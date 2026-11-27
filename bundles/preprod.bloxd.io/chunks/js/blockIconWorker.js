@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var BB = __webpack_require__.u,
-        OB = __webpack_require__.e,
-        GB = {},
-        YB = {};
-      __webpack_require__.u = function(OB) {
-        return BB(OB) + (GB.hasOwnProperty(OB) ? "?" + GB[OB] : "")
-      }, __webpack_require__.e = function(DB) {
-        return OB(DB).catch((function(OB) {
-          var QB = YB.hasOwnProperty(DB) ? YB[DB] : 4;
-          if (QB < 1) {
-            var oB = BB(DB);
-            if (OB.message = "Loading chunk " + DB + " failed after 4 retries.\n(" + oB + ")", OB.request = oB, GB[DB] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete YB[DB]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === OB.code) {
-              var jB = __webpack_require__.miniCssF(DB);
-              OB.message = OB.message.replace("Loading chunk", "Loading CSS chunk").replace(oB, jB), OB.request = jB
+      var WW = __webpack_require__.u,
+        iW = __webpack_require__.e,
+        OW = {},
+        mW = {};
+      __webpack_require__.u = function(iW) {
+        return WW(iW) + (OW.hasOwnProperty(iW) ? "?" + OW[iW] : "")
+      }, __webpack_require__.e = function(EW) {
+        return iW(EW).catch((function(iW) {
+          var NW = mW.hasOwnProperty(EW) ? mW[EW] : 4;
+          if (NW < 1) {
+            var PW = WW(EW);
+            if (iW.message = "Loading chunk " + EW + " failed after 4 retries.\n(" + PW + ")", iW.request = PW, OW[EW] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete mW[EW]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === iW.code) {
+              var LW = __webpack_require__.miniCssF(EW);
+              iW.message = iW.message.replace("Loading chunk", "Loading CSS chunk").replace(PW, LW), iW.request = LW
             }
-            throw OB
+            throw iW
           }
-          return new Promise((function(BB) {
-            var OB = 4 - QB + 1;
+          return new Promise((function(WW) {
+            var iW = 4 - NW + 1;
             setTimeout((function() {
-              var OB = "cache-bust=" + Date.now();
-              GB[DB] = OB, YB[DB] = QB - 1, BB(__webpack_require__.e(DB))
-            }), function(BB) {
-              return 500 * Math.pow(2, BB)
-            }(OB))
+              var iW = "cache-bust=" + Date.now();
+              OW[EW] = iW, mW[EW] = NW - 1, WW(__webpack_require__.e(EW))
+            }), function(WW) {
+              return 500 * Math.pow(2, WW)
+            }(iW))
           }))
         }))
       }
     }
   })();
-  const BB = Math.SQRT1_2,
-    OB = Math.SQRT1_2 / 2,
-    GB = Math.sqrt(3) / 2,
-    YB = 2 * BB,
-    DB = 2 * OB + GB;
+  const WW = Math.SQRT1_2,
+    iW = Math.SQRT1_2 / 2,
+    OW = Math.sqrt(3) / 2,
+    mW = 2 * WW,
+    EW = 2 * iW + OW;
 
-  function QB(OB, GB) {
-    const YB = GB > 0 ? GB + 1 : 0,
-      QB = .6 * OB - GB / BB;
-    return Math.max(0, Math.min(QB, (OB - 2 * YB) / DB))
+  function NW(iW, OW) {
+    const mW = OW > 0 ? OW + 1 : 0,
+      NW = .6 * iW - OW / WW;
+    return Math.max(0, Math.min(NW, (iW - 2 * mW) / EW))
   }
-  const oB = [15, 15, 15],
-    jB = {
+  const PW = [15, 15, 15],
+    LW = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function yB(BB, OB, GB, oB) {
+  function cW(WW, iW, OW, PW) {
     const {
-      vertices: jB,
-      uvs: yB,
-      indices: JB,
-      shades: MB
-    } = BB, zB = function(BB, OB) {
-      const GB = QB(BB, OB),
-        oB = YB * GB,
-        jB = DB * GB;
+      vertices: LW,
+      uvs: cW,
+      indices: wW,
+      shades: tW
+    } = WW, xW = function(WW, iW) {
+      const OW = NW(WW, iW),
+        PW = mW * OW,
+        LW = EW * OW;
       return {
-        left: (BB - oB) / 2,
-        top: (BB - jB) / 2,
-        width: oB,
-        height: jB
+        left: (WW - PW) / 2,
+        top: (WW - LW) / 2,
+        width: PW,
+        height: LW
       }
-    }(GB, oB), lB = new Float32Array(jB.length);
-    for (let YB = 0; YB < jB.length; YB += 3) lB[YB] = zB.left + jB[YB] * zB.width, lB[YB + 1] = zB.top + jB[YB + 1] * zB.height, lB[YB + 2] = jB[YB + 2];
-    const pB = new Float32Array(GB * GB).fill(-1 / 0),
-      qB = new Uint8ClampedArray(GB * GB * 4),
-      ZB = 255 * BB.alphaCutoff;
-    for (let YB = 0; YB < JB.length; YB += 3) {
-      const [BB, DB, QB] = [JB[YB], JB[YB + 1], JB[YB + 2]], [oB, jB, PB] = [3 * BB, 3 * DB, 3 * QB], [zB, NB, RB, WB, AB, VB] = [lB[oB], lB[oB + 1], lB[jB], lB[jB + 1], lB[PB], lB[PB + 1]], SB = (RB - zB) * (VB - NB) - (AB - zB) * (WB - NB);
-      if (Math.abs(SB) < 1e-9) continue;
-      const nB = MB[YB / 3],
-        [UB, fB, kB, dB, KB, uB] = [yB[2 * BB], yB[2 * BB + 1], yB[2 * DB], yB[2 * DB + 1], yB[2 * QB], yB[2 * QB + 1]],
-        mB = Math.max(0, Math.floor(Math.min(zB, RB, AB))),
-        IB = Math.min(GB - 1, Math.ceil(Math.max(zB, RB, AB))),
-        FB = Math.max(0, Math.floor(Math.min(NB, WB, VB))),
-        iB = Math.min(GB - 1, Math.ceil(Math.max(NB, WB, VB)));
-      for (let YB = FB; YB <= iB; YB++)
-        for (let BB = mB; BB <= IB; BB++) {
-          const [DB, QB] = [BB + .5, YB + .5], yB = ((DB - zB) * (VB - NB) - (AB - zB) * (QB - NB)) / SB, JB = ((RB - zB) * (QB - NB) - (DB - zB) * (WB - NB)) / SB, MB = 1 - yB - JB;
-          if (MB < 0 || yB < 0 || JB < 0) continue;
-          const mB = MB * lB[oB + 2] + yB * lB[jB + 2] + JB * lB[PB + 2],
-            IB = YB * GB + BB;
-          if (mB <= pB[IB]) continue;
-          const FB = Math.max(0, Math.min(OB.width - 1, Math.floor((MB * UB + yB * kB + JB * KB) * OB.width))),
-            iB = 4 * (Math.max(0, Math.min(OB.height - 1, Math.floor((MB * fB + yB * dB + JB * uB) * OB.height))) * OB.width + FB);
-          OB.pixels[iB + 3] < ZB || (pB[IB] = mB, qB[4 * IB] = OB.pixels[iB] * nB, qB[4 * IB + 1] = OB.pixels[iB + 1] * nB, qB[4 * IB + 2] = OB.pixels[iB + 2] * nB, qB[4 * IB + 3] = 255)
+    }(OW, PW), lW = new Float32Array(LW.length);
+    for (let mW = 0; mW < LW.length; mW += 3) lW[mW] = xW.left + LW[mW] * xW.width, lW[mW + 1] = xW.top + LW[mW + 1] * xW.height, lW[mW + 2] = LW[mW + 2];
+    const AW = new Float32Array(OW * OW).fill(-1 / 0),
+      bW = new Uint8ClampedArray(OW * OW * 4),
+      jW = 255 * WW.alphaCutoff;
+    for (let mW = 0; mW < wW.length; mW += 3) {
+      const [WW, EW, NW] = [wW[mW], wW[mW + 1], wW[mW + 2]], [PW, LW, ZW] = [3 * WW, 3 * EW, 3 * NW], [xW, UW, kW, sW, MW, KW] = [lW[PW], lW[PW + 1], lW[LW], lW[LW + 1], lW[ZW], lW[ZW + 1]], SW = (kW - xW) * (KW - UW) - (MW - xW) * (sW - UW);
+      if (Math.abs(SW) < 1e-9) continue;
+      const YW = tW[mW / 3],
+        [yW, TW, JW, hW, HW, nW] = [cW[2 * WW], cW[2 * WW + 1], cW[2 * EW], cW[2 * EW + 1], cW[2 * NW], cW[2 * NW + 1]],
+        uW = Math.max(0, Math.floor(Math.min(xW, kW, MW))),
+        oW = Math.min(OW - 1, Math.ceil(Math.max(xW, kW, MW))),
+        dW = Math.max(0, Math.floor(Math.min(UW, sW, KW))),
+        eW = Math.min(OW - 1, Math.ceil(Math.max(UW, sW, KW)));
+      for (let mW = dW; mW <= eW; mW++)
+        for (let WW = uW; WW <= oW; WW++) {
+          const [EW, NW] = [WW + .5, mW + .5], cW = ((EW - xW) * (KW - UW) - (MW - xW) * (NW - UW)) / SW, wW = ((kW - xW) * (NW - UW) - (EW - xW) * (sW - UW)) / SW, tW = 1 - cW - wW;
+          if (tW < 0 || cW < 0 || wW < 0) continue;
+          const uW = tW * lW[PW + 2] + cW * lW[LW + 2] + wW * lW[ZW + 2],
+            oW = mW * OW + WW;
+          if (uW <= AW[oW]) continue;
+          const dW = Math.max(0, Math.min(iW.width - 1, Math.floor((tW * yW + cW * JW + wW * HW) * iW.width))),
+            eW = 4 * (Math.max(0, Math.min(iW.height - 1, Math.floor((tW * TW + cW * hW + wW * nW) * iW.height))) * iW.width + dW);
+          iW.pixels[eW + 3] < jW || (AW[oW] = uW, bW[4 * oW] = iW.pixels[eW] * YW, bW[4 * oW + 1] = iW.pixels[eW + 1] * YW, bW[4 * oW + 2] = iW.pixels[eW + 2] * YW, bW[4 * oW + 3] = 255)
         }
     }
-    return PB(qB, GB, oB), qB
+    return ZW(bW, OW, PW), bW
   }
-  let JB = NaN,
-    MB = new Int32Array(0);
+  let wW = NaN,
+    tW = new Int32Array(0);
 
-  function PB(BB, OB, GB) {
-    let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : OB => 0 !== BB[4 * OB + 3];
-    const DB = new Uint8Array(OB * OB);
-    for (let oB = 0; oB < OB * OB; oB++) DB[oB] = YB(oB) ? 1 : 0;
-    const QB = (BB, GB) => BB >= 0 && GB >= 0 && BB < OB && GB < OB && 0 === DB[GB * OB + BB],
-      jB = new Float32Array(OB * OB).fill(1 / 0),
-      yB = function(BB) {
-        if (BB !== JB) {
-          const OB = Math.ceil(BB + 1),
-            GB = [];
-          for (let YB = -OB; YB <= OB; YB++)
-            for (let DB = -OB; DB <= OB; DB++) {
-              const OB = DB * DB + YB * YB;
-              OB > 0 && OB < (BB + 1) ** 2 && GB.push(DB, YB, OB)
+  function ZW(WW, iW, OW) {
+    let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : iW => 0 !== WW[4 * iW + 3];
+    const EW = new Uint8Array(iW * iW);
+    for (let PW = 0; PW < iW * iW; PW++) EW[PW] = mW(PW) ? 1 : 0;
+    const NW = (WW, OW) => WW >= 0 && OW >= 0 && WW < iW && OW < iW && 0 === EW[OW * iW + WW],
+      LW = new Float32Array(iW * iW).fill(1 / 0),
+      cW = function(WW) {
+        if (WW !== wW) {
+          const iW = Math.ceil(WW + 1),
+            OW = [];
+          for (let mW = -iW; mW <= iW; mW++)
+            for (let EW = -iW; EW <= iW; EW++) {
+              const iW = EW * EW + mW * mW;
+              iW > 0 && iW < (WW + 1) ** 2 && OW.push(EW, mW, iW)
             }
-          JB = BB, MB = Int32Array.from(GB)
+          wW = WW, tW = Int32Array.from(OW)
         }
-        return MB
-      }(GB);
-    for (let oB = 0; oB < OB; oB++)
-      for (let BB = 0; BB < OB; BB++) {
-        if (1 === DB[oB * OB + BB] && (QB(BB - 1, oB) || QB(BB + 1, oB) || QB(BB, oB - 1) || QB(BB, oB + 1)))
-          for (let GB = 0; GB < yB.length; GB += 3) {
-            const YB = BB + yB[GB],
-              DB = oB + yB[GB + 1];
-            if (YB >= 0 && DB >= 0 && YB < OB && DB < OB) {
-              const BB = DB * OB + YB;
-              jB[BB] = Math.min(jB[BB], yB[GB + 2])
+        return tW
+      }(OW);
+    for (let PW = 0; PW < iW; PW++)
+      for (let WW = 0; WW < iW; WW++) {
+        if (1 === EW[PW * iW + WW] && (NW(WW - 1, PW) || NW(WW + 1, PW) || NW(WW, PW - 1) || NW(WW, PW + 1)))
+          for (let OW = 0; OW < cW.length; OW += 3) {
+            const mW = WW + cW[OW],
+              EW = PW + cW[OW + 1];
+            if (mW >= 0 && EW >= 0 && mW < iW && EW < iW) {
+              const WW = EW * iW + mW;
+              LW[WW] = Math.min(LW[WW], cW[OW + 2])
             }
           }
       }
-    for (let JB = 0; JB < OB * OB; JB++) 1 !== DB[JB] && jB[JB] !== 1 / 0 && (BB.set(oB, 4 * JB), BB[4 * JB + 3] = Math.round(255 * Math.min(1, GB + 1 - Math.sqrt(jB[JB]))))
+    for (let wW = 0; wW < iW * iW; wW++) 1 !== EW[wW] && LW[wW] !== 1 / 0 && (WW.set(PW, 4 * wW), WW[4 * wW + 3] = Math.round(255 * Math.min(1, OW + 1 - Math.sqrt(LW[wW]))))
   }
-  const zB = {
+  const xW = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    lB = {
+    lW = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    pB = {
+    AW = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const qB = 1e-6;
+  const bW = 1e-6;
 
-  function ZB(BB, OB, GB, YB) {
+  function jW(WW, iW, OW, mW) {
     let {
-      origin: DB,
-      across: QB,
-      down: oB,
-      texture: jB,
-      rect: [yB, JB, MB, PB],
-      shade: zB
-    } = YB;
-    const lB = QB.x * oB.y - QB.y * oB.x;
-    if (Math.abs(lB) < 1e-9) return;
-    const pB = [DB.x, DB.x + QB.x, DB.x + oB.x, DB.x + QB.x + oB.x],
-      ZB = [DB.y, DB.y + QB.y, DB.y + oB.y, DB.y + QB.y + oB.y],
-      NB = Math.max(0, Math.floor(Math.min(...pB))),
-      RB = Math.min(GB - 1, Math.ceil(Math.max(...pB))),
-      WB = Math.max(0, Math.floor(Math.min(...ZB))),
-      AB = Math.min(GB - 1, Math.ceil(Math.max(...ZB)));
-    for (let VB = WB; VB <= AB; VB++)
-      for (let YB = NB; YB <= RB; YB++) {
-        const pB = YB + .5 - DB.x,
-          ZB = VB + .5 - DB.y,
-          NB = (pB * oB.y - ZB * oB.x) / lB,
-          RB = (QB.x * ZB - QB.y * pB) / lB;
-        if (NB < -qB || NB > 1 + qB || RB < -qB || RB > 1 + qB) continue;
-        const WB = VB * GB + YB;
-        OB[WB] = 1;
-        const AB = yB + Math.min(Math.max(NB, 0), 1) * (MB - yB),
-          SB = JB + Math.min(Math.max(RB, 0), 1) * (PB - JB),
-          nB = Math.min(jB.width - 1, Math.floor(AB * jB.width)),
-          UB = 4 * (Math.min(jB.height - 1, Math.floor(SB * jB.height)) * jB.width + nB),
-          fB = jB.pixels[UB + 3] / 255;
-        if (0 === fB) continue;
-        const kB = 4 * WB,
-          dB = BB[kB + 3] / 255 * (1 - fB),
-          KB = fB + dB;
-        for (let OB = 0; OB < 3; OB++) BB[kB + OB] = (jB.pixels[UB + OB] * zB * fB + BB[kB + OB] * dB) / KB;
-        BB[kB + 3] = 255 * KB
+      origin: EW,
+      across: NW,
+      down: PW,
+      texture: LW,
+      rect: [cW, wW, tW, ZW],
+      shade: xW
+    } = mW;
+    const lW = NW.x * PW.y - NW.y * PW.x;
+    if (Math.abs(lW) < 1e-9) return;
+    const AW = [EW.x, EW.x + NW.x, EW.x + PW.x, EW.x + NW.x + PW.x],
+      jW = [EW.y, EW.y + NW.y, EW.y + PW.y, EW.y + NW.y + PW.y],
+      UW = Math.max(0, Math.floor(Math.min(...AW))),
+      kW = Math.min(OW - 1, Math.ceil(Math.max(...AW))),
+      sW = Math.max(0, Math.floor(Math.min(...jW))),
+      MW = Math.min(OW - 1, Math.ceil(Math.max(...jW)));
+    for (let KW = sW; KW <= MW; KW++)
+      for (let mW = UW; mW <= kW; mW++) {
+        const AW = mW + .5 - EW.x,
+          jW = KW + .5 - EW.y,
+          UW = (AW * PW.y - jW * PW.x) / lW,
+          kW = (NW.x * jW - NW.y * AW) / lW;
+        if (UW < -bW || UW > 1 + bW || kW < -bW || kW > 1 + bW) continue;
+        const sW = KW * OW + mW;
+        iW[sW] = 1;
+        const MW = cW + Math.min(Math.max(UW, 0), 1) * (tW - cW),
+          SW = wW + Math.min(Math.max(kW, 0), 1) * (ZW - wW),
+          YW = Math.min(LW.width - 1, Math.floor(MW * LW.width)),
+          yW = 4 * (Math.min(LW.height - 1, Math.floor(SW * LW.height)) * LW.width + YW),
+          TW = LW.pixels[yW + 3] / 255;
+        if (0 === TW) continue;
+        const JW = 4 * sW,
+          hW = WW[JW + 3] / 255 * (1 - TW),
+          HW = TW + hW;
+        for (let iW = 0; iW < 3; iW++) WW[JW + iW] = (LW.pixels[yW + iW] * xW * TW + WW[JW + iW] * hW) / HW;
+        WW[JW + 3] = 255 * HW
       }
   }
 
-  function NB(BB, OB, GB) {
-    const YB = BB.get(OB);
-    if (void 0 === YB) throw new Error(`no ${GB} was sent for ${OB.slice(0,100)}`);
-    return YB
+  function UW(WW, iW, OW) {
+    const mW = WW.get(iW);
+    if (void 0 === mW) throw new Error(`no ${OW} was sent for ${iW.slice(0,100)}`);
+    return mW
   }
-  const RB = {
-      pixelsOf(BB) {
-        const OB = new OffscreenCanvas(BB.width, BB.height),
-          GB = OB.getContext("2d");
-        if (!GB) throw new Error("no 2D context");
-        return GB.drawImage(BB, 0, 0), BB.close(), {
-          width: OB.width,
-          height: OB.height,
-          pixels: GB.getImageData(0, 0, OB.width, OB.height).data
+  const kW = {
+      pixelsOf(WW) {
+        const iW = new OffscreenCanvas(WW.width, WW.height),
+          OW = iW.getContext("2d");
+        if (!OW) throw new Error("no 2D context");
+        return OW.drawImage(WW, 0, 0), WW.close(), {
+          width: iW.width,
+          height: iW.height,
+          pixels: OW.getImageData(0, 0, iW.width, iW.height).data
         }
       },
-      async encode(BB, OB) {
-        const GB = new OffscreenCanvas(OB, OB),
-          YB = GB.getContext("2d");
-        if (!YB) throw new Error("no 2D context");
-        YB.putImageData(new ImageData(BB, OB, OB), 0, 0);
-        const DB = await GB.convertToBlob();
-        return new Promise(((BB, OB) => {
-          const GB = new FileReader;
-          GB.onload = () => {
-            BB(GB.result)
-          }, GB.onerror = () => {
-            var BB;
-            OB(null !== (BB = GB.error) && void 0 !== BB ? BB : new Error("the icon did not encode"))
-          }, GB.readAsDataURL(DB)
+      async encode(WW, iW) {
+        const OW = new OffscreenCanvas(iW, iW),
+          mW = OW.getContext("2d");
+        if (!mW) throw new Error("no 2D context");
+        mW.putImageData(new ImageData(WW, iW, iW), 0, 0);
+        const EW = await OW.convertToBlob();
+        return new Promise(((WW, iW) => {
+          const OW = new FileReader;
+          OW.onload = () => {
+            WW(OW.result)
+          }, OW.onerror = () => {
+            var WW;
+            iW(null !== (WW = OW.error) && void 0 !== WW ? WW : new Error("the icon did not encode"))
+          }, OW.readAsDataURL(EW)
         }))
       }
     },
-    WB = globalThis.WorkerGlobalScope;
-  void 0 !== WB && globalThis instanceof WB && function(YB, DB) {
-    const oB = new Map,
-      JB = new Map,
-      MB = (BB, OB, GB) => {
+    sW = globalThis.WorkerGlobalScope;
+  void 0 !== sW && globalThis instanceof sW && function(mW, EW) {
+    const PW = new Map,
+      wW = new Map,
+      tW = (WW, iW, OW) => {
         (async () => {
           try {
-            YB.postMessage({
+            mW.postMessage({
               type: "drawn",
-              id: BB,
-              url: await DB.encode(GB(), OB)
+              id: WW,
+              url: await EW.encode(OW(), iW)
             })
-          } catch (QB) {
-            YB.postMessage({
+          } catch (NW) {
+            mW.postMessage({
               type: "failed",
-              message: String(QB)
+              message: String(NW)
             })
           }
         })()
       };
-    YB.onmessage = YB => {
+    mW.onmessage = mW => {
       let {
-        data: qB
-      } = YB;
-      if ("texture" === qB.type) oB.set(qB.url, DB.pixelsOf(qB.bitmap));
-      else if ("model" === qB.type) JB.set(qB.name, {
-        geometry: qB.geometry,
-        texture: DB.pixelsOf(qB.bitmap)
+        data: bW
+      } = mW;
+      if ("texture" === bW.type) PW.set(bW.url, EW.pixelsOf(bW.bitmap));
+      else if ("model" === bW.type) wW.set(bW.name, {
+        geometry: bW.geometry,
+        texture: EW.pixelsOf(bW.bitmap)
       });
-      else if ("draw" === qB.type) {
+      else if ("draw" === bW.type) {
         const {
-          id: YB,
-          top: DB,
-          left: yB,
-          right: JB,
-          itemType: RB,
-          size: WB,
-          outlineWidth: AB
-        } = qB;
-        MB(YB, WB, (() => function(YB, DB, oB, yB) {
-          const JB = QB(oB, yB),
-            MB = JB * BB,
-            zB = JB * OB,
-            lB = JB * GB,
-            pB = Math.max(...DB.boxes.map((BB => BB[4]))),
-            qB = oB / 2,
-            NB = zB + (oB - zB - zB - pB * lB) / 2,
-            RB = (BB, OB, GB) => ({
-              x: qB + (BB - GB) * MB,
-              y: NB - zB + (BB + GB) * zB + (pB - OB) * lB
+          id: mW,
+          top: EW,
+          left: cW,
+          right: wW,
+          itemType: kW,
+          size: sW,
+          outlineWidth: MW
+        } = bW;
+        tW(mW, sW, (() => function(mW, EW, PW, cW) {
+          const wW = NW(PW, cW),
+            tW = wW * WW,
+            xW = wW * iW,
+            lW = wW * OW,
+            AW = Math.max(...EW.boxes.map((WW => WW[4]))),
+            bW = PW / 2,
+            UW = xW + (PW - xW - xW - AW * lW) / 2,
+            kW = (WW, iW, OW) => ({
+              x: bW + (WW - OW) * tW,
+              y: UW - xW + (WW + OW) * xW + (AW - iW) * lW
             }),
-            WB = (BB, OB, GB, YB, QB, oB) => ({
-              origin: BB,
+            sW = (WW, iW, OW, mW, NW, PW) => ({
+              origin: WW,
               across: {
-                x: OB.x - BB.x,
-                y: OB.y - BB.y
+                x: iW.x - WW.x,
+                y: iW.y - WW.y
               },
               down: {
-                x: GB.x - BB.x,
-                y: GB.y - BB.y
+                x: OW.x - WW.x,
+                y: OW.y - WW.y
               },
-              texture: YB,
-              rect: DB.cropFaces ? QB : [0, 0, 1, 1],
-              shade: oB
+              texture: mW,
+              rect: EW.cropFaces ? NW : [0, 0, 1, 1],
+              shade: PW
             }),
-            AB = new Uint8ClampedArray(oB * oB * 4),
-            VB = new Uint8Array(oB * oB),
-            SB = jB;
-          for (const [BB, OB, GB, QB, jB, PB] of DB.boxes) {
-            const DB = WB(RB(QB, jB, PB), RB(QB, jB, GB), RB(QB, OB, PB), YB.right, [1 - PB, 1 - jB, 1 - GB, 1 - OB], SB.right),
-              yB = WB(RB(BB, jB, PB), RB(QB, jB, PB), RB(BB, OB, PB), YB.left, [BB, 1 - jB, QB, 1 - OB], SB.left),
-              JB = WB(RB(BB, jB, GB), RB(QB, jB, GB), RB(BB, jB, PB), YB.top, [BB, GB, QB, PB], SB.top);
-            for (const BB of [DB, yB, JB]) ZB(AB, VB, oB, BB)
+            MW = new Uint8ClampedArray(PW * PW * 4),
+            KW = new Uint8Array(PW * PW),
+            SW = LW;
+          for (const [WW, iW, OW, NW, LW, ZW] of EW.boxes) {
+            const EW = sW(kW(NW, LW, ZW), kW(NW, LW, OW), kW(NW, iW, ZW), mW.right, [1 - ZW, 1 - LW, 1 - OW, 1 - iW], SW.right),
+              cW = sW(kW(WW, LW, ZW), kW(NW, LW, ZW), kW(WW, iW, ZW), mW.left, [WW, 1 - LW, NW, 1 - iW], SW.left),
+              wW = sW(kW(WW, LW, OW), kW(NW, LW, OW), kW(WW, LW, ZW), mW.top, [WW, OW, NW, ZW], SW.top);
+            for (const WW of [EW, cW, wW]) jW(MW, KW, PW, WW)
           }
-          return PB(AB, oB, yB, (BB => 1 === VB[BB])), AB
+          return ZW(MW, PW, cW, (WW => 1 === KW[WW])), MW
         }({
-          top: NB(oB, DB, "texture"),
-          left: NB(oB, yB, "texture"),
-          right: NB(oB, JB, "texture")
-        }, function(BB) {
-          return "SlabBlock" === BB ? lB : "StairsBlock" === BB ? pB : zB
-        }(RB), WB, AB)))
+          top: UW(PW, EW, "texture"),
+          left: UW(PW, cW, "texture"),
+          right: UW(PW, wW, "texture")
+        }, function(WW) {
+          return "SlabBlock" === WW ? lW : "StairsBlock" === WW ? AW : xW
+        }(kW), sW, MW)))
       } else {
         const {
-          id: BB,
-          name: OB,
-          size: GB,
-          outlineWidth: YB
-        } = qB;
-        MB(BB, GB, (() => {
+          id: WW,
+          name: iW,
+          size: OW,
+          outlineWidth: mW
+        } = bW;
+        tW(WW, OW, (() => {
           const {
-            geometry: BB,
-            texture: DB
-          } = NB(JB, OB, "model");
-          return yB(BB, DB, GB, YB)
+            geometry: WW,
+            texture: EW
+          } = UW(wW, iW, "model");
+          return cW(WW, EW, OW, mW)
         }))
       }
-    }, YB.postMessage({
+    }, mW.postMessage({
       type: "started"
     })
-  }(globalThis, RB)
+  }(globalThis, kW)
 })();

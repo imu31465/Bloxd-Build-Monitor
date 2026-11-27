@@ -1,215 +1,221 @@
 export const id = 28;
 export const ids = [28];
 export const modules = {
-  37263: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => ZB,
-      e: () => NB,
-      h: () => zB,
-      l: () => PB
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var YB = GB(34790),
-      DB = GB(37267),
-      QB = GB(37270),
-      oB = GB(9391),
-      jB = GB(1480),
-      yB = GB(56),
-      JB = GB(70),
-      MB = GB(1282);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function PB() {
-      var BB;
-      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
-        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function zB(BB) {
-      var OB;
+    function xW(WW) {
+      var iW;
       let {
-        show: GB
-      } = BB;
-      (0, jB.i)(DB.d, (0, DB.n)());
-      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
-      return (0, yB.useEffect)((() => {
-        var BB;
-        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
-      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
-        showing: GB,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === JB || void 0 === JB ? void 0 : JB.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const lB = new Map,
-      pB = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function qB(BB, OB) {
-      OB ? lB.set(BB, OB) : lB.delete(BB);
-      for (const GB of pB) GB()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function ZB(BB) {
+    function jW(WW) {
       let {
-        placement: OB = "bottom"
-      } = BB;
-      const GB = (0, yB.useRef)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = GB.current;
-        return qB(OB, BB), () => {
-          lB.get(OB) === BB && qB(OB, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [OB]), (0, MB.jsx)("div", {
-        ref: GB,
-        id: `clientGameHud-${OB}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function UW(WW) {
       let {
-        children: OB,
-        placement: GB = "bottom"
-      } = BB;
-      const [YB, DB] = (0, yB.useState)((() => {
-        var BB;
-        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, yB.useEffect)((() => {
-        const BB = () => {
-          var BB;
-          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return pB.add(BB), BB(), () => {
-          pB.delete(BB)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  37180: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => kB,
-      f: () => nB,
-      j: () => UB,
-      n: () => VB,
-      o: () => SB
+  37761: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => hW,
+      f: () => yW,
+      g: () => TW,
+      j: () => SW,
+      l: () => YW
     });
-    var YB = GB(56),
-      DB = GB(1090),
-      QB = GB.n(DB),
-      oB = GB(3528),
-      jB = GB(331),
-      yB = GB(2653),
-      JB = GB(25),
-      MB = GB(2050),
-      PB = GB(31),
-      zB = GB(2063),
-      lB = GB(16),
-      pB = GB(2076),
-      qB = GB(1434),
-      ZB = GB(9485),
-      NB = GB(2111),
-      RB = GB(1175),
-      WB = GB(1282);
-    const AB = 7e3;
+    var mW = OW(62),
+      EW = OW(1089),
+      NW = OW.n(EW),
+      PW = OW(4275),
+      LW = OW(327),
+      cW = OW(3332),
+      wW = OW(27),
+      tW = OW(2061),
+      ZW = OW(39),
+      xW = OW(2075),
+      lW = OW(25),
+      AW = OW(2080),
+      bW = OW(1459),
+      jW = OW(10049),
+      UW = OW(2108),
+      kW = OW(1172),
+      sW = OW(37763),
+      MW = OW(1283);
+    const KW = 7e3;
 
-    function VB() {
+    function SW() {
       const {
-        loadingOverlayVisible: BB,
-        openInGameMenuName: OB,
-        openEverythingMenuName: GB
-      } = (0, lB.o)(["loadingOverlayVisible", "openInGameMenuName", "openEverythingMenuName"]);
-      return BB || null !== OB || null !== GB
+        loadingOverlayVisible: WW,
+        openInGameMenuName: iW,
+        openEverythingMenuName: OW
+      } = (0, lW.p)(["loadingOverlayVisible", "openInGameMenuName", "openEverythingMenuName"]);
+      return WW || null !== iW || null !== OW
     }
 
-    function SB(BB, OB, GB) {
-      const DB = (0, YB.useRef)(GB);
-      DB.current = GB;
-      const QB = (0, YB.useRef)({
-        card: BB,
+    function YW(WW, iW, OW) {
+      const EW = (0, mW.useRef)(OW);
+      EW.current = OW;
+      const NW = (0, mW.useRef)({
+        card: WW,
         ms: 0
       });
-      (0, YB.useEffect)((() => {
-        if (OB || null === BB) return;
-        QB.current.card !== BB && (QB.current = {
-          card: BB,
+      (0, mW.useEffect)((() => {
+        if (iW || null === WW) return;
+        NW.current.card !== WW && (NW.current = {
+          card: WW,
           ms: 0
         });
-        const GB = QB.current,
-          YB = performance.now(),
-          oB = setTimeout((() => {
-            DB.current()
-          }), AB - GB.ms);
+        const OW = NW.current,
+          mW = performance.now(),
+          PW = setTimeout((() => {
+            EW.current()
+          }), KW - OW.ms);
         return () => {
-          clearTimeout(oB), GB.ms += performance.now() - YB
+          clearTimeout(PW), OW.ms += performance.now() - mW
         }
-      }), [OB, BB])
+      }), [iW, WW])
     }
-    const nB = (0, YB.memo)((function() {
+    const yW = (0, mW.memo)((function() {
       const {
-        isTouchScreen: BB
-      } = (0, lB.o)(["isTouchScreen"]), OB = (0, qB.s)();
-      (0, oB.e)();
-      const GB = (0, yB.g)("showBasicMovementControls"),
-        [DB, MB] = (0, YB.useState)("movement"),
-        zB = "movement" === DB,
-        pB = OB && !1 !== GB;
-      (0, YB.useEffect)((() => {
-        "padActions" !== DB || pB || MB("done")
-      }), [DB, pB]);
-      const ZB = VB();
-      SB("done" === DB ? null : DB, ZB, (() => {
-        MB("movement" === DB && (0, qB.j)() ? "padActions" : "done")
+        isTouchScreen: WW
+      } = (0, lW.p)(["isTouchScreen"]), iW = (0, bW.x)();
+      (0, PW.d)();
+      const OW = (0, cW.e)("showBasicMovementControls"),
+        [EW, tW] = (0, mW.useState)("movement"),
+        xW = "movement" === EW,
+        AW = iW && !1 !== OW;
+      (0, mW.useEffect)((() => {
+        "padActions" !== EW || AW || tW("done")
+      }), [EW, AW]);
+      const jW = SW();
+      YW("done" === EW ? null : EW, jW, (() => {
+        tW("movement" === EW && (0, bW.k)() ? "padActions" : "done")
       }));
-      const NB = PB.g.getItem(jB.Mb) > 2,
-        RB = !NB && (!BB || OB) && zB && !1 !== GB;
-      return (0, YB.useEffect)((() => {
-        RB && !ZB && JB.o.tM("controlsTutorialShown", "movement")
-      }), [RB, ZB]), NB ? (0, WB.jsx)(dB, {
+      const UW = ZW.i.getItem(LW.Qb) > 2,
+        kW = (!WW || iW) && xW && !1 !== OW,
+        KW = "padActions" === EW && AW,
+        yW = (0, mW.useRef)(null);
+      (0, sW.c)(!UW && !jW && kW, yW), (0, sW.c)(!UW && !jW && KW);
+      const nW = !UW && kW;
+      return (0, mW.useEffect)((() => {
+        nW && !jW && wW.l.iZ("controlsTutorialShown", "movement")
+      }), [nW, jW]), UW ? (0, MW.jsx)(HW, {
         showingMovementControls: !1
-      }) : (0, WB.jsxs)(WB.Fragment, {
-        children: [RB ? (0, WB.jsxs)("div", {
-          className: QB()("ControlsTutorialDiv", {
-            Covered: ZB
+      }) : (0, MW.jsxs)(MW.Fragment, {
+        children: [kW ? (0, MW.jsxs)("div", {
+          ref: yW,
+          className: NW()("ControlsTutorialDiv", {
+            Covered: jW
           }),
-          children: [(0, WB.jsx)(UB, {}), (0, WB.jsx)(kB, {
+          children: [(0, MW.jsx)(TW, {}), (0, MW.jsx)(hW, {
             header: "Sprint",
             noaAction: "sprint"
-          }), (0, WB.jsx)(kB, {
+          }), (0, MW.jsx)(hW, {
             header: "Jump",
             noaAction: "jump"
           })]
-        }) : null, "padActions" === DB && pB && (0, WB.jsx)(fB, {
-          covered: ZB
-        }), (0, WB.jsx)(dB, {
-          showingMovementControls: "done" !== DB
+        }) : null, KW && (0, MW.jsx)(JW, {
+          covered: jW
+        }), (0, MW.jsx)(HW, {
+          showingMovementControls: "done" !== EW
         })]
       })
     }));
 
-    function UB() {
-      const BB = (0, qB.s)();
-      return (0, WB.jsxs)("div", {
+    function TW() {
+      const WW = (0, bW.x)();
+      return (0, MW.jsxs)("div", {
         className: "KeyControlDiv",
-        children: [(0, WB.jsx)("div", {
+        children: [(0, MW.jsx)("div", {
           className: "KeyHeader",
           children: "Move"
-        }), BB && (0, WB.jsx)(pB.c, {
+        }), WW && (0, MW.jsx)(AW.e, {
           noaAction: "forward"
-        }), !BB && (0, WB.jsxs)(WB.Fragment, {
-          children: [(0, WB.jsx)("div", {
+        }), !WW && (0, MW.jsxs)(MW.Fragment, {
+          children: [(0, MW.jsx)("div", {
             className: "WasdKeysTopRow",
-            children: (0, WB.jsx)(pB.c, {
+            children: (0, MW.jsx)(AW.e, {
               noaAction: "forward"
             })
-          }), (0, WB.jsxs)("div", {
+          }), (0, MW.jsxs)("div", {
             className: "WasdKeysBottomRow",
-            children: [(0, WB.jsx)(pB.c, {
+            children: [(0, MW.jsx)(AW.e, {
               noaAction: "left"
-            }), (0, WB.jsx)(pB.c, {
+            }), (0, MW.jsx)(AW.e, {
               noaAction: "backward"
-            }), (0, WB.jsx)(pB.c, {
+            }), (0, MW.jsx)(AW.e, {
               noaAction: "right"
             })]
           })]
@@ -217,266 +223,367 @@ export const modules = {
       })
     }
 
-    function fB(BB) {
+    function JW(WW) {
       let {
-        covered: OB
-      } = BB;
+        covered: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, RB.H)(), YB = (0, yB.g)("useInventory");
-      return (0, WB.jsxs)("div", {
-        className: QB()("ControlsTutorialDiv", {
-          Covered: OB
+        t: OW
+      } = (0, kW.B)(), mW = (0, cW.e)("useInventory");
+      return (0, MW.jsxs)("div", {
+        className: NW()("ControlsTutorialDiv", {
+          Covered: iW
         }),
-        children: [(0, WB.jsx)(kB, {
-          header: GB("controller:tutorialMine"),
+        children: [(0, MW.jsx)(hW, {
+          header: OW("controller:tutorialMine"),
           noaAction: "primary-fire"
-        }), (0, WB.jsx)(kB, {
-          header: GB("controller:tutorialPlace"),
+        }), (0, MW.jsx)(hW, {
+          header: OW("controller:tutorialPlace"),
           noaAction: "alt-fire"
-        }), !1 !== YB && (0, WB.jsx)(kB, {
-          header: GB("controller:tutorialInventory"),
+        }), !1 !== mW && (0, MW.jsx)(hW, {
+          header: OW("controller:tutorialInventory"),
           noaAction: "OpenInventory"
-        }), (0, WB.jsx)(kB, {
-          header: GB("controller:tutorialPause"),
+        }), (0, MW.jsx)(hW, {
+          header: OW("controller:tutorialPause"),
           noaAction: "OpenSettings"
         })]
       })
     }
 
-    function kB(BB) {
+    function hW(WW) {
       let {
-        header: OB,
-        noaAction: GB
-      } = BB;
-      return (0, WB.jsxs)("div", {
+        header: iW,
+        noaAction: OW
+      } = WW;
+      return (0, MW.jsxs)("div", {
         className: "KeyControlDiv",
-        children: [(0, WB.jsx)("div", {
+        children: [(0, MW.jsx)("div", {
           className: "KeyHeader",
-          children: OB
-        }), (0, WB.jsx)(pB.c, {
-          noaAction: GB
+          children: iW
+        }), (0, MW.jsx)(AW.e, {
+          noaAction: OW
         })]
       })
     }
 
-    function dB(BB) {
+    function HW(WW) {
       let {
-        showingMovementControls: OB
-      } = BB;
+        showingMovementControls: iW
+      } = WW;
       const {
-        isTouchScreen: GB
-      } = (0, lB.o)(["isTouchScreen"]), DB = (0, qB.s)(), QB = (0, NB.b)("OpenShop"), [oB, jB] = (0, YB.useState)(!1), pB = `SeenShopControls|${(0,zB.f)("connectedGame",(BB=>BB.gameNameWithVariation))}`, RB = () => (!(0, qB.j)() || null !== (0, ZB.c)("OpenShop")) && !PB.g.getItem(pB) && MB.e.get("shopInfo") && !OB, AB = () => (jB(!0), PB.g.setItem(pB, !0), (0, qB.j)() || JB.o.tM("showShopTouchTutorial"), setTimeout((() => {
-        jB(!1)
+        isTouchScreen: OW
+      } = (0, lW.p)(["isTouchScreen"]), EW = (0, bW.x)(), NW = (0, UW.c)("OpenShop"), [PW, LW] = (0, mW.useState)(!1), AW = `SeenShopControls|${(0,xW.f)("connectedGame",(WW=>WW.gameNameWithVariation))}`, kW = () => (!(0, bW.k)() || null !== (0, jW.c)("OpenShop")) && !ZW.i.getItem(AW) && tW.d.get("shopInfo") && !iW, sW = () => (LW(!0), ZW.i.setItem(AW, !0), (0, bW.k)() || wW.l.iZ("showShopTouchTutorial"), setTimeout((() => {
+        LW(!1)
       }), 7e3));
-      (0, YB.useEffect)((() => {
-        let BB;
-        const OB = JB.o.subscribe("showShopTutorial", (() => {
-          RB() && (BB = AB())
+      (0, mW.useEffect)((() => {
+        let WW;
+        const iW = wW.l.subscribe("showShopTutorial", (() => {
+          kW() && (WW = sW())
         }));
         return () => {
-          clearTimeout(BB), JB.o.unsubscribe(OB)
+          clearTimeout(WW), wW.l.unsubscribe(iW)
         }
-      }), [OB]);
-      const VB = (0, YB.useRef)();
-      return (0, yB.f)("currencyAmounts", (BB => {
-        if (RB()) {
-          let GB = !1;
-          const YB = MB.e.get("shopInfo");
-          for (const DB in YB) {
-            for (const QB in YB[DB].items) {
-              var OB;
-              const oB = YB[DB].items[QB];
-              if (void 0 !== oB.currency && BB[oB.currency] && oB.cost <= BB[oB.currency].amount && (null === (OB = oB.hidden) || void 0 === OB || !OB)) {
-                GB = !0;
+      }), [iW]);
+      const KW = (0, mW.useRef)();
+      return (0, cW.d)("currencyAmounts", (WW => {
+        if (kW()) {
+          let OW = !1;
+          const mW = tW.d.get("shopInfo");
+          for (const EW in mW) {
+            for (const NW in mW[EW].items) {
+              var iW;
+              const PW = mW[EW].items[NW];
+              if (void 0 !== PW.currency && WW[PW.currency] && PW.cost <= WW[PW.currency].amount && (null === (iW = PW.hidden) || void 0 === iW || !iW)) {
+                OW = !0;
                 break
               }
             }
-            if (GB) break
+            if (OW) break
           }
-          GB && (VB.current = AB())
+          OW && (KW.current = sW())
         }
-      })), (0, YB.useEffect)((() => () => {
-        clearTimeout(VB.current)
-      }), [OB]), !oB || DB && !QB ? null : (0, WB.jsx)("div", {
+      })), (0, mW.useEffect)((() => () => {
+        clearTimeout(KW.current)
+      }), [iW]), !PW || EW && !NW ? null : (0, MW.jsx)("div", {
         className: "ControlsTutorialDiv",
-        children: GB && !DB ? null : (0, WB.jsx)(kB, {
+        children: OW && !EW ? null : (0, MW.jsx)(hW, {
           header: "Shop",
           noaAction: "OpenShop"
         })
       })
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function QB(BB) {
+    function NW(WW) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  37367: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB,
-      i: () => oB,
-      k: () => jB,
-      n: () => yB
+  37763: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW,
+      c: () => LW,
+      f: () => wW
     });
-    var YB = GB(56),
-      DB = GB(3528);
-    const QB = 8,
-      oB = "InGameHeaderContainer",
-      jB = "TopRightElements";
+    var mW = OW(62);
+    const EW = new Set,
+      NW = new Set;
 
-    function yB(BB) {
-      const [OB] = (0, DB.e)(), [GB, yB] = (0, YB.useState)(!1);
-      return (0, YB.useLayoutEffect)((() => {
-        if (!BB) return;
-        const OB = document.querySelector(`.${oB}`),
-          GB = document.querySelector(`.${jB}`),
-          YB = () => {
-            const YB = BB.getBoundingClientRect(),
-              DB = OB ? OB.getBoundingClientRect().right : 0,
-              oB = GB ? GB.getBoundingClientRect().left : window.innerWidth,
-              jB = YB.left < DB + QB,
-              JB = YB.right > oB - QB;
-            yB(jB || JB)
-          };
-        YB();
-        const DB = new ResizeObserver(YB);
-        return DB.observe(BB), OB && DB.observe(OB), GB && DB.observe(GB), () => {
-          DB.disconnect()
+    function PW() {
+      for (const WW of NW) WW()
+    }
+
+    function LW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      (0, mW.useEffect)((() => WW ? function() {
+        const WW = {
+          element: arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null
+        };
+        return EW.add(WW), PW(), () => {
+          EW.delete(WW) && PW()
         }
-      }), [BB, OB]), GB
+      }(iW) : void 0), [WW, iW]), (0, mW.useEffect)((() => {
+        WW && PW()
+      }), [WW, OW])
+    }
+
+    function cW() {
+      const WW = [];
+      for (const {
+          element: OW
+        }
+        of EW) {
+        var iW;
+        if (null === OW) return {
+          anywhere: !0,
+          boxes: []
+        };
+        const mW = null === (iW = OW.current) || void 0 === iW ? void 0 : iW.getBoundingClientRect();
+        mW && mW.width > 0 && WW.push(mW)
+      }
+      return {
+        anywhere: !1,
+        boxes: WW
+      }
+    }
+
+    function wW(WW) {
+      return NW.add(WW), () => {
+        NW.delete(WW)
+      }
     }
   },
-  40167: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => oB,
-      i: () => DB,
-      k: () => QB
+  37919: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW,
+      e: () => cW,
+      h: () => wW,
+      i: () => tW,
+      j: () => AW
     });
-    var YB = GB(56);
+    var mW = OW(62),
+      EW = OW(4275),
+      NW = OW(3457),
+      PW = OW(27);
+    const LW = 8,
+      cW = "InGameHeaderContainer",
+      wW = "TopRightElements";
 
-    function DB(BB) {
-      return jB(BB, yB)
+    function tW(WW) {
+      const [iW] = (0, EW.d)(), [OW, NW] = (0, mW.useState)(!1);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const iW = document.querySelector(`.${cW}`),
+          OW = document.querySelector(`.${wW}`),
+          mW = () => {
+            const mW = WW.getBoundingClientRect(),
+              EW = iW ? iW.getBoundingClientRect().right : 0,
+              PW = OW ? OW.getBoundingClientRect().left : window.innerWidth,
+              cW = mW.left < EW + LW,
+              wW = mW.right > PW - LW;
+            NW(cW || wW)
+          };
+        mW();
+        const EW = new ResizeObserver(mW);
+        return EW.observe(WW), iW && EW.observe(iW), OW && EW.observe(OW), () => {
+          EW.disconnect()
+        }
+      }), [WW, iW]), OW
+    }
+    const ZW = `.InGameUi .${cW}`,
+      xW = [ZW, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      lW = 1e3;
+
+    function AW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW,
+        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [EW, cW] = (0, mW.useState)(null);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const mW = new ResizeObserver((() => {
+          wW()
+        }));
+        mW.observe(WW), iW && iW !== WW && mW.observe(iW);
+        let EW = [];
+
+        function wW() {
+          var NW, PW, wW;
+          const tW = WW.getBoundingClientRect(),
+            lW = function() {
+              const WW = xW.map((WW => document.querySelector(WW))).filter((WW => null !== WW));
+              for (const iW of WW) EW.includes(iW) || mW.observe(iW);
+              for (const iW of EW) WW.includes(iW) || mW.unobserve(iW);
+              return EW = WW, WW
+            }(),
+            AW = lW.filter((WW => {
+              const iW = WW.getBoundingClientRect();
+              return iW.width > 0 && iW.height > 0 && tW.left < iW.right + LW && tW.right > iW.left - LW
+            }));
+          if (0 === AW.length && !OW) return void cW(null);
+          const bW = lW.find((WW => WW.matches(ZW))),
+            jW = Math.max(null !== (NW = null === bW || void 0 === bW ? void 0 : bW.getBoundingClientRect().bottom) && void 0 !== NW ? NW : 0, ...AW.map((WW => WW.getBoundingClientRect().bottom))),
+            UW = null !== (PW = null === iW || void 0 === iW || null === (wW = iW.offsetParent) || void 0 === wW ? void 0 : wW.getBoundingClientRect().top) && void 0 !== PW ? PW : 0;
+          cW(Math.ceil(jW + LW / 2) - Math.round(UW))
+        }
+        const tW = setInterval(wW, lW);
+        wW(), window.addEventListener("resize", wW);
+        const AW = (0, PW.n)(NW.d, wW);
+        return () => {
+          mW.disconnect(), clearInterval(tW), window.removeEventListener("resize", wW), AW()
+        }
+      }), [WW, iW, OW]), EW
+    }
+  },
+  37888: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      e: () => EW,
+      f: () => NW
+    });
+    var mW = OW(62);
+
+    function EW(WW) {
+      return LW(WW, cW)
     }
 
-    function QB(BB) {
-      return jB(BB, JB)
+    function NW(WW) {
+      return LW(WW, wW)
     }
 
-    function oB(BB) {
-      return `${Math.floor(BB/60)}:${String(BB%60).padStart(2,"0")}`
+    function PW(WW) {
+      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
     }
 
-    function jB(BB, OB) {
-      const [, GB] = (0, YB.useState)(null);
-      return (0, YB.useEffect)((() => {
-        if (0 === BB) return;
-        const YB = window.setInterval((() => {
-          const YB = OB(BB);
-          GB((OB => (null === OB || void 0 === OB ? void 0 : OB.endsAt) === BB && OB.value === YB ? OB : {
-            endsAt: BB,
-            value: YB
+    function LW(WW, iW) {
+      const [, OW] = (0, mW.useState)(null);
+      return (0, mW.useEffect)((() => {
+        if (0 === WW) return;
+        const mW = window.setInterval((() => {
+          const mW = iW(WW);
+          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
+            endsAt: WW,
+            value: mW
           }))
         }), 250);
         return () => {
-          window.clearInterval(YB)
+          window.clearInterval(mW)
         }
-      }), [BB, OB]), OB(BB)
+      }), [WW, iW]), iW(WW)
     }
 
-    function yB(BB) {
-      return (BB - performance.now()) / 1e3
+    function cW(WW) {
+      return (WW - performance.now()) / 1e3
     }
 
-    function JB(BB) {
-      return Math.max(0, Math.ceil(yB(BB)))
+    function wW(WW) {
+      return Math.max(0, Math.ceil(cW(WW)))
     }
   },
-  9485: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => jB,
-      d: () => JB,
-      f: () => PB,
-      h: () => MB,
-      j: () => yB,
-      l: () => lB
+  10049: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => LW,
+      e: () => wW,
+      i: () => ZW,
+      l: () => tW,
+      p: () => cW,
+      q: () => lW
     });
-    var YB = GB(25),
-      DB = GB(2117),
-      QB = GB(1450),
-      oB = GB(1434);
-    const jB = BB => {
-        var OB, GB;
-        return (0, oB.j)() && null !== (OB = null === (GB = (0, QB.f)()) || void 0 === GB ? void 0 : GB.getGlyphForNoaAction(BB)) && void 0 !== OB ? OB : null
+    var mW = OW(27),
+      EW = OW(2111),
+      NW = OW(1479),
+      PW = OW(1459);
+    const LW = WW => {
+        var iW, OW;
+        return (0, PW.k)() && null !== (iW = null === (OW = (0, NW.h)()) || void 0 === OW ? void 0 : OW.getGlyphForNoaAction(WW)) && void 0 !== iW ? iW : null
       },
-      yB = "controllerGlyph:",
-      JB = BB => {
-        var OB, GB;
-        return null !== (OB = null === (GB = (0, QB.f)()) || void 0 === GB ? void 0 : GB.getPadGlyphIconName(BB)) && void 0 !== OB ? OB : `${yB}xbox/${BB}`
+      cW = "controllerGlyph:",
+      wW = WW => {
+        var iW, OW;
+        return null !== (iW = null === (OW = (0, NW.h)()) || void 0 === OW ? void 0 : OW.getPadGlyphIconName(WW)) && void 0 !== iW ? iW : `${cW}xbox/${WW}`
       },
-      MB = BB => BB.startsWith(yB),
-      PB = BB => {
-        var OB, GB;
-        return MB(BB) && null !== (OB = null === (GB = (0, QB.f)()) || void 0 === GB ? void 0 : GB.getPadGlyphIconUrl(BB)) && void 0 !== OB ? OB : null
+      tW = WW => WW.startsWith(cW),
+      ZW = WW => {
+        var iW, OW;
+        return tW(WW) && null !== (iW = null === (OW = (0, NW.h)()) || void 0 === OW ? void 0 : OW.getPadGlyphIconUrl(WW)) && void 0 !== iW ? iW : null
       },
-      zB = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", oB.d, DB.h, DB.e],
-      lB = BB => {
-        const OB = zB.map((OB => YB.o.subscribe(OB, BB)));
+      xW = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", PW.d, EW.e, EW.b],
+      lW = WW => {
+        const iW = xW.map((iW => mW.l.subscribe(iW, WW)));
         return () => {
-          for (const BB of OB) YB.o.unsubscribe(BB)
+          for (const WW of iW) mW.l.unsubscribe(WW)
         }
       }
   },
-  9391: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
     });
-    let YB = null;
-    const DB = function(BB) {
-        const OB = {
-          cycle: BB,
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return YB = OB, () => {
-          YB === OB && (YB = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      QB = () => {
-        var BB;
-        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  39226: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
+  39775: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW
     });
-    const YB = 4,
-      DB = 12e3,
-      QB = 1e3;
-    class oB {
+    const mW = 4,
+      EW = 12e3,
+      NW = 1e3;
+    class PW {
       constructor() {
         let {
-          limit: BB = YB,
-          windowMs: OB = DB,
-          spacingMs: GB = QB,
-          now: oB = Date.now
+          limit: WW = mW,
+          windowMs: iW = EW,
+          spacingMs: OW = NW,
+          now: PW = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = BB, this.windowMs = OB, this.spacingMs = GB, this.now = oB
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = WW, this.windowMs = iW, this.spacingMs = OW, this.now = PW
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -485,247 +592,98 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const BB of this.priority) BB.flush();
+        for (const WW of this.priority) WW.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const BB = this.now();
-        this.sent.push(BB), this.lastSentAt = BB, this.schedule(), this.notify()
+        const WW = this.now();
+        this.sent.push(WW), this.lastSentAt = WW, this.schedule(), this.notify()
       }
-      addPriority(BB) {
-        return this.priority.add(BB), () => {
-          this.priority.delete(BB)
+      addPriority(WW) {
+        return this.priority.add(WW), () => {
+          this.priority.delete(WW)
         }
       }
-      subscribe(BB) {
-        return this.listeners.add(BB), () => {
-          this.listeners.delete(BB)
+      subscribe(WW) {
+        return this.listeners.add(WW), () => {
+          this.listeners.delete(WW)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const BB of this.priority)
-          if (BB.waiting()) return !0;
+        for (const WW of this.priority)
+          if (WW.waiting()) return !0;
         return !1
       }
       prune() {
-        const BB = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= BB;) this.sent.shift()
+        const WW = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= WW;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const BB = this.now(),
-          OB = this.lastSentAt + this.spacingMs,
-          GB = Math.min(OB > BB ? OB : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        GB !== 1 / 0 && (this.timer = setTimeout((() => {
+        const WW = this.now(),
+          iW = this.lastSentAt + this.spacingMs,
+          OW = Math.min(iW > WW ? iW : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        OW !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, GB - BB)))
+        }), Math.max(0, OW - WW)))
       }
       notify() {
-        for (const BB of this.listeners) BB()
+        for (const WW of this.listeners) WW()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  37270: (BB, OB, GB) => {
-    GB.d(OB, {
-      D: () => pB,
-      G: () => RB,
-      e: () => QB,
-      i: () => qB,
-      l: () => ZB,
-      m: () => jB,
-      q: () => zB,
-      u: () => NB,
-      y: () => PB,
-      z: () => WB
+  40888: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => HO
     });
-    var YB = GB(16),
-      DB = GB(25);
-    const QB = "clientGameInventoryButtonsChanged",
-      oB = new Map;
+    var mW = OW(182);
+    const EW = ["gingerbreadLane", "toyRow", "iceRink", "carousel", "greatTree", "cocoaCorner", "lanternWalk", "marketGate", "santasGrotto"];
+    var NW = OW(62),
+      PW = OW(3361),
+      LW = OW(1089),
+      cW = OW.n(LW),
+      wW = OW(25),
+      tW = OW(1459),
+      ZW = OW(39),
+      xW = OW(1172),
+      lW = OW(37761),
+      AW = OW(1526),
+      bW = OW(27);
+    var jW = OW(39726),
+      UW = OW(39722);
+    const kW = 2 * Math.PI * 17;
 
-    function jB() {
-      return [...oB.values()].sort(((BB, OB) => {
-        var GB, YB;
-        return (null !== (GB = BB.order) && void 0 !== GB ? GB : 0) - (null !== (YB = OB.order) && void 0 !== YB ? YB : 0)
-      }))
-    }
-    let yB = null;
-
-    function JB(BB) {
-      yB = BB
-    }
-    let MB = !1;
-
-    function PB(BB) {
-      MB = !0;
-      try {
-        BB.onClick()
-      } finally {
-        MB = !1
-      }
-      BB.panel && "clientGame" === YB.c.get("openInGameMenuName") && JB(BB.id)
-    }
-
-    function zB() {
-      return MB
-    }
-
-    function lB() {
-      return jB().filter((BB => BB.panel && !BB.disabled))
-    }
-
-    function pB(BB) {
-      const OB = lB(),
-        GB = OB.findIndex((BB => BB.id === yB));
-      return !(GB < 0 || OB.length < 2) && (PB(OB[(GB + BB + OB.length) % OB.length]), !0)
-    }
-
-    function qB() {
-      return null !== yB && lB().length > 1
-    }
-
-    function ZB() {
-      JB(null)
-    }
-
-    function NB() {
-      "inventory" !== YB.c.get("openInGameMenuName") && JB(null)
-    }
-
-    function RB() {
-      const BB = yB;
-      return JB(null), BB
-    }
-
-    function WB(BB) {
-      return oB.set(BB.id, BB), DB.o.tM(QB, jB(), !0), () => {
-        oB.get(BB.id) === BB && (oB.delete(BB.id), DB.o.tM(QB, jB()))
-      }
-    }
-  },
-  37267: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      f: () => RB,
-      g: () => ZB,
-      i: () => NB,
-      m: () => zB,
-      n: () => JB,
-      o: () => qB,
-      r: () => lB,
-      s: () => MB
-    });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(37270);
-    const jB = "clientGameUiChanged";
-    let yB = null;
-
-    function JB() {
-      return yB
-    }
-
-    function MB(BB, OB) {
-      const GB = {
-        content: BB,
-        menu: OB
-      };
-      return yB = GB, DB.o.tM(jB, yB, !0), () => {
-        yB === GB && (yB = null, pB = !1, ZB(), DB.o.tM(jB, null))
-      }
-    }
-    let PB = null;
-
-    function zB() {
-      return PB
-    }
-
-    function lB(BB) {
-      return PB = BB, () => {
-        PB === BB && (PB = null)
-      }
-    }
-    let pB = !1;
-
-    function qB() {
-      const BB = YB.c.get("openInGameMenuName");
-      "clientGame" !== BB && (pB = "inventory" === BB), (0, oB.q)() || (0, oB.l)(), (0, QB.p)(QB.b), YB.c.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function ZB() {
-      WB(!1)
-    }
-
-    function NB() {
-      WB(pB)
-    }
-
-    function RB() {
-      pB && WB(!1)
-    }
-
-    function WB(BB) {
-      "clientGame" === YB.c.get("openInGameMenuName") && YB.c.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, oB.l)(), pB = !1
-    }
-  },
-  40312: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => UG
-    });
-    var YB = GB(192);
-    const DB = ["gingerbreadLane", "toyRow", "iceRink", "carousel", "greatTree", "cocoaCorner", "lanternWalk", "marketGate", "santasGrotto"];
-    var QB = GB(56),
-      oB = GB(37267),
-      jB = GB(1090),
-      yB = GB.n(jB),
-      JB = GB(16),
-      MB = GB(1434),
-      PB = GB(31),
-      zB = GB(1175),
-      lB = GB(37180),
-      pB = GB(1480),
-      qB = GB(25);
-    var ZB = GB(39193),
-      NB = GB(39189);
-    const RB = 2 * Math.PI * 17;
-
-    function WB(BB, OB, GB) {
+    function sW(WW, iW, OW) {
       const {
-        santaMarketMinX: YB,
-        santaMarketMinZ: DB,
-        santaMarketSize: QB
-      } = BB;
-      return (0, NB.c)(OB, GB, {
-        mapMinX: YB,
-        mapMaxX: YB + QB,
-        mapMinZ: DB,
-        mapMaxZ: DB + QB
+        santaMarketMinX: mW,
+        santaMarketMinZ: EW,
+        santaMarketSize: NW
+      } = WW;
+      return (0, UW.e)(iW, OW, {
+        mapMinX: mW,
+        mapMaxX: mW + NW,
+        mapMinZ: EW,
+        mapMaxZ: EW + NW
       })
     }
 
-    function AB(BB, OB, GB) {
-      return function(BB, OB, GB, YB, DB) {
-        const QB = GB / 3,
-          oB = BB => Math.min(2, Math.max(0, Math.floor(BB / QB)));
-        return 3 * oB(DB - OB) + 2 - oB(YB - BB)
-      }(BB.santaMarketMinX, BB.santaMarketMinZ, BB.santaMarketSize, OB, GB)
+    function MW(WW, iW, OW) {
+      return function(WW, iW, OW, mW, EW) {
+        const NW = OW / 3,
+          PW = WW => Math.min(2, Math.max(0, Math.floor(WW / NW)));
+        return 3 * PW(EW - iW) + 2 - PW(mW - WW)
+      }(WW.santaMarketMinX, WW.santaMarketMinZ, WW.santaMarketSize, iW, OW)
     }
-    const VB = "secretSantaDistrictEntered",
-      SB = "data-here";
-    class nB {
+    const KW = "secretSantaDistrictEntered",
+      SW = "data-here";
+    class YW {
       constructor() {
         this.here = -1, this.lastLeft = 0, this.lastTop = 0, this.lastAt = 0, this.drawnHere = -1, this.drawnCell = null, this.bannerAt = [], this.banner = null, this.bannerSeq = 0
       }
@@ -738,110 +696,137 @@ export const modules = {
       getBanner() {
         return this.banner && performance.now() - this.banner.at < 2200 ? this.banner : null
       }
-      update(BB, OB, GB, YB, DB) {
-        const QB = performance.now(),
-          oB = 100 / BB.santaMarketSize,
-          jB = 4 + .008 * Math.min(1e3, QB - this.lastAt),
-          yB = Math.hypot(OB - this.lastLeft, GB - this.lastTop) > jB * oB;
-        this.lastLeft = OB, this.lastTop = GB, this.lastAt = QB;
-        const JB = yB ? -1 : this.here,
-          MB = function(BB, OB, GB, YB, DB) {
-            if (BB >= 0) {
-              const OB = 100 / 3,
-                QB = BB % 3 * OB,
-                oB = Math.floor(BB / 3) * OB;
-              if (GB >= QB - DB && GB <= QB + OB + DB && YB >= oB - DB && YB <= oB + OB + DB) return BB
+      update(WW, iW, OW, mW, EW) {
+        const NW = performance.now(),
+          PW = 100 / WW.santaMarketSize,
+          LW = 4 + .008 * Math.min(1e3, NW - this.lastAt),
+          cW = Math.hypot(iW - this.lastLeft, OW - this.lastTop) > LW * PW;
+        this.lastLeft = iW, this.lastTop = OW, this.lastAt = NW;
+        const wW = cW ? -1 : this.here,
+          tW = function(WW, iW, OW, mW, EW) {
+            if (WW >= 0) {
+              const iW = 100 / 3,
+                NW = WW % 3 * iW,
+                PW = Math.floor(WW / 3) * iW;
+              if (OW >= NW - EW && OW <= NW + iW + EW && mW >= PW - EW && mW <= PW + iW + EW) return WW
             }
-            return OB
-          }(JB, YB, OB, GB, 1.5 * oB);
-        if (MB !== this.here) {
-          var PB, zB;
-          this.here = MB;
-          const OB = BB.santaMarketDistricts[MB];
-          JB >= 0 && QB - (null !== (PB = this.bannerAt[MB]) && void 0 !== PB ? PB : -1 / 0) >= 8e3 ? (this.bannerAt[MB] = QB, this.bannerSeq++, this.setBanner({
-            key: OB,
+            return iW
+          }(wW, mW, iW, OW, 1.5 * PW);
+        if (tW !== this.here) {
+          var ZW, xW;
+          this.here = tW;
+          const iW = WW.santaMarketDistricts[tW];
+          wW >= 0 && NW - (null !== (ZW = this.bannerAt[tW]) && void 0 !== ZW ? ZW : -1 / 0) >= 8e3 ? (this.bannerAt[tW] = NW, this.bannerSeq++, this.setBanner({
+            key: iW,
             seq: this.bannerSeq,
-            at: QB
-          })) : (null === (zB = this.getBanner()) || void 0 === zB ? void 0 : zB.key) !== OB && this.setBanner(null)
+            at: NW
+          })) : (null === (xW = this.getBanner()) || void 0 === xW ? void 0 : xW.key) !== iW && this.setBanner(null)
         }
-        var lB, pB;
-        this.here !== this.drawnHere && (null === (lB = this.drawnCell) || void 0 === lB || lB.removeAttribute(SB), this.drawnCell = DB.querySelector(`[data-district="${this.here}"]`), null === (pB = this.drawnCell) || void 0 === pB || pB.setAttribute(SB, ""), this.drawnHere = this.here)
+        var lW, AW;
+        this.here !== this.drawnHere && (null === (lW = this.drawnCell) || void 0 === lW || lW.removeAttribute(SW), this.drawnCell = EW.querySelector(`[data-district="${this.here}"]`), null === (AW = this.drawnCell) || void 0 === AW || AW.setAttribute(SW, ""), this.drawnHere = this.here)
       }
       dispose() {
         this.unbind(), this.reset()
       }
-      setBanner(BB) {
-        null === BB && null === this.banner || (this.banner = BB, qB.o.tM(VB, BB))
+      setBanner(WW) {
+        null === WW && null === this.banner || (this.banner = WW, bW.l.iZ(KW, WW))
       }
     }
-    class UB {
+    class yW {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.at = WW, this.minSpanMs = iW, this.element = null, this.animation = null
+      }
+      bind(WW, iW, OW) {
+        this.element = WW, this.run(iW, OW)
+      }
+      run(WW) {
+        var iW;
+        let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e4;
+        if (null === (iW = this.animation) || void 0 === iW || iW.cancel(), this.animation = null, !this.element || null === WW) return;
+        const mW = Math.max(1, OW, this.minSpanMs),
+          EW = mW - OW,
+          NW = WW => Math.max(0, Math.min(1, WW / mW));
+        this.animation = this.element.animate([this.at(NW(Math.max(0, WW) + EW)), this.at(NW(EW))], {
+          duration: Math.max(1, WW),
+          fill: "forwards"
+        })
+      }
+    }
+
+    function TW() {
+      return new yW((WW => ({
+        opacity: .5 + .5 * WW
+      })), 5e3)
+    }
+    class JW {
       constructor() {
         this.state = "idle", this.ownRing = !1, this.faded = !1, this.lastPressAt = -1 / 0, this.predictedAt = 0, this.timedOutPressAt = null, this.cooldownUntil = 0, this.averageRoundTrip = null, this.recentRoundTrips = []
       }
-      press(BB, OB, GB) {
-        var YB, DB;
-        this.forgetOldRoundTrips(BB);
-        const QB = BB - this.lastPressAt;
-        if (this.lastPressAt = BB, QB < this.quietMs() || this.awaitingTimedOut(BB) || "idle" !== this.state || GB || BB < this.cooldownUntil || null === OB) return 0;
-        const oB = Math.max(0, OB.awaySpeed) * ((null !== (YB = this.averageRoundTrip) && void 0 !== YB ? YB : 300) / 1e3);
-        return OB.distance + oB > 3.5 ? 0 : (this.state = "predicted", this.predictedAt = BB, this.ownRing = !0, this.faded = !1, 500 + (null !== (DB = this.averageRoundTrip) && void 0 !== DB ? DB : 0))
+      press(WW, iW, OW) {
+        var mW, EW;
+        this.forgetOldRoundTrips(WW);
+        const NW = WW - this.lastPressAt;
+        if (this.lastPressAt = WW, NW < this.quietMs() || this.awaitingTimedOut(WW) || "idle" !== this.state || OW || WW < this.cooldownUntil || null === iW) return 0;
+        const PW = Math.max(0, iW.awaySpeed) * ((null !== (mW = this.averageRoundTrip) && void 0 !== mW ? mW : 300) / 1e3);
+        return iW.distance + PW > 3.5 ? 0 : (this.state = "predicted", this.predictedAt = WW, this.ownRing = !0, this.faded = !1, 500 + (null !== (EW = this.averageRoundTrip) && void 0 !== EW ? EW : 0))
       }
-      turnedAway(BB, OB, GB) {
-        if (!this.mayTurnAway(BB)) return !1;
-        const YB = 4.6 * (this.averageRoundTrip + 150) / 1e3;
-        return !(OB <= 40 + (YB >= GB ? 180 : 180 * Math.asin(YB / GB) / Math.PI) && GB <= 5 + Math.max(.5, YB)) && (this.faded = !0, !0)
+      turnedAway(WW, iW, OW) {
+        if (!this.mayTurnAway(WW)) return !1;
+        const mW = 4.6 * (this.averageRoundTrip + 150) / 1e3;
+        return !(iW <= 40 + (mW >= OW ? 180 : 180 * Math.asin(mW / OW) / Math.PI) && OW <= 5 + Math.max(.5, mW)) && (this.faded = !0, !0)
       }
-      mayTurnAway(BB) {
-        return null !== this.averageRoundTrip && "idle" !== this.state && this.ownRing && !this.faded && BB - this.predictedAt <= 350
+      mayTurnAway(WW) {
+        return null !== this.averageRoundTrip && "idle" !== this.state && this.ownRing && !this.faded && WW - this.predictedAt <= 350
       }
-      nP(BB, OB, GB) {
-        const YB = OB > 0 || !GB,
-          DB = "predicted" === this.state;
-        return GB && (this.cooldownUntil = BB + 1e3), YB && DB ? this.learnRoundTrip(BB, BB - this.predictedAt) : YB && this.awaitingTimedOut(BB) && (this.timedOutPressAt = null), OB > 0 ? (this.state = "confirmed", DB ? null : (this.ownRing = !1, this.faded = !1, {
+      yZ(WW, iW, OW) {
+        const mW = iW > 0 || !OW,
+          EW = "predicted" === this.state;
+        return OW && (this.cooldownUntil = WW + 1e3), mW && EW ? this.learnRoundTrip(WW, WW - this.predictedAt) : mW && this.awaitingTimedOut(WW) && (this.timedOutPressAt = null), iW > 0 ? (this.state = "confirmed", EW ? null : (this.ownRing = !1, this.faded = !1, {
           kind: "start",
-          ms: OB
-        })) : "idle" === this.state ? null : (this.state = "idle", this.faded && !GB ? null : {
+          ms: iW
+        })) : "idle" === this.state ? null : (this.state = "idle", this.faded && !OW ? null : {
           kind: "end",
-          done: GB
+          done: OW
         })
       }
-      expired(BB) {
-        var OB;
-        return !("predicted" !== this.state || BB - this.predictedAt < 1200 + (null !== (OB = this.averageRoundTrip) && void 0 !== OB ? OB : 0)) && (this.state = "idle", this.timedOutPressAt = this.predictedAt, this.learnRoundTrip(BB, BB - this.predictedAt), !this.faded)
+      expired(WW) {
+        var iW;
+        return !("predicted" !== this.state || WW - this.predictedAt < 1200 + (null !== (iW = this.averageRoundTrip) && void 0 !== iW ? iW : 0)) && (this.state = "idle", this.timedOutPressAt = this.predictedAt, this.learnRoundTrip(WW, WW - this.predictedAt), !this.faded)
       }
       stop() {
         this.state = "idle", this.cooldownUntil = 0, this.timedOutPressAt = null
       }
       quietMs() {
-        var BB;
-        const OB = this.recentRoundTrips.reduce(((BB, OB) => {
+        var WW;
+        const iW = this.recentRoundTrips.reduce(((WW, iW) => {
           let {
-            ms: GB
-          } = OB;
-          return Math.max(BB, GB)
-        }), null !== (BB = this.averageRoundTrip) && void 0 !== BB ? BB : 0);
-        return Math.max(300, OB > 0 ? 1.5 * OB + 300 : 1e3)
+            ms: OW
+          } = iW;
+          return Math.max(WW, OW)
+        }), null !== (WW = this.averageRoundTrip) && void 0 !== WW ? WW : 0);
+        return Math.max(300, iW > 0 ? 1.5 * iW + 300 : 1e3)
       }
-      awaitingTimedOut(BB) {
-        return null !== this.timedOutPressAt && BB - this.timedOutPressAt >= 3500 && (this.timedOutPressAt = null), null !== this.timedOutPressAt
+      awaitingTimedOut(WW) {
+        return null !== this.timedOutPressAt && WW - this.timedOutPressAt >= 3500 && (this.timedOutPressAt = null), null !== this.timedOutPressAt
       }
-      forgetOldRoundTrips(BB) {
-        for (; this.recentRoundTrips.length > 0 && BB - this.recentRoundTrips[0].at > 3e4;) this.recentRoundTrips.shift()
+      forgetOldRoundTrips(WW) {
+        for (; this.recentRoundTrips.length > 0 && WW - this.recentRoundTrips[0].at > 3e4;) this.recentRoundTrips.shift()
       }
-      learnRoundTrip(BB, OB) {
-        const GB = Math.min(2e3, Math.max(0, OB));
-        this.averageRoundTrip = null === this.averageRoundTrip ? GB : this.averageRoundTrip + .3 * (GB - this.averageRoundTrip), this.recentRoundTrips.push({
-          at: BB,
-          ms: GB
+      learnRoundTrip(WW, iW) {
+        const OW = Math.min(2e3, Math.max(0, iW));
+        this.averageRoundTrip = null === this.averageRoundTrip ? OW : this.averageRoundTrip + .3 * (OW - this.averageRoundTrip), this.recentRoundTrips.push({
+          at: WW,
+          ms: OW
         })
       }
     }
-    const fB = "secretSantaHudChanged",
-      kB = "SecretSantaHudShown",
-      dB = "SecretSantaMatchOrFinish",
-      KB = "SecretSantaNaughtyLock",
-      uB = ["Wrapping", "Naughty", "Cancelled"],
-      mB = {
+    const hW = "secretSantaHudChanged",
+      HW = "SecretSantaHudShown",
+      nW = "SecretSantaMatchOrFinish",
+      uW = "SecretSantaNaughtyLock",
+      oW = ["Wrapping", "Naughty", "Cancelled"],
+      dW = {
         shown: !1,
         market: null,
         hint: null,
@@ -853,88 +838,93 @@ export const modules = {
         pulse: 0,
         bells: 0
       };
-    class IB {
-      constructor(BB) {
-        this.onWrapStart = BB, this.view = mB, this.endTimer = null, this.finishEndTimer = null, this.map = null, this.arrow = null, this.countdown = null, this.countdownAnimation = null, this.ring = null, this.ringFill = null, this.ringAnimation = null, this.ringEndAnimation = null, this.flash = null, this.flashAnimation = null, this.wrap = new UB, this.district = new nB, this.drawnArrow = "", this.drawnInCircle = !1, this.bindMap = BB => {
-          this.map = BB, this.drawnInCircle = !1, this.district.unbind()
-        }, this.bindArrow = BB => {
-          this.arrow = BB, this.drawnArrow = ""
-        }, this.bindCountdown = BB => {
-          var OB;
-          null === (OB = this.countdownAnimation) || void 0 === OB || OB.cancel(), this.countdownAnimation = null, this.countdown = BB, this.restartCountdown()
-        }, this.bindRing = BB => {
-          var OB;
-          this.stopRing(), this.ring = BB, this.ringFill = null !== (OB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".SecretSantaRingFill")) && void 0 !== OB ? OB : null;
-          const GB = this.view.naughtyEndsAt - performance.now();
-          BB && GB > 0 && this.runRing("Naughty", GB)
-        }, this.bindFlash = BB => {
-          var OB;
-          null === (OB = this.flashAnimation) || void 0 === OB || OB.cancel(), this.flashAnimation = null, this.flash = BB
+    class eW {
+      constructor(WW) {
+        this.onWrapStart = WW, this.view = dW, this.endTimer = null, this.finishEndTimer = null, this.map = null, this.arrow = null, this.countdown = new yW((WW => ({
+          strokeDashoffset: 1 - WW
+        }))), this.targetGlow = TW(), this.circleFade = TW(), this.targetFreshAt = 0, this.ring = null, this.ringFill = null, this.ringAnimation = null, this.ringEndAnimation = null, this.flash = null, this.flashAnimation = null, this.wrap = new JW, this.district = new YW, this.drawnArrow = "", this.drawnInCircle = !1, this.bindMap = WW => {
+          this.map = WW, this.drawnInCircle = !1, this.district.unbind()
+        }, this.bindArrow = WW => {
+          this.arrow = WW, this.drawnArrow = ""
+        }, this.bindCountdown = WW => {
+          this.countdown.bind(WW, this.hintMsLeft())
+        }, this.bindTargetGlow = WW => {
+          this.targetGlow.bind(WW, this.hintMsLeft(), this.targetFadeMs())
+        }, this.bindCircleFade = WW => {
+          this.circleFade.bind(WW, this.hintMsLeft(), this.targetFadeMs())
+        }, this.bindRing = WW => {
+          var iW;
+          this.stopRing(), this.ring = WW, this.ringFill = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".SecretSantaRingFill")) && void 0 !== iW ? iW : null;
+          const OW = this.view.naughtyEndsAt - performance.now();
+          WW && OW > 0 && this.runRing("Naughty", OW)
+        }, this.bindFlash = WW => {
+          var iW;
+          null === (iW = this.flashAnimation) || void 0 === iW || iW.cancel(), this.flashAnimation = null, this.flash = WW
         }
       }
       getView() {
         return this.view
       }
-      receiveMarket(BB) {
-        this.district.reset(), this.tM({
+      receiveMarket(WW) {
+        this.district.reset(), this.iZ({
           ...this.view,
-          market: BB,
+          market: WW,
           bells: 0
         })
       }
-      receiveBells(BB) {
-        BB !== this.view.bells && this.tM({
+      receiveBells(WW) {
+        WW !== this.view.bells && this.iZ({
           ...this.view,
-          bells: BB
+          bells: WW
         })
       }
-      receiveHint(BB) {
-        const OB = this.view.hint,
-          GB = FB(this.view.nextHintAt, performance.now() + BB.santaHintNextInMs, 1e3),
-          YB = GB > this.view.nextHintAt,
-          DB = !OB || OB.santaHintContract !== BB.santaHintContract || OB.santaHintDistrict !== BB.santaHintDistrict || OB.santaHintCircleX !== BB.santaHintCircleX || OB.santaHintCircleZ !== BB.santaHintCircleZ,
-          QB = "hunting" === BB.santaHintState && (YB || DB) ? this.view.pulse + 1 : this.view.pulse;
-        this.tM({
+      receiveHint(WW) {
+        const iW = this.view.hint,
+          OW = vW(this.view.nextHintAt, performance.now() + WW.santaHintNextInMs, 1e3),
+          mW = OW > this.view.nextHintAt,
+          EW = !iW || iW.santaHintContract !== WW.santaHintContract || iW.santaHintDistrict !== WW.santaHintDistrict || iW.santaHintCircleX !== WW.santaHintCircleX || iW.santaHintCircleZ !== WW.santaHintCircleZ,
+          NW = "hunting" === WW.santaHintState && (mW || EW) ? this.view.pulse + 1 : this.view.pulse;
+        NW !== this.view.pulse && (this.targetFreshAt = performance.now()), this.iZ({
           ...this.view,
-          hint: BB,
-          nextHintAt: GB,
-          pulse: QB
+          hint: WW,
+          nextHintAt: OW,
+          pulse: NW
         }), this.restartCountdown()
       }
-      receiveStatus(BB) {
-        var OB, GB;
-        const YB = performance.now(),
-          DB = FB(this.view.endsAt, YB + BB.santaStatusMsLeft),
-          QB = BB.santaStatusNaughtyMs > 0 ? FB(this.view.naughtyEndsAt, YB + BB.santaStatusNaughtyMs) : 0,
-          oB = 0 !== QB && 0 === this.view.naughtyEndsAt,
-          jB = null !== (OB = BB.santaStatusTreeLitInMs) && void 0 !== OB ? OB : null,
-          yB = null === jB ? 0 : FB(this.view.treeLitAt, YB + jB);
-        this.tM({
+      receiveStatus(WW) {
+        var iW, OW;
+        const mW = performance.now(),
+          EW = vW(this.view.endsAt, mW + WW.santaStatusMsLeft),
+          NW = WW.santaStatusNaughtyMs > 0 ? vW(this.view.naughtyEndsAt, mW + WW.santaStatusNaughtyMs) : 0,
+          PW = 0 !== NW && 0 === this.view.naughtyEndsAt,
+          LW = null !== (iW = WW.santaStatusTreeLitInMs) && void 0 !== iW ? iW : null,
+          cW = null === LW ? 0 : vW(this.view.treeLitAt, mW + LW);
+        this.iZ({
           ...this.view,
-          status: BB,
-          endsAt: DB,
-          naughtyEndsAt: QB,
-          treeLitAt: yB,
-          shown: BB.santaStatusMsLeft > 0
-        }), this.scheduleEnd(DB - YB), oB ? this.runRing("Naughty", BB.santaStatusNaughtyMs) : 0 === QB && null !== (GB = this.ring) && void 0 !== GB && GB.classList.contains("Naughty") && this.stopRing()
+          status: WW,
+          endsAt: EW,
+          naughtyEndsAt: NW,
+          treeLitAt: cW,
+          shown: WW.santaStatusMsLeft > 0
+        }), this.scheduleEnd(EW - mW), PW ? this.runRing("Naughty", WW.santaStatusNaughtyMs) : 0 === NW && null !== (OW = this.ring) && void 0 !== OW && OW.classList.contains("Naughty") && this.stopRing()
       }
-      pressGift(BB, OB) {
+      pressGift(WW, iW) {
         if (!this.view.shown) return !1;
-        const GB = this.wrap.press(BB, OB, this.view.naughtyEndsAt > BB);
-        return GB > 0 && this.startWrapRing(Math.max(1, GB - (performance.now() - BB))), GB > 0
+        const OW = this.wrap.press(WW, iW, this.view.naughtyEndsAt > WW);
+        return OW > 0 && this.startWrapRing(Math.max(1, OW - (performance.now() - WW))), OW > 0
       }
-      aimAtWrap(BB, OB) {
-        const GB = performance.now();
-        return this.wrap.turnedAway(GB, BB, OB) && this.endWrapRing(!1), this.wrap.mayTurnAway(GB)
+      aimAtWrap(WW, iW) {
+        const OW = performance.now();
+        return this.wrap.turnedAway(OW, WW, iW) && this.endWrapRing(!1), this.wrap.mayTurnAway(OW)
       }
-      receiveWrap(BB, OB) {
-        const GB = this.wrap.nP(performance.now(), BB, OB);
-        "start" === (null === GB || void 0 === GB ? void 0 : GB.kind) ? this.startWrapRing(GB.ms): "end" === (null === GB || void 0 === GB ? void 0 : GB.kind) && (GB.done && this.ring && !this.ring.classList.contains("Wrapping") && this.runRing("Wrapping", 1), this.endWrapRing(GB.done))
+      receiveWrap(WW, iW) {
+        const OW = this.wrap.yZ(performance.now(), WW, iW);
+        "start" === (null === OW || void 0 === OW ? void 0 : OW.kind) ? this.startWrapRing(OW.ms): "end" === (null === OW || void 0 === OW ? void 0 : OW.kind) && (OW.done && this.ring && !this.ring.classList.contains("Wrapping") && this.runRing("Wrapping", 1), this.endWrapRing(OW.done))
       }
       snowBlink() {
-        var BB, OB, GB;
-        null === (BB = this.flashAnimation) || void 0 === BB || BB.cancel();
-        this.flashAnimation = null !== (OB = null === (GB = this.flash) || void 0 === GB ? void 0 : GB.animate([{
+        var WW, iW, OW;
+        null === (WW = this.flashAnimation) || void 0 === WW || WW.cancel();
+        this.flashAnimation = null !== (iW = null === (OW = this.flash) || void 0 === OW ? void 0 : OW.animate([{
           opacity: 1
         }, {
           opacity: 1,
@@ -944,41 +934,41 @@ export const modules = {
           opacity: 0
         }], {
           duration: 500
-        })) && void 0 !== OB ? OB : null
+        })) && void 0 !== iW ? iW : null
       }
-      frame(BB, OB) {
+      frame(WW, iW) {
         this.wrap.expired(performance.now()) && this.endWrapRing(!1);
         const {
-          market: GB,
-          hint: YB
+          market: OW,
+          hint: mW
         } = this.view;
-        if (!this.view.shown || !GB || !OB || !this.arrow || !this.map) return;
-        const [DB, QB] = WB(GB, OB[0], OB[2]), oB = Math.min(100, Math.max(0, DB)), jB = Math.min(100, Math.max(0, QB)), yB = Math.min(95, Math.max(5, oB)), JB = Math.min(95, Math.max(5, jB)), MB = Math.round(180 * function(BB) {
-          return BB - ZB.c
-        }(BB) / Math.PI), PB = `${yB.toFixed(1)}% ${JB.toFixed(1)}% ${MB}`;
-        PB !== this.drawnArrow && (this.drawnArrow = PB, this.arrow.style.left = `${yB.toFixed(1)}%`, this.arrow.style.top = `${JB.toFixed(1)}%`, this.arrow.style.transform = `translate(-50%, -50%) rotate(${MB}deg)`), this.district.update(GB, oB, jB, AB(GB, OB[0], OB[2]), this.map);
-        const zB = "hunting" === (null === YB || void 0 === YB ? void 0 : YB.santaHintState) ? YB : null,
-          lB = null !== zB && function(BB, OB) {
-            let [GB, , YB] = OB;
+        if (!this.view.shown || !OW || !iW || !this.arrow || !this.map) return;
+        const [EW, NW] = sW(OW, iW[0], iW[2]), PW = Math.min(100, Math.max(0, EW)), LW = Math.min(100, Math.max(0, NW)), cW = Math.min(95, Math.max(5, PW)), wW = Math.min(95, Math.max(5, LW)), tW = Math.round(180 * function(WW) {
+          return WW - jW.f
+        }(WW) / Math.PI), ZW = `${cW.toFixed(1)}% ${wW.toFixed(1)}% ${tW}`;
+        ZW !== this.drawnArrow && (this.drawnArrow = ZW, this.arrow.style.left = `${cW.toFixed(1)}%`, this.arrow.style.top = `${wW.toFixed(1)}%`, this.arrow.style.transform = `translate(-50%, -50%) rotate(${tW}deg)`), this.district.update(OW, PW, LW, MW(OW, iW[0], iW[2]), this.map);
+        const xW = "hunting" === (null === mW || void 0 === mW ? void 0 : mW.santaHintState) ? mW : null,
+          lW = null !== xW && function(WW, iW) {
+            let [OW, , mW] = iW;
             const {
-              santaHintCircleX: DB,
-              santaHintCircleZ: QB,
-              santaHintCircleR: oB
-            } = BB;
-            return null !== DB && null !== QB && oB > 0 && Math.hypot(GB - DB, YB - QB) <= oB
-          }(zB, OB);
-        lB !== this.drawnInCircle && (this.drawnInCircle = lB, this.map.toggleAttribute("data-in-circle", lB))
+              santaHintCircleX: EW,
+              santaHintCircleZ: NW,
+              santaHintCircleR: PW
+            } = WW;
+            return null !== EW && null !== NW && PW > 0 && Math.hypot(OW - EW, mW - NW) <= PW
+          }(xW, iW);
+        lW !== this.drawnInCircle && (this.drawnInCircle = lW, this.map.toggleAttribute("data-in-circle", lW))
       }
       dispose() {
-        var BB, OB;
-        null !== this.endTimer && (window.clearTimeout(this.endTimer), this.endTimer = null), this.clearFinishEnd(), document.body.classList.remove(dB), null === (BB = this.countdownAnimation) || void 0 === BB || BB.cancel(), this.countdownAnimation = null, this.stopRing(), null === (OB = this.flashAnimation) || void 0 === OB || OB.cancel(), this.flashAnimation = null, this.map = this.arrow = this.ring = this.flash = null, this.countdown = this.ringFill = null, this.district.dispose(), document.body.classList.remove(kB, KB), this.view = mB
+        var WW;
+        null !== this.endTimer && (window.clearTimeout(this.endTimer), this.endTimer = null), this.clearFinishEnd(), document.body.classList.remove(nW), this.countdown.bind(null, null), this.targetGlow.bind(null, null), this.circleFade.bind(null, null), this.stopRing(), null === (WW = this.flashAnimation) || void 0 === WW || WW.cancel(), this.flashAnimation = null, this.map = this.arrow = this.ring = this.flash = null, this.ringFill = null, this.district.dispose(), document.body.classList.remove(HW, uW), this.view = dW
       }
-      tM(BB) {
-        this.view = BB, document.body.classList.toggle(kB, BB.shown), document.body.classList.toggle(KB, BB.shown && 0 !== BB.naughtyEndsAt), BB.shown && (this.clearFinishEnd(), document.body.classList.add(dB)), qB.o.tM(fB, BB, !0)
+      iZ(WW) {
+        this.view = WW, document.body.classList.toggle(HW, WW.shown), document.body.classList.toggle(uW, WW.shown && 0 !== WW.naughtyEndsAt), WW.shown && (this.clearFinishEnd(), document.body.classList.add(nW)), bW.l.iZ(hW, WW, !0)
       }
-      scheduleEnd(BB) {
+      scheduleEnd(WW) {
         null !== this.endTimer && window.clearTimeout(this.endTimer), this.endTimer = window.setTimeout((() => {
-          this.endTimer = null, this.wrap.stop(), this.tM({
+          this.endTimer = null, this.wrap.stop(), this.iZ({
             ...this.view,
             shown: !1,
             endsAt: 0,
@@ -986,181 +976,177 @@ export const modules = {
             treeLitAt: 0,
             bells: 0
           }), this.stopRing(), this.clearFinishEnd(), this.finishEndTimer = window.setTimeout((() => {
-            this.finishEndTimer = null, document.body.classList.remove(dB)
+            this.finishEndTimer = null, document.body.classList.remove(nW)
           }), 13e3)
-        }), BB)
+        }), WW)
       }
       clearFinishEnd() {
         null !== this.finishEndTimer && (window.clearTimeout(this.finishEndTimer), this.finishEndTimer = null)
       }
-      restartCountdown() {
-        var BB, OB;
-        null === (BB = this.countdownAnimation) || void 0 === BB || BB.cancel(), this.countdownAnimation = null;
-        const GB = this.view.nextHintAt - performance.now();
-        if (!this.countdown || "hunting" !== (null === (OB = this.view.hint) || void 0 === OB ? void 0 : OB.santaHintState) || GB <= 0) return;
-        const YB = 1 - Math.min(1, GB / 1e4);
-        this.countdownAnimation = this.countdown.animate([{
-          strokeDashoffset: YB
-        }, {
-          strokeDashoffset: 1
-        }], {
-          duration: GB,
-          fill: "forwards"
-        })
+      targetFadeMs() {
+        return this.view.nextHintAt - this.targetFreshAt
       }
-      runRing(BB, OB) {
+      hintMsLeft() {
+        var WW;
+        return "hunting" === (null === (WW = this.view.hint) || void 0 === WW ? void 0 : WW.santaHintState) ? this.view.nextHintAt - performance.now() : null
+      }
+      restartCountdown() {
+        const WW = this.hintMsLeft();
+        this.countdown.run(WW), this.targetGlow.run(WW, this.targetFadeMs()), this.circleFade.run(WW, this.targetFadeMs())
+      }
+      runRing(WW, iW) {
         if (this.stopRing(), !this.ring || !this.ringFill) return;
-        this.ring.classList.add(BB);
-        const [GB, YB] = "Wrapping" === BB ? [RB, 0] : [0, RB], DB = [{
-          strokeDashoffset: GB
+        this.ring.classList.add(WW);
+        const [OW, mW] = "Wrapping" === WW ? [kW, 0] : [0, kW], EW = [{
+          strokeDashoffset: OW
         }, {
-          strokeDashoffset: YB
-        }], QB = this.ringFill.animate(DB, {
-          duration: OB,
+          strokeDashoffset: mW
+        }], NW = this.ringFill.animate(EW, {
+          duration: iW,
           fill: "forwards"
         });
-        this.ringAnimation = QB, "Naughty" === BB && (QB.onfinish = () => {
-          this.ringAnimation === QB && this.stopRing()
+        this.ringAnimation = NW, "Naughty" === WW && (NW.onfinish = () => {
+          this.ringAnimation === NW && this.stopRing()
         })
       }
-      startWrapRing(BB) {
-        this.runRing("Wrapping", BB), this.onWrapStart()
+      startWrapRing(WW) {
+        this.runRing("Wrapping", WW), this.onWrapStart()
       }
-      endWrapRing(BB) {
-        const OB = this.ring;
-        if (null === OB || void 0 === OB || !OB.classList.contains("Wrapping")) return;
-        var GB, YB;
-        BB ? null === (GB = this.ringAnimation) || void 0 === GB || GB.finish() : null === (YB = this.ringAnimation) || void 0 === YB || YB.pause();
-        OB.classList.toggle("Cancelled", !BB);
-        const DB = OB.animate([{
+      endWrapRing(WW) {
+        const iW = this.ring;
+        if (null === iW || void 0 === iW || !iW.classList.contains("Wrapping")) return;
+        var OW, mW;
+        WW ? null === (OW = this.ringAnimation) || void 0 === OW || OW.finish() : null === (mW = this.ringAnimation) || void 0 === mW || mW.pause();
+        iW.classList.toggle("Cancelled", !WW);
+        const EW = iW.animate([{
           opacity: 1,
           scale: 1
         }, {
           opacity: 0,
-          scale: BB ? 1.6 : .8
+          scale: WW ? 1.6 : .8
         }], {
-          duration: BB ? 350 : 300,
-          easing: BB ? "ease-out" : "ease-in",
+          duration: WW ? 350 : 300,
+          easing: WW ? "ease-out" : "ease-in",
           fill: "forwards"
         });
-        this.ringEndAnimation = DB, DB.onfinish = () => {
-          this.ringEndAnimation === DB && this.stopRing()
+        this.ringEndAnimation = EW, EW.onfinish = () => {
+          this.ringEndAnimation === EW && this.stopRing()
         }
       }
       stopRing() {
-        var BB, OB, GB;
-        null === (BB = this.ringAnimation) || void 0 === BB || BB.cancel(), null === (OB = this.ringEndAnimation) || void 0 === OB || OB.cancel(), this.ringAnimation = this.ringEndAnimation = null, null === (GB = this.ring) || void 0 === GB || GB.classList.remove(...uB)
+        var WW, iW, OW;
+        null === (WW = this.ringAnimation) || void 0 === WW || WW.cancel(), null === (iW = this.ringEndAnimation) || void 0 === iW || iW.cancel(), this.ringAnimation = this.ringEndAnimation = null, null === (OW = this.ring) || void 0 === OW || OW.classList.remove(...oW)
       }
     }
 
-    function FB(BB, OB) {
-      return 0 === BB || OB - BB > (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5e3) ? OB : Math.min(BB, OB)
+    function vW(WW, iW) {
+      return 0 === WW || iW - WW > (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5e3) ? iW : Math.min(WW, iW)
     }
-    var iB = GB(1282);
-    const LB = "secretSantaControlsShown",
-      gB = (0, QB.memo)((function(BB) {
+    var gW = OW(1283);
+    const DW = "secretSantaControlsShown",
+      VW = (0, NW.memo)((function(WW) {
         let {
-          controller: OB
-        } = BB;
+          controller: iW
+        } = WW;
         const {
-          isTouchScreen: GB
-        } = (0, JB.o)(["isTouchScreen"]), YB = (0, MB.s)(), {
-          t: DB
-        } = (0, zB.H)(), oB = (0, pB.i)(fB, OB.getView()).shown, jB = (0, lB.n)(), [qB] = (0, QB.useState)((() => {
-          var BB;
-          return null !== (BB = PB.g.getItem(LB)) && void 0 !== BB ? BB : 0
-        })), [ZB, NB] = (0, QB.useState)(qB >= 2), [RB, WB] = (0, QB.useState)(!1), AB = (0, QB.useRef)(!1), VB = !ZB && RB && oB && (!GB || YB);
-        return (0, QB.useEffect)((() => {
-          if (!oB || RB || ZB) return;
-          const BB = setTimeout((() => {
-            WB(!0)
-          }), 12500);
+          isTouchScreen: OW
+        } = (0, wW.p)(["isTouchScreen"]), mW = (0, tW.x)(), {
+          t: EW
+        } = (0, xW.B)(), PW = (0, AW.g)(hW, iW.getView()).shown, LW = (0, lW.j)(), [bW] = (0, NW.useState)((() => {
+          var WW;
+          return null !== (WW = ZW.i.getItem(DW)) && void 0 !== WW ? WW : 0
+        })), [jW, UW] = (0, NW.useState)(bW >= 2), [kW, sW] = (0, NW.useState)(!1), MW = (0, NW.useRef)(!1), KW = !jW && kW && PW && (!OW || mW);
+        return (0, NW.useEffect)((() => {
+          if (!PW || kW || jW) return;
+          const WW = setTimeout((() => {
+            sW(!0)
+          }), 15500);
           return () => {
-            clearTimeout(BB)
+            clearTimeout(WW)
           }
-        }), [oB, RB, ZB]), (0, QB.useEffect)((() => {
-          !VB || jB || AB.current || (AB.current = !0, PB.g.setItem(LB, qB + 1))
-        }), [VB, jB, qB]), (0, lB.o)(VB ? "secretSanta" : null, jB, (() => {
-          NB(!0)
-        })), VB ? (0, iB.jsxs)("div", {
-          className: yB()("ControlsTutorialDiv", {
-            Covered: jB
+        }), [PW, kW, jW]), (0, NW.useEffect)((() => {
+          !KW || LW || MW.current || (MW.current = !0, ZW.i.setItem(DW, bW + 1))
+        }), [KW, LW, bW]), (0, lW.l)(KW ? "secretSanta" : null, LW, (() => {
+          UW(!0)
+        })), KW ? (0, gW.jsxs)("div", {
+          className: cW()("ControlsTutorialDiv", {
+            Covered: LW
           }),
-          children: [(0, iB.jsx)(lB.j, {}), (0, iB.jsx)(lB.b, {
+          children: [(0, gW.jsx)(lW.g, {}), (0, gW.jsx)(lW.d, {
             header: "Jump",
             noaAction: "jump"
-          }), (0, iB.jsx)(lB.b, {
-            header: DB("secretSantaHud:givePresent"),
+          }), (0, gW.jsx)(lW.d, {
+            header: EW("secretSantaHud:givePresent"),
             noaAction: "alt-fire"
-          }), YB && (0, iB.jsx)(lB.b, {
-            header: DB("controller:tutorialPause"),
+          }), mW && (0, gW.jsx)(lW.d, {
+            header: EW("controller:tutorialPause"),
             noaAction: "OpenSettings"
           })]
         }) : null
       }));
-    var rB = GB(37263),
-      XB = GB(3831),
-      wB = GB(37367),
-      EB = GB(1106),
-      cB = GB(1383),
-      hB = GB(40167);
-    const aB = (0, QB.memo)((function(BB) {
+    var pW = OW(37868),
+      fW = OW(4613),
+      CW = OW(37919),
+      XW = OW(1095),
+      BW = OW(1391),
+      qW = OW(37888);
+    const RW = (0, NW.memo)((function(WW) {
       let {
-        controller: OB,
-        naughtyEndsAt: GB
-      } = BB;
-      return (0, iB.jsxs)("div", {
-        ref: OB.bindRing,
+        controller: iW,
+        naughtyEndsAt: OW
+      } = WW;
+      return (0, gW.jsxs)("div", {
+        ref: iW.bindRing,
         className: "SecretSantaRing",
-        children: [(0, iB.jsxs)("svg", {
+        children: [(0, gW.jsxs)("svg", {
           viewBox: "0 0 40 40",
           "aria-hidden": "true",
-          children: [(0, iB.jsx)("circle", {
+          children: [(0, gW.jsx)("circle", {
             className: "SecretSantaRingTrack",
             cx: "20",
             cy: "20",
             r: 17
-          }), (0, iB.jsx)("circle", {
+          }), (0, gW.jsx)("circle", {
             className: "SecretSantaRingFill",
             cx: "20",
             cy: "20",
             r: 17,
             style: {
-              strokeDasharray: RB,
-              strokeDashoffset: RB
+              strokeDasharray: kW,
+              strokeDashoffset: kW
             }
           })]
-        }), GB > 0 && (0, iB.jsx)(eB, {
-          endsAt: GB
+        }), OW > 0 && (0, gW.jsx)(GW, {
+          endsAt: OW
         })]
       })
     }));
 
-    function eB(BB) {
+    function GW(WW) {
       let {
-        endsAt: OB
-      } = BB;
+        endsAt: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, zB.H)(), YB = (0, hB.k)(OB);
-      return YB <= 0 ? null : (0, iB.jsxs)("div", {
+        t: OW
+      } = (0, xW.B)(), mW = (0, qW.f)(iW);
+      return mW <= 0 ? null : (0, gW.jsxs)("div", {
         className: "SecretSantaNaughty SmallTextBold",
-        children: [(0, iB.jsxs)("span", {
+        children: [(0, gW.jsxs)("span", {
           className: "SecretSantaNaughtyTitle",
-          children: [(0, iB.jsx)(cB.b, {
+          children: [(0, gW.jsx)(BW.c, {
             name: "ban",
             "aria-hidden": "true"
-          }), " ", GB("secretSantaHud:naughty")]
-        }), (0, iB.jsx)("span", {
-          children: GB("secretSantaHud:naughtyWait", {
-            seconds: YB
+          }), " ", OW("secretSantaHud:naughty")]
+        }), (0, gW.jsx)("span", {
+          children: OW("secretSantaHud:naughtyWait", {
+            seconds: mW
           })
         })]
       })
     }
-    const TB = "user-magnifying-glass",
-      bB = "tree-christmas",
-      CB = {
+    const IW = "user-magnifying-glass",
+      aW = "tree-christmas",
+      rW = {
         gingerbreadLane: "gingerbread-man",
         toyRow: "teddy-bear",
         iceRink: "ice-skate",
@@ -1172,233 +1158,233 @@ export const modules = {
         santasGrotto: "hat-santa"
       };
 
-    function HB(BB) {
-      return BB && CB[BB] || "snowflake"
+    function zW(WW) {
+      return WW && rW[WW] || "snowflake"
     }
-    const vB = "SecretSantaDistrictBanner",
-      sB = {
+    const FW = "SecretSantaDistrictBanner",
+      QW = {
         animationDuration: "2200ms"
       },
-      xB = (0, QB.memo)((function(BB) {
+      Wi = (0, NW.memo)((function(WW) {
         let {
-          controller: OB
-        } = BB;
+          controller: iW
+        } = WW;
         const {
-          t: GB
-        } = (0, zB.H)(), YB = (0, pB.i)(VB, OB.district.getBanner());
-        return YB ? (0, iB.jsxs)("div", {
-          className: yB()(vB, `District-${YB.key}`),
-          style: sB,
-          children: [(0, iB.jsx)("span", {
+          t: OW
+        } = (0, xW.B)(), mW = (0, AW.g)(KW, iW.district.getBanner());
+        return mW ? (0, gW.jsxs)("div", {
+          className: cW()(FW, `District-${mW.key}`),
+          style: QW,
+          children: [(0, gW.jsx)("span", {
             className: "SecretSantaDistrictBannerIcon",
-            children: (0, iB.jsx)(cB.b, {
-              name: HB(YB.key)
+            children: (0, gW.jsx)(BW.c, {
+              name: zW(mW.key)
             })
-          }), GB(`secretSantaHud:district_${YB.key}`)]
-        }, YB.seq) : null
+          }), OW(`secretSantaHud:district_${mW.key}`)]
+        }, mW.seq) : null
       }));
-    var tB = GB(2063),
-      BO = GB(1260);
-    const OO = "\x01",
-      GO = "\x02";
+    var ii = OW(2075),
+      Oi = OW(1255);
+    const mi = "\x01",
+      Ei = "\x02";
 
-    function YO(BB) {
+    function Ni(WW) {
       let {
-        scarf: OB,
-        className: GB
-      } = BB;
+        scarf: iW,
+        className: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, zB.H)();
-      return (0, iB.jsxs)("span", {
-        className: yB()("SecretSantaScarf", `Scarf-${OB}`, GB),
-        children: [(0, iB.jsx)("span", {
+        t: mW
+      } = (0, xW.B)();
+      return (0, gW.jsxs)("span", {
+        className: cW()("SecretSantaScarf", `Scarf-${iW}`, OW),
+        children: [(0, gW.jsx)("span", {
           className: "SecretSantaScarfSwatch"
-        }), YB(`secretSantaHud:scarfName_${OB}`)]
+        }), mW(`secretSantaHud:scarfName_${iW}`)]
       })
     }
-    const DO = {
+    const Pi = {
       santa: "hat-santa",
       elf: "hat-wizard",
       bobble: "hat-winter",
       antlers: "deer"
     };
 
-    function QO(BB) {
+    function Li(WW) {
       let {
-        hat: OB,
-        className: GB
-      } = BB;
+        hat: iW,
+        className: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, zB.H)();
-      return (0, iB.jsxs)("span", {
-        className: yB()("SecretSantaHat", `Hat-${OB}`, GB),
-        children: [(0, iB.jsx)(cB.b, {
-          name: DO[OB]
-        }), " ", YB(`secretSantaHud:hatName_${OB}`)]
+        t: mW
+      } = (0, xW.B)();
+      return (0, gW.jsxs)("span", {
+        className: cW()("SecretSantaHat", `Hat-${iW}`, OW),
+        children: [(0, gW.jsx)(BW.c, {
+          name: Pi[iW]
+        }), " ", mW(`secretSantaHud:hatName_${iW}`)]
       })
     }
 
-    function oO(BB) {
+    function ci(WW) {
       let {
-        scarf: OB,
-        hat: GB
-      } = BB;
+        scarf: iW,
+        hat: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, zB.H)();
-      return (0, iB.jsx)(iB.Fragment, {
-        children: jO(YB("secretSantaHud:lookName", {
-          scarf: OO,
-          hat: GO
-        }), (0, iB.jsx)(YO, {
-          scarf: OB
-        }), (0, iB.jsx)(QO, {
-          hat: GB
+        t: mW
+      } = (0, xW.B)();
+      return (0, gW.jsx)(gW.Fragment, {
+        children: wi(mW("secretSantaHud:lookName", {
+          scarf: mi,
+          hat: Ei
+        }), (0, gW.jsx)(Ni, {
+          scarf: iW
+        }), (0, gW.jsx)(Li, {
+          hat: OW
         }))
       })
     }
 
-    function jO(BB) {
-      for (var OB = arguments.length, GB = new Array(OB > 1 ? OB - 1 : 0), YB = 1; YB < OB; YB++) GB[YB - 1] = arguments[YB];
-      const DB = [];
-      return BB.split(OO).forEach(((BB, OB) => {
-        OB > 0 && DB.push(GB[0]), BB.split(GO).forEach(((BB, OB) => {
-          OB > 0 && DB.push(GB[1]), DB.push(BB)
+    function wi(WW) {
+      for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
+      const EW = [];
+      return WW.split(mi).forEach(((WW, iW) => {
+        iW > 0 && EW.push(OW[0]), WW.split(Ei).forEach(((WW, iW) => {
+          iW > 0 && EW.push(OW[1]), EW.push(WW)
         }))
-      })), DB.map(((BB, OB) => (0, iB.jsx)(QB.Fragment, {
-        children: BB
-      }, OB)))
+      })), EW.map(((WW, iW) => (0, gW.jsx)(NW.Fragment, {
+        children: WW
+      }, iW)))
     }
-    const yO = {
+    const ti = {
         circle: {
-          icon: TB,
+          icon: IW,
           text: "secretSantaHud:circleNote"
         },
         lit: {
-          icon: bB,
+          icon: aW,
           text: "secretSantaHud:targetLit"
         }
       },
-      JO = (0, QB.memo)((function(BB) {
-        var OB, GB, YB;
+      Zi = (0, NW.memo)((function(WW) {
+        var iW, OW, mW;
         let {
-          controller: DB,
-          market: oB,
-          hint: jB,
-          nextHintAt: JB,
-          pulse: MB
-        } = BB;
+          controller: EW,
+          market: PW,
+          hint: LW,
+          nextHintAt: wW,
+          pulse: tW
+        } = WW;
         const {
-          t: PB
-        } = (0, zB.H)(), lB = (0, tB.g)("hiddenPlayerNames"), pB = null !== (OB = null === jB || void 0 === jB ? void 0 : jB.santaHintState) && void 0 !== OB ? OB : "none", qB = null !== (GB = null === jB || void 0 === jB ? void 0 : jB.santaHintTargetName) && void 0 !== GB ? GB : null, ZB = null !== qB && (0, iB.jsx)("span", {
+          t: ZW
+        } = (0, xW.B)(), lW = (0, ii.g)("hiddenPlayerNames"), AW = null !== (iW = null === LW || void 0 === LW ? void 0 : LW.santaHintState) && void 0 !== iW ? iW : "none", bW = null !== (OW = null === LW || void 0 === LW ? void 0 : LW.santaHintTargetName) && void 0 !== OW ? OW : null, jW = null !== bW && (0, gW.jsx)("span", {
           className: "SecretSantaTargetName",
-          children: (0, BO.g)(qB, lB)
-        }), NB = "hunting" === pB && null !== jB, RB = NB && !0 === jB.santaHintTreeLit, WB = function(BB, OB) {
-          const [GB, YB] = (0, QB.useState)(null);
-          OB && (null === GB || void 0 === GB ? void 0 : GB.contract) !== BB && YB({
-            contract: BB,
+          children: (0, Oi.g)(bW, lW)
+        }), UW = "hunting" === AW && null !== LW, kW = UW && !0 === LW.santaHintTreeLit, sW = function(WW, iW) {
+          const [OW, mW] = (0, NW.useState)(null);
+          iW && (null === OW || void 0 === OW ? void 0 : OW.contract) !== WW && mW({
+            contract: WW,
             until: performance.now() + 8e3
           });
-          const DB = (null === GB || void 0 === GB ? void 0 : GB.contract) === BB ? GB.until : 0,
-            oB = (0, hB.k)(DB);
-          0 !== DB && 0 === oB && YB({
-            contract: BB,
+          const EW = (null === OW || void 0 === OW ? void 0 : OW.contract) === WW ? OW.until : 0,
+            PW = (0, qW.f)(EW);
+          0 !== EW && 0 === PW && mW({
+            contract: WW,
             until: 0
           });
-          return OB && oB > 0
-        }(null !== (YB = null === jB || void 0 === jB ? void 0 : jB.santaHintContract) && void 0 !== YB ? YB : 0, NB && jB.santaHintCircleR > 0 && !RB);
-        let AB, VB = `${pB}-${null!==qB&&void 0!==qB?qB:""}`;
-        if (jB && "none" !== pB && ZB)
-          if ("lost" === pB) AB = (0, iB.jsxs)(iB.Fragment, {
-            children: [(0, iB.jsx)(cB.b, {
+          return iW && PW > 0
+        }(null !== (mW = null === LW || void 0 === LW ? void 0 : LW.santaHintContract) && void 0 !== mW ? mW : 0, UW && LW.santaHintCircleR > 0 && !kW);
+        let MW, KW = `${AW}-${null!==bW&&void 0!==bW?bW:""}`;
+        if (LW && "none" !== AW && jW)
+          if ("lost" === AW) MW = (0, gW.jsxs)(gW.Fragment, {
+            children: [(0, gW.jsx)(BW.c, {
               name: "snowflake",
               className: "SecretSantaLostLineIcon"
-            }), " ", jO(PB("secretSantaHud:lostLine", {
-              name: OO
-            }), ZB)]
+            }), " ", wi(ZW("secretSantaHud:lostLine", {
+              name: mi
+            }), jW)]
           });
-          else if (null !== jB.santaHintScarf) {
-          var SB, nB;
-          VB += `-scarf-${jB.santaHintScarf}-${null!==(SB=jB.santaHintHat)&&void 0!==SB?SB:""}`, AB = jO(PB("secretSantaHud:lookingFor", {
-            name: OO,
-            clue: GO
-          }), ZB, (0, iB.jsx)(PO, {
-            scarf: jB.santaHintScarf,
-            hat: null !== (nB = jB.santaHintHat) && void 0 !== nB ? nB : null
+          else if (null !== LW.santaHintScarf) {
+          var SW, YW;
+          KW += `-scarf-${LW.santaHintScarf}-${null!==(SW=LW.santaHintHat)&&void 0!==SW?SW:""}`, MW = wi(ZW("secretSantaHud:lookingFor", {
+            name: mi,
+            clue: Ei
+          }), jW, (0, gW.jsx)(li, {
+            scarf: LW.santaHintScarf,
+            hat: null !== (YW = LW.santaHintHat) && void 0 !== YW ? YW : null
           }))
         } else {
-          const BB = null === oB || void 0 === oB ? void 0 : oB.santaMarketDistricts[jB.santaHintDistrict];
-          VB += `-district-${null!==BB&&void 0!==BB?BB:"?"}`, AB = jO(PB("secretSantaHud:findIn", {
-            name: OO,
-            district: GO
-          }), ZB, (0, iB.jsxs)("span", {
-            className: yB()("SecretSantaClueChip", "SecretSantaDistrictName", void 0 !== BB && `District-${BB}`),
-            children: [(0, iB.jsx)(cB.b, {
-              name: HB(BB)
-            }), " ", void 0 !== BB ? PB(`secretSantaHud:district_${BB}`) : "?"]
+          const WW = null === PW || void 0 === PW ? void 0 : PW.santaMarketDistricts[LW.santaHintDistrict];
+          KW += `-district-${null!==WW&&void 0!==WW?WW:"?"}`, MW = wi(ZW("secretSantaHud:findIn", {
+            name: mi,
+            district: Ei
+          }), jW, (0, gW.jsxs)("span", {
+            className: cW()("SecretSantaClueChip", "SecretSantaDistrictName", void 0 !== WW && `District-${WW}`),
+            children: [(0, gW.jsx)(BW.c, {
+              name: zW(WW)
+            }), " ", void 0 !== WW ? ZW(`secretSantaHud:district_${WW}`) : "?"]
           }))
-        } else AB = PB("secretSantaHud:finding");
-        const [UB, fB] = (0, QB.useState)({
-          key: VB,
-          pulse: MB
+        } else MW = ZW("secretSantaHud:finding");
+        const [yW, TW] = (0, NW.useState)({
+          key: KW,
+          pulse: tW
         });
-        UB.key !== VB && fB({
-          key: VB,
-          pulse: MB
+        yW.key !== KW && TW({
+          key: KW,
+          pulse: tW
         });
-        const kB = UB.key === VB && MB !== UB.pulse;
-        return (0, iB.jsxs)("div", {
-          className: yB()("SecretSantaTarget", `State-${pB}`),
-          children: [AB, "hunting" === pB && (0, iB.jsxs)(iB.Fragment, {
-            children: [(0, iB.jsx)(MO, {
-              controller: DB,
-              nextHintAt: JB,
-              note: RB ? "lit" : WB ? "circle" : null
-            }), kB && (0, iB.jsx)("div", {
+        const JW = yW.key === KW && tW !== yW.pulse;
+        return (0, gW.jsxs)("div", {
+          className: cW()("SecretSantaTarget", `State-${AW}`),
+          children: [MW, "hunting" === AW && (0, gW.jsxs)(gW.Fragment, {
+            children: [(0, gW.jsx)(xi, {
+              controller: EW,
+              nextHintAt: wW,
+              note: kW ? "lit" : sW ? "circle" : null
+            }), JW && (0, gW.jsx)("div", {
               className: "SecretSantaClueFlash",
               "aria-hidden": "true"
-            }, MB)]
+            }, tW)]
           })]
-        }, VB)
+        }, KW)
       }));
 
-    function MO(BB) {
+    function xi(WW) {
       let {
-        controller: OB,
-        nextHintAt: GB,
-        note: YB
-      } = BB;
+        controller: iW,
+        nextHintAt: OW,
+        note: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, zB.H)(), oB = (0, hB.k)(GB), [jB, yB] = (0, QB.useState)(null), [JB, MB] = (0, QB.useState)(null);
-      (0, QB.useLayoutEffect)((() => {
-        if (!jB) return;
-        const BB = () => {
-          const BB = jB.offsetWidth,
-            OB = jB.offsetHeight;
-          MB((GB => GB && GB.width === BB && GB.height === OB ? GB : {
-            width: BB,
-            height: OB
+        t: EW
+      } = (0, xW.B)(), PW = (0, qW.f)(OW), [LW, cW] = (0, NW.useState)(null), [wW, tW] = (0, NW.useState)(null);
+      (0, NW.useLayoutEffect)((() => {
+        if (!LW) return;
+        const WW = () => {
+          const WW = LW.offsetWidth,
+            iW = LW.offsetHeight;
+          tW((OW => OW && OW.width === WW && OW.height === iW ? OW : {
+            width: WW,
+            height: iW
           }))
         };
-        BB();
-        const OB = new ResizeObserver(BB);
-        return OB.observe(jB), () => {
-          OB.disconnect()
+        WW();
+        const iW = new ResizeObserver(WW);
+        return iW.observe(LW), () => {
+          iW.disconnect()
         }
-      }), [jB]);
-      return (0, iB.jsxs)(iB.Fragment, {
-        children: [(0, iB.jsx)("div", {
-          ref: yB,
+      }), [LW]);
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [(0, gW.jsx)("div", {
+          ref: cW,
           className: "SecretSantaClueCountdown",
           "aria-hidden": "true",
-          children: JB && JB.width > 8 && JB.height > 8 && (0, iB.jsx)("svg", {
-            viewBox: `0 0 ${JB.width} ${JB.height}`,
-            children: (0, iB.jsx)("path", {
-              ref: OB.bindCountdown,
-              d: `M${JB.width/2} 2H${JB.width-2}V${JB.height-2}H2V2Z`,
+          children: wW && wW.width > 8 && wW.height > 8 && (0, gW.jsx)("svg", {
+            viewBox: `0 0 ${wW.width} ${wW.height}`,
+            children: (0, gW.jsx)("path", {
+              ref: iW.bindCountdown,
+              d: `M${wW.width/2} 2H${wW.width-2}V${wW.height-2}H2V2Z`,
               pathLength: 1,
               strokeWidth: 4,
               style: {
@@ -1407,195 +1393,202 @@ export const modules = {
               }
             })
           })
-        }), null === YB ? (0, iB.jsxs)("div", {
+        }), null === mW ? (0, gW.jsxs)("div", {
           className: "SecretSantaClueTimer",
-          children: [(0, iB.jsx)(cB.b, {
+          children: [(0, gW.jsx)(BW.c, {
             name: "arrows-rotate"
-          }), " ", DB("secretSantaHud:mapUpdateIn", {
-            seconds: Math.max(1, oB)
+          }), " ", EW("secretSantaHud:mapUpdateIn", {
+            seconds: Math.max(1, PW)
           })]
-        }) : (0, iB.jsx)(zO, {
-          kind: YB
-        }, YB)]
+        }) : (0, gW.jsx)(Ai, {
+          kind: mW
+        }, mW)]
       })
     }
 
-    function PO(BB) {
+    function li(WW) {
       let {
-        scarf: OB,
-        hat: GB
-      } = BB;
-      return (0, iB.jsxs)(iB.Fragment, {
-        children: [(0, iB.jsx)(YO, {
-          scarf: OB,
+        scarf: iW,
+        hat: OW
+      } = WW;
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [(0, gW.jsx)(Ni, {
+          scarf: iW,
           className: "SecretSantaClueChip"
-        }), null !== GB && (0, iB.jsxs)(iB.Fragment, {
-          children: [(0, iB.jsx)("span", {
+        }), null !== OW && (0, gW.jsxs)(gW.Fragment, {
+          children: [(0, gW.jsx)("span", {
             className: "SecretSantaClueJoin",
             children: "+"
-          }), (0, iB.jsx)(QO, {
-            hat: GB,
+          }), (0, gW.jsx)(Li, {
+            hat: OW,
             className: "SecretSantaClueChip"
           })]
         })]
       })
     }
 
-    function zO(BB) {
+    function Ai(WW) {
       let {
-        kind: OB
-      } = BB;
+        kind: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, zB.H)(), {
-        icon: YB,
-        text: DB
-      } = yO[OB];
-      return (0, iB.jsxs)("div", {
-        className: yB()("SecretSantaClueTimer", "SecretSantaClueNote", `Note-${OB}`),
-        children: [(0, iB.jsx)("span", {
+        t: OW
+      } = (0, xW.B)(), {
+        icon: mW,
+        text: EW
+      } = ti[iW];
+      return (0, gW.jsxs)("div", {
+        className: cW()("SecretSantaClueTimer", "SecretSantaClueNote", `Note-${iW}`),
+        children: [(0, gW.jsx)("span", {
           className: "SecretSantaClueNoteIcon",
-          children: (0, iB.jsx)(cB.b, {
-            name: YB
+          children: (0, gW.jsx)(BW.c, {
+            name: mW
           })
-        }), " ", GB(DB)]
+        }), " ", OW(EW)]
       })
     }
 
-    function lO(BB) {
+    function bi(WW) {
       let {
-        litAt: OB,
-        hunters: GB
-      } = BB;
+        litAt: iW,
+        hunters: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, zB.H)(), DB = (0, hB.k)(OB);
-      return (0, iB.jsxs)("span", {
-        className: yB()("SecretSantaHuntedBanner", "SecretSantaTreeLights", {
-          Lit: DB <= 0
+        t: mW
+      } = (0, xW.B)(), EW = (0, qW.f)(iW);
+      return (0, gW.jsxs)("span", {
+        className: cW()("SecretSantaHuntedBanner", "SecretSantaTreeLights", {
+          Lit: EW <= 0
         }),
-        children: [(0, iB.jsx)("span", {
+        children: [(0, gW.jsx)("span", {
           className: "SecretSantaTreeLightsIcon",
-          children: (0, iB.jsx)(cB.b, {
-            name: bB
+          children: (0, gW.jsx)(BW.c, {
+            name: aW
           })
-        }), " ", DB > 0 ? YB("secretSantaHud:treeLightsOn", {
-          seconds: DB
-        }) : YB(GB > 1 ? "secretSantaHud:treeLit2" : "secretSantaHud:treeLit")]
+        }), " ", EW > 0 ? mW("secretSantaHud:treeLightsOn", {
+          seconds: EW
+        }) : mW(OW > 1 ? "secretSantaHud:treeLit2" : "secretSantaHud:treeLit")]
       })
     }
 
-    function pO(BB) {
+    function ji(WW) {
       let {
-        on: OB
-      } = BB;
-      return (0, iB.jsx)("span", {
-        className: yB()("SecretSantaTreeLightString", {
-          On: OB
+        on: iW
+      } = WW;
+      return (0, gW.jsx)("span", {
+        className: cW()("SecretSantaTreeLightString", {
+          On: iW
         }),
         "aria-hidden": "true"
       })
     }
-    const qO = (0, QB.memo)((function(BB) {
-      var OB, GB;
+    const Ui = (0, NW.memo)((function(WW) {
+      var iW, OW;
       let {
-        controller: YB,
-        market: QB,
-        hint: oB,
-        pulse: jB,
-        treeLightsOn: JB
-      } = BB;
+        controller: mW,
+        market: NW,
+        hint: PW,
+        pulse: LW,
+        treeLightsOn: wW
+      } = WW;
       const {
-        t: MB
-      } = (0, zB.H)(), PB = null !== (OB = null === oB || void 0 === oB ? void 0 : oB.santaHintState) && void 0 !== OB ? OB : "none", lB = "hunting" === PB && oB ? oB.santaHintDistrict : -1, pB = null !== (GB = null === QB || void 0 === QB ? void 0 : QB.santaMarketDistricts) && void 0 !== GB ? GB : DB, qB = "hunting" === PB && QB && oB ? function(BB, OB) {
+        t: tW
+      } = (0, xW.B)(), ZW = null !== (iW = null === PW || void 0 === PW ? void 0 : PW.santaHintState) && void 0 !== iW ? iW : "none", lW = "hunting" === ZW && PW ? PW.santaHintDistrict : -1, AW = null !== (OW = null === NW || void 0 === NW ? void 0 : NW.santaMarketDistricts) && void 0 !== OW ? OW : EW, bW = "hunting" === ZW && NW && PW ? function(WW, iW) {
         const {
-          santaHintCircleX: GB,
-          santaHintCircleZ: YB,
-          santaHintCircleR: DB,
-          santaHintContract: QB
-        } = OB;
-        if (null === GB || null === YB || DB <= 0) return null;
-        const [oB, jB] = WB(BB, GB, YB), yB = 200 * DB / BB.santaMarketSize, JB = ZO(oB), MB = Math.sqrt(Math.max(0, (yB / 2) ** 2 - (JB - oB) ** 2)), PB = ZO(jB - MB >= 9 ? jB - MB : jB + MB);
+          santaHintCircleX: OW,
+          santaHintCircleZ: mW,
+          santaHintCircleR: EW,
+          santaHintContract: NW
+        } = iW;
+        if (null === OW || null === mW || EW <= 0) return null;
+        const [PW, LW] = sW(WW, OW, mW), cW = 200 * EW / WW.santaMarketSize, wW = ki(PW), tW = Math.sqrt(Math.max(0, (cW / 2) ** 2 - (wW - PW) ** 2)), ZW = ki(LW - tW >= 9 ? LW - tW : LW + tW);
         return {
-          left: oB,
-          top: jB,
-          size: yB,
-          contract: QB,
-          badgeLeft: JB,
-          badgeTop: PB
+          left: PW,
+          top: LW,
+          size: cW,
+          contract: NW,
+          badgeLeft: wW,
+          badgeTop: ZW
         }
-      }(QB, oB) : null;
-      return (0, iB.jsxs)("div", {
-        ref: YB.bindMap,
-        className: yB()("SecretSantaMinimap", `State-${PB}`, {
-          WithCircle: null !== qB
+      }(NW, PW) : null;
+      return (0, gW.jsxs)("div", {
+        ref: mW.bindMap,
+        className: cW()("SecretSantaMinimap", `State-${ZW}`, {
+          WithCircle: null !== bW
         }),
-        children: [(0, iB.jsx)("img", {
+        children: [(0, gW.jsx)("img", {
           className: "SecretSantaMinimapTerrain",
           src: "data:image/png;base64,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",
           alt: "",
           draggable: !1
-        }), (0, iB.jsx)("div", {
+        }), (0, gW.jsx)("div", {
           className: "SecretSantaMinimapGrid",
-          children: pB.map(((BB, OB) => (0, iB.jsxs)("div", {
-            className: yB()("SecretSantaDistrict", `District-${BB}`, {
-              Target: OB === lB
+          children: AW.map(((WW, iW) => (0, gW.jsxs)("div", {
+            className: cW()("SecretSantaDistrict", `District-${WW}`, {
+              Target: iW === lW
             }),
-            "data-district": OB,
-            children: [(0, iB.jsx)("span", {
+            "data-district": iW,
+            children: [(0, gW.jsx)("span", {
               className: "SecretSantaDistrictIcon",
-              children: (0, iB.jsx)(cB.b, {
-                name: HB(BB)
+              children: (0, gW.jsx)(BW.c, {
+                name: zW(WW)
               })
-            }), (0, iB.jsx)("span", {
+            }), (0, gW.jsx)("span", {
               className: "SecretSantaDistrictLabel",
-              children: MB(`secretSantaHud:district_${BB}`)
-            }), "greatTree" === BB && (0, iB.jsx)(pO, {
-              on: JB
+              children: tW(`secretSantaHud:district_${WW}`)
+            }), "greatTree" === WW && (0, gW.jsx)(ji, {
+              on: wW
             })]
-          }, BB)))
-        }), lB >= 0 && (0, iB.jsx)("div", {
-          className: "SecretSantaDistrictPulse",
+          }, WW)))
+        }), lW >= 0 && (0, gW.jsxs)("div", {
+          className: "SecretSantaTargetCell",
           style: {
-            left: lB % 3 * (100 / 3) + "%",
-            top: Math.floor(lB / 3) * (100 / 3) + "%"
-          }
-        }, jB), qB && (0, iB.jsxs)("div", {
+            left: lW % 3 * (100 / 3) + "%",
+            top: Math.floor(lW / 3) * (100 / 3) + "%"
+          },
+          children: [(0, gW.jsx)("div", {
+            ref: mW.bindTargetGlow,
+            className: "SecretSantaTargetGlow"
+          }), (0, gW.jsx)("div", {
+            className: "SecretSantaDistrictPulse"
+          }, LW)]
+        }), bW && (0, gW.jsxs)("div", {
+          ref: mW.bindCircleFade,
           className: "SecretSantaCircleClip",
-          children: [(0, iB.jsx)("div", {
+          children: [(0, gW.jsx)("div", {
             className: "SecretSantaCircle",
             style: {
-              left: `${qB.left}%`,
-              top: `${qB.top}%`,
-              width: `${qB.size}%`,
-              height: `${qB.size}%`
+              left: `${bW.left}%`,
+              top: `${bW.top}%`,
+              width: `${bW.size}%`,
+              height: `${bW.size}%`
             }
-          }, qB.contract), (0, iB.jsx)("span", {
+          }, bW.contract), (0, gW.jsx)("span", {
             className: "SecretSantaCircleBadge",
             style: {
-              left: `${qB.badgeLeft}%`,
-              top: `${qB.badgeTop}%`
+              left: `${bW.badgeLeft}%`,
+              top: `${bW.badgeTop}%`
             },
-            children: (0, iB.jsx)(cB.b, {
-              name: TB
+            children: (0, gW.jsx)(BW.c, {
+              name: IW
             })
-          }, `badge-${qB.contract}`)]
-        }), (0, iB.jsx)("div", {
+          }, `badge-${bW.contract}`)]
+        }), (0, gW.jsx)("div", {
           className: "SecretSantaMinimapArrowClip",
-          children: (0, iB.jsx)("div", {
-            ref: YB.bindArrow,
+          children: (0, gW.jsx)("div", {
+            ref: mW.bindArrow,
             className: "SecretSantaMinimapArrow",
-            children: (0, iB.jsxs)("svg", {
+            children: (0, gW.jsxs)("svg", {
               viewBox: "0 2 20 20",
-              children: [(0, iB.jsx)("path", {
+              children: [(0, gW.jsx)("path", {
                 className: "SecretSantaMinimapArrowBody",
                 d: "M10 1.5 14.2 6.4H5.8Z"
-              }), (0, iB.jsx)("circle", {
+              }), (0, gW.jsx)("circle", {
                 className: "SecretSantaMinimapArrowBody",
                 cx: "10",
                 cy: "12",
                 r: "5"
-              }), (0, iB.jsx)("circle", {
+              }), (0, gW.jsx)("circle", {
                 className: "SecretSantaMinimapArrowDot",
                 cx: "10",
                 cy: "12",
@@ -1603,382 +1596,382 @@ export const modules = {
               })]
             })
           })
-        }), "lost" === PB && (0, iB.jsxs)("div", {
+        }), "lost" === ZW && (0, gW.jsxs)("div", {
           className: "SecretSantaLost",
-          children: [(0, iB.jsx)("span", {
+          children: [(0, gW.jsx)("span", {
             className: "SecretSantaLostIcon",
-            children: (0, iB.jsx)(cB.b, {
+            children: (0, gW.jsx)(BW.c, {
               name: "snowflake"
             })
-          }), (0, iB.jsx)("span", {
+          }), (0, gW.jsx)("span", {
             className: "SmallTextBold",
-            children: MB("secretSantaHud:lost")
+            children: tW("secretSantaHud:lost")
           })]
         })]
       })
     }));
 
-    function ZO(BB) {
-      return Math.min(91, Math.max(9, BB))
+    function ki(WW) {
+      return Math.min(91, Math.max(9, WW))
     }
 
-    function NO(BB) {
+    function si(WW) {
       let {
-        bells: OB
-      } = BB;
-      return (0, iB.jsx)("div", {
-        className: yB()("SecretSantaFrost", `Bells-${OB}`),
+        bells: iW
+      } = WW;
+      return (0, gW.jsx)("div", {
+        className: cW()("SecretSantaFrost", `Bells-${iW}`),
         "aria-hidden": "true",
-        children: (0, iB.jsx)("div", {
+        children: (0, gW.jsx)("div", {
           className: "SecretSantaFrostPulse"
         })
       })
     }
 
-    function RO(BB) {
+    function Mi(WW) {
       let {
-        bells: OB
-      } = BB;
+        bells: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, zB.H)();
-      return (0, iB.jsxs)("span", {
-        className: yB()("SecretSantaHuntedBanner", "SecretSantaClose", `Bells-${OB}`),
-        children: [(0, iB.jsx)("span", {
+        t: OW
+      } = (0, xW.B)();
+      return (0, gW.jsxs)("span", {
+        className: cW()("SecretSantaHuntedBanner", "SecretSantaClose", `Bells-${iW}`),
+        children: [(0, gW.jsx)("span", {
           className: "SecretSantaBell",
-          children: (0, iB.jsx)(cB.b, {
+          children: (0, gW.jsx)(BW.c, {
             name: "bell"
           })
-        }), " ", GB(2 === OB ? "secretSantaHud:santaClose" : "secretSantaHud:santaNear")]
+        }), " ", OW(2 === iW ? "secretSantaHud:santaClose" : "secretSantaHud:santaNear")]
       })
     }
 
-    function WO(BB) {
+    function Ki(WW) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, pB.i)(fB, OB.getView());
-      return (0, iB.jsxs)(iB.Fragment, {
-        children: [GB.shown && (0, iB.jsx)(NO, {
-          bells: GB.bells
-        }), (0, iB.jsx)("div", {
-          ref: OB.bindFlash,
+        controller: iW
+      } = WW;
+      const OW = (0, AW.g)(hW, iW.getView());
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [OW.shown && (0, gW.jsx)(si, {
+          bells: OW.bells
+        }), (0, gW.jsx)("div", {
+          ref: iW.bindFlash,
           className: "SecretSantaFlash",
           "aria-hidden": "true"
-        }), (0, iB.jsx)(aB, {
-          controller: OB,
-          naughtyEndsAt: GB.naughtyEndsAt
-        }), GB.shown && (0, iB.jsxs)(iB.Fragment, {
-          children: [(0, iB.jsx)(fO, {
-            controller: OB,
-            status: GB.status,
-            endsAt: GB.endsAt,
-            bells: GB.bells,
-            treeLitAt: GB.treeLitAt
-          }), (0, iB.jsx)(AO, {
-            controller: OB,
-            market: GB.market,
-            hint: GB.hint,
-            pulse: GB.pulse,
-            treeLightsOn: 0 !== GB.treeLitAt
-          }), (0, iB.jsx)(rB.e, {
-            children: (0, iB.jsx)(JO, {
-              controller: OB,
-              market: GB.market,
-              hint: GB.hint,
-              nextHintAt: GB.nextHintAt,
-              pulse: GB.pulse
+        }), (0, gW.jsx)(RW, {
+          controller: iW,
+          naughtyEndsAt: OW.naughtyEndsAt
+        }), OW.shown && (0, gW.jsxs)(gW.Fragment, {
+          children: [(0, gW.jsx)(Hi, {
+            controller: iW,
+            status: OW.status,
+            endsAt: OW.endsAt,
+            bells: OW.bells,
+            treeLitAt: OW.treeLitAt
+          }), (0, gW.jsx)(Si, {
+            controller: iW,
+            market: OW.market,
+            hint: OW.hint,
+            pulse: OW.pulse,
+            treeLightsOn: 0 !== OW.treeLitAt
+          }), (0, gW.jsx)(pW.h, {
+            children: (0, gW.jsx)(Zi, {
+              controller: iW,
+              market: OW.market,
+              hint: OW.hint,
+              nextHintAt: OW.nextHintAt,
+              pulse: OW.pulse
             })
           })]
         })]
       })
     }
 
-    function AO(BB) {
+    function Si(WW) {
       let {
-        controller: OB,
-        market: GB,
-        hint: YB,
-        pulse: DB,
-        treeLightsOn: oB
-      } = BB;
-      const [jB, yB] = (0, QB.useState)(null);
-      return (0, XB.q)(jB, VO), (0, iB.jsx)("div", {
-        ref: yB,
+        controller: iW,
+        market: OW,
+        hint: mW,
+        pulse: EW,
+        treeLightsOn: PW
+      } = WW;
+      const [LW, cW] = (0, NW.useState)(null);
+      return (0, fW.o)(LW, Yi), (0, gW.jsx)("div", {
+        ref: cW,
         className: "SecretSantaMapPanel",
-        children: (0, iB.jsx)(qO, {
-          controller: OB,
-          market: GB,
-          hint: YB,
-          pulse: DB,
-          treeLightsOn: oB
+        children: (0, gW.jsx)(Ui, {
+          controller: iW,
+          market: OW,
+          hint: mW,
+          pulse: EW,
+          treeLightsOn: PW
         })
       })
     }
 
-    function VO(BB) {
-      const OB = () => {
-        const OB = BB.getBoundingClientRect();
-        let GB = 0;
-        for (const BB of UO()) BB.left < OB.right && BB.right > OB.left && (GB = Math.max(GB, BB.bottom));
-        const YB = (0, XB.j)(OB.left, OB.right, GB);
-        SO(BB, "--ss-map-top", GB + 6), SO(BB, "--ss-map-bottom", null === YB ? null : (0, XB.g)(BB) - YB + 6)
+    function Yi(WW) {
+      const iW = () => {
+        const iW = WW.getBoundingClientRect();
+        let OW = 0;
+        for (const WW of Ji()) WW.left < iW.right && WW.right > iW.left && (OW = Math.max(OW, WW.bottom));
+        const mW = (0, fW.j)(iW.left, iW.right, OW);
+        yi(WW, "--ss-map-top", OW + 6), yi(WW, "--ss-map-bottom", null === mW ? null : (0, fW.f)(WW) - mW + 6)
       };
-      OB();
-      const GB = nO(OB);
+      iW();
+      const OW = Ti(iW);
       return {
-        layout: OB,
+        layout: iW,
         clear: () => {
-          GB(), BB.style.removeProperty("--ss-map-top"), BB.style.removeProperty("--ss-map-bottom")
+          OW(), WW.style.removeProperty("--ss-map-top"), WW.style.removeProperty("--ss-map-bottom")
         }
       }
     }
 
-    function SO(BB, OB, GB) {
-      const YB = null === GB ? "" : `${Math.ceil(GB)}px`;
-      BB.style.getPropertyValue(OB) !== YB && BB.style.setProperty(OB, YB)
+    function yi(WW, iW, OW) {
+      const mW = null === OW ? "" : `${Math.ceil(OW)}px`;
+      WW.style.getPropertyValue(iW) !== mW && WW.style.setProperty(iW, mW)
     }
 
-    function nO(BB) {
-      const OB = document.querySelector(`.${wB.k}`),
-        GB = new ResizeObserver(BB);
-      for (const QB of [document.querySelector(`.${wB.i}`), OB]) QB && GB.observe(QB);
-      const YB = new MutationObserver(BB),
-        DB = null === OB || void 0 === OB ? void 0 : OB.querySelector(".TopRightElementsRight");
-      return DB && YB.observe(DB, {
+    function Ti(WW) {
+      const iW = document.querySelector(`.${CW.h}`),
+        OW = new ResizeObserver(WW);
+      for (const NW of [document.querySelector(`.${CW.e}`), iW]) NW && OW.observe(NW);
+      const mW = new MutationObserver(WW),
+        EW = null === iW || void 0 === iW ? void 0 : iW.querySelector(".TopRightElementsRight");
+      return EW && mW.observe(EW, {
         childList: !0,
         subtree: !0,
         characterData: !0
       }), () => {
-        GB.disconnect(), YB.disconnect()
+        OW.disconnect(), mW.disconnect()
       }
     }
 
-    function UO() {
-      const BB = `.${wB.k}`,
-        OB = document.querySelectorAll(`.${wB.i}, ${BB} .TopRightIcon:not(.TopRightTray *), ${BB} .CondensedSocialBarInner`);
-      return Array.from(OB, (BB => BB.getBoundingClientRect())).filter((BB => BB.width > 0 && BB.height > 0))
+    function Ji() {
+      const WW = `.${CW.h}`,
+        iW = document.querySelectorAll(`.${CW.e}, ${WW} .TopRightIcon:not(.TopRightTray *), ${WW} .CondensedSocialBarInner`);
+      return Array.from(iW, (WW => WW.getBoundingClientRect())).filter((WW => WW.width > 0 && WW.height > 0))
     }
-    const fO = (0, QB.memo)((function(BB) {
+    const Hi = (0, NW.memo)((function(WW) {
       let {
-        controller: OB,
-        status: GB,
-        endsAt: YB,
-        bells: DB,
-        treeLitAt: oB
-      } = BB;
+        controller: iW,
+        status: OW,
+        endsAt: mW,
+        bells: EW,
+        treeLitAt: PW
+      } = WW;
       const {
-        t: jB
-      } = (0, zB.H)(), [yB, JB] = (0, QB.useState)(null);
-      return function(BB) {
-        (0, QB.useLayoutEffect)((() => {
-          if (!BB) return;
-          const OB = document.documentElement;
-          let GB = 0,
-            YB = window.innerWidth;
-          const DB = () => {
-              BB.style.removeProperty("top");
-              const YB = UO(),
-                DB = Array.from(BB.children).filter((BB => BB instanceof HTMLElement && !BB.classList.contains(vB))),
-                QB = BB.getBoundingClientRect(),
-                oB = DB.map((BB => {
-                  const OB = QB.left + BB.offsetLeft,
-                    GB = QB.top + BB.offsetTop;
+        t: LW
+      } = (0, xW.B)(), [cW, wW] = (0, NW.useState)(null);
+      return function(WW) {
+        (0, NW.useLayoutEffect)((() => {
+          if (!WW) return;
+          const iW = document.documentElement;
+          let OW = 0,
+            mW = window.innerWidth;
+          const EW = () => {
+              WW.style.removeProperty("top");
+              const mW = Ji(),
+                EW = Array.from(WW.children).filter((WW => WW instanceof HTMLElement && !WW.classList.contains(FW))),
+                NW = WW.getBoundingClientRect(),
+                PW = EW.map((WW => {
+                  const iW = NW.left + WW.offsetLeft,
+                    OW = NW.top + WW.offsetTop;
                   return {
-                    left: OB,
-                    right: OB + BB.offsetWidth,
-                    top: GB,
-                    bottom: GB + BB.offsetHeight
+                    left: iW,
+                    right: iW + WW.offsetWidth,
+                    top: OW,
+                    bottom: OW + WW.offsetHeight
                   }
                 }));
-              let jB = 0;
-              for (let BB = 0; BB < YB.length; BB++) {
-                let BB = jB;
-                for (const OB of oB)
-                  for (const GB of YB) {
-                    OB.left < GB.right + wB.e && OB.right > GB.left - wB.e && OB.top + jB < GB.bottom + 4 && OB.bottom + jB > GB.top && (BB = Math.max(BB, Math.ceil(GB.bottom + 4 - OB.top)))
+              let LW = 0;
+              for (let WW = 0; WW < mW.length; WW++) {
+                let WW = LW;
+                for (const iW of PW)
+                  for (const OW of mW) {
+                    iW.left < OW.right + CW.b && iW.right > OW.left - CW.b && iW.top + LW < OW.bottom + 4 && iW.bottom + LW > OW.top && (WW = Math.max(WW, Math.ceil(OW.bottom + 4 - iW.top)))
                   }
-                if (BB === jB) break;
-                jB = BB
+                if (WW === LW) break;
+                LW = WW
               }
-              jB > 0 && (BB.style.top = `${BB.getBoundingClientRect().top+jB}px`);
-              const yB = Math.max(0, ...oB.map((BB => BB.bottom - QB.top)));
-              (0, EB.e)(window.innerWidth, window.innerHeight) && !document.querySelector(".Chat.Chatting") && (GB = Math.max(GB, Math.ceil(BB.getBoundingClientRect().top + yB)), OB.style.setProperty("--ss-top-bar-bottom", `${GB}px`))
+              LW > 0 && (WW.style.top = `${WW.getBoundingClientRect().top+LW}px`);
+              const cW = Math.max(0, ...PW.map((WW => WW.bottom - NW.top)));
+              (0, XW.g)(window.innerWidth, window.innerHeight) && !document.querySelector(".Chat.Chatting") && (OW = Math.max(OW, Math.ceil(WW.getBoundingClientRect().top + cW)), iW.style.setProperty("--ss-top-bar-bottom", `${OW}px`))
             },
-            QB = () => {
-              window.innerWidth !== YB && (YB = window.innerWidth, GB = 0), DB()
+            NW = () => {
+              window.innerWidth !== mW && (mW = window.innerWidth, OW = 0), EW()
             };
-          DB();
-          const oB = new ResizeObserver(DB);
-          oB.observe(BB);
-          const jB = nO(DB),
-            yB = new MutationObserver((BB => {
-              BB.some((BB => {
-                const OB = BB.target instanceof Element ? BB.target : BB.target.parentElement;
-                return !(null !== OB && void 0 !== OB && OB.closest(".SecretSantaClock"))
-              })) && DB()
+          EW();
+          const PW = new ResizeObserver(EW);
+          PW.observe(WW);
+          const LW = Ti(EW),
+            cW = new MutationObserver((WW => {
+              WW.some((WW => {
+                const iW = WW.target instanceof Element ? WW.target : WW.target.parentElement;
+                return !(null !== iW && void 0 !== iW && iW.closest(".SecretSantaClock"))
+              })) && EW()
             }));
-          yB.observe(BB, {
+          cW.observe(WW, {
             childList: !0,
             subtree: !0,
             characterData: !0
           });
-          const JB = new MutationObserver((BB => {
-              BB.some((BB => BB.target instanceof Element && BB.target.classList.contains("Chat"))) && DB()
+          const wW = new MutationObserver((WW => {
+              WW.some((WW => WW.target instanceof Element && WW.target.classList.contains("Chat"))) && EW()
             })),
-            MB = document.querySelector(".TopLeftElements");
-          return MB && JB.observe(MB, {
+            tW = document.querySelector(".TopLeftElements");
+          return tW && wW.observe(tW, {
             attributes: !0,
             attributeFilter: ["class"],
             subtree: !0
-          }), window.addEventListener("resize", QB), () => {
-            oB.disconnect(), jB(), yB.disconnect(), JB.disconnect(), window.removeEventListener("resize", QB), OB.style.removeProperty("--ss-top-bar-bottom")
+          }), window.addEventListener("resize", NW), () => {
+            PW.disconnect(), LW(), cW.disconnect(), wW.disconnect(), window.removeEventListener("resize", NW), iW.style.removeProperty("--ss-top-bar-bottom")
           }
-        }), [BB])
-      }(yB), (0, iB.jsxs)("div", {
-        ref: JB,
+        }), [WW])
+      }(cW), (0, gW.jsxs)("div", {
+        ref: wW,
         className: "SecretSantaTop",
-        children: [(0, iB.jsxs)("div", {
+        children: [(0, gW.jsxs)("div", {
           className: "SecretSantaTopBar",
-          children: [(0, iB.jsx)(kO, {
-            endsAt: YB
-          }), GB && (0, iB.jsxs)("span", {
+          children: [(0, gW.jsx)(ni, {
+            endsAt: mW
+          }), OW && (0, gW.jsxs)("span", {
             className: "SecretSantaScore",
-            children: [(0, iB.jsxs)("span", {
+            children: [(0, gW.jsxs)("span", {
               className: "SecretSantaPoints",
-              children: [(0, iB.jsx)(cB.b, {
+              children: [(0, gW.jsx)(BW.c, {
                 name: "star"
-              }), " ", GB.santaStatusPoints]
-            }, GB.santaStatusPoints), (0, iB.jsx)("span", {
+              }), " ", OW.santaStatusPoints]
+            }, OW.santaStatusPoints), (0, gW.jsx)("span", {
               className: "SecretSantaRank",
-              children: jB("secretSantaHud:rank", {
-                rank: GB.santaStatusRank,
-                players: GB.santaStatusPlayers
+              children: LW("secretSantaHud:rank", {
+                rank: OW.santaStatusRank,
+                players: OW.santaStatusPlayers
               })
             })]
           })]
-        }), GB && (0, iB.jsx)(dO, {
-          status: GB,
-          bells: DB,
-          treeLitAt: oB
-        }), (0, iB.jsx)(xB, {
-          controller: OB
+        }), OW && (0, gW.jsx)(ui, {
+          status: OW,
+          bells: EW,
+          treeLitAt: PW
+        }), (0, gW.jsx)(Wi, {
+          controller: iW
         })]
       })
     }));
 
-    function kO(BB) {
+    function ni(WW) {
       let {
-        endsAt: OB
-      } = BB;
-      const GB = (0, hB.k)(OB);
-      return 0 === OB ? (0, iB.jsx)("span", {
+        endsAt: iW
+      } = WW;
+      const OW = (0, qW.f)(iW);
+      return 0 === iW ? (0, gW.jsx)("span", {
         className: "SecretSantaClock"
-      }) : (0, iB.jsxs)("span", {
-        className: yB()("SecretSantaClock", {
-          Urgent: GB <= 30
+      }) : (0, gW.jsxs)("span", {
+        className: cW()("SecretSantaClock", {
+          Urgent: OW <= 30
         }),
-        children: [(0, iB.jsx)(cB.b, {
+        children: [(0, gW.jsx)(BW.c, {
           name: "stopwatch",
           className: "SecretSantaClockIcon",
           "aria-hidden": "true"
-        }), (0, hB.e)(GB)]
+        }), (0, qW.d)(OW)]
       })
     }
-    const dO = (0, QB.memo)((function(BB) {
+    const ui = (0, NW.memo)((function(WW) {
       let {
-        status: OB,
-        bells: GB,
-        treeLitAt: YB
-      } = BB;
+        status: iW,
+        bells: OW,
+        treeLitAt: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, zB.H)(), QB = Math.min(2, Math.max(0, OB.santaStatusHunters)), oB = OB.santaStatusScarf, jB = (0, iB.jsx)(oO, {
-        scarf: oB,
-        hat: OB.santaStatusHat
+        t: EW
+      } = (0, xW.B)(), NW = Math.min(2, Math.max(0, iW.santaStatusHunters)), PW = iW.santaStatusScarf, LW = (0, gW.jsx)(ci, {
+        scarf: PW,
+        hat: iW.santaStatusHat
       });
-      let yB = (0, iB.jsx)("span", {
-        children: jO(DB("secretSantaHud:youWearLook", {
-          look: OO
-        }), jB)
+      let cW = (0, gW.jsx)("span", {
+        children: wi(EW("secretSantaHud:youWearLook", {
+          look: mi
+        }), LW)
       });
-      if (OB.santaStatusKnown) {
-        const BB = OB.santaStatusHatKnown ? jO(DB("secretSantaHud:spottedLook", {
-          look: OO
-        }), jB) : jO(DB("secretSantaHud:spottedScarf", {
-          scarf: OO
-        }), (0, iB.jsx)(YO, {
-          scarf: oB
+      if (iW.santaStatusKnown) {
+        const WW = iW.santaStatusHatKnown ? wi(EW("secretSantaHud:spottedLook", {
+          look: mi
+        }), LW) : wi(EW("secretSantaHud:spottedScarf", {
+          scarf: mi
+        }), (0, gW.jsx)(Ni, {
+          scarf: PW
         }));
-        yB = (0, iB.jsxs)("span", {
+        cW = (0, gW.jsxs)("span", {
           className: "SecretSantaSpotted",
-          children: [(0, iB.jsx)(cB.b, {
+          children: [(0, gW.jsx)(BW.c, {
             name: "eye"
-          }), " ", BB]
+          }), " ", WW]
         })
       }
-      let JB = null;
-      return 0 !== YB ? JB = (0, iB.jsx)(lO, {
-        litAt: YB,
-        hunters: QB
-      }) : 0 !== GB ? JB = (0, iB.jsx)(RO, {
-        bells: GB
-      }) : QB > 0 && (JB = (0, iB.jsxs)("span", {
+      let wW = null;
+      return 0 !== mW ? wW = (0, gW.jsx)(bi, {
+        litAt: mW,
+        hunters: NW
+      }) : 0 !== OW ? wW = (0, gW.jsx)(Mi, {
+        bells: OW
+      }) : NW > 0 && (wW = (0, gW.jsxs)("span", {
         className: "SecretSantaHuntedBanner",
-        children: [(0, iB.jsx)(cB.b, {
+        children: [(0, gW.jsx)(BW.c, {
           name: "eyes",
           "aria-hidden": "true"
-        }), " ", DB(1 === QB ? "secretSantaHud:hunters1" : "secretSantaHud:hunters2")]
-      })), (0, iB.jsxs)("div", {
+        }), " ", EW(1 === NW ? "secretSantaHud:hunters1" : "secretSantaHud:hunters2")]
+      })), (0, gW.jsxs)("div", {
         className: "SecretSantaYouTab",
-        children: [JB, yB]
-      }, QB)
+        children: [wW, cW]
+      }, NW)
     }));
-    var KO = GB(4642);
-    const uO = [226, 36, 52],
-      mO = [246, 250, 255],
-      IO = [168, 214, 255],
-      FO = [24, 24, 28],
-      iO = [44, 44, 50],
-      LO = [112, 112, 122],
-      gO = [255, 112, 36];
+    var oi = OW(2937);
+    const di = [226, 36, 52],
+      ei = [246, 250, 255],
+      vi = [168, 214, 255],
+      gi = [24, 24, 28],
+      Di = [44, 44, 50],
+      Vi = [112, 112, 122],
+      fi = [255, 112, 36];
 
-    function rO(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+    function Ci(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
       return [{
         timeFraction: 0,
-        minColor: [BB[0], BB[1], BB[2], GB],
-        maxColor: [OB[0], OB[1], OB[2], GB]
+        minColor: [WW[0], WW[1], WW[2], OW],
+        maxColor: [iW[0], iW[1], iW[2], OW]
       }, {
         timeFraction: 1,
-        minColor: [BB[0], BB[1], BB[2], 0],
-        maxColor: [OB[0], OB[1], OB[2], 0]
+        minColor: [WW[0], WW[1], WW[2], 0],
+        maxColor: [iW[0], iW[1], iW[2], 0]
       }]
     }
 
-    function XO(BB, OB, GB) {
-      let [YB, DB, QB] = BB;
+    function Xi(WW, iW, OW) {
+      let [mW, EW, NW] = WW;
       return {
-        pos1: [YB - OB, DB, QB - OB],
-        pos2: [YB + OB, DB + GB, QB + OB]
+        pos1: [mW - iW, EW, NW - iW],
+        pos2: [mW + iW, EW + OW, NW + iW]
       }
     }
 
-    function wO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const GB = .45 * OB;
+    function Bi(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const OW = .45 * iW;
       return [{
         texture: "square_particle",
-        ...XO(BB, GB, 1.4 * OB),
+        ...Xi(WW, OW, 1.4 * iW),
         dir1: [-.7, .5, -.7],
         dir2: [.7, 1.4, .7],
         minEmitPower: .5,
         maxEmitPower: 1,
         minLifeTime: .8,
         maxLifeTime: 1.4,
-        minSize: .18 * OB,
-        maxSize: .34 * OB,
-        manualEmitCount: Math.round(26 * OB),
+        minSize: .18 * iW,
+        maxSize: .34 * iW,
+        manualEmitCount: Math.round(26 * iW),
         gravity: [0, .6, 0],
         velocityGradients: [{
           timeFraction: 0,
@@ -1989,12 +1982,12 @@ export const modules = {
           factor: .2,
           factor2: .3
         }],
-        colorGradients: rO(iO, LO, .95),
+        colorGradients: Ci(Di, Vi, .95),
         hideDist: 48,
-        blendMode: KO.f.Standard
+        blendMode: oi.d.Standard
       }, {
         texture: "square_particle",
-        ...XO(BB, .6 * GB, 1.2 * OB),
+        ...Xi(WW, .6 * OW, 1.2 * iW),
         dir1: [-1.4, 1.2, -1.4],
         dir2: [1.4, 2.6, 1.4],
         minEmitPower: 1.2,
@@ -2003,7 +1996,7 @@ export const modules = {
         maxLifeTime: 1,
         minSize: .1,
         maxSize: .18,
-        manualEmitCount: Math.round(14 * OB),
+        manualEmitCount: Math.round(14 * iW),
         gravity: [0, -14, 0],
         velocityGradients: [{
           timeFraction: 0,
@@ -2012,18 +2005,18 @@ export const modules = {
         }],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [FO[0], FO[1], FO[2], 1],
+          minColor: [gi[0], gi[1], gi[2], 1],
           maxColor: [58, 52, 48, 1]
         }, {
           timeFraction: 1,
-          minColor: [FO[0], FO[1], FO[2], 1],
+          minColor: [gi[0], gi[1], gi[2], 1],
           maxColor: [58, 52, 48, 1]
         }],
         hideDist: 48,
-        blendMode: KO.f.Standard
+        blendMode: oi.d.Standard
       }, {
         texture: "glint",
-        ...XO(BB, .7 * GB, 1.2 * OB),
+        ...Xi(WW, .7 * OW, 1.2 * iW),
         dir1: [-.8, .8, -.8],
         dir2: [.8, 2, .8],
         minEmitPower: .6,
@@ -2032,23 +2025,23 @@ export const modules = {
         maxLifeTime: .8,
         minSize: .06,
         maxSize: .14,
-        manualEmitCount: Math.round(6 * OB),
+        manualEmitCount: Math.round(6 * iW),
         gravity: [0, 1, 0],
         velocityGradients: [{
           timeFraction: 0,
           factor: 1,
           factor2: 1
         }],
-        colorGradients: rO(gO, uO),
+        colorGradients: Ci(fi, di),
         hideDist: 48,
-        blendMode: KO.f.Add
+        blendMode: oi.d.Add
       }]
     }
 
-    function EO(BB, OB) {
+    function qi(WW, iW) {
       return {
         texture: "glint",
-        ...XO(BB, .9, 1.9),
+        ...Xi(WW, .9, 1.9),
         dir1: [-.5, .6, -.5],
         dir2: [.5, 1.6, .5],
         minEmitPower: .6,
@@ -2057,41 +2050,41 @@ export const modules = {
         maxLifeTime: 1.5,
         minSize: .05,
         maxSize: .13,
-        manualEmitCount: OB,
+        manualEmitCount: iW,
         gravity: [0, .4, 0],
         velocityGradients: [{
           timeFraction: 0,
           factor: 1,
           factor2: 1
         }],
-        colorGradients: rO(mO, IO),
+        colorGradients: Ci(ei, vi),
         hideDist: 16,
-        blendMode: KO.f.Add
+        blendMode: oi.d.Add
       }
     }
-    var cO = GB(92);
-    const hO = "harp_pling",
-      aO = "cloth1",
-      eO = [
+    var Ri = OW(100);
+    const Gi = "harp_pling",
+      Ii = "cloth1",
+      ai = [
         [0, .55, 1],
         [110, .55, 1.5]
       ],
-      TO = [
+      ri = [
         [0, .5, 1],
         [85, .5, 1.26],
         [170, .5, 1.5],
         [255, .45, 2]
       ],
-      bO = [
+      zi = [
         [0, .5, 1.5],
         [85, .45, 2]
       ],
-      CO = [
+      Fi = [
         [0, .4, .75],
         [170, .4, .63]
       ],
-      HO = "keysJingle",
-      vO = [
+      Qi = "keysJingle",
+      WO = [
         [],
         [
           [.45, 1]
@@ -2102,15 +2095,15 @@ export const modules = {
         ]
       ];
 
-    function sO(BB, OB) {
-      return 1 === OB ? BB : {
-        ...BB,
-        manualEmitCount: Math.max(1, Math.round(BB.manualEmitCount * OB))
+    function iO(WW, iW) {
+      return 1 === iW ? WW : {
+        ...WW,
+        manualEmitCount: Math.max(1, Math.round(WW.manualEmitCount * iW))
       }
     }
-    class xO {
-      constructor(BB, OB) {
-        this.api = BB, this.localPlayerId = OB, this.layers = [{
+    class OO {
+      constructor(WW, iW) {
+        this.api = WW, this.localPlayerId = iW, this.layers = [{
           sound: null,
           volume: 0,
           target: 0,
@@ -2120,633 +2113,633 @@ export const modules = {
           volume: 0,
           target: 0,
           rate: 1
-        }], this.timers = new Set, this.camera = [0, 0, 0], this.look = [0, 0, 1], this.hint = null, this.spotted = !1, this.hatSpotted = !1, this.lastFrameAt = 0, this.particleShare = (0, cO.isMobile)() ? .6 : 1, BB.preloadSounds([hO, HO, aO])
+        }], this.timers = new Set, this.camera = [0, 0, 0], this.look = [0, 0, 1], this.hint = null, this.spotted = !1, this.hatSpotted = !1, this.lastFrameAt = 0, this.particleShare = (0, Ri.isMobile)() ? .6 : 1, WW.preloadSounds([Gi, Qi, Ii])
       }
       reset() {
         this.hint = null, this.spotted = !1, this.hatSpotted = !1, this.setBells(0)
       }
-      receiveHint(BB) {
-        const OB = this.hint;
-        this.hint = BB, "none" !== BB.santaHintState && (OB && OB.santaHintContract === BB.santaHintContract ? null === OB.santaHintScarf && null !== BB.santaHintScarf ? this.play(TO) : null === OB.santaHintHat && null !== BB.santaHintHat && this.play(bO) : this.play(eO))
+      receiveHint(WW) {
+        const iW = this.hint;
+        this.hint = WW, "none" !== WW.santaHintState && (iW && iW.santaHintContract === WW.santaHintContract ? null === iW.santaHintScarf && null !== WW.santaHintScarf ? this.play(ri) : null === iW.santaHintHat && null !== WW.santaHintHat && this.play(zi) : this.play(ai))
       }
-      receiveStatus(BB) {
-        (BB.santaStatusKnown && !this.spotted || BB.santaStatusHatKnown && !this.hatSpotted) && this.play(CO), this.spotted = BB.santaStatusKnown, this.hatSpotted = BB.santaStatusHatKnown
+      receiveStatus(WW) {
+        (WW.santaStatusKnown && !this.spotted || WW.santaStatusHatKnown && !this.hatSpotted) && this.play(Fi), this.spotted = WW.santaStatusKnown, this.hatSpotted = WW.santaStatusHatKnown
       }
       wrapStarted() {
-        this.api.playSound(this.localPlayerId, aO, .5, 1.2)
+        this.api.playSound(this.localPlayerId, Ii, .5, 1.2)
       }
-      setBells(BB) {
-        const OB = vO[BB];
-        this.layers.forEach(((BB, GB) => {
-          var YB;
-          const [DB, QB] = null !== (YB = OB[GB]) && void 0 !== YB ? YB : [0, BB.rate];
-          var oB;
-          (0 === DB && BB.target > 0 && BB.sound && this.stopLater(BB), BB.target = DB, DB > 0 && QB !== BB.rate) && (BB.rate = QB, null === (oB = BB.sound) || void 0 === oB || oB.rate(QB))
+      setBells(WW) {
+        const iW = WO[WW];
+        this.layers.forEach(((WW, OW) => {
+          var mW;
+          const [EW, NW] = null !== (mW = iW[OW]) && void 0 !== mW ? mW : [0, WW.rate];
+          var PW;
+          (0 === EW && WW.target > 0 && WW.sound && this.stopLater(WW), WW.target = EW, EW > 0 && NW !== WW.rate) && (WW.rate = NW, null === (PW = WW.sound) || void 0 === PW || PW.rate(NW))
         }))
       }
-      receiveFx(BB) {
+      receiveFx(WW) {
         let {
-          santaFxKind: OB,
-          santaFxAt: GB
-        } = BB;
+          santaFxKind: iW,
+          santaFxAt: OW
+        } = WW;
         if (this.api.particlesEnabled())
-          if ("caughtSanta" === OB) GB && this.burst(wO(GB));
-          else if ("toTunnel" === OB) this.later(300, (() => {
-          const [BB, OB, GB] = this.ahead();
-          this.burst([EO([BB, OB - 1, GB], 36)])
+          if ("caughtSanta" === iW) OW && this.burst(Bi(OW));
+          else if ("toTunnel" === iW) this.later(300, (() => {
+          const [WW, iW, OW] = this.ahead();
+          this.burst([qi([WW, iW - 1, OW], 36)])
         }));
         else {
-          const [BB, OB, GB] = this.ahead();
-          this.burst(wO([BB, OB - .6, GB], .8))
+          const [WW, iW, OW] = this.ahead();
+          this.burst(Bi([WW, iW - .6, OW], .8))
         }
       }
-      frame(BB) {
+      frame(WW) {
         const {
-          cameraPosition: OB,
-          cameraDirection: GB
-        } = BB;
-        this.camera[0] = OB[0], this.camera[1] = OB[1], this.camera[2] = OB[2], this.look[0] = GB[0], this.look[1] = GB[1], this.look[2] = GB[2];
-        const YB = performance.now(),
-          DB = Math.min(.1, (YB - (this.lastFrameAt || YB)) / 1e3);
-        this.lastFrameAt = YB;
-        for (const oB of this.layers) {
-          if (0 === oB.volume && 0 === oB.target && !oB.sound) continue;
-          oB.target > 0 && !oB.sound && (oB.sound = this.api.playSound(this.localPlayerId, HO, 0, oB.rate, void 0, !0));
-          const BB = (oB.target > oB.volume ? 3 : 1.2) * DB;
-          var QB;
-          if (oB.volume = oB.target > oB.volume ? Math.min(oB.target, oB.volume + BB) : Math.max(oB.target, oB.volume - BB), oB.volume <= 0 && 0 === oB.target) this.silence(oB);
-          else null === (QB = oB.sound) || void 0 === QB || QB.setRelativeVolume(oB.volume)
+          cameraPosition: iW,
+          cameraDirection: OW
+        } = WW;
+        this.camera[0] = iW[0], this.camera[1] = iW[1], this.camera[2] = iW[2], this.look[0] = OW[0], this.look[1] = OW[1], this.look[2] = OW[2];
+        const mW = performance.now(),
+          EW = Math.min(.1, (mW - (this.lastFrameAt || mW)) / 1e3);
+        this.lastFrameAt = mW;
+        for (const PW of this.layers) {
+          if (0 === PW.volume && 0 === PW.target && !PW.sound) continue;
+          PW.target > 0 && !PW.sound && (PW.sound = this.api.playSound(this.localPlayerId, Qi, 0, PW.rate, void 0, !0));
+          const WW = (PW.target > PW.volume ? 3 : 1.2) * EW;
+          var NW;
+          if (PW.volume = PW.target > PW.volume ? Math.min(PW.target, PW.volume + WW) : Math.max(PW.target, PW.volume - WW), PW.volume <= 0 && 0 === PW.target) this.silence(PW);
+          else null === (NW = PW.sound) || void 0 === NW || NW.setRelativeVolume(PW.volume)
         }
       }
       dispose() {
-        for (const BB of this.timers) window.clearTimeout(BB);
+        for (const WW of this.timers) window.clearTimeout(WW);
         this.timers.clear();
-        for (const BB of this.layers) BB.target = 0, this.silence(BB)
+        for (const WW of this.layers) WW.target = 0, this.silence(WW)
       }
-      silence(BB) {
-        var OB;
-        null === (OB = BB.sound) || void 0 === OB || OB.stop(), BB.sound = null, BB.volume = 0
+      silence(WW) {
+        var iW;
+        null === (iW = WW.sound) || void 0 === iW || iW.stop(), WW.sound = null, WW.volume = 0
       }
-      stopLater(BB) {
-        const OB = BB.sound,
-          GB = window.setTimeout((() => {
-            this.timers.delete(GB), BB.sound === OB && 0 === BB.target && this.silence(BB)
-          }), BB.volume / 1.2 * 1e3 + 150);
-        this.timers.add(GB)
+      stopLater(WW) {
+        const iW = WW.sound,
+          OW = window.setTimeout((() => {
+            this.timers.delete(OW), WW.sound === iW && 0 === WW.target && this.silence(WW)
+          }), WW.volume / 1.2 * 1e3 + 150);
+        this.timers.add(OW)
       }
       ahead() {
-        const [BB, OB, GB] = this.camera, [YB, DB, QB] = this.look;
-        return [BB + 1.8 * YB, OB + 1.8 * DB - .35, GB + 1.8 * QB]
+        const [WW, iW, OW] = this.camera, [mW, EW, NW] = this.look;
+        return [WW + 1.8 * mW, iW + 1.8 * EW - .35, OW + 1.8 * NW]
       }
-      later(BB, OB) {
-        const GB = window.setTimeout((() => {
-          this.timers.delete(GB), OB()
-        }), BB);
-        this.timers.add(GB)
+      later(WW, iW) {
+        const OW = window.setTimeout((() => {
+          this.timers.delete(OW), iW()
+        }), WW);
+        this.timers.add(OW)
       }
-      play(BB) {
-        for (const [OB, GB, YB] of BB) 0 === OB ? this.api.playSound(this.localPlayerId, hO, GB, YB) : this.later(OB, (() => {
-          this.api.playSound(this.localPlayerId, hO, GB, YB)
+      play(WW) {
+        for (const [iW, OW, mW] of WW) 0 === iW ? this.api.playSound(this.localPlayerId, Gi, OW, mW) : this.later(iW, (() => {
+          this.api.playSound(this.localPlayerId, Gi, OW, mW)
         }))
       }
-      burst(BB) {
-        for (const OB of BB) this.api.playParticleEffect(sO(OB, this.particleShare))
+      burst(WW) {
+        for (const iW of WW) this.api.playParticleEffect(iO(iW, this.particleShare))
       }
     }
-    class tO {
-      constructor(BB) {
-        this.api = BB, this.wait = null
+    class mO {
+      constructor(WW) {
+        this.api = WW, this.wait = null
       }
-      nP(BB) {
-        const OB = performance.now();
+      yZ(WW) {
+        const iW = performance.now();
         this.wait = {
-          min: BB.santaFlyoverMin,
-          max: BB.santaFlyoverMax,
-          start: BB.santaFlyoverStart,
-          until: OB + BB.santaFlyoverWaitMs,
+          min: WW.santaFlyoverMin,
+          max: WW.santaFlyoverMax,
+          start: WW.santaFlyoverStart,
+          until: iW + WW.santaFlyoverWaitMs,
           loadedAt: null,
           settledFrames: 0,
-          lastFrameAt: OB
+          lastFrameAt: iW
         }
       }
-      frame(BB) {
-        const OB = this.wait;
-        if (!OB) return;
-        const GB = performance.now(),
-          YB = GB - OB.lastFrameAt;
-        OB.lastFrameAt = GB, GB > OB.until ? this.wait = null : null !== OB.loadedAt ? (OB.settledFrames = YB <= 60 ? OB.settledFrames + 1 : 0, OB.settledFrames >= 6 && GB - OB.loadedAt >= 300 && (this.wait = null, this.api.sendCommand("santaFlyoverReady"))) : BB && this.isLoaded(OB, BB) && (OB.loadedAt = GB)
+      frame(WW) {
+        const iW = this.wait;
+        if (!iW) return;
+        const OW = performance.now(),
+          mW = OW - iW.lastFrameAt;
+        iW.lastFrameAt = OW, OW > iW.until ? this.wait = null : null !== iW.loadedAt ? (iW.settledFrames = mW <= 60 ? iW.settledFrames + 1 : 0, iW.settledFrames >= 6 && OW - iW.loadedAt >= 300 && (this.wait = null, this.api.sendCommand("santaFlyoverReady"))) : WW && this.isLoaded(iW, WW) && (iW.loadedAt = OW)
       }
-      isLoaded(BB, OB) {
+      isLoaded(WW, iW) {
         let {
-          min: GB,
-          max: DB,
-          start: QB
-        } = BB;
-        if (OB[0] < GB[0] || OB[0] > DB[0] || OB[2] < GB[2] || OB[2] > DB[2]) return !1;
-        const oB = YB.f.pP,
-          jB = BB => BB.map((BB => Math.floor(BB / oB))),
-          yB = [jB(OB), jB(QB)],
-          [JB, MB] = [jB(GB), jB(DB)];
-        for (let YB = JB[0]; YB <= MB[0]; YB++)
-          for (let BB = JB[1]; BB <= MB[1]; BB++)
-            for (let OB = JB[2]; OB <= MB[2]; OB++) {
-              if (yB.some((GB => {
-                  let [DB, QB, oB] = GB;
-                  return (YB - DB) ** 2 + (BB - QB) ** 2 + (OB - oB) ** 2 <= 4
-                })) && !this.api.isBlockInLoadedChunk(YB * oB, BB * oB, OB * oB)) return !1
+          min: OW,
+          max: EW,
+          start: NW
+        } = WW;
+        if (iW[0] < OW[0] || iW[0] > EW[0] || iW[2] < OW[2] || iW[2] > EW[2]) return !1;
+        const PW = mW.f.jZ,
+          LW = WW => WW.map((WW => Math.floor(WW / PW))),
+          cW = [LW(iW), LW(NW)],
+          [wW, tW] = [LW(OW), LW(EW)];
+        for (let mW = wW[0]; mW <= tW[0]; mW++)
+          for (let WW = wW[1]; WW <= tW[1]; WW++)
+            for (let iW = wW[2]; iW <= tW[2]; iW++) {
+              if (cW.some((OW => {
+                  let [EW, NW, PW] = OW;
+                  return (mW - EW) ** 2 + (WW - NW) ** 2 + (iW - PW) ** 2 <= 4
+                })) && !this.api.isBlockInLoadedChunk(mW * PW, WW * PW, iW * PW)) return !1
             }
         return !0
       }
     }
-    var BG = GB(39572),
-      OG = GB(1299),
-      GG = GB(39226);
-    class YG {
-      constructor(BB) {
-        this.api = BB, this.sent = null, this.timer = null, this.recheck = setInterval((() => {
-          this.jP()
-        }), 5e3), this.pacer = new GG.d({
+    var EO = OW(40090),
+      NO = OW(1301),
+      PO = OW(39775);
+    class LO {
+      constructor(WW) {
+        this.api = WW, this.sent = null, this.timer = null, this.recheck = setInterval((() => {
+          this.wZ()
+        }), 5e3), this.pacer = new PO.c({
           limit: 2,
           spacingMs: 3e3
         }), this.heldBack = !1, this.stopPacer = void 0, this.resized = () => {
           null !== this.timer && clearTimeout(this.timer), this.timer = setTimeout((() => {
-            this.timer = null, this.jP()
+            this.timer = null, this.wZ()
           }), 400)
         }, window.addEventListener("resize", this.resized), this.stopPacer = this.pacer.subscribe((() => {
-          this.heldBack && !this.pacer.isPacing() && (this.heldBack = !1, this.jP())
-        })), this.jP()
+          this.heldBack && !this.pacer.isPacing() && (this.heldBack = !1, this.wZ())
+        })), this.wZ()
       }
       resend() {
-        this.sent = null, this.jP()
+        this.sent = null, this.wZ()
       }
       dispose() {
         window.removeEventListener("resize", this.resized), this.stopPacer(), this.pacer.dispose(), clearInterval(this.recheck), null !== this.timer && clearTimeout(this.timer)
       }
-      jP() {
-        var BB, OB;
-        const GB = null !== (BB = null === (OB = (0, OG.D)().gameRender()) || void 0 === OB ? void 0 : OB.canvas.width) && void 0 !== BB ? BB : 0;
-        if (GB <= 0 || window.innerWidth <= 0 || window.innerHeight <= 0) return;
-        const YB = window.innerWidth / window.innerHeight,
-          DB = (0, BG.b)(GB),
-          QB = this.sent;
-        QB && Math.abs(YB / QB.aspect - 1) < .02 && Math.abs(DB / QB.tagScale - 1) < .02 || (this.pacer.tryStart() ? (this.sent = {
-          aspect: YB,
-          tagScale: DB
-        }, this.api.sendCommand(`santaView ${Math.round(1e3*YB)} ${Math.round(1e3*DB)}`)) : this.heldBack = !0)
+      wZ() {
+        var WW, iW;
+        const OW = null !== (WW = null === (iW = (0, NO.y)().gameRender()) || void 0 === iW ? void 0 : iW.canvas.width) && void 0 !== WW ? WW : 0;
+        if (OW <= 0 || window.innerWidth <= 0 || window.innerHeight <= 0) return;
+        const mW = window.innerWidth / window.innerHeight,
+          EW = (0, EO.b)(OW),
+          NW = this.sent;
+        NW && Math.abs(mW / NW.aspect - 1) < .02 && Math.abs(EW / NW.tagScale - 1) < .02 || (this.pacer.tryStart() ? (this.sent = {
+          aspect: mW,
+          tagScale: EW
+        }, this.api.sendCommand(`santaView ${Math.round(1e3*mW)} ${Math.round(1e3*EW)}`)) : this.heldBack = !0)
       }
     }
-    var DG = GB(39858);
-    const QG = [20, 9, 20],
-      oG = [8, 12],
-      jG = .3,
-      yG = [.05, .13],
-      JG = {
+    var cO = OW(40371);
+    const wO = [20, 9, 20],
+      tO = [8, 12],
+      ZO = .3,
+      xO = [.05, .13],
+      lO = {
         kind: "smokePuff"
       },
-      MG = [245, 250, 255],
-      PG = {
-        CP: 900,
+      AO = [245, 250, 255],
+      bO = {
+        aZ: 900,
         perS: 80
       },
-      zG = {
-        CP: 360,
+      jO = {
+        aZ: 360,
         perS: 34
       };
-    class lG {
-      constructor(BB) {
-        this.api = BB, this.tier = (0, cO.isMobile)() ? zG : PG, this.system = null, this.at = [0, 0, 0], this.last = [0, 0, 0], this.budget = 0, this.lastMs = 0, this.roofed = !1, this.nextRoofCheckMs = 0
+    class UO {
+      constructor(WW) {
+        this.api = WW, this.tier = (0, Ri.isMobile)() ? jO : bO, this.system = null, this.at = [0, 0, 0], this.last = [0, 0, 0], this.budget = 0, this.lastMs = 0, this.roofed = !1, this.nextRoofCheckMs = 0
       }
-      onAfterRender(BB) {
-        const OB = performance.now(),
-          GB = 0 === this.lastMs ? 0 : Math.min(OB - this.lastMs, 250) / 1e3;
-        if (this.lastMs = OB, !this.api.particlesEnabled()) return void this.dispose();
-        const YB = Math.hypot(BB[0] - this.last[0], BB[1] - this.last[1], BB[2] - this.last[2]) > 20;
-        if (this.last[0] = BB[0], this.last[1] = BB[1], this.last[2] = BB[2], YB && this.dispose(), (YB || OB >= this.nextRoofCheckMs) && (this.nextRoofCheckMs = OB + 250, this.roofed = this.hasRoof(BB)), this.roofed) return void(this.budget = 0);
-        const DB = this.at;
-        let QB;
-        DB[0] = BB[0], DB[1] = BB[1] + 7, DB[2] = BB[2], this.system ? (this.budget = Math.min(this.budget + this.tier.perS * GB, this.tier.perS / 4), QB = Math.floor(this.budget), this.budget -= QB) : (this.system = this.api.createParticles(this.opts(), {
-          pos: DB,
-          half: QG
-        }), QB = Math.floor(this.tier.CP / 2)), QB > 0 && (this.system.moveTo(DB, QG), this.system.emit(QB))
+      onAfterRender(WW) {
+        const iW = performance.now(),
+          OW = 0 === this.lastMs ? 0 : Math.min(iW - this.lastMs, 250) / 1e3;
+        if (this.lastMs = iW, !this.api.particlesEnabled()) return void this.dispose();
+        const mW = Math.hypot(WW[0] - this.last[0], WW[1] - this.last[1], WW[2] - this.last[2]) > 20;
+        if (this.last[0] = WW[0], this.last[1] = WW[1], this.last[2] = WW[2], mW && this.dispose(), (mW || iW >= this.nextRoofCheckMs) && (this.nextRoofCheckMs = iW + 250, this.roofed = this.hasRoof(WW)), this.roofed) return void(this.budget = 0);
+        const EW = this.at;
+        let NW;
+        EW[0] = WW[0], EW[1] = WW[1] + 7, EW[2] = WW[2], this.system ? (this.budget = Math.min(this.budget + this.tier.perS * OW, this.tier.perS / 4), NW = Math.floor(this.budget), this.budget -= NW) : (this.system = this.api.createParticles(this.opts(), {
+          pos: EW,
+          half: wO
+        }), NW = Math.floor(this.tier.aZ / 2)), NW > 0 && (this.system.moveTo(EW, wO), this.system.emit(NW))
       }
       dispose() {
-        var BB;
-        null === (BB = this.system) || void 0 === BB || BB.dispose(), this.system = null
+        var WW;
+        null === (WW = this.system) || void 0 === WW || WW.dispose(), this.system = null
       }
-      hasRoof(BB) {
-        let [OB, GB, YB] = BB;
-        const DB = Math.floor(OB),
-          QB = Math.floor(YB);
-        let oB = 0;
-        for (let jB = Math.floor(GB) + 1; jB <= Math.floor(GB) + 16; jB++)
-          if (oB = this.api.isSolidToPlayerBlockId(this.api.getBlockId(DB, jB, QB)) ? oB + 1 : 0, oB >= 4) return !0;
+      hasRoof(WW) {
+        let [iW, OW, mW] = WW;
+        const EW = Math.floor(iW),
+          NW = Math.floor(mW);
+        let PW = 0;
+        for (let LW = Math.floor(OW) + 1; LW <= Math.floor(OW) + 16; LW++)
+          if (PW = this.api.isSolidToPlayerBlockId(this.api.getBlockId(EW, LW, NW)) ? PW + 1 : 0, PW >= 4) return !0;
         return !1
       }
       opts() {
-        const [BB, OB, GB] = MG;
+        const [WW, iW, OW] = AO;
         return {
-          texture: JG,
-          CP: this.tier.CP,
-          minLifeTime: oG[0] / DG.c,
-          maxLifeTime: oG[1] / DG.c,
-          minEmitPower: 1.1 * DG.c * .8,
-          maxEmitPower: 1.1 * DG.c * 1.2,
-          minSize: yG[0],
-          maxSize: yG[1],
+          texture: lO,
+          aZ: this.tier.aZ,
+          minLifeTime: tO[0] / cO.d,
+          maxLifeTime: tO[1] / cO.d,
+          minEmitPower: 1.1 * cO.d * .8,
+          maxEmitPower: 1.1 * cO.d * 1.2,
+          minSize: xO[0],
+          maxSize: xO[1],
           emitRate: 0,
           gravity: [0, 0, 0],
           dir1: [-.3, -1, -.3],
-          dir2: [jG, -1, jG],
+          dir2: [ZO, -1, ZO],
           colorGradients: [{
             timeFraction: 0,
-            minColor: [BB, OB, GB, 0]
+            minColor: [WW, iW, OW, 0]
           }, {
             timeFraction: .12,
-            minColor: [BB, OB, GB, .9]
+            minColor: [WW, iW, OW, .9]
           }, {
             timeFraction: .85,
-            minColor: [BB, OB, GB, .9]
+            minColor: [WW, iW, OW, .9]
           }, {
             timeFraction: 1,
-            minColor: [BB, OB, GB, 0]
+            minColor: [WW, iW, OW, 0]
           }],
-          blendMode: KO.f.Standard
+          blendMode: oi.d.Standard
         }
       }
     }
-    var pG = GB(37233);
-    const qG = [{
+    var kO = OW(37838);
+    const sO = [{
+        icon: "eyes",
+        key: "secretSantaHud:introSantas"
+      }, {
         icon: "gift",
         key: "secretSantaHud:introFind"
       }, {
         icon: "coins",
         key: "secretSantaHud:introCoal"
-      }, {
-        icon: "eyes",
-        key: "secretSantaHud:introWatched"
       }],
-      ZG = (0, QB.memo)((function() {
+      MO = (0, NW.memo)((function() {
         const {
-          t: BB
-        } = (0, zB.H)();
-        return (0, iB.jsxs)("div", {
+          t: WW
+        } = (0, xW.B)();
+        return (0, gW.jsxs)("div", {
           className: "SecretSantaIntroLines",
-          children: [(0, iB.jsxs)("div", {
+          children: [(0, gW.jsxs)("div", {
             className: "SecretSantaIntroHeadline",
-            children: [(0, iB.jsx)(cB.b, {
+            children: [(0, gW.jsx)(BW.c, {
               name: "user-secret"
-            }), (0, iB.jsx)("span", {
-              children: BB("secretSantaHud:introHeadline")
+            }), (0, gW.jsx)("span", {
+              children: WW("secretSantaHud:introHeadline")
             })]
-          }), qG.map((OB => {
+          }), sO.map((iW => {
             let {
-              icon: GB,
-              key: YB
-            } = OB;
-            return (0, iB.jsxs)("div", {
+              icon: OW,
+              key: mW
+            } = iW;
+            return (0, gW.jsxs)("div", {
               className: "SecretSantaIntroLine",
-              children: [(0, iB.jsx)(cB.b, {
-                name: GB,
+              children: [(0, gW.jsx)(BW.c, {
+                name: OW,
                 fixedWidth: !0
-              }), (0, iB.jsx)("span", {
-                children: BB(YB)
+              }), (0, gW.jsx)("span", {
+                children: WW(mW)
               })]
-            }, YB)
+            }, mW)
           }))]
         })
       })),
-      NG = (0, QB.memo)((function(BB) {
+      KO = (0, NW.memo)((function(WW) {
         let {
-          controller: OB
-        } = BB;
-        return (0, iB.jsx)("div", {
-          ref: OB.bindIntro,
+          controller: iW
+        } = WW;
+        return (0, gW.jsx)("div", {
+          ref: iW.bindIntro,
           className: "SecretSantaIntro",
           "data-camera-keeper": "",
           "aria-hidden": "true",
-          children: (0, iB.jsx)("div", {
+          children: (0, gW.jsx)("div", {
             className: "SecretSantaIntroCard",
-            children: (0, iB.jsx)(ZG, {})
+            children: (0, gW.jsx)(MO, {})
           })
         })
       })),
-      RG = "secretSantaIntroShown";
-    class WG {
+      SO = "secretSantaIntroShown";
+    class YO {
       constructor() {
-        this.element = null, this.fade = null, this.fadeLookedAt = -1 / 0, this.armedUntil = 0, this.shownAt = null, this.drawn = -1, this.intro = null, this.introUntil = 0, this.drawnIntro = null, this.bind = BB => {
-          this.element = BB, this.drawn = -1
-        }, this.bindIntro = BB => {
-          this.intro = BB, this.drawnIntro = null
+        this.element = null, this.fade = null, this.fadeLookedAt = -1 / 0, this.armedUntil = 0, this.shownAt = null, this.drawn = -1, this.intro = null, this.introUntil = 0, this.drawnIntro = null, this.bind = WW => {
+          this.element = WW, this.drawn = -1
+        }, this.bindIntro = WW => {
+          this.intro = WW, this.drawnIntro = null
         }
       }
-      receiveFlyover(BB) {
-        this.armedUntil = performance.now() + BB + 3e3
+      receiveFlyover(WW) {
+        this.armedUntil = performance.now() + WW + 3e3
       }
-      frame(BB) {
-        const OB = performance.now(),
-          GB = this.snowAlpha(OB);
-        if (this.drawIntro(OB, GB), GB <= 0) return null !== this.shownAt && (OB < this.armedUntil && this.startIntro(OB), this.armedUntil = 0), this.shownAt = null, void this.draw(0);
+      frame(WW) {
+        const iW = performance.now(),
+          OW = this.snowAlpha(iW);
+        if (this.drawIntro(iW, OW), OW <= 0) return null !== this.shownAt && (iW < this.armedUntil && this.startIntro(iW), this.armedUntil = 0), this.shownAt = null, void this.draw(0);
         if (null === this.shownAt) {
-          if (GB < 1 || BB && OB >= this.armedUntil) return void this.draw(0);
-          this.shownAt = OB
+          if (OW < 1 || WW && iW >= this.armedUntil) return void this.draw(0);
+          this.shownAt = iW
         }
-        this.draw(Math.min(1, (OB - this.shownAt) / 300) * GB)
+        this.draw(Math.min(1, (iW - this.shownAt) / 300) * OW)
       }
-      startIntro(BB) {
-        var OB;
-        const GB = null !== (OB = PB.g.getItem(RG)) && void 0 !== OB ? OB : 0;
-        PB.g.setItem(RG, GB + 1), this.introUntil = BB + (GB < 2 ? 3500 : 2e3)
+      startIntro(WW) {
+        var iW;
+        const OW = null !== (iW = ZW.i.getItem(SO)) && void 0 !== iW ? iW : 0;
+        ZW.i.setItem(SO, OW + 1), this.introUntil = WW + (OW < 3 ? 4900 : 3e3)
       }
-      drawIntro(BB, OB) {
-        0 !== this.introUntil && (BB >= this.introUntil || OB > 0) && (this.introUntil = 0);
-        const GB = 0 !== this.introUntil;
-        this.intro && GB !== this.drawnIntro && (this.drawnIntro = GB, this.intro.classList.toggle("Shown", GB))
+      drawIntro(WW, iW) {
+        0 !== this.introUntil && (WW >= this.introUntil || iW > 0) && (this.introUntil = 0);
+        const OW = 0 !== this.introUntil;
+        this.intro && OW !== this.drawnIntro && (this.drawnIntro = OW, this.intro.classList.toggle("Shown", OW))
       }
-      snowAlpha(BB) {
-        var OB, GB, YB, DB;
-        (null === (OB = this.fade) || void 0 === OB || !OB.isConnected) && BB - this.fadeLookedAt >= 250 && (this.fadeLookedAt = BB, this.fade = document.querySelector(`[${pG.b}]`));
-        const QB = null === (GB = this.fade) || void 0 === GB ? void 0 : GB.style;
-        if (!QB || "none" === QB.display) return 0;
-        const oB = null !== (YB = null === (DB = QB.backgroundColor.match(/\d+/g)) || void 0 === DB ? void 0 : DB.slice(0, 3).map(Number)) && void 0 !== YB ? YB : [];
-        return 3 === oB.length && oB.every((BB => BB >= 200)) && Number(QB.opacity) || 0
+      snowAlpha(WW) {
+        var iW, OW, mW, EW;
+        (null === (iW = this.fade) || void 0 === iW || !iW.isConnected) && WW - this.fadeLookedAt >= 250 && (this.fadeLookedAt = WW, this.fade = document.querySelector(`[${kO.c}]`));
+        const NW = null === (OW = this.fade) || void 0 === OW ? void 0 : OW.style;
+        if (!NW || "none" === NW.display) return 0;
+        const PW = null !== (mW = null === (EW = NW.backgroundColor.match(/\d+/g)) || void 0 === EW ? void 0 : EW.slice(0, 3).map(Number)) && void 0 !== mW ? mW : [];
+        return 3 === PW.length && PW.every((WW => WW >= 200)) && Number(NW.opacity) || 0
       }
-      draw(BB) {
-        const OB = Math.round(100 * BB) / 100;
-        this.element && OB !== this.drawn && (this.drawn = OB, this.element.style.opacity = String(OB), this.element.style.display = OB > 0 ? "flex" : "none")
+      draw(WW) {
+        const iW = Math.round(100 * WW) / 100;
+        this.element && iW !== this.drawn && (this.drawn = iW, this.element.style.opacity = String(iW), this.element.style.display = iW > 0 ? "flex" : "none")
       }
     }
-    const AG = (0, QB.memo)((function(BB) {
+    const yO = (0, NW.memo)((function(WW) {
         let {
-          controller: OB
-        } = BB;
+          controller: iW
+        } = WW;
         const {
-          t: GB
-        } = (0, zB.H)();
-        return (0, iB.jsx)("div", {
-          ref: OB.bind,
+          t: OW
+        } = (0, xW.B)();
+        return (0, gW.jsx)("div", {
+          ref: iW.bind,
           className: "SecretSantaSnowTitle",
           "data-camera-keeper": "",
           "aria-hidden": "true",
-          children: (0, iB.jsxs)("div", {
+          children: (0, gW.jsxs)("div", {
             className: "SecretSantaSnowTitleCard",
-            children: [(0, iB.jsxs)("div", {
+            children: [(0, gW.jsxs)("div", {
               className: "SecretSantaSnowTitleName",
-              children: [(0, iB.jsx)(cB.b, {
+              children: [(0, gW.jsx)(BW.c, {
                 name: "hat-santa",
                 className: "SecretSantaSnowTitleIcon"
-              }), GB("secretSantaHud:titleName")]
-            }), (0, iB.jsx)(ZG, {})]
+              }), OW("secretSantaHud:titleName")]
+            }), (0, gW.jsx)(MO, {})]
           })
         })
       })),
-      VG = "SecretSantaMode",
-      SG = YB.f.xZ * YB.f.playerEyeToHeightRatio;
+      TO = "SecretSantaMode",
+      JO = mW.f.ZU * mW.f.playerEyeToHeightRatio;
 
-    function nG(BB) {
-      document.body.classList.toggle("SecretSantaPodium", BB)
+    function hO(WW) {
+      document.body.classList.toggle("SecretSantaPodium", WW)
     }
-    const UG = function(BB, OB, GB, YB) {
+    const HO = function(WW, iW, OW, mW) {
       let {
-        localPlayerId: DB
-      } = YB;
-      const jB = new IB((() => {
-          var BB;
-          null === (BB = qB) || void 0 === BB || BB.wrapStarted()
+        localPlayerId: EW
+      } = mW;
+      const LW = new eW((() => {
+          var WW;
+          null === (WW = bW) || void 0 === WW || WW.wrapStarted()
         })),
-        yB = new WG,
-        JB = [0, 0, 0];
-      let MB = null;
-      const PB = [0, 0, 0],
-        zB = [0, 0, 0];
-      let lB = null,
-        pB = null,
-        qB = null,
-        ZB = null,
-        NB = null,
-        RB = null,
-        WB = null;
-      const AB = BB => {
-          lB && null !== BB && BB !== DB && !WB && (WB = {
-            target: BB,
+        cW = new YO,
+        wW = [0, 0, 0];
+      let tW = null;
+      const ZW = [0, 0, 0],
+        xW = [0, 0, 0];
+      let lW = null,
+        AW = null,
+        bW = null,
+        jW = null,
+        UW = null,
+        kW = null,
+        sW = null;
+      const MW = WW => {
+          lW && null !== WW && WW !== EW && !sW && (sW = {
+            target: WW,
             at: performance.now(),
             first: null
           })
         },
-        VB = (BB, OB) => {
-          WB = null, jB.pressGift(BB.at, OB) && (MB = BB.target)
+        KW = (WW, iW) => {
+          sW = null, LW.pressGift(WW.at, iW) && (tW = WW.target)
         },
-        SB = (BB, OB) => {
-          if (null === MB) return;
-          if (!BB.readDrawnPosition(MB, PB)) return void(MB = null);
-          zB[0] = OB[0], zB[1] = OB[1] + SG, zB[2] = OB[2];
-          const GB = Math.hypot(PB[0] - OB[0], PB[1] - OB[1], PB[2] - OB[2]);
-          jB.aimAtWrap(function(BB, OB, GB) {
-            const YB = GB[0] - BB[0],
-              DB = GB[2] - BB[2],
-              QB = Math.hypot(OB[0], OB[2]);
-            let oB = BB[1];
-            const jB = QB > 0 ? (YB * OB[0] + DB * OB[2]) / QB : 0;
-            jB > 0 && (oB += OB[1] / QB * jB), oB = Math.max(GB[1], Math.min(GB[1] + 1.8, oB));
-            const yB = [YB, oB - BB[1], DB],
-              JB = Math.hypot(yB[0], yB[1], yB[2]),
-              MB = Math.hypot(OB[0], OB[1], OB[2]);
-            if (0 === JB || 0 === MB) return 0;
-            const PB = (yB[0] * OB[0] + yB[1] * OB[1] + yB[2] * OB[2]) / (JB * MB);
-            return 180 * Math.acos(Math.max(-1, Math.min(1, PB))) / Math.PI
-          }(zB, BB.getActionRay().direction, PB), GB) || (MB = null)
+        SW = (WW, iW) => {
+          if (null === tW) return;
+          if (!WW.readDrawnPosition(tW, ZW)) return void(tW = null);
+          xW[0] = iW[0], xW[1] = iW[1] + JO, xW[2] = iW[2];
+          const OW = Math.hypot(ZW[0] - iW[0], ZW[1] - iW[1], ZW[2] - iW[2]);
+          LW.aimAtWrap(function(WW, iW, OW) {
+            const mW = OW[0] - WW[0],
+              EW = OW[2] - WW[2],
+              NW = Math.hypot(iW[0], iW[2]);
+            let PW = WW[1];
+            const LW = NW > 0 ? (mW * iW[0] + EW * iW[2]) / NW : 0;
+            LW > 0 && (PW += iW[1] / NW * LW), PW = Math.max(OW[1], Math.min(OW[1] + 1.8, PW));
+            const cW = [mW, PW - WW[1], EW],
+              wW = Math.hypot(cW[0], cW[1], cW[2]),
+              tW = Math.hypot(iW[0], iW[1], iW[2]);
+            if (0 === wW || 0 === tW) return 0;
+            const ZW = (cW[0] * iW[0] + cW[1] * iW[1] + cW[2] * iW[2]) / (wW * tW);
+            return 180 * Math.acos(Math.max(-1, Math.min(1, ZW))) / Math.PI
+          }(xW, WW.getActionRay().direction, ZW), OW) || (tW = null)
         },
-        nB = (BB, OB, GB) => {
-          const YB = [0, 0, 0];
-          GB && BB.readDrawnPosition(OB.target, YB) ? OB.first ? VB(OB, function(BB, OB, GB, YB) {
-            const DB = GB[0] - BB[0],
-              QB = GB[1] - BB[1],
-              oB = GB[2] - BB[2],
-              jB = Math.hypot(DB, QB, oB);
-            return 0 === jB || YB <= 0 ? {
-              distance: jB,
+        YW = (WW, iW, OW) => {
+          const mW = [0, 0, 0];
+          OW && WW.readDrawnPosition(iW.target, mW) ? iW.first ? KW(iW, function(WW, iW, OW, mW) {
+            const EW = OW[0] - WW[0],
+              NW = OW[1] - WW[1],
+              PW = OW[2] - WW[2],
+              LW = Math.hypot(EW, NW, PW);
+            return 0 === LW || mW <= 0 ? {
+              distance: LW,
               awaySpeed: 0
             } : {
-              distance: jB,
-              awaySpeed: (DB * (GB[0] - OB[0]) + QB * (GB[1] - OB[1]) + oB * (GB[2] - OB[2])) / jB / YB
+              distance: LW,
+              awaySpeed: (EW * (OW[0] - iW[0]) + NW * (OW[1] - iW[1]) + PW * (OW[2] - iW[2])) / LW / mW
             }
-          }(GB, OB.first.pos, YB, (performance.now() - OB.first.at) / 1e3)) : OB.first = {
-            pos: YB,
+          }(OW, iW.first.pos, mW, (performance.now() - iW.first.at) / 1e3)) : iW.first = {
+            pos: mW,
             at: performance.now()
-          } : VB(OB, null)
+          } : KW(iW, null)
         };
       return {
-        onCreate: BB => {
-          lB = BB, document.body.classList.add(VG), qB = new xO(BB, DB), ZB = new lG(BB), NB = new tO(BB), RB = new YG(BB), pB = (0, oB.s)((0, QB.createElement)(QB.Fragment, null, (0, QB.createElement)(WO, {
-            controller: jB
-          }), (0, QB.createElement)(gB, {
-            controller: jB
-          }), (0, QB.createElement)(AG, {
-            controller: yB
-          }), (0, QB.createElement)(NG, {
-            controller: yB
+        onCreate: WW => {
+          lW = WW, document.body.classList.add(TO), bW = new OO(WW, EW), jW = new UO(WW), UW = new mO(WW), kW = new LO(WW), AW = (0, PW.O)((0, NW.createElement)(NW.Fragment, null, (0, NW.createElement)(Ki, {
+            controller: LW
+          }), (0, NW.createElement)(VW, {
+            controller: LW
+          }), (0, NW.createElement)(yO, {
+            controller: cW
+          }), (0, NW.createElement)(KO, {
+            controller: cW
           })))
         },
         onClose: () => {
-          var BB, OB, GB, YB;
-          document.body.classList.remove(VG), nG(!1), null === (BB = pB) || void 0 === BB || BB(), pB = null, jB.dispose(), null === (OB = qB) || void 0 === OB || OB.dispose(), qB = null, null === (GB = ZB) || void 0 === GB || GB.dispose(), ZB = null, NB = null, null === (YB = RB) || void 0 === YB || YB.dispose(), RB = null, lB = null
+          var WW, iW, OW, mW;
+          document.body.classList.remove(TO), hO(!1), null === (WW = AW) || void 0 === WW || WW(), AW = null, LW.dispose(), null === (iW = bW) || void 0 === iW || iW.dispose(), bW = null, null === (OW = jW) || void 0 === OW || OW.dispose(), jW = null, UW = null, null === (mW = kW) || void 0 === mW || mW.dispose(), kW = null, lW = null
         },
-        onPlayerAltAction: (BB, OB, GB, YB, DB, QB) => {
-          AB(QB)
+        onPlayerAltAction: (WW, iW, OW, mW, EW, NW) => {
+          MW(NW)
         },
-        onPlayerAttackEntity: (BB, OB) => {
-          AB(OB)
+        onPlayerAttackEntity: (WW, iW) => {
+          MW(iW)
         },
-        onAfterRender: (BB, OB) => {
-          var GB, YB, QB, oB;
-          const MB = null !== (GB = lB) && void 0 !== GB && GB.readDrawnPosition(DB, JB) ? JB : null;
-          WB && lB && nB(lB, WB, MB), lB && MB && SB(lB, MB), jB.frame(OB.cameraHeading, MB), null === (YB = qB) || void 0 === YB || YB.frame(OB), null === (QB = ZB) || void 0 === QB || QB.onAfterRender(OB.cameraPosition), null === (oB = NB) || void 0 === oB || oB.frame(MB), yB.frame(jB.getView().shown)
+        onAfterRender: (WW, iW) => {
+          var OW, mW, NW, PW;
+          const tW = null !== (OW = lW) && void 0 !== OW && OW.readDrawnPosition(EW, wW) ? wW : null;
+          sW && lW && YW(lW, sW, tW), lW && tW && SW(lW, tW), LW.frame(iW.cameraHeading, tW), null === (mW = bW) || void 0 === mW || mW.frame(iW), null === (NW = jW) || void 0 === NW || NW.onAfterRender(iW.cameraPosition), null === (PW = UW) || void 0 === PW || PW.frame(tW), cW.frame(LW.getView().shown)
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          var GB;
-          if ("secretSantaHint" === BB) jB.receiveHint(OB), null === (GB = qB) || void 0 === GB || GB.receiveHint(OB);
-          else if ("secretSantaStatus" === BB) {
-            var YB;
-            jB.receiveStatus(OB), null === (YB = qB) || void 0 === YB || YB.receiveStatus(OB)
-          } else if ("secretSantaWrap" === BB) {
-            WB && VB(WB, null);
+        onReceivedMessageFromServer: (WW, iW) => {
+          var OW;
+          if ("secretSantaHint" === WW) LW.receiveHint(iW), null === (OW = bW) || void 0 === OW || OW.receiveHint(iW);
+          else if ("secretSantaStatus" === WW) {
+            var mW;
+            LW.receiveStatus(iW), null === (mW = bW) || void 0 === mW || mW.receiveStatus(iW)
+          } else if ("secretSantaWrap" === WW) {
+            sW && KW(sW, null);
             const {
-              santaWrapMs: BB,
-              santaWrapDone: GB
-            } = OB;
-            jB.receiveWrap(BB, GB)
-          } else if ("secretSantaMarket" === BB) {
-            var DB;
-            null === (DB = qB) || void 0 === DB || DB.reset(), jB.receiveMarket(OB)
-          } else if ("secretSantaBells" === BB) {
-            var QB;
+              santaWrapMs: WW,
+              santaWrapDone: OW
+            } = iW;
+            LW.receiveWrap(WW, OW)
+          } else if ("secretSantaMarket" === WW) {
+            var EW;
+            null === (EW = bW) || void 0 === EW || EW.reset(), LW.receiveMarket(iW)
+          } else if ("secretSantaBells" === WW) {
+            var NW;
             const {
-              santaBellsLevel: BB
-            } = OB;
-            jB.receiveBells(BB), null === (QB = qB) || void 0 === QB || QB.setBells(BB)
-          } else if ("secretSantaFx" === BB) {
-            var oB;
-            const BB = OB;
-            "toTunnel" === BB.santaFxKind && jB.snowBlink(), null === (oB = qB) || void 0 === oB || oB.receiveFx(BB)
-          } else if ("secretSantaFlyover" === BB) {
-            var JB;
-            null === (JB = NB) || void 0 === JB || JB.nP(OB), yB.receiveFlyover(OB.santaFlyoverWaitMs)
-          } else if ("secretSantaPodium" === BB) {
+              santaBellsLevel: WW
+            } = iW;
+            LW.receiveBells(WW), null === (NW = bW) || void 0 === NW || NW.setBells(WW)
+          } else if ("secretSantaFx" === WW) {
+            var PW;
+            const WW = iW;
+            "toTunnel" === WW.santaFxKind && LW.snowBlink(), null === (PW = bW) || void 0 === PW || PW.receiveFx(WW)
+          } else if ("secretSantaFlyover" === WW) {
+            var wW;
+            null === (wW = UW) || void 0 === wW || wW.yZ(iW), cW.receiveFlyover(iW.santaFlyoverWaitMs)
+          } else if ("secretSantaPodium" === WW) {
             const {
-              santaPodiumShown: BB
-            } = OB;
-            var MB;
-            if (nG(BB), !BB) null === (MB = RB) || void 0 === MB || MB.resend()
+              santaPodiumShown: WW
+            } = iW;
+            var tW;
+            if (hO(WW), !WW) null === (tW = kW) || void 0 === tW || tW.resend()
           }
         }
       }
     }
   },
-  39193: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      c: () => DB
+  39726: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW,
+      f: () => EW
     });
-    var YB = GB(353);
-    const DB = (0, YB.Kb)([0, 0, -1]),
-      QB = [{
+    var mW = OW(344);
+    const EW = (0, mW.Ab)([0, 0, -1]),
+      NW = [{
         name: "S",
-        bearing: (0, YB.Kb)([0, 0, 1])
+        bearing: (0, mW.Ab)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, YB.Kb)([-1, 0, 0])
+        bearing: (0, mW.Ab)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: DB
+        bearing: EW
       }, {
         name: "W",
-        bearing: (0, YB.Kb)([1, 0, 0])
+        bearing: (0, mW.Ab)([1, 0, 0])
       }]
   },
-  39189: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      d: () => QB
+  39722: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      f: () => NW
     });
-    var YB = GB(39193);
+    var mW = OW(39726);
 
-    function DB(BB, OB, GB) {
-      return [100 * (GB.mapMaxX - BB) / (GB.mapMaxX - GB.mapMinX), 100 * (OB - GB.mapMinZ) / (GB.mapMaxZ - GB.mapMinZ)]
+    function EW(WW, iW, OW) {
+      return [100 * (OW.mapMaxX - WW) / (OW.mapMaxX - OW.mapMinX), 100 * (iW - OW.mapMinZ) / (OW.mapMaxZ - OW.mapMinZ)]
     }
 
-    function QB(BB, OB, GB, QB) {
-      const [oB, jB] = DB(BB, OB, QB), yB = YB.c - GB;
+    function NW(WW, iW, OW, NW) {
+      const [PW, LW] = EW(WW, iW, NW), cW = mW.f - OW;
       return {
-        rotation: yB,
-        transform: `rotate(${yB}rad) translate(-${oB}%, -${jB}%)`
+        rotation: cW,
+        transform: `rotate(${cW}rad) translate(-${PW}%, -${LW}%)`
       }
     }
   },
-  39858: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB,
-      g: () => QB
+  40371: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      h: () => NW
     });
-    const YB = 1 / .6,
-      DB = {
+    const mW = 1 / .6,
+      EW = {
         kind: "smokePuff"
       };
-    class QB {
-      constructor(BB, OB, GB) {
-        this.style = BB, this.CP = OB, this.half = GB, this.particles = null, this.lastFrame = -1
+    class NW {
+      constructor(WW, iW, OW) {
+        this.style = WW, this.aZ = iW, this.half = OW, this.particles = null, this.lastFrame = -1
       }
-      emit(BB, OB, GB) {
-        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return GB !== this.lastFrame && (this.lastFrame = GB, this.particles || (this.particles = BB.createParticles(function(BB, OB) {
+      emit(WW, iW, OW) {
+        let NW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return OW !== this.lastFrame && (this.lastFrame = OW, this.particles || (this.particles = WW.createParticles(function(WW, iW) {
           const [
-            [GB, QB, oB],
-            [jB, yB, JB]
-          ] = BB.colours;
+            [OW, NW, PW],
+            [LW, cW, wW]
+          ] = WW.colours;
           return {
-            texture: BB.soft ? DB : "square_particle",
-            CP: OB,
-            minLifeTime: BB.life[0] / YB,
-            maxLifeTime: BB.life[1] / YB,
-            minEmitPower: BB.power[0] * YB,
-            maxEmitPower: BB.power[1] * YB,
-            minSize: BB.size[0],
-            maxSize: BB.size[1],
+            texture: WW.soft ? EW : "square_particle",
+            aZ: iW,
+            minLifeTime: WW.life[0] / mW,
+            maxLifeTime: WW.life[1] / mW,
+            minEmitPower: WW.power[0] * mW,
+            maxEmitPower: WW.power[1] * mW,
+            minSize: WW.size[0],
+            maxSize: WW.size[1],
             emitRate: 0,
-            gravity: [0, BB.lift * YB * YB, 0],
-            dir1: [-BB.spread, 1, -BB.spread],
-            dir2: [BB.spread, 1, BB.spread],
+            gravity: [0, WW.lift * mW * mW, 0],
+            dir1: [-WW.spread, 1, -WW.spread],
+            dir2: [WW.spread, 1, WW.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [GB, QB, oB, BB.alpha],
-              maxColor: [jB, yB, JB, BB.alpha]
+              minColor: [OW, NW, PW, WW.alpha],
+              maxColor: [LW, cW, wW, WW.alpha]
             }, {
               timeFraction: 1,
-              minColor: [GB, QB, oB, 0],
-              maxColor: [jB, yB, JB, 0]
+              minColor: [OW, NW, PW, 0],
+              maxColor: [LW, cW, wW, 0]
             }],
-            blendMode: BB.blendMode
+            blendMode: WW.blendMode
           }
-        }(this.style, this.CP), {
-          pos: OB,
+        }(this.style, this.aZ), {
+          pos: iW,
           half: this.half
-        })), this.particles.moveTo(OB, this.half), this.particles.emit(QB), !0)
+        })), this.particles.moveTo(iW, this.half), this.particles.emit(NW), !0)
       }
       dispose() {
-        var BB;
-        null === (BB = this.particles) || void 0 === BB || BB.stop(), this.particles = null
+        var WW;
+        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null
       }
     }
   },
-  39572: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB
+  40090: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => NW
     });
-    const YB = 1400,
-      DB = .45;
+    const mW = 1400,
+      EW = .45;
 
-    function QB(BB) {
-      return BB < YB ? Math.pow(YB / BB, DB) : 1
+    function NW(WW) {
+      return WW < mW ? Math.pow(mW / WW, EW) : 1
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

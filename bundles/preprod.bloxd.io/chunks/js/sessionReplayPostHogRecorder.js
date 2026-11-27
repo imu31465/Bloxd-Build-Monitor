@@ -1,276 +1,276 @@
-export const id = 62;
-export const ids = [62];
+export const id = 63;
+export const ids = [63];
 export const modules = {
-  40555: () => {
+  41099: () => {
     ! function() {
-      function BB(OB) {
-        return (BB = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
-          return typeof BB
-        } : function(BB) {
-          return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-        })(OB)
+      function WW(iW) {
+        return (WW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(WW) {
+          return typeof WW
+        } : function(WW) {
+          return WW && "function" == typeof Symbol && WW.constructor === Symbol && WW !== Symbol.prototype ? "symbol" : typeof WW
+        })(iW)
       }
 
-      function OB(OB, GB, YB) {
-        return (GB = function(OB) {
-          var GB = function(OB) {
-            if ("object" != BB(OB) || !OB) return OB;
-            var GB = OB[Symbol.toPrimitive];
-            if (void 0 !== GB) {
-              var YB = GB.call(OB, "string");
-              if ("object" != BB(YB)) return YB;
+      function iW(iW, OW, mW) {
+        return (OW = function(iW) {
+          var OW = function(iW) {
+            if ("object" != WW(iW) || !iW) return iW;
+            var OW = iW[Symbol.toPrimitive];
+            if (void 0 !== OW) {
+              var mW = OW.call(iW, "string");
+              if ("object" != WW(mW)) return mW;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(OB)
-          }(OB);
-          return "symbol" == BB(GB) ? GB : GB + ""
-        }(GB)) in OB ? Object.defineProperty(OB, GB, {
-          value: YB,
+            return String(iW)
+          }(iW);
+          return "symbol" == WW(OW) ? OW : OW + ""
+        }(OW)) in iW ? Object.defineProperty(iW, OW, {
+          value: mW,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : OB[GB] = YB, OB
+        }) : iW[OW] = mW, iW
       }
 
-      function GB(BB, OB) {
-        var GB = Object.keys(BB);
+      function OW(WW, iW) {
+        var OW = Object.keys(WW);
         if (Object.getOwnPropertySymbols) {
-          var YB = Object.getOwnPropertySymbols(BB);
-          OB && (YB = YB.filter((function(OB) {
-            return Object.getOwnPropertyDescriptor(BB, OB).enumerable
-          }))), GB.push.apply(GB, YB)
+          var mW = Object.getOwnPropertySymbols(WW);
+          iW && (mW = mW.filter((function(iW) {
+            return Object.getOwnPropertyDescriptor(WW, iW).enumerable
+          }))), OW.push.apply(OW, mW)
         }
-        return GB
+        return OW
       }
 
-      function YB(BB) {
-        for (var YB = 1; arguments.length > YB; YB++) {
-          var DB = null != arguments[YB] ? arguments[YB] : {};
-          YB % 2 ? GB(Object(DB), !0).forEach((function(GB) {
-            OB(BB, GB, DB[GB])
-          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(DB)) : GB(Object(DB)).forEach((function(OB) {
-            Object.defineProperty(BB, OB, Object.getOwnPropertyDescriptor(DB, OB))
+      function mW(WW) {
+        for (var mW = 1; arguments.length > mW; mW++) {
+          var EW = null != arguments[mW] ? arguments[mW] : {};
+          mW % 2 ? OW(Object(EW), !0).forEach((function(OW) {
+            iW(WW, OW, EW[OW])
+          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(WW, Object.getOwnPropertyDescriptors(EW)) : OW(Object(EW)).forEach((function(iW) {
+            Object.defineProperty(WW, iW, Object.getOwnPropertyDescriptor(EW, iW))
           }))
         }
-        return BB
+        return WW
       }
 
-      function DB(BB, OB, GB, YB, DB, QB, oB) {
+      function EW(WW, iW, OW, mW, EW, NW, PW) {
         try {
-          var jB = BB[QB](oB),
-            yB = jB.value
-        } catch (BB) {
-          return void GB(BB)
+          var LW = WW[NW](PW),
+            cW = LW.value
+        } catch (WW) {
+          return void OW(WW)
         }
-        jB.done ? OB(yB) : Promise.resolve(yB).then(YB, DB)
+        LW.done ? iW(cW) : Promise.resolve(cW).then(mW, EW)
       }
 
-      function QB(BB) {
+      function NW(WW) {
         return function() {
-          var OB = this,
-            GB = arguments;
-          return new Promise((function(YB, QB) {
-            var oB = BB.apply(OB, GB);
+          var iW = this,
+            OW = arguments;
+          return new Promise((function(mW, NW) {
+            var PW = WW.apply(iW, OW);
 
-            function jB(BB) {
-              DB(oB, YB, QB, jB, yB, "next", BB)
+            function LW(WW) {
+              EW(PW, mW, NW, LW, cW, "next", WW)
             }
 
-            function yB(BB) {
-              DB(oB, YB, QB, jB, yB, "throw", BB)
+            function cW(WW) {
+              EW(PW, mW, NW, LW, cW, "throw", WW)
             }
-            jB(void 0)
+            LW(void 0)
           }))
         }
       }
-      const oB = ["type"];
-      var jB = function(BB) {
-          return BB[BB.DomContentLoaded = 0] = "DomContentLoaded", BB[BB.Load = 1] = "Load", BB[BB.FullSnapshot = 2] = "FullSnapshot", BB[BB.IncrementalSnapshot = 3] = "IncrementalSnapshot", BB[BB.Meta = 4] = "Meta", BB[BB.Custom = 5] = "Custom", BB[BB.Plugin = 6] = "Plugin", BB
+      const PW = ["type"];
+      var LW = function(WW) {
+          return WW[WW.DomContentLoaded = 0] = "DomContentLoaded", WW[WW.Load = 1] = "Load", WW[WW.FullSnapshot = 2] = "FullSnapshot", WW[WW.IncrementalSnapshot = 3] = "IncrementalSnapshot", WW[WW.Meta = 4] = "Meta", WW[WW.Custom = 5] = "Custom", WW[WW.Plugin = 6] = "Plugin", WW
         }({}),
-        yB = function(BB) {
-          return BB[BB.Mutation = 0] = "Mutation", BB[BB.MouseMove = 1] = "MouseMove", BB[BB.MouseInteraction = 2] = "MouseInteraction", BB[BB.Scroll = 3] = "Scroll", BB[BB.ViewportResize = 4] = "ViewportResize", BB[BB.Input = 5] = "Input", BB[BB.TouchMove = 6] = "TouchMove", BB[BB.MediaInteraction = 7] = "MediaInteraction", BB[BB.StyleSheetRule = 8] = "StyleSheetRule", BB[BB.CanvasMutation = 9] = "CanvasMutation", BB[BB.Font = 10] = "Font", BB[BB.Log = 11] = "Log", BB[BB.Drag = 12] = "Drag", BB[BB.StyleDeclaration = 13] = "StyleDeclaration", BB[BB.Selection = 14] = "Selection", BB[BB.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", BB[BB.CustomElement = 16] = "CustomElement", BB
+        cW = function(WW) {
+          return WW[WW.Mutation = 0] = "Mutation", WW[WW.MouseMove = 1] = "MouseMove", WW[WW.MouseInteraction = 2] = "MouseInteraction", WW[WW.Scroll = 3] = "Scroll", WW[WW.ViewportResize = 4] = "ViewportResize", WW[WW.Input = 5] = "Input", WW[WW.TouchMove = 6] = "TouchMove", WW[WW.MediaInteraction = 7] = "MediaInteraction", WW[WW.StyleSheetRule = 8] = "StyleSheetRule", WW[WW.CanvasMutation = 9] = "CanvasMutation", WW[WW.Font = 10] = "Font", WW[WW.Log = 11] = "Log", WW[WW.Drag = 12] = "Drag", WW[WW.StyleDeclaration = 13] = "StyleDeclaration", WW[WW.Selection = 14] = "Selection", WW[WW.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", WW[WW.CustomElement = 16] = "CustomElement", WW
         }({}),
-        JB = function(BB) {
-          return BB[BB.MouseUp = 0] = "MouseUp", BB[BB.MouseDown = 1] = "MouseDown", BB[BB.Click = 2] = "Click", BB[BB.ContextMenu = 3] = "ContextMenu", BB[BB.DblClick = 4] = "DblClick", BB[BB.Focus = 5] = "Focus", BB[BB.Blur = 6] = "Blur", BB[BB.TouchStart = 7] = "TouchStart", BB[BB.TouchMove_Departed = 8] = "TouchMove_Departed", BB[BB.TouchEnd = 9] = "TouchEnd", BB[BB.TouchCancel = 10] = "TouchCancel", BB
+        wW = function(WW) {
+          return WW[WW.MouseUp = 0] = "MouseUp", WW[WW.MouseDown = 1] = "MouseDown", WW[WW.Click = 2] = "Click", WW[WW.ContextMenu = 3] = "ContextMenu", WW[WW.DblClick = 4] = "DblClick", WW[WW.Focus = 5] = "Focus", WW[WW.Blur = 6] = "Blur", WW[WW.TouchStart = 7] = "TouchStart", WW[WW.TouchMove_Departed = 8] = "TouchMove_Departed", WW[WW.TouchEnd = 9] = "TouchEnd", WW[WW.TouchCancel = 10] = "TouchCancel", WW
         }({}),
-        MB = function(BB) {
-          return BB[BB.Mouse = 0] = "Mouse", BB[BB.Pen = 1] = "Pen", BB[BB.Touch = 2] = "Touch", BB
+        tW = function(WW) {
+          return WW[WW.Mouse = 0] = "Mouse", WW[WW.Pen = 1] = "Pen", WW[WW.Touch = 2] = "Touch", WW
         }({}),
-        PB = function(BB) {
-          return BB[BB["2D"] = 0] = "2D", BB[BB.WebGL = 1] = "WebGL", BB[BB.WebGL2 = 2] = "WebGL2", BB
+        ZW = function(WW) {
+          return WW[WW["2D"] = 0] = "2D", WW[WW.WebGL = 1] = "WebGL", WW[WW.WebGL2 = 2] = "WebGL2", WW
         }({}),
-        zB = function(BB) {
-          return BB[BB.Play = 0] = "Play", BB[BB.Pause = 1] = "Pause", BB[BB.Seeked = 2] = "Seeked", BB[BB.VolumeChange = 3] = "VolumeChange", BB[BB.RateChange = 4] = "RateChange", BB
+        xW = function(WW) {
+          return WW[WW.Play = 0] = "Play", WW[WW.Pause = 1] = "Pause", WW[WW.Seeked = 2] = "Seeked", WW[WW.VolumeChange = 3] = "VolumeChange", WW[WW.RateChange = 4] = "RateChange", WW
         }({}),
-        lB = function(BB) {
-          return BB[BB.Document = 0] = "Document", BB[BB.DocumentType = 1] = "DocumentType", BB[BB.Element = 2] = "Element", BB[BB.Text = 3] = "Text", BB[BB.CDATA = 4] = "CDATA", BB[BB.Comment = 5] = "Comment", BB
+        lW = function(WW) {
+          return WW[WW.Document = 0] = "Document", WW[WW.DocumentType = 1] = "DocumentType", WW[WW.Element = 2] = "Element", WW[WW.Text = 3] = "Text", WW[WW.CDATA = 4] = "CDATA", WW[WW.Comment = 5] = "Comment", WW
         }({});
 
-      function pB(BB, OB) {
-        return -1 !== BB.indexOf(OB)
+      function AW(WW, iW) {
+        return -1 !== WW.indexOf(iW)
       }
       "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var qB = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${qB.source}`, "i"), new RegExp(qB.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var ZB = {
+      var bW = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${bW.source}`, "i"), new RegExp(bW.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var jW = {
           Node: ["childNodes", "parentNode", "parentElement", "textContent"],
           ShadowRoot: ["host", "styleSheets"],
           Element: ["shadowRoot"],
           MutationObserver: []
         },
-        NB = {
+        UW = {
           Node: ["contains", "getRootNode"],
           ShadowRoot: ["getSelection"],
           Element: ["querySelector", "querySelectorAll"],
           MutationObserver: ["constructor"]
         },
-        RB = {};
+        kW = {};
 
-      function WB(BB) {
-        if (RB[BB]) return RB[BB];
-        const OB = function(BB) {
-            var OB, GB;
-            const YB = null === (OB = globalThis) || void 0 === OB || null === (OB = OB.Zone) || void 0 === OB || null === (GB = OB.__symbol__) || void 0 === GB ? void 0 : GB.call(OB, BB);
-            return YB && globalThis[YB] ? globalThis[YB] : void 0
-          }(BB) || globalThis[BB],
-          GB = OB.prototype,
-          YB = BB in ZB ? ZB[BB] : void 0,
-          DB = Boolean(YB && YB.every((BB => {
-            var OB;
-            return Boolean(null === (OB = Object.getOwnPropertyDescriptor(GB, BB)) || void 0 === OB || null === (OB = OB.get) || void 0 === OB ? void 0 : OB.toString().includes("[native code]"))
+      function sW(WW) {
+        if (kW[WW]) return kW[WW];
+        const iW = function(WW) {
+            var iW, OW;
+            const mW = null === (iW = globalThis) || void 0 === iW || null === (iW = iW.Zone) || void 0 === iW || null === (OW = iW.__symbol__) || void 0 === OW ? void 0 : OW.call(iW, WW);
+            return mW && globalThis[mW] ? globalThis[mW] : void 0
+          }(WW) || globalThis[WW],
+          OW = iW.prototype,
+          mW = WW in jW ? jW[WW] : void 0,
+          EW = Boolean(mW && mW.every((WW => {
+            var iW;
+            return Boolean(null === (iW = Object.getOwnPropertyDescriptor(OW, WW)) || void 0 === iW || null === (iW = iW.get) || void 0 === iW ? void 0 : iW.toString().includes("[native code]"))
           }))),
-          QB = BB in NB ? NB[BB] : void 0,
-          oB = Boolean(QB && QB.every((BB => {
-            var OB;
-            return "function" == typeof GB[BB] && (null === (OB = GB[BB]) || void 0 === OB ? void 0 : OB.toString().includes("[native code]"))
+          NW = WW in UW ? UW[WW] : void 0,
+          PW = Boolean(NW && NW.every((WW => {
+            var iW;
+            return "function" == typeof OW[WW] && (null === (iW = OW[WW]) || void 0 === iW ? void 0 : iW.toString().includes("[native code]"))
           })));
-        if (DB && oB) return RB[BB] = OB.prototype, OB.prototype;
-        const jB = document.createElement("iframe");
-        jB.style.display = "none";
-        let yB = !1;
+        if (EW && PW) return kW[WW] = iW.prototype, iW.prototype;
+        const LW = document.createElement("iframe");
+        LW.style.display = "none";
+        let cW = !1;
         try {
-          document.body.appendChild(jB);
-          const YB = jB.contentWindow;
-          if (!YB) return OB.prototype;
-          const DB = YB[BB].prototype;
-          return DB ? (pB(JB = navigator.userAgent, "AppleWebKit") && !pB(JB, "Chrome") && (jB.classList.add("rr-block", "ph-no-capture"), jB.setAttribute("__rrwebUntaintedPrototype", BB), yB = !0), RB[BB] = DB) : GB
-        } catch (BB) {
-          return GB
+          document.body.appendChild(LW);
+          const mW = LW.contentWindow;
+          if (!mW) return iW.prototype;
+          const EW = mW[WW].prototype;
+          return EW ? (AW(wW = navigator.userAgent, "AppleWebKit") && !AW(wW, "Chrome") && (LW.classList.add("rr-block", "ph-no-capture"), LW.setAttribute("__rrwebUntaintedPrototype", WW), cW = !0), kW[WW] = EW) : OW
+        } catch (WW) {
+          return OW
         } finally {
-          !yB && jB.parentNode && document.body.removeChild(jB)
+          !cW && LW.parentNode && document.body.removeChild(LW)
         }
-        var JB
+        var wW
       }
-      var AB = Object.create(null);
+      var MW = Object.create(null);
 
-      function VB(BB, OB, GB) {
-        var YB;
-        const DB = AB[BB],
-          QB = DB[GB];
-        if (QB) return QB.call(OB);
-        const oB = WB(BB),
-          jB = null === (YB = Object.getOwnPropertyDescriptor(oB, GB)) || void 0 === YB ? void 0 : YB.get;
-        return jB ? (DB[GB] = jB, jB.call(OB)) : OB[GB]
+      function KW(WW, iW, OW) {
+        var mW;
+        const EW = MW[WW],
+          NW = EW[OW];
+        if (NW) return NW.call(iW);
+        const PW = sW(WW),
+          LW = null === (mW = Object.getOwnPropertyDescriptor(PW, OW)) || void 0 === mW ? void 0 : mW.get;
+        return LW ? (EW[OW] = LW, LW.call(iW)) : iW[OW]
       }
-      AB.Node = Object.create(null), AB.ShadowRoot = Object.create(null), AB.MutationObserver = Object.create(null), AB.Element = Object.create(null);
-      var SB, nB = {};
+      MW.Node = Object.create(null), MW.ShadowRoot = Object.create(null), MW.MutationObserver = Object.create(null), MW.Element = Object.create(null);
+      var SW, YW = {};
 
-      function UB(BB, OB, GB) {
-        const YB = `${BB}.${String(GB)}`;
-        if (nB[YB]) return nB[YB].bind(OB);
-        const DB = WB(BB)[GB];
-        return "function" != typeof DB ? OB[GB] : (nB[YB] = DB, DB.bind(OB))
-      }
-
-      function fB() {
-        return WB("MutationObserver").constructor
+      function yW(WW, iW, OW) {
+        const mW = `${WW}.${String(OW)}`;
+        if (YW[mW]) return YW[mW].bind(iW);
+        const EW = sW(WW)[OW];
+        return "function" != typeof EW ? iW[OW] : (YW[mW] = EW, EW.bind(iW))
       }
 
-      function kB(BB, OB, GB) {
+      function TW() {
+        return sW("MutationObserver").constructor
+      }
+
+      function JW(WW, iW, OW) {
         try {
-          if (!(OB in BB)) return () => {};
-          const YB = BB[OB],
-            DB = {
-              next: YB
+          if (!(iW in WW)) return () => {};
+          const mW = WW[iW],
+            EW = {
+              next: mW
             },
-            QB = GB((function() {
-              for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-              return DB.next.apply(this, OB)
+            NW = OW((function() {
+              for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+              return EW.next.apply(this, iW)
             }));
-          return "function" == typeof QB && (QB.prototype = QB.prototype || {}, Object.defineProperties(QB, {
+          return "function" == typeof NW && (NW.prototype = NW.prototype || {}, Object.defineProperties(NW, {
             __rrweb_original__: {
               enumerable: !1,
-              value: YB
+              value: mW
             },
             __rrweb_layer__: {
               enumerable: !1,
-              value: DB
+              value: EW
             }
-          })), BB[OB] = QB, () => {
-            if (BB[OB] === QB) return void(BB[OB] = DB.next);
-            const GB = BB => {
-              var OB;
-              return "function" == typeof BB ? null !== (OB = BB.__rrweb_layer__) && void 0 !== OB ? OB : BB.__posthog_layer__ : void 0
+          })), WW[iW] = NW, () => {
+            if (WW[iW] === NW) return void(WW[iW] = EW.next);
+            const OW = WW => {
+              var iW;
+              return "function" == typeof WW ? null !== (iW = WW.__rrweb_layer__) && void 0 !== iW ? iW : WW.__posthog_layer__ : void 0
             };
-            let YB = BB[OB],
-              oB = GB(YB);
-            for (; oB;) {
-              if (oB.next === QB) return void(oB.next = DB.next);
-              YB = oB.next, oB = GB(YB)
+            let mW = WW[iW],
+              PW = OW(mW);
+            for (; PW;) {
+              if (PW.next === NW) return void(PW.next = EW.next);
+              mW = PW.next, PW = OW(mW)
             }
           }
-        } catch (BB) {
+        } catch (WW) {
           return () => {}
         }
       }
-      var dB = {
-        childNodes: BB => VB("Node", BB, "childNodes"),
-        parentNode: BB => VB("Node", BB, "parentNode"),
-        parentElement: BB => VB("Node", BB, "parentElement"),
-        textContent: BB => VB("Node", BB, "textContent"),
-        isConnected(BB) {
-          if (void 0 === SB) {
-            var OB;
-            const BB = null === (OB = Object.getOwnPropertyDescriptor(WB("Node"), "isConnected")) || void 0 === OB ? void 0 : OB.get;
-            SB = (null == BB ? void 0 : BB.toString().includes("[native code]")) ? BB : null
+      var hW = {
+        childNodes: WW => KW("Node", WW, "childNodes"),
+        parentNode: WW => KW("Node", WW, "parentNode"),
+        parentElement: WW => KW("Node", WW, "parentElement"),
+        textContent: WW => KW("Node", WW, "textContent"),
+        isConnected(WW) {
+          if (void 0 === SW) {
+            var iW;
+            const WW = null === (iW = Object.getOwnPropertyDescriptor(sW("Node"), "isConnected")) || void 0 === iW ? void 0 : iW.get;
+            SW = (null == WW ? void 0 : WW.toString().includes("[native code]")) ? WW : null
           }
-          return null == SB ? void 0 : SB.call(BB)
+          return null == SW ? void 0 : SW.call(WW)
         },
-        contains: (BB, OB) => UB("Node", BB, "contains")(OB),
-        getRootNode: BB => UB("Node", BB, "getRootNode")(),
-        host: BB => BB && "host" in BB ? VB("ShadowRoot", BB, "host") : null,
-        styleSheets: BB => BB.styleSheets,
-        shadowRoot: BB => BB && "shadowRoot" in BB ? VB("Element", BB, "shadowRoot") : null,
-        querySelector: (BB, OB) => UB("Element", BB, "querySelector")(OB),
-        querySelectorAll: (BB, OB) => UB("Element", BB, "querySelectorAll")(OB),
-        mutationObserver: fB,
-        patch: kB
+        contains: (WW, iW) => yW("Node", WW, "contains")(iW),
+        getRootNode: WW => yW("Node", WW, "getRootNode")(),
+        host: WW => WW && "host" in WW ? KW("ShadowRoot", WW, "host") : null,
+        styleSheets: WW => WW.styleSheets,
+        shadowRoot: WW => WW && "shadowRoot" in WW ? KW("Element", WW, "shadowRoot") : null,
+        querySelector: (WW, iW) => yW("Element", WW, "querySelector")(iW),
+        querySelectorAll: (WW, iW) => yW("Element", WW, "querySelectorAll")(iW),
+        mutationObserver: TW,
+        patch: JW
       };
 
-      function KB() {
+      function HW() {
         try {
           if ("undefined" != typeof performance && performance.now) return performance.now()
-        } catch (BB) {}
+        } catch (WW) {}
         return Date.now()
       }
-      var uB = 0,
-        mB = 0;
+      var nW = 0,
+        uW = 0;
 
-      function IB() {
-        uB += 1
+      function oW() {
+        nW += 1
       }
 
-      function FB() {
-        return uB
+      function dW() {
+        return nW
       }
 
-      function iB(BB, OB) {
-        return (OB !== uB || BB > 6e4) && (mB += 1, !0)
+      function eW(WW, iW) {
+        return (iW !== nW || WW > 6e4) && (uW += 1, !0)
       }
-      var LB = 0,
-        gB = 0,
-        rB = 0,
-        XB = {
+      var vW = 0,
+        gW = 0,
+        DW = 0,
+        VW = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
@@ -278,15 +278,15 @@ export const modules = {
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
         },
-        wB = null,
-        EB = null,
-        cB = [],
-        hB = 0,
-        aB = 0,
-        eB = {
+        pW = null,
+        fW = null,
+        CW = [],
+        XW = 0,
+        BW = 0,
+        qW = {
           slowestBatchMs: 0
         },
-        TB = {
+        RW = {
           deferredCount: 0,
           failedCount: 0,
           abandonedCount: 0,
@@ -294,1040 +294,1040 @@ export const modules = {
           slowestSliceMs: 0
         };
 
-      function bB(BB) {
-        var OB;
-        (LB += 1) > 1 || (XB = {
+      function GW(WW) {
+        var iW;
+        (vW += 1) > 1 || (VW = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        }, cB = [], hB = 0, EB = (OB = BB) && OB > 0 ? OB : null, gB = KB(), rB = uB)
+        }, CW = [], XW = 0, fW = (iW = WW) && iW > 0 ? iW : null, gW = HW(), DW = nW)
       }
 
-      function CB() {
-        return 0 === LB ? wB || {
+      function IW() {
+        return 0 === vW ? pW || {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        } : (LB -= 1) > 0 ? XB : (XB.durationMs = KB() - gB, XB.deferredStylesheetCount = hB, TB.deferredCount += hB, EB = null, iB(XB.durationMs, rB) ? XB : wB = XB)
+        } : (vW -= 1) > 0 ? VW : (VW.durationMs = HW() - gW, VW.deferredStylesheetCount = XW, RW.deferredCount += XW, fW = null, eW(VW.durationMs, DW) ? VW : pW = VW)
       }
 
-      function HB(BB, OB, GB) {
-        let YB = BB.length;
-        if (GB >= 32) return YB;
-        for (let DB = 0; BB.length > DB; DB++) {
-          const QB = BB[DB];
+      function aW(WW, iW, OW) {
+        let mW = WW.length;
+        if (OW >= 32) return mW;
+        for (let EW = 0; WW.length > EW; EW++) {
+          const NW = WW[EW];
           try {
-            const BB = QB.cssRules;
-            if (BB && BB.length) YB += HB(BB, OB, GB + 1);
-            else if (OB && QB.styleSheet) {
-              const BB = QB.styleSheet;
-              if (!OB.has(BB)) {
-                OB.add(BB);
-                const DB = BB.rules || BB.cssRules;
-                DB && (YB += HB(DB, OB, GB + 1))
+            const WW = NW.cssRules;
+            if (WW && WW.length) mW += aW(WW, iW, OW + 1);
+            else if (iW && NW.styleSheet) {
+              const WW = NW.styleSheet;
+              if (!iW.has(WW)) {
+                iW.add(WW);
+                const EW = WW.rules || WW.cssRules;
+                EW && (mW += aW(EW, iW, OW + 1))
               }
             }
-          } catch (BB) {}
+          } catch (WW) {}
         }
-        return YB
+        return mW
       }
 
-      function vB(BB) {
-        if (0 === LB) return;
-        const OB = HB(BB, null, 0);
-        XB.cssRuleCount += OB, aB > 0 && (XB.nonDeferrableCssRuleCount += OB)
+      function rW(WW) {
+        if (0 === vW) return;
+        const iW = aW(WW, null, 0);
+        VW.cssRuleCount += iW, BW > 0 && (VW.nonDeferrableCssRuleCount += iW)
       }
 
-      function sB(BB) {
-        aB += 1;
+      function zW(WW) {
+        BW += 1;
         try {
-          return BB()
+          return WW()
         } finally {
-          aB -= 1
+          BW -= 1
         }
       }
 
-      function xB(BB) {
-        LB > 0 && (XB.stylesheetMs += BB)
+      function FW(WW) {
+        vW > 0 && (VW.stylesheetMs += WW)
       }
 
-      function tB(BB) {
-        if (0 === LB || null === EB) return !1;
-        const OB = XB.cssRuleCount - XB.nonDeferrableCssRuleCount;
-        return OB >= EB || OB + function(BB) {
+      function QW(WW) {
+        if (0 === vW || null === fW) return !1;
+        const iW = VW.cssRuleCount - VW.nonDeferrableCssRuleCount;
+        return iW >= fW || iW + function(WW) {
           try {
-            const OB = BB && (BB.rules || BB.cssRules);
-            if (!OB) return 0;
-            const GB = new WeakSet;
-            return GB.add(BB), HB(OB, GB, 0)
-          } catch (BB) {
+            const iW = WW && (WW.rules || WW.cssRules);
+            if (!iW) return 0;
+            const OW = new WeakSet;
+            return OW.add(WW), aW(iW, OW, 0)
+          } catch (WW) {
             return 0
           }
-        }(BB) > EB
+        }(WW) > fW
       }
 
-      function BO() {
-        const BB = cB;
-        return cB = [], BB
+      function Wi() {
+        const WW = CW;
+        return CW = [], WW
       }
 
-      function OO() {
-        TB.failedCount += 1
+      function ii() {
+        RW.failedCount += 1
       }
 
-      function GO(BB) {
-        BB > 0 && (TB.abandonedCount += BB)
+      function Oi(WW) {
+        WW > 0 && (RW.abandonedCount += WW)
       }
 
-      function YO(BB) {
-        return YO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
-          return typeof BB
-        } : function(BB) {
-          return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-        }, YO(BB)
+      function mi(WW) {
+        return mi = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(WW) {
+          return typeof WW
+        } : function(WW) {
+          return WW && "function" == typeof Symbol && WW.constructor === Symbol && WW !== Symbol.prototype ? "symbol" : typeof WW
+        }, mi(WW)
       }
 
-      function DO(BB, OB, GB) {
-        return (OB = function(BB) {
-          var OB = function(BB) {
-            if ("object" != YO(BB) || !BB) return BB;
-            var OB = BB[Symbol.toPrimitive];
-            if (void 0 !== OB) {
-              var GB = OB.call(BB, "string");
-              if ("object" != YO(GB)) return GB;
+      function Ei(WW, iW, OW) {
+        return (iW = function(WW) {
+          var iW = function(WW) {
+            if ("object" != mi(WW) || !WW) return WW;
+            var iW = WW[Symbol.toPrimitive];
+            if (void 0 !== iW) {
+              var OW = iW.call(WW, "string");
+              if ("object" != mi(OW)) return OW;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(BB)
-          }(BB);
-          return "symbol" == YO(OB) ? OB : OB + ""
-        }(OB)) in BB ? Object.defineProperty(BB, OB, {
-          value: GB,
+            return String(WW)
+          }(WW);
+          return "symbol" == mi(iW) ? iW : iW + ""
+        }(iW)) in WW ? Object.defineProperty(WW, iW, {
+          value: OW,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : BB[OB] = GB, BB
+        }) : WW[iW] = OW, WW
       }
 
-      function QO(BB) {
-        return BB.nodeType === BB.ELEMENT_NODE
+      function Ni(WW) {
+        return WW.nodeType === WW.ELEMENT_NODE
       }
 
-      function oO(BB) {
-        const OB = BB && "host" in BB && "mode" in BB && dB.host(BB) || null;
-        return Boolean(OB && "shadowRoot" in OB && dB.shadowRoot(OB) === BB)
+      function Pi(WW) {
+        const iW = WW && "host" in WW && "mode" in WW && hW.host(WW) || null;
+        return Boolean(iW && "shadowRoot" in iW && hW.shadowRoot(iW) === WW)
       }
 
-      function jO(BB) {
-        return "[object ShadowRoot]" === {}.toString.call(BB)
+      function Li(WW) {
+        return "[object ShadowRoot]" === {}.toString.call(WW)
       }
 
-      function yO(BB) {
-        return BB.includes(" background-clip: text;") && !BB.includes(" -webkit-background-clip: text;") && (BB = BB.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), BB
+      function ci(WW) {
+        return WW.includes(" background-clip: text;") && !WW.includes(" -webkit-background-clip: text;") && (WW = WW.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), WW
       }
 
-      function JO(BB) {
+      function wi(WW) {
         const {
-          cssText: OB
-        } = BB;
-        if (3 > OB.split('"').length) return OB;
-        const GB = ["@import", `url(${JSON.stringify(BB.href)})`];
-        return "" === BB.layerName ? GB.push("layer") : BB.layerName && GB.push(`layer(${BB.layerName})`), BB.supportsText && GB.push(`supports(${BB.supportsText})`), BB.media.length && GB.push(BB.media.mediaText), GB.join(" ") + ";"
+          cssText: iW
+        } = WW;
+        if (3 > iW.split('"').length) return iW;
+        const OW = ["@import", `url(${JSON.stringify(WW.href)})`];
+        return "" === WW.layerName ? OW.push("layer") : WW.layerName && OW.push(`layer(${WW.layerName})`), WW.supportsText && OW.push(`supports(${WW.supportsText})`), WW.media.length && OW.push(WW.media.mediaText), OW.join(" ") + ";"
       }
-      var MO = 0;
+      var ti = 0;
 
-      function PO(BB) {
-        const OB = 0 === MO,
-          GB = OB ? KB() : 0;
-        MO += 1;
+      function Zi(WW) {
+        const iW = 0 === ti,
+          OW = iW ? HW() : 0;
+        ti += 1;
         try {
-          const OB = BB.rules || BB.cssRules;
-          if (!OB) return null;
-          vB(OB);
-          let GB = BB.href;
-          return !GB && BB.ownerNode && (GB = BB.ownerNode.baseURI), yO(Array.from(OB, (BB => zO(BB, GB))).join(""))
-        } catch (BB) {
+          const iW = WW.rules || WW.cssRules;
+          if (!iW) return null;
+          rW(iW);
+          let OW = WW.href;
+          return !OW && WW.ownerNode && (OW = WW.ownerNode.baseURI), ci(Array.from(iW, (WW => xi(WW, OW))).join(""))
+        } catch (WW) {
           return null
         } finally {
-          MO -= 1, OB && xB(KB() - GB)
+          ti -= 1, iW && FW(HW() - OW)
         }
       }
 
-      function zO(BB, OB) {
-        if (pO(BB)) {
-          let OB;
+      function xi(WW, iW) {
+        if (Ai(WW)) {
+          let iW;
           try {
-            OB = PO(BB.styleSheet) || JO(BB)
-          } catch (GB) {
-            OB = BB.cssText
+            iW = Zi(WW.styleSheet) || wi(WW)
+          } catch (OW) {
+            iW = WW.cssText
           }
           try {
-            var GB;
-            if (OB && (null === (GB = BB.styleSheet) || void 0 === GB ? void 0 : GB.href)) return uO(OB, BB.styleSheet.href)
-          } catch (BB) {}
-          return OB
+            var OW;
+            if (iW && (null === (OW = WW.styleSheet) || void 0 === OW ? void 0 : OW.href)) return ui(iW, WW.styleSheet.href)
+          } catch (WW) {}
+          return iW
         } {
-          let GB = BB.cssText;
-          return qO(BB) && BB.selectorText.includes(":") && (GB = lO(GB)), OB ? uO(GB, OB) : GB
+          let OW = WW.cssText;
+          return bi(WW) && WW.selectorText.includes(":") && (OW = li(OW)), iW ? ui(OW, iW) : OW
         }
       }
 
-      function lO(BB) {
-        return BB.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
+      function li(WW) {
+        return WW.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
       }
 
-      function pO(BB) {
-        return "styleSheet" in BB
+      function Ai(WW) {
+        return "styleSheet" in WW
       }
 
-      function qO(BB) {
-        return "selectorText" in BB
+      function bi(WW) {
+        return "selectorText" in WW
       }
-      var ZO = /^-?[A-Za-z_][\w-]*$/,
-        NO = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
-      var RO = class {
+      var ji = /^-?[A-Za-z_][\w-]*$/,
+        Ui = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
+      var ki = class {
         constructor() {
-          DO(this, "idNodeMap", new Map), DO(this, "nodeMetaMap", new WeakMap)
+          Ei(this, "idNodeMap", new Map), Ei(this, "nodeMetaMap", new WeakMap)
         }
-        getId(BB) {
-          var OB, GB;
-          return BB && null !== (OB = null === (GB = this.getMeta(BB)) || void 0 === GB ? void 0 : GB.id) && void 0 !== OB ? OB : -1
+        getId(WW) {
+          var iW, OW;
+          return WW && null !== (iW = null === (OW = this.getMeta(WW)) || void 0 === OW ? void 0 : OW.id) && void 0 !== iW ? iW : -1
         }
-        yDB(BB) {
-          return this.idNodeMap.get(BB) || null
+        AmW(WW) {
+          return this.idNodeMap.get(WW) || null
         }
         getIds() {
           return Array.from(this.idNodeMap.keys())
         }
-        getMeta(BB) {
-          return this.nodeMetaMap.get(BB) || null
+        getMeta(WW) {
+          return this.nodeMetaMap.get(WW) || null
         }
-        removeNodeFromMap(BB) {
-          const OB = this.getId(BB);
-          if (this.idNodeMap.delete(OB), BB.childNodes && BB.childNodes.forEach((BB => this.removeNodeFromMap(BB))), QO(BB)) {
-            const OB = dB.shadowRoot(BB);
-            OB && this.removeNodeFromMap(OB), "IFRAME" === BB.nodeName && BB.contentDocument && this.removeNodeFromMap(BB.contentDocument)
+        removeNodeFromMap(WW) {
+          const iW = this.getId(WW);
+          if (this.idNodeMap.delete(iW), WW.childNodes && WW.childNodes.forEach((WW => this.removeNodeFromMap(WW))), Ni(WW)) {
+            const iW = hW.shadowRoot(WW);
+            iW && this.removeNodeFromMap(iW), "IFRAME" === WW.nodeName && WW.contentDocument && this.removeNodeFromMap(WW.contentDocument)
           }
         }
-        has(BB) {
-          return this.idNodeMap.has(BB)
+        has(WW) {
+          return this.idNodeMap.has(WW)
         }
-        hasNode(BB) {
-          return this.nodeMetaMap.has(BB)
+        hasNode(WW) {
+          return this.nodeMetaMap.has(WW)
         }
-        add(BB, OB) {
-          this.idNodeMap.set(OB.id, BB), this.nodeMetaMap.set(BB, OB)
+        add(WW, iW) {
+          this.idNodeMap.set(iW.id, WW), this.nodeMetaMap.set(WW, iW)
         }
-        replace(BB, OB) {
-          const GB = this.yDB(BB);
-          if (GB) {
-            const BB = this.nodeMetaMap.get(GB);
-            BB && this.nodeMetaMap.set(OB, BB)
+        replace(WW, iW) {
+          const OW = this.AmW(WW);
+          if (OW) {
+            const WW = this.nodeMetaMap.get(OW);
+            WW && this.nodeMetaMap.set(iW, WW)
           }
-          this.idNodeMap.set(BB, OB)
+          this.idNodeMap.set(WW, iW)
         }
         reset() {
           this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
         }
       };
 
-      function WO(BB) {
+      function si(WW) {
         let {
-          element: OB,
-          maskInputOptions: GB,
-          tagName: YB,
-          type: DB,
-          value: QB,
-          maskInputFn: oB
-        } = BB, jB = QB || "";
-        const yB = DB && AO(DB);
-        return (GB[YB.toLowerCase()] || yB && GB[yB]) && (jB = oB ? oB(jB, OB) : "*".repeat(jB.length)), jB
+          element: iW,
+          maskInputOptions: OW,
+          tagName: mW,
+          type: EW,
+          value: NW,
+          maskInputFn: PW
+        } = WW, LW = NW || "";
+        const cW = EW && Mi(EW);
+        return (OW[mW.toLowerCase()] || cW && OW[cW]) && (LW = PW ? PW(LW, iW) : "*".repeat(LW.length)), LW
       }
 
-      function AO(BB) {
-        return BB.toLowerCase()
+      function Mi(WW) {
+        return WW.toLowerCase()
       }
-      var VO = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
+      var Ki = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
 
-      function SO(BB) {
+      function Si(WW) {
         let {
-          element: OB,
-          name: GB,
-          value: YB,
-          maskAllElementAttributes: DB,
-          maskAttributeFn: QB,
-          isGenerated: oB = !1
-        } = BB;
-        return YB ? DB ? oB && VO.has(AO(GB)) ? YB : "*".repeat(YB.length) : QB ? QB(GB, YB, OB) : YB : YB
+          element: iW,
+          name: OW,
+          value: mW,
+          maskAllElementAttributes: EW,
+          maskAttributeFn: NW,
+          isGenerated: PW = !1
+        } = WW;
+        return mW ? EW ? PW && Ki.has(Mi(OW)) ? mW : "*".repeat(mW.length) : NW ? NW(OW, mW, iW) : mW : mW
       }
-      var nO = "__rrweb_original__";
+      var Yi = "__rrweb_original__";
 
-      function UO(BB) {
+      function yi(WW) {
         try {
-          const OB = BB.type;
-          return BB.hasAttribute("data-rr-is-password") ? "password" : OB ? AO(OB) : null
-        } catch (BB) {
+          const iW = WW.type;
+          return WW.hasAttribute("data-rr-is-password") ? "password" : iW ? Mi(iW) : null
+        } catch (WW) {
           return null
         }
       }
-      var fO = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
-        kO = /^(?:[a-z+]+:)?\/\//i,
-        dO = /^www\..*/i,
-        KO = /^(data:)([^,]*),(.*)/i;
+      var Ti = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+        Ji = /^(?:[a-z+]+:)?\/\//i,
+        Hi = /^www\..*/i,
+        ni = /^(data:)([^,]*),(.*)/i;
 
-      function uO(BB, OB) {
-        return (BB || "").replace(fO, ((BB, GB, YB, DB, QB, oB) => {
-          const jB = YB || QB || oB,
-            yB = GB || DB || "";
-          if (!jB) return BB;
-          if (kO.test(jB) || dO.test(jB)) return `url(${yB}${jB}${yB})`;
-          if (KO.test(jB)) return `url(${yB}${jB}${yB})`;
-          if ("/" === jB[0]) return `url(${yB}${function(BB){let OB="";return OB=BB.indexOf("//")>-1?BB.split("/").slice(0,3).join("/"):BB.split("/")[0],OB=OB.split("?")[0],OB}(OB)+jB}${yB})`;
-          const JB = OB.split("/"),
-            MB = jB.split("/");
-          JB.pop();
-          for (const OB of MB) "." !== OB && (".." === OB ? JB.pop() : JB.push(OB));
-          return `url(${yB}${JB.join("/")}${yB})`
+      function ui(WW, iW) {
+        return (WW || "").replace(Ti, ((WW, OW, mW, EW, NW, PW) => {
+          const LW = mW || NW || PW,
+            cW = OW || EW || "";
+          if (!LW) return WW;
+          if (Ji.test(LW) || Hi.test(LW)) return `url(${cW}${LW}${cW})`;
+          if (ni.test(LW)) return `url(${cW}${LW}${cW})`;
+          if ("/" === LW[0]) return `url(${cW}${function(WW){let iW="";return iW=WW.indexOf("//")>-1?WW.split("/").slice(0,3).join("/"):WW.split("/")[0],iW=iW.split("?")[0],iW}(iW)+LW}${cW})`;
+          const wW = iW.split("/"),
+            tW = LW.split("/");
+          wW.pop();
+          for (const iW of tW) "." !== iW && (".." === iW ? wW.pop() : wW.push(iW));
+          return `url(${cW}${wW.join("/")}${cW})`
         }))
       }
-      var mO, IO, FO = new Map,
-        iO = 1,
-        LO = new RegExp("[^a-z0-9-_:]");
+      var oi, di, ei = new Map,
+        vi = 1,
+        gi = new RegExp("[^a-z0-9-_:]");
 
-      function gO() {
-        return iO++
+      function Di() {
+        return vi++
       }
-      var rO = !1,
-        XO = /^[^ \t\n\r\u000c]+/,
-        wO = /^[, \t\n\r\u000c]+/,
-        EO = new WeakMap;
+      var Vi = !1,
+        fi = /^[^ \t\n\r\u000c]+/,
+        Ci = /^[, \t\n\r\u000c]+/,
+        Xi = new WeakMap;
 
-      function cO(BB, OB) {
-        return OB && "" !== OB.trim() ? hO(BB, OB) : OB
-      }
-
-      function hO(BB, OB) {
-        let GB = EO.get(BB);
-        if (GB || (GB = BB.createElement("a"), EO.set(BB, GB)), OB) {
-          if (OB.startsWith("blob:") || OB.startsWith("data:")) return OB
-        } else OB = "";
-        return GB.setAttribute("href", OB), GB.href
+      function Bi(WW, iW) {
+        return iW && "" !== iW.trim() ? qi(WW, iW) : iW
       }
 
-      function aO(BB, OB) {
-        return (null == OB ? void 0 : OB.maxBase64ImageLength) ? function(BB, OB) {
-          return OB && BB.length > OB ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : BB
-        }(BB, OB.maxBase64ImageLength) : BB
+      function qi(WW, iW) {
+        let OW = Xi.get(WW);
+        if (OW || (OW = WW.createElement("a"), Xi.set(WW, OW)), iW) {
+          if (iW.startsWith("blob:") || iW.startsWith("data:")) return iW
+        } else iW = "";
+        return OW.setAttribute("href", iW), OW.href
       }
 
-      function eO(BB, OB, GB, YB, DB, QB) {
-        if (!YB) return YB;
-        if ("src" === GB || "href" === GB && ("use" !== OB || "#" !== YB[0])) {
-          if ("link" === OB && DB) {
-            var oB;
-            const BB = null === (oB = DB.sheet) || void 0 === oB ? void 0 : oB.href;
-            if (BB) return BB
+      function Ri(WW, iW) {
+        return (null == iW ? void 0 : iW.maxBase64ImageLength) ? function(WW, iW) {
+          return iW && WW.length > iW ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : WW
+        }(WW, iW.maxBase64ImageLength) : WW
+      }
+
+      function Gi(WW, iW, OW, mW, EW, NW) {
+        if (!mW) return mW;
+        if ("src" === OW || "href" === OW && ("use" !== iW || "#" !== mW[0])) {
+          if ("link" === iW && EW) {
+            var PW;
+            const WW = null === (PW = EW.sheet) || void 0 === PW ? void 0 : PW.href;
+            if (WW) return WW
           }
-          const GB = cO(BB, YB);
-          if (GB.startsWith("data:")) {
-            if ("img" === OB && DB) {
-              let BB = GB;
-              return ((null == QB ? void 0 : QB.type) || void 0 !== (null == QB ? void 0 : QB.quality)) && (BB = function(BB, OB, GB, YB) {
-                if (1e5 > OB.length) return OB;
-                if (!BB.complete || 0 === BB.naturalWidth) return OB;
-                if (BB.naturalWidth > 4096 || BB.naturalHeight > 4096) return OB;
-                const DB = FO.get(OB);
-                if (DB && DB.type === GB && DB.quality === YB) return DB.result;
+          const OW = Bi(WW, mW);
+          if (OW.startsWith("data:")) {
+            if ("img" === iW && EW) {
+              let WW = OW;
+              return ((null == NW ? void 0 : NW.type) || void 0 !== (null == NW ? void 0 : NW.quality)) && (WW = function(WW, iW, OW, mW) {
+                if (1e5 > iW.length) return iW;
+                if (!WW.complete || 0 === WW.naturalWidth) return iW;
+                if (WW.naturalWidth > 4096 || WW.naturalHeight > 4096) return iW;
+                const EW = ei.get(iW);
+                if (EW && EW.type === OW && EW.quality === mW) return EW.result;
                 try {
-                  const DB = document.createElement("canvas");
-                  DB.width = BB.naturalWidth, DB.height = BB.naturalHeight;
-                  const QB = DB.getContext("2d");
-                  if (!QB) return OB;
-                  QB.drawImage(BB, 0, 0);
-                  const oB = DB.toDataURL(GB || "image/webp", null != YB ? YB : .4),
-                    jB = OB.length > oB.length ? oB : OB;
-                  if (FO.size >= 10) {
-                    const BB = FO.keys().next().value;
-                    void 0 !== BB && FO.delete(BB)
+                  const EW = document.createElement("canvas");
+                  EW.width = WW.naturalWidth, EW.height = WW.naturalHeight;
+                  const NW = EW.getContext("2d");
+                  if (!NW) return iW;
+                  NW.drawImage(WW, 0, 0);
+                  const PW = EW.toDataURL(OW || "image/webp", null != mW ? mW : .4),
+                    LW = iW.length > PW.length ? PW : iW;
+                  if (ei.size >= 10) {
+                    const WW = ei.keys().next().value;
+                    void 0 !== WW && ei.delete(WW)
                   }
-                  return FO.set(OB, {
-                    type: GB,
-                    quality: YB,
-                    result: jB
-                  }), jB
-                } catch (BB) {
-                  return OB
+                  return ei.set(iW, {
+                    type: OW,
+                    quality: mW,
+                    result: LW
+                  }), LW
+                } catch (WW) {
+                  return iW
                 }
-              }(DB, GB, QB.type, QB.quality)), aO(BB, QB)
+              }(EW, OW, NW.type, NW.quality)), Ri(WW, NW)
             }
-            if ("image" === OB) return aO(GB, QB)
+            if ("image" === iW) return Ri(OW, NW)
           }
-          return GB
+          return OW
         }
-        if ("xlink:href" === GB && "#" !== YB[0]) {
-          const GB = cO(BB, YB);
-          return "image" === OB && GB.startsWith("data:") ? aO(GB, QB) : GB
+        if ("xlink:href" === OW && "#" !== mW[0]) {
+          const OW = Bi(WW, mW);
+          return "image" === iW && OW.startsWith("data:") ? Ri(OW, NW) : OW
         }
-        return "background" !== GB || "table" !== OB && "td" !== OB && "th" !== OB ? "srcset" === GB ? function(BB, OB) {
-          if ("" === OB.trim()) return OB;
-          let GB = 0;
+        return "background" !== OW || "table" !== iW && "td" !== iW && "th" !== iW ? "srcset" === OW ? function(WW, iW) {
+          if ("" === iW.trim()) return iW;
+          let OW = 0;
 
-          function YB(BB) {
-            let YB;
-            const DB = BB.exec(OB.substring(GB));
-            return DB ? (YB = DB[0], GB += YB.length, YB) : ""
+          function mW(WW) {
+            let mW;
+            const EW = WW.exec(iW.substring(OW));
+            return EW ? (mW = EW[0], OW += mW.length, mW) : ""
           }
-          const DB = [];
-          for (; YB(wO), OB.length > GB;) {
-            let QB = YB(XO);
-            if ("," === QB.slice(-1)) QB = cO(BB, QB.substring(0, QB.length - 1)), DB.push(QB);
+          const EW = [];
+          for (; mW(Ci), iW.length > OW;) {
+            let NW = mW(fi);
+            if ("," === NW.slice(-1)) NW = Bi(WW, NW.substring(0, NW.length - 1)), EW.push(NW);
             else {
-              let YB = "";
-              QB = cO(BB, QB);
-              let oB = !1;
+              let mW = "";
+              NW = Bi(WW, NW);
+              let PW = !1;
               for (;;) {
-                const BB = OB.charAt(GB);
-                if ("" === BB) {
-                  DB.push((QB + YB).trim());
+                const WW = iW.charAt(OW);
+                if ("" === WW) {
+                  EW.push((NW + mW).trim());
                   break
                 }
-                if (oB) ")" === BB && (oB = !1);
+                if (PW) ")" === WW && (PW = !1);
                 else {
-                  if ("," === BB) {
-                    GB += 1, DB.push((QB + YB).trim());
+                  if ("," === WW) {
+                    OW += 1, EW.push((NW + mW).trim());
                     break
                   }
-                  "(" === BB && (oB = !0)
+                  "(" === WW && (PW = !0)
                 }
-                YB += BB, GB += 1
+                mW += WW, OW += 1
               }
             }
           }
-          return DB.join(", ")
-        }(BB, YB) : "style" === GB ? uO(YB, hO(BB)) : "object" === OB && "data" === GB ? cO(BB, YB) : YB : cO(BB, YB)
+          return EW.join(", ")
+        }(WW, mW) : "style" === OW ? ui(mW, qi(WW)) : "object" === iW && "data" === OW ? Bi(WW, mW) : mW : Bi(WW, mW)
       }
 
-      function TO(BB, OB, GB) {
-        return ("video" === BB || "audio" === BB) && "autoplay" === AO(OB)
+      function Ii(WW, iW, OW) {
+        return ("video" === WW || "audio" === WW) && "autoplay" === Mi(iW)
       }
 
-      function bO(BB) {
-        return "string" == typeof BB && AO(BB).split(/\s+/).includes("stylesheet")
+      function ai(WW) {
+        return "string" == typeof WW && Mi(WW).split(/\s+/).includes("stylesheet")
       }
 
-      function CO(BB, OB, GB) {
-        if (!BB) return !1;
-        if (BB.nodeType !== BB.ELEMENT_NODE) return !!GB && CO(dB.parentNode(BB), OB, GB);
-        for (let YB = BB.classList.length; YB--;)
-          if (OB.test(BB.classList[YB])) return !0;
-        return !!GB && CO(dB.parentNode(BB), OB, GB)
+      function ri(WW, iW, OW) {
+        if (!WW) return !1;
+        if (WW.nodeType !== WW.ELEMENT_NODE) return !!OW && ri(hW.parentNode(WW), iW, OW);
+        for (let mW = WW.classList.length; mW--;)
+          if (iW.test(WW.classList[mW])) return !0;
+        return !!OW && ri(hW.parentNode(WW), iW, OW)
       }
 
-      function HO(BB, OB, GB, YB) {
-        let DB;
-        if (QO(BB)) {
-          if (DB = BB, !dB.childNodes(DB).length) return !1
+      function zi(WW, iW, OW, mW) {
+        let EW;
+        if (Ni(WW)) {
+          if (EW = WW, !hW.childNodes(EW).length) return !1
         } else {
-          if (null === dB.parentElement(BB)) return !1;
-          DB = dB.parentElement(BB)
+          if (null === hW.parentElement(WW)) return !1;
+          EW = hW.parentElement(WW)
         }
         try {
-          if ("string" == typeof OB) {
-            if (YB) {
-              if (DB.closest(`.${OB}`)) return !0
-            } else if (DB.classList.contains(OB)) return !0
-          } else if (CO(DB, OB, YB)) return !0;
-          if (GB)
-            if (YB) {
-              if (DB.closest(GB)) return !0
-            } else if (DB.matches(GB)) return !0
-        } catch (BB) {}
+          if ("string" == typeof iW) {
+            if (mW) {
+              if (EW.closest(`.${iW}`)) return !0
+            } else if (EW.classList.contains(iW)) return !0
+          } else if (ri(EW, iW, mW)) return !0;
+          if (OW)
+            if (mW) {
+              if (EW.closest(OW)) return !0
+            } else if (EW.matches(OW)) return !0
+        } catch (WW) {}
         return !1
       }
 
-      function vO(BB, OB, GB) {
-        const YB = BB.removeEventListener;
-        "function" == typeof YB && YB.call(BB, OB, GB)
+      function Fi(WW, iW, OW) {
+        const mW = WW.removeEventListener;
+        "function" == typeof mW && mW.call(WW, iW, OW)
       }
-      var sO = new Map;
+      var Qi = new Map;
 
-      function xO(BB, OB) {
-        return Array.from(BB.styleSheets).find((BB => BB.href === OB))
+      function WO(WW, iW) {
+        return Array.from(WW.styleSheets).find((WW => WW.href === iW))
       }
 
-      function tO(BB) {
-        return null == BB ? "" : BB.toLowerCase()
+      function iO(WW) {
+        return null == WW ? "" : WW.toLowerCase()
       }
-      var BG = !1,
-        OG = !1;
+      var OO = !1,
+        mO = !1;
 
-      function GG(BB, OB) {
+      function EO(WW, iW) {
         const {
-          doc: GB,
-          mirror: YB,
-          blockClass: DB,
-          blockSelector: QB,
-          maskTextClass: oB,
-          maskTextSelector: jB,
-          skipChild: yB = !1,
-          inlineStylesheet: JB = !0,
-          maskInputOptions: MB = {},
-          maskTextFn: PB,
-          maskInputFn: zB,
-          maskAllElementAttributes: pB = !1,
-          maskAttributeFn: qB,
-          slimDOMOptions: ZB,
-          dataURLOptions: NB = {},
-          inlineImages: RB = !1,
-          recordCanvas: WB = !1,
-          canvasMaskingConfigured: AB,
-          onSerialize: VB,
-          onIframeLoad: SB,
-          iframeLoadTimeout: nB = 5e3,
-          onIframeListenerRegistered: UB,
-          onStylesheetLoad: fB,
-          stylesheetLoadTimeout: kB = 5e3,
-          keepIframeSrcFn: KB = () => !1,
-          newlyAddedElement: uB = !1,
-          depth: mB = 0,
-          maxDepth: IB = 50
-        } = OB;
+          doc: OW,
+          mirror: mW,
+          blockClass: EW,
+          blockSelector: NW,
+          maskTextClass: PW,
+          maskTextSelector: LW,
+          skipChild: cW = !1,
+          inlineStylesheet: wW = !0,
+          maskInputOptions: tW = {},
+          maskTextFn: ZW,
+          maskInputFn: xW,
+          maskAllElementAttributes: AW = !1,
+          maskAttributeFn: bW,
+          slimDOMOptions: jW,
+          dataURLOptions: UW = {},
+          inlineImages: kW = !1,
+          recordCanvas: sW = !1,
+          canvasMaskingConfigured: MW,
+          onSerialize: KW,
+          onIframeLoad: SW,
+          iframeLoadTimeout: YW = 5e3,
+          onIframeListenerRegistered: yW,
+          onStylesheetLoad: TW,
+          stylesheetLoadTimeout: JW = 5e3,
+          keepIframeSrcFn: HW = () => !1,
+          newlyAddedElement: nW = !1,
+          depth: uW = 0,
+          maxDepth: oW = 50
+        } = iW;
         let {
-          needsMask: FB
-        } = OB, {
-          preserveWhiteSpace: iB = !0
-        } = OB;
-        if (mB >= IB) return OG = !0, BG || (BG = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${IB}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
-        FB || (FB = HO(BB, oB, jB, void 0 === FB)), LB > 0 && (XB.nodeCount += 1);
-        const gB = function(BB, OB) {
+          needsMask: dW
+        } = iW, {
+          preserveWhiteSpace: eW = !0
+        } = iW;
+        if (uW >= oW) return mO = !0, OO || (OO = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${oW}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
+        dW || (dW = zi(WW, PW, LW, void 0 === dW)), vW > 0 && (VW.nodeCount += 1);
+        const gW = function(WW, iW) {
           const {
-            doc: GB,
-            mirror: YB,
-            blockClass: DB,
-            blockSelector: QB,
-            needsMask: oB,
-            inlineStylesheet: jB,
-            maskInputOptions: yB = {},
-            maskTextFn: JB,
-            maskInputFn: MB,
-            maskAllElementAttributes: PB = !1,
-            maskAttributeFn: zB,
-            dataURLOptions: pB = {},
-            inlineImages: qB,
-            recordCanvas: ZB,
-            canvasMaskingConfigured: NB,
-            keepIframeSrcFn: RB,
-            newlyAddedElement: WB = !1
-          } = OB, AB = function(BB, OB) {
-            if (!OB.hasNode(BB)) return;
-            const GB = OB.getId(BB);
-            return 1 === GB ? void 0 : GB
-          }(GB, YB);
-          switch (BB.nodeType) {
-            case BB.DOCUMENT_NODE:
-              return "CSS1Compat" !== BB.compatMode ? {
-                type: lB.Document,
+            doc: OW,
+            mirror: mW,
+            blockClass: EW,
+            blockSelector: NW,
+            needsMask: PW,
+            inlineStylesheet: LW,
+            maskInputOptions: cW = {},
+            maskTextFn: wW,
+            maskInputFn: tW,
+            maskAllElementAttributes: ZW = !1,
+            maskAttributeFn: xW,
+            dataURLOptions: AW = {},
+            inlineImages: bW,
+            recordCanvas: jW,
+            canvasMaskingConfigured: UW,
+            keepIframeSrcFn: kW,
+            newlyAddedElement: sW = !1
+          } = iW, MW = function(WW, iW) {
+            if (!iW.hasNode(WW)) return;
+            const OW = iW.getId(WW);
+            return 1 === OW ? void 0 : OW
+          }(OW, mW);
+          switch (WW.nodeType) {
+            case WW.DOCUMENT_NODE:
+              return "CSS1Compat" !== WW.compatMode ? {
+                type: lW.Document,
                 childNodes: [],
-                compatMode: BB.compatMode
+                compatMode: WW.compatMode
               } : {
-                type: lB.Document,
+                type: lW.Document,
                 childNodes: []
               };
-            case BB.DOCUMENT_TYPE_NODE:
+            case WW.DOCUMENT_TYPE_NODE:
               return {
-                type: lB.DocumentType, name: BB.name, publicId: BB.publicId, systemId: BB.systemId, rootId: AB
+                type: lW.DocumentType, name: WW.name, publicId: WW.publicId, systemId: WW.systemId, rootId: MW
               };
-            case BB.ELEMENT_NODE:
-              return function(BB, OB) {
+            case WW.ELEMENT_NODE:
+              return function(WW, iW) {
                 const {
-                  doc: GB,
-                  blockClass: YB,
-                  blockSelector: DB,
-                  inlineStylesheet: QB,
-                  maskInputOptions: oB = {},
-                  maskInputFn: jB,
-                  maskAllElementAttributes: yB = !1,
-                  maskAttributeFn: JB,
-                  dataURLOptions: MB = {},
-                  inlineImages: PB,
-                  recordCanvas: zB,
-                  canvasMaskingConfigured: pB,
-                  keepIframeSrcFn: qB,
-                  newlyAddedElement: ZB = !1,
-                  rootId: NB
-                } = OB, RB = function(BB, OB, GB) {
+                  doc: OW,
+                  blockClass: mW,
+                  blockSelector: EW,
+                  inlineStylesheet: NW,
+                  maskInputOptions: PW = {},
+                  maskInputFn: LW,
+                  maskAllElementAttributes: cW = !1,
+                  maskAttributeFn: wW,
+                  dataURLOptions: tW = {},
+                  inlineImages: ZW,
+                  recordCanvas: xW,
+                  canvasMaskingConfigured: AW,
+                  keepIframeSrcFn: bW,
+                  newlyAddedElement: jW = !1,
+                  rootId: UW
+                } = iW, kW = function(WW, iW, OW) {
                   try {
-                    if ("string" == typeof OB) {
-                      if (BB.classList.contains(OB)) return !0
+                    if ("string" == typeof iW) {
+                      if (WW.classList.contains(iW)) return !0
                     } else
-                      for (let GB = BB.classList.length; GB--;)
-                        if (OB.test(BB.classList[GB])) return !0;
-                    if (GB) return BB.matches(GB)
-                  } catch (BB) {}
+                      for (let OW = WW.classList.length; OW--;)
+                        if (iW.test(WW.classList[OW])) return !0;
+                    if (OW) return WW.matches(OW)
+                  } catch (WW) {}
                   return !1
-                }(BB, YB, DB), WB = function(BB) {
-                  if (BB instanceof HTMLFormElement) return "form";
-                  const OB = AO(BB.tagName);
-                  return LO.test(OB) ? "div" : OB
-                }(BB), AB = new Set;
-                let VB = {};
-                const SB = BB.attributes.length;
-                for (let lB = 0; SB > lB; lB++) {
-                  const OB = BB.attributes[lB];
-                  TO(WB, OB.name) || (VB[OB.name] = eO(GB, WB, AO(OB.name), OB.value, BB, MB))
+                }(WW, mW, EW), sW = function(WW) {
+                  if (WW instanceof HTMLFormElement) return "form";
+                  const iW = Mi(WW.tagName);
+                  return gi.test(iW) ? "div" : iW
+                }(WW), MW = new Set;
+                let KW = {};
+                const SW = WW.attributes.length;
+                for (let lW = 0; SW > lW; lW++) {
+                  const iW = WW.attributes[lW];
+                  Ii(sW, iW.name) || (KW[iW.name] = Gi(OW, sW, Mi(iW.name), iW.value, WW, tW))
                 }
-                if ("link" === WB && QB && !RB && bO(VB.rel)) {
-                  let OB = BB.sheet;
-                  if (!OB) {
-                    const YB = function(BB) {
-                      return BB.href
-                    }(BB);
-                    YB && (OB = xO(GB, YB), !OB && YB.includes(".css")) && (OB = xO(GB, window.location.origin + "/" + YB.replace(window.location.href, "")))
+                if ("link" === sW && NW && !kW && ai(KW.rel)) {
+                  let iW = WW.sheet;
+                  if (!iW) {
+                    const mW = function(WW) {
+                      return WW.href
+                    }(WW);
+                    mW && (iW = WO(OW, mW), !iW && mW.includes(".css")) && (iW = WO(OW, window.location.origin + "/" + mW.replace(window.location.href, "")))
                   }
-                  let YB = null;
-                  OB && (tB(OB) ? LB > 0 && (cB.push(BB), hB += 1) : YB = PO(OB)), YB && (delete VB.rel, delete VB.href, VB._cssText = YB)
+                  let mW = null;
+                  iW && (QW(iW) ? vW > 0 && (CW.push(WW), XW += 1) : mW = Zi(iW)), mW && (delete KW.rel, delete KW.href, KW._cssText = mW)
                 }
-                var nB;
-                if ("style" === WB && BB.sheet && !(BB.innerText || dB.textContent(BB) || "").trim().length) {
-                  const OB = sB((() => PO(BB.sheet)));
-                  OB && (VB._cssText = OB)
+                var YW;
+                if ("style" === sW && WW.sheet && !(WW.innerText || hW.textContent(WW) || "").trim().length) {
+                  const iW = zW((() => Zi(WW.sheet)));
+                  iW && (KW._cssText = iW)
                 }
-                if ("input" === WB || "textarea" === WB || "select" === WB) {
-                  const OB = BB.value,
-                    GB = BB.checked;
-                  "radio" !== VB.type && "checkbox" !== VB.type && "submit" !== VB.type && "button" !== VB.type && OB ? VB.value = WO({
-                    element: BB,
-                    type: UO(BB),
-                    tagName: WB,
-                    value: OB,
-                    maskInputOptions: oB,
-                    maskInputFn: jB
-                  }) : GB && (VB.checked = GB)
+                if ("input" === sW || "textarea" === sW || "select" === sW) {
+                  const iW = WW.value,
+                    OW = WW.checked;
+                  "radio" !== KW.type && "checkbox" !== KW.type && "submit" !== KW.type && "button" !== KW.type && iW ? KW.value = si({
+                    element: WW,
+                    type: yi(WW),
+                    tagName: sW,
+                    value: iW,
+                    maskInputOptions: PW,
+                    maskInputFn: LW
+                  }) : OW && (KW.checked = OW)
                 }
-                if ("option" === WB && (BB.selected && !oB.select ? VB.selected = !0 : delete VB.selected), "dialog" === WB && BB.open) {
+                if ("option" === sW && (WW.selected && !PW.select ? KW.selected = !0 : delete KW.selected), "dialog" === sW && WW.open) {
                   try {
-                    VB.rr_open_mode = BB.matches("dialog:modal") ? "modal" : "non-modal"
-                  } catch (BB) {
-                    VB.rr_open_mode = "modal", VB.ph_rr_could_not_detect_modal = !0
+                    KW.rr_open_mode = WW.matches("dialog:modal") ? "modal" : "non-modal"
+                  } catch (WW) {
+                    KW.rr_open_mode = "modal", KW.ph_rr_could_not_detect_modal = !0
                   }
-                  AB.add("rr_open_mode")
+                  MW.add("rr_open_mode")
                 }
-                if ("canvas" === WB && zB && !(null == pB ? void 0 : pB())) try {
-                  if ("2d" === BB.__context)(function(BB) {
-                    const OB = BB.getContext("2d");
-                    if (!OB) return !0;
-                    for (let GB = 0; BB.width > GB; GB += 50)
-                      for (let YB = 0; BB.height > YB; YB += 50) {
-                        const DB = OB.getImageData,
-                          QB = nO in DB ? DB[nO] : DB;
-                        let oB;
+                if ("canvas" === sW && xW && !(null == AW ? void 0 : AW())) try {
+                  if ("2d" === WW.__context)(function(WW) {
+                    const iW = WW.getContext("2d");
+                    if (!iW) return !0;
+                    for (let OW = 0; WW.width > OW; OW += 50)
+                      for (let mW = 0; WW.height > mW; mW += 50) {
+                        const EW = iW.getImageData,
+                          NW = Yi in EW ? EW[Yi] : EW;
+                        let PW;
                         try {
-                          oB = QB.call(OB, GB, YB, Math.min(50, BB.width - GB), Math.min(50, BB.height - YB))
-                        } catch (BB) {
+                          PW = NW.call(iW, OW, mW, Math.min(50, WW.width - OW), Math.min(50, WW.height - mW))
+                        } catch (WW) {
                           return !1
                         }
-                        if (new Uint32Array(oB.data.buffer).some((BB => 0 !== BB))) return !1
+                        if (new Uint32Array(PW.data.buffer).some((WW => 0 !== WW))) return !1
                       }
                     return !0
-                  })(BB) || (VB.rr_dataURL = BB.toDataURL(MB.type, MB.quality));
-                  else if (!("__context" in BB)) {
-                    const OB = BB.toDataURL(MB.type, MB.quality),
-                      YB = GB.createElement("canvas");
-                    YB.width = BB.width, YB.height = BB.height, OB !== YB.toDataURL(MB.type, MB.quality) && (VB.rr_dataURL = OB)
+                  })(WW) || (KW.rr_dataURL = WW.toDataURL(tW.type, tW.quality));
+                  else if (!("__context" in WW)) {
+                    const iW = WW.toDataURL(tW.type, tW.quality),
+                      mW = OW.createElement("canvas");
+                    mW.width = WW.width, mW.height = WW.height, iW !== mW.toDataURL(tW.type, tW.quality) && (KW.rr_dataURL = iW)
                   }
-                } catch (BB) {
-                  "SecurityError" === (null == (nB = BB) ? void 0 : nB.name) ? rO || (rO = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", nB)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", nB)
+                } catch (WW) {
+                  "SecurityError" === (null == (YW = WW) ? void 0 : YW.name) ? Vi || (Vi = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", YW)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", YW)
                 }
-                let UB, fB = !1;
-                if ("img" === WB && PB) {
-                  mO || (mO = GB.createElement("canvas"), IO = mO.getContext("2d"));
-                  const OB = BB,
-                    YB = OB.currentSrc || OB.getAttribute("src") || "<unknown-src>",
-                    DB = OB.crossOrigin,
-                    QB = (OB, GB) => fB ? SO({
-                      element: BB,
-                      name: OB,
-                      value: GB,
-                      maskAllElementAttributes: yB,
-                      maskAttributeFn: JB
-                    }) : GB,
-                    oB = () => {
-                      vO(OB, "load", oB);
+                let yW, TW = !1;
+                if ("img" === sW && ZW) {
+                  oi || (oi = OW.createElement("canvas"), di = oi.getContext("2d"));
+                  const iW = WW,
+                    mW = iW.currentSrc || iW.getAttribute("src") || "<unknown-src>",
+                    EW = iW.crossOrigin,
+                    NW = (iW, OW) => TW ? Si({
+                      element: WW,
+                      name: iW,
+                      value: OW,
+                      maskAllElementAttributes: cW,
+                      maskAttributeFn: wW
+                    }) : OW,
+                    PW = () => {
+                      Fi(iW, "load", PW);
                       try {
-                        mO.width = OB.naturalWidth, mO.height = OB.naturalHeight, IO.drawImage(OB, 0, 0);
-                        const BB = mO.toDataURL(MB.type, MB.quality);
-                        VB.rr_dataURL = QB("rr_dataURL", BB)
-                      } catch (BB) {
-                        if ("anonymous" !== OB.crossOrigin) return OB.crossOrigin = "anonymous", void(OB.complete && 0 !== OB.naturalWidth ? oB() : OB.addEventListener("load", oB));
-                        console.warn(`Cannot inline img src=${YB}! Error: ${BB}`)
+                        oi.width = iW.naturalWidth, oi.height = iW.naturalHeight, di.drawImage(iW, 0, 0);
+                        const WW = oi.toDataURL(tW.type, tW.quality);
+                        KW.rr_dataURL = NW("rr_dataURL", WW)
+                      } catch (WW) {
+                        if ("anonymous" !== iW.crossOrigin) return iW.crossOrigin = "anonymous", void(iW.complete && 0 !== iW.naturalWidth ? PW() : iW.addEventListener("load", PW));
+                        console.warn(`Cannot inline img src=${mW}! Error: ${WW}`)
                       }
-                      "anonymous" === OB.crossOrigin && (DB ? VB.crossOrigin = QB("crossOrigin", DB) : OB.removeAttribute("crossorigin"))
+                      "anonymous" === iW.crossOrigin && (EW ? KW.crossOrigin = NW("crossOrigin", EW) : iW.removeAttribute("crossorigin"))
                     };
-                  OB.complete && 0 !== OB.naturalWidth ? oB() : OB.addEventListener("load", oB)
+                  iW.complete && 0 !== iW.naturalWidth ? PW() : iW.addEventListener("load", PW)
                 }
-                if ("audio" === WB || "video" === WB) {
-                  const OB = VB;
-                  OB.rr_mediaState = BB.paused ? "paused" : "played", AB.add("rr_mediaState"), OB.rr_mediaCurrentTime = BB.currentTime, OB.rr_mediaPlaybackRate = BB.playbackRate, OB.rr_mediaMuted = BB.muted, OB.rr_mediaLoop = BB.loop, OB.rr_mediaVolume = BB.volume
+                if ("audio" === sW || "video" === sW) {
+                  const iW = KW;
+                  iW.rr_mediaState = WW.paused ? "paused" : "played", MW.add("rr_mediaState"), iW.rr_mediaCurrentTime = WW.currentTime, iW.rr_mediaPlaybackRate = WW.playbackRate, iW.rr_mediaMuted = WW.muted, iW.rr_mediaLoop = WW.loop, iW.rr_mediaVolume = WW.volume
                 }
-                if (ZB || (BB.scrollLeft && (VB.rr_scrollLeft = BB.scrollLeft), BB.scrollTop && (VB.rr_scrollTop = BB.scrollTop)), RB) {
-                  var kB, KB, uB;
+                if (jW || (WW.scrollLeft && (KW.rr_scrollLeft = WW.scrollLeft), WW.scrollTop && (KW.rr_scrollTop = WW.scrollTop)), kW) {
+                  var JW, HW, nW;
                   const {
-                    width: OB,
-                    height: YB,
-                    left: DB,
-                    top: QB
-                  } = BB.getBoundingClientRect(), oB = null === (kB = GB.defaultView) || void 0 === kB ? void 0 : kB.getComputedStyle(BB);
-                  VB = {
-                    class: VB.class,
-                    rr_width: `${OB}px`,
-                    rr_height: `${YB}px`,
-                    rr_left: `${Math.floor(DB+((null===(KB=GB.defaultView)||void 0===KB?void 0:KB.scrollX)||0))}px`,
-                    rr_top: `${Math.floor(QB+((null===(uB=GB.defaultView)||void 0===uB?void 0:uB.scrollY)||0))}px`
-                  }, AB.add("rr_width"), AB.add("rr_height"), AB.add("rr_left"), AB.add("rr_top"), oB && (VB.rr_position = oB.position || "static", AB.add("rr_position"), oB.transform && "none" !== oB.transform && (VB.rr_transform = oB.transform, AB.add("rr_transform")), oB.display && oB.display.startsWith("inline") && (VB.rr_display = oB.display, AB.add("rr_display")))
+                    width: iW,
+                    height: mW,
+                    left: EW,
+                    top: NW
+                  } = WW.getBoundingClientRect(), PW = null === (JW = OW.defaultView) || void 0 === JW ? void 0 : JW.getComputedStyle(WW);
+                  KW = {
+                    class: KW.class,
+                    rr_width: `${iW}px`,
+                    rr_height: `${mW}px`,
+                    rr_left: `${Math.floor(EW+((null===(HW=OW.defaultView)||void 0===HW?void 0:HW.scrollX)||0))}px`,
+                    rr_top: `${Math.floor(NW+((null===(nW=OW.defaultView)||void 0===nW?void 0:nW.scrollY)||0))}px`
+                  }, MW.add("rr_width"), MW.add("rr_height"), MW.add("rr_left"), MW.add("rr_top"), PW && (KW.rr_position = PW.position || "static", MW.add("rr_position"), PW.transform && "none" !== PW.transform && (KW.rr_transform = PW.transform, MW.add("rr_transform")), PW.display && PW.display.startsWith("inline") && (KW.rr_display = PW.display, MW.add("rr_display")))
                 }
-                if ("iframe" !== WB || qB(VB.src) || (BB.contentDocument || (VB.rr_src = VB.src), delete VB.src), yB || JB)
-                  for (const [lB, dB] of Object.entries(VB)) "string" != typeof dB && null !== dB || (VB[lB] = SO({
-                    element: BB,
-                    name: lB,
-                    value: dB,
-                    maskAllElementAttributes: yB,
-                    maskAttributeFn: JB,
-                    isGenerated: AB.has(lB)
+                if ("iframe" !== sW || bW(KW.src) || (WW.contentDocument || (KW.rr_src = KW.src), delete KW.src), cW || wW)
+                  for (const [lW, hW] of Object.entries(KW)) "string" != typeof hW && null !== hW || (KW[lW] = Si({
+                    element: WW,
+                    name: lW,
+                    value: hW,
+                    maskAllElementAttributes: cW,
+                    maskAttributeFn: wW,
+                    isGenerated: MW.has(lW)
                   }));
-                fB = !0;
+                TW = !0;
                 try {
-                  customElements.get(WB) && (UB = !0)
-                } catch (BB) {}
+                  customElements.get(sW) && (yW = !0)
+                } catch (WW) {}
                 return {
-                  type: lB.Element,
-                  tagName: WB,
-                  attributes: VB,
+                  type: lW.Element,
+                  tagName: sW,
+                  attributes: KW,
                   childNodes: [],
-                  isSVG: (mB = BB, Boolean("svg" === mB.tagName || mB.ownerSVGElement) || void 0),
-                  needBlock: RB,
-                  rootId: NB,
-                  isCustom: UB
+                  isSVG: (uW = WW, Boolean("svg" === uW.tagName || uW.ownerSVGElement) || void 0),
+                  needBlock: kW,
+                  rootId: UW,
+                  isCustom: yW
                 };
-                var mB
-              }(BB, {
-                doc: GB,
-                blockClass: DB,
-                blockSelector: QB,
-                inlineStylesheet: jB,
-                maskInputOptions: yB,
-                maskInputFn: MB,
-                maskAllElementAttributes: PB,
-                maskAttributeFn: zB,
-                dataURLOptions: pB,
-                inlineImages: qB,
-                recordCanvas: ZB,
-                canvasMaskingConfigured: NB,
-                keepIframeSrcFn: RB,
-                newlyAddedElement: WB,
-                rootId: AB
+                var uW
+              }(WW, {
+                doc: OW,
+                blockClass: EW,
+                blockSelector: NW,
+                inlineStylesheet: LW,
+                maskInputOptions: cW,
+                maskInputFn: tW,
+                maskAllElementAttributes: ZW,
+                maskAttributeFn: xW,
+                dataURLOptions: AW,
+                inlineImages: bW,
+                recordCanvas: jW,
+                canvasMaskingConfigured: UW,
+                keepIframeSrcFn: kW,
+                newlyAddedElement: sW,
+                rootId: MW
               });
-            case BB.TEXT_NODE:
-              return function(BB, OB) {
+            case WW.TEXT_NODE:
+              return function(WW, iW) {
                 const {
-                  needsMask: GB,
-                  maskTextFn: YB,
-                  rootId: DB
-                } = OB, QB = dB.parentNode(BB), oB = QB && QB.tagName;
-                let jB = dB.textContent(BB);
-                const yB = "STYLE" === oB || void 0,
-                  JB = "SCRIPT" === oB || void 0;
-                if (yB && jB) {
+                  needsMask: OW,
+                  maskTextFn: mW,
+                  rootId: EW
+                } = iW, NW = hW.parentNode(WW), PW = NW && NW.tagName;
+                let LW = hW.textContent(WW);
+                const cW = "STYLE" === PW || void 0,
+                  wW = "SCRIPT" === PW || void 0;
+                if (cW && LW) {
                   try {
-                    var MB;
-                    if (BB.nextSibling || BB.previousSibling);
-                    else if (tB(QB.sheet));
-                    else if (null === (MB = QB.sheet) || void 0 === MB ? void 0 : MB.cssRules) {
-                      const BB = PO(QB.sheet);
-                      BB && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(BB) && (jB = BB)
+                    var tW;
+                    if (WW.nextSibling || WW.previousSibling);
+                    else if (QW(NW.sheet));
+                    else if (null === (tW = NW.sheet) || void 0 === tW ? void 0 : tW.cssRules) {
+                      const WW = Zi(NW.sheet);
+                      WW && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(WW) && (LW = WW)
                     }
-                  } catch (OB) {
-                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${OB}`, BB)
+                  } catch (iW) {
+                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${iW}`, WW)
                   }
-                  jB = uO(jB, hO(OB.doc))
+                  LW = ui(LW, qi(iW.doc))
                 }
-                return JB && (jB = "SCRIPT_PLACEHOLDER"), !yB && !JB && jB && GB && (jB = YB ? YB(jB, dB.parentElement(BB)) : jB.replace(/[\S]/g, "*")), {
-                  type: lB.Text,
-                  textContent: jB || "",
-                  isStyle: yB,
-                  rootId: DB
+                return wW && (LW = "SCRIPT_PLACEHOLDER"), !cW && !wW && LW && OW && (LW = mW ? mW(LW, hW.parentElement(WW)) : LW.replace(/[\S]/g, "*")), {
+                  type: lW.Text,
+                  textContent: LW || "",
+                  isStyle: cW,
+                  rootId: EW
                 }
-              }(BB, {
-                doc: GB,
-                needsMask: oB,
-                maskTextFn: JB,
-                rootId: AB
+              }(WW, {
+                doc: OW,
+                needsMask: PW,
+                maskTextFn: wW,
+                rootId: MW
               });
-            case BB.CDATA_SECTION_NODE:
+            case WW.CDATA_SECTION_NODE:
               return {
-                type: lB.CDATA, textContent: "", rootId: AB
+                type: lW.CDATA, textContent: "", rootId: MW
               };
-            case BB.COMMENT_NODE:
+            case WW.COMMENT_NODE:
               return {
-                type: lB.Comment, textContent: dB.textContent(BB) || "", rootId: AB
+                type: lW.Comment, textContent: hW.textContent(WW) || "", rootId: MW
               };
             default:
               return !1
           }
-        }(BB, {
-          doc: GB,
-          mirror: YB,
-          blockClass: DB,
-          blockSelector: QB,
-          needsMask: FB,
-          inlineStylesheet: JB,
-          maskInputOptions: MB,
-          maskTextFn: PB,
-          maskInputFn: zB,
-          maskAllElementAttributes: pB,
-          maskAttributeFn: qB,
-          dataURLOptions: NB,
-          inlineImages: RB,
-          recordCanvas: WB,
-          canvasMaskingConfigured: AB,
-          keepIframeSrcFn: KB,
-          newlyAddedElement: uB
+        }(WW, {
+          doc: OW,
+          mirror: mW,
+          blockClass: EW,
+          blockSelector: NW,
+          needsMask: dW,
+          inlineStylesheet: wW,
+          maskInputOptions: tW,
+          maskTextFn: ZW,
+          maskInputFn: xW,
+          maskAllElementAttributes: AW,
+          maskAttributeFn: bW,
+          dataURLOptions: UW,
+          inlineImages: kW,
+          recordCanvas: sW,
+          canvasMaskingConfigured: MW,
+          keepIframeSrcFn: HW,
+          newlyAddedElement: nW
         });
-        if (!gB) return console.warn(BB, "not serialized"), null;
-        let rB;
-        rB = YB.hasNode(BB) ? YB.getId(BB) : function(BB, OB) {
-          if (OB.comment && BB.type === lB.Comment) return !0;
-          if (BB.type === lB.Element) {
-            if (OB.script && ("script" === BB.tagName || "link" === BB.tagName && ("preload" === BB.attributes.rel && "script" === BB.attributes.as || "modulepreload" === BB.attributes.rel) || "link" === BB.tagName && "prefetch" === BB.attributes.rel && "string" == typeof BB.attributes.href && "js" === function(BB) {
-                var OB;
-                let GB;
+        if (!gW) return console.warn(WW, "not serialized"), null;
+        let DW;
+        DW = mW.hasNode(WW) ? mW.getId(WW) : function(WW, iW) {
+          if (iW.comment && WW.type === lW.Comment) return !0;
+          if (WW.type === lW.Element) {
+            if (iW.script && ("script" === WW.tagName || "link" === WW.tagName && ("preload" === WW.attributes.rel && "script" === WW.attributes.as || "modulepreload" === WW.attributes.rel) || "link" === WW.tagName && "prefetch" === WW.attributes.rel && "string" == typeof WW.attributes.href && "js" === function(WW) {
+                var iW;
+                let OW;
                 try {
-                  GB = new URL(BB, window.location.href)
-                } catch (BB) {
+                  OW = new URL(WW, window.location.href)
+                } catch (WW) {
                   return null
                 }
-                const YB = GB.pathname.match(/\.([0-9a-z]+)(?:$)/i);
-                return null !== (OB = null == YB ? void 0 : YB[1]) && void 0 !== OB ? OB : null
-              }(BB.attributes.href))) return !0;
-            if (OB.headFavicon && ("link" === BB.tagName && "shortcut icon" === BB.attributes.rel || "meta" === BB.tagName && (tO(BB.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === tO(BB.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(tO(BB.attributes.rel))))) return !0;
-            if ("meta" === BB.tagName) {
-              if (OB.headMetaDescKeywords && tO(BB.attributes.name).match(/^description|keywords$/)) return !0;
-              if (OB.headMetaSocial && (tO(BB.attributes.property).match(/^(og|twitter|fb):/) || tO(BB.attributes.name).match(/^(og|twitter):/) || "pinterest" === tO(BB.attributes.name))) return !0;
-              if (OB.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(tO(BB.attributes.name))) return !0;
-              if (OB.headMetaHttpEquiv && void 0 !== BB.attributes["http-equiv"]) return !0;
-              if (OB.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(tO(BB.attributes.name)) || tO(BB.attributes.property).match(/^article:/) || tO(BB.attributes.property).match(/^product:/))) return !0;
-              if (OB.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(tO(BB.attributes.name))) return !0
+                const mW = OW.pathname.match(/\.([0-9a-z]+)(?:$)/i);
+                return null !== (iW = null == mW ? void 0 : mW[1]) && void 0 !== iW ? iW : null
+              }(WW.attributes.href))) return !0;
+            if (iW.headFavicon && ("link" === WW.tagName && "shortcut icon" === WW.attributes.rel || "meta" === WW.tagName && (iO(WW.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === iO(WW.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(iO(WW.attributes.rel))))) return !0;
+            if ("meta" === WW.tagName) {
+              if (iW.headMetaDescKeywords && iO(WW.attributes.name).match(/^description|keywords$/)) return !0;
+              if (iW.headMetaSocial && (iO(WW.attributes.property).match(/^(og|twitter|fb):/) || iO(WW.attributes.name).match(/^(og|twitter):/) || "pinterest" === iO(WW.attributes.name))) return !0;
+              if (iW.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(iO(WW.attributes.name))) return !0;
+              if (iW.headMetaHttpEquiv && void 0 !== WW.attributes["http-equiv"]) return !0;
+              if (iW.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(iO(WW.attributes.name)) || iO(WW.attributes.property).match(/^article:/) || iO(WW.attributes.property).match(/^product:/))) return !0;
+              if (iW.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(iO(WW.attributes.name))) return !0
             }
           }
           return !1
-        }(gB, ZB) || !iB && gB.type === lB.Text && !gB.isStyle && !gB.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : gO();
-        const wB = Object.assign(gB, {
-          id: rB
+        }(gW, jW) || !eW && gW.type === lW.Text && !gW.isStyle && !gW.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : Di();
+        const pW = Object.assign(gW, {
+          id: DW
         });
-        if (YB.add(BB, wB), -2 === rB) return null;
-        VB && VB(BB);
-        let EB = !yB;
-        if (wB.type === lB.Element) {
-          EB = EB && !wB.needBlock, delete wB.needBlock;
-          const OB = dB.shadowRoot(BB);
-          OB && jO(OB) && (wB.isShadowHost = !0)
+        if (mW.add(WW, pW), -2 === DW) return null;
+        KW && KW(WW);
+        let fW = !cW;
+        if (pW.type === lW.Element) {
+          fW = fW && !pW.needBlock, delete pW.needBlock;
+          const iW = hW.shadowRoot(WW);
+          iW && Li(iW) && (pW.isShadowHost = !0)
         }
-        if ((wB.type === lB.Document || wB.type === lB.Element) && EB) {
-          ZB.headWhitespace && wB.type === lB.Element && "head" === wB.tagName && (iB = !1);
-          const OB = {
-            doc: GB,
-            mirror: YB,
-            blockClass: DB,
-            blockSelector: QB,
-            needsMask: FB,
-            maskTextClass: oB,
-            maskTextSelector: jB,
-            skipChild: yB,
-            inlineStylesheet: JB,
-            maskInputOptions: MB,
-            maskTextFn: PB,
-            maskInputFn: zB,
-            maskAllElementAttributes: pB,
-            maskAttributeFn: qB,
-            slimDOMOptions: ZB,
-            dataURLOptions: NB,
-            inlineImages: RB,
-            recordCanvas: WB,
-            canvasMaskingConfigured: AB,
-            preserveWhiteSpace: iB,
-            onSerialize: VB,
-            onIframeLoad: SB,
-            iframeLoadTimeout: nB,
-            onIframeListenerRegistered: UB,
-            onStylesheetLoad: fB,
-            stylesheetLoadTimeout: kB,
-            keepIframeSrcFn: KB,
-            depth: mB + 1,
-            maxDepth: IB
+        if ((pW.type === lW.Document || pW.type === lW.Element) && fW) {
+          jW.headWhitespace && pW.type === lW.Element && "head" === pW.tagName && (eW = !1);
+          const iW = {
+            doc: OW,
+            mirror: mW,
+            blockClass: EW,
+            blockSelector: NW,
+            needsMask: dW,
+            maskTextClass: PW,
+            maskTextSelector: LW,
+            skipChild: cW,
+            inlineStylesheet: wW,
+            maskInputOptions: tW,
+            maskTextFn: ZW,
+            maskInputFn: xW,
+            maskAllElementAttributes: AW,
+            maskAttributeFn: bW,
+            slimDOMOptions: jW,
+            dataURLOptions: UW,
+            inlineImages: kW,
+            recordCanvas: sW,
+            canvasMaskingConfigured: MW,
+            preserveWhiteSpace: eW,
+            onSerialize: KW,
+            onIframeLoad: SW,
+            iframeLoadTimeout: YW,
+            onIframeListenerRegistered: yW,
+            onStylesheetLoad: TW,
+            stylesheetLoadTimeout: JW,
+            keepIframeSrcFn: HW,
+            depth: uW + 1,
+            maxDepth: oW
           };
-          if (wB.type === lB.Element && "textarea" === wB.tagName && void 0 !== wB.attributes.value);
+          if (pW.type === lW.Element && "textarea" === pW.tagName && void 0 !== pW.attributes.value);
           else
-            for (const GB of Array.from(dB.childNodes(BB))) {
-              const BB = GG(GB, OB);
-              BB && wB.childNodes.push(BB)
+            for (const OW of Array.from(hW.childNodes(WW))) {
+              const WW = EO(OW, iW);
+              WW && pW.childNodes.push(WW)
             }
-          let uB = null;
-          if (QO(BB) && (uB = dB.shadowRoot(BB)))
-            for (const BB of Array.from(dB.childNodes(uB))) {
-              const GB = GG(BB, OB);
-              GB && (jO(uB) && (GB.isShadow = !0), wB.childNodes.push(GB))
+          let nW = null;
+          if (Ni(WW) && (nW = hW.shadowRoot(WW)))
+            for (const WW of Array.from(hW.childNodes(nW))) {
+              const OW = EO(WW, iW);
+              OW && (Li(nW) && (OW.isShadow = !0), pW.childNodes.push(OW))
             }
         }
-        const aB = dB.parentNode(BB);
-        if (aB && oO(aB) && jO(aB) && (wB.isShadow = !0), wB.type === lB.Element && "iframe" === wB.tagName) {
-          const OB = function(BB, OB, GB) {
-            const YB = () => {},
-              DB = BB.contentWindow;
-            if (!DB) return YB;
-            let QB;
+        const BW = hW.parentNode(WW);
+        if (BW && Pi(BW) && Li(BW) && (pW.isShadow = !0), pW.type === lW.Element && "iframe" === pW.tagName) {
+          const iW = function(WW, iW, OW) {
+            const mW = () => {},
+              EW = WW.contentWindow;
+            if (!EW) return mW;
+            let NW;
             try {
-              QB = DB.document.readyState
-            } catch (BB) {
-              return YB
+              NW = EW.document.readyState
+            } catch (WW) {
+              return mW
             }
-            const oB = () => OB();
-            if ("complete" !== QB) {
-              let YB = !1,
-                DB = null;
-              const QB = () => {
-                  YB || (YB = !0, null !== DB && (clearTimeout(DB), DB = null), vO(BB, "load", jB), BB.addEventListener("load", oB), OB())
+            const PW = () => iW();
+            if ("complete" !== NW) {
+              let mW = !1,
+                EW = null;
+              const NW = () => {
+                  mW || (mW = !0, null !== EW && (clearTimeout(EW), EW = null), Fi(WW, "load", LW), WW.addEventListener("load", PW), iW())
                 },
-                jB = () => QB();
-              return DB = setTimeout(QB, GB), BB.addEventListener("load", jB), () => {
-                null !== DB && (clearTimeout(DB), DB = null), YB ? vO(BB, "load", oB) : (YB = !0, vO(BB, "load", jB))
+                LW = () => NW();
+              return EW = setTimeout(NW, OW), WW.addEventListener("load", LW), () => {
+                null !== EW && (clearTimeout(EW), EW = null), mW ? Fi(WW, "load", PW) : (mW = !0, Fi(WW, "load", LW))
               }
             }
-            const jB = "about:blank";
-            let yB;
+            const LW = "about:blank";
+            let cW;
             try {
-              yB = DB.location.href
-            } catch (BB) {
-              return YB
+              cW = EW.location.href
+            } catch (WW) {
+              return mW
             }
-            if (yB !== jB || BB.src === jB || "" === BB.src) {
-              const GB = setTimeout(OB, 0);
-              return BB.addEventListener("load", oB), () => {
-                clearTimeout(GB), vO(BB, "load", oB)
+            if (cW !== LW || WW.src === LW || "" === WW.src) {
+              const OW = setTimeout(iW, 0);
+              return WW.addEventListener("load", PW), () => {
+                clearTimeout(OW), Fi(WW, "load", PW)
               }
             }
-            return BB.addEventListener("load", oB), () => {
-              vO(BB, "load", oB)
+            return WW.addEventListener("load", PW), () => {
+              Fi(WW, "load", PW)
             }
-          }(BB, (() => {
-            const OB = BB.contentDocument;
-            if (OB && SB) {
-              const GB = GG(OB, {
-                doc: OB,
-                mirror: YB,
-                blockClass: DB,
-                blockSelector: QB,
-                needsMask: FB,
-                maskTextClass: oB,
-                maskTextSelector: jB,
+          }(WW, (() => {
+            const iW = WW.contentDocument;
+            if (iW && SW) {
+              const OW = EO(iW, {
+                doc: iW,
+                mirror: mW,
+                blockClass: EW,
+                blockSelector: NW,
+                needsMask: dW,
+                maskTextClass: PW,
+                maskTextSelector: LW,
                 skipChild: !1,
-                inlineStylesheet: JB,
-                maskInputOptions: MB,
-                maskTextFn: PB,
-                maskInputFn: zB,
-                maskAllElementAttributes: pB,
-                maskAttributeFn: qB,
-                slimDOMOptions: ZB,
-                dataURLOptions: NB,
-                inlineImages: RB,
-                recordCanvas: WB,
-                canvasMaskingConfigured: AB,
-                preserveWhiteSpace: iB,
-                onSerialize: VB,
-                onIframeLoad: SB,
-                iframeLoadTimeout: nB,
-                onIframeListenerRegistered: UB,
-                onStylesheetLoad: fB,
-                stylesheetLoadTimeout: kB,
-                keepIframeSrcFn: KB,
-                depth: mB + 1,
-                maxDepth: IB
+                inlineStylesheet: wW,
+                maskInputOptions: tW,
+                maskTextFn: ZW,
+                maskInputFn: xW,
+                maskAllElementAttributes: AW,
+                maskAttributeFn: bW,
+                slimDOMOptions: jW,
+                dataURLOptions: UW,
+                inlineImages: kW,
+                recordCanvas: sW,
+                canvasMaskingConfigured: MW,
+                preserveWhiteSpace: eW,
+                onSerialize: KW,
+                onIframeLoad: SW,
+                iframeLoadTimeout: YW,
+                onIframeListenerRegistered: yW,
+                onStylesheetLoad: TW,
+                stylesheetLoadTimeout: JW,
+                keepIframeSrcFn: HW,
+                depth: uW + 1,
+                maxDepth: oW
               });
-              GB && SB(BB, GB)
+              OW && SW(WW, OW)
             }
-          }), nB);
-          null == UB || UB(BB, OB)
+          }), YW);
+          null == yW || yW(WW, iW)
         }
-        return wB.type === lB.Element && "link" === wB.tagName && bO(wB.attributes.rel) && function(OB, yB, lB) {
-          if (sO.has(OB)) return;
-          let UB;
+        return pW.type === lW.Element && "link" === pW.tagName && ai(pW.attributes.rel) && function(iW, cW, lW) {
+          if (Qi.has(iW)) return;
+          let yW;
           try {
-            UB = OB.sheet
-          } catch (BB) {
+            yW = iW.sheet
+          } catch (WW) {
             return
           }
-          if (UB) return;
-          const dB = new AbortController;
-          let uB = !1;
-          const LB = () => {
-              if (!uB) {
-                uB = !0;
+          if (yW) return;
+          const hW = new AbortController;
+          let nW = !1;
+          const vW = () => {
+              if (!nW) {
+                nW = !0;
                 try {
                   (() => {
-                    if (fB) {
-                      const OB = GG(BB, {
-                        doc: GB,
-                        mirror: YB,
-                        blockClass: DB,
-                        blockSelector: QB,
-                        needsMask: FB,
-                        maskTextClass: oB,
-                        maskTextSelector: jB,
+                    if (TW) {
+                      const iW = EO(WW, {
+                        doc: OW,
+                        mirror: mW,
+                        blockClass: EW,
+                        blockSelector: NW,
+                        needsMask: dW,
+                        maskTextClass: PW,
+                        maskTextSelector: LW,
                         skipChild: !1,
-                        inlineStylesheet: JB,
-                        maskInputOptions: MB,
-                        maskTextFn: PB,
-                        maskInputFn: zB,
-                        maskAllElementAttributes: pB,
-                        maskAttributeFn: qB,
-                        slimDOMOptions: ZB,
-                        dataURLOptions: NB,
-                        inlineImages: RB,
-                        recordCanvas: WB,
-                        canvasMaskingConfigured: AB,
-                        preserveWhiteSpace: iB,
-                        onSerialize: VB,
-                        onIframeLoad: SB,
-                        iframeLoadTimeout: nB,
-                        onStylesheetLoad: fB,
-                        stylesheetLoadTimeout: kB,
-                        keepIframeSrcFn: KB,
-                        depth: mB,
-                        maxDepth: IB
+                        inlineStylesheet: wW,
+                        maskInputOptions: tW,
+                        maskTextFn: ZW,
+                        maskInputFn: xW,
+                        maskAllElementAttributes: AW,
+                        maskAttributeFn: bW,
+                        slimDOMOptions: jW,
+                        dataURLOptions: UW,
+                        inlineImages: kW,
+                        recordCanvas: sW,
+                        canvasMaskingConfigured: MW,
+                        preserveWhiteSpace: eW,
+                        onSerialize: KW,
+                        onIframeLoad: SW,
+                        iframeLoadTimeout: YW,
+                        onStylesheetLoad: TW,
+                        stylesheetLoadTimeout: JW,
+                        keepIframeSrcFn: HW,
+                        depth: uW,
+                        maxDepth: oW
                       });
-                      OB && fB(BB, OB)
+                      iW && TW(WW, iW)
                     }
                   })()
                 } finally {
-                  sO.delete(OB), dB.abort()
+                  Qi.delete(iW), hW.abort()
                 }
               }
             },
-            gB = setTimeout(LB, lB);
-          dB.signal.addEventListener("abort", (() => clearTimeout(gB)), {
+            gW = setTimeout(vW, lW);
+          hW.signal.addEventListener("abort", (() => clearTimeout(gW)), {
             once: !0
-          }), OB.addEventListener("load", LB, {
-            signal: dB.signal,
+          }), iW.addEventListener("load", vW, {
+            signal: hW.signal,
             once: !0
-          }), sO.set(OB, dB)
-        }(BB, 0, kB), wB
+          }), Qi.set(iW, hW)
+        }(WW, 0, JW), pW
       }
 
-      function YG(BB) {
-        return !0 === BB || "all" === BB ? {
+      function NO(WW) {
+        return !0 === WW || "all" === WW ? {
           script: !0,
           comment: !0,
           headFavicon: !0,
@@ -1336,38 +1336,38 @@ export const modules = {
           headMetaRobots: !0,
           headMetaHttpEquiv: !0,
           headMetaVerification: !0,
-          headMetaAuthorship: "all" === BB,
-          headMetaDescKeywords: "all" === BB,
-          headTitleMutations: "all" === BB
-        } : !1 === BB ? {} : BB
+          headMetaAuthorship: "all" === WW,
+          headMetaDescKeywords: "all" === WW,
+          headTitleMutations: "all" === WW
+        } : !1 === WW ? {} : WW
       }
-      var DG = class BB {
+      var PO = class WW {
         constructor() {
-          DO(this, "parentElement", null), DO(this, "parentNode", null), DO(this, "ownerDocument", void 0), DO(this, "firstChild", null), DO(this, "lastChild", null), DO(this, "previousSibling", null), DO(this, "nextSibling", null), DO(this, "ELEMENT_NODE", 1), DO(this, "TEXT_NODE", 3), DO(this, "nodeType", void 0), DO(this, "nodeName", void 0), DO(this, "RRNodeType", void 0)
+          Ei(this, "parentElement", null), Ei(this, "parentNode", null), Ei(this, "ownerDocument", void 0), Ei(this, "firstChild", null), Ei(this, "lastChild", null), Ei(this, "previousSibling", null), Ei(this, "nextSibling", null), Ei(this, "ELEMENT_NODE", 1), Ei(this, "TEXT_NODE", 3), Ei(this, "nodeType", void 0), Ei(this, "nodeName", void 0), Ei(this, "RRNodeType", void 0)
         }
         get childNodes() {
-          const BB = [];
-          let OB = this.firstChild;
-          for (; OB;) BB.push(OB), OB = OB.nextSibling;
-          return BB
+          const WW = [];
+          let iW = this.firstChild;
+          for (; iW;) WW.push(iW), iW = iW.nextSibling;
+          return WW
         }
-        contains(OB) {
-          if (!(OB instanceof BB)) return !1;
-          if (OB.ownerDocument !== this.ownerDocument) return !1;
-          if (OB === this) return !0;
-          for (; OB.parentNode;) {
-            if (OB.parentNode === this) return !0;
-            OB = OB.parentNode
+        contains(iW) {
+          if (!(iW instanceof WW)) return !1;
+          if (iW.ownerDocument !== this.ownerDocument) return !1;
+          if (iW === this) return !0;
+          for (; iW.parentNode;) {
+            if (iW.parentNode === this) return !0;
+            iW = iW.parentNode
           }
           return !1
         }
-        appendChild(BB) {
+        appendChild(WW) {
           throw new Error("RRDomException: Failed to execute 'appendChild' on 'RRNode': This RRNode type does not support this method.")
         }
-        insertBefore(BB, OB) {
+        insertBefore(WW, iW) {
           throw new Error("RRDomException: Failed to execute 'insertBefore' on 'RRNode': This RRNode type does not support this method.")
         }
-        removeChild(BB) {
+        removeChild(WW) {
           throw new Error("RRDomException: Failed to execute 'removeChild' on 'RRNode': This RRNode type does not support this method.")
         }
         toString() {
@@ -1375,194 +1375,194 @@ export const modules = {
         }
       };
 
-      function QG(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
-        const YB = {
+      function LO(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
+        const mW = {
           capture: !0,
           passive: !0
         };
-        return GB.addEventListener(BB, OB, YB), () => oG(GB, BB, OB, YB)
+        return OW.addEventListener(WW, iW, mW), () => cO(OW, WW, iW, mW)
       }
 
-      function oG(BB, OB, GB, YB) {
-        jG((() => {
-          const DB = BB.removeEventListener;
-          "function" == typeof DB && (void 0 !== YB ? DB.call(BB, OB, GB, YB) : DB.call(BB, OB, GB))
+      function cO(WW, iW, OW, mW) {
+        wO((() => {
+          const EW = WW.removeEventListener;
+          "function" == typeof EW && (void 0 !== mW ? EW.call(WW, iW, OW, mW) : EW.call(WW, iW, OW))
         }))
       }
 
-      function jG(BB) {
+      function wO(WW) {
         try {
-          BB()
-        } catch (BB) {
-          if (!(BB instanceof DOMException && "SecurityError" === BB.name)) throw BB
+          WW()
+        } catch (WW) {
+          if (!(WW instanceof DOMException && "SecurityError" === WW.name)) throw WW
         }
       }
 
-      function yG(BB) {
-        BB.forEach((BB => {
-          if ("function" == typeof BB) try {
-            BB()
-          } catch (BB) {}
+      function tO(WW) {
+        WW.forEach((WW => {
+          if ("function" == typeof WW) try {
+            WW()
+          } catch (WW) {}
         }))
       }
-      var JG = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
-        MG = {
+      var ZO = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
+        xO = {
           map: {},
-          getId: () => (console.warn(JG), -1),
-          yDB: () => (console.warn(JG), null),
+          getId: () => (console.warn(ZO), -1),
+          AmW: () => (console.warn(ZO), null),
           removeNodeFromMap() {
-            console.warn(JG)
+            console.warn(ZO)
           },
-          has: () => (console.warn(JG), !1),
+          has: () => (console.warn(ZO), !1),
           reset() {
-            console.warn(JG)
+            console.warn(ZO)
           }
         };
 
-      function PG(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-          YB = null,
-          DB = 0;
+      function lO(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+          mW = null,
+          EW = 0;
         return function() {
-          for (var QB = arguments.length, oB = new Array(QB), jB = 0; jB < QB; jB++) oB[jB] = arguments[jB];
-          const yB = Date.now();
-          DB || !1 !== GB.leading || (DB = yB);
-          const JB = OB - (yB - DB),
-            MB = this;
-          0 >= JB || JB > OB ? (YB && (clearTimeout(YB), YB = null), DB = yB, BB.apply(MB, oB)) : YB || !1 === GB.trailing || (YB = setTimeout((() => {
-            DB = !1 === GB.leading ? 0 : Date.now(), YB = null, BB.apply(MB, oB)
-          }), JB))
+          for (var NW = arguments.length, PW = new Array(NW), LW = 0; LW < NW; LW++) PW[LW] = arguments[LW];
+          const cW = Date.now();
+          EW || !1 !== OW.leading || (EW = cW);
+          const wW = iW - (cW - EW),
+            tW = this;
+          0 >= wW || wW > iW ? (mW && (clearTimeout(mW), mW = null), EW = cW, WW.apply(tW, PW)) : mW || !1 === OW.trailing || (mW = setTimeout((() => {
+            EW = !1 === OW.leading ? 0 : Date.now(), mW = null, WW.apply(tW, PW)
+          }), wW))
         }
       }
 
-      function zG(BB, OB, GB, YB) {
-        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
-        const QB = DB.Object.getOwnPropertyDescriptor(BB, OB),
-          oB = () => zG(BB, OB, QB || {}, !0);
-        if (YB) return DB.Object.defineProperty(BB, OB, GB), oB;
-        const jB = function(BB) {
-          let OB = "function" == typeof BB.setTimeout ? BB.setTimeout : void 0;
+      function AO(WW, iW, OW, mW) {
+        let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
+        const NW = EW.Object.getOwnPropertyDescriptor(WW, iW),
+          PW = () => AO(WW, iW, NW || {}, !0);
+        if (mW) return EW.Object.defineProperty(WW, iW, OW), PW;
+        const LW = function(WW) {
+          let iW = "function" == typeof WW.setTimeout ? WW.setTimeout : void 0;
           try {
-            var GB, YB;
-            const DB = null === (GB = BB.Zone) || void 0 === GB || null === (YB = GB.__symbol__) || void 0 === YB ? void 0 : YB.call(GB, "setTimeout"),
-              QB = DB ? BB[DB] : void 0;
-            "function" == typeof QB && (OB = QB)
-          } catch (BB) {}
-          if (!OB) return () => {};
-          const DB = OB;
-          return OB => {
+            var OW, mW;
+            const EW = null === (OW = WW.Zone) || void 0 === OW || null === (mW = OW.__symbol__) || void 0 === mW ? void 0 : mW.call(OW, "setTimeout"),
+              NW = EW ? WW[EW] : void 0;
+            "function" == typeof NW && (iW = NW)
+          } catch (WW) {}
+          if (!iW) return () => {};
+          const EW = iW;
+          return iW => {
             try {
-              DB.call(BB, OB, 0)
-            } catch (BB) {}
+              EW.call(WW, iW, 0)
+            } catch (WW) {}
           }
-        }(DB);
-        return DB.Object.defineProperty(BB, OB, {
-          set(BB) {
-            if (jB((() => {
+        }(EW);
+        return EW.Object.defineProperty(WW, iW, {
+          set(WW) {
+            if (LW((() => {
                 try {
-                  GB.set.call(this, BB)
-                } catch (BB) {}
-              })), QB && QB.set) {
-              if (QB.get) try {
-                QB.get.call(this)
-              } catch (BB) {
+                  OW.set.call(this, WW)
+                } catch (WW) {}
+              })), NW && NW.set) {
+              if (NW.get) try {
+                NW.get.call(this)
+              } catch (WW) {
                 return
               }
-              QB.set.call(this, BB)
+              NW.set.call(this, WW)
             }
           }
-        }), oB
+        }), PW
       }
-      "undefined" != typeof window && window.Proxy && window.Reflect && (MG = new Proxy(MG, {
-        get: (BB, OB, GB) => ("map" === OB && console.warn(JG), Reflect.get(BB, OB, GB))
+      "undefined" != typeof window && window.Proxy && window.Reflect && (xO = new Proxy(xO, {
+        get: (WW, iW, OW) => ("map" === iW && console.warn(ZO), Reflect.get(WW, iW, OW))
       }));
-      var lG = Date.now;
+      var bO = Date.now;
 
-      function pG(BB) {
-        var OB, GB, YB, DB;
-        const QB = BB.document;
+      function jO(WW) {
+        var iW, OW, mW, EW;
+        const NW = WW.document;
         return {
-          left: QB.scrollingElement ? QB.scrollingElement.scrollLeft : void 0 !== BB.pageXOffset ? BB.pageXOffset : QB.documentElement.scrollLeft || (null == QB ? void 0 : QB.body) && (null === (OB = dB.parentElement(QB.body)) || void 0 === OB ? void 0 : OB.scrollLeft) || (null == QB || null === (GB = QB.body) || void 0 === GB ? void 0 : GB.scrollLeft) || 0,
-          top: QB.scrollingElement ? QB.scrollingElement.scrollTop : void 0 !== BB.pageYOffset ? BB.pageYOffset : (null == QB ? void 0 : QB.documentElement.scrollTop) || (null == QB ? void 0 : QB.body) && (null === (YB = dB.parentElement(QB.body)) || void 0 === YB ? void 0 : YB.scrollTop) || (null == QB || null === (DB = QB.body) || void 0 === DB ? void 0 : DB.scrollTop) || 0
+          left: NW.scrollingElement ? NW.scrollingElement.scrollLeft : void 0 !== WW.pageXOffset ? WW.pageXOffset : NW.documentElement.scrollLeft || (null == NW ? void 0 : NW.body) && (null === (iW = hW.parentElement(NW.body)) || void 0 === iW ? void 0 : iW.scrollLeft) || (null == NW || null === (OW = NW.body) || void 0 === OW ? void 0 : OW.scrollLeft) || 0,
+          top: NW.scrollingElement ? NW.scrollingElement.scrollTop : void 0 !== WW.pageYOffset ? WW.pageYOffset : (null == NW ? void 0 : NW.documentElement.scrollTop) || (null == NW ? void 0 : NW.body) && (null === (mW = hW.parentElement(NW.body)) || void 0 === mW ? void 0 : mW.scrollTop) || (null == NW || null === (EW = NW.body) || void 0 === EW ? void 0 : EW.scrollTop) || 0
         }
       }
 
-      function qG() {
+      function UO() {
         return window.innerHeight || document.documentElement && document.documentElement.clientHeight || document.body && document.body.clientHeight
       }
 
-      function ZG() {
+      function kO() {
         return window.innerWidth || document.documentElement && document.documentElement.clientWidth || document.body && document.body.clientWidth
       }
 
-      function NG(BB) {
-        return BB ? BB.nodeType === BB.ELEMENT_NODE ? BB : dB.parentElement(BB) : null
+      function sO(WW) {
+        return WW ? WW.nodeType === WW.ELEMENT_NODE ? WW : hW.parentElement(WW) : null
       }
 
-      function RG(BB, OB, GB, YB) {
-        if (!BB) return !1;
-        const DB = NG(BB);
-        if (!DB) return !1;
+      function MO(WW, iW, OW, mW) {
+        if (!WW) return !1;
+        const EW = sO(WW);
+        if (!EW) return !1;
         try {
-          if ("string" == typeof OB) {
-            if (DB.classList.contains(OB)) return !0;
-            if (YB && null !== DB.closest("." + OB)) return !0
-          } else if (CO(DB, OB, YB)) return !0
-        } catch (BB) {}
-        if (GB) {
-          if (DB.matches(GB)) return !0;
-          if (YB && null !== DB.closest(GB)) return !0
+          if ("string" == typeof iW) {
+            if (EW.classList.contains(iW)) return !0;
+            if (mW && null !== EW.closest("." + iW)) return !0
+          } else if (ri(EW, iW, mW)) return !0
+        } catch (WW) {}
+        if (OW) {
+          if (EW.matches(OW)) return !0;
+          if (mW && null !== EW.closest(OW)) return !0
         }
         return !1
       }
 
-      function WG(BB, OB, GB) {
-        return !("TITLE" !== BB.tagName || !GB.headTitleMutations) || -2 === OB.getId(BB)
+      function KO(WW, iW, OW) {
+        return !("TITLE" !== WW.tagName || !OW.headTitleMutations) || -2 === iW.getId(WW)
       }
 
-      function AG(BB, OB) {
-        if (oO(BB)) return !1;
-        const GB = OB.getId(BB);
-        if (!OB.has(GB)) return !0;
-        const YB = dB.parentNode(BB);
-        return (!YB || YB.nodeType !== BB.DOCUMENT_NODE) && (!YB || AG(YB, OB))
+      function SO(WW, iW) {
+        if (Pi(WW)) return !1;
+        const OW = iW.getId(WW);
+        if (!iW.has(OW)) return !0;
+        const mW = hW.parentNode(WW);
+        return (!mW || mW.nodeType !== WW.DOCUMENT_NODE) && (!mW || SO(mW, iW))
       }
 
-      function VG(BB) {
-        return Boolean(BB.changedTouches)
+      function YO(WW) {
+        return Boolean(WW.changedTouches)
       }
 
-      function SG(BB, OB) {
-        return Boolean("IFRAME" === BB.nodeName && OB.getMeta(BB))
+      function yO(WW, iW) {
+        return Boolean("IFRAME" === WW.nodeName && iW.getMeta(WW))
       }
 
-      function nG(BB, OB) {
-        return Boolean("LINK" === BB.nodeName && BB.nodeType === BB.ELEMENT_NODE && BB.getAttribute && "stylesheet" === BB.getAttribute("rel") && OB.getMeta(BB))
+      function TO(WW, iW) {
+        return Boolean("LINK" === WW.nodeName && WW.nodeType === WW.ELEMENT_NODE && WW.getAttribute && "stylesheet" === WW.getAttribute("rel") && iW.getMeta(WW))
       }
 
-      function UG(BB) {
-        return !!BB && (BB instanceof DG && "shadowRoot" in BB ? Boolean(BB.shadowRoot) : Boolean(dB.shadowRoot(BB)))
+      function JO(WW) {
+        return !!WW && (WW instanceof PO && "shadowRoot" in WW ? Boolean(WW.shadowRoot) : Boolean(hW.shadowRoot(WW)))
       }
-      /[1-9][0-9]{12}/.test(Date.now().toString()) || (lG = () => (new Date).getTime());
-      var fG = class {
+      /[1-9][0-9]{12}/.test(Date.now().toString()) || (bO = () => (new Date).getTime());
+      var hO = class {
         constructor() {
-          DO(this, "id", 1), DO(this, "styleIDMap", new WeakMap), DO(this, "idStyleMap", new Map)
+          Ei(this, "id", 1), Ei(this, "styleIDMap", new WeakMap), Ei(this, "idStyleMap", new Map)
         }
-        getId(BB) {
-          var OB;
-          return null !== (OB = this.styleIDMap.get(BB)) && void 0 !== OB ? OB : -1
+        getId(WW) {
+          var iW;
+          return null !== (iW = this.styleIDMap.get(WW)) && void 0 !== iW ? iW : -1
         }
-        has(BB) {
-          return this.styleIDMap.has(BB)
+        has(WW) {
+          return this.styleIDMap.has(WW)
         }
-        add(BB, OB) {
-          if (this.has(BB)) return this.getId(BB);
-          let GB;
-          return GB = void 0 === OB ? this.id++ : OB, this.styleIDMap.set(BB, GB), this.idStyleMap.set(GB, BB), GB
+        add(WW, iW) {
+          if (this.has(WW)) return this.getId(WW);
+          let OW;
+          return OW = void 0 === iW ? this.id++ : iW, this.styleIDMap.set(WW, OW), this.idStyleMap.set(OW, WW), OW
         }
-        getStyle(BB) {
-          return this.idStyleMap.get(BB) || null
+        getStyle(WW) {
+          return this.idStyleMap.get(WW) || null
         }
         reset() {
           this.styleIDMap = new WeakMap, this.idStyleMap = new Map, this.id = 1
@@ -1572,97 +1572,97 @@ export const modules = {
         }
       };
 
-      function kG(BB) {
-        var OB;
-        let GB = null;
-        return "getRootNode" in BB && (null === (OB = dB.getRootNode(BB)) || void 0 === OB ? void 0 : OB.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && dB.host(dB.getRootNode(BB)) && (GB = dB.host(dB.getRootNode(BB))), GB
+      function HO(WW) {
+        var iW;
+        let OW = null;
+        return "getRootNode" in WW && (null === (iW = hW.getRootNode(WW)) || void 0 === iW ? void 0 : iW.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && hW.host(hW.getRootNode(WW)) && (OW = hW.host(hW.getRootNode(WW))), OW
       }
 
-      function dG(BB) {
-        const OB = BB.ownerDocument;
-        if (!OB) return !1;
-        if (dB.contains(OB, BB)) return !0;
-        const GB = dB.isConnected(BB);
-        return "boolean" == typeof GB ? GB : function(BB) {
-          const OB = BB.ownerDocument;
-          if (!OB) return !1;
-          const GB = function(BB) {
-            let OB, GB = BB;
-            for (; OB = kG(GB);) GB = OB;
-            return GB
-          }(BB);
-          return dB.contains(OB, GB)
-        }(BB)
+      function nO(WW) {
+        const iW = WW.ownerDocument;
+        if (!iW) return !1;
+        if (hW.contains(iW, WW)) return !0;
+        const OW = hW.isConnected(WW);
+        return "boolean" == typeof OW ? OW : function(WW) {
+          const iW = WW.ownerDocument;
+          if (!iW) return !1;
+          const OW = function(WW) {
+            let iW, OW = WW;
+            for (; iW = HO(OW);) OW = iW;
+            return OW
+          }(WW);
+          return hW.contains(iW, OW)
+        }(WW)
       }
 
-      function KG(BB) {
-        return "__ln" in BB
+      function uO(WW) {
+        return "__ln" in WW
       }
-      var uG, mG = class {
+      var oO, dO = class {
           constructor() {
-            DO(this, "length", 0), DO(this, "head", null), DO(this, "tail", null)
+            Ei(this, "length", 0), Ei(this, "head", null), Ei(this, "tail", null)
           }
-          get(BB) {
-            if (BB >= this.length) throw new Error("Position outside of list range");
-            let OB = this.head;
-            for (let GB = 0; BB > GB; GB++) OB = (null == OB ? void 0 : OB.next) || null;
-            return OB
+          get(WW) {
+            if (WW >= this.length) throw new Error("Position outside of list range");
+            let iW = this.head;
+            for (let OW = 0; WW > OW; OW++) iW = (null == iW ? void 0 : iW.next) || null;
+            return iW
           }
-          addNode(BB) {
-            const OB = {
-              value: BB,
+          addNode(WW) {
+            const iW = {
+              value: WW,
               previous: null,
               next: null
             };
-            if (BB.__ln = OB, BB.previousSibling && KG(BB.previousSibling)) {
-              const GB = BB.previousSibling.__ln.next;
-              OB.next = GB, OB.previous = BB.previousSibling.__ln, BB.previousSibling.__ln.next = OB, GB && (GB.previous = OB)
-            } else if (BB.nextSibling && KG(BB.nextSibling) && BB.nextSibling.__ln.previous) {
-              const GB = BB.nextSibling.__ln.previous;
-              OB.previous = GB, OB.next = BB.nextSibling.__ln, BB.nextSibling.__ln.previous = OB, GB && (GB.next = OB)
-            } else this.head && (this.head.previous = OB), OB.next = this.head, this.head = OB;
-            null === OB.next && (this.tail = OB), this.length++
+            if (WW.__ln = iW, WW.previousSibling && uO(WW.previousSibling)) {
+              const OW = WW.previousSibling.__ln.next;
+              iW.next = OW, iW.previous = WW.previousSibling.__ln, WW.previousSibling.__ln.next = iW, OW && (OW.previous = iW)
+            } else if (WW.nextSibling && uO(WW.nextSibling) && WW.nextSibling.__ln.previous) {
+              const OW = WW.nextSibling.__ln.previous;
+              iW.previous = OW, iW.next = WW.nextSibling.__ln, WW.nextSibling.__ln.previous = iW, OW && (OW.next = iW)
+            } else this.head && (this.head.previous = iW), iW.next = this.head, this.head = iW;
+            null === iW.next && (this.tail = iW), this.length++
           }
-          removeNode(BB) {
-            const OB = BB.__ln;
-            this.head && (OB.previous ? (OB.previous.next = OB.next, OB.next ? OB.next.previous = OB.previous : this.tail = OB.previous) : (this.head = OB.next, this.head ? this.head.previous = null : this.tail = null), BB.__ln && delete BB.__ln, this.length--)
+          removeNode(WW) {
+            const iW = WW.__ln;
+            this.head && (iW.previous ? (iW.previous.next = iW.next, iW.next ? iW.next.previous = iW.previous : this.tail = iW.previous) : (this.head = iW.next, this.head ? this.head.previous = null : this.tail = null), WW.__ln && delete WW.__ln, this.length--)
           }
         },
-        IG = (BB, OB) => `${BB}@${OB}`,
-        FG = class {
+        eO = (WW, iW) => `${WW}@${iW}`,
+        vO = class {
           constructor() {
-            DO(this, "frozen", !1), DO(this, "locked", !1), DO(this, "texts", []), DO(this, "attributes", []), DO(this, "attributeMap", new WeakMap), DO(this, "generatedAttributes", new WeakMap), DO(this, "removes", []), DO(this, "mapRemoves", new Set), DO(this, "movedMap", {}), DO(this, "addedSet", new Set), DO(this, "movedSet", new Set), DO(this, "droppedSet", new Set), DO(this, "removesSubTreeCache", new Set), DO(this, "mutationCb", void 0), DO(this, "blockClass", void 0), DO(this, "blockSelector", void 0), DO(this, "maskTextClass", void 0), DO(this, "maskTextSelector", void 0), DO(this, "inlineStylesheet", void 0), DO(this, "maskInputOptions", void 0), DO(this, "maskTextFn", void 0), DO(this, "maskInputFn", void 0), DO(this, "maskAllElementAttributes", void 0), DO(this, "maskAttributeFn", void 0), DO(this, "keepIframeSrcFn", void 0), DO(this, "recordCanvas", void 0), DO(this, "canvasMaskingConfigured", void 0), DO(this, "inlineImages", void 0), DO(this, "slimDOMOptions", void 0), DO(this, "dataURLOptions", void 0), DO(this, "doc", void 0), DO(this, "mirror", void 0), DO(this, "iframeManager", void 0), DO(this, "stylesheetManager", void 0), DO(this, "shadowDomManager", void 0), DO(this, "canvasManager", void 0), DO(this, "processedNodeManager", void 0), DO(this, "unattachedDoc", void 0), DO(this, "canvasManagerReleased", !1), DO(this, "processMutations", (BB => {
-              BB.forEach(this.processMutation), this.emit()
-            })), DO(this, "emit", (() => {
+            Ei(this, "frozen", !1), Ei(this, "locked", !1), Ei(this, "texts", []), Ei(this, "attributes", []), Ei(this, "attributeMap", new WeakMap), Ei(this, "generatedAttributes", new WeakMap), Ei(this, "removes", []), Ei(this, "mapRemoves", new Set), Ei(this, "movedMap", {}), Ei(this, "addedSet", new Set), Ei(this, "movedSet", new Set), Ei(this, "droppedSet", new Set), Ei(this, "removesSubTreeCache", new Set), Ei(this, "mutationCb", void 0), Ei(this, "blockClass", void 0), Ei(this, "blockSelector", void 0), Ei(this, "maskTextClass", void 0), Ei(this, "maskTextSelector", void 0), Ei(this, "inlineStylesheet", void 0), Ei(this, "maskInputOptions", void 0), Ei(this, "maskTextFn", void 0), Ei(this, "maskInputFn", void 0), Ei(this, "maskAllElementAttributes", void 0), Ei(this, "maskAttributeFn", void 0), Ei(this, "keepIframeSrcFn", void 0), Ei(this, "recordCanvas", void 0), Ei(this, "canvasMaskingConfigured", void 0), Ei(this, "inlineImages", void 0), Ei(this, "slimDOMOptions", void 0), Ei(this, "dataURLOptions", void 0), Ei(this, "doc", void 0), Ei(this, "mirror", void 0), Ei(this, "iframeManager", void 0), Ei(this, "stylesheetManager", void 0), Ei(this, "shadowDomManager", void 0), Ei(this, "canvasManager", void 0), Ei(this, "processedNodeManager", void 0), Ei(this, "unattachedDoc", void 0), Ei(this, "canvasManagerReleased", !1), Ei(this, "processMutations", (WW => {
+              WW.forEach(this.processMutation), this.emit()
+            })), Ei(this, "emit", (() => {
               if (this.frozen || this.locked) return;
-              const BB = KB(),
-                OB = FB();
+              const WW = HW(),
+                iW = dW();
               try {
                 this.processBufferedMutations()
               } finally {
-                GB = KB() - BB, YB = OB, LB > 0 || iB(GB, null != YB ? YB : uB) || GB > eB.slowestBatchMs && (eB.slowestBatchMs = GB)
+                OW = HW() - WW, mW = iW, vW > 0 || eW(OW, null != mW ? mW : nW) || OW > qW.slowestBatchMs && (qW.slowestBatchMs = OW)
               }
-              var GB, YB
-            })), DO(this, "processBufferedMutations", (() => {
-              const BB = [],
-                OB = new Set,
-                GB = new mG,
-                YB = BB => {
-                  let OB = BB,
-                    GB = -2;
-                  for (; - 2 === GB;) OB = OB && OB.nextSibling, GB = OB && this.mirror.getId(OB);
-                  return GB
+              var OW, mW
+            })), Ei(this, "processBufferedMutations", (() => {
+              const WW = [],
+                iW = new Set,
+                OW = new dO,
+                mW = WW => {
+                  let iW = WW,
+                    OW = -2;
+                  for (; - 2 === OW;) iW = iW && iW.nextSibling, OW = iW && this.mirror.getId(iW);
+                  return OW
                 };
-              let DB;
-              const QB = QB => {
-                var oB;
-                const jB = dB.parentNode(QB);
-                if (!jB || !dG(QB) || "TEXTAREA" === jB.tagName) return;
-                if (this.isBlockedAtEmission(jB)) return;
-                const yB = oO(jB) ? this.mirror.getId(kG(QB)) : this.mirror.getId(jB),
-                  JB = YB(QB);
-                if (-1 === yB || -1 === JB) return GB.addNode(QB);
-                null !== (oB = DB) && void 0 !== oB || (DB = {
+              let EW;
+              const NW = NW => {
+                var PW;
+                const LW = hW.parentNode(NW);
+                if (!LW || !nO(NW) || "TEXTAREA" === LW.tagName) return;
+                if (this.isBlockedAtEmission(LW)) return;
+                const cW = Pi(LW) ? this.mirror.getId(HO(NW)) : this.mirror.getId(LW),
+                  wW = mW(NW);
+                if (-1 === cW || -1 === wW) return OW.addNode(NW);
+                null !== (PW = EW) && void 0 !== PW || (EW = {
                   doc: this.doc,
                   mirror: this.mirror,
                   blockClass: this.blockClass,
@@ -1682,52 +1682,52 @@ export const modules = {
                   recordCanvas: this.recordCanvas,
                   canvasMaskingConfigured: this.canvasMaskingConfigured,
                   inlineImages: this.inlineImages,
-                  onSerialize: BB => {
-                    SG(BB, this.mirror) && this.iframeManager.addIframe(BB), nG(BB, this.mirror) && this.stylesheetManager.trackLinkElement(BB), UG(BB) && !RG(BB, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(dB.shadowRoot(BB), this.doc)
+                  onSerialize: WW => {
+                    yO(WW, this.mirror) && this.iframeManager.addIframe(WW), TO(WW, this.mirror) && this.stylesheetManager.trackLinkElement(WW), JO(WW) && !MO(WW, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(hW.shadowRoot(WW), this.doc)
                   },
-                  onIframeLoad: (BB, OB) => {
-                    this.iframeManager.attachIframe(BB, OB), this.shadowDomManager.observeAttachShadow(BB)
+                  onIframeLoad: (WW, iW) => {
+                    this.iframeManager.attachIframe(WW, iW), this.shadowDomManager.observeAttachShadow(WW)
                   },
-                  onIframeListenerRegistered: (BB, OB) => {
-                    this.iframeManager.registerLoadListenerDisposer(BB, OB)
+                  onIframeListenerRegistered: (WW, iW) => {
+                    this.iframeManager.registerLoadListenerDisposer(WW, iW)
                   },
-                  onStylesheetLoad: (BB, OB) => {
-                    this.stylesheetManager.attachLinkElement(BB, OB)
+                  onStylesheetLoad: (WW, iW) => {
+                    this.stylesheetManager.attachLinkElement(WW, iW)
                   }
                 });
-                const MB = GG(QB, DB);
-                MB && (BB.push({
-                  parentId: yB,
-                  nextId: JB,
-                  node: MB
-                }), OB.add(MB.id))
+                const tW = EO(NW, EW);
+                tW && (WW.push({
+                  parentId: cW,
+                  nextId: wW,
+                  node: tW
+                }), iW.add(tW.id))
               };
-              for (const yB of this.mapRemoves) this.mapRemoves.delete(yB), this.mirror.removeNodeFromMap(yB);
-              for (const yB of this.movedSet) LG(this.removesSubTreeCache, yB) && !this.movedSet.has(dB.parentNode(yB)) || QB(yB);
-              for (const yB of this.addedSet) gG(this.droppedSet, yB) || LG(this.removesSubTreeCache, yB) ? gG(this.movedSet, yB) ? QB(yB) : this.droppedSet.add(yB) : QB(yB);
-              let oB = null;
-              for (; GB.length;) {
-                let BB = null;
-                if (oB) {
-                  const OB = this.mirror.getId(dB.parentNode(oB.value)),
-                    GB = YB(oB.value); - 1 !== OB && -1 !== GB && (BB = oB)
+              for (const cW of this.mapRemoves) this.mapRemoves.delete(cW), this.mirror.removeNodeFromMap(cW);
+              for (const cW of this.movedSet) DO(this.removesSubTreeCache, cW) && !this.movedSet.has(hW.parentNode(cW)) || NW(cW);
+              for (const cW of this.addedSet) VO(this.droppedSet, cW) || DO(this.removesSubTreeCache, cW) ? VO(this.movedSet, cW) ? NW(cW) : this.droppedSet.add(cW) : NW(cW);
+              let PW = null;
+              for (; OW.length;) {
+                let WW = null;
+                if (PW) {
+                  const iW = this.mirror.getId(hW.parentNode(PW.value)),
+                    OW = mW(PW.value); - 1 !== iW && -1 !== OW && (WW = PW)
                 }
-                if (!BB) {
-                  let OB = GB.tail;
-                  for (; OB;) {
-                    const GB = OB;
-                    if (OB = OB.previous, GB) {
-                      const OB = this.mirror.getId(dB.parentNode(GB.value));
-                      if (-1 === YB(GB.value)) continue;
-                      if (-1 !== OB) {
-                        BB = GB;
+                if (!WW) {
+                  let iW = OW.tail;
+                  for (; iW;) {
+                    const OW = iW;
+                    if (iW = iW.previous, OW) {
+                      const iW = this.mirror.getId(hW.parentNode(OW.value));
+                      if (-1 === mW(OW.value)) continue;
+                      if (-1 !== iW) {
+                        WW = OW;
                         break
                       } {
-                        const OB = dB.parentNode(GB.value);
-                        if (OB && OB.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                          const YB = dB.host(OB);
-                          if (-1 !== this.mirror.getId(YB)) {
-                            BB = GB;
+                        const iW = hW.parentNode(OW.value);
+                        if (iW && iW.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+                          const mW = hW.host(iW);
+                          if (-1 !== this.mirror.getId(mW)) {
+                            WW = OW;
                             break
                           }
                         }
@@ -1735,186 +1735,186 @@ export const modules = {
                     }
                   }
                 }
-                if (!BB) {
-                  for (; GB.head;) GB.removeNode(GB.head.value);
+                if (!WW) {
+                  for (; OW.head;) OW.removeNode(OW.head.value);
                   break
                 }
-                oB = BB.previous, GB.removeNode(BB.value), QB(BB.value)
+                PW = WW.previous, OW.removeNode(WW.value), NW(WW.value)
               }
-              const jB = {
-                texts: this.texts.filter((BB => !this.isBlockedAtEmission(BB.node))).map((BB => {
-                  const OB = BB.node,
-                    GB = dB.parentNode(OB);
-                  return GB && "TEXTAREA" === GB.tagName && this.genTextAreaValueMutation(GB), {
-                    id: this.mirror.getId(OB),
-                    value: BB.value
+              const LW = {
+                texts: this.texts.filter((WW => !this.isBlockedAtEmission(WW.node))).map((WW => {
+                  const iW = WW.node,
+                    OW = hW.parentNode(iW);
+                  return OW && "TEXTAREA" === OW.tagName && this.genTextAreaValueMutation(OW), {
+                    id: this.mirror.getId(iW),
+                    value: WW.value
                   }
-                })).filter((BB => !OB.has(BB.id))).filter((BB => this.mirror.has(BB.id))),
-                attributes: this.attributes.filter((BB => !this.isBlockedAtEmission(BB.node))).map((BB => {
+                })).filter((WW => !iW.has(WW.id))).filter((WW => this.mirror.has(WW.id))),
+                attributes: this.attributes.filter((WW => !this.isBlockedAtEmission(WW.node))).map((WW => {
                   const {
-                    attributes: OB
-                  } = BB;
-                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof OB.style) {
-                    const GB = JSON.stringify(BB.styleDiff),
-                      YB = JSON.stringify(BB._unchangedStyles);
-                    OB.style.length > GB.length && (GB + YB).split("var(").length === OB.style.split("var(").length && (OB.style = BB.styleDiff)
+                    attributes: iW
+                  } = WW;
+                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof iW.style) {
+                    const OW = JSON.stringify(WW.styleDiff),
+                      mW = JSON.stringify(WW._unchangedStyles);
+                    iW.style.length > OW.length && (OW + mW).split("var(").length === iW.style.split("var(").length && (iW.style = WW.styleDiff)
                   }
                   if (this.maskAllElementAttributes || this.maskAttributeFn)
-                    for (const [YB, DB] of Object.entries(OB))
-                      if ("string" == typeof DB || null === DB) {
-                        var GB;
-                        OB[YB] = SO({
-                          element: BB.node,
-                          name: YB,
-                          value: DB,
+                    for (const [mW, EW] of Object.entries(iW))
+                      if ("string" == typeof EW || null === EW) {
+                        var OW;
+                        iW[mW] = Si({
+                          element: WW.node,
+                          name: mW,
+                          value: EW,
                           maskAllElementAttributes: this.maskAllElementAttributes,
                           maskAttributeFn: this.maskAttributeFn,
-                          isGenerated: null === (GB = this.generatedAttributes.get(BB.node)) || void 0 === GB ? void 0 : GB.has(YB)
+                          isGenerated: null === (OW = this.generatedAttributes.get(WW.node)) || void 0 === OW ? void 0 : OW.has(mW)
                         })
                       } return {
-                    id: this.mirror.getId(BB.node),
-                    attributes: OB
+                    id: this.mirror.getId(WW.node),
+                    attributes: iW
                   }
-                })).filter((BB => !OB.has(BB.id))).filter((BB => this.mirror.has(BB.id))),
+                })).filter((WW => !iW.has(WW.id))).filter((WW => this.mirror.has(WW.id))),
                 removes: this.removes,
-                adds: BB
+                adds: WW
               };
-              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (jB.texts.length || jB.attributes.length || jB.removes.length || jB.adds.length) && this.mutationCb(jB)
-            })), DO(this, "bufferBelongsToIframe", (BB => this.doc === BB.contentDocument)), DO(this, "genTextAreaValueMutation", (BB => {
-              let OB = this.attributeMap.get(BB);
-              OB || (OB = {
-                node: BB,
+              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (LW.texts.length || LW.attributes.length || LW.removes.length || LW.adds.length) && this.mutationCb(LW)
+            })), Ei(this, "bufferBelongsToIframe", (WW => this.doc === WW.contentDocument)), Ei(this, "genTextAreaValueMutation", (WW => {
+              let iW = this.attributeMap.get(WW);
+              iW || (iW = {
+                node: WW,
                 attributes: {},
                 styleDiff: {},
                 _unchangedStyles: {}
-              }, this.attributes.push(OB), this.attributeMap.set(BB, OB));
-              const GB = Array.from(dB.childNodes(BB), (BB => dB.textContent(BB) || "")).join("");
-              OB.attributes.value = WO({
-                element: BB,
+              }, this.attributes.push(iW), this.attributeMap.set(WW, iW));
+              const OW = Array.from(hW.childNodes(WW), (WW => hW.textContent(WW) || "")).join("");
+              iW.attributes.value = si({
+                element: WW,
                 maskInputOptions: this.maskInputOptions,
-                tagName: BB.tagName,
-                type: UO(BB),
-                value: GB,
+                tagName: WW.tagName,
+                type: yi(WW),
+                value: OW,
                 maskInputFn: this.maskInputFn
               })
-            })), DO(this, "processMutation", (BB => {
-              if (!WG(BB.target, this.mirror, this.slimDOMOptions)) switch (BB.type) {
+            })), Ei(this, "processMutation", (WW => {
+              if (!KO(WW.target, this.mirror, this.slimDOMOptions)) switch (WW.type) {
                 case "characterData": {
-                  const OB = dB.textContent(BB.target);
-                  RG(BB.target, this.blockClass, this.blockSelector, !1) || OB === BB.oldValue || this.texts.push({
-                    value: HO(BB.target, this.maskTextClass, this.maskTextSelector, !0) && OB ? this.maskTextFn ? this.maskTextFn(OB, NG(BB.target)) : OB.replace(/[\S]/g, "*") : OB,
-                    node: BB.target
+                  const iW = hW.textContent(WW.target);
+                  MO(WW.target, this.blockClass, this.blockSelector, !1) || iW === WW.oldValue || this.texts.push({
+                    value: zi(WW.target, this.maskTextClass, this.maskTextSelector, !0) && iW ? this.maskTextFn ? this.maskTextFn(iW, sO(WW.target)) : iW.replace(/[\S]/g, "*") : iW,
+                    node: WW.target
                   });
                   break
                 }
                 case "attributes": {
-                  var OB;
-                  const YB = BB.target,
-                    DB = AO(YB.tagName),
-                    QB = BB.attributeName,
-                    oB = null !== (OB = BB.attributeNamespace) && void 0 !== OB ? OB : null;
-                  let jB = function(BB, OB, GB) {
-                      if (!GB) return OB;
-                      const YB = BB.getAttributeNodeNS(GB, OB);
-                      if (YB) return YB.name;
-                      if ("http://www.w3.org/1999/xlink" === GB) return `xlink:${OB}`;
-                      if ("http://www.w3.org/XML/1998/namespace" === GB) return `xml:${OB}`;
-                      if ("http://www.w3.org/2000/xmlns/" === GB) return "xmlns" === OB ? OB : `xmlns:${OB}`;
-                      const DB = BB.lookupPrefix(GB);
-                      return DB ? `${DB}:${OB}` : OB
-                    }(YB, QB, oB),
-                    yB = oB ? YB.getAttributeNS(oB, QB) : BB.target.getAttribute(QB);
-                  if ("value" === jB) {
-                    const BB = YB,
-                      OB = UO(BB);
-                    yB = WO({
-                      element: BB,
+                  var iW;
+                  const mW = WW.target,
+                    EW = Mi(mW.tagName),
+                    NW = WW.attributeName,
+                    PW = null !== (iW = WW.attributeNamespace) && void 0 !== iW ? iW : null;
+                  let LW = function(WW, iW, OW) {
+                      if (!OW) return iW;
+                      const mW = WW.getAttributeNodeNS(OW, iW);
+                      if (mW) return mW.name;
+                      if ("http://www.w3.org/1999/xlink" === OW) return `xlink:${iW}`;
+                      if ("http://www.w3.org/XML/1998/namespace" === OW) return `xml:${iW}`;
+                      if ("http://www.w3.org/2000/xmlns/" === OW) return "xmlns" === iW ? iW : `xmlns:${iW}`;
+                      const EW = WW.lookupPrefix(OW);
+                      return EW ? `${EW}:${iW}` : iW
+                    }(mW, NW, PW),
+                    cW = PW ? mW.getAttributeNS(PW, NW) : WW.target.getAttribute(NW);
+                  if ("value" === LW) {
+                    const WW = mW,
+                      iW = yi(WW);
+                    cW = si({
+                      element: WW,
                       maskInputOptions: this.maskInputOptions,
-                      tagName: YB.tagName,
-                      type: OB,
-                      value: yB,
+                      tagName: mW.tagName,
+                      type: iW,
+                      value: cW,
                       maskInputFn: this.maskInputFn
                     })
                   }
-                  if (RG(BB.target, this.blockClass, this.blockSelector, !1) || yB === BB.oldValue) return;
-                  let JB = this.attributeMap.get(BB.target);
-                  const MB = "iframe" === DB && "src" === jB;
-                  if (MB && !this.keepIframeSrcFn(yB) && YB.contentDocument) return;
-                  if ("type" === jB && "input" === DB && "password" === (BB.oldValue || "").toLowerCase() && YB.setAttribute("data-rr-is-password", "true"), !TO(DB, jB)) {
-                    var GB;
-                    JB || (JB = {
-                      node: BB.target,
+                  if (MO(WW.target, this.blockClass, this.blockSelector, !1) || cW === WW.oldValue) return;
+                  let wW = this.attributeMap.get(WW.target);
+                  const tW = "iframe" === EW && "src" === LW;
+                  if (tW && !this.keepIframeSrcFn(cW) && mW.contentDocument) return;
+                  if ("type" === LW && "input" === EW && "password" === (WW.oldValue || "").toLowerCase() && mW.setAttribute("data-rr-is-password", "true"), !Ii(EW, LW)) {
+                    var OW;
+                    wW || (wW = {
+                      node: WW.target,
                       attributes: {},
                       styleDiff: {},
                       _unchangedStyles: {}
-                    }, this.attributes.push(JB), this.attributeMap.set(BB.target, JB));
-                    const OB = eO(this.doc, DB, AO(jB), yB, YB, this.dataURLOptions);
-                    if (MB && !this.keepIframeSrcFn(yB) && (jB = "rr_src"), JB.attributes[jB] = OB, null === (GB = this.generatedAttributes.get(BB.target)) || void 0 === GB || GB.delete(jB), "style" === jB) {
+                    }, this.attributes.push(wW), this.attributeMap.set(WW.target, wW));
+                    const iW = Gi(this.doc, EW, Mi(LW), cW, mW, this.dataURLOptions);
+                    if (tW && !this.keepIframeSrcFn(cW) && (LW = "rr_src"), wW.attributes[LW] = iW, null === (OW = this.generatedAttributes.get(WW.target)) || void 0 === OW || OW.delete(LW), "style" === LW) {
                       if (!this.unattachedDoc) try {
                         this.unattachedDoc = document.implementation.createHTMLDocument()
-                      } catch (BB) {
+                      } catch (WW) {
                         this.unattachedDoc = this.doc
                       }
-                      const OB = this.unattachedDoc.createElement("span"),
-                        GB = YB.style;
-                      BB.oldValue && (OB.style.cssText = BB.oldValue);
-                      for (const BB of Array.from(GB)) {
-                        const YB = GB.getPropertyValue(BB),
-                          DB = GB.getPropertyPriority(BB);
-                        YB !== OB.style.getPropertyValue(BB) || DB !== OB.style.getPropertyPriority(BB) ? JB.styleDiff[BB] = "" === DB ? YB : [YB, DB] : JB._unchangedStyles[BB] = [YB, DB]
+                      const iW = this.unattachedDoc.createElement("span"),
+                        OW = mW.style;
+                      WW.oldValue && (iW.style.cssText = WW.oldValue);
+                      for (const WW of Array.from(OW)) {
+                        const mW = OW.getPropertyValue(WW),
+                          EW = OW.getPropertyPriority(WW);
+                        mW !== iW.style.getPropertyValue(WW) || EW !== iW.style.getPropertyPriority(WW) ? wW.styleDiff[WW] = "" === EW ? mW : [mW, EW] : wW._unchangedStyles[WW] = [mW, EW]
                       }
-                      for (const BB of Array.from(OB.style)) "" === GB.getPropertyValue(BB) && (JB.styleDiff[BB] = !1)
-                    } else if ("open" === jB && "dialog" === DB) {
-                      JB.attributes.rr_open_mode = YB.matches("dialog:modal") ? "modal" : "non-modal";
-                      let OB = this.generatedAttributes.get(BB.target);
-                      OB || (OB = new Set, this.generatedAttributes.set(BB.target, OB)), OB.add("rr_open_mode")
+                      for (const WW of Array.from(iW.style)) "" === OW.getPropertyValue(WW) && (wW.styleDiff[WW] = !1)
+                    } else if ("open" === LW && "dialog" === EW) {
+                      wW.attributes.rr_open_mode = mW.matches("dialog:modal") ? "modal" : "non-modal";
+                      let iW = this.generatedAttributes.get(WW.target);
+                      iW || (iW = new Set, this.generatedAttributes.set(WW.target, iW)), iW.add("rr_open_mode")
                     }
                   }
                   break
                 }
                 case "childList":
-                  if (RG(BB.target, this.blockClass, this.blockSelector, !0)) return;
-                  if ("TEXTAREA" === BB.target.tagName) return void this.genTextAreaValueMutation(BB.target);
-                  BB.addedNodes.forEach((OB => this.genAdds(OB, BB.target))), BB.removedNodes.forEach((OB => {
-                    const GB = this.mirror.getId(OB),
-                      YB = oO(BB.target) ? this.mirror.getId(dB.host(BB.target)) : this.mirror.getId(BB.target);
-                    RG(BB.target, this.blockClass, this.blockSelector, !1) || WG(OB, this.mirror, this.slimDOMOptions) || ! function(BB, OB) {
-                      return -1 !== OB.getId(BB)
-                    }(OB, this.mirror) || (this.addedSet.has(OB) ? (iG(this.addedSet, OB), this.droppedSet.add(OB)) : this.addedSet.has(BB.target) && -1 === GB || AG(BB.target, this.mirror) || (this.movedSet.has(OB) && this.movedMap[IG(GB, YB)] ? iG(this.movedSet, OB) : (this.removes.push({
-                      parentId: YB,
-                      id: GB,
-                      isShadow: !(!oO(BB.target) || !jO(BB.target)) || void 0
-                    }), function(BB, OB) {
-                      const GB = [BB];
-                      for (; GB.length;) {
-                        const BB = GB.pop();
-                        OB.has(BB) || (OB.add(BB), dB.childNodes(BB).forEach((BB => GB.push(BB))))
+                  if (MO(WW.target, this.blockClass, this.blockSelector, !0)) return;
+                  if ("TEXTAREA" === WW.target.tagName) return void this.genTextAreaValueMutation(WW.target);
+                  WW.addedNodes.forEach((iW => this.genAdds(iW, WW.target))), WW.removedNodes.forEach((iW => {
+                    const OW = this.mirror.getId(iW),
+                      mW = Pi(WW.target) ? this.mirror.getId(hW.host(WW.target)) : this.mirror.getId(WW.target);
+                    MO(WW.target, this.blockClass, this.blockSelector, !1) || KO(iW, this.mirror, this.slimDOMOptions) || ! function(WW, iW) {
+                      return -1 !== iW.getId(WW)
+                    }(iW, this.mirror) || (this.addedSet.has(iW) ? (gO(this.addedSet, iW), this.droppedSet.add(iW)) : this.addedSet.has(WW.target) && -1 === OW || SO(WW.target, this.mirror) || (this.movedSet.has(iW) && this.movedMap[eO(OW, mW)] ? gO(this.movedSet, iW) : (this.removes.push({
+                      parentId: mW,
+                      id: OW,
+                      isShadow: !(!Pi(WW.target) || !Li(WW.target)) || void 0
+                    }), function(WW, iW) {
+                      const OW = [WW];
+                      for (; OW.length;) {
+                        const WW = OW.pop();
+                        iW.has(WW) || (iW.add(WW), hW.childNodes(WW).forEach((WW => OW.push(WW))))
                       }
-                    }(OB, this.removesSubTreeCache))), this.mapRemoves.add(OB))
+                    }(iW, this.removesSubTreeCache))), this.mapRemoves.add(iW))
                   }))
               }
-            })), DO(this, "genAdds", ((BB, OB) => {
-              if (!this.processedNodeManager.inOtherBuffer(BB, this)) {
-                if (this.addedSet.has(BB)) return this.addedSet.delete(BB), void this.addedSet.add(BB);
-                if (!this.movedSet.has(BB)) {
-                  if (this.mirror.hasNode(BB)) {
-                    if (WG(BB, this.mirror, this.slimDOMOptions)) return;
-                    this.movedSet.add(BB);
-                    let GB = null;
-                    OB && this.mirror.hasNode(OB) && (GB = this.mirror.getId(OB)), GB && -1 !== GB && (this.movedMap[IG(this.mirror.getId(BB), GB)] = !0)
-                  } else this.addedSet.add(BB), this.droppedSet.delete(BB);
-                  if (!RG(BB, this.blockClass, this.blockSelector, !1)) {
-                    if (BB.nodeType === BB.TEXT_NODE) return;
-                    const OB = dB.childNodes(BB);
-                    for (let BB = 0, GB = OB.length; GB > BB; BB++) {
-                      const GB = OB[BB];
-                      GB && this.genAdds(GB)
+            })), Ei(this, "genAdds", ((WW, iW) => {
+              if (!this.processedNodeManager.inOtherBuffer(WW, this)) {
+                if (this.addedSet.has(WW)) return this.addedSet.delete(WW), void this.addedSet.add(WW);
+                if (!this.movedSet.has(WW)) {
+                  if (this.mirror.hasNode(WW)) {
+                    if (KO(WW, this.mirror, this.slimDOMOptions)) return;
+                    this.movedSet.add(WW);
+                    let OW = null;
+                    iW && this.mirror.hasNode(iW) && (OW = this.mirror.getId(iW)), OW && -1 !== OW && (this.movedMap[eO(this.mirror.getId(WW), OW)] = !0)
+                  } else this.addedSet.add(WW), this.droppedSet.delete(WW);
+                  if (!MO(WW, this.blockClass, this.blockSelector, !1)) {
+                    if (WW.nodeType === WW.TEXT_NODE) return;
+                    const iW = hW.childNodes(WW);
+                    for (let WW = 0, OW = iW.length; OW > WW; WW++) {
+                      const OW = iW[WW];
+                      OW && this.genAdds(OW)
                     }
-                    if (UG(BB)) {
-                      const OB = dB.childNodes(dB.shadowRoot(BB));
-                      for (let GB = 0, YB = OB.length; YB > GB; GB++) {
-                        const YB = OB[GB];
-                        YB && (this.processedNodeManager.add(YB, this), this.genAdds(YB, BB))
+                    if (JO(WW)) {
+                      const iW = hW.childNodes(hW.shadowRoot(WW));
+                      for (let OW = 0, mW = iW.length; mW > OW; OW++) {
+                        const mW = iW[OW];
+                        mW && (this.processedNodeManager.add(mW, this), this.genAdds(mW, WW))
                       }
                     }
                   }
@@ -1922,9 +1922,9 @@ export const modules = {
               }
             }))
           }
-          init(BB) {
-            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((OB => {
-              this[OB] = BB[OB]
+          init(WW) {
+            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((iW => {
+              this[iW] = WW[iW]
             })), this.canvasManager.acquire()
           }
           freeze() {
@@ -1952,79 +1952,79 @@ export const modules = {
             return this.doc
           }
           destroy() {
-            for (const BB of this.mapRemoves) this.mapRemoves.delete(BB), this.mirror.removeNodeFromMap(BB)
+            for (const WW of this.mapRemoves) this.mapRemoves.delete(WW), this.mirror.removeNodeFromMap(WW)
           }
-          isBlockedAtEmission(BB) {
-            const OB = this.blockClass,
-              GB = OB && "string" != typeof OB && (OB.global || OB.sticky) ? new RegExp(OB) : null;
-            for (; BB;) {
-              if (GB && (GB.lastIndex = 0), RG(BB, GB || OB, this.blockSelector, !0)) return !0;
-              const YB = "getRootNode" in BB ? dB.getRootNode(BB) : null;
-              BB = (null == YB ? void 0 : YB.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? dB.host(YB) : null
+          isBlockedAtEmission(WW) {
+            const iW = this.blockClass,
+              OW = iW && "string" != typeof iW && (iW.global || iW.sticky) ? new RegExp(iW) : null;
+            for (; WW;) {
+              if (OW && (OW.lastIndex = 0), MO(WW, OW || iW, this.blockSelector, !0)) return !0;
+              const mW = "getRootNode" in WW ? hW.getRootNode(WW) : null;
+              WW = (null == mW ? void 0 : mW.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? hW.host(mW) : null
             }
             return !1
           }
         };
 
-      function iG(BB, OB) {
-        const GB = [OB];
-        for (; GB.length;) {
-          const OB = GB.pop();
-          if (BB.delete(OB), OB.nodeType === OB.TEXT_NODE) continue;
-          const YB = dB.childNodes(OB);
-          for (let BB = 0, DB = YB.length; DB > BB; BB++) {
-            const OB = YB[BB];
-            OB && GB.push(OB)
+      function gO(WW, iW) {
+        const OW = [iW];
+        for (; OW.length;) {
+          const iW = OW.pop();
+          if (WW.delete(iW), iW.nodeType === iW.TEXT_NODE) continue;
+          const mW = hW.childNodes(iW);
+          for (let WW = 0, EW = mW.length; EW > WW; WW++) {
+            const iW = mW[WW];
+            iW && OW.push(iW)
           }
         }
       }
 
-      function LG(BB, OB, GB) {
-        return 0 !== BB.size && function(BB, OB) {
-          const GB = dB.parentNode(OB);
-          return !!GB && BB.has(GB)
-        }(BB, OB)
+      function DO(WW, iW, OW) {
+        return 0 !== WW.size && function(WW, iW) {
+          const OW = hW.parentNode(iW);
+          return !!OW && WW.has(OW)
+        }(WW, iW)
       }
 
-      function gG(BB, OB) {
-        if (0 === BB.size) return !1;
-        let GB = dB.parentNode(OB);
-        for (; GB;) {
-          if (BB.has(GB)) return !0;
-          GB = dB.parentNode(GB)
+      function VO(WW, iW) {
+        if (0 === WW.size) return !1;
+        let OW = hW.parentNode(iW);
+        for (; OW;) {
+          if (WW.has(OW)) return !0;
+          OW = hW.parentNode(OW)
         }
         return !1
       }
-      var rG = function(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
-          return uG ? function() {
+      var pO = function(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
+          return oO ? function() {
             try {
-              return BB(...arguments)
-            } catch (BB) {
-              if (uG && !0 === uG(BB, OB)) return;
-              throw BB
+              return WW(...arguments)
+            } catch (WW) {
+              if (oO && !0 === oO(WW, iW)) return;
+              throw WW
             }
-          } : BB
+          } : WW
         },
-        XG = [];
+        fO = [];
 
-      function wG(BB) {
+      function CO(WW) {
         try {
-          if ("composedPath" in BB) {
-            const OB = BB.composedPath();
-            if (OB.length) return OB[0]
-          } else if ("path" in BB && BB.path.length) return BB.path[0]
-        } catch (BB) {}
-        return BB && BB.target
+          if ("composedPath" in WW) {
+            const iW = WW.composedPath();
+            if (iW.length) return iW[0]
+          } else if ("path" in WW && WW.path.length) return WW.path[0]
+        } catch (WW) {}
+        return WW && WW.target
       }
 
-      function EG(BB, OB) {
-        const GB = new FG;
-        let YB;
-        GB.init(BB);
+      function XO(WW, iW) {
+        const OW = new vO;
+        let mW;
+        OW.init(WW);
         try {
-          YB = new(fB())(rG(GB.processMutations.bind(GB)));
-          const DB = {
+          mW = new(TW())(pO(OW.processMutations.bind(OW)));
+          const EW = {
             attributes: !0,
             attributeOldValue: !0,
             characterData: !0,
@@ -2032,979 +2032,979 @@ export const modules = {
             childList: !0,
             subtree: !0
           };
-          return BB.attributeFilter && BB.attributeFilter.length > 0 && (DB.attributeFilter = BB.attributeFilter), YB.observe(OB, DB), XG.push(GB), {
-            observer: YB,
-            buffer: GB
+          return WW.attributeFilter && WW.attributeFilter.length > 0 && (EW.attributeFilter = WW.attributeFilter), mW.observe(iW, EW), fO.push(OW), {
+            observer: mW,
+            buffer: OW
           }
-        } catch (BB) {
+        } catch (WW) {
           try {
-            null == YB || YB.disconnect(), GB.destroy(), GB.reset()
-          } catch (BB) {}
-          throw BB
+            null == mW || mW.disconnect(), OW.destroy(), OW.reset()
+          } catch (WW) {}
+          throw WW
         }
       }
 
-      function cG(BB) {
+      function BO(WW) {
         let {
-          scrollCb: OB,
-          doc: GB,
-          mirror: YB,
-          blockClass: DB,
-          blockSelector: QB,
-          sampling: oB
-        } = BB;
-        const jB = new Map,
-          yB = BB => {
-            const oB = wG(BB);
-            if (!oB || RG(oB, DB, QB, !0)) return;
-            const yB = YB.getId(oB);
-            let JB, MB;
-            if (oB === GB && GB.defaultView) {
-              const BB = pG(GB.defaultView);
-              JB = BB.left, MB = BB.top
-            } else JB = oB.scrollLeft, MB = oB.scrollTop;
-            const PB = `${JB},${MB}`;
-            jB.get(yB) !== PB && (jB.set(yB, PB), OB({
-              id: yB,
-              x: JB,
-              y: MB
+          scrollCb: iW,
+          doc: OW,
+          mirror: mW,
+          blockClass: EW,
+          blockSelector: NW,
+          sampling: PW
+        } = WW;
+        const LW = new Map,
+          cW = WW => {
+            const PW = CO(WW);
+            if (!PW || MO(PW, EW, NW, !0)) return;
+            const cW = mW.getId(PW);
+            let wW, tW;
+            if (PW === OW && OW.defaultView) {
+              const WW = jO(OW.defaultView);
+              wW = WW.left, tW = WW.top
+            } else wW = PW.scrollLeft, tW = PW.scrollTop;
+            const ZW = `${wW},${tW}`;
+            LW.get(cW) !== ZW && (LW.set(cW, ZW), iW({
+              id: cW,
+              x: wW,
+              y: tW
             }))
           },
-          JB = [QG("scroll", rG(PG(rG((BB => yB(BB))), oB.scroll || 100)), GB)];
-        return "onscrollend" in GB && JB.push(QG("scrollend", rG(yB), GB)), () => JB.forEach((BB => BB()))
+          wW = [LO("scroll", pO(lO(pO((WW => cW(WW))), PW.scroll || 100)), OW)];
+        return "onscrollend" in OW && wW.push(LO("scrollend", pO(cW), OW)), () => wW.forEach((WW => WW()))
       }
 
-      function hG(BB, OB) {
-        for (let GB = XG.length - 1; GB >= 0; GB--) {
-          const YB = XG[GB];
-          if (!YB) continue;
-          let DB = YB.bufferBelongsToIframe(BB);
-          !DB && OB && OB.has(YB.bufferDoc()) && (DB = !0), DB && (YB.reset(), XG.splice(GB, 1))
+      function qO(WW, iW) {
+        for (let OW = fO.length - 1; OW >= 0; OW--) {
+          const mW = fO[OW];
+          if (!mW) continue;
+          let EW = mW.bufferBelongsToIframe(WW);
+          !EW && iW && iW.has(mW.bufferDoc()) && (EW = !0), EW && (mW.reset(), fO.splice(OW, 1))
         }
       }
-      var aG = ["INPUT", "TEXTAREA", "SELECT"],
-        eG = new WeakMap;
+      var RO = ["INPUT", "TEXTAREA", "SELECT"],
+        GO = new WeakMap;
 
-      function TG(BB) {
-        return function BB(OB, GB) {
-          if (sG("CSSGroupingRule") && OB.parentRule instanceof CSSGroupingRule || sG("CSSMediaRule") && OB.parentRule instanceof CSSMediaRule || sG("CSSSupportsRule") && OB.parentRule instanceof CSSSupportsRule || sG("CSSConditionRule") && OB.parentRule instanceof CSSConditionRule) {
-            const YB = Array.from(OB.parentRule.cssRules).indexOf(OB);
-            return GB.unshift(YB), BB(OB.parentRule, GB)
+      function IO(WW) {
+        return function WW(iW, OW) {
+          if (QO("CSSGroupingRule") && iW.parentRule instanceof CSSGroupingRule || QO("CSSMediaRule") && iW.parentRule instanceof CSSMediaRule || QO("CSSSupportsRule") && iW.parentRule instanceof CSSSupportsRule || QO("CSSConditionRule") && iW.parentRule instanceof CSSConditionRule) {
+            const mW = Array.from(iW.parentRule.cssRules).indexOf(iW);
+            return OW.unshift(mW), WW(iW.parentRule, OW)
           }
-          if (OB.parentStyleSheet) {
-            const BB = Array.from(OB.parentStyleSheet.cssRules).indexOf(OB);
-            GB.unshift(BB)
+          if (iW.parentStyleSheet) {
+            const WW = Array.from(iW.parentStyleSheet.cssRules).indexOf(iW);
+            OW.unshift(WW)
           }
-          return GB
-        }(BB, [])
+          return OW
+        }(WW, [])
       }
 
-      function bG(BB, OB, GB) {
-        let YB, DB;
-        return BB ? (BB.ownerNode ? YB = OB.getId(BB.ownerNode) : DB = GB.getId(BB), {
-          styleId: DB,
-          id: YB
+      function aO(WW, iW, OW) {
+        let mW, EW;
+        return WW ? (WW.ownerNode ? mW = iW.getId(WW.ownerNode) : EW = OW.getId(WW), {
+          styleId: EW,
+          id: mW
         }) : {}
       }
 
-      function CG(BB, OB) {
+      function rO(WW, iW) {
         let {
-          mirror: GB,
-          stylesheetManager: YB
-        } = BB;
-        var DB, QB;
-        let oB = null;
-        oB = GB.getId("#document" === OB.nodeName ? OB : dB.host(OB));
-        const jB = "#document" === OB.nodeName ? null === (DB = OB.defaultView) || void 0 === DB ? void 0 : DB.Document : null === (QB = OB.ownerDocument) || void 0 === QB || null === (QB = QB.defaultView) || void 0 === QB ? void 0 : QB.ShadowRoot,
-          yB = (null == jB ? void 0 : jB.prototype) ? Object.getOwnPropertyDescriptor(null == jB ? void 0 : jB.prototype, "adoptedStyleSheets") : void 0;
-        return null !== oB && -1 !== oB && jB && yB ? (Object.defineProperty(OB, "adoptedStyleSheets", {
-          configurable: yB.configurable,
-          enumerable: yB.enumerable,
+          mirror: OW,
+          stylesheetManager: mW
+        } = WW;
+        var EW, NW;
+        let PW = null;
+        PW = OW.getId("#document" === iW.nodeName ? iW : hW.host(iW));
+        const LW = "#document" === iW.nodeName ? null === (EW = iW.defaultView) || void 0 === EW ? void 0 : EW.Document : null === (NW = iW.ownerDocument) || void 0 === NW || null === (NW = NW.defaultView) || void 0 === NW ? void 0 : NW.ShadowRoot,
+          cW = (null == LW ? void 0 : LW.prototype) ? Object.getOwnPropertyDescriptor(null == LW ? void 0 : LW.prototype, "adoptedStyleSheets") : void 0;
+        return null !== PW && -1 !== PW && LW && cW ? (Object.defineProperty(iW, "adoptedStyleSheets", {
+          configurable: cW.configurable,
+          enumerable: cW.enumerable,
           get() {
-            var BB;
-            return null === (BB = yB.get) || void 0 === BB ? void 0 : BB.call(this)
+            var WW;
+            return null === (WW = cW.get) || void 0 === WW ? void 0 : WW.call(this)
           },
-          set(BB) {
-            let OB;
+          set(WW) {
+            let iW;
             try {
-              var GB;
-              OB = null === (GB = yB.set) || void 0 === GB ? void 0 : GB.call(this, BB)
-            } catch (BB) {
-              if (BB && "object" == typeof BB && "NotAllowedError" === BB.name) return;
-              throw BB
+              var OW;
+              iW = null === (OW = cW.set) || void 0 === OW ? void 0 : OW.call(this, WW)
+            } catch (WW) {
+              if (WW && "object" == typeof WW && "NotAllowedError" === WW.name) return;
+              throw WW
             }
-            if (null !== oB && -1 !== oB) try {
-              YB.adoptStyleSheets(BB, oB)
-            } catch (BB) {}
-            return OB
+            if (null !== PW && -1 !== PW) try {
+              mW.adoptStyleSheets(WW, PW)
+            } catch (WW) {}
+            return iW
           }
-        }), rG((() => {
-          Object.defineProperty(OB, "adoptedStyleSheets", {
-            configurable: yB.configurable,
-            enumerable: yB.enumerable,
-            get: yB.get,
-            set: yB.set
+        }), pO((() => {
+          Object.defineProperty(iW, "adoptedStyleSheets", {
+            configurable: cW.configurable,
+            enumerable: cW.enumerable,
+            get: cW.get,
+            set: cW.set
           })
         }))) : () => {}
       }
-      var HG = new Set;
+      var zO = new Set;
 
-      function vG(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const GB = BB.doc.defaultView;
-        if (!GB) return () => {};
-        let DB, QB;
-        ! function(BB, OB) {
+      function FO(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const OW = WW.doc.defaultView;
+        if (!OW) return () => {};
+        let EW, NW;
+        ! function(WW, iW) {
           const {
-            mutationCb: GB,
-            mousemoveCb: YB,
-            mouseInteractionCb: DB,
-            scrollCb: QB,
-            viewportResizeCb: oB,
-            inputCb: jB,
-            mediaInteractionCb: yB,
-            styleSheetRuleCb: JB,
-            styleDeclarationCb: MB,
-            canvasMutationCb: PB,
-            fontCb: zB,
-            selectionCb: lB,
-            customElementCb: pB
-          } = BB;
-          BB.mutationCb = function() {
-            OB.mutation && OB.mutation(...arguments), GB(...arguments)
-          }, BB.mousemoveCb = function() {
-            OB.mousemove && OB.mousemove(...arguments), YB(...arguments)
-          }, BB.mouseInteractionCb = function() {
-            OB.mouseInteraction && OB.mouseInteraction(...arguments), DB(...arguments)
-          }, BB.scrollCb = function() {
-            OB.scroll && OB.scroll(...arguments), QB(...arguments)
-          }, BB.viewportResizeCb = function() {
-            OB.viewportResize && OB.viewportResize(...arguments), oB(...arguments)
-          }, BB.inputCb = function() {
-            OB.input && OB.input(...arguments), jB(...arguments)
-          }, BB.mediaInteractionCb = function() {
-            OB.mediaInteaction && OB.mediaInteaction(...arguments), yB(...arguments)
-          }, BB.styleSheetRuleCb = function() {
-            OB.styleSheetRule && OB.styleSheetRule(...arguments), JB(...arguments)
-          }, BB.styleDeclarationCb = function() {
-            OB.styleDeclaration && OB.styleDeclaration(...arguments), MB(...arguments)
-          }, BB.canvasMutationCb = function() {
-            OB.canvasMutation && OB.canvasMutation(...arguments), PB(...arguments)
-          }, BB.fontCb = function() {
-            OB.font && OB.font(...arguments), zB(...arguments)
-          }, BB.selectionCb = function() {
-            OB.selection && OB.selection(...arguments), lB(...arguments)
-          }, BB.customElementCb = function() {
-            OB.customElement && OB.customElement(...arguments), pB(...arguments)
+            mutationCb: OW,
+            mousemoveCb: mW,
+            mouseInteractionCb: EW,
+            scrollCb: NW,
+            viewportResizeCb: PW,
+            inputCb: LW,
+            mediaInteractionCb: cW,
+            styleSheetRuleCb: wW,
+            styleDeclarationCb: tW,
+            canvasMutationCb: ZW,
+            fontCb: xW,
+            selectionCb: lW,
+            customElementCb: AW
+          } = WW;
+          WW.mutationCb = function() {
+            iW.mutation && iW.mutation(...arguments), OW(...arguments)
+          }, WW.mousemoveCb = function() {
+            iW.mousemove && iW.mousemove(...arguments), mW(...arguments)
+          }, WW.mouseInteractionCb = function() {
+            iW.mouseInteraction && iW.mouseInteraction(...arguments), EW(...arguments)
+          }, WW.scrollCb = function() {
+            iW.scroll && iW.scroll(...arguments), NW(...arguments)
+          }, WW.viewportResizeCb = function() {
+            iW.viewportResize && iW.viewportResize(...arguments), PW(...arguments)
+          }, WW.inputCb = function() {
+            iW.input && iW.input(...arguments), LW(...arguments)
+          }, WW.mediaInteractionCb = function() {
+            iW.mediaInteaction && iW.mediaInteaction(...arguments), cW(...arguments)
+          }, WW.styleSheetRuleCb = function() {
+            iW.styleSheetRule && iW.styleSheetRule(...arguments), wW(...arguments)
+          }, WW.styleDeclarationCb = function() {
+            iW.styleDeclaration && iW.styleDeclaration(...arguments), tW(...arguments)
+          }, WW.canvasMutationCb = function() {
+            iW.canvasMutation && iW.canvasMutation(...arguments), ZW(...arguments)
+          }, WW.fontCb = function() {
+            iW.font && iW.font(...arguments), xW(...arguments)
+          }, WW.selectionCb = function() {
+            iW.selection && iW.selection(...arguments), lW(...arguments)
+          }, WW.customElementCb = function() {
+            iW.customElement && iW.customElement(...arguments), AW(...arguments)
           }
-        }(BB, OB);
-        const oB = [],
-          jB = rG((() => {
+        }(WW, iW);
+        const PW = [],
+          LW = pO((() => {
             try {
-              if (QB) try {
-                QB.destroy(), QB.reset()
+              if (NW) try {
+                NW.destroy(), NW.reset()
               } finally {
-                const BB = XG.indexOf(QB); - 1 !== BB && XG.splice(BB, 1)
+                const WW = fO.indexOf(NW); - 1 !== WW && fO.splice(WW, 1)
               }
-              BB.shadowDomManager.resetForDoc(BB.doc), null == DB || DB.disconnect()
+              WW.shadowDomManager.resetForDoc(WW.doc), null == EW || EW.disconnect()
             } finally {
-              yG(oB)
+              tO(PW)
             }
           })),
-          PB = (BB, OB) => {
-            const GB = rG((() => {
+          ZW = (WW, iW) => {
+            const OW = pO((() => {
               try {
-                return OB()
-              } catch (OB) {
-                throw HG.add(BB), OB
+                return iW()
+              } catch (iW) {
+                throw zO.add(WW), iW
               }
             }))();
-            "function" == typeof GB && oB.push(GB)
+            "function" == typeof OW && PW.push(OW)
           };
         try {
-          if (BB.recordDOM && PB("mutation", (() => {
-              const OB = EG(BB, BB.doc);
-              DB = OB.observer, QB = OB.buffer
-            })), PB("move", (() => function(BB) {
+          if (WW.recordDOM && ZW("mutation", (() => {
+              const iW = XO(WW, WW.doc);
+              EW = iW.observer, NW = iW.buffer
+            })), ZW("move", (() => function(WW) {
               let {
-                mousemoveCb: OB,
-                sampling: GB,
-                doc: YB,
-                mirror: DB
-              } = BB;
-              if (!1 === GB.mousemove) return () => {};
-              const QB = "number" == typeof GB.mousemove ? GB.mousemove : 50,
-                oB = "number" == typeof GB.mousemoveCallback ? GB.mousemoveCallback : 500;
-              let jB, JB = [];
-              const MB = PG(rG((BB => {
-                  const GB = Date.now() - jB;
-                  OB(JB.map((BB => (BB.timeOffset -= GB, BB))), BB), JB = [], jB = null
-                })), oB),
-                PB = rG(PG(rG((BB => {
-                  const OB = wG(BB),
+                mousemoveCb: iW,
+                sampling: OW,
+                doc: mW,
+                mirror: EW
+              } = WW;
+              if (!1 === OW.mousemove) return () => {};
+              const NW = "number" == typeof OW.mousemove ? OW.mousemove : 50,
+                PW = "number" == typeof OW.mousemoveCallback ? OW.mousemoveCallback : 500;
+              let LW, wW = [];
+              const tW = lO(pO((WW => {
+                  const OW = Date.now() - LW;
+                  iW(wW.map((WW => (WW.timeOffset -= OW, WW))), WW), wW = [], LW = null
+                })), PW),
+                ZW = pO(lO(pO((WW => {
+                  const iW = CO(WW),
                     {
-                      clientX: GB,
-                      clientY: YB
-                    } = VG(BB) ? BB.changedTouches[0] : BB;
-                  jB || (jB = lG()), JB.push({
-                    x: GB,
-                    y: YB,
-                    id: DB.getId(OB),
-                    timeOffset: lG() - jB
-                  }), MB("undefined" != typeof DragEvent && BB instanceof DragEvent ? yB.Drag : BB instanceof MouseEvent ? yB.MouseMove : yB.TouchMove)
-                })), QB, {
+                      clientX: OW,
+                      clientY: mW
+                    } = YO(WW) ? WW.changedTouches[0] : WW;
+                  LW || (LW = bO()), wW.push({
+                    x: OW,
+                    y: mW,
+                    id: EW.getId(iW),
+                    timeOffset: bO() - LW
+                  }), tW("undefined" != typeof DragEvent && WW instanceof DragEvent ? cW.Drag : WW instanceof MouseEvent ? cW.MouseMove : cW.TouchMove)
+                })), NW, {
                   trailing: !1
                 })),
-                zB = [QG("mousemove", PB, YB), QG("touchmove", PB, YB), QG("drag", PB, YB)];
-              return rG((() => {
-                zB.forEach((BB => BB()))
+                xW = [LO("mousemove", ZW, mW), LO("touchmove", ZW, mW), LO("drag", ZW, mW)];
+              return pO((() => {
+                xW.forEach((WW => WW()))
               }))
-            }(BB))), PB("mouseInteraction", (() => function(BB) {
+            }(WW))), ZW("mouseInteraction", (() => function(WW) {
               let {
-                mouseInteractionCb: OB,
-                doc: GB,
-                mirror: DB,
-                blockClass: QB,
-                blockSelector: oB,
-                sampling: jB
-              } = BB;
-              if (!1 === jB.mouseInteraction) return () => {};
-              const yB = !0 === jB.mouseInteraction || void 0 === jB.mouseInteraction ? {} : jB.mouseInteraction,
-                PB = [];
-              let zB = null;
-              return Object.keys(JB).filter((BB => Number.isNaN(Number(BB)) && !BB.endsWith("_Departed") && !1 !== yB[BB])).forEach((BB => {
-                let jB = AO(BB);
-                const yB = (BB => GB => {
-                  const jB = wG(GB);
-                  if (RG(jB, QB, oB, !0)) return;
-                  let yB = null,
-                    PB = BB;
-                  if ("pointerType" in GB) {
-                    switch (GB.pointerType) {
+                mouseInteractionCb: iW,
+                doc: OW,
+                mirror: EW,
+                blockClass: NW,
+                blockSelector: PW,
+                sampling: LW
+              } = WW;
+              if (!1 === LW.mouseInteraction) return () => {};
+              const cW = !0 === LW.mouseInteraction || void 0 === LW.mouseInteraction ? {} : LW.mouseInteraction,
+                ZW = [];
+              let xW = null;
+              return Object.keys(wW).filter((WW => Number.isNaN(Number(WW)) && !WW.endsWith("_Departed") && !1 !== cW[WW])).forEach((WW => {
+                let LW = Mi(WW);
+                const cW = (WW => OW => {
+                  const LW = CO(OW);
+                  if (MO(LW, NW, PW, !0)) return;
+                  let cW = null,
+                    ZW = WW;
+                  if ("pointerType" in OW) {
+                    switch (OW.pointerType) {
                       case "mouse":
-                        yB = MB.Mouse;
+                        cW = tW.Mouse;
                         break;
                       case "touch":
-                        yB = MB.Touch;
+                        cW = tW.Touch;
                         break;
                       case "pen":
-                        yB = MB.Pen
+                        cW = tW.Pen
                     }
-                    yB === MB.Touch && (JB[BB] === JB.MouseDown ? PB = "TouchStart" : JB[BB] === JB.MouseUp && (PB = "TouchEnd"))
-                  } else VG(GB) && (yB = MB.Touch);
-                  null !== yB ? (zB = yB, (PB.startsWith("Touch") && yB === MB.Touch || PB.startsWith("Mouse") && yB === MB.Mouse) && (yB = null)) : JB[BB] === JB.Click && (yB = zB, zB = null);
-                  const lB = VG(GB) ? GB.changedTouches[0] : GB;
-                  if (!lB) return;
-                  const pB = DB.getId(jB),
+                    cW === tW.Touch && (wW[WW] === wW.MouseDown ? ZW = "TouchStart" : wW[WW] === wW.MouseUp && (ZW = "TouchEnd"))
+                  } else YO(OW) && (cW = tW.Touch);
+                  null !== cW ? (xW = cW, (ZW.startsWith("Touch") && cW === tW.Touch || ZW.startsWith("Mouse") && cW === tW.Mouse) && (cW = null)) : wW[WW] === wW.Click && (cW = xW, xW = null);
+                  const lW = YO(OW) ? OW.changedTouches[0] : OW;
+                  if (!lW) return;
+                  const AW = EW.getId(LW),
                     {
-                      clientX: qB,
-                      clientY: ZB
-                    } = lB;
-                  rG(OB)(YB({
-                    type: JB[PB],
-                    id: pB,
-                    x: qB,
-                    y: ZB
-                  }, null !== yB && {
-                    pointerType: yB
+                      clientX: bW,
+                      clientY: jW
+                    } = lW;
+                  pO(iW)(mW({
+                    type: wW[ZW],
+                    id: AW,
+                    x: bW,
+                    y: jW
+                  }, null !== cW && {
+                    pointerType: cW
                   }))
-                })(BB);
-                if (window.PointerEvent) switch (JB[BB]) {
-                  case JB.MouseDown:
-                  case JB.MouseUp:
-                    jB = jB.replace("mouse", "pointer");
+                })(WW);
+                if (window.PointerEvent) switch (wW[WW]) {
+                  case wW.MouseDown:
+                  case wW.MouseUp:
+                    LW = LW.replace("mouse", "pointer");
                     break;
-                  case JB.TouchStart:
-                  case JB.TouchEnd:
+                  case wW.TouchStart:
+                  case wW.TouchEnd:
                     return
                 }
-                PB.push(QG(jB, yB, GB))
-              })), rG((() => {
-                PB.forEach((BB => BB()))
+                ZW.push(LO(LW, cW, OW))
+              })), pO((() => {
+                ZW.forEach((WW => WW()))
               }))
-            }(BB))), PB("scroll", (() => cG(BB))), PB("viewportResize", (() => function(BB, OB) {
+            }(WW))), ZW("scroll", (() => BO(WW))), ZW("viewportResize", (() => function(WW, iW) {
               let {
-                viewportResizeCb: GB
-              } = BB, {
-                win: YB
-              } = OB, DB = -1, QB = -1;
-              return QG("resize", rG(PG(rG((() => {
-                const BB = qG(),
-                  OB = ZG();
-                DB === BB && QB === OB || (GB({
-                  width: Number(OB),
-                  height: Number(BB)
-                }), DB = BB, QB = OB)
-              })), 200)), YB)
-            }(BB, {
-              win: GB
-            }))), PB("input", (() => function(BB) {
+                viewportResizeCb: OW
+              } = WW, {
+                win: mW
+              } = iW, EW = -1, NW = -1;
+              return LO("resize", pO(lO(pO((() => {
+                const WW = UO(),
+                  iW = kO();
+                EW === WW && NW === iW || (OW({
+                  width: Number(iW),
+                  height: Number(WW)
+                }), EW = WW, NW = iW)
+              })), 200)), mW)
+            }(WW, {
+              win: OW
+            }))), ZW("input", (() => function(WW) {
               let {
-                inputCb: OB,
-                doc: GB,
-                mirror: DB,
-                blockClass: QB,
-                blockSelector: oB,
-                ignoreClass: jB,
-                ignoreSelector: yB,
-                maskInputOptions: JB,
-                maskInputFn: MB,
-                sampling: PB,
-                userTriggeredOnInput: zB
-              } = BB;
+                inputCb: iW,
+                doc: OW,
+                mirror: EW,
+                blockClass: NW,
+                blockSelector: PW,
+                ignoreClass: LW,
+                ignoreSelector: cW,
+                maskInputOptions: wW,
+                maskInputFn: tW,
+                sampling: ZW,
+                userTriggeredOnInput: xW
+              } = WW;
 
-              function lB(BB) {
-                let OB = wG(BB);
-                const YB = BB.isTrusted,
-                  DB = GB.defaultView;
-                if (OB && DB && !(OB instanceof DB.HTMLElement)) return;
-                const PB = OB && OB.tagName;
-                if (OB && "OPTION" === PB && (OB = dB.parentElement(OB)), !OB || !PB || 0 > aG.indexOf(PB) || RG(OB, QB, oB, !0)) return;
-                if (OB.classList.contains(jB) || yB && OB.matches(yB)) return;
-                let lB = OB.value,
-                  qB = !1;
-                const ZB = UO(OB) || "";
-                "radio" === ZB || "checkbox" === ZB ? qB = OB.checked : (JB[PB.toLowerCase()] || JB[ZB]) && (lB = WO({
-                  element: OB,
-                  maskInputOptions: JB,
-                  tagName: PB,
-                  type: ZB,
-                  value: lB,
-                  maskInputFn: MB
-                })), pB(OB, zB ? {
-                  text: lB,
-                  isChecked: qB,
-                  userTriggered: YB
+              function lW(WW) {
+                let iW = CO(WW);
+                const mW = WW.isTrusted,
+                  EW = OW.defaultView;
+                if (iW && EW && !(iW instanceof EW.HTMLElement)) return;
+                const ZW = iW && iW.tagName;
+                if (iW && "OPTION" === ZW && (iW = hW.parentElement(iW)), !iW || !ZW || 0 > RO.indexOf(ZW) || MO(iW, NW, PW, !0)) return;
+                if (iW.classList.contains(LW) || cW && iW.matches(cW)) return;
+                let lW = iW.value,
+                  bW = !1;
+                const jW = yi(iW) || "";
+                "radio" === jW || "checkbox" === jW ? bW = iW.checked : (wW[ZW.toLowerCase()] || wW[jW]) && (lW = si({
+                  element: iW,
+                  maskInputOptions: wW,
+                  tagName: ZW,
+                  type: jW,
+                  value: lW,
+                  maskInputFn: tW
+                })), AW(iW, xW ? {
+                  text: lW,
+                  isChecked: bW,
+                  userTriggered: mW
                 } : {
-                  text: lB,
-                  isChecked: qB
+                  text: lW,
+                  isChecked: bW
                 });
-                const NB = OB.name;
-                "radio" === ZB && NB && qB && GB.querySelectorAll(`input[type="radio"][name="${NB}"]`).forEach((BB => {
-                  if (BB !== OB) {
-                    const OB = BB.value;
-                    pB(BB, zB ? {
-                      text: OB,
-                      isChecked: !qB,
+                const UW = iW.name;
+                "radio" === jW && UW && bW && OW.querySelectorAll(`input[type="radio"][name="${UW}"]`).forEach((WW => {
+                  if (WW !== iW) {
+                    const iW = WW.value;
+                    AW(WW, xW ? {
+                      text: iW,
+                      isChecked: !bW,
                       userTriggered: !1
                     } : {
-                      text: OB,
-                      isChecked: !qB
+                      text: iW,
+                      isChecked: !bW
                     })
                   }
                 }))
               }
 
-              function pB(BB, GB) {
-                const QB = eG.get(BB);
-                if (!QB || QB.text !== GB.text || QB.isChecked !== GB.isChecked) {
-                  eG.set(BB, GB);
-                  const QB = DB.getId(BB);
-                  rG(OB)(YB(YB({}, GB), {}, {
-                    id: QB
+              function AW(WW, OW) {
+                const NW = GO.get(WW);
+                if (!NW || NW.text !== OW.text || NW.isChecked !== OW.isChecked) {
+                  GO.set(WW, OW);
+                  const NW = EW.getId(WW);
+                  pO(iW)(mW(mW({}, OW), {}, {
+                    id: NW
                   }))
                 }
               }
-              const qB = ("last" === PB.input ? ["change"] : ["input", "change"]).map((BB => QG(BB, rG(lB), GB))),
-                ZB = GB.defaultView;
-              if (!ZB) return () => {
-                qB.forEach((BB => BB()))
+              const bW = ("last" === ZW.input ? ["change"] : ["input", "change"]).map((WW => LO(WW, pO(lW), OW))),
+                jW = OW.defaultView;
+              if (!jW) return () => {
+                bW.forEach((WW => WW()))
               };
-              const NB = ZB.Object.getOwnPropertyDescriptor(ZB.HTMLInputElement.prototype, "value");
-              return NB && NB.set && qB.push(...[
-                [ZB.HTMLInputElement.prototype, "value"],
-                [ZB.HTMLInputElement.prototype, "checked"],
-                [ZB.HTMLSelectElement.prototype, "value"],
-                [ZB.HTMLTextAreaElement.prototype, "value"],
-                [ZB.HTMLSelectElement.prototype, "selectedIndex"],
-                [ZB.HTMLOptionElement.prototype, "selected"]
-              ].map((BB => zG(BB[0], BB[1], {
+              const UW = jW.Object.getOwnPropertyDescriptor(jW.HTMLInputElement.prototype, "value");
+              return UW && UW.set && bW.push(...[
+                [jW.HTMLInputElement.prototype, "value"],
+                [jW.HTMLInputElement.prototype, "checked"],
+                [jW.HTMLSelectElement.prototype, "value"],
+                [jW.HTMLTextAreaElement.prototype, "value"],
+                [jW.HTMLSelectElement.prototype, "selectedIndex"],
+                [jW.HTMLOptionElement.prototype, "selected"]
+              ].map((WW => AO(WW[0], WW[1], {
                 set() {
-                  rG(lB)({
+                  pO(lW)({
                     target: this,
                     isTrusted: !1
                   })
                 }
-              }, !1, ZB)))), rG((() => {
-                yG(qB)
+              }, !1, jW)))), pO((() => {
+                tO(bW)
               }))
-            }(BB))), PB("mediaInteraction", (() => function(BB) {
+            }(WW))), ZW("mediaInteraction", (() => function(WW) {
               let {
-                mediaInteractionCb: OB,
-                blockClass: GB,
-                blockSelector: YB,
-                mirror: DB,
-                sampling: QB,
-                doc: oB
-              } = BB;
-              const jB = rG((BB => PG(rG((QB => {
-                  const oB = wG(QB);
-                  if (!oB || RG(oB, GB, YB, !0)) return;
+                mediaInteractionCb: iW,
+                blockClass: OW,
+                blockSelector: mW,
+                mirror: EW,
+                sampling: NW,
+                doc: PW
+              } = WW;
+              const LW = pO((WW => lO(pO((NW => {
+                  const PW = CO(NW);
+                  if (!PW || MO(PW, OW, mW, !0)) return;
                   const {
-                    currentTime: jB,
-                    volume: yB,
-                    muted: JB,
-                    playbackRate: MB,
-                    loop: PB
-                  } = oB;
-                  OB({
-                    type: BB,
-                    id: DB.getId(oB),
-                    currentTime: jB,
-                    volume: yB,
-                    muted: JB,
-                    playbackRate: MB,
-                    loop: PB
+                    currentTime: LW,
+                    volume: cW,
+                    muted: wW,
+                    playbackRate: tW,
+                    loop: ZW
+                  } = PW;
+                  iW({
+                    type: WW,
+                    id: EW.getId(PW),
+                    currentTime: LW,
+                    volume: cW,
+                    muted: wW,
+                    playbackRate: tW,
+                    loop: ZW
                   })
-                })), QB.media || 500))),
-                yB = [QG("play", jB(zB.Play), oB), QG("pause", jB(zB.Pause), oB), QG("seeked", jB(zB.Seeked), oB), QG("volumechange", jB(zB.VolumeChange), oB), QG("ratechange", jB(zB.RateChange), oB)];
-              return rG((() => {
-                yB.forEach((BB => BB()))
+                })), NW.media || 500))),
+                cW = [LO("play", LW(xW.Play), PW), LO("pause", LW(xW.Pause), PW), LO("seeked", LW(xW.Seeked), PW), LO("volumechange", LW(xW.VolumeChange), PW), LO("ratechange", LW(xW.RateChange), PW)];
+              return pO((() => {
+                cW.forEach((WW => WW()))
               }))
-            }(BB))), BB.recordDOM) {
-            const OB = function(BB) {
-              const OB = new Map,
-                GB = new Set;
-              let YB = !0;
-              const DB = BB => {
-                  if (YB) try {
-                    BB()
-                  } catch (BB) {}
+            }(WW))), WW.recordDOM) {
+            const iW = function(WW) {
+              const iW = new Map,
+                OW = new Set;
+              let mW = !0;
+              const EW = WW => {
+                  if (mW) try {
+                    WW()
+                  } catch (WW) {}
                 },
-                QB = BB => {
-                  var GB;
-                  const YB = OB.get(BB);
-                  if (YB) {
-                    for (; null === (GB = YB[0]) || void 0 === GB ? void 0 : GB.ready;) {
-                      const BB = YB.shift();
-                      (null == BB ? void 0 : BB.emit) && DB(BB.emit)
+                NW = WW => {
+                  var OW;
+                  const mW = iW.get(WW);
+                  if (mW) {
+                    for (; null === (OW = mW[0]) || void 0 === OW ? void 0 : OW.ready;) {
+                      const WW = mW.shift();
+                      (null == WW ? void 0 : WW.emit) && EW(WW.emit)
                     }
-                    0 === YB.length && OB.delete(BB)
+                    0 === mW.length && iW.delete(WW)
                   }
                 };
               return {
-                queueMutation(BB, GB) {
-                  if (!BB) return void DB(GB);
-                  const YB = OB.get(BB);
-                  YB ? (YB.push({
-                    emit: GB,
+                queueMutation(WW, OW) {
+                  if (!WW) return void EW(OW);
+                  const mW = iW.get(WW);
+                  mW ? (mW.push({
+                    emit: OW,
                     ready: !0
-                  }), QB(BB)) : DB(GB)
+                  }), NW(WW)) : EW(OW)
                 },
-                queuePendingMutation(oB, jB, yB) {
-                  if (!YB) return () => {};
-                  let JB = OB.get(oB);
-                  JB || (JB = [], OB.set(oB, JB));
-                  const MB = {
-                    emit: jB,
+                queuePendingMutation(PW, LW, cW) {
+                  if (!mW) return () => {};
+                  let wW = iW.get(PW);
+                  wW || (wW = [], iW.set(PW, wW));
+                  const tW = {
+                    emit: LW,
                     ready: !1
                   };
-                  JB.push(MB);
-                  let PB, zB = !1,
-                    lB = !1;
-                  const pB = () => {
-                    zB || lB || (zB = !0, void 0 !== PB && GB.delete(PB), MB.ready = !0, MB.emit = void 0, QB(oB))
+                  wW.push(tW);
+                  let ZW, xW = !1,
+                    lW = !1;
+                  const AW = () => {
+                    xW || lW || (xW = !0, void 0 !== ZW && OW.delete(ZW), tW.ready = !0, tW.emit = void 0, NW(PW))
                   };
                   try {
-                    PB = BB.setTimeout(pB, 5e3), zB || lB ? BB.clearTimeout(PB) : GB.add(PB)
-                  } catch (BB) {
-                    pB()
+                    ZW = WW.setTimeout(AW, 5e3), xW || lW ? WW.clearTimeout(ZW) : OW.add(ZW)
+                  } catch (WW) {
+                    AW()
                   }
-                  return OB => {
-                    !lB && YB && (lB = !0, void 0 !== PB && (BB.clearTimeout(PB), GB.delete(PB)), zB ? OB && DB(yB) : (MB.ready = !0, OB || (MB.emit = void 0), QB(oB)))
+                  return iW => {
+                    !lW && mW && (lW = !0, void 0 !== ZW && (WW.clearTimeout(ZW), OW.delete(ZW)), xW ? iW && EW(cW) : (tW.ready = !0, iW || (tW.emit = void 0), NW(PW)))
                   }
                 },
                 reset() {
-                  YB = !1, GB.forEach((OB => BB.clearTimeout(OB))), GB.clear(), OB.clear()
+                  mW = !1, OW.forEach((iW => WW.clearTimeout(iW))), OW.clear(), iW.clear()
                 }
               }
-            }(GB);
-            oB.push(OB.reset), PB("styleSheet", (() => function(BB, OB) {
+            }(OW);
+            PW.push(iW.reset), ZW("styleSheet", (() => function(WW, iW) {
               let {
-                styleSheetRuleCb: GB,
-                mirror: YB,
-                stylesheetManager: DB
-              } = BB, {
-                win: QB,
-                mutationQueue: oB
-              } = OB;
-              if (!QB.CSSStyleSheet || !QB.CSSStyleSheet.prototype) return () => {};
-              const jB = QB.CSSStyleSheet.prototype.insertRule;
-              QB.CSSStyleSheet.prototype.insertRule = new Proxy(jB, {
-                apply: rG(((BB, OB, QB) => {
-                  const [jB] = QB, yB = BB.apply(OB, QB);
-                  DB.onCssomSheetMutation(OB);
+                styleSheetRuleCb: OW,
+                mirror: mW,
+                stylesheetManager: EW
+              } = WW, {
+                win: NW,
+                mutationQueue: PW
+              } = iW;
+              if (!NW.CSSStyleSheet || !NW.CSSStyleSheet.prototype) return () => {};
+              const LW = NW.CSSStyleSheet.prototype.insertRule;
+              NW.CSSStyleSheet.prototype.insertRule = new Proxy(LW, {
+                apply: pO(((WW, iW, NW) => {
+                  const [LW] = NW, cW = WW.apply(iW, NW);
+                  EW.onCssomSheetMutation(iW);
                   const {
-                    id: JB,
-                    styleId: MB
-                  } = bG(OB, YB, DB.styleMirror);
-                  return (JB && -1 !== JB || MB && -1 !== MB) && oB.queueMutation(OB, (() => GB({
-                    id: JB,
-                    styleId: MB,
+                    id: wW,
+                    styleId: tW
+                  } = aO(iW, mW, EW.styleMirror);
+                  return (wW && -1 !== wW || tW && -1 !== tW) && PW.queueMutation(iW, (() => OW({
+                    id: wW,
+                    styleId: tW,
                     adds: [{
-                      rule: jB,
-                      index: yB
+                      rule: LW,
+                      index: cW
                     }]
-                  }))), yB
+                  }))), cW
                 }), "host")
-              }), QB.CSSStyleSheet.prototype.addRule = function(BB, OB) {
-                let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
-                return QB.CSSStyleSheet.prototype.insertRule.apply(this, [`${BB} { ${OB} }`, GB])
+              }), NW.CSSStyleSheet.prototype.addRule = function(WW, iW) {
+                let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
+                return NW.CSSStyleSheet.prototype.insertRule.apply(this, [`${WW} { ${iW} }`, OW])
               };
-              const yB = QB.CSSStyleSheet.prototype.deleteRule;
-              let JB, MB;
-              QB.CSSStyleSheet.prototype.deleteRule = new Proxy(yB, {
-                apply: rG(((BB, OB, QB) => {
-                  const [jB] = QB, yB = BB.apply(OB, QB);
-                  DB.onCssomSheetMutation(OB);
+              const cW = NW.CSSStyleSheet.prototype.deleteRule;
+              let wW, tW;
+              NW.CSSStyleSheet.prototype.deleteRule = new Proxy(cW, {
+                apply: pO(((WW, iW, NW) => {
+                  const [LW] = NW, cW = WW.apply(iW, NW);
+                  EW.onCssomSheetMutation(iW);
                   const {
-                    id: JB,
-                    styleId: MB
-                  } = bG(OB, YB, DB.styleMirror);
-                  return (JB && -1 !== JB || MB && -1 !== MB) && oB.queueMutation(OB, (() => GB({
-                    id: JB,
-                    styleId: MB,
+                    id: wW,
+                    styleId: tW
+                  } = aO(iW, mW, EW.styleMirror);
+                  return (wW && -1 !== wW || tW && -1 !== tW) && PW.queueMutation(iW, (() => OW({
+                    id: wW,
+                    styleId: tW,
                     removes: [{
-                      index: jB
+                      index: LW
                     }]
-                  }))), yB
+                  }))), cW
                 }), "host")
-              }), QB.CSSStyleSheet.prototype.removeRule = function(BB) {
-                return QB.CSSStyleSheet.prototype.deleteRule.apply(this, [BB])
-              }, QB.CSSStyleSheet.prototype.replace && (JB = QB.CSSStyleSheet.prototype.replace, QB.CSSStyleSheet.prototype.replace = new Proxy(JB, {
-                apply: rG(((BB, OB, QB) => {
-                  const [jB] = QB, yB = BB.apply(OB, QB);
+              }), NW.CSSStyleSheet.prototype.removeRule = function(WW) {
+                return NW.CSSStyleSheet.prototype.deleteRule.apply(this, [WW])
+              }, NW.CSSStyleSheet.prototype.replace && (wW = NW.CSSStyleSheet.prototype.replace, NW.CSSStyleSheet.prototype.replace = new Proxy(wW, {
+                apply: pO(((WW, iW, NW) => {
+                  const [LW] = NW, cW = WW.apply(iW, NW);
                   try {
-                    const BB = null == yB ? void 0 : yB.then;
-                    if (OB.ownerNode || !yB || "function" != typeof BB) return yB;
-                    DB.onCssomSheetMutation(OB);
+                    const WW = null == cW ? void 0 : cW.then;
+                    if (iW.ownerNode || !cW || "function" != typeof WW) return cW;
+                    EW.onCssomSheetMutation(iW);
                     const {
-                      id: QB,
-                      styleId: JB
-                    } = bG(OB, YB, DB.styleMirror);
-                    if (!(QB && -1 !== QB || JB && -1 !== JB)) return yB;
-                    const MB = oB.queuePendingMutation(OB, (() => GB({
-                      id: QB,
-                      styleId: JB,
-                      replace: jB
+                      id: NW,
+                      styleId: wW
+                    } = aO(iW, mW, EW.styleMirror);
+                    if (!(NW && -1 !== NW || wW && -1 !== wW)) return cW;
+                    const tW = PW.queuePendingMutation(iW, (() => OW({
+                      id: NW,
+                      styleId: wW,
+                      replace: LW
                     })), (() => {
-                      const BB = PO(OB);
-                      null !== BB && GB({
-                        id: QB,
-                        styleId: JB,
-                        replace: BB
+                      const WW = Zi(iW);
+                      null !== WW && OW({
+                        id: NW,
+                        styleId: wW,
+                        replace: WW
                       })
                     }));
                     try {
-                      BB.call(yB, (() => MB(!0)), (() => MB(!1)))
-                    } catch (GB) {
-                      MB(!1)
+                      WW.call(cW, (() => tW(!0)), (() => tW(!1)))
+                    } catch (OW) {
+                      tW(!1)
                     }
-                  } catch (GB) {}
-                  return yB
+                  } catch (OW) {}
+                  return cW
                 }), "host")
-              })), QB.CSSStyleSheet.prototype.replaceSync && (MB = QB.CSSStyleSheet.prototype.replaceSync, QB.CSSStyleSheet.prototype.replaceSync = new Proxy(MB, {
-                apply: rG(((BB, OB, QB) => {
-                  const [jB] = QB, yB = BB.apply(OB, QB);
-                  DB.onCssomSheetMutation(OB);
+              })), NW.CSSStyleSheet.prototype.replaceSync && (tW = NW.CSSStyleSheet.prototype.replaceSync, NW.CSSStyleSheet.prototype.replaceSync = new Proxy(tW, {
+                apply: pO(((WW, iW, NW) => {
+                  const [LW] = NW, cW = WW.apply(iW, NW);
+                  EW.onCssomSheetMutation(iW);
                   const {
-                    id: JB,
-                    styleId: MB
-                  } = bG(OB, YB, DB.styleMirror);
-                  return (JB && -1 !== JB || MB && -1 !== MB) && oB.queueMutation(OB, (() => GB({
-                    id: JB,
-                    styleId: MB,
-                    replaceSync: jB
-                  }))), yB
+                    id: wW,
+                    styleId: tW
+                  } = aO(iW, mW, EW.styleMirror);
+                  return (wW && -1 !== wW || tW && -1 !== tW) && PW.queueMutation(iW, (() => OW({
+                    id: wW,
+                    styleId: tW,
+                    replaceSync: LW
+                  }))), cW
                 }), "host")
               }));
-              const PB = {};
-              xG("CSSGroupingRule") ? PB.CSSGroupingRule = QB.CSSGroupingRule : (xG("CSSMediaRule") && (PB.CSSMediaRule = QB.CSSMediaRule), xG("CSSConditionRule") && (PB.CSSConditionRule = QB.CSSConditionRule), xG("CSSSupportsRule") && (PB.CSSSupportsRule = QB.CSSSupportsRule));
-              const zB = {};
-              return Object.entries(PB).forEach((BB => {
-                let [OB, QB] = BB;
-                zB[OB] = {
-                  insertRule: QB.prototype.insertRule,
-                  deleteRule: QB.prototype.deleteRule
-                }, QB.prototype.insertRule = new Proxy(zB[OB].insertRule, {
-                  apply: rG(((BB, OB, QB) => {
-                    const [jB] = QB, yB = BB.apply(OB, QB);
-                    DB.onCssomSheetMutation(OB.parentStyleSheet);
+              const ZW = {};
+              Wm("CSSGroupingRule") ? ZW.CSSGroupingRule = NW.CSSGroupingRule : (Wm("CSSMediaRule") && (ZW.CSSMediaRule = NW.CSSMediaRule), Wm("CSSConditionRule") && (ZW.CSSConditionRule = NW.CSSConditionRule), Wm("CSSSupportsRule") && (ZW.CSSSupportsRule = NW.CSSSupportsRule));
+              const xW = {};
+              return Object.entries(ZW).forEach((WW => {
+                let [iW, NW] = WW;
+                xW[iW] = {
+                  insertRule: NW.prototype.insertRule,
+                  deleteRule: NW.prototype.deleteRule
+                }, NW.prototype.insertRule = new Proxy(xW[iW].insertRule, {
+                  apply: pO(((WW, iW, NW) => {
+                    const [LW] = NW, cW = WW.apply(iW, NW);
+                    EW.onCssomSheetMutation(iW.parentStyleSheet);
                     const {
-                      id: JB,
-                      styleId: MB
-                    } = bG(OB.parentStyleSheet, YB, DB.styleMirror);
-                    if (OB.parentStyleSheet && (JB && -1 !== JB || MB && -1 !== MB)) {
-                      const BB = [...TG(OB), yB];
-                      oB.queueMutation(OB.parentStyleSheet, (() => GB({
-                        id: JB,
-                        styleId: MB,
+                      id: wW,
+                      styleId: tW
+                    } = aO(iW.parentStyleSheet, mW, EW.styleMirror);
+                    if (iW.parentStyleSheet && (wW && -1 !== wW || tW && -1 !== tW)) {
+                      const WW = [...IO(iW), cW];
+                      PW.queueMutation(iW.parentStyleSheet, (() => OW({
+                        id: wW,
+                        styleId: tW,
                         adds: [{
-                          rule: jB,
-                          index: BB
+                          rule: LW,
+                          index: WW
                         }]
                       })))
                     }
-                    return yB
+                    return cW
                   }), "host")
-                }), QB.prototype.deleteRule = new Proxy(zB[OB].deleteRule, {
-                  apply: rG(((BB, OB, QB) => {
-                    const [jB] = QB, yB = BB.apply(OB, QB);
-                    DB.onCssomSheetMutation(OB.parentStyleSheet);
+                }), NW.prototype.deleteRule = new Proxy(xW[iW].deleteRule, {
+                  apply: pO(((WW, iW, NW) => {
+                    const [LW] = NW, cW = WW.apply(iW, NW);
+                    EW.onCssomSheetMutation(iW.parentStyleSheet);
                     const {
-                      id: JB,
-                      styleId: MB
-                    } = bG(OB.parentStyleSheet, YB, DB.styleMirror);
-                    if (OB.parentStyleSheet && (JB && -1 !== JB || MB && -1 !== MB)) {
-                      const BB = [...TG(OB), jB];
-                      oB.queueMutation(OB.parentStyleSheet, (() => GB({
-                        id: JB,
-                        styleId: MB,
+                      id: wW,
+                      styleId: tW
+                    } = aO(iW.parentStyleSheet, mW, EW.styleMirror);
+                    if (iW.parentStyleSheet && (wW && -1 !== wW || tW && -1 !== tW)) {
+                      const WW = [...IO(iW), LW];
+                      PW.queueMutation(iW.parentStyleSheet, (() => OW({
+                        id: wW,
+                        styleId: tW,
                         removes: [{
-                          index: BB
+                          index: WW
                         }]
                       })))
                     }
-                    return yB
+                    return cW
                   }), "host")
                 })
-              })), rG((() => {
-                QB.CSSStyleSheet.prototype.insertRule = jB, QB.CSSStyleSheet.prototype.deleteRule = yB, JB && (QB.CSSStyleSheet.prototype.replace = JB), MB && (QB.CSSStyleSheet.prototype.replaceSync = MB), Object.entries(PB).forEach((BB => {
-                  let [OB, GB] = BB;
-                  GB.prototype.insertRule = zB[OB].insertRule, GB.prototype.deleteRule = zB[OB].deleteRule
+              })), pO((() => {
+                NW.CSSStyleSheet.prototype.insertRule = LW, NW.CSSStyleSheet.prototype.deleteRule = cW, wW && (NW.CSSStyleSheet.prototype.replace = wW), tW && (NW.CSSStyleSheet.prototype.replaceSync = tW), Object.entries(ZW).forEach((WW => {
+                  let [iW, OW] = WW;
+                  OW.prototype.insertRule = xW[iW].insertRule, OW.prototype.deleteRule = xW[iW].deleteRule
                 }))
               }))
-            }(BB, {
-              win: GB,
-              mutationQueue: OB
-            }))), PB("adoptedStyleSheet", (() => CG(BB, BB.doc))), PB("styleDeclaration", (() => function(BB, OB) {
+            }(WW, {
+              win: OW,
+              mutationQueue: iW
+            }))), ZW("adoptedStyleSheet", (() => rO(WW, WW.doc))), ZW("styleDeclaration", (() => function(WW, iW) {
               let {
-                styleDeclarationCb: GB,
-                mirror: YB,
-                ignoreCSSAttributes: DB,
-                stylesheetManager: QB
-              } = BB, {
-                win: oB,
-                mutationQueue: jB
-              } = OB;
-              const yB = oB.CSSStyleDeclaration.prototype.setProperty;
-              oB.CSSStyleDeclaration.prototype.setProperty = new Proxy(yB, {
-                apply: rG(((BB, OB, oB) => {
-                  var yB;
-                  const [JB, MB, PB] = oB, zB = BB.apply(OB, oB);
-                  if (DB.has(JB)) return zB;
-                  const lB = null === (yB = OB.parentRule) || void 0 === yB ? void 0 : yB.parentStyleSheet;
-                  QB.onCssomSheetMutation(lB);
+                styleDeclarationCb: OW,
+                mirror: mW,
+                ignoreCSSAttributes: EW,
+                stylesheetManager: NW
+              } = WW, {
+                win: PW,
+                mutationQueue: LW
+              } = iW;
+              const cW = PW.CSSStyleDeclaration.prototype.setProperty;
+              PW.CSSStyleDeclaration.prototype.setProperty = new Proxy(cW, {
+                apply: pO(((WW, iW, PW) => {
+                  var cW;
+                  const [wW, tW, ZW] = PW, xW = WW.apply(iW, PW);
+                  if (EW.has(wW)) return xW;
+                  const lW = null === (cW = iW.parentRule) || void 0 === cW ? void 0 : cW.parentStyleSheet;
+                  NW.onCssomSheetMutation(lW);
                   const {
-                    id: pB,
-                    styleId: qB
-                  } = bG(lB, YB, QB.styleMirror);
-                  if (pB && -1 !== pB || qB && -1 !== qB) {
-                    const BB = TG(OB.parentRule);
-                    jB.queueMutation(lB, (() => GB({
-                      id: pB,
-                      styleId: qB,
+                    id: AW,
+                    styleId: bW
+                  } = aO(lW, mW, NW.styleMirror);
+                  if (AW && -1 !== AW || bW && -1 !== bW) {
+                    const WW = IO(iW.parentRule);
+                    LW.queueMutation(lW, (() => OW({
+                      id: AW,
+                      styleId: bW,
                       set: {
-                        property: JB,
-                        value: MB,
-                        priority: PB
+                        property: wW,
+                        value: tW,
+                        priority: ZW
                       },
-                      index: BB
+                      index: WW
                     })))
                   }
-                  return zB
+                  return xW
                 }), "host")
               });
-              const JB = oB.CSSStyleDeclaration.prototype.removeProperty;
-              return oB.CSSStyleDeclaration.prototype.removeProperty = new Proxy(JB, {
-                apply: rG(((BB, OB, oB) => {
-                  var yB;
-                  const [JB] = oB, MB = BB.apply(OB, oB);
-                  if (DB.has(JB)) return MB;
-                  const PB = null === (yB = OB.parentRule) || void 0 === yB ? void 0 : yB.parentStyleSheet;
-                  QB.onCssomSheetMutation(PB);
+              const wW = PW.CSSStyleDeclaration.prototype.removeProperty;
+              return PW.CSSStyleDeclaration.prototype.removeProperty = new Proxy(wW, {
+                apply: pO(((WW, iW, PW) => {
+                  var cW;
+                  const [wW] = PW, tW = WW.apply(iW, PW);
+                  if (EW.has(wW)) return tW;
+                  const ZW = null === (cW = iW.parentRule) || void 0 === cW ? void 0 : cW.parentStyleSheet;
+                  NW.onCssomSheetMutation(ZW);
                   const {
-                    id: zB,
-                    styleId: lB
-                  } = bG(PB, YB, QB.styleMirror);
-                  if (zB && -1 !== zB || lB && -1 !== lB) {
-                    const BB = TG(OB.parentRule);
-                    jB.queueMutation(PB, (() => GB({
-                      id: zB,
-                      styleId: lB,
+                    id: xW,
+                    styleId: lW
+                  } = aO(ZW, mW, NW.styleMirror);
+                  if (xW && -1 !== xW || lW && -1 !== lW) {
+                    const WW = IO(iW.parentRule);
+                    LW.queueMutation(ZW, (() => OW({
+                      id: xW,
+                      styleId: lW,
                       remove: {
-                        property: JB
+                        property: wW
                       },
-                      index: BB
+                      index: WW
                     })))
                   }
-                  return MB
+                  return tW
                 }), "host")
-              }), rG((() => {
-                oB.CSSStyleDeclaration.prototype.setProperty = yB, oB.CSSStyleDeclaration.prototype.removeProperty = JB
+              }), pO((() => {
+                PW.CSSStyleDeclaration.prototype.setProperty = cW, PW.CSSStyleDeclaration.prototype.removeProperty = wW
               }))
-            }(BB, {
-              win: GB,
-              mutationQueue: OB
-            }))), BB.collectFonts && PB("font", (() => function(BB) {
+            }(WW, {
+              win: OW,
+              mutationQueue: iW
+            }))), WW.collectFonts && ZW("font", (() => function(WW) {
               let {
-                fontCb: OB,
-                doc: GB
-              } = BB;
-              const YB = GB.defaultView;
-              if (!YB) return () => {};
-              const DB = [],
-                QB = new WeakMap,
-                oB = YB.FontFace;
-              YB.FontFace = function(BB, OB, GB) {
-                const YB = new oB(BB, OB, GB);
-                return QB.set(YB, {
-                  family: BB,
-                  buffer: "string" != typeof OB,
-                  descriptors: GB,
-                  fontSource: "string" == typeof OB ? OB : JSON.stringify(Array.from(new Uint8Array(OB)))
-                }), YB
+                fontCb: iW,
+                doc: OW
+              } = WW;
+              const mW = OW.defaultView;
+              if (!mW) return () => {};
+              const EW = [],
+                NW = new WeakMap,
+                PW = mW.FontFace;
+              mW.FontFace = function(WW, iW, OW) {
+                const mW = new PW(WW, iW, OW);
+                return NW.set(mW, {
+                  family: WW,
+                  buffer: "string" != typeof iW,
+                  descriptors: OW,
+                  fontSource: "string" == typeof iW ? iW : JSON.stringify(Array.from(new Uint8Array(iW)))
+                }), mW
               };
-              const jB = kB(GB.fonts, "add", (function(BB) {
-                return function(GB) {
-                  return setTimeout(rG((() => {
-                    const BB = QB.get(GB);
-                    BB && (OB(BB), QB.delete(GB))
-                  })), 0), BB.apply(this, [GB])
+              const LW = JW(OW.fonts, "add", (function(WW) {
+                return function(OW) {
+                  return setTimeout(pO((() => {
+                    const WW = NW.get(OW);
+                    WW && (iW(WW), NW.delete(OW))
+                  })), 0), WW.apply(this, [OW])
                 }
               }));
-              return DB.push((() => {
-                YB.FontFace = oB
-              })), DB.push(jB), rG((() => {
-                DB.forEach((BB => BB()))
+              return EW.push((() => {
+                mW.FontFace = PW
+              })), EW.push(LW), pO((() => {
+                EW.forEach((WW => WW()))
               }))
-            }(BB)))
+            }(WW)))
           }
-          PB("selection", (() => function(BB) {
+          ZW("selection", (() => function(WW) {
             const {
-              doc: OB,
-              mirror: GB,
-              blockClass: YB,
-              blockSelector: DB,
-              selectionCb: QB
-            } = BB;
-            let oB = !0;
-            const jB = rG((() => {
-              const BB = OB.getSelection();
-              if (!BB || oB && (null == BB ? void 0 : BB.isCollapsed)) return;
-              oB = BB.isCollapsed || !1;
-              const jB = [],
-                yB = BB.rangeCount || 0;
-              for (let OB = 0; yB > OB; OB++) {
+              doc: iW,
+              mirror: OW,
+              blockClass: mW,
+              blockSelector: EW,
+              selectionCb: NW
+            } = WW;
+            let PW = !0;
+            const LW = pO((() => {
+              const WW = iW.getSelection();
+              if (!WW || PW && (null == WW ? void 0 : WW.isCollapsed)) return;
+              PW = WW.isCollapsed || !1;
+              const LW = [],
+                cW = WW.rangeCount || 0;
+              for (let iW = 0; cW > iW; iW++) {
                 const {
-                  startContainer: QB,
-                  startOffset: oB,
-                  endContainer: yB,
-                  endOffset: JB
-                } = BB.getRangeAt(OB);
-                RG(QB, YB, DB, !0) || RG(yB, YB, DB, !0) || jB.push({
-                  start: GB.getId(QB),
-                  startOffset: oB,
-                  end: GB.getId(yB),
-                  endOffset: JB
+                  startContainer: NW,
+                  startOffset: PW,
+                  endContainer: cW,
+                  endOffset: wW
+                } = WW.getRangeAt(iW);
+                MO(NW, mW, EW, !0) || MO(cW, mW, EW, !0) || LW.push({
+                  start: OW.getId(NW),
+                  startOffset: PW,
+                  end: OW.getId(cW),
+                  endOffset: wW
                 })
               }
-              QB({
-                JZ: jB
+              NW({
+                kj: LW
               })
             }));
-            return jB(), QG("selectionchange", jB)
-          }(BB))), PB("customElement", (() => function(BB) {
+            return LW(), LO("selectionchange", LW)
+          }(WW))), ZW("customElement", (() => function(WW) {
             let {
-              doc: OB,
-              customElementCb: GB
-            } = BB;
-            const YB = OB.defaultView;
-            return YB && YB.customElements ? kB(YB.customElements, "define", (function(BB) {
-              return function(OB, YB, DB) {
+              doc: iW,
+              customElementCb: OW
+            } = WW;
+            const mW = iW.defaultView;
+            return mW && mW.customElements ? JW(mW.customElements, "define", (function(WW) {
+              return function(iW, mW, EW) {
                 try {
-                  GB({
+                  OW({
                     define: {
-                      name: OB
+                      name: iW
                     }
                   })
-                } catch (BB) {
-                  console.warn(`Custom element callback failed for ${OB}`)
+                } catch (WW) {
+                  console.warn(`Custom element callback failed for ${iW}`)
                 }
-                return BB.apply(this, [OB, YB, DB])
+                return WW.apply(this, [iW, mW, EW])
               }
             })) : () => {}
-          }(BB)));
-          for (const OB of BB.plugins) PB(`plugin:${OB.name}`, (() => OB.observer(OB.callback, GB, OB.options)))
-        } catch (BB) {
+          }(WW)));
+          for (const iW of WW.plugins) ZW(`plugin:${iW.name}`, (() => iW.observer(iW.callback, OW, iW.options)))
+        } catch (WW) {
           try {
-            jB()
-          } catch (BB) {}
-          throw BB
+            LW()
+          } catch (WW) {}
+          throw WW
         }
-        return jB
+        return LW
       }
 
-      function sG(BB) {
-        return void 0 !== window[BB]
+      function QO(WW) {
+        return void 0 !== window[WW]
       }
 
-      function xG(BB) {
-        return Boolean(void 0 !== window[BB] && window[BB].prototype && "insertRule" in window[BB].prototype && "deleteRule" in window[BB].prototype)
+      function Wm(WW) {
+        return Boolean(void 0 !== window[WW] && window[WW].prototype && "insertRule" in window[WW].prototype && "deleteRule" in window[WW].prototype)
       }
-      var tG = class {
-          constructor(BB) {
-            DO(this, "generateIdFn", void 0), DO(this, "iframeRemoteIdToLocalIdMap", new WeakMap), DO(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = BB
+      var im = class {
+          constructor(WW) {
+            Ei(this, "generateIdFn", void 0), Ei(this, "iframeRemoteIdToLocalIdMap", new WeakMap), Ei(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = WW
           }
-          getId(BB, OB, GB, YB) {
-            if (0 > OB) return OB;
-            const DB = GB || this.getRemoteIdToLocalIdMap(BB),
-              QB = YB || this.getLocalIdToRemoteIdMap(BB);
-            let oB = DB.get(OB);
-            return void 0 === oB && (oB = this.generateIdFn(), DB.set(OB, oB), QB.set(oB, OB)), oB
+          getId(WW, iW, OW, mW) {
+            if (0 > iW) return iW;
+            const EW = OW || this.getRemoteIdToLocalIdMap(WW),
+              NW = mW || this.getLocalIdToRemoteIdMap(WW);
+            let PW = EW.get(iW);
+            return void 0 === PW && (PW = this.generateIdFn(), EW.set(iW, PW), NW.set(PW, iW)), PW
           }
-          getIds(BB, OB) {
-            const GB = this.getRemoteIdToLocalIdMap(BB),
-              YB = this.getLocalIdToRemoteIdMap(BB);
-            return OB.map((OB => this.getId(BB, OB, GB, YB)))
+          getIds(WW, iW) {
+            const OW = this.getRemoteIdToLocalIdMap(WW),
+              mW = this.getLocalIdToRemoteIdMap(WW);
+            return iW.map((iW => this.getId(WW, iW, OW, mW)))
           }
-          getRemoteId(BB, OB, GB) {
-            var YB;
-            return "number" != typeof OB || 0 > OB ? OB : null !== (YB = (GB || this.getLocalIdToRemoteIdMap(BB)).get(OB)) && void 0 !== YB ? YB : -1
+          getRemoteId(WW, iW, OW) {
+            var mW;
+            return "number" != typeof iW || 0 > iW ? iW : null !== (mW = (OW || this.getLocalIdToRemoteIdMap(WW)).get(iW)) && void 0 !== mW ? mW : -1
           }
-          getRemoteIds(BB, OB) {
-            const GB = this.getLocalIdToRemoteIdMap(BB);
-            return OB.map((OB => this.getRemoteId(BB, OB, GB)))
+          getRemoteIds(WW, iW) {
+            const OW = this.getLocalIdToRemoteIdMap(WW);
+            return iW.map((iW => this.getRemoteId(WW, iW, OW)))
           }
-          reset(BB) {
-            if (!BB) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
-            this.iframeRemoteIdToLocalIdMap.delete(BB), this.iframeLocalIdToRemoteIdMap.delete(BB)
+          reset(WW) {
+            if (!WW) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
+            this.iframeRemoteIdToLocalIdMap.delete(WW), this.iframeLocalIdToRemoteIdMap.delete(WW)
           }
-          getRemoteIdToLocalIdMap(BB) {
-            let OB = this.iframeRemoteIdToLocalIdMap.get(BB);
-            return OB || (OB = new Map, this.iframeRemoteIdToLocalIdMap.set(BB, OB)), OB
+          getRemoteIdToLocalIdMap(WW) {
+            let iW = this.iframeRemoteIdToLocalIdMap.get(WW);
+            return iW || (iW = new Map, this.iframeRemoteIdToLocalIdMap.set(WW, iW)), iW
           }
-          getLocalIdToRemoteIdMap(BB) {
-            let OB = this.iframeLocalIdToRemoteIdMap.get(BB);
-            return OB || (OB = new Map, this.iframeLocalIdToRemoteIdMap.set(BB, OB)), OB
+          getLocalIdToRemoteIdMap(WW) {
+            let iW = this.iframeLocalIdToRemoteIdMap.get(WW);
+            return iW || (iW = new Map, this.iframeLocalIdToRemoteIdMap.set(WW, iW)), iW
           }
         },
-        BY = class {
-          constructor(BB) {
-            DO(this, "iframes", new WeakMap), DO(this, "crossOriginIframeMap", new WeakMap), DO(this, "crossOriginIframeMirror", new tG(gO)), DO(this, "crossOriginIframeStyleMirror", void 0), DO(this, "crossOriginIframeRootIdMap", new WeakMap), DO(this, "mirror", void 0), DO(this, "mutationCb", void 0), DO(this, "wrappedEmit", void 0), DO(this, "loadListener", void 0), DO(this, "pageHideListener", void 0), DO(this, "stylesheetManager", void 0), DO(this, "recordCrossOriginIframes", void 0), DO(this, "messageHandler", void 0), DO(this, "nestedIframeListeners", new Map), DO(this, "attachedWindows", new WeakMap), DO(this, "attachedDocuments", new WeakMap), DO(this, "attachedIframes", new Map), DO(this, "loadListenerDisposers", new WeakMap), DO(this, "iframeElementsById", new Map), DO(this, "pageHideHandlers", new WeakMap), this.mutationCb = BB.mutationCb, this.wrappedEmit = BB.wrappedEmit, this.stylesheetManager = BB.stylesheetManager, this.recordCrossOriginIframes = BB.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new tG(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = BB.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
+        Om = class {
+          constructor(WW) {
+            Ei(this, "iframes", new WeakMap), Ei(this, "crossOriginIframeMap", new WeakMap), Ei(this, "crossOriginIframeMirror", new im(Di)), Ei(this, "crossOriginIframeStyleMirror", void 0), Ei(this, "crossOriginIframeRootIdMap", new WeakMap), Ei(this, "mirror", void 0), Ei(this, "mutationCb", void 0), Ei(this, "wrappedEmit", void 0), Ei(this, "loadListener", void 0), Ei(this, "pageHideListener", void 0), Ei(this, "stylesheetManager", void 0), Ei(this, "recordCrossOriginIframes", void 0), Ei(this, "messageHandler", void 0), Ei(this, "nestedIframeListeners", new Map), Ei(this, "attachedWindows", new WeakMap), Ei(this, "attachedDocuments", new WeakMap), Ei(this, "attachedIframes", new Map), Ei(this, "loadListenerDisposers", new WeakMap), Ei(this, "iframeElementsById", new Map), Ei(this, "pageHideHandlers", new WeakMap), this.mutationCb = WW.mutationCb, this.wrappedEmit = WW.wrappedEmit, this.stylesheetManager = WW.stylesheetManager, this.recordCrossOriginIframes = WW.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new im(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = WW.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
           }
-          addIframe(BB) {
-            this.iframes.set(BB, !0), BB.contentWindow && this.crossOriginIframeMap.set(BB.contentWindow, BB)
+          addIframe(WW) {
+            this.iframes.set(WW, !0), WW.contentWindow && this.crossOriginIframeMap.set(WW.contentWindow, WW)
           }
-          registerLoadListenerDisposer(BB, OB) {
-            let GB = this.loadListenerDisposers.get(BB);
-            GB || (GB = new Set, this.loadListenerDisposers.set(BB, GB)), GB.add(OB);
-            const YB = this.mirror.getId(BB); - 1 !== YB && this.iframeElementsById.set(YB, BB)
+          registerLoadListenerDisposer(WW, iW) {
+            let OW = this.loadListenerDisposers.get(WW);
+            OW || (OW = new Set, this.loadListenerDisposers.set(WW, OW)), OW.add(iW);
+            const mW = this.mirror.getId(WW); - 1 !== mW && this.iframeElementsById.set(mW, WW)
           }
-          getIframeElementById(BB) {
-            var OB, GB, YB;
-            return null !== (OB = null !== (GB = null === (YB = this.attachedIframes.get(BB)) || void 0 === YB ? void 0 : YB.element) && void 0 !== GB ? GB : this.iframeElementsById.get(BB)) && void 0 !== OB ? OB : null
+          getIframeElementById(WW) {
+            var iW, OW, mW;
+            return null !== (iW = null !== (OW = null === (mW = this.attachedIframes.get(WW)) || void 0 === mW ? void 0 : mW.element) && void 0 !== OW ? OW : this.iframeElementsById.get(WW)) && void 0 !== iW ? iW : null
           }
-          forgetIframeId(BB) {
-            this.attachedIframes.delete(BB), this.iframeElementsById.delete(BB)
+          forgetIframeId(WW) {
+            this.attachedIframes.delete(WW), this.iframeElementsById.delete(WW)
           }
-          disposeLoadListeners(BB) {
-            const OB = this.loadListenerDisposers.get(BB);
-            OB && (OB.forEach((BB => jG(BB))), this.loadListenerDisposers.delete(BB))
+          disposeLoadListeners(WW) {
+            const iW = this.loadListenerDisposers.get(WW);
+            iW && (iW.forEach((WW => wO(WW))), this.loadListenerDisposers.delete(WW))
           }
-          removePageHideListener(BB) {
-            const OB = this.pageHideHandlers.get(BB);
-            OB && (OB.forEach((BB => {
+          removePageHideListener(WW) {
+            const iW = this.pageHideHandlers.get(WW);
+            iW && (iW.forEach((WW => {
               let {
-                win: OB,
-                handler: GB
-              } = BB;
-              oG(OB, "pagehide", GB)
-            })), this.pageHideHandlers.delete(BB))
+                win: iW,
+                handler: OW
+              } = WW;
+              cO(iW, "pagehide", OW)
+            })), this.pageHideHandlers.delete(WW))
           }
-          addLoadListener(BB) {
-            this.loadListener = BB
+          addLoadListener(WW) {
+            this.loadListener = WW
           }
-          addPageHideListener(BB) {
-            this.pageHideListener = BB
+          addPageHideListener(WW) {
+            this.pageHideListener = WW
           }
           removeLoadListener() {
             this.loadListener = void 0
           }
-          trackIframeContent(BB, OB) {
-            const GB = this.mirror.getId(BB);
-            return this.attachedIframes.set(GB, {
-              element: BB,
-              content: OB
-            }), GB
+          trackIframeContent(WW, iW) {
+            const OW = this.mirror.getId(WW);
+            return this.attachedIframes.set(OW, {
+              element: WW,
+              content: iW
+            }), OW
           }
-          attachIframe(BB, OB) {
-            var GB;
-            const YB = this.trackIframeContent(BB, OB);
-            if (BB.contentDocument) {
-              let OB = this.attachedDocuments.get(BB);
-              OB || (OB = new Set, this.attachedDocuments.set(BB, OB)), OB.add(BB.contentDocument)
+          attachIframe(WW, iW) {
+            var OW;
+            const mW = this.trackIframeContent(WW, iW);
+            if (WW.contentDocument) {
+              let iW = this.attachedDocuments.get(WW);
+              iW || (iW = new Set, this.attachedDocuments.set(WW, iW)), iW.add(WW.contentDocument)
             }
             this.mutationCb({
               adds: [{
-                parentId: YB,
+                parentId: mW,
                 nextId: null,
-                node: OB
+                node: iW
               }],
               removes: [],
               texts: [],
               attributes: [],
               isAttachIframe: !0
             });
-            const DB = BB.contentWindow;
-            if (this.recordCrossOriginIframes && DB && !this.nestedIframeListeners.has(DB)) {
-              const OB = this.handleMessage.bind(this);
-              jG((() => {
-                DB.addEventListener("message", OB), this.nestedIframeListeners.set(DB, OB);
-                let GB = this.attachedWindows.get(BB);
-                GB || (GB = new Set, this.attachedWindows.set(BB, GB)), GB.add(DB)
+            const EW = WW.contentWindow;
+            if (this.recordCrossOriginIframes && EW && !this.nestedIframeListeners.has(EW)) {
+              const iW = this.handleMessage.bind(this);
+              wO((() => {
+                EW.addEventListener("message", iW), this.nestedIframeListeners.set(EW, iW);
+                let OW = this.attachedWindows.get(WW);
+                OW || (OW = new Set, this.attachedWindows.set(WW, OW)), OW.add(EW)
               }))
             }
-            jG((() => {
-              const OB = BB.contentWindow;
-              if (!OB) return;
-              let GB = this.pageHideHandlers.get(BB);
-              if (GB)
-                for (const BB of GB)
-                  if (BB.win === OB) return;
-              const YB = () => {
-                var OB;
-                null === (OB = this.pageHideListener) || void 0 === OB || OB.call(this, BB), BB.contentDocument && this.mirror.removeNodeFromMap(BB.contentDocument)
+            wO((() => {
+              const iW = WW.contentWindow;
+              if (!iW) return;
+              let OW = this.pageHideHandlers.get(WW);
+              if (OW)
+                for (const WW of OW)
+                  if (WW.win === iW) return;
+              const mW = () => {
+                var iW;
+                null === (iW = this.pageHideListener) || void 0 === iW || iW.call(this, WW), WW.contentDocument && this.mirror.removeNodeFromMap(WW.contentDocument)
               };
-              OB.addEventListener("pagehide", YB), GB || (GB = new Set, this.pageHideHandlers.set(BB, GB)), GB.add({
-                win: OB,
-                handler: YB
+              iW.addEventListener("pagehide", mW), OW || (OW = new Set, this.pageHideHandlers.set(WW, OW)), OW.add({
+                win: iW,
+                handler: mW
               })
-            })), null === (GB = this.loadListener) || void 0 === GB || GB.call(this, BB), BB.contentDocument && BB.contentDocument.adoptedStyleSheets && BB.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(BB.contentDocument.adoptedStyleSheets, this.mirror.getId(BB.contentDocument))
+            })), null === (OW = this.loadListener) || void 0 === OW || OW.call(this, WW), WW.contentDocument && WW.contentDocument.adoptedStyleSheets && WW.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(WW.contentDocument.adoptedStyleSheets, this.mirror.getId(WW.contentDocument))
           }
-          handleMessage(BB) {
-            const OB = BB;
-            if ("rrweb" !== OB.data.type || OB.origin !== OB.data.origin) return;
-            if (!BB.source) return;
-            const GB = this.crossOriginIframeMap.get(BB.source);
-            if (!GB) return;
-            const YB = this.transformCrossOriginEvent(GB, OB.data.event);
-            YB && this.wrappedEmit(YB, OB.data.isCheckout)
+          handleMessage(WW) {
+            const iW = WW;
+            if ("rrweb" !== iW.data.type || iW.origin !== iW.data.origin) return;
+            if (!WW.source) return;
+            const OW = this.crossOriginIframeMap.get(WW.source);
+            if (!OW) return;
+            const mW = this.transformCrossOriginEvent(OW, iW.data.event);
+            mW && this.wrappedEmit(mW, iW.data.isCheckout)
           }
-          transformCrossOriginEvent(BB, OB) {
-            switch (OB.type) {
-              case jB.FullSnapshot: {
-                this.crossOriginIframeMirror.reset(BB), this.crossOriginIframeStyleMirror.reset(BB), this.replaceIdOnNode(OB.data.node, BB);
-                const GB = OB.data.node.id;
-                return this.crossOriginIframeRootIdMap.set(BB, GB), this.patchRootIdOnNode(OB.data.node, GB), this.trackIframeContent(BB, OB.data.node), {
-                  timestamp: OB.timestamp,
-                  type: jB.IncrementalSnapshot,
+          transformCrossOriginEvent(WW, iW) {
+            switch (iW.type) {
+              case LW.FullSnapshot: {
+                this.crossOriginIframeMirror.reset(WW), this.crossOriginIframeStyleMirror.reset(WW), this.replaceIdOnNode(iW.data.node, WW);
+                const OW = iW.data.node.id;
+                return this.crossOriginIframeRootIdMap.set(WW, OW), this.patchRootIdOnNode(iW.data.node, OW), this.trackIframeContent(WW, iW.data.node), {
+                  timestamp: iW.timestamp,
+                  type: LW.IncrementalSnapshot,
                   data: {
-                    source: yB.Mutation,
+                    source: cW.Mutation,
                     adds: [{
-                      parentId: this.mirror.getId(BB),
+                      parentId: this.mirror.getId(WW),
                       nextId: null,
-                      node: OB.data.node
+                      node: iW.data.node
                     }],
                     removes: [],
                     texts: [],
@@ -3013,436 +3013,436 @@ export const modules = {
                   }
                 }
               }
-              case jB.Meta:
-              case jB.Load:
-              case jB.DomContentLoaded:
+              case LW.Meta:
+              case LW.Load:
+              case LW.DomContentLoaded:
                 return !1;
-              case jB.Plugin:
-                return OB;
-              case jB.Custom:
-                return this.replaceIds(OB.data.payload, BB, ["id", "parentId", "previousId", "nextId"]), OB;
-              case jB.IncrementalSnapshot:
-                switch (OB.data.source) {
-                  case yB.Mutation:
-                    return OB.data.adds.forEach((OB => {
-                      this.replaceIds(OB, BB, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(OB.node, BB);
-                      const GB = this.crossOriginIframeRootIdMap.get(BB);
-                      GB && this.patchRootIdOnNode(OB.node, GB)
-                    })), OB.data.removes.forEach((OB => {
-                      this.replaceIds(OB, BB, ["parentId", "id"])
-                    })), OB.data.attributes.forEach((OB => {
-                      this.replaceIds(OB, BB, ["id"])
-                    })), OB.data.texts.forEach((OB => {
-                      this.replaceIds(OB, BB, ["id"])
-                    })), OB;
-                  case yB.Drag:
-                  case yB.TouchMove:
-                  case yB.MouseMove:
-                    return OB.data.positions.forEach((OB => {
-                      this.replaceIds(OB, BB, ["id"])
-                    })), OB;
-                  case yB.ViewportResize:
+              case LW.Plugin:
+                return iW;
+              case LW.Custom:
+                return this.replaceIds(iW.data.payload, WW, ["id", "parentId", "previousId", "nextId"]), iW;
+              case LW.IncrementalSnapshot:
+                switch (iW.data.source) {
+                  case cW.Mutation:
+                    return iW.data.adds.forEach((iW => {
+                      this.replaceIds(iW, WW, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(iW.node, WW);
+                      const OW = this.crossOriginIframeRootIdMap.get(WW);
+                      OW && this.patchRootIdOnNode(iW.node, OW)
+                    })), iW.data.removes.forEach((iW => {
+                      this.replaceIds(iW, WW, ["parentId", "id"])
+                    })), iW.data.attributes.forEach((iW => {
+                      this.replaceIds(iW, WW, ["id"])
+                    })), iW.data.texts.forEach((iW => {
+                      this.replaceIds(iW, WW, ["id"])
+                    })), iW;
+                  case cW.Drag:
+                  case cW.TouchMove:
+                  case cW.MouseMove:
+                    return iW.data.positions.forEach((iW => {
+                      this.replaceIds(iW, WW, ["id"])
+                    })), iW;
+                  case cW.ViewportResize:
                     return !1;
-                  case yB.MediaInteraction:
-                  case yB.MouseInteraction:
-                  case yB.Scroll:
-                  case yB.CanvasMutation:
-                  case yB.Input:
-                    return this.replaceIds(OB.data, BB, ["id"]), OB;
-                  case yB.StyleSheetRule:
-                  case yB.StyleDeclaration:
-                    return this.replaceIds(OB.data, BB, ["id"]), this.replaceStyleIds(OB.data, BB, ["styleId"]), OB;
-                  case yB.Font:
-                    return OB;
-                  case yB.Selection:
-                    return OB.data.JZ.forEach((OB => {
-                      this.replaceIds(OB, BB, ["start", "end"])
-                    })), OB;
-                  case yB.AdoptedStyleSheet:
-                    var GB;
-                    return this.replaceIds(OB.data, BB, ["id"]), this.replaceStyleIds(OB.data, BB, ["styleIds"]), null === (GB = OB.data.styles) || void 0 === GB || GB.forEach((OB => {
-                      this.replaceStyleIds(OB, BB, ["styleId"])
-                    })), OB
+                  case cW.MediaInteraction:
+                  case cW.MouseInteraction:
+                  case cW.Scroll:
+                  case cW.CanvasMutation:
+                  case cW.Input:
+                    return this.replaceIds(iW.data, WW, ["id"]), iW;
+                  case cW.StyleSheetRule:
+                  case cW.StyleDeclaration:
+                    return this.replaceIds(iW.data, WW, ["id"]), this.replaceStyleIds(iW.data, WW, ["styleId"]), iW;
+                  case cW.Font:
+                    return iW;
+                  case cW.Selection:
+                    return iW.data.kj.forEach((iW => {
+                      this.replaceIds(iW, WW, ["start", "end"])
+                    })), iW;
+                  case cW.AdoptedStyleSheet:
+                    var OW;
+                    return this.replaceIds(iW.data, WW, ["id"]), this.replaceStyleIds(iW.data, WW, ["styleIds"]), null === (OW = iW.data.styles) || void 0 === OW || OW.forEach((iW => {
+                      this.replaceStyleIds(iW, WW, ["styleId"])
+                    })), iW
                 }
             }
             return !1
           }
-          replace(BB, OB, GB, YB) {
-            for (const DB of YB)(Array.isArray(OB[DB]) || "number" == typeof OB[DB]) && (OB[DB] = Array.isArray(OB[DB]) ? BB.getIds(GB, OB[DB]) : BB.getId(GB, OB[DB]));
-            return OB
+          replace(WW, iW, OW, mW) {
+            for (const EW of mW)(Array.isArray(iW[EW]) || "number" == typeof iW[EW]) && (iW[EW] = Array.isArray(iW[EW]) ? WW.getIds(OW, iW[EW]) : WW.getId(OW, iW[EW]));
+            return iW
           }
-          replaceIds(BB, OB, GB) {
-            return this.replace(this.crossOriginIframeMirror, BB, OB, GB)
+          replaceIds(WW, iW, OW) {
+            return this.replace(this.crossOriginIframeMirror, WW, iW, OW)
           }
-          replaceStyleIds(BB, OB, GB) {
-            return this.replace(this.crossOriginIframeStyleMirror, BB, OB, GB)
+          replaceStyleIds(WW, iW, OW) {
+            return this.replace(this.crossOriginIframeStyleMirror, WW, iW, OW)
           }
-          replaceIdOnNode(BB, OB) {
-            this.replaceIds(BB, OB, ["id", "rootId"]), "childNodes" in BB && BB.childNodes.forEach((BB => {
-              this.replaceIdOnNode(BB, OB)
+          replaceIdOnNode(WW, iW) {
+            this.replaceIds(WW, iW, ["id", "rootId"]), "childNodes" in WW && WW.childNodes.forEach((WW => {
+              this.replaceIdOnNode(WW, iW)
             }))
           }
-          patchRootIdOnNode(BB, OB) {
-            BB.type === lB.Document || BB.rootId || (BB.rootId = OB), "childNodes" in BB && BB.childNodes.forEach((BB => {
-              this.patchRootIdOnNode(BB, OB)
+          patchRootIdOnNode(WW, iW) {
+            WW.type === lW.Document || WW.rootId || (WW.rootId = iW), "childNodes" in WW && WW.childNodes.forEach((WW => {
+              this.patchRootIdOnNode(WW, iW)
             }))
           }
-          removeIframeById(BB) {
-            const OB = this.attachedIframes.get(BB),
-              GB = (null == OB ? void 0 : OB.element) || this.iframeElementsById.get(BB) || this.mirror.yDB(BB);
-            if (this.iframeElementsById.delete(BB), GB) {
-              const BB = GB.contentWindow,
-                OB = this.attachedWindows.get(GB);
-              OB && (OB.forEach((BB => {
-                const OB = this.nestedIframeListeners.get(BB);
-                OB && (oG(BB, "message", OB), this.nestedIframeListeners.delete(BB)), this.crossOriginIframeMap.delete(BB)
-              })), this.attachedWindows.delete(GB)), BB && this.nestedIframeListeners.has(BB) && (oG(BB, "message", this.nestedIframeListeners.get(BB)), this.nestedIframeListeners.delete(BB)), BB && this.crossOriginIframeMap.delete(BB), this.iframes.delete(GB), this.disposeLoadListeners(GB), this.removePageHideListener(GB);
-              const YB = this.attachedDocuments.get(GB);
-              YB && (YB.forEach((BB => {
-                jG((() => this.mirror.removeNodeFromMap(BB)))
-              })), jG((() => hG(GB, YB))), this.attachedDocuments.delete(GB))
+          removeIframeById(WW) {
+            const iW = this.attachedIframes.get(WW),
+              OW = (null == iW ? void 0 : iW.element) || this.iframeElementsById.get(WW) || this.mirror.AmW(WW);
+            if (this.iframeElementsById.delete(WW), OW) {
+              const WW = OW.contentWindow,
+                iW = this.attachedWindows.get(OW);
+              iW && (iW.forEach((WW => {
+                const iW = this.nestedIframeListeners.get(WW);
+                iW && (cO(WW, "message", iW), this.nestedIframeListeners.delete(WW)), this.crossOriginIframeMap.delete(WW)
+              })), this.attachedWindows.delete(OW)), WW && this.nestedIframeListeners.has(WW) && (cO(WW, "message", this.nestedIframeListeners.get(WW)), this.nestedIframeListeners.delete(WW)), WW && this.crossOriginIframeMap.delete(WW), this.iframes.delete(OW), this.disposeLoadListeners(OW), this.removePageHideListener(OW);
+              const mW = this.attachedDocuments.get(OW);
+              mW && (mW.forEach((WW => {
+                wO((() => this.mirror.removeNodeFromMap(WW)))
+              })), wO((() => qO(OW, mW))), this.attachedDocuments.delete(OW))
             }
-            OB && this.attachedIframes.delete(BB)
+            iW && this.attachedIframes.delete(WW)
           }
           cleanupDetachedIframes() {
             if (0 === this.attachedIframes.size) return;
-            const BB = [];
-            this.attachedIframes.forEach(((OB, GB) => {
-              this.mirror.has(GB) || BB.push(GB)
-            })), BB.forEach((BB => this.removeIframeById(BB)))
+            const WW = [];
+            this.attachedIframes.forEach(((iW, OW) => {
+              this.mirror.has(OW) || WW.push(OW)
+            })), WW.forEach((WW => this.removeIframeById(WW)))
           }
           reattachIframes() {
-            this.attachedIframes.forEach(((BB, OB) => {
+            this.attachedIframes.forEach(((WW, iW) => {
               let {
-                content: GB
-              } = BB;
-              this.mirror.has(OB) ? this.mutationCb({
+                content: OW
+              } = WW;
+              this.mirror.has(iW) ? this.mutationCb({
                 adds: [{
-                  parentId: OB,
+                  parentId: iW,
                   nextId: null,
-                  node: GB
+                  node: OW
                 }],
                 removes: [],
                 texts: [],
                 attributes: [],
                 isAttachIframe: !0
-              }) : this.attachedIframes.delete(OB)
+              }) : this.attachedIframes.delete(iW)
             }))
           }
           destroy() {
-            this.recordCrossOriginIframes && oG(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((BB, OB) => {
-              oG(OB, "message", BB)
+            this.recordCrossOriginIframes && cO(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((WW, iW) => {
+              cO(iW, "message", WW)
             })), this.nestedIframeListeners.clear();
-            const BB = new Set;
-            this.iframeElementsById.forEach((OB => BB.add(OB))), this.attachedIframes.forEach((OB => {
+            const WW = new Set;
+            this.iframeElementsById.forEach((iW => WW.add(iW))), this.attachedIframes.forEach((iW => {
               let {
-                element: GB
-              } = OB;
-              return BB.add(GB)
-            })), BB.forEach((BB => {
-              this.disposeLoadListeners(BB), this.removePageHideListener(BB)
+                element: OW
+              } = iW;
+              return WW.add(OW)
+            })), WW.forEach((WW => {
+              this.disposeLoadListeners(WW), this.removePageHideListener(WW)
             })), this.crossOriginIframeMirror.reset(), this.crossOriginIframeStyleMirror.reset(), this.attachedIframes.clear(), this.crossOriginIframeMap = new WeakMap, this.iframes = new WeakMap, this.crossOriginIframeRootIdMap = new WeakMap, this.loadListenerDisposers = new WeakMap, this.pageHideHandlers = new WeakMap, this.attachedDocuments = new WeakMap, this.attachedWindows = new WeakMap, this.iframeElementsById = new Map
           }
         },
-        OY = class {
-          constructor(BB) {
-            DO(this, "shadowDoms", new WeakSet), DO(this, "mutationCb", void 0), DO(this, "scrollCb", void 0), DO(this, "bypassOptions", void 0), DO(this, "mirror", void 0), DO(this, "restoreHandlers", []), this.mutationCb = BB.mutationCb, this.scrollCb = BB.scrollCb, this.bypassOptions = BB.bypassOptions, this.mirror = BB.mirror, this.init()
+        mm = class {
+          constructor(WW) {
+            Ei(this, "shadowDoms", new WeakSet), Ei(this, "mutationCb", void 0), Ei(this, "scrollCb", void 0), Ei(this, "bypassOptions", void 0), Ei(this, "mirror", void 0), Ei(this, "restoreHandlers", []), this.mutationCb = WW.mutationCb, this.scrollCb = WW.scrollCb, this.bypassOptions = WW.bypassOptions, this.mirror = WW.mirror, this.init()
           }
           init() {
             this.reset(), this.patchAttachShadow(Element, document)
           }
-          addShadowRoot(BB, OB) {
-            var GB, DB;
-            if (!jO(BB)) return;
-            if (this.shadowDoms.has(BB)) return;
-            this.shadowDoms.add(BB);
-            const QB = null !== (GB = null === (DB = dB.host(BB)) || void 0 === DB ? void 0 : DB.ownerDocument) && void 0 !== GB ? GB : OB,
+          addShadowRoot(WW, iW) {
+            var OW, EW;
+            if (!Li(WW)) return;
+            if (this.shadowDoms.has(WW)) return;
+            this.shadowDoms.add(WW);
+            const NW = null !== (OW = null === (EW = hW.host(WW)) || void 0 === EW ? void 0 : EW.ownerDocument) && void 0 !== OW ? OW : iW,
               {
-                observer: oB,
-                buffer: jB
-              } = EG(YB(YB({}, this.bypassOptions), {}, {
-                doc: QB,
+                observer: PW,
+                buffer: LW
+              } = XO(mW(mW({}, this.bypassOptions), {}, {
+                doc: NW,
                 mutationCb: this.mutationCb,
                 mirror: this.mirror,
                 shadowDomManager: this
-              }), BB);
+              }), WW);
             this.restoreHandlers.push({
-              doc: QB,
+              doc: NW,
               handler() {
-                oB.disconnect(), jB.destroy(), jB.releaseCanvasManager();
-                const BB = XG.indexOf(jB); - 1 !== BB && XG.splice(BB, 1)
+                PW.disconnect(), LW.destroy(), LW.releaseCanvasManager();
+                const WW = fO.indexOf(LW); - 1 !== WW && fO.splice(WW, 1)
               }
             }), this.restoreHandlers.push({
-              doc: QB,
-              handler: cG(YB(YB({}, this.bypassOptions), {}, {
+              doc: NW,
+              handler: BO(mW(mW({}, this.bypassOptions), {}, {
                 scrollCb: this.scrollCb,
-                doc: BB,
+                doc: WW,
                 mirror: this.mirror
               }))
             }), setTimeout((() => {
-              BB.adoptedStyleSheets && BB.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(BB.adoptedStyleSheets, this.mirror.getId(dB.host(BB))), this.restoreHandlers.push({
-                doc: QB,
-                handler: CG({
+              WW.adoptedStyleSheets && WW.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(WW.adoptedStyleSheets, this.mirror.getId(hW.host(WW))), this.restoreHandlers.push({
+                doc: NW,
+                handler: rO({
                   mirror: this.mirror,
                   stylesheetManager: this.bypassOptions.stylesheetManager
-                }, BB)
+                }, WW)
               })
             }), 0)
           }
-          observeAttachShadow(BB) {
-            jG((() => {
-              const OB = BB.contentWindow,
-                GB = BB.contentDocument;
-              OB && GB && this.patchAttachShadow(OB.Element, GB)
+          observeAttachShadow(WW) {
+            wO((() => {
+              const iW = WW.contentWindow,
+                OW = WW.contentDocument;
+              iW && OW && this.patchAttachShadow(iW.Element, OW)
             }))
           }
-          patchAttachShadow(BB, OB) {
-            const GB = this;
+          patchAttachShadow(WW, iW) {
+            const OW = this;
             this.restoreHandlers.push({
-              doc: OB,
-              handler: kB(BB.prototype, "attachShadow", (function(BB) {
-                return function(YB) {
-                  const DB = BB.call(this, YB),
-                    QB = dB.shadowRoot(this);
-                  return QB && dG(this) && GB.addShadowRoot(QB, OB), DB
+              doc: iW,
+              handler: JW(WW.prototype, "attachShadow", (function(WW) {
+                return function(mW) {
+                  const EW = WW.call(this, mW),
+                    NW = hW.shadowRoot(this);
+                  return NW && nO(this) && OW.addShadowRoot(NW, iW), EW
                 }
               }))
             })
           }
           reset() {
-            this.restoreHandlers.forEach((BB => {
+            this.restoreHandlers.forEach((WW => {
               let {
-                handler: OB
-              } = BB;
+                handler: iW
+              } = WW;
               try {
-                OB()
-              } catch (OB) {}
+                iW()
+              } catch (iW) {}
             })), this.restoreHandlers = [], this.shadowDoms = new WeakSet
           }
-          resetForDoc(BB) {
-            const OB = [];
-            for (const GB of this.restoreHandlers)
-              if (GB.doc === BB) try {
-                GB.handler()
-              } catch (BB) {} else OB.push(GB);
-            this.restoreHandlers = OB
+          resetForDoc(WW) {
+            const iW = [];
+            for (const OW of this.restoreHandlers)
+              if (OW.doc === WW) try {
+                OW.handler()
+              } catch (WW) {} else iW.push(OW);
+            this.restoreHandlers = iW
           }
         },
-        GY = "skip-frame";
+        Em = "skip-frame";
 
-      function YY(BB) {
-        if ("object" != typeof BB || null === BB) return !1;
+      function Nm(WW) {
+        if ("object" != typeof WW || null === WW) return !1;
         const {
-          x: OB,
-          y: GB,
-          width: YB,
-          height: DB
-        } = BB;
-        return Number.isFinite(OB) && Number.isFinite(GB) && Number.isFinite(YB) && Number.isFinite(DB) && YB >= 0 && DB >= 0
+          x: iW,
+          y: OW,
+          width: mW,
+          height: EW
+        } = WW;
+        return Number.isFinite(iW) && Number.isFinite(OW) && Number.isFinite(mW) && Number.isFinite(EW) && mW >= 0 && EW >= 0
       }
-      for (var DY = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", QY = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), oY = 0; 64 > oY; oY++) QY[DY.charCodeAt(oY)] = oY;
-      var jY = function(BB) {
-          var OB, GB = new Uint8Array(BB),
-            YB = GB.length,
-            DB = "";
-          for (OB = 0; YB > OB; OB += 3) DB += DY[GB[OB] >> 2], DB += DY[(3 & GB[OB]) << 4 | GB[OB + 1] >> 4], DB += DY[(15 & GB[OB + 1]) << 2 | GB[OB + 2] >> 6], DB += DY[63 & GB[OB + 2]];
-          return YB % 3 == 2 ? DB = DB.substring(0, DB.length - 1) + "=" : YB % 3 == 1 && (DB = DB.substring(0, DB.length - 2) + "=="), DB
+      for (var Pm = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", Lm = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), cm = 0; 64 > cm; cm++) Lm[Pm.charCodeAt(cm)] = cm;
+      var wm = function(WW) {
+          var iW, OW = new Uint8Array(WW),
+            mW = OW.length,
+            EW = "";
+          for (iW = 0; mW > iW; iW += 3) EW += Pm[OW[iW] >> 2], EW += Pm[(3 & OW[iW]) << 4 | OW[iW + 1] >> 4], EW += Pm[(15 & OW[iW + 1]) << 2 | OW[iW + 2] >> 6], EW += Pm[63 & OW[iW + 2]];
+          return mW % 3 == 2 ? EW = EW.substring(0, EW.length - 1) + "=" : mW % 3 == 1 && (EW = EW.substring(0, EW.length - 2) + "=="), EW
         },
-        yY = !1,
-        JY = new Map,
-        MY = (BB, OB, GB) => {
-          if (!BB || !lY(BB, OB) && "object" != typeof BB) return;
-          const YB = function(BB, OB) {
-            let GB = JY.get(BB);
-            return GB || (GB = new Map, JY.set(BB, GB)), GB.has(OB) || GB.set(OB, []), GB.get(OB)
-          }(GB, BB.constructor.name);
-          let DB = YB.indexOf(BB);
-          return -1 === DB && (DB = YB.length, YB.push(BB)), DB
+        tm = !1,
+        Zm = new Map,
+        xm = (WW, iW, OW) => {
+          if (!WW || !bm(WW, iW) && "object" != typeof WW) return;
+          const mW = function(WW, iW) {
+            let OW = Zm.get(WW);
+            return OW || (OW = new Map, Zm.set(WW, OW)), OW.has(iW) || OW.set(iW, []), OW.get(iW)
+          }(OW, WW.constructor.name);
+          let EW = mW.indexOf(WW);
+          return -1 === EW && (EW = mW.length, mW.push(WW)), EW
         };
 
-      function PY(BB, OB, GB, YB) {
-        if (BB instanceof Array) return BB.map((BB => PY(BB, OB, GB, YB)));
-        if (null === BB) return BB;
-        if (BB instanceof Float32Array || BB instanceof Float64Array || BB instanceof Int32Array || BB instanceof Uint32Array || BB instanceof Uint8Array || BB instanceof Uint16Array || BB instanceof Int16Array || BB instanceof Int8Array || BB instanceof Uint8ClampedArray) return {
-          rr_type: BB.constructor.name,
-          args: [Object.values(BB)]
+      function lm(WW, iW, OW, mW) {
+        if (WW instanceof Array) return WW.map((WW => lm(WW, iW, OW, mW)));
+        if (null === WW) return WW;
+        if (WW instanceof Float32Array || WW instanceof Float64Array || WW instanceof Int32Array || WW instanceof Uint32Array || WW instanceof Uint8Array || WW instanceof Uint16Array || WW instanceof Int16Array || WW instanceof Int8Array || WW instanceof Uint8ClampedArray) return {
+          rr_type: WW.constructor.name,
+          args: [Object.values(WW)]
         };
-        if (BB instanceof ArrayBuffer) return {
-          rr_type: BB.constructor.name,
-          base64: jY(BB)
+        if (WW instanceof ArrayBuffer) return {
+          rr_type: WW.constructor.name,
+          base64: wm(WW)
         };
-        if (BB instanceof DataView) return {
-          rr_type: BB.constructor.name,
-          args: [PY(BB.buffer, OB, GB, YB), BB.byteOffset, BB.byteLength]
+        if (WW instanceof DataView) return {
+          rr_type: WW.constructor.name,
+          args: [lm(WW.buffer, iW, OW, mW), WW.byteOffset, WW.byteLength]
         };
-        if (BB instanceof HTMLImageElement) {
-          const OB = BB.constructor.name,
+        if (WW instanceof HTMLImageElement) {
+          const iW = WW.constructor.name,
             {
-              src: GB
-            } = BB;
+              src: OW
+            } = WW;
           return {
-            rr_type: OB,
-            src: GB
+            rr_type: iW,
+            src: OW
           }
         }
-        if (BB instanceof HTMLCanvasElement) {
-          const OB = "HTMLImageElement";
-          let GB;
+        if (WW instanceof HTMLCanvasElement) {
+          const iW = "HTMLImageElement";
+          let OW;
           try {
-            GB = BB.toDataURL(YB.type, YB.quality)
-          } catch (BB) {
-            throw function(BB) {
-              "SecurityError" === (null == BB ? void 0 : BB.name) ? yY || (yY = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", BB)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", BB)
-            }(BB), BB
+            OW = WW.toDataURL(mW.type, mW.quality)
+          } catch (WW) {
+            throw function(WW) {
+              "SecurityError" === (null == WW ? void 0 : WW.name) ? tm || (tm = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", WW)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", WW)
+            }(WW), WW
           }
           return {
-            rr_type: OB,
-            src: GB
+            rr_type: iW,
+            src: OW
           }
         }
-        return BB instanceof ImageData ? {
-          rr_type: BB.constructor.name,
-          args: [PY(BB.data, OB, GB, YB), BB.width, BB.height]
-        } : lY(BB, OB) || "object" == typeof BB ? {
-          rr_type: BB.constructor.name,
-          index: MY(BB, OB, GB)
-        } : BB
+        return WW instanceof ImageData ? {
+          rr_type: WW.constructor.name,
+          args: [lm(WW.data, iW, OW, mW), WW.width, WW.height]
+        } : bm(WW, iW) || "object" == typeof WW ? {
+          rr_type: WW.constructor.name,
+          index: xm(WW, iW, OW)
+        } : WW
       }
-      var zY = (BB, OB, GB, YB) => BB.map((BB => PY(BB, OB, GB, YB))),
-        lY = (BB, OB) => {
-          const GB = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((BB => "function" == typeof OB[BB]));
-          return Boolean(GB.find((GB => BB instanceof OB[GB])))
+      var Am = (WW, iW, OW, mW) => WW.map((WW => lm(WW, iW, OW, mW))),
+        bm = (WW, iW) => {
+          const OW = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((WW => "function" == typeof iW[WW]));
+          return Boolean(OW.find((OW => WW instanceof iW[OW])))
         },
-        pY = ["webgl", "webgl2"];
+        jm = ["webgl", "webgl2"];
 
-      function qY(BB) {
-        return "nodeType" in BB
+      function Um(WW) {
+        return "nodeType" in WW
       }
 
-      function ZY(BB, OB, GB, DB) {
-        const QB = [];
+      function km(WW, iW, OW, EW) {
+        const NW = [];
         try {
-          if (DB) {
-            const DB = function(BB, OB, GB) {
-              const DB = BB.GPUCanvasContext;
-              if ((null == DB ? void 0 : DB.prototype) && "function" == typeof DB.prototype.configure) return kB(DB.prototype, "configure", (function(DB) {
-                return function(QB) {
-                  const oB = function(BB) {
+          if (EW) {
+            const EW = function(WW, iW, OW) {
+              const EW = WW.GPUCanvasContext;
+              if ((null == EW ? void 0 : EW.prototype) && "function" == typeof EW.prototype.configure) return JW(EW.prototype, "configure", (function(EW) {
+                return function(NW) {
+                  const PW = function(WW) {
                     const {
-                      canvas: OB
-                    } = BB;
-                    return OB && "object" == typeof OB ? OB : null
+                      canvas: iW
+                    } = WW;
+                    return iW && "object" == typeof iW ? iW : null
                   }(this);
-                  if (!oB || qY(oB) && RG(oB, OB, GB, !0)) return DB.call(this, QB);
-                  qY(oB) && !("__context" in oB) && (oB.__context = "webgpu");
-                  const jB = function(BB) {
-                    const OB = BB.GPUTextureUsage;
-                    return OB ? OB.COPY_SRC | OB.RENDER_ATTACHMENT : null
-                  }(BB);
-                  return DB.call(this, null !== jB && QB ? YB(YB({}, QB), {}, {
-                    usage: "number" == typeof QB.usage ? QB.usage | jB : jB
-                  }) : QB)
+                  if (!PW || Um(PW) && MO(PW, iW, OW, !0)) return EW.call(this, NW);
+                  Um(PW) && !("__context" in PW) && (PW.__context = "webgpu");
+                  const LW = function(WW) {
+                    const iW = WW.GPUTextureUsage;
+                    return iW ? iW.COPY_SRC | iW.RENDER_ATTACHMENT : null
+                  }(WW);
+                  return EW.call(this, null !== LW && NW ? mW(mW({}, NW), {}, {
+                    usage: "number" == typeof NW.usage ? NW.usage | LW : LW
+                  }) : NW)
                 }
               }))
-            }(BB, OB, GB);
-            DB && QB.push(DB)
+            }(WW, iW, OW);
+            EW && NW.push(EW)
           }
-          const oB = kB(BB.HTMLCanvasElement.prototype, "getContext", (function(BB) {
-            return function(YB) {
-              const QB = function(BB) {
-                return "experimental-webgl" === BB ? "webgl" : BB
-              }(YB);
-              for (var oB = arguments.length, jB = new Array(oB > 1 ? oB - 1 : 0), yB = 1; yB < oB; yB++) jB[yB - 1] = arguments[yB];
-              if (!RG(this, OB, GB, !0) && ("__context" in this || (this.__context = QB), DB && pY.includes(QB)))
-                if (jB[0] && "object" == typeof jB[0]) {
-                  const BB = jB[0];
-                  BB.preserveDrawingBuffer || (BB.preserveDrawingBuffer = !0)
-                } else jB.splice(0, 1, {
+          const PW = JW(WW.HTMLCanvasElement.prototype, "getContext", (function(WW) {
+            return function(mW) {
+              const NW = function(WW) {
+                return "experimental-webgl" === WW ? "webgl" : WW
+              }(mW);
+              for (var PW = arguments.length, LW = new Array(PW > 1 ? PW - 1 : 0), cW = 1; cW < PW; cW++) LW[cW - 1] = arguments[cW];
+              if (!MO(this, iW, OW, !0) && ("__context" in this || (this.__context = NW), EW && jm.includes(NW)))
+                if (LW[0] && "object" == typeof LW[0]) {
+                  const WW = LW[0];
+                  WW.preserveDrawingBuffer || (WW.preserveDrawingBuffer = !0)
+                } else LW.splice(0, 1, {
                   preserveDrawingBuffer: !0
                 });
-              return BB.apply(this, [YB, ...jB])
+              return WW.apply(this, [mW, ...LW])
             }
           }));
-          QB.push(oB)
-        } catch (BB) {
+          NW.push(PW)
+        } catch (WW) {
           console.warn("failed to patch HTMLCanvasElement.prototype.getContext")
         }
         return () => {
-          QB.forEach((BB => BB()))
+          NW.forEach((WW => WW()))
         }
       }
 
-      function NY(BB, OB, GB, YB, DB, QB, oB) {
-        const jB = [],
-          yB = Object.getOwnPropertyNames(BB);
-        for (const JB of yB)
-          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(JB)) try {
-            if ("function" != typeof BB[JB]) continue;
-            const yB = kB(BB, JB, (function(BB) {
+      function sm(WW, iW, OW, mW, EW, NW, PW) {
+        const LW = [],
+          cW = Object.getOwnPropertyNames(WW);
+        for (const wW of cW)
+          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(wW)) try {
+            if ("function" != typeof WW[wW]) continue;
+            const cW = JW(WW, wW, (function(WW) {
               return function() {
-                for (var jB = arguments.length, yB = new Array(jB), MB = 0; MB < jB; MB++) yB[MB] = arguments[MB];
-                const PB = BB.apply(this, yB);
-                if (MY(PB, QB, this), this.canvas && "tagName" in this.canvas && !RG(this.canvas, YB, DB, !0)) {
-                  let YB;
+                for (var LW = arguments.length, cW = new Array(LW), tW = 0; tW < LW; tW++) cW[tW] = arguments[tW];
+                const ZW = WW.apply(this, cW);
+                if (xm(ZW, NW, this), this.canvas && "tagName" in this.canvas && !MO(this.canvas, mW, EW, !0)) {
+                  let mW;
                   try {
-                    YB = zY(yB, QB, this, oB)
-                  } catch (BB) {}
-                  YB && GB(this.canvas, {
-                    type: OB,
-                    property: JB,
-                    args: YB
+                    mW = Am(cW, NW, this, PW)
+                  } catch (WW) {}
+                  mW && OW(this.canvas, {
+                    type: iW,
+                    property: wW,
+                    args: mW
                   })
                 }
-                return PB
+                return ZW
               }
             }));
-            jB.push(yB)
-          } catch (QB) {
-            const oB = zG(BB, JB, {
-              set(BB) {
-                this.canvas && "tagName" in this.canvas && !RG(this.canvas, YB, DB, !0) && GB(this.canvas, {
-                  type: OB,
-                  property: JB,
-                  args: [BB],
+            LW.push(cW)
+          } catch (NW) {
+            const PW = AO(WW, wW, {
+              set(WW) {
+                this.canvas && "tagName" in this.canvas && !MO(this.canvas, mW, EW, !0) && OW(this.canvas, {
+                  type: iW,
+                  property: wW,
+                  args: [WW],
                   setter: !0
                 })
               }
             });
-            jB.push(oB)
+            LW.push(PW)
           }
-        return jB
+        return LW
       }
-      var RY = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
-        WY = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", RY], {
+      var Mm = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
+        Km = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", Mm], {
           type: "text/javascript;charset=utf-8"
         });
 
-      function AY(BB) {
-        let OB;
+      function Sm(WW) {
+        let iW;
         try {
-          if (OB = WY && (self.URL || self.webkitURL).createObjectURL(WY), !OB) throw "";
-          const GB = new Worker(OB, {
-            name: null == BB ? void 0 : BB.name
+          if (iW = Km && (self.URL || self.webkitURL).createObjectURL(Km), !iW) throw "";
+          const OW = new Worker(iW, {
+            name: null == WW ? void 0 : WW.name
           });
-          return GB.addEventListener("error", (() => {
-            (self.URL || self.webkitURL).revokeObjectURL(OB)
-          })), GB
-        } catch (OB) {
-          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(RY), {
-            name: null == BB ? void 0 : BB.name
+          return OW.addEventListener("error", (() => {
+            (self.URL || self.webkitURL).revokeObjectURL(iW)
+          })), OW
+        } catch (iW) {
+          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(Mm), {
+            name: null == WW ? void 0 : WW.name
           })
         }
       }
-      var VY = "A page CSP that omits blob: from worker-src or script-src blocks it";
+      var Ym = "A page CSP that omits blob: from worker-src or script-src blocks it";
 
-      function SY(BB) {
-        for (var OB = arguments.length, GB = new Array(OB > 1 ? OB - 1 : 0), YB = 1; YB < OB; YB++) GB[YB - 1] = arguments[YB];
-        console.warn(`[replay] canvas capture: ${BB}`, ...GB)
+      function ym(WW) {
+        for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
+        console.warn(`[replay] canvas capture: ${WW}`, ...OW)
       }
-      var nY, UY, fY, kY = class {
+      var Tm, Jm, hm, Hm = class {
           onFullSnapshot() {
-            var BB;
-            null === (BB = this.resetFrameDedup) || void 0 === BB || BB.call(this)
+            var WW;
+            null === (WW = this.resetFrameDedup) || void 0 === WW || WW.call(this)
           }
           acquire() {
             this.refCount += 1
@@ -3465,66 +3465,66 @@ export const modules = {
           unlock() {
             this.locked = !1
           }
-          constructor(BB) {
-            DO(this, "pendingCanvasMutations", new Map), DO(this, "rafStamps", {
+          constructor(WW) {
+            Ei(this, "pendingCanvasMutations", new Map), Ei(this, "rafStamps", {
               latestId: 0,
               invokeId: null
-            }), DO(this, "mirror", void 0), DO(this, "mutationCb", void 0), DO(this, "resetObservers", void 0), DO(this, "frozen", !1), DO(this, "locked", !1), DO(this, "rafIdTimestamp", null), DO(this, "rafIdFlush", null), DO(this, "refCount", 0), DO(this, "torndown", !1), DO(this, "resetFrameDedup", null), DO(this, "processMutation", ((BB, OB) => {
-              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(BB) || this.pendingCanvasMutations.set(BB, []), this.pendingCanvasMutations.get(BB).push(OB)
+            }), Ei(this, "mirror", void 0), Ei(this, "mutationCb", void 0), Ei(this, "resetObservers", void 0), Ei(this, "frozen", !1), Ei(this, "locked", !1), Ei(this, "rafIdTimestamp", null), Ei(this, "rafIdFlush", null), Ei(this, "refCount", 0), Ei(this, "torndown", !1), Ei(this, "resetFrameDedup", null), Ei(this, "processMutation", ((WW, iW) => {
+              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(WW) || this.pendingCanvasMutations.set(WW, []), this.pendingCanvasMutations.get(WW).push(iW)
             }));
             const {
-              sampling: OB = "all",
-              win: GB,
-              blockClass: YB,
-              blockSelector: DB,
-              recordCanvas: QB,
-              dataURLOptions: oB,
-              resolutionScale: jB,
-              canvasMasking: yB
-            } = BB;
-            this.mutationCb = BB.mutationCb, this.mirror = BB.mirror, QB && "all" === OB && this.initCanvasMutationObserver(GB, YB, DB, oB), QB && "number" == typeof OB && this.initCanvasFPSObserver(OB, GB, YB, DB, {
-              dataURLOptions: oB,
-              resolutionScale: jB,
-              canvasMasking: yB
+              sampling: iW = "all",
+              win: OW,
+              blockClass: mW,
+              blockSelector: EW,
+              recordCanvas: NW,
+              dataURLOptions: PW,
+              resolutionScale: LW,
+              canvasMasking: cW
+            } = WW;
+            this.mutationCb = WW.mutationCb, this.mirror = WW.mirror, NW && "all" === iW && this.initCanvasMutationObserver(OW, mW, EW, PW), NW && "number" == typeof iW && this.initCanvasFPSObserver(iW, OW, mW, EW, {
+              dataURLOptions: PW,
+              resolutionScale: LW,
+              canvasMasking: cW
             })
           }
-          initCanvasFPSObserver(BB, OB, GB, YB, DB) {
-            var oB = this;
-            if (!("OffscreenCanvas" in OB)) return void SY("disabled because this browser does not support OffscreenCanvas");
-            const jB = "number" == typeof DB.resolutionScale && Number.isFinite(DB.resolutionScale) ? Math.min(1, Math.max(.1, DB.resolutionScale)) : 1,
-              yB = ZY(OB, GB, YB, !0),
-              JB = new Map;
-            let MB;
+          initCanvasFPSObserver(WW, iW, OW, mW, EW) {
+            var PW = this;
+            if (!("OffscreenCanvas" in iW)) return void ym("disabled because this browser does not support OffscreenCanvas");
+            const LW = "number" == typeof EW.resolutionScale && Number.isFinite(EW.resolutionScale) ? Math.min(1, Math.max(.1, EW.resolutionScale)) : 1,
+              cW = km(iW, OW, mW, !0),
+              wW = new Map;
+            let tW;
             try {
-              MB = new AY
-            } catch (BB) {
-              return SY(`disabled because the encode worker did not start. ${VY}`, BB), void yB()
+              tW = new Sm
+            } catch (WW) {
+              return ym(`disabled because the encode worker did not start. ${Ym}`, WW), void cW()
             }
-            let zB = !1;
-            MB.onerror = BB => {
-              var OB;
-              zB = !0, SY(`stopped because the encode worker failed. ${VY}`, BB), cancelAnimationFrame(ZB), null === (OB = MB.terminate) || void 0 === OB || OB.call(MB), this.resetFrameDedup = null
+            let xW = !1;
+            tW.onerror = WW => {
+              var iW;
+              xW = !0, ym(`stopped because the encode worker failed. ${Ym}`, WW), cancelAnimationFrame(jW), null === (iW = tW.terminate) || void 0 === iW || iW.call(tW), this.resetFrameDedup = null
             }, this.resetFrameDedup = () => {
-              MB.postMessage({
+              tW.postMessage({
                 resetFrameDedup: !0
               })
-            }, MB.onmessage = BB => {
+            }, tW.onmessage = WW => {
               const {
-                id: OB
-              } = BB.data;
-              if (JB.set(OB, !1), !("base64" in BB.data)) return;
+                id: iW
+              } = WW.data;
+              if (wW.set(iW, !1), !("base64" in WW.data)) return;
               const {
-                base64: GB,
-                type: YB,
-                displayWidth: DB,
-                displayHeight: QB
-              } = BB.data;
+                base64: OW,
+                type: mW,
+                displayWidth: EW,
+                displayHeight: NW
+              } = WW.data;
               this.mutationCb({
-                id: OB,
-                type: PB["2D"],
+                id: iW,
+                type: ZW["2D"],
                 commands: [{
                   property: "clearRect",
-                  args: [0, 0, DB, QB]
+                  args: [0, 0, EW, NW]
                 }, {
                   property: "drawImage",
                   args: [{
@@ -3533,481 +3533,481 @@ export const modules = {
                       rr_type: "Blob",
                       data: [{
                         rr_type: "ArrayBuffer",
-                        base64: GB
+                        base64: OW
                       }],
-                      type: YB
+                      type: mW
                     }]
-                  }, 0, 0, DB, QB]
+                  }, 0, 0, EW, NW]
                 }],
-                displayWidth: DB,
-                displayHeight: QB
+                displayWidth: EW,
+                displayHeight: NW
               })
             };
-            let lB = !1,
-              pB = !1;
-            const qB = 1e3 / BB;
-            let ZB, NB = 0;
-            const RB = BB => {
-              var yB;
-              zB || (NB && qB > BB - NB || (NB = BB, (() => {
-                const BB = [],
-                  DB = OB => {
+            let lW = !1,
+              AW = !1;
+            const bW = 1e3 / WW;
+            let jW, UW = 0;
+            const kW = WW => {
+              var cW;
+              xW || (UW && bW > WW - UW || (UW = WW, (() => {
+                const WW = [],
+                  EW = iW => {
                     try {
-                      OB.querySelectorAll("canvas").forEach((OB => {
-                        RG(OB, GB, YB, !0) || BB.push(OB)
-                      })), OB.querySelectorAll("*").forEach((BB => {
-                        BB.shadowRoot && DB(BB.shadowRoot)
+                      iW.querySelectorAll("canvas").forEach((iW => {
+                        MO(iW, OW, mW, !0) || WW.push(iW)
+                      })), iW.querySelectorAll("*").forEach((WW => {
+                        WW.shadowRoot && EW(WW.shadowRoot)
                       }))
-                    } catch (BB) {}
+                    } catch (WW) {}
                   };
-                return DB(OB.document), BB
-              })().forEach((yB = QB((function*(BB) {
-                const OB = oB.mirror.getId(BB);
-                if (-1 !== OB && !JB.get(OB) && 0 !== BB.width && 0 !== BB.height) {
-                  JB.set(OB, !0);
+                return EW(iW.document), WW
+              })().forEach((cW = NW((function*(WW) {
+                const iW = PW.mirror.getId(WW);
+                if (-1 !== iW && !wW.get(iW) && 0 !== WW.width && 0 !== WW.height) {
+                  wW.set(iW, !0);
                   try {
-                    if (["webgl", "webgl2"].includes(BB.__context)) {
-                      var GB, YB;
-                      const DB = BB.getContext(BB.__context);
-                      if (null == DB || null === (GB = DB.isContextLost) || void 0 === GB ? void 0 : GB.call(DB)) return void JB.set(OB, !1);
-                      !1 === (null == DB || null === (YB = DB.getContextAttributes()) || void 0 === YB ? void 0 : YB.preserveDrawingBuffer) && DB.clear(DB.COLOR_BUFFER_BIT)
+                    if (["webgl", "webgl2"].includes(WW.__context)) {
+                      var OW, mW;
+                      const EW = WW.getContext(WW.__context);
+                      if (null == EW || null === (OW = EW.isContextLost) || void 0 === OW ? void 0 : OW.call(EW)) return void wW.set(iW, !1);
+                      !1 === (null == EW || null === (mW = EW.getContextAttributes()) || void 0 === mW ? void 0 : mW.preserveDrawingBuffer) && EW.clear(EW.COLOR_BUFFER_BIT)
                     }
-                    const QB = BB.clientWidth || BB.width,
-                      oB = BB.clientHeight || BB.height,
-                      yB = Math.max(1, Math.round(QB * jB)),
-                      PB = Math.max(1, Math.round(oB * jB)),
-                      zB = function(BB, OB, GB, YB, DB, QB) {
-                        if (!BB || "function" != typeof BB.regionsFn) return;
-                        let oB;
+                    const NW = WW.clientWidth || WW.width,
+                      PW = WW.clientHeight || WW.height,
+                      cW = Math.max(1, Math.round(NW * LW)),
+                      ZW = Math.max(1, Math.round(PW * LW)),
+                      xW = function(WW, iW, OW, mW, EW, NW) {
+                        if (!WW || "function" != typeof WW.regionsFn) return;
+                        let PW;
                         try {
-                          oB = BB.regionsFn(OB)
-                        } catch (BB) {
-                          return GY
+                          PW = WW.regionsFn(iW)
+                        } catch (WW) {
+                          return Em
                         }
-                        if (void 0 === oB) return;
-                        if (!Array.isArray(oB) || !oB.every(YY)) return GY;
-                        const jB = GB / DB,
-                          yB = YB / QB;
-                        return oB.filter((BB => BB.width > 0 && BB.height > 0)).map((BB => {
-                          const OB = Math.floor(BB.x * jB),
-                            GB = Math.floor(BB.y * yB);
+                        if (void 0 === PW) return;
+                        if (!Array.isArray(PW) || !PW.every(Nm)) return Em;
+                        const LW = OW / EW,
+                          cW = mW / NW;
+                        return PW.filter((WW => WW.width > 0 && WW.height > 0)).map((WW => {
+                          const iW = Math.floor(WW.x * LW),
+                            OW = Math.floor(WW.y * cW);
                           return {
-                            x: OB,
-                            y: GB,
-                            width: Math.ceil((BB.x + BB.width) * jB) - OB,
-                            height: Math.ceil((BB.y + BB.height) * yB) - GB
+                            x: iW,
+                            y: OW,
+                            width: Math.ceil((WW.x + WW.width) * LW) - iW,
+                            height: Math.ceil((WW.y + WW.height) * cW) - OW
                           }
                         }))
-                      }(DB.canvasMasking, BB, yB, PB, QB, oB);
-                    if ("skip-frame" === zB) return lB || (lB = !0, SY("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void JB.set(OB, !1);
-                    const pB = yield createImageBitmap(BB, 1 > jB ? {
-                      resizeWidth: yB,
-                      resizeHeight: PB,
+                      }(EW.canvasMasking, WW, cW, ZW, NW, PW);
+                    if ("skip-frame" === xW) return lW || (lW = !0, ym("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void wW.set(iW, !1);
+                    const AW = yield createImageBitmap(WW, 1 > LW ? {
+                      resizeWidth: cW,
+                      resizeHeight: ZW,
                       resizeQuality: "medium"
                     } : {
-                      resizeWidth: yB,
-                      resizeHeight: PB
+                      resizeWidth: cW,
+                      resizeHeight: ZW
                     });
-                    MB.postMessage({
-                      id: OB,
-                      bitmap: pB,
-                      width: yB,
-                      height: PB,
-                      displayWidth: QB,
-                      displayHeight: oB,
-                      dataURLOptions: DB.dataURLOptions,
-                      maskRegions: zB
-                    }, [pB])
-                  } catch (BB) {
-                    pB || (pB = !0, SY("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", BB)), JB.set(OB, !1)
+                    tW.postMessage({
+                      id: iW,
+                      bitmap: AW,
+                      width: cW,
+                      height: ZW,
+                      displayWidth: NW,
+                      displayHeight: PW,
+                      dataURLOptions: EW.dataURLOptions,
+                      maskRegions: xW
+                    }, [AW])
+                  } catch (WW) {
+                    AW || (AW = !0, ym("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", WW)), wW.set(iW, !1)
                   }
                 }
-              })), function(BB) {
-                return yB.apply(this, arguments)
-              }))), ZB = requestAnimationFrame(RB))
+              })), function(WW) {
+                return cW.apply(this, arguments)
+              }))), jW = requestAnimationFrame(kW))
             };
-            ZB = requestAnimationFrame(RB), this.resetObservers = () => {
-              var BB;
-              yB(), cancelAnimationFrame(ZB), null === (BB = MB.terminate) || void 0 === BB || BB.call(MB), this.resetFrameDedup = null
+            jW = requestAnimationFrame(kW), this.resetObservers = () => {
+              var WW;
+              cW(), cancelAnimationFrame(jW), null === (WW = tW.terminate) || void 0 === WW || WW.call(tW), this.resetFrameDedup = null
             }
           }
-          initCanvasMutationObserver(BB, OB, GB, YB) {
+          initCanvasMutationObserver(WW, iW, OW, mW) {
             this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher();
-            const DB = ZY(BB, OB, GB, !1),
-              QB = function(BB, OB, GB, YB, DB) {
-                const QB = [],
-                  oB = Object.getOwnPropertyNames(OB.CanvasRenderingContext2D.prototype);
-                for (const jB of oB) try {
-                  if ("function" != typeof OB.CanvasRenderingContext2D.prototype[jB]) continue;
-                  const oB = kB(OB.CanvasRenderingContext2D.prototype, jB, (function(QB) {
+            const EW = km(WW, iW, OW, !1),
+              NW = function(WW, iW, OW, mW, EW) {
+                const NW = [],
+                  PW = Object.getOwnPropertyNames(iW.CanvasRenderingContext2D.prototype);
+                for (const LW of PW) try {
+                  if ("function" != typeof iW.CanvasRenderingContext2D.prototype[LW]) continue;
+                  const PW = JW(iW.CanvasRenderingContext2D.prototype, LW, (function(NW) {
                     return function() {
-                      for (var oB = arguments.length, yB = new Array(oB), JB = 0; JB < oB; JB++) yB[JB] = arguments[JB];
-                      return RG(this.canvas, GB, YB, !0) || setTimeout((() => {
-                        let GB;
+                      for (var PW = arguments.length, cW = new Array(PW), wW = 0; wW < PW; wW++) cW[wW] = arguments[wW];
+                      return MO(this.canvas, OW, mW, !0) || setTimeout((() => {
+                        let OW;
                         try {
-                          GB = zY(yB, OB, this, DB)
-                        } catch (BB) {
+                          OW = Am(cW, iW, this, EW)
+                        } catch (WW) {
                           return
                         }
-                        BB(this.canvas, {
-                          type: PB["2D"],
-                          property: jB,
-                          args: GB
+                        WW(this.canvas, {
+                          type: ZW["2D"],
+                          property: LW,
+                          args: OW
                         })
-                      }), 0), QB.apply(this, yB)
+                      }), 0), NW.apply(this, cW)
                     }
                   }));
-                  QB.push(oB)
-                } catch (DB) {
-                  const oB = zG(OB.CanvasRenderingContext2D.prototype, jB, {
-                    set(OB) {
-                      RG(this.canvas, GB, YB, !0) || BB(this.canvas, {
-                        type: PB["2D"],
-                        property: jB,
-                        args: [OB],
+                  NW.push(PW)
+                } catch (EW) {
+                  const PW = AO(iW.CanvasRenderingContext2D.prototype, LW, {
+                    set(iW) {
+                      MO(this.canvas, OW, mW, !0) || WW(this.canvas, {
+                        type: ZW["2D"],
+                        property: LW,
+                        args: [iW],
                         setter: !0
                       })
                     }
                   });
-                  QB.push(oB)
+                  NW.push(PW)
                 }
                 return () => {
-                  QB.forEach((BB => BB()))
+                  NW.forEach((WW => WW()))
                 }
-              }(this.processMutation.bind(this), BB, OB, GB, YB),
-              oB = function(BB, OB, GB, YB, DB) {
-                const QB = [];
-                return void 0 !== OB.WebGLRenderingContext && QB.push(...NY(OB.WebGLRenderingContext.prototype, PB.WebGL, BB, GB, YB, OB, DB)), void 0 !== OB.WebGL2RenderingContext && QB.push(...NY(OB.WebGL2RenderingContext.prototype, PB.WebGL2, BB, GB, YB, OB, DB)), () => {
-                  QB.forEach((BB => BB()))
+              }(this.processMutation.bind(this), WW, iW, OW, mW),
+              PW = function(WW, iW, OW, mW, EW) {
+                const NW = [];
+                return void 0 !== iW.WebGLRenderingContext && NW.push(...sm(iW.WebGLRenderingContext.prototype, ZW.WebGL, WW, OW, mW, iW, EW)), void 0 !== iW.WebGL2RenderingContext && NW.push(...sm(iW.WebGL2RenderingContext.prototype, ZW.WebGL2, WW, OW, mW, iW, EW)), () => {
+                  NW.forEach((WW => WW()))
                 }
-              }(this.processMutation.bind(this), BB, OB, GB, YB);
+              }(this.processMutation.bind(this), WW, iW, OW, mW);
             this.resetObservers = () => {
-              DB(), QB(), oB()
+              EW(), NW(), PW()
             }
           }
           startPendingCanvasMutationFlusher() {
             this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
           startRAFTimestamping() {
-            const BB = OB => {
-              this.rafStamps.latestId = OB, this.rafIdTimestamp = requestAnimationFrame(BB)
+            const WW = iW => {
+              this.rafStamps.latestId = iW, this.rafIdTimestamp = requestAnimationFrame(WW)
             };
-            this.rafIdTimestamp = requestAnimationFrame(BB)
+            this.rafIdTimestamp = requestAnimationFrame(WW)
           }
           flushPendingCanvasMutations() {
-            this.pendingCanvasMutations.forEach(((BB, OB) => {
-              const GB = this.mirror.getId(OB);
-              this.flushPendingCanvasMutationFor(OB, GB)
+            this.pendingCanvasMutations.forEach(((WW, iW) => {
+              const OW = this.mirror.getId(iW);
+              this.flushPendingCanvasMutationFor(iW, OW)
             })), this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
-          flushPendingCanvasMutationFor(BB, OB) {
+          flushPendingCanvasMutationFor(WW, iW) {
             if (this.frozen || this.locked) return;
-            const GB = this.pendingCanvasMutations.get(BB);
-            if (!GB || -1 === OB) return;
-            const YB = GB.map((BB => function(BB, OB) {
-                if (null == BB) return {};
-                var GB, YB, DB = function(BB, OB) {
-                  if (null == BB) return {};
-                  var GB = {};
-                  for (var YB in BB)
-                    if ({}.hasOwnProperty.call(BB, YB)) {
-                      if (OB.includes(YB)) continue;
-                      GB[YB] = BB[YB]
-                    } return GB
-                }(BB, OB);
+            const OW = this.pendingCanvasMutations.get(WW);
+            if (!OW || -1 === iW) return;
+            const mW = OW.map((WW => function(WW, iW) {
+                if (null == WW) return {};
+                var OW, mW, EW = function(WW, iW) {
+                  if (null == WW) return {};
+                  var OW = {};
+                  for (var mW in WW)
+                    if ({}.hasOwnProperty.call(WW, mW)) {
+                      if (iW.includes(mW)) continue;
+                      OW[mW] = WW[mW]
+                    } return OW
+                }(WW, iW);
                 if (Object.getOwnPropertySymbols) {
-                  var QB = Object.getOwnPropertySymbols(BB);
-                  for (YB = 0; QB.length > YB; YB++) OB.includes(GB = QB[YB]) || {}.propertyIsEnumerable.call(BB, GB) && (DB[GB] = BB[GB])
+                  var NW = Object.getOwnPropertySymbols(WW);
+                  for (mW = 0; NW.length > mW; mW++) iW.includes(OW = NW[mW]) || {}.propertyIsEnumerable.call(WW, OW) && (EW[OW] = WW[OW])
                 }
-                return DB
-              }(BB, oB))),
+                return EW
+              }(WW, PW))),
               {
-                type: DB
-              } = GB[0];
+                type: EW
+              } = OW[0];
             this.mutationCb({
-              id: OB,
-              type: DB,
-              commands: YB
-            }), this.pendingCanvasMutations.delete(BB)
+              id: iW,
+              type: EW,
+              commands: mW
+            }), this.pendingCanvasMutations.delete(WW)
           }
         },
-        dY = class {
-          constructor(BB) {
-            var OB;
-            DO(this, "trackedLinkElements", new WeakSet), DO(this, "pendingDeferredSheets", new Set), DO(this, "mutationCb", void 0), DO(this, "adoptedStyleSheetCb", void 0), DO(this, "maskAllElementAttributes", void 0), DO(this, "maskAttributeFn", void 0), DO(this, "styleMirror", new fG), this.mutationCb = BB.mutationCb, this.adoptedStyleSheetCb = BB.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (OB = BB.maskAllElementAttributes) && void 0 !== OB && OB, this.maskAttributeFn = BB.maskAttributeFn
+        nm = class {
+          constructor(WW) {
+            var iW;
+            Ei(this, "trackedLinkElements", new WeakSet), Ei(this, "pendingDeferredSheets", new Set), Ei(this, "mutationCb", void 0), Ei(this, "adoptedStyleSheetCb", void 0), Ei(this, "maskAllElementAttributes", void 0), Ei(this, "maskAttributeFn", void 0), Ei(this, "styleMirror", new hO), this.mutationCb = WW.mutationCb, this.adoptedStyleSheetCb = WW.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (iW = WW.maskAllElementAttributes) && void 0 !== iW && iW, this.maskAttributeFn = WW.maskAttributeFn
           }
-          attachLinkElement(BB, OB) {
-            "_cssText" in OB.attributes && this.mutationCb({
+          attachLinkElement(WW, iW) {
+            "_cssText" in iW.attributes && this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: OB.id,
-                attributes: OB.attributes
+                id: iW.id,
+                attributes: iW.attributes
               }]
-            }), this.trackLinkElement(BB)
+            }), this.trackLinkElement(WW)
           }
-          beginDeferredLinkInlining(BB, OB) {
-            if (-1 === OB || !BB.isConnected) return null;
-            let GB = null,
-              YB = null;
+          beginDeferredLinkInlining(WW, iW) {
+            if (-1 === iW || !WW.isConnected) return null;
+            let OW = null,
+              mW = null;
             try {
-              YB = BB.sheet, YB && (GB = function(BB) {
-                const OB = [];
-                let GB = !1,
-                  YB = null;
-                const DB = new Map;
+              mW = WW.sheet, mW && (OW = function(WW) {
+                const iW = [];
+                let OW = !1,
+                  mW = null;
+                const EW = new Map;
 
-                function QB(BB) {
-                  const DB = OB.pop();
-                  if ("group" === DB.kind) {
-                    if (null === BB) {
-                      for (; OB.length > 0 && "group" === OB[OB.length - 1].kind;) OB.pop();
-                      return void QB(null)
+                function NW(WW) {
+                  const EW = iW.pop();
+                  if ("group" === EW.kind) {
+                    if (null === WW) {
+                      for (; iW.length > 0 && "group" === iW[iW.length - 1].kind;) iW.pop();
+                      return void NW(null)
                     }
-                    const GB = OB[OB.length - 1];
-                    return GB.parts.push(BB), void(GB.index += 1)
+                    const OW = iW[iW.length - 1];
+                    return OW.parts.push(WW), void(OW.index += 1)
                   }
-                  if (!DB.importRule) return GB = !0, void(YB = BB);
-                  oB(OB[OB.length - 1], DB.importRule, BB)
+                  if (!EW.importRule) return OW = !0, void(mW = WW);
+                  PW(iW[iW.length - 1], EW.importRule, WW)
                 }
 
-                function oB(BB, OB, GB) {
+                function PW(WW, iW, OW) {
                   try {
-                    let DB;
+                    let EW;
                     try {
-                      DB = GB || JO(OB)
-                    } catch (BB) {
-                      DB = OB.cssText
+                      EW = OW || wi(iW)
+                    } catch (WW) {
+                      EW = iW.cssText
                     }
                     try {
-                      var YB;
-                      DB && (null === (YB = OB.styleSheet) || void 0 === YB ? void 0 : YB.href) && (DB = uO(DB, OB.styleSheet.href))
-                    } catch (BB) {}
-                    DB && BB.parts.push(DB), BB.index += 1
-                  } catch (BB) {
-                    QB(null)
+                      var mW;
+                      EW && (null === (mW = iW.styleSheet) || void 0 === mW ? void 0 : mW.href) && (EW = ui(EW, iW.styleSheet.href))
+                    } catch (WW) {}
+                    EW && WW.parts.push(EW), WW.index += 1
+                  } catch (WW) {
+                    NW(null)
                   }
                 }
 
-                function jB(BB) {
-                  const GB = BB.rules[BB.index];
-                  if ("sheet" === BB.kind && pO(GB)) {
-                    const YB = DB.get(GB);
-                    return null === YB ? (BB.parts.push(GB.cssText), void(BB.index += 1)) : YB ? void OB.push({
+                function LW(WW) {
+                  const OW = WW.rules[WW.index];
+                  if ("sheet" === WW.kind && Ai(OW)) {
+                    const mW = EW.get(OW);
+                    return null === mW ? (WW.parts.push(OW.cssText), void(WW.index += 1)) : mW ? void iW.push({
                       kind: "sheet",
-                      sheet: YB.sheet,
-                      rules: YB.rules,
-                      sheetHref: YB.sheetHref,
+                      sheet: mW.sheet,
+                      rules: mW.rules,
+                      sheetHref: mW.sheetHref,
                       index: 0,
                       parts: [],
-                      importRule: GB
-                    }) : void oB(BB, GB, null)
+                      importRule: OW
+                    }) : void PW(WW, OW, null)
                   }
-                  if (function(BB, GB) {
+                  if (function(WW, OW) {
                       try {
-                        const YB = function(BB) {
-                          const OB = BB;
-                          if (!OB.cssRules || 0 === OB.cssRules.length) return null;
-                          if (OB.media && "string" == typeof OB.media.mediaText) return `@media ${OB.media.mediaText} {`;
-                          if (qO(BB)) {
-                            if ("number" == typeof OB.type && 1 !== OB.type) return null;
-                            const GB = OB.style ? OB.style.cssText : "";
-                            return `${BB.selectorText} {${GB?" "+GB:""}`
+                        const mW = function(WW) {
+                          const iW = WW;
+                          if (!iW.cssRules || 0 === iW.cssRules.length) return null;
+                          if (iW.media && "string" == typeof iW.media.mediaText) return `@media ${iW.media.mediaText} {`;
+                          if (bi(WW)) {
+                            if ("number" == typeof iW.type && 1 !== iW.type) return null;
+                            const OW = iW.style ? iW.style.cssText : "";
+                            return `${WW.selectorText} {${OW?" "+OW:""}`
                           }
-                          if ("containerName" in OB) return "string" != typeof OB.containerQuery || OB.containerName && !ZO.test(OB.containerName) ? null : `@container ${OB.containerName?`${OB.containerName} `:""}${OB.containerQuery} {`;
-                          if ("string" == typeof OB.conditionText) {
-                            let YB = "";
+                          if ("containerName" in iW) return "string" != typeof iW.containerQuery || iW.containerName && !ji.test(iW.containerName) ? null : `@container ${iW.containerName?`${iW.containerName} `:""}${iW.containerQuery} {`;
+                          if ("string" == typeof iW.conditionText) {
+                            let mW = "";
                             try {
-                              var GB;
-                              YB = (null === (GB = BB.constructor) || void 0 === GB ? void 0 : GB.name) || ""
-                            } catch (BB) {
+                              var OW;
+                              mW = (null === (OW = WW.constructor) || void 0 === OW ? void 0 : OW.name) || ""
+                            } catch (WW) {
                               return null
                             }
-                            return "" === YB || "Object" === YB || "CSSSupportsRule" === YB ? `@supports ${OB.conditionText} {` : null
+                            return "" === mW || "Object" === mW || "CSSSupportsRule" === mW ? `@supports ${iW.conditionText} {` : null
                           }
-                          return "string" == typeof OB.name ? "keyText" in OB.cssRules[0] ? ZO.test(OB.name) ? `@keyframes ${OB.name} {` : null : "" === OB.name ? "@layer {" : NO.test(OB.name) ? `@layer ${OB.name} {` : null : null
-                        }(BB);
-                        if (null === YB) return !1;
-                        const DB = GB.sheetHref;
-                        return OB.push({
+                          return "string" == typeof iW.name ? "keyText" in iW.cssRules[0] ? ji.test(iW.name) ? `@keyframes ${iW.name} {` : null : "" === iW.name ? "@layer {" : Ui.test(iW.name) ? `@layer ${iW.name} {` : null : null
+                        }(WW);
+                        if (null === mW) return !1;
+                        const EW = OW.sheetHref;
+                        return iW.push({
                           kind: "group",
-                          rules: Array.from(BB.cssRules),
-                          sheetHref: DB,
+                          rules: Array.from(WW.cssRules),
+                          sheetHref: EW,
                           index: 0,
                           parts: [],
-                          prelude: DB ? uO(YB, DB) : YB,
-                          fixColons: "sheet" === GB.kind && qO(BB) && BB.selectorText.includes(":")
+                          prelude: EW ? ui(mW, EW) : mW,
+                          fixColons: "sheet" === OW.kind && bi(WW) && WW.selectorText.includes(":")
                         }), !0
-                      } catch (BB) {
+                      } catch (WW) {
                         return !1
                       }
-                    }(GB, BB)) return;
-                  let YB = GB.cssText;
-                  "sheet" === BB.kind && qO(GB) && GB.selectorText.includes(":") && (YB = lO(YB)), BB.parts.push(BB.sheetHref ? uO(YB, BB.sheetHref) : YB), BB.index += 1
+                    }(OW, WW)) return;
+                  let mW = OW.cssText;
+                  "sheet" === WW.kind && bi(OW) && OW.selectorText.includes(":") && (mW = li(mW)), WW.parts.push(WW.sheetHref ? ui(mW, WW.sheetHref) : mW), WW.index += 1
                 }
-                return function(BB) {
+                return function(WW) {
                   try {
-                    const GB = BB.rules || BB.cssRules;
-                    if (!GB) return !1;
-                    vB(GB);
-                    let YB = BB.href;
-                    !YB && BB.ownerNode && (YB = BB.ownerNode.baseURI);
-                    const QB = Array.from(GB);
-                    return OB.push({
+                    const OW = WW.rules || WW.cssRules;
+                    if (!OW) return !1;
+                    rW(OW);
+                    let mW = WW.href;
+                    !mW && WW.ownerNode && (mW = WW.ownerNode.baseURI);
+                    const NW = Array.from(OW);
+                    return iW.push({
                         kind: "sheet",
-                        sheet: BB,
-                        rules: QB,
-                        sheetHref: YB,
+                        sheet: WW,
+                        rules: NW,
+                        sheetHref: mW,
                         index: 0,
                         parts: [],
                         importRule: null
                       }),
-                      function(BB, OB) {
-                        const GB = [{
-                          sheet: OB,
-                          rules: BB,
+                      function(WW, iW) {
+                        const OW = [{
+                          sheet: iW,
+                          rules: WW,
                           index: 0
                         }];
-                        for (; GB.length > 0;) {
-                          const OB = GB[GB.length - 1];
-                          if (OB.index >= OB.rules.length) {
-                            GB.pop();
+                        for (; OW.length > 0;) {
+                          const iW = OW[OW.length - 1];
+                          if (iW.index >= iW.rules.length) {
+                            OW.pop();
                             continue
                           }
-                          const YB = OB.rules[OB.index];
-                          if (OB.index += 1, !pO(YB) || DB.has(YB)) continue;
-                          let QB = null;
+                          const mW = iW.rules[iW.index];
+                          if (iW.index += 1, !Ai(mW) || EW.has(mW)) continue;
+                          let NW = null;
                           try {
-                            QB = YB.styleSheet
-                          } catch (BB) {
-                            DB.set(YB, null);
+                            NW = mW.styleSheet
+                          } catch (WW) {
+                            EW.set(mW, null);
                             continue
                           }
-                          if (QB && !GB.some((BB => BB.sheet === QB))) try {
-                            const BB = QB.rules || QB.cssRules;
-                            if (!BB) continue;
-                            vB(BB);
-                            let OB = QB.href;
-                            !OB && QB.ownerNode && (OB = QB.ownerNode.baseURI);
-                            const oB = Array.from(BB);
-                            DB.set(YB, {
-                              sheet: QB,
-                              rules: oB,
-                              sheetHref: OB
-                            }), GB.push({
-                              sheet: QB,
-                              rules: oB,
+                          if (NW && !OW.some((WW => WW.sheet === NW))) try {
+                            const WW = NW.rules || NW.cssRules;
+                            if (!WW) continue;
+                            rW(WW);
+                            let iW = NW.href;
+                            !iW && NW.ownerNode && (iW = NW.ownerNode.baseURI);
+                            const PW = Array.from(WW);
+                            EW.set(mW, {
+                              sheet: NW,
+                              rules: PW,
+                              sheetHref: iW
+                            }), OW.push({
+                              sheet: NW,
+                              rules: PW,
                               index: 0
                             })
-                          } catch (BB) {}
+                          } catch (WW) {}
                         }
-                      }(QB, BB), !0
-                  } catch (BB) {
+                      }(NW, WW), !0
+                  } catch (WW) {
                     return !1
                   }
-                }(BB) || (GB = !0), {
-                  advance(BB) {
-                    if (GB) return !0;
-                    const DB = KB();
-                    let oB = BB > 0 ? BB : 1;
+                }(WW) || (OW = !0), {
+                  advance(WW) {
+                    if (OW) return !0;
+                    const EW = HW();
+                    let PW = WW > 0 ? WW : 1;
                     try {
-                      for (; !GB && oB > 0;) {
-                        const GB = OB[OB.length - 1];
-                        if (GB.index >= GB.rules.length) {
-                          let OB = null;
+                      for (; !OW && PW > 0;) {
+                        const OW = iW[iW.length - 1];
+                        if (OW.index >= OW.rules.length) {
+                          let iW = null;
                           try {
-                            if ("group" === GB.kind) {
-                              const BB = GB.prelude + GB.parts.join("") + "}";
-                              OB = GB.fixColons ? lO(BB) : BB
-                            } else OB = yO(GB.parts.join(""))
-                          } catch (BB) {}
-                          QB(OB)
+                            if ("group" === OW.kind) {
+                              const WW = OW.prelude + OW.parts.join("") + "}";
+                              iW = OW.fixColons ? li(WW) : WW
+                            } else iW = ci(OW.parts.join(""))
+                          } catch (WW) {}
+                          NW(iW)
                         } else {
-                          oB -= 1;
+                          PW -= 1;
                           try {
-                            jB(GB)
-                          } catch (BB) {
-                            QB(null)
+                            LW(OW)
+                          } catch (WW) {
+                            NW(null)
                           }
                         }
                       }
-                    } catch (BB) {
-                      GB = !0, YB = null
+                    } catch (WW) {
+                      OW = !0, mW = null
                     } finally {
-                      xB(KB() - DB)
+                      FW(HW() - EW)
                     }
-                    return GB
+                    return OW
                   },
-                  text: () => GB ? YB : null,
+                  text: () => OW ? mW : null,
                   remainingRules() {
-                    if (GB) return 0;
-                    let BB = 0;
-                    for (const GB of OB) BB += GB.rules.length - GB.index;
-                    return BB
+                    if (OW) return 0;
+                    let WW = 0;
+                    for (const OW of iW) WW += OW.rules.length - OW.index;
+                    return WW
                   }
                 }
-              }(YB))
-            } catch (BB) {}
-            if (!GB || !YB) return OO(), null;
-            const DB = GB;
-            let QB = !1;
-            const oB = {
-              sheet: YB,
+              }(mW))
+            } catch (WW) {}
+            if (!OW || !mW) return ii(), null;
+            const EW = OW;
+            let NW = !1;
+            const PW = {
+              sheet: mW,
               invalidate() {
-                QB = !0
+                NW = !0
               }
             };
-            this.pendingDeferredSheets.add(oB);
-            let jB = !1;
+            this.pendingDeferredSheets.add(PW);
+            let LW = !1;
             return {
-              advance: GB => {
-                if (jB) return !0;
-                const yB = KB(),
-                  JB = FB();
-                let MB = !0;
+              advance: OW => {
+                if (LW) return !0;
+                const cW = HW(),
+                  wW = dW();
+                let tW = !0;
                 try {
-                  if (QB) return jB = !0, OO(), !0;
-                  if (!DB.advance(GB)) return MB = !1, !1;
-                  jB = !0;
-                  const oB = DB.text();
-                  if (!BB.isConnected) return !0;
-                  let yB = null;
+                  if (NW) return LW = !0, ii(), !0;
+                  if (!EW.advance(OW)) return tW = !1, !1;
+                  LW = !0;
+                  const PW = EW.text();
+                  if (!WW.isConnected) return !0;
+                  let cW = null;
                   try {
-                    yB = BB.sheet
-                  } catch (BB) {}
-                  return yB !== YB ? (OO(), !0) : oB ? (this.emitCssTextMutation(BB, OB, oB), !0) : (OO(), !0)
+                    cW = WW.sheet
+                  } catch (WW) {}
+                  return cW !== mW ? (ii(), !0) : PW ? (this.emitCssTextMutation(WW, iW, PW), !0) : (ii(), !0)
                 } finally {
-                  MB && this.pendingDeferredSheets.delete(oB), iB(PB = KB() - yB, null != (zB = JB) ? zB : uB) || (TB.totalMs += PB, PB > TB.slowestSliceMs && (TB.slowestSliceMs = PB))
+                  tW && this.pendingDeferredSheets.delete(PW), eW(ZW = HW() - cW, null != (xW = wW) ? xW : nW) || (RW.totalMs += ZW, ZW > RW.slowestSliceMs && (RW.slowestSliceMs = ZW))
                 }
-                var PB, zB
+                var ZW, xW
               },
-              remainingRules: () => DB.remainingRules(),
+              remainingRules: () => EW.remainingRules(),
               discard: () => {
-                this.pendingDeferredSheets.delete(oB)
+                this.pendingDeferredSheets.delete(PW)
               }
             }
           }
-          onCssomSheetMutation(BB) {
-            if (BB && 0 !== this.pendingDeferredSheets.size)
-              for (const OB of this.pendingDeferredSheets) OB.sheet === BB && (this.pendingDeferredSheets.delete(OB), OB.invalidate())
+          onCssomSheetMutation(WW) {
+            if (WW && 0 !== this.pendingDeferredSheets.size)
+              for (const iW of this.pendingDeferredSheets) iW.sheet === WW && (this.pendingDeferredSheets.delete(iW), iW.invalidate())
           }
-          inlineDeferredLinkElement(BB, OB) {
-            var GB;
-            null === (GB = this.beginDeferredLinkInlining(BB, OB)) || void 0 === GB || GB.advance(1 / 0)
+          inlineDeferredLinkElement(WW, iW) {
+            var OW;
+            null === (OW = this.beginDeferredLinkInlining(WW, iW)) || void 0 === OW || OW.advance(1 / 0)
           }
-          emitCssTextMutation(BB, OB, GB) {
+          emitCssTextMutation(WW, iW, OW) {
             this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: OB,
+                id: iW,
                 attributes: {
-                  _cssText: SO({
-                    element: BB,
+                  _cssText: Si({
+                    element: WW,
                     name: "_cssText",
-                    value: GB,
+                    value: OW,
                     maskAllElementAttributes: this.maskAllElementAttributes,
                     maskAttributeFn: this.maskAttributeFn
                   })
@@ -4015,159 +4015,159 @@ export const modules = {
               }]
             })
           }
-          trackLinkElement(BB) {
-            this.trackedLinkElements.has(BB) || (this.trackedLinkElements.add(BB), this.trackStylesheetInLinkElement(BB))
+          trackLinkElement(WW) {
+            this.trackedLinkElements.has(WW) || (this.trackedLinkElements.add(WW), this.trackStylesheetInLinkElement(WW))
           }
-          adoptStyleSheets(BB, OB) {
-            if (0 === BB.length) return;
-            const GB = {
-                id: OB,
+          adoptStyleSheets(WW, iW) {
+            if (0 === WW.length) return;
+            const OW = {
+                id: iW,
                 styleIds: []
               },
-              YB = [];
-            for (const DB of BB) {
-              let BB;
-              if (this.styleMirror.has(DB)) BB = this.styleMirror.getId(DB);
+              mW = [];
+            for (const EW of WW) {
+              let WW;
+              if (this.styleMirror.has(EW)) WW = this.styleMirror.getId(EW);
               else {
-                const OB = this.styleMirror.add(DB);
-                BB = OB;
-                const GB = KB();
+                const iW = this.styleMirror.add(EW);
+                WW = iW;
+                const OW = HW();
                 try {
-                  sB((() => {
+                  zW((() => {
                     try {
-                      const BB = DB.rules || DB.cssRules;
-                      BB && vB(BB)
-                    } catch (BB) {}
-                    YB.push({
-                      styleId: OB,
-                      rules: Array.from(DB.rules || CSSRule, ((BB, OB) => ({
-                        rule: zO(BB, DB.href),
-                        index: OB
+                      const WW = EW.rules || EW.cssRules;
+                      WW && rW(WW)
+                    } catch (WW) {}
+                    mW.push({
+                      styleId: iW,
+                      rules: Array.from(EW.rules || CSSRule, ((WW, iW) => ({
+                        rule: xi(WW, EW.href),
+                        index: iW
                       })))
                     })
                   }))
                 } finally {
-                  xB(KB() - GB)
+                  FW(HW() - OW)
                 }
               }
-              GB.styleIds.push(BB)
+              OW.styleIds.push(WW)
             }
-            YB.length > 0 && (GB.styles = YB), this.adoptedStyleSheetCb(GB)
+            mW.length > 0 && (OW.styles = mW), this.adoptedStyleSheetCb(OW)
           }
           reset() {
-            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), sO.forEach((BB => BB.abort())), sO.clear()
+            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), Qi.forEach((WW => WW.abort())), Qi.clear()
           }
-          trackStylesheetInLinkElement(BB) {}
+          trackStylesheetInLinkElement(WW) {}
         },
-        KY = class {
+        um = class {
           constructor() {
-            DO(this, "nodeMap", new WeakMap), DO(this, "active", !1)
+            Ei(this, "nodeMap", new WeakMap), Ei(this, "active", !1)
           }
-          inOtherBuffer(BB, OB) {
-            const GB = this.nodeMap.get(BB);
-            return GB && Array.from(GB).some((BB => BB !== OB))
+          inOtherBuffer(WW, iW) {
+            const OW = this.nodeMap.get(WW);
+            return OW && Array.from(OW).some((WW => WW !== iW))
           }
-          add(BB, OB) {
+          add(WW, iW) {
             this.active || (this.active = !0, requestAnimationFrame((() => {
               this.nodeMap = new WeakMap, this.active = !1
-            }))), this.nodeMap.set(BB, (this.nodeMap.get(BB) || new Set).add(OB))
+            }))), this.nodeMap.set(WW, (this.nodeMap.get(WW) || new Set).add(iW))
           }
           destroy() {}
         },
-        uY = !1;
+        om = !1;
       try {
-        if (2 !== Array.from([1], (BB => 2 * BB))[0]) {
-          var mY;
-          const BB = document.createElement("iframe");
-          document.body.appendChild(BB), Array.from = (null === (mY = BB.contentWindow) || void 0 === mY ? void 0 : mY.Array.from) || Array.from, document.body.removeChild(BB)
+        if (2 !== Array.from([1], (WW => 2 * WW))[0]) {
+          var dm;
+          const WW = document.createElement("iframe");
+          document.body.appendChild(WW), Array.from = (null === (dm = WW.contentWindow) || void 0 === dm ? void 0 : dm.Array.from) || Array.from, document.body.removeChild(WW)
         }
-      } catch (BB) {
-        console.debug("Unable to override Array.from", BB)
+      } catch (WW) {
+        console.debug("Unable to override Array.from", WW)
       }
-      var IY = new RO,
-        FY = new Set([yB.Mutation, yB.MediaInteraction, yB.StyleSheetRule, yB.CanvasMutation, yB.Font, yB.Log, yB.StyleDeclaration, yB.AdoptedStyleSheet]);
+      var em = new ki,
+        gm = new Set([cW.Mutation, cW.MediaInteraction, cW.StyleSheetRule, cW.CanvasMutation, cW.Font, cW.Log, cW.StyleDeclaration, cW.AdoptedStyleSheet]);
 
-      function iY(BB) {
-        const OB = window;
-        if ("function" == typeof OB.requestIdleCallback) {
-          const GB = OB.requestIdleCallback(BB, {
+      function Dm(WW) {
+        const iW = window;
+        if ("function" == typeof iW.requestIdleCallback) {
+          const OW = iW.requestIdleCallback(WW, {
             timeout: 2e3
           });
           return {
             cancel() {
-              var BB;
-              return null === (BB = OB.cancelIdleCallback) || void 0 === BB ? void 0 : BB.call(OB, GB)
+              var WW;
+              return null === (WW = iW.cancelIdleCallback) || void 0 === WW ? void 0 : WW.call(iW, OW)
             }
           }
         }
-        const GB = setTimeout(BB, 250);
+        const OW = setTimeout(WW, 250);
         return {
-          cancel: () => clearTimeout(GB)
+          cancel: () => clearTimeout(OW)
         }
       }
 
-      function LY() {
-        let BB, OB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          GB = !1,
-          DB = !1;
+      function Vm() {
+        let WW, iW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          OW = !1,
+          EW = !1;
         const {
-          emit: QB,
-          checkoutEveryNms: oB,
-          checkoutEveryNth: JB,
-          blockClass: MB = "rr-block",
-          blockSelector: PB = null,
-          ignoreClass: zB = "rr-ignore",
-          ignoreSelector: lB = null,
-          maskTextClass: pB = "rr-mask",
-          maskTextSelector: qB = null,
-          inlineStylesheet: ZB = !0,
-          inlineStylesheetBudgetRules: NB,
-          maskAllInputs: RB,
-          maskInputOptions: WB,
-          slimDOMOptions: AB,
-          maskInputFn: VB,
-          maskTextFn: SB,
-          maskAllElementAttributes: nB = !1,
-          maskAttributeFn: UB,
-          hooks: fB,
-          packFn: kB,
-          sampling: KB = {},
-          dataURLOptions: uB = {},
-          canvasResolutionScale: mB,
-          canvasMasking: FB,
-          mousemoveWait: iB,
-          recordDOM: LB = !0,
-          recordCanvas: gB = !1,
-          recordCrossOriginIframes: rB = !1,
-          recordAfter: XB = ("DOMContentLoaded" === OB.recordAfter ? OB.recordAfter : "load"),
-          userTriggeredOnInput: wB = !1,
-          collectFonts: EB = !1,
-          inlineImages: cB = !1,
-          plugins: hB,
-          keepIframeSrcFn: aB = () => !1,
-          ignoreCSSAttributes: eB = new Set([]),
-          attributeFilter: TB,
-          errorHandler: HB
-        } = OB;
-        ! function(BB) {
-          uG = BB
-        }(HB);
-        const vB = YB({
+          emit: NW,
+          checkoutEveryNms: PW,
+          checkoutEveryNth: wW,
+          blockClass: tW = "rr-block",
+          blockSelector: ZW = null,
+          ignoreClass: xW = "rr-ignore",
+          ignoreSelector: lW = null,
+          maskTextClass: AW = "rr-mask",
+          maskTextSelector: bW = null,
+          inlineStylesheet: jW = !0,
+          inlineStylesheetBudgetRules: UW,
+          maskAllInputs: kW,
+          maskInputOptions: sW,
+          slimDOMOptions: MW,
+          maskInputFn: KW,
+          maskTextFn: SW,
+          maskAllElementAttributes: YW = !1,
+          maskAttributeFn: yW,
+          hooks: TW,
+          packFn: JW,
+          sampling: HW = {},
+          dataURLOptions: nW = {},
+          canvasResolutionScale: uW,
+          canvasMasking: dW,
+          mousemoveWait: eW,
+          recordDOM: vW = !0,
+          recordCanvas: gW = !1,
+          recordCrossOriginIframes: DW = !1,
+          recordAfter: VW = ("DOMContentLoaded" === iW.recordAfter ? iW.recordAfter : "load"),
+          userTriggeredOnInput: pW = !1,
+          collectFonts: fW = !1,
+          inlineImages: CW = !1,
+          plugins: XW,
+          keepIframeSrcFn: BW = () => !1,
+          ignoreCSSAttributes: qW = new Set([]),
+          attributeFilter: RW,
+          errorHandler: aW
+        } = iW;
+        ! function(WW) {
+          oO = WW
+        }(aW);
+        const rW = mW({
             type: "image/webp",
             quality: .4,
             maxBase64ImageLength: 1048576
-          }, uB),
-          sB = !rB || window.parent === window;
-        let xB = !1;
-        if (!sB) try {
-          window.parent.document && (xB = !1)
-        } catch (OB) {
-          xB = !0
+          }, nW),
+          zW = !DW || window.parent === window;
+        let FW = !1;
+        if (!zW) try {
+          window.parent.document && (FW = !1)
+        } catch (iW) {
+          FW = !0
         }
-        if (sB && !QB) throw new Error("emit function is required");
-        if (!sB && !xB) return () => {};
-        void 0 !== iB && void 0 === KB.mousemove && (KB.mousemove = iB), IY.reset();
-        const tB = !0 === RB ? {
+        if (zW && !NW) throw new Error("emit function is required");
+        if (!zW && !FW) return () => {};
+        void 0 !== eW && void 0 === HW.mousemove && (HW.mousemove = eW), em.reset();
+        const QW = !0 === kW ? {
             color: !0,
             date: !0,
             "datetime-local": !0,
@@ -4184,190 +4184,190 @@ export const modules = {
             textarea: !0,
             select: !0,
             password: !0
-          } : void 0 !== WB ? WB : {
+          } : void 0 !== sW ? sW : {
             password: !0
           },
-          OO = YG(void 0 !== AB && AB);
-        let YO;
+          ii = NO(void 0 !== MW && MW);
+        let mi;
         ! function() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
-          "NodeList" in BB && !BB.NodeList.prototype.forEach && (BB.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in BB && !BB.DOMTokenList.prototype.forEach && (BB.DOMTokenList.prototype.forEach = [].forEach)
+          let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
+          "NodeList" in WW && !WW.NodeList.prototype.forEach && (WW.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in WW && !WW.DOMTokenList.prototype.forEach && (WW.DOMTokenList.prototype.forEach = [].forEach)
         }();
-        let DO = 0;
-        const QO = new Map;
-        let oO, jO;
-        const yO = BB => {
-          for (const OB of hB || []) OB.eventProcessor && (BB = OB.eventProcessor(BB));
-          return kB && !xB && (BB = kB(BB)), BB
+        let Ei = 0;
+        const Ni = new Map;
+        let Pi, Li;
+        const ci = WW => {
+          for (const iW of XW || []) iW.eventProcessor && (WW = iW.eventProcessor(WW));
+          return JW && !FW && (WW = JW(WW)), WW
         };
-        nY = (BB, OB) => {
-          var GB;
-          const YB = BB;
-          if (YB.timestamp = lG(), !(null === (GB = XG[0]) || void 0 === GB ? void 0 : GB.isFrozen()) || YB.type === jB.FullSnapshot || YB.type === jB.IncrementalSnapshot && FY.has(YB.data.source) || XG.forEach((BB => BB.unfreeze())), sB) null == QB || QB(yO(YB), OB);
-          else if (xB) {
-            const BB = {
+        Tm = (WW, iW) => {
+          var OW;
+          const mW = WW;
+          if (mW.timestamp = bO(), !(null === (OW = fO[0]) || void 0 === OW ? void 0 : OW.isFrozen()) || mW.type === LW.FullSnapshot || mW.type === LW.IncrementalSnapshot && gm.has(mW.data.source) || fO.forEach((WW => WW.unfreeze())), zW) null == NW || NW(ci(mW), iW);
+          else if (FW) {
+            const WW = {
               type: "rrweb",
-              event: yO(YB),
+              event: ci(mW),
               origin: window.location.origin,
-              isCheckout: OB
+              isCheckout: iW
             };
-            window.parent.postMessage(BB, "*")
+            window.parent.postMessage(WW, "*")
           }
-          if (YB.type === jB.FullSnapshot) YO = YB, DO = 0;
-          else if (YB.type === jB.IncrementalSnapshot) {
-            if (YB.data.source === yB.Mutation && YB.data.isAttachIframe) return;
-            DO++, (JB && DO >= JB || oB && YB.timestamp - YO.timestamp > oB) && UY(!0)
+          if (mW.type === LW.FullSnapshot) mi = mW, Ei = 0;
+          else if (mW.type === LW.IncrementalSnapshot) {
+            if (mW.data.source === cW.Mutation && mW.data.isAttachIframe) return;
+            Ei++, (wW && Ei >= wW || PW && mW.timestamp - mi.timestamp > PW) && Jm(!0)
           }
         };
-        const JO = BB => {
-            if (BB.removes && BB.removes.length > 0) {
-              const OB = BB.adds.length > 0 ? new Set(BB.adds.map((BB => BB.node.id))) : null,
-                GB = new Set;
-              if (BB.adds.length > 0)
-                for (const YB of BB.adds) {
-                  const BB = IY.yDB(YB.node.id);
-                  BB && "IFRAME" === BB.nodeName && GB.add(BB)
+        const wi = WW => {
+            if (WW.removes && WW.removes.length > 0) {
+              const iW = WW.adds.length > 0 ? new Set(WW.adds.map((WW => WW.node.id))) : null,
+                OW = new Set;
+              if (WW.adds.length > 0)
+                for (const mW of WW.adds) {
+                  const WW = em.AmW(mW.node.id);
+                  WW && "IFRAME" === WW.nodeName && OW.add(WW)
                 }
-              BB.removes.forEach((BB => {
+              WW.removes.forEach((WW => {
                 let {
-                  id: YB
-                } = BB;
-                if (OB && OB.has(YB)) return;
-                const DB = lO.getIframeElementById(YB);
-                DB && GB.has(DB) ? lO.forgetIframeId(YB) : (null == oO || oO(YB), lO.removeIframeById(YB))
-              })), null == jO || jO(), lO.cleanupDetachedIframes()
+                  id: mW
+                } = WW;
+                if (iW && iW.has(mW)) return;
+                const EW = li.getIframeElementById(mW);
+                EW && OW.has(EW) ? li.forgetIframeId(mW) : (null == Pi || Pi(mW), li.removeIframeById(mW))
+              })), null == Li || Li(), li.cleanupDetachedIframes()
             }
-            nY({
-              type: jB.IncrementalSnapshot,
-              data: YB({
-                source: yB.Mutation
-              }, BB)
+            Tm({
+              type: LW.IncrementalSnapshot,
+              data: mW({
+                source: cW.Mutation
+              }, WW)
             })
           },
-          MO = BB => nY({
-            type: jB.IncrementalSnapshot,
-            data: YB({
-              source: yB.Scroll
-            }, BB)
+          ti = WW => Tm({
+            type: LW.IncrementalSnapshot,
+            data: mW({
+              source: cW.Scroll
+            }, WW)
           }),
-          PO = BB => nY({
-            type: jB.IncrementalSnapshot,
-            data: YB({
-              source: yB.CanvasMutation
-            }, BB)
+          Zi = WW => Tm({
+            type: LW.IncrementalSnapshot,
+            data: mW({
+              source: cW.CanvasMutation
+            }, WW)
           }),
-          zO = new dY({
-            mutationCb: JO,
-            adoptedStyleSheetCb: BB => nY({
-              type: jB.IncrementalSnapshot,
-              data: YB({
-                source: yB.AdoptedStyleSheet
-              }, BB)
+          xi = new nm({
+            mutationCb: wi,
+            adoptedStyleSheetCb: WW => Tm({
+              type: LW.IncrementalSnapshot,
+              data: mW({
+                source: cW.AdoptedStyleSheet
+              }, WW)
             }),
-            maskAllElementAttributes: nB,
-            maskAttributeFn: UB
+            maskAllElementAttributes: YW,
+            maskAttributeFn: yW
           }),
-          lO = new BY({
-            mirror: IY,
-            mutationCb: JO,
-            stylesheetManager: zO,
-            recordCrossOriginIframes: rB,
-            wrappedEmit: nY
+          li = new Om({
+            mirror: em,
+            mutationCb: wi,
+            stylesheetManager: xi,
+            recordCrossOriginIframes: DW,
+            wrappedEmit: Tm
           });
-        for (const YB of hB || []) YB.getMirror && YB.getMirror({
-          nodeMirror: IY,
-          crossOriginIframeMirror: lO.crossOriginIframeMirror,
-          crossOriginIframeStyleMirror: lO.crossOriginIframeStyleMirror
+        for (const mW of XW || []) mW.getMirror && mW.getMirror({
+          nodeMirror: em,
+          crossOriginIframeMirror: li.crossOriginIframeMirror,
+          crossOriginIframeStyleMirror: li.crossOriginIframeStyleMirror
         });
-        const pO = new KY,
-          qO = null == FB ? void 0 : FB.configured;
-        fY = new kY({
-          recordCanvas: gB,
-          mutationCb: PO,
+        const Ai = new um,
+          bi = null == dW ? void 0 : dW.configured;
+        hm = new Hm({
+          recordCanvas: gW,
+          mutationCb: Zi,
           win: window,
-          blockClass: MB,
-          blockSelector: PB,
-          mirror: IY,
-          sampling: KB.canvas,
-          dataURLOptions: vB,
-          resolutionScale: mB,
-          canvasMasking: FB
+          blockClass: tW,
+          blockSelector: ZW,
+          mirror: em,
+          sampling: HW.canvas,
+          dataURLOptions: rW,
+          resolutionScale: uW,
+          canvasMasking: dW
         });
-        const ZO = new OY({
-          mutationCb: JO,
-          scrollCb: MO,
+        const ji = new mm({
+          mutationCb: wi,
+          scrollCb: ti,
           bypassOptions: {
-            blockClass: MB,
-            blockSelector: PB,
-            maskTextClass: pB,
-            maskTextSelector: qB,
-            inlineStylesheet: ZB,
-            maskInputOptions: tB,
-            dataURLOptions: vB,
-            maskTextFn: SB,
-            maskInputFn: VB,
-            maskAllElementAttributes: nB,
-            maskAttributeFn: UB,
-            recordCanvas: gB,
-            canvasMaskingConfigured: qO,
-            inlineImages: cB,
-            sampling: KB,
-            slimDOMOptions: OO,
-            iframeManager: lO,
-            stylesheetManager: zO,
-            canvasManager: fY,
-            keepIframeSrcFn: aB,
-            processedNodeManager: pO,
-            attributeFilter: TB
+            blockClass: tW,
+            blockSelector: ZW,
+            maskTextClass: AW,
+            maskTextSelector: bW,
+            inlineStylesheet: jW,
+            maskInputOptions: QW,
+            dataURLOptions: rW,
+            maskTextFn: SW,
+            maskInputFn: KW,
+            maskAllElementAttributes: YW,
+            maskAttributeFn: yW,
+            recordCanvas: gW,
+            canvasMaskingConfigured: bi,
+            inlineImages: CW,
+            sampling: HW,
+            slimDOMOptions: ii,
+            iframeManager: li,
+            stylesheetManager: xi,
+            canvasManager: hm,
+            keepIframeSrcFn: BW,
+            processedNodeManager: Ai,
+            attributeFilter: RW
           },
-          mirror: IY
+          mirror: em
         });
-        UY = function() {
-          let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (LB) {
-            bB(NB);
+        Jm = function() {
+          let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (vW) {
+            GW(UW);
             try {
-              if (nY({
-                  type: jB.Meta,
+              if (Tm({
+                  type: LW.Meta,
                   data: {
                     href: window.location.href,
-                    width: ZG(),
-                    height: qG()
+                    width: kO(),
+                    height: UO()
                   }
-                }, OB), GB) return;
-              null == BB || BB.cancel(), BB = void 0, zO.reset(), ZO.init(), XG.forEach((BB => BB.lock()));
-              let YB = null,
-                DB = [];
+                }, iW), OW) return;
+              null == WW || WW.cancel(), WW = void 0, xi.reset(), ji.init(), fO.forEach((WW => WW.lock()));
+              let mW = null,
+                EW = [];
               try {
-                YB = function(BB, OB) {
+                mW = function(WW, iW) {
                   const {
-                    mirror: GB = new RO,
-                    blockClass: YB = "rr-block",
-                    blockSelector: DB = null,
-                    maskTextClass: QB = "rr-mask",
-                    maskTextSelector: oB = null,
-                    inlineStylesheet: jB = !0,
-                    inlineImages: yB = !1,
-                    recordCanvas: JB = !1,
-                    canvasMaskingConfigured: MB,
-                    maskAllInputs: PB = !1,
-                    maskTextFn: zB,
-                    maskInputFn: lB,
-                    maskAllElementAttributes: pB = !1,
-                    maskAttributeFn: qB,
-                    slimDOM: ZB = !1,
-                    dataURLOptions: NB,
-                    preserveWhiteSpace: RB,
-                    onSerialize: WB,
-                    onIframeLoad: AB,
-                    iframeLoadTimeout: VB,
-                    onIframeListenerRegistered: SB,
-                    onStylesheetLoad: nB,
-                    stylesheetLoadTimeout: UB,
-                    keepIframeSrcFn: fB = () => !1,
-                    maxDepth: kB,
-                    inlineStylesheetBudgetRules: dB
-                  } = OB || {}, KB = !0 === PB ? {
+                    mirror: OW = new ki,
+                    blockClass: mW = "rr-block",
+                    blockSelector: EW = null,
+                    maskTextClass: NW = "rr-mask",
+                    maskTextSelector: PW = null,
+                    inlineStylesheet: LW = !0,
+                    inlineImages: cW = !1,
+                    recordCanvas: wW = !1,
+                    canvasMaskingConfigured: tW,
+                    maskAllInputs: ZW = !1,
+                    maskTextFn: xW,
+                    maskInputFn: lW,
+                    maskAllElementAttributes: AW = !1,
+                    maskAttributeFn: bW,
+                    slimDOM: jW = !1,
+                    dataURLOptions: UW,
+                    preserveWhiteSpace: kW,
+                    onSerialize: sW,
+                    onIframeLoad: MW,
+                    iframeLoadTimeout: KW,
+                    onIframeListenerRegistered: SW,
+                    onStylesheetLoad: YW,
+                    stylesheetLoadTimeout: yW,
+                    keepIframeSrcFn: TW = () => !1,
+                    maxDepth: JW,
+                    inlineStylesheetBudgetRules: hW
+                  } = iW || {}, HW = !0 === ZW ? {
                     color: !0,
                     date: !0,
                     "datetime-local": !0,
@@ -4384,1403 +4384,1403 @@ export const modules = {
                     textarea: !0,
                     select: !0,
                     password: !0
-                  } : !1 === PB ? {
+                  } : !1 === ZW ? {
                     password: !0
-                  } : PB, uB = YG(ZB);
-                  bB(dB);
+                  } : ZW, nW = NO(jW);
+                  GW(hW);
                   try {
-                    return GG(BB, {
-                      doc: BB,
-                      mirror: GB,
-                      blockClass: YB,
-                      blockSelector: DB,
-                      maskTextClass: QB,
-                      maskTextSelector: oB,
+                    return EO(WW, {
+                      doc: WW,
+                      mirror: OW,
+                      blockClass: mW,
+                      blockSelector: EW,
+                      maskTextClass: NW,
+                      maskTextSelector: PW,
                       skipChild: !1,
-                      inlineStylesheet: jB,
-                      maskInputOptions: KB,
-                      maskTextFn: zB,
-                      maskInputFn: lB,
-                      maskAllElementAttributes: pB,
-                      maskAttributeFn: qB,
-                      slimDOMOptions: uB,
-                      dataURLOptions: NB,
-                      inlineImages: yB,
-                      recordCanvas: JB,
-                      canvasMaskingConfigured: MB,
-                      preserveWhiteSpace: RB,
-                      onSerialize: WB,
-                      onIframeLoad: AB,
-                      iframeLoadTimeout: VB,
-                      onIframeListenerRegistered: SB,
-                      onStylesheetLoad: nB,
-                      stylesheetLoadTimeout: UB,
-                      keepIframeSrcFn: fB,
+                      inlineStylesheet: LW,
+                      maskInputOptions: HW,
+                      maskTextFn: xW,
+                      maskInputFn: lW,
+                      maskAllElementAttributes: AW,
+                      maskAttributeFn: bW,
+                      slimDOMOptions: nW,
+                      dataURLOptions: UW,
+                      inlineImages: cW,
+                      recordCanvas: wW,
+                      canvasMaskingConfigured: tW,
+                      preserveWhiteSpace: kW,
+                      onSerialize: sW,
+                      onIframeLoad: MW,
+                      iframeLoadTimeout: KW,
+                      onIframeListenerRegistered: SW,
+                      onStylesheetLoad: YW,
+                      stylesheetLoadTimeout: yW,
+                      keepIframeSrcFn: TW,
                       newlyAddedElement: !1,
-                      maxDepth: kB
+                      maxDepth: JW
                     })
                   } finally {
-                    CB()
+                    IW()
                   }
                 }(document, {
-                  mirror: IY,
-                  blockClass: MB,
-                  blockSelector: PB,
-                  maskTextClass: pB,
-                  maskTextSelector: qB,
-                  inlineStylesheet: ZB,
-                  maskAllInputs: tB,
-                  inlineStylesheetBudgetRules: NB,
-                  maskTextFn: SB,
-                  maskInputFn: VB,
-                  maskAllElementAttributes: nB,
-                  maskAttributeFn: UB,
-                  slimDOM: OO,
-                  dataURLOptions: vB,
-                  recordCanvas: gB,
-                  canvasMaskingConfigured: qO,
-                  inlineImages: cB,
-                  onSerialize(BB) {
-                    SG(BB, IY) && lO.addIframe(BB), nG(BB, IY) && zO.trackLinkElement(BB), UG(BB) && ZO.addShadowRoot(dB.shadowRoot(BB), document)
+                  mirror: em,
+                  blockClass: tW,
+                  blockSelector: ZW,
+                  maskTextClass: AW,
+                  maskTextSelector: bW,
+                  inlineStylesheet: jW,
+                  maskAllInputs: QW,
+                  inlineStylesheetBudgetRules: UW,
+                  maskTextFn: SW,
+                  maskInputFn: KW,
+                  maskAllElementAttributes: YW,
+                  maskAttributeFn: yW,
+                  slimDOM: ii,
+                  dataURLOptions: rW,
+                  recordCanvas: gW,
+                  canvasMaskingConfigured: bi,
+                  inlineImages: CW,
+                  onSerialize(WW) {
+                    yO(WW, em) && li.addIframe(WW), TO(WW, em) && xi.trackLinkElement(WW), JO(WW) && ji.addShadowRoot(hW.shadowRoot(WW), document)
                   },
-                  onIframeLoad(BB, OB) {
-                    lO.attachIframe(BB, OB), ZO.observeAttachShadow(BB)
+                  onIframeLoad(WW, iW) {
+                    li.attachIframe(WW, iW), ji.observeAttachShadow(WW)
                   },
-                  onIframeListenerRegistered(BB, OB) {
-                    lO.registerLoadListenerDisposer(BB, OB)
+                  onIframeListenerRegistered(WW, iW) {
+                    li.registerLoadListenerDisposer(WW, iW)
                   },
-                  onStylesheetLoad(BB, OB) {
-                    zO.attachLinkElement(BB, OB)
+                  onStylesheetLoad(WW, iW) {
+                    xi.attachLinkElement(WW, iW)
                   },
-                  keepIframeSrcFn: aB
+                  keepIframeSrcFn: BW
                 })
               } finally {
-                DB = BO()
+                EW = Wi()
               }
-              if (GB) return;
-              if (!YB) return console.warn("Failed to snapshot the document");
-              if (nY({
-                  type: jB.FullSnapshot,
+              if (OW) return;
+              if (!mW) return console.warn("Failed to snapshot the document");
+              if (Tm({
+                  type: LW.FullSnapshot,
                   data: {
-                    node: YB,
-                    initialOffset: pG(window)
+                    node: mW,
+                    initialOffset: jO(window)
                   }
-                }, OB), GB) return;
-              if (XG.forEach((BB => BB.unlock())), fY.onFullSnapshot(), DB.length) {
-                const OB = function(BB, OB, GB) {
-                  let YB = !1,
-                    DB = null,
-                    QB = 0,
-                    oB = null;
-                  const jB = () => null !== oB || BB.length > QB,
-                    yB = () => {
-                      const GB = BB[QB];
-                      BB[QB] = null, QB += 1, GB && jG((() => {
-                        oB = OB.beginDeferredLinkInlining(GB, IY.getId(GB))
+                }, iW), OW) return;
+              if (fO.forEach((WW => WW.unlock())), hm.onFullSnapshot(), EW.length) {
+                const iW = function(WW, iW, OW) {
+                  let mW = !1,
+                    EW = null,
+                    NW = 0,
+                    PW = null;
+                  const LW = () => null !== PW || WW.length > NW,
+                    cW = () => {
+                      const OW = WW[NW];
+                      WW[NW] = null, NW += 1, OW && wO((() => {
+                        PW = iW.beginDeferredLinkInlining(OW, em.getId(OW))
                       }))
                     },
-                    JB = () => {
-                      if (!oB) return;
-                      const BB = oB;
-                      let OB = !0;
-                      jG((() => {
-                        OB = BB.advance(200)
-                      })), OB && (oB = null)
+                    wW = () => {
+                      if (!PW) return;
+                      const WW = PW;
+                      let iW = !0;
+                      wO((() => {
+                        iW = WW.advance(200)
+                      })), iW && (PW = null)
                     },
-                    MB = BB => {
-                      if (DB = null, YB) return;
-                      let OB = 0;
+                    tW = WW => {
+                      if (EW = null, mW) return;
+                      let iW = 0;
                       do {
                         try {
-                          oB || yB(), JB()
-                        } catch (BB) {
-                          null == oB || oB.discard(), oB = null, GO(1)
+                          PW || cW(), wW()
+                        } catch (WW) {
+                          null == PW || PW.discard(), PW = null, Oi(1)
                         }
-                        OB += 1
-                      } while (!YB && jB() && (BB ? !BB.didTimeout && BB.timeRemaining() > 5 : 10 > OB));
-                      YB || (jB() ? DB = iY(MB) : GB())
+                        iW += 1
+                      } while (!mW && LW() && (WW ? !WW.didTimeout && WW.timeRemaining() > 5 : 10 > iW));
+                      mW || (LW() ? EW = Dm(tW) : OW())
                     };
-                  return DB = iY(MB), {
+                  return EW = Dm(tW), {
                     cancel() {
-                      YB = !0, null == oB || oB.discard(), oB = null, null == DB || DB.cancel(), DB = null
+                      mW = !0, null == PW || PW.discard(), PW = null, null == EW || EW.cancel(), EW = null
                     },
                     flush() {
-                      if (YB) return;
-                      YB = !0, null == DB || DB.cancel(), DB = null;
-                      let OB = 0,
-                        MB = 0;
-                      for (; jB() && 50 > OB;) {
-                        oB || yB();
-                        const GB = oB;
-                        if (GB)
-                          if (Math.floor(GB.remainingRules() / 200) + 1 > 50 - OB) GB.discard(), oB = null, MB += 1;
+                      if (mW) return;
+                      mW = !0, null == EW || EW.cancel(), EW = null;
+                      let iW = 0,
+                        tW = 0;
+                      for (; LW() && 50 > iW;) {
+                        PW || cW();
+                        const OW = PW;
+                        if (OW)
+                          if (Math.floor(OW.remainingRules() / 200) + 1 > 50 - iW) OW.discard(), PW = null, tW += 1;
                           else {
                             try {
-                              JB()
-                            } catch (BB) {
-                              null == oB || oB.discard(), oB = null, MB += 1
+                              wW()
+                            } catch (WW) {
+                              null == PW || PW.discard(), PW = null, tW += 1
                             }
-                            OB += 1
+                            iW += 1
                           }
                       }
-                      if (jB() || MB > 0) {
-                        let OB = MB + (null !== oB ? 1 : 0);
-                        for (let GB = QB; BB.length > GB; GB++) null !== BB[GB] && (OB += 1);
-                        GO(OB), null == oB || oB.discard(), oB = null
+                      if (LW() || tW > 0) {
+                        let iW = tW + (null !== PW ? 1 : 0);
+                        for (let OW = NW; WW.length > OW; OW++) null !== WW[OW] && (iW += 1);
+                        Oi(iW), null == PW || PW.discard(), PW = null
                       }
-                      GB()
+                      OW()
                     }
                   }
-                }(DB, zO, (() => {
-                  BB === OB && (BB = void 0)
+                }(EW, xi, (() => {
+                  WW === iW && (WW = void 0)
                 }));
-                BB = OB
+                WW = iW
               }
-              rB && lO.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && zO.adoptStyleSheets(document.adoptedStyleSheets, IY.getId(document))
+              DW && li.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && xi.adoptStyleSheets(document.adoptedStyleSheets, em.getId(document))
             } finally {
-              CB()
+              IW()
             }
           }
         };
         try {
-          const OB = [];
-          OB.push(QG("pagehide", (() => {
+          const iW = [];
+          iW.push(LO("pagehide", (() => {
             try {
-              null == BB || BB.flush()
-            } catch (OB) {}
-            BB = void 0
+              null == WW || WW.flush()
+            } catch (iW) {}
+            WW = void 0
           }), window));
-          for (const BB of ["visibilitychange", "freeze", "resume"]) OB.push(QG(BB, IB, document));
-          oO = BB => {
-            const GB = QO.get(BB);
-            GB && (GB.forEach((BB => {
-              jG(BB);
-              const GB = OB.indexOf(BB); - 1 !== GB && OB.splice(GB, 1)
-            })), QO.delete(BB))
-          }, jO = () => {
-            for (const [OB] of QO) {
-              const GB = IY.yDB(OB);
-              if (GB) try {
-                GB.contentDocument && GB.contentDocument.defaultView || null == oO || oO(OB)
-              } catch (BB) {
-                null == oO || oO(OB)
-              } else null == oO || oO(OB)
+          for (const WW of ["visibilitychange", "freeze", "resume"]) iW.push(LO(WW, oW, document));
+          Pi = WW => {
+            const OW = Ni.get(WW);
+            OW && (OW.forEach((WW => {
+              wO(WW);
+              const OW = iW.indexOf(WW); - 1 !== OW && iW.splice(OW, 1)
+            })), Ni.delete(WW))
+          }, Li = () => {
+            for (const [iW] of Ni) {
+              const OW = em.AmW(iW);
+              if (OW) try {
+                OW.contentDocument && OW.contentDocument.defaultView || null == Pi || Pi(iW)
+              } catch (WW) {
+                null == Pi || Pi(iW)
+              } else null == Pi || Pi(iW)
             }
           };
-          const QB = BB => {
-            var OB;
-            return rG(vG)({
-              mutationCb: JO,
-              mousemoveCb: (BB, OB) => nY({
-                type: jB.IncrementalSnapshot,
+          const NW = WW => {
+            var iW;
+            return pO(FO)({
+              mutationCb: wi,
+              mousemoveCb: (WW, iW) => Tm({
+                type: LW.IncrementalSnapshot,
                 data: {
-                  source: OB,
-                  positions: BB
+                  source: iW,
+                  positions: WW
                 }
               }),
-              mouseInteractionCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.MouseInteraction
-                }, BB)
+              mouseInteractionCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.MouseInteraction
+                }, WW)
               }),
-              scrollCb: MO,
-              viewportResizeCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.ViewportResize
-                }, BB)
+              scrollCb: ti,
+              viewportResizeCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.ViewportResize
+                }, WW)
               }),
-              inputCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.Input
-                }, BB)
+              inputCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.Input
+                }, WW)
               }),
-              mediaInteractionCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.MediaInteraction
-                }, BB)
+              mediaInteractionCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.MediaInteraction
+                }, WW)
               }),
-              styleSheetRuleCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.StyleSheetRule
-                }, BB)
+              styleSheetRuleCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.StyleSheetRule
+                }, WW)
               }),
-              styleDeclarationCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.StyleDeclaration
-                }, BB)
+              styleDeclarationCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.StyleDeclaration
+                }, WW)
               }),
-              canvasMutationCb: PO,
-              fontCb: BB => nY({
-                type: jB.IncrementalSnapshot,
-                data: YB({
-                  source: yB.Font
-                }, BB)
+              canvasMutationCb: Zi,
+              fontCb: WW => Tm({
+                type: LW.IncrementalSnapshot,
+                data: mW({
+                  source: cW.Font
+                }, WW)
               }),
-              selectionCb(BB) {
-                nY({
-                  type: jB.IncrementalSnapshot,
-                  data: YB({
-                    source: yB.Selection
-                  }, BB)
+              selectionCb(WW) {
+                Tm({
+                  type: LW.IncrementalSnapshot,
+                  data: mW({
+                    source: cW.Selection
+                  }, WW)
                 })
               },
-              customElementCb(BB) {
-                nY({
-                  type: jB.IncrementalSnapshot,
-                  data: YB({
-                    source: yB.CustomElement
-                  }, BB)
+              customElementCb(WW) {
+                Tm({
+                  type: LW.IncrementalSnapshot,
+                  data: mW({
+                    source: cW.CustomElement
+                  }, WW)
                 })
               },
-              blockClass: MB,
-              ignoreClass: zB,
-              ignoreSelector: lB,
-              maskTextClass: pB,
-              maskTextSelector: qB,
-              maskInputOptions: tB,
-              inlineStylesheet: ZB,
-              sampling: KB,
-              recordDOM: LB,
-              recordCanvas: gB,
-              canvasMaskingConfigured: qO,
-              inlineImages: cB,
-              userTriggeredOnInput: wB,
-              collectFonts: EB,
-              doc: BB,
-              maskInputFn: VB,
-              maskTextFn: SB,
-              maskAllElementAttributes: nB,
-              maskAttributeFn: UB,
-              keepIframeSrcFn: aB,
-              blockSelector: PB,
-              slimDOMOptions: OO,
-              dataURLOptions: vB,
-              mirror: IY,
-              iframeManager: lO,
-              stylesheetManager: zO,
-              shadowDomManager: ZO,
-              processedNodeManager: pO,
-              canvasManager: fY,
-              ignoreCSSAttributes: eB,
-              attributeFilter: TB,
-              plugins: (null == hB || null === (OB = hB.filter((BB => BB.observer))) || void 0 === OB ? void 0 : OB.map((BB => ({
-                name: BB.name,
-                observer: BB.observer,
-                options: BB.options,
-                callback: OB => nY({
-                  type: jB.Plugin,
+              blockClass: tW,
+              ignoreClass: xW,
+              ignoreSelector: lW,
+              maskTextClass: AW,
+              maskTextSelector: bW,
+              maskInputOptions: QW,
+              inlineStylesheet: jW,
+              sampling: HW,
+              recordDOM: vW,
+              recordCanvas: gW,
+              canvasMaskingConfigured: bi,
+              inlineImages: CW,
+              userTriggeredOnInput: pW,
+              collectFonts: fW,
+              doc: WW,
+              maskInputFn: KW,
+              maskTextFn: SW,
+              maskAllElementAttributes: YW,
+              maskAttributeFn: yW,
+              keepIframeSrcFn: BW,
+              blockSelector: ZW,
+              slimDOMOptions: ii,
+              dataURLOptions: rW,
+              mirror: em,
+              iframeManager: li,
+              stylesheetManager: xi,
+              shadowDomManager: ji,
+              processedNodeManager: Ai,
+              canvasManager: hm,
+              ignoreCSSAttributes: qW,
+              attributeFilter: RW,
+              plugins: (null == XW || null === (iW = XW.filter((WW => WW.observer))) || void 0 === iW ? void 0 : iW.map((WW => ({
+                name: WW.name,
+                observer: WW.observer,
+                options: WW.options,
+                callback: iW => Tm({
+                  type: LW.Plugin,
                   data: {
-                    plugin: BB.name,
-                    payload: OB
+                    plugin: WW.name,
+                    payload: iW
                   }
                 })
               })))) || []
-            }, fB)
+            }, TW)
           };
-          lO.addLoadListener((BB => {
+          li.addLoadListener((WW => {
             try {
-              const GB = IY.getId(BB),
-                YB = QB(BB.contentDocument);
-              if ("function" == typeof YB && (OB.push(YB), -1 !== GB)) {
-                let BB = QO.get(GB);
-                BB || (BB = new Set, QO.set(GB, BB)), BB.add(YB)
+              const OW = em.getId(WW),
+                mW = NW(WW.contentDocument);
+              if ("function" == typeof mW && (iW.push(mW), -1 !== OW)) {
+                let WW = Ni.get(OW);
+                WW || (WW = new Set, Ni.set(OW, WW)), WW.add(mW)
               }
-            } catch (OB) {
-              console.warn(OB)
+            } catch (iW) {
+              console.warn(iW)
             }
-          })), lO.addPageHideListener((BB => {
-            const OB = IY.getId(BB);
-            null == oO || oO(OB), hG(BB)
+          })), li.addPageHideListener((WW => {
+            const iW = em.getId(WW);
+            null == Pi || Pi(iW), qO(WW)
           }));
-          let oB = -1;
-          const JB = BB => nY({
-              type: jB.Custom,
+          let PW = -1;
+          const wW = WW => Tm({
+              type: LW.Custom,
               data: {
                 tag: "rrweb/fullscreen",
-                payload: BB
+                payload: WW
               }
             }),
-            NB = () => {
-              var BB, OB, GB, YB;
-              const DB = document,
-                QB = null !== (BB = null !== (OB = null !== (GB = null !== (YB = DB.fullscreenElement) && void 0 !== YB ? YB : DB.webkitFullscreenElement) && void 0 !== GB ? GB : DB.mozFullScreenElement) && void 0 !== OB ? OB : DB.msFullscreenElement) && void 0 !== BB ? BB : null,
-                jB = QB ? IY.getId(QB) : -1;
-              jB !== oB && (-1 !== oB && JB({
-                id: oB,
+            UW = () => {
+              var WW, iW, OW, mW;
+              const EW = document,
+                NW = null !== (WW = null !== (iW = null !== (OW = null !== (mW = EW.fullscreenElement) && void 0 !== mW ? mW : EW.webkitFullscreenElement) && void 0 !== OW ? OW : EW.mozFullScreenElement) && void 0 !== iW ? iW : EW.msFullscreenElement) && void 0 !== WW ? WW : null,
+                LW = NW ? em.getId(NW) : -1;
+              LW !== PW && (-1 !== PW && wW({
+                id: PW,
                 enter: !1
-              }), oB = jB, -1 !== jB && JB({
-                id: jB,
+              }), PW = LW, -1 !== LW && wW({
+                id: LW,
                 enter: !0
               }))
             },
-            RB = () => {
-              if (GB || DB) return;
-              if (DB = !0, UY(), GB) return;
-              const BB = QB(document);
-              GB ? "function" == typeof BB && yG([BB]) : ("function" == typeof BB && OB.push(BB), OB.push(QG("fullscreenchange", NB)), OB.push(QG("webkitfullscreenchange", NB)), OB.push(QG("mozfullscreenchange", NB)), OB.push(QG("MSFullscreenChange", NB)), uY = !0)
+            kW = () => {
+              if (OW || EW) return;
+              if (EW = !0, Jm(), OW) return;
+              const WW = NW(document);
+              OW ? "function" == typeof WW && tO([WW]) : ("function" == typeof WW && iW.push(WW), iW.push(LO("fullscreenchange", UW)), iW.push(LO("webkitfullscreenchange", UW)), iW.push(LO("mozfullscreenchange", UW)), iW.push(LO("MSFullscreenChange", UW)), om = !0)
             };
-          return ["interactive", "complete"].includes(document.readyState) ? RB() : (OB.push(QG("DOMContentLoaded", (() => {
-            nY({
-              type: jB.DomContentLoaded,
+          return ["interactive", "complete"].includes(document.readyState) ? kW() : (iW.push(LO("DOMContentLoaded", (() => {
+            Tm({
+              type: LW.DomContentLoaded,
               data: {}
-            }), "DOMContentLoaded" === XB && setTimeout(RB, 0)
-          }))), OB.push(QG("load", (() => {
-            nY({
-              type: jB.Load,
+            }), "DOMContentLoaded" === VW && setTimeout(kW, 0)
+          }))), iW.push(LO("load", (() => {
+            Tm({
+              type: LW.Load,
               data: {}
-            }), "load" === XB && RB()
+            }), "load" === VW && kW()
           }), window))), () => {
-            GB = !0;
+            OW = !0;
             try {
-              null == BB || BB.flush()
-            } catch (OB) {}
-            BB = void 0, yG(OB), pO.destroy(), lO.removeLoadListener(), lO.destroy(), QO.clear(), ZO.reset(), IY.reset(), uY = !1, uG = void 0
+              null == WW || WW.flush()
+            } catch (iW) {}
+            WW = void 0, tO(iW), Ai.destroy(), li.removeLoadListener(), li.destroy(), Ni.clear(), ji.reset(), em.reset(), om = !1, oO = void 0
           }
-        } catch (OB) {
-          console.warn(OB)
+        } catch (iW) {
+          console.warn(iW)
         }
       }
-      LY.addCustomEvent = (BB, OB) => {
-        if (!uY) throw new Error("please add custom event after start recording");
-        nY({
-          type: jB.Custom,
+      Vm.addCustomEvent = (WW, iW) => {
+        if (!om) throw new Error("please add custom event after start recording");
+        Tm({
+          type: LW.Custom,
           data: {
-            tag: BB,
-            payload: OB
+            tag: WW,
+            payload: iW
           }
         })
-      }, LY.freezePage = () => {
-        XG.forEach((BB => BB.freeze()))
-      }, LY.takeFullSnapshot = BB => {
-        if (!uY) throw new Error("please take full snapshot after start recording");
-        UY(BB)
-      }, LY.isRecording = () => uY, LY.mirror = IY, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var gY = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${gY.source}`, "i"), new RegExp(gY.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var rY = Object.create(null);
+      }, Vm.freezePage = () => {
+        fO.forEach((WW => WW.freeze()))
+      }, Vm.takeFullSnapshot = WW => {
+        if (!om) throw new Error("please take full snapshot after start recording");
+        Jm(WW)
+      }, Vm.isRecording = () => om, Vm.mirror = em, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
+      var pm = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${pm.source}`, "i"), new RegExp(pm.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var fm = Object.create(null);
 
-      function XY(BB) {
-        return XY = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
-          return typeof BB
-        } : function(BB) {
-          return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-        }, XY(BB)
+      function Cm(WW) {
+        return Cm = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(WW) {
+          return typeof WW
+        } : function(WW) {
+          return WW && "function" == typeof Symbol && WW.constructor === Symbol && WW !== Symbol.prototype ? "symbol" : typeof WW
+        }, Cm(WW)
       }
 
-      function wY(BB, OB, GB) {
-        return (OB = function(BB) {
-          var OB = function(BB) {
-            if ("object" != XY(BB) || !BB) return BB;
-            var OB = BB[Symbol.toPrimitive];
-            if (void 0 !== OB) {
-              var GB = OB.call(BB, "string");
-              if ("object" != XY(GB)) return GB;
+      function Xm(WW, iW, OW) {
+        return (iW = function(WW) {
+          var iW = function(WW) {
+            if ("object" != Cm(WW) || !WW) return WW;
+            var iW = WW[Symbol.toPrimitive];
+            if (void 0 !== iW) {
+              var OW = iW.call(WW, "string");
+              if ("object" != Cm(OW)) return OW;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(BB)
-          }(BB);
-          return "symbol" == XY(OB) ? OB : OB + ""
-        }(OB)) in BB ? Object.defineProperty(BB, OB, {
-          value: GB,
+            return String(WW)
+          }(WW);
+          return "symbol" == Cm(iW) ? iW : iW + ""
+        }(iW)) in WW ? Object.defineProperty(WW, iW, {
+          value: OW,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : BB[OB] = GB, BB
+        }) : WW[iW] = OW, WW
       }
-      rY.Node = Object.create(null), rY.ShadowRoot = Object.create(null), rY.MutationObserver = Object.create(null), rY.Element = Object.create(null);
-      var EY = class {
-          constructor(BB) {
-            wY(this, "fileName", void 0), wY(this, "functionName", void 0), wY(this, "lineNumber", void 0), wY(this, "columnNumber", void 0), this.fileName = BB.fileName || "", this.functionName = BB.functionName || "", this.lineNumber = BB.lineNumber, this.columnNumber = BB.columnNumber
+      fm.Node = Object.create(null), fm.ShadowRoot = Object.create(null), fm.MutationObserver = Object.create(null), fm.Element = Object.create(null);
+      var Bm = class {
+          constructor(WW) {
+            Xm(this, "fileName", void 0), Xm(this, "functionName", void 0), Xm(this, "lineNumber", void 0), Xm(this, "columnNumber", void 0), this.fileName = WW.fileName || "", this.functionName = WW.functionName || "", this.lineNumber = WW.lineNumber, this.columnNumber = WW.columnNumber
           }
           toString() {
-            const BB = this.lineNumber || "",
-              OB = this.columnNumber || "";
-            return this.functionName ? `${this.functionName} (${this.fileName}:${BB}:${OB})` : `${this.fileName}:${BB}:${OB}`
+            const WW = this.lineNumber || "",
+              iW = this.columnNumber || "";
+            return this.functionName ? `${this.functionName} (${this.fileName}:${WW}:${iW})` : `${this.fileName}:${WW}:${iW}`
           }
         },
-        cY = /(^|@)\S+:\d+/,
-        hY = /^\s*at .*(\S+:\d+|\(native\))/m,
-        aY = /^(eval@)?(\[native code])?$/,
-        eY = {
-          parse(BB) {
-            return BB ? void 0 !== BB.stacktrace || void 0 !== BB["opera#sourceloc"] ? this.parseOpera(BB) : BB.stack && BB.stack.match(hY) ? this.parseV8OrIE(BB) : BB.stack ? this.parseFFOrSafari(BB) : [] : []
+        qm = /(^|@)\S+:\d+/,
+        Rm = /^\s*at .*(\S+:\d+|\(native\))/m,
+        Gm = /^(eval@)?(\[native code])?$/,
+        Im = {
+          parse(WW) {
+            return WW ? void 0 !== WW.stacktrace || void 0 !== WW["opera#sourceloc"] ? this.parseOpera(WW) : WW.stack && WW.stack.match(Rm) ? this.parseV8OrIE(WW) : WW.stack ? this.parseFFOrSafari(WW) : [] : []
           },
-          extractLocation(BB) {
-            if (-1 === BB.indexOf(":")) return [BB];
-            const OB = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(BB.replace(/[()]/g, ""));
-            if (!OB) throw new Error(`Cannot parse given url: ${BB}`);
-            return [OB[1], OB[2] || void 0, OB[3] || void 0]
+          extractLocation(WW) {
+            if (-1 === WW.indexOf(":")) return [WW];
+            const iW = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(WW.replace(/[()]/g, ""));
+            if (!iW) throw new Error(`Cannot parse given url: ${WW}`);
+            return [iW[1], iW[2] || void 0, iW[3] || void 0]
           },
-          parseV8OrIE(BB) {
-            return BB.stack.split("\n").filter((function(BB) {
-              return !!BB.match(hY)
-            }), this).map((function(BB) {
-              BB.indexOf("(eval ") > -1 && (BB = BB.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
-              let OB = BB.replace(/^\s+/, "").replace(/\(eval code/g, "(");
-              const GB = OB.match(/ (\((.+):(\d+):(\d+)\)$)/);
-              OB = GB ? OB.replace(GB[0], "") : OB;
-              const YB = OB.split(/\s+/).slice(1),
-                DB = this.extractLocation(GB ? GB[1] : YB.pop());
-              return new EY({
-                functionName: YB.join(" ") || void 0,
-                fileName: ["eval", "<anonymous>"].indexOf(DB[0]) > -1 ? void 0 : DB[0],
-                lineNumber: DB[1],
-                columnNumber: DB[2]
+          parseV8OrIE(WW) {
+            return WW.stack.split("\n").filter((function(WW) {
+              return !!WW.match(Rm)
+            }), this).map((function(WW) {
+              WW.indexOf("(eval ") > -1 && (WW = WW.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
+              let iW = WW.replace(/^\s+/, "").replace(/\(eval code/g, "(");
+              const OW = iW.match(/ (\((.+):(\d+):(\d+)\)$)/);
+              iW = OW ? iW.replace(OW[0], "") : iW;
+              const mW = iW.split(/\s+/).slice(1),
+                EW = this.extractLocation(OW ? OW[1] : mW.pop());
+              return new Bm({
+                functionName: mW.join(" ") || void 0,
+                fileName: ["eval", "<anonymous>"].indexOf(EW[0]) > -1 ? void 0 : EW[0],
+                lineNumber: EW[1],
+                columnNumber: EW[2]
               })
             }), this)
           },
-          parseFFOrSafari(BB) {
-            return BB.stack.split("\n").filter((function(BB) {
-              return !BB.match(aY)
-            }), this).map((function(BB) {
-              if (BB.indexOf(" > eval") > -1 && (BB = BB.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === BB.indexOf("@") && -1 === BB.indexOf(":")) return new EY({
-                functionName: BB
+          parseFFOrSafari(WW) {
+            return WW.stack.split("\n").filter((function(WW) {
+              return !WW.match(Gm)
+            }), this).map((function(WW) {
+              if (WW.indexOf(" > eval") > -1 && (WW = WW.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === WW.indexOf("@") && -1 === WW.indexOf(":")) return new Bm({
+                functionName: WW
               });
               {
-                const OB = /((.*".+"[^@]*)?[^@]*)(?:@)/,
-                  GB = BB.match(OB),
-                  YB = GB && GB[1] ? GB[1] : void 0,
-                  DB = this.extractLocation(BB.replace(OB, ""));
-                return new EY({
-                  functionName: YB,
-                  fileName: DB[0],
-                  lineNumber: DB[1],
-                  columnNumber: DB[2]
+                const iW = /((.*".+"[^@]*)?[^@]*)(?:@)/,
+                  OW = WW.match(iW),
+                  mW = OW && OW[1] ? OW[1] : void 0,
+                  EW = this.extractLocation(WW.replace(iW, ""));
+                return new Bm({
+                  functionName: mW,
+                  fileName: EW[0],
+                  lineNumber: EW[1],
+                  columnNumber: EW[2]
                 })
               }
             }), this)
           },
-          parseOpera(BB) {
-            return !BB.stacktrace || BB.message.indexOf("\n") > -1 && BB.message.split("\n").length > BB.stacktrace.split("\n").length ? this.parseOpera9(BB) : BB.stack ? this.parseOpera11(BB) : this.parseOpera10(BB)
+          parseOpera(WW) {
+            return !WW.stacktrace || WW.message.indexOf("\n") > -1 && WW.message.split("\n").length > WW.stacktrace.split("\n").length ? this.parseOpera9(WW) : WW.stack ? this.parseOpera11(WW) : this.parseOpera10(WW)
           },
-          parseOpera9(BB) {
-            const OB = /Line (\d+).*script (?:in )?(\S+)/i,
-              GB = BB.message.split("\n"),
-              YB = [];
-            for (let DB = 2, QB = GB.length; QB > DB; DB += 2) {
-              const BB = OB.exec(GB[DB]);
-              BB && YB.push(new EY({
-                fileName: BB[2],
-                lineNumber: parseFloat(BB[1])
+          parseOpera9(WW) {
+            const iW = /Line (\d+).*script (?:in )?(\S+)/i,
+              OW = WW.message.split("\n"),
+              mW = [];
+            for (let EW = 2, NW = OW.length; NW > EW; EW += 2) {
+              const WW = iW.exec(OW[EW]);
+              WW && mW.push(new Bm({
+                fileName: WW[2],
+                lineNumber: parseFloat(WW[1])
               }))
             }
-            return YB
+            return mW
           },
-          parseOpera10(BB) {
-            const OB = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
-              GB = BB.stacktrace.split("\n"),
-              YB = [];
-            for (let DB = 0, QB = GB.length; QB > DB; DB += 2) {
-              const BB = OB.exec(GB[DB]);
-              BB && YB.push(new EY({
-                functionName: BB[3] || void 0,
-                fileName: BB[2],
-                lineNumber: parseFloat(BB[1])
+          parseOpera10(WW) {
+            const iW = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
+              OW = WW.stacktrace.split("\n"),
+              mW = [];
+            for (let EW = 0, NW = OW.length; NW > EW; EW += 2) {
+              const WW = iW.exec(OW[EW]);
+              WW && mW.push(new Bm({
+                functionName: WW[3] || void 0,
+                fileName: WW[2],
+                lineNumber: parseFloat(WW[1])
               }))
             }
-            return YB
+            return mW
           },
-          parseOpera11(BB) {
-            return BB.stack.split("\n").filter((function(BB) {
-              return !!BB.match(cY) && !BB.match(/^Error created at/)
-            }), this).map((function(BB) {
-              const OB = BB.split("@"),
-                GB = this.extractLocation(OB.pop());
-              return new EY({
-                functionName: (OB.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
-                fileName: GB[0],
-                lineNumber: GB[1],
-                columnNumber: GB[2]
+          parseOpera11(WW) {
+            return WW.stack.split("\n").filter((function(WW) {
+              return !!WW.match(qm) && !WW.match(/^Error created at/)
+            }), this).map((function(WW) {
+              const iW = WW.split("@"),
+                OW = this.extractLocation(iW.pop());
+              return new Bm({
+                functionName: (iW.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
+                fileName: OW[0],
+                lineNumber: OW[1],
+                columnNumber: OW[2]
               })
             }), this)
           }
         };
 
-      function TY(BB) {
-        if (!BB || !BB.outerHTML) return "";
-        let OB = "";
-        for (; BB.parentElement;) {
-          let GB = BB.localName;
-          if (!GB) break;
-          GB = GB.toLowerCase();
-          const YB = BB.parentElement,
-            DB = [];
-          if (YB.children && YB.children.length > 0)
-            for (let BB = 0; YB.children.length > BB; BB++) {
-              const OB = YB.children[BB];
-              OB.localName && OB.localName.toLowerCase && OB.localName.toLowerCase() === GB && DB.push(OB)
+      function am(WW) {
+        if (!WW || !WW.outerHTML) return "";
+        let iW = "";
+        for (; WW.parentElement;) {
+          let OW = WW.localName;
+          if (!OW) break;
+          OW = OW.toLowerCase();
+          const mW = WW.parentElement,
+            EW = [];
+          if (mW.children && mW.children.length > 0)
+            for (let WW = 0; mW.children.length > WW; WW++) {
+              const iW = mW.children[WW];
+              iW.localName && iW.localName.toLowerCase && iW.localName.toLowerCase() === OW && EW.push(iW)
             }
-          DB.length > 1 && (GB += `:eq(${DB.indexOf(BB)})`), OB = GB + (OB ? ">" + OB : ""), BB = YB
+          EW.length > 1 && (OW += `:eq(${EW.indexOf(WW)})`), iW = OW + (iW ? ">" + iW : ""), WW = mW
         }
-        return OB
+        return iW
       }
 
-      function bY(BB) {
-        return Array.isArray(BB)
+      function rm(WW) {
+        return Array.isArray(WW)
       }
 
-      function CY(BB) {
-        return "object" == typeof BB && null !== BB && !bY(BB)
+      function zm(WW) {
+        return "object" == typeof WW && null !== WW && !rm(WW)
       }
 
-      function HY(BB, OB) {
-        if (0 === OB) return !0;
-        const GB = Object.keys(BB);
-        for (const YB of GB)
-          if (CY(BB[YB]) && HY(BB[YB], OB - 1)) return !0;
+      function Fm(WW, iW) {
+        if (0 === iW) return !0;
+        const OW = Object.keys(WW);
+        for (const mW of OW)
+          if (zm(WW[mW]) && Fm(WW[mW], iW - 1)) return !0;
         return !1
       }
 
-      function vY(BB, OB) {
-        const GB = {
+      function Qm(WW, iW) {
+        const OW = {
           numOfKeysLimit: 50,
           depthOfLimit: 4
         };
-        Object.assign(GB, OB);
-        const YB = [],
-          DB = [];
-        return JSON.stringify(BB, (function(BB, OB) {
-          if (YB.length > 0) {
-            const GB = YB.indexOf(this);
-            ~GB ? YB.splice(GB + 1) : YB.push(this), ~GB ? DB.splice(GB, 1 / 0, BB) : DB.push(BB), ~YB.indexOf(OB) && (OB = YB[0] === OB ? "[Circular ~]" : "[Circular ~." + DB.slice(0, YB.indexOf(OB)).join(".") + "]")
-          } else YB.push(OB);
-          if (null === OB) return OB;
-          if (void 0 === OB) return "undefined";
-          if (CY(QB = OB) && Object.keys(QB).length > GB.numOfKeysLimit || "function" == typeof QB || CY(QB) && HY(QB, GB.depthOfLimit)) return function(BB) {
-            let OB = BB.toString();
-            return GB.stringLengthLimit && OB.length > GB.stringLengthLimit && (OB = `${OB.slice(0,GB.stringLengthLimit)}...`), OB
-          }(OB);
-          var QB;
-          if ("bigint" == typeof OB) return OB.toString() + "n";
-          if (OB instanceof Event) {
-            const BB = {};
-            for (const GB in OB) {
-              const YB = OB[GB];
-              BB[GB] = bY(YB) ? TY(YB.length ? YB[0] : null) : YB
+        Object.assign(OW, iW);
+        const mW = [],
+          EW = [];
+        return JSON.stringify(WW, (function(WW, iW) {
+          if (mW.length > 0) {
+            const OW = mW.indexOf(this);
+            ~OW ? mW.splice(OW + 1) : mW.push(this), ~OW ? EW.splice(OW, 1 / 0, WW) : EW.push(WW), ~mW.indexOf(iW) && (iW = mW[0] === iW ? "[Circular ~]" : "[Circular ~." + EW.slice(0, mW.indexOf(iW)).join(".") + "]")
+          } else mW.push(iW);
+          if (null === iW) return iW;
+          if (void 0 === iW) return "undefined";
+          if (zm(NW = iW) && Object.keys(NW).length > OW.numOfKeysLimit || "function" == typeof NW || zm(NW) && Fm(NW, OW.depthOfLimit)) return function(WW) {
+            let iW = WW.toString();
+            return OW.stringLengthLimit && iW.length > OW.stringLengthLimit && (iW = `${iW.slice(0,OW.stringLengthLimit)}...`), iW
+          }(iW);
+          var NW;
+          if ("bigint" == typeof iW) return iW.toString() + "n";
+          if (iW instanceof Event) {
+            const WW = {};
+            for (const OW in iW) {
+              const mW = iW[OW];
+              WW[OW] = rm(mW) ? am(mW.length ? mW[0] : null) : mW
             }
-            return BB
+            return WW
           }
-          return OB instanceof Node ? OB instanceof HTMLElement ? OB ? OB.outerHTML : "" : OB.nodeName : OB instanceof Error ? OB.stack ? OB.stack + "\nEnd of stack for Error object" : OB.name + ": " + OB.message : OB
+          return iW instanceof Node ? iW instanceof HTMLElement ? iW ? iW.outerHTML : "" : iW.nodeName : iW instanceof Error ? iW.stack ? iW.stack + "\nEnd of stack for Error object" : iW.name + ": " + iW.message : iW
         }))
       }
-      var sY = {
+      var WE = {
         level: ["assert", "clear", "count", "countReset", "debug", "dir", "dirxml", "error", "group", "groupCollapsed", "groupEnd", "info", "log", "table", "time", "timeEnd", "timeLog", "trace", "warn"],
         lengthThreshold: 1e3,
         logger: "console"
       };
 
-      function xY(BB, OB, GB) {
-        const YB = GB ? Object.assign({}, sY, GB) : sY,
-          DB = YB.logger;
-        if (!DB) return () => {};
-        let QB;
-        QB = "string" == typeof DB ? OB[DB] : DB;
-        let oB = 0,
-          jB = !1,
-          yB = !0;
-        const JB = [];
-        if (YB.level.includes("error")) {
-          const GB = OB => {
-            const GB = OB.message;
-            BB({
+      function iE(WW, iW, OW) {
+        const mW = OW ? Object.assign({}, WE, OW) : WE,
+          EW = mW.logger;
+        if (!EW) return () => {};
+        let NW;
+        NW = "string" == typeof EW ? iW[EW] : EW;
+        let PW = 0,
+          LW = !1,
+          cW = !0;
+        const wW = [];
+        if (mW.level.includes("error")) {
+          const OW = iW => {
+            const OW = iW.message;
+            WW({
               level: "error",
-              trace: eY.parse(OB.error).map((BB => BB.toString())),
-              payload: [vY(GB, YB.stringifyOptions)]
+              trace: Im.parse(iW.error).map((WW => WW.toString())),
+              payload: [Qm(OW, mW.stringifyOptions)]
             })
           };
-          OB.addEventListener("error", GB), JB.push((() => {
-            OB.removeEventListener("error", GB)
+          iW.addEventListener("error", OW), wW.push((() => {
+            iW.removeEventListener("error", OW)
           }));
-          const DB = OB => {
-            let GB, DB;
-            OB.reason instanceof Error ? (GB = OB.reason, DB = [vY(`Uncaught (in promise) ${GB.name}: ${GB.message}`, YB.stringifyOptions)]) : (GB = new Error, DB = [vY("Uncaught (in promise)", YB.stringifyOptions), vY(OB.reason, YB.stringifyOptions)]), BB({
+          const EW = iW => {
+            let OW, EW;
+            iW.reason instanceof Error ? (OW = iW.reason, EW = [Qm(`Uncaught (in promise) ${OW.name}: ${OW.message}`, mW.stringifyOptions)]) : (OW = new Error, EW = [Qm("Uncaught (in promise)", mW.stringifyOptions), Qm(iW.reason, mW.stringifyOptions)]), WW({
               level: "error",
-              trace: eY.parse(GB).map((BB => BB.toString())),
-              payload: DB
+              trace: Im.parse(OW).map((WW => WW.toString())),
+              payload: EW
             })
           };
-          OB.addEventListener("unhandledrejection", DB), JB.push((() => {
-            OB.removeEventListener("unhandledrejection", DB)
+          iW.addEventListener("unhandledrejection", EW), wW.push((() => {
+            iW.removeEventListener("unhandledrejection", EW)
           }))
         }
-        for (const PB of YB.level) JB.push(MB(QB, PB));
+        for (const ZW of mW.level) wW.push(tW(NW, ZW));
         return () => {
-          yB = !1, JB.forEach((BB => BB()))
+          cW = !1, wW.forEach((WW => WW()))
         };
 
-        function MB(OB, GB) {
-          return OB[GB] ? function(DB, QB) {
+        function tW(iW, OW) {
+          return iW[OW] ? function(EW, NW) {
             try {
-              if (!(QB in DB)) return () => {};
-              const JB = DB[QB],
-                MB = {
-                  next: JB
+              if (!(NW in EW)) return () => {};
+              const wW = EW[NW],
+                tW = {
+                  next: wW
                 },
-                PB = (DB => function() {
-                  for (var QB = arguments.length, JB = new Array(QB), MB = 0; MB < QB; MB++) JB[MB] = arguments[MB];
-                  if (DB.apply(OB, JB), yB && !("assert" === GB && JB[0] || jB)) {
-                    jB = !0;
+                ZW = (EW => function() {
+                  for (var NW = arguments.length, wW = new Array(NW), tW = 0; tW < NW; tW++) wW[tW] = arguments[tW];
+                  if (EW.apply(iW, wW), cW && !("assert" === OW && wW[0] || LW)) {
+                    LW = !0;
                     try {
-                      const OB = eY.parse(new Error).map((BB => BB.toString())).splice(1),
-                        DB = ("assert" === GB ? JB.slice(1) : JB).map((BB => vY(BB, YB.stringifyOptions)));
-                      oB++, YB.lengthThreshold > oB ? BB({
-                        level: GB,
-                        trace: OB,
-                        payload: DB
-                      }) : oB === YB.lengthThreshold && BB({
+                      const iW = Im.parse(new Error).map((WW => WW.toString())).splice(1),
+                        EW = ("assert" === OW ? wW.slice(1) : wW).map((WW => Qm(WW, mW.stringifyOptions)));
+                      PW++, mW.lengthThreshold > PW ? WW({
+                        level: OW,
+                        trace: iW,
+                        payload: EW
+                      }) : PW === mW.lengthThreshold && WW({
                         level: "warn",
                         trace: [],
-                        payload: [vY("The number of log records reached the threshold.")]
+                        payload: [Qm("The number of log records reached the threshold.")]
                       })
-                    } catch (BB) {
-                      DB.apply(OB, ["rrweb logger error:", BB, ...JB])
+                    } catch (WW) {
+                      EW.apply(iW, ["rrweb logger error:", WW, ...wW])
                     } finally {
-                      jB = !1
+                      LW = !1
                     }
                   }
                 })((function() {
-                  for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-                  return MB.next.apply(this, OB)
+                  for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+                  return tW.next.apply(this, iW)
                 }));
-              return "function" == typeof PB && (PB.prototype = PB.prototype || {}, Object.defineProperties(PB, {
+              return "function" == typeof ZW && (ZW.prototype = ZW.prototype || {}, Object.defineProperties(ZW, {
                 __rrweb_original__: {
                   enumerable: !1,
-                  value: JB
+                  value: wW
                 },
                 __rrweb_layer__: {
                   enumerable: !1,
-                  value: MB
+                  value: tW
                 }
-              })), DB[QB] = PB, () => {
-                if (DB[QB] === PB) return void(DB[QB] = MB.next);
-                const BB = BB => {
-                  var OB;
-                  return "function" == typeof BB ? null !== (OB = BB.__rrweb_layer__) && void 0 !== OB ? OB : BB.__posthog_layer__ : void 0
+              })), EW[NW] = ZW, () => {
+                if (EW[NW] === ZW) return void(EW[NW] = tW.next);
+                const WW = WW => {
+                  var iW;
+                  return "function" == typeof WW ? null !== (iW = WW.__rrweb_layer__) && void 0 !== iW ? iW : WW.__posthog_layer__ : void 0
                 };
-                let OB = DB[QB],
-                  GB = BB(OB);
-                for (; GB;) {
-                  if (GB.next === PB) return void(GB.next = MB.next);
-                  OB = GB.next, GB = BB(OB)
+                let iW = EW[NW],
+                  OW = WW(iW);
+                for (; OW;) {
+                  if (OW.next === ZW) return void(OW.next = tW.next);
+                  iW = OW.next, OW = WW(iW)
                 }
               }
-            } catch (BB) {
+            } catch (WW) {
               return () => {}
             }
-          }(OB, GB) : () => {}
+          }(iW, OW) : () => {}
         }
       }
-      const tY = "u" > typeof window ? window : void 0,
-        BD = "u" > typeof globalThis ? globalThis : tY,
-        OD = null == BD ? void 0 : BD.document,
-        GD = null == BD ? void 0 : BD.location;
-      null != BD && BD.XMLHttpRequest && new BD.XMLHttpRequest;
-      const YD = "undefined" != typeof globalThis ? globalThis : tY;
-      YD && "undefined" == typeof self && (YD.self = YD), YD && "undefined" == typeof File && (YD.File = function() {});
-      const DD = null != tY ? tY : {},
-        QD = Object.prototype,
-        oD = QD.hasOwnProperty,
-        jD = QD.toString,
-        yD = Array.isArray || function(BB) {
-          return "[object Array]" === jD.call(BB)
+      const OE = "u" > typeof window ? window : void 0,
+        mE = "u" > typeof globalThis ? globalThis : OE,
+        EE = null == mE ? void 0 : mE.document,
+        NE = null == mE ? void 0 : mE.location;
+      null != mE && mE.XMLHttpRequest && new mE.XMLHttpRequest;
+      const PE = "undefined" != typeof globalThis ? globalThis : OE;
+      PE && "undefined" == typeof self && (PE.self = PE), PE && "undefined" == typeof File && (PE.File = function() {});
+      const LE = null != OE ? OE : {},
+        cE = Object.prototype,
+        wE = cE.hasOwnProperty,
+        tE = cE.toString,
+        ZE = Array.isArray || function(WW) {
+          return "[object Array]" === tE.call(WW)
         },
-        JD = BB => "function" == typeof BB,
-        MD = BB => BB === Object(BB) && !yD(BB),
-        PD = BB => void 0 === BB,
-        zD = BB => "[object String]" == jD.call(BB),
-        lD = BB => null === BB,
-        pD = BB => PD(BB) || lD(BB),
-        qD = BB => "[object Number]" == jD.call(BB) && BB == BB,
-        ZD = BB => "[object Boolean]" === jD.call(BB),
-        ND = BB => BB instanceof FormData;
+        xE = WW => "function" == typeof WW,
+        lE = WW => WW === Object(WW) && !ZE(WW),
+        AE = WW => void 0 === WW,
+        bE = WW => "[object String]" == tE.call(WW),
+        jE = WW => null === WW,
+        UE = WW => AE(WW) || jE(WW),
+        kE = WW => "[object Number]" == tE.call(WW) && WW == WW,
+        sE = WW => "[object Boolean]" === tE.call(WW),
+        ME = WW => WW instanceof FormData;
 
-      function RD(BB, OB, GB, YB, DB) {
-        return OB > GB && (YB.warn("min cannot be greater than max."), OB = GB), qD(BB) ? BB > GB ? (YB.warn(" cannot be  greater than max: " + GB + ". Using max value instead."), GB) : OB > BB ? (YB.warn(" cannot be less than min: " + OB + ". Using min value instead."), OB) : BB : (YB.warn(" must be a number. using max or fallback. max: " + GB + ", fallback: " + DB), RD(null != DB ? DB : GB, OB, GB, YB))
+      function KE(WW, iW, OW, mW, EW) {
+        return iW > OW && (mW.warn("min cannot be greater than max."), iW = OW), kE(WW) ? WW > OW ? (mW.warn(" cannot be  greater than max: " + OW + ". Using max value instead."), OW) : iW > WW ? (mW.warn(" cannot be less than min: " + iW + ". Using min value instead."), iW) : WW : (mW.warn(" must be a number. using max or fallback. max: " + OW + ", fallback: " + EW), KE(null != EW ? EW : OW, iW, OW, mW))
       }
-      var WD = class {
-        constructor(BB) {
-          this.C = {}, this.I = BB.I, this.R = RD(BB.bucketSize, 0, 100, BB.A), this.$ = RD(BB.refillRate, 0, this.R, BB.A), this.O = RD(BB.refillInterval, 0, 864e5, BB.A)
+      var SE = class {
+        constructor(WW) {
+          this.C = {}, this.I = WW.I, this.R = KE(WW.bucketSize, 0, 100, WW.A), this.$ = KE(WW.refillRate, 0, this.R, WW.A), this.O = KE(WW.refillInterval, 0, 864e5, WW.A)
         }
-        F(BB, OB) {
-          const GB = Math.floor((OB - BB.lastAccess) / this.O);
-          GB > 0 && (BB.tokens = Math.min(BB.tokens + GB * this.$, this.R), BB.lastAccess = BB.lastAccess + GB * this.O)
+        F(WW, iW) {
+          const OW = Math.floor((iW - WW.lastAccess) / this.O);
+          OW > 0 && (WW.tokens = Math.min(WW.tokens + OW * this.$, this.R), WW.lastAccess = WW.lastAccess + OW * this.O)
         }
-        consumeRateLimit(BB) {
-          var OB;
-          const GB = Date.now(),
-            YB = String(BB);
-          let DB = this.C[YB];
-          return DB ? this.F(DB, GB) : (DB = {
+        consumeRateLimit(WW) {
+          var iW;
+          const OW = Date.now(),
+            mW = String(WW);
+          let EW = this.C[mW];
+          return EW ? this.F(EW, OW) : (EW = {
             tokens: this.R,
-            lastAccess: GB
-          }, this.C[YB] = DB), 0 === DB.tokens || (DB.tokens--, 0 === DB.tokens && (null === (OB = this.I) || void 0 === OB || OB.call(this, BB)), 0 === DB.tokens)
+            lastAccess: OW
+          }, this.C[mW] = EW), 0 === EW.tokens || (EW.tokens--, 0 === EW.tokens && (null === (iW = this.I) || void 0 === iW || iW.call(this, WW)), 0 === EW.tokens)
         }
         stop() {
           this.C = {}
         }
       };
 
-      function AD(BB) {
-        return BB ? BB.split("#")[0] : BB
+      function YE(WW) {
+        return WW ? WW.split("#")[0] : WW
       }
-      const VD = "NativeGzipValidationError";
-      let SD;
-      const nD = BB => {
-          throw function(BB, OB) {
-            const GB = new Error(OB);
+      const yE = "NativeGzipValidationError";
+      let TE;
+      const JE = WW => {
+          throw function(WW, iW) {
+            const OW = new Error(iW);
             try {
-              Object.defineProperty(GB, "name", {
-                value: BB,
+              Object.defineProperty(OW, "name", {
+                value: WW,
                 writable: !0,
                 enumerable: !0,
                 configurable: !0
               })
-            } catch (BB) {}
-            return GB
-          }(VD, `Native gzip produced invalid output: ${BB}`)
+            } catch (WW) {}
+            return OW
+          }(yE, `Native gzip produced invalid output: ${WW}`)
         },
-        UD = (fD = QB((function*(BB, OB) {
-          18 > BB.size && nD("too-short");
-          const GB = new Uint8Array(yield BB.slice(0, 10).arrayBuffer());
-          var YB;
-          (2 > (YB = GB).length || 31 !== YB[0] || 139 !== YB[1] || 8 !== GB[2]) && nD("invalid-header");
-          const DB = new DataView(yield BB.slice(BB.size - 8).arrayBuffer());
-          DB.getUint32(0, !0) !== (BB => {
-            const OB = (() => {
-              if (SD) return SD;
-              SD = [];
-              for (let BB = 0; 256 > BB; BB++) {
-                let OB = BB;
-                for (let BB = 0; 8 > BB; BB++) OB = 1 & OB ? 3988292384 ^ OB >>> 1 : OB >>> 1;
-                SD[BB] = OB >>> 0
+        hE = (HE = NW((function*(WW, iW) {
+          18 > WW.size && JE("too-short");
+          const OW = new Uint8Array(yield WW.slice(0, 10).arrayBuffer());
+          var mW;
+          (2 > (mW = OW).length || 31 !== mW[0] || 139 !== mW[1] || 8 !== OW[2]) && JE("invalid-header");
+          const EW = new DataView(yield WW.slice(WW.size - 8).arrayBuffer());
+          EW.getUint32(0, !0) !== (WW => {
+            const iW = (() => {
+              if (TE) return TE;
+              TE = [];
+              for (let WW = 0; 256 > WW; WW++) {
+                let iW = WW;
+                for (let WW = 0; 8 > WW; WW++) iW = 1 & iW ? 3988292384 ^ iW >>> 1 : iW >>> 1;
+                TE[WW] = iW >>> 0
               }
-              return SD
+              return TE
             })();
-            let GB = 4294967295;
-            for (let YB = 0; BB.length > YB; YB++) GB = OB[255 & (GB ^ BB[YB])] ^ GB >>> 8;
-            return (4294967295 ^ GB) >>> 0
-          })(OB) && nD("invalid-crc");
-          const QB = OB.length >>> 0;
-          DB.getUint32(4, !0) !== QB && nD("invalid-size")
-        })), function(BB, OB) {
-          return fD.apply(this, arguments)
+            let OW = 4294967295;
+            for (let mW = 0; WW.length > mW; mW++) OW = iW[255 & (OW ^ WW[mW])] ^ OW >>> 8;
+            return (4294967295 ^ OW) >>> 0
+          })(iW) && JE("invalid-crc");
+          const NW = iW.length >>> 0;
+          EW.getUint32(4, !0) !== NW && JE("invalid-size")
+        })), function(WW, iW) {
+          return HE.apply(this, arguments)
         });
-      var fD;
+      var HE;
 
-      function kD() {
-        return kD = QB((function*(BB) {
-          let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-            GB = arguments.length > 2 ? arguments[2] : void 0;
+      function nE() {
+        return nE = NW((function*(WW) {
+          let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            OW = arguments.length > 2 ? arguments[2] : void 0;
           try {
-            const OB = (new TextEncoder).encode(BB),
-              GB = new globalThis.CompressionStream("gzip"),
-              DB = GB.writable.getWriter(),
-              oB = DB.write(OB).then((() => DB.close())).catch((YB = QB((function*(BB) {
+            const iW = (new TextEncoder).encode(WW),
+              OW = new globalThis.CompressionStream("gzip"),
+              EW = OW.writable.getWriter(),
+              PW = EW.write(iW).then((() => EW.close())).catch((mW = NW((function*(WW) {
                 try {
-                  yield DB.abort(BB)
-                } catch (BB) {}
-                throw BB
-              })), function(BB) {
-                return YB.apply(this, arguments)
+                  yield EW.abort(WW)
+                } catch (WW) {}
+                throw WW
+              })), function(WW) {
+                return mW.apply(this, arguments)
               })),
-              jB = new Response(GB.readable).blob(),
-              [yB] = yield Promise.all([jB, oB]);
-            return yield UD(yB, OB), yB
-          } catch (BB) {
-            if (null == GB ? void 0 : GB.rethrow) throw BB;
-            return OB && console.error("Failed to gzip compress data", BB), null
+              LW = new Response(OW.readable).blob(),
+              [cW] = yield Promise.all([LW, PW]);
+            return yield hE(cW, iW), cW
+          } catch (WW) {
+            if (null == OW ? void 0 : OW.rethrow) throw WW;
+            return iW && console.error("Failed to gzip compress data", WW), null
           }
-          var YB
-        })), kD.apply(this, arguments)
+          var mW
+        })), nE.apply(this, arguments)
       }
-      const dD = "0.9.4",
-        KD = {
+      const uE = "0.9.4",
+        oE = {
           DEBUG: !1,
-          LIB_VERSION: dD,
+          LIB_VERSION: uE,
           LIB_NAME: "browser-common",
-          JS_SDK_VERSION: dD
+          JS_SDK_VERSION: uE
         },
-        uD = function(BB) {
+        dE = function(WW) {
           let {
-            debugEnabled: OB
+            debugEnabled: iW
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const GB = {
-            N(GB) {
-              let YB;
+          const OW = {
+            N(OW) {
+              let mW;
               try {
-                YB = typeof window > "u" ? void 0 : window
-              } catch (BB) {
+                mW = typeof window > "u" ? void 0 : window
+              } catch (WW) {
                 return
               }
-              for (var DB = arguments.length, QB = new Array(DB > 1 ? DB - 1 : 0), oB = 1; oB < DB; oB++) QB[oB - 1] = arguments[oB];
-              YB && (KD.DEBUG || YB.POSTHOG_DEBUG || OB) && !PD(YB.console) && YB.console && ("__rrweb_original__" in YB.console[GB] ? YB.console[GB].__rrweb_original__ : YB.console[GB])(BB, ...QB)
+              for (var EW = arguments.length, NW = new Array(EW > 1 ? EW - 1 : 0), PW = 1; PW < EW; PW++) NW[PW - 1] = arguments[PW];
+              mW && (oE.DEBUG || mW.POSTHOG_DEBUG || iW) && !AE(mW.console) && mW.console && ("__rrweb_original__" in mW.console[OW] ? mW.console[OW].__rrweb_original__ : mW.console[OW])(WW, ...NW)
             },
             debug() {
-              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
-              GB.N("debug", ...OB)
+              for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
+              OW.N("debug", ...iW)
             },
             info() {
-              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
-              GB.N("log", ...OB)
+              for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
+              OW.N("log", ...iW)
             },
             warn() {
-              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
-              GB.N("warn", ...OB)
+              for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
+              OW.N("warn", ...iW)
             },
             error() {
-              for (var BB = arguments.length, OB = new Array(BB), YB = 0; YB < BB; YB++) OB[YB] = arguments[YB];
-              GB.N("error", ...OB)
+              for (var WW = arguments.length, iW = new Array(WW), mW = 0; mW < WW; mW++) iW[mW] = arguments[mW];
+              OW.N("error", ...iW)
             },
             critical() {
-              for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-              console.error(BB, ...GB)
+              for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+              console.error(WW, ...OW)
             },
-            uninitializedWarning(BB) {
-              GB.error(`You must initialize PostHog before calling ${BB}`)
+            uninitializedWarning(WW) {
+              OW.error(`You must initialize PostHog before calling ${WW}`)
             },
-            createLogger: (OB, GB) => uD(`${BB} ${OB}`, GB)
+            createLogger: (iW, OW) => dE(`${WW} ${iW}`, OW)
           };
-          return GB
+          return OW
         },
-        mD = uD("[PostHog.js]"),
-        ID = mD.createLogger;
+        eE = dE("[PostHog.js]"),
+        vE = eE.createLogger;
 
-      function FD(BB, OB) {
-        if (!pD(BB))
-          if (yD(BB)) BB.forEach(OB);
-          else if (ND(BB)) BB.forEach(((BB, GB) => OB(BB, GB)));
+      function gE(WW, iW) {
+        if (!UE(WW))
+          if (ZE(WW)) WW.forEach(iW);
+          else if (ME(WW)) WW.forEach(((WW, OW) => iW(WW, OW)));
         else
-          for (const GB in BB) oD.call(BB, GB) && OB(BB[GB], GB)
+          for (const OW in WW) wE.call(WW, OW) && iW(WW[OW], OW)
       }
 
-      function iD(BB, OB, GB, YB) {
+      function DE(WW, iW, OW, mW) {
         const {
-          capture: DB = !1,
-          passive: QB = !0
-        } = null != YB ? YB : {};
-        null == BB || BB.addEventListener(OB, GB, {
-          capture: DB,
-          passive: QB
+          capture: EW = !1,
+          passive: NW = !0
+        } = null != mW ? mW : {};
+        null == WW || WW.addEventListener(iW, OW, {
+          capture: EW,
+          passive: NW
         })
       }
-      const LD = ["localhost", "127.0.0.1"],
-        gD = BB => {
-          const OB = null == OD ? void 0 : OD.createElement("a");
-          return PD(OB) ? null : (OB.href = BB, OB)
+      const VE = ["localhost", "127.0.0.1"],
+        pE = WW => {
+          const iW = null == EE ? void 0 : EE.createElement("a");
+          return AE(iW) ? null : (iW.href = WW, iW)
         },
-        rD = () => {},
-        XD = BB => {
-          var OB;
-          if (JD(BB)) return null !== (OB = BB.__posthog_layer__) && void 0 !== OB ? OB : BB.__rrweb_layer__
+        fE = () => {},
+        CE = WW => {
+          var iW;
+          if (xE(WW)) return null !== (iW = WW.__posthog_layer__) && void 0 !== iW ? iW : WW.__rrweb_layer__
         };
 
-      function wD(BB, OB, GB) {
+      function XE(WW, iW, OW) {
         try {
-          if (!(OB in BB)) return rD;
-          const YB = {
-              next: BB[OB]
+          if (!(iW in WW)) return fE;
+          const mW = {
+              next: WW[iW]
             },
-            DB = GB((function() {
-              for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-              return YB.next.apply(this, OB)
+            EW = OW((function() {
+              for (var WW = arguments.length, iW = new Array(WW), OW = 0; OW < WW; OW++) iW[OW] = arguments[OW];
+              return mW.next.apply(this, iW)
             }));
-          return JD(DB) && (DB.prototype = DB.prototype || {}, Object.defineProperties(DB, {
+          return xE(EW) && (EW.prototype = EW.prototype || {}, Object.defineProperties(EW, {
             __posthog_wrapped__: {
               enumerable: !1,
               value: !0
             },
             __posthog_layer__: {
               enumerable: !1,
-              value: YB
+              value: mW
             }
-          })), BB[OB] = DB, () => {
-            if (BB[OB] === DB) return void(BB[OB] = YB.next);
-            let GB = BB[OB],
-              QB = XD(GB);
-            for (; QB;) {
-              if (QB.next === DB) return void(QB.next = YB.next);
-              GB = QB.next, QB = XD(GB)
+          })), WW[iW] = EW, () => {
+            if (WW[iW] === EW) return void(WW[iW] = mW.next);
+            let OW = WW[iW],
+              NW = CE(OW);
+            for (; NW;) {
+              if (NW.next === EW) return void(NW.next = mW.next);
+              OW = NW.next, NW = CE(OW)
             }
           }
-        } catch (BB) {
-          return rD
+        } catch (WW) {
+          return fE
         }
       }
 
-      function ED(BB, OB) {
-        var GB;
-        const YB = function(BB) {
+      function BE(WW, iW) {
+        var OW;
+        const mW = function(WW) {
             try {
-              return "string" == typeof BB ? new URL(BB).hostname : "url" in BB ? new URL(BB.url).hostname : BB.hostname
-            } catch (BB) {
+              return "string" == typeof WW ? new URL(WW).hostname : "url" in WW ? new URL(WW.url).hostname : WW.hostname
+            } catch (WW) {
               return null
             }
-          }(BB),
-          DB = {
-            hostname: YB,
+          }(WW),
+          EW = {
+            hostname: mW,
             isHostDenied: !1
           };
-        if (!(null === (GB = OB.payloadHostDenyList) || void 0 === GB ? void 0 : GB.length) || !(null == YB ? void 0 : YB.trim().length)) return DB;
-        for (const QB of OB.payloadHostDenyList)
-          if (YB.endsWith(QB)) return {
-            hostname: YB,
+        if (!(null === (OW = iW.payloadHostDenyList) || void 0 === OW ? void 0 : OW.length) || !(null == mW ? void 0 : mW.trim().length)) return EW;
+        for (const NW of iW.payloadHostDenyList)
+          if (mW.endsWith(NW)) return {
+            hostname: mW,
             isHostDenied: !0
           };
-        return DB
+        return EW
       }
 
-      function cD(BB) {
-        var OB;
-        const GB = null == tY || null === (OB = tY.location) || void 0 === OB ? void 0 : OB.href;
-        return PD(GB) ? void 0 : function(BB, OB) {
-          var GB;
-          const YB = null == BB || null === (GB = BB.config) || void 0 === GB ? void 0 : GB.get_current_url;
-          if (!JD(YB)) return OB;
+      function qE(WW) {
+        var iW;
+        const OW = null == OE || null === (iW = OE.location) || void 0 === iW ? void 0 : iW.href;
+        return AE(OW) ? void 0 : function(WW, iW) {
+          var OW;
+          const mW = null == WW || null === (OW = WW.config) || void 0 === OW ? void 0 : OW.get_current_url;
+          if (!xE(mW)) return iW;
           try {
-            const BB = YB(OB);
-            return zD(BB) && BB ? BB : OB
-          } catch (BB) {
-            return mD.error("Error in get_current_url, falling back to window.location.href", BB), OB
+            const WW = mW(iW);
+            return bE(WW) && WW ? WW : iW
+          } catch (WW) {
+            return eE.error("Error in get_current_url, falling back to window.location.href", WW), iW
           }
-        }(BB, GB)
+        }(WW, OW)
       }
-      const hD = "$stored_person_properties",
-        aD = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
-        eD = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
-        TD = [16, 15, 14, 13],
-        bD = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
-        CD = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
-        HD = /[0-9A-Za-z_]/;
+      const RE = "$stored_person_properties",
+        GE = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
+        IE = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
+        aE = [16, 15, 14, 13],
+        rE = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
+        zE = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
+        FE = /[0-9A-Za-z_]/;
 
-      function vD(BB) {
-        let OB = 0,
-          GB = !1;
-        for (let YB = BB.length - 1; YB >= 0; YB--) {
-          let DB = BB.charCodeAt(YB) - 48;
-          GB && (DB *= 2, DB > 9 && (DB -= 9)), OB += DB, GB = !GB
+      function QE(WW) {
+        let iW = 0,
+          OW = !1;
+        for (let mW = WW.length - 1; mW >= 0; mW--) {
+          let EW = WW.charCodeAt(mW) - 48;
+          OW && (EW *= 2, EW > 9 && (EW -= 9)), iW += EW, OW = !OW
         }
-        return OB % 10 == 0
+        return iW % 10 == 0
       }
-      const sD = 1e6;
+      const WN = 1e6;
 
-      function xD(BB) {
-        var OB;
-        return Math.min(sD, null !== (OB = BB.payloadSizeLimitBytes) && void 0 !== OB ? OB : sD)
+      function iN(WW) {
+        var iW;
+        return Math.min(WN, null !== (iW = WW.payloadSizeLimitBytes) && void 0 !== iW ? iW : WN)
       }
-      const tD = {
+      const ON = {
           initiatorTypes: ["audio", "beacon", "body", "css", "early-hint", "embed", "fetch", "frame", "iframe", "icon", "image", "img", "input", "link", "navigation", "object", "ping", "script", "track", "video", "xmlhttprequest"],
-          maskRequestFn: BB => BB,
+          maskRequestFn: WW => WW,
           recordHeaders: !1,
           recordBody: !1,
           recordInitialRequests: !1,
           recordPerformance: !1,
           performanceEntryTypeToObserve: ["first-input", "navigation", "paint", "resource"],
-          payloadSizeLimitBytes: sD,
+          payloadSizeLimitBytes: WN,
           payloadHostDenyList: [".lr-ingest.io", ".ingest.sentry.io", ".clarity.ms", "google-analytics.com", "analytics.google.com", "nr-data.net", "datadoghq.com", "datadoghq.eu", "ddog-gov.com", "segment.io", "rudderstack.com", "amplitude.com", "mixpanel.com", "hotjar.com", "hotjar.io", "fullstory.com"],
           streamNetworkBody: !1
         },
-        BQ = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
-        OQ = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
-        GQ = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
-        YQ = BB => {
-          pD(BB) || FD(Object.keys(BB), (OB => {
-            (BB => {
-              const OB = BB.toLowerCase();
-              return BQ.includes(OB) || GQ.some((BB => OB.includes(BB)))
-            })(OB) && (BB[OB] = "redacted")
+        mN = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
+        EN = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
+        NN = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
+        PN = WW => {
+          UE(WW) || gE(Object.keys(WW), (iW => {
+            (WW => {
+              const iW = WW.toLowerCase();
+              return mN.includes(iW) || NN.some((WW => iW.includes(WW)))
+            })(iW) && (WW[iW] = "redacted")
           }))
         },
-        DQ = ["/s/", "/e/", "/i/"];
+        LN = ["/s/", "/e/", "/i/"];
 
-      function QQ(BB, OB, GB, YB) {
-        if (pD(BB)) return BB;
-        let DB = (null == OB ? void 0 : OB["content-length"]) || function(BB) {
-          return new Blob([BB]).size
-        }(BB);
-        return zD(DB) && (DB = parseInt(DB)), DB > GB ? `[SessionRecording] ${YB} body too large to record (${DB} bytes)` : BB
+      function cN(WW, iW, OW, mW) {
+        if (UE(WW)) return WW;
+        let EW = (null == iW ? void 0 : iW["content-length"]) || function(WW) {
+          return new Blob([WW]).size
+        }(WW);
+        return bE(EW) && (EW = parseInt(EW)), EW > OW ? `[SessionRecording] ${mW} body too large to record (${EW} bytes)` : WW
       }
 
-      function oQ(BB, OB) {
-        if (pD(BB)) return BB;
-        let GB = BB;
-        return function(BB) {
-          let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          if (pD(BB)) return !1;
-          if (zD(BB)) {
-            if (BB = BB.trim(), OB ? aD.test((BB || "").replace(/[- ]/g, "")) : function(BB) {
-                let OB;
-                for (eD.lastIndex = 0; OB = eD.exec(BB);) {
-                  const BB = OB[2];
-                  if (!BB) continue;
-                  const GB = BB.replace(/[- ]/g, "");
-                  for (let OB = 0; GB.length > OB; OB++)
-                    for (const BB of TD) {
-                      const YB = OB + BB;
-                      if (GB.length >= YB) {
-                        const BB = GB.slice(OB, YB);
-                        if (aD.test(BB) && vD(BB)) return !0
+      function wN(WW, iW) {
+        if (UE(WW)) return WW;
+        let OW = WW;
+        return function(WW) {
+          let iW = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          if (UE(WW)) return !1;
+          if (bE(WW)) {
+            if (WW = WW.trim(), iW ? GE.test((WW || "").replace(/[- ]/g, "")) : function(WW) {
+                let iW;
+                for (IE.lastIndex = 0; iW = IE.exec(WW);) {
+                  const WW = iW[2];
+                  if (!WW) continue;
+                  const OW = WW.replace(/[- ]/g, "");
+                  for (let iW = 0; OW.length > iW; iW++)
+                    for (const WW of aE) {
+                      const mW = iW + WW;
+                      if (OW.length >= mW) {
+                        const WW = OW.slice(iW, mW);
+                        if (GE.test(WW) && QE(WW)) return !0
                       }
                     }
                 }
                 return !1
-              }(BB)) return !1;
-            if (OB ? bD.test(BB) : function(BB) {
-                let OB;
-                for (CD.lastIndex = 0; OB = CD.exec(BB);) {
-                  const BB = OB[1],
-                    GB = OB[3];
-                  if (!(BB && GB && HD.test(BB) && HD.test(GB))) return !0
+              }(WW)) return !1;
+            if (iW ? rE.test(WW) : function(WW) {
+                let iW;
+                for (zE.lastIndex = 0; iW = zE.exec(WW);) {
+                  const WW = iW[1],
+                    OW = iW[3];
+                  if (!(WW && OW && FE.test(WW) && FE.test(OW))) return !0
                 }
                 return !1
-              }(BB)) return !1
+              }(WW)) return !1
           }
           return !0
-        }(GB, !1) || (GB = "[SessionRecording] " + OB + " body redacted"), FD(OQ, (BB => {
-          (null == GB ? void 0 : GB.length) && -1 !== (null == GB ? void 0 : GB.indexOf(BB)) && (GB = "[SessionRecording] " + OB + " body redacted as might contain: " + BB)
-        })), GB
+        }(OW, !1) || (OW = "[SessionRecording] " + iW + " body redacted"), gE(EN, (WW => {
+          (null == OW ? void 0 : OW.length) && -1 !== (null == OW ? void 0 : OW.indexOf(WW)) && (OW = "[SessionRecording] " + iW + " body redacted as might contain: " + WW)
+        })), OW
       }
-      const jQ = new WeakSet,
-        yQ = ID("[Recorder]"),
-        JQ = BB => "navigation" === BB.entryType,
-        MQ = BB => "resource" === BB.entryType,
-        PQ = () => {};
+      const tN = new WeakSet,
+        ZN = vE("[Recorder]"),
+        xN = WW => "navigation" === WW.entryType,
+        lN = WW => "resource" === WW.entryType,
+        AN = () => {};
 
-      function zQ(BB, OB) {
-        var GB;
-        return JQ(OB) && "complete" === (null === (GB = BB.document) || void 0 === GB ? void 0 : GB.readyState) && OB.loadEventEnd > 0
-      }
-
-      function lQ(BB, OB) {
-        return OB.recordInitialRequests ? BB.performance.getEntries().filter((GB => zQ(BB, GB) || MQ(GB) && OB.initiatorTypes.includes(GB.initiatorType))) : OB.performanceEntryTypeToObserve.includes("navigation") ? function(BB) {
-          var OB;
-          return "complete" !== (null === (OB = BB.document) || void 0 === OB ? void 0 : OB.readyState) ? [] : BB.performance.getEntriesByType("navigation").filter((OB => zQ(BB, OB)))
-        }(BB) : []
+      function bN(WW, iW) {
+        var OW;
+        return xN(iW) && "complete" === (null === (OW = WW.document) || void 0 === OW ? void 0 : OW.readyState) && iW.loadEventEnd > 0
       }
 
-      function pQ(BB, OB) {
-        return !!OB && (ZD(OB) || OB[BB])
+      function jN(WW, iW) {
+        return iW.recordInitialRequests ? WW.performance.getEntries().filter((OW => bN(WW, OW) || lN(OW) && iW.initiatorTypes.includes(OW.initiatorType))) : iW.performanceEntryTypeToObserve.includes("navigation") ? function(WW) {
+          var iW;
+          return "complete" !== (null === (iW = WW.document) || void 0 === iW ? void 0 : iW.readyState) ? [] : WW.performance.getEntriesByType("navigation").filter((iW => bN(WW, iW)))
+        }(WW) : []
       }
 
-      function qQ(BB) {
+      function UN(WW, iW) {
+        return !!iW && (sE(iW) || iW[WW])
+      }
+
+      function kN(WW) {
         if ("undefined" == typeof Request) return !1;
-        if (BB instanceof Request) return !0;
+        if (WW instanceof Request) return !0;
         try {
-          return "[object Request]" === {}.toString.call(BB)
-        } catch (BB) {
+          return "[object Request]" === {}.toString.call(WW)
+        } catch (WW) {
           return !1
         }
       }
-      const ZQ = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
+      const sN = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
 
-      function NQ(BB) {
+      function MN(WW) {
         let {
-          type: OB,
-          recordBody: GB,
-          headers: YB,
-          url: DB
-        } = BB;
+          type: iW,
+          recordBody: OW,
+          headers: mW,
+          url: EW
+        } = WW;
 
-        function QB(BB) {
-          const OB = Object.keys(YB).find((BB => "content-type" === BB.toLowerCase())),
-            GB = OB && YB[OB];
-          return BB.some((BB => null == GB ? void 0 : GB.toLowerCase().includes(BB)))
+        function NW(WW) {
+          const iW = Object.keys(mW).find((WW => "content-type" === WW.toLowerCase())),
+            OW = iW && mW[iW];
+          return WW.some((WW => null == OW ? void 0 : OW.toLowerCase().includes(WW)))
         }
-        if (!GB) return !1;
-        if (function BB(OB) {
+        if (!OW) return !1;
+        if (function WW(iW) {
             try {
-              return "string" == typeof OB ? OB.startsWith("blob:") : OB instanceof URL ? "blob:" === OB.protocol : !!qQ(OB) && BB(OB.url)
-            } catch (BB) {
+              return "string" == typeof iW ? iW.startsWith("blob:") : iW instanceof URL ? "blob:" === iW.protocol : !!kN(iW) && WW(iW.url)
+            } catch (WW) {
               return !1
             }
-          }(DB)) return !1;
-        if (QB(ZQ)) return !1;
-        if (ZD(GB)) return !0;
-        if (yD(GB)) return QB(GB);
-        const oB = GB[OB];
-        return ZD(oB) ? oB : QB(oB)
+          }(EW)) return !1;
+        if (NW(sN)) return !1;
+        if (sE(OW)) return !0;
+        if (ZE(OW)) return NW(OW);
+        const PW = OW[iW];
+        return sE(PW) ? PW : NW(PW)
       }
 
-      function RQ(BB, OB, GB, YB, DB) {
-        return WQ.apply(this, arguments)
+      function KN(WW, iW, OW, mW, EW) {
+        return SN.apply(this, arguments)
       }
 
-      function WQ() {
-        return WQ = QB((function*(BB, OB, GB, YB, DB) {
-          let QB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          if (QB > 10) return yQ.warn("Failed to get performance entry for request", {
-            url: GB,
-            initiatorType: OB
+      function SN() {
+        return SN = NW((function*(WW, iW, OW, mW, EW) {
+          let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          if (NW > 10) return ZN.warn("Failed to get performance entry for request", {
+            url: OW,
+            initiatorType: iW
           }), null;
-          const oB = function(BB, OB) {
-            for (let GB = BB.length - 1; GB >= 0; GB -= 1)
-              if (OB(BB[GB])) return BB[GB]
-          }(BB.performance.getEntriesByName(GB), (BB => MQ(BB) && BB.initiatorType === OB && (PD(YB) || BB.startTime >= YB) && (PD(DB) || DB >= BB.startTime)));
-          return oB || (yield new Promise((BB => setTimeout(BB, 50 * QB))), RQ(BB, OB, GB, YB, DB, QB + 1))
-        })), WQ.apply(this, arguments)
+          const PW = function(WW, iW) {
+            for (let OW = WW.length - 1; OW >= 0; OW -= 1)
+              if (iW(WW[OW])) return WW[OW]
+          }(WW.performance.getEntriesByName(OW), (WW => lN(WW) && WW.initiatorType === iW && (AE(mW) || WW.startTime >= mW) && (AE(EW) || EW >= WW.startTime)));
+          return PW || (yield new Promise((WW => setTimeout(WW, 50 * NW))), KN(WW, iW, OW, mW, EW, NW + 1))
+        })), SN.apply(this, arguments)
       }
 
-      function AQ(BB) {
+      function YN(WW) {
         let {
-          body: OB,
-          options: GB,
-          url: YB
-        } = BB;
-        if (pD(OB)) return null;
+          body: iW,
+          options: OW,
+          url: mW
+        } = WW;
+        if (UE(iW)) return null;
         const {
-          hostname: DB,
-          isHostDenied: QB
-        } = ED(YB, GB);
-        if (QB) return DB + " is in deny list";
-        if (zD(OB)) return OB;
-        if ((BB => "u" > typeof Document && BB instanceof Document)(OB)) return OB.textContent;
-        if (ND(OB)) return function(BB) {
-          let OB, GB, YB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
-          const DB = [];
-          return FD(BB, (function(BB, YB) {
-            PD(BB) || PD(YB) || "undefined" === YB || (OB = encodeURIComponent((BB => BB instanceof File)(BB) ? BB.name : BB.toString()), GB = encodeURIComponent(YB), DB[DB.length] = GB + "=" + OB)
-          })), DB.join(YB)
-        }(OB);
-        if (MD(OB)) try {
-          return JSON.stringify(OB)
-        } catch (OB) {
+          hostname: EW,
+          isHostDenied: NW
+        } = BE(mW, OW);
+        if (NW) return EW + " is in deny list";
+        if (bE(iW)) return iW;
+        if ((WW => "u" > typeof Document && WW instanceof Document)(iW)) return iW.textContent;
+        if (ME(iW)) return function(WW) {
+          let iW, OW, mW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
+          const EW = [];
+          return gE(WW, (function(WW, mW) {
+            AE(WW) || AE(mW) || "undefined" === mW || (iW = encodeURIComponent((WW => WW instanceof File)(WW) ? WW.name : WW.toString()), OW = encodeURIComponent(mW), EW[EW.length] = OW + "=" + iW)
+          })), EW.join(mW)
+        }(iW);
+        if (lE(iW)) try {
+          return JSON.stringify(iW)
+        } catch (iW) {
           return "[SessionReplay] Failed to stringify response object"
         }
-        return "[SessionReplay] Cannot read body of type " + toString.call(OB)
+        return "[SessionReplay] Cannot read body of type " + toString.call(iW)
       }
 
-      function VQ(BB, OB) {
+      function yN(WW, iW) {
         let {
-          entry: GB,
-          method: DB,
-          status: QB,
-          networkRequest: oB,
-          isInitial: jB,
-          start: yB,
-          end: JB,
-          url: MB,
-          initiatorType: PB
-        } = OB;
-        yB = GB ? GB.startTime : yB, JB = GB ? GB.responseEnd : JB;
-        const zB = Math.floor(Date.now() - BB.performance.now()),
-          lB = Math.floor(zB + (yB || 0)),
-          pB = [YB(YB({}, GB ? JSON.parse(JSON.stringify(GB.toJSON())) : {
-            name: MB
+          entry: OW,
+          method: EW,
+          status: NW,
+          networkRequest: PW,
+          isInitial: LW,
+          start: cW,
+          end: wW,
+          url: tW,
+          initiatorType: ZW
+        } = iW;
+        cW = OW ? OW.startTime : cW, wW = OW ? OW.responseEnd : wW;
+        const xW = Math.floor(Date.now() - WW.performance.now()),
+          lW = Math.floor(xW + (cW || 0)),
+          AW = [mW(mW({}, OW ? JSON.parse(JSON.stringify(OW.toJSON())) : {
+            name: tW
           }), {}, {
-            startTime: PD(yB) ? void 0 : Math.round(yB),
-            endTime: PD(JB) ? void 0 : Math.round(JB),
-            timeOrigin: zB,
-            timestamp: lB,
-            method: DB,
-            initiatorType: PB || (GB ? GB.initiatorType : void 0),
-            status: QB,
-            requestHeaders: oB.requestHeaders,
-            requestBody: oB.requestBody,
-            responseHeaders: oB.responseHeaders,
-            responseBody: oB.responseBody,
-            isInitial: jB
+            startTime: AE(cW) ? void 0 : Math.round(cW),
+            endTime: AE(wW) ? void 0 : Math.round(wW),
+            timeOrigin: xW,
+            timestamp: lW,
+            method: EW,
+            initiatorType: ZW || (OW ? OW.initiatorType : void 0),
+            status: NW,
+            requestHeaders: PW.requestHeaders,
+            requestBody: PW.requestBody,
+            responseHeaders: PW.responseHeaders,
+            responseBody: PW.responseBody,
+            isInitial: LW
           })];
-        if ((BB => !lD(BB) && ("navigation" === BB.entryType || "resource" === BB.entryType))(GB))
-          for (const YB of GB.serverTiming || []) pB.push({
-            timeOrigin: zB,
-            timestamp: lB,
-            startTime: Math.round(GB.startTime),
-            name: YB.name,
-            duration: YB.duration,
+        if ((WW => !jE(WW) && ("navigation" === WW.entryType || "resource" === WW.entryType))(OW))
+          for (const mW of OW.serverTiming || []) AW.push({
+            timeOrigin: xW,
+            timestamp: lW,
+            startTime: Math.round(OW.startTime),
+            name: mW.name,
+            duration: mW.duration,
             entryType: "serverTiming"
           });
-        return pB
+        return AW
       }
-      const SQ = ["video/", "audio/"];
+      const TN = ["video/", "audio/"];
 
-      function nQ(BB) {
-        return MD(BB) && JD(BB.getReader) && JD(BB.tee)
+      function JN(WW) {
+        return lE(WW) && xE(WW.getReader) && xE(WW.tee)
       }
-      const UQ = "[SessionReplay] Timeout while trying to read body",
-        fQ = "[SessionReplay] Failed to read body";
+      const hN = "[SessionReplay] Timeout while trying to read body",
+        HN = "[SessionReplay] Failed to read body";
 
-      function kQ(BB) {
-        return `${fQ}: ${BB}`
-      }
-
-      function dQ(BB) {
-        return `[SessionReplay] Body too large to record (> ${BB} bytes)`
+      function nN(WW) {
+        return `${HN}: ${WW}`
       }
 
-      function KQ(BB, OB) {
-        if (!OB.streamNetworkBody) return function(BB) {
-          return new Promise((OB => {
-            const GB = setTimeout((() => OB(UQ)), 500);
+      function uN(WW) {
+        return `[SessionReplay] Body too large to record (> ${WW} bytes)`
+      }
+
+      function oN(WW, iW) {
+        if (!iW.streamNetworkBody) return function(WW) {
+          return new Promise((iW => {
+            const OW = setTimeout((() => iW(hN)), 500);
             try {
-              BB.clone().text().then((BB => OB(BB)), (BB => OB(kQ(BB)))).finally((() => clearTimeout(GB)))
-            } catch (BB) {
-              clearTimeout(GB), OB(fQ)
+              WW.clone().text().then((WW => iW(WW)), (WW => iW(nN(WW)))).finally((() => clearTimeout(OW)))
+            } catch (WW) {
+              clearTimeout(OW), iW(HN)
             }
           }))
-        }(BB);
-        const GB = xD(OB);
-        return function(BB, OB) {
+        }(WW);
+        const OW = iN(iW);
+        return function(WW, iW) {
           try {
-            var GB, YB;
-            const DB = null === (GB = BB.headers) || void 0 === GB || null === (YB = GB.get) || void 0 === YB ? void 0 : YB.call(GB, "content-length");
-            if (!DB) return !1;
-            const QB = parseInt(DB, 10);
-            return Number.isFinite(QB) && QB > OB
-          } catch (BB) {
+            var OW, mW;
+            const EW = null === (OW = WW.headers) || void 0 === OW || null === (mW = OW.get) || void 0 === mW ? void 0 : mW.call(OW, "content-length");
+            if (!EW) return !1;
+            const NW = parseInt(EW, 10);
+            return Number.isFinite(NW) && NW > iW
+          } catch (WW) {
             return !1
           }
-        }(BB, GB) ? Promise.resolve(dQ(GB)) : function(BB, OB) {
-          return new Promise((GB => {
-            let YB, DB = !1;
+        }(WW, OW) ? Promise.resolve(uN(OW)) : function(WW, iW) {
+          return new Promise((OW => {
+            let mW, EW = !1;
 
-            function QB() {
+            function NW() {
               try {
-                null == YB || YB.cancel().catch((() => {}))
-              } catch (BB) {}
+                null == mW || mW.cancel().catch((() => {}))
+              } catch (WW) {}
             }
 
-            function oB(BB) {
-              DB || (DB = !0, clearTimeout(jB), QB(), GB(BB))
+            function PW(WW) {
+              EW || (EW = !0, clearTimeout(LW), NW(), OW(WW))
             }
-            const jB = setTimeout((() => oB(UQ)), 500);
-            let yB;
+            const LW = setTimeout((() => PW(hN)), 500);
+            let cW;
             try {
-              yB = BB.clone()
-            } catch (BB) {
-              return void oB(fQ)
+              cW = WW.clone()
+            } catch (WW) {
+              return void PW(HN)
             }
-            const JB = yB.body;
-            if (!nQ(JB) || "undefined" == typeof TextDecoder) {
+            const wW = cW.body;
+            if (!JN(wW) || "undefined" == typeof TextDecoder) {
               try {
-                yB.text().then((BB => oB(BB)), (BB => oB(kQ(BB))))
-              } catch (BB) {
-                oB(fQ)
+                cW.text().then((WW => PW(WW)), (WW => PW(nN(WW))))
+              } catch (WW) {
+                PW(HN)
               }
               return
             }
             try {
-              YB = JB.getReader()
-            } catch (BB) {
-              return void oB(fQ)
+              mW = wW.getReader()
+            } catch (WW) {
+              return void PW(HN)
             }
-            const MB = [];
-            let PB = 0;
-            ! function BB() {
-              YB.read().then((GB => {
+            const tW = [];
+            let ZW = 0;
+            ! function WW() {
+              mW.read().then((OW => {
                 let {
-                  done: YB,
-                  value: jB
-                } = GB;
-                if (DB) QB();
-                else if (YB) oB((new TextDecoder).decode(function(BB, OB) {
-                  const GB = new Uint8Array(OB);
-                  let YB = 0;
-                  for (const DB of BB) GB.set(DB, YB), YB += DB.byteLength;
-                  return GB
-                }(MB, PB)));
+                  done: mW,
+                  value: LW
+                } = OW;
+                if (EW) NW();
+                else if (mW) PW((new TextDecoder).decode(function(WW, iW) {
+                  const OW = new Uint8Array(iW);
+                  let mW = 0;
+                  for (const EW of WW) OW.set(EW, mW), mW += EW.byteLength;
+                  return OW
+                }(tW, ZW)));
                 else {
-                  if (jB) {
-                    if (PB + jB.byteLength > OB) return void oB(dQ(OB));
-                    PB += jB.byteLength, MB.push(jB)
+                  if (LW) {
+                    if (ZW + LW.byteLength > iW) return void PW(uN(iW));
+                    ZW += LW.byteLength, tW.push(LW)
                   }
-                  BB()
+                  WW()
                 }
-              }), (BB => oB(kQ(BB))))
+              }), (WW => PW(nN(WW))))
             }()
           }))
-        }(BB, GB)
+        }(WW, OW)
       }
 
-      function uQ(BB) {
-        return mQ.apply(this, arguments)
+      function dN(WW) {
+        return eN.apply(this, arguments)
       }
 
-      function mQ() {
-        return (mQ = QB((function*(BB) {
+      function eN() {
+        return (eN = NW((function*(WW) {
           let {
-            r: OB,
-            options: GB,
-            url: YB
-          } = BB;
+            r: iW,
+            options: OW,
+            url: mW
+          } = WW;
           const {
-            hostname: DB,
-            isHostDenied: QB
-          } = ED(YB, GB);
-          return QB ? Promise.resolve(DB + " is in deny list") : KQ(OB, GB)
+            hostname: EW,
+            isHostDenied: NW
+          } = BE(mW, OW);
+          return NW ? Promise.resolve(EW + " is in deny list") : oN(iW, OW)
         }))).apply(this, arguments)
       }
 
-      function IQ(BB) {
-        return FQ.apply(this, arguments)
+      function vN(WW) {
+        return gN.apply(this, arguments)
       }
 
-      function FQ() {
-        return (FQ = QB((function*(BB) {
+      function gN() {
+        return (gN = NW((function*(WW) {
           let {
-            r: OB,
-            options: GB,
-            url: YB
-          } = BB;
-          const DB = function(BB) {
+            r: iW,
+            options: OW,
+            url: mW
+          } = WW;
+          const EW = function(WW) {
             let {
-              r: OB,
-              options: GB,
-              url: YB
-            } = BB;
-            var DB;
-            if ("chunked" === OB.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
-            const QB = null === (DB = OB.headers.get("Content-Type")) || void 0 === DB ? void 0 : DB.toLowerCase(),
-              oB = SQ.some((BB => null == QB ? void 0 : QB.startsWith(BB)));
-            if (QB && oB) return `Content-Type ${QB} is not supported`;
+              r: iW,
+              options: OW,
+              url: mW
+            } = WW;
+            var EW;
+            if ("chunked" === iW.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
+            const NW = null === (EW = iW.headers.get("Content-Type")) || void 0 === EW ? void 0 : EW.toLowerCase(),
+              PW = TN.some((WW => null == NW ? void 0 : NW.startsWith(WW)));
+            if (NW && PW) return `Content-Type ${NW} is not supported`;
             const {
-              hostname: jB,
-              isHostDenied: yB
-            } = ED(YB, GB);
-            return yB ? jB + " is in deny list" : null
+              hostname: LW,
+              isHostDenied: cW
+            } = BE(mW, OW);
+            return cW ? LW + " is in deny list" : null
           }({
-            r: OB,
-            options: GB,
-            url: YB
+            r: iW,
+            options: OW,
+            url: mW
           });
-          return lD(DB) ? KQ(OB, GB) : Promise.resolve(DB)
+          return jE(EW) ? oN(iW, OW) : Promise.resolve(EW)
         }))).apply(this, arguments)
       }
-      let iQ = null;
+      let DN = null;
 
-      function LQ(BB, OB, GB) {
-        if (!("performance" in OB)) return () => {};
-        if (iQ) return yQ.warn("Network observer already initialised, doing nothing"), () => {};
-        const DB = GB ? Object.assign({}, tD, GB) : tD;
-        let oB = !0,
-          jB = !1;
-        const yB = OB => {
-            if (!oB) return;
-            const GB = [];
-            let QB = !1;
-            OB.requests.forEach((BB => {
-              const OB = "serverTiming" === BB.entryType;
-              if (OB && QB) return;
-              let YB;
+      function VN(WW, iW, OW) {
+        if (!("performance" in iW)) return () => {};
+        if (DN) return ZN.warn("Network observer already initialised, doing nothing"), () => {};
+        const EW = OW ? Object.assign({}, ON, OW) : ON;
+        let PW = !0,
+          LW = !1;
+        const cW = iW => {
+            if (!PW) return;
+            const OW = [];
+            let NW = !1;
+            iW.requests.forEach((WW => {
+              const iW = "serverTiming" === WW.entryType;
+              if (iW && NW) return;
+              let mW;
               try {
-                YB = DB.maskRequestFn(BB)
-              } catch (BB) {
-                return jB || (jB = !0, yQ.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(OB || (QB = !0))
+                mW = EW.maskRequestFn(WW)
+              } catch (WW) {
+                return LW || (LW = !0, ZN.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(iW || (NW = !0))
               }
-              OB || (QB = !YB || (BB => !!BB && jQ.has(BB))(YB)), YB && GB.push(YB)
-            })), GB.length > 0 && BB(YB(YB({}, OB), {}, {
-              requests: GB
+              iW || (NW = !mW || (WW => !!WW && tN.has(WW))(mW)), mW && OW.push(mW)
+            })), OW.length > 0 && WW(mW(mW({}, iW), {}, {
+              requests: OW
             }))
           },
-          JB = function(BB, OB, GB) {
+          wW = function(WW, iW, OW) {
             try {
-              BB({
-                requests: lQ(OB, GB).flatMap((BB => VQ(OB, {
-                  entry: BB,
+              WW({
+                requests: jN(iW, OW).flatMap((WW => yN(iW, {
+                  entry: WW,
                   method: void 0,
                   status: void 0,
                   networkRequest: {},
@@ -5788,582 +5788,582 @@ export const modules = {
                 }))),
                 isInitial: !0
               })
-            } catch (BB) {
-              yQ.error("Failed to capture initial performance entries for network capture", BB)
+            } catch (WW) {
+              ZN.error("Failed to capture initial performance entries for network capture", WW)
             }
-            const YB = OB.PerformanceObserver,
-              DB = null == YB ? void 0 : YB.supportedEntryTypes;
-            if (!YB || !yD(DB)) return;
-            const QB = DB.filter((BB => GB.performanceEntryTypeToObserve.includes(BB)));
-            if (!QB.length) return;
-            const oB = new YB((YB => {
-              BB({
-                requests: YB.getEntries().filter((BB => JQ(BB) || MQ(BB) && GB.initiatorTypes.includes(BB.initiatorType) && (BB => !GB.recordBody && !GB.recordHeaders || "xmlhttprequest" !== BB.initiatorType && "fetch" !== BB.initiatorType)(BB))).flatMap((BB => VQ(OB, {
-                  entry: BB,
+            const mW = iW.PerformanceObserver,
+              EW = null == mW ? void 0 : mW.supportedEntryTypes;
+            if (!mW || !ZE(EW)) return;
+            const NW = EW.filter((WW => OW.performanceEntryTypeToObserve.includes(WW)));
+            if (!NW.length) return;
+            const PW = new mW((mW => {
+              WW({
+                requests: mW.getEntries().filter((WW => xN(WW) || lN(WW) && OW.initiatorTypes.includes(WW.initiatorType) && (WW => !OW.recordBody && !OW.recordHeaders || "xmlhttprequest" !== WW.initiatorType && "fetch" !== WW.initiatorType)(WW))).flatMap((WW => yN(iW, {
+                  entry: WW,
                   method: void 0,
                   status: void 0,
                   networkRequest: {}
                 })))
               })
             }));
-            return oB.observe({
-              entryTypes: QB
+            return PW.observe({
+              entryTypes: NW
             }), () => {
-              oB.disconnect()
+              PW.disconnect()
             }
-          }(yB, OB, DB),
-          MB = DB.recordHeaders || DB.recordBody;
-        if (!JB && !MB) return oB = !1, PQ;
-        let PB = () => {},
-          zB = () => {};
-        return MB && (PB = function(BB, OB, GB) {
-          if (!GB.initiatorTypes.includes("xmlhttprequest")) return () => {};
-          const YB = pQ("request", GB.recordHeaders),
-            DB = pQ("response", GB.recordHeaders),
-            QB = wD(OB.XMLHttpRequest.prototype, "open", (QB => function(oB, jB) {
-              let yB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-                JB = arguments.length > 3 ? arguments[3] : void 0,
-                MB = arguments.length > 4 ? arguments[4] : void 0;
-              const PB = this;
+          }(cW, iW, EW),
+          tW = EW.recordHeaders || EW.recordBody;
+        if (!wW && !tW) return PW = !1, AN;
+        let ZW = () => {},
+          xW = () => {};
+        return tW && (ZW = function(WW, iW, OW) {
+          if (!OW.initiatorTypes.includes("xmlhttprequest")) return () => {};
+          const mW = UN("request", OW.recordHeaders),
+            EW = UN("response", OW.recordHeaders),
+            NW = XE(iW.XMLHttpRequest.prototype, "open", (NW => function(PW, LW) {
+              let cW = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+                wW = arguments.length > 3 ? arguments[3] : void 0,
+                tW = arguments.length > 4 ? arguments[4] : void 0;
+              const ZW = this;
               try {
-                const QB = new Request(jB),
-                  yB = {};
-                let JB, MB;
-                const zB = {},
-                  lB = PB.setRequestHeader.bind(PB);
-                PB.setRequestHeader = (BB, OB) => (zB[BB] = OB, lB(BB, OB)), YB && (yB.requestHeaders = zB);
-                const pB = PB.send.bind(PB);
-                PB.send = BB => (NQ({
+                const NW = new Request(LW),
+                  cW = {};
+                let wW, tW;
+                const xW = {},
+                  lW = ZW.setRequestHeader.bind(ZW);
+                ZW.setRequestHeader = (WW, iW) => (xW[WW] = iW, lW(WW, iW)), mW && (cW.requestHeaders = xW);
+                const AW = ZW.send.bind(ZW);
+                ZW.send = WW => (MN({
                   type: "request",
-                  headers: zB,
-                  url: jB,
-                  recordBody: GB.recordBody
-                }) && (yB.requestBody = AQ({
-                  body: BB,
-                  options: GB,
-                  url: jB
-                })), JB = OB.performance.now(), pB(BB));
-                const qB = () => {
-                    PB.removeEventListener("readystatechange", ZB), PB.removeEventListener("error", qB), PB.removeEventListener("abort", qB), PB.removeEventListener("timeout", qB)
+                  headers: xW,
+                  url: LW,
+                  recordBody: OW.recordBody
+                }) && (cW.requestBody = YN({
+                  body: WW,
+                  options: OW,
+                  url: LW
+                })), wW = iW.performance.now(), AW(WW));
+                const bW = () => {
+                    ZW.removeEventListener("readystatechange", jW), ZW.removeEventListener("error", bW), ZW.removeEventListener("abort", bW), ZW.removeEventListener("timeout", bW)
                   },
-                  ZB = () => {
-                    if (PB.readyState !== PB.DONE) return;
-                    qB(), MB = OB.performance.now();
-                    const YB = {};
-                    PB.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((BB => {
-                      const OB = BB.split(": "),
-                        GB = OB.shift(),
-                        DB = OB.join(": ");
-                      GB && (YB[GB] = DB)
-                    })), DB && (yB.responseHeaders = YB), NQ({
+                  jW = () => {
+                    if (ZW.readyState !== ZW.DONE) return;
+                    bW(), tW = iW.performance.now();
+                    const mW = {};
+                    ZW.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((WW => {
+                      const iW = WW.split(": "),
+                        OW = iW.shift(),
+                        EW = iW.join(": ");
+                      OW && (mW[OW] = EW)
+                    })), EW && (cW.responseHeaders = mW), MN({
                       type: "response",
-                      headers: YB,
-                      url: jB,
-                      recordBody: GB.recordBody
-                    }) && (yB.responseBody = AQ({
-                      body: PB.response,
-                      options: GB,
-                      url: jB
-                    })), RQ(OB, "xmlhttprequest", QB.url, JB, MB).then((GB => {
-                      BB({
-                        requests: VQ(OB, {
-                          entry: GB,
-                          method: oB,
-                          status: null == PB ? void 0 : PB.status,
-                          networkRequest: yB,
-                          start: JB,
-                          end: MB,
-                          url: jB.toString(),
+                      headers: mW,
+                      url: LW,
+                      recordBody: OW.recordBody
+                    }) && (cW.responseBody = YN({
+                      body: ZW.response,
+                      options: OW,
+                      url: LW
+                    })), KN(iW, "xmlhttprequest", NW.url, wW, tW).then((OW => {
+                      WW({
+                        requests: yN(iW, {
+                          entry: OW,
+                          method: PW,
+                          status: null == ZW ? void 0 : ZW.status,
+                          networkRequest: cW,
+                          start: wW,
+                          end: tW,
+                          url: LW.toString(),
                           initiatorType: "xmlhttprequest"
                         })
                       })
                     })).catch((() => {}))
                   };
-                PB.addEventListener("readystatechange", ZB), PB.addEventListener("error", qB), PB.addEventListener("abort", qB), PB.addEventListener("timeout", qB)
-              } catch (BB) {
-                yQ.error("Failed to instrument XHR for network capture", BB)
+                ZW.addEventListener("readystatechange", jW), ZW.addEventListener("error", bW), ZW.addEventListener("abort", bW), ZW.addEventListener("timeout", bW)
+              } catch (WW) {
+                ZN.error("Failed to instrument XHR for network capture", WW)
               }
-              QB.call(PB, oB, jB.toString(), yB, JB, MB)
+              NW.call(ZW, PW, LW.toString(), cW, wW, tW)
             }));
           return () => {
-            QB()
+            NW()
           }
-        }(yB, OB, DB), zB = !0 === DB.captureFetchSynchronously ? function(BB, OB, GB) {
-          if (!GB.initiatorTypes.includes("fetch")) return () => {};
-          const YB = pQ("request", GB.recordHeaders),
-            DB = pQ("response", GB.recordHeaders),
-            oB = wD(OB, "fetch", (oB => function(jB, yB) {
-              let JB;
+        }(cW, iW, EW), xW = !0 === EW.captureFetchSynchronously ? function(WW, iW, OW) {
+          if (!OW.initiatorTypes.includes("fetch")) return () => {};
+          const mW = UN("request", OW.recordHeaders),
+            EW = UN("response", OW.recordHeaders),
+            PW = XE(iW, "fetch", (PW => function(LW, cW) {
+              let wW;
               try {
-                JB = new Request(jB, yB)
-              } catch (BB) {
-                yQ.error("Failed to instrument fetch for network capture", BB);
+                wW = new Request(LW, cW)
+              } catch (WW) {
+                ZN.error("Failed to instrument fetch for network capture", WW);
                 try {
-                  return Promise.resolve(oB(jB, yB))
-                } catch (BB) {
-                  return new Promise(((GB, YB) => YB(BB)))
+                  return Promise.resolve(PW(LW, cW))
+                } catch (WW) {
+                  return new Promise(((OW, mW) => mW(WW)))
                 }
               }
-              const MB = {};
-              let PB, zB;
-              const lB = QB((function*() {
+              const tW = {};
+              let ZW, xW;
+              const lW = NW((function*() {
                   try {
-                    const BB = {};
-                    JB.headers.forEach(((OB, GB) => {
-                      BB[GB] = OB
-                    })), YB && (MB.requestHeaders = BB), !nQ(null == yB ? void 0 : yB.body) && NQ({
+                    const WW = {};
+                    wW.headers.forEach(((iW, OW) => {
+                      WW[OW] = iW
+                    })), mW && (tW.requestHeaders = WW), !JN(null == cW ? void 0 : cW.body) && MN({
                       type: "request",
-                      headers: BB,
-                      url: jB,
-                      recordBody: GB.recordBody
-                    }) && (MB.requestBody = yield uQ({
-                      r: JB,
-                      options: GB,
-                      url: jB
+                      headers: WW,
+                      url: LW,
+                      recordBody: OW.recordBody
+                    }) && (tW.requestBody = yield dN({
+                      r: wW,
+                      options: OW,
+                      url: LW
                     }))
-                  } catch (BB) {
-                    yQ.error("Failed to record fetch request for network capture", BB)
+                  } catch (WW) {
+                    ZN.error("Failed to record fetch request for network capture", WW)
                   }
                 }))(),
-                pB = (qB = QB((function*(BB) {
+                AW = (bW = NW((function*(WW) {
                   try {
-                    const OB = {};
-                    BB.headers.forEach(((BB, GB) => {
-                      OB[GB] = BB
-                    })), DB && (MB.responseHeaders = OB), NQ({
+                    const iW = {};
+                    WW.headers.forEach(((WW, OW) => {
+                      iW[OW] = WW
+                    })), EW && (tW.responseHeaders = iW), MN({
                       type: "response",
-                      headers: OB,
-                      url: jB,
-                      recordBody: GB.recordBody
-                    }) && (MB.responseBody = yield IQ({
-                      r: BB,
-                      options: GB,
-                      url: jB
+                      headers: iW,
+                      url: LW,
+                      recordBody: OW.recordBody
+                    }) && (tW.responseBody = yield vN({
+                      r: WW,
+                      options: OW,
+                      url: LW
                     }))
-                  } catch (BB) {
-                    yQ.error("Failed to record fetch response for network capture", BB)
+                  } catch (WW) {
+                    ZN.error("Failed to record fetch response for network capture", WW)
                   }
-                })), function(BB) {
-                  return qB.apply(this, arguments)
+                })), function(WW) {
+                  return bW.apply(this, arguments)
                 });
-              var qB;
+              var bW;
               try {
-                PB = OB.performance.now()
-              } catch (BB) {}
-              let ZB;
+                ZW = iW.performance.now()
+              } catch (WW) {}
+              let jW;
               try {
-                ZB = qQ(jB) ? oB(JB) : oB(jB, yB)
-              } catch (BB) {
-                ZB = new Promise(((GB, YB) => YB(BB)))
+                jW = kN(LW) ? PW(wW) : PW(LW, cW)
+              } catch (WW) {
+                jW = new Promise(((OW, mW) => mW(WW)))
               }
-              const NB = Promise.resolve(ZB).then((BB => {
+              const UW = Promise.resolve(jW).then((WW => {
                 try {
-                  zB = OB.performance.now()
-                } catch (BB) {}
+                  xW = iW.performance.now()
+                } catch (WW) {}
                 return {
                   status: "fulfilled",
-                  response: BB
+                  response: WW
                 }
-              }), (BB => ({
+              }), (WW => ({
                 status: "rejected",
-                error: BB
+                error: WW
               })));
-              return QB((function*() {
-                let GB;
+              return NW((function*() {
+                let OW;
                 try {
-                  yield lB;
-                  const BB = yield NB;
-                  if ("rejected" === BB.status) throw BB.error;
-                  return GB = BB.response, yield pB(GB), GB
+                  yield lW;
+                  const WW = yield UW;
+                  if ("rejected" === WW.status) throw WW.error;
+                  return OW = WW.response, yield AW(OW), OW
                 } finally {
-                  (YB = GB, RQ(OB, "fetch", JB.url, PB, zB).then((GB => {
-                    BB({
-                      requests: VQ(OB, {
-                        entry: GB,
-                        method: JB.method,
-                        status: null == YB ? void 0 : YB.status,
-                        networkRequest: MB,
-                        start: PB,
-                        end: zB,
-                        url: JB.url,
+                  (mW = OW, KN(iW, "fetch", wW.url, ZW, xW).then((OW => {
+                    WW({
+                      requests: yN(iW, {
+                        entry: OW,
+                        method: wW.method,
+                        status: null == mW ? void 0 : mW.status,
+                        networkRequest: tW,
+                        start: ZW,
+                        end: xW,
+                        url: wW.url,
                         initiatorType: "fetch"
                       })
                     })
                   }))).catch((() => {}))
                 }
-                var YB
+                var mW
               }))()
             }));
           return () => {
-            oB()
+            PW()
           }
-        }(yB, OB, DB) : function(BB, OB, GB) {
-          if (!GB.initiatorTypes.includes("fetch")) return () => {};
-          const YB = pQ("request", GB.recordHeaders),
-            DB = pQ("response", GB.recordHeaders),
-            oB = wD(OB, "fetch", (oB => function() {
-              var jB = QB((function*(QB, jB) {
-                let yB, JB;
+        }(cW, iW, EW) : function(WW, iW, OW) {
+          if (!OW.initiatorTypes.includes("fetch")) return () => {};
+          const mW = UN("request", OW.recordHeaders),
+            EW = UN("response", OW.recordHeaders),
+            PW = XE(iW, "fetch", (PW => function() {
+              var LW = NW((function*(NW, LW) {
+                let cW, wW;
                 try {
-                  yB = new Request(QB, jB)
-                } catch (BB) {
-                  return yQ.error("Failed to instrument fetch for network capture", BB), oB(QB, jB)
+                  cW = new Request(NW, LW)
+                } catch (WW) {
+                  return ZN.error("Failed to instrument fetch for network capture", WW), PW(NW, LW)
                 }
-                const MB = {};
-                let PB, zB;
+                const tW = {};
+                let ZW, xW;
                 try {
                   try {
-                    const BB = {};
-                    yB.headers.forEach(((OB, GB) => {
-                      BB[GB] = OB
-                    })), YB && (MB.requestHeaders = BB), !nQ(null == jB ? void 0 : jB.body) && NQ({
+                    const WW = {};
+                    cW.headers.forEach(((iW, OW) => {
+                      WW[OW] = iW
+                    })), mW && (tW.requestHeaders = WW), !JN(null == LW ? void 0 : LW.body) && MN({
                       type: "request",
-                      headers: BB,
-                      url: QB,
-                      recordBody: GB.recordBody
-                    }) && (MB.requestBody = yield uQ({
-                      r: yB,
-                      options: GB,
-                      url: QB
+                      headers: WW,
+                      url: NW,
+                      recordBody: OW.recordBody
+                    }) && (tW.requestBody = yield dN({
+                      r: cW,
+                      options: OW,
+                      url: NW
                     }))
-                  } catch (BB) {
-                    yQ.error("Failed to record fetch request for network capture", BB)
+                  } catch (WW) {
+                    ZN.error("Failed to record fetch request for network capture", WW)
                   }
-                  PB = OB.performance.now(), JB = qQ(QB) ? yield oB(yB): yield oB(QB, jB), zB = OB.performance.now();
+                  ZW = iW.performance.now(), wW = kN(NW) ? yield PW(cW): yield PW(NW, LW), xW = iW.performance.now();
                   try {
-                    const BB = {};
-                    JB.headers.forEach(((OB, GB) => {
-                      BB[GB] = OB
-                    })), DB && (MB.responseHeaders = BB), NQ({
+                    const WW = {};
+                    wW.headers.forEach(((iW, OW) => {
+                      WW[OW] = iW
+                    })), EW && (tW.responseHeaders = WW), MN({
                       type: "response",
-                      headers: BB,
-                      url: QB,
-                      recordBody: GB.recordBody
-                    }) && (MB.responseBody = yield IQ({
-                      r: JB,
-                      options: GB,
-                      url: QB
+                      headers: WW,
+                      url: NW,
+                      recordBody: OW.recordBody
+                    }) && (tW.responseBody = yield vN({
+                      r: wW,
+                      options: OW,
+                      url: NW
                     }))
-                  } catch (BB) {
-                    yQ.error("Failed to record fetch response for network capture", BB)
+                  } catch (WW) {
+                    ZN.error("Failed to record fetch response for network capture", WW)
                   }
-                  return JB
+                  return wW
                 } finally {
-                  RQ(OB, "fetch", yB.url, PB, zB).then((GB => {
-                    BB({
-                      requests: VQ(OB, {
-                        entry: GB,
-                        method: yB.method,
-                        status: null == JB ? void 0 : JB.status,
-                        networkRequest: MB,
-                        start: PB,
-                        end: zB,
-                        url: yB.url,
+                  KN(iW, "fetch", cW.url, ZW, xW).then((OW => {
+                    WW({
+                      requests: yN(iW, {
+                        entry: OW,
+                        method: cW.method,
+                        status: null == wW ? void 0 : wW.status,
+                        networkRequest: tW,
+                        start: ZW,
+                        end: xW,
+                        url: cW.url,
                         initiatorType: "fetch"
                       })
                     })
                   })).catch((() => {}))
                 }
               }));
-              return function(BB, OB) {
-                return jB.apply(this, arguments)
+              return function(WW, iW) {
+                return LW.apply(this, arguments)
               }
             }()));
           return () => {
-            oB()
+            PW()
           }
-        }(yB, OB, DB)), iQ = () => {
-          oB = !1, null == JB || JB(), PB(), zB(), iQ = null
-        }, iQ
+        }(cW, iW, EW)), DN = () => {
+          PW = !1, null == wW || wW(), ZW(), xW(), DN = null
+        }, DN
       }
-      const gQ = "$replay_override_sampling",
-        rQ = "$replay_override_linked_flag",
-        XQ = "$replay_override_url_trigger",
-        wQ = "$replay_override_event_trigger",
-        EQ = "$session_is_sampled",
-        cQ = "$session_recording_url_trigger_activated_session",
-        hQ = "$session_recording_event_trigger_activated_session",
-        aQ = "$posthog_sr_group_event_trigger_",
-        eQ = "$posthog_sr_group_url_trigger_",
-        TQ = "$sess_rec_flush_size",
-        bQ = "$sdk_debug_replay_event_trigger_status",
-        CQ = "$sdk_debug_replay_linked_flag_trigger_status",
-        HQ = "$sdk_debug_replay_matched_recording_trigger_groups",
-        vQ = "$sdk_debug_replay_pending_trigger_conditions",
-        sQ = "$sdk_debug_replay_remote_trigger_matching_config",
-        xQ = "$sdk_debug_replay_trigger_groups_count",
-        tQ = "$sdk_debug_replay_url_trigger_status",
-        Bo = "$sdk_debug_rrweb_attached",
-        Oo = "$sdk_debug_rrweb_start_attempted",
-        Go = "$session_recording_start_reason",
-        Yo = "disabled",
-        Do = "sampled",
-        Qo = "active",
-        oo = "buffering",
-        jo = "paused",
-        yo = "rrweb_error",
-        Jo = "trigger_activated",
-        Mo = "trigger_pending",
-        Po = "trigger_disabled";
+      const pN = "$replay_override_sampling",
+        fN = "$replay_override_linked_flag",
+        CN = "$replay_override_url_trigger",
+        XN = "$replay_override_event_trigger",
+        BN = "$session_is_sampled",
+        qN = "$session_recording_url_trigger_activated_session",
+        RN = "$session_recording_event_trigger_activated_session",
+        GN = "$posthog_sr_group_event_trigger_",
+        IN = "$posthog_sr_group_url_trigger_",
+        aN = "$sess_rec_flush_size",
+        rN = "$sdk_debug_replay_event_trigger_status",
+        zN = "$sdk_debug_replay_linked_flag_trigger_status",
+        FN = "$sdk_debug_replay_matched_recording_trigger_groups",
+        QN = "$sdk_debug_replay_pending_trigger_conditions",
+        WP = "$sdk_debug_replay_remote_trigger_matching_config",
+        iP = "$sdk_debug_replay_trigger_groups_count",
+        OP = "$sdk_debug_replay_url_trigger_status",
+        mP = "$sdk_debug_rrweb_attached",
+        EP = "$sdk_debug_rrweb_start_attempted",
+        NP = "$session_recording_start_reason",
+        PP = "disabled",
+        LP = "sampled",
+        cP = "active",
+        wP = "buffering",
+        tP = "paused",
+        ZP = "rrweb_error",
+        xP = "trigger_activated",
+        lP = "trigger_pending",
+        AP = "trigger_disabled";
 
-      function zo(BB, OB, GB, YB, DB, QB) {
-        return 0 === OB ? Po : (null == BB ? void 0 : BB.get_property(GB ? YB + GB : DB)) === QB ? Jo : Mo
+      function bP(WW, iW, OW, mW, EW, NW) {
+        return 0 === iW ? AP : (null == WW ? void 0 : WW.get_property(OW ? mW + OW : EW)) === NW ? xP : lP
       }
 
-      function po(BB, OB, GB) {
-        return OB.some((OB => {
-          var YB;
-          return "regex" === OB.matching && (null !== (YB = null == GB ? void 0 : GB.get(OB.url)) && void 0 !== YB ? YB : new RegExp(OB.url)).test(BB)
+      function jP(WW, iW, OW) {
+        return iW.some((iW => {
+          var mW;
+          return "regex" === iW.matching && (null !== (mW = null == OW ? void 0 : OW.get(iW.url)) && void 0 !== mW ? mW : new RegExp(iW.url)).test(WW)
         }))
       }
 
-      function qo(BB) {
-        return BB.includes("trigger_activated") ? Jo : BB.includes("trigger_pending") ? Mo : Po
+      function UP(WW) {
+        return WW.includes("trigger_activated") ? xP : WW.includes("trigger_pending") ? lP : AP
       }
 
-      function Zo(BB) {
-        const OB = new Set(BB);
-        switch (OB.delete(Po), OB.size) {
+      function kP(WW) {
+        const iW = new Set(WW);
+        switch (iW.delete(AP), iW.size) {
           case 0:
-            return Po;
+            return AP;
           case 1:
-            return Array.from(OB)[0];
+            return Array.from(iW)[0];
           default:
-            return Mo
+            return lP
         }
       }
-      var No = class {
-          constructor(BB) {
-            this.q = BB
+      var sP = class {
+          constructor(WW) {
+            this.q = WW
           }
-          triggerStatus(BB) {
-            return qo(this.q.map((OB => OB.triggerStatus(BB))))
+          triggerStatus(WW) {
+            return UP(this.q.map((iW => iW.triggerStatus(WW))))
           }
-          triggerStatusNoSideEffects(BB) {
-            return qo(this.q.map((OB => OB.triggerStatusNoSideEffects(BB))))
-          }
-          stop() {
-            this.q.forEach((BB => BB.stop()))
-          }
-        },
-        Ro = class {
-          constructor(BB) {
-            this.q = BB
-          }
-          triggerStatus(BB) {
-            return Zo(this.q.map((OB => OB.triggerStatus(BB))))
-          }
-          triggerStatusNoSideEffects(BB) {
-            return Zo(this.q.map((OB => OB.triggerStatusNoSideEffects(BB))))
+          triggerStatusNoSideEffects(WW) {
+            return UP(this.q.map((iW => iW.triggerStatusNoSideEffects(WW))))
           }
           stop() {
-            this.q.forEach((BB => BB.stop()))
+            this.q.forEach((WW => WW.stop()))
           }
         },
-        Wo = class {
+        MP = class {
+          constructor(WW) {
+            this.q = WW
+          }
+          triggerStatus(WW) {
+            return kP(this.q.map((iW => iW.triggerStatus(WW))))
+          }
+          triggerStatusNoSideEffects(WW) {
+            return kP(this.q.map((iW => iW.triggerStatusNoSideEffects(WW))))
+          }
+          stop() {
+            this.q.forEach((WW => WW.stop()))
+          }
+        },
+        KP = class {
           triggerStatus() {
             return this.triggerStatusNoSideEffects()
           }
           triggerStatusNoSideEffects() {
-            return Jo
+            return xP
           }
           stop() {}
         };
-      const Ao = BB => "sessionRecording" in BB;
-      var Vo = class {
-          constructor(BB, OB) {
-            this._instance = BB, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = OB
+      const SP = WW => "sessionRecording" in WW;
+      var YP = class {
+          constructor(WW, iW) {
+            this._instance = WW, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = iW
           }
-          onConfig(BB) {
-            var OB, GB;
-            this.j = (Ao(BB) ? MD(BB.sessionRecording) ? null === (OB = BB.sessionRecording) || void 0 === OB ? void 0 : OB.urlTriggers : [] : null == BB ? void 0 : BB.urlTriggers) || [], this.B = (Ao(BB) ? MD(BB.sessionRecording) ? null === (GB = BB.sessionRecording) || void 0 === GB ? void 0 : GB.urlBlocklist : [] : null == BB ? void 0 : BB.urlBlocklist) || [], this.G()
+          onConfig(WW) {
+            var iW, OW;
+            this.j = (SP(WW) ? lE(WW.sessionRecording) ? null === (iW = WW.sessionRecording) || void 0 === iW ? void 0 : iW.urlTriggers : [] : null == WW ? void 0 : WW.urlTriggers) || [], this.B = (SP(WW) ? lE(WW.sessionRecording) ? null === (OW = WW.sessionRecording) || void 0 === OW ? void 0 : OW.urlBlocklist : [] : null == WW ? void 0 : WW.urlBlocklist) || [], this.G()
           }
           G() {
             this.H.clear(), this.U.clear();
-            for (const BB of this.j)
-              if ("regex" === BB.matching && !this.H.has(BB.url)) try {
-                this.H.set(BB.url, new RegExp(BB.url))
-              } catch (OB) {
-                mD.error("Invalid URL trigger regex pattern:", BB.url, OB)
+            for (const WW of this.j)
+              if ("regex" === WW.matching && !this.H.has(WW.url)) try {
+                this.H.set(WW.url, new RegExp(WW.url))
+              } catch (iW) {
+                eE.error("Invalid URL trigger regex pattern:", WW.url, iW)
               }
-            for (const BB of this.B)
-              if ("regex" === BB.matching && !this.U.has(BB.url)) try {
-                this.U.set(BB.url, new RegExp(BB.url))
-              } catch (OB) {
-                mD.error("Invalid URL blocklist regex pattern:", BB.url, OB)
+            for (const WW of this.B)
+              if ("regex" === WW.matching && !this.U.has(WW.url)) try {
+                this.U.set(WW.url, new RegExp(WW.url))
+              } catch (iW) {
+                eE.error("Invalid URL blocklist regex pattern:", WW.url, iW)
               }
           }
-          onRemoteConfig(BB) {
-            this.onConfig(BB)
+          onRemoteConfig(WW) {
+            this.onConfig(WW)
           }
-          Z(BB) {
-            return zo(this._instance, this.j.length, this.V, eQ, cQ, BB)
+          Z(WW) {
+            return bP(this._instance, this.j.length, this.V, IN, qN, WW)
           }
-          triggerStatus(BB) {
-            const OB = this.triggerStatusNoSideEffects(BB);
+          triggerStatus(WW) {
+            const iW = this.triggerStatusNoSideEffects(WW);
             return this._instance.register_for_session({
-              [tQ]: OB
-            }), OB
+              [OP]: iW
+            }), iW
           }
-          triggerStatusNoSideEffects(BB) {
-            return this.Z(BB)
+          triggerStatusNoSideEffects(WW) {
+            return this.Z(WW)
           }
           isCurrentUrlBlocked() {
-            const BB = cD(this._instance);
-            if (!BB) return !1;
+            const WW = qE(this._instance);
+            if (!WW) return !1;
             try {
-              return po(BB, this.B, this.U)
-            } catch (BB) {
+              return jP(WW, this.B, this.U)
+            } catch (WW) {
               return !0
             }
           }
-          checkUrlBlocklist(BB, OB) {
-            const GB = cD(this._instance);
-            if (!GB) return;
-            if (GB === this.W) return;
-            this.W = GB;
-            const YB = this.urlBlocked,
-              DB = po(GB, this.B, this.U);
-            YB && DB || (DB && !YB ? BB() : !DB && YB && OB())
+          checkUrlBlocklist(WW, iW) {
+            const OW = qE(this._instance);
+            if (!OW) return;
+            if (OW === this.W) return;
+            this.W = OW;
+            const mW = this.urlBlocked,
+              EW = jP(OW, this.B, this.U);
+            mW && EW || (EW && !mW ? WW() : !EW && mW && iW())
           }
-          checkUrlTriggerConditions(BB, OB, GB, YB) {
-            const DB = cD(this._instance);
-            if (!DB) return;
-            if (DB === this.W) return;
-            this.W = DB;
-            const QB = this.urlBlocked,
-              oB = po(DB, this.B, this.U);
-            oB && !QB ? BB() : !oB && QB && OB();
-            const jB = this.Z(YB) === Jo,
-              yB = po(DB, this.j, this.H);
-            !jB && yB && GB("url", DB)
+          checkUrlTriggerConditions(WW, iW, OW, mW) {
+            const EW = qE(this._instance);
+            if (!EW) return;
+            if (EW === this.W) return;
+            this.W = EW;
+            const NW = this.urlBlocked,
+              PW = jP(EW, this.B, this.U);
+            PW && !NW ? WW() : !PW && NW && iW();
+            const LW = this.Z(mW) === xP,
+              cW = jP(EW, this.j, this.H);
+            !LW && cW && OW("url", EW)
           }
           stop() {
             this.W = ""
           }
         },
-        So = class {
-          constructor(BB) {
-            this._instance = BB, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
+        yP = class {
+          constructor(WW) {
+            this._instance = WW, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
           }
           triggerStatus() {
-            const BB = this.triggerStatusNoSideEffects();
+            const WW = this.triggerStatusNoSideEffects();
             return this._instance.register_for_session({
-              [CQ]: BB
-            }), BB
+              [zN]: WW
+            }), WW
           }
           triggerStatusNoSideEffects() {
-            let BB = Mo;
-            return pD(this.linkedFlag) && (BB = Po), this.linkedFlagSeen && (BB = Jo), BB
+            let WW = lP;
+            return UE(this.linkedFlag) && (WW = AP), this.linkedFlagSeen && (WW = xP), WW
           }
-          onConfig(BB, OB) {
-            var GB;
-            if (this.linkedFlag = (Ao(BB) ? MD(BB.sessionRecording) ? null === (GB = BB.sessionRecording) || void 0 === GB ? void 0 : GB.linkedFlag : null : null == BB ? void 0 : BB.linkedFlag) || null, !pD(this.linkedFlag) && !this.linkedFlagSeen) {
-              const BB = zD(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
-                GB = zD(this.linkedFlag) ? null : this.linkedFlag.variant;
-              this.J = this._instance.onFeatureFlags(((YB, DB) => {
-                let QB = !1;
-                if (MD(DB) && BB in DB) {
-                  const OB = DB[BB];
-                  QB = ZD(OB) ? !0 === OB : GB ? OB === GB : !!OB
+          onConfig(WW, iW) {
+            var OW;
+            if (this.linkedFlag = (SP(WW) ? lE(WW.sessionRecording) ? null === (OW = WW.sessionRecording) || void 0 === OW ? void 0 : OW.linkedFlag : null : null == WW ? void 0 : WW.linkedFlag) || null, !UE(this.linkedFlag) && !this.linkedFlagSeen) {
+              const WW = bE(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
+                OW = bE(this.linkedFlag) ? null : this.linkedFlag.variant;
+              this.J = this._instance.onFeatureFlags(((mW, EW) => {
+                let NW = !1;
+                if (lE(EW) && WW in EW) {
+                  const iW = EW[WW];
+                  NW = sE(iW) ? !0 === iW : OW ? iW === OW : !!iW
                 }
-                const oB = QB && !this.linkedFlagSeen;
-                this.linkedFlagSeen = QB, oB && OB(BB, GB)
+                const PW = NW && !this.linkedFlagSeen;
+                this.linkedFlagSeen = NW, PW && iW(WW, OW)
               }))
             }
           }
-          onRemoteConfig(BB, OB) {
-            this.onConfig(BB, OB)
+          onRemoteConfig(WW, iW) {
+            this.onConfig(WW, iW)
           }
           stop() {
             this.J()
           }
         },
-        no = class {
-          constructor(BB, OB) {
-            this._instance = BB, this.K = [], this.V = OB
+        TP = class {
+          constructor(WW, iW) {
+            this._instance = WW, this.K = [], this.V = iW
           }
-          onConfig(BB) {
-            var OB;
-            this.K = (Ao(BB) ? MD(BB.sessionRecording) ? null === (OB = BB.sessionRecording) || void 0 === OB ? void 0 : OB.eventTriggers : [] : null == BB ? void 0 : BB.eventTriggers) || []
+          onConfig(WW) {
+            var iW;
+            this.K = (SP(WW) ? lE(WW.sessionRecording) ? null === (iW = WW.sessionRecording) || void 0 === iW ? void 0 : iW.eventTriggers : [] : null == WW ? void 0 : WW.eventTriggers) || []
           }
-          onRemoteConfig(BB) {
-            this.onConfig(BB)
+          onRemoteConfig(WW) {
+            this.onConfig(WW)
           }
-          X(BB) {
-            return zo(this._instance, this.K.length, this.V, aQ, hQ, BB)
+          X(WW) {
+            return bP(this._instance, this.K.length, this.V, GN, RN, WW)
           }
-          triggerStatus(BB) {
-            const OB = this.triggerStatusNoSideEffects(BB);
+          triggerStatus(WW) {
+            const iW = this.triggerStatusNoSideEffects(WW);
             return this._instance.register_for_session({
-              [bQ]: OB
-            }), OB
+              [rN]: iW
+            }), iW
           }
-          triggerStatusNoSideEffects(BB) {
-            return this.X(BB)
+          triggerStatusNoSideEffects(WW) {
+            return this.X(WW)
           }
-          checkEventTriggerConditions(BB, OB, GB) {
+          checkEventTriggerConditions(WW, iW, OW) {
             if (0 === this.K.length) return;
-            const YB = this.X(GB) === Jo,
-              DB = this.K.includes(BB);
-            !YB && DB && OB("event", BB)
+            const mW = this.X(OW) === xP,
+              EW = this.K.includes(WW);
+            !mW && EW && iW("event", WW)
           }
           stop() {}
         },
-        Uo = class {
-          constructor(BB, OB, GB) {
-            if (this._instance = BB, this.group = OB, this.Y = new Vo(BB, OB.id), this.tt = new no(BB, OB.id), this.et = new So(BB), OB.conditions.events && OB.conditions.events.length > 0 || OB.conditions.urls && OB.conditions.urls.length > 0 || OB.conditions.flag) {
-              const BB = (OB.conditions.events || []).map((BB => BB.name)),
-                YB = {
-                  urlTriggers: OB.conditions.urls || [],
-                  eventTriggers: BB,
-                  linkedFlag: OB.conditions.flag || null,
+        JP = class {
+          constructor(WW, iW, OW) {
+            if (this._instance = WW, this.group = iW, this.Y = new YP(WW, iW.id), this.tt = new TP(WW, iW.id), this.et = new yP(WW), iW.conditions.events && iW.conditions.events.length > 0 || iW.conditions.urls && iW.conditions.urls.length > 0 || iW.conditions.flag) {
+              const WW = (iW.conditions.events || []).map((WW => WW.name)),
+                mW = {
+                  urlTriggers: iW.conditions.urls || [],
+                  eventTriggers: WW,
+                  linkedFlag: iW.conditions.flag || null,
                   urlBlocklist: []
                 };
-              this.Y.onConfig(YB), this.tt.onConfig(YB), this.et.onConfig(YB, GB);
-              const DB = [this.tt, this.Y, this.et];
-              this.nt = "any" === OB.conditions.matchType ? new No(DB) : new Ro(DB)
-            } else this.nt = new Wo
+              this.Y.onConfig(mW), this.tt.onConfig(mW), this.et.onConfig(mW, OW);
+              const EW = [this.tt, this.Y, this.et];
+              this.nt = "any" === iW.conditions.matchType ? new sP(EW) : new MP(EW)
+            } else this.nt = new KP
           }
-          triggerStatus(BB) {
-            return this.nt.triggerStatus(BB)
+          triggerStatus(WW) {
+            return this.nt.triggerStatus(WW)
           }
-          triggerStatusNoSideEffects(BB) {
-            return this.nt.triggerStatusNoSideEffects(BB)
+          triggerStatusNoSideEffects(WW) {
+            return this.nt.triggerStatusNoSideEffects(WW)
           }
-          getPendingTriggerConditions(BB) {
-            return "trigger_pending" !== this.triggerStatusNoSideEffects(BB) ? [] : [{
+          getPendingTriggerConditions(WW) {
+            return "trigger_pending" !== this.triggerStatusNoSideEffects(WW) ? [] : [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(BB)
+              status: this.Y.triggerStatusNoSideEffects(WW)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(BB)
+              status: this.tt.triggerStatusNoSideEffects(WW)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((BB => {
+            }].filter((WW => {
               let {
-                status: OB
-              } = BB;
-              return OB === Mo
-            })).map((BB => {
+                status: iW
+              } = WW;
+              return iW === lP
+            })).map((WW => {
               let {
-                label: OB
-              } = BB;
-              return OB
+                label: iW
+              } = WW;
+              return iW
             }))
           }
-          checkEventTriggerConditions(BB, OB, GB) {
-            this.tt.checkEventTriggerConditions(BB, OB, GB)
+          checkEventTriggerConditions(WW, iW, OW) {
+            this.tt.checkEventTriggerConditions(WW, iW, OW)
           }
-          checkUrlTriggerConditions(BB, OB, GB, YB) {
-            this.Y.checkUrlTriggerConditions(BB, OB, GB, YB)
+          checkUrlTriggerConditions(WW, iW, OW, mW) {
+            this.Y.checkUrlTriggerConditions(WW, iW, OW, mW)
           }
-          activateTrigger(BB, OB) {
-            var GB;
-            const YB = "url" === BB ? eQ + this.group.id : aQ + this.group.id;
-            null === (GB = this._instance.persistence) || void 0 === GB || GB.register({
-              [YB]: OB
+          activateTrigger(WW, iW) {
+            var OW;
+            const mW = "url" === WW ? IN + this.group.id : GN + this.group.id;
+            null === (OW = this._instance.persistence) || void 0 === OW || OW.register({
+              [mW]: iW
             })
           }
           stop() {
@@ -6371,368 +6371,368 @@ export const modules = {
           }
         };
 
-      function fo(BB) {
-        if (BB.rrwebError) return yo;
-        if (!BB.receivedFlags) return oo;
-        if (!BB.isRecordingEnabled) return Yo;
-        if (BB.urlTriggerMatching.urlBlocked) return jo;
-        const OB = !0 === BB.isSampled,
-          GB = new No([BB.eventTriggerMatching, BB.urlTriggerMatching, BB.linkedFlagMatching]).triggerStatus(BB.sessionId);
-        return OB ? Do : "trigger_activated" === GB ? Qo : "trigger_pending" === GB ? oo : !1 === BB.isSampled ? Yo : Qo
+      function hP(WW) {
+        if (WW.rrwebError) return ZP;
+        if (!WW.receivedFlags) return wP;
+        if (!WW.isRecordingEnabled) return PP;
+        if (WW.urlTriggerMatching.urlBlocked) return tP;
+        const iW = !0 === WW.isSampled,
+          OW = new sP([WW.eventTriggerMatching, WW.urlTriggerMatching, WW.linkedFlagMatching]).triggerStatus(WW.sessionId);
+        return iW ? LP : "trigger_activated" === OW ? cP : "trigger_pending" === OW ? wP : !1 === WW.isSampled ? PP : cP
       }
 
-      function ko(BB) {
-        if (BB.rrwebError) return yo;
-        if (!BB.receivedFlags) return oo;
-        if (!BB.isRecordingEnabled) return Yo;
-        if (BB.urlTriggerMatching.urlBlocked) return jo;
-        const OB = new Ro([BB.eventTriggerMatching, BB.urlTriggerMatching, BB.linkedFlagMatching]).triggerStatus(BB.sessionId),
-          GB = OB !== Po,
-          YB = ZD(BB.isSampled);
-        return GB && "trigger_pending" === OB ? oo : GB && "trigger_disabled" === OB || YB && !BB.isSampled ? Yo : !0 === BB.isSampled ? Do : Qo
+      function HP(WW) {
+        if (WW.rrwebError) return ZP;
+        if (!WW.receivedFlags) return wP;
+        if (!WW.isRecordingEnabled) return PP;
+        if (WW.urlTriggerMatching.urlBlocked) return tP;
+        const iW = new MP([WW.eventTriggerMatching, WW.urlTriggerMatching, WW.linkedFlagMatching]).triggerStatus(WW.sessionId),
+          OW = iW !== AP,
+          mW = sE(WW.isSampled);
+        return OW && "trigger_pending" === iW ? wP : OW && "trigger_disabled" === iW || mW && !WW.isSampled ? PP : !0 === WW.isSampled ? LP : cP
       }
 
-      function Ko() {
-        const BB = [];
-        return function(OB, GB) {
-          if (MD(GB) || yD(GB)) {
-            for (; BB.length > 0 && BB[BB.length - 1] !== this;) BB.pop();
-            return BB.includes(GB) ? "[Circular]" : (BB.push(GB), GB)
+      function nP() {
+        const WW = [];
+        return function(iW, OW) {
+          if (lE(OW) || ZE(OW)) {
+            for (; WW.length > 0 && WW[WW.length - 1] !== this;) WW.pop();
+            return WW.includes(OW) ? "[Circular]" : (WW.push(OW), OW)
           }
-          return GB
+          return OW
         }
       }
 
-      function uo(BB) {
+      function uP(WW) {
         try {
-          const OB = JSON.stringify(BB, Ko());
-          return OB ? new Blob([OB]).size : 0
-        } catch (BB) {
+          const iW = JSON.stringify(WW, nP());
+          return iW ? new Blob([iW]).size : 0
+        } catch (WW) {
           return -1
         }
       }
 
-      function mo(BB) {
-        if (lD(BB)) return 4;
-        if (PD(BB)) return 0;
-        switch (typeof BB) {
+      function oP(WW) {
+        if (jE(WW)) return 4;
+        if (AE(WW)) return 0;
+        switch (typeof WW) {
           case "string":
-            return BB.length + 2;
+            return WW.length + 2;
           case "number":
-            return String(BB).length;
+            return String(WW).length;
           case "boolean":
-            return BB ? 4 : 5;
+            return WW ? 4 : 5;
           case "object": {
-            if (yD(BB)) {
-              let OB = 2;
-              for (let GB = 0; BB.length > GB; GB++) {
-                GB > 0 && (OB += 1);
-                const YB = BB[GB];
-                OB += PD(YB) || lD(YB) ? 4 : mo(YB)
+            if (ZE(WW)) {
+              let iW = 2;
+              for (let OW = 0; WW.length > OW; OW++) {
+                OW > 0 && (iW += 1);
+                const mW = WW[OW];
+                iW += AE(mW) || jE(mW) ? 4 : oP(mW)
               }
-              return OB
+              return iW
             }
-            const OB = BB;
-            let GB = 2,
-              YB = !0;
-            for (const BB in OB) {
-              if (!{}.hasOwnProperty.call(OB, BB)) continue;
-              const DB = OB[BB];
-              PD(DB) || (YB || (GB += 1), YB = !1, GB += BB.length + 3 + mo(DB))
+            const iW = WW;
+            let OW = 2,
+              mW = !0;
+            for (const WW in iW) {
+              if (!{}.hasOwnProperty.call(iW, WW)) continue;
+              const EW = iW[WW];
+              AE(EW) || (mW || (OW += 1), mW = !1, OW += WW.length + 3 + oP(EW))
             }
-            return GB
+            return OW
           }
           default:
             return 0
         }
       }
 
-      function Io(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
-        if (BB.size >= OB && BB.data.length > 1) {
-          const OB = Math.floor(BB.data.length / 2),
-            GB = BB.sizes.slice(0, OB),
-            YB = BB.sizes.slice(OB);
-          return [Io({
-            size: GB.reduce(((BB, OB) => BB + OB), 0),
-            data: BB.data.slice(0, OB),
-            sizes: GB,
-            sessionId: BB.sessionId,
-            windowId: BB.windowId
-          }), Io({
-            size: YB.reduce(((BB, OB) => BB + OB), 0),
-            data: BB.data.slice(OB),
-            sizes: YB,
-            sessionId: BB.sessionId,
-            windowId: BB.windowId
-          })].flatMap((BB => BB))
+      function dP(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
+        if (WW.size >= iW && WW.data.length > 1) {
+          const iW = Math.floor(WW.data.length / 2),
+            OW = WW.sizes.slice(0, iW),
+            mW = WW.sizes.slice(iW);
+          return [dP({
+            size: OW.reduce(((WW, iW) => WW + iW), 0),
+            data: WW.data.slice(0, iW),
+            sizes: OW,
+            sessionId: WW.sessionId,
+            windowId: WW.windowId
+          }), dP({
+            size: mW.reduce(((WW, iW) => WW + iW), 0),
+            data: WW.data.slice(iW),
+            sizes: mW,
+            sessionId: WW.sessionId,
+            windowId: WW.windowId
+          })].flatMap((WW => WW))
         }
-        return [BB]
+        return [WW]
       }
-      var Fo = Uint8Array,
-        io = Uint16Array,
-        Lo = Uint32Array,
-        go = new Fo([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
-        ro = new Fo([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
-        Xo = new Fo([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
-        wo = function(BB, OB) {
-          for (var GB = new io(31), YB = 0; 31 > YB; ++YB) GB[YB] = OB += 1 << BB[YB - 1];
-          var DB = new Lo(GB[30]);
-          for (YB = 1; 30 > YB; ++YB)
-            for (var QB = GB[YB]; GB[YB + 1] > QB; ++QB) DB[QB] = QB - GB[YB] << 5 | YB;
-          return [GB, DB]
+      var eP = Uint8Array,
+        vP = Uint16Array,
+        gP = Uint32Array,
+        DP = new eP([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
+        VP = new eP([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
+        pP = new eP([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
+        fP = function(WW, iW) {
+          for (var OW = new vP(31), mW = 0; 31 > mW; ++mW) OW[mW] = iW += 1 << WW[mW - 1];
+          var EW = new gP(OW[30]);
+          for (mW = 1; 30 > mW; ++mW)
+            for (var NW = OW[mW]; OW[mW + 1] > NW; ++NW) EW[NW] = NW - OW[mW] << 5 | mW;
+          return [OW, EW]
         },
-        Eo = wo(go, 2),
-        co = Eo[1];
-      Eo[0][28] = 258, co[258] = 28;
-      for (var ho = wo(ro, 0)[1], ao = new io(32768), eo = 0; 32768 > eo; ++eo) {
-        var To = (43690 & eo) >>> 1 | (21845 & eo) << 1;
-        ao[eo] = ((65280 & (To = (61680 & (To = (52428 & To) >>> 2 | (13107 & To) << 2)) >>> 4 | (3855 & To) << 4)) >>> 8 | (255 & To) << 8) >>> 1
+        CP = fP(DP, 2),
+        XP = CP[1];
+      CP[0][28] = 258, XP[258] = 28;
+      for (var BP = fP(VP, 0)[1], qP = new vP(32768), RP = 0; 32768 > RP; ++RP) {
+        var GP = (43690 & RP) >>> 1 | (21845 & RP) << 1;
+        qP[RP] = ((65280 & (GP = (61680 & (GP = (52428 & GP) >>> 2 | (13107 & GP) << 2)) >>> 4 | (3855 & GP) << 4)) >>> 8 | (255 & GP) << 8) >>> 1
       }
-      var bo = function(BB, OB, GB) {
-          for (var YB = BB.length, DB = 0, QB = new io(OB); YB > DB; ++DB) ++QB[BB[DB] - 1];
-          var oB, jB = new io(OB);
-          for (DB = 0; OB > DB; ++DB) jB[DB] = jB[DB - 1] + QB[DB - 1] << 1;
-          if (GB) {
-            oB = new io(1 << OB);
-            var yB = 15 - OB;
-            for (DB = 0; YB > DB; ++DB)
-              if (BB[DB])
-                for (var JB = DB << 4 | BB[DB], MB = OB - BB[DB], PB = jB[BB[DB] - 1]++ << MB, zB = PB | (1 << MB) - 1; zB >= PB; ++PB) oB[ao[PB] >>> yB] = JB
+      var IP = function(WW, iW, OW) {
+          for (var mW = WW.length, EW = 0, NW = new vP(iW); mW > EW; ++EW) ++NW[WW[EW] - 1];
+          var PW, LW = new vP(iW);
+          for (EW = 0; iW > EW; ++EW) LW[EW] = LW[EW - 1] + NW[EW - 1] << 1;
+          if (OW) {
+            PW = new vP(1 << iW);
+            var cW = 15 - iW;
+            for (EW = 0; mW > EW; ++EW)
+              if (WW[EW])
+                for (var wW = EW << 4 | WW[EW], tW = iW - WW[EW], ZW = LW[WW[EW] - 1]++ << tW, xW = ZW | (1 << tW) - 1; xW >= ZW; ++ZW) PW[qP[ZW] >>> cW] = wW
           } else
-            for (oB = new io(YB), DB = 0; YB > DB; ++DB) oB[DB] = ao[jB[BB[DB] - 1]++] >>> 15 - BB[DB];
-          return oB
+            for (PW = new vP(mW), EW = 0; mW > EW; ++EW) PW[EW] = qP[LW[WW[EW] - 1]++] >>> 15 - WW[EW];
+          return PW
         },
-        Co = new Fo(288);
-      for (eo = 0; 144 > eo; ++eo) Co[eo] = 8;
-      for (eo = 144; 256 > eo; ++eo) Co[eo] = 9;
-      for (eo = 256; 280 > eo; ++eo) Co[eo] = 7;
-      for (eo = 280; 288 > eo; ++eo) Co[eo] = 8;
-      var Ho = new Fo(32);
-      for (eo = 0; 32 > eo; ++eo) Ho[eo] = 5;
-      var vo = bo(Co, 9, 0),
-        so = bo(Ho, 5, 0),
-        xo = function(BB) {
-          return (BB / 8 | 0) + (7 & BB && 1)
+        aP = new eP(288);
+      for (RP = 0; 144 > RP; ++RP) aP[RP] = 8;
+      for (RP = 144; 256 > RP; ++RP) aP[RP] = 9;
+      for (RP = 256; 280 > RP; ++RP) aP[RP] = 7;
+      for (RP = 280; 288 > RP; ++RP) aP[RP] = 8;
+      var rP = new eP(32);
+      for (RP = 0; 32 > RP; ++RP) rP[RP] = 5;
+      var zP = IP(aP, 9, 0),
+        FP = IP(rP, 5, 0),
+        QP = function(WW) {
+          return (WW / 8 | 0) + (7 & WW && 1)
         },
-        to = function(BB, OB, GB) {
-          (null == OB || 0 > OB) && (OB = 0), (null == GB || GB > BB.length) && (GB = BB.length);
-          var YB = new(BB instanceof io ? io : BB instanceof Lo ? Lo : Fo)(GB - OB);
-          return YB.set(BB.subarray(OB, GB)), YB
+        WL = function(WW, iW, OW) {
+          (null == iW || 0 > iW) && (iW = 0), (null == OW || OW > WW.length) && (OW = WW.length);
+          var mW = new(WW instanceof vP ? vP : WW instanceof gP ? gP : eP)(OW - iW);
+          return mW.set(WW.subarray(iW, OW)), mW
         },
-        Bj = function(BB, OB, GB) {
-          var YB = OB / 8 | 0;
-          BB[YB] |= GB <<= 7 & OB, BB[YB + 1] |= GB >>> 8
+        iL = function(WW, iW, OW) {
+          var mW = iW / 8 | 0;
+          WW[mW] |= OW <<= 7 & iW, WW[mW + 1] |= OW >>> 8
         },
-        Oj = function(BB, OB, GB) {
-          var YB = OB / 8 | 0;
-          BB[YB] |= GB <<= 7 & OB, BB[YB + 1] |= GB >>> 8, BB[YB + 2] |= GB >>> 16
+        OL = function(WW, iW, OW) {
+          var mW = iW / 8 | 0;
+          WW[mW] |= OW <<= 7 & iW, WW[mW + 1] |= OW >>> 8, WW[mW + 2] |= OW >>> 16
         },
-        Gj = function(BB, OB) {
-          for (var GB = [], YB = 0; BB.length > YB; ++YB) BB[YB] && GB.push({
-            s: YB,
-            f: BB[YB]
+        mL = function(WW, iW) {
+          for (var OW = [], mW = 0; WW.length > mW; ++mW) WW[mW] && OW.push({
+            s: mW,
+            f: WW[mW]
           });
-          var DB = GB.length,
-            QB = GB.slice();
-          if (!DB) return [new Fo(0), 0];
-          if (1 == DB) {
-            var oB = new Fo(GB[0].s + 1);
-            return oB[GB[0].s] = 1, [oB, 1]
+          var EW = OW.length,
+            NW = OW.slice();
+          if (!EW) return [new eP(0), 0];
+          if (1 == EW) {
+            var PW = new eP(OW[0].s + 1);
+            return PW[OW[0].s] = 1, [PW, 1]
           }
-          GB.sort((function(BB, OB) {
-            return BB.f - OB.f
-          })), GB.push({
+          OW.sort((function(WW, iW) {
+            return WW.f - iW.f
+          })), OW.push({
             s: -1,
             f: 25001
           });
-          var jB = GB[0],
-            yB = GB[1],
-            JB = 0,
-            MB = 1,
-            PB = 2;
-          for (GB[0] = {
+          var LW = OW[0],
+            cW = OW[1],
+            wW = 0,
+            tW = 1,
+            ZW = 2;
+          for (OW[0] = {
               s: -1,
-              f: jB.f + yB.f,
-              l: jB,
-              r: yB
-            }; MB != DB - 1;) jB = GB[GB[PB].f > GB[JB].f ? JB++ : PB++], yB = GB[JB != MB && GB[PB].f > GB[JB].f ? JB++ : PB++], GB[MB++] = {
+              f: LW.f + cW.f,
+              l: LW,
+              r: cW
+            }; tW != EW - 1;) LW = OW[OW[ZW].f > OW[wW].f ? wW++ : ZW++], cW = OW[wW != tW && OW[ZW].f > OW[wW].f ? wW++ : ZW++], OW[tW++] = {
             s: -1,
-            f: jB.f + yB.f,
-            l: jB,
-            r: yB
+            f: LW.f + cW.f,
+            l: LW,
+            r: cW
           };
-          var zB = QB[0].s;
-          for (YB = 1; DB > YB; ++YB) QB[YB].s > zB && (zB = QB[YB].s);
-          var lB = new io(zB + 1),
-            pB = Yj(GB[MB - 1], lB, 0);
-          if (pB > OB) {
-            YB = 0;
-            var qB = 0,
-              ZB = pB - OB,
-              NB = 1 << ZB;
-            for (QB.sort((function(BB, OB) {
-                return lB[OB.s] - lB[BB.s] || BB.f - OB.f
-              })); DB > YB; ++YB) {
-              var RB = QB[YB].s;
-              if (OB >= lB[RB]) break;
-              qB += NB - (1 << pB - lB[RB]), lB[RB] = OB
+          var xW = NW[0].s;
+          for (mW = 1; EW > mW; ++mW) NW[mW].s > xW && (xW = NW[mW].s);
+          var lW = new vP(xW + 1),
+            AW = EL(OW[tW - 1], lW, 0);
+          if (AW > iW) {
+            mW = 0;
+            var bW = 0,
+              jW = AW - iW,
+              UW = 1 << jW;
+            for (NW.sort((function(WW, iW) {
+                return lW[iW.s] - lW[WW.s] || WW.f - iW.f
+              })); EW > mW; ++mW) {
+              var kW = NW[mW].s;
+              if (iW >= lW[kW]) break;
+              bW += UW - (1 << AW - lW[kW]), lW[kW] = iW
             }
-            for (qB >>>= ZB; qB > 0;) {
-              var WB = QB[YB].s;
-              OB > lB[WB] ? qB -= 1 << OB - lB[WB]++ - 1 : ++YB
+            for (bW >>>= jW; bW > 0;) {
+              var sW = NW[mW].s;
+              iW > lW[sW] ? bW -= 1 << iW - lW[sW]++ - 1 : ++mW
             }
-            for (; YB >= 0 && qB; --YB) {
-              var AB = QB[YB].s;
-              lB[AB] == OB && (--lB[AB], ++qB)
+            for (; mW >= 0 && bW; --mW) {
+              var MW = NW[mW].s;
+              lW[MW] == iW && (--lW[MW], ++bW)
             }
-            pB = OB
+            AW = iW
           }
-          return [new Fo(lB), pB]
+          return [new eP(lW), AW]
         },
-        Yj = function(BB, OB, GB) {
-          return -1 == BB.s ? Math.max(Yj(BB.l, OB, GB + 1), Yj(BB.r, OB, GB + 1)) : OB[BB.s] = GB
+        EL = function(WW, iW, OW) {
+          return -1 == WW.s ? Math.max(EL(WW.l, iW, OW + 1), EL(WW.r, iW, OW + 1)) : iW[WW.s] = OW
         },
-        Dj = function(BB) {
-          for (var OB = BB.length; OB && !BB[--OB];);
-          for (var GB = new io(++OB), YB = 0, DB = BB[0], QB = 1, oB = function(BB) {
-              GB[YB++] = BB
-            }, jB = 1; OB >= jB; ++jB)
-            if (BB[jB] == DB && jB != OB) ++QB;
+        NL = function(WW) {
+          for (var iW = WW.length; iW && !WW[--iW];);
+          for (var OW = new vP(++iW), mW = 0, EW = WW[0], NW = 1, PW = function(WW) {
+              OW[mW++] = WW
+            }, LW = 1; iW >= LW; ++LW)
+            if (WW[LW] == EW && LW != iW) ++NW;
             else {
-              if (!DB && QB > 2) {
-                for (; QB > 138; QB -= 138) oB(32754);
-                QB > 2 && (oB(QB > 10 ? QB - 11 << 5 | 28690 : QB - 3 << 5 | 12305), QB = 0)
-              } else if (QB > 3) {
-                for (oB(DB), --QB; QB > 6; QB -= 6) oB(8304);
-                QB > 2 && (oB(QB - 3 << 5 | 8208), QB = 0)
+              if (!EW && NW > 2) {
+                for (; NW > 138; NW -= 138) PW(32754);
+                NW > 2 && (PW(NW > 10 ? NW - 11 << 5 | 28690 : NW - 3 << 5 | 12305), NW = 0)
+              } else if (NW > 3) {
+                for (PW(EW), --NW; NW > 6; NW -= 6) PW(8304);
+                NW > 2 && (PW(NW - 3 << 5 | 8208), NW = 0)
               }
-              for (; QB--;) oB(DB);
-              QB = 1, DB = BB[jB]
-            } return [GB.subarray(0, YB), OB]
+              for (; NW--;) PW(EW);
+              NW = 1, EW = WW[LW]
+            } return [OW.subarray(0, mW), iW]
         },
-        Qj = function(BB, OB) {
-          for (var GB = 0, YB = 0; OB.length > YB; ++YB) GB += BB[YB] * OB[YB];
-          return GB
+        PL = function(WW, iW) {
+          for (var OW = 0, mW = 0; iW.length > mW; ++mW) OW += WW[mW] * iW[mW];
+          return OW
         },
-        oj = function(BB, OB, GB) {
-          var YB = GB.length,
-            DB = xo(OB + 2);
-          BB[DB] = 255 & YB, BB[DB + 1] = YB >>> 8, BB[DB + 2] = 255 ^ BB[DB], BB[DB + 3] = 255 ^ BB[DB + 1];
-          for (var QB = 0; YB > QB; ++QB) BB[DB + QB + 4] = GB[QB];
-          return 8 * (DB + 4 + YB)
+        LL = function(WW, iW, OW) {
+          var mW = OW.length,
+            EW = QP(iW + 2);
+          WW[EW] = 255 & mW, WW[EW + 1] = mW >>> 8, WW[EW + 2] = 255 ^ WW[EW], WW[EW + 3] = 255 ^ WW[EW + 1];
+          for (var NW = 0; mW > NW; ++NW) WW[EW + NW + 4] = OW[NW];
+          return 8 * (EW + 4 + mW)
         },
-        jj = function(BB, OB, GB, YB, DB, QB, oB, jB, yB, JB, MB) {
-          Bj(OB, MB++, GB), ++DB[256];
-          for (var PB = Gj(DB, 15), zB = PB[0], lB = PB[1], pB = Gj(QB, 15), qB = pB[0], ZB = pB[1], NB = Dj(zB), RB = NB[0], WB = NB[1], AB = Dj(qB), VB = AB[0], SB = AB[1], nB = new io(19), UB = 0; RB.length > UB; ++UB) nB[31 & RB[UB]]++;
-          for (UB = 0; VB.length > UB; ++UB) nB[31 & VB[UB]]++;
-          for (var fB = Gj(nB, 7), kB = fB[0], dB = fB[1], KB = 19; KB > 4 && !kB[Xo[KB - 1]]; --KB);
-          var uB, mB, IB, FB, iB = JB + 5 << 3,
-            LB = Qj(DB, Co) + Qj(QB, Ho) + oB,
-            gB = Qj(DB, zB) + Qj(QB, qB) + oB + 14 + 3 * KB + Qj(nB, kB) + (2 * nB[16] + 3 * nB[17] + 7 * nB[18]);
-          if (LB >= iB && gB >= iB) return oj(OB, MB, BB.subarray(yB, yB + JB));
-          if (Bj(OB, MB, 1 + (LB > gB)), MB += 2, LB > gB) {
-            uB = bo(zB, lB, 0), mB = zB, IB = bo(qB, ZB, 0), FB = qB;
-            var rB = bo(kB, dB, 0);
-            for (Bj(OB, MB, WB - 257), Bj(OB, MB + 5, SB - 1), Bj(OB, MB + 10, KB - 4), MB += 14, UB = 0; KB > UB; ++UB) Bj(OB, MB + 3 * UB, kB[Xo[UB]]);
-            MB += 3 * KB;
-            for (var XB = [RB, VB], wB = 0; 2 > wB; ++wB) {
-              var EB = XB[wB];
-              for (UB = 0; EB.length > UB; ++UB) Bj(OB, MB, rB[cB = 31 & EB[UB]]), MB += kB[cB], cB > 15 && (Bj(OB, MB, EB[UB] >>> 5 & 127), MB += EB[UB] >>> 12)
+        cL = function(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW, tW) {
+          iL(iW, tW++, OW), ++EW[256];
+          for (var ZW = mL(EW, 15), xW = ZW[0], lW = ZW[1], AW = mL(NW, 15), bW = AW[0], jW = AW[1], UW = NL(xW), kW = UW[0], sW = UW[1], MW = NL(bW), KW = MW[0], SW = MW[1], YW = new vP(19), yW = 0; kW.length > yW; ++yW) YW[31 & kW[yW]]++;
+          for (yW = 0; KW.length > yW; ++yW) YW[31 & KW[yW]]++;
+          for (var TW = mL(YW, 7), JW = TW[0], hW = TW[1], HW = 19; HW > 4 && !JW[pP[HW - 1]]; --HW);
+          var nW, uW, oW, dW, eW = wW + 5 << 3,
+            vW = PL(EW, aP) + PL(NW, rP) + PW,
+            gW = PL(EW, xW) + PL(NW, bW) + PW + 14 + 3 * HW + PL(YW, JW) + (2 * YW[16] + 3 * YW[17] + 7 * YW[18]);
+          if (vW >= eW && gW >= eW) return LL(iW, tW, WW.subarray(cW, cW + wW));
+          if (iL(iW, tW, 1 + (vW > gW)), tW += 2, vW > gW) {
+            nW = IP(xW, lW, 0), uW = xW, oW = IP(bW, jW, 0), dW = bW;
+            var DW = IP(JW, hW, 0);
+            for (iL(iW, tW, sW - 257), iL(iW, tW + 5, SW - 1), iL(iW, tW + 10, HW - 4), tW += 14, yW = 0; HW > yW; ++yW) iL(iW, tW + 3 * yW, JW[pP[yW]]);
+            tW += 3 * HW;
+            for (var VW = [kW, KW], pW = 0; 2 > pW; ++pW) {
+              var fW = VW[pW];
+              for (yW = 0; fW.length > yW; ++yW) iL(iW, tW, DW[CW = 31 & fW[yW]]), tW += JW[CW], CW > 15 && (iL(iW, tW, fW[yW] >>> 5 & 127), tW += fW[yW] >>> 12)
             }
-          } else uB = vo, mB = Co, IB = so, FB = Ho;
-          for (UB = 0; jB > UB; ++UB)
-            if (YB[UB] > 255) {
-              var cB;
-              Oj(OB, MB, uB[257 + (cB = YB[UB] >>> 18 & 31)]), MB += mB[cB + 257], cB > 7 && (Bj(OB, MB, YB[UB] >>> 23 & 31), MB += go[cB]);
-              var hB = 31 & YB[UB];
-              Oj(OB, MB, IB[hB]), MB += FB[hB], hB > 3 && (Oj(OB, MB, YB[UB] >>> 5 & 8191), MB += ro[hB])
-            } else Oj(OB, MB, uB[YB[UB]]), MB += mB[YB[UB]];
-          return Oj(OB, MB, uB[256]), MB + mB[256]
+          } else nW = zP, uW = aP, oW = FP, dW = rP;
+          for (yW = 0; LW > yW; ++yW)
+            if (mW[yW] > 255) {
+              var CW;
+              OL(iW, tW, nW[257 + (CW = mW[yW] >>> 18 & 31)]), tW += uW[CW + 257], CW > 7 && (iL(iW, tW, mW[yW] >>> 23 & 31), tW += DP[CW]);
+              var XW = 31 & mW[yW];
+              OL(iW, tW, oW[XW]), tW += dW[XW], XW > 3 && (OL(iW, tW, mW[yW] >>> 5 & 8191), tW += VP[XW])
+            } else OL(iW, tW, nW[mW[yW]]), tW += uW[mW[yW]];
+          return OL(iW, tW, nW[256]), tW + uW[256]
         },
-        yj = new Lo([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
-        Jj = (new Fo(0), function() {
-          for (var BB = new Lo(256), OB = 0; 256 > OB; ++OB) {
-            for (var GB = OB, YB = 9; --YB;) GB = (1 & GB && 3988292384) ^ GB >>> 1;
-            BB[OB] = GB
+        wL = new gP([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
+        tL = (new eP(0), function() {
+          for (var WW = new gP(256), iW = 0; 256 > iW; ++iW) {
+            for (var OW = iW, mW = 9; --mW;) OW = (1 & OW && 3988292384) ^ OW >>> 1;
+            WW[iW] = OW
           }
-          return BB
+          return WW
         }()),
-        Mj = function(BB, OB, GB) {
-          for (; GB; ++OB) BB[OB] = GB, GB >>>= 8
+        ZL = function(WW, iW, OW) {
+          for (; OW; ++iW) WW[iW] = OW, OW >>>= 8
         };
 
-      function Pj(BB, OB) {
-        var GB = "";
-        if (!OB && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(BB);
-        for (var YB = 0; BB.length > YB;) {
-          var DB = BB[YB++];
-          128 > DB || OB ? GB += String.fromCharCode(DB) : 224 > DB ? GB += String.fromCharCode((31 & DB) << 6 | 63 & BB[YB++]) : 240 > DB ? GB += String.fromCharCode((15 & DB) << 12 | (63 & BB[YB++]) << 6 | 63 & BB[YB++]) : (DB = ((15 & DB) << 18 | (63 & BB[YB++]) << 12 | (63 & BB[YB++]) << 6 | 63 & BB[YB++]) - 65536, GB += String.fromCharCode(55296 | DB >> 10, 56320 | 1023 & DB))
+      function xL(WW, iW) {
+        var OW = "";
+        if (!iW && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(WW);
+        for (var mW = 0; WW.length > mW;) {
+          var EW = WW[mW++];
+          128 > EW || iW ? OW += String.fromCharCode(EW) : 224 > EW ? OW += String.fromCharCode((31 & EW) << 6 | 63 & WW[mW++]) : 240 > EW ? OW += String.fromCharCode((15 & EW) << 12 | (63 & WW[mW++]) << 6 | 63 & WW[mW++]) : (EW = ((15 & EW) << 18 | (63 & WW[mW++]) << 12 | (63 & WW[mW++]) << 6 | 63 & WW[mW++]) - 65536, OW += String.fromCharCode(55296 | EW >> 10, 56320 | 1023 & EW))
         }
-        return GB
+        return OW
       }
-      var zj = class {
-        constructor(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          var GB, YB, DB, QB;
-          this._rrweb = BB, this.it = OB, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
-            const BB = Date.now(),
-              OB = BB - this.ot;
-            OB > 0 ? (this.ct = Math.min(this.dt, this.ct + OB / 1e3 * this.ht), this.ot = BB) : this.ot = BB
-          }, this.ft = BB => {
-            if (!this.rt[BB]) {
-              var OB, GB;
-              this.rt[BB] = !0;
-              const YB = this.vt(BB);
-              null === (OB = (GB = this.it).onBlockedNode) || void 0 === OB || OB.call(GB, BB, YB)
+      var lL = class {
+        constructor(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          var OW, mW, EW, NW;
+          this._rrweb = WW, this.it = iW, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
+            const WW = Date.now(),
+              iW = WW - this.ot;
+            iW > 0 ? (this.ct = Math.min(this.dt, this.ct + iW / 1e3 * this.ht), this.ot = WW) : this.ot = WW
+          }, this.ft = WW => {
+            if (!this.rt[WW]) {
+              var iW, OW;
+              this.rt[WW] = !0;
+              const mW = this.vt(WW);
+              null === (iW = (OW = this.it).onBlockedNode) || void 0 === iW || iW.call(OW, WW, mW)
             }
-          }, this.yt = BB => {
-            const OB = this.vt(BB);
-            if ("svg" !== (null == OB ? void 0 : OB.nodeName) && OB instanceof Element) {
-              const BB = OB.closest("svg");
-              if (BB) return [this._rrweb.mirror.getId(BB), BB]
+          }, this.yt = WW => {
+            const iW = this.vt(WW);
+            if ("svg" !== (null == iW ? void 0 : iW.nodeName) && iW instanceof Element) {
+              const WW = iW.closest("svg");
+              if (WW) return [this._rrweb.mirror.getId(WW), WW]
             }
-            return [BB, OB]
-          }, this.vt = BB => this._rrweb.mirror.yDB(BB), this.bt = BB => {
-            var OB, GB, YB, DB, QB, oB, jB, yB;
-            return (null !== (OB = null === (GB = BB.removes) || void 0 === GB ? void 0 : GB.length) && void 0 !== OB ? OB : 0) + (null !== (YB = null === (DB = BB.attributes) || void 0 === DB ? void 0 : DB.length) && void 0 !== YB ? YB : 0) + (null !== (QB = null === (oB = BB.texts) || void 0 === oB ? void 0 : oB.length) && void 0 !== QB ? QB : 0) + (null !== (jB = null === (yB = BB.adds) || void 0 === yB ? void 0 : yB.length) && void 0 !== jB ? jB : 0)
-          }, this.throttleMutations = BB => {
-            if (3 !== BB.type || 0 !== BB.data.source) return BB;
-            const OB = BB.data,
-              GB = this.bt(OB);
-            if (OB.attributes) {
-              const BB = OB.attributes.length;
-              OB.attributes = OB.attributes.filter((BB => {
-                const [OB] = this.yt(BB.id);
-                return !this.wt.consumeRateLimit(OB) && BB
+            return [WW, iW]
+          }, this.vt = WW => this._rrweb.mirror.AmW(WW), this.bt = WW => {
+            var iW, OW, mW, EW, NW, PW, LW, cW;
+            return (null !== (iW = null === (OW = WW.removes) || void 0 === OW ? void 0 : OW.length) && void 0 !== iW ? iW : 0) + (null !== (mW = null === (EW = WW.attributes) || void 0 === EW ? void 0 : EW.length) && void 0 !== mW ? mW : 0) + (null !== (NW = null === (PW = WW.texts) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0) + (null !== (LW = null === (cW = WW.adds) || void 0 === cW ? void 0 : cW.length) && void 0 !== LW ? LW : 0)
+          }, this.throttleMutations = WW => {
+            if (3 !== WW.type || 0 !== WW.data.source) return WW;
+            const iW = WW.data,
+              OW = this.bt(iW);
+            if (iW.attributes) {
+              const WW = iW.attributes.length;
+              iW.attributes = iW.attributes.filter((WW => {
+                const [iW] = this.yt(WW.id);
+                return !this.wt.consumeRateLimit(iW) && WW
               }));
-              const GB = BB - OB.attributes.length;
-              var YB, DB;
-              GB > 0 && (null === (YB = (DB = this.it).onDroppedAttributeMutations) || void 0 === YB || YB.call(DB, GB))
+              const OW = WW - iW.attributes.length;
+              var mW, EW;
+              OW > 0 && (null === (mW = (EW = this.it).onDroppedAttributeMutations) || void 0 === mW || mW.call(EW, OW))
             }
-            const QB = this.bt(OB);
-            if (0 === QB && GB !== QB) return;
-            if (this.kt) return BB;
+            const NW = this.bt(iW);
+            if (0 === NW && OW !== NW) return;
+            if (this.kt) return WW;
             this.ut();
-            const oB = mo(BB);
-            var jB, yB;
-            return oB > this.ct ? (null === (jB = (yB = this.it).onDroppedOversizedMutation) || void 0 === jB || jB.call(yB, oB), void this._t()) : (this.ct -= oB, BB)
+            const PW = oP(WW);
+            var LW, cW;
+            return PW > this.ct ? (null === (LW = (cW = this.it).onDroppedOversizedMutation) || void 0 === LW || LW.call(cW, PW), void this._t()) : (this.ct -= PW, WW)
           }, this._t = () => {
             if (this.St) return;
-            const BB = Math.max(0, this.xt - (Date.now() - this.st));
+            const WW = Math.max(0, this.xt - (Date.now() - this.st));
             this.St = setTimeout((() => {
-              var BB, OB;
-              this.St = void 0, this.st = Date.now(), null === (BB = (OB = this.it).requestFullSnapshot) || void 0 === BB || BB.call(OB)
-            }), BB)
-          }, this.wt = new WD({
-            bucketSize: null !== (GB = this.it.bucketSize) && void 0 !== GB ? GB : 100,
-            refillRate: null !== (YB = this.it.refillRate) && void 0 !== YB ? YB : 10,
+              var WW, iW;
+              this.St = void 0, this.st = Date.now(), null === (WW = (iW = this.it).requestFullSnapshot) || void 0 === WW || WW.call(iW)
+            }), WW)
+          }, this.wt = new SE({
+            bucketSize: null !== (OW = this.it.bucketSize) && void 0 !== OW ? OW : 100,
+            refillRate: null !== (mW = this.it.refillRate) && void 0 !== mW ? mW : 10,
             refillInterval: 1e3,
             I: this.ft,
-            A: mD
-          }), this.dt = null !== (DB = this.it.bytesBucketSize) && void 0 !== DB ? DB : 0, this.ht = null !== (QB = this.it.bytesRefillRate) && void 0 !== QB ? QB : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
-          const oB = this.it.resyncIntervalMs;
-          this.xt = qD(oB) && Number.isFinite(oB) && oB > 0 ? oB : 3e5
+            A: eE
+          }), this.dt = null !== (EW = this.it.bytesBucketSize) && void 0 !== EW ? EW : 0, this.ht = null !== (NW = this.it.bytesRefillRate) && void 0 !== NW ? NW : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
+          const PW = this.it.resyncIntervalMs;
+          this.xt = kE(PW) && Number.isFinite(PW) && PW > 0 ? PW : 3e5
         }
         reset() {
           this.rt = {}, this.St && (clearTimeout(this.St), this.St = void 0), this.st = Date.now()
@@ -6741,422 +6741,422 @@ export const modules = {
           this.wt.stop(), this.reset(), this.ct = this.dt, this.ot = Date.now(), this.st = -1 / 0
         }
       };
-      Math.trunc || (Math.trunc = function(BB) {
-        return 0 > BB ? Math.ceil(BB) : Math.floor(BB)
-      }), Number.isInteger || (Number.isInteger = function(BB) {
-        return qD(BB) && isFinite(BB) && Math.floor(BB) === BB
-      }), tY && !PD(tY.crypto) && crypto;
-      let lj = null;
-      const pj = {
+      Math.trunc || (Math.trunc = function(WW) {
+        return 0 > WW ? Math.ceil(WW) : Math.floor(WW)
+      }), Number.isInteger || (Number.isInteger = function(WW) {
+        return kE(WW) && isFinite(WW) && Math.floor(WW) === WW
+      }), OE && !AE(OE.crypto) && crypto;
+      let AL = null;
+      const bL = {
         At() {
-          if (!lD(lj)) return lj;
-          if (lj = !0, PD(tY)) lj = !1;
+          if (!jE(AL)) return AL;
+          if (AL = !0, AE(OE)) AL = !1;
           else try {
-            const BB = "__support__";
-            pj.$t(BB, "xyz"), '"xyz"' !== pj.Ot(BB) && (lj = !1), pj.Pt(BB)
-          } catch (BB) {
-            lj = !1
+            const WW = "__support__";
+            bL.$t(WW, "xyz"), '"xyz"' !== bL.Ot(WW) && (AL = !1), bL.Pt(WW)
+          } catch (WW) {
+            AL = !1
           }
-          return lj
+          return AL
         },
-        Lt(BB) {
-          mD.error("sessionStorage error: ", BB)
+        Lt(WW) {
+          eE.error("sessionStorage error: ", WW)
         },
-        Ot(BB) {
+        Ot(WW) {
           try {
-            return null == tY ? void 0 : tY.sessionStorage.getItem(BB)
-          } catch (BB) {
-            pj.Lt(BB)
+            return null == OE ? void 0 : OE.sessionStorage.getItem(WW)
+          } catch (WW) {
+            bL.Lt(WW)
           }
           return null
         },
-        Dt(BB) {
+        Dt(WW) {
           try {
-            return JSON.parse(pj.Ot(BB)) || null
-          } catch (BB) {}
+            return JSON.parse(bL.Ot(WW)) || null
+          } catch (WW) {}
           return null
         },
-        $t(BB, OB) {
+        $t(WW, iW) {
           try {
-            return null == tY || tY.sessionStorage.setItem(BB, JSON.stringify(OB)), !0
-          } catch (BB) {
-            pj.Lt(BB)
+            return null == OE || OE.sessionStorage.setItem(WW, JSON.stringify(iW)), !0
+          } catch (WW) {
+            bL.Lt(WW)
           }
           return !1
         },
-        Pt(BB) {
+        Pt(WW) {
           try {
-            null == tY || tY.sessionStorage.removeItem(BB)
-          } catch (BB) {
-            pj.Lt(BB)
+            null == OE || OE.sessionStorage.removeItem(WW)
+          } catch (WW) {
+            bL.Lt(WW)
           }
         }
       };
-      KD.DEBUG = !1, KD.LIB_VERSION = "1.438.7", KD.LIB_NAME = "web";
-      var qj = KD,
-        Zj = class {
-          constructor(BB) {
-            if (!BB.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
-            this.Ft = BB.get_property.bind(BB), this.Nt = BB.persistence.set_property.bind(BB.persistence)
+      oE.DEBUG = !1, oE.LIB_VERSION = "1.438.7", oE.LIB_NAME = "web";
+      var jL = oE,
+        UL = class {
+          constructor(WW) {
+            if (!WW.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
+            this.Ft = WW.get_property.bind(WW), this.Nt = WW.persistence.set_property.bind(WW.persistence)
           }
-          trackSize(BB, OB) {
-            this.Nt(TQ, {
-              sessionId: BB,
-              size: this.currentTrackedSize(BB) + OB
+          trackSize(WW, iW) {
+            this.Nt(aN, {
+              sessionId: WW,
+              size: this.currentTrackedSize(WW) + iW
             })
           }
-          currentTrackedSize(BB) {
-            const OB = this.Ft(TQ);
-            return MD(GB = OB) && zD(GB.sessionId) && qD(GB.size) && OB.sessionId === BB ? OB.size : 0;
-            var GB
+          currentTrackedSize(WW) {
+            const iW = this.Ft(aN);
+            return lE(OW = iW) && bE(OW.sessionId) && kE(OW.size) && iW.sessionId === WW ? iW.size : 0;
+            var OW
           }
         };
 
-      function Nj(BB, OB) {
-        return function(BB) {
-          let OB = 0;
-          for (let GB = 0; BB.length > GB; GB++) OB = (OB << 5) - OB + BB.charCodeAt(GB), OB |= 0;
-          return Math.abs(OB)
-        }(BB) % 100 < RD(100 * OB, 0, 100, mD)
+      function kL(WW, iW) {
+        return function(WW) {
+          let iW = 0;
+          for (let OW = 0; WW.length > OW; OW++) iW = (iW << 5) - iW + WW.charCodeAt(OW), iW |= 0;
+          return Math.abs(iW)
+        }(WW) % 100 < KE(100 * iW, 0, 100, eE)
       }
-      const Rj = (BB, OB) => {
-          if (!(BB => {
+      const sL = (WW, iW) => {
+          if (!(WW => {
               try {
-                new RegExp(BB)
-              } catch (BB) {
+                new RegExp(WW)
+              } catch (WW) {
                 return !1
               }
               return !0
-            })(OB)) return !1;
+            })(iW)) return !1;
           try {
-            return new RegExp(OB).test(BB)
-          } catch (BB) {
+            return new RegExp(iW).test(WW)
+          } catch (WW) {
             return !1
           }
         },
-        Wj = BB => BB.toLowerCase(),
-        Aj = {
-          exact: (BB, OB) => OB.some((OB => BB.some((BB => OB === BB)))),
-          is_not: (BB, OB) => OB.every((OB => BB.every((BB => OB !== BB)))),
-          regex: (BB, OB) => OB.some((OB => BB.some((BB => Rj(OB, BB))))),
-          not_regex: (BB, OB) => OB.every((OB => BB.every((BB => !Rj(OB, BB))))),
-          icontains: (BB, OB) => OB.map(Wj).some((OB => BB.map(Wj).some((BB => OB.includes(BB))))),
-          not_icontains: (BB, OB) => OB.map(Wj).every((OB => BB.map(Wj).every((BB => !OB.includes(BB))))),
-          gt: (BB, OB) => OB.some((OB => {
-            const GB = parseFloat(OB);
-            return !isNaN(GB) && BB.some((BB => GB > parseFloat(BB)))
+        ML = WW => WW.toLowerCase(),
+        KL = {
+          exact: (WW, iW) => iW.some((iW => WW.some((WW => iW === WW)))),
+          is_not: (WW, iW) => iW.every((iW => WW.every((WW => iW !== WW)))),
+          regex: (WW, iW) => iW.some((iW => WW.some((WW => sL(iW, WW))))),
+          not_regex: (WW, iW) => iW.every((iW => WW.every((WW => !sL(iW, WW))))),
+          icontains: (WW, iW) => iW.map(ML).some((iW => WW.map(ML).some((WW => iW.includes(WW))))),
+          not_icontains: (WW, iW) => iW.map(ML).every((iW => WW.map(ML).every((WW => !iW.includes(WW))))),
+          gt: (WW, iW) => iW.some((iW => {
+            const OW = parseFloat(iW);
+            return !isNaN(OW) && WW.some((WW => OW > parseFloat(WW)))
           })),
-          lt: (BB, OB) => OB.some((OB => {
-            const GB = parseFloat(OB);
-            return !isNaN(GB) && BB.some((BB => GB < parseFloat(BB)))
+          lt: (WW, iW) => iW.some((iW => {
+            const OW = parseFloat(iW);
+            return !isNaN(OW) && WW.some((WW => OW < parseFloat(WW)))
           }))
         },
-        Vj = new Set(["is_not", "not_icontains", "not_regex"]);
+        SL = new Set(["is_not", "not_icontains", "not_regex"]);
 
-      function Sj(BB, OB, GB) {
-        return !BB || 0 === BB.length || BB.every((BB => {
-          const YB = "person" === BB.type ? GB : OB,
-            DB = null == YB ? void 0 : YB[BB.key],
-            QB = BB.operator || "exact";
-          if (PD(DB) || lD(DB)) return Vj.has(QB);
-          const oB = Aj[QB];
-          return !!oB && !PD(BB.value) && !lD(BB.value) && oB(yD(BB.value) ? BB.value.map(String) : [String(BB.value)], yD(DB) ? DB.map(String) : [String(DB)])
+      function YL(WW, iW, OW) {
+        return !WW || 0 === WW.length || WW.every((WW => {
+          const mW = "person" === WW.type ? OW : iW,
+            EW = null == mW ? void 0 : mW[WW.key],
+            NW = WW.operator || "exact";
+          if (AE(EW) || jE(EW)) return SL.has(NW);
+          const PW = KL[NW];
+          return !!PW && !AE(WW.value) && !jE(WW.value) && PW(ZE(WW.value) ? WW.value.map(String) : [String(WW.value)], ZE(EW) ? EW.map(String) : [String(EW)])
         }))
       }
-      const nj = ID("[SessionRecording]");
+      const yL = vE("[SessionRecording]");
 
-      function Uj(BB, OB) {
-        return OB ? BB : "!" + BB
+      function TL(WW, iW) {
+        return iW ? WW : "!" + WW
       }
 
-      function fj(BB, OB) {
-        return BB === OB || BB !== "!" + OB && null
+      function JL(WW, iW) {
+        return WW === iW || WW !== "!" + iW && null
       }
-      var kj = class {
-          constructor(BB, OB, GB, YB, DB, QB, oB) {
-            this._instance = BB, this.Y = OB, this.tt = GB, this.et = YB, this.qt = DB, this.jt = QB, this.Bt = oB, this.zt = null, this.Ht = ko
+      var hL = class {
+          constructor(WW, iW, OW, mW, EW, NW, PW) {
+            this._instance = WW, this.Y = iW, this.tt = OW, this.et = mW, this.qt = EW, this.jt = NW, this.Bt = PW, this.zt = null, this.Ht = HP
           }
-          onRemoteConfig(BB) {
-            this.zt = qD(BB.sampleRate) ? BB.sampleRate : null, "any" === BB.triggerMatchType ? (this.Ut = new No([this.tt, this.Y]), this.Ht = fo) : (this.Ut = new Ro([this.tt, this.Y]), this.Ht = ko), this._instance.register_for_session({
-              [sQ]: BB.triggerMatchType
-            }), this.Y.onConfig(BB), this.tt.onConfig(BB), this.et.onConfig(BB, ((BB, OB) => {
+          onRemoteConfig(WW) {
+            this.zt = kE(WW.sampleRate) ? WW.sampleRate : null, "any" === WW.triggerMatchType ? (this.Ut = new sP([this.tt, this.Y]), this.Ht = hP) : (this.Ut = new MP([this.tt, this.Y]), this.Ht = HP), this._instance.register_for_session({
+              [WP]: WW.triggerMatchType
+            }), this.Y.onConfig(WW), this.tt.onConfig(WW), this.et.onConfig(WW, ((WW, iW) => {
               this.qt("linked_flag_matched", {
-                flag: BB,
-                variant: OB
+                flag: WW,
+                variant: iW
               }), this.Bt()
             }))
           }
-          getStatus(BB) {
+          getStatus(WW) {
             return this.Ht({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: BB.isSampled,
-              rrwebError: BB.rrwebError,
-              urlTriggerMatching: BB.urlTriggerMatching,
-              eventTriggerMatching: BB.eventTriggerMatching,
-              linkedFlagMatching: BB.linkedFlagMatching,
-              sessionId: BB.sessionId
+              isSampled: WW.isSampled,
+              rrwebError: WW.rrwebError,
+              urlTriggerMatching: WW.urlTriggerMatching,
+              eventTriggerMatching: WW.eventTriggerMatching,
+              linkedFlagMatching: WW.linkedFlagMatching,
+              sessionId: WW.sessionId
             })
           }
-          getMinimumDuration(BB) {
-            const OB = this._instance.get_property("$session_recording_remote_config"),
-              GB = null == OB ? void 0 : OB.minimumDurationMilliseconds;
-            return qD(GB) ? GB : null
+          getMinimumDuration(WW) {
+            const iW = this._instance.get_property("$session_recording_remote_config"),
+              OW = null == iW ? void 0 : iW.minimumDurationMilliseconds;
+            return kE(OW) ? OW : null
           }
-          checkUrlTriggers(BB, OB, GB, YB) {
-            this.Y.checkUrlTriggerConditions(OB, GB, YB, BB)
+          checkUrlTriggers(WW, iW, OW, mW) {
+            this.Y.checkUrlTriggerConditions(iW, OW, mW, WW)
           }
-          setupEventTriggerListeners(BB, OB, GB) {
-            if (0 !== this.tt.K.length && pD(this.Wt)) return this.Wt = BB((BB => {
+          setupEventTriggerListeners(WW, iW, OW) {
+            if (0 !== this.tt.K.length && UE(this.Wt)) return this.Wt = WW((WW => {
               try {
-                this.tt.checkEventTriggerConditions(BB.event, GB, OB)
-              } catch (BB) {
-                nj.error("Could not activate event trigger", BB)
+                this.tt.checkEventTriggerConditions(WW.event, OW, iW)
+              } catch (WW) {
+                yL.error("Could not activate event trigger", WW)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(BB) {
-            var OB;
-            const GB = this.zt;
-            var YB, DB;
-            if (!qD(GB)) return null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$session_is_sampled"), void(null === (DB = this._instance.persistence) || void 0 === DB || DB.unregister("$replay_sample_rate"));
-            const QB = this._instance.get_property(EQ),
-              oB = this._instance.get_property("$replay_sample_rate"),
-              jB = fj(QB, BB),
-              yB = qD(oB) && oB !== GB,
-              JB = PD(oB) && QB === BB,
-              MB = yB || JB || !ZD(jB),
-              PB = MB ? Nj(BB, GB) : jB;
-            MB && (PB ? this.qt("sampled") : nj.warn(`Sample rate (${GB}) has determined that this sessionId (${BB}) will not be sent to the server.`)), null === (OB = this._instance.persistence) || void 0 === OB || OB.register({
-              $session_is_sampled: Uj(BB, PB),
-              $replay_sample_rate: lD(oB) && QB === BB ? null : GB
+          makeSamplingDecisions(WW) {
+            var iW;
+            const OW = this.zt;
+            var mW, EW;
+            if (!kE(OW)) return null === (mW = this._instance.persistence) || void 0 === mW || mW.unregister("$session_is_sampled"), void(null === (EW = this._instance.persistence) || void 0 === EW || EW.unregister("$replay_sample_rate"));
+            const NW = this._instance.get_property(BN),
+              PW = this._instance.get_property("$replay_sample_rate"),
+              LW = JL(NW, WW),
+              cW = kE(PW) && PW !== OW,
+              wW = AE(PW) && NW === WW,
+              tW = cW || wW || !sE(LW),
+              ZW = tW ? kL(WW, OW) : LW;
+            tW && (ZW ? this.qt("sampled") : yL.warn(`Sample rate (${OW}) has determined that this sessionId (${WW}) will not be sent to the server.`)), null === (iW = this._instance.persistence) || void 0 === iW || iW.register({
+              $session_is_sampled: TL(WW, ZW),
+              $replay_sample_rate: jE(PW) && NW === WW ? null : OW
             })
           }
-          ensureSamplingDecision(BB) {
-            if (!qD(this.zt)) return;
-            const OB = this._instance.get_property(EQ);
-            ZD(fj(OB, BB)) || this.makeSamplingDecisions(BB)
+          ensureSamplingDecision(WW) {
+            if (!kE(this.zt)) return;
+            const iW = this._instance.get_property(BN);
+            sE(JL(iW, WW)) || this.makeSamplingDecisions(WW)
           }
           onFlushComplete() {}
           clearConditionalRecordingPersistence() {
-            var BB, OB, GB, YB, DB;
-            null === (BB = this._instance.persistence) || void 0 === BB || BB.unregister("$session_recording_event_trigger_activated_session"), null === (OB = this._instance.persistence) || void 0 === OB || OB.unregister("$session_recording_url_trigger_activated_session"), null === (GB = this._instance.persistence) || void 0 === GB || GB.unregister("$session_is_sampled"), null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$replay_sample_rate"), null === (DB = this._instance.persistence) || void 0 === DB || DB.unregister("$session_past_minimum_duration")
+            var WW, iW, OW, mW, EW;
+            null === (WW = this._instance.persistence) || void 0 === WW || WW.unregister("$session_recording_event_trigger_activated_session"), null === (iW = this._instance.persistence) || void 0 === iW || iW.unregister("$session_recording_url_trigger_activated_session"), null === (OW = this._instance.persistence) || void 0 === OW || OW.unregister("$session_is_sampled"), null === (mW = this._instance.persistence) || void 0 === mW || mW.unregister("$replay_sample_rate"), null === (EW = this._instance.persistence) || void 0 === EW || EW.unregister("$session_past_minimum_duration")
           }
-          updateActiveTriggers(BB) {}
-          hasPendingTriggers(BB) {
-            var OB;
-            return (null === (OB = this.Ut) || void 0 === OB ? void 0 : OB.triggerStatus(BB)) === Mo
+          updateActiveTriggers(WW) {}
+          hasPendingTriggers(WW) {
+            var iW;
+            return (null === (iW = this.Ut) || void 0 === iW ? void 0 : iW.triggerStatus(WW)) === lP
           }
-          getPendingTriggerConditions(BB) {
+          getPendingTriggerConditions(WW) {
             return [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(BB)
+              status: this.Y.triggerStatusNoSideEffects(WW)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(BB)
+              status: this.tt.triggerStatusNoSideEffects(WW)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((BB => {
+            }].filter((WW => {
               let {
-                status: OB
-              } = BB;
-              return OB === Mo
-            })).map((BB => {
+                status: iW
+              } = WW;
+              return iW === lP
+            })).map((WW => {
               let {
-                label: OB
-              } = BB;
-              return OB
+                label: iW
+              } = WW;
+              return iW
             }))
           }
           stop() {
-            var BB;
-            null === (BB = this.Wt) || void 0 === BB || BB.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
+            var WW;
+            null === (WW = this.Wt) || void 0 === WW || WW.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
           }
         },
-        dj = class {
-          constructor(BB, OB, GB, YB, DB) {
-            this._instance = BB, this.Y = OB, this.qt = GB, this.Vt = YB, this.Bt = DB, this.Gt = [], this.Qt = new Map, this.Zt = !1
+        HL = class {
+          constructor(WW, iW, OW, mW, EW) {
+            this._instance = WW, this.Y = iW, this.qt = OW, this.Vt = mW, this.Bt = EW, this.Gt = [], this.Qt = new Map, this.Zt = !1
           }
-          onRemoteConfig(BB) {
-            BB.triggerGroups && 0 !== BB.triggerGroups.length ? (this.Jt(BB.triggerGroups), this._instance.register_for_session({
-              [sQ]: "v2_trigger_groups",
-              [xQ]: BB.triggerGroups.length
-            }), this.Y.onConfig(BB)) : nj.warn("[V2Strategy] No trigger groups configured")
+          onRemoteConfig(WW) {
+            WW.triggerGroups && 0 !== WW.triggerGroups.length ? (this.Jt(WW.triggerGroups), this._instance.register_for_session({
+              [WP]: "v2_trigger_groups",
+              [iP]: WW.triggerGroups.length
+            }), this.Y.onConfig(WW)) : yL.warn("[V2Strategy] No trigger groups configured")
           }
-          getStatus(BB) {
-            return function(BB) {
-              if (BB.rrwebError) return yo;
-              if (!BB.receivedFlags) return oo;
-              if (!BB.isRecordingEnabled) return Yo;
-              if (BB.urlTriggerMatching.urlBlocked) return jo;
-              const OB = BB.triggerGroupMatchers,
-                GB = BB.triggerGroupSamplingResults;
-              if (0 === OB.length) return Yo;
-              let YB = !1,
-                DB = !1;
-              for (const QB of OB) {
-                const OB = QB.triggerStatus(BB.sessionId);
-                if ("trigger_activated" === OB) {
-                  const BB = QB.group.id,
-                    OB = GB.get(BB);
-                  PD(OB) ? mD.warn("[V2 Triggers] Group activated but no sampling decision found", {
-                    groupId: BB
-                  }) : !0 === OB && (DB = !0)
-                } else "trigger_pending" === OB && (YB = !0)
+          getStatus(WW) {
+            return function(WW) {
+              if (WW.rrwebError) return ZP;
+              if (!WW.receivedFlags) return wP;
+              if (!WW.isRecordingEnabled) return PP;
+              if (WW.urlTriggerMatching.urlBlocked) return tP;
+              const iW = WW.triggerGroupMatchers,
+                OW = WW.triggerGroupSamplingResults;
+              if (0 === iW.length) return PP;
+              let mW = !1,
+                EW = !1;
+              for (const NW of iW) {
+                const iW = NW.triggerStatus(WW.sessionId);
+                if ("trigger_activated" === iW) {
+                  const WW = NW.group.id,
+                    iW = OW.get(WW);
+                  AE(iW) ? eE.warn("[V2 Triggers] Group activated but no sampling decision found", {
+                    groupId: WW
+                  }) : !0 === iW && (EW = !0)
+                } else "trigger_pending" === iW && (mW = !0)
               }
-              return DB ? Do : YB ? oo : Yo
+              return EW ? LP : mW ? wP : PP
             }({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: BB.isSampled,
-              rrwebError: BB.rrwebError,
-              urlTriggerMatching: BB.urlTriggerMatching,
-              eventTriggerMatching: BB.eventTriggerMatching,
-              linkedFlagMatching: BB.linkedFlagMatching,
-              sessionId: BB.sessionId,
+              isSampled: WW.isSampled,
+              rrwebError: WW.rrwebError,
+              urlTriggerMatching: WW.urlTriggerMatching,
+              eventTriggerMatching: WW.eventTriggerMatching,
+              linkedFlagMatching: WW.linkedFlagMatching,
+              sessionId: WW.sessionId,
               triggerGroupMatchers: this.Gt,
               triggerGroupSamplingResults: this.Qt,
-              minimumDuration: this.getMinimumDuration(BB.sessionId)
+              minimumDuration: this.getMinimumDuration(WW.sessionId)
             })
           }
-          getMinimumDuration(BB) {
-            let OB = null;
-            for (const GB of this.Gt)
-              if ("trigger_activated" === GB.triggerStatus(BB)) {
-                const BB = GB.group.minDurationMs;
-                qD(BB) && (lD(OB) || OB > BB) && (OB = BB)
-              } return OB
+          getMinimumDuration(WW) {
+            let iW = null;
+            for (const OW of this.Gt)
+              if ("trigger_activated" === OW.triggerStatus(WW)) {
+                const WW = OW.group.minDurationMs;
+                kE(WW) && (jE(iW) || iW > WW) && (iW = WW)
+              } return iW
           }
-          checkUrlTriggers(BB, OB, GB, YB) {
-            this.Y.checkUrlBlocklist(OB, GB);
-            for (const DB of this.Gt) DB.checkUrlTriggerConditions(OB, GB, (OB => {
-              this.Kt(DB, void 0) && (DB.activateTrigger(OB, BB), this.updateActiveTriggers(BB), this.Bt(OB))
-            }), BB)
+          checkUrlTriggers(WW, iW, OW, mW) {
+            this.Y.checkUrlBlocklist(iW, OW);
+            for (const EW of this.Gt) EW.checkUrlTriggerConditions(iW, OW, (iW => {
+              this.Kt(EW, void 0) && (EW.activateTrigger(iW, WW), this.updateActiveTriggers(WW), this.Bt(iW))
+            }), WW)
           }
-          setupEventTriggerListeners(BB, OB, GB) {
-            return this.Wt = BB((BB => {
-              var GB;
-              if (this.Zt) return nj.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (GB = this.Wt) || void 0 === GB || GB.call(this), void(this.Wt = void 0);
+          setupEventTriggerListeners(WW, iW, OW) {
+            return this.Wt = WW((WW => {
+              var OW;
+              if (this.Zt) return yL.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (OW = this.Wt) || void 0 === OW || OW.call(this), void(this.Wt = void 0);
               try {
-                for (const GB of this.Gt) GB.checkEventTriggerConditions(BB.event, (YB => {
-                  if (!this.Kt(GB, BB.properties)) return;
-                  const DB = (GB.group.conditions.events || []).filter((OB => OB.name === BB.event)),
-                    QB = this._instance.get_property(hD);
-                  DB.some((OB => !OB.properties || 0 === OB.properties.length || Sj(OB.properties, BB.properties, QB))) && (GB.activateTrigger(YB, OB), this.updateActiveTriggers(OB), this.Bt(YB))
-                }), OB)
-              } catch (BB) {
-                nj.error("Could not activate event trigger for trigger groups", BB)
+                for (const OW of this.Gt) OW.checkEventTriggerConditions(WW.event, (mW => {
+                  if (!this.Kt(OW, WW.properties)) return;
+                  const EW = (OW.group.conditions.events || []).filter((iW => iW.name === WW.event)),
+                    NW = this._instance.get_property(RE);
+                  EW.some((iW => !iW.properties || 0 === iW.properties.length || YL(iW.properties, WW.properties, NW))) && (OW.activateTrigger(mW, iW), this.updateActiveTriggers(iW), this.Bt(mW))
+                }), iW)
+              } catch (WW) {
+                yL.error("Could not activate event trigger for trigger groups", WW)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(BB) {
-            for (const GB of this.Gt) {
-              var OB;
-              const YB = GB.group,
-                DB = YB.id,
-                QB = YB.sampleRate,
-                oB = "$posthog_sr_group_sampling_" + DB,
-                jB = this._instance.get_property(oB);
-              let yB = null,
-                JB = !1,
-                MB = !1,
-                PB = !1;
-              if (MD(jB)) {
-                const OB = jB.sessionId,
-                  GB = jB.sampleRate,
-                  YB = jB.sampled;
-                JB = "string" == typeof OB && OB !== BB, MB = qD(GB) && GB !== QB, yB = OB === BB && qD(GB) && GB === QB && ZD(YB) ? YB : null
-              } else yB = jB === BB || null, JB = "string" == typeof jB && jB !== BB, PB = jB === BB;
-              const zB = JB || MB || PB || !ZD(yB),
-                lB = zB ? Nj(BB + DB, QB) : yB;
-              zB && this.Vt("triggerGroupSamplingDecisionMade", {
-                group_id: DB,
-                group_name: YB.name,
-                sampleRate: QB,
-                isSampled: lB
-              }), this.Qt.set(DB, lB), null === (OB = this._instance.persistence) || void 0 === OB || OB.register({
-                [oB]: {
-                  sessionId: BB,
-                  sampleRate: QB,
-                  sampled: lB
+          makeSamplingDecisions(WW) {
+            for (const OW of this.Gt) {
+              var iW;
+              const mW = OW.group,
+                EW = mW.id,
+                NW = mW.sampleRate,
+                PW = "$posthog_sr_group_sampling_" + EW,
+                LW = this._instance.get_property(PW);
+              let cW = null,
+                wW = !1,
+                tW = !1,
+                ZW = !1;
+              if (lE(LW)) {
+                const iW = LW.sessionId,
+                  OW = LW.sampleRate,
+                  mW = LW.sampled;
+                wW = "string" == typeof iW && iW !== WW, tW = kE(OW) && OW !== NW, cW = iW === WW && kE(OW) && OW === NW && sE(mW) ? mW : null
+              } else cW = LW === WW || null, wW = "string" == typeof LW && LW !== WW, ZW = LW === WW;
+              const xW = wW || tW || ZW || !sE(cW),
+                lW = xW ? kL(WW + EW, NW) : cW;
+              xW && this.Vt("triggerGroupSamplingDecisionMade", {
+                group_id: EW,
+                group_name: mW.name,
+                sampleRate: NW,
+                isSampled: lW
+              }), this.Qt.set(EW, lW), null === (iW = this._instance.persistence) || void 0 === iW || iW.register({
+                [PW]: {
+                  sessionId: WW,
+                  sampleRate: NW,
+                  sampled: lW
                 }
               })
             }
-            this.updateActiveTriggers(BB)
+            this.updateActiveTriggers(WW)
           }
-          ensureSamplingDecision(BB) {}
+          ensureSamplingDecision(WW) {}
           onFlushComplete() {
             this.Zt = !0
           }
           clearConditionalRecordingPersistence() {
-            var BB, OB, GB;
-            null === (BB = this._instance.persistence) || void 0 === BB || BB.unregister("$session_is_sampled"), null === (OB = this._instance.persistence) || void 0 === OB || OB.unregister("$replay_sample_rate"), null === (GB = this._instance.persistence) || void 0 === GB || GB.unregister("$session_past_minimum_duration");
-            for (const oB of this.Gt) {
-              var YB, DB, QB;
-              const BB = oB.group.id;
-              null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$posthog_sr_group_event_trigger_" + BB), null === (DB = this._instance.persistence) || void 0 === DB || DB.unregister("$posthog_sr_group_url_trigger_" + BB), null === (QB = this._instance.persistence) || void 0 === QB || QB.unregister("$posthog_sr_group_sampling_" + BB)
+            var WW, iW, OW;
+            null === (WW = this._instance.persistence) || void 0 === WW || WW.unregister("$session_is_sampled"), null === (iW = this._instance.persistence) || void 0 === iW || iW.unregister("$replay_sample_rate"), null === (OW = this._instance.persistence) || void 0 === OW || OW.unregister("$session_past_minimum_duration");
+            for (const PW of this.Gt) {
+              var mW, EW, NW;
+              const WW = PW.group.id;
+              null === (mW = this._instance.persistence) || void 0 === mW || mW.unregister("$posthog_sr_group_event_trigger_" + WW), null === (EW = this._instance.persistence) || void 0 === EW || EW.unregister("$posthog_sr_group_url_trigger_" + WW), null === (NW = this._instance.persistence) || void 0 === NW || NW.unregister("$posthog_sr_group_sampling_" + WW)
             }
           }
-          updateActiveTriggers(BB) {
-            const OB = [];
-            for (const GB of this.Gt) {
-              const YB = GB.group,
-                DB = YB.id,
-                QB = "trigger_activated" === GB.triggerStatus(BB),
-                oB = !0 === this.Qt.get(DB);
-              QB && OB.push({
-                id: DB,
-                name: YB.name,
+          updateActiveTriggers(WW) {
+            const iW = [];
+            for (const OW of this.Gt) {
+              const mW = OW.group,
+                EW = mW.id,
+                NW = "trigger_activated" === OW.triggerStatus(WW),
+                PW = !0 === this.Qt.get(EW);
+              NW && iW.push({
+                id: EW,
+                name: mW.name,
                 matched: !0,
-                sampled: oB
+                sampled: PW
               })
             }
             this._instance.register_for_session({
-              [HQ]: OB
+              [FN]: iW
             })
           }
-          hasPendingTriggers(BB) {
-            for (const OB of this.Gt)
-              if ("trigger_pending" === OB.triggerStatus(BB)) return !0;
+          hasPendingTriggers(WW) {
+            for (const iW of this.Gt)
+              if ("trigger_pending" === iW.triggerStatus(WW)) return !0;
             return !1
           }
-          getPendingTriggerConditions(BB) {
-            return this.Gt.flatMap((OB => "trigger_pending" !== OB.triggerStatusNoSideEffects(BB) ? [] : OB.getPendingTriggerConditions(BB).map((BB => `trigger group "${OB.group.name}": ${BB}`))))
+          getPendingTriggerConditions(WW) {
+            return this.Gt.flatMap((iW => "trigger_pending" !== iW.triggerStatusNoSideEffects(WW) ? [] : iW.getPendingTriggerConditions(WW).map((WW => `trigger group "${iW.group.name}": ${WW}`))))
           }
           stop() {
-            var BB;
-            null === (BB = this.Wt) || void 0 === BB || BB.call(this), this.Wt = void 0, this.Gt.forEach((BB => BB.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
+            var WW;
+            null === (WW = this.Wt) || void 0 === WW || WW.call(this), this.Wt = void 0, this.Gt.forEach((WW => WW.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
           }
-          Kt(BB, OB) {
-            const GB = BB.group.conditions.properties;
-            return !GB || 0 === GB.length || Sj(GB, OB, this._instance.get_property(hD))
+          Kt(WW, iW) {
+            const OW = WW.group.conditions.properties;
+            return !OW || 0 === OW.length || YL(OW, iW, this._instance.get_property(RE))
           }
-          Jt(BB) {
-            this.Gt.forEach((BB => BB.stop())), this.Gt = [], this.Qt.clear();
-            for (const OB of BB) {
-              const BB = new Uo(this._instance, OB, ((BB, GB) => {
+          Jt(WW) {
+            this.Gt.forEach((WW => WW.stop())), this.Gt = [], this.Qt.clear();
+            for (const iW of WW) {
+              const WW = new JP(this._instance, iW, ((WW, OW) => {
                 this.qt("linked_flag_matched", {
-                  flag: BB,
-                  variant: GB,
-                  group_id: OB.id,
-                  group_name: OB.name
+                  flag: WW,
+                  variant: OW,
+                  group_id: iW.id,
+                  group_name: iW.name
                 }), this.Bt()
               }));
-              this.Gt.push(BB)
+              this.Gt.push(WW)
             }
           }
         };
-      const Kj = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
-        uj = 1e5,
-        mj = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
-        Ij = [],
-        Fj = () => !1,
-        ij = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
-        Lj = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
-        gj = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
-        rj = "Accommodation AdministrativeArea Country Place State".split(" "),
-        Xj = {
+      const nL = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
+        uL = 1e5,
+        oL = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
+        dL = [],
+        eL = () => !1,
+        vL = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
+        gL = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
+        DL = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
+        VL = "Accommodation AdministrativeArea Country Place State".split(" "),
+        pL = {
           AggregateOffer: {
             offers: ["Offer"]
           },
@@ -7177,8 +7177,8 @@ export const modules = {
             educationalUse: !0,
             interactivityType: !0,
             aggregateRating: ["AggregateRating"],
-            potentialAction: Lj,
-            publisher: gj
+            potentialAction: gL,
+            publisher: DL
           },
           Event: {
             startDate: !0,
@@ -7191,10 +7191,10 @@ export const modules = {
             itemListElement: ["ListItem"]
           },
           ListItem: {
-            item: Ij
+            item: dL
           },
           Offer: {
-            seller: gj
+            seller: DL
           },
           Organization: {
             name: !0,
@@ -7228,7 +7228,7 @@ export const modules = {
             productionDate: !0,
             releaseDate: !0,
             brand: ["Brand", "Organization"],
-            manufacturer: gj,
+            manufacturer: DL,
             offers: ["Offer", "AggregateOffer"],
             aggregateRating: ["AggregateRating"]
           },
@@ -7236,416 +7236,416 @@ export const modules = {
             name: !0,
             serviceType: !0,
             category: !0,
-            provider: gj,
-            areaServed: rj,
+            provider: DL,
+            areaServed: VL,
             offers: ["AggregateOffer", "Offer"],
             aggregateRating: ["AggregateRating"]
           },
           OfferCatalog: {
             name: !0,
-            itemListElement: Ij
+            itemListElement: dL
           }
         },
-        wj = [
-          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), Xj.CreativeWork],
-          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), Xj.Event],
-          [gj, Xj.Organization],
-          [rj, Xj.Place],
-          ["Car IndividualProduct ProductGroup ProductModel".split(" "), Xj.Product]
+        fL = [
+          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), pL.CreativeWork],
+          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), pL.Event],
+          [DL, pL.Organization],
+          [VL, pL.Place],
+          ["Car IndividualProduct ProductGroup ProductModel".split(" "), pL.Product]
         ];
 
-      function Ej(BB, OB) {
-        return oD.call(BB, OB) ? BB[OB] : void 0
+      function CL(WW, iW) {
+        return wE.call(WW, iW) ? WW[iW] : void 0
       }
 
-      function cj(BB) {
-        const OB = typeof BB;
-        return lD(BB) || "string" === OB || "number" === OB || "boolean" === OB
+      function XL(WW) {
+        const iW = typeof WW;
+        return jE(WW) || "string" === iW || "number" === iW || "boolean" === iW
       }
 
-      function hj(BB, OB) {
-        return OB && function(BB) {
-          return zD(BB) && /^(https?:\/\/|\/|\.\.?\/)/i.test(BB.trim())
-        }(BB) ? OB(BB.trim()) || void 0 : BB
+      function BL(WW, iW) {
+        return iW && function(WW) {
+          return bE(WW) && /^(https?:\/\/|\/|\.\.?\/)/i.test(WW.trim())
+        }(WW) ? iW(WW.trim()) || void 0 : WW
       }
 
-      function aj(BB, OB) {
-        return yD(BB) && BB.every(cj) ? BB.map((BB => hj(BB, OB))).filter((BB => !PD(BB))) : cj(BB) ? hj(BB, OB) : void 0
+      function qL(WW, iW) {
+        return ZE(WW) && WW.every(XL) ? WW.map((WW => BL(WW, iW))).filter((WW => !AE(WW))) : XL(WW) ? BL(WW, iW) : void 0
       }
 
-      function ej(BB, OB) {
-        if ("string" != typeof BB) return;
-        const GB = BB.trim(),
-          YB = GB.indexOf("#"),
-          DB = 0 > YB ? GB : GB.slice(YB + 1);
-        if (DB && !(0 > YB && (/^[a-z][a-z\d+.-]*:/i.test(GB) || GB.includes("/") || GB.includes("?")))) try {
-          return OB(DB) ? DB : void 0
-        } catch (BB) {
+      function RL(WW, iW) {
+        if ("string" != typeof WW) return;
+        const OW = WW.trim(),
+          mW = OW.indexOf("#"),
+          EW = 0 > mW ? OW : OW.slice(mW + 1);
+        if (EW && !(0 > mW && (/^[a-z][a-z\d+.-]*:/i.test(OW) || OW.includes("/") || OW.includes("?")))) try {
+          return iW(EW) ? EW : void 0
+        } catch (WW) {
           return
         }
       }
 
-      function Tj(BB) {
-        if (oD.call(Xj, BB)) return Xj[BB];
-        for (const [OB, GB] of wj)
-          if (OB.includes(BB)) return GB
+      function GL(WW) {
+        if (wE.call(pL, WW)) return pL[WW];
+        for (const [iW, OW] of fL)
+          if (iW.includes(WW)) return OW
       }
 
-      function bj(BB, OB, GB) {
-        Object.defineProperty(BB, OB, {
+      function IL(WW, iW, OW) {
+        Object.defineProperty(WW, iW, {
           configurable: !0,
           enumerable: !0,
-          value: GB,
+          value: OW,
           writable: !0
         })
       }
 
-      function Cj(BB, OB, GB, YB) {
-        if (yD(BB)) {
-          const DB = BB.map((BB => Cj(BB, OB, GB, YB))).filter((BB => !PD(BB)));
-          return DB.length ? DB : void 0
+      function aL(WW, iW, OW, mW) {
+        if (ZE(WW)) {
+          const EW = WW.map((WW => aL(WW, iW, OW, mW))).filter((WW => !AE(WW)));
+          return EW.length ? EW : void 0
         }
-        return Hj(BB, OB, GB, YB) || void 0
+        return rL(WW, iW, OW, mW) || void 0
       }
 
-      function Hj(BB, OB, GB, YB) {
-        if (!MD(BB) || ! function(BB) {
-            return BB.remainingNodes ? (BB.remainingNodes--, !0) : (BB.exceeded = !0, !1)
-          }(GB)) return null;
-        const DB = Ej(BB, "@type"),
-          QB = function(BB) {
-            const OB = new Set,
-              GB = "string" == typeof BB ? [BB] : yD(BB) ? BB : [],
-              YB = [];
-            for (const DB of GB) {
-              if ("string" != typeof DB) continue;
-              const BB = DB.replace(/^https?:\/\/schema\.org\//, "");
-              if (100 >= BB.length && mj.test(BB) && !OB.has(BB) && (OB.add(BB), YB.push(BB), 20 === YB.length)) break
+      function rL(WW, iW, OW, mW) {
+        if (!lE(WW) || ! function(WW) {
+            return WW.remainingNodes ? (WW.remainingNodes--, !0) : (WW.exceeded = !0, !1)
+          }(OW)) return null;
+        const EW = CL(WW, "@type"),
+          NW = function(WW) {
+            const iW = new Set,
+              OW = "string" == typeof WW ? [WW] : ZE(WW) ? WW : [],
+              mW = [];
+            for (const EW of OW) {
+              if ("string" != typeof EW) continue;
+              const WW = EW.replace(/^https?:\/\/schema\.org\//, "");
+              if (100 >= WW.length && oL.test(WW) && !iW.has(WW) && (iW.add(WW), mW.push(WW), 20 === mW.length)) break
             }
-            return YB
-          }(DB),
-          oB = QB.filter((BB => !!Tj(BB) && (!YB || !YB.length || YB.includes(BB)))),
-          jB = {};
-        for (const JB of ij) {
-          const YB = "@type" === JB ? QB.length ? "string" == typeof DB ? QB[0] : QB : void 0 : "@id" === JB ? ej(Ej(BB, JB), OB) : aj(Ej(BB, JB), GB.maskUrl);
-          PD(YB) || bj(jB, JB, YB)
+            return mW
+          }(EW),
+          PW = NW.filter((WW => !!GL(WW) && (!mW || !mW.length || mW.includes(WW)))),
+          LW = {};
+        for (const wW of vL) {
+          const mW = "@type" === wW ? NW.length ? "string" == typeof EW ? NW[0] : NW : void 0 : "@id" === wW ? RL(CL(WW, wW), iW) : qL(CL(WW, wW), OW.maskUrl);
+          AE(mW) || IL(LW, wW, mW)
         }
-        for (const JB of oB) {
-          const YB = Tj(JB);
-          for (const DB of Object.keys(YB)) {
-            const QB = Ej(BB, DB),
-              oB = YB[DB];
-            if (!0 === oB) {
-              const BB = aj(QB, GB.maskUrl);
-              PD(BB) || bj(jB, DB, BB)
+        for (const wW of PW) {
+          const mW = GL(wW);
+          for (const EW of Object.keys(mW)) {
+            const NW = CL(WW, EW),
+              PW = mW[EW];
+            if (!0 === PW) {
+              const WW = qL(NW, OW.maskUrl);
+              AE(WW) || IL(LW, EW, WW)
             } else {
-              const BB = Cj(QB, OB, GB, oB);
-              PD(BB) || bj(jB, DB, BB)
+              const WW = aL(NW, iW, OW, PW);
+              AE(WW) || IL(LW, EW, WW)
             }
           }
         }
-        const yB = Cj(Ej(BB, "@graph"), OB, GB);
-        return PD(yB) || bj(jB, "@graph", yB), Object.keys(jB).length ? jB : null
+        const cW = aL(CL(WW, "@graph"), iW, OW);
+        return AE(cW) || IL(LW, "@graph", cW), Object.keys(LW).length ? LW : null
       }
 
-      function vj(BB, OB, GB) {
-        if (!MD(BB)) return null;
-        const DB = Ej(BB, "@context");
-        if ("string" != typeof DB || !/^https?:\/\/schema\.org\/?$/.test(DB)) return null;
-        const QB = Hj(BB, OB, GB);
-        return QB ? YB({
+      function zL(WW, iW, OW) {
+        if (!lE(WW)) return null;
+        const EW = CL(WW, "@context");
+        if ("string" != typeof EW || !/^https?:\/\/schema\.org\/?$/.test(EW)) return null;
+        const NW = rL(WW, iW, OW);
+        return NW ? mW({
           "@context": "https://schema.org"
-        }, QB) : null
+        }, NW) : null
       }
 
-      function sj(BB) {
-        var OB;
-        return "SCRIPT" === BB.nodeName && "application/ld+json" === (null === (OB = BB.getAttribute("type")) || void 0 === OB ? void 0 : OB.trim().toLowerCase())
+      function FL(WW) {
+        var iW;
+        return "SCRIPT" === WW.nodeName && "application/ld+json" === (null === (iW = WW.getAttribute("type")) || void 0 === iW ? void 0 : iW.trim().toLowerCase())
       }
 
-      function xj(BB, OB, GB) {
-        if ("string" == typeof OB ? BB.classList.contains(OB) : OB && Array.from(BB.classList).some((BB => (OB.lastIndex = 0, OB.test(BB))))) return !0;
+      function QL(WW, iW, OW) {
+        if ("string" == typeof iW ? WW.classList.contains(iW) : iW && Array.from(WW.classList).some((WW => (iW.lastIndex = 0, iW.test(WW))))) return !0;
         try {
-          return !!GB && BB.matches(GB)
-        } catch (BB) {
+          return !!OW && WW.matches(OW)
+        } catch (WW) {
           return !1
         }
       }
 
-      function tj(BB, OB, GB) {
-        for (let YB = BB; YB;) {
-          if (xj(YB, OB, GB)) return !0;
-          const BB = YB.parentNode;
-          YB = YB.parentElement || (BB && BB.nodeType === BB.DOCUMENT_FRAGMENT_NODE ? BB.host : null)
+      function Wc(WW, iW, OW) {
+        for (let mW = WW; mW;) {
+          if (QL(mW, iW, OW)) return !0;
+          const WW = mW.parentNode;
+          mW = mW.parentElement || (WW && WW.nodeType === WW.DOCUMENT_FRAGMENT_NODE ? WW.host : null)
         }
         return !1
       }
 
-      function By(BB) {
-        return sj(BB) ? [BB] : BB.nodeType !== BB.ELEMENT_NODE ? [] : Array.from(BB.querySelectorAll("script")).filter(sj)
+      function ic(WW) {
+        return FL(WW) ? [WW] : WW.nodeType !== WW.ELEMENT_NODE ? [] : Array.from(WW.querySelectorAll("script")).filter(FL)
       }
 
-      function Oy(BB) {
-        return MD(BB) ? BB.network_timing : BB
+      function Oc(WW) {
+        return lE(WW) ? WW.network_timing : WW
       }
-      const Gy = ID("[SessionRecording]"),
-        Yy = [1, 2, 3, 4, 5, 6, 7, 12],
-        Dy = BB => ({
-          rrwebMethod: BB,
+      const mc = vE("[SessionRecording]"),
+        Ec = [1, 2, 3, 4, 5, 6, 7, 12],
+        Nc = WW => ({
+          rrwebMethod: WW,
           enqueuedAt: Date.now(),
           attempt: 1
         });
 
-      function Qy() {
-        var BB;
-        return null == DD || null === (BB = DD.__PosthogExtensions__) || void 0 === BB ? void 0 : BB.rrweb
+      function Pc() {
+        var WW;
+        return null == LE || null === (WW = LE.__PosthogExtensions__) || void 0 === WW ? void 0 : WW.rrweb
       }
 
-      function oy() {
-        var BB;
-        return null === (BB = Qy()) || void 0 === BB ? void 0 : BB.record
+      function Lc() {
+        var WW;
+        return null === (WW = Pc()) || void 0 === WW ? void 0 : WW.record
       }
 
-      function jy(BB) {
+      function cc(WW) {
         try {
-          return JSON.stringify(BB)
-        } catch (OB) {
-          if (OB instanceof RangeError) throw OB;
-          return JSON.stringify(BB, Ko())
+          return JSON.stringify(WW)
+        } catch (iW) {
+          if (iW instanceof RangeError) throw iW;
+          return JSON.stringify(WW, nP())
         }
       }
 
-      function yy(BB) {
-        return Pj(function(BB, OB) {
-          void 0 === OB && (OB = {});
-          var GB = function() {
-              var BB = 4294967295;
+      function wc(WW) {
+        return xL(function(WW, iW) {
+          void 0 === iW && (iW = {});
+          var OW = function() {
+              var WW = 4294967295;
               return {
-                p(OB) {
-                  for (var GB = BB, YB = 0; OB.length > YB; ++YB) GB = Jj[255 & GB ^ OB[YB]] ^ GB >>> 8;
-                  BB = GB
+                p(iW) {
+                  for (var OW = WW, mW = 0; iW.length > mW; ++mW) OW = tL[255 & OW ^ iW[mW]] ^ OW >>> 8;
+                  WW = OW
                 },
-                d: () => 4294967295 ^ BB
+                d: () => 4294967295 ^ WW
               }
             }(),
-            YB = BB.length;
-          GB.p(BB);
-          var DB, QB, oB, jB, yB = (jB = 10 + ((DB = OB).filename && DB.filename.length + 1 || 0), function(BB, OB, GB, YB, DB, QB) {
-              var oB = BB.length,
-                jB = new Fo(YB + oB + 5 * (1 + Math.floor(oB / 7e3)) + 8),
-                yB = jB.subarray(YB, jB.length - 8),
-                JB = 0;
-              if (!OB || 8 > oB)
-                for (var MB = 0; oB >= MB; MB += 65535) {
-                  var PB = MB + 65535;
-                  oB > PB ? JB = oj(yB, JB, BB.subarray(MB, PB)) : (yB[MB] = QB, JB = oj(yB, JB, BB.subarray(MB, oB)))
+            mW = WW.length;
+          OW.p(WW);
+          var EW, NW, PW, LW, cW = (LW = 10 + ((EW = iW).filename && EW.filename.length + 1 || 0), function(WW, iW, OW, mW, EW, NW) {
+              var PW = WW.length,
+                LW = new eP(mW + PW + 5 * (1 + Math.floor(PW / 7e3)) + 8),
+                cW = LW.subarray(mW, LW.length - 8),
+                wW = 0;
+              if (!iW || 8 > PW)
+                for (var tW = 0; PW >= tW; tW += 65535) {
+                  var ZW = tW + 65535;
+                  PW > ZW ? wW = LL(cW, wW, WW.subarray(tW, ZW)) : (cW[tW] = NW, wW = LL(cW, wW, WW.subarray(tW, PW)))
                 } else {
-                  for (var zB = yj[OB - 1], lB = zB >>> 13, pB = 8191 & zB, qB = (1 << GB) - 1, ZB = new io(32768), NB = new io(qB + 1), RB = Math.ceil(GB / 3), WB = 2 * RB, AB = function(OB) {
-                      return (BB[OB] ^ BB[OB + 1] << RB ^ BB[OB + 2] << WB) & qB
-                    }, VB = new Lo(25e3), SB = new io(288), nB = new io(32), UB = 0, fB = 0, kB = (MB = 0, 0), dB = 0, KB = 0; oB > MB; ++MB) {
-                    var uB = AB(MB),
-                      mB = 32767 & MB,
-                      IB = NB[uB];
-                    if (ZB[mB] = IB, NB[uB] = mB, MB >= dB) {
-                      var FB = oB - MB;
-                      if ((UB > 7e3 || kB > 24576) && FB > 423) {
-                        JB = jj(BB, yB, 0, VB, SB, nB, fB, kB, KB, MB - KB, JB), kB = UB = fB = 0, KB = MB;
-                        for (var iB = 0; 286 > iB; ++iB) SB[iB] = 0;
-                        for (iB = 0; 30 > iB; ++iB) nB[iB] = 0
+                  for (var xW = wL[iW - 1], lW = xW >>> 13, AW = 8191 & xW, bW = (1 << OW) - 1, jW = new vP(32768), UW = new vP(bW + 1), kW = Math.ceil(OW / 3), sW = 2 * kW, MW = function(iW) {
+                      return (WW[iW] ^ WW[iW + 1] << kW ^ WW[iW + 2] << sW) & bW
+                    }, KW = new gP(25e3), SW = new vP(288), YW = new vP(32), yW = 0, TW = 0, JW = (tW = 0, 0), hW = 0, HW = 0; PW > tW; ++tW) {
+                    var nW = MW(tW),
+                      uW = 32767 & tW,
+                      oW = UW[nW];
+                    if (jW[uW] = oW, UW[nW] = uW, tW >= hW) {
+                      var dW = PW - tW;
+                      if ((yW > 7e3 || JW > 24576) && dW > 423) {
+                        wW = cL(WW, cW, 0, KW, SW, YW, TW, JW, HW, tW - HW, wW), JW = yW = TW = 0, HW = tW;
+                        for (var eW = 0; 286 > eW; ++eW) SW[eW] = 0;
+                        for (eW = 0; 30 > eW; ++eW) YW[eW] = 0
                       }
-                      var LB = 2,
-                        gB = 0,
-                        rB = pB,
-                        XB = mB - IB & 32767;
-                      if (FB > 2 && uB == AB(MB - XB))
-                        for (var wB = Math.min(lB, FB) - 1, EB = Math.min(32767, MB), cB = Math.min(258, FB); EB >= XB && --rB && mB != IB;) {
-                          if (BB[MB + LB] == BB[MB + LB - XB]) {
-                            for (var hB = 0; cB > hB && BB[MB + hB] == BB[MB + hB - XB]; ++hB);
-                            if (hB > LB) {
-                              if (LB = hB, gB = XB, hB > wB) break;
-                              var aB = Math.min(XB, hB - 2),
-                                eB = 0;
-                              for (iB = 0; aB > iB; ++iB) {
-                                var TB = MB - XB + iB + 32768 & 32767,
-                                  bB = TB - ZB[TB] + 32768 & 32767;
-                                bB > eB && (eB = bB, IB = TB)
+                      var vW = 2,
+                        gW = 0,
+                        DW = AW,
+                        VW = uW - oW & 32767;
+                      if (dW > 2 && nW == MW(tW - VW))
+                        for (var pW = Math.min(lW, dW) - 1, fW = Math.min(32767, tW), CW = Math.min(258, dW); fW >= VW && --DW && uW != oW;) {
+                          if (WW[tW + vW] == WW[tW + vW - VW]) {
+                            for (var XW = 0; CW > XW && WW[tW + XW] == WW[tW + XW - VW]; ++XW);
+                            if (XW > vW) {
+                              if (vW = XW, gW = VW, XW > pW) break;
+                              var BW = Math.min(VW, XW - 2),
+                                qW = 0;
+                              for (eW = 0; BW > eW; ++eW) {
+                                var RW = tW - VW + eW + 32768 & 32767,
+                                  GW = RW - jW[RW] + 32768 & 32767;
+                                GW > qW && (qW = GW, oW = RW)
                               }
                             }
                           }
-                          XB += (mB = IB) - (IB = ZB[mB]) + 32768 & 32767
+                          VW += (uW = oW) - (oW = jW[uW]) + 32768 & 32767
                         }
-                      if (gB) {
-                        VB[kB++] = 268435456 | co[LB] << 18 | ho[gB];
-                        var CB = 31 & co[LB],
-                          HB = 31 & ho[gB];
-                        fB += go[CB] + ro[HB], ++SB[257 + CB], ++nB[HB], dB = MB + LB, ++UB
-                      } else VB[kB++] = BB[MB], ++SB[BB[MB]]
+                      if (gW) {
+                        KW[JW++] = 268435456 | XP[vW] << 18 | BP[gW];
+                        var IW = 31 & XP[vW],
+                          aW = 31 & BP[gW];
+                        TW += DP[IW] + VP[aW], ++SW[257 + IW], ++YW[aW], hW = tW + vW, ++yW
+                      } else KW[JW++] = WW[tW], ++SW[WW[tW]]
                     }
                   }
-                  JB = jj(BB, yB, QB, VB, SB, nB, fB, kB, KB, MB - KB, JB)
+                  wW = cL(WW, cW, NW, KW, SW, YW, TW, JW, HW, tW - HW, wW)
                 }
-              return to(jB, 0, YB + xo(JB) + 8)
-            }(QB = BB, null == (oB = OB).level ? 6 : oB.level, null == oB.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(QB.length)))) : 12 + oB.mem, jB, 0, !0)),
-            JB = yB.length;
-          return function(BB, OB) {
-            var GB = OB.filename;
-            if (BB[0] = 31, BB[1] = 139, BB[2] = 8, BB[8] = 2 > OB.level ? 4 : 9 == OB.level ? 2 : 0, BB[9] = 3, 0 != OB.mtime && Mj(BB, 4, Math.floor(new Date(OB.mtime || Date.now()) / 1e3)), GB) {
-              BB[3] = 8;
-              for (var YB = 0; GB.length >= YB; ++YB) BB[YB + 10] = GB.charCodeAt(YB)
+              return WL(LW, 0, mW + QP(wW) + 8)
+            }(NW = WW, null == (PW = iW).level ? 6 : PW.level, null == PW.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(NW.length)))) : 12 + PW.mem, LW, 0, !0)),
+            wW = cW.length;
+          return function(WW, iW) {
+            var OW = iW.filename;
+            if (WW[0] = 31, WW[1] = 139, WW[2] = 8, WW[8] = 2 > iW.level ? 4 : 9 == iW.level ? 2 : 0, WW[9] = 3, 0 != iW.mtime && ZL(WW, 4, Math.floor(new Date(iW.mtime || Date.now()) / 1e3)), OW) {
+              WW[3] = 8;
+              for (var mW = 0; OW.length >= mW; ++mW) WW[mW + 10] = OW.charCodeAt(mW)
             }
-          }(yB, OB), Mj(yB, JB - 8, GB.d()), Mj(yB, JB - 4, YB), yB
-        }(function(BB) {
-          var OB = BB.length;
-          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(BB);
-          for (var GB = new Fo(BB.length + (BB.length >>> 1)), YB = 0, DB = function(BB) {
-              GB[YB++] = BB
-            }, QB = 0; OB > QB; ++QB) {
-            if (YB + 5 > GB.length) {
-              var oB = new Fo(YB + 8 + (OB - QB << 1));
-              oB.set(GB), GB = oB
+          }(cW, iW), ZL(cW, wW - 8, OW.d()), ZL(cW, wW - 4, mW), cW
+        }(function(WW) {
+          var iW = WW.length;
+          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(WW);
+          for (var OW = new eP(WW.length + (WW.length >>> 1)), mW = 0, EW = function(WW) {
+              OW[mW++] = WW
+            }, NW = 0; iW > NW; ++NW) {
+            if (mW + 5 > OW.length) {
+              var PW = new eP(mW + 8 + (iW - NW << 1));
+              PW.set(OW), OW = PW
             }
-            var jB = BB.charCodeAt(QB);
-            128 > jB ? DB(jB) : 2048 > jB ? (DB(192 | jB >>> 6), DB(128 | 63 & jB)) : jB > 55295 && 57344 > jB ? (DB(240 | (jB = 65536 + (1047552 & jB) | 1023 & BB.charCodeAt(++QB)) >>> 18), DB(128 | jB >>> 12 & 63), DB(128 | jB >>> 6 & 63), DB(128 | 63 & jB)) : (DB(224 | jB >>> 12), DB(128 | jB >>> 6 & 63), DB(128 | 63 & jB))
+            var LW = WW.charCodeAt(NW);
+            128 > LW ? EW(LW) : 2048 > LW ? (EW(192 | LW >>> 6), EW(128 | 63 & LW)) : LW > 55295 && 57344 > LW ? (EW(240 | (LW = 65536 + (1047552 & LW) | 1023 & WW.charCodeAt(++NW)) >>> 18), EW(128 | LW >>> 12 & 63), EW(128 | LW >>> 6 & 63), EW(128 | 63 & LW)) : (EW(224 | LW >>> 12), EW(128 | LW >>> 6 & 63), EW(128 | 63 & LW))
           }
-          return to(GB, 0, YB)
-        }(jy(BB))), !0)
+          return WL(OW, 0, mW)
+        }(cc(WW))), !0)
       }
 
-      function Jy(BB) {
-        return My.apply(this, arguments)
+      function tc(WW) {
+        return Zc.apply(this, arguments)
       }
 
-      function My() {
-        return My = QB((function*(BB) {
-          const OB = yield function(BB) {
-            return kD.apply(this, arguments)
-          }(jy(BB), qj.DEBUG, {
+      function Zc() {
+        return Zc = NW((function*(WW) {
+          const iW = yield function(WW) {
+            return nE.apply(this, arguments)
+          }(cc(WW), jL.DEBUG, {
             rethrow: !0
           });
-          return Pj(new Uint8Array(yield OB.arrayBuffer()), !0)
-        })), My.apply(this, arguments)
+          return xL(new Uint8Array(yield iW.arrayBuffer()), !0)
+        })), Zc.apply(this, arguments)
       }
-      let Py, zy;
-      const ly = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
-      let py = !1;
+      let xc, lc;
+      const Ac = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
+      let bc = !1;
 
-      function qy(BB) {
-        var OB;
-        return yD(BB) && 0 === BB.length ? (Py = null !== (OB = Py) && void 0 !== OB ? OB : yy([]), Py) : yy(BB)
-      }
-
-      function Zy(BB) {
-        return Ny.apply(this, arguments)
+      function jc(WW) {
+        var iW;
+        return ZE(WW) && 0 === WW.length ? (xc = null !== (iW = xc) && void 0 !== iW ? iW : wc([]), xc) : wc(WW)
       }
 
-      function Ny() {
-        return (Ny = QB((function*(BB) {
-          var OB;
-          return yD(BB) && 0 === BB.length ? Py || (zy = null !== (OB = zy) && void 0 !== OB ? OB : Jy([]).then((BB => (Py = BB, BB))).catch((BB => {
-            throw Py = void 0, zy = void 0, BB
-          })), zy) : Jy(BB)
+      function Uc(WW) {
+        return kc.apply(this, arguments)
+      }
+
+      function kc() {
+        return (kc = NW((function*(WW) {
+          var iW;
+          return ZE(WW) && 0 === WW.length ? xc || (lc = null !== (iW = lc) && void 0 !== iW ? iW : tc([]).then((WW => (xc = WW, WW))).catch((WW => {
+            throw xc = void 0, lc = void 0, WW
+          })), lc) : tc(WW)
         }))).apply(this, arguments)
       }
 
-      function Ry(BB) {
-        return ly && !py && function(BB) {
-          return 2 === BB.type || 3 === BB.type && (0 === BB.data.source || 8 === BB.data.source)
-        }(BB)
+      function sc(WW) {
+        return Ac && !bc && function(WW) {
+          return 2 === WW.type || 3 === WW.type && (0 === WW.data.source || 8 === WW.data.source)
+        }(WW)
       }
 
-      function Wy(BB) {
+      function Mc(WW) {
         return {
-          event: BB,
-          size: mo(BB)
+          event: WW,
+          size: oP(WW)
         }
       }
 
-      function Ay(BB, OB) {
-        return YB(YB({}, BB), {}, {
-          data: OB,
+      function Kc(WW, iW) {
+        return mW(mW({}, WW), {}, {
+          data: iW,
           cv: "2024-10"
         })
       }
 
-      function Vy(BB, OB) {
-        return YB(YB({}, BB), {}, {
+      function Sc(WW, iW) {
+        return mW(mW({}, WW), {}, {
           cv: "2024-10",
-          data: YB(YB({}, BB.data), OB)
+          data: mW(mW({}, WW.data), iW)
         })
       }
 
-      function Sy(BB) {
+      function Yc(WW) {
         try {
-          if (2 === BB.type) return Wy(Ay(BB, yy(BB.data)));
-          if (3 === BB.type && 0 === BB.data.source) return Wy(Vy(BB, {
-            texts: qy(BB.data.texts),
-            attributes: qy(BB.data.attributes),
-            removes: qy(BB.data.removes),
-            adds: qy(BB.data.adds)
+          if (2 === WW.type) return Mc(Kc(WW, wc(WW.data)));
+          if (3 === WW.type && 0 === WW.data.source) return Mc(Sc(WW, {
+            texts: jc(WW.data.texts),
+            attributes: jc(WW.data.attributes),
+            removes: jc(WW.data.removes),
+            adds: jc(WW.data.adds)
           }));
-          if (3 === BB.type && 8 === BB.data.source) return Wy(Vy(BB, {
-            adds: BB.data.adds ? yy(BB.data.adds) : void 0,
-            removes: BB.data.removes ? yy(BB.data.removes) : void 0
+          if (3 === WW.type && 8 === WW.data.source) return Mc(Sc(WW, {
+            adds: WW.data.adds ? wc(WW.data.adds) : void 0,
+            removes: WW.data.removes ? wc(WW.data.removes) : void 0
           }))
-        } catch (BB) {
-          Gy.warn("could not compress event - will use uncompressed event", BB)
+        } catch (WW) {
+          mc.warn("could not compress event - will use uncompressed event", WW)
         }
         return {
-          event: BB,
-          size: uo(BB)
+          event: WW,
+          size: uP(WW)
         }
       }
 
-      function ny() {
-        return (ny = QB((function*(BB) {
+      function yc() {
+        return (yc = NW((function*(WW) {
           try {
-            if (2 === BB.type) return Wy(Ay(BB, yield Jy(BB.data)));
-            if (3 === BB.type && 0 === BB.data.source) {
-              const [OB, GB, YB, DB] = yield Promise.all([Zy(BB.data.texts), Zy(BB.data.attributes), Zy(BB.data.removes), Zy(BB.data.adds)]);
-              return Wy(Vy(BB, {
-                texts: OB,
-                attributes: GB,
-                removes: YB,
-                adds: DB
+            if (2 === WW.type) return Mc(Kc(WW, yield tc(WW.data)));
+            if (3 === WW.type && 0 === WW.data.source) {
+              const [iW, OW, mW, EW] = yield Promise.all([Uc(WW.data.texts), Uc(WW.data.attributes), Uc(WW.data.removes), Uc(WW.data.adds)]);
+              return Mc(Sc(WW, {
+                texts: iW,
+                attributes: OW,
+                removes: mW,
+                adds: EW
               }))
             }
-            if (3 === BB.type && 8 === BB.data.source) {
-              const [OB, GB] = yield Promise.all([BB.data.adds ? Jy(BB.data.adds) : void 0, BB.data.removes ? Jy(BB.data.removes) : void 0]);
-              return Wy(Vy(BB, {
-                adds: OB,
-                removes: GB
+            if (3 === WW.type && 8 === WW.data.source) {
+              const [iW, OW] = yield Promise.all([WW.data.adds ? tc(WW.data.adds) : void 0, WW.data.removes ? tc(WW.data.removes) : void 0]);
+              return Mc(Sc(WW, {
+                adds: iW,
+                removes: OW
               }))
             }
-          } catch (OB) {
-            return (BB => {
-              if (!BB || "object" != typeof BB) return !1;
-              const OB = "name" in BB ? String(BB.name) : "";
-              return (BB => !(!BB || "object" != typeof BB) && "NotReadableError" === ("name" in BB ? String(BB.name) : ""))(BB) || OB === VD
-            })(OB) && (py = !0), Gy.warn("could not compress event asynchronously - trying synchronous compression", OB), Sy(BB)
+          } catch (iW) {
+            return (WW => {
+              if (!WW || "object" != typeof WW) return !1;
+              const iW = "name" in WW ? String(WW.name) : "";
+              return (WW => !(!WW || "object" != typeof WW) && "NotReadableError" === ("name" in WW ? String(WW.name) : ""))(WW) || iW === yE
+            })(iW) && (bc = !0), mc.warn("could not compress event asynchronously - trying synchronous compression", iW), Yc(WW)
           }
           return {
-            event: BB,
-            size: uo(BB)
+            event: WW,
+            size: uP(WW)
           }
         }))).apply(this, arguments)
       }
 
-      function Uy(BB, OB) {
-        return 5 === BB.type && BB.data.tag === OB
+      function Tc(WW, iW) {
+        return 5 === WW.type && WW.data.tag === iW
       }
 
-      function fy(BB) {
-        return Uy(BB, "sessionIdle")
+      function Jc(WW) {
+        return Tc(WW, "sessionIdle")
       }
 
-      function ky(BB) {
-        return Uy(BB, "$session_ending")
+      function hc(WW) {
+        return Tc(WW, "$session_ending")
       }
 
-      function dy(BB) {
-        return Uy(BB, "$session_starting")
+      function Hc(WW) {
+        return Tc(WW, "$session_starting")
       }
-      var Ky = class {
+      var nc = class {
         get sessionId() {
           return this.Xt
         }
@@ -7657,73 +7657,73 @@ export const modules = {
           return this._instance.config.session_recording.session_idle_threshold_ms || 3e5
         }
         get ee() {
-          return fj(this._instance.get_property(EQ), this.sessionId)
+          return JL(this._instance.get_property(BN), this.sessionId)
         }
         get zt() {
-          var BB;
-          const OB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.sampleRate;
-          return qD(OB) ? OB : null
+          var WW;
+          const iW = null === (WW = this.ne) || void 0 === WW ? void 0 : WW.sampleRate;
+          return kE(iW) ? iW : null
         }
         get ie() {
-          var BB, OB;
-          return null !== (BB = null === (OB = this.re) || void 0 === OB ? void 0 : OB.getMinimumDuration(this.sessionId)) && void 0 !== BB ? BB : null
+          var WW, iW;
+          return null !== (WW = null === (iW = this.re) || void 0 === iW ? void 0 : iW.getMinimumDuration(this.sessionId)) && void 0 !== WW ? WW : null
         }
-        constructor(BB, OB) {
-          this._instance = BB, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (BB, OB, GB) => {
-            var YB, DB, QB, oB;
-            if (!GB) return;
-            if (BB === this.Xt && OB === this.je) return;
-            const jB = !GB.noSessionId && (GB.activityTimeout || GB.sessionPastMaximumLength),
-              yB = this.Xt,
-              JB = this.je;
-            var MB;
-            if (jB && this.Vt("$session_ending", {
-                currentSessionId: yB,
-                currentWindowId: JB,
-                nextSessionId: BB,
-                nextWindowId: OB,
-                changeReason: GB,
+        constructor(WW, iW) {
+          this._instance = WW, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (WW, iW, OW) => {
+            var mW, EW, NW, PW;
+            if (!OW) return;
+            if (WW === this.Xt && iW === this.je) return;
+            const LW = !OW.noSessionId && (OW.activityTimeout || OW.sessionPastMaximumLength),
+              cW = this.Xt,
+              wW = this.je;
+            var tW;
+            if (LW && this.Vt("$session_ending", {
+                currentSessionId: cW,
+                currentWindowId: wW,
+                nextSessionId: WW,
+                nextWindowId: iW,
+                changeReason: OW,
                 lastActivityTimestamp: this.le,
-                flushed_size: null === (MB = this.Be) || void 0 === MB ? void 0 : MB.currentTrackedSize(yB)
-              }), null === (YB = this._instance.persistence) || void 0 === YB || YB.unregister("$debug_first_full_snapshot_timestamp"), null === (DB = Qy()) || void 0 === DB || null === (QB = DB.resetMaxDepthState) || void 0 === QB || QB.call(DB), this.Vt("$session_id_change", {
-                sessionId: BB,
-                windowId: OB,
-                changeReason: GB
-              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === BB && this.je === OB)) {
-              const OB = this.Xt !== BB && !1 !== this.de;
-              this.de = "unknown", this.He(OB)
+                flushed_size: null === (tW = this.Be) || void 0 === tW ? void 0 : tW.currentTrackedSize(cW)
+              }), null === (mW = this._instance.persistence) || void 0 === mW || mW.unregister("$debug_first_full_snapshot_timestamp"), null === (EW = Pc()) || void 0 === EW || null === (NW = EW.resetMaxDepthState) || void 0 === NW || NW.call(EW), this.Vt("$session_id_change", {
+                sessionId: WW,
+                windowId: iW,
+                changeReason: OW
+              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === WW && this.je === iW)) {
+              const iW = this.Xt !== WW && !1 !== this.de;
+              this.de = "unknown", this.He(iW)
             }
-            jB && this.Vt("$session_starting", {
-              previousSessionId: yB,
-              previousWindowId: JB,
-              nextSessionId: BB,
-              nextWindowId: OB,
-              changeReason: GB,
+            LW && this.Vt("$session_starting", {
+              previousSessionId: cW,
+              previousWindowId: wW,
+              nextSessionId: WW,
+              nextWindowId: iW,
+              changeReason: OW,
               lastActivityTimestamp: this.le
-            }), null === (oB = this.re) || void 0 === oB || oB.makeSamplingDecisions(BB)
+            }), null === (PW = this.re) || void 0 === PW || PW.makeSamplingDecisions(WW)
           }, this.Ue = !1, this.We = () => {
-            var BB;
-            return (null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.props.$session_past_minimum_duration) === this.Xt
+            var WW;
+            return (null === (WW = this._instance.persistence) || void 0 === WW ? void 0 : WW.props.$session_past_minimum_duration) === this.Xt
           }, this.Ve = () => {
-            var BB, OB;
+            var WW, iW;
             if (0 === this.Rt.data.length) return null;
-            const GB = null === (BB = this.Rt.data[0]) || void 0 === BB ? void 0 : BB.timestamp,
-              YB = null === (OB = this.Rt.data[this.Rt.data.length - 1]) || void 0 === OB ? void 0 : OB.timestamp;
-            return qD(GB) && qD(YB) ? YB - GB : null
+            const OW = null === (WW = this.Rt.data[0]) || void 0 === WW ? void 0 : WW.timestamp,
+              mW = null === (iW = this.Rt.data[this.Rt.data.length - 1]) || void 0 === iW ? void 0 : iW.timestamp;
+            return kE(OW) && kE(mW) ? mW - OW : null
           }, this.Ge = () => {
-            var BB, OB;
-            const GB = this.ie;
-            if (!qD(GB)) return !1;
-            if (null === (BB = null === (OB = this._instance.config.session_recording) || void 0 === OB ? void 0 : OB.strictMinimumDuration) || void 0 === BB || !BB) {
-              const BB = this.Qe;
-              return qD(BB) && BB >= 0 && GB > BB
+            var WW, iW;
+            const OW = this.ie;
+            if (!kE(OW)) return !1;
+            if (null === (WW = null === (iW = this._instance.config.session_recording) || void 0 === iW ? void 0 : iW.strictMinimumDuration) || void 0 === WW || !WW) {
+              const WW = this.Qe;
+              return kE(WW) && WW >= 0 && OW > WW
             }
             if (this.We()) return !1;
-            const YB = this.Ve();
-            return !!lD(YB) || GB > YB || (null === (DB = this._instance.persistence) || void 0 === DB || DB.register({
+            const mW = this.Ve();
+            return !!jE(mW) || OW > mW || (null === (EW = this._instance.persistence) || void 0 === EW || EW.register({
               $session_past_minimum_duration: this.Xt
             }), !1);
-            var DB
+            var EW
           }, this.Ze = () => {
             "buffering" !== this.status ? (this.ge && this.ye && this.Je && (this.Ke(void 0), this.be && (this.be = !1, this.jt())), this.Xe(), this.Ye(!0)) : this.tn()
           }, this.en = () => {
@@ -7733,314 +7733,314 @@ export const modules = {
           }, this.rn = () => {
             this.Vt("browser online", {})
           }, this.sn = () => {
-            (null == OD ? void 0 : OD.visibilityState) && ("visible" === OD.visibilityState && (this.Je = !0), this.Vt("window " + OD.visibilityState, {}))
-          }, this.Je = null == OB || OB;
+            (null == EE ? void 0 : EE.visibilityState) && ("visible" === EE.visibilityState && (this.Je = !0), this.Vt("window " + EE.visibilityState, {}))
+          }, this.Je = null == iW || iW;
           const {
-            sessionId: GB,
-            windowId: YB,
-            sessionStartTimestamp: DB
+            sessionId: OW,
+            windowId: mW,
+            sessionStartTimestamp: EW
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = GB, this.je = YB, this._sessionStartTimestamp = DB, this.et = new So(this._instance), this.Y = new Vo(this._instance), this.tt = new no(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || Gy.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new Zj(this._instance)
+          this.Xt = OW, this.je = mW, this._sessionStartTimestamp = EW, this.et = new yP(this._instance), this.Y = new YP(this._instance), this.tt = new TP(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || mc.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new UL(this._instance)
         }
-        setDocumentWasEverVisible(BB) {
-          BB && (this.Je = !0)
+        setDocumentWasEverVisible(WW) {
+          WW && (this.Je = !0)
         }
         get ln() {
-          var BB, OB, GB, YB, DB, QB, oB, jB, yB;
-          const JB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.masking,
-            MB = {
-              maskAllInputs: null === (OB = this._instance.config.session_recording) || void 0 === OB ? void 0 : OB.maskAllInputs,
-              maskTextSelector: null === (GB = this._instance.config.session_recording) || void 0 === GB ? void 0 : GB.maskTextSelector,
-              blockSelector: null === (YB = this._instance.config.session_recording) || void 0 === YB ? void 0 : YB.blockSelector,
-              maskAllElementAttributes: null === (DB = this._instance.config.session_recording) || void 0 === DB ? void 0 : DB.maskAllElementAttributes
+          var WW, iW, OW, mW, EW, NW, PW, LW, cW;
+          const wW = null === (WW = this.ne) || void 0 === WW ? void 0 : WW.masking,
+            tW = {
+              maskAllInputs: null === (iW = this._instance.config.session_recording) || void 0 === iW ? void 0 : iW.maskAllInputs,
+              maskTextSelector: null === (OW = this._instance.config.session_recording) || void 0 === OW ? void 0 : OW.maskTextSelector,
+              blockSelector: null === (mW = this._instance.config.session_recording) || void 0 === mW ? void 0 : mW.blockSelector,
+              maskAllElementAttributes: null === (EW = this._instance.config.session_recording) || void 0 === EW ? void 0 : EW.maskAllElementAttributes
             },
-            PB = null !== (QB = null == MB ? void 0 : MB.maskAllInputs) && void 0 !== QB ? QB : null == JB ? void 0 : JB.maskAllInputs,
-            zB = null !== (oB = null == MB ? void 0 : MB.maskTextSelector) && void 0 !== oB ? oB : null == JB ? void 0 : JB.maskTextSelector,
-            lB = null !== (jB = null == MB ? void 0 : MB.blockSelector) && void 0 !== jB ? jB : null == JB ? void 0 : JB.blockSelector,
-            pB = null !== (yB = null == MB ? void 0 : MB.maskAllElementAttributes) && void 0 !== yB ? yB : null == JB ? void 0 : JB.maskAllElementAttributes;
-          return PD(PB) && PD(zB) && PD(lB) && PD(pB) ? void 0 : {
-            maskAllInputs: null == PB || PB,
-            maskTextSelector: zB,
-            blockSelector: lB,
-            maskAllElementAttributes: pB
+            ZW = null !== (NW = null == tW ? void 0 : tW.maskAllInputs) && void 0 !== NW ? NW : null == wW ? void 0 : wW.maskAllInputs,
+            xW = null !== (PW = null == tW ? void 0 : tW.maskTextSelector) && void 0 !== PW ? PW : null == wW ? void 0 : wW.maskTextSelector,
+            lW = null !== (LW = null == tW ? void 0 : tW.blockSelector) && void 0 !== LW ? LW : null == wW ? void 0 : wW.blockSelector,
+            AW = null !== (cW = null == tW ? void 0 : tW.maskAllElementAttributes) && void 0 !== cW ? cW : null == wW ? void 0 : wW.maskAllElementAttributes;
+          return AE(ZW) && AE(xW) && AE(lW) && AE(AW) ? void 0 : {
+            maskAllInputs: null == ZW || ZW,
+            maskTextSelector: xW,
+            blockSelector: lW,
+            maskAllElementAttributes: AW
           }
         }
         un() {
-          var BB;
+          var WW;
           if (this.xe) return;
-          const OB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.masking;
-          if (pD(OB)) return;
-          const GB = this._instance.config.session_recording,
-            YB = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((BB => {
-              const YB = null == GB ? void 0 : GB[BB],
-                DB = OB[BB];
-              return !PD(YB) && YB !== DB
+          const iW = null === (WW = this.ne) || void 0 === WW ? void 0 : WW.masking;
+          if (UE(iW)) return;
+          const OW = this._instance.config.session_recording,
+            mW = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((WW => {
+              const mW = null == OW ? void 0 : OW[WW],
+                EW = iW[WW];
+              return !AE(mW) && mW !== EW
             }));
-          0 !== YB.length && (this.xe = !0, Gy.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + YB.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
+          0 !== mW.length && (this.xe = !0, mc.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + mW.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
             client: {
-              maskAllInputs: null == GB ? void 0 : GB.maskAllInputs,
-              maskTextSelector: null == GB ? void 0 : GB.maskTextSelector,
-              blockSelector: null == GB ? void 0 : GB.blockSelector,
-              maskAllElementAttributes: null == GB ? void 0 : GB.maskAllElementAttributes
+              maskAllInputs: null == OW ? void 0 : OW.maskAllInputs,
+              maskTextSelector: null == OW ? void 0 : OW.maskTextSelector,
+              blockSelector: null == OW ? void 0 : OW.blockSelector,
+              maskAllElementAttributes: null == OW ? void 0 : OW.maskAllElementAttributes
             },
-            project: OB
+            project: iW
           }))
         }
         get cn() {
-          var BB;
-          return RD(null === (BB = this._instance.config.session_recording.canvasCapture) || void 0 === BB ? void 0 : BB.resolutionScale, .1, 1, ID("canvas recording resolution scale"), 1)
+          var WW;
+          return KE(null === (WW = this._instance.config.session_recording.canvasCapture) || void 0 === WW ? void 0 : WW.resolutionScale, .1, 1, vE("canvas recording resolution scale"), 1)
         }
         get dn() {
-          var BB, OB, GB, YB, DB, QB, oB;
-          const jB = this._instance.config.session_recording.captureCanvas,
-            yB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.canvasRecording,
-            JB = null !== (OB = null !== (GB = null == jB ? void 0 : jB.recordCanvas) && void 0 !== GB ? GB : null == yB ? void 0 : yB.enabled) && void 0 !== OB && OB,
-            MB = null !== (YB = null !== (DB = null == jB ? void 0 : jB.canvasFps) && void 0 !== DB ? DB : null == yB ? void 0 : yB.fps) && void 0 !== YB ? YB : 4;
-          let PB = null !== (QB = null !== (oB = null == jB ? void 0 : jB.canvasQuality) && void 0 !== oB ? oB : null == yB ? void 0 : yB.quality) && void 0 !== QB ? QB : .4;
-          if ("string" == typeof PB) {
-            const BB = parseFloat(PB);
-            PB = isNaN(BB) ? .4 : BB
+          var WW, iW, OW, mW, EW, NW, PW;
+          const LW = this._instance.config.session_recording.captureCanvas,
+            cW = null === (WW = this.ne) || void 0 === WW ? void 0 : WW.canvasRecording,
+            wW = null !== (iW = null !== (OW = null == LW ? void 0 : LW.recordCanvas) && void 0 !== OW ? OW : null == cW ? void 0 : cW.enabled) && void 0 !== iW && iW,
+            tW = null !== (mW = null !== (EW = null == LW ? void 0 : LW.canvasFps) && void 0 !== EW ? EW : null == cW ? void 0 : cW.fps) && void 0 !== mW ? mW : 4;
+          let ZW = null !== (NW = null !== (PW = null == LW ? void 0 : LW.canvasQuality) && void 0 !== PW ? PW : null == cW ? void 0 : cW.quality) && void 0 !== NW ? NW : .4;
+          if ("string" == typeof ZW) {
+            const WW = parseFloat(ZW);
+            ZW = isNaN(WW) ? .4 : WW
           }
           return {
-            enabled: JB,
-            fps: RD(MB, 0, 12, ID("canvas recording fps"), 4),
-            quality: RD(PB, 0, 1, ID("canvas recording quality"), .4)
+            enabled: wW,
+            fps: KE(tW, 0, 12, vE("canvas recording fps"), 4),
+            quality: KE(ZW, 0, 1, vE("canvas recording quality"), .4)
           }
         }
         get hn() {
-          var BB;
-          const OB = !!(null === (BB = this.ne) || void 0 === BB ? void 0 : BB.consoleLogRecordingEnabled),
-            GB = this._instance.config.enable_recording_console_log;
-          return null != GB ? GB : OB
+          var WW;
+          const iW = !!(null === (WW = this.ne) || void 0 === WW ? void 0 : WW.consoleLogRecordingEnabled),
+            OW = this._instance.config.enable_recording_console_log;
+          return null != OW ? OW : iW
         }
-        get oP() {
-          var BB, OB, GB;
-          const YB = null === (BB = this.ne) || void 0 === BB ? void 0 : BB.networkPayloadCapture,
-            DB = {
-              recordHeaders: null === (OB = this._instance.config.session_recording) || void 0 === OB ? void 0 : OB.recordHeaders,
-              recordBody: null === (GB = this._instance.config.session_recording) || void 0 === GB ? void 0 : GB.recordBody
+        get cZ() {
+          var WW, iW, OW;
+          const mW = null === (WW = this.ne) || void 0 === WW ? void 0 : WW.networkPayloadCapture,
+            EW = {
+              recordHeaders: null === (iW = this._instance.config.session_recording) || void 0 === iW ? void 0 : iW.recordHeaders,
+              recordBody: null === (OW = this._instance.config.session_recording) || void 0 === OW ? void 0 : OW.recordBody
             },
-            QB = (null == DB ? void 0 : DB.recordHeaders) || (null == YB ? void 0 : YB.recordHeaders),
-            oB = (null == DB ? void 0 : DB.recordBody) || (null == YB ? void 0 : YB.recordBody),
-            jB = Oy(this._instance.config.capture_performance),
-            yB = Oy(null == YB ? void 0 : YB.capturePerformance),
-            JB = !!(ZD(jB) ? jB : yB);
-          return QB || oB || JB ? {
-            recordHeaders: QB,
-            recordBody: oB,
-            recordPerformance: JB
+            NW = (null == EW ? void 0 : EW.recordHeaders) || (null == mW ? void 0 : mW.recordHeaders),
+            PW = (null == EW ? void 0 : EW.recordBody) || (null == mW ? void 0 : mW.recordBody),
+            LW = Oc(this._instance.config.capture_performance),
+            cW = Oc(null == mW ? void 0 : mW.capturePerformance),
+            wW = !!(sE(LW) ? LW : cW);
+          return NW || PW || wW ? {
+            recordHeaders: NW,
+            recordBody: PW,
+            recordPerformance: wW
           } : void 0
         }
         vn() {
-          var BB, OB;
-          const GB = [],
-            DB = null === (BB = DD.__PosthogExtensions__) || void 0 === BB || null === (BB = BB.rrwebPlugins) || void 0 === BB ? void 0 : BB.getRecordConsolePlugin;
-          DB && this.hn && GB.push(DB());
-          const QB = null === (OB = DD.__PosthogExtensions__) || void 0 === OB || null === (OB = OB.rrwebPlugins) || void 0 === OB ? void 0 : OB.getRecordNetworkPlugin;
-          if (this.oP && JD(QB))
-            if (!LD.includes(GD.hostname) || this._forceAllowLocalhostNetworkCapture) {
-              const BB = JD(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
-              GB.push(QB(YB(YB({}, ((BB, OB, GB) => {
-                const DB = {
-                    payloadSizeLimitBytes: tD.payloadSizeLimitBytes,
-                    performanceEntryTypeToObserve: [...tD.performanceEntryTypeToObserve],
-                    payloadHostDenyList: [...OB.payloadHostDenyList || [], ...tD.payloadHostDenyList]
+          var WW, iW;
+          const OW = [],
+            EW = null === (WW = LE.__PosthogExtensions__) || void 0 === WW || null === (WW = WW.rrwebPlugins) || void 0 === WW ? void 0 : WW.getRecordConsolePlugin;
+          EW && this.hn && OW.push(EW());
+          const NW = null === (iW = LE.__PosthogExtensions__) || void 0 === iW || null === (iW = iW.rrwebPlugins) || void 0 === iW ? void 0 : iW.getRecordNetworkPlugin;
+          if (this.cZ && xE(NW))
+            if (!VE.includes(NE.hostname) || this._forceAllowLocalhostNetworkCapture) {
+              const WW = xE(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
+              OW.push(NW(mW(mW({}, ((WW, iW, OW) => {
+                const EW = {
+                    payloadSizeLimitBytes: ON.payloadSizeLimitBytes,
+                    performanceEntryTypeToObserve: [...ON.performanceEntryTypeToObserve],
+                    payloadHostDenyList: [...iW.payloadHostDenyList || [], ...ON.payloadHostDenyList]
                   },
-                  QB = !1 !== BB.session_recording.recordHeaders && OB.recordHeaders,
-                  oB = !1 !== BB.session_recording.recordBody && OB.recordBody,
-                  jB = !1 !== BB.capture_performance && OB.recordPerformance,
-                  yB = (BB => {
-                    const OB = xD(BB);
-                    return BB => ((null == BB ? void 0 : BB.requestBody) && (BB.requestBody = QQ(BB.requestBody, BB.requestHeaders, OB, "Request")), (null == BB ? void 0 : BB.responseBody) && (BB.responseBody = QQ(BB.responseBody, BB.responseHeaders, OB, "Response")), BB)
-                  })(DB),
-                  JB = OB => {
-                    return yB(((BB, OB, GB) => {
-                      var YB;
-                      if (null == GB ? void 0 : GB(BB.name)) return;
-                      const DB = gD(BB.name);
-                      let QB = 0 === OB.indexOf("http") ? null === (YB = gD(OB)) || void 0 === YB ? void 0 : YB.pathname : OB;
-                      "/" === QB && (QB = "");
-                      const oB = null == DB ? void 0 : DB.pathname.replace(QB || "", "");
-                      return DB && oB && DQ.some((BB => 0 === oB.indexOf(BB))) ? void 0 : BB
-                    })((YQ((YB = OB).requestHeaders), YQ(YB.responseHeaders), YB), BB.api_host, GB));
-                    var YB
+                  NW = !1 !== WW.session_recording.recordHeaders && iW.recordHeaders,
+                  PW = !1 !== WW.session_recording.recordBody && iW.recordBody,
+                  LW = !1 !== WW.capture_performance && iW.recordPerformance,
+                  cW = (WW => {
+                    const iW = iN(WW);
+                    return WW => ((null == WW ? void 0 : WW.requestBody) && (WW.requestBody = cN(WW.requestBody, WW.requestHeaders, iW, "Request")), (null == WW ? void 0 : WW.responseBody) && (WW.responseBody = cN(WW.responseBody, WW.responseHeaders, iW, "Response")), WW)
+                  })(EW),
+                  wW = iW => {
+                    return cW(((WW, iW, OW) => {
+                      var mW;
+                      if (null == OW ? void 0 : OW(WW.name)) return;
+                      const EW = pE(WW.name);
+                      let NW = 0 === iW.indexOf("http") ? null === (mW = pE(iW)) || void 0 === mW ? void 0 : mW.pathname : iW;
+                      "/" === NW && (NW = "");
+                      const PW = null == EW ? void 0 : EW.pathname.replace(NW || "", "");
+                      return EW && PW && LN.some((WW => 0 === PW.indexOf(WW))) ? void 0 : WW
+                    })((PN((mW = iW).requestHeaders), PN(mW.responseHeaders), mW), WW.api_host, OW));
+                    var mW
                   },
-                  MB = JD(BB.session_recording.maskNetworkRequestFn);
-                return MB && JD(BB.session_recording.maskCapturedNetworkRequestFn) ? mD.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : MB && (BB.session_recording.maskCapturedNetworkRequestFn = OB => {
-                  const GB = BB.session_recording.maskNetworkRequestFn({
-                    url: OB.name
+                  tW = xE(WW.session_recording.maskNetworkRequestFn);
+                return tW && xE(WW.session_recording.maskCapturedNetworkRequestFn) ? eE.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : tW && (WW.session_recording.maskCapturedNetworkRequestFn = iW => {
+                  const OW = WW.session_recording.maskNetworkRequestFn({
+                    url: iW.name
                   });
-                  return !GB && OB.isInitial ? GB : YB(YB({}, OB), {}, {
-                    name: null == GB ? void 0 : GB.url
+                  return !OW && iW.isInitial ? OW : mW(mW({}, iW), {}, {
+                    name: null == OW ? void 0 : OW.url
                   })
-                }), DB.maskRequestFn = JD(BB.session_recording.maskCapturedNetworkRequestFn) ? OB => {
-                  var GB, YB;
-                  const DB = JB(OB);
-                  if (!DB) return;
-                  const QB = DB.isInitial ? {
+                }), EW.maskRequestFn = xE(WW.session_recording.maskCapturedNetworkRequestFn) ? iW => {
+                  var OW, mW;
+                  const EW = wW(iW);
+                  if (!EW) return;
+                  const NW = EW.isInitial ? {
                       name: "",
-                      entryType: DB.entryType,
-                      startTime: DB.startTime,
-                      duration: DB.duration,
-                      endTime: DB.endTime,
-                      timeOrigin: DB.timeOrigin,
-                      timestamp: DB.timestamp,
+                      entryType: EW.entryType,
+                      startTime: EW.startTime,
+                      duration: EW.duration,
+                      endTime: EW.endTime,
+                      timeOrigin: EW.timeOrigin,
+                      timestamp: EW.timestamp,
                       isInitial: !0
                     } : void 0,
-                    oB = null === (GB = (YB = BB.session_recording).maskCapturedNetworkRequestFn) || void 0 === GB ? void 0 : GB.call(YB, DB);
-                  return pD(oB) && QB ? (jQ.add(QB), QB) : null != oB ? oB : void 0
-                } : BB => function(BB) {
-                  if (!PD(BB)) return BB.requestBody = oQ(BB.requestBody, "Request"), BB.responseBody = oQ(BB.responseBody, "Response"), BB
-                }(JB(BB)), YB(YB(YB({}, tD), DB), {}, {
-                  recordHeaders: QB,
-                  recordBody: oB,
-                  recordPerformance: jB,
-                  recordInitialRequests: jB,
-                  streamNetworkBody: !0 === BB.session_recording.streamNetworkBody
+                    PW = null === (OW = (mW = WW.session_recording).maskCapturedNetworkRequestFn) || void 0 === OW ? void 0 : OW.call(mW, EW);
+                  return UE(PW) && NW ? (tN.add(NW), NW) : null != PW ? PW : void 0
+                } : WW => function(WW) {
+                  if (!AE(WW)) return WW.requestBody = wN(WW.requestBody, "Request"), WW.responseBody = wN(WW.responseBody, "Response"), WW
+                }(wW(WW)), mW(mW(mW({}, ON), EW), {}, {
+                  recordHeaders: NW,
+                  recordBody: PW,
+                  recordPerformance: LW,
+                  recordInitialRequests: LW,
+                  streamNetworkBody: !0 === WW.session_recording.streamNetworkBody
                 })
-              })(this._instance.config, this.oP, BB)), {}, {
+              })(this._instance.config, this.cZ, WW)), {}, {
                 captureFetchSynchronously: !0 === this._instance.config.__preview_replay_sync_fetch
               })))
-            } else Gy.info("NetworkCapture not started because we are on localhost.");
-          return GB
+            } else mc.info("NetworkCapture not started because we are on localhost.");
+          return OW
         }
-        pn(BB) {
-          return this._instance.config.disable_capture_url_hashes ? AD(BB) : BB
+        pn(WW) {
+          return this._instance.config.disable_capture_url_hashes ? YE(WW) : WW
         }
-        mn(BB) {
-          const OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? AD(BB) : this.pn(BB),
-            GB = this._instance.config.mask_personal_data_properties ? [...Kj, ...this._instance.config.custom_personal_data_properties || []] : [];
-          return this.gn(function(BB, OB) {
-            if (!BB || !OB || !OB.length) return BB;
-            const GB = BB.split("#"),
-              YB = GB[1],
-              DB = (GB[0] || "").split("?"),
-              QB = DB[1],
-              oB = DB[0],
-              jB = (QB || "").split("&"),
-              yB = [];
-            for (let MB = 0; jB.length > MB; MB++) {
-              const BB = jB[MB].split("=");
-              yD(BB) && (OB.includes(BB[0]) ? yB.push(BB[0] + "=<masked>") : yB.push(jB[MB]))
+        mn(WW) {
+          const iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? YE(WW) : this.pn(WW),
+            OW = this._instance.config.mask_personal_data_properties ? [...nL, ...this._instance.config.custom_personal_data_properties || []] : [];
+          return this.gn(function(WW, iW) {
+            if (!WW || !iW || !iW.length) return WW;
+            const OW = WW.split("#"),
+              mW = OW[1],
+              EW = (OW[0] || "").split("?"),
+              NW = EW[1],
+              PW = EW[0],
+              LW = (NW || "").split("&"),
+              cW = [];
+            for (let tW = 0; LW.length > tW; tW++) {
+              const WW = LW[tW].split("=");
+              ZE(WW) && (iW.includes(WW[0]) ? cW.push(WW[0] + "=<masked>") : cW.push(LW[tW]))
             }
-            let JB = oB;
-            return null != QB && (JB += "?" + yB.join("&")), null != YB && (JB += "#" + YB), JB
-          }(OB, GB))
+            let wW = PW;
+            return null != NW && (wW += "?" + cW.join("&")), null != mW && (wW += "#" + mW), wW
+          }(iW, OW))
         }
-        gn(BB) {
-          const OB = this._instance.config.session_recording;
-          if (OB.maskCapturedNetworkRequestFn) {
-            var GB;
-            const YB = OB.maskCapturedNetworkRequestFn({
-              name: BB
+        gn(WW) {
+          const iW = this._instance.config.session_recording;
+          if (iW.maskCapturedNetworkRequestFn) {
+            var OW;
+            const mW = iW.maskCapturedNetworkRequestFn({
+              name: WW
             });
-            return null !== (GB = null == YB ? void 0 : YB.name) && void 0 !== GB ? GB : null == YB ? void 0 : YB.url
+            return null !== (OW = null == mW ? void 0 : mW.name) && void 0 !== OW ? OW : null == mW ? void 0 : mW.url
           }
-          if (OB.maskNetworkRequestFn) {
-            const GB = OB.maskNetworkRequestFn({
-              url: BB
+          if (iW.maskNetworkRequestFn) {
+            const OW = iW.maskNetworkRequestFn({
+              url: WW
             });
-            return null == GB ? void 0 : GB.url
+            return null == OW ? void 0 : OW.url
           }
-          return BB
+          return WW
         }
-        yn(BB) {
+        yn(WW) {
           try {
-            return BB.rrwebMethod(), !0
-          } catch (OB) {
+            return WW.rrwebMethod(), !0
+          } catch (iW) {
             return 10 > this.ce.length ? this.ce.push({
-              enqueuedAt: BB.enqueuedAt || Date.now(),
-              attempt: BB.attempt + 1,
-              rrwebMethod: BB.rrwebMethod
-            }) : Gy.warn("could not emit queued rrweb event.", OB, BB), !1
+              enqueuedAt: WW.enqueuedAt || Date.now(),
+              attempt: WW.attempt + 1,
+              rrwebMethod: WW.rrwebMethod
+            }) : mc.warn("could not emit queued rrweb event.", iW, WW), !1
           }
         }
-        Vt(BB, OB) {
-          return this.yn(Dy((() => oy().addCustomEvent(BB, OB))))
+        Vt(WW, iW) {
+          return this.yn(Nc((() => Lc().addCustomEvent(WW, iW))))
         }
         bn() {
-          var BB;
-          return this.ae && !0 === (null === (BB = this._instance.config.session_recording) || void 0 === BB ? void 0 : BB.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
+          var WW;
+          return this.ae && !0 === (null === (WW = this._instance.config.session_recording) || void 0 === WW ? void 0 : WW.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
         }
-        wn(BB) {
+        wn(WW) {
           if (!this.bn()) return !1;
           try {
-            const OB = oy();
-            return !!OB && (OB.addCustomEvent("$json_ld", BB), this.bn())
-          } catch (BB) {
+            const iW = Lc();
+            return !!iW && (iW.addCustomEvent("$json_ld", WW), this.bn())
+          } catch (WW) {
             return !1
           }
         }
         kn() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
           Promise.resolve().then((() => {
-            var OB;
-            return null === (OB = this._n) || void 0 === OB ? void 0 : OB.scan(BB)
+            var iW;
+            return null === (iW = this._n) || void 0 === iW ? void 0 : iW.scan(WW)
           }))
         }
         Sn() {
           try {
-            if (this._instance.config.capture_pageview || !tY) return;
-            const BB = new URL(tY.location.href),
-              OB = this.mn(BB.origin + BB.pathname + BB.search);
-            this.xn !== OB && (this.xn = OB, this.Vt("$url_changed", {
-              href: OB
+            if (this._instance.config.capture_pageview || !OE) return;
+            const WW = new URL(OE.location.href),
+              iW = this.mn(WW.origin + WW.pathname + WW.search);
+            this.xn !== iW && (this.xn = iW, this.Vt("$url_changed", {
+              href: iW
             }))
-          } catch (BB) {}
+          } catch (WW) {}
         }
         Cn() {
           if (this.ce.length) {
-            const BB = [...this.ce];
-            this.ce = [], BB.forEach((BB => {
-              Date.now() - BB.enqueuedAt > 2e3 || this.yn(BB)
+            const WW = [...this.ce];
+            this.ce = [], WW.forEach((WW => {
+              Date.now() - WW.enqueuedAt > 2e3 || this.yn(WW)
             }))
           }
         }
         jt() {
-          return this.yn(Dy((() => oy().takeFullSnapshot())))
+          return this.yn(Nc((() => Lc().takeFullSnapshot())))
         }
         get In() {
-          var BB, OB, GB;
-          if ((null === (BB = this.re) || void 0 === BB ? void 0 : BB.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
-            var YB;
-            const BB = null === (YB = this._instance.config.session_recording) || void 0 === YB ? void 0 : YB.trigger_pending_buffer_interval_millis;
-            return qD(BB) && Number.isFinite(BB) && BB >= 1e3 && 36e5 >= BB ? BB : 6e4
+          var WW, iW, OW;
+          if ((null === (WW = this.re) || void 0 === WW ? void 0 : WW.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
+            var mW;
+            const WW = null === (mW = this._instance.config.session_recording) || void 0 === mW ? void 0 : mW.trigger_pending_buffer_interval_millis;
+            return kE(WW) && Number.isFinite(WW) && WW >= 1e3 && 36e5 >= WW ? WW : 6e4
           }
-          return null !== (OB = null === (GB = this._instance.config.session_recording) || void 0 === GB ? void 0 : GB.full_snapshot_interval_millis) && void 0 !== OB ? OB : 3e5
+          return null !== (iW = null === (OW = this._instance.config.session_recording) || void 0 === OW ? void 0 : OW.full_snapshot_interval_millis) && void 0 !== iW ? iW : 3e5
         }
         Mn() {
           if (this.Tn && clearInterval(this.Tn), !0 === this.de) return;
-          const BB = this.In;
-          BB && (this.Tn = setInterval((() => {
+          const WW = this.In;
+          WW && (this.Tn = setInterval((() => {
             this.jt()
-          }), BB))
+          }), WW))
         }
-        Bt(BB) {
-          "event" === BB && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
+        Bt(WW) {
+          "event" === WW && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
         }
         En() {
-          var BB;
-          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (BB = this._n) || void 0 === BB || BB.scan(), clearInterval(this.Tn), Gy.info("recording paused due to URL blocker"), this.Vt("recording paused", {
+          var WW;
+          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (WW = this._n) || void 0 === WW || WW.scan(), clearInterval(this.Tn), mc.info("recording paused due to URL blocker"), this.Vt("recording paused", {
             reason: "url blocker"
           }))
         }
         An() {
-          var BB;
-          this.Y.urlBlocked && (null === (BB = this._n) || void 0 === BB || BB.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
+          var WW;
+          this.Y.urlBlocked && (null === (WW = this._n) || void 0 === WW || WW.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
             reason: "left blocked url"
-          }), Gy.info("recording resumed"))
+          }), mc.info("recording resumed"))
         }
-        $n(BB, OB) {
-          var GB;
-          if ("event" === BB && this.Rn(), !this.ue && (null === (GB = this.re) || void 0 === GB ? void 0 : GB.hasPendingTriggers(this.sessionId))) {
+        $n(WW, iW) {
+          var OW;
+          if ("event" === WW && this.Rn(), !this.ue && (null === (OW = this.re) || void 0 === OW ? void 0 : OW.hasPendingTriggers(this.sessionId))) {
             this.ue = !0;
             try {
-              var YB, DB;
-              const GB = "url" === BB ? cQ : hQ;
-              null === (YB = this._instance.persistence) || void 0 === YB || YB.register({
-                [GB]: this.sessionId
-              }), null === (DB = this.re) || void 0 === DB || DB.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(BB + "_trigger_matched", {
-                ["url" === BB ? "matchedUrl" : "matchedEvent"]: OB
+              var mW, EW;
+              const OW = "url" === WW ? qN : RN;
+              null === (mW = this._instance.persistence) || void 0 === mW || mW.register({
+                [OW]: this.sessionId
+              }), null === (EW = this.re) || void 0 === EW || EW.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(WW + "_trigger_matched", {
+                ["url" === WW ? "matchedUrl" : "matchedEvent"]: iW
               })
             } finally {
               this.ue = !1
@@ -8051,95 +8051,95 @@ export const modules = {
           return !!this.se
         }
         get ne() {
-          const BB = this._instance.get_property("$session_recording_remote_config");
-          if (!BB) return;
-          let OB;
+          const WW = this._instance.get_property("$session_recording_remote_config");
+          if (!WW) return;
+          let iW;
           try {
-            OB = MD(BB) ? BB : JSON.parse(BB)
-          } catch (BB) {
-            return void Gy.warn("persisted remote config for session recording is invalid and will be ignored", BB)
+            iW = lE(WW) ? WW : JSON.parse(WW)
+          } catch (WW) {
+            return void mc.warn("persisted remote config for session recording is invalid and will be ignored", WW)
           }
           if (!this.isStarted && !this.Ue) {
-            var GB;
-            const YB = null !== (GB = OB.cache_timestamp) && void 0 !== GB ? GB : Date.now();
-            if (Date.now() - YB > 36e5) return void Gy.info("persisted remote config for session recording is stale and will be ignored", {
-              cacheTimestamp: YB,
-              persistedConfig: BB
+            var OW;
+            const mW = null !== (OW = iW.cache_timestamp) && void 0 !== OW ? OW : Date.now();
+            if (Date.now() - mW > 36e5) return void mc.info("persisted remote config for session recording is stale and will be ignored", {
+              cacheTimestamp: mW,
+              persistedConfig: WW
             })
           }
-          return OB
+          return iW
         }
-        On(BB, OB, GB) {
-          this._instance.get_property(BB) && (OB(), GB())
+        On(WW, iW, OW) {
+          this._instance.get_property(WW) && (iW(), OW())
         }
-        start(BB) {
-          var OB, GB;
-          const YB = this.ne;
-          if (!YB) return void Gy.info("remote config must be stored in persistence before recording can start");
+        start(WW) {
+          var iW, OW;
+          const mW = this.ne;
+          if (!mW) return void mc.info("remote config must be stored in persistence before recording can start");
           if (!this.isStarted) {
-            const BB = !1 !== this.de && !this.we;
-            this.Ke(BB ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = BB, this.be = !1
+            const WW = !1 !== this.de && !this.we;
+            this.Ke(WW ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = WW, this.be = !1
           }
           this.Pe && (this.Pn(), this.tn());
           const {
-            sessionId: DB,
-            windowId: QB,
-            sessionStartTimestamp: oB
+            sessionId: EW,
+            windowId: NW,
+            sessionStartTimestamp: PW
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = DB, this.je = QB, this._sessionStartTimestamp = oB, this.Ln(), null === (OB = this._instance.persistence) || void 0 === OB || OB.unregister("$debug_first_full_snapshot_timestamp"), (null == YB ? void 0 : YB.endpoint) && (this.oe = null == YB ? void 0 : YB.endpoint), this.re = 2 === (null == YB ? void 0 : YB.version) && (null == YB ? void 0 : YB.triggerGroups) && YB.triggerGroups.length > 0 ? new dj(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new kj(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(YB), null === (GB = this.Wt) || void 0 === GB || GB.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((BB, OB) => this.$n(BB, OB))), this.On(gQ, (() => {
+          this.Xt = EW, this.je = NW, this._sessionStartTimestamp = PW, this.Ln(), null === (iW = this._instance.persistence) || void 0 === iW || iW.unregister("$debug_first_full_snapshot_timestamp"), (null == mW ? void 0 : mW.endpoint) && (this.oe = null == mW ? void 0 : mW.endpoint), this.re = 2 === (null == mW ? void 0 : mW.version) && (null == mW ? void 0 : mW.triggerGroups) && mW.triggerGroups.length > 0 ? new HL(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new hL(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(mW), null === (OW = this.Wt) || void 0 === OW || OW.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((WW, iW) => this.$n(WW, iW))), this.On(pN, (() => {
             this.overrideSampling()
           }), (() => {
-            var BB;
-            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(gQ)
-          })), this.On(rQ, (() => {
+            var WW;
+            return null === (WW = this._instance.persistence) || void 0 === WW ? void 0 : WW.unregister(pN)
+          })), this.On(fN, (() => {
             this.overrideLinkedFlag()
           }), (() => {
-            var BB;
-            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(rQ)
-          })), this.On(wQ, (() => {
+            var WW;
+            return null === (WW = this._instance.persistence) || void 0 === WW ? void 0 : WW.unregister(fN)
+          })), this.On(XN, (() => {
             this.overrideTrigger("event")
           }), (() => {
-            var BB;
-            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(wQ)
-          })), this.On(XQ, (() => {
+            var WW;
+            return null === (WW = this._instance.persistence) || void 0 === WW ? void 0 : WW.unregister(XN)
+          })), this.On(CN, (() => {
             this.overrideTrigger("url")
           }), (() => {
-            var BB;
-            return null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.unregister(XQ)
-          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (iD(tY, "beforeunload", this.Ze), iD(tY, "pagehide", this.en), iD(tY, "offline", this.nn), iD(tY, "online", this.rn), iD(OD, "visibilitychange", this.sn), !this.De && JD(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && JD(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
-            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((BB, OB, GB) => {
-              var YB;
-              null === (YB = this.Ne) || void 0 === YB || YB.call(this), this.Ne = void 0, this.qe(BB, OB, GB)
+            var WW;
+            return null === (WW = this._instance.persistence) || void 0 === WW ? void 0 : WW.unregister(CN)
+          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (DE(OE, "beforeunload", this.Ze), DE(OE, "pagehide", this.en), DE(OE, "offline", this.nn), DE(OE, "online", this.rn), DE(EE, "visibilitychange", this.sn), !this.De && xE(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && xE(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
+            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((WW, iW, OW) => {
+              var mW;
+              null === (mW = this.Ne) || void 0 === mW || mW.call(this), this.Ne = void 0, this.qe(WW, iW, OW)
             }))
-          })) : JD(this.Yt.on) || Gy.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), pD(this.Le) && (this.Le = this._instance.on("eventCaptured", (BB => {
+          })) : xE(this.Yt.on) || mc.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), UE(this.Le) && (this.Le = this._instance.on("eventCaptured", (WW => {
             try {
-              if ("$pageview" === BB.event) {
-                const OB = (null == BB ? void 0 : BB.properties.$current_url) ? this.mn(BB.properties.$current_url) : "";
-                if (!OB) return;
+              if ("$pageview" === WW.event) {
+                const iW = (null == WW ? void 0 : WW.properties.$current_url) ? this.mn(WW.properties.$current_url) : "";
+                if (!iW) return;
                 this.Vt("$pageview", {
-                  href: OB
+                  href: iW
                 })
               }
-            } catch (BB) {
-              Gy.error("Could not add $pageview to rrweb session", BB)
+            } catch (WW) {
+              mc.error("Could not add $pageview to rrweb session", WW)
             }
-          }))), "active" === this.status && this.qt(BB || "recording_initialized"))
+          }))), "active" === this.status && this.qt(WW || "recording_initialized"))
         }
         Fn() {
-          var BB, OB, GB, YB, DB, QB;
-          null == tY || tY.removeEventListener("beforeunload", this.Ze), null == tY || tY.removeEventListener("pagehide", this.en), null == tY || tY.removeEventListener("offline", this.nn), null == tY || tY.removeEventListener("online", this.rn), null == OD || OD.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (BB = this.Le) || void 0 === BB || BB.call(this), this.Le = void 0, null === (OB = this.Wt) || void 0 === OB || OB.call(this), this.Wt = void 0, null === (GB = this.De) || void 0 === GB || GB.call(this), this.De = void 0, null === (YB = this.Fe) || void 0 === YB || YB.call(this), this.Fe = void 0, null === (DB = this.Ne) || void 0 === DB || DB.call(this), this.Ne = void 0, null === (QB = this.re) || void 0 === QB || QB.stop(), this.qn(), this.Pn()
+          var WW, iW, OW, mW, EW, NW;
+          null == OE || OE.removeEventListener("beforeunload", this.Ze), null == OE || OE.removeEventListener("pagehide", this.en), null == OE || OE.removeEventListener("offline", this.nn), null == OE || OE.removeEventListener("online", this.rn), null == EE || EE.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (WW = this.Le) || void 0 === WW || WW.call(this), this.Le = void 0, null === (iW = this.Wt) || void 0 === iW || iW.call(this), this.Wt = void 0, null === (OW = this.De) || void 0 === OW || OW.call(this), this.De = void 0, null === (mW = this.Fe) || void 0 === mW || mW.call(this), this.Fe = void 0, null === (EW = this.Ne) || void 0 === EW || EW.call(this), this.Ne = void 0, null === (NW = this.re) || void 0 === NW || NW.stop(), this.qn(), this.Pn()
         }
         Pn() {
           this.Oe += 1, this.Ae = [], this.$e = 0, this.jn = void 0, this.Pe = !1
         }
         qn() {
-          var BB, OB;
-          null === (BB = this.Bn) || void 0 === BB || BB.stop(), this.ce = [], null === (OB = this._n) || void 0 === OB || OB.stop(), this._n = void 0, this.ae = !1;
+          var WW, iW;
+          null === (WW = this.Bn) || void 0 === WW || WW.stop(), this.ce = [], null === (iW = this._n) || void 0 === iW || iW.stop(), this._n = void 0, this.ae = !1;
           try {
-            var GB;
-            null === (GB = this.se) || void 0 === GB || GB.call(this)
-          } catch (BB) {
-            Gy.warn("could not stop rrweb", BB)
+            var OW;
+            null === (OW = this.se) || void 0 === OW || OW.call(this)
+          } catch (WW) {
+            mc.warn("could not stop rrweb", WW)
           }
           this.se = void 0
         }
@@ -8147,17 +8147,17 @@ export const modules = {
           if (!this.jn || 0 === this.$e) return !1;
           if (this.Pe) return !0;
           this.Pe = !0, this.Hn = void 0;
-          const BB = this.Oe;
+          const WW = this.Oe;
           return this.Nn(), this.qn(), this.jn.catch((() => {})).then((() => {
-            BB === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), Gy.info("stopped"))
+            WW === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), mc.info("stopped"))
           })).catch((() => {
-            this.Pe = !1, this.Un(), this.Fn(), Gy.info("stopped")
+            this.Pe = !1, this.Un(), this.Fn(), mc.info("stopped")
           })), !0
         }
         stop() {
           if (this.qn(), this.Ue) this.Xe();
           else if (this.zn()) return;
-          this.Ye(), this.tn(), this.Un(), this.Fn(), Gy.info("stopped")
+          this.Ye(), this.tn(), this.Un(), this.Fn(), mc.info("stopped")
         }
         Un() {
           this.Ke(void 0, {
@@ -8167,205 +8167,205 @@ export const modules = {
         flushBeforeIdentityReset() {
           (this.isStarted || this.Pe) && (this.Xe(), this.Ye())
         }
-        He(BB) {
+        He(WW) {
           this.Ue = !0, this.le = Date.now();
           try {
-            var OB, GB;
-            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (OB = Qy()) || void 0 === OB || null === (GB = OB.resetSnapshotCostState) || void 0 === GB || GB.call(OB), this.start("session_id_changed")
+            var iW, OW;
+            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (iW = Pc()) || void 0 === iW || null === (OW = iW.resetSnapshotCostState) || void 0 === OW || OW.call(iW), this.start("session_id_changed")
           } finally {
             this.Ue = !1
           }
-          this.Ke(BB ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
+          this.Ke(WW ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
         }
-        Ke(BB) {
+        Ke(WW) {
           let {
-            preserveLogDedup: OB = !1
+            preserveLogDedup: iW = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (this.ge = !PD(BB), this.Hn = BB, PD(BB)) return void(OB || (this.Vn = void 0));
+          if (this.ge = !AE(WW), this.Hn = WW, AE(WW)) return void(iW || (this.Vn = void 0));
           if (this.Ue) return;
-          const GB = `${this.sessionId}:${BB}`;
-          GB !== this.Vn && (this.Vn = GB, Gy.info(`holding buffer: ${BB}. nothing is uploaded until the user interacts with the page`))
+          const OW = `${this.sessionId}:${WW}`;
+          OW !== this.Vn && (this.Vn = OW, mc.info(`holding buffer: ${WW}. nothing is uploaded until the user interacts with the page`))
         }
         Rn() {
           this.isStarted || (this.we = !0), this.ge && (this.Ke(void 0), this.ye = !1, this.be && (this.be = !1, this.jt()), this.Gn())
         }
         discard() {
           let {
-            discardProducerEvents: BB = !1
+            discardProducerEvents: WW = !1
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          this.ge = !0, BB && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), Gy.info("discarded")
+          this.ge = !0, WW && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), mc.info("discarded")
         }
-        Qn(BB, OB, GB, YB, DB) {
-          if (-1 === GB) return this.me += 1, void Gy.warn("could not stringify event - dropping it to keep the rest of the recording");
-          const QB = {
-            $snapshot_bytes: GB,
-            $snapshot_data: OB,
-            $session_id: YB,
-            $window_id: DB
+        Qn(WW, iW, OW, mW, EW) {
+          if (-1 === OW) return this.me += 1, void mc.warn("could not stringify event - dropping it to keep the rest of the recording");
+          const NW = {
+            $snapshot_bytes: OW,
+            $snapshot_data: iW,
+            $session_id: mW,
+            $window_id: EW
           };
-          "disabled" !== this.status ? (this.Zn(BB, YB), this.Jn(QB)) : this.tn()
+          "disabled" !== this.status ? (this.Zn(WW, mW), this.Jn(NW)) : this.tn()
         }
         Kn() {
           try {
             this.Xn()
-          } catch (BB) {
-            this.Se || (this.Se = !0, Gy.error("could not track full snapshot cost", BB))
+          } catch (WW) {
+            this.Se || (this.Se = !0, mc.error("could not track full snapshot cost", WW))
           }
         }
         Xn() {
-          var BB, OB;
-          const GB = null === (BB = Qy()) || void 0 === BB || null === (OB = BB.getLastSnapshotCost) || void 0 === OB ? void 0 : OB.call(BB);
-          GB && GB !== this.Wn && (this.Wn = GB, 500 > GB.durationMs || Gy.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
-            durationMs: Math.round(GB.durationMs),
-            stylesheetMs: Math.round(GB.stylesheetMs),
-            nodeCount: GB.nodeCount,
-            cssRuleCount: GB.cssRuleCount,
-            nonDeferrableCssRuleCount: GB.nonDeferrableCssRuleCount,
-            deferredStylesheetCount: GB.deferredStylesheetCount
+          var WW, iW;
+          const OW = null === (WW = Pc()) || void 0 === WW || null === (iW = WW.getLastSnapshotCost) || void 0 === iW ? void 0 : iW.call(WW);
+          OW && OW !== this.Wn && (this.Wn = OW, 500 > OW.durationMs || mc.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
+            durationMs: Math.round(OW.durationMs),
+            stylesheetMs: Math.round(OW.stylesheetMs),
+            nodeCount: OW.nodeCount,
+            cssRuleCount: OW.cssRuleCount,
+            nonDeferrableCssRuleCount: OW.nonDeferrableCssRuleCount,
+            deferredStylesheetCount: OW.deferredStylesheetCount
           }))
         }
-        Zn(BB, OB) {
-          2 !== BB.type ? 3 === BB.type && (PD(this.Te) || this.Te === OB || this.Re === OB || (this.Re = OB, Gy.info("incremental snapshot for a session with no full snapshot - requesting one", {
-            sessionId: OB
-          }), this.jt())) : this.Te = OB
+        Zn(WW, iW) {
+          2 !== WW.type ? 3 === WW.type && (AE(this.Te) || this.Te === iW || this.Re === iW || (this.Re = iW, mc.info("incremental snapshot for a session with no full snapshot - requesting one", {
+            sessionId: iW
+          }), this.jt())) : this.Te = iW
         }
-        Yn(BB) {
-          BB.counted && BB.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), BB.counted = !1, this.Ae = this.Ae.filter((OB => OB !== BB))
+        Yn(WW) {
+          WW.counted && WW.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), WW.counted = !1, this.Ae = this.Ae.filter((iW => iW !== WW))
         }
-        ti(BB, OB, GB) {
-          BB.processed || BB.generation !== this.Oe || (BB.processed = !0, this.Qn(BB.event, OB, GB, BB.targetSessionId, BB.targetWindowId))
+        ti(WW, iW, OW) {
+          WW.processed || WW.generation !== this.Oe || (WW.processed = !0, this.Qn(WW.event, iW, OW, WW.targetSessionId, WW.targetWindowId))
         }
-        ei(BB) {
+        ei(WW) {
           try {
-            let OB, GB = BB.event;
-            if (BB.compressionEnabled) try {
+            let iW, OW = WW.event;
+            if (WW.compressionEnabled) try {
               ({
-                event: GB,
-                size: OB
-              } = Sy(BB.event))
-            } catch (BB) {
-              Gy.warn("could not process queued compression event - will use uncompressed event", BB)
+                event: OW,
+                size: iW
+              } = Yc(WW.event))
+            } catch (WW) {
+              mc.warn("could not process queued compression event - will use uncompressed event", WW)
             }
-            PD(OB) && (OB = uo(BB.event));
+            AE(iW) && (iW = uP(WW.event));
             try {
-              this.ti(BB, GB, OB)
-            } catch (BB) {
-              Gy.warn("could not capture queued compression event", BB)
+              this.ti(WW, OW, iW)
+            } catch (WW) {
+              mc.warn("could not capture queued compression event", WW)
             }
           } finally {
-            this.Yn(BB)
+            this.Yn(WW)
           }
         }
         Xe() {
-          [...this.Ae].forEach((BB => {
+          [...this.Ae].forEach((WW => {
             try {
-              this.ei(BB)
-            } catch (BB) {
-              Gy.warn("could not drain queued compression event", BB)
+              this.ei(WW)
+            } catch (WW) {
+              mc.warn("could not drain queued compression event", WW)
             }
           }))
         }
-        ni(BB, OB, GB, YB) {
-          var DB = this;
-          const oB = {
-            event: BB,
-            compressionEnabled: OB,
-            targetSessionId: GB,
-            targetWindowId: YB,
+        ni(WW, iW, OW, mW) {
+          var EW = this;
+          const PW = {
+            event: WW,
+            compressionEnabled: iW,
+            targetSessionId: OW,
+            targetWindowId: mW,
             generation: this.Oe,
             processed: !1,
             counted: !0
           };
-          this.Ae.push(oB), this.$e += 1;
-          const jB = (yB = QB((function*() {
+          this.Ae.push(PW), this.$e += 1;
+          const LW = (cW = NW((function*() {
             try {
-              if (oB.processed) return;
-              let GB, YB;
+              if (PW.processed) return;
+              let OW, mW;
               try {
-                const DB = OB ? Ry(BB) ? yield function(BB) {
-                  return ny.apply(this, arguments)
-                }(BB): Sy(BB): {
-                  event: BB,
-                  size: uo(BB)
+                const EW = iW ? sc(WW) ? yield function(WW) {
+                  return yc.apply(this, arguments)
+                }(WW): Yc(WW): {
+                  event: WW,
+                  size: uP(WW)
                 };
-                GB = DB.event, YB = DB.size
-              } catch (OB) {
-                Gy.warn("could not process queued compression event - will use uncompressed event", OB), GB = BB, YB = uo(BB)
+                OW = EW.event, mW = EW.size
+              } catch (iW) {
+                mc.warn("could not process queued compression event - will use uncompressed event", iW), OW = WW, mW = uP(WW)
               }
-              DB.ti(oB, GB, YB)
+              EW.ti(PW, OW, mW)
             } finally {
-              DB.Yn(oB)
+              EW.Yn(PW)
             }
           })), function() {
-            return yB.apply(this, arguments)
+            return cW.apply(this, arguments)
           });
-          var yB;
-          this.jn = this.jn ? this.jn.catch((() => {})).then(jB) : jB()
+          var cW;
+          this.jn = this.jn ? this.jn.catch((() => {})).then(LW) : LW()
         }
-        onRRwebEmit(BB) {
-          var OB, GB, YB, DB, QB, oB, jB, yB, JB, MB, PB, zB;
+        onRRwebEmit(WW) {
+          var iW, OW, mW, EW, NW, PW, LW, cW, wW, tW, ZW, xW;
           if (!this._instance.sessionManager) return;
-          if (this.Cn(), !BB || !MD(BB)) return;
-          if (4 === BB.type) {
-            const OB = this.mn(BB.data.href);
-            if (this.xn = OB, !OB) return;
-            BB.data.href = OB
+          if (this.Cn(), !WW || !lE(WW)) return;
+          if (4 === WW.type) {
+            const iW = this.mn(WW.data.href);
+            if (this.xn = iW, !iW) return;
+            WW.data.href = iW
           } else this.Sn();
-          if (null === (OB = this.re) || void 0 === OB || OB.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((BB, OB) => this.$n(BB, OB))), this.Y.urlBlocked && (5 !== (MB = BB).type || "recording paused" !== MB.data.tag)) return;
-          2 === BB.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (PB = this.Bn) || void 0 === PB || PB.reset(), null === (zB = this._instance.persistence) || void 0 === zB || zB.register_once({
-            $debug_first_full_snapshot_timestamp: BB.timestamp
+          if (null === (iW = this.re) || void 0 === iW || iW.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((WW, iW) => this.$n(WW, iW))), this.Y.urlBlocked && (5 !== (tW = WW).type || "recording paused" !== tW.data.tag)) return;
+          2 === WW.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (ZW = this.Bn) || void 0 === ZW || ZW.reset(), null === (xW = this._instance.persistence) || void 0 === xW || xW.register_once({
+            $debug_first_full_snapshot_timestamp: WW.timestamp
           }, void 0));
-          const lB = 2 === BB.type && (null === (GB = this.re) || void 0 === GB ? void 0 : GB.hasPendingTriggers(this.sessionId));
-          lB && this.ii();
-          const pB = this.Bn ? this.Bn.throttleMutations(BB) : BB;
-          if (!pB) return void(!0 === this.de && this.he++);
-          const qB = function(BB) {
-              const OB = BB;
-              if (OB && MD(OB) && 6 === OB.type && MD(OB.data) && "rrweb/console@1" === OB.data.plugin) {
-                OB.data.payload.payload.length > 10 && (OB.data.payload.payload = OB.data.payload.payload.slice(0, 10), OB.data.payload.payload.push("...[truncated]"));
-                const GB = [];
-                for (let BB = 0; OB.data.payload.payload.length > BB; BB++) GB.push(OB.data.payload.payload[BB] && OB.data.payload.payload[BB].length > 2e3 ? OB.data.payload.payload[BB].slice(0, 2e3) + "...[truncated]" : OB.data.payload.payload[BB]);
-                return OB.data.payload.payload = GB, BB
+          const lW = 2 === WW.type && (null === (OW = this.re) || void 0 === OW ? void 0 : OW.hasPendingTriggers(this.sessionId));
+          lW && this.ii();
+          const AW = this.Bn ? this.Bn.throttleMutations(WW) : WW;
+          if (!AW) return void(!0 === this.de && this.he++);
+          const bW = function(WW) {
+              const iW = WW;
+              if (iW && lE(iW) && 6 === iW.type && lE(iW.data) && "rrweb/console@1" === iW.data.plugin) {
+                iW.data.payload.payload.length > 10 && (iW.data.payload.payload = iW.data.payload.payload.slice(0, 10), iW.data.payload.payload.push("...[truncated]"));
+                const OW = [];
+                for (let WW = 0; iW.data.payload.payload.length > WW; WW++) OW.push(iW.data.payload.payload[WW] && iW.data.payload.payload[WW].length > 2e3 ? iW.data.payload.payload[WW].slice(0, 2e3) + "...[truncated]" : iW.data.payload.payload[WW]);
+                return iW.data.payload.payload = OW, WW
               }
-              return BB
-            }(pB),
-            ZB = function(BB) {
-              return ky(BB) ? BB.data.payload : null
-            }(qB),
-            NB = function(BB) {
-              return dy(BB) ? BB.data.payload : null
-            }(qB),
-            RB = function(BB) {
-              return fy(BB) ? BB.data.payload : null
-            }(qB);
-          ZB || NB ? (null == ZB ? void 0 : ZB.lastActivityTimestamp) && (qB.timestamp = ZB.lastActivityTimestamp) : (null == RB ? void 0 : RB.sessionId) || this.ri(qB);
-          const WB = null !== (YB = null !== (DB = null !== (QB = null == ZB ? void 0 : ZB.currentSessionId) && void 0 !== QB ? QB : null == NB ? void 0 : NB.nextSessionId) && void 0 !== DB ? DB : null == RB ? void 0 : RB.sessionId) && void 0 !== YB ? YB : this.Xt,
-            AB = null !== (oB = null !== (jB = null !== (yB = null == ZB ? void 0 : ZB.currentWindowId) && void 0 !== yB ? yB : null == NB ? void 0 : NB.nextWindowId) && void 0 !== jB ? jB : null == RB ? void 0 : RB.windowId) && void 0 !== oB ? oB : this.je;
-          if (!0 === this.de && ! function(BB) {
-              return fy(BB) || ky(BB) || dy(BB)
-            }(qB)) return void(function(BB) {
-            return 2 === BB.type || 4 === BB.type || 3 === BB.type && 9 !== BB.data.source
-          }(qB) && this.he++);
-          2 === qB.type && (this.he = 0), RB && (qB.timestamp = RB.lastActivityTimestamp + RB.threshold);
-          const VB = this.ae;
-          this.ae = !0, lB ? this.kn(!0) : VB || this.kn();
-          const SB = null === (JB = this._instance.config.session_recording.compress_events) || void 0 === JB || JB;
-          if (5 === qB.type && "$json_ld" === qB.data.tag) {
-            let OB;
+              return WW
+            }(AW),
+            jW = function(WW) {
+              return hc(WW) ? WW.data.payload : null
+            }(bW),
+            UW = function(WW) {
+              return Hc(WW) ? WW.data.payload : null
+            }(bW),
+            kW = function(WW) {
+              return Jc(WW) ? WW.data.payload : null
+            }(bW);
+          jW || UW ? (null == jW ? void 0 : jW.lastActivityTimestamp) && (bW.timestamp = jW.lastActivityTimestamp) : (null == kW ? void 0 : kW.sessionId) || this.ri(bW);
+          const sW = null !== (mW = null !== (EW = null !== (NW = null == jW ? void 0 : jW.currentSessionId) && void 0 !== NW ? NW : null == UW ? void 0 : UW.nextSessionId) && void 0 !== EW ? EW : null == kW ? void 0 : kW.sessionId) && void 0 !== mW ? mW : this.Xt,
+            MW = null !== (PW = null !== (LW = null !== (cW = null == jW ? void 0 : jW.currentWindowId) && void 0 !== cW ? cW : null == UW ? void 0 : UW.nextWindowId) && void 0 !== LW ? LW : null == kW ? void 0 : kW.windowId) && void 0 !== PW ? PW : this.je;
+          if (!0 === this.de && ! function(WW) {
+              return Jc(WW) || hc(WW) || Hc(WW)
+            }(bW)) return void(function(WW) {
+            return 2 === WW.type || 4 === WW.type || 3 === WW.type && 9 !== WW.data.source
+          }(bW) && this.he++);
+          2 === bW.type && (this.he = 0), kW && (bW.timestamp = kW.lastActivityTimestamp + kW.threshold);
+          const KW = this.ae;
+          this.ae = !0, lW ? this.kn(!0) : KW || this.kn();
+          const SW = null === (wW = this._instance.config.session_recording.compress_events) || void 0 === wW || wW;
+          if (5 === bW.type && "$json_ld" === bW.data.tag) {
+            let iW;
             try {
-              OB = tY ? this.mn(tY.location.href) : void 0
-            } catch (BB) {}
-            qB.data.href = OB
+              iW = OE ? this.mn(OE.location.href) : void 0
+            } catch (WW) {}
+            bW.data.href = iW
           }
-          if (this.$e > 0 || SB && Ry(qB)) return void this.ni(qB, SB, WB, AB);
+          if (this.$e > 0 || SW && sc(bW)) return void this.ni(bW, SW, sW, MW);
           const {
-            event: nB,
-            size: UB
-          } = SB ? Sy(qB) : {
-            event: qB,
-            size: uo(qB)
+            event: YW,
+            size: yW
+          } = SW ? Yc(bW) : {
+            event: bW,
+            size: uP(bW)
           };
-          this.Qn(qB, nB, UB, WB, AB)
+          this.Qn(bW, YW, yW, sW, MW)
         }
         get status() {
           return this.re ? this.re.getStatus({
@@ -8377,19 +8377,19 @@ export const modules = {
             eventTriggerMatching: this.tt,
             linkedFlagMatching: this.et,
             remoteConfig: this.ne
-          }) : Yo
+          }) : PP
         }
-        log(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
-          var GB;
-          null === (GB = this._instance.sessionRecording) || void 0 === GB || GB.onRRwebEmit({
+        log(WW) {
+          let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
+          var OW;
+          null === (OW = this._instance.sessionRecording) || void 0 === OW || OW.onRRwebEmit({
             type: 6,
             data: {
               plugin: "rrweb/console@1",
               payload: {
-                level: OB,
+                level: iW,
                 trace: [],
-                payload: [JSON.stringify(BB)]
+                payload: [JSON.stringify(WW)]
               }
             },
             timestamp: Date.now()
@@ -8399,24 +8399,24 @@ export const modules = {
           this.et.linkedFlagSeen = !0, this.jt(), this.Rn(), this.qt("linked_flag_overridden")
         }
         overrideSampling() {
-          var BB;
-          null === (BB = this._instance.persistence) || void 0 === BB || BB.register({
+          var WW;
+          null === (WW = this._instance.persistence) || void 0 === WW || WW.register({
             $session_is_sampled: this.sessionId,
             $replay_sample_rate: null
           }), this.jt(), this.Rn(), this.qt("sampling_overridden")
         }
-        overrideTrigger(BB) {
-          this.$n(BB), this.Rn()
+        overrideTrigger(WW) {
+          this.$n(WW), this.Rn()
         }
         oi() {
           try {
-            var BB;
-            const OB = null == tY || null === (BB = tY.location) || void 0 === BB ? void 0 : BB.href;
-            if (!OB) return;
-            const GB = this.mn(OB);
-            if (!GB) return;
-            return new URL(GB).hostname || void 0
-          } catch (BB) {
+            var WW;
+            const iW = null == OE || null === (WW = OE.location) || void 0 === WW ? void 0 : WW.href;
+            if (!iW) return;
+            const OW = this.mn(iW);
+            if (!OW) return;
+            return new URL(OW).hostname || void 0
+          } catch (WW) {
             return
           }
         }
@@ -8429,64 +8429,64 @@ export const modules = {
           }), 2e3))
         }
         ai() {
-          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((BB => 5 === (null == BB ? void 0 : BB.type) && !ky(BB) && !dy(BB)))
+          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((WW => 5 === (null == WW ? void 0 : WW.type) && !hc(WW) && !Hc(WW)))
         }
         li() {
-          var BB, OB;
-          return null !== (BB = null === (OB = this.re) || void 0 === OB ? void 0 : OB.getPendingTriggerConditions(this.sessionId)) && void 0 !== BB ? BB : []
+          var WW, iW;
+          return null !== (WW = null === (iW = this.re) || void 0 === iW ? void 0 : iW.getPendingTriggerConditions(this.sessionId)) && void 0 !== WW ? WW : []
         }
-        ui(BB) {
-          if ("buffering" !== BB) return PD(this.ci) || this._instance.register_for_session({
-            [vQ]: []
+        ui(WW) {
+          if ("buffering" !== WW) return AE(this.ci) || this._instance.register_for_session({
+            [QN]: []
           }), void(this.ci = void 0);
-          const OB = this.li();
-          if (0 === OB.length) return PD(this.ci) || this._instance.register_for_session({
-            [vQ]: []
+          const iW = this.li();
+          if (0 === iW.length) return AE(this.ci) || this._instance.register_for_session({
+            [QN]: []
           }), void(this.ci = void 0);
-          const GB = OB.join(", "),
-            YB = `${this.sessionId}:${GB}`;
-          YB !== this.ci && (this.ci = YB, this._instance.register_for_session({
-            [vQ]: OB
-          }), Gy.info(`buffering: ${GB}`))
+          const OW = iW.join(", "),
+            mW = `${this.sessionId}:${OW}`;
+          mW !== this.ci && (this.ci = mW, this._instance.register_for_session({
+            [QN]: iW
+          }), mc.info(`buffering: ${OW}`))
         }
         di() {
-          var BB;
-          return "memory" !== this._instance.config.persistence && !0 !== (null === (BB = this._instance.persistence) || void 0 === BB ? void 0 : BB.hi) && pj.At()
+          var WW;
+          return "memory" !== this._instance.config.persistence && !0 !== (null === (WW = this._instance.persistence) || void 0 === WW ? void 0 : WW.hi) && bL.At()
         }
         fi() {
-          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, pj.$t(this.an, this.Rt))
+          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, bL.$t(this.an, this.Rt))
         }
         Ln() {
           if (this.Ee || !this.di()) return;
           this.Ee = !0;
-          const BB = pj.Dt(this.an);
-          pj.Pt(this.an), MD(BB) && yD(BB.data) && 0 !== BB.data.length && yD(BB.sizes) && BB.sizes.length === BB.data.length && qD(BB.size) && BB.sessionId === this.Xt && BB.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = BB))
+          const WW = bL.Dt(this.an);
+          bL.Pt(this.an), lE(WW) && ZE(WW.data) && 0 !== WW.data.length && ZE(WW.sizes) && WW.sizes.length === WW.data.length && kE(WW.size) && WW.sessionId === this.Xt && WW.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = WW))
         }
         Ye() {
-          let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          var OB;
+          let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          var iW;
           if (this.Nn(), this.ge) return this.Rt;
-          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (BB && this.fi(), this.Rt);
-          const GB = this.Rt;
-          null === (OB = this.re) || void 0 === OB || OB.ensureSamplingDecision(this.sessionId);
-          const DB = this.Ge(),
-            QB = this.status;
-          if (this.ui(QB), "buffering" === QB || "paused" === QB || "disabled" === QB || DB) return !BB || "active" !== QB && "sampled" !== QB || this.fi(), this.Gn(), this.Rt;
-          if (this.Rt !== GB) return this.Rt;
-          if (GB.data.length > 0) {
-            var oB;
-            const BB = this.oi();
-            Io(GB).forEach((OB => {
+          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (WW && this.fi(), this.Rt);
+          const OW = this.Rt;
+          null === (iW = this.re) || void 0 === iW || iW.ensureSamplingDecision(this.sessionId);
+          const EW = this.Ge(),
+            NW = this.status;
+          if (this.ui(NW), "buffering" === NW || "paused" === NW || "disabled" === NW || EW) return !WW || "active" !== NW && "sampled" !== NW || this.fi(), this.Gn(), this.Rt;
+          if (this.Rt !== OW) return this.Rt;
+          if (OW.data.length > 0) {
+            var PW;
+            const WW = this.oi();
+            dP(OW).forEach((iW => {
               try {
-                var GB;
-                null === (GB = this.Be) || void 0 === GB || GB.trackSize(OB.sessionId, OB.size), this.mi(YB(YB(YB(YB({
-                  $snapshot_bytes: OB.size,
-                  $snapshot_data: OB.data,
-                  $session_id: OB.sessionId,
-                  $window_id: OB.windowId,
-                  $lib: qj.LIB_NAME,
-                  $lib_version: qj.LIB_VERSION,
-                  $snapshot_host: BB
+                var OW;
+                null === (OW = this.Be) || void 0 === OW || OW.trackSize(iW.sessionId, iW.size), this.mi(mW(mW(mW(mW({
+                  $snapshot_bytes: iW.size,
+                  $snapshot_data: iW.data,
+                  $session_id: iW.sessionId,
+                  $window_id: iW.windowId,
+                  $lib: jL.LIB_NAME,
+                  $lib_version: jL.LIB_VERSION,
+                  $snapshot_host: WW
                 }, this.fe > 0 ? {
                   $sdk_debug_replay_throttled_mutations_dropped: this.fe
                 } : {}), this.ve > 0 ? {
@@ -8496,27 +8496,27 @@ export const modules = {
                 } : {}), this.me > 0 ? {
                   $sdk_debug_replay_unstringifiable_events_dropped: this.me
                 } : {}))
-              } catch (BB) {
-                Gy.warn("could not capture snapshot chunk - skipping it", BB)
+              } catch (WW) {
+                mc.warn("could not capture snapshot chunk - skipping it", WW)
               }
-            })), PD(this.pi) || (pj.Pt(this.an), this.pi = void 0), null === (oB = this.re) || void 0 === oB || oB.onFlushComplete()
+            })), AE(this.pi) || (bL.Pt(this.an), this.pi = void 0), null === (PW = this.re) || void 0 === PW || PW.onFlushComplete()
           }
           return this.tn()
         }
-        Jn(BB) {
-          var OB;
-          const GB = 2 + ((null === (OB = this.Rt) || void 0 === OB ? void 0 : OB.data.length) || 0),
-            YB = BB.$session_id,
-            DB = this.Rt.sessionId !== YB;
-          if (DB || !0 !== this.de && !this.ge && this.Rt.size + BB.$snapshot_bytes + GB > 943718.4) {
-            const OB = this.Xt;
-            if (this.Rt = this.Ye(), this.Xt !== OB) return;
-            DB && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = YB, this.Rt.windowId = BB.$window_id
+        Jn(WW) {
+          var iW;
+          const OW = 2 + ((null === (iW = this.Rt) || void 0 === iW ? void 0 : iW.data.length) || 0),
+            mW = WW.$session_id,
+            EW = this.Rt.sessionId !== mW;
+          if (EW || !0 !== this.de && !this.ge && this.Rt.size + WW.$snapshot_bytes + OW > 943718.4) {
+            const iW = this.Xt;
+            if (this.Rt = this.Ye(), this.Xt !== iW) return;
+            EW && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = mW, this.Rt.windowId = WW.$window_id
           }
-          this.ge && (this.be || this.Rt.size + BB.$snapshot_bytes + GB > 943718.4) ? this.be = !0 : (this.Rt.size += BB.$snapshot_bytes, this.Rt.data.push(BB.$snapshot_data), this.Rt.sizes.push(BB.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
+          this.ge && (this.be || this.Rt.size + WW.$snapshot_bytes + OW > 943718.4) ? this.be = !0 : (this.Rt.size += WW.$snapshot_bytes, this.Rt.data.push(WW.$snapshot_data), this.Rt.sizes.push(WW.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
         }
-        mi(BB) {
-          this._instance.capture("$snapshot", BB, {
+        mi(WW) {
+          this._instance.capture("$snapshot", WW, {
             _url: this._instance.requestRouter.endpointFor("api", this.oe),
             _noTruncate: !0,
             _batchKey: "recordings",
@@ -8524,18 +8524,18 @@ export const modules = {
           })
         }
         get Qe() {
-          var BB, OB;
-          const GB = null === (BB = this.Rt) || void 0 === BB ? void 0 : BB.data[(null === (OB = this.Rt) || void 0 === OB ? void 0 : OB.data.length) - 1];
-          return GB ? GB.timestamp - this._sessionStartTimestamp : null
+          var WW, iW;
+          const OW = null === (WW = this.Rt) || void 0 === WW ? void 0 : WW.data[(null === (iW = this.Rt) || void 0 === iW ? void 0 : iW.data.length) - 1];
+          return OW ? OW.timestamp - this._sessionStartTimestamp : null
         }
         ii() {
           if (!this.Rt || 0 === this.Rt.data.length) return this.tn();
-          let BB = -1;
-          for (let OB = this.Rt.data.length - 1; OB >= 0; OB--)
-            if (4 === this.Rt.data[OB].type) {
-              BB = OB;
+          let WW = -1;
+          for (let iW = this.Rt.data.length - 1; iW >= 0; iW--)
+            if (4 === this.Rt.data[iW].type) {
+              WW = iW;
               break
-            } return 0 > BB ? this.tn() : (this.Rt.data = this.Rt.data.slice(BB), this.Rt.sizes = this.Rt.sizes.slice(BB), this.Rt.size = this.Rt.sizes.reduce(((BB, OB) => BB + OB), 0), this.Rt)
+            } return 0 > WW ? this.tn() : (this.Rt.data = this.Rt.data.slice(WW), this.Rt.sizes = this.Rt.sizes.slice(WW), this.Rt.size = this.Rt.sizes.reduce(((WW, iW) => WW + iW), 0), this.Rt)
         }
         tn() {
           return this.Rt = {
@@ -8546,21 +8546,21 @@ export const modules = {
             windowId: this.je
           }, this.Rt
         }
-        qt(BB, OB) {
+        qt(WW, iW) {
           this._instance.register_for_session({
-            [Go]: BB
-          }), Gy.info(BB.replace("_", " "), OB), "session_id_changed" !== BB && this.Vt("$recording_started", YB({
-            reason: BB
-          }, OB))
+            [NP]: WW
+          }), mc.info(WW.replace("_", " "), iW), "session_id_changed" !== WW && this.Vt("$recording_started", mW({
+            reason: WW
+          }, iW))
         }
-        gi(BB) {
-          var OB;
-          return 3 === BB.type && -1 !== Yy.indexOf(null === (OB = BB.data) || void 0 === OB ? void 0 : OB.source)
+        gi(WW) {
+          var iW;
+          return 3 === WW.type && -1 !== Ec.indexOf(null === (iW = WW.data) || void 0 === iW ? void 0 : iW.source)
         }
-        ri(BB) {
-          const OB = this.gi(BB);
-          OB || !0 === this.de || BB.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
-            eventTimestamp: BB.timestamp,
+        ri(WW) {
+          const iW = this.gi(WW);
+          iW || !0 === this.de || WW.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
+            eventTimestamp: WW.timestamp,
             lastActivityTimestamp: this.le,
             threshold: this.te,
             bufferLength: this.Rt.data.length,
@@ -8569,55 +8569,55 @@ export const modules = {
             windowId: this.je
           }), this.Ye());
           const {
-            windowId: GB,
-            sessionId: YB
-          } = this.Yt.checkAndGetSessionAndWindowId(!OB, BB.timestamp);
-          let DB = !1;
-          if (OB && (this.le = BB.timestamp, this.de)) {
-            const OB = "unknown" === this.de;
-            this.de = !1, OB || (this.Vt("sessionNoLongerIdle", {
+            windowId: OW,
+            sessionId: mW
+          } = this.Yt.checkAndGetSessionAndWindowId(!iW, WW.timestamp);
+          let EW = !1;
+          if (iW && (this.le = WW.timestamp, this.de)) {
+            const iW = "unknown" === this.de;
+            this.de = !1, iW || (this.Vt("sessionNoLongerIdle", {
               reason: "user activity",
-              type: BB.type
-            }), DB = !0)
+              type: WW.type
+            }), EW = !0)
           }
-          const QB = this.Xt !== YB,
-            oB = this.je !== GB;
-          if (this.je = GB, this.Xt = YB, QB || oB) {
-            const BB = QB && !1 !== this.de;
-            BB && (this.de = "unknown"), this.He(BB)
-          } else if (OB && this.Rn(), DB) {
-            var jB;
-            const BB = ["sampled", "active"].includes(this.status) || (null === (jB = this.re) || void 0 === jB ? void 0 : jB.hasPendingTriggers(this.sessionId));
-            this.he > 0 && BB && this.jt(), this.kn(), this.Mn()
+          const NW = this.Xt !== mW,
+            PW = this.je !== OW;
+          if (this.je = OW, this.Xt = mW, NW || PW) {
+            const WW = NW && !1 !== this.de;
+            WW && (this.de = "unknown"), this.He(WW)
+          } else if (iW && this.Rn(), EW) {
+            var LW;
+            const WW = ["sampled", "active"].includes(this.status) || (null === (LW = this.re) || void 0 === LW ? void 0 : LW.hasPendingTriggers(this.sessionId));
+            this.he > 0 && WW && this.jt(), this.kn(), this.Mn()
           }
         }
         ze() {
-          var BB;
-          null === (BB = this.re) || void 0 === BB || BB.clearConditionalRecordingPersistence()
+          var WW;
+          null === (WW = this.re) || void 0 === WW || WW.clearConditionalRecordingPersistence()
         }
         get sdkDebugProperties() {
-          var BB;
+          var WW;
           return {
             $recording_status: this.status,
             $sdk_debug_replay_flush_hold_reason: this.Hn,
             $sdk_debug_replay_internal_buffer_length: this.Rt.data.length,
             $sdk_debug_replay_internal_buffer_size: this.Rt.size,
             $sdk_debug_session_start: this._sessionStartTimestamp,
-            $sdk_debug_replay_flushed_size: null === (BB = this.Be) || void 0 === BB ? void 0 : BB.currentTrackedSize(this.sessionId),
+            $sdk_debug_replay_flushed_size: null === (WW = this.Be) || void 0 === WW ? void 0 : WW.currentTrackedSize(this.sessionId),
             $sdk_debug_replay_rrweb_error: this.ke,
-            [Bo]: this.yi,
-            [Oo]: this._e
+            [mP]: this.yi,
+            [EP]: this._e
           }
         }
         get yi() {
-          var BB, OB, GB;
-          return !!this.se && (null === (BB = null === (OB = oy()) || void 0 === OB || null === (GB = OB.isRecording) || void 0 === GB ? void 0 : GB.call(OB)) || void 0 === BB || BB)
+          var WW, iW, OW;
+          return !!this.se && (null === (WW = null === (iW = Lc()) || void 0 === iW || null === (OW = iW.isRecording) || void 0 === OW ? void 0 : OW.call(iW)) || void 0 === WW || WW)
         }
         Dn() {
-          var BB;
+          var WW;
           if (this.se) return;
           this._e = !0;
-          const OB = {
+          const iW = {
               blockClass: "ph-no-capture",
               blockSelector: void 0,
               ignoreClass: "ph-ignore-input",
@@ -8639,136 +8639,136 @@ export const modules = {
               sampling: void 0,
               attributeFilter: void 0
             },
-            GB = this._instance.config.session_recording;
-          for (const [MB, PB] of Object.entries(GB || {}))
-            if (MB in OB)
-              if ("maskInputOptions" === MB) OB.maskInputOptions = YB({
+            OW = this._instance.config.session_recording;
+          for (const [tW, ZW] of Object.entries(OW || {}))
+            if (tW in iW)
+              if ("maskInputOptions" === tW) iW.maskInputOptions = mW({
                 password: !0
-              }, PB);
-              else if ("sampling" === MB) {
-            const BB = null != PB ? PB : {},
-              GB = {};
-            PD(BB.mousemove) || (GB.mousemove = BB.mousemove), PD(BB.mouseInteraction) || (GB.mouseInteraction = BB.mouseInteraction), OB.sampling = GB
-          } else OB[MB] = PB;
-          var DB, QB, oB, jB;
-          !0 === (null == GB ? void 0 : GB.captureJsonLd) && !0 !== OB.slimDOMOptions && "all" !== OB.slimDOMOptions && (OB.slimDOMOptions = YB(YB({}, OB.slimDOMOptions), {}, {
+              }, ZW);
+              else if ("sampling" === tW) {
+            const WW = null != ZW ? ZW : {},
+              OW = {};
+            AE(WW.mousemove) || (OW.mousemove = WW.mousemove), AE(WW.mouseInteraction) || (OW.mouseInteraction = WW.mouseInteraction), iW.sampling = OW
+          } else iW[tW] = ZW;
+          var EW, NW, PW, LW;
+          !0 === (null == OW ? void 0 : OW.captureJsonLd) && !0 !== iW.slimDOMOptions && "all" !== iW.slimDOMOptions && (iW.slimDOMOptions = mW(mW({}, iW.slimDOMOptions), {}, {
             script: !0
-          })), this.dn && this.dn.enabled && (OB.recordCanvas = !0, OB.sampling = YB(YB({}, OB.sampling), {}, {
+          })), this.dn && this.dn.enabled && (iW.recordCanvas = !0, iW.sampling = mW(mW({}, iW.sampling), {}, {
             canvas: this.dn.fps
-          }), OB.dataURLOptions = {
+          }), iW.dataURLOptions = {
             type: "image/webp",
             quality: this.dn.quality
-          }, OB.canvasResolutionScale = this.cn, OB.canvasMasking = {
+          }, iW.canvasResolutionScale = this.cn, iW.canvasMasking = {
             configured: () => {
-              var BB;
-              return JD(null === (BB = this._instance.config.session_recording) || void 0 === BB || null === (BB = BB.canvasCapture) || void 0 === BB ? void 0 : BB.maskRegionsFn)
+              var WW;
+              return xE(null === (WW = this._instance.config.session_recording) || void 0 === WW || null === (WW = WW.canvasCapture) || void 0 === WW ? void 0 : WW.maskRegionsFn)
             },
-            regionsFn: BB => {
-              var OB;
-              const GB = null === (OB = this._instance.config.session_recording) || void 0 === OB || null === (OB = OB.canvasCapture) || void 0 === OB ? void 0 : OB.maskRegionsFn;
-              if (JD(GB)) try {
-                var YB;
-                return null !== (YB = GB(BB)) && void 0 !== YB ? YB : null
-              } catch (BB) {
-                return this.Ie || (this.Ie = !0, Gy.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", BB)), null
+            regionsFn: WW => {
+              var iW;
+              const OW = null === (iW = this._instance.config.session_recording) || void 0 === iW || null === (iW = iW.canvasCapture) || void 0 === iW ? void 0 : iW.maskRegionsFn;
+              if (xE(OW)) try {
+                var mW;
+                return null !== (mW = OW(WW)) && void 0 !== mW ? mW : null
+              } catch (WW) {
+                return this.Ie || (this.Ie = !0, mc.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", WW)), null
               }
             }
-          }), this.ln && (OB.maskAllInputs = null === (DB = this.ln.maskAllInputs) || void 0 === DB || DB, OB.maskTextSelector = null !== (QB = this.ln.maskTextSelector) && void 0 !== QB ? QB : void 0, OB.blockSelector = null !== (oB = this.ln.blockSelector) && void 0 !== oB ? oB : void 0, OB.maskAllElementAttributes = null !== (jB = this.ln.maskAllElementAttributes) && void 0 !== jB && jB), OB.maskAllElementAttributes && OB.maskAttributeFn && (OB.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, Gy.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
-          const yB = oy();
-          if (!yB) return void Gy.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
-          this.Bn = null !== (BB = this.Bn) && void 0 !== BB ? BB : new zj(yB, {
+          }), this.ln && (iW.maskAllInputs = null === (EW = this.ln.maskAllInputs) || void 0 === EW || EW, iW.maskTextSelector = null !== (NW = this.ln.maskTextSelector) && void 0 !== NW ? NW : void 0, iW.blockSelector = null !== (PW = this.ln.blockSelector) && void 0 !== PW ? PW : void 0, iW.maskAllElementAttributes = null !== (LW = this.ln.maskAllElementAttributes) && void 0 !== LW && LW), iW.maskAllElementAttributes && iW.maskAttributeFn && (iW.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, mc.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
+          const cW = Lc();
+          if (!cW) return void mc.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
+          this.Bn = null !== (WW = this.Bn) && void 0 !== WW ? WW : new lL(cW, {
             refillRate: this._instance.config.session_recording.__mutationThrottlerRefillRate,
             bucketSize: this._instance.config.session_recording.__mutationThrottlerBucketSize,
-            onBlockedNode: (BB, OB) => {
-              const GB = `Too many mutations on node '${BB}'. Rate limiting. This could be due to SVG animations or something similar`;
-              Gy.info(GB, {
-                node: OB
-              }), this.log("[SessionRecording] " + GB, "warn")
+            onBlockedNode: (WW, iW) => {
+              const OW = `Too many mutations on node '${WW}'. Rate limiting. This could be due to SVG animations or something similar`;
+              mc.info(OW, {
+                node: iW
+              }), this.log("[SessionRecording] " + OW, "warn")
             },
-            onDroppedAttributeMutations: BB => this.fe += BB,
+            onDroppedAttributeMutations: WW => this.fe += WW,
             bytesRefillRate: this._instance.config.session_recording.__mutationBytesRefillRate,
             bytesBucketSize: this._instance.config.session_recording.__mutationBytesBucketSize,
             resyncIntervalMs: this.In,
-            onDroppedOversizedMutation: BB => {
-              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += BB
+            onDroppedOversizedMutation: WW => {
+              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += WW
             },
             requestFullSnapshot: () => this.jt()
           });
-          const JB = this.vn();
-          if (this.se = yB(YB(YB({
-              emit: BB => {
-                this.onRRwebEmit(BB)
+          const wW = this.vn();
+          if (this.se = cW(mW(mW({
+              emit: WW => {
+                this.onRRwebEmit(WW)
               },
-              plugins: JB,
-              errorHandler: (BB, OB) => "rrweb" === OB && (this.Me || (this.Me = !0, Gy.error("rrweb internal error - recording will continue but may be incomplete", BB)), !0)
-            }, OB), {}, {
+              plugins: wW,
+              errorHandler: (WW, iW) => "rrweb" === iW && (this.Me || (this.Me = !0, mc.error("rrweb internal error - recording will continue but may be incomplete", WW)), !0)
+            }, iW), {}, {
               recordAfter: "DOMContentLoaded"
-            })), !this.se) return this.ke = !0, void Gy.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
-          this.ke = !1, !0 === (null == GB ? void 0 : GB.captureJsonLd) && OD && (null == tY ? void 0 : tY.MutationObserver) && !this._n && (this._n = function(BB, OB, GB) {
-            const YB = new WeakMap,
-              DB = GB.getCaptureState || (() => !0);
-            let QB = uj;
-            const oB = function(BB, OB) {
-                const GB = OB.attributeFilter;
-                return OB.maskAllElementAttributes || OB.maskAttributeFn || (null == GB ? void 0 : GB.length) && !GB.includes("id") ? Fj : GB => {
-                  const YB = BB.getElementById(GB);
-                  return !!YB && "SCRIPT" !== YB.nodeName && (!OB.isRecordedElement || OB.isRecordedElement(YB)) && !tj(YB, OB.blockClass, OB.blockSelector)
+            })), !this.se) return this.ke = !0, void mc.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
+          this.ke = !1, !0 === (null == OW ? void 0 : OW.captureJsonLd) && EE && (null == OE ? void 0 : OE.MutationObserver) && !this._n && (this._n = function(WW, iW, OW) {
+            const mW = new WeakMap,
+              EW = OW.getCaptureState || (() => !0);
+            let NW = uL;
+            const PW = function(WW, iW) {
+                const OW = iW.attributeFilter;
+                return iW.maskAllElementAttributes || iW.maskAttributeFn || (null == OW ? void 0 : OW.length) && !OW.includes("id") ? eL : OW => {
+                  const mW = WW.getElementById(OW);
+                  return !!mW && "SCRIPT" !== mW.nodeName && (!iW.isRecordedElement || iW.isRecordedElement(mW)) && !Wc(mW, iW.blockClass, iW.blockSelector)
                 }
-              }(BB, GB),
-              jB = OB => {
+              }(WW, OW),
+              LW = iW => {
                 try {
-                  const jB = DB();
-                  if (!QB || !1 === jB || !OB.isConnected || OB.ownerDocument !== BB || function(BB, OB) {
-                      return tj(BB, OB.blockClass, OB.blockSelector) || tj(BB, OB.maskTextClass, OB.maskTextSelector)
-                    }(OB, GB)) return;
-                  const yB = function(BB) {
-                    let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fj,
-                      GB = arguments.length > 2 ? arguments[2] : void 0;
-                    if (!BB || BB.length > uj) return null;
+                  const LW = EW();
+                  if (!NW || !1 === LW || !iW.isConnected || iW.ownerDocument !== WW || function(WW, iW) {
+                      return Wc(WW, iW.blockClass, iW.blockSelector) || Wc(WW, iW.maskTextClass, iW.maskTextSelector)
+                    }(iW, OW)) return;
+                  const cW = function(WW) {
+                    let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eL,
+                      OW = arguments.length > 2 ? arguments[2] : void 0;
+                    if (!WW || WW.length > uL) return null;
                     try {
-                      const YB = JSON.parse(BB),
-                        DB = {
-                          maskUrl: GB,
+                      const mW = JSON.parse(WW),
+                        EW = {
+                          maskUrl: OW,
                           remainingNodes: 2048,
                           exceeded: !1
                         },
-                        QB = yD(YB) ? YB.map((BB => vj(BB, OB, DB))) : vj(YB, OB, DB);
-                      if (DB.exceeded || lD(QB) || yD(QB) && (!QB.length || QB.some(lD))) return null;
-                      const oB = JSON.stringify(QB);
-                      return oB.length > 2e4 ? null : [QB, oB]
-                    } catch (BB) {
+                        NW = ZE(mW) ? mW.map((WW => zL(WW, iW, EW))) : zL(mW, iW, EW);
+                      if (EW.exceeded || jE(NW) || ZE(NW) && (!NW.length || NW.some(jE))) return null;
+                      const PW = JSON.stringify(NW);
+                      return PW.length > 2e4 ? null : [NW, PW]
+                    } catch (WW) {
                       return null
                     }
-                  }(OB.text, oB, GB.maskUrl);
-                  if (!yB) return void YB.delete(OB);
-                  const [JB, MB] = yB;
-                  if (lD(jB)) return void YB.set(OB, MB);
-                  if (YB.get(OB) !== MB) {
-                    if (MB.length > QB) return void(QB = 0);
-                    GB.emit(JB) && (YB.set(OB, MB), QB -= MB.length)
+                  }(iW.text, PW, OW.maskUrl);
+                  if (!cW) return void mW.delete(iW);
+                  const [wW, tW] = cW;
+                  if (jE(LW)) return void mW.set(iW, tW);
+                  if (mW.get(iW) !== tW) {
+                    if (tW.length > NW) return void(NW = 0);
+                    OW.emit(wW) && (mW.set(iW, tW), NW -= tW.length)
                   }
-                } catch (BB) {
+                } catch (WW) {
                   return
                 }
               };
             try {
-              const GB = new OB((BB => {
+              const OW = new iW((WW => {
                 try {
-                  if (!QB || !1 === DB()) return;
-                  const OB = BB => {
-                    for (const OB of By(BB)) jB(OB)
+                  if (!NW || !1 === EW()) return;
+                  const iW = WW => {
+                    for (const iW of ic(WW)) LW(iW)
                   };
-                  for (const GB of BB)
-                    if ("childList" === GB.type) sj(GB.target) && jB(GB.target), GB.addedNodes.forEach(OB);
-                    else if ("characterData" === GB.type) {
-                    const BB = GB.target.parentNode;
-                    BB && sj(BB) && jB(BB)
-                  } else "attributes" === GB.type && sj(GB.target) && jB(GB.target)
-                } catch (BB) {
+                  for (const OW of WW)
+                    if ("childList" === OW.type) FL(OW.target) && LW(OW.target), OW.addedNodes.forEach(iW);
+                    else if ("characterData" === OW.type) {
+                    const WW = OW.target.parentNode;
+                    WW && FL(WW) && LW(WW)
+                  } else "attributes" === OW.type && FL(OW.target) && LW(OW.target)
+                } catch (WW) {
                   return
                 }
               }));
-              return GB.observe(BB, {
+              return OW.observe(WW, {
                 attributes: !0,
                 attributeFilter: ["type"],
                 characterData: !0,
@@ -8776,79 +8776,79 @@ export const modules = {
                 subtree: !0
               }), {
                 scan() {
-                  let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                  QB && !1 !== DB() && By(BB.documentElement).forEach((BB => {
-                    OB && YB.delete(BB), jB(BB)
+                  let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                  NW && !1 !== EW() && ic(WW.documentElement).forEach((WW => {
+                    iW && mW.delete(WW), LW(WW)
                   }))
                 },
-                stop: () => GB.disconnect()
+                stop: () => OW.disconnect()
               }
-            } catch (BB) {
+            } catch (WW) {
               return {
                 scan() {},
                 stop() {}
               }
             }
-          }(OD, tY.MutationObserver, {
-            maskUrl: BB => this.mn(BB),
-            attributeFilter: OB.attributeFilter,
-            blockClass: OB.blockClass,
-            blockSelector: OB.blockSelector,
-            isRecordedElement: BB => yB.mirror.getId(BB) > 0,
-            maskAllElementAttributes: OB.maskAllElementAttributes,
-            maskAttributeFn: OB.maskAttributeFn,
-            maskTextClass: OB.maskTextClass,
-            maskTextSelector: OB.maskTextSelector,
+          }(EE, OE.MutationObserver, {
+            maskUrl: WW => this.mn(WW),
+            attributeFilter: iW.attributeFilter,
+            blockClass: iW.blockClass,
+            blockSelector: iW.blockSelector,
+            isRecordedElement: WW => cW.mirror.getId(WW) > 0,
+            maskAllElementAttributes: iW.maskAllElementAttributes,
+            maskAttributeFn: iW.maskAttributeFn,
+            maskTextClass: iW.maskTextClass,
+            maskTextSelector: iW.maskTextSelector,
             getCaptureState: () => {
-              var BB;
-              return !0 !== (null === (BB = this._instance.config.session_recording) || void 0 === BB ? void 0 : BB.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
+              var WW;
+              return !0 !== (null === (WW = this._instance.config.session_recording) || void 0 === WW ? void 0 : WW.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
             },
-            emit: BB => this.wn(BB)
-          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = ZD(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
-            sessionRecordingOptions: OB,
-            activePlugins: JB.map((BB => null == BB ? void 0 : BB.name))
+            emit: WW => this.wn(WW)
+          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = sE(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
+            sessionRecordingOptions: iW,
+            activePlugins: wW.map((WW => null == WW ? void 0 : WW.name))
           }), this.Vt("$posthog_config", {
             config: this._instance.config
           })
         }
-        tryAddCustomEvent(BB, OB) {
-          return this.Vt(BB, OB)
+        tryAddCustomEvent(WW, iW) {
+          return this.Vt(WW, iW)
         }
       };
-      DD.__PosthogExtensions__ = DD.__PosthogExtensions__ || {}, DD.__PosthogExtensions__.rrwebPlugins = {
-        getRecordConsolePlugin: BB => ({
+      LE.__PosthogExtensions__ = LE.__PosthogExtensions__ || {}, LE.__PosthogExtensions__.rrwebPlugins = {
+        getRecordConsolePlugin: WW => ({
           name: "rrweb/console@1",
-          observer: xY,
-          options: BB
+          observer: iE,
+          options: WW
         }),
-        getRecordNetworkPlugin: BB => ({
+        getRecordNetworkPlugin: WW => ({
           name: "rrweb/network@1",
-          observer: LQ,
-          options: BB
+          observer: VN,
+          options: WW
         })
-      }, DD.__PosthogExtensions__.rrweb = {
-        record: LY,
+      }, LE.__PosthogExtensions__.rrweb = {
+        record: Vm,
         version: "v2",
-        wasMaxDepthReached: () => OG,
+        wasMaxDepthReached: () => mO,
         resetMaxDepthState() {
-          OG = !1, BG = !1
+          mO = !1, OO = !1
         },
-        getLastSnapshotCost: () => wB,
-        getMutationCost: () => YB({}, eB),
-        getDeferredStylesheetStats: () => YB({}, TB),
-        getDiscardedDurationSamples: () => mB,
-        getObserverInitFailures: () => HG.size ? Array.from(HG) : void 0,
+        getLastSnapshotCost: () => pW,
+        getMutationCost: () => mW({}, qW),
+        getDeferredStylesheetStats: () => mW({}, RW),
+        getDiscardedDurationSamples: () => uW,
+        getObserverInitFailures: () => zO.size ? Array.from(zO) : void 0,
         resetSnapshotCostState() {
-          LB = 0, gB = 0, rB = 0, uB = 0, mB = 0, XB = {
+          vW = 0, gW = 0, DW = 0, nW = 0, uW = 0, VW = {
             durationMs: 0,
             stylesheetMs: 0,
             nodeCount: 0,
             cssRuleCount: 0,
             nonDeferrableCssRuleCount: 0,
             deferredStylesheetCount: 0
-          }, wB = null, EB = null, cB = [], hB = 0, aB = 0, eB = {
+          }, pW = null, fW = null, CW = [], XW = 0, BW = 0, qW = {
             slowestBatchMs: 0
-          }, TB = {
+          }, RW = {
             deferredCount: 0,
             failedCount: 0,
             abandonedCount: 0,
@@ -8856,9 +8856,9 @@ export const modules = {
             slowestSliceMs: 0
           }
         }
-      }, DD.__PosthogExtensions__.initSessionRecording = (BB, OB) => new Ky(BB, OB)
+      }, LE.__PosthogExtensions__.initSessionRecording = (WW, iW) => new nc(WW, iW)
     }()
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

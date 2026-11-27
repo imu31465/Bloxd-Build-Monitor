@@ -1,0 +1,2139 @@
+.InGameUi[data-replay-ui-active] .DamageFeedback,
+body.DamageFeedbackArcsShown .InGameUi:not([data-replay-ui-active]) .DirectionalDamage {
+  display: none
+}
+
+.DamageFeedback {
+  display: contents;
+  pointer-events: none
+}
+
+.DamageFeedback .DamageFeedbackFlash,
+.DamageFeedback .DamageFeedbackLow {
+  inset: 0;
+  position: fixed
+}
+
+.DamageFeedback .DamageFeedbackShade {
+  inset: 0;
+  position: absolute
+}
+
+.DamageFeedback .DamageFeedbackLow {
+  opacity: 0;
+  transition: opacity .7s ease-out
+}
+
+.DamageFeedback .DamageFeedbackLow.Active .DamageFeedbackShade {
+  animation: DamageFeedbackHeartbeat 1.3s ease-out infinite
+}
+
+.DamageFeedback .DamageFeedbackLow.Critical .DamageFeedbackShade {
+  animation-duration: .85s
+}
+
+.DamageFeedback .DamageFeedbackShade {
+  background: radial-gradient(ellipse at 50% 50%, rgba(204, 20, 20, 0) 34%, rgba(204, 20, 20, .16) 46%, rgba(204, 20, 20, .34) 56%, rgba(128, 12, 12, .56) 72%, rgba(128, 12, 12, .76) 86%, rgba(49, 12, 0, .88) 100%)
+}
+
+.DamageFeedback .DamageFeedbackFlash {
+  opacity: 0
+}
+
+.DamageFeedback .DamageFeedbackFlash .DamageFeedbackFlashGlow {
+  background: radial-gradient(ellipse var(--glowRx) var(--glowRy) at var(--glowX) var(--glowY), rgba(204, 20, 20, .9) 0, rgba(204, 20, 20, .62) 18%, rgba(204, 20, 20, .3) 42%, rgba(204, 20, 20, .1) 70%, rgba(204, 20, 20, 0) 100%);
+  inset: 0;
+  position: absolute
+}
+
+.DamageFeedback .DamageFeedbackFlash .DamageFeedbackFlashGlow.Everywhere {
+  background: radial-gradient(ellipse at 50% 50%, rgba(204, 20, 20, 0) 55%, rgba(204, 20, 20, .3) 75%, rgba(204, 20, 20, .62) 90%, rgba(204, 20, 20, .9) 100%)
+}
+
+.DamageFeedback .DamageFeedbackArcs {
+  left: 50%;
+  position: fixed;
+  top: 50%
+}
+
+.DamageFeedback .DamageFeedbackArc {
+  height: 46vmin;
+  opacity: 0;
+  position: absolute;
+  translate: -50% -50%;
+  width: 46vmin
+}
+
+.DamageFeedback .DamageFeedbackArc .DamageFeedbackArcBand {
+  background: conic-gradient(from -34deg, rgba(231, 49, 49, 0) 0deg, rgba(231, 49, 49, .016) 2.8333333333deg, rgba(231, 49, 49, .064) 5.6666666667deg, rgba(231, 49, 49, .139) 8.5deg, rgba(231, 49, 49, .238) 11.3333333333deg, rgba(231, 49, 49, .352) 14.1666666667deg, rgba(231, 49, 49, .475) 17deg, rgba(231, 49, 49, .598) 19.8333333333deg, rgba(231, 49, 49, .713) 22.6666666667deg, rgba(231, 49, 49, .811) 25.5deg, rgba(231, 49, 49, .886) 28.3333333333deg, rgba(231, 49, 49, .934) 31.1666666667deg, rgba(231, 49, 49, .95) 34deg, rgba(231, 49, 49, .934) 36.8333333333deg, rgba(231, 49, 49, .886) 39.6666666667deg, rgba(231, 49, 49, .811) 42.5deg, rgba(231, 49, 49, .713) 45.3333333333deg, rgba(231, 49, 49, .598) 48.1666666667deg, rgba(231, 49, 49, .475) 51deg, rgba(231, 49, 49, .352) 53.8333333333deg, rgba(231, 49, 49, .238) 56.6666666667deg, rgba(231, 49, 49, .139) 59.5deg, rgba(231, 49, 49, .064) 62.3333333333deg, rgba(231, 49, 49, .016) 65.1666666667deg, rgba(231, 49, 49, 0) 68deg, transparent 0deg);
+  inset: 0;
+  -webkit-mask: radial-gradient(closest-side, transparent 92.8%, #000 94.2%, #000 98.6%, transparent 99.6%), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0h2L1 1Z'/%3E%3C/svg%3E") 50% .92vmin/2.40064vmin 1.936vmin no-repeat;
+  mask: radial-gradient(closest-side, transparent 92.8%, #000 94.2%, #000 98.6%, transparent 99.6%), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0h2L1 1Z'/%3E%3C/svg%3E") 50% .92vmin/2.40064vmin 1.936vmin no-repeat;
+  position: absolute
+}
+
+@keyframes DamageFeedbackHeartbeat {
+  0% {
+    opacity: .66
+  }
+
+  10% {
+    opacity: 1
+  }
+
+  20% {
+    opacity: .76
+  }
+
+  30% {
+    opacity: .94
+  }
+
+  55%,
+  to {
+    opacity: .66
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .DamageFeedback .DamageFeedbackLow.Active .DamageFeedbackShade {
+    animation: none
+  }
+}
+
+.ShootingStat {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  flex-direction: column;
+  padding: .35rem .5rem
+}
+
+.ShootingStat,
+.ShootingStat b {
+  align-items: center;
+  display: flex
+}
+
+.ShootingStat b {
+  gap: .3rem
+}
+
+.ShootingStat b.Gold {
+  color: #ffb914
+}
+
+.ShootingStat span {
+  color: #cfcfcf;
+  font-size: .75rem;
+  text-transform: uppercase
+}
+
+.GameBackgroundScreen.ShootingBoardOverlay {
+  z-index: 9
+}
+
+.ShootingBoardOverlay {
+  background: rgba(26, 31, 46, .6);
+  box-sizing: border-box;
+  padding: max(var(--notchTop), .75rem) max(var(--notchRight), .75rem) max(var(--notchBottom), .75rem) max(var(--notchLeft), .75rem)
+}
+
+.ShootingBoardOverlay .ShootingBoard {
+  background: #22283b;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  max-height: 100%;
+  text-align: left;
+  width: min(58rem, 100%)
+}
+
+.ShootingBoardOverlay .ShootingBoard.ShootingBoardFfa {
+  width: min(34rem, 100%)
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardHeader {
+  align-items: center;
+  background: #303a59;
+  display: flex;
+  gap: 1rem;
+  padding: .4rem .4rem .4rem .9rem
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardHeader h2 {
+  align-items: center;
+  display: flex;
+  font-size: 1.3rem;
+  gap: .5em;
+  margin: 0;
+  white-space: nowrap
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardHeader .ShootingBoardMeta {
+  color: #cfcfcf;
+  display: flex;
+  font-size: 1rem;
+  gap: 1rem;
+  margin-left: auto;
+  white-space: nowrap
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardHeader .ExitButton.ShootingBoardClose {
+  flex: none
+}
+
+@media(pointer:coarse) {
+  .ShootingBoardOverlay .ShootingBoard .ShootingBoardHeader .ExitButton.ShootingBoardClose .NewButton {
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardColumns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-color: #3c4b68 #22283b;
+  scrollbar-width: thin
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardColumns::-webkit-scrollbar {
+  height: 6px;
+  width: 6px
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardColumns::-webkit-scrollbar-track {
+  background-color: #22283b
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardColumns::-webkit-scrollbar-thumb {
+  background-color: #3c4b68;
+  border-radius: 0
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardColumn+.ShootingBoardColumn {
+  border-left: 1px solid #0f0f0f
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable td,
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable th {
+  padding: .3em .6em;
+  text-align: right;
+  white-space: nowrap
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable td:first-child,
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable th:first-child {
+  text-align: left;
+  width: auto
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable td:not(:first-child),
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable th:not(:first-child) {
+  width: 2.6em
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable td:last-child,
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable th:last-child {
+  width: 3.6em
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable thead th {
+  background: #2b3249;
+  color: #cfcfcf;
+  font-size: .8em
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable thead th abbr {
+  text-decoration: none
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable thead th .ShootingBoardTeam {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 1.25em;
+  gap: .5em;
+  justify-content: space-between
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable thead th .ShootingBoardTeam b {
+  font-size: 1.3em
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable thead th .ShootingBoardTeam .ShootingBoardYou {
+  color: #cfcfcf
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable.Team thead th {
+  background: color-mix(in srgb, var(--team) 55%, #1a1f2e)
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable tbody tr:nth-of-type(2n) {
+  background: rgba(57, 73, 128, .4)
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable tbody tr.Dead .ShootingBoardName {
+  color: #838383
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable tbody tr.Dead .ShootingBoardName .ProfilePicture {
+  filter: grayscale(1) brightness(.6)
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable tbody tr.Mine {
+  background: rgba(255, 185, 20, .15);
+  box-shadow: inset .3rem 0 0 #ffb914
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable tbody tr.Mine .ShootingBoardNameText {
+  color: #fcd373
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable td {
+  font-weight: 700
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardName {
+  align-items: center;
+  display: flex;
+  gap: .5em;
+  min-width: 0
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardName .ProfilePicture {
+  flex: none
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardName .ShootingBoardNameText {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardPlace {
+  color: #a4a4a4;
+  flex: none;
+  text-align: center;
+  width: 1.4em
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardPlace.Place1 {
+  color: #ffb914
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardPlace.Place2 {
+  color: #cfcfcf
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardPlace.Place3 {
+  color: #ff922b
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardTable .ShootingBoardScore {
+  color: #fff
+}
+
+.ShootingBoardOverlay .ShootingBoard.ShootingBoardFfa tbody tr:not(.Mine) {
+  box-shadow: inset .3rem 0 0 var(--team)
+}
+
+.ShootingBoardOverlay .ShootingBoard .ShootingBoardFooter {
+  border-top: 1px solid #0f0f0f;
+  color: #a4a4a4;
+  display: flex;
+  font-size: .85rem;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: .4rem .9rem
+}
+
+.ShootingVoteStrip {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  font-size: max(1rem, 10px);
+  margin-bottom: calc(.6rem + var(--over-keys-lift, 0px));
+  pointer-events: auto;
+  width: min(48rem, 96vw)
+}
+
+.ShootingVoteStrip .ShootingVoteHeader {
+  align-items: center;
+  background: #394980;
+  display: flex;
+  gap: .7rem;
+  padding: .3rem .4rem .3rem .7rem
+}
+
+.ShootingVoteStrip .ShootingVoteHeader .ShootingVoteTitle {
+  flex-shrink: 0;
+  font-weight: 800
+}
+
+.ShootingVoteStrip .ShootingVoteHeader .ShootingVoteHint {
+  color: #cfcfcf;
+  font-size: .85em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ShootingVoteStrip .ShootingVoteHeader .ShootingVoteHide {
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  color: #cfcfcf;
+  display: flex;
+  flex-shrink: 0;
+  font: inherit;
+  font-weight: 700;
+  gap: .4rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0 0 0 auto;
+  padding: .2rem .5rem;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(pointer:coarse) {
+  .ShootingVoteStrip .ShootingVoteHeader .ShootingVoteHide:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+@media(hover:hover) {
+  .ShootingVoteStrip .ShootingVoteHeader .ShootingVoteHide:hover {
+    color: #fff
+  }
+}
+
+.ShootingVoteStrip .ShootingVoteHeader .ShootingVoteHide.pad-focused {
+  color: #fff
+}
+
+@media(hover:none) {
+  .ShootingVoteStrip .ShootingVoteHeader .ShootingVoteHide:active {
+    color: #fff
+  }
+}
+
+.ShootingVoteStrip.Touch {
+  font-size: max(1rem, 11px);
+  width: min(48rem, 38vw)
+}
+
+.ShootingVoteStrip.Touch .ShootingVoteHeader .ShootingVoteHint {
+  display: none
+}
+
+.ShootingVoteStrip.Touch .ShootingVoteCards {
+  gap: .4rem;
+  padding: .4rem
+}
+
+.ShootingVoteStrip.Touch .ShootingMapCard .ShootingMapCardImage {
+  aspect-ratio: 7/2
+}
+
+.ShootingVoteStrip.Touch .ShootingMapCard .ShootingMapCardInfo {
+  padding: .2rem .4rem
+}
+
+.ShootingVoteStrip.Touch .ShootingMapCard .ShootingMapCardBar {
+  margin: 0 .4rem
+}
+
+.ShootingVoteStrip.Touch .ShootingMapCard .ShootingMapCardFooter {
+  min-height: 0;
+  padding: .15rem .4rem .25rem
+}
+
+.ShootingVoteStrip .ShootingVoteCards {
+  grid-gap: .5rem;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: .5rem
+}
+
+.ShootingVoteStrip .ShootingMapCard {
+  background: none;
+  background: rgba(57, 73, 128, .4);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: content-box;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-align: left;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+  .ShootingVoteStrip .ShootingMapCard:hover {
+    background: rgba(57, 73, 128, .6)
+  }
+}
+
+.ShootingVoteStrip .ShootingMapCard.pad-focused {
+  background: rgba(57, 73, 128, .6)
+}
+
+@media(hover:none) {
+  .ShootingVoteStrip .ShootingMapCard:active {
+    background: rgba(57, 73, 128, .6)
+  }
+}
+
+.ShootingVoteStrip .ShootingMapCard.Mine {
+  border-color: #ffb914
+}
+
+.ShootingVoteStrip .ShootingMapCard.Mine .ShootingMapCardBar i {
+  background: #ffb914
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage {
+  aspect-ratio: 2/1;
+  background: #1a1f2e;
+  position: relative
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage .SchematicImageContainer {
+  inset: 0;
+  position: absolute;
+  z-index: auto
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage .ShootingMapCardMutation,
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage .ShootingMapCardNew {
+  font-size: .75em;
+  font-weight: 900;
+  left: .4rem;
+  padding: .05rem .4rem;
+  position: absolute
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage .ShootingMapCardNew {
+  background: linear-gradient(125deg, #07940e, #1dd06d);
+  top: .4rem
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage .ShootingMapCardMutation {
+  background: #ffb914;
+  bottom: .4rem;
+  color: #1a1f2e;
+  letter-spacing: .05em;
+  text-transform: uppercase
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardImage .ShootingMapCardCheck {
+  background: #ffb914;
+  color: #1a1f2e;
+  display: grid;
+  height: 1.6em;
+  place-items: center;
+  position: absolute;
+  right: .4rem;
+  top: .4rem;
+  width: 1.6em
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardInfo {
+  align-items: center;
+  display: flex;
+  gap: .4rem;
+  padding: .35rem .5rem .25rem
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardInfo .ShootingMapCardName {
+  font-weight: 800;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardInfo .ShootingMapCardVotes {
+  font-feature-settings: "tnum";
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  gap: .3rem;
+  margin-left: auto
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardBar {
+  background: #1a1f2e;
+  height: .3rem;
+  margin: 0 .5rem;
+  position: relative
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardBar i {
+  background: #4f94f1;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: width .3s
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardFooter {
+  align-items: center;
+  display: flex;
+  gap: .4rem;
+  min-height: 1.6em;
+  padding: .25rem .5rem .35rem
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardFooter .ShootingMapCardHeads {
+  display: flex;
+  font-size: .9em;
+  gap: .15rem;
+  min-width: 0
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardFooter .ShootingMapCardHeads .ProfilePicture {
+  transform: translateY(-.25em)
+}
+
+.ShootingVoteStrip .ShootingMapCard .ShootingMapCardFooter .ShootingMapCardChance {
+  font-feature-settings: "tnum";
+  color: #cfcfcf;
+  flex-shrink: 0;
+  font-size: .8em;
+  font-variant-numeric: tabular-nums;
+  margin-left: auto
+}
+
+.ShootingVoteChip {
+  align-items: center;
+  background: none;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  color: #fff;
+  color: inherit;
+  display: flex;
+  font-size: max(1rem, 10px);
+  font: inherit;
+  gap: .6rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: .35rem .8rem;
+  pointer-events: auto;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(pointer:coarse) {
+  .ShootingVoteChip:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.ShootingVoteChip .ShootingVoteChipLabel {
+  color: #cfcfcf;
+  font-weight: 700
+}
+
+.ShootingVoteChip .ShootingVoteChipVote {
+  font-weight: 800
+}
+
+.ShootingVoteChip .ShootingVoteChipShop {
+  align-items: center;
+  border-left: 1px solid hsla(0, 0%, 95%, .1);
+  color: #cfcfcf;
+  display: flex;
+  font-size: .85em;
+  gap: .4rem;
+  padding-left: .6rem
+}
+
+@media(hover:hover) {
+  .ShootingVoteChip:hover {
+    background: #394980
+  }
+}
+
+.ShootingVoteChip.pad-focused {
+  background: #394980
+}
+
+@media(hover:none) {
+  .ShootingVoteChip:active {
+    background: #394980
+  }
+}
+
+body.ShootingVoteStripOpen .ControlsTutorialDiv {
+  bottom: 24rem
+}
+
+.ShootingLobbyStatusContainer {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: .6rem;
+  z-index: 6
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  gap: .35rem;
+  max-width: 60vw
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown,
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams {
+  align-items: center;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown {
+  gap: .6rem;
+  padding: .2rem 1rem
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownLabel {
+  color: #cfcfcf;
+  font-size: max(.85rem, 10px);
+  letter-spacing: .08em;
+  text-transform: uppercase
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownTime {
+  font-feature-settings: "tnum";
+  font-size: max(1.8rem, 18px);
+  font-variant-numeric: tabular-nums;
+  text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownTime .svg-inline--fa,
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownTime.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownTime .svg-inline--fa path:only-of-type,
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownTime.svg-inline--fa path:only-of-type {
+  stroke: #1a1f2e;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyCountdown .ShootingLobbyCountdownTime.Soon {
+  color: #1dd06d
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams {
+  font-size: max(1rem, 11px);
+  gap: .8rem;
+  padding: .3rem .5rem
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeamHint {
+  color: #cfcfcf;
+  font-weight: 700;
+  min-width: 0;
+  text-align: center
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam {
+  align-items: center;
+  border: 2px solid transparent;
+  color: var(--team);
+  display: flex;
+  flex-shrink: 0;
+  gap: .4rem;
+  padding: .15rem .5rem;
+  text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam .svg-inline--fa,
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam .svg-inline--fa path:only-of-type,
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam.svg-inline--fa path:only-of-type {
+  stroke: #1a1f2e;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam.Mine {
+  background: #394980;
+  border-color: var(--team)
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam .ShootingLobbyTeamCount {
+  font-feature-settings: "tnum";
+  color: #fff;
+  font-variant-numeric: tabular-nums
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyTeam.Full .ShootingLobbyTeamCount {
+  color: #ff8a80
+}
+
+.ShootingLobbyStatusContainer .ShootingLobbyStatus .ShootingLobbyTeams .ShootingLobbyPlayers {
+  font-feature-settings: "tnum";
+  align-items: center;
+  display: flex;
+  font-variant-numeric: tabular-nums;
+  gap: .5rem;
+  padding: 0 .4rem
+}
+
+.CubeWarfareScoreBarContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: .5rem;
+  transform: translateX(-50%);
+  z-index: 6
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareScoreBar {
+  align-items: stretch;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide {
+  --team: #a4a4a4;
+  align-items: center;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  display: flex;
+  gap: .6rem;
+  min-width: 8.5rem;
+  padding: .225rem .9rem .525rem;
+  position: relative
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Left {
+  border-right: 0;
+  justify-content: flex-end
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Right {
+  border-left: 0
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Ffa.Mine,
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Team-Blue,
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Team-Red {
+  background-color: color-mix(in srgb, var(--team) 70%, #1a1f2e)
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareYouTag {
+  background-color: #fff;
+  color: #1a1f2e;
+  font-size: max(.6rem, 8px);
+  font-weight: 900;
+  letter-spacing: .1em;
+  padding: 0 calc(.25rem - .1em) 0 .25rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  transform: translateY(-50%)
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Left .CubeWarfareYouTag {
+  left: .4rem
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Right .CubeWarfareYouTag {
+  right: .4rem
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareHeads {
+  grid-gap: .15rem;
+  display: grid;
+  font-size: .7rem;
+  gap: .15rem;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1.05rem)
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareHeads .CubeWarfareHead {
+  display: block
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareHeads .CubeWarfareHead.Dead .ProfilePicture {
+  filter: grayscale(1) brightness(.6);
+  opacity: .7
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideText {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 0
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideName {
+  display: flex;
+  font-size: max(.8rem, 9px);
+  font-weight: 800;
+  gap: .3rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideName .CubeWarfareSideLabel {
+  margin-right: -.08em
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideName .CubeWarfareSideWho {
+  letter-spacing: 0;
+  max-width: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: none
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideScore {
+  font-feature-settings: "tnum";
+  font-size: 2.1rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  line-height: 1
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareStrip {
+  background-color: var(--team);
+  bottom: 0;
+  height: .3rem;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareStrip.Progress {
+  background-color: rgba(26, 31, 46, .6)
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareStrip i {
+  background-color: #fff;
+  inset: 0;
+  position: absolute;
+  transition: transform .3s ease-out
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Left .CubeWarfareStrip i {
+  transform-origin: right
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareSide.Right .CubeWarfareStrip i {
+  transform-origin: left
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareClock {
+  align-items: center;
+  background-color: #22283b;
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 6.2rem;
+  padding: .25rem .9rem
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareClock .CubeWarfareClockTime {
+  font-feature-settings: "tnum";
+  font-size: 1.7rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  line-height: 1
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareClock .CubeWarfareClockTime.Urgent {
+  color: #fcd373
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareClock .CubeWarfareClockLabel {
+  color: #cfcfcf;
+  font-size: max(.65rem, 8px);
+  font-weight: 800;
+  letter-spacing: .1em;
+  margin-right: -.1em;
+  margin-top: .15rem;
+  text-transform: uppercase;
+  white-space: nowrap
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareScoreLine {
+  align-items: center;
+  background-color: rgba(26, 31, 46, .85);
+  color: #fff;
+  display: flex;
+  font-size: .9rem;
+  gap: .35rem;
+  padding: .15rem .55rem;
+  white-space: nowrap
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareScoreLine .CubeWarfareScoreLineItem {
+  height: 1.4rem;
+  width: 1.4rem
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareScoreLine .CubeWarfareScoreLineItem:first-child {
+  margin-left: -.35rem
+}
+
+.CubeWarfareScoreBarContainer .CubeWarfareScoreLine .CubeWarfareScoreLineItem:last-child {
+  margin-right: -.1rem
+}
+
+@supports(text-box:trim-both cap alphabetic) {
+  .CubeWarfareScoreBarContainer .CubeWarfareSide {
+    padding-bottom: .875rem;
+    padding-top: .575rem
+  }
+
+  .CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareYouTag {
+    padding-bottom: .2rem;
+    padding-top: .2rem
+  }
+
+  .CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideText {
+    gap: .45rem
+  }
+
+  .CubeWarfareScoreBarContainer .CubeWarfareSide .CubeWarfareSideName .CubeWarfareSideWho {
+    margin: -.3em 0;
+    padding: .3em 0
+  }
+
+  .CubeWarfareScoreBarContainer .CubeWarfareClock .CubeWarfareClockLabel {
+    margin-top: .5rem
+  }
+
+  .CubeWarfareScoreBarContainer .CubeWarfareScoreLine {
+    min-height: 1.2rem
+  }
+
+  .CubeWarfareScoreBarContainer .CubeWarfareClockLabel,
+  .CubeWarfareScoreBarContainer .CubeWarfareClockTime,
+  .CubeWarfareScoreBarContainer .CubeWarfareScoreLine>:not(.CubeWarfareScoreLineItem),
+  .CubeWarfareScoreBarContainer .CubeWarfareSideLabel,
+  .CubeWarfareScoreBarContainer .CubeWarfareSideScore,
+  .CubeWarfareScoreBarContainer .CubeWarfareSideWho,
+  .CubeWarfareScoreBarContainer .CubeWarfareYouTag {
+    text-box: trim-both cap alphabetic
+  }
+}
+
+.CubeWarfarePerkColumn {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin-bottom: .75rem;
+  pointer-events: none
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerkPoints {
+  font-feature-settings: "tnum";
+  align-items: center;
+  display: flex;
+  font-size: 1.05rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  gap: .3rem
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk {
+  align-items: center;
+  display: flex;
+  gap: .45rem
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkTile {
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #a4a4a4;
+  display: grid;
+  flex: none;
+  font-size: 1.25rem;
+  height: 2.6rem;
+  overflow: hidden;
+  place-items: center;
+  position: relative;
+  width: 2.6rem
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkTile .CubeWarfarePerkFill {
+  background-color: rgba(63, 210, 242, .45);
+  inset: 0;
+  position: absolute;
+  transform-origin: bottom;
+  transition: transform .3s ease-out
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkTile svg {
+  position: relative
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk.Next .CubeWarfarePerkTile {
+  color: #fff
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk.Reached .CubeWarfarePerkTile {
+  background-color: #ffb914;
+  border-color: #fff;
+  color: #1a1f2e
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkText {
+  display: flex;
+  flex-direction: column;
+  font-size: .85rem;
+  line-height: 1.15;
+  white-space: nowrap
+}
+
+.CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkText small {
+  color: #cfcfcf;
+  font-size: max(.75rem, 9px)
+}
+
+.CubeWarfarePerkColumnTouch {
+  bottom: calc(var(--hud-inset-bottom) + 40px);
+  left: calc(var(--hud-inset-left) + .5rem);
+  pointer-events: none;
+  position: fixed;
+  z-index: 2
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn {
+  gap: .2rem;
+  margin: 0
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn .CubeWarfarePerkPoints {
+  font-size: max(.9rem, 10px)
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn .CubeWarfarePerk {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: .1rem
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkTile {
+  font-size: 1.05rem;
+  height: 2.2rem;
+  width: 2.2rem
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn .CubeWarfarePerk .CubeWarfarePerkText {
+  display: none
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn .CubeWarfarePerk.Next .CubeWarfarePerkText {
+  display: flex
+}
+
+.CubeWarfarePerkColumnTouch .CubeWarfarePerkColumn .CubeWarfarePerk.Next .CubeWarfarePerkText .CubeWarfarePerkName {
+  display: none
+}
+
+.CubeWarfareKillPop {
+  align-items: center;
+  animation: CubeWarfarePop .35s cubic-bezier(.2, .8, .2, 1.2) both;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem
+}
+
+.CubeWarfareKillPop .CubeWarfareMultiKill {
+  color: #fcd373;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.CubeWarfareKillPop .CubeWarfareKillLine {
+  align-items: center;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  font-size: 1.35rem;
+  font-weight: 900;
+  gap: .5rem;
+  padding: .25rem .9rem;
+  white-space: nowrap
+}
+
+.CubeWarfareKillPop .CubeWarfareKillLine .CubeWarfareKillTag {
+  color: #ff8a80;
+  font-size: max(.8rem, 9px);
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.CubeWarfareKillPop .CubeWarfareKillLine .CubeWarfareKillName {
+  max-width: 18rem;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.CubeWarfareKillPop .CubeWarfareKillRewards {
+  display: flex;
+  gap: .4rem
+}
+
+.CubeWarfareKillPop .CubeWarfareKillRewards .CubeWarfareReward {
+  align-items: center;
+  background-color: rgba(26, 31, 46, .6);
+  display: flex;
+  font-size: 1rem;
+  font-weight: 900;
+  gap: .3rem;
+  padding: .1rem .5rem
+}
+
+.CubeWarfareKillPop .CubeWarfareKillRewards .CubeWarfareReward.Gold {
+  color: #fcd373
+}
+
+.CubeWarfareKillPop .CubeWarfareKillRewards .CubeWarfareReward.Headshot {
+  color: #3fd2f2
+}
+
+.CubeWarfareTierBanner {
+  align-items: center;
+  animation: CubeWarfarePop .4s cubic-bezier(.2, .8, .2, 1.2) both;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #ffb914;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-shadow: 0 0 1rem rgba(255, 185, 20, .45), .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  gap: .7rem;
+  padding: .45rem 1rem .45rem .5rem;
+  white-space: nowrap
+}
+
+.CubeWarfareTierBanner .CubeWarfareTierIcon {
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #1a1f2e;
+  display: grid;
+  font-size: 1.4rem;
+  height: 2.6rem;
+  place-items: center;
+  width: 2.6rem
+}
+
+.CubeWarfareTierBanner .CubeWarfareTierTitle {
+  color: #fcd373;
+  font-size: max(.75rem, 9px);
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.CubeWarfareTierBanner .CubeWarfareTierPerk {
+  font-size: 1.2rem;
+  font-weight: 900
+}
+
+@keyframes CubeWarfarePop {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.CubeWarfareWallet {
+  font-feature-settings: "tnum";
+  align-items: center;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  gap: .35rem;
+  height: 2.5rem;
+  padding: 0 .6rem;
+  pointer-events: none
+}
+
+.CubeWarfareWallet.Bump {
+  animation: CubeWarfareBump .5s ease-out
+}
+
+@keyframes CubeWarfareBump {
+  30% {
+    color: #fcd373;
+    transform: scale(1.15)
+  }
+}
+
+.CubeWarfareProtection {
+  align-items: center;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #3fd2f2;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  gap: .8rem;
+  overflow: hidden;
+  padding: .6rem 1.2rem .8rem .9rem;
+  pointer-events: none;
+  position: relative;
+  white-space: nowrap
+}
+
+.CubeWarfareProtection .CubeWarfareProtectionIcon {
+  color: #3fd2f2;
+  font-size: 2.2rem
+}
+
+.CubeWarfareProtection .CubeWarfareProtectionText {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.15
+}
+
+.CubeWarfareProtection .CubeWarfareProtectionText small {
+  color: #cfcfcf;
+  font-size: max(.9rem, 9px);
+  font-weight: 700
+}
+
+.CubeWarfareProtection .CubeWarfareProtectionDrain {
+  animation: CubeWarfareDrain var(--cubeWarfareDrainMs) linear both;
+  background-color: #3fd2f2;
+  bottom: 0;
+  height: .3rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform-origin: left
+}
+
+.CubeWarfareProtectionEdge {
+  animation: CubeWarfareEdgePulse 1.2s ease-in-out infinite;
+  box-shadow: inset 0 0 0 .3rem rgba(63, 210, 242, .7), inset 0 0 3rem rgba(63, 210, 242, .35);
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .CubeWarfareProtectionEdge {
+    animation: none
+  }
+}
+
+@keyframes CubeWarfareDrain {
+  0% {
+    transform: scaleX(1)
+  }
+
+  to {
+    transform: scaleX(0)
+  }
+}
+
+@keyframes CubeWarfareEdgePulse {
+  50% {
+    opacity: .55
+  }
+}
+
+.CubeWarfareOverHotbar {
+  height: 0;
+  pointer-events: none;
+  position: relative;
+  width: 0
+}
+
+.CubeWarfareCentreSlot {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  pointer-events: none;
+  transform: translateX(-50%)
+}
+
+.CubeWarfareCentreSlot.OverHotbar {
+  bottom: 1rem;
+  left: 0;
+  position: absolute
+}
+
+.CubeWarfareCentreSlot.AboveCrosshair,
+.CubeWarfareCentreSlot.BelowCrosshair {
+  left: 50%;
+  position: fixed;
+  z-index: 2
+}
+
+.CubeWarfareCentreSlot.Hidden {
+  visibility: hidden
+}
+
+.CubeWarfareCentreSlot.AboveCrosshair {
+  bottom: calc(50% + max(1.5rem, 28px))
+}
+
+.CubeWarfareCentreSlot.BelowCrosshair {
+  top: calc(50% + max(2rem, 28px))
+}
+
+.CubeWarfareAmmo {
+  align-items: center;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  display: flex;
+  gap: .6rem;
+  height: 2.5rem;
+  margin-left: var(--hotbar-keys-reach, 0);
+  margin-right: auto;
+  order: -1;
+  padding: 0 .7rem;
+  pointer-events: none
+}
+
+.CubeWarfareAmmo .CubeWarfareAmmoMag {
+  font-feature-settings: "tnum";
+  font-size: 1.7rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 900;
+  line-height: 1
+}
+
+.CubeWarfareAmmo .CubeWarfareAmmoClip {
+  color: #cfcfcf;
+  font-size: 1rem
+}
+
+.CubeWarfareAmmo.Low .CubeWarfareAmmoMag {
+  color: #ff8a80
+}
+
+.CubeWarfareAmmo .CubeWarfareAmmoReloading {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: .2rem;
+  position: relative;
+  white-space: nowrap
+}
+
+.CubeWarfareAmmo .CubeWarfareAmmoReloading .CubeWarfareAmmoReloadBar {
+  animation: CubeWarfareReload var(--cubeWarfareReloadMs) linear both;
+  background-color: #fff;
+  display: block;
+  height: .3rem;
+  transform-origin: left
+}
+
+.CubeWarfareAmmo .CubeWarfareAmmoGun {
+  height: 1.8rem;
+  width: 3.4rem
+}
+
+html.TouchHotbar .CubeWarfareAmmo .CubeWarfareAmmoGun {
+  display: none
+}
+
+.CubeWarfareAmmo .CubeWarfareAmmoKey {
+  font-size: .8rem
+}
+
+@keyframes CubeWarfareReload {
+  0% {
+    transform: scaleX(0)
+  }
+
+  to {
+    transform: scaleX(1)
+  }
+}
+
+.CubeWarfareCoin {
+  color: #ffb914
+}
+
+body.CubeWarfareUi .DamageFeedback .DamageFeedbackArcs {
+  z-index: 7
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-top: var(--cubeWarfareKillfeedOffset, .3rem)
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  font-size: 1rem;
+  font-weight: 800;
+  gap: .45rem;
+  margin: 0;
+  padding: .25rem .55rem;
+  white-space: nowrap
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper.Local {
+  border-color: #ffb914;
+  box-shadow: 0 0 1rem rgba(255, 185, 20, .45), .2rem .25rem 0 rgba(0, 0, 0, .32)
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedDeadName,
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedKillerName {
+  margin: 0;
+  max-width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedKillerName {
+  color: color-mix(in srgb, var(--killfeedKillerColour, #fff) 65%, #fff)
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedDeadName {
+  color: color-mix(in srgb, var(--killfeedDeadColour, #fff) 65%, #fff)
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedKillstreak {
+  background-color: #ffb914;
+  color: #1a1f2e;
+  font-size: .7rem;
+  font-weight: 900;
+  padding: 0 .25rem;
+  text-shadow: none
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedItem {
+  height: 1.5rem;
+  margin: 0;
+  width: 1.5rem
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedItem.Gun {
+  width: 3.2rem
+}
+
+body.CubeWarfareUi .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedHeadshotIcon {
+  color: #fcd373;
+  font-size: .95rem
+}
+
+body.CubeWarfareUi.CubeWarfareFfa .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedDeadName,
+body.CubeWarfareUi.CubeWarfareFfa .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedKillerName {
+  color: #fff
+}
+
+body.CubeWarfareUi.CubeWarfareFfa .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedDeadName:before,
+body.CubeWarfareUi.CubeWarfareFfa .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedKillerName:before {
+  border: 1px solid #0f0f0f;
+  content: "";
+  display: inline-block;
+  height: .7em;
+  margin-right: .35rem;
+  width: .7em
+}
+
+body.CubeWarfareUi.CubeWarfareFfa .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedKillerName:before {
+  background-color: var(--killfeedKillerColour)
+}
+
+body.CubeWarfareUi.CubeWarfareFfa .InGameUi:not([data-replay-ui-active]) .Killfeed .IndividualKillWrapper .KillfeedDeadName:before {
+  background-color: var(--killfeedDeadColour)
+}
+
+.ShootingDeathCard {
+  --killer: #ff8a80;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: .6rem;
+  text-align: left;
+  width: min(36rem, 90vw)
+}
+
+@media(min-width:926px) {
+  .ShootingDeathCard {
+    width: clamp(22rem, 100vw - 2*(300px + 2rem) - 2rem - 8px, 36rem)
+  }
+}
+
+.ShootingDeathCard .ShootingDeathKiller {
+  grid-gap: .9rem;
+  align-items: center;
+  background: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: grid;
+  gap: .9rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  padding: .7rem .9rem
+}
+
+.ShootingDeathCard .ShootingDeathHead {
+  display: grid;
+  font-size: 2.4rem;
+  height: 3.6rem;
+  place-items: center;
+  width: 3.6rem
+}
+
+.ShootingDeathCard .ShootingDeathHead.ShootingDeathSkull {
+  background: #1a1f2e;
+  color: #ff8a80;
+  font-size: 1.8rem
+}
+
+.ShootingDeathCard .ShootingDeathWho {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0
+}
+
+.ShootingDeathCard .ShootingDeathWho .ShootingDeathEyebrow {
+  color: #ff8a80;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.ShootingDeathCard .ShootingDeathWho .ShootingDeathName {
+  color: var(--killer);
+  font-size: 1.7rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ShootingDeathCard .ShootingDeathWho .ShootingDeathWeapon {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-size: .95rem;
+  gap: .4rem
+}
+
+.ShootingDeathCard .ShootingDeathWho .ShootingDeathWeapon .ShootingDeathGun {
+  display: grid;
+  height: 1.6rem;
+  place-items: center;
+  width: 1.6rem
+}
+
+.ShootingDeathCard .ShootingDeathWho .ShootingDeathWeapon .ShootingDeathGun .ItemTwoDRepresentation {
+  height: 100%;
+  width: 100%
+}
+
+.ShootingDeathCard .ShootingDeathWho .ShootingDeathWeapon .ShootingDeathHeadshot {
+  color: #fcd373
+}
+
+.ShootingDeathCard .ShootingDeathRing {
+  display: grid;
+  height: 4.4rem;
+  place-items: center;
+  position: relative;
+  width: 4.4rem
+}
+
+.ShootingDeathCard .ShootingDeathRing>svg {
+  inset: 0;
+  position: absolute;
+  transform: rotate(-90deg)
+}
+
+.ShootingDeathCard .ShootingDeathRing circle {
+  fill: none;
+  stroke-width: 4
+}
+
+.ShootingDeathCard .ShootingDeathRing .ShootingDeathRingTrack {
+  fill: #1a1f2e;
+  stroke: hsla(0, 0%, 95%, .1)
+}
+
+.ShootingDeathCard .ShootingDeathRing .ShootingDeathRingFill {
+  stroke: #fff;
+  transition: stroke-dashoffset 1s linear
+}
+
+.ShootingDeathCard .ShootingDeathRing b {
+  font-size: 1.8rem;
+  position: relative
+}
+
+.ShootingDeathCard .ShootingDeathLife {
+  display: flex;
+  gap: .4rem
+}
+
+.ShootingDeathCard .ShootingDeathLife .ShootingStat {
+  background: #3c4b68;
+  flex: 1 1
+}
+
+.ShootingDeathCard .ShootingDeathLife .ShootingStat b {
+  font-size: 1.3rem
+}
+
+.ShootingDeathCard .ShootingDeathActions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem .8rem
+}
+
+.ShootingDeathCard .ShootingDeathActions .ShootingDeathLoadout {
+  flex: none;
+  font-size: 1.15rem;
+  min-height: 44px
+}
+
+.ShootingDeathCard .ShootingDeathActions .ShootingDeathLoadout .ShootingDeathLoadoutText {
+  align-items: center;
+  display: flex;
+  gap: .5em
+}
+
+.ShootingDeathCard .ShootingDeathActions .ShootingDeathStatus {
+  flex: 1 1 10rem;
+  font-size: 1.4rem;
+  text-align: center
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.ShootingResults {
+  --result: #ffb914;
+  align-items: center;
+  animation: ShootingResultsFadeIn .25s ease-out both;
+  background: rgba(26, 31, 46, .85);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  inset: 0;
+  justify-content: center;
+  padding: max(var(--notchTop), 1rem) 1rem max(var(--notchBottom), 1rem);
+  pointer-events: none;
+  position: fixed;
+  z-index: 7
+}
+
+.ShootingResults.Lost {
+  --result: #fc6464
+}
+
+.ShootingResults .ShootingResultsTitle {
+  animation: ShootingResultsPop .5s cubic-bezier(.2, .8, .2, 1.2) both;
+  color: var(--result);
+  font-size: min(5.5rem, 12vw, 14vh);
+  letter-spacing: .06em;
+  line-height: 1;
+  text-transform: uppercase
+}
+
+.ShootingResults .ShootingResultsScore {
+  align-items: center;
+  display: flex;
+  font-size: 1.3rem;
+  gap: .8rem
+}
+
+.ShootingResults .ShootingResultsScore b {
+  color: var(--team);
+  font-size: 2.2rem
+}
+
+.ShootingResults .ShootingResultsScore .ShootingResultsDash,
+.ShootingResults .ShootingResultsScore .ShootingResultsTeam {
+  color: #cfcfcf
+}
+
+.ShootingResults .ShootingResultsWhy {
+  color: #cfcfcf;
+  font-size: .95rem;
+  margin-top: -.6rem
+}
+
+.ShootingResults .ShootingResultsPodium {
+  align-items: flex-end;
+  display: flex;
+  gap: .7rem;
+  margin-top: 1rem
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard {
+  --place: #cfcfcf;
+  align-items: center;
+  background: #22283b;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: .7rem .6rem .6rem;
+  position: relative;
+  width: min(11rem, 28vw)
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard.Place1 {
+  --place: #ffb914;
+  padding-top: 1.2rem
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard.Place3 {
+  --place: #ff922b
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard.Mine {
+  background: #303a59;
+  outline: 2px solid #ffb914;
+  outline-offset: -2px
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard .ShootingPodiumCrown {
+  color: #ffb914;
+  filter: drop-shadow(0 0 .08rem rgba(0, 0, 0, .7));
+  font-size: 1.8rem;
+  position: absolute;
+  top: -1.4rem
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard .ShootingPodiumHead {
+  font-size: 2.4rem;
+  isolation: isolate;
+  margin-bottom: .3em
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard.Place1 .ShootingPodiumHead {
+  font-size: 3rem
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard .ShootingPodiumPlace {
+  color: var(--place);
+  font-size: .8rem;
+  letter-spacing: .1em;
+  position: relative;
+  text-transform: uppercase
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard .ShootingPodiumName {
+  font-size: 1.05rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard.Team .ShootingPodiumName {
+  color: var(--team)
+}
+
+.ShootingResults .ShootingResultsPodium .ShootingPodiumCard .ShootingPodiumStats {
+  color: #cfcfcf;
+  font-size: .85rem
+}
+
+.ShootingResults .ShootingResultsYou {
+  display: flex;
+  gap: .4rem
+}
+
+.ShootingResults .ShootingResultsYou .ShootingStat {
+  background: rgba(38, 52, 93, .85);
+  min-width: 6.5rem;
+  padding: .4rem .6rem
+}
+
+.ShootingResults .ShootingResultsYou .ShootingStat b {
+  font-size: 1.4rem
+}
+
+.ShootingResults .ShootingResultsNext {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-size: 1rem;
+  gap: .6rem
+}
+
+.ShootingResults .ShootingResultsNext .ShootingResultsBar {
+  background: #1a1f2e;
+  height: .4rem;
+  position: relative;
+  width: 10rem
+}
+
+.ShootingResults .ShootingResultsNext .ShootingResultsBar i {
+  animation: ShootingResultsDrain var(--lobbyMs) linear calc(var(--lobbyElapsedMs)*-1) both;
+  background: #f2f2f2;
+  inset: 0;
+  position: absolute;
+  transform-origin: left
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .ShootingResults {
+    gap: .6rem
+  }
+
+  .ShootingResults .ShootingResultsTitle {
+    font-size: min(3.6rem, 16vh)
+  }
+
+  .ShootingResults .ShootingResultsPodium {
+    margin-top: .6rem
+  }
+
+  .ShootingResults .ShootingResultsPodium .ShootingPodiumCard {
+    padding: .5rem .4rem .4rem
+  }
+
+  .ShootingResults .ShootingResultsPodium .ShootingPodiumCard .ShootingPodiumHead {
+    font-size: 1.8rem
+  }
+
+  .ShootingResults .ShootingResultsPodium .ShootingPodiumCard.Place1 .ShootingPodiumHead {
+    font-size: 2.2rem
+  }
+}
+
+@keyframes ShootingResultsFadeIn {
+  0% {
+    opacity: 0
+  }
+}
+
+@keyframes ShootingResultsPop {
+  0% {
+    opacity: 0;
+    transform: scale(1.4)
+  }
+}
+
+@keyframes ShootingResultsDrain {
+  0% {
+    transform: scaleX(1)
+  }
+
+  to {
+    transform: scaleX(0)
+  }
+}

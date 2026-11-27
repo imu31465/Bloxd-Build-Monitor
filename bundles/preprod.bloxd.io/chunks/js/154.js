@@ -1,249 +1,502 @@
 export const id = 154;
-export const ids = [154];
+export const ids = [154, 159, 160];
 export const modules = {
-  7176: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => AB,
-      g: () => VB,
-      h: () => RB,
-      l: () => NB
+  42022: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => ZW,
+      installListedShaderPack: () => tW
     });
-    var YB = GB(7179);
-    const DB = 6,
-      QB = 3,
-      oB = 1,
-      jB = 2,
-      yB = 4,
-      JB = 8,
-      MB = 16,
-      PB = 32,
-      zB = 64,
-      lB = 128,
-      pB = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
-
-    function qB(BB) {
-      if (!BB) return 0;
-      const OB = pB.indexOf(BB);
-      if (OB <= 0) throw new Error(`"${BB}" is not a shader pack hook function`);
-      return OB
-    }
-
-    function ZB(BB) {
-      if (0 === BB) return null;
-      const OB = pB[BB];
-      if (void 0 === OB) throw new Error(`${BB} is not a shader pack hook function id`);
-      return OB
-    }
-
-    function NB(BB) {
-      const OB = YB.e.length;
-      return {
-        strict: BB >= OB,
-        program: YB.e[BB % OB]
-      }
-    }
-
-    function RB(BB) {
-      return Number(BB.strict) * YB.e.length + YB.e.indexOf(BB.program)
-    }
-
-    function WB(BB) {
-      return "" === BB ? [] : BB.split(" ")
-    }
-
-    function AB(BB) {
-      const OB = {
-        variantFlags: new Uint8Array(DB),
-        hooks: new Uint8Array(DB * QB),
-        moduleCodes: Array(DB).fill(""),
-        reads: Array(2 * DB).fill("")
+    var mW = OW(7570),
+      EW = OW(5970),
+      NW = OW(1185),
+      PW = OW(7621),
+      LW = OW(5961),
+      cW = OW(7656),
+      wW = OW(7648);
+    async function tW(WW) {
+      const iW = await (0, PW.loadPageShaderPackCompiler)();
+      if (null === iW) return {
+        kind: "failed",
+        reason: "compiler"
       };
-      for (const GB of BB) {
-        const BB = RB(GB.key),
-          YB = (BB, OB) => null === GB.hooks.surface || GB.reads.fragment.includes(BB) ? 0 : OB;
-        OB.variantFlags[BB] = (GB.sceneDepth ? oB : 0) | (GB.movesVertices ? jB : 0) | (GB.sunShadow ? yB : 0) | (GB.airShadow ? JB : 0) | (GB.discards ? MB : 0) | YB("localPosition", PB) | YB("enchantSpeed", zB) | YB("enchantTier", lB), OB.hooks[BB * QB] = qB(GB.hooks.vertex), OB.hooks[BB * QB + 1] = qB(GB.hooks.surface), OB.hooks[BB * QB + 2] = qB(GB.hooks.light), OB.moduleCodes[BB] = GB.moduleCode, OB.reads[2 * BB] = GB.reads.vertex.join(" "), OB.reads[2 * BB + 1] = GB.reads.fragment.join(" ")
+      const OW = await ZW(WW, iW);
+      return "failed" === OW.kind ? OW : await (0, cW.saveShaderPack)(OW.stored, iW) ? ((0, cW.markShaderPackChangePending)(), OW) : {
+        kind: "failed",
+        reason: "save"
       }
-      return OB
     }
-
-    function VB(BB) {
-      const {
-        hooks: OB,
-        moduleCodes: GB,
-        reads: YB
-      } = BB;
-      return Array.from(BB.variantFlags, ((BB, DB) => {
-        const PB = DB * QB;
-        return {
-          key: NB(DB),
-          hooks: {
-            vertex: ZB(OB[PB]),
-            surface: ZB(OB[PB + 1]),
-            light: ZB(OB[PB + 2])
-          },
-          moduleCode: GB[DB],
-          sceneDepth: 0 !== (BB & oB),
-          sunShadow: 0 !== (BB & yB),
-          airShadow: 0 !== (BB & JB),
-          movesVertices: 0 !== (BB & jB),
-          discards: 0 !== (BB & MB),
-          reads: {
-            vertex: WB(YB[2 * DB]),
-            fragment: WB(YB[2 * DB + 1])
+    async function ZW(WW, iW) {
+      const OW = await async function(WW) {
+        let {
+          packId: iW,
+          sourceHash: OW
+        } = WW;
+        try {
+          const WW = await fetch(`${NW.clientSideServerUrls.s3Url}/${(0,mW.L)(iW,OW)}`, {
+            headers: {
+              Accept: "application/json"
+            }
+          });
+          if (!WW.ok) return console.error(`Failed to download shader pack ${iW} (${WW.status})`), null;
+          const EW = await WW.json();
+          return "object" !== typeof EW || null === EW ? (console.error(`Shader pack ${iW}'s source isn't an object`), null) : EW
+        } catch (EW) {
+          return console.error(`Failed to download shader pack ${iW}`, EW), null
+        }
+      }(WW);
+      if (null === OW) return {
+        kind: "failed",
+        reason: "download"
+      };
+      if (!(0, LW.g)(OW.apiVersion)) return {
+        kind: "failed",
+        reason: "apiVersion"
+      };
+      const PW = (0, EW.x)(OW.files);
+      if ("string" === typeof PW) return console.error(`A listed shader pack breaks the pack rules: ${PW}`), {
+        kind: "failed",
+        reason: "invalid"
+      };
+      const tW = await (0, wW.g)(iW, PW);
+      if (!1 === (null === tW || void 0 === tW ? void 0 : tW.ok)) return {
+        kind: "failed",
+        reason: "errors"
+      };
+      const ZW = {
+        manifest: {
+          apiVersion: OW.apiVersion,
+          name: WW.name,
+          author: WW.ownerName,
+          description: WW.description || null,
+          keepCircleShadows: !0 === OW.keepCircleShadows
+        },
+        files: PW
+      };
+      return {
+        kind: "loaded",
+        stored: (0, cW.toStoredShaderPack)(ZW, tW, {
+          packId: WW.packId,
+          sourceHash: WW.sourceHash
+        })
+      }
+    }
+  },
+  44906: (WW, iW, OW) => {
+    OW.d(iW, {
+      followListingUpdates: () => xW
+    });
+    var mW = OW(192),
+      EW = OW(25),
+      NW = OW(1584),
+      PW = OW(1111),
+      LW = OW(7621),
+      cW = OW(5961),
+      wW = OW(42022),
+      tW = OW(7656);
+    const ZW = ["apiVersion", "invalid", "errors"];
+    async function xW(WW, iW) {
+      const OW = await PW.userContextManager.getCurrentUserContext(),
+        xW = await NW.e.getShaderPackVersions(OW, [iW.packId]),
+        lW = function(WW, iW, OW) {
+          var mW;
+          if (void 0 === OW || "unlisted" === OW.status) return {
+            kind: "none"
+          };
+          if ("banned" === OW.status) return {
+            kind: "remove"
+          };
+          if (!(0, cW.g)(OW.apiVersion)) return {
+            kind: "none"
+          };
+          const {
+            sourceHash: EW,
+            name: NW,
+            ownerName: PW,
+            description: LW
+          } = OW;
+          return EW !== iW.sourceHash && EW !== iW.rejectedSourceHash ? {
+            kind: "update",
+            sourceHash: EW,
+            name: NW,
+            ownerName: PW,
+            description: LW
+          } : NW !== WW.manifest.name || PW !== WW.manifest.author || (LW || null) !== (null !== (mW = WW.manifest.description) && void 0 !== mW ? mW : null) ? {
+            kind: "rename",
+            name: NW,
+            ownerName: PW,
+            description: LW
+          } : {
+            kind: "none"
+          }
+        }(WW, iW, (0, mW.c)(xW, iW.packId));
+      if ("update" === lW.kind && "landingPage" !== EW.d.get("gameState")) return !1;
+      const AW = "update" === lW.kind || "rename" === lW.kind,
+        bW = AW ? await (0, LW.loadPageShaderPackCompiler)() : null;
+      if (AW && null === bW) return console.warn(`Didn't follow shader pack ${iW.packId}'s listing: the shader pack compiler couldn't load`), !0;
+      const jW = await async function(WW, iW, OW, mW) {
+        switch (OW.kind) {
+          case "none":
+            return;
+          case "remove":
+            return null;
+          case "rename":
+            return {
+              ...WW, manifest: {
+                ...WW.manifest,
+                name: OW.name,
+                author: OW.ownerName,
+                description: OW.description || null
+              }
+            };
+          case "update": {
+            if (null === mW) return;
+            const {
+              sourceHash: EW,
+              name: NW,
+              ownerName: PW,
+              description: LW
+            } = OW, cW = await (0, wW.e)({
+              packId: iW.packId,
+              sourceHash: EW,
+              name: NW,
+              ownerName: PW,
+              description: LW
+            }, mW);
+            if ("loaded" === cW.kind && null !== cW.stored.validation) return cW.stored;
+            const tW = "failed" === cW.kind ? cW.reason : "no WebGPU device could check it";
+            return console.warn(`Didn't update shader pack ${iW.packId}: ${tW}`), "failed" === cW.kind && ZW.includes(cW.reason) ? {
+              ...WW,
+              listing: {
+                ...iW,
+                rejectedSourceHash: EW
+              }
+            } : void 0
           }
         }
+      }(WW, iW, lW, bW);
+      return void 0 === jW || (await (0, tW.replaceShaderPack)(WW, jW, bW) ? (null !== jW && jW.files === WW.files || (0, tW.markShaderPackChangePending)(), !0) : (console.warn("Didn't apply the shader pack listing's update: the stored pack changed or couldn't be written"), !0))
+    }
+  },
+  7656: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      forgetShaderPackActiveHint: () => HW,
+      isOtherApiVersion: () => yW,
+      isShaderPackActive: () => MW,
+      isShaderPackChangePending: () => YW,
+      markShaderPackChangePending: () => SW,
+      pageShaderPackValidationVersion: () => TW,
+      reconcileStoredShaderPackHint: () => hW,
+      removeShaderPack: () => sW,
+      replaceShaderPack: () => jW,
+      saveShaderPack: () => bW,
+      shaderPackNeedsCheck: () => JW,
+      storedPackOutcome: () => KW,
+      storedShaderPackFiles: () => xW,
+      toStoredShaderPack: () => ZW
+    });
+    var mW = OW(5970),
+      EW = OW(5961),
+      NW = OW(39),
+      PW = OW(4666),
+      LW = OW(7659),
+      cW = OW(7637);
+    const wW = "shaderPackChangePending";
+    let tW = null;
+
+    function ZW(WW, iW, OW) {
+      return {
+        manifest: WW.manifest,
+        files: (0, mW.A)(WW.files),
+        validation: iW,
+        ...OW && {
+          listing: OW
+        }
+      }
+    }
+
+    function xW(WW) {
+      return Object.keys(WW.files).map((iW => ({
+        path: iW,
+        source: WW.files[iW]
+      })))
+    }
+    let lW = Promise.resolve();
+
+    function AW(WW) {
+      const iW = lW.then(WW);
+      return lW = iW.catch((() => {})), iW
+    }
+
+    function bW(WW, iW) {
+      return AW((() => UW(WW, iW)))
+    }
+
+    function jW(WW, iW, OW) {
+      return AW((async () => JSON.stringify(await (0, LW.g)()) === JSON.stringify(WW) && (null === iW ? (await kW(), !0) : UW(iW, OW))))
+    }
+    async function UW(WW, iW) {
+      const OW = await NW.f.setItem(LW.c, WW);
+      return OW && nW(WW, iW), OW
+    }
+    async function kW() {
+      await NW.f.removeItem(LW.c), NW.i.removeItem(PW.b)
+    }
+
+    function sW() {
+      return AW(kW)
+    }
+
+    function MW(WW, iW) {
+      return "active" === KW(WW, iW).kind
+    }
+
+    function KW(WW, iW) {
+      var OW;
+      return null === WW ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : yW(WW) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.ok) || WW.validation.fromRecheck ? null === iW ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : JW(WW, iW) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : WW.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function SW() {
+      NW.j.setItem(wW, performance.timeOrigin)
+    }
+
+    function YW() {
+      return NW.j.getItem(wW) === performance.timeOrigin
+    }
+
+    function yW(WW) {
+      return !(0, EW.g)(WW.manifest.apiVersion)
+    }
+
+    function TW(WW) {
+      return tW ??= WW.IH((0, cW.shaderPackTextures)()), tW
+    }
+
+    function JW(WW, iW) {
+      var OW;
+      return (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.headerVersion) !== TW(iW)
+    }
+
+    function hW(WW) {
+      return AW((async () => {
+        nW(await (0, LW.g)(!0), WW)
       }))
     }
+
+    function HW() {
+      return AW((async () => {
+        NW.i.removeItem(PW.b)
+      }))
+    }
+
+    function nW(WW, iW) {
+      MW(WW, iW) ? NW.i.setItem(PW.b, !0) : NW.i.removeItem(PW.b)
+    }
   },
-  41714: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB,
-      e: () => YB,
-      f: () => zB,
-      g: () => MB,
-      j: () => ZB,
-      k: () => QB,
-      n: () => jB,
-      o: () => yB,
-      p: () => oB,
-      t: () => qB,
-      w: () => lB,
-      z: () => pB
+  7637: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      loadShaderPackTextures: () => PW,
+      shaderPackTextures: () => LW
     });
-    const YB = 3,
-      DB = 0,
-      QB = 1,
-      oB = 2,
-      jB = {
-        uniform: 3,
-        sz: 4,
-        special: 5,
-        volume: 6,
-        sampler: 7,
-        entities: 8,
-        entityGrids: 9
+    var mW = OW(5970);
+    let EW = null,
+      NW = null;
+
+    function PW() {
+      return NW ??= Promise.all([OW.e(85), OW.e(126)]).then((() => OW(42015))).then((WW => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: iW,
+          textureNameToIndex: OW,
+          textureAnimationData: NW
+        } = WW;
+        return EW ??= (0, mW.o)(OW, NW, iW), EW
+      })), NW
+    }
+
+    function LW() {
+      if (null === EW) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return EW
+    }
+  },
+  7648: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => cW,
+      g: () => LW
+    });
+    var mW = OW(7656),
+      EW = OW(7637),
+      NW = OW(119);
+    const PW = 100;
+    async function LW(WW, iW) {
+      var OW;
+      let mW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (OW = navigator.gpu) && void 0 !== OW ? OW : null;
+      const PW = WW.dWW(iW, (0, EW.shaderPackTextures)());
+      if (PW.errors.length > 0) return wW(WW, PW.errors, PW.offInStrict);
+      const LW = await async function(WW) {
+        if (!WW) return null;
+        try {
+          const iW = await (0, NW.r)(WW);
+          return iW ? await iW.requestDevice() : null
+        } catch (iW) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", iW), null
+        }
+      }(mW);
+      if (!LW) return null;
+      let cW = !1;
+      LW.lost.then((() => {
+        cW = !0
+      }));
+      try {
+        const iW = await Promise.all(PW.validationModules.map((iW => async function(WW, iW, OW) {
+          iW.pushErrorScope("validation");
+          const mW = iW.createShaderModule({
+              code: OW.code
+            }),
+            EW = iW.popErrorScope(),
+            {
+              messages: NW
+            } = await mW.getCompilationInfo(),
+            PW = NW.filter((WW => "error" === WW.type)).map((iW => WW.mapValidationMessage(OW, iW))),
+            LW = await EW;
+          LW && 0 === PW.length && PW.push({
+            file: null,
+            line: 0,
+            message: LW.message,
+            variants: [OW.key]
+          });
+          return PW
+        }(WW, LW, iW))));
+        return cW ? null : wW(WW, WW.smW(iW.flat()), PW.offInStrict)
+      } catch (tW) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", tW), null
+      } finally {
+        LW.destroy()
+      }
+    }
+    async function cW(WW, iW) {
+      var OW;
+      if (!(0, mW.shaderPackNeedsCheck)(WW, iW) || (0, mW.isOtherApiVersion)(WW)) return WW;
+      const EW = await LW(iW, (0, mW.storedShaderPackFiles)(WW));
+      if (!EW) return WW;
+      const NW = !1 === (null === (OW = WW.validation) || void 0 === OW ? void 0 : OW.ok) && !WW.validation.fromRecheck,
+        PW = {
+          ...WW,
+          validation: NW ? EW : {
+            ...EW,
+            fromRecheck: !0
+          }
+        };
+      return await (0, mW.replaceShaderPack)(WW, PW, iW) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), PW
+    }
+
+    function wW(WW, iW, OW) {
+      return {
+        headerVersion: (0, mW.pageShaderPackValidationVersion)(WW),
+        ok: 0 === iW.length,
+        errors: iW.slice(0, PW),
+        moreErrors: Math.max(0, iW.length - PW),
+        offInStrict: OW
+      }
+    }
+  },
+  7570: (WW, iW, OW) => {
+    OW.d(iW, {
+      B: () => PW,
+      F: () => mW,
+      G: () => xW,
+      K: () => tW,
+      L: () => MW,
+      M: () => ZW,
+      N: () => wW,
+      c: () => AW,
+      d: () => jW,
+      e: () => bW,
+      f: () => lW,
+      g: () => sW,
+      i: () => SW,
+      j: () => cW,
+      n: () => EW,
+      q: () => KW,
+      u: () => NW,
+      x: () => LW
+    });
+    const mW = ["forest", "desert", "water", "night", "cave"];
+    const EW = {
+        full: {
+          width: 3840,
+          height: 2160
+        },
+        large: {
+          width: 1920,
+          height: 1080
+        },
+        thumb: {
+          width: 640,
+          height: 360
+        }
       },
-      yB = 10,
-      JB = "BloxdPackInputs",
-      MB = "bloxdPackInputs",
-      PB = [{
-        name: "seconds",
-        type: "f32",
-        offset: 0
-      }, {
-        name: "lit",
-        type: "u32",
-        offset: 4
-      }, {
-        name: "renderOffset",
-        type: "vec3i",
-        offset: 16
-      }, {
-        name: "sunDirection",
-        type: "vec3f",
-        offset: 32
-      }, {
-        name: "eyePosition",
-        type: "vec3f",
-        offset: 48
-      }, {
-        name: "shadowDirection",
-        type: "vec3f",
-        offset: 64
-      }],
-      zB = 80;
+      NW = ["popular", "updated", "newest"],
+      PW = 3,
+      LW = 32,
+      cW = 300;
 
-    function lB() {
-      const BB = PB.map((BB => {
-        let {
-          name: OB,
-          type: GB
-        } = BB;
-        return `    ${OB}: ${GB},\n`
-      })).join("");
-      return `struct ${JB} {\n${BB}}\n@group(${YB}) @binding(${DB}) var<uniform> ${MB}: ${JB};\n`
+    function wW(WW, iW) {
+      return WW.slice(0, iW).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const tW = 64,
+      ZW = 512,
+      xW = 18e5;
+
+    function lW(WW) {
+      const iW = WW,
+        OW = null === iW || void 0 === iW ? void 0 : iW.files;
+      return "number" === typeof(null === iW || void 0 === iW ? void 0 : iW.apiVersion) && "string" === typeof iW.name && (null === iW.author || "string" === typeof iW.author) && (void 0 === iW.keepCircleShadows || "boolean" === typeof iW.keepCircleShadows) && "object" === typeof OW && null !== OW && Object.values(OW).every((WW => "string" === typeof WW))
+    }
+    const AW = "Bloxdhub",
+      bW = "https://bloxdhub.com/shaders";
+
+    function jW(WW) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(WW)}`
+    }
+    const UW = "Screenshot generation failed.",
+      kW = "Its screenshots couldn't be generated:";
+
+    function sW(WW) {
+      var iW;
+      return WW === UW || null !== (iW = null === WW || void 0 === WW ? void 0 : WW.startsWith(kW)) && void 0 !== iW && iW
     }
 
-    function pB(BB, OB) {
-      const GB = new DataView(BB, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, zB),
-        [YB, DB, QB, oB, jB, yB] = PB;
-      GB.setFloat32(YB.offset, OB.seconds, !0), GB.setUint32(DB.offset, OB.lit ? 1 : 0, !0);
-      for (let JB = 0; JB < 3; JB++) GB.setInt32(QB.offset + 4 * JB, OB.renderOffset[JB], !0), GB.setFloat32(oB.offset + 4 * JB, OB.nOB[JB], !0), GB.setFloat32(jB.offset + 4 * JB, OB.eyePosition[JB], !0), GB.setFloat32(yB.offset + 4 * JB, OB.shadowDirection[JB], !0)
+    function MW(WW, iW) {
+      return `shaderPacks/${WW}/${iW}.json`
     }
 
-    function qB(BB) {
-      const OB = new Uint32Array(Math.max(1, BB.length));
-      return BB.forEach(((BB, GB) => {
-        let {
-          id: YB,
-          rotation: DB
-        } = BB;
-        OB[GB] = 65535 & YB | (3 & DB) << 16
-      })), OB
-    }
-    const ZB = {
-      off: 0,
-      strict: 1,
-      allow: 2
-    }
-  },
-  7179: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => YB,
-      g: () => oB,
-      k: () => jB,
-      o: () => DB,
-      r: () => QB
-    });
-    const YB = ["terrain", "liquid", "model"];
-
-    function DB() {
-      const BB = [];
-      for (const OB of [!1, !0])
-        for (const GB of YB) BB.push({
-          strict: OB,
-          program: GB
-        });
-      return BB
+    function KW(WW, iW, OW, mW) {
+      return null === iW.renderId ? SW(WW, iW.baselineVersion, OW, mW) : `${WW}/${function(WW,iW,OW,mW){return`shaderPacks/${WW}/${iW}/${OW}-${mW}.webp`}(iW.packId,iW.renderId,OW,mW)}`
     }
 
-    function QB(BB) {
-      return `${BB.strict?"strict":"allow"}.${BB.program}`
+    function SW(WW, iW, OW, mW) {
+      return `${WW}/${function(WW,iW,OW){return`shaderPacks/baseline/${WW}/${iW}-${OW}.webp`}(iW,OW,mW)}`
     }
-
-    function oB(BB) {
-      return !BB.hooks.vertex && !BB.hooks.surface && !BB.hooks.light
-    }
-
-    function jB(BB, OB) {
-      return "off" !== OB && (null === BB || BB.some((BB => BB.key.strict === ("strict" === OB) && !oB(BB))))
-    }
-  },
-  44442: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      SHADER_PACK_INPUTS_BINDING: () => QB.b,
-      SHADER_PACK_INPUTS_GROUP: () => QB.e,
-      SHADER_PACK_INPUTS_SIZE: () => QB.f,
-      SHADER_PACK_INPUTS_VAR: () => QB.g,
-      SHADER_PACK_MODES: () => QB.j,
-      SHADER_PACK_PROGRAMS: () => YB.e,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => QB.k,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => QB.n,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => QB.o,
-      SHADER_PACK_TEXTURES_BINDING: () => QB.p,
-      encodeTextureLayers: () => QB.t,
-      flattenVariants: () => DB.d,
-      isVariantOff: () => YB.g,
-      packRunsIn: () => YB.k,
-      shaderPackInputsWgsl: () => QB.w,
-      shaderPackVariantKeys: () => YB.o,
-      variantKeyId: () => YB.r,
-      writeShaderPackInputs: () => QB.z
-    });
-    var YB = GB(7179),
-      DB = GB(7176),
-      QB = GB(41714)
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

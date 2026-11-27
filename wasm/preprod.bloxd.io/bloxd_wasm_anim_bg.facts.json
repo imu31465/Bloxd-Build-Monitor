@@ -2,10 +2,10 @@
  "context": {
   "module": "bloxd_wasm_anim_bg",
   "environment": "preprod.bloxd.io",
-  "build": "gw4e3a.937868ec",
-  "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.871999dc0f27698e17e9.wasm",
-  "sha256": "412a9ead222a90865e84867e83bc25acfd52a0e1c584c793e1f272639ce5dc2c",
-  "analyzed_at": "2026-11-27T02:05:20+09:00",
+  "build": "1yqdn.8419f1e1",
+  "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.39cfafebdd7463cb374f.wasm",
+  "sha256": "95aba8d7de72cdcce081f679def0f8248e845944fba77b065315103503401e53",
+  "analyzed_at": "2026-11-28T01:59:41+09:00",
   "referenced_by": "bloxd-wasm-anim.js"
  },
  "facts": {
@@ -139,36 +139,36 @@
   },
   "imports": [
    {
-    "module": "tUHU",
-    "name": "Ap2r",
+    "module": "rthQ",
+    "name": "iaoL",
     "kind": "func",
     "index": 0,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "tUHU",
-    "name": "dDx4",
+    "module": "rthQ",
+    "name": "lgNX",
     "kind": "func",
     "index": 1,
     "type": "(i32) -> ()"
    },
    {
-    "module": "tUHU",
-    "name": "FMyY",
+    "module": "rthQ",
+    "name": "v1Mk",
     "kind": "func",
     "index": 2,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "tUHU",
-    "name": "alcT",
+    "module": "rthQ",
+    "name": "Mjwu",
     "kind": "func",
     "index": 3,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "tUHU",
-    "name": "mNP4",
+    "module": "rthQ",
+    "name": "dZ7X",
     "kind": "func",
     "index": 4,
     "type": "(i32 i32) -> ()"
@@ -176,61 +176,61 @@
   ],
   "exports": [
    {
-    "name": "knRL",
-    "kind": "func",
-    "index": 223,
-    "type": "(i32 i32 i32 i32) -> (i32)"
-   },
-   {
-    "name": "uB0s",
-    "kind": "func",
-    "index": 213,
-    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
-   },
-   {
-    "name": "UVD4",
-    "kind": "func",
-    "index": 237,
-    "type": "(i32 i32 i32) -> ()"
-   },
-   {
-    "name": "mExL",
-    "kind": "global",
-    "index": 1,
-    "type": ""
-   },
-   {
-    "name": "rubw",
-    "kind": "func",
-    "index": 222,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "a2OL",
-    "kind": "func",
-    "index": 228,
-    "type": "(i32 i32 i32) -> (i32 i32)"
-   },
-   {
-    "name": "bPmF",
-    "kind": "func",
-    "index": 261,
-    "type": "() -> ()"
-   },
-   {
-    "name": "ceDp",
-    "kind": "global",
-    "index": 2,
-    "type": ""
-   },
-   {
     "name": "memory",
     "kind": "memory",
     "index": 0,
     "type": ""
    },
    {
-    "name": "rxZz",
+    "name": "JLiP",
+    "kind": "func",
+    "index": 228,
+    "type": "(i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "zNwJ",
+    "kind": "func",
+    "index": 261,
+    "type": "() -> ()"
+   },
+   {
+    "name": "Ncmb",
+    "kind": "func",
+    "index": 213,
+    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "AlF0",
+    "kind": "func",
+    "index": 237,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "GCO1",
+    "kind": "global",
+    "index": 1,
+    "type": ""
+   },
+   {
+    "name": "Rmm1",
+    "kind": "func",
+    "index": 223,
+    "type": "(i32 i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "VnNx",
+    "kind": "func",
+    "index": 222,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "RYmh",
+    "kind": "global",
+    "index": 2,
+    "type": ""
+   },
+   {
+    "name": "xFkT",
     "kind": "func",
     "index": 261,
     "type": "() -> ()"
@@ -1223,7 +1223,7 @@
      "bytes": 23
     }
    ],
-   "module_name": "597ce689babcf50d.821",
+   "module_name": "ae9d035ebdb2794f.821",
    "producers": {}
   },
   "strings": [
@@ -1540,6 +1540,15 @@
    "at": "2026-11-27T02:05:20+09:00",
    "size": 415630,
    "sha256": "412a9ead222a9086",
+   "functions": 258,
+   "exports": 10,
+   "imports": 5
+  },
+  {
+   "build": "1yqdn.8419f1e1",
+   "at": "2026-11-28T01:59:41+09:00",
+   "size": 415630,
+   "sha256": "95aba8d7de72cdcc",
    "functions": 258,
    "exports": 10,
    "imports": 5

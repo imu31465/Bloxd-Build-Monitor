@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12, 13];
 export const modules = {
-  39162: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB
+  39689: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW
     });
-    var YB = GB(39167);
-    const DB = [0, 0, 0];
-    class QB {
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DB;
-        this.pool = BB, this.origin = OB, this.count = 0, this.free = []
+    var mW = OW(39696);
+    const EW = [0, 0, 0];
+    class NW {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : EW;
+        this.pool = WW, this.origin = iW, this.count = 0, this.free = []
       }
       take() {
-        var BB;
-        const OB = null !== (BB = this.free.pop()) && void 0 !== BB ? BB : this.count++;
-        return OB >= this.pool.CP && this.pool.grow(Math.max(2 * this.pool.CP, OB + 1)), this.hide(OB), OB
+        var WW;
+        const iW = null !== (WW = this.free.pop()) && void 0 !== WW ? WW : this.count++;
+        return iW >= this.pool.aZ && this.pool.grow(Math.max(2 * this.pool.aZ, iW + 1)), this.hide(iW), iW
       }
-      release(BB) {
-        this.hide(BB), this.free.push(BB)
+      release(WW) {
+        this.hide(WW), this.free.push(WW)
       }
-      write(BB, OB, GB, DB) {
+      write(WW, iW, OW, EW) {
         const {
-          records: QB
+          records: NW
         } = this.pool, {
-          origin: oB
-        } = this, jB = BB * YB.b;
-        QB[jB] = OB - oB[0], QB[jB + 1] = GB - oB[1], QB[jB + 2] = DB - oB[2], QB[jB + YB.e] = 0, this.pool.markDirty(BB)
+          origin: PW
+        } = this, LW = WW * mW.b;
+        NW[LW] = iW - PW[0], NW[LW + 1] = OW - PW[1], NW[LW + 2] = EW - PW[2], NW[LW + mW.d] = 0, this.pool.markDirty(WW)
       }
-      hide(BB) {
-        this.pool.records[BB * YB.b + YB.e] = 1, this.pool.markDirty(BB)
+      hide(WW) {
+        this.pool.records[WW * mW.b + mW.d] = 1, this.pool.markDirty(WW)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,179 +38,371 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class oB {
-      constructor(BB, OB, GB) {
-        this.api = BB, this.model = OB, this.initialCapacity = GB, this.kinds = new Map, this.origin = [0, 0, 0]
+    class PW {
+      constructor(WW, iW, OW) {
+        this.api = WW, this.model = iW, this.initialCapacity = OW, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(BB) {
-        let OB = this.kinds.get(BB);
-        if (void 0 === OB) {
-          const GB = this.api.createInstancePool({
+      kindOf(WW) {
+        let iW = this.kinds.get(WW);
+        if (void 0 === iW) {
+          const OW = this.api.createInstancePool({
             ...this.model,
-            item: BB
+            item: WW
           }, this.initialCapacity);
-          null === GB || void 0 === GB || GB.setOrigin(this.origin[0], this.origin[1], this.origin[2]), OB = GB && new QB(GB, this.origin), this.kinds.set(BB, OB)
+          null === OW || void 0 === OW || OW.setOrigin(this.origin[0], this.origin[1], this.origin[2]), iW = OW && new NW(OW, this.origin), this.kinds.set(WW, iW)
         }
-        return OB
+        return iW
       }
-      follow(BB) {
+      follow(WW) {
         const {
-          origin: OB
+          origin: iW
         } = this;
-        if (Math.abs(BB[0] - OB[0]) <= 512 && Math.abs(BB[1] - OB[1]) <= 512 && Math.abs(BB[2] - OB[2]) <= 512) return !1;
-        OB[0] = Math.floor(BB[0]), OB[1] = Math.floor(BB[1]), OB[2] = Math.floor(BB[2]);
-        for (const GB of this.kinds.values()) null === GB || void 0 === GB || GB.pool.setOrigin(OB[0], OB[1], OB[2]);
+        if (Math.abs(WW[0] - iW[0]) <= 512 && Math.abs(WW[1] - iW[1]) <= 512 && Math.abs(WW[2] - iW[2]) <= 512) return !1;
+        iW[0] = Math.floor(WW[0]), iW[1] = Math.floor(WW[1]), iW[2] = Math.floor(WW[2]);
+        for (const OW of this.kinds.values()) null === OW || void 0 === OW || OW.pool.setOrigin(iW[0], iW[1], iW[2]);
         return !0
       }
       commit() {
-        for (const BB of this.kinds.values()) null === BB || void 0 === BB || BB.commit()
+        for (const WW of this.kinds.values()) null === WW || void 0 === WW || WW.commit()
       }
       dispose() {
-        for (const BB of this.kinds.values()) null === BB || void 0 === BB || BB.dispose();
+        for (const WW of this.kinds.values()) null === WW || void 0 === WW || WW.dispose();
         this.kinds.clear()
       }
     }
   },
-  40001: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => zB
+  40522: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => xW
     });
-    const YB = "Pipe",
-      DB = "Extractor Pipe",
-      QB = (new Set([YB, DB]), new Set([YB, DB, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var oB = GB(39162);
-    class jB {
-      constructor(BB) {
-        this.api = BB, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new oB.c(BB, {
+    const mW = "Pipe",
+      EW = "Extractor Pipe",
+      NW = (new Set([mW, EW]), new Set([mW, EW, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var PW = OW(39689);
+    class LW {
+      constructor(WW) {
+        this.api = WW, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new PW.e(WW, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(BB) {
-        if (BB.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${BB.id} with < 2 waypoints`);
-        const OB = this.kinds.kindOf(BB.itemName);
-        if (!OB) return void(this.unshown.has(BB.itemName) || (this.unshown.add(BB.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${BB.itemName}"`)));
-        this.remove(BB.id);
-        const GB = function(BB) {
-          return (BB.waypoints.length - 1) / 2 * 1e3
-        }(BB);
-        if (Date.now() - BB.startTimeMs > GB + 2e3) return;
-        const YB = OB.take();
-        this.items.set(BB.id, {
-          kind: OB,
-          slot: YB,
-          waypoints: BB.waypoints,
-          startTimeMs: BB.startTimeMs,
-          durationMs: GB
+      onSpawn(WW) {
+        if (WW.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${WW.id} with < 2 waypoints`);
+        const iW = this.kinds.kindOf(WW.itemName);
+        if (!iW) return void(this.unshown.has(WW.itemName) || (this.unshown.add(WW.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${WW.itemName}"`)));
+        this.remove(WW.id);
+        const OW = function(WW) {
+          return (WW.waypoints.length - 1) / 2 * 1e3
+        }(WW);
+        if (Date.now() - WW.startTimeMs > OW + 2e3) return;
+        const mW = iW.take();
+        this.items.set(WW.id, {
+          kind: iW,
+          slot: mW,
+          waypoints: WW.waypoints,
+          startTimeMs: WW.startTimeMs,
+          durationMs: OW
         })
       }
-      onEnd(BB) {
-        this.remove(BB.id)
+      onEnd(WW) {
+        this.remove(WW.id)
       }
-      yR() {
+      Hk() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const BB = Date.now();
+        const WW = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [OB, GB] of this.items) BB - GB.startTimeMs > GB.durationMs + 2e3 ? this.remove(OB) : this.write(GB, BB);
+        for (const [iW, OW] of this.items) WW - OW.startTimeMs > OW.durationMs + 2e3 ? this.remove(iW) : this.write(OW, WW);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(BB) {
-        const OB = this.items.get(BB);
-        OB && (OB.kind.release(OB.slot), this.items.delete(BB))
+      remove(WW) {
+        const iW = this.items.get(WW);
+        iW && (iW.kind.release(iW.slot), this.items.delete(WW))
       }
-      write(BB, OB) {
-        const GB = BB.waypoints.length - 1;
-        let YB = (OB - BB.startTimeMs) / BB.durationMs;
-        YB < 0 ? YB = 0 : YB > 1 && (YB = 1);
-        const DB = YB * GB;
-        let QB = Math.floor(DB);
-        QB >= GB && (QB = GB - 1);
-        const oB = DB - QB,
-          [jB, yB, JB] = BB.waypoints[QB],
-          [MB, PB, zB] = BB.waypoints[QB + 1];
-        BB.kind.write(BB.slot, jB + (MB - jB) * oB + .5, yB + (PB - yB) * oB + .5, JB + (zB - JB) * oB + .5)
+      write(WW, iW) {
+        const OW = WW.waypoints.length - 1;
+        let mW = (iW - WW.startTimeMs) / WW.durationMs;
+        mW < 0 ? mW = 0 : mW > 1 && (mW = 1);
+        const EW = mW * OW;
+        let NW = Math.floor(EW);
+        NW >= OW && (NW = OW - 1);
+        const PW = EW - NW,
+          [LW, cW, wW] = WW.waypoints[NW],
+          [tW, ZW, xW] = WW.waypoints[NW + 1];
+        WW.kind.write(WW.slot, LW + (tW - LW) * PW + .5, cW + (ZW - cW) * PW + .5, wW + (xW - wW) * PW + .5)
       }
     }
-    const yB = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      JB = new Set(yB);
-    class MB {
+    const cW = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      wW = new Set(cW);
+    class tW {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(BB) {
-        this.api = BB, this.pipeVisualizer = new jB(BB)
+      onCreate(WW) {
+        this.api = WW, this.pipeVisualizer = new LW(WW)
       }
       onClose() {
-        var BB;
-        null === (BB = this.pipeVisualizer) || void 0 === BB || BB.dispose(), this.pipeVisualizer = null
+        var WW;
+        null === (WW = this.pipeVisualizer) || void 0 === WW || WW.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(BB, OB) {
+      onReceivedMessageFromServer(WW, iW) {
         const {
-          pipeVisualizer: GB
+          pipeVisualizer: OW
         } = this;
-        if (GB)
-          if ("pipeItemSpawnBatch" === BB)
-            for (const YB of OB.items) GB.onSpawn(YB);
-          else if ("pipeItemEndBatch" === BB)
-          for (const YB of OB.items) GB.onEnd(YB)
+        if (OW)
+          if ("pipeItemSpawnBatch" === WW)
+            for (const mW of iW.items) OW.onSpawn(mW);
+          else if ("pipeItemEndBatch" === WW)
+          for (const mW of iW.items) OW.onEnd(mW)
       }
-      yR() {
-        var BB;
-        null === (BB = this.pipeVisualizer) || void 0 === BB || BB.yR()
+      Hk() {
+        var WW;
+        null === (WW = this.pipeVisualizer) || void 0 === WW || WW.Hk()
       }
-      onPlayerAttemptAltAction(BB, OB, GB, YB, DB, oB) {
-        var jB;
-        if (!JB.has(this.api.getMetaInfo(DB).rootName)) return;
-        const yB = null === (jB = this.api.MYB(BB)) || void 0 === jB ? void 0 : jB.name;
-        return void 0 !== yB && QB.has(yB) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(WW, iW, OW, mW, EW, PW) {
+        var LW;
+        if (!wW.has(this.api.getMetaInfo(EW).rootName)) return;
+        const cW = null === (LW = this.api.kOW(WW)) || void 0 === LW ? void 0 : LW.name;
+        return void 0 !== cW && NW.has(cW) ? "preventAction" : void 0
       }
     }
-    var PB = GB(40007);
-    const zB = function(BB, OB, GB) {
-      if ("smp2" === GB) return (0, PB.makeSmp2ClientGame)();
-      if ("survivalFactory" !== GB && "survivalFactoryPersistent" !== GB) {
+    var ZW = OW(40525);
+    const xW = function(WW, iW, OW) {
+      if ("smp2" === OW) return (0, ZW.makeSmp2ClientGame)();
+      if ("survivalFactory" !== OW && "survivalFactoryPersistent" !== OW) {
         return {}
       }
-      const YB = new MB;
+      const mW = new tW;
       return {
-        onCreate: BB => {
-          YB.onCreate(BB)
+        onCreate: WW => {
+          mW.onCreate(WW)
         },
         onClose: () => {
-          YB.onClose()
+          mW.onClose()
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          YB.onReceivedMessageFromServer(BB, OB)
+        onReceivedMessageFromServer: (WW, iW) => {
+          mW.onReceivedMessageFromServer(WW, iW)
         },
-        kP: () => {
-          YB.yR()
+        hZ: () => {
+          mW.Hk()
         },
-        altVetoBlocks: yB,
-        onPlayerAttemptAltAction: (BB, OB, GB, DB, QB, oB) => YB.onPlayerAttemptAltAction(BB, OB, GB, DB, QB, oB)
+        altVetoBlocks: cW,
+        onPlayerAttemptAltAction: (WW, iW, OW, EW, NW, PW) => mW.onPlayerAttemptAltAction(WW, iW, OW, EW, NW, PW)
       }
     }
   },
-  40007: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      makeSmp2ClientGame: () => QB
+  40534: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => PW,
+      g: () => LW
     });
-    const YB = "smp2FirstSpawn";
-    var DB = GB(1723);
+    var mW = OW(40542),
+      EW = OW(27);
+    const NW = "smp2OnboardingView",
+      PW = 5e3;
+    class LW {
+      constructor() {
+        this.view = {
+          path: null,
+          reward: null
+        }, this.queued = [], this.seenRewardIds = new Set, this.showing = !1, this.rewardTimer = null
+      }
+      get() {
+        return this.view
+      }
+      receivePath(WW) {
+        let [iW, OW, EW] = WW;
+        const NW = mW.g[iW];
+        if (void 0 === NW) return;
+        const {
+          title: PW,
+          steps: LW
+        } = mW.e[NW];
+        this.iZ({
+          ...this.view,
+          path: OW < LW.length ? {
+            title: PW,
+            steps: LW,
+            step: OW,
+            progress: EW
+          } : null
+        })
+      }
+      receiveReward(WW) {
+        let [iW, OW] = WW;
+        const EW = mW.k[iW];
+        if (void 0 !== EW && !this.seenRewardIds.has(OW)) {
+          var NW;
+          if (this.seenRewardIds.add(OW), this.queued.push({
+              ...EW,
+              id: OW
+            }), null === this.view.reward) this.iZ({
+            ...this.view,
+            reward: null !== (NW = this.queued.shift()) && void 0 !== NW ? NW : null
+          });
+          this.runTimers()
+        }
+      }
+      setShowing(WW) {
+        this.showing = WW, this.runTimers()
+      }
+      dispose() {
+        this.clearTimers()
+      }
+      runTimers() {
+        this.showing ? this.view.reward && null === this.rewardTimer && (this.rewardTimer = setTimeout((() => {
+          var WW;
+          this.rewardTimer = null, this.iZ({
+            ...this.view,
+            reward: null !== (WW = this.queued.shift()) && void 0 !== WW ? WW : null
+          }), this.runTimers()
+        }), PW)) : this.clearTimers()
+      }
+      clearTimers() {
+        null !== this.rewardTimer && (clearTimeout(this.rewardTimer), this.rewardTimer = null)
+      }
+      iZ(WW) {
+        this.view = WW, EW.l.iZ(NW, WW)
+      }
+    }
+  },
+  40525: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      makeSmp2ClientGame: () => ZW
+    });
+    var mW = OW(62);
+    const EW = "smp2FirstSpawn",
+      NW = "smp2Path",
+      PW = "smp2Reward";
+    var LW = OW(1770),
+      cW = OW(3637),
+      wW = OW(3361),
+      tW = OW(40534);
 
-    function QB() {
-      let BB = !1;
-      return {
-        onReceivedMessageFromServer: OB => {
-          OB !== YB || BB || (BB = !0, (0, DB.h)({
-            id: "smp2.first_spawn"
+    function ZW() {
+      let WW = !1,
+        iW = !1,
+        ZW = "loading",
+        xW = !1;
+      const lW = () => {
+          !WW || iW || xW || "loading" === ZW || (iW = !0, (0, LW.e)({
+            id: "smp2.first_spawn",
+            value: ZW
           }))
+        },
+        AW = new tW.g;
+      let bW = null;
+      return {
+        onCreate: () => {
+          OW.e(182).then((() => OW(53936))).then((WW => {
+            let {
+              Smp2OnboardingUi: iW
+            } = WW;
+            xW || (bW = (0, wW.O)((0, mW.createElement)(iW, {
+              store: AW
+            })), ZW = "cards")
+          })).catch((WW => {
+            xW || (ZW = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, cW.e)(WW) ? " (chunk load failed)" : ""), WW))
+          })).finally(lW)
+        },
+        onClose: () => {
+          var WW;
+          "loading" === ZW && (ZW = "no_cards"), lW(), xW = !0, null === (WW = bW) || void 0 === WW || WW(), AW.dispose()
+        },
+        onReceivedMessageFromServer: (iW, OW) => {
+          iW === EW ? (WW = !0, lW()) : iW === NW ? AW.receivePath(OW) : iW === PW && AW.receiveReward(OW)
         }
       }
     }
+  },
+  40542: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW,
+      g: () => mW,
+      k: () => LW,
+      m: () => PW
+    });
+    const mW = ["starter_path", "portal_first"],
+      EW = "Iron Pickaxe",
+      NW = {
+        starter_path: {
+          title: "Starter Path",
+          steps: [{
+            key: "sell",
+            goal: "sell",
+            text: "Sell your dirt at Instant Sell",
+            icon: "Dirt"
+          }, {
+            key: "portal",
+            goal: "portal",
+            text: "Jump into the portal to go out into the world",
+            icon: "Compass"
+          }, {
+            key: "logs",
+            goal: "logs",
+            amount: 4,
+            text: "Chop 4 logs",
+            icon: "Maple Log"
+          }, {
+            key: "workbench",
+            goal: "craft",
+            item: "Workbench",
+            text: "Craft a Workbench",
+            icon: "Workbench"
+          }, {
+            key: "pickaxe",
+            goal: "craft",
+            item: "Wood Pickaxe",
+            text: "Craft a Wood Pickaxe",
+            icon: "Wood Pickaxe"
+          }]
+        },
+        portal_first: {
+          title: "First steps",
+          steps: [{
+            key: "portal",
+            goal: "portal",
+            text: "Jump into the portal to go out into the world",
+            icon: "Compass"
+          }, {
+            key: "logs",
+            goal: "logs",
+            amount: 3,
+            text: "Chop 3 logs",
+            icon: "Maple Log"
+          }]
+        }
+      };
+
+    function PW(WW) {
+      return "logs" === WW.goal ? WW.amount : 1
+    }
+    const LW = [{
+      title: "Starter Path done!",
+      text: "+100 gold. The world is yours.",
+      icon: "Gold Coin"
+    }, {
+      title: "Starter kit",
+      text: "A pickaxe, an axe and food to get you going",
+      icon: "Wood Pickaxe"
+    }, {
+      title: "Come back tomorrow",
+      text: `A free ${EW} is waiting for you`,
+      icon: EW
+    }, {
+      title: "Welcome back!",
+      text: `Here's your ${EW}`,
+      icon: EW
+    }, {
+      title: "Nice!",
+      text: "Keep exploring: the hub's traders buy what you find",
+      icon: "Maple Log"
+    }];
+    mW.flatMap((WW => [...NW[WW].steps.map((iW => `${WW}:${iW.key}`)), `${WW}:done`]))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,37 +1,43 @@
 export const id = 192;
 export const ids = [192];
 export const modules = {
-  9728: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      pageBody: () => YB
+  10249: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const YB = {
-      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
-      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
-      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
-      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
-      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
+    const mW = {
+      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
+      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
+      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
+      tips: ["Build away from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
+      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
       faq: [{
-        question: "What is Build a Factory 2 on Bloxd?",
-        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
+        question: "What is Bloxd Survival?",
+        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
       }, {
-        question: "Is Build a Factory 2 an idle factory game?",
-        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
+        question: "How do I protect my base in Bloxd Survival?",
+        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
       }, {
-        question: "How do I unlock new machines in Build a Factory 2?",
-        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
+        question: "Why did my build disappear?",
+        answer: "Blocks near spawn reset every few hours, so build outside that area. Private lobbies reset only if their owner turns on Enable Spawn Reset."
       }, {
-        question: "What's the best way to power my factory?",
-        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
+        question: "Is stealing and griefing allowed in Bloxd Survival?",
+        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
       }, {
-        question: "What are the Wilds?",
-        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
+        question: "Can I make a private server in Bloxd Survival?",
+        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
       }, {
-        question: "Can friends help build my factory?",
-        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
+        question: "What happens if I log out during a fight?",
+        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
+      }, {
+        question: "Will my world still be there tomorrow?",
+        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
+      }, {
+        question: "Which Bloxd survival mode should I play?",
+        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

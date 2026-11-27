@@ -1,167 +1,167 @@
-export const id = 45;
-export const ids = [45];
+export const id = 46;
+export const ids = [46];
 export const modules = {
-  5177: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      LEAVE_POINTER_MARGIN_PX: () => oB,
-      RECHECK_MS: () => QB,
-      iframeHost: () => MB,
-      isNear: () => qB,
-      leaveCoverLine: () => zB,
-      overlaps: () => pB,
-      resetLeaveCoverDebugForTest: () => RB,
-      startLeaveCoverDebug: () => AB,
-      startLeaveCoverProbe: () => WB,
-      whereIs: () => PB
+  5442: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      LEAVE_POINTER_MARGIN_PX: () => PW,
+      RECHECK_MS: () => NW,
+      iframeHost: () => tW,
+      isNear: () => bW,
+      leaveCoverLine: () => xW,
+      overlaps: () => AW,
+      resetLeaveCoverDebugForTest: () => kW,
+      startLeaveCoverDebug: () => MW,
+      startLeaveCoverProbe: () => sW,
+      whereIs: () => ZW
     });
-    var YB = GB(5181),
-      DB = GB(3136);
-    const QB = 2e3,
-      oB = 32,
-      jB = 80,
-      yB = ".EverythingMenuBannerDiv";
+    var mW = OW(5445),
+      EW = OW(3866);
+    const NW = 2e3,
+      PW = 32,
+      LW = 80,
+      cW = ".EverythingMenuBannerDiv";
 
-    function JB(BB) {
-      const OB = BB.trim().replace(/[\s=]+/g, ".").slice(0, jB);
-      return "" === OB ? "-" : OB
+    function wW(WW) {
+      const iW = WW.trim().replace(/[\s=]+/g, ".").slice(0, LW);
+      return "" === iW ? "-" : iW
     }
 
-    function MB(BB, OB) {
-      const GB = BB.getAttribute("src");
-      if (null === GB || "" === GB.trim()) return "none";
+    function tW(WW, iW) {
+      const OW = WW.getAttribute("src");
+      if (null === OW || "" === OW.trim()) return "none";
       try {
-        const BB = new URL(GB, OB);
-        return "http:" === BB.protocol || "https:" === BB.protocol ? BB.hostname : BB.protocol.replace(":", "")
+        const WW = new URL(OW, iW);
+        return "http:" === WW.protocol || "https:" === WW.protocol ? WW.hostname : WW.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function PB(BB, OB) {
-      return null !== BB.closest(yB) ? "banner" : null !== OB && OB.contains(BB) ? "app" : "body"
+    function ZW(WW, iW) {
+      return null !== WW.closest(cW) ? "banner" : null !== iW && iW.contains(WW) ? "app" : "body"
     }
 
-    function zB(BB, OB, GB, YB) {
-      var DB, QB, oB, jB;
-      if (null === BB || BB === OB || OB.contains(BB)) return null;
-      const yB = null === (DB = BB.ownerDocument.defaultView) || void 0 === DB ? void 0 : DB.getComputedStyle(BB),
-        zB = BB.getBoundingClientRect();
-      return `leave covered ${[["trigger",YB],["where",PB(BB,GB)],["tag",BB.tagName.toLowerCase()],["id",JB(BB.id)],["class",JB(null!==(QB=BB.getAttribute("class"))&&void 0!==QB?QB:"")],["z",JB(null!==(oB=null===yB||void 0===yB?void 0:yB.zIndex)&&void 0!==oB?oB:"")],["position",JB(null!==(jB=null===yB||void 0===yB?void 0:yB.position)&&void 0!==jB?jB:"")],["size",`${Math.round(zB.width)}x${Math.round(zB.height)}`],["iframe","IFRAME"===BB.tagName?JB(MB(BB,BB.ownerDocument.baseURI)):"-"]].map((BB=>{let[OB,GB]=BB;return`${OB}=${GB}`})).join(" ")}`
+    function xW(WW, iW, OW, mW) {
+      var EW, NW, PW, LW;
+      if (null === WW || WW === iW || iW.contains(WW)) return null;
+      const cW = null === (EW = WW.ownerDocument.defaultView) || void 0 === EW ? void 0 : EW.getComputedStyle(WW),
+        xW = WW.getBoundingClientRect();
+      return `leave covered ${[["trigger",mW],["where",ZW(WW,OW)],["tag",WW.tagName.toLowerCase()],["id",wW(WW.id)],["class",wW(null!==(NW=WW.getAttribute("class"))&&void 0!==NW?NW:"")],["z",wW(null!==(PW=null===cW||void 0===cW?void 0:cW.zIndex)&&void 0!==PW?PW:"")],["position",wW(null!==(LW=null===cW||void 0===cW?void 0:cW.position)&&void 0!==LW?LW:"")],["size",`${Math.round(xW.width)}x${Math.round(xW.height)}`],["iframe","IFRAME"===WW.tagName?wW(tW(WW,WW.ownerDocument.baseURI)):"-"]].map((WW=>{let[iW,OW]=WW;return`${iW}=${OW}`})).join(" ")}`
     }
 
-    function lB(BB) {
-      const OB = BB.getBoundingClientRect();
-      return 0 === OB.width || 0 === OB.height ? null : {
-        x: OB.left + OB.width / 2,
-        y: OB.top + OB.height / 2
+    function lW(WW) {
+      const iW = WW.getBoundingClientRect();
+      return 0 === iW.width || 0 === iW.height ? null : {
+        x: iW.left + iW.width / 2,
+        y: iW.top + iW.height / 2
       }
     }
 
-    function pB(BB, OB) {
-      const GB = BB.getBoundingClientRect(),
-        YB = OB.getBoundingClientRect();
-      return Math.max(GB.left, YB.left) < Math.min(GB.right, YB.right) && Math.max(GB.top, YB.top) < Math.min(GB.bottom, YB.bottom)
+    function AW(WW, iW) {
+      const OW = WW.getBoundingClientRect(),
+        mW = iW.getBoundingClientRect();
+      return Math.max(OW.left, mW.left) < Math.min(OW.right, mW.right) && Math.max(OW.top, mW.top) < Math.min(OW.bottom, mW.bottom)
     }
 
-    function qB(BB, OB, GB, YB) {
-      const DB = BB.getBoundingClientRect();
-      return OB >= DB.left - YB && OB <= DB.right + YB && GB >= DB.top - YB && GB <= DB.bottom + YB
+    function bW(WW, iW, OW, mW) {
+      const EW = WW.getBoundingClientRect();
+      return iW >= EW.left - mW && iW <= EW.right + mW && OW >= EW.top - mW && OW <= EW.bottom + mW
     }
 
-    function ZB(BB) {
-      (0, DB.m)("leavecover", BB)
+    function jW(WW) {
+      (0, EW.m)("leavecover", WW)
     }
-    const NB = new Set;
+    const UW = new Set;
 
-    function RB() {
-      NB.clear()
+    function kW() {
+      UW.clear()
     }
 
-    function WB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZB;
-      const GB = BB.ownerDocument,
-        YB = GB.defaultView;
-      if (null === YB) return () => {};
-      const DB = (BB, GB) => {
-          null === BB || NB.has(GB) || (NB.add(GB), OB(BB))
+    function sW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jW;
+      const OW = WW.ownerDocument,
+        mW = OW.defaultView;
+      if (null === mW) return () => {};
+      const EW = (WW, OW) => {
+          null === WW || UW.has(OW) || (UW.add(OW), iW(WW))
         },
-        jB = OB => {
-          const YB = BB.isConnected ? lB(BB) : null;
-          if (null === YB) return;
-          const QB = GB.elementFromPoint(YB.x, YB.y);
-          if (null !== QB) {
-            const YB = GB.getElementById("root");
-            DB(zB(QB, BB, YB, OB), PB(QB, YB))
+        LW = iW => {
+          const mW = WW.isConnected ? lW(WW) : null;
+          if (null === mW) return;
+          const NW = OW.elementFromPoint(mW.x, mW.y);
+          if (null !== NW) {
+            const mW = OW.getElementById("root");
+            EW(xW(NW, WW, mW, iW), ZW(NW, mW))
           }
         };
-      let yB = null;
-      const JB = BB => {
-        yB = {
-          x: BB.clientX,
-          y: BB.clientY
+      let cW = null;
+      const wW = WW => {
+        cW = {
+          x: WW.clientX,
+          y: WW.clientY
         }
       };
-      let MB = null;
-      const RB = () => {
-          MB = setTimeout((() => {
-            MB = null;
-            const OB = GB.activeElement;
-            if ("IFRAME" !== (null === OB || void 0 === OB ? void 0 : OB.tagName) || !BB.isConnected) return;
-            const YB = lB(BB),
-              QB = null !== YB && qB(OB, YB.x, YB.y, 0),
-              jB = yB,
-              JB = null !== jB && qB(BB, jB.x, jB.y, oB);
-            if (pB(OB, BB) && (QB || JB)) {
-              const YB = GB.getElementById("root");
-              DB(zB(OB, BB, YB, "blurIframe"), PB(OB, YB))
+      let tW = null;
+      const kW = () => {
+          tW = setTimeout((() => {
+            tW = null;
+            const iW = OW.activeElement;
+            if ("IFRAME" !== (null === iW || void 0 === iW ? void 0 : iW.tagName) || !WW.isConnected) return;
+            const mW = lW(WW),
+              NW = null !== mW && bW(iW, mW.x, mW.y, 0),
+              LW = cW,
+              wW = null !== LW && bW(WW, LW.x, LW.y, PW);
+            if (AW(iW, WW) && (NW || wW)) {
+              const mW = OW.getElementById("root");
+              EW(xW(iW, WW, mW, "blurIframe"), ZW(iW, mW))
             }
           }), 0)
         },
-        WB = YB.requestAnimationFrame((() => {
-          jB("open")
+        sW = mW.requestAnimationFrame((() => {
+          LW("open")
         })),
-        AB = setTimeout((() => {
-          jB("recheck")
-        }), QB);
-      return YB.addEventListener("pointermove", JB, {
+        MW = setTimeout((() => {
+          LW("recheck")
+        }), NW);
+      return mW.addEventListener("pointermove", wW, {
         capture: !0,
         passive: !0
-      }), YB.addEventListener("pointerdown", JB, {
+      }), mW.addEventListener("pointerdown", wW, {
         capture: !0,
         passive: !0
-      }), YB.addEventListener("blur", RB), () => {
-        YB.cancelAnimationFrame(WB), clearTimeout(AB), null !== MB && clearTimeout(MB), YB.removeEventListener("pointermove", JB, {
+      }), mW.addEventListener("blur", kW), () => {
+        mW.cancelAnimationFrame(sW), clearTimeout(MW), null !== tW && clearTimeout(tW), mW.removeEventListener("pointermove", wW, {
           capture: !0
-        }), YB.removeEventListener("pointerdown", JB, {
+        }), mW.removeEventListener("pointerdown", wW, {
           capture: !0
-        }), YB.removeEventListener("blur", RB)
+        }), mW.removeEventListener("blur", kW)
       }
     }
 
-    function AB() {
-      (0, YB.k)(WB)
+    function MW() {
+      (0, mW.k)(sW)
     }
   },
-  5181: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB,
-      g: () => QB,
-      k: () => DB
+  5445: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      g: () => NW,
+      k: () => EW
     });
-    let YB = null;
+    let mW = null;
 
-    function DB(BB) {
-      YB = BB
+    function EW(WW) {
+      mW = WW
     }
 
-    function QB() {
-      return YB
+    function NW() {
+      return mW
     }
 
-    function oB(BB) {
-      return "bloxd" === BB.site && !BB.isMobileApp && !BB.isTouchScreen
+    function PW(WW) {
+      return "bloxd" === WW.site && !WW.isMobileApp && !WW.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

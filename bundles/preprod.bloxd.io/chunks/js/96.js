@@ -1,9 +1,700 @@
 export const id = 96;
 export const ids = [96];
 export const modules = {
-  5242: BB => {
-    BB.exports = '# Block Names (1535 blocks)\n#\n# Each block name listed below is the ROOT block - use it exactly as shown (no suffix).\n# Some blocks also have meta variants, indicated by codes in brackets.\n#\n# ROOT BLOCK: Use the block name exactly as listed (e.g. "Maple Door", "Wheat", "Stone")\n#\n# META VARIANTS: If a block has codes in brackets, you can append suffixes to get variants:\n#   R  = rotation    -> BlockName|meta|rot1 through |meta|rot4\n#   O  = open/closed -> BlockName|meta|rot1|open or |closed (combine with R)\n#   H  = halfblockPlacement -> BlockName|meta|rot1|top or |bot or |side (combine with R; stairs have no |side)\n#   G  = growing     -> BlockName|Growing\n#   TB = treeBase    -> BlockName|TreeBase|<WoodType> (e.g. Maple Log|TreeBase|Maple)\n#   TC = treeCanopy  -> BlockName|TreeCanopy\n#   B  = books       -> BlockName|meta|rot1|books1 through |books6 (combine with R)\n#   FG = freshlyGrown -> BlockName|FreshlyGrown (harvestable crop state)\n#   RT = roots       -> BlockName|Roots (flower with roots for world gen)\n#   LV = lava        -> BlockName|Lava (lava-growing variant)\n#   TP = top         -> BlockName|Top (top half of tall plants)\n#   GR = grassRoots  -> BlockName|GrassRoots (dirt with grass roots)\n#   BK = breaking    -> BlockName|Breaking (breaking animation state)\n#   FL = flashing    -> BlockName|Flashing (flashing animation state)\n#   SC = stairsCorner -> BlockName|meta|rot1|bot|innerLeft, innerRight, outerLeft or outerRight (combine with R and H)\n#\n# Examples:\n#   Stone           -> Just use "Stone" (no brackets = no variants, root block only)\n#   Maple Door [O,R] -> Root: "Maple Door", Variants: "Maple Door|meta|rot2|open", etc.\n#   Wheat [FG]       -> Root: "Wheat", Variant: "Wheat|FreshlyGrown"\n#\nDirt [GR]\nMessy Dirt\nGrass Block\nSand\nClay\nGravel\nSnow\nMaple Log [TB]\nPine Log [TB]\nPlum Log [TB]\nCedar Log [TB]\nAspen Log [TB]\nJungle Log [TB]\nMaple Wood Planks\nAspen Wood Planks\nPlum Wood Planks\nJungle Wood Planks\nPine Wood Planks\nCedar Wood Planks\nBarkless Maple Log [TB]\nBarkless Aspen Log [TB]\nBarkless Plum Log [TB]\nBarkless Jungle Log [TB]\nBarkless Pine Log [TB]\nBarkless Cedar Log [TB]\nfree_placeholder2\nStone\nMessy Stone\nfree_placeholder\nSmooth Stone\nDiorite\nSmooth Diorite\nAndesite\nSmooth Andesite\nGranite\nSmooth Granite\nSandstone\nYellowstone\nCoal Ore\nIron Ore\nGold Ore\nLapis Lazuli Ore\nEmerald Ore\nDiamond Ore\nBlock of Coal\nBlock of Iron\nBlock of Gold\nBlock of Lapis Lazuli\nBlock of Emerald\nWhite Wool\nOrange Wool\nMagenta Wool\nLight Blue Wool\nYellow Wool\nLime Wool\nPink Wool\nGray Wool\nLight Gray Wool\nCyan Wool\nPurple Wool\nBlue Wool\nBrown Wool\nGreen Wool\nRed Wool\nBlack Wool\nBaked Clay\nWhite Baked Clay\nOrange Baked Clay\nMagenta Baked Clay\nLight Blue Baked Clay\nYellow Baked Clay\nLime Baked Clay\nPink Baked Clay\nGray Baked Clay\nLight Gray Baked Clay\nCyan Baked Clay\nPurple Baked Clay\nBlue Baked Clay\nBrown Baked Clay\nGreen Baked Clay\nRed Baked Clay\nBlack Baked Clay\nGray Concrete\nLight Gray Concrete\nBlack Concrete\nBlue Concrete\nBrown Concrete\nCyan Concrete\nLight Blue Concrete\nLime Concrete\nMagenta Concrete\nOrange Concrete\nPink Concrete\nPurple Concrete\nRed Concrete\nWhite Concrete\nGreen Concrete\nYellow Concrete\nPine Leaves [TC]\nAspen Leaves [TC]\nMaple Leaves [TC]\nJungle Leaves [TC]\nPumpkin_placeholder\nWatermelon\nGlass\nBlack Glass\nBlue Glass\nBrown Glass\nCyan Glass\nGray Glass\nLight Gray Glass\nGreen Glass\nLight Blue Glass\nLime Glass\nMagenta Glass\nOrange Glass\nPink Glass\nPurple Glass\nRed Glass\nWhite Glass\nYellow Glass\nUNUSED BLOCK TYPE\nDim Lamp On\nDim Lamp Off\nWater\nInvisible Solid\nBricks\nStone Bricks\nDark Red Brick\nDark Red Stone\nBlock of Quartz\nChiseled Block of Quartz\nEngraved Stone\nMossy Stone Bricks\nCracked Stone Bricks\nSmooth Sandstone\nEngraved Sandstone\nIce\nObsidian\nHay Bale\nSponge\nBeacon\ntemp\nGolden Decoration\nMoonstone Explosive\nBedrock\nSmooth Double Stone Slab\nCactus [G]\nGrass\nDandelion [RT]\nPoppy [RT]\nRed Tulip [RT]\nPink Tulip [RT]\nWhite Tulip [RT]\nOrange Tulip [RT]\nDaisy [RT]\nBluebell [RT]\nForget-me-not [RT]\nAllium [RT]\nAzure Bluet [RT]\nLily of the Valley [RT]\nShadow Rose [RT]\nFurnace [R]\nWorkbench [R]\nBlock of Diamond\nMaple Door [O,R]\n_Maple Door Top [O,R]\nMaple Trapdoor [O,R]\nAspen Sapling\nMaple Sapling\nJungle Sapling\nPlum Sapling\nPine Sapling\nCedar Sapling\nChest [R]\nProtector\nFat Cactus [G]\nDry Fat Cactus\nMaple Ladder [R]\nVines [G,R]\nIron Ladder [R]\nWhite Planks\nOrange Planks\nMagenta Planks\nLight Blue Planks\nYellow Planks\nLime Planks\nPink Planks\nGray Planks\nLight Gray Planks\nCyan Planks\nPurple Planks\nBlue Planks\nBrown Planks\nGreen Planks\nRed Planks\nBlack Planks\nArtisan Bench\nWhite Ceramic [R]\nOrange Ceramic [R]\nMagenta Ceramic [R]\nLight Blue Ceramic [R]\nYellow Ceramic [R]\nLime Ceramic [R]\nPink Ceramic [R]\nGray Ceramic [R]\nLight Gray Ceramic [R]\nCyan Ceramic [R]\nPurple Ceramic [R]\nBlue Ceramic [R]\nBrown Ceramic [R]\nGreen Ceramic [R]\nRed Ceramic [R]\nBlack Ceramic [R]\nWheat Seeds\nWheat_stage1\nWheat_stage2\nWheat_stage3\nWheat_stage4\nWheat_stage5\nWheat [FG]\nTilled Soil\nBread Block\nReservedBread BlockRotation1\nReservedBread BlockRotation2\nReservedBread BlockRotation3\nMossy Messy Stone\nWhite Bed [R]\n_White Bed Head [R]\nOrange Bed [R]\n_Orange Bed Head [R]\nMagenta Bed [R]\n_Magenta Bed Head [R]\nLight Blue Bed [R]\n_Light Blue Bed Head [R]\nYellow Bed [R]\n_Yellow Bed Head [R]\nLime Bed [R]\n_Lime Bed Head [R]\nPink Bed [R]\n_Pink Bed Head [R]\nGray Bed [R]\n_Gray Bed Head [R]\nLight Gray Bed [R]\n_Light Gray Bed Head [R]\nCyan Bed [R]\n_Cyan Bed Head [R]\nPurple Bed [R]\n_Purple Bed Head [R]\nBlue Bed [R]\n_Blue Bed Head [R]\nBrown Bed [R]\n_Brown Bed Head [R]\nGreen Bed [R]\n_Green Bed Head [R]\nRed Bed [R]\n_Red Bed Head [R]\nBlack Bed [R]\n_Black Bed Head [R]\nApple Block\nMoonstone Ore\nMoonstone Chest [R]\nBlock of Moonstone\nMagma\nUseless Soil\nMarked Sandstone\nRed Sandstone\nSmooth Red Sandstone\nEngraved Red Sandstone\nMarked Red Sandstone\nGreen Stone\nGreen Bricks\nDark Green Bricks\nSandstone Bricks\nEngraved Diorite\nDiorite Bricks\nEngraved Andesite\nAndesite Bricks\nEngraved Granite\nGranite Bricks\nIce Bricks\nPlaceholder Packed Ice\nPlaceholder Blue Ice\nPlum Leaves [TC]\nCedar Leaves [TC]\nPalm Leaves [TC]\nPalm Log [TB]\nPalm Wood Planks\nPalm Sapling\nPine Door [O,R]\n_Pine Door Top [O,R]\nPlum Door [O,R]\n_Plum Door Top [O,R]\nCedar Door [O,R]\n_Cedar Door Top [O,R]\nAspen Door [O,R]\n_Aspen Door Top [O,R]\nJungle Door [O,R]\n_Jungle Door Top [O,R]\nPalm Door [O,R]\n_Palm Door Top [O,R]\nPine Trapdoor [O,R]\nPlum Trapdoor [O,R]\nCedar Trapdoor [O,R]\nAspen Trapdoor [O,R]\nJungle Trapdoor [O,R]\nPalm Trapdoor [O,R]\nRed Sand\nRed Sandstone Bricks\nRocky Dirt\nAutumn Maple Leaves [TC]\nFallen Maple Leaves [H,R]\nMaple Slab [H,R]\nPine Slab [H,R]\nPlum Slab [H,R]\nCedar Slab [H,R]\nAspen Slab [H,R]\nJungle Slab [H,R]\nPalm Slab [H,R]\nDirt Slab [H,R]\nGrass Slab [H,R]\nMessy Stone Slab [H,R]\nStone Slab [H,R]\nSmooth Stone Slab [H,R]\nEngraved Stone Slab [H,R]\nStone Bricks Slab [H,R]\nMossy Stone Slab [H,R]\nMossy Stone Bricks Slab [H,R]\nAndesite Slab [H,R]\nSmooth Andesite Slab [H,R]\nEngraved Andesite Slab [H,R]\nAndesite Bricks Slab [H,R]\nDiorite Slab [H,R]\nSmooth Diorite Slab [H,R]\nEngraved Diorite Slab [H,R]\nDiorite Bricks Slab [H,R]\nGranite Slab [H,R]\nSmooth Granite Slab [H,R]\nEngraved Granite Slab [H,R]\nGranite Bricks Slab [H,R]\nSandstone Slab [H,R]\nSmooth Sandstone Slab [H,R]\nEngraved Sandstone Slab [H,R]\nMarked Sandstone Slab [H,R]\nSandstone Bricks Slab [H,R]\nRed Sandstone Slab [H,R]\nSmooth Red Sandstone Slab [H,R]\nEngraved Red Sandstone Slab [H,R]\nMarked Red Sandstone Slab [H,R]\nRed Sandstone Bricks Slab [H,R]\nBricks Slab [H,R]\nIce Bricks Slab [H,R]\nPlum Block\nCoconut Block\nPear Log [TB]\nPear Wood Planks\nPear Leaves [TC]\nPear Door [O,R]\n_Pear Door Top [O,R]\nPear Trapdoor [O,R]\nPear Sapling\nPear Slab [H,R]\nPear Block\nCompressed Messy Stone\nExtra Compressed Messy Stone\nSuper Compressed Messy Stone\nHyper Compressed Messy Stone\nUltra Compressed Messy Stone\nMega Compressed Messy Stone\nBoard [R]\nNet\nCobweb\nBrown Mushroom Block\nRed Mushroom Block\nMushroom Stem\nFireball Block\nIceball Block\nWatermelon Seeds [G]\nAttached Watermelon Stem [R]\nPumpkin Seeds [G]\nAttached Pumpkin Stem [R]\nPumpkin\nCarved Pumpkin [R]\nJack o\'Lantern [R]\nMelon Seeds [G]\nAttached Melon Stem [R]\nMelon\nIron Watermelon\nPatterned Black Glass\nPatterned Blue Glass\nPatterned Brown Glass\nPatterned Cyan Glass\nPatterned Gray Glass\nPatterned Light Gray Glass\nPatterned Green Glass\nPatterned Light Blue Glass\nPatterned Lime Glass\nPatterned Magenta Glass\nPatterned Orange Glass\nPatterned Pink Glass\nPatterned Purple Glass\nPatterned Red Glass\nPatterned White Glass\nPatterned Yellow Glass\nPotion Table [R]\nPine Ladder [R]\nPlum Ladder [R]\nCedar Ladder [R]\nAspen Ladder [R]\nJungle Ladder [R]\nPalm Ladder [R]\nPear Ladder [R]\nBlack Carpet\nBlue Carpet\nBrown Carpet\nCyan Carpet\nGray Carpet\nLight Gray Carpet\nGreen Carpet\nLight Blue Carpet\nLime Carpet\nMagenta Carpet\nOrange Carpet\nPink Carpet\nPurple Carpet\nRed Carpet\nWhite Carpet\nYellow Carpet\nBookshelf [B,R]\nEmpty Bookshelf [B,R]\nMailbox [R]\nRice [FG]\nRice_stage1\nRice_stage2\nRice_stage3\nRice_stage4\nRice_stage5\nCranberries\nCranberries_stage1\nCranberries_stage2\nRed Mushroom\nBrown Mushroom\nCotton Seeds\nCotton_stage1\nCotton_stage2\nCotton_stage3\nTribe Protector\nTall Grass [TP]\nFaction Protector\nBarkless Palm Log [TB]\nBarkless Pear Log [TB]\nMystery Block\nRocket\nSuper Rocket\nYellow Concrete Slab [H,R]\nWhite Concrete Slab [H,R]\nRed Concrete Slab [H,R]\nPurple Concrete Slab [H,R]\nPink Concrete Slab [H,R]\nOrange Concrete Slab [H,R]\nMagenta Concrete Slab [H,R]\nLime Concrete Slab [H,R]\nLight Gray Concrete Slab [H,R]\nLight Blue Concrete Slab [H,R]\nGreen Concrete Slab [H,R]\nGray Concrete Slab [H,R]\nCyan Concrete Slab [H,R]\nBrown Concrete Slab [H,R]\nBlue Concrete Slab [H,R]\nBlack Concrete Slab [H,R]\nGrenade\nCherry Log [TB]\nBarkless Cherry Log [TB]\nCherry Wood Planks\nCherry Leaves [TC]\nFallen Cherry Leaves [H,R]\nCherry Door [O,R]\n_Cherry Door Top [O,R]\nCherry Trapdoor [O,R]\nCherry Sapling\nCherry Slab [H,R]\nCherry Ladder [R]\nCherry Block\nBouncy Bomb Block\nObby Rocket\nWood Spikes\nStone Spikes\nIron Spikes\nGold Spikes\nDiamond Spikes\nKill Spikes\nCorn Block\nCorn Seeds [FG,G]\nCorn Seeds_stage1\nCorn Plant_stage1\nCorn Plant_stage2\nCorn Plant_stage3\nCorn Plant_stage4\nCorn Plant_stage5\nCorn Plant [FG]\nLoot Chest [R]\nMelting Ice [BK]\nYellow Paintball Explosive\nWhite Paintball Explosive\nRed Paintball Explosive\nPurple Paintball Explosive\nPink Paintball Explosive\nOrange Paintball Explosive\nMagenta Paintball Explosive\nLime Paintball Explosive\nLight Gray Paintball Explosive\nLight Blue Paintball Explosive\nGreen Paintball Explosive\nGray Paintball Explosive\nCyan Paintball Explosive\nBrown Paintball Explosive\nBlue Paintball Explosive\nBlack Paintball Explosive\nYellow Quick Paintball Explosive\nWhite Quick Paintball Explosive\nRed Quick Paintball Explosive\nPurple Quick Paintball Explosive\nPink Quick Paintball Explosive\nOrange Quick Paintball Explosive\nMagenta Quick Paintball Explosive\nLime Quick Paintball Explosive\nLight Gray Quick Paintball Explosive\nLight Blue Quick Paintball Explosive\nGreen Quick Paintball Explosive\nGray Quick Paintball Explosive\nCyan Quick Paintball Explosive\nBrown Quick Paintball Explosive\nBlue Quick Paintball Explosive\nBlack Quick Paintball Explosive\nYellow Seeking Paintball Explosive\nWhite Seeking Paintball Explosive\nRed Seeking Paintball Explosive\nPurple Seeking Paintball Explosive\nPink Seeking Paintball Explosive\nOrange Seeking Paintball Explosive\nMagenta Seeking Paintball Explosive\nLime Seeking Paintball Explosive\nLight Gray Seeking Paintball Explosive\nLight Blue Seeking Paintball Explosive\nGreen Seeking Paintball Explosive\nGray Seeking Paintball Explosive\nCyan Seeking Paintball Explosive\nBrown Seeking Paintball Explosive\nBlue Seeking Paintball Explosive\nBlack Seeking Paintball Explosive\nYellow Sticky Paintball Explosive\nWhite Sticky Paintball Explosive\nRed Sticky Paintball Explosive\nPurple Sticky Paintball Explosive\nPink Sticky Paintball Explosive\nOrange Sticky Paintball Explosive\nMagenta Sticky Paintball Explosive\nLime Sticky Paintball Explosive\nLight Gray Sticky Paintball Explosive\nLight Blue Sticky Paintball Explosive\nGreen Sticky Paintball Explosive\nGray Sticky Paintball Explosive\nCyan Sticky Paintball Explosive\nBrown Sticky Paintball Explosive\nBlue Sticky Paintball Explosive\nBlack Sticky Paintball Explosive\nWhite Strongbed [R]\n_White Strongbed Head [R]\nOrange Strongbed [R]\n_Orange Strongbed Head [R]\nMagenta Strongbed [R]\n_Magenta Strongbed Head [R]\nLight Blue Strongbed [R]\n_Light Blue Strongbed Head [R]\nYellow Strongbed [R]\n_Yellow Strongbed Head [R]\nLime Strongbed [R]\n_Lime Strongbed Head [R]\nPink Strongbed [R]\n_Pink Strongbed Head [R]\nGray Strongbed [R]\n_Gray Strongbed Head [R]\nLight Gray Strongbed [R]\n_Light Gray Strongbed Head [R]\nCyan Strongbed [R]\n_Cyan Strongbed Head [R]\nPurple Strongbed [R]\n_Purple Strongbed Head [R]\nBlue Strongbed [R]\n_Blue Strongbed Head [R]\nBrown Strongbed [R]\n_Brown Strongbed Head [R]\nGreen Strongbed [R]\n_Green Strongbed Head [R]\nRed Strongbed [R]\n_Red Strongbed Head [R]\nBlack Strongbed [R]\n_Black Strongbed Head [R]\nTimed Spike Bomb Block [FL]\nLava\nFat Brown Mushroom\nFat Red Mushroom\nChili Pepper Block\nChili Pepper Seeds [LV]\nChili Pepper Plant_stage1 [LV]\nChili Pepper Plant_stage2 [LV]\nChili Pepper Plant_stage3 [LV]\nChili Pepper Plant_stage4 [LV]\nChili Pepper Plant [FG,LV]\nChili Pepper Plant_stage5 [LV]\nCode Block\nToxin Ball Block\nSpawn Block (Yellow) [R]\nSpawn Block (White) [R]\nSpawn Block (Red) [R]\nSpawn Block (Purple) [R]\nSpawn Block (Pink) [R]\nSpawn Block (Orange) [R]\nSpawn Block (Magenta) [R]\nSpawn Block (Lime) [R]\nSpawn Block (Light Gray) [R]\nSpawn Block (Light Blue) [R]\nSpawn Block (Green) [R]\nSpawn Block (Gray) [R]\nSpawn Block (Cyan) [R]\nSpawn Block (Brown) [R]\nSpawn Block (Blue) [R]\nSpawn Block (Black) [R]\nCheckpoint Block [R]\nCustom Lobby Block [R]\nGenerator Spawn Block (Red)\nGenerator Spawn Block (Blue)\nGenerator Spawn Block (Lime)\nGenerator Spawn Block (Yellow)\nGenerator Spawn Block (Cyan)\nGenerator Spawn Block (White)\nGenerator Spawn Block (Pink)\nGenerator Spawn Block (Gray)\nTrader Shop Spawn Block [R]\nWizard Shop Spawn Block [R]\nGenerator Spawn Block (Diamond)\nGenerator Spawn Block (Moonstone)\nGenerator Spawn Block (Ore)\nGoal Block (Red)\nGoal Block (Blue)\nFinish Block\nDrop Location Block\nObby Death Block\nObby Absorb Block\nObby Absorb Death Block\nBone Block\nPig Spawner Block\nCow Spawner Block\nSheep Spawner Block\nCave Golem Spawner Block\nDraugr Zombie Spawner Block\nDraugr Skeleton Spawner Block\nEmpty Spawner Block\nFrost Golem Spawner Block\nFrost Zombie Spawner Block\nFrost Skeleton Spawner Block\nSnowy Messy Stone\nSnowy Stone Slab [H,R]\nDraugr Knight Spawner Block\nPacked Snow\nCarved Messy Stone\nSpectral Grass\nSpectral Log [TB]\nBarkless Spectral Log [TB]\nSpectral Wood Planks\nSpectral Leaves [TC]\nSpectral Door [O,R]\n_Spectral Door Top [O,R]\nSpectral Trapdoor [O,R]\nSpectral Sapling\nSpectral Slab [H,R]\nSpectral Ladder [R]\nWood Enchanting Table [R]\nStone Enchanting Table [R]\nIron Enchanting Table [R]\nGold Enchanting Table [R]\nDiamond Enchanting Table [R]\nPine Grass Block\nPine Grass Slab [H,R]\nPine Grass\nPine Fern\nFallen Pine Cone\nPine Cone Block\nWolf Spawner Block\nBear Spawner Block\nDeer Spawner Block\nStag Spawner Block\nBone Antlers [R]\nGold Antlers [R]\nGold Watermelon Stag Spawner Block\nSalvaging Table [R]\nChalk\nYellow Chalk\nWhite Chalk\nRed Chalk\nPurple Chalk\nPink Chalk\nOrange Chalk\nMagenta Chalk\nLime Chalk\nLight Gray Chalk\nLight Blue Chalk\nGreen Chalk\nGray Chalk\nCyan Chalk\nBrown Chalk\nBlue Chalk\nBlack Chalk\nYellow Chalk Bricks\nWhite Chalk Bricks\nRed Chalk Bricks\nPurple Chalk Bricks\nPink Chalk Bricks\nOrange Chalk Bricks\nMagenta Chalk Bricks\nLime Chalk Bricks\nLight Gray Chalk Bricks\nLight Blue Chalk Bricks\nGreen Chalk Bricks\nGray Chalk Bricks\nCyan Chalk Bricks\nBrown Chalk Bricks\nBlue Chalk Bricks\nBlack Chalk Bricks\nYellow Chalk Slab [H,R]\nWhite Chalk Slab [H,R]\nRed Chalk Slab [H,R]\nPurple Chalk Slab [H,R]\nPink Chalk Slab [H,R]\nOrange Chalk Slab [H,R]\nMagenta Chalk Slab [H,R]\nLime Chalk Slab [H,R]\nLight Gray Chalk Slab [H,R]\nLight Blue Chalk Slab [H,R]\nGreen Chalk Slab [H,R]\nGray Chalk Slab [H,R]\nCyan Chalk Slab [H,R]\nBrown Chalk Slab [H,R]\nBlue Chalk Slab [H,R]\nBlack Chalk Slab [H,R]\nYellow Chalk Bricks Slab [H,R]\nWhite Chalk Bricks Slab [H,R]\nRed Chalk Bricks Slab [H,R]\nPurple Chalk Bricks Slab [H,R]\nPink Chalk Bricks Slab [H,R]\nOrange Chalk Bricks Slab [H,R]\nMagenta Chalk Bricks Slab [H,R]\nLime Chalk Bricks Slab [H,R]\nLight Gray Chalk Bricks Slab [H,R]\nLight Blue Chalk Bricks Slab [H,R]\nGreen Chalk Bricks Slab [H,R]\nGray Chalk Bricks Slab [H,R]\nCyan Chalk Bricks Slab [H,R]\nBrown Chalk Bricks Slab [H,R]\nBlue Chalk Bricks Slab [H,R]\nBlack Chalk Bricks Slab [H,R]\nLeaf Bed [R]\n_Leaf Bed Head [R]\nJungle Grass Block\nJungle Grass Slab [H,R]\nJungle Tall Grass [TP]\nCatnip\nMango Log [TB]\nBarkless Mango Log [TB]\nMango Wood Planks\nMango Leaves [TC]\nMango Door [O,R]\n_Mango Door Top [O,R]\nMango Trapdoor [O,R]\nMango Sapling\nMango Slab [H,R]\nMango Ladder [R]\nMango Block\nBanana Block\nBanana Seeds [G]\nAttached Banana Stem [R]\nDangling Rope\nDangling Vine\nGorilla Spawner Block\nWildcat Spawner Block\nFruity Maple Leaves\nPine Cone Leaves\nFruity Plum Leaves\nFruity Palm Leaves\nFruity Pear Leaves\nFruity Cherry Leaves\nFruity Mango Leaves\nDraugr Huntress Spawner Block\nMagma Golem Spawner Block\nBlack Portal\nBlue Portal\nBrown Portal\nCyan Portal\nGray Portal\nGreen Portal\nGrey Portal\nLight Blue Portal\nLight Gray Portal\nLime Portal\nMagenta Portal\nOrange Portal\nPink Portal\nPurple Portal\nRed Portal\nWhite Portal\nYellow Portal\nLeather Block\nHorse Spawner Block\nTomato Plant [FG,TP]\nTomato Plant_stage1\nCarrot Plant [FG]\nCarrot Plant_stage1\nPotato Plant [FG]\nPotato Plant_stage1\nStrawberry Bush\nStrawberry Bush_stage1\nStrawberry Bush_stage2\nSugar Cane Plant [FG,TP]\nSugar Cane Plant_stage1\nLettuce Plant [FG]\nLettuce Plant_stage1\nCoffee Plant [FG]\nCoffee Plant_stage1\nCauliflower Plant [FG]\nCauliflower Plant_stage1\nParsnip Plant [FG]\nParsnip Plant_stage1\nBlueberry Bush\nBlueberry Bush_stage1\nBlueberry Bush_stage2\nRed Cabbage Plant [FG]\nRed Cabbage Plant_stage1\nBeetroot Plant [FG]\nBeetroot Plant_stage1\nAutumn Aspen Leaves [TC]\nAutumn Fern\nIron Chest [R]\nCrate\nCarrot Block\nCarrot Seeds\nPotato Block\nPotato Seeds\nBeetroot Block\nBeetroot Seeds\nWhite Banner [H,R]\n_White Banner Flag [H,R]\nOrange Banner [H,R]\n_Orange Banner Flag [H,R]\nMagenta Banner [H,R]\n_Magenta Banner Flag [H,R]\nLight Blue Banner [H,R]\n_Light Blue Banner Flag [H,R]\nYellow Banner [H,R]\n_Yellow Banner Flag [H,R]\nLime Banner [H,R]\n_Lime Banner Flag [H,R]\nPink Banner [H,R]\n_Pink Banner Flag [H,R]\nGray Banner [H,R]\n_Gray Banner Flag [H,R]\nLight Gray Banner [H,R]\n_Light Gray Banner Flag [H,R]\nCyan Banner [H,R]\n_Cyan Banner Flag [H,R]\nPurple Banner [H,R]\n_Purple Banner Flag [H,R]\nBlue Banner [H,R]\n_Blue Banner Flag [H,R]\nBrown Banner [H,R]\n_Brown Banner Flag [H,R]\nGreen Banner [H,R]\n_Green Banner Flag [H,R]\nRed Banner [H,R]\n_Red Banner Flag [H,R]\nBlack Banner [H,R]\n_Black Banner Flag [H,R]\nDraugr Banner [H,R]\n_Draugr Banner Flag [H,R]\nSpirit Golem Spawner Block\nSpirit Wolf Spawner Block\nSpirit Bear Spawner Block\nSpirit Stag Spawner Block\nSpirit Gorilla Spawner Block\nFertilised Soil\n_Grant Wool Top Left [R]\n_Grant Wool Top Right [R]\nGrant Wool [R]\n_Grant Wool Bottom Right [R]\n_Stampede Top Left [R]\n_Stampede Top Right [R]\nStampede [R]\n_Stampede Bottom Right [R]\n_Unforgotten Pig Top Left [R]\n_Unforgotten Pig Top Right [R]\nUnforgotten Pig [R]\n_Unforgotten Pig Bottom Right [R]\n_Sunbathed Gallope Top Left [R]\n_Sunbathed Gallope Top Right [R]\nSunbathed Gallope [R]\n_Sunbathed Gallope Bottom Right [R]\n_Dreaming Canine Top Left [R]\n_Dreaming Canine Top Right [R]\nDreaming Canine [R]\n_Dreaming Canine Bottom Right [R]\n_A Doe Through The Green Top Left [R]\n_A Doe Through The Green Top Right [R]\nA Doe Through The Green [R]\n_A Doe Through The Green Bottom Right [R]\n_Whiskers Top Left [R]\n_Whiskers Top Right [R]\nWhiskers [R]\n_Whiskers Bottom Right [R]\nHollow Crate\nDraugr Warper Spawner Block\nRadar [R]\n_Radar Back [R]\n_Radar Dish [R]\nInactive Radar [R]\n_Inactive Radar Back [R]\n_Inactive Radar Dish [R]\nActive Radar [R]\n_Active Radar Back [R]\n_Active Radar Dish [R]\nLucky Block\nUltra Lucky Block\nGold Trophy [R]\nSmall Magenta Pod\n_Small Magenta Pod Mid\n_Small Magenta Pod Top\nSmall Light Gray Pod\n_Small Light Gray Pod Mid\n_Small Light Gray Pod Top\nSmall Red Pod\n_Small Red Pod Mid\n_Small Red Pod Top\nINTERNAL_MESH_Gold Trophy\nFrost Wraith Spawner Block\nDraugr Reaver Spawner Block\nSmall White Pod\n_Small White Pod Mid\n_Small White Pod Top\nSmall Orange Pod\n_Small Orange Pod Mid\n_Small Orange Pod Top\nSmall Light Blue Pod\n_Small Light Blue Pod Mid\n_Small Light Blue Pod Top\nSmall Yellow Pod\n_Small Yellow Pod Mid\n_Small Yellow Pod Top\nSmall Lime Pod\n_Small Lime Pod Mid\n_Small Lime Pod Top\nSmall Pink Pod\n_Small Pink Pod Mid\n_Small Pink Pod Top\nSmall Gray Pod\n_Small Gray Pod Mid\n_Small Gray Pod Top\nSmall Cyan Pod\n_Small Cyan Pod Mid\n_Small Cyan Pod Top\nSmall Purple Pod\n_Small Purple Pod Mid\n_Small Purple Pod Top\nSmall Blue Pod\n_Small Blue Pod Mid\n_Small Blue Pod Top\nSmall Brown Pod\n_Small Brown Pod Mid\n_Small Brown Pod Top\nSmall Green Pod\n_Small Green Pod Mid\n_Small Green Pod Top\nSmall Black Pod\n_Small Black Pod Mid\n_Small Black Pod Top\nSkull Banner [H,R]\n_Skull Banner Flag [H,R]\nRainbow Banner [H,R]\n_Rainbow Banner Flag [H,R]\nDuo Blocchino Statue\nBebek Bebek Bebek Statue\nBobino Musculino Statue\nBobzilla Statue\nBrra Brra Pachim Statue\nCapitano Explovissimo Statue\nCappuccino Ninjino Statue\nChimpanzano Bananano Statue\nIl Wizardini Del Porko Statue\nLucchia Blocchi Statue\nMonsieur Bedwar Statue\nTwirlina Cappucina Statue\nWeapon Lucky Block\nBoiling Pot\nChopping Board\nFrying Pan\nHob Boiling\nHob Frying\nKitchen Worktop\nSlicing Board\nWood Trophy [R]\nINTERNAL_MESH_Wood Trophy\nStone Trophy [R]\nINTERNAL_MESH_Stone Trophy\nIron Trophy [R]\nINTERNAL_MESH_Iron Trophy\nDiamond Trophy [R]\nINTERNAL_MESH_Diamond Trophy\nMoonstone Trophy [R]\nINTERNAL_MESH_Moonstone Trophy\nBlack Wave\nBlue Wave\nBrown Wave\nCyan Wave\nGreen Wave\nGrey Wave\nLight Blue Wave\nLight Grey Wave\nLime Wave\nMagenta Wave\nOrange Wave\nPink Wave\nPurple Wave\nRed Wave\nWhite Wave\nYellow Wave\nWhite Directional Arrow [R]\nOrange Directional Arrow [R]\nMagenta Directional Arrow [R]\nLight Blue Directional Arrow [R]\nYellow Directional Arrow [R]\nLime Directional Arrow [R]\nPink Directional Arrow [R]\nGrey Directional Arrow [R]\nLight Grey Directional Arrow [R]\nCyan Directional Arrow [R]\nPurple Directional Arrow [R]\nBlue Directional Arrow [R]\nBrown Directional Arrow [R]\nGreen Directional Arrow [R]\nRed Directional Arrow [R]\nBlack Directional Arrow [R]\nBin\nVending Machine [R]\n_Vending Machine Top [R]\nJob Application Statue\nJohn Beef Statue\n67 Statue\nColoured Wheel\nUFO\nTorch [H,R]\nYellow Torch [H,R]\nWhite Torch [H,R]\nRed Torch [H,R]\nPurple Torch [H,R]\nPink Torch [H,R]\nOrange Torch [H,R]\nMagenta Torch [H,R]\nLime Torch [H,R]\nLight Gray Torch [H,R]\nLight Blue Torch [H,R]\nGreen Torch [H,R]\nGray Torch [H,R]\nCyan Torch [H,R]\nBrown Torch [H,R]\nBlue Torch [H,R]\nBlack Torch [H,R]\nYellow Neon\nWhite Neon\nRed Neon\nPurple Neon\nPink Neon\nOrange Neon\nMagenta Neon\nLime Neon\nLight Gray Neon\nLight Blue Neon\nGreen Neon\nGray Neon\nCyan Neon\nBrown Neon\nBlue Neon\nBlack Neon\nLanding Pad\nWeak Jump Pad\nJump Pad\nStrong Jump Pad\nSuper Jump Pad\nInvisible Yellow Light\nInvisible White Light\nInvisible Red Light\nInvisible Purple Light\nInvisible Pink Light\nInvisible Orange Light\nInvisible Magenta Light\nInvisible Lime Light\nInvisible Light Gray Light\nInvisible Light Blue Light\nInvisible Green Light\nInvisible Gray Light\nInvisible Cyan Light\nInvisible Brown Light\nInvisible Blue Light\nInvisible Black Light\nInvisible Sky Light\nGun Lucky Block\nGhost Chest\nGhost Lucky Block\nGhost Mystery Block\nFootball\nPet Lucky Block\nGlowing Mushroom [H,R]\nCrystal [H,R]\nSlime Trail [R]\nOvergrown Grass Block\nOvergrown Pine Grass Block\nOvergrown Jungle Grass Block\nSmoke Block\nPipe\nAuto Miner [R]\n_Auto Miner Drill Front [R]\n_Auto Miner Drill Back [R]\n_Auto Miner Foot Front [R]\n_Auto Miner Body [R]\nAuto Crafter\nRocket Ship\n_Rocket Ship Southwest L2\n_Rocket Ship Southwest L3\n_Rocket Ship Southwest L4\n_Rocket Ship Southwest L5\n_Rocket Ship Southeast L1\n_Rocket Ship Southeast L2\n_Rocket Ship Southeast L3\n_Rocket Ship Southeast L4\n_Rocket Ship Southeast L5\n_Rocket Ship Northwest L1\n_Rocket Ship Northwest L2\n_Rocket Ship Northwest L3\n_Rocket Ship Northwest L4\n_Rocket Ship Northwest L5\n_Rocket Ship Northeast L1\n_Rocket Ship Northeast L2\n_Rocket Ship Northeast L3\n_Rocket Ship Northeast L4\n_Rocket Ship Northeast L5\nRocket Ship S2\nRocket Ship S3\nRocket Ship S4\nRocket Ship S5\nINTERNAL_MESH_Rocket Ship Full\nExtractor Pipe\nSplitter Pipe\nSolar Panel [R]\n_Solar Panel SE [R]\n_Solar Panel NW [R]\n_Solar Panel NE [R]\nWire\nFilter Pipe\nMerger Pipe\nAuto Harvester\nStalker Spawner Block\nLunite Ore\nBlock of Lunite\nLunite Auto Miner [R]\n_Lunite Auto Miner Drill Front [R]\n_Lunite Auto Miner Drill Back [R]\n_Lunite Auto Miner Foot Front [R]\n_Lunite Auto Miner Body [R]\nLunite Auto Crafter\nLunite Auto Harvester\nBowling Alley Floor\nCrone Spawner Block\nSlime Spawner Block\nIron Guardian Spawner Block\nGold Guardian Spawner Block\nDiamond Guardian Spawner Block\nMoonstone Guardian Spawner Block\nDry Grass Block\nOvergrown Dry Grass Block\nDead Bush\nDry Grass Slab [H,R]\nLantern [H,R]\nLily Pad [R]\nCamel Spawner Block\n_Hump Day Top Left [R]\n_Hump Day Top Right [R]\nHump Day [R]\n_Hump Day Bottom Right [R]\nRare Lucky Block\nSuper Lucky Block\nRare Weapon Lucky Block\nSuper Weapon Lucky Block\nBuilding Lucky Block\nRare Building Lucky Block\nSuper Building Lucky Block\nArmour Lucky Block\nRare Armour Lucky Block\nSuper Armour Lucky Block\nTools Lucky Block\nRare Tools Lucky Block\nSuper Tools Lucky Block\nFood Lucky Block\nRare Food Lucky Block\nSuper Food Lucky Block\nPotion Lucky Block\nRare Potion Lucky Block\nSuper Potion Lucky Block\nBlock Destroyer TNT\nMaple Stairs [H,R,SC]\nPine Stairs [H,R,SC]\nPlum Stairs [H,R,SC]\nCedar Stairs [H,R,SC]\nAspen Stairs [H,R,SC]\nJungle Stairs [H,R,SC]\nPalm Stairs [H,R,SC]\nPear Stairs [H,R,SC]\nCherry Stairs [H,R,SC]\nSpectral Stairs [H,R,SC]\nMango Stairs [H,R,SC]\nMessy Stone Stairs [H,R,SC]\nStone Stairs [H,R,SC]\nSmooth Stone Stairs [H,R,SC]\nEngraved Stone Stairs [H,R,SC]\nStone Bricks Stairs [H,R,SC]\nMossy Stone Stairs [H,R,SC]\nMossy Stone Bricks Stairs [H,R,SC]\nAndesite Stairs [H,R,SC]\nSmooth Andesite Stairs [H,R,SC]\nEngraved Andesite Stairs [H,R,SC]\nAndesite Bricks Stairs [H,R,SC]\nDiorite Stairs [H,R,SC]\nSmooth Diorite Stairs [H,R,SC]\nEngraved Diorite Stairs [H,R,SC]\nDiorite Bricks Stairs [H,R,SC]\nGranite Stairs [H,R,SC]\nSmooth Granite Stairs [H,R,SC]\nEngraved Granite Stairs [H,R,SC]\nGranite Bricks Stairs [H,R,SC]\nSandstone Stairs [H,R,SC]\nSmooth Sandstone Stairs [H,R,SC]\nEngraved Sandstone Stairs [H,R,SC]\nMarked Sandstone Stairs [H,R,SC]\nSandstone Bricks Stairs [H,R,SC]\nRed Sandstone Stairs [H,R,SC]\nSmooth Red Sandstone Stairs [H,R,SC]\nEngraved Red Sandstone Stairs [H,R,SC]\nMarked Red Sandstone Stairs [H,R,SC]\nRed Sandstone Bricks Stairs [H,R,SC]\nBricks Stairs [H,R,SC]\nIce Bricks Stairs [H,R,SC]\nYellow Concrete Stairs [H,R,SC]\nWhite Concrete Stairs [H,R,SC]\nRed Concrete Stairs [H,R,SC]\nPurple Concrete Stairs [H,R,SC]\nPink Concrete Stairs [H,R,SC]\nOrange Concrete Stairs [H,R,SC]\nMagenta Concrete Stairs [H,R,SC]\nLime Concrete Stairs [H,R,SC]\nLight Gray Concrete Stairs [H,R,SC]\nLight Blue Concrete Stairs [H,R,SC]\nGreen Concrete Stairs [H,R,SC]\nGray Concrete Stairs [H,R,SC]\nCyan Concrete Stairs [H,R,SC]\nBrown Concrete Stairs [H,R,SC]\nBlue Concrete Stairs [H,R,SC]\nBlack Concrete Stairs [H,R,SC]\nYellow Chalk Stairs [H,R,SC]\nWhite Chalk Stairs [H,R,SC]\nRed Chalk Stairs [H,R,SC]\nPurple Chalk Stairs [H,R,SC]\nPink Chalk Stairs [H,R,SC]\nOrange Chalk Stairs [H,R,SC]\nMagenta Chalk Stairs [H,R,SC]\nLime Chalk Stairs [H,R,SC]\nLight Gray Chalk Stairs [H,R,SC]\nLight Blue Chalk Stairs [H,R,SC]\nGreen Chalk Stairs [H,R,SC]\nGray Chalk Stairs [H,R,SC]\nCyan Chalk Stairs [H,R,SC]\nBrown Chalk Stairs [H,R,SC]\nBlue Chalk Stairs [H,R,SC]\nBlack Chalk Stairs [H,R,SC]\nYellow Chalk Bricks Stairs [H,R,SC]\nWhite Chalk Bricks Stairs [H,R,SC]\nRed Chalk Bricks Stairs [H,R,SC]\nPurple Chalk Bricks Stairs [H,R,SC]\nPink Chalk Bricks Stairs [H,R,SC]\nOrange Chalk Bricks Stairs [H,R,SC]\nMagenta Chalk Bricks Stairs [H,R,SC]\nLime Chalk Bricks Stairs [H,R,SC]\nLight Gray Chalk Bricks Stairs [H,R,SC]\nLight Blue Chalk Bricks Stairs [H,R,SC]\nGreen Chalk Bricks Stairs [H,R,SC]\nGray Chalk Bricks Stairs [H,R,SC]\nCyan Chalk Bricks Stairs [H,R,SC]\nBrown Chalk Bricks Stairs [H,R,SC]\nBlue Chalk Bricks Stairs [H,R,SC]\nBlack Chalk Bricks Stairs [H,R,SC]\nToxic Waste Barrel\nToxic Waste\nAncient Maple Log\nEvil Lucky Block\nINTERNAL_MESH_Small Twin Icicle\nINTERNAL_MESH_Medium Icicle\nINTERNAL_MESH_Large Icicle\nINTERNAL_MESH_Large Twin Icicle\nNoticeboard Standing [R]\nNoticeboard Standing Top [R]\nNoticeboard Standing Bottom [R]\nNoticeboard Standing Left [R]\nNoticeboard Standing Right [R]\nNoticeboard Standing Top Left [R]\nNoticeboard Standing Top Right [R]\nNoticeboard Standing Bottom Left [R]\nNoticeboard Standing Bottom Right [R]\nNoticeboard Standing Leg [R]\nNoticeboard Wall [R]\nNoticeboard Wall Top [R]\nNoticeboard Wall Bottom [R]\nNoticeboard Wall Left [R]\nNoticeboard Wall Right [R]\nNoticeboard Wall Top Left [R]\nNoticeboard Wall Top Right [R]\nNoticeboard Wall Bottom Left [R]\nNoticeboard Wall Bottom Right [R]\nTiki Terror Spawner Block\nMaple Fence\n_Maple Fence Top\nPine Fence\n_Pine Fence Top\nPlum Fence\n_Plum Fence Top\nCedar Fence\n_Cedar Fence Top\nAspen Fence\n_Aspen Fence Top\nJungle Fence\n_Jungle Fence Top\nPalm Fence\n_Palm Fence Top\nPear Fence\n_Pear Fence Top\nCherry Fence\n_Cherry Fence Top\nSpectral Fence\n_Spectral Fence Top\nMango Fence\n_Mango Fence Top\nNoticeboard [R]\nStanding Noticeboard [R]\nPure Coal Ore\nPure Iron Ore\nPure Gold Ore\nPure Diamond Ore\nPure Moonstone Ore\nMaple Fence Gate [O,R]\n_Maple Fence Gate Top [O,R]\nPine Fence Gate [O,R]\n_Pine Fence Gate Top [O,R]\nPlum Fence Gate [O,R]\n_Plum Fence Gate Top [O,R]\nCedar Fence Gate [O,R]\n_Cedar Fence Gate Top [O,R]\nAspen Fence Gate [O,R]\n_Aspen Fence Gate Top [O,R]\nJungle Fence Gate [O,R]\n_Jungle Fence Gate Top [O,R]\nPalm Fence Gate [O,R]\n_Palm Fence Gate Top [O,R]\nPear Fence Gate [O,R]\n_Pear Fence Gate Top [O,R]\nCherry Fence Gate [O,R]\n_Cherry Fence Gate Top [O,R]\nSpectral Fence Gate [O,R]\n_Spectral Fence Gate Top [O,R]\nMango Fence Gate [O,R]\n_Mango Fence Gate Top [O,R]\nIron Goofy Golem Spawner Block\nGold Goofy Golem Spawner Block\nDiamond Goofy Golem Spawner Block\nMoonstone Goofy Golem Spawner Block\nCannon [R]\n_Cannon Bottom Front [R]\n_Cannon Barrel Back [R]\n_Cannon Barrel Front [R]\n_Cannon Top Back [R]\n_Cannon Top Front [R]\nCrystal Block\nRope Block\nAsh\nCoal Deposit\nIron Deposit\nStone Deposit\nCopper Deposit\nGold Deposit\nHomestead Core\nDrop Pad\nCopper Ore\nBurner Drill [R]\nCrusher [R]\nSmelter [R]\nGenerator [R]\nPress [R]\nWire Mill [R]\nConveyor Belt [R]\nSplitter [R]\nVoltite Ore\nAlloy Kiln [R]\nElectric Drill [R]\nAssembler [R]\nSorting Gate [R]\nBelt Loader [R]\nStorage Silo\nCharge Vault\nMachine Bench\nParts Bench\nTool Bench\n_Homestead Core Mid\n_Homestead Core Top\nTree Cutter [R]\nVoltite Deposit\nVolt Engine [R]\nDeep Drill [R]\nShatter Mill [R]\nSky Tap [R]\nFast Belt [R]\nCharging Pad\nCrystal Vat [R]\nStarframe\nForge Hopper\nComet Ore\nComet Heart\n_Starframe Spire\nRecycler [R]\nBelt Lift\nBelt Drop\nCrop Harvester [R]\nBelt Tunnel [R]\nPure Copper Ore\nPure Voltite Ore\nDarkstone\nDarkstone Bricks\nCracked Darkstone Bricks\nMolten Darkstone Bricks\nEngraved Darkstone\nSmooth Darkstone\nINTERNAL_MESH_Floor Quarters\nScorpion Eggs Block\nINTERNAL_MESH_Boss Target\nINTERNAL_MESH_Rune Sigil\nINTERNAL_MESH_Eclipse Dial\nINTERNAL_MESH_Beam Arm\nINTERNAL_MESH_Beam Arm Mirrored\nINTERNAL_MESH_Mortar\nTrading Terminal [R]\nStone Generator\nWheat Helper\nCarrot Helper\nMelon Helper\nShowcase\nPine Item Pedestal\nPlum Item Pedestal\nCedar Item Pedestal\nAspen Item Pedestal\nJungle Item Pedestal\nPalm Item Pedestal\nPear Item Pedestal\nCherry Item Pedestal\nSpectral Item Pedestal\nMango Item Pedestal\nUranium Ore\nUranium Deposit\nSky Spring\nAtomic Bench\nPump [R]\nCondenser [R]\nCentrifuge [R]\nSynthesizer [R]\nMob Farm [R]\nFluid Tank [R]\nReactor Controller [R]\nReactor Frame [R]\nReactor Casing\nReactor Glass [R]\nReactor Port [R]\nFuel Rod [R]\nGraphite Block\nCoolant Channel [R]\nReactor Slag\nAtomic Bomb\nBattery Controller [R]\nBattery Casing\nBattery Cell [R]\nCollider [R]\n_Collider Focus [R]\n_Collider Output [R]\nLaser [R]\nWireless Terminal [R]\nDense Silo\nExpress Belt [R]\nFast Loader [R]\nUranium Glass\nGlow Lamp\n_Jetpack Back\n_Atomic Spire\nIsotope Comet Ore\nIsotope Comet Heart\nFluid Pipe\nCoolant Mixer [R]\nCoolant Pipe\nScaffolding\nNova Trophy [R]\nUranium Block\nPure Uranium Ore\nCopper Block\nVoltite Block\nNova Bomb\nINTERNAL_MESH_White Directional Arrow\nINTERNAL_MESH_Light Grey Directional Arrow\nINTERNAL_MESH_Light Blue Directional Arrow\nINTERNAL_MESH_Cyan Directional Arrow\nINTERNAL_MESH_Green Directional Arrow\nINTERNAL_MESH_Lime Directional Arrow\nINTERNAL_MESH_Yellow Directional Arrow\nINTERNAL_MESH_Orange Directional Arrow\nINTERNAL_MESH_Magenta Directional Arrow\nINTERNAL_MESH_Red Directional Arrow\nPlaced Water\nPlaced Lava\n'
-  }
+  5479: (WW, iW, OW) => {
+    OW.d(iW, {
+      B: () => xW,
+      d: () => mW,
+      e: () => PW,
+      i: () => jW,
+      j: () => bW,
+      l: () => LW,
+      o: () => EW,
+      s: () => NW,
+      v: () => AW,
+      y: () => lW
+    });
+    const mW = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+
+    function EW(WW) {
+      try {
+        return decodeURIComponent(WW.slice(1))
+      } catch {
+        return WW.slice(1)
+      }
+    }
+
+    function NW(WW) {
+      return WW.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    }
+    const PW = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${mW.source}`, "g");
+
+    function LW(WW, iW) {
+      return 2 === WW.length ? iW.replace(/^ (.*) $/, "$1") : iW
+    }
+
+    function cW(WW) {
+      return "" === WW.trim()
+    }
+
+    function wW(WW) {
+      const iW = [];
+      for (const OW of WW.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) iW.length > 0 && iW[iW.length - 1].endsWith("\\") ? iW[iW.length - 1] += `|${OW}` : iW.push(OW);
+      return iW.map((WW => WW.trim().replaceAll("\\|", "|")))
+    }
+    const tW = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function ZW(WW) {
+      const iW = [],
+        OW = [{
+          indent: -1,
+          items: iW
+        }];
+      let mW = null;
+      for (const EW of WW) {
+        const WW = EW.match(tW);
+        if (!WW) {
+          mW && (mW.text += ` ${EW.trim()}`);
+          continue
+        }
+        const iW = WW[1].replace(/\t/g, "  ").length;
+        for (; iW <= OW[OW.length - 1].indent;) OW.pop();
+        mW = {
+          text: WW[3].trim(),
+          children: []
+        }, OW[OW.length - 1].items.push(mW), OW.push({
+          indent: iW,
+          items: mW.children
+        })
+      }
+      return iW
+    }
+
+    function xW(WW) {
+      const iW = WW.replace(/\r\n/g, "\n").split("\n"),
+        OW = [];
+      let mW = 0;
+      for (; mW < iW.length;) {
+        const WW = iW[mW];
+        if (cW(WW)) {
+          mW++;
+          continue
+        }
+        const EW = WW.match(/^\s*```\s*(\w*)\s*$/);
+        if (EW) {
+          const WW = [];
+          for (mW++; mW < iW.length && !/^\s*```\s*$/.test(iW[mW]);) WW.push(iW[mW]), mW++;
+          mW++, OW.push({
+            kind: "code",
+            lang: EW[1] || "text",
+            code: WW.join("\n").replace(/\s+$/, "")
+          });
+          continue
+        }
+        const PW = WW.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (PW) {
+          const WW = PW[2].trim();
+          OW.push({
+            kind: "heading",
+            level: PW[1].length,
+            text: WW,
+            anchor: NW(WW)
+          }), mW++;
+          continue
+        }
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(WW)) {
+          OW.push({
+            kind: "rule"
+          }), mW++;
+          continue
+        }
+        if (WW.trim().startsWith("|") && mW + 1 < iW.length && /^\s*\|[\s:|-]+\|\s*$/.test(iW[mW + 1])) {
+          const EW = wW(WW),
+            NW = [];
+          for (mW += 2; mW < iW.length && iW[mW].trim().startsWith("|");) NW.push(wW(iW[mW])), mW++;
+          OW.push({
+            kind: "table",
+            header: EW,
+            rows: NW
+          });
+          continue
+        }
+        if (WW.startsWith(">")) {
+          const WW = [];
+          for (; mW < iW.length && iW[mW].startsWith(">");) WW.push(iW[mW].replace(/^>\s?/, "")), mW++;
+          OW.push({
+            kind: "quote",
+            blocks: xW(WW.join("\n"))
+          });
+          continue
+        }
+        if (tW.test(WW)) {
+          const EW = [],
+            NW = /^\s*\d+\./.test(WW);
+          for (; mW < iW.length && !cW(iW[mW]) && (tW.test(iW[mW]) || /^\s+\S/.test(iW[mW]));) EW.push(iW[mW]), mW++;
+          OW.push({
+            kind: "list",
+            ordered: NW,
+            items: ZW(EW)
+          });
+          continue
+        }
+        const LW = [];
+        for (; mW < iW.length && !cW(iW[mW]) && !/^\s*```/.test(iW[mW]) && !/^#{1,6}\s/.test(iW[mW]) && !iW[mW].startsWith(">") && !tW.test(iW[mW]) && (!iW[mW].trim().startsWith("|") || 0 !== LW.length);) LW.push(iW[mW].trim()), mW++;
+        0 === LW.length && (LW.push(iW[mW].trim()), mW++), OW.push({
+          kind: "paragraph",
+          text: LW.join(" ")
+        })
+      }
+      return OW
+    }
+
+    function lW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const OW = xW(WW);
+      let mW = "";
+      const EW = [],
+        NW = [],
+        PW = new Map;
+      for (const wW of OW) {
+        if ("heading" === wW.kind) {
+          var LW;
+          const WW = (null !== (LW = PW.get(wW.anchor)) && void 0 !== LW ? LW : 0) + 1;
+          PW.set(wW.anchor, WW), WW > 1 && (wW.anchor = `${wW.anchor}-${WW}`)
+        }
+        if ("heading" === wW.kind && 1 === wW.level && !mW) {
+          mW = wW.text;
+          continue
+        }
+        if ("heading" === wW.kind && wW.level <= iW) {
+          NW.push({
+            heading: wW,
+            blocks: []
+          });
+          continue
+        }
+        const WW = NW.at(-1);
+        WW ? WW.blocks.push(wW) : EW.push(wW)
+      }
+      const cW = WW => {
+        for (;
+          "rule" === (null === (iW = WW.at(-1)) || void 0 === iW ? void 0 : iW.kind);) {
+          var iW;
+          WW.pop()
+        }
+      };
+      cW(EW);
+      for (const wW of NW) cW(wW.blocks);
+      return {
+        title: mW,
+        intro: EW,
+        sections: NW
+      }
+    }
+
+    function AW(WW) {
+      return [{
+        heading: null,
+        blocks: WW.intro
+      }, ...WW.sections.map((WW => ({
+        heading: WW.heading,
+        blocks: WW.blocks
+      })))]
+    }
+
+    function bW(WW) {
+      return WW.flatMap((WW => "code" === WW.kind ? [WW] : "quote" === WW.kind ? bW(WW.blocks) : []))
+    }
+
+    function jW(WW) {
+      switch (WW.kind) {
+        case "heading":
+        case "paragraph":
+          return WW.text;
+        case "code":
+          return WW.code;
+        case "table":
+          return [WW.header, ...WW.rows].map((WW => WW.join(" "))).join(" ");
+        case "list": {
+          const iW = WW => WW.map((WW => `${WW.text} ${iW(WW.children)}`)).join(" ");
+          return iW(WW.items)
+        }
+        case "quote":
+          return WW.blocks.map(jW).join(" ");
+        case "rule":
+          return ""
+      }
+    }
+  },
+  7473: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => ZW,
+      f: () => PW,
+      i: () => LW
+    });
+    OW(7468);
+    var mW = OW(62),
+      EW = OW(5479),
+      NW = OW(1283);
+    const PW = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+
+    function LW(WW, iW) {
+      return WW === iW ? WW : `${WW} (${iW})`
+    }
+
+    function cW(WW) {
+      const iW = [];
+      let OW = 0;
+      for (const mW of WW.matchAll(PW)) {
+        mW.index > OW && iW.push(WW.slice(OW, mW.index));
+        const [, EW, PW, cW, wW, tW, ZW] = mW;
+        void 0 !== EW ? iW.push(LW(EW, PW)) : void 0 !== cW || void 0 !== wW ? iW.push((0, NW.jsx)("strong", {
+          children: null !== cW && void 0 !== cW ? cW : wW
+        }, mW.index)) : void 0 !== tW ? iW.push((0, NW.jsx)("em", {
+          children: tW
+        }, mW.index)) : iW.push((0, NW.jsx)("code", {
+          children: ZW
+        }, mW.index)), OW = mW.index + mW[0].length
+      }
+      return OW < WW.length && iW.push(WW.slice(OW)), iW
+    }
+
+    function wW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const mW = WW.map(((WW, iW) => (0, NW.jsxs)("li", {
+        children: [cW(WW.text), WW.children.length > 0 && wW(WW.children, !1)]
+      }, iW)));
+      return iW ? (0, NW.jsx)("ol", {
+        start: OW,
+        children: mW
+      }) : (0, NW.jsx)("ul", {
+        children: mW
+      })
+    }
+
+    function tW(WW, iW) {
+      switch (WW.kind) {
+        case "heading":
+          return WW.level <= 2 ? (0, NW.jsx)("h3", {
+            children: cW(WW.text)
+          }, iW) : (0, NW.jsx)("h4", {
+            children: cW(WW.text)
+          }, iW);
+        case "paragraph":
+          return (0, NW.jsx)("p", {
+            children: cW(WW.text)
+          }, iW);
+        case "list":
+          return (0, NW.jsx)(mW.Fragment, {
+            children: wW(WW.items, WW.ordered)
+          }, iW);
+        case "quote":
+          return (0, NW.jsx)("blockquote", {
+            children: WW.blocks.map(((WW, iW) => tW(WW, iW)))
+          }, iW);
+        case "code":
+          return (0, NW.jsx)("pre", {
+            children: (0, NW.jsx)("code", {
+              children: WW.code
+            })
+          }, iW);
+        case "table":
+          return (0, NW.jsxs)("table", {
+            children: [(0, NW.jsx)("thead", {
+              children: (0, NW.jsx)("tr", {
+                children: WW.header.map(((WW, iW) => (0, NW.jsx)("th", {
+                  children: cW(WW)
+                }, iW)))
+              })
+            }), (0, NW.jsx)("tbody", {
+              children: WW.rows.map(((WW, iW) => (0, NW.jsx)("tr", {
+                children: WW.map(((WW, iW) => (0, NW.jsx)("td", {
+                  children: cW(WW)
+                }, iW)))
+              }, iW)))
+            })]
+          }, iW);
+        case "rule":
+          return (0, NW.jsx)("hr", {}, iW)
+      }
+    }
+
+    function ZW(WW) {
+      let {
+        markdown: iW
+      } = WW, OW = 0;
+      return (0, NW.jsx)("div", {
+        className: "StudioAiAnswerText",
+        children: (0, EW.B)(iW).map(((WW, iW) => {
+          if ("list" !== WW.kind || !WW.ordered) return OW = 0, tW(WW, iW);
+          const EW = OW + 1;
+          return OW += WW.items.length, (0, NW.jsx)(mW.Fragment, {
+            children: wW(WW.items, !0, EW)
+          }, iW)
+        }))
+      })
+    }
+  },
+  7463: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => kW,
+      k: () => sW,
+      g: () => KW,
+      n: () => AW
+    });
+    var mW = OW(1194),
+      EW = OW(7429),
+      NW = OW(5622);
+    const PW = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+
+    function LW(WW) {
+      return (0, NW.e)(WW, PW, (iW => !/^my/i.test(iW[0]) || !/follow $/i.test(WW.slice(0, iW.index)))).length > 0
+    }
+    const cW = /\byou(?:r|'re|'ll)?\b/i,
+      wW = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      tW = 2;
+
+    function ZW(WW) {
+      return function(WW) {
+        const iW = [];
+        let OW = !1;
+        for (const mW of WW.split("\n")) {
+          if (/^\s*(```|~~~)/.test(mW)) {
+            OW = !OW;
+            continue
+          }
+          if (OW || /^\s*>/.test(mW)) continue;
+          const WW = mW.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          iW.push(...(0, EW.s)(WW))
+        }
+        return iW
+      }(WW).filter((WW => LW(WW) || wW.test(WW) && !cW.test(WW)))
+    }
+    const xW = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      lW = [{
+        name: "Qwen3.6-27B",
+        temperature: .7,
+        reasoningEffort: "none"
+      }, {
+        name: "Qwen3.5-397B-A17B",
+        temperature: .7,
+        reasoningEffort: "none"
+      }, {
+        name: "Mistral-Small-3.2-24B-Instruct-2506",
+        temperature: .15
+      }];
+
+    function AW(WW) {
+      const iW = lW.findIndex((iW => iW.name === WW));
+      return -1 === iW ? lW.length : iW
+    }
+    const bW = 2500,
+      jW = 12e4;
+    class UW extends Error {
+      constructor(WW) {
+        super(`Studio AI chat ${WW}`), this.reason = WW
+      }
+    }
+
+    function kW(WW, iW) {
+      const OW = new AbortController,
+        mW = () => {
+          OW.abort()
+        },
+        EW = setTimeout(mW, WW);
+      return null !== iW && void 0 !== iW && iW.aborted && mW(), null === iW || void 0 === iW || iW.addEventListener("abort", mW, {
+        once: !0
+      }), {
+        signal: OW.signal,
+        clear: () => {
+          clearTimeout(EW), null === iW || void 0 === iW || iW.removeEventListener("abort", mW)
+        }
+      }
+    }
+
+    function sW(WW, iW, OW) {
+      return new Promise(((EW, NW) => {
+        const PW = new AbortController,
+          LW = () => {
+            PW.abort(), NW((0, mW.f)(OW))
+          };
+        if (null !== OW && void 0 !== OW && OW.aborted) return void LW();
+        null === OW || void 0 === OW || OW.addEventListener("abort", LW, {
+          once: !0
+        });
+        const cW = lW.map((() => !1));
+        let wW = null;
+        const tW = lW.map((() => !1)),
+          ZW = lW.map((() => !1));
+        lW.forEach(((mW, xW) => {
+          const AW = kW(jW, PW.signal);
+          SW(mW, [{
+            role: "user",
+            content: WW
+          }], AW.signal).then((WW => {
+            PW.signal.aborted || ("busy" === WW || "failed" === WW ? (tW[xW] = "busy" === WW, ZW[xW] = !0) : null !== WW && (null === wW || xW < wW.rank) && (wW = {
+              rank: xW,
+              answer: {
+                text: WW.text,
+                model: mW.name
+              }
+            }, iW(wW.answer)))
+          }), (WW => {
+            PW.signal.aborted || (ZW[xW] = !0, console.warn(`Studio AI: ${mW.name} couldn't be reached`, WW))
+          })).finally((() => {
+            AW.clear(), cW[xW] = !0, PW.signal.aborted || (() => {
+              var WW, iW;
+              const mW = null !== (WW = null === (iW = wW) || void 0 === iW ? void 0 : iW.rank) && void 0 !== WW ? WW : lW.length;
+              cW.slice(0, mW).includes(!1) || (null === OW || void 0 === OW || OW.removeEventListener("abort", LW), PW.abort(), null !== wW ? EW({
+                ...wW.answer,
+                isFinal: !ZW.slice(0, wW.rank).includes(!0)
+              }) : NW(new UW(tW.includes(!0) ? "busy" : "failed")))
+            })()
+          })).catch((WW => {
+            console.error("Studio AI: showing an answer failed", WW)
+          }))
+        }))
+      }))
+    }
+
+    function MW(WW) {
+      var iW, OW;
+      return "length" === (null === WW || void 0 === WW || null === (iW = WW.choices) || void 0 === iW || null === (OW = iW[0]) || void 0 === OW ? void 0 : OW.finish_reason)
+    }
+    async function KW(WW, iW, OW) {
+      const mW = lW.find((iW => iW.name === WW));
+      if (void 0 === mW) return "failed";
+      const EW = kW(jW, OW);
+      try {
+        const WW = await SW(mW, iW, EW.signal);
+        return null !== WW && "object" === typeof WW ? WW.isCutOff ? (console.warn(`Studio AI: ${mW.name}'s answer was cut off at the token limit`), null) : {
+          text: WW.text
+        } : WW
+      } finally {
+        EW.clear()
+      }
+    }
+    async function SW(WW, iW, OW) {
+      const mW = await fetch(xW, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: WW.name,
+          messages: iW,
+          max_tokens: bW,
+          temperature: WW.temperature,
+          reasoning_effort: WW.reasoningEffort
+        }),
+        credentials: "omit",
+        referrerPolicy: "no-referrer",
+        signal: OW
+      });
+      if (429 === mW.status) return "busy";
+      if (!mW.ok) return console.warn(`Studio AI: ${WW.name} answered ${mW.status}`), "failed";
+      const EW = await mW.json().catch((() => null)),
+        NW = function(WW) {
+          var iW, OW, mW;
+          const EW = null === WW || void 0 === WW || null === (iW = WW.choices) || void 0 === iW || null === (OW = iW[0]) || void 0 === OW || null === (mW = OW.message) || void 0 === mW ? void 0 : mW.content;
+          if ("string" !== typeof EW) return null;
+          const NW = EW.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === NW ? null : NW
+        }(EW);
+      return null !== NW && function(WW) {
+        const iW = ZW(WW);
+        return iW.length >= tW || iW.some((WW => LW(WW)))
+      }(NW) ? (console.warn(`Studio AI: ${WW.name} thought out loud instead of answering`), "failed") : null === NW ? null : {
+        text: NW,
+        isCutOff: MW(EW)
+      }
+    }
+  },
+  7429: (WW, iW, OW) => {
+    OW.d(iW, {
+      D: () => MW,
+      E: () => SW,
+      G: () => jW,
+      J: () => sW,
+      L: () => KW,
+      N: () => kW,
+      R: () => ZW,
+      T: () => wW,
+      W: () => lW,
+      e: () => AW,
+      f: () => LW,
+      i: () => PW,
+      k: () => bW,
+      o: () => xW,
+      s: () => tW,
+      v: () => NW,
+      z: () => EW
+    });
+    var mW = OW(5622);
+    const EW = 2e3,
+      NW = 2e4;
+
+    function PW(WW) {
+      return WW.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    }
+
+    function LW(WW) {
+      return WW.replace(/\$/g, "\\$")
+    }
+    const cW = /[.!?](?=\s|\*|_|$)|\n|$/g;
+
+    function wW(WW, iW) {
+      cW.lastIndex = iW;
+      const OW = cW.exec(WW);
+      return OW.index + OW[0].length
+    }
+
+    function tW(WW) {
+      return (0, mW.r)(WW, /\s+/g, (0, mW.o)(".!?")).flatMap((WW => WW.split("\n")))
+    }
+
+    function ZW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : iW;
+      const mW = [...WW.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((WW => WW.index)),
+        EW = mW.filter((WW => WW < iW)),
+        NW = mW.find((WW => WW >= OW));
+      return [0 === EW.length ? 0 : EW.at(-1) + 1, void 0 === NW ? WW.length : NW + 1]
+    }
+
+    function xW(WW, iW) {
+      const OW = WW.charCodeAt(iW - 1);
+      return WW.slice(0, iW > 0 && iW < WW.length && OW >= 55296 && OW <= 56319 ? iW - 1 : iW)
+    }
+
+    function lW(WW, iW) {
+      return `${iW}${WW.replace(/\\/g,"\\\\").split(iW).join(`\\${iW}`)}${iW}`
+    }
+
+    function AW(WW) {
+      return WW.charAt(0).toUpperCase() + WW.slice(1)
+    }
+
+    function bW(WW) {
+      return Math.round(WW).toLocaleString("en-US")
+    }
+
+    function jW(WW) {
+      return WW.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((WW => "" !== WW))
+    }
+    const UW = 3;
+
+    function kW(WW, iW) {
+      return jW(WW).filter((WW => WW.length >= UW && !/\d/.test(WW))).map((WW => `${WW} ${iW}`))
+    }
+
+    function sW(WW) {
+      return WW.split(/[\s:_]+/).filter((WW => "" !== WW)).map(PW).join("[`:_\\s]+")
+    }
+
+    function MW(WW) {
+      return jW(WW.split(".").pop())
+    }
+
+    function KW(WW) {
+      return WW.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function SW(WW) {
+      let iW = null;
+      return () => {
+        const OW = iW ??= WW();
+        return OW.catch((() => {
+          iW === OW && (iW = null)
+        })), OW
+      }
+    }
+  },
+  5622: (WW, iW, OW) => {
+    function mW(WW) {
+      return {
+        notAfter: WW
+      }
+    }
+    OW.d(iW, {
+      c: () => cW,
+      e: () => wW,
+      f: () => LW,
+      j: () => mW,
+      k: () => EW,
+      n: () => NW,
+      o: () => PW,
+      q: () => tW,
+      r: () => ZW
+    });
+    const EW = mW("\\w$."),
+      NW = mW("\\w.,");
+
+    function PW(WW) {
+      return iW => cW(iW, WW)
+    }
+
+    function LW(WW) {
+      return iW => !WW.test(iW.input.slice(0, iW.index))
+    }
+
+    function cW(WW, iW) {
+      return WW.index > 0 && new RegExp(`[${iW}]`).test(WW.input[WW.index - 1])
+    }
+
+    function wW(WW, iW, OW) {
+      return function(WW) {
+        return void 0 !== WW && "function" !== typeof WW
+      }(OW) ? function(WW, iW, OW) {
+        const mW = iW.flags.replace(/[gy]/g, ""),
+          EW = new RegExp(`[^${OW}](?:${iW.source})`, `${mW}g`),
+          NW = [],
+          PW = OW => {
+            const mW = OW.index + OW[0].length;
+            return ("" === OW[0] ? xW(WW, iW, mW) : mW) - 1
+          },
+          LW = new RegExp(`(?:${iW.source})`, `${mW}y`).exec(WW);
+        if (LW) {
+          if (NW.push(LW), !iW.global) return NW;
+          EW.lastIndex = PW(LW)
+        }
+        for (let cW = EW.exec(WW); cW; cW = EW.exec(WW)) {
+          const OW = xW(WW, iW, cW.index) - cW.index;
+          if (cW[0] = cW[0].slice(OW), cW.index += OW, NW.push(cW), !iW.global) break;
+          EW.lastIndex = PW(cW)
+        }
+        return NW
+      }(WW, iW, OW.notAfter) : function(WW, iW, OW) {
+        const mW = new RegExp(iW.source, `${iW.flags.replace(/[gy]/g,"")}g`),
+          EW = [];
+        for (let NW = mW.exec(WW); NW; NW = mW.exec(WW))
+          if (!OW || OW(NW)) {
+            if (EW.push(NW), !iW.global) break;
+            "" === NW[0] && (mW.lastIndex = xW(WW, iW, mW.lastIndex))
+          } else mW.lastIndex = xW(WW, iW, NW.index);
+        return EW
+      }(WW, iW, OW)
+    }
+
+    function tW(WW, iW, OW, mW) {
+      let EW = "",
+        NW = 0;
+      for (const PW of wW(WW, iW, OW)) EW += WW.slice(NW, PW.index) + mW(PW), NW = PW.index + PW[0].length;
+      return EW + WW.slice(NW)
+    }
+
+    function ZW(WW, iW, OW) {
+      const mW = [];
+      let EW = 0;
+      for (const NW of wW(WW, iW, OW)) mW.push(WW.slice(EW, NW.index)), EW = NW.index + NW[0].length;
+      return [...mW, WW.slice(EW)]
+    }
+
+    function xW(WW, iW, OW) {
+      var mW;
+      return OW + (iW.unicode && (null !== (mW = WW.codePointAt(OW)) && void 0 !== mW ? mW : 0) > 65535 ? 2 : 1)
+    }
+  },
+  7468: () => {}
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

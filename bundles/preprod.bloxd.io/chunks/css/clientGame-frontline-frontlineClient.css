@@ -1,3 +1,106 @@
+.InGameUi[data-replay-ui-active] .DamageFeedback,
+body.DamageFeedbackArcsShown .InGameUi:not([data-replay-ui-active]) .DirectionalDamage {
+  display: none
+}
+
+.DamageFeedback {
+  display: contents;
+  pointer-events: none
+}
+
+.DamageFeedback .DamageFeedbackFlash,
+.DamageFeedback .DamageFeedbackLow {
+  inset: 0;
+  position: fixed
+}
+
+.DamageFeedback .DamageFeedbackShade {
+  inset: 0;
+  position: absolute
+}
+
+.DamageFeedback .DamageFeedbackLow {
+  opacity: 0;
+  transition: opacity .7s ease-out
+}
+
+.DamageFeedback .DamageFeedbackLow.Active .DamageFeedbackShade {
+  animation: DamageFeedbackHeartbeat 1.3s ease-out infinite
+}
+
+.DamageFeedback .DamageFeedbackLow.Critical .DamageFeedbackShade {
+  animation-duration: .85s
+}
+
+.DamageFeedback .DamageFeedbackShade {
+  background: radial-gradient(ellipse at 50% 50%, rgba(204, 20, 20, 0) 34%, rgba(204, 20, 20, .16) 46%, rgba(204, 20, 20, .34) 56%, rgba(128, 12, 12, .56) 72%, rgba(128, 12, 12, .76) 86%, rgba(49, 12, 0, .88) 100%)
+}
+
+.DamageFeedback .DamageFeedbackFlash {
+  opacity: 0
+}
+
+.DamageFeedback .DamageFeedbackFlash .DamageFeedbackFlashGlow {
+  background: radial-gradient(ellipse var(--glowRx) var(--glowRy) at var(--glowX) var(--glowY), rgba(204, 20, 20, .9) 0, rgba(204, 20, 20, .62) 18%, rgba(204, 20, 20, .3) 42%, rgba(204, 20, 20, .1) 70%, rgba(204, 20, 20, 0) 100%);
+  inset: 0;
+  position: absolute
+}
+
+.DamageFeedback .DamageFeedbackFlash .DamageFeedbackFlashGlow.Everywhere {
+  background: radial-gradient(ellipse at 50% 50%, rgba(204, 20, 20, 0) 55%, rgba(204, 20, 20, .3) 75%, rgba(204, 20, 20, .62) 90%, rgba(204, 20, 20, .9) 100%)
+}
+
+.DamageFeedback .DamageFeedbackArcs {
+  left: 50%;
+  position: fixed;
+  top: 50%
+}
+
+.DamageFeedback .DamageFeedbackArc {
+  height: 46vmin;
+  opacity: 0;
+  position: absolute;
+  translate: -50% -50%;
+  width: 46vmin
+}
+
+.DamageFeedback .DamageFeedbackArc .DamageFeedbackArcBand {
+  background: conic-gradient(from -34deg, rgba(231, 49, 49, 0) 0deg, rgba(231, 49, 49, .016) 2.8333333333deg, rgba(231, 49, 49, .064) 5.6666666667deg, rgba(231, 49, 49, .139) 8.5deg, rgba(231, 49, 49, .238) 11.3333333333deg, rgba(231, 49, 49, .352) 14.1666666667deg, rgba(231, 49, 49, .475) 17deg, rgba(231, 49, 49, .598) 19.8333333333deg, rgba(231, 49, 49, .713) 22.6666666667deg, rgba(231, 49, 49, .811) 25.5deg, rgba(231, 49, 49, .886) 28.3333333333deg, rgba(231, 49, 49, .934) 31.1666666667deg, rgba(231, 49, 49, .95) 34deg, rgba(231, 49, 49, .934) 36.8333333333deg, rgba(231, 49, 49, .886) 39.6666666667deg, rgba(231, 49, 49, .811) 42.5deg, rgba(231, 49, 49, .713) 45.3333333333deg, rgba(231, 49, 49, .598) 48.1666666667deg, rgba(231, 49, 49, .475) 51deg, rgba(231, 49, 49, .352) 53.8333333333deg, rgba(231, 49, 49, .238) 56.6666666667deg, rgba(231, 49, 49, .139) 59.5deg, rgba(231, 49, 49, .064) 62.3333333333deg, rgba(231, 49, 49, .016) 65.1666666667deg, rgba(231, 49, 49, 0) 68deg, transparent 0deg);
+  inset: 0;
+  -webkit-mask: radial-gradient(closest-side, transparent 92.8%, #000 94.2%, #000 98.6%, transparent 99.6%), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0h2L1 1Z'/%3E%3C/svg%3E") 50% .92vmin/2.40064vmin 1.936vmin no-repeat;
+  mask: radial-gradient(closest-side, transparent 92.8%, #000 94.2%, #000 98.6%, transparent 99.6%), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0h2L1 1Z'/%3E%3C/svg%3E") 50% .92vmin/2.40064vmin 1.936vmin no-repeat;
+  position: absolute
+}
+
+@keyframes DamageFeedbackHeartbeat {
+  0% {
+    opacity: .66
+  }
+
+  10% {
+    opacity: 1
+  }
+
+  20% {
+    opacity: .76
+  }
+
+  30% {
+    opacity: .94
+  }
+
+  55%,
+  to {
+    opacity: .66
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .DamageFeedback .DamageFeedbackLow.Active .DamageFeedbackShade {
+    animation: none
+  }
+}
+
 .FrontlinePointMarkers {
   inset: 0;
   overflow: hidden;
@@ -124,107 +227,6 @@
 }
 
 .FrontlinePointMarkers .FrontlinePointMarker .FrontlinePointMarkerDistance:empty,
-body.FrontlineCustomDamage .InGameUi:not([data-replay-ui-active]) .DirectionalDamage {
-  display: none
-}
-
-.FrontlineDamage {
-  inset: 0;
-  pointer-events: none;
-  position: fixed
-}
-
-.FrontlineDamage .FrontlineDamageFlash,
-.FrontlineDamage .FrontlineDamageLow,
-.FrontlineDamage .FrontlineDamageShade {
-  inset: 0;
-  position: absolute
-}
-
-.FrontlineDamage .FrontlineDamageLow {
-  opacity: 0;
-  transition: opacity .7s ease-out
-}
-
-.FrontlineDamage .FrontlineDamageLow.Active .FrontlineDamageShade {
-  animation: FrontlineHeartbeat 1.3s ease-out infinite
-}
-
-.FrontlineDamage .FrontlineDamageLow.Critical .FrontlineDamageShade {
-  animation-duration: .85s
-}
-
-.FrontlineDamage .FrontlineDamageShade {
-  background: radial-gradient(ellipse at 50% 50%, rgba(204, 20, 20, 0) 34%, rgba(204, 20, 20, .16) 46%, rgba(204, 20, 20, .34) 56%, rgba(128, 12, 12, .56) 72%, rgba(128, 12, 12, .76) 86%, rgba(49, 12, 0, .88) 100%)
-}
-
-.FrontlineDamage .FrontlineDamageFlash {
-  opacity: 0
-}
-
-.FrontlineDamage .FrontlineDamageFlash .FrontlineDamageFlashGlow {
-  background: radial-gradient(ellipse var(--glowRx) var(--glowRy) at var(--glowX) var(--glowY), rgba(204, 20, 20, .9) 0, rgba(204, 20, 20, .62) 18%, rgba(204, 20, 20, .3) 42%, rgba(204, 20, 20, .1) 70%, rgba(204, 20, 20, 0) 100%);
-  inset: 0;
-  position: absolute
-}
-
-.FrontlineDamage .FrontlineDamageFlash .FrontlineDamageFlashGlow.Everywhere {
-  background: radial-gradient(ellipse at 50% 50%, rgba(204, 20, 20, 0) 55%, rgba(204, 20, 20, .3) 75%, rgba(204, 20, 20, .62) 90%, rgba(204, 20, 20, .9) 100%)
-}
-
-.FrontlineDamage .FrontlineDamageArcs {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  z-index: 1
-}
-
-.FrontlineDamage .FrontlineDamageArc {
-  height: 46vmin;
-  opacity: 0;
-  position: absolute;
-  translate: -50% -50%;
-  width: 46vmin
-}
-
-.FrontlineDamage .FrontlineDamageArc .FrontlineDamageArcBand {
-  background: conic-gradient(from -34deg, rgba(231, 49, 49, 0) 0deg, rgba(231, 49, 49, .016) 2.8333333333deg, rgba(231, 49, 49, .064) 5.6666666667deg, rgba(231, 49, 49, .139) 8.5deg, rgba(231, 49, 49, .238) 11.3333333333deg, rgba(231, 49, 49, .352) 14.1666666667deg, rgba(231, 49, 49, .475) 17deg, rgba(231, 49, 49, .598) 19.8333333333deg, rgba(231, 49, 49, .713) 22.6666666667deg, rgba(231, 49, 49, .811) 25.5deg, rgba(231, 49, 49, .886) 28.3333333333deg, rgba(231, 49, 49, .934) 31.1666666667deg, rgba(231, 49, 49, .95) 34deg, rgba(231, 49, 49, .934) 36.8333333333deg, rgba(231, 49, 49, .886) 39.6666666667deg, rgba(231, 49, 49, .811) 42.5deg, rgba(231, 49, 49, .713) 45.3333333333deg, rgba(231, 49, 49, .598) 48.1666666667deg, rgba(231, 49, 49, .475) 51deg, rgba(231, 49, 49, .352) 53.8333333333deg, rgba(231, 49, 49, .238) 56.6666666667deg, rgba(231, 49, 49, .139) 59.5deg, rgba(231, 49, 49, .064) 62.3333333333deg, rgba(231, 49, 49, .016) 65.1666666667deg, rgba(231, 49, 49, 0) 68deg, transparent 0deg);
-  inset: 0;
-  -webkit-mask: radial-gradient(closest-side, transparent 92.8%, #000 94.2%, #000 98.6%, transparent 99.6%), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0h2L1 1Z'/%3E%3C/svg%3E") 50% .92vmin/2.40064vmin 1.936vmin no-repeat;
-  mask: radial-gradient(closest-side, transparent 92.8%, #000 94.2%, #000 98.6%, transparent 99.6%), url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 1' preserveAspectRatio='none'%3E%3Cpath d='M0 0h2L1 1Z'/%3E%3C/svg%3E") 50% .92vmin/2.40064vmin 1.936vmin no-repeat;
-  position: absolute
-}
-
-@keyframes FrontlineHeartbeat {
-  0% {
-    opacity: .66
-  }
-
-  10% {
-    opacity: 1
-  }
-
-  20% {
-    opacity: .76
-  }
-
-  30% {
-    opacity: .94
-  }
-
-  55%,
-  to {
-    opacity: .66
-  }
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .FrontlineDamage .FrontlineDamageLow.Active .FrontlineDamageShade {
-    animation: none
-  }
-}
-
-.InGameUi[data-replay-ui-active] .FrontlineDamage,
 .InGameUi[data-replay-ui-active] .FrontlinePlate,
 .InGameUi[data-replay-ui-active] .FrontlinePointMarkers,
 .InGameUi[data-replay-ui-active] .FrontlineScoreboardContainer,

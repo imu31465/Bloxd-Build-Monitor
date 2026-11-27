@@ -1,64 +1,336 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  40027: (BB, OB, GB) => {
-    var YB = {
-      "./breach-zero-uncaught.webp": 40034,
-      "./breach-zero.webp": 40042,
-      "./brood-father-uncaught.webp": 40050,
-      "./brood-father.webp": 40059,
-      "./carousel-uncaught.webp": 40065,
-      "./carousel.webp": 40068,
-      "./deadlock-uncaught.webp": 40077,
-      "./deadlock.webp": 40085,
-      "./doom-warlord-uncaught.webp": 40092,
-      "./doom-warlord.webp": 40094,
-      "./frost-revenant-uncaught.webp": 40096,
-      "./frost-revenant.webp": 40098,
-      "./hollow-choir-uncaught.webp": 40103,
-      "./hollow-choir.webp": 40107,
-      "./magma-warden-uncaught.webp": 40111,
-      "./magma-warden.webp": 40114,
-      "./patient-zero-uncaught.webp": 40117,
-      "./patient-zero.webp": 40123,
-      "./siege-engine-uncaught.webp": 40125,
-      "./siege-engine.webp": 40130,
-      "./warp-stalker-uncaught.webp": 40137,
-      "./warp-stalker.webp": 40143
+  40554: (WW, iW, OW) => {
+    var mW = {
+      "./breach-zero-uncaught.webp": 40559,
+      "./breach-zero.webp": 40568,
+      "./brood-father-uncaught.webp": 40574,
+      "./brood-father.webp": 40576,
+      "./carousel-uncaught.webp": 40580,
+      "./carousel.webp": 40583,
+      "./deadlock-uncaught.webp": 40591,
+      "./deadlock.webp": 40598,
+      "./doom-warlord-uncaught.webp": 40607,
+      "./doom-warlord.webp": 40616,
+      "./frost-revenant-uncaught.webp": 40619,
+      "./frost-revenant.webp": 40626,
+      "./hollow-choir-uncaught.webp": 40635,
+      "./hollow-choir.webp": 40640,
+      "./magma-warden-uncaught.webp": 40648,
+      "./magma-warden.webp": 40652,
+      "./patient-zero-uncaught.webp": 40661,
+      "./patient-zero.webp": 40665,
+      "./siege-engine-uncaught.webp": 40667,
+      "./siege-engine.webp": 40673,
+      "./warp-stalker-uncaught.webp": 40682,
+      "./warp-stalker.webp": 40686
     };
 
-    function DB(BB) {
-      var OB = QB(BB);
-      return GB(OB)
+    function EW(WW) {
+      var iW = NW(WW);
+      return OW(iW)
     }
 
-    function QB(BB) {
-      if (!GB.o(YB, BB)) {
-        var OB = new Error("Cannot find module '" + BB + "'");
-        throw OB.code = "MODULE_NOT_FOUND", OB
+    function NW(WW) {
+      if (!OW.o(mW, WW)) {
+        var iW = new Error("Cannot find module '" + WW + "'");
+        throw iW.code = "MODULE_NOT_FOUND", iW
       }
-      return YB[BB]
+      return mW[WW]
     }
-    DB.keys = function() {
-      return Object.keys(YB)
-    }, DB.resolve = QB, BB.exports = DB, DB.id = 40027
+    EW.keys = function() {
+      return Object.keys(mW)
+    }, EW.resolve = NW, WW.exports = EW, EW.id = 40554
   },
-  39226: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
+  38030: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => yW,
+      h: () => SW,
+      j: () => YW,
+      n: () => AW
     });
-    const YB = 4,
-      DB = 12e3,
-      QB = 1e3;
-    class oB {
+    var mW = OW(1089),
+      EW = OW.n(mW),
+      NW = OW(62),
+      PW = OW(80),
+      LW = OW(1436),
+      cW = OW(1532),
+      wW = OW(1434),
+      tW = OW(1269),
+      ZW = OW(1172),
+      xW = OW(38039),
+      lW = OW(1283);
+
+    function AW(WW) {
+      const [iW, OW] = (0, NW.useState)((() => (0, xW.o)(WW)));
+      return (0, NW.useEffect)((() => (OW((0, xW.o)(WW)), (0, xW.M)((() => {
+        OW((0, xW.o)(WW))
+      })))), [WW]), iW
+    }
+
+    function bW(WW, iW) {
+      "function" === typeof WW ? WW(iW) : WW && (WW.current = iW)
+    }
+
+    function jW(WW) {
+      let {
+        tutorial: iW,
+        step: OW,
+        enabled: mW = !0
+      } = WW;
+      const EW = AW(iW);
+      return mW && EW === OW
+    }
+
+    function UW(WW, iW) {
+      const OW = (0, xW.s)(WW),
+        mW = OW.indexOf(iW);
+      return !OW.slice(mW + 1).some((iW => (0, xW.x)(WW, iW)))
+    }
+
+    function kW(WW, iW, OW, mW) {
+      let {
+        tutorial: EW,
+        step: NW,
+        waitForClick: PW = !1,
+        onPrevious: LW
+      } = WW;
+      const cW = iW && (0, xW.w)(EW, NW),
+        wW = iW && !UW(EW, NW),
+        ZW = PW ? mW : OW;
+      let lW = null;
+      cW ? lW = () => {
+        null === LW || void 0 === LW || LW(), (0, xW.u)(EW, NW)
+      } : wW && (lW = () => {
+        (0, xW.m)(EW)
+      }), (0, tW.r)("popup", null !== ZW && void 0 !== ZW ? ZW : OW, lW, iW && null !== ZW, null, cW ? void 0 : "controller:menusSkipTutorial")
+    }
+
+    function sW(WW) {
+      let {
+        tutorial: iW,
+        step: OW,
+        text: mW,
+        waitForClick: EW = !1,
+        onPrevious: NW
+      } = WW;
+      const {
+        t: PW
+      } = (0, ZW.B)(), LW = UW(iW, OW);
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, lW.jsx)("div", {
+          className: "TutorialStepText",
+          children: mW
+        }), (0, lW.jsxs)("div", {
+          className: "TutorialStepButtons",
+          children: [(0, xW.w)(iW, OW) && (0, lW.jsx)(cW.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              null === NW || void 0 === NW || NW(), (0, xW.u)(iW, OW)
+            },
+            children: PW("tutorial:back")
+          }), !EW && (0, lW.jsx)(cW.f, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, xW.h)(OW)
+            },
+            padDefaultFocus: !0,
+            children: PW(LW ? "tutorial:done" : "tutorial:next")
+          }), !LW && (0, lW.jsx)(cW.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, xW.m)(iW)
+            },
+            children: PW("tutorial:skip")
+          })]
+        })]
+      })
+    }
+    const MW = 6;
+
+    function KW(WW) {
+      let {
+        rect: iW,
+        margin: OW
+      } = WW;
+      const mW = Math.max(0, iW.top - OW),
+        EW = iW.bottom + OW,
+        NW = Math.max(0, iW.left - OW),
+        PW = iW.right + OW;
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: 0,
+            left: 0,
+            right: 0,
+            height: mW
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: EW,
+            left: 0,
+            right: 0,
+            bottom: 0
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: mW,
+            left: 0,
+            width: NW,
+            height: EW - mW
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: mW,
+            left: PW,
+            right: 0,
+            height: EW - mW
+          }
+        })]
+      })
+    }
+
+    function SW(WW) {
+      let {
+        target: iW,
+        placement: OW,
+        boxRef: mW,
+        className: cW,
+        spotlight: tW = !0,
+        spotlightMargin: ZW = MW,
+        children: xW
+      } = WW;
+      const {
+        getArrowProps: AW,
+        getTooltipProps: bW,
+        setTooltipRef: jW,
+        setTriggerRef: UW,
+        update: kW
+      } = (0, LW.c)({
+        placement: OW,
+        trigger: null,
+        visible: !0,
+        interactive: !0,
+        closeOnOutsideClick: !1,
+        offset: [0, ZW]
+      });
+      (0, NW.useLayoutEffect)((() => {
+        UW(iW)
+      }), [iW, UW]);
+      const sW = function(WW, iW) {
+        const [OW, mW] = (0, NW.useState)(null);
+        return (0, NW.useEffect)((() => {
+          if (!iW || !WW) return void mW(null);
+          let OW = 0,
+            EW = null;
+          const NW = () => {
+            const iW = WW.getBoundingClientRect();
+            EW && iW.left === EW.left && iW.top === EW.top && iW.width === EW.width && iW.height === EW.height || (EW = iW, mW(iW)), OW = requestAnimationFrame(NW)
+          };
+          return NW(), () => {
+            cancelAnimationFrame(OW)
+          }
+        }), [WW, iW]), OW
+      }(iW, tW);
+      (0, NW.useEffect)((() => {
+        null === kW || void 0 === kW || kW()
+      }), [sW, kW]), (0, NW.useEffect)((() => {
+        if (tW || !iW || !kW) return;
+        const WW = new ResizeObserver((() => {
+          kW()
+        }));
+        return WW.observe(iW), iW.parentElement && WW.observe(iW.parentElement), () => {
+          WW.disconnect()
+        }
+      }), [iW, tW, kW]), (0, NW.useEffect)((() => {
+        tW && (null === iW || void 0 === iW || iW.scrollIntoView({
+          block: "nearest",
+          inline: "nearest"
+        }))
+      }), [iW, tW]);
+      const SW = (0, NW.useCallback)((WW => {
+        jW(WW), mW && (mW.current = WW)
+      }), [jW, mW]);
+      return (0, PW.createPortal)((0, lW.jsxs)(lW.Fragment, {
+        children: [sW && (0, lW.jsx)(KW, {
+          rect: sW,
+          margin: ZW
+        }), (0, lW.jsxs)("div", {
+          ref: SW,
+          ...bW({
+            className: EW()("tooltip-container SmallTextLight TutorialStep", cW)
+          }),
+          children: [xW, (0, lW.jsx)("div", {
+            ...AW({
+              className: "tooltip-arrow"
+            })
+          })]
+        })]
+      }), (0, wW.g)())
+    }
+    const YW = (0, NW.forwardRef)((function(WW, iW) {
+      let {
+        placement: OW = "right",
+        children: mW,
+        ...EW
+      } = WW;
+      const PW = jW(EW),
+        LW = (0, NW.useRef)(null),
+        cW = (0, NW.useRef)(null);
+      kW(EW, PW, LW, cW);
+      const [wW, tW] = (0, NW.useState)(null), ZW = mW.ref, xW = (0, NW.useCallback)((WW => {
+        cW.current = WW, tW(WW), bW(iW, WW), bW(ZW, WW)
+      }), [iW, ZW]);
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, NW.cloneElement)(mW, {
+          ref: xW
+        }), PW && (0, lW.jsx)(SW, {
+          target: wW,
+          placement: OW,
+          boxRef: LW,
+          children: (0, lW.jsx)(sW, {
+            ...EW
+          })
+        })]
+      })
+    }));
+
+    function yW(WW) {
+      const iW = jW(WW),
+        OW = (0, NW.useRef)(null);
+      return kW(WW, iW, OW, null), iW ? (0, PW.createPortal)((0, lW.jsx)("div", {
+        className: "TutorialCentreBackdrop",
+        children: (0, lW.jsx)("div", {
+          ref: OW,
+          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
+          children: (0, lW.jsx)(sW, {
+            ...WW
+          })
+        })
+      }), (0, wW.g)()) : null
+    }
+  },
+  39775: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW
+    });
+    const mW = 4,
+      EW = 12e3,
+      NW = 1e3;
+    class PW {
       constructor() {
         let {
-          limit: BB = YB,
-          windowMs: OB = DB,
-          spacingMs: GB = QB,
-          now: oB = Date.now
+          limit: WW = mW,
+          windowMs: iW = EW,
+          spacingMs: OW = NW,
+          now: PW = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = BB, this.windowMs = OB, this.spacingMs = GB, this.now = oB
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = WW, this.windowMs = iW, this.spacingMs = OW, this.now = PW
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -67,61 +339,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const BB of this.priority) BB.flush();
+        for (const WW of this.priority) WW.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const BB = this.now();
-        this.sent.push(BB), this.lastSentAt = BB, this.schedule(), this.notify()
+        const WW = this.now();
+        this.sent.push(WW), this.lastSentAt = WW, this.schedule(), this.notify()
       }
-      addPriority(BB) {
-        return this.priority.add(BB), () => {
-          this.priority.delete(BB)
+      addPriority(WW) {
+        return this.priority.add(WW), () => {
+          this.priority.delete(WW)
         }
       }
-      subscribe(BB) {
-        return this.listeners.add(BB), () => {
-          this.listeners.delete(BB)
+      subscribe(WW) {
+        return this.listeners.add(WW), () => {
+          this.listeners.delete(WW)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const BB of this.priority)
-          if (BB.waiting()) return !0;
+        for (const WW of this.priority)
+          if (WW.waiting()) return !0;
         return !1
       }
       prune() {
-        const BB = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= BB;) this.sent.shift()
+        const WW = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= WW;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const BB = this.now(),
-          OB = this.lastSentAt + this.spacingMs,
-          GB = Math.min(OB > BB ? OB : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        GB !== 1 / 0 && (this.timer = setTimeout((() => {
+        const WW = this.now(),
+          iW = this.lastSentAt + this.spacingMs,
+          OW = Math.min(iW > WW ? iW : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        OW !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, GB - BB)))
+        }), Math.max(0, OW - WW)))
       }
       notify() {
-        for (const BB of this.listeners) BB()
+        for (const WW of this.listeners) WW()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  39200: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB
+  39733: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW
     });
-    class YB {
-      constructor(BB, OB, GB) {
-        this.tM = BB, this.beforeOpen = OB, this.afterClose = GB, this.open = !1, this.Vp = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.Vp && (this.open = !0, this.beforeOpen(this), this.emit())
+    class mW {
+      constructor(WW, iW, OW) {
+        this.iZ = WW, this.beforeOpen = iW, this.afterClose = OW, this.open = !1, this.JA = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.JA && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -134,234 +406,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(BB) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(BB)
+      closePanel(WW) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(WW)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.Vp = !0
+        this.open = !1, this.emit(), this.JA = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.Vp || (this.snapshot = this.buildSnapshot(), this.tM(this.snapshot))
+        this.JA || (this.snapshot = this.buildSnapshot(), this.iZ(this.snapshot))
       }
     }
   },
-  40020: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => MG
+  40552: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => xO
     });
-    var YB = GB(56);
-    var DB = GB(16),
-      QB = GB(2010),
-      oB = GB(25),
-      jB = GB(37267),
-      yB = GB(1090),
-      JB = GB.n(yB),
-      MB = GB(1480),
-      PB = GB(1175),
-      zB = GB(4946),
-      lB = GB(1398),
-      pB = GB(1485),
-      qB = GB(2012),
-      ZB = GB(1405),
-      NB = GB(2e3),
-      RB = GB(2063),
-      WB = GB(204);
-    const AB = GB(40027),
-      VB = Object.fromEntries(AB.keys().map((BB => [BB.replace(/^\.\/(.*)\.webp$/, "$1"), AB(BB)]))),
-      SB = new Set;
+    var mW = OW(62);
+    var EW = OW(25),
+      NW = OW(2029),
+      PW = OW(27),
+      LW = OW(3361),
+      cW = OW(1089),
+      wW = OW.n(cW),
+      tW = OW(1526),
+      ZW = OW(1172),
+      xW = OW(5238),
+      lW = OW(1414),
+      AW = OW(1532),
+      bW = OW(2032),
+      jW = OW(1434),
+      UW = OW(2021),
+      kW = OW(2075),
+      sW = OW(192);
+    const MW = OW(40554),
+      KW = Object.fromEntries(MW.keys().map((WW => [WW.replace(/^\.\/(.*)\.webp$/, "$1"), MW(WW)]))),
+      SW = new Set;
 
-    function nB(BB, OB) {
-      const GB = OB ? BB : `${BB}-uncaught`,
-        YB = (0, WB.c)(VB, GB);
-      return void 0 !== YB || SB.has(GB) || (SB.add(GB), console.warn(`Containment Breach has no mugshot ${GB}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), YB
+    function YW(WW, iW) {
+      const OW = iW ? WW : `${WW}-uncaught`,
+        mW = (0, sW.c)(KW, OW);
+      return void 0 !== mW || SW.has(OW) || (SW.add(OW), console.warn(`Containment Breach has no mugshot ${OW}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), mW
     }
-    var UB = GB(1282);
-    const fB = "containmentBreach",
-      kB = "Gold Coin";
+    var yW = OW(1283);
+    const TW = "containmentBreach",
+      JW = "Gold Coin";
 
-    function dB(BB) {
+    function hW(WW) {
       let {
-        open: OB,
-        onDismiss: GB,
-        title: YB,
-        className: DB,
-        decor: QB,
-        headerExtra: oB,
-        status: jB,
-        statusRefused: yB = !1,
-        children: MB
-      } = BB;
-      const PB = `${DB}Title`;
-      return (0, UB.jsx)(zB.d, {
-        show: OB,
-        close: GB,
+        open: iW,
+        onDismiss: OW,
+        title: mW,
+        className: EW,
+        decor: NW,
+        headerExtra: PW,
+        status: LW,
+        statusRefused: cW = !1,
+        children: tW
+      } = WW;
+      const ZW = `${EW}Title`;
+      return (0, yW.jsx)(xW.b, {
+        show: iW,
+        close: OW,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, UB.jsxs)("section", {
-          className: JB()("ContainmentBoardPanel", DB),
+        children: (0, yW.jsxs)("section", {
+          className: wW()("ContainmentBoardPanel", EW),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": PB,
-          children: [QB && (0, UB.jsx)("div", {
+          "aria-labelledby": ZW,
+          children: [NW && (0, yW.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: QB
-          }), (0, UB.jsxs)("header", {
+            children: NW
+          }), (0, yW.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, UB.jsx)("h2", {
-              id: PB,
+            children: [(0, yW.jsx)("h2", {
+              id: ZW,
               className: "VisuallyHidden",
-              children: YB
-            }), oB, (0, UB.jsx)(pB.m, {
-              onClick: GB
+              children: mW
+            }), PW, (0, yW.jsx)(AW.l, {
+              onClick: OW
             })]
-          }), (0, UB.jsx)("div", {
+          }), (0, yW.jsx)("div", {
             className: "BoardBody",
-            children: MB
-          }), void 0 !== jB && (0, UB.jsx)("footer", {
-            className: JB()("BoardStatus", {
-              Refused: yB
+            children: tW
+          }), void 0 !== LW && (0, yW.jsx)("footer", {
+            className: wW()("BoardStatus", {
+              Refused: cW
             }),
-            children: jB
+            children: LW
           })]
         })
       })
     }
 
-    function KB(BB) {
+    function HW(WW) {
       let {
-        itemName: OB
-      } = BB;
-      return (0, UB.jsx)(qB.c, {
-        itemName: OB,
+        itemName: iW
+      } = WW;
+      return (0, yW.jsx)(bW.b, {
+        itemName: iW,
         amount: 0
       })
     }
 
-    function uB(BB) {
+    function nW(WW) {
       let {
-        anomalyId: OB,
-        caught: GB
-      } = BB;
-      const DB = (0, YB.useRef)(null);
-      return (0, lB.b)(DB, !GB), (0, UB.jsx)("span", {
-        ref: DB,
-        className: JB()("BoardMugshot", {
-          Uncaught: !GB
+        anomalyId: iW,
+        caught: OW
+      } = WW;
+      const EW = (0, mW.useRef)(null);
+      return (0, lW.b)(EW, !OW), (0, yW.jsx)("span", {
+        ref: EW,
+        className: wW()("BoardMugshot", {
+          Uncaught: !OW
         }),
-        children: (0, UB.jsx)("img", {
-          src: nB(OB, GB),
+        children: (0, yW.jsx)("img", {
+          src: YW(iW, OW),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function mB(BB) {
+    function uW(WW) {
       let {
-        itemName: OB,
-        amount: GB,
-        sJ: YB,
-        inTile: DB = !1
-      } = BB;
-      return (0, UB.jsx)(ZB.g, {
+        itemName: iW,
+        amount: OW,
+        BL: mW,
+        inTile: EW = !1
+      } = WW;
+      return (0, yW.jsx)(jW.f, {
         delayShow: 200,
-        hoverOnly: DB,
+        hoverOnly: EW,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, UB.jsx)(FB, {
-          itemName: OB,
-          amount: GB,
-          sJ: YB
+        tooltipInner: (0, yW.jsx)(dW, {
+          itemName: iW,
+          amount: OW,
+          BL: mW
         }),
-        children: (0, UB.jsxs)("span", {
-          className: JB()("BoardChip", {
-            Short: void 0 !== YB && YB < GB
+        children: (0, yW.jsxs)("span", {
+          className: wW()("BoardChip", {
+            Short: void 0 !== mW && mW < OW
           }),
-          children: [(0, UB.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, UB.jsx)(KB, {
-              itemName: OB
+            children: (0, yW.jsx)(HW, {
+              itemName: iW
             })
-          }), GB.toLocaleString()]
+          }), OW.toLocaleString()]
         })
       })
     }
-    const IB = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const oW = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function FB(BB) {
-      var OB;
+    function dW(WW) {
+      var iW;
       let {
-        itemName: GB,
-        amount: YB,
-        sJ: DB
-      } = BB;
+        itemName: OW,
+        amount: mW,
+        BL: EW
+      } = WW;
       const {
-        t: QB
-      } = (0, PB.H)(), oB = (0, RB.f)("itemInfo", (BB => BB[GB])), {
-        lore: jB,
-        droppedBy: yB
-      } = function(BB) {
-        if ("string" !== typeof BB) return {
-          lore: BB,
+        t: NW
+      } = (0, ZW.B)(), PW = (0, kW.f)("itemInfo", (WW => WW[OW])), {
+        lore: LW,
+        droppedBy: cW
+      } = function(WW) {
+        if ("string" !== typeof WW) return {
+          lore: WW,
           droppedBy: null
         };
-        const OB = IB.exec(BB);
-        return null === OB ? {
-          lore: BB,
+        const iW = oW.exec(WW);
+        return null === iW ? {
+          lore: WW,
           droppedBy: null
         } : {
-          lore: "" === OB[1] ? void 0 : OB[1],
-          droppedBy: OB[2]
+          lore: "" === iW[1] ? void 0 : iW[1],
+          droppedBy: iW[2]
         }
-      }(null === oB || void 0 === oB ? void 0 : oB.description);
-      return (0, UB.jsxs)("div", {
+      }(null === PW || void 0 === PW ? void 0 : PW.description);
+      return (0, yW.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, UB.jsxs)("div", {
+        children: [(0, yW.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, UB.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, UB.jsx)(KB, {
-              itemName: GB
+            children: (0, yW.jsx)(HW, {
+              itemName: OW
             })
-          }), (0, UB.jsx)(NB.b, {
-            text: null !== (OB = null === oB || void 0 === oB ? void 0 : oB.displayName) && void 0 !== OB ? OB : GB,
+          }), (0, yW.jsx)(UW.d, {
+            text: null !== (iW = null === PW || void 0 === PW ? void 0 : PW.displayName) && void 0 !== iW ? iW : OW,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== jB || null !== yB) && (0, UB.jsxs)("div", {
+        }), (void 0 !== LW || null !== cW) && (0, yW.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== jB && (0, UB.jsx)(NB.b, {
-            text: jB,
+          children: [void 0 !== LW && (0, yW.jsx)(UW.d, {
+            text: LW,
             className: "BoardChipTooltipDescription"
-          }), null !== yB && (0, UB.jsxs)("span", {
+          }), null !== cW && (0, yW.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, UB.jsx)("span", {
+            children: [(0, yW.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: QB(`${fB}:chipDroppedBy`)
-            }), yB]
+              children: NW(`${TW}:chipDroppedBy`)
+            }), cW]
           })]
-        }), void 0 !== DB && (0, UB.jsxs)("div", {
-          className: JB()("BoardChipTooltipHeld", {
-            Short: DB < YB
+        }), void 0 !== EW && (0, yW.jsxs)("div", {
+          className: wW()("BoardChipTooltipHeld", {
+            Short: EW < mW
           }),
-          children: [(0, UB.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: QB(`${fB}:chipYouHave`)
-          }), (0, UB.jsxs)("span", {
+            children: NW(`${TW}:chipYouHave`)
+          }), (0, yW.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, UB.jsx)("span", {
+            children: [(0, yW.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: DB.toLocaleString()
-            }), ` / ${YB.toLocaleString()}`]
-          }), (0, UB.jsx)("span", {
+              children: EW.toLocaleString()
+            }), ` / ${mW.toLocaleString()}`]
+          }), (0, yW.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, UB.jsx)("span", {
+            children: (0, yW.jsx)("span", {
               style: {
-                width: (YB > 0 ? 100 * Math.min(1, DB / YB) : 100) + "%"
+                width: (mW > 0 ? 100 * Math.min(1, EW / mW) : 100) + "%"
               }
             })
           })]
@@ -369,81 +641,81 @@ export const modules = {
       })
     }
 
-    function iB(BB) {
+    function eW(WW) {
       let {
-        icon: OB,
-        name: GB,
-        selected: YB,
-        locked: DB,
-        className: QB,
-        buttonRef: oB,
-        onSelect: jB,
-        children: yB
-      } = BB;
-      return (0, UB.jsxs)("button", {
-        ref: oB,
+        icon: iW,
+        name: OW,
+        selected: mW,
+        locked: EW,
+        className: NW,
+        buttonRef: PW,
+        onSelect: LW,
+        children: cW
+      } = WW;
+      return (0, yW.jsxs)("button", {
+        ref: PW,
         type: "button",
-        className: JB()("BoardTile", QB, {
-          Selected: YB,
-          Locked: DB
+        className: wW()("BoardTile", NW, {
+          Selected: mW,
+          Locked: EW
         }),
-        onClick: jB,
-        children: [(0, UB.jsx)("span", {
+        onClick: LW,
+        children: [(0, yW.jsx)("span", {
           className: "BoardTileIcon",
-          children: OB
-        }), (0, UB.jsx)("span", {
+          children: iW
+        }), (0, yW.jsx)("span", {
           className: "BoardTileName",
-          children: GB
-        }), yB]
+          children: OW
+        }), cW]
       })
     }
 
-    function LB(BB) {
+    function vW(WW) {
       let {
-        icon: OB,
-        name: GB,
-        children: YB
-      } = BB;
-      return (0, UB.jsxs)("header", {
+        icon: iW,
+        name: OW,
+        children: mW
+      } = WW;
+      return (0, yW.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, UB.jsx)("span", {
+        children: [(0, yW.jsx)("span", {
           className: "BoardDetailIcon",
-          children: OB
-        }), (0, UB.jsxs)("div", {
+          children: iW
+        }), (0, yW.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, UB.jsx)("h3", {
-            children: GB
-          }), (0, UB.jsx)("span", {
+          children: [(0, yW.jsx)("h3", {
+            children: OW
+          }), (0, yW.jsx)("span", {
             className: "BoardDetailStatus",
-            children: YB
+            children: mW
           })]
         })]
       })
     }
 
-    function gB(BB) {
+    function gW(WW) {
       let {
-        coins: OB,
-        children: GB
-      } = BB;
-      return (0, UB.jsxs)("div", {
+        coins: iW,
+        children: OW
+      } = WW;
+      return (0, yW.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, UB.jsx)(mB, {
-          itemName: kB,
-          amount: OB
-        }), GB]
+        children: [(0, yW.jsx)(uW, {
+          itemName: JW,
+          amount: iW
+        }), OW]
       })
     }
-    var rB = GB(39200);
-    const XB = "containmentCodexView";
-    class wB extends rB.d {
+    var DW = OW(39733);
+    const VW = "containmentCodexView";
+    class pW extends DW.e {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = BB => {
-          this.selectedId = BB, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = WW => {
+          this.selectedId = WW, this.emit()
         }
       }
-      nP(BB) {
-        this.entries = BB.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      yZ(WW) {
+        this.entries = WW.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -453,55 +725,55 @@ export const modules = {
         }
       }
     }
-    const EB = {
-        codexAnyDifficulty: `${fB}:codexNeedsAny`,
-        codexNormalOnly: `${fB}:codexNeedsNormal`,
-        codexHardOnly: `${fB}:codexNeedsHard`
+    const fW = {
+        codexAnyDifficulty: `${TW}:codexNeedsAny`,
+        codexNormalOnly: `${TW}:codexNeedsNormal`,
+        codexHardOnly: `${TW}:codexNeedsHard`
       },
-      cB = {
+      CW = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      hB = {
-        codexContained: `${fB}:codexContainedBadge`,
-        codexEncountered: `${fB}:codexEncounteredBadge`,
-        codexUnidentified: `${fB}:codexUnidentifiedBadge`
+      XW = {
+        codexContained: `${TW}:codexContainedBadge`,
+        codexEncountered: `${TW}:codexEncounteredBadge`,
+        codexUnidentified: `${TW}:codexUnidentifiedBadge`
       },
-      aB = ["94%", "81%", "88%", "46%", "72%"];
+      BW = ["94%", "81%", "88%", "46%", "72%"];
 
-    function eB(BB) {
+    function qW(WW) {
       let {
-        entry: OB
-      } = BB;
+        entry: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, PB.H)();
-      return (0, UB.jsx)("span", {
-        className: JB()("BoardBadge", cB[OB.codexEntryState]),
-        children: GB(hB[OB.codexEntryState])
+        t: OW
+      } = (0, ZW.B)();
+      return (0, yW.jsx)("span", {
+        className: wW()("BoardBadge", CW[iW.codexEntryState]),
+        children: OW(XW[iW.codexEntryState])
       })
     }
 
-    function TB(BB) {
+    function RW(WW) {
       const {
-        t: OB
-      } = (0, PB.H)();
-      return "codexUnidentified" === BB.codexEntryState ? OB(`${fB}:codexUnidentifiedName`) : BB.codexEntryName
+        t: iW
+      } = (0, ZW.B)();
+      return "codexUnidentified" === WW.codexEntryState ? iW(`${TW}:codexUnidentifiedName`) : WW.codexEntryName
     }
 
-    function bB(BB) {
+    function GW(WW) {
       let {
-        entry: OB
-      } = BB;
-      return "codexUnidentified" === OB.codexEntryState ? (0, UB.jsx)(KB, {
+        entry: iW
+      } = WW;
+      return "codexUnidentified" === iW.codexEntryState ? (0, yW.jsx)(HW, {
         itemName: "Book"
-      }) : (0, UB.jsxs)("span", {
+      }) : (0, yW.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, UB.jsx)(uB, {
-          anomalyId: OB.codexEntryId,
-          caught: "codexContained" === OB.codexEntryState
-        }), (0, UB.jsx)("img", {
+        children: [(0, yW.jsx)(nW, {
+          anomalyId: iW.codexEntryId,
+          caught: "codexContained" === iW.codexEntryState
+        }), (0, yW.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -510,27 +782,27 @@ export const modules = {
       })
     }
 
-    function CB(BB) {
+    function IW(WW) {
       let {
-        entry: OB,
-        selected: GB,
-        onSelect: YB
-      } = BB;
-      const DB = "codexUnidentified" === OB.codexEntryState;
-      return (0, UB.jsxs)(iB, {
-        icon: (0, UB.jsx)(bB, {
-          entry: OB
+        entry: iW,
+        selected: OW,
+        onSelect: mW
+      } = WW;
+      const EW = "codexUnidentified" === iW.codexEntryState;
+      return (0, yW.jsxs)(eW, {
+        icon: (0, yW.jsx)(GW, {
+          entry: iW
         }),
-        name: TB(OB),
-        selected: GB,
-        locked: DB,
-        className: JB()("CodexFolder", cB[OB.codexEntryState]),
+        name: RW(iW),
+        selected: OW,
+        locked: EW,
+        className: wW()("CodexFolder", CW[iW.codexEntryState]),
         onSelect: () => {
-          YB(OB.codexEntryId)
+          mW(iW.codexEntryId)
         },
-        children: [!DB && (0, UB.jsx)(eB, {
-          entry: OB
-        }), DB && (0, UB.jsx)("img", {
+        children: [!EW && (0, yW.jsx)(qW, {
+          entry: iW
+        }), EW && (0, yW.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -539,176 +811,176 @@ export const modules = {
       })
     }
 
-    function HB(BB) {
+    function aW(WW) {
       let {
-        count: OB
-      } = BB;
-      const GB = [];
-      for (let YB = Math.min(OB, 25); YB > 0; YB -= 5) GB.push(Math.min(YB, 5));
-      return (0, UB.jsx)("span", {
+        count: iW
+      } = WW;
+      const OW = [];
+      for (let mW = Math.min(iW, 25); mW > 0; mW -= 5) OW.push(Math.min(mW, 5));
+      return (0, yW.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: GB.map(((BB, OB) => (0, UB.jsx)("span", {
-          className: JB()("CodexTallyGroup", {
-            Gate: 5 === BB
+        children: OW.map(((WW, iW) => (0, yW.jsx)("span", {
+          className: wW()("CodexTallyGroup", {
+            Gate: 5 === WW
           }),
           children: Array.from({
-            length: Math.min(BB, 4)
-          }, ((BB, OB) => (0, UB.jsx)("span", {
+            length: Math.min(WW, 4)
+          }, ((WW, iW) => (0, yW.jsx)("span", {
             className: "CodexTallyMark"
-          }, OB)))
-        }, OB)))
+          }, iW)))
+        }, iW)))
       })
     }
 
-    function vB(BB) {
+    function rW(WW) {
       let {
-        contained: OB,
-        total: GB
-      } = BB;
+        contained: iW,
+        total: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, PB.H)();
-      return (0, UB.jsxs)("div", {
+        t: mW
+      } = (0, ZW.B)();
+      return (0, yW.jsxs)("div", {
         className: "CodexProgress",
-        children: [YB(`${fB}:codexProgress`, {
-          contained: String(OB),
-          total: String(GB)
-        }), (0, UB.jsx)("span", {
+        children: [mW(`${TW}:codexProgress`, {
+          contained: String(iW),
+          total: String(OW)
+        }), (0, yW.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, UB.jsx)("span", {
+          children: (0, yW.jsx)("span", {
             style: {
-              width: OB / GB * 100 + "%"
+              width: iW / OW * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function sB(BB) {
+    function zW(WW) {
       let {
-        entry: OB,
-        fileNumber: GB
-      } = BB;
+        entry: iW,
+        fileNumber: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, PB.H)(), DB = "codexContained" === OB.codexEntryState;
-      return (0, UB.jsx)("section", {
+        t: mW
+      } = (0, ZW.B)(), EW = "codexContained" === iW.codexEntryState;
+      return (0, yW.jsx)("section", {
         className: "BoardDetail",
-        children: (0, UB.jsxs)("article", {
-          className: JB()("CodexDossier", cB[OB.codexEntryState]),
-          children: [(0, UB.jsx)("span", {
+        children: (0, yW.jsxs)("article", {
+          className: wW()("CodexDossier", CW[iW.codexEntryState]),
+          children: [(0, yW.jsx)("span", {
             className: "CodexFileNumber",
-            children: YB(`${fB}:codexFileNumber`, {
-              number: String(GB).padStart(3, "0")
+            children: mW(`${TW}:codexFileNumber`, {
+              number: String(OW).padStart(3, "0")
             })
-          }), (0, UB.jsx)(LB, {
-            icon: (0, UB.jsx)(bB, {
-              entry: OB
+          }), (0, yW.jsx)(vW, {
+            icon: (0, yW.jsx)(GW, {
+              entry: iW
             }),
-            name: TB(OB),
-            children: (0, UB.jsx)(eB, {
-              entry: OB
+            name: RW(iW),
+            children: (0, yW.jsx)(qW, {
+              entry: iW
             })
-          }), DB && (0, UB.jsxs)(UB.Fragment, {
-            children: [(0, UB.jsx)("p", {
+          }), EW && (0, yW.jsxs)(yW.Fragment, {
+            children: [(0, yW.jsx)("p", {
               className: "BoardDescription",
-              children: OB.codexEntryLore
-            }), (0, UB.jsxs)("p", {
+              children: iW.codexEntryLore
+            }), (0, yW.jsxs)("p", {
               className: "CodexTally",
-              children: [YB(`${fB}:codexContainments`, {
-                count: String(OB.codexEntryContainedCount)
-              }), (0, UB.jsx)(HB, {
-                count: OB.codexEntryContainedCount
+              children: [mW(`${TW}:codexContainments`, {
+                count: String(iW.codexEntryContainedCount)
+              }), (0, yW.jsx)(aW, {
+                count: iW.codexEntryContainedCount
               })]
-            }), (0, UB.jsx)("span", {
+            }), (0, yW.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: YB(`${fB}:codexContainedBadge`)
+              children: mW(`${TW}:codexContainedBadge`)
             })]
-          }), !DB && (0, UB.jsxs)(UB.Fragment, {
-            children: [(0, UB.jsxs)("div", {
+          }), !EW && (0, yW.jsxs)(yW.Fragment, {
+            children: [(0, yW.jsxs)("div", {
               className: "CodexRedaction",
-              children: [aB.map((BB => (0, UB.jsx)("span", {
+              children: [BW.map((WW => (0, yW.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: BB
+                  width: WW
                 }
-              }, BB))), (0, UB.jsx)("p", {
+              }, WW))), (0, yW.jsx)("p", {
                 className: "CodexRedacted",
-                children: YB(`${fB}:codexRedacted`)
+                children: mW(`${TW}:codexRedacted`)
               })]
-            }), "" !== OB.codexEntryHint && (0, UB.jsxs)("aside", {
+            }), "" !== iW.codexEntryHint && (0, yW.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, UB.jsx)("h4", {
-                children: YB(`${fB}:codexHintLabel`)
-              }), (0, UB.jsx)("p", {
-                children: OB.codexEntryHint
+              children: [(0, yW.jsx)("h4", {
+                children: mW(`${TW}:codexHintLabel`)
+              }), (0, yW.jsx)("p", {
+                children: iW.codexEntryHint
               })]
-            }), (0, UB.jsx)("p", {
+            }), (0, yW.jsx)("p", {
               className: "CodexClearance",
-              children: YB(EB[OB.codexEntryDifficulty])
+              children: mW(fW[iW.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function xB(BB) {
+    function FW(WW) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, MB.i)(XB, OB.getSnapshot()),
+        controller: iW
+      } = WW;
+      const OW = (0, tW.g)(VW, iW.getSnapshot()),
         {
-          t: YB
-        } = (0, PB.H)();
-      if (0 === GB.entries.length) return null;
-      const DB = GB.entries.find((BB => BB.codexEntryId === GB.selectedId)),
-        QB = GB.entries.filter((BB => "codexContained" === BB.codexEntryState)).length,
-        oB = GB.entries.map((BB => BB.codexEntryId)).sort().indexOf(DB.codexEntryId) + 1;
-      return (0, UB.jsxs)(dB, {
-        open: GB.open,
-        onDismiss: OB.dismiss,
-        title: YB(`${fB}:codexTitle`),
+          t: mW
+        } = (0, ZW.B)();
+      if (0 === OW.entries.length) return null;
+      const EW = OW.entries.find((WW => WW.codexEntryId === OW.selectedId)),
+        NW = OW.entries.filter((WW => "codexContained" === WW.codexEntryState)).length,
+        PW = OW.entries.map((WW => WW.codexEntryId)).sort().indexOf(EW.codexEntryId) + 1;
+      return (0, yW.jsxs)(hW, {
+        open: OW.open,
+        onDismiss: iW.dismiss,
+        title: mW(`${TW}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, UB.jsx)(vB, {
-          contained: QB,
-          total: GB.entries.length
+        headerExtra: (0, yW.jsx)(rW, {
+          contained: NW,
+          total: OW.entries.length
         }),
-        children: [(0, UB.jsx)("div", {
+        children: [(0, yW.jsx)("div", {
           className: "BoardTiles",
-          children: GB.entries.map((BB => (0, UB.jsx)(CB, {
-            entry: BB,
-            selected: BB === DB,
-            onSelect: OB.select
-          }, BB.codexEntryId)))
-        }), (0, UB.jsx)(sB, {
-          entry: DB,
-          fileNumber: oB
+          children: OW.entries.map((WW => (0, yW.jsx)(IW, {
+            entry: WW,
+            selected: WW === EW,
+            onSelect: iW.select
+          }, WW.codexEntryId)))
+        }), (0, yW.jsx)(zW, {
+          entry: EW,
+          fileNumber: PW
         })]
       })
     }
-    var tB = GB(353);
-    class BO extends rB.d {
-      constructor(BB, OB, GB, YB, DB, QB) {
-        super(BB, OB, GB), this.pacer = YB, this.command = DB, this.predict = QB, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = BB => {
-          this.selectedId = BB, this.emit()
-        }, this.act = (BB, OB) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${BB} ${OB}`, this.rollBack)) return;
-          const GB = this.predict(this.board, BB, OB);
-          null !== GB && (this.board = GB.board, this.notice = GB.notice, this.emit())
+    var QW = OW(344);
+    class Wi extends DW.e {
+      constructor(WW, iW, OW, mW, EW, NW) {
+        super(WW, iW, OW), this.pacer = mW, this.command = EW, this.predict = NW, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = WW => {
+          this.selectedId = WW, this.emit()
+        }, this.act = (WW, iW) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${WW} ${iW}`, this.rollBack)) return;
+          const OW = this.predict(this.board, WW, iW);
+          null !== OW && (this.board = OW.board, this.notice = OW.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = YB.subscribe((() => {
+        }, this.unsubscribePacer = mW.subscribe((() => {
           this.emit()
         }))
       }
-      nP(BB) {
-        const OB = this.messageOpens(BB);
-        if (OB && this.open) return this.board === this.confirmed && (this.board = BB), this.confirmed = BB, void this.emit();
-        if (this.board = BB, this.confirmed = BB, this.pacer.onReply(), OB) return this.notice = null, this.selectedId = this.openingSelection(BB), void this.show();
-        const GB = this.messageNotice(BB);
-        null !== GB && (this.notice = GB), this.emit()
+      yZ(WW) {
+        const iW = this.messageOpens(WW);
+        if (iW && this.open) return this.board === this.confirmed && (this.board = WW), this.confirmed = WW, void this.emit();
+        if (this.board = WW, this.confirmed = WW, this.pacer.onReply(), iW) return this.notice = null, this.selectedId = this.openingSelection(WW), void this.show();
+        const OW = this.messageNotice(WW);
+        null !== OW && (this.notice = OW), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -718,153 +990,153 @@ export const modules = {
       }
     }
 
-    function OO(BB, OB) {
-      return BB.loadoutCoins >= OB.loadoutCostCoins && OB.loadoutCostParts.every((OB => function(BB, OB) {
-        return GO(BB, OB).loadoutHeldPartAmount
-      }(BB, OB.loadoutPartCurrency) >= OB.loadoutPartAmount))
+    function ii(WW, iW) {
+      return WW.loadoutCoins >= iW.loadoutCostCoins && iW.loadoutCostParts.every((iW => function(WW, iW) {
+        return Oi(WW, iW).loadoutHeldPartAmount
+      }(WW, iW.loadoutPartCurrency) >= iW.loadoutPartAmount))
     }
 
-    function GO(BB, OB) {
-      return BB.loadoutHeldParts.find((BB => BB.loadoutHeldPartCurrency === OB))
+    function Oi(WW, iW) {
+      return WW.loadoutHeldParts.find((WW => WW.loadoutHeldPartCurrency === iW))
     }
 
-    function YO(BB, OB) {
-      return BB.loadoutSlots.find((BB => BB.loadoutSlotKind === OB))
+    function mi(WW, iW) {
+      return WW.loadoutSlots.find((WW => WW.loadoutSlotKind === iW))
     }
 
-    function DO(BB) {
-      return BB.loadoutPerks.filter((BB => BB.loadoutPerkEquipped)).length >= BB.loadoutMaxPerks
+    function Ei(WW) {
+      return WW.loadoutPerks.filter((WW => WW.loadoutPerkEquipped)).length >= WW.loadoutMaxPerks
     }
 
-    function QO(BB, OB, GB) {
-      for (const DB of BB.loadoutSlots) {
-        const YB = DB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === GB));
-        if (YB) return "loadoutArmour" === DB.loadoutSlotKind ? jO(BB, DB, YB, OB) : oO(BB, DB, YB, OB)
+    function Ni(WW, iW, OW) {
+      for (const EW of WW.loadoutSlots) {
+        const mW = EW.loadoutSlotOptions.find((WW => WW.loadoutOptionId === OW));
+        if (mW) return "loadoutArmour" === EW.loadoutSlotKind ? Li(WW, EW, mW, iW) : Pi(WW, EW, mW, iW)
       }
-      const YB = BB.loadoutPerks.find((BB => BB.loadoutPerkId === GB));
-      return YB ? function(BB, OB, GB) {
-        const YB = OB.loadoutPerkOwned,
-          DB = OB.loadoutPerkEquipped,
-          QB = OB.loadoutPerkName,
-          oB = DO(BB);
-        if ("loadoutUnlock" === GB) {
-          if (YB || !OO(BB, OB.loadoutPerkCost)) return null;
-          const GB = {
-            ...OB,
+      const mW = WW.loadoutPerks.find((WW => WW.loadoutPerkId === OW));
+      return mW ? function(WW, iW, OW) {
+        const mW = iW.loadoutPerkOwned,
+          EW = iW.loadoutPerkEquipped,
+          NW = iW.loadoutPerkName,
+          PW = Ei(WW);
+        if ("loadoutUnlock" === OW) {
+          if (mW || !ii(WW, iW.loadoutPerkCost)) return null;
+          const OW = {
+            ...iW,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !oB
+            loadoutPerkEquipped: !PW
           };
           return {
-            board: JO(MO(BB, OB.loadoutPerkCost), GB),
-            notice: PO(oB ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", QB)
+            board: wi(ti(WW, iW.loadoutPerkCost), OW),
+            notice: Zi(PW ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", NW)
           }
         }
-        if ("loadoutUpgrade" === GB || !YB || "loadoutEquip" === GB === DB || !DB && oB) return null;
+        if ("loadoutUpgrade" === OW || !mW || "loadoutEquip" === OW === EW || !EW && PW) return null;
         return {
-          board: JO(BB, {
-            ...OB,
-            loadoutPerkEquipped: !DB
+          board: wi(WW, {
+            ...iW,
+            loadoutPerkEquipped: !EW
           }),
-          notice: PO(DB ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", QB)
+          notice: Zi(EW ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", NW)
         }
-      }(BB, YB, OB) : null
+      }(WW, mW, iW) : null
     }
 
-    function oO(BB, OB, GB, YB) {
-      const DB = GB.loadoutOptionOwnedTier,
-        QB = GB.loadoutOptionName;
-      if ("loadoutEquip" === YB) return 0 === DB ? null : {
-        board: yO(BB, OB, GB.loadoutOptionId, null),
-        notice: PO("loadoutNoticeEquipped", QB)
+    function Pi(WW, iW, OW, mW) {
+      const EW = OW.loadoutOptionOwnedTier,
+        NW = OW.loadoutOptionName;
+      if ("loadoutEquip" === mW) return 0 === EW ? null : {
+        board: ci(WW, iW, OW.loadoutOptionId, null),
+        notice: Zi("loadoutNoticeEquipped", NW)
       };
-      const oB = "loadoutUnlock" === YB;
-      if (oB && 0 !== DB || "loadoutUpgrade" === YB && (0 === DB || DB >= GB.loadoutOptionTiers.length) || "loadoutUnequip" === YB) return null;
-      const jB = GB.loadoutOptionTiers[DB].loadoutTierCost;
-      if (!OO(BB, jB)) return null;
-      const yB = {
-          ...GB,
-          loadoutOptionOwnedTier: DB + 1
+      const PW = "loadoutUnlock" === mW;
+      if (PW && 0 !== EW || "loadoutUpgrade" === mW && (0 === EW || EW >= OW.loadoutOptionTiers.length) || "loadoutUnequip" === mW) return null;
+      const LW = OW.loadoutOptionTiers[EW].loadoutTierCost;
+      if (!ii(WW, LW)) return null;
+      const cW = {
+          ...OW,
+          loadoutOptionOwnedTier: EW + 1
         },
-        JB = oB ? GB.loadoutOptionId : OB.loadoutSlotEquippedId;
+        wW = PW ? OW.loadoutOptionId : iW.loadoutSlotEquippedId;
       return {
-        board: yO(MO(BB, jB), OB, JB, yB),
-        notice: oB ? PO("loadoutNoticeUnlocked", QB) : PO("loadoutNoticeUpgraded", QB, DB + 1)
+        board: ci(ti(WW, LW), iW, wW, cW),
+        notice: PW ? Zi("loadoutNoticeUnlocked", NW) : Zi("loadoutNoticeUpgraded", NW, EW + 1)
       }
     }
 
-    function jO(BB, OB, GB, YB) {
-      const DB = GB.loadoutOptionOwnedTier > 0,
-        QB = GB.loadoutOptionName;
-      if ("loadoutEquip" === YB && DB) return {
-        board: yO(BB, OB, GB.loadoutOptionId, null),
-        notice: PO("loadoutNoticeEquipped", QB)
+    function Li(WW, iW, OW, mW) {
+      const EW = OW.loadoutOptionOwnedTier > 0,
+        NW = OW.loadoutOptionName;
+      if ("loadoutEquip" === mW && EW) return {
+        board: ci(WW, iW, OW.loadoutOptionId, null),
+        notice: Zi("loadoutNoticeEquipped", NW)
       };
-      const oB = GB.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== YB || DB || !OO(BB, oB) ? null : {
-        board: yO(MO(BB, oB), OB, GB.loadoutOptionId, {
-          ...GB,
+      const PW = OW.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== mW || EW || !ii(WW, PW) ? null : {
+        board: ci(ti(WW, PW), iW, OW.loadoutOptionId, {
+          ...OW,
           loadoutOptionOwnedTier: 1
         }),
-        notice: PO("loadoutNoticeUnlocked", QB)
+        notice: Zi("loadoutNoticeUnlocked", NW)
       }
     }
 
-    function yO(BB, OB, GB, YB) {
-      const DB = {
-        ...OB,
-        loadoutSlotEquippedId: GB,
-        loadoutSlotOptions: OB.loadoutSlotOptions.map((BB => null !== YB && BB.loadoutOptionId === YB.loadoutOptionId ? YB : BB))
+    function ci(WW, iW, OW, mW) {
+      const EW = {
+        ...iW,
+        loadoutSlotEquippedId: OW,
+        loadoutSlotOptions: iW.loadoutSlotOptions.map((WW => null !== mW && WW.loadoutOptionId === mW.loadoutOptionId ? mW : WW))
       };
       return {
-        ...BB,
-        loadoutSlots: BB.loadoutSlots.map((BB => BB === OB ? DB : BB))
+        ...WW,
+        loadoutSlots: WW.loadoutSlots.map((WW => WW === iW ? EW : WW))
       }
     }
 
-    function JO(BB, OB) {
+    function wi(WW, iW) {
       return {
-        ...BB,
-        loadoutPerks: BB.loadoutPerks.map((BB => BB.loadoutPerkId === OB.loadoutPerkId ? OB : BB))
+        ...WW,
+        loadoutPerks: WW.loadoutPerks.map((WW => WW.loadoutPerkId === iW.loadoutPerkId ? iW : WW))
       }
     }
 
-    function MO(BB, OB) {
+    function ti(WW, iW) {
       return {
-        ...BB,
-        loadoutCoins: BB.loadoutCoins - OB.loadoutCostCoins,
-        loadoutHeldParts: BB.loadoutHeldParts.map((BB => {
-          const GB = OB.loadoutCostParts.find((OB => OB.loadoutPartCurrency === BB.loadoutHeldPartCurrency));
-          return GB ? {
-            ...BB,
-            loadoutHeldPartAmount: BB.loadoutHeldPartAmount - GB.loadoutPartAmount
-          } : BB
+        ...WW,
+        loadoutCoins: WW.loadoutCoins - iW.loadoutCostCoins,
+        loadoutHeldParts: WW.loadoutHeldParts.map((WW => {
+          const OW = iW.loadoutCostParts.find((iW => iW.loadoutPartCurrency === WW.loadoutHeldPartCurrency));
+          return OW ? {
+            ...WW,
+            loadoutHeldPartAmount: WW.loadoutHeldPartAmount - OW.loadoutPartAmount
+          } : WW
         }))
       }
     }
 
-    function PO(BB, OB) {
+    function Zi(WW, iW) {
       return {
-        loadoutNoticeKey: BB,
+        loadoutNoticeKey: WW,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: OB,
+        loadoutNoticeName: iW,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const zO = "containmentLoadoutView";
-    class lO extends BO {
-      constructor(BB, OB, GB, YB) {
-        super(BB, OB, GB, YB, "loadout", QO), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = BB => {
-          this.slot = BB, this.selectedId = pO(this.board, BB), this.emit()
+    const xi = "containmentLoadoutView";
+    class li extends Wi {
+      constructor(WW, iW, OW, mW) {
+        super(WW, iW, OW, mW, "loadout", Ni), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = WW => {
+          this.slot = WW, this.selectedId = Ai(this.board, WW), this.emit()
         }
       }
-      messageOpens(BB) {
-        return BB.loadoutMessageOpens
+      messageOpens(WW) {
+        return WW.loadoutMessageOpens
       }
-      messageNotice(BB) {
-        return BB.loadoutNotice
+      messageNotice(WW) {
+        return WW.loadoutNotice
       }
-      openingSelection(BB) {
-        return pO(BB, this.slot)
+      openingSelection(WW) {
+        return Ai(WW, this.slot)
       }
       buildSnapshot() {
         return {
@@ -878,765 +1150,765 @@ export const modules = {
       }
     }
 
-    function pO(BB, OB) {
-      if ("loadoutPerks" === OB) {
-        var GB;
-        const OB = BB.loadoutPerks;
-        return (null !== (GB = OB.find((BB => BB.loadoutPerkEquipped))) && void 0 !== GB ? GB : OB[0]).loadoutPerkId
+    function Ai(WW, iW) {
+      if ("loadoutPerks" === iW) {
+        var OW;
+        const iW = WW.loadoutPerks;
+        return (null !== (OW = iW.find((WW => WW.loadoutPerkEquipped))) && void 0 !== OW ? OW : iW[0]).loadoutPerkId
       }
-      return YO(BB, OB).loadoutSlotEquippedId
+      return mi(WW, iW).loadoutSlotEquippedId
     }
-    const qO = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var ZO = GB(37572),
-      NO = GB(1268);
-    const RO = {
-        loadoutPrimary: `${fB}:loadoutSlotPrimary`,
-        loadoutSecondary: `${fB}:loadoutSlotSecondary`,
-        loadoutOffensive: `${fB}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${fB}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${fB}:loadoutSlotArmour`,
-        loadoutPerks: `${fB}:loadoutSlotPerks`
+    const bi = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var ji = OW(38030),
+      Ui = OW(1269);
+    const ki = {
+        loadoutPrimary: `${TW}:loadoutSlotPrimary`,
+        loadoutSecondary: `${TW}:loadoutSlotSecondary`,
+        loadoutOffensive: `${TW}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${TW}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${TW}:loadoutSlotArmour`,
+        loadoutPerks: `${TW}:loadoutSlotPerks`
       },
-      WO = {
+      si = {
         section: "right",
-        pl: "bottom",
+        Kl: "bottom",
         act: "top"
       },
-      AO = (0, YB.createContext)({
+      Mi = (0, mW.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function VO() {
+    function Ki() {
       const {
-        step: BB,
-        targetRef: OB
-      } = (0, YB.useContext)(AO);
-      return (GB, YB) => (null === BB || void 0 === BB ? void 0 : BB.kind) === GB && BB.id === YB ? OB : void 0
+        step: WW,
+        targetRef: iW
+      } = (0, mW.useContext)(Mi);
+      return (OW, mW) => (null === WW || void 0 === WW ? void 0 : WW.kind) === OW && WW.id === mW ? iW : void 0
     }
 
-    function SO(BB, OB) {
-      const GB = OB.loadoutTargetId;
-      if ("loadoutPerks" === OB.loadoutTargetSection) {
-        const OB = BB.loadoutPerks.find((BB => BB.loadoutPerkId === GB));
+    function Si(WW, iW) {
+      const OW = iW.loadoutTargetId;
+      if ("loadoutPerks" === iW.loadoutTargetSection) {
+        const iW = WW.loadoutPerks.find((WW => WW.loadoutPerkId === OW));
         return {
-          name: OB.loadoutPerkName,
-          owned: OB.loadoutPerkOwned,
-          equipped: OB.loadoutPerkEquipped
+          name: iW.loadoutPerkName,
+          owned: iW.loadoutPerkOwned,
+          equipped: iW.loadoutPerkEquipped
         }
       }
-      const YB = YO(BB, OB.loadoutTargetSection),
-        DB = YB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === GB));
+      const mW = mi(WW, iW.loadoutTargetSection),
+        EW = mW.loadoutSlotOptions.find((WW => WW.loadoutOptionId === OW));
       return {
-        name: DB.loadoutOptionName,
-        owned: DB.loadoutOptionOwnedTier > 0,
-        equipped: YB.loadoutSlotEquippedId === GB
+        name: EW.loadoutOptionName,
+        owned: EW.loadoutOptionOwnedTier > 0,
+        equipped: mW.loadoutSlotEquippedId === OW
       }
     }
 
-    function nO(BB, OB, GB, YB) {
-      const [DB, QB] = BB(`${fB}:${OB}`, {
-        [GB]: "\x01"
+    function Yi(WW, iW, OW, mW) {
+      const [EW, NW] = WW(`${TW}:${iW}`, {
+        [OW]: "\x01"
       }).split("\x01");
-      return (0, UB.jsxs)(UB.Fragment, {
-        children: [DB, (0, UB.jsx)("span", {
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [EW, (0, yW.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: YB
-        }), QB]
+          children: mW
+        }), NW]
       })
     }
 
-    function UO(BB) {
+    function yi(WW) {
       let {
-        view: OB,
-        onDismiss: GB,
-        children: DB
-      } = BB;
+        view: iW,
+        onDismiss: OW,
+        children: EW
+      } = WW;
       const {
-        t: QB
-      } = (0, PB.H)(), oB = OB.loadout, jB = OB.open ? oB.loadoutWalkthrough.map((BB => ({
-        target: BB,
-        info: SO(oB, BB)
-      }))).find((BB => {
+        t: NW
+      } = (0, ZW.B)(), PW = iW.loadout, LW = iW.open ? PW.loadoutWalkthrough.map((WW => ({
+        target: WW,
+        info: Si(PW, WW)
+      }))).find((WW => {
         let {
-          info: OB
-        } = BB;
-        return !OB.equipped
+          info: iW
+        } = WW;
+        return !iW.equipped
       })) : void 0;
-      let yB = null,
-        JB = null;
-      if (void 0 !== jB) {
+      let cW = null,
+        wW = null;
+      if (void 0 !== LW) {
         const {
-          target: BB,
-          info: GB
-        } = jB;
-        OB.slot !== BB.loadoutTargetSection ? (yB = {
+          target: WW,
+          info: OW
+        } = LW;
+        iW.slot !== WW.loadoutTargetSection ? (cW = {
           kind: "section",
-          id: BB.loadoutTargetSection
-        }, JB = nO(QB, "loadoutWalkthroughSection", "section", QB(RO[BB.loadoutTargetSection]))) : OB.selectedId !== BB.loadoutTargetId ? (yB = {
-          kind: "pl",
-          id: BB.loadoutTargetId
-        }, JB = nO(QB, "loadoutWalkthroughPick", "name", GB.name)) : (yB = {
+          id: WW.loadoutTargetSection
+        }, wW = Yi(NW, "loadoutWalkthroughSection", "section", NW(ki[WW.loadoutTargetSection]))) : iW.selectedId !== WW.loadoutTargetId ? (cW = {
+          kind: "Kl",
+          id: WW.loadoutTargetId
+        }, wW = Yi(NW, "loadoutWalkthroughPick", "name", OW.name)) : (cW = {
           kind: "act",
-          id: BB.loadoutTargetId
-        }, JB = nO(QB, GB.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", GB.name))
+          id: WW.loadoutTargetId
+        }, wW = Yi(NW, OW.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", OW.name))
       }
-      const MB = null === yB ? null : function(BB) {
-          return `${BB.kind}:${BB.id}`
-        }(yB),
-        [zB, lB] = (0, YB.useState)(null),
-        pB = (0, YB.useCallback)((BB => {
-          lB((OB => null !== BB ? {
-            key: MB,
-            node: BB
-          } : (null === OB || void 0 === OB ? void 0 : OB.key) === MB ? null : OB))
-        }), [MB]),
-        qB = null !== MB && (null === zB || void 0 === zB ? void 0 : zB.key) === MB ? zB.node : null;
-      return (0, UB.jsxs)(AO.Provider, {
+      const tW = null === cW ? null : function(WW) {
+          return `${WW.kind}:${WW.id}`
+        }(cW),
+        [xW, lW] = (0, mW.useState)(null),
+        AW = (0, mW.useCallback)((WW => {
+          lW((iW => null !== WW ? {
+            key: tW,
+            node: WW
+          } : (null === iW || void 0 === iW ? void 0 : iW.key) === tW ? null : iW))
+        }), [tW]),
+        bW = null !== tW && (null === xW || void 0 === xW ? void 0 : xW.key) === tW ? xW.node : null;
+      return (0, yW.jsxs)(Mi.Provider, {
         value: {
-          step: yB,
-          targetRef: pB
+          step: cW,
+          targetRef: AW
         },
-        children: [DB, null !== yB && null !== qB && (0, UB.jsx)(fO, {
-          target: qB,
-          placement: WO[yB.kind],
-          onDismiss: GB,
-          children: JB
-        }, MB)]
+        children: [EW, null !== cW && null !== bW && (0, yW.jsx)(Ti, {
+          target: bW,
+          placement: si[cW.kind],
+          onDismiss: OW,
+          children: wW
+        }, tW)]
       })
     }
 
-    function fO(BB) {
+    function Ti(WW) {
       let {
-        target: OB,
-        placement: GB,
-        onDismiss: DB,
-        children: QB
-      } = BB;
+        target: iW,
+        placement: OW,
+        onDismiss: EW,
+        children: NW
+      } = WW;
       const {
-        t: oB
-      } = (0, PB.H)(), jB = (0, YB.useRef)(OB);
-      return jB.current = OB, (0, NO.v)("popup", jB, DB), (0, UB.jsxs)(ZO.f, {
-        target: OB,
-        placement: GB,
+        t: PW
+      } = (0, ZW.B)(), LW = (0, mW.useRef)(iW);
+      return LW.current = iW, (0, Ui.r)("popup", LW, EW), (0, yW.jsxs)(ji.h, {
+        target: iW,
+        placement: OW,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, UB.jsxs)("div", {
+        children: [(0, yW.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, UB.jsx)("img", {
+          children: [(0, yW.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: qO,
+            src: bi,
             alt: "",
             draggable: !1
-          }), (0, UB.jsx)("span", {
+          }), (0, yW.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: oB(`${fB}:operatorName`)
-          }), (0, UB.jsx)(pB.m, {
-            onClick: DB,
-            ariaLabel: oB(`${fB}:loadoutWalkthroughClose`),
+            children: PW(`${TW}:operatorName`)
+          }), (0, yW.jsx)(AW.l, {
+            onClick: EW,
+            ariaLabel: PW(`${TW}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, UB.jsx)("p", {
+        }), (0, yW.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: QB
+          children: NW
         })]
       })
     }
-    const kO = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const Ji = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function dO(BB) {
+    function Hi(WW) {
       let {
-        cost: OB,
-        loadout: GB
-      } = BB;
+        cost: iW,
+        loadout: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, PB.H)();
-      return OB.loadoutCostCoins <= 0 && 0 === OB.loadoutCostParts.length ? (0, UB.jsx)("span", {
+        t: mW
+      } = (0, ZW.B)();
+      return iW.loadoutCostCoins <= 0 && 0 === iW.loadoutCostParts.length ? (0, yW.jsx)("span", {
         className: "LoadoutCost",
-        children: YB(`${fB}:loadoutFree`)
-      }) : (0, UB.jsxs)("span", {
+        children: mW(`${TW}:loadoutFree`)
+      }) : (0, yW.jsxs)("span", {
         className: "LoadoutCost",
-        children: [OB.loadoutCostCoins > 0 && (0, UB.jsx)(mB, {
-          itemName: kB,
-          amount: OB.loadoutCostCoins,
-          sJ: GB.loadoutCoins
-        }), OB.loadoutCostParts.map((BB => {
-          const OB = GO(GB, BB.loadoutPartCurrency);
-          return (0, UB.jsx)(mB, {
-            itemName: OB.loadoutHeldPartItem,
-            amount: BB.loadoutPartAmount,
-            sJ: OB.loadoutHeldPartAmount
-          }, BB.loadoutPartCurrency)
+        children: [iW.loadoutCostCoins > 0 && (0, yW.jsx)(uW, {
+          itemName: JW,
+          amount: iW.loadoutCostCoins,
+          BL: OW.loadoutCoins
+        }), iW.loadoutCostParts.map((WW => {
+          const iW = Oi(OW, WW.loadoutPartCurrency);
+          return (0, yW.jsx)(uW, {
+            itemName: iW.loadoutHeldPartItem,
+            amount: WW.loadoutPartAmount,
+            BL: iW.loadoutHeldPartAmount
+          }, WW.loadoutPartCurrency)
         }))]
       })
     }
-    const KO = {
-      loadoutStatFireRate: `${fB}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${fB}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${fB}:loadoutUnitSeconds`
+    const ni = {
+      loadoutStatFireRate: `${TW}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${TW}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${TW}:loadoutUnitSeconds`
     };
 
-    function uO(BB) {
-      return "loadoutStatPotency" === BB.loadoutStatKind ? (0, tB.S)(BB.loadoutStatValue) : String(BB.loadoutStatValue)
+    function ui(WW) {
+      return "loadoutStatPotency" === WW.loadoutStatKind ? (0, QW.V)(WW.loadoutStatValue) : String(WW.loadoutStatValue)
     }
 
-    function mO(BB) {
-      var OB;
+    function oi(WW) {
+      var iW;
       let {
-        option: GB
-      } = BB;
+        option: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, PB.H)(), DB = GB.loadoutOptionTiers, QB = null === (OB = DB[0]) || void 0 === OB ? void 0 : OB.loadoutTierStats.map((BB => BB.loadoutStatKind));
-      if (!QB || 0 === QB.length) return null;
-      const oB = GB.loadoutOptionOwnedTier,
-        jB = (BB, OB) => {
-          var GB;
-          return null === (GB = DB[BB]) || void 0 === GB ? void 0 : GB.loadoutTierStats.find((BB => BB.loadoutStatKind === OB))
+        t: mW
+      } = (0, ZW.B)(), EW = OW.loadoutOptionTiers, NW = null === (iW = EW[0]) || void 0 === iW ? void 0 : iW.loadoutTierStats.map((WW => WW.loadoutStatKind));
+      if (!NW || 0 === NW.length) return null;
+      const PW = OW.loadoutOptionOwnedTier,
+        LW = (WW, iW) => {
+          var OW;
+          return null === (OW = EW[WW]) || void 0 === OW ? void 0 : OW.loadoutTierStats.find((WW => WW.loadoutStatKind === iW))
         };
-      return (0, UB.jsxs)("table", {
+      return (0, yW.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, UB.jsx)("thead", {
-          children: (0, UB.jsxs)("tr", {
-            children: [(0, UB.jsx)("th", {}), DB.map(((BB, OB) => (0, UB.jsx)("th", {
-              className: JB()({
-                Current: OB + 1 === oB,
-                Next: OB === oB
+        children: [(0, yW.jsx)("thead", {
+          children: (0, yW.jsxs)("tr", {
+            children: [(0, yW.jsx)("th", {}), EW.map(((WW, iW) => (0, yW.jsx)("th", {
+              className: wW()({
+                Current: iW + 1 === PW,
+                Next: iW === PW
               }),
-              children: YB(`${fB}:loadoutTier`, {
-                tier: (0, tB.S)(OB + 1)
+              children: mW(`${TW}:loadoutTier`, {
+                tier: (0, QW.V)(iW + 1)
               })
-            }, OB)))]
+            }, iW)))]
           })
-        }), (0, UB.jsx)("tbody", {
-          children: QB.map((BB => {
-            const OB = KO[BB];
-            return (0, UB.jsxs)("tr", {
-              children: [(0, UB.jsxs)("th", {
+        }), (0, yW.jsx)("tbody", {
+          children: NW.map((WW => {
+            const iW = ni[WW];
+            return (0, yW.jsxs)("tr", {
+              children: [(0, yW.jsxs)("th", {
                 scope: "row",
-                children: [YB(`${fB}:${BB}`), OB && (0, UB.jsx)("span", {
+                children: [mW(`${TW}:${WW}`), iW && (0, yW.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: YB(OB)
+                  children: mW(iW)
                 })]
-              }), DB.map(((OB, GB) => {
-                const YB = jB(GB, BB),
-                  DB = GB > 0 ? jB(GB - 1, BB) : void 0,
-                  QB = YB && DB ? YB.loadoutStatValue - DB.loadoutStatValue : 0,
-                  yB = kO.has(BB) ? QB < 0 : QB > 0,
-                  MB = GB === oB;
-                return (0, UB.jsxs)("td", {
-                  className: JB()({
-                    Current: GB + 1 === oB,
-                    Next: MB,
-                    Gain: yB,
-                    Owned: GB < oB
+              }), EW.map(((iW, OW) => {
+                const mW = LW(OW, WW),
+                  EW = OW > 0 ? LW(OW - 1, WW) : void 0,
+                  NW = mW && EW ? mW.loadoutStatValue - EW.loadoutStatValue : 0,
+                  cW = Ji.has(WW) ? NW < 0 : NW > 0,
+                  tW = OW === PW;
+                return (0, yW.jsxs)("td", {
+                  className: wW()({
+                    Current: OW + 1 === PW,
+                    Next: tW,
+                    Gain: cW,
+                    Owned: OW < PW
                   }),
-                  children: [MB && yB && (0, UB.jsx)("span", {
+                  children: [tW && cW && (0, yW.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: QB < 0 ? "\u25bc" : "\u25b2"
-                  }), YB ? uO(YB) : "-"]
-                }, GB)
+                    children: NW < 0 ? "\u25bc" : "\u25b2"
+                  }), mW ? ui(mW) : "-"]
+                }, OW)
               }))]
-            }, BB)
+            }, WW)
           }))
         })]
       })
     }
 
-    function IO(BB) {
+    function di(WW) {
       let {
-        view: OB,
-        controller: GB,
-        slot: YB,
-        option: DB
-      } = BB;
+        view: iW,
+        controller: OW,
+        slot: mW,
+        option: EW
+      } = WW;
       const {
-        t: QB
-      } = (0, PB.H)(), oB = OB.loadout, jB = DB.loadoutOptionOwnedTier, yB = DB.loadoutOptionTiers.length, JB = YB.loadoutSlotEquippedId === DB.loadoutOptionId, MB = jB < yB ? DB.loadoutOptionTiers[jB].loadoutTierCost : null, zB = null !== MB && OO(oB, MB), lB = DB.loadoutOptionId, qB = VO();
-      return (0, UB.jsxs)(UB.Fragment, {
-        children: [(0, UB.jsx)(iO, {
-          icon: DB.loadoutOptionIcon,
-          name: DB.loadoutOptionName,
-          status: 0 === jB ? QB(`${fB}:loadoutLocked`) : yB > 1 ? QB(`${fB}:loadoutTier`, {
-            tier: (0, tB.S)(jB)
+        t: NW
+      } = (0, ZW.B)(), PW = iW.loadout, LW = EW.loadoutOptionOwnedTier, cW = EW.loadoutOptionTiers.length, wW = mW.loadoutSlotEquippedId === EW.loadoutOptionId, tW = LW < cW ? EW.loadoutOptionTiers[LW].loadoutTierCost : null, xW = null !== tW && ii(PW, tW), lW = EW.loadoutOptionId, bW = Ki();
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [(0, yW.jsx)(vi, {
+          icon: EW.loadoutOptionIcon,
+          name: EW.loadoutOptionName,
+          status: 0 === LW ? NW(`${TW}:loadoutLocked`) : cW > 1 ? NW(`${TW}:loadoutTier`, {
+            tier: (0, QW.V)(LW)
           }) : null,
-          locked: 0 === jB,
-          equipped: JB
-        }), (0, UB.jsx)("p", {
+          locked: 0 === LW,
+          equipped: wW
+        }), (0, yW.jsx)("p", {
           className: "BoardDescription",
-          children: DB.loadoutOptionDescription
-        }), (0, UB.jsx)(mO, {
-          option: DB
-        }), (0, UB.jsxs)("div", {
-          ref: qB("act", lB),
+          children: EW.loadoutOptionDescription
+        }), (0, yW.jsx)(oi, {
+          option: EW
+        }), (0, yW.jsxs)("div", {
+          ref: bW("act", lW),
           className: "BoardActions",
-          children: [null !== MB && (0, UB.jsxs)("div", {
+          children: [null !== tW && (0, yW.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, UB.jsx)(dO, {
-              cost: MB,
-              loadout: oB
-            }), (0, UB.jsx)(pB.q, {
-              disabled: !zB || OB.pending,
+            children: [(0, yW.jsx)(Hi, {
+              cost: tW,
+              loadout: PW
+            }), (0, yW.jsx)(AW.n, {
+              disabled: !xW || iW.pending,
               onClick: () => {
-                GB.act(0 === jB ? "loadoutUnlock" : "loadoutUpgrade", lB)
+                OW.act(0 === LW ? "loadoutUnlock" : "loadoutUpgrade", lW)
               },
-              children: 0 === jB ? QB(`${fB}:loadoutUnlock`) : QB(`${fB}:loadoutUpgrade`, {
-                tier: (0, tB.S)(jB + 1)
+              children: 0 === LW ? NW(`${TW}:loadoutUnlock`) : NW(`${TW}:loadoutUpgrade`, {
+                tier: (0, QW.V)(LW + 1)
               })
             })]
-          }), null === MB && yB > 1 && (0, UB.jsx)("span", {
+          }), null === tW && cW > 1 && (0, yW.jsx)("span", {
             className: "BoardHint",
-            children: QB(`${fB}:loadoutMaxed`)
-          }), jB > 0 && !JB && (0, UB.jsx)(pB.f, {
-            disabled: OB.pending,
+            children: NW(`${TW}:loadoutMaxed`)
+          }), LW > 0 && !wW && (0, yW.jsx)(AW.f, {
+            disabled: iW.pending,
             onClick: () => {
-              GB.act("loadoutEquip", lB)
+              OW.act("loadoutEquip", lW)
             },
-            children: QB(`${fB}:loadoutEquip`)
+            children: NW(`${TW}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function FO(BB) {
+    function ei(WW) {
       let {
-        view: OB,
-        controller: GB,
-        perk: YB
-      } = BB;
+        view: iW,
+        controller: OW,
+        perk: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, PB.H)(), QB = OB.loadout, oB = DO(QB), jB = YB.loadoutPerkId, yB = VO();
-      return (0, UB.jsxs)(UB.Fragment, {
-        children: [(0, UB.jsx)(iO, {
-          icon: YB.loadoutPerkIcon,
-          name: YB.loadoutPerkName,
-          status: YB.loadoutPerkOwned ? null : DB(`${fB}:loadoutLocked`),
-          locked: !YB.loadoutPerkOwned,
-          equipped: YB.loadoutPerkEquipped
-        }), (0, UB.jsx)("p", {
+        t: EW
+      } = (0, ZW.B)(), NW = iW.loadout, PW = Ei(NW), LW = mW.loadoutPerkId, cW = Ki();
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [(0, yW.jsx)(vi, {
+          icon: mW.loadoutPerkIcon,
+          name: mW.loadoutPerkName,
+          status: mW.loadoutPerkOwned ? null : EW(`${TW}:loadoutLocked`),
+          locked: !mW.loadoutPerkOwned,
+          equipped: mW.loadoutPerkEquipped
+        }), (0, yW.jsx)("p", {
           className: "BoardDescription",
-          children: YB.loadoutPerkDescription
-        }), (0, UB.jsxs)("div", {
-          ref: yB("act", jB),
+          children: mW.loadoutPerkDescription
+        }), (0, yW.jsxs)("div", {
+          ref: cW("act", LW),
           className: "BoardActions",
-          children: [!YB.loadoutPerkOwned && (0, UB.jsxs)("div", {
+          children: [!mW.loadoutPerkOwned && (0, yW.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, UB.jsx)(dO, {
-              cost: YB.loadoutPerkCost,
-              loadout: QB
-            }), (0, UB.jsx)(pB.q, {
-              disabled: !OO(QB, YB.loadoutPerkCost) || OB.pending,
+            children: [(0, yW.jsx)(Hi, {
+              cost: mW.loadoutPerkCost,
+              loadout: NW
+            }), (0, yW.jsx)(AW.n, {
+              disabled: !ii(NW, mW.loadoutPerkCost) || iW.pending,
               onClick: () => {
-                GB.act("loadoutUnlock", jB)
+                OW.act("loadoutUnlock", LW)
               },
-              children: DB(`${fB}:loadoutUnlock`)
+              children: EW(`${TW}:loadoutUnlock`)
             })]
-          }), YB.loadoutPerkOwned && !YB.loadoutPerkEquipped && (0, UB.jsx)(pB.f, {
-            disabled: oB || OB.pending,
+          }), mW.loadoutPerkOwned && !mW.loadoutPerkEquipped && (0, yW.jsx)(AW.f, {
+            disabled: PW || iW.pending,
             onClick: () => {
-              GB.act("loadoutEquip", jB)
+              OW.act("loadoutEquip", LW)
             },
-            children: DB(`${fB}:loadoutEquip`)
-          }), YB.loadoutPerkOwned && !YB.loadoutPerkEquipped && oB && (0, UB.jsx)("span", {
+            children: EW(`${TW}:loadoutEquip`)
+          }), mW.loadoutPerkOwned && !mW.loadoutPerkEquipped && PW && (0, yW.jsx)("span", {
             className: "BoardHint",
-            children: DB(`${fB}:loadoutSocketsFullHint`)
-          }), YB.loadoutPerkEquipped && (0, UB.jsx)(pB.Z, {
-            disabled: OB.pending,
+            children: EW(`${TW}:loadoutSocketsFullHint`)
+          }), mW.loadoutPerkEquipped && (0, yW.jsx)(AW.Z, {
+            disabled: iW.pending,
             onClick: () => {
-              GB.act("loadoutUnequip", jB)
+              OW.act("loadoutUnequip", LW)
             },
-            children: DB(`${fB}:loadoutUnequip`)
+            children: EW(`${TW}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function iO(BB) {
+    function vi(WW) {
       let {
-        icon: OB,
-        name: GB,
-        status: YB,
-        locked: DB,
-        equipped: QB
-      } = BB;
+        icon: iW,
+        name: OW,
+        status: mW,
+        locked: EW,
+        equipped: NW
+      } = WW;
       const {
-        t: oB
-      } = (0, PB.H)();
-      return (0, UB.jsxs)(LB, {
-        icon: (0, UB.jsx)(KB, {
-          itemName: OB
+        t: PW
+      } = (0, ZW.B)();
+      return (0, yW.jsxs)(vW, {
+        icon: (0, yW.jsx)(HW, {
+          itemName: iW
         }),
-        name: GB,
-        children: [null !== YB && (0, UB.jsx)("span", {
-          className: JB()("LoadoutStatusText", {
-            Locked: DB
+        name: OW,
+        children: [null !== mW && (0, yW.jsx)("span", {
+          className: wW()("LoadoutStatusText", {
+            Locked: EW
           }),
-          children: YB
-        }), QB && (0, UB.jsx)("span", {
+          children: mW
+        }), NW && (0, yW.jsx)("span", {
           className: "BoardBadge",
-          children: oB(`${fB}:loadoutEquippedBadge`)
+          children: PW(`${TW}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function LO(BB) {
+    function gi(WW) {
       let {
-        view: OB,
-        controller: GB
-      } = BB;
-      const YB = OB.loadout;
-      if ("loadoutPerks" === OB.slot) {
-        const BB = YB.loadoutPerks.find((BB => BB.loadoutPerkId === OB.selectedId));
-        return (0, UB.jsx)("section", {
+        view: iW,
+        controller: OW
+      } = WW;
+      const mW = iW.loadout;
+      if ("loadoutPerks" === iW.slot) {
+        const WW = mW.loadoutPerks.find((WW => WW.loadoutPerkId === iW.selectedId));
+        return (0, yW.jsx)("section", {
           className: "BoardDetail",
-          children: BB && (0, UB.jsx)(FO, {
-            view: OB,
-            controller: GB,
-            perk: BB
+          children: WW && (0, yW.jsx)(ei, {
+            view: iW,
+            controller: OW,
+            perk: WW
           })
         })
       }
-      const DB = YO(YB, OB.slot),
-        QB = DB.loadoutSlotOptions.find((BB => BB.loadoutOptionId === OB.selectedId));
-      return (0, UB.jsx)("section", {
+      const EW = mi(mW, iW.slot),
+        NW = EW.loadoutSlotOptions.find((WW => WW.loadoutOptionId === iW.selectedId));
+      return (0, yW.jsx)("section", {
         className: "BoardDetail",
-        children: QB && (0, UB.jsx)(IO, {
-          view: OB,
-          controller: GB,
-          slot: DB,
-          option: QB
+        children: NW && (0, yW.jsx)(di, {
+          view: iW,
+          controller: OW,
+          slot: EW,
+          option: NW
         })
       })
     }
 
-    function gO(BB) {
+    function Di(WW) {
       let {
-        owned: OB,
-        total: GB
-      } = BB;
-      return GB <= 1 ? null : (0, UB.jsx)("span", {
+        owned: iW,
+        total: OW
+      } = WW;
+      return OW <= 1 ? null : (0, yW.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: GB
-        }, ((BB, GB) => (0, UB.jsx)("span", {
-          className: JB()("LoadoutPip", {
-            Filled: GB < OB
+          length: OW
+        }, ((WW, OW) => (0, yW.jsx)("span", {
+          className: wW()("LoadoutPip", {
+            Filled: OW < iW
           })
-        }, GB)))
+        }, OW)))
       })
     }
 
-    function rO(BB) {
+    function Vi(WW) {
       let {
-        view: OB,
-        controller: GB
-      } = BB;
+        view: iW,
+        controller: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, PB.H)(), DB = OB.loadout, QB = VO();
-      return (0, UB.jsxs)("nav", {
+        t: mW
+      } = (0, ZW.B)(), EW = iW.loadout, NW = Ki();
+      return (0, yW.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": YB(`${fB}:loadoutKit`),
-        children: [DB.loadoutSlots.map((BB => {
-          const DB = BB.loadoutSlotOptions.find((OB => OB.loadoutOptionId === BB.loadoutSlotEquippedId));
-          return (0, UB.jsxs)("button", {
-            ref: QB("section", BB.loadoutSlotKind),
+        "aria-label": mW(`${TW}:loadoutKit`),
+        children: [EW.loadoutSlots.map((WW => {
+          const EW = WW.loadoutSlotOptions.find((iW => iW.loadoutOptionId === WW.loadoutSlotEquippedId));
+          return (0, yW.jsxs)("button", {
+            ref: NW("section", WW.loadoutSlotKind),
             type: "button",
-            className: JB()("LoadoutKitSlot", {
-              Selected: OB.slot === BB.loadoutSlotKind
+            className: wW()("LoadoutKitSlot", {
+              Selected: iW.slot === WW.loadoutSlotKind
             }),
             onClick: () => {
-              GB.selectSlot(BB.loadoutSlotKind)
+              OW.selectSlot(WW.loadoutSlotKind)
             },
-            children: [(0, UB.jsx)("span", {
+            children: [(0, yW.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: DB && (0, UB.jsx)(KB, {
-                itemName: DB.loadoutOptionIcon
+              children: EW && (0, yW.jsx)(HW, {
+                itemName: EW.loadoutOptionIcon
               })
-            }), (0, UB.jsxs)("span", {
+            }), (0, yW.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, UB.jsxs)("span", {
+              children: [(0, yW.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, UB.jsx)("span", {
+                children: [(0, yW.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: YB(RO[BB.loadoutSlotKind])
-                }), DB && (0, UB.jsx)(gO, {
-                  owned: DB.loadoutOptionOwnedTier,
-                  total: DB.loadoutOptionTiers.length
+                  children: mW(ki[WW.loadoutSlotKind])
+                }), EW && (0, yW.jsx)(Di, {
+                  owned: EW.loadoutOptionOwnedTier,
+                  total: EW.loadoutOptionTiers.length
                 })]
-              }), (0, UB.jsx)("span", {
+              }), (0, yW.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === DB || void 0 === DB ? void 0 : DB.loadoutOptionName
+                children: null === EW || void 0 === EW ? void 0 : EW.loadoutOptionName
               })]
             })]
-          }, BB.loadoutSlotKind)
-        })), (0, UB.jsx)(XO, {
-          view: OB,
-          controller: GB
+          }, WW.loadoutSlotKind)
+        })), (0, yW.jsx)(fi, {
+          view: iW,
+          controller: OW
         })]
       })
     }
 
-    function XO(BB) {
+    function fi(WW) {
       let {
-        view: OB,
-        controller: GB
-      } = BB;
+        view: iW,
+        controller: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, PB.H)(), DB = OB.loadout, QB = DB.loadoutPerks.filter((BB => BB.loadoutPerkEquipped)), oB = VO();
-      return (0, UB.jsxs)("button", {
-        ref: oB("section", "loadoutPerks"),
+        t: mW
+      } = (0, ZW.B)(), EW = iW.loadout, NW = EW.loadoutPerks.filter((WW => WW.loadoutPerkEquipped)), PW = Ki();
+      return (0, yW.jsxs)("button", {
+        ref: PW("section", "loadoutPerks"),
         type: "button",
-        className: JB()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === OB.slot
+        className: wW()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === iW.slot
         }),
         onClick: () => {
-          GB.selectSlot("loadoutPerks")
+          OW.selectSlot("loadoutPerks")
         },
-        children: [(0, UB.jsxs)("span", {
+        children: [(0, yW.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, UB.jsx)("span", {
+          children: [(0, yW.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: YB(RO.loadoutPerks)
-          }), (0, UB.jsx)("span", {
+            children: mW(ki.loadoutPerks)
+          }), (0, yW.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: YB(`${fB}:loadoutPerkCount`, {
-              equipped: String(QB.length),
-              max: String(DB.loadoutMaxPerks)
+            children: mW(`${TW}:loadoutPerkCount`, {
+              equipped: String(NW.length),
+              max: String(EW.loadoutMaxPerks)
             })
           })]
-        }), (0, UB.jsx)("span", {
+        }), (0, yW.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: DB.loadoutMaxPerks
-          }, ((BB, OB) => {
-            const GB = QB[OB];
-            return (0, UB.jsxs)("span", {
-              className: JB()("LoadoutSocket", {
-                Filled: GB,
-                Empty: !GB
+            length: EW.loadoutMaxPerks
+          }, ((WW, iW) => {
+            const OW = NW[iW];
+            return (0, yW.jsxs)("span", {
+              className: wW()("LoadoutSocket", {
+                Filled: OW,
+                Empty: !OW
               }),
-              children: [(0, UB.jsx)("span", {
+              children: [(0, yW.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: GB && (0, UB.jsx)(KB, {
-                  itemName: GB.loadoutPerkIcon
+                children: OW && (0, yW.jsx)(HW, {
+                  itemName: OW.loadoutPerkIcon
                 })
-              }), (0, UB.jsx)("span", {
+              }), (0, yW.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: GB ? GB.loadoutPerkName : YB(`${fB}:loadoutPerkSocketEmpty`)
+                children: OW ? OW.loadoutPerkName : mW(`${TW}:loadoutPerkSocketEmpty`)
               })]
-            }, OB)
+            }, iW)
           }))
         })]
       })
     }
 
-    function wO(BB) {
+    function Ci(WW) {
       let {
-        icon: OB,
-        name: GB,
-        selected: YB,
-        equipped: DB,
-        locked: QB,
-        ownedTier: oB,
-        tiers: jB,
-        buttonRef: yB,
-        onSelect: JB
-      } = BB;
+        icon: iW,
+        name: OW,
+        selected: mW,
+        equipped: EW,
+        locked: NW,
+        ownedTier: PW,
+        tiers: LW,
+        buttonRef: cW,
+        onSelect: wW
+      } = WW;
       const {
-        t: MB
-      } = (0, PB.H)();
-      return (0, UB.jsxs)(iB, {
-        icon: (0, UB.jsx)(KB, {
-          itemName: OB
+        t: tW
+      } = (0, ZW.B)();
+      return (0, yW.jsxs)(eW, {
+        icon: (0, yW.jsx)(HW, {
+          itemName: iW
         }),
-        name: GB,
-        selected: YB,
-        locked: QB,
-        buttonRef: yB,
-        onSelect: JB,
-        children: [DB && (0, UB.jsx)("span", {
+        name: OW,
+        selected: mW,
+        locked: NW,
+        buttonRef: cW,
+        onSelect: wW,
+        children: [EW && (0, yW.jsx)("span", {
           className: "BoardBadge",
-          children: MB(`${fB}:loadoutEquippedBadge`)
-        }), QB && (0, UB.jsx)("span", {
+          children: tW(`${TW}:loadoutEquippedBadge`)
+        }), NW && (0, yW.jsx)("span", {
           className: "BoardBadge Muted",
-          children: MB(`${fB}:loadoutLocked`)
-        }), !QB && (0, UB.jsx)(gO, {
-          owned: oB,
-          total: jB
+          children: tW(`${TW}:loadoutLocked`)
+        }), !NW && (0, yW.jsx)(Di, {
+          owned: PW,
+          total: LW
         })]
       })
     }
 
-    function EO(BB) {
+    function Xi(WW) {
       let {
-        view: OB,
-        controller: GB
-      } = BB;
-      const YB = OB.loadout,
-        DB = VO();
-      if ("loadoutPerks" === OB.slot) return (0, UB.jsx)("div", {
+        view: iW,
+        controller: OW
+      } = WW;
+      const mW = iW.loadout,
+        EW = Ki();
+      if ("loadoutPerks" === iW.slot) return (0, yW.jsx)("div", {
         className: "BoardTiles",
-        children: YB.loadoutPerks.map((BB => (0, UB.jsx)(wO, {
-          icon: BB.loadoutPerkIcon,
-          name: BB.loadoutPerkName,
-          selected: OB.selectedId === BB.loadoutPerkId,
-          equipped: BB.loadoutPerkEquipped,
-          locked: !BB.loadoutPerkOwned,
+        children: mW.loadoutPerks.map((WW => (0, yW.jsx)(Ci, {
+          icon: WW.loadoutPerkIcon,
+          name: WW.loadoutPerkName,
+          selected: iW.selectedId === WW.loadoutPerkId,
+          equipped: WW.loadoutPerkEquipped,
+          locked: !WW.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: DB("pl", BB.loadoutPerkId),
+          buttonRef: EW("Kl", WW.loadoutPerkId),
           onSelect: () => {
-            GB.select(BB.loadoutPerkId)
+            OW.select(WW.loadoutPerkId)
           }
-        }, BB.loadoutPerkId)))
+        }, WW.loadoutPerkId)))
       });
-      const QB = YO(YB, OB.slot);
-      return (0, UB.jsx)("div", {
+      const NW = mi(mW, iW.slot);
+      return (0, yW.jsx)("div", {
         className: "BoardTiles",
-        children: QB.loadoutSlotOptions.map((BB => (0, UB.jsx)(wO, {
-          icon: BB.loadoutOptionIcon,
-          name: BB.loadoutOptionName,
-          selected: OB.selectedId === BB.loadoutOptionId,
-          equipped: QB.loadoutSlotEquippedId === BB.loadoutOptionId,
-          locked: 0 === BB.loadoutOptionOwnedTier,
-          ownedTier: BB.loadoutOptionOwnedTier,
-          tiers: BB.loadoutOptionTiers.length,
-          buttonRef: DB("pl", BB.loadoutOptionId),
+        children: NW.loadoutSlotOptions.map((WW => (0, yW.jsx)(Ci, {
+          icon: WW.loadoutOptionIcon,
+          name: WW.loadoutOptionName,
+          selected: iW.selectedId === WW.loadoutOptionId,
+          equipped: NW.loadoutSlotEquippedId === WW.loadoutOptionId,
+          locked: 0 === WW.loadoutOptionOwnedTier,
+          ownedTier: WW.loadoutOptionOwnedTier,
+          tiers: WW.loadoutOptionTiers.length,
+          buttonRef: EW("Kl", WW.loadoutOptionId),
           onSelect: () => {
-            GB.select(BB.loadoutOptionId)
+            OW.select(WW.loadoutOptionId)
           }
-        }, BB.loadoutOptionId)))
+        }, WW.loadoutOptionId)))
       })
     }
 
-    function cO(BB) {
+    function Bi(WW) {
       let {
-        loadout: OB
-      } = BB;
-      return (0, UB.jsx)(gB, {
-        coins: OB.loadoutCoins,
-        children: OB.loadoutHeldParts.filter((BB => BB.loadoutHeldPartAmount > 0)).map((BB => (0, UB.jsx)(mB, {
-          itemName: BB.loadoutHeldPartItem,
-          amount: BB.loadoutHeldPartAmount
-        }, BB.loadoutHeldPartCurrency)))
+        loadout: iW
+      } = WW;
+      return (0, yW.jsx)(gW, {
+        coins: iW.loadoutCoins,
+        children: iW.loadoutHeldParts.filter((WW => WW.loadoutHeldPartAmount > 0)).map((WW => (0, yW.jsx)(uW, {
+          itemName: WW.loadoutHeldPartItem,
+          amount: WW.loadoutHeldPartAmount
+        }, WW.loadoutHeldPartCurrency)))
       })
     }
 
-    function hO(BB) {
+    function qi(WW) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, MB.i)(zO, OB.getSnapshot()),
+        controller: iW
+      } = WW;
+      const OW = (0, tW.g)(xi, iW.getSnapshot()),
         {
-          t: YB
-        } = (0, PB.H)();
-      if (null === GB.loadout) return null;
-      const DB = GB.notice;
-      return (0, UB.jsx)(UO, {
-        view: GB,
-        onDismiss: OB.dismiss,
-        children: (0, UB.jsxs)(dB, {
-          open: GB.open,
-          onDismiss: OB.dismiss,
-          title: YB(`${fB}:loadoutTitle`),
+          t: mW
+        } = (0, ZW.B)();
+      if (null === OW.loadout) return null;
+      const EW = OW.notice;
+      return (0, yW.jsx)(yi, {
+        view: OW,
+        onDismiss: iW.dismiss,
+        children: (0, yW.jsxs)(hW, {
+          open: OW.open,
+          onDismiss: iW.dismiss,
+          title: mW(`${TW}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, UB.jsx)(cO, {
-            loadout: GB.loadout
+          headerExtra: (0, yW.jsx)(Bi, {
+            loadout: OW.loadout
           }),
-          statusRefused: null === DB || void 0 === DB ? void 0 : DB.loadoutNoticeRefused,
-          status: (0, UB.jsxs)(UB.Fragment, {
-            children: [(0, UB.jsx)("span", {
+          statusRefused: null === EW || void 0 === EW ? void 0 : EW.loadoutNoticeRefused,
+          status: (0, yW.jsxs)(yW.Fragment, {
+            children: [(0, yW.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: YB(`${fB}:loadoutRadioBadge`)
-            }), null !== DB && YB(`${fB}:${DB.loadoutNoticeKey}`, {
-              name: DB.loadoutNoticeName,
-              tier: (0, tB.S)(DB.loadoutNoticeTier),
-              max: String(GB.loadout.loadoutMaxPerks)
+              children: mW(`${TW}:loadoutRadioBadge`)
+            }), null !== EW && mW(`${TW}:${EW.loadoutNoticeKey}`, {
+              name: EW.loadoutNoticeName,
+              tier: (0, QW.V)(EW.loadoutNoticeTier),
+              max: String(OW.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, UB.jsx)(rO, {
-            view: GB,
-            controller: OB
-          }), (0, UB.jsx)(EO, {
-            view: GB,
-            controller: OB
-          }), (0, UB.jsx)(LO, {
-            view: GB,
-            controller: OB
+          children: [(0, yW.jsx)(Vi, {
+            view: OW,
+            controller: iW
+          }), (0, yW.jsx)(Xi, {
+            view: OW,
+            controller: iW
+          }), (0, yW.jsx)(gi, {
+            view: OW,
+            controller: iW
           })]
         })
       })
     }
 
-    function aO(BB, OB, GB) {
-      const YB = BB.locatorEntries.find((BB => BB.locatorEntryId === GB));
-      if (!YB) return null;
-      const DB = YB.locatorEntryName;
-      if ("locatorDisarm" === OB) return YB.locatorEntryArmed ? {
-        board: eO(BB, null),
-        notice: TO("locatorNoticeDisarmed", DB)
+    function Ri(WW, iW, OW) {
+      const mW = WW.locatorEntries.find((WW => WW.locatorEntryId === OW));
+      if (!mW) return null;
+      const EW = mW.locatorEntryName;
+      if ("locatorDisarm" === iW) return mW.locatorEntryArmed ? {
+        board: Gi(WW, null),
+        notice: Ii("locatorNoticeDisarmed", EW)
       } : null;
-      if ("locatorArm" === OB) return YB.locatorEntryOwned && !YB.locatorEntryArmed ? {
-        board: eO(BB, GB),
-        notice: TO("locatorNoticeArmed", DB)
+      if ("locatorArm" === iW) return mW.locatorEntryOwned && !mW.locatorEntryArmed ? {
+        board: Gi(WW, OW),
+        notice: Ii("locatorNoticeArmed", EW)
       } : null;
-      if (YB.locatorEntryOwned || BB.locatorCoins < YB.locatorEntryPrice) return null;
-      const QB = eO({
-        ...BB,
-        locatorCoins: BB.locatorCoins - YB.locatorEntryPrice
-      }, GB);
+      if (mW.locatorEntryOwned || WW.locatorCoins < mW.locatorEntryPrice) return null;
+      const NW = Gi({
+        ...WW,
+        locatorCoins: WW.locatorCoins - mW.locatorEntryPrice
+      }, OW);
       return {
         board: {
-          ...QB,
-          locatorEntries: QB.locatorEntries.map((BB => BB.locatorEntryId === GB ? {
-            ...BB,
+          ...NW,
+          locatorEntries: NW.locatorEntries.map((WW => WW.locatorEntryId === OW ? {
+            ...WW,
             locatorEntryOwned: !0
-          } : BB))
+          } : WW))
         },
-        notice: TO("locatorNoticeBought", DB)
+        notice: Ii("locatorNoticeBought", EW)
       }
     }
 
-    function eO(BB, OB) {
+    function Gi(WW, iW) {
       return {
-        ...BB,
-        locatorEntries: BB.locatorEntries.map((BB => {
-          const GB = BB.locatorEntryId === OB;
-          return BB.locatorEntryArmed === GB ? BB : {
-            ...BB,
-            locatorEntryArmed: GB
+        ...WW,
+        locatorEntries: WW.locatorEntries.map((WW => {
+          const OW = WW.locatorEntryId === iW;
+          return WW.locatorEntryArmed === OW ? WW : {
+            ...WW,
+            locatorEntryArmed: OW
           }
         }))
       }
     }
 
-    function TO(BB, OB) {
+    function Ii(WW, iW) {
       return {
-        locatorNoticeKey: BB,
+        locatorNoticeKey: WW,
         locatorNoticeRefused: !1,
-        locatorNoticeName: OB
+        locatorNoticeName: iW
       }
     }
-    const bO = "containmentLocatorView";
-    class CO extends BO {
-      constructor(BB, OB, GB, YB) {
-        super(BB, OB, GB, YB, "locator", aO), this.snapshot = this.buildSnapshot()
+    const ai = "containmentLocatorView";
+    class ri extends Wi {
+      constructor(WW, iW, OW, mW) {
+        super(WW, iW, OW, mW, "locator", Ri), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(BB) {
-        return BB.locatorMessageOpens
+      messageOpens(WW) {
+        return WW.locatorMessageOpens
       }
-      messageNotice(BB) {
-        return BB.locatorNotice
+      messageNotice(WW) {
+        return WW.locatorNotice
       }
-      openingSelection(BB) {
-        var OB;
-        const GB = BB.locatorEntries;
-        return (null !== (OB = GB.find((BB => BB.locatorEntryArmed))) && void 0 !== OB ? OB : GB[0]).locatorEntryId
+      openingSelection(WW) {
+        var iW;
+        const OW = WW.locatorEntries;
+        return (null !== (iW = OW.find((WW => WW.locatorEntryArmed))) && void 0 !== iW ? iW : OW[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1648,245 +1920,245 @@ export const modules = {
         }
       }
     }
-    const HO = {
-        locatorContained: `${fB}:locatorFlavourContained`,
-        locatorEncountered: `${fB}:locatorFlavourEncountered`,
-        locatorUnseen: `${fB}:locatorFlavourUnseen`
+    const zi = {
+        locatorContained: `${TW}:locatorFlavourContained`,
+        locatorEncountered: `${TW}:locatorFlavourEncountered`,
+        locatorUnseen: `${TW}:locatorFlavourUnseen`
       },
-      vO = {
+      Fi = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${fB}:locatorAttunedNormal`,
-        codexHardOnly: `${fB}:locatorAttunedHard`
+        codexNormalOnly: `${TW}:locatorAttunedNormal`,
+        codexHardOnly: `${TW}:locatorAttunedHard`
       };
 
-    function sO() {
-      return (0, UB.jsx)(UB.Fragment, {
+    function Qi() {
+      return (0, yW.jsx)(yW.Fragment, {
         children: Array.from({
           length: 5
-        }, ((BB, OB) => (0, UB.jsx)("span", {
+        }, ((WW, iW) => (0, yW.jsx)("span", {
           className: "LocatorFly",
-          children: (0, UB.jsx)("img", {
+          children: (0, yW.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, OB)))
+        }, iW)))
       })
     }
 
-    function xO(BB) {
+    function WO(WW) {
       let {
-        entry: OB
-      } = BB;
+        entry: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, PB.H)();
-      return OB.locatorEntryArmed ? (0, UB.jsx)("span", {
+        t: OW
+      } = (0, ZW.B)();
+      return iW.locatorEntryArmed ? (0, yW.jsx)("span", {
         className: "BoardBadge Armed",
-        children: GB(`${fB}:locatorArmedBadge`)
-      }) : OB.locatorEntryOwned ? (0, UB.jsx)("span", {
+        children: OW(`${TW}:locatorArmedBadge`)
+      }) : iW.locatorEntryOwned ? (0, yW.jsx)("span", {
         className: "BoardBadge",
-        children: GB(`${fB}:locatorOwnedBadge`)
+        children: OW(`${TW}:locatorOwnedBadge`)
       }) : null
     }
 
-    function tO(BB) {
+    function iO(WW) {
       let {
-        entry: OB,
-        coins: GB,
-        inTile: YB = !1
-      } = BB;
-      return (0, UB.jsx)(mB, {
-        itemName: kB,
-        amount: OB.locatorEntryPrice,
-        sJ: GB,
-        inTile: YB
+        entry: iW,
+        coins: OW,
+        inTile: mW = !1
+      } = WW;
+      return (0, yW.jsx)(uW, {
+        itemName: JW,
+        amount: iW.locatorEntryPrice,
+        BL: OW,
+        inTile: mW
       })
     }
 
-    function BG(BB) {
+    function OO(WW) {
       let {
-        view: OB,
-        controller: GB,
-        entry: YB
-      } = BB;
+        view: iW,
+        controller: OW,
+        entry: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, PB.H)(), QB = YB.locatorEntryId, oB = OB.locators.locatorEntries.find((BB => BB.locatorEntryArmed && BB !== YB));
-      return (0, UB.jsxs)("div", {
+        t: EW
+      } = (0, ZW.B)(), NW = mW.locatorEntryId, PW = iW.locators.locatorEntries.find((WW => WW.locatorEntryArmed && WW !== mW));
+      return (0, yW.jsxs)("div", {
         className: "BoardActions",
-        children: [YB.locatorEntryArmed && (0, UB.jsx)(pB.Z, {
-          disabled: OB.pending,
+        children: [mW.locatorEntryArmed && (0, yW.jsx)(AW.Z, {
+          disabled: iW.pending,
           onClick: () => {
-            GB.act("locatorDisarm", QB)
+            OW.act("locatorDisarm", NW)
           },
-          children: DB(`${fB}:locatorDisarm`)
-        }), YB.locatorEntryOwned && !YB.locatorEntryArmed && (0, UB.jsx)(pB.f, {
-          disabled: OB.pending,
+          children: EW(`${TW}:locatorDisarm`)
+        }), mW.locatorEntryOwned && !mW.locatorEntryArmed && (0, yW.jsx)(AW.f, {
+          disabled: iW.pending,
           onClick: () => {
-            GB.act("locatorArm", QB)
+            OW.act("locatorArm", NW)
           },
-          children: DB(`${fB}:locatorArm`)
-        }), !YB.locatorEntryOwned && (0, UB.jsxs)("div", {
+          children: EW(`${TW}:locatorArm`)
+        }), !mW.locatorEntryOwned && (0, yW.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, UB.jsx)(tO, {
-            entry: YB,
-            coins: OB.locators.locatorCoins
-          }), (0, UB.jsx)(pB.q, {
-            disabled: OB.locators.locatorCoins < YB.locatorEntryPrice || OB.pending,
+          children: [(0, yW.jsx)(iO, {
+            entry: mW,
+            coins: iW.locators.locatorCoins
+          }), (0, yW.jsx)(AW.n, {
+            disabled: iW.locators.locatorCoins < mW.locatorEntryPrice || iW.pending,
             onClick: () => {
-              GB.act("locatorBuy", QB)
+              OW.act("locatorBuy", NW)
             },
-            children: DB(`${fB}:locatorBuy`)
+            children: EW(`${TW}:locatorBuy`)
           })]
-        }), oB && !YB.locatorEntryArmed && (0, UB.jsx)("span", {
+        }), PW && !mW.locatorEntryArmed && (0, yW.jsx)("span", {
           className: "BoardHint",
-          children: DB(`${fB}:locatorReplacesHint`, {
-            name: oB.locatorEntryName
+          children: EW(`${TW}:locatorReplacesHint`, {
+            name: PW.locatorEntryName
           })
         })]
       })
     }
 
-    function OG(BB) {
+    function mO(WW) {
       let {
-        entry: OB
-      } = BB;
-      return "locatorUnseen" === OB.locatorEntryStanding ? (0, UB.jsx)(KB, {
+        entry: iW
+      } = WW;
+      return "locatorUnseen" === iW.locatorEntryStanding ? (0, yW.jsx)(HW, {
         itemName: "Compass"
-      }) : (0, UB.jsx)(uB, {
-        anomalyId: OB.locatorEntryId,
-        caught: "locatorContained" === OB.locatorEntryStanding
+      }) : (0, yW.jsx)(nW, {
+        anomalyId: iW.locatorEntryId,
+        caught: "locatorContained" === iW.locatorEntryStanding
       })
     }
 
-    function GG(BB) {
+    function EO(WW) {
       let {
-        view: OB,
-        controller: GB,
-        entry: YB
-      } = BB;
+        view: iW,
+        controller: OW,
+        entry: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, PB.H)(), QB = vO[YB.locatorEntryDifficulty];
-      return (0, UB.jsxs)("section", {
+        t: EW
+      } = (0, ZW.B)(), NW = Fi[mW.locatorEntryDifficulty];
+      return (0, yW.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, UB.jsxs)("div", {
-          className: JB()("LocatorLabel", {
-            Armed: YB.locatorEntryArmed
+        children: [(0, yW.jsxs)("div", {
+          className: wW()("LocatorLabel", {
+            Armed: mW.locatorEntryArmed
           }),
-          children: [(0, UB.jsx)(LB, {
-            icon: (0, UB.jsx)(OG, {
-              entry: YB
+          children: [(0, yW.jsx)(vW, {
+            icon: (0, yW.jsx)(mO, {
+              entry: mW
             }),
-            name: DB(`${fB}:locatorName`, {
-              name: YB.locatorEntryName
+            name: EW(`${TW}:locatorName`, {
+              name: mW.locatorEntryName
             }),
-            children: (0, UB.jsx)(xO, {
-              entry: YB
+            children: (0, yW.jsx)(WO, {
+              entry: mW
             })
-          }), (0, UB.jsx)("p", {
+          }), (0, yW.jsx)("p", {
             className: "BoardDescription",
-            children: DB(YB.locatorEntryArmed ? `${fB}:locatorFlavourArmed` : HO[YB.locatorEntryStanding])
-          }), null !== QB && (0, UB.jsx)("p", {
+            children: EW(mW.locatorEntryArmed ? `${TW}:locatorFlavourArmed` : zi[mW.locatorEntryStanding])
+          }), null !== NW && (0, yW.jsx)("p", {
             className: "LocatorAttuned",
-            children: DB(QB)
-          }), (0, UB.jsx)("p", {
+            children: EW(NW)
+          }), (0, yW.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: DB(`${fB}:locatorUsage`)
+            children: EW(`${TW}:locatorUsage`)
           })]
-        }), (0, UB.jsx)(BG, {
-          view: OB,
-          controller: GB,
-          entry: YB
+        }), (0, yW.jsx)(OO, {
+          view: iW,
+          controller: OW,
+          entry: mW
         })]
       })
     }
 
-    function YG(BB) {
+    function NO(WW) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, MB.i)(bO, OB.getSnapshot()),
+        controller: iW
+      } = WW;
+      const OW = (0, tW.g)(ai, iW.getSnapshot()),
         {
-          t: YB
-        } = (0, PB.H)(),
-        DB = GB.locators;
-      if (null === DB) return null;
-      const QB = DB.locatorEntries.find((BB => BB.locatorEntryId === GB.selectedId)),
-        oB = GB.notice;
-      return (0, UB.jsxs)(dB, {
-        open: GB.open,
-        onDismiss: OB.dismiss,
-        title: YB(`${fB}:locatorTitle`),
+          t: mW
+        } = (0, ZW.B)(),
+        EW = OW.locators;
+      if (null === EW) return null;
+      const NW = EW.locatorEntries.find((WW => WW.locatorEntryId === OW.selectedId)),
+        PW = OW.notice;
+      return (0, yW.jsxs)(hW, {
+        open: OW.open,
+        onDismiss: iW.dismiss,
+        title: mW(`${TW}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, UB.jsx)(sO, {}),
-        headerExtra: (0, UB.jsx)(gB, {
-          coins: DB.locatorCoins
+        decor: (0, yW.jsx)(Qi, {}),
+        headerExtra: (0, yW.jsx)(gW, {
+          coins: EW.locatorCoins
         }),
-        statusRefused: null === oB || void 0 === oB ? void 0 : oB.locatorNoticeRefused,
-        status: (0, UB.jsxs)(UB.Fragment, {
-          children: [(0, UB.jsx)("span", {
+        statusRefused: null === PW || void 0 === PW ? void 0 : PW.locatorNoticeRefused,
+        status: (0, yW.jsxs)(yW.Fragment, {
+          children: [(0, yW.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: YB(`${fB}:locatorKeeperName`)
-          }), null !== oB && YB(`${fB}:${oB.locatorNoticeKey}`, {
-            name: oB.locatorNoticeName
+            children: mW(`${TW}:locatorKeeperName`)
+          }), null !== PW && mW(`${TW}:${PW.locatorNoticeKey}`, {
+            name: PW.locatorNoticeName
           })]
         }),
-        children: [(0, UB.jsx)("div", {
+        children: [(0, yW.jsx)("div", {
           className: "BoardTiles",
-          children: DB.locatorEntries.map((BB => (0, UB.jsxs)(iB, {
-            icon: (0, UB.jsx)(OG, {
-              entry: BB
+          children: EW.locatorEntries.map((WW => (0, yW.jsxs)(eW, {
+            icon: (0, yW.jsx)(mO, {
+              entry: WW
             }),
-            name: BB.locatorEntryName,
-            selected: BB === QB,
+            name: WW.locatorEntryName,
+            selected: WW === NW,
             locked: !1,
-            className: JB()("LocatorTag", {
-              Armed: BB.locatorEntryArmed
+            className: wW()("LocatorTag", {
+              Armed: WW.locatorEntryArmed
             }),
             onSelect: () => {
-              OB.select(BB.locatorEntryId)
+              iW.select(WW.locatorEntryId)
             },
-            children: [(0, UB.jsx)(xO, {
-              entry: BB
-            }), !BB.locatorEntryOwned && (0, UB.jsx)(tO, {
-              entry: BB,
-              coins: DB.locatorCoins,
+            children: [(0, yW.jsx)(WO, {
+              entry: WW
+            }), !WW.locatorEntryOwned && (0, yW.jsx)(iO, {
+              entry: WW,
+              coins: EW.locatorCoins,
               inTile: !0
             })]
-          }, BB.locatorEntryId)))
-        }), (0, UB.jsx)(GG, {
-          view: GB,
-          controller: OB,
-          entry: QB
+          }, WW.locatorEntryId)))
+        }), (0, yW.jsx)(EO, {
+          view: OW,
+          controller: iW,
+          entry: NW
         })]
       })
     }
 
-    function DG(BB) {
+    function PO(WW) {
       let {
-        loadout: OB,
-        codex: GB,
-        locator: YB
-      } = BB;
-      return (0, UB.jsxs)(UB.Fragment, {
-        children: [(0, UB.jsx)(hO, {
-          controller: OB
-        }), (0, UB.jsx)(xB, {
-          controller: GB
-        }), (0, UB.jsx)(YG, {
-          controller: YB
+        loadout: iW,
+        codex: OW,
+        locator: mW
+      } = WW;
+      return (0, yW.jsxs)(yW.Fragment, {
+        children: [(0, yW.jsx)(qi, {
+          controller: iW
+        }), (0, yW.jsx)(FW, {
+          controller: OW
+        }), (0, yW.jsx)(NO, {
+          controller: mW
         })]
       })
     }
-    var QG = GB(39226);
-    class oG {
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = BB, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new QG.d({
+    var LO = OW(39775);
+    class cO {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = WW, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new LO.c({
           spacingMs: 0,
-          now: OB
+          now: iW
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1894,17 +2166,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(BB, OB) {
+      send(WW, iW) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, OB(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(BB), !0)
+          this.replyTimer = null, this.awaitingReply = !1, iW(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(WW), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(BB) {
-        return this.listeners.add(BB), () => {
-          this.listeners.delete(BB)
+      subscribe(WW) {
+        return this.listeners.add(WW), () => {
+          this.listeners.delete(WW)
         }
       }
       dispose() {
@@ -1914,143 +2186,306 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const BB of this.listeners) BB()
+        for (const WW of this.listeners) WW()
       }
     }
-    var jG = GB(39222);
-    const yG = new Map([
-      ["npc_general", qO],
-      ["npc_tentacle_guy", jG]
+    var wO = OW(39767);
+    const tO = new Map([
+      ["npc_general", bi],
+      ["npc_tentacle_guy", wO]
     ]);
 
-    function JG(BB) {
-      const OB = yG.get(BB);
-      if (void 0 === OB) return null;
-      const GB = document.createElement("img");
-      return GB.src = OB, GB.alt = "", GB.draggable = !1, GB.style.imageRendering = "pixelated", GB
+    function ZO(WW) {
+      const iW = tO.get(WW);
+      if (void 0 === iW) return null;
+      const OW = document.createElement("img");
+      return OW.src = iW, OW.alt = "", OW.draggable = !1, OW.style.imageRendering = "pixelated", OW
     }
-    const MG = function() {
-      let BB, OB = !1,
-        GB = null,
-        yB = null;
-      const JB = [],
-        MB = BB => {
-          for (const OB of JB) OB !== BB && OB.close();
-          (0, jB.o)()
+    const xO = function() {
+      let WW, iW = !1,
+        OW = null,
+        cW = null;
+      const wW = [],
+        tW = WW => {
+          for (const iW of wW) iW !== WW && iW.close();
+          (0, LW.H)()
         },
-        PB = BB => {
-          BB && (0, jB.i)()
+        ZW = WW => {
+          WW && (0, LW.q)()
         },
-        zB = new oG((OB => {
-          BB.sendCommand(OB)
+        xW = new cO((iW => {
+          WW.sendCommand(iW)
         })),
-        lB = new lO((BB => {
-          oB.o.tM(zO, BB, !0)
-        }), MB, PB, zB),
-        pB = new wB((BB => {
-          oB.o.tM(XB, BB, !0)
-        }), MB, PB),
-        qB = new CO((BB => {
-          oB.o.tM(bO, BB, !0)
-        }), MB, PB, zB);
-      JB.push(lB, pB, qB);
+        lW = new li((WW => {
+          PW.l.iZ(xi, WW, !0)
+        }), tW, ZW, xW),
+        AW = new pW((WW => {
+          PW.l.iZ(VW, WW, !0)
+        }), tW, ZW),
+        bW = new ri((WW => {
+          PW.l.iZ(ai, WW, !0)
+        }), tW, ZW, xW);
+      wW.push(lW, AW, bW);
       return {
-        onCreate: OB => {
-          BB = OB, GB = (0, jB.s)(null, {
-            content: (0, YB.createElement)(DG, {
-              loadout: lB,
-              codex: pB,
-              locator: qB
+        onCreate: iW => {
+          WW = iW, OW = (0, LW.O)(null, {
+            content: (0, mW.createElement)(PO, {
+              loadout: lW,
+              codex: AW,
+              locator: bW
             }),
             onClose: () => {
-              for (const BB of JB) BB.close()
+              for (const WW of wW) WW.close()
             }
-          }), yB = (0, QB.g)(JG)
+          }), cW = (0, NW.f)(ZO)
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          "containmentLoadout" === BB ? lB.nP(OB) : "containmentLoadoutClose" === BB ? lB.isOpen() && (lB.close(), (0, jB.g)()) : "containmentCodex" === BB ? pB.nP(OB) : "containmentLocator" === BB && qB.nP(OB)
+        onReceivedMessageFromServer: (WW, iW) => {
+          "containmentLoadout" === WW ? lW.yZ(iW) : "containmentLoadoutClose" === WW ? lW.isOpen() && (lW.close(), (0, LW.m)()) : "containmentCodex" === WW ? AW.yZ(iW) : "containmentLocator" === WW && bW.yZ(iW)
         },
-        kP: () => {
-          OB || DB.c.get("loadingOverlayVisible") || (OB = !0, BB.sendCommand("containmentEntered"))
+        hZ: () => {
+          iW || EW.d.get("loadingOverlayVisible") || (iW = !0, WW.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var BB, OB;
-          null === (BB = GB) || void 0 === BB || BB(), GB = null, null === (OB = yB) || void 0 === OB || OB(), yB = null;
-          for (const GB of JB) GB.dispose();
-          zB.dispose()
+          var WW, iW;
+          null === (WW = OW) || void 0 === WW || WW(), OW = null, null === (iW = cW) || void 0 === iW || iW(), cW = null;
+          for (const OW of wW) OW.dispose();
+          xW.dispose()
         }
       }
     }
   },
-  40034: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  38039: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => gW,
+      G: () => DW,
+      I: () => eW,
+      M: () => VW,
+      d: () => cW,
+      h: () => HW,
+      i: () => LW,
+      m: () => dW,
+      o: () => JW,
+      s: () => SW,
+      u: () => oW,
+      w: () => uW,
+      x: () => TW,
+      y: () => vW
+    });
+    var mW = OW(39);
+    const EW = {
+        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
+        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
+      },
+      NW = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      PW = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      LW = NW.filter((WW => "docsButton" !== WW)),
+      cW = PW.filter((WW => "aiHelperButton" !== WW)),
+      wW = "codeEditorTutorials",
+      tW = {
+        codeBlockIntro: "codeBlockIntroShown",
+        worldCodeIntro: "worldCodeIntroShown"
+      },
+      ZW = {
+        welcome: "welcomeComplete",
+        docsOverview: "docsOverviewComplete",
+        aiHelperOverview: "aiHelperOverviewComplete"
+      };
+    let xW = null,
+      lW = null;
+    const AW = new Set,
+      bW = new Set;
+    let jW = null;
+    const UW = new Set,
+      kW = new Set;
+
+    function sW() {
+      kW.forEach((WW => {
+        WW()
+      }))
+    }
+
+    function MW() {
+      if (!xW) {
+        const WW = mW.i.getItem(wW);
+        xW = {
+          codeBlockIntroShown: !1,
+          worldCodeIntroShown: !1,
+          welcomeComplete: !1,
+          docsOverviewComplete: !1,
+          aiHelperOverviewComplete: !1,
+          ..."object" === typeof WW && null !== WW ? WW : {}
+        }
+      }
+      return xW
+    }
+
+    function KW(WW) {
+      const iW = MW();
+      iW[WW] || (xW = {
+        ...iW,
+        [WW]: !0
+      }, mW.i.setItem(wW, xW))
+    }
+
+    function SW(WW) {
+      return "docsOverview" === WW ? NW : "aiHelperOverview" === WW ? PW : lW ? EW[lW] : []
+    }
+
+    function YW(WW) {
+      return ("worldCodeButton" !== WW || !MW().worldCodeIntroShown) && !UW.has(WW)
+    }
+
+    function yW(WW) {
+      var iW;
+      return (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW ? jW.stepsDone : AW
+    }
+
+    function TW(WW, iW) {
+      if (! function(WW) {
+          return jW ? jW.name === WW : "welcome" === WW
+        }(WW) || !YW(iW) || yW(WW).has(iW)) return !1;
+      if (jW) return !0;
+      const OW = tW[iW];
+      return OW ? !MW()[OW] || bW.has(iW) : !MW()[ZW[WW]]
+    }
+
+    function JW(WW) {
+      var iW;
+      return null !== (iW = SW(WW).find((iW => TW(WW, iW)))) && void 0 !== iW ? iW : null
+    }
+
+    function hW(WW) {
+      var iW;
+      KW(ZW[WW]), (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW && (jW = null)
+    }
+
+    function HW(WW) {
+      const iW = (jW ? [jW.name] : ["welcome", "docsOverview"]).find((iW => JW(iW) === WW));
+      if (!iW) return;
+      yW(iW).add(WW);
+      const OW = tW[WW];
+      OW && (KW(OW), jW || bW.add(WW)), null === JW(iW) && hW(iW), sW()
+    }
+
+    function nW(WW, iW) {
+      const OW = SW(WW),
+        mW = yW(WW);
+      for (let EW = OW.indexOf(iW) - 1; EW >= 0; EW--)
+        if (mW.has(OW[EW]) && YW(OW[EW])) return OW[EW];
+      return null
+    }
+
+    function uW(WW, iW) {
+      return null !== nW(WW, iW)
+    }
+
+    function oW(WW, iW) {
+      const OW = nW(WW, iW);
+      OW && (yW(WW).delete(OW), sW())
+    }
+
+    function dW(WW) {
+      hW(WW), "welcome" === WW && SW("welcome").forEach((WW => {
+        const iW = tW[WW];
+        iW && KW(iW)
+      })), sW()
+    }
+
+    function eW(WW) {
+      jW = {
+        name: WW,
+        stepsDone: new Set
+      }, sW()
+    }
+
+    function vW() {
+      (jW || 0 !== AW.size || 0 !== bW.size) && (jW = null, AW.clear(), bW.clear(), sW())
+    }
+
+    function gW(WW, iW) {
+      const OW = iW ? WW : lW === WW ? null : lW;
+      OW !== lW && (lW = OW, sW())
+    }
+
+    function DW(WW, iW) {
+      UW.has(WW) === iW && (iW ? UW.delete(WW) : UW.add(WW), sW())
+    }
+
+    function VW(WW) {
+      return kW.add(WW), () => {
+        kW.delete(WW)
+      }
+    }
   },
-  40042: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  40559: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  40050: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  40568: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  40059: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  40574: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  40065: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  40576: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  40068: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  40580: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  40077: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  40583: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  40085: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  40591: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  40092: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/doom-warlord-uncaught.b25b11d54326d386a901.webp"
+  40598: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  40094: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/doom-warlord.d9ef07d4167ff931b0f0.webp"
+  40607: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/doom-warlord-uncaught.b25b11d54326d386a901.webp"
   },
-  40096: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  40616: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/doom-warlord.d9ef07d4167ff931b0f0.webp"
   },
-  40098: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  40619: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  40103: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  40626: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  40107: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  40635: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  40111: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  40640: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  40114: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  40648: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  40117: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  40652: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  40123: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  40661: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  40125: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  40665: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  40130: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  40667: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  40137: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  40673: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  40143: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  40682: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  39222: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  40686: (WW, iW, OW) => {
+    WW.exports = OW.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  },
+  39767: WW => {
+    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

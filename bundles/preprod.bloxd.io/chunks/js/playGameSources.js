@@ -1,184 +1,184 @@
-export const id = 54;
-export const ids = [54];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  40414: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => yB,
-      c: () => QB,
-      d: () => DB
+  40976: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW,
+      e: () => NW,
+      i: () => EW
     });
-    const YB = 6e3;
+    const mW = 6e3;
 
-    function DB(BB, OB) {
-      return [Math.floor(BB[0] / OB) * OB, Math.floor(BB[1] / OB) * OB, Math.floor(BB[2] / OB) * OB]
+    function EW(WW, iW) {
+      return [Math.floor(WW[0] / iW) * iW, Math.floor(WW[1] / iW) * iW, Math.floor(WW[2] / iW) * iW]
     }
 
-    function QB(BB) {
-      const OB = (null !== BB && void 0 !== BB ? BB : "").match(/-?\d+(?:\.\d+)?/g);
-      return OB && OB.length >= 3 ? [Number(OB[0]), Number(OB[1]), Number(OB[2])] : null
+    function NW(WW) {
+      const iW = (null !== WW && void 0 !== WW ? WW : "").match(/-?\d+(?:\.\d+)?/g);
+      return iW && iW.length >= 3 ? [Number(iW[0]), Number(iW[1]), Number(iW[2])] : null
     }
 
-    function oB(BB, OB) {
-      return BB === OB ? String(BB) : `${BB}-${OB}`
+    function PW(WW, iW) {
+      return WW === iW ? String(WW) : `${WW}-${iW}`
     }
 
-    function jB(BB, OB, GB, YB) {
-      const DB = [];
-      let QB = new Map;
-      for (let oB = BB[2]; oB < BB[2] + OB; oB++) {
-        const jB = new Map;
-        let yB = BB[0];
-        for (; yB < BB[0] + OB;) {
-          const DB = YB(yB, GB, oB);
-          let JB = yB;
-          for (; JB + 1 < BB[0] + OB && YB(JB + 1, GB, oB) === DB;) JB++;
-          if (null !== DB) {
-            const BB = `${yB} ${JB} ${DB}`,
-              OB = QB.get(BB);
-            OB ? (OB.z1 = oB, QB.delete(BB), jB.set(BB, OB)) : jB.set(BB, {
-              x0: yB,
-              x1: JB,
-              z0: oB,
-              z1: oB,
-              name: DB
+    function LW(WW, iW, OW, mW) {
+      const EW = [];
+      let NW = new Map;
+      for (let PW = WW[2]; PW < WW[2] + iW; PW++) {
+        const LW = new Map;
+        let cW = WW[0];
+        for (; cW < WW[0] + iW;) {
+          const EW = mW(cW, OW, PW);
+          let wW = cW;
+          for (; wW + 1 < WW[0] + iW && mW(wW + 1, OW, PW) === EW;) wW++;
+          if (null !== EW) {
+            const WW = `${cW} ${wW} ${EW}`,
+              iW = NW.get(WW);
+            iW ? (iW.z1 = PW, NW.delete(WW), LW.set(WW, iW)) : LW.set(WW, {
+              x0: cW,
+              x1: wW,
+              z0: PW,
+              z1: PW,
+              name: EW
             })
           }
-          yB = JB + 1
+          cW = wW + 1
         }
-        DB.push(...QB.values()), QB = jB
+        EW.push(...NW.values()), NW = LW
       }
-      return DB.push(...QB.values()), DB.sort(((BB, OB) => BB.z0 - OB.z0 || BB.x0 - OB.x0)).map((BB => `x${oB(BB.x0,BB.x1)} z${oB(BB.z0,BB.z1)} ${BB.name}`))
+      return EW.push(...NW.values()), EW.sort(((WW, iW) => WW.z0 - iW.z0 || WW.x0 - iW.x0)).map((WW => `x${PW(WW.x0,WW.x1)} z${PW(WW.z0,WW.z1)} ${WW.name}`))
     }
 
-    function yB(BB, OB, GB, DB) {
-      let QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : YB;
-      const yB = [BB[0] + OB - 1, BB[1] + OB - 1, BB[2] + OB - 1],
-        JB = null !== DB && DB.every(((OB, GB) => Math.floor(OB) >= BB[GB] && Math.floor(OB) <= yB[GB])),
-        MB = [`The chunk from ${BB.join(" ")} to ${yB.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== DB && MB.push(`The player's feet are at ${DB.map(Math.floor).join(" ")}, ${JB?"in this chunk":"outside this chunk"}.`);
-      const PB = [];
-      for (let YB = BB[1]; YB <= yB[1]; YB++) {
-        const DB = jB(BB, OB, YB, GB).join("; "),
-          QB = PB[PB.length - 1];
-        (null === QB || void 0 === QB ? void 0 : QB.boxes) === DB ? QB.to = YB : PB.push({
-          from: YB,
-          to: YB,
-          boxes: DB
+    function cW(WW, iW, OW, EW) {
+      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : mW;
+      const cW = [WW[0] + iW - 1, WW[1] + iW - 1, WW[2] + iW - 1],
+        wW = null !== EW && EW.every(((iW, OW) => Math.floor(iW) >= WW[OW] && Math.floor(iW) <= cW[OW])),
+        tW = [`The chunk from ${WW.join(" ")} to ${cW.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== EW && tW.push(`The player's feet are at ${EW.map(Math.floor).join(" ")}, ${wW?"in this chunk":"outside this chunk"}.`);
+      const ZW = [];
+      for (let mW = WW[1]; mW <= cW[1]; mW++) {
+        const EW = LW(WW, iW, mW, OW).join("; "),
+          NW = ZW[ZW.length - 1];
+        (null === NW || void 0 === NW ? void 0 : NW.boxes) === EW ? NW.to = mW : ZW.push({
+          from: mW,
+          to: mW,
+          boxes: EW
         })
       }
-      const zB = PB.filter((BB => "" !== BB.boxes));
-      0 === zB.length && MB.push("It is all air.");
-      let lB = MB.join("\n").length;
-      for (const YB of zB) {
-        const BB = `y${oB(YB.from,YB.to)}: ${YB.boxes}`;
-        if (lB += BB.length + 1, lB > QB) {
-          MB.push(`Cut short: the layers from y${YB.from} up aren't shown, as there are too many blocks.`);
+      const xW = ZW.filter((WW => "" !== WW.boxes));
+      0 === xW.length && tW.push("It is all air.");
+      let lW = tW.join("\n").length;
+      for (const mW of xW) {
+        const WW = `y${PW(mW.from,mW.to)}: ${mW.boxes}`;
+        if (lW += WW.length + 1, lW > NW) {
+          tW.push(`Cut short: the layers from y${mW.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        MB.push(BB)
+        tW.push(WW)
       }
-      return MB.join("\n")
+      return tW.join("\n")
     }
   },
-  9460: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB
+  10027: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW
     });
-    var YB = GB(16);
+    var mW = OW(25);
 
-    function DB() {
-      return !YB.c.get("isTouchScreen") && null !== document.pointerLockElement
+    function EW() {
+      return !mW.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37650: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB,
-      c: () => QB,
-      d: () => DB
+  38107: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      h: () => NW,
+      k: () => EW
     });
-    const YB = [.25, .5, 1, 2, 4, 8, 16];
+    const mW = [.25, .5, 1, 2, 4, 8, 16];
 
-    function DB(BB, OB) {
-      const GB = YB;
-      let DB = GB.indexOf(BB);
-      return -1 === DB && (DB = GB.findIndex((OB => OB >= BB)), -1 === DB && (DB = GB.length - 1)), "up" === OB ? GB[Math.min(DB + 1, GB.length - 1)] : GB[Math.max(DB - 1, 0)]
+    function EW(WW, iW) {
+      const OW = mW;
+      let EW = OW.indexOf(WW);
+      return -1 === EW && (EW = OW.findIndex((iW => iW >= WW)), -1 === EW && (EW = OW.length - 1)), "up" === iW ? OW[Math.min(EW + 1, OW.length - 1)] : OW[Math.max(EW - 1, 0)]
     }
 
-    function QB(BB) {
-      return BB <= YB[0]
+    function NW(WW) {
+      return WW <= mW[0]
     }
 
-    function oB(BB) {
-      return BB >= YB[YB.length - 1]
+    function PW(WW) {
+      return WW >= mW[mW.length - 1]
     }
   },
-  37166: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB,
-      f: () => QB
+  37735: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => NW
     });
-    let YB = !1;
+    let mW = !1;
 
-    function DB() {
-      return YB
+    function EW() {
+      return mW
     }
 
-    function QB(BB) {
-      return YB !== BB && (YB = BB, !0)
+    function NW(WW) {
+      return mW !== WW && (mW = WW, !0)
     }
   },
-  39730: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB
+  40229: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var YB = GB(25),
-      DB = GB(2050);
+    var mW = OW(27),
+      EW = OW(2061);
 
-    function QB(BB) {
+    function NW(WW) {
       let {
-        taskId: OB,
-        progress: GB
-      } = BB;
-      const YB = DB.e.get("_tasks");
-      null !== YB && void 0 !== YB && YB[OB] && DB.e.apply({
+        taskId: iW,
+        progress: OW
+      } = WW;
+      const mW = EW.d.get("_tasks");
+      null !== mW && void 0 !== mW && mW[iW] && EW.d.apply({
         _tasks: {
-          ...YB,
-          [OB]: {
-            ...YB[OB],
-            progress: GB
+          ...mW,
+          [iW]: {
+            ...mW[iW],
+            progress: OW
           }
         }
       })
     }
-    YB.o.subscribe("clientTaskProgress", (BB => {
-      QB(BB)
+    mW.l.subscribe("clientTaskProgress", (WW => {
+      NW(WW)
     }))
   },
-  40381: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => lB,
-      e: () => qB,
-      f: () => JB,
-      h: () => PB,
-      l: () => zB,
-      o: () => yB,
-      s: () => oB,
-      u: () => MB,
-      w: () => ZB
+  40951: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => lW,
+      h: () => bW,
+      i: () => wW,
+      k: () => ZW,
+      o: () => xW,
+      p: () => cW,
+      r: () => PW,
+      t: () => tW,
+      v: () => jW
     });
-    var YB = GB(2050),
-      DB = GB(25),
-      QB = GB(2059);
-    const oB = (0, QB.i)((function() {
-        var BB, OB, GB, DB;
+    var mW = OW(2061),
+      EW = OW(27),
+      NW = OW(2072);
+    const PW = (0, NW.r)((function() {
+        var WW, iW, OW, EW;
         return {
-          health: null !== (BB = YB.e.get("_health")) && void 0 !== BB ? BB : null,
-          maxHealth: null !== (OB = YB.e.get("_totalMaxHealth")) && void 0 !== OB ? OB : null,
-          shield: null !== (GB = YB.e.get("_shield")) && void 0 !== GB ? GB : null,
-          maxShield: null !== (DB = YB.e.get("maxShield")) && void 0 !== DB ? DB : null
+          health: null !== (WW = mW.d.get("_health")) && void 0 !== WW ? WW : null,
+          maxHealth: null !== (iW = mW.d.get("_totalMaxHealth")) && void 0 !== iW ? iW : null,
+          shield: null !== (OW = mW.d.get("_shield")) && void 0 !== OW ? OW : null,
+          maxShield: null !== (EW = mW.d.get("maxShield")) && void 0 !== EW ? EW : null
         }
-      }), [], (0, QB.h)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      jB = [{
+      }), [], (0, NW.o)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      LW = [{
         canFly: !1,
         flying: !1
       }, {
@@ -192,966 +192,767 @@ export const modules = {
         flying: !0
       }];
 
-    function yB(BB, OB) {
-      return jB[(BB ? 2 : 0) + (OB ? 1 : 0)]
+    function cW(WW, iW) {
+      return LW[(WW ? 2 : 0) + (iW ? 1 : 0)]
     }
-    const JB = (0, QB.i)((function() {
-      var BB;
-      return null !== (BB = YB.e.get("_aura")) && void 0 !== BB ? BB : null
-    }), [], (0, QB.h)("_aura"));
+    const wW = (0, NW.r)((function() {
+      var WW;
+      return null !== (WW = mW.d.get("_aura")) && void 0 !== WW ? WW : null
+    }), [], (0, NW.o)("_aura"));
 
-    function MB(BB) {
+    function tW(WW) {
       return {
-        watch: OB => (0, DB.p)("shotPlayer", (GB => {
+        watch: iW => (0, EW.n)("shotPlayer", (OW => {
           let {
-            playerId: YB,
-            damage: DB,
-            wasCrit: QB,
-            distance: oB
-          } = GB;
-          BB(YB) && OB({
-            damage: DB,
-            wasCrit: QB,
-            distance: oB
+            playerId: mW,
+            damage: EW,
+            wasCrit: NW,
+            distance: PW
+          } = OW;
+          WW(mW) && iW({
+            damage: EW,
+            wasCrit: NW,
+            distance: PW
           })
         }))
       }
     }
 
-    function PB(BB) {
-      return (0, QB.b)("chat", (OB => {
+    function ZW(WW) {
+      return (0, NW.d)("chat", (iW => {
         let {
-          serverChatMsgId: GB,
-          worldCodeLineId: YB,
-          content: DB,
-          chatterEId: QB,
-          chatterObjectsToReplay: oB
-        } = OB;
+          serverChatMsgId: OW,
+          worldCodeLineId: mW,
+          content: EW,
+          chatterEId: NW,
+          chatterObjectsToReplay: PW
+        } = iW;
         return {
-          serverChatMsgId: null !== GB && void 0 !== GB ? GB : null,
-          worldCodeLineId: null !== YB && void 0 !== YB ? YB : null,
-          content: DB,
-          author: QB ? BB(QB) : null,
-          hiddenFromReplay: !0 === oB
+          serverChatMsgId: null !== OW && void 0 !== OW ? OW : null,
+          worldCodeLineId: null !== mW && void 0 !== mW ? mW : null,
+          content: EW,
+          author: NW ? WW(NW) : null,
+          hiddenFromReplay: !0 === PW
         }
       }))
     }
-    const zB = (0, QB.b)("chatRemoved");
-    class lB {
+    const xW = (0, NW.d)("chatRemoved");
+    class lW {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const GB = this.shown;
-        return BB !== this.needed && (this.needed = BB, this.neededSince = OB, null === BB && (this.shown = null)), this.shown !== this.needed && OB - this.neededSince > 200 && (this.shown = this.needed), this.shown !== GB
+      update(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const OW = this.shown;
+        return WW !== this.needed && (this.needed = WW, this.neededSince = iW, null === WW && (this.shown = null)), this.shown !== this.needed && iW - this.neededSince > 200 && (this.shown = this.needed), this.shown !== OW
       }
     }
 
-    function pB(BB) {
+    function AW(WW) {
       return [{
-        translationKey: `touchKeys:${BB}`
+        translationKey: `touchKeys:${WW}`
       }]
     }
-    const qB = {
-      open: pB("open"),
-      close: pB("close"),
-      milk: pB("milk"),
-      shear: pB("shear"),
-      tame: pB("tame"),
-      feed: pB("feed"),
-      ride: pB("ride")
+    const bW = {
+      open: AW("open"),
+      close: AW("close"),
+      milk: AW("milk"),
+      shear: AW("shear"),
+      tame: AW("tame"),
+      feed: AW("feed"),
+      ride: AW("ride")
     };
 
-    function ZB(BB) {
+    function jW(WW) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: BB
+        icon: WW
       }]
     }
   },
-  37004: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => jB,
-      e: () => oB
+  37444: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW,
+      e: () => PW
     });
-    var YB = GB(3711);
-    let DB = null,
-      QB = null;
+    var mW = OW(4459);
+    let EW = null,
+      NW = null;
 
-    function oB() {
-      return QB ??= GB.e(235).then((() => GB(36925))).then((BB => {
+    function PW() {
+      return NW ??= OW.e(241).then((() => OW(37314))).then((WW => {
         let {
-          ITEM_SPRITES: OB,
-          ITEM_SPRITES_WITHOUT_FILE: GB,
-          ITEM_FILES_WITHOUT_SPRITE: QB
-        } = BB;
-        DB = function(BB, OB, GB) {
-          const DB = new Set,
-            QB = (0, YB.w)(OB);
-          let oB = 0;
-          for (const [YB, jB] of BB.entries()) YB === QB[oB] ? oB++ : DB.add(jB);
-          if ("" !== GB)
-            for (const jB of GB.split(YB.r)) DB.add(jB);
-          return DB
-        }(OB.split(YB.r), GB, QB)
-      }), (BB => {
-        throw QB = null, BB
-      })), QB
+          ITEM_SPRITES: iW,
+          ITEM_SPRITES_WITHOUT_FILE: OW,
+          ITEM_FILES_WITHOUT_SPRITE: NW
+        } = WW;
+        EW = function(WW, iW, OW) {
+          const EW = new Set,
+            NW = (0, mW.w)(iW);
+          let PW = 0;
+          for (const [mW, LW] of WW.entries()) mW === NW[PW] ? PW++ : EW.add(LW);
+          if ("" !== OW)
+            for (const LW of OW.split(mW.s)) EW.add(LW);
+          return EW
+        }(iW.split(mW.s), OW, NW)
+      }), (WW => {
+        throw NW = null, WW
+      })), NW
     }
 
-    function jB(BB) {
-      var OB, GB;
-      return null !== (OB = null === (GB = DB) || void 0 === GB ? void 0 : GB.has(BB)) && void 0 !== OB && OB
+    function LW(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = EW) || void 0 === OW ? void 0 : OW.has(WW)) && void 0 !== iW && iW
     }
   },
-  40400: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB,
-      e: () => QB,
-      h: () => DB
+  40960: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      h: () => NW,
+      k: () => EW
     });
-    const YB = 128;
+    const mW = 128;
 
-    function DB(BB, OB, GB, YB) {
-      const DB = 2 * OB - 1,
-        QB = 1 - 2 * GB,
-        oB = BB(0) - DB * BB(3),
-        jB = BB(4) - DB * BB(7),
-        yB = BB(8) - DB * BB(11),
-        JB = BB(1) - QB * BB(3),
-        MB = BB(5) - QB * BB(7),
-        PB = BB(9) - QB * BB(11);
-      YB[0] = jB * PB - yB * MB, YB[1] = yB * JB - oB * PB, YB[2] = oB * MB - jB * JB;
-      const zB = YB[0] * BB(3) + YB[1] * BB(7) + YB[2] * BB(11) < 0 ? -1 : 1,
-        lB = Math.hypot(YB[0], YB[1], YB[2]) * zB;
-      return YB[0] /= lB, YB[1] /= lB, YB[2] /= lB, YB
+    function EW(WW, iW, OW, mW) {
+      const EW = 2 * iW - 1,
+        NW = 1 - 2 * OW,
+        PW = WW(0) - EW * WW(3),
+        LW = WW(4) - EW * WW(7),
+        cW = WW(8) - EW * WW(11),
+        wW = WW(1) - NW * WW(3),
+        tW = WW(5) - NW * WW(7),
+        ZW = WW(9) - NW * WW(11);
+      mW[0] = LW * ZW - cW * tW, mW[1] = cW * wW - PW * ZW, mW[2] = PW * tW - LW * wW;
+      const xW = mW[0] * WW(3) + mW[1] * WW(7) + mW[2] * WW(11) < 0 ? -1 : 1,
+        lW = Math.hypot(mW[0], mW[1], mW[2]) * xW;
+      return mW[0] /= lW, mW[1] /= lW, mW[2] /= lW, mW
     }
 
-    function QB(BB, OB, GB, YB, DB, QB) {
-      const oB = [Math.floor(OB[0]), Math.floor(OB[1]), Math.floor(OB[2])],
-        jB = [0, 0, 0],
-        yB = [1 / 0, 1 / 0, 1 / 0],
-        JB = [1 / 0, 1 / 0, 1 / 0];
-      for (let zB = 0; zB < 3; zB++) jB[zB] = Math.sign(GB[zB]), 0 !== jB[zB] && (JB[zB] = Math.abs(1 / GB[zB]), yB[zB] = (oB[zB] + (jB[zB] > 0 ? 1 : 0) - OB[zB]) / GB[zB]);
-      let MB = 0,
-        PB = Math.abs(GB[0]) > Math.abs(GB[1]) ? 0 : 1;
-      for (Math.abs(GB[2]) > Math.abs(GB[PB]) && (PB = 2); MB <= YB;) {
-        if (BB(oB[0], oB[1], oB[2])) return DB[0] = oB[0], DB[1] = oB[1], DB[2] = oB[2], QB[0] = 0, QB[1] = 0, QB[2] = 0, QB[PB] = -jB[PB], !0;
-        PB = yB[0] < yB[1] ? 0 : 1, yB[2] < yB[PB] && (PB = 2), MB = yB[PB], oB[PB] += jB[PB], yB[PB] += JB[PB]
+    function NW(WW, iW, OW, mW, EW, NW) {
+      const PW = [Math.floor(iW[0]), Math.floor(iW[1]), Math.floor(iW[2])],
+        LW = [0, 0, 0],
+        cW = [1 / 0, 1 / 0, 1 / 0],
+        wW = [1 / 0, 1 / 0, 1 / 0];
+      for (let xW = 0; xW < 3; xW++) LW[xW] = Math.sign(OW[xW]), 0 !== LW[xW] && (wW[xW] = Math.abs(1 / OW[xW]), cW[xW] = (PW[xW] + (LW[xW] > 0 ? 1 : 0) - iW[xW]) / OW[xW]);
+      let tW = 0,
+        ZW = Math.abs(OW[0]) > Math.abs(OW[1]) ? 0 : 1;
+      for (Math.abs(OW[2]) > Math.abs(OW[ZW]) && (ZW = 2); tW <= mW;) {
+        if (WW(PW[0], PW[1], PW[2])) return EW[0] = PW[0], EW[1] = PW[1], EW[2] = PW[2], NW[0] = 0, NW[1] = 0, NW[2] = 0, NW[ZW] = -LW[ZW], !0;
+        ZW = cW[0] < cW[1] ? 0 : 1, cW[2] < cW[ZW] && (ZW = 2), tW = cW[ZW], PW[ZW] += LW[ZW], cW[ZW] += wW[ZW]
       }
       return !1
     }
   },
-  37083: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => dB,
-      i: () => KB,
-      k: () => VB,
-      n: () => WB,
-      q: () => SB
+  37640: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => hW,
+      c: () => HW,
+      f: () => KW,
+      g: () => sW,
+      h: () => SW
     });
-    var YB = GB(271),
-      DB = GB(92);
-    const QB = new(GB(37085).d)(new URL(GB.p + GB.u(3), GB.b), {
+    var mW = OW(259),
+      EW = OW(100);
+    const NW = new(OW(37646).e)(new URL(OW.p + OW.u(3), OW.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var oB = GB(1896),
-      jB = GB(2259);
-    const yB = 1e4,
-      JB = 3e4;
-    let MB = null,
-      PB = null,
-      zB = null,
-      lB = !1,
-      pB = 0;
-    const qB = new Map;
-    let ZB = null;
-    const NB = new Map,
-      RB = new Map;
+    var PW = OW(1755),
+      LW = OW(2289);
+    const cW = 1e4,
+      wW = 3e4;
+    let tW = null,
+      ZW = null,
+      xW = null,
+      lW = !1,
+      AW = 0;
+    const bW = new Map;
+    let jW = null;
+    const UW = new Map,
+      kW = new Map;
 
-    function WB(BB) {
-      const OB = new Promise(((OB, GB) => {
-        const YB = new Image;
-        YB.crossOrigin = "anonymous", YB.fetchPriority = "high", YB.onload = () => {
-          OB(YB)
-        }, YB.onerror = () => {
-          GB(new Error(`A block icon's texture did not load: ${BB.slice(0,100)}`))
-        }, YB.src = BB
+    function sW(WW) {
+      const iW = new Promise(((iW, OW) => {
+        const mW = new Image;
+        mW.crossOrigin = "anonymous", mW.fetchPriority = "high", mW.onload = () => {
+          iW(mW)
+        }, mW.onerror = () => {
+          OW(new Error(`A block icon's texture did not load: ${WW.slice(0,100)}`))
+        }, mW.src = WW
       }));
-      return (0, jB.e)(OB)
+      return (0, LW.f)(iW)
     }
 
-    function AB(BB) {
-      var OB, GB;
-      lB || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${BB}`), lB = !0, null === (OB = MB) || void 0 === OB || OB.terminate(), MB = null, PB = null, NB.clear(), RB.clear();
-      for (const YB of qB.values()) YB(null);
-      qB.clear(), null === (GB = ZB) || void 0 === GB || GB()
+    function MW(WW) {
+      var iW, OW;
+      lW || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${WW}`), lW = !0, null === (iW = tW) || void 0 === iW || iW.terminate(), tW = null, ZW = null, UW.clear(), kW.clear();
+      for (const mW of bW.values()) mW(null);
+      bW.clear(), null === (OW = jW) || void 0 === OW || OW()
     }
 
-    function VB() {
-      return null !== PB
+    function KW() {
+      return null !== ZW
     }
 
-    function SB() {
-      return zB ??= async function() {
+    function SW() {
+      return xW ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === YB.b.ios_icon_worker_v1 && (0, DB.isWebKit)()) return;
+        if ("page" === mW.d.ios_icon_worker_v1 && (0, EW.isWebKit)()) return;
         try {
-          MB = await async function() {
-            return await QB.ready(), QB.start()
+          tW = await async function() {
+            return await NW.ready(), NW.start()
           }()
-        } catch (jB) {
-          return void AB(`did not start (${String(jB)})`)
+        } catch (LW) {
+          return void MW(`did not start (${String(LW)})`)
         }
-        let BB = () => {};
-        const OB = new Promise((OB => {
-          BB = OB
+        let WW = () => {};
+        const iW = new Promise((iW => {
+          WW = iW
         }));
-        MB.onmessage = OB => {
+        tW.onmessage = iW => {
           let {
-            data: GB
-          } = OB;
-          if ("started" === GB.type) PB = MB, BB();
-          else if ("failed" === GB.type) AB(`failed a draw (${GB.message})`);
+            data: OW
+          } = iW;
+          if ("started" === OW.type) ZW = tW, WW();
+          else if ("failed" === OW.type) MW(`failed a draw (${OW.message})`);
           else {
-            var YB, DB;
-            null === (YB = qB.get(GB.id)) || void 0 === YB || YB(GB.url), qB.delete(GB.id), null === (DB = ZB) || void 0 === DB || DB()
+            var mW, EW;
+            null === (mW = bW.get(OW.id)) || void 0 === mW || mW(OW.url), bW.delete(OW.id), null === (EW = jW) || void 0 === EW || EW()
           }
-        }, MB.onerror = OB => {
-          OB.preventDefault(), AB(`stopped (${OB.message||"its script did not load or run"})`), BB()
+        }, tW.onerror = iW => {
+          iW.preventDefault(), MW(`stopped (${iW.message||"its script did not load or run"})`), WW()
         };
-        const GB = `did not start in ${JB/1e3} s`;
-        await (0, oB.h)(OB, JB, GB).catch((() => {
-          AB(GB)
+        const OW = `did not start in ${wW/1e3} s`;
+        await (0, PW.o)(iW, wW, OW).catch((() => {
+          MW(OW)
         }))
-      }(), zB
+      }(), xW
     }
 
-    function nB() {
-      if (null !== ZB || 0 === qB.size) return;
-      const BB = new Promise((BB => {
-          ZB = BB
+    function YW() {
+      if (null !== jW || 0 === bW.size) return;
+      const WW = new Promise((WW => {
+          jW = WW
         })),
-        OB = `did not answer in ${yB/1e3} s`;
-      (0, oB.h)(BB, yB, OB).then((() => {
-        ZB = null, nB()
+        iW = `did not answer in ${cW/1e3} s`;
+      (0, PW.o)(WW, cW, iW).then((() => {
+        jW = null, YW()
       }), (() => {
-        ZB = null, AB(OB)
+        jW = null, MW(iW)
       }))
     }
 
-    function UB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      BB.postMessage(OB, GB)
+    function yW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      WW.postMessage(iW, OW)
     }
 
-    function fB(BB, OB, GB, YB) {
-      let DB = OB.get(GB);
-      return void 0 === DB && (DB = YB().then((async OB => {
+    function TW(WW, iW, OW, mW) {
+      let EW = iW.get(OW);
+      return void 0 === EW && (EW = mW().then((async iW => {
         let {
-          image: GB,
-          request: YB
-        } = OB;
+          image: OW,
+          request: mW
+        } = iW;
         try {
-          const OB = await createImageBitmap(GB);
-          UB(BB, YB(OB), [OB])
-        } catch (DB) {
-          AB(`could not take an image (${String(DB)})`)
+          const iW = await createImageBitmap(OW);
+          yW(WW, mW(iW), [iW])
+        } catch (EW) {
+          MW(`could not take an image (${String(EW)})`)
         }
-      })), DB.catch((() => {
-        OB.get(GB) === DB && OB.delete(GB)
-      })), OB.set(GB, DB)), DB
+      })), EW.catch((() => {
+        iW.get(OW) === EW && iW.delete(OW)
+      })), iW.set(OW, EW)), EW
     }
-    async function kB(BB, OB) {
-      SB();
-      const GB = PB;
-      if (null === GB) return null;
-      if (await BB(GB), PB !== GB) return null;
-      const YB = ++pB;
-      return new Promise((BB => {
-        qB.set(YB, BB), UB(GB, OB(YB)), nB()
+    async function JW(WW, iW) {
+      SW();
+      const OW = ZW;
+      if (null === OW) return null;
+      if (await WW(OW), ZW !== OW) return null;
+      const mW = ++AW;
+      return new Promise((WW => {
+        bW.set(mW, WW), yW(OW, iW(mW)), YW()
       }))
     }
 
-    function dB(BB, OB, GB) {
-      return kB((OB => Promise.all([BB.top, BB.left, BB.right].map((BB => function(BB, OB) {
-        return fB(BB, NB, OB, (async () => ({
-          image: await WB(OB),
-          request: BB => ({
+    function hW(WW, iW, OW) {
+      return JW((iW => Promise.all([WW.top, WW.left, WW.right].map((WW => function(WW, iW) {
+        return TW(WW, UW, iW, (async () => ({
+          image: await sW(iW),
+          request: WW => ({
             type: "texture",
-            url: OB,
-            bitmap: BB
+            url: iW,
+            bitmap: WW
           })
         })))
-      }(OB, BB))))), (YB => ({
+      }(iW, WW))))), (mW => ({
         type: "draw",
-        id: YB,
-        ...BB,
-        size: OB,
-        outlineWidth: GB
+        id: mW,
+        ...WW,
+        size: iW,
+        outlineWidth: OW
       })))
     }
 
-    function KB(BB, OB, GB, YB) {
-      return kB((GB => function(BB, OB, GB) {
-        return fB(BB, RB, OB, (async () => {
+    function HW(WW, iW, OW, mW) {
+      return JW((OW => function(WW, iW, OW) {
+        return TW(WW, kW, iW, (async () => {
           const {
-            texture: BB,
-            ...YB
-          } = await GB();
+            texture: WW,
+            ...mW
+          } = await OW();
           return {
-            image: await WB(BB),
-            request: BB => ({
+            image: await sW(WW),
+            request: WW => ({
               type: "model",
-              name: OB,
-              bitmap: BB,
-              geometry: YB
+              name: iW,
+              bitmap: WW,
+              geometry: mW
             })
           }
         }))
-      }(GB, BB, OB)), (OB => ({
+      }(OW, WW, iW)), (iW => ({
         type: "drawModel",
-        id: OB,
-        name: BB,
-        size: GB,
-        outlineWidth: YB
+        id: iW,
+        name: WW,
+        size: OW,
+        outlineWidth: mW
       })))
     }
   },
-  40372: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => DB
+  40943: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => EW
     });
-    var YB = GB(1998);
+    var mW = OW(2012);
 
-    function DB(BB, OB, GB) {
-      return (0, YB.j)(BB, OB) < GB
+    function EW(WW, iW, OW) {
+      return (0, mW.l)(WW, iW) < OW
     }
   },
-  9394: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB
+  9957: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    var YB = GB(1255);
+    var mW = OW(1250);
 
-    function DB(BB, OB) {
-      var GB, DB;
+    function EW(WW, iW) {
+      var OW, EW;
       try {
-        const GB = (0, YB.c)();
-        if ("function" === typeof GB) {
-          const YB = new GB(BB, OB);
-          if (YB.type === BB) return YB
+        const OW = (0, mW.e)();
+        if ("function" === typeof OW) {
+          const mW = new OW(WW, iW);
+          if (mW.type === WW) return mW
         }
       } catch {}
-      const QB = document.createEvent("Event");
-      return QB.initEvent(BB, null !== (GB = null === OB || void 0 === OB ? void 0 : OB.bubbles) && void 0 !== GB && GB, null !== (DB = null === OB || void 0 === OB ? void 0 : OB.cancelable) && void 0 !== DB && DB), QB
+      const NW = document.createEvent("Event");
+      return NW.initEvent(WW, null !== (OW = null === iW || void 0 === iW ? void 0 : iW.bubbles) && void 0 !== OW && OW, null !== (EW = null === iW || void 0 === iW ? void 0 : iW.cancelable) && void 0 !== EW && EW), NW
     }
   },
-  39720: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => MB
+  40216: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => tW
     });
-    var YB = GB(1217),
-      DB = GB(1360),
-      QB = GB(16),
-      oB = GB(1338),
-      jB = GB(1350),
-      yB = GB(1560),
-      JB = GB(37139);
+    var mW = OW(1217),
+      EW = OW(1365),
+      NW = OW(25),
+      PW = OW(1339),
+      LW = OW(1351),
+      cW = OW(1605),
+      wW = OW(37709);
 
-    function MB(BB) {
+    function tW(WW) {
       let {
-        BB: OB,
-        OB: GB
-      } = BB;
-      const MB = null !== OB && void 0 !== OB ? OB : (0, jB.c)().gameNameWithVariation;
-      (0, YB.O)(MB) && ((0, JB.h)(), (0, oB.X)((() => {
-        console.log("Received matchmaking order from game server to game", OB), (0, QB.m)("inGameReplay"), (0, yB.navigatePreserveSearch)((0, DB.c)(MB, null !== GB && void 0 !== GB ? GB : void 0))
+        cN: iW,
+        wN: OW
+      } = WW;
+      const tW = null !== iW && void 0 !== iW ? iW : (0, LW.d)().gameNameWithVariation;
+      (0, mW.N)(tW) && ((0, wW.j)(), (0, PW.$)((() => {
+        console.log("Received matchmaking order from game server to game", iW), (0, NW.l)("inGameReplay"), (0, cW.navigatePreserveSearch)((0, EW.e)(tW, null !== OW && void 0 !== OW ? OW : void 0))
       }), "video_start"))
     }
   },
-  39896: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  40416: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW
     });
-    var YB = GB(25),
-      DB = GB(2085);
+    var mW = OW(27),
+      EW = OW(2085);
 
-    function QB(BB) {
-      var OB, GB;
-      const QB = (0, DB.l)(null !== (OB = null === (GB = DB.t.toggleFreeCam) || void 0 === GB ? void 0 : GB[0]) && void 0 !== OB ? OB : null);
-      YB.o.tM("showBottomMessage", {
-        message: `Free Camera ${BB?"Enabled":"Disabled"}${QB?` - Press ${QB} to toggle`:""}`,
+    function NW(WW) {
+      var iW, OW;
+      const NW = (0, EW.m)(null !== (iW = null === (OW = EW.v.toggleFreeCam) || void 0 === OW ? void 0 : OW[0]) && void 0 !== iW ? iW : null);
+      mW.l.iZ("showBottomMessage", {
+        message: `Free Camera ${WW?"Enabled":"Disabled"}${NW?` - Press ${NW} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39713: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => MB,
-      d: () => yB,
-      f: () => JB,
-      j: () => PB
+  40213: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => tW,
+      f: () => cW,
+      h: () => wW,
+      j: () => ZW
     });
-    var YB = GB(2023),
-      DB = GB(25),
-      QB = GB(1400),
-      oB = GB(1260);
-    const jB = new Map;
+    var mW = OW(2037),
+      EW = OW(27),
+      NW = OW(1422),
+      PW = OW(1255);
+    const LW = new Map;
 
-    function yB(BB, OB) {
-      DB.o.tM("newUiRequest", {
-        id: BB,
-        clientParameters: OB
+    function cW(WW, iW) {
+      EW.l.iZ("newUiRequest", {
+        id: WW,
+        clientParameters: iW
       }, !0)
     }
 
-    function JB(BB) {
-      DB.o.tM("removeUiRequest", BB, !0);
-      const OB = jB.get(BB);
-      OB && (OB.tearDownNotification(), jB.delete(BB))
+    function wW(WW) {
+      EW.l.iZ("removeUiRequest", WW, !0);
+      const iW = LW.get(WW);
+      iW && (iW.tearDownNotification(), LW.delete(WW))
     }
 
-    function MB() {
-      DB.o.tM("clearUiRequests");
-      for (const BB of jB.values()) BB.tearDownNotification();
-      jB.clear()
+    function tW() {
+      EW.l.iZ("clearUiRequests");
+      for (const WW of LW.values()) WW.tearDownNotification();
+      LW.clear()
     }
 
-    function PB(BB, OB, GB, DB) {
-      const yB = "string" === typeof OB ? {
-          translationKey: OB
-        } : OB,
-        JB = QB.NotificationProvider.showPromptPopup({
-          title: yB.translationKey,
+    function ZW(WW, iW, OW, EW) {
+      const cW = "string" === typeof iW ? {
+          translationKey: iW
+        } : iW,
+        wW = NW.NotificationProvider.showPromptPopup({
+          title: cW.translationKey,
           textOpts: {
-            title: (0, oB.j)(yB.params, YB.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, PW.j)(cW.params, mW.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: GB,
+          destructive: OW,
           unlockPointerKey: "uiRequestPopup"
         });
-      jB.set(BB, JB), JB.getResult().then((OB => {
-        jB.delete(BB), "notificationTornDown" !== OB && DB(OB)
+      LW.set(WW, wW), wW.getResult().then((iW => {
+        LW.delete(WW), "notificationTornDown" !== iW && EW(iW)
       }))
     }
   },
-  40406: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => PB,
-      h: () => zB
+  40969: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => ZW,
+      e: () => xW
     });
-    var YB = GB(192),
-      DB = GB(40414);
-    const QB = 20;
+    var mW = OW(182),
+      EW = OW(40976);
+    const NW = 20;
 
-    function oB(BB) {
-      return BB.map(Math.floor).join(" ")
+    function PW(WW) {
+      return WW.map(Math.floor).join(" ")
     }
 
-    function jB(BB) {
-      return null === BB.amount || 1 === BB.amount ? BB.name : `${BB.amount} ${BB.name}`
+    function LW(WW) {
+      return null === WW.amount || 1 === WW.amount ? WW.name : `${WW.amount} ${WW.name}`
     }
-    var yB = GB(40416),
-      JB = GB(2050),
-      MB = GB(1350);
+    var cW = OW(40980),
+      wW = OW(2061),
+      tW = OW(1351);
 
-    function PB(BB, OB) {
-      if (!BB) return yB.d;
-      const GB = BB.playerFeet();
-      if (!GB) return "The player isn't in the world yet, so no blocks can be seen.";
-      const QB = YB.f.pP,
-        oB = (0, DB.d)(null !== OB && void 0 !== OB ? OB : GB, QB),
-        jB = BB.chunkBlocks(oB);
-      return jB ? (0, DB.b)(oB, QB, ((OB, GB, YB) => {
-        const DB = jB(OB, GB, YB);
-        return 0 === DB ? null : BB.blockName(DB).split("|")[0]
-      }), GB) : `The chunk from ${oB.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${GB.map(Math.floor).join(" ")}.`
+    function ZW(WW, iW) {
+      if (!WW) return cW.c;
+      const OW = WW.playerFeet();
+      if (!OW) return "The player isn't in the world yet, so no blocks can be seen.";
+      const NW = mW.f.jZ,
+        PW = (0, EW.i)(null !== iW && void 0 !== iW ? iW : OW, NW),
+        LW = WW.chunkBlocks(PW);
+      return LW ? (0, EW.b)(PW, NW, ((iW, OW, mW) => {
+        const EW = LW(iW, OW, mW);
+        return 0 === EW ? null : WW.blockName(EW).split("|")[0]
+      }), OW) : `The chunk from ${PW.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${OW.map(Math.floor).join(" ")}.`
     }
 
-    function zB(BB) {
-      var OB, GB, YB;
-      if (!BB) return yB.e;
-      const DB = BB.playerFeet();
-      if (!DB) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function xW(WW) {
+      var iW, OW, mW;
+      if (!WW) return cW.e;
+      const EW = WW.playerFeet();
+      if (!EW) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: PB,
-        heldSlot: zB
-      } = BB.inventory();
-      return function(BB) {
-        const OB = [];
-        null !== BB.game && OB.push(`Game: ${BB.game}.`);
-        const GB = null === BB.health ? "" : `, health ${Math.round(BB.health)}${null===BB.maxHealth?"":` of ${Math.round(BB.maxHealth)}`}`;
-        OB.push(`The player (the creator) stands at ${oB(BB.position)}${GB}, ${BB.creative?"in":"not in"} creative mode.`);
-        const YB = BB.slots[BB.heldSlot];
-        OB.push(YB ? `Holding (slot ${BB.heldSlot}): ${jB(YB)}.` : `Holding nothing (slot ${BB.heldSlot} is empty).`);
-        const DB = BB.slots.flatMap(((BB, OB) => BB ? [`slot ${OB}: ${jB(BB)}`] : []));
-        OB.push(DB.length > 0 ? `Inventory: ${DB.join(", ")}.` : "Inventory: empty.");
-        const yB = OB => Math.hypot(OB.position[0] - BB.position[0], OB.position[1] - BB.position[1], OB.position[2] - BB.position[2]),
-          JB = [...BB.nearby].sort(((BB, OB) => yB(BB) - yB(OB)));
-        if (0 === JB.length) OB.push("No other players or mobs are near enough to see.");
+        slots: ZW,
+        heldSlot: xW
+      } = WW.inventory();
+      return function(WW) {
+        const iW = [];
+        null !== WW.game && iW.push(`Game: ${WW.game}.`);
+        const OW = null === WW.health ? "" : `, health ${Math.round(WW.health)}${null===WW.maxHealth?"":` of ${Math.round(WW.maxHealth)}`}`;
+        iW.push(`The player (the creator) stands at ${PW(WW.position)}${OW}, ${WW.creative?"in":"not in"} creative mode.`);
+        const mW = WW.slots[WW.heldSlot];
+        iW.push(mW ? `Holding (slot ${WW.heldSlot}): ${LW(mW)}.` : `Holding nothing (slot ${WW.heldSlot} is empty).`);
+        const EW = WW.slots.flatMap(((WW, iW) => WW ? [`slot ${iW}: ${LW(WW)}`] : []));
+        iW.push(EW.length > 0 ? `Inventory: ${EW.join(", ")}.` : "Inventory: empty.");
+        const cW = iW => Math.hypot(iW.position[0] - WW.position[0], iW.position[1] - WW.position[1], iW.position[2] - WW.position[2]),
+          wW = [...WW.nearby].sort(((WW, iW) => cW(WW) - cW(iW)));
+        if (0 === wW.length) iW.push("No other players or mobs are near enough to see.");
         else {
-          OB.push("Near them, nearest first:");
-          for (const BB of JB.slice(0, QB)) {
-            const GB = "player" === BB.kind ? `player "${BB.name||"?"}"` : BB.name && BB.name !== BB.kind ? `${BB.kind} "${BB.name}"` : BB.kind,
-              YB = Math.round(yB(BB));
-            OB.push(`- ${GB} at ${oB(BB.position)}, ${YB} block${1===YB?"":"s"} away`)
+          iW.push("Near them, nearest first:");
+          for (const WW of wW.slice(0, NW)) {
+            const OW = "player" === WW.kind ? `player "${WW.name||"?"}"` : WW.name && WW.name !== WW.kind ? `${WW.kind} "${WW.name}"` : WW.kind,
+              mW = Math.round(cW(WW));
+            iW.push(`- ${OW} at ${PW(WW.position)}, ${mW} block${1===mW?"":"s"} away`)
           }
-          JB.length > QB && OB.push(`- and ${JB.length-QB} more further away`)
+          wW.length > NW && iW.push(`- and ${wW.length-NW} more further away`)
         }
-        return BB.droppedItems > 0 && OB.push(`${BB.droppedItems} dropped item${1===BB.droppedItems?" is":"s are"} on the ground nearby.`), OB.join("\n")
+        return WW.droppedItems > 0 && iW.push(`${WW.droppedItems} dropped item${1===WW.droppedItems?" is":"s are"} on the ground nearby.`), iW.join("\n")
       }({
-        game: null !== (OB = (0, MB.c)().gameNameWithVariation) && void 0 !== OB ? OB : null,
-        position: DB,
-        health: null !== (GB = JB.e.get("_health")) && void 0 !== GB ? GB : null,
-        maxHealth: null !== (YB = JB.e.get("_totalMaxHealth")) && void 0 !== YB ? YB : null,
-        creative: !0 === JB.e.get("creative"),
-        heldSlot: zB,
-        slots: PB,
-        nearby: BB.nearby(),
-        droppedItems: BB.droppedItems()
+        game: null !== (iW = (0, tW.d)().gameNameWithVariation) && void 0 !== iW ? iW : null,
+        position: EW,
+        health: null !== (OW = wW.d.get("_health")) && void 0 !== OW ? OW : null,
+        maxHealth: null !== (mW = wW.d.get("_totalMaxHealth")) && void 0 !== mW ? mW : null,
+        creative: !0 === wW.d.get("creative"),
+        heldSlot: xW,
+        slots: ZW,
+        nearby: WW.nearby(),
+        droppedItems: WW.droppedItems()
       })
     }
   },
-  41897: (BB, OB, GB) => {
-    GB.d(OB, {
-      A: () => gB,
-      B: () => uB,
-      E: () => LB,
-      G: () => KB,
-      I: () => eB,
-      J: () => aB,
-      L: () => IB,
-      b: () => TB,
-      e: () => XB,
-      f: () => kB,
-      j: () => bB,
-      k: () => dB,
-      n: () => fB,
-      p: () => rB,
-      s: () => mB,
-      t: () => iB,
-      v: () => FB,
-      z: () => vB
+  42495: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      attachPlayGameSources: () => am,
+      playGameSources: () => Im
     });
-    var YB = GB(1434),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(2617),
-      jB = GB(5313),
-      yB = GB(5274);
-    let JB, MB = !1,
-      PB = !1,
-      zB = !1,
-      lB = !1;
-    const pB = 1300,
-      qB = 3e3;
-    let ZB = 0,
-      NB = !1,
-      RB = !1,
-      WB = 0;
-    const AB = 2;
-    let VB = !1,
-      SB = !1;
-    const nB = new Set,
-      UB = new Set;
-
-    function fB() {
-      return MB
-    }
-
-    function kB() {
-      return RB
-    }
-
-    function dB() {
-      return SB
-    }
-
-    function KB() {
-      return (0, QB.q)() && !SB
-    }
-
-    function uB(BB) {
-      let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (BB !== SB) {
-        SB = BB;
-        for (const BB of [...UB]) BB(SB);
-        OB && aB()
-      }
-    }
-
-    function mB(BB) {
-      return UB.add(BB), () => {
-        UB.delete(BB)
-      }
-    }
-
-    function IB() {
-      (0, jB.m)(oB.y.Menu, (0, QB.q)() ? 0 : oB.y.Menu)
-    }
-
-    function FB() {
-      RB = !1, WB = 0, IB(), aB()
-    }
-
-    function iB(BB) {
-      return nB.add(BB), () => {
-        nB.delete(BB)
-      }
-    }
-
-    function LB(BB) {
-      PB = !1, BB !== MB && (MB = BB, lB = !1, clearTimeout(JB), zB = !MB && VB, MB ? (NB = !1, RB = !1, WB = 0) : KB() && !VB && (RB = !0), VB = !1, MB && !KB() && HB(), sB(), zB && aB())
-    }
-
-    function gB(BB) {
-      BB !== NB && (NB = BB, BB || aB())
-    }
-
-    function rB() {
-      PB = !1, lB || !0 !== cB() || (lB = !0, clearTimeout(JB), JB = setTimeout(wB, pB))
-    }
-
-    function XB() {
-      return (!PB || performance.now() - ZB > qB) && (PB = (0, yB.O)().lockPointer(), ZB = performance.now()), PB
-    }
-
-    function wB() {
-      EB() && hB() && XB()
-    }
-
-    function EB() {
-      return KB() && !MB && !NB && !(0, YB.j)()
-    }
-
-    function cB() {
-      var BB;
-      return "undefined" === typeof navigator || null === (BB = navigator.userActivation) || void 0 === BB ? void 0 : BB.isActive
-    }
-
-    function hB() {
-      return zB && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== cB()
-    }
-
-    function aB() {
-      KB() ? EB() && !RB && hB() && XB() : MB && !VB && HB()
-    }
-
-    function eB() {
-      RB ? navigator.vendor.startsWith("Apple") ? CB() : WB = AB : aB()
-    }
-
-    function TB() {
-      WB > 0 && 0 === --WB && CB()
-    }
-
-    function bB() {
-      WB = 0
-    }
-
-    function CB() {
-      EB() && !0 === cB() && XB()
-    }
-
-    function HB() {
-      VB = !0, (0, yB.O)().unlockPointer()
-    }
-
-    function vB() {
-      PB = !1, zB = !1, lB = !1, clearTimeout(JB), NB = !1, RB = !1, WB = 0, VB = !1;
-      const BB = MB;
-      MB = !1, BB && sB()
-    }
-
-    function sB() {
-      for (const BB of [...nB]) BB(MB);
-      DB.o.tM("pointerLockUpdate", MB)
-    }
-  },
-  41688: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => zB,
-      g: () => jB,
-      i: () => PB,
-      l: () => JB,
-      m: () => oB,
-      p: () => MB,
-      s: () => yB
-    });
-    let YB = null,
-      DB = null,
-      QB = null;
-
-    function oB(BB) {
-      YB = BB
-    }
-
-    function jB() {
-      return YB
-    }
-
-    function yB(BB) {
-      DB = BB
-    }
-
-    function JB() {
-      return DB
-    }
-
-    function MB(BB) {
-      QB = BB
-    }
-
-    function PB() {
-      return QB
-    }
-
-    function zB() {
-      var BB, OB;
-      return !0 === (null === (BB = DB) || void 0 === BB || null === (OB = BB.currentViewer) || void 0 === OB ? void 0 : OB.inPlayback)
-    }
-  },
-  42017: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      attachPlayGameSources: () => TY,
-      playGameSources: () => eY
-    });
-    var YB = GB(2023),
-      DB = GB(41688),
-      QB = GB(5274),
-      oB = GB(41593),
-      jB = GB(42004),
-      yB = GB(40381),
-      JB = GB(25),
-      MB = GB(5287),
-      PB = GB(5281),
-      zB = GB(41630),
-      lB = GB(41661),
-      pB = GB(42023),
-      qB = GB(41637);
-    (0, qB.g)(MB.oc.Chat, (BB => {
-      if (BB.payloadKind !== PB.sc.Msgpack) return;
-      const OB = function(BB) {
-        if (null === BB || "object" !== typeof BB || !("content" in BB)) return null;
+    var mW = OW(2037),
+      EW = OW(42373),
+      NW = OW(5533),
+      PW = OW(42109),
+      LW = OW(42479),
+      cW = OW(40951),
+      wW = OW(27),
+      tW = OW(5551),
+      ZW = OW(5546),
+      xW = OW(42137),
+      lW = OW(42174),
+      AW = OW(42502),
+      bW = OW(42149);
+    (0, bW.j)(tW.uc.Chat, (WW => {
+      if (WW.payloadKind !== ZW.hc.Msgpack) return;
+      const iW = function(WW) {
+        if (null === WW || "object" !== typeof WW || !("content" in WW)) return null;
         const {
-          chatMsgId: OB,
-          worldCodeLineId: GB,
-          content: YB,
-          chatterEId: DB,
-          chatterObjectsToReplay: QB
-        } = BB;
+          chatMsgId: iW,
+          worldCodeLineId: OW,
+          content: mW,
+          chatterEId: EW,
+          chatterObjectsToReplay: NW
+        } = WW;
         return {
-          serverChatMsgId: null !== OB && void 0 !== OB ? OB : void 0,
-          worldCodeLineId: null !== GB && void 0 !== GB ? GB : void 0,
-          content: YB,
-          chatterEId: void 0 === DB || null === DB ? void 0 : String(DB),
-          chatterObjectsToReplay: QB
+          serverChatMsgId: null !== iW && void 0 !== iW ? iW : void 0,
+          worldCodeLineId: null !== OW && void 0 !== OW ? OW : void 0,
+          content: mW,
+          chatterEId: void 0 === EW || null === EW ? void 0 : String(EW),
+          chatterObjectsToReplay: NW
         }
-      }((0, zB.b)(BB.payload));
-      null !== OB && JB.o.tM("chat", OB, !0)
-    })), (0, qB.g)(MB.oc.ChatRemoved, (BB => {
-      if (BB.payloadKind === PB.sc.Msgpack) {
+      }((0, xW.d)(WW.payload));
+      null !== iW && wW.l.iZ("chat", iW, !0)
+    })), (0, bW.j)(tW.uc.ChatRemoved, (WW => {
+      if (WW.payloadKind === ZW.hc.Msgpack) {
         const {
-          chatMsgId: OB
-        } = (0, zB.b)(BB.payload);
-        JB.o.tM("chatRemoved", OB, !0)
+          chatMsgId: iW
+        } = (0, xW.d)(WW.payload);
+        wW.l.iZ("chatRemoved", iW, !0)
       }
     }));
-    const ZB = {
-        chatReceived: (0, yB.h)((function(BB) {
-          var OB, GB, YB;
+    const jW = {
+        chatReceived: (0, cW.k)((function(WW) {
+          var iW, OW, mW;
           return {
-            id: BB,
-            name: null !== (OB = pB.d.getName(BB)) && void 0 !== OB ? OB : null,
-            local: (0, lB.h)() === BB,
-            profileEffect: null !== (GB = null === (YB = (0, pB.f)(BB)) || void 0 === YB ? void 0 : YB.profileEffect) && void 0 !== GB ? GB : null
+            id: WW,
+            name: null !== (iW = AW.i.getName(WW)) && void 0 !== iW ? iW : null,
+            local: (0, lW.g)() === WW,
+            profileEffect: null !== (OW = null === (mW = (0, AW.m)(WW)) || void 0 === mW ? void 0 : mW.profileEffect) && void 0 !== OW ? OW : null
           }
         })),
-        chatRemoved: yB.l
+        chatRemoved: cW.o
       },
-      NB = {
-        sendChatMessage(BB) {
-          var OB, GB;
+      UW = {
+        sendChatMessage(WW) {
+          var iW, OW;
           let {
-            ty: YB,
-            channelName: DB
-          } = BB;
-          return null !== (OB = null === (GB = (0, oB.j)()) || void 0 === GB ? void 0 : GB.clientApi.sendChat(YB, DB)) && void 0 !== OB && OB
+            tP: mW,
+            channelName: EW
+          } = WW;
+          return null !== (iW = null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.clientApi.sendChat(mW, EW)) && void 0 !== iW && iW
         }
       };
-    var RB = GB(192),
-      WB = GB(2050),
-      AB = GB(41579),
-      VB = GB(40372);
-    const SB = [0, 0, 0],
-      nB = {
-        codeBlockClickable(BB) {
-          var OB;
-          const GB = (0, oB.j)();
-          if (null === GB || void 0 === GB || !GB.isSessionLive) return !1;
-          const YB = GB.api;
-          if (0 !== (AB.u.playerFlags(YB.apiView, 0) & AB.Id.Crouching)) return !1;
-          const DB = YB.queries.directorEntity(YB.localId) >= AB.xb.BYTES ? YB.memoryData(YB.scratch(), AB.xb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === DB) return !1;
-          for (let QB = 0; QB < 3; QB++) SB[QB] = AB.xb.feet(DB, 0, QB);
-          return SB[1] += AB.xb.eyeHeight(DB, 0), (0, VB.e)(SB, BB, null !== (OB = WB.e.get("blockReach")) && void 0 !== OB ? OB : RB.f.BN)
+    var kW = OW(182),
+      sW = OW(2061),
+      MW = OW(42094),
+      KW = OW(40943);
+    const SW = [0, 0, 0],
+      YW = {
+        codeBlockClickable(WW) {
+          var iW;
+          const OW = (0, PW.f)();
+          if (null === OW || void 0 === OW || !OW.isSessionLive) return !1;
+          const mW = OW.api;
+          if (0 !== (MW.z.playerFlags(mW.apiView, 0) & MW.Ud.Crouching)) return !1;
+          const EW = mW.queries.directorEntity(mW.localId) >= MW.zb.BYTES ? mW.memoryData(mW.scratch(), MW.zb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === EW) return !1;
+          for (let NW = 0; NW < 3; NW++) SW[NW] = MW.zb.feet(EW, 0, NW);
+          return SW[1] += MW.zb.eyeHeight(EW, 0), (0, KW.b)(SW, WW, null !== (iW = sW.d.get("blockReach")) && void 0 !== iW ? iW : kW.f.lU)
         }
       },
-      UB = {
-        clickCodeBlock(BB) {
-          var OB;
-          null === (OB = (0, oB.j)()) || void 0 === OB || OB.clickCodeBlock(BB)
+      yW = {
+        clickCodeBlock(WW) {
+          var iW;
+          null === (iW = (0, PW.f)()) || void 0 === iW || iW.clickCodeBlock(WW)
         }
       };
-    var fB = GB(41602),
-      kB = GB(42031),
-      dB = GB(1049),
-      KB = GB(39741),
-      uB = GB(5269),
-      mB = GB(41616),
-      IB = GB(41600),
-      FB = GB(41624);
+    var TW = OW(42118),
+      JW = OW(42508),
+      hW = OW(1052),
+      HW = OW(40242),
+      nW = OW(5525),
+      uW = OW(42131),
+      oW = OW(42116),
+      dW = OW(42134);
 
-    function iB(BB) {
-      if (null === BB) return null;
-      const OB = [];
-      for (const GB of BB) {
-        const BB = Object.keys(GB)[0];
-        if ("WB" === BB) {
+    function eW(WW) {
+      if (null === WW) return null;
+      const iW = [];
+      for (const OW of WW) {
+        const WW = Object.keys(OW)[0];
+        if ("Ii" === WW) {
           const {
-            str: BB,
-            style: YB,
-            clickableUrl: DB
-          } = GB.WB, QB = Object.keys(BB)[0], oB = BB[QB];
-          "string" !== QB && "styledEntityName" !== QB && "styledTranslatedText" !== QB || OB.push({
-            str: oB,
-            style: YB,
-            clickableUrl: DB
+            str: WW,
+            style: mW,
+            clickableUrl: EW
+          } = OW.Ii, NW = Object.keys(WW)[0], PW = WW[NW];
+          "string" !== NW && "styledEntityName" !== NW && "styledTranslatedText" !== NW || iW.push({
+            str: PW,
+            style: mW,
+            clickableUrl: EW
           })
-        } else OB.push(GB[BB])
+        } else iW.push(OW[WW])
       }
-      return OB
+      return iW
     }
-    const LB = {
-      screenPos(BB) {
-        var OB, GB;
-        return null !== (OB = null === (GB = (0, oB.j)()) || void 0 === GB ? void 0 : GB.renderFrame.projectWorldPosToScreenPos(BB)) && void 0 !== OB ? OB : {
+    const vW = {
+      screenPos(WW) {
+        var iW, OW;
+        return null !== (iW = null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.renderFrame.projectWorldPosToScreenPos(WW)) && void 0 !== iW ? iW : {
           x: 0,
           y: 0
         }
       }
     };
-    let gB = !1;
+    let gW = !1;
 
-    function rB() {
-      gB || (gB = !0, (0, qB.g)(MB.oc.ProgressBarUpdate, (BB => {
-        const OB = (0, FB.l)(BB);
-        (0, FB.e)(OB) && JB.o.tM("progressBarUpdate", OB, !0)
-      })), (0, qB.g)(mB.x, (BB => {
-        const OB = (0, FB.h)(mB.x, BB);
-        OB && JB.o.tM("middleScreenBarInitiate", {
-          duration: OB.tG,
-          BY: OB.BY,
-          horizBarRemOffset: OB.OY
+    function DW() {
+      gW || (gW = !0, (0, bW.j)(tW.uc.ProgressBarUpdate, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && wW.l.iZ("progressBarUpdate", iW, !0)
+      })), (0, bW.j)(uW.v, (WW => {
+        const iW = (0, dW.g)(uW.v, WW);
+        iW && wW.l.iZ("middleScreenBarInitiate", {
+          duration: iW.xN,
+          lN: iW.lN,
+          horizBarRemOffset: iW.bN
         }, !0)
-      })), (0, qB.g)(MB.oc.RemoveMiddleScreenBar, (() => {
-        JB.o.tM("middleScreenBarRemove")
-      })), (0, qB.g)(mB.$, (BB => {
-        const OB = (0, FB.h)(mB.$, BB);
-        if (OB) {
-          var GB;
-          const BB = OB.bG ? null === (GB = (0, oB.j)()) || void 0 === GB ? void 0 : GB.renderFrame.projectDirectionToScreenPos(OB.bG) : void 0;
-          JB.o.tM("sendHitmarker", {
-            GD: OB.GD,
-            screenPos: BB
+      })), (0, bW.j)(tW.uc.RemoveMiddleScreenBar, (() => {
+        wW.l.iZ("middleScreenBarRemove")
+      })), (0, bW.j)(uW.hb, (WW => {
+        const iW = (0, dW.g)(uW.hb, WW);
+        if (iW) {
+          var OW;
+          const WW = iW.oi ? null === (OW = (0, PW.f)()) || void 0 === OW ? void 0 : OW.renderFrame.projectDirectionToScreenPos(iW.oi) : void 0;
+          wW.l.iZ("sendHitmarker", {
+            ui: iW.ui,
+            screenPos: WW
           }, !0)
         }
-      })), (0, qB.g)(mB.fb, (BB => {
-        const OB = (0, FB.h)(mB.fb, BB);
-        if (OB) {
+      })), (0, bW.j)(uW.mb, (WW => {
+        const iW = (0, dW.g)(uW.mb, WW);
+        if (iW) {
           const {
-            id: BB,
-            position: GB,
-            style: YB,
-            DO: DB,
-            oO: QB
-          } = OB;
-          JB.o.tM("setDirectionArrow", {
-            id: BB,
-            position: GB,
-            style: YB,
-            text: iB(DB),
-            oO: QB
+            id: WW,
+            position: OW,
+            style: mW,
+            Gi: EW,
+            zi: NW
+          } = iW;
+          wW.l.iZ("setDirectionArrow", {
+            id: WW,
+            position: OW,
+            style: mW,
+            text: eW(EW),
+            zi: NW
           }, !0)
         }
-      })), (0, qB.g)(mB.g, (BB => {
-        const OB = (0, FB.h)(mB.g, BB);
-        OB && JB.o.tM("clearDirectionArrow", {
-          id: OB.id
+      })), (0, bW.j)(uW.d, (WW => {
+        const iW = (0, dW.g)(uW.d, WW);
+        iW && wW.l.iZ("clearDirectionArrow", {
+          id: iW.id
         }, !0)
-      })), (0, qB.g)(mB.r, (BB => {
-        const OB = (0, FB.h)(mB.r, BB);
-        OB && JB.o.tM("flyingMiddleMessage", {
-          content: iB(OB.RB),
-          VB: OB.VB,
-          SB: OB.SB
+      })), (0, bW.j)(uW.n, (WW => {
+        const iW = (0, dW.g)(uW.n, WW);
+        iW && wW.l.iZ("flyingMiddleMessage", {
+          content: eW(iW.qN),
+          RN: iW.RN,
+          GN: iW.GN
         }, !0)
-      })), (0, qB.g)(MB.oc.WorldVariation, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ("string" === typeof OB) {
-          const BB = OB === dB.d ? null : {
-            message: `Currently loaded as variation: ${OB}`,
+      })), (0, bW.j)(tW.uc.WorldVariation, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ("string" === typeof iW) {
+          const WW = iW === hW.e ? null : {
+            message: `Currently loaded as variation: ${iW}`,
             type: "Warning"
           };
-          JB.o.tM("showPermanentBottomMessage", BB, !0)
+          wW.l.iZ("showPermanentBottomMessage", WW, !0)
         }
-      })), (0, qB.g)(mB.F, (BB => {
-        const OB = (0, FB.h)(mB.F, BB);
-        OB && function(BB, OB) {
+      })), (0, bW.j)(uW.J, (WW => {
+        const iW = (0, dW.g)(uW.J, WW);
+        iW && function(WW, iW) {
           const {
-            type: GB,
-            params: YB
-          } = (0, KB.f)(OB), DB = {
-            ...YB
+            type: OW,
+            params: mW
+          } = (0, HW.f)(iW), EW = {
+            ...mW
           };
-          for (const QB of KB.d) DB[QB] && (DB[QB] = iB(DB[QB]));
-          uB.d.queueQTE(BB, GB, DB).getResult().then((OB => {
-            var GB;
-            "boolean" === typeof OB && (null === (GB = (0, oB.j)()) || void 0 === GB || GB.send(IB.c.QteResponse, {
-              qteId: BB,
-              qteResponse: OB
+          for (const NW of HW.c) EW[NW] && (EW[NW] = eW(EW[NW]));
+          nW.d.queueQTE(WW, OW, EW).getResult().then((iW => {
+            var OW;
+            "boolean" === typeof iW && (null === (OW = (0, PW.f)()) || void 0 === OW || OW.send(oW.e.QteResponse, {
+              qteId: WW,
+              qteResponse: iW
             }))
           }))
-        }(OB.id, OB.IO)
-      })), (0, qB.g)(mB.T, (BB => {
-        const OB = (0, FB.h)(mB.T, BB);
-        "number" === typeof OB && uB.d.cancelQTE(OB)
-      })), (0, qB.d)((() => {
-        uB.d.reset()
-      })), (0, qB.e)((() => {
-        uB.d.reset()
-      })), (0, qB.g)(MB.oc.EditItemCraftingRecipes, (BB => {
-        const OB = (0, FB.l)(BB);
-        (0, FB.e)(OB) && JB.o.tM("craftingRecipesEdited", {
-          itemName: OB.craftingRecipeItemName,
-          recipesForItem: OB.recipesForItem
+        }(iW.id, iW.jN)
+      })), (0, bW.j)(uW.Y, (WW => {
+        const iW = (0, dW.g)(uW.Y, WW);
+        "number" === typeof iW && nW.d.cancelQTE(iW)
+      })), (0, bW.e)((() => {
+        nW.d.reset()
+      })), (0, bW.i)((() => {
+        nW.d.reset()
+      })), (0, bW.j)(tW.uc.EditItemCraftingRecipes, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && wW.l.iZ("craftingRecipesEdited", {
+          itemName: iW.craftingRecipeItemName,
+          recipesForItem: iW.recipesForItem
         })
-      })), (0, qB.g)(mB.Q, (BB => {
-        const OB = (0, FB.h)(mB.Q, BB);
-        OB && JB.o.tM("craftingRecipesEdited", {
-          itemName: OB.IQ,
+      })), (0, bW.j)(uW.V, (WW => {
+        const iW = (0, dW.g)(uW.V, WW);
+        iW && wW.l.iZ("craftingRecipesEdited", {
+          itemName: iW.Oi,
           recipesForItem: []
         })
       })))
     }
-    var XB = GB(16);
-    const wB = [{
+    var VW = OW(25);
+    const pW = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1165,1646 +966,1621 @@ export const modules = {
       movesFly: !0
     }];
 
-    function EB(BB) {
-      return AB.u.playerFlags(BB.api.apiView, 0)
+    function fW(WW) {
+      return MW.z.playerFlags(WW.api.apiView, 0)
     }
-    const cB = {
-        freeCamera: (0, lB.e)((BB => () => {
-          const OB = BB.isSessionLive && 0 !== (EB(BB) & AB.Id.FreeCamMoves),
-            GB = BB.freeCameraAllowed() && null === XB.c.get("scriptedCameraFacing");
-          return wB[(GB ? 2 : 0) + (OB ? 1 : 0)]
-        }), wB[0], (BB => (0, QB.w)(BB)))
+    const CW = {
+        freeCamera: (0, lW.e)((WW => () => {
+          const iW = WW.isSessionLive && 0 !== (fW(WW) & MW.Ud.FreeCamMoves),
+            OW = WW.freeCameraAllowed() && null === VW.d.get("scriptedCameraFacing");
+          return pW[(OW ? 2 : 0) + (iW ? 1 : 0)]
+        }), pW[0], (WW => (0, NW.v)(WW)))
       },
-      hB = {
-        setFreeCameraMovesFly: BB => {
-          var OB;
-          null === (OB = (0, oB.j)()) || void 0 === OB || OB.setFreeCameraMovesFly(BB)
+      XW = {
+        setFreeCameraMovesFly: WW => {
+          var iW;
+          null === (iW = (0, PW.f)()) || void 0 === iW || iW.setFreeCameraMovesFly(WW)
         }
       },
-      aB = {
+      BW = {
         freeCameraPos: () => {
-          const BB = (0, oB.j)();
-          return null !== BB && void 0 !== BB && BB.isSessionLive && BB.renderFrame.hasView && 0 !== (EB(BB) & AB.Id.FreeCam) ? BB.renderFrame.cameraPosition : null
+          const WW = (0, PW.f)();
+          return null !== WW && void 0 !== WW && WW.isSessionLive && WW.renderFrame.hasView && 0 !== (fW(WW) & MW.Ud.FreeCam) ? WW.renderFrame.cameraPosition : null
         }
       };
-    var eB = GB(39896);
-    let TB = !1,
-      bB = !1;
+    var qW = OW(40416);
+    let RW = !1,
+      GW = !1;
 
-    function CB() {
-      const BB = (0, oB.j)();
-      if (null === BB || void 0 === BB || !BB.isSessionLive) return void(TB = !1);
-      const OB = 0 !== (AB.u.playerFlags(BB.api.apiView, 0) & AB.Id.FreeCam);
-      OB !== TB && (TB = OB, (0, eB.d)(OB))
+    function IW() {
+      const WW = (0, PW.f)();
+      if (null === WW || void 0 === WW || !WW.isSessionLive) return void(RW = !1);
+      const iW = 0 !== (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.FreeCam);
+      iW !== RW && (RW = iW, (0, qW.e)(iW))
     }
-    var HB = GB(353),
-      vB = GB(37723),
-      sB = GB(2059);
-    var xB = GB(42039),
-      tB = GB(41652);
-    const BO = {
+    var aW = OW(344),
+      rW = OW(38195),
+      zW = OW(2072);
+    var FW = OW(42513),
+      QW = OW(42165);
+    const Wi = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let OO = "off";
+    let ii = "off";
 
-    function GO(BB) {
-      var OB;
-      return null === BB ? null : {
-        label: null !== (OB = (0, xB.c)(BB, "interactionPrompt")) && void 0 !== OB ? OB : null
+    function Oi(WW) {
+      var iW;
+      return null === WW ? null : {
+        label: null !== (iW = (0, FW.c)(WW, "interactionPrompt")) && void 0 !== iW ? iW : null
       }
     }
-    const YO = new Map([
-      [AB.vc.Open, {
-        label: yB.e.open
+    const mi = new Map([
+      [MW.Jc.Open, {
+        label: cW.h.open
       }],
-      [AB.vc.Close, {
-        label: yB.e.close
+      [MW.Jc.Close, {
+        label: cW.h.close
       }],
-      [AB.vc.Milk, {
-        label: yB.e.milk
+      [MW.Jc.Milk, {
+        label: cW.h.milk
       }],
-      [AB.vc.Shear, {
-        label: yB.e.shear
+      [MW.Jc.Shear, {
+        label: cW.h.shear
       }],
-      [AB.vc.Tame, {
-        label: yB.e.tame
+      [MW.Jc.Tame, {
+        label: cW.h.tame
       }],
-      [AB.vc.Feed, {
-        label: yB.e.feed
+      [MW.Jc.Feed, {
+        label: cW.h.feed
       }],
-      [AB.vc.Ride, {
-        label: yB.e.ride
+      [MW.Jc.Ride, {
+        label: cW.h.ride
       }]
     ]);
-    class DO {
+    class Ei {
       constructor() {
-        this.target = BO, this.SM = AB.fd, this.optionName = null, this.pickaxe = new yB.d
+        this.target = Wi, this.NL = MW.nd, this.optionName = null, this.pickaxe = new cW.d
       }
-      read(BB) {
-        var OB;
-        const GB = AB.u.targetBlockId(BB.api.apiView, 0);
-        GB !== this.SM && (this.SM = GB, this.optionName = GB === AB.fd ? null : `${BB.tables.getMetaInfo(GB).rootName}CrosshairText`);
-        const YB = null === this.optionName ? null : null !== (OB = BB.tables.getClientOption(this.optionName)) && void 0 !== OB ? OB : null;
-        this.pickaxe.update(function(BB, OB) {
-          var GB, YB, DB;
-          if (0 === (AB.u.playerFlags(BB.api.apiView, 0) & AB.Id.Breaking) || OB === AB.fd || 0 === OB) return null;
+      read(WW) {
+        var iW;
+        const OW = MW.z.targetBlockId(WW.api.apiView, 0);
+        OW !== this.NL && (this.NL = OW, this.optionName = OW === MW.nd ? null : `${WW.tables.getMetaInfo(OW).rootName}CrosshairText`);
+        const mW = null === this.optionName ? null : null !== (iW = WW.tables.getClientOption(this.optionName)) && void 0 !== iW ? iW : null;
+        this.pickaxe.update(function(WW, iW) {
+          var OW, mW, EW;
+          if (0 === (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.Breaking) || iW === MW.nd || 0 === iW) return null;
           const {
-            tables: QB
-          } = BB;
-          if (!0 === QB.getClientOption("creative")) return null;
-          const oB = QB.nameOfId(OB),
-            jB = null === (GB = BB.items.sJ()) || void 0 === GB ? void 0 : GB.name,
-            yB = null !== (YB = QB.getItemStat(oB, "harvestLevel")) && void 0 !== YB ? YB : 0;
-          return (0, HB.Pc)({
-            blockHarvestType: QB.getDefaultItemStat(oB, "harvestType"),
-            blockHarvestLevel: QB.getDefaultItemStat(oB, "harvestLevel"),
-            harvestLevel: yB,
-            heldToolType: void 0 === jB ? void 0 : QB.getDefaultItemStat(jB, "harvests"),
-            heldToolLevel: void 0 === jB ? void 0 : QB.getDefaultItemStat(jB, "level")
-          }) && null !== (DB = vB.s[yB]) && void 0 !== DB ? DB : null
-        }(BB, GB)), BB.watchPromptPick(OO);
-        const DB = "touch" === OO ? function(BB) {
-          var OB;
-          const GB = BB.interactLabel;
-          return GB === AB.vc.Entity ? GO(BB.promptEntity) : GB === AB.vc.TameWith ? {
-            label: (0, yB.w)(BB.tables.nameOfId(BB.interactIcon))
-          } : null !== (OB = YO.get(GB)) && void 0 !== OB ? OB : null
-        }(BB) : GO(BB.promptEntity);
-        return this.target = (0, sB.k)(this.target, {
-          interactPrompt: DB,
-          blockText: YB,
+            tables: NW
+          } = WW;
+          if (!0 === NW.getClientOption("creative")) return null;
+          const PW = NW.nameOfId(iW),
+            LW = null === (OW = WW.items.BL()) || void 0 === OW ? void 0 : OW.name,
+            cW = null !== (mW = NW.getItemStat(PW, "harvestLevel")) && void 0 !== mW ? mW : 0;
+          return (0, aW.uc)({
+            blockHarvestType: NW.getDefaultItemStat(PW, "harvestType"),
+            blockHarvestLevel: NW.getDefaultItemStat(PW, "harvestLevel"),
+            harvestLevel: cW,
+            heldToolType: void 0 === LW ? void 0 : NW.getDefaultItemStat(LW, "harvests"),
+            heldToolLevel: void 0 === LW ? void 0 : NW.getDefaultItemStat(LW, "level")
+          }) && null !== (EW = rW.p[cW]) && void 0 !== EW ? EW : null
+        }(WW, OW)), WW.watchPromptPick(ii);
+        const EW = "touch" === ii ? function(WW) {
+          var iW;
+          const OW = WW.interactLabel;
+          return OW === MW.Jc.Entity ? Oi(WW.promptEntity) : OW === MW.Jc.TameWith ? {
+            label: (0, cW.v)(WW.tables.nameOfId(WW.interactIcon))
+          } : null !== (iW = mi.get(OW)) && void 0 !== iW ? iW : null
+        }(WW) : Oi(WW.promptEntity);
+        return this.target = (0, zW.t)(this.target, {
+          interactPrompt: EW,
+          blockText: mW,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let QO = null;
-    const oO = {
+    let Ni = null;
+    const Pi = {
       current: () => {
-        var BB, OB;
-        return null !== (BB = null === (OB = QO) || void 0 === OB ? void 0 : OB.target) && void 0 !== BB ? BB : BO
+        var WW, iW;
+        return null !== (WW = null === (iW = Ni) || void 0 === iW ? void 0 : iW.target) && void 0 !== WW ? WW : Wi
       },
-      watch: BB => {
-        const OB = new DO;
-        QO = OB;
-        const GB = (0, lB.l)((GB => {
-          let YB = OB.read(GB);
-          BB(YB);
-          const DB = (0, QB.z)((() => {
-            const DB = OB.read(GB);
-            DB !== YB && (YB = DB, BB(DB))
+      watch: WW => {
+        const iW = new Ei;
+        Ni = iW;
+        const OW = (0, lW.k)((OW => {
+          let mW = iW.read(OW);
+          WW(mW);
+          const EW = (0, NW.x)((() => {
+            const EW = iW.read(OW);
+            EW !== mW && (mW = EW, WW(EW))
           }));
           return () => {
-            DB(), GB.watchPromptPick("off")
+            EW(), OW.watchPromptPick("off")
           }
         }));
         return () => {
-          GB(), QO === OB && (QO = null)
+          OW(), Ni === iW && (Ni = null)
         }
       }
     };
-    let jO = 0,
-      yO = 0;
-    const JO = {
-        health: yB.s,
-        aura: yB.f,
-        hotbar: tB.c.states.hotbar,
-        heldItemAim: tB.c.states.heldItemAim,
-        crouching: (0, lB.e)((BB => function(BB) {
-          const OB = () => 0 !== (AB.u.playerFlags(BB.apiView, 0) & AB.Id.Crouching);
+    let Li = 0,
+      ci = 0;
+    const wi = {
+        health: cW.r,
+        aura: cW.i,
+        hotbar: QW.c.states.hotbar,
+        heldItemAim: QW.c.states.heldItemAim,
+        crouching: (0, lW.e)((WW => function(WW) {
+          const iW = () => 0 !== (MW.z.playerFlags(WW.apiView, 0) & MW.Ud.Crouching);
           return {
-            current: OB,
-            watch(BB) {
-              let GB = OB();
-              return (0, QB.w)((() => {
-                const YB = OB();
-                YB !== GB && (GB = YB, BB(YB))
+            current: iW,
+            watch(WW) {
+              let OW = iW();
+              return (0, NW.v)((() => {
+                const mW = iW();
+                mW !== OW && (OW = mW, WW(mW))
               }))
             }
           }
-        }(BB.api).current), !1, (BB => (0, QB.w)(BB))),
-        flight: (0, lB.e)((BB => () => function(BB) {
-          const OB = AB.u.playerFlags(BB.apiView, 0);
-          return (0, yB.o)(0 !== (OB & AB.Id.CanFly), 0 !== (OB & AB.Id.Flying))
-        }(BB.api)), (0, yB.o)(!1, !1), (BB => (0, QB.w)(BB))),
-        gliderBoostFuel: (0, lB.e)((BB => () => AB.u.gliderBoostFuel(BB.api.apiView, 0)), 0, (BB => (0, QB.w)(BB))),
-        crosshairTarget: oO
+        }(WW.api).current), !1, (WW => (0, NW.v)(WW))),
+        flight: (0, lW.e)((WW => () => function(WW) {
+          const iW = MW.z.playerFlags(WW.apiView, 0);
+          return (0, cW.p)(0 !== (iW & MW.Ud.CanFly), 0 !== (iW & MW.Ud.Flying))
+        }(WW.api)), (0, cW.p)(!1, !1), (WW => (0, NW.v)(WW))),
+        gliderBoostFuel: (0, lW.e)((WW => () => MW.z.gliderBoostFuel(WW.api.apiView, 0)), 0, (WW => (0, NW.v)(WW))),
+        crosshairTarget: Pi
       },
-      MO = {
-        hotbarSlotRequested: tB.c.events.hotbarSlotRequested,
-        hotbarScrolled: tB.c.events.hotbarScrolled,
-        numberKeyPressed: tB.c.events.numberKeyPressed,
-        shotDamageToShow: (0, yB.u)((BB => !0 === (0, xB.c)(BB, "showDamageAmounts")))
+      ti = {
+        hotbarSlotRequested: QW.c.events.hotbarSlotRequested,
+        hotbarScrolled: QW.c.events.hotbarScrolled,
+        numberKeyPressed: QW.c.events.numberKeyPressed,
+        shotDamageToShow: (0, cW.t)((WW => !0 === (0, FW.c)(WW, "showDamageAmounts")))
       },
-      PO = {
-        selectHotbarSlot: tB.c.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: BB => {
-          OO = BB
+      Zi = {
+        selectHotbarSlot: QW.c.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: WW => {
+          ii = WW
         }
       },
-      zO = {
+      xi = {
         momentumFrac: function() {
-          var BB, OB, GB;
-          const YB = (0, oB.j)(),
-            DB = performance.now(),
-            QB = null === YB || void 0 === YB || null === (BB = YB.items.sJ()) || void 0 === BB || null === (OB = BB.attributes) || void 0 === OB || null === (GB = OB.customAttributes) || void 0 === GB ? void 0 : GB.enchantments;
-          return jO = null !== YB && null !== QB && void 0 !== QB && QB.Momentum ? 0 !== (AB.u.playerFlags(YB.api.apiView, 0) & AB.Id.Breaking) ? Math.max(0, AB.u.momentumFrac(YB.api.apiView, 0)) : Math.max(0, jO - (DB - yO) / 1500) : 0, yO = DB, jO
+          var WW, iW, OW;
+          const mW = (0, PW.f)(),
+            EW = performance.now(),
+            NW = null === mW || void 0 === mW || null === (WW = mW.items.BL()) || void 0 === WW || null === (iW = WW.attributes) || void 0 === iW || null === (OW = iW.customAttributes) || void 0 === OW ? void 0 : OW.enchantments;
+          return Li = null !== mW && null !== NW && void 0 !== NW && NW.Momentum ? 0 !== (MW.z.playerFlags(mW.api.apiView, 0) & MW.Ud.Breaking) ? Math.max(0, MW.z.momentumFrac(mW.api.apiView, 0)) : Math.max(0, Li - (EW - ci) / 1500) : 0, ci = EW, Li
         }
       };
-    var lO = GB(41587);
-    const pO = {
-      lobbyManage(BB) {
-        var OB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.LobbyManage, BB)
+    var li = OW(42103);
+    const Ai = {
+      lobbyManage(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.LobbyManage, WW)
       }
     };
-    var qO = GB(1238),
-      ZO = GB(37166),
-      NO = GB(9460),
-      RO = GB(1699),
-      WO = GB(2617),
-      AO = GB(5296);
-    let VO = !1;
+    var bi = OW(1230),
+      ji = OW(37735),
+      Ui = OW(10027),
+      ki = OW(1729),
+      si = OW(3305),
+      Mi = OW(5560);
+    let Ki = !1;
 
-    function SO(BB) {
-      VO = BB
+    function Si(WW) {
+      Ki = WW
     }
 
-    function nO() {
-      "inGame" !== XB.c.get("gameState") || (0, RO.u)() || JB.o.tM("ctrlCrouchWithoutFullscreen")
+    function Yi() {
+      "inGame" !== VW.d.get("gameState") || (0, ki.m)() || wW.l.iZ("ctrlCrouchWithoutFullscreen")
     }
-    let UO = !1;
-    const fO = {
+    let yi = !1;
+    const Ti = {
         OpenEmoteWheel: () => {
-          SO(!0), UO = !0, queueMicrotask((() => {
-            UO && (UO = !1, JB.o.tM("requestEmoteWheelHoldOpen"))
+          Si(!0), yi = !0, queueMicrotask((() => {
+            yi && (yi = !1, wW.l.iZ("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          JB.o.tM("toggleFullCoordinateOverlay")
+          wW.l.iZ("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, ZO.b)() || JB.o.tM("YKeyPressed")
+          (0, ji.e)() || wW.l.iZ("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, ZO.b)() || JB.o.tM("XKeyPressed")
+          (0, ji.e)() || wW.l.iZ("XKeyPressed")
         },
-        CtrlCrouch: nO,
+        CtrlCrouch: Yi,
         "primary-fire": () => {
-          JB.o.tM("mouseState", {
-            OM: qO.b.DownFirePrimary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          JB.o.tM("mouseState", {
-            OM: qO.b.DownFireSecondary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          JB.o.tM("mouseState", {
-            OM: qO.b.TouchDownLong,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.TouchDownLong,
             isDown: !0
           })
         }
       },
-      kO = {
+      Ji = {
         OpenEmoteWheel: () => {
-          SO(!1), UO ? (UO = !1, (0, NO.b)() || JB.o.tM("requestEmoteWheelHoldOpen")) : JB.o.tM("requestEmoteWheelHoldRelease")
+          Si(!1), yi ? (yi = !1, (0, Ui.d)() || wW.l.iZ("requestEmoteWheelHoldOpen")) : wW.l.iZ("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: nO,
+        CtrlCrouch: Yi,
         "primary-fire": () => {
-          JB.o.tM("mouseState", {
-            OM: qO.b.UpFirePrimary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          JB.o.tM("mouseState", {
-            OM: qO.b.UpFireSecondary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          JB.o.tM("mouseState", {
-            OM: qO.b.UpFirePrimary,
+          wW.l.iZ("mouseState", {
+            IL: bi.c.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let dO = !1;
+    let Hi = !1;
 
-    function KO() {
-      dO || (dO = !0, (0, AO.g)((BB => {
-        if ((0, DB.e)()) return;
-        const OB = (0, AO.f)(BB) ? "primary-fire" : BB.action;
-        var GB;
-        if (BB.down) {
-          if (0 === (BB.flags & WO.c.Synthetic)) {
-            var YB;
-            null === (YB = fO[OB]) || void 0 === YB || YB.call(fO)
+    function ni() {
+      Hi || (Hi = !0, (0, Mi.g)((WW => {
+        if ((0, EW.d)()) return;
+        const iW = (0, Mi.f)(WW) ? "primary-fire" : WW.action;
+        var OW;
+        if (WW.down) {
+          if (0 === (WW.flags & si.e.Synthetic)) {
+            var mW;
+            null === (mW = Ti[iW]) || void 0 === mW || mW.call(Ti)
           }
-        } else null === (GB = kO[OB]) || void 0 === GB || GB.call(kO)
+        } else null === (OW = Ji[iW]) || void 0 === OW || OW.call(Ji)
       })))
     }
-    var uO = GB(331),
-      mO = GB(92),
-      IO = GB(31),
-      FO = GB(41897),
-      iO = GB(1350),
-      LO = GB(2643);
-    let gO = !1;
-    const rO = {
-      sendCodeCollab(BB) {
-        var OB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.CodeCollab, (0, IB.j)(BB), (0, LO.e)(BB))
+    var ui = OW(327),
+      oi = OW(100),
+      di = OW(39),
+      ei = OW(42394),
+      vi = OW(1351),
+      gi = OW(3323);
+    let Di = !1;
+    const Vi = {
+      sendCodeCollab(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.CodeCollab, (0, oW.r)(WW), (0, gi.h)(WW))
       }
     };
-    var XO = GB(39804),
-      wO = GB(9394);
-    let EO = null,
-      cO = !1,
-      hO = null;
+    var fi = OW(40305),
+      Ci = OW(9957);
+    let Xi = null,
+      Bi = !1,
+      qi = null;
 
-    function aO() {
-      return "inGame" === XB.c.get("gameState") && !(0, ZO.b)()
+    function Ri() {
+      return "inGame" === VW.d.get("gameState") && !(0, ji.e)()
     }
-    const eO = {
-        OpenInventory: BB => {
-          (0, RO.D)(BB, "inventory", (0, lO.k)())
+    const Gi = {
+        OpenInventory: WW => {
+          (0, ki.t)(WW, "inventory", (0, li.h)())
         },
-        OpenShop: BB => {
-          EO && aO() && (0, RO.A)(BB, uO.p.SHOP, !EO.shopIsEmpty(WB.e.get("shopInfo")))
+        OpenShop: WW => {
+          Xi && Ri() && (0, ki.s)(WW, ui.m.SHOP, !Xi.shopIsEmpty(sW.d.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: BB => {
-          aO() && (0, RO.A)(BB, uO.p.LOBBY_LEADERBOARD, (0, XO.b)({
-            lobbyLeaderboardInfo: WB.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: WB.e.get("lobbyManage")
-          }))
+        OpenLobbyLeaderboard: WW => {
+          var iW, OW;
+          Ri() && (0, ki.x)(WW, (0, fi.d)({
+            lobbyLeaderboardInfo: sW.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: sW.d.get("lobbyManage")
+          }), null !== (iW = null === (OW = Xi) || void 0 === OW ? void 0 : OW.getClientGameLeaderboardKey()) && void 0 !== iW ? iW : null)
         },
-        OpenTasksAndLeaderboard: BB => {
-          var OB;
-          const GB = null === (OB = EO) || void 0 === OB ? void 0 : OB.getClientGameMapKey();
-          GB ? (0, RO.E)(BB, !0, GB) : (0, RO.D)(BB, "retentionFeatures", !(!WB.e.get("_tasks") && !WB.e.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: WW => {
+          var iW;
+          const OW = null === (iW = Xi) || void 0 === iW ? void 0 : iW.getClientGameMapKey();
+          OW ? (0, ki.A)(WW, !0, OW) : (0, ki.t)(WW, "retentionFeatures", !(!sW.d.get("_tasks") && !sW.d.get("_availableLeaderboards")))
         },
-        OpenInviteLink: BB => {
-          (0, RO.D)(BB, "inviteLink", mO.featureFlags.canUseInviteLinks)
+        OpenInviteLink: WW => {
+          (0, ki.t)(WW, "inviteLink", oi.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: BB => {
-          aO() && function(BB) {
-            const OB = (0, oB.j)(),
-              GB = null !== OB && void 0 !== OB && OB.isSessionLive ? OB.api : null,
-              YB = GB ? GB.pR(GB.localId) : null;
-            (0, RO.E)(BB, null !== YB && (0, LO.c)((0, iO.c)()), (() => {
-              (0, LO.h)(YB)
+        OpenCodeEditor: WW => {
+          Ri() && function(WW) {
+            const iW = (0, PW.f)(),
+              OW = null !== iW && void 0 !== iW && iW.isSessionLive ? iW.api : null,
+              mW = OW ? OW.Vk(OW.localId) : null;
+            (0, ki.A)(WW, null !== mW && (0, gi.d)((0, vi.d)()), (() => {
+              (0, gi.i)(mW)
             }))
-          }(BB)
+          }(WW)
         },
         HideUi: () => {
-          JB.o.tM("showUi", !1)
+          wW.l.iZ("showUi", !1)
         }
       },
-      TO = {
+      Ii = {
         HideUi: () => {
-          JB.o.tM("showUi", !0)
+          wW.l.iZ("showUi", !0)
         }
       };
 
-    function bO() {
-      cO || (cO = !0, GB.e(173).then((() => GB(63844))).then((BB => {
-        EO = BB
-      }), (BB => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", BB)
-      })), (0, FO.t)((BB => {
-        BB || !(0, FO.f)() || (0, mO.isMobile)() || !IO.g.getItem("disableFullscreen") || (0, RO.r)() || XB.c.set({
-          openEverythingMenuName: uO.p.SETTINGS
+    function ai() {
+      Bi || (Bi = !0, OW.e(183).then((() => OW(64355))).then((WW => {
+        Xi = WW
+      }), (WW => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", WW)
+      })), (0, ei.z)((WW => {
+        WW || !(0, ei.i)() || (0, oi.isMobile)() || !di.i.getItem("disableFullscreen") || (0, ki.l)() || VW.d.set({
+          openEverythingMenuName: ui.m.SETTINGS
         })
-      })), (0, AO.g)((BB => {
+      })), (0, Mi.g)((WW => {
         let {
-          action: OB,
-          down: GB,
-          press: YB
-        } = BB;
-        var QB, oB;
-        (0, DB.e)() || (GB ? null === (QB = eO[OB]) || void 0 === QB || QB.call(eO, function(BB) {
-          var OB;
-          if (0 === BB || (null === (OB = hO) || void 0 === OB ? void 0 : OB.press) !== BB) {
-            const OB = {
-              press: BB,
-              event: (0, wO.b)("inputAction")
+          action: iW,
+          down: OW,
+          press: mW
+        } = WW;
+        var NW, PW;
+        (0, EW.d)() || (OW ? null === (NW = Gi[iW]) || void 0 === NW || NW.call(Gi, function(WW) {
+          var iW;
+          if (0 === WW || (null === (iW = qi) || void 0 === iW ? void 0 : iW.press) !== WW) {
+            const iW = {
+              press: WW,
+              event: (0, Ci.e)("inputAction")
             };
-            hO = OB, queueMicrotask((() => {
-              hO === OB && (hO = null)
+            qi = iW, queueMicrotask((() => {
+              qi === iW && (qi = null)
             }))
           }
-          return hO.event
-        }(YB)) : null === (oB = TO[OB]) || void 0 === oB || oB.call(TO))
+          return qi.event
+        }(mW)) : null === (PW = Ii[iW]) || void 0 === PW || PW.call(Ii))
       })))
     }
-    var CO = GB(39730),
-      HO = GB(39720),
-      vO = GB(39713);
-    const sO = {
-      completeTask(BB) {
-        var OB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.CompleteTask, (0, IB.m)(BB))
+    var ri = OW(40229),
+      zi = OW(40216),
+      Fi = OW(40213);
+    const Qi = {
+      completeTask(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.CompleteTask, (0, oW.s)(WW))
       },
-      setServerCookie(BB) {
-        var OB;
+      setServerCookie(WW) {
+        var iW;
         let {
-          key: GB,
-          value: YB
-        } = BB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.GeneralCookieSet, (0, IB.p)({
-          zJ: GB,
-          lJ: YB
+          key: OW,
+          value: mW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.GeneralCookieSet, (0, oW.A)({
+          bt: OW,
+          jt: mW
         }))
       },
-      answerUiRequest(BB) {
-        var OB;
+      answerUiRequest(WW) {
+        var iW;
         let {
-          id: GB,
-          UJ: YB
-        } = BB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.UiRequestResp, (0, IB.O)({
-          RM: GB,
-          WM: YB,
-          AM: 5
+          id: OW,
+          ct: mW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.UiRequestResp, (0, oW.V)({
+          jP: OW,
+          UP: mW,
+          kP: 5
         }))
       },
-      chooseRewardedAd(BB) {
-        var OB;
+      chooseRewardedAd(WW) {
+        var iW;
         let {
-          id: GB,
-          UJ: YB
-        } = BB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.UiRequestResponded, (0, IB.M)({
-          id: GB,
-          UJ: YB
+          id: OW,
+          ct: mW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.UiRequestResponded, (0, oW.U)({
+          id: OW,
+          ct: mW
         }))
       },
-      requestLeaderboard(BB) {
-        var OB;
+      requestLeaderboard(WW) {
+        var iW;
         let {
-          category: GB,
-          timeframe: YB,
-          seeTop: DB
-        } = BB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.LeaderboardRequest, {
-          category: GB,
-          timeframe: YB,
-          seeTop: DB
+          category: OW,
+          timeframe: mW,
+          seeTop: EW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.LeaderboardRequest, {
+          category: OW,
+          timeframe: mW,
+          seeTop: EW
         })
       }
     };
-    let xO = !1;
-    const tO = RB.f.sZ / 2,
-      BG = [tO, -tO, -tO, -tO, tO, tO, -tO, tO],
-      OG = [0, 0, 0];
+    let WO = !1;
+    const iO = kW.f.tU / 2,
+      OO = [iO, -iO, -iO, -iO, iO, iO, -iO, iO],
+      mO = [0, 0, 0];
 
-    function GG(BB, OB, GB) {
-      for (let YB = 0; YB < BB.length; YB += 2)
-        if (BB[YB] === OB && BB[YB + 1] === GB) return !0;
+    function EO(WW, iW, OW) {
+      for (let mW = 0; mW < WW.length; mW += 2)
+        if (WW[mW] === iW && WW[mW + 1] === OW) return !0;
       return !1
     }
-    const YG = {
+    const NO = {
       blocksStandingOn: function() {
-        const BB = (0, oB.j)();
-        if (null === BB) return [];
+        const WW = (0, PW.f)();
+        if (null === WW) return [];
         const {
-          api: OB,
-          chunks: GB,
-          tables: YB
-        } = BB;
-        if (!OB.readPosition(OB.localId, OG)) return [];
-        const [DB, QB, jB] = OG, yB = Math.ceil(QB) - 1, JB = [], MB = [];
-        for (let oB = 0; oB < BG.length; oB += 2) {
-          const BB = DB + BG[oB],
-            OB = jB + BG[oB + 1];
-          if (Number.isInteger(BB) || Number.isInteger(OB)) continue;
-          const QB = Math.floor(BB),
-            PB = Math.floor(OB);
-          if (GG(MB, QB, PB)) continue;
-          const zB = GB.SM(QB, yB, PB);
-          YB.isSolidBlockId(zB) && (MB.push(QB, PB), JB.push(YB.nameOfId(zB)))
+          api: iW,
+          chunks: OW,
+          tables: mW
+        } = WW;
+        if (!iW.readPosition(iW.localId, mO)) return [];
+        const [EW, NW, LW] = mO, cW = Math.ceil(NW) - 1, wW = [], tW = [];
+        for (let PW = 0; PW < OO.length; PW += 2) {
+          const WW = EW + OO[PW],
+            iW = LW + OO[PW + 1];
+          if (Number.isInteger(WW) || Number.isInteger(iW)) continue;
+          const NW = Math.floor(WW),
+            ZW = Math.floor(iW);
+          if (EO(tW, NW, ZW)) continue;
+          const xW = OW.NL(NW, cW, ZW);
+          mW.isSolidBlockId(xW) && (tW.push(NW, ZW), wW.push(mW.nameOfId(xW)))
         }
-        return JB
+        return wW
       },
       dropAhead: function() {
-        const BB = (0, oB.j)();
-        return null !== BB && 0 !== (AB.u.playerFlags(BB.api.apiView, 0) & AB.Id.DropAhead)
+        const WW = (0, PW.f)();
+        return null !== WW && 0 !== (MW.z.playerFlags(WW.api.apiView, 0) & MW.Ud.DropAhead)
       }
     };
-    var DG = GB(37650),
-      QG = GB(39782),
-      oG = GB(1400),
-      jG = GB(41667);
-    const yG = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      JG = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var PO = OW(38107),
+      LO = OW(40287),
+      cO = OW(1422),
+      wO = OW(42176);
+    const tO = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      ZO = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function MG() {
-      const BB = new Set;
+    function xO() {
+      const WW = new Set;
       return {
-        add: OB => (BB.add(OB), () => {
-          BB.delete(OB)
+        add: iW => (WW.add(iW), () => {
+          WW.delete(iW)
         }),
         fire() {
-          for (const OB of BB) OB()
+          for (const iW of WW) iW()
         }
       }
     }
-    const PG = Object.freeze([]);
+    const lO = Object.freeze([]);
 
-    function zG(BB, OB) {
-      let GB, {
-        rereads: YB,
-        followLocalId: DB
-      } = OB;
-      const oB = () => (GB = (0, sB.k)(GB, BB()), GB);
+    function AO(WW, iW) {
+      let OW, {
+        rereads: mW,
+        followLocalId: EW
+      } = iW;
+      const PW = () => (OW = (0, zW.t)(OW, WW()), OW);
       return {
-        current: oB,
-        watch(BB) {
-          const OB = (0, pB.b)((OB => {
-            YB(OB) && BB(oB())
+        current: PW,
+        watch(WW) {
+          const iW = (0, AW.e)((iW => {
+            mW(iW) && WW(PW())
           }));
-          if (!DB) return OB;
-          let GB = (0, lB.h)();
-          const jB = (0, QB.z)((() => {
-            const OB = (0, lB.h)();
-            OB !== GB && (GB = OB, BB(oB()))
+          if (!EW) return iW;
+          let OW = (0, lW.g)();
+          const LW = (0, NW.x)((() => {
+            const iW = (0, lW.g)();
+            iW !== OW && (OW = iW, WW(PW()))
           }));
           return () => {
-            OB(), jB()
+            iW(), LW()
           }
         }
       }
     }
-    const lG = {
-        players: zG((function() {
-          const BB = pB.d.ids(),
-            OB = {};
-          for (const QB of BB) {
-            var GB, YB, DB;
-            OB[QB] = {
-              name: null !== (GB = pB.d.getName(QB)) && void 0 !== GB ? GB : null,
-              ranks: null !== (YB = pB.d.getSetting(QB, "ranks")) && void 0 !== YB ? YB : PG,
-              cosmetics: null !== (DB = (0, pB.f)(QB)) && void 0 !== DB ? DB : null
+    const bO = {
+        players: AO((function() {
+          const WW = AW.i.ids(),
+            iW = {};
+          for (const NW of WW) {
+            var OW, mW, EW;
+            iW[NW] = {
+              name: null !== (OW = AW.i.getName(NW)) && void 0 !== OW ? OW : null,
+              ranks: null !== (mW = AW.i.getSetting(NW, "ranks")) && void 0 !== mW ? mW : lO,
+              cosmetics: null !== (EW = (0, AW.m)(NW)) && void 0 !== EW ? EW : null
             }
           }
           return {
-            ids: BB,
-            byId: OB,
-            localId: (0, lB.h)()
+            ids: WW,
+            byId: iW,
+            localId: (0, lW.g)()
           }
         }), {
-          rereads: BB => "roster" !== BB.kind || BB.members || BB.settings.has("ranks"),
+          rereads: WW => "roster" !== WW.kind || WW.members || WW.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: zG((function() {
-          const BB = {};
-          for (const DB of pB.d.ids()) {
-            var OB, GB, YB;
-            BB[DB] = {
-              colour: null !== (OB = pB.d.getSetting(DB, "colorInLobbyLeaderboard")) && void 0 !== OB ? OB : null,
-              values: null !== (GB = pB.d.getSetting(DB, "lobbyLeaderboardValues")) && void 0 !== GB ? GB : null,
-              tags: null !== (YB = pB.d.getSetting(DB, "lobbyLeaderboardTags")) && void 0 !== YB ? YB : null
+        lobbyLeaderboardRows: AO((function() {
+          const WW = {};
+          for (const EW of AW.i.ids()) {
+            var iW, OW, mW;
+            WW[EW] = {
+              colour: null !== (iW = AW.i.getSetting(EW, "colorInLobbyLeaderboard")) && void 0 !== iW ? iW : null,
+              values: null !== (OW = AW.i.getSetting(EW, "lobbyLeaderboardValues")) && void 0 !== OW ? OW : null,
+              tags: null !== (mW = AW.i.getSetting(EW, "lobbyLeaderboardTags")) && void 0 !== mW ? mW : null
             }
           }
-          return BB
+          return WW
         }), {
-          rereads: function(BB) {
-            if ("roster" !== BB.kind) return "reset" === BB.kind;
+          rereads: function(WW) {
+            if ("roster" !== WW.kind) return "reset" === WW.kind;
             const {
-              members: OB,
-              settings: GB
-            } = BB;
-            return OB || GB.has("colorInLobbyLeaderboard") || GB.has("lobbyLeaderboardValues") || GB.has("lobbyLeaderboardTags")
+              members: iW,
+              settings: OW
+            } = WW;
+            return iW || OW.has("colorInLobbyLeaderboard") || OW.has("lobbyLeaderboardValues") || OW.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      pG = {
+      jO = {
         cosmeticsUpdated: {
-          watch: BB => (0, pB.b)((OB => {
-            if ("cosmetics" !== OB.kind) return;
-            const GB = (0, lB.h)();
-            BB(OB.updates.map((BB => {
+          watch: WW => (0, AW.e)((iW => {
+            if ("cosmetics" !== iW.kind) return;
+            const OW = (0, lW.g)();
+            WW(iW.updates.map((WW => {
               let {
-                nB: OB,
-                UB: YB,
-                fB: DB
-              } = BB;
+                EE: iW,
+                NE: mW,
+                PE: EW
+              } = WW;
               return {
-                local: OB === GB,
-                UB: YB,
-                fB: DB
+                local: iW === OW,
+                NE: mW,
+                PE: EW
               }
             })))
           }))
         }
       };
-    var qG = GB(3262),
-      ZG = GB(1822),
-      NG = GB(677),
-      RG = GB(41935);
-    let WG = !1,
-      AG = null;
-    const VG = {
-      setShopOpen(BB) {
-        var OB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.ShopMenuChanged, (0, IB.I)(BB))
+    var UO = OW(3960),
+      kO = OW(1856),
+      sO = OW(683),
+      MO = OW(42432);
+    let KO = !1,
+      SO = null;
+    const YO = {
+      setShopOpen(WW) {
+        var iW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.ShopMenuChanged, (0, oW.P)(WW))
       },
-      buyShopItem(BB) {
-        var OB;
+      buyShopItem(WW) {
+        var iW;
         let {
-          categoryKey: GB,
-          itemKey: YB,
-          userInput: DB
-        } = BB;
-        null === (OB = (0, oB.j)()) || void 0 === OB || OB.send(IB.c.ItemBought, {
-          categoryKey: GB,
-          itemKey: YB,
-          shopVersion: WB.e.get("_shopVersion"),
-          userInput: DB
+          categoryKey: OW,
+          itemKey: mW,
+          userInput: EW
+        } = WW;
+        null === (iW = (0, PW.f)()) || void 0 === iW || iW.send(oW.e.ItemBought, {
+          categoryKey: OW,
+          itemKey: mW,
+          shopVersion: sW.d.get("_shopVersion"),
+          userInput: EW
         })
       }
     };
-    let SG = !1;
-    var nG = GB(5313);
-    const UG = WO.y.LookFrozen | WO.y.ClicksSuppressed;
+    let yO = !1;
+    var TO = OW(5575);
+    const JO = si.y.LookFrozen | si.y.ClicksSuppressed;
 
-    function fG(BB, OB) {
-      var GB;
-      null !== (GB = (0, oB.j)()) && void 0 !== GB && GB.send(BB, OB) || console.warn(`[bloxd-wasm-client] message ${BB} not sent: no live game or the core's command ring is full`)
-    }(0, qB.g)(mB.hb, (BB => {
-      const OB = (0, FB.h)(mB.hb, BB);
-      void 0 !== OB && JB.o.tM("setDiscordReportKey", OB)
+    function hO(WW, iW) {
+      var OW;
+      null !== (OW = (0, PW.f)()) && void 0 !== OW && OW.send(WW, iW) || console.warn(`[bloxd-wasm-client] message ${WW} not sent: no live game or the core's command ring is full`)
+    }(0, bW.j)(uW.pb, (WW => {
+      const iW = (0, dW.g)(uW.pb, WW);
+      void 0 !== iW && wW.l.iZ("setDiscordReportKey", iW)
     }));
-    const kG = {
-      ignorePlayer(BB) {
-        fG(IB.c.IgnoreUser, (0, IB.s)({
-          nM: BB
+    const HO = {
+      ignorePlayer(WW) {
+        hO(oW.e.IgnoreUser, (0, oW.B)({
+          Nt: WW
         }))
       },
-      reportPlayer(BB) {
+      reportPlayer(WW) {
         let {
-          playerId: OB,
-          chatMsgId: GB,
-          policy: YB,
-          details: DB
-        } = BB;
-        fG(IB.c.UserReport, (0, IB.$)({
-          Hy: OB,
-          vy: GB,
-          policy: YB,
-          Jy: DB
+          playerId: iW,
+          chatMsgId: OW,
+          contextChatMsgIds: mW,
+          policy: EW,
+          details: NW
+        } = WW;
+        hO(oW.e.UserReport, (0, oW.gb)({
+          et: iW,
+          vt: OW,
+          policy: EW,
+          PL: NW,
+          gt: mW
         }))
       },
-      reportWorldCodeChat(BB) {
+      reportWorldCodeChat(WW) {
         let {
-          chatMsgId: OB,
-          policy: GB,
-          details: YB
-        } = BB;
-        fG(IB.c.UserReport, (0, IB.$)({
-          Hy: "",
-          vy: OB,
-          policy: GB,
-          Jy: YB
+          chatMsgId: iW,
+          policy: OW,
+          details: mW
+        } = WW;
+        hO(oW.e.UserReport, (0, oW.gb)({
+          et: "",
+          vt: iW,
+          policy: OW,
+          PL: mW,
+          gt: []
         }))
       },
-      requestDiscordReportKey(BB) {
-        fG(IB.c.ReqDiscordReportKey, (0, IB.B)(BB))
+      requestDiscordReportKey(WW) {
+        hO(oW.e.ReqDiscordReportKey, (0, oW.L)(WW))
       },
-      reportLobbyOrGame(BB) {
+      reportLobbyOrGame(WW) {
         let {
-          target: OB,
-          policy: GB,
-          details: YB
-        } = BB;
-        "customGame" === OB ? fG(IB.c.CustomGameReport, (0, IB.o)({
-          policy: GB,
-          Jy: YB
-        })) : fG(IB.c.LobbyReport, (0, IB.u)({
-          policy: GB,
-          Jy: YB
+          target: iW,
+          policy: OW,
+          details: mW
+        } = WW;
+        "customGame" === iW ? hO(oW.e.CustomGameReport, (0, oW.w)({
+          policy: OW,
+          PL: mW
+        })) : hO(oW.e.LobbyReport, (0, oW.E)({
+          policy: OW,
+          PL: mW
         }))
       },
-      updateMyCosmetic(BB) {
-        fG(IB.c.UpdateMyCosmetic, (0, IB.Z)(BB))
+      updateMyCosmetic(WW) {
+        hO(oW.e.UpdateMyCosmetic, (0, oW.db)(WW))
       },
-      holdEmoteWheel(BB) {
-        !BB || VO ? (0, nG.m)(UG, BB ? UG : 0) : JB.o.tM("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(WW) {
+        !WW || Ki ? (0, TO.j)(JO, WW ? JO : 0) : wW.l.iZ("requestEmoteWheelHoldRelease")
       }
     };
-    var dG = GB(42042),
-      KG = GB(9927),
-      uG = GB(40400);
-    const mG = [0, 0, 0],
-      IG = [0, 0, 0],
-      FG = [0, 0, 0],
-      iG = {
-        blockAtViewPoint(BB) {
+    var nO = OW(42519),
+      uO = OW(5725),
+      oO = OW(40960);
+    const dO = [0, 0, 0],
+      eO = [0, 0, 0],
+      vO = [0, 0, 0],
+      gO = {
+        blockAtViewPoint(WW) {
           let {
-            x: OB,
-            y: GB
-          } = BB;
-          const YB = (0, oB.j)();
-          if (null === YB || void 0 === YB || !YB.renderFrame.hasView) return null;
+            x: iW,
+            y: OW
+          } = WW;
+          const mW = (0, PW.f)();
+          if (null === mW || void 0 === mW || !mW.renderFrame.hasView) return null;
           const {
-            renderFrame: DB,
-            clientApi: QB,
-            api: jB
-          } = YB;
-          let yB = 0;
-          return (0, uG.e)(((BB, OB, GB) => (yB = QB.getBlockId(BB, OB, GB), 0 !== yB)), DB.cameraPosition, (0, uG.h)((BB => AB.u.viewProj(jB.apiView, 0, BB)), OB, GB, mG), uG.b, IG, FG) ? {
-            pos: [IG[0], IG[1], IG[2]],
-            normal: [FG[0], FG[1], FG[2]],
-            name: (0, KG.d)(yB)
+            renderFrame: EW,
+            clientApi: NW,
+            api: LW
+          } = mW;
+          let cW = 0;
+          return (0, oO.h)(((WW, iW, OW) => (cW = NW.getBlockId(WW, iW, OW), 0 !== cW)), EW.cameraPosition, (0, oO.k)((WW => MW.z.viewProj(LW.apiView, 0, WW)), iW, OW, dO), oO.d, eO, vO) ? {
+            pos: [eO[0], eO[1], eO[2]],
+            normal: [vO[0], vO[1], vO[2]],
+            name: (0, uO.f)(cW)
           } : null
         }
       },
-      LG = {
-        setBlockHighlight(BB) {
-          var OB;
-          null === (OB = (0, oB.j)()) || void 0 === OB || OB.setBlockHighlight(BB)
+      DO = {
+        setBlockHighlight(WW) {
+          var iW;
+          null === (iW = (0, PW.f)()) || void 0 === iW || iW.setBlockHighlight(WW)
         }
       };
-    var gG = GB(2034),
-      rG = GB(41924),
-      XG = GB(42045),
-      wG = GB(2072),
-      EG = GB(37083),
-      cG = GB(244);
-    const hG = {
+    var VO = OW(2047),
+      pO = OW(42427),
+      fO = OW(42528),
+      CO = OW(2077),
+      XO = OW(37640),
+      BO = OW(232);
+    const qO = {
         icon: ".EntireInventoryWrapper .InvenBodyRight .InvenItem .DrawnBlockIcon",
         fallbackRem: 3.4,
         asked: new Set
       },
-      aG = {
+      RO = {
         icon: ".EntireInventoryWrapper .LazyLoadedItemWrapper .InvenItem .DrawnBlockIcon",
-        fallbackRem: .9 * hG.fallbackRem,
+        fallbackRem: .9 * qO.fallbackRem,
         asked: new Set
       },
-      eG = 2e3,
-      TG = 4;
-    let bG = [],
-      CG = !1,
-      HG = !1,
-      vG = !1;
-    const sG = new Set,
-      xG = [];
-    let tG = 0,
-      BY = null;
+      GO = 2e3,
+      IO = 4;
+    let aO = [],
+      rO = !1,
+      zO = !1,
+      FO = !1;
+    const QO = new Set,
+      Wm = [];
+    let im = 0,
+      Om = null;
 
-    function OY() {
-      return CG && (0, EG.k)()
+    function mm() {
+      return rO && (0, XO.f)()
     }
 
-    function GY() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : YB.gameBridge.latest("inventory");
-      if (vG && !HG) {
-        for (const GB of BB.player) {
-          var OB;
-          if (null !== GB) YY(null !== (OB = GB.icon) && void 0 !== OB ? OB : GB.name, hG)
+    function Em() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mW.gameBridge.latest("inventory");
+      if (FO && !zO) {
+        for (const OW of WW.player) {
+          var iW;
+          if (null !== OW) Nm(null !== (iW = OW.icon) && void 0 !== iW ? iW : OW.name, qO)
         }
-        for (const BB of [...AB.H, ...bG]) YY(BB, aG);
-        QY()
+        for (const WW of [...MW.P, ...aO]) Nm(WW, RO);
+        Lm()
       }
     }
 
-    function YY(BB, OB) {
-      OB.asked.has(BB) || sG.has(BB) || ("model" === YB.gameBridge.lookup("itemIcon", BB).kind ? (OB.asked.add(BB), xG.push({
-        name: BB,
-        slot: OB
-      })) : sG.add(BB))
+    function Nm(WW, iW) {
+      iW.asked.has(WW) || QO.has(WW) || ("model" === mW.gameBridge.lookup("itemIcon", WW).kind ? (iW.asked.add(WW), Wm.push({
+        name: WW,
+        slot: iW
+      })) : QO.add(WW))
     }
 
-    function DY(BB) {
-      bG = BB, GY()
+    function Pm(WW) {
+      aO = WW, Em()
     }
 
-    function QY() {
-      !vG || HG || null !== BY || 0 === xG.length || tG >= TG || (BY = (0, cG.b)((() => {
-        BY = null;
-        const BB = xG.shift();
-        void 0 !== BB && vG && (tG++, async function(BB, OB) {
-          var GB, DB;
-          if (await (0, EG.q)(), !vG) return void OB.asked.delete(BB);
-          if (!(0, EG.k)()) return void(HG = !0);
-          const QB = window.devicePixelRatio,
-            oB = null !== (GB = null === (DB = document.querySelector(OB.icon)) || void 0 === DB ? void 0 : DB.getBoundingClientRect().width) && void 0 !== GB ? GB : 0,
-            jB = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
-            yB = Math.round((oB > 0 ? oB : OB.fallbackRem * jB) * QB);
+    function Lm() {
+      !FO || zO || null !== Om || 0 === Wm.length || im >= IO || (Om = (0, BO.d)((() => {
+        Om = null;
+        const WW = Wm.shift();
+        void 0 !== WW && FO && (im++, async function(WW, iW) {
+          var OW, EW;
+          if (await (0, XO.h)(), !FO) return void iW.asked.delete(WW);
+          if (!(0, XO.f)()) return void(zO = !0);
+          const NW = window.devicePixelRatio,
+            PW = null !== (OW = null === (EW = document.querySelector(iW.icon)) || void 0 === EW ? void 0 : EW.getBoundingClientRect().width) && void 0 !== OW ? OW : 0,
+            LW = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+            cW = Math.round((PW > 0 ? PW : iW.fallbackRem * LW) * NW);
           try {
-            await YB.gameBridge.query("blockIcon", {
-              name: BB,
-              size: yB,
-              lineWidth: (0, wG.b)(QB)
-            }) || OB.asked.delete(BB)
+            await mW.gameBridge.query("blockIcon", {
+              name: WW,
+              size: cW,
+              lineWidth: (0, CO.d)(NW)
+            }) || iW.asked.delete(WW)
           } catch {
-            OB.asked.delete(BB)
+            iW.asked.delete(WW)
           }
-        }(BB.name, BB.slot).finally((() => {
-          tG--, QY()
-        })), QY())
+        }(WW.name, WW.slot).finally((() => {
+          im--, Lm()
+        })), Lm())
       }), {
-        timeoutMs: eG
+        timeoutMs: GO
       }))
     }
-    var oY = GB(4908),
-      jY = GB(4891),
-      yY = GB(42048),
-      JY = GB(3708),
-      MY = GB(3711);
-    let PY = null,
-      zY = null;
+    var cm = OW(5199),
+      wm = OW(5178),
+      tm = OW(42533),
+      Zm = OW(4454),
+      xm = OW(4459);
+    let lm = null,
+      Am = null;
 
-    function lY(BB) {
-      const OB = BB.startsWith(MY.k),
-        [GB, YB = GB, DB = GB] = (OB ? BB.slice(MY.k.length) : BB).split(MY.i);
+    function bm(WW) {
+      const iW = WW.startsWith(xm.k),
+        [OW, mW = OW, EW = OW] = (iW ? WW.slice(xm.k.length) : WW).split(xm.i);
       return {
-        top: GB,
-        left: YB,
-        right: DB,
-        half: OB
+        top: OW,
+        left: mW,
+        right: EW,
+        half: iW
       }
     }
 
-    function pY(BB) {
-      const OB = null === PY ? void 0 : (0, JY.c)(BB),
-        GB = void 0 === OB ? 0 : PY.codes[OB];
-      return 0 === GB ? void 0 : PY.pool[GB - 1]
+    function jm(WW) {
+      const iW = null === lm ? void 0 : (0, Zm.b)(WW),
+        OW = void 0 === iW ? 0 : lm.codes[iW];
+      return 0 === OW ? void 0 : lm.pool[OW - 1]
     }
-    var qY = GB(3705),
-      ZY = GB(4882),
-      NY = GB(4901),
-      RY = GB(36997),
-      WY = GB(37e3);
-    const AY = "item:";
-    let VY = null,
-      SY = null,
-      nY = null,
-      UY = null,
-      fY = !1,
-      kY = !1;
+    var Um = OW(4448),
+      km = OW(5166),
+      sm = OW(5195),
+      Mm = OW(37436),
+      Km = OW(37441);
+    const Sm = "item:";
+    let Ym = null,
+      ym = null,
+      Tm = null,
+      Jm = null,
+      hm = !1,
+      Hm = !1;
 
-    function dY() {
-      return kY || (kY = !0, (0, NY.o)().then((BB => {
-        BB && (0, gG.b)()
-      }))), nY ??= Promise.all([(0, qY.d)(), (zY ??= GB.e(1).then((() => GB(63859))).then((BB => {
+    function nm() {
+      return Hm || (Hm = !0, (0, sm.n)().then((WW => {
+        WW && (0, VO.b)()
+      }))), Tm ??= Promise.all([(0, Um.f)(), (Am ??= OW.e(1).then((() => OW(64378))).then((WW => {
         let {
-          BLOCK_FACE_RUNS: OB,
-          BLOCK_FACES: GB,
-          MAX_FACE_ITEM_ID: YB
-        } = BB;
-        PY = {
-          codes: (0, MY.z)(OB, YB + 1),
-          pool: GB.split(MY.r).map(lY)
+          BLOCK_FACE_RUNS: iW,
+          BLOCK_FACES: OW,
+          MAX_FACE_ITEM_ID: mW
+        } = WW;
+        lm = {
+          codes: (0, xm.y)(iW, mW + 1),
+          pool: OW.split(xm.s).map(bm)
         }
-      }), (BB => {
-        throw zY = null, BB
-      })), zY), (0, WY.f)(), GB.e(220).then((() => GB(34813)))]).then((BB => {
-        let [, , OB, GB] = BB;
-        OB.followBundledTextures(), VY = OB, SY = GB, (0, gG.b)()
-      }), (BB => {
-        nY = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", BB)
-      })), nY
+      }), (WW => {
+        throw Am = null, WW
+      })), Am), (0, Km.d)(), OW.e(224).then((() => OW(35231)))]).then((WW => {
+        let [, , iW, OW] = WW;
+        iW.followBundledTextures(), Ym = iW, ym = OW, (0, VO.b)()
+      }), (WW => {
+        Tm = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", WW)
+      })), Tm
     }
 
-    function KY(BB) {
-      var OB, GB;
-      return null !== (OB = null === (GB = (0, RY.k)()) || void 0 === GB ? void 0 : GB.textureUrl(BB)) && void 0 !== OB ? OB : VY.itemSpriteUrl(BB)
+    function um(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = (0, Mm.f)()) || void 0 === OW ? void 0 : OW.textureUrl(WW)) && void 0 !== iW ? iW : Ym.itemSpriteUrl(WW)
     }
 
-    function uY(BB) {
-      var OB, GB;
-      return null !== (OB = null === (GB = (0, RY.k)()) || void 0 === GB ? void 0 : GB.textureUrl(BB)) && void 0 !== OB ? OB : VY.blockTextureUrl(BB)
+    function om(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = (0, Mm.f)()) || void 0 === OW ? void 0 : OW.textureUrl(WW)) && void 0 !== iW ? iW : Ym.blockTextureUrl(WW)
     }
 
-    function mY(BB) {
-      var OB;
-      return null !== (OB = (0, qY.b)(BB)) && void 0 !== OB ? OB : BB
+    function dm(WW) {
+      var iW;
+      return null !== (iW = (0, Um.b)(WW)) && void 0 !== iW ? iW : WW
     }
 
-    function IY(BB, OB) {
-      var GB, YB, DB;
-      return null !== (GB = null !== (YB = null !== (DB = uY(BB)) && void 0 !== DB ? DB : null === OB || void 0 === OB ? void 0 : OB.rotated[BB]) && void 0 !== YB ? YB : null === OB || void 0 === OB ? void 0 : OB.animated[BB]) && void 0 !== GB ? GB : VY.notFoundUrl()
+    function em(WW, iW) {
+      var OW, mW, EW;
+      return null !== (OW = null !== (mW = null !== (EW = om(WW)) && void 0 !== EW ? EW : null === iW || void 0 === iW ? void 0 : iW.rotated[WW]) && void 0 !== mW ? mW : null === iW || void 0 === iW ? void 0 : iW.animated[WW]) && void 0 !== OW ? OW : Ym.notFoundUrl()
     }
 
-    function FY(BB) {
-      return void 0 !== (0, JY.c)(BB) ? BB : /^[1-9][0-9]*$/.test(BB) ? (0, JY.g)(Number(BB)) : void 0
+    function gm(WW) {
+      return void 0 !== (0, Zm.b)(WW) ? WW : /^[1-9][0-9]*$/.test(WW) ? (0, Zm.d)(Number(WW)) : void 0
     }
 
-    function iY(BB) {
-      var OB;
-      if (BB.startsWith(AY)) {
-        var GB;
-        const OB = (0, qY.b)(BB.slice(5));
-        return null !== (GB = void 0 === OB ? null : KY(OB)) && void 0 !== GB ? GB : VY.notFoundUrl()
+    function Dm(WW) {
+      var iW;
+      if (WW.startsWith(Sm)) {
+        var OW;
+        const iW = (0, Um.b)(WW.slice(5));
+        return null !== (OW = void 0 === iW ? null : um(iW)) && void 0 !== OW ? OW : Ym.notFoundUrl()
       }
-      return null !== (OB = VY.particleUrl(BB)) && void 0 !== OB ? OB : VY.notFoundUrl()
+      return null !== (iW = Ym.particleUrl(WW)) && void 0 !== iW ? iW : Ym.notFoundUrl()
     }
 
-    function LY(BB, OB) {
-      return "StairsBlock" === BB ? BB : OB ? "SlabBlock" : "CubeBlock"
+    function Vm(WW, iW) {
+      return "StairsBlock" === WW ? WW : iW ? "SlabBlock" : "CubeBlock"
     }
-    const gY = {
-        async blockIcon(BB) {
-          var OB;
+    const pm = {
+        async blockIcon(WW) {
+          var iW;
           let {
-            name: YB,
-            size: DB,
-            lineWidth: QB
-          } = BB;
-          await dY();
-          const oB = null !== (OB = FY(YB)) && void 0 !== OB ? OB : YB,
-            jB = (0, NY.f)(oB, DB, QB);
-          if (null !== jB) return jB;
-          const yB = pY(oB),
-            JB = (0, JY.c)(oB),
-            MB = void 0 === JB || null === SY ? void 0 : SY.itemTypeNameOf(JB);
-          if (null === VY || void 0 === yB) return "";
-          const PB = [yB.top, yB.left, yB.right].some((BB => null === uY(BB))),
-            zB = PB ? await (UY ??= GB.e(228).then((() => GB(34878))).then((BB => (fY && (fY = !1, (0, gG.b)()), {
-              rotated: BB.rotatedBlockTextures,
-              animated: BB.animatedBlockTextures
-            })), (BB => (UY = null, fY = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", BB), null))), UY) : null;
-          if (PB && null === zB) return "";
-          const lB = {
-              top: IY(yB.top, zB),
-              left: IY(yB.left, zB),
-              right: IY(yB.right, zB),
-              itemType: LY(MB, yB.half)
+            name: mW,
+            size: EW,
+            lineWidth: NW
+          } = WW;
+          await nm();
+          const PW = null !== (iW = gm(mW)) && void 0 !== iW ? iW : mW,
+            LW = (0, sm.e)(PW, EW, NW);
+          if (null !== LW) return LW;
+          const cW = jm(PW),
+            wW = (0, Zm.b)(PW),
+            tW = void 0 === wW || null === ym ? void 0 : ym.itemTypeNameOf(wW);
+          if (null === Ym || void 0 === cW) return "";
+          const ZW = [cW.top, cW.left, cW.right].some((WW => null === om(WW))),
+            xW = ZW ? await (Jm ??= OW.e(234).then((() => OW(35332))).then((WW => (hm && (hm = !1, (0, VO.b)()), {
+              rotated: WW.rotatedBlockTextures,
+              animated: WW.animatedBlockTextures
+            })), (WW => (Jm = null, hm = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", WW), null))), Jm) : null;
+          if (ZW && null === xW) return "";
+          const lW = {
+              top: em(cW.top, xW),
+              left: em(cW.left, xW),
+              right: em(cW.right, xW),
+              itemType: Vm(tW, cW.half)
             },
-            pB = (0, RY.g)(),
-            qB = 0 === pB ? oB : `${oB}#${pB}`;
-          return (await (0, ZY.c)()).drawBlockIconUrl(qB, DB, QB, (() => lB))
+            AW = (0, Mm.d)(),
+            bW = 0 === AW ? PW : `${PW}#${AW}`;
+          return (await (0, km.e)()).drawBlockIconUrl(bW, EW, NW, (() => lW))
         }
       },
-      rY = {
-        itemIcon: function(BB) {
-          var OB, GB, DB, QB;
-          if (null === VY) return dY(), YB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
-          if ((0, jY.j)(BB)) return {
+      fm = {
+        itemIcon: function(WW) {
+          var iW, OW, EW, NW;
+          if (null === Ym) return nm(), mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(WW);
+          if ((0, wm.h)(WW)) return {
             kind: "icon",
-            url: null !== (GB = null !== (DB = null === (QB = (0, RY.k)()) || void 0 === QB ? void 0 : QB.textureUrl(BB)) && void 0 !== DB ? DB : VY.ingameIconUrl(BB)) && void 0 !== GB ? GB : VY.notFoundUrl()
+            url: null !== (OW = null !== (EW = null === (NW = (0, Mm.f)()) || void 0 === NW ? void 0 : NW.textureUrl(WW)) && void 0 !== EW ? EW : Ym.ingameIconUrl(WW)) && void 0 !== OW ? OW : Ym.notFoundUrl()
           };
-          if (BB.startsWith(jY.c)) return {
+          if (WW.startsWith(wm.d)) return {
             kind: "icon",
-            url: iY(BB.slice(jY.c.length))
+            url: Dm(WW.slice(wm.d.length))
           };
-          if (0 === (0, JY.k)()) return (0, yY.b)(), YB.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(BB);
-          const oB = null !== (OB = FY(BB)) && void 0 !== OB ? OB : BB,
-            jB = (0, JY.c)(oB),
-            yB = void 0 === jB ? void 0 : SY.itemTypeNameOf(jB);
-          if (void 0 !== pY(oB)) return {
+          if (0 === (0, Zm.f)()) return (0, tm.e)(), mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(WW);
+          const PW = null !== (iW = gm(WW)) && void 0 !== iW ? iW : WW,
+            LW = (0, Zm.b)(PW),
+            cW = void 0 === LW ? void 0 : ym.itemTypeNameOf(LW);
+          if (void 0 !== jm(PW)) return {
             kind: "drawnBlock"
           };
-          const JB = function(BB) {
-            var OB;
-            return null !== (OB = KY(mY(BB))) && void 0 !== OB ? OB : VY.notFoundUrl()
-          }(oB);
-          if ((0, NY.n)(oB) && ! function(BB) {
-              const OB = (0, RY.k)();
-              return null !== OB && (null !== OB.textureUrl(mY(BB)) || (0, NY.e)(BB).some((BB => null !== OB.modelUrl(BB))))
-            }(oB)) return {
+          const wW = function(WW) {
+            var iW;
+            return null !== (iW = um(dm(WW))) && void 0 !== iW ? iW : Ym.notFoundUrl()
+          }(PW);
+          if ((0, sm.k)(PW) && ! function(WW) {
+              const iW = (0, Mm.f)();
+              return null !== iW && (null !== iW.textureUrl(dm(WW)) || (0, sm.d)(WW).some((WW => null !== iW.modelUrl(WW))))
+            }(PW)) return {
             kind: "model",
-            url: JB,
-            drawn: (0, NY.j)(oB)
+            url: wW,
+            drawn: (0, sm.h)(PW)
           };
-          if ("Gun" === yB) return {
+          if ("Gun" === cW) return {
             kind: "gun",
-            url: JB
+            url: wW
           };
-          if (void 0 !== jB && "GrayscaleArmour" === SY.itemTypeOf(jB) || Object.hasOwn(oY.e, oB)) {
-            var MB;
-            const OB = null !== (MB = (0, oY.g)(BB)) && void 0 !== MB ? MB : (0, oY.g)(oB);
-            if (OB) return {
+          if (void 0 !== LW && "GrayscaleArmour" === ym.itemTypeOf(LW) || Object.hasOwn(cm.b, PW)) {
+            var tW;
+            const iW = null !== (tW = (0, cm.c)(WW)) && void 0 !== tW ? tW : (0, cm.c)(PW);
+            if (iW) return {
               kind: "item",
-              url: JB,
-              tint: OB
+              url: wW,
+              tint: iW
             }
           }
           return {
             kind: "item",
-            url: JB
+            url: wW
           }
         },
-        hasIcon: function(BB) {
-          return void 0 !== FY(BB) || (0, jY.j)(BB) || BB.startsWith(jY.c)
+        hasIcon: function(WW) {
+          return void 0 !== gm(WW) || (0, wm.h)(WW) || WW.startsWith(wm.d)
         },
-        isItemName: function(BB) {
-          return void 0 !== FY(BB)
+        isItemName: function(WW) {
+          return void 0 !== gm(WW)
         }
       };
 
-    function XY() {
-      (0, YB.installPageSources)({
+    function Cm() {
+      (0, mW.installPageSources)({
         commands: {
-          ...YB.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: rG.o,
-          prewarmCreativeIcons: DY
+          ...mW.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: pO.m,
+          prewarmCreativeIcons: Pm
         },
-        queries: gY,
+        queries: pm,
         lookups: {
-          ...YB.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...rY,
-          bR: rG.h,
-          drawCallStats: XG.i,
-          iconsDrawAhead: OY
+          ...mW.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...fm,
+          YM: pO.f,
+          drawCallStats: fO.f,
+          iconsDrawAhead: mm
         }
-      }), (0, gG.b)(), dY(), CG || (CG = !0, JB.o.subscribe("gameJoined", (() => {
-        var BB;
-        vG = !1, null === (BB = BY) || void 0 === BB || BB(), BY = null;
+      }), (0, VO.b)(), nm(), rO || (rO = !0, wW.l.subscribe("gameJoined", (() => {
+        var WW;
+        FO = !1, null === (WW = Om) || void 0 === WW || WW(), Om = null;
         for (const {
-            name: OB,
-            slot: GB
+            name: iW,
+            slot: OW
           }
-          of xG.splice(0)) GB.asked.delete(OB)
-      })), JB.o.subscribe("gamePlayable", (() => {
-        vG = !0, GY()
-      })), YB.gameBridge.subscribe("inventory", GY), YB.gameBridge.subscribe("itemIconsVersion", (() => {
-        sG.clear(), GY()
+          of Wm.splice(0)) OW.asked.delete(iW)
+      })), wW.l.subscribe("gamePlayable", (() => {
+        FO = !0, Em()
+      })), mW.gameBridge.subscribe("inventory", Em), mW.gameBridge.subscribe("itemIconsVersion", (() => {
+        QO.clear(), Em()
       })))
     }
-    var wY = GB(633),
-      EY = GB(40406);
+    var Xm = OW(632),
+      Bm = OW(40969);
 
-    function cY(BB) {
-      if (null === BB || void 0 === BB || !BB.isCoreRunning) return null;
+    function qm(WW) {
+      if (null === WW || void 0 === WW || !WW.isCoreRunning) return null;
       const {
-        api: OB,
-        chunks: GB,
-        items: YB,
-        tables: DB
-      } = BB;
+        api: iW,
+        chunks: OW,
+        items: mW,
+        tables: EW
+      } = WW;
       return {
         playerFeet() {
-          const BB = OB.pR(OB.localId);
-          return null !== BB && void 0 !== BB && BB.every(Number.isFinite) ? BB : null
+          const WW = iW.Vk(iW.localId);
+          return null !== WW && void 0 !== WW && WW.every(Number.isFinite) ? WW : null
         },
-        chunkBlocks: BB => GB.isLoaded(BB[0], BB[1], BB[2]) ? (BB, OB, YB) => GB.SM(BB, OB, YB) : null,
-        blockName: BB => DB.nameOfId(BB),
+        chunkBlocks: WW => OW.isLoaded(WW[0], WW[1], WW[2]) ? (WW, iW, mW) => OW.NL(WW, iW, mW) : null,
+        blockName: WW => EW.nameOfId(WW),
         inventory: () => ({
-          slots: YB.playerItems().map((BB => BB ? {
-            name: BB.name,
-            amount: BB.amount
+          slots: mW.playerItems().map((WW => WW ? {
+            name: WW.name,
+            amount: WW.amount
           } : null)),
-          heldSlot: YB.selectedSlot
+          heldSlot: mW.selectedSlot
         }),
         nearby() {
-          const GB = [];
-          for (let DB = 0; DB < OB.idStr.length; DB++) {
-            var YB;
-            const QB = OB.idStr[DB],
-              oB = OB.serverIds[DB],
-              jB = OB.kinds[DB];
-            if (null === QB || OB.isLocal(oB) || jB >>> AB.c !== AB.t.Lifeform) continue;
-            const yB = OB.pR(oB),
-              JB = wY.j[jB & AB.g];
-            yB && void 0 !== JB && GB.push({
-              kind: "Player" === JB ? "player" : JB,
-              name: null !== (YB = BB.clientApi.getEntityName(QB)) && void 0 !== YB ? YB : null,
-              position: yB
+          const OW = [];
+          for (let EW = 0; EW < iW.idStr.length; EW++) {
+            var mW;
+            const NW = iW.idStr[EW],
+              PW = iW.serverIds[EW],
+              LW = iW.kinds[EW];
+            if (null === NW || iW.isLocal(PW) || LW >>> MW.e !== MW.v.Lifeform) continue;
+            const cW = iW.Vk(PW),
+              wW = Xm.i[LW & MW.g];
+            cW && void 0 !== wW && OW.push({
+              kind: "Player" === wW ? "player" : wW,
+              name: null !== (mW = WW.clientApi.getEntityName(NW)) && void 0 !== mW ? mW : null,
+              position: cW
             })
           }
-          return GB
+          return OW
         },
         droppedItems() {
-          let BB = 0;
-          for (let GB = 0; GB < OB.idStr.length; GB++) null !== OB.idStr[GB] && OB.kinds[GB] >>> AB.c === AB.t.Item && BB++;
-          return BB
+          let WW = 0;
+          for (let OW = 0; OW < iW.idStr.length; OW++) null !== iW.idStr[OW] && iW.kinds[OW] >>> MW.e === MW.v.Item && WW++;
+          return WW
         }
       }
     }
-    const hY = {
-        worldCodeAiChunk: BB => Promise.resolve((0, EY.d)(cY((0, oB.j)()), BB)),
-        worldCodeAiGameState: () => Promise.resolve((0, EY.h)(cY((0, oB.j)())))
+    const Rm = {
+        worldCodeAiChunk: WW => Promise.resolve((0, Bm.d)(qm((0, PW.f)()), WW)),
+        worldCodeAiGameState: () => Promise.resolve((0, Bm.e)(qm((0, PW.f)())))
       },
-      aY = function(BB) {
-        const OB = MG(),
-          YB = MG(),
-          DB = new Set,
-          QB = new Set,
-          oB = () => {
-            var OB, GB;
-            return null !== (OB = null === (GB = BB.runtime()) || void 0 === GB ? void 0 : GB.currentViewer) && void 0 !== OB ? OB : null
+      Gm = function(WW) {
+        const iW = xO(),
+          mW = xO(),
+          EW = new Set,
+          NW = new Set,
+          PW = () => {
+            var iW, OW;
+            return null !== (iW = null === (OW = WW.runtime()) || void 0 === OW ? void 0 : OW.currentViewer) && void 0 !== iW ? iW : null
           };
-        let jB = null,
-          yB = null;
-        const MB = (BB, OB) => ({
-            current: BB,
-            watch(GB) {
-              let YB = BB();
-              return OB.add((() => {
-                const OB = BB();
-                OB !== YB && (YB = OB, GB(OB))
+        let LW = null,
+          cW = null;
+        const tW = (WW, iW) => ({
+            current: WW,
+            watch(OW) {
+              let mW = WW();
+              return iW.add((() => {
+                const iW = WW();
+                iW !== mW && (mW = iW, OW(iW))
               }))
             }
           }),
-          zB = BB => ({
-            watch: OB => (BB.add(OB), () => {
-              BB.delete(OB)
+          xW = WW => ({
+            watch: iW => (WW.add(iW), () => {
+              WW.delete(iW)
             })
           }),
-          lB = BB => {
-            const OB = oB(),
-              GB = null === OB || void 0 === OB ? void 0 : OB.view;
-            OB && GB && OB.seek(Math.max(0, Math.min(GB.totalTicks - 1, GB.kP + BB * PB.Cd)))
+          lW = WW => {
+            const iW = PW(),
+              OW = null === iW || void 0 === iW ? void 0 : iW.view;
+            iW && OW && iW.seek(Math.max(0, Math.min(OW.totalTicks - 1, OW.hZ + WW * ZW.Jd)))
           },
-          pB = {
-            replay: MB((() => {
-              var BB;
-              const OB = oB(),
-                GB = null !== (BB = null === OB || void 0 === OB ? void 0 : OB.view) && void 0 !== BB ? BB : null;
-              return null === OB || null === GB || GB.state === PB.sd.None ? (jB = null, null) : (jB = (0, sB.k)(jB, {
-                id: OB.id,
-                kP: GB.kP,
-                totalTicks: GB.totalTicks,
-                pI: PB.Cd,
-                playing: GB.state === PB.sd.Playing,
-                speed: GB.speed,
-                cameraMode: GB.cameraMode,
-                freecam: "freecam" === GB.cameraMode
-              }), jB)
-            }), OB),
-            replayEdits: MB((() => {
-              var BB;
-              const OB = oB(),
-                GB = null !== (BB = null === OB || void 0 === OB ? void 0 : OB.view) && void 0 !== BB ? BB : null;
-              return null === OB || null === GB || GB.state === PB.sd.None ? (yB = null, null) : (yB = (0, sB.k)(yB, {
-                cameraKeyframes: [...OB.keyframes],
-                playbackMark: GB.mark,
-                fileName: OB.fileName,
-                unsavedChanges: OB.unsavedChanges,
-                suggestSaveAs: OB.suggestSaveAs
-              }), yB)
-            }), OB),
-            replayRecorder: MB((() => {
-              var OB, GB;
-              return null !== (OB = null === (GB = BB.runtime()) || void 0 === GB ? void 0 : GB.recorder.current) && void 0 !== OB ? OB : jG.c.states.replayRecorder.current()
-            }), YB),
+          AW = {
+            replay: tW((() => {
+              var WW;
+              const iW = PW(),
+                OW = null !== (WW = null === iW || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null;
+              return null === iW || null === OW || OW.state === ZW.td.None ? (LW = null, null) : (LW = (0, zW.t)(LW, {
+                id: iW.id,
+                hZ: OW.hZ,
+                totalTicks: OW.totalTicks,
+                Fv: ZW.Jd,
+                playing: OW.state === ZW.td.Playing,
+                speed: OW.speed,
+                cameraMode: OW.cameraMode,
+                freecam: "freecam" === OW.cameraMode
+              }), LW)
+            }), iW),
+            replayEdits: tW((() => {
+              var WW;
+              const iW = PW(),
+                OW = null !== (WW = null === iW || void 0 === iW ? void 0 : iW.view) && void 0 !== WW ? WW : null;
+              return null === iW || null === OW || OW.state === ZW.td.None ? (cW = null, null) : (cW = (0, zW.t)(cW, {
+                cameraKeyframes: [...iW.keyframes],
+                playbackMark: OW.mark,
+                fileName: iW.fileName,
+                unsavedChanges: iW.unsavedChanges,
+                suggestSaveAs: iW.suggestSaveAs
+              }), cW)
+            }), iW),
+            replayRecorder: tW((() => {
+              var iW, OW;
+              return null !== (iW = null === (OW = WW.runtime()) || void 0 === OW ? void 0 : OW.recorder.current) && void 0 !== iW ? iW : wO.c.states.replayRecorder.current()
+            }), mW),
             replayVideoExporting: {
-              current: QG.b,
-              watch: BB => (0, JB.p)("replayViewer|videoExportChanged", (() => {
-                BB((0, QG.b)())
+              current: LO.b,
+              watch: WW => (0, wW.n)("replayViewer|videoExportChanged", (() => {
+                WW((0, LO.b)())
               }))
             }
           },
-          qB = {
-            replayUiActionRequested: zB(QB),
-            replayViewerRequested: zB(DB)
+          bW = {
+            replayUiActionRequested: xW(NW),
+            replayViewerRequested: xW(EW)
           },
-          ZB = BB => {
-            for (const OB of DB) OB(BB)
+          jW = WW => {
+            for (const iW of EW) iW(WW)
           },
-          NB = () => {
-            var YB;
-            !0 === (null === (YB = oB()) || void 0 === YB ? void 0 : YB.isOpen) && Promise.all([GB.e(111), GB.e(78)]).then((() => GB(63849))).then((GB => {
+          UW = () => {
+            var mW;
+            !0 === (null === (mW = PW()) || void 0 === mW ? void 0 : mW.isOpen) && Promise.all([OW.e(113), OW.e(79)]).then((() => OW(64363))).then((OW => {
               let {
-                startWasmReplayVideoExport: YB
-              } = GB;
-              return YB({
-                viewer: oB,
+                startWasmReplayVideoExport: mW
+              } = OW;
+              return mW({
+                viewer: PW,
                 canvas: () => {
-                  var OB, GB;
-                  return null !== (OB = null === (GB = BB.canvas) || void 0 === GB ? void 0 : GB.call(BB)) && void 0 !== OB ? OB : null
+                  var iW, OW;
+                  return null !== (iW = null === (OW = WW.canvas) || void 0 === OW ? void 0 : OW.call(WW)) && void 0 !== iW ? iW : null
                 },
-                watchViewer: OB.add,
-                requestViewer: ZB
+                watchViewer: iW.add,
+                requestViewer: jW
               })
-            }), (BB => {
-              console.error("Couldn't load the video export", BB), oG.NotificationProvider.showAlertPopup({
+            }), (WW => {
+              console.error("Couldn't load the video export", WW), cO.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((BB => {
-              console.error("The video export failed", BB)
+            })).catch((WW => {
+              console.error("The video export failed", WW)
             }))
           },
-          RB = {
-            replayAction(BB) {
-              if ((0, QG.b)()) return;
-              const OB = oB();
-              switch (BB) {
+          kW = {
+            replayAction(WW) {
+              if ((0, LO.b)()) return;
+              const iW = PW();
+              switch (WW) {
                 case "replaySkipBack":
-                  lB(-1);
+                  lW(-1);
                   break;
                 case "replaySkipForward":
-                  lB(1);
+                  lW(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== OB && void 0 !== OB && OB.view && OB.setSpeed((0, DG.d)(OB.view.speed, "replaySpeedUp" === BB ? "up" : "down"));
+                  null !== iW && void 0 !== iW && iW.view && iW.setSpeed((0, PO.k)(iW.view.speed, "replaySpeedUp" === WW ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === OB || void 0 === OB || OB.addKeyframe()
+                  null === iW || void 0 === iW || iW.addKeyframe()
               }
             },
-            setReplayPlaying(BB) {
-              var OB, GB;
-              (0, QG.b)() || (BB ? null === (OB = oB()) || void 0 === OB || OB.play() : null === (GB = oB()) || void 0 === GB || GB.pause())
+            setReplayPlaying(WW) {
+              var iW, OW;
+              (0, LO.b)() || (WW ? null === (iW = PW()) || void 0 === iW || iW.play() : null === (OW = PW()) || void 0 === OW || OW.pause())
             },
-            seekReplay(BB) {
-              var OB;
+            seekReplay(WW) {
+              var iW;
               let {
-                kP: GB,
-                ignorePlaybackMark: YB
-              } = BB;
-              null === (OB = oB()) || void 0 === OB || OB.seek(GB, null !== YB && void 0 !== YB && YB)
+                hZ: OW,
+                ignorePlaybackMark: mW
+              } = WW;
+              null === (iW = PW()) || void 0 === iW || iW.seek(OW, null !== mW && void 0 !== mW && mW)
             },
-            setReplayCameraMode(BB) {
-              var OB;
-              null === (OB = oB()) || void 0 === OB || OB.setCameraMode(BB)
+            setReplayCameraMode(WW) {
+              var iW;
+              null === (iW = PW()) || void 0 === iW || iW.setCameraMode(WW)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(BB) {
-              var OB;
-              null === (OB = oB()) || void 0 === OB || OB.setKeyframe(BB)
+            setReplayCameraKeyframe(WW) {
+              var iW;
+              null === (iW = PW()) || void 0 === iW || iW.setKeyframe(WW)
             },
-            moveReplayCameraKeyframe(BB) {
-              var OB;
+            moveReplayCameraKeyframe(WW) {
+              var iW;
               let {
-                from: GB,
-                to: YB
-              } = BB;
-              null === (OB = oB()) || void 0 === OB || OB.moveKeyframe(GB, YB)
+                from: OW,
+                to: mW
+              } = WW;
+              null === (iW = PW()) || void 0 === iW || iW.moveKeyframe(OW, mW)
             },
-            deleteReplayCameraKeyframes(BB) {
-              var OB;
+            deleteReplayCameraKeyframes(WW) {
+              var iW;
               let {
-                start: GB,
-                end: YB
-              } = BB;
-              null === (OB = oB()) || void 0 === OB || OB.deleteKeyframes(GB, YB)
+                start: OW,
+                end: mW
+              } = WW;
+              null === (iW = PW()) || void 0 === iW || iW.deleteKeyframes(OW, mW)
             },
-            setReplayPlaybackMark(BB) {
-              var OB;
-              null === (OB = oB()) || void 0 === OB || OB.setMark(BB)
+            setReplayPlaybackMark(WW) {
+              var iW;
+              null === (iW = PW()) || void 0 === iW || iW.setMark(WW)
             },
-            cropReplay(BB) {
-              var OB, GB;
+            cropReplay(WW) {
+              var iW, OW;
               let {
-                start: YB,
-                end: DB
-              } = BB;
-              return !(0, QG.b)() && (null !== (OB = null === (GB = oB()) || void 0 === GB ? void 0 : GB.crop(YB, DB)) && void 0 !== OB && OB)
+                start: mW,
+                end: EW
+              } = WW;
+              return !(0, LO.b)() && (null !== (iW = null === (OW = PW()) || void 0 === OW ? void 0 : OW.crop(mW, EW)) && void 0 !== iW && iW)
             },
-            holdReplayForShaderPackFailure(BB) {
-              const OB = oB();
-              OB && (OB.holdForShaderPackFailure(), function(BB) {
-                GB.e(130).then((() => GB(39925))).then((OB => {
+            holdReplayForShaderPackFailure(WW) {
+              const iW = PW();
+              iW && (iW.holdForShaderPackFailure(), function(WW) {
+                OW.e(138).then((() => OW(40448))).then((iW => {
                   let {
-                    shaderPackPage: GB
-                  } = OB;
-                  GB.block(BB)
-                })).catch((BB => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", BB)
+                    shaderPackPage: OW
+                  } = iW;
+                  OW.block(WW)
+                })).catch((WW => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", WW)
                 }))
-              }(BB))
+              }(WW))
             },
             exportReplayVideo() {
-              NB()
+              UW()
             },
             toggleRecording() {
-              var OB;
-              null === (OB = BB.runtime()) || void 0 === OB || OB.recorder.toggleRecording()
+              var iW;
+              null === (iW = WW.runtime()) || void 0 === iW || iW.recorder.toggleRecording()
             },
             saveClip() {
-              var OB;
-              null === (OB = BB.runtime()) || void 0 === OB || OB.recorder.saveClip()
+              var iW;
+              null === (iW = WW.runtime()) || void 0 === iW || iW.recorder.saveClip()
             },
-            setRecorderPrefs(OB) {
-              var GB;
+            setRecorderPrefs(iW) {
+              var OW;
               let {
-                clipping: YB,
-                clipSeconds: DB
-              } = OB;
-              null === (GB = BB.runtime()) || void 0 === GB || GB.recorder.setPrefs(YB, DB)
+                clipping: mW,
+                clipSeconds: EW
+              } = iW;
+              null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.setPrefs(mW, EW)
             },
-            setReplayViewerOpen(OB) {
-              var GB;
-              (0, ZO.f)(OB) && (null === (GB = BB.runtime()) || void 0 === GB || GB.recorder.viewerShown(OB))
+            setReplayViewerOpen(iW) {
+              var OW;
+              (0, ji.g)(iW) && (null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.viewerShown(iW))
             },
-            recordFlyingMiddleText(OB) {
-              var GB;
+            recordFlyingMiddleText(iW) {
+              var OW;
               let {
-                content: YB,
-                VB: DB,
-                angle: QB,
-                SB: oB
-              } = OB;
-              null === (GB = BB.runtime()) || void 0 === GB || GB.recorder.recordFlyingText(JSON.stringify(YB), DB, QB, oB)
+                content: mW,
+                RN: EW,
+                angle: NW,
+                GN: PW
+              } = iW;
+              null === (OW = WW.runtime()) || void 0 === OW || OW.recorder.recordFlyingText(JSON.stringify(mW), EW, NW, PW)
             },
-            dragReplayCamera(OB) {
-              var GB;
+            dragReplayCamera(iW) {
+              var OW;
               let {
-                dx: YB,
-                dy: DB
-              } = OB;
-              null === (GB = BB.freecam()) || void 0 === GB || GB.drag(YB, DB)
+                dx: mW,
+                dy: EW
+              } = iW;
+              null === (OW = WW.freecam()) || void 0 === OW || OW.drag(mW, EW)
             },
-            moveReplayFreecam(OB) {
-              var GB;
-              null === (GB = BB.freecam()) || void 0 === GB || GB.move(OB)
+            moveReplayFreecam(iW) {
+              var OW;
+              null === (OW = WW.freecam()) || void 0 === OW || OW.move(iW)
             },
-            holdReplayFreecamVertical(OB) {
-              var GB;
+            holdReplayFreecamVertical(iW) {
+              var OW;
               let {
-                action: YB,
-                sJ: DB
-              } = OB;
-              null === (GB = BB.freecam()) || void 0 === GB || GB.holdVertical(YB, DB)
+                action: mW,
+                BL: EW
+              } = iW;
+              null === (OW = WW.freecam()) || void 0 === OW || OW.holdVertical(mW, EW)
             }
           },
-          WB = BB => {
-            var OB;
-            const GB = oB(),
-              YB = null !== (OB = null === GB || void 0 === GB ? void 0 : GB.view) && void 0 !== OB ? OB : null;
-            yG.has(BB) ? (BB => {
-              for (const OB of QB) OB(BB)
-            })(BB) : JG.has(BB) ? RB.replayAction(BB) : "replayPlayPause" === BB ? GB && YB && YB.state !== PB.sd.None && RB.setReplayPlaying(YB.state !== PB.sd.Playing) : "replayChangeCameraMode" === BB ? null === GB || void 0 === GB || GB.cycleCameraMode() : "replayExit" === BB ? !0 === (null === GB || void 0 === GB ? void 0 : GB.inPlayback) && (0, iO.l)("/") : "replayExportVideo" === BB && NB()
+          sW = WW => {
+            var iW;
+            const OW = PW(),
+              mW = null !== (iW = null === OW || void 0 === OW ? void 0 : OW.view) && void 0 !== iW ? iW : null;
+            tO.has(WW) ? (WW => {
+              for (const iW of NW) iW(WW)
+            })(WW) : ZO.has(WW) ? kW.replayAction(WW) : "replayPlayPause" === WW ? OW && mW && mW.state !== ZW.td.None && kW.setReplayPlaying(mW.state !== ZW.td.Playing) : "replayChangeCameraMode" === WW ? null === OW || void 0 === OW || OW.cycleCameraMode() : "replayExit" === WW ? !0 === (null === OW || void 0 === OW ? void 0 : OW.inPlayback) && (0, vi.k)("/") : "replayExportVideo" === WW && UW()
           };
-        let AB = !1;
+        let MW = !1;
         return {
-          states: pB,
-          events: qB,
-          commands: RB,
+          states: AW,
+          events: bW,
+          commands: kW,
           lookups: {
             replayCamera() {
-              var OB, GB, YB;
-              return !0 !== (null === (OB = oB()) || void 0 === OB ? void 0 : OB.isOpen) ? null : null !== (GB = null === (YB = BB.cameraView) || void 0 === YB ? void 0 : YB.call(BB)) && void 0 !== GB ? GB : null
+              var iW, OW, mW;
+              return !0 !== (null === (iW = PW()) || void 0 === iW ? void 0 : iW.isOpen) ? null : null !== (OW = null === (mW = WW.cameraView) || void 0 === mW ? void 0 : mW.call(WW)) && void 0 !== OW ? OW : null
             },
             leaveGameReloadsPage() {
-              var BB;
-              return !0 === (null === (BB = oB()) || void 0 === BB ? void 0 : BB.inPlayback)
+              var WW;
+              return !0 === (null === (WW = PW()) || void 0 === WW ? void 0 : WW.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var BB;
-              const GB = !0 === (null === (BB = oB()) || void 0 === BB ? void 0 : BB.inPlayback);
-              GB !== AB && (AB = GB, JB.o.tM("connectedGameChanged")), OB.fire()
+              var WW;
+              const OW = !0 === (null === (WW = PW()) || void 0 === WW ? void 0 : WW.inPlayback);
+              OW !== MW && (MW = OW, wW.l.iZ("connectedGameChanged")), iW.fire()
             },
-            recorderChanged: YB.fire,
-            keyDown: BB => {
-              var OB;
-              switch (BB) {
+            recorderChanged: mW.fire,
+            keyDown: WW => {
+              var iW;
+              switch (WW) {
                 case "recordGame":
-                  return void RB.toggleRecording();
+                  return void kW.toggleRecording();
                 case "recordClip":
-                  return void((0, ZO.b)() || RB.saveClip())
-              }(0, QG.b)() || ("replayViewerOpen" !== BB ? BB.startsWith("replay") && ((0, ZO.b)() || !0 === (null === (OB = oB()) || void 0 === OB ? void 0 : OB.inPlayback)) && WB(BB) : ZB("toggle"))
+                  return void((0, ji.e)() || kW.saveClip())
+              }(0, LO.b)() || ("replayViewerOpen" !== WW ? WW.startsWith("replay") && ((0, ji.e)() || !0 === (null === (iW = PW()) || void 0 === iW ? void 0 : iW.inPlayback)) && sW(WW) : jW("toggle"))
             }
           }
         }
       }({
-        runtime: DB.l,
+        runtime: EW.n,
         cameraView: () => {
-          var BB;
-          const OB = null === (BB = (0, oB.j)()) || void 0 === BB ? void 0 : BB.renderFrame;
-          if (!OB) return null;
-          const [GB, YB, DB] = OB.cameraPosition, [QB, jB, yB] = OB.cameraDirection;
+          var WW;
+          const iW = null === (WW = (0, PW.f)()) || void 0 === WW ? void 0 : WW.renderFrame;
+          if (!iW) return null;
+          const [OW, mW, EW] = iW.cameraPosition, [NW, LW, cW] = iW.cameraDirection;
           return {
-            position: [GB, YB, DB],
-            direction: [QB, jB, yB]
+            position: [OW, mW, EW],
+            direction: [NW, LW, cW]
           }
         },
         canvas: () => {
-          var BB, OB, GB;
-          return null !== (BB = null === (OB = (GB = (0, QB.O)()).canvas) || void 0 === OB ? void 0 : OB.call(GB)) && void 0 !== BB ? BB : null
+          var WW, iW, OW;
+          return null !== (WW = null === (iW = (OW = (0, NW.K)()).canvas) || void 0 === iW ? void 0 : iW.call(OW)) && void 0 !== WW ? WW : null
         },
-        freecam: DB.i
+        freecam: EW.j
       }),
-      eY = {
+      Im = {
         states: {
-          ...JO,
-          ...lO.j,
-          ...aY.states,
-          ...lG,
-          ...cB
+          ...wi,
+          ...li.f,
+          ...Gm.states,
+          ...bO,
+          ...CW
         },
         events: {
-          ...MO,
-          ...ZB,
-          ...lO.g,
-          ...kB.d,
-          ...dG.j,
-          ...aY.events,
-          ...pG,
-          ...fB.h
+          ...ti,
+          ...jW,
+          ...li.d,
+          ...JW.b,
+          ...nO.k,
+          ...Gm.events,
+          ...jO,
+          ...TW.k
         },
         commands: {
-          ...UB,
-          ...PO,
-          ...NB,
-          ...lO.c,
-          ...sO,
-          ...kG,
-          ...fB.d,
-          ...rO,
-          ...aY.commands,
-          ...VG,
-          ...hB,
-          ...LG,
-          ...pO
+          ...yW,
+          ...Zi,
+          ...UW,
+          ...li.b,
+          ...Qi,
+          ...HO,
+          ...TW.g,
+          ...Vi,
+          ...Gm.commands,
+          ...YO,
+          ...XW,
+          ...DO,
+          ...Ai
         },
         queries: {
-          ...lO.h,
-          ...hY
+          ...li.e,
+          ...Rm
         },
         lookups: {
-          ...zO,
-          ...LB,
-          ...dG.n,
-          ...aY.lookups,
-          ...nB,
-          ...YG,
-          ...iG,
-          ...aB
+          ...xi,
+          ...vW,
+          ...nO.l,
+          ...Gm.lookups,
+          ...YW,
+          ...NO,
+          ...gO,
+          ...BW
         }
       };
 
-    function TY() {
-      (0, jB.f)(qB.i), (0, DB.m)(aY.feed), (0, kB.h)(), xO || (xO = !0, (0, qB.g)(mB.k, (BB => {
-        const OB = (0, FB.h)(mB.k, BB);
-        "string" === typeof OB && Promise.resolve().then((() => GB(4073))).then((BB => {
+    function am() {
+      (0, LW.e)(bW.k), (0, EW.q)(Gm.feed), (0, JW.c)(), WO || (WO = !0, (0, bW.j)(uW.g, (WW => {
+        const iW = (0, dW.g)(uW.g, WW);
+        "string" === typeof iW && Promise.resolve().then((() => OW(4866))).then((WW => {
           let {
-            onCosmeticPackGranted: GB
-          } = BB;
-          GB(OB)
+            onCosmeticPackGranted: OW
+          } = WW;
+          OW(iW)
         }))
-      })), (0, qB.g)(mB.bb, (BB => {
-        const OB = (0, FB.h)(mB.bb, BB);
-        "number" === typeof OB && JB.o.tM("serverUpdating", Date.now() + OB, !0)
-      })), (0, qB.g)(mB.D, (BB => {
-        const OB = (0, FB.h)(mB.D, BB);
-        if ((0, FB.e)(OB)) {
+      })), (0, bW.j)(uW.kb, (WW => {
+        const iW = (0, dW.g)(uW.kb, WW);
+        "number" === typeof iW && wW.l.iZ("serverUpdating", Date.now() + iW, !0)
+      })), (0, bW.j)(uW.F, (WW => {
+        const iW = (0, dW.g)(uW.F, WW);
+        if ((0, dW.d)(iW)) {
           const {
-            BB: BB,
-            OB: GB
-          } = OB;
-          (0, HO.d)({
-            BB: "string" === typeof BB ? BB : null,
-            OB: "string" === typeof GB ? GB : null
+            cN: WW,
+            wN: OW
+          } = iW;
+          (0, zi.d)({
+            cN: "string" === typeof WW ? WW : null,
+            wN: "string" === typeof OW ? OW : null
           })
         }
-      })), (0, qB.g)(MB.oc.NewUiRequest, (BB => {
-        const OB = (0, FB.l)(BB);
-        (0, FB.e)(OB) && "number" === typeof OB.id && (0, FB.e)(OB.clientParameters) && (0, vO.d)(OB.id, OB.clientParameters)
-      })), (0, qB.g)(mB.V, (BB => {
-        const OB = (0, FB.h)(mB.V, BB);
-        "number" === typeof OB && (0, vO.f)(OB)
-      })), (0, qB.e)(vO.c), (0, qB.g)(MB.oc.UiRequestPopup, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ((0, FB.e)(OB) && "number" === typeof OB.id && ("string" === typeof OB.text || (0, FB.e)(OB.text) && "string" === typeof OB.text.translationKey)) {
-          const BB = OB.id;
-          (0, vO.j)(BB, OB.text, !0 === OB.destructive, (OB => {
-            sO.answerUiRequest({
-              id: BB,
-              UJ: OB
+      })), (0, bW.j)(tW.uc.NewUiRequest, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && "number" === typeof iW.id && (0, dW.d)(iW.clientParameters) && (0, Fi.f)(iW.id, iW.clientParameters)
+      })), (0, bW.j)(uW.ab, (WW => {
+        const iW = (0, dW.g)(uW.ab, WW);
+        "number" === typeof iW && (0, Fi.h)(iW)
+      })), (0, bW.i)(Fi.c), (0, bW.j)(tW.uc.UiRequestPopup, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW) && "number" === typeof iW.id && ("string" === typeof iW.text || (0, dW.d)(iW.text) && "string" === typeof iW.text.translationKey)) {
+          const WW = iW.id;
+          (0, Fi.j)(WW, iW.text, !0 === iW.destructive, (iW => {
+            Qi.answerUiRequest({
+              id: WW,
+              ct: iW
             })
           }))
         }
-      })), (0, qB.g)(MB.oc.TopRightHelper, (BB => {
-        const OB = (0, FB.l)(BB);
-        void 0 !== OB && JB.o.tM("TopRightHelper", OB, !0)
-      })), (0, qB.g)(MB.oc.TaskProgress, (BB => {
-        const OB = (0, FB.l)(BB);
-        (0, FB.e)(OB) && "string" === typeof OB.taskId && "number" === typeof OB.progress && (0, CO.e)({
-          taskId: OB.taskId,
-          progress: OB.progress
+      })), (0, bW.j)(tW.uc.TopRightHelper, (WW => {
+        const iW = (0, dW.j)(WW);
+        void 0 !== iW && wW.l.iZ("TopRightHelper", iW, !0)
+      })), (0, bW.j)(tW.uc.TaskProgress, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && "string" === typeof iW.taskId && "number" === typeof iW.progress && (0, ri.d)({
+          taskId: iW.taskId,
+          progress: iW.progress
         })
-      }))), SG || (SG = !0, (0, qB.g)(mB.t, (BB => {
-        const OB = (0, FB.h)(mB.t, BB);
-        (0, FB.e)(OB) && JB.o.tM("showShopFromServer", {
-          toggle: OB.fO,
-          kO: OB.kO
+      }))), yO || (yO = !0, (0, bW.j)(uW.o, (WW => {
+        const iW = (0, dW.g)(uW.o, WW);
+        (0, dW.d)(iW) && wW.l.iZ("showShopFromServer", {
+          toggle: iW.Hi,
+          ni: iW.ni
         }, !0)
-      })), (0, qB.g)(MB.oc.OverShopInfo, (BB => {
-        const OB = (0, FB.l)(BB);
-        (0, FB.e)(OB) && JB.o.tM("overShopInfo", OB.info, !0)
-      })), (0, qB.g)(MB.oc.ShowShopTutorial, (() => {
-        JB.o.tM("showShopTutorial", null, !0)
-      }))), WG || (WG = !0, (0, qB.d)((() => {
-        var BB;
-        (0, qG.resetLeaveEvents)(), null === (BB = AG) || void 0 === BB || BB(), AG = (0, qB.b)() ? (0, NG.onVisitSessionGameServerConnected)(qB.b) : null, (0, qB.b)() || JB.o.kN()
-      })), (0, qB.g)(MB.oc.SetCookie, (BB => {
-        const OB = (0, FB.l)(BB),
-          GB = (0, iO.c)().gameNameWithVariation;
-        (0, FB.e)(OB) && "string" === typeof OB.key && null !== GB && (0, ZG.setCookie)(GB, OB.key, OB.value)
-      })), (0, qB.g)(MB.oc.LeaveValues, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ((0, FB.e)(OB) && "string" === typeof OB.leaveEventType) {
+      })), (0, bW.j)(tW.uc.OverShopInfo, (WW => {
+        const iW = (0, dW.j)(WW);
+        (0, dW.d)(iW) && wW.l.iZ("overShopInfo", iW.info, !0)
+      })), (0, bW.j)(tW.uc.ShowShopTutorial, (() => {
+        wW.l.iZ("showShopTutorial", null, !0)
+      }))), KO || (KO = !0, (0, bW.e)((() => {
+        var WW;
+        (0, UO.resetLeaveEvents)(), null === (WW = SO) || void 0 === WW || WW(), SO = (0, bW.c)() ? (0, sO.onVisitSessionGameServerConnected)(bW.c) : null, (0, bW.c)() || wW.l.pU()
+      })), (0, bW.j)(tW.uc.SetCookie, (WW => {
+        const iW = (0, dW.j)(WW),
+          OW = (0, vi.d)().gameNameWithVariation;
+        (0, dW.d)(iW) && "string" === typeof iW.key && null !== OW && (0, kO.setCookie)(OW, iW.key, iW.value)
+      })), (0, bW.j)(tW.uc.LeaveValues, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW) && "string" === typeof iW.leaveEventType) {
           const {
-            leaveEventType: BB,
-            category: GB,
-            subCategory: YB,
-            value: DB
-          } = OB;
-          (0, qG.updateLeaveValue)({
-            leaveEventType: BB,
-            category: GB,
-            subCategory: YB,
-            value: DB
+            leaveEventType: WW,
+            category: OW,
+            subCategory: mW,
+            value: EW
+          } = iW;
+          (0, UO.updateLeaveValue)({
+            leaveEventType: WW,
+            category: OW,
+            subCategory: mW,
+            value: EW
           })
         }
-      })), (0, qB.g)(MB.oc.CustomAnalyticsEvent, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ((0, FB.e)(OB) && "string" === typeof OB.cat1) {
+      })), (0, bW.j)(tW.uc.CustomAnalyticsEvent, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW) && "string" === typeof iW.cat1) {
           const {
-            cat1: BB,
-            cat2: GB,
-            cat3: YB,
-            value: DB
-          } = OB;
-          (0, qG.logCustomAnalyticsEvent)({
-            cat1: BB,
-            cat2: GB,
-            cat3: YB,
-            value: DB
+            cat1: WW,
+            cat2: OW,
+            cat3: mW,
+            value: EW
+          } = iW;
+          (0, UO.logCustomAnalyticsEvent)({
+            cat1: WW,
+            cat2: OW,
+            cat3: mW,
+            value: EW
           })
         }
-      })), (0, qB.g)(MB.oc.ProgressionEvent, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ((0, FB.e)(OB)) {
+      })), (0, bW.j)(tW.uc.ProgressionEvent, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW)) {
           const {
-            type: BB,
-            location1: GB,
-            location2: YB,
-            location3: DB,
-            score: QB
-          } = OB;
-          (0, qG.logProgressionEvent)({
-            type: BB,
-            location1: GB,
-            location2: YB,
-            location3: DB,
-            score: QB
+            type: WW,
+            location1: OW,
+            location2: mW,
+            location3: EW,
+            score: NW
+          } = iW;
+          (0, UO.logProgressionEvent)({
+            type: WW,
+            location1: OW,
+            location2: mW,
+            location3: EW,
+            score: NW
           })
         }
-      })), (0, qB.g)(MB.oc.ResourceEvent, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ((0, FB.e)(OB)) {
+      })), (0, bW.j)(tW.uc.ResourceEvent, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW)) {
           const {
-            type: BB,
-            resourceType: GB,
-            amount: YB,
-            category: DB,
-            itemName: QB
-          } = OB;
-          (0, qG.logResourceEvent)({
-            type: BB,
-            resourceType: GB,
-            amount: YB,
-            category: DB,
-            itemName: QB
+            type: WW,
+            resourceType: OW,
+            amount: mW,
+            category: EW,
+            itemName: NW
+          } = iW;
+          (0, UO.logResourceEvent)({
+            type: WW,
+            resourceType: OW,
+            amount: mW,
+            category: EW,
+            itemName: NW
           })
         }
-      })), (0, qB.g)(MB.oc.LeaderboardResponse, (BB => {
-        const OB = (0, FB.l)(BB);
-        if ((0, FB.e)(OB)) {
+      })), (0, bW.j)(tW.uc.LeaderboardResponse, (WW => {
+        const iW = (0, dW.j)(WW);
+        if ((0, dW.d)(iW)) {
           const {
-            category: BB,
-            timeframe: GB,
-            data: YB
-          } = OB;
-          JB.o.tM("leaderboardResponse", {
-            category: BB,
-            timeframe: GB,
-            data: YB
+            category: WW,
+            timeframe: OW,
+            data: mW
+          } = iW;
+          wW.l.iZ("leaderboardResponse", {
+            category: WW,
+            timeframe: OW,
+            data: mW
           })
         }
-      })), (0, qB.g)(mB.z, (BB => {
-        const OB = (0, FB.h)(mB.z, BB);
-        "string" === typeof OB && (0, RG.d)(BB.conn, OB)
-      })), (0, qB.g)(mB.B, (BB => {
-        const OB = (0, FB.h)(mB.B, BB);
-        "string" === typeof OB && console.error(`[logErrorToConsole]: ${OB}`)
-      }))), rB(), (0, dG.c)(), gO || (gO = !0, (0, qB.g)(mB.j, (BB => {
-        const OB = (0, FB.h)(mB.j, BB);
-        void 0 !== OB && (0, LO.i)(OB)
-      }))), bO(), KO(), bB || (bB = !0, (0, QB.w)(CB)), YB.gameBridge.attach(eY), XY()
+      })), (0, bW.j)(uW.z, (WW => {
+        const iW = (0, dW.g)(uW.z, WW);
+        "string" === typeof iW && (0, MO.b)(WW.conn, iW)
+      })), (0, bW.j)(uW.C, (WW => {
+        const iW = (0, dW.g)(uW.C, WW);
+        "string" === typeof iW && console.error(`[logErrorToConsole]: ${iW}`)
+      }))), DW(), (0, nO.c)(), Di || (Di = !0, (0, bW.j)(uW.f, (WW => {
+        const iW = (0, dW.g)(uW.f, WW);
+        void 0 !== iW && (0, gi.k)(iW)
+      }))), ai(), ni(), GW || (GW = !0, (0, NW.v)(IW)), mW.gameBridge.attach(Im), Cm()
     }
   },
-  36997: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => MB,
-      g: () => yB,
-      k: () => jB,
-      o: () => JB
+  37441: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW,
+      d: () => LW
     });
-    var YB = GB(2034);
-    let DB = null,
-      QB = 0;
-    const oB = new Set;
+    var mW = OW(37444);
+    let EW = null,
+      NW = null;
 
-    function jB() {
-      return DB
+    function PW() {
+      return EW ??= OW.e(74).then((() => OW(42663))).catch((WW => {
+        throw EW = null, WW
+      })), EW
     }
 
-    function yB() {
-      return QB
-    }
-
-    function JB(BB) {
-      DB = BB, QB++, (0, YB.b)();
-      for (const OB of oB) OB()
-    }
-
-    function MB(BB) {
-      oB.add(BB)
+    function LW() {
+      return NW ??= Promise.all([PW(), (0, mW.e)()]).then((WW => {
+        let [iW] = WW;
+        return iW
+      }), (WW => {
+        throw NW = null, WW
+      })), NW
     }
   },
-  37e3: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      f: () => jB
+  37646: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    var YB = GB(37004);
-    let DB = null,
-      QB = null;
-
-    function oB() {
-      return DB ??= GB.e(73).then((() => GB(42193))).catch((BB => {
-        throw DB = null, BB
-      })), DB
-    }
-
-    function jB() {
-      return QB ??= Promise.all([oB(), (0, YB.e)()]).then((BB => {
-        let [OB] = BB;
-        return OB
-      }), (BB => {
-        throw QB = null, BB
-      })), QB
-    }
-  },
-  37085: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB
-    });
-    const YB = {
-      wait: function(BB) {
-        return new Promise((OB => {
-          setTimeout(OB, BB)
+    const mW = {
+      wait: function(WW) {
+        return new Promise((iW => {
+          setTimeout(iW, WW)
         }))
       },
       stallMs: 2e4
     };
-    class DB {
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YB;
-        this.url = BB, this.options = OB, this.timing = GB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
+    class EW {
+      constructor(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mW;
+        this.url = WW, this.options = iW, this.timing = OW, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = WW
       }
       ready() {
         if (null === this.fetched) {
-          const BB = new AbortController;
-          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).then((OB => (this.fetchAbort === BB && (this.fetchAbort = null), OB)))
+          const WW = new AbortController;
+          this.fetchAbort = WW, this.fetched = this.fetchWithRetries(WW.signal).then((iW => (this.fetchAbort === WW && (this.fetchAbort = null), iW)))
         }
         return this.fetched
       }
@@ -2820,56 +2596,56 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(BB) {
-        for (let OB = 0;; OB++) {
-          const GB = new URL(this.url);
-          if (OB > 0 && GB.searchParams.set("cache-bust", `${Date.now()}-${OB}`), await this.fetchWhole(GB, BB)) return this.scriptUrl = GB, !0;
-          if (OB >= 3 || BB.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** OB), BB.aborted) return !1
+      async fetchWithRetries(WW) {
+        for (let iW = 0;; iW++) {
+          const OW = new URL(this.url);
+          if (iW > 0 && OW.searchParams.set("cache-bust", `${Date.now()}-${iW}`), await this.fetchWhole(OW, WW)) return this.scriptUrl = OW, !0;
+          if (iW >= 3 || WW.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** iW), WW.aborted) return !1
         }
       }
-      async fetchWhole(BB, OB) {
-        const GB = new AbortController;
-        let YB;
-        const DB = () => {
-            clearTimeout(YB), YB = setTimeout((() => {
-              GB.abort()
+      async fetchWhole(WW, iW) {
+        const OW = new AbortController;
+        let mW;
+        const EW = () => {
+            clearTimeout(mW), mW = setTimeout((() => {
+              OW.abort()
             }), this.timing.stallMs)
           },
-          QB = () => {
-            GB.abort()
+          NW = () => {
+            OW.abort()
           };
-        OB.addEventListener("abort", QB, {
+        iW.addEventListener("abort", NW, {
           once: !0
-        }), DB();
+        }), EW();
         try {
-          var oB;
-          const OB = await fetch(BB, {
-            signal: GB.signal
+          var PW;
+          const iW = await fetch(WW, {
+            signal: OW.signal
           });
-          if (!OB.ok) return !1;
-          const YB = null === (oB = OB.body) || void 0 === oB ? void 0 : oB.getReader();
-          if (!YB) return !1;
+          if (!iW.ok) return !1;
+          const mW = null === (PW = iW.body) || void 0 === PW ? void 0 : PW.getReader();
+          if (!mW) return !1;
           for (;;) {
             const {
-              done: BB
-            } = await YB.read();
-            if (BB) return !0;
-            DB()
+              done: WW
+            } = await mW.read();
+            if (WW) return !0;
+            EW()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(YB), OB.removeEventListener("abort", QB)
+          clearTimeout(mW), iW.removeEventListener("abort", NW)
         }
       }
     }
   },
-  37753: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB
+  38214: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW
     });
-    const YB = {
+    const mW = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -3029,21 +2805,21 @@ export const modules = {
       }
     }
   },
-  39741: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      f: () => DB
+  40242: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW,
+      f: () => EW
     });
-    const YB = ["description", "label"];
+    const mW = ["description", "label"];
 
-    function DB(BB) {
-      const OB = BB.type;
+    function EW(WW) {
+      const iW = WW.type;
       return {
-        type: OB,
-        params: BB[OB]
+        type: iW,
+        params: WW[iW]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,77 +1,35 @@
 export const id = 643;
 export const ids = [643];
 export const modules = {
-  45408: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB
+  54093: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW
     });
-    var YB = GB(40864);
-    const DB = "instancesDeclaration",
-      QB = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
-    YB.b.IncludesShadersStoreWGSL[DB] || (YB.b.IncludesShadersStoreWGSL[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
+    var mW = OW(41392);
+    const EW = "helperFunctions",
+      NW = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
+    mW.c.IncludesShadersStore[EW] || (mW.c.IncludesShadersStore[EW] = NW);
+    const PW = {
+      name: EW,
+      shader: NW
     }
   },
-  45492: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB
+  64537: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      rgbdEncodePixelShader: () => cW
     });
-    var YB = GB(40864);
-    const DB = "instancesVertex",
-      QB = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
-    YB.b.IncludesShadersStoreWGSL[DB] || (YB.b.IncludesShadersStoreWGSL[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
-    }
-  },
-  45378: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB
-    });
-    var YB = GB(40864);
-    const DB = "meshUboDeclaration",
-      QB = "struct Mesh {world : mat4x4<f32>,\nvisibility : f32,};var<uniform> mesh : Mesh;\n#define WORLD_UBO\n";
-    YB.b.IncludesShadersStoreWGSL[DB] || (YB.b.IncludesShadersStoreWGSL[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
-    }
-  },
-  45374: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
-    });
-    var YB = GB(40864);
-    const DB = "sceneUboDeclaration",
-      QB = "struct Scene {viewProjection : mat4x4<f32>,\n#ifdef MULTIVIEW\nviewProjectionR : mat4x4<f32>,\n#endif \nview : mat4x4<f32>,\nprojection : mat4x4<f32>,\nvEyePosition : vec4<f32>,\ninverseProjection : mat4x4<f32>,};\n#define SCENE_UBO\nvar<uniform> scene : Scene;\n";
-    YB.b.IncludesShadersStoreWGSL[DB] || (YB.b.IncludesShadersStoreWGSL[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
-    }
-  },
-  64450: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      greasedLineVertexShaderWGSL: () => PB
-    });
-    var YB = GB(40864),
-      DB = GB(45408),
-      QB = GB(45374),
-      oB = GB(45378),
-      jB = GB(45492);
-    const yB = "greasedLineVertexShader",
-      JB = "#include<instancesDeclaration>\n#include<sceneUboDeclaration>\n#include<meshUboDeclaration>\nattribute grl_widths: f32;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute grl_offsets: vec3f; \n#endif\nattribute grl_colorPointers: f32;attribute position: vec3f;varying grlCounters: f32;varying grlColorPointer: f32;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute grl_nextAndCounters: vec4f;attribute grl_previousAndSide: vec4f;uniform grlResolution: vec2f;uniform grlAspect: f32;uniform grlWidth: f32;uniform grlSizeAttenuation: f32;fn grlFix(i: vec4f,aspect: f32)->vec2f {var res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute grl_slopes: vec3f;attribute grl_counters: f32;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\n#include<instancesVertex>\nvertexOutputs.grlColorPointer=vertexInputs.grl_colorPointers;let grlMatrix: mat4x4f=scene.viewProjection*mesh.world ;\n#ifdef GREASED_LINE_CAMERA_FACING\nlet grlBaseWidth: f32=uniforms.grlWidth;let grlPrevious: vec3f=vertexInputs.grl_previousAndSide.xyz;let grlSide: f32=vertexInputs.grl_previousAndSide.w;let grlNext: vec3f=vertexInputs.grl_nextAndCounters.xyz;vertexOutputs.grlCounters=vertexInputs.grl_nextAndCounters.w;let grlWidth:f32=grlBaseWidth*vertexInputs.grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvar grlPositionOffset: vec3f=vertexInputs.grl_offsets;\n#else\nvar grlPositionOffset=vec3f(0.);\n#endif\nlet positionUpdated: vec3f=vertexInputs.position+grlPositionOffset;let worldDir: vec3f=normalize(grlNext-grlPrevious);let nearPosition: vec3f=positionUpdated+(worldDir*0.001);let grlFinalPosition: vec4f=grlMatrix*vec4f(positionUpdated,1.0);let screenNearPos: vec4f=grlMatrix*vec4(nearPosition,1.0);let grlLinePosition: vec2f=grlFix(grlFinalPosition,uniforms.grlAspect);let grlLineNearPosition: vec2f=grlFix(screenNearPos,uniforms.grlAspect);let grlDir: vec2f=normalize(grlLineNearPosition-grlLinePosition);var grlNormal: vec4f=vec4f(-grlDir.y,grlDir.x,0.0,1.0);let grlHalfWidth: f32=0.5*grlWidth;\n#if defined(GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM)\ngrlNormal.x*=-grlHalfWidth;grlNormal.y*=-grlHalfWidth;\n#else\ngrlNormal.x*=grlHalfWidth;grlNormal.y*=grlHalfWidth;\n#endif\ngrlNormal*=scene.projection;if (uniforms.grlSizeAttenuation==1.) {grlNormal.x*=grlFinalPosition.w;grlNormal.y*=grlFinalPosition.w;let pr=vec4f(uniforms.grlResolution,0.0,1.0)*scene.projection;grlNormal.x/=pr.x;grlNormal.y/=pr.y;}\nvertexOutputs.position=vec4f(grlFinalPosition.xy+grlNormal.xy*grlSide,grlFinalPosition.z,grlFinalPosition.w);\n#else\nvertexOutputs.grlCounters=vertexInputs.grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nlet grlPositionOffset: vec3f=vertexInputs.grl_offsets;\n#else\nlet grlPositionOffset: vec3f=vec3f(0.0);\n#endif\nvertexOutputs.position=grlMatrix*vec4f(vertexInputs.position+grlPositionOffset+vertexInputs.grl_slopes*vertexInputs.grl_widths,1.0);\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
-    YB.b.ShadersStoreWGSL[yB] || (YB.b.ShadersStoreWGSL[yB] = JB);
-    const MB = [DB.b, QB.d, oB.c, jB.b];
-    for (const zB of MB) YB.b.IncludesShadersStoreWGSL[zB.name] || (YB.b.IncludesShadersStoreWGSL[zB.name] = zB.shader);
-    const PB = {
-      name: yB,
-      shader: JB
+    var mW = OW(41392),
+      EW = OW(54093);
+    const NW = "rgbdEncodePixelShader",
+      PW = "varying vec2 vUV;uniform sampler2D textureSampler;\n#include<helperFunctions>\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=toRGBD(texture2D(textureSampler,vUV).rgb);}";
+    mW.c.ShadersStore[NW] || (mW.c.ShadersStore[NW] = PW);
+    const LW = [EW.b];
+    for (const wW of LW) mW.c.IncludesShadersStore[wW.name] || (mW.c.IncludesShadersStore[wW.name] = wW.shader);
+    const cW = {
+      name: NW,
+      shader: PW
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

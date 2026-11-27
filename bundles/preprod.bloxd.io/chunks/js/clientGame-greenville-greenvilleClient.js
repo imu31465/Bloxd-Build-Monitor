@@ -1,30 +1,56 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  37888: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      e: () => EW,
+      f: () => NW
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var mW = OW(62);
 
-    function QB(BB) {
-      let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+    function EW(WW) {
+      return LW(WW, cW)
+    }
+
+    function NW(WW) {
+      return LW(WW, wW)
+    }
+
+    function PW(WW) {
+      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
+    }
+
+    function LW(WW, iW) {
+      const [, OW] = (0, mW.useState)(null);
+      return (0, mW.useEffect)((() => {
+        if (0 === WW) return;
+        const mW = window.setInterval((() => {
+          const mW = iW(WW);
+          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
+            endsAt: WW,
+            value: mW
+          }))
+        }), 250);
+        return () => {
+          window.clearInterval(mW)
+        }
+      }), [WW, iW]), iW(WW)
+    }
+
+    function cW(WW) {
+      return (WW - performance.now()) / 1e3
+    }
+
+    function wW(WW) {
+      return Math.max(0, Math.ceil(cW(WW)))
     }
   },
-  37361: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB
+  37917: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    const YB = [{
+    const mW = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -41,58 +67,79 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function DB(BB, OB, GB) {
-      const DB = Math.abs(BB - OB),
-        QB = Date.now() - GB;
-      for (const oB of YB)
-        if (BB < oB.maxDist) return DB >= oB.hardUpdateDist || QB > oB.timeBetweenSoftChecks && DB >= oB.softUpdateDist;
+    function EW(WW, iW, OW) {
+      const EW = Math.abs(WW - iW),
+        NW = Date.now() - OW;
+      for (const PW of mW)
+        if (WW < PW.maxDist) return EW >= PW.hardUpdateDist || NW > PW.timeBetweenSoftChecks && EW >= PW.softUpdateDist;
       return !1
     }
   },
-  39151: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      g: () => jB
+  39672: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW,
+      g: () => LW
     });
-    var YB = GB(353),
-      DB = GB(34813),
-      QB = GB(3708);
+    var mW = OW(344),
+      EW = OW(35231),
+      NW = OW(4454);
 
-    function oB(BB) {
-      const OB = (0, QB.c)(BB);
-      return (0, YB.bc)(BB, void 0 === OB ? void 0 : (0, DB.displayNameOf)(OB))
+    function PW(WW) {
+      const iW = (0, NW.b)(WW);
+      return (0, mW.Wb)(WW, void 0 === iW ? void 0 : (0, EW.displayNameOf)(iW))
     }
 
-    function jB(BB, OB) {
-      return BB(oB(OB))
+    function LW(WW, iW) {
+      return WW(PW(iW))
     }
   },
-  39154: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      f: () => QB
+  39677: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => NW,
+      e: () => LW,
+      g: () => PW
     });
-    const YB = new WeakMap;
+    var mW = OW(3451);
+    const EW = "(max-height: 420px), (max-width: 650px)";
 
-    function DB(BB) {
-      let OB = YB.get(BB);
-      return OB || (OB = {
-        hidden: BB.hidden,
+    function NW() {
+      return (0, mW.b)(EW)
+    }
+
+    function PW(WW) {
+      return (0, mW.e)(EW, WW)
+    }
+
+    function LW() {
+      return (0, mW.c)(EW)
+    }
+  },
+  39679: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      h: () => NW
+    });
+    const mW = new WeakMap;
+
+    function EW(WW) {
+      let iW = mW.get(WW);
+      return iW || (iW = {
+        hidden: WW.hidden,
         x: NaN,
         y: NaN
-      }, YB.set(BB, OB)), OB
+      }, mW.set(WW, iW)), iW
     }
 
-    function QB(BB, OB) {
-      const GB = DB(BB);
-      GB.hidden !== OB && (GB.hidden = OB, BB.hidden = OB)
+    function NW(WW, iW) {
+      const OW = EW(WW);
+      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
     }
 
-    function oB(BB, OB, GB) {
-      const YB = DB(BB);
-      YB.x === OB && YB.y === GB || (YB.x = OB, YB.y = GB, BB.style.translate = `${OB}vw ${GB}vh`)
+    function PW(WW, iW, OW) {
+      const mW = EW(WW);
+      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

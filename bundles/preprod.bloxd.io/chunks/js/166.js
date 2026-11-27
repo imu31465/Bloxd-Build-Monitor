@@ -1,109 +1,166 @@
 export const id = 166;
 export const ids = [166];
 export const modules = {
-  7280: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      AdinPlaySdkAdaptor: () => MB
+  7708: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      BloxdFirebaseSdk: () => xW
     });
-    var YB = GB(1341),
-      DB = GB(1168),
-      QB = GB(224),
-      oB = GB(3262),
-      jB = GB(3268);
-
-    function yB(BB) {
-      let OB = 0;
-      BB("addEventListener", 2, ((BB, GB) => {
-        if (!GB) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
-        !1 === BB.gdprApplies && (0, oB.noteNoGdprChoiceComing)();
-        const YB = function(BB) {
-          const OB = "useractioncomplete" === BB.eventStatus || "tcloaded" === BB.eventStatus && !!BB.tcString;
-          return BB.gdprApplies && OB ? jB.d.every((OB => !0 === BB.purpose.consents[OB])) : null
-        }(BB);
-        if (null === YB) return;
-        const DB = ++OB;
-        if (!YB) return void(0, oB.updateAnalyticsConsent)(!1);
-        const QB = window.__tcfapi;
-        QB ? QB("getNonIABVendorConsents", 2, ((BB, GB) => {
-          var YB;
-          DB === OB && (0, oB.updateAnalyticsConsent)(GB && !0 === (null === (YB = BB.nonIabVendorConsents) || void 0 === YB ? void 0 : YB[5]))
-        })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
-      }))
-    }
-    const JB = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
-    class MB extends YB.c {
-      constructor() {
-        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = JB
-      }
+    var mW = OW(1964),
+      EW = OW(3960),
+      NW = OW(109),
+      PW = OW(100),
+      LW = OW(1787),
+      cW = OW(2152);
+    const wW = {
+      apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+      authDomain: "bloxd-ee1aa.firebaseapp.com",
+      projectId: "bloxd-ee1aa",
+      storageBucket: "bloxd-ee1aa.appspot.com",
+      messagingSenderId: "758847442742",
+      appId: "1:758847442742:web:7bb74eb261641e30f02d97"
+    };
+    var tW = OW(1888),
+      ZW = OW(1813);
+    class xW {
+      constructor() {}
       static async setup() {
-        return (0, QB.canonicaliseZonesWhenIdle)(JB), (0, oB.setUpGtag)({
-            tcfCmp: !0
-          }), await (0, DB.b)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"),
-          function() {
-            if (window.__tcfapi) return void yB(window.__tcfapi);
-            let BB = 0;
-            const OB = window.setInterval((() => {
-              BB++;
-              const GB = window.__tcfapi;
-              GB ? (window.clearInterval(OB), yB(GB)) : BB >= 150 && window.clearInterval(OB)
-            }), 200)
-          }(), new MB
+        try {
+          return await xW.setupInternal()
+        } catch (WW) {
+          return console.error("Failed to setup Firebase SDK:", WW), null
+        }
       }
-      playRewarded(BB, OB) {
-        if ("undefined" !== typeof window.aiptag.adplayer) {
-          console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
-          const GB = "video_reward";
-          window.aiptag.cmd.player.push((function() {
-            window.aiptag.adplayer.startPreRoll({
-              alias: GB
-            })
-          })), window.adStartSoPause(BB, {
-            onFailCb: OB
-          })
-        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), OB()
-      }
-      playVideoAd(BB, OB) {
-        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (OB ? ` (alias: ${OB})` : "")), window.aiptag.cmd.player.push((function() {
-          window.aiptag.adplayer.startPreRoll({
-            alias: OB
-          })
-        })), window.adStartSoPause(BB)) : (BB(), console.error("AIP ad lib not loaded, no ad playing"))
-      }
-      willRequestBanner() {
-        return "undefined" !== typeof window.aiptag.adplayer
-      }
-      renderBanner(BB) {
-        if (!this.willRequestBanner()) return void console.log("AD: User has adblock, not requesting new banners");
-        const {
-          divId: OB,
-          alias: GB
-        } = BB;
-        window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.display({
-            adUnitName: OB,
-            alias: GB
-          })
-        })), console.log("AD: Requested aip banner", document.getElementById(BB.divId), GB ? `(alias: ${GB})` : "")
-      }
-      clearBanner(BB) {
-        "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.destroy(BB.divId)
-        })), console.log(`AD: Clearing aip banner ad ${BB.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
-      }
-      setBannerAutoRefreshEnabled(BB, OB) {
-        window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.setAutoRefresh(BB.divId, OB)
-        }))
-      }
-      newPageSession() {
-        console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
-          window.__VM.push((function(BB, OB) {
-            OB.Instances.pageManager.newPageSession(!1)
+      static async setupInternal() {
+        const WW = await Promise.all([OW.e(303), OW.e(302)]).then((() => OW(42026))),
+          iW = await Promise.all([OW.e(303), OW.e(304)]).then((() => OW(42045))),
+          lW = await Promise.all([OW.e(303), OW.e(305)]).then((() => OW(42048))),
+          AW = WW.initializeApp({
+            ...wW,
+            measurementId: EW.bloxdGa4MeasurementId
+          });
+        (0, EW.setUpGtag)(), window.gtag("config", EW.bloxdGa4MeasurementId), (0, EW.markBloxdGa4Configured)(), window.gtag("config", "AW-16469618203");
+        const bW = iW.getAnalytics(AW),
+          jW = {
+            portal: NW.currentUrl.getSearchParam("portal") || "root",
+            loggedIn: !1
+          };
+        iW.setUserProperties(bW, jW);
+        const UW = lW.initializeAuth(AW, {
+          persistence: [lW.indexedDBLocalPersistence, lW.browserLocalPersistence, lW.browserSessionPersistence],
+          popupRedirectResolver: (0, PW.isMobileApp)() ? void 0 : lW.browserPopupRedirectResolver
+        });
+        lW.useDeviceLanguage(UW);
+        const kW = new lW.GoogleAuthProvider;
+        kW.setCustomParameters({
+          prompt: "select_account"
+        });
+        const sW = new lW.OAuthProvider(mW.i[mW.c.APPLE]),
+          MW = new lW.OAuthProvider(mW.i[mW.c.MICROSOFT]);
+        MW.setCustomParameters({
+          prompt: "select_account",
+          tenant: "consumers"
+        });
+        const KW = {
+          [mW.c.GOOGLE]: kW,
+          [mW.c.APPLE]: sW,
+          [mW.c.MICROSOFT]: MW
+        };
+        window.gtag("set", {
+          cookie_flags: "SameSite=None;Secure"
+        }), await new Promise((WW => {
+          const iW = lW.onIdTokenChanged(UW, (OW => {
+            iW(), WW()
           }))
-        }))
+        }));
+        class SW extends xW {
+          setUserProperties(WW) {
+            iW.setUserProperties(bW, WW)
+          }
+          onIdTokenChanged(WW) {
+            lW.onIdTokenChanged(UW, WW)
+          }
+          canSignIn() {
+            return !0
+          }
+          async signInWithPopup(WW) {
+            var iW;
+            const OW = await lW.signInWithPopup(UW, KW[WW]);
+            return null !== (iW = null === OW || void 0 === OW ? void 0 : OW.user) && void 0 !== iW ? iW : null
+          }
+          async getCurrentUser(WW) {
+            const iW = UW.currentUser;
+            if (!iW) return null;
+            const {
+              signInProvider: OW
+            } = await iW.getIdTokenResult(!1);
+            return OW === mW.i[WW] ? iW : null
+          }
+          async signOut(WW) {
+            null !== await this.getCurrentUser(WW) && await lW.signOut(UW)
+          }
+        }
+        async function YW(WW, iW) {
+          const OW = await LW.d.request(`${WW}.${iW}`, {});
+          if (null === OW) return null;
+          const mW = "google" === WW ? lW.GoogleAuthProvider.credential(OW.idToken) : sW.credential({
+            idToken: OW.idToken
+          });
+          return (await lW.signInWithCredential(UW, mW)).user
+        }
+        class yW extends xW {
+          setUserProperties(WW) {
+            iW.setUserProperties(bW, WW)
+          }
+          onIdTokenChanged(WW) {
+            lW.onIdTokenChanged(UW, WW)
+          }
+          canSignIn(WW) {
+            return null !== (0, cW.c)(WW)
+          }
+          async signInWithPopup(WW) {
+            const iW = (0, cW.c)(WW);
+            if (null === iW) return console.warn(`The app can't sign in with ${WW}; check canSignIn first`), null;
+            try {
+              return await YW(iW, "signIn")
+            } catch (OW) {
+              if (OW instanceof ZW.d && "timeout" === OW.code) return null;
+              throw (0, tW.reportClientError)("login_failed", OW, `app_${iW}`), OW
+            }
+          }
+          async getCurrentUser(WW) {
+            const iW = UW.currentUser;
+            if (iW) {
+              const {
+                signInProvider: OW
+              } = await iW.getIdTokenResult(!1);
+              if (OW === mW.i[WW]) return iW
+            }
+            const OW = (0, cW.c)(WW);
+            if (null === OW) return null;
+            try {
+              return await YW(OW, "getCurrentUser")
+            } catch (EW) {
+              return console.error(`Failed to get the current ${WW} user from the app:`, EW), null
+            }
+          }
+          async signOut(WW) {
+            const iW = (0, cW.c)(WW);
+            null !== iW && LW.d.request(`${iW}.signOut`, {}).catch((iW => {
+              console.error(`Failed to sign out of ${WW} in the app:`, iW)
+            }));
+            const OW = UW.currentUser;
+            if (OW) {
+              const {
+                signInProvider: iW
+              } = await OW.getIdTokenResult(!1);
+              iW === mW.i[WW] && await lW.signOut(UW)
+            }
+          }
+        }
+        return (0, PW.isMobileApp)() ? (await LW.d.ready, new yW) : new SW
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

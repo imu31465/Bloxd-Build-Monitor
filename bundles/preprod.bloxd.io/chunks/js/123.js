@@ -1,883 +1,1051 @@
 export const id = 123;
-export const ids = [123, 176];
+export const ids = [123];
 export const modules = {
-  9579: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => NO
+  40312: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW,
+      f: () => NW
     });
-    var YB = GB(1571),
-      DB = GB(16),
-      QB = GB(5082),
-      oB = GB(56),
-      jB = GB(1480);
-    var yB = GB(2023),
-      JB = GB(1560),
-      MB = GB(1400),
-      PB = GB(1175),
-      zB = GB(9587),
-      lB = GB(9592),
-      pB = GB(5011),
-      qB = GB(162),
-      ZB = GB(1121),
-      NB = GB(25),
-      RB = GB(1246),
-      WB = GB(1822),
-      AB = GB(92),
-      VB = GB(1338),
-      SB = GB(1468),
-      nB = GB(4943),
-      UB = GB(4764),
-      fB = GB(4720),
-      kB = GB(3659),
-      dB = GB(2549),
-      KB = GB(1360),
-      uB = GB(791),
-      mB = GB(1225),
-      IB = GB(1049),
-      FB = GB(1217),
-      iB = GB(3716),
-      LB = GB(3573),
-      gB = GB(1403),
-      rB = GB(1375),
-      XB = GB(5473),
-      wB = GB(9608),
-      EB = GB(3325),
-      cB = GB(1282);
+    var mW = OW(2780);
+    let EW = null;
 
-    function hB(BB) {
-      let {
-        onApply: OB,
-        onSkip: GB
-      } = BB;
-      const {
-        t: YB
-      } = (0, PB.H)();
-      return (0, oB.useEffect)((() => {
-        EB.g.skipPlayWait()
-      }), []), (0, cB.jsx)(gB.g, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, cB.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [YB("customTexturePack:downloadPrompt"), (0, cB.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: YB("customTexturePack:authorWarning")
-          }), (0, cB.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: YB("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: OB
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: GB
-        }
-      })
+    function NW(WW) {
+      return null !== EW && WW === EW
     }
-    async function aB() {
-      let BB = !1;
-      const OB = MB.NotificationProvider.showCustomPopup({
-        body: OB => (0, cB.jsx)(hB, {
-          onApply: () => {
-            BB = !0, OB()
-          },
-          onSkip: OB
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await OB.getResult(), BB
+
+    function PW() {
+      this.Qq = !1, this.stopPropagation = !1, this.xR = !1, this.disabled = !1
     }
-    let eB = {
-      wanted: !1
-    };
-    let TB = null;
-
-    function bB(BB) {
-      BB.setGamePackConfirm(aB), TB = BB
-    }
-    var CB = GB(3928),
-      HB = GB(1540),
-      vB = GB(31),
-      sB = GB(3670);
-
-    function xB(BB) {
-      let {
-        schematicId: OB,
-        texturePackKey: GB,
-        onClose: YB
-      } = BB;
-      const [DB, QB] = (0, oB.useState)("prompt"), [jB, yB] = (0, oB.useState)(null), JB = (0, CB.c)();
-
-      function MB() {
-        YB()
-      }
-      return "prompt" === DB ? (0, cB.jsx)(hB, {
-        onApply: async function() {
-          QB("downloading");
-          try {
-            const BB = await async function(BB, OB) {
-              const GB = await (0, XB.e)(OB);
-              if (GB) return {
-                pack: GB,
-                key: OB
-              };
-              const YB = await ZB.userContextManager.getCurrentUserContext(),
-                DB = (await HB.b.getGame(YB, BB, !0)).customTexturePackKey;
-              if (!DB) return null;
-              const QB = await (0, XB.e)(DB);
-              if (!QB) throw new Error("The texture pack could not be found");
-              return {
-                pack: QB,
-                key: DB
-              }
-            }(OB, GB);
-            if (!JB.current) return;
-            if (!BB) return void YB();
-            if ((0, iB.m)(BB.pack)) return void QB("refused");
-            const DB = LB.c.toJson(),
-              oB = LB.c.isUsingTemporaryTexturePack() ? "customGame" : "player";
-            if (LB.c.setFromJson(BB.pack, "customGame"), await LB.c.saveTemporaryTexturePack(BB.key), JB.current) return void(0, WB.reloadBloxd)();
-            LB.c.setFromJson(DB, oB), await (0, sB.q)(vB.d)
-          } catch (BB) {
-            yB(BB instanceof Error ? BB.message : String(BB)), QB("error")
-          }
-        },
-        onSkip: MB
-      }) : "downloading" === DB ? (0, cB.jsx)(gB.g, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, cB.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, cB.jsx)(rB.b, {
-            showFace: !0
-          })
+    class LW {
+      constructor(WW, iW) {
+        this.version = "0.7.0";
+        var OW = Object.assign({}, new PW, iW || {});
+        this.element = WW || document, this.Qq = !!OW.Qq, this.stopPropagation = !!OW.stopPropagation, this.xR = !!OW.xR, this.disabled = !!OW.disabled, this.filterEvents = (WW, iW) => !0, this.ignoreEvent = WW => !1, this.down = new mW.EventEmitter, this.up = new mW.EventEmitter, this.state = {}, this.bR = {
+          dx: 0,
+          dy: 0,
+          diW: 0,
+          eiW: 0,
+          viW: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? wW(this) : document.addEventListener("DOMContentLoaded", (WW => {
+          wW(this)
+        }), {
+          once: !0
         })
-      }) : "error" === DB ? (0, cB.jsx)(gB.g, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: jB,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
-          }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: MB
+      }
+      bind(WW) {
+        for (var iW = arguments.length, OW = new Array(iW > 1 ? iW - 1 : 0), mW = 1; mW < iW; mW++) OW[mW - 1] = arguments[mW];
+        OW.forEach((iW => {
+          var OW = this._keyBindmap[iW] || [];
+          OW.includes(WW) || (OW.push(WW), this._keyBindmap[iW] = OW)
+        })), this.state[WW] = !!this.state[WW], this.pressCount[WW] = this.pressCount[WW] || 0, this.releaseCount[WW] = this.releaseCount[WW] || 0
+      }
+      unbind(WW) {
+        for (var iW in this._keyBindmap) {
+          var OW = this._keyBindmap[iW],
+            mW = OW.indexOf(WW);
+          mW > -1 && OW.splice(mW, 1)
         }
-      }) : "refused" === DB ? (0, cB.jsx)(gB.g, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: MB
+      }
+      getBindings() {
+        var WW = {};
+        for (var iW in this._keyBindmap) {
+          this._keyBindmap[iW].forEach((OW => {
+            WW[OW] = WW[OW] || [], WW[OW].push(iW)
+          }))
         }
-      }) : null
-    }
-    var tB = GB(9622),
-      BO = GB(4711),
-      OO = GB(1871),
-      GO = GB(1856),
-      YO = GB(4714),
-      DO = GB(2247),
-      QO = GB(9629);
-    var oO = GB(5150),
-      jO = GB(1299),
-      yO = GB(1813),
-      JO = GB(662),
-      MO = GB(756),
-      PO = GB(1896);
-
-    function zO() {
-      const BB = DB.c.get("clientEscMenuOptions");
-      yB.gameBridge.send("setLookSensitivity", DB.c.get("isTouchScreen") ? (0, MO.q)(BB) : BB.mouseSensitivity)
-    }
-    const lO = 45e3;
-
-    function pO(BB) {
-      const OB = BB.asError();
-      if (OB.debugResult.rB || (0, yO.b)(OB.debugResult.error)) return;
-      console.log("Failed to join lobby:", OB.message);
-      const GB = "timedOut" === OB.debugResult.gameServerUnreachable;
-      (0, GO.reportClientError)("matchmake_failed", OB.message, GB ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : qB.l[OB.code]);
-      const {
-        error: YB
-      } = OB.debugResult;
-      if (YB instanceof kB.p && "default" !== YB.packSource) {
-        const BB = (0, YO.g)("js", "game" === YB.packSource ? "game" : "page", (0, YO.h)(YB));
-        (0, GO.reportClientError)("texture_pack", YB, BB)
+        return WW
+      }
+      hZ() {
+        cW(this.bR), cW(this.pressCount), cW(this.releaseCount)
       }
     }
 
-    function qO(BB) {
-      if (null === BB || void 0 === BB || !BB.isError()) return !1;
-      const OB = BB.asError();
-      return OB.code === qB.l.REQUEST_TO_MATCHMAKING && !(0, yO.b)(OB.debugResult.error)
-    }
-    async function ZO(BB, OB, GB) {
-      const YB = (0, oO.Q)(OB);
-      async function oB(BB, OB, GB, YB) {
-        var oB;
-        if (YB.aborted) return null;
-        null === DB.c.get("gameEntrySource") && (0, DB.m)("directPlayUrl"), JO.D && (0, wB.loadWasmPlay)().catch((() => {})), DB.c.set({
-          gameState: "findingLobby"
-        }), NB.o.tM("loadingScreenState", "loadingPage:findingLobby");
-        const jB = await ZB.userContextManager.getCurrentUserContext();
-        yB.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: OB,
-          discordContext: BB instanceof mB.e ? BB.getSerialisableParams() : null
-        }), (0, OO.e)(null !== (oB = EB.g.playInputAt()) && void 0 !== oB ? oB : performance.now());
-        const JB = await async function(BB, OB, GB, YB, DB) {
-          try {
-            await (0, PO.h)(QB.reqLibsLoadedPromise, lO, "Required libraries timed out")
-          } catch (oB) {
-            const BB = oB instanceof PO.d ? `Required libraries still loading after ${lO/1e3} s: ${(0,QB.requiredLibsPending)().join(", ")}` : oB.toString();
-            return RB.c.errorWithCode(BB, qB.l.LOAD_REQUIRED_LIBS, {
-              error: oB,
-              severity: "medium"
-            })
-          }
-          return NB.o.tM("matchmakeAndPlayStepCompleted", {
-            step: qB.l.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, QB.matchmakeAndPlayMaybeUnloaded)(BB, OB, GB, YB, DB)
-        }(BB, OB, GB, jB, YB), MB = JB.isError() ? JB.asError() : null;
-        if (YB.aborted) return MB && pO(JB), yB.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), null;
-        if (null !== MB && void 0 !== MB && MB.debugResult.rB) return console.log("Join cancelled:", MB.message), null;
-        if (MB) return JB;
-        const {
-          gameNameWithVariation: PB,
-          lobbyName: zB
-        } = JB.getValue();
-        return zO(), (0, jO.D)().setGameViewShown(!0), jB.recordJoin(PB, zB), (0, VB.H)(), JB
-      }
-      return YB && (0, DB.m)("updateRejoin"), (0, DO.g)((async DB => {
-        try {
-          var QB;
-          let jB = BB,
-            yB = await oB(jB, OB, GB, DB);
-          for (let BB = 0; YB && BB < oO.k && (qO(yB) && await (0, oO.S)((0, oO.w)(BB), DB)); BB++) jB = (0, oO.z)(jB, BB + 1, "string" === typeof jB && (0, FB.Q)(jB)), yB = await oB(jB, OB, GB, DB);
-          return null !== (QB = yB) && void 0 !== QB && QB.isError() && pO(yB), yB
-        } catch (jB) {
-          if ((0, GO.reportClientError)("matchmake_failed", jB, "unexpected"), yB.gameBridge.send("leaveGame", {
-              reloadPath: DB.aborted ? null : "/"
-            }), DB.aborted) return null;
-          throw jB
-        }
-      }), (async BB => {
-        var GB;
-        if (YB) return;
-        const DB = (0, VB.x)();
-        null !== DB && (await DB, BB.aborted) || (null !== (GB = uB.b[OB]) && void 0 !== GB && GB.playAdBeforeMatchmaking ? (EB.g.skipPlayWait(), await new Promise((BB => {
-          (0, VB.X)((() => {
-            BB(!0)
-          }), "video_start")
-        }))) : (0, VB.X)((() => {}), "video_start"))
-      }))
+    function cW(WW) {
+      for (var iW in WW) WW[iW] = 0
     }
 
-    function NO() {
-      const {
-        t: BB
-      } = (0, PB.H)(), OB = (0, JB.useNavigatePreserveSearch)(), GB = (0, YB.r)(), mB = (0, YB.A)(), iB = (0, oB.useRef)({
-        t: BB,
-        navigate: OB
-      });
-      iB.current = {
-        t: BB,
-        navigate: OB
+    function wW(WW) {
+      window.addEventListener("keydown", jW.bind(null, WW, !0), !1), window.addEventListener("keyup", jW.bind(null, WW, !1), !1);
+      var iW = {
+        passive: !0
       };
-      const gB = (0, oB.useRef)("");
-      gB.current = GB.pathname + GB.search;
-      const {
-        gameState: rB,
-        clientEscMenuOptions: XB
-      } = (0, DB.o)(["gameState", "clientEscMenuOptions"]), EB = (0, oB.useRef)(null), hB = (0, oB.useRef)(!1);
-      var aB;
-      (0, oB.useEffect)((() => () => {
-        NB.o.tM("leftPlayPage")
-      }), []), (0, DO.k)(), (0, DO.o)(), aB = JO.D, (0, oB.useEffect)((() => {
-        if (!aB) return;
-        let BB = !0;
-        return (0, wB.loadWasmPlay)().then((OB => {
-          BB && bB(OB)
-        })).catch((() => {})), () => {
-          var OB;
-          BB = !1, eB.wanted = !1, null === (OB = TB) || void 0 === OB || OB.setGamePackConfirm(null), TB = null
-        }
-      }), [aB]), (0, oB.useEffect)((() => {
-        var BB, OB, YB;
-        (0, QB.needGameClientNow)();
-        const {
-          t: oB,
-          navigate: jB
-        } = iB.current, PB = (0, tB.b)(mB, GB.search);
-        if (mB.lobbyName && !new URLSearchParams(GB.search).has("lobby")) return void jB((0, KB.c)(PB.gameNameWithVariation, PB.lobbyName), {
-          replace: !0
-        });
-        let SB = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        const rB = new AbortController;
-        if ("/play/discord-custom-lobby" === GB.pathname) {
-          const BB = DB.c.get("discordContext");
-          if (!BB) return void jB("/");
-          SB = pB.c.setupDiscordLobby(BB, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: BB
-          }))).catch((OB => (console.error("Failed to setup discord lobby", OB), {
-            shouldMatchmake: !1,
-            discordContext: BB
-          })))
-        } else if (!PB.gameNameWithVariation || !(0, FB.O)(PB.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${PB.gameNameWithVariation}`), void jB(-1);
-        const XB = EB.current;
-        if (null !== XB && PB.gameNameWithVariation === XB.gameNameWithVariation && PB.lobbyName === XB.lobbyName) return;
-        if (yB.gameBridge.latest("connectedGame").replay) return void(0, DO.e)(null);
-        if ("releaseCountdown" === (null === (BB = (0, dB.d)(PB.gameNameWithVariation)) || void 0 === BB ? void 0 : BB.type)) return console.error(`Game hasn't been released yet: ${PB.gameNameWithVariation}`), void jB(-1);
-        const aB = hB.current;
-        hB.current = !1, (0, VB.z)(), DB.c.set({
-          gameState: "loadingScreen"
-        });
-        const TB = function() {
-            eB.wanted = !1;
-            const BB = {
-              wanted: !0
-            };
-            return eB = BB, () => BB.wanted
-          }(),
-          CB = PB.gameNameWithVariation;
-        if (CB && (JO.D || (0, IB.l)(CB))) {
-          const BB = JO.D ? Promise.all([(0, wB.loadWasmPlay)(), ZB.userContextManager.getCurrentUserContext()]).then((BB => {
-            let [OB, GB] = BB;
-            if (TB()) return bB(OB), OB.packForGame(CB, GB, TB)
-          })) : async function(BB, OB) {
-            await LB.c.indexedDbValuesAreLoaded();
-            const GB = await ZB.userContextManager.getCurrentUserContext(),
-              YB = (0, IB.r)(BB);
-            let DB;
-            try {
-              DB = await HB.b.getGame(GB, YB, !0)
-            } catch (yB) {
-              return void console.error("Failed to get game", yB)
-            }
-            if (null !== OB && void 0 !== OB && OB.aborted) return;
-            const QB = DB.customTexturePackKey;
-            if (!QB) return void(LB.c.isUsingTemporaryTexturePack() && ((0, WB.reloadBloxd)(), await new Promise((() => {}))));
-            if (LB.c.isUsingTemporaryTexturePack() && LB.c.getTemporaryTexturePackSource() === QB) return;
-            const oB = MB.NotificationProvider.showCustomPopup({
-                body: BB => (0, cB.jsx)(xB, {
-                  schematicId: YB,
-                  texturePackKey: QB,
-                  onClose: BB
-                }),
-                disableExitButton: !0,
-                disablePressBackgroundToClose: !0
-              }),
-              jB = () => {
-                oB.tearDownNotification()
-              };
-            null === OB || void 0 === OB || OB.addEventListener("abort", jB, {
-              once: !0
-            }), await oB.getResult(), null === OB || void 0 === OB || OB.removeEventListener("abort", jB)
-          }(CB, rB.signal), OB = SB;
-          SB = BB.catch((BB => {
-            console.error("Failed to check for custom texture pack", BB)
-          })).then((() => OB))
-        }
-        const vB = {
-          wasm: JO.D,
-          game: PB.gameNameWithVariation,
-          custom: void 0 !== CB && (0, IB.l)(CB),
-          lobbyName: null !== (OB = PB.lobbyName) && void 0 !== OB ? OB : null,
-          direct: null !== PB.directJoinVmUrl && void 0 !== PB.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === GB.pathname,
-          adBeforeMatchmaking: void 0 !== CB && !0 === (null === (YB = uB.b[CB]) || void 0 === YB ? void 0 : YB.playAdBeforeMatchmaking),
-          afterAnother: null !== EB.current || (0, DO.b)()
-        };
-        (0, QO.j)(null);
-        const sB = !(OO = vB).wasm || void 0 === OO.game || OO.custom || OO.direct || OO.discord || OO.adBeforeMatchmaking || OO.afterAnother ? null : () => {
-          ! function(BB, OB) {
-            (0, QO.j)({
-              key: (0, QO.f)(BB, OB),
-              settled: Promise.all([QB.matchmakingLibrariesPromise, ZB.userContextManager.getCurrentUserContext()]).then((GB => {
-                let [YB, DB] = GB;
-                if (void 0 === YB.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return YB.matchmakeForAhead(BB, OB, DB)
-              })).catch((BB => ({
-                result: RB.c.errorWithCode(String(BB), qB.l.REQUEST_TO_MATCHMAKING, {
-                  error: BB,
-                  severity: "medium"
-                }),
-                at: performance.now()
-              })))
-            })
-          }(vB.lobbyName, vB.game)
-        };
-        var OO;
-        const GO = null !== EB.current;
-        EB.current = null, (0, DO.e)(null);
-        const YO = () => {
-          aB ? (0, JB.navigateToHomePage)() : (hB.current = GO, jB(-1))
-        };
-        let oO = !1;
-        const jO = GB.pathname + GB.search,
-          MO = () => !oO && gB.current === jO;
-        return (0, QO.e)(SB, sB, (BB => {
-          let {
-            shouldMatchmake: OB,
-            discordContext: GB
-          } = BB;
-          MO() && (OB ? ZO(null !== GB && void 0 !== GB ? GB : PB.lobbyName, GB ? "classic" : PB.gameNameWithVariation, PB.directJoinVmUrl).then((BB => {
-            if (null !== BB && MO())
-              if (BB.isError()) {
-                var OB, GB;
-                const YB = BB.asError(),
-                  QB = null !== (OB = YB.debugResult.severity) && void 0 !== OB ? OB : "high";
-                if (NB.o.tM("joinFailed", {
-                    step: null !== (GB = YB.code) && void 0 !== GB ? GB : null,
-                    severity: QB
-                  }), (0, yO.b)(YB.debugResult.error)) return void yO.f.reload();
-                if (YB.code === qB.l.SHADER_PACK) return void(0, BO.e)(YB.message, jB);
-                const JB = DB.c.get("gameEntrySource"),
-                  pB = YB.code === qB.l.INITIALISE_WEBGL ? (0, UB.d)() : null,
-                  {
-                    error: ZB
-                  } = YB.debugResult;
-                let RB;
-                if ((0, lB.e)(oB, YB)) RB = Promise.resolve(!1);
-                else if (null !== pB) RB = (0, UB.k)(pB);
-                else if (ZB instanceof kB.p) RB = (0, fB.g)(ZB);
-                else {
-                  let BB;
-                  switch (QB) {
-                    case "low":
-                      BB = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      BB = "face-worried";
-                      break;
-                    case "high":
-                      BB = "face-dizzy"
-                  }
-                  const OB = ZB instanceof PO.d;
-                  let GB = (0, zB.c)(YB.message);
-                  OB ? GB = oB("general:gameFilesStalled") : YB.debugResult.gameServerUnreachable && (GB = oB((0, AB.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  RB = MB.NotificationProvider.showPromptPopup({
-                    icon: BB,
-                    title: qB.E[YB.code],
-                    subtitle: (0, cB.jsxs)(cB.Fragment, {
-                      children: [GB, ZB instanceof Error && !OB && (0, cB.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, cB.jsx)(nB.c, {
-                          errorString: ZB.stack
-                        })
-                      })]
-                    }),
-                    confirmText: oB("general:tryAgain"),
-                    cancelText: oB("general:cancel")
-                  }).getResult().then((BB => !0 === BB))
-                }
-                RB.then((BB => {
-                  if (BB) {
-                    (0, DB.m)(JB);
-                    const BB = (0, KB.c)(PB.gameNameWithVariation, PB.lobbyName);
-                    "low" === QB ? jB(BB) : (0, WB.reloadBloxd)(BB)
-                  }
-                })), yB.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), YO()
-              } else {
-                const {
-                  gameNameWithVariation: OB,
-                  lobbyName: GB
-                } = BB.getValue();
-                EB.current = {
-                  gameNameWithVariation: OB,
-                  lobbyName: GB
-                };
-                const YB = (0, KB.c)(OB, GB);
-                jB(YB, {
-                  replace: !0
-                })
-              }
-          })).catch((BB => {
-            if (!MO()) return;
-            NB.o.tM("joinFailed", {
-              step: null,
-              severity: "unexpected"
-            });
-            MB.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, cB.jsxs)(cB.Fragment, {
-                children: [oB("homePage:pleaseCopyError"), (0, cB.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
-                  },
-                  children: (0, cB.jsx)(nB.c, {
-                    errorString: BB.stack
-                  })
-                })]
-              }),
-              confirmText: oB("general:tryAgain"),
-              cancelText: oB("general:cancel")
-            }).getResult().then((BB => {
-              !0 === BB && (0, WB.reloadBloxd)((0, KB.c)(PB.gameNameWithVariation, PB.lobbyName))
-            })), YO()
-          })) : jB(-1))
-        }), MO), () => {
-          oO = !0, rB.abort()
-        }
-      }), [mB, GB.search, GB.pathname]), (0, oB.useEffect)((() => {
-        XB.disableFullscreen && (0, SB.d)() ? (0, SB.i)() : !XB.disableFullscreen && (0, SB.h)() && (0, SB.s)({
-          automatic: !0
-        })
-      }), [rB, XB]), (0, oB.useEffect)((() => {
-        "inGame" === rB && zO()
-      }), [rB, XB]), (0, oB.useEffect)((() => {
-        "inGame" !== rB && DB.c.set({
-          openInGameMenuName: null
-        })
-      }), [rB]);
-      const CB = function(BB) {
-        const OB = (0, DB.k)(BB),
-          [GB, YB] = (0, oB.useState)(0),
-          [QB, yB] = (0, oB.useState)(!1);
-        (0, jB.f)("gameJoined", (() => {
-          (0, DB.k)(DB.c.get("gameState")) && (YB((BB => BB + 1)), yB(!0))
-        })), (0, oB.useEffect)((() => {
-          OB || yB(!1)
-        }), [OB]);
-        const JB = "inGame" === BB;
-        return {
-          mounted: JB || OB && QB,
-          shown: JB,
-          key: GB
-        }
-      }(rB);
-      return (0, cB.jsx)(cB.Fragment, {
-        children: CB.mounted && (0, cB.jsx)(QB.InGameUi, {
-          shown: CB.shown
-        }, CB.key)
-      })
+      WW.element.addEventListener("touchstart", lW.bind(void 0, WW), {
+        passive: !1
+      }), WW.element.addEventListener("touchend", bW.bind(void 0, WW), iW), WW.element.addEventListener("mousedown", UW.bind(null, WW, !0), iW), window.document.addEventListener("mouseup", UW.bind(null, WW, !1), iW), WW.element.addEventListener("touchmove", kW.bind(null, WW), iW), WW.element.addEventListener("mousemove", kW.bind(null, WW), iW), window.PointerEvent, WW.element.addEventListener("wheel", sW.bind(null, WW), iW), WW.element.addEventListener("contextmenu", MW.bind(null, WW), !1), window.addEventListener("blur", YW.bind(null, WW), !1)
     }
-  },
-  5473: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => DB
-    });
-    var YB = GB(1186);
-    async function DB(BB) {
-      const OB = await fetch(`${YB.clientSideServerUrls.s3Url}/${BB}`, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (404 === OB.status || 403 === OB.status) return null;
-      if (!OB.ok) throw new Error(`Failed to download the texture pack (${OB.status})`);
-      return await OB.json()
-    }
-  },
-  9592: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => ZB,
-      g: () => NB
-    });
-    var YB = GB(162),
-      DB = GB(192),
-      QB = GB(1049),
-      oB = GB(1061),
-      jB = GB(1217),
-      yB = GB(2023),
-      JB = GB(2549),
-      MB = GB(1540),
-      PB = GB(1400),
-      zB = GB(1121),
-      lB = GB(9599),
-      pB = GB(1560),
-      qB = GB(1586);
+    var tW = 0,
+      ZW = 0,
+      xW = null;
 
-    function ZB(BB, OB) {
-      const GB = !0 === OB.debugResult.gameRefused,
-        QB = GB || OB.code === YB.l.REQUEST_TO_MATCHMAKING ? (0, lB.h)(OB.message) : null;
-      if (null !== QB) return VB(BB, BB((0, lB.m)(QB)), BB(lB.k[QB])), !0;
-      if (GB) return async function(BB) {
-        const {
-          gameNameWithVariation: OB,
-          lobbyName: GB,
-          shownLobbyName: YB
-        } = yB.gameBridge.latest("connectedGame"), DB = "classic" === OB && (0, jB.L)(GB) ? YB : await (0, JB.c)(BB, OB, GB);
-        return "" !== DB ? BB("general:cantJoinGame", {
-          game: DB
-        }) : BB("general:cantJoinThisGame")
-      }(BB).then((GB => {
-        VB(BB, GB, OB.message)
-      })), !0;
-      const {
-        joinFailure: oB
-      } = OB.debugResult, MB = "refused" === (null === oB || void 0 === oB ? void 0 : oB.at) ? oB.code : null;
-      return MB === DB.c.schematicNotPublished.code ? (async function(BB, OB) {
-        const GB = RB(),
-          YB = await AB(GB);
-        if (null === YB || YB.gamePublished) return void VB(BB, BB("general:cantJoinThisGame"), OB);
-        await WB(BB, "rocket-launch", BB("studio:gameNotPublishedTitle", {
-          game: YB.name
-        }), BB("studio:publishInStudio"), GB)
-      }(BB, OB.message), !0) : (MB === DB.c.schematicBanned.code || MB === DB.c.customGameTakenDown.code) && (AB(RB()).then((OB => {
-        NB(BB, OB)
-      })), !0)
+    function lW(WW, iW) {
+      iW.preventDefault(), AW(iW)
     }
 
-    function NB(BB, OB) {
-      !0 !== (null === OB || void 0 === OB ? void 0 : OB.takenDown) ? VB(BB, BB("general:cantJoinThisGame"), DB.c.customGameTakenDown.text) : WB(BB, "lock", BB("studio:gameTakenDownTitle", {
-        game: OB.name
-      }), BB("studio:viewInStudio"), OB.schematicId)
-    }
-
-    function RB() {
-      return (0, QB.r)(yB.gameBridge.latest("connectedGame").gameNameWithVariation)
-    }
-    async function WB(BB, OB, GB, YB, DB) {
-      !0 === await PB.NotificationProvider.showPromptPopup({
-        icon: OB,
-        title: GB,
-        confirmText: YB,
-        cancelText: BB("general:cancel")
-      }).getResult() && (0, pB.navigatePreserveSearch)((0, qB.w)((0, oB.e)(DB), "manage"))
-    }
-    async function AB(BB) {
-      try {
-        return await MB.b.getGame(await zB.userContextManager.getCurrentUserContext(), BB, !0)
-      } catch (OB) {
-        return (0, MB.f)(OB) || console.error(`Failed to get game ${BB}`, OB), null
+    function AW(WW) {
+      let iW = !1;
+      for (let OW = 0; OW < WW.touches.length; ++OW)
+        if (WW.touches[OW].identifier === xW) {
+          iW = !0;
+          break
+        } if (!iW) {
+        const iW = WW.changedTouches[0];
+        tW = iW.clientX, ZW = iW.clientY, xW = iW.identifier
       }
     }
 
-    function VB(BB, OB, GB) {
-      PB.NotificationProvider.showPromptPopup({
-        icon: "lock",
-        title: OB,
-        subtitle: GB,
-        confirmText: BB("general:ok"),
-        cancelText: ""
-      })
+    function bW(WW, iW) {
+      for (var OW = iW.changedTouches, mW = 0; mW < OW.length; ++mW) OW[mW].identifier === xW && (xW = null)
     }
-  },
-  9622: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB
-    });
-    var YB = GB(1360),
-      DB = GB(1217),
-      QB = GB(641);
 
-    function oB(BB) {
-      return BB = function(BB, OB) {
-        var GB;
-        const YB = new URLSearchParams(OB),
-          DB = YB.get("lobby"),
-          QB = YB.get("vm"),
-          oB = null !== (GB = DB) && void 0 !== GB ? GB : BB.lobbyName,
-          jB = null !== QB && void 0 !== QB ? QB : BB.directJoinVmUrl;
-        if (oB === BB.lobbyName && jB === BB.directJoinVmUrl) return BB;
-        return {
-          ...BB,
-          lobbyName: oB,
-          directJoinVmUrl: jB
+    function jW(WW, iW, OW) {
+      if (!WW.ignoreEvent(OW)) try {
+        yW(WW, OW), iW && OW.isTrusted && !OW.repeat && WW._keyStates[OW.code] && TW(WW, OW.code)
+      } finally {
+        JW(OW.code, iW, WW, OW)
+      }
+    }
+
+    function UW(WW, iW, OW) {
+      if (!WW.ignoreEvent(OW)) try {
+        yW(WW, OW)
+      } finally {
+        ! function(WW, iW, OW) {
+          if ("pointerId" in OW)
+            if (iW) {
+              if (null !== WW._touches.currID) return;
+              WW._touches.currID = OW.pointerId
+            } else {
+              if (WW._touches.currID !== OW.pointerId) return;
+              WW._touches.currID = null
+            } var mW = "button" in OW ? OW.button + 1 : 1;
+          JW("Mouse" + mW, iW, WW, OW)
+        }(WW, iW, OW)
+      }
+    }
+
+    function kW(WW, iW) {
+      var OW = iW.movementX || iW.mozMovementX || 0,
+        mW = iW.movementY || iW.mozMovementY || 0;
+      if (iW.touches && 0 === (OW | mW)) {
+        var EW = function(WW) {
+          AW(WW);
+          for (let iW = 0; iW < WW.changedTouches.length; ++iW)
+            if (WW.changedTouches[iW].identifier == xW) {
+              const OW = WW.changedTouches[iW],
+                mW = [OW.clientX - tW, OW.clientY - ZW];
+              return tW = OW.clientX, ZW = OW.clientY, mW
+            } return console.error(`Did not find touch id ${xW}`), [0, 0]
+        }(iW);
+        OW = EW[0], mW = EW[1]
+      }
+      WW.bR.dx += OW, WW.bR.dy += mW
+    }
+
+    function sW(WW, iW) {
+      yW(WW, iW);
+      var OW = 1;
+      switch (iW.deltaMode) {
+        case 0:
+          OW = 1;
+          break;
+        case 1:
+          OW = 12;
+          break;
+        case 2:
+          OW = WW.element.clientHeight || window.innerHeight
+      }
+      WW.bR.diW += (iW.deltaX || 0) * OW, WW.bR.eiW += (iW.deltaY || 0) * OW, WW.bR.viW += (iW.deltaZ || 0) * OW
+    }
+
+    function MW(WW, iW) {
+      if (!WW.xR) return iW.preventDefault(), !1
+    }
+    var KW = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
+    };
+
+    function SW(WW, iW) {
+      return !!WW[KW[iW]] || ("AltRight" === iW || "ControlLeft" === iW) && "function" === typeof WW.getModifierState && !0 === WW.getModifierState("AltGraph")
+    }
+
+    function YW(WW, iW) {
+      for (var OW in WW._modifiersHeldThroughBlur = {}, KW) WW._keyStates[OW] && (WW._modifiersHeldThroughBlur[OW] = !0);
+      iW && iW.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (WW) {
+          return !0
         }
-      }(BB, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), BB = function(BB) {
-        if ((0, QB.Q)(BB.directJoinVmUrl)) return BB;
-        const OB = (0, DB.fb)(BB.directJoinVmUrl);
-        null === OB && (BB.directJoinVmUrl = void 0);
-        return BB
-      }(BB = function(BB) {
-        if ((0, QB.Q)(BB.gameNameWithVariation)) return BB;
-        return BB.gameNameWithVariation = (0, YB.m)(BB.gameNameWithVariation), BB
-      }(BB))
+      }() && (clearTimeout(WW._blurRelease), WW._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var iW in WW._modifiersHeldThroughBlur = {}, WW._keyStates) WW._keyStates[iW] && !/^Mouse\d/.test(iW) && TW(WW, iW)
+      }), 0))
+    }
+
+    function yW(WW, iW) {
+      var OW = WW._modifiersHeldThroughBlur;
+      if (OW && iW.isTrusted && document.hasFocus())
+        for (var mW in OW) delete OW[mW], WW._keyStates[mW] && mW !== iW.code && (SW(iW, mW) || TW(WW, mW))
+    }
+
+    function TW(WW, iW) {
+      const OW = {
+          code: iW,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        mW = EW;
+      EW = OW;
+      try {
+        JW(iW, !1, WW, OW)
+      } finally {
+        EW = mW
+      }
+    }
+
+    function JW(WW, iW, OW, mW) {
+      var EW = OW._keyBindmap[WW];
+      EW && (hW(OW._keyStates[WW], iW) && (OW._keyStates[WW] = iW, EW.forEach((WW => {
+        (!OW.filterEvents || OW.filterEvents(mW, WW)) && function(WW, iW, OW, mW) {
+          var EW = iW ? OW.pressCount : OW.releaseCount;
+          EW[WW] = (EW[WW] || 0) + 1;
+          var NW = OW._bindPressCount[WW] || 0;
+          (NW += iW ? 1 : -1) < 0 && (NW = 0);
+          OW._bindPressCount[WW] = NW;
+          var PW = OW.state[WW];
+          if (hW(PW, NW)) {
+            OW.state[WW] = NW > 0;
+            var LW = iW ? OW.down : OW.up;
+            OW.disabled || LW.emit(WW, mW)
+          }
+        }(WW, iW, OW, mW)
+      }))), "button" in mW || (OW.Qq && !mW.defaultPrevented && mW.preventDefault(), OW.stopPropagation && mW.stopPropagation()))
+    }
+
+    function hW(WW, iW) {
+      return WW ? !iW : iW
     }
   },
-  9614: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  37904: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => bW,
+      i: () => jW
     });
-    let YB = !1;
+    var mW = OW(62),
+      EW = OW(1526),
+      NW = OW(2075),
+      PW = OW(37902),
+      LW = OW(643),
+      cW = OW(1089),
+      wW = OW.n(cW),
+      tW = OW(1283);
+    const ZW = [xW()];
 
-    function DB() {
-      YB = !0
+    function xW() {
+      return {
+        source: null,
+        direction: null,
+        WC: null,
+        timeout: void 0,
+        writtenAngle: null
+      }
     }
 
-    function QB() {
-      return YB
-    }
-  },
-  9629: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB,
-      f: () => DB,
-      j: () => QB,
-      l: () => oB
-    });
-    let YB = null;
-
-    function DB(BB, OB) {
-      return `${OB}\n${null!==BB&&void 0!==BB?BB:""}`
+    function lW(WW) {
+      return ZW.find((iW => null !== iW.source && iW.source === WW))
     }
 
-    function QB(BB) {
-      YB = BB
+    function AW(WW) {
+      clearTimeout(WW.timeout), WW.source = null, WW.direction = null, WW.writtenAngle = null, WW.WC && (WW.WC.style.rotate = "")
     }
-
-    function oB(BB) {
-      const OB = YB;
-      return YB = null, null !== OB && OB.key === BB ? OB.settled : null
-    }
-
-    function jB(BB, OB, GB, YB) {
-      let DB = !1;
-      null !== OB && setTimeout((() => {
-        YB() && !DB && OB()
-      }), 0), BB.then((BB => {
-        DB = !0, GB(BB)
-      }))
-    }
-  },
-  9608: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadWasmPlay: () => zB,
-      loadWasmPlayAhead: () => lB,
-      loadWasmPreviews: () => pB
-    });
-    var YB = GB(3573),
-      DB = GB(2457),
-      QB = GB(2250),
-      oB = GB(5065),
-      jB = GB(3944),
-      yB = GB(9614);
-    let JB = null;
-
-    function MB() {
-      return Promise.all([GB.e(86), GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(216), GB.e(243), GB.e(155), GB.e(101), GB.e(244), GB.e(75)]).then((() => GB(41683)))
-    }
-
-    function PB() {
-      Promise.all([GB.e(84), GB.e(87), GB.e(85), GB.e(86), GB.e(103), GB.e(100), GB.e(300), GB.e(207), GB.e(250), GB.e(274), GB.e(244), GB.e(54)]).then((() => GB(42017))).catch((() => {}))
-    }
-
-    function zB() {
-      return oB.b.cancelDownloadForJoin(), (0, jB.d)(), (0, DB.h)(), (0, yB.d)(), (0, QB.j)(), PB(), Promise.all([GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(155), GB.e(70)]).then((() => GB(42053))).then((BB => {
+    const bW = (0, mW.memo)((function() {
+      const [, WW] = (0, mW.useReducer)((WW => WW + 1), 0);
+      return (0, EW.e)("damagedByOtherPlayer", (iW => {
         let {
-          startJoinLoad: OB
-        } = BB;
-        OB()
-      }), (() => {})), JB ??= MB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        YB.c.showGamePack(BB)
-      })), BB)), (BB => {
-        throw JB = null, BB
-      })), JB
-    }
-
-    function lB() {
-      return PB(), GB.e(124).then((() => GB(42056))).catch((() => {})), MB().then((() => {}))
-    }
-
-    function pB() {
-      return MB().then((BB => {
-        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
-      }))
-    }
-  },
-  9599: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => oB,
-      h: () => jB,
-      k: () => JB,
-      m: () => yB
-    });
-    var YB = GB(192),
-      DB = GB(5047);
-
-    function QB(BB) {
-      return oB(BB) === YB.c.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function oB(BB) {
-      return "object" === typeof BB && null !== BB ? BB.code : void 0
-    }
-
-    function jB(BB) {
-      var OB;
-      return null !== (OB = Object.keys(DB.b).find((OB => DB.b[OB] === BB))) && void 0 !== OB ? OB : null
-    }
-
-    function yB(BB) {
-      return "notWhitelisted" === BB ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const JB = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
-  },
-  9587: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => JB,
-      c: () => yB
-    });
-    var YB = GB(353);
-
-    function DB(BB) {
-      if (!BB.startsWith("{")) return BB;
-      let OB;
-      try {
-        OB = JSON.parse(BB)
-      } catch {
-        return BB
-      }
-      return function(BB) {
-        if (null === (0, YB.nf)(BB)) return !1;
-        const {
-          params: OB
-        } = BB;
-        return void 0 === OB || "object" === typeof OB && null !== OB && Object.values(OB).every((BB => "string" === typeof BB))
-      }(OB) ? OB : BB
-    }
-    var QB = GB(1175),
-      oB = GB(1253);
-
-    function jB(BB) {
-      return (0, QB.C)(oB.e.get().getCurrentLanguageCode(), BB.translationKey, BB.params)
-    }
-
-    function yB(BB) {
-      const OB = DB(BB);
-      return "string" === typeof OB ? OB : jB(OB)
-    }
-
-    function JB(BB) {
-      const OB = DB(BB);
-      return "string" === typeof OB ? OB : jB({
-        translationKey: "moderation:kicked",
-        params: {
-          reason: jB(OB)
+          ME: OW,
+          direction: mW
+        } = iW;
+        const EW = OW || "nonDirectional",
+          NW = function(WW) {
+            var iW;
+            const OW = null !== (iW = lW(WW)) && void 0 !== iW ? iW : ZW.find((WW => null === WW.source));
+            if (OW) return OW;
+            const mW = {
+              source: null,
+              direction: null,
+              WC: null,
+              timeout: void 0,
+              writtenAngle: null
+            };
+            return ZW.push(mW), mW
+          }(EW);
+        clearTimeout(NW.timeout), NW.source = EW, NW.direction = mW, NW.timeout = setTimeout((() => {
+          AW(NW), WW()
+        }), 800), WW()
+      })), (0, NW.c)("kill", (iW => {
+        let {
+          killer: OW,
+          victim: mW
+        } = iW;
+        const EW = OW.local && lW(mW.id);
+        EW && (AW(EW), WW())
+      })), (0, mW.useEffect)((() => {
+        const WW = (0, PW.h)("turnDamageIndicators", jW);
+        return () => {
+          WW(), ZW.forEach(AW)
         }
+      }), []), (0, tW.jsx)("div", {
+        className: "DirectionalDamage",
+        children: ZW.map(((WW, iW) => (0, tW.jsx)("div", {
+          ref: iW => {
+            WW.WC = iW
+          },
+          className: wW()("DamageIndicator", {
+            DamageIndicatorFullCircle: (0, LW.K)(WW.direction),
+            DamageIndicatorIdle: null === WW.source
+          })
+        }, iW)))
+      })
+    }));
+
+    function jW(WW) {
+      for (const iW of ZW) {
+        if (null === iW.source || (0, LW.K)(iW.direction)) continue;
+        const OW = iW.direction - WW;
+        OW !== iW.writtenAngle && (iW.writtenAngle = OW, iW.WC.style.rotate = `${OW}rad`)
+      }
+    }
+  },
+  37909: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => hW,
+      g: () => TW
+    });
+    var mW = OW(62),
+      EW = OW(25),
+      NW = OW(37902),
+      PW = OW(37915),
+      LW = OW(37609),
+      cW = OW(37763),
+      wW = OW(2037),
+      tW = OW(2075),
+      ZW = OW(1283);
+    const xW = 20 * Math.PI / 180,
+      lW = new Map,
+      AW = 25 * Math.PI / 180,
+      bW = Array.from({
+        length: 6
+      }, (() => ({
+        kind: null,
+        direction: 0,
+        shownAt: 0,
+        WC: null,
+        fade: null,
+        timeout: void 0,
+        writtenAngle: null,
+        away: !1
+      })));
+    let jW = null,
+      UW = null,
+      kW = [];
+    const sW = 2;
+
+    function MW(WW) {
+      const iW = "combat" === WW.kind || "explosion" === WW.kind,
+        OW = null !== UW && null !== WW.writtenAngle && function(WW, iW, OW, mW) {
+          const EW = iW.width / 3.8,
+            NW = (mW ? .7 : .35) * EW + 1,
+            PW = (mW ? .175 : .1) * EW + 1,
+            LW = iW.width / 2 - PW,
+            cW = Math.sin(WW),
+            wW = Math.cos(WW),
+            tW = iW.left + iW.width / 2 + cW * LW,
+            ZW = iW.top + iW.height / 2 - wW * LW,
+            xW = Math.abs(wW) * NW + Math.abs(cW) * PW,
+            lW = Math.abs(cW) * NW + Math.abs(wW) * PW;
+          return OW.some((WW => tW + xW > WW.left - sW && tW - xW < WW.right + sW && ZW + lW > WW.top - sW && ZW - lW < WW.bottom + sW))
+        }(WW.writtenAngle, UW, kW, iW);
+      OW !== WW.away && WW.WC && (WW.away = OW, WW.WC.classList.toggle("SoundCueAway", OW))
+    }
+    let KW = 0;
+
+    function SW(WW) {
+      var iW;
+      clearTimeout(WW.timeout), null === (iW = WW.fade) || void 0 === iW || iW.cancel(), WW.fade = null, WW.kind = null, WW.writtenAngle = null, WW.away = !1, WW.WC && (WW.WC.className = "SoundCue SoundCueIdle", WW.WC.style.rotate = "")
+    }
+
+    function YW(WW, iW) {
+      var OW, mW, EW;
+      const NW = performance.now();
+      if (Math.abs((0, PW.y)(KW, iW)) < xW || NW - (null !== (OW = lW.get(WW)) && void 0 !== OW ? OW : -1 / 0) < 250) return;
+      lW.set(WW, NW), null === (mW = jW) || void 0 === mW || mW();
+      const LW = function(WW, iW) {
+          const OW = bW.find((OW => OW.kind === WW && Math.abs((0, PW.y)(OW.direction, iW)) < AW));
+          if (OW) return OW;
+          return bW.find((WW => null === WW.kind)) || bW.reduce(((WW, iW) => iW.shownAt < WW.shownAt ? iW : WW))
+        }(WW, iW),
+        cW = LW.WC;
+      cW && (clearTimeout(LW.timeout), null === (EW = LW.fade) || void 0 === EW || EW.cancel(), LW.kind = WW, LW.direction = iW, LW.shownAt = NW, cW.className = `SoundCue SoundCue-${WW}`, LW.away = !1, yW(LW, KW), MW(LW), LW.fade = cW.animate([{
+        opacity: 1
+      }, {
+        opacity: 1,
+        offset: .5
+      }, {
+        opacity: 0
+      }], {
+        duration: 1200,
+        fill: "forwards"
+      }), LW.timeout = setTimeout((() => {
+        SW(LW)
+      }), 1200))
+    }
+
+    function yW(WW, iW) {
+      const OW = WW.direction - iW;
+      OW !== WW.writtenAngle && WW.WC && (WW.writtenAngle = OW, WW.WC.style.rotate = `${OW}rad`, MW(WW))
+    }
+
+    function TW(WW) {
+      KW = WW;
+      for (const iW of bW) null !== iW.kind && yW(iW, WW)
+    }
+    const JW = (0, mW.memo)((function() {
+        const WW = (0, mW.useRef)(null);
+        return (0, mW.useEffect)((() => {
+          const iW = WW.current,
+            OW = () => {
+              const {
+                anywhere: WW,
+                boxes: OW
+              } = (0, cW.b)();
+              iW.classList.toggle("SoundDirectionsHidden", WW), UW = iW.getBoundingClientRect(), kW = OW;
+              for (const iW of bW) MW(iW)
+            };
+          let mW = 0;
+          const EW = () => {
+            cancelAnimationFrame(mW), mW = requestAnimationFrame((() => {
+              mW = requestAnimationFrame(OW)
+            }))
+          };
+          OW(), jW = OW, window.addEventListener("resize", EW);
+          const NW = (0, cW.f)(OW),
+            PW = new ResizeObserver(OW);
+          return PW.observe(iW), () => {
+            PW.disconnect(), NW(), window.removeEventListener("resize", EW), cancelAnimationFrame(mW), jW = null, UW = null, kW = []
+          }
+        }), []), (0, mW.useEffect)((() => {
+          const WW = (0, NW.h)("turnSoundCues", TW),
+            iW = (0, LW.c)(YW);
+          return () => {
+            iW(), WW(), bW.forEach(SW), lW.clear()
+          }
+        }), []), (0, ZW.jsx)("div", {
+          ref: WW,
+          className: "SoundDirections",
+          children: bW.map(((WW, iW) => (0, ZW.jsx)("div", {
+            ref: iW => {
+              WW.WC = iW
+            },
+            className: "SoundCue SoundCueIdle"
+          }, iW)))
+        })
+      })),
+      hW = (0, mW.memo)((function() {
+        const {
+          clientEscMenuOptions: WW
+        } = (0, EW.p)(["clientEscMenuOptions"]);
+        return WW.showSoundDirections ? (0, ZW.jsxs)(ZW.Fragment, {
+          children: [(0, ZW.jsx)(JW, {}), (0, ZW.jsx)(HW, {})]
+        }) : null
+      })),
+      HW = (0, mW.memo)((function() {
+        const [WW, iW] = (0, mW.useState)((() => {
+          var WW;
+          return null === (WW = wW.gameBridge.latest("localPlayerAlive")) || void 0 === WW || WW
+        }));
+        return (0, tW.c)("localPlayerAliveSet", iW), (0, cW.c)(!WW), null
+      }))
+  },
+  37763: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW,
+      c: () => LW,
+      f: () => wW
+    });
+    var mW = OW(62);
+    const EW = new Set,
+      NW = new Set;
+
+    function PW() {
+      for (const WW of NW) WW()
+    }
+
+    function LW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      (0, mW.useEffect)((() => WW ? function() {
+        const WW = {
+          element: arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null
+        };
+        return EW.add(WW), PW(), () => {
+          EW.delete(WW) && PW()
+        }
+      }(iW) : void 0), [WW, iW]), (0, mW.useEffect)((() => {
+        WW && PW()
+      }), [WW, OW])
+    }
+
+    function cW() {
+      const WW = [];
+      for (const {
+          element: OW
+        }
+        of EW) {
+        var iW;
+        if (null === OW) return {
+          anywhere: !0,
+          boxes: []
+        };
+        const mW = null === (iW = OW.current) || void 0 === iW ? void 0 : iW.getBoundingClientRect();
+        mW && mW.width > 0 && WW.push(mW)
+      }
+      return {
+        anywhere: !1,
+        boxes: WW
+      }
+    }
+
+    function wW(WW) {
+      return NW.add(WW), () => {
+        NW.delete(WW)
+      }
+    }
+  },
+  37735: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => NW
+    });
+    let mW = !1;
+
+    function EW() {
+      return mW
+    }
+
+    function NW(WW) {
+      return mW !== WW && (mW = WW, !0)
+    }
+  },
+  42192: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      startPadGameplay: () => KW
+    });
+    OW(42060);
+    var mW = OW(42067),
+      EW = OW(2478),
+      NW = OW(25),
+      PW = OW(40274),
+      LW = OW(2350),
+      cW = OW(40298),
+      wW = OW(27),
+      tW = OW(2365),
+      ZW = OW(39615),
+      xW = OW(10079),
+      lW = OW(42075);
+    const AW = {
+      yawRadPerSec: 0,
+      pitchRadPerSec: 0
+    };
+    var bW = OW(42089),
+      jW = OW(10053),
+      UW = OW(40305);
+    const kW = WW => WW.padSneakToggled || !!NW.d.get("clientEscMenuOptions").crouchIsToggle && WW.crouchToggled,
+      sW = () => {
+        const WW = (() => {
+          const WW = (0, xW.d)();
+          let iW = AW;
+          const OW = new lW.b;
+          let mW = !1,
+            EW = 0;
+          const NW = () => {
+            const OW = performance.now(),
+              NW = 0 === EW ? 0 : OW - EW;
+            if (EW = OW, !mW) return WW.discardPending(), null;
+            const PW = (0, lW.o)(iW, NW),
+              LW = WW.drainLookDelta(),
+              cW = (0, ZW.h)();
+            return {
+              jH: (PW.jH + LW.jH) * cW,
+              UH: (PW.UH + LW.UH) * cW
+            }
+          };
+          return {
+            update: (WW, EW, PW, LW) => {
+              WW.camera.vI !== NW && (WW.camera.vI = NW), mW = !0, iW = (0, lW.p)(OW, EW, PW, LW, performance.now())
+            },
+            release: () => {
+              mW = !1, iW = AW, OW.reset()
+            },
+            uninstall: WW => {
+              WW.camera.vI === NW && (WW.camera.vI = null)
+            }
+          }
+        })();
+        return {
+          update: (iW, OW, mW) => {
+            WW.update((0, tW.h)(), iW, OW, mW)
+          },
+          release: WW.release,
+          uninstall: () => {
+            const iW = (0, tW.h)();
+            iW && WW.uninstall(iW)
+          }
+        }
+      };
+    var MW = OW(42086);
+    OW(38866), OW(9966);
+    OW(9976).e;
+    const KW = () => {
+      const WW = (0, MW.b)((() => {
+          const WW = {
+            x: 0,
+            y: 0,
+            magnitude: 0,
+            headingOffset: 0,
+            jumpHeld: !1,
+            jumpPressedSinceTick: !1,
+            crouchHeld: !1,
+            running: !1,
+            sprintHeld: !1
+          };
+          return {
+            bodies: () => (0, PW.d)(),
+            look: sW(),
+            move: (iW, OW) => {
+              const mW = (0, tW.h)(),
+                EW = mW.EY.YOW();
+              if (WW.x = iW.x, WW.y = iW.y, WW.magnitude = iW.magnitude, WW.headingOffset = iW.headingOffset, WW.jumpHeld = iW.jumpHeld, iW.jumpPressed && (WW.jumpPressedSinceTick = !0), WW.running = iW.running, WW.sprintHeld = iW.sprintHeld, OW) {
+                const iW = (0, bW.f)({
+                  ...OW,
+                  descending: mW.EY.HiW(mW.Dv).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!mW.gM.canCrouch,
+                  toggled: kW(EW)
+                });
+                WW.crouchHeld = iW.crouchHeld, EW.padSneakToggled = iW.toggled, EW.crouchToggled = !1, (0, jW.g)(iW.toggled)
+              }
+              EW.gamepad = WW
+            },
+            stopMoving: () => {
+              var iW;
+              Object.assign(WW, {
+                x: 0,
+                y: 0,
+                magnitude: 0,
+                headingOffset: 0,
+                jumpHeld: !1,
+                jumpPressedSinceTick: !1,
+                crouchHeld: !1,
+                running: !1,
+                sprintHeld: !1
+              });
+              const OW = null === (iW = (0, tW.h)()) || void 0 === iW ? void 0 : iW.EY.YOW();
+              (null === OW || void 0 === OW ? void 0 : OW.gamepad) === WW && (OW.gamepad = null)
+            },
+            uninstall: () => {},
+            deviceChanged: WW => {
+              const iW = (0, tW.h)(),
+                OW = null === iW || void 0 === iW ? void 0 : iW.EY.YOW();
+              "touch" === WW ? ((0, jW.g)(!1), null !== OW && void 0 !== OW && OW.padSneakToggled && (OW.padSneakToggled = !1, OW.isTouchscreen && !OW.gamepad && iW.EY.aiW(iW.Dv).setCrouching(!!iW.gM.canCrouch && OW.touchCrouch))) : "gamepad" === WW && OW && (0, jW.g)(kW(OW))
+            },
+            hasPlayer: () => {
+              var WW;
+              return !(null === (WW = (0, tW.h)()) || void 0 === WW || !WW.Dv)
+            },
+            isPlayerDead: () => {
+              var WW;
+              const iW = (0, tW.h)();
+              return !1 === (null === (WW = iW.EY.jOW(iW.Dv)) || void 0 === WW ? void 0 : WW.isAlive)
+            },
+            isReplayMode: () => {
+              var WW, iW;
+              return !(null === (WW = (0, tW.d)()) || void 0 === WW || null === (iW = WW.client) || void 0 === iW || !iW.isReplayMode())
+            },
+            isFreeCameraOn: () => {
+              var WW, iW, OW;
+              return !(null === (WW = (0, tW.d)()) || void 0 === WW || null === (iW = WW.client) || void 0 === iW || null === (OW = iW.freeCameraController) || void 0 === OW || !OW.isEnabled())
+            },
+            targetsBlock: () => !!(0, tW.h)().WiW,
+            selectedSlotEmpty: () => {
+              var WW;
+              const iW = (0, tW.h)();
+              return !(null !== (WW = iW.EY.ziW(iW.Dv)) && void 0 !== WW && WW.getItemAtSelectedSlot())
+            },
+            pickBlockAllowed: () => {
+              const WW = (0, tW.h)().gM;
+              return !!WW.creative && !!WW.canPickBlocks
+            },
+            zoomAllowed: () => !!(0, tW.h)().gM.canUseZoomKey,
+            scrollHotbar: WW => {
+              wW.l.iZ("ScrollInventorySlot", WW)
+            },
+            hasFullInventory: () => (0, cW.b)((0, tW.h)()),
+            hasLobbyTab: () => (0, UW.d)((0, tW.h)().gM),
+            contextActionInputs: () => {
+              var WW, iW, OW, mW;
+              const EW = (0, tW.h)();
+              return {
+                holdingGun: !(null === (WW = EW.EY.UOW(EW.Dv)) || void 0 === WW || null === (iW = WW.nS) || void 0 === iW || !iW.isGun()),
+                customButtons: null !== (OW = EW.gM.customButtons) && void 0 !== OW ? OW : null,
+                touchscreenActionButton: null !== (mW = EW.gM.touchscreenActionButton) && void 0 !== mW ? mW : null
+              }
+            },
+            pressTouchButton: WW => {
+              (0, LW.sendColyMessage)(EW.xj, WW)
+            }
+          }
+        })()),
+        iW = (0, mW.b)(),
+        OW = null,
+        NW = null;
+      return () => {
+        WW(), iW(), null === OW || void 0 === OW || OW(), null === NW || void 0 === NW || NW()
+      }
+    }
+  },
+  37915: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => tW,
+      d: () => mW,
+      f: () => xW,
+      g: () => ZW,
+      k: () => PW,
+      m: () => AW,
+      q: () => cW,
+      t: () => bW,
+      w: () => wW,
+      y: () => LW
+    });
+    const mW = Math.PI / 2 - .001,
+      EW = 2 * Math.PI,
+      NW = 1e-9;
+
+    function PW(WW, iW) {
+      iW.heading = WW.heading, iW.pitch = WW.pitch
+    }
+
+    function LW(WW, iW) {
+      const OW = iW - WW;
+      return OW - EW * Math.floor((OW + Math.PI) / EW)
+    }
+
+    function cW(WW, iW, OW) {
+      return WW + LW(WW, iW) * OW
+    }
+
+    function wW(WW) {
+      if (!Number.isFinite(WW)) return WW;
+      const iW = WW - EW * Math.floor(WW / EW);
+      return iW < EW ? iW : 0
+    }
+
+    function tW(WW, iW) {
+      return WW + LW(WW, iW)
+    }
+
+    function ZW(WW) {
+      return Math.max(-mW, Math.min(mW, WW))
+    }
+
+    function xW(WW, iW, OW) {
+      const mW = Math.cos(iW);
+      return OW[0] = mW * Math.sin(WW), OW[1] = -Math.sin(iW), OW[2] = mW * Math.cos(WW), OW
+    }
+
+    function lW(WW, iW, OW, mW) {
+      const EW = Math.sqrt(WW * WW + OW * OW);
+      return EW < NW && Math.abs(iW) < NW || (EW >= NW && (mW.heading = Math.atan2(WW, OW)), mW.pitch = ZW(Math.atan2(-iW, EW) + 0)), mW
+    }
+
+    function AW(WW, iW) {
+      return lW(WW[0], WW[1], WW[2], iW)
+    }
+
+    function bW(WW, iW, OW) {
+      return lW(iW[0] - WW[0], iW[1] - WW[1], iW[2] - WW[2], OW)
+    }
+  },
+  37730: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => cW
+    });
+    var mW = OW(327),
+      EW = OW(25),
+      NW = OW(37735),
+      PW = OW(1729),
+      LW = OW(2085);
+
+    function cW(WW, iW) {
+      var OW, cW, wW;
+      if (!EW.d.get("isKeydownEnabled") || WW.repeat) return;
+      const tW = WW.code;
+      "Escape" === WW.key ? (0, PW.h)(WW) : null !== (OW = LW.v.OpenSettings) && void 0 !== OW && OW.includes(tW) ? (0, PW.s)(WW, mW.m.SETTINGS) : null !== (cW = LW.v.OpenCharacterCustomization) && void 0 !== cW && cW.includes(tW) ? (0, NW.e)() || (0, PW.s)(WW, mW.m.CUSTOMISATION, iW()) : null !== (wW = LW.v.ShowDebugOverlay) && void 0 !== wW && wW.includes(tW) && EW.d.set({
+        showDebugOverlay: !EW.d.get("showDebugOverlay")
       })
     }
+  },
+  37709: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => xW,
+      d: () => tW,
+      g: () => lW,
+      j: () => ZW
+    });
+    var mW = OW(344),
+      EW = OW(678),
+      NW = OW(687),
+      PW = OW(39);
+    const LW = {
+        idStorageKey: "playSessionId",
+        lastActivityStorageKey: "playSessionLastActivityMs",
+        expiryMs: 3e5
+      },
+      cW = "playSessionGameNameWithVariation",
+      wW = "wasMatchmakePlayer";
+
+    function tW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j;
+      (0, NW.h)(WW, LW)
+    }
+
+    function ZW() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j).setItem(wW, !0)
+    }
+
+    function xW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j;
+      return (0, NW.b)(WW, LW)
+    }
+
+    function lW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PW.j;
+      const OW = (0, NW.b)(iW, LW),
+        tW = function(WW) {
+          const iW = WW.getItem(cW);
+          return "string" !== typeof iW ? null : iW
+        }(iW),
+        ZW = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j).getItem(wW)
+        }(iW);
+      let xW;
+      return xW = null !== OW && null !== tW && (0, NW.e)(iW, LW) && function(WW, iW, OW) {
+          const EW = (0, mW.Tb)(WW),
+            NW = (0, mW.Tb)(iW),
+            PW = (0, mW.Lb)(WW),
+            LW = (0, mW.Lb)(iW);
+          return !(EW !== NW || !OW) || EW === NW && PW === LW
+        }(tW, WW, ZW) ? OW : (0, EW.d)(), (0, NW.i)(iW, LW, xW), iW.setItem(cW, WW),
+        function() {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PW.j).removeItem(wW)
+        }(iW), xW
+    }
+  },
+  37707: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => KW,
+      e: () => SW
+    });
+    var mW = OW(1052),
+      EW = OW(192),
+      NW = OW(339),
+      PW = OW(649),
+      LW = OW(344),
+      cW = OW(1061),
+      wW = OW(671),
+      tW = OW(698),
+      ZW = OW(5230),
+      xW = OW(100),
+      lW = OW(136),
+      AW = OW(1856),
+      bW = OW(117),
+      jW = OW(37709),
+      UW = OW(39),
+      kW = OW(683),
+      sW = OW(657),
+      MW = OW(37711);
+
+    function KW() {
+      var WW, iW;
+      return [...null !== (WW = navigator.languages) && void 0 !== WW ? WW : [null !== (iW = navigator.language) && void 0 !== iW ? iW : "none"], "EN-gb"]
+    }
+
+    function SW(WW, iW, OW, SW, YW) {
+      const yW = (0, mW.i)(iW) ? (0, mW.n)(iW) : null,
+        TW = WW.isLoggedIn() && void 0 !== (0, EW.c)(NW.k, lW.siteUsed) ? (0, sW.g)() : null,
+        JW = {
+          cookies: (0, AW.getAllCookiesForGameNameWithVariation)(iW),
+          isMobile: (0, xW.isMobile)(),
+          isUsingCustomGameTexturePack: null !== yW && YW(yW),
+          generalCookies: {
+            joinDiscord: !!UW.i.getItem("DiscordPressed"),
+            newGo: ZW.c,
+            ...WW.getMetricsCookies(),
+            trafficCode: SW,
+            compliance: xW.compliance
+          },
+          browserInfo: {
+            ua: window.navigator.userAgent,
+            name: (0, xW.getBrowserName)(),
+            version: (0, xW.getBrowserVersion)(),
+            platform: navigator.platform,
+            platformType: (0, xW.getPlatformType)(),
+            deviceType: (0, bW.d)()
+          },
+          isLoggedIn: WW.isLoggedIn(),
+          lobbyName: OW,
+          languages: KW(),
+          version: PW.d,
+          siteUsed: lW.siteUsed,
+          subsiteUsed: lW.subsiteUsed,
+          playSessionId: (0, jW.g)(iW),
+          visitSessionId: (0, kW.getVisitSessionId)(),
+          clientReason: wW.B.reason,
+          budgetBasis: (0, MW.g)(),
+          ...null !== tW.o && {
+            diagClaim: tW.o.claimId
+          },
+          ...null !== TW && {
+            webGpuLoss: TW
+          }
+        };
+      return null !== yW && (0, LW.xc)(yW) ? (JW.lobbyName = (0, mW.f)(yW, (0, mW.m)(iW), OW), {
+        roomName: `classic_${cW.e}`,
+        joinOptions: JW
+      }) : {
+        roomName: iW,
+        joinOptions: JW
+      }
+    }
+  },
+  5713: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => xW,
+      i: () => cW,
+      m: () => AW,
+      o: () => wW,
+      p: () => lW
+    });
+    var mW = OW(5721),
+      EW = OW(5725);
+    const NW = !1,
+      PW = mW.h.map((WW => {
+        const iW = [];
+        for (let NW = 1; NW <= WW.reach; NW++) iW.push(EW.j[(0, mW.d)(WW.source, NW)].id);
+        const OW = "water" === WW.family;
+        return Object.freeze({
+          name: WW.kind,
+          family: WW.family,
+          reach: WW.reach,
+          stepTicks: OW ? 5 : 10,
+          slopeDistance: OW ? 4 : 2,
+          sourceId: EW.j[WW.source].id,
+          fallingId: EW.j[(0, mW.b)(WW.source)].id,
+          flowingIds: Object.freeze(iW),
+          makesSources: OW,
+          stillId: EW.j[WW.still].id
+        })
+      })),
+      LW = new Map;
+    for (const bW of PW) LW.set(bW.sourceId, Object.freeze({
+      kind: bW,
+      state: "source",
+      distance: 0
+    })), LW.set(bW.fallingId, Object.freeze({
+      kind: bW,
+      state: "falling",
+      distance: 0
+    })), bW.flowingIds.forEach(((WW, iW) => {
+      LW.set(WW, Object.freeze({
+        kind: bW,
+        state: "flowing",
+        distance: iW + 1
+      }))
+    }));
+
+    function cW(WW) {
+      return PW.find((iW => iW.name === WW))
+    }
+
+    function wW(WW) {
+      return null === WW ? void 0 : LW.get(WW)
+    }
+    const tW = new Uint8Array(65536);
+    for (const [bW, jW] of LW) tW[bW] = "source" === jW.state ? 1 : 2;
+    const ZW = new Map;
+    for (const bW of PW) ZW.set(bW.stillId, bW.family);
+
+    function xW(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = wW(WW)) || void 0 === OW ? void 0 : OW.kind.family) && void 0 !== iW ? iW : lW(WW)
+    }
+
+    function lW(WW) {
+      var iW;
+      return null === WW ? null : null !== (iW = ZW.get(WW)) && void 0 !== iW ? iW : null
+    }
+    EW.j.Obsidian.id, EW.j["Messy Stone"].id;
+
+    function AW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : function() {
+        let WW = 0;
+        for (const iW of PW) WW = Math.max(WW, iW.stillId, iW.sourceId, iW.fallingId, ...iW.flowingIds);
+        return WW
+      }() + 1;
+      const iW = new Uint8Array(WW);
+      for (const OW of PW) {
+        const mW = ("water" === OW.family ? 1 : 2) << 4;
+        for (const EW of [OW.stillId, OW.sourceId, OW.fallingId, ...OW.flowingIds]) EW < WW && (iW[EW] = mW)
+      }
+      return iW
+    }
+  },
+  40189: (WW, iW, OW) => {
+    function mW(WW, iW, OW, mW, EW) {
+      var NW = {};
+      return Object.keys(mW).forEach((function(WW) {
+        NW[WW] = mW[WW]
+      })), NW.enumerable = !!NW.enumerable, NW.configurable = !!NW.configurable, ("value" in NW || NW.initializer) && (NW.writable = !0), NW = OW.slice().reverse().reduce((function(OW, mW) {
+        return mW(WW, iW, OW) || OW
+      }), NW), EW && void 0 !== NW.initializer && (NW.value = NW.initializer ? NW.initializer.call(EW) : void 0, NW.initializer = void 0), void 0 === NW.initializer && (Object.defineProperty(WW, iW, NW), NW = null), NW
+    }
+    OW.d(iW, {
+      c: () => mW
+    })
+  },
+  40181: (WW, iW, OW) => {
+    function mW(WW, iW, OW, mW) {
+      OW && Object.defineProperty(WW, iW, {
+        enumerable: OW.enumerable,
+        configurable: OW.configurable,
+        writable: OW.writable,
+        value: OW.initializer ? OW.initializer.call(mW) : void 0
+      })
+    }
+    OW.d(iW, {
+      e: () => mW
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

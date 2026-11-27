@@ -1,285 +1,136 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37263: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => ZB,
-      e: () => NB,
-      h: () => zB,
-      l: () => PB
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var YB = GB(34790),
-      DB = GB(37267),
-      QB = GB(37270),
-      oB = GB(9391),
-      jB = GB(1480),
-      yB = GB(56),
-      JB = GB(70),
-      MB = GB(1282);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function PB() {
-      var BB;
-      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
-        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function zB(BB) {
-      var OB;
+    function xW(WW) {
+      var iW;
       let {
-        show: GB
-      } = BB;
-      (0, jB.i)(DB.d, (0, DB.n)());
-      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
-      return (0, yB.useEffect)((() => {
-        var BB;
-        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
-      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
-        showing: GB,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === JB || void 0 === JB ? void 0 : JB.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const lB = new Map,
-      pB = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function qB(BB, OB) {
-      OB ? lB.set(BB, OB) : lB.delete(BB);
-      for (const GB of pB) GB()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function ZB(BB) {
+    function jW(WW) {
       let {
-        placement: OB = "bottom"
-      } = BB;
-      const GB = (0, yB.useRef)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = GB.current;
-        return qB(OB, BB), () => {
-          lB.get(OB) === BB && qB(OB, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [OB]), (0, MB.jsx)("div", {
-        ref: GB,
-        id: `clientGameHud-${OB}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function UW(WW) {
       let {
-        children: OB,
-        placement: GB = "bottom"
-      } = BB;
-      const [YB, DB] = (0, yB.useState)((() => {
-        var BB;
-        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, yB.useEffect)((() => {
-        const BB = () => {
-          var BB;
-          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return pB.add(BB), BB(), () => {
-          pB.delete(BB)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function QB(BB) {
+    function NW(WW) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  9391: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
     });
-    let YB = null;
-    const DB = function(BB) {
-        const OB = {
-          cycle: BB,
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return YB = OB, () => {
-          YB === OB && (YB = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      QB = () => {
-        var BB;
-        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  37270: (BB, OB, GB) => {
-    GB.d(OB, {
-      D: () => pB,
-      G: () => RB,
-      e: () => QB,
-      i: () => qB,
-      l: () => ZB,
-      m: () => jB,
-      q: () => zB,
-      u: () => NB,
-      y: () => PB,
-      z: () => WB
+  40771: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => QW
     });
-    var YB = GB(16),
-      DB = GB(25);
-    const QB = "clientGameInventoryButtonsChanged",
-      oB = new Map;
-
-    function jB() {
-      return [...oB.values()].sort(((BB, OB) => {
-        var GB, YB;
-        return (null !== (GB = BB.order) && void 0 !== GB ? GB : 0) - (null !== (YB = OB.order) && void 0 !== YB ? YB : 0)
-      }))
-    }
-    let yB = null;
-
-    function JB(BB) {
-      yB = BB
-    }
-    let MB = !1;
-
-    function PB(BB) {
-      MB = !0;
-      try {
-        BB.onClick()
-      } finally {
-        MB = !1
-      }
-      BB.panel && "clientGame" === YB.c.get("openInGameMenuName") && JB(BB.id)
-    }
-
-    function zB() {
-      return MB
-    }
-
-    function lB() {
-      return jB().filter((BB => BB.panel && !BB.disabled))
-    }
-
-    function pB(BB) {
-      const OB = lB(),
-        GB = OB.findIndex((BB => BB.id === yB));
-      return !(GB < 0 || OB.length < 2) && (PB(OB[(GB + BB + OB.length) % OB.length]), !0)
-    }
-
-    function qB() {
-      return null !== yB && lB().length > 1
-    }
-
-    function ZB() {
-      JB(null)
-    }
-
-    function NB() {
-      "inventory" !== YB.c.get("openInGameMenuName") && JB(null)
-    }
-
-    function RB() {
-      const BB = yB;
-      return JB(null), BB
-    }
-
-    function WB(BB) {
-      return oB.set(BB.id, BB), DB.o.tM(QB, jB(), !0), () => {
-        oB.get(BB.id) === BB && (oB.delete(BB.id), DB.o.tM(QB, jB()))
-      }
-    }
-  },
-  37267: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      f: () => RB,
-      g: () => ZB,
-      i: () => NB,
-      m: () => zB,
-      n: () => JB,
-      o: () => qB,
-      r: () => lB,
-      s: () => MB
-    });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(37270);
-    const jB = "clientGameUiChanged";
-    let yB = null;
-
-    function JB() {
-      return yB
-    }
-
-    function MB(BB, OB) {
-      const GB = {
-        content: BB,
-        menu: OB
-      };
-      return yB = GB, DB.o.tM(jB, yB, !0), () => {
-        yB === GB && (yB = null, pB = !1, ZB(), DB.o.tM(jB, null))
-      }
-    }
-    let PB = null;
-
-    function zB() {
-      return PB
-    }
-
-    function lB(BB) {
-      return PB = BB, () => {
-        PB === BB && (PB = null)
-      }
-    }
-    let pB = !1;
-
-    function qB() {
-      const BB = YB.c.get("openInGameMenuName");
-      "clientGame" !== BB && (pB = "inventory" === BB), (0, oB.q)() || (0, oB.l)(), (0, QB.p)(QB.b), YB.c.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function ZB() {
-      WB(!1)
-    }
-
-    function NB() {
-      WB(pB)
-    }
-
-    function RB() {
-      pB && WB(!1)
-    }
-
-    function WB(BB) {
-      "clientGame" === YB.c.get("openInGameMenuName") && YB.c.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, oB.l)(), pB = !1
-    }
-  },
-  40220: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => tB
-    });
-    const YB = {
+    const mW = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -289,270 +140,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var DB = GB(56),
-      QB = GB(38703),
-      oB = GB(353);
-    const jB = ["Basic", "Rare", "Super"];
+    var EW = OW(62),
+      NW = OW(39220),
+      PW = OW(344);
+    const LW = ["Basic", "Rare", "Super"];
 
-    function yB(BB, OB) {
-      return `${"Basic"===OB?"":`${OB} `}${"Simple"===BB?"":`${BB} `}Lucky Block`
+    function cW(WW, iW) {
+      return `${"Basic"===iW?"":`${iW} `}${"Simple"===WW?"":`${WW} `}Lucky Block`
     }
-    const JB = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((BB => jB.map((OB => [yB(BB, OB), {
-      category: BB,
-      rarity: OB
+    const wW = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((WW => LW.map((iW => [cW(WW, iW), {
+      category: WW,
+      rarity: iW
     }])))));
-    JB.keys();
+    wW.keys();
 
-    function MB(BB) {
-      return JB.get(BB)
+    function tW(WW) {
+      return wW.get(WW)
     }
-    const PB = "Obsidian",
-      zB = ["Cobweb"],
-      lB = [...["Red", "Blue", "Green", "Yellow"].map((BB => `${(0,oB._)(BB)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", PB, ...zB];
+    const ZW = "Obsidian",
+      xW = ["Cobweb"],
+      lW = [...["Red", "Blue", "Green", "Yellow"].map((WW => `${(0,PW.Z)(WW)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", ZW, ...xW];
 
-    function pB(BB) {
-      return lB.includes(BB)
+    function AW(WW) {
+      return lW.includes(WW)
     }
-    var qB = GB(641);
+    var bW = OW(643);
 
-    function ZB(BB, OB) {
-      const GB = MB(BB);
-      if (GB) {
-        const BB = MB(OB);
-        if (!BB) return;
-        const YB = jB.length - 1 - jB.indexOf(BB.rarity);
-        return (BB.category === GB.category ? 0 : 1) * jB.length + YB
+    function jW(WW, iW) {
+      const OW = tW(WW);
+      if (OW) {
+        const WW = tW(iW);
+        if (!WW) return;
+        const mW = LW.length - 1 - LW.indexOf(WW.rarity);
+        return (WW.category === OW.category ? 0 : 1) * LW.length + mW
       }
-      if (!pB(BB)) return;
-      if (OB === BB) return 0;
-      const YB = BB => pB(BB) && !zB.includes(BB) && BB !== PB;
-      return YB(BB) && YB(OB) ? 1 : void 0
+      if (!AW(WW)) return;
+      if (iW === WW) return 0;
+      const mW = WW => AW(WW) && !xW.includes(WW) && WW !== ZW;
+      return mW(WW) && mW(iW) ? 1 : void 0
     }
-    const NB = [...Array.from({
-      length: qB.t - qB.r
-    }, ((BB, OB) => qB.r + OB)), ...Array.from({
-      length: qB.r
-    }, ((BB, OB) => OB))];
-    class RB {
-      constructor(BB) {
-        this.inventory = BB, this.pending = new Map
+    const UW = [...Array.from({
+      length: bW.o - bW.m
+    }, ((WW, iW) => bW.m + iW)), ...Array.from({
+      length: bW.m
+    }, ((WW, iW) => iW))];
+    class kW {
+      constructor(WW) {
+        this.inventory = WW, this.pending = new Map
       }
-      onPlace(BB) {
-        var OB;
-        const GB = this.inventory.selectedSlot(),
-          YB = this.inventory.itemAt(GB);
-        (null === YB || void 0 === YB ? void 0 : YB.name) === BB && (null !== (OB = YB.amount) && void 0 !== OB ? OB : 1) <= 1 && WB(BB) && this.pending.set(GB, BB)
+      onPlace(WW) {
+        var iW;
+        const OW = this.inventory.selectedSlot(),
+          mW = this.inventory.itemAt(OW);
+        (null === mW || void 0 === mW ? void 0 : mW.name) === WW && (null !== (iW = mW.amount) && void 0 !== iW ? iW : 1) <= 1 && sW(WW) && this.pending.set(OW, WW)
       }
-      onDrop(BB, OB) {
-        OB < qB.r && null === this.inventory.itemAt(OB) && WB(BB) && this.refill(OB, BB)
+      onDrop(WW, iW) {
+        iW < bW.m && null === this.inventory.itemAt(iW) && sW(WW) && this.refill(iW, WW)
       }
-      kP() {
-        const BB = [...this.pending];
+      hZ() {
+        const WW = [...this.pending];
         this.pending.clear();
-        for (const [OB, GB] of BB) null === this.inventory.itemAt(OB) && this.refill(OB, GB)
+        for (const [iW, OW] of WW) null === this.inventory.itemAt(iW) && this.refill(iW, OW)
       }
-      refill(BB, OB) {
-        const GB = function(BB, OB, GB, YB) {
-          let DB, QB = 1 / 0;
-          for (const oB of NB) {
-            if (oB === OB) continue;
-            const jB = YB(oB);
-            if (!jB || oB < qB.r && OB !== GB) continue;
-            const yB = ZB(BB, jB.name);
-            void 0 !== yB && yB < QB && (DB = oB, QB = yB)
+      refill(WW, iW) {
+        const OW = function(WW, iW, OW, mW) {
+          let EW, NW = 1 / 0;
+          for (const PW of UW) {
+            if (PW === iW) continue;
+            const LW = mW(PW);
+            if (!LW || PW < bW.m && iW !== OW) continue;
+            const cW = jW(WW, LW.name);
+            void 0 !== cW && cW < NW && (EW = PW, NW = cW)
           }
-          return DB
-        }(OB, BB, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== GB && this.inventory.swap(BB, GB)
+          return EW
+        }(iW, WW, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== OW && this.inventory.swap(WW, OW)
       }
     }
 
-    function WB(BB) {
-      return !!MB(BB) || pB(BB)
+    function sW(WW) {
+      return !!tW(WW) || AW(WW)
     }
-    var AB = GB(37267),
-      VB = GB(70),
-      SB = GB(1090),
-      nB = GB.n(SB);
-    const UB = "Lucky Clover",
-      fB = {
+    var MW = OW(3361),
+      KW = OW(80),
+      SW = OW(1089),
+      YW = OW.n(SW);
+    const yW = "Lucky Clover",
+      TW = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function kB(BB) {
-      return fB[BB][0]
+    function JW(WW) {
+      return TW[WW][0]
     }
 
-    function dB(BB) {
-      return jB.filter((OB => BB >= kB(OB)))
+    function hW(WW) {
+      return LW.filter((iW => WW >= JW(iW)))
     }
-    var KB = GB(331),
-      uB = GB(2653),
-      mB = GB(16),
-      IB = GB(2854),
-      FB = GB(2012),
-      iB = GB(37263),
-      LB = GB(1383);
-    var gB = GB(1282);
-    const rB = {
-      Basic: oB.J.whiteUiText,
-      Rare: oB.J.goldUiText,
-      Super: oB.J.cyanUiText
+    var HW = OW(327),
+      nW = OW(3332),
+      uW = OW(25),
+      oW = OW(3599),
+      dW = OW(2032),
+      eW = OW(37868),
+      vW = OW(1391);
+    var gW = OW(1283);
+    const DW = {
+      Basic: PW.M.whiteUiText,
+      Rare: PW.M.goldUiText,
+      Super: PW.M.cyanUiText
     };
-    let XB = 1;
+    let VW = 1;
 
-    function wB() {
-      const BB = (0, uB.g)("currencyAmounts"),
-        OB = null === BB || void 0 === BB ? void 0 : BB.Clovers;
-      return !OB || OB.hidden ? null : (0, gB.jsx)(iB.e, {
-        children: (0, gB.jsx)(EB, {
-          amount: OB.amount
+    function pW() {
+      const WW = (0, nW.e)("currencyAmounts"),
+        iW = null === WW || void 0 === WW ? void 0 : WW.Clovers;
+      return !iW || iW.hidden ? null : (0, gW.jsx)(eW.h, {
+        children: (0, gW.jsx)(fW, {
+          amount: iW.amount
         })
       })
     }
 
-    function EB(BB) {
-      var OB, GB, YB;
+    function fW(WW) {
+      var iW, OW, mW;
       let {
-        amount: QB
-      } = BB;
+        amount: NW
+      } = WW;
       const {
-        openEverythingMenuName: yB
-      } = (0, mB.o)(["openEverythingMenuName"]), JB = (0, IB.d)(), [MB, PB] = (0, DB.useState)(QB), [zB, lB] = (0, DB.useState)(null), [pB, qB] = (0, DB.useState)(0), [ZB, NB] = (0, DB.useState)([]), RB = (0, DB.useRef)(QB), WB = (0, DB.useRef)(!1), AB = (0, DB.useRef)(null), SB = yB === KB.p.SHOP;
-      (0, DB.useEffect)((() => {
-        const BB = RB.current;
-        if (RB.current = QB, QB <= BB || SB) return void PB(QB);
-        const OB = JB || ZB.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (GB = QB - BB, YB = !WB.current, GB <= 0 || !YB && GB < 40 ? 0 : Math.min(4, Math.ceil(GB / 30)));
-        var GB, YB;
-        if (WB.current = !0, dB(QB).length > dB(BB).length && qB(XB++), OB > 0) {
-          const BB = [];
-          for (let GB = 0; GB < OB; GB++) BB.push({
-            id: XB++,
+        openEverythingMenuName: cW
+      } = (0, uW.p)(["openEverythingMenuName"]), wW = (0, oW.e)(), [tW, ZW] = (0, EW.useState)(NW), [xW, lW] = (0, EW.useState)(null), [AW, bW] = (0, EW.useState)(0), [jW, UW] = (0, EW.useState)([]), kW = (0, EW.useRef)(NW), sW = (0, EW.useRef)(!1), MW = (0, EW.useRef)(null), SW = cW === HW.m.SHOP;
+      (0, EW.useEffect)((() => {
+        const WW = kW.current;
+        if (kW.current = NW, NW <= WW || SW) return void ZW(NW);
+        const iW = wW || jW.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (OW = NW - WW, mW = !sW.current, OW <= 0 || !mW && OW < 40 ? 0 : Math.min(4, Math.ceil(OW / 30)));
+        var OW, mW;
+        if (sW.current = !0, hW(NW).length > hW(WW).length && bW(VW++), iW > 0) {
+          const WW = [];
+          for (let OW = 0; OW < iW; OW++) WW.push({
+            id: VW++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * GB
+            delayMs: 70 * OW
           });
-          NB((OB => [...OB, ...BB]))
+          UW((iW => [...iW, ...WW]))
         }
-        const DB = OB > 0 ? 600 : 0;
-        lB({
-          id: XB++,
-          delayMs: DB
+        const EW = iW > 0 ? 600 : 0;
+        lW({
+          id: VW++,
+          delayMs: EW
         });
-        const jB = performance.now() + DB;
-        let yB = 0;
-        const MB = OB => {
-          const GB = oB.b.clamp((OB - jB) / 600, 0, 1);
-          PB(Math.round(BB + (QB - BB) * GB)), GB < 1 && (yB = requestAnimationFrame(MB))
+        const LW = performance.now() + EW;
+        let cW = 0;
+        const tW = iW => {
+          const OW = PW.e.clamp((iW - LW) / 600, 0, 1);
+          ZW(Math.round(WW + (NW - WW) * OW)), OW < 1 && (cW = requestAnimationFrame(tW))
         };
-        return yB = requestAnimationFrame(MB), () => {
-          cancelAnimationFrame(yB)
+        return cW = requestAnimationFrame(tW), () => {
+          cancelAnimationFrame(cW)
         }
-      }), [QB, SB]);
-      const fB = function(BB) {
-          var OB;
-          const GB = null !== (OB = jB.find((OB => BB < kB(OB)))) && void 0 !== OB ? OB : "Super";
+      }), [NW, SW]);
+      const TW = function(WW) {
+          var iW;
+          const OW = null !== (iW = LW.find((iW => WW < JW(iW)))) && void 0 !== iW ? iW : "Super";
           return {
-            rarity: GB,
-            progress: oB.b.clamp(BB / kB(GB), 0, 1)
+            rarity: OW,
+            progress: PW.e.clamp(WW / JW(OW), 0, 1)
           }
-        }(MB),
-        uB = dB(MB).at(-1);
-      return (0, gB.jsxs)(gB.Fragment, {
-        children: [(0, gB.jsx)("div", {
+        }(tW),
+        nW = hW(tW).at(-1);
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [(0, gW.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, gB.jsxs)("div", {
-            className: nB()("LuckyCloverWallet", {
-              Capped: uB && "Basic" !== uB
+          children: (0, gW.jsxs)("div", {
+            className: YW()("LuckyCloverWallet", {
+              Capped: nW && "Basic" !== nW
             }),
-            style: uB && {
-              "--luckyTierColour": rB[uB]
+            style: nW && {
+              "--luckyTierColour": DW[nW]
             },
-            children: [(0, gB.jsx)("div", {
+            children: [(0, gW.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${fB.progress})`
+                transform: `scaleX(${TW.progress})`
               }
-            }), pB > 0 && (0, gB.jsx)("div", {
+            }), AW > 0 && (0, gW.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(OB=null===zB||void 0===zB?void 0:zB.delayMs)&&void 0!==OB?OB:0}ms`
+                animationDelay: `${null!==(iW=null===xW||void 0===xW?void 0:xW.delayMs)&&void 0!==iW?iW:0}ms`
               }
-            }, pB), (0, gB.jsx)("div", {
-              ref: AB,
-              className: nB()("LuckyCloverWalletIcon", zB && "Bounce"),
+            }, AW), (0, gW.jsx)("div", {
+              ref: MW,
+              className: YW()("LuckyCloverWalletIcon", xW && "Bounce"),
               style: {
-                animationDelay: `${null!==(YB=null===zB||void 0===zB?void 0:zB.delayMs)&&void 0!==YB?YB:0}ms`
+                animationDelay: `${null!==(mW=null===xW||void 0===xW?void 0:xW.delayMs)&&void 0!==mW?mW:0}ms`
               },
-              children: (0, gB.jsx)(FB.c, {
-                itemName: UB,
+              children: (0, gW.jsx)(dW.b, {
+                itemName: yW,
                 amount: 0
               })
-            }, null !== (GB = null === zB || void 0 === zB ? void 0 : zB.id) && void 0 !== GB ? GB : 0), (0, gB.jsx)("span", {
+            }, null !== (OW = null === xW || void 0 === xW ? void 0 : xW.id) && void 0 !== OW ? OW : 0), (0, gW.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: MB
-            }), uB && (0, gB.jsx)(LB.b, {
+              children: tW
+            }), nW && (0, gW.jsx)(vW.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, VB.createPortal)(ZB.map((BB => (0, gB.jsx)(cB, {
-          flyer: BB,
-          target: AB,
+        }), (0, KW.createPortal)(jW.map((WW => (0, gW.jsx)(CW, {
+          flyer: WW,
+          target: MW,
           onDone: () => {
-            NB((OB => OB.filter((OB => OB.id !== BB.id))))
+            UW((iW => iW.filter((iW => iW.id !== WW.id))))
           }
-        }, BB.id))), document.body)]
+        }, WW.id))), document.body)]
       })
     }
 
-    function cB(BB) {
+    function CW(WW) {
       let {
-        flyer: OB,
-        target: GB,
-        onDone: YB
-      } = BB;
-      const QB = (0, DB.useRef)(null);
-      return (0, DB.useEffect)((() => {
-        var BB;
-        const DB = null === (BB = GB.current) || void 0 === BB ? void 0 : BB.getBoundingClientRect();
-        if (!QB.current || !DB) return void YB();
+        flyer: iW,
+        target: OW,
+        onDone: mW
+      } = WW;
+      const NW = (0, EW.useRef)(null);
+      return (0, EW.useEffect)((() => {
+        var WW;
+        const EW = null === (WW = OW.current) || void 0 === WW ? void 0 : WW.getBoundingClientRect();
+        if (!NW.current || !EW) return void mW();
         const {
-          x: oB,
-          y: jB
-        } = OB, yB = oB + 140 * (Math.random() - .5), JB = jB - 30 - 40 * Math.random(), MB = QB.current.animate([{
-          transform: `translate(${oB}px, ${jB}px) scale(0.3)`,
+          x: PW,
+          y: LW
+        } = iW, cW = PW + 140 * (Math.random() - .5), wW = LW - 30 - 40 * Math.random(), tW = NW.current.animate([{
+          transform: `translate(${PW}px, ${LW}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${yB}px, ${JB}px) scale(1.3)`,
+          transform: `translate(${cW}px, ${wW}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${DB.left}px, ${DB.top}px) scale(0.8)`,
+          transform: `translate(${EW.left}px, ${EW.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: OB.delayMs,
+          delay: iW.delayMs,
           fill: "backwards"
         });
-        return MB.onfinish = YB, () => {
-          MB.cancel()
+        return tW.onfinish = mW, () => {
+          tW.cancel()
         }
-      }), []), (0, gB.jsx)("div", {
-        ref: QB,
+      }), []), (0, gW.jsx)("div", {
+        ref: NW,
         className: "LuckyCloverFlying",
-        children: (0, gB.jsx)(FB.c, {
-          itemName: UB,
+        children: (0, gW.jsx)(dW.b, {
+          itemName: yW,
           amount: 0
         })
       })
     }
-    var hB = GB(25);
-    const aB = "luckyGearUpgradeView",
-      eB = {
+    var XW = OW(27);
+    const BW = "luckyGearUpgradeView",
+      qW = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -560,13 +411,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function TB(BB) {
-      var OB;
-      return null !== (OB = eB[BB.split(" ")[0]]) && void 0 !== OB ? OB : "#e07bff"
+    function RW(WW) {
+      var iW;
+      return null !== (iW = qW[WW.split(" ")[0]]) && void 0 !== iW ? iW : "#e07bff"
     }
-    class bB {
-      constructor(BB, OB) {
-        this.selectedSlot = BB, this.itemAt = OB, this.rings = [], this.unseen = new Map, this.view = {
+    class GW {
+      constructor(WW, iW) {
+        this.selectedSlot = WW, this.itemAt = iW, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -574,200 +425,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      nP(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [GB, YB, DB] of BB) this.rings.push({
+      yZ(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [OW, mW, EW] of WW) this.rings.push({
           id: this.nextId++,
-          slot: GB,
-          colour: TB(DB),
-          until: OB + 1200
-        }), GB !== this.selectedSlot() && this.unseen.set(GB, {
-          from: YB,
-          to: DB
+          slot: OW,
+          colour: RW(EW),
+          until: iW + 1200
+        }), OW !== this.selectedSlot() && this.unseen.set(OW, {
+          from: mW,
+          to: EW
         });
-        this.tM()
+        this.iZ()
       }
-      kP() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      hZ() {
+        let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const OB = this.rings.filter((OB => OB.until > BB));
-        let GB = OB.length !== this.rings.length;
-        this.rings = OB;
-        for (const [YB, {
-            from: DB,
-            to: QB
+        const iW = this.rings.filter((iW => iW.until > WW));
+        let OW = iW.length !== this.rings.length;
+        this.rings = iW;
+        for (const [mW, {
+            from: EW,
+            to: NW
           }] of this.unseen) {
-          const BB = this.itemAt(YB);
-          (YB === this.selectedSlot() || BB !== QB && BB !== DB) && (this.unseen.delete(YB), GB = !0)
+          const WW = this.itemAt(mW);
+          (mW === this.selectedSlot() || WW !== NW && WW !== EW) && (this.unseen.delete(mW), OW = !0)
         }
-        GB && this.tM()
+        OW && this.iZ()
       }
-      tM() {
+      iZ() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, hB.o.tM(aB, this.view)
+        }, XW.l.iZ(BW, this.view)
       }
     }
-    var CB = GB(1480);
+    var IW = OW(1526);
 
-    function HB(BB) {
-      return document.querySelector(`.HotBar [data-inven-idx="${BB}"]`)
+    function aW(WW) {
+      return document.querySelector(`.HotBar [data-inven-idx="${WW}"]`)
     }
 
-    function vB(BB) {
+    function rW(WW) {
       let {
-        ring: OB
-      } = BB;
-      const [GB, YB] = (0, DB.useState)(null);
-      return (0, DB.useLayoutEffect)((() => {
-        var BB, GB;
-        YB(null !== (BB = null === (GB = HB(OB.slot)) || void 0 === GB ? void 0 : GB.getBoundingClientRect()) && void 0 !== BB ? BB : null)
-      }), [OB]), GB ? (0, gB.jsx)("div", {
+        ring: iW
+      } = WW;
+      const [OW, mW] = (0, EW.useState)(null);
+      return (0, EW.useLayoutEffect)((() => {
+        var WW, OW;
+        mW(null !== (WW = null === (OW = aW(iW.slot)) || void 0 === OW ? void 0 : OW.getBoundingClientRect()) && void 0 !== WW ? WW : null)
+      }), [iW]), OW ? (0, gW.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: GB.left,
-          top: GB.top,
-          width: GB.width,
-          height: GB.height,
-          "--ringColour": OB.colour,
+          left: OW.left,
+          top: OW.top,
+          width: OW.width,
+          height: OW.height,
+          "--ringColour": iW.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function sB(BB) {
+    function zW(WW) {
       let {
-        slot: OB
-      } = BB;
-      const [GB, YB] = (0, DB.useState)(null);
-      return (0, DB.useLayoutEffect)((() => {
-        const BB = () => {
-          YB(HB(OB))
+        slot: iW
+      } = WW;
+      const [OW, mW] = (0, EW.useState)(null);
+      return (0, EW.useLayoutEffect)((() => {
+        const WW = () => {
+          mW(aW(iW))
         };
-        BB();
-        const GB = new MutationObserver(BB),
-          DB = document.querySelector(".BottomMiddleElements");
-        return DB && GB.observe(DB, {
+        WW();
+        const OW = new MutationObserver(WW),
+          EW = document.querySelector(".BottomMiddleElements");
+        return EW && OW.observe(EW, {
           childList: !0,
           subtree: !0
         }), () => {
-          GB.disconnect()
+          OW.disconnect()
         }
-      }), [OB]), GB ? (0, VB.createPortal)((0, gB.jsx)("div", {
+      }), [iW]), OW ? (0, KW.createPortal)((0, gW.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), GB) : null
+      }), OW) : null
     }
 
-    function xB(BB) {
+    function FW(WW) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, CB.i)(aB, OB.getView());
-      return (0, gB.jsxs)(gB.Fragment, {
-        children: [GB.rings.map((BB => (0, gB.jsx)(vB, {
-          ring: BB
-        }, BB.id))), GB.unseenSlots.map((BB => (0, gB.jsx)(sB, {
-          slot: BB
-        }, BB)))]
+        controller: iW
+      } = WW;
+      const OW = (0, IW.g)(BW, iW.getView());
+      return (0, gW.jsxs)(gW.Fragment, {
+        children: [OW.rings.map((WW => (0, gW.jsx)(rW, {
+          ring: WW
+        }, WW.id))), OW.unseenSlots.map((WW => (0, gW.jsx)(zW, {
+          slot: WW
+        }, WW)))]
       })
     }
-    const tB = function(BB, OB, GB, oB) {
-      let jB, {
-          localPlayerId: yB
-        } = oB,
-        JB = null;
-      const MB = new RB({
-          itemAt: BB => jB.getItemSlot(yB, BB),
-          selectedSlot: () => jB.getSelectedInventorySlotI(yB),
-          swap: (BB, OB) => {
-            jB.swapInventorySlots(BB, OB)
+    const QW = function(WW, iW, OW, PW) {
+      let LW, {
+          localPlayerId: cW
+        } = PW,
+        wW = null;
+      const tW = new kW({
+          itemAt: WW => LW.getItemSlot(cW, WW),
+          selectedSlot: () => LW.getSelectedInventorySlotI(cW),
+          swap: (WW, iW) => {
+            LW.swapInventorySlots(WW, iW)
           }
         }),
-        PB = new bB((() => jB.getSelectedInventorySlotI(yB)), (BB => {
-          var OB;
-          return null === (OB = jB.getItemSlot(yB, BB)) || void 0 === OB ? void 0 : OB.name
+        ZW = new GW((() => LW.getSelectedInventorySlotI(cW)), (WW => {
+          var iW;
+          return null === (iW = LW.getItemSlot(cW, WW)) || void 0 === iW ? void 0 : iW.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, QB.e)()
+          placeAgainstBeds: (0, NW.d)()
         },
-        onCreate: BB => {
-          jB = BB, JB = (0, AB.s)((0, DB.createElement)(DB.Fragment, null, (0, DB.createElement)(wB), (0, DB.createElement)(xB, {
-            controller: PB
+        onCreate: WW => {
+          LW = WW, wW = (0, MW.O)((0, EW.createElement)(EW.Fragment, null, (0, EW.createElement)(pW), (0, EW.createElement)(FW, {
+            controller: ZW
           })))
         },
         onClose: () => {
-          var BB;
-          null === (BB = JB) || void 0 === BB || BB()
+          var WW;
+          null === (WW = wW) || void 0 === WW || WW()
         },
-        kP: () => {
-          MB.kP(), PB.kP()
+        hZ: () => {
+          tW.hZ(), ZW.hZ()
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          "luckyGearUpgrade" === BB && PB.nP(OB)
+        onReceivedMessageFromServer: (WW, iW) => {
+          "luckyGearUpgrade" === WW && ZW.yZ(iW)
         },
-        onPlayerChangeBlock: (BB, OB, GB, YB, DB, QB) => {
-          "Air" !== QB && MB.onPlace(QB)
+        onPlayerChangeBlock: (WW, iW, OW, mW, EW, NW) => {
+          "Air" !== NW && tW.onPlace(NW)
         },
-        onPlayerDropItem: (BB, OB, GB, YB) => {
-          MB.onDrop(OB, YB)
+        onPlayerDropItem: (WW, iW, OW, mW) => {
+          tW.onDrop(iW, mW)
         },
-        onPlayerAltAction: (BB, OB, GB, DB, QB, oB) => {
-          if (!oB || "Mesh" !== jB.getEntityType(oB)) return;
-          const yB = jB.getEntityName(oB),
-            JB = Object.values(YB).find((BB => BB.name === yB));
-          JB && jB.openShop(BB, !1, JB.shopTab)
+        onPlayerAltAction: (WW, iW, OW, EW, NW, PW) => {
+          if (!PW || "Mesh" !== LW.getEntityType(PW)) return;
+          const cW = LW.getEntityName(PW),
+            wW = Object.values(mW).find((WW => WW.name === cW));
+          wW && LW.openShop(WW, !1, wW.shopTab)
         }
       }
     }
   },
-  38703: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB
+  39220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW
     });
-    var YB = GB(353),
-      DB = GB(37633),
-      QB = GB(4896);
-    const oB = ["Leaf Bed", "_Leaf Bed Head", ...YB.Vc.flatMap((BB => [`${BB} Bed`, `_${BB} Bed Head`, `${BB} Strongbed`, `_${BB} Strongbed Head`]))];
+    var mW = OW(344),
+      EW = OW(38097),
+      NW = OW(5187);
+    const PW = ["Leaf Bed", "_Leaf Bed Head", ...mW.yc.flatMap((WW => [`${WW} Bed`, `_${WW} Bed Head`, `${WW} Strongbed`, `_${WW} Strongbed Head`]))];
 
-    function jB() {
-      let BB;
+    function LW() {
+      let WW;
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(iW) {
+          WW = iW
         },
-        altVetoBlocks: oB,
-        onPlayerAttemptAltAction(OB, GB, YB, oB, jB, yB) {
-          var JB;
-          if ((0, DB.b)(BB.getMetaInfo(jB).rootName) && !BB.isEntityInteractable(yB) && (0, QB.h)(null === (JB = BB.MYB(OB)) || void 0 === JB ? void 0 : JB.typeObj.type)) return "preventAction"
+        altVetoBlocks: PW,
+        onPlayerAttemptAltAction(iW, OW, mW, PW, LW, cW) {
+          var wW;
+          if ((0, EW.d)(WW.getMetaInfo(LW).rootName) && !WW.isEntityInteractable(cW) && (0, NW.f)(null === (wW = WW.kOW(iW)) || void 0 === wW ? void 0 : wW.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37633: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.includes("Leaf Bed")
+  38097: (WW, iW, OW) => {
+    function mW(WW) {
+      return WW.includes("Leaf Bed")
     }
 
-    function DB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
+    function EW(WW) {
+      return / Bed(?: Head)?(?:\||$)/.test(WW) && !mW(WW)
     }
 
-    function QB(BB) {
-      return BB.includes(" Strongbed")
+    function NW(WW) {
+      return WW.includes(" Strongbed")
     }
 
-    function oB(BB) {
-      return YB(BB) || DB(BB) || QB(BB)
+    function PW(WW) {
+      return mW(WW) || EW(WW) || NW(WW)
     }
-    GB.d(OB, {
-      b: () => oB,
-      d: () => YB,
-      f: () => QB,
-      i: () => DB
+    OW.d(iW, {
+      d: () => PW,
+      f: () => mW,
+      j: () => NW,
+      l: () => EW
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

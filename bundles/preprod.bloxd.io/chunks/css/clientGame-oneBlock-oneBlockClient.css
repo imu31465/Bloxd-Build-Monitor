@@ -1,0 +1,643 @@
+.OBBlockPops {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 30%
+}
+
+.OBBlockPops .OBBlockPop {
+  align-items: baseline;
+  animation: OBBlockPopRise .9s ease-out forwards;
+  display: flex;
+  gap: .5rem;
+  position: absolute;
+  transform: translate(-50%);
+  white-space: nowrap
+}
+
+.OBBlockPops .OBBlockPop .OBBlockPopPlus {
+  color: #ffb914;
+  font-size: 2.6rem;
+  font-weight: 900;
+  text-shadow: -2px -2px 0 #0f0f0f, -2px -1px 0 #0f0f0f, -2px 0 0 #0f0f0f, -2px 1px 0 #0f0f0f, -2px 2px 0 #0f0f0f, -1px -2px 0 #0f0f0f, -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, -1px 2px 0 #0f0f0f, 0 -2px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 0 2px 0 #0f0f0f, 1px -2px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f, 1px 2px 0 #0f0f0f, 2px -2px 0 #0f0f0f, 2px -1px 0 #0f0f0f, 2px 0 0 #0f0f0f, 2px 1px 0 #0f0f0f, 2px 2px 0 #0f0f0f
+}
+
+.OBBlockPops .OBBlockPop .OBBlockPopPlus .svg-inline--fa,
+.OBBlockPops .OBBlockPop .OBBlockPopPlus.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.OBBlockPops .OBBlockPop .OBBlockPopPlus .svg-inline--fa path:only-of-type,
+.OBBlockPops .OBBlockPop .OBBlockPopPlus.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 4px;
+  stroke-linejoin: round
+}
+
+.OBPhaseParty {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 14
+}
+
+.OBPhaseParty .OBPhasePartyConfetti {
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span {
+  animation: OBConfettiFall 2.6s var(--ob-confetti-delay) cubic-bezier(.25, .6, .6, 1) forwards;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  height: .9rem;
+  left: var(--ob-confetti-x);
+  position: absolute;
+  top: -2rem;
+  width: .9rem
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span:nth-child(6n+1) {
+  background: #ffb914
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span:nth-child(6n+2) {
+  background: #1dd06d
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span:nth-child(6n+3) {
+  background: #4f94f1
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span:nth-child(6n+4) {
+  background: #fc6464
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span:nth-child(6n+5) {
+  background: #fcd373
+}
+
+.OBPhaseParty .OBPhasePartyConfetti span:nth-child(6n+6) {
+  background: #ad50e3
+}
+
+.OBPhaseParty .OBPhasePartyPanel {
+  --ob-phase-colour: #1dd06d;
+  align-items: center;
+  animation: OBPhasePartyIn 5.2s cubic-bezier(.3, 1.5, .5, 1) forwards;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-top: .5rem solid var(--ob-phase-colour);
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  left: 50%;
+  max-width: 90vw;
+  padding: 1.2rem 2.4rem 1.4rem;
+  position: absolute;
+  top: 16%;
+  transform: translateX(-50%);
+  width: max-content
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle {
+  color: var(--ob-phase-colour);
+  font-size: min(3.4rem, 6.5vw);
+  font-weight: 900;
+  letter-spacing: .08em;
+  line-height: 1.1;
+  text-shadow: -3px -3px 0 #0f0f0f, -3px -2px 0 #0f0f0f, -3px -1px 0 #0f0f0f, -3px 0 0 #0f0f0f, -3px 1px 0 #0f0f0f, -3px 2px 0 #0f0f0f, -3px 3px 0 #0f0f0f, -2px -3px 0 #0f0f0f, -2px -2px 0 #0f0f0f, -2px -1px 0 #0f0f0f, -2px 0 0 #0f0f0f, -2px 1px 0 #0f0f0f, -2px 2px 0 #0f0f0f, -2px 3px 0 #0f0f0f, -1px -3px 0 #0f0f0f, -1px -2px 0 #0f0f0f, -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, -1px 2px 0 #0f0f0f, -1px 3px 0 #0f0f0f, 0 -3px 0 #0f0f0f, 0 -2px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 0 2px 0 #0f0f0f, 0 3px 0 #0f0f0f, 1px -3px 0 #0f0f0f, 1px -2px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f, 1px 2px 0 #0f0f0f, 1px 3px 0 #0f0f0f, 2px -3px 0 #0f0f0f, 2px -2px 0 #0f0f0f, 2px -1px 0 #0f0f0f, 2px 0 0 #0f0f0f, 2px 1px 0 #0f0f0f, 2px 2px 0 #0f0f0f, 2px 3px 0 #0f0f0f, 3px -3px 0 #0f0f0f, 3px -2px 0 #0f0f0f, 3px -1px 0 #0f0f0f, 3px 0 0 #0f0f0f, 3px 1px 0 #0f0f0f, 3px 2px 0 #0f0f0f, 3px 3px 0 #0f0f0f;
+  text-transform: uppercase
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle .svg-inline--fa,
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle .svg-inline--fa path:only-of-type,
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 6px;
+  stroke-linejoin: round
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle {
+  overflow-wrap: break-word;
+  text-align: center
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyGift,
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyNew {
+  align-items: center;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 800;
+  gap: .6rem
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyNewLabel {
+  color: #cfcfcf;
+  margin-right: .3rem
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyGift {
+  color: #fcd373
+}
+
+.OBPhaseParty .OBPhasePartyPanel .OBPhasePartyBlock {
+  align-items: center;
+  background: rgba(57, 73, 128, .4);
+  border: .15rem solid #0f0f0f;
+  display: flex;
+  font-size: 2.4rem;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem
+}
+
+@keyframes OBBlockPopRise {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, .5rem) scale(.6)
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--ob-pop-drift)*.3), -1rem) scale(1.15)
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--ob-pop-drift)), -5rem) scale(1)
+  }
+}
+
+@keyframes OBConfettiFall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0)
+  }
+
+  85% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(70vh) rotate(calc(var(--ob-confetti-spin)*540deg))
+  }
+}
+
+@keyframes OBPhasePartyIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(.6)
+  }
+
+  8% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.06)
+  }
+
+  12% {
+    transform: translateX(-50%) scale(1)
+  }
+
+  88% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1)
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1.5rem)
+  }
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .OBBlockPops .OBBlockPop .OBBlockPopPlus {
+    font-size: max(2.6rem, 20px)
+  }
+
+  .OBPhaseParty .OBPhasePartyPanel {
+    gap: 5px;
+    padding: 8px 16px 10px;
+    top: 10%
+  }
+
+  .OBPhaseParty .OBPhasePartyPanel .OBPhasePartyTitle {
+    font-size: max(3.4rem, 24px)
+  }
+
+  .OBPhaseParty .OBPhasePartyPanel .OBPhasePartyGift,
+  .OBPhaseParty .OBPhasePartyPanel .OBPhasePartyNew {
+    font-size: max(1.4rem, 12px)
+  }
+
+  .OBPhaseParty .OBPhasePartyPanel .OBPhasePartyBlock {
+    font-size: max(2.4rem, 18px);
+    height: max(3rem, 24px);
+    width: max(3rem, 24px)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .OBBlockPops .OBBlockPop,
+  .OBPhaseParty .OBPhasePartyConfetti span {
+    animation: none;
+    opacity: 0
+  }
+
+  .OBPhaseParty .OBPhasePartyPanel {
+    animation: none
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.OBQuestCardContainer {
+  display: flex;
+  justify-content: center;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: .6rem;
+  z-index: 14
+}
+
+.OBQuestCardContainer.Below {
+  top: calc(var(--InGameHeaderRowsHeight, 2.5rem) + .25rem)
+}
+
+.OBQuestCard {
+  --ob-card-accent: #ffb914;
+  --ob-card-line-size: 1.6rem;
+  --ob-card-icon-size: 3.6rem;
+  animation: OBQuestCardIn .38s cubic-bezier(.3, 1.4, .5, 1);
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-left: .4rem solid var(--ob-card-accent);
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  gap: 1rem;
+  padding: .7rem 1.1rem .7rem .8rem;
+  width: min(34rem, 60vw)
+}
+
+.OBQuestCard,
+.OBQuestCard .OBQuestCardIcon {
+  align-items: center;
+  display: flex;
+  position: relative
+}
+
+.OBQuestCard .OBQuestCardIcon {
+  background: rgba(57, 73, 128, .4);
+  border: .15rem solid #0f0f0f;
+  flex-shrink: 0;
+  font-size: calc(var(--ob-card-icon-size)*.8);
+  height: var(--ob-card-icon-size);
+  justify-content: center;
+  width: var(--ob-card-icon-size)
+}
+
+.OBQuestCard .OBQuestCardIcon .OBQuestCardTick {
+  animation: OBQuestCardTickIn .42s cubic-bezier(.3, 1.8, .5, 1);
+  background: #1dd06d;
+  border: .15rem solid #0f0f0f;
+  bottom: -.6rem;
+  height: 1.8rem;
+  position: absolute;
+  right: -.6rem;
+  width: 1.8rem
+}
+
+.OBQuestCard .OBQuestCardIcon .OBQuestCardTick:after {
+  border: solid #fff;
+  border-width: 0 .25rem .25rem 0;
+  content: "";
+  height: .8rem;
+  left: .55rem;
+  position: absolute;
+  top: .2rem;
+  transform: rotate(45deg);
+  width: .4rem
+}
+
+.OBQuestCard .OBQuestCardBody {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .45rem;
+  min-width: 0
+}
+
+.OBQuestCard .OBQuestCardBody .OBQuestCardLine {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: var(--ob-card-line-size);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: normal
+}
+
+.OBQuestCard .OBQuestCardBody .OBQuestCardPlains {
+  align-items: center;
+  display: flex;
+  gap: .6rem
+}
+
+.OBQuestCard .OBQuestCardBody .OBQuestCardPlains .OBQuestCardPlainsLabel {
+  color: #1dd06d;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: 800
+}
+
+.OBQuestCard.Short .OBQuestCardBody .OBQuestCardLine {
+  color: #fcd373
+}
+
+.OBQuestCard.Completed {
+  --ob-card-accent: #1dd06d
+}
+
+.OBQuestCard.Completed .OBQuestCardBody .OBQuestCardTaskBar .OBQuestCardBarTrack .OBQuestCardBarFill {
+  background: #1dd06d
+}
+
+.OBQuestCard .OBQuestCardBurst {
+  animation: OBQuestCardBurst .65s ease-out forwards;
+  height: .5rem;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  width: .5rem
+}
+
+.OBQuestCardBar {
+  align-items: center;
+  display: flex;
+  gap: .6rem
+}
+
+.OBQuestCardBar .OBQuestCardBarTrack {
+  background: rgba(57, 73, 128, .4);
+  border: .1rem solid #0f0f0f;
+  flex: 1 1;
+  height: .8rem;
+  min-width: 4rem;
+  overflow: hidden
+}
+
+.OBQuestCardBar .OBQuestCardBarTrack .OBQuestCardBarFill {
+  background: #ffb914;
+  height: 100%;
+  transform-origin: left;
+  transition: transform .25s ease-out
+}
+
+.OBQuestCardBar .OBQuestCardBarCount {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  min-width: 3.2rem;
+  text-align: right
+}
+
+.OBQuestCardBar.OBQuestCardPlainsBar {
+  flex: 1 1
+}
+
+.OBQuestCardBar.OBQuestCardPlainsBar .OBQuestCardBarTrack {
+  height: .5rem
+}
+
+.OBQuestCardBar.OBQuestCardPlainsBar .OBQuestCardBarTrack .OBQuestCardBarFill {
+  background: #1dd06d
+}
+
+.OBBlockPointer {
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  z-index: 14
+}
+
+.OBBlockPointer .OBBlockPointerArrow {
+  animation: OBBlockPointerBounce .9s ease-in-out infinite;
+  background: #ffb914;
+  bottom: 0;
+  clip-path: polygon(30% 0, 70% 0, 70% 45%, 100% 45%, 50% 100%, 0 45%, 30% 45%);
+  height: 3.2rem;
+  left: -1.4rem;
+  position: absolute;
+  width: 2.8rem
+}
+
+@keyframes OBQuestCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-1.2rem) scale(.96)
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes OBQuestCardTickIn {
+  0% {
+    transform: scale(0) rotate(-45deg)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes OBQuestCardBurst {
+  0% {
+    box-shadow: 0 0 0 0 #1dd06d, 0 0 0 0 #ffb914, 0 0 0 0 #1dd06d, 0 0 0 0 #ffb914, 0 0 0 0 #1dd06d, 0 0 0 0 #ffb914;
+    opacity: 1
+  }
+
+  to {
+    box-shadow: -9rem -2.4rem 0 0 #1dd06d, 9rem -2.6rem 0 0 #ffb914, -12rem 1.8rem 0 0 #ffb914, 12rem 2rem 0 0 #1dd06d, -4rem 3.4rem 0 0 #1dd06d, 5rem -3.6rem 0 0 #ffb914;
+    opacity: 0
+  }
+}
+
+@keyframes OBBlockPointerBounce {
+
+  0%,
+  to {
+    transform: translateY(-1.2rem)
+  }
+
+  50% {
+    transform: translateY(0)
+  }
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .OBQuestCard {
+    --ob-card-line-size: max(1.6rem, 13px);
+    --ob-card-icon-size: max(3.6rem, 28px);
+    gap: 8px;
+    min-width: 240px;
+    padding: 5px 8px 5px 6px;
+    width: min(34rem, 50vw, 300px)
+  }
+
+  .OBQuestCard .OBQuestCardBody {
+    gap: 3px
+  }
+
+  .OBQuestCard .OBQuestCardBody .OBQuestCardPlains .OBQuestCardPlainsLabel {
+    font-size: max(1.1rem, 10px)
+  }
+
+  .OBQuestCardBar .OBQuestCardBarTrack {
+    height: max(.8rem, 6px)
+  }
+
+  .OBQuestCardBar .OBQuestCardBarCount {
+    font-size: max(1.3rem, 11px);
+    min-width: 0
+  }
+
+  .OBQuestCardBar.OBQuestCardPlainsBar .OBQuestCardBarTrack {
+    height: max(.5rem, 4px)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .OBBlockPointer .OBBlockPointerArrow,
+  .OBQuestCard,
+  .OBQuestCard .OBQuestCardIcon .OBQuestCardTick {
+    animation: none
+  }
+
+  .OBQuestCardBar .OBQuestCardBarTrack .OBQuestCardBarFill {
+    transition: none
+  }
+}

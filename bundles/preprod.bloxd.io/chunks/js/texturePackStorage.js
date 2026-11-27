@@ -1,72 +1,72 @@
-export const id = 67;
-export const ids = [67];
+export const id = 68;
+export const ids = [68];
 export const modules = {
-  34852: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      announceStoredTexturePack: () => DB.c,
-      takeOneShotTexturePack: () => YB.l
+  35297: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      announceStoredTexturePack: () => EW.c,
+      takeOneShotTexturePack: () => mW.h
     });
-    var YB = GB(34854),
-      DB = GB(34856)
+    var mW = OW(35303),
+      EW = OW(35307)
   },
-  34856: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      e: () => QB
+  35307: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW,
+      g: () => NW
     });
-    var YB = GB(3670);
+    var mW = OW(4431);
 
-    function DB() {
+    function EW() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const BB = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const WW = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const OB = new BroadcastChannel(YB.o);
-        OB.postMessage({
-          stored: BB
-        }), OB.close()
+        const iW = new BroadcastChannel(mW.m);
+        iW.postMessage({
+          stored: WW
+        }), iW.close()
       } catch {
         return null
       }
-      return BB
+      return WW
     }
 
-    function QB(BB) {
-      const OB = "object" === typeof BB && null !== BB ? BB.stored : null;
-      return "string" === typeof OB ? OB : null
+    function NW(WW) {
+      const iW = "object" === typeof WW && null !== WW ? WW.stored : null;
+      return "string" === typeof iW ? iW : null
     }
   },
-  34854: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => oB,
-      h: () => DB,
-      l: () => QB
+  35303: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW,
+      e: () => EW,
+      h: () => NW
     });
-    var YB = GB(3670);
-    async function DB(BB, OB, GB) {
-      let DB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const QB = oB(await BB.getItem(YB.i, OB));
-      if (null === QB || DB()) return null;
-      const jB = await BB.getItem(YB.m, OB);
-      return DB() ? null : (await async function(BB) {
-        await Promise.all([BB.removeItem(YB.i), BB.removeItem(YB.m)])
-      }(BB).catch(GB), {
-        pack: QB,
-        source: "string" === typeof jB ? jB : null
+    var mW = OW(4431);
+    async function EW(WW, iW, OW) {
+      let EW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const NW = PW(await WW.getItem(mW.h, iW));
+      if (null === NW || EW()) return null;
+      const LW = await WW.getItem(mW.l, iW);
+      return EW() ? null : (await async function(WW) {
+        await Promise.all([WW.removeItem(mW.h), WW.removeItem(mW.l)])
+      }(WW).catch(OW), {
+        pack: NW,
+        source: "string" === typeof LW ? LW : null
       })
     }
 
-    function QB(BB) {
-      return (0, YB.u)() ? Promise.resolve(null) : DB(BB, !1, (BB => {
-        console.error("Error removing temporary texture pack: ", BB)
-      }), YB.u)
+    function NW(WW) {
+      return (0, mW.t)() ? Promise.resolve(null) : EW(WW, !1, (WW => {
+        console.error("Error removing temporary texture pack: ", WW)
+      }), mW.t)
     }
 
-    function oB(BB) {
-      if ("object" !== typeof BB || null === BB) return null;
-      const OB = BB.metaData;
-      return "object" !== typeof OB || null === OB || "string" !== typeof OB.id ? null : BB
+    function PW(WW) {
+      if ("object" !== typeof WW || null === WW) return null;
+      const iW = WW.metaData;
+      return "object" !== typeof iW || null === iW || "string" !== typeof iW.id ? null : WW
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

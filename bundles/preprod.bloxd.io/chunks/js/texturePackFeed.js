@@ -1,30 +1,30 @@
-export const id = 66;
-export const ids = [66];
+export const id = 67;
+export const ids = [67];
 export const modules = {
-  54098: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      startPageTexturePackFeed: () => oB
+  54835: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      startPageTexturePackFeed: () => PW
     });
-    var YB = GB(1186),
-      DB = GB(31),
-      QB = GB(54089);
+    var mW = OW(1185),
+      EW = OW(39),
+      NW = OW(54829);
 
-    function oB(BB, OB) {
-      const GB = new QB.d({
-        store: DB.d,
-        warn: BB,
-        oneShot: OB,
-        fetchLatest: async BB => {
-          const OB = await fetch(`${YB.clientSideServerUrls.texturePackUrl}/${BB}.json`, {
+    function PW(WW, iW) {
+      const OW = new NW.c({
+        store: EW.f,
+        warn: WW,
+        oneShot: iW,
+        fetchLatest: async WW => {
+          const iW = await fetch(`${mW.clientSideServerUrls.texturePackUrl}/${WW}.json`, {
             cache: "reload"
           });
-          if (!OB.ok) throw new Error(`fetching texture pack ${BB} answered HTTP ${OB.status}`);
-          return await OB.json()
+          if (!iW.ok) throw new Error(`fetching texture pack ${WW} answered HTTP ${iW.status}`);
+          return await iW.json()
         }
       });
-      return (0, QB.h)(GB), GB
+      return (0, NW.g)(OW), OW
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

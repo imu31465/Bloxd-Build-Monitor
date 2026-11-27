@@ -1,30 +1,30 @@
-export const id = 56;
-export const ids = [56];
+export const id = 57;
+export const ids = [57];
 export const modules = {
-  5159: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => MB
+  5424: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => tW
     });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(3136);
-    const jB = 3e4,
-      yB = 1e3;
+    var mW = OW(25),
+      EW = OW(27),
+      NW = OW(1294),
+      PW = OW(3866);
+    const LW = 3e4,
+      cW = 1e3;
 
-    function JB() {
-      return "visible" === document.visibilityState && "inGame" === YB.c.get("gameState") && (0, QB.q)()
+    function wW() {
+      return "visible" === document.visibilityState && "inGame" === mW.d.get("gameState") && (0, NW.z)()
     }
 
-    function MB(BB, OB) {
-      (0, oB.u)() || function(BB, OB, GB) {
-        let YB = 0;
-        const DB = setInterval((() => {
-          OB() && (YB += yB, YB >= BB && (clearInterval(DB), GB()))
-        }), yB)
-      }(jB, JB, (() => {
-        OB().then((() => {
-          BB(`saved for the player after ${jB/1e3} s of play`), (0, oB.J)(), DB.o.tM("chat", {
+    function tW(WW, iW) {
+      (0, PW.x)() || function(WW, iW, OW) {
+        let mW = 0;
+        const EW = setInterval((() => {
+          iW() && (mW += cW, mW >= WW && (clearInterval(EW), OW()))
+        }), cW)
+      }(LW, wW, (() => {
+        iW().then((() => {
+          WW(`saved for the player after ${LW/1e3} s of play`), (0, PW.J)(), EW.l.iZ("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  5152: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      installRenderDebug: () => PG,
-      renderDebugPlayable: () => lG,
-      startRenderDebug: () => zG,
-      waitForDraw: () => pG
+  5419: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      installRenderDebug: () => lO,
+      renderDebugPlayable: () => bO,
+      startRenderDebug: () => AO,
+      waitForDraw: () => jO
     });
-    var YB = GB(1919),
-      DB = GB(5159),
-      QB = GB(3136);
-    const oB = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var mW = OW(1943),
+      EW = OW(5424),
+      NW = OW(3866);
+    const PW = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function jB(BB) {
-      return 7 & BB
+    function LW(WW) {
+      return 7 & WW
     }
 
-    function yB(BB) {
-      return BB >>> 11 & 1
+    function cW(WW) {
+      return WW >>> 11 & 1
     }
 
-    function JB(BB) {
-      return [1 + (BB >>> 18 & 63), 1 + (BB >>> 24 & 63)]
+    function wW(WW) {
+      return [1 + (WW >>> 18 & 63), 1 + (WW >>> 24 & 63)]
     }
 
-    function MB(BB, OB) {
-      const [GB, , YB] = BB, DB = jB(YB), QB = function(BB, OB, GB) {
-        return OB + (1 === (22 >>> BB & 1) ? 4 - GB : GB) & 3
-      }(DB, yB(YB), OB), oB = DB >>> 1, [MB, PB] = JB(GB), zB = 1 === QB || 2 === QB ? MB : 0, lB = QB >= 2 ? PB : 0, pB = [63 & GB, GB >>> 6 & 63, GB >>> 12 & 63];
-      return pB[2 === oB ? 0 : 2] += zB, pB[1 === oB ? 0 : 1] += lB, pB
+    function tW(WW, iW) {
+      const [OW, , mW] = WW, EW = LW(mW), NW = function(WW, iW, OW) {
+        return iW + (1 === (22 >>> WW & 1) ? 4 - OW : OW) & 3
+      }(EW, cW(mW), iW), PW = EW >>> 1, [tW, ZW] = wW(OW), xW = 1 === NW || 2 === NW ? tW : 0, lW = NW >= 2 ? ZW : 0, AW = [63 & OW, OW >>> 6 & 63, OW >>> 12 & 63];
+      return AW[2 === PW ? 0 : 2] += xW, AW[1 === PW ? 0 : 1] += lW, AW
     }
 
-    function PB(BB) {
-      const OB = Math.max(...JB(BB[0]));
-      return 1 === OB ? "1" : OB <= 4 ? "2-4" : OB <= 16 ? "5-16" : "17-64"
+    function ZW(WW) {
+      const iW = Math.max(...wW(WW[0]));
+      return 1 === iW ? "1" : iW <= 4 ? "2-4" : iW <= 16 ? "5-16" : "17-64"
     }
-    const zB = 16;
+    const xW = 16;
 
-    function lB(BB) {
-      let OB = 2166136261;
-      for (let GB = 0; GB < BB.length; GB++) OB = Math.imul(OB ^ BB[GB], 16777619);
-      return OB >>> 0
+    function lW(WW) {
+      let iW = 2166136261;
+      for (let OW = 0; OW < WW.length; OW++) iW = Math.imul(iW ^ WW[OW], 16777619);
+      return iW >>> 0
     }
 
-    function pB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const YB = Math.max(0, OB - GB),
-        DB = Math.min(BB.length, OB + GB),
-        QB = [];
-      for (let oB = YB; oB < DB; oB++) {
-        const GB = BB[oB].toString(16).padStart(2, "0");
-        QB.push(oB === OB ? `[${GB}]` : GB)
+    function AW(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const mW = Math.max(0, iW - OW),
+        EW = Math.min(WW.length, iW + OW),
+        NW = [];
+      for (let PW = mW; PW < EW; PW++) {
+        const OW = WW[PW].toString(16).padStart(2, "0");
+        NW.push(PW === iW ? `[${OW}]` : OW)
       }
-      return QB.join(" ")
+      return NW.join(" ")
     }
-    const qB = {
+    const bW = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,438 +168,438 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      ZB = "_vs2fs_location0";
-    const NB = 0,
-      RB = 4,
-      WB = 6,
-      AB = [0, 1, 2, 0, 2, 3],
-      VB = 2048,
-      SB = 4,
-      nB = 256,
-      UB = 64,
-      fB = 268435456,
-      kB = 65536,
-      dB = /^#version [^\n]*\/\/ program (\S+)$/m;
+      jW = "_vs2fs_location0";
+    const UW = 0,
+      kW = 4,
+      sW = 6,
+      MW = [0, 1, 2, 0, 2, 3],
+      KW = 2048,
+      SW = 4,
+      YW = 256,
+      yW = 64,
+      TW = 268435456,
+      JW = 65536,
+      hW = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function KB(BB) {
-      return null === BB.name ? `#${BB.id}` : `#${BB.id} ${BB.name}`
+    function HW(WW) {
+      return null === WW.name ? `#${WW.id}` : `#${WW.id} ${WW.name}`
     }
-    const uB = [],
-      mB = new WeakMap,
-      IB = new WeakMap,
-      FB = {
+    const nW = [],
+      uW = new WeakMap,
+      oW = new WeakMap,
+      dW = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let iB = 1;
-    const LB = new WeakMap;
+    let eW = 1;
+    const vW = new WeakMap;
 
-    function gB(BB) {
-      if (null === BB) return 0;
-      let OB = LB.get(BB);
-      return void 0 === OB && (OB = iB++, LB.set(BB, OB)), OB
+    function gW(WW) {
+      if (null === WW) return 0;
+      let iW = vW.get(WW);
+      return void 0 === iW && (iW = eW++, vW.set(WW, iW)), iW
     }
-    class rB {
-      constructor(BB, OB) {
-        this.print = BB, this.now = OB, this.shown = 0, this.sJ = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.GP = [], this.dropped = 0
+    class DW {
+      constructor(WW, iW) {
+        this.print = WW, this.now = iW, this.shown = 0, this.BL = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.EZ = [], this.dropped = 0
       }
-      line(BB) {
-        const OB = this.now();
-        if (OB - this.second >= 1e3 && (this.second = OB, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.sJ++, void this.store(BB);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${BB} (the last line here: the rest go to bloxdDebug.save())` : BB)
+      line(WW) {
+        const iW = this.now();
+        if (iW - this.second >= 1e3 && (this.second = iW, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.BL++, void this.store(WW);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${WW} (the last line here: the rest go to bloxdDebug.save())` : WW)
       }
-      keep(BB) {
-        this.sections++, this.store(BB)
+      keep(WW) {
+        this.sections++, this.store(WW)
       }
-      store(BB) {
-        this.GP.push(`${new Date(Date.now()).toISOString()} ${BB}`), this.GP.length > 2e4 && (this.GP.shift(), this.dropped++)
+      store(WW) {
+        this.EZ.push(`${new Date(Date.now()).toISOString()} ${WW}`), this.EZ.length > 2e4 && (this.EZ.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.sJ} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.GP].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.BL} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.EZ].join("\n")
       }
     }
-    let XB = null;
+    let VW = null;
 
-    function wB() {
-      if (null === XB) {
-        const BB = new rB((BB => {
-          (0, QB.m)("render", BB)
+    function pW() {
+      if (null === VW) {
+        const WW = new DW((WW => {
+          (0, NW.m)("render", WW)
         }), (() => performance.now()));
-        (0, QB.l)("render", (() => BB.dump())), XB = BB
+        (0, NW.l)("render", (() => WW.dump())), VW = WW
       }
-      return XB
+      return VW
     }
 
-    function EB(BB) {
-      wB().line(BB)
+    function fW(WW) {
+      pW().line(WW)
     }
 
-    function cB(BB) {
-      wB().keep(BB)
+    function CW(WW) {
+      pW().keep(WW)
     }
 
-    function hB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return BB.length <= OB ? BB : `${BB.slice(0,OB)}... (${BB.length-OB} more characters)`
+    function XW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return WW.length <= iW ? WW : `${WW.slice(0,iW)}... (${WW.length-iW} more characters)`
     }
 
-    function aB(BB, OB, GB, YB, DB, QB) {
-      const oB = FB.pendingCheck;
-      if (null === oB) return;
-      const jB = "undefined" !== typeof WebGL2RenderingContext && BB instanceof WebGL2RenderingContext,
-        yB = {
-          gl: BB,
-          program: GB,
-          call: YB,
-          JZ: DB,
-          instances: QB,
+    function BW(WW, iW, OW, mW, EW, NW) {
+      const PW = dW.pendingCheck;
+      if (null === PW) return;
+      const LW = "undefined" !== typeof WebGL2RenderingContext && WW instanceof WebGL2RenderingContext,
+        cW = {
+          gl: WW,
+          program: OW,
+          call: mW,
+          kj: EW,
+          instances: NW,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (oB.draws.push(yB), jB) try {
-        const YB = function(BB) {
-          const OB = [],
-            GB = new Map,
-            YB = Math.min(16, BB.getParameter(qB.MAX_VERTEX_ATTRIBS));
-          for (let DB = 0; DB < YB; DB++) {
-            if (!BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const YB = BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              QB = BB.getVertexAttribOffset(DB, qB.VERTEX_ATTRIB_ARRAY_POINTER),
-              oB = BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_STRIDE),
-              jB = BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_SIZE),
-              yB = BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_TYPE),
-              JB = "VERTEX_ATTRIB_ARRAY_INTEGER" in BB && BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_INTEGER),
-              MB = "VERTEX_ATTRIB_ARRAY_DIVISOR" in BB ? BB.getVertexAttrib(DB, qB.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            GB.set(DB, {
-              buffer: YB,
-              offset: QB,
-              stride: oB
-            }), OB.push(`@${DB} buf#${gB(YB)} +${QB} stride ${oB} ${jB}x0x${yB.toString(16)}${JB?" int":""} div ${MB}`)
+      if (PW.draws.push(cW), LW) try {
+        const mW = function(WW) {
+          const iW = [],
+            OW = new Map,
+            mW = Math.min(16, WW.getParameter(bW.MAX_VERTEX_ATTRIBS));
+          for (let EW = 0; EW < mW; EW++) {
+            if (!WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const mW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              NW = WW.getVertexAttribOffset(EW, bW.VERTEX_ATTRIB_ARRAY_POINTER),
+              PW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_STRIDE),
+              LW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_SIZE),
+              cW = WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_TYPE),
+              wW = "VERTEX_ATTRIB_ARRAY_INTEGER" in WW && WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_INTEGER),
+              tW = "VERTEX_ATTRIB_ARRAY_DIVISOR" in WW ? WW.getVertexAttrib(EW, bW.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            OW.set(EW, {
+              buffer: mW,
+              offset: NW,
+              stride: PW
+            }), iW.push(`@${EW} buf#${gW(mW)} +${NW} stride ${PW} ${LW}x0x${cW.toString(16)}${wW?" int":""} div ${tW}`)
           }
           return {
-            lines: OB,
-            byLocation: GB
+            lines: iW,
+            byLocation: OW
           }
-        }(BB);
-        if (yB.attributes = YB.lines, "inst" === GB.terrain) {
+        }(WW);
+        if (cW.attributes = mW.lines, "inst" === OW.terrain) {
           const {
-            group: DB,
-            chunk: jB
-          } = function(BB, OB, GB) {
-            const YB = OB.get(WB),
-              DB = BB.getVertexAttrib(WB, qB.CURRENT_VERTEX_ATTRIB),
-              QB = YB ? `+${YB.offset}` : DB ? Array.from(DB).slice(0, 3).join(",") : "?";
-            let oB = GB.groups.get(QB);
-            return void 0 === oB && (oB = GB.groups.size, GB.groups.set(QB, oB)), {
-              group: oB,
-              chunk: QB
+            group: EW,
+            chunk: LW
+          } = function(WW, iW, OW) {
+            const mW = iW.get(sW),
+              EW = WW.getVertexAttrib(sW, bW.CURRENT_VERTEX_ATTRIB),
+              NW = mW ? `+${mW.offset}` : EW ? Array.from(EW).slice(0, 3).join(",") : "?";
+            let PW = OW.groups.get(NW);
+            return void 0 === PW && (PW = OW.groups.size, OW.groups.set(NW, PW)), {
+              group: PW,
+              chunk: NW
             }
-          }(BB, YB.byLocation, oB);
-          yB.group = DB, yB.chunk = jB;
-          for (const BB of [NB, RB]) {
-            var JB;
-            const OB = null === (JB = YB.byLocation.get(BB)) || void 0 === JB ? void 0 : JB.buffer;
-            OB && yB.pages.push({
+          }(WW, mW.byLocation, PW);
+          cW.group = EW, cW.chunk = LW;
+          for (const WW of [UW, kW]) {
+            var wW;
+            const iW = null === (wW = mW.byLocation.get(WW)) || void 0 === wW ? void 0 : wW.buffer;
+            iW && cW.pages.push({
               kind: "buf",
-              buffer: OB
+              buffer: iW
             })
-          }! function(BB, OB, GB, YB, DB, QB, oB) {
-            const jB = YB.get(NB),
-              yB = oB.parts.get(QB);
-            if (void 0 === yB && oB.parts.size >= SB) return;
-            const JB = Math.min(DB, UB, nB - (null !== yB && void 0 !== yB ? yB : 0));
-            if (null === jB || void 0 === jB || !jB.buffer || JB <= 0) return;
-            const MB = eB(BB, OB, GB);
-            if (!MB) return;
-            const PB = jB.stride || 12,
-              zB = vB(BB, jB.buffer, jB.offset, (JB - 1) * PB + 12),
-              lB = new DataView(zB.buffer),
-              pB = function(BB, OB) {
-                const GB = function(BB) {
-                    const OB = tB.get(BB);
-                    if (void 0 !== OB && (null === OB || BB.isProgram(OB))) return OB;
-                    FB.inProbe = !0;
-                    let GB = null;
+          }! function(WW, iW, OW, mW, EW, NW, PW) {
+            const LW = mW.get(UW),
+              cW = PW.parts.get(NW);
+            if (void 0 === cW && PW.parts.size >= SW) return;
+            const wW = Math.min(EW, yW, YW - (null !== cW && void 0 !== cW ? cW : 0));
+            if (null === LW || void 0 === LW || !LW.buffer || wW <= 0) return;
+            const tW = qW(WW, iW, OW);
+            if (!tW) return;
+            const ZW = LW.stride || 12,
+              xW = rW(WW, LW.buffer, LW.offset, (wW - 1) * ZW + 12),
+              lW = new DataView(xW.buffer),
+              AW = function(WW, iW) {
+                const OW = function(WW) {
+                    const iW = QW.get(WW);
+                    if (void 0 !== iW && (null === iW || WW.isProgram(iW))) return iW;
+                    dW.inProbe = !0;
+                    let OW = null;
                     try {
-                      GB = TB(BB, sB, xB, "fed", "the record feed")
+                      OW = RW(WW, zW, FW, "fed", "the record feed")
                     } finally {
-                      FB.inProbe = !1
+                      dW.inProbe = !1
                     }
-                    return tB.set(BB, GB), GB
-                  }(BB),
-                  YB = GB ? HB(BB, GB, OB, (() => {
-                    BB.drawArraysInstanced(qB.POINTS, 0, 1, OB)
+                    return QW.set(WW, OW), OW
+                  }(WW),
+                  mW = OW ? aW(WW, OW, iW, (() => {
+                    WW.drawArraysInstanced(bW.POINTS, 0, 1, iW)
                   }), "decode probe input (the record feed)") : null;
-                return YB ? new Uint32Array(YB.buffer) : null
-              }(BB, JB);
-            pB || oB.fed.failed++;
-            const ZB = HB(BB, MB, 4 * JB, (() => {
-              BB.drawArraysInstanced(qB.POINTS, 0, 4, JB)
+                return mW ? new Uint32Array(mW.buffer) : null
+              }(WW, wW);
+            AW || PW.fed.failed++;
+            const jW = aW(WW, tW, 4 * wW, (() => {
+              WW.drawArraysInstanced(bW.POINTS, 0, 4, wW)
             }));
-            if (!ZB) return;
-            oB.parts.set(QB, (null !== yB && void 0 !== yB ? yB : 0) + JB);
-            for (let qB = 0; qB < JB; qB++) {
-              const BB = qB * PB,
-                OB = [lB.getUint32(BB, !0), lB.getUint32(BB + 4, !0), lB.getUint32(BB + 8, !0)],
-                GB = pB ? [pB[3 * qB], pB[3 * qB + 1], pB[3 * qB + 2]] : OB;
-              pB && (oB.fed.records++, GB.some(((BB, GB) => BB !== OB[GB])) && (oB.fed.differing++, oB.fed.first.length < 8 && oB.fed.first.push(`part ${QB} instance ${qB}: fed ${GB.map(DO).join(" ")} buffer ${OB.map(DO).join(" ")}`)));
-              for (let YB = 0; YB < 4; YB++) {
-                const BB = 3 * (4 * qB + YB);
-                oB.vertices.push({
-                  record: GB,
-                  slot: YB,
-                  group: QB,
-                  gpu: [ZB[BB], ZB[BB + 1], ZB[BB + 2]]
+            if (!jW) return;
+            PW.parts.set(NW, (null !== cW && void 0 !== cW ? cW : 0) + wW);
+            for (let bW = 0; bW < wW; bW++) {
+              const WW = bW * ZW,
+                iW = [lW.getUint32(WW, !0), lW.getUint32(WW + 4, !0), lW.getUint32(WW + 8, !0)],
+                OW = AW ? [AW[3 * bW], AW[3 * bW + 1], AW[3 * bW + 2]] : iW;
+              AW && (PW.fed.records++, OW.some(((WW, OW) => WW !== iW[OW])) && (PW.fed.differing++, PW.fed.first.length < 8 && PW.fed.first.push(`part ${NW} instance ${bW}: fed ${OW.map(Ei).join(" ")} buffer ${iW.map(Ei).join(" ")}`)));
+              for (let mW = 0; mW < 4; mW++) {
+                const WW = 3 * (4 * bW + mW);
+                PW.vertices.push({
+                  record: OW,
+                  slot: mW,
+                  group: NW,
+                  gpu: [jW[WW], jW[WW + 1], jW[WW + 2]]
                 })
               }
             }
-          }(BB, OB, GB, YB.byLocation, QB, DB, oB)
+          }(WW, iW, OW, mW.byLocation, NW, EW, PW)
         } else {
-          const YB = BO(BB, OB, 16),
-            QB = BO(BB, OB, 8);
-          for (const BB of [YB, QB]) BB && yB.pages.push({
+          const mW = Wi(WW, iW, 16),
+            NW = Wi(WW, iW, 8);
+          for (const WW of [mW, NW]) WW && cW.pages.push({
             kind: "tex",
-            texture: BB
+            texture: WW
           });
-          YB && function(BB, OB, GB, YB, DB, QB) {
-            if (QB.parts.size >= SB) return;
-            const oB = eB(BB, OB, GB);
-            if (!oB) return;
-            let jB = 6 * nB;
-            const yB = [];
-            for (const [lB, pB] of DB) {
-              const BB = Math.min(pB, jB, Math.max(6, 6 * Math.floor(nB / DB.length)));
-              BB > 0 && (yB.push([lB, BB]), jB -= BB)
+          mW && function(WW, iW, OW, mW, EW, NW) {
+            if (NW.parts.size >= SW) return;
+            const PW = qW(WW, iW, OW);
+            if (!PW) return;
+            let LW = 6 * YW;
+            const cW = [];
+            for (const [lW, AW] of EW) {
+              const WW = Math.min(AW, LW, Math.max(6, 6 * Math.floor(YW / EW.length)));
+              WW > 0 && (cW.push([lW, WW]), LW -= WW)
             }
-            const JB = yB.reduce(((BB, OB) => {
-                let [, GB] = OB;
-                return BB + GB
+            const wW = cW.reduce(((WW, iW) => {
+                let [, OW] = iW;
+                return WW + OW
               }), 0),
-              MB = HB(BB, oB, JB, (() => {
-                for (const [OB, GB] of yB) BB.drawArrays(qB.POINTS, OB, GB)
+              tW = aW(WW, PW, wW, (() => {
+                for (const [iW, OW] of cW) WW.drawArrays(bW.POINTS, iW, OW)
               }));
-            if (!MB) return;
-            let PB = 0;
-            for (const [lB, pB] of yB) {
-              const OB = Math.floor(lB / 6),
-                GB = Math.floor((lB + pB - 1) / 6) - OB + 1,
-                DB = OO(BB, YB, VB, OB, GB);
-              for (let BB = lB; BB < lB + pB; BB++, PB++) {
-                var zB;
-                const GB = 4 * (Math.floor(BB / 6) - OB),
-                  YB = [DB[GB], DB[GB + 1], DB[GB + 2]];
-                QB.parts.set(DB[GB + 3], (null !== (zB = QB.parts.get(DB[GB + 3])) && void 0 !== zB ? zB : 0) + (BB % 6 === 0 ? 1 : 0)), QB.vertices.push({
-                  record: YB,
-                  slot: AB[BB % 6],
-                  group: DB[GB + 3],
-                  gpu: [MB[3 * PB], MB[3 * PB + 1], MB[3 * PB + 2]]
+            if (!tW) return;
+            let ZW = 0;
+            for (const [lW, AW] of cW) {
+              const iW = Math.floor(lW / 6),
+                OW = Math.floor((lW + AW - 1) / 6) - iW + 1,
+                EW = ii(WW, mW, KW, iW, OW);
+              for (let WW = lW; WW < lW + AW; WW++, ZW++) {
+                var xW;
+                const OW = 4 * (Math.floor(WW / 6) - iW),
+                  mW = [EW[OW], EW[OW + 1], EW[OW + 2]];
+                NW.parts.set(EW[OW + 3], (null !== (xW = NW.parts.get(EW[OW + 3])) && void 0 !== xW ? xW : 0) + (WW % 6 === 0 ? 1 : 0)), NW.vertices.push({
+                  record: mW,
+                  slot: MW[WW % 6],
+                  group: EW[OW + 3],
+                  gpu: [tW[3 * ZW], tW[3 * ZW + 1], tW[3 * ZW + 2]]
                 })
               }
             }
-          }(BB, OB, GB, YB, DB, oB)
+          }(WW, iW, OW, mW, EW, PW)
         }
-      } catch (MB) {
-        EB(`decode probe failed on program ${KB(GB)}: ${String(MB)}`)
+      } catch (tW) {
+        fW(`decode probe failed on program ${HW(OW)}: ${String(tW)}`)
       }
     }
 
-    function eB(BB, OB, GB) {
-      if (void 0 !== GB.probe) return GB.probe && bB(BB, OB, GB.probe), GB.probe;
-      GB.probe = null, FB.inProbe = !0;
+    function qW(WW, iW, OW) {
+      if (void 0 !== OW.probe) return OW.probe && GW(WW, iW, OW.probe), OW.probe;
+      OW.probe = null, dW.inProbe = !0;
       try {
-        GB.probe = function(BB, OB) {
-          return TB(BB, (GB = OB.vertex, GB.replace(`\nvec3 ${ZB} = vec3(0);\n`, `\nout vec3 ${ZB};\n`)), OB.fragment, ZB, `program ${KB(OB)}'s twin`);
-          var GB
-        }(BB, GB)
+        OW.probe = function(WW, iW) {
+          return RW(WW, (OW = iW.vertex, OW.replace(`\nvec3 ${jW} = vec3(0);\n`, `\nout vec3 ${jW};\n`)), iW.fragment, jW, `program ${HW(iW)}'s twin`);
+          var OW
+        }(WW, OW)
       } finally {
-        FB.inProbe = !1
+        dW.inProbe = !1
       }
-      return GB.probe && bB(BB, OB, GB.probe), GB.probe
+      return OW.probe && GW(WW, iW, OW.probe), OW.probe
     }
 
-    function TB(BB, OB, GB, YB, DB) {
-      const QB = [BB.createShader(qB.VERTEX_SHADER), BB.createShader(qB.FRAGMENT_SHADER)],
-        oB = BB.createProgram();
-      if (!oB || !QB[0] || !QB[1]) return null;
-      BB.shaderSource(QB[0], OB), BB.shaderSource(QB[1], GB);
-      for (const yB of QB) BB.compileShader(yB), BB.attachShader(oB, yB);
-      BB.transformFeedbackVaryings(oB, [YB], qB.INTERLEAVED_ATTRIBS), BB.linkProgram(oB);
-      for (const yB of QB) BB.deleteShader(yB);
-      var jB;
-      return BB.getProgramParameter(oB, qB.LINK_STATUS) ? oB : (EB(`decode probe: ${DB} failed to link: ${hB(null!==(jB=BB.getProgramInfoLog(oB))&&void 0!==jB?jB:"",300)}`), BB.deleteProgram(oB), null)
+    function RW(WW, iW, OW, mW, EW) {
+      const NW = [WW.createShader(bW.VERTEX_SHADER), WW.createShader(bW.FRAGMENT_SHADER)],
+        PW = WW.createProgram();
+      if (!PW || !NW[0] || !NW[1]) return null;
+      WW.shaderSource(NW[0], iW), WW.shaderSource(NW[1], OW);
+      for (const cW of NW) WW.compileShader(cW), WW.attachShader(PW, cW);
+      WW.transformFeedbackVaryings(PW, [mW], bW.INTERLEAVED_ATTRIBS), WW.linkProgram(PW);
+      for (const cW of NW) WW.deleteShader(cW);
+      var LW;
+      return WW.getProgramParameter(PW, bW.LINK_STATUS) ? PW : (fW(`decode probe: ${EW} failed to link: ${XW(null!==(LW=WW.getProgramInfoLog(PW))&&void 0!==LW?LW:"",300)}`), WW.deleteProgram(PW), null)
     }
 
-    function bB(BB, OB, GB) {
-      const YB = BB.getProgramParameter(OB, qB.ACTIVE_UNIFORM_BLOCKS);
-      for (let jB = 0; jB < YB; jB++) {
-        const YB = BB.getActiveUniformBlockName(OB, jB),
-          DB = null === YB ? qB.INVALID_INDEX : BB.getUniformBlockIndex(GB, YB);
-        DB !== qB.INVALID_INDEX && BB.uniformBlockBinding(GB, DB, BB.getActiveUniformBlockParameter(OB, jB, qB.UNIFORM_BLOCK_BINDING))
+    function GW(WW, iW, OW) {
+      const mW = WW.getProgramParameter(iW, bW.ACTIVE_UNIFORM_BLOCKS);
+      for (let LW = 0; LW < mW; LW++) {
+        const mW = WW.getActiveUniformBlockName(iW, LW),
+          EW = null === mW ? bW.INVALID_INDEX : WW.getUniformBlockIndex(OW, mW);
+        EW !== bW.INVALID_INDEX && WW.uniformBlockBinding(OW, EW, WW.getActiveUniformBlockParameter(iW, LW, bW.UNIFORM_BLOCK_BINDING))
       }
-      const DB = BB.getParameter(qB.CURRENT_PROGRAM);
-      BB.useProgram(GB);
-      const QB = BB.getProgramParameter(OB, qB.ACTIVE_UNIFORMS),
-        oB = BB.getActiveUniforms(OB, [...Array(QB).keys()], qB.UNIFORM_BLOCK_INDEX);
-      for (let jB = 0; jB < QB; jB++) {
-        const YB = BB.getActiveUniform(OB, jB);
-        if (!YB || -1 !== oB[jB]) continue;
-        const DB = YB.name.replace(/\[0\]$/, "");
-        for (let QB = 0; QB < YB.size; QB++) {
-          const oB = YB.size > 1 ? `${DB}[${QB}]` : YB.name,
-            jB = BB.getUniformLocation(OB, oB),
-            yB = BB.getUniformLocation(GB, oB);
-          jB && yB && CB(BB, yB, YB.type, BB.getUniform(OB, jB))
+      const EW = WW.getParameter(bW.CURRENT_PROGRAM);
+      WW.useProgram(OW);
+      const NW = WW.getProgramParameter(iW, bW.ACTIVE_UNIFORMS),
+        PW = WW.getActiveUniforms(iW, [...Array(NW).keys()], bW.UNIFORM_BLOCK_INDEX);
+      for (let LW = 0; LW < NW; LW++) {
+        const mW = WW.getActiveUniform(iW, LW);
+        if (!mW || -1 !== PW[LW]) continue;
+        const EW = mW.name.replace(/\[0\]$/, "");
+        for (let NW = 0; NW < mW.size; NW++) {
+          const PW = mW.size > 1 ? `${EW}[${NW}]` : mW.name,
+            LW = WW.getUniformLocation(iW, PW),
+            cW = WW.getUniformLocation(OW, PW);
+          LW && cW && IW(WW, cW, mW.type, WW.getUniform(iW, LW))
         }
       }
-      BB.useProgram(DB)
+      WW.useProgram(EW)
     }
 
-    function CB(BB, OB, GB, YB) {
-      const DB = ArrayBuffer.isView(YB) ? Array.from(YB) : [Number(YB)];
-      switch (GB) {
-        case qB.FLOAT:
-          return void BB.uniform1f(OB, DB[0]);
-        case qB.FLOAT_VEC2:
-          return void BB.uniform2fv(OB, DB);
-        case qB.FLOAT_VEC3:
-          return void BB.uniform3fv(OB, DB);
-        case qB.FLOAT_VEC4:
-          return void BB.uniform4fv(OB, DB);
-        case qB.FLOAT_MAT3:
-          return void BB.uniformMatrix3fv(OB, !1, DB);
-        case qB.FLOAT_MAT4:
-          return void BB.uniformMatrix4fv(OB, !1, DB);
-        case qB.UNSIGNED_INT:
-          return void BB.uniform1ui(OB, DB[0]);
-        case qB.UNSIGNED_INT_VEC2:
-          return void BB.uniform2uiv(OB, DB);
-        case qB.UNSIGNED_INT_VEC3:
-          return void BB.uniform3uiv(OB, DB);
-        case qB.UNSIGNED_INT_VEC4:
-          return void BB.uniform4uiv(OB, DB);
-        case qB.INT_VEC2:
-          return void BB.uniform2iv(OB, DB);
-        case qB.INT_VEC3:
-          return void BB.uniform3iv(OB, DB);
-        case qB.INT_VEC4:
-          return void BB.uniform4iv(OB, DB);
+    function IW(WW, iW, OW, mW) {
+      const EW = ArrayBuffer.isView(mW) ? Array.from(mW) : [Number(mW)];
+      switch (OW) {
+        case bW.FLOAT:
+          return void WW.uniform1f(iW, EW[0]);
+        case bW.FLOAT_VEC2:
+          return void WW.uniform2fv(iW, EW);
+        case bW.FLOAT_VEC3:
+          return void WW.uniform3fv(iW, EW);
+        case bW.FLOAT_VEC4:
+          return void WW.uniform4fv(iW, EW);
+        case bW.FLOAT_MAT3:
+          return void WW.uniformMatrix3fv(iW, !1, EW);
+        case bW.FLOAT_MAT4:
+          return void WW.uniformMatrix4fv(iW, !1, EW);
+        case bW.UNSIGNED_INT:
+          return void WW.uniform1ui(iW, EW[0]);
+        case bW.UNSIGNED_INT_VEC2:
+          return void WW.uniform2uiv(iW, EW);
+        case bW.UNSIGNED_INT_VEC3:
+          return void WW.uniform3uiv(iW, EW);
+        case bW.UNSIGNED_INT_VEC4:
+          return void WW.uniform4uiv(iW, EW);
+        case bW.INT_VEC2:
+          return void WW.uniform2iv(iW, EW);
+        case bW.INT_VEC3:
+          return void WW.uniform3iv(iW, EW);
+        case bW.INT_VEC4:
+          return void WW.uniform4iv(iW, EW);
         default:
-          BB.uniform1i(OB, DB[0])
+          WW.uniform1i(iW, EW[0])
       }
     }
 
-    function HB(BB, OB, GB, YB) {
-      let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const QB = BB.getParameter(qB.CURRENT_PROGRAM),
-        oB = BB.getParameter(qB.TRANSFORM_FEEDBACK_BINDING),
-        jB = BB.getParameter(qB.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        yB = BB.getParameter(qB.COPY_READ_BUFFER_BINDING),
-        JB = BB.isEnabled(qB.RASTERIZER_DISCARD),
-        MB = BB.createTransformFeedback(),
-        PB = BB.createBuffer();
-      FB.inProbe = !0;
+    function aW(WW, iW, OW, mW) {
+      let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const NW = WW.getParameter(bW.CURRENT_PROGRAM),
+        PW = WW.getParameter(bW.TRANSFORM_FEEDBACK_BINDING),
+        LW = WW.getParameter(bW.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        cW = WW.getParameter(bW.COPY_READ_BUFFER_BINDING),
+        wW = WW.isEnabled(bW.RASTERIZER_DISCARD),
+        tW = WW.createTransformFeedback(),
+        ZW = WW.createBuffer();
+      dW.inProbe = !0;
       try {
-        const QB = BB.getError();
-        QB !== qB.NO_ERROR && EB(`GL error 0x${QB.toString(16)} pending before the decode probe (the renderer's)`), BB.useProgram(OB), BB.bindTransformFeedback(qB.TRANSFORM_FEEDBACK, MB), BB.bindBuffer(qB.TRANSFORM_FEEDBACK_BUFFER, PB), BB.bufferData(qB.TRANSFORM_FEEDBACK_BUFFER, 12 * GB, qB.STREAM_READ), BB.bindBufferBase(qB.TRANSFORM_FEEDBACK_BUFFER, 0, PB), BB.enable(qB.RASTERIZER_DISCARD), BB.beginTransformFeedback(qB.POINTS), YB(), BB.endTransformFeedback(), BB.bindBufferBase(qB.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const oB = BB.getError();
-        if (oB !== qB.NO_ERROR) return EB(`${DB}: GL error 0x${oB.toString(16)} on the feedback draw`), null;
-        const jB = new Float32Array(3 * GB);
-        return BB.bindBuffer(qB.COPY_READ_BUFFER, PB), BB.getBufferSubData(qB.COPY_READ_BUFFER, 0, jB), jB
+        const NW = WW.getError();
+        NW !== bW.NO_ERROR && fW(`GL error 0x${NW.toString(16)} pending before the decode probe (the renderer's)`), WW.useProgram(iW), WW.bindTransformFeedback(bW.TRANSFORM_FEEDBACK, tW), WW.bindBuffer(bW.TRANSFORM_FEEDBACK_BUFFER, ZW), WW.bufferData(bW.TRANSFORM_FEEDBACK_BUFFER, 12 * OW, bW.STREAM_READ), WW.bindBufferBase(bW.TRANSFORM_FEEDBACK_BUFFER, 0, ZW), WW.enable(bW.RASTERIZER_DISCARD), WW.beginTransformFeedback(bW.POINTS), mW(), WW.endTransformFeedback(), WW.bindBufferBase(bW.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const PW = WW.getError();
+        if (PW !== bW.NO_ERROR) return fW(`${EW}: GL error 0x${PW.toString(16)} on the feedback draw`), null;
+        const LW = new Float32Array(3 * OW);
+        return WW.bindBuffer(bW.COPY_READ_BUFFER, ZW), WW.getBufferSubData(bW.COPY_READ_BUFFER, 0, LW), LW
       } finally {
-        JB || BB.disable(qB.RASTERIZER_DISCARD), BB.bindTransformFeedback(qB.TRANSFORM_FEEDBACK, oB), BB.bindBuffer(qB.TRANSFORM_FEEDBACK_BUFFER, jB), BB.bindBuffer(qB.COPY_READ_BUFFER, yB), BB.deleteTransformFeedback(MB), BB.deleteBuffer(PB), BB.useProgram(QB), FB.inProbe = !1
+        wW || WW.disable(bW.RASTERIZER_DISCARD), WW.bindTransformFeedback(bW.TRANSFORM_FEEDBACK, PW), WW.bindBuffer(bW.TRANSFORM_FEEDBACK_BUFFER, LW), WW.bindBuffer(bW.COPY_READ_BUFFER, cW), WW.deleteTransformFeedback(tW), WW.deleteBuffer(ZW), WW.useProgram(NW), dW.inProbe = !1
       }
     }
 
-    function vB(BB, OB, GB, YB) {
-      const DB = BB.getParameter(qB.COPY_READ_BUFFER_BINDING),
-        QB = new Uint8Array(YB);
-      return BB.bindBuffer(qB.COPY_READ_BUFFER, OB), BB.getBufferSubData(qB.COPY_READ_BUFFER, GB, QB), BB.bindBuffer(qB.COPY_READ_BUFFER, DB), QB
+    function rW(WW, iW, OW, mW) {
+      const EW = WW.getParameter(bW.COPY_READ_BUFFER_BINDING),
+        NW = new Uint8Array(mW);
+      return WW.bindBuffer(bW.COPY_READ_BUFFER, iW), WW.getBufferSubData(bW.COPY_READ_BUFFER, OW, NW), WW.bindBuffer(bW.COPY_READ_BUFFER, EW), NW
     }
-    const sB = `#version 300 es\nlayout(location = ${NB}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      xB = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      tB = new WeakMap;
+    const zW = `#version 300 es\nlayout(location = ${UW}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      FW = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      QW = new WeakMap;
 
-    function BO(BB, OB, GB) {
-      const YB = BB.getProgramParameter(OB, qB.ACTIVE_UNIFORMS),
-        DB = BB.getParameter(qB.ACTIVE_TEXTURE);
+    function Wi(WW, iW, OW) {
+      const mW = WW.getProgramParameter(iW, bW.ACTIVE_UNIFORMS),
+        EW = WW.getParameter(bW.ACTIVE_TEXTURE);
       try {
-        for (let DB = 0; DB < YB; DB++) {
-          const YB = BB.getActiveUniform(OB, DB);
-          if ((null === YB || void 0 === YB ? void 0 : YB.type) !== qB.UNSIGNED_INT_SAMPLER_2D) continue;
-          const QB = BB.getUniformLocation(OB, YB.name),
-            oB = QB ? BB.getUniform(OB, QB) : -1;
-          if (oB < 0) continue;
-          BB.activeTexture(qB.TEXTURE0 + oB);
-          const jB = BB.getParameter(qB.TEXTURE_BINDING_2D);
-          if (jB && IB.get(jB) === GB) return jB
+        for (let EW = 0; EW < mW; EW++) {
+          const mW = WW.getActiveUniform(iW, EW);
+          if ((null === mW || void 0 === mW ? void 0 : mW.type) !== bW.UNSIGNED_INT_SAMPLER_2D) continue;
+          const NW = WW.getUniformLocation(iW, mW.name),
+            PW = NW ? WW.getUniform(iW, NW) : -1;
+          if (PW < 0) continue;
+          WW.activeTexture(bW.TEXTURE0 + PW);
+          const LW = WW.getParameter(bW.TEXTURE_BINDING_2D);
+          if (LW && oW.get(LW) === OW) return LW
         }
         return null
       } finally {
-        BB.activeTexture(DB)
+        WW.activeTexture(EW)
       }
     }
 
-    function OO(BB, OB, GB, YB, DB) {
-      const QB = new Uint32Array(4 * DB),
-        oB = BB.getParameter(qB.READ_FRAMEBUFFER_BINDING),
-        jB = BB.createFramebuffer();
-      BB.bindFramebuffer(qB.READ_FRAMEBUFFER, jB), BB.framebufferTexture2D(qB.READ_FRAMEBUFFER, qB.COLOR_ATTACHMENT0, qB.TEXTURE_2D, OB, 0);
+    function ii(WW, iW, OW, mW, EW) {
+      const NW = new Uint32Array(4 * EW),
+        PW = WW.getParameter(bW.READ_FRAMEBUFFER_BINDING),
+        LW = WW.createFramebuffer();
+      WW.bindFramebuffer(bW.READ_FRAMEBUFFER, LW), WW.framebufferTexture2D(bW.READ_FRAMEBUFFER, bW.COLOR_ATTACHMENT0, bW.TEXTURE_2D, iW, 0);
       try {
-        let OB = 0;
-        for (; OB < DB;) {
-          const oB = YB + OB,
-            jB = oB % GB,
-            yB = Math.min(DB - OB, GB - jB);
-          BB.readPixels(jB, Math.floor(oB / GB), yB, 1, qB.RGBA_INTEGER, qB.UNSIGNED_INT, QB.subarray(4 * OB, 4 * (OB + yB))), OB += yB
+        let iW = 0;
+        for (; iW < EW;) {
+          const PW = mW + iW,
+            LW = PW % OW,
+            cW = Math.min(EW - iW, OW - LW);
+          WW.readPixels(LW, Math.floor(PW / OW), cW, 1, bW.RGBA_INTEGER, bW.UNSIGNED_INT, NW.subarray(4 * iW, 4 * (iW + cW))), iW += cW
         }
       } finally {
-        BB.bindFramebuffer(qB.READ_FRAMEBUFFER, oB), BB.deleteFramebuffer(jB)
+        WW.bindFramebuffer(bW.READ_FRAMEBUFFER, PW), WW.deleteFramebuffer(LW)
       }
-      return QB
+      return NW
     }
 
-    function GO(BB, OB, GB) {
-      let YB = 0,
-        DB = 0;
-      for (let yB = 0; yB < OB.bytes.length; yB += kB) {
-        YB++;
-        const BB = Math.min(yB + kB, OB.bytes.length);
-        lB(OB.bytes.subarray(yB, BB)) !== lB(GB.subarray(yB, BB)) && DB++
+    function Oi(WW, iW, OW) {
+      let mW = 0,
+        EW = 0;
+      for (let cW = 0; cW < iW.bytes.length; cW += JW) {
+        mW++;
+        const WW = Math.min(cW + JW, iW.bytes.length);
+        lW(iW.bytes.subarray(cW, WW)) !== lW(OW.subarray(cW, WW)) && EW++
       }
-      const QB = `${BB} ${OB.bytes.length} B cpu ${lB(OB.bytes).toString(16)} gpu ${lB(GB).toString(16)}, ${DB}/${YB} blocks differ${OB.missed?`, ${OB.missed} GPU-side writes uncopied`:""}`;
-      if (0 === DB) return QB;
+      const NW = `${WW} ${iW.bytes.length} B cpu ${lW(iW.bytes).toString(16)} gpu ${lW(OW).toString(16)}, ${EW}/${mW} blocks differ${iW.missed?`, ${iW.missed} GPU-side writes uncopied`:""}`;
+      if (0 === EW) return NW;
       const {
-        count: oB,
-        offsets: jB
-      } = function(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const YB = Math.min(BB.length, OB.length);
-        let DB = Math.abs(BB.length - OB.length);
-        const QB = [];
-        for (let oB = 0; oB < YB; oB++) BB[oB] !== OB[oB] && (DB++, QB.length < GB && QB.push(oB));
+        count: PW,
+        offsets: LW
+      } = function(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const mW = Math.min(WW.length, iW.length);
+        let EW = Math.abs(WW.length - iW.length);
+        const NW = [];
+        for (let PW = 0; PW < mW; PW++) WW[PW] !== iW[PW] && (EW++, NW.length < OW && NW.push(PW));
         return {
-          count: DB,
-          offsets: QB
+          count: EW,
+          offsets: NW
         }
-      }(OB.bytes, GB);
-      return cB([`${QB}: ${oB} bytes differ`, ...jB.map((BB => `  +${BB}: cpu ${pB(OB.bytes,BB)} | gpu ${pB(GB,BB)}`))].join("\n")), `${QB}: ${oB} bytes differ, first at ${jB.join(", ")} (context in the saved file)`
+      }(iW.bytes, OW);
+      return CW([`${NW}: ${PW} bytes differ`, ...LW.map((WW => `  +${WW}: cpu ${AW(iW.bytes,WW)} | gpu ${AW(OW,WW)}`))].join("\n")), `${NW}: ${PW} bytes differ, first at ${LW.join(", ")} (context in the saved file)`
     }
 
-    function YO(BB) {
-      if (0 === BB.vertices.length) return void EB(`decode probe (${BB.reason}): no terrain draw probed (${BB.draws.length} seen)`);
-      const OB = function(BB) {
-          const OB = new Map;
-          for (const YB of BB) {
-            const BB = OB.get(YB.group);
-            BB ? BB.push(YB) : OB.set(YB.group, [YB])
+    function mi(WW) {
+      if (0 === WW.vertices.length) return void fW(`decode probe (${WW.reason}): no terrain draw probed (${WW.draws.length} seen)`);
+      const iW = function(WW) {
+          const iW = new Map;
+          for (const mW of WW) {
+            const WW = iW.get(mW.group);
+            WW ? WW.push(mW) : iW.set(mW.group, [mW])
           }
-          const GB = {
-            vertices: BB.length,
+          const OW = {
+            vertices: WW.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -607,67 +607,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [YB, DB] of OB) {
-            const BB = new Map,
-              OB = DB.map((OB => {
-                const GB = MB(OB.record, OB.slot),
-                  YB = [OB.gpu[0] - GB[0], OB.gpu[1] - GB[1], OB.gpu[2] - GB[2]],
-                  DB = YB.map((BB => Math.round(64 * BB))).join(","),
-                  QB = BB.get(DB);
-                return QB ? QB.count++ : BB.set(DB, {
+          for (const [mW, EW] of iW) {
+            const WW = new Map,
+              iW = EW.map((iW => {
+                const OW = tW(iW.record, iW.slot),
+                  mW = [iW.gpu[0] - OW[0], iW.gpu[1] - OW[1], iW.gpu[2] - OW[2]],
+                  EW = mW.map((WW => Math.round(64 * WW))).join(","),
+                  NW = WW.get(EW);
+                return NW ? NW.count++ : WW.set(EW, {
                   count: 1,
-                  offset: YB
-                }), GB
+                  offset: mW
+                }), OW
               }));
-            let QB = [0, 0, 0],
-              oB = 0;
-            for (const GB of BB.values()) GB.count > oB && (oB = GB.count, QB = GB.offset);
-            GB.translations.set(YB, QB), DB.forEach(((BB, YB) => {
-              var DB;
-              const oB = [OB[YB][0] + QB[0], OB[YB][1] + QB[1], OB[YB][2] + QB[2]];
-              if (oB.every(((OB, GB) => {
-                  return YB = BB.gpu[GB], DB = OB, Math.abs(YB - DB) <= Math.max(.001, 1e-6 * Math.abs(DB));
-                  var YB, DB
+            let NW = [0, 0, 0],
+              PW = 0;
+            for (const OW of WW.values()) OW.count > PW && (PW = OW.count, NW = OW.offset);
+            OW.translations.set(mW, NW), EW.forEach(((WW, mW) => {
+              var EW;
+              const PW = [iW[mW][0] + NW[0], iW[mW][1] + NW[1], iW[mW][2] + NW[2]];
+              if (PW.every(((iW, OW) => {
+                  return mW = WW.gpu[OW], EW = iW, Math.abs(mW - EW) <= Math.max(.001, 1e-6 * Math.abs(EW));
+                  var mW, EW
                 }))) return;
-              GB.mismatches++, GB.byDirection[jB(BB.record[2])]++, GB.byDiagonal[yB(BB.record[2])]++;
-              const JB = PB(BB.record);
-              GB.byBand[JB] = (null !== (DB = GB.byBand[JB]) && void 0 !== DB ? DB : 0) + 1, GB.first.length < zB && GB.first.push({
-                ...BB,
-                expected: oB
+              OW.mismatches++, OW.byDirection[LW(WW.record[2])]++, OW.byDiagonal[cW(WW.record[2])]++;
+              const wW = ZW(WW.record);
+              OW.byBand[wW] = (null !== (EW = OW.byBand[wW]) && void 0 !== EW ? EW : 0) + 1, OW.first.length < xW && OW.first.push({
+                ...WW,
+                expected: PW
               })
             }))
           }
-          return GB
-        }(BB.vertices),
-        GB = OB.byDirection.map(((BB, OB) => BB ? `${oB[OB]} ${BB}` : "")).filter(Boolean).join(" "),
-        YB = Object.entries(OB.byBand).map((BB => {
-          let [OB, GB] = BB;
-          return `${OB}: ${GB}`
+          return OW
+        }(WW.vertices),
+        OW = iW.byDirection.map(((WW, iW) => WW ? `${PW[iW]} ${WW}` : "")).filter(Boolean).join(" "),
+        mW = Object.entries(iW.byBand).map((WW => {
+          let [iW, OW] = WW;
+          return `${iW}: ${OW}`
         })).join(" ");
-      if (EB(`decode probe (${BB.reason}): ${OB.mismatches}/${OB.vertices} vertices differ from the CPU decode over ${BB.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (OB.mismatches ? ` by direction [${GB}] diagonal [0: ${OB.byDiagonal[0]} 1: ${OB.byDiagonal[1]}] extent [${YB}]` : "")), BB.fed.records > 0 || BB.fed.failed > 0) {
-        EB(`decode probe input: ${BB.fed.differing}/${BB.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (BB.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (BB.fed.failed ? `; the feed failed on ${BB.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const OB of BB.fed.first) EB(`  ${OB}`)
+      if (fW(`decode probe (${WW.reason}): ${iW.mismatches}/${iW.vertices} vertices differ from the CPU decode over ${WW.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (iW.mismatches ? ` by direction [${OW}] diagonal [0: ${iW.byDiagonal[0]} 1: ${iW.byDiagonal[1]}] extent [${mW}]` : "")), WW.fed.records > 0 || WW.fed.failed > 0) {
+        fW(`decode probe input: ${WW.fed.differing}/${WW.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (WW.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (WW.fed.failed ? `; the feed failed on ${WW.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const iW of WW.fed.first) fW(`  ${iW}`)
       }
-      for (const DB of OB.first) {
-        const [BB, OB, GB] = DB.record;
-        EB(`  mismatch part ${DB.group} r0 ${BB.toString(16)} r1 ${OB.toString(16)} r2 ${GB.toString(16)} slot ${DB.slot} (${oB[jB(GB)]}): expected ${DB.expected.map(QO).join(",")} gpu ${DB.gpu.map(QO).join(",")}`)
+      for (const EW of iW.first) {
+        const [WW, iW, OW] = EW.record;
+        fW(`  mismatch part ${EW.group} r0 ${WW.toString(16)} r1 ${iW.toString(16)} r2 ${OW.toString(16)} slot ${EW.slot} (${PW[LW(OW)]}): expected ${EW.expected.map(Ni).join(",")} gpu ${EW.gpu.map(Ni).join(",")}`)
       }
-      cB(`decode probe translations: ${[...OB.translations].map((BB=>{let[OB,GB]=BB;return`${OB}: ${GB.map(QO).join(",")}`})).join("; ")}`)
+      CW(`decode probe translations: ${[...iW.translations].map((WW=>{let[iW,OW]=WW;return`${iW}: ${OW.map(Ni).join(",")}`})).join("; ")}`)
     }
 
-    function DO(BB) {
-      return BB.toString(16)
+    function Ei(WW) {
+      return WW.toString(16)
     }
 
-    function QO(BB) {
-      return Number.isInteger(BB) ? String(BB) : BB.toFixed(3)
+    function Ni(WW) {
+      return Number.isInteger(WW) ? String(WW) : WW.toFixed(3)
     }
 
-    function oO(BB) {
-      return null !== FB.pendingCheck ? Promise.resolve() : new Promise((OB => {
-        let GB = !1;
-        const YB = {
-          reason: BB,
+    function Pi(WW) {
+      return null !== dW.pendingCheck ? Promise.resolve() : new Promise((iW => {
+        let OW = !1;
+        const mW = {
+          reason: WW,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -680,85 +680,85 @@ export const modules = {
             failed: 0
           }
         };
-        FB.pendingCheck = YB;
-        const DB = () => {
-            FB.pendingCheck = null;
+        dW.pendingCheck = mW;
+        const EW = () => {
+            dW.pendingCheck = null;
             try {
-              ! function(BB) {
-                EB(`draw ranges (${BB.reason}): ${BB.terrainDraws} terrain draws in the frame, the first ${BB.draws.length} here`);
-                for (const OB of BB.draws) {
-                  const BB = OB.JZ.slice(0, 8).map((BB => {
-                      let [OB, GB] = BB;
-                      return `${OB}+${GB}`
+              ! function(WW) {
+                fW(`draw ranges (${WW.reason}): ${WW.terrainDraws} terrain draws in the frame, the first ${WW.draws.length} here`);
+                for (const iW of WW.draws) {
+                  const WW = iW.kj.slice(0, 8).map((WW => {
+                      let [iW, OW] = WW;
+                      return `${iW}+${OW}`
                     })).join(" "),
-                    GB = OB.JZ.length > 8 ? ` (+${OB.JZ.length-8} ranges)` : "";
-                  EB(`  ${KB(OB.program)} ${OB.program.terrain} ${OB.call} ${BB}${GB} x${OB.instances}${OB.group>=0?` part ${OB.group} chunk ${OB.chunk}`:""} | ${OB.attributes.join(" | ")}`)
+                    OW = iW.kj.length > 8 ? ` (+${iW.kj.length-8} ranges)` : "";
+                  fW(`  ${HW(iW.program)} ${iW.program.terrain} ${iW.call} ${WW}${OW} x${iW.instances}${iW.group>=0?` part ${iW.group} chunk ${iW.chunk}`:""} | ${iW.attributes.join(" | ")}`)
                 }
-              }(YB), YO(YB);
-              YB.draws.some((BB => "undefined" !== typeof WebGL2RenderingContext && BB.gl instanceof WebGL2RenderingContext)) || 0 === YB.draws.length ? function(BB) {
-                const OB = [],
-                  GB = new Map;
-                for (const YB of BB)
-                  if ("undefined" !== typeof WebGL2RenderingContext && YB.gl instanceof WebGL2RenderingContext)
-                    for (const BB of YB.pages) GB.set("buf" === BB.kind ? BB.buffer : BB.texture, {
-                      page: BB,
-                      gl: YB.gl
+              }(mW), mi(mW);
+              mW.draws.some((WW => "undefined" !== typeof WebGL2RenderingContext && WW.gl instanceof WebGL2RenderingContext)) || 0 === mW.draws.length ? function(WW) {
+                const iW = [],
+                  OW = new Map;
+                for (const mW of WW)
+                  if ("undefined" !== typeof WebGL2RenderingContext && mW.gl instanceof WebGL2RenderingContext)
+                    for (const WW of mW.pages) OW.set("buf" === WW.kind ? WW.buffer : WW.texture, {
+                      page: WW,
+                      gl: mW.gl
                     });
-                for (const [YB, {
-                    page: DB,
-                    gl: QB
-                  }] of GB) {
-                  const BB = mB.get(YB);
-                  if (!BB) {
-                    OB.push(`${DB.kind}#${gB(YB)}: no CPU copy (${FB.uncopied} pages over the copy budget)`);
+                for (const [mW, {
+                    page: EW,
+                    gl: NW
+                  }] of OW) {
+                  const WW = uW.get(mW);
+                  if (!WW) {
+                    iW.push(`${EW.kind}#${gW(mW)}: no CPU copy (${dW.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === DB.kind) {
-                    OB.push(GO(`buf#${BB.id}`, BB, vB(QB, DB.buffer, 0, BB.bytes.length)));
+                  if ("buf" === EW.kind) {
+                    iW.push(Oi(`buf#${WW.id}`, WW, rW(NW, EW.buffer, 0, WW.bytes.length)));
                     continue
                   }
-                  const GB = OO(QB, DB.texture, BB.width, 0, BB.width * BB.height),
-                    oB = 16 === BB.texelBytes ? new Uint8Array(GB.buffer) : new Uint8Array(new Uint16Array(GB).buffer);
-                  OB.push(GO(`tex#${BB.id} (${16===BB.texelBytes?"records":"light"})`, BB, oB))
+                  const OW = ii(NW, EW.texture, WW.width, 0, WW.width * WW.height),
+                    PW = 16 === WW.texelBytes ? new Uint8Array(OW.buffer) : new Uint8Array(new Uint16Array(OW).buffer);
+                  iW.push(Oi(`tex#${WW.id} (${16===WW.texelBytes?"records":"light"})`, WW, PW))
                 }
-                for (const YB of OB) EB(`page readback ${YB}`)
-              }(YB.draws) : EB("page readback: none on WebGL1 (no buffer readback)")
-            } catch (BB) {
-              EB(`check failed: ${String(BB)}`)
+                for (const mW of iW) fW(`page readback ${mW}`)
+              }(mW.draws) : fW("page readback: none on WebGL1 (no buffer readback)")
+            } catch (WW) {
+              fW(`check failed: ${String(WW)}`)
             }
-            OB()
+            iW()
           },
-          QB = () => {
-            if (YB.draws.length > 0 && !GB) return GB = !0, void setTimeout(DB, 0);
-            GB || requestAnimationFrame(QB)
+          NW = () => {
+            if (mW.draws.length > 0 && !OW) return OW = !0, void setTimeout(EW, 0);
+            OW || requestAnimationFrame(NW)
           };
-        requestAnimationFrame(QB), setTimeout((() => {
-          GB || (GB = !0, DB())
+        requestAnimationFrame(NW), setTimeout((() => {
+          OW || (OW = !0, EW())
         }), 5e3)
       }))
     }
-    var jO = GB(5165);
-    const yO = 20,
-      JO = 24,
-      MO = Reflect.apply;
+    var Li = OW(5427);
+    const ci = 20,
+      wi = 24,
+      ti = Reflect.apply;
 
-    function PO(BB, OB, GB) {
-      if (!BB) return;
-      const YB = BB[OB];
-      if ("function" === typeof YB) {
-        const DB = GB(YB);
-        BB[OB] = DB, (0, jO.r)(DB, YB)
+    function Zi(WW, iW, OW) {
+      if (!WW) return;
+      const mW = WW[iW];
+      if ("function" === typeof mW) {
+        const EW = OW(mW);
+        WW[iW] = EW, (0, Li.v)(EW, mW)
       }
     }
-    let zO = !1;
-    const lO = new WeakMap,
-      pO = new WeakMap,
-      qO = new WeakMap,
-      ZO = {
+    let xi = !1;
+    const li = new WeakMap,
+      Ai = new WeakMap,
+      bi = new WeakMap,
+      ji = {
         gl: 0,
         lost: 0
       };
-    let NO = {
+    let Ui = {
         inst: {
           draws: 0,
           faces: 0
@@ -772,307 +772,307 @@ export const modules = {
           faces: 0
         }
       },
-      RO = {
+      ki = {
         buffer: 0,
         texture: 0
       },
-      WO = 0;
+      si = 0;
 
-    function AO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (BB instanceof ArrayBuffer) return new Uint8Array(BB, OB, GB || void 0);
-      if (!ArrayBuffer.isView(BB)) return null;
-      const YB = "BYTES_PER_ELEMENT" in BB ? BB.BYTES_PER_ELEMENT : 1,
-        DB = BB.byteOffset + OB * YB,
-        QB = GB ? GB * YB : BB.byteLength - OB * YB;
-      return new Uint8Array(BB.buffer, DB, Math.max(0, QB))
+    function Mi(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (WW instanceof ArrayBuffer) return new Uint8Array(WW, iW, OW || void 0);
+      if (!ArrayBuffer.isView(WW)) return null;
+      const mW = "BYTES_PER_ELEMENT" in WW ? WW.BYTES_PER_ELEMENT : 1,
+        EW = WW.byteOffset + iW * mW,
+        NW = OW ? OW * mW : WW.byteLength - iW * mW;
+      return new Uint8Array(WW.buffer, EW, Math.max(0, NW))
     }
 
-    function VO(BB, OB) {
-      const GB = function(BB) {
-        switch (BB) {
-          case qB.ARRAY_BUFFER:
-            return qB.ARRAY_BUFFER_BINDING;
-          case qB.ELEMENT_ARRAY_BUFFER:
-            return qB.ELEMENT_ARRAY_BUFFER_BINDING;
-          case qB.COPY_READ_BUFFER:
-            return qB.COPY_READ_BUFFER_BINDING;
-          case qB.COPY_WRITE_BUFFER:
-            return qB.COPY_WRITE_BUFFER_BINDING;
-          case qB.UNIFORM_BUFFER:
-            return qB.UNIFORM_BUFFER_BINDING;
-          case qB.PIXEL_UNPACK_BUFFER:
-            return qB.PIXEL_UNPACK_BUFFER_BINDING;
-          case qB.TRANSFORM_FEEDBACK_BUFFER:
-            return qB.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function Ki(WW, iW) {
+      const OW = function(WW) {
+        switch (WW) {
+          case bW.ARRAY_BUFFER:
+            return bW.ARRAY_BUFFER_BINDING;
+          case bW.ELEMENT_ARRAY_BUFFER:
+            return bW.ELEMENT_ARRAY_BUFFER_BINDING;
+          case bW.COPY_READ_BUFFER:
+            return bW.COPY_READ_BUFFER_BINDING;
+          case bW.COPY_WRITE_BUFFER:
+            return bW.COPY_WRITE_BUFFER_BINDING;
+          case bW.UNIFORM_BUFFER:
+            return bW.UNIFORM_BUFFER_BINDING;
+          case bW.PIXEL_UNPACK_BUFFER:
+            return bW.PIXEL_UNPACK_BUFFER_BINDING;
+          case bW.TRANSFORM_FEEDBACK_BUFFER:
+            return bW.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(OB);
-      return GB ? BB.getParameter(GB) : null
+      }(iW);
+      return OW ? WW.getParameter(OW) : null
     }
 
-    function SO(BB) {
-      const OB = mB.get(BB);
-      OB && (FB.shadowBytes -= OB.bytes.length, mB.delete(BB))
+    function Si(WW) {
+      const iW = uW.get(WW);
+      iW && (dW.shadowBytes -= iW.bytes.length, uW.delete(WW))
     }
 
-    function nO(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      SO(BB), FB.shadowBytes + OB > fB ? FB.uncopied++ : (FB.shadowBytes += OB, mB.set(BB, {
-        id: gB(BB),
-        bytes: new Uint8Array(OB),
-        width: GB,
-        height: YB,
-        texelBytes: DB,
+    function Yi(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      Si(WW), dW.shadowBytes + iW > TW ? dW.uncopied++ : (dW.shadowBytes += iW, uW.set(WW, {
+        id: gW(WW),
+        bytes: new Uint8Array(iW),
+        width: OW,
+        height: mW,
+        texelBytes: EW,
         missed: 0
       }))
     }
 
-    function UO(BB, OB) {
-      for (const GB of ["deleteBuffer", "deleteTexture"]) PO(BB, GB, (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return GB[0] && SO(GB[0]), MO(BB, this, GB)
+    function yi(WW, iW) {
+      for (const OW of ["deleteBuffer", "deleteTexture"]) Zi(WW, OW, (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return OW[0] && Si(OW[0]), ti(WW, this, OW)
       }));
-      PO(BB, "shaderSource", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return GB[0] && "string" === typeof GB[1] && lO.set(GB[0], GB[1]), MO(BB, this, GB)
-      })), PO(BB, "attachShader", (BB => function() {
-        for (var OB, GB = arguments.length, YB = new Array(GB), DB = 0; DB < GB; DB++) YB[DB] = arguments[DB];
-        const QB = YB[0],
-          oB = null !== (OB = pO.get(QB)) && void 0 !== OB ? OB : [];
-        return oB.push(YB[1]), pO.set(QB, oB), MO(BB, this, YB)
-      })), PO(BB, "linkProgram", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB);
-        return FB.inProbe || function(BB, OB) {
-          var GB, YB, DB;
-          "undefined" !== typeof HTMLCanvasElement && BB.canvas instanceof HTMLCanvasElement && function(BB) {
-            if (mO.has(BB)) return;
-            mO.add(BB);
-            for (const OB of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) BB.addEventListener(OB, (BB => {
-              ZO.lost < yO && (ZO.lost++, EB(`${OB}${"statusMessage"in BB?`: ${String(BB.statusMessage)}`:""}`))
+      Zi(WW, "shaderSource", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return OW[0] && "string" === typeof OW[1] && li.set(OW[0], OW[1]), ti(WW, this, OW)
+      })), Zi(WW, "attachShader", (WW => function() {
+        for (var iW, OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+        const NW = mW[0],
+          PW = null !== (iW = Ai.get(NW)) && void 0 !== iW ? iW : [];
+        return PW.push(mW[1]), Ai.set(NW, PW), ti(WW, this, mW)
+      })), Zi(WW, "linkProgram", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        return dW.inProbe || function(WW, iW) {
+          var OW, mW, EW;
+          "undefined" !== typeof HTMLCanvasElement && WW.canvas instanceof HTMLCanvasElement && function(WW) {
+            if (oi.has(WW)) return;
+            oi.add(WW);
+            for (const iW of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) WW.addEventListener(iW, (WW => {
+              ji.lost < ci && (ji.lost++, fW(`${iW}${"statusMessage"in WW?`: ${String(WW.statusMessage)}`:""}`))
             }))
-          }(BB.canvas);
-          FB.context ??= BB;
-          const QB = null !== (GB = pO.get(OB)) && void 0 !== GB ? GB : [];
-          let oB = "",
-            jB = "";
-          for (const MB of QB) {
-            var yB;
-            const BB = null !== (yB = lO.get(MB)) && void 0 !== yB ? yB : "";
-            /\bgl_Position\b/.test(BB) ? oB = BB : jB = BB
+          }(WW.canvas);
+          dW.context ??= WW;
+          const NW = null !== (OW = Ai.get(iW)) && void 0 !== OW ? OW : [];
+          let PW = "",
+            LW = "";
+          for (const tW of NW) {
+            var cW;
+            const WW = null !== (cW = li.get(tW)) && void 0 !== cW ? cW : "";
+            /\bgl_Position\b/.test(WW) ? PW = WW : LW = WW
           }
-          const JB = {
-            id: gB(OB),
-            name: null !== (YB = null === (DB = dB.exec(oB)) || void 0 === DB ? void 0 : DB[1]) && void 0 !== YB ? YB : null,
-            gl: BB,
-            vertex: oB,
-            fragment: jB,
-            terrain: kO(oB),
+          const wW = {
+            id: gW(iW),
+            name: null !== (mW = null === (EW = hW.exec(PW)) || void 0 === EW ? void 0 : EW[1]) && void 0 !== mW ? mW : null,
+            gl: WW,
+            vertex: PW,
+            fragment: LW,
+            terrain: Ji(PW),
             checked: !1,
             firstDraw: !1
           };
-          if (qO.set(OB, JB), uB.push([OB, JB]), null !== JB.terrain) {
-            const OB = QB.map((OB => {
-              var GB;
-              return null !== (GB = BB.getShaderInfoLog(OB)) && void 0 !== GB ? GB : ""
-            })).filter((BB => "" !== BB.trim()));
-            OB.length > 0 && cB(`program ${KB(JB)} (${JB.terrain}) shader logs:\n${hB(OB.join("\n"))}`)
+          if (bi.set(iW, wW), nW.push([iW, wW]), null !== wW.terrain) {
+            const iW = NW.map((iW => {
+              var OW;
+              return null !== (OW = WW.getShaderInfoLog(iW)) && void 0 !== OW ? OW : ""
+            })).filter((WW => "" !== WW.trim()));
+            iW.length > 0 && CW(`program ${HW(wW)} (${wW.terrain}) shader logs:\n${XW(iW.join("\n"))}`)
           }
-        }(this, GB[0]), DB
-      })), PO(BB, "bufferData", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB);
-        if (!FB.inProbe) {
-          const BB = VO(this, GB[0]);
-          if (BB) {
-            var QB, oB, jB;
-            const OB = "number" === typeof GB[1] ? null : AO(GB[1], null !== (QB = GB[3]) && void 0 !== QB ? QB : 0, null !== (oB = GB[4]) && void 0 !== oB ? oB : 0);
-            var yB;
-            if (nO(BB, "number" === typeof GB[1] ? GB[1] : null !== (jB = null === OB || void 0 === OB ? void 0 : OB.length) && void 0 !== jB ? jB : 0), OB) null === (yB = mB.get(BB)) || void 0 === yB || yB.bytes.set(OB)
-          }
-        }
-        return DB
-      })), PO(BB, "bufferSubData", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB);
-        if (!FB.inProbe) {
-          var QB, oB;
-          const BB = VO(this, GB[0]),
-            OB = BB ? mB.get(BB) : void 0,
-            YB = AO(GB[2], null !== (QB = GB[3]) && void 0 !== QB ? QB : 0, null !== (oB = GB[4]) && void 0 !== oB ? oB : 0);
-          if (OB && YB) {
-            const BB = GB[1];
-            OB.bytes.set(YB.subarray(0, Math.max(0, OB.bytes.length - BB)), BB), fO("buffer", OB, BB, YB.length)
+        }(this, OW[0]), EW
+      })), Zi(WW, "bufferData", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        if (!dW.inProbe) {
+          const WW = Ki(this, OW[0]);
+          if (WW) {
+            var NW, PW, LW;
+            const iW = "number" === typeof OW[1] ? null : Mi(OW[1], null !== (NW = OW[3]) && void 0 !== NW ? NW : 0, null !== (PW = OW[4]) && void 0 !== PW ? PW : 0);
+            var cW;
+            if (Yi(WW, "number" === typeof OW[1] ? OW[1] : null !== (LW = null === iW || void 0 === iW ? void 0 : iW.length) && void 0 !== LW ? LW : 0), iW) null === (cW = uW.get(WW)) || void 0 === cW || cW.bytes.set(iW)
           }
         }
-        return DB
-      })), OB && (PO(BB, "copyBufferSubData", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB);
-        if (!FB.inProbe) {
-          const [BB, OB, YB, DB, QB] = GB, oB = VO(this, BB), jB = VO(this, OB), yB = oB ? mB.get(oB) : void 0, JB = jB ? mB.get(jB) : void 0;
-          JB && (yB ? JB.bytes.set(yB.bytes.slice(YB, YB + QB), DB) : JB.missed++)
-        }
-        return DB
-      })), PO(BB, "texStorage2D", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB),
-          [, , QB, oB, jB] = GB;
-        if (!FB.inProbe && (QB === qB.RGBA32UI || QB === qB.RGBA16UI)) {
-          const BB = this.getParameter(qB.TEXTURE_BINDING_2D),
-            OB = QB === qB.RGBA32UI ? 16 : 8;
-          BB && (IB.set(BB, OB), nO(BB, oB * jB * OB, oB, jB, OB))
-        }
-        return DB
-      })), PO(BB, "texSubImage2D", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB);
-        return !FB.inProbe && GB.length >= 9 && GB[0] === qB.TEXTURE_2D && 0 === GB[1] && function(BB, OB) {
-          var GB;
-          const YB = BB.getParameter(qB.TEXTURE_BINDING_2D),
-            DB = YB ? mB.get(YB) : void 0;
-          if (!DB) return;
-          const [, , QB, oB, jB, yB] = OB;
-          let JB = AO(OB[8], null !== (GB = OB[9]) && void 0 !== GB ? GB : 0);
-          if (null === JB && "number" === typeof OB[8]) {
-            const GB = VO(BB, qB.PIXEL_UNPACK_BUFFER),
-              YB = GB ? mB.get(GB) : void 0;
-            JB = YB ? YB.bytes.subarray(OB[8]) : null
+        return EW
+      })), Zi(WW, "bufferSubData", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        if (!dW.inProbe) {
+          var NW, PW;
+          const WW = Ki(this, OW[0]),
+            iW = WW ? uW.get(WW) : void 0,
+            mW = Mi(OW[2], null !== (NW = OW[3]) && void 0 !== NW ? NW : 0, null !== (PW = OW[4]) && void 0 !== PW ? PW : 0);
+          if (iW && mW) {
+            const WW = OW[1];
+            iW.bytes.set(mW.subarray(0, Math.max(0, iW.bytes.length - WW)), WW), Ti("buffer", iW, WW, mW.length)
           }
-          if (null === JB) return void DB.missed++;
-          const MB = BB.getParameter(qB.UNPACK_ROW_LENGTH) || jB,
-            PB = BB.getParameter(qB.UNPACK_SKIP_ROWS),
-            zB = BB.getParameter(qB.UNPACK_SKIP_PIXELS),
-            lB = DB.texelBytes;
-          for (let pB = 0; pB < yB; pB++) {
-            const BB = ((PB + pB) * MB + zB) * lB,
-              OB = ((oB + pB) * DB.width + QB) * lB;
-            DB.bytes.set(JB.subarray(BB, BB + jB * lB), OB)
+        }
+        return EW
+      })), iW && (Zi(WW, "copyBufferSubData", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        if (!dW.inProbe) {
+          const [WW, iW, mW, EW, NW] = OW, PW = Ki(this, WW), LW = Ki(this, iW), cW = PW ? uW.get(PW) : void 0, wW = LW ? uW.get(LW) : void 0;
+          wW && (cW ? wW.bytes.set(cW.bytes.slice(mW, mW + NW), EW) : wW.missed++)
+        }
+        return EW
+      })), Zi(WW, "texStorage2D", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW),
+          [, , NW, PW, LW] = OW;
+        if (!dW.inProbe && (NW === bW.RGBA32UI || NW === bW.RGBA16UI)) {
+          const WW = this.getParameter(bW.TEXTURE_BINDING_2D),
+            iW = NW === bW.RGBA32UI ? 16 : 8;
+          WW && (oW.set(WW, iW), Yi(WW, PW * LW * iW, PW, LW, iW))
+        }
+        return EW
+      })), Zi(WW, "texSubImage2D", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        return !dW.inProbe && OW.length >= 9 && OW[0] === bW.TEXTURE_2D && 0 === OW[1] && function(WW, iW) {
+          var OW;
+          const mW = WW.getParameter(bW.TEXTURE_BINDING_2D),
+            EW = mW ? uW.get(mW) : void 0;
+          if (!EW) return;
+          const [, , NW, PW, LW, cW] = iW;
+          let wW = Mi(iW[8], null !== (OW = iW[9]) && void 0 !== OW ? OW : 0);
+          if (null === wW && "number" === typeof iW[8]) {
+            const OW = Ki(WW, bW.PIXEL_UNPACK_BUFFER),
+              mW = OW ? uW.get(OW) : void 0;
+            wW = mW ? mW.bytes.subarray(iW[8]) : null
           }
-          fO("texture", DB, (oB * DB.width + QB) * lB, jB * yB * lB)
-        }(this, GB), DB
-      })), PO(BB, "copyTexSubImage2D", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = GB[0] === qB.TEXTURE_2D ? this.getParameter(qB.TEXTURE_BINDING_2D) : null,
-          QB = DB ? mB.get(DB) : void 0;
-        return QB && QB.missed++, MO(BB, this, GB)
+          if (null === wW) return void EW.missed++;
+          const tW = WW.getParameter(bW.UNPACK_ROW_LENGTH) || LW,
+            ZW = WW.getParameter(bW.UNPACK_SKIP_ROWS),
+            xW = WW.getParameter(bW.UNPACK_SKIP_PIXELS),
+            lW = EW.texelBytes;
+          for (let AW = 0; AW < cW; AW++) {
+            const WW = ((ZW + AW) * tW + xW) * lW,
+              iW = ((PW + AW) * EW.width + NW) * lW;
+            EW.bytes.set(wW.subarray(WW, WW + LW * lW), iW)
+          }
+          Ti("texture", EW, (PW * EW.width + NW) * lW, LW * cW * lW)
+        }(this, OW), EW
+      })), Zi(WW, "copyTexSubImage2D", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = OW[0] === bW.TEXTURE_2D ? this.getParameter(bW.TEXTURE_BINDING_2D) : null,
+          NW = EW ? uW.get(EW) : void 0;
+        return NW && NW.missed++, ti(WW, this, OW)
       })));
-      for (const GB of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) PO(BB, GB, (BB => function() {
-        for (var OB = arguments.length, YB = new Array(OB), DB = 0; DB < OB; DB++) YB[DB] = arguments[DB];
-        const QB = MO(BB, this, YB);
-        return FB.inProbe || KO(this, GB, YB), QB
+      for (const OW of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Zi(WW, OW, (WW => function() {
+        for (var iW = arguments.length, mW = new Array(iW), EW = 0; EW < iW; EW++) mW[EW] = arguments[EW];
+        const NW = ti(WW, this, mW);
+        return dW.inProbe || ni(this, OW, mW), NW
       }));
-      PO(BB, "getExtension", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        const DB = MO(BB, this, GB);
-        return DB && "object" === typeof DB && function(BB, OB, GB) {
-          const YB = {
+      Zi(WW, "getExtension", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        const EW = ti(WW, this, OW);
+        return EW && "object" === typeof EW && function(WW, iW, OW) {
+          const mW = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(OB in YB) || GB.bloxdRenderDebug) return;
-          GB.bloxdRenderDebug = !0;
-          for (const DB of YB[OB]) {
-            const OB = GB[DB];
-            "function" === typeof OB && (GB[DB] = function() {
-              for (var YB = arguments.length, QB = new Array(YB), oB = 0; oB < YB; oB++) QB[oB] = arguments[oB];
-              const jB = MO(OB, GB, QB);
-              return FB.inProbe || KO(BB, DB, QB), jB
+          if (!(iW in mW) || OW.bloxdRenderDebug) return;
+          OW.bloxdRenderDebug = !0;
+          for (const EW of mW[iW]) {
+            const iW = OW[EW];
+            "function" === typeof iW && (OW[EW] = function() {
+              for (var mW = arguments.length, NW = new Array(mW), PW = 0; PW < mW; PW++) NW[PW] = arguments[PW];
+              const LW = ti(iW, OW, NW);
+              return dW.inProbe || ni(WW, EW, NW), LW
             })
           }
-        }(this, GB[0], DB), DB
+        }(this, OW[0], EW), EW
       }))
     }
 
-    function fO(BB, OB, GB, YB) {
-      RO[BB] += YB, WO < 32 && OB.bytes.length >= 1 << 20 && (WO++, cB(`upload ${BB} #${OB.id} +${GB} ${YB} B`))
+    function Ti(WW, iW, OW, mW) {
+      ki[WW] += mW, si < 32 && iW.bytes.length >= 1 << 20 && (si++, CW(`upload ${WW} #${iW.id} +${OW} ${mW} B`))
     }
 
-    function kO(BB) {
-      if (!BB.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(BB) || /in uvec3 _p2vs_location0\b/.test(BB) ? "inst" : "tex"
+    function Ji(WW) {
+      if (!WW.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(WW) || /in uvec3 _p2vs_location0\b/.test(WW) ? "inst" : "tex"
     }
 
-    function dO(BB, OB, GB) {
-      var YB;
-      if (GB.checked) return;
-      GB.checked = !0;
-      const DB = BB.getProgramParameter(OB, qB.LINK_STATUS),
-        QB = (null !== (YB = BB.getProgramInfoLog(OB)) && void 0 !== YB ? YB : "").trim();
-      var oB;
-      null === GB.terrain && DB || (EB(`program ${KB(GB)} ${null!==(oB=GB.terrain)&&void 0!==oB?oB:"other"} link ${DB?"ok":"FAILED"}${QB?`: ${hB(QB,300)}`:""}`), QB && cB(`program ${KB(GB)} link log:\n${hB(QB)}`))
+    function Hi(WW, iW, OW) {
+      var mW;
+      if (OW.checked) return;
+      OW.checked = !0;
+      const EW = WW.getProgramParameter(iW, bW.LINK_STATUS),
+        NW = (null !== (mW = WW.getProgramInfoLog(iW)) && void 0 !== mW ? mW : "").trim();
+      var PW;
+      null === OW.terrain && EW || (fW(`program ${HW(OW)} ${null!==(PW=OW.terrain)&&void 0!==PW?PW:"other"} link ${EW?"ok":"FAILED"}${NW?`: ${XW(NW,300)}`:""}`), NW && CW(`program ${HW(OW)} link log:\n${XW(NW)}`))
     }
 
-    function KO(BB, OB, GB) {
-      var YB;
-      const DB = BB.getParameter(qB.CURRENT_PROGRAM),
-        QB = DB ? qO.get(DB) : void 0;
-      if (!DB || !QB) return;
-      const oB = null !== (YB = QB.terrain) && void 0 !== YB ? YB : "other",
+    function ni(WW, iW, OW) {
+      var mW;
+      const EW = WW.getParameter(bW.CURRENT_PROGRAM),
+        NW = EW ? bi.get(EW) : void 0;
+      if (!EW || !NW) return;
+      const PW = null !== (mW = NW.terrain) && void 0 !== mW ? mW : "other",
         {
-          JZ: jB,
-          instances: yB
-        } = function(BB, OB) {
-          switch (BB) {
+          kj: LW,
+          instances: cW
+        } = function(WW, iW) {
+          switch (WW) {
             case "drawArrays":
               return {
-                JZ: [
-                  [OB[1], OB[2]]
+                kj: [
+                  [iW[1], iW[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                JZ: [
-                  [OB[1], OB[2]]
-                ], instances: OB[3]
+                kj: [
+                  [iW[1], iW[2]]
+                ], instances: iW[3]
               };
             case "drawElements":
               return {
-                JZ: [
-                  [0, OB[1]]
+                kj: [
+                  [0, iW[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                JZ: [
-                  [0, OB[1]]
-                ], instances: OB[4]
+                kj: [
+                  [0, iW[1]]
+                ], instances: iW[4]
               };
             case "multiDrawArraysWEBGL": {
-              const BB = OB[1],
-                GB = OB[3],
-                YB = OB[2],
-                DB = OB[4],
-                QB = [];
-              for (let oB = 0; oB < OB[5]; oB++) QB.push([BB[YB + oB], GB[DB + oB]]);
+              const WW = iW[1],
+                OW = iW[3],
+                mW = iW[2],
+                EW = iW[4],
+                NW = [];
+              for (let PW = 0; PW < iW[5]; PW++) NW.push([WW[mW + PW], OW[EW + PW]]);
               return {
-                JZ: QB,
+                kj: NW,
                 instances: 1
               }
             }
             default:
               return {
-                JZ: [], instances: 0
+                kj: [], instances: 0
               }
           }
-        }(OB, GB),
-        JB = "inst" === QB.terrain ? yB : jB.reduce(((BB, OB) => {
-          let [, GB] = OB;
-          return BB + GB
+        }(iW, OW),
+        wW = "inst" === NW.terrain ? cW : LW.reduce(((WW, iW) => {
+          let [, OW] = iW;
+          return WW + OW
         }), 0) / 6;
-      if (NO[oB].draws++, NO[oB].faces += JB, null === QB.terrain) return;
-      if (FB.context = BB, !QB.firstDraw) {
-        QB.firstDraw = !0, dO(BB, DB, QB), uO || (uO = !0, EB(function(BB) {
-          var OB;
-          const GB = BB.getParameter(qB.DEPTH_FUNC),
-            YB = {
+      if (Ui[PW].draws++, Ui[PW].faces += wW, null === NW.terrain) return;
+      if (dW.context = WW, !NW.firstDraw) {
+        NW.firstDraw = !0, Hi(WW, EW, NW), ui || (ui = !0, fW(function(WW) {
+          var iW;
+          const OW = WW.getParameter(bW.DEPTH_FUNC),
+            mW = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1080,319 +1080,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let DB = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in BB && BB.getParameter(qB.DRAW_FRAMEBUFFER_BINDING)) {
-            const OB = BB;
-            DB = OB.getFramebufferAttachmentParameter(qB.DRAW_FRAMEBUFFER, qB.DEPTH_ATTACHMENT, qB.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(OB.getFramebufferAttachmentParameter(qB.DRAW_FRAMEBUFFER,qB.DEPTH_ATTACHMENT,qB.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(OB.getFramebufferAttachmentParameter(qB.DRAW_FRAMEBUFFER,qB.DEPTH_ATTACHMENT,qB.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let EW = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in WW && WW.getParameter(bW.DRAW_FRAMEBUFFER_BINDING)) {
+            const iW = WW;
+            EW = iW.getFramebufferAttachmentParameter(bW.DRAW_FRAMEBUFFER, bW.DEPTH_ATTACHMENT, bW.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(iW.getFramebufferAttachmentParameter(bW.DRAW_FRAMEBUFFER,bW.DEPTH_ATTACHMENT,bW.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(iW.getFramebufferAttachmentParameter(bW.DRAW_FRAMEBUFFER,bW.DEPTH_ATTACHMENT,bW.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const QB = BB.getParameter(qB.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(OB=YB[GB])&&void 0!==OB?OB:`0x${GB.toString(16)}`} clear ${QB}${516===GB||518===GB?" (reverse-Z)":""}, samples ${String(BB.getParameter(qB.SAMPLES))}, ${DB}`
-        }(BB)));
-        const GB = BB.getError();
-        GB !== qB.NO_ERROR && ZO.gl < yO && (ZO.gl++, EB(`GL error 0x${GB.toString(16)} after program ${KB(QB)}'s first terrain draw (${OB})`))
+          const NW = WW.getParameter(bW.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(iW=mW[OW])&&void 0!==iW?iW:`0x${OW.toString(16)}`} clear ${NW}${516===OW||518===OW?" (reverse-Z)":""}, samples ${String(WW.getParameter(bW.SAMPLES))}, ${EW}`
+        }(WW)));
+        const OW = WW.getError();
+        OW !== bW.NO_ERROR && ji.gl < ci && (ji.gl++, fW(`GL error 0x${OW.toString(16)} after program ${HW(NW)}'s first terrain draw (${iW})`))
       }
-      const MB = FB.pendingCheck;
-      null !== MB && (MB.terrainDraws++, MB.draws.length < JO && aB(BB, DB, QB, OB, jB, yB))
+      const tW = dW.pendingCheck;
+      null !== tW && (tW.terrainDraws++, tW.draws.length < wi && BW(WW, EW, NW, iW, LW, cW))
     }
-    let uO = !1;
-    const mO = new WeakSet;
-    var IO = GB(4923),
-      FO = GB(5167);
-    const iO = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let LO = !1;
-    const gO = new WeakSet,
-      rO = new WeakMap,
-      XO = new WeakMap,
-      wO = {
+    let ui = !1;
+    const oi = new WeakSet;
+    var di = OW(5217),
+      ei = OW(5431);
+    const vi = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let gi = !1;
+    const Di = new WeakSet,
+      Vi = new WeakMap,
+      fi = new WeakMap,
+      Ci = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let EO = 0,
-      cO = !1,
-      hO = null,
-      aO = {
+    let Xi = 0,
+      Bi = !1,
+      qi = null,
+      Ri = {
         draws: 0,
         faces: 0
       };
 
-    function eO(BB) {
-      const OB = globalThis[BB];
-      return null === OB || void 0 === OB ? void 0 : OB.prototype
+    function Gi(WW) {
+      const iW = globalThis[WW];
+      return null === iW || void 0 === iW ? void 0 : iW.prototype
     }
 
-    function TO(BB) {
-      return BB && "function" === typeof BB[Symbol.iterator] ? [...BB].sort().join(" ") : ""
+    function Ii(WW) {
+      return WW && "function" === typeof WW[Symbol.iterator] ? [...WW].sort().join(" ") : ""
     }
 
-    function bO(BB, OB) {
-      const GB = null !== BB && void 0 !== BB ? BB : {},
-        YB = null !== OB && void 0 !== OB ? OB : Object.keys(Object.getPrototypeOf(GB)).concat(Object.keys(GB));
-      return [...new Set(YB)].filter((BB => "number" === typeof GB[BB])).map((BB => `${BB} ${String(GB[BB])}`)).join(", ")
+    function ai(WW, iW) {
+      const OW = null !== WW && void 0 !== WW ? WW : {},
+        mW = null !== iW && void 0 !== iW ? iW : Object.keys(Object.getPrototypeOf(OW)).concat(Object.keys(OW));
+      return [...new Set(mW)].filter((WW => "number" === typeof OW[WW])).map((WW => `${WW} ${String(OW[WW])}`)).join(", ")
     }
 
-    function CO(BB, OB) {
-      var GB;
-      const YB = null !== (GB = OB.vertex) && void 0 !== GB ? GB : {};
-      if (YB.module && gO.has(YB.module)) {
-        var DB;
-        const GB = String(null !== (DB = YB.entryPoint) && void 0 !== DB ? DB : "");
-        if (GB.startsWith("vs_packed") && rO.set(BB, GB), !cO) {
-          var QB, oB, jB, yB, JB;
-          cO = !0;
-          const BB = null !== (QB = OB.depthStencil) && void 0 !== QB ? QB : {},
-            YB = null !== (oB = OB.multisample) && void 0 !== oB ? oB : {},
-            DB = String(null !== (jB = BB.depthCompare) && void 0 !== jB ? jB : "");
-          EB(`WebGPU terrain pipeline ${GB}: depth ${String(null!==(yB=BB.format)&&void 0!==yB?yB:"none")} ${DB}${DB.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(JB=YB.count)&&void 0!==JB?JB:1)}`)
+    function ri(WW, iW) {
+      var OW;
+      const mW = null !== (OW = iW.vertex) && void 0 !== OW ? OW : {};
+      if (mW.module && Di.has(mW.module)) {
+        var EW;
+        const OW = String(null !== (EW = mW.entryPoint) && void 0 !== EW ? EW : "");
+        if (OW.startsWith("vs_packed") && Vi.set(WW, OW), !Bi) {
+          var NW, PW, LW, cW, wW;
+          Bi = !0;
+          const WW = null !== (NW = iW.depthStencil) && void 0 !== NW ? NW : {},
+            mW = null !== (PW = iW.multisample) && void 0 !== PW ? PW : {},
+            EW = String(null !== (LW = WW.depthCompare) && void 0 !== LW ? LW : "");
+          fW(`WebGPU terrain pipeline ${OW}: depth ${String(null!==(cW=WW.format)&&void 0!==cW?cW:"none")} ${EW}${EW.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(wW=mW.count)&&void 0!==wW?wW:1)}`)
         }
       }
     }
 
-    function HO(BB) {
-      PO(BB, "setPipeline", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return XO.set(this, GB[0]), MO(BB, this, GB)
+    function zi(WW) {
+      Zi(WW, "setPipeline", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return fi.set(this, OW[0]), ti(WW, this, OW)
       }));
-      for (const OB of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) PO(BB, OB, (BB => function() {
-        const GB = XO.get(this),
-          YB = GB ? rO.get(GB) : void 0;
-        for (var DB = arguments.length, QB = new Array(DB), oB = 0; oB < DB; oB++) QB[oB] = arguments[oB];
-        return void 0 !== YB && vO(OB, YB, QB), MO(BB, this, QB)
+      for (const iW of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Zi(WW, iW, (WW => function() {
+        const OW = fi.get(this),
+          mW = OW ? Vi.get(OW) : void 0;
+        for (var EW = arguments.length, NW = new Array(EW), PW = 0; PW < EW; PW++) NW[PW] = arguments[PW];
+        return void 0 !== mW && Fi(iW, mW, NW), ti(WW, this, NW)
       }))
     }
 
-    function vO(BB, OB, GB) {
-      var YB;
-      (aO.draws++, "draw" === BB || "drawIndexed" === BB) && (aO.faces += GB[0] * (null !== (YB = GB[1]) && void 0 !== YB ? YB : 1) / 6);
-      if (null !== hO && hO.length < JO) {
-        const YB = ("draw" === BB ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === BB ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((OB, YB) => {
-          const DB = BB.endsWith("Indirect") ? GB[1] : GB[YB];
-          return `${OB} ${String(null!==DB&&void 0!==DB?DB:"instances"===OB?1:0)}`
+    function Fi(WW, iW, OW) {
+      var mW;
+      (Ri.draws++, "draw" === WW || "drawIndexed" === WW) && (Ri.faces += OW[0] * (null !== (mW = OW[1]) && void 0 !== mW ? mW : 1) / 6);
+      if (null !== qi && qi.length < wi) {
+        const mW = ("draw" === WW ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === WW ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((iW, mW) => {
+          const EW = WW.endsWith("Indirect") ? OW[1] : OW[mW];
+          return `${iW} ${String(null!==EW&&void 0!==EW?EW:"instances"===iW?1:0)}`
         }));
-        hO.push(`  ${OB} ${BB} ${YB.join(" ")}`)
+        qi.push(`  ${iW} ${WW} ${mW.join(" ")}`)
       }
     }
 
-    function sO() {
-      if (LO || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      LO = !0, PO(eO("GPU"), "requestAdapter", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return MO(BB, this, GB).then((BB => {
-          var OB;
-          BB ? function(BB) {
-            var OB;
-            const GB = null !== (OB = BB.info) && void 0 !== OB ? OB : {};
-            EB(`WebGPU adapter ${["vendor","architecture","device","description"].map((BB=>{var OB;return`${BB} "${String(null!==(OB=GB[BB])&&void 0!==OB?OB:"")}"`})).join(" ")}${BB.isFallbackAdapter?" (fallback)":""}`), EB(`WebGPU adapter features ${TO(BB.features)}`), EB(`WebGPU adapter limits ${bO(BB.limits,iO)}`), cB(`WebGPU adapter all limits ${bO(BB.limits,null)}`)
-          }(BB) : EB(`WebGPU requestAdapter(${JSON.stringify(null!==(OB=GB[0])&&void 0!==OB?OB:{})}) gave none`);
-          return BB
+    function Qi() {
+      if (gi || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      gi = !0, Zi(Gi("GPU"), "requestAdapter", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return ti(WW, this, OW).then((WW => {
+          var iW;
+          WW ? function(WW) {
+            var iW;
+            const OW = null !== (iW = WW.info) && void 0 !== iW ? iW : {};
+            fW(`WebGPU adapter ${["vendor","architecture","device","description"].map((WW=>{var iW;return`${WW} "${String(null!==(iW=OW[WW])&&void 0!==iW?iW:"")}"`})).join(" ")}${WW.isFallbackAdapter?" (fallback)":""}`), fW(`WebGPU adapter features ${Ii(WW.features)}`), fW(`WebGPU adapter limits ${ai(WW.limits,vi)}`), CW(`WebGPU adapter all limits ${ai(WW.limits,null)}`)
+          }(WW) : fW(`WebGPU requestAdapter(${JSON.stringify(null!==(iW=OW[0])&&void 0!==iW?iW:{})}) gave none`);
+          return WW
         }))
-      })), PO(eO("GPUAdapter"), "requestDevice", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return MO(BB, this, GB).then((BB => (function(BB) {
-          EB(`WebGPU device features ${TO(BB.features)}`), EB(`WebGPU device limits ${bO(BB.limits,iO)}`), BB.addEventListener("uncapturederror", (BB => {
-            if (wO.uncaptured < yO) {
-              var OB, GB, YB;
-              wO.uncaptured++;
-              const DB = BB.error;
-              EB(`WebGPU uncaptured ${null!==(OB=null===DB||void 0===DB||null===(GB=DB.constructor)||void 0===GB?void 0:GB.name)&&void 0!==OB?OB:"error"}: ${hB(String(null!==(YB=null===DB||void 0===DB?void 0:DB.message)&&void 0!==YB?YB:""),600)}`)
+      })), Zi(Gi("GPUAdapter"), "requestDevice", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return ti(WW, this, OW).then((WW => (function(WW) {
+          fW(`WebGPU device features ${Ii(WW.features)}`), fW(`WebGPU device limits ${ai(WW.limits,vi)}`), WW.addEventListener("uncapturederror", (WW => {
+            if (Ci.uncaptured < ci) {
+              var iW, OW, mW;
+              Ci.uncaptured++;
+              const EW = WW.error;
+              fW(`WebGPU uncaptured ${null!==(iW=null===EW||void 0===EW||null===(OW=EW.constructor)||void 0===OW?void 0:OW.name)&&void 0!==iW?iW:"error"}: ${XW(String(null!==(mW=null===EW||void 0===EW?void 0:EW.message)&&void 0!==mW?mW:""),600)}`)
             }
           }));
-          const OB = BB.lost;
-          null === OB || void 0 === OB || OB.then((BB => {
-            var OB;
-            EB(`WebGPU device lost (${String(BB.reason)}): ${hB(String(null!==(OB=BB.message)&&void 0!==OB?OB:""),600)}`)
+          const iW = WW.lost;
+          null === iW || void 0 === iW || iW.then((WW => {
+            var iW;
+            fW(`WebGPU device lost (${String(WW.reason)}): ${XW(String(null!==(iW=WW.message)&&void 0!==iW?iW:""),600)}`)
           }))
-        }(BB), BB)), (BB => {
-          throw EB(`WebGPU requestDevice failed: ${String(BB)}`), BB
+        }(WW), WW)), (WW => {
+          throw fW(`WebGPU requestDevice failed: ${String(WW)}`), WW
         }))
       }));
-      const BB = eO("GPUDevice");
-      PO(BB, "createShaderModule", (BB => function() {
-        for (var OB, GB, YB = arguments.length, DB = new Array(YB), QB = 0; QB < YB; QB++) DB[QB] = arguments[QB];
-        const oB = MO(BB, this, DB);
-        return function(BB, OB) {
-          const GB = OB.includes("decodeQuad");
-          GB && gO.add(BB);
-          const YB = BB.getCompilationInfo;
-          null === YB || void 0 === YB || YB.call(BB).then((BB => {
-            if (0 === BB.messages.length && !GB) return;
-            const OB = {};
-            for (const GB of BB.messages) {
-              var YB;
-              OB[String(GB.type)] = (null !== (YB = OB[String(GB.type)]) && void 0 !== YB ? YB : 0) + 1
+      const WW = Gi("GPUDevice");
+      Zi(WW, "createShaderModule", (WW => function() {
+        for (var iW, OW, mW = arguments.length, EW = new Array(mW), NW = 0; NW < mW; NW++) EW[NW] = arguments[NW];
+        const PW = ti(WW, this, EW);
+        return function(WW, iW) {
+          const OW = iW.includes("decodeQuad");
+          OW && Di.add(WW);
+          const mW = WW.getCompilationInfo;
+          null === mW || void 0 === mW || mW.call(WW).then((WW => {
+            if (0 === WW.messages.length && !OW) return;
+            const iW = {};
+            for (const OW of WW.messages) {
+              var mW;
+              iW[String(OW.type)] = (null !== (mW = iW[String(OW.type)]) && void 0 !== mW ? mW : 0) + 1
             }
-            const DB = BB.messages.map((BB => `${String(BB.type)} ${String(BB.lineNum)}:${String(BB.linePos)} ${String(BB.message)}`)).join("\n");
-            wO.compile < yO && (wO.compile++, EB(`WebGPU ${GB?"terrain ":""}shader module compiled: ${JSON.stringify(OB)}${DB?` first: ${hB(DB.split("\n")[0],300)}`:""}`)), DB && cB(`WebGPU shader module messages:\n${hB(DB)}`)
+            const EW = WW.messages.map((WW => `${String(WW.type)} ${String(WW.lineNum)}:${String(WW.linePos)} ${String(WW.message)}`)).join("\n");
+            Ci.compile < ci && (Ci.compile++, fW(`WebGPU ${OW?"terrain ":""}shader module compiled: ${JSON.stringify(iW)}${EW?` first: ${XW(EW.split("\n")[0],300)}`:""}`)), EW && CW(`WebGPU shader module messages:\n${XW(EW)}`)
           }))
-        }(oB, String(null !== (OB = (null !== (GB = DB[0]) && void 0 !== GB ? GB : {}).code) && void 0 !== OB ? OB : "")), oB
-      })), PO(BB, "createRenderPipeline", (BB => function() {
-        for (var OB, GB = arguments.length, YB = new Array(GB), DB = 0; DB < GB; DB++) YB[DB] = arguments[DB];
-        const QB = MO(BB, this, YB);
-        return CO(QB, null !== (OB = YB[0]) && void 0 !== OB ? OB : {}), QB
-      })), PO(BB, "createRenderPipelineAsync", (BB => function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return MO(BB, this, GB).then((BB => {
-          var OB;
-          return CO(BB, null !== (OB = GB[0]) && void 0 !== OB ? OB : {}), BB
-        }), (BB => {
-          var OB;
-          throw function(BB, OB) {
-            var GB, YB, DB;
-            if (wO.rejected >= yO) return;
-            wO.rejected++;
+        }(PW, String(null !== (iW = (null !== (OW = EW[0]) && void 0 !== OW ? OW : {}).code) && void 0 !== iW ? iW : "")), PW
+      })), Zi(WW, "createRenderPipeline", (WW => function() {
+        for (var iW, OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+        const NW = ti(WW, this, mW);
+        return ri(NW, null !== (iW = mW[0]) && void 0 !== iW ? iW : {}), NW
+      })), Zi(WW, "createRenderPipelineAsync", (WW => function() {
+        for (var iW = arguments.length, OW = new Array(iW), mW = 0; mW < iW; mW++) OW[mW] = arguments[mW];
+        return ti(WW, this, OW).then((WW => {
+          var iW;
+          return ri(WW, null !== (iW = OW[0]) && void 0 !== iW ? iW : {}), WW
+        }), (WW => {
+          var iW;
+          throw function(WW, iW) {
+            var OW, mW, EW;
+            if (Ci.rejected >= ci) return;
+            Ci.rejected++;
             const {
-              reason: QB,
-              message: oB
-            } = null !== OB && void 0 !== OB ? OB : {}, jB = String(null !== (GB = (null !== (YB = BB.vertex) && void 0 !== YB ? YB : {}).entryPoint) && void 0 !== GB ? GB : "");
-            EB(`WebGPU pipeline "${String(null!==(DB=BB.label)&&void 0!==DB?DB:"")}" ${jB} rejected (${String(null!==QB&&void 0!==QB?QB:"no reason")}): ${hB(String(null!==oB&&void 0!==oB?oB:OB),600)}`)
-          }(null !== (OB = GB[0]) && void 0 !== OB ? OB : {}, BB), BB
+              reason: NW,
+              message: PW
+            } = null !== iW && void 0 !== iW ? iW : {}, LW = String(null !== (OW = (null !== (mW = WW.vertex) && void 0 !== mW ? mW : {}).entryPoint) && void 0 !== OW ? OW : "");
+            fW(`WebGPU pipeline "${String(null!==(EW=WW.label)&&void 0!==EW?EW:"")}" ${LW} rejected (${String(null!==NW&&void 0!==NW?NW:"no reason")}): ${XW(String(null!==PW&&void 0!==PW?PW:iW),600)}`)
+          }(null !== (iW = OW[0]) && void 0 !== iW ? iW : {}, WW), WW
         }))
-      })), PO(eO("GPUCanvasContext"), "configure", (BB => function() {
-        for (var OB, GB = arguments.length, YB = new Array(GB), DB = 0; DB < GB; DB++) YB[DB] = arguments[DB];
-        const QB = null !== (OB = YB[0]) && void 0 !== OB ? OB : {};
-        var oB, jB;
-        EO++ < 3 && EB(`WebGPU canvas ${String(QB.format)} ${String(null!==(oB=QB.colorSpace)&&void 0!==oB?oB:"srgb")} alpha ${String(null!==(jB=QB.alphaMode)&&void 0!==jB?jB:"opaque")}`);
-        return MO(BB, this, YB)
-      })), HO(eO("GPURenderPassEncoder")), HO(eO("GPURenderBundleEncoder"))
+      })), Zi(Gi("GPUCanvasContext"), "configure", (WW => function() {
+        for (var iW, OW = arguments.length, mW = new Array(OW), EW = 0; EW < OW; EW++) mW[EW] = arguments[EW];
+        const NW = null !== (iW = mW[0]) && void 0 !== iW ? iW : {};
+        var PW, LW;
+        Xi++ < 3 && fW(`WebGPU canvas ${String(NW.format)} ${String(null!==(PW=NW.colorSpace)&&void 0!==PW?PW:"srgb")} alpha ${String(null!==(LW=NW.alphaMode)&&void 0!==LW?LW:"opaque")}`);
+        return ti(WW, this, mW)
+      })), zi(Gi("GPURenderPassEncoder")), zi(Gi("GPURenderBundleEncoder"))
     }
-    const xO = 1e4,
-      tO = 6e4,
-      BG = 5e3,
-      OG = 3e3,
-      GG = 100;
-    let YG = null,
-      DG = !1,
-      QG = {
-        ...IO.b
+    const WO = 1e4,
+      iO = 6e4,
+      OO = 5e3,
+      mO = 3e3,
+      EO = 100;
+    let NO = null,
+      PO = !1,
+      LO = {
+        ...di.b
       },
-      oG = !1,
-      jG = null,
-      yG = 0,
-      JG = () => {};
-    const MG = new Promise((BB => {
-      JG = BB
+      cO = !1,
+      wO = null,
+      tO = 0,
+      ZO = () => {};
+    const xO = new Promise((WW => {
+      ZO = WW
     }));
 
-    function PG() {
-      var BB;
-      DG || (DG = !0, QG = Object.assign(window.bloxdRenderDebug ??= {
-        ...IO.b
+    function lO() {
+      var WW;
+      PO || (PO = !0, LO = Object.assign(window.bloxdRenderDebug ??= {
+        ...di.b
       }, {
-        faceCull: "0" === (0, QB.p)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (BB = (0, QB.p)("adrenoProbe")) && void 0 !== BB ? BB : ""
-      }), EB("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), zO || "undefined" === typeof window || (zO = !0, "undefined" !== typeof WebGL2RenderingContext && UO(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && UO(WebGLRenderingContext.prototype, !1)), sO(), (0, QB.e)("renderProbe", (() => {
-        NG("console")
-      })), qG(), setInterval(WG, BG))
+        faceCull: "0" === (0, NW.p)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (WW = (0, NW.p)("adrenoProbe")) && void 0 !== WW ? WW : ""
+      }), fW("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), xi || "undefined" === typeof window || (xi = !0, "undefined" !== typeof WebGL2RenderingContext && yi(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && yi(WebGLRenderingContext.prototype, !1)), Qi(), (0, NW.e)("renderProbe", (() => {
+        sO("console")
+      })), UO(), setInterval(KO, OO))
     }
 
-    function zG(BB) {
-      var OB, GB;
-      PG(), YG = null !== (OB = null === BB || void 0 === BB ? void 0 : BB.backend) && void 0 !== OB ? OB : null;
-      const YB = `, renderer param ${null!==(GB=(0,QB.p)("renderer"))&&void 0!==GB?GB:"none"}, faceCull ${"0"===QG.faceCull?"off (whole parts)":"on"}, adrenoProbe ${QG.adrenoProbe||"none"}`;
-      EB(`${(0,FO.d)(BB)}${null===BB?"":YB}`)
+    function AO(WW) {
+      var iW, OW;
+      lO(), NO = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.backend) && void 0 !== iW ? iW : null;
+      const mW = `, renderer param ${null!==(OW=(0,NW.p)("renderer"))&&void 0!==OW?OW:"none"}, faceCull ${"0"===LO.faceCull?"off (whole parts)":"on"}, adrenoProbe ${LO.adrenoProbe||"none"}`;
+      fW(`${(0,ei.e)(WW)}${null===WW?"":mW}`)
     }
 
-    function lG() {
-      const BB = performance.now(),
-        OB = pG(MG, xO, tO).then((OB => NG(`${Math.round((performance.now()-BB)/1e3)} s after playable${OB?"":", no terrain drawn yet"}`)));
-      (0, DB.b)(EB, (async () => {
-        await OB, await jG
+    function bO() {
+      const WW = performance.now(),
+        iW = jO(xO, WO, iO).then((iW => sO(`${Math.round((performance.now()-WW)/1e3)} s after playable${iW?"":", no terrain drawn yet"}`)));
+      (0, EW.c)(fW, (async () => {
+        await iW, await wO
       }))
     }
-    async function pG(BB, OB, GB) {
-      const DB = (0, YB.c)(GB).then((() => !1));
-      return await (0, YB.c)(OB), Promise.race([BB.then((() => !0)), DB])
+    async function jO(WW, iW, OW) {
+      const EW = (0, mW.b)(OW).then((() => !1));
+      return await (0, mW.b)(iW), Promise.race([WW.then((() => !0)), EW])
     }
 
-    function qG() {
+    function UO() {
       requestAnimationFrame((() => {
-        yG++, qG()
+        tO++, UO()
       }))
     }
 
-    function ZG() {
-      var BB, OB, GB;
-      if (oG) return;
-      (oG = !0, EB(`renderer caps ${null!==(BB=QG.caps)&&void 0!==BB?BB:"(not noted)"}; terrain fetch ${null!==(OB=QG.fetch)&&void 0!==OB?OB:"(not noted)"}`), QG.adrenoProbe) && EB(`adrenoProbe ${QG.adrenoProbe} asked; in force (storage fetch only): ${null!==(GB=QG.probe)&&void 0!==GB?GB:"(not noted)"}`);
-      const YB = FB.context;
-      if (YB) {
-        for (const BB of function(BB) {
-            var OB;
-            const GB = [],
-              YB = BB.getExtension("WEBGL_debug_renderer_info"),
-              DB = YB ? BB.getParameter(YB.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              QB = YB ? BB.getParameter(YB.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            GB.push(`GL ${String(BB.getParameter(BB.VERSION))} | ${String(BB.getParameter(BB.SHADING_LANGUAGE_VERSION))} | ${String(BB.getParameter(BB.VENDOR))} / ${String(BB.getParameter(BB.RENDERER))}`), GB.push(`GL unmasked ${DB} / ${QB}`);
-            const oB = [
-              ["MAX_TEXTURE_SIZE", BB.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", BB.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", BB.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", BB.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", BB.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", BB.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", BB.MAX_RENDERBUFFER_SIZE]
+    function kO() {
+      var WW, iW, OW;
+      if (cO) return;
+      (cO = !0, fW(`renderer caps ${null!==(WW=LO.caps)&&void 0!==WW?WW:"(not noted)"}; terrain fetch ${null!==(iW=LO.fetch)&&void 0!==iW?iW:"(not noted)"}`), LO.adrenoProbe) && fW(`adrenoProbe ${LO.adrenoProbe} asked; in force (storage fetch only): ${null!==(OW=LO.probe)&&void 0!==OW?OW:"(not noted)"}`);
+      const mW = dW.context;
+      if (mW) {
+        for (const WW of function(WW) {
+            var iW;
+            const OW = [],
+              mW = WW.getExtension("WEBGL_debug_renderer_info"),
+              EW = mW ? WW.getParameter(mW.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              NW = mW ? WW.getParameter(mW.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            OW.push(`GL ${String(WW.getParameter(WW.VERSION))} | ${String(WW.getParameter(WW.SHADING_LANGUAGE_VERSION))} | ${String(WW.getParameter(WW.VENDOR))} / ${String(WW.getParameter(WW.RENDERER))}`), OW.push(`GL unmasked ${EW} / ${NW}`);
+            const PW = [
+              ["MAX_TEXTURE_SIZE", WW.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", WW.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", WW.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", WW.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", WW.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", WW.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", WW.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in BB && oB.push(["MAX_UNIFORM_BLOCK_SIZE", BB.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", BB.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", BB.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", BB.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), GB.push(`GL limits ${oB.map((OB=>{let[GB,YB]=OB;return`${GB} ${String(BB.getParameter(YB))}`})).join(", ")}`);
-            const jB = (OB, GB) => {
-              const YB = BB.getShaderPrecisionFormat(OB, BB.HIGH_FLOAT),
-                DB = BB.getShaderPrecisionFormat(OB, BB.HIGH_INT);
-              return `${GB} highp float ${YB?`${YB.rangeMin}/${YB.rangeMax}/${YB.precision}`:"?"} int ${DB?`${DB.rangeMin}/${DB.rangeMax}/${DB.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in WW && PW.push(["MAX_UNIFORM_BLOCK_SIZE", WW.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", WW.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", WW.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", WW.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), OW.push(`GL limits ${PW.map((iW=>{let[OW,mW]=iW;return`${OW} ${String(WW.getParameter(mW))}`})).join(", ")}`);
+            const LW = (iW, OW) => {
+              const mW = WW.getShaderPrecisionFormat(iW, WW.HIGH_FLOAT),
+                EW = WW.getShaderPrecisionFormat(iW, WW.HIGH_INT);
+              return `${OW} highp float ${mW?`${mW.rangeMin}/${mW.rangeMax}/${mW.precision}`:"?"} int ${EW?`${EW.rangeMin}/${EW.rangeMax}/${EW.precision}`:"?"}`
             };
-            GB.push(`GL precision ${jB(BB.VERTEX_SHADER,"VS")}, ${jB(BB.FRAGMENT_SHADER,"FS")}`);
-            const yB = BB.getContextAttributes();
-            return GB.push(`GL context ${JSON.stringify(yB)} drawingBuffer ${BB.drawingBufferWidth}x${BB.drawingBufferHeight}${"drawingBufferFormat"in BB?` format 0x${Number(BB.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in BB?` ${String(BB.drawingBufferColorSpace)}`:""}`), GB.push(`GL extensions ${(null!==(OB=BB.getSupportedExtensions())&&void 0!==OB?OB:[]).join(" ")}`), GB
-          }(YB)) EB(BB);
+            OW.push(`GL precision ${LW(WW.VERTEX_SHADER,"VS")}, ${LW(WW.FRAGMENT_SHADER,"FS")}`);
+            const cW = WW.getContextAttributes();
+            return OW.push(`GL context ${JSON.stringify(cW)} drawingBuffer ${WW.drawingBufferWidth}x${WW.drawingBufferHeight}${"drawingBufferFormat"in WW?` format 0x${Number(WW.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in WW?` ${String(WW.drawingBufferColorSpace)}`:""}`), OW.push(`GL extensions ${(null!==(iW=WW.getSupportedExtensions())&&void 0!==iW?iW:[]).join(" ")}`), OW
+          }(mW)) fW(WW);
         ! function() {
-          if (!FB.context) return;
-          let BB = 0,
-            OB = 0;
-          for (const [GB, YB] of uB) !YB.gl.isContextLost() && YB.gl.isProgram(GB) && (OB++, dO(YB.gl, GB, YB), null !== YB.terrain && BB++);
-          EB(`programs: ${OB} live of ${uB.length} linked, ${BB} packed terrain; CPU page copies ${Math.round(FB.shadowBytes/1048576)} MiB (${FB.uncopied} over budget)`)
+          if (!dW.context) return;
+          let WW = 0,
+            iW = 0;
+          for (const [OW, mW] of nW) !mW.gl.isContextLost() && mW.gl.isProgram(OW) && (iW++, Hi(mW.gl, OW, mW), null !== mW.terrain && WW++);
+          fW(`programs: ${iW} live of ${nW.length} linked, ${WW} packed terrain; CPU page copies ${Math.round(dW.shadowBytes/1048576)} MiB (${dW.uncopied} over budget)`)
         }()
       }
     }
 
-    function NG(BB) {
-      return jG ??= async function(BB) {
-        ZG(), "webgpu" === YG ? (RG(), "1" === QG.slotCheck && EB("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), QG.slotCheck = "1", await
-          function(BB) {
-            if (null !== hO) return Promise.resolve();
-            const OB = [];
-            return hO = OB, new Promise((GB => {
+    function sO(WW) {
+      return wO ??= async function(WW) {
+        kO(), "webgpu" === NO ? (MO(), "1" === LO.slotCheck && fW("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), LO.slotCheck = "1", await
+          function(WW) {
+            if (null !== qi) return Promise.resolve();
+            const iW = [];
+            return qi = iW, new Promise((OW => {
               setTimeout((() => {
-                hO = null, EB(`WebGPU draw ranges (${BB}): ${OB.length} terrain draws recorded in a second (first ${JO}; bundles replay without new ones)`);
-                for (const BB of OB) EB(BB);
-                GB()
+                qi = null, fW(`WebGPU draw ranges (${WW}): ${iW.length} terrain draws recorded in a second (first ${wi}; bundles replay without new ones)`);
+                for (const WW of iW) fW(WW);
+                OW()
               }), 1e3)
             }))
-          }(BB), await async function() {
-            if (await (0, IO.e)(QG, "slotCheck", ["1"], OG, GG), "1" === QG.slotCheck) return void EB(`slot check: no answer in ${OG} ms (only the storage fetch has one; a later answer logs on its own)`);
-            RG()
-          }()) : await oO(BB);
-        EB(`check (${BB}) done: bloxdDebug.save() downloads it all`)
-      }(BB).catch((OB => {
-        EB(`check (${BB}) failed: ${String(OB)}`)
+          }(WW), await async function() {
+            if (await (0, di.e)(LO, "slotCheck", ["1"], mO, EO), "1" === LO.slotCheck) return void fW(`slot check: no answer in ${mO} ms (only the storage fetch has one; a later answer logs on its own)`);
+            MO()
+          }()) : await Pi(WW);
+        fW(`check (${WW}) done: bloxdDebug.save() downloads it all`)
+      }(WW).catch((iW => {
+        fW(`check (${WW}) failed: ${String(iW)}`)
       })).finally((() => {
-        jG = null
-      })), jG
+        wO = null
+      })), wO
     }
 
-    function RG() {
-      void 0 !== QG.slotCheck && "1" !== QG.slotCheck && (EB(QG.slotCheck), delete QG.slotCheck)
+    function MO() {
+      void 0 !== LO.slotCheck && "1" !== LO.slotCheck && (fW(LO.slotCheck), delete LO.slotCheck)
     }
 
-    function WG() {
-      const BB = BB => yG ? (BB / yG).toFixed(1) : "0",
-        OB = function() {
-          const BB = aO;
-          return aO = {
+    function KO() {
+      const WW = WW => tO ? (WW / tO).toFixed(1) : "0",
+        iW = function() {
+          const WW = Ri;
+          return Ri = {
             draws: 0,
             faces: 0
-          }, BB
+          }, WW
         }(),
-        GB = function() {
-          const BB = NO;
-          return NO = {
+        OW = function() {
+          const WW = Ui;
+          return Ui = {
             inst: {
               draws: 0,
               faces: 0
@@ -1405,30 +1405,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, BB
+          }, WW
         }(),
-        YB = function() {
-          const BB = RO;
-          return RO = {
+        mW = function() {
+          const WW = ki;
+          return ki = {
             buffer: 0,
             texture: 0
-          }, BB
+          }, WW
         }();
-      RG(), ("webgpu" === YG ? OB.draws : GB.inst.draws + GB.tex.draws) > 0 && JG();
-      const DB = "webgpu" === YG ? [`terrain ${BB(OB.draws)} draws ${BB(OB.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((BB => GB[BB].draws > 0)).map((OB => `${OB} ${BB(GB[OB].draws)} draws ${BB(GB[OB].faces)} faces a frame`));
-      EB(`${yG} frames: ${DB.join(", ")||"no draws"}; uploaded ${Math.round(YB.buffer/1024)} KiB to buffers, ${Math.round(YB.texture/1024)} KiB to data textures`), yG = 0
+      MO(), ("webgpu" === NO ? iW.draws : OW.inst.draws + OW.tex.draws) > 0 && ZO();
+      const EW = "webgpu" === NO ? [`terrain ${WW(iW.draws)} draws ${WW(iW.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((WW => OW[WW].draws > 0)).map((iW => `${iW} ${WW(OW[iW].draws)} draws ${WW(OW[iW].faces)} faces a frame`));
+      fW(`${tO} frames: ${EW.join(", ")||"no draws"}; uploaded ${Math.round(mW.buffer/1024)} KiB to buffers, ${Math.round(mW.texture/1024)} KiB to data textures`), tO = 0
     }
   },
-  5167: (BB, OB, GB) => {
-    function YB(BB) {
-      if (null === BB) return "backend: none picked (no renderer build)";
-      const OB = BB.adapter ? `${BB.adapter.vendor}/${BB.adapter.architecture}` : "none";
-      return `backend ${BB.backend}: reason ${BB.reason}, source ${BB.source}, adapter ${OB}`
+  5431: (WW, iW, OW) => {
+    function mW(WW) {
+      if (null === WW) return "backend: none picked (no renderer build)";
+      const iW = WW.adapter ? `${WW.adapter.vendor}/${WW.adapter.architecture}` : "none";
+      return `backend ${WW.backend}: reason ${WW.reason}, source ${WW.source}, adapter ${iW}`
     }
-    GB.d(OB, {
-      d: () => YB
+    OW.d(iW, {
+      e: () => mW
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

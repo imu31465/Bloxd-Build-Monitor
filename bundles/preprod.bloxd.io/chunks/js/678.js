@@ -1,19 +1,29 @@
 export const id = 678;
 export const ids = [678];
 export const modules = {
-  64042: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      lodPixelShaderWGSL: () => oB
-    });
-    var YB = GB(40864);
-    const DB = "lodPixelShader",
-      QB = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSampler: texture_2d<f32>;uniform lod: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let textureSize=textureDimensions(textureSampler);fragmentOutputs.color=textureLoad(textureSampler,vec2u(fragmentInputs.vUV*vec2f(textureSize)),u32(uniforms.lod));if (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
-    YB.b.ShadersStoreWGSL[DB] || (YB.b.ShadersStoreWGSL[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
+  64490: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      for (const OW of WW._frameGraph._tasks)
+        if (OW?._config && OW._colorAttachment && (OW._config.rt === iW.scRT || OW._config.rst === iW.scRT)) return OW
     }
+
+    function EW(WW, iW) {
+      const OW = WW._renderingContexts[WW._renderingContexts.length - 1];
+      if (!OW?._frameGraph) return;
+      const EW = mW(iW, WW);
+      if (!EW) return;
+      if (1 === WW.msaaSamples) return void(EW._config.clr = !1);
+      const NW = EW.enabled;
+      EW._config.clr = !0, EW.enabled = !1, iW._beforeRender.unshift((() => {
+        const iW = mW(OW, WW),
+          PW = iW?._config.rst === WW.scRT && iW._config.rt._colorView;
+        EW.enabled = !!PW && NW, EW._config.clr = !PW, PW && (EW._colorAttachment.view = PW)
+      }))
+    }
+    OW.r(iW), OW.d(iW, {
+      configureSwapchainOverlayScene: () => EW
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

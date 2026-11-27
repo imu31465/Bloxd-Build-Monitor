@@ -1,649 +1,584 @@
 export const id = 269;
 export const ids = [269];
 export const modules = {
-  38739: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => JB,
-      f: () => YB,
-      j: () => jB,
-      l: () => DB,
-      o: () => oB,
-      q: () => QB
+  42543: (WW, iW, OW) => {
+    OW.d(iW, {
+      noaDevTools: () => ZW
     });
-    const YB = 1.001,
-      DB = .501,
-      QB = .025,
-      oB = .75,
-      jB = .08,
-      yB = 4;
+    var mW = OW(38626),
+      EW = OW(38612),
+      NW = OW(2365),
+      PW = OW(1856),
+      LW = OW(42471);
 
-    function JB() {
-      const BB = DB,
-        OB = QB,
-        GB = BB - OB / 2,
-        YB = (2 * BB - 2 * OB) / (2 * yB - 1),
-        oB = [];
-      for (const DB of [-GB, GB])
-        for (const QB of [-GB, GB])
-          for (let GB = 0; GB < yB; GB++) {
-            const jB = -BB + OB + YB * (2 * GB + .5);
-            oB.push([YB, OB, OB, jB, DB, QB]), oB.push([OB, YB, OB, DB, jB, QB]), oB.push([OB, OB, YB, DB, QB, jB])
-          }
-      for (const DB of [-GB, GB])
-        for (const BB of [-GB, GB])
-          for (const YB of [-GB, GB]) oB.push([OB, OB, OB, DB, BB, YB]);
-      return oB
-    }
-  },
-  39084: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => lB,
-      C: () => SB,
-      F: () => UB,
-      J: () => VB,
-      L: () => AB,
-      O: () => zB,
-      S: () => qB,
-      V: () => NB,
-      W: () => DB,
-      b: () => MB,
-      e: () => yB,
-      g: () => WB,
-      j: () => JB,
-      m: () => jB,
-      q: () => oB,
-      u: () => QB,
-      x: () => nB
-    });
-    var YB = GB(10010);
-
-    function DB(BB) {
-      return Math.floor(BB).toLocaleString("en-US")
-    }
-    const QB = 2e3,
-      oB = .005,
-      jB = .001,
-      yB = 2,
-      JB = "Fluid Tank",
-      MB = "Coolant Mixer",
-      PB = 144;
-
-    function zB(BB) {
-      const OB = BB.split("|")[0];
-      return (0, YB.n)(OB) ? OB === YB.e ? "cryo" : "water" : null
-    }
-    const lB = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 1, 0],
-        [0, -1, 0],
-        [0, 0, 1],
-        [0, 0, -1]
-      ],
-      pB = 63;
-
-    function qB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const GB = OB ? function(BB, OB, GB) {
-        const YB = lB.findIndex((YB => {
-          let [DB, QB, oB] = YB;
-          return DB === BB && QB === OB && oB === GB
-        }));
-        return YB < 0 ? 0 : 1 << YB
-      }(OB[0], OB[1], OB[2]) : 0;
-      return "maker" === BB ? {
-        kind: BB,
-        faces: GB
-      } : "user" === BB ? {
-        kind: BB,
-        faces: pB & ~GB
-      } : {
-        kind: BB,
-        faces: pB
-      }
-    }
-
-    function ZB(BB) {
-      return "pipe" === BB || "tank" === BB || "maker" === BB
-    }
-
-    function NB(BB, OB, GB) {
-      return 0 !== (BB.faces & 1 << GB) && 0 !== (OB.faces & 1 << (1 ^ GB)) && (ZB(BB.kind) || ZB(OB.kind))
-    }
-    const RB = (BB, OB, GB, YB) => ({
-        input: BB,
-        inputAmount: YB,
-        output: OB,
-        outputAmount: GB
-      }),
-      WB = {
-        Condenser: {
-          kind: "Condenser",
-          opMs: 2e3,
-          inputSlot: null,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [],
-          powerPerOp: 60,
-          fluidMade: 12,
-          couplable: !0,
-          couplerSlot: 0
-        },
-        Centrifuge: {
-          kind: "Centrifuge",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [RB("Uranium Grit", "Uranium Pellet", 1, 12), RB("Spent Pellet", "Plutonium Pellet", 1, 4)],
-          powerPerOp: 600,
-          waterPerOp: 24
-        },
-        Synthesizer: {
-          kind: "Synthesizer",
-          opMs: 6e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [],
-          powerPerOp: 120,
-          waterPerOp: 12,
-          synth: !0
-        },
-        "Coolant Mixer": {
-          kind: "Coolant Mixer",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [RB("Biomass", "", 0, 1)],
-          powerPerOp: 720,
-          waterPerOp: 144,
-          cryoMade: PB,
-          couplable: !0,
-          couplerSlot: 1
-        }
-      };
-
-    function AB(BB, OB) {
-      return 1e3 * (null !== OB && void 0 !== OB ? OB : 0) / BB.opMs
-    }
-
-    function VB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const GB = AB(WB["Coolant Mixer"], PB) * OB;
-      return BB <= 0 ? 0 : Math.ceil(BB / GB - 1e-9)
-    }
-    const SB = "baf2Water",
-      nB = "baf2waterclose",
-      UB = "baf2wateropen"
-  },
-  39074: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => FB,
-      d: () => iB
-    });
-    var YB = GB(9927),
-      DB = GB(9965);
-    const QB = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-      [0, 1, 0],
-      [0, -1, 0]
-    ];
-    var oB = GB(9983),
-      jB = GB(38888),
-      yB = GB(9974);
-    const JB = {
-      1: [0, -1],
-      2: [-1, 0],
-      3: [0, 1],
-      4: [1, 0]
-    };
-
-    function MB(BB) {
-      let [OB, GB] = BB;
-      return [-GB, OB]
-    }
-
-    function PB(BB, OB) {
-      return BB[0] === OB[0] && BB[1] === OB[1]
-    }
-
-    function zB(BB, OB) {
-      return BB[0] * OB[0] + BB[1] * OB[1] === 0
-    }
-    const lB = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-    var pB = GB(10004);
-
-    function qB(BB, OB, GB, YB, DB) {
-      return OB < pB.k || OB >= pB.k + pB.o || Math.floor(BB / pB.t) === Math.floor(YB / pB.t) && Math.floor(GB / pB.t) === Math.floor(DB / pB.t)
-    }
-    const ZB = "Splitter",
-      NB = "Sorting Gate",
-      RB = new Set(pB.E),
-      WB = new Set([...pB.E, "Belt Loader", "Fast Loader", NB]),
-      AB = new Set(pB.s),
-      VB = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 0, 1],
-        [0, 0, -1],
-        [0, 1, 0],
-        [0, -1, 0]
-      ];
-
-    function SB(BB) {
-      var OB, GB;
-      return null !== (OB = null === (GB = YB.h[BB]) || void 0 === GB ? void 0 : GB.meta.rootName) && void 0 !== OB ? OB : ""
-    }
-
-    function nB(BB) {
-      return SB(BB) === pB.e && (0, pB.O)(YB.h[BB].name)
-    }
-    var UB = GB(9967),
-      fB = GB(9993);
-    const kB = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-
-    function dB(BB) {
-      var OB, GB;
-      const DB = null === (OB = YB.h[BB]) || void 0 === OB ? void 0 : OB.meta;
-      return (null === DB || void 0 === DB ? void 0 : DB.rootName) !== fB.p ? null : {
-        rot: null !== (GB = DB.rot) && void 0 !== GB ? GB : 1,
-        half: (0, fB.h)(DB.rootName, DB.metaStr)
-      }
-    }
-
-    function KB(BB, OB, GB, YB) {
-      return dB(BB(OB, GB, YB))
-    }
-
-    function uB(BB, OB, GB, YB, DB) {
-      let {
-        rot: QB,
-        half: oB
-      } = DB;
-      const [jB, yB] = (0, fB.l)(QB, oB), JB = KB(BB, OB + jB, GB, YB + yB);
-      return null !== JB && JB.rot === QB && JB.half === fB.s[oB]
-    }
-    var mB = GB(39081);
-    const IB = [new class {
-      constructor() {
-        this.reshapeOffsets = lB
-      }
-      handles(BB) {
-        var OB;
-        return "Stairs" === (null === (OB = YB.h[BB]) || void 0 === OB ? void 0 : OB.model)
-      }
-      affects(BB) {
-        return this.handles(BB)
-      }
-      shape(BB, OB, GB, DB, QB) {
-        const oB = this.stairsOf(QB),
-          jB = this.cornerAt(BB, OB, GB, DB, oB),
-          JB = oB.half === yB.d.top ? "top" : "bot";
-        return (0, YB.j)(`${YB.h[QB].meta.rootName}|meta|rot${oB.rot}|${JB}${null===jB?"":`|${jB}`}`)
-      }
-      stairsOf(BB) {
-        const {
-          rot: OB,
-          halfblockPlacement: GB
-        } = YB.h[BB].meta;
-        return {
-          rot: OB,
-          half: GB
-        }
-      }
-      stairsAt(BB, OB, GB, YB) {
-        const DB = BB(OB, GB, YB);
-        return this.handles(DB) ? this.stairsOf(DB) : null
-      }
-      cornerAt(BB, OB, GB, YB, DB) {
-        let {
-          rot: QB,
-          half: oB
-        } = DB;
-        const jB = JB[QB],
-          yB = DB => {
-            let [jB, yB] = DB;
-            const JB = this.stairsAt(BB, OB + jB, GB, YB + yB);
-            return null !== JB && JB.rot === QB && JB.half === oB
-          },
-          lB = this.stairsAt(BB, OB + jB[0], GB, YB + jB[1]);
-        if (null !== lB && lB.half === oB) {
-          const BB = JB[lB.rot];
-          if (zB(jB, BB) && !yB([-BB[0], -BB[1]])) return PB(BB, MB(jB)) ? "outerLeft" : "outerRight"
-        }
-        const pB = this.stairsAt(BB, OB - jB[0], GB, YB - jB[1]);
-        if (null !== pB && pB.half === oB) {
-          const BB = JB[pB.rot];
-          if (zB(jB, BB) && !yB(BB)) return PB(BB, MB(jB)) ? "innerLeft" : "innerRight"
-        }
-        return null
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = QB, this.rootIds = new Set(DB.i.map((BB => (0, YB.j)(BB))))
-      }
-      handles(BB) {
-        var OB;
-        const GB = null === (OB = YB.h[BB]) || void 0 === OB ? void 0 : OB.meta;
-        return void 0 !== GB && this.rootIds.has(GB.rootId)
-      }
-      affects(BB) {
-        return this.handles(BB)
-      }
-      placedBy(BB) {
-        return YB.h[BB].meta.rootName === DB.s ? null : DB.s
-      }
-      shape(BB, OB, GB, QB, oB) {
-        const {
-          rootId: jB,
-          rootName: yB,
-          rot: JB
-        } = YB.h[oB].meta;
-        let MB = 0;
-        return DB.z[JB].forEach(((DB, oB) => {
-          var yB;
-          let [PB, zB, lB] = DB;
-          const pB = null === (yB = YB.h[BB(OB + PB, GB + zB, QB + lB)]) || void 0 === yB ? void 0 : yB.meta;
-          (null === pB || void 0 === pB ? void 0 : pB.rootId) === jB && pB.rot === JB && (MB |= 1 << oB)
-        })), (0, YB.j)((0, DB.e)(yB, JB, MB))
-      }
-    }, ...oB.b.map((BB => new jB.e(BB))), new class {
-      constructor() {
-        this.reshapeOffsets = VB
-      }
-      handles(BB) {
-        const OB = SB(BB);
-        return RB.has(OB) || OB === pB.e
-      }
-      affects(BB) {
-        const OB = SB(BB);
-        return WB.has(OB) || AB.has(OB) || OB === ZB || OB === pB.e || void 0 !== pB.b[OB]
-      }
-      shape(BB, OB, GB, DB, QB, oB) {
-        const {
-          rootName: jB,
-          rot: yB
-        } = YB.h[QB].meta;
-        return jB === pB.e ? oB ? QB : function(BB, OB, GB, DB, QB) {
-          const [oB, jB] = pB.d[QB - 1];
-          for (let yB = 1; yB <= pB.C; yB++) {
-            const [JB, MB] = [OB - oB * yB, DB - jB * yB], PB = BB(JB, GB, MB);
-            if (SB(PB) === pB.e && YB.h[PB].meta.rot === QB && qB(OB, GB, DB, JB, MB)) return (0, YB.j)((0, pB.Y)(QB, !nB(PB)))
-          }
-          return (0, YB.j)((0, pB.Y)(QB, !1))
-        }(BB, OB, GB, DB, yB) : (0, YB.j)((0, pB.F)(jB, yB, function(BB, OB, GB, DB, QB) {
-          const [oB, jB] = pB.d[QB - 1], yB = (QB, oB) => function(BB, OB, GB) {
-            var DB;
-            const QB = null === (DB = YB.h[BB]) || void 0 === DB ? void 0 : DB.meta;
-            if (!QB) return !1;
-            const oB = QB.rootName,
-              jB = WB.has(oB) || nB(BB);
-            if (!jB && !AB.has(oB) && oB !== ZB) return !1;
-            const [yB, JB] = pB.d[QB.rot - 1];
-            if (jB && yB === -OB && JB === -GB) return !0;
-            if (AB.has(oB)) return yB === OB && JB === GB;
-            const MB = YB.h[BB].name;
-            return (oB === ZB ? (0, pB.U)(MB, yB, JB) : oB === NB ? [(0, pB.J)(MB, yB, JB)] : []).some((BB => {
-              let [YB, DB] = BB;
-              return YB === -OB && DB === -GB
-            }))
-          }(BB(OB + QB, GB, DB + oB), QB, oB), JB = BB(OB - oB, GB, DB - jB), MB = SB(JB) === ZB && YB.h[JB].meta.rot === QB, PB = 1 === pB.b[SB(BB(OB, GB - 1, DB))] || -1 === pB.b[SB(BB(OB, GB + 1, DB))];
-          if (PB || MB || yB(-oB, -jB)) return null;
-          const zB = yB(-jB, oB),
-            lB = yB(jB, -oB);
-          if (zB === lB) return null;
-          return zB ? "turnLeft" : "turnRight"
-        }(BB, OB, GB, DB, yB)))
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = kB, this.rootId = (0, YB.j)(fB.p)
-      }
-      handles(BB) {
-        var OB;
-        return (null === (OB = YB.h[BB]) || void 0 === OB ? void 0 : OB.meta.rootId) === this.rootId
-      }
-      affects(BB) {
-        return this.handles(BB)
-      }
-      shape(BB, OB, GB, DB, QB, oB) {
-        const jB = dB(QB);
-        return (0, YB.j)((yB = jB.rot, null !== (JB = oB ? this.reshapedHalf(BB, OB, GB, DB, jB) : this.placedHalf(BB, OB, GB, DB, jB.rot)) ? (0, fB.e)(fB.p, yB, JB) : 1 === yB ? fB.p : `${fB.p}|meta|rot${yB}`));
-        var yB, JB
-      }
-      placedHalf(BB, OB, GB, YB, DB) {
-        const [QB, oB] = UB.d[DB];
-        for (const [jB, yB] of [
-            ["right", 1],
-            ["left", -1]
-          ]) {
-          const JB = OB + yB * QB,
-            MB = YB + yB * oB,
-            PB = KB(BB, JB, GB, MB);
-          if (null !== PB && PB.rot === DB && (null === PB.half || !uB(BB, JB, GB, MB, PB))) return jB
-        }
-        return null
-      }
-      reshapedHalf(BB, OB, GB, YB, DB) {
-        if (null !== DB.half && uB(BB, OB, GB, YB, DB)) return DB.half;
-        for (const QB of ["right", "left"]) {
-          const [oB, jB] = (0, fB.l)(DB.rot, QB), yB = KB(BB, OB + oB, GB, YB + jB);
-          if (null !== yB && yB.rot === DB.rot && yB.half === fB.s[QB]) return QB
-        }
-        return null
-      }
-    }, new mB.e];
-
-    function FB(BB, OB, GB, YB, DB) {
-      let QB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const oB of IB)
-        if (oB.handles(DB)) return oB.shape(BB, OB, GB, YB, DB, QB);
-      return DB
-    }
-
-    function iB(BB) {
-      for (const YB of IB) {
-        var OB, GB;
-        if (YB.handles(BB)) return null !== (OB = null === (GB = YB.placedBy) || void 0 === GB ? void 0 : GB.call(YB, BB)) && void 0 !== OB ? OB : null
-      }
-      return null
-    }
-  },
-  39081: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => fB,
-      g: () => AB,
-      k: () => WB
-    });
-    var YB = GB(9927),
-      DB = GB(9955),
-      QB = GB(10010),
-      oB = GB(39084),
-      jB = GB(10004);
-    const yB = (0, oB.S)("pipe"),
-      JB = (0, oB.S)("tank"),
-      MB = (0, oB.S)("port"),
-      PB = "Reactor Port";
-
-    function zB(BB, OB, GB) {
-      const YB = new Set([QB.g, QB.e, PB, ...OB, ...GB, ...BB ? [oB.j] : []]);
-      return {
-        makers: new Set(OB),
-        roots: YB
-      }
-    }
-    const lB = {
-        water: zB(!0, ["Condenser"], ["Centrifuge", "Synthesizer", oB.b]),
-        cryo: zB(!1, [oB.b], [])
-      },
-      pB = new Set([...lB.water.roots, ...lB.cryo.roots]),
-      qB = {
-        nx: [-1, 0, 0],
-        ny: [0, -1, 0],
-        nz: [0, 0, -1],
-        px: [1, 0, 0],
-        py: [0, 1, 0],
-        pz: [0, 0, 1]
-      },
-      ZB = DB.c.map((BB => qB[BB])),
-      NB = ZB.map((BB => {
-        let [OB, GB, YB] = BB;
-        return oB.B.findIndex((BB => {
-          let [DB, QB, oB] = BB;
-          return DB === OB && QB === GB && oB === YB
-        }))
-      }));
-
-    function RB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const GB = YB.h[BB],
-        DB = null === GB || void 0 === GB ? void 0 : GB.meta.rootName,
-        zB = lB[OB];
-      if (!DB || !zB.roots.has(DB)) return null;
-      if ((0, QB.n)(DB)) return (0, oB.O)(GB.name) === OB ? yB : null;
-      if (DB === oB.j) return JB;
-      if (DB === PB) return GB.name.endsWith("|Water") ? MB : null;
-      const [pB, qB] = jB.d[(GB.meta.rot || 1) - 1];
-      return (0, oB.S)(zB.makers.has(DB) ? "maker" : "user", [-pB, 0, -qB])
-    }
-
-    function WB(BB, OB, GB, DB) {
-      let QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function cW(WW) {
       const {
-        makers: jB
-      } = lB[QB];
-      return ZB.some(((JB, MB) => {
-        var PB, zB;
-        let [lB, pB, qB] = JB;
-        const ZB = BB(OB + lB, GB + pB, DB + qB),
-          WB = RB(ZB, QB);
-        return null !== WB && jB.has(null !== (PB = null === (zB = YB.h[ZB]) || void 0 === zB ? void 0 : zB.meta.rootName) && void 0 !== PB ? PB : "") && !(0, oB.V)(yB, WB, NB[MB])
-      }))
-    }
-
-    function AB(BB) {
-      const OB = YB.h[BB];
-      return OB ? (0, oB.O)(OB.name) : null
-    }
-    let VB = null;
-
-    function SB(BB) {
-      if (!VB) {
-        VB = new Map;
-        for (const BB of ["water", "cryo"])
-          for (let OB = 0; OB < 64; OB++)
-            for (const GB of [!1, !0]) VB.set((0, QB.p)(BB, OB, GB), {
-              fl: BB,
-              mask: OB,
-              full: GB
-            })
+        TZ: iW
+      } = WW, OW = iW.engine, mW = {
+        width: OW.getRenderWidth(),
+        height: OW.getRenderHeight()
+      };
+      return {
+        canvas: OW.getRenderingCanvas(),
+        maxTextureSize: OW.getCaps().maxTextureSize,
+        KZ: () => !WW.JZ,
+        resize: (WW, iW) => {
+          OW.setSize(WW, iW)
+        },
+        restoreSize: () => {
+          OW.setSize(mW.width, mW.height), iW.resize()
+        },
+        onFrameDrawn: OW => {
+          const mW = () => {
+            iW.TY && OW()
+          };
+          return WW.on("afterRender", mW), () => {
+            WW.off("afterRender", mW)
+          }
+        }
       }
-      return VB.get(BB)
     }
-    const nB = new Map(Array.from({
-      length: QB.k + 1
-    }, ((BB, OB) => [(0, QB.q)(OB), OB])));
+    var wW = OW(35114);
 
-    function UB(BB, OB, GB, DB, QB, oB) {
-      return ZB.some(((jB, yB) => {
-        var JB, MB, PB;
-        let [zB, lB, pB] = jB;
-        if (0 === (oB >> yB & 1)) return !1;
-        const qB = null !== (JB = null === (MB = YB.h[BB(OB + zB, GB + lB, DB + pB)]) || void 0 === MB ? void 0 : MB.name) && void 0 !== JB ? JB : "",
-          ZB = SB(qB);
-        return ZB ? ZB.fl === QB && ZB.full : (null !== (PB = function(BB) {
-          var OB;
-          return null !== (OB = nB.get(BB)) && void 0 !== OB ? OB : null
-        }(qB)) && void 0 !== PB ? PB : 0) > 0
+    function tW(WW, iW) {
+      let {
+        width: wW,
+        height: tW,
+        colouring: ZW
+      } = iW;
+      const xW = "normals" === ZW,
+        lW = "depth" === ZW;
+      return new Promise((iW => {
+        try {
+          const AW = (0, NW.h)();
+          if (AW.TZ.Lb) return "screenshot" !== WW || null !== ZW ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void iW()) : void(0, LW.f)(cW(AW), wW, tW).finally(iW);
+          const bW = AW.TZ.engine,
+            jW = AW.TZ.bD(),
+            UW = wW,
+            kW = tW;
+          Promise.all([Promise.all([OW.e(289), OW.e(290), OW.e(265)]).then((() => OW(64385))), Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(291), OW.e(294), OW.e(629), OW.e(271)]).then((() => OW(64392))), Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(299), OW.e(273)]).then((() => OW(64398))), OW.e(670).then((() => OW(64402))), Promise.all([OW.e(263), OW.e(259)]).then((() => OW(38235))), OW.e(288).then((() => OW(64405))), OW.e(268).then((() => OW(64410)))]).then((NW => {
+            const {
+              CreateScreenshotUsingRenderTarget: LW
+            } = NW[1], {
+              ShaderMaterial: cW
+            } = NW[2], {
+              ShaderLanguage: wW
+            } = NW[3], {
+              fA: tW
+            } = NW[4], {
+              registerDevtoolsShader: ZW
+            } = NW[6], AW = wW.GLSL, sW = new Map, MW = jW.meshes.filter((WW => WW.material));
+            let KW = !1,
+              SW = null;
+
+            function YW() {
+              var WW;
+              KW && (KW = !1, (0, mW.g)(jW.meshes, !1)), null === (WW = SW) || void 0 === WW || WW(), SW = null, MW.forEach((WW => {
+                const iW = sW.get(WW);
+                iW && (WW.material = iW)
+              }))
+            }
+            if (xW) {
+              const WW = [],
+                iW = [];
+              MW.forEach((OW => {
+                const mW = OW.name.toLowerCase(),
+                  EW = OW.KV().boundingBox.center,
+                  NW = jW.activeCamera.position.subtract(EW).length();
+                mW.includes("sky") || mW.includes("background") || mW.includes("environment") || NW > 1e3 ? iW.push(OW) : WW.push(OW)
+              })), ZW("devtoolsNormal", AW);
+              const OW = new cW("normalMaterial", jW, "devtoolsNormal", {
+                attributes: ["position", "normal"],
+                uniforms: ["worldViewProjection", "world"],
+                shaderLanguage: AW
+              });
+              ZW("devtoolsWhite", AW);
+              const mW = new cW("whiteMaterial", jW, "devtoolsWhite", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection"],
+                shaderLanguage: AW
+              });
+              WW.forEach((WW => {
+                sW.set(WW, WW.material), WW.material = OW
+              })), iW.forEach((WW => {
+                sW.set(WW, WW.material), WW.material = mW
+              }))
+            } else if (lW) {
+              ZW("devtoolsDepth", AW);
+              const WW = jW.activeCamera.position;
+              let iW = 0,
+                OW = 1 / 0;
+              MW.forEach((mW => {
+                const EW = mW.name.toLowerCase();
+                if (EW.includes("sky") || EW.includes("background") || EW.includes("environment")) return;
+                const NW = mW.KV().boundingBox.center,
+                  PW = tW.TransformCoordinates(NW, mW.getWorldMatrix()),
+                  LW = WW.subtract(PW).length();
+                LW > 1e3 || (iW = Math.max(iW, LW), OW = Math.min(OW, LW))
+              }));
+              const mW = iW - OW;
+              iW += .1 * mW, OW = Math.max(0, OW - .1 * mW), console.log(`Depth range: min=${OW.toFixed(2)}, max=${iW.toFixed(2)}, range=${mW.toFixed(2)}`), mW < 1 && (iW = OW + 10);
+              const EW = new cW("depthMaterial", jW, "devtoolsDepth", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
+                shaderLanguage: AW
+              });
+              EW.setVector3("cameraPosition", WW), EW.setFloat("maxDepth", iW), EW.setFloat("minDepth", OW), MW.forEach((WW => {
+                sW.set(WW, WW.material), WW.material = EW
+              }))
+            }
+            if ((0, mW.g)(jW.meshes, !0), KW = !0, "glb" === WW && (SW = (0, EW.c)(jW.meshes)), "screenshot" === WW) {
+              let WW = `bloxd-screenshot-${UW}x${kW}-${Date.now()}.png`;
+              xW ? WW = `bloxd-screenshot-normals-${UW}x${kW}-${Date.now()}.png` : lW && (WW = `bloxd-screenshot-depth-${UW}x${kW}-${Date.now()}.png`), LW(bW, jW.activeCamera, {
+                width: UW,
+                height: kW
+              }, (function(OW) {
+                YW(), fetch(OW).then((function(WW) {
+                  return WW.blob()
+                })).then((function(OW) {
+                  (0, PW.downloadBlob)(OW, WW), iW()
+                })).catch((function(WW) {
+                  console.error("Error processing screenshot:", WW), iW()
+                }))
+              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
+                console.error("Screenshot timed out"), YW(), iW()
+              }))
+            } else {
+              let WW = "rb";
+              xW ? WW = "scene-normals" : lW && (WW = "scene-depth"), xW || lW ? setTimeout((() => {
+                (async function() {
+                  const {
+                    StandardMaterial: WW
+                  } = await Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(296), OW.e(272)]).then((() => OW(41782))), {
+                    Color3: iW
+                  } = await Promise.all([OW.e(264), OW.e(267)]).then((() => OW(38369))), mW = [], EW = [];
+                  if (MW.forEach((WW => {
+                      const iW = WW.name.toLowerCase(),
+                        OW = WW.KV().boundingBox.center,
+                        NW = jW.activeCamera.position.subtract(OW).length();
+                      iW.includes("sky") || iW.includes("background") || iW.includes("environment") || NW > 1e3 ? EW.push(WW) : mW.push(WW)
+                    })), xW) mW.forEach(((OW, mW) => {
+                    const EW = OW.getVerticesData("normal");
+                    if (EW) {
+                      const NW = [];
+                      for (let WW = 0; WW < EW.length; WW += 3) {
+                        const iW = Math.abs(EW[WW]),
+                          OW = Math.abs(EW[WW + 1]),
+                          mW = Math.abs(EW[WW + 2]);
+                        NW.push(iW, OW, mW, 1)
+                      }
+                      OW.setVerticesData("color", NW);
+                      const PW = new WW(`vertexColorMat_${mW}`, jW);
+                      PW.disableLighting = !0, PW.emissiveColor = new iW(1, 1, 1), PW.specularColor = new iW(0, 0, 0), OW.material = PW
+                    }
+                  })), EW.forEach(((OW, mW) => {
+                    const EW = OW.getVerticesData("position");
+                    if (EW) {
+                      const NW = [],
+                        PW = EW.length / 3;
+                      for (let WW = 0; WW < PW; WW++) NW.push(1, 1, 1, 1);
+                      OW.setVerticesData("color", NW);
+                      const LW = new WW(`whiteMat_${mW}`, jW);
+                      LW.disableLighting = !0, LW.emissiveColor = new iW(1, 1, 1), LW.specularColor = new iW(0, 0, 0), OW.material = LW
+                    }
+                  }));
+                  else if (lW) {
+                    const OW = jW.activeCamera.position;
+                    let EW = 0,
+                      NW = 1 / 0;
+                    mW.forEach((WW => {
+                      const iW = WW.KV().boundingBox.center,
+                        mW = tW.TransformCoordinates(iW, WW.getWorldMatrix()),
+                        PW = OW.subtract(mW).length();
+                      EW = Math.max(EW, PW), NW = Math.min(NW, PW)
+                    }));
+                    const PW = EW - NW;
+                    EW += .1 * PW, NW = Math.max(0, NW - .1 * PW), PW < 1 && (EW = NW + 10), MW.forEach(((mW, PW) => {
+                      const LW = mW.name.toLowerCase(),
+                        cW = mW.KV().boundingBox.center,
+                        wW = tW.TransformCoordinates(cW, mW.getWorldMatrix()),
+                        ZW = OW.subtract(wW).length();
+                      if (!(LW.includes("sky") || LW.includes("background") || LW.includes("environment") || ZW > 1e3)) {
+                        const OW = 1 - Math.min(Math.max((ZW - NW) / (EW - NW), 0), 1),
+                          LW = new WW(`depthMat_${PW}`, jW);
+                        LW.diffuseColor = new iW(OW, OW, OW), LW.specularColor = new iW(0, 0, 0), mW.material = LW
+                      }
+                    }))
+                  }
+                })().then((() => Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(629), OW.e(278), OW.e(298), OW.e(262)]).then((() => OW(64419))))).then((iW => iW.GLTF2Export.GLBAsync(jW, WW))).then((WW => {
+                  YW(), WW.downloadFiles(), iW()
+                })).catch((WW => {
+                  console.error("Error exporting GLB:", WW), YW(), iW()
+                }))
+              }), 100) : Promise.all([OW.e(264), OW.e(263), OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(629), OW.e(278), OW.e(298), OW.e(262)]).then((() => OW(64419))).then((OW => {
+                OW.GLTF2Export.GLBAsync(jW, WW).then((WW => {
+                  YW(), WW.downloadFiles(), iW()
+                })).catch((WW => {
+                  console.error("Error exporting GLB:", WW), YW(), iW()
+                }))
+              })).catch((WW => {
+                console.error("Error importing serializers:", WW), YW(), iW()
+              }))
+            }
+          })).catch((WW => {
+            console.error("Error downloading the scene:", WW), iW()
+          }))
+        } catch (AW) {
+          console.error("Error taking screenshot:", AW), iW()
+        }
       }))
     }
-    class fB {
+    const ZW = new class {
       constructor() {
-        this.reshapeOffsets = ZB
+        this.tools = wW.ALL_DEV_TOOLS
       }
-      handles(BB) {
-        return null !== AB(BB)
+      downloadScene(WW, iW) {
+        return tW(WW, iW)
       }
-      affects(BB) {
-        var OB, GB;
-        return pB.has(null !== (OB = null === (GB = YB.h[BB]) || void 0 === GB ? void 0 : GB.meta.rootName) && void 0 !== OB ? OB : "")
+      async setAmbientLightIntensity(WW) {
+        const {
+          Color3: iW
+        } = await Promise.all([OW.e(264), OW.e(267)]).then((() => OW(38369)));
+        (0, NW.h)().TZ.bD().ambientColor = iW.FromArray([WW, WW, WW])
       }
-      placedBy(BB) {
-        var OB;
-        return (null === (OB = YB.h[BB]) || void 0 === OB ? void 0 : OB.meta.rootName) === QB.e ? QB.g : null
-      }
-      shape(BB, OB, GB, DB, jB, JB) {
-        var MB, PB, zB;
-        const lB = null !== (MB = null === (PB = YB.h[jB]) || void 0 === PB ? void 0 : PB.name) && void 0 !== MB ? MB : "",
-          pB = JB || lB !== QB.g ? null !== (zB = (0, oB.O)(lB)) && void 0 !== zB ? zB : "water" : function(BB, OB, GB, YB) {
-            return ZB.some(((DB, QB) => {
-              let [jB, JB, MB] = DB;
-              const PB = RB(BB(OB + jB, GB + JB, YB + MB), "cryo");
-              return null !== PB && "port" !== PB.kind && (0, oB.V)(yB, PB, NB[QB])
-            })) ? "cryo" : "water"
-          }(BB, OB, GB, DB),
-          qB = function(BB, OB, GB, YB) {
-            let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              QB = 0;
-            return ZB.forEach(((jB, JB) => {
-              let [MB, PB, zB] = jB;
-              const lB = RB(BB(OB + MB, GB + PB, YB + zB), DB);
-              lB && (0, oB.V)(yB, lB, NB[JB]) && (QB |= 1 << JB)
-            })), QB
-          }(BB, OB, GB, DB, pB),
-          WB = JB ? function(BB) {
-            var OB;
-            return !0 === (null === (OB = SB(BB)) || void 0 === OB ? void 0 : OB.full)
-          }(lB) : UB(BB, OB, GB, DB, pB, qB);
-        return (0, YB.j)((0, QB.p)(pB, qB, WB))
+      capturePhoto(WW, iW, OW) {
+        return function(WW, iW, OW, mW) {
+          return (0, LW.d)(cW(WW), iW, OW, mW)
+        }((0, NW.h)(), WW, iW, OW)
       }
     }
   },
-  38836: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      h: () => QB
+  42471: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW,
+      f: () => cW
     });
-    const YB = ["Chest", "Loot Chest", "Moonstone Chest"],
-      DB = [{
-        name: "Workbench",
-        exactMatch: !0
-      }, {
-        name: "Furnace",
-        exactMatch: !0
-      }, {
-        name: "Artisan Bench",
-        exactMatch: !0
-      }, {
-        name: "Potion Table",
-        exactMatch: !0
-      }, {
-        name: "Salvaging Table",
-        exactMatch: !0
-      }, {
-        name: "Enchanting Table",
-        exactMatch: !1
-      }];
+    var mW = OW(1876);
+    const EW = 33177600,
+      NW = 3e4;
+    let PW = !1;
 
-    function QB(BB) {
-      return DB.find((OB => OB.exactMatch ? BB === OB.name : BB.includes(OB.name)))
+    function LW(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const {
+        scale: LW = 1,
+        type: cW = "image/png",
+        quality: wW
+      } = mW;
+      return WW.KZ() ? PW ? Promise.reject(new Error("A screenshot is already being taken")) : (PW = !0, new Promise(((mW, tW) => {
+        let ZW, xW = 2,
+          lW = null;
+        const AW = () => {
+          var iW;
+          PW = !1, null === (iW = lW) || void 0 === iW || iW(), clearTimeout(ZW);
+          try {
+            WW.restoreSize()
+          } catch (OW) {
+            console.error("A screenshot couldn't size the canvas back", OW)
+          }
+        };
+        ZW = setTimeout((() => {
+          AW(), tW(new Error("No frame was drawn to capture"))
+        }), NW);
+        try {
+          const mW = function(WW, iW, OW) {
+            const mW = Math.max(1, WW),
+              NW = Math.max(1, iW),
+              PW = Math.min(1, OW / Math.max(mW, NW), Math.sqrt(EW / (mW * NW)));
+            return {
+              width: Math.max(1, Math.floor(mW * PW)),
+              height: Math.max(1, Math.floor(NW * PW))
+            }
+          }(iW, OW, WW.maxTextureSize);
+          WW.resize(mW.width, mW.height, LW * mW.width / Math.max(1, iW))
+        } catch (bW) {
+          return AW(), void tW(bW)
+        }
+        lW = WW.onFrameDrawn((() => {
+          if (xW--, xW > 0) return;
+          const {
+            canvas: iW
+          } = WW, OW = {
+            width: iW.width,
+            height: iW.height
+          };
+          try {
+            iW.toBlob((WW => {
+              WW ? mW({
+                blob: WW,
+                ...OW
+              }) : tW(new Error("The canvas gave no image"))
+            }), cW, wW)
+          } catch (bW) {
+            tW(bW)
+          } finally {
+            AW()
+          }
+        }))
+      }))) : Promise.reject(new Error("Screenshots need a game to be running"))
+    }
+    async function cW(WW, iW, OW) {
+      try {
+        const EW = await LW(WW, iW, OW);
+        (0, mW.e)(EW.blob, `bloxd-screenshot-${EW.width}x${EW.height}-${Date.now()}.png`)
+      } catch (EW) {
+        console.error("Error taking screenshot:", EW)
+      }
+    }
+  },
+  38626: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => wW,
+      g: () => LW,
+      i: () => PW
+    });
+    var mW = OW(38623),
+      EW = OW(38631);
+    let NW = 0;
+
+    function PW(WW, iW) {
+      const OW = WW;
+      OW._noaFaceGroups = null !== iW && void 0 !== iW ? iW : null, OW._noaFaceEpoch = -1, OW._noaFaceMask = -1, OW._noaFaceCount = -1, OW._noaFaceMaterial = null;
+      const mW = WW.hY;
+      mW && 1 === mW.length && (mW[0].indexStart = 0, mW[0].indexCount = WW.getTotalIndices())
+    }
+
+    function LW(WW, iW) {
+      if (iW) {
+        NW++;
+        for (const iW of WW) {
+          const WW = iW._noaFaceGroups;
+          WW && PW(iW, WW)
+        }
+      } else NW = Math.max(0, NW - 1)
+    }
+
+    function cW(WW, iW, OW) {
+      let EW = -1,
+        NW = 0;
+      for (let PW = 0; PW < mW.f; PW++) {
+        const OW = WW[PW],
+          LW = WW[PW + 1];
+        LW > OW && iW & 1 << mW.d[PW] && (EW < 0 && (EW = OW), NW = LW)
+      }
+      return EW < 0 ? (OW[0] = 0, OW[1] = 0, 0) : (OW[0] = EW, OW[1] = NW - EW, NW - EW)
+    }
+    class wW {
+      constructor(WW, iW) {
+        this.jZ = WW, this.engine = iW, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+      }
+      apply(WW, iW) {
+        if (!iW) return;
+        const OW = iW.getProjectionMatrix().m,
+          PW = 0 === NW && 0 === OW[15],
+          LW = iW.globalPosition,
+          {
+            engine: wW
+          } = this,
+          tW = PW ? (0, EW.e)(OW, wW.getRenderWidth(), wW.getRenderHeight()) : 0;
+        LW.x === this.eyeX && LW.y === this.eyeY && LW.z === this.eyeZ && tW === this.focalPx && PW === this.culling || (this.epoch++, this.eyeX = LW.x, this.eyeY = LW.y, this.eyeZ = LW.z, this.focalPx = tW, this.culling = PW);
+        const {
+          epoch: ZW,
+          range: xW
+        } = this, lW = this.jZ / 2, AW = lW * Math.sqrt(3), bW = WW.data, jW = WW.length;
+        let UW = 0;
+        for (let NW = 0; NW < jW; NW++) {
+          const WW = bW[NW],
+            iW = WW._noaFaceGroups;
+          if (iW && (WW._noaFaceEpoch !== ZW || WW._noaFaceMaterial !== WW.material)) {
+            WW._noaFaceEpoch = ZW, WW._noaFaceMaterial = WW.material;
+            const OW = WW.hY,
+              NW = OW && 1 === OW.length ? OW[0] : null;
+            let wW = -1;
+            if (PW && NW && (0, mW.w)(WW.material)) {
+              const OW = WW.position,
+                mW = LW.x - OW.x,
+                NW = LW.y - OW.y,
+                PW = LW.z - OW.z,
+                cW = mW - lW,
+                ZW = NW - lW,
+                xW = PW - lW,
+                bW = Math.sqrt(cW * cW + ZW * ZW + xW * xW) + AW;
+              wW = (0, EW.m)(iW, mW, NW, PW, (0, EW.h)(bW, tW))
+            }
+            if (NW && wW !== WW._noaFaceMask) {
+              WW._noaFaceMask = wW;
+              let OW = 0,
+                EW = iW[mW.f]; - 1 !== wW && (EW = cW(iW, wW, xW), OW = xW[0]), WW._noaFaceCount = EW, NW.indexStart = 6 * OW, NW.indexCount = 6 * EW, NW.setBoundingInfo(WW.KV())
+            }
+          }
+          iW && 0 === WW._noaFaceCount || (bW[UW++] = WW)
+        }
+        WW.length = UW
+      }
+    }
+  },
+  38612: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => cW,
+      d: () => LW
+    });
+    const mW = new WeakSet;
+    let EW = 0;
+    const NW = new Set;
+
+    function PW(WW, iW) {
+      WW._data = iW
+    }
+
+    function LW(WW) {
+      var iW, OW;
+      (null !== (iW = null === (OW = WW.getBuffer()) || void 0 === OW ? void 0 : OW.aZ) && void 0 !== iW ? iW : 0) > 0 && (mW.add(WW), 0 === EW ? PW(WW, null) : NW.add(WW))
+    }
+
+    function cW(WW) {
+      EW++;
+      for (const OW of function(WW) {
+          const iW = new Set;
+          for (const EW of WW) {
+            const WW = EW.geometry;
+            for (const EW of Object.values(null !== (OW = null === WW || void 0 === WW ? void 0 : WW.getVertexBuffers()) && void 0 !== OW ? OW : {})) {
+              var OW;
+              const WW = EW.getWrapperBuffer();
+              mW.has(WW) && iW.add(WW)
+            }
+          }
+          return iW
+        }(WW)) OW.getData() || wW(OW), NW.add(OW);
+      let iW = !0;
+      return () => {
+        if (iW && (iW = !1, EW--, 0 === EW)) {
+          for (const WW of NW) PW(WW, null);
+          NW.clear()
+        }
+      }
+    }
+
+    function wW(WW) {
+      const iW = WW.getBuffer();
+      if (!iW || !(iW.aZ > 0)) return;
+      const OW = WW._engine,
+        mW = new Uint8Array(iW.aZ);
+      OW.bindArrayBuffer(iW), OW._gl.getBufferSubData(OW._gl.ARRAY_BUFFER, 0, mW), OW._resetVertexBufferBinding(), PW(WW, mW)
+    }
+  },
+  38623: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      f: () => NW,
+      g: () => cW,
+      k: () => mW,
+      o: () => LW,
+      s: () => EW,
+      w: () => wW
+    });
+    const mW = 6,
+      EW = [0, 2, 4, 1, 3, 5, 0, 2],
+      NW = 6,
+      PW = [1, 0, 3, 2, 5, 4];
+    for (let tW = NW; tW < EW.length; tW++)
+      if (EW[tW] !== EW[tW - NW]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const LW = EW.length + 1,
+      cW = (() => {
+        const WW = [];
+        for (let iW = 0; iW < NW; iW++) WW[EW[iW]] = iW;
+        return WW
+      })();
+
+    function wW(WW) {
+      return !!WW && WW.backFaceCulling && (0 === WW.transparencyMode || 1 === WW.transparencyMode)
+    }
+  },
+  38631: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => LW,
+      h: () => cW,
+      j: () => tW,
+      m: () => wW,
+      o: () => AW
+    });
+    var mW = OW(38623);
+    const EW = 1 / 16,
+      NW = 1 / 64,
+      PW = 2048;
+    mW.k;
+
+    function LW(WW, iW, OW) {
+      return Math.min(Math.abs(WW[0] * iW), Math.abs(WW[5] * OW)) / 2
+    }
+
+    function cW(WW, iW) {
+      return EW + NW * WW * WW / iW
+    }
+
+    function wW(WW, iW, OW, EW, NW) {
+      const PW = mW.o;
+      return tW(WW[PW], WW[PW + 1], WW[PW + 2], WW[PW + 3], WW[PW + 4], WW[PW + 5], iW, OW, EW, NW)
+    }
+
+    function tW(WW, iW, OW, mW, EW, NW, PW, LW, cW, wW) {
+      return (PW <= WW - wW ? 0 : 1) | (PW >= iW + wW ? 0 : 2) | (LW <= OW - wW ? 0 : 4) | (LW >= mW + wW ? 0 : 8) | (cW <= EW - wW ? 0 : 16) | (cW >= NW + wW ? 0 : 32)
+    }
+    const ZW = (() => {
+        const WW = [];
+        for (let iW = 0; iW < mW.s.length; iW++) {
+          let OW = 0;
+          for (let EW = iW + 1; EW <= mW.s.length; EW++) {
+            const NW = 1 << mW.s[EW - 1];
+            if (OW & NW) break;
+            OW |= NW, WW.push({
+              start: iW,
+              end: EW,
+              iW: OW
+            })
+          }
+        }
+        return WW
+      })(),
+      xW = [];
+
+    function lW(WW, iW) {
+      const OW = mW.g[iW];
+      return WW[OW + 1] - WW[OW]
+    }
+
+    function AW(WW, iW, OW) {
+      let EW = 0;
+      for (let PW = 0; PW < mW.k; PW++) lW(WW, PW) > 0 && (EW |= 1 << PW);
+      if (0 === (iW &= EW)) return 0;
+      if (iW === EW) return OW[0] = 0, OW[1] = WW[mW.f], 1;
+      let NW = null,
+        LW = 1 / 0;
+      for (const wW of function(WW) {
+          let iW = xW[WW];
+          if (iW) return iW;
+          const OW = new Map,
+            mW = (WW, iW) => {
+              const mW = 4 * WW + iW.length / 2;
+              OW.has(mW) || OW.set(mW, {
+                iW: WW,
+                windows: iW
+              })
+            };
+          for (const NW of ZW)
+            if ((NW.iW & WW) === WW && mW(NW.iW, [NW.start, NW.end]), 0 !== (NW.iW & WW))
+              for (const iW of ZW) iW.start < NW.end || 0 !== (NW.iW & iW.iW) || 0 === (iW.iW & WW) || ((NW.iW | iW.iW) & WW) !== WW || mW(NW.iW | iW.iW, [NW.start, NW.end, iW.start, iW.end]);
+          const EW = [...OW.values()];
+          return iW = EW.filter((WW => !EW.some((iW => iW !== WW && (iW.iW & WW.iW) === iW.iW && iW.windows.length <= WW.windows.length)))), xW[WW] = iW, iW
+        }(iW)) {
+        let OW = (wW.windows.length / 2 - 1) * PW;
+        const cW = wW.iW & ~iW & EW;
+        for (let iW = 0; iW < mW.k; iW++) cW & 1 << iW && (OW += lW(WW, iW));
+        OW < LW && (NW = wW, LW = OW)
+      }
+      const cW = NW.windows;
+      for (let mW = 0; mW < cW.length; mW += 2) {
+        const iW = WW[cW[mW]];
+        OW[mW] = iW, OW[mW + 1] = WW[cW[mW + 1]] - iW
+      }
+      return cW.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

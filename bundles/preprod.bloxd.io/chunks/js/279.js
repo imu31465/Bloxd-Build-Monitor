@@ -1,701 +1,944 @@
 export const id = 279;
 export const ids = [279];
 export const modules = {
-  40821: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => CB
+  40014: (WW, iW, OW) => {
+    var mW = {
+      "./cape_cow_cream.png": 29007,
+      "./cape_cow_normal.png": 29012,
+      "./cape_creator_level1.png": 29015,
+      "./cape_creator_level2.png": 29018,
+      "./cape_creator_level3.png": 29022,
+      "./cape_none.png": 29027,
+      "./cape_pig.png": 29034,
+      "./cape_sheep.png": 29041,
+      "./cape_super.png": 29044,
+      "./cape_super_inverted.png": 29053,
+      "./cape_youtuber.png": 29057
+    };
+
+    function EW(WW) {
+      var iW = NW(WW);
+      return OW(iW)
+    }
+
+    function NW(WW) {
+      if (!OW.o(mW, WW)) {
+        var iW = new Error("Cannot find module '" + WW + "'");
+        throw iW.code = "MODULE_NOT_FOUND", iW
+      }
+      return mW[WW]
+    }
+    EW.keys = function() {
+      return Object.keys(mW)
+    }, EW.resolve = NW, WW.exports = EW, EW.id = 40014
+  },
+  40380: (WW, iW, OW) => {
+    function mW(WW) {
+      return void 0 === WW ? void 0 : [WW[0], WW[1], WW[2]]
+    }
+
+    function EW(WW) {
+      const iW = WW.particles;
+      return {
+        opts: {
+          texture: iW.texture,
+          aZ: iW.aZ,
+          minLifeTime: iW.minLifeTime,
+          maxLifeTime: iW.maxLifeTime,
+          minSize: iW.minSize,
+          maxSize: iW.maxSize,
+          minEmitPower: iW.minEmitPower,
+          maxEmitPower: iW.maxEmitPower,
+          emitRate: iW.emitRate,
+          gravity: mW(iW.gravity),
+          dir1: mW(iW.dir1),
+          dir2: mW(iW.dir2),
+          colorGradients: iW.colorGradients,
+          blendMode: iW.blendMode
+        },
+        half: [iW.width / 2, iW.height / 2, iW.depth / 2]
+      }
+    }
+    OW.d(iW, {
+      d: () => EW
+    })
+  },
+  40337: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      g: () => wW,
+      h: () => cW,
+      i: () => PW
     });
-    GB(6976);
-    var YB = GB(56),
-      DB = GB(40825),
-      QB = GB(41089),
-      oB = GB(41213),
-      jB = GB(41246),
-      yB = GB(41258),
-      JB = GB(37885),
-      MB = GB(37771),
-      PB = GB(41406),
-      zB = GB(41452),
-      lB = (GB(41472), GB(1217)),
-      pB = GB(192),
-      qB = GB(1175),
-      ZB = GB(16),
-      NB = GB(3072),
-      RB = GB(1485),
-      WB = GB(1383),
-      AB = GB(6968),
-      VB = GB(6980),
-      SB = GB(4875),
-      nB = GB(1282);
-    const UB = 1.2,
-      fB = .2,
-      kB = .0066 * Math.PI / 180,
-      dB = new Set(["Escape", "KeyG"]),
-      KB = {
-        ArrowLeft: -1,
-        ArrowRight: 1
-      },
-      uB = "ArrowUp",
-      mB = new Set([...Object.keys(KB), uB, "ArrowDown"]),
-      IB = 32,
-      FB = 1,
-      iB = 10,
-      LB = "F4",
-      gB = "Period",
-      rB = Math.PI / 2 - .001,
-      XB = Math.PI / 6,
-      wB = Math.PI / 6,
-      EB = 1.08,
-      cB = [{
-        name: "X",
-        direction: [1, 0, 0],
-        colour: "#e5534b"
-      }, {
-        name: "Y",
-        direction: [0, 1, 0],
-        colour: "#57ab5a"
-      }, {
-        name: "Z",
-        direction: [0, 0, 1],
-        colour: "#539bf5"
-      }],
-      hB = 24,
-      aB = 7,
-      eB = 4,
-      TB = .01,
-      bB = 4;
+    var mW = OW(192);
+    const EW = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      NW = "PetRoot";
+    let PW = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      LW = EW;
+    new Map, new Map;
 
-    function CB(BB) {
-      let {
-        heatmap: OB,
-        scale: GB,
-        fullyOpaqueFrom: FB,
-        bounds: XB,
-        fitBounds: wB,
-        schematic: EB,
-        controls: cB,
-        onStepTime: hB,
-        onShowAllTime: aB,
-        onTogglePlaying: eB,
-        getReadout: bB = null
-      } = BB;
-      const {
-        t: CB
-      } = (0, qB.H)(), {
-        clientEscMenuOptions: QO
-      } = (0, ZB.o)(["clientEscMenuOptions"]), yO = (0, YB.useRef)(null), JO = (0, YB.useRef)(null), MO = (0, YB.useRef)(null), PO = (0, NB.e)(yO), [zO, lO] = (0, YB.useState)(!1), [pO, qO] = (0, YB.useState)(!1), [ZO, NO] = (0, YB.useState)(!0), RO = (0, YB.useRef)(!1), [WO, AO] = (0, YB.useState)(!1), VO = pO || !ZO && WO, [SO, nO] = (0, YB.useState)(!1), [UO, fO] = (0, YB.useState)(!0), [kO, dO] = (0, YB.useState)(null), KO = XB.min, [uO, mO] = (0, YB.useState)(KO);
-      uO[0] === KO[0] && uO[1] === KO[1] && uO[2] === KO[2] || (mO(KO), null !== kO && dO({
-        ...kO,
-        position: oO(kO.position, oO(uO, jO(KO, -1)))
-      }));
-      const IO = (0, YB.useMemo)((() => function(BB) {
-          return [BB.max[0] - BB.min[0] + 1, BB.max[1] - BB.min[1] + 1, BB.max[2] - BB.min[2] + 1]
-        }(XB)), [XB]),
-        FO = (0, YB.useMemo)((() => function(BB, OB) {
-          const GB = [],
-            YB = [];
-          for (const [DB, QB] of Object.entries(BB.frequencies)) {
-            const BB = Number(DB);
-            for (const [DB, oB] of Object.entries(QB)) {
-              const QB = Number(DB);
-              for (const [DB, jB] of Object.entries(oB)) jB <= 0 || (GB.push(BB - OB[0], QB - OB[1], Number(DB) - OB[2]), YB.push(jB))
-            }
-          }
-          return {
-            positions: Int32Array.from(GB),
-            values: Float64Array.from(YB),
-            count: YB.length
-          }
-        }(OB, KO)), [OB, KO]),
-        iO = UB * QO.cameraFOV / 100,
-        LO = PO.height > 0 ? PO.width / PO.height : 1,
-        gO = (0, YB.useMemo)((() => function(BB, OB) {
-          return {
-            min: [BB.min[0] - OB[0], BB.min[1] - OB[1], BB.min[2] - OB[2]],
-            max: [BB.max[0] - OB[0] + 1, BB.max[1] - OB[1] + 1, BB.max[2] - OB[2] + 1]
-          }
-        }(wB, KO)), [wB, KO]),
-        rO = GO(gO, LO, iO),
-        XO = null !== kO && void 0 !== kO ? kO : rO,
-        wO = (0, YB.useRef)({
-          fittedView: rO,
-          fieldOfView: iO,
-          mouseSensitivity: QO.mouseSensitivity,
-          canLock: ZO
-        });
-      wO.current = {
-        fittedView: rO,
-        fieldOfView: iO,
-        mouseSensitivity: QO.mouseSensitivity,
-        canLock: ZO
-      };
-      const EO = (0, YB.useMemo)((() => {
-          if (!VO) return null;
-          const BB = (BB, GB, YB) => {
-              var DB, QB, oB;
-              return null !== (DB = null === (QB = OB.frequencies[BB + KO[0]]) || void 0 === QB || null === (oB = QB[GB + KO[1]]) || void 0 === oB ? void 0 : oB[YB + KO[2]]) && void 0 !== DB ? DB : 0
-            },
-            YB = function(BB, OB, GB, YB) {
-              let DB = 0,
-                QB = 1 / 0;
-              for (const PB of [0, 1, 2]) {
-                if (0 === OB[PB]) {
-                  if (BB[PB] < 0 || BB[PB] > GB[PB]) return null;
-                  continue
-                }
-                const YB = (0 - BB[PB]) / OB[PB],
-                  oB = (GB[PB] - BB[PB]) / OB[PB];
-                DB = Math.max(DB, Math.min(YB, oB)), QB = Math.min(QB, Math.max(YB, oB))
-              }
-              if (DB > QB) return null;
-              const oB = [0, 1, 2].map((YB => Math.min(GB[YB] - 1, Math.max(0, Math.floor(BB[YB] + OB[YB] * DB))))),
-                jB = [0, 1, 2].map((BB => Math.sign(OB[BB]))),
-                yB = [0, 1, 2].map((GB => {
-                  if (0 === jB[GB]) return 1 / 0;
-                  return ((jB[GB] > 0 ? oB[GB] + 1 : oB[GB]) - BB[GB]) / OB[GB]
-                })),
-                JB = [0, 1, 2].map((BB => 0 === jB[BB] ? 1 / 0 : Math.abs(1 / OB[BB])));
-              let MB = null;
-              for (;;) {
-                const BB = YB(oB[0], oB[1], oB[2]);
-                if (BB >= 1) return oB;
-                BB > 0 && (MB = [oB[0], oB[1], oB[2]]);
-                const OB = yB[0] < yB[1] ? yB[0] < yB[2] ? 0 : 2 : yB[1] < yB[2] ? 1 : 2;
-                if (yB[OB] > QB) return MB;
-                if (oB[OB] += jB[OB], yB[OB] += JB[OB], oB[OB] < 0 || oB[OB] >= GB[OB]) return MB
-              }
-            }(XO.position, BO(XO), IO, ((OB, YB, DB) => (0, AB.y)(BB(OB, YB, DB), GB, FB)));
-          return null === YB ? null : {
-            x: YB[0] + KO[0],
-            y: YB[1] + KO[1],
-            z: YB[2] + KO[2],
-            value: BB(YB[0], YB[1], YB[2])
-          }
-        }), [VO, OB, KO, XO, IO, GB, FB]),
-        {
-          keyHandlers: cO
-        } = (0, VB.f)({
-          isEnabled: VO,
-          claimedKeyCodes: mB,
-          Lz: BB => {
-            dO((OB => function(BB, OB) {
-              const GB = [Math.sin(BB.heading), 0, Math.cos(BB.heading)],
-                YB = oO(oO(jO(GB, OB.forward), jO(OO(BB.heading), OB.right)), [0, OB.up, 0]);
-              return {
-                ...BB,
-                position: oO(BB.position, YB)
-              }
-            }(null !== OB && void 0 !== OB ? OB : wO.current.fittedView, BB)))
-          },
-          onZoomChange: nO
-        });
-      (0, YB.useEffect)((() => {
-        const BB = JO.current;
-        if (!BB) return;
-        let OB;
-        try {
-          OB = function(BB, OB) {
-            const GB = new DB.c(BB, !0, {
-                stencil: !1
-              }, !0),
-              YB = new QB.b(GB),
-              [lB, pB, qB] = AB.Q;
-            YB.clearColor = new JB.e(lB / 255, pB / 255, qB / 255, 1);
-            const ZB = new oB.c("Heatmap3DCamera", MB.Xp.Zero(), YB);
-            ZB.fov = OB, ZB.minZ = .05;
-            const NB = new jB.d("Heatmap3DLight", new MB.Xp(.4, 1, -.6), YB);
-            NB.diffuse = JB.Color3.White(), NB.groundColor = JB.Color3.Black(), NB.specular = JB.Color3.Black();
-            const RB = new yB.StandardMaterial("Heatmap3DCellMaterial", YB);
-            RB.diffuseColor = new JB.Color3(.4, .4, .4), RB.emissiveColor = new JB.Color3(.62, .62, .62), RB.specularColor = JB.Color3.Black();
-            const WB = (0, PB.d)("Heatmap3DCells", {
-              size: 1
-            }, YB);
-            WB.material = RB, WB.bq = !1, WB.rp = !0, WB.isVisible = !1;
-            const VB = (0, PB.d)("Heatmap3DTranslucentCells", {
-              size: 1
-            }, YB);
-            VB.material = RB, VB.hasVertexAlpha = !0, VB.bq = !1, VB.rp = !0, VB.isVisible = !1;
-            const SB = new yB.StandardMaterial("Heatmap3DSchematicMaterial", YB);
-            SB.diffuseColor = new JB.Color3(.6, .6, .6), SB.emissiveColor = new JB.Color3(.4, .4, .4), SB.specularColor = JB.Color3.Black();
-            const nB = (0, PB.d)("Heatmap3DSchematicBlocks", {
-              size: 1
-            }, YB);
-            nB.material = SB, nB.bq = !1, nB.rp = !0, nB.isVisible = !1;
-            const UB = (0, zB.d)("Heatmap3DTarget", {
-              lines: tB([-.52, -.52, -.52], [.52, .52, .52])
-            }, YB);
-            return UB.color = new JB.Color3(.06, .14, .23), UB.renderingGroupId = 1, UB.bq = !1, UB.isVisible = !1, {
-              engine: GB,
-              eq: YB,
-              camera: ZB,
-              cells: WB,
-              translucentCells: VB,
-              translucent: {
-                DZ: new Float32Array(0),
-                colours: new Float32Array(0),
-                count: 0
-              },
-              translucentSortedFrom: null,
-              schematicBlocks: nB,
-              targetOutline: UB,
-              chunkGrid: null,
-              chunkGridCentre: null,
-              chunkGridOrigin: null,
-              targetFieldOfView: OB,
-              needsRender: !0
-            }
-          }(BB, wO.current.fieldOfView)
-        } catch (GB) {
-          return console.error("Failed to start the 3D heatmap", GB), void lO(!0)
+    function cW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(PW, WW)) && void 0 !== iW ? iW : null
+    }
+
+    function wW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(LW, WW)) && void 0 !== iW ? iW : null
+    }
+  },
+  40384: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      f: () => EW,
+      j: () => NW
+    });
+    class mW {
+      constructor() {
+        this.pose = {
+          pos: [0, 0, 0],
+          yaw: 0,
+          mode: "flying",
+          seated: !1,
+          clip: void 0
+        }, this.Sj = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+      }
+      step(WW) {
+        var iW;
+        const {
+          feet: OW,
+          heading: mW,
+          tuning: PW
+        } = WW, LW = Math.min(Math.max(WW.dt, 0), .1), {
+          pose: cW,
+          Sj: wW,
+          target: tW
+        } = this;
+        if (this.started && LW > 0) {
+          const WW = Math.hypot(OW[0] - this.lastFeet[0], OW[1] - this.lastFeet[1], OW[2] - this.lastFeet[2]);
+          this.speed += (WW / LW - this.speed) * Math.min(LW / .15, 1)
         }
-        return MO.current = OB, OB.engine.runRenderLoop((() => {
-          const BB = OB.camera;
-          BB.fov !== OB.targetFieldOfView && (BB.fov += (OB.targetFieldOfView - BB.fov) * (BB.fov > OB.targetFieldOfView ? .3 : .2), Math.abs(OB.targetFieldOfView - BB.fov) < 5e-4 && (BB.fov = OB.targetFieldOfView), OB.needsRender = !0), OB.needsRender && (OB.eq.render(), OB.needsRender = !OB.eq.isReady() || !OB.engine.areAllEffectsReady())
-        })), () => {
-          MO.current = null, OB.engine.dispose()
+        this.lastFeet[0] = OW[0], this.lastFeet[1] = OW[1], this.lastFeet[2] = OW[2], this.stillS = this.speed > .3 ? 0 : this.stillS + LW;
+        const ZW = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === ZW && "perched" === cW.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += LW, cW.mode = ZW;
+        const xW = Math.sin(mW),
+          lW = Math.cos(mW);
+        "perched" === ZW ? (NW(tW, OW, PW.perchOffset, xW, lW), tW[1] += WW.headTopY - OW[1]) : (NW(tW, OW, PW.followOffset, xW, lW), tW[1] += EW(PW, WW.timeS));
+        const {
+          pos: AW
+        } = cW, bW = Math.hypot(tW[0] - AW[0], tW[1] - AW[1], tW[2] - AW[2]);
+        if (!this.started || bW > 8 || "perched" === ZW && (this.perchLocked || bW < .05)) this.perchLocked = this.started && "perched" === ZW, AW[0] = tW[0], AW[1] = tW[1], AW[2] = tW[2], wW[0] = wW[1] = wW[2] = 0;
+        else {
+          const WW = PW.followStiffness;
+          for (let iW = 0; iW < 3; iW++) wW[iW] += (WW * WW * (tW[iW] - AW[iW]) - 2 * WW * wW[iW]) * LW, AW[iW] += wW[iW] * LW
         }
-      }), []), (0, YB.useEffect)((() => {
-        const BB = JO.current;
-        if (!BB) return;
-        const OB = () => {
-            RO.current = !1, qO(document.pointerLockElement === BB)
-          },
-          GB = () => {
-            RO.current && (RO.current = !1, NO(!1))
-          },
-          YB = OB => {
-            const GB = !wO.current.canLock && document.activeElement === BB && 0 !== (1 & OB.buttons);
-            if (document.pointerLockElement !== BB && !GB) return;
-            const YB = wO.current.mouseSensitivity * kB;
-            dO((BB => function(BB, OB, GB) {
-              const YB = 2 * Math.PI;
-              return {
-                ...BB,
-                heading: ((BB.heading + OB) % YB + YB) % YB,
-                pitch: Math.max(-rB, Math.min(rB, BB.pitch + GB))
-              }
-            }(null !== BB && void 0 !== BB ? BB : wO.current.fittedView, OB.movementX * YB, OB.movementY * YB)))
-          };
-        return document.addEventListener("pointerlockchange", OB), document.addEventListener("pointerlockerror", GB), document.addEventListener("pointermove", YB), () => {
-          document.removeEventListener("pointerlockchange", OB), document.removeEventListener("pointerlockerror", GB), document.removeEventListener("pointermove", YB), document.pointerLockElement === BB && (0, SB.b)()
-        }
-      }), []), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && 0 !== PO.width && 0 !== PO.height && (BB.engine.resize(), BB.needsRender = !0)
-      }), [PO.width, PO.height]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && (BB.targetFieldOfView = iO * (SO ? fB : 1))
-      }), [iO, SO]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && function(BB, OB, GB, YB) {
-          const DB = [],
-            QB = [],
-            oB = [],
-            jB = [];
-          for (let yB = 0; yB < OB.count; yB++) {
-            const BB = OB.values[yB],
-              JB = (0, AB.y)(BB, GB, YB);
-            if (JB <= 0) continue;
-            const [MB, PB, zB] = (0, AB.q)((0, AB.I)(BB, GB)), lB = JB >= 1;
-            (lB ? DB : oB).push(OB.positions[3 * yB] + .5, OB.positions[3 * yB + 1] + .5, OB.positions[3 * yB + 2] + .5), (lB ? QB : jB).push(MB / 255, PB / 255, zB / 255, JB)
+        const jW = mW + PW.yawOffset;
+        var UW;
+        return this.started ? cW.yaw += ((UW = jW - cW.yaw) - 2 * Math.PI * Math.round(UW / (2 * Math.PI))) * Math.min(8 * LW, 1) : cW.yaw = jW, this.started = !0, cW.seated = "perched" === ZW && this.perchLocked, cW.clip = null === (iW = PW.clips) || void 0 === iW ? void 0 : iW[this.bO(ZW)], cW
+      }
+      reset() {
+        this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
+      }
+      bO(WW) {
+        return "perched" === WW ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      }
+    }
+
+    function EW(WW, iW) {
+      return WW.bobAmplitude * Math.sin(2 * Math.PI * WW.bobHz * iW)
+    }
+
+    function NW(WW, iW, OW, mW, EW) {
+      const [NW, PW, LW] = OW;
+      WW[0] = iW[0] + NW * EW + LW * mW, WW[1] = iW[1] + PW, WW[2] = iW[2] - NW * mW + LW * EW
+    }
+  },
+  40345: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => NW
+    });
+    var mW = OW(38235),
+      EW = OW(39045);
+
+    function NW(WW, iW) {
+      var OW;
+      WW.blendMode = iW.blendMode, WW.minLifeTime = iW.minLifeTime, WW.maxLifeTime = iW.maxLifeTime, WW.minSize = iW.minSize, WW.maxSize = iW.maxSize, WW.minEmitPower = iW.minEmitPower, WW.maxEmitPower = iW.maxEmitPower;
+      const NW = null !== (OW = iW.gravity) && void 0 !== OW ? OW : [0, 0, 0];
+      WW.gravity = new mW.fA(NW[0], NW[1], NW[2]);
+      for (const mW of iW.colorGradients) WW.addColorGradient(mW.timeFraction, (0, EW.k)(mW.minColor), mW.maxColor ? (0, EW.k)(mW.maxColor) : void 0)
+    }
+  },
+  39965: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => MW,
+      h: () => YW,
+      j: () => SW,
+      n: () => TW,
+      q: () => JW,
+      s: () => sW
+    });
+    var mW = OW(327),
+      EW = OW(39976),
+      NW = OW(3827),
+      PW = OW(3831),
+      LW = OW(39967),
+      cW = OW(39972),
+      wW = OW(25),
+      tW = OW(109),
+      ZW = OW(3941),
+      xW = OW(100),
+      lW = OW(131),
+      AW = OW(39),
+      bW = OW(299),
+      jW = OW(4816),
+      UW = OW(119);
+    const kW = {
+      no_adapter: "start_no_adapter",
+      device: "device_failed"
+    };
+
+    function sW(WW) {
+      var iW;
+      const OW = null !== (iW = tW.currentUrl.getSearchParam(WW)) && void 0 !== iW ? iW : AW.i.getItem(WW);
+      return null === OW || void 0 === OW || "" === OW ? null : "0" !== OW && "false" !== OW && !1 !== OW && 0 !== OW
+    }
+    async function MW(WW, iW) {
+      (0, NW.E)(null);
+      const OW = (0, PW.k)((0, PW.j)(iW.useWebGpu, !0));
+      (0, xW.setWebGpuRequested)("lite" === OW.requested && (0, xW.getWebGpuSupported)());
+      const LW = (0, PW.d)(OW.source);
+      null !== LW && console.info(`Renderer: ${OW.requested} from ${LW}`), null !== OW.fallbackReason && console.warn(`Renderer: ${OW.fallbackReason}`);
+      let tW = OW.fallbackReason;
+      if ("webgl2" !== OW.choice) {
+        const LW = await async function(WW, iW, OW, PW) {
+          const LW = await (0, xW.probeWebGpuAdapter)();
+          if ("usable" !== LW) return (0, xW.setWebGpuFallbackReason)(LW), console.info("No usable WebGPU adapter, rendering with WebGL."), "no usable WebGPU adapter";
+          if (OW && !0 !== AW.i.getItem(mW.pc)) {
+            if (!0 === AW.i.getItem(UW.A)) return (0, xW.setWebGpuFallbackReason)("old_intel_driver"), console.info("The WebGPU adapter is an Intel GPU whose driver is too old for Lite (no shader-f16), rendering with WebGL."), UW.c;
+            if (await (0, bW.p)(), (0, bW.e)()) return (0, xW.setWebGpuFallbackReason)("few_wasm_memories"), console.info("This tab fits too few wasm memories for WebGPU, rendering with WebGL."), bW.b
           }
-          sB(BB.cells, Float32Array.from(DB), Float32Array.from(QB), QB.length / 4), BB.translucent = {
-            DZ: Float32Array.from(oB),
-            colours: Float32Array.from(jB),
-            count: jB.length / 4
-          }, BB.translucentSortedFrom = null, xB(BB), BB.needsRender = !0
-        }(BB, FO, GB, FB)
-      }), [FO, GB, FB]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && function(BB, OB) {
-          BB.chunkGridOrigin = OB, BB.chunkGridCentre = null, vB(BB)
-        }(BB, XB.min)
-      }), [XB]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && function(BB, OB, GB) {
-          const YB = [],
-            DB = [];
-          if (null !== OB) {
+          let tW = "load_failed";
+          try {
             const {
-              positions: BB,
-              colours: QB,
-              count: oB
-            } = OB.surface;
-            for (let OB = 0; OB < oB; OB++) {
-              const oB = [BB[3 * OB], BB[3 * OB + 1], BB[3 * OB + 2]];
-              [0, 1, 2].every((BB => oB[BB] >= GB.min[BB] - IB && oB[BB] <= GB.max[BB] + IB)) && (YB.push(oB[0] - GB.min[0] + .5, oB[1] - GB.min[1] + .5, oB[2] - GB.min[2] + .5), DB.push(QB[3 * OB] / 255, QB[3 * OB + 1] / 255, QB[3 * OB + 2] / 255, 1))
-            }
-          }
-          sB(BB.schematicBlocks, Float32Array.from(YB), Float32Array.from(DB), DB.length / 4), BB.needsRender = !0
-        }(BB, EB, XB)
-      }), [EB, XB]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && null !== BB.chunkGrid && (BB.chunkGrid.isVisible = UO, BB.needsRender = !0)
-      }), [UO, XB]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && function(BB, OB, GB) {
-          const {
-            camera: YB
-          } = BB;
-          YB.position.set(OB.position[0], OB.position[1], OB.position[2]), YB.rotation.set(OB.pitch, OB.heading, 0);
-          const DB = (iB + 1) * pB.f.pP * Math.sqrt(3);
-          YB.maxZ = Math.max(DB, Math.hypot(...oO(OB.position, jO(DO({
-            min: [0, 0, 0],
-            max: GB
-          }), -1))) + 2 * Math.hypot(...GB)), vB(BB), xB(BB), BB.needsRender = !0
-        }(BB, XO, IO)
-      }), [XO, IO]), (0, YB.useEffect)((() => {
-        const BB = MO.current;
-        null !== BB && (BB.targetOutline.isVisible = null !== EO, null !== EO && BB.targetOutline.position.set(EO.x - KO[0] + .5, EO.y - KO[1] + .5, EO.z - KO[2] + .5), BB.needsRender = !0)
-      }), [EO, KO]);
-      return (0, nB.jsxs)("div", {
-        className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: yO,
-        children: [(0, nB.jsx)("canvas", {
-          className: "StudioHeatmapMapCanvas",
-          ref: JO,
-          style: {
-            width: `${PO.width}px`,
-            height: `${PO.height}px`
-          },
-          tabIndex: 0,
-          "aria-label": CB("3D heatmap"),
-          onClick: () => {
-            const BB = JO.current;
-            if (null === BB) return;
-            if (BB.focus({
-                preventScroll: !0
-              }), pO || !ZO) return;
-            const OB = BB.requestPointerLock();
-            OB instanceof Promise ? OB.catch((BB => {
-              BB instanceof DOMException && ("WrongDocumentError" === BB.name || "NotSupportedError" === BB.name) && NO(!1)
-            })) : RO.current = !0
-          },
-          ...cO,
-          onKeyDown: BB => {
-            if (VO && dB.has(BB.code)) return BB.preventDefault(), void(() => {
-              const BB = JO.current;
-              null !== BB && document.pointerLockElement === BB ? (0, SB.b)() : null === BB || void 0 === BB || BB.blur()
-            })();
-            const OB = KB[BB.code];
-            return VO && void 0 !== OB ? (BB.preventDefault(), void hB(OB)) : VO && (0, VB.c)("replayPlayPause", BB.code) && !(0, VB.c)("Zoom", BB.code) ? (BB.preventDefault(), void(BB.repeat || eB())) : VO && BB.code === uB ? (BB.preventDefault(), void aB()) : VO && BB.code === gB ? (BB.preventDefault(), void dO(null)) : VO && BB.code === LB ? (BB.preventDefault(), void fO((BB => !BB))) : void cO.onKeyDown(BB)
-          },
-          onFocus: () => {
-            AO(!0)
-          },
-          onBlur: () => {
-            AO(!1), cO.onBlur()
-          }
-        }), zO && (0, nB.jsx)("div", {
-          className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: CB("3D view isn't available in this browser.")
-        }), VO && (0, nB.jsx)("div", {
-          className: "StudioHeatmap3DCrosshair"
-        }), (0, nB.jsx)("div", {
-          className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: XO.position.map(((BB, OB) => (BB + KO[OB]).toFixed(2))).join(" ")
-        }), UO && (0, nB.jsx)(HB, {
-          heading: XO.heading,
-          pitch: XO.pitch,
-          onViewFrom: BB => {
-            const OB = jO(BB, -1),
-              GB = 0 === OB[1] ? {
-                heading: Math.atan2(OB[0], OB[2]),
-                pitch: 0
-              } : {
-                heading: XO.heading,
-                pitch: OB[1] < 0 ? rB : -rB
-              };
-            dO(GO(gO, LO, iO, GB))
-          },
-          onTurn: (BB, OB) => {
-            dO((GB => function(BB, OB, GB, YB) {
-              return YO(BB, OB, {
-                heading: BB.heading + GB * TB,
-                pitch: Math.max(-rB, Math.min(rB, BB.pitch + YB * TB))
-              })
-            }(null !== GB && void 0 !== GB ? GB : wO.current.fittedView, DO(gO), BB, OB)))
-          },
-          onFlip: () => {
-            dO((BB => function(BB, OB) {
-              return YO(BB, OB, {
-                heading: BB.heading + Math.PI,
-                pitch: -BB.pitch
-              })
-            }(null !== BB && void 0 !== BB ? BB : wO.current.fittedView, DO(gO))))
-          }
-        }), null !== EO && (0, nB.jsx)("div", {
-          className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === bB ? CB("studio:heatmapBlockReadout", {
-            x: EO.x,
-            y: EO.y,
-            z: EO.z,
-            count: (0, lB.U)(EO.value)
-          }) : bB(EO.x, EO.y, EO.z, EO.value)
-        }), (0, nB.jsxs)("div", {
-          className: "StudioHeatmapMapControls",
-          children: [cB, (0, nB.jsx)(RB.Z, {
-            active: null === kO,
-            onClick: () => {
-              dO(null)
-            },
-            children: (0, nB.jsx)(WB.b, {
-              name: "eye"
+              create: OW
+            } = await (0, NW.v)(PW).load();
+            tW = "start_failed";
+            const mW = wW.d.antiAliasingOnWebGpuAdapter((0, lW.f)()),
+              EW = (0, cW.i)(WW),
+              LW = (0, cW.e)(EW, {
+                size: WW => (0, ZW.m)(EW, WW)
+              });
+            return await OW(WW, {
+              ROW: mW,
+              sceneDepth: iW.sceneDepth,
+              sunShadow: iW.sunShadow,
+              bufferSize: LW
             })
-          })]
-        })]
-      })
-    }
-
-    function HB(BB) {
-      let {
-        heading: OB,
-        pitch: GB,
-        onViewFrom: DB,
-        onTurn: QB,
-        onFlip: oB
-      } = BB;
-      const {
-        t: jB
-      } = (0, qB.H)(), yB = (0, YB.useRef)(null), JB = BO({
-        heading: OB,
-        pitch: GB
-      }), MB = OO(OB), PB = JO(JB, MB), zB = hB + aB + 2, lB = cB.flatMap((BB => [1, -1].map((OB => {
-        const GB = jO(BB.direction, OB);
-        return {
-          ...BB,
-          sign: OB,
-          direction: GB,
-          endX: zB + yO(GB, MB) * hB,
-          endY: zB - yO(GB, PB) * hB,
-          depth: yO(GB, JB)
-        }
-      })))).sort(((BB, OB) => OB.depth - BB.depth));
-      return (0, nB.jsxs)("svg", {
-        className: "StudioHeatmap3DGizmo",
-        width: 2 * zB,
-        height: 2 * zB,
-        "aria-hidden": !0,
-        onPointerDown: BB => {
-          var OB, GB;
-          BB.currentTarget.setPointerCapture(BB.pointerId);
-          const YB = BB.target,
-            DB = YB.getAttribute("data-end");
-          yB.current = {
-            pointerId: BB.pointerId,
-            x: BB.clientX,
-            y: BB.clientY,
-            travel: 0,
-            side: null === DB ? null : null !== (OB = null === (GB = lB[Number(DB)]) || void 0 === GB ? void 0 : GB.direction) && void 0 !== OB ? OB : null,
-            isOnMiddle: YB.hasAttribute("data-middle")
+          } catch (jW) {
+            const WW = (0, EW.d)(jW);
+            (0, xW.setWebGpuFallbackReason)(WW ? kW[WW] : tW);
+            const iW = null === jW || void 0 === jW ? void 0 : jW.fallbackReason;
+            return "string" === typeof iW ? (console.warn(`Lite could not start, falling back to WebGL: ${String(jW)}`), iW) : (console.error("Failed to initialise the Lite renderer, falling back to WebGL.", jW), "it failed to start (see the console)")
           }
-        },
-        onPointerMove: BB => {
-          const OB = yB.current;
-          if (null === OB || OB.pointerId !== BB.pointerId) return;
-          const GB = BB.clientX - OB.x,
-            YB = BB.clientY - OB.y;
-          OB.x = BB.clientX, OB.y = BB.clientY, OB.travel += Math.abs(GB) + Math.abs(YB), OB.travel >= bB && QB(GB, YB)
-        },
-        onPointerUp: BB => {
-          const OB = yB.current;
-          yB.current = null, null === OB || OB.pointerId !== BB.pointerId || OB.travel >= bB || (null !== OB.side ? DB(OB.side) : OB.isOnMiddle && oB())
-        },
-        onPointerCancel: () => {
-          yB.current = null
-        },
-        children: [lB.map(((BB, OB) => {
-          const GB = BB.sign > 0;
-          return (0, nB.jsxs)("g", {
-            children: [(0, nB.jsx)("line", {
-              x1: zB,
-              y1: zB,
-              x2: BB.endX,
-              y2: BB.endY,
-              stroke: BB.colour,
-              strokeOpacity: GB ? 1 : .5,
-              strokeWidth: 2,
-              strokeLinecap: "round"
-            }), (0, nB.jsx)("circle", {
-              className: "StudioHeatmap3DGizmoEnd",
-              "data-end": OB,
-              cx: BB.endX,
-              cy: BB.endY,
-              r: GB ? aB : aB - 1,
-              fill: BB.colour,
-              fillOpacity: GB ? 1 : .3,
-              stroke: BB.colour,
-              strokeWidth: GB ? 0 : 1.5,
-              children: (0, nB.jsx)("title", {
-                children: `${jB("View from")} ${GB?"+":"\u2212"}${BB.name}`
-              })
-            }), GB && (0, nB.jsx)("text", {
-              pointerEvents: "none",
-              x: BB.endX,
-              y: BB.endY,
-              fill: "#151515",
-              fontSize: 9,
-              fontWeight: "bold",
-              textAnchor: "middle",
-              dominantBaseline: "central",
-              children: BB.name
-            })]
-          }, `${GB?"+":"-"}${BB.name}`)
-        })), (0, nB.jsx)("circle", {
-          className: "StudioHeatmap3DGizmoEnd",
-          "data-middle": !0,
-          cx: zB,
-          cy: zB,
-          r: eB,
-          fill: "#d0d0d0",
-          fillOpacity: .85,
-          children: (0, nB.jsx)("title", {
-            children: jB("View from the opposite side")
-          })
-        })]
-      })
-    }
-
-    function vB(BB) {
-      var OB, GB, YB;
-      const {
-        chunkGridOrigin: DB,
-        camera: QB
-      } = BB;
-      if (null === DB) return;
-      const oB = [QB.position.x, QB.position.y, QB.position.z],
-        jB = [0, 2].map((BB => Math.floor((oB[BB] + DB[BB]) / pB.f.pP))),
-        yB = BB.chunkGridCentre;
-      if (null !== yB && yB.every(((BB, OB) => BB === jB[OB]))) return;
-      const PB = null === (OB = null === (GB = BB.chunkGrid) || void 0 === GB ? void 0 : GB.isVisible) || void 0 === OB || OB;
-      null === (YB = BB.chunkGrid) || void 0 === YB || YB.dispose();
-      const [lB, qB] = [0, 2].map(((BB, OB) => {
-        const GB = [];
-        for (let YB = jB[OB] - iB; YB <= jB[OB] + iB + 1; YB++) GB.push(YB * pB.f.pP - DB[BB]);
-        return GB
-      })), ZB = -DB[1], NB = [];
-      for (const JB of qB) NB.push([new MB.Xp(lB[0], ZB, JB), new MB.Xp(lB[lB.length - 1], ZB, JB)]);
-      for (const JB of lB) NB.push([new MB.Xp(JB, ZB, qB[0]), new MB.Xp(JB, ZB, qB[qB.length - 1])]);
-      const RB = (0, zB.d)("Heatmap3DChunkGrid", {
-        lines: NB
-      }, BB.eq);
-      RB.color = new JB.Color3(.45, .6, .78), RB.bq = !1, RB.isVisible = PB, BB.chunkGrid = RB, BB.chunkGridCentre = jB, BB.needsRender = !0
-    }
-
-    function sB(BB, OB, GB, YB) {
-      BB.DOB("matrix", function(BB, OB) {
-        const GB = new Float32Array(16 * OB);
-        for (let YB = 0; YB < OB; YB++) {
-          const OB = 16 * YB;
-          GB[OB] = 1, GB[OB + 5] = 1, GB[OB + 10] = 1, GB[OB + 12] = BB[3 * YB], GB[OB + 13] = BB[3 * YB + 1], GB[OB + 14] = BB[3 * YB + 2], GB[OB + 15] = 1
-        }
-        return GB
-      }(OB, YB), 16, !0), BB.DOB("color", GB, 4, !0), BB.isVisible = YB > 0
-    }
-
-    function xB(BB) {
-      const {
-        camera: OB,
-        translucent: GB
-      } = BB, YB = [OB.position.x, OB.position.y, OB.position.z], DB = BB.translucentSortedFrom;
-      if (null !== DB && Math.hypot(YB[0] - DB[0], YB[1] - DB[1], YB[2] - DB[2]) < FB) return;
-      BB.translucentSortedFrom = YB;
-      const QB = new Float64Array(GB.count),
-        oB = new Uint32Array(GB.count);
-      for (let JB = 0; JB < GB.count; JB++) {
-        const BB = GB.DZ[3 * JB] - YB[0],
-          OB = GB.DZ[3 * JB + 1] - YB[1],
-          DB = GB.DZ[3 * JB + 2] - YB[2];
-        QB[JB] = BB * BB + OB * OB + DB * DB, oB[JB] = JB
+        }(WW, iW, "setting" === OW.source, OW.choice);
+        if ("lite" === OW.choice && AW.i.setItem(UW.p, "string" === typeof LW), "string" !== typeof LW) return wW.d.followGameGpu((0, lW.f)()), (0, xW.setWebGpuFallbackReason)("none"), (0, PW.o)(OW), (0, NW.E)(LW), {
+          lite: LW
+        };
+        tW = (0, PW.b)(OW.choice, [LW]), WW.replaceWith(WW.cloneNode(!1))
+      } else "lite" === OW.requested ? (0, xW.setWebGpuFallbackReason)("load_failed") : "default" === OW.source && iW.webGpuDefaultOffReason ? (0, xW.setWebGpuFallbackReason)(iW.webGpuDefaultOffReason) : (0, xW.setWebGpuFallbackReason)("not_requested");
+      return (0, PW.o)({
+        ...OW,
+        choice: "webgl2",
+        fallbackReason: tW
+      }), wW.d.followGameGpu(null), {
+        lite: null
       }
-      oB.sort(((BB, OB) => QB[OB] - QB[BB]));
-      const jB = new Float32Array(3 * GB.count),
-        yB = new Float32Array(4 * GB.count);
-      oB.forEach(((BB, OB) => {
-        jB.set(GB.DZ.subarray(3 * BB, 3 * BB + 3), 3 * OB), yB.set(GB.colours.subarray(4 * BB, 4 * BB + 4), 4 * OB)
-      })), sB(BB.translucentCells, jB, yB, GB.count), BB.needsRender = !0
     }
 
-    function tB(BB, OB) {
-      const GB = (GB, YB, DB) => new MB.Xp(0 === GB ? BB[0] : OB[0], 0 === YB ? BB[1] : OB[1], 0 === DB ? BB[2] : OB[2]),
-        YB = [];
-      for (const DB of [0, 1])
-        for (const BB of [0, 1]) YB.push([GB(0, DB, BB), GB(1, DB, BB)], [GB(DB, 0, BB), GB(DB, 1, BB)], [GB(DB, BB, 0), GB(DB, BB, 1)]);
-      return YB
+    function KW() {
+      return Promise.all([OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(298), OW.e(292), OW.e(293), OW.e(277), OW.e(0)]).then((() => OW(53714)))
+    }
+    async function SW() {
+      return (await KW()).createSceneParticleSystem
+    }
+    async function YW() {
+      Promise.all([OW.e(289), OW.e(621)]).then((() => OW(53803))).then((WW => {
+        WW.installImageBitmapTextureLoader()
+      })).catch((() => {}));
+      const [WW, iW] = await Promise.all([KW(), Promise.all([OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(298), OW.e(292), OW.e(293), OW.e(277), OW.e(0)]).then((() => OW(53815))), Promise.all([OW.e(289), OW.e(290), OW.e(287), OW.e(297), OW.e(291), OW.e(296), OW.e(294), OW.e(286), OW.e(299), OW.e(311), OW.e(298), OW.e(292), OW.e(293), OW.e(277), OW.e(0)]).then((() => OW(42601)))]);
+      return (0, LW.h)(iW.SkyMaterial), WW.default
     }
 
-    function BO(BB) {
-      return [Math.sin(BB.heading) * Math.cos(BB.pitch), -Math.sin(BB.pitch), Math.cos(BB.heading) * Math.cos(BB.pitch)]
+    function yW(WW) {
+      return "lite" === (0, PW.k)((0, PW.j)(WW, !1)).choice && (0, xW.getWebGpuSupported)() && !AW.i.getItem(UW.p)
     }
 
-    function OO(BB) {
-      return [Math.cos(BB), 0, -Math.sin(BB)]
+    function TW(WW) {
+      yW(WW) || YW().catch((WW => {
+        console.warn("Failed to prefetch noa's Babylon backend.", WW)
+      }))
     }
 
-    function GO(BB, OB, GB) {
-      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: XB,
-        pitch: wB
+    function JW(WW) {
+      (0, jW.e)((() => {
+        yW(WW) ? (0, NW.s)().load().catch((WW => {
+          console.warn("Failed to prefetch the Lite renderer.", WW)
+        })) : TW(WW)
+      }))
+    }
+  },
+  39972: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => LW,
+      i: () => PW
+    });
+    var mW = OW(25),
+      EW = OW(35167),
+      NW = OW(3941);
+
+    function PW(WW) {
+      var iW;
+      return null !== (iW = WW.parentElement) && void 0 !== iW ? iW : WW
+    }
+
+    function LW(WW, iW) {
+      if (WW.clientWidth <= 0 || WW.clientHeight <= 0 || EW.c.isHeld()) return null;
+      const OW = (0, NW.p)(),
+        [PW, LW] = iW.size(OW);
+      return (0, NW.v)(PW, LW, OW, mW.d.get("clientEscMenuOptions").pixelScale)
+    }
+  },
+  40085: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      d: () => EW
+    });
+    const mW = 2.2;
+
+    function EW(WW) {
+      let iW = 0;
+      return WW > 5 && (iW = .12 * Math.min(WW - 5, 15), WW > 20 && (iW += .01 * (WW - 20))), 1.4 + iW
+    }
+  },
+  40073: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => PW,
+      g: () => LW,
+      k: () => NW,
+      n: () => lW,
+      r: () => cW,
+      t: () => tW,
+      u: () => wW,
+      v: () => xW
+    });
+    var mW = OW(38235),
+      EW = OW(38532);
+    const NW = 0,
+      PW = 1,
+      LW = 18;
+
+    function cW(WW) {
+      return !1 !== WW && (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || arguments.length > 2 && void 0 !== arguments[2] && arguments[2])
+    }
+
+    function wW(WW, iW) {
+      return null !== WW && void 0 !== WW ? WW : iW
+    }
+
+    function tW(WW, iW, OW) {
+      return iW && !OW ? Math.max(1, WW / LW) : 1
+    }
+    const ZW = new WeakMap;
+
+    function xW(WW, iW, OW, EW) {
+      const NW = WW.EY.XiW(OW),
+        PW = NW.offset;
+      PW[0] = PW[1] = PW[2] = 0;
+      const LW = WW.EY.XiW(iW);
+      if (EW || !LW || !NW.mesh.isEnabled() || !NW.mesh.isVisible) return 1;
+      const cW = WW.EY.YG(OW).Yz,
+        wW = WW.camera.mF(),
+        tW = WW.camera.XF(),
+        xW = wW[0] - cW[0],
+        lW = wW[1] - cW[1],
+        AW = wW[2] - cW[2];
+      if (-(tW[0] * xW + tW[1] * lW + tW[2] * AW) <= 0 || Math.hypot(xW, lW, AW) < .1) return 1;
+      const bW = WW.TZ.bD().getFrameId();
+      let jW = ZW.get(LW);
+      if (jW || (jW = {
+          frame: -1,
+          minimum: new mW.fA,
+          maximum: new mW.fA,
+          valid: !1
+        }, ZW.set(LW, jW)), jW.frame !== bW)
+        if (jW.frame = bW, LW.OmW) jW.valid = WW.TZ.nD.getObjectBounds(LW.uD, jW.minimum, jW.maximum);
+        else {
+          jW.minimum.Z5(1 / 0), jW.maximum.Z5(-1 / 0), jW.valid = !1;
+          const WW = [LW.mesh, ...LW.mesh.getChildMeshes(!1)];
+          for (const iW of WW) {
+            if (!("getTotalVertices" in iW) || !iW.isEnabled() || !iW.isVisible || !iW.getTotalVertices()) continue;
+            iW.computeWorldMatrix();
+            const WW = iW.KV().boundingBox;
+            jW.minimum.minimizeInPlace(WW.minimumWorld), jW.maximum.maximizeInPlace(WW.maximumWorld), jW.valid = !0
+          }
+        } if (!jW.valid) return 1;
+      const UW = function(WW, iW, OW, mW, EW) {
+        const NW = iW[0] - WW[0],
+          PW = iW[1] - WW[1],
+          LW = iW[2] - WW[2],
+          cW = Math.hypot(NW, PW, LW),
+          wW = -(EW[0] * NW + EW[1] * PW + EW[2] * LW);
+        if (cW < .1 || wW <= 0) return 0;
+        const tW = (Math.abs(EW[0]) * (mW.x - OW.x) + Math.abs(EW[1]) * (mW.y - OW.y) + Math.abs(EW[2]) * (mW.z - OW.z)) / 2,
+          ZW = -(EW[0] * ((OW.x + mW.x) / 2 - WW[0]) + EW[1] * ((OW.y + mW.y) / 2 - WW[1]) + EW[2] * ((OW.z + mW.z) / 2 - WW[2]));
+        return Math.max(0, Math.min((ZW + tW + .01) / wW, 2 * tW / wW, 1 - .1 / wW))
+      }(cW, wW, jW.minimum, jW.maximum, WW.camera.XF());
+      for (let mW = 0; mW < 3; mW++) PW[mW] = (wW[mW] - cW[mW]) * UW;
+      return 1 - UW
+    }
+
+    function lW(WW, iW) {
+      const {
+        mesh: OW,
+        offset: mW
+      } = WW.EY.XiW(iW), NW = WW.EY.YG(iW).Yz, PW = NW[0] + mW[0], LW = NW[1] + mW[1], cW = NW[2] + mW[2];
+      (0, EW.q)(OW, PW, LW, cW)
+    }
+  },
+  39967: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => wW,
+      h: () => LW,
+      j: () => cW
+    });
+    var mW = OW(38526),
+      EW = OW(38419);
+    const NW = new Set;
+    let PW = null;
+
+    function LW(WW) {
+      PW = WW
+    }
+
+    function cW(WW) {
+      if (!PW) throw new Error("No SkyMaterial: WebGL2's backend installs it");
+      return new PW("sky", WW)
+    }
+
+    function wW(WW, iW, OW) {
+      if (!(0, mW.f)(WW)) return void WW.material.forceCompilation(WW, iW);
+      const PW = () => {
+        if (WW.Ay()) return void NW.delete(WW);
+        const mW = (0, EW.bb)(WW.material);
+        if (![null === mW || void 0 === mW ? void 0 : mW.diffuseTexture, null === mW || void 0 === mW ? void 0 : mW.opacityTexture, null === mW || void 0 === mW ? void 0 : mW.emissiveTexture, null === mW || void 0 === mW ? void 0 : mW.reflectionTexture].every((WW => !WW || OW.prepareTexture(WW)))) return NW.add(WW), void setTimeout(PW, 16);
+        NW.delete(WW), iW()
       };
-      const DB = [BB.max[0] - BB.min[0], BB.max[1] - BB.min[1], BB.max[2] - BB.min[2]],
-        QB = BO(YB),
-        oB = OO(YB.heading),
-        jB = JO(QB, oB),
-        yB = Math.tan(GB / 2),
-        JB = yB * OB;
-      let MB = 1;
-      for (const PB of [-DB[0] / 2, DB[0] / 2])
-        for (const BB of [-DB[1] / 2, DB[1] / 2])
-          for (const OB of [-DB[2] / 2, DB[2] / 2]) {
-            const GB = [PB, BB, OB],
-              YB = yO(GB, QB);
-            MB = Math.max(MB, Math.abs(yO(GB, oB)) / JB - YB, Math.abs(yO(GB, jB)) / yB - YB)
+      PW()
+    }
+  },
+  40070: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => fW,
+      c: () => DW,
+      d: () => zW,
+      e: () => XW,
+      g: () => ti,
+      k: () => Ni,
+      o: () => Ei,
+      p: () => CW,
+      q: () => aW,
+      s: () => BW,
+      u: () => Oi,
+      w: () => Zi
+    });
+    var mW = OW(1172),
+      EW = OW(1244),
+      NW = OW(327),
+      PW = OW(1404),
+      LW = OW(5185),
+      cW = OW(5199),
+      wW = OW(2365),
+      tW = OW(38437),
+      ZW = OW(38431),
+      xW = OW(39083),
+      lW = OW(38694),
+      AW = OW(38576),
+      bW = OW(38364),
+      jW = OW(40073),
+      UW = OW(39120),
+      kW = OW(39913),
+      sW = OW(38411),
+      MW = OW(38502),
+      KW = OW(643),
+      SW = OW(1255),
+      YW = OW(2042),
+      yW = OW(2138),
+      TW = OW(4344),
+      JW = OW(4337),
+      hW = OW(2085),
+      HW = OW(25),
+      nW = OW(10049),
+      uW = OW(5161),
+      oW = OW(5187),
+      dW = OW(5192),
+      eW = OW(37369);
+    const vW = Object.create(null),
+      gW = Object.create(null),
+      DW = {
+        DEFAULT_FONT_SIZE: 47,
+        DEFAULT_SUBTITLE_FONT_SIZE: 30,
+        HORIZONTAL_PADDING: 30,
+        VERTICAL_PADDING: 22,
+        TEXT_SHADOW_WIDTH: 2,
+        TEXT_PLANE_RATIO: .2 / 64,
+        LINE_SPACING: 8,
+        ICON_PADDING: 6,
+        ANIMATE_IN_DELAY: 40,
+        EFFECT_ICON_SIZE: 70
+      },
+      VW = {
+        text: WW => `bolder ${WW}px 'Jetbrains Mono'`
+      },
+      pW = 41,
+      fW = {
+        icon: yW.e,
+        mainRGB: "transparent",
+        chatTag: [],
+        nameTag: {
+          iconRGB: "#f38ab6",
+          iconShadowRGB: "black"
+        },
+        visible: !0
+      };
+
+    function CW(WW, iW) {
+      return WW.flatMap((WW => {
+        var OW;
+        if ("object" === typeof WW && "chatTag" in WW) return [WW];
+        if (qW(WW)) return [WW];
+        if ((0, NW.Cb)(WW)) return [{
+          str: ""
+        }];
+        if ((0, NW.yb)(WW)) {
+          const OW = (0, nW.c)(WW.action);
+          if (OW) {
+            var PW;
+            const mW = WW.style;
+            return [{
+              icon: (0, nW.e)(OW),
+              style: {
+                fontSize: null !== (PW = null === mW || void 0 === mW ? void 0 : mW.fontSize) && void 0 !== PW ? PW : `${iW}px`,
+                opacity: null === mW || void 0 === mW ? void 0 : mW.opacity
+              }
+            }]
           }
+          const mW = (0, hW.r)(WW.action, HW.d.get("isTouchScreen")),
+            EW = (0, hW.n)(WW.action);
+          null === mW && null === EW && console.warn(`No key binding found for action: ${WW.action}`), WW = {
+            str: null !== mW && void 0 !== mW ? mW : (0, hW.m)(EW),
+            style: WW.style
+          }
+        }
+        let LW;
+        return LW = "string" !== typeof WW && "str" in WW ? WW : {
+            str: WW
+          }, null !== (OW = LW.style) && void 0 !== OW && OW.fontSize ? LW.style.fontSize.endsWith("px") || console.warn(new Error("Canvas text font size should be in px").stack) : LW.style ? LW.style.fontSize = `${iW}px` : LW.style = {
+            fontSize: `${iW}px`
+          },
+          function(WW) {
+            if ("object" !== typeof WW.str || !("translationKey" in WW.str)) return [WW];
+            const iW = EW.e.get().getCurrentLanguageCode(),
+              OW = (0, mW.o)(WW.str.params, YW.e.shown),
+              NW = (0, mW.t)(iW, WW.str.translationKey, OW);
+            if (NW.every((WW => "string" === typeof WW))) return [WW];
+            return NW.map((iW => "string" === typeof iW ? {
+              str: iW,
+              style: WW.style
+            } : {
+              icon: iW.icon,
+              style: {
+                fontSize: WW.style.fontSize,
+                opacity: WW.style.opacity
+              }
+            }))
+          }(LW)
+      }))
+    }
+
+    function XW(WW) {
+      const iW = Object.keys(WW).length;
       return {
-        position: oO([BB.min[0] + DB[0] / 2, BB.min[1] + DB[1] / 2, BB.min[2] + DB[2] / 2], jO(QB, -MB * EB)),
-        heading: YB.heading,
-        pitch: YB.pitch
+        width: DW.EFFECT_ICON_SIZE * iW,
+        height: iW > 0 ? DW.EFFECT_ICON_SIZE : 0
       }
     }
 
-    function YO(BB, OB, GB) {
-      const YB = QO(BB),
-        DB = QO(GB),
-        QB = oO(BB.position, jO(OB, -1)),
-        oB = [0, 1, 2].reduce(((BB, OB) => oO(BB, jO(DB[OB], yO(QB, YB[OB])))), [0, 0, 0]);
+    function BW(WW) {
+      return WW && void 0 !== WW.str
+    }
+
+    function qW(WW) {
+      return WW && "object" === typeof WW && "icon" in WW && !("mainRGB" in WW)
+    }
+
+    function RW(WW) {
+      return WW && "object" === typeof WW && "mainRGB" in WW
+    }
+
+    function GW(WW) {
+      var iW, OW;
+      const mW = null !== (iW = BW(WW) ? null === (OW = WW.style) || void 0 === OW ? void 0 : OW.fontSize : void 0) && void 0 !== iW ? iW : `${DW.DEFAULT_FONT_SIZE}px`;
+      return VW.text(Number(mW.replace("px", "")))
+    }
+
+    function IW(WW) {
+      var iW;
+      const OW = null !== (iW = Object.hasOwn(eW.e, WW) ? eW.e[WW] : null) && void 0 !== iW ? iW : (0, PW.e)(WW, (0, PW.m)(WW));
+      return OW || console.warn(`Unknown rank icon "${WW}" \u2014 not in the bundled Font Awesome subset.`), OW
+    }
+
+    function aW(WW) {
+      return RW(WW) ? "" : rW(WW)
+    }
+
+    function rW(WW) {
+      if (!BW(WW)) return "";
+      if ("string" === typeof WW.str) return WW.str;
+      if ("translationKey" in WW.str) {
+        const iW = EW.e.get().getCurrentLanguageCode(),
+          OW = (0, mW.o)(WW.str.params, YW.e.shown);
+        return (0, mW.u)(iW, WW.str.translationKey, OW)
+      }
+      return "entityName" in WW.str ? (0, SW.g)(WW.str.entityName, YW.e.shown) : ""
+    }
+
+    function zW(WW, iW) {
+      if ((0, KW.K)(WW) || 0 === WW.length) return {
+        width: 0,
+        height: 0,
+        sizeCache: []
+      };
+      let OW = 0;
+      for (const PW of WW) {
+        const WW = wi(PW);
+        OW = Math.max(OW, WW)
+      }
+      const mW = OW + DW.VERTICAL_PADDING,
+        EW = [];
+      let NW = 0;
+      NW += Wi(void 0, WW[0]);
+      for (let PW = 0; PW < WW.length; PW++) {
+        const OW = WW[PW],
+          mW = {
+            x: NW,
+            width: 0
+          };
+        NW += FW(OW, iW), NW += Wi(OW, WW[PW + 1]), mW.width = NW - mW.x, EW.push(mW)
+      }
       return {
-        position: oO(OB, oB),
-        heading: GB.heading,
-        pitch: GB.pitch
+        width: NW,
+        height: mW,
+        sizeCache: EW
       }
     }
 
-    function DO(BB) {
-      return jO(oO(BB.min, BB.max), .5)
+    function FW(WW, iW) {
+      if (qW(WW)) return wi(WW);
+      if (RW(WW)) return function(WW) {
+        const iW = IW(WW);
+        if (!iW) return pW;
+        const [OW, mW] = iW.icon;
+        return pW * (OW / mW)
+      }(WW.icon) + DW.HORIZONTAL_PADDING;
+      const OW = GW(WW);
+      return function(WW, iW, OW) {
+        return OW.font = iW, OW.measureText(WW).width
+      }(rW(WW), OW, iW)
     }
 
-    function QO(BB) {
-      const OB = BO(BB),
-        GB = OO(BB.heading);
-      return [OB, GB, JO(OB, GB)]
+    function QW(WW) {
+      return BW(WW) || qW(WW)
     }
 
-    function oO(BB, OB) {
-      return [BB[0] + OB[0], BB[1] + OB[1], BB[2] + OB[2]]
+    function Wi(WW, iW) {
+      const OW = QW(WW),
+        mW = QW(iW);
+      return void 0 === WW && !mW || !OW && void 0 === iW ? 0 : OW !== mW ? .5 * DW.HORIZONTAL_PADDING : 0
+    }
+    let ii;
+
+    function Oi() {
+      return ii ??= document.createElement("canvas").getContext("2d"), ii
+    }
+    const mi = () => 0;
+
+    function Ei(WW, iW, OW, mW, EW) {
+      let NW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mi;
+      iW += Wi(void 0, WW[0]);
+      for (let PW = 0; PW < WW.length; PW++) {
+        const LW = WW[PW],
+          cW = Ni(LW, iW, OW, mW, EW, void 0, NW);
+        iW += 0 === cW ? 0 : cW + Wi(LW, WW[PW + 1])
+      }
     }
 
-    function jO(BB, OB) {
-      return [BB[0] * OB, BB[1] * OB, BB[2] * OB]
+    function Ni(WW, iW, OW, mW, EW, PW) {
+      var ZW;
+      let xW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mi;
+      if (qW(WW)) {
+        const mW = wi(WW);
+        return function(WW, iW, OW, mW, EW) {
+          var NW;
+          let PW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mi;
+          const ZW = (0, tW.k)(EW);
+          OW += DW.VERTICAL_PADDING / 2;
+          const xW = PW(),
+            lW = (0, nW.l)(WW.icon),
+            AW = WW => {
+              if (xW === PW())
+                if (ZW.imageSmoothingEnabled = lW, lW && WW.width > WW.height) {
+                  const EW = mW * WW.height / WW.width;
+                  ZW.drawImage(WW, iW, OW + (mW - EW) / 2, mW, EW)
+                } else ZW.drawImage(WW, iW, OW, mW, mW)
+            };
+          if (gW[WW.icon]) return void AW(gW[WW.icon]);
+          if (vW[WW.icon]) {
+            const iW = vW[WW.icon];
+            if (iW.complete) return void AW(iW)
+          }
+          const bW = (0, uW.j)(WW.icon, mW);
+          if (bW) return void AW(bW);
+          const jW = function(WW) {
+              const iW = (0, nW.i)(WW);
+              if (null !== iW) return {
+                url: iW,
+                type: "padGlyph"
+              };
+              if (LW.c.includes(WW)) return {
+                url: JW.d.getTexture(WW, TW.g.ICON).url,
+                type: "ingameIcon"
+              };
+              {
+                var OW;
+                const iW = null === (OW = wW.l.itemsClient[WW]) || void 0 === OW ? void 0 : OW.type;
+                return ci.includes(iW) ? (console.error(new Error(`Invalid icon type ${iW} is not supported in nametags`).stack), {
+                  url: "",
+                  type: ""
+                }) : (0, oW.c)(iW) ? {
+                  url: "",
+                  type: iW
+                } : "GrayscaleArmour" === iW || cW.b[WW] ? {
+                  url: (0, dW.f)(WW),
+                  type: iW,
+                  tint: (0, cW.c)(WW)
+                } : {
+                  url: (0, dW.f)(WW),
+                  type: iW
+                }
+              }
+            }(WW.icon),
+            UW = jW.tint;
+          let sW = jW.url;
+          if ((0, oW.c)(null === (NW = wW.l.itemsClient[WW.icon]) || void 0 === NW ? void 0 : NW.type)) {
+            const iW = WW.icon;
+            if (!wW.l.itemsClient[iW].itemTexture) return void(0, uW.g)(iW, mW).then((WW => {
+              AW(WW), (0, kW.l)(EW)
+            }), (() => {}));
+            sW = (0, dW.f)(iW)
+          }
+          if (!sW) return;
+          const MW = new Image;
+          lW && (MW.crossOrigin = "anonymous");
+          if (MW.src = sW, UW) return void(MW.onload = () => {
+            const iW = function(WW, iW) {
+              let [OW, mW, EW] = iW;
+              const NW = document.createElement("canvas");
+              NW.width = WW.naturalWidth, NW.height = WW.naturalHeight;
+              const PW = NW.getContext("2d");
+              return PW.drawImage(WW, 0, 0), PW.globalCompositeOperation = "multiply", PW.fillStyle = `rgb(${OW}, ${mW}, ${EW})`, PW.fillRect(0, 0, NW.width, NW.height), PW.globalCompositeOperation = "destination-in", PW.drawImage(WW, 0, 0), NW
+            }(MW, UW);
+            gW[WW.icon] = iW, AW(iW), (0, kW.l)(EW)
+          });
+          vW[WW.icon] = MW, MW.onload = () => {
+            AW(MW), (0, kW.l)(EW)
+          }
+        }(WW, iW, OW, mW, EW, xW), mW
+      }
+      const lW = (0, tW.k)(EW);
+      if (RW(WW)) {
+        const EW = null !== PW && void 0 !== PW ? PW : FW(WW, lW);
+        return function(WW, iW, OW, mW, EW, NW) {
+          var PW, LW;
+          NW.fillStyle = WW.mainRGB, NW.fillRect(iW, OW, mW, EW);
+          const cW = IW(WW.icon);
+          if (!cW) return;
+          const wW = (null === (PW = WW.nameTag) || void 0 === PW ? void 0 : PW.iconRGB) || "white",
+            tW = (null === (LW = WW.nameTag) || void 0 === LW ? void 0 : LW.iconShadowRGB) || "black",
+            [ZW, xW, , , lW] = cW.icon,
+            AW = "string" === typeof lW ? lW : lW.join(" "),
+            bW = pW / xW,
+            jW = iW + (mW - ZW * bW) / 2,
+            UW = OW + (EW - pW) / 2,
+            kW = new Path2D(AW),
+            sW = NW;
+          for (const MW of [-1, 1])
+            for (const WW of [-1, 1]) Pi(sW, kW, jW + DW.TEXT_SHADOW_WIDTH * MW, UW + DW.TEXT_SHADOW_WIDTH * WW, bW, tW);
+          Pi(sW, kW, jW, UW, bW, wW)
+        }(WW, iW, OW, EW, mW, lW), EW
+      }
+      const AW = rW(WW);
+      if (0 === AW.length) return 0;
+      const bW = GW(WW);
+      lW.font = bW;
+      const jW = null !== PW && void 0 !== PW ? PW : FW(WW, lW),
+        UW = BW(WW) && null !== (ZW = (0, NW.cc)(WW.style)) && void 0 !== ZW ? ZW : "white";
+      let sW = OW + mW;
+      return sW -= DW.VERTICAL_PADDING, sW += BW(WW) ? 5 : 0,
+        function(WW, iW, OW, mW, EW, NW, PW) {
+          let LW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : DW.TEXT_SHADOW_WIDTH;
+          for (const cW of [-1, 1])
+            for (const EW of [-1, 1]) Li(PW, WW, iW + LW * cW, OW + LW * EW, mW, NW);
+          Li(PW, WW, iW, OW, mW, EW)
+        }(AW, iW, sW, bW, UW, "black", lW), jW
     }
 
-    function yO(BB, OB) {
-      return BB[0] * OB[0] + BB[1] * OB[1] + BB[2] * OB[2]
+    function Pi(WW, iW, OW, mW, EW, NW) {
+      WW.save(), WW.translate(OW, mW), WW.scale(EW, EW), WW.fillStyle = NW, WW.fill(iW), WW.restore()
     }
 
-    function JO(BB, OB) {
-      return [BB[1] * OB[2] - BB[2] * OB[1], BB[2] * OB[0] - BB[0] * OB[2], BB[0] * OB[1] - BB[1] * OB[0]]
+    function Li(WW, iW, OW, mW, EW, NW) {
+      WW.font = EW, WW.fillStyle = NW, WW.fillText(iW, OW, mW)
     }
+    const ci = ["Gun"];
+
+    function wi(WW) {
+      if (BW(WW) || qW(WW)) {
+        var iW, OW;
+        const mW = null !== (iW = null === (OW = WW.style) || void 0 === OW ? void 0 : OW.fontSize) && void 0 !== iW ? iW : `${DW.DEFAULT_FONT_SIZE}px`;
+        return Number(mW.replace("px", "")) || DW.DEFAULT_FONT_SIZE
+      }
+      return DW.DEFAULT_FONT_SIZE
+    }
+
+    function ti(WW, iW, OW) {
+      let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+        EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        NW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      const PW = WW.TZ.bD(),
+        LW = (0, kW.g)(WW, `${OW}Tex`, mW, EW, {
+          mipped: ZW.k.nearestLinearMipLinear,
+          unmipped: ZW.k.nearestLinearMipNearest
+        }),
+        cW = (0, xW.r)(WW.TZ, OW, (0, lW.f)({
+          width: 1,
+          height: 1
+        }));
+      cW.metadata = new WW.TZ.Qb, cW.metadata[AW.E] = !0, cW.billboardMode = bW.e.BILLBOARDMODE_ALL, cW.renderingGroupId = jW.c;
+      const wW = WW.EY.add([0, 0, 0], 1, 1, cW, [0, 0, 0]);
+      let tW;
+      WW.EY.zD(wW, WW.EY.names.qS, {
+        MA: iW
+      });
+      const {
+        mirror: KW
+      } = (0, sW.b)({
+        name: `${OW}Mat`,
+        rb: PW,
+        sets: {
+          specularColor: [0, 0, 0],
+          ambientColor: [1.3, 1.3, 1.3],
+          emissiveColor: [1, 1, 1],
+          ...(0, kW.k)(LW)
+        },
+        features: iW => {
+          (0, kW.c)(iW, "planes"), tW = (0, MW.e)(iW, WW.TZ, NW ? {
+            x: 1,
+            y: 1,
+            z: 1,
+            w: 1
+          } : void 0)
+        },
+        unrendered: !0,
+        freeze: !0
+      });
+      return cW.material = KW, NW ? WW.EY.XiW(wW).dLW = !1 : (0, UW.d)(cW), cW.jD.add((() => {
+        KW.dispose(!1, !0)
+      })), {
+        planeEId: wW,
+        plane: cW,
+        texture: LW,
+        lightState: tW
+      }
+    }
+
+    function Zi(WW, iW) {
+      let OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        mW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const EW = (0, jW.r)(iW, OW, mW);
+      return WW.renderingGroupId = EW ? jW.c : jW.k, EW
+    }
+  },
+  39913: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => wW,
+      g: () => PW,
+      k: () => cW,
+      l: () => LW
+    });
+    var mW = OW(38437),
+      EW = OW(38419),
+      NW = OW(39915);
+
+    function PW(WW, iW, OW, EW, NW) {
+      const PW = function(WW) {
+          return !WW.TZ.engine.needPOTTextures
+        }(WW),
+        LW = PW ? NW.mipped : NW.unmipped;
+      return (0, mW.o)(WW.TZ.bD(), iW, {
+        width: OW,
+        height: EW,
+        mipmaps: PW,
+        samplingMode: LW,
+        hasAlpha: !0
+      })
+    }
+
+    function LW(WW) {
+      (0, mW.Y)(WW, !0, !WW.sampler.noMipmap)
+    }
+
+    function cW(WW) {
+      return {
+        diffuseTexture: WW,
+        useAlphaFromDiffuseTexture: !0,
+        transparencyMode: EW.n.alphaTestAndBlend,
+        alphaCutOff: .05,
+        alphaMode: EW.b.premultiplied,
+        forceDepthWrite: !0
+      }
+    }
+
+    function wW(WW, iW) {
+      WW.diffuseTexture.sampler.noMipmap || (0, EW.q)(WW, NW.d, {
+        lodBias: NW.b[iW]
+      })
+    }
+  },
+  39976: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      return "object" === typeof WW && null !== WW ? Object.assign(WW, {
+        startStep: iW
+      }) : WW
+    }
+
+    function EW(WW) {
+      return "object" === typeof WW && null !== WW && "startStep" in WW ? WW.startStep : null
+    }
+    OW.d(iW, {
+      d: () => EW,
+      f: () => mW
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

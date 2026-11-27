@@ -1,573 +1,1037 @@
 export const id = 293;
 export const ids = [293];
 export const modules = {
-  41468: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => nB,
-      c: () => VB,
-      d: () => WB,
-      f: () => AB,
-      j: () => RB,
-      k: () => NB
+  41715: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => JW
     });
-    var YB = GB(41022),
-      DB = GB(41091),
-      QB = GB(37778),
-      oB = GB(41150),
-      jB = GB(41470),
-      yB = GB(41354),
-      JB = GB(41041),
-      MB = GB(41346),
-      PB = GB(37796),
-      zB = GB(41333),
-      lB = GB(41325),
-      pB = GB(41368),
-      qB = GB(37823);
-    const ZB = {
-      effect: null,
-      subMesh: null
-    };
-    class NB extends MB.d {
-      constructor(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        super(BB, OB, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new QB.d, this._cachedWorldViewProjectionMatrix = new QB.d, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = GB, this._options = {
-          needAlphaBlending: !1,
-          needAlphaTesting: !1,
-          attributes: ["position", "normal", "uv"],
-          uniforms: ["worldViewProjection"],
-          uniformBuffers: [],
-          samplers: [],
-          externalTextures: [],
-          samplerObjects: [],
-          storageBuffers: [],
-          defines: [],
-          useClipPlane: !1,
-          ...YB
+    var mW = OW(41516),
+      EW = OW(41519),
+      NW = OW(38241),
+      PW = OW(41719),
+      LW = OW(41753),
+      cW = OW(41700),
+      wW = OW(41620);
+    let tW = (() => {
+      var WW;
+      let iW, OW, PW, LW, tW, ZW, xW, lW, AW, bW, jW, UW = [],
+        kW = [],
+        sW = [],
+        MW = [],
+        KW = [],
+        SW = [],
+        YW = [],
+        yW = [],
+        TW = [],
+        JW = [],
+        hW = [],
+        HW = [],
+        nW = [],
+        uW = [],
+        oW = [],
+        dW = [],
+        eW = [],
+        vW = [],
+        gW = [],
+        DW = [],
+        VW = [],
+        pW = [];
+      return WW = class {
+        constructor() {
+          this.keysUp = (0, mW.g)(this, UW, [38]), this.keysUpward = ((0, mW.g)(this, kW), (0, mW.g)(this, sW, [33])), this.keysDown = ((0, mW.g)(this, MW), (0, mW.g)(this, KW, [40])), this.keysDownward = ((0, mW.g)(this, SW), (0, mW.g)(this, YW, [34])), this.keysLeft = ((0, mW.g)(this, yW), (0, mW.g)(this, TW, [37])), this.keysRight = ((0, mW.g)(this, JW), (0, mW.g)(this, hW, [39])), this.rotationSpeed = ((0, mW.g)(this, HW), (0, mW.g)(this, nW, .5)), this.keysRotateLeft = ((0, mW.g)(this, uW), (0, mW.g)(this, oW, [])), this.keysRotateRight = ((0, mW.g)(this, dW), (0, mW.g)(this, eW, [])), this.keysRotateUp = ((0, mW.g)(this, vW), (0, mW.g)(this, gW, [])), this.keysRotateDown = ((0, mW.g)(this, DW), (0, mW.g)(this, VW, [])), this._keys = ((0, mW.g)(this, pW), new Array)
         }
-      }
-      get shaderPath() {
-        return this._shaderPath
-      }
-      set shaderPath(BB) {
-        this._shaderPath = BB
-      }
-      get options() {
-        return this._options
-      }
-      get isMultiview() {
-        return this._multiview
-      }
-      getClassName() {
-        return "ShaderMaterial"
-      }
-      needAlphaBlending() {
-        return this.alpha < 1 || this._options.needAlphaBlending
-      }
-      needAlphaTesting() {
-        return this._options.needAlphaTesting
-      }
-      _checkUniform(BB) {
-        -1 === this._options.uniforms.indexOf(BB) && this._options.uniforms.push(BB)
-      }
-      setTexture(BB, OB) {
-        return -1 === this._options.samplers.indexOf(BB) && this._options.samplers.push(BB), this._textures[BB] = OB, this
-      }
-      setInternalTexture(BB, OB) {
-        return -1 === this._options.samplers.indexOf(BB) && this._options.samplers.push(BB), this._internalTextures[BB] = OB, this
-      }
-      removeTexture(BB) {
-        delete this._textures[BB]
-      }
-      setTextureArray(BB, OB) {
-        return -1 === this._options.samplers.indexOf(BB) && this._options.samplers.push(BB), this._checkUniform(BB), this._textureArrays[BB] = OB, this
-      }
-      setExternalTexture(BB, OB) {
-        return -1 === this._options.externalTextures.indexOf(BB) && this._options.externalTextures.push(BB), this._externalTextures[BB] = OB, this
-      }
-      setFloat(BB, OB) {
-        return this._checkUniform(BB), this._floats[BB] = OB, this
-      }
-      setInt(BB, OB) {
-        return this._checkUniform(BB), this._ints[BB] = OB, this
-      }
-      setUInt(BB, OB) {
-        return this._checkUniform(BB), this._uints[BB] = OB, this
-      }
-      setFloats(BB, OB) {
-        return this._checkUniform(BB), this._floatsArrays[BB] = OB, this
-      }
-      setColor3(BB, OB) {
-        return this._checkUniform(BB), this._colors3[BB] = OB, this
-      }
-      setColor3Array(BB, OB) {
-        return this._checkUniform(BB), this._colors3Arrays[BB] = OB.reduce(((BB, OB) => (BB.push(OB.r, OB.g, OB.b), BB)), []), this
-      }
-      setColor4(BB, OB) {
-        return this._checkUniform(BB), this._colors4[BB] = OB, this
-      }
-      setColor4Array(BB, OB) {
-        return this._checkUniform(BB), this._colors4Arrays[BB] = OB.reduce(((BB, OB) => (BB.push(OB.r, OB.g, OB.b, OB.a), BB)), []), this
-      }
-      setVector2(BB, OB) {
-        return this._checkUniform(BB), this._vectors2[BB] = OB, this
-      }
-      setVector3(BB, OB) {
-        return this._checkUniform(BB), this._vectors3[BB] = OB, this
-      }
-      setVector4(BB, OB) {
-        return this._checkUniform(BB), this._vectors4[BB] = OB, this
-      }
-      setQuaternion(BB, OB) {
-        return this._checkUniform(BB), this._quaternions[BB] = OB, this
-      }
-      setQuaternionArray(BB, OB) {
-        return this._checkUniform(BB), this._quaternionsArrays[BB] = OB.reduce(((BB, OB) => (OB.toArray(BB, BB.length), BB)), []), this
-      }
-      setMatrix(BB, OB) {
-        return this._checkUniform(BB), this._matrices[BB] = OB, this
-      }
-      setMatrices(BB, OB) {
-        this._checkUniform(BB);
-        const GB = new Float32Array(16 * OB.length);
-        for (let YB = 0; YB < OB.length; YB++) {
-          OB[YB].copyToArray(GB, 16 * YB)
+        attachControl(WW) {
+          WW = wW.f.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.bD(), this._engine = this._scene.VA(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+            this._keys.length = 0
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((iW => {
+            const OW = iW.event;
+            if (!OW.metaKey)
+              if (iW.type === cW.c.KEYDOWN) {
+                if (-1 !== this.keysUp.indexOf(OW.keyCode) || -1 !== this.keysDown.indexOf(OW.keyCode) || -1 !== this.keysLeft.indexOf(OW.keyCode) || -1 !== this.keysRight.indexOf(OW.keyCode) || -1 !== this.keysUpward.indexOf(OW.keyCode) || -1 !== this.keysDownward.indexOf(OW.keyCode) || -1 !== this.keysRotateLeft.indexOf(OW.keyCode) || -1 !== this.keysRotateRight.indexOf(OW.keyCode) || -1 !== this.keysRotateUp.indexOf(OW.keyCode) || -1 !== this.keysRotateDown.indexOf(OW.keyCode)) {
+                  -1 === this._keys.indexOf(OW.keyCode) && this._keys.push(OW.keyCode), WW || OW.preventDefault()
+                }
+              } else if (-1 !== this.keysUp.indexOf(OW.keyCode) || -1 !== this.keysDown.indexOf(OW.keyCode) || -1 !== this.keysLeft.indexOf(OW.keyCode) || -1 !== this.keysRight.indexOf(OW.keyCode) || -1 !== this.keysUpward.indexOf(OW.keyCode) || -1 !== this.keysDownward.indexOf(OW.keyCode) || -1 !== this.keysRotateLeft.indexOf(OW.keyCode) || -1 !== this.keysRotateRight.indexOf(OW.keyCode) || -1 !== this.keysRotateUp.indexOf(OW.keyCode) || -1 !== this.keysRotateDown.indexOf(OW.keyCode)) {
+              const iW = this._keys.indexOf(OW.keyCode);
+              iW >= 0 && this._keys.splice(iW, 1), WW || OW.preventDefault()
+            }
+          })))
         }
-        return this._matrixArrays[BB] = GB, this
-      }
-      setMatrix3x3(BB, OB) {
-        return this._checkUniform(BB), this._matrices3x3[BB] = OB, this
-      }
-      setMatrix2x2(BB, OB) {
-        return this._checkUniform(BB), this._matrices2x2[BB] = OB, this
-      }
-      setArray2(BB, OB) {
-        return this._checkUniform(BB), this._vectors2Arrays[BB] = OB, this
-      }
-      setArray3(BB, OB) {
-        return this._checkUniform(BB), this._vectors3Arrays[BB] = OB, this
-      }
-      setArray4(BB, OB) {
-        return this._checkUniform(BB), this._vectors4Arrays[BB] = OB, this
-      }
-      setUniformBuffer(BB, OB) {
-        return -1 === this._options.uniformBuffers.indexOf(BB) && this._options.uniformBuffers.push(BB), this._uniformBuffers[BB] = OB, this
-      }
-      setTextureSampler(BB, OB) {
-        return -1 === this._options.samplerObjects.indexOf(BB) && this._options.samplerObjects.push(BB), this._textureSamplers[BB] = OB, this
-      }
-      setStorageBuffer(BB, OB) {
-        return -1 === this._options.storageBuffers.indexOf(BB) && this._options.storageBuffers.push(BB), this._storageBuffers[BB] = OB, this
-      }
-      setDefine(BB, OB) {
-        const GB = BB.trimEnd() + " ",
-          YB = this.options.defines.findIndex((OB => OB === BB || OB.startsWith(GB)));
-        return YB >= 0 && this.options.defines.splice(YB, 1), ("boolean" !== typeof OB || OB) && this.options.defines.push(GB + OB), this
-      }
-      isReadyForSubMesh(BB, OB, GB) {
-        return this.isReady(BB, GB, OB)
-      }
-      isReady(BB, OB, GB) {
-        const YB = GB && this._storeEffectOnSubMeshes;
-        if (this.isFrozen) {
-          const BB = YB ? GB._drawWrapper : this._drawWrapper;
-          if (BB.effect && BB._wasPreviouslyReady && BB._wasPreviouslyUsingInstances === OB) return !0
+        detachControl() {
+          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
         }
-        const QB = this.JF(),
-          jB = QB.Lp(),
-          JB = [],
-          MB = [];
-        let PB = null,
-          qB = this._shaderPath,
-          NB = this._options.uniforms,
-          RB = this._options.uniformBuffers,
-          WB = this._options.samplers;
-        jB.getCaps().multiview && QB.activeCamera && QB.activeCamera.outputRenderTarget && QB.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, JB.push("#define MULTIVIEW"), -1 !== NB.indexOf("viewProjection") && -1 === NB.indexOf("viewProjectionR") && NB.push("viewProjectionR"));
-        for (let DB = 0; DB < this._options.defines.length; DB++) {
-          const BB = 0 === this._options.defines[DB].indexOf("#define") ? this._options.defines[DB] : `#define ${this._options.defines[DB]}`;
-          JB.push(BB)
-        }
-        for (let DB = 0; DB < this._options.attributes.length; DB++) MB.push(this._options.attributes[DB]);
-        if (BB && BB.isVerticesDataPresent(oB.h.ColorKind) && (-1 === MB.indexOf(oB.h.ColorKind) && MB.push(oB.h.ColorKind), JB.push("#define VERTEXCOLOR")), OB && (JB.push("#define INSTANCES"), (0, lB.rb)(MB, this._materialHelperNeedsPreviousMatrices), BB?.hasThinInstances && (JB.push("#define THIN_INSTANCES"), BB && BB.isVerticesDataPresent(oB.h.ColorInstanceKind) && (MB.push(oB.h.ColorInstanceKind), JB.push("#define INSTANCESCOLOR")))), BB && BB.useBones && BB.computeBonesUsingShaders && BB.skeleton) {
-          MB.push(oB.h.MatricesIndicesKind), MB.push(oB.h.MatricesWeightsKind), BB.numBoneInfluencers > 4 && (MB.push(oB.h.MatricesIndicesExtraKind), MB.push(oB.h.MatricesWeightsExtraKind));
-          const OB = BB.skeleton;
-          JB.push("#define NUM_BONE_INFLUENCERS " + BB.numBoneInfluencers), PB = new yB.c, PB.addCPUSkinningFallback(0, BB), OB.isUsingTextureForMatrices ? (JB.push("#define BONETEXTURE"), -1 === NB.indexOf("boneTextureInfo") && NB.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (JB.push("#define BonesPerMesh " + (OB.bones.length + 1)), -1 === NB.indexOf("mBones") && NB.push("mBones"))
-        } else JB.push("#define NUM_BONE_INFLUENCERS 0");
-        let AB = 0;
-        const VB = BB ? BB.morphTargetManager : null;
-        if (VB) {
-          const OB = -1 !== JB.indexOf("#define UV1"),
-            GB = -1 !== JB.indexOf("#define UV2"),
-            YB = -1 !== JB.indexOf("#define TANGENT"),
-            DB = -1 !== JB.indexOf("#define NORMAL"),
-            QB = -1 !== JB.indexOf("#define VERTEXCOLOR");
-          AB = (0, lB.V)(VB, JB, MB, BB, !0, DB, YB, OB, GB, QB), VB.isUsingTextureForTargets && (-1 === NB.indexOf("morphTargetTextureIndices") && NB.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), AB > 0 && (NB = NB.slice(), NB.push("morphTargetInfluences"), NB.push("morphTargetCount"), NB.push("morphTargetTextureInfo"), NB.push("morphTargetTextureIndices"))
-        } else JB.push("#define NUM_MORPH_INFLUENCERS 0");
-        if (BB) {
-          const GB = BB.bakedVertexAnimationManager;
-          GB && GB.isEnabled && (JB.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === NB.indexOf("bakedVertexAnimationSettings") && NB.push("bakedVertexAnimationSettings"), -1 === NB.indexOf("bakedVertexAnimationTextureSizeInverted") && NB.push("bakedVertexAnimationTextureSizeInverted"), -1 === NB.indexOf("bakedVertexAnimationTime") && NB.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), OB && MB.push("bakedVertexAnimationSettingsInstanced"))
-        }
-        for (const DB in this._textures)
-          if (!this._textures[DB].isReady()) return !1;
-        for (const DB in this._internalTextures)
-          if (!this._internalTextures[DB].isReady) return !1;
-        BB && this.needAlphaTestingForMesh(BB) && JB.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, zB.e)(NB), (0, zB.o)(this, QB, JB)), QB.fogEnabled && BB?.applyFog && QB.fogMode !== DB.e.FOGMODE_NONE && (JB.push("#define FOG"), -1 === NB.indexOf("view") && NB.push("view"), -1 === NB.indexOf("vFogInfos") && NB.push("vFogInfos"), -1 === NB.indexOf("vFogColor") && NB.push("vFogColor")), this._useLogarithmicDepth && (JB.push("#define LOGARITHMICDEPTH"), -1 === NB.indexOf("logarithmicDepthConstant") && NB.push("logarithmicDepthConstant"));
-        const SB = GB ? GB.getRenderingMesh() : BB;
-        if (SB && this.useVertexPulling) {
-          const BB = SB.geometry;
-          BB && (this._vertexPullingMetadata = (0, pB.e)(BB), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((BB, OB) => {
-            NB.push(`vp_${OB}_info`)
-          }))), JB.push("#define USE_VERTEX_PULLING");
-          const OB = SB.geometry?.getIndexBuffer();
-          OB && !SB.isUnIndexed && (JB.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), OB.is32Bits && JB.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
-        }
-        this.customShaderNameResolve && (NB = NB.slice(), RB = RB.slice(), WB = WB.slice(), qB = this.customShaderNameResolve(this.name, NB, RB, WB, JB, MB));
-        const nB = YB ? GB._getDrawWrapper(void 0, !0) : this._drawWrapper,
-          UB = nB?.effect ?? null,
-          fB = nB?.defines ?? null,
-          kB = JB.join("\n");
-        let dB = UB;
-        return fB !== kB && (dB = jB.createEffect(qB, {
-          attributes: MB,
-          uniformsNames: NB,
-          uniformBuffersNames: RB,
-          samplers: WB,
-          defines: kB,
-          fallbacks: PB,
-          onCompiled: this.onCompiled,
-          onError: this.onError,
-          indexParameters: {
-            maxSimultaneousMorphTargets: AB
-          },
-          shaderLanguage: this._options.shaderLanguage,
-          extraInitializationsAsync: this._options.extraInitializationsAsync
-        }, jB), YB ? GB.setEffect(dB, kB, this._materialContext) : nB && nB.setEffect(dB, kB), this._onEffectCreatedObservable && (ZB.effect = dB, ZB.subMesh = GB ?? BB?.iW[0] ?? null, this._onEffectCreatedObservable.notifyObservers(ZB))), nB._wasPreviouslyUsingInstances = !!OB, !!dB?.isReady() && (UB !== dB && QB.resetCachedMaterial(), nB._wasPreviouslyReady = !0, !0)
-      }
-      bindOnlyWorldMatrix(BB, OB) {
-        const GB = OB ?? this.getEffect();
-        if (!GB) return;
-        const YB = this._options.uniforms; - 1 !== YB.indexOf("world") && GB.setMatrix("world", BB);
-        const DB = this.JF(); - 1 !== YB.indexOf("worldView") && (BB.multiplyToRef(DB.getViewMatrix(), this._cachedWorldViewMatrix), GB.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== YB.indexOf("worldViewProjection") && (BB.multiplyToRef(DB.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), GB.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== YB.indexOf("view") && GB.setMatrix("view", DB.getViewMatrix())
-      }
-      bindForSubMesh(BB, OB, GB) {
-        this.bind(BB, OB, GB._drawWrapperOverride?.effect, GB)
-      }
-      bind(BB, OB, GB, YB) {
-        const DB = YB && this._storeEffectOnSubMeshes,
-          QB = GB ?? (DB ? YB.effect : this.getEffect());
-        if (!QB) return;
-        const oB = this.JF();
-        this._activeEffect = QB, this.bindOnlyWorldMatrix(BB, GB);
-        const jB = this._options.uniformBuffers;
-        let yB = !1;
-        if (QB && jB && jB.length > 0 && oB.Lp().supportsUniformBuffers)
-          for (let MB = 0; MB < jB.length; ++MB) {
-            switch (jB[MB]) {
-              case "Mesh":
-                OB && (OB.getMeshUniformBuffer().bindToEffect(QB, "Mesh"), OB.transferToEffect(BB));
-                break;
-              case "Scene":
-                (0, lB.E)(QB, oB.getSceneUniformBuffer()), oB.finalizeSceneUbo(), yB = !0
+        checkInputs() {
+          if (this._onKeyboardObserver) {
+            const WW = this.camera,
+              iW = WW.movement.input,
+              OW = iW.getEntry("keyboard", "translate"),
+              mW = iW.getEntry("keyboard", "rotate"),
+              EW = mW?.sensitivity ?? 1,
+              PW = WW._localDirection.yWW(0, 0, 0);
+            for (let NW = 0; NW < this._keys.length; NW++) {
+              const iW = this._keys[NW]; - 1 !== this.keysLeft.indexOf(iW) ? PW.x -= 1 : -1 !== this.keysUp.indexOf(iW) ? PW.z += 1 : -1 !== this.keysRight.indexOf(iW) ? PW.x += 1 : -1 !== this.keysDown.indexOf(iW) ? PW.z -= 1 : -1 !== this.keysUpward.indexOf(iW) ? PW.y += 1 : -1 !== this.keysDownward.indexOf(iW) ? PW.y -= 1 : -1 !== this.keysRotateLeft.indexOf(iW) ? mW && (WW.cameraRotation.y -= this._getLocalRotation() * EW) : -1 !== this.keysRotateRight.indexOf(iW) ? mW && (WW.cameraRotation.y += this._getLocalRotation() * EW) : -1 !== this.keysRotateUp.indexOf(iW) ? mW && (WW.cameraRotation.x -= this._getLocalRotation() * EW) : -1 !== this.keysRotateDown.indexOf(iW) && mW && (WW.cameraRotation.x += this._getLocalRotation() * EW)
+            }
+            if (OW && (0 !== PW.x || 0 !== PW.y || 0 !== PW.z)) {
+              const iW = WW._computeLocalCameraSpeed() * (OW.sensitivity ?? 1);
+              PW.normalize().scaleInPlace(iW), WW.bD().useRightHandedSystem && (PW.z *= -1), WW.getViewMatrix().invertToRef(WW._cameraTransformMatrix), NW.q.TransformNormalToRef(PW, WW._cameraTransformMatrix, WW._transformedDirection), WW.cameraDirection.addInPlace(WW._transformedDirection)
             }
           }
-        const JB = OB && DB ? this._mustRebind(oB, QB, YB, OB.visibility) : oB.getCachedMaterial() !== this;
-        if (QB && JB) {
-          let BB;
-          for (BB in yB || -1 === this._options.uniforms.indexOf("view") || QB.setMatrix("view", oB.getViewMatrix()), yB || -1 === this._options.uniforms.indexOf("projection") || QB.setMatrix("projection", oB.getProjectionMatrix()), yB || -1 === this._options.uniforms.indexOf("viewProjection") || (QB.setMatrix("viewProjection", oB.getTransformMatrix()), this._multiview && QB.setMatrix("viewProjectionR", oB._transformMatrixR)), oB.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && QB.setVector3("cameraPosition", oB.activeCamera.globalPosition), (0, lB.i)(OB, QB), (0, zB.g)(QB, this, oB), this._vertexPullingMetadata && (0, pB.c)(QB, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, lB.x)(DB ? YB.materialDefines : QB.defines, QB, oB), OB && (0, lB.k)(oB, OB, QB), this._textures) QB.setTexture(BB, this._textures[BB]);
-          for (BB in this._internalTextures) QB._bindTexture(BB, this._internalTextures[BB]);
-          for (BB in this._textureArrays) QB.setTextureArray(BB, this._textureArrays[BB]);
-          for (BB in this._ints) QB.setInt(BB, this._ints[BB]);
-          for (BB in this._uints) QB.setUInt(BB, this._uints[BB]);
-          for (BB in this._floats) QB.setFloat(BB, this._floats[BB]);
-          for (BB in this._floatsArrays) QB.setArray(BB, this._floatsArrays[BB]);
-          for (BB in this._colors3) QB.setColor3(BB, this._colors3[BB]);
-          for (BB in this._colors3Arrays) QB.setArray3(BB, this._colors3Arrays[BB]);
-          for (BB in this._colors4) {
-            const OB = this._colors4[BB];
-            QB.setFloat4(BB, OB.r, OB.g, OB.b, OB.a)
+        }
+        getClassName() {
+          return "FreeCameraKeyboardMoveInput"
+        }
+        _onLostFocus() {
+          this._keys.length = 0
+        }
+        getSimpleName() {
+          return "keyboard"
+        }
+        _getLocalRotation() {
+          const WW = this.camera._calculateHandednessMultiplier();
+          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * WW
+        }
+      }, (() => {
+        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        iW = [(0, EW.M)()], OW = [(0, EW.M)()], PW = [(0, EW.M)()], LW = [(0, EW.M)()], tW = [(0, EW.M)()], ZW = [(0, EW.M)()], xW = [(0, EW.M)()], lW = [(0, EW.M)()], AW = [(0, EW.M)()], bW = [(0, EW.M)()], jW = [(0, EW.M)()], (0, mW.e)(null, null, iW, {
+          kind: "field",
+          name: "keysUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysUp" in WW,
+            get: WW => WW.keysUp,
+            set: (WW, iW) => {
+              WW.keysUp = iW
+            }
+          },
+          metadata: NW
+        }, UW, kW), (0, mW.e)(null, null, OW, {
+          kind: "field",
+          name: "keysUpward",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysUpward" in WW,
+            get: WW => WW.keysUpward,
+            set: (WW, iW) => {
+              WW.keysUpward = iW
+            }
+          },
+          metadata: NW
+        }, sW, MW), (0, mW.e)(null, null, PW, {
+          kind: "field",
+          name: "keysDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysDown" in WW,
+            get: WW => WW.keysDown,
+            set: (WW, iW) => {
+              WW.keysDown = iW
+            }
+          },
+          metadata: NW
+        }, KW, SW), (0, mW.e)(null, null, LW, {
+          kind: "field",
+          name: "keysDownward",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysDownward" in WW,
+            get: WW => WW.keysDownward,
+            set: (WW, iW) => {
+              WW.keysDownward = iW
+            }
+          },
+          metadata: NW
+        }, YW, yW), (0, mW.e)(null, null, tW, {
+          kind: "field",
+          name: "keysLeft",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysLeft" in WW,
+            get: WW => WW.keysLeft,
+            set: (WW, iW) => {
+              WW.keysLeft = iW
+            }
+          },
+          metadata: NW
+        }, TW, JW), (0, mW.e)(null, null, ZW, {
+          kind: "field",
+          name: "keysRight",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysRight" in WW,
+            get: WW => WW.keysRight,
+            set: (WW, iW) => {
+              WW.keysRight = iW
+            }
+          },
+          metadata: NW
+        }, hW, HW), (0, mW.e)(null, null, xW, {
+          kind: "field",
+          name: "rotationSpeed",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "rotationSpeed" in WW,
+            get: WW => WW.rotationSpeed,
+            set: (WW, iW) => {
+              WW.rotationSpeed = iW
+            }
+          },
+          metadata: NW
+        }, nW, uW), (0, mW.e)(null, null, lW, {
+          kind: "field",
+          name: "keysRotateLeft",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysRotateLeft" in WW,
+            get: WW => WW.keysRotateLeft,
+            set: (WW, iW) => {
+              WW.keysRotateLeft = iW
+            }
+          },
+          metadata: NW
+        }, oW, dW), (0, mW.e)(null, null, AW, {
+          kind: "field",
+          name: "keysRotateRight",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysRotateRight" in WW,
+            get: WW => WW.keysRotateRight,
+            set: (WW, iW) => {
+              WW.keysRotateRight = iW
+            }
+          },
+          metadata: NW
+        }, eW, vW), (0, mW.e)(null, null, bW, {
+          kind: "field",
+          name: "keysRotateUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysRotateUp" in WW,
+            get: WW => WW.keysRotateUp,
+            set: (WW, iW) => {
+              WW.keysRotateUp = iW
+            }
+          },
+          metadata: NW
+        }, gW, DW), (0, mW.e)(null, null, jW, {
+          kind: "field",
+          name: "keysRotateDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "keysRotateDown" in WW,
+            get: WW => WW.keysRotateDown,
+            set: (WW, iW) => {
+              WW.keysRotateDown = iW
+            }
+          },
+          metadata: NW
+        }, VW, pW), NW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: NW
+        })
+      })(), WW
+    })();
+    LW.d.FreeCameraKeyboardMoveInput = tW;
+    var ZW = OW(38276),
+      xW = OW(41695);
+    let lW = (() => {
+      var WW;
+      let iW, OW, NW = [],
+        PW = [],
+        LW = [],
+        cW = [];
+      return WW = class {
+        _applyPointerRotation(WW, iW) {
+          this._pointerConditions.button = this._currentActiveButton;
+          const OW = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
+          if (!OW || "rotate" !== OW.interaction) return;
+          const mW = OW.iG ?? OW.sensitivity ?? 1 / this.angularSensibility,
+            EW = OW.mG ?? OW.sensitivity ?? 1 / this.angularSensibility;
+          this.camera.cameraRotation.y += WW * mW, this.camera.cameraRotation.x += iW * EW
+        }
+        constructor() {
+          let WW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          this.touchEnabled = WW, this.buttons = (0, mW.g)(this, NW, [0, 1, 2]), this.angularSensibility = ((0, mW.g)(this, PW), (0, mW.g)(this, LW, 2e3)), this._pointerInput = (0, mW.g)(this, cW), this._previousPosition = null, this.onPointerMovedObservable = new ZW.e, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
+        }
+        attachControl(WW) {
+          WW = wW.f.BackCompatCameraNoPreventDefault(arguments);
+          const iW = this.camera.VA(),
+            OW = iW.getInputElement();
+          this._pointerInput || (this._pointerInput = mW => {
+            const EW = mW.event,
+              NW = "touch" === EW.pointerType;
+            if (!this.touchEnabled && NW) return;
+            if (mW.type !== xW.c.POINTERMOVE && -1 === this.buttons.indexOf(EW.button)) return;
+            const PW = EW.target;
+            if (mW.type === xW.c.POINTERDOWN) {
+              if (NW && -1 !== this._activePointerId || !NW && -1 !== this._currentActiveButton) return;
+              this._activePointerId = EW.pointerId;
+              try {
+                PW?.setPointerCapture(EW.pointerId)
+              } catch (LW) {} - 1 === this._currentActiveButton && (this._currentActiveButton = EW.button), this._previousPosition = {
+                x: EW.clientX,
+                y: EW.clientY
+              }, WW || (EW.preventDefault(), OW && OW.focus()), iW.isPointerLock && this._onMouseMove && this._onMouseMove(mW.event)
+            } else if (mW.type === xW.c.POINTERUP) {
+              if (NW && this._activePointerId !== EW.pointerId || !NW && this._currentActiveButton !== EW.button) return;
+              try {
+                PW?.releasePointerCapture(EW.pointerId)
+              } catch (LW) {}
+              this._currentActiveButton = -1, this._previousPosition = null, WW || EW.preventDefault(), this._activePointerId = -1
+            } else if (mW.type === xW.c.POINTERMOVE && (this._activePointerId === EW.pointerId || !NW))
+              if (iW.isPointerLock && this._onMouseMove) this._onMouseMove(mW.event);
+              else if (this._previousPosition) {
+              const iW = this.camera._calculateHandednessMultiplier(),
+                OW = (EW.clientX - this._previousPosition.x) * iW,
+                mW = (EW.clientY - this._previousPosition.y) * iW;
+              this._allowCameraRotation && this._applyPointerRotation(OW, mW), this.onPointerMovedObservable.notifyObservers({
+                offsetX: OW,
+                offsetY: mW
+              }), this._previousPosition = {
+                x: EW.clientX,
+                y: EW.clientY
+              }, WW || EW.preventDefault()
+            }
+          }), this._onMouseMove = OW => {
+            if (!iW.isPointerLock) return;
+            const mW = this.camera._calculateHandednessMultiplier();
+            this._applyPointerRotation(OW.movementX * mW, OW.movementY * mW), this._previousPosition = null, WW || OW.preventDefault()
+          }, this._observer = this.camera.bD()._inputManager._addCameraPointerObserver(this._pointerInput, xW.c.POINTERDOWN | xW.c.POINTERUP | xW.c.POINTERMOVE), OW && (this._contextMenuBind = WW => this.onContextMenu(WW), OW.addEventListener("contextmenu", this._contextMenuBind, !1))
+        }
+        onContextMenu(WW) {
+          WW.preventDefault()
+        }
+        detachControl() {
+          if (this._observer) {
+            if (this.camera.bD()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
+              const WW = this.camera.VA().getInputElement();
+              WW && WW.removeEventListener("contextmenu", this._contextMenuBind)
+            }
+            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
           }
-          for (BB in this._colors4Arrays) QB.setArray4(BB, this._colors4Arrays[BB]);
-          for (BB in this._vectors2) QB.setVector2(BB, this._vectors2[BB]);
-          for (BB in this._vectors3) QB.setVector3(BB, this._vectors3[BB]);
-          for (BB in this._vectors4) QB.setVector4(BB, this._vectors4[BB]);
-          for (BB in this._quaternions) QB.setQuaternion(BB, this._quaternions[BB]);
-          for (BB in this._matrices) QB.setMatrix(BB, this._matrices[BB]);
-          for (BB in this._matrixArrays) QB.setMatrices(BB, this._matrixArrays[BB]);
-          for (BB in this._matrices3x3) QB.setMatrix3x3(BB, this._matrices3x3[BB]);
-          for (BB in this._matrices2x2) QB.setMatrix2x2(BB, this._matrices2x2[BB]);
-          for (BB in this._vectors2Arrays) QB.setArray2(BB, this._vectors2Arrays[BB]);
-          for (BB in this._vectors3Arrays) QB.setArray3(BB, this._vectors3Arrays[BB]);
-          for (BB in this._vectors4Arrays) QB.setArray4(BB, this._vectors4Arrays[BB]);
-          for (BB in this._quaternionsArrays) QB.setArray4(BB, this._quaternionsArrays[BB]);
-          for (BB in this._uniformBuffers) {
-            const OB = this._uniformBuffers[BB].getBuffer();
-            OB && QB.bindUniformBuffer(OB, BB)
+          this._activePointerId = -1, this._currentActiveButton = -1
+        }
+        getClassName() {
+          return "FreeCameraMouseInput"
+        }
+        getSimpleName() {
+          return "mouse"
+        }
+      }, (() => {
+        const wW = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        iW = [(0, EW.M)()], OW = [(0, EW.M)()], (0, mW.e)(null, null, iW, {
+          kind: "field",
+          name: "buttons",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "buttons" in WW,
+            get: WW => WW.buttons,
+            set: (WW, iW) => {
+              WW.buttons = iW
+            }
+          },
+          metadata: wW
+        }, NW, PW), (0, mW.e)(null, null, OW, {
+          kind: "field",
+          name: "angularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "angularSensibility" in WW,
+            get: WW => WW.angularSensibility,
+            set: (WW, iW) => {
+              WW.angularSensibility = iW
+            }
+          },
+          metadata: wW
+        }, LW, cW), wW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: wW
+        })
+      })(), WW
+    })();
+    LW.d.FreeCameraMouseInput = lW;
+    var AW = OW(41703);
+    let bW = (() => {
+      var WW;
+      let iW, OW, NW, PW = [],
+        LW = [],
+        cW = [],
+        tW = [],
+        lW = [],
+        bW = [];
+      return WW = class {
+        constructor() {
+          this.wheelPrecisionX = (0, mW.g)(this, PW, 3), this.wheelPrecisionY = ((0, mW.g)(this, LW), (0, mW.g)(this, cW, 3)), this.wheelPrecisionZ = ((0, mW.g)(this, tW), (0, mW.g)(this, lW, 3)), this.onChangedObservable = ((0, mW.g)(this, bW), new ZW.e), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
+        }
+        attachControl(WW) {
+          WW = wW.f.BackCompatCameraNoPreventDefault(arguments), this._wheel = iW => {
+            if (iW.type !== xW.c.POINTERWHEEL) return;
+            const OW = iW.event,
+              mW = OW.deltaMode === AW.e.DOM_DELTA_LINE ? this._ffMultiplier : 1;
+            this._wheelDeltaX += this.wheelPrecisionX * mW * OW.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * mW * OW.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * mW * OW.deltaZ / this._normalize, OW.preventDefault && (WW || OW.preventDefault())
+          }, this._observer = this.camera.bD()._inputManager._addCameraPointerObserver(this._wheel, xW.c.POINTERWHEEL)
+        }
+        detachControl() {
+          this._observer && (this.camera.bD()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
+        }
+        checkInputs() {
+          this.onChangedObservable.notifyObservers({
+            wheelDeltaX: this._wheelDeltaX,
+            wheelDeltaY: this._wheelDeltaY,
+            wheelDeltaZ: this._wheelDeltaZ
+          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
+        }
+        getClassName() {
+          return "BaseCameraMouseWheelInput"
+        }
+        getSimpleName() {
+          return "mousewheel"
+        }
+      }, (() => {
+        const wW = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        iW = [(0, EW.M)()], OW = [(0, EW.M)()], NW = [(0, EW.M)()], (0, mW.e)(null, null, iW, {
+          kind: "field",
+          name: "wheelPrecisionX",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelPrecisionX" in WW,
+            get: WW => WW.wheelPrecisionX,
+            set: (WW, iW) => {
+              WW.wheelPrecisionX = iW
+            }
+          },
+          metadata: wW
+        }, PW, LW), (0, mW.e)(null, null, OW, {
+          kind: "field",
+          name: "wheelPrecisionY",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelPrecisionY" in WW,
+            get: WW => WW.wheelPrecisionY,
+            set: (WW, iW) => {
+              WW.wheelPrecisionY = iW
+            }
+          },
+          metadata: wW
+        }, cW, tW), (0, mW.e)(null, null, NW, {
+          kind: "field",
+          name: "wheelPrecisionZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelPrecisionZ" in WW,
+            get: WW => WW.wheelPrecisionZ,
+            set: (WW, iW) => {
+              WW.wheelPrecisionZ = iW
+            }
+          },
+          metadata: wW
+        }, lW, bW), wW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: wW
+        })
+      })(), WW
+    })();
+    var jW;
+    ! function(WW) {
+      WW[WW.MoveRelative = 0] = "MoveRelative", WW[WW.RotateRelative = 1] = "RotateRelative", WW[WW.MoveScene = 2] = "MoveScene"
+    }(jW || (jW = {}));
+    let UW = (() => {
+      var WW;
+      let iW, OW, PW, LW, cW, wW, tW, ZW, xW, lW = bW,
+        AW = [];
+      return WW = class extends lW {
+        constructor() {
+          super(...arguments), this.camera = (0, mW.g)(this, AW), this._moveRelative = NW.q.Zero(), this._rotateRelative = NW.q.Zero(), this._moveScene = NW.q.Zero(), this._wheelXAction = jW.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = jW.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
+        }
+        getClassName() {
+          return "FreeCameraMouseWheelInput"
+        }
+        set wheelXMoveRelative(WW) {
+          null === WW && this._wheelXAction !== jW.MoveRelative || (this._wheelXAction = jW.MoveRelative, this._wheelXActionCoordinate = WW)
+        }
+        get wheelXMoveRelative() {
+          return this._wheelXAction !== jW.MoveRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveRelative(WW) {
+          null === WW && this._wheelYAction !== jW.MoveRelative || (this._wheelYAction = jW.MoveRelative, this._wheelYActionCoordinate = WW)
+        }
+        get wheelYMoveRelative() {
+          return this._wheelYAction !== jW.MoveRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveRelative(WW) {
+          null === WW && this._wheelZAction !== jW.MoveRelative || (this._wheelZAction = jW.MoveRelative, this._wheelZActionCoordinate = WW)
+        }
+        get wheelZMoveRelative() {
+          return this._wheelZAction !== jW.MoveRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXRotateRelative(WW) {
+          null === WW && this._wheelXAction !== jW.RotateRelative || (this._wheelXAction = jW.RotateRelative, this._wheelXActionCoordinate = WW)
+        }
+        get wheelXRotateRelative() {
+          return this._wheelXAction !== jW.RotateRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYRotateRelative(WW) {
+          null === WW && this._wheelYAction !== jW.RotateRelative || (this._wheelYAction = jW.RotateRelative, this._wheelYActionCoordinate = WW)
+        }
+        get wheelYRotateRelative() {
+          return this._wheelYAction !== jW.RotateRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZRotateRelative(WW) {
+          null === WW && this._wheelZAction !== jW.RotateRelative || (this._wheelZAction = jW.RotateRelative, this._wheelZActionCoordinate = WW)
+        }
+        get wheelZRotateRelative() {
+          return this._wheelZAction !== jW.RotateRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXMoveScene(WW) {
+          null === WW && this._wheelXAction !== jW.MoveScene || (this._wheelXAction = jW.MoveScene, this._wheelXActionCoordinate = WW)
+        }
+        get wheelXMoveScene() {
+          return this._wheelXAction !== jW.MoveScene ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveScene(WW) {
+          null === WW && this._wheelYAction !== jW.MoveScene || (this._wheelYAction = jW.MoveScene, this._wheelYActionCoordinate = WW)
+        }
+        get wheelYMoveScene() {
+          return this._wheelYAction !== jW.MoveScene ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveScene(WW) {
+          null === WW && this._wheelZAction !== jW.MoveScene || (this._wheelZAction = jW.MoveScene, this._wheelZActionCoordinate = WW)
+        }
+        get wheelZMoveScene() {
+          return this._wheelZAction !== jW.MoveScene ? null : this._wheelZActionCoordinate
+        }
+        checkInputs() {
+          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
+          this._moveRelative.Z5(0), this._rotateRelative.Z5(0), this._moveScene.Z5(0), this._updateCamera(), this.camera.bD().useRightHandedSystem && (this._moveRelative.z *= -1);
+          const WW = NW.d.Zero();
+          this.camera.getViewMatrix().invertToRef(WW);
+          const iW = NW.q.Zero();
+          NW.q.TransformNormalToRef(this._moveRelative, WW, iW), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(iW), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
+        }
+        _updateCamera() {
+          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
+        }
+        _updateCameraProperty(WW, iW, OW) {
+          if (0 === WW) return;
+          if (null === iW || null === OW) return;
+          let mW = null;
+          switch (iW) {
+            case jW.MoveRelative:
+              mW = this._moveRelative;
+              break;
+            case jW.RotateRelative:
+              mW = this._rotateRelative;
+              break;
+            case jW.MoveScene:
+              mW = this._moveScene
           }
-          const GB = oB.Lp(),
-            jB = GB.setExternalTexture;
-          if (jB)
-            for (BB in this._externalTextures) jB.call(GB, BB, this._externalTextures[BB]);
-          const JB = GB.setTextureSampler;
-          if (JB)
-            for (BB in this._textureSamplers) JB.call(GB, BB, this._textureSamplers[BB]);
-          const MB = GB.setStorageBuffer;
-          if (MB)
-            for (BB in this._storageBuffers) MB.call(GB, BB, this._storageBuffers[BB])
-        }
-        if (QB && OB && (JB || !this.isFrozen)) {
-          (0, lB.A)(OB, QB), OB.morphTargetManager && OB.morphTargetManager.isUsingTextureForTargets && OB.morphTargetManager._bind(QB);
-          const BB = OB.bakedVertexAnimationManager;
-          if (BB && BB.isEnabled) {
-            const BB = DB ? YB._drawWrapper : this._drawWrapper;
-            OB.bakedVertexAnimationManager?.bind(QB, !!BB._wasPreviouslyUsingInstances)
+          switch (OW) {
+            case 0:
+              mW.set(WW, 0, 0);
+              break;
+            case 1:
+              mW.set(0, WW, 0);
+              break;
+            case 2:
+              mW.set(0, 0, WW)
           }
         }
-        this._afterBind(OB, QB, YB)
-      }
-      getActiveTextures() {
-        const BB = super.getActiveTextures();
-        for (const OB in this._textures) BB.push(this._textures[OB]);
-        for (const OB in this._textureArrays) {
-          const GB = this._textureArrays[OB];
-          for (let OB = 0; OB < GB.length; OB++) BB.push(GB[OB])
+      }, (() => {
+        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(lW[Symbol.metadata] ?? null) : void 0;
+        iW = [(0, EW.M)()], OW = [(0, EW.M)()], PW = [(0, EW.M)()], LW = [(0, EW.M)()], cW = [(0, EW.M)()], wW = [(0, EW.M)()], tW = [(0, EW.M)()], ZW = [(0, EW.M)()], xW = [(0, EW.M)()], (0, mW.e)(WW, null, iW, {
+          kind: "setter",
+          name: "wheelXMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelXMoveRelative" in WW,
+            set: (WW, iW) => {
+              WW.wheelXMoveRelative = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, OW, {
+          kind: "setter",
+          name: "wheelYMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelYMoveRelative" in WW,
+            set: (WW, iW) => {
+              WW.wheelYMoveRelative = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, PW, {
+          kind: "setter",
+          name: "wheelZMoveRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelZMoveRelative" in WW,
+            set: (WW, iW) => {
+              WW.wheelZMoveRelative = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, LW, {
+          kind: "setter",
+          name: "wheelXRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelXRotateRelative" in WW,
+            set: (WW, iW) => {
+              WW.wheelXRotateRelative = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, cW, {
+          kind: "setter",
+          name: "wheelYRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelYRotateRelative" in WW,
+            set: (WW, iW) => {
+              WW.wheelYRotateRelative = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, wW, {
+          kind: "setter",
+          name: "wheelZRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelZRotateRelative" in WW,
+            set: (WW, iW) => {
+              WW.wheelZRotateRelative = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, tW, {
+          kind: "setter",
+          name: "wheelXMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelXMoveScene" in WW,
+            set: (WW, iW) => {
+              WW.wheelXMoveScene = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, ZW, {
+          kind: "setter",
+          name: "wheelYMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelYMoveScene" in WW,
+            set: (WW, iW) => {
+              WW.wheelYMoveScene = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), (0, mW.e)(WW, null, xW, {
+          kind: "setter",
+          name: "wheelZMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "wheelZMoveScene" in WW,
+            set: (WW, iW) => {
+              WW.wheelZMoveScene = iW
+            }
+          },
+          metadata: NW
+        }, null, AW), NW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: NW
+        })
+      })(), WW
+    })();
+    LW.d.FreeCameraMouseWheelInput = UW;
+    let kW = (() => {
+      var WW;
+      let iW, OW, PW = [],
+        LW = [],
+        cW = [],
+        tW = [];
+      return WW = class {
+        constructor() {
+          let WW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          this.allowMouse = WW, this.touchAngularSensibility = (0, mW.g)(this, PW, 2e5), this.touchMoveSensibility = ((0, mW.g)(this, LW), (0, mW.g)(this, cW, 250)), this.singleFingerRotate = ((0, mW.g)(this, tW), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = wW.f.IsSafari()
         }
-        return BB
-      }
-      hasTexture(BB) {
-        if (super.hasTexture(BB)) return !0;
-        for (const GB in this._textures)
-          if (this._textures[GB] === BB) return !0;
-        const OB = BB.getInternalTexture();
-        for (const GB in this._internalTextures)
-          if (this._internalTextures[GB] === OB) return !0;
-        for (const GB in this._textureArrays) {
-          const OB = this._textureArrays[GB];
-          for (let GB = 0; GB < OB.length; GB++)
-            if (OB[GB] === BB) return !0
-        }
-        return !1
-      }
-      clone(BB) {
-        const OB = YB.d.Clone((() => new NB(BB, this.JF(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
-        OB.name = BB, OB.id = BB, "object" === typeof OB._shaderPath && (OB._shaderPath = {
-          ...OB._shaderPath
-        }), this._options = {
-          ...this._options
-        };
-        const GB = Object.keys(this._options);
-        for (const YB of GB) {
-          const BB = this._options[YB];
-          Array.isArray(BB) && (this._options[YB] = BB.slice(0))
-        }
-        this.stencil.copyTo(OB.stencil);
-        for (const YB in this._textures) OB.setTexture(YB, this._textures[YB]);
-        for (const YB in this._internalTextures) OB.setInternalTexture(YB, this._internalTextures[YB]);
-        for (const YB in this._textureArrays) OB.setTextureArray(YB, this._textureArrays[YB]);
-        for (const YB in this._externalTextures) OB.setExternalTexture(YB, this._externalTextures[YB]);
-        for (const YB in this._ints) OB.setInt(YB, this._ints[YB]);
-        for (const YB in this._uints) OB.setUInt(YB, this._uints[YB]);
-        for (const YB in this._floats) OB.setFloat(YB, this._floats[YB]);
-        for (const YB in this._floatsArrays) OB.setFloats(YB, this._floatsArrays[YB]);
-        for (const YB in this._colors3) OB.setColor3(YB, this._colors3[YB]);
-        for (const YB in this._colors3Arrays) OB._colors3Arrays[YB] = this._colors3Arrays[YB];
-        for (const YB in this._colors4) OB.setColor4(YB, this._colors4[YB]);
-        for (const YB in this._colors4Arrays) OB._colors4Arrays[YB] = this._colors4Arrays[YB];
-        for (const YB in this._vectors2) OB.setVector2(YB, this._vectors2[YB]);
-        for (const YB in this._vectors3) OB.setVector3(YB, this._vectors3[YB]);
-        for (const YB in this._vectors4) OB.setVector4(YB, this._vectors4[YB]);
-        for (const YB in this._quaternions) OB.setQuaternion(YB, this._quaternions[YB]);
-        for (const YB in this._quaternionsArrays) OB._quaternionsArrays[YB] = this._quaternionsArrays[YB];
-        for (const YB in this._matrices) OB.setMatrix(YB, this._matrices[YB]);
-        for (const YB in this._matrixArrays) OB._matrixArrays[YB] = this._matrixArrays[YB].slice();
-        for (const YB in this._matrices3x3) OB.setMatrix3x3(YB, this._matrices3x3[YB]);
-        for (const YB in this._matrices2x2) OB.setMatrix2x2(YB, this._matrices2x2[YB]);
-        for (const YB in this._vectors2Arrays) OB.setArray2(YB, this._vectors2Arrays[YB]);
-        for (const YB in this._vectors3Arrays) OB.setArray3(YB, this._vectors3Arrays[YB]);
-        for (const YB in this._vectors4Arrays) OB.setArray4(YB, this._vectors4Arrays[YB]);
-        for (const YB in this._uniformBuffers) OB.setUniformBuffer(YB, this._uniformBuffers[YB]);
-        for (const YB in this._textureSamplers) OB.setTextureSampler(YB, this._textureSamplers[YB]);
-        for (const YB in this._storageBuffers) OB.setStorageBuffer(YB, this._storageBuffers[YB]);
-        return OB
-      }
-      dispose(BB, OB, GB) {
-        if (OB) {
-          let BB;
-          for (BB in this._textures) this._textures[BB].dispose();
-          for (BB in this._internalTextures) this._internalTextures[BB].dispose();
-          for (BB in this._textureArrays) {
-            const OB = this._textureArrays[BB];
-            for (let BB = 0; BB < OB.length; BB++) OB[BB].dispose()
+        attachControl(WW) {
+          WW = wW.f.BackCompatCameraNoPreventDefault(arguments);
+          let iW = null;
+          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
+              this._offsetX = null, this._offsetY = null
+            }, this._pointerInput = OW => {
+              const mW = OW.event,
+                EW = "mouse" === mW.pointerType || this._isSafari && "undefined" === typeof mW.pointerType;
+              if (this.allowMouse || !EW)
+                if (OW.type === xW.c.POINTERDOWN) {
+                  if (WW || mW.preventDefault(), this._pointerPressed.push(mW.pointerId), 1 !== this._pointerPressed.length) return;
+                  iW = {
+                    x: mW.clientX,
+                    y: mW.clientY
+                  }
+                } else if (OW.type === xW.c.POINTERUP) {
+                WW || mW.preventDefault();
+                const OW = this._pointerPressed.indexOf(mW.pointerId);
+                if (-1 === OW) return;
+                if (this._pointerPressed.splice(OW, 1), 0 != OW) return;
+                iW = null, this._offsetX = null, this._offsetY = null
+              } else if (OW.type === xW.c.POINTERMOVE) {
+                if (WW || mW.preventDefault(), !iW) return;
+                if (0 != this._pointerPressed.indexOf(mW.pointerId)) return;
+                this._offsetX = mW.clientX - iW.x, this._offsetY = -(mW.clientY - iW.y)
+              }
+            }), this._observer = this.camera.bD()._inputManager._addCameraPointerObserver(this._pointerInput, xW.c.POINTERDOWN | xW.c.POINTERUP | xW.c.POINTERMOVE), this._onLostFocus) {
+            const WW = this.camera.VA().getInputElement();
+            WW && WW.addEventListener("blur", this._onLostFocus)
           }
         }
-        this._textures = {}, this._internalTextures = {}, super.dispose(BB, OB, GB)
-      }
-      serialize() {
-        const BB = YB.d.Serialize(this);
-        let OB;
-        for (OB in BB.customType = "BABYLON.ShaderMaterial", BB.uniqueId = this.uniqueId, BB.options = this._options, BB.shaderPath = this._shaderPath, BB.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, BB.stencil = this.stencil.serialize(), BB.textures = {}, this._textures) BB.textures[OB] = this._textures[OB].serialize();
-        for (OB in BB.textureArrays = {}, this._textureArrays) {
-          BB.textureArrays[OB] = [];
-          const GB = this._textureArrays[OB];
-          for (let YB = 0; YB < GB.length; YB++) BB.textureArrays[OB].push(GB[YB].serialize())
+        detachControl() {
+          if (this._pointerInput) {
+            if (this._observer && (this.camera.bD()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
+              const WW = this.camera.VA().getInputElement();
+              WW && WW.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+            }
+            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
+          }
         }
-        for (OB in BB.ints = {}, this._ints) BB.ints[OB] = this._ints[OB];
-        for (OB in BB.uints = {}, this._uints) BB.uints[OB] = this._uints[OB];
-        for (OB in BB.floats = {}, this._floats) BB.floats[OB] = this._floats[OB];
-        for (OB in BB.floatsArrays = {}, this._floatsArrays) BB.floatsArrays[OB] = this._floatsArrays[OB];
-        for (OB in BB.colors3 = {}, this._colors3) {
-          const GB = this._colors3[OB];
-          BB.colors3[OB] = [GB.r, GB.g, GB.b]
+        checkInputs() {
+          if (null === this._offsetX || null === this._offsetY) return;
+          if (0 === this._offsetX && 0 === this._offsetY) return;
+          const WW = this.camera,
+            iW = WW.movement.input,
+            OW = iW.getEntry("touch", "rotate"),
+            mW = iW.getEntry("touch", "translate"),
+            EW = WW._calculateHandednessMultiplier(),
+            PW = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
+          if (OW) {
+            const iW = OW.sensitivity ?? 1 / this.touchAngularSensibility;
+            WW.cameraRotation.y = this._offsetX * EW * iW, PW && (WW.cameraRotation.x = -this._offsetY * EW * iW)
+          }
+          if (!PW && mW) {
+            const iW = WW._computeLocalCameraSpeed(),
+              OW = mW.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
+              EW = NW.l.fA[0];
+            EW.yWW(0, 0, iW * this._offsetY * OW), NW.d.RotationYawPitchRollToRef(WW.rotation.y, WW.rotation.x, 0, WW._cameraRotationMatrix), NW.q.TransformCoordinatesToRef(EW, WW._cameraRotationMatrix, EW), WW.cameraDirection.addInPlace(EW)
+          }
         }
-        for (OB in BB.colors3Arrays = {}, this._colors3Arrays) BB.colors3Arrays[OB] = this._colors3Arrays[OB];
-        for (OB in BB.colors4 = {}, this._colors4) {
-          const GB = this._colors4[OB];
-          BB.colors4[OB] = [GB.r, GB.g, GB.b, GB.a]
+        getClassName() {
+          return "FreeCameraTouchInput"
         }
-        for (OB in BB.colors4Arrays = {}, this._colors4Arrays) BB.colors4Arrays[OB] = this._colors4Arrays[OB];
-        for (OB in BB.vectors2 = {}, this._vectors2) {
-          const GB = this._vectors2[OB];
-          BB.vectors2[OB] = [GB.x, GB.y]
+        getSimpleName() {
+          return "touch"
         }
-        for (OB in BB.vectors3 = {}, this._vectors3) {
-          const GB = this._vectors3[OB];
-          BB.vectors3[OB] = [GB.x, GB.y, GB.z]
-        }
-        for (OB in BB.vectors4 = {}, this._vectors4) {
-          const GB = this._vectors4[OB];
-          BB.vectors4[OB] = [GB.x, GB.y, GB.z, GB.w]
-        }
-        for (OB in BB.quaternions = {}, this._quaternions) BB.quaternions[OB] = this._quaternions[OB].dDB();
-        for (OB in BB.matrices = {}, this._matrices) BB.matrices[OB] = this._matrices[OB].dDB();
-        for (OB in BB.matrixArray = {}, this._matrixArrays) BB.matrixArray[OB] = this._matrixArrays[OB];
-        for (OB in BB.matrices3x3 = {}, this._matrices3x3) BB.matrices3x3[OB] = this._matrices3x3[OB];
-        for (OB in BB.matrices2x2 = {}, this._matrices2x2) BB.matrices2x2[OB] = this._matrices2x2[OB];
-        for (OB in BB.vectors2Arrays = {}, this._vectors2Arrays) BB.vectors2Arrays[OB] = this._vectors2Arrays[OB];
-        for (OB in BB.vectors3Arrays = {}, this._vectors3Arrays) BB.vectors3Arrays[OB] = this._vectors3Arrays[OB];
-        for (OB in BB.vectors4Arrays = {}, this._vectors4Arrays) BB.vectors4Arrays[OB] = this._vectors4Arrays[OB];
-        for (OB in BB.quaternionsArrays = {}, this._quaternionsArrays) BB.quaternionsArrays[OB] = this._quaternionsArrays[OB];
-        return BB
-      }
-    }
-
-    function RB(BB, OB, GB) {
-      const DB = YB.d.Parse((() => new NB(BB.name, OB, BB.shaderPath, BB.options, BB.storeEffectOnSubMeshes)), BB, OB, GB);
-      let oB;
-      for (oB in BB.stencil && DB.stencil.parse(BB.stencil, OB, GB), BB.textures) DB.setTexture(oB, jB.e.Parse(BB.textures[oB], OB, GB));
-      for (oB in BB.textureArrays) {
-        const YB = BB.textureArrays[oB],
-          QB = [];
-        for (let BB = 0; BB < YB.length; BB++) QB.push(jB.e.Parse(YB[BB], OB, GB));
-        DB.setTextureArray(oB, QB)
-      }
-      for (oB in BB.ints) DB.setInt(oB, BB.ints[oB]);
-      for (oB in BB.uints) DB.setUInt(oB, BB.uints[oB]);
-      for (oB in BB.floats) DB.setFloat(oB, BB.floats[oB]);
-      for (oB in BB.floatsArrays) DB.setFloats(oB, BB.floatsArrays[oB]);
-      for (oB in BB.colors3) {
-        const OB = BB.colors3[oB];
-        DB.setColor3(oB, {
-          r: OB[0],
-          g: OB[1],
-          b: OB[2]
+      }, (() => {
+        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        iW = [(0, EW.M)()], OW = [(0, EW.M)()], (0, mW.e)(null, null, iW, {
+          kind: "field",
+          name: "touchAngularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "touchAngularSensibility" in WW,
+            get: WW => WW.touchAngularSensibility,
+            set: (WW, iW) => {
+              WW.touchAngularSensibility = iW
+            }
+          },
+          metadata: NW
+        }, PW, LW), (0, mW.e)(null, null, OW, {
+          kind: "field",
+          name: "touchMoveSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "touchMoveSensibility" in WW,
+            get: WW => WW.touchMoveSensibility,
+            set: (WW, iW) => {
+              WW.touchMoveSensibility = iW
+            }
+          },
+          metadata: NW
+        }, cW, tW), NW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: NW
         })
+      })(), WW
+    })();
+    LW.d.FreeCameraTouchInput = kW;
+    var sW, MW, KW, SW = OW(41415);
+    class YW extends LW.f {
+      constructor(WW) {
+        super(WW), this._mouseInput = null, this._mouseWheelInput = null
       }
-      for (oB in BB.colors3Arrays) {
-        const OB = BB.colors3Arrays[oB].reduce(((BB, OB, GB) => (GB % 3 === 0 ? BB.push([OB]) : BB[BB.length - 1].push(OB), BB)), []).map((BB => ({
-          r: BB[0],
-          g: BB[1],
-          b: BB[2]
-        })));
-        DB.setColor3Array(oB, OB)
+      addKeyboard() {
+        return this.add(new tW), this
       }
-      for (oB in BB.colors4) {
-        const OB = BB.colors4[oB];
-        DB.setColor4(oB, {
-          r: OB[0],
-          g: OB[1],
-          b: OB[2],
-          a: OB[3]
-        })
+      addMouse() {
+        let WW = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._mouseInput || (this._mouseInput = new lW(WW), this.add(this._mouseInput)), this
       }
-      for (oB in BB.colors4Arrays) {
-        const OB = BB.colors4Arrays[oB].reduce(((BB, OB, GB) => (GB % 4 === 0 ? BB.push([OB]) : BB[BB.length - 1].push(OB), BB)), []).map((BB => ({
-          r: BB[0],
-          g: BB[1],
-          b: BB[2],
-          a: BB[3]
-        })));
-        DB.setColor4Array(oB, OB)
+      removeMouse() {
+        return this._mouseInput && this.remove(this._mouseInput), this
       }
-      for (oB in BB.vectors2) {
-        const OB = BB.vectors2[oB];
-        DB.setVector2(oB, {
-          x: OB[0],
-          y: OB[1]
-        })
+      addMouseWheel() {
+        return this._mouseWheelInput || (this._mouseWheelInput = new UW, this.add(this._mouseWheelInput)), this
       }
-      for (oB in BB.vectors3) {
-        const OB = BB.vectors3[oB];
-        DB.setVector3(oB, {
-          x: OB[0],
-          y: OB[1],
-          z: OB[2]
-        })
+      removeMouseWheel() {
+        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
       }
-      for (oB in BB.vectors4) {
-        const OB = BB.vectors4[oB];
-        DB.setVector4(oB, {
-          x: OB[0],
-          y: OB[1],
-          z: OB[2],
-          w: OB[3]
-        })
+      addTouch() {
+        return this.add(new kW), this
       }
-      for (oB in BB.quaternions) DB.setQuaternion(oB, QB.f.FromArray(BB.quaternions[oB]));
-      for (oB in BB.matrices) DB.setMatrix(oB, QB.d.FromArray(BB.matrices[oB]));
-      const yB = DB;
-      for (oB in BB.matrixArray) yB._matrixArrays[oB] = new Float32Array(BB.matrixArray[oB]);
-      for (oB in BB.matrices3x3) DB.setMatrix3x3(oB, BB.matrices3x3[oB]);
-      for (oB in BB.matrices2x2) DB.setMatrix2x2(oB, BB.matrices2x2[oB]);
-      for (oB in BB.vectors2Arrays) DB.setArray2(oB, BB.vectors2Arrays[oB]);
-      for (oB in BB.vectors3Arrays) DB.setArray3(oB, BB.vectors3Arrays[oB]);
-      for (oB in BB.vectors4Arrays) DB.setArray4(oB, BB.vectors4Arrays[oB]);
-      for (oB in BB.quaternionsArrays) DB.setArray4(oB, BB.quaternionsArrays[oB]);
-      return DB
-    }
-    async function WB(BB, OB, GB) {
-      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-      return await new Promise(((DB, QB) => {
-        const oB = new JB.e;
-        oB.addEventListener("readystatechange", (() => {
-          if (4 == oB.readyState)
-            if (200 == oB.status) {
-              const OB = RB(JSON.parse(oB.responseText), GB || PB.b.LastCreatedScene, YB);
-              BB && (OB.name = BB), DB(OB)
-            } else QB("Unable to load the ShaderMaterial")
-        })), oB.open("GET", OB), oB.send()
-      }))
-    }
-    async function AB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const YB = this?.SnippetUrl ?? NB.SnippetUrl;
-      return await new Promise(((DB, QB) => {
-        const oB = new JB.e;
-        oB.addEventListener("readystatechange", (() => {
-          if (4 == oB.readyState)
-            if (200 == oB.status) {
-              const YB = JSON.parse(JSON.parse(oB.responseText).jsonPayload),
-                QB = RB(JSON.parse(YB.shaderMaterial), OB || PB.b.LastCreatedScene, GB);
-              QB.snippetId = BB, DB(QB)
-            } else QB("Unable to load the snippet " + BB)
-        })), oB.open("GET", YB + "/" + BB.replace(/#/g, "/")), oB.send()
-      }))
-    }
-    NB.SnippetUrl = "https://snippet.babylonjs.com";
-    const VB = AB;
-    let SB = !1;
-
-    function nB() {
-      SB || (SB = !0, NB.Parse = RB, NB.ParseFromFileAsync = WB, NB.ParseFromSnippetAsync = AB, NB.CreateFromSnippetAsync = VB, (0, qB.f)("BABYLON.ShaderMaterial", NB))
-    }
+      clear() {
+        super.clear(), this._mouseInput = null
+      }
+    }(sW = YW.prototype).addDeviceOrientation ?? (sW.addDeviceOrientation = (0, SW.k)("FreeCameraInputsManager", "addDeviceOrientation")), (MW = YW.prototype).addVirtualJoystick ?? (MW.addVirtualJoystick = (0, SW.k)("FreeCameraInputsManager", "addVirtualJoystick")), (KW = YW.prototype).addGamepad ?? (KW.addGamepad = (0, SW.k)("FreeCameraInputsManager", "addGamepad"));
+    var yW = OW(41423),
+      TW = OW(38299);
+    let JW = (() => {
+        var WW;
+        let iW, OW, LW, cW, tW = PW.d,
+          ZW = [],
+          xW = [],
+          lW = [],
+          AW = [],
+          bW = [],
+          jW = [],
+          UW = [],
+          kW = [];
+        return WW = class extends tW {
+          get angularSensibility() {
+            const WW = this.inputs.attached.mouse;
+            return WW ? WW.angularSensibility : 0
+          }
+          set angularSensibility(WW) {
+            const iW = this.inputs.attached.mouse;
+            iW && (iW.angularSensibility = WW)
+          }
+          get keysUp() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysUp : []
+          }
+          set keysUp(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysUp = WW)
+          }
+          get keysUpward() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysUpward : []
+          }
+          set keysUpward(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysUpward = WW)
+          }
+          get keysDown() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysDown : []
+          }
+          set keysDown(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysDown = WW)
+          }
+          get keysDownward() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysDownward : []
+          }
+          set keysDownward(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysDownward = WW)
+          }
+          get keysLeft() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysLeft : []
+          }
+          set keysLeft(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysLeft = WW)
+          }
+          get keysRight() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysRight : []
+          }
+          set keysRight(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysRight = WW)
+          }
+          get keysRotateLeft() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysRotateLeft : []
+          }
+          set keysRotateLeft(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysRotateLeft = WW)
+          }
+          get keysRotateRight() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysRotateRight : []
+          }
+          set keysRotateRight(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysRotateRight = WW)
+          }
+          get keysRotateUp() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysRotateUp : []
+          }
+          set keysRotateUp(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysRotateUp = WW)
+          }
+          get keysRotateDown() {
+            const WW = this.inputs.attached.keyboard;
+            return WW ? WW.keysRotateDown : []
+          }
+          set keysRotateDown(WW) {
+            const iW = this.inputs.attached.keyboard;
+            iW && (iW.keysRotateDown = WW)
+          }
+          constructor(WW, iW, OW) {
+            var EW;
+            super(WW, iW, OW, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), EW = this, this.ellipsoid = (0, mW.g)(this, ZW, new NW.q(.5, 1, .5)), this.ellipsoidOffset = ((0, mW.g)(this, xW), (0, mW.g)(this, lW, new NW.q(0, 0, 0))), this.checkCollisions = ((0, mW.g)(this, AW), (0, mW.g)(this, bW, !1)), this.applyGravity = ((0, mW.g)(this, jW), (0, mW.g)(this, UW, !1)), this.inputs = (0, mW.g)(this, kW), this._needMoveForGravity = !1, this._oldPosition = NW.q.Zero(), this._diffPosition = NW.q.Zero(), this._newPosition = NW.q.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(WW, iW) {
+              let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              EW._newPosition.HJ(iW), EW._newPosition.subtractToRef(EW._oldPosition, EW._diffPosition), EW._diffPosition.length() > yW.b.CollisionsEpsilon && (EW.position.addToRef(EW._diffPosition, EW._deferredPositionUpdate), EW._deferOnly ? EW._deferredUpdated = !0 : EW.position.HJ(EW._deferredPositionUpdate), EW.Vx && OW && EW.Vx(OW))
+            }, this.inputs = new YW(this), this.inputs.addKeyboard().addMouse()
+          }
+          attachControl(WW, iW) {
+            iW = wW.f.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(iW)
+          }
+          detachControl() {
+            this.inputs.detachElement(), this.cameraDirection = new NW.q(0, 0, 0), this.cameraRotation = new NW.m(0, 0)
+          }
+          get collisionMask() {
+            return this._collisionMask
+          }
+          set collisionMask(WW) {
+            this._collisionMask = isNaN(WW) ? -1 : WW
+          }
+          _collideWithWorld(WW) {
+            let iW;
+            iW = this.parent ? NW.q.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, iW.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
+            const OW = this.bD().collisionCoordinator;
+            this._collider || (this._collider = OW.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
+            let mW = WW;
+            this.applyGravity && (mW = WW.add(this.bD().gravity)), OW.getNewPosition(this._oldPosition, mW, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+          }
+          _checkInputs() {
+            this._localDirection || (this._localDirection = NW.q.Zero(), this._transformedDirection = NW.q.Zero()), this.inputs.checkInputs(), super._checkInputs()
+          }
+          set needMoveForGravity(WW) {
+            this._needMoveForGravity = WW
+          }
+          get needMoveForGravity() {
+            return this._needMoveForGravity
+          }
+          _decideIfNeedsToMove() {
+            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
+          }
+          _updatePosition() {
+            this.checkCollisions && this.bD().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
+          }
+          dispose() {
+            this.inputs.clear(), super.dispose()
+          }
+          getClassName() {
+            return "FreeCamera"
+          }
+        }, (() => {
+          const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(tW[Symbol.metadata] ?? null) : void 0;
+          iW = [(0, EW.K)()], OW = [(0, EW.K)()], LW = [(0, EW.M)()], cW = [(0, EW.M)()], (0, mW.e)(null, null, iW, {
+            kind: "field",
+            name: "ellipsoid",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "ellipsoid" in WW,
+              get: WW => WW.ellipsoid,
+              set: (WW, iW) => {
+                WW.ellipsoid = iW
+              }
+            },
+            metadata: NW
+          }, ZW, xW), (0, mW.e)(null, null, OW, {
+            kind: "field",
+            name: "ellipsoidOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "ellipsoidOffset" in WW,
+              get: WW => WW.ellipsoidOffset,
+              set: (WW, iW) => {
+                WW.ellipsoidOffset = iW
+              }
+            },
+            metadata: NW
+          }, lW, AW), (0, mW.e)(null, null, LW, {
+            kind: "field",
+            name: "checkCollisions",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "checkCollisions" in WW,
+              get: WW => WW.checkCollisions,
+              set: (WW, iW) => {
+                WW.checkCollisions = iW
+              }
+            },
+            metadata: NW
+          }, bW, jW), (0, mW.e)(null, null, cW, {
+            kind: "field",
+            name: "applyGravity",
+            static: !1,
+            private: !1,
+            access: {
+              has: WW => "applyGravity" in WW,
+              get: WW => WW.applyGravity,
+              set: (WW, iW) => {
+                WW.applyGravity = iW
+              }
+            },
+            metadata: NW
+          }, UW, kW), NW && Object.defineProperty(WW, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: NW
+          })
+        })(), WW
+      })(),
+      hW = !1;
+    hW || (hW = !0, (0, TW.h)("BABYLON.FreeCamera", JW))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

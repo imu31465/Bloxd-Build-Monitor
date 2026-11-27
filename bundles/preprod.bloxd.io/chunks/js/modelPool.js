@@ -1,26 +1,27 @@
-export const id = 50;
-export const ids = [50];
+export const id = 51;
+export const ids = [51];
 export const modules = {
-  54113: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => qB,
-      pageModelPool: () => RB
+  54853: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => jW,
+      pageModelPool: () => sW
     });
-    var YB = GB(3210),
-      DB = GB(36912),
-      QB = GB(41882),
-      oB = GB(4808),
-      jB = GB(4820),
-      yB = GB(3656),
-      JB = GB(3257),
-      MB = GB(41834),
-      PB = GB(41842),
-      zB = GB(36876),
-      lB = GB(41944);
-    class pB {
-      constructor(BB) {
-        this.opts = BB, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
-        for (let OB = 0; OB < Math.max(1, BB.count); OB++) this.slots.push({
+    var mW = OW(2388),
+      EW = OW(37297),
+      NW = OW(42202),
+      PW = OW(4010),
+      LW = OW(5072),
+      cW = OW(5089),
+      wW = OW(299),
+      tW = OW(3953),
+      ZW = OW(42339),
+      xW = OW(42344),
+      lW = OW(37265),
+      AW = OW(42440);
+    class bW {
+      constructor(WW) {
+        this.opts = WW, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
+        for (let iW = 0; iW < Math.max(1, WW.count); iW++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
@@ -33,15 +34,15 @@ export const modules = {
         this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((BB => null !== BB.job)).length
+        return this.queue.length + this.slots.filter((WW => null !== WW.job)).length
       }
-      build(BB, OB) {
-        return null !== this.stopped ? Promise.resolve((0, PB.o)(BB, this.stopped)) : new Promise((GB => {
+      build(WW, iW) {
+        return null !== this.stopped ? Promise.resolve((0, xW.l)(WW, this.stopped)) : new Promise((OW => {
           this.queue.push({
-            word: BB,
-            glb: OB,
+            word: WW,
+            glb: iW,
             attempts: 0,
-            resolve: GB
+            resolve: OW
           }), this.pump()
         }))
       }
@@ -55,152 +56,212 @@ export const modules = {
         this.fail(null)
       }
       pump() {
-        const BB = this.resting && 0 === this.queue.length;
-        for (const OB of this.slots) {
+        const WW = this.resting && 0 === this.queue.length;
+        for (const iW of this.slots) {
           if (null !== this.stopped) return;
-          if (OB.gaveUp || OB.starting) continue;
-          if (null === OB.worker) {
-            BB || this.start(OB);
+          if (iW.gaveUp || iW.starting) continue;
+          if (null === iW.worker) {
+            WW || this.start(iW);
             continue
           }
-          if (BB) {
-            null === OB.job && this.end(OB);
+          if (WW) {
+            null === iW.job && this.end(iW);
             continue
           }
-          const GB = null === OB.job ? this.queue.shift() : void 0;
-          void 0 !== GB && this.run(OB, OB.worker, GB)
+          const OW = null === iW.job ? this.queue.shift() : void 0;
+          void 0 !== OW && this.run(iW, iW.worker, OW)
         }
       }
-      start(BB) {
-        if (BB.losses >= 6) return BB.gaveUp = !0, void(this.slots.every((BB => BB.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        BB.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((OB => {
-          let [GB, YB] = OB;
-          null === this.stopped && this.launch(BB, GB, YB)
-        }), (BB => {
-          this.fail(BB)
+      start(WW) {
+        if (WW.losses >= 6) return WW.gaveUp = !0, void(this.slots.every((WW => WW.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        WW.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((iW => {
+          let [OW, mW] = iW;
+          null === this.stopped && this.launch(WW, OW, mW)
+        }), (WW => {
+          this.fail(WW)
         }))
       }
-      launch(BB, OB, GB) {
-        let YB;
+      launch(WW, iW, OW) {
+        let mW;
         try {
-          YB = OB()
-        } catch (DB) {
-          return void this.lose(BB, `a model worker could not be created (${String(DB)})`)
+          mW = iW()
+        } catch (EW) {
+          return void this.lose(WW, `a model worker could not be created (${String(EW)})`)
         }
-        BB.worker = YB, BB.timer = new lB.g(3e4, (OB => {
-          BB.timer = null, this.lose(BB, `a model worker did not start: ${(0,lB.k)(OB)}`)
-        }), void 0, this.opts.visibility), YB.onmessage = OB => {
+        WW.worker = mW, WW.timer = new AW.f(3e4, (iW => {
+          WW.timer = null, this.lose(WW, `a model worker did not start: ${(0,AW.g)(iW)}`)
+        }), void 0, this.opts.visibility), mW.onmessage = iW => {
           let {
-            data: GB
-          } = OB;
-          this.answered(BB, GB)
-        }, YB.onerror = OB => {
-          this.lose(BB, BB.starting ? `a model worker failed to start: ${OB.message}` : `a model worker failed: ${OB.message}`)
-        }, YB.postMessage({
+            data: OW
+          } = iW;
+          this.answered(WW, OW)
+        }, mW.onerror = iW => {
+          this.lose(WW, WW.starting ? `a model worker failed to start: ${iW.message}` : `a model worker failed: ${iW.message}`)
+        }, mW.postMessage({
           type: "start",
-          module: GB
+          module: OW
         })
       }
-      end(BB) {
-        const OB = BB.worker;
-        null !== OB && (OB.onmessage = null, OB.onerror = null, OB.terminate()), BB.worker = null, BB.startedAt = void 0
+      end(WW) {
+        const iW = WW.worker;
+        null !== iW && (iW.onmessage = null, iW.onerror = null, iW.terminate()), WW.worker = null, WW.startedAt = void 0
       }
-      clearTimer(BB) {
-        var OB;
-        null === (OB = BB.timer) || void 0 === OB || OB.cancel(), BB.timer = null
+      clearTimer(WW) {
+        var iW;
+        null === (iW = WW.timer) || void 0 === iW || iW.cancel(), WW.timer = null
       }
-      answered(BB, OB) {
-        if ("lost" === OB.type) return void this.lose(BB, OB.reason);
-        if (BB.starting) return "started" !== OB.type ? void this.lose(BB, `a model worker answered ${OB.type} before it started`) : (this.clearTimer(BB), BB.starting = !1, BB.startedAt = performance.now(), void this.pump());
-        const GB = BB.job;
-        null !== GB && "started" !== OB.type && OB.seq === BB.seq && ("trapped" !== OB.type ? (BB.job = null, BB.losses = 0, this.jobLosses = 0, GB.resolve(new Uint8Array(OB.record)), this.pump()) : this.lose(BB, OB.trap))
+      answered(WW, iW) {
+        if ("lost" === iW.type) return void this.lose(WW, iW.reason);
+        if (WW.starting) return "started" !== iW.type ? void this.lose(WW, `a model worker answered ${iW.type} before it started`) : (this.clearTimer(WW), WW.starting = !1, WW.startedAt = performance.now(), void this.pump());
+        const OW = WW.job;
+        null !== OW && "started" !== iW.type && iW.seq === WW.seq && ("trapped" !== iW.type ? (WW.job = null, WW.losses = 0, this.jobLosses = 0, OW.resolve(new Uint8Array(iW.record)), this.pump()) : this.lose(WW, iW.trap))
       }
-      run(BB, OB, GB) {
-        const YB = this.nextSeq++;
-        BB.seq = YB, BB.job = GB, GB.attempts++;
-        const DB = GB.glb.slice();
-        OB.postMessage({
+      run(WW, iW, OW) {
+        const mW = this.nextSeq++;
+        WW.seq = mW, WW.job = OW, OW.attempts++;
+        const EW = OW.glb.slice();
+        iW.postMessage({
           type: "job",
-          seq: YB,
-          word: GB.word,
-          glb: DB.buffer
-        }, [DB.buffer])
+          seq: mW,
+          word: OW.word,
+          glb: EW.buffer
+        }, [EW.buffer])
       }
-      lose(BB, OB) {
-        this.clearTimer(BB), void 0 !== BB.startedAt && performance.now() - BB.startedAt >= 6e4 && (BB.losses = 0), this.end(BB), BB.starting = !1;
-        const GB = BB.job;
-        BB.job = null, null === GB && BB.losses++, this.opts.onWorkerLost(OB), null !== GB && (GB.attempts < 2 ? this.queue.unshift(GB) : GB.resolve((0, PB.m)(GB.word, OB)), 0 === (GB.word & MB.c) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
+      lose(WW, iW) {
+        this.clearTimer(WW), void 0 !== WW.startedAt && performance.now() - WW.startedAt >= 6e4 && (WW.losses = 0), this.end(WW), WW.starting = !1;
+        const OW = WW.job;
+        WW.job = null, null === OW && WW.losses++, this.opts.onWorkerLost(iW), null !== OW && (OW.attempts < 2 ? this.queue.unshift(OW) : OW.resolve((0, xW.j)(OW.word, iW)), 0 === (OW.word & ZW.c) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
       }
-      fail(BB) {
+      fail(WW) {
         if (null !== this.stopped) return;
-        this.stopped = null === BB ? "the model workers stopped" : `the model workers could not start: ${(0,zB.l)(BB)}`;
-        const OB = this.stopped,
-          GB = BB => {
-            BB.resolve((0, PB.o)(BB.word, OB))
+        this.stopped = null === WW ? "the model workers stopped" : `the model workers could not start: ${(0,lW.m)(WW)}`;
+        const iW = this.stopped,
+          OW = WW => {
+            WW.resolve((0, xW.l)(WW.word, iW))
           };
-        for (const DB of this.slots) {
-          var YB;
-          this.clearTimer(DB), null === (YB = DB.worker) || void 0 === YB || YB.terminate(), DB.worker = null, null !== DB.job && GB(DB.job), DB.job = null
+        for (const EW of this.slots) {
+          var mW;
+          this.clearTimer(EW), null === (mW = EW.worker) || void 0 === mW || mW.terminate(), EW.worker = null, null !== EW.job && OW(EW.job), EW.job = null
         }
-        this.queue.splice(0).forEach(GB), null !== BB && this.opts.onUnavailable(BB)
+        this.queue.splice(0).forEach(OW), null !== WW && this.opts.onUnavailable(WW)
       }
     }
-    const qB = [...YB.r, 5e3, 15e3, 3e4];
-    let ZB = null;
-    const NB = new Set;
+    const jW = [...mW.t, 5e3, 15e3, 3e4];
+    let UW = null;
+    const kW = new Set;
 
-    function RB(BB) {
-      return NB.add(BB), ZB ??= function() {
-        let BB = "fix" === (0, jB.n)() || (0, jB.e)() || (0, oB.i)() ? 1 : (OB = navigator.hardwareConcurrency, MB = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, OB > 2 && !(0, JB.q)(MB) ? 2 : 1);
-        var OB, MB;
-        const PB = new pB({
-          module: (0, DB.g)(QB.d, {
-            delays: qB,
-            onRetry: (BB, OB) => {
-              ZB === PB && WB((GB => {
-                GB.onModuleRetry(BB, OB)
+    function sW(WW) {
+      return kW.add(WW), UW ??= function() {
+        let WW = "fix" === (0, cW.n)() || (0, cW.g)() || (0, LW.k)() || (0, PW.f)() ? 1 : (iW = navigator.hardwareConcurrency, ZW = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, iW > 2 && !(0, tW.q)(ZW) ? 2 : 1);
+        var iW, ZW;
+        const xW = new bW({
+          module: (0, EW.f)(NW.c, {
+            delays: jW,
+            onRetry: (WW, iW) => {
+              UW === xW && MW((OW => {
+                OW.onModuleRetry(WW, iW)
               }))
             }
           }),
           loadWorker: async () => {
-            const [BB] = await Promise.all([GB.e(51).then((() => GB(64086))), (0, yB.g)()]);
-            return BB.createModelWorker
+            const [WW] = await Promise.all([OW.e(52).then((() => OW(64629))), (0, wW.p)()]);
+            return WW.createModelWorker
           },
-          count: BB,
-          onUnavailable: BB => {
-            if (ZB === PB) {
-              ZB = null;
-              const OB = function(BB) {
-                return BB instanceof YB.b ? [QB.d.url().href] : void 0
-              }(BB);
-              WB((GB => {
-                GB.onUnavailable(BB, OB)
+          count: WW,
+          onUnavailable: WW => {
+            if (UW === xW) {
+              UW = null;
+              const iW = function(WW) {
+                return WW instanceof mW.d ? [NW.c.url().href] : void 0
+              }(WW);
+              MW((OW => {
+                OW.onUnavailable(WW, iW)
               }))
             }
           },
-          onWorkerLost: BB => {
-            ZB === PB && WB((OB => {
-              OB.onWorkerLost(BB)
+          onWorkerLost: WW => {
+            UW === xW && MW((iW => {
+              iW.onWorkerLost(WW)
             }))
           }
         });
-        return PB
+        return xW
       }(), {
-        pool: ZB,
+        pool: UW,
         unlisten: () => {
-          NB.delete(BB)
+          kW.delete(WW)
         }
       }
     }
 
-    function WB(BB) {
-      for (const GB of [...NB]) try {
-        BB(GB)
-      } catch (OB) {
-        console.error("[pageModelPool] a listener threw", OB)
+    function MW(WW) {
+      for (const OW of [...kW]) try {
+        WW(OW)
+      } catch (iW) {
+        console.error("[pageModelPool] a listener threw", iW)
+      }
+    }
+  },
+  42440: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW,
+      d: () => mW,
+      f: () => LW,
+      g: () => PW
+    });
+    const mW = 12e4,
+      EW = 3e4,
+      NW = {
+        hidden: () => "undefined" !== typeof document && document.hidden,
+        listen: WW => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", WW), () => {
+          document.removeEventListener("visibilitychange", WW)
+        })
+      };
+
+    function PW(WW) {
+      return `it sent no start within ${Math.round(WW)} ms`
+    }
+    class LW {
+      constructor(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : NW;
+        this.timeoutMs = WW, this.onTimeout = iW, this.now = OW, this.visibility = mW, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = mW.listen((() => {
+          this.onVisibility()
+        })), mW.hidden() || this.next()
+      }
+      cancel() {
+        this.pause(), this.unlisten()
+      }
+      onVisibility() {
+        this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
+      }
+      credit() {
+        const WW = this.step;
+        return null === WW ? 0 : Math.min(this.now() - WW.at, WW.ms)
+      }
+      pause() {
+        null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
+      }
+      next() {
+        const WW = this.timeoutMs - this.counted;
+        if (WW <= 0) return void this.arm(1e3, (() => {
+          this.cancel(), this.onTimeout(this.counted)
+        }));
+        const iW = Math.min(WW, 5e3);
+        this.step = {
+          at: this.now(),
+          ms: iW
+        }, this.arm(iW, (() => {
+          this.counted += this.credit(), this.step = null, this.next()
+        }))
+      }
+      arm(WW, iW) {
+        this.timer = setTimeout((() => {
+          this.timer = null, iW()
+        }), WW)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

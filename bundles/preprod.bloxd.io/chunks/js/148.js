@@ -1,506 +1,226 @@
 export const id = 148;
-export const ids = [148, 152, 153];
+export const ids = [148];
 export const modules = {
-  7147: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB
+  7541: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => NW
     });
-    var YB = GB(5531),
-      DB = GB(1282);
-    const QB = {
-      strict: "shaderPack:variantStrict",
-      nonStrict: "shaderPack:variantNonStrict",
-      terrain: "shaderPack:variantTerrain",
-      liquid: "shaderPack:variantLiquid",
-      model: "shaderPack:variantModel"
-    };
+    var mW = OW(1172),
+      EW = OW(1283);
 
-    function oB(BB) {
-      let {
-        diagnostics: OB,
-        more: GB = 0,
-        t: oB
-      } = BB;
-      return (0, DB.jsxs)("ul", {
-        className: "ShaderPackDiagnostics",
-        children: [OB.map(((BB, OB) => {
-          const GB = (0, YB.g)(BB),
-            jB = function(BB, OB) {
-              const GB = (0, YB.e)(null !== BB && void 0 !== BB ? BB : []);
-              if (0 === GB.length) return null;
-              return GB.map((BB => BB.map((BB => OB(QB[BB]))).join(", "))).join("; ")
-            }(BB.variants, oB);
-          return (0, DB.jsxs)("li", {
-            children: [GB && (0, DB.jsx)("span", {
-              className: "ShaderPackDiagnosticLocation",
-              children: GB
-            }), BB.message, jB && (0, DB.jsx)("span", {
-              className: "ShaderPackDiagnosticVariants",
-              children: oB("shaderPack:onlyIn", {
-                variants: jB
-              })
+    function NW() {
+      const {
+        t: WW
+      } = (0, mW.B)();
+      return (0, EW.jsxs)("div", {
+        className: "LegalText",
+        children: [(0, EW.jsx)("div", {
+          className: "BloxdInformationHeader FullyFancyText",
+          children: WW("homePage:termsOfService")
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsx)("em", {
+            children: "Last updated: July 15, 2025"
+          })
+        }), (0, EW.jsx)("p", {
+          children: 'These Terms of Service ("Terms") govern your access to and use of the Bloxd.io website and services (the "Services"). These Terms form a legally binding agreement between you and Bloxd LTD ("we," "us" or "our"). By using our Services, you agree to these Terms in full. If you do not agree, you may not access or use our Services.'
+        }), (0, EW.jsx)("h3", {
+          children: "1. General Information"
+        }), (0, EW.jsx)("p", {
+          children: "We may update these Terms at any time. When we do, we\u2019ll post the revised version on our website with the new effective date. Your continued use of Bloxd.io after the changes take effect means you accept the updated Terms. If you do not agree to the changes, you must stop using the Services."
+        }), (0, EW.jsx)("h3", {
+          children: "2. Definitions"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: '"Account" means the account you create to access the Services on Bloxd.io.'
+            }), (0, EW.jsx)("li", {
+              children: '"Company" refers to Bloxd LTD and its affiliates, subsidiaries, and associated entities.'
+            }), (0, EW.jsx)("li", {
+              children: '"Services" includes the Bloxd.io website, games, content, and related services provided by us.'
+            }), (0, EW.jsx)("li", {
+              children: '"User", "you", or "your" refers to anyone using the Services.'
+            }), (0, EW.jsx)("li", {
+              children: '"Content" means all text, graphics, logos, images, software, and other material found on Bloxd.io.'
+            }), (0, EW.jsx)("li", {
+              children: '"Virtual Goods" refers to virtual items available for purchase within Bloxd.io, such as game items and in-game currency.'
             })]
-          }, OB)
-        })), GB > 0 && (0, DB.jsx)("li", {
-          children: oB("shaderPack:moreErrors", {
-            count: String(GB)
           })
-        })]
-      })
-    }
-  },
-  7152: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => SB,
-      e: () => nB
-    });
-    var YB = GB(56),
-      DB = GB(1090),
-      QB = GB.n(DB),
-      oB = GB(5452),
-      jB = GB(1375),
-      yB = GB(1383),
-      JB = GB(1175),
-      MB = GB(5546),
-      PB = GB(5538),
-      zB = GB(3588);
-    const lB = 33554432,
-      pB = 1024,
-      qB = 65536;
-    async function ZB(BB) {
-      const OB = (0, zB.p)(BB);
-      if (OB) {
-        if (OB.size > lB) throw new zB.b("shaderPack:loadZipTooBig", {
-          megabytes: String(lB / 1048576)
-        });
-        return async function(BB) {
-          return NB((0, zB.g)(BB, pB).map((OB => ({
-            path: OB.path,
-            read: GB => (0, zB.l)(BB, OB, GB)
-          }))))
-        }(new Uint8Array(await OB.arrayBuffer()))
-      }
-      return NB(BB.map((BB => ({
-        path: (0, zB.k)(BB),
-        read: OB => async function(BB, OB) {
-          return BB.size > OB ? null : new Uint8Array(await BB.arrayBuffer())
-        }(BB, OB)
-      }))))
-    }
-    async function NB(BB) {
-      const OB = function(BB) {
-          const OB = BB.length > 0 ? BB[0].path.indexOf("/") : -1;
-          if (-1 === OB) return BB;
-          const GB = BB[0].path.slice(0, OB + 1);
-          if (!BB.every((BB => BB.path.startsWith(GB)))) return BB;
-          return BB.map((BB => ({
-            ...BB,
-            path: BB.path.slice(GB.length)
-          })))
-        }(BB.filter((BB => !(0, zB.d)(BB.path)))),
-        GB = OB.filter((BB => "pack.json" === BB.path.toLowerCase()));
-      if (0 === GB.length) throw new zB.b("shaderPack:loadNoManifest");
-      if (GB.length > 1) throw new zB.b("shaderPack:loadDuplicateManifest");
-      const YB = GB[0],
-        DB = await YB.read(qB);
-      if (null === DB) throw new zB.b("shaderPack:loadManifestTooBig", {
-        kilobytes: String(qB / 1024)
-      });
-      const QB = function(BB) {
-          let OB;
-          try {
-            OB = JSON.parse(BB)
-          } catch (jB) {
-            throw new zB.b("shaderPack:loadManifestNotJson", {
-              error: jB.message
-            }, {
-              cause: jB
-            })
-          }
-          if ("object" !== typeof OB || null === OB || Array.isArray(OB)) throw new zB.b("shaderPack:loadManifestNotObject");
-          const {
-            apiVersion: GB,
-            name: YB,
-            author: DB,
-            description: QB,
-            keepCircleShadows: oB
-          } = OB;
-          if (void 0 === GB) throw new zB.b("shaderPack:loadNoApiVersion", {
-            version: String(PB.b)
-          });
-          if (!(0, PB.g)(GB)) throw new zB.b("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(GB),
-            version: String(PB.b)
-          });
-          if ("string" !== typeof YB || "" === YB.trim()) throw new zB.b("shaderPack:loadNoName");
-          if (void 0 !== DB && null !== DB && "string" !== typeof DB) throw new zB.b("shaderPack:loadAuthorNotString");
-          if (void 0 !== QB && null !== QB && "string" !== typeof QB) throw new zB.b("shaderPack:loadDescriptionNotString");
-          if (void 0 !== oB && "boolean" !== typeof oB) throw new zB.b("shaderPack:loadKeepCircleShadowsNotBoolean");
-          return {
-            apiVersion: GB,
-            name: YB,
-            author: "string" === typeof DB ? DB : null,
-            description: "string" === typeof QB && "" !== QB.trim() ? QB : null,
-            keepCircleShadows: !0 === oB
-          }
-        }(RB(DB, YB.path)),
-        oB = OB.filter((BB => BB.path.toLowerCase().endsWith(".wgsl"))).sort(((BB, OB) => (0, MB.p)(BB.path, OB.path)));
-      if (0 === oB.length) throw new zB.b("shaderPack:loadNoWgsl");
-      if (oB.length > MB.e) throw new zB.b("shaderPack:loadTooManyWgsl", {
-        count: String(MB.e)
-      });
-      const jB = oB.find(((BB, OB) => OB > 0 && BB.path === oB[OB - 1].path));
-      if (jB) throw new zB.b("shaderPack:loadDuplicatePath", {
-        path: jB.path
-      });
-      const yB = [];
-      let JB = MB.h;
-      for (const PB of oB) {
-        const BB = await PB.read(JB);
-        if (null === BB) throw new zB.b("shaderPack:loadSourceTooBig", {
-          kilobytes: String(MB.h / 1024)
-        });
-        JB -= BB.byteLength, yB.push({
-          path: PB.path,
-          source: RB(BB, PB.path)
-        })
-      }
-      return {
-        manifest: QB,
-        files: yB
-      }
-    }
-
-    function RB(BB, OB) {
-      try {
-        return new TextDecoder("utf-8", {
-          fatal: !0
-        }).decode(BB)
-      } catch (GB) {
-        throw new zB.b("shaderPack:loadNotUtf8", {
-          path: OB
-        }, {
-          cause: GB
-        })
-      }
-    }
-    var WB = GB(5531),
-      AB = GB(5549),
-      VB = GB(1282);
-
-    function SB(BB) {
-      let {
-        busy: OB,
-        disabled: GB,
-        onFiles: YB
-      } = BB;
-      const {
-        t: DB
-      } = (0, JB.H)(), {
-        getRootProps: MB,
-        getInputProps: PB,
-        isDragActive: zB,
-        open: lB
-      } = (0, oB.e)({
-        onDrop: YB,
-        noClick: !0,
-        noKeyboard: !0,
-        useFsAccessApi: !1,
-        disabled: GB
-      });
-      return (0, VB.jsxs)("div", {
-        ...MB({
-          className: QB()("ShaderPackDropZone", {
-            ActiveDrag: zB,
-            Disabled: GB
+        }), (0, EW.jsx)("h3", {
+          children: "3. Age Requirements"
+        }), (0, EW.jsx)("p", {
+          children: "To use Bloxd.io, you must be at least 13 years old. If you are under 13, you need permission from a parent or guardian. By using our Services, you confirm that you meet this age or permission requirement."
+        }), (0, EW.jsx)("h3", {
+          children: "4. Account Creation and Security"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Account Information: You agree to provide accurate and complete information when creating your account. You are responsible for keeping your account information secure and confidential."
+            }), (0, EW.jsx)("li", {
+              children: "Account Security: Notify us immediately if you suspect unauthorized access to your account. We are not liable for any loss or damage arising from your failure to secure your account."
+            })]
           })
-        }),
-        children: [(0, VB.jsx)("input", {
-          ...PB({
-            webkitdirectory: "true"
+        }), (0, EW.jsx)("h3", {
+          children: "5. User Conduct and Community Guidelines"
+        }), (0, EW.jsx)("p", {
+          children: "We are committed to creating a fun, safe, and inclusive environment for everyone. By using Bloxd.io, you agree to follow our Community Conduct Guidelines and adhere to the following rules:"
+        }), (0, EW.jsx)("h4", {
+          children: "Expected Behavior"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Show Respect: Treat others with kindness and consideration in all interactions."
+            }), (0, EW.jsx)("li", {
+              children: "Promote Positivity: Engage in activities that contribute to a positive community experience."
+            }), (0, EW.jsx)("li", {
+              children: "Play Fairly: Participate honestly and with integrity, respecting the rules and spirit of the game."
+            })]
           })
-        }), OB && (0, VB.jsx)(jB.b, {}), !OB && (0, VB.jsxs)(VB.Fragment, {
-          children: [(0, VB.jsx)("div", {
-            className: "ShaderPackDropZoneIcon",
-            children: (0, VB.jsx)(yB.b, {
-              name: "up-from-bracket"
-            })
-          }), (0, VB.jsx)("div", {
-            className: "ShaderPackDropZoneInstructions",
-            children: DB((0, AB.d)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, VB.jsx)(AB.b, {
-            disabled: GB,
-            openFolderPicker: lB,
-            onFiles: YB
+        }), (0, EW.jsx)("h4", {
+          children: "Prohibited Behavior"
+        }), (0, EW.jsxs)("p", {
+          children: ["To maintain a safe and welcoming environment, the following actions are strictly prohibited:", (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Harassment and Threats: Any form of bullying, stalking, or harassment, including making threats or inciting violence."
+            }), (0, EW.jsx)("li", {
+              children: "Discrimination and Hate Speech: Discriminating against or mocking others based on age, race, ethnicity, gender, sexual orientation, religion, disability, or any other protected characteristic."
+            }), (0, EW.jsx)("li", {
+              children: "Inappropriate Content and Behavior: Sharing or promoting content that is sexually explicit, violent, or otherwise inappropriate."
+            }), (0, EW.jsx)("li", {
+              children: "Impersonation: Impersonating other players, staff, or developers with the intent to deceive or harm."
+            }), (0, EW.jsx)("li", {
+              children: "Account Security and Privacy: Sharing, selling, or trading accounts, or using someone else's account without permission."
+            }), (0, EW.jsx)("li", {
+              children: "Spam and Advertising: Spamming chat, boards, or other communication channels with repetitive or irrelevant messages."
+            }), (0, EW.jsx)("li", {
+              children: "Inappropriate World Creation: Creating worlds or lobbies with inappropriate or offensive themes or content."
+            })]
           })]
+        }), (0, EW.jsx)("h4", {
+          children: "Cheating and Unfair Play"
+        }), (0, EW.jsxs)("p", {
+          children: ["You may not make, use, share, or promote any cheats, hacks, bots, scripts, or other tools that change how the game works or give players an unfair advantage.", (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "This includes trying to bypass any form of security - including, but not limited to, protections related to client integrity or gameplay action security."
+            }), (0, EW.jsx)("li", {
+              children: "It also includes trying to reverse engineer our game's code in any way, or trying to gain unauthorised access to our systems."
+            }), (0, EW.jsx)("li", {
+              children: "If you do any of these things, we may suspend or ban your account, and we reserve the right to take civil and/or criminal legal action for your actions harming our game, our players, and our business."
+            }), (0, EW.jsx)("li", {
+              children: "If you break these rules - like hacking, cheating, or trying to mess with our game or servers - you agree to pay us \xa325,000 for each violation. This is because it's hard to measure exactly how much damage those actions cause, and this amount is a fair estimate of the harm they can do. This doesn't stop us from taking other legal steps if needed, like our right to seek injunctive relief or any other remedy available at law or in equity."
+            }), (0, EW.jsx)("li", {
+              children: "These rules apply to everyone, whether or not you have a game account, and even if you used a bot or other automated tool to do it."
+            })]
+          })]
+        }), (0, EW.jsx)("h3", {
+          children: "6. Software License and IP Restrictions"
+        }), (0, EW.jsxs)("ul", {
+          children: [(0, EW.jsx)("li", {
+            children: "License Grant: We grant you a limited, non-exclusive, non-transferable right to download and run the Bloxd game client solely to access and play our Services."
+          }), (0, EW.jsx)("li", {
+            children: "What You Can't Do: You may not copy, modify, distribute, or create derivative works of the game client, or attempt to reverse-engineer, decompile, disassemble, hack, bypass security, inject cheats, bots, scripts, or any unauthorized tools. Any such action automatically terminates your license and may lead to legal remedies. For the avoidance of doubt, any use of hacks and cheats including but not limited to killaura, fly exploits, and speed exploits automatically terminates your license and may lead to legal remedies."
+          }), (0, EW.jsx)("li", {
+            children: "Our Ownership: All intellectual property rights in the game client and Services stay with Bloxd LTD. You get no ownership or other rights here beyond this limited license."
+          })]
+        }), (0, EW.jsx)("h3", {
+          children: "7. Virtual Goods and In-Game Purchases"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Purchases: Virtual Goods can be purchased within the Services. All purchases are final and non-refundable unless required by law."
+            }), (0, EW.jsx)("li", {
+              children: "License: When you purchase Virtual Goods, you receive a limited, non-transferable license to use them within the Services."
+            }), (0, EW.jsx)("li", {
+              children: "Termination: We may terminate your access to Virtual Goods if you violate these Terms or our Community Conduct Guidelines."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "8. Modifications and Updates"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Service Changes: We may update or modify the Services at any time without prior notice. We are not liable for any changes, suspensions, or discontinuations of the Services."
+            }), (0, EW.jsx)("li", {
+              children: "Terms Updates: These Terms may be updated periodically. We will notify you of significant changes, and your continued use of the Services constitutes your acceptance of the new Terms."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "9. Termination"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Termination by You: You can terminate your account at any time by contacting us."
+            }), (0, EW.jsx)("li", {
+              children: "Termination by Us: We reserve the right to terminate or suspend your account if you violate these Terms, the Community Conduct Guidelines, or engage in harmful behavior."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "10. Reporting and Consequences"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Reporting Violations: If you encounter behavior that violates these Terms or the Community Conduct Guidelines, report it using the in-game tools. Your reports help us maintain a high-quality, enjoyable experience for everyone."
+            }), (0, EW.jsx)("li", {
+              children: "Consequences for Violations: Breaking these guidelines can result in penalties ranging from temporary suspensions to permanent bans. Players who demonstrate positive behavior over time may see a reduction in penalties."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "11. Disclaimer of Warranties"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: 'As-Is Basis: The Services are provided "as is" and "as available", without any warranties, either express or implied.'
+            }), (0, EW.jsx)("li", {
+              children: "No Warranty: We do not guarantee that the Services will be uninterrupted or error-free."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "12. Limitation of Liability"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "No Liability: To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, or consequential damages arising from your use of the Services."
+            }), (0, EW.jsx)("li", {
+              children: "Total Liability: Our total liability to you for any claims related to the Services is limited to the amount you paid us in the past 12 months."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "13. Governing Law and Dispute Resolution"
+        }), (0, EW.jsx)("p", {
+          children: (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Governing Law: These Terms are governed by the laws of England and Wales."
+            }), (0, EW.jsx)("li", {
+              children: "Small-Claims Court Option: If you or we seek only money damages up to the small-claims track limit set by the Civil Procedure Rules (currently \xa310,000), you may choose to bring that claim in the County Court small-claims track in England and Wales. This does not cover any other kinds of relief (like injunctions), nor can you split one dispute into several small claims to get around this limit."
+            }), (0, EW.jsx)("li", {
+              children: "Dispute Resolution: Any other disputes arising from these Terms will be resolved through binding arbitration in London, United Kingdom. You waive any right to participate in a class action or jury trial."
+            }), (0, EW.jsx)("li", {
+              children: "Equitable Relief for Bloxd: Even though we agree to arbitrate all other non-small claim disputes, only Bloxd LTD (not you) may go to an English or Welsh court for urgent orders - like injunctions or specific-performance - to protect our IP, confidential data, account security, gameplay experience, or the integrity of our service. Asking a court for such relief won't count as breaking our arbitration agreement."
+            }), (0, EW.jsx)("li", {
+              children: "Identity Verification: If the arbitrator issues any award against you (including for hacks, cheats, or other breaches), you agree that upon request you will promptly provide your full legal name, current address, relevant IP logs, and a copy of a government-issued photo ID to confirm your identity and enable enforcement of the award (including collection of any monetary damages)."
+            })]
+          })
+        }), (0, EW.jsx)("h3", {
+          children: "14. Severability"
+        }), (0, EW.jsx)("p", {
+          children: "If any part of these Terms is found to be unenforceable, the remaining provisions will continue to be in full force and effect."
+        }), (0, EW.jsx)("h3", {
+          children: "15. Contact Information"
+        }), (0, EW.jsxs)("p", {
+          children: ["If you have any questions about these Terms, please contact us at:", (0, EW.jsxs)("ul", {
+            children: [(0, EW.jsx)("li", {
+              children: "Email: privacy@bloxd.io"
+            }), (0, EW.jsx)("li", {
+              children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
+            })]
+          })]
+        }), (0, EW.jsx)("h3", {
+          children: "16. Entire Agreement"
+        }), (0, EW.jsx)("p", {
+          children: "These Terms, together with our Privacy Policy and Community Conduct Guidelines, constitute the entire agreement between you and Bloxd LTD regarding your use of the Services. They supersede any prior agreements or communications."
         })]
       })
-    }
-
-    function nB(BB) {
-      const {
-        t: OB
-      } = (0, JB.H)(), [GB, DB] = (0, YB.useState)(!1), [QB, oB] = (0, YB.useState)(null), jB = (0, YB.useRef)(!1);
-      return {
-        loading: GB,
-        error: QB,
-        setError: oB,
-        onFiles: async function(GB) {
-          if (!jB.current) {
-            jB.current = !0, DB(!0), oB(null);
-            try {
-              await BB(await ZB(GB))
-            } catch (YB) {
-              YB instanceof zB.b ? oB((0, WB.j)(OB, YB.translationKey, YB.params)) : (console.error("Failed to load the shader pack", YB), oB(OB("shaderPack:unexpectedError")))
-            } finally {
-              jB.current = !1, DB(!1)
-            }
-          }
-        }
-      }
-    }
-  },
-  7193: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      forgetShaderPackActiveHint: () => KB,
-      isOtherApiVersion: () => UB,
-      isShaderPackActive: () => AB,
-      isShaderPackChangePending: () => nB,
-      markShaderPackChangePending: () => SB,
-      pageShaderPackValidationVersion: () => fB,
-      reconcileStoredShaderPackHint: () => dB,
-      removeShaderPack: () => WB,
-      replaceShaderPack: () => ZB,
-      saveShaderPack: () => qB,
-      shaderPackNeedsCheck: () => kB,
-      storedPackOutcome: () => VB,
-      storedShaderPackFiles: () => zB,
-      toStoredShaderPack: () => PB
-    });
-    var YB = GB(5546),
-      DB = GB(5538),
-      QB = GB(31),
-      oB = GB(3885),
-      jB = GB(7198),
-      yB = GB(7174);
-    const JB = "shaderPackChangePending";
-    let MB = null;
-
-    function PB(BB, OB, GB) {
-      return {
-        manifest: BB.manifest,
-        files: (0, YB.y)(BB.files),
-        validation: OB,
-        ...GB && {
-          listing: GB
-        }
-      }
-    }
-
-    function zB(BB) {
-      return Object.keys(BB.files).map((OB => ({
-        path: OB,
-        source: BB.files[OB]
-      })))
-    }
-    let lB = Promise.resolve();
-
-    function pB(BB) {
-      const OB = lB.then(BB);
-      return lB = OB.catch((() => {})), OB
-    }
-
-    function qB(BB, OB) {
-      return pB((() => NB(BB, OB)))
-    }
-
-    function ZB(BB, OB, GB) {
-      return pB((async () => JSON.stringify(await (0, jB.e)()) === JSON.stringify(BB) && (null === OB ? (await RB(), !0) : NB(OB, GB))))
-    }
-    async function NB(BB, OB) {
-      const GB = await QB.d.setItem(jB.c, BB);
-      return GB && uB(BB, OB), GB
-    }
-    async function RB() {
-      await QB.d.removeItem(jB.c), QB.g.removeItem(oB.d)
-    }
-
-    function WB() {
-      return pB(RB)
-    }
-
-    function AB(BB, OB) {
-      return "active" === VB(BB, OB).kind
-    }
-
-    function VB(BB, OB) {
-      var GB;
-      return null === BB ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : UB(BB) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) || BB.validation.fromRecheck ? null === OB ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : kB(BB, OB) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : BB.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function SB() {
-      QB.i.setItem(JB, performance.timeOrigin)
-    }
-
-    function nB() {
-      return QB.i.getItem(JB) === performance.timeOrigin
-    }
-
-    function UB(BB) {
-      return !(0, DB.g)(BB.manifest.apiVersion)
-    }
-
-    function fB(BB) {
-      return MB ??= BB.yI((0, yB.shaderPackTextures)()), MB
-    }
-
-    function kB(BB, OB) {
-      var GB;
-      return (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.headerVersion) !== fB(OB)
-    }
-
-    function dB(BB) {
-      return pB((async () => {
-        uB(await (0, jB.e)(!0), BB)
-      }))
-    }
-
-    function KB() {
-      return pB((async () => {
-        QB.g.removeItem(oB.d)
-      }))
-    }
-
-    function uB(BB, OB) {
-      AB(BB, OB) ? QB.g.setItem(oB.d, !0) : QB.g.removeItem(oB.d)
-    }
-  },
-  7174: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadShaderPackTextures: () => oB,
-      shaderPackTextures: () => jB
-    });
-    var YB = GB(5546);
-    let DB = null,
-      QB = null;
-
-    function oB() {
-      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: OB,
-          textureNameToIndex: GB,
-          textureAnimationData: QB
-        } = BB;
-        return DB ??= (0, YB.o)(GB, QB, OB), DB
-      })), QB
-    }
-
-    function jB() {
-      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return DB
-    }
-  },
-  7186: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => yB,
-      f: () => jB
-    });
-    var YB = GB(7193),
-      DB = GB(7174),
-      QB = GB(113);
-    const oB = 100;
-    async function jB(BB, OB) {
-      var GB;
-      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GB = navigator.gpu) && void 0 !== GB ? GB : null;
-      const oB = BB.VOB(OB, (0, DB.shaderPackTextures)());
-      if (oB.errors.length > 0) return JB(BB, oB.errors, oB.offInStrict);
-      const jB = await async function(BB) {
-        if (!BB) return null;
-        try {
-          const OB = await (0, QB.w)(BB);
-          return OB ? await OB.requestDevice() : null
-        } catch (OB) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", OB), null
-        }
-      }(YB);
-      if (!jB) return null;
-      let yB = !1;
-      jB.lost.then((() => {
-        yB = !0
-      }));
-      try {
-        const OB = await Promise.all(oB.validationModules.map((OB => async function(BB, OB, GB) {
-          OB.pushErrorScope("validation");
-          const YB = OB.createShaderModule({
-              code: GB.code
-            }),
-            DB = OB.popErrorScope(),
-            {
-              messages: QB
-            } = await YB.getCompilationInfo(),
-            oB = QB.filter((BB => "error" === BB.type)).map((OB => BB.mapValidationMessage(GB, OB))),
-            jB = await DB;
-          jB && 0 === oB.length && oB.push({
-            file: null,
-            line: 0,
-            message: jB.message,
-            variants: [GB.key]
-          });
-          return oB
-        }(BB, jB, OB))));
-        return yB ? null : JB(BB, BB.lDB(OB.flat()), oB.offInStrict)
-      } catch (MB) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", MB), null
-      } finally {
-        jB.destroy()
-      }
-    }
-    async function yB(BB, OB) {
-      var GB;
-      if (!(0, YB.shaderPackNeedsCheck)(BB, OB) || (0, YB.isOtherApiVersion)(BB)) return BB;
-      const DB = await jB(OB, (0, YB.storedShaderPackFiles)(BB));
-      if (!DB) return BB;
-      const QB = !1 === (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) && !BB.validation.fromRecheck,
-        oB = {
-          ...BB,
-          validation: QB ? DB : {
-            ...DB,
-            fromRecheck: !0
-          }
-        };
-      return await (0, YB.replaceShaderPack)(BB, oB, OB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), oB
-    }
-
-    function JB(BB, OB, GB) {
-      return {
-        headerVersion: (0, YB.pageShaderPackValidationVersion)(BB),
-        ok: 0 === OB.length,
-        errors: OB.slice(0, oB),
-        moreErrors: Math.max(0, OB.length - oB),
-        offInStrict: GB
-      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

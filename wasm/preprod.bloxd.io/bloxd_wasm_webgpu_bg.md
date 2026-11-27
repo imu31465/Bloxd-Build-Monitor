@@ -1,646 +1,660 @@
 # WASM module: `bloxd_wasm_webgpu_bg`
 
-> environment **preprod.bloxd.io** · build `gw4e3a.937868ec` · analyzed 2026-11-27T02:05:20+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_webgpu_bg.b094ad5b4d802c8dcce0.wasm
-> 5,162,719 bytes (4.9 MB) · sha256 `feb1e82520617426…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `1yqdn.8419f1e1` · analyzed 2026-11-28T01:59:41+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_webgpu_bg.6553b0be0a0f65d95e34.wasm
+> 5,238,928 bytes (5.0 MB) · sha256 `603e3bc645f5c3d0…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 5,163,087 → 5,162,719 bytes (-368)
-- code bytes 4,073,527 → 4,073,529
-- data bytes 1,043,096 → 1,042,710
-- name-section module id `881bcbb741e8cb97.12347` → `1b7fd571c66fed14.12347` (numeric version suffix unchanged — same module version, re-randomized prefix)
-- export identifiers rotated by the obfuscator: 1/163 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- size 5,162,719 → 5,238,928 bytes (+76,209)
+- defined functions 2,969 → 3,025
+- imported functions 393 → 394
+- code bytes 4,073,529 → 4,142,840
+- data bytes 1,042,710 → 1,049,293
+- name-section module id `1b7fd571c66fed14.12347` → `6491d4607a069046.12491`
+- export signatures: +1 × `(i32) -> (i32 i32)`; +3 × `(i32) -> ()`; +1 × `(i32 i32) -> ()`; +1 × `(i32 i32 i32 i32) -> ()`; +1 × `(i32 i32 i32 i32 i32 i32 i32 i32) -> ()`
+- import signatures: +1 × `(i32) -> ()`
+- export identifiers rotated by the obfuscator: 1/170 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `flag testalpha * baseColor.abaseColor.adiffuseBase.remissive`; `packLightLevels.rgb, packLightLevels.w, frame.uAmbientLightC`; `ue:keydownkeyupmousedownmouseuptouchstarttouchendMouse1Mouse`
+- removed embedded strings: `flag testalpha * baseColor.abaseColor.abloxdSpGlintTier(v.vE`; `fn vs_mesh_0040d040073_l7(@location(0) position: vec3f, @loc`; `ue:keydownkeyupmousedownmouseuptouchstarttouchendotherMouse1`
 
 ## Overview
 
 | Metric | Value |
 |---|---|
-| Functions defined / imported | 2,969 / 393 |
-| Exports / imports | 163 / 394 |
-| Code bytes (function bodies) | 4,073,529 (3.9 MB) |
-| Total local variables | 31,171 |
-| Instructions (scanable bodies) | 1,905,103 |
-| Data segments / bytes | 3,545 / 1,042,710 |
-| Element segments / entries | 1 / 839 |
+| Functions defined / imported | 3,025 / 394 |
+| Exports / imports | 170 / 395 |
+| Code bytes (function bodies) | 4,142,840 (4.0 MB) |
+| Total local variables | 31,921 |
+| Instructions (scanable bodies) | 1,938,528 |
+| Data segments / bytes | 3,552 / 1,049,293 |
+| Element segments / entries | 1 / 844 |
 | Memories / tables / globals | 0 / 1 / 3 |
-| name-section module id | `1b7fd571c66fed14.12347` |
+| name-section module id | `6491d4607a069046.12491` |
 | Sections | 11 |
 
 ## Sections
 
 | id | Section | Bytes | Items |
 |---|---|---:|---:|
-| 1 | type | 1,533 | 179 |
-| 2 | import | 4,734 | 394 |
-| 3 | function | 3,022 | 2969 |
+| 1 | type | 1,542 | 180 |
+| 2 | import | 4,746 | 395 |
+| 3 | function | 3,079 | 3025 |
 | 4 | table | 7 | 1 |
 | 6 | global | 25 | 3 |
-| 7 | export | 1,305 | 163 |
-| 9 | element | 1,685 | 1 |
+| 7 | export | 1,361 | 170 |
+| 9 | element | 1,695 | 1 |
 | 12 | datacount | 2 | — |
-| 10 | code | 4,078,948 | 2969 |
-| 11 | data | 1,071,388 | 3545 |
+| 10 | code | 4,148,372 | 3025 |
+| 11 | data | 1,078,029 | 3552 |
 | 0 | custom:name | 30 | — |
 
 ## Types
 
-179 function types; top shapes: `(i32 i32) -> ()` ×1, `(i32 i32 i32) -> ()` ×1, `(i32) -> ()` ×1, `(i32 i32) -> (i32)` ×1, `(i32 i32 i32) -> (i32)` ×1, `(i32 i32 i32 i32) -> ()` ×1, `(i32) -> (i32)` ×1, `(i32 i32 i32 i32 i32) -> ()` ×1
+180 function types; top shapes: `(i32 i32) -> ()` ×1, `(i32 i32 i32) -> ()` ×1, `(i32) -> ()` ×1, `(i32 i32) -> (i32)` ×1, `(i32 i32 i32) -> (i32)` ×1, `(i32 i32 i32 i32) -> ()` ×1, `(i32) -> (i32)` ×1, `(i32 i32 i32 i32 i32) -> ()` ×1
 
 ## Imports
 
-394 imported items (JS callbacks and shared state):
+395 imported items (JS callbacks and shared state):
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `MeSD.PVry` | memory | `[128..14648]` |
-| 0 | `MeSD.Q1CH` | func | `(i32) -> (i32)` |
-| 1 | `MeSD.h1eB` | func | `(i32) -> (f64)` |
-| 2 | `MeSD.mhcl` | func | `() -> (i32)` |
-| 3 | `MeSD.hfDK` | func | `(i32 i32 i32) -> (i32)` |
-| 4 | `MeSD.r3K0` | func | `(i32) -> ()` |
-| 5 | `MeSD.SSAR` | func | `(i32 i32) -> (i32)` |
-| 6 | `MeSD.GGsJ` | func | `(i32) -> (i32)` |
-| 7 | `MeSD.jkN4` | func | `(i32 i32 i32) -> (i32)` |
-| 8 | `MeSD.c1Gb` | func | `(i32 i32 i32 i32) -> (i32)` |
-| 9 | `MeSD.qI3j` | func | `(i32) -> (i32)` |
-| 10 | `MeSD.HgOj` | func | `(i32 i32) -> ()` |
-| 11 | `MeSD.LsNa` | func | `(i32 i32) -> ()` |
-| 12 | `MeSD.EUxe` | func | `(i32 i32 i32 i32) -> (i32)` |
-| 13 | `MeSD.bQCw` | func | `(i32 i32) -> (i32)` |
-| 14 | `MeSD.IfPw` | func | `(i32 i32 i32 i32 i32 i32) -> (i32)` |
-| 15 | `MeSD.CnuK` | func | `(i32) -> (i32)` |
-| 16 | `MeSD.SmIB` | func | `(i32 i32) -> (i32)` |
-| 17 | `MeSD.WmGO` | func | `(i32 i32) -> (i32)` |
-| 18 | `MeSD.mmp8` | func | `(i32 i32) -> ()` |
-| 19 | `MeSD.EuG9` | func | `(i32) -> (i32)` |
-| 20 | `MeSD.K2rf` | func | `(i32) -> (i32)` |
-| 21 | `MeSD.q3Tc` | func | `(i32 i32 i32) -> ()` |
-| 22 | `MeSD.aV5A` | func | `(i32 i32 i32) -> (i32)` |
-| 23 | `MeSD.Cril` | func | `(i32) -> (i32)` |
-| 24 | `MeSD.l2oB` | func | `(i32) -> (i32)` |
-| 25 | `MeSD.lSWy` | func | `(i32 i32) -> ()` |
-| 26 | `MeSD.l04e` | func | `(i32 i32) -> (i32)` |
-| 27 | `MeSD.A8xM` | func | `(i32 i32 i32 i32) -> ()` |
-| 28 | `MeSD.dn1s` | func | `(i32) -> (i32)` |
-| 29 | `MeSD.CeJw` | func | `(i32) -> (i32)` |
-| 30 | `MeSD.PCRZ` | func | `(i32) -> (i32)` |
-| 31 | `MeSD.jaD9` | func | `(i32) -> (i32)` |
-| 32 | `MeSD.vYOE` | func | `(i32) -> (i32)` |
-| 33 | `MeSD.qiog` | func | `(i32 i32 i32) -> ()` |
-| 34 | `MeSD.b1Vg` | func | `(i32 i32) -> (i32)` |
-| 35 | `MeSD.PzJM` | func | `(i32) -> (i32)` |
-| 36 | `MeSD.MCZT` | func | `(i32) -> ()` |
-| 37 | `MeSD.PXwV` | func | `(i32) -> (i32)` |
-| 38 | `MeSD.WHSq` | func | `(i32) -> (i32)` |
-| 39 | `MeSD.O6MH` | func | `(i32) -> ()` |
-| 40 | `MeSD.X93x` | func | `(i32 i32) -> (i32)` |
-| 41 | `MeSD.JGlr` | func | `(i32 i32 i32) -> (i32)` |
-| 42 | `MeSD.ANuA` | func | `(i32) -> ()` |
-| 43 | `MeSD.Ci4D` | func | `(i32 i32) -> ()` |
-| 44 | `MeSD.aapF` | func | `() -> (i32)` |
-| 45 | `MeSD.M5BD` | func | `(i32 i32) -> (i32)` |
-| 46 | `MeSD.ZGe8` | func | `(i32 i32) -> (i32)` |
-| 47 | `MeSD.mKqK` | func | `(i32) -> (i32)` |
-| 48 | `MeSD.NRP0` | func | `(i32) -> (i32)` |
-| 49 | `MeSD.deUw` | func | `(i32) -> (i32)` |
-| 50 | `MeSD.Z1Nv` | func | `(i32 i32) -> ()` |
-| 51 | `MeSD.mmpD` | func | `(i32) -> (i32)` |
-| 52 | `MeSD.QNWq` | func | `(i32) -> ()` |
-| 53 | `MeSD.BC48` | func | `(i32 i32) -> (i32)` |
-| 54 | `MeSD.FehG` | func | `(i32 i32 i32) -> (i32)` |
-| 55 | `MeSD.IWCS` | func | `(i32) -> (i32)` |
-| 56 | `MeSD.dg8B` | func | `(i32 i32 i32) -> ()` |
-| 57 | `MeSD.BYnW` | func | `(i32 i32) -> ()` |
-| 58 | `MeSD.dlan` | func | `(i32) -> (i32)` |
-| 59 | `MeSD.kYQZ` | func | `(i32 i32 f64 i32 i32 f64 f64) -> ()` |
-| 60 | `MeSD.gKCa` | func | `(i32) -> ()` |
-| 61 | `MeSD.SyDu` | func | `(i32 i32 f64 i32 f64 f64) -> ()` |
-| 62 | `MeSD.RfVR` | func | `(i32) -> ()` |
-| 63 | `MeSD.tlsG` | func | `(i32 i32 i32) -> ()` |
-| 64 | `MeSD.pfw7` | func | `(i32 i32) -> ()` |
-| 65 | `MeSD.LvSQ` | func | `(i32 i32 i32 i32 i32 f64 i32) -> ()` |
-| 66 | `MeSD.AWbc` | func | `(i32 i32 i32 f64 f64) -> ()` |
-| 67 | `MeSD.upAb` | func | `(i32 i32 i32 f64 f64) -> ()` |
-| 68 | `MeSD.WcVg` | func | `(i32 i32 f64) -> ()` |
-| 69 | `MeSD.AnFy` | func | `(i32) -> (i32)` |
-| 70 | `MeSD.M8vr` | func | `(i32 i32) -> ()` |
-| 71 | `MeSD.LuXT` | func | `(i32 i32 i32) -> ()` |
-| 72 | `MeSD.SC7u` | func | `(i32 i32 i32 i32) -> ()` |
-| 73 | `MeSD.m4Qp` | func | `(i32 i32 i32) -> ()` |
-| 74 | `MeSD.e9bv` | func | `(i32) -> ()` |
-| 75 | `MeSD.sC7L` | func | `(i32 i32) -> ()` |
-| 76 | `MeSD.YK4t` | func | `(i32 i32 i32 i32 i32) -> ()` |
-| 77 | `MeSD.HsMP` | func | `(i32 f32 f32 f32 f32 f32 f32) -> ()` |
-| 78 | `MeSD.r6HQ` | func | `(i32 i32 i32) -> ()` |
-| 79 | `MeSD.v3Yk` | func | `(i32 i32 i32 i32 i32 i32) -> ()` |
-| 80 | `MeSD.MDMk` | func | `(i32 i32 i32 f64 f64) -> ()` |
-| 81 | `MeSD.rEPW` | func | `(i32 i32 i32 i32 i32 f64 i32) -> ()` |
-| 82 | `MeSD.euHT` | func | `(i32 i32 i32 f64 f64) -> ()` |
-| 83 | `MeSD.KjxV` | func | `(i32 i32 i32 i32 i32 i32) -> ()` |
-| 84 | `MeSD.T8k6` | func | `(i32 i32 i32) -> ()` |
-| 85 | `MeSD.RPZW` | func | `(i32 i32) -> (i32)` |
-| 86 | `MeSD.vByV` | func | `(i32) -> (i32)` |
-| 87 | `MeSD.uSWj` | func | `(i32) -> (i32)` |
-| 88 | `MeSD.Mhzz` | func | `(i32) -> (i32)` |
-| 89 | `MeSD.ZHxi` | func | `(i32 i32) -> (i32)` |
-| 90 | `MeSD.el1a` | func | `(i32) -> ()` |
-| 91 | `MeSD.ihoV` | func | `(i32) -> (i32)` |
-| 92 | `MeSD.oe3n` | func | `(i32 i32) -> (i32)` |
-| 93 | `MeSD.k1h6` | func | `(i32 i32 i32) -> (i32)` |
-| 94 | `MeSD.tE7P` | func | `(i32 i32 i32) -> ()` |
-| 95 | `MeSD.hZay` | func | `(i32 i32 i32 i32) -> (i32)` |
-| 96 | `MeSD.ZLc5` | func | `() -> (f64)` |
-| 97 | `MeSD.WnaH` | func | `() -> (f64)` |
-| 98 | `MeSD.en4Y` | func | `(i32 i32) -> ()` |
-| 99 | `MeSD.oy0f` | func | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| 100 | `MeSD.HMdz` | func | `(i32) -> (i32)` |
-| 101 | `MeSD.qchQ` | func | `(i32) -> (i32)` |
-| 102 | `MeSD.TkWn` | func | `(i32) -> (i32)` |
-| 103 | `MeSD.Ey4x` | func | `() -> (i32)` |
-| 104 | `MeSD.uP9V` | func | `() -> (i32)` |
-| 105 | `MeSD.n7YA` | func | `() -> (i32)` |
-| 106 | `MeSD.AZ7K` | func | `() -> (i32)` |
-| 107 | `MeSD.baSQ` | func | `(i32 i32) -> (i32)` |
-| 108 | `MeSD.GAuM` | func | `(i32) -> ()` |
-| 109 | `MeSD.AyEs` | func | `(i32 i32) -> (i32)` |
-| 110 | `MeSD.osp8` | func | `(i32) -> (i32)` |
-| 111 | `MeSD.hq7x` | func | `() -> (f64)` |
-| 112 | `MeSD.CDts` | func | `(i32) -> (i32)` |
-| 113 | `MeSD.Dmiv` | func | `(i32 i32) -> ()` |
-| 114 | `MeSD.Q8iy` | func | `(i32 i32) -> ()` |
-| 115 | `MeSD.iX1v` | func | `(i32 i32) -> ()` |
-| 116 | `MeSD.V1MH` | func | `(i32 f32) -> ()` |
-| 117 | `MeSD.xSVW` | func | `(i32 f32) -> ()` |
-| 118 | `MeSD.YRvs` | func | `(i32 i32) -> ()` |
-| 119 | `MeSD.wrMV` | func | `(i32 i32) -> ()` |
-| 120 | `MeSD.QLJv` | func | `(i32 i32) -> ()` |
-| 121 | `MeSD.uXl3` | func | `(i32 i32) -> ()` |
-| 122 | `MeSD.wzrw` | func | `(i32 i32 i32) -> ()` |
-| 123 | `MeSD.sS3E` | func | `(i32 i32) -> (i32)` |
-| 124 | `MeSD.DjZl` | func | `(i32 i32) -> ()` |
-| 125 | `MeSD.xUAM` | func | `(i32 i32) -> ()` |
-| 126 | `MeSD.Xgyj` | func | `(i32 i32) -> ()` |
-| 127 | `MeSD.GEqy` | func | `(i32 i32) -> ()` |
-| 128 | `MeSD.RvwM` | func | `(i32 f64) -> ()` |
-| 129 | `MeSD.Cn26` | func | `(i32 f64) -> ()` |
-| 130 | `MeSD.yjwr` | func | `(i32 i32) -> ()` |
-| 131 | `MeSD.vn2A` | func | `(i32 i32 i32) -> ()` |
-| 132 | `MeSD.Rpg9` | func | `(i32 i32) -> ()` |
-| 133 | `MeSD.MYbG` | func | `(i32 i32) -> (i32)` |
-| 134 | `MeSD.U4VA` | func | `(i32 i32 i32) -> ()` |
-| 135 | `MeSD.uguy` | func | `(i32 i32 i32) -> ()` |
-| 136 | `MeSD.kt03` | func | `(i32 i32) -> (i32)` |
-| 137 | `MeSD.oIBZ` | func | `(i32 i32) -> (i32)` |
-| 138 | `MeSD.OQ1f` | func | `(i32 i32 i32) -> ()` |
-| 139 | `MeSD.avz1` | func | `(i32 i32 i32) -> ()` |
-| 140 | `MeSD.Sh9G` | func | `(i32 i32) -> (i32)` |
-| 141 | `MeSD.hp1T` | func | `(i32 i32) -> ()` |
-| 142 | `MeSD.iETC` | func | `(i32 i32) -> ()` |
-| 143 | `MeSD.IgiP` | func | `(i32 i32) -> ()` |
-| 144 | `MeSD.FvG9` | func | `(i32 i32) -> ()` |
-| 145 | `MeSD.k0yL` | func | `(i32 i32) -> ()` |
-| 146 | `MeSD.dMA4` | func | `(i32 i32) -> ()` |
-| 147 | `MeSD.x1On` | func | `(i32 i32) -> ()` |
-| 148 | `MeSD.xaro` | func | `(i32 f64) -> ()` |
-| 149 | `MeSD.POPa` | func | `(i32 i32) -> ()` |
-| 150 | `MeSD.zwL4` | func | `(i32 i32) -> ()` |
-| 151 | `MeSD.U0fx` | func | `(i32 i32) -> ()` |
-| 152 | `MeSD.Qr3O` | func | `(i32 i32) -> ()` |
-| 153 | `MeSD.KOv1` | func | `(i32 i32) -> ()` |
-| 154 | `MeSD.c1ct` | func | `(i32 i32) -> ()` |
-| 155 | `MeSD.fcKC` | func | `(i32 i32) -> ()` |
-| 156 | `MeSD.bzz4` | func | `(i32 i32) -> ()` |
-| 157 | `MeSD.VJU0` | func | `(i32 i32) -> ()` |
-| 158 | `MeSD.Iy3A` | func | `(i32 i32 i32) -> ()` |
-| 159 | `MeSD.NYmf` | func | `(i32 i32 i32) -> ()` |
-| 160 | `MeSD.UxZj` | func | `(i32 i32) -> (i32)` |
-| 161 | `MeSD.oxsk` | func | `(i32 i32) -> (i32)` |
-| 162 | `MeSD.Jn61` | func | `(i32 i32) -> ()` |
-| 163 | `MeSD.p230` | func | `(i32 i32) -> ()` |
-| 164 | `MeSD.Cb9Z` | func | `(i32 f64) -> ()` |
-| 165 | `MeSD.pEF2` | func | `(i32 i32) -> ()` |
-| 166 | `MeSD.h4vH` | func | `(i32 i32) -> ()` |
-| 167 | `MeSD.txbQ` | func | `(i32 i32) -> ()` |
-| 168 | `MeSD.oKwE` | func | `(i32 i32 i32 i32 i32 i32) -> ()` |
-| 169 | `MeSD.Zpe3` | func | `(i32 f64) -> ()` |
-| 170 | `MeSD.P69z` | func | `(i32 f64) -> ()` |
-| 171 | `MeSD.MVVg` | func | `(i32 f64) -> ()` |
-| 172 | `MeSD.N8wI` | func | `(i32 f64) -> ()` |
-| 173 | `MeSD.GK6d` | func | `(i32 i32) -> ()` |
-| 174 | `MeSD.ks0j` | func | `(i32 i32) -> ()` |
-| 175 | `MeSD.Kemr` | func | `(i32 i32) -> ()` |
-| 176 | `MeSD.ZD4g` | func | `(i32 i32) -> ()` |
-| 177 | `MeSD.a5is` | func | `(i32 i32) -> ()` |
-| 178 | `MeSD.nezA` | func | `(i32 i32 i32) -> ()` |
-| 179 | `MeSD.Kvaw` | func | `(i32 i32) -> ()` |
-| 180 | `MeSD.M9MF` | func | `(i32 f32) -> ()` |
-| 181 | `MeSD.FdJL` | func | `(i32 i32) -> ()` |
-| 182 | `MeSD.AgAg` | func | `(i32 i32) -> ()` |
-| 183 | `MeSD.jQRF` | func | `(i32 i32) -> ()` |
-| 184 | `MeSD.HKOd` | func | `(i32 i32) -> ()` |
-| 185 | `MeSD.Kxyb` | func | `(i32 i32) -> ()` |
-| 186 | `MeSD.W0pj` | func | `(i32 i32) -> ()` |
-| 187 | `MeSD.ADyO` | func | `(i32 i32) -> ()` |
-| 188 | `MeSD.pLJ0` | func | `(i32 i32) -> ()` |
-| 189 | `MeSD.K0P4` | func | `(i32 i32) -> ()` |
-| 190 | `MeSD.DnPH` | func | `(i32 i32) -> ()` |
-| 191 | `MeSD.ZI4T` | func | `(i32 i32) -> ()` |
-| 192 | `MeSD.NJFk` | func | `(i32 i32) -> ()` |
-| 193 | `MeSD.XyJJ` | func | `(i32 i32) -> (i32)` |
-| 194 | `MeSD.dYOs` | func | `(i32 i32 i32 i32) -> ()` |
-| 195 | `MeSD.G3oh` | func | `(i32 i32) -> ()` |
-| 196 | `MeSD.m0vY` | func | `(i32 i32 i32) -> ()` |
-| 197 | `MeSD.QJJ1` | func | `(i32 i32) -> (i32)` |
-| 198 | `MeSD.eWF1` | func | `(i32) -> (i32)` |
-| 199 | `MeSD.gIq5` | func | `(i32 i32) -> ()` |
-| 200 | `MeSD.Thwm` | func | `(i32 i32) -> ()` |
-| 201 | `MeSD.ONYX` | func | `(i32 i32) -> ()` |
-| 202 | `MeSD.wlPF` | func | `(i32 i32) -> ()` |
-| 203 | `MeSD.wiIY` | func | `(i32 i32) -> ()` |
-| 204 | `MeSD.cxkR` | func | `(i32 i32) -> ()` |
-| 205 | `MeSD.lZgS` | func | `(i32 i32) -> ()` |
-| 206 | `MeSD.POZD` | func | `(i32 i32) -> ()` |
-| 207 | `MeSD.wqNG` | func | `(i32) -> (i32)` |
-| 208 | `MeSD.zr7c` | func | `(i32 i32 i32) -> ()` |
-| 209 | `MeSD.pbGk` | func | `(i32 i32) -> ()` |
-| 210 | `MeSD.w8oA` | func | `(i32 i32 i32 i32) -> ()` |
-| 211 | `MeSD.ZboJ` | func | `(i32 i32) -> ()` |
-| 212 | `MeSD.qoRu` | func | `(i32) -> ()` |
-| 213 | `MeSD.Q2MJ` | func | `(i32 i32) -> ()` |
-| 214 | `MeSD.iAy4` | func | `(i32) -> (i32)` |
-| 215 | `MeSD.BRii` | func | `(i32 i32 i32) -> ()` |
-| 216 | `MeSD.ij7T` | func | `(i32 i32) -> ()` |
-| 217 | `MeSD.kLBf` | func | `(i32 i32) -> ()` |
-| 218 | `MeSD.CrHo` | func | `(i32 i32) -> ()` |
-| 219 | `MeSD.HaFF` | func | `(i32 i32) -> ()` |
-| 220 | `MeSD.aCYN` | func | `(i32 i32) -> (i32)` |
-| 221 | `MeSD.nxlw` | func | `(i32 i32) -> ()` |
-| 222 | `MeSD.CSgd` | func | `(i32 i32) -> ()` |
-| 223 | `MeSD.TK2l` | func | `(i32 i32) -> ()` |
-| 224 | `MeSD.HBoO` | func | `(i32 i32) -> ()` |
-| 225 | `MeSD.QZyT` | func | `(i32 i32) -> ()` |
-| 226 | `MeSD.CS9U` | func | `(i32 i32) -> ()` |
-| 227 | `MeSD.UAyZ` | func | `(i32 i32) -> ()` |
-| 228 | `MeSD.h6i4` | func | `(i32 i32 f64 f64) -> (i32)` |
-| 229 | `MeSD.dQog` | func | `(i32) -> (i32)` |
-| 230 | `MeSD.wMB2` | func | `(i32) -> ()` |
-| 231 | `MeSD.phS2` | func | `(i32 f64) -> ()` |
-| 232 | `MeSD.AoPJ` | func | `(i32 i32) -> ()` |
-| 233 | `MeSD.Sn9I` | func | `(i32 i32) -> ()` |
-| 234 | `MeSD.Vnut` | func | `(i32 i32 i32) -> ()` |
-| 235 | `MeSD.HIFJ` | func | `(i32 i32) -> (i32)` |
-| 236 | `MeSD.MiWm` | func | `(i32 i32) -> ()` |
-| 237 | `MeSD.KrrD` | func | `(i32 i32) -> ()` |
-| 238 | `MeSD.Hfpo` | func | `(i32 i32) -> ()` |
-| 239 | `MeSD.VgP9` | func | `(i32 i32 i32) -> ()` |
-| 240 | `MeSD.jmOp` | func | `(i32 i32) -> ()` |
-| 241 | `MeSD.MpwR` | func | `(i32 i32) -> ()` |
-| 242 | `MeSD.JZsb` | func | `(i32 i32) -> ()` |
-| 243 | `MeSD.H0Pb` | func | `(i32 i32 i32) -> ()` |
-| 244 | `MeSD.LfnF` | func | `(i32 i32) -> ()` |
-| 245 | `MeSD.pIoQ` | func | `(i32 i32) -> ()` |
-| 246 | `MeSD.SONV` | func | `(i32 i32 i32) -> ()` |
-| 247 | `MeSD.NBLQ` | func | `(i32 i32) -> (i32)` |
-| 248 | `MeSD.l1r0` | func | `(i32 i32) -> ()` |
-| 249 | `MeSD.OqwI` | func | `(i32 i32 i32) -> ()` |
-| 250 | `MeSD.pYbt` | func | `(i32 i32) -> ()` |
-| 251 | `MeSD.CpX9` | func | `(i32 f64) -> ()` |
-| 252 | `MeSD.CuES` | func | `(i32 i32) -> ()` |
-| 253 | `MeSD.qYVC` | func | `(i32 f64) -> ()` |
-| 254 | `MeSD.j8Ic` | func | `(i32 i32 i32) -> ()` |
-| 255 | `MeSD.SgfD` | func | `(i32 i32) -> ()` |
-| 256 | `MeSD.O6TE` | func | `(i32 i32 i32) -> ()` |
-| 257 | `MeSD.d41K` | func | `(i32 i32) -> ()` |
-| 258 | `MeSD.C1LS` | func | `(i32 i32) -> ()` |
-| 259 | `MeSD.DjA4` | func | `(i32 i32) -> ()` |
-| 260 | `MeSD.NPNH` | func | `(i32 i32 i32) -> ()` |
-| 261 | `MeSD.YWx5` | func | `(i32 i32) -> ()` |
-| 262 | `MeSD.hRZx` | func | `(i32 i32) -> ()` |
-| 263 | `MeSD.mEAH` | func | `(i32 i32) -> ()` |
-| 264 | `MeSD.fJEZ` | func | `(i32 i32) -> ()` |
-| 265 | `MeSD.tBe8` | func | `(i32 f32) -> ()` |
-| 266 | `MeSD.VdJp` | func | `(i32 f32) -> ()` |
-| 267 | `MeSD.Nxl1` | func | `(i32 i32) -> ()` |
-| 268 | `MeSD.CT0G` | func | `(i32 i32) -> ()` |
-| 269 | `MeSD.V7NK` | func | `(i32 i32) -> ()` |
-| 270 | `MeSD.m44m` | func | `(i32 i32) -> ()` |
-| 271 | `MeSD.BR0J` | func | `(i32 i32) -> ()` |
-| 272 | `MeSD.nuf9` | func | `(i32 i32) -> ()` |
-| 273 | `MeSD.Ij5X` | func | `(i32 i32) -> ()` |
-| 274 | `MeSD.jgnJ` | func | `(i32 i32) -> ()` |
-| 275 | `MeSD.XCJS` | func | `(i32 i32) -> ()` |
-| 276 | `MeSD.E6Fx` | func | `(i32 i32) -> ()` |
-| 277 | `MeSD.rQcR` | func | `(i32 i32) -> ()` |
-| 278 | `MeSD.MaLC` | func | `(i32 i32) -> ()` |
-| 279 | `MeSD.ynVs` | func | `(i32 i32) -> ()` |
-| 280 | `MeSD.lWsG` | func | `(i32 i32) -> ()` |
-| 281 | `MeSD.z8Kc` | func | `(i32 i32) -> ()` |
-| 282 | `MeSD.e8KN` | func | `(i32 i32) -> ()` |
-| 283 | `MeSD.QEI0` | func | `(i32 i32) -> ()` |
-| 284 | `MeSD.V43i` | func | `(i32 i32) -> ()` |
-| 285 | `MeSD.cilx` | func | `(i32 i32 i32) -> ()` |
-| 286 | `MeSD.CV9u` | func | `(i32 i32 i32) -> ()` |
-| 287 | `MeSD.E1tH` | func | `(i32 i32) -> ()` |
-| 288 | `MeSD.lz80` | func | `(i32 i32) -> ()` |
-| 289 | `MeSD.gs9B` | func | `(i32 i32) -> ()` |
-| 290 | `MeSD.Qqcb` | func | `(i32 i32) -> ()` |
-| 291 | `MeSD.AQwv` | func | `(i32 i32) -> ()` |
-| 292 | `MeSD.Zhb1` | func | `(i32 i32) -> ()` |
-| 293 | `MeSD.RURU` | func | `(i32 i32) -> ()` |
-| 294 | `MeSD.QFfg` | func | `(i32 i32) -> ()` |
-| 295 | `MeSD.pCkg` | func | `(i32 i32) -> ()` |
-| 296 | `MeSD.Bsxx` | func | `(i32 i32) -> ()` |
-| 297 | `MeSD.RKIs` | func | `(i32 i32) -> ()` |
-| 298 | `MeSD.WKQj` | func | `(i32 i32) -> (i32)` |
-| 299 | `MeSD.qqO5` | func | `(i32 i32) -> ()` |
-| 300 | `MeSD.TiXG` | func | `(i32 i32 i32) -> ()` |
-| 301 | `MeSD.DhUE` | func | `(i32 i32) -> ()` |
-| 302 | `MeSD.iJK7` | func | `(i32 i32) -> ()` |
-| 303 | `MeSD.eoFq` | func | `(i32 i32) -> ()` |
-| 304 | `MeSD.tWGB` | func | `(i32 i32 i32) -> ()` |
-| 305 | `MeSD.Z5iW` | func | `(i32 i32) -> (i32)` |
-| 306 | `MeSD.agkZ` | func | `(i32 i32 i32) -> ()` |
-| 307 | `MeSD.utul` | func | `(i32 i32 i32) -> ()` |
-| 308 | `MeSD.ynHY` | func | `(i32 i32) -> ()` |
-| 309 | `MeSD.mJkF` | func | `(i32 i32) -> ()` |
-| 310 | `MeSD.MYvS` | func | `(i32 i32) -> ()` |
-| 311 | `MeSD.rEwf` | func | `(i32 i32) -> ()` |
-| 312 | `MeSD.VbOA` | func | `(i32 i32) -> (i32)` |
-| 313 | `MeSD.cRWw` | func | `(i32) -> (i32)` |
-| 314 | `MeSD.ZCUr` | func | `(i32) -> (i32)` |
-| 315 | `MeSD.HVLd` | func | `(i32) -> (i32)` |
-| 316 | `MeSD.YOhn` | func | `(i32) -> (i32)` |
-| 317 | `MeSD.kL83` | func | `(i32) -> (i32)` |
-| 318 | `MeSD.zQVh` | func | `(i32) -> (i32)` |
-| 319 | `MeSD.TD8K` | func | `(i32) -> (i32)` |
-| 320 | `MeSD.ogQp` | func | `(i32) -> (i32)` |
-| 321 | `MeSD.QWGv` | func | `(i32) -> (i32)` |
-| 322 | `MeSD.TSyN` | func | `(i32) -> (i32)` |
-| 323 | `MeSD.OzQI` | func | `(i32) -> (i32)` |
-| 324 | `MeSD.lNPs` | func | `(i32) -> (i32)` |
-| 325 | `MeSD.zDTG` | func | `(i32) -> (i32)` |
-| 326 | `MeSD.OZqo` | func | `(i32) -> (i32)` |
-| 327 | `MeSD.hei4` | func | `(i32) -> (f64)` |
-| 328 | `MeSD.r11D` | func | `(i32) -> (f64)` |
-| 329 | `MeSD.TBMD` | func | `(i32) -> (i32)` |
-| 330 | `MeSD.SdjK` | func | `(i32) -> (f64)` |
-| 331 | `MeSD.M80w` | func | `(i32) -> (i32)` |
-| 332 | `MeSD.WWuU` | func | `(i32) -> (i32)` |
-| 333 | `MeSD.TssO` | func | `(i32) -> (i32)` |
-| 334 | `MeSD.H2L5` | func | `(i32) -> (i32)` |
-| 335 | `MeSD.B2An` | func | `(i32) -> (i32)` |
-| 336 | `MeSD.WUI0` | func | `(i32) -> (i32)` |
-| 337 | `MeSD.PUzz` | func | `(i32) -> (i32)` |
-| 338 | `MeSD.dMbL` | func | `(i32) -> (i32)` |
-| 339 | `MeSD.fOcv` | func | `(i32) -> (i32)` |
-| 340 | `MeSD.qrU4` | func | `(i32) -> (i32)` |
-| 341 | `MeSD.AJq4` | func | `(i32) -> (i32)` |
-| 342 | `MeSD.TotJ` | func | `(i32) -> (i32)` |
-| 343 | `MeSD.hIIR` | func | `(i32) -> (i32)` |
-| 344 | `MeSD.t21M` | func | `(i32 i32 i32) -> (i32)` |
-| 345 | `MeSD.koEL` | func | `() -> (i32)` |
-| 346 | `MeSD.BaeE` | func | `(i32 i32) -> ()` |
-| 347 | `MeSD.TzWv` | func | `(i32 i32 i32) -> ()` |
-| 348 | `MeSD.dqa6` | func | `(i32 i32 i32) -> ()` |
-| 349 | `MeSD.bOsU` | func | `(i32 i32) -> (i32)` |
-| 350 | `MeSD.rx0t` | func | `(i32) -> (i32)` |
-| 351 | `MeSD.cdpo` | func | `(i32 i32 i32) -> (i32)` |
-| 352 | `MeSD.Shot` | func | `(i32) -> ()` |
-| 353 | `MeSD.bBq7` | func | `(i32) -> (i32)` |
-| 354 | `MeSD.Z7Kg` | func | `(i32 i32) -> ()` |
-| 355 | `MeSD.IWNw` | func | `(i32) -> (i32)` |
-| 356 | `MeSD.tUNG` | func | `(i32) -> (i32)` |
-| 357 | `MeSD.q4Wj` | func | `(i32) -> (i32)` |
-| 358 | `MeSD.KMVV` | func | `(i32) -> (i32)` |
-| 359 | `MeSD.r6Zd` | func | `(i32) -> (i32)` |
-| 360 | `MeSD.IZpd` | func | `(i32 i32) -> ()` |
-| 361 | `MeSD.jF9v` | func | `(i32 i32) -> ()` |
-| 362 | `MeSD.DqSG` | func | `(i32 i32) -> ()` |
-| 363 | `MeSD.NsAB` | func | `(i32 i32) -> ()` |
-| 364 | `MeSD.q0tg` | func | `(i32 i32) -> ()` |
-| 365 | `MeSD.TRqP` | func | `(i32 i32) -> ()` |
-| 366 | `MeSD.Gu2p` | func | `(i32 i32) -> ()` |
-| 367 | `MeSD.hrlp` | func | `(i32 i32 i32) -> ()` |
-| 368 | `MeSD.JxHL` | func | `(i32 i32) -> ()` |
-| 369 | `MeSD.hpHG` | func | `(i32 i32) -> (i32)` |
-| 370 | `MeSD.IWiV` | func | `(i32) -> (i32)` |
-| 371 | `MeSD.BMNd` | func | `(i32) -> (i32)` |
-| 372 | `MeSD.y9oz` | func | `(i32 i32) -> ()` |
-| 373 | `MeSD.q4A2` | func | `(i32) -> (i32)` |
-| 374 | `MeSD.QUKz` | func | `(i32 f64 f64) -> (i32)` |
-| 375 | `MeSD.ycS2` | func | `(i32 i32 i32) -> (i32)` |
-| 376 | `MeSD.cnu7` | func | `(i32 i32) -> ()` |
-| 377 | `MeSD.vqKG` | func | `(i32) -> (i32)` |
-| 378 | `MeSD.rYNr` | func | `(i32) -> (i32)` |
-| 379 | `MeSD.KRk0` | func | `(i32) -> (i32)` |
-| 380 | `MeSD.HSeG` | func | `(i32) -> (i32)` |
-| 381 | `MeSD.VXL7` | func | `(i32) -> (i32)` |
-| 382 | `MeSD.lWOf` | func | `(i32) -> (i32)` |
-| 383 | `MeSD.VUtz` | func | `(i32 i32) -> ()` |
-| 384 | `MeSD.AJL8` | func | `(i32 i32) -> (i32)` |
-| 385 | `MeSD.w718` | func | `(i32 i32) -> (i32)` |
-| 386 | `MeSD.nYKj` | func | `(i32 i32) -> (i32)` |
-| 387 | `MeSD.Y2YH` | func | `(i32 i32) -> (i32)` |
-| 388 | `MeSD.A2hn` | func | `(i32 i32) -> (i32)` |
-| 389 | `MeSD.BfGC` | func | `(i32 i32) -> (i32)` |
-| 390 | `MeSD.XwRd` | func | `(f64) -> (i32)` |
-| 391 | `MeSD.Bbt3` | func | `(i32 i32) -> (i32)` |
-| 392 | `MeSD.ZBVy` | func | `(i32 i32) -> (i32)` |
+| 0 | `HiKq.CgFp` | memory | `[128..14648]` |
+| 0 | `HiKq.cxlK` | func | `(i32) -> (i32)` |
+| 1 | `HiKq.KIsm` | func | `(i32) -> (f64)` |
+| 2 | `HiKq.pmkX` | func | `() -> (i32)` |
+| 3 | `HiKq.svPh` | func | `(i32 i32 i32) -> (i32)` |
+| 4 | `HiKq.tjjW` | func | `(i32) -> ()` |
+| 5 | `HiKq.tud6` | func | `(i32 i32) -> (i32)` |
+| 6 | `HiKq.YnXJ` | func | `(i32) -> (i32)` |
+| 7 | `HiKq.EErt` | func | `(i32 i32 i32) -> (i32)` |
+| 8 | `HiKq.rflp` | func | `(i32 i32 i32 i32) -> (i32)` |
+| 9 | `HiKq.xFqh` | func | `(i32) -> (i32)` |
+| 10 | `HiKq.zE6w` | func | `(i32 i32) -> ()` |
+| 11 | `HiKq.W9cE` | func | `(i32 i32) -> ()` |
+| 12 | `HiKq.P0oz` | func | `(i32 i32 i32 i32) -> (i32)` |
+| 13 | `HiKq.G6Fi` | func | `(i32 i32) -> (i32)` |
+| 14 | `HiKq.L8RH` | func | `(i32 i32 i32 i32 i32 i32) -> (i32)` |
+| 15 | `HiKq.Y0Y4` | func | `(i32) -> (i32)` |
+| 16 | `HiKq.udfz` | func | `(i32 i32) -> (i32)` |
+| 17 | `HiKq.opTM` | func | `(i32 i32) -> (i32)` |
+| 18 | `HiKq.QTZd` | func | `(i32 i32) -> ()` |
+| 19 | `HiKq.OQdO` | func | `(i32) -> (i32)` |
+| 20 | `HiKq.iurG` | func | `(i32) -> (i32)` |
+| 21 | `HiKq.R5gk` | func | `(i32 i32 i32) -> ()` |
+| 22 | `HiKq.Nxat` | func | `(i32 i32 i32) -> (i32)` |
+| 23 | `HiKq.PoTo` | func | `(i32) -> (i32)` |
+| 24 | `HiKq.jsbN` | func | `(i32) -> (i32)` |
+| 25 | `HiKq.xs7I` | func | `(i32 i32) -> ()` |
+| 26 | `HiKq.Bmiy` | func | `(i32 i32) -> (i32)` |
+| 27 | `HiKq.Cz2y` | func | `(i32 i32 i32 i32) -> ()` |
+| 28 | `HiKq.iPfp` | func | `(i32) -> (i32)` |
+| 29 | `HiKq.pOWc` | func | `(i32) -> (i32)` |
+| 30 | `HiKq.PtsM` | func | `(i32) -> (i32)` |
+| 31 | `HiKq.xsFl` | func | `(i32) -> (i32)` |
+| 32 | `HiKq.AIGN` | func | `(i32) -> (i32)` |
+| 33 | `HiKq.LMvt` | func | `(i32 i32 i32) -> ()` |
+| 34 | `HiKq.K1vM` | func | `(i32 i32) -> (i32)` |
+| 35 | `HiKq.egRe` | func | `(i32) -> (i32)` |
+| 36 | `HiKq.pCAo` | func | `(i32) -> ()` |
+| 37 | `HiKq.qCTH` | func | `(i32) -> (i32)` |
+| 38 | `HiKq.b5sR` | func | `(i32) -> (i32)` |
+| 39 | `HiKq.DXq5` | func | `(i32) -> ()` |
+| 40 | `HiKq.GV9t` | func | `(i32 i32) -> (i32)` |
+| 41 | `HiKq.TnQx` | func | `(i32) -> ()` |
+| 42 | `HiKq.Cnua` | func | `(i32 i32) -> ()` |
+| 43 | `HiKq.QVKz` | func | `(i32 i32 i32) -> (i32)` |
+| 44 | `HiKq.rrKB` | func | `(i32) -> ()` |
+| 45 | `HiKq.EMyl` | func | `(i32) -> ()` |
+| 46 | `HiKq.qYfi` | func | `() -> (i32)` |
+| 47 | `HiKq.Qo0s` | func | `(i32 i32) -> (i32)` |
+| 48 | `HiKq.DDHO` | func | `(i32 i32) -> (i32)` |
+| 49 | `HiKq.PulT` | func | `(i32) -> (i32)` |
+| 50 | `HiKq.LqPD` | func | `(i32) -> (i32)` |
+| 51 | `HiKq.sm7M` | func | `(i32) -> (i32)` |
+| 52 | `HiKq.h1xP` | func | `(i32 i32) -> ()` |
+| 53 | `HiKq.P7gX` | func | `(i32) -> (i32)` |
+| 54 | `HiKq.Eby3` | func | `(i32) -> ()` |
+| 55 | `HiKq.OD1A` | func | `(i32 i32) -> (i32)` |
+| 56 | `HiKq.CfHd` | func | `(i32 i32 i32) -> (i32)` |
+| 57 | `HiKq.Jk6s` | func | `(i32) -> (i32)` |
+| 58 | `HiKq.kChA` | func | `(i32 i32 i32) -> ()` |
+| 59 | `HiKq.RnhJ` | func | `(i32 i32) -> ()` |
+| 60 | `HiKq.rqcp` | func | `(i32) -> (i32)` |
+| 61 | `HiKq.Rz58` | func | `(i32 i32 f64 i32 i32 f64 f64) -> ()` |
+| 62 | `HiKq.jAPZ` | func | `(i32 i32 f64 i32 f64 f64) -> ()` |
+| 63 | `HiKq.guYa` | func | `(i32) -> ()` |
+| 64 | `HiKq.nOik` | func | `(i32 i32 i32) -> ()` |
+| 65 | `HiKq.RY0I` | func | `(i32 i32) -> ()` |
+| 66 | `HiKq.HwVo` | func | `(i32 i32 i32 i32 i32 f64 i32) -> ()` |
+| 67 | `HiKq.MKeI` | func | `(i32 i32 i32 f64 f64) -> ()` |
+| 68 | `HiKq.a4Tj` | func | `(i32 i32 i32 f64 f64) -> ()` |
+| 69 | `HiKq.iQpB` | func | `(i32 i32 f64) -> ()` |
+| 70 | `HiKq.Um5r` | func | `(i32) -> (i32)` |
+| 71 | `HiKq.sljt` | func | `(i32 i32) -> ()` |
+| 72 | `HiKq.vm5n` | func | `(i32 i32 i32) -> ()` |
+| 73 | `HiKq.NERk` | func | `(i32 i32 i32 i32) -> ()` |
+| 74 | `HiKq.IfUY` | func | `(i32) -> ()` |
+| 75 | `HiKq.vC6b` | func | `(i32 i32 i32) -> ()` |
+| 76 | `HiKq.fsgN` | func | `(i32 i32) -> ()` |
+| 77 | `HiKq.bYNi` | func | `(i32 i32 i32 i32 i32) -> ()` |
+| 78 | `HiKq.MIri` | func | `(i32 f32 f32 f32 f32 f32 f32) -> ()` |
+| 79 | `HiKq.XRQB` | func | `(i32 i32 i32) -> ()` |
+| 80 | `HiKq.k5in` | func | `(i32 i32 i32 i32 i32 i32) -> ()` |
+| 81 | `HiKq.IDbl` | func | `(i32 i32 i32 f64 f64) -> ()` |
+| 82 | `HiKq.uffT` | func | `(i32 i32 i32 i32 i32 f64 i32) -> ()` |
+| 83 | `HiKq.g60w` | func | `(i32 i32 i32 f64 f64) -> ()` |
+| 84 | `HiKq.g45P` | func | `(i32 i32 i32 i32 i32 i32) -> ()` |
+| 85 | `HiKq.QUfN` | func | `(i32 i32 i32) -> ()` |
+| 86 | `HiKq.wt5Q` | func | `(i32 i32) -> (i32)` |
+| 87 | `HiKq.olH3` | func | `(i32) -> (i32)` |
+| 88 | `HiKq.TaNb` | func | `(i32) -> (i32)` |
+| 89 | `HiKq.iO31` | func | `(i32) -> (i32)` |
+| 90 | `HiKq.oeXX` | func | `(i32 i32) -> (i32)` |
+| 91 | `HiKq.C1w6` | func | `(i32) -> ()` |
+| 92 | `HiKq.UGyK` | func | `(i32) -> (i32)` |
+| 93 | `HiKq.GJ0A` | func | `(i32 i32) -> (i32)` |
+| 94 | `HiKq.OF7L` | func | `(i32 i32 i32) -> (i32)` |
+| 95 | `HiKq.jhx0` | func | `(i32 i32 i32) -> ()` |
+| 96 | `HiKq.iQgq` | func | `(i32 i32 i32 i32) -> (i32)` |
+| 97 | `HiKq.oVU0` | func | `() -> (f64)` |
+| 98 | `HiKq.YvAB` | func | `() -> (f64)` |
+| 99 | `HiKq.fijM` | func | `(i32 i32) -> ()` |
+| 100 | `HiKq.NV1F` | func | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| 101 | `HiKq.DY2s` | func | `(i32) -> (i32)` |
+| 102 | `HiKq.j98N` | func | `(i32) -> (i32)` |
+| 103 | `HiKq.zgA0` | func | `(i32) -> (i32)` |
+| 104 | `HiKq.UmTm` | func | `() -> (i32)` |
+| 105 | `HiKq.f72x` | func | `() -> (i32)` |
+| 106 | `HiKq.RHEV` | func | `() -> (i32)` |
+| 107 | `HiKq.ooxB` | func | `() -> (i32)` |
+| 108 | `HiKq.QyRn` | func | `(i32 i32) -> (i32)` |
+| 109 | `HiKq.XVPT` | func | `(i32) -> ()` |
+| 110 | `HiKq.Vgq5` | func | `(i32 i32) -> (i32)` |
+| 111 | `HiKq.Cj3Z` | func | `(i32) -> (i32)` |
+| 112 | `HiKq.TVf3` | func | `() -> (f64)` |
+| 113 | `HiKq.ZQHJ` | func | `(i32) -> (i32)` |
+| 114 | `HiKq.KC3Q` | func | `(i32 i32) -> ()` |
+| 115 | `HiKq.hXwN` | func | `(i32 i32) -> ()` |
+| 116 | `HiKq.Wlii` | func | `(i32 i32) -> ()` |
+| 117 | `HiKq.tRg9` | func | `(i32 f32) -> ()` |
+| 118 | `HiKq.NBYg` | func | `(i32 f32) -> ()` |
+| 119 | `HiKq.moDO` | func | `(i32 i32) -> ()` |
+| 120 | `HiKq.n7Wi` | func | `(i32 i32) -> ()` |
+| 121 | `HiKq.KHFc` | func | `(i32 i32) -> ()` |
+| 122 | `HiKq.FjzY` | func | `(i32 i32) -> ()` |
+| 123 | `HiKq.NNWn` | func | `(i32 i32 i32) -> ()` |
+| 124 | `HiKq.OJ6J` | func | `(i32 i32) -> (i32)` |
+| 125 | `HiKq.DgNY` | func | `(i32 i32) -> ()` |
+| 126 | `HiKq.KOe8` | func | `(i32 i32) -> ()` |
+| 127 | `HiKq.D7M6` | func | `(i32 i32) -> ()` |
+| 128 | `HiKq.q7Bl` | func | `(i32 i32) -> ()` |
+| 129 | `HiKq.LLMd` | func | `(i32 f64) -> ()` |
+| 130 | `HiKq.aFor` | func | `(i32 f64) -> ()` |
+| 131 | `HiKq.TdW2` | func | `(i32 i32) -> ()` |
+| 132 | `HiKq.oe9d` | func | `(i32 i32 i32) -> ()` |
+| 133 | `HiKq.lNP3` | func | `(i32 i32) -> ()` |
+| 134 | `HiKq.HTbu` | func | `(i32 i32) -> (i32)` |
+| 135 | `HiKq.z3AQ` | func | `(i32 i32 i32) -> ()` |
+| 136 | `HiKq.lU0u` | func | `(i32 i32 i32) -> ()` |
+| 137 | `HiKq.JcAf` | func | `(i32 i32) -> (i32)` |
+| 138 | `HiKq.RFAr` | func | `(i32 i32) -> (i32)` |
+| 139 | `HiKq.AK8P` | func | `(i32 i32 i32) -> ()` |
+| 140 | `HiKq.Noub` | func | `(i32 i32 i32) -> ()` |
+| 141 | `HiKq.QTIY` | func | `(i32 i32) -> (i32)` |
+| 142 | `HiKq.Tc17` | func | `(i32 i32) -> ()` |
+| 143 | `HiKq.vFuP` | func | `(i32 i32) -> ()` |
+| 144 | `HiKq.Ml1Y` | func | `(i32 i32) -> ()` |
+| 145 | `HiKq.lzDv` | func | `(i32 i32) -> ()` |
+| 146 | `HiKq.WoRP` | func | `(i32 i32) -> ()` |
+| 147 | `HiKq.c74F` | func | `(i32 i32) -> ()` |
+| 148 | `HiKq.ro0v` | func | `(i32 i32) -> ()` |
+| 149 | `HiKq.D9si` | func | `(i32 f64) -> ()` |
+| 150 | `HiKq.OGjx` | func | `(i32 i32) -> ()` |
+| 151 | `HiKq.VLcN` | func | `(i32 i32) -> ()` |
+| 152 | `HiKq.O95H` | func | `(i32 i32) -> ()` |
+| 153 | `HiKq.VAOV` | func | `(i32 i32) -> ()` |
+| 154 | `HiKq.WjcS` | func | `(i32 i32) -> ()` |
+| 155 | `HiKq.GEoh` | func | `(i32 i32) -> ()` |
+| 156 | `HiKq.ldnW` | func | `(i32 i32) -> ()` |
+| 157 | `HiKq.ukb1` | func | `(i32 i32) -> ()` |
+| 158 | `HiKq.YBNz` | func | `(i32 i32) -> ()` |
+| 159 | `HiKq.Kmlz` | func | `(i32 i32 i32) -> ()` |
+| 160 | `HiKq.Y3sW` | func | `(i32 i32 i32) -> ()` |
+| 161 | `HiKq.F3oT` | func | `(i32 i32) -> (i32)` |
+| 162 | `HiKq.qiOS` | func | `(i32 i32) -> (i32)` |
+| 163 | `HiKq.GavA` | func | `(i32 i32) -> ()` |
+| 164 | `HiKq.bbjr` | func | `(i32 i32) -> ()` |
+| 165 | `HiKq.anhP` | func | `(i32 f64) -> ()` |
+| 166 | `HiKq.ph1O` | func | `(i32 i32) -> ()` |
+| 167 | `HiKq.AnCZ` | func | `(i32 i32) -> ()` |
+| 168 | `HiKq.epUO` | func | `(i32 i32) -> ()` |
+| 169 | `HiKq.as4X` | func | `(i32 i32 i32 i32 i32 i32) -> ()` |
+| 170 | `HiKq.GhBi` | func | `(i32 f64) -> ()` |
+| 171 | `HiKq.fku8` | func | `(i32 f64) -> ()` |
+| 172 | `HiKq.vOsh` | func | `(i32 f64) -> ()` |
+| 173 | `HiKq.jZT4` | func | `(i32 f64) -> ()` |
+| 174 | `HiKq.YBwW` | func | `(i32 i32) -> ()` |
+| 175 | `HiKq.bnBV` | func | `(i32 i32) -> ()` |
+| 176 | `HiKq.J7EJ` | func | `(i32 i32) -> ()` |
+| 177 | `HiKq.TFO4` | func | `(i32 i32) -> ()` |
+| 178 | `HiKq.ZYc9` | func | `(i32 i32) -> ()` |
+| 179 | `HiKq.ysKN` | func | `(i32 i32 i32) -> ()` |
+| 180 | `HiKq.F1z2` | func | `(i32 i32) -> ()` |
+| 181 | `HiKq.ytSZ` | func | `(i32 f32) -> ()` |
+| 182 | `HiKq.FjTt` | func | `(i32 i32) -> ()` |
+| 183 | `HiKq.Xwjl` | func | `(i32 i32) -> ()` |
+| 184 | `HiKq.lffL` | func | `(i32 i32) -> ()` |
+| 185 | `HiKq.YpKh` | func | `(i32 i32) -> ()` |
+| 186 | `HiKq.y4Dt` | func | `(i32 i32) -> ()` |
+| 187 | `HiKq.EEGo` | func | `(i32 i32) -> ()` |
+| 188 | `HiKq.Nrct` | func | `(i32 i32) -> ()` |
+| 189 | `HiKq.NTKr` | func | `(i32 i32) -> ()` |
+| 190 | `HiKq.Pzga` | func | `(i32 i32) -> ()` |
+| 191 | `HiKq.ITWZ` | func | `(i32 i32) -> ()` |
+| 192 | `HiKq.v59t` | func | `(i32 i32) -> ()` |
+| 193 | `HiKq.i1Qt` | func | `(i32 i32) -> ()` |
+| 194 | `HiKq.PKIL` | func | `(i32 i32) -> (i32)` |
+| 195 | `HiKq.z51u` | func | `(i32 i32 i32 i32) -> ()` |
+| 196 | `HiKq.I97j` | func | `(i32 i32) -> ()` |
+| 197 | `HiKq.qvZX` | func | `(i32 i32 i32) -> ()` |
+| 198 | `HiKq.vR8I` | func | `(i32 i32) -> (i32)` |
+| 199 | `HiKq.kF8g` | func | `(i32) -> (i32)` |
+| 200 | `HiKq.z0WM` | func | `(i32 i32) -> ()` |
+| 201 | `HiKq.tIlU` | func | `(i32 i32) -> ()` |
+| 202 | `HiKq.OSvW` | func | `(i32 i32) -> ()` |
+| 203 | `HiKq.iV1F` | func | `(i32 i32) -> ()` |
+| 204 | `HiKq.Q9GZ` | func | `(i32 i32) -> ()` |
+| 205 | `HiKq.oTMa` | func | `(i32 i32) -> ()` |
+| 206 | `HiKq.q9iR` | func | `(i32 i32) -> ()` |
+| 207 | `HiKq.sNhq` | func | `(i32 i32) -> ()` |
+| 208 | `HiKq.Kwmo` | func | `(i32) -> (i32)` |
+| 209 | `HiKq.IM42` | func | `(i32 i32 i32) -> ()` |
+| 210 | `HiKq.xnxH` | func | `(i32 i32) -> ()` |
+| 211 | `HiKq.CQN6` | func | `(i32 i32 i32 i32) -> ()` |
+| 212 | `HiKq.OiUZ` | func | `(i32 i32) -> ()` |
+| 213 | `HiKq.J08x` | func | `(i32) -> ()` |
+| 214 | `HiKq.DefD` | func | `(i32 i32) -> ()` |
+| 215 | `HiKq.Zs2r` | func | `(i32) -> (i32)` |
+| 216 | `HiKq.X5c2` | func | `(i32 i32 i32) -> ()` |
+| 217 | `HiKq.ELfv` | func | `(i32 i32) -> ()` |
+| 218 | `HiKq.DNrV` | func | `(i32 i32) -> ()` |
+| 219 | `HiKq.aW85` | func | `(i32 i32) -> ()` |
+| 220 | `HiKq.aggb` | func | `(i32 i32) -> ()` |
+| 221 | `HiKq.pjnU` | func | `(i32 i32) -> (i32)` |
+| 222 | `HiKq.o8ha` | func | `(i32 i32) -> ()` |
+| 223 | `HiKq.sj8j` | func | `(i32 i32) -> ()` |
+| 224 | `HiKq.lyTb` | func | `(i32 i32) -> ()` |
+| 225 | `HiKq.goId` | func | `(i32 i32) -> ()` |
+| 226 | `HiKq.JOsU` | func | `(i32 i32) -> ()` |
+| 227 | `HiKq.bbA9` | func | `(i32 i32) -> ()` |
+| 228 | `HiKq.a4NB` | func | `(i32 i32) -> ()` |
+| 229 | `HiKq.HNP0` | func | `(i32 i32 f64 f64) -> (i32)` |
+| 230 | `HiKq.w8GI` | func | `(i32) -> (i32)` |
+| 231 | `HiKq.x5e8` | func | `(i32) -> ()` |
+| 232 | `HiKq.NzIA` | func | `(i32 f64) -> ()` |
+| 233 | `HiKq.fvyb` | func | `(i32 i32) -> ()` |
+| 234 | `HiKq.tE1W` | func | `(i32 i32) -> ()` |
+| 235 | `HiKq.sqBK` | func | `(i32 i32 i32) -> ()` |
+| 236 | `HiKq.SQDm` | func | `(i32 i32) -> (i32)` |
+| 237 | `HiKq.emRb` | func | `(i32 i32) -> ()` |
+| 238 | `HiKq.T2JV` | func | `(i32 i32) -> ()` |
+| 239 | `HiKq.MXgE` | func | `(i32 i32) -> ()` |
+| 240 | `HiKq.FOjN` | func | `(i32 i32 i32) -> ()` |
+| 241 | `HiKq.tCh4` | func | `(i32 i32) -> ()` |
+| 242 | `HiKq.O5ko` | func | `(i32 i32) -> ()` |
+| 243 | `HiKq.pYih` | func | `(i32 i32) -> ()` |
+| 244 | `HiKq.jbGO` | func | `(i32 i32 i32) -> ()` |
+| 245 | `HiKq.ollo` | func | `(i32 i32) -> ()` |
+| 246 | `HiKq.FMf4` | func | `(i32 i32) -> ()` |
+| 247 | `HiKq.w5qZ` | func | `(i32 i32 i32) -> ()` |
+| 248 | `HiKq.EXHY` | func | `(i32 i32) -> (i32)` |
+| 249 | `HiKq.VUt9` | func | `(i32 i32) -> ()` |
+| 250 | `HiKq.mu57` | func | `(i32 i32 i32) -> ()` |
+| 251 | `HiKq.KOdv` | func | `(i32 i32) -> ()` |
+| 252 | `HiKq.l4HS` | func | `(i32 f64) -> ()` |
+| 253 | `HiKq.sqUh` | func | `(i32 i32) -> ()` |
+| 254 | `HiKq.yrgu` | func | `(i32 f64) -> ()` |
+| 255 | `HiKq.gwP7` | func | `(i32 i32 i32) -> ()` |
+| 256 | `HiKq.cS9i` | func | `(i32 i32) -> ()` |
+| 257 | `HiKq.bq75` | func | `(i32 i32 i32) -> ()` |
+| 258 | `HiKq.hoLG` | func | `(i32 i32) -> ()` |
+| 259 | `HiKq.JMko` | func | `(i32 i32) -> ()` |
+| 260 | `HiKq.gqyh` | func | `(i32 i32) -> ()` |
+| 261 | `HiKq.mLEK` | func | `(i32 i32 i32) -> ()` |
+| 262 | `HiKq.cr8F` | func | `(i32 i32) -> ()` |
+| 263 | `HiKq.SoG0` | func | `(i32 i32) -> ()` |
+| 264 | `HiKq.Szq4` | func | `(i32 i32) -> ()` |
+| 265 | `HiKq.stKF` | func | `(i32 i32) -> ()` |
+| 266 | `HiKq.oYKJ` | func | `(i32 f32) -> ()` |
+| 267 | `HiKq.b2AZ` | func | `(i32 f32) -> ()` |
+| 268 | `HiKq.Csct` | func | `(i32 i32) -> ()` |
+| 269 | `HiKq.nCqd` | func | `(i32 i32) -> ()` |
+| 270 | `HiKq.iYE9` | func | `(i32 i32) -> ()` |
+| 271 | `HiKq.tBb7` | func | `(i32 i32) -> ()` |
+| 272 | `HiKq.gwtH` | func | `(i32 i32) -> ()` |
+| 273 | `HiKq.DfOt` | func | `(i32 i32) -> ()` |
+| 274 | `HiKq.Bxcg` | func | `(i32 i32) -> ()` |
+| 275 | `HiKq.bCft` | func | `(i32 i32) -> ()` |
+| 276 | `HiKq.gjcP` | func | `(i32 i32) -> ()` |
+| 277 | `HiKq.sBWt` | func | `(i32 i32) -> ()` |
+| 278 | `HiKq.FGgh` | func | `(i32 i32) -> ()` |
+| 279 | `HiKq.G01p` | func | `(i32 i32) -> ()` |
+| 280 | `HiKq.Baui` | func | `(i32 i32) -> ()` |
+| 281 | `HiKq.TaHb` | func | `(i32 i32) -> ()` |
+| 282 | `HiKq.jqBc` | func | `(i32 i32) -> ()` |
+| 283 | `HiKq.Gcr1` | func | `(i32 i32) -> ()` |
+| 284 | `HiKq.vZBy` | func | `(i32 i32) -> ()` |
+| 285 | `HiKq.VW7T` | func | `(i32 i32) -> ()` |
+| 286 | `HiKq.qbhO` | func | `(i32 i32 i32) -> ()` |
+| 287 | `HiKq.Z49H` | func | `(i32 i32 i32) -> ()` |
+| 288 | `HiKq.jJJ0` | func | `(i32 i32) -> ()` |
+| 289 | `HiKq.qLOQ` | func | `(i32 i32) -> ()` |
+| 290 | `HiKq.rTwo` | func | `(i32 i32) -> ()` |
+| 291 | `HiKq.VDEm` | func | `(i32 i32) -> ()` |
+| 292 | `HiKq.M9dJ` | func | `(i32 i32) -> ()` |
+| 293 | `HiKq.RGx8` | func | `(i32 i32) -> ()` |
+| 294 | `HiKq.rwkI` | func | `(i32 i32) -> ()` |
+| 295 | `HiKq.knFB` | func | `(i32 i32) -> ()` |
+| 296 | `HiKq.gjSJ` | func | `(i32 i32) -> ()` |
+| 297 | `HiKq.xadg` | func | `(i32 i32) -> ()` |
+| 298 | `HiKq.ABi7` | func | `(i32 i32) -> ()` |
+| 299 | `HiKq.YIs1` | func | `(i32 i32) -> (i32)` |
+| 300 | `HiKq.EP9H` | func | `(i32 i32) -> ()` |
+| 301 | `HiKq.BStU` | func | `(i32 i32 i32) -> ()` |
+| 302 | `HiKq.eras` | func | `(i32 i32) -> ()` |
+| 303 | `HiKq.iNAp` | func | `(i32 i32) -> ()` |
+| 304 | `HiKq.AhhT` | func | `(i32 i32) -> ()` |
+| 305 | `HiKq.Zh4p` | func | `(i32 i32 i32) -> ()` |
+| 306 | `HiKq.KDBh` | func | `(i32 i32) -> (i32)` |
+| 307 | `HiKq.SLL3` | func | `(i32 i32 i32) -> ()` |
+| 308 | `HiKq.ck9i` | func | `(i32 i32 i32) -> ()` |
+| 309 | `HiKq.CKOk` | func | `(i32 i32) -> ()` |
+| 310 | `HiKq.ydSJ` | func | `(i32 i32) -> ()` |
+| 311 | `HiKq.udU3` | func | `(i32 i32) -> ()` |
+| 312 | `HiKq.VrhO` | func | `(i32 i32) -> ()` |
+| 313 | `HiKq.Qot3` | func | `(i32 i32) -> (i32)` |
+| 314 | `HiKq.j7eA` | func | `(i32) -> (i32)` |
+| 315 | `HiKq.zLJk` | func | `(i32) -> (i32)` |
+| 316 | `HiKq.eSLe` | func | `(i32) -> (i32)` |
+| 317 | `HiKq.hEbe` | func | `(i32) -> (i32)` |
+| 318 | `HiKq.TSzE` | func | `(i32) -> (i32)` |
+| 319 | `HiKq.wZLw` | func | `(i32) -> (i32)` |
+| 320 | `HiKq.N7Z3` | func | `(i32) -> (i32)` |
+| 321 | `HiKq.SpyY` | func | `(i32) -> (i32)` |
+| 322 | `HiKq.yGI9` | func | `(i32) -> (i32)` |
+| 323 | `HiKq.DcRm` | func | `(i32) -> (i32)` |
+| 324 | `HiKq.v36m` | func | `(i32) -> (i32)` |
+| 325 | `HiKq.JzJz` | func | `(i32) -> (i32)` |
+| 326 | `HiKq.CDBP` | func | `(i32) -> (i32)` |
+| 327 | `HiKq.OFfk` | func | `(i32) -> (i32)` |
+| 328 | `HiKq.XHcf` | func | `(i32) -> (f64)` |
+| 329 | `HiKq.frPW` | func | `(i32) -> (f64)` |
+| 330 | `HiKq.qDdJ` | func | `(i32) -> (i32)` |
+| 331 | `HiKq.zB9Z` | func | `(i32) -> (f64)` |
+| 332 | `HiKq.IYoz` | func | `(i32) -> (i32)` |
+| 333 | `HiKq.TNZ0` | func | `(i32) -> (i32)` |
+| 334 | `HiKq.dFfs` | func | `(i32) -> (i32)` |
+| 335 | `HiKq.UTPu` | func | `(i32) -> (i32)` |
+| 336 | `HiKq.XaGr` | func | `(i32) -> (i32)` |
+| 337 | `HiKq.fW06` | func | `(i32) -> (i32)` |
+| 338 | `HiKq.nJyT` | func | `(i32) -> (i32)` |
+| 339 | `HiKq.Xs46` | func | `(i32) -> (i32)` |
+| 340 | `HiKq.GHCw` | func | `(i32) -> (i32)` |
+| 341 | `HiKq.mWA3` | func | `(i32) -> (i32)` |
+| 342 | `HiKq.PUHH` | func | `(i32) -> (i32)` |
+| 343 | `HiKq.cx55` | func | `(i32) -> (i32)` |
+| 344 | `HiKq.RzEj` | func | `(i32) -> (i32)` |
+| 345 | `HiKq.dFJ5` | func | `(i32 i32 i32) -> (i32)` |
+| 346 | `HiKq.CZIa` | func | `() -> (i32)` |
+| 347 | `HiKq.lChC` | func | `(i32 i32) -> ()` |
+| 348 | `HiKq.GMcD` | func | `(i32 i32 i32) -> ()` |
+| 349 | `HiKq.p94L` | func | `(i32 i32 i32) -> ()` |
+| 350 | `HiKq.RIso` | func | `(i32 i32) -> (i32)` |
+| 351 | `HiKq.QENf` | func | `(i32) -> (i32)` |
+| 352 | `HiKq.piEo` | func | `(i32 i32 i32) -> (i32)` |
+| 353 | `HiKq.igkM` | func | `(i32) -> ()` |
+| 354 | `HiKq.SxO2` | func | `(i32) -> (i32)` |
+| 355 | `HiKq.NqO4` | func | `(i32 i32) -> ()` |
+| 356 | `HiKq.W6fa` | func | `(i32) -> (i32)` |
+| 357 | `HiKq.gsyQ` | func | `(i32) -> (i32)` |
+| 358 | `HiKq.SD6b` | func | `(i32) -> (i32)` |
+| 359 | `HiKq.wfNs` | func | `(i32) -> (i32)` |
+| 360 | `HiKq.hiBW` | func | `(i32) -> (i32)` |
+| 361 | `HiKq.g3AJ` | func | `(i32 i32) -> ()` |
+| 362 | `HiKq.c9vE` | func | `(i32 i32) -> ()` |
+| 363 | `HiKq.ZZdN` | func | `(i32 i32) -> ()` |
+| 364 | `HiKq.MOTt` | func | `(i32 i32) -> ()` |
+| 365 | `HiKq.V8bQ` | func | `(i32 i32) -> ()` |
+| 366 | `HiKq.mN5U` | func | `(i32 i32) -> ()` |
+| 367 | `HiKq.S3yG` | func | `(i32 i32) -> ()` |
+| 368 | `HiKq.hCBh` | func | `(i32 i32 i32) -> ()` |
+| 369 | `HiKq.luVu` | func | `(i32 i32) -> ()` |
+| 370 | `HiKq.OBxe` | func | `(i32 i32) -> (i32)` |
+| 371 | `HiKq.KKvl` | func | `(i32) -> (i32)` |
+| 372 | `HiKq.DxYg` | func | `(i32) -> (i32)` |
+| 373 | `HiKq.j215` | func | `(i32 i32) -> ()` |
+| 374 | `HiKq.GgSi` | func | `(i32) -> (i32)` |
+| 375 | `HiKq.R5KF` | func | `(i32 f64 f64) -> (i32)` |
+| 376 | `HiKq.OuWB` | func | `(i32 i32 i32) -> (i32)` |
+| 377 | `HiKq.TUFX` | func | `(i32 i32) -> ()` |
+| 378 | `HiKq.Fpor` | func | `(i32) -> (i32)` |
+| 379 | `HiKq.VUfb` | func | `(i32) -> (i32)` |
+| 380 | `HiKq.vXYc` | func | `(i32) -> (i32)` |
+| 381 | `HiKq.vqWz` | func | `(i32) -> (i32)` |
+| 382 | `HiKq.rPyh` | func | `(i32) -> (i32)` |
+| 383 | `HiKq.qPSp` | func | `(i32) -> (i32)` |
+| 384 | `HiKq.CEsn` | func | `(i32 i32) -> ()` |
+| 385 | `HiKq.Damx` | func | `(i32 i32) -> (i32)` |
+| 386 | `HiKq.NLRC` | func | `(i32 i32) -> (i32)` |
+| 387 | `HiKq.Two1` | func | `(i32 i32) -> (i32)` |
+| 388 | `HiKq.lUcr` | func | `(i32 i32) -> (i32)` |
+| 389 | `HiKq.JLmF` | func | `(i32 i32) -> (i32)` |
+| 390 | `HiKq.YaYA` | func | `(i32 i32) -> (i32)` |
+| 391 | `HiKq.wIRA` | func | `(f64) -> (i32)` |
+| 392 | `HiKq.s1gH` | func | `(i32 i32) -> (i32)` |
+| 393 | `HiKq.EfB5` | func | `(i32 i32) -> (i32)` |
 
 ## Exports
 
-163 exported items — the API surface consumed by the JS glue:
+170 exported items — the API surface consumed by the JS glue:
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `qpDy` | func | 3131 | `(i32 i32 i32) -> (i32 i32)` |
-| `iXVG` | func | 3114 | `(i32 i32) -> ()` |
-| `Lsej` | func | 2150 | `(i32 i32) -> ()` |
-| `yWZx` | func | 2359 | `(i32 f64) -> (i32)` |
-| `an3I` | func | 1350 | `(i32 i32 i32) -> (i32)` |
-| `v9gU` | func | 802 | `(i32 i32) -> (i32)` |
-| `sPIU` | func | 3081 | `() -> ()` |
-| `Hqs6` | func | 3169 | `() -> (i32 i32)` |
+| `l0Cl` | func | 2001 | `(i32 i32 f64 f64 f64) -> ()` |
+| `igrR` | func | 2637 | `(i32) -> (i32)` |
+| `dYlb` | func | 2652 | `(i32) -> (i32)` |
+| `QYO5` | func | 2660 | `(i32) -> (i32)` |
+| `Tjzv` | func | 2669 | `(i32) -> (i32)` |
+| `wVtc` | func | 3199 | `(i32 i32) -> (i32 i32)` |
+| `VeTf` | func | 671 | `(i32 i32 i32) -> (i32)` |
+| `LOgy` | func | 2079 | `(i32) -> (i32)` |
+| `PXWp` | func | 3212 | `(i32) -> (i32 i32)` |
+| `Xnx6` | func | 862 | `(i32 i32 i32) -> (i32)` |
+| `UBpt` | func | 1716 | `(i32 i32) -> (i32)` |
+| `iw9s` | func | 3167 | `(i32 i32 i32 i32) -> (i32)` |
+| `h2FG` | func | 2177 | `(i32 f64 f64 f64) -> (i32)` |
+| `OLvd` | func | 2735 | `(i32) -> ()` |
+| `x163` | func | 3292 | `() -> (i32)` |
+| `x9KZ` | func | 2404 | `(i32 i32) -> ()` |
+| `JXUC` | func | 1438 | `(i32) -> ()` |
+| `WCtE` | func | 779 | `(i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `Px3N` | func | 2432 | `(i32 i32) -> ()` |
+| `VBqK` | func | 2662 | `(i32 i32) -> (i32)` |
+| `kDrb` | func | 951 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()` |
+| `LuZ8` | func | 1022 | `(i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `Jm7X` | func | 3140 | `() -> ()` |
+| `Hvkb` | func | 1731 | `(i32 f64 f64 f64) -> (i32)` |
+| `zXcF` | func | 2565 | `(i32) -> (i32)` |
+| `APAX` | func | 2633 | `(i32) -> (i32)` |
+| `eyDL` | func | 3406 | `() -> (i32)` |
+| `IQd8` | func | 3401 | `(f64) -> (f64)` |
+| `no6m` | func | 2538 | `(i32 i32 i32 i32) -> (i32)` |
+| `spkx` | func | 1455 | `(i32 i32 i32) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `qgTT` | func | 1302 | `(i32 i32 i32 i32) -> (i32)` |
-| `QxV7` | func | 1375 | `(i32) -> (i32)` |
-| `DCIP` | func | 3234 | `() -> (i32)` |
-| `NtC8` | func | 1733 | `(i32 i32 i32 i32) -> (i32)` |
-| `gE2R` | func | 2247 | `(i32 i32) -> (i32)` |
-| `pXWV` | func | 1555 | `(i32 i32 i32 i32) -> ()` |
-| `hQKq` | func | 1205 | `(i32 i32) -> (i32)` |
-| `iIAP` | func | 1575 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `V86r` | func | 3348 | `() -> (i32)` |
-| `sg7h` | func | 1262 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `yuJE` | func | 975 | `(i32 i32) -> (i32)` |
-| `TGEV` | func | 1602 | `(i32 i32) -> (i32)` |
-| `dUHb` | func | 2892 | `(i32) -> (i32)` |
-| `sVxV` | func | 1382 | `(i32 i32) -> (i32)` |
-| `a0iv` | func | 2174 | `(i32 i32) -> (i32)` |
-| `gbfM` | func | 3275 | `() -> ()` |
-| `UvIH` | func | 853 | `(i32 i32 i32) -> (i32)` |
-| `F8z2` | func | 3155 | `(i32) -> (i32 i32)` |
-| `tLn6` | func | 2602 | `(i32) -> (i32)` |
-| `f5fR` | func | 2611 | `(i32 i32) -> (i32)` |
-| `G5Rl` | func | 1650 | `(i32 i32 i32 i32) -> (i32)` |
-| `oTsN` | func | 3132 | `(i32 i32 i32) -> (i32 i32)` |
-| `tt9B` | func | 1354 | `(i32 i32 i32) -> ()` |
-| `cMVI` | func | 1838 | `(i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `NKEx` | func | 3144 | `(i32 i32) -> (i32 i32)` |
-| `Unsl` | func | 3349 | `() -> (i32)` |
-| `qi7L` | func | 2601 | `(i32) -> (i32)` |
-| `UVLc` | func | 2091 | `(i32 i32) -> ()` |
-| `uWPG` | func | 2582 | `(i32) -> (i32)` |
-| `AORk` | func | 2285 | `(i32 i32) -> (i32)` |
-| `pLdu` | func | 992 | `(i32 i32 f64 f64 f64 i32) -> (i32)` |
-| `xdIz` | func | 2668 | `() -> (i32)` |
-| `z5xu` | func | 2650 | `(i32 i32) -> ()` |
-| `gPnA` | func | 3108 | `(i32 i32 i32 i32) -> (i32)` |
-| `RI7r` | func | 832 | `(i32 i32 i32 i32) -> (i32)` |
-| `paOc` | func | 1797 | `(i32 i32 i32 i32 i32 f32 i32) -> (i32)` |
-| `Y6wo` | func | 3154 | `(i32) -> (i32 i32)` |
-| `nrdK` | func | 2385 | `(i32 i32) -> ()` |
-| `HvRx` | func | 662 | `(i32 i32 i32) -> (i32)` |
-| `OTKS` | func | 2056 | `(i32) -> (i32)` |
-| `JkCN` | func | 762 | `(i32 i32) -> (i32)` |
-| `Okms` | func | 1691 | `(i32 i32) -> ()` |
-| `UWIK` | func | 778 | `(i32 i32) -> (i32)` |
-| `nlfe` | func | 1844 | `(i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `yQTz` | func | 3195 | `(i32 i32 i32 i32) -> ()` |
-| `qn0k` | func | 3206 | `(i32 i32 i32) -> ()` |
-| `lwli` | func | 2584 | `(i32) -> (i32)` |
-| `Rl4o` | func | 2588 | `(i32) -> (i32)` |
-| `VMub` | func | 705 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `Urho` | func | 2439 | `(i32 i32) -> (i32)` |
-| `pFbj` | func | 2564 | `(i32) -> (i32)` |
-| `sApG` | func | 3132 | `(i32 i32 i32) -> (i32 i32)` |
-| `xWQt` | func | 1962 | `(i32 i32 f64 f64 f64) -> ()` |
-| `THVV` | func | 3170 | `() -> (i32 i32)` |
-| `qCYw` | func | 2473 | `(i32 i32) -> (i32)` |
-| `YGju` | func | 3132 | `(i32 i32 i32) -> (i32 i32)` |
-| `Y8if` | func | 1309 | `(i32 i32 i32 i32 i32 i32 f64) -> (i32)` |
-| `DYwj` | func | 2488 | `(i32 i32 i32 i32) -> (i32)` |
-| `EM3c` | func | 1993 | `(i32) -> ()` |
-| `Gxll` | global | 1 | `` |
-| `Ojhd` | func | 2884 | `(i32) -> (i32)` |
-| `XCYs` | func | 3344 | `(f64) -> (f64)` |
-| `dCV4` | func | 2619 | `(i32) -> (i32)` |
-| `DbGb` | func | 1924 | `(i32 f64 i32 i32 i32 i32 i32) -> (i32)` |
-| `s9EI` | func | 2953 | `(i32) -> (i32)` |
-| `VoAs` | func | 1476 | `(i32 f64 f64) -> (i32)` |
-| `wVJS` | func | 2585 | `(i32) -> ()` |
-| `GfD8` | func | 2515 | `(i32) -> (i32)` |
-| `LOrl` | func | 1528 | `(i32 f64 f64 f64 f64 f64 f64 f64) -> (f64)` |
-| `ZHV0` | func | 3152 | `(i32) -> (i32 i32)` |
-| `sKLE` | func | 3143 | `(i32 i32) -> (i32 i32)` |
-| `fUdl` | func | 1857 | `(i32 i32) -> (i32)` |
-| `sDCN` | func | 1690 | `(i32 i32) -> ()` |
-| `LDYx` | func | 1408 | `(i32) -> ()` |
-| `w6XP` | func | 2587 | `(i32) -> (i32)` |
-| `w0jz` | func | 1004 | `(i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `rMu3` | func | 1533 | `() -> (i32)` |
-| `RKbR` | func | 1618 | `(i32 f64) -> (f64)` |
-| `Sdof` | func | 1580 | `(i32 i32 i32 i32) -> (i32)` |
-| `f10K` | func | 1615 | `(i32 i32) -> (i32)` |
-| `PtcQ` | func | 1616 | `(i32 i32) -> (i32)` |
-| `HkSZ` | func | 2039 | `(i32) -> (i32)` |
-| `be3G` | func | 2058 | `(i32 i32 i32 i32) -> ()` |
-| `Yk7b` | func | 2597 | `(i32 i32) -> ()` |
-| `HlcX` | global | 2 | `` |
-| `BmrN` | func | 3132 | `(i32 i32 i32) -> (i32 i32)` |
-| `vcMB` | func | 3204 | `(i32 i32 i32) -> (i32)` |
-| `wAxj` | func | 2358 | `(i32 i32) -> ()` |
-| `sxpo` | func | 772 | `(i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `w9QQ` | func | 2919 | `(i32) -> (i32)` |
-| `lqgk` | func | 3324 | `(i32) -> ()` |
-| `MhGt` | func | 3153 | `(i32) -> (i32 i32)` |
-| `b3kG` | func | 3140 | `(i32 i32) -> (i32 i32)` |
-| `N2Au` | func | 2437 | `(i32 i32) -> (i32)` |
-| `WtLR` | func | 2604 | `(i32) -> (i32)` |
-| `c880` | func | 940 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()` |
-| `Mfvq` | func | 2701 | `(i32 i32) -> ()` |
-| `cU4A` | func | 2586 | `(i32) -> (i32)` |
-| `Cpz0` | func | 3319 | `() -> (f64)` |
-| `RTRo` | func | 3101 | `(i32 i32) -> (i32)` |
-| `EBV1` | func | 3145 | `(i32 i32) -> (i32 i32)` |
-| `k7vO` | func | 1206 | `(i32 i32) -> ()` |
-| `sEYs` | func | 3141 | `(i32 i32) -> (i32 i32)` |
-| `VYQi` | func | 2563 | `(i32 i32) -> ()` |
-| `In5T` | func | 2580 | `(i32) -> (i32)` |
-| `yG9E` | func | 2483 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 f64 i32 i32) -> (i32)` |
-| `WLca` | func | 1331 | `(i32 i32) -> (i32)` |
-| `MlgZ` | func | 2702 | `() -> (i32)` |
-| `MSBs` | func | 1679 | `(i32 i32) -> (i32)` |
-| `oiAP` | func | 3264 | `(i32 i32 i32) -> ()` |
-| `MFXF` | func | 2581 | `(i32) -> (i32)` |
-| `IY1q` | func | 2578 | `(i32) -> (f64)` |
-| `Outm` | func | 3323 | `(i32) -> (i32)` |
-| `ZWeQ` | func | 2579 | `(i32) -> (i32)` |
-| `wHpz` | func | 1581 | `(i32) -> (i32)` |
-| `UyvK` | func | 2610 | `(i32) -> (i32)` |
-| `RfFH` | func | 1570 | `(i32 i32 i32 i32 i32) -> (i32)` |
-| `MnC4` | func | 836 | `(i32) -> (i32)` |
-| `yngo` | func | 2134 | `(i32 f64 f64 f64) -> (i32)` |
-| `oSMy` | func | 2612 | `(i32 i32) -> (i32)` |
-| `CZNA` | func | 3142 | `(i32 i32) -> (i32 i32)` |
-| `Ic2f` | func | 3168 | `() -> (i32 i32)` |
-| `o4Js` | func | 1425 | `(i32 i32 i32) -> (i32)` |
-| `Vg0i` | func | 2440 | `(i32 i32) -> (i32)` |
-| `HThW` | func | 2603 | `(i32 i32) -> ()` |
-| `o6C6` | func | 2532 | `(i32) -> (i32)` |
-| `oTYo` | func | 1588 | `(i32 i32) -> (i32)` |
-| `Myws` | func | 1917 | `() -> (i32)` |
-| `LYPc` | func | 2620 | `(i32) -> (i32)` |
-| `TspS` | func | 1301 | `(i32 i32 f64 f64 f64) -> (i32)` |
-| `BieO` | func | 2930 | `(i32) -> ()` |
-| `LHzM` | func | 1412 | `(i32 i32) -> (i32)` |
-| `id00` | func | 3156 | `(i32) -> (i32 i32)` |
-| `VQ9P` | func | 1940 | `(i32 i32 i32 i32) -> (i32)` |
-| `KpPT` | func | 2908 | `(i32) -> (i32)` |
-| `YVVL` | func | 1695 | `(i32 f64 f64 f64) -> (i32)` |
-| `HOOh` | func | 1968 | `(i32 i32) -> ()` |
-| `m58p` | func | 2438 | `(i32 i32) -> (i32)` |
-| `NzcP` | func | 839 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` |
-| `ZQCB` | func | 1978 | `(i32 i32) -> (i32)` |
-| `Tb1Q` | func | 2306 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| `lAaS` | func | 1629 | `(i32 i32 i32) -> (i32)` |
-| `eNcb` | func | 3273 | `(i32) -> ()` |
-| `vFiA` | func | 974 | `(i32 i32 i32 i32 i32) -> (i32)` |
-| `gcHc` | func | 1475 | `(i32 i32 i32 i32 i32) -> (i32)` |
-| `wmSI` | func | 2621 | `(i32) -> (i32)` |
-| `UPFf` | func | 3139 | `(i32 i32) -> (i32 i32)` |
-| `numv` | func | 1994 | `(i32) -> ()` |
-| `PoqW` | func | 2583 | `(i32) -> (i32)` |
-| `fl9S` | func | 1536 | `(i32) -> (i32)` |
-| `x21A` | func | 2117 | `(i32 f64) -> (i32)` |
-| `cWrE` | func | 1985 | `(i32 f64 f64 f64 f32 f32 f32) -> (i32)` |
-| `O9zD` | func | 1501 | `(i32 i32) -> (i32)` |
-| `xOHx` | func | 1820 | `(i32) -> (i32)` |
+| `uZqD` | func | 3229 | `() -> (i32 i32)` |
+| `L4nr` | func | 2097 | `(i32) -> (i32)` |
+| `Jcjt` | func | 768 | `(i32 i32) -> (i32)` |
+| `vCuJ` | func | 988 | `(i32 i32 i32 i32 i32) -> (i32)` |
+| `IbvQ` | func | 1288 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `oNOd` | func | 1532 | `(i32 i32) -> (i32)` |
+| `vmKM` | func | 3191 | `(i32 i32 i32) -> (i32 i32)` |
+| `nf9B` | func | 989 | `(i32 i32) -> (i32)` |
+| `IgNn` | func | 2160 | `(i32 f64) -> (i32)` |
+| `qqhO` | func | 3228 | `() -> (i32 i32)` |
+| `vyV8` | func | 2638 | `(i32) -> (i32)` |
+| `Bg4M` | func | 1413 | `(i32 i32) -> (i32)` |
+| `kLPB` | func | 2942 | `(i32) -> (i32)` |
+| `aD6a` | func | 3405 | `() -> (i32)` |
+| `RQNp` | func | 1566 | `() -> (i32)` |
+| `BmP6` | func | 1330 | `(i32 i32 i32 i32) -> (i32)` |
+| `efWp` | func | 2488 | `(i32 i32) -> (i32)` |
+| `rkLS` | func | 2670 | `(i32) -> (i32)` |
+| `YU0w` | func | 2331 | `(i32 i32) -> (i32)` |
+| `dOjI` | func | 3201 | `(i32 i32) -> (i32 i32)` |
+| `glzO` | func | 1962 | `(i32 f64 i32 i32 i32 i32 i32) -> (i32)` |
+| `Cd4U` | func | 1379 | `(i32 i32 i32) -> (i32)` |
+| `TOnP` | func | 1230 | `(i32 i32) -> ()` |
+| `g3zi` | func | 3322 | `(i32 i32 i32) -> ()` |
+| `foVb` | func | 2653 | `(i32 i32) -> ()` |
+| `LtIT` | func | 2630 | `(i32) -> (i32)` |
+| `hf02` | func | 2465 | `(i32 i32 i32 i32) -> ()` |
+| `EcTX` | func | 3333 | `() -> ()` |
+| `zYCP` | func | 2822 | `(i32 i32) -> ()` |
+| `v0Xo` | func | 2671 | `(i32) -> (i32)` |
+| `BnHj` | func | 1360 | `(i32 i32) -> (i32)` |
+| `fNt6` | func | 3265 | `(i32 i32 i32) -> ()` |
+| `D6BG` | func | 2647 | `(i32 i32) -> ()` |
+| `dQJP` | func | 1655 | `(i32 f64) -> (f64)` |
+| `BAXv` | func | 1833 | `(i32 i32 i32 i32 i32 f32 i32) -> (i32)` |
+| `zNn0` | func | 3202 | `(i32 i32) -> (i32 i32)` |
+| `EqdF` | func | 1653 | `(i32 i32) -> (i32)` |
+| `w3qI` | func | 2628 | `(i32) -> (f64)` |
+| `hFdD` | func | 2654 | `(i32) -> (i32)` |
+| `fFCJ` | func | 3191 | `(i32 i32 i32) -> (i32 i32)` |
+| `jXZg` | func | 1405 | `(i32) -> (i32)` |
+| `Ch9Q` | func | 1623 | `(i32 i32) -> (i32)` |
+| `lbRe` | func | 1507 | `(i32 f64 f64) -> (i32)` |
+| `ntJ1` | func | 845 | `(i32) -> (i32)` |
+| `FVHw` | func | 1508 | `(i32 i32 i32 i32 i32) -> (i32)` |
+| `dAzb` | func | 2133 | `(i32 i32) -> ()` |
+| `yLxa` | func | 3204 | `(i32 i32) -> (i32 i32)` |
+| `nNt3` | func | 1329 | `(i32 i32 f64 f64 f64) -> (i32)` |
+| `buxP` | func | 2719 | `(i32) -> ()` |
+| `MM4C` | func | 1652 | `(i32 i32) -> (i32)` |
+| `wozO` | func | 3190 | `(i32 i32 i32) -> (i32 i32)` |
+| `SenL` | func | 2487 | `(i32 i32) -> (i32)` |
+| `CQz6` | func | 2194 | `(i32 i32) -> ()` |
+| `JLp0` | func | 2720 | `() -> (i32)` |
+| `kxqo` | func | 809 | `(i32 i32) -> (i32)` |
+| `pP0G` | func | 3377 | `() -> (f64)` |
+| `IrLr` | global | 1 | `` |
+| `rq5W` | func | 2634 | `(i32) -> (i32)` |
+| `tN8x` | func | 1229 | `(i32 i32) -> (i32)` |
+| `nLaS` | func | 1685 | `(i32 i32 i32 i32) -> (i32)` |
+| `bZpr` | func | 1665 | `(i32 i32 i32) -> (i32)` |
+| `PuOF` | func | 3382 | `(i32) -> ()` |
+| `YXTd` | func | 2636 | `(i32) -> (i32)` |
+| `tIrE` | func | 2977 | `(i32) -> (i32)` |
+| `Kbja` | func | 2353 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `mMAa` | func | 1795 | `(i32) -> ()` |
+| `qDUI` | func | 2218 | `(i32 i32) -> (i32)` |
+| `wqDR` | func | 1442 | `(i32 i32) -> (i32)` |
+| `nday` | func | 1856 | `(i32) -> (i32)` |
+| `lIyu` | func | 3381 | `(i32) -> (i32)` |
+| `opIm` | func | 1569 | `(i32) -> (i32)` |
+| `wccA` | func | 2966 | `(i32) -> (i32)` |
+| `ePvq` | func | 2700 | `(i32 i32) -> ()` |
+| `QPE1` | func | 713 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `AJZZ` | func | 1506 | `(i32 i32 i32 i32 i32) -> (i32)` |
+| `RD3i` | func | 785 | `(i32 i32) -> (i32)` |
+| `uMox` | func | 2292 | `(i32 i32) -> (i32)` |
+| `WH4F` | func | 3263 | `(i32 i32 i32) -> (i32)` |
+| `mjC4` | func | 3416 | `(i32) -> ()` |
+| `giiJ` | func | 1955 | `() -> (i32)` |
+| `NBbf` | func | 1614 | `(i32 i32 i32 i32) -> (i32)` |
+| `Rac7` | func | 3230 | `() -> (i32 i32)` |
+| `sVdW` | func | 1559 | `(i32 f64 f64 f64 f64 f64 f64 f64) -> (f64)` |
+| `W39N` | func | 1608 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `NMPK` | func | 1893 | `(i32 i32) -> (i32)` |
+| `Uwi3` | func | 1589 | `(i32 i32 i32 i32) -> ()` |
+| `l7JT` | func | 3160 | `(i32 i32) -> (i32)` |
+| `fQtv` | func | 2629 | `(i32) -> (i32)` |
+| `qGgP` | func | 2661 | `(i32 i32) -> (i32)` |
+| `HjKK` | func | 3215 | `(i32) -> (i32 i32)` |
+| `sfF8` | func | 3213 | `(i32) -> (i32 i32)` |
+| `U04s` | func | 2025 | `(i32 f64 f64 f64 f32 f32 f32) -> (i32)` |
+| `Ld8P` | func | 1978 | `(i32 i32 i32 i32) -> (i32)` |
+| `IwzV` | func | 1636 | `(i32 i32) -> (i32)` |
+| `o3S5` | func | 1769 | `(i32 i32 i32 i32) -> (i32)` |
+| `mzal` | global | 2 | `` |
+| `kUS0` | func | 2405 | `(i32 f64) -> (i32)` |
+| `ObTW` | func | 3012 | `(i32) -> (i32)` |
+| `aoMl` | func | 2635 | `(i32) -> ()` |
+| `iylu` | func | 2651 | `(i32) -> (i32)` |
+| `GNhO` | func | 2754 | `(i32 i32) -> ()` |
+| `V1Hq` | func | 3203 | `(i32 i32) -> (i32 i32)` |
+| `d0aH` | func | 1615 | `(i32) -> (i32)` |
+| `f77p` | func | 3331 | `(i32) -> ()` |
+| `otT4` | func | 1880 | `(i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `vAPV` | func | 1874 | `(i32 i32 i32 i32 i32 i32) -> (i32)` |
+| `yZ5t` | func | 2033 | `(i32) -> ()` |
+| `lpmN` | func | 3198 | `(i32 i32) -> (i32 i32)` |
+| `qAwu` | func | 842 | `(i32 i32 i32 i32) -> (i32)` |
+| `HaO6` | func | 2486 | `(i32 i32) -> (i32)` |
+| `czqQ` | func | 2632 | `(i32) -> (i32)` |
+| `iWSC` | func | 2018 | `(i32 i32) -> (i32)` |
+| `uEEn` | func | 848 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` |
+| `JE30` | func | 3200 | `(i32 i32) -> (i32 i32)` |
+| `b5aX` | func | 2836 | `(i32 i32) -> ()` |
+| `Yf6b` | func | 1945 | `(i32 i32 i32 i32 i32 i32 i32 i32) -> ()` |
+| `KfKZ` | func | 1336 | `(i32 i32 i32 i32 i32 i32 f64) -> (i32)` |
+| `mzXr` | func | 1010 | `(i32 i32 f64 f64 f64 i32) -> (i32)` |
+| `HK5m` | func | 3214 | `(i32) -> (i32 i32)` |
+| `LfP6` | func | 3173 | `(i32 i32) -> ()` |
+| `HCT4` | func | 2522 | `(i32 i32) -> (i32)` |
+| `gQtp` | func | 2755 | `() -> (i32)` |
+| `vrsV` | func | 3191 | `(i32 i32 i32) -> (i32 i32)` |
+| `Fio4` | func | 3211 | `(i32) -> (i32 i32)` |
+| `r5SV` | func | 3191 | `(i32 i32 i32) -> (i32 i32)` |
+| `u4Id` | func | 2583 | `(i32) -> (i32)` |
+| `GJyE` | func | 2950 | `(i32) -> (i32)` |
+| `Kz21` | func | 3216 | `(i32) -> (i32 i32)` |
+| `MjPK` | func | 2007 | `(i32 i32) -> ()` |
+| `o6CL` | func | 2988 | `(i32) -> ()` |
+| `jBYK` | func | 2533 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 f64 i32 i32) -> (i32)` |
+| `BDtc` | func | 2615 | `(i32) -> (i32)` |
+| `zfHw` | func | 2485 | `(i32 i32) -> (i32)` |
+| `ihfN` | func | 1727 | `(i32 i32) -> ()` |
+| `tbiH` | func | 2631 | `(i32) -> (i32)` |
+| `XtuC` | func | 3254 | `(i32 i32 i32 i32) -> ()` |
+| `bVqC` | func | 2614 | `(i32 i32) -> ()` |
+| `Kvos` | func | 2099 | `(i32 i32 i32 i32) -> ()` |
+| `ZJrb` | func | 1384 | `(i32 i32 i32) -> ()` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
 ## Memory, tables, globals
 
-- table 0: funcref · min 840 · max 840
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 2251264, `i32` = i32.const 2251828
+- table 0: funcref · min 845 · max 845
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 2257920, `i32` = i32.const 2258484
 
 ## Functions
 
-- 2,969 bodies · 4,073,529 code bytes · avg 1.3 KB
-- instruction scan: 2,969 bodies fully decoded, 0 degraded (unknown/extension opcodes)
+- 3,025 bodies · 4,142,840 code bytes · avg 1.3 KB
+- instruction scan: 3,025 bodies fully decoded, 0 degraded (unknown/extension opcodes)
 
 | Body size | Functions |
 |---|---:|
-| <= 32 bytes | 172 |
-| <= 64 bytes | 114 |
-| <= 128 bytes | 274 |
-| <= 256 bytes | 390 |
-| <= 512 bytes | 674 |
-| <= 1024 bytes | 594 |
-| <= 2048 bytes | 418 |
-| <= 4096 bytes | 177 |
-| <= 8192 bytes | 93 |
+| <= 32 bytes | 170 |
+| <= 64 bytes | 113 |
+| <= 128 bytes | 277 |
+| <= 256 bytes | 399 |
+| <= 512 bytes | 687 |
+| <= 1024 bytes | 606 |
+| <= 2048 bytes | 429 |
+| <= 4096 bytes | 184 |
+| <= 8192 bytes | 97 |
 | <= 16384 bytes | 27 |
 | > 16384 bytes | 36 |
 
@@ -648,36 +662,36 @@ Largest functions:
 
 | # | type | locals | body bytes | instructions | dominant opcodes |
 |---:|---|---:|---:|---:|---|
-| 0 | `(i32 i32 i32 i32) -> ()` | 218 | 200,777 | 91,008 | local.get×26752, i32.const×10169, i32.load×5791, local.set×4887, local.tee×4766 |
-| 1 | `(i32 i32 i32 i32 i32) -> ()` | 150 | 122,738 | 58,940 | local.get×16686, i32.const×7065, i32.add×3411, local.set×3377, i32.load×3107 |
-| 2 | `(i32 i32 i32 i32 i32 i32) -> ()` | 132 | 56,262 | 25,609 | local.get×7565, i32.const×3392, local.set×1402, i32.add×1294, i32.load×1168 |
-| 3 | `(i32 i32) -> ()` | 105 | 36,607 | 16,578 | local.get×4596, i32.const×1664, local.set×977, local.tee×845, i32.load×782 |
-| 4 | `(i32 i32 i32) -> ()` | 66 | 31,462 | 14,007 | local.get×4107, i32.const×1883, i32.load×880, i32.add×647, local.set×620 |
-| 5 | `(i32 i32) -> ()` | 58 | 29,792 | 14,312 | local.get×4209, i32.const×1738, i32.load×1042, local.set×931, i32.add×820 |
+| 0 | `(i32 i32 i32 i32 i32) -> ()` | 150 | 117,778 | 56,609 | local.get×16100, i32.const×6734, i32.add×3268, local.set×3248, i32.load×3016 |
+| 1 | `(i32 i32 i32 i32) -> ()` | 218 | 195,037 | 88,336 | local.get×25973, i32.const×9814, i32.load×5552, local.set×4795, local.tee×4566 |
+| 2 | `(i32 i32 i32 i32 i32 i32) -> ()` | 132 | 56,258 | 25,605 | local.get×7564, i32.const×3391, local.set×1401, i32.add×1293, i32.load×1168 |
+| 3 | `(i32 i32) -> ()` | 105 | 36,615 | 16,581 | local.get×4597, i32.const×1665, local.set×977, local.tee×845, i32.load×782 |
+| 4 | `(i32 i32) -> ()` | 58 | 29,792 | 14,312 | local.get×4209, i32.const×1738, i32.load×1042, local.set×931, i32.add×820 |
+| 5 | `(i32 i32 i32) -> ()` | 66 | 30,661 | 13,617 | local.get×3991, i32.const×1839, i32.load×847, i32.add×623, local.tee×591 |
 | 6 | `(i32 i32) -> ()` | 90 | 26,046 | 12,563 | local.get×3702, i32.const×1379, local.set×779, i32.load×721, local.tee×698 |
 | 7 | `(i32 i32 i32 i32 i32) -> ()` | 135 | 32,562 | 16,141 | local.get×4566, i32.const×2205, local.set×1141, i32.add×1062, local.tee×800 |
-| 8 | `(i32 i32 i32 i32 i32) -> ()` | 58 | 21,491 | 10,529 | local.get×2903, i32.const×1493, local.set×728, i32.add×591, local.tee×504 |
-| 9 | `(i32 i32 i32 i32) -> ()` | 105 | 26,392 | 12,764 | local.get×3784, i32.const×1615, local.set×985, i32.add×682, i32.load×663 |
-| 10 | `(i32 i32 i32 i32 i32 i32) -> ()` | 177 | 20,026 | 9,398 | local.get×2934, i32.const×1038, local.set×621, i32.add×458, i32.load×421 |
+| 8 | `(i32 i32 i32 i32 i32 i32) -> ()` | 170 | 23,746 | 11,210 | local.get×3269, i32.const×1369, local.set×657, br_if×494, i32.load×485 |
+| 9 | `(i32 i32 i32 i32 i32) -> ()` | 58 | 21,491 | 10,529 | local.get×2903, i32.const×1493, local.set×728, i32.add×591, local.tee×504 |
+| 10 | `(i32 i32 i32 i32) -> ()` | 105 | 26,393 | 12,764 | local.get×3784, i32.const×1615, local.set×985, i32.add×682, i32.load×663 |
 | 12 | `(i32 i32 i32 i32) -> ()` | 53 | 24,505 | 11,634 | local.get×3005, i32.const×1276, local.tee×731, end×592, i32.load×586 |
 | 14 | `(i32 i32 i32 i32 i32 i32) -> ()` | 125 | 19,810 | 8,875 | local.get×2493, i32.const×1111, local.set×430, local.tee×385, i32.load×382 |
-| 17 | `(i32 i32) -> ()` | 96 | 31,835 | 14,861 | local.get×4482, i32.const×1910, i32.add×763, local.set×692, i32.load×669 |
-| 19 | `(i32 i32 i64 i32 i32 i64 i32 i32) -> ()` | 105 | 20,468 | 7,839 | local.get×2940, i32.const×890, i64.store×834, i32.store×615, i64.const×478 |
-| 21 | `(i32 i32) -> ()` | 82 | 29,024 | 13,043 | local.get×4618, i32.const×1456, i32.store×702, i32.add×689, local.tee×645 |
+| 18 | `(i32 i32) -> ()` | 96 | 31,835 | 14,861 | local.get×4482, i32.const×1910, i32.add×763, local.set×692, i32.load×669 |
+| 19 | `(i32 i32 i64 i32 i32 i64 i32 i32) -> ()` | 106 | 20,589 | 7,881 | local.get×2959, i32.const×902, i64.store×835, i32.store×633, i64.const×483 |
+| 22 | `(i32 i32) -> ()` | 82 | 29,024 | 13,043 | local.get×4618, i32.const×1456, i32.store×702, i32.add×689, local.tee×645 |
 | 23 | `(i32 i32 i32 i32 i32 i32 i32) -> ()` | 64 | 24,318 | 11,211 | local.get×2683, i32.const×1714, local.set×822, end×665, block×466 |
-| 25 | `(i32 i32 i32 i32 i32) -> ()` | 68 | 22,818 | 10,630 | local.get×3348, i32.const×1245, local.tee×735, i32.add×431, local.set×341 |
-| 44 | `(i32 i32 i32 i32 i32) -> ()` | 83 | 27,436 | 12,890 | local.get×3670, i32.const×1868, i32.add×766, local.set×697, end×577 |
+| 26 | `(i32 i32 i32 i32 i32) -> ()` | 68 | 22,818 | 10,630 | local.get×3348, i32.const×1245, local.tee×735, i32.add×431, local.set×341 |
+| 43 | `(i32 i32 i32 i32 i32) -> ()` | 82 | 27,582 | 12,950 | local.get×3686, i32.const×1878, i32.add×765, local.set×717, end×580 |
 | 66 | `(i32 i32 i32 i32 i32 i32 i32) -> (i32)` | 112 | 27,605 | 13,066 | local.get×3810, i32.const×1687, i32.load×857, local.set×788, i32.add×672 |
-| 194 | `(i32 i32) -> ()` | 10 | 27,551 | 13,273 | local.get×4670, i32.load×1257, i32.const×1060, end×827, i32.add×762 |
-| 214 | `(i32) -> ()` | 19 | 23,258 | 10,909 | local.get×2733, i32.load×1495, i32.const×1187, local.tee×1011, end×855 |
-| 712 | `(i32 i32) -> ()` | 139 | 42,973 | 20,266 | local.get×5275, i32.const×2347, local.tee×1198, i32.add×1066, local.set×1006 |
-| 713 | `(i32 i32 i32 i32) -> ()` | 54 | 21,809 | 10,215 | local.get×2971, i32.const×1257, i32.load×778, i32.add×634, br_if×536 |
-| 1017 | `(i32 i32) -> (i32)` | 40 | 19,972 | 7,775 | local.get×2507, i32.const×849, i64.store×583, i32.load×394, local.set×357 |
-| 1585 | `(i32 i32) -> (i32)` | 182 | 54,925 | 19,834 | local.get×6599, i32.const×2595, i64.store×1935, i64.const×1087, i64.load×1068 |
-| 1984 | `(i32 i32) -> ()` | 111 | 39,749 | 17,590 | local.get×5165, i32.const×1655, local.set×898, local.tee×741, end×677 |
-| 2625 | `(i32 i32) -> ()` | 398 | 142,193 | 64,164 | local.get×18413, i32.const×8006, local.set×3828, i32.load×3150, end×2805 |
-| 2916 | `(i32 i32 i32 i32) -> ()` | 137 | 31,379 | 14,285 | local.get×4258, i32.const×1517, local.tee×742, local.set×690, br_if×632 |
-| 2935 | `(i32 i32) -> ()` | 143 | 33,660 | 15,072 | local.get×4234, i32.const×1988, local.set×803, local.tee×732, i32.add×689 |
+| 200 | `(i32 i32) -> ()` | 10 | 30,134 | 14,535 | local.get×5127, i32.load×1394, i32.const×1130, end×911, i32.add×829 |
+| 220 | `(i32) -> ()` | 19 | 23,308 | 10,931 | local.get×2739, i32.load×1499, i32.const×1189, local.tee×1013, end×857 |
+| 730 | `(i32 i32) -> ()` | 139 | 42,975 | 20,266 | local.get×5275, i32.const×2347, local.tee×1198, i32.add×1066, local.set×1006 |
+| 731 | `(i32 i32 i32 i32) -> ()` | 54 | 21,809 | 10,215 | local.get×2971, i32.const×1257, i32.load×778, i32.add×634, br_if×536 |
+| 1046 | `(i32 i32) -> (i32)` | 40 | 20,198 | 7,815 | local.get×2521, i32.const×859, i64.store×586, i32.load×393, local.set×358 |
+| 1624 | `(i32 i32) -> (i32)` | 182 | 55,135 | 19,838 | local.get×6600, i32.const×2596, i64.store×1935, i64.const×1087, i64.load×1068 |
+| 2030 | `(i32 i32) -> ()` | 111 | 39,749 | 17,590 | local.get×5165, i32.const×1655, local.set×898, local.tee×741, end×677 |
+| 2682 | `(i32 i32) -> ()` | 398 | 142,193 | 64,164 | local.get×18413, i32.const×8006, local.set×3828, i32.load×3150, end×2805 |
+| 2973 | `(i32 i32 i32 i32) -> ()` | 137 | 31,379 | 14,285 | local.get×4258, i32.const×1517, local.tee×742, local.set×690, br_if×632 |
+| 2992 | `(i32 i32) -> ()` | 143 | 33,660 | 15,072 | local.get×4234, i32.const×1988, local.set×803, local.tee×732, i32.add×689 |
 
 ## Embedded strings (data segments)
 
@@ -693,48 +707,48 @@ vs_mesh_00000020801vs_mesh_00000021801vs_mesh_00000040000vs_mesh_00000040011vs_m
 alliumaspen_saplingattached_banana_stemattached_banana_stem_wrapperattached_melon_stemattached_melon_stem_wrapperautumn_fernazure_bluetbanana_stembeetroot_plant_stage0beetroot_plant_stage1beetroot_pla
 ````````````````````````````````^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZYYYYYYYY
 0x | SHADER_FLOAT32_ATOMICTEXTURE_FORMAT_16BIT_NORMTEXTURE_COMPRESSION_ASTC_HDRTEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURESPIPELINE_STATISTICS_QUERYTIMESTAMP_QUERY_INSIDE_ENCODERSTIMESTAMP_QUERY_INSIDE_PA
+ue:keydownkeyupmousedownmouseuptouchstarttouchendMouse1Mouse2Mouse3Alt+Left ClickF2F4F5F8F9Digit0Digit1Digit2Digit3Digit4Digit5Digit6Digit7Digit8Digit9KeyQKeyWKeyEKeyRKeyTKeyYKeyUKeyIKeyOKeyPKeyAKeySK
 fs_mesh_0040d000053_l7fs_mesh_0040d040073_l3fs_mesh_0040d040073_l7fs_mesh_0040d0b0053_l1fs_mesh_0040d0b0073_l1fs_mesh_0042d040072_l3fs_mesh_0044b0b0073fs_mesh_0044d000053_l3fs_mesh_0044d000053_l7fs_me
-ue:keydownkeyupmousedownmouseuptouchstarttouchendotherMouse1Mouse2Mouse3Alt+Left ClickF2F4F5F8F9Digit0Digit1Digit2Digit3Digit4Digit5Digit6Digit7Digit8Digit9KeyQKeyWKeyEKeyRKeyTKeyYKeyUKeyIKeyOKeyPKeyA
 targetcolourmaxUpSpeedforceinclinationazimuthturbidityluminancemieCoefficientmieDirectionalGsunPositionvertexTintxCameraOffsetyCameraOffsetzCameraOffsetditheringinfiniteDistanceuseSunPositionrgba(tran
 r8unormr8snormr8uintr8sintr16unormr16snormr16uintr16sintr16floatrg8unormrg8snormrg8uintrg8sintr32uintr32sintr32floatrg16unormrg16snormrg16uintrg16sintrg16floatrgba8unormrgba8unorm-srgbrgba8snormrgba8u
 schema023canChangeblockReachezBridgingezBridgingGrowMsezToweringezToweringGrowMscrouchingSpeedwalkingSpeedrunningSpeedjumpAmountairJumpCountjumpHoldThrustbunnyhopMaxMultiplierskyBoxminChunkAddDistshow
 Aspen LeavesAspen LogAspen SaplingAspen Wood PlanksBarkless Aspen LogBarkless Cedar LogBarkless Jungle LogBarkless Maple LogBarkless Pine LogBarkless Plum LogBlack PlanksBlue PlanksBookshelfBowl of Cr
 Acacia LeavesAcacia LogAcacia SaplingAcacia Wood PlanksAlchemy TableBarkless Acacia LogBarkless Birch LogBarkless Dark Oak LogBarkless Elm LogBarkless Oak LogBarkless Spruce LogBirch LeavesBirch LogBi
 maxTextureDimension1DmaxTextureDimension2DmaxTextureDimension3DmaxTextureArrayLayersmaxBindGroupsmaxBindGroupsPlusVertexBuffersmaxBindingsPerBindGroupmaxDynamicUniformBuffersPerPipelineLayoutmaxDynami
+flag testalpha * baseColor.abaseColor.adiffuseBase.remissiveColormix(diffuseBase.r, 0.0, texels.stripGlow)mix(emissiveColor, vec3f(1.0), texels.stripGlow)bloxdSpGlintTier(v.vEnchantHsvAndTick.xyz)ench
 R8UnormR8SnormR8UintR8SintR16UintR16SintR16UnormR16SnormR16FloatRg8UnormRg8SnormRg8UintRg8SintR32UintR32SintR32FloatRg16UintRg16SintRg16UnormRg16SnormRg16FloatRgba8UnormRgba8UnormSrgbRgba8SnormRgba8Ui
 standingsittingzombieglidingdrivingsleepingridingShearedSaddledskyblockHeldBossBoxBloxdBlockPersonLeaderboardParticleEmitterTier 1Tier 2Tier 3Tier 4Tier 5PlayerPigCowSheepHorseCamelIron Goofy GolemGol
-flag testalpha * baseColor.abaseColor.abloxdSpGlintTier(v.vEnchantHsvAndTick.xyz)enchantmentColour(v.vEnchantHsvAndTick, v.vEnchantLocalPos, baseColor.rgb)bloxdSpEnchantSpeedbloxdSpLocalvec4f(v.vOverl
 ```
 
 ## Opcode histogram (aggregated)
 
 | opcode | count |
 |---|---:|
-| `local.get` | 544,694 |
-| `i32.const` | 228,717 |
-| `local.tee` | 100,005 |
-| `local.set` | 94,967 |
-| `i32.load` | 93,878 |
-| `i32.add` | 87,539 |
-| `end` | 79,689 |
-| `br_if` | 64,245 |
-| `i32.store` | 47,215 |
-| `block` | 37,495 |
-| `i64.store` | 33,162 |
-| `i64.const` | 32,325 |
-| `if` | 30,491 |
-| `call` | 30,347 |
-| `i64.load` | 24,595 |
-| `i32.sub` | 24,247 |
-| `br` | 23,328 |
-| `i32.eqz` | 19,180 |
-| `select` | 16,812 |
-| `i32.and` | 16,371 |
-| `i32.shl` | 16,237 |
-| `i32.ne` | 15,738 |
-| `i32.load8_u` | 15,333 |
-| `i32.eq` | 13,843 |
-| `i32.store8` | 13,487 |
+| `local.get` | 554,136 |
+| `i32.const` | 232,929 |
+| `local.tee` | 101,816 |
+| `local.set` | 96,628 |
+| `i32.load` | 95,577 |
+| `i32.add` | 89,145 |
+| `end` | 81,079 |
+| `br_if` | 65,304 |
+| `i32.store` | 47,910 |
+| `block` | 38,038 |
+| `i64.store` | 33,701 |
+| `i64.const` | 32,914 |
+| `if` | 31,075 |
+| `call` | 30,902 |
+| `i64.load` | 24,933 |
+| `i32.sub` | 24,708 |
+| `br` | 23,650 |
+| `i32.eqz` | 19,516 |
+| `select` | 17,179 |
+| `i32.and` | 16,537 |
+| `i32.shl` | 16,500 |
+| `i32.ne` | 16,149 |
+| `i32.load8_u` | 15,732 |
+| `i32.eq` | 14,050 |
+| `i32.store8` | 13,661 |
 
 ## Custom sections
 
@@ -743,4 +757,4 @@ flag testalpha * baseColor.abaseColor.abloxdSpGlintTier(v.vEnchantHsvAndTick.xyz
 ## Analysis quality
 
 - sections consumed: 11, structural errors: 0
-- bodies fully decoded: 2,969/2,969 (degraded: 0)
+- bodies fully decoded: 3,025/3,025 (degraded: 0)

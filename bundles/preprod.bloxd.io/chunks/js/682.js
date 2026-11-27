@@ -1,19 +1,19 @@
 export const id = 682;
 export const ids = [682];
 export const modules = {
-  64055: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      passCubePixelShader: () => oB
+  64554: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      lod3DPixelShader: () => PW
     });
-    var YB = GB(40864);
-    const DB = "passCubePixelShader",
-      QB = "varying vec2 vUV;uniform samplerCube textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{vec2 uv=vUV*2.0-1.0;\n#ifdef POSITIVEX\ngl_FragColor=textureCube(textureSampler,vec3(1.001,uv.y,uv.x));\n#endif\n#ifdef NEGATIVEX\ngl_FragColor=textureCube(textureSampler,vec3(-1.001,uv.y,uv.x));\n#endif\n#ifdef POSITIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,1.001,uv.x));\n#endif\n#ifdef NEGATIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,-1.001,uv.x));\n#endif\n#ifdef POSITIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,1.001));\n#endif\n#ifdef NEGATIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,-1.001));\n#endif\n}";
-    YB.b.ShadersStore[DB] || (YB.b.ShadersStore[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
+    var mW = OW(41392);
+    const EW = "lod3DPixelShader",
+      NW = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
+    mW.c.ShadersStore[EW] || (mW.c.ShadersStore[EW] = NW);
+    const PW = {
+      name: EW,
+      shader: NW
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

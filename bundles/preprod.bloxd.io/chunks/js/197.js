@@ -1,37 +1,37 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  9753: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      pageBody: () => YB
+  10274: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const YB = {
-      whatIs: ["Set sail for messy sea fights where good timing and teamwork decide who rules the waves. In Bloxd Pirates your crew fires cannons, grabs loot and races to destroy the other team's spawn blocks. It doesn't cost a thing and it loads straight in your browser."],
-      howToPlay: ["You'll join a team, usually Red or Blue, though Classic (4 Teams) and Treasure Island have 4. Each team has spawn blocks to protect. Break the enemy's spawn blocks and they can't respawn any more, then use your Compass to hunt down the rest of their crew. Last team standing wins.", "To fire the cannons, click your team's coloured glass. After that you'll have to wait 15 seconds for them to reload. Before the match you pick a kit in the lobby. The Cannoneer fires two cannonballs at once, the Medic heals teammates and the Admiral can call in artillery strikes. Loot refills during the match, so keep grabbing new gear. Wins, final kills and broken spawn blocks all earn Gold, which you spend on new kits."],
-      features: ["Team Cannon Battles on the High Seas", "Destroy Spawn Blocks to Stop the Enemy Respawning", "26 Kits, from Swashbuckler and Pegleg to Ghost and Portalmaster", "Perks like Bridger, Leech and Inferno", "11 Maps, Including 4-Team Classic and Treasure Island", "Loot That Refills During the Match", "Track Your Games Played and Wins"],
-      tips: ["Fire your cannons early, then get moving while they reload", "Break the enemy's cannons and they can't fire back for a while", "Guard your spawn blocks. Once they're all gone, you can't respawn", "Switch your Compass between Nearest Player and Nearest Spawn", "Don't hide from the fight, or you'll be cursed as a coward and won't be able to heal", "Stick with your crew. A Captain or Medic makes the whole team stronger", "Pick your kit carefully, because you're stuck with it untill the match ends"],
-      similarGames: ["bedwars", "skywars", "shooting", "luckyBedwars"],
+    const mW = {
+      whatIs: ["Your own little slice of the world to shape, share and show off. Bloxd Plots gives every player their own plot in a shared creative world. Each plot starts out completely blank, so you can build whatever you like with whoever you like. It's different from the open world of Bloxd Creative because your plot really is yours. Only you and the players you add can change it."],
+      howToPlay: ["Join Plots and claim a plot. Each one is a 91\xd791 block build area, with 5-block-wide roads between the plots. There's no height limit, so build as tall as you dare. You're in creative mode, which means no health to worry about and nothing stopping you from building.", "Want to build with friends? Add them to your plot and they can build with you, or use Go To Shared Plot to visit plots they've shared with you. You can own up to 5 plots and hop between them. Tp To Plot takes you to any plot in the world if you know its coordinates. Change at least 500 blocks and your plot is saved for good."],
+      features: ["Your Own 91\xd791 Plot to Build On", "Own Up to 5 Plots", "No Height Limit", "Add Friends to Build Together", "Teleport to Any Plot with Coordinates", "Plots Saved Forever Once You've Built Enough", "Spawn Mobs on Your Own Plot"],
+      tips: ["Get to 500 changed blocks quickly, because unsaved plots can be reset", "Add Player to Plot lets a friend build with you", "If you don't want someone editing anymore, use Remove Player from Plot", "Starting something new? Get New Plot gives you a fresh one without losing your old build", "Use Tp To Plot to check out other players' plots for ideas", "Keep your build inside the plot edges, since you can't place blocks on the roads", "Place spawner blocks if you want mobs on your plot"],
+      similarGames: ["classic_creative", "greenville", "classic", "parkourPlace"],
       faq: [{
-        question: "What is Bloxd Pirates?",
-        answer: "A team battle mode where pirate crews clash in chaotic sea fights, with cannons, kits and loot."
+        question: "What is Bloxd Plots?",
+        answer: "A building mode where you get your own 91\xd791 plot and can build anything you like in creative mode."
       }, {
-        question: "How do you win in Bloxd Pirates?",
-        answer: "Destroy every one of the enemy team's spawn blocks so they can't respawn, then take down whoever's left. The last team standing wins."
+        question: "How do I save my plot in Bloxd Plots?",
+        answer: "Change at least 500 blocks on it. From then on your plot is saved permanently. Plots that haven't been saved yet can be reset."
       }, {
-        question: "How do cannons work in Bloxd Pirates?",
-        answer: "Click your team's coloured glass to fire. Each cannon takes 15 seconds to reload, and you can break enemy cannons to knock them out for a while."
+        question: "How do I build with friends in Bloxd Plots?",
+        answer: "Use Add Player to Plot to give a friend access. They can find it with Go To Shared Plot, and you can remove them whenever you want."
       }, {
-        question: "Which kits can I pick in Bloxd Pirates?",
-        answer: "There are 26, each with its own items or powers. The Scout can double jump, the Scoundrel can go invisible and the Portalmaster makes portals. You pick one in the lobby and unlock more with Gold or gems."
+        question: "Can other players break my build?",
+        answer: "No. Only you and the players you've added can change blocks on your plot. Changed your mind about someone? Use Remove Player from Plot."
       }, {
-        question: "How do I get Gold in Bloxd Pirates?",
-        answer: "A win is worth 25 Gold. You also get 5 Gold for every spawn block you break and every final kill."
+        question: "How big is a plot in Bloxd Plots?",
+        answer: "Each plot is a 91\xd791 block build area with no height limit. Roads 5 blocks wide run between them."
       }, {
-        question: "What maps are in Bloxd Pirates?",
-        answer: "There are 11: Classic, Classic (4 Teams), Scurvy Shore, Cutthroat Cliffs, Treasure Island, Double Trouble, Stowaway Seas, Woesome Waters, Cannon Storm, Scorched Sails and Dynasty Docks."
+        question: "How many plots can one player own?",
+        answer: "Up to 5 each."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

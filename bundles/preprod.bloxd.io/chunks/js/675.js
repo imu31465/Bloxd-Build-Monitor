@@ -1,19 +1,62 @@
 export const id = 675;
 export const ids = [675];
 export const modules = {
-  64025: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      lodPixelShader: () => oB
+  64479: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      applyLightFoOffset: () => PW,
+      getFloatingOriginOffset: () => EW,
+      lightFoVersion: () => NW,
+      wrapRenderableForFO: () => LW
     });
-    var YB = GB(40864);
-    const DB = "lodPixelShader",
-      QB = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    YB.b.ShadersStore[DB] || (YB.b.ShadersStore[DB] = QB);
-    const oB = {
-      name: DB,
-      shader: QB
+    var mW = OW(53901);
+
+    function EW(WW) {
+      const iW = WW.camera;
+      if (!iW) return {
+        x: 0,
+        y: 0,
+        z: 0
+      };
+      const OW = iW.worldMatrix;
+      return {
+        x: OW[12],
+        y: OW[13],
+        z: OW[14]
+      }
+    }
+
+    function NW(WW) {
+      return WW.camera ? WW.camera.worldMatrixVersion : 0
+    }
+
+    function PW(WW, iW) {
+      const OW = iW.camera?.worldMatrix;
+      if (!OW) return;
+      const EW = OW[12],
+        NW = OW[13],
+        PW = OW[14];
+      let LW = 0;
+      for (const cW of iW.lights) {
+        if (LW >= mW.b) break;
+        if (!cW._writeLightUbo) continue;
+        const iW = 4 + 16 * LW,
+          OW = WW[iW + 3];
+        if (0 === OW || 2 === OW) {
+          const OW = cW.worldMatrix;
+          WW[iW] = OW[12] - EW, WW[iW + 1] = OW[13] - NW, WW[iW + 2] = OW[14] - PW
+        }
+        LW++
+      }
+    }
+
+    function LW(WW, iW, OW) {
+      let mW = -1;
+      return () => {
+        const EW = iW.camera ? iW.camera.worldMatrixVersion : -1;
+        EW !== mW && (OW(), mW = EW), WW()
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

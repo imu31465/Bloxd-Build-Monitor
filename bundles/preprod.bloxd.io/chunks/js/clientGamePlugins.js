@@ -1,68 +1,68 @@
-export const id = 32;
-export const ids = [32];
+export const id = 33;
+export const ids = [33];
 export const modules = {
-  39860: (BB, OB, GB) => {
-    function YB(BB) {
-      return void 0 === BB ? void 0 : [BB[0], BB[1], BB[2]]
+  40380: (WW, iW, OW) => {
+    function mW(WW) {
+      return void 0 === WW ? void 0 : [WW[0], WW[1], WW[2]]
     }
 
-    function DB(BB) {
-      const OB = BB.particles;
+    function EW(WW) {
+      const iW = WW.particles;
       return {
         opts: {
-          texture: OB.texture,
-          CP: OB.CP,
-          minLifeTime: OB.minLifeTime,
-          maxLifeTime: OB.maxLifeTime,
-          minSize: OB.minSize,
-          maxSize: OB.maxSize,
-          minEmitPower: OB.minEmitPower,
-          maxEmitPower: OB.maxEmitPower,
-          emitRate: OB.emitRate,
-          gravity: YB(OB.gravity),
-          dir1: YB(OB.dir1),
-          dir2: YB(OB.dir2),
-          colorGradients: OB.colorGradients,
-          blendMode: OB.blendMode
+          texture: iW.texture,
+          aZ: iW.aZ,
+          minLifeTime: iW.minLifeTime,
+          maxLifeTime: iW.maxLifeTime,
+          minSize: iW.minSize,
+          maxSize: iW.maxSize,
+          minEmitPower: iW.minEmitPower,
+          maxEmitPower: iW.maxEmitPower,
+          emitRate: iW.emitRate,
+          gravity: mW(iW.gravity),
+          dir1: mW(iW.dir1),
+          dir2: mW(iW.dir2),
+          colorGradients: iW.colorGradients,
+          blendMode: iW.blendMode
         },
-        half: [OB.width / 2, OB.height / 2, OB.depth / 2]
+        half: [iW.width / 2, iW.height / 2, iW.depth / 2]
       }
     }
-    GB.d(OB, {
-      c: () => DB
+    OW.d(iW, {
+      d: () => EW
     })
   },
-  39836: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      d: () => JB,
-      f: () => yB,
-      g: () => oB
+  40337: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      g: () => wW,
+      h: () => cW,
+      i: () => PW
     });
-    var YB = GB(204);
-    const DB = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      QB = "PetRoot";
-    let oB = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      jB = DB;
+    var mW = OW(192);
+    const EW = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      NW = "PetRoot";
+    let PW = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      LW = EW;
     new Map, new Map;
 
-    function yB(BB) {
-      var OB;
-      return null !== (OB = (0, YB.c)(oB, BB)) && void 0 !== OB ? OB : null
+    function cW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(PW, WW)) && void 0 !== iW ? iW : null
     }
 
-    function JB(BB) {
-      var OB;
-      return null !== (OB = (0, YB.c)(jB, BB)) && void 0 !== OB ? OB : null
+    function wW(WW) {
+      var iW;
+      return null !== (iW = (0, mW.c)(LW, WW)) && void 0 !== iW ? iW : null
     }
   },
-  39869: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => YB,
-      g: () => DB,
-      h: () => QB
+  40384: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      f: () => EW,
+      j: () => NW
     });
-    class YB {
+    class mW {
       constructor() {
         this.pose = {
           pos: [0, 0, 0],
@@ -70,355 +70,355 @@ export const modules = {
           mode: "flying",
           seated: !1,
           clip: void 0
-        }, this.lZ = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+        }, this.Sj = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
       }
-      step(BB) {
-        var OB;
+      step(WW) {
+        var iW;
         const {
-          feet: GB,
-          heading: YB,
-          tuning: oB
-        } = BB, jB = Math.min(Math.max(BB.dt, 0), .1), {
-          pose: yB,
-          lZ: JB,
-          target: MB
+          feet: OW,
+          heading: mW,
+          tuning: PW
+        } = WW, LW = Math.min(Math.max(WW.dt, 0), .1), {
+          pose: cW,
+          Sj: wW,
+          target: tW
         } = this;
-        if (this.started && jB > 0) {
-          const BB = Math.hypot(GB[0] - this.lastFeet[0], GB[1] - this.lastFeet[1], GB[2] - this.lastFeet[2]);
-          this.speed += (BB / jB - this.speed) * Math.min(jB / .15, 1)
+        if (this.started && LW > 0) {
+          const WW = Math.hypot(OW[0] - this.lastFeet[0], OW[1] - this.lastFeet[1], OW[2] - this.lastFeet[2]);
+          this.speed += (WW / LW - this.speed) * Math.min(LW / .15, 1)
         }
-        this.lastFeet[0] = GB[0], this.lastFeet[1] = GB[1], this.lastFeet[2] = GB[2], this.stillS = this.speed > .3 ? 0 : this.stillS + jB;
-        const PB = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === PB && "perched" === yB.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += jB, yB.mode = PB;
-        const zB = Math.sin(YB),
-          lB = Math.cos(YB);
-        "perched" === PB ? (QB(MB, GB, oB.perchOffset, zB, lB), MB[1] += BB.headTopY - GB[1]) : (QB(MB, GB, oB.followOffset, zB, lB), MB[1] += DB(oB, BB.timeS));
+        this.lastFeet[0] = OW[0], this.lastFeet[1] = OW[1], this.lastFeet[2] = OW[2], this.stillS = this.speed > .3 ? 0 : this.stillS + LW;
+        const ZW = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === ZW && "perched" === cW.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += LW, cW.mode = ZW;
+        const xW = Math.sin(mW),
+          lW = Math.cos(mW);
+        "perched" === ZW ? (NW(tW, OW, PW.perchOffset, xW, lW), tW[1] += WW.headTopY - OW[1]) : (NW(tW, OW, PW.followOffset, xW, lW), tW[1] += EW(PW, WW.timeS));
         const {
-          pos: pB
-        } = yB, qB = Math.hypot(MB[0] - pB[0], MB[1] - pB[1], MB[2] - pB[2]);
-        if (!this.started || qB > 8 || "perched" === PB && (this.perchLocked || qB < .05)) this.perchLocked = this.started && "perched" === PB, pB[0] = MB[0], pB[1] = MB[1], pB[2] = MB[2], JB[0] = JB[1] = JB[2] = 0;
+          pos: AW
+        } = cW, bW = Math.hypot(tW[0] - AW[0], tW[1] - AW[1], tW[2] - AW[2]);
+        if (!this.started || bW > 8 || "perched" === ZW && (this.perchLocked || bW < .05)) this.perchLocked = this.started && "perched" === ZW, AW[0] = tW[0], AW[1] = tW[1], AW[2] = tW[2], wW[0] = wW[1] = wW[2] = 0;
         else {
-          const BB = oB.followStiffness;
-          for (let OB = 0; OB < 3; OB++) JB[OB] += (BB * BB * (MB[OB] - pB[OB]) - 2 * BB * JB[OB]) * jB, pB[OB] += JB[OB] * jB
+          const WW = PW.followStiffness;
+          for (let iW = 0; iW < 3; iW++) wW[iW] += (WW * WW * (tW[iW] - AW[iW]) - 2 * WW * wW[iW]) * LW, AW[iW] += wW[iW] * LW
         }
-        const ZB = YB + oB.yawOffset;
-        var NB;
-        return this.started ? yB.yaw += ((NB = ZB - yB.yaw) - 2 * Math.PI * Math.round(NB / (2 * Math.PI))) * Math.min(8 * jB, 1) : yB.yaw = ZB, this.started = !0, yB.seated = "perched" === PB && this.perchLocked, yB.clip = null === (OB = oB.clips) || void 0 === OB ? void 0 : OB[this.pG(PB)], yB
+        const jW = mW + PW.yawOffset;
+        var UW;
+        return this.started ? cW.yaw += ((UW = jW - cW.yaw) - 2 * Math.PI * Math.round(UW / (2 * Math.PI))) * Math.min(8 * LW, 1) : cW.yaw = jW, this.started = !0, cW.seated = "perched" === ZW && this.perchLocked, cW.clip = null === (iW = PW.clips) || void 0 === iW ? void 0 : iW[this.bO(ZW)], cW
       }
       reset() {
         this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
       }
-      pG(BB) {
-        return "perched" === BB ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      bO(WW) {
+        return "perched" === WW ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
       }
     }
 
-    function DB(BB, OB) {
-      return BB.bobAmplitude * Math.sin(2 * Math.PI * BB.bobHz * OB)
+    function EW(WW, iW) {
+      return WW.bobAmplitude * Math.sin(2 * Math.PI * WW.bobHz * iW)
     }
 
-    function QB(BB, OB, GB, YB, DB) {
-      const [QB, oB, jB] = GB;
-      BB[0] = OB[0] + QB * DB + jB * YB, BB[1] = OB[1] + oB, BB[2] = OB[2] - QB * YB + jB * DB
+    function NW(WW, iW, OW, mW, EW) {
+      const [NW, PW, LW] = OW;
+      WW[0] = iW[0] + NW * EW + LW * mW, WW[1] = iW[1] + PW, WW[2] = iW[2] - NW * mW + LW * EW
     }
   },
-  5337: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => iB,
-      c: () => FB
+  5599: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => eW,
+      g: () => dW
     });
-    var YB = GB(5345),
-      DB = GB(331);
-    const QB = 120,
-      oB = 260,
-      jB = 1.15,
-      yB = 1.2,
-      JB = 2,
-      MB = 1.08,
-      PB = .8,
-      zB = .95,
-      lB = 8,
-      pB = "[\"')\\]\u300d\u300f\uff09]*",
-      qB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${pB}$`),
-      ZB = new RegExp(`[?\uff1f]${pB}$`),
-      NB = new RegExp(`[!\uff01]${pB}$`),
-      RB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      WB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      AB = new RegExp(`[${WB}]`),
-      VB = new RegExp(`[${WB}]|[^${WB}]+`, "g"),
-      SB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var mW = OW(5605),
+      EW = OW(327);
+    const NW = 120,
+      PW = 260,
+      LW = 1.15,
+      cW = 1.2,
+      wW = 2,
+      tW = 1.08,
+      ZW = .8,
+      xW = .95,
+      lW = 8,
+      AW = "[\"')\\]\u300d\u300f\uff09]*",
+      bW = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${AW}$`),
+      jW = new RegExp(`[?\uff1f]${AW}$`),
+      UW = new RegExp(`[!\uff01]${AW}$`),
+      kW = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      sW = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      MW = new RegExp(`[${sW}]`),
+      KW = new RegExp(`[${sW}]|[^${sW}]+`, "g"),
+      SW = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function nB(BB) {
-      let OB = 2166136261;
-      for (let GB = 0; GB < BB.length; GB++) OB ^= BB.charCodeAt(GB), OB = Math.imul(OB, 16777619);
-      return (OB >>> 0) / 4294967295 * 2 - 1
+    function YW(WW) {
+      let iW = 2166136261;
+      for (let OW = 0; OW < WW.length; OW++) iW ^= WW.charCodeAt(OW), iW = Math.imul(iW, 16777619);
+      return (iW >>> 0) / 4294967295 * 2 - 1
     }
 
-    function UB(BB) {
-      var OB;
-      if (AB.test(BB)) return 1;
-      const GB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        YB = GB.replace(/[^0-9]/g, "");
-      if (YB.length > 0 && !/\p{L}/u.test(GB)) return Math.min(YB.length, 4);
-      const DB = null !== (OB = GB.match(SB)) && void 0 !== OB ? OB : [];
-      if (0 === DB.length) {
-        var QB, oB;
-        const BB = null !== (QB = null === (oB = GB.match(/\p{L}/gu)) || void 0 === oB ? void 0 : oB.length) && void 0 !== QB ? QB : 0;
-        return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), lB)
+    function yW(WW) {
+      var iW;
+      if (MW.test(WW)) return 1;
+      const OW = WW.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        mW = OW.replace(/[^0-9]/g, "");
+      if (mW.length > 0 && !/\p{L}/u.test(OW)) return Math.min(mW.length, 4);
+      const EW = null !== (iW = OW.match(SW)) && void 0 !== iW ? iW : [];
+      if (0 === EW.length) {
+        var NW, PW;
+        const WW = null !== (NW = null === (PW = OW.match(/\p{L}/gu)) || void 0 === PW ? void 0 : PW.length) && void 0 !== NW ? NW : 0;
+        return 0 === WW ? 0 : Math.min(Math.max(1, Math.round(WW / 2.5)), lW)
       }
-      const jB = GB.replace(/[^\p{L}]/gu, ""),
-        yB = DB.length > 1 && "e" === DB.at(-1) && jB.endsWith("e") && !jB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
-      return Math.min(DB.length - (yB ? 1 : 0), lB)
+      const LW = OW.replace(/[^\p{L}]/gu, ""),
+        cW = EW.length > 1 && "e" === EW.at(-1) && LW.endsWith("e") && !LW.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(WW.replace(/[^\p{L}]/gu, ""));
+      return Math.min(EW.length - (cW ? 1 : 0), lW)
     }
 
-    function fB(BB) {
-      return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function TW(WW) {
+      return WW.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function kB(BB) {
-      const OB = BB.replace(/[^\p{L}]/gu, "");
-      return OB.length >= 2 && OB === OB.toUpperCase() && OB !== OB.toLowerCase()
+    function JW(WW) {
+      const iW = WW.replace(/[^\p{L}]/gu, "");
+      return iW.length >= 2 && iW === iW.toUpperCase() && iW !== iW.toLowerCase()
     }
 
-    function dB(BB, OB) {
-      var GB;
-      const lB = OB && (0, YB.j)(OB),
-        pB = null !== (GB = null === lB || void 0 === lB ? void 0 : lB.syllableMs) && void 0 !== GB ? GB : YB.d,
-        WB = function(BB) {
-          const OB = [];
-          for (const YB of (0, DB.hc)(BB))
-            if ("string" === typeof YB)
-              for (const BB of YB.split(/(\s+)/)) {
-                if ("" === BB) continue;
-                if (/^\s+$/.test(BB)) {
-                  OB.push({
+    function hW(WW, iW) {
+      var OW;
+      const lW = iW && (0, mW.h)(iW),
+        AW = null !== (OW = null === lW || void 0 === lW ? void 0 : lW.syllableMs) && void 0 !== OW ? OW : mW.d,
+        sW = function(WW) {
+          const iW = [];
+          for (const mW of (0, EW.kc)(WW))
+            if ("string" === typeof mW)
+              for (const WW of mW.split(/(\s+)/)) {
+                if ("" === WW) continue;
+                if (/^\s+$/.test(WW)) {
+                  iW.push({
                     kind: "space",
-                    text: BB
+                    text: WW
                   });
                   continue
                 }
-                if (!AB.test(BB)) {
-                  OB.push({
+                if (!MW.test(WW)) {
+                  iW.push({
                     kind: "word",
-                    text: BB,
+                    text: WW,
                     delayMs: 0
                   });
                   continue
                 }
-                let YB = !0;
-                for (const DB of null !== (GB = BB.match(VB)) && void 0 !== GB ? GB : []) {
-                  var GB;
-                  const BB = OB.at(-1);
-                  YB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || AB.test(DB) || /[\p{L}\p{N}]/u.test(DB) ? (YB || OB.push({
+                let mW = !0;
+                for (const EW of null !== (OW = WW.match(KW)) && void 0 !== OW ? OW : []) {
+                  var OW;
+                  const WW = iW.at(-1);
+                  mW || "word" !== (null === WW || void 0 === WW ? void 0 : WW.kind) || MW.test(EW) || /[\p{L}\p{N}]/u.test(EW) ? (mW || iW.push({
                     kind: "space",
                     text: "\u200b"
-                  }), OB.push({
+                  }), iW.push({
                     kind: "word",
-                    text: DB,
+                    text: EW,
                     delayMs: 0
-                  }), YB = !1) : BB.text += DB
+                  }), mW = !1) : WW.text += EW
                 }
-              } else OB.push({
+              } else iW.push({
                 kind: "icon",
-                text: YB.icon,
+                text: mW.icon,
                 delayMs: 0
               });
-          return OB
-        }(BB),
-        SB = [];
-      let dB = [];
-      for (const YB of WB) "space" !== YB.kind && (dB.push(YB), qB.test(YB.text) && (SB.push(dB), dB = []));
-      SB.push(dB);
-      const KB = [];
-      let uB = 0;
-      for (const YB of SB) {
-        var mB, IB;
-        const BB = null !== (mB = null === (IB = YB.at(-1)) || void 0 === IB ? void 0 : IB.text) && void 0 !== mB ? mB : "",
-          OB = ZB.test(BB),
-          GB = NB.test(BB),
-          DB = YB.map((BB => "word" === BB.kind ? UB(BB.text) : 1)),
-          WB = DB.findLastIndex((BB => BB > 0));
-        for (const [ZB, NB] of YB.entries()) {
-          const BB = "word" === NB.kind,
-            YB = DB[ZB];
-          NB.delayMs = uB;
-          for (let DB = 0; lB && DB < YB; DB++) {
+          return iW
+        }(WW),
+        SW = [];
+      let hW = [];
+      for (const mW of sW) "space" !== mW.kind && (hW.push(mW), bW.test(mW.text) && (SW.push(hW), hW = []));
+      SW.push(hW);
+      const HW = [];
+      let nW = 0;
+      for (const mW of SW) {
+        var uW, oW;
+        const WW = null !== (uW = null === (oW = mW.at(-1)) || void 0 === oW ? void 0 : oW.text) && void 0 !== uW ? uW : "",
+          iW = jW.test(WW),
+          OW = UW.test(WW),
+          EW = mW.map((WW => "word" === WW.kind ? yW(WW.text) : 1)),
+          sW = EW.findLastIndex((WW => WW > 0));
+        for (const [jW, UW] of mW.entries()) {
+          const WW = "word" === UW.kind,
+            mW = EW[jW];
+          UW.delayMs = nW;
+          for (let EW = 0; lW && EW < mW; EW++) {
             const {
-              intonation: QB
-            } = lB;
-            let oB = WB > 0 ? -QB.declineSemitones * (ZB / WB) : 0;
-            oB += nB(`${fB(NB.text)}|${DB}`) * QB.variationSemitones;
-            const qB = Math.min(1, QB.variationSemitones);
-            let RB = lB.glideSemitones,
-              AB = 1;
-            GB && (oB += QB.exclaimLiftSemitones, AB *= jB), OB && ZB === WB && (oB += QB.questionRiseSemitones * (YB > 1 ? .5 + .5 * DB / (YB - 1) : 1), DB === YB - 1 && (RB = Math.abs(RB) + QB.questionRiseSemitones / 2)), BB && kB(NB.text) && (oB += JB * qB, AB *= yB), YB > 1 && 0 === DB && (oB += PB * qB, AB *= MB), KB.push({
-              atMs: uB + DB * pB,
-              semitones: oB,
-              glideSemitones: RB,
-              durationMs: DB < YB - 1 ? Math.min(lB.durationMs, pB * zB) : lB.durationMs,
-              level: AB
+              intonation: NW
+            } = lW;
+            let PW = sW > 0 ? -NW.declineSemitones * (jW / sW) : 0;
+            PW += YW(`${TW(UW.text)}|${EW}`) * NW.variationSemitones;
+            const bW = Math.min(1, NW.variationSemitones);
+            let kW = lW.glideSemitones,
+              MW = 1;
+            OW && (PW += NW.exclaimLiftSemitones, MW *= LW), iW && jW === sW && (PW += NW.questionRiseSemitones * (mW > 1 ? .5 + .5 * EW / (mW - 1) : 1), EW === mW - 1 && (kW = Math.abs(kW) + NW.questionRiseSemitones / 2)), WW && JW(UW.text) && (PW += wW * bW, MW *= cW), mW > 1 && 0 === EW && (PW += ZW * bW, MW *= tW), HW.push({
+              atMs: nW + EW * AW,
+              semitones: PW,
+              glideSemitones: kW,
+              durationMs: EW < mW - 1 ? Math.min(lW.durationMs, AW * xW) : lW.durationMs,
+              level: MW
             })
           }
-          uB += YB * pB + (qB.test(NB.text) ? oB : RB.test(NB.text) ? QB : 0)
+          nW += mW * AW + (bW.test(UW.text) ? PW : kW.test(UW.text) ? NW : 0)
         }
       }
       return {
-        pieces: WB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
+        pieces: sW.map((WW => "space" === WW.kind ? WW : "icon" === WW.kind ? {
           kind: "icon",
-          icon: BB.text,
-          delayMs: BB.delayMs
+          icon: WW.text,
+          delayMs: WW.delayMs
         } : {
           kind: "word",
-          text: BB.text,
-          delayMs: BB.delayMs
+          text: WW.text,
+          delayMs: WW.delayMs
         })),
-        blips: KB
+        blips: HW
       }
     }
-    var KB = GB(1175),
-      uB = GB(1253),
-      mB = GB(2027);
+    var HW = OW(1172),
+      nW = OW(1244),
+      uW = OW(2042);
 
-    function IB(BB) {
-      if ("string" === typeof BB) return BB;
-      const OB = uB.e.get().getCurrentLanguageCode();
-      return (0, KB.x)(OB, BB.translationKey, (0, KB.v)(BB.params, mB.d.shown))
+    function oW(WW) {
+      if ("string" === typeof WW) return WW;
+      const iW = nW.e.get().getCurrentLanguageCode();
+      return (0, HW.p)(iW, WW.translationKey, (0, HW.o)(WW.params, uW.e.shown))
     }
 
-    function FB(BB) {
-      const OB = void 0 === BB.voice ? null : (0, YB.k)(BB.voice),
-        GB = OB && (0, YB.j)(OB);
+    function dW(WW) {
+      const iW = void 0 === WW.voice ? null : (0, mW.j)(WW.voice),
+        OW = iW && (0, mW.h)(iW);
       return {
-        plan: dB(IB(BB.line), GB),
-        synth: GB
+        plan: hW(oW(WW.line), OW),
+        synth: OW
       }
     }
 
-    function iB(BB) {
-      const OB = [];
-      let GB = [];
-      for (const [DB, QB] of BB.entries()) {
-        var YB;
-        "space" === QB.kind && (" " !== QB.text || "icon" !== (null === (YB = BB[DB + 1]) || void 0 === YB ? void 0 : YB.kind)) ? (GB.length > 0 && OB.push(GB), OB.push([QB]), GB = []) : GB.push(QB)
+    function eW(WW) {
+      const iW = [];
+      let OW = [];
+      for (const [EW, NW] of WW.entries()) {
+        var mW;
+        "space" === NW.kind && (" " !== NW.text || "icon" !== (null === (mW = WW[EW + 1]) || void 0 === mW ? void 0 : mW.kind)) ? (OW.length > 0 && iW.push(OW), iW.push([NW]), OW = []) : OW.push(NW)
       }
-      return GB.length > 0 && OB.push(GB), OB
+      return OW.length > 0 && iW.push(OW), iW
     }
   },
-  5349: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => MB,
-      f: () => PB
+  5610: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => tW,
+      h: () => ZW
     });
-    var YB = GB(5353),
-      DB = GB(16);
-    const QB = .25,
-      oB = .85,
-      jB = .02,
-      yB = .01;
+    var mW = OW(5615),
+      EW = OW(25);
+    const NW = .25,
+      PW = .85,
+      LW = .02,
+      cW = .01;
 
-    function JB(BB, OB, GB, YB, DB, QB, jB) {
+    function wW(WW, iW, OW, mW, EW, NW, LW) {
       const {
-        waveform: yB,
-        pitchHz: JB,
-        attackMs: MB,
-        releaseMs: PB,
-        lowpassHz: zB
-      } = GB, lB = DB + YB.durationMs / 1e3, pB = JB * 2 ** (YB.semitones / 12), qB = BB.createOscillator();
-      qB.type = yB, qB.frequency.setValueAtTime(pB, DB), qB.frequency.exponentialRampToValueAtTime(pB * 2 ** (YB.glideSemitones / 12), lB);
-      const ZB = DB + Math.min(MB, YB.durationMs) / 1e3,
-        NB = BB.createGain();
-      NB.gain.setValueAtTime(0, DB), NB.gain.linearRampToValueAtTime(QB, ZB), NB.gain.linearRampToValueAtTime(QB * oB, Math.max(ZB, lB - PB / 1e3)), NB.gain.linearRampToValueAtTime(0, lB);
-      const RB = [qB];
-      if (null !== zB) {
-        const OB = BB.createBiquadFilter();
-        OB.type = "lowpass", OB.frequency.value = zB, RB.push(OB)
+        waveform: cW,
+        pitchHz: wW,
+        attackMs: tW,
+        releaseMs: ZW,
+        lowpassHz: xW
+      } = OW, lW = EW + mW.durationMs / 1e3, AW = wW * 2 ** (mW.semitones / 12), bW = WW.createOscillator();
+      bW.type = cW, bW.frequency.setValueAtTime(AW, EW), bW.frequency.exponentialRampToValueAtTime(AW * 2 ** (mW.glideSemitones / 12), lW);
+      const jW = EW + Math.min(tW, mW.durationMs) / 1e3,
+        UW = WW.createGain();
+      UW.gain.setValueAtTime(0, EW), UW.gain.linearRampToValueAtTime(NW, jW), UW.gain.linearRampToValueAtTime(NW * PW, Math.max(jW, lW - ZW / 1e3)), UW.gain.linearRampToValueAtTime(0, lW);
+      const kW = [bW];
+      if (null !== xW) {
+        const iW = WW.createBiquadFilter();
+        iW.type = "lowpass", iW.frequency.value = xW, kW.push(iW)
       }
-      RB.push(NB, OB);
-      for (let oB = 1; oB < RB.length; oB++) RB[oB - 1].connect(RB[oB]);
-      return qB.onended = () => {
-        for (const BB of RB.slice(0, -1)) BB.disconnect();
-        jB()
-      }, qB.start(DB), qB.stop(lB), qB
+      kW.push(UW, iW);
+      for (let PW = 1; PW < kW.length; PW++) kW[PW - 1].connect(kW[PW]);
+      return bW.onended = () => {
+        for (const WW of kW.slice(0, -1)) WW.disconnect();
+        LW()
+      }, bW.start(EW), bW.stop(lW), bW
     }
 
-    function MB(BB, OB, GB, YB, DB, oB) {
-      if (0 === YB.length) return oB(), () => {};
-      const MB = QB * GB.volume * DB,
-        PB = BB.createGain();
-      PB.connect(OB);
-      const zB = BB.currentTime + jB,
-        lB = new Set;
-      for (const QB of YB) {
-        const OB = JB(BB, PB, GB, QB, zB + QB.atMs / 1e3, MB * QB.level, (() => {
-          lB.delete(OB), 0 === lB.size && (PB.disconnect(), oB())
+    function tW(WW, iW, OW, mW, EW, PW) {
+      if (0 === mW.length) return PW(), () => {};
+      const tW = NW * OW.volume * EW,
+        ZW = WW.createGain();
+      ZW.connect(iW);
+      const xW = WW.currentTime + LW,
+        lW = new Set;
+      for (const NW of mW) {
+        const iW = wW(WW, ZW, OW, NW, xW + NW.atMs / 1e3, tW * NW.level, (() => {
+          lW.delete(iW), 0 === lW.size && (ZW.disconnect(), PW())
         }));
-        lB.add(OB)
+        lW.add(iW)
       }
       return () => {
-        const OB = BB.currentTime;
-        PB.gain.setTargetAtTime(0, OB, yB);
-        for (const BB of lB) try {
-          BB.stop(OB + 5 * yB)
+        const iW = WW.currentTime;
+        ZW.gain.setTargetAtTime(0, iW, cW);
+        for (const WW of lW) try {
+          WW.stop(iW + 5 * cW)
         } catch {}
       }
     }
 
-    function PB(BB, OB) {
-      var GB;
-      const QB = YB.Howler.ctx,
-        oB = YB.Howler.masterGain;
-      if (!QB || !oB || !DB.c.get("soundOnFromAd")) return () => {};
-      const jB = YB.Howler;
-      return null === (GB = jB._autoResume) || void 0 === GB || GB.call(jB), MB(QB, oB, BB, OB, DB.c.get("soundVolume"), (() => {
-        var BB;
-        null === (BB = jB._autoSuspend) || void 0 === BB || BB.call(jB)
+    function ZW(WW, iW) {
+      var OW;
+      const NW = mW.Howler.ctx,
+        PW = mW.Howler.masterGain;
+      if (!NW || !PW || !EW.d.get("soundOnFromAd")) return () => {};
+      const LW = mW.Howler;
+      return null === (OW = LW._autoResume) || void 0 === OW || OW.call(LW), tW(NW, PW, WW, iW, EW.d.get("soundVolume"), (() => {
+        var WW;
+        null === (WW = LW._autoSuspend) || void 0 === WW || WW.call(LW)
       }))
     }
   },
-  39849: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      closeClientGame: () => PO,
-      createDefaultClientPlugins: () => MO
+  40366: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      closeClientGame: () => Zi,
+      createDefaultClientPlugins: () => ti
     });
-    var YB = GB(353);
+    var mW = OW(344);
 
-    function DB() {
-      let BB;
+    function EW() {
+      let WW;
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(iW) {
+          WW = iW
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(OB, GB, DB, QB, oB, jB) {
-          var yB, JB;
-          if ("Iron Chest" !== BB.getMetaInfo(oB).rootName) return;
-          if (!BB.hasEffect(OB, "Thief")) return;
-          const MB = BB.getBlockData(GB, DB, QB);
-          return BB.getPlayerDbId(OB) !== (null === MB || void 0 === MB || null === (yB = MB.persisted) || void 0 === yB || null === (JB = yB.shared) || void 0 === JB ? void 0 : JB.ownerDbId) ? (BB.sendMessage(OB, [{
+        onPlayerAttemptAltAction(iW, OW, EW, NW, PW, LW) {
+          var cW, wW;
+          if ("Iron Chest" !== WW.getMetaInfo(PW).rootName) return;
+          if (!WW.hasEffect(iW, "Thief")) return;
+          const tW = WW.getBlockData(OW, EW, NW);
+          return WW.getPlayerDbId(iW) !== (null === tW || void 0 === tW || null === (cW = tW.persisted) || void 0 === cW || null === (wW = cW.shared) || void 0 === wW ? void 0 : wW.ownerDbId) ? (WW.sendMessage(iW, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: YB.J.redUiText
+              color: mW.M.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var QB = GB(4642),
-      oB = GB(1238);
-    const jB = 8.4,
-      yB = 1e-4,
-      JB = .15,
-      MB = .04,
-      PB = [.12, .04, .12],
-      zB = 26,
-      lB = {
+    var NW = OW(2937),
+      PW = OW(1230);
+    const LW = 8.4,
+      cW = 1e-4,
+      wW = .15,
+      tW = .04,
+      ZW = [.12, .04, .12],
+      xW = 26,
+      lW = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        CP: 1,
-        minLifeTime: yB,
-        maxLifeTime: yB,
+        aZ: 1,
+        minLifeTime: cW,
+        maxLifeTime: cW,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -431,19 +431,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: QB.f.Standard
+        blendMode: NW.d.Standard
       },
-      pB = {
+      AW = {
         texture: "bubble",
         mipmaps: !1,
-        CP: 96,
+        aZ: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: zB,
+        emitRate: xW,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -457,159 +457,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: QB.f.Standard
+        blendMode: NW.d.Standard
       },
-      qB = [0, 0, 0],
-      ZB = [0, 0, 0];
+      bW = [0, 0, 0],
+      jW = [0, 0, 0];
 
-    function NB(BB) {
-      const OB = new Map;
-      let GB = null;
+    function UW(WW) {
+      const iW = new Map;
+      let OW = null;
 
-      function YB(BB) {
-        var OB, GB;
-        null === (OB = BB.bubbles) || void 0 === OB || OB.stop(), null === (GB = BB.fish) || void 0 === GB || GB.stop()
+      function mW(WW) {
+        var iW, OW;
+        null === (iW = WW.bubbles) || void 0 === iW || iW.stop(), null === (OW = WW.fish) || void 0 === OW || OW.stop()
       }
 
-      function DB(GB) {
-        if (!GB.readDrawnPosition(BB, ZB)) {
-          for (const BB of OB.values()) {
-            var YB;
-            null === (YB = BB.bubbles) || void 0 === YB || YB.setEmitRate(0)
+      function EW(OW) {
+        if (!OW.readDrawnPosition(WW, jW)) {
+          for (const WW of iW.values()) {
+            var mW;
+            null === (mW = WW.bubbles) || void 0 === mW || mW.setEmitRate(0)
           }
           return
         }
-        const DB = performance.now();
-        for (const [BB, oB] of OB) {
-          var QB;
-          if (null === (QB = oB.bubbles) || void 0 === QB || QB.setEmitRate(0), !GB.readDrawnPosition(BB, qB)) continue;
-          if (!((qB[0] - ZB[0]) ** 2 + (qB[1] - ZB[1]) ** 2 + (qB[2] - ZB[2]) ** 2 < 900)) continue;
-          const OB = Math.max(0, oB.biteAt - DB),
-            YB = oB.approachDurationMs > 0 ? Math.min(1, 1 - OB / oB.approachDurationMs) : 1,
-            yB = (oB.approachDurationMs - OB) / 1e3,
-            NB = oB.phase + .25 * Math.sin(1.7 * yB + oB.phase),
-            RB = Math.min(oB.approachDurationMs / 3e3 * 2.8, jB) * (1 - YB) * (1 + .15 * Math.sin(2.1 * yB + oB.phase)),
-            WB = Math.min(1, 4 * (1 - YB)),
-            AB = (.45 * Math.sin(4.1 * yB + oB.phase) + .18 * Math.sin(9.7 * yB + 2 * oB.phase)) * WB,
-            VB = qB[0] + Math.cos(NB) * RB - Math.sin(NB) * AB,
-            SB = Math.ceil(oB.surfaceY),
-            nB = qB[2] + Math.sin(NB) * RB + Math.cos(NB) * AB,
+        const EW = performance.now();
+        for (const [WW, PW] of iW) {
+          var NW;
+          if (null === (NW = PW.bubbles) || void 0 === NW || NW.setEmitRate(0), !OW.readDrawnPosition(WW, bW)) continue;
+          if (!((bW[0] - jW[0]) ** 2 + (bW[1] - jW[1]) ** 2 + (bW[2] - jW[2]) ** 2 < 900)) continue;
+          const iW = Math.max(0, PW.biteAt - EW),
+            mW = PW.approachDurationMs > 0 ? Math.min(1, 1 - iW / PW.approachDurationMs) : 1,
+            cW = (PW.approachDurationMs - iW) / 1e3,
+            UW = PW.phase + .25 * Math.sin(1.7 * cW + PW.phase),
+            kW = Math.min(PW.approachDurationMs / 3e3 * 2.8, LW) * (1 - mW) * (1 + .15 * Math.sin(2.1 * cW + PW.phase)),
+            sW = Math.min(1, 4 * (1 - mW)),
+            MW = (.45 * Math.sin(4.1 * cW + PW.phase) + .18 * Math.sin(9.7 * cW + 2 * PW.phase)) * sW,
+            KW = bW[0] + Math.cos(UW) * kW - Math.sin(UW) * MW,
+            SW = Math.ceil(PW.surfaceY),
+            YW = bW[2] + Math.sin(UW) * kW + Math.cos(UW) * MW,
             {
-              fishAt: UB,
-              bubblesAt: fB
-            } = oB;
-          UB[0] = fB[0] = VB, UB[1] = SB + JB, fB[1] = SB + MB, UB[2] = fB[2] = nB, oB.fish ??= GB.createParticles(lB, {
-            pos: UB
-          }), oB.fish.moveTo(UB), oB.fish.emit(1), oB.bubbles ??= GB.createParticles(pB, {
-            pos: fB,
-            half: PB
-          }), oB.bubbles.moveTo(fB), oB.bubbles.setEmitRate(zB + 32 * (.5 + .5 * Math.sin(9 * yB + oB.phase)) ** 4 + 13 * YB)
+              fishAt: yW,
+              bubblesAt: TW
+            } = PW;
+          yW[0] = TW[0] = KW, yW[1] = SW + wW, TW[1] = SW + tW, yW[2] = TW[2] = YW, PW.fish ??= OW.createParticles(lW, {
+            pos: yW
+          }), PW.fish.moveTo(yW), PW.fish.emit(1), PW.bubbles ??= OW.createParticles(AW, {
+            pos: TW,
+            half: ZW
+          }), PW.bubbles.moveTo(TW), PW.bubbles.setEmitRate(xW + 32 * (.5 + .5 * Math.sin(9 * cW + PW.phase)) ** 4 + 13 * mW)
         }
       }
       return {
-        onCreate(BB) {
-          GB = BB
+        onCreate(WW) {
+          OW = WW
         },
         onAfterRender() {
-          GB && DB(GB)
+          OW && EW(OW)
         },
         onClose() {
-          for (const BB of OB.values()) YB(BB);
-          OB.clear(), GB = null
+          for (const WW of iW.values()) mW(WW);
+          iW.clear(), OW = null
         },
-        onReceivedMessageFromServer(BB, GB) {
-          if (BB !== oB.y) return;
+        onReceivedMessageFromServer(WW, OW) {
+          if (WW !== PW.r) return;
           const {
-            hookId: DB,
-            waiting: QB
-          } = GB;
-          if (QB) OB.has(DB) || OB.set(DB, {
+            hookId: EW,
+            waiting: NW
+          } = OW;
+          if (NW) iW.has(EW) || iW.set(EW, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + QB.remainingMs,
-            approachDurationMs: QB.durationMs,
-            surfaceY: QB.surfaceY,
+            biteAt: performance.now() + NW.remainingMs,
+            approachDurationMs: NW.durationMs,
+            surfaceY: NW.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const BB = OB.get(DB);
-            BB && YB(BB), OB.delete(DB)
+            const WW = iW.get(EW);
+            WW && mW(WW), iW.delete(EW)
           }
         }
       }
     }
-    var RB = GB(5349),
-      WB = GB(5337);
+    var kW = OW(5610),
+      sW = OW(5599);
 
-    function AB(BB) {
-      let OB, GB = null,
-        YB = null;
-      const DB = () => {
-        var BB;
-        null === (BB = YB) || void 0 === BB || BB(), YB = null
+    function MW(WW) {
+      let iW, OW = null,
+        mW = null;
+      const EW = () => {
+        var WW;
+        null === (WW = mW) || void 0 === WW || WW(), mW = null
       };
       return {
-        onCreate(YB) {
-          OB = YB, GB = OB.getClientOption(BB, "dialogue")
+        onCreate(mW) {
+          iW = mW, OW = iW.getClientOption(WW, "dialogue")
         },
         onAfterRender() {
-          if (!OB) return;
-          const QB = OB.getClientOption(BB, "dialogue");
-          if (QB === GB) return;
-          if (GB = QB, DB(), !QB || !1 === QB.animateIn) return;
+          if (!iW) return;
+          const NW = iW.getClientOption(WW, "dialogue");
+          if (NW === OW) return;
+          if (OW = NW, EW(), !NW || !1 === NW.animateIn) return;
           const {
-            plan: oB,
-            synth: jB
-          } = (0, WB.c)(QB);
-          jB && (YB = (0, RB.f)(jB, oB.blips))
+            plan: PW,
+            synth: LW
+          } = (0, sW.g)(NW);
+          LW && (mW = (0, kW.h)(LW, PW.blips))
         },
-        onClose: DB
+        onClose: EW
       }
     }
-    var VB = GB(39858);
-    const SB = [
+    var KW = OW(40371);
+    const SW = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      nB = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      UB = [0, 1, 2, 0, 2, 3];
+      YW = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      yW = [0, 1, 2, 0, 2, 3];
 
-    function fB(BB, OB, GB) {
-      var YB;
-      let [DB, QB, oB] = OB;
-      if (BB.hasPackModel("Furnace")) return null;
-      const jB = ((null !== (YB = BB.getMetaInfo(GB).rot) && void 0 !== YB ? YB : 1) - 1) * Math.PI / 2,
-        yB = Math.PI + jB,
-        JB = Math.cos(yB),
-        MB = Math.sin(yB),
-        PB = [];
-      for (const [pB, qB] of SB) PB.push(pB * JB, qB, -pB * MB);
-      const zB = {
-          positions: PB,
-          indices: UB,
-          uvs: nB
+    function TW(WW, iW, OW) {
+      var mW;
+      let [EW, NW, PW] = iW;
+      if (WW.hasPackModel("Furnace")) return null;
+      const LW = ((null !== (mW = WW.getMetaInfo(OW).rot) && void 0 !== mW ? mW : 1) - 1) * Math.PI / 2,
+        cW = Math.PI + LW,
+        wW = Math.cos(cW),
+        tW = Math.sin(cW),
+        ZW = [];
+      for (const [AW, bW] of SW) ZW.push(AW * wW, bW, -AW * tW);
+      const xW = {
+          positions: ZW,
+          indices: yW,
+          uvs: YW
         },
-        lB = [DB + .5 + .51 * Math.sin(jB), QB + .375, oB + .5 + .51 * Math.cos(jB)];
-      return BB.createGameMesh(zB, {
+        lW = [EW + .5 + .51 * Math.sin(LW), NW + .375, PW + .5 + .51 * Math.cos(LW)];
+      return WW.createGameMesh(xW, {
         kind: "furnaceFire"
-      }, lB)
+      }, lW)
     }
 
-    function kB(BB) {
-      return Math.floor(BB / 200) % 3
+    function JW(WW) {
+      return Math.floor(WW / 200) % 3
     }
 
-    function dB(BB, OB, GB) {
-      BB.setGameMesh(OB, {
-        uvOffset: [0, GB / 3]
+    function hW(WW, iW, OW) {
+      WW.setGameMesh(iW, {
+        uvOffset: [0, OW / 3]
       })
     }
-    const KB = [.12, .025, .12],
-      uB = [{
+    const HW = [.12, .025, .12],
+      nW = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -622,7 +622,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: QB.f.Standard,
+          blendMode: NW.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -639,140 +639,140 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: QB.f.Add,
+          blendMode: NW.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class mB {
+    class uW {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(BB, OB) {
-        const GB = BB.getBlockId(OB[0], OB[1], OB[2]);
-        if ("Furnace" !== BB.getMetaInfo(GB).rootName) return;
-        const YB = performance.now();
-        let DB = this.smokes.find((BB => BB.pos[0] === OB[0] && BB.pos[1] === OB[1] && BB.pos[2] === OB[2] && BB.SM === GB));
-        if (DB || (DB = {
-            pos: [OB[0], OB[1], OB[2]],
-            SM: GB,
-            endMs: YB,
+      start(WW, iW) {
+        const OW = WW.getBlockId(iW[0], iW[1], iW[2]);
+        if ("Furnace" !== WW.getMetaInfo(OW).rootName) return;
+        const mW = performance.now();
+        let EW = this.smokes.find((WW => WW.pos[0] === iW[0] && WW.pos[1] === iW[1] && WW.pos[2] === iW[2] && WW.NL === OW));
+        if (EW || (EW = {
+            pos: [iW[0], iW[1], iW[2]],
+            NL: OW,
+            endMs: mW,
             lastBurstMs: -1 / 0,
-            pending: new Array(uB.length).fill(0),
-            fire: fB(BB, OB, GB)
-          }, this.smokes.push(DB), null !== DB.fire && (dB(BB, DB.fire, kB(YB)), this.shownFireFrame = -1)), DB.endMs = YB + 6e3, this.smokes.length > 4) {
-          const OB = this.smokes.reduce(((BB, OB) => OB.endMs < BB.endMs ? OB : BB));
-          IB(BB, OB), this.smokes.splice(this.smokes.indexOf(OB), 1)
+            pending: new Array(nW.length).fill(0),
+            fire: TW(WW, iW, OW)
+          }, this.smokes.push(EW), null !== EW.fire && (hW(WW, EW.fire, JW(mW)), this.shownFireFrame = -1)), EW.endMs = mW + 6e3, this.smokes.length > 4) {
+          const iW = this.smokes.reduce(((WW, iW) => iW.endMs < WW.endMs ? iW : WW));
+          oW(WW, iW), this.smokes.splice(this.smokes.indexOf(iW), 1)
         }
-        YB - DB.lastBurstMs >= 300 && (DB.lastBurstMs = YB, uB.forEach(((BB, OB) => {
-          DB.pending[OB] += BB.style.count
+        mW - EW.lastBurstMs >= 300 && (EW.lastBurstMs = mW, nW.forEach(((WW, iW) => {
+          EW.pending[iW] += WW.style.count
         })))
       }
-      onAfterRender(BB, OB) {
+      onAfterRender(WW, iW) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const GB = performance.now();
-        this.smokes = this.smokes.filter((OB => {
-          const [YB, DB, QB] = OB.pos, oB = GB < OB.endMs && BB.getBlockId(YB, DB, QB) === OB.SM;
-          return oB || IB(BB, OB), oB
+        const OW = performance.now();
+        this.smokes = this.smokes.filter((iW => {
+          const [mW, EW, NW] = iW.pos, PW = OW < iW.endMs && WW.getBlockId(mW, EW, NW) === iW.NL;
+          return PW || oW(WW, iW), PW
         }));
-        const YB = kB(GB);
-        if (YB !== this.shownFireFrame) {
-          this.shownFireFrame = YB;
-          for (const OB of this.smokes) null !== OB.fire && dB(BB, OB.fire, YB)
+        const mW = JW(OW);
+        if (mW !== this.shownFireFrame) {
+          this.shownFireFrame = mW;
+          for (const iW of this.smokes) null !== iW.fire && hW(WW, iW.fire, mW)
         }
-        if (!BB.particlesEnabled()) {
-          for (const BB of this.smokes) BB.pending.fill(0);
+        if (!WW.particlesEnabled()) {
+          for (const WW of this.smokes) WW.pending.fill(0);
           return
         }
-        const DB = Math.min(OB, 250) / 1e3;
-        for (const QB of this.smokes) {
-          const [OB, YB, oB] = QB.pos;
-          if (0 !== BB.getBlockId(OB, YB + 1, oB)) {
-            QB.pending.fill(0);
+        const EW = Math.min(iW, 250) / 1e3;
+        for (const NW of this.smokes) {
+          const [iW, mW, PW] = NW.pos;
+          if (0 !== WW.getBlockId(iW, mW + 1, PW)) {
+            NW.pending.fill(0);
             continue
           }
-          const jB = (QB.endMs - GB) / 6e3,
-            yB = this.centre;
-          yB[0] = OB + .5, yB[1] = YB + 1.275, yB[2] = oB + .5, uB.forEach(((OB, GB) => {
-            QB.pending[GB] += OB.perSecond * jB * DB;
-            const YB = Math.floor(QB.pending[GB]);
-            YB > 0 && this.emit(BB, GB, yB, YB) && (QB.pending[GB] -= YB)
+          const LW = (NW.endMs - OW) / 6e3,
+            cW = this.centre;
+          cW[0] = iW + .5, cW[1] = mW + 1.275, cW[2] = PW + .5, nW.forEach(((iW, OW) => {
+            NW.pending[OW] += iW.perSecond * LW * EW;
+            const mW = Math.floor(NW.pending[OW]);
+            mW > 0 && this.emit(WW, OW, cW, mW) && (NW.pending[OW] -= mW)
           }))
         }
       }
-      dispose(BB) {
-        for (const GB of this.smokes) IB(BB, GB);
+      dispose(WW) {
+        for (const OW of this.smokes) oW(WW, OW);
         this.smokes = [];
-        for (const GB of null !== (OB = this.puffers) && void 0 !== OB ? OB : []) {
-          var OB;
-          GB.dispose()
+        for (const OW of null !== (iW = this.puffers) && void 0 !== iW ? iW : []) {
+          var iW;
+          OW.dispose()
         }
         this.puffers = null
       }
-      emit(BB, OB, GB, YB) {
-        return this.puffers ??= uB.map((BB => {
+      emit(WW, iW, OW, mW) {
+        return this.puffers ??= nW.map((WW => {
           let {
-            style: OB,
-            perSecond: GB
-          } = BB;
-          const YB = (OB.count / .3 + GB) * OB.life[1];
-          return new VB.g(OB, Math.ceil(4 * YB), KB)
-        })), this.puffers[OB].emit(BB, GB, this.renderFrame, YB)
+            style: iW,
+            perSecond: OW
+          } = WW;
+          const mW = (iW.count / .3 + OW) * iW.life[1];
+          return new KW.h(iW, Math.ceil(4 * mW), HW)
+        })), this.puffers[iW].emit(WW, OW, this.renderFrame, mW)
       }
     }
 
-    function IB(BB, OB) {
-      null !== OB.fire && (BB.disposeGameMesh(OB.fire), OB.fire = null)
+    function oW(WW, iW) {
+      null !== iW.fire && (WW.disposeGameMesh(iW.fire), iW.fire = null)
     }
 
-    function FB() {
-      let BB;
-      const OB = new mB;
+    function dW() {
+      let WW;
+      const iW = new uW;
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(iW) {
+          WW = iW
         },
-        onReceivedMessageFromServer(GB, YB) {
-          GB === oB.C && OB.start(BB, YB)
+        onReceivedMessageFromServer(OW, mW) {
+          OW === PW.s && iW.start(WW, mW)
         },
-        onAfterRender(GB) {
-          OB.onAfterRender(BB, GB)
+        onAfterRender(OW) {
+          iW.onAfterRender(WW, OW)
         },
         onClose() {
-          OB.dispose(BB)
+          iW.dispose(WW)
         }
       }
     }
-    var iB = GB(192),
-      LB = GB(39836),
-      gB = GB(39860),
-      rB = GB(39869);
-    class XB {
-      constructor(BB, OB, GB) {
-        this.api = BB, this.wearer = OB, this.name = GB, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new rB.e, this.shown = !1, this.raised = 0
+    var eW = OW(182),
+      vW = OW(40337),
+      gW = OW(40380),
+      DW = OW(40384);
+    class VW {
+      constructor(WW, iW, OW) {
+        this.api = WW, this.wearer = iW, this.name = OW, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new DW.e, this.shown = !1, this.raised = 0
       }
-      update(BB) {
-        var OB;
-        const GB = (0, LB.f)(this.name);
-        if (!GB) return void this.dispose();
-        if (!this.madeFrom || this.madeFrom.model === GB.model && this.madeFrom.scale === GB.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(GB.model, GB.scale), this.madeFrom = GB, !this.model)) return void this.raiseNametag(0);
-        if (!(BB.drawn && !BB.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
-        const YB = this.motion.step({
-          dt: BB.dt,
-          feet: BB.feet,
-          heading: BB.heading,
-          headTopY: BB.headTopY,
-          tuning: GB,
-          timeS: BB.timeS
+      update(WW) {
+        var iW;
+        const OW = (0, vW.h)(this.name);
+        if (!OW) return void this.dispose();
+        if (!this.madeFrom || this.madeFrom.model === OW.model && this.madeFrom.scale === OW.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(OW.model, OW.scale), this.madeFrom = OW, !this.model)) return void this.raiseNametag(0);
+        if (!(WW.drawn && !WW.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
+        const mW = this.motion.step({
+          dt: WW.dt,
+          feet: WW.feet,
+          heading: WW.heading,
+          headTopY: WW.headTopY,
+          tuning: OW,
+          timeS: WW.timeS
         });
-        this.model.setPose(YB.pos, YB.yaw + Math.PI), this.model.setClip(null !== (OB = YB.clip) && void 0 !== OB ? OB : null);
-        const DB = YB.seated ? GB : null;
-        DB !== this.perchedWith && (this.perchedWith = DB, this.model.setPerch(DB && {
-          MG: this.wearer,
-          offset: DB.perchOffset,
-          yaw: DB.yawOffset
-        })), this.setShown(!0), this.raiseNametag(GB.nametagRaise)
+        this.model.setPose(mW.pos, mW.yaw + Math.PI), this.model.setClip(null !== (iW = mW.clip) && void 0 !== iW ? iW : null);
+        const EW = mW.seated ? OW : null;
+        EW !== this.perchedWith && (this.perchedWith = EW, this.model.setPerch(EW && {
+          ZO: this.wearer,
+          offset: EW.perchOffset,
+          yaw: EW.yawOffset
+        })), this.setShown(!0), this.raiseNametag(OW.nametagRaise)
       }
       refreshNametag() {
         0 !== this.raised && this.api.setNametagOffset(this.wearer, this.raised)
@@ -780,66 +780,66 @@ export const modules = {
       dispose() {
         this.freeModel(), this.raiseNametag(0)
       }
-      raiseNametag(BB) {
-        BB !== this.raised && (this.raised = BB, this.api.setNametagOffset(this.wearer, BB))
+      raiseNametag(WW) {
+        WW !== this.raised && (this.raised = WW, this.api.setNametagOffset(this.wearer, WW))
       }
       freeModel() {
-        var BB;
-        null === (BB = this.model) || void 0 === BB || BB.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
+        var WW;
+        null === (WW = this.model) || void 0 === WW || WW.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
       }
-      setShown(BB) {
-        this.model && BB !== this.shown && (this.shown = BB, this.model.setVisible(BB))
+      setShown(WW) {
+        this.model && WW !== this.shown && (this.shown = WW, this.model.setVisible(WW))
       }
     }
-    class wB {
-      constructor(BB, OB) {
-        this.api = BB, this.name = OB, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
+    class pW {
+      constructor(WW, iW) {
+        this.api = WW, this.name = iW, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
       }
-      update(BB) {
-        const OB = (0, LB.d)(this.name);
-        if (OB !== this.madeFrom && this.stop(), !OB) return;
-        const GB = BB.ownFirstPerson ? OB.ownInFirstPerson : BB.drawn;
-        if (GB) {
+      update(WW) {
+        const iW = (0, vW.g)(this.name);
+        if (iW !== this.madeFrom && this.stop(), !iW) return;
+        const OW = WW.ownFirstPerson ? iW.ownInFirstPerson : WW.drawn;
+        if (OW) {
           const {
-            centre: GB
+            centre: OW
           } = this;
-          if ((0, rB.h)(GB, BB.feet, OB.offset, Math.sin(BB.heading), Math.cos(BB.heading)), this.particles) this.particles.moveTo(GB, this.half);
+          if ((0, DW.j)(OW, WW.feet, iW.offset, Math.sin(WW.heading), Math.cos(WW.heading)), this.particles) this.particles.moveTo(OW, this.half);
           else {
-            const BB = (0, gB.c)(OB);
-            this.half = BB.half, this.particles = this.api.createParticles(BB.opts, {
-              pos: GB,
-              half: BB.half
-            }), this.madeFrom = OB, this.emitting = !0
+            const WW = (0, gW.d)(iW);
+            this.half = WW.half, this.particles = this.api.createParticles(WW.opts, {
+              pos: OW,
+              half: WW.half
+            }), this.madeFrom = iW, this.emitting = !0
           }
         }
-        this.particles && GB !== this.emitting && (this.emitting = GB, this.particles.setEmitRate(GB ? OB.particles.emitRate : 0))
+        this.particles && OW !== this.emitting && (this.emitting = OW, this.particles.setEmitRate(OW ? iW.particles.emitRate : 0))
       }
       stop() {
-        var BB;
-        null === (BB = this.particles) || void 0 === BB || BB.stop(), this.particles = null, this.madeFrom = null
+        var WW;
+        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null, this.madeFrom = null
       }
     }
-    const EB = .25,
-      cB = 48,
-      hB = 4,
-      aB = 24,
-      eB = 12,
-      TB = .6,
-      bB = 1 / iB.f.playerEyeToHeightRatio;
+    const fW = .25,
+      CW = 48,
+      XW = 4,
+      BW = 24,
+      qW = 12,
+      RW = .6,
+      GW = 1 / eW.f.playerEyeToHeightRatio;
 
-    function CB(BB, OB, GB) {
-      const YB = BB.filter((BB => BB[OB] <= cB));
-      return YB.sort(((BB, GB) => BB[OB] - GB[OB])), new Set(YB.slice(0, GB).map((BB => BB.id)))
+    function IW(WW, iW, OW) {
+      const mW = WW.filter((WW => WW[iW] <= CW));
+      return mW.sort(((WW, OW) => WW[iW] - OW[iW])), new Set(mW.slice(0, OW).map((WW => WW.id)))
     }
 
-    function HB() {
-      let BB;
-      const OB = new Map;
-      let GB = 0,
-        YB = 0;
-      const DB = [0, 0, 0],
-        QB = {
-          feet: DB,
+    function aW() {
+      let WW;
+      const iW = new Map;
+      let OW = 0,
+        mW = 0;
+      const EW = [0, 0, 0],
+        NW = {
+          feet: EW,
           heading: 0,
           headTopY: 0,
           drawn: !1,
@@ -848,96 +848,96 @@ export const modules = {
           timeS: 0
         };
 
-      function oB(BB) {
-        var OB, GB;
-        null === (OB = BB.pet) || void 0 === OB || OB.dispose(), null === (GB = BB.aura) || void 0 === GB || GB.stop()
+      function PW(WW) {
+        var iW, OW;
+        null === (iW = WW.pet) || void 0 === iW || iW.dispose(), null === (OW = WW.aura) || void 0 === OW || OW.stop()
       }
 
-      function jB(OB, GB) {
-        var YB, oB;
+      function LW(iW, OW) {
+        var mW, PW;
         const {
-          id: jB
-        } = OB, yB = BB.readDrawnPosition(jB, DB) ? BB.getDrawnHeading(jB) : null, JB = null === yB ? null : BB.getDrawnEyeHeight(jB);
-        if (null === yB || null === JB) QB.drawn = !1, QB.ownFirstPerson = !1;
+          id: LW
+        } = iW, cW = WW.readDrawnPosition(LW, EW) ? WW.getDrawnHeading(LW) : null, wW = null === cW ? null : WW.getDrawnEyeHeight(LW);
+        if (null === cW || null === wW) NW.drawn = !1, NW.ownFirstPerson = !1;
         else {
-          const OB = GB.cameraPosition;
-          QB.heading = yB, QB.headTopY = DB[1] + JB * bB, QB.drawn = BB.isAlive(jB) && BB.isEntityDrawn(jB), QB.ownFirstPerson = BB.isLocalPlayer(jB) && BB.isAlive(jB) && Math.hypot(OB[0] - DB[0], OB[1] - DB[1] - JB, OB[2] - DB[2]) < TB
+          const iW = OW.cameraPosition;
+          NW.heading = cW, NW.headTopY = EW[1] + wW * GW, NW.drawn = WW.isAlive(LW) && WW.isEntityDrawn(LW), NW.ownFirstPerson = WW.isLocalPlayer(LW) && WW.isAlive(LW) && Math.hypot(iW[0] - EW[0], iW[1] - EW[1] - wW, iW[2] - EW[2]) < RW
         }
-        null === (YB = OB.pet) || void 0 === YB || YB.update(QB), null === (oB = OB.aura) || void 0 === oB || oB.update(QB)
+        null === (mW = iW.pet) || void 0 === mW || mW.update(NW), null === (PW = iW.aura) || void 0 === PW || PW.update(NW)
       }
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(iW) {
+          WW = iW
         },
-        onAfterRender(yB, JB) {
-          const MB = yB / 1e3;
-          YB += MB, GB -= MB, GB <= 0 && (GB = EB, function(GB) {
-            const YB = [];
-            for (const oB of BB.getPlayerIds()) {
-              const QB = BB.getPlayerCosmetics(oB),
-                jB = void 0 !== (null === QB || void 0 === QB ? void 0 : QB.pet) && (0, LB.f)(QB.pet) ? QB.pet : null,
-                yB = void 0 !== (null === QB || void 0 === QB ? void 0 : QB.aura) && (0, LB.d)(QB.aura) ? QB.aura : null;
-              if (null === jB && null === yB || !BB.readDrawnPosition(oB, DB)) continue;
-              const JB = Math.hypot(DB[0] - GB[0], DB[1] - GB[1], DB[2] - GB[2]),
-                MB = OB.get(oB);
-              YB.push({
-                id: oB,
-                pet: jB,
-                aura: yB,
-                petDist: null === jB ? 1 / 0 : JB - (null !== MB && void 0 !== MB && MB.pet ? hB : 0),
-                auraDist: null === yB ? 1 / 0 : JB - (null !== MB && void 0 !== MB && MB.aura ? hB : 0)
+        onAfterRender(cW, wW) {
+          const tW = cW / 1e3;
+          mW += tW, OW -= tW, OW <= 0 && (OW = fW, function(OW) {
+            const mW = [];
+            for (const PW of WW.getPlayerIds()) {
+              const NW = WW.getPlayerCosmetics(PW),
+                LW = void 0 !== (null === NW || void 0 === NW ? void 0 : NW.pet) && (0, vW.h)(NW.pet) ? NW.pet : null,
+                cW = void 0 !== (null === NW || void 0 === NW ? void 0 : NW.aura) && (0, vW.g)(NW.aura) ? NW.aura : null;
+              if (null === LW && null === cW || !WW.readDrawnPosition(PW, EW)) continue;
+              const wW = Math.hypot(EW[0] - OW[0], EW[1] - OW[1], EW[2] - OW[2]),
+                tW = iW.get(PW);
+              mW.push({
+                id: PW,
+                pet: LW,
+                aura: cW,
+                petDist: null === LW ? 1 / 0 : wW - (null !== tW && void 0 !== tW && tW.pet ? XW : 0),
+                auraDist: null === cW ? 1 / 0 : wW - (null !== tW && void 0 !== tW && tW.aura ? XW : 0)
               })
             }
-            const QB = CB(YB, "petDist", aB),
-              jB = BB.particlesEnabled() ? CB(YB, "auraDist", eB) : new Set,
-              yB = new Set;
+            const NW = IW(mW, "petDist", BW),
+              LW = WW.particlesEnabled() ? IW(mW, "auraDist", qW) : new Set,
+              cW = new Set;
             for (const {
-                id: DB,
-                pet: oB,
-                aura: qB
+                id: EW,
+                pet: PW,
+                aura: bW
               }
-              of YB) {
-              var JB, MB, PB;
-              const GB = null !== (JB = OB.get(DB)) && void 0 !== JB ? JB : {
-                  id: DB,
+              of mW) {
+              var wW, tW, ZW;
+              const OW = null !== (wW = iW.get(EW)) && void 0 !== wW ? wW : {
+                  id: EW,
                   pet: null,
                   aura: null
                 },
-                YB = QB.has(DB) ? oB : null,
-                ZB = jB.has(DB) ? qB : null;
-              var zB, lB, pB;
-              (null === (MB = GB.pet) || void 0 === MB ? void 0 : MB.name) !== YB ? (null === (zB = GB.pet) || void 0 === zB || zB.dispose(), GB.pet = null === YB ? null : new XB(BB, DB, YB)) : null === (lB = GB.pet) || void 0 === lB || lB.refreshNametag(), (null === (PB = GB.aura) || void 0 === PB ? void 0 : PB.name) !== ZB && (null === (pB = GB.aura) || void 0 === pB || pB.stop(), GB.aura = null === ZB ? null : new wB(BB, ZB)), (GB.pet || GB.aura) && (OB.set(DB, GB), yB.add(DB))
+                mW = NW.has(EW) ? PW : null,
+                jW = LW.has(EW) ? bW : null;
+              var xW, lW, AW;
+              (null === (tW = OW.pet) || void 0 === tW ? void 0 : tW.name) !== mW ? (null === (xW = OW.pet) || void 0 === xW || xW.dispose(), OW.pet = null === mW ? null : new VW(WW, EW, mW)) : null === (lW = OW.pet) || void 0 === lW || lW.refreshNametag(), (null === (ZW = OW.aura) || void 0 === ZW ? void 0 : ZW.name) !== jW && (null === (AW = OW.aura) || void 0 === AW || AW.stop(), OW.aura = null === jW ? null : new pW(WW, jW)), (OW.pet || OW.aura) && (iW.set(EW, OW), cW.add(EW))
             }
-            for (const [BB, DB] of OB) yB.has(BB) || (oB(DB), OB.delete(BB))
-          }(JB.cameraPosition)), QB.dt = MB, QB.timeS = YB;
-          for (const BB of OB.values()) jB(BB, JB)
+            for (const [WW, EW] of iW) cW.has(WW) || (PW(EW), iW.delete(WW))
+          }(wW.cameraPosition)), NW.dt = tW, NW.timeS = mW;
+          for (const WW of iW.values()) LW(WW, wW)
         },
         onClose() {
-          for (const BB of OB.values()) oB(BB);
-          OB.clear()
+          for (const WW of iW.values()) PW(WW);
+          iW.clear()
         }
       }
     }
-    var vB = GB(9397);
-    const sB = "skyblockLoot",
-      xB = "autoPickupClick";
-    var tB = GB(1723);
+    var rW = OW(9963);
+    const zW = "skyblockLoot",
+      FW = "autoPickupClick";
+    var QW = OW(1770);
 
-    function BO(BB, OB) {
+    function Wi(WW, iW) {
       return [{
         timeFraction: 0,
-        minColor: [255 * BB[0], 255 * BB[1], 255 * BB[2], 1],
-        maxColor: [255 * OB[0], 255 * OB[1], 255 * OB[2], 1]
+        minColor: [255 * WW[0], 255 * WW[1], 255 * WW[2], 1],
+        maxColor: [255 * iW[0], 255 * iW[1], 255 * iW[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const OO = [0, 0, 0],
-      GO = {
+    const ii = [0, 0, 0],
+      Oi = {
         texture: "glint",
         mipmaps: !1,
-        CP: 24,
+        aZ: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -945,23 +945,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: OO,
-        dir2: OO,
-        blendMode: QB.f.OneOne
+        dir1: ii,
+        dir2: ii,
+        blendMode: NW.d.OneOne
       },
-      YO = {
-        ...GO,
-        colorGradients: BO([1, .88, .38], [1, .65, .15])
+      mi = {
+        ...Oi,
+        colorGradients: Wi([1, .88, .38], [1, .65, .15])
       },
-      DO = {
-        ...GO,
-        colorGradients: BO([.55, .95, 1], [.9, 1, 1])
+      Ei = {
+        ...Oi,
+        colorGradients: Wi([.55, .95, 1], [.9, 1, 1])
       },
-      QO = [.5, .5, .5],
-      oO = {
+      Ni = [.5, .5, .5],
+      Pi = {
         texture: "glint",
         mipmaps: !1,
-        CP: 24,
+        aZ: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -969,24 +969,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: BO([1, .12, .12], [1, .35, .2]),
-        blendMode: QB.f.OneOne
+        colorGradients: Wi([1, .12, .12], [1, .35, .2]),
+        blendMode: NW.d.OneOne
       };
-    class jO {
+    class Li {
       constructor() {
         this.drops = new Map
       }
-      nP(BB, OB) {
-        if ("overflowFlash" === OB.kind) {
-          const [GB, YB, DB] = OB.position, QB = BB.createParticles(oO, {
-            pos: [GB, YB, DB],
-            half: QO
+      yZ(WW, iW) {
+        if ("overflowFlash" === iW.kind) {
+          const [OW, mW, EW] = iW.position, NW = WW.createParticles(Pi, {
+            pos: [OW, mW, EW],
+            half: Ni
           });
-          return QB.emit(18), void QB.stop()
+          return NW.emit(18), void NW.stop()
         }
-        this.drops.has(OB.itemId) || this.drops.set(OB.itemId, {
-          owner: OB.owner,
-          cosmetic: OB.cosmetic,
+        this.drops.has(iW.itemId) || this.drops.set(iW.itemId, {
+          owner: iW.owner,
+          cosmetic: iW.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -995,168 +995,168 @@ export const modules = {
           particles: null
         })
       }
-      kP(BB) {
+      hZ(WW) {
         if (0 === this.drops.size) return;
-        const OB = performance.now(),
-          GB = BB.getCameraPosition();
-        let YB = 0;
-        for (const QB of this.drops.values()) null !== QB.particles && YB++;
-        for (const [QB, oB] of this.drops) {
-          const jB = BB.getPositionView(QB);
-          if (null === jB) {
-            var DB;
-            if (oB.seen || OB - oB.markedAt > 5e3) null !== oB.particles && YB--, null === (DB = oB.particles) || void 0 === DB || DB.stop(), this.drops.delete(QB);
+        const iW = performance.now(),
+          OW = WW.getCameraPosition();
+        let mW = 0;
+        for (const NW of this.drops.values()) null !== NW.particles && mW++;
+        for (const [NW, PW] of this.drops) {
+          const LW = WW.getPositionView(NW);
+          if (null === LW) {
+            var EW;
+            if (PW.seen || iW - PW.markedAt > 5e3) null !== PW.particles && mW--, null === (EW = PW.particles) || void 0 === EW || EW.stop(), this.drops.delete(NW);
             continue
           }
-          oB.cosmetic || !BB.isLocalPlayer(oB.owner) || oB.pickupDelayCleared || (BB.clearPickupDelay(QB), oB.pickupDelayCleared = !0);
-          const yB = oB.lastPosition,
-            JB = oB.seen && (jB[0] - yB[0]) ** 2 + (jB[1] - yB[1]) ** 2 + (jB[2] - yB[2]) ** 2 > 4e-4,
-            MB = (jB[0] - GB[0]) ** 2 + (jB[1] - GB[1]) ** 2 + (jB[2] - GB[2]) ** 2 < 2025;
-          oB.seen = !0, yB[0] = jB[0], yB[1] = jB[1], yB[2] = jB[2], JB && (oB.lastMovingAt = OB), null !== oB.particles && (!MB || OB - oB.lastMovingAt > 500) && (oB.particles.stop(), oB.particles = null, YB--), JB && MB && null === oB.particles && YB < 32 && (oB.particles = BB.createParticles(oB.cosmetic ? DO : YO, {
-            pos: jB
-          }), YB++), null !== oB.particles && (oB.particles.moveTo(jB), oB.particles.setEmitRate(JB ? 12 : 0)), !JB && null === oB.particles && OB - Math.max(oB.lastMovingAt, oB.markedAt) > 2e3 && this.drops.delete(QB)
+          PW.cosmetic || !WW.isLocalPlayer(PW.owner) || PW.pickupDelayCleared || (WW.clearPickupDelay(NW), PW.pickupDelayCleared = !0);
+          const cW = PW.lastPosition,
+            wW = PW.seen && (LW[0] - cW[0]) ** 2 + (LW[1] - cW[1]) ** 2 + (LW[2] - cW[2]) ** 2 > 4e-4,
+            tW = (LW[0] - OW[0]) ** 2 + (LW[1] - OW[1]) ** 2 + (LW[2] - OW[2]) ** 2 < 2025;
+          PW.seen = !0, cW[0] = LW[0], cW[1] = LW[1], cW[2] = LW[2], wW && (PW.lastMovingAt = iW), null !== PW.particles && (!tW || iW - PW.lastMovingAt > 500) && (PW.particles.stop(), PW.particles = null, mW--), wW && tW && null === PW.particles && mW < 32 && (PW.particles = WW.createParticles(PW.cosmetic ? Ei : mi, {
+            pos: LW
+          }), mW++), null !== PW.particles && (PW.particles.moveTo(LW), PW.particles.setEmitRate(wW ? 12 : 0)), !wW && null === PW.particles && iW - Math.max(PW.lastMovingAt, PW.markedAt) > 2e3 && this.drops.delete(NW)
         }
       }
       dispose() {
-        for (const OB of this.drops.values()) {
-          var BB;
-          null === (BB = OB.particles) || void 0 === BB || BB.stop()
+        for (const iW of this.drops.values()) {
+          var WW;
+          null === (WW = iW.particles) || void 0 === WW || WW.stop()
         }
         this.drops.clear()
       }
     }
-    const yO = new Set;
+    const ci = new Set;
 
-    function JO() {
-      let BB;
-      const OB = new jO;
+    function wi() {
+      let WW;
+      const iW = new Li;
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(iW) {
+          WW = iW
         },
-        onReceivedMessageFromServer(GB, YB) {
-          if (GB === sB) OB.nP(BB, YB);
-          else if (GB === xB) {
-            const BB = YB,
-              OB = `${BB.id}|${BB.value}`;
-            yO.has(OB) || (yO.add(OB), (0, tB.h)({
-              id: BB.id,
-              value: BB.value
+        onReceivedMessageFromServer(OW, mW) {
+          if (OW === zW) iW.yZ(WW, mW);
+          else if (OW === FW) {
+            const WW = mW,
+              iW = `${WW.id}|${WW.value}`;
+            ci.has(iW) || (ci.add(iW), (0, QW.e)({
+              id: WW.id,
+              value: WW.value
             }))
           }
         },
-        kP() {
-          OB.kP(BB)
+        hZ() {
+          iW.hZ(WW)
         },
         onClose() {
-          OB.dispose()
+          iW.dispose()
         }
       }
     }
 
-    function MO(BB, OB, GB, YB) {
+    function ti(WW, iW, OW, mW) {
       return {
-        cosmeticCompanions: HB(),
-        dialogue: AB(YB.localPlayerId),
-        fishing: NB(YB.localPlayerId),
-        furnaceSmoke: FB(),
-        ironChest: DB(),
-        localBlockBroken: (0, vB.c)(),
-        magnetLoot: JO()
+        cosmeticCompanions: aW(),
+        dialogue: MW(mW.localPlayerId),
+        fishing: UW(mW.localPlayerId),
+        furnaceSmoke: dW(),
+        ironChest: EW(),
+        localBlockBroken: (0, rW.b)(),
+        magnetLoot: wi()
       }
     }
 
-    function PO(BB, OB) {
-      for (const DB of [BB, ...null !== OB && void 0 !== OB ? OB : []]) try {
-        var GB;
-        null === DB || void 0 === DB || null === (GB = DB.onClose) || void 0 === GB || GB.call(DB)
-      } catch (YB) {
-        console.error("Error in client onClose callback", YB)
+    function Zi(WW, iW) {
+      for (const EW of [WW, ...null !== iW && void 0 !== iW ? iW : []]) try {
+        var OW;
+        null === EW || void 0 === EW || null === (OW = EW.onClose) || void 0 === OW || OW.call(EW)
+      } catch (mW) {
+        console.error("Error in client onClose callback", mW)
       }
     }
   },
-  9397: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      g: () => DB
+  9963: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => NW,
+      e: () => EW
     });
-    var YB = GB(25);
-    const DB = "localBlockBroken";
+    var mW = OW(27);
+    const EW = "localBlockBroken";
 
-    function QB() {
+    function NW() {
       return {
-        onPlayerChangeBlock(BB, OB, GB, QB, oB, jB) {
-          "Air" === jB && YB.o.tM(DB)
+        onPlayerChangeBlock(WW, iW, OW, NW, PW, LW) {
+          "Air" === LW && mW.l.iZ(EW)
         }
       }
     }
   },
-  39858: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB,
-      g: () => QB
+  40371: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      h: () => NW
     });
-    const YB = 1 / .6,
-      DB = {
+    const mW = 1 / .6,
+      EW = {
         kind: "smokePuff"
       };
-    class QB {
-      constructor(BB, OB, GB) {
-        this.style = BB, this.CP = OB, this.half = GB, this.particles = null, this.lastFrame = -1
+    class NW {
+      constructor(WW, iW, OW) {
+        this.style = WW, this.aZ = iW, this.half = OW, this.particles = null, this.lastFrame = -1
       }
-      emit(BB, OB, GB) {
-        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return GB !== this.lastFrame && (this.lastFrame = GB, this.particles || (this.particles = BB.createParticles(function(BB, OB) {
+      emit(WW, iW, OW) {
+        let NW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return OW !== this.lastFrame && (this.lastFrame = OW, this.particles || (this.particles = WW.createParticles(function(WW, iW) {
           const [
-            [GB, QB, oB],
-            [jB, yB, JB]
-          ] = BB.colours;
+            [OW, NW, PW],
+            [LW, cW, wW]
+          ] = WW.colours;
           return {
-            texture: BB.soft ? DB : "square_particle",
-            CP: OB,
-            minLifeTime: BB.life[0] / YB,
-            maxLifeTime: BB.life[1] / YB,
-            minEmitPower: BB.power[0] * YB,
-            maxEmitPower: BB.power[1] * YB,
-            minSize: BB.size[0],
-            maxSize: BB.size[1],
+            texture: WW.soft ? EW : "square_particle",
+            aZ: iW,
+            minLifeTime: WW.life[0] / mW,
+            maxLifeTime: WW.life[1] / mW,
+            minEmitPower: WW.power[0] * mW,
+            maxEmitPower: WW.power[1] * mW,
+            minSize: WW.size[0],
+            maxSize: WW.size[1],
             emitRate: 0,
-            gravity: [0, BB.lift * YB * YB, 0],
-            dir1: [-BB.spread, 1, -BB.spread],
-            dir2: [BB.spread, 1, BB.spread],
+            gravity: [0, WW.lift * mW * mW, 0],
+            dir1: [-WW.spread, 1, -WW.spread],
+            dir2: [WW.spread, 1, WW.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [GB, QB, oB, BB.alpha],
-              maxColor: [jB, yB, JB, BB.alpha]
+              minColor: [OW, NW, PW, WW.alpha],
+              maxColor: [LW, cW, wW, WW.alpha]
             }, {
               timeFraction: 1,
-              minColor: [GB, QB, oB, 0],
-              maxColor: [jB, yB, JB, 0]
+              minColor: [OW, NW, PW, 0],
+              maxColor: [LW, cW, wW, 0]
             }],
-            blendMode: BB.blendMode
+            blendMode: WW.blendMode
           }
-        }(this.style, this.CP), {
-          pos: OB,
+        }(this.style, this.aZ), {
+          pos: iW,
           half: this.half
-        })), this.particles.moveTo(OB, this.half), this.particles.emit(QB), !0)
+        })), this.particles.moveTo(iW, this.half), this.particles.emit(NW), !0)
       }
       dispose() {
-        var BB;
-        null === (BB = this.particles) || void 0 === BB || BB.stop(), this.particles = null
+        var WW;
+        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null
       }
     }
   },
-  5345: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB,
-      e: () => YB,
-      g: () => QB,
-      j: () => yB,
-      k: () => oB
+  5605: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => EW,
+      e: () => mW,
+      g: () => NW,
+      h: () => cW,
+      j: () => PW
     });
-    const YB = ["sine", "triangle", "square", "sawtooth"],
-      DB = 55,
-      QB = {
+    const mW = ["sine", "triangle", "square", "sawtooth"],
+      EW = 55,
+      NW = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1295,39 +1295,39 @@ export const modules = {
         }
       };
 
-    function oB(BB) {
-      return "string" !== typeof BB ? BB : Object.hasOwn(QB, BB) ? QB[BB] : null
+    function PW(WW) {
+      return "string" !== typeof WW ? WW : Object.hasOwn(NW, WW) ? NW[WW] : null
     }
 
-    function jB(BB, OB, GB) {
-      return Math.min(GB, Math.max(OB, BB))
+    function LW(WW, iW, OW) {
+      return Math.min(OW, Math.max(iW, WW))
     }
 
-    function yB(BB) {
-      const OB = jB(BB.durationMs, 10, 500),
-        GB = jB(BB.attackMs, 0, OB),
+    function cW(WW) {
+      const iW = LW(WW.durationMs, 10, 500),
+        OW = LW(WW.attackMs, 0, iW),
         {
-          intonation: DB
-        } = BB;
+          intonation: EW
+        } = WW;
       return {
-        waveform: YB.includes(BB.waveform) ? BB.waveform : "sine",
-        pitchHz: jB(BB.pitchHz, 20, 4e3),
-        glideSemitones: jB(BB.glideSemitones, -24, 24),
-        durationMs: OB,
-        attackMs: GB,
-        releaseMs: jB(BB.releaseMs, 0, OB - GB),
-        lowpassHz: null === BB.lowpassHz ? null : jB(BB.lowpassHz, 20, 2e4),
-        volume: jB(BB.volume, 0, 2),
+        waveform: mW.includes(WW.waveform) ? WW.waveform : "sine",
+        pitchHz: LW(WW.pitchHz, 20, 4e3),
+        glideSemitones: LW(WW.glideSemitones, -24, 24),
+        durationMs: iW,
+        attackMs: OW,
+        releaseMs: LW(WW.releaseMs, 0, iW - OW),
+        lowpassHz: null === WW.lowpassHz ? null : LW(WW.lowpassHz, 20, 2e4),
+        volume: LW(WW.volume, 0, 2),
         intonation: {
-          variationSemitones: jB(DB.variationSemitones, 0, 6),
-          declineSemitones: jB(DB.declineSemitones, 0, 12),
-          questionRiseSemitones: jB(DB.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: jB(DB.exclaimLiftSemitones, 0, 12)
+          variationSemitones: LW(EW.variationSemitones, 0, 6),
+          declineSemitones: LW(EW.declineSemitones, 0, 12),
+          questionRiseSemitones: LW(EW.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: LW(EW.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: jB(BB.syllableMs, 25, 200)
+        syllableMs: LW(WW.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

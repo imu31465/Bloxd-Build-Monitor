@@ -1,1043 +1,369 @@
-/*! For license information please see gw4e3a.298.16f1aa57.chunk.js.LICENSE.txt */
 export const id = 298;
 export const ids = [298];
 export const modules = {
-  41533: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      getAnalytics: () => bO,
-      getGoogleAnalyticsClientId: () => sO,
-      initializeAnalytics: () => CO,
-      isSupported: () => HO,
-      logEvent: () => GG,
-      setAnalyticsCollectionEnabled: () => BG,
-      setConsent: () => YG,
-      setCurrentScreen: () => vO,
-      setDefaultEventParameters: () => OG,
-      setUserId: () => xO,
-      setUserProperties: () => tO,
-      settings: () => eO
+  53769: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW
     });
-    var YB = GB(41513),
-      DB = GB(41525),
-      QB = GB(41520),
-      oB = GB(41515);
-    let jB, yB;
-    const JB = new WeakMap,
-      MB = new WeakMap,
-      PB = new WeakMap,
-      zB = new WeakMap,
-      lB = new WeakMap;
-    let pB = {
-      get(BB, OB, GB) {
-        if (BB instanceof IDBTransaction) {
-          if ("done" === OB) return MB.get(BB);
-          if ("objectStoreNames" === OB) return BB.objectStoreNames || PB.get(BB);
-          if ("store" === OB) return GB.objectStoreNames[1] ? void 0 : GB.objectStore(GB.objectStoreNames[0])
+    class mW {}
+    mW.AUTOSAMPLERSUFFIX = "Sampler", mW.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", mW.ALPHA_DISABLE = 0, mW.ALPHA_ADD = 1, mW.ALPHA_COMBINE = 2, mW.ALPHA_SUBTRACT = 3, mW.ALPHA_MULTIPLY = 4, mW.ALPHA_MAXIMIZED = 5, mW.ALPHA_ONEONE = 6, mW.ALPHA_PREMULTIPLIED = 7, mW.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, mW.ALPHA_INTERPOLATE = 9, mW.ALPHA_SCREENMODE = 10, mW.ALPHA_ONEONE_ONEONE = 11, mW.ALPHA_ALPHATOCOLOR = 12, mW.ALPHA_REVERSEONEMINUS = 13, mW.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, mW.ALPHA_ONEONE_ONEZERO = 15, mW.ALPHA_EXCLUSION = 16, mW.ALPHA_LAYER_ACCUMULATE = 17, mW.ALPHA_MIN = 18, mW.ALPHA_MAX = 19, mW.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, mW.ALPHA_REPLACE_COLOR = 21, mW.ALPHA_EQUATION_ADD = 0, mW.ALPHA_EQUATION_SUBSTRACT = 1, mW.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, mW.ALPHA_EQUATION_MAX = 3, mW.ALPHA_EQUATION_MIN = 4, mW.ALPHA_EQUATION_DARKEN = 5, mW.DELAYLOADSTATE_NONE = 0, mW.DELAYLOADSTATE_LOADED = 1, mW.DELAYLOADSTATE_LOADING = 2, mW.DELAYLOADSTATE_NOTLOADED = 4, mW.NEVER = 512, mW.ALWAYS = 519, mW.LESS = 513, mW.EQUAL = 514, mW.LEQUAL = 515, mW.GREATER = 516, mW.GEQUAL = 518, mW.NOTEQUAL = 517, mW.KEEP = 7680, mW.ZERO = 0, mW.REPLACE = 7681, mW.INCR = 7682, mW.DECR = 7683, mW.INVERT = 5386, mW.INCR_WRAP = 34055, mW.DECR_WRAP = 34056, mW.TEXTURE_CLAMP_ADDRESSMODE = 0, mW.TEXTURE_WRAP_ADDRESSMODE = 1, mW.TEXTURE_MIRROR_ADDRESSMODE = 2, mW.TEXTURE_REPETITION_NONE = 0, mW.TEXTURE_REPETITION_NOISE_BLEND = 1, mW.TEXTURE_REPETITION_HEX_TILING = 2, mW.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, mW.TEXTURE_REPETITION_VORONOI_BOMBING = 4, mW.TEXTURE_CREATIONFLAG_STORAGE = 1, mW.TEXTUREFORMAT_ALPHA = 0, mW.TEXTUREFORMAT_LUMINANCE = 1, mW.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, mW.TEXTUREFORMAT_RGB = 4, mW.TEXTUREFORMAT_RGBA = 5, mW.TEXTUREFORMAT_RED = 6, mW.TEXTUREFORMAT_R = 6, mW.TEXTUREFORMAT_R16_UNORM = 33322, mW.TEXTUREFORMAT_RG16_UNORM = 33324, mW.TEXTUREFORMAT_RGB16_UNORM = 32852, mW.TEXTUREFORMAT_RGBA16_UNORM = 32859, mW.TEXTUREFORMAT_R16_SNORM = 36760, mW.TEXTUREFORMAT_RG16_SNORM = 36761, mW.TEXTUREFORMAT_RGB16_SNORM = 36762, mW.TEXTUREFORMAT_RGBA16_SNORM = 36763, mW.TEXTUREFORMAT_RG = 7, mW.TEXTUREFORMAT_RED_INTEGER = 8, mW.TEXTUREFORMAT_R_INTEGER = 8, mW.TEXTUREFORMAT_RG_INTEGER = 9, mW.TEXTUREFORMAT_RGB_INTEGER = 10, mW.TEXTUREFORMAT_RGBA_INTEGER = 11, mW.TEXTUREFORMAT_BGRA = 12, mW.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, mW.TEXTUREFORMAT_DEPTH32_FLOAT = 14, mW.TEXTUREFORMAT_DEPTH16 = 15, mW.TEXTUREFORMAT_DEPTH24 = 16, mW.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, mW.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, mW.TEXTUREFORMAT_STENCIL8 = 19, mW.TEXTUREFORMAT_UNDEFINED = 4294967295, mW.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, mW.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, mW.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, mW.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, mW.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, mW.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, mW.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, mW.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, mW.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, mW.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, mW.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, mW.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, mW.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, mW.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, mW.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, mW.TEXTURETYPE_UNSIGNED_BYTE = 0, mW.TEXTURETYPE_UNSIGNED_INT = 0, mW.TEXTURETYPE_FLOAT = 1, mW.TEXTURETYPE_HALF_FLOAT = 2, mW.TEXTURETYPE_BYTE = 3, mW.TEXTURETYPE_SHORT = 4, mW.TEXTURETYPE_UNSIGNED_SHORT = 5, mW.TEXTURETYPE_INT = 6, mW.TEXTURETYPE_UNSIGNED_INTEGER = 7, mW.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, mW.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, mW.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, mW.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, mW.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, mW.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, mW.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, mW.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, mW.TEXTURETYPE_UNDEFINED = 16, mW.TEXTURE_2D = 3553, mW.TEXTURE_2D_ARRAY = 35866, mW.TEXTURE_CUBE_MAP = 34067, mW.TEXTURE_CUBE_MAP_ARRAY = 3735928559, mW.TEXTURE_3D = 32879, mW.TEXTURE_NEAREST_SAMPLINGMODE = 1, mW.TEXTURE_NEAREST_NEAREST = 1, mW.TEXTURE_BILINEAR_SAMPLINGMODE = 2, mW.TEXTURE_LINEAR_LINEAR = 2, mW.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, mW.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, mW.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, mW.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, mW.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, mW.TEXTURE_NEAREST_LINEAR = 7, mW.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, mW.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, mW.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, mW.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, mW.TEXTURE_LINEAR_NEAREST = 12, mW.TEXTURE_EXPLICIT_MODE = 0, mW.TEXTURE_SPHERICAL_MODE = 1, mW.TEXTURE_PLANAR_MODE = 2, mW.TEXTURE_CUBIC_MODE = 3, mW.TEXTURE_PROJECTION_MODE = 4, mW.TEXTURE_SKYBOX_MODE = 5, mW.TEXTURE_INVCUBIC_MODE = 6, mW.TEXTURE_EQUIRECTANGULAR_MODE = 7, mW.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, mW.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, mW.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, mW.TEXTURE_FILTERING_QUALITY_HIGH = 64, mW.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, mW.TEXTURE_FILTERING_QUALITY_LOW = 8, mW.SCALEMODE_FLOOR = 1, mW.SCALEMODE_NEAREST = 2, mW.SCALEMODE_CEILING = 3, mW.MATERIAL_TextureDirtyFlag = 1, mW.MATERIAL_LightDirtyFlag = 2, mW.MATERIAL_FresnelDirtyFlag = 4, mW.MATERIAL_AttributesDirtyFlag = 8, mW.MATERIAL_MiscDirtyFlag = 16, mW.MATERIAL_PrePassDirtyFlag = 32, mW.MATERIAL_ImageProcessingDirtyFlag = 64, mW.MATERIAL_AllDirtyFlag = 127, mW.MATERIAL_TriangleFillMode = 0, mW.MATERIAL_WireFrameFillMode = 1, mW.MATERIAL_PointFillMode = 2, mW.MATERIAL_PointListDrawMode = 3, mW.MATERIAL_LineListDrawMode = 4, mW.MATERIAL_LineLoopDrawMode = 5, mW.MATERIAL_LineStripDrawMode = 6, mW.MATERIAL_TriangleStripDrawMode = 7, mW.MATERIAL_TriangleFanDrawMode = 8, mW.MATERIAL_ClockWiseSideOrientation = 0, mW.MATERIAL_CounterClockWiseSideOrientation = 1, mW.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, mW.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, mW.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, mW.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, mW.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, mW.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, mW.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, mW.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, mW.ACTION_NothingTrigger = 0, mW.ACTION_OnPickTrigger = 1, mW.ACTION_OnLeftPickTrigger = 2, mW.ACTION_OnRightPickTrigger = 3, mW.ACTION_OnCenterPickTrigger = 4, mW.ACTION_OnPickDownTrigger = 5, mW.ACTION_OnDoublePickTrigger = 6, mW.ACTION_OnPickUpTrigger = 7, mW.ACTION_OnPickOutTrigger = 16, mW.ACTION_OnLongPressTrigger = 8, mW.ACTION_OnPointerOverTrigger = 9, mW.ACTION_OnPointerOutTrigger = 10, mW.ACTION_OnEveryFrameTrigger = 11, mW.ACTION_OnIntersectionEnterTrigger = 12, mW.ACTION_OnIntersectionExitTrigger = 13, mW.ACTION_OnKeyDownTrigger = 14, mW.ACTION_OnKeyUpTrigger = 15, mW.PARTICLES_BILLBOARDMODE_Y = 2, mW.PARTICLES_BILLBOARDMODE_ALL = 7, mW.PARTICLES_BILLBOARDMODE_STRETCHED = 8, mW.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, mW.MESHES_CULLINGSTRATEGY_STANDARD = 0, mW.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, mW.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, mW.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, mW.SCENELOADER_NO_LOGGING = 0, mW.SCENELOADER_MINIMAL_LOGGING = 1, mW.SCENELOADER_SUMMARY_LOGGING = 2, mW.SCENELOADER_DETAILED_LOGGING = 3, mW.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, mW.PREPASS_POSITION_TEXTURE_TYPE = 1, mW.PREPASS_VELOCITY_TEXTURE_TYPE = 2, mW.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, mW.PREPASS_COLOR_TEXTURE_TYPE = 4, mW.PREPASS_DEPTH_TEXTURE_TYPE = 5, mW.PREPASS_NORMAL_TEXTURE_TYPE = 6, mW.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, mW.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, mW.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, mW.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, mW.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, mW.PREPASS_ALBEDO_TEXTURE_TYPE = 12, mW.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, mW.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, mW.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, mW.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, mW.BUFFER_CREATIONFLAG_READ = 1, mW.BUFFER_CREATIONFLAG_WRITE = 2, mW.BUFFER_CREATIONFLAG_READWRITE = 3, mW.BUFFER_CREATIONFLAG_UNIFORM = 4, mW.BUFFER_CREATIONFLAG_VERTEX = 8, mW.BUFFER_CREATIONFLAG_INDEX = 16, mW.BUFFER_CREATIONFLAG_STORAGE = 32, mW.BUFFER_CREATIONFLAG_INDIRECT = 64, mW.RENDERPASS_MAIN = 0, mW.INPUT_ALT_KEY = 18, mW.INPUT_CTRL_KEY = 17, mW.INPUT_META_KEY1 = 91, mW.INPUT_META_KEY2 = 92, mW.INPUT_META_KEY3 = 93, mW.INPUT_SHIFT_KEY = 16, mW.SNAPSHOTRENDERING_STANDARD = 0, mW.SNAPSHOTRENDERING_FAST = 1, mW.PERSPECTIVE_CAMERA = 0, mW.ORTHOGRAPHIC_CAMERA = 1, mW.FOVMODE_VERTICAL_FIXED = 0, mW.FOVMODE_HORIZONTAL_FIXED = 1, mW.RIG_MODE_NONE = 0, mW.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, mW.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, mW.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, mW.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, mW.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, mW.RIG_MODE_VR = 20, mW.RIG_MODE_CUSTOM = 22, mW.MAX_SUPPORTED_UV_SETS = 6, mW.GL_ALPHA_EQUATION_ADD = 32774, mW.GL_ALPHA_EQUATION_MIN = 32775, mW.GL_ALPHA_EQUATION_MAX = 32776, mW.GL_ALPHA_EQUATION_SUBTRACT = 32778, mW.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, mW.GL_ALPHA_FUNCTION_SRC = 768, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, mW.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, mW.GL_ALPHA_FUNCTION_DST_ALPHA = 772, mW.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, mW.GL_ALPHA_FUNCTION_DST_COLOR = 774, mW.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, mW.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, mW.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, mW.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, mW.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, mW.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, mW.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, mW.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, mW.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, mW.SnippetUrl = "https://snippet.babylonjs.com", mW.FOGMODE_NONE = 0, mW.FOGMODE_EXP = 1, mW.FOGMODE_EXP2 = 2, mW.FOGMODE_LINEAR = 3, mW.BYTE = 5120, mW.UNSIGNED_BYTE = 5121, mW.SHORT = 5122, mW.UNSIGNED_SHORT = 5123, mW.INT = 5124, mW.UNSIGNED_INT = 5125, mW.FLOAT = 5126, mW.HALF_FLOAT = 5131, mW.PositionKind = "position", mW.NormalKind = "normal", mW.TangentKind = "tangent", mW.UVKind = "uv", mW.UV2Kind = "uv2", mW.UV3Kind = "uv3", mW.UV4Kind = "uv4", mW.UV5Kind = "uv5", mW.UV6Kind = "uv6", mW.ColorKind = "color", mW.ColorInstanceKind = "instanceColor", mW.MatricesIndicesKind = "matricesIndices", mW.MatricesWeightsKind = "matricesWeights", mW.MatricesIndicesExtraKind = "matricesIndicesExtra", mW.MatricesWeightsExtraKind = "matricesWeightsExtra", mW.ANIMATIONTYPE_FLOAT = 0, mW.ANIMATIONTYPE_VECTOR3 = 1, mW.ANIMATIONTYPE_QUATERNION = 2, mW.ANIMATIONTYPE_MATRIX = 3, mW.ANIMATIONTYPE_COLOR3 = 4, mW.ANIMATIONTYPE_COLOR4 = 7, mW.ANIMATIONTYPE_VECTOR2 = 5, mW.ANIMATIONTYPE_SIZE = 6, mW.ShadowMinZ = 0, mW.ShadowMaxZ = 1e4, mW.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, mW.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
+  },
+  53745: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => cW
+    });
+    var mW = OW(41516),
+      EW = OW(41519),
+      NW = OW(38241),
+      PW = OW(41773),
+      LW = OW(41739);
+    let cW = (() => {
+      var WW;
+      let iW, OW, cW, wW, tW = PW.b,
+        ZW = [];
+      return WW = class extends tW {
+        constructor() {
+          super(...arguments), this._position = (0, mW.g)(this, ZW), this._needProjectionMatrixCompute = !0, this._viewMatrix = NW.d.Identity(), this._projectionMatrix = NW.d.Identity()
         }
-        return NB(BB[OB])
-      },
-      set: (BB, OB, GB) => (BB[OB] = GB, !0),
-      has: (BB, OB) => BB instanceof IDBTransaction && ("done" === OB || "store" === OB) || OB in BB
-    };
-
-    function qB(BB) {
-      return BB !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (yB || (yB = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(BB) ? function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return BB.apply(RB(this), GB), NB(JB.get(this))
-      } : function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        return NB(BB.apply(RB(this), GB))
-      } : function(OB) {
-        for (var GB = arguments.length, YB = new Array(GB > 1 ? GB - 1 : 0), DB = 1; DB < GB; DB++) YB[DB - 1] = arguments[DB];
-        const QB = BB.call(RB(this), OB, ...YB);
-        return PB.set(QB, OB.sort ? OB.sort() : [OB]), NB(QB)
-      }
-    }
-
-    function ZB(BB) {
-      return "function" === typeof BB ? qB(BB) : (BB instanceof IDBTransaction && function(BB) {
-        if (MB.has(BB)) return;
-        const OB = new Promise(((OB, GB) => {
-          const YB = () => {
-              BB.removeEventListener("complete", DB), BB.removeEventListener("error", QB), BB.removeEventListener("abort", QB)
-            },
-            DB = () => {
-              OB(), YB()
-            },
-            QB = () => {
-              GB(BB.error || new DOMException("AbortError", "AbortError")), YB()
-            };
-          BB.addEventListener("complete", DB), BB.addEventListener("error", QB), BB.addEventListener("abort", QB)
-        }));
-        MB.set(BB, OB)
-      }(BB), OB = BB, (jB || (jB = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((BB => OB instanceof BB)) ? new Proxy(BB, pB) : BB);
-      var OB
-    }
-
-    function NB(BB) {
-      if (BB instanceof IDBRequest) return function(BB) {
-        const OB = new Promise(((OB, GB) => {
-          const YB = () => {
-              BB.removeEventListener("success", DB), BB.removeEventListener("error", QB)
-            },
-            DB = () => {
-              OB(NB(BB.result)), YB()
-            },
-            QB = () => {
-              GB(BB.error), YB()
-            };
-          BB.addEventListener("success", DB), BB.addEventListener("error", QB)
-        }));
-        return OB.then((OB => {
-          OB instanceof IDBCursor && JB.set(OB, BB)
-        })).catch((() => {})), lB.set(OB, BB), OB
-      }(BB);
-      if (zB.has(BB)) return zB.get(BB);
-      const OB = ZB(BB);
-      return OB !== BB && (zB.set(BB, OB), lB.set(OB, BB)), OB
-    }
-    const RB = BB => lB.get(BB);
-    const WB = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      AB = ["put", "add", "delete", "clear"],
-      VB = new Map;
-
-    function SB(BB, OB) {
-      if (!(BB instanceof IDBDatabase) || OB in BB || "string" !== typeof OB) return;
-      if (VB.get(OB)) return VB.get(OB);
-      const GB = OB.replace(/FromIndex$/, ""),
-        YB = OB !== GB,
-        DB = AB.includes(GB);
-      if (!(GB in (YB ? IDBIndex : IDBObjectStore).prototype) || !DB && !WB.includes(GB)) return;
-      const QB = async function(BB) {
-        const OB = this.transaction(BB, DB ? "readwrite" : "readonly");
-        let QB = OB.store;
-        for (var oB = arguments.length, jB = new Array(oB > 1 ? oB - 1 : 0), yB = 1; yB < oB; yB++) jB[yB - 1] = arguments[yB];
-        return YB && (QB = QB.index(jB.shift())), (await Promise.all([QB[GB](...jB), DB && OB.done]))[0]
-      };
-      return VB.set(OB, QB), QB
-    }
-    pB = (BB => ({
-      ...BB,
-      get: (OB, GB, YB) => SB(OB, GB) || BB.get(OB, GB, YB),
-      has: (OB, GB) => !!SB(OB, GB) || BB.has(OB, GB)
-    }))(pB);
-    const nB = "@firebase/installations",
-      UB = "0.6.4",
-      fB = 1e4,
-      kB = `w:${UB}`,
-      dB = "FIS_v2",
-      KB = 36e5,
-      uB = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      mB = new QB.f("installations", "Installations", uB);
-
-    function IB(BB) {
-      return BB instanceof QB.h && BB.code.includes("request-failed")
-    }
-
-    function FB(BB) {
-      let {
-        projectId: OB
-      } = BB;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${OB}/installations`
-    }
-
-    function iB(BB) {
-      return {
-        token: BB.token,
-        requestStatus: 2,
-        expiresIn: (OB = BB.expiresIn, Number(OB.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var OB
-    }
-    async function LB(BB, OB) {
-      const GB = (await OB.json()).error;
-      return mB.create("request-failed", {
-        requestName: BB,
-        serverCode: GB.code,
-        serverMessage: GB.message,
-        serverStatus: GB.status
-      })
-    }
-
-    function gB(BB) {
-      let {
-        apiKey: OB
-      } = BB;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": OB
-      })
-    }
-
-    function rB(BB, OB) {
-      let {
-        refreshToken: GB
-      } = OB;
-      const YB = gB(BB);
-      return YB.append("Authorization", function(BB) {
-        return `${dB} ${BB}`
-      }(GB)), YB
-    }
-    async function XB(BB) {
-      const OB = await BB();
-      return OB.status >= 500 && OB.status < 600 ? BB() : OB
-    }
-
-    function wB(BB) {
-      return new Promise((OB => {
-        setTimeout(OB, BB)
-      }))
-    }
-    const EB = /^[cdef][\w-]{21}$/;
-
-    function cB() {
-      try {
-        const BB = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(BB), BB[0] = 112 + BB[0] % 16;
-        const OB = function(BB) {
-          const OB = (GB = BB, btoa(String.fromCharCode(...GB)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var GB;
-          return OB.substr(0, 22)
-        }(BB);
-        return EB.test(OB) ? OB : ""
-      } catch (BB) {
-        return ""
-      }
-    }
-
-    function hB(BB) {
-      return `${BB.appName}!${BB.appId}`
-    }
-    const aB = new Map;
-
-    function eB(BB, OB) {
-      const GB = hB(BB);
-      TB(GB, OB),
-        function(BB, OB) {
-          const GB = CB();
-          GB && GB.postMessage({
-            key: BB,
-            fid: OB
-          });
-          HB()
-        }(GB, OB)
-    }
-
-    function TB(BB, OB) {
-      const GB = aB.get(BB);
-      if (GB)
-        for (const YB of GB) YB(OB)
-    }
-    let bB = null;
-
-    function CB() {
-      return !bB && "BroadcastChannel" in self && (bB = new BroadcastChannel("[Firebase] FID Change"), bB.onmessage = BB => {
-        TB(BB.data.key, BB.data.fid)
-      }), bB
-    }
-
-    function HB() {
-      0 === aB.size && bB && (bB.close(), bB = null)
-    }
-    const vB = "firebase-installations-store";
-    let sB = null;
-
-    function xB() {
-      return sB || (sB = function(BB, OB) {
-        let {
-          blocked: GB,
-          upgrade: YB,
-          blocking: DB,
-          terminated: QB
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const oB = indexedDB.open(BB, OB),
-          jB = NB(oB);
-        return YB && oB.addEventListener("upgradeneeded", (BB => {
-          YB(NB(oB.result), BB.oldVersion, BB.newVersion, NB(oB.transaction))
-        })), GB && oB.addEventListener("blocked", (() => GB())), jB.then((BB => {
-          QB && BB.addEventListener("close", (() => QB())), DB && BB.addEventListener("versionchange", (() => DB()))
-        })).catch((() => {})), jB
-      }("firebase-installations-database", 1, {
-        upgrade: (BB, OB) => {
-          if (0 === OB) BB.createObjectStore(vB)
+        _setPosition(WW) {
+          this._position = WW
         }
-      })), sB
-    }
-    async function tB(BB, OB) {
-      const GB = hB(BB),
-        YB = (await xB()).transaction(vB, "readwrite"),
-        DB = YB.objectStore(vB),
-        QB = await DB.get(GB);
-      return await DB.put(OB, GB), await YB.done, QB && QB.fid === OB.fid || eB(BB, OB.fid), OB
-    }
-    async function BO(BB) {
-      const OB = hB(BB),
-        GB = (await xB()).transaction(vB, "readwrite");
-      await GB.objectStore(vB).delete(OB), await GB.done
-    }
-    async function OO(BB, OB) {
-      const GB = hB(BB),
-        YB = (await xB()).transaction(vB, "readwrite"),
-        DB = YB.objectStore(vB),
-        QB = await DB.get(GB),
-        oB = OB(QB);
-      return void 0 === oB ? await DB.delete(GB) : await DB.put(oB, GB), await YB.done, !oB || QB && QB.fid === oB.fid || eB(BB, oB.fid), oB
-    }
-    async function GO(BB) {
-      let OB;
-      const GB = await OO(BB.appConfig, (GB => {
-        const YB = function(BB) {
-            const OB = BB || {
-              fid: cB(),
-              registrationStatus: 0
-            };
-            return QO(OB)
-          }(GB),
-          DB = function(BB, OB) {
-            if (0 === OB.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: OB,
-                  registrationPromise: Promise.reject(mB.create("app-offline"))
-                }
-              }
-              const GB = {
-                  fid: OB.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                YB = async function(BB, OB) {
-                  try {
-                    const GB = await async function(BB, OB) {
-                      let {
-                        appConfig: GB,
-                        heartbeatServiceProvider: YB
-                      } = BB, {
-                        fid: DB
-                      } = OB;
-                      const QB = FB(GB),
-                        oB = gB(GB),
-                        jB = YB.getImmediate({
-                          optional: !0
-                        });
-                      if (jB) {
-                        const BB = await jB.getHeartbeatsHeader();
-                        BB && oB.append("x-firebase-client", BB)
-                      }
-                      const yB = {
-                          fid: DB,
-                          authVersion: dB,
-                          appId: GB.appId,
-                          sdkVersion: kB
-                        },
-                        JB = {
-                          method: "POST",
-                          headers: oB,
-                          body: JSON.stringify(yB)
-                        },
-                        MB = await XB((() => fetch(QB, JB)));
-                      if (MB.ok) {
-                        const BB = await MB.json();
-                        return {
-                          fid: BB.fid || DB,
-                          registrationStatus: 2,
-                          refreshToken: BB.refreshToken,
-                          authToken: iB(BB.authToken)
-                        }
-                      }
-                      throw await LB("Create Installation", MB)
-                    }(BB, OB);
-                    return tB(BB.appConfig, GB)
-                  } catch (GB) {
-                    throw IB(GB) && 409 === GB.customData.serverCode ? await BO(BB.appConfig) : await tB(BB.appConfig, {
-                      fid: OB.fid,
-                      registrationStatus: 0
-                    }), GB
-                  }
-                }(BB, GB);
-              return {
-                installationEntry: GB,
-                registrationPromise: YB
-              }
-            }
-            return 1 === OB.registrationStatus ? {
-              installationEntry: OB,
-              registrationPromise: YO(BB)
-            } : {
-              installationEntry: OB
-            }
-          }(BB, YB);
-        return OB = DB.registrationPromise, DB.installationEntry
-      }));
-      return "" === GB.fid ? {
-        installationEntry: await OB
-      } : {
-        installationEntry: GB,
-        registrationPromise: OB
-      }
-    }
-    async function YO(BB) {
-      let OB = await DO(BB.appConfig);
-      for (; 1 === OB.registrationStatus;) await wB(100), OB = await DO(BB.appConfig);
-      if (0 === OB.registrationStatus) {
-        const {
-          installationEntry: OB,
-          registrationPromise: GB
-        } = await GO(BB);
-        return GB || OB
-      }
-      return OB
-    }
-
-    function DO(BB) {
-      return OO(BB, (BB => {
-        if (!BB) throw mB.create("installation-not-found");
-        return QO(BB)
-      }))
-    }
-
-    function QO(BB) {
-      return 1 === (OB = BB).registrationStatus && OB.registrationTime + fB < Date.now() ? {
-        fid: BB.fid,
-        registrationStatus: 0
-      } : BB;
-      var OB
-    }
-    async function oO(BB, OB) {
-      let {
-        appConfig: GB,
-        heartbeatServiceProvider: YB
-      } = BB;
-      const DB = function(BB, OB) {
-          let {
-            fid: GB
-          } = OB;
-          return `${FB(BB)}/${GB}/authTokens:generate`
-        }(GB, OB),
-        QB = rB(GB, OB),
-        oB = YB.getImmediate({
-          optional: !0
-        });
-      if (oB) {
-        const BB = await oB.getHeartbeatsHeader();
-        BB && QB.append("x-firebase-client", BB)
-      }
-      const jB = {
-          installation: {
-            sdkVersion: kB,
-            appId: GB.appId
-          }
-        },
-        yB = {
-          method: "POST",
-          headers: QB,
-          body: JSON.stringify(jB)
-        },
-        JB = await XB((() => fetch(DB, yB)));
-      if (JB.ok) {
-        return iB(await JB.json())
-      }
-      throw await LB("Generate Auth Token", JB)
-    }
-    async function jO(BB) {
-      let OB, GB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const YB = await OO(BB.appConfig, (YB => {
-        if (!JO(YB)) throw mB.create("not-registered");
-        const DB = YB.authToken;
-        if (!GB && function(BB) {
-            return 2 === BB.requestStatus && ! function(BB) {
-              const OB = Date.now();
-              return OB < BB.creationTime || BB.creationTime + BB.expiresIn < OB + KB
-            }(BB)
-          }(DB)) return YB;
-        if (1 === DB.requestStatus) return OB = async function(BB, OB) {
-          let GB = await yO(BB.appConfig);
-          for (; 1 === GB.authToken.requestStatus;) await wB(100), GB = await yO(BB.appConfig);
-          const YB = GB.authToken;
-          return 0 === YB.requestStatus ? jO(BB, OB) : YB
-        }(BB, GB), YB;
-        {
-          if (!navigator.onLine) throw mB.create("app-offline");
-          const GB = function(BB) {
-            const OB = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, BB), {
-              authToken: OB
-            })
-          }(YB);
-          return OB = async function(BB, OB) {
-            try {
-              const GB = await oO(BB, OB),
-                YB = Object.assign(Object.assign({}, OB), {
-                  authToken: GB
-                });
-              return await tB(BB.appConfig, YB), GB
-            } catch (GB) {
-              if (!IB(GB) || 401 !== GB.customData.serverCode && 404 !== GB.customData.serverCode) {
-                const GB = Object.assign(Object.assign({}, OB), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await tB(BB.appConfig, GB)
-              } else await BO(BB.appConfig);
-              throw GB
-            }
-          }(BB, GB), GB
+        get position() {
+          return this._position
         }
-      }));
-      return OB ? await OB : YB.authToken
-    }
-
-    function yO(BB) {
-      return OO(BB, (BB => {
-        if (!JO(BB)) throw mB.create("not-registered");
-        const OB = BB.authToken;
-        return 1 === (GB = OB).requestStatus && GB.requestTime + fB < Date.now() ? Object.assign(Object.assign({}, BB), {
-          authToken: {
-            requestStatus: 0
-          }
-        }) : BB;
-        var GB
-      }))
-    }
-
-    function JO(BB) {
-      return void 0 !== BB && 2 === BB.registrationStatus
-    }
-    async function MO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const GB = BB;
-      await async function(BB) {
-        const {
-          registrationPromise: OB
-        } = await GO(BB);
-        OB && await OB
-      }(GB);
-      return (await jO(GB, OB)).token
-    }
-
-    function PO(BB) {
-      return mB.create("missing-app-config-values", {
-        valueName: BB
-      })
-    }
-    const zO = "installations",
-      lO = BB => {
-        const OB = BB.getProvider("app").getImmediate(),
-          GB = function(BB) {
-            if (!BB || !BB.options) throw PO("App Configuration");
-            if (!BB.name) throw PO("App Name");
-            const OB = ["projectId", "apiKey", "appId"];
-            for (const GB of OB)
-              if (!BB.options[GB]) throw PO(GB);
-            return {
-              appName: BB.name,
-              projectId: BB.options.projectId,
-              apiKey: BB.options.apiKey,
-              appId: BB.options.appId
-            }
-          }(OB);
-        return {
-          app: OB,
-          appConfig: GB,
-          heartbeatServiceProvider: (0, YB.D)(OB, "heartbeat"),
-          _delete: () => Promise.resolve()
+        set position(WW) {
+          this._setPosition(WW)
         }
-      },
-      pO = BB => {
-        const OB = BB.getProvider("app").getImmediate(),
-          GB = (0, YB.D)(OB, zO).getImmediate();
-        return {
-          getId: () => async function(BB) {
-            const OB = BB,
-              {
-                installationEntry: GB,
-                registrationPromise: YB
-              } = await GO(OB);
-            return YB ? YB.catch(console.error) : jO(OB).catch(console.error), GB.fid
-          }(GB),
-          getToken: BB => MO(GB, BB)
+        _setDirection(WW) {
+          this._direction = WW
         }
-      };
-    (0, YB.F)(new oB.f(zO, lO, "PUBLIC")), (0, YB.F)(new oB.f("installations-internal", pO, "PRIVATE")), (0, YB.X)(nB, UB), (0, YB.X)(nB, UB, "esm2017");
-    const qO = "analytics",
-      ZO = "https://www.googletagmanager.com/gtag/js",
-      NO = new DB.g("@firebase/analytics"),
-      RO = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      WO = new QB.f("analytics", "Analytics", RO);
-
-    function AO(BB) {
-      if (!BB.startsWith(ZO)) {
-        const OB = WO.create("invalid-gtag-resource", {
-          gtagURL: BB
-        });
-        return NO.warn(OB.message), ""
-      }
-      return BB
-    }
-
-    function VO(BB) {
-      return Promise.all(BB.map((BB => BB.catch((BB => BB)))))
-    }
-
-    function SO(BB, OB) {
-      const GB = function(BB, OB) {
-          let GB;
-          return window.trustedTypes && (GB = window.trustedTypes.createPolicy(BB, OB)), GB
-        }("firebase-js-sdk-policy", {
-          createScriptURL: AO
-        }),
-        YB = document.createElement("script"),
-        DB = `${ZO}?l=${BB}&id=${OB}`;
-      YB.src = GB ? null === GB || void 0 === GB ? void 0 : GB.createScriptURL(DB) : DB, YB.async = !0, document.head.appendChild(YB)
-    }
-
-    function nO(BB, OB, GB, YB) {
-      return async function(DB) {
-        try {
-          for (var QB = arguments.length, oB = new Array(QB > 1 ? QB - 1 : 0), jB = 1; jB < QB; jB++) oB[jB - 1] = arguments[jB];
-          if ("event" === DB) {
-            const [YB, DB] = oB;
-            await async function(BB, OB, GB, YB, DB) {
-              try {
-                let QB = [];
-                if (DB && DB.send_to) {
-                  let BB = DB.send_to;
-                  Array.isArray(BB) || (BB = [BB]);
-                  const YB = await VO(GB);
-                  for (const GB of BB) {
-                    const BB = YB.find((BB => BB.measurementId === GB)),
-                      DB = BB && OB[BB.appId];
-                    if (!DB) {
-                      QB = [];
-                      break
-                    }
-                    QB.push(DB)
-                  }
-                }
-                0 === QB.length && (QB = Object.values(OB)), await Promise.all(QB), BB("event", YB, DB || {})
-              } catch (QB) {
-                NO.error(QB)
-              }
-            }(BB, OB, GB, YB, DB)
-          } else if ("config" === DB) {
-            const [DB, QB] = oB;
-            await async function(BB, OB, GB, YB, DB, QB) {
-              const oB = YB[DB];
-              try {
-                if (oB) await OB[oB];
-                else {
-                  const BB = (await VO(GB)).find((BB => BB.measurementId === DB));
-                  BB && await OB[BB.appId]
-                }
-              } catch (jB) {
-                NO.error(jB)
-              }
-              BB("config", DB, QB)
-            }(BB, OB, GB, YB, DB, QB)
-          } else if ("consent" === DB) {
-            const [OB] = oB;
-            BB("consent", "update", OB)
-          } else if ("get" === DB) {
-            const [OB, GB, YB] = oB;
-            BB("get", OB, GB, YB)
-          } else if ("set" === DB) {
-            const [OB] = oB;
-            BB("set", OB)
-          } else BB(DB, ...oB)
-        } catch (yB) {
-          NO.error(yB)
+        get direction() {
+          return this._direction
         }
+        set direction(WW) {
+          this._setDirection(WW)
+        }
+        get shadowMinZ() {
+          return this._shadowMinZ
+        }
+        set shadowMinZ(WW) {
+          this._shadowMinZ = WW, this.forceProjectionMatrixCompute()
+        }
+        get shadowMaxZ() {
+          return this._shadowMaxZ
+        }
+        set shadowMaxZ(WW) {
+          this._shadowMaxZ = WW, this.forceProjectionMatrixCompute()
+        }
+        computeTransformedInformation() {
+          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = NW.q.Zero()), NW.q.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = NW.q.Zero()), NW.q.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        }
+        getDepthScale() {
+          return 50
+        }
+        getShadowDirection(WW) {
+          return this.transformedDirection ? this.transformedDirection : this.direction
+        }
+        getAbsolutePosition() {
+          return this.transformedPosition ? this.transformedPosition : this.position
+        }
+        setDirectionToTarget(WW) {
+          return this.direction = NW.q.Normalize(WW.subtract(this.position)), this.direction
+        }
+        getRotation() {
+          this.direction.normalize();
+          const WW = NW.q.Cross(this.direction, LW.c.Y),
+            iW = NW.q.Cross(WW, this.direction);
+          return NW.q.RotationFromAxis(WW, iW, this.direction)
+        }
+        needCube() {
+          return !1
+        }
+        needProjectionMatrixCompute() {
+          return this._needProjectionMatrixCompute
+        }
+        forceProjectionMatrixCompute() {
+          this._needProjectionMatrixCompute = !0
+        }
+        _initCache() {
+          super._initCache(), this._cache.position = NW.q.Zero()
+        }
+        _isSynchronized() {
+          return !!this._cache.position.equals(this.position)
+        }
+        computeWorldMatrix(WW) {
+          return !WW && this.isSynchronized() ? (this._currentRenderId = this.bD().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.HJ(this.position), this._worldMatrix || (this._worldMatrix = NW.d.Identity()), NW.d.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        }
+        getDepthMinZ(WW) {
+          return void 0 !== this.shadowMinZ ? this.shadowMinZ : WW?.minZ || 0
+        }
+        getDepthMaxZ(WW) {
+          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : WW?.maxZ || 1e4
+        }
+        setShadowProjectionMatrix(WW, iW, OW) {
+          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(iW, OW, WW) : this._setDefaultShadowProjectionMatrix(WW, iW, OW), this
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+        }
+        getViewMatrix(WW) {
+          const iW = NW.l.fA[0];
+          let OW = this.position;
+          this.computeTransformedInformation() && (OW = this.transformedPosition), NW.q.NormalizeToRef(this.getShadowDirection(WW), iW), 1 === Math.abs(NW.q.Dot(iW, NW.q.Up())) && (iW.z = 1e-13);
+          const mW = NW.l.fA[1];
+          return OW.addToRef(iW, mW), NW.d.LookAtLHToRef(OW, mW, NW.q.Up(), this._viewMatrix), this._viewMatrix
+        }
+        getProjectionMatrix(WW, iW) {
+          return this.setShadowProjectionMatrix(this._projectionMatrix, WW ?? this._viewMatrix, iW ?? []), this._projectionMatrix
+        }
+      }, (() => {
+        const NW = "function" === typeof Symbol && Symbol.metadata ? Object.create(tW[Symbol.metadata] ?? null) : void 0;
+        iW = [(0, EW.K)()], OW = [(0, EW.K)()], cW = [(0, EW.M)()], wW = [(0, EW.M)()], (0, mW.e)(WW, null, iW, {
+          kind: "getter",
+          name: "position",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "position" in WW,
+            get: WW => WW.position
+          },
+          metadata: NW
+        }, null, ZW), (0, mW.e)(WW, null, OW, {
+          kind: "getter",
+          name: "direction",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "direction" in WW,
+            get: WW => WW.direction
+          },
+          metadata: NW
+        }, null, ZW), (0, mW.e)(WW, null, cW, {
+          kind: "getter",
+          name: "shadowMinZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "shadowMinZ" in WW,
+            get: WW => WW.shadowMinZ
+          },
+          metadata: NW
+        }, null, ZW), (0, mW.e)(WW, null, wW, {
+          kind: "getter",
+          name: "shadowMaxZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: WW => "shadowMaxZ" in WW,
+            get: WW => WW.shadowMaxZ
+          },
+          metadata: NW
+        }, null, ZW), NW && Object.defineProperty(WW, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: NW
+        })
+      })(), WW
+    })()
+  },
+  53763: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => EW
+    });
+    var mW = OW(41992);
+    class EW extends mW.h {
+      constructor(WW, iW, OW, EW, NW) {
+        let PW = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          LW = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          cW = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
+          wW = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          tW = arguments.length > 9 ? arguments[9] : void 0,
+          ZW = arguments.length > 10 ? arguments[10] : void 0,
+          xW = arguments.length > 11 ? arguments[11] : void 0,
+          lW = arguments.length > 12 ? arguments[12] : void 0;
+        super(null, NW, !PW, LW, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, tW), this.format = EW, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== wW || (cW = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== wW || (cW = 1), this._texture = this._engine.createRawTexture(WW, iW, OW, EW, PW, LW, cW, null, wW, tW ?? 0, ZW ?? !1, lW), this.wrapU = mW.h.CLAMP_ADDRESSMODE, this.wrapV = mW.h.CLAMP_ADDRESSMODE, this._waitingForData = !!xW && !WW)
+      }
+      update(WW) {
+        this.updateMipLevel(WW, 0)
+      }
+      updateMipLevel(WW, iW) {
+        this._getEngine().updateRawTexture(this._texture, WW, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, iW), this._waitingForData = !1
+      }
+      clone() {
+        if (!this._texture) return super.clone();
+        const WW = new EW(null, this.getSize().width, this.getSize().height, this.format, this.bD(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
+        return WW._texture = this._texture, this._texture.incrementReferences(), WW
+      }
+      isReady() {
+        return super.isReady() && !this._waitingForData
+      }
+      static CreateLuminanceTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 1, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateLuminanceAlphaTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 2, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateAlphaTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 0, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateRGBTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 4, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
+      }
+      static CreateRGBATexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 5, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
+      }
+      static CreateRGBAStorageTexture(WW, iW, OW, mW) {
+        return new EW(WW, iW, OW, 5, mW, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }
+      static CreateRTexture(WW, iW, OW, NW) {
+        let PW = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          LW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          cW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mW.h.TRILINEAR_SAMPLINGMODE;
+        return new EW(WW, iW, OW, 6, NW, PW, LW, cW, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
+      }
+      static CreateRStorageTexture(WW, iW, OW, NW) {
+        let PW = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          LW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          cW = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mW.h.TRILINEAR_SAMPLINGMODE;
+        return new EW(WW, iW, OW, 6, NW, PW, LW, cW, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
       }
     }
-    const UO = new class {
-      constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = BB, this.intervalMillis = OB
+  },
+  53801: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW.b
+    });
+    var mW = OW(41942);
+    (0, mW.d)()
+  },
+  53752: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW.c
+    });
+    var mW = OW(41969);
+    (0, mW.d)()
+  },
+  41969: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => xW,
+      d: () => bW
+    });
+    var mW, EW, NW = OW(38372),
+      PW = OW(41660),
+      LW = OW(41919),
+      cW = OW(41976),
+      wW = OW(41805),
+      tW = OW(41985),
+      ZW = OW(41415);
+    class xW extends LW.e {
+      _isShaderMaterial(WW) {
+        return !!WW && "ShaderMaterial" === WW.getClassName()
       }
-      getThrottleMetadata(BB) {
-        return this.throttleMetadata[BB]
-      }
-      setThrottleMetadata(BB, OB) {
-        this.throttleMetadata[BB] = OB
-      }
-      deleteThrottleMetadata(BB) {
-        delete this.throttleMetadata[BB]
-      }
-    };
-
-    function fO(BB) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": BB
-      })
-    }
-    async function kO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UO,
-        GB = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: YB,
-        apiKey: DB,
-        measurementId: QB
-      } = BB.options;
-      if (!YB) throw WO.create("no-app-id");
-      if (!DB) {
-        if (QB) return {
-          measurementId: QB,
-          appId: YB
+      constructor(WW) {
+        let iW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          mW = arguments.length > 5 ? arguments[5] : void 0,
+          EW = arguments.length > 6 ? arguments[6] : void 0,
+          LW = arguments.length > 7 ? arguments[7] : void 0;
+        super(WW, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, iW, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = mW, this.useVertexAlpha = EW, this.color = new NW.b(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, iW && (this.color = iW.color.clone(), this.alpha = iW.alpha, this.useVertexColor = iW.useVertexColor, this.useVertexAlpha = iW.useVertexAlpha), this.intersectionThreshold = .1;
+        const cW = {
+          attributes: [PW.k.PositionKind],
+          uniforms: ["world", "viewProjection"],
+          needAlphaBlending: !0,
+          defines: [],
+          useClipPlane: null,
+          shaderLanguage: 0
         };
-        throw WO.create("no-api-key")
-      }
-      const oB = OB.getThrottleMetadata(YB) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        jB = new KO;
-      return setTimeout((async () => {
-        jB.abort()
-      }), void 0 !== GB ? GB : 6e4), dO({
-        appId: YB,
-        apiKey: DB,
-        measurementId: QB
-      }, oB, jB, OB)
-    }
-    async function dO(BB, OB, GB) {
-      let {
-        throttleEndTimeMillis: YB,
-        backoffCount: DB
-      } = OB, oB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UO;
-      var jB;
-      const {
-        appId: yB,
-        measurementId: JB
-      } = BB;
-      try {
-        await
-        function(BB, OB) {
-          return new Promise(((GB, YB) => {
-            const DB = Math.max(OB - Date.now(), 0),
-              QB = setTimeout(GB, DB);
-            BB.addEventListener((() => {
-              clearTimeout(QB), YB(WO.create("fetch-throttle", {
-                throttleEndTimeMillis: OB
-              }))
-            }))
-          }))
-        }(GB, YB)
-      } catch (MB) {
-        if (JB) return NO.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${JB} provided in the "measurementId" field in the local Firebase config. [${null===MB||void 0===MB?void 0:MB.message}]`), {
-          appId: yB,
-          measurementId: JB
-        };
-        throw MB
-      }
-      try {
-        const OB = await async function(BB) {
-          var OB;
-          const {
-            appId: GB,
-            apiKey: YB
-          } = BB, DB = {
-            method: "GET",
-            headers: fO(YB)
-          }, QB = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", GB), oB = await fetch(QB, DB);
-          if (200 !== oB.status && 304 !== oB.status) {
-            let BB = "";
-            try {
-              const GB = await oB.json();
-              (null === (OB = GB.error) || void 0 === OB ? void 0 : OB.message) && (BB = GB.error.message)
-            } catch (jB) {}
-            throw WO.create("config-fetch-failed", {
-              httpStatus: oB.status,
-              responseMessage: BB
-            })
-          }
-          return oB.json()
-        }(BB);
-        return oB.deleteThrottleMetadata(yB), OB
-      } catch (MB) {
-        const OB = MB;
-        if (! function(BB) {
-            if (!(BB instanceof QB.h) || !BB.customData) return !1;
-            const OB = Number(BB.customData.httpStatus);
-            return 429 === OB || 500 === OB || 503 === OB || 504 === OB
-          }(OB)) {
-          if (oB.deleteThrottleMetadata(yB), JB) return NO.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${JB} provided in the "measurementId" field in the local Firebase config. [${null===OB||void 0===OB?void 0:OB.message}]`), {
-            appId: yB,
-            measurementId: JB
+        if (this.useVertexAlpha ? cW.defines.push("#define VERTEXALPHA") : cW.needAlphaBlending = !1, this.useVertexColor ? (cW.defines.push("#define VERTEXCOLOR"), cW.attributes.push(PW.k.ColorKind)) : (cW.uniforms.push("color"), this._color4 = new NW.d), LW) this.material = LW;
+        else {
+          this.bD().VA().isWebGPU && !xW.ForceGLSL && (this._shaderLanguage = 1), cW.shaderLanguage = this._shaderLanguage, cW.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([OW.e(662).then((() => OW(54717))), OW.e(668).then((() => OW(54719)))]) : await Promise.all([OW.e(644).then((() => OW(54721))), OW.e(650).then((() => OW(54726)))])
           };
-          throw MB
+          const WW = new tW.o("colorShader", this.bD(), "color", cW, !1);
+          WW.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(WW)
         }
-        const YB = 503 === Number(null === (jB = null === OB || void 0 === OB ? void 0 : OB.customData) || void 0 === jB ? void 0 : jB.httpStatus) ? (0, QB.t)(DB, oB.intervalMillis, 30) : (0, QB.t)(DB, oB.intervalMillis),
-          PB = {
-            throttleEndTimeMillis: Date.now() + YB,
-            backoffCount: DB + 1
-          };
-        return oB.setThrottleMetadata(yB, PB), NO.debug(`Calling attemptFetch again in ${YB} millis`), dO(BB, PB, GB, oB)
       }
-    }
-    class KO {
-      constructor() {
-        this.listeners = []
+      getClassName() {
+        return "LinesMesh"
       }
-      addEventListener(BB) {
-        this.listeners.push(BB)
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
       }
-      abort() {
-        this.listeners.forEach((BB => BB()))
+      set material(WW) {
+        const iW = this.material;
+        if (iW === WW) return;
+        const OW = iW && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(WW), OW && iW?.dispose()
       }
-    }
-    let uO, mO;
-
-    function IO(BB) {
-      mO = BB
-    }
-
-    function FO(BB) {
-      uO = BB
-    }
-    async function iO(BB, OB, GB, YB, DB, oB, jB) {
-      var yB;
-      const JB = kO(BB);
-      JB.then((OB => {
-        GB[OB.measurementId] = OB.appId, BB.options.measurementId && OB.measurementId !== BB.options.measurementId && NO.warn(`The measurement ID in the local Firebase config (${BB.options.measurementId}) does not match the measurement ID fetched from the server (${OB.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((BB => NO.error(BB))), OB.push(JB);
-      const MB = async function() {
-        if (!(0, QB.S)()) return NO.warn(WO.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, QB.ib)()
-        } catch (BB) {
-          return NO.warn(WO.create("indexeddb-unavailable", {
-            errorInfo: null === BB || void 0 === BB ? void 0 : BB.toString()
-          }).message), !1
-        }
-        return !0
-      }().then((BB => BB ? YB.getId() : void 0)), [PB, zB] = await Promise.all([JB, MB]);
-      (function(BB) {
-        const OB = window.document.getElementsByTagName("script");
-        for (const GB of Object.values(OB))
-          if (GB.src && GB.src.includes(ZO) && GB.src.includes(BB)) return GB;
-        return null
-      })(oB) || SO(oB, PB.measurementId), mO && (DB("consent", "default", mO), IO(void 0)), DB("js", new Date);
-      const lB = null !== (yB = null === jB || void 0 === jB ? void 0 : jB.config) && void 0 !== yB ? yB : {};
-      return lB.origin = "firebase", lB.update = !0, null != zB && (lB.firebase_id = zB), DB("config", PB.measurementId, lB), uO && (DB("set", uO), FO(void 0)), PB.measurementId
-    }
-    class LO {
-      constructor(BB) {
-        this.app = BB
+      _setInternalMaterial(WW) {
+        this._setMaterial(WW), this.material && (this.material.fillMode = wW.d.LineListDrawMode, this.material.disableLighting = !0)
       }
-      _delete() {
-        return delete gO[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let gO = {},
-      rO = [];
-    const XO = {};
-    let wO, EO, cO = "dataLayer",
-      hO = "gtag",
-      aO = !1;
-
-    function eO(BB) {
-      if (aO) throw WO.create("already-initialized");
-      BB.dataLayerName && (cO = BB.dataLayerName), BB.gtagName && (hO = BB.gtagName)
-    }
-
-    function TO(BB, OB, GB) {
-      ! function() {
-        const BB = [];
-        if ((0, QB.I)() && BB.push("This is a browser extension environment."), (0, QB.l)() || BB.push("Cookies are not available."), BB.length > 0) {
-          const OB = BB.map(((BB, OB) => `(${OB+1}) ${BB}`)).join(" "),
-            GB = WO.create("invalid-analytics-context", {
-              errorInfo: OB
-            });
-          NO.warn(GB.message)
-        }
-      }();
-      const YB = BB.options.appId;
-      if (!YB) throw WO.create("no-app-id");
-      if (!BB.options.apiKey) {
-        if (!BB.options.measurementId) throw WO.create("no-api-key");
-        NO.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${BB.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != gO[YB]) throw WO.create("already-exists", {
-        id: YB
-      });
-      if (!aO) {
-        ! function(BB) {
-          let OB = [];
-          Array.isArray(window[BB]) ? OB = window[BB] : window[BB] = OB
-        }(cO);
-        const {
-          wrappedGtag: BB,
-          gtagCore: OB
-        } = function(BB, OB, GB, YB, DB) {
-          let QB = function() {
-            for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-            window[YB].push(arguments)
-          };
-          return window[DB] && "function" === typeof window[DB] && (QB = window[DB]), window[DB] = nO(QB, BB, OB, GB), {
-            gtagCore: QB,
-            wrappedGtag: window[DB]
-          }
-        }(gO, rO, XO, cO, hO);
-        EO = BB, wO = OB, aO = !0
-      }
-      gO[YB] = iO(BB, rO, XO, OB, wO, cO, GB);
-      return new LO(BB)
-    }
-
-    function bO() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, YB.S)();
-      BB = (0, QB.E)(BB);
-      const OB = (0, YB.D)(BB, qO);
-      return OB.isInitialized() ? OB.getImmediate() : CO(BB)
-    }
-
-    function CO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const GB = (0, YB.D)(BB, qO);
-      if (GB.isInitialized()) {
-        const BB = GB.getImmediate();
-        if ((0, QB.v)(OB, GB.getOptions())) return BB;
-        throw WO.create("already-initialized")
-      }
-      return GB.initialize({
-        options: OB
-      })
-    }
-    async function HO() {
-      if ((0, QB.I)()) return !1;
-      if (!(0, QB.l)()) return !1;
-      if (!(0, QB.S)()) return !1;
-      try {
-        return await (0, QB.ib)()
-      } catch (BB) {
+      get checkCollisions() {
         return !1
       }
-    }
-
-    function vO(BB, OB, GB) {
-      BB = (0, QB.E)(BB), async function(BB, OB, GB, YB) {
-        if (YB && YB.global) return BB("set", {
-          screen_name: GB
-        }), Promise.resolve();
-        BB("config", await OB, {
-          update: !0,
-          screen_name: GB
-        })
-      }(EO, gO[BB.app.options.appId], OB, GB).catch((BB => NO.error(BB)))
-    }
-    async function sO(BB) {
-      return BB = (0, QB.E)(BB), async function(BB, OB) {
-        const GB = await OB;
-        return new Promise(((OB, YB) => {
-          BB("get", GB, "client_id", (BB => {
-            BB || YB(WO.create("no-client-id")), OB(BB)
-          }))
-        }))
-      }(EO, gO[BB.app.options.appId])
-    }
-
-    function xO(BB, OB, GB) {
-      BB = (0, QB.E)(BB), async function(BB, OB, GB, YB) {
-        if (YB && YB.global) return BB("set", {
-          user_id: GB
-        }), Promise.resolve();
-        BB("config", await OB, {
-          update: !0,
-          user_id: GB
-        })
-      }(EO, gO[BB.app.options.appId], OB, GB).catch((BB => NO.error(BB)))
-    }
-
-    function tO(BB, OB, GB) {
-      BB = (0, QB.E)(BB), async function(BB, OB, GB, YB) {
-        if (YB && YB.global) {
-          const OB = {};
-          for (const BB of Object.keys(GB)) OB[`user_properties.${BB}`] = GB[BB];
-          return BB("set", OB), Promise.resolve()
+      set checkCollisions(WW) {}
+      _bind(WW, iW) {
+        if (!this._geometry) return this;
+        const OW = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(iW, OW) : this._geometry._bind(iW, OW, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+          const {
+            r: WW,
+            g: iW,
+            b: OW
+          } = this.color;
+          this._color4.set(WW, iW, OW, this.alpha), this.material.setColor4("color", this._color4)
         }
-        BB("config", await OB, {
-          update: !0,
-          user_properties: GB
-        })
-      }(EO, gO[BB.app.options.appId], OB, GB).catch((BB => NO.error(BB)))
-    }
-
-    function BG(BB, OB) {
-      BB = (0, QB.E)(BB), async function(BB, OB) {
-        const GB = await BB;
-        window[`ga-disable-${GB}`] = !OB
-      }(gO[BB.app.options.appId], OB).catch((BB => NO.error(BB)))
-    }
-
-    function OG(BB) {
-      EO ? EO("set", BB) : FO(BB)
-    }
-
-    function GG(BB, OB, GB, YB) {
-      BB = (0, QB.E)(BB), async function(BB, OB, GB, YB, DB) {
-        if (DB && DB.global) BB("event", GB, YB);
-        else {
-          const DB = await OB;
-          BB("event", GB, Object.assign(Object.assign({}, YB), {
-            send_to: DB
-          }))
-        }
-      }(EO, gO[BB.app.options.appId], OB, GB, YB).catch((BB => NO.error(BB)))
-    }
-
-    function YG(BB) {
-      EO ? EO("consent", "update", BB) : IO(BB)
-    }
-    const DG = "@firebase/analytics",
-      QG = "0.10.0";
-    (0, YB.F)(new oB.f(qO, ((BB, OB) => {
-      let {
-        options: GB
-      } = OB;
-      return TO(BB.getProvider("app").getImmediate(), BB.getProvider("installations-internal").getImmediate(), GB)
-    }), "PUBLIC")), (0, YB.F)(new oB.f("analytics-internal", (function(BB) {
-      try {
-        const OB = BB.getProvider(qO).getImmediate();
-        return {
-          logEvent: (BB, GB, YB) => GG(OB, BB, GB, YB)
-        }
-      } catch (OB) {
-        throw WO.create("interop-component-reg-failed", {
-          reason: OB
-        })
+        return this
       }
-    }), "PRIVATE")), (0, YB.X)(DG, QG), (0, YB.X)(DG, QG, "esm2017")
+      _draw(WW, iW, OW) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        const mW = this.bD().VA();
+        return this._unIndexed ? mW.drawArraysType(wW.d.LineListDrawMode, WW.verticesStart, WW.verticesCount, OW) : mW.drawElementsType(wW.d.LineListDrawMode, WW.indexStart, WW.indexCount, OW), this
+      }
+      dispose(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || iW) && this.material?.dispose(!1, !1, !0), super.dispose(WW)
+      }
+      clone(WW) {
+        let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          OW = arguments.length > 2 ? arguments[2] : void 0;
+        if (iW && void 0 === iW._addToSceneRootNodes) {
+          const OW = iW;
+          return OW.source = this, new xW(WW, this.bD(), OW.parent, OW.source, OW.doNotCloneChildren)
+        }
+        return new xW(WW, this.bD(), iW, this, OW)
+      }
+      createInstance(WW) {
+        const iW = new lW(WW, this);
+        if (this.bV) {
+          iW.bV = {};
+          for (const WW in this.bV) iW.bV[WW] = this.bV[WW]
+        }
+        return iW
+      }
+      serialize(WW) {
+        super.serialize(WW), WW.color = this.color.wEW(), WW.alpha = this.alpha
+      }
+      static Parse(WW, iW) {
+        const OW = new xW(WW.name, iW);
+        return OW.color = NW.b.FromArray(WW.color), OW.alpha = WW.alpha, OW
+      }
+    }
+    xW.ForceGLSL = !1;
+    class lW extends cW.e {
+      constructor(WW, iW) {
+        super(WW, iW), this.intersectionThreshold = iW.intersectionThreshold
+      }
+      getClassName() {
+        return "InstancedLinesMesh"
+      }
+    }
+    let AW = !1;
+
+    function bW() {
+      AW || (AW = !0, LW.e._LinesMeshParser = (WW, iW) => xW.Parse(WW, iW))
+    }(mW = xW.prototype).enableEdgesRendering ?? (mW.enableEdgesRendering = (0, ZW.k)("LinesMesh", "enableEdgesRendering")), (EW = lW.prototype).enableEdgesRendering ?? (EW.enableEdgesRendering = (0, ZW.k)("InstancedLinesMesh", "enableEdgesRendering"))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

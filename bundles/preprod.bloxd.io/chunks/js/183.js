@@ -1,46 +1,67 @@
 export const id = 183;
 export const ids = [183];
 export const modules = {
-  9671: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      pageBody: () => YB
+  9997: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW
     });
-    const YB = {
-      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
-      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
-      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
-      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
-      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
-      faq: [{
-        question: "What is Bloxd Peaceful?",
-        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
-      }, {
-        question: "Can you die in Bloxd Peaceful?",
-        answer: "No. There's no health bar, so mobs and other players can't hurt you."
-      }, {
-        question: "Is there PvP in Bloxd Peaceful?",
-        answer: "There isn't. Players can't attack each other in Peaceful."
-      }, {
-        question: "Are there mobs in Bloxd Peaceful?",
-        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
-      }, {
-        question: "What's the difference between Peaceful and Survival in Bloxd?",
-        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
-      }, {
-        question: "Is Bloxd Peaceful good for beginners?",
-        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
-      }, {
-        question: "Can I play Bloxd Peaceful with friends?",
-        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
-      }, {
-        question: "How do I keep my builds safe in Peaceful?",
-        answer: "Blocks near spawn reset every few hours, so build outside that area (a message shows when you cross its edge). Then put down a Protector and other players won't be able to break your builds or open your chests."
-      }, {
-        question: "How do I save my progress in Bloxd Peaceful?",
-        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
-      }]
+    var mW = OW(10006),
+      EW = OW(643),
+      NW = OW(136);
+
+    function PW(WW) {
+      var iW, OW;
+      if ((0, EW.K)(WW)) return !0;
+      const PW = null !== (iW = null === (OW = NW.siteUsedData[NW.siteUsed]) || void 0 === OW ? void 0 : OW.adConfig.showRewardedAds) && void 0 !== iW && iW;
+      for (const EW in WW) {
+        const iW = WW[EW];
+        if (null !== iW && void 0 !== iW && iW.items)
+          for (const WW in iW.items)
+            if ((0, mW.g)(iW.items[WW], PW)) return !1
+      }
+      return !0
     }
+  },
+  64355: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      getClientGameLeaderboardKey: () => mW.u,
+      getClientGameMapKey: () => mW.x,
+      shopIsEmpty: () => EW.b
+    });
+    var mW = OW(3361),
+      EW = OW(9997)
+  },
+  10006: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      return !WW.hidden && (iW || !WW.isRewardedAd)
+    }
+
+    function EW(WW) {
+      return "object" === typeof WW ? WW.option : WW
+    }
+
+    function NW(WW, iW) {
+      var OW;
+      if ("dropdown" === (null === (OW = WW.userInput) || void 0 === OW ? void 0 : OW.type) && "object" === typeof WW.userInput.dropdownOptions[0]) {
+        for (const OW of WW.userInput.dropdownOptions)
+          if (EW(OW) === iW) return "object" === typeof OW ? OW.cost : WW.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", WW, "input:", iW)
+      }
+      return WW.cost
+    }
+
+    function PW(WW, iW, OW) {
+      var mW;
+      const EW = null !== (mW = OW.excludedPlayers) && void 0 !== mW ? mW : [iW];
+      return WW.filter((WW => !EW.includes(WW)))
+    }
+    OW.d(iW, {
+      b: () => NW,
+      c: () => EW,
+      d: () => PW,
+      g: () => mW
+    })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,40 +1,40 @@
 export const id = 196;
 export const ids = [196];
 export const modules = {
-  9744: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      pageBody: () => YB
+  10265: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const YB = {
-      whatIs: ["Capture the points, hold the line, win the fight. Bloxd Frontline is a 12v12 FPS where Red and Blue go head to head in fast domination rounds. It's free to play online and there's nothing to install. Gear up at the Armorer, pick one of 17 kits, jump in a vehicle and push the line with your team. You can hop in on your own, but it's better with a full squad."],
-      howToPlay: ["You'll join Red or Blue and spawn at your base. Head to the Armorer to choose a kit, then get out there and capture the lettered points on the map. Every point you hold earns your team tickets. First team to 100 tickets takes the round. There's a timer as well, so don't let up. If you go down, you're back in the fight after 5 seconds.", "Kills, captures and wins all earn gold. You can spend it on a mystery kit draw, or at the Quartermaster next to your Armorer for Frag Grenades, healing potions and buffs that last the whole round. Vehicles spawn at each base and around the map. They're great for pushing forward fast, but enemy guns and explosives can wreck them. Your base has a shield over it that pushes enemies out, so there's always somewhere safe to regroup."],
-      features: ["Domination Rounds: Capture Points and Race to 100 Tickets", "17 Unique Kits, Including Combat Medic, Ninja, Juggernaut, Wrecker and Marksman", "Vehicles to Drive into Battle", "Quartermaster Buffs: Fleet Footed, Rapid Deploy, Fast Hands and Sure Grip", "Shielded Team Bases and Auto-Balanced Teams", "Ranks from Bronze to Moonstone, Plus Tracked Stats", "Party Up and Play with a Full Squad"],
-      tips: ["Capture points together and hold them so your tickets keep climbing", "Try a few kits at the Armorer until you find one that fits how you play", "Play Combat Medic to keep your team in the fight", "Buy buffs early. They stop selling in the last minute of a round", "Captures trigger Rally windows that cut your team's respawn time", "Use the Ninja's smoke grenades to cover a push onto a point", "Grab a vehicle when you need to reach a point on the other side of the map"],
-      similarGames: ["shooting", "pirates", "bedwars", "skywars"],
+    const mW = {
+      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
+      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
+      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
+      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build away from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
+      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Frontline?",
-        answer: "A 12v12 team shooter on Bloxd.io. You capture points, pick kits and drive vehicles to win domination rounds."
+        question: "What is Bloxd Creative?",
+        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
       }, {
-        question: "How does a team win in Bloxd Frontline?",
-        answer: "By holding points to earn tickets. The first team to reach 100 tickets wins the round."
+        question: "Can you fly in Bloxd Creative?",
+        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
       }, {
-        question: "What do kits do in Bloxd Frontline?",
-        answer: "They decide your weapons and abilities. Combat Medic brings strong healing, the Ninja has smoke grenades and the Juggernaut carries a belt-fed GPMG."
+        question: "What is Superflat in Bloxd?",
+        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
       }, {
-        question: "How do I unlock new kits?",
-        answer: "Spend gold on a mystery kit draw. Draw one you already own and you'll get gems instead, which you can use to buy a specific locked kit."
+        question: "How do I make a free build server in Bloxd?",
+        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
       }, {
-        question: "Does Bloxd Frontline have vehicles?",
-        answer: "Yep. They spawn at each base and around the map. Guns and explosives can destroy them, so drive carefully."
+        question: "Can you use TNT in Bloxd Creative?",
+        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
       }, {
-        question: "How is Frontline different from Cube Warfare?",
-        answer: "Frontline is 12v12 objective play with points, kits and vehicles. Cube Warfare is quicker Free-For-All, Team Deathmatch and Gun Game fights where killstreaks matter most."
+        question: "Why did my build disappear in Bloxd Creative?",
+        answer: "In public lobbies, blocks near spawn reset every few hours; a message shows when you cross the edge of that area. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets unless its owner turns on Enable Spawn Reset."
       }, {
-        question: "Can I squad up with friends in Bloxd Frontline?",
-        answer: "Yes. Party up with your friends and you'll play together as a squad."
+        question: "What's the difference between Creative and Plots?",
+        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

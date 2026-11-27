@@ -1,116 +1,116 @@
-export const id = 31;
-export const ids = [31];
+export const id = 32;
+export const ids = [32];
 export const modules = {
-  40322: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => jB
+  40900: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => LW
     });
-    var YB = GB(34815);
-    const DB = 1e3 / 3;
+    var mW = OW(35243);
+    const EW = 1e3 / 3;
 
-    function QB(BB, OB, GB) {
-      if ("parenthetical-seconds" === OB) return ` (${BB}s)`;
-      const YB = `${Math.floor(BB/60)}:${(BB%60).toString().padStart(2,"0")}`;
-      return GB ? `${GB}${YB}` : YB
+    function NW(WW, iW, OW) {
+      if ("parenthetical-seconds" === iW) return ` (${WW}s)`;
+      const mW = `${Math.floor(WW/60)}:${(WW%60).toString().padStart(2,"0")}`;
+      return OW ? `${OW}${mW}` : mW
     }
 
-    function oB(BB, OB, GB, DB, QB) {
-      var oB;
-      const jB = {
-        ...DB.baseNametag
+    function PW(WW, iW, OW, EW, NW) {
+      var PW;
+      const LW = {
+        ...EW.baseNametag
       };
-      jB.content = [...null !== (oB = DB.baseNametag.content) && void 0 !== oB ? oB : [], {
+      LW.content = [...null !== (PW = EW.baseNametag.content) && void 0 !== PW ? PW : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,YB.d)(QB)}`
-      }], BB.setOtherEntitySetting(OB, GB, "nameTagInfo", jB)
+        str: `: ${(0,mW.e)(NW)}`
+      }], WW.setOtherEntitySetting(iW, OW, "nameTagInfo", LW)
     }
-    const jB = function(BB, OB, GB, YB) {
-      let jB, {
-        localPlayerId: yB
-      } = YB;
-      const JB = new Map,
-        MB = new Map;
-      let PB = 0,
-        zB = 0;
+    const LW = function(WW, iW, OW, mW) {
+      let LW, {
+        localPlayerId: cW
+      } = mW;
+      const wW = new Map,
+        tW = new Map;
+      let ZW = 0,
+        xW = 0;
       return {
-        onCreate: BB => {
-          jB = BB
+        onCreate: WW => {
+          LW = WW
         },
-        kP: BB => {
-          const OB = Date.now();
-          for (const [YB, DB] of JB) {
-            const BB = Math.floor((OB - DB.startTime) / 1e3),
-              oB = Math.max(0, DB.remainingSeconds - BB);
-            if (oB === DB.lastRenderedSecond) continue;
-            DB.lastRenderedSecond = oB;
-            const MB = {
-                str: QB(oB, DB.format, DB.prefix),
-                style: DB.style
+        hZ: WW => {
+          const iW = Date.now();
+          for (const [mW, EW] of wW) {
+            const WW = Math.floor((iW - EW.startTime) / 1e3),
+              PW = Math.max(0, EW.remainingSeconds - WW);
+            if (PW === EW.lastRenderedSecond) continue;
+            EW.lastRenderedSecond = PW;
+            const tW = {
+                str: NW(PW, EW.format, EW.prefix),
+                style: EW.style
               },
-              PB = {
-                ...DB.baseNametag
+              ZW = {
+                ...EW.baseNametag
               };
-            var GB;
-            if ("content" === DB.location) PB.content = [...null !== (GB = DB.baseNametag.content) && void 0 !== GB ? GB : [], MB];
-            else PB.subtitle = [MB];
-            jB.setOtherEntitySetting(yB, YB, "nameTagInfo", PB), oB <= 0 && JB.delete(YB)
+            var OW;
+            if ("content" === EW.location) ZW.content = [...null !== (OW = EW.baseNametag.content) && void 0 !== OW ? OW : [], tW];
+            else ZW.subtitle = [tW];
+            LW.setOtherEntitySetting(cW, mW, "nameTagInfo", ZW), PW <= 0 && wW.delete(mW)
           }
-          if (MB.size > 0 && OB - PB >= DB) {
-            PB = OB, zB = (zB + 1) % 3;
-            let BB = 0;
-            for (const [GB, YB] of MB) {
-              if (BB++ % 3 !== zB) continue;
-              const DB = Math.floor((OB - YB.startTime) / 1e3);
-              if (DB === YB.lastRenderedSecond) continue;
-              YB.lastRenderedSecond = DB;
-              const QB = YB.accumulatedIncome + YB.incomePerSecond * BigInt(DB);
-              oB(jB, yB, GB, YB, QB)
+          if (tW.size > 0 && iW - ZW >= EW) {
+            ZW = iW, xW = (xW + 1) % 3;
+            let WW = 0;
+            for (const [OW, mW] of tW) {
+              if (WW++ % 3 !== xW) continue;
+              const EW = Math.floor((iW - mW.startTime) / 1e3);
+              if (EW === mW.lastRenderedSecond) continue;
+              mW.lastRenderedSecond = EW;
+              const NW = mW.accumulatedIncome + mW.incomePerSecond * BigInt(EW);
+              PW(LW, cW, OW, mW, NW)
             }
           }
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          if ("startCountdown" === BB) JB.set(OB.eId, {
-            baseNametag: OB.baseNametag,
-            remainingSeconds: OB.remainingSeconds,
+        onReceivedMessageFromServer: (WW, iW) => {
+          if ("startCountdown" === WW) wW.set(iW.eId, {
+            baseNametag: iW.baseNametag,
+            remainingSeconds: iW.remainingSeconds,
             startTime: Date.now(),
-            format: OB.format,
-            location: OB.location,
-            prefix: OB.prefix,
-            style: OB.style,
+            format: iW.format,
+            location: iW.location,
+            prefix: iW.prefix,
+            style: iW.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === BB) JB.delete(OB.eId);
-          else if ("startIncomeTicking" === BB) {
-            const BB = {
-              baseNametag: OB.baseNametag,
-              accumulatedIncome: BigInt(OB.accumulatedIncome),
-              incomePerSecond: BigInt(OB.incomePerSecond),
+          else if ("stopCountdown" === WW) wW.delete(iW.eId);
+          else if ("startIncomeTicking" === WW) {
+            const WW = {
+              baseNametag: iW.baseNametag,
+              accumulatedIncome: BigInt(iW.accumulatedIncome),
+              incomePerSecond: BigInt(iW.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            MB.set(OB.eId, BB), oB(jB, yB, OB.eId, BB, BB.accumulatedIncome)
-          } else "stopIncomeTicking" === BB && MB.delete(OB.eId) && jB.setOtherEntitySetting(yB, OB.eId, "nameTagInfo", {
+            tW.set(iW.eId, WW), PW(LW, cW, iW.eId, WW, WW.accumulatedIncome)
+          } else "stopIncomeTicking" === WW && tW.delete(iW.eId) && LW.setOtherEntitySetting(cW, iW.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (BB, OB, GB, YB, DB, QB) => {
-          if (QB && "Mesh" === jB.getEntityType(QB)) {
-            const OB = jB.getEntityName(QB);
-            "Upgrades" === OB ? jB.openShop(BB, !1, "Upgrades") : "Items" === OB ? jB.openShop(BB, !1, "Items") : "Prestige" === OB ? jB.openShop(BB, !1, "Prestige") : "Collections" === OB ? jB.openShop(BB, !1, "Collections") : "Base Skins" === OB ? jB.openShop(BB, !1, "Base Skins") : "Gauntlet" === OB ? jB.openShop(BB, !1, "Gauntlet") : "Diamond Shop" === OB && jB.openShop(BB, !1, "Diamond Shop")
+        onPlayerAltAction: (WW, iW, OW, mW, EW, NW) => {
+          if (NW && "Mesh" === LW.getEntityType(NW)) {
+            const iW = LW.getEntityName(NW);
+            "Upgrades" === iW ? LW.openShop(WW, !1, "Upgrades") : "Items" === iW ? LW.openShop(WW, !1, "Items") : "Prestige" === iW ? LW.openShop(WW, !1, "Prestige") : "Collections" === iW ? LW.openShop(WW, !1, "Collections") : "Base Skins" === iW ? LW.openShop(WW, !1, "Base Skins") : "Gauntlet" === iW ? LW.openShop(WW, !1, "Gauntlet") : "Diamond Shop" === iW && LW.openShop(WW, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34815: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB,
-      g: () => oB
+  35243: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => PW
     });
-    const YB = [{
+    const mW = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function DB(BB) {
-      let OB, GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof BB) {
-        if (!Number.isFinite(BB)) return "0";
-        if (Math.abs(BB) < 100) {
-          const OB = BB < 0 ? "-" : "",
-            GB = Math.abs(BB);
-          return GB >= 10 ? `${OB}${GB.toFixed(1).replace(/\.0$/,"")}` : `${OB}${GB.toFixed(2).replace(/\.?0+$/,"")}`
+    function EW(WW) {
+      let iW, OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof WW) {
+        if (!Number.isFinite(WW)) return "0";
+        if (Math.abs(WW) < 100) {
+          const iW = WW < 0 ? "-" : "",
+            OW = Math.abs(WW);
+          return OW >= 10 ? `${iW}${OW.toFixed(1).replace(/\.0$/,"")}` : `${iW}${OW.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        OB = BigInt(Math.floor(BB))
-      } else OB = BB;
-      const DB = OB < 0n ? -OB : OB,
-        QB = OB < 0n ? "-" : "",
-        oB = DB.toString();
-      if (oB.length <= GB) return `${QB}${oB}`;
-      const jB = 3 * Math.floor((oB.length - 1) / 3);
-      if (jB < 3) return `${QB}${oB}`;
-      if (jB > 3 * YB.length) {
-        const BB = oB[0],
-          OB = oB.slice(1, 3).replace(/0+$/, "");
-        return `${QB}${OB?`${BB}.${OB}`:BB}e${oB.length-1}`
+        iW = BigInt(Math.floor(WW))
+      } else iW = WW;
+      const EW = iW < 0n ? -iW : iW,
+        NW = iW < 0n ? "-" : "",
+        PW = EW.toString();
+      if (PW.length <= OW) return `${NW}${PW}`;
+      const LW = 3 * Math.floor((PW.length - 1) / 3);
+      if (LW < 3) return `${NW}${PW}`;
+      if (LW > 3 * mW.length) {
+        const WW = PW[0],
+          iW = PW.slice(1, 3).replace(/0+$/, "");
+        return `${NW}${iW?`${WW}.${iW}`:WW}e${PW.length-1}`
       }
       const {
-        threshold: yB,
-        suffix: JB
-      } = YB[YB.length - jB / 3], MB = DB / yB, PB = Number(1000n * (DB % yB) / yB), zB = Number(MB) + PB / 1e3;
-      let lB;
-      return lB = zB >= 100 ? Math.floor(zB).toString() : zB >= 10 ? zB.toFixed(1).replace(/\.0$/, "") : zB.toFixed(2).replace(/\.?0+$/, ""), `${QB}${lB}${JB}`
+        threshold: cW,
+        suffix: wW
+      } = mW[mW.length - LW / 3], tW = EW / cW, ZW = Number(1000n * (EW % cW) / cW), xW = Number(tW) + ZW / 1e3;
+      let lW;
+      return lW = xW >= 100 ? Math.floor(xW).toString() : xW >= 10 ? xW.toFixed(1).replace(/\.0$/, "") : xW.toFixed(2).replace(/\.?0+$/, ""), `${NW}${lW}${wW}`
     }
-    const QB = YB.map((BB => {
+    const NW = mW.map((WW => {
       let {
-        threshold: OB,
-        suffix: GB
-      } = BB;
+        threshold: iW,
+        suffix: OW
+      } = WW;
       return {
-        threshold: Number(OB),
-        suffix: GB
+        threshold: Number(iW),
+        suffix: OW
       }
-    })).filter((BB => {
+    })).filter((WW => {
       let {
-        threshold: OB
-      } = BB;
-      return Number.isFinite(OB)
+        threshold: iW
+      } = WW;
+      return Number.isFinite(iW)
     }));
 
-    function oB(BB) {
-      const OB = Math.abs(BB),
-        GB = BB < 0 ? "-" : "";
+    function PW(WW) {
+      const iW = Math.abs(WW),
+        OW = WW < 0 ? "-" : "";
       for (const {
-          threshold: YB,
-          suffix: DB
+          threshold: mW,
+          suffix: EW
         }
-        of QB)
-        if (OB >= YB) {
-          const BB = OB / YB;
-          if (BB >= 1e3) return `${GB}${OB.toExponential(2).replace("e+","e")}`;
-          let QB;
-          return QB = BB >= 100 ? Math.floor(BB).toString() : BB >= 10 ? BB.toFixed(1).replace(/\.0$/, "") : BB.toFixed(2).replace(/\.?0+$/, ""), `${GB}${QB}${DB}`
-        } return `${GB}${OB}`
+        of NW)
+        if (iW >= mW) {
+          const WW = iW / mW;
+          if (WW >= 1e3) return `${OW}${iW.toExponential(2).replace("e+","e")}`;
+          let NW;
+          return NW = WW >= 100 ? Math.floor(WW).toString() : WW >= 10 ? WW.toFixed(1).replace(/\.0$/, "") : WW.toFixed(2).replace(/\.?0+$/, ""), `${OW}${NW}${EW}`
+        } return `${OW}${iW}`
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

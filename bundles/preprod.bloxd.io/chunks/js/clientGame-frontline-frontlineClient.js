@@ -1,196 +1,242 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  37263: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => ZB,
-      e: () => NB,
-      h: () => zB,
-      l: () => PB
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var YB = GB(34790),
-      DB = GB(37267),
-      QB = GB(37270),
-      oB = GB(9391),
-      jB = GB(1480),
-      yB = GB(56),
-      JB = GB(70),
-      MB = GB(1282);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function PB() {
-      var BB;
-      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
-        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function zB(BB) {
-      var OB;
+    function xW(WW) {
+      var iW;
       let {
-        show: GB
-      } = BB;
-      (0, jB.i)(DB.d, (0, DB.n)());
-      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
-      return (0, yB.useEffect)((() => {
-        var BB;
-        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
-      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
-        showing: GB,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === JB || void 0 === JB ? void 0 : JB.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const lB = new Map,
-      pB = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function qB(BB, OB) {
-      OB ? lB.set(BB, OB) : lB.delete(BB);
-      for (const GB of pB) GB()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function ZB(BB) {
+    function jW(WW) {
       let {
-        placement: OB = "bottom"
-      } = BB;
-      const GB = (0, yB.useRef)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = GB.current;
-        return qB(OB, BB), () => {
-          lB.get(OB) === BB && qB(OB, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [OB]), (0, MB.jsx)("div", {
-        ref: GB,
-        id: `clientGameHud-${OB}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function UW(WW) {
       let {
-        children: OB,
-        placement: GB = "bottom"
-      } = BB;
-      const [YB, DB] = (0, yB.useState)((() => {
-        var BB;
-        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, yB.useEffect)((() => {
-        const BB = () => {
-          var BB;
-          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return pB.add(BB), BB(), () => {
-          pB.delete(BB)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function QB(BB) {
+    function NW(WW) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  37367: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB,
-      i: () => oB,
-      k: () => jB,
-      n: () => yB
+  37919: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW,
+      e: () => cW,
+      h: () => wW,
+      i: () => tW,
+      j: () => AW
     });
-    var YB = GB(56),
-      DB = GB(3528);
-    const QB = 8,
-      oB = "InGameHeaderContainer",
-      jB = "TopRightElements";
+    var mW = OW(62),
+      EW = OW(4275),
+      NW = OW(3457),
+      PW = OW(27);
+    const LW = 8,
+      cW = "InGameHeaderContainer",
+      wW = "TopRightElements";
 
-    function yB(BB) {
-      const [OB] = (0, DB.e)(), [GB, yB] = (0, YB.useState)(!1);
-      return (0, YB.useLayoutEffect)((() => {
-        if (!BB) return;
-        const OB = document.querySelector(`.${oB}`),
-          GB = document.querySelector(`.${jB}`),
-          YB = () => {
-            const YB = BB.getBoundingClientRect(),
-              DB = OB ? OB.getBoundingClientRect().right : 0,
-              oB = GB ? GB.getBoundingClientRect().left : window.innerWidth,
-              jB = YB.left < DB + QB,
-              JB = YB.right > oB - QB;
-            yB(jB || JB)
+    function tW(WW) {
+      const [iW] = (0, EW.d)(), [OW, NW] = (0, mW.useState)(!1);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const iW = document.querySelector(`.${cW}`),
+          OW = document.querySelector(`.${wW}`),
+          mW = () => {
+            const mW = WW.getBoundingClientRect(),
+              EW = iW ? iW.getBoundingClientRect().right : 0,
+              PW = OW ? OW.getBoundingClientRect().left : window.innerWidth,
+              cW = mW.left < EW + LW,
+              wW = mW.right > PW - LW;
+            NW(cW || wW)
           };
-        YB();
-        const DB = new ResizeObserver(YB);
-        return DB.observe(BB), OB && DB.observe(OB), GB && DB.observe(GB), () => {
-          DB.disconnect()
+        mW();
+        const EW = new ResizeObserver(mW);
+        return EW.observe(WW), iW && EW.observe(iW), OW && EW.observe(OW), () => {
+          EW.disconnect()
         }
-      }), [BB, OB]), GB
+      }), [WW, iW]), OW
+    }
+    const ZW = `.InGameUi .${cW}`,
+      xW = [ZW, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      lW = 1e3;
+
+    function AW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW,
+        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [EW, cW] = (0, mW.useState)(null);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const mW = new ResizeObserver((() => {
+          wW()
+        }));
+        mW.observe(WW), iW && iW !== WW && mW.observe(iW);
+        let EW = [];
+
+        function wW() {
+          var NW, PW, wW;
+          const tW = WW.getBoundingClientRect(),
+            lW = function() {
+              const WW = xW.map((WW => document.querySelector(WW))).filter((WW => null !== WW));
+              for (const iW of WW) EW.includes(iW) || mW.observe(iW);
+              for (const iW of EW) WW.includes(iW) || mW.unobserve(iW);
+              return EW = WW, WW
+            }(),
+            AW = lW.filter((WW => {
+              const iW = WW.getBoundingClientRect();
+              return iW.width > 0 && iW.height > 0 && tW.left < iW.right + LW && tW.right > iW.left - LW
+            }));
+          if (0 === AW.length && !OW) return void cW(null);
+          const bW = lW.find((WW => WW.matches(ZW))),
+            jW = Math.max(null !== (NW = null === bW || void 0 === bW ? void 0 : bW.getBoundingClientRect().bottom) && void 0 !== NW ? NW : 0, ...AW.map((WW => WW.getBoundingClientRect().bottom))),
+            UW = null !== (PW = null === iW || void 0 === iW || null === (wW = iW.offsetParent) || void 0 === wW ? void 0 : wW.getBoundingClientRect().top) && void 0 !== PW ? PW : 0;
+          cW(Math.ceil(jW + LW / 2) - Math.round(UW))
+        }
+        const tW = setInterval(wW, lW);
+        wW(), window.addEventListener("resize", wW);
+        const AW = (0, PW.n)(NW.d, wW);
+        return () => {
+          mW.disconnect(), clearInterval(tW), window.removeEventListener("resize", wW), AW()
+        }
+      }), [WW, iW, OW]), EW
     }
   },
-  40167: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => oB,
-      i: () => DB,
-      k: () => QB
+  37888: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      e: () => EW,
+      f: () => NW
     });
-    var YB = GB(56);
+    var mW = OW(62);
 
-    function DB(BB) {
-      return jB(BB, yB)
+    function EW(WW) {
+      return LW(WW, cW)
     }
 
-    function QB(BB) {
-      return jB(BB, JB)
+    function NW(WW) {
+      return LW(WW, wW)
     }
 
-    function oB(BB) {
-      return `${Math.floor(BB/60)}:${String(BB%60).padStart(2,"0")}`
+    function PW(WW) {
+      return `${Math.floor(WW/60)}:${String(WW%60).padStart(2,"0")}`
     }
 
-    function jB(BB, OB) {
-      const [, GB] = (0, YB.useState)(null);
-      return (0, YB.useEffect)((() => {
-        if (0 === BB) return;
-        const YB = window.setInterval((() => {
-          const YB = OB(BB);
-          GB((OB => (null === OB || void 0 === OB ? void 0 : OB.endsAt) === BB && OB.value === YB ? OB : {
-            endsAt: BB,
-            value: YB
+    function LW(WW, iW) {
+      const [, OW] = (0, mW.useState)(null);
+      return (0, mW.useEffect)((() => {
+        if (0 === WW) return;
+        const mW = window.setInterval((() => {
+          const mW = iW(WW);
+          OW((iW => (null === iW || void 0 === iW ? void 0 : iW.endsAt) === WW && iW.value === mW ? iW : {
+            endsAt: WW,
+            value: mW
           }))
         }), 250);
         return () => {
-          window.clearInterval(YB)
+          window.clearInterval(mW)
         }
-      }), [BB, OB]), OB(BB)
+      }), [WW, iW]), iW(WW)
     }
 
-    function yB(BB) {
-      return (BB - performance.now()) / 1e3
+    function cW(WW) {
+      return (WW - performance.now()) / 1e3
     }
 
-    function JB(BB) {
-      return Math.max(0, Math.ceil(yB(BB)))
+    function wW(WW) {
+      return Math.max(0, Math.ceil(cW(WW)))
     }
   },
-  37361: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB
+  37917: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    const YB = [{
+    const mW = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -207,286 +253,148 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function DB(BB, OB, GB) {
-      const DB = Math.abs(BB - OB),
-        QB = Date.now() - GB;
-      for (const oB of YB)
-        if (BB < oB.maxDist) return DB >= oB.hardUpdateDist || QB > oB.timeBetweenSoftChecks && DB >= oB.softUpdateDist;
+    function EW(WW, iW, OW) {
+      const EW = Math.abs(WW - iW),
+        NW = Date.now() - OW;
+      for (const PW of mW)
+        if (WW < PW.maxDist) return EW >= PW.hardUpdateDist || NW > PW.timeBetweenSoftChecks && EW >= PW.softUpdateDist;
       return !1
     }
   },
-  9391: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
     });
-    let YB = null;
-    const DB = function(BB) {
-        const OB = {
-          cycle: BB,
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return YB = OB, () => {
-          YB === OB && (YB = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      QB = () => {
-        var BB;
-        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  39205: (BB, OB, GB) => {
-    function YB(BB, OB, GB) {
-      var YB;
+  39739: (WW, iW, OW) => {
+    function mW(WW, iW, OW) {
+      var mW;
       const {
-        width: DB,
-        height: QB
-      } = GB, oB = null !== (YB = BB.text) && void 0 !== YB ? YB : BB, jB = (oB.x / 100 - .5) * DB, yB = (oB.y / 100 - .5) * QB, JB = DB / 2 - OB.x;
-      if (null !== BB.text && Math.abs(jB) <= JB && yB >= OB.top - QB / 2 && yB <= QB / 2 - OB.bottom) return {
-        x: oB.x,
-        y: oB.y
+        width: EW,
+        height: NW
+      } = OW, PW = null !== (mW = WW.text) && void 0 !== mW ? mW : WW, LW = (PW.x / 100 - .5) * EW, cW = (PW.y / 100 - .5) * NW, wW = EW / 2 - iW.x;
+      if (null !== WW.text && Math.abs(LW) <= wW && cW >= iW.top - NW / 2 && cW <= NW / 2 - iW.bottom) return {
+        x: PW.x,
+        y: PW.y
       };
-      const MB = Math.min(0 === jB ? 1 / 0 : JB / Math.abs(jB), yB > 0 ? (QB / 2 - OB.bottom) / yB : yB < 0 ? (OB.top - QB / 2) / yB : 1 / 0);
-      return !Number.isFinite(MB) || MB < 0 ? {
+      const tW = Math.min(0 === LW ? 1 / 0 : wW / Math.abs(LW), cW > 0 ? (NW / 2 - iW.bottom) / cW : cW < 0 ? (iW.top - NW / 2) / cW : 1 / 0);
+      return !Number.isFinite(tW) || tW < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + jB * MB / DB * 100,
-        y: 50 + yB * MB / QB * 100
+        x: 50 + LW * tW / EW * 100,
+        y: 50 + cW * tW / NW * 100
       }
     }
-    GB.d(OB, {
-      b: () => YB
+    OW.d(iW, {
+      b: () => mW
     })
   },
-  37270: (BB, OB, GB) => {
-    GB.d(OB, {
-      D: () => pB,
-      G: () => RB,
-      e: () => QB,
-      i: () => qB,
-      l: () => ZB,
-      m: () => jB,
-      q: () => zB,
-      u: () => NB,
-      y: () => PB,
-      z: () => WB
+  40712: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW
     });
-    var YB = GB(16),
-      DB = GB(25);
-    const QB = "clientGameInventoryButtonsChanged",
-      oB = new Map;
+    const mW = 1e3;
 
-    function jB() {
-      return [...oB.values()].sort(((BB, OB) => {
-        var GB, YB;
-        return (null !== (GB = BB.order) && void 0 !== GB ? GB : 0) - (null !== (YB = OB.order) && void 0 !== YB ? YB : 0)
-      }))
-    }
-    let yB = null;
-
-    function JB(BB) {
-      yB = BB
-    }
-    let MB = !1;
-
-    function PB(BB) {
-      MB = !0;
-      try {
-        BB.onClick()
-      } finally {
-        MB = !1
-      }
-      BB.panel && "clientGame" === YB.c.get("openInGameMenuName") && JB(BB.id)
-    }
-
-    function zB() {
-      return MB
-    }
-
-    function lB() {
-      return jB().filter((BB => BB.panel && !BB.disabled))
-    }
-
-    function pB(BB) {
-      const OB = lB(),
-        GB = OB.findIndex((BB => BB.id === yB));
-      return !(GB < 0 || OB.length < 2) && (PB(OB[(GB + BB + OB.length) % OB.length]), !0)
-    }
-
-    function qB() {
-      return null !== yB && lB().length > 1
-    }
-
-    function ZB() {
-      JB(null)
-    }
-
-    function NB() {
-      "inventory" !== YB.c.get("openInGameMenuName") && JB(null)
-    }
-
-    function RB() {
-      const BB = yB;
-      return JB(null), BB
-    }
-
-    function WB(BB) {
-      return oB.set(BB.id, BB), DB.o.tM(QB, jB(), !0), () => {
-        oB.get(BB.id) === BB && (oB.delete(BB.id), DB.o.tM(QB, jB()))
-      }
+    function EW(WW, iW) {
+      const OW = performance.now() + WW;
+      return 0 !== iW && Math.abs(OW - iW) < mW ? iW : OW
     }
   },
-  37267: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      f: () => RB,
-      g: () => ZB,
-      i: () => NB,
-      m: () => zB,
-      n: () => JB,
-      o: () => qB,
-      r: () => lB,
-      s: () => MB
+  40719: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => cW
     });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(37270);
-    const jB = "clientGameUiChanged";
-    let yB = null;
-
-    function JB() {
-      return yB
-    }
-
-    function MB(BB, OB) {
-      const GB = {
-        content: BB,
-        menu: OB
-      };
-      return yB = GB, DB.o.tM(jB, yB, !0), () => {
-        yB === GB && (yB = null, pB = !1, ZB(), DB.o.tM(jB, null))
-      }
-    }
-    let PB = null;
-
-    function zB() {
-      return PB
-    }
-
-    function lB(BB) {
-      return PB = BB, () => {
-        PB === BB && (PB = null)
-      }
-    }
-    let pB = !1;
-
-    function qB() {
-      const BB = YB.c.get("openInGameMenuName");
-      "clientGame" !== BB && (pB = "inventory" === BB), (0, oB.q)() || (0, oB.l)(), (0, QB.p)(QB.b), YB.c.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function ZB() {
-      WB(!1)
-    }
-
-    function NB() {
-      WB(pB)
-    }
-
-    function RB() {
-      pB && WB(!1)
-    }
-
-    function WB(BB) {
-      "clientGame" === YB.c.get("openInGameMenuName") && YB.c.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, oB.l)(), pB = !1
-    }
-  },
-  40172: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => yB
-    });
-    var YB = GB(37361),
-      DB = GB(1175),
-      QB = GB(1253),
-      oB = GB(39154),
-      jB = GB(39205);
-    class yB {
-      constructor(BB, OB) {
-        var GB;
-        this.classes = BB, this.distanceKey = OB, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var mW = OW(37917),
+      EW = OW(1172),
+      NW = OW(1244),
+      PW = OW(39679),
+      LW = OW(39739);
+    class cW {
+      constructor(WW, iW) {
+        var OW;
+        this.classes = WW, this.distanceKey = iW, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.Vp = !1, this.vN = () => {
+        }, this.render = null, this.JA = !1, this.Lk = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.vN), null === (GB = window.visualViewport) || void 0 === GB || GB.addEventListener("resize", this.vN)
+        }, window.addEventListener("resize", this.Lk), null === (OW = window.visualViewport) || void 0 === OW || OW.addEventListener("resize", this.Lk)
       }
-      bindMarker(BB) {
-        const OB = this.refs.get(BB);
-        if (OB) return OB;
-        const GB = OB => {
-          var YB;
-          null === (YB = this.markers.get(BB)) || void 0 === YB || YB.stopObserving(), this.markers.delete(BB), OB && !this.Vp ? (this.markers.set(BB, this.mount(OB)), this.refs.set(BB, GB)) : this.refs.delete(BB)
+      bindMarker(WW) {
+        const iW = this.refs.get(WW);
+        if (iW) return iW;
+        const OW = iW => {
+          var mW;
+          null === (mW = this.markers.get(WW)) || void 0 === mW || mW.stopObserving(), this.markers.delete(WW), iW && !this.JA ? (this.markers.set(WW, this.mount(iW)), this.refs.set(WW, OW)) : this.refs.delete(WW)
         };
-        return this.refs.set(BB, GB), GB
+        return this.refs.set(WW, OW), OW
       }
       hasMarkers() {
         return this.markers.size > 0
       }
-      setRender(BB) {
-        this.render = BB
+      setRender(WW) {
+        this.render = WW
       }
-      update(BB, OB, GB, YB, DB) {
-        const QB = this.markers.get(BB);
-        QB && (QB.target ??= [0, 0, 0], QB.target[0] = OB, QB.target[1] = GB, QB.target[2] = YB, this.place(QB), this.oO(QB, DB && Math.hypot(OB - DB[0], GB - DB[1], YB - DB[2])))
+      update(WW, iW, OW, mW, EW) {
+        const NW = this.markers.get(WW);
+        NW && (NW.target ??= [0, 0, 0], NW.target[0] = iW, NW.target[1] = OW, NW.target[2] = mW, this.place(NW), this.zi(NW, EW && Math.hypot(iW - EW[0], OW - EW[1], mW - EW[2])))
       }
       dispose() {
-        var BB;
-        this.Vp = !0, window.removeEventListener("resize", this.vN), null === (BB = window.visualViewport) || void 0 === BB || BB.removeEventListener("resize", this.vN);
-        for (const OB of this.markers.values()) OB.stopObserving();
+        var WW;
+        this.JA = !0, window.removeEventListener("resize", this.Lk), null === (WW = window.visualViewport) || void 0 === WW || WW.removeEventListener("resize", this.Lk);
+        for (const iW of this.markers.values()) iW.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(BB) {
+      place(WW) {
         const {
-          render: OB,
-          viewport: GB
+          render: iW,
+          viewport: OW
         } = this;
-        if (!OB || !BB.target) return;
-        const YB = (50 - OB.screenBandPct.y) / 100 * GB.height,
-          DB = {
-            x: BB.halfSize.width + 8,
-            top: BB.halfSize.height + 8,
-            bottom: BB.halfSize.height + BB.labelsBelow + YB
+        if (!iW || !WW.target) return;
+        const mW = (50 - iW.screenBandPct.y) / 100 * OW.height,
+          EW = {
+            x: WW.halfSize.width + 8,
+            top: WW.halfSize.height + 8,
+            bottom: WW.halfSize.height + WW.labelsBelow + mW
           },
-          QB = OB.projectWorldPosToViewport(BB.target),
-          yB = null !== QB && void 0 !== QB ? QB : OB.projectWorldPosToScreenPos(BB.target),
-          JB = (0, jB.b)({
-            x: yB.x,
-            y: yB.y,
-            text: QB
-          }, DB, GB);
-        (0, oB.d)(BB.root, Math.round(100 * JB.x) / 100, Math.round(100 * JB.y) / 100)
+          NW = iW.projectWorldPosToViewport(WW.target),
+          cW = null !== NW && void 0 !== NW ? NW : iW.projectWorldPosToScreenPos(WW.target),
+          wW = (0, LW.b)({
+            x: cW.x,
+            y: cW.y,
+            text: NW
+          }, EW, OW);
+        (0, PW.e)(WW.root, Math.round(100 * wW.x) / 100, Math.round(100 * wW.y) / 100)
       }
-      oO(BB, OB) {
-        if (null === OB) return void(null !== BB.metres && (BB.metres = null, BB.distance.textContent = ""));
-        const GB = Date.now();
-        (null === BB.metres || (0, YB.b)(OB, BB.metres, BB.metresShownAt)) && (BB.metres = Math.round(OB), BB.metresShownAt = GB, BB.distance.textContent = (0, DB.C)(QB.e.get().getCurrentLanguageCode(), this.distanceKey, {
-          distance: String(BB.metres)
+      zi(WW, iW) {
+        if (null === iW) return void(null !== WW.metres && (WW.metres = null, WW.distance.textContent = ""));
+        const OW = Date.now();
+        (null === WW.metres || (0, mW.e)(iW, WW.metres, WW.metresShownAt)) && (WW.metres = Math.round(iW), WW.metresShownAt = OW, WW.distance.textContent = (0, EW.u)(NW.e.get().getCurrentLanguageCode(), this.distanceKey, {
+          distance: String(WW.metres)
         }))
       }
-      mount(BB) {
-        const OB = {
-            root: BB,
-            distance: BB.querySelector(`.${this.classes.distance}`),
+      mount(WW) {
+        const iW = {
+            root: WW,
+            distance: WW.querySelector(`.${this.classes.distance}`),
             halfSize: {
               width: 0,
               height: 0
@@ -497,35 +405,36 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          GB = BB.querySelector(`.${this.classes.labels}`),
-          YB = new ResizeObserver((() => {
-            OB.halfSize = {
-              width: Math.max(BB.offsetWidth, GB.offsetWidth) / 2,
-              height: BB.offsetHeight / 2
-            }, OB.labelsBelow = GB.offsetTop + GB.offsetHeight - BB.offsetHeight, this.place(OB)
+          OW = WW.querySelector(`.${this.classes.labels}`),
+          mW = new ResizeObserver((() => {
+            iW.halfSize = {
+              width: Math.max(WW.offsetWidth, OW.offsetWidth) / 2,
+              height: WW.offsetHeight / 2
+            }, iW.labelsBelow = OW.offsetTop + OW.offsetHeight - WW.offsetHeight, this.place(iW)
           }));
-        return YB.observe(BB, {
+        return mW.observe(WW, {
           box: "border-box"
-        }), YB.observe(GB, {
+        }), mW.observe(OW, {
           box: "border-box"
-        }), OB.stopObserving = () => {
-          YB.disconnect()
-        }, OB
+        }), iW.stopObserving = () => {
+          mW.disconnect()
+        }, iW
       }
     }
   },
-  40161: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => lO
+  40701: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => wi
     });
-    const YB = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
-    var DB = GB(56),
-      QB = GB(37267),
-      oB = GB(37723),
-      jB = GB(37288),
-      yB = GB(1822),
-      JB = GB(25);
-    const MB = {
+    const mW = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes", "hat", "back"];
+    var EW = OW(62),
+      NW = OW(3361),
+      PW = OW(40706),
+      LW = OW(38195),
+      cW = OW(37898),
+      wW = OW(1856),
+      tW = OW(27);
+    const ZW = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -551,416 +460,187 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const PB = 32;
+    const xW = 32;
 
-    function zB(BB, OB, GB, YB) {
+    function lW(WW, iW, OW, mW) {
       return {
         tag: "line",
         attrs: {
-          x1: BB,
-          y1: OB,
-          x2: GB,
-          y2: YB,
+          x1: WW,
+          y1: iW,
+          x2: OW,
+          y2: mW,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function lB(BB) {
+    function AW(WW) {
       return {
         tag: "circle",
         attrs: {
-          cx: PB,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PB,
-          r: BB,
+          cx: xW,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xW,
+          r: WW,
           class: "Fill"
         }
       }
     }
 
-    function pB(BB, OB) {
+    function bW(WW, iW) {
       return {
         tag: "path",
         attrs: {
-          d: BB,
-          "stroke-width": OB
+          d: WW,
+          "stroke-width": iW
         }
       }
     }
 
-    function qB(BB, OB, GB) {
+    function jW(WW, iW, OW) {
       return {
         tag: "circle",
         attrs: {
-          cx: PB,
-          cy: PB,
-          r: BB,
-          "stroke-width": OB,
-          class: GB
+          cx: xW,
+          cy: xW,
+          r: WW,
+          "stroke-width": iW,
+          class: OW
         }
       }
     }
 
-    function ZB(BB, OB, GB) {
+    function UW(WW, iW, OW) {
       return {
         tag: "text",
         attrs: {
-          x: BB,
-          y: OB,
+          x: WW,
+          y: iW,
           class: "Fill Label"
         },
-        text: GB
+        text: OW
       }
     }
-    const NB = {
-      pistol: BB => [zB(PB, PB - BB - 5, PB, PB - BB), zB(PB - BB - 5, PB, PB - BB, PB), zB(PB + BB, PB, PB + BB + 5, PB), lB(1.4)],
-      rifle: BB => [zB(PB, PB - BB - 8, PB, PB - BB), zB(PB, PB + BB, PB, PB + BB + 8), zB(PB - BB - 8, PB, PB - BB, PB), zB(PB + BB, PB, PB + BB + 8, PB), lB(1)],
-      smg: BB => {
-        const OB = Math.PI / 2,
-          GB = [];
-        for (let oB = 0; oB < 4; oB++) GB.push((DB = oB * OB + .35, QB = (oB + 1) * OB - .35, pB(`M${PB+(YB=6+BB)*Math.cos(DB)} ${PB+YB*Math.sin(DB)} A${YB} ${YB} 0 0 1 ${PB+YB*Math.cos(QB)} ${PB+YB*Math.sin(QB)}`, 2)));
-        var YB, DB, QB;
-        return [...GB, lB(1.4)]
+    const kW = {
+      pistol: WW => [lW(xW, xW - WW - 5, xW, xW - WW), lW(xW - WW - 5, xW, xW - WW, xW), lW(xW + WW, xW, xW + WW + 5, xW), AW(1.4)],
+      rifle: WW => [lW(xW, xW - WW - 8, xW, xW - WW), lW(xW, xW + WW, xW, xW + WW + 8), lW(xW - WW - 8, xW, xW - WW, xW), lW(xW + WW, xW, xW + WW + 8, xW), AW(1)],
+      smg: WW => {
+        const iW = Math.PI / 2,
+          OW = [];
+        for (let PW = 0; PW < 4; PW++) OW.push((EW = PW * iW + .35, NW = (PW + 1) * iW - .35, bW(`M${xW+(mW=6+WW)*Math.cos(EW)} ${xW+mW*Math.sin(EW)} A${mW} ${mW} 0 0 1 ${xW+mW*Math.cos(NW)} ${xW+mW*Math.sin(NW)}`, 2)));
+        var mW, EW, NW;
+        return [...OW, AW(1.4)]
       },
-      shotgun: BB => [qB(BB, 3, "Ring Outline"), qB(BB, 1.5, "Ring")],
-      marksman: BB => [pB(`M${26-BB/2} ${39+BB/2} L32 33 L${38+BB/2} ${39+BB/2}`, 2), zB(14 - BB, PB, 24 - BB, PB, 1.5), zB(40 + BB, PB, 50 + BB, PB, 1.5), zB(14 - BB, 30, 14 - BB, 34, 1.5), zB(50 + BB, 30, 50 + BB, 34, 1.5)],
-      machineGun: BB => {
-        const OB = 10 + BB,
-          GB = [];
-        for (const [YB, DB] of [
+      shotgun: WW => [jW(WW, 3, "Ring Outline"), jW(WW, 1.5, "Ring")],
+      marksman: WW => [bW(`M${26-WW/2} ${39+WW/2} L32 33 L${38+WW/2} ${39+WW/2}`, 2), lW(14 - WW, xW, 24 - WW, xW, 1.5), lW(40 + WW, xW, 50 + WW, xW, 1.5), lW(14 - WW, 30, 14 - WW, 34, 1.5), lW(50 + WW, 30, 50 + WW, 34, 1.5)],
+      machineGun: WW => {
+        const iW = 10 + WW,
+          OW = [];
+        for (const [mW, EW] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) GB.push(pB(`M${PB+YB*OB} ${PB+DB*(OB-5)} L${PB+YB*OB} ${PB+DB*OB} L${PB+YB*(OB-5)} ${PB+DB*OB}`, 2));
-        return [...GB, zB(PB, 28, PB, 36, 1.5), zB(28, PB, 36, PB, 1.5)]
+          ]) OW.push(bW(`M${xW+mW*iW} ${xW+EW*(iW-5)} L${xW+mW*iW} ${xW+EW*iW} L${xW+mW*(iW-5)} ${xW+EW*iW}`, 2));
+        return [...OW, lW(xW, 28, xW, 36, 1.5), lW(28, xW, 36, xW, 1.5)]
       },
-      launcher: () => [zB(14, 30, 50, 30, 1.5), zB(PB, 24, PB, 52, 1.5), zB(28, 38, 36, 38, 1.5), zB(29, 44, 35, 44, 1.5), zB(30, 50, 34, 50, 1.5), ZB(38, 40, "100"), ZB(37, 46, "200"), lB(1.4, 30)],
-      melee: () => [pB("M32 26 L38 32 L32 38 L26 32 Z", 1.5), lB(1.2)],
-      throwable: () => [lB(1.6)]
+      launcher: () => [lW(14, 30, 50, 30, 1.5), lW(xW, 24, xW, 52, 1.5), lW(28, 38, 36, 38, 1.5), lW(29, 44, 35, 44, 1.5), lW(30, 50, 34, 50, 1.5), UW(38, 40, "100"), UW(37, 46, "200"), AW(1.4, 30)],
+      melee: () => [bW("M32 26 L38 32 L32 38 L26 32 Z", 1.5), AW(1.2)],
+      throwable: () => [AW(1.6)]
     };
 
-    function RB(BB) {
+    function sW(WW) {
       let {
-        tag: OB,
-        attrs: GB,
-        text: YB
-      } = BB, DB = `<${OB}`;
-      for (const [QB, oB] of Object.entries(GB)) DB += ` ${QB}="${oB}"`;
-      return void 0 === YB ? `${DB}/>` : `${DB}>${YB}</${OB}>`
+        tag: iW,
+        attrs: OW,
+        text: mW
+      } = WW, EW = `<${iW}`;
+      for (const [NW, PW] of Object.entries(OW)) EW += ` ${NW}="${PW}"`;
+      return void 0 === mW ? `${EW}/>` : `${EW}>${mW}</${iW}>`
     }
-    class WB {
-      constructor(BB, OB) {
-        this.api = BB, this.localPlayerId = OB, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = BB => {
-          this.element = BB, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, BB && !this.enabled && (BB.style.display = "none")
+    class MW {
+      constructor(WW, iW) {
+        this.api = WW, this.localPlayerId = iW, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = WW => {
+          this.element = WW, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, WW && !this.enabled && (WW.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, yB.getRemInPx)()))
-        }, this.tokens = [JB.o.subscribe("aimingOverlay", (BB => {
-          this.sniperOverlay = "sniper" === BB
-        })), JB.o.subscribe("mouseState", (BB => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, wW.getRemInPx)()))
+        }, this.tokens = [tW.l.subscribe("aimingOverlay", (WW => {
+          this.sniperOverlay = "sniper" === WW
+        })), tW.l.subscribe("mouseState", (WW => {
           let {
-            isDown: OB
-          } = BB;
-          this.mouseDown = OB
+            isDown: iW
+          } = WW;
+          this.mouseDown = iW
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      Zk(BB) {
-        BB !== this.enabled && (this.enabled = BB, this.drawnVisible = null, BB || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      WK(WW) {
+        WW !== this.enabled && (this.enabled = WW, this.drawnVisible = null, WW || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(BB, OB) {
-        var GB, YB;
+      frame(WW, iW) {
+        var OW, mW;
         if (!this.enabled) return;
         const {
-          api: DB
-        } = this, QB = DB.isAlive(this.localPlayerId) && null !== (GB = null === (YB = DB.MYB(this.localPlayerId)) || void 0 === YB ? void 0 : YB.name) && void 0 !== GB ? GB : null, oB = (jB = QB) && MB[jB] || null;
-        var jB;
-        if (this.setOwnsCrosshair(null !== oB), !this.element) return;
-        const yB = DB.getHeldGunInaccuracy(),
-          JB = null !== yB,
-          PB = null !== oB && !this.sniperOverlay && DB.isCrosshairShown();
-        if (PB !== this.drawnVisible && (this.drawnVisible = PB, this.element.style.display = PB ? "block" : "none"), !PB) return;
-        const zB = JB ? function(BB) {
-            return "launcher" === BB || "melee" === BB || "throwable" === BB ? "none" : "shotgun" === BB ? "cone" : "offset"
-          }(oB) : "none",
-          lB = null !== yB && void 0 !== yB ? yB : 0;
-        "cone" === zB ? this.drawCone(oB, this.coneRadiusVh(lB, OB) * this.gapPerVh, BB) : (this.coneDrawn = !1, this.draw(oB, "none" === zB ? 2 : this.offsetGap(lB)));
-        const pB = !JB && this.mouseDown;
-        pB !== this.drawnPressed && (this.drawnPressed = pB, this.element.classList.toggle("Pressed", pB))
+          api: EW
+        } = this, NW = EW.isAlive(this.localPlayerId) && null !== (OW = null === (mW = EW.kOW(this.localPlayerId)) || void 0 === mW ? void 0 : mW.name) && void 0 !== OW ? OW : null, PW = (LW = NW) && ZW[LW] || null;
+        var LW;
+        if (this.setOwnsCrosshair(null !== PW), !this.element) return;
+        const cW = EW.getHeldGunInaccuracy(),
+          wW = null !== cW,
+          tW = null !== PW && !this.sniperOverlay && EW.isCrosshairShown();
+        if (tW !== this.drawnVisible && (this.drawnVisible = tW, this.element.style.display = tW ? "block" : "none"), !tW) return;
+        const xW = wW ? function(WW) {
+            return "launcher" === WW || "melee" === WW || "throwable" === WW ? "none" : "shotgun" === WW ? "cone" : "offset"
+          }(PW) : "none",
+          lW = null !== cW && void 0 !== cW ? cW : 0;
+        "cone" === xW ? this.drawCone(PW, this.coneRadiusVh(lW, iW) * this.gapPerVh, WW) : (this.coneDrawn = !1, this.draw(PW, "none" === xW ? 2 : this.offsetGap(lW)));
+        const AW = !wW && this.mouseDown;
+        AW !== this.drawnPressed && (this.drawnPressed = AW, this.element.classList.toggle("Pressed", AW))
       }
       dispose() {
-        for (const BB of this.tokens) JB.o.unsubscribe(BB);
+        for (const WW of this.tokens) tW.l.unsubscribe(WW);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(BB, OB) {
-        var GB, YB;
-        BB !== this.drawnFamily ? (this.drawnFamily = BB, this.drawnGap = OB, this.element.innerHTML = function(BB, OB) {
-          return `<svg viewBox="0 0 64 64">${NB[BB](OB).map(RB).join("")}</svg>`
-        }(BB, OB), this.shapes = Array.from(null !== (GB = null === (YB = this.element.firstElementChild) || void 0 === YB ? void 0 : YB.children) && void 0 !== GB ? GB : [])) : OB !== this.drawnGap && (this.drawnGap = OB, function(BB, OB, GB) {
-          const YB = NB[OB](GB);
-          for (let DB = 0; DB < YB.length; DB++)
-            for (const [OB, GB] of Object.entries(YB[DB].attrs)) {
-              const YB = String(GB);
-              BB[DB].getAttribute(OB) !== YB && BB[DB].setAttribute(OB, YB)
+      draw(WW, iW) {
+        var OW, mW;
+        WW !== this.drawnFamily ? (this.drawnFamily = WW, this.drawnGap = iW, this.element.innerHTML = function(WW, iW) {
+          return `<svg viewBox="0 0 64 64">${kW[WW](iW).map(sW).join("")}</svg>`
+        }(WW, iW), this.shapes = Array.from(null !== (OW = null === (mW = this.element.firstElementChild) || void 0 === mW ? void 0 : mW.children) && void 0 !== OW ? OW : [])) : iW !== this.drawnGap && (this.drawnGap = iW, function(WW, iW, OW) {
+          const mW = kW[iW](OW);
+          for (let EW = 0; EW < mW.length; EW++)
+            for (const [iW, OW] of Object.entries(mW[EW].attrs)) {
+              const mW = String(OW);
+              WW[EW].getAttribute(iW) !== mW && WW[EW].setAttribute(iW, mW)
             }
-        }(this.shapes, BB, OB))
+        }(this.shapes, WW, iW))
       }
-      drawCone(BB, OB, GB) {
-        BB === this.drawnFamily && this.coneDrawn ? this.shownRadius += (OB - this.shownRadius) * (1 - Math.exp(-GB / 80)) : this.shownRadius = OB, this.coneDrawn = !0, this.draw(BB, Math.round(4 * this.shownRadius) / 4)
+      drawCone(WW, iW, OW) {
+        WW === this.drawnFamily && this.coneDrawn ? this.shownRadius += (iW - this.shownRadius) * (1 - Math.exp(-OW / 80)) : this.shownRadius = iW, this.coneDrawn = !0, this.draw(WW, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(BB, OB) {
-        if (!(OB > 0)) return 1;
-        const GB = BB * oB.i / 2;
-        return Math.max(50 * Math.tan(GB) / OB, 1)
+      coneRadiusVh(WW, iW) {
+        if (!(iW > 0)) return 1;
+        const OW = WW * LW.i / 2;
+        return Math.max(50 * Math.tan(OW) / iW, 1)
       }
-      offsetGap(BB) {
-        const OB = 2 + ((0, jB.f)(BB) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * OB) / 2)
+      offsetGap(WW) {
+        const iW = 2 + ((0, cW.f)(WW) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * iW) / 2)
       }
-      setOwnsCrosshair(BB) {
-        BB !== this.ownsCrosshair && (this.ownsCrosshair = BB, document.body.classList.toggle("FrontlineCustomCrosshair", BB))
-      }
-    }
-    const AB = "FrontlineCustomDamage",
-      VB = .45,
-      SB = .2;
-    class nB {
-      constructor(BB, OB) {
-        this.api = BB, this.localPlayerId = OB, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
-          frac: 0,
-          at: -1 / 0
-        }, this.maxHealth = null, this.xG = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = BB => {
-          var OB, GB;
-          this.clearHits(), this.root = BB, this.lowLayer = null !== (OB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".FrontlineDamageLow")) && void 0 !== OB ? OB : null, this.arcLayer = null !== (GB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".FrontlineDamageArcs")) && void 0 !== GB ? GB : null, this.showRoot(), this.drawLow()
-        }, this.token = JB.o.subscribe("damagedByOtherPlayer", (BB => {
-          let {
-            direction: OB,
-            vG: GB
-          } = BB;
-          this.onHurt(OB, GB)
-        })), this.syncHealth(), document.body.classList.add(AB)
-      }
-      Zk(BB) {
-        BB !== this.enabled && (this.enabled = BB, document.body.classList.toggle(AB, BB), BB || this.clearHits(), this.showRoot())
-      }
-      frame(BB) {
-        this.syncHealth(), this.cameraHeading = BB;
-        for (const OB of this.arcs) this.drawArcAngle(OB)
-      }
-      dispose() {
-        JB.o.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(AB)
-      }
-      showRoot() {
-        this.root && (this.root.style.display = this.enabled ? "" : "none")
-      }
-      syncHealth() {
-        const BB = this.api.getClientOption(this.localPlayerId, "_health"),
-          OB = this.api.getClientOption(this.localPlayerId, "_shield"),
-          GB = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(BB, this.readHealth) && Object.is(OB, this.readShield) && Object.is(GB, this.readMaxHealth)) return;
-        if (this.readHealth = BB, this.readShield = OB, this.readMaxHealth = GB, null === BB || void 0 === BB || !GB) return this.lastHealthPool = null, this.maxHealth = null, this.xG = 1, this.dead = !1, void this.drawLow();
-        const YB = BB + (null !== OB && void 0 !== OB ? OB : 0);
-        if (null !== this.lastHealthPool && YB < this.lastHealthPool) {
-          const BB = performance.now(),
-            OB = (this.lastHealthPool - YB) / GB;
-          this.lastDrop = BB - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + OB,
-            at: this.lastDrop.at
-          } : {
-            frac: OB,
-            at: BB
-          }
-        }
-        this.dead = BB <= 0, this.dead && this.clearHits(), this.lastHealthPool = YB, this.maxHealth = GB, this.xG = BB > 0 ? BB / GB : 1, this.drawLow()
-      }
-      onHurt(BB, OB) {
-        if (this.syncHealth(), this.dead || !this.enabled) return;
-        const GB = Math.min(1, this.takeDamageFrac(OB) / .3);
-        null !== BB && this.showArc(BB, GB), this.flashEdge(null === BB ? null : BB - this.cameraHeading, .4 + .6 * GB)
-      }
-      takeDamageFrac(BB) {
-        if (void 0 !== BB && this.maxHealth) return BB / this.maxHealth;
-        if (performance.now() - this.lastDrop.at >= 300) return .12;
-        const {
-          frac: OB
-        } = this.lastDrop;
-        return this.lastDrop = {
-          frac: 0,
-          at: -1 / 0
-        }, OB
-      }
-      drawLow() {
-        if (!this.lowLayer) return;
-        const BB = fB((VB - this.xG) / .25),
-          OB = fB((SB - this.xG) / .15000000000000002),
-          GB = this.xG < VB;
-        this.lowLayer.classList.toggle("Active", GB), this.lowLayer.classList.toggle("Critical", this.xG < SB), this.lowLayer.style.opacity = String(GB ? .55 + .3 * BB + .15 * OB : 0)
-      }
-      showArc(BB, OB) {
-        var GB, YB;
-        if (!this.arcLayer) return;
-        let DB = this.arcs.find((OB => UB(OB.direction, BB) < .6));
-        if (!DB) {
-          const OB = document.createElement("div");
-          OB.className = "FrontlineDamageArc", OB.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(OB), DB = {
-            element: OB,
-            direction: BB,
-            drawnAngle: null,
-            fade: null,
-            pop: null
-          }, this.arcs.push(DB)
-        }
-        DB.direction = BB, this.drawArcAngle(DB);
-        const QB = DB.fade ? Number(getComputedStyle(DB.element).opacity) : 0;
-        null === (GB = DB.fade) || void 0 === GB || GB.cancel(), null === (YB = DB.pop) || void 0 === YB || YB.cancel(), DB.element.style.opacity = "1";
-        const oB = DB.element.animate([{
-          opacity: QB
-        }, {
-          opacity: 1
-        }], 144);
-        DB.fade = oB, DB.pop = DB.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * OB
-        }, {
-          scale: 1
-        }], {
-          duration: 160,
-          easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
-        });
-        const jB = DB;
-        oB.onfinish = () => {
-          if (jB.fade !== oB) return;
-          const BB = jB.element.animate([{
-            opacity: 1
-          }, {
-            opacity: 0
-          }], {
-            delay: 936,
-            duration: 864,
-            easing: "cubic-bezier(0.4, 0, 0.7, 1)",
-            fill: "forwards"
-          });
-          BB.startTime = oB.startTime, jB.fade = BB, BB.onfinish = () => {
-            jB.fade === BB && (jB.element.remove(), kB(this.arcs, jB))
-          }
-        }
-      }
-      drawArcAngle(BB) {
-        const OB = BB.direction - this.cameraHeading;
-        (null === BB.drawnAngle || Math.abs(OB - BB.drawnAngle) > .005) && (BB.drawnAngle = OB, BB.element.style.rotate = `${OB}rad`)
-      }
-      flashEdge(BB, OB) {
-        var GB, YB, DB;
-        if (!this.root) return;
-        let QB = this.flashes.find((OB => null === OB.angle || null === BB ? OB.angle === BB : UB(OB.angle, BB) < .5));
-        if (!QB) {
-          const OB = document.createElement("div");
-          OB.className = "FrontlineDamageFlash";
-          const GB = OB.appendChild(document.createElement("div"));
-          GB.className = "FrontlineDamageFlashGlow", this.root.insertBefore(OB, this.arcLayer), QB = {
-            element: OB,
-            glow: GB,
-            angle: BB,
-            level: 0,
-            animation: null
-          }, this.flashes.push(QB)
-        }
-        const oB = null === (GB = QB.animation) || void 0 === GB || null === (YB = GB.effect) || void 0 === YB ? void 0 : YB.getComputedTiming().progress,
-          jB = null === oB || void 0 === oB ? 0 : QB.level * (1 - oB);
-        QB.level = Math.min(1, Math.max(OB, jB + .6 * OB)), QB.angle = BB;
-        const {
-          x: yB,
-          y: JB,
-          rx: MB,
-          ry: PB
-        } = function(BB, OB) {
-          const GB = window.innerWidth,
-            YB = window.innerHeight;
-          if (null === BB) return {
-            x: GB / 2,
-            y: YB / 2,
-            rx: 0,
-            ry: 0
-          };
-          const DB = Math.sin(BB),
-            QB = -Math.cos(BB),
-            oB = GB / 2 / Math.max(1e-6, Math.abs(DB)),
-            jB = YB / 2 / Math.max(1e-6, Math.abs(QB)),
-            yB = Math.min(oB, jB),
-            JB = Math.round(GB / 2 + DB * yB),
-            MB = Math.round(YB / 2 + QB * yB),
-            PB = YB / 100 * (.85 + .25 * OB),
-            zB = oB <= jB,
-            lB = Math.round((zB ? 30 : 74) * PB),
-            pB = Math.round((zB ? 58 : 26) * PB);
-          return {
-            x: JB,
-            y: MB,
-            rx: lB,
-            ry: pB
-          }
-        }(BB, QB.level), {
-          style: zB
-        } = QB.glow;
-        QB.glow.classList.toggle("Everywhere", null === BB), zB.setProperty("--glowX", `${yB}px`), zB.setProperty("--glowY", `${JB}px`), zB.setProperty("--glowRx", `${MB}px`), zB.setProperty("--glowRy", `${PB}px`), QB.element.style.transformOrigin = `${yB}px ${JB}px`, null === (DB = QB.animation) || void 0 === DB || DB.cancel();
-        const lB = QB.element.animate([{
-          opacity: 0,
-          scale: .82,
-          easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
-        }, {
-          opacity: QB.level,
-          scale: 1,
-          offset: .12,
-          easing: "linear"
-        }, {
-          opacity: .8 * QB.level,
-          offset: .38,
-          easing: "cubic-bezier(0.4, 0, 0.7, 1)"
-        }, {
-          opacity: 0,
-          scale: .92
-        }], {
-          duration: 520 + 180 * QB.level
-        });
-        QB.animation = lB;
-        const pB = QB;
-        lB.onfinish = () => {
-          pB.animation === lB && (pB.element.remove(), kB(this.flashes, pB))
-        }
-      }
-      clearHits() {
-        for (const YB of this.arcs) {
-          var BB, OB;
-          null === (BB = YB.fade) || void 0 === BB || BB.cancel(), YB.fade = null, null === (OB = YB.pop) || void 0 === OB || OB.cancel(), YB.element.remove()
-        }
-        this.arcs.length = 0;
-        for (const YB of this.flashes) {
-          var GB;
-          null === (GB = YB.animation) || void 0 === GB || GB.cancel(), YB.element.remove()
-        }
-        this.flashes.length = 0
+      setOwnsCrosshair(WW) {
+        WW !== this.ownsCrosshair && (this.ownsCrosshair = WW, document.body.classList.toggle("FrontlineCustomCrosshair", WW))
       }
     }
-
-    function UB(BB, OB) {
-      return Math.abs(Math.atan2(Math.sin(BB - OB), Math.cos(BB - OB)))
-    }
-
-    function fB(BB) {
-      return Math.max(0, Math.min(1, BB))
-    }
-
-    function kB(BB, OB) {
-      const GB = BB.indexOf(OB); - 1 !== GB && BB.splice(GB, 1)
-    }
-    var dB = GB(1090),
-      KB = GB.n(dB),
-      uB = GB(37263),
-      mB = GB(37367),
-      IB = GB(1175),
-      FB = GB(1480),
-      iB = GB(40167);
-    const LB = "frontlineHudChanged",
-      gB = "frontlineScoreboardChanged";
-    class rB {
+    var KW = OW(1089),
+      SW = OW.n(KW),
+      YW = OW(37868),
+      yW = OW(37919),
+      TW = OW(1172),
+      JW = OW(1526),
+      hW = OW(37888),
+      HW = OW(40710),
+      nW = OW(40712);
+    const uW = "frontlineHudChanged",
+      oW = "frontlineScoreboardChanged";
+    class dW {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -973,86 +653,85 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      nP(BB) {
-        this.wire = BB, JB.o.tM(LB, BB, !0)
+      yZ(WW) {
+        this.wire = WW, tW.l.iZ(uW, WW, !0)
       }
-      receiveScoreboard(BB) {
-        let OB = "scoreboard" === BB[0] ? performance.now() + BB[5] : 0;
-        const GB = this.scoreboard.endsAt;
-        0 !== OB && 0 !== GB && Math.abs(OB - GB) < 1e3 && (OB = GB), this.scoreboard = {
-          wire: BB,
-          endsAt: OB
-        }, JB.o.tM(gB, this.scoreboard, !0)
+      receiveScoreboard(WW) {
+        const iW = "scoreboard" === WW[0] ? (0, nW.e)(WW[5], this.scoreboard.endsAt) : 0;
+        this.scoreboard = {
+          wire: WW,
+          endsAt: iW
+        }, tW.l.iZ(oW, this.scoreboard, !0)
       }
     }
-    var XB = GB(1282);
-    const wB = {
+    var eW = OW(1283);
+    const vW = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function EB(BB) {
+    function gW(WW) {
       let {
-        className: OB,
-        point: GB
-      } = BB;
-      const [YB, DB, QB, oB, jB, yB] = GB;
-      return (0, XB.jsxs)("div", {
-        className: KB()(OB, `Owner-${DB||"None"}`, `Leader-${oB||"None"}`, {
-          Contested: jB,
-          Here: yB
+        className: iW,
+        point: OW
+      } = WW;
+      const [mW, EW, NW, PW, LW, cW] = OW;
+      return (0, eW.jsxs)("div", {
+        className: SW()(iW, `Owner-${EW||"None"}`, `Leader-${PW||"None"}`, {
+          Contested: LW,
+          Here: cW
         }),
-        children: [(0, XB.jsx)("span", {
+        children: [(0, eW.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: YB
-        }), (0, XB.jsx)("i", {
+          children: mW
+        }), (0, eW.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${QB}%`
+            width: `${NW}%`
           }
         })]
       })
     }
-    const cB = (0, DB.memo)((function(BB) {
+    const DW = (0, EW.memo)((function(WW) {
         let {
-          points: OB,
-          markers: GB
-        } = BB;
+          points: iW,
+          markers: OW
+        } = WW;
         const {
-          t: YB
-        } = (0, IB.H)();
-        return OB ? (0, XB.jsx)("div", {
+          t: mW
+        } = (0, TW.B)();
+        return iW ? (0, eW.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: OB.map((BB => {
-            const [OB, , , , , , , DB] = BB;
-            return (0, XB.jsxs)("div", {
-              ref: GB.points.bindMarker(OB),
+          children: iW.map((WW => {
+            const [iW, , , , , , , EW] = WW;
+            return (0, eW.jsxs)("div", {
+              ref: OW.points.bindMarker(iW),
               className: "FrontlinePointMarker",
-              children: [(0, XB.jsx)(EB, {
+              children: [(0, eW.jsx)(gW, {
                 className: "FrontlinePointMarkerTile",
-                point: BB
-              }), (0, XB.jsxs)("div", {
+                point: WW
+              }), (0, eW.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [DB && (0, XB.jsx)("span", {
-                  className: KB()("FrontlinePointMarkerHomeTurf", `Team-${DB}`),
-                  children: YB("frontlineHud:homeTurf", {
-                    team: YB(wB[DB])
+                children: [EW && (0, eW.jsx)("span", {
+                  className: SW()("FrontlinePointMarkerHomeTurf", `Team-${EW}`),
+                  children: mW("frontlineHud:homeTurf", {
+                    team: mW(vW[EW])
                   })
-                }), (0, XB.jsx)("span", {
+                }), (0, eW.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, OB)
+            }, iW)
           }))
         }) : null
       })),
-      hB = {
+      VW = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      aB = {
+      pW = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -1060,269 +739,252 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function eB(BB) {
+    function fW(WW) {
       let {
-        hud: OB,
-        crosshair: GB,
-        damage: YB,
-        markers: DB
-      } = BB;
-      const QB = (0, FB.i)(LB, OB.getWire()),
-        oB = (0, FB.i)(gB, OB.getScoreboard());
-      return (0, XB.jsxs)(XB.Fragment, {
-        children: [(0, XB.jsx)(TB, {
-          damage: YB
-        }), (0, XB.jsx)(cB, {
-          points: "scoreboard" === oB.wire[0] ? oB.wire[6] : null,
-          markers: DB
-        }), (0, XB.jsx)(CB, {
-          view: oB
-        }), (0, XB.jsx)("div", {
+        hud: iW,
+        crosshair: OW,
+        damage: mW,
+        markers: EW
+      } = WW;
+      const NW = (0, JW.g)(uW, iW.getWire()),
+        PW = (0, JW.g)(oW, iW.getScoreboard());
+      return (0, eW.jsxs)(eW.Fragment, {
+        children: [(0, eW.jsx)(HW.e, {
+          controller: mW
+        }), (0, eW.jsx)(DW, {
+          points: "scoreboard" === PW.wire[0] ? PW.wire[6] : null,
+          markers: EW
+        }), (0, eW.jsx)(XW, {
+          view: PW
+        }), (0, eW.jsx)("div", {
           className: "FrontlineReticle",
-          ref: GB.bindElement
-        }), (0, XB.jsx)(uB.e, {
-          children: (0, XB.jsx)(bB, {
-            wire: QB
+          ref: OW.bindElement
+        }), (0, eW.jsx)(YW.h, {
+          children: (0, eW.jsx)(CW, {
+            wire: NW
           })
         })]
       })
     }
-    const TB = (0, DB.memo)((function(BB) {
+    const CW = (0, EW.memo)((function(WW) {
         let {
-          damage: OB
-        } = BB;
-        return (0, XB.jsxs)("div", {
-          className: "FrontlineDamage",
-          ref: OB.bindElement,
-          children: [(0, XB.jsx)("div", {
-            className: "FrontlineDamageLow",
-            children: (0, XB.jsx)("div", {
-              className: "FrontlineDamageShade"
-            })
-          }), (0, XB.jsx)("div", {
-            className: "FrontlineDamageArcs"
-          })]
-        })
-      })),
-      bB = (0, DB.memo)((function(BB) {
-        let {
-          wire: OB
-        } = BB;
+          wire: iW
+        } = WW;
         const {
-          t: GB
-        } = (0, IB.H)();
-        if ("capture" === OB[0]) {
-          const [, BB, YB, DB, QB, oB, jB] = OB, yB = Math.round(DB / 100 * 24);
-          return (0, XB.jsxs)("div", {
-            className: KB()("FrontlinePlate", `Status-${YB}`, `Leader-${QB||"None"}`),
-            children: [(0, XB.jsx)(xB, {}), (0, XB.jsxs)("div", {
+          t: OW
+        } = (0, TW.B)();
+        if ("capture" === iW[0]) {
+          const [, WW, mW, EW, NW, PW, LW] = iW, cW = Math.round(EW / 100 * 24);
+          return (0, eW.jsxs)("div", {
+            className: SW()("FrontlinePlate", `Status-${mW}`, `Leader-${NW||"None"}`),
+            children: [(0, eW.jsx)(GW, {}), (0, eW.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, XB.jsx)("span", {
+              children: [(0, eW.jsx)("span", {
                 className: "FrontlineObjective",
-                children: BB
-              }), (0, XB.jsxs)("div", {
+                children: WW
+              }), (0, eW.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, XB.jsx)("div", {
+                children: [(0, eW.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: GB("frontlineHud:objective", {
-                    point: BB,
-                    friendly: oB,
-                    enemy: jB
+                  children: OW("frontlineHud:objective", {
+                    point: WW,
+                    friendly: PW,
+                    enemy: LW
                   })
-                }), (0, XB.jsx)("div", {
+                }), (0, eW.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: GB(hB[YB])
+                  children: OW(VW[mW])
                 })]
-              }), (0, XB.jsxs)("span", {
+              }), (0, eW.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(DB).padStart(3, "0"), (0, XB.jsx)("small", {
+                children: [String(EW).padStart(3, "0"), (0, eW.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, XB.jsx)(vB, {
+            }), (0, eW.jsx)(qW, {
               segments: 24,
-              lit: yB
+              lit: cW
             })]
           })
         }
-        if ("alert" === OB[0]) {
-          const [, BB, YB, DB] = OB;
-          return (0, XB.jsxs)("div", {
-            className: KB()("FrontlinePlate", "FrontlineAlert", `Tone-${DB}`),
-            children: [(0, XB.jsx)(xB, {}), (0, XB.jsx)("div", {
+        if ("alert" === iW[0]) {
+          const [, WW, mW, EW] = iW;
+          return (0, eW.jsxs)("div", {
+            className: SW()("FrontlinePlate", "FrontlineAlert", `Tone-${EW}`),
+            children: [(0, eW.jsx)(GW, {}), (0, eW.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: GB(aB[BB])
-            }), (0, XB.jsx)("div", {
+              children: OW(pW[WW])
+            }), (0, eW.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: YB
+              children: mW
             })]
           })
         }
         return null
       })),
-      CB = (0, DB.memo)((function(BB) {
+      XW = (0, EW.memo)((function(WW) {
         let {
-          view: OB
-        } = BB;
+          view: iW
+        } = WW;
         const {
-          t: GB
-        } = (0, IB.H)(), YB = (0, DB.useRef)(null), QB = function(BB, OB) {
-          const [GB, YB] = (0, DB.useState)(!1);
-          return (0, DB.useLayoutEffect)((() => {
-            const OB = BB.current;
-            if (!OB) return;
-            const GB = document.querySelector(`.${mB.i}`),
-              DB = document.querySelector(`.${mB.k}`),
-              QB = () => {
-                var BB;
-                const QB = OB.querySelector(".FrontlineTeamTrack"),
-                  oB = (0, yB.getRemInPx)(),
-                  jB = OB.getBoundingClientRect().width - 2 * (null !== (BB = null === QB || void 0 === QB ? void 0 : QB.getBoundingClientRect().width) && void 0 !== BB ? BB : 0),
-                  JB = window.innerWidth / 2,
-                  MB = GB ? GB.getBoundingClientRect().right : 0,
-                  PB = DB ? DB.getBoundingClientRect().left : window.innerWidth,
-                  zB = Math.min(JB - MB, PB - JB) - mB.e - jB / 2,
-                  lB = zB < 6 * oB,
-                  pB = lB ? (window.innerWidth - jB) / 2 - mB.e : zB;
-                OB.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(pB,14*oB)))}px`), YB(lB)
+          t: OW
+        } = (0, TW.B)(), mW = (0, EW.useRef)(null), NW = function(WW, iW) {
+          const [OW, mW] = (0, EW.useState)(!1);
+          return (0, EW.useLayoutEffect)((() => {
+            const iW = WW.current;
+            if (!iW) return;
+            const OW = document.querySelector(`.${yW.e}`),
+              EW = document.querySelector(`.${yW.h}`),
+              NW = () => {
+                var WW;
+                const NW = iW.querySelector(".FrontlineTeamTrack"),
+                  PW = (0, wW.getRemInPx)(),
+                  LW = iW.getBoundingClientRect().width - 2 * (null !== (WW = null === NW || void 0 === NW ? void 0 : NW.getBoundingClientRect().width) && void 0 !== WW ? WW : 0),
+                  cW = window.innerWidth / 2,
+                  tW = OW ? OW.getBoundingClientRect().right : 0,
+                  ZW = EW ? EW.getBoundingClientRect().left : window.innerWidth,
+                  xW = Math.min(cW - tW, ZW - cW) - yW.b - LW / 2,
+                  lW = xW < 6 * PW,
+                  AW = lW ? (window.innerWidth - LW) / 2 - yW.b : xW;
+                iW.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(AW,14*PW)))}px`), mW(lW)
               };
-            QB();
-            const oB = new ResizeObserver(QB);
-            for (const BB of [OB, GB, DB]) BB && oB.observe(BB);
-            return window.addEventListener("resize", QB), () => {
-              oB.disconnect(), window.removeEventListener("resize", QB)
+            NW();
+            const PW = new ResizeObserver(NW);
+            for (const WW of [iW, OW, EW]) WW && PW.observe(WW);
+            return window.addEventListener("resize", NW), () => {
+              PW.disconnect(), window.removeEventListener("resize", NW)
             }
-          }), [BB, OB]), GB
-        }(YB, "scoreboard" === OB.wire[0]);
-        if ("scoreboard" !== OB.wire[0]) return null;
-        const [, oB, jB, JB, MB, , PB] = OB.wire, zB = "Red" === oB ? "Blue" : "Red";
-        return (0, XB.jsxs)("div", {
-          className: KB()("FrontlineScoreboardContainer", {
-            Below: QB
+          }), [WW, iW]), OW
+        }(mW, "scoreboard" === iW.wire[0]);
+        if ("scoreboard" !== iW.wire[0]) return null;
+        const [, PW, LW, cW, tW, , ZW] = iW.wire, xW = "Red" === PW ? "Blue" : "Red";
+        return (0, eW.jsxs)("div", {
+          className: SW()("FrontlineScoreboardContainer", {
+            Below: NW
           }),
-          children: [(0, XB.jsxs)("div", {
-            ref: YB,
+          children: [(0, eW.jsxs)("div", {
+            ref: mW,
             className: "FrontlineScoreboard",
-            children: [(0, XB.jsx)(xB, {}), (0, XB.jsx)(HB, {
-              team: oB,
-              tickets: jB,
-              goal: MB,
+            children: [(0, eW.jsx)(GW, {}), (0, eW.jsx)(BW, {
+              team: PW,
+              tickets: LW,
+              goal: tW,
               side: "Friendly"
-            }), (0, XB.jsx)("div", {
+            }), (0, eW.jsx)("div", {
               className: "FrontlinePoints",
-              children: PB.map((BB => (0, XB.jsx)(EB, {
+              children: ZW.map((WW => (0, eW.jsx)(gW, {
                 className: "FrontlinePoint",
-                point: BB
-              }, BB[0])))
-            }), (0, XB.jsx)(HB, {
-              team: zB,
-              tickets: JB,
-              goal: MB,
+                point: WW
+              }, WW[0])))
+            }), (0, eW.jsx)(BW, {
+              team: xW,
+              tickets: cW,
+              goal: tW,
               side: "Enemy"
             })]
-          }), (0, XB.jsxs)("div", {
+          }), (0, eW.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, XB.jsx)(sB, {
-              endsAt: OB.endsAt
-            }), (0, XB.jsx)("div", {
+            children: [(0, eW.jsx)(RW, {
+              endsAt: iW.endsAt
+            }), (0, eW.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: GB("frontlineHud:ticketGoal", {
-                goal: MB
+              children: OW("frontlineHud:ticketGoal", {
+                goal: tW
               })
             })]
           })]
         })
       }));
 
-    function HB(BB) {
+    function BW(WW) {
       let {
-        team: OB,
-        tickets: GB,
-        goal: YB,
-        side: DB
-      } = BB;
+        team: iW,
+        tickets: OW,
+        goal: mW,
+        side: EW
+      } = WW;
       const {
-        t: QB
-      } = (0, IB.H)(), oB = String(GB).padStart(3, "0"), jB = oB.search(/[1-9]/), yB = -1 === jB ? oB : oB.slice(0, jB), JB = Math.min(20, Math.floor(GB / YB * 20));
-      return (0, XB.jsxs)("div", {
-        className: KB()("FrontlineTeamScore", DB, `Team-${OB}`),
-        children: [(0, XB.jsxs)("div", {
+        t: NW
+      } = (0, TW.B)(), PW = String(OW).padStart(3, "0"), LW = PW.search(/[1-9]/), cW = -1 === LW ? PW : PW.slice(0, LW), wW = Math.min(20, Math.floor(OW / mW * 20));
+      return (0, eW.jsxs)("div", {
+        className: SW()("FrontlineTeamScore", EW, `Team-${iW}`),
+        children: [(0, eW.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, XB.jsx)("span", {
+          children: [(0, eW.jsx)("span", {
             className: "Lead",
-            children: yB
-          }), -1 !== jB && oB.slice(jB)]
-        }), (0, XB.jsxs)("div", {
+            children: cW
+          }), -1 !== LW && PW.slice(LW)]
+        }), (0, eW.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, XB.jsx)("div", {
+          children: [(0, eW.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: QB(wB[OB])
-          }), (0, XB.jsx)(vB, {
+            children: NW(vW[iW])
+          }), (0, eW.jsx)(qW, {
             segments: 20,
-            lit: JB
+            lit: wW
           })]
         })]
       })
     }
 
-    function vB(BB) {
+    function qW(WW) {
       let {
-        segments: OB,
-        lit: GB
-      } = BB;
-      return (0, XB.jsx)("div", {
+        segments: iW,
+        lit: OW
+      } = WW;
+      return (0, eW.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: OB
-        }, ((BB, OB) => (0, XB.jsx)("i", {
-          className: KB()({
-            Lit: OB < GB
+          length: iW
+        }, ((WW, iW) => (0, eW.jsx)("i", {
+          className: SW()({
+            Lit: iW < OW
           })
-        }, OB)))
+        }, iW)))
       })
     }
 
-    function sB(BB) {
+    function RW(WW) {
       let {
-        endsAt: OB
-      } = BB;
-      const GB = (0, iB.k)(OB);
-      return (0, XB.jsx)("div", {
-        className: KB()("FrontlineClock", {
-          Urgent: GB <= 60
+        endsAt: iW
+      } = WW;
+      const OW = (0, hW.f)(iW);
+      return (0, eW.jsx)("div", {
+        className: SW()("FrontlineClock", {
+          Urgent: OW <= 60
         }),
-        children: (0, iB.e)(GB)
+        children: (0, hW.d)(OW)
       })
     }
 
-    function xB() {
-      return (0, XB.jsxs)(XB.Fragment, {
-        children: [(0, XB.jsx)("i", {
+    function GW() {
+      return (0, eW.jsxs)(eW.Fragment, {
+        children: [(0, eW.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, XB.jsx)("i", {
+        }), (0, eW.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var tB = GB(40172);
-    class BO {
-      constructor(BB) {
-        this.hud = BB, this.points = new tB.e({
+    var IW = OW(40719);
+    class aW {
+      constructor(WW) {
+        this.hud = WW, this.points = new IW.d({
           labels: "FrontlinePointMarkerLabels",
           distance: "FrontlinePointMarkerDistance"
         }, "frontlineHud:markerDistance")
       }
-      frame(BB, OB) {
-        this.points.setRender(BB);
-        const GB = this.hud.getScoreboard().wire;
-        if ("scoreboard" === GB[0] && this.points.hasMarkers())
-          for (const [YB, , , , , , DB] of GB[6]) DB && this.points.update(YB, DB[0], DB[1] + 2.5, DB[2], OB)
+      frame(WW, iW) {
+        this.points.setRender(WW);
+        const OW = this.hud.getScoreboard().wire;
+        if ("scoreboard" === OW[0] && this.points.hasMarkers())
+          for (const [mW, , , , , , EW] of OW[6]) EW && this.points.update(mW, EW[0], EW[1] + 2.5, EW[2], iW)
       }
     }
-    var OO = GB(6954),
-      GO = GB(2898);
-    const YO = "frontlineRoundEndChanged";
-    class DO {
+    var rW = OW(7421),
+      zW = OW(3637);
+    const FW = "frontlineRoundEndChanged";
+    class QW {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1333,245 +995,522 @@ export const modules = {
       getView() {
         return this.view
       }
-      nP(BB) {
-        const OB = "roundEnd" === BB[0] ? performance.now() + BB[5] : 0;
+      yZ(WW) {
+        const iW = "roundEnd" === WW[0] ? performance.now() + WW[5] : 0;
         this.view = {
-          wire: BB,
+          wire: WW,
           key: this.view.key + 1,
-          endsAt: OB
-        }, JB.o.tM(YO, this.view, !0)
+          endsAt: iW
+        }, tW.l.iZ(FW, this.view, !0)
       }
     }
-    const QO = (0, DB.lazy)((() => (0, GO.e)(Promise.all([GB.e(261), GB.e(222)]).then((() => GB(44896))), (BB => BB.FrontlineMvpLineup)))),
-      oO = [4800, 4e3, 3200],
-      jO = [1, 0, 2],
-      yO = {
+    var Wi = OW(2983);
+    const ii = (0, EW.lazy)((() => (0, zW.b)(Promise.all([OW.e(266), OW.e(228)]).then((() => OW(53944))), (WW => WW.FrontlineMvpLineup)))),
+      Oi = [4800, 4e3, 3200],
+      mi = [1, 0, 2],
+      Ei = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      JO = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      Ni = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function MO(BB) {
+    function Pi(WW) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, FB.i)(YO, OB.getView()),
-        YB = (0, iB.i)(GB.endsAt);
-      return "roundEnd" !== GB.wire[0] || 1e3 * YB < -2e3 ? null : (0, XB.jsx)(PO, {
-        wire: GB.wire,
-        secondsLeft: Math.max(0, Math.ceil(YB))
-      }, GB.key)
+        controller: iW
+      } = WW;
+      const OW = (0, JW.g)(FW, iW.getView()),
+        mW = (0, hW.e)(OW.endsAt);
+      return "roundEnd" !== OW.wire[0] || 1e3 * mW < -2e3 ? null : (0, eW.jsx)(Li, {
+        wire: OW.wire,
+        secondsLeft: Math.max(0, Math.ceil(mW))
+      }, OW.key)
     }
-    const PO = (0, DB.memo)((function(BB) {
+    const Li = (0, EW.memo)((function(WW) {
       let {
-        wire: OB,
-        secondsLeft: GB
-      } = BB;
+        wire: iW,
+        secondsLeft: OW
+      } = WW;
       const {
-        t: QB
-      } = (0, IB.H)(), [, oB, jB, yB, JB, , MB, PB] = OB, zB = (0, DB.useMemo)((() => jO.filter((BB => BB < PB.length))), [PB]), lB = (0, DB.useMemo)((() => zB.map((BB => {
-        const [, , , , , OB, GB] = PB[BB];
+        t: NW
+      } = (0, TW.B)();
+      (0, EW.useEffect)((() => (0, Wi.c)()), []);
+      const [, PW, LW, cW, wW, , tW, ZW] = iW, xW = (0, EW.useMemo)((() => mi.filter((WW => WW < ZW.length))), [ZW]), lW = (0, EW.useMemo)((() => xW.map((WW => {
+        const [, , , , , iW, OW] = ZW[WW];
         return {
-          cosmetics: YB.map(((BB, GB) => [BB, OB[GB]])),
-          size: 0 === BB ? 1.15 : .85,
+          cosmetics: mW.map(((WW, OW) => [WW, iW[OW]])),
+          size: 0 === WW ? 1.15 : .85,
           heldGun: {
-            name: GB,
-            aimed: 0 === BB
+            name: OW,
+            aimed: 0 === WW
           },
-          showAfterMs: oO[BB]
+          showAfterMs: Oi[WW]
         }
-      }))), [PB, zB]);
-      return (0, XB.jsxs)("div", {
-        className: KB()("FrontlineRoundEnd", `Result-${oB}`),
+      }))), [ZW, xW]);
+      return (0, eW.jsxs)("div", {
+        className: SW()("FrontlineRoundEnd", `Result-${PW}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, XB.jsx)("div", {
+        children: [(0, eW.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, XB.jsxs)("div", {
+        }), (0, eW.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, XB.jsxs)("div", {
+          children: [(0, eW.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, XB.jsx)("i", {
+            children: [(0, eW.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, XB.jsx)("i", {
+            }), (0, eW.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (pB = QB(yO[oB]), /\p{Script=Arabic}/u.test(pB) ? [pB] : (0, OO.c)(pB)).map(((BB, OB) => (0, XB.jsx)("span", {
+            }), (AW = NW(Ei[PW]), /\p{Script=Arabic}/u.test(AW) ? [AW] : (0, rW.c)(AW)).map(((WW, iW) => (0, eW.jsx)("span", {
               style: {
-                "--letter": OB
+                "--letter": iW
               },
-              children: BB
-            }, OB)))]
-          }), (0, XB.jsxs)("div", {
+              children: WW
+            }, iW)))]
+          }), (0, eW.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [jB && "victory" === oB && (0, XB.jsx)("span", {
+            children: [LW && "victory" === PW && (0, eW.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: QB("frontlineRoundEnd:comeback")
-            }), (0, XB.jsxs)("span", {
+              children: NW("frontlineRoundEnd:comeback")
+            }), (0, eW.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, XB.jsx)("b", {
+              children: [(0, eW.jsx)("b", {
                 className: "Friendly",
-                children: yB
-              }), " \u2013 ", (0, XB.jsx)("b", {
+                children: cW
+              }), " \u2013 ", (0, eW.jsx)("b", {
                 className: "Enemy",
-                children: JB
+                children: wW
               })]
             })]
           })]
-        }), zB.length > 0 && (0, XB.jsxs)("div", {
+        }), xW.length > 0 && (0, eW.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": zB.length
+            "--columns": xW.length
           },
-          children: [(0, XB.jsx)(DB.Suspense, {
+          children: [(0, eW.jsx)(EW.Suspense, {
             fallback: null,
-            children: (0, XB.jsx)(QO, {
+            children: (0, eW.jsx)(ii, {
               className: "FrontlineRoundEndLineup",
-              players: lB
+              players: lW
             })
-          }), zB.map((BB => (0, XB.jsx)(zO, {
-            mvp: PB[BB],
-            place: BB
-          }, BB)))]
-        }), (0, XB.jsx)("div", {
+          }), xW.map((WW => (0, eW.jsx)(ci, {
+            mvp: ZW[WW],
+            place: WW
+          }, WW)))]
+        }), (0, eW.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: QB("frontlineRoundEnd:nextFront", {
-            map: MB,
-            seconds: String(GB)
+          children: NW("frontlineRoundEnd:nextFront", {
+            map: tW,
+            seconds: String(OW)
           })
         })]
       });
-      var pB
+      var AW
     }));
 
-    function zO(BB) {
+    function ci(WW) {
       let {
-        mvp: OB,
-        place: GB
-      } = BB;
+        mvp: iW,
+        place: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, IB.H)(), [DB, QB, oB, jB, yB] = OB, [JB, MB] = YB(function(BB, OB) {
-        return 1 === OB && "damage" !== BB ? `frontlineRoundEnd:${BB}One` : `frontlineRoundEnd:${BB}`
-      }(oB, jB), {
+        t: mW
+      } = (0, TW.B)(), [EW, NW, PW, LW, cW] = iW, [wW, tW] = mW(function(WW, iW) {
+        return 1 === iW && "damage" !== WW ? `frontlineRoundEnd:${WW}One` : `frontlineRoundEnd:${WW}`
+      }(PW, LW), {
         name: "\0",
-        count: jB.toLocaleString()
+        count: LW.toLocaleString()
       }).split("\0");
-      return (0, XB.jsxs)("div", {
-        className: KB()("FrontlineMvpCard", `Place-${GB+1}`, `Team-${QB}`),
+      return (0, eW.jsxs)("div", {
+        className: SW()("FrontlineMvpCard", `Place-${OW+1}`, `Team-${NW}`),
         style: {
-          "--revealMs": `${oO[GB]}ms`
+          "--revealMs": `${Oi[OW]}ms`
         },
-        children: [(0, XB.jsx)("i", {
+        children: [(0, eW.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, XB.jsx)("i", {
+        }), (0, eW.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, XB.jsx)("div", {
+        }), (0, eW.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: YB(JO[GB])
-        }), (0, XB.jsxs)("div", {
+          children: mW(Ni[OW])
+        }), (0, eW.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [JB, (0, XB.jsx)("span", {
+          children: [wW, (0, eW.jsx)("span", {
             className: "FrontlineMvpName",
-            children: DB
-          }), MB]
-        }), (0, XB.jsx)("div", {
+            children: EW
+          }), tW]
+        }), (0, eW.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: yB
+          children: cW
         })]
       })
     }
-    const lO = function(BB, OB, GB, YB) {
+    const wi = function(WW, iW, OW, mW) {
       let {
-        localPlayerId: oB
-      } = YB;
-      const jB = new rB,
-        yB = new DO;
-      let JB = null,
-        MB = null,
-        PB = null,
-        zB = null,
-        lB = null,
-        pB = [!1, !1];
-      const qB = () => {
-        var BB, OB;
-        const [GB, YB] = pB;
-        null === (BB = MB) || void 0 === BB || BB.Zk(!GB), null === (OB = PB) || void 0 === OB || OB.Zk(!YB)
+        localPlayerId: LW
+      } = mW;
+      const cW = new dW,
+        wW = new QW;
+      let tW = null,
+        ZW = null,
+        xW = null,
+        lW = null,
+        AW = null,
+        bW = [!1, !1];
+      const jW = () => {
+        var WW, iW;
+        const [OW, mW] = bW;
+        null === (WW = ZW) || void 0 === WW || WW.WK(!OW), null === (iW = xW) || void 0 === iW || iW.WK(!mW)
       };
       return {
-        onCreate: BB => {
-          JB = BB, MB = new WB(BB, oB), PB = new nB(BB, oB), zB = new BO(jB), qB(), lB = (0, QB.s)((0, DB.createElement)(DB.Fragment, null, (0, DB.createElement)(eB, {
-            hud: jB,
-            crosshair: MB,
-            damage: PB,
-            markers: zB
-          }), (0, DB.createElement)(MO, {
-            controller: yB
+        onCreate: WW => {
+          tW = WW, ZW = new MW(WW, LW), xW = new PW.d(WW, LW), lW = new aW(cW), jW(), AW = (0, NW.O)((0, EW.createElement)(EW.Fragment, null, (0, EW.createElement)(fW, {
+            hud: cW,
+            crosshair: ZW,
+            damage: xW,
+            markers: lW
+          }), (0, EW.createElement)(Pi, {
+            controller: wW
           })))
         },
         onClose: () => {
-          var BB, OB, GB, YB;
-          null === (BB = lB) || void 0 === BB || BB(), null === (OB = MB) || void 0 === OB || OB.dispose(), MB = null, null === (GB = PB) || void 0 === GB || GB.dispose(), PB = null, null === (YB = zB) || void 0 === YB || YB.points.dispose(), zB = null, JB = null
+          var WW, iW, OW, mW;
+          null === (WW = AW) || void 0 === WW || WW(), null === (iW = ZW) || void 0 === iW || iW.dispose(), ZW = null, null === (OW = xW) || void 0 === OW || OW.dispose(), xW = null, null === (mW = lW) || void 0 === mW || mW.points.dispose(), lW = null, tW = null
         },
-        onAfterRender: (BB, OB) => {
-          var GB, YB, DB, QB, jB;
-          null === (GB = MB) || void 0 === GB || GB.frame(BB, OB.tanHalfFovY), null === (YB = PB) || void 0 === YB || YB.frame(OB.cameraHeading), null === (DB = zB) || void 0 === DB || DB.frame(OB, null !== (QB = null === (jB = JB) || void 0 === jB ? void 0 : jB.getPositionView(oB)) && void 0 !== QB ? QB : null)
+        onAfterRender: (WW, iW) => {
+          var OW, mW, EW, NW, PW;
+          null === (OW = ZW) || void 0 === OW || OW.frame(WW, iW.tanHalfFovY), null === (mW = xW) || void 0 === mW || mW.frame(iW.cameraHeading), null === (EW = lW) || void 0 === EW || EW.frame(iW, null !== (NW = null === (PW = tW) || void 0 === PW ? void 0 : PW.getPositionView(LW)) && void 0 !== NW ? NW : null)
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          "frontlineHud" === BB ? jB.nP(OB) : "frontlineScoreboard" === BB ? jB.receiveScoreboard(OB) : "frontlineRoundEnd" === BB ? yB.nP(OB) : "frontlinePrefs" === BB && (pB = OB, qB())
+        onReceivedMessageFromServer: (WW, iW) => {
+          "frontlineHud" === WW ? cW.yZ(iW) : "frontlineScoreboard" === WW ? cW.receiveScoreboard(iW) : "frontlineRoundEnd" === WW ? wW.yZ(iW) : "frontlinePrefs" === WW && (bW = iW, jW())
         }
       }
     }
   },
-  6954: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB
+  40710: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW
     });
-    const YB = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    var mW = OW(62),
+      EW = OW(1283);
+    const NW = (0, mW.memo)((function(WW) {
+      let {
+        controller: iW
+      } = WW;
+      return (0, EW.jsxs)("div", {
+        className: "DamageFeedback",
+        ref: iW.bindElement,
+        children: [(0, EW.jsx)("div", {
+          className: "DamageFeedbackLow",
+          children: (0, EW.jsx)("div", {
+            className: "DamageFeedbackShade"
+          })
+        }), (0, EW.jsx)("div", {
+          className: "DamageFeedbackArcs"
+        })]
+      })
+    }))
+  },
+  40706: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW
+    });
+    var mW = OW(27);
+    const EW = "DamageFeedbackArcsShown",
+      NW = .45,
+      PW = .2;
+    class LW {
+      constructor(WW, iW) {
+        let {
+          arcs: OW = !0,
+          edgeGlow: EW = !0,
+          lowHealthShade: NW = !0,
+          enabled: PW = !0
+        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.api = WW, this.localPlayerId = iW, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+          frac: 0,
+          at: -1 / 0
+        }, this.maxHealth = null, this.DE = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = WW => {
+          var iW, OW;
+          this.clearHits(), this.root = WW, this.lowLayer = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".DamageFeedbackLow")) && void 0 !== iW ? iW : null, this.arcLayer = null !== (OW = null === WW || void 0 === WW ? void 0 : WW.querySelector(".DamageFeedbackArcs")) && void 0 !== OW ? OW : null, this.showRoot(), this.drawLow()
+        }, this.parts = {
+          arcs: OW,
+          edgeGlow: EW,
+          lowHealthShade: NW
+        }, this.enabled = PW, this.token = mW.l.subscribe("damagedByOtherPlayer", (WW => {
+          let {
+            direction: iW,
+            vE: OW
+          } = WW;
+          this.onHurt(iW, OW)
+        })), this.syncHealth(), this.showCustomDamage()
+      }
+      WK(WW) {
+        WW !== this.enabled && (this.enabled = WW, this.showCustomDamage(), WW || this.clearHits(), this.showRoot())
+      }
+      frame(WW) {
+        this.syncHealth(), this.cameraHeading = WW;
+        for (const iW of this.arcs) this.drawArcAngle(iW)
+      }
+      dispose() {
+        mW.l.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(EW)
+      }
+      showCustomDamage() {
+        document.body.classList.toggle(EW, this.enabled && this.parts.arcs)
+      }
+      showRoot() {
+        this.root && (this.root.style.display = this.enabled ? "" : "none")
+      }
+      syncHealth() {
+        const WW = this.api.getClientOption(this.localPlayerId, "_health"),
+          iW = this.api.getClientOption(this.localPlayerId, "_shield"),
+          OW = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(WW, this.readHealth) && Object.is(iW, this.readShield) && Object.is(OW, this.readMaxHealth)) return;
+        if (this.readHealth = WW, this.readShield = iW, this.readMaxHealth = OW, null === WW || void 0 === WW || !OW) return this.lastHealthPool = null, this.maxHealth = null, this.DE = 1, this.dead = !1, void this.drawLow();
+        const mW = WW + (null !== iW && void 0 !== iW ? iW : 0);
+        if (null !== this.lastHealthPool && mW < this.lastHealthPool) {
+          const WW = performance.now(),
+            iW = (this.lastHealthPool - mW) / OW;
+          this.lastDrop = WW - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + iW,
+            at: this.lastDrop.at
+          } : {
+            frac: iW,
+            at: WW
+          }
+        }
+        this.dead = WW <= 0, this.dead && this.clearHits(), this.lastHealthPool = mW, this.maxHealth = OW, this.DE = WW > 0 ? WW / OW : 1, this.drawLow()
+      }
+      onHurt(WW, iW) {
+        if (this.syncHealth(), this.dead || !this.enabled) return;
+        const OW = Math.min(1, this.takeDamageFrac(iW) / .3);
+        null !== WW && this.parts.arcs && this.showArc(WW, OW), this.parts.edgeGlow && this.flashEdge(null === WW ? null : WW - this.cameraHeading, .4 + .6 * OW)
+      }
+      takeDamageFrac(WW) {
+        if (void 0 !== WW && this.maxHealth) return WW / this.maxHealth;
+        if (performance.now() - this.lastDrop.at >= 300) return .12;
+        const {
+          frac: iW
+        } = this.lastDrop;
+        return this.lastDrop = {
+          frac: 0,
+          at: -1 / 0
+        }, iW
+      }
+      drawLow() {
+        if (!this.lowLayer || !this.parts.lowHealthShade) return;
+        const WW = wW((NW - this.DE) / .25),
+          iW = wW((PW - this.DE) / .15000000000000002),
+          OW = this.DE < NW;
+        this.lowLayer.classList.toggle("Active", OW), this.lowLayer.classList.toggle("Critical", this.DE < PW), this.lowLayer.style.opacity = String(OW ? .55 + .3 * WW + .15 * iW : 0)
+      }
+      showArc(WW, iW) {
+        var OW, mW;
+        if (!this.arcLayer) return;
+        let EW = this.arcs.find((iW => cW(iW.direction, WW) < .6));
+        if (!EW) {
+          const iW = document.createElement("div");
+          iW.className = "DamageFeedbackArc", iW.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(iW), EW = {
+            element: iW,
+            direction: WW,
+            drawnAngle: null,
+            fade: null,
+            pop: null
+          }, this.arcs.push(EW)
+        }
+        EW.direction = WW, this.drawArcAngle(EW);
+        const NW = EW.fade ? Number(getComputedStyle(EW.element).opacity) : 0;
+        null === (OW = EW.fade) || void 0 === OW || OW.cancel(), null === (mW = EW.pop) || void 0 === mW || mW.cancel(), EW.element.style.opacity = "1";
+        const PW = EW.element.animate([{
+          opacity: NW
+        }, {
+          opacity: 1
+        }], 144);
+        EW.fade = PW, EW.pop = EW.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * iW
+        }, {
+          scale: 1
+        }], {
+          duration: 160,
+          easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
+        });
+        const LW = EW;
+        PW.onfinish = () => {
+          if (LW.fade !== PW) return;
+          const WW = LW.element.animate([{
+            opacity: 1
+          }, {
+            opacity: 0
+          }], {
+            delay: 936,
+            duration: 864,
+            easing: "cubic-bezier(0.4, 0, 0.7, 1)",
+            fill: "forwards"
+          });
+          WW.startTime = PW.startTime, LW.fade = WW, WW.onfinish = () => {
+            LW.fade === WW && (LW.element.remove(), tW(this.arcs, LW))
+          }
+        }
+      }
+      drawArcAngle(WW) {
+        const iW = WW.direction - this.cameraHeading;
+        (null === WW.drawnAngle || Math.abs(iW - WW.drawnAngle) > .005) && (WW.drawnAngle = iW, WW.element.style.rotate = `${iW}rad`)
+      }
+      flashEdge(WW, iW) {
+        var OW, mW, EW;
+        if (!this.root) return;
+        let NW = this.flashes.find((iW => null === iW.angle || null === WW ? iW.angle === WW : cW(iW.angle, WW) < .5));
+        if (!NW) {
+          const iW = document.createElement("div");
+          iW.className = "DamageFeedbackFlash";
+          const OW = iW.appendChild(document.createElement("div"));
+          OW.className = "DamageFeedbackFlashGlow", this.root.insertBefore(iW, this.arcLayer), NW = {
+            element: iW,
+            glow: OW,
+            angle: WW,
+            level: 0,
+            animation: null
+          }, this.flashes.push(NW)
+        }
+        const PW = null === (OW = NW.animation) || void 0 === OW || null === (mW = OW.effect) || void 0 === mW ? void 0 : mW.getComputedTiming().progress,
+          LW = null === PW || void 0 === PW ? 0 : NW.level * (1 - PW);
+        NW.level = Math.min(1, Math.max(iW, LW + .6 * iW)), NW.angle = WW;
+        const {
+          x: wW,
+          y: ZW,
+          rx: xW,
+          ry: lW
+        } = function(WW, iW) {
+          const OW = window.innerWidth,
+            mW = window.innerHeight;
+          if (null === WW) return {
+            x: OW / 2,
+            y: mW / 2,
+            rx: 0,
+            ry: 0
+          };
+          const EW = Math.sin(WW),
+            NW = -Math.cos(WW),
+            PW = OW / 2 / Math.max(1e-6, Math.abs(EW)),
+            LW = mW / 2 / Math.max(1e-6, Math.abs(NW)),
+            cW = Math.min(PW, LW),
+            wW = Math.round(OW / 2 + EW * cW),
+            tW = Math.round(mW / 2 + NW * cW),
+            ZW = mW / 100 * (.85 + .25 * iW),
+            xW = PW <= LW,
+            lW = Math.round((xW ? 30 : 74) * ZW),
+            AW = Math.round((xW ? 58 : 26) * ZW);
+          return {
+            x: wW,
+            y: tW,
+            rx: lW,
+            ry: AW
+          }
+        }(WW, NW.level), {
+          style: AW
+        } = NW.glow;
+        NW.glow.classList.toggle("Everywhere", null === WW), AW.setProperty("--glowX", `${wW}px`), AW.setProperty("--glowY", `${ZW}px`), AW.setProperty("--glowRx", `${xW}px`), AW.setProperty("--glowRy", `${lW}px`), NW.element.style.transformOrigin = `${wW}px ${ZW}px`, null === (EW = NW.animation) || void 0 === EW || EW.cancel();
+        const bW = NW.element.animate([{
+          opacity: 0,
+          scale: .82,
+          easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
+        }, {
+          opacity: NW.level,
+          scale: 1,
+          offset: .12,
+          easing: "linear"
+        }, {
+          opacity: .8 * NW.level,
+          offset: .38,
+          easing: "cubic-bezier(0.4, 0, 0.7, 1)"
+        }, {
+          opacity: 0,
+          scale: .92
+        }], {
+          duration: 520 + 180 * NW.level
+        });
+        NW.animation = bW;
+        const jW = NW;
+        bW.onfinish = () => {
+          jW.animation === bW && (jW.element.remove(), tW(this.flashes, jW))
+        }
+      }
+      clearHits() {
+        for (const mW of this.arcs) {
+          var WW, iW;
+          null === (WW = mW.fade) || void 0 === WW || WW.cancel(), mW.fade = null, null === (iW = mW.pop) || void 0 === iW || iW.cancel(), mW.element.remove()
+        }
+        this.arcs.length = 0;
+        for (const mW of this.flashes) {
+          var OW;
+          null === (OW = mW.animation) || void 0 === OW || OW.cancel(), mW.element.remove()
+        }
+        this.flashes.length = 0
+      }
+    }
+
+    function cW(WW, iW) {
+      return Math.abs(Math.atan2(Math.sin(WW - iW), Math.cos(WW - iW)))
+    }
+
+    function wW(WW) {
+      return Math.max(0, Math.min(1, WW))
+    }
+
+    function tW(WW, iW) {
+      const OW = WW.indexOf(iW); - 1 !== OW && WW.splice(OW, 1)
+    }
+  },
+  7421: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW
+    });
+    const mW = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function DB(BB) {
-      return null === YB ? Array.from(BB) : Array.from(YB.segment(BB), (BB => {
+    function EW(WW) {
+      return null === mW ? Array.from(WW) : Array.from(mW.segment(WW), (WW => {
         let {
-          segment: OB
-        } = BB;
-        return OB
+          segment: iW
+        } = WW;
+        return iW
       }))
     }
   },
-  39154: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      f: () => QB
+  39679: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      h: () => NW
     });
-    const YB = new WeakMap;
+    const mW = new WeakMap;
 
-    function DB(BB) {
-      let OB = YB.get(BB);
-      return OB || (OB = {
-        hidden: BB.hidden,
+    function EW(WW) {
+      let iW = mW.get(WW);
+      return iW || (iW = {
+        hidden: WW.hidden,
         x: NaN,
         y: NaN
-      }, YB.set(BB, OB)), OB
+      }, mW.set(WW, iW)), iW
     }
 
-    function QB(BB, OB) {
-      const GB = DB(BB);
-      GB.hidden !== OB && (GB.hidden = OB, BB.hidden = OB)
+    function NW(WW, iW) {
+      const OW = EW(WW);
+      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
     }
 
-    function oB(BB, OB, GB) {
-      const YB = DB(BB);
-      YB.x === OB && YB.y === GB || (YB.x = OB, YB.y = GB, BB.style.translate = `${OB}vw ${GB}vh`)
+    function PW(WW, iW, OW) {
+      const mW = EW(WW);
+      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
     }
   },
-  37753: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB
+  38214: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW
     });
-    const YB = {
+    const mW = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1733,4 +1672,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

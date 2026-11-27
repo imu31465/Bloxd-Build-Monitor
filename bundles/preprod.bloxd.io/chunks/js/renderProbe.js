@@ -1,17 +1,17 @@
-export const id = 58;
-export const ids = [58];
+export const id = 59;
+export const ids = [59];
 export const modules = {
-  54076: (BB, OB, GB) => {
-    GB.d(OB, {
-      startRenderProbe: () => PB
+  54813: (WW, iW, OW) => {
+    OW.d(iW, {
+      startRenderProbe: () => ZW
     });
-    var YB = GB(645),
-      DB = GB(4801),
-      QB = GB(3136),
-      oB = GB(4923);
-    const jB = 1e3,
-      yB = 36e5,
-      JB = [{
+    var mW = OW(649),
+      EW = OW(5058),
+      NW = OW(3866),
+      PW = OW(5217);
+    const LW = 1e3,
+      cW = 36e5,
+      wW = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function MB(BB, OB, GB) {
-      var DB, QB;
-      return `${BB}; ${GB?`os ${GB.os}, gpu ${null!==(DB=GB.gpuFamily)&&void 0!==DB?DB:"unknown"} ${null!==(QB=GB.gpuModel)&&void 0!==QB?QB:"unknown"}`:"device unknown"}, version ${YB.b}; ${OB}`
+    function tW(WW, iW, OW) {
+      var EW, NW;
+      return `${WW}; ${OW?`os ${OW.os}, gpu ${null!==(EW=OW.gpuFamily)&&void 0!==EW?EW:"unknown"} ${null!==(NW=OW.gpuModel)&&void 0!==NW?NW:"unknown"}`:"device unknown"}, version ${mW.d}; ${iW}`
     }
 
-    function PB(BB) {
-      var OB;
-      const GB = null !== (OB = null === BB || void 0 === BB ? void 0 : BB.backend) && void 0 !== OB ? OB : "none";
-      if ("webgl" !== GB) {
-        const BB = (0, oB.d)();
+    function ZW(WW) {
+      var iW;
+      const OW = null !== (iW = null === WW || void 0 === WW ? void 0 : WW.backend) && void 0 !== iW ? iW : "none";
+      if ("webgl" !== OW) {
+        const WW = (0, PW.d)();
         for (const {
-            field: OB
+            field: iW
           }
-          of JB) delete BB[OB];
-        return void(0, QB.m)("renderprobe", `decode and particle probes not run: the renderer is ${GB}, and they read WebGL2's draws`)
+          of wW) delete WW[iW];
+        return void(0, NW.m)("renderprobe", `decode and particle probes not run: the renderer is ${OW}, and they read WebGL2's draws`)
       }
-      const YB = (0, oB.d)();
+      const mW = (0, PW.d)();
       for (const {
-          field: PB,
-          name: zB
+          field: ZW,
+          name: xW
         }
-        of JB)(0, oB.e)(YB, PB, ["1", "pending"], yB, jB).then((BB => {
-        void 0 !== BB && (0, QB.m)("renderprobe", MB(zB, BB, (0, DB.e)(!1)))
+        of wW)(0, PW.e)(mW, ZW, ["1", "pending"], cW, LW).then((WW => {
+        void 0 !== WW && (0, NW.m)("renderprobe", tW(xW, WW, (0, EW.d)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

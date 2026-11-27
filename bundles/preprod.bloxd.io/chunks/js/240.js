@@ -1,546 +1,620 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  37041: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => MB,
-      f: () => zB
+  37727: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW,
+      c: () => EW,
+      d: () => NW
     });
-    var YB = GB(56),
-      DB = GB(1400),
-      QB = GB(1175),
-      oB = GB(1375),
-      jB = GB(3926),
-      yB = GB(5414),
-      JB = GB(1282);
-
-    function MB(BB) {
-      let {
-        loading: OB,
-        schematics: GB,
-        onSchematicPicked: YB,
-        selectedSchematicIdList: DB = [],
-        disableAutoExport: yB
-      } = BB;
-      const {
-        t: MB
-      } = (0, QB.H)();
-      return (0, JB.jsxs)("div", {
-        className: "SchematicList",
-        children: [OB && (0, JB.jsx)(oB.b, {}), !OB && 0 === GB.length && (0, JB.jsx)("div", {
-          className: "NoSchematicsText",
-          children: MB("worldBuilder:noSavedSchematic")
-        }), !OB && GB.map((BB => (0, JB.jsx)(jB.h, {
-          source: {
-            type: "schematic",
-            schematic: BB
-          },
-          gameWidth: "25%",
-          useLongRatio: !0,
-          onClick: () => {
-            YB(BB)
-          },
-          isSelected: DB.includes(BB.schematicId),
-          hideCcu: !0,
-          hideFavourites: !0,
-          showPublishedChip: !0,
-          hideUnpublishedChip: !0,
-          disabled: BB.isAutoExported && yB,
-          disabledReason: "worldBuilder:autoExportDisabled"
-        }, BB.schematicId)))]
-      })
+    var mW = OW(1755);
+    class EW extends Error {
+      constructor(WW) {
+        super("The game server didn't answer in time"), this.leg = WW, this.name = "SeatRequestTimedOut"
+      }
     }
-
-    function PB(BB) {
-      let {
-        ownedSchematics: OB,
-        currentWorldSchematicId: GB,
-        onClose: DB
-      } = BB;
-      const {
-        t: oB
-      } = (0, QB.H)(), [jB, PB] = (0, YB.useState)(null);
-      return (0, JB.jsxs)("div", {
-        className: "SchematicListWindow",
-        children: [null === jB && (0, JB.jsxs)(JB.Fragment, {
-          children: [(0, JB.jsx)("h1", {
-            className: "SchematicPopupTitle",
-            children: oB("worldBuilder:schematicList")
-          }), (0, JB.jsx)("h2", {
-            className: "SchematicPopupSubtitle",
-            children: oB("worldBuilder:clickSchematicForOptions")
-          }), (0, JB.jsx)("div", {
-            className: "SchematicPopupSchematicListContainer",
-            children: (0, JB.jsx)(MB, {
-              loading: !1,
-              schematics: OB,
-              onSchematicPicked: BB => {
-                PB(BB)
-              },
-              disableAutoExport: !1
-            })
-          })]
-        }), null !== jB && (0, JB.jsx)(yB.k, {
-          schematic: jB,
-          inSourceWorld: jB.schematicId === GB,
-          onSchematicUpdate: BB => {
-            PB(BB)
-          },
-          onClose: () => {
-            PB(null), DB()
-          }
-        })]
-      })
-    }
-
-    function zB(BB) {
-      let {
-        ownedSchematics: OB,
-        currentWorldSchematicId: GB,
-        onClose: YB
-      } = BB;
-      DB.NotificationProvider.showCustomPopup({
-        body: BB => (0, JB.jsx)(PB, {
-          ownedSchematics: OB,
-          currentWorldSchematicId: GB,
-          onClose: BB
-        }),
-        middleScreenPopupClassName: "SchematicPopup",
-        onClose: YB,
-        unlockPointerKey: "schematicListPopup"
-      })
+    const NW = new class {
+      constructor() {
+        this.count = 0, this.answers = 0, this.waiting = new Set
+      }
+      get answered() {
+        return this.answers
+      }
+      answer() {
+        this.answers++
+      }
+      add() {
+        this.count++;
+        for (const WW of this.waiting) WW()
+      }
+      remove() {
+        this.count--
+      }
+      whenSlow(WW) {
+        return this.count > 0 || WW.aborted ? Promise.resolve(!WW.aborted) : new Promise((iW => {
+          const OW = () => {
+            this.waiting.delete(OW), iW(!WW.aborted)
+          };
+          this.waiting.add(OW), WW.addEventListener("abort", OW, {
+            once: !0
+          })
+        }))
+      }
+    };
+    class PW {
+      constructor(WW) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new mW.d(45e3, WW), this.slow = new mW.d(8e3, (() => {
+          this.countedSlow = !0, NW.add()
+        }))
+      }
+      restart() {
+        NW.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+      }
+      stop() {
+        this.timeout.stop(), this.slow.stop(), this.uncountSlow()
+      }
+      answered() {
+        this.stop(), NW.answer()
+      }
+      socketOpened() {
+        this.slow.stop(), this.uncountSlow(), NW.answer()
+      }
+      uncountSlow() {
+        this.countedSlow && (this.countedSlow = !1, NW.remove())
+      }
     }
   },
-  44867: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      runClientGameMessage: () => KB
+  37260: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      d: () => EW,
+      h: () => NW,
+      j: () => PW
     });
-    var YB = GB(4150),
-      DB = GB(4166),
-      QB = GB(1350),
-      oB = GB(37041),
-      jB = GB(5452),
-      yB = GB(1090),
-      JB = GB.n(yB),
-      MB = GB(56),
-      PB = GB(1400),
-      zB = GB(1485),
-      lB = GB(353),
-      pB = GB(1175),
-      qB = GB(1383),
-      ZB = GB(1282);
+    const mW = 1024,
+      EW = 1024 * mW;
 
-    function NB(BB) {
-      let {
-        onFilePicked: OB
-      } = BB;
-      const {
-        t: GB
-      } = (0, pB.H)(), [YB, DB] = (0, MB.useState)(null), {
-        getRootProps: QB,
-        getInputProps: oB,
-        isDragActive: yB
-      } = (0, jB.e)({
-        onDrop: BB => {
-          BB.length > 0 && DB(BB[0])
-        },
-        useFsAccessApi: !1
-      }), PB = YB && YB.size > 1024 * lB.vd;
-      return (0, ZB.jsxs)("div", {
-        className: "SchematicUploadContainer",
-        children: [(0, ZB.jsxs)("div", {
-          ...QB({
-            className: JB()("SchematicUpload", {
-              ActiveDrag: yB
-            })
-          }),
-          children: [(0, ZB.jsx)("input", {
-            ...oB({
-              accept: ".bloxdschem"
-            })
-          }), !yB && YB ? (0, ZB.jsxs)(ZB.Fragment, {
-            children: [(0, ZB.jsx)("div", {
-              className: JB()("SchematicUploadIcon", "Active", {
-                TooBig: PB
-              }),
-              children: (0, ZB.jsx)(qB.b, {
-                name: "file-lines"
-              })
-            }), (0, ZB.jsx)("div", {
-              className: "SchematicUploadInstructions Active",
-              children: YB.name
-            })]
-          }) : (0, ZB.jsxs)(ZB.Fragment, {
-            children: [(0, ZB.jsx)("div", {
-              className: "SchematicUploadIcon",
-              children: (0, ZB.jsx)(qB.b, {
-                name: "up-from-bracket"
-              })
-            }), (0, ZB.jsx)("div", {
-              className: "SchematicUploadInstructions",
-              children: GB("worldBuilder:dragAFileHere")
-            })]
-          })]
-        }), (0, ZB.jsx)(zB.q, {
-          disabled: PB || !YB,
-          className: "SchematicUploadButton",
-          onClick: () => {
-            !PB && YB && OB(YB)
-          },
-          children: PB ? GB("worldBuilder:fileTooBig", {
-            maxSizeKb: lB.vd
-          }) : GB("worldBuilder:upload")
-        })]
-      })
+    function NW(WW) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, WW / EW)))
     }
 
-    function RB(BB) {
-      let {
-        ownedSchematics: OB,
-        onClose: GB,
-        onChosenPreset: YB,
-        onChosenFile: DB
-      } = BB;
-      const {
-        t: QB
-      } = (0, pB.H)();
-      return (0, ZB.jsxs)(ZB.Fragment, {
-        children: [(0, ZB.jsx)("h1", {
-          className: "SchematicPopupTitle",
-          children: QB("worldBuilder:loadSchematic")
-        }), (0, ZB.jsx)("h2", {
-          className: "SchematicPopupSubtitle",
-          children: QB("worldBuilder:chooseOneOfYourSchematics")
-        }), (0, ZB.jsx)("div", {
-          className: "SchematicPopupSchematicListContainer",
-          children: (0, ZB.jsx)(oB.d, {
-            schematics: OB,
-            onSchematicPicked: BB => {
-              YB(BB.schematicId), GB()
-            },
-            loading: !1,
-            disableAutoExport: !0
-          })
-        }), (0, ZB.jsx)("h2", {
-          className: "SchematicPopupSubtitle",
-          children: QB("worldBuilder:uploadNewSchematic")
-        }), (0, ZB.jsx)(NB, {
-          onFilePicked: async BB => {
-            try {
-              await DB(BB)
-            } catch (OB) {
-              console.warn("Schematic upload failed", OB)
-            } finally {
-              GB()
-            }
-          }
-        })]
-      })
+    function PW(WW) {
+      return (WW / EW).toFixed(1)
     }
-    var WB = GB(5414),
-      AB = GB(1735),
-      VB = GB(4777),
-      SB = GB(1217);
+  },
+  37717: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => NW,
+      h: () => cW,
+      j: () => LW,
+      l: () => PW,
+      n: () => wW,
+      o: () => tW,
+      r: () => xW
+    });
+    var mW = OW(182);
+    const EW = 32 * OW(37260).d,
+      NW = 6144,
+      PW = 4608,
+      LW = 512,
+      cW = function() {
+        const WW = xW(mW.f.maxChunkHorizAddDistance + 1, mW.f.maxChunkVertAddDistance + 1);
+        let iW = WW;
+        for (; ZW(iW) < WW;) iW++;
+        return iW
+      }();
 
-    function nB(BB) {
-      var OB;
-      let {
-        ownedSchematics: GB,
-        onClose: YB,
-        onChosenEdit: DB,
-        onChosenNew: QB,
-        onChosenDownload: jB
-      } = BB;
-      const {
-        t: yB
-      } = (0, pB.H)(), [JB, PB] = (0, MB.useState)("choose"), [lB, qB] = (0, MB.useState)(null), [NB, RB] = (0, MB.useState)(null);
-      return (0, ZB.jsxs)(ZB.Fragment, {
-        children: [(0, ZB.jsx)("h1", {
-          className: "SchematicPopupTitle",
-          children: yB("worldBuilder:saveSchematic")
-        }), "choose" === JB && (0, ZB.jsxs)(ZB.Fragment, {
-          children: [(0, ZB.jsx)("h2", {
-            className: "SchematicPopupSubtitle",
-            children: yB("worldBuilder:overwriteOneOfYourSchematics")
-          }), (0, ZB.jsx)("div", {
-            className: "SchematicPopupSchematicListContainer",
-            children: (0, ZB.jsx)(oB.d, {
-              schematics: GB,
-              onSchematicPicked: BB => {
-                qB(BB.schematicId), RB("existing"), PB("save")
-              },
-              loading: !1,
-              disableAutoExport: !1
-            })
-          }), (0, ZB.jsx)("h2", {
-            className: "SchematicPopupSubtitle",
-            children: yB("general:otherOptions")
-          }), (0, ZB.jsxs)("div", {
-            className: "OtherOptions",
-            children: [(0, ZB.jsx)(zB.q, {
-              className: "ChooseUploadSchematicButton",
-              onClick: () => {
-                RB("new"), PB("save")
-              },
-              children: yB("worldBuilder:saveAsNewSchematic")
-            }), (0, ZB.jsx)(zB.f, {
-              className: "ChooseUploadSchematicButton",
-              onClick: () => {
-                RB("file"), PB("save")
-              },
-              children: yB("worldBuilder:downloadSchematic")
-            })]
-          })]
-        }), "choose" !== JB && (0, ZB.jsx)(UB, {
-          type: NB,
-          ownedSchematics: GB,
-          onSubmit: (BB, OB, GB) => {
-            "file" === NB ? jB(OB, BB) : "new" === NB ? QB(OB, GB, BB) : DB(lB, OB, GB, BB), YB()
-          },
-          onBack: () => {
-            PB("choose")
-          },
-          prepopName: "existing" === NB ? null === (OB = GB.find((BB => BB.schematicId === lB))) || void 0 === OB ? void 0 : OB.name : null
-        })]
-      })
+    function wW(WW) {
+      return Math.floor(EW * WW / NW)
     }
 
-    function UB(BB) {
-      let {
-        type: OB,
-        prepopName: GB,
-        ownedSchematics: YB,
-        onSubmit: DB,
-        onBack: QB
-      } = BB;
-      const {
-        t: oB
-      } = (0, pB.H)(), [jB, yB] = (0, MB.useState)(""), [PB, lB] = (0, MB.useState)(""), [qB, NB] = (0, MB.useState)(null), [RB, WB] = (0, MB.useState)(!0), nB = BB => {
-        var DB;
-        BB = null !== (DB = BB) && void 0 !== DB ? DB : jB;
-        const QB = (0, SB.Cb)(BB, "new" === OB || "existing" === OB && BB !== GB);
-        return QB ? (NB(oB(QB.translationKey, QB.params)), !1) : "new" === OB && YB.find((OB => OB.name === BB)) ? (NB(oB("worldBuilder:schematicAlreadyExists")), !1) : (NB(null), !0)
-      };
-      return (0, ZB.jsxs)("div", {
-        className: "SaveSchematicWindow",
-        children: [(0, ZB.jsx)("h2", {
-          className: "SchematicPopupSubtitle",
-          children: oB("general:name")
-        }), (0, ZB.jsx)(AB.b, {
-          className: JB()("SaveSchematicName", {
-            Error: qB
-          }),
-          forcedText: GB,
-          onValueChange: BB => {
-            yB(BB), nB(BB)
-          },
-          placeholderText: oB("worldBuilder:schematicNamePlaceholder"),
-          maxLength: SB.rb
-        }), (0, ZB.jsx)("h2", {
-          className: JB()("SaveSchematicError", {
-            Hidden: !qB
-          }),
-          children: qB
-        }), (0, ZB.jsx)("h2", {
-          className: JB()("SchematicPopupSubtitle", {
-            Hidden: "file" === OB
-          }),
-          children: oB("general:description")
-        }), (0, ZB.jsx)(AB.b, {
-          className: JB()("SaveSchematicDescription", {
-            Hidden: "file" === OB
-          }),
-          onValueChange: lB,
-          placeholderText: oB("worldBuilder:schematicDescriptionPlaceholder"),
-          maxLength: SB.qb,
-          useTextarea: !0
-        }), (0, ZB.jsxs)("div", {
-          className: JB()("SaveSchematicCheckboxContainer", {
-            WarningBorder: "existing" === OB
-          }),
-          children: [(0, ZB.jsx)(VB.e, {
-            checked: RB,
-            onChange: BB => {
-              WB(BB.target.checked)
-            },
-            disabled: !1,
-            className: "SaveSchematicCheckbox"
-          }), (0, ZB.jsx)("h1", {
-            className: "SchematicPopupSubtitle",
-            children: oB("existing" === OB ? "worldBuilder:overwriteLobbyCode" : "worldBuilder:includeLobbyCode")
-          })]
-        }), "existing" === OB && (0, ZB.jsx)("div", {
-          className: "SaveSchematicLobbyCodeWarning",
-          children: oB("worldBuilder:lobbyCodeWarning")
-        }), (0, ZB.jsxs)("div", {
-          className: "SaveSchematicButtons",
-          children: [(0, ZB.jsx)(zB.q, {
-            className: "SaveSchematicButton",
-            onClick: () => {
-              nB() && DB(RB, jB, PB)
-            },
-            children: oB("file" === OB ? "general:download" : "general:save")
-          }), (0, ZB.jsx)(zB.Q, {
-            className: "SaveSchematicButton",
-            onClick: QB,
-            children: oB("general:cancel")
-          })]
-        })]
-      })
-    }
-    var fB = GB(1186),
-      kB = GB(1822),
-      dB = GB(1121);
-
-    function KB(BB, OB) {
-      if ("devDownloadJson" !== BB) ! function(BB, OB) {
-        const GB = fB.clientSideServerUrls.getHttpUrlFromWebSocketUrl((0, QB.c)().websocketUrl);
-        let jB = !1;
-        const yB = async (BB, OB) => {
-          if (jB) return;
-          jB = !0;
-          const {
-            gameNameWithVariation: YB,
-            lobbyName: oB
-          } = (0, QB.c)(), yB = {
-            gameNameWithVariation: YB,
-            lobbyName: oB
-          };
-          return await (0, dB.postJsonWithMetricsCookiesAndJsonResponse)(`${GB}/schematic/${BB}`, DB.F[BB].toBuffer({
-            ...yB,
-            ...OB
-          }), {
-            retries: 1
-          })
-        };
-        if ("Plugin|WorldBuilder|SaveSchematic" === BB) ! function(BB) {
-          let {
-            ownedSchematics: OB,
-            onChosenDownload: GB,
-            onChosenEdit: YB,
-            onChosenNew: DB,
-            onClose: QB
-          } = BB;
-          PB.NotificationProvider.showCustomPopup({
-            body: BB => (0, ZB.jsx)(nB, {
-              ownedSchematics: OB,
-              onChosenDownload: GB,
-              onChosenEdit: YB,
-              onChosenNew: DB,
-              onClose: BB
-            }),
-            middleScreenPopupClassName: "SchematicPopup",
-            onClose: QB,
-            unlockPointerKey: "schematicSaverPopup"
-          })
-        }({
-          ownedSchematics: OB,
-          onChosenDownload: (BB, OB) => {
-            yB("download-schematic", {
-              name: BB,
-              includeLobbyCode: OB
-            }).then((OB => {
-              let {
-                buffer: {
-                  data: GB
-                }
-              } = OB;
-              const DB = YB.BP.from(GB);
-              (0, kB.downloadBlob)(new Blob([DB], {
-                type: "application/octet-stream"
-              }), `${BB}.bloxdschem`)
-            }))
-          },
-          onClose: () => {
-            yB("cancel", {})
-          },
-          onChosenEdit: (BB, OB, GB, YB) => {
-            yB("save-to-profile", {
-              schematicId: BB,
-              name: OB,
-              description: GB,
-              includeLobbyCode: YB
-            })
-          },
-          onChosenNew: (BB, OB, GB) => {
-            yB("save-to-profile", {
-              schematicId: null,
-              name: BB,
-              description: OB,
-              includeLobbyCode: GB
-            })
-          }
-        });
-        else if ("Plugin|WorldBuilder|LoadSchematic" === BB) ! function(BB) {
-          let {
-            ownedSchematics: OB,
-            onChosenFile: GB,
-            onChosenPreset: YB,
-            onClose: DB
-          } = BB;
-          PB.NotificationProvider.showCustomPopup({
-            body: BB => (0, ZB.jsx)(RB, {
-              ownedSchematics: OB,
-              onChosenFile: GB,
-              onChosenPreset: YB,
-              onClose: BB
-            }),
-            middleScreenPopupClassName: "SchematicPopup",
-            onClose: DB,
-            unlockPointerKey: "schematicLoaderPopup"
-          })
-        }({
-          ownedSchematics: OB,
-          onChosenFile: async BB => {
-            const OB = YB.BP.from(await BB.arrayBuffer()),
-              {
-                gameNameWithVariation: oB,
-                lobbyName: jB
-              } = (0, QB.c)();
-            await (0, dB.postBinaryWithMetricsCookiesAndCustomResponse)(`${GB}/schematic/upload-schematic`, DB.F["upload-schematic"].toBuffer({
-              gameNameWithVariation: oB,
-              lobbyName: jB,
-              schematic: OB
-            }), {
-              retries: 1
-            }, dB.HttpPayloadType.json)
-          },
-          onChosenPreset: BB => {
-            yB("load-from-profile", {
-              schematicId: BB
-            })
-          },
-          onClose: () => {
-            yB("cancel", {})
-          }
-        });
-        else if ("Plugin|WorldBuilder|ListSchematics" === BB)(0, oB.f)({
-          ownedSchematics: Array.isArray(OB) ? OB : OB.schematics,
-          currentWorldSchematicId: Array.isArray(OB) ? null : OB.currentWorldSchematicId,
-          onClose: () => {
-            yB("cancel", {})
-          }
-        });
-        else if ("Plugin|WorldBuilder|ExportWorld" === BB) {
-          var JB;
-          const BB = null !== (JB = OB.schematic) && void 0 !== JB ? JB : OB;
-          (0, WB.m)({
-            schematic: BB,
-            inSourceWorld: BB.schematicId === OB.currentWorldSchematicId,
-            onClose: () => {
-              yB("cancel", {})
-            }
-          })
-        } else console.error(`Unknown plugin message type ${BB}`)
-      }(BB, OB);
-      else {
-        const BB = JSON.stringify(OB.data, null, 2);
-        (0, kB.downloadBlob)(new Blob([BB], {
-          type: "application/json"
-        }), OB.filename)
+    function tW(WW) {
+      const iW = ZW(WW);
+      let OW = mW.f.maxChunkHorizAddDistance,
+        EW = mW.f.maxChunkVertAddDistance;
+      if (xW(OW + 1, EW + 1) <= iW) return null;
+      for (; xW(OW + 1, EW + 1) > iW && (OW > 0 || EW > 0);) OW > EW ? OW-- : EW--;
+      return {
+        horizontal: OW,
+        vertical: EW
       }
+    }
+
+    function ZW(WW) {
+      return WW - Math.floor(WW / 6)
+    }
+
+    function xW(WW, iW) {
+      const OW = Math.max(WW, iW);
+      let mW = 0;
+      for (let EW = -OW; EW <= OW; EW++)
+        for (let NW = -OW; NW <= OW; NW++)
+          for (let PW = -OW; PW <= OW; PW++) lW(WW, iW, EW, NW, PW) && mW++;
+      return mW
+    }
+
+    function lW(WW, iW, OW, mW, EW) {
+      const NW = OW * OW + EW * EW;
+      return WW === iW ? NW + mW * mW <= WW * WW : WW > iW ? Math.abs(mW) <= iW && NW + mW * mW <= WW * WW : NW <= WW * WW && NW + mW * mW <= iW * iW
+    }
+  },
+  37711: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => yW,
+      d: () => XW,
+      g: () => CW,
+      i: () => fW,
+      m: () => dW,
+      p: () => pW,
+      q: () => DW
+    });
+    var mW = OW(182),
+      EW = OW(100),
+      NW = OW(136),
+      PW = OW(274),
+      LW = OW(5067),
+      cW = OW(673),
+      wW = OW(696),
+      tW = OW(5072),
+      ZW = OW(5089),
+      xW = OW(37717),
+      lW = OW(37724);
+    const AW = 1048576,
+      bW = 1024 * AW,
+      jW = 400 * AW,
+      UW = 147456,
+      kW = .5,
+      sW = 2048,
+      MW = 1.5 * bW,
+      KW = 768 * AW;
+
+    function SW(WW) {
+      const {
+        os: iW,
+        deviceMemory: OW
+      } = WW;
+      if ("ios" === iW) switch ((0, PW.h)(WW)) {
+        case "ipad_m":
+          return {
+            footprintBytes: YW(xW.e), basis: "ipad-m", namesLimit: !1
+          };
+        case "ipad":
+          return {
+            footprintBytes: KW, basis: "ipad", namesLimit: !0
+          };
+        case "iphone_6gb":
+          return {
+            footprintBytes: MW, basis: "iphone-6gb", namesLimit: !0
+          };
+        case "iphone":
+          return {
+            footprintBytes: KW, basis: "iphone", namesLimit: !0
+          }
+      }
+      return "number" === typeof OW && Number.isFinite(OW) && OW > 0 ? {
+        footprintBytes: OW * bW * kW,
+        basis: `memory-${OW}`,
+        namesLimit: !0
+      } : "android" === iW ? {
+        footprintBytes: KW,
+        basis: "android",
+        namesLimit: !0
+      } : {
+        footprintBytes: YW(xW.l),
+        basis: "unreported",
+        namesLimit: !1
+      }
+    }
+
+    function YW(WW) {
+      return jW + WW * UW
+    }
+
+    function yW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : uW(),
+        iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NW.siteUsed;
+      if ("android" !== WW.os || "mobileAndroid" === iW) return !0;
+      const {
+        footprintBytes: OW,
+        basis: mW
+      } = SW(WW);
+      return "android" === mW || OW > 2 * bW
+    }
+
+    function TW(WW) {
+      const iW = Math.min(WW, YW(xW.e));
+      return jW + Math.max(0, iW - jW) / 2
+    }
+
+    function JW(WW, iW, OW) {
+      var EW, NW, PW, LW;
+      let cW = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        {
+          footprintBytes: wW,
+          basis: lW,
+          namesLimit: AW
+        } = SW(WW);
+      OW && (wW = TW(wW), lW += "+killed", AW = !0), null !== iW && YW(iW) < wW && (wW = YW(iW), lW += "+learned", AW = !0), lW += (0, ZW.B)(null !== (EW = WW.x32) && void 0 !== EW ? EW : null) + (0, tW.j)(null !== (NW = WW.lowRam) && void 0 !== NW ? NW : null), "fix" === WW.x32 && YW(sW) < wW && (wW = YW(sW), AW = !0), cW && (wW = TW(wW), lW += "+refused", AW = !0);
+      const bW = function(WW) {
+          const iW = Math.floor((WW - jW) / UW);
+          return Math.min(xW.e, Math.max(xW.j, iW))
+        }(wW),
+        kW = AW && bW < xW.e ? Math.min(bW, xW.h) : bW,
+        MW = (0, xW.o)(kW);
+      return {
+        footprintBytes: wW,
+        shedFootprintBytes: AW ? Math.max(wW, YW(kW)) : null,
+        chunkCap: kW,
+        maxHorizDistance: null !== (PW = null === MW || void 0 === MW ? void 0 : MW.horizontal) && void 0 !== PW ? PW : mW.f.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (LW = null === MW || void 0 === MW ? void 0 : MW.vertical) && void 0 !== LW ? LW : mW.f.maxChunkVertAddDistance,
+        basis: lW
+      }
+    }
+    let hW = null,
+      HW = null,
+      nW = null;
+
+    function uW() {
+      var WW, iW;
+      return hW ??= {
+        os: (0, EW.getOperatingSystem)(),
+        deviceMemory: navigator.deviceMemory,
+        ...(0, PW.j)()
+      }, {
+        ...hW,
+        x32: null !== (WW = (0, ZW.y)()) && void 0 !== WW ? WW : void 0,
+        lowRam: null !== (iW = (0, tW.h)()) && void 0 !== iW ? iW : void 0
+      }
+    }
+
+    function oW() {
+      return JW(uW(), (0, LW.e)(), (0, cW.K)("wasm").length > 0, DW())
+    }
+
+    function dW() {
+      return nW ??= (0, lW.o)(JW(uW(), null, !1, DW()).chunkCap), nW
+    }
+    const eW = "wasmMemoryRecord",
+      vW = {
+        halvedAt: null,
+        reloadSpent: !1
+      };
+
+    function gW() {
+      let WW = null;
+      try {
+        var iW;
+        WW = JSON.parse(null !== (iW = (0, wW.p)((0, wW.y)(), eW)) && void 0 !== iW ? iW : "null")
+      } catch {
+        return vW
+      }
+      if ("object" !== typeof WW || null === WW) return vW;
+      const {
+        halvedAt: OW,
+        reloadSpent: mW
+      } = WW;
+      return {
+        halvedAt: "number" === typeof OW && Number.isFinite(OW) ? OW : null,
+        reloadSpent: !0 === mW
+      }
+    }
+
+    function DW() {
+      return null !== gW().halvedAt
+    }
+
+    function VW(WW) {
+      const iW = (0, wW.y)(),
+        OW = JSON.stringify(WW);
+      try {
+        null === iW || void 0 === iW || iW.setItem(eW, OW)
+      } catch {
+        return !1
+      }
+      return (0, wW.p)(iW, eW) === OW
+    }
+
+    function pW() {
+      let WW = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now(),
+        iW = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const OW = gW();
+      return null === OW.halvedAt ? VW({
+        halvedAt: WW,
+        reloadSpent: iW
+      }) ? (nW = null, HW = null, "halve") : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent") : OW.reloadSpent ? "spent" : VW({
+        ...OW,
+        reloadSpent: !0
+      }) ? "reload" : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent")
+    }
+
+    function fW() {
+      return HW ??= oW(), HW
+    }
+
+    function CW() {
+      var WW;
+      return (null !== (WW = HW) && void 0 !== WW ? WW : oW()).basis
+    }
+
+    function XW(WW, iW) {
+      return WW.setChunkCap(iW.chunkCap)
+    }
+  },
+  37724: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => JW,
+      f: () => KW,
+      h: () => ZW,
+      k: () => SW,
+      o: () => kW,
+      p: () => yW,
+      u: () => TW,
+      w: () => xW
+    });
+    var mW = OW(37260),
+      EW = OW(37717);
+    const NW = 64 * mW.b,
+      PW = 40 * mW.d,
+      LW = 36 * mW.d,
+      cW = 20 * mW.d,
+      wW = 2 * mW.d,
+      tW = 5 * mW.d;
+
+    function ZW(WW) {
+      return "footprint" !== WW && "gcPressure" !== WW
+    }
+
+    function xW(WW) {
+      return ZW(WW) ? "wasm memory was refused" : "gcPressure" === WW ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
+    }
+    const lW = 2 * mW.d,
+      AW = 4 * mW.d,
+      bW = 35 * mW.d + lW + AW,
+      jW = 6.5 * mW.d,
+      UW = 132.5 * mW.b;
+
+    function kW(WW) {
+      const iW = jW + (0, EW.n)(WW) + WW * UW;
+      return Math.ceil((2 * bW + iW) / NW) * NW
+    }
+    kW(EW.e), mW.d, mW.d, mW.d;
+    const sW = {
+        targetBytes: PW,
+        leastBytes: cW
+      },
+      MW = {
+        targetBytes: LW,
+        leastBytes: cW
+      };
+
+    function KW(WW) {
+      return {
+        targetBytes: WW,
+        leastBytes: 0
+      }
+    }
+
+    function SW(WW) {
+      return WW >= EW.e ? sW : MW
+    }
+    const YW = 2 * NW;
+
+    function yW(WW, iW, OW) {
+      return WW + iW + YW > OW
+    }
+    const TW = {
+      now: () => performance.now(),
+      requestIdle: "function" === typeof requestIdleCallback ? WW => {
+        requestIdleCallback(WW)
+      } : null
+    };
+    class JW {
+      constructor(WW, iW, OW) {
+        let mW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : TW;
+        this.memory = WW, this.readPeakStoredChunks = iW, this.onError = OW, this.clock = mW, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+          reserves: 0,
+          allocations: 0
+        }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
+      }
+      setShed(WW, iW, OW) {
+        this.shedding = {
+          shed: WW,
+          wZ: iW,
+          readDistanceInUse: OW
+        }
+      }
+      shedDistanceInUse() {
+        return this.distanceInUse
+      }
+      setFootprint(WW) {
+        this.footprint = WW
+      }
+      setGcPressure(WW) {
+        this.gcPressure = {
+          highEpisode: WW,
+          shedEpisode: null,
+          nextAt: null
+        }
+      }
+      setCeiling(WW) {
+        this.ceilingBytes = WW, this.call((() => {
+          this.memory.setCeiling(WW)
+        }), void 0)
+      }
+      ceilingMayRefuse(WW, iW) {
+        var OW;
+        return yW(this.memory.memoryBytes(), WW, null !== (OW = this.ceilingBytes) && void 0 !== OW ? OW : iW)
+      }
+      reserveAtJoin(WW) {
+        let {
+          targetBytes: iW,
+          leastBytes: OW
+        } = WW;
+        const mW = this.memory.memoryBytes(),
+          EW = mW + OW,
+          NW = Math.max(iW + (this.ballastOn() ? tW : 0), EW),
+          PW = this.call((() => this.memory.reserveUpFront(NW) ? "target" : NW > EW && this.memory.reserveUpFront(EW) ? "least" : "none"), "none");
+        if (this.stopped) return !1;
+        if ("target" !== PW) {
+          const WW = "least" === PW ? `took ${EW} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${NW} bytes was refused at ${mW} bytes; ${WW}`)
+        }
+        return this.joinReserveTaken = PW, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== PW && this.shedFor("joinReserve"), "none" !== PW
+      }
+      afterFrame() {
+        if (this.stopped) return;
+        const WW = this.clock.now(),
+          iW = null !== this.stepsHeldUntil && WW >= this.stepsHeldUntil;
+        if (iW && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && WW >= this.ballastCheckAt && (this.takeBallast(WW), this.stopped)) return;
+        const OW = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          mW = iW && "now" === OW ? "none" : OW,
+          {
+            requestIdle: EW
+          } = this.clock;
+        "now" === mW || null !== this.pendingSince && WW - this.pendingSince >= 500 ? this.step() : "idle" === mW && null === this.pendingSince && (null === EW ? this.step() : (this.pendingSince = WW, EW((() => {
+          null !== this.pendingSince && this.step()
+        })))), WW - this.statsAt >= 1e3 && (this.statsAt = WW, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(WW))
+      }
+      refreshStats() {
+        this.call((() => {
+          var WW, iW;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (iW = this.shedding.readDistanceInUse()) && void 0 !== iW ? iW : this.distanceInUse);
+          null === (WW = this.footprint) || void 0 === WW || WW.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+        }), void 0)
+      }
+      stop() {
+        this.stopped = !0, this.pendingSince = null
+      }
+      noteMeshWorker(WW, iW) {
+        this.noteWorker(`Mesh${WW}`, iW)
+      }
+      meshWorkerGone(WW) {
+        this.workerGone(`Mesh${WW}`)
+      }
+      noteWorldgen(WW) {
+        this.noteWorker("Worldgen", WW)
+      }
+      worldgenGone() {
+        this.workerGone("Worldgen")
+      }
+      noteWorker(WW, iW) {
+        const OW = this.workers.get(WW);
+        null !== OW && void 0 !== OW && OW.gone && (this.replacedRefusals.reserves += OW.stats.reservesRefused, this.replacedRefusals.allocations += OW.stats.allocationsRefused), this.workers.set(WW, {
+          stats: iW,
+          gone: !1
+        })
+      }
+      workerGone(WW) {
+        const iW = this.workers.get(WW);
+        iW && (iW.gone = !0)
+      }
+      details() {
+        var WW, iW;
+        const OW = this.memory.memoryBytes(),
+          EW = {
+            wasmMemoryNow: `${(0,mW.j)(OW)} MiB`,
+            wasmMemoryMiB: String(Math.floor(OW / mW.d))
+          };
+        null !== this.joinReserveTaken && (EW.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (EW.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const NW = this.main;
+        if (NW) {
+          EW.wasmMemoryMain = hW(NW);
+          const WW = Math.max(0, NW.peakLiveBytes - this.ballastPeakBytes),
+            iW = 0 === this.peakStoredChunks ? "-" : (WW / this.peakStoredChunks / mW.b).toFixed(1);
+          EW.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${iW} KiB`
+        }
+        for (const [mW, {
+            stats: LW,
+            gone: cW
+          }] of this.workers) EW[`wasmMemory${mW}`] = hW(LW) + (cW ? " (gone)" : "");
+        const PW = null !== (WW = null === (iW = this.footprint) || void 0 === iW ? void 0 : iW.describe()) && void 0 !== WW ? WW : null;
+        return null !== PW && (EW.wasmMemoryFootprint = PW), EW
+      }
+      pageKillSnapshot() {
+        var WW, iW, OW, EW, NW;
+        let PW = (null !== (WW = null === (iW = this.main) || void 0 === iW ? void 0 : iW.reservesRefused) && void 0 !== WW ? WW : 0) + this.replacedRefusals.reserves,
+          LW = (null !== (OW = null === (EW = this.main) || void 0 === EW ? void 0 : EW.allocationsRefused) && void 0 !== OW ? OW : 0) + this.replacedRefusals.allocations;
+        for (const {
+            stats: mW
+          }
+          of this.workers.values()) PW += mW.reservesRefused, LW += mW.allocationsRefused;
+        return {
+          wasmMainMiB: Number((0, mW.j)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, mW.j)(this.workersMemoryBytes())),
+          peakStoredChunks: this.peakStoredChunks,
+          refusedReserves: PW,
+          refusedAllocations: LW,
+          sheds: this.sheds,
+          ...null === (NW = this.footprint) || void 0 === NW ? void 0 : NW.snapshot()
+        }
+      }
+      workersMemoryBytes() {
+        let WW = 0;
+        for (const {
+            stats: iW,
+            gone: OW
+          }
+          of this.workers.values()) WW += OW ? 0 : iW.memoryBytes;
+        return WW
+      }
+      checkFootprint() {
+        null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
+      }
+      checkGcPressure(WW) {
+        const iW = this.gcPressure;
+        if (null === iW) return;
+        if (null !== iW.nextAt || "undefined" !== typeof document && document.hidden || (iW.nextAt = WW + 6e4), null === iW.nextAt || WW < iW.nextAt) return;
+        if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
+        const OW = iW.highEpisode();
+        null !== OW && OW !== iW.shedEpisode && (iW.shedEpisode = OW, iW.nextAt = WW + 3e4, this.shedFor("gcPressure"))
+      }
+      step() {
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(wW)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+      }
+      ballastOn() {
+        return null !== this.shedding
+      }
+      takeBallast(WW) {
+        if (!this.ballastOn() || null === this.joinReserveTaken) return;
+        this.ballastCheckAt = WW + 1e3;
+        const iW = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, iW)
+      }
+      takePressure() {
+        return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
+      }
+      stopSteps(WW) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${WW}: frames grow on demand from here`)
+      }
+      shedFor(WW) {
+        const {
+          shedding: iW
+        } = this;
+        if (null === iW) return;
+        this.pendingSince = null;
+        const OW = this.call((() => iW.shed(WW)), null);
+        if (this.stopped) return;
+        if (null === OW) return void(ZW(WW) && this.stopSteps("nothing is left to shed"));
+        this.sheds++, this.shedCap = OW, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
+        const mW = "gcPressure" === WW ? ++this.gcSheds : this.sheds - this.gcSheds;
+        iW.wZ(WW, mW, this.details())
+      }
+      call(WW, iW) {
+        if (this.stopped) return iW;
+        try {
+          return WW()
+        } catch (OW) {
+          return this.stop(), this.onError(OW), iW
+        }
+      }
+    }
+
+    function hW(WW) {
+      const iW = (WW, iW) => `${WW}/${(0,mW.j)(iW)}`;
+      return `memory ${(0,mW.j)(WW.memoryBytes)} live ${(0,mW.j)(WW.liveBytes)} peak ${(0,mW.j)(WW.peakLiveBytes)} unused ${(0,mW.j)(WW.unusedBytes)} ceiling ${(0,mW.j)(WW.ceilingBytes)} MiB; grows upFront ${iW(WW.grows.upFront,WW.grownBytes.upFront)} ahead ${iW(WW.grows.ahead,WW.grownBytes.ahead)} inFrame ${iW(WW.grows.onDemandInFrame,WW.grownBytes.onDemandInFrame)} other ${iW(WW.grows.onDemand,WW.grownBytes.onDemand)}; refused reserves ${WW.reservesRefused} allocations ${WW.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

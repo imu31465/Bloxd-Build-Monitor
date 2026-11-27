@@ -1,248 +1,717 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  37263: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => ZB,
-      e: () => NB,
-      h: () => zB,
-      l: () => PB
+  37868: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => jW,
+      h: () => UW,
+      l: () => xW,
+      o: () => ZW
     });
-    var YB = GB(34790),
-      DB = GB(37267),
-      QB = GB(37270),
-      oB = GB(9391),
-      jB = GB(1480),
-      yB = GB(56),
-      JB = GB(70),
-      MB = GB(1282);
+    var mW = OW(35220),
+      EW = OW(3361),
+      NW = OW(3368),
+      PW = OW(9954),
+      LW = OW(1526),
+      cW = OW(62),
+      wW = OW(80),
+      tW = OW(1283);
 
-    function PB() {
-      var BB;
-      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
-        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
+    function ZW() {
+      var WW;
+      return (0, LW.g)(EW.g, (0, EW.F)()), (0, tW.jsx)(tW.Fragment, {
+        children: null === (WW = (0, EW.F)()) || void 0 === WW ? void 0 : WW.content
       })
     }
 
-    function zB(BB) {
-      var OB;
+    function xW(WW) {
+      var iW;
       let {
-        show: GB
-      } = BB;
-      (0, jB.i)(DB.d, (0, DB.n)());
-      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
-      return (0, yB.useEffect)((() => {
-        var BB;
-        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
-      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
-        showing: GB,
+        show: OW
+      } = WW;
+      (0, LW.g)(EW.g, (0, EW.F)());
+      const wW = null === (iW = (0, EW.F)()) || void 0 === iW ? void 0 : iW.menu;
+      return (0, cW.useEffect)((() => {
+        var WW;
+        OW || (null === wW || void 0 === wW || null === (WW = wW.onClose) || void 0 === WW || WW.call(wW), (0, NW.s)())
+      }), [OW, wW]), (0, cW.useEffect)((() => OW ? (0, PW.e)(NW.C, NW.f) : void 0), [OW]), (0, tW.jsx)(mW.d, {
+        showing: OW,
         globallyUniqueKey: "clientGameMenu",
-        children: null === JB || void 0 === JB ? void 0 : JB.content
+        children: null === wW || void 0 === wW ? void 0 : wW.content
       })
     }
-    const lB = new Map,
-      pB = new Set;
+    const lW = new Map,
+      AW = new Set;
 
-    function qB(BB, OB) {
-      OB ? lB.set(BB, OB) : lB.delete(BB);
-      for (const GB of pB) GB()
+    function bW(WW, iW) {
+      iW ? lW.set(WW, iW) : lW.delete(WW);
+      for (const OW of AW) OW()
     }
 
-    function ZB(BB) {
+    function jW(WW) {
       let {
-        placement: OB = "bottom"
-      } = BB;
-      const GB = (0, yB.useRef)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = GB.current;
-        return qB(OB, BB), () => {
-          lB.get(OB) === BB && qB(OB, null)
+        placement: iW = "bottom"
+      } = WW;
+      const OW = (0, cW.useRef)(null);
+      return (0, cW.useLayoutEffect)((() => {
+        const WW = OW.current;
+        return bW(iW, WW), () => {
+          lW.get(iW) === WW && bW(iW, null)
         }
-      }), [OB]), (0, MB.jsx)("div", {
-        ref: GB,
-        id: `clientGameHud-${OB}`,
+      }), [iW]), (0, tW.jsx)("div", {
+        ref: OW,
+        id: `clientGameHud-${iW}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function UW(WW) {
       let {
-        children: OB,
-        placement: GB = "bottom"
-      } = BB;
-      const [YB, DB] = (0, yB.useState)((() => {
-        var BB;
-        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
+        children: iW,
+        placement: OW = "bottom"
+      } = WW;
+      const [mW, EW] = (0, cW.useState)((() => {
+        var WW;
+        return null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null
       }));
-      return (0, yB.useEffect)((() => {
-        const BB = () => {
-          var BB;
-          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
+      return (0, cW.useEffect)((() => {
+        const WW = () => {
+          var WW;
+          EW(null !== (WW = lW.get(OW)) && void 0 !== WW ? WW : null)
         };
-        return pB.add(BB), BB(), () => {
-          pB.delete(BB)
+        return AW.add(WW), WW(), () => {
+          AW.delete(WW)
         }
-      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
+      }), [OW]), mW ? (0, wW.createPortal)(iW, mW) : null
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  35220: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var mW = OW(5243),
+      EW = OW(5251);
 
-    function QB(BB) {
+    function NW(WW) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: iW,
+        showing: OW,
+        globallyUniqueKey: NW,
+        alwaysMountChildren: PW = !1,
+        doGameplayStartStopOnShow: LW = !0,
+        keepsMovement: cW = !1
+      } = WW;
+      return (0, EW.b)(!0, OW, NW, cW), (0, mW.b)(LW, OW), OW || PW ? iW : null
     }
   },
-  37367: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB,
-      i: () => oB,
-      k: () => jB,
-      n: () => yB
+  38030: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => yW,
+      h: () => SW,
+      j: () => YW,
+      n: () => AW
     });
-    var YB = GB(56),
-      DB = GB(3528);
-    const QB = 8,
-      oB = "InGameHeaderContainer",
-      jB = "TopRightElements";
+    var mW = OW(1089),
+      EW = OW.n(mW),
+      NW = OW(62),
+      PW = OW(80),
+      LW = OW(1436),
+      cW = OW(1532),
+      wW = OW(1434),
+      tW = OW(1269),
+      ZW = OW(1172),
+      xW = OW(38039),
+      lW = OW(1283);
 
-    function yB(BB) {
-      const [OB] = (0, DB.e)(), [GB, yB] = (0, YB.useState)(!1);
-      return (0, YB.useLayoutEffect)((() => {
-        if (!BB) return;
-        const OB = document.querySelector(`.${oB}`),
-          GB = document.querySelector(`.${jB}`),
-          YB = () => {
-            const YB = BB.getBoundingClientRect(),
-              DB = OB ? OB.getBoundingClientRect().right : 0,
-              oB = GB ? GB.getBoundingClientRect().left : window.innerWidth,
-              jB = YB.left < DB + QB,
-              JB = YB.right > oB - QB;
-            yB(jB || JB)
+    function AW(WW) {
+      const [iW, OW] = (0, NW.useState)((() => (0, xW.o)(WW)));
+      return (0, NW.useEffect)((() => (OW((0, xW.o)(WW)), (0, xW.M)((() => {
+        OW((0, xW.o)(WW))
+      })))), [WW]), iW
+    }
+
+    function bW(WW, iW) {
+      "function" === typeof WW ? WW(iW) : WW && (WW.current = iW)
+    }
+
+    function jW(WW) {
+      let {
+        tutorial: iW,
+        step: OW,
+        enabled: mW = !0
+      } = WW;
+      const EW = AW(iW);
+      return mW && EW === OW
+    }
+
+    function UW(WW, iW) {
+      const OW = (0, xW.s)(WW),
+        mW = OW.indexOf(iW);
+      return !OW.slice(mW + 1).some((iW => (0, xW.x)(WW, iW)))
+    }
+
+    function kW(WW, iW, OW, mW) {
+      let {
+        tutorial: EW,
+        step: NW,
+        waitForClick: PW = !1,
+        onPrevious: LW
+      } = WW;
+      const cW = iW && (0, xW.w)(EW, NW),
+        wW = iW && !UW(EW, NW),
+        ZW = PW ? mW : OW;
+      let lW = null;
+      cW ? lW = () => {
+        null === LW || void 0 === LW || LW(), (0, xW.u)(EW, NW)
+      } : wW && (lW = () => {
+        (0, xW.m)(EW)
+      }), (0, tW.r)("popup", null !== ZW && void 0 !== ZW ? ZW : OW, lW, iW && null !== ZW, null, cW ? void 0 : "controller:menusSkipTutorial")
+    }
+
+    function sW(WW) {
+      let {
+        tutorial: iW,
+        step: OW,
+        text: mW,
+        waitForClick: EW = !1,
+        onPrevious: NW
+      } = WW;
+      const {
+        t: PW
+      } = (0, ZW.B)(), LW = UW(iW, OW);
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, lW.jsx)("div", {
+          className: "TutorialStepText",
+          children: mW
+        }), (0, lW.jsxs)("div", {
+          className: "TutorialStepButtons",
+          children: [(0, xW.w)(iW, OW) && (0, lW.jsx)(cW.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              null === NW || void 0 === NW || NW(), (0, xW.u)(iW, OW)
+            },
+            children: PW("tutorial:back")
+          }), !EW && (0, lW.jsx)(cW.f, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, xW.h)(OW)
+            },
+            padDefaultFocus: !0,
+            children: PW(LW ? "tutorial:done" : "tutorial:next")
+          }), !LW && (0, lW.jsx)(cW.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, xW.m)(iW)
+            },
+            children: PW("tutorial:skip")
+          })]
+        })]
+      })
+    }
+    const MW = 6;
+
+    function KW(WW) {
+      let {
+        rect: iW,
+        margin: OW
+      } = WW;
+      const mW = Math.max(0, iW.top - OW),
+        EW = iW.bottom + OW,
+        NW = Math.max(0, iW.left - OW),
+        PW = iW.right + OW;
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: 0,
+            left: 0,
+            right: 0,
+            height: mW
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: EW,
+            left: 0,
+            right: 0,
+            bottom: 0
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: mW,
+            left: 0,
+            width: NW,
+            height: EW - mW
+          }
+        }), (0, lW.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: mW,
+            left: PW,
+            right: 0,
+            height: EW - mW
+          }
+        })]
+      })
+    }
+
+    function SW(WW) {
+      let {
+        target: iW,
+        placement: OW,
+        boxRef: mW,
+        className: cW,
+        spotlight: tW = !0,
+        spotlightMargin: ZW = MW,
+        children: xW
+      } = WW;
+      const {
+        getArrowProps: AW,
+        getTooltipProps: bW,
+        setTooltipRef: jW,
+        setTriggerRef: UW,
+        update: kW
+      } = (0, LW.c)({
+        placement: OW,
+        trigger: null,
+        visible: !0,
+        interactive: !0,
+        closeOnOutsideClick: !1,
+        offset: [0, ZW]
+      });
+      (0, NW.useLayoutEffect)((() => {
+        UW(iW)
+      }), [iW, UW]);
+      const sW = function(WW, iW) {
+        const [OW, mW] = (0, NW.useState)(null);
+        return (0, NW.useEffect)((() => {
+          if (!iW || !WW) return void mW(null);
+          let OW = 0,
+            EW = null;
+          const NW = () => {
+            const iW = WW.getBoundingClientRect();
+            EW && iW.left === EW.left && iW.top === EW.top && iW.width === EW.width && iW.height === EW.height || (EW = iW, mW(iW)), OW = requestAnimationFrame(NW)
           };
-        YB();
-        const DB = new ResizeObserver(YB);
-        return DB.observe(BB), OB && DB.observe(OB), GB && DB.observe(GB), () => {
-          DB.disconnect()
+          return NW(), () => {
+            cancelAnimationFrame(OW)
+          }
+        }), [WW, iW]), OW
+      }(iW, tW);
+      (0, NW.useEffect)((() => {
+        null === kW || void 0 === kW || kW()
+      }), [sW, kW]), (0, NW.useEffect)((() => {
+        if (tW || !iW || !kW) return;
+        const WW = new ResizeObserver((() => {
+          kW()
+        }));
+        return WW.observe(iW), iW.parentElement && WW.observe(iW.parentElement), () => {
+          WW.disconnect()
         }
-      }), [BB, OB]), GB
+      }), [iW, tW, kW]), (0, NW.useEffect)((() => {
+        tW && (null === iW || void 0 === iW || iW.scrollIntoView({
+          block: "nearest",
+          inline: "nearest"
+        }))
+      }), [iW, tW]);
+      const SW = (0, NW.useCallback)((WW => {
+        jW(WW), mW && (mW.current = WW)
+      }), [jW, mW]);
+      return (0, PW.createPortal)((0, lW.jsxs)(lW.Fragment, {
+        children: [sW && (0, lW.jsx)(KW, {
+          rect: sW,
+          margin: ZW
+        }), (0, lW.jsxs)("div", {
+          ref: SW,
+          ...bW({
+            className: EW()("tooltip-container SmallTextLight TutorialStep", cW)
+          }),
+          children: [xW, (0, lW.jsx)("div", {
+            ...AW({
+              className: "tooltip-arrow"
+            })
+          })]
+        })]
+      }), (0, wW.g)())
+    }
+    const YW = (0, NW.forwardRef)((function(WW, iW) {
+      let {
+        placement: OW = "right",
+        children: mW,
+        ...EW
+      } = WW;
+      const PW = jW(EW),
+        LW = (0, NW.useRef)(null),
+        cW = (0, NW.useRef)(null);
+      kW(EW, PW, LW, cW);
+      const [wW, tW] = (0, NW.useState)(null), ZW = mW.ref, xW = (0, NW.useCallback)((WW => {
+        cW.current = WW, tW(WW), bW(iW, WW), bW(ZW, WW)
+      }), [iW, ZW]);
+      return (0, lW.jsxs)(lW.Fragment, {
+        children: [(0, NW.cloneElement)(mW, {
+          ref: xW
+        }), PW && (0, lW.jsx)(SW, {
+          target: wW,
+          placement: OW,
+          boxRef: LW,
+          children: (0, lW.jsx)(sW, {
+            ...EW
+          })
+        })]
+      })
+    }));
+
+    function yW(WW) {
+      const iW = jW(WW),
+        OW = (0, NW.useRef)(null);
+      return kW(WW, iW, OW, null), iW ? (0, PW.createPortal)((0, lW.jsx)("div", {
+        className: "TutorialCentreBackdrop",
+        children: (0, lW.jsx)("div", {
+          ref: OW,
+          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
+          children: (0, lW.jsx)(sW, {
+            ...WW
+          })
+        })
+      }), (0, wW.g)()) : null
     }
   },
-  9391: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  37919: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => LW,
+      e: () => cW,
+      h: () => wW,
+      i: () => tW,
+      j: () => AW
     });
-    let YB = null;
-    const DB = function(BB) {
-        const OB = {
-          cycle: BB,
+    var mW = OW(62),
+      EW = OW(4275),
+      NW = OW(3457),
+      PW = OW(27);
+    const LW = 8,
+      cW = "InGameHeaderContainer",
+      wW = "TopRightElements";
+
+    function tW(WW) {
+      const [iW] = (0, EW.d)(), [OW, NW] = (0, mW.useState)(!1);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const iW = document.querySelector(`.${cW}`),
+          OW = document.querySelector(`.${wW}`),
+          mW = () => {
+            const mW = WW.getBoundingClientRect(),
+              EW = iW ? iW.getBoundingClientRect().right : 0,
+              PW = OW ? OW.getBoundingClientRect().left : window.innerWidth,
+              cW = mW.left < EW + LW,
+              wW = mW.right > PW - LW;
+            NW(cW || wW)
+          };
+        mW();
+        const EW = new ResizeObserver(mW);
+        return EW.observe(WW), iW && EW.observe(iW), OW && EW.observe(OW), () => {
+          EW.disconnect()
+        }
+      }), [WW, iW]), OW
+    }
+    const ZW = `.InGameUi .${cW}`,
+      xW = [ZW, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      lW = 1e3;
+
+    function AW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WW,
+        OW = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [EW, cW] = (0, mW.useState)(null);
+      return (0, mW.useLayoutEffect)((() => {
+        if (!WW) return;
+        const mW = new ResizeObserver((() => {
+          wW()
+        }));
+        mW.observe(WW), iW && iW !== WW && mW.observe(iW);
+        let EW = [];
+
+        function wW() {
+          var NW, PW, wW;
+          const tW = WW.getBoundingClientRect(),
+            lW = function() {
+              const WW = xW.map((WW => document.querySelector(WW))).filter((WW => null !== WW));
+              for (const iW of WW) EW.includes(iW) || mW.observe(iW);
+              for (const iW of EW) WW.includes(iW) || mW.unobserve(iW);
+              return EW = WW, WW
+            }(),
+            AW = lW.filter((WW => {
+              const iW = WW.getBoundingClientRect();
+              return iW.width > 0 && iW.height > 0 && tW.left < iW.right + LW && tW.right > iW.left - LW
+            }));
+          if (0 === AW.length && !OW) return void cW(null);
+          const bW = lW.find((WW => WW.matches(ZW))),
+            jW = Math.max(null !== (NW = null === bW || void 0 === bW ? void 0 : bW.getBoundingClientRect().bottom) && void 0 !== NW ? NW : 0, ...AW.map((WW => WW.getBoundingClientRect().bottom))),
+            UW = null !== (PW = null === iW || void 0 === iW || null === (wW = iW.offsetParent) || void 0 === wW ? void 0 : wW.getBoundingClientRect().top) && void 0 !== PW ? PW : 0;
+          cW(Math.ceil(jW + LW / 2) - Math.round(UW))
+        }
+        const tW = setInterval(wW, lW);
+        wW(), window.addEventListener("resize", wW);
+        const AW = (0, PW.n)(NW.d, wW);
+        return () => {
+          mW.disconnect(), clearInterval(tW), window.removeEventListener("resize", wW), AW()
+        }
+      }), [WW, iW, OW]), EW
+    }
+  },
+  39244: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => wW,
+      f: () => mW,
+      h: () => LW,
+      k: () => EW,
+      o: () => PW,
+      q: () => NW
+    });
+    const mW = 1.001,
+      EW = .501,
+      NW = .025,
+      PW = .75,
+      LW = .08,
+      cW = 4;
+
+    function wW() {
+      const WW = EW,
+        iW = NW,
+        OW = WW - iW / 2,
+        mW = (2 * WW - 2 * iW) / (2 * cW - 1),
+        PW = [];
+      for (const EW of [-OW, OW])
+        for (const NW of [-OW, OW])
+          for (let OW = 0; OW < cW; OW++) {
+            const LW = -WW + iW + mW * (2 * OW + .5);
+            PW.push([mW, iW, iW, LW, EW, NW]), PW.push([iW, mW, iW, EW, LW, NW]), PW.push([iW, iW, mW, EW, NW, LW])
+          }
+      for (const EW of [-OW, OW])
+        for (const WW of [-OW, OW])
+          for (const mW of [-OW, OW]) PW.push([iW, iW, iW, EW, WW, mW]);
+      return PW
+    }
+  },
+  9954: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW,
+      e: () => EW
+    });
+    let mW = null;
+    const EW = function(WW) {
+        const iW = {
+          cycle: WW,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return YB = OB, () => {
-          YB === OB && (YB = null)
+        return mW = iW, () => {
+          mW === iW && (mW = null)
         }
       },
-      QB = () => {
-        var BB;
-        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
+      NW = () => {
+        var WW;
+        return null !== (WW = mW) && void 0 !== WW && WW.canCycle() ? mW.cycle : null
       }
   },
-  39176: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB,
-      c: () => jB,
-      f: () => yB
+  39708: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      h: () => LW,
+      k: () => cW
     });
-    const YB = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      DB = [0, 1, 2, 0, 2, 3],
-      QB = [4, 5];
+    const mW = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      EW = [0, 1, 2, 0, 2, 3],
+      NW = [4, 5];
 
-    function oB(BB, OB, GB, YB, DB) {
-      for (let oB = 0; oB < 6; oB++) QB.includes(oB) === DB && JB(BB, OB, GB, YB, oB)
+    function PW(WW, iW, OW, mW, EW) {
+      for (let PW = 0; PW < 6; PW++) NW.includes(PW) === EW && wW(WW, iW, OW, mW, PW)
     }
 
-    function jB(BB, OB, GB, YB) {
-      for (let DB = 0; DB < 6; DB++) JB(BB, OB, GB, YB, DB)
+    function LW(WW, iW, OW, mW) {
+      for (let EW = 0; EW < 6; EW++) wW(WW, iW, OW, mW, EW)
     }
 
-    function yB(BB, OB, GB, QB, oB) {
-      for (let jB = 0; jB < 6; jB++)
-        for (const yB of [0, 1]) {
-          const [JB, MB, PB] = [yB + 2, yB + 1, (yB + 3) % 4], zB = BB.length / 3;
-          for (const [OB, DB] of [
-              [yB, MB],
-              [JB, MB],
-              [JB, PB],
-              [yB, PB]
+    function cW(WW, iW, OW, NW, PW) {
+      for (let LW = 0; LW < 6; LW++)
+        for (const cW of [0, 1]) {
+          const [wW, tW, ZW] = [cW + 2, cW + 1, (cW + 3) % 4], xW = WW.length / 3;
+          for (const [iW, EW] of [
+              [cW, tW],
+              [wW, tW],
+              [wW, ZW],
+              [cW, ZW]
             ])
-            for (let yB = 0; yB < 3; yB++) {
-              const JB = YB[3 * (4 * jB + OB) + yB],
-                MB = YB[3 * (4 * jB + DB) + yB];
-              BB.push((JB + (MB - JB) * oB) * QB / 2 + GB[yB])
+            for (let cW = 0; cW < 3; cW++) {
+              const wW = mW[3 * (4 * LW + iW) + cW],
+                tW = mW[3 * (4 * LW + EW) + cW];
+              WW.push((wW + (tW - wW) * PW) * NW / 2 + OW[cW])
             }
-          for (const BB of DB) OB.push(zB + BB)
+          for (const WW of EW) iW.push(xW + WW)
         }
     }
 
-    function JB(BB, OB, GB, QB, oB) {
-      let [jB, yB, JB] = GB, [MB, PB, zB] = QB;
-      const lB = BB.length / 3;
-      for (let DB = 4 * oB; DB < 4 * oB + 4; DB++) BB.push(YB[3 * DB] * MB / 2 + jB, YB[3 * DB + 1] * PB / 2 + yB, YB[3 * DB + 2] * zB / 2 + JB);
-      for (const YB of DB) OB.push(lB + YB)
+    function wW(WW, iW, OW, NW, PW) {
+      let [LW, cW, wW] = OW, [tW, ZW, xW] = NW;
+      const lW = WW.length / 3;
+      for (let EW = 4 * PW; EW < 4 * PW + 4; EW++) WW.push(mW[3 * EW] * tW / 2 + LW, mW[3 * EW + 1] * ZW / 2 + cW, mW[3 * EW + 2] * xW / 2 + wW);
+      for (const mW of EW) iW.push(lW + mW)
     }
   },
-  40237: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => kY
+  40798: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => LW,
+      e: () => cW,
+      h: () => PW,
+      j: () => wW,
+      n: () => tW
     });
-    const YB = [0, 90, 180, 270],
-      DB = "plotsblueprint";
-    var QB = GB(56),
-      oB = GB(37267),
-      jB = GB(16),
-      yB = GB(1480),
-      JB = GB(2085),
-      MB = GB(1175),
-      PB = GB(1090),
-      zB = GB.n(PB),
-      lB = GB(1699),
-      pB = GB(40244),
-      qB = GB(37263),
-      ZB = GB(1383),
-      NB = GB(2012),
-      RB = GB(2076),
-      WB = GB(3839),
-      AB = GB(1822);
+    var mW = OW(40804),
+      EW = OW(39708);
+    const NW = .35,
+      PW = {
+        size: .9,
+        alpha: .35,
+        crossed: !1
+      },
+      LW = {
+        size: 1.04,
+        alpha: .45,
+        crossed: !0
+      },
+      cW = [.95, .2, .15];
+    class wW {
+      constructor() {
+        this.groups = []
+      }
+      add(WW, iW, OW, EW, NW) {
+        let PW = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mW.d;
+        for (const mW of this.groups)
+          if (xW(mW, EW, NW)) return mW.cells.push(WW, iW, OW), void mW.boxes.push(PW);
+        this.groups.push({
+          rgb: EW,
+          look: NW,
+          cells: [WW, iW, OW],
+          boxes: [PW]
+        })
+      }
+      toArray() {
+        return this.groups
+      }
+    }
+    class tW {
+      constructor(WW) {
+        this.api = WW, this.shown = []
+      }
+      show(WW) {
+        const iW = [];
+        for (const OW of WW) {
+          const WW = this.shown.findIndex((WW => {
+            let {
+              group: iW
+            } = WW;
+            return xW(iW, OW.rgb, OW.look) && lW(iW, OW)
+          })); - 1 === WW ? iW.push(this.build(OW)) : (iW.push(this.shown[WW]), this.shown.splice(WW, 1))
+        }
+        this.dispose(), this.shown = iW
+      }
+      dispose() {
+        for (const {
+            meshes: WW
+          }
+          of this.shown)
+          for (const iW of WW) this.api.disposeGameMesh(iW);
+        this.shown = []
+      }
+      build(WW) {
+        const {
+          rgb: iW,
+          look: OW,
+          boxes: mW
+        } = WW, PW = [iW[0] + (1 - iW[0]) * NW, iW[1] + (1 - iW[1]) * NW, iW[2] + (1 - iW[2]) * NW], LW = [this.buildMesh(WW.cells, iW, OW.alpha, ((WW, iW, EW, NW) => {
+          ZW(WW, iW, EW, mW[NW], OW.size, !1)
+        })), this.buildMesh(WW.cells, PW, OW.alpha, ((WW, iW, EW, NW) => {
+          ZW(WW, iW, EW, mW[NW], OW.size, !0)
+        }))];
+        return OW.crossed && LW.push(this.buildMesh(WW.cells, iW, .9, ((WW, iW, mW) => {
+          (0, EW.k)(WW, iW, mW, OW.size + .01, .12)
+        }))), {
+          group: WW,
+          meshes: LW
+        }
+      }
+      buildMesh(WW, iW, OW, mW) {
+        const EW = [WW[0], WW[1], WW[2]],
+          NW = [],
+          PW = [];
+        for (let LW = 0; LW < WW.length; LW += 3) mW(NW, PW, [WW[LW] - EW[0] + .5, WW[LW + 1] - EW[1] + .5, WW[LW + 2] - EW[2] + .5], LW / 3);
+        return this.api.createGameMesh({
+          positions: NW,
+          indices: PW
+        }, {
+          rgb: [iW[0], iW[1], iW[2]],
+          alpha: OW
+        }, EW)
+      }
+    }
 
-    function VB() {}
-    const SB = (0, QB.createContext)({
-      hint: null,
-      journalRef: VB,
-      placementCardRef: VB,
-      buildRef: VB
+    function ZW(WW, iW, OW, mW, NW, PW) {
+      for (let LW = 0; LW < mW.length; LW += 6) {
+        const cW = [0, 0, 0],
+          wW = [0, 0, 0];
+        for (let WW = 0; WW < 3; WW++) cW[WW] = OW[WW] + ((mW[LW + WW] + mW[LW + WW + 3]) / 2 - .5) * NW, wW[WW] = (mW[LW + WW + 3] - mW[LW + WW]) * NW;
+        (0, EW.d)(WW, iW, cW, wW, PW)
+      }
+    }
+
+    function xW(WW, iW, OW) {
+      return WW.rgb[0] === iW[0] && WW.rgb[1] === iW[1] && WW.rgb[2] === iW[2] && WW.look === OW
+    }
+
+    function lW(WW, iW) {
+      if (WW.cells.length !== iW.cells.length) return !1;
+      for (let OW = 0; OW < WW.cells.length; OW++)
+        if (WW.cells[OW] !== iW.cells[OW]) return !1;
+      return WW.boxes.every(((WW, OW) => WW === iW.boxes[OW]))
+    }
+  },
+  40809: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => lm
     });
-    var nB = GB(25);
-    const UB = [
+    const mW = [0, 90, 180, 270],
+      EW = "plotsblueprint";
+    var NW = OW(62),
+      PW = OW(3361),
+      LW = OW(25),
+      cW = OW(1526),
+      wW = OW(2085),
+      tW = OW(1172),
+      ZW = OW(1089),
+      xW = OW.n(ZW),
+      lW = OW(1729),
+      AW = OW(40814),
+      bW = OW(37868),
+      jW = OW(1391),
+      UW = OW(2032),
+      kW = OW(2080),
+      sW = OW(4619),
+      MW = OW(1856);
+
+    function KW() {}
+    const SW = (0, NW.createContext)({
+      hint: null,
+      journalRef: KW,
+      placementCardRef: KW,
+      buildRef: KW
+    });
+    var YW = OW(27);
+    const yW = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      fB = {
+      TW = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -316,18 +785,18 @@ export const modules = {
           tier: "large"
         }
       },
-      kB = ["small", "medium", "large"].flatMap((BB => UB.flat().filter((OB => fB[OB].tier === BB))));
+      JW = ["small", "medium", "large"].flatMap((WW => yW.flat().filter((iW => TW[iW].tier === WW))));
 
-    function dB(BB) {
-      return fB[BB]
+    function hW(WW) {
+      return TW[WW]
     }
-    const KB = new Map(UB.flatMap((BB => BB.slice(1).map(((OB, GB) => [OB, BB[GB]])))));
+    const HW = new Map(yW.flatMap((WW => WW.slice(1).map(((iW, OW) => [iW, WW[OW]])))));
 
-    function uB(BB) {
-      var OB;
-      return null !== (OB = KB.get(BB)) && void 0 !== OB ? OB : null
+    function nW(WW) {
+      var iW;
+      return null !== (iW = HW.get(WW)) && void 0 !== iW ? iW : null
     }
-    const mB = {
+    const uW = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -350,110 +819,110 @@ export const modules = {
       }
     };
 
-    function IB(BB, OB) {
-      const GB = new Set(BB),
-        YB = function(BB) {
-          const OB = new Set(BB);
-          return new Set(kB.filter((BB => {
-            const GB = uB(BB);
-            return null === GB || OB.has(GB)
+    function oW(WW, iW) {
+      const OW = new Set(WW),
+        mW = function(WW) {
+          const iW = new Set(WW);
+          return new Set(JW.filter((WW => {
+            const OW = nW(WW);
+            return null === OW || iW.has(OW)
           })))
-        }(GB);
-      return kB.map((BB => {
-        const DB = BB === OB;
-        if (GB.has(BB)) return {
-          id: BB,
-          active: DB,
+        }(OW);
+      return JW.map((WW => {
+        const EW = WW === iW;
+        if (OW.has(WW)) return {
+          id: WW,
+          active: EW,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const QB = mB[BB],
-          oB = void 0 === QB || QB.firstBuild && GB.size > 0 ? null : QB.key;
-        return YB.has(BB) ? {
-          id: BB,
-          active: DB,
-          note: oB,
+        const NW = uW[WW],
+          PW = void 0 === NW || NW.firstBuild && OW.size > 0 ? null : NW.key;
+        return mW.has(WW) ? {
+          id: WW,
+          active: EW,
+          note: PW,
           state: "open",
           unlockedBy: null
         } : {
-          id: BB,
-          active: DB,
-          note: oB,
+          id: WW,
+          active: EW,
+          note: PW,
           state: "locked",
-          unlockedBy: uB(BB)
+          unlockedBy: nW(WW)
         }
       }))
     }
-    const FB = "plotsJournalChanged";
-    class iB {
-      constructor(BB, OB) {
-        this.api = BB, this.placement = OB, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.jP(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = BB => {
-          this.placement.start(BB), (0, oB.g)()
+    const dW = "plotsJournalChanged";
+    class eW {
+      constructor(WW, iW) {
+        this.api = WW, this.placement = iW, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.wZ(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = WW => {
+          this.placement.start(WW), (0, PW.m)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${DB} cancel`)
+          this.api.sendCommand(`${EW} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      nP(BB) {
-        let [, OB, GB] = BB;
-        this.pages = IB(OB, GB), nB.o.tM(FB, this.pages, !0)
+      yZ(WW) {
+        let [, iW, OW] = WW;
+        this.pages = oW(iW, OW), YW.l.iZ(dW, this.pages, !0)
       }
-      openFromServer(BB) {
-        let [, OB] = BB;
-        this.openRequested = OB, this.kP()
+      openFromServer(WW) {
+        let [, iW] = WW;
+        this.openRequested = iW, this.hZ()
       }
-      kP() {
-        const BB = this.openRequested;
-        null === BB || jB.c.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, lB.r)() || (0, AB.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = BB, (0, oB.o)()))
+      hZ() {
+        const WW = this.openRequested;
+        null === WW || LW.d.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, lW.l)() || (0, MW.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = WW, (0, PW.H)()))
       }
-      jP(BB) {
-        this.reported.has(BB) || (this.reported.add(BB), this.api.sendCommand(`${DB} report ${BB}`))
+      wZ(WW) {
+        this.reported.has(WW) || (this.reported.add(WW), this.api.sendCommand(`${EW} report ${WW}`))
       }
     }
-    var LB = GB(1282);
-    const gB = "KeyJ";
+    var vW = OW(1283);
+    const gW = "KeyJ";
 
-    function rB(BB) {
+    function DW(WW) {
       let {
-        journal: OB
-      } = BB;
-      const GB = (0, yB.i)(FB, OB.getPages()),
+        journal: iW
+      } = WW;
+      const OW = (0, cW.g)(dW, iW.getPages()),
         {
-          isTouchScreen: YB
-        } = (0, jB.o)(["isTouchScreen"]),
+          isTouchScreen: mW
+        } = (0, LW.p)(["isTouchScreen"]),
         {
-          t: DB
-        } = (0, MB.H)(),
-        JB = (0, QB.useContext)(SB),
-        PB = null !== GB;
-      return (0, QB.useEffect)((() => PB ? (0, pB.d)(gB) : void 0), [PB]), (0, WB.b)((BB => PB && BB.code === gB && !BB.repeat && !(0, AB.isTypingInInput)()), (BB => {
-        (0, lB.E)(BB, !0, oB.o)
-      })), null === GB ? null : (0, LB.jsx)(qB.e, {
+          t: EW
+        } = (0, tW.B)(),
+        wW = (0, NW.useContext)(SW),
+        ZW = null !== OW;
+      return (0, NW.useEffect)((() => ZW ? (0, AW.d)(gW) : void 0), [ZW]), (0, sW.c)((WW => ZW && WW.code === gW && !WW.repeat && !(0, MW.isTypingInInput)()), (WW => {
+        (0, lW.A)(WW, !0, PW.H)
+      })), null === OW ? null : (0, vW.jsx)(bW.h, {
         placement: "topRight",
-        children: (0, LB.jsx)("div", {
+        children: (0, vW.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, LB.jsxs)("button", {
-            ref: JB.journalRef,
+          children: (0, vW.jsxs)("button", {
+            ref: wW.journalRef,
             type: "button",
-            className: zB()("PlotsJournalButton SmallTextBold", {
-              Touch: YB
+            className: xW()("PlotsJournalButton SmallTextBold", {
+              Touch: mW
             }),
-            onClick: oB.o,
-            children: [(0, LB.jsx)("span", {
+            onClick: PW.H,
+            children: [(0, vW.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, LB.jsx)(NB.c, {
+              children: (0, vW.jsx)(UW.b, {
                 itemName: "Book",
                 amount: 0
               })
-            }), DB("plotsGame:journalButton"), !YB && (0, LB.jsx)(RB.c, {
+            }), EW("plotsGame:journalButton"), !mW && (0, vW.jsx)(kW.e, {
               className: "PlotsJournalButtonKey",
-              keyCode: gB
-            }), "openJournal" === JB.hint && (0, LB.jsx)(ZB.b, {
+              keyCode: gW
+            }), "openJournal" === wW.hint && (0, vW.jsx)(jW.c, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -461,114 +930,114 @@ export const modules = {
         })
       })
     }
-    var XB = GB(9927);
-    const wB = [0, 90, 180, 270],
-      EB = /^(meta\|rot\d)\|([lrud]+)$/,
-      cB = "nesw",
-      hB = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      aB = function(BB) {
-        const OB = new WeakMap;
-        return (GB, YB) => {
-          let DB = OB.get(GB);
-          return void 0 === DB && (DB = BB(GB, YB), OB.set(GB, DB)), DB
+    var VW = OW(5725);
+    const pW = [0, 90, 180, 270],
+      fW = /^(meta\|rot\d)\|([lrud]+)$/,
+      CW = "nesw",
+      XW = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      BW = function(WW) {
+        const iW = new WeakMap;
+        return (OW, mW) => {
+          let EW = iW.get(OW);
+          return void 0 === EW && (EW = WW(OW, mW), iW.set(OW, EW)), EW
         }
-      }((BB => new eB(BB)));
-    class eB {
-      constructor(BB) {
-        this.blockMetadata = BB, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const OB = new Set(Object.keys(BB).map((OB => BB[OB].id)));
-        OB.add(0), this.maxBlockId = Math.max(...OB)
+      }((WW => new qW(WW)));
+    class qW {
+      constructor(WW) {
+        this.blockMetadata = WW, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const iW = new Set(Object.keys(WW).map((iW => WW[iW].id)));
+        iW.add(0), this.maxBlockId = Math.max(...iW)
       }
       static
-      for (BB) {
-        return aB(BB)
+      for (WW) {
+        return BW(WW)
       }
-      getBlockIdMapping(BB, OB) {
-        const GB = this.getBlockIdMappingKey(BB, OB);
-        let YB = this.blockIdMappings.get(GB);
-        return void 0 === YB && wB.includes(BB) && (YB = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, BB, OB), this.blockIdMappings.set(GB, YB)), YB
+      getBlockIdMapping(WW, iW) {
+        const OW = this.getBlockIdMappingKey(WW, iW);
+        let mW = this.blockIdMappings.get(OW);
+        return void 0 === mW && pW.includes(WW) && (mW = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, WW, iW), this.blockIdMappings.set(OW, mW)), mW
       }
-      turnBlockId(BB, OB, GB) {
-        return this.mapBlockId(this.blockMetadata[BB], OB, this.getRotationMapping(OB, GB), GB)
+      turnBlockId(WW, iW, OW) {
+        return this.mapBlockId(this.blockMetadata[WW], iW, this.getRotationMapping(iW, OW), OW)
       }
-      getBlockIdMappingKey(BB, OB) {
-        return `r${BB}|m${Number(OB)}`
+      getBlockIdMappingKey(WW, iW) {
+        return `r${WW}|m${Number(iW)}`
       }
-      createBlockIdMapping(BB, OB, GB, YB) {
-        const DB = new Uint16Array(OB + 1),
-          QB = this.getRotationMapping(GB, YB);
-        for (const oB in BB) {
-          const OB = BB[oB];
-          DB[OB.id] = this.mapBlockId(OB, GB, QB, YB)
+      createBlockIdMapping(WW, iW, OW, mW) {
+        const EW = new Uint16Array(iW + 1),
+          NW = this.getRotationMapping(OW, mW);
+        for (const PW in WW) {
+          const iW = WW[PW];
+          EW[iW.id] = this.mapBlockId(iW, OW, NW, mW)
         }
-        return DB
+        return EW
       }
-      getRotationMapping(BB, OB) {
-        const GB = Math.round(BB / 90),
-          YB = new Uint8Array(4);
-        for (let DB = 0; DB < 4; DB++) YB[DB] = (4 + DB - GB) % 4;
-        if (OB) {
-          let BB = YB[0];
-          YB[0] = YB[1], YB[1] = BB, BB = YB[2], YB[2] = YB[3], YB[3] = BB
+      getRotationMapping(WW, iW) {
+        const OW = Math.round(WW / 90),
+          mW = new Uint8Array(4);
+        for (let EW = 0; EW < 4; EW++) mW[EW] = (4 + EW - OW) % 4;
+        if (iW) {
+          let WW = mW[0];
+          mW[0] = mW[1], mW[1] = WW, WW = mW[2], mW[2] = mW[3], mW[3] = WW
         }
-        return YB
+        return mW
       }
-      mapBlockId(BB, OB, GB, YB) {
-        var DB;
+      mapBlockId(WW, iW, OW, mW) {
+        var EW;
         const {
-          blockMetadata: QB
-        } = this, oB = Math.round(OB / 90), {
-          id: jB,
-          meta: yB
-        } = BB, {
-          rot: JB,
-          rootName: MB,
-          metaStr: PB
-        } = yB;
-        let zB;
-        const [, lB, pB] = null !== (DB = hB.exec(PB)) && void 0 !== DB ? DB : [];
-        if (void 0 !== lB) {
-          var qB, ZB;
-          zB = null !== (qB = null === (ZB = QB[`${MB}|meta|${[cB.split("").filter(((BB,OB)=>lB.split("").some((BB=>{const GB=cB.indexOf(BB);return((YB?3-GB:GB)+oB)%4===OB})))).join(""),pB].filter(Boolean).join("|")}`]) || void 0 === ZB ? void 0 : ZB.id) && void 0 !== qB ? qB : jB
-        } else if (null === JB) zB = jB;
+          blockMetadata: NW
+        } = this, PW = Math.round(iW / 90), {
+          id: LW,
+          meta: cW
+        } = WW, {
+          rot: wW,
+          rootName: tW,
+          metaStr: ZW
+        } = cW;
+        let xW;
+        const [, lW, AW] = null !== (EW = XW.exec(ZW)) && void 0 !== EW ? EW : [];
+        if (void 0 !== lW) {
+          var bW, jW;
+          xW = null !== (bW = null === (jW = NW[`${tW}|meta|${[CW.split("").filter(((WW,iW)=>lW.split("").some((WW=>{const OW=CW.indexOf(WW);return((mW?3-OW:OW)+PW)%4===iW})))).join(""),AW].filter(Boolean).join("|")}`]) || void 0 === jW ? void 0 : jW.id) && void 0 !== bW ? bW : LW
+        } else if (null === wW) xW = LW;
         else {
-          var NB, RB;
-          const BB = GB[JB - 1] + 1;
-          let OB = PB.replace(`rot${JB}`, `rot${BB}`);
-          YB && yB.stairsCorner && (OB = OB.replace(/(Left|Right)$/, (BB => "Left" === BB ? "Right" : "Left"))), YB && "Chest" === MB && (OB = OB.replace(/\|(left|right)$/, ((BB, OB) => "left" === OB ? "|right" : "|left")));
-          const DB = EB.exec(OB);
-          if (YB && null !== DB) {
-            const BB = "lrud".split("").filter((BB => DB[2].includes("l" === BB ? "r" : "r" === BB ? "l" : BB)));
-            OB = `${DB[1]}|${BB.join("")}`
+          var UW, kW;
+          const WW = OW[wW - 1] + 1;
+          let iW = ZW.replace(`rot${wW}`, `rot${WW}`);
+          mW && cW.stairsCorner && (iW = iW.replace(/(Left|Right)$/, (WW => "Left" === WW ? "Right" : "Left"))), mW && "Chest" === tW && (iW = iW.replace(/\|(left|right)$/, ((WW, iW) => "left" === iW ? "|right" : "|left")));
+          const EW = fW.exec(iW);
+          if (mW && null !== EW) {
+            const WW = "lrud".split("").filter((WW => EW[2].includes("l" === WW ? "r" : "r" === WW ? "l" : WW)));
+            iW = `${EW[1]}|${WW.join("")}`
           }
-          const oB = `${MB}|${OB}`;
-          if (zB = null !== (NB = null === (RB = QB[oB]) || void 0 === RB ? void 0 : RB.id) && void 0 !== NB ? NB : null, null === zB) {
-            const BB = QB[MB];
-            zB = BB.rootMetaDesc === oB ? BB.id : jB
+          const PW = `${tW}|${iW}`;
+          if (xW = null !== (UW = null === (kW = NW[PW]) || void 0 === kW ? void 0 : kW.id) && void 0 !== UW ? UW : null, null === xW) {
+            const WW = NW[tW];
+            xW = WW.rootMetaDesc === PW ? WW.id : LW
           }
         }
-        return zB
+        return xW
       }
     }
 
-    function TB(BB, OB, GB) {
+    function RW(WW, iW, OW) {
       let {
-        xRotationMappedOrigin: YB,
-        shouldSwapXZ: DB
-      } = GB;
-      const QB = DB ? OB : BB;
-      return null === YB ? QB : YB - QB
+        xRotationMappedOrigin: mW,
+        shouldSwapXZ: EW
+      } = OW;
+      const NW = EW ? iW : WW;
+      return null === mW ? NW : mW - NW
     }
 
-    function bB(BB, OB, GB) {
+    function GW(WW, iW, OW) {
       let {
-        zRotationMappedOrigin: YB,
-        shouldSwapXZ: DB
-      } = GB;
-      const QB = DB ? BB : OB;
-      return null === YB ? QB : YB - QB
+        zRotationMappedOrigin: mW,
+        shouldSwapXZ: EW
+      } = OW;
+      const NW = EW ? WW : iW;
+      return null === mW ? NW : mW - NW
     }
-    const CB = {
+    const IW = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -630,304 +1099,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      HB = new Map;
+      aW = new Map;
 
-    function vB(BB, OB) {
-      const GB = `${BB}|${OB}`;
-      let YB = HB.get(GB);
-      if (void 0 === YB) {
+    function rW(WW, iW) {
+      const OW = `${WW}|${iW}`;
+      let mW = aW.get(OW);
+      if (void 0 === mW) {
         const {
-          size: DB,
-          palette: QB,
-          layers: oB
-        } = CB[BB], jB = 90 === OB || 270 === OB, [yB, JB] = jB ? [DB[2], DB[0]] : [DB[0], DB[2]], MB = function(BB, OB, GB) {
-          let YB = null,
-            DB = null,
-            QB = !1;
-          switch (BB) {
+          size: EW,
+          palette: NW,
+          layers: PW
+        } = IW[WW], LW = 90 === iW || 270 === iW, [cW, wW] = LW ? [EW[2], EW[0]] : [EW[0], EW[2]], tW = function(WW, iW, OW) {
+          let mW = null,
+            EW = null,
+            NW = !1;
+          switch (WW) {
             case 0:
               break;
             case 90:
-              YB = OB - 1, QB = !0;
+              mW = iW - 1, NW = !0;
               break;
             case 180:
-              YB = OB - 1, DB = GB - 1;
+              mW = iW - 1, EW = OW - 1;
               break;
             case 270:
-              DB = GB - 1, QB = !0;
+              EW = OW - 1, NW = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${BB}`)
+              throw new Error(`Invalid rotation: ${WW}`)
           }
           return {
-            xRotationMappedOrigin: YB,
-            zRotationMappedOrigin: DB,
-            shouldSwapXZ: QB
+            xRotationMappedOrigin: mW,
+            zRotationMappedOrigin: EW,
+            shouldSwapXZ: NW
           }
-        }(OB, yB, JB), PB = eB.for(XB.h), zB = QB.map((BB => (0, XB.d)(PB.turnBlockId((0, XB.j)(BB), OB, !1)))), lB = [];
-        oB.forEach(((BB, OB) => {
-          BB.split(" ").forEach(((BB, GB) => {
-            for (let YB = 0; YB < BB.length; YB++)
-              if ("." !== BB[YB]) {
-                const DB = [TB(YB, GB, MB), OB, bB(YB, GB, MB)];
-                lB.push({
-                  offset: DB,
-                  block: zB[BB.charCodeAt(YB) - "a".charCodeAt(0)]
+        }(iW, cW, wW), ZW = qW.for(VW.j), xW = NW.map((WW => (0, VW.f)(ZW.turnBlockId((0, VW.l)(WW), iW, !1)))), lW = [];
+        PW.forEach(((WW, iW) => {
+          WW.split(" ").forEach(((WW, OW) => {
+            for (let mW = 0; mW < WW.length; mW++)
+              if ("." !== WW[mW]) {
+                const EW = [RW(mW, OW, tW), iW, GW(mW, OW, tW)];
+                lW.push({
+                  offset: EW,
+                  block: xW[WW.charCodeAt(mW) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), YB = {
-          size: [yB, DB[1], JB],
-          cells: lB
-        }, HB.set(GB, YB)
+        })), mW = {
+          size: [cW, EW[1], wW],
+          cells: lW
+        }, aW.set(OW, mW)
       }
-      return YB
+      return mW
     }
-    const sB = "plotsBuildProgressChanged",
-      xB = new Map;
+    const zW = "plotsBuildProgressChanged",
+      FW = new Map;
 
-    function tB(BB, OB, GB) {
-      let YB = 0,
-        DB = 0;
-      return function(BB) {
-        let OB = xB.get(BB);
-        if (void 0 === OB) {
-          const YB = [];
+    function QW(WW, iW, OW) {
+      let mW = 0,
+        EW = 0;
+      return function(WW) {
+        let iW = FW.get(WW);
+        if (void 0 === iW) {
+          const mW = [];
           for (const {
-              offset: OB
+              offset: iW
             }
-            of vB(BB, 0).cells) {
-            var GB;
-            YB[OB[1]] = (null !== (GB = YB[OB[1]]) && void 0 !== GB ? GB : 0) + 1
+            of rW(WW, 0).cells) {
+            var OW;
+            mW[iW[1]] = (null !== (OW = mW[iW[1]]) && void 0 !== OW ? OW : 0) + 1
           }
-          OB = YB, xB.set(BB, OB)
+          iW = mW, FW.set(WW, iW)
         }
-        return OB
-      }(BB).forEach(((BB, GB) => {
-        YB += BB, GB > OB && (DB += BB)
+        return iW
+      }(WW).forEach(((WW, OW) => {
+        mW += WW, OW > iW && (EW += WW)
       })), {
-        id: BB,
-        filled: YB - DB - GB,
-        total: YB
+        id: WW,
+        filled: mW - EW - OW,
+        total: mW
       }
     }
-    class BO {
+    class Wi {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(BB) {
-        this.shown = BB, this.topOpen = 0, null === BB && this.tM(null)
+      show(WW) {
+        this.shown = WW, this.topOpen = 0, null === WW && this.iZ(null)
       }
-      update(BB, OB, GB) {
-        const YB = this.shown;
-        null !== YB && (BB >= OB && (this.topOpen = GB), this.tM(tB(YB.id, OB - YB.y, BB >= OB ? GB : this.topOpen + GB)))
+      update(WW, iW, OW) {
+        const mW = this.shown;
+        null !== mW && (WW >= iW && (this.topOpen = OW), this.iZ(QW(mW.id, iW - mW.y, WW >= iW ? OW : this.topOpen + OW)))
       }
-      tM(BB) {
-        const OB = this.progress;
-        (null === BB || void 0 === BB ? void 0 : BB.id) === (null === OB || void 0 === OB ? void 0 : OB.id) && (null === BB || void 0 === BB ? void 0 : BB.filled) === (null === OB || void 0 === OB ? void 0 : OB.filled) && (null === BB || void 0 === BB ? void 0 : BB.total) === (null === OB || void 0 === OB ? void 0 : OB.total) || (this.progress = BB, nB.o.tM(sB, BB, !0))
+      iZ(WW) {
+        const iW = this.progress;
+        (null === WW || void 0 === WW ? void 0 : WW.id) === (null === iW || void 0 === iW ? void 0 : iW.id) && (null === WW || void 0 === WW ? void 0 : WW.filled) === (null === iW || void 0 === iW ? void 0 : iW.filled) && (null === WW || void 0 === WW ? void 0 : WW.total) === (null === iW || void 0 === iW ? void 0 : iW.total) || (this.progress = WW, YW.l.iZ(zW, WW, !0))
       }
     }
-    const OO = "plotsPlotChanged",
-      GO = "plotsGuideChanged",
-      YO = "plotsGuideDone";
-    class DO {
+    const ii = "plotsPlotChanged",
+      Oi = "plotsGuideChanged",
+      mi = "plotsGuideDone";
+    class Ei {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(BB) {
-        this.plot = BB, nB.o.tM(OO, BB, !0)
+      receivePlot(WW) {
+        this.plot = WW, YW.l.iZ(ii, WW, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(BB) {
-        this.guide = BB, nB.o.tM(GO, BB, !0)
+      receiveGuide(WW) {
+        this.guide = WW, YW.l.iZ(Oi, WW, !0)
       }
       receiveGuideDone() {
-        nB.o.tM(YO, void 0, !0)
+        YW.l.iZ(mi, void 0, !0)
       }
     }
-    var QO = GB(1268),
-      oO = GB(39215),
-      jO = GB(37572),
-      yO = GB(1510);
+    var Ni = OW(1269),
+      Pi = OW(39759),
+      Li = OW(38030),
+      ci = OW(1551);
 
-    function JO(BB) {
+    function wi(WW) {
       let {
-        onSkip: OB,
-        className: GB
-      } = BB;
+        onSkip: iW,
+        className: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, MB.H)();
-      return (0, LB.jsx)("button", {
+        t: mW
+      } = (0, tW.B)();
+      return (0, vW.jsx)("button", {
         type: "button",
-        className: zB()("PlotsGuideSkipButton", GB),
-        ...(0, yO.g)(OB, "pointerup"),
-        children: YB("tutorial:skip")
+        className: xW()("PlotsGuideSkipButton", OW),
+        ...(0, ci.d)(iW, "pointerup"),
+        children: mW("tutorial:skip")
       })
     }
 
-    function MO(BB) {
+    function ti(WW) {
       let {
-        target: OB,
-        placement: GB,
-        spotlight: YB = null,
-        children: DB
-      } = BB;
+        target: iW,
+        placement: OW,
+        spotlight: mW = null,
+        children: EW
+      } = WW;
       const {
-        t: oB
-      } = (0, MB.H)(), jB = (0, QB.useRef)(OB);
-      return jB.current = OB, (0, QO.v)("popup", jB, null === YB ? null : YB.onSkip, null !== YB, null, "controller:menusSkipTutorial"), (0, LB.jsxs)(jO.f, {
-        target: OB,
-        placement: GB,
-        className: zB()("PlotsGuideBubble", {
-          Passive: null === YB
+        t: PW
+      } = (0, tW.B)(), LW = (0, NW.useRef)(iW);
+      return LW.current = iW, (0, Ni.r)("popup", LW, null === mW ? null : mW.onSkip, null !== mW, null, "controller:menusSkipTutorial"), (0, vW.jsxs)(Li.h, {
+        target: iW,
+        placement: OW,
+        className: xW()("PlotsGuideBubble", {
+          Passive: null === mW
         }),
-        spotlight: null !== YB,
+        spotlight: null !== mW,
         spotlightMargin: 30,
-        children: [(0, LB.jsxs)("div", {
+        children: [(0, vW.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, LB.jsx)("img", {
+          children: [(0, vW.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: oO,
+            src: Pi,
             alt: "",
             draggable: !1
-          }), (0, LB.jsx)("span", {
+          }), (0, vW.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: oB("plotsGame:maverickName")
-          }), null !== YB && (0, LB.jsx)(JO, {
-            onSkip: YB.onSkip
+            children: PW("plotsGame:maverickName")
+          }), null !== mW && (0, vW.jsx)(wi, {
+            onSkip: mW.onSkip
           })]
-        }), (0, LB.jsx)("p", {
+        }), (0, vW.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: DB
+          children: EW
         })]
       })
     }
 
-    function PO(BB) {
+    function Zi(WW) {
       let {
-        className: OB,
-        icon: GB,
-        title: YB,
-        children: DB
-      } = BB;
-      return (0, LB.jsxs)("div", {
-        className: zB()("PlotsCard", OB),
+        className: iW,
+        icon: OW,
+        title: mW,
+        children: EW
+      } = WW;
+      return (0, vW.jsxs)("div", {
+        className: xW()("PlotsCard", iW),
         role: "status",
-        children: [(0, LB.jsx)("span", {
+        children: [(0, vW.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, LB.jsx)(ZB.b, {
-            name: GB
+          children: (0, vW.jsx)(jW.c, {
+            name: OW
           })
-        }), (0, LB.jsxs)("div", {
+        }), (0, vW.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, LB.jsx)("div", {
+          children: [(0, vW.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: YB
-          }), DB]
+            children: mW
+          }), EW]
         })]
       })
     }
 
-    function zO(BB) {
+    function xi(WW) {
       let {
-        progress: OB,
-        goal: GB
-      } = BB;
-      const YB = Math.min(OB, GB);
-      return (0, LB.jsxs)("div", {
+        progress: iW,
+        goal: OW
+      } = WW;
+      const mW = Math.min(iW, OW);
+      return (0, vW.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, LB.jsx)("div", {
+        children: [(0, vW.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": GB,
-          "aria-valuenow": YB,
-          children: (0, LB.jsx)("div", {
+          "aria-valuemax": OW,
+          "aria-valuenow": mW,
+          children: (0, vW.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${YB/GB})`
+              transform: `scaleX(${mW/OW})`
             }
           })
-        }), (0, LB.jsxs)("span", {
+        }), (0, vW.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [YB, "/", GB]
+          children: [mW, "/", OW]
         })]
       })
     }
 
-    function lO(BB) {
+    function li(WW) {
       let {
-        progress: OB,
-        guide: GB
-      } = BB;
+        progress: iW,
+        guide: OW
+      } = WW;
       const {
-        t: YB
-      } = (0, MB.H)(), {
-        isTouchScreen: DB
-      } = (0, jB.o)(["isTouchScreen"]), QB = OB.filled < 5;
-      return (0, LB.jsxs)(LB.Fragment, {
-        children: [(QB || OB.total - OB.filled <= 5) && (0, LB.jsx)("div", {
+        t: mW
+      } = (0, tW.B)(), {
+        isTouchScreen: EW
+      } = (0, LW.p)(["isTouchScreen"]), NW = iW.filled < 5;
+      return (0, vW.jsxs)(vW.Fragment, {
+        children: [(NW || iW.total - iW.filled <= 5) && (0, vW.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, LB.jsx)("div", {
-            ref: GB.bindHand,
+          children: (0, vW.jsx)("div", {
+            ref: OW.bindHand,
             className: "PlotsGuideHand",
-            children: (0, LB.jsx)(ZB.b, {
+            children: (0, vW.jsx)(jW.c, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, LB.jsx)(qB.e, {
+        }), (0, vW.jsx)(bW.h, {
           placement: "bottom",
-          children: (0, LB.jsxs)(PO, {
+          children: (0, vW.jsxs)(Zi, {
             icon: "hammer",
-            title: YB(dB(OB.id).displayName.translationKey),
-            children: [QB && (0, LB.jsx)("div", {
+            title: mW(hW(iW.id).displayName.translationKey),
+            children: [NW && (0, vW.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: DB ? YB("plotsGame:guideBuildTouch") : pO(YB)
-            }), (0, LB.jsx)(zO, {
-              progress: OB.filled,
-              goal: OB.total
+              children: EW ? mW("plotsGame:guideBuildTouch") : Ai(mW)
+            }), (0, vW.jsx)(xi, {
+              progress: iW.filled,
+              goal: iW.total
             })]
           })
         })]
       })
     }
 
-    function pO(BB) {
-      const OB = JB.t["alt-fire"][0];
-      return "Mouse3" === OB ? BB("plotsGame:guideBuildRightClick") : BB("plotsGame:guideBuildKeys", {
-        key: (0, JB.l)(OB)
+    function Ai(WW) {
+      const iW = wW.v["alt-fire"][0];
+      return "Mouse3" === iW ? WW("plotsGame:guideBuildRightClick") : WW("plotsGame:guideBuildKeys", {
+        key: (0, wW.m)(iW)
       })
     }
 
-    function qO() {
-      return (0, LB.jsx)("div", {
+    function bi() {
+      return (0, vW.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, LB.jsx)(ZB.b, {
+        children: (0, vW.jsx)(jW.c, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var ZO = GB(1293),
-      NO = GB(2854),
-      RO = GB(39074),
-      WO = GB(38836),
-      AO = GB(37627),
-      VO = GB(9965),
-      SO = GB(9983),
-      nO = GB(353),
-      UO = GB(38488);
-    const fO = new Map([
+    var ji = OW(1294),
+      Ui = OW(3599),
+      ki = OW(39595),
+      si = OW(39352),
+      Mi = OW(38088),
+      Ki = OW(5754),
+      Si = OW(5772),
+      Yi = OW(344),
+      yi = OW(38986);
+    const Ti = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -947,450 +1416,320 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      kO = [...AO.d.blockRemoveActionRoots, ...WO.d, ...VO.i, "Board", "Code Block", "Custom Lobby Block"],
-      dO = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let KO = null;
+      Ji = [...Mi.b.blockRemoveActionRoots, ...si.b, ...Ki.k, "Board", "Code Block", "Custom Lobby Block"],
+      Hi = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let ni = null;
 
-    function uO() {
-      return KO ??= function() {
-        const BB = mO(),
-          OB = Math.max(...BB.map((BB => XB.h[BB].id))) + 1,
-          GB = new Int32Array(OB),
-          YB = new Int32Array(OB),
-          DB = new Uint8Array(OB).fill(1),
-          QB = new Uint8Array(OB),
-          oB = new Uint8Array(OB),
-          jB = new Array(OB).fill("Air"),
-          yB = new Map,
-          JB = BB => {
-            let OB = yB.get(BB);
-            return void 0 === OB && (OB = yB.size + 1, yB.set(BB, OB)), OB
+    function ui() {
+      return ni ??= function() {
+        const WW = oi(),
+          iW = Math.max(...WW.map((WW => VW.j[WW].id))) + 1,
+          OW = new Int32Array(iW),
+          mW = new Int32Array(iW),
+          EW = new Uint8Array(iW).fill(1),
+          NW = new Uint8Array(iW),
+          PW = new Uint8Array(iW),
+          LW = new Array(iW).fill("Air"),
+          cW = new Map,
+          wW = WW => {
+            let iW = cW.get(WW);
+            return void 0 === iW && (iW = cW.size + 1, cW.set(WW, iW)), iW
           },
-          MB = new Set(kO);
-        for (const zB of BB) {
-          var PB;
+          tW = new Set(Ji);
+        for (const xW of WW) {
+          var ZW;
           const {
-            id: BB,
-            meta: OB,
-            altActionable: yB,
-            canBePlacedOver: lB
-          } = XB.h[zB];
-          GB[BB] = JB(IO(zB));
-          const pB = OB.stairsCorner;
-          if (null === pB) YB[BB] = GB[BB];
+            id: WW,
+            meta: iW,
+            altActionable: cW,
+            canBePlacedOver: lW
+          } = VW.j[xW];
+          OW[WW] = wW(di(xW));
+          const AW = iW.stairsCorner;
+          if (null === AW) mW[WW] = OW[WW];
           else {
-            const GB = pB.endsWith("Right");
-            YB[BB] = JB(`${OB.rootName}|rot${GB?OB.rot%4+1:OB.rot}|${OB.halfblockPlacement}|${pB.replace("Right","Left")}`)
+            const OW = AW.endsWith("Right");
+            mW[WW] = wW(`${iW.rootName}|rot${OW?iW.rot%4+1:iW.rot}|${iW.halfblockPlacement}|${AW.replace("Right","Left")}`)
           }
-          DB[BB] = lB ? 1 : 0, QB[BB] = yB || null !== OB.open || zB in UO.c || MB.has(OB.rootName) || void 0 !== (0, WO.h)(OB.rootName) ? 1 : 0;
+          EW[WW] = lW ? 1 : 0, NW[WW] = cW || null !== iW.open || xW in yi.d || tW.has(iW.rootName) || void 0 !== (0, si.e)(iW.rootName) ? 1 : 0;
           const {
-            rootName: qB
-          } = OB;
-          oB[BB] = null !== OB.open || WO.d.includes(qB) || qB.includes("Bookshelf") || qB.includes("Mailbox") ? 1 : 0, jB[BB] = null !== (PB = (0, RO.d)(BB)) && void 0 !== PB ? PB : qB
+            rootName: bW
+          } = iW;
+          PW[WW] = null !== iW.open || si.b.includes(bW) || bW.includes("Bookshelf") || bW.includes("Mailbox") ? 1 : 0, LW[WW] = null !== (ZW = (0, ki.f)(WW)) && void 0 !== ZW ? ZW : bW
         }
         return {
-          kinds: GB,
-          shapes: YB,
-          empty: DB,
-          inUse: QB,
-          ownAltActionMessage: oB,
-          placingItems: jB
+          kinds: OW,
+          shapes: mW,
+          empty: EW,
+          inUse: NW,
+          ownAltActionMessage: PW,
+          placingItems: LW
         }
-      }(), KO
+      }(), ni
     }
 
-    function mO() {
-      return Object.keys(XB.h).filter((BB => XB.h[BB].name === BB))
+    function oi() {
+      return Object.keys(VW.j).filter((WW => VW.j[WW].name === WW))
     }
 
-    function IO(BB) {
-      var OB;
-      const GB = XB.h[BB],
+    function di(WW) {
+      var iW;
+      const OW = VW.j[WW],
         {
-          rootName: YB,
-          rot: DB
-        } = GB.meta,
-        [, ...QB] = (null !== (OB = GB.rootMetaDesc) && void 0 !== OB ? OB : BB).split("|"),
-        oB = QB.filter((BB => !("meta" === BB || dO.test(BB) || (0, SO.A)(GB) && /^[nesw]+$/.test(BB) || VO.i.includes(YB) && /^[lrud]+$/.test(BB) || nO.H.includes(YB) && /^(left|right)$/.test(BB))));
-      return [YB, ...oB].map((BB => "fenceGate" === GB.model && BB === `rot${DB}` ? "rot" + ((DB - 1) % 2 + 1) : BB)).join("|")
+          rootName: mW,
+          rot: EW
+        } = OW.meta,
+        [, ...NW] = (null !== (iW = OW.rootMetaDesc) && void 0 !== iW ? iW : WW).split("|"),
+        PW = NW.filter((WW => !("meta" === WW || Hi.test(WW) || (0, Si.w)(OW) && /^[nesw]+$/.test(WW) || Ki.k.includes(mW) && /^[lrud]+$/.test(WW) || Yi.L.includes(mW) && /^(left|right)$/.test(WW))));
+      return [mW, ...PW].map((WW => "fenceGate" === OW.model && WW === `rot${EW}` ? "rot" + ((EW - 1) % 2 + 1) : WW)).join("|")
     }
 
-    function FO(BB, OB) {
+    function ei(WW, iW) {
       const {
-        kinds: GB,
-        shapes: YB
-      } = uO();
-      return GB[BB] === GB[OB] || YB[BB] === YB[OB]
+        kinds: OW,
+        shapes: mW
+      } = ui();
+      return OW[WW] === OW[iW] || mW[WW] === mW[iW]
     }
 
-    function iO(BB) {
-      return 1 === uO().empty[BB]
+    function vi(WW) {
+      return 1 === ui().empty[WW]
     }
 
-    function LO(BB) {
-      return uO().placingItems[BB]
+    function gi(WW) {
+      return ui().placingItems[WW]
     }
 
-    function gO(BB) {
-      return fO.get(XB.h[BB].meta.rootName)
+    function Di(WW) {
+      return Ti.get(VW.j[WW].meta.rootName)
     }
-    var rO = GB(9962),
-      XO = GB(9974);
-    const wO = [0, 0, 0, 1, 1, 1],
-      EO = (0, rO.d)([
-        [2, 0, 2, 6, 6, 6]
-      ]),
-      cO = (0, rO.d)([
-        [3, 0, 3, 5, 5, 5]
-      ]),
-      hO = (0, rO.d)([
-        [3, 3, 3, 5, 8, 5]
-      ]),
-      aO = [0, 1, 2, 3].map((BB => (0, rO.d)((0, rO.m)([
-        [3, 2, 0, 5, 7, 3]
-      ], BB))));
-
-    function eO(BB) {
-      const {
-        MZ: OB,
-        model: GB,
-        blockModel: YB,
-        meta: DB
-      } = XB.h[BB];
-      return void 0 !== OB ? OB : "CentreCross" === GB ? EO : null !== YB && void 0 !== YB && YB.startsWith("torch") ? DB.halfblockPlacement === XO.d.side ? aO[DB.rot - 1] : DB.halfblockPlacement === XO.d.top ? hO : cO : wO
-    }
-    var TO = GB(192);
-    class bO {
-      constructor(BB) {
-        this.api = BB, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var Vi = OW(40804),
+      fi = OW(182);
+    class Ci {
+      constructor(WW) {
+        this.api = WW, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(BB) {
-        const OB = TO.f.pP;
+      watch(WW) {
+        const iW = fi.f.jZ;
         this.chunks = [];
-        for (let GB = 0; GB < BB.length; GB += 3) {
-          const YB = Math.floor(BB[GB] / OB),
-            DB = Math.floor(BB[GB + 1] / OB),
-            QB = Math.floor(BB[GB + 2] / OB);
-          this.watches(YB, DB, QB) || this.chunks.push(YB, DB, QB)
+        for (let OW = 0; OW < WW.length; OW += 3) {
+          const mW = Math.floor(WW[OW] / iW),
+            EW = Math.floor(WW[OW + 1] / iW),
+            NW = Math.floor(WW[OW + 2] / iW);
+          this.watches(mW, EW, NW) || this.chunks.push(mW, EW, NW)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const BB = performance.now();
-        if (BB - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = BB;
-        let OB = !1;
-        for (let GB = 0; GB < this.chunks.length; GB += 3) {
-          const BB = this.api.getChunkVersion(this.chunks[GB], this.chunks[GB + 1], this.chunks[GB + 2]);
-          this.versions[GB / 3] !== BB && (this.versions[GB / 3] = BB, OB = !0)
+        const WW = performance.now();
+        if (WW - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = WW;
+        let iW = !1;
+        for (let OW = 0; OW < this.chunks.length; OW += 3) {
+          const WW = this.api.getChunkVersion(this.chunks[OW], this.chunks[OW + 1], this.chunks[OW + 2]);
+          this.versions[OW / 3] !== WW && (this.versions[OW / 3] = WW, iW = !0)
         }
-        return OB
+        return iW
       }
-      watches(BB, OB, GB) {
-        for (let YB = 0; YB < this.chunks.length; YB += 3)
-          if (this.chunks[YB] === BB && this.chunks[YB + 1] === OB && this.chunks[YB + 2] === GB) return !0;
+      watches(WW, iW, OW) {
+        for (let mW = 0; mW < this.chunks.length; mW += 3)
+          if (this.chunks[mW] === WW && this.chunks[mW + 1] === iW && this.chunks[mW + 2] === OW) return !0;
         return !1
       }
     }
-    var CO = GB(39176);
-    const HO = .35,
-      vO = {
-        size: .9,
-        alpha: .35,
-        crossed: !1
-      },
-      sO = {
-        size: 1.04,
-        alpha: .45,
-        crossed: !0
-      },
-      xO = [.95, .2, .15];
-    class tO {
-      constructor() {
-        this.groups = []
-      }
-      add(BB, OB, GB, YB, DB) {
-        let QB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : wO;
-        for (const oB of this.groups)
-          if (GG(oB, YB, DB)) return oB.cells.push(BB, OB, GB), void oB.boxes.push(QB);
-        this.groups.push({
-          rgb: YB,
-          look: DB,
-          cells: [BB, OB, GB],
-          boxes: [QB]
-        })
-      }
-      toArray() {
-        return this.groups
-      }
-    }
-    class BG {
-      constructor(BB) {
-        this.api = BB, this.shown = []
-      }
-      show(BB) {
-        const OB = [];
-        for (const GB of BB) {
-          const BB = this.shown.findIndex((BB => {
-            let {
-              group: OB
-            } = BB;
-            return GG(OB, GB.rgb, GB.look) && YG(OB, GB)
-          })); - 1 === BB ? OB.push(this.build(GB)) : (OB.push(this.shown[BB]), this.shown.splice(BB, 1))
-        }
-        this.dispose(), this.shown = OB
-      }
-      dispose() {
-        for (const {
-            meshes: BB
-          }
-          of this.shown)
-          for (const OB of BB) this.api.disposeGameMesh(OB);
-        this.shown = []
-      }
-      build(BB) {
-        const {
-          rgb: OB,
-          look: GB,
-          boxes: YB
-        } = BB, DB = [OB[0] + (1 - OB[0]) * HO, OB[1] + (1 - OB[1]) * HO, OB[2] + (1 - OB[2]) * HO], QB = [this.buildMesh(BB.cells, OB, GB.alpha, ((BB, OB, DB, QB) => {
-          OG(BB, OB, DB, YB[QB], GB.size, !1)
-        })), this.buildMesh(BB.cells, DB, GB.alpha, ((BB, OB, DB, QB) => {
-          OG(BB, OB, DB, YB[QB], GB.size, !0)
-        }))];
-        return GB.crossed && QB.push(this.buildMesh(BB.cells, OB, .9, ((BB, OB, YB) => {
-          (0, CO.f)(BB, OB, YB, GB.size + .01, .12)
-        }))), {
-          group: BB,
-          meshes: QB
-        }
-      }
-      buildMesh(BB, OB, GB, YB) {
-        const DB = [BB[0], BB[1], BB[2]],
-          QB = [],
-          oB = [];
-        for (let jB = 0; jB < BB.length; jB += 3) YB(QB, oB, [BB[jB] - DB[0] + .5, BB[jB + 1] - DB[1] + .5, BB[jB + 2] - DB[2] + .5], jB / 3);
-        return this.api.createGameMesh({
-          positions: QB,
-          indices: oB
-        }, {
-          rgb: [OB[0], OB[1], OB[2]],
-          alpha: GB
-        }, DB)
-      }
-    }
+    var Xi = OW(40798);
 
-    function OG(BB, OB, GB, YB, DB, QB) {
-      for (let oB = 0; oB < YB.length; oB += 6) {
-        const jB = [0, 0, 0],
-          yB = [0, 0, 0];
-        for (let BB = 0; BB < 3; BB++) jB[BB] = GB[BB] + ((YB[oB + BB] + YB[oB + BB + 3]) / 2 - .5) * DB, yB[BB] = (YB[oB + BB + 3] - YB[oB + BB]) * DB;
-        (0, CO.b)(BB, OB, jB, yB, QB)
+    function Bi(WW, iW, OW, mW, EW) {
+      if (!WW.isBlockInLoadedChunk(iW, mW - 6, OW) || !WW.isBlockInLoadedChunk(iW, mW + 6 + EW, OW) || !WW.canModifyBlockAt(iW, mW, OW)) return NaN;
+      let NW = mW - 1;
+      if (0 !== WW.getBlockId(iW, NW, OW)) {
+        for (; NW < mW + 6 && 0 !== WW.getBlockId(iW, NW + 1, OW);) NW++;
+        return NW
       }
-    }
-
-    function GG(BB, OB, GB) {
-      return BB.rgb[0] === OB[0] && BB.rgb[1] === OB[1] && BB.rgb[2] === OB[2] && BB.look === GB
-    }
-
-    function YG(BB, OB) {
-      if (BB.cells.length !== OB.cells.length) return !1;
-      for (let GB = 0; GB < BB.cells.length; GB++)
-        if (BB.cells[GB] !== OB.cells[GB]) return !1;
-      return BB.boxes.every(((BB, GB) => BB === OB.boxes[GB]))
-    }
-
-    function DG(BB, OB, GB, YB, DB) {
-      if (!BB.isBlockInLoadedChunk(OB, YB - 6, GB) || !BB.isBlockInLoadedChunk(OB, YB + 6 + DB, GB) || !BB.canModifyBlockAt(OB, YB, GB)) return NaN;
-      let QB = YB - 1;
-      if (0 !== BB.getBlockId(OB, QB, GB)) {
-        for (; QB < YB + 6 && 0 !== BB.getBlockId(OB, QB + 1, GB);) QB++;
-        return QB
-      }
-      for (; QB > YB - 6;)
-        if (QB--, 0 !== BB.getBlockId(OB, QB, GB)) return QB;
+      for (; NW > mW - 6;)
+        if (NW--, 0 !== WW.getBlockId(iW, NW, OW)) return NW;
       return NaN
     }
 
-    function QG(BB, OB, GB, YB, DB) {
-      let QB = 0;
-      for (let oB = YB + 1; oB <= YB + DB; oB++) 0 !== BB.getBlockId(OB, oB, GB) && QB++;
-      return QB
+    function qi(WW, iW, OW, mW, EW) {
+      let NW = 0;
+      for (let PW = mW + 1; PW <= mW + EW; PW++) 0 !== WW.getBlockId(iW, PW, OW) && NW++;
+      return NW
     }
 
-    function oG(BB) {
-      const OB = new Map;
-      for (const oB of BB) {
-        var GB;
-        if (Number.isNaN(oB)) return null;
-        OB.set(oB, (null !== (GB = OB.get(oB)) && void 0 !== GB ? GB : 0) + 1)
+    function Ri(WW) {
+      const iW = new Map;
+      for (const PW of WW) {
+        var OW;
+        if (Number.isNaN(PW)) return null;
+        iW.set(PW, (null !== (OW = iW.get(PW)) && void 0 !== OW ? OW : 0) + 1)
       }
-      let YB = NaN,
-        DB = 0;
-      for (const [oB, jB] of OB)(jB > DB || jB === DB && oB < YB) && (YB = oB, DB = jB);
-      let QB = 0;
-      for (const oB of BB) QB += Math.abs(oB - YB);
-      return QB
+      let mW = NaN,
+        EW = 0;
+      for (const [PW, LW] of iW)(LW > EW || LW === EW && PW < mW) && (mW = PW, EW = LW);
+      let NW = 0;
+      for (const PW of WW) NW += Math.abs(PW - mW);
+      return NW
     }
 
-    function jG(BB, OB, GB, YB) {
+    function Gi(WW, iW, OW, mW) {
       const {
-        eye: DB,
-        forward: QB,
-        tanHalfFovX: oB,
-        tanHalfFovY: jB
-      } = BB, [yB, JB] = function(BB) {
-        let [OB, GB, YB] = BB;
-        const DB = Math.hypot(OB, YB),
-          [QB, oB] = [YB / DB, -OB / DB];
+        eye: EW,
+        forward: NW,
+        tanHalfFovX: PW,
+        tanHalfFovY: LW
+      } = WW, [cW, wW] = function(WW) {
+        let [iW, OW, mW] = WW;
+        const EW = Math.hypot(iW, mW),
+          [NW, PW] = [mW / EW, -iW / EW];
         return [
-          [QB, 0, oB],
-          [GB * oB, YB * QB - OB * oB, -GB * QB]
+          [NW, 0, PW],
+          [OW * PW, mW * NW - iW * PW, -OW * NW]
         ]
-      }(QB), [MB, PB] = [OB * oB, GB * jB], zB = QB[0] + MB * yB[0] + PB * JB[0], lB = QB[1] + PB * JB[1], pB = QB[2] + MB * yB[2] + PB * JB[2], qB = (YB - DB[1]) / lB;
-      return qB > 0 && qB < 1 / 0 ? [DB[0] + qB * zB, DB[2] + qB * pB] : null
+      }(NW), [tW, ZW] = [iW * PW, OW * LW], xW = NW[0] + tW * cW[0] + ZW * wW[0], lW = NW[1] + ZW * wW[1], AW = NW[2] + tW * cW[2] + ZW * wW[2], bW = (mW - EW[1]) / lW;
+      return bW > 0 && bW < 1 / 0 ? [EW[0] + bW * xW, EW[2] + bW * AW] : null
     }
-    const yG = "plotsBlueprintPlacementChanged",
-      JG = {
+    const Ii = "plotsBlueprintPlacementChanged",
+      ai = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class MG {
-      constructor(BB, OB) {
-        this.api = BB, this.localPlayerId = OB, this.placing = null, this.view = null, this.camera = {
+    class ri {
+      constructor(WW, iW) {
+        this.api = WW, this.localPlayerId = iW, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = BB => {
-          var OB, GB, YB, QB;
-          const oB = null !== (OB = null === (GB = this.placing) || void 0 === GB ? void 0 : GB.rotation) && void 0 !== OB ? OB : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = WW => {
+          var iW, OW, mW, NW;
+          const PW = null !== (iW = null === (OW = this.placing) || void 0 === OW ? void 0 : OW.rotation) && void 0 !== iW ? iW : 0,
             {
-              size: jB
-            } = vB(BB, oB),
-            yB = this.api.pR(this.localPlayerId),
-            [JB, MB] = null !== (YB = null !== (QB = function(BB, OB, GB, YB) {
-              const [DB, QB, oB] = OB, [jB, yB, JB] = [Math.floor(GB[0]), Math.floor(GB[1]), Math.floor(GB[2])], MB = 6 + Math.max(DB, oB) / 2, [PB, zB] = [Math.ceil(MB + DB / 2), Math.ceil(MB + oB / 2)], [lB, pB] = [jB - PB, JB - zB], [qB, ZB] = [2 * PB + 1, 2 * zB + 1], NB = new Float64Array(qB * ZB), RB = new Uint16Array(qB * ZB);
-              for (let nB = 0; nB < qB; nB++)
-                for (let OB = 0; OB < ZB; OB++) {
-                  const GB = DG(BB, lB + nB, pB + OB, yB, QB);
-                  NB[nB * ZB + OB] = GB, Number.isNaN(GB) || (RB[nB * ZB + OB] = QG(BB, lB + nB, pB + OB, GB, QB))
+              size: LW
+            } = rW(WW, PW),
+            cW = this.api.Vk(this.localPlayerId),
+            [wW, tW] = null !== (mW = null !== (NW = function(WW, iW, OW, mW) {
+              const [EW, NW, PW] = iW, [LW, cW, wW] = [Math.floor(OW[0]), Math.floor(OW[1]), Math.floor(OW[2])], tW = 6 + Math.max(EW, PW) / 2, [ZW, xW] = [Math.ceil(tW + EW / 2), Math.ceil(tW + PW / 2)], [lW, AW] = [LW - ZW, wW - xW], [bW, jW] = [2 * ZW + 1, 2 * xW + 1], UW = new Float64Array(bW * jW), kW = new Uint16Array(bW * jW);
+              for (let YW = 0; YW < bW; YW++)
+                for (let iW = 0; iW < jW; iW++) {
+                  const OW = Bi(WW, lW + YW, AW + iW, cW, NW);
+                  UW[YW * jW + iW] = OW, Number.isNaN(OW) || (kW[YW * jW + iW] = qi(WW, lW + YW, AW + iW, OW, NW))
                 }
-              const WB = Math.hypot(YB[0], YB[2]),
-                AB = [];
-              let VB = null,
-                SB = 1 / 0;
-              for (let nB = 0; nB + DB <= qB; nB++)
-                for (let BB = 0; BB + oB <= ZB; BB++) {
-                  const [OB, QB] = [lB + nB, pB + BB], [yB, PB] = [OB + DB / 2 - GB[0], QB + oB / 2 - GB[2]], zB = Math.hypot(yB, PB);
-                  if (zB > MB || jB >= OB - 2 && jB < OB + DB + 2 && JB >= QB - 2 && JB < QB + oB + 2) continue;
-                  AB.length = 0;
-                  let qB = 0;
-                  for (let GB = 0; GB < DB; GB++)
-                    for (let OB = 0; OB < oB; OB++) AB.push(NB[(nB + GB) * ZB + BB + OB]), qB += RB[(nB + GB) * ZB + BB + OB];
-                  const UB = oG(AB);
-                  if (null === UB) continue;
-                  const fB = zB + 3 * (UB + qB) + (1 - (0 === WB ? 1 : (yB * YB[0] + PB * YB[2]) / (zB * WB))) / 2 * 6;
-                  fB < SB && (SB = fB, VB = [OB, QB])
+              const sW = Math.hypot(mW[0], mW[2]),
+                MW = [];
+              let KW = null,
+                SW = 1 / 0;
+              for (let YW = 0; YW + EW <= bW; YW++)
+                for (let WW = 0; WW + PW <= jW; WW++) {
+                  const [iW, NW] = [lW + YW, AW + WW], [cW, ZW] = [iW + EW / 2 - OW[0], NW + PW / 2 - OW[2]], xW = Math.hypot(cW, ZW);
+                  if (xW > tW || LW >= iW - 2 && LW < iW + EW + 2 && wW >= NW - 2 && wW < NW + PW + 2) continue;
+                  MW.length = 0;
+                  let bW = 0;
+                  for (let OW = 0; OW < EW; OW++)
+                    for (let iW = 0; iW < PW; iW++) MW.push(UW[(YW + OW) * jW + WW + iW]), bW += kW[(YW + OW) * jW + WW + iW];
+                  const yW = Ri(MW);
+                  if (null === yW) continue;
+                  const TW = xW + 3 * (yW + bW) + (1 - (0 === sW ? 1 : (cW * mW[0] + ZW * mW[2]) / (xW * sW))) / 2 * 6;
+                  TW < SW && (SW = TW, KW = [iW, NW])
                 }
-              return VB
-            }(this.api, jB, yB, this.camera.forward)) && void 0 !== QB ? QB : this.cornerOnTarget(jB)) && void 0 !== YB ? YB : [Math.floor(yB[0]) + 2, Math.floor(yB[2])];
+              return KW
+            }(this.api, LW, cW, this.camera.forward)) && void 0 !== NW ? NW : this.cornerOnTarget(LW)) && void 0 !== mW ? mW : [Math.floor(cW[0]) + 2, Math.floor(cW[2])];
           this.placing = {
-            id: BB,
-            rotation: oB,
-            corner: [JB, this.playerLevel(), MB],
+            id: WW,
+            rotation: PW,
+            corner: [wW, this.playerLevel(), tW],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${DB} preview`)
+          }, this.update(), this.api.sendCommand(`${EW} preview`)
         }, this.rotate = () => {
           const {
-            id: BB,
-            rotation: OB,
-            corner: GB
-          } = this.placing, DB = YB[(YB.indexOf(OB) + 1) % YB.length], [QB, , oB] = vB(BB, OB).size, [jB, , yB] = vB(BB, DB).size;
-          this.moveTo(GB[0] + Math.floor(QB / 2) - Math.floor(jB / 2), GB[2] + Math.floor(oB / 2) - Math.floor(yB / 2), DB)
-        }, this.hoverAt = (BB, OB) => {
-          this.placing.hover = [BB, OB], this.moveCentreTo(this.camera, BB, OB)
+            id: WW,
+            rotation: iW,
+            corner: OW
+          } = this.placing, EW = mW[(mW.indexOf(iW) + 1) % mW.length], [NW, , PW] = rW(WW, iW).size, [LW, , cW] = rW(WW, EW).size;
+          this.moveTo(OW[0] + Math.floor(NW / 2) - Math.floor(LW / 2), OW[2] + Math.floor(PW / 2) - Math.floor(cW / 2), EW)
+        }, this.hoverAt = (WW, iW) => {
+          this.placing.hover = [WW, iW], this.moveCentreTo(this.camera, WW, iW)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (BB, OB) => {
-          const GB = this.placing,
+        }, this.beginDrag = (WW, iW) => {
+          const OW = this.placing,
             {
-              eye: YB,
-              forward: DB,
-              tanHalfFovX: QB,
-              tanHalfFovY: oB
+              eye: mW,
+              forward: EW,
+              tanHalfFovX: NW,
+              tanHalfFovY: PW
             } = this.camera,
-            jB = {
-              eye: [YB[0], YB[1], YB[2]],
-              forward: [DB[0], DB[1], DB[2]],
-              tanHalfFovX: QB,
-              tanHalfFovY: oB
+            LW = {
+              eye: [mW[0], mW[1], mW[2]],
+              forward: [EW[0], EW[1], EW[2]],
+              tanHalfFovX: NW,
+              tanHalfFovY: PW
             },
-            yB = GB.corner[1],
-            JB = jG(jB, BB, OB, yB);
-          GB.hover = null, GB.drag = JB && {
-            view: jB,
-            ground: JB,
-            corner: [GB.corner[0], GB.corner[2]],
-            level: yB
+            cW = OW.corner[1],
+            wW = Gi(LW, WW, iW, cW);
+          OW.hover = null, OW.drag = wW && {
+            view: LW,
+            ground: wW,
+            corner: [OW.corner[0], OW.corner[2]],
+            level: cW
           }
-        }, this.dragTo = (BB, OB) => {
-          const GB = this.placing.drag,
-            YB = GB && jG(GB.view, BB, OB, GB.level);
-          null !== GB && null !== YB && this.moveTo(GB.corner[0] + Math.round(YB[0] - GB.ground[0]), GB.corner[1] + Math.round(YB[1] - GB.ground[1]))
+        }, this.dragTo = (WW, iW) => {
+          const OW = this.placing.drag,
+            mW = OW && Gi(OW.view, WW, iW, OW.level);
+          null !== OW && null !== mW && this.moveTo(OW.corner[0] + Math.round(mW[0] - OW.ground[0]), OW.corner[1] + Math.round(mW[1] - OW.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const BB = this.view;
-          BB.waiting || (BB.blocked ? this.tM({
-            ...BB,
+          const WW = this.view;
+          WW.waiting || (WW.blocked ? this.iZ({
+            ...WW,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const BB = this.placing,
+          const WW = this.placing,
             {
-              id: OB,
-              rotation: GB,
-              corner: YB
-            } = BB;
-          this.api.sendCommand(`${DB} place ${OB} ${YB.join(" ")} ${GB}`), BB.sent = {
+              id: iW,
+              rotation: OW,
+              corner: mW
+            } = WW;
+          this.api.sendCommand(`${EW} place ${iW} ${mW.join(" ")} ${OW}`), WW.sent = {
             atMs: performance.now(),
-            corner: [...YB],
-            rotation: GB,
+            corner: [...mW],
+            rotation: OW,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${DB} preview off`))
-        }, this.chunkWatch = new bO(BB), this.meshes = new BG(BB)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${EW} preview off`))
+        }, this.chunkWatch = new Ci(WW), this.meshes = new Xi.n(WW)
       }
       getView() {
         return this.view
       }
-      kP() {
-        const BB = this.placing;
-        null !== BB && (null !== BB.sent && !BB.sent.timedOut && performance.now() - BB.sent.atMs > 3e3 ? (BB.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(BB) || this.chunkWatch.changed() || this.view.settled !== PG(BB, this.view.blocked)) && this.update())
+      hZ() {
+        const WW = this.placing;
+        null !== WW && (null !== WW.sent && !WW.sent.timedOut && performance.now() - WW.sent.atMs > 3e3 ? (WW.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(WW) || this.chunkWatch.changed() || this.view.settled !== zi(WW, this.view.blocked)) && this.update())
       }
-      afterRender(BB) {
-        ! function(BB, OB) {
-          for (let GB = 0; GB < 3; GB++) OB.eye[GB] = BB.cameraPosition[GB], OB.forward[GB] = BB.cameraDirection[GB];
-          OB.tanHalfFovX = BB.tanHalfFovX, OB.tanHalfFovY = BB.tanHalfFovY
-        }(BB, this.camera);
-        const OB = this.placing;
-        null !== OB && null !== OB.hover && this.moveCentreTo(this.camera, OB.hover[0], OB.hover[1])
+      afterRender(WW) {
+        ! function(WW, iW) {
+          for (let OW = 0; OW < 3; OW++) iW.eye[OW] = WW.cameraPosition[OW], iW.forward[OW] = WW.cameraDirection[OW];
+          iW.tanHalfFovX = WW.tanHalfFovX, iW.tanHalfFovY = WW.tanHalfFovY
+        }(WW, this.camera);
+        const iW = this.placing;
+        null !== iW && null !== iW.hover && this.moveCentreTo(this.camera, iW.hover[0], iW.hover[1])
       }
-      nP(BB) {
-        const OB = this.placing;
-        if (null === OB || null === OB.sent || "active" !== BB[0]) return;
+      yZ(WW) {
+        const iW = this.placing;
+        if (null === iW || null === iW.sent || "active" !== WW[0]) return;
         const {
-          sent: GB
-        } = OB, [, YB, DB, QB, oB, jB, yB] = BB;
-        DB && YB === OB.id && yB === GB.rotation && QB === GB.corner[0] && oB === GB.corner[1] && jB === GB.corner[2] && this.close()
+          sent: OW
+        } = iW, [, mW, EW, NW, PW, LW, cW] = WW;
+        EW && mW === iW.id && cW === OW.rotation && NW === OW.corner[0] && PW === OW.corner[1] && LW === OW.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1398,1237 +1737,1238 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(BB) {
-        let [OB, , GB] = BB;
-        const YB = this.api.getTargetedBlock();
-        if (null === YB) return null;
-        const [DB, , QB] = YB.position;
-        return [DB - Math.floor(OB / 2), QB - Math.floor(GB / 2)]
+      cornerOnTarget(WW) {
+        let [iW, , OW] = WW;
+        const mW = this.api.getTargetedBlock();
+        if (null === mW) return null;
+        const [EW, , NW] = mW.position;
+        return [EW - Math.floor(iW / 2), NW - Math.floor(OW / 2)]
       }
       playerLevel() {
-        var BB;
-        const [OB, GB, YB] = this.api.pR(this.localPlayerId);
-        if (null !== (BB = this.api.getLocalPlayerMovement()) && void 0 !== BB && BB.onGround) return Math.ceil(GB - .01);
-        const [DB, QB, oB] = [Math.floor(OB), Math.floor(GB), Math.floor(YB)];
-        for (let jB = QB; jB >= QB - 2; jB--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(DB, jB, oB))) return jB + 1;
-        return QB
+        var WW;
+        const [iW, OW, mW] = this.api.Vk(this.localPlayerId);
+        if (null !== (WW = this.api.getLocalPlayerMovement()) && void 0 !== WW && WW.onGround) return Math.ceil(OW - .01);
+        const [EW, NW, PW] = [Math.floor(iW), Math.floor(OW), Math.floor(mW)];
+        for (let LW = NW; LW >= NW - 2; LW--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(EW, LW, PW))) return LW + 1;
+        return NW
       }
-      followPlayerLevel(BB) {
-        if (zG(BB)) return !1;
-        const OB = this.playerLevel();
-        return OB !== BB.corner[1] && (BB.corner[1] = OB, !0)
+      followPlayerLevel(WW) {
+        if (Fi(WW)) return !1;
+        const iW = this.playerLevel();
+        return iW !== WW.corner[1] && (WW.corner[1] = iW, !0)
       }
-      moveCentreTo(BB, OB, GB) {
-        const YB = this.placing,
-          DB = jG(BB, OB, GB, YB.corner[1]);
-        if (null !== DB) {
-          const [BB, , OB] = vB(YB.id, YB.rotation).size;
-          this.moveTo(Math.round(DB[0] - BB / 2), Math.round(DB[1] - OB / 2))
+      moveCentreTo(WW, iW, OW) {
+        const mW = this.placing,
+          EW = Gi(WW, iW, OW, mW.corner[1]);
+        if (null !== EW) {
+          const [WW, , iW] = rW(mW.id, mW.rotation).size;
+          this.moveTo(Math.round(EW[0] - WW / 2), Math.round(EW[1] - iW / 2))
         }
       }
-      moveTo(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const YB = this.placing;
-        if (zG(YB)) return;
-        const [DB, QB, oB] = YB.corner;
-        if (this.centreOnPlot(DB, oB) && !this.centreOnPlot(BB, OB, GB))
-          if (this.centreOnPlot(BB, oB, GB)) OB = oB;
+      moveTo(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const mW = this.placing;
+        if (Fi(mW)) return;
+        const [EW, NW, PW] = mW.corner;
+        if (this.centreOnPlot(EW, PW) && !this.centreOnPlot(WW, iW, OW))
+          if (this.centreOnPlot(WW, PW, OW)) iW = PW;
           else {
-            if (!this.centreOnPlot(DB, OB, GB)) return;
-            BB = DB
-          } BB === DB && OB === oB && GB === YB.rotation || (YB.rotation = GB, YB.corner = [BB, QB, OB], YB.moved = !0, YB.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(EW, iW, OW)) return;
+            WW = EW
+          } WW === EW && iW === PW && OW === mW.rotation || (mW.rotation = OW, mW.corner = [WW, NW, iW], mW.moved = !0, mW.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(WW, iW) {
+        let OW = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: YB,
-          corner: DB
-        } = this.placing, [QB, , oB] = vB(YB, GB).size;
-        return this.api.canModifyBlockAt(BB + Math.floor(QB / 2), DB[1], OB + Math.floor(oB / 2))
+          id: mW,
+          corner: EW
+        } = this.placing, [NW, , PW] = rW(mW, OW).size;
+        return this.api.canModifyBlockAt(WW + Math.floor(NW / 2), EW[1], iW + Math.floor(PW / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.tM(null)
+        this.placing = null, this.meshes.dispose(), this.iZ(null)
       }
       update() {
         const {
-          id: BB,
-          rotation: OB,
-          corner: GB,
-          refusals: YB
-        } = this.placing, DB = new tO, QB = [];
-        let oB = !1,
-          jB = 0;
+          id: WW,
+          rotation: iW,
+          corner: OW,
+          refusals: mW
+        } = this.placing, EW = new Xi.j, NW = [];
+        let PW = !1,
+          LW = 0;
         for (const {
-            offset: PB,
-            block: zB
+            offset: ZW,
+            block: xW
           }
-          of vB(BB, OB).cells) {
-          const [BB, OB, YB] = [GB[0] + PB[0], GB[1] + PB[1], GB[2] + PB[2]];
-          QB.push(BB, OB, YB);
-          const yB = !this.api.canModifyBlockAt(BB, OB, YB),
-            JB = this.api.getBlockId(BB, OB, YB),
-            MB = !iO(JB) && !FO(this.api.blockNameToBlockId(zB), JB);
-          oB ||= yB, jB += MB ? 1 : 0, yB || MB ? DB.add(BB, OB, YB, xO, sO) : DB.add(BB, OB, YB, gO(zB), JG, eO(zB))
+          of rW(WW, iW).cells) {
+          const [WW, iW, mW] = [OW[0] + ZW[0], OW[1] + ZW[1], OW[2] + ZW[2]];
+          NW.push(WW, iW, mW);
+          const cW = !this.api.canModifyBlockAt(WW, iW, mW),
+            wW = this.api.getBlockId(WW, iW, mW),
+            tW = !vi(wW) && !ei(this.api.blockNameToBlockId(xW), wW);
+          PW ||= cW, LW += tW ? 1 : 0, cW || tW ? EW.add(WW, iW, mW, Xi.e, Xi.d) : EW.add(WW, iW, mW, Di(xW), ai, (0, Vi.e)(xW))
         }
-        this.chunkWatch.watch(QB), this.meshes.show(DB.toArray());
-        const yB = this.view,
-          JB = zG(this.placing),
-          MB = PG(this.placing, oB);
-        (null === yB || void 0 === yB ? void 0 : yB.id) === BB && yB.blocked === oB && yB.toClear === jB && yB.waiting === JB && yB.refusals === YB && yB.settled === MB || this.tM({
-          id: BB,
-          blocked: oB,
-          toClear: jB,
-          waiting: JB,
-          refusals: YB,
-          settled: MB
+        this.chunkWatch.watch(NW), this.meshes.show(EW.toArray());
+        const cW = this.view,
+          wW = Fi(this.placing),
+          tW = zi(this.placing, PW);
+        (null === cW || void 0 === cW ? void 0 : cW.id) === WW && cW.blocked === PW && cW.toClear === LW && cW.waiting === wW && cW.refusals === mW && cW.settled === tW || this.iZ({
+          id: WW,
+          blocked: PW,
+          toClear: LW,
+          waiting: wW,
+          refusals: mW,
+          settled: tW
         })
       }
-      tM(BB) {
-        this.view = BB, nB.o.tM(yG, BB, !0)
+      iZ(WW) {
+        this.view = WW, YW.l.iZ(Ii, WW, !0)
       }
     }
 
-    function PG(BB, OB) {
+    function zi(WW, iW) {
       let {
-        moved: GB,
-        stillSinceMs: YB
-      } = BB;
-      return !OB && performance.now() - YB >= (GB ? 1500 : 6e3)
+        moved: OW,
+        stillSinceMs: mW
+      } = WW;
+      return !iW && performance.now() - mW >= (OW ? 1500 : 6e3)
     }
 
-    function zG(BB) {
+    function Fi(WW) {
       let {
-        sent: OB
-      } = BB;
-      return null !== OB && !OB.timedOut
+        sent: iW
+      } = WW;
+      return null !== iW && !iW.timedOut
     }
-    var lG = GB(4956);
-    class pG {
-      constructor(BB) {
-        this.placement = BB, this.press = null
+    var Qi = OW(5251);
+    class WO {
+      constructor(WW) {
+        this.placement = WW, this.press = null
       }
-      down(BB) {
+      down(WW) {
         if (null !== this.press) return !1;
         const {
-          id: OB,
-          mouse: GB,
-          x: YB,
-          y: DB,
-          atMs: QB
-        } = BB;
+          id: iW,
+          mouse: OW,
+          x: mW,
+          y: EW,
+          atMs: NW
+        } = WW;
         return this.press = {
-          id: OB,
-          mouse: GB,
-          x: YB,
-          y: DB,
-          atMs: QB,
+          id: iW,
+          mouse: OW,
+          x: mW,
+          y: EW,
+          atMs: NW,
           moved: !1
-        }, GB || this.placement.beginDrag(BB.ndcX, BB.ndcY), !0
+        }, OW || this.placement.beginDrag(WW.ndcX, WW.ndcY), !0
       }
-      move(BB) {
-        const OB = this.press;
-        null !== OB && OB.id === BB.id && (OB.moved ||= Math.hypot(BB.x - OB.x, BB.y - OB.y) > 8), BB.mouse ? this.placement.hoverAt(BB.ndcX, BB.ndcY) : (null === OB || void 0 === OB ? void 0 : OB.id) === BB.id && this.placement.dragTo(BB.ndcX, BB.ndcY)
+      move(WW) {
+        const iW = this.press;
+        null !== iW && iW.id === WW.id && (iW.moved ||= Math.hypot(WW.x - iW.x, WW.y - iW.y) > 8), WW.mouse ? this.placement.hoverAt(WW.ndcX, WW.ndcY) : (null === iW || void 0 === iW ? void 0 : iW.id) === WW.id && this.placement.dragTo(WW.ndcX, WW.ndcY)
       }
-      up(BB) {
-        const OB = this.press;
-        (null === OB || void 0 === OB ? void 0 : OB.id) === BB.id && (this.move(BB), this.end(), !OB.moved && (OB.mouse || BB.atMs - OB.atMs <= 250) && this.placement.tap())
+      up(WW) {
+        const iW = this.press;
+        (null === iW || void 0 === iW ? void 0 : iW.id) === WW.id && (this.move(WW), this.end(), !iW.moved && (iW.mouse || WW.atMs - iW.atMs <= 250) && this.placement.tap())
       }
-      cancel(BB) {
-        var OB;
-        (null === (OB = this.press) || void 0 === OB ? void 0 : OB.id) === BB && this.end()
+      cancel(WW) {
+        var iW;
+        (null === (iW = this.press) || void 0 === iW ? void 0 : iW.id) === WW && this.end()
       }
-      leave(BB) {
+      leave(WW) {
         let {
-          id: OB,
-          mouse: GB
-        } = BB;
-        GB && this.placement.endHover(), this.cancel(OB)
+          id: iW,
+          mouse: OW
+        } = WW;
+        OW && this.placement.endHover(), this.cancel(iW)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const qG = "PlotsPlacementLayer";
+    const iO = "PlotsPlacementLayer";
 
-    function ZG(BB) {
+    function OO(WW) {
       let {
-        placement: OB
-      } = BB;
-      return null === (0, yB.i)(yG, OB.getView()) ? null : (0, LB.jsx)(NG, {
-        placement: OB
+        placement: iW
+      } = WW;
+      return null === (0, cW.g)(Ii, iW.getView()) ? null : (0, vW.jsx)(mO, {
+        placement: iW
       })
     }
 
-    function NG(BB) {
+    function mO(WW) {
       let {
-        placement: OB
-      } = BB;
-      (0, lG.e)(!0, !0, qG);
-      const GB = (0, QB.useMemo)((() => new pG(OB)), [OB]);
-      return (0, LB.jsx)("div", {
+        placement: iW
+      } = WW;
+      (0, Qi.b)(!0, !0, iO);
+      const OW = (0, NW.useMemo)((() => new WO(iW)), [iW]);
+      return (0, vW.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: BB => {
-          "mouse" === BB.pointerType && 0 !== BB.button || !GB.down(RG(BB)) || BB.currentTarget.setPointerCapture(BB.pointerId)
+        onPointerDown: WW => {
+          "mouse" === WW.pointerType && 0 !== WW.button || !OW.down(EO(WW)) || WW.currentTarget.setPointerCapture(WW.pointerId)
         },
-        onPointerMove: BB => {
-          GB.move(RG(BB))
+        onPointerMove: WW => {
+          OW.move(EO(WW))
         },
-        onPointerUp: BB => {
-          GB.up(RG(BB))
+        onPointerUp: WW => {
+          OW.up(EO(WW))
         },
-        onPointerCancel: BB => {
-          GB.cancel(BB.pointerId)
+        onPointerCancel: WW => {
+          OW.cancel(WW.pointerId)
         },
-        onLostPointerCapture: BB => {
-          GB.cancel(BB.pointerId)
+        onLostPointerCapture: WW => {
+          OW.cancel(WW.pointerId)
         },
-        onPointerLeave: BB => {
-          GB.leave(RG(BB))
+        onPointerLeave: WW => {
+          OW.leave(EO(WW))
         },
         "aria-hidden": !0
       })
     }
 
-    function RG(BB) {
+    function EO(WW) {
       const {
-        left: OB,
-        top: GB,
-        width: YB,
-        height: DB
-      } = BB.currentTarget.getBoundingClientRect();
+        left: iW,
+        top: OW,
+        width: mW,
+        height: EW
+      } = WW.currentTarget.getBoundingClientRect();
       return {
-        id: BB.pointerId,
-        mouse: "mouse" === BB.pointerType,
-        x: BB.clientX,
-        y: BB.clientY,
-        ndcX: (BB.clientX - OB) / YB * 2 - 1,
-        ndcY: 1 - (BB.clientY - GB) / DB * 2,
-        atMs: BB.timeStamp
+        id: WW.pointerId,
+        mouse: "mouse" === WW.pointerType,
+        x: WW.clientX,
+        y: WW.clientY,
+        ndcX: (WW.clientX - iW) / mW * 2 - 1,
+        ndcY: 1 - (WW.clientY - OW) / EW * 2,
+        atMs: WW.timeStamp
       }
     }
 
-    function WG() {
-      return (0, ZO.n)().some((BB => BB !== ZO.b && BB !== qG))
+    function NO() {
+      return (0, ji.t)().some((WW => WW !== ji.b && WW !== iO))
     }
-    const AG = 2500;
+    const PO = 2500;
 
-    function VG(BB) {
+    function LO(WW) {
       let {
-        hud: OB,
-        guide: GB,
-        tracker: YB,
-        placement: DB,
-        children: oB
-      } = BB;
+        hud: iW,
+        guide: OW,
+        tracker: mW,
+        placement: EW,
+        children: PW
+      } = WW;
       const {
-        t: PB
-      } = (0, MB.H)(), {
-        isTouchScreen: zB
-      } = (0, jB.o)(["isTouchScreen"]), lB = (0, yB.i)(GO, OB.getGuide()), pB = (0, yB.i)(OO, OB.getPlot()), qB = (0, yB.i)(sB, YB.get()), ZB = function(BB) {
+        t: ZW
+      } = (0, tW.B)(), {
+        isTouchScreen: xW
+      } = (0, LW.p)(["isTouchScreen"]), lW = (0, cW.g)(Oi, iW.getGuide()), AW = (0, cW.g)(ii, iW.getPlot()), bW = (0, cW.g)(zW, mW.get()), jW = function(WW) {
         const {
-          openInGameMenuName: OB,
-          openEverythingMenuName: GB,
-          loadingOverlayVisible: YB
-        } = (0, jB.o)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), DB = (0, NO.d)(), [oB, JB] = (0, QB.useState)(WG);
-        (0, QB.useEffect)((() => {
-          const BB = () => {
-            JB(WG())
+          openInGameMenuName: iW,
+          openEverythingMenuName: OW,
+          loadingOverlayVisible: mW
+        } = (0, LW.p)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), EW = (0, Ui.e)(), [PW, wW] = (0, NW.useState)(NO);
+        (0, NW.useEffect)((() => {
+          const WW = () => {
+            wW(NO())
           };
-          BB();
-          const OB = (0, ZO.k)(BB),
-            GB = (0, ZO.j)(BB);
+          WW();
+          const iW = (0, ji.r)(WW),
+            OW = (0, ji.n)(WW);
           return () => {
-            OB(), GB()
+            iW(), OW()
           }
         }), []);
-        const MB = (0, yB.i)(yG, BB.getView()),
-          PB = "clientGame" === OB;
+        const tW = (0, cW.g)(Ii, WW.getView()),
+          ZW = "clientGame" === iW;
         return {
-          hudHidden: DB || YB,
-          journalOpen: PB,
-          covered: oB || null !== GB || null !== OB && !PB,
-          placing: null === MB ? null : MB.settled ? "placeBuild" : "placeSpot"
+          hudHidden: EW || mW,
+          journalOpen: ZW,
+          covered: PW || null !== OW || null !== iW && !ZW,
+          placing: null === tW ? null : tW.settled ? "placeBuild" : "placeSpot"
         }
-      }(DB), NB = function(BB, OB, GB) {
-        return "none" === BB[0] || GB.hudHidden || GB.journalOpen || GB.covered ? null : null !== GB.placing ? GB.placing : null !== OB ? "build" : "choose" === BB[1] ? "openJournal" : null
-      }(lB, null === qB ? null : qB.id, ZB), RB = function() {
-        const [BB, OB] = (0, QB.useState)(null), [GB, YB] = (0, QB.useState)(!1);
-        return (0, yB.f)(YO, (() => {
-          OB(performance.now())
-        })), (0, QB.useEffect)((() => {
-          if (null === BB) return;
-          const OB = window.setTimeout((() => {
-              YB(!0)
-            }), AG),
-            GB = window.setTimeout((() => {
-              YB(!1)
+      }(EW), UW = function(WW, iW, OW) {
+        return "none" === WW[0] || OW.hudHidden || OW.journalOpen || OW.covered ? null : null !== OW.placing ? OW.placing : null !== iW ? "build" : "choose" === WW[1] ? "openJournal" : null
+      }(lW, null === bW ? null : bW.id, jW), kW = function() {
+        const [WW, iW] = (0, NW.useState)(null), [OW, mW] = (0, NW.useState)(!1);
+        return (0, cW.e)(mi, (() => {
+          iW(performance.now())
+        })), (0, NW.useEffect)((() => {
+          if (null === WW) return;
+          const iW = window.setTimeout((() => {
+              mW(!0)
+            }), PO),
+            OW = window.setTimeout((() => {
+              mW(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(OB), window.clearTimeout(GB)
+            window.clearTimeout(iW), window.clearTimeout(OW)
           }
-        }), [BB]), GB
-      }() && !ZB.hudHidden && !ZB.covered && !ZB.journalOpen && null === ZB.placing, [WB, AB] = (0, QB.useState)(!1);
-      (0, QB.useEffect)((() => {
-        ZB.journalOpen && AB(!0)
-      }), [ZB.journalOpen]);
-      const [VB, nB] = (0, QB.useState)(null), [UB, fB] = (0, QB.useState)(null), [kB, dB] = (0, QB.useState)(null), KB = (0, QB.useMemo)((() => ({
-        hint: NB,
-        journalRef: nB,
-        placementCardRef: fB,
-        buildRef: dB
-      })), [NB]), uB = "plot" === pB[0] && "own" === pB[5], mB = zB && !WB && uB ? {
-        onSkip: GB.skip
+        }), [WW]), OW
+      }() && !jW.hudHidden && !jW.covered && !jW.journalOpen && null === jW.placing, [sW, MW] = (0, NW.useState)(!1);
+      (0, NW.useEffect)((() => {
+        jW.journalOpen && MW(!0)
+      }), [jW.journalOpen]);
+      const [KW, YW] = (0, NW.useState)(null), [yW, TW] = (0, NW.useState)(null), [JW, hW] = (0, NW.useState)(null), HW = (0, NW.useMemo)((() => ({
+        hint: UW,
+        journalRef: YW,
+        placementCardRef: TW,
+        buildRef: hW
+      })), [UW]), nW = "plot" === AW[0] && "own" === AW[5], uW = xW && !sW && nW ? {
+        onSkip: OW.skip
       } : null;
-      return (0, LB.jsxs)(SB.Provider, {
-        value: KB,
-        children: [oB, "openJournal" === NB && null !== VB && (0, LB.jsx)(MO, {
-          target: VB,
+      return (0, vW.jsxs)(SW.Provider, {
+        value: HW,
+        children: [PW, "openJournal" === UW && null !== KW && (0, vW.jsx)(ti, {
+          target: KW,
           placement: "left",
-          spotlight: mB,
-          children: zB ? PB("plotsGame:guideOpenJournal") : PB("plotsGame:guideOpenJournalKeys", {
-            key: (0, JB.l)(gB)
+          spotlight: uW,
+          children: xW ? ZW("plotsGame:guideOpenJournal") : ZW("plotsGame:guideOpenJournalKeys", {
+            key: (0, wW.m)(gW)
           })
-        }), "placeSpot" === NB && null !== UB && (0, LB.jsxs)(LB.Fragment, {
-          children: [zB && (0, LB.jsx)(qO, {}), (0, LB.jsx)(MO, {
-            target: UB,
+        }), "placeSpot" === UW && null !== yW && (0, vW.jsxs)(vW.Fragment, {
+          children: [xW && (0, vW.jsx)(bi, {}), (0, vW.jsx)(ti, {
+            target: yW,
             placement: "top",
-            children: PB(zB ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: ZW(xW ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === NB && null !== kB && null !== UB && (0, LB.jsx)(MO, {
-          target: zB ? kB : UB,
+        }), "placeBuild" === UW && null !== JW && null !== yW && (0, vW.jsx)(ti, {
+          target: xW ? JW : yW,
           placement: "top",
-          children: PB(zB ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === NB && null !== qB && (0, LB.jsx)(lO, {
-          progress: qB,
-          guide: GB
-        }), RB && null !== VB && (0, LB.jsx)(MO, {
-          target: VB,
+          children: ZW(xW ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === UW && null !== bW && (0, vW.jsx)(li, {
+          progress: bW,
+          guide: OW
+        }), kW && null !== KW && (0, vW.jsx)(ti, {
+          target: KW,
           placement: "left",
-          children: PB("plotsGame:guideMoreBuilds")
+          children: ZW("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var SG = GB(39154),
-      nG = GB(39157);
-    class UG {
-      constructor(BB, OB, GB) {
-        this.api = BB, this.localPlayerId = OB, this.nextCell = GB, this.hand = null, this.skip = () => {
+    var cO = OW(39679),
+      wO = OW(39687);
+    class tO {
+      constructor(WW, iW, OW) {
+        this.api = WW, this.localPlayerId = iW, this.nextCell = OW, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = BB => {
-          this.hand = BB
+        }, this.bindHand = WW => {
+          this.hand = WW
         }
       }
-      afterRender(BB) {
-        const OB = this.hand;
-        if (null === OB) return;
-        const GB = this.nextCell.get();
-        if (null === GB) return void(0, SG.f)(OB, !0);
-        const YB = (0, nG.b)(OB, BB, this.api.getPositionView(this.localPlayerId), GB, 1, 40);
-        null !== YB && (0, SG.d)(OB, Math.round(100 * YB.x) / 100, Math.round(100 * YB.y) / 100)
+      afterRender(WW) {
+        const iW = this.hand;
+        if (null === iW) return;
+        const OW = this.nextCell.get();
+        if (null === OW) return void(0, cO.h)(iW, !0);
+        const mW = (0, wO.c)(iW, WW, this.api.getPositionView(this.localPlayerId), OW, 1, 40);
+        null !== mW && (0, cO.e)(iW, Math.round(100 * mW.x) / 100, Math.round(100 * mW.y) / 100)
       }
     }
-    var fG = GB(1485),
-      kG = GB(4946),
-      dG = GB(1108);
-    const KG = {
-        farm_hut: GB.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: GB.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: GB.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: GB.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: GB.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: GB.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: GB.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: GB.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: GB.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: GB.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: GB.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: GB.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var ZO = OW(1532),
+      xO = OW(5238),
+      lO = OW(1102);
+    const AO = {
+        farm_hut: OW.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: OW.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: OW.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: OW.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: OW.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: OW.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: OW.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: OW.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: OW.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: OW.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: OW.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: OW.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      uG = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      mG = ["market_stand", "rusticHome_tent", "farm_hut"].map((BB => ({
-        id: BB,
-        blocks: vB(BB, 0).cells.length
-      }))).sort(((BB, OB) => BB.blocks - OB.blocks)).map(((BB, OB) => ({
-        ...BB,
-        effortKey: uG[OB]
+      bO = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      jO = ["market_stand", "rusticHome_tent", "farm_hut"].map((WW => ({
+        id: WW,
+        blocks: rW(WW, 0).cells.length
+      }))).sort(((WW, iW) => WW.blocks - iW.blocks)).map(((WW, iW) => ({
+        ...WW,
+        effortKey: bO[iW]
       })));
 
-    function IG(BB) {
+    function UO(WW) {
       let {
-        onBuild: OB
-      } = BB;
+        onBuild: iW
+      } = WW;
       const {
-        t: GB
-      } = (0, MB.H)();
-      return (0, LB.jsx)("div", {
+        t: OW
+      } = (0, tW.B)();
+      return (0, vW.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, LB.jsxs)("div", {
+        children: (0, vW.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, LB.jsx)("h3", {
+          children: [(0, vW.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: GB("plotsGame:guidePickTitle")
-          }), (0, LB.jsxs)("p", {
+            children: OW("plotsGame:guidePickTitle")
+          }), (0, vW.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, LB.jsx)("img", {
-              src: oO,
+            children: [(0, vW.jsx)("img", {
+              src: Pi,
               alt: "",
               draggable: !1
-            }), GB("plotsGame:guidePickNote")]
-          }), (0, LB.jsx)("div", {
+            }), OW("plotsGame:guidePickNote")]
+          }), (0, vW.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: mG.map((BB => {
+            children: jO.map((WW => {
               let {
-                id: YB,
-                blocks: DB,
-                effortKey: QB
-              } = BB;
-              return (0, LB.jsxs)("article", {
+                id: mW,
+                blocks: EW,
+                effortKey: NW
+              } = WW;
+              return (0, vW.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, LB.jsx)("button", {
+                children: [(0, vW.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    OB(YB)
+                    iW(mW)
                   },
-                  children: (0, LB.jsx)("img", {
-                    src: KG[YB],
+                  children: (0, vW.jsx)("img", {
+                    src: AO[mW],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, LB.jsxs)("div", {
+                }), (0, vW.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, LB.jsxs)("span", {
+                  children: [(0, vW.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, LB.jsx)("span", {
+                    children: [(0, vW.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: GB(dB(YB).displayName.translationKey)
-                    }), (0, LB.jsx)("span", {
+                      children: OW(hW(mW).displayName.translationKey)
+                    }), (0, vW.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: GB(QB)
-                    }), (0, LB.jsx)("span", {
+                      children: OW(NW)
+                    }), (0, vW.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: GB("plotsGame:journalBlocks", {
-                        blocks: String(DB)
+                      children: OW("plotsGame:journalBlocks", {
+                        blocks: String(EW)
                       })
                     })]
-                  }), (0, LB.jsx)(fG.q, {
+                  }), (0, vW.jsx)(ZO.n, {
                     onClick: () => {
-                      OB(YB)
+                      iW(mW)
                     },
-                    children: GB("plotsGame:placementBuild")
+                    children: OW("plotsGame:placementBuild")
                   })]
                 })]
-              }, YB)
+              }, mW)
             }))
           })]
         })
       })
     }
 
-    function FG(BB) {
+    function kO(WW) {
       let {
-        direction: OB,
-        disabled: GB,
-        onTurn: YB
-      } = BB;
+        direction: iW,
+        disabled: OW,
+        onTurn: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, MB.H)();
-      return (0, LB.jsx)("div", {
-        className: zB()("PlotsJournalArrow", OB),
-        children: (0, LB.jsx)(fG.f, {
-          disabled: GB,
-          ariaLabel: DB("Forward" === OB ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: EW
+      } = (0, tW.B)();
+      return (0, vW.jsx)("div", {
+        className: xW()("PlotsJournalArrow", iW),
+        children: (0, vW.jsx)(ZO.f, {
+          disabled: OW,
+          ariaLabel: EW("Forward" === iW ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            YB(OB)
+            mW(iW)
           },
-          children: (0, LB.jsx)(ZB.b, {
+          children: (0, vW.jsx)(jW.c, {
             name: "angle-up"
           })
         })
       })
     }
-    const iG = {
+    const sO = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function LG(BB) {
+    function MO(WW) {
       let {
-        page: OB,
-        building: GB,
-        onBuild: YB,
-        onPutAway: DB
-      } = BB;
+        page: iW,
+        building: OW,
+        onBuild: mW,
+        onPutAway: EW
+      } = WW;
       const {
-        t: QB
-      } = (0, MB.H)(), {
-        displayName: oB,
-        tier: jB
-      } = dB(OB.id), yB = vB(OB.id, 0).cells.length, JB = "locked" === OB.state, PB = GB ? fG.f : fG.q;
-      return (0, LB.jsxs)("article", {
-        className: zB()("PlotsJournalPage", {
-          Locked: JB
+        t: NW
+      } = (0, tW.B)(), {
+        displayName: PW,
+        tier: LW
+      } = hW(iW.id), cW = rW(iW.id, 0).cells.length, wW = "locked" === iW.state, ZW = OW ? ZO.f : ZO.n;
+      return (0, vW.jsxs)("article", {
+        className: xW()("PlotsJournalPage", {
+          Locked: wW
         }),
-        children: [(0, LB.jsx)("h3", {
+        children: [(0, vW.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: QB(oB.translationKey)
-        }), (0, LB.jsxs)("div", {
+          children: NW(PW.translationKey)
+        }), (0, vW.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [QB(iG[jB]), " \xb7 ", QB("plotsGame:journalBlocks", {
-            blocks: String(yB)
+          children: [NW(sO[LW]), " \xb7 ", NW("plotsGame:journalBlocks", {
+            blocks: String(cW)
           })]
-        }), (0, LB.jsxs)("div", {
+        }), (0, vW.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [kB.map((BB => (0, LB.jsx)("img", {
-            className: zB()({
-              Shown: BB === OB.id
+          children: [JW.map((WW => (0, vW.jsx)("img", {
+            className: xW()({
+              Shown: WW === iW.id
             }),
-            src: KG[BB],
+            src: AO[WW],
             alt: "",
             draggable: !1
-          }, BB))), "completed" === OB.state && (0, LB.jsx)("span", {
+          }, WW))), "completed" === iW.state && (0, vW.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: QB("plotsGame:journalBuilt")
-          }), JB && (0, LB.jsx)("span", {
+            children: NW("plotsGame:journalBuilt")
+          }), wW && (0, vW.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, LB.jsx)(ZB.b, {
+            children: (0, vW.jsx)(jW.c, {
               name: "lock"
             })
           })]
-        }), null !== OB.note && (0, LB.jsx)("p", {
+        }), null !== iW.note && (0, vW.jsx)("p", {
           className: "PlotsJournalNote",
-          children: QB(OB.note)
-        }), (0, LB.jsxs)("div", {
+          children: NW(iW.note)
+        }), (0, vW.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === OB.state && (0, LB.jsx)("p", {
+          children: ["locked" === iW.state && (0, vW.jsx)("p", {
             className: "PlotsJournalHint",
-            children: QB("plotsGame:journalLocked", {
-              name: QB(dB(OB.unlockedBy).displayName.translationKey)
+            children: NW("plotsGame:journalLocked", {
+              name: NW(hW(iW.unlockedBy).displayName.translationKey)
             })
-          }), OB.active && (0, LB.jsxs)(LB.Fragment, {
-            children: [(0, LB.jsx)("p", {
+          }), iW.active && (0, vW.jsxs)(vW.Fragment, {
+            children: [(0, vW.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: QB("plotsGame:journalBuilding")
-            }), (0, LB.jsx)(fG.j, {
-              onClick: DB,
-              children: QB("plotsGame:journalPutAway")
+              children: NW("plotsGame:journalBuilding")
+            }), (0, vW.jsx)(ZO.h, {
+              onClick: EW,
+              children: NW("plotsGame:journalPutAway")
             })]
-          }), !JB && !OB.active && (0, LB.jsx)(PB, {
+          }), !wW && !iW.active && (0, vW.jsx)(ZW, {
             onClick: () => {
-              YB(OB.id)
+              mW(iW.id)
             },
-            children: QB("plotsGame:placementBuild")
+            children: NW("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function gG(BB) {
+    function KO(WW) {
       let {
-        className: OB,
-        page: GB,
-        hidden: YB,
-        building: DB,
-        journal: QB
-      } = BB;
-      return (0, LB.jsxs)("div", {
-        ref: BB => {
-          null !== BB && (BB.inert = YB)
+        className: iW,
+        page: OW,
+        hidden: mW,
+        building: EW,
+        journal: NW
+      } = WW;
+      return (0, vW.jsxs)("div", {
+        ref: WW => {
+          null !== WW && (WW.inert = mW)
         },
-        className: zB()("PlotsJournalSide", OB),
-        children: [void 0 !== GB && (0, LB.jsx)(LG, {
-          page: GB,
-          building: DB,
-          onBuild: QB.build,
-          onPutAway: QB.putAway
-        }), void 0 === GB && (0, LB.jsx)("div", {
+        className: xW()("PlotsJournalSide", iW),
+        children: [void 0 !== OW && (0, vW.jsx)(MO, {
+          page: OW,
+          building: EW,
+          onBuild: NW.build,
+          onPutAway: NW.putAway
+        }), void 0 === OW && (0, vW.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var rG = GB(1998);
+    var SO = OW(2012);
 
-    function XG(BB) {
-      return Math.cos((0, rG.h)(BB))
+    function YO(WW) {
+      return Math.cos((0, SO.i)(WW))
     }
 
-    function wG(BB) {
-      return (0, rG.B)(Math.acos(nO.b.clamp(BB, -1, 1)))
+    function yO(WW) {
+      return (0, SO.x)(Math.acos(Yi.e.clamp(WW, -1, 1)))
     }
 
-    function EG(BB, OB, GB, YB, DB) {
-      const QB = Math.abs(OB - BB),
-        oB = (0, rG.B)(DB / (GB * Math.abs(Math.sin((0, rG.h)(BB))))),
-        jB = 450 * Math.min(1, QB / YB),
-        yB = oB > 0 ? 3 * QB / oB : 1 / 0;
-      return Math.round(Math.max(120, Math.min(jB, yB)))
+    function TO(WW, iW, OW, mW, EW) {
+      const NW = Math.abs(iW - WW),
+        PW = (0, SO.x)(EW / (OW * Math.abs(Math.sin((0, SO.i)(WW))))),
+        LW = 450 * Math.min(1, NW / mW),
+        cW = PW > 0 ? 3 * NW / PW : 1 / 0;
+      return Math.round(Math.max(120, Math.min(LW, cW)))
     }
-    class cG {
+    class JO {
       constructor() {
         this.samples = []
       }
-      add(BB, OB) {
+      add(WW, iW) {
         for (this.samples.push({
-            x: BB,
-            at: OB
-          }); OB - this.samples[0].at > 100;) this.samples.shift()
+            x: WW,
+            at: iW
+          }); iW - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const BB = this.samples[0],
-          OB = this.samples[this.samples.length - 1];
-        return OB.at > BB.at ? (OB.x - BB.x) / (OB.at - BB.at) : 0
+        const WW = this.samples[0],
+          iW = this.samples[this.samples.length - 1];
+        return iW.at > WW.at ? (iW.x - WW.x) / (iW.at - WW.at) : 0
       }
     }
 
-    function hG(BB) {
-      return wG(new DOMMatrixReadOnly(getComputedStyle(BB).transform).m11)
+    function hO(WW) {
+      return yO(new DOMMatrixReadOnly(getComputedStyle(WW).transform).m11)
     }
 
-    function aG(BB, OB) {
-      BB.style.transform = `rotateY(${-OB}deg)`, BB.classList.add("Turning")
+    function HO(WW, iW) {
+      WW.style.transform = `rotateY(${-iW}deg)`, WW.classList.add("Turning")
     }
 
-    function eG(BB, OB, GB) {
-      const [YB, DB] = (0, QB.useState)(GB), oB = (0, QB.useRef)(null), jB = (0, QB.useRef)(null), yB = (0, QB.useRef)({
+    function nO(WW, iW, OW) {
+      const [mW, EW] = (0, NW.useState)(OW), PW = (0, NW.useRef)(null), LW = (0, NW.useRef)(null), cW = (0, NW.useRef)({
         Forward: null,
         Back: null
-      }), JB = OB ? 2 : 1, MB = OB ? 180 : 90, PB = YB - YB % JB, zB = PB > 0, lB = PB + JB < BB, pB = (0, QB.useCallback)((() => {
-        const BB = jB.current;
-        return null === BB ? PB : (jB.current = null, BB.animation.cancel(), (OB = yB.current[BB.direction]).style.transform = "", OB.classList.remove("Turning"), null === BB.next ? PB : (DB(BB.next), BB.next));
-        var OB
-      }), [PB]), qB = (0, QB.useCallback)(((BB, OB, GB, YB) => {
-        const DB = yB.current[BB],
-          QB = hG(DB),
-          oB = OB === ("Forward" === BB) ? MB : 0;
-        aG(DB, oB);
-        const PB = DB.animate([{
-          transform: `rotateY(${-QB}deg)`
+      }), wW = iW ? 2 : 1, tW = iW ? 180 : 90, ZW = mW - mW % wW, xW = ZW > 0, lW = ZW + wW < WW, AW = (0, NW.useCallback)((() => {
+        const WW = LW.current;
+        return null === WW ? ZW : (LW.current = null, WW.animation.cancel(), (iW = cW.current[WW.direction]).style.transform = "", iW.classList.remove("Turning"), null === WW.next ? ZW : (EW(WW.next), WW.next));
+        var iW
+      }), [ZW]), bW = (0, NW.useCallback)(((WW, iW, OW, mW) => {
+        const EW = cW.current[WW],
+          NW = hO(EW),
+          PW = iW === ("Forward" === WW) ? tW : 0;
+        HO(EW, PW);
+        const ZW = EW.animate([{
+          transform: `rotateY(${-NW}deg)`
         }, {
-          transform: `rotateY(${-oB}deg)`
+          transform: `rotateY(${-PW}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : EG(QB, oB, DB.offsetWidth, MB, oB > QB ? -GB : GB),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : TO(NW, PW, EW.offsetWidth, tW, PW > NW ? -OW : OW),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        jB.current = {
-          direction: BB,
-          animation: PB,
-          next: OB ? YB + ("Forward" === BB ? JB : -JB) : null
-        }, PB.onfinish = () => {
-          var BB;
-          (null === (BB = jB.current) || void 0 === BB ? void 0 : BB.animation) === PB && pB()
+        LW.current = {
+          direction: WW,
+          animation: ZW,
+          next: iW ? mW + ("Forward" === WW ? wW : -wW) : null
+        }, ZW.onfinish = () => {
+          var WW;
+          (null === (WW = LW.current) || void 0 === WW ? void 0 : WW.animation) === ZW && AW()
         }
-      }), [JB, MB, pB]), ZB = (0, QB.useCallback)((OB => {
-        if (null !== oB.current) return;
-        const GB = pB();
-        ("Forward" === OB ? GB + JB < BB : GB > 0) && qB(OB, !0, 0, GB)
-      }), [pB, qB, JB, BB]);
-      (0, QB.useEffect)((() => () => {
-        var BB;
-        null === (BB = jB.current) || void 0 === BB || BB.animation.cancel()
-      }), []), (0, QB.useEffect)((() => {
-        const BB = BB => {
-          var OB;
-          BB.pointerId !== (null === (OB = oB.current) || void 0 === OB ? void 0 : OB.pointerId) || oB.current.following || (oB.current = null)
+      }), [wW, tW, AW]), jW = (0, NW.useCallback)((iW => {
+        if (null !== PW.current) return;
+        const OW = AW();
+        ("Forward" === iW ? OW + wW < WW : OW > 0) && bW(iW, !0, 0, OW)
+      }), [AW, bW, wW, WW]);
+      (0, NW.useEffect)((() => () => {
+        var WW;
+        null === (WW = LW.current) || void 0 === WW || WW.animation.cancel()
+      }), []), (0, NW.useEffect)((() => {
+        const WW = WW => {
+          var iW;
+          WW.pointerId !== (null === (iW = PW.current) || void 0 === iW ? void 0 : iW.pointerId) || PW.current.following || (PW.current = null)
         };
-        return window.addEventListener("pointerup", BB), () => {
-          window.removeEventListener("pointerup", BB)
+        return window.addEventListener("pointerup", WW), () => {
+          window.removeEventListener("pointerup", WW)
         }
       }), []);
-      const NB = (BB, OB, GB) => {
-          const YB = function(BB, OB, GB, YB) {
-            return (BB < 0 ? GB : YB) ? nO.b.clampAbs(BB, OB) : Math.sign(BB) * OB * (1 - 1 / (.55 * Math.abs(BB) / OB + 1))
-          }(BB.base + GB, JB * BB.width, lB, zB);
-          return "Forward" === OB ? Math.min(YB, 0) : Math.max(YB, 0)
+      const UW = (WW, iW, OW) => {
+          const mW = function(WW, iW, OW, mW) {
+            return (WW < 0 ? OW : mW) ? Yi.e.clampAbs(WW, iW) : Math.sign(WW) * iW * (1 - 1 / (.55 * Math.abs(WW) / iW + 1))
+          }(WW.base + OW, wW * WW.width, lW, xW);
+          return "Forward" === iW ? Math.min(mW, 0) : Math.max(mW, 0)
         },
-        RB = (BB, OB) => {
-          const GB = oB.current;
-          if (oB.current = null, null === GB.direction) return;
-          GB.speed.add(BB, OB);
-          const YB = GB.speed.get(),
-            DB = NB(GB, GB.direction, BB - GB.x);
-          qB(GB.direction, null !== function(BB, OB, GB, YB, DB) {
-            if (Math.abs(OB) >= .3 ? Math.sign(OB) !== Math.sign(BB) : Math.abs(BB) < .5 * GB) return null;
-            const QB = BB < 0 ? "Forward" : "Back";
-            return ("Forward" === QB ? YB : DB) ? QB : null
-          }(DB, YB, JB * GB.width, lB, zB), YB, PB)
+        kW = (WW, iW) => {
+          const OW = PW.current;
+          if (PW.current = null, null === OW.direction) return;
+          OW.speed.add(WW, iW);
+          const mW = OW.speed.get(),
+            EW = UW(OW, OW.direction, WW - OW.x);
+          bW(OW.direction, null !== function(WW, iW, OW, mW, EW) {
+            if (Math.abs(iW) >= .3 ? Math.sign(iW) !== Math.sign(WW) : Math.abs(WW) < .5 * OW) return null;
+            const NW = WW < 0 ? "Forward" : "Back";
+            return ("Forward" === NW ? mW : EW) ? NW : null
+          }(EW, mW, wW * OW.width, lW, xW), mW, ZW)
         },
-        WB = {
-          onPointerDown: BB => {
-            var OB;
-            if (!BB.isPrimary || 0 !== BB.button || null !== jB.current && null !== BB.target.closest("button")) return;
-            const GB = new cG;
-            GB.add(BB.clientX, BB.timeStamp);
-            const YB = yB.current.Forward.offsetWidth,
-              DB = jB.current;
-            jB.current = null;
-            let QB = 0;
-            if (null !== DB) {
-              const OB = yB.current[DB.direction],
-                GB = hG(OB);
-              DB.animation.cancel(), aG(OB, GB), QB = function(BB, OB, GB, YB) {
-                return (BB < 0 ? GB : YB) ? BB : Math.sign(BB) * OB * (1 / (1 - Math.min(Math.abs(BB) / OB, .99)) - 1) / .55
-              }(function(BB, OB, GB, YB) {
-                return GB * (XG(OB) - XG("Forward" === BB ? 0 : YB))
-              }(DB.direction, GB, YB, MB), JB * YB, lB, zB), BB.currentTarget.setPointerCapture(BB.pointerId)
+        sW = {
+          onPointerDown: WW => {
+            var iW;
+            if (!WW.isPrimary || 0 !== WW.button || null !== LW.current && null !== WW.target.closest("button")) return;
+            const OW = new JO;
+            OW.add(WW.clientX, WW.timeStamp);
+            const mW = cW.current.Forward.offsetWidth,
+              EW = LW.current;
+            LW.current = null;
+            let NW = 0;
+            if (null !== EW) {
+              const iW = cW.current[EW.direction],
+                OW = hO(iW);
+              EW.animation.cancel(), HO(iW, OW), NW = function(WW, iW, OW, mW) {
+                return (WW < 0 ? OW : mW) ? WW : Math.sign(WW) * iW * (1 / (1 - Math.min(Math.abs(WW) / iW, .99)) - 1) / .55
+              }(function(WW, iW, OW, mW) {
+                return OW * (YO(iW) - YO("Forward" === WW ? 0 : mW))
+              }(EW.direction, OW, mW, tW), wW * mW, lW, xW), WW.currentTarget.setPointerCapture(WW.pointerId)
             }
-            oB.current = {
-              pointerId: BB.pointerId,
-              x: BB.clientX,
-              y: BB.clientY,
-              base: QB,
-              width: YB,
-              following: null !== DB,
-              direction: null !== (OB = null === DB || void 0 === DB ? void 0 : DB.direction) && void 0 !== OB ? OB : null,
-              speed: GB
+            PW.current = {
+              pointerId: WW.pointerId,
+              x: WW.clientX,
+              y: WW.clientY,
+              base: NW,
+              width: mW,
+              following: null !== EW,
+              direction: null !== (iW = null === EW || void 0 === EW ? void 0 : EW.direction) && void 0 !== iW ? iW : null,
+              speed: OW
             }
           },
-          onPointerMove: BB => {
-            const OB = oB.current;
-            if (null === OB || BB.pointerId !== OB.pointerId) return;
-            if (0 === BB.buttons) return void RB(BB.clientX, BB.timeStamp);
-            const GB = BB.clientX - OB.x;
-            !OB.following && function(BB, OB) {
-              return Math.abs(BB) > 8 && Math.abs(BB) > Math.abs(OB)
-            }(GB, BB.clientY - OB.y) && (OB.following = !0, OB.direction = GB < 0 ? "Forward" : "Back", BB.currentTarget.setPointerCapture(BB.pointerId)), null !== OB.direction && (OB.speed.add(BB.clientX, BB.timeStamp), aG(yB.current[OB.direction], function(BB, OB, GB, YB) {
-              const DB = GB * XG("Forward" === BB ? 0 : YB) + OB;
-              return nO.b.clamp(wG(DB / GB), 0, YB)
-            }(OB.direction, NB(OB, OB.direction, GB), OB.width, MB)))
+          onPointerMove: WW => {
+            const iW = PW.current;
+            if (null === iW || WW.pointerId !== iW.pointerId) return;
+            if (0 === WW.buttons) return void kW(WW.clientX, WW.timeStamp);
+            const OW = WW.clientX - iW.x;
+            !iW.following && function(WW, iW) {
+              return Math.abs(WW) > 8 && Math.abs(WW) > Math.abs(iW)
+            }(OW, WW.clientY - iW.y) && (iW.following = !0, iW.direction = OW < 0 ? "Forward" : "Back", WW.currentTarget.setPointerCapture(WW.pointerId)), null !== iW.direction && (iW.speed.add(WW.clientX, WW.timeStamp), HO(cW.current[iW.direction], function(WW, iW, OW, mW) {
+              const EW = OW * YO("Forward" === WW ? 0 : mW) + iW;
+              return Yi.e.clamp(yO(EW / OW), 0, mW)
+            }(iW.direction, UW(iW, iW.direction, OW), iW.width, tW)))
           },
-          onPointerUp: BB => {
-            var OB;
-            BB.pointerId === (null === (OB = oB.current) || void 0 === OB ? void 0 : OB.pointerId) && RB(BB.clientX, BB.timeStamp)
+          onPointerUp: WW => {
+            var iW;
+            WW.pointerId === (null === (iW = PW.current) || void 0 === iW ? void 0 : iW.pointerId) && kW(WW.clientX, WW.timeStamp)
           },
-          onPointerCancel: BB => {
-            const OB = oB.current;
-            BB.pointerId === (null === OB || void 0 === OB ? void 0 : OB.pointerId) && (oB.current = null, null !== OB.direction && qB(OB.direction, !1, 0, PB))
+          onPointerCancel: WW => {
+            const iW = PW.current;
+            WW.pointerId === (null === iW || void 0 === iW ? void 0 : iW.pointerId) && (PW.current = null, null !== iW.direction && bW(iW.direction, !1, 0, ZW))
           }
         };
       return {
-        first: PB,
-        step: JB,
-        canGoBack: zB,
-        canGoForward: lB,
-        turnPage: ZB,
-        leaves: yB,
-        pagesHandlers: WB
+        first: ZW,
+        step: wW,
+        canGoBack: xW,
+        canGoForward: lW,
+        turnPage: jW,
+        leaves: cW,
+        pagesHandlers: sW
       }
     }
 
-    function TG(BB, OB) {
-      return BB > OB && BB >= 600
+    function uO(WW, iW) {
+      return WW > iW && WW >= 600
     }
 
-    function bG(BB) {
+    function oO(WW) {
       let {
-        journal: OB,
-        hud: GB,
-        guide: YB
-      } = BB;
+        journal: iW,
+        hud: OW,
+        guide: mW
+      } = WW;
       const {
-        t: DB
-      } = (0, MB.H)(), jB = (0, yB.i)(FB, OB.getPages()), JB = (0, yB.i)(GO, GB.getGuide()), PB = jB.find((BB => BB.active)), lB = (pB = JB, qB = void 0 === PB ? null : PB.id, "active" === pB[0] && null === qB);
-      var pB, qB;
-      const ZB = (0, dG.h)(TG),
+        t: EW
+      } = (0, tW.B)(), LW = (0, cW.g)(dW, iW.getPages()), wW = (0, cW.g)(Oi, OW.getGuide()), ZW = LW.find((WW => WW.active)), lW = (AW = wW, bW = void 0 === ZW ? null : ZW.id, "active" === AW[0] && null === bW);
+      var AW, bW;
+      const jW = (0, lO.l)(uO),
         {
-          first: NB,
-          step: RB,
-          canGoBack: VB,
-          canGoForward: SB,
-          turnPage: nB,
-          leaves: UB,
-          pagesHandlers: fB
-        } = eG(jB.length, ZB, (() => function(BB) {
-          const OB = BB.findIndex((BB => BB.active));
-          return -1 !== OB ? OB : Math.max(0, BB.findIndex((BB => "open" === BB.state)))
-        }(jB)));
-      (0, QB.useEffect)((() => {
-        OB.onOpened()
-      }), [OB]), (0, WB.b)((BB => !lB && ("ArrowLeft" === BB.code || "ArrowRight" === BB.code) && !(0, AB.isTypingInInput)()), (BB => {
-        BB.stopPropagation(), nB("ArrowLeft" === BB.code ? "Back" : "Forward")
+          first: UW,
+          step: kW,
+          canGoBack: KW,
+          canGoForward: SW,
+          turnPage: YW,
+          leaves: yW,
+          pagesHandlers: TW
+        } = nO(LW.length, jW, (() => function(WW) {
+          const iW = WW.findIndex((WW => WW.active));
+          return -1 !== iW ? iW : Math.max(0, WW.findIndex((WW => "open" === WW.state)))
+        }(LW)));
+      (0, NW.useEffect)((() => {
+        iW.onOpened()
+      }), [iW]), (0, sW.c)((WW => !lW && ("ArrowLeft" === WW.code || "ArrowRight" === WW.code) && !(0, MW.isTypingInInput)()), (WW => {
+        WW.stopPropagation(), YW("ArrowLeft" === WW.code ? "Back" : "Forward")
       }));
-      const kB = void 0 !== PB,
-        dB = (BB, GB, YB) => (0, LB.jsx)(gG, {
-          className: BB,
-          page: GB >= 0 && GB < jB.length ? jB[GB] : void 0,
-          hidden: YB,
-          building: kB,
-          journal: OB
+      const JW = void 0 !== ZW,
+        hW = (WW, OW, mW) => (0, vW.jsx)(KO, {
+          className: WW,
+          page: OW >= 0 && OW < LW.length ? LW[OW] : void 0,
+          hidden: mW,
+          building: JW,
+          journal: iW
         });
-      return (0, LB.jsx)(kG.d, {
-        close: oB.i,
+      return (0, vW.jsx)(xO.b, {
+        close: PW.q,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, LB.jsxs)("section", {
-          className: zB()("PlotsJournal", {
-            Spread: ZB
+        children: (0, vW.jsxs)("section", {
+          className: xW()("PlotsJournal", {
+            Spread: jW
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": DB("plotsGame:journalTitle"),
-          children: [(0, LB.jsx)(fG.m, {
+          "aria-label": EW("plotsGame:journalTitle"),
+          children: [(0, vW.jsx)(ZO.l, {
             className: "PlotsJournalClose",
-            onClick: oB.i
-          }), "active" === JB[0] && (0, LB.jsx)(JO, {
+            onClick: PW.q
+          }), "active" === wW[0] && (0, vW.jsx)(wi, {
             className: "PlotsJournalGuideSkip",
-            onSkip: YB.skip
-          }), lB && (0, LB.jsx)(IG, {
-            onBuild: OB.build
-          }), !lB && (0, LB.jsx)(FG, {
+            onSkip: mW.skip
+          }), lW && (0, vW.jsx)(UO, {
+            onBuild: iW.build
+          }), !lW && (0, vW.jsx)(kO, {
             direction: "Back",
-            disabled: !VB,
-            onTurn: nB
-          }), (0, LB.jsx)("div", {
-            hidden: lB,
+            disabled: !KW,
+            onTurn: YW
+          }), (0, vW.jsx)("div", {
+            hidden: lW,
             className: "PlotsJournalBookPages",
-            ...fB,
-            children: (0, LB.jsxs)("div", {
+            ...TW,
+            children: (0, vW.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [ZB && dB("Left", NB - 2, !0), dB("Right", NB + 2 * RB - 1, !0), (0, LB.jsxs)("div", {
-                ref: BB => {
-                  UB.current.Back = BB
+              children: [jW && hW("Left", UW - 2, !0), hW("Right", UW + 2 * kW - 1, !0), (0, vW.jsxs)("div", {
+                ref: WW => {
+                  yW.current.Back = WW
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [dB("Recto", NB - 1, !0), ZB && dB("Verso", NB, !1)]
-              }), (0, LB.jsxs)("div", {
-                ref: BB => {
-                  UB.current.Forward = BB
+                children: [hW("Recto", UW - 1, !0), jW && hW("Verso", UW, !1)]
+              }), (0, vW.jsxs)("div", {
+                ref: WW => {
+                  yW.current.Forward = WW
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [dB("Recto", NB + RB - 1, !1), ZB && dB("Verso", NB + RB, !0)]
+                children: [hW("Recto", UW + kW - 1, !1), jW && hW("Verso", UW + kW, !0)]
               })]
             })
-          }), !lB && (0, LB.jsx)(FG, {
+          }), !lW && (0, vW.jsx)(kO, {
             direction: "Forward",
-            disabled: !SB,
-            onTurn: nB
+            disabled: !SW,
+            onTurn: YW
           })]
         })
       })
     }
 
-    function CG(BB, OB, GB, YB, DB) {
-      const QB = Math.hypot(...OB.dir);
-      if (!Number.isFinite(QB) || 0 === QB) return -1;
+    function dO(WW, iW, OW, mW, EW) {
+      const NW = Math.hypot(...iW.dir);
+      if (!Number.isFinite(NW) || 0 === NW) return -1;
       const {
-        from: oB,
-        reach: jB,
-        solid: yB
-      } = OB, JB = [OB.dir[0] / QB, OB.dir[1] / QB, OB.dir[2] / QB], MB = null === yB ? jB : Math.min(jB, function(BB, OB, GB) {
-        const YB = HG(BB, OB, GB);
-        if (YB !== 1 / 0) return YB;
-        return (GB[0] + .5 - BB[0]) * OB[0] + (GB[1] + .5 - BB[1]) * OB[1] + (GB[2] + .5 - BB[2]) * OB[2]
-      }(oB, JB, yB) + .75);
-      let PB = -1,
-        zB = 1 / 0,
-        lB = 1 / 0;
-      for (let pB = 0; pB < BB.length; pB += 4) {
-        const OB = [BB[pB], BB[pB + 1], BB[pB + 2]],
-          QB = DB(pB) ? jB : MB;
-        let yB = -1,
-          qB = HG(oB, JB, OB);
-        if (qB > QB) {
-          const BB = [OB[0] + .5 - oB[0], OB[1] + .5 - oB[1], OB[2] + .5 - oB[2]];
-          if (qB = BB[0] * JB[0] + BB[1] * JB[1] + BB[2] * JB[2], qB <= 0 || qB > QB) continue;
-          if (yB = Math.hypot(BB[0] - qB * JB[0], BB[1] - qB * JB[1], BB[2] - qB * JB[2]), yB > .7 || !YB(pB)) continue
-        }(yB < zB || yB === zB && qB < lB) && GB(pB) && (PB = pB, zB = yB, lB = qB)
+        from: PW,
+        reach: LW,
+        solid: cW
+      } = iW, wW = [iW.dir[0] / NW, iW.dir[1] / NW, iW.dir[2] / NW], tW = null === cW ? LW : Math.min(LW, function(WW, iW, OW) {
+        const mW = eO(WW, iW, OW);
+        if (mW !== 1 / 0) return mW;
+        return (OW[0] + .5 - WW[0]) * iW[0] + (OW[1] + .5 - WW[1]) * iW[1] + (OW[2] + .5 - WW[2]) * iW[2]
+      }(PW, wW, cW) + .75);
+      let ZW = -1,
+        xW = 1 / 0,
+        lW = 1 / 0;
+      for (let AW = 0; AW < WW.length; AW += 4) {
+        const iW = [WW[AW], WW[AW + 1], WW[AW + 2]],
+          NW = EW(AW) ? LW : tW;
+        let cW = -1,
+          bW = eO(PW, wW, iW);
+        if (bW > NW) {
+          const WW = [iW[0] + .5 - PW[0], iW[1] + .5 - PW[1], iW[2] + .5 - PW[2]];
+          if (bW = WW[0] * wW[0] + WW[1] * wW[1] + WW[2] * wW[2], bW <= 0 || bW > NW) continue;
+          if (cW = Math.hypot(WW[0] - bW * wW[0], WW[1] - bW * wW[1], WW[2] - bW * wW[2]), cW > .7 || !mW(AW)) continue
+        }(cW < xW || cW === xW && bW < lW) && OW(AW) && (ZW = AW, xW = cW, lW = bW)
       }
-      return PB
+      return ZW
     }
 
-    function HG(BB, OB, GB) {
-      let YB = 0,
-        DB = 1 / 0;
-      for (let QB = 0; QB < 3; QB++) {
-        const oB = GB[QB] - BB[QB];
-        if (0 === OB[QB]) {
-          if (oB > 0 || oB + 1 < 0) return 1 / 0;
+    function eO(WW, iW, OW) {
+      let mW = 0,
+        EW = 1 / 0;
+      for (let NW = 0; NW < 3; NW++) {
+        const PW = OW[NW] - WW[NW];
+        if (0 === iW[NW]) {
+          if (PW > 0 || PW + 1 < 0) return 1 / 0;
           continue
         }
-        const jB = oB / OB[QB],
-          yB = (oB + 1) / OB[QB];
-        YB = Math.max(YB, Math.min(jB, yB)), DB = Math.min(DB, Math.max(jB, yB))
+        const LW = PW / iW[NW],
+          cW = (PW + 1) / iW[NW];
+        mW = Math.max(mW, Math.min(LW, cW)), EW = Math.min(EW, Math.max(LW, cW))
       }
-      return YB <= DB ? YB : 1 / 0
+      return mW <= EW ? mW : 1 / 0
     }
-    var vG = GB(37584),
-      sG = GB(38739);
-    const xG = [1, 1, 1];
-    class tG {
-      constructor(BB) {
-        this.api = BB, this.meshes = null, this.shown = null
+    var vO = OW(38048),
+      gO = OW(39244),
+      DO = OW(39708);
+    const VO = [1, 1, 1];
+    class pO {
+      constructor(WW) {
+        this.api = WW, this.meshes = null, this.shown = null
       }
-      show(BB) {
-        if (!(0, vG.d)(BB, this.shown))
-          if (this.shown = null === BB ? null : [BB[0], BB[1], BB[2]], null !== this.meshes)
-            for (const OB of this.meshes) this.api.setGameMesh(OB, null === BB ? {
+      show(WW) {
+        if (!(0, vO.f)(WW, this.shown))
+          if (this.shown = null === WW ? null : [WW[0], WW[1], WW[2]], null !== this.meshes)
+            for (const iW of this.meshes) this.api.setGameMesh(iW, null === WW ? {
               visible: !1
             } : {
-              anchor: BB,
+              anchor: WW,
               visible: !0
             });
-          else if (null !== BB) {
-          const OB = [sG.f, sG.f, sG.f, 0, 0, 0];
-          this.meshes = [this.build([OB], sG.j, BB), this.build((0, sG.d)(), sG.o, BB)]
+          else if (null !== WW) {
+          const iW = [gO.f, gO.f, gO.f, 0, 0, 0];
+          this.meshes = [this.build([iW], gO.h, WW), this.build((0, gO.c)(), gO.o, WW)]
         }
       }
       dispose() {
-        for (const OB of null !== (BB = this.meshes) && void 0 !== BB ? BB : []) {
-          var BB;
-          this.api.disposeGameMesh(OB)
+        for (const iW of null !== (WW = this.meshes) && void 0 !== WW ? WW : []) {
+          var WW;
+          this.api.disposeGameMesh(iW)
         }
         this.meshes = null, this.shown = null
       }
-      build(BB, OB, GB) {
-        const YB = [],
-          DB = [];
-        for (const [QB, oB, jB, yB, JB, MB] of BB)(0, CO.c)(YB, DB, [yB + .5, JB + .5, MB + .5], [QB, oB, jB]);
+      build(WW, iW, OW) {
+        const mW = [],
+          EW = [];
+        for (const [NW, PW, LW, cW, wW, tW] of WW)(0, DO.h)(mW, EW, [cW + .5, wW + .5, tW + .5], [NW, PW, LW]);
         return this.api.createGameMesh({
-          positions: YB,
-          indices: DB
+          positions: mW,
+          indices: EW
         }, {
-          rgb: xG,
-          alpha: OB,
+          rgb: VO,
+          alpha: iW,
           onTop: !0
-        }, GB)
+        }, OW)
       }
     }
 
-    function BY(BB, OB) {
-      const GB = TO.f.sZ / 2;
-      return BB[0] < OB[0] + GB && BB[0] + 1 > OB[0] - GB && BB[1] < OB[1] + TO.f.xZ && BB[1] + 1 > OB[1] && BB[2] < OB[2] + GB && BB[2] + 1 > OB[2] - GB
+    function fO(WW, iW) {
+      const OW = fi.f.tU / 2;
+      return WW[0] < iW[0] + OW && WW[0] + 1 > iW[0] - OW && WW[1] < iW[1] + fi.f.ZU && WW[1] + 1 > iW[1] && WW[2] < iW[2] + OW && WW[2] + 1 > iW[2] - OW
     }
 
-    function OY(BB, OB) {
-      return BB.getClientOption(OB, "blockReach") + 1
+    function CO(WW, iW) {
+      return WW.getClientOption(iW, "blockReach") + 1
     }
-    class GY {
-      constructor(BB, OB, GB) {
-        this.api = BB, this.localPlayerId = OB, this.foreseen = GB, this.cells = [], this.playerCells = [], this.next = null
+    class XO {
+      constructor(WW, iW, OW) {
+        this.api = WW, this.localPlayerId = iW, this.foreseen = OW, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(BB) {
-        this.cells = BB
+      setCells(WW) {
+        this.cells = WW
       }
       playerMoved() {
-        return YY(this.api.getPositionView(this.localPlayerId)).some(((BB, OB) => BB !== this.playerCells[OB]))
+        return BO(this.api.getPositionView(this.localPlayerId)).some(((WW, iW) => WW !== this.playerCells[iW]))
       }
-      pl(BB) {
-        const OB = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...YY(OB)), this.next = this.pickFrom(null === BB ? [OB[0], OB[1] + 1, OB[2]] : (0, vG.c)(BB), (() => !1)), this.next
+      Kl(WW) {
+        const iW = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...BO(iW)), this.next = this.pickFrom(null === WW ? [iW[0], iW[1] + 1, iW[2]] : (0, vO.b)(WW), (() => !1)), this.next
       }
-      pickFrom(BB, OB) {
-        const GB = this.api.getPositionView(this.localPlayerId),
-          YB = [GB[0], GB[1] + TO.f.xZ * TO.f.playerEyeToHeightRatio, GB[2]],
-          DB = OY(this.api, this.localPlayerId),
+      pickFrom(WW, iW) {
+        const OW = this.api.getPositionView(this.localPlayerId),
+          mW = [OW[0], OW[1] + fi.f.ZU * fi.f.playerEyeToHeightRatio, OW[2]],
+          EW = CO(this.api, this.localPlayerId),
           {
-            cells: QB
+            cells: NW
           } = this,
-          oB = BB => [QB[BB], QB[BB + 1], QB[BB + 2]],
-          jB = function(BB, OB, GB, YB, DB, QB) {
-            let oB = -1,
-              jB = -1,
-              yB = 1 / 0;
-            for (let JB = 0; JB < BB.length; JB += OB) {
-              const OB = (QB(JB) ? 2 : 0) + (YB(JB) ? 1 : 0);
-              if (OB < jB || DB(JB)) continue;
-              const MB = (BB[JB] + .5 - GB[0]) ** 2 + (BB[JB + 1] + .5 - GB[1]) ** 2 + (BB[JB + 2] + .5 - GB[2]) ** 2;
-              (OB > jB || MB < yB) && (oB = JB, jB = OB, yB = MB)
+          PW = WW => [NW[WW], NW[WW + 1], NW[WW + 2]],
+          LW = function(WW, iW, OW, mW, EW, NW) {
+            let PW = -1,
+              LW = -1,
+              cW = 1 / 0;
+            for (let wW = 0; wW < WW.length; wW += iW) {
+              const iW = (NW(wW) ? 2 : 0) + (mW(wW) ? 1 : 0);
+              if (iW < LW || EW(wW)) continue;
+              const tW = (WW[wW] + .5 - OW[0]) ** 2 + (WW[wW + 1] + .5 - OW[1]) ** 2 + (WW[wW + 2] + .5 - OW[2]) ** 2;
+              (iW > LW || tW < cW) && (PW = wW, LW = iW, cW = tW)
             }
-            return oB
-          }(QB, 4, BB, (BB => 1 === QB[BB + 3]), (BB => {
-            const YB = oB(BB);
-            return BY(YB, GB) || this.foreseen.has(YB.join()) || OB(YB)
-          }), (BB => function(BB, OB, GB) {
-            return (OB[0] + .5 - BB[0]) ** 2 + (OB[1] + .5 - BB[1]) ** 2 + (OB[2] + .5 - BB[2]) ** 2 <= GB ** 2
-          }(YB, oB(BB), DB)));
-        return -1 === jB ? null : oB(jB)
+            return PW
+          }(NW, 4, WW, (WW => 1 === NW[WW + 3]), (WW => {
+            const mW = PW(WW);
+            return fO(mW, OW) || this.foreseen.has(mW.join()) || iW(mW)
+          }), (WW => function(WW, iW, OW) {
+            return (iW[0] + .5 - WW[0]) ** 2 + (iW[1] + .5 - WW[1]) ** 2 + (iW[2] + .5 - WW[2]) ** 2 <= OW ** 2
+          }(mW, PW(WW), EW)));
+        return -1 === LW ? null : PW(LW)
       }
     }
 
-    function YY(BB) {
-      let [OB, GB, YB] = BB;
-      const DB = TO.f.sZ / 2;
-      return [Math.floor(OB), Math.floor(GB), Math.floor(YB), Math.floor(OB - DB), Math.floor(OB + DB), Math.floor(GB + TO.f.xZ), Math.floor(YB - DB), Math.floor(YB + DB)]
+    function BO(WW) {
+      let [iW, OW, mW] = WW;
+      const EW = fi.f.tU / 2;
+      return [Math.floor(iW), Math.floor(OW), Math.floor(mW), Math.floor(iW - EW), Math.floor(iW + EW), Math.floor(OW + fi.f.ZU), Math.floor(mW - EW), Math.floor(mW + EW)]
     }
-    class DY {
-      constructor(BB, OB, GB) {
-        this.api = BB, this.localPlayerId = OB, this.pickNext = GB, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class qO {
+      constructor(WW, iW, OW) {
+        this.api = WW, this.localPlayerId = iW, this.pickNext = OW, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(BB) {
-        const [OB, , GB] = BB.cameraDirection, YB = Math.hypot(OB, GB);
-        YB > .001 && (this.heading = [OB / YB, GB / YB])
+      look(WW) {
+        const [iW, , OW] = WW.cameraDirection, mW = Math.hypot(iW, OW);
+        mW > .001 && (this.heading = [iW / mW, OW / mW])
       }
-      tapped(BB, OB, GB) {
-        const YB = OY(this.api, this.localPlayerId),
+      tapped(WW, iW, OW) {
+        const mW = CO(this.api, this.localPlayerId),
           {
-            origin: DB,
-            direction: QB
+            origin: EW,
+            direction: NW
           } = this.api.getActionRay(),
-          oB = [...DB],
-          jB = [
-            [oB, [oB[0] + QB[0] * YB, oB[1] + QB[1] * YB, oB[2] + QB[2] * YB]]
+          PW = [...EW],
+          LW = [
+            [PW, [PW[0] + NW[0] * mW, PW[1] + NW[1] * mW, PW[2] + NW[2] * mW]]
           ];
-        null !== BB && jB.push([oB, (0, vG.c)(BB)]), this.tap = {
-          lines: jB,
-          next: OB,
-          ms: GB
+        null !== WW && LW.push([PW, (0, vO.b)(WW)]), this.tap = {
+          lines: LW,
+          next: iW,
+          ms: OW
         }
       }
-      filled(BB, OB) {
-        this.tap = null, this.turnFrom(BB, OB), this.retry(OB)
+      filled(WW, iW) {
+        this.tap = null, this.turnFrom(WW, iW), this.retry(iW)
       }
-      arrived(BB, OB) {
+      arrived(WW, iW) {
         const {
-          tap: GB
+          tap: OW
         } = this;
-        if (null === GB || OB - GB.ms > 1500) return null;
-        const YB = (0, vG.c)(BB);
-        return (0, vG.d)(GB.next, BB) || GB.lines.some((BB => {
-          let [OB, GB] = BB;
-          return function(BB, OB, GB) {
-            const YB = [GB[0] - OB[0], GB[1] - OB[1], GB[2] - OB[2]],
-              DB = [BB[0] - OB[0], BB[1] - OB[1], BB[2] - OB[2]],
-              QB = YB[0] ** 2 + YB[1] ** 2 + YB[2] ** 2,
-              oB = 0 === QB ? 0 : Math.min(1, Math.max(0, (DB[0] * YB[0] + DB[1] * YB[1] + DB[2] * YB[2]) / QB));
-            return Math.hypot(DB[0] - YB[0] * oB, DB[1] - YB[1] * oB, DB[2] - YB[2] * oB)
-          }(YB, OB, GB) <= .9
-        })) ? (this.tap = null, this.turnFrom(BB, OB), GB.ms) : null
+        if (null === OW || iW - OW.ms > 1500) return null;
+        const mW = (0, vO.b)(WW);
+        return (0, vO.f)(OW.next, WW) || OW.lines.some((WW => {
+          let [iW, OW] = WW;
+          return function(WW, iW, OW) {
+            const mW = [OW[0] - iW[0], OW[1] - iW[1], OW[2] - iW[2]],
+              EW = [WW[0] - iW[0], WW[1] - iW[1], WW[2] - iW[2]],
+              NW = mW[0] ** 2 + mW[1] ** 2 + mW[2] ** 2,
+              PW = 0 === NW ? 0 : Math.min(1, Math.max(0, (EW[0] * mW[0] + EW[1] * mW[1] + EW[2] * mW[2]) / NW));
+            return Math.hypot(EW[0] - mW[0] * PW, EW[1] - mW[1] * PW, EW[2] - mW[2] * PW)
+          }(mW, iW, OW) <= .9
+        })) ? (this.tap = null, this.turnFrom(WW, iW), OW.ms) : null
       }
-      turnFrom(BB, OB) {
+      turnFrom(WW, iW) {
         this.pending = {
-          from: BB,
-          ms: OB,
-          turnMs: Math.max(50, Math.min(250, OB - this.lastFillMs))
-        }, this.lastFillMs = OB
+          from: WW,
+          ms: iW,
+          turnMs: Math.max(50, Math.min(250, iW - this.lastFillMs))
+        }, this.lastFillMs = iW
       }
-      retry(BB) {
+      retry(WW) {
         const {
-          pending: OB
+          pending: iW
         } = this;
-        if (null === OB) return;
-        if (BB - OB.ms > 1500) return void(this.pending = null);
-        const GB = this.pickNext((0, vG.c)(OB.from), (BB => (0, vG.d)(BB, OB.from)));
-        if (null === GB) return;
+        if (null === iW) return;
+        if (WW - iW.ms > 1500) return void(this.pending = null);
+        const OW = this.pickNext((0, vO.b)(iW.from), (WW => (0, vO.f)(WW, iW.from)));
+        if (null === OW) return;
         this.pending = null;
         const {
-          turning: YB
+          turning: mW
         } = this;
-        if (null !== YB && BB < YB.endMs && (0, vG.d)(YB.to, GB)) return;
-        const DB = this.api.getActionRay().origin,
-          QB = [GB[0] + .5 - DB[0], GB[1] + .5 - DB[1], GB[2] + .5 - DB[2]],
-          oB = Math.hypot(QB[0], QB[2]);
-        if (oB < .3) {
-          const BB = Math.max(oB, .001);
-          QB[0] = this.heading[0] * BB, QB[2] = this.heading[1] * BB
+        if (null !== mW && WW < mW.endMs && (0, vO.f)(mW.to, OW)) return;
+        const EW = this.api.getActionRay().origin,
+          NW = [OW[0] + .5 - EW[0], OW[1] + .5 - EW[1], OW[2] + .5 - EW[2]],
+          PW = Math.hypot(NW[0], NW[2]);
+        if (PW < .3) {
+          const WW = Math.max(PW, .001);
+          NW[0] = this.heading[0] * WW, NW[2] = this.heading[1] * WW
         }
-        this.api.turnCamera(QB, OB.turnMs), this.turning = {
-          to: GB,
-          endMs: BB + OB.turnMs
+        this.api.turnCamera(NW, iW.turnMs), this.turning = {
+          to: OW,
+          endMs: WW + iW.turnMs
         }
       }
     }
-    class QY {
-      constructor(BB, OB, GB, YB) {
-        this.api = BB, this.localPlayerId = OB, this.juice = GB, this.tracker = YB, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new bO(BB), this.meshes = new BG(BB), this.outline = new tG(BB), this.nextCell = new GY(BB, OB, this.foreseen), this.turn = new DY(BB, OB, ((BB, OB) => this.nextCell.pickFrom(BB, OB)))
+    class RO {
+      constructor(WW, iW, OW, mW) {
+        this.api = WW, this.localPlayerId = iW, this.juice = OW, this.tracker = mW, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Ci(WW), this.meshes = new Xi.n(WW), this.outline = new pO(WW), this.nextCell = new XO(WW, iW, this.foreseen), this.turn = new qO(WW, iW, ((WW, iW) => this.nextCell.pickFrom(WW, iW)))
       }
-      nP(BB) {
-        const OB = "active" === BB[0] ? `${BB[1]}|${BB[3]}|${BB[4]}|${BB[5]}|${BB[6]}` : "";
-        if ("active" !== BB[0]) "built" === BB[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      yZ(WW) {
+        const iW = "active" === WW[0] ? `${WW[1]}|${WW[3]}|${WW[4]}|${WW[5]}|${WW[6]}` : "";
+        if ("active" !== WW[0]) "built" === WW[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , GB, YB, DB, QB] = BB;
-          OB !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = GB) : GB === this.layerY ? this.burstUnlisted(YB) : GB > this.layerY && this.finishLayer(GB), this.layerY = GB, this.layerCells.has(GB) || this.layerCells.set(GB, YB.filter(oY)), this.ghostCells = YB, this.palette = DB, this.occupiedCells = QB
+          const [, , , , , , , OW, mW, EW, NW] = WW;
+          iW !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = OW) : OW === this.layerY ? this.burstUnlisted(mW) : OW > this.layerY && this.finishLayer(OW), this.layerY = OW, this.layerCells.has(OW) || this.layerCells.set(OW, mW.filter(GO)), this.ghostCells = mW, this.palette = EW, this.occupiedCells = NW
         }
-        OB !== this.blueprint && (this.tracker.show("active" === BB[0] && BB[2] ? {
-          id: BB[1],
-          y: BB[4]
-        } : null), this.blueprint = OB, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((BB => this.api.blockNameToBlockId(BB))), this.chunkWatch.watch([...this.ghostCells.filter(oY), ...this.occupiedCells]), this.refresh()
+        iW !== this.blueprint && (this.tracker.show("active" === WW[0] && WW[2] ? {
+          id: WW[1],
+          y: WW[4]
+        } : null), this.blueprint = iW, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((WW => this.api.blockNameToBlockId(WW))), this.chunkWatch.watch([...this.ghostCells.filter(GO), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(BB) {
-        this.burstUnlisted([]), BB > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = BB)
+      finishLayer(WW) {
+        this.burstUnlisted([]), WW > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = WW)
       }
-      kP() {
+      hZ() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const BB = performance.now();
-        let OB = !1;
-        for (const [YB, DB] of this.foreseen) {
-          var GB;
-          if (BB - DB > 1e3) this.foreseen.delete(YB), OB = !0, (null === (GB = this.lastFilled) || void 0 === GB ? void 0 : GB.join()) === YB && (this.lastFilled = this.lastSeenFilled)
-        }(OB || this.nextCell.playerMoved()) && this.showNext()
+        const WW = performance.now();
+        let iW = !1;
+        for (const [mW, EW] of this.foreseen) {
+          var OW;
+          if (WW - EW > 1e3) this.foreseen.delete(mW), iW = !0, (null === (OW = this.lastFilled) || void 0 === OW ? void 0 : OW.join()) === mW && (this.lastFilled = this.lastSeenFilled)
+        }(iW || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(BB) {
-        const OB = new Set;
-        for (let DB = 0; DB < BB.length; DB += 4) OB.add(`${BB[DB]},${BB[DB+1]},${BB[DB+2]}`);
-        const GB = [],
+      burstUnlisted(WW) {
+        const iW = new Set;
+        for (let EW = 0; EW < WW.length; EW += 4) iW.add(`${WW[EW]},${WW[EW+1]},${WW[EW+2]}`);
+        const OW = [],
           {
-            ghostCells: YB
+            ghostCells: mW
           } = this;
-        for (let DB = 0; DB < YB.length; DB += 4) {
-          const BB = `${YB[DB]},${YB[DB+1]},${YB[DB+2]}`;
-          !OB.has(BB) && this.open.delete(BB) && GB.push(this.filledCell(DB))
+        for (let EW = 0; EW < mW.length; EW += 4) {
+          const WW = `${mW[EW]},${mW[EW+1]},${mW[EW+2]}`;
+          !iW.has(WW) && this.open.delete(WW) && OW.push(this.filledCell(EW))
         }
-        this.burst(GB)
+        this.burst(OW)
       }
       refresh() {
         const {
-          ghostCells: BB,
-          palette: OB,
-          occupiedCells: GB
-        } = this, YB = new tO, DB = new Set, QB = [], oB = [];
-        let jB = 0;
-        for (let yB = 0; yB < BB.length; yB += 4) {
-          const [GB, JB, MB, PB] = [BB[yB], BB[yB + 1], BB[yB + 2], BB[yB + 3]], zB = this.api.getBlockId(GB, JB, MB), lB = `${GB},${JB},${MB}`, pB = FO(this.blockIds[PB], zB);
-          !pB && iO(zB) ? YB.add(GB, JB, MB, gO(OB[PB]), vO, eO(OB[PB])) : pB ? this.open.has(lB) && QB.push(this.filledCell(yB)) : YB.add(GB, JB, MB, xO, sO), pB || jB++, !pB && this.api.isBlockInLoadedChunk(GB, JB, MB) && (DB.add(lB), oB.push(GB, JB, MB, iO(zB) ? 0 : 1))
+          ghostCells: WW,
+          palette: iW,
+          occupiedCells: OW
+        } = this, mW = new Xi.j, EW = new Set, NW = [], PW = [];
+        let LW = 0;
+        for (let cW = 0; cW < WW.length; cW += 4) {
+          const [OW, wW, tW, ZW] = [WW[cW], WW[cW + 1], WW[cW + 2], WW[cW + 3]], xW = this.api.getBlockId(OW, wW, tW), lW = `${OW},${wW},${tW}`, AW = ei(this.blockIds[ZW], xW);
+          !AW && vi(xW) ? mW.add(OW, wW, tW, Di(iW[ZW]), Xi.h, (0, Vi.e)(iW[ZW])) : AW ? this.open.has(lW) && NW.push(this.filledCell(cW)) : mW.add(OW, wW, tW, Xi.e, Xi.d), AW || LW++, !AW && this.api.isBlockInLoadedChunk(OW, wW, tW) && (EW.add(lW), PW.push(OW, wW, tW, vi(xW) ? 0 : 1))
         }
-        this.open = DB, this.nextCell.setCells(oB), this.tracker.update(this.layerY, this.topLayerY, jB);
-        for (let yB = 0; yB < GB.length; yB += 3) {
-          const [BB, OB, DB] = [GB[yB], GB[yB + 1], GB[yB + 2]];
-          iO(this.api.getBlockId(BB, OB, DB)) || YB.add(BB, OB, DB, xO, sO)
+        this.open = EW, this.nextCell.setCells(PW), this.tracker.update(this.layerY, this.topLayerY, LW);
+        for (let cW = 0; cW < OW.length; cW += 3) {
+          const [WW, iW, EW] = [OW[cW], OW[cW + 1], OW[cW + 2]];
+          vi(this.api.getBlockId(WW, iW, EW)) || mW.add(WW, iW, EW, Xi.e, Xi.d)
         }
-        this.meshes.show(YB.toArray()), this.burst(QB), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(mW.toArray()), this.burst(NW), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(BB) {
-        const OB = performance.now(),
-          GB = [];
-        for (const [DB, QB, oB] of BB) {
-          const BB = [DB, QB, oB];
-          this.lastSeenFilled = BB, this.foreseen.delete(BB.join()) || GB.push(BB)
+      burst(WW) {
+        const iW = performance.now(),
+          OW = [];
+        for (const [EW, NW, PW] of WW) {
+          const WW = [EW, NW, PW];
+          this.lastSeenFilled = WW, this.foreseen.delete(WW.join()) || OW.push(WW)
         }
-        const YB = this.isHolding(OB);
-        for (const DB of GB) {
-          if (this.lastFilled = DB, YB && this.pressFilled) {
-            this.turn.filled(DB, OB);
+        const mW = this.isHolding(iW);
+        for (const EW of OW) {
+          if (this.lastFilled = EW, mW && this.pressFilled) {
+            this.turn.filled(EW, iW);
             continue
           }
-          const BB = this.turn.arrived(DB, OB);
-          if (null !== BB) {
-            this.pressFilled = YB;
-            for (const [OB, GB] of this.foreseen) GB <= BB && this.foreseen.delete(OB)
+          const WW = this.turn.arrived(EW, iW);
+          if (null !== WW) {
+            this.pressFilled = mW;
+            for (const [iW, OW] of this.foreseen) OW <= WW && this.foreseen.delete(iW)
           }
         }
-        this.juice.filled(BB)
+        this.juice.filled(WW)
       }
       showNext() {
-        var BB;
-        this.outline.show(null !== (BB = this.aimed) && void 0 !== BB ? BB : this.nextCell.pl(this.lastFilled))
+        var WW;
+        this.outline.show(null !== (WW = this.aimed) && void 0 !== WW ? WW : this.nextCell.Kl(this.lastFilled))
       }
-      afterRender(BB) {
-        var OB;
-        this.turn.look(BB);
-        const GB = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === GB ? null : GB.position), this.outline.show(null !== (OB = this.aimed) && void 0 !== OB ? OB : this.nextCell.get())
+      afterRender(WW) {
+        var iW;
+        this.turn.look(WW);
+        const OW = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === OW ? null : OW.position), this.outline.show(null !== (iW = this.aimed) && void 0 !== iW ? iW : this.nextCell.get())
       }
-      isHolding(BB) {
-        return null !== this.altMs && BB - this.altMs <= 500
+      isHolding(WW) {
+        return null !== this.altMs && WW - this.altMs <= 500
       }
-      attemptAltAction(BB) {
-        const OB = performance.now();
-        if (this.isHolding(OB) || (this.pressFilled = !1), this.altMs = OB, this.pressFilled) return "preventPlacement";
-        const GB = this.findAimed(BB);
-        if (null !== GB) return this.foreseen.set(GB.join(), OB), this.lastFilled = GB, this.aimed = null, this.showNext(), this.turn.filled(GB, OB), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(WW) {
+        const iW = performance.now();
+        if (this.isHolding(iW) || (this.pressFilled = !1), this.altMs = iW, this.pressFilled) return "preventPlacement";
+        const OW = this.findAimed(WW);
+        if (null !== OW) return this.foreseen.set(OW.join(), iW), this.lastFilled = OW, this.aimed = null, this.showNext(), this.turn.filled(OW, iW), this.pressFilled = !0, "preventPlacement";
         {
-          const GB = this.nextCell.get();
-          null !== GB && this.turn.tapped(BB, GB, OB)
+          const OW = this.nextCell.get();
+          null !== OW && this.turn.tapped(WW, OW, iW)
         }
       }
       holdPressOnEntity() {
-        const BB = performance.now();
-        this.pressFilled && this.isHolding(BB) && (this.altMs = BB)
+        const WW = performance.now();
+        this.pressFilled && this.isHolding(WW) && (this.altMs = WW)
       }
-      findAimed(BB) {
-        return function(BB, OB, GB, YB, DB, QB, oB) {
-          const jB = BB.MYB(OB),
-            yB = null === jB || null === BB.blockNameToBlockId(jB.name, !0) ? null : jB.name,
-            JB = BB.getPositionView(OB),
+      findAimed(WW) {
+        return function(WW, iW, OW, mW, EW, NW, PW) {
+          const LW = WW.kOW(iW),
+            cW = null === LW || null === WW.blockNameToBlockId(LW.name, !0) ? null : LW.name,
+            wW = WW.getPositionView(iW),
             {
-              origin: MB,
-              direction: PB
-            } = BB.getActionRay(),
-            zB = CG(YB, {
-              from: MB,
-              dir: PB,
-              reach: OY(BB, OB),
-              solid: GB
-            }, (OB => {
-              const GB = [YB[OB], YB[OB + 1], YB[OB + 2]];
-              return !FO(DB[YB[OB + 3]], BB.getBlockId(...GB)) && !oB.has(GB.join()) && BB.isBlockInLoadedChunk(...GB) && !BY(GB, JB)
-            }), (BB => null === yB || yB === LO(DB[YB[BB + 3]])), (BB => null !== QB && YB[BB] === QB[0] && YB[BB + 1] === QB[1] && YB[BB + 2] === QB[2]));
-          return -1 === zB ? null : [YB[zB], YB[zB + 1], YB[zB + 2]]
-        }(this.api, this.localPlayerId, BB, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: tW,
+              direction: ZW
+            } = WW.getActionRay(),
+            xW = dO(mW, {
+              from: tW,
+              dir: ZW,
+              reach: CO(WW, iW),
+              solid: OW
+            }, (iW => {
+              const OW = [mW[iW], mW[iW + 1], mW[iW + 2]];
+              return !ei(EW[mW[iW + 3]], WW.getBlockId(...OW)) && !PW.has(OW.join()) && WW.isBlockInLoadedChunk(...OW) && !fO(OW, wW)
+            }), (WW => null === cW || cW === gi(EW[mW[WW + 3]])), (WW => null !== NW && mW[WW] === NW[0] && mW[WW + 1] === NW[1] && mW[WW + 2] === NW[2]));
+          return -1 === xW ? null : [mW[xW], mW[xW + 1], mW[xW + 2]]
+        }(this.api, this.localPlayerId, WW, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(BB) {
+      filledCell(WW) {
         const {
-          ghostCells: OB
-        } = this, [GB, YB, DB] = gO(this.palette[OB[BB + 3]]);
-        return [OB[BB], OB[BB + 1], OB[BB + 2], GB, YB, DB]
+          ghostCells: iW
+        } = this, [OW, mW, EW] = Di(this.palette[iW[WW + 3]]);
+        return [iW[WW], iW[WW + 1], iW[WW + 2], OW, mW, EW]
       }
     }
 
-    function oY(BB, OB) {
-      return OB % 4 !== 3
+    function GO(WW, iW) {
+      return iW % 4 !== 3
     }
-    class jY {
-      constructor(BB) {
-        this.api = BB, this.sent = !1
+    class IO {
+      constructor(WW) {
+        this.api = WW, this.sent = !1
       }
-      kP() {
-        this.sent || jB.c.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      hZ() {
+        this.sent || LW.d.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var yY = GB(4642),
-      JY = GB(39858);
+    var aO = OW(2937),
+      rO = OW(40371);
 
-    function MY(BB, OB, GB) {
-      const YB = [255 * BB, 255 * OB, 255 * GB],
-        [DB, QB, oB] = YB.map((BB => BB + .4 * (255 - BB)));
+    function zO(WW, iW, OW) {
+      const mW = [255 * WW, 255 * iW, 255 * OW],
+        [EW, NW, PW] = mW.map((WW => WW + .4 * (255 - WW)));
       return {
         texture: "square_particle",
-        CP: 48,
-        minLifeTime: .3 / JY.c,
-        maxLifeTime: .55 / JY.c,
+        aZ: 48,
+        minLifeTime: .3 / rO.d,
+        maxLifeTime: .55 / rO.d,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * JY.c * JY.c, 0],
+        gravity: [0, -14 * rO.d * rO.d, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...YB, 1],
-          maxColor: [DB, QB, oB, 1]
+          minColor: [...mW, 1],
+          maxColor: [EW, NW, PW, 1]
         }, {
           timeFraction: 1,
-          minColor: [...YB, 0],
-          maxColor: [DB, QB, oB, 0]
+          minColor: [...mW, 0],
+          maxColor: [EW, NW, PW, 0]
         }],
-        blendMode: yY.f.Standard
+        blendMode: aO.d.Standard
       }
     }
-    const PY = {
+    const FO = {
       texture: "glint",
       mipmaps: !1,
-      CP: 96,
-      minLifeTime: .5 / JY.c,
-      maxLifeTime: .9 / JY.c,
+      aZ: 96,
+      minLifeTime: .5 / rO.d,
+      maxLifeTime: .9 / rO.d,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * JY.c * JY.c, 0],
+      gravity: [0, 2 * rO.d * rO.d, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2637,112 +2977,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: yY.f.OneOne
+      blendMode: aO.d.OneOne
     };
-    class zY {
-      constructor(BB, OB) {
-        this.api = BB, this.localPlayerId = OB, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class QO {
+      constructor(WW, iW) {
+        this.api = WW, this.localPlayerId = iW, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(BB) {
+      filled(WW) {
         if (this.api.particlesEnabled())
-          for (const [OB, GB, YB, DB, QB, oB] of BB.slice(0, 3)) {
-            const BB = `${DB},${QB},${oB}`;
-            let jB = this.chips.get(BB);
-            void 0 === jB && (jB = this.api.createParticles(MY(DB, QB, oB), {
-              pos: [OB + .5, GB + .5, YB + .5]
-            }), this.chips.set(BB, jB));
-            for (let OB = 0; OB < 8; OB++) this.setPoint(OB, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            jB.emitPoints([OB + .5, GB + .5, YB + .5], this.points, 8)
+          for (const [iW, OW, mW, EW, NW, PW] of WW.slice(0, 3)) {
+            const WW = `${EW},${NW},${PW}`;
+            let LW = this.chips.get(WW);
+            void 0 === LW && (LW = this.api.createParticles(zO(EW, NW, PW), {
+              pos: [iW + .5, OW + .5, mW + .5]
+            }), this.chips.set(WW, LW));
+            for (let iW = 0; iW < 8; iW++) this.setPoint(iW, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            LW.emitPoints([iW + .5, OW + .5, mW + .5], this.points, 8)
           }
       }
-      layerDone(BB) {
+      layerDone(WW) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const OB = BB.length / 3;
-        if (0 === OB || !this.api.particlesEnabled()) return;
-        const GB = Math.min(OB, 48),
-          [YB, DB, QB] = [BB[0] + .5, BB[1] + 1, BB[2] + .5];
-        let oB = 0;
-        for (let jB = 0; jB < GB; jB++) {
-          const yB = 3 * Math.floor(jB * OB / GB);
-          for (let OB = 0; OB < 2; OB++) this.setPoint(oB++, BB[yB] + Math.random() - YB, BB[yB + 1] + 1 - DB, BB[yB + 2] + Math.random() - QB, .6 + .8 * Math.random())
+        const iW = WW.length / 3;
+        if (0 === iW || !this.api.particlesEnabled()) return;
+        const OW = Math.min(iW, 48),
+          [mW, EW, NW] = [WW[0] + .5, WW[1] + 1, WW[2] + .5];
+        let PW = 0;
+        for (let LW = 0; LW < OW; LW++) {
+          const cW = 3 * Math.floor(LW * iW / OW);
+          for (let iW = 0; iW < 2; iW++) this.setPoint(PW++, WW[cW] + Math.random() - mW, WW[cW + 1] + 1 - EW, WW[cW + 2] + Math.random() - NW, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(PY, {
-          pos: [YB, DB, QB]
-        }), this.sparkles.emitPoints([YB, DB, QB], this.points, oB)
+        this.sparkles ??= this.api.createParticles(FO, {
+          pos: [mW, EW, NW]
+        }), this.sparkles.emitPoints([mW, EW, NW], this.points, PW)
       }
       dispose() {
-        var BB;
-        for (const OB of this.chips.values()) OB.stop();
-        this.chips.clear(), null === (BB = this.sparkles) || void 0 === BB || BB.stop(), this.sparkles = null
+        var WW;
+        for (const iW of this.chips.values()) iW.stop();
+        this.chips.clear(), null === (WW = this.sparkles) || void 0 === WW || WW.stop(), this.sparkles = null
       }
-      setPoint(BB, OB, GB, YB, DB) {
-        const QB = 4 * BB;
-        this.points[QB] = OB, this.points[QB + 1] = GB, this.points[QB + 2] = YB, this.points[QB + 3] = DB
+      setPoint(WW, iW, OW, mW, EW) {
+        const NW = 4 * WW;
+        this.points[NW] = iW, this.points[NW + 1] = OW, this.points[NW + 2] = mW, this.points[NW + 3] = EW
       }
     }
-    const lY = "SpecialAction1",
-      pY = "KeyY",
-      qY = "KeyX";
+    const Wm = "SpecialAction1",
+      im = "KeyY",
+      Om = "KeyX";
 
-    function ZY(BB) {
+    function mm(WW) {
       let {
-        placement: OB
-      } = BB;
-      const GB = (0, yB.i)(yG, OB.getView()),
+        placement: iW
+      } = WW;
+      const OW = (0, cW.g)(Ii, iW.getView()),
         {
-          t: YB
-        } = (0, MB.H)(),
+          t: mW
+        } = (0, tW.B)(),
         {
-          isTouchScreen: DB
-        } = (0, jB.o)(["isTouchScreen"]),
-        oB = (0, QB.useContext)(SB),
-        PB = null !== GB,
-        pB = PB && !GB.blocked && !GB.waiting;
-      if ((0, WB.b)((BB => PB && !BB.repeat && !(0, AB.isTypingInInput)() && !(0, lB.r)() && !DB), (BB => {
-          const GB = function(BB, OB, GB) {
-            if (BB === qY) return OB.stop;
-            if (BB === pY) return GB ? OB.build : RY;
-            return JB.t[lY].includes(BB) ? OB.rotate : null
-          }(BB.code, OB, pB);
-          null !== GB && (BB.stopPropagation(), GB())
-        })), !PB) return null;
-      let ZB = DB ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return GB.blocked ? ZB = "plotsGame:placementOffPlot" : GB.toClear > 0 ? ZB = "plotsGame:placementClear" : "placeSpot" !== oB.hint && "placeBuild" !== oB.hint || (ZB = null), (0, LB.jsx)(qB.e, {
+          isTouchScreen: EW
+        } = (0, LW.p)(["isTouchScreen"]),
+        PW = (0, NW.useContext)(SW),
+        ZW = null !== OW,
+        AW = ZW && !OW.blocked && !OW.waiting;
+      if ((0, sW.c)((WW => ZW && !WW.repeat && !(0, MW.isTypingInInput)() && !(0, lW.l)() && !EW), (WW => {
+          const OW = function(WW, iW, OW) {
+            if (WW === Om) return iW.stop;
+            if (WW === im) return OW ? iW.build : Nm;
+            return wW.v[Wm].includes(WW) ? iW.rotate : null
+          }(WW.code, iW, AW);
+          null !== OW && (WW.stopPropagation(), OW())
+        })), !ZW) return null;
+      let jW = EW ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return OW.blocked ? jW = "plotsGame:placementOffPlot" : OW.toClear > 0 ? jW = "plotsGame:placementClear" : "placeSpot" !== PW.hint && "placeBuild" !== PW.hint || (jW = null), (0, vW.jsx)(bW.h, {
         placement: "bottom",
-        children: (0, LB.jsxs)("div", {
-          ref: oB.placementCardRef,
+        children: (0, vW.jsxs)("div", {
+          ref: PW.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, LB.jsx)("div", {
+          children: [(0, vW.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: YB(dB(GB.id).displayName.translationKey)
-          }), null !== ZB && (0, LB.jsx)("div", {
-            className: zB()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: GB.refusals > 0
+            children: mW(hW(OW.id).displayName.translationKey)
+          }), null !== jW && (0, vW.jsx)("div", {
+            className: xW()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: OW.refusals > 0
             }),
-            children: YB(ZB)
-          }, GB.refusals), (0, LB.jsxs)("div", {
+            children: mW(jW)
+          }, OW.refusals), (0, vW.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, LB.jsxs)(fG.f, {
-              onClick: OB.rotate,
-              children: [(0, LB.jsx)(NY, {
-                noaAction: lY
-              }), YB("plotsGame:placementRotate")]
-            }), (0, LB.jsxs)(fG.Q, {
-              onClick: OB.stop,
-              children: [(0, LB.jsx)(NY, {
-                keyCode: qY
-              }), YB("general:cancel")]
-            }), (0, LB.jsx)("span", {
-              ref: oB.buildRef,
-              className: zB()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === oB.hint && pB && DB
+            children: [(0, vW.jsxs)(ZO.f, {
+              onClick: iW.rotate,
+              children: [(0, vW.jsx)(Em, {
+                noaAction: Wm
+              }), mW("plotsGame:placementRotate")]
+            }), (0, vW.jsxs)(ZO.O, {
+              onClick: iW.stop,
+              children: [(0, vW.jsx)(Em, {
+                keyCode: Om
+              }), mW("general:cancel")]
+            }), (0, vW.jsx)("span", {
+              ref: PW.buildRef,
+              className: xW()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === PW.hint && AW && EW
               }),
-              children: (0, LB.jsxs)(fG.q, {
-                disabled: !pB,
-                onClick: OB.build,
-                children: [(0, LB.jsx)(NY, {
-                  keyCode: pY
-                }), YB("plotsGame:placementBuild")]
+              children: (0, vW.jsxs)(ZO.n, {
+                disabled: !AW,
+                onClick: iW.build,
+                children: [(0, vW.jsx)(Em, {
+                  keyCode: im
+                }), mW("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -2750,353 +3090,1157 @@ export const modules = {
       })
     }
 
-    function NY(BB) {
-      return (0, LB.jsx)(RB.c, {
+    function Em(WW) {
+      return (0, vW.jsx)(kW.e, {
         className: "PlotsPlacementKey",
-        ...BB
+        ...WW
       })
     }
 
-    function RY() {}
-    var WY = GB(2554),
-      AY = GB(37367),
-      VY = GB(2063),
-      SY = GB(1260);
-    const nY = {
+    function Nm() {}
+    var Pm = OW(3247),
+      Lm = OW(37919),
+      cm = OW(2075),
+      wm = OW(1255);
+    const tm = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function UY(BB) {
+    function Zm(WW) {
       let {
-        hud: OB
-      } = BB;
-      const GB = (0, yB.i)(OO, OB.getPlot()),
-        [YB, DB] = (0, QB.useState)(null),
-        oB = (0, AY.n)(YB);
-      if ("none" === GB[0]) return null;
-      const [, jB, JB, MB, PB, lB] = GB;
-      return (0, LB.jsx)("div", {
-        className: zB()("PlotsPlotBannerContainer", {
-          Below: oB
+        hud: iW
+      } = WW;
+      const OW = (0, cW.g)(ii, iW.getPlot()),
+        [mW, EW] = (0, NW.useState)(null),
+        PW = (0, Lm.i)(mW);
+      if ("none" === OW[0]) return null;
+      const [, LW, wW, tW, ZW, lW] = OW;
+      return (0, vW.jsx)("div", {
+        className: xW()("PlotsPlotBannerContainer", {
+          Below: PW
         }),
-        children: (0, LB.jsx)(fY, {
-          plotX: jB,
-          plotZ: JB,
-          ownerName: MB,
-          ownerId: PB,
-          relation: lB,
-          plaqueRef: DB
-        }, `${jB},${JB}`)
+        children: (0, vW.jsx)(xm, {
+          plotX: LW,
+          plotZ: wW,
+          ownerName: tW,
+          ownerId: ZW,
+          relation: lW,
+          plaqueRef: EW
+        }, `${LW},${wW}`)
       })
     }
 
-    function fY(BB) {
-      var OB, GB;
+    function xm(WW) {
+      var iW, OW;
       let {
-        plotX: YB,
-        plotZ: DB,
-        ownerName: QB,
-        ownerId: oB,
-        relation: jB,
-        plaqueRef: yB
-      } = BB;
+        plotX: mW,
+        plotZ: EW,
+        ownerName: NW,
+        ownerId: PW,
+        relation: LW,
+        plaqueRef: cW
+      } = WW;
       const {
-        t: JB
-      } = (0, MB.H)(), PB = (0, VY.g)("hiddenPlayerNames"), lB = (0, VY.g)("players"), pB = null === oB ? null : null !== (OB = null === (GB = lB.byId[oB]) || void 0 === GB ? void 0 : GB.cosmetics) && void 0 !== OB ? OB : null, qB = JB("plotsGame:plotBannerCoords", {
-        x: YB,
-        z: DB
-      }), NB = "own" === jB || null !== QB;
-      return (0, LB.jsxs)("div", {
-        ref: yB,
-        className: zB()("PlotsPlotBanner", {
-          Own: "own" === jB,
-          Shared: "shared" === jB
+        t: wW
+      } = (0, tW.B)(), ZW = (0, cm.g)("hiddenPlayerNames"), lW = (0, cm.g)("players"), AW = null === PW ? null : null !== (iW = null === (OW = lW.byId[PW]) || void 0 === OW ? void 0 : OW.cosmetics) && void 0 !== iW ? iW : null, bW = wW("plotsGame:plotBannerCoords", {
+        x: mW,
+        z: EW
+      }), UW = "own" === LW || null !== NW;
+      return (0, vW.jsxs)("div", {
+        ref: cW,
+        className: xW()("PlotsPlotBanner", {
+          Own: "own" === LW,
+          Shared: "shared" === LW
         }),
         role: "status",
-        children: [(0, LB.jsxs)("span", {
-          className: zB()("PlotsPlotBannerSeal", {
-            Face: null !== pB
+        children: [(0, vW.jsxs)("span", {
+          className: xW()("PlotsPlotBannerSeal", {
+            Face: null !== AW
           }),
-          children: [null !== pB && (0, LB.jsx)(WY.b, {
-            cosmetics: pB
-          }), null === pB && (0, LB.jsx)(ZB.b, {
-            name: nY[jB]
+          children: [null !== AW && (0, vW.jsx)(Pm.e, {
+            cosmetics: AW
+          }), null === AW && (0, vW.jsx)(jW.c, {
+            name: tm[LW]
           })]
-        }), (0, LB.jsxs)("div", {
+        }), (0, vW.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, LB.jsxs)("div", {
+          children: [(0, vW.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === jB && JB("plotsGame:plotBannerYours"), "own" !== jB && null !== QB && JB("plotsGame:plotBannerOwner", {
-              name: (0, SY.g)(QB, PB)
-            }), !NB && qB]
-          }), NB && (0, LB.jsxs)("div", {
+            children: ["own" === LW && wW("plotsGame:plotBannerYours"), "own" !== LW && null !== NW && wW("plotsGame:plotBannerOwner", {
+              name: (0, wm.g)(NW, ZW)
+            }), !UW && bW]
+          }), UW && (0, vW.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [qB, "shared" === jB && (0, LB.jsx)("span", {
+            children: [bW, "shared" === LW && (0, vW.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: JB("plotsGame:plotBannerShared")
+              children: wW("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const kY = function(BB, OB, GB, YB) {
+    const lm = function(WW, iW, OW, mW) {
       let {
-        localPlayerId: DB
-      } = YB;
-      const jB = new DO;
-      let yB = null,
-        JB = null,
-        MB = null,
-        PB = null,
-        zB = null,
-        lB = null;
-      const pB = [];
+        localPlayerId: EW
+      } = mW;
+      const LW = new Ei;
+      let cW = null,
+        wW = null,
+        tW = null,
+        ZW = null,
+        xW = null,
+        lW = null;
+      const AW = [];
       return {
-        onCreate: BB => {
-          yB = new zY(BB, DB);
-          const OB = new BO;
-          JB = new QY(BB, DB, yB, OB), MB = new MG(BB, DB), PB = new iB(BB, MB), zB = new UG(BB, DB, JB.nextCell), lB = new jY(BB), pB.push((0, oB.s)((0, QB.createElement)(VG, {
-            hud: jB,
-            guide: zB,
-            tracker: OB,
-            placement: MB
-          }, (0, QB.createElement)(UY, {
-            hud: jB
-          }), (0, QB.createElement)(rB, {
-            journal: PB
-          }), (0, QB.createElement)(ZG, {
-            placement: MB
-          }), (0, QB.createElement)(ZY, {
-            placement: MB
+        onCreate: WW => {
+          cW = new QO(WW, EW);
+          const iW = new Wi;
+          wW = new RO(WW, EW, cW, iW), tW = new ri(WW, EW), ZW = new eW(WW, tW), xW = new tO(WW, EW, wW.nextCell), lW = new IO(WW), AW.push((0, PW.O)((0, NW.createElement)(LO, {
+            hud: LW,
+            guide: xW,
+            tracker: iW,
+            placement: tW
+          }, (0, NW.createElement)(Zm, {
+            hud: LW
+          }), (0, NW.createElement)(DW, {
+            journal: ZW
+          }), (0, NW.createElement)(OO, {
+            placement: tW
+          }), (0, NW.createElement)(mm, {
+            placement: tW
           })), {
-            content: (0, QB.createElement)(bG, {
-              journal: PB,
-              hud: jB,
-              guide: zB
+            content: (0, NW.createElement)(oO, {
+              journal: ZW,
+              hud: LW,
+              guide: xW
             })
           }))
         },
-        kP: () => {
-          lB.kP(), JB.kP(), MB.kP(), PB.kP()
+        hZ: () => {
+          lW.hZ(), wW.hZ(), tW.hZ(), ZW.hZ()
         },
-        onPlayerAttemptAltAction: (BB, OB, GB, YB, DB, QB) => {
-          if (null !== QB) return void JB.holdPressOnEntity();
-          const oB = void 0 === OB ? null : [OB, GB, YB];
-          return JB.attemptAltAction(oB)
+        onPlayerAttemptAltAction: (WW, iW, OW, mW, EW, NW) => {
+          if (null !== NW) return void wW.holdPressOnEntity();
+          const PW = void 0 === iW ? null : [iW, OW, mW];
+          return wW.attemptAltAction(PW)
         },
         onPlayerClickUp: () => {
-          JB.endPress()
+          wW.endPress()
         },
-        onAfterRender: (BB, OB) => {
-          MB.afterRender(OB), JB.afterRender(OB), zB.afterRender(OB)
+        onAfterRender: (WW, iW) => {
+          tW.afterRender(iW), wW.afterRender(iW), xW.afterRender(iW)
         },
         onClose: () => {
-          for (const BB of pB) BB();
-          yB.dispose(), JB.dispose(), MB.dispose(), yB = null, JB = null, MB = null, PB = null, zB = null, lB = null
+          for (const WW of AW) WW();
+          cW.dispose(), wW.dispose(), tW.dispose(), cW = null, wW = null, tW = null, ZW = null, xW = null, lW = null
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          if ("plotsPlot" === BB) jB.receivePlot(OB);
-          else if ("plotsBlueprint" === BB) {
-            const BB = OB;
-            JB.nP(BB), MB.nP(BB)
-          } else "plotsJournal" === BB ? PB.nP(OB) : "plotsJournalOpen" === BB ? PB.openFromServer(OB) : "plotsPreviewEnd" === BB ? MB.endFromServer() : "plotsGuide" === BB ? jB.receiveGuide(OB) : "plotsGuideDone" === BB && jB.receiveGuideDone()
+        onReceivedMessageFromServer: (WW, iW) => {
+          if ("plotsPlot" === WW) LW.receivePlot(iW);
+          else if ("plotsBlueprint" === WW) {
+            const WW = iW;
+            wW.yZ(WW), tW.yZ(WW)
+          } else "plotsJournal" === WW ? ZW.yZ(iW) : "plotsJournalOpen" === WW ? ZW.openFromServer(iW) : "plotsPreviewEnd" === WW ? tW.endFromServer() : "plotsGuide" === WW ? LW.receiveGuide(iW) : "plotsGuideDone" === WW && LW.receiveGuideDone()
         }
       }
     }
   },
-  39157: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => jB
+  39687: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => LW
     });
-    var YB = GB(39154);
-    const DB = 5,
-      QB = [0, 0, 0],
-      oB = {
+    var mW = OW(39679);
+    const EW = 5,
+      NW = [0, 0, 0],
+      PW = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function jB(BB, OB, GB, jB, yB, JB) {
-      let [MB, PB, zB] = jB;
-      const lB = (MB + .5 - GB[0]) ** 2 + (PB - GB[1]) ** 2 + (zB + .5 - GB[2]) ** 2;
-      let pB = null;
-      lB <= JB ** 2 && (QB[0] = MB + .5, QB[1] = PB + yB, QB[2] = zB + .5, pB = OB.projectWorldPosToViewport(QB));
-      const qB = null !== pB && pB.x > -DB && pB.x < 100 + DB && pB.y > -DB && pB.y < 100 + DB;
-      return (0, YB.f)(BB, !qB), qB ? (oB.x = pB.x, oB.y = pB.y, oB.distSq = lB, oB) : null
+    function LW(WW, iW, OW, LW, cW, wW) {
+      let [tW, ZW, xW] = LW;
+      const lW = (tW + .5 - OW[0]) ** 2 + (ZW - OW[1]) ** 2 + (xW + .5 - OW[2]) ** 2;
+      let AW = null;
+      lW <= wW ** 2 && (NW[0] = tW + .5, NW[1] = ZW + cW, NW[2] = xW + .5, AW = iW.projectWorldPosToViewport(NW));
+      const bW = null !== AW && AW.x > -EW && AW.x < 100 + EW && AW.y > -EW && AW.y < 100 + EW;
+      return (0, mW.h)(WW, !bW), bW ? (PW.x = AW.x, PW.y = AW.y, PW.distSq = lW, PW) : null
     }
   },
-  39858: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB,
-      g: () => QB
+  40371: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => mW,
+      h: () => NW
     });
-    const YB = 1 / .6,
-      DB = {
+    const mW = 1 / .6,
+      EW = {
         kind: "smokePuff"
       };
-    class QB {
-      constructor(BB, OB, GB) {
-        this.style = BB, this.CP = OB, this.half = GB, this.particles = null, this.lastFrame = -1
+    class NW {
+      constructor(WW, iW, OW) {
+        this.style = WW, this.aZ = iW, this.half = OW, this.particles = null, this.lastFrame = -1
       }
-      emit(BB, OB, GB) {
-        let QB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return GB !== this.lastFrame && (this.lastFrame = GB, this.particles || (this.particles = BB.createParticles(function(BB, OB) {
+      emit(WW, iW, OW) {
+        let NW = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return OW !== this.lastFrame && (this.lastFrame = OW, this.particles || (this.particles = WW.createParticles(function(WW, iW) {
           const [
-            [GB, QB, oB],
-            [jB, yB, JB]
-          ] = BB.colours;
+            [OW, NW, PW],
+            [LW, cW, wW]
+          ] = WW.colours;
           return {
-            texture: BB.soft ? DB : "square_particle",
-            CP: OB,
-            minLifeTime: BB.life[0] / YB,
-            maxLifeTime: BB.life[1] / YB,
-            minEmitPower: BB.power[0] * YB,
-            maxEmitPower: BB.power[1] * YB,
-            minSize: BB.size[0],
-            maxSize: BB.size[1],
+            texture: WW.soft ? EW : "square_particle",
+            aZ: iW,
+            minLifeTime: WW.life[0] / mW,
+            maxLifeTime: WW.life[1] / mW,
+            minEmitPower: WW.power[0] * mW,
+            maxEmitPower: WW.power[1] * mW,
+            minSize: WW.size[0],
+            maxSize: WW.size[1],
             emitRate: 0,
-            gravity: [0, BB.lift * YB * YB, 0],
-            dir1: [-BB.spread, 1, -BB.spread],
-            dir2: [BB.spread, 1, BB.spread],
+            gravity: [0, WW.lift * mW * mW, 0],
+            dir1: [-WW.spread, 1, -WW.spread],
+            dir2: [WW.spread, 1, WW.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [GB, QB, oB, BB.alpha],
-              maxColor: [jB, yB, JB, BB.alpha]
+              minColor: [OW, NW, PW, WW.alpha],
+              maxColor: [LW, cW, wW, WW.alpha]
             }, {
               timeFraction: 1,
-              minColor: [GB, QB, oB, 0],
-              maxColor: [jB, yB, JB, 0]
+              minColor: [OW, NW, PW, 0],
+              maxColor: [LW, cW, wW, 0]
             }],
-            blendMode: BB.blendMode
+            blendMode: WW.blendMode
           }
-        }(this.style, this.CP), {
-          pos: OB,
+        }(this.style, this.aZ), {
+          pos: iW,
           half: this.half
-        })), this.particles.moveTo(OB, this.half), this.particles.emit(QB), !0)
+        })), this.particles.moveTo(iW, this.half), this.particles.emit(NW), !0)
       }
       dispose() {
-        var BB;
-        null === (BB = this.particles) || void 0 === BB || BB.stop(), this.particles = null
+        var WW;
+        null === (WW = this.particles) || void 0 === WW || WW.stop(), this.particles = null
       }
     }
   },
-  40244: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      e: () => jB,
-      i: () => yB
+  40814: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      g: () => LW,
+      k: () => cW
     });
-    const YB = new Map,
-      DB = [];
+    const mW = new Map,
+      EW = [];
 
-    function QB() {
-      for (const BB of DB) BB()
+    function NW() {
+      for (const WW of EW) WW()
     }
 
-    function oB(BB) {
-      var OB;
-      return YB.set(BB, (null !== (OB = YB.get(BB)) && void 0 !== OB ? OB : 0) + 1), QB(), () => {
-        const OB = YB.get(BB) - 1;
-        0 === OB ? YB.delete(BB) : YB.set(BB, OB), QB()
+    function PW(WW) {
+      var iW;
+      return mW.set(WW, (null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : 0) + 1), NW(), () => {
+        const iW = mW.get(WW) - 1;
+        0 === iW ? mW.delete(WW) : mW.set(WW, iW), NW()
       }
     }
 
-    function jB() {
-      return [...YB.keys()]
+    function LW() {
+      return [...mW.keys()]
     }
 
-    function yB(BB) {
-      DB.push(BB)
+    function cW(WW) {
+      EW.push(WW)
     }
   },
-  39154: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      f: () => QB
+  38039: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => gW,
+      G: () => DW,
+      I: () => eW,
+      M: () => VW,
+      d: () => cW,
+      h: () => HW,
+      i: () => LW,
+      m: () => dW,
+      o: () => JW,
+      s: () => SW,
+      u: () => oW,
+      w: () => uW,
+      x: () => TW,
+      y: () => vW
     });
-    const YB = new WeakMap;
+    var mW = OW(39);
+    const EW = {
+        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
+        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
+      },
+      NW = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      PW = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      LW = NW.filter((WW => "docsButton" !== WW)),
+      cW = PW.filter((WW => "aiHelperButton" !== WW)),
+      wW = "codeEditorTutorials",
+      tW = {
+        codeBlockIntro: "codeBlockIntroShown",
+        worldCodeIntro: "worldCodeIntroShown"
+      },
+      ZW = {
+        welcome: "welcomeComplete",
+        docsOverview: "docsOverviewComplete",
+        aiHelperOverview: "aiHelperOverviewComplete"
+      };
+    let xW = null,
+      lW = null;
+    const AW = new Set,
+      bW = new Set;
+    let jW = null;
+    const UW = new Set,
+      kW = new Set;
 
-    function DB(BB) {
-      let OB = YB.get(BB);
-      return OB || (OB = {
-        hidden: BB.hidden,
+    function sW() {
+      kW.forEach((WW => {
+        WW()
+      }))
+    }
+
+    function MW() {
+      if (!xW) {
+        const WW = mW.i.getItem(wW);
+        xW = {
+          codeBlockIntroShown: !1,
+          worldCodeIntroShown: !1,
+          welcomeComplete: !1,
+          docsOverviewComplete: !1,
+          aiHelperOverviewComplete: !1,
+          ..."object" === typeof WW && null !== WW ? WW : {}
+        }
+      }
+      return xW
+    }
+
+    function KW(WW) {
+      const iW = MW();
+      iW[WW] || (xW = {
+        ...iW,
+        [WW]: !0
+      }, mW.i.setItem(wW, xW))
+    }
+
+    function SW(WW) {
+      return "docsOverview" === WW ? NW : "aiHelperOverview" === WW ? PW : lW ? EW[lW] : []
+    }
+
+    function YW(WW) {
+      return ("worldCodeButton" !== WW || !MW().worldCodeIntroShown) && !UW.has(WW)
+    }
+
+    function yW(WW) {
+      var iW;
+      return (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW ? jW.stepsDone : AW
+    }
+
+    function TW(WW, iW) {
+      if (! function(WW) {
+          return jW ? jW.name === WW : "welcome" === WW
+        }(WW) || !YW(iW) || yW(WW).has(iW)) return !1;
+      if (jW) return !0;
+      const OW = tW[iW];
+      return OW ? !MW()[OW] || bW.has(iW) : !MW()[ZW[WW]]
+    }
+
+    function JW(WW) {
+      var iW;
+      return null !== (iW = SW(WW).find((iW => TW(WW, iW)))) && void 0 !== iW ? iW : null
+    }
+
+    function hW(WW) {
+      var iW;
+      KW(ZW[WW]), (null === (iW = jW) || void 0 === iW ? void 0 : iW.name) === WW && (jW = null)
+    }
+
+    function HW(WW) {
+      const iW = (jW ? [jW.name] : ["welcome", "docsOverview"]).find((iW => JW(iW) === WW));
+      if (!iW) return;
+      yW(iW).add(WW);
+      const OW = tW[WW];
+      OW && (KW(OW), jW || bW.add(WW)), null === JW(iW) && hW(iW), sW()
+    }
+
+    function nW(WW, iW) {
+      const OW = SW(WW),
+        mW = yW(WW);
+      for (let EW = OW.indexOf(iW) - 1; EW >= 0; EW--)
+        if (mW.has(OW[EW]) && YW(OW[EW])) return OW[EW];
+      return null
+    }
+
+    function uW(WW, iW) {
+      return null !== nW(WW, iW)
+    }
+
+    function oW(WW, iW) {
+      const OW = nW(WW, iW);
+      OW && (yW(WW).delete(OW), sW())
+    }
+
+    function dW(WW) {
+      hW(WW), "welcome" === WW && SW("welcome").forEach((WW => {
+        const iW = tW[WW];
+        iW && KW(iW)
+      })), sW()
+    }
+
+    function eW(WW) {
+      jW = {
+        name: WW,
+        stepsDone: new Set
+      }, sW()
+    }
+
+    function vW() {
+      (jW || 0 !== AW.size || 0 !== bW.size) && (jW = null, AW.clear(), bW.clear(), sW())
+    }
+
+    function gW(WW, iW) {
+      const OW = iW ? WW : lW === WW ? null : lW;
+      OW !== lW && (lW = OW, sW())
+    }
+
+    function DW(WW, iW) {
+      UW.has(WW) === iW && (iW ? UW.delete(WW) : UW.add(WW), sW())
+    }
+
+    function VW(WW) {
+      return kW.add(WW), () => {
+        kW.delete(WW)
+      }
+    }
+  },
+  39679: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW,
+      h: () => NW
+    });
+    const mW = new WeakMap;
+
+    function EW(WW) {
+      let iW = mW.get(WW);
+      return iW || (iW = {
+        hidden: WW.hidden,
         x: NaN,
         y: NaN
-      }, YB.set(BB, OB)), OB
+      }, mW.set(WW, iW)), iW
     }
 
-    function QB(BB, OB) {
-      const GB = DB(BB);
-      GB.hidden !== OB && (GB.hidden = OB, BB.hidden = OB)
+    function NW(WW, iW) {
+      const OW = EW(WW);
+      OW.hidden !== iW && (OW.hidden = iW, WW.hidden = iW)
     }
 
-    function oB(BB, OB, GB) {
-      const YB = DB(BB);
-      YB.x === OB && YB.y === GB || (YB.x = OB, YB.y = GB, BB.style.translate = `${OB}vw ${GB}vh`)
+    function PW(WW, iW, OW) {
+      const mW = EW(WW);
+      mW.x === iW && mW.y === OW || (mW.x = iW, mW.y = OW, WW.style.translate = `${iW}vw ${OW}vh`)
     }
   },
-  37584: (BB, OB, GB) => {
-    function YB(BB, OB) {
-      return null === BB || null === OB ? BB === OB : BB[0] === OB[0] && BB[1] === OB[1] && BB[2] === OB[2]
-    }
-
-    function DB(BB) {
-      return [BB[0] + .5, BB[1] + .5, BB[2] + .5]
-    }
-    GB.d(OB, {
-      c: () => DB,
-      d: () => YB
-    })
-  },
-  37633: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.includes("Leaf Bed")
-    }
-
-    function DB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
-    }
-
-    function QB(BB) {
-      return BB.includes(" Strongbed")
-    }
-
-    function oB(BB) {
-      return YB(BB) || DB(BB) || QB(BB)
-    }
-    GB.d(OB, {
-      b: () => oB,
-      d: () => YB,
-      f: () => QB,
-      i: () => DB
-    })
-  },
-  37627: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => JB
+  39606: (WW, iW, OW) => {
+    OW.d(iW, {
+      C: () => yW,
+      F: () => KW,
+      G: () => MW,
+      J: () => xW,
+      M: () => bW,
+      N: () => UW,
+      O: () => EW,
+      c: () => tW,
+      f: () => cW,
+      j: () => sW,
+      l: () => wW,
+      n: () => LW,
+      q: () => PW,
+      t: () => NW,
+      w: () => YW,
+      x: () => lW,
+      y: () => SW
     });
-    var YB = GB(37633),
-      DB = GB(9927);
-    const QB = [],
-      oB = [],
-      jB = [],
-      yB = [];
-    for (const MB of Object.keys(DB.n))(0, YB.d)(MB) ? QB.push(MB) : (0, YB.i)(MB) && oB.push(MB), (0, YB.f)(MB) && jB.push(MB), (MB.includes(" Bed Head") || MB.includes(" Strongbed Head")) && yB.push(MB);
-    const JB = {
-      leafBeds: QB,
-      woolBeds: oB,
-      strongBeds: jB,
-      beds: [...QB, ...oB, ...jB],
-      bedHeads: yB,
+    var mW = OW(5797);
+
+    function EW(WW) {
+      return Math.floor(WW).toLocaleString("en-US")
+    }
+    const NW = 2e3,
+      PW = .005,
+      LW = .001,
+      cW = 2,
+      wW = "Fluid Tank",
+      tW = "Coolant Mixer",
+      ZW = 144;
+
+    function xW(WW) {
+      const iW = WW.split("|")[0];
+      return (0, mW.p)(iW) ? iW === mW.e ? "cryo" : "water" : null
+    }
+    const lW = [
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 1, 0],
+        [0, -1, 0],
+        [0, 0, 1],
+        [0, 0, -1]
+      ],
+      AW = 63;
+
+    function bW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const OW = iW ? function(WW, iW, OW) {
+        const mW = lW.findIndex((mW => {
+          let [EW, NW, PW] = mW;
+          return EW === WW && NW === iW && PW === OW
+        }));
+        return mW < 0 ? 0 : 1 << mW
+      }(iW[0], iW[1], iW[2]) : 0;
+      return "maker" === WW ? {
+        kind: WW,
+        faces: OW
+      } : "user" === WW ? {
+        kind: WW,
+        faces: AW & ~OW
+      } : {
+        kind: WW,
+        faces: AW
+      }
+    }
+
+    function jW(WW) {
+      return "pipe" === WW || "tank" === WW || "maker" === WW
+    }
+
+    function UW(WW, iW, OW) {
+      return 0 !== (WW.faces & 1 << OW) && 0 !== (iW.faces & 1 << (1 ^ OW)) && (jW(WW.kind) || jW(iW.kind))
+    }
+    const kW = (WW, iW, OW, mW) => ({
+        input: WW,
+        inputAmount: mW,
+        output: iW,
+        outputAmount: OW
+      }),
+      sW = {
+        Condenser: {
+          kind: "Condenser",
+          opMs: 2e3,
+          inputSlot: null,
+          fuelSlot: null,
+          outputSlots: [],
+          recipes: [],
+          powerPerOp: 60,
+          fluidMade: 12,
+          couplable: !0,
+          couplerSlot: 0
+        },
+        Centrifuge: {
+          kind: "Centrifuge",
+          opMs: 12e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [1, 2, 3],
+          recipes: [kW("Uranium Grit", "Uranium Pellet", 1, 12), kW("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          powerPerOp: 600,
+          waterPerOp: 24
+        },
+        Synthesizer: {
+          kind: "Synthesizer",
+          opMs: 6e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [1, 2, 3],
+          recipes: [],
+          powerPerOp: 120,
+          waterPerOp: 12,
+          synth: !0
+        },
+        "Coolant Mixer": {
+          kind: "Coolant Mixer",
+          opMs: 12e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [],
+          recipes: [kW("Biomass", "", 0, 1)],
+          powerPerOp: 720,
+          waterPerOp: 144,
+          cryoMade: ZW,
+          couplable: !0,
+          couplerSlot: 1
+        }
+      };
+
+    function MW(WW, iW) {
+      return 1e3 * (null !== iW && void 0 !== iW ? iW : 0) / WW.opMs
+    }
+
+    function KW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const OW = MW(sW["Coolant Mixer"], ZW) * iW;
+      return WW <= 0 ? 0 : Math.ceil(WW / OW - 1e-9)
+    }
+    const SW = "baf2Water",
+      YW = "baf2waterclose",
+      yW = "baf2wateropen"
+  },
+  40804: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      e: () => ZW
+    });
+    var mW = OW(5725),
+      EW = OW(5747),
+      NW = OW(5766);
+    const PW = [0, 0, 0, 1, 1, 1],
+      LW = (0, EW.c)([
+        [2, 0, 2, 6, 6, 6]
+      ]),
+      cW = (0, EW.c)([
+        [3, 0, 3, 5, 5, 5]
+      ]),
+      wW = (0, EW.c)([
+        [3, 3, 3, 5, 8, 5]
+      ]),
+      tW = [0, 1, 2, 3].map((WW => (0, EW.c)((0, EW.q)([
+        [3, 2, 0, 5, 7, 3]
+      ], WW))));
+
+    function ZW(WW) {
+      const {
+        sj: iW,
+        model: OW,
+        blockModel: EW,
+        meta: ZW
+      } = mW.j[WW];
+      return void 0 !== iW ? iW : "CentreCross" === OW ? LW : null !== EW && void 0 !== EW && EW.startsWith("torch") ? ZW.halfblockPlacement === NW.d.side ? tW[ZW.rot - 1] : ZW.halfblockPlacement === NW.d.top ? wW : cW : PW
+    }
+  },
+  39595: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => dW,
+      f: () => eW
+    });
+    var mW = OW(5725),
+      EW = OW(5754);
+    const NW = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+      [0, 1, 0],
+      [0, -1, 0]
+    ];
+    var PW = OW(5772),
+      LW = OW(39392),
+      cW = OW(5766);
+    const wW = {
+      1: [0, -1],
+      2: [-1, 0],
+      3: [0, 1],
+      4: [1, 0]
+    };
+
+    function tW(WW) {
+      let [iW, OW] = WW;
+      return [-OW, iW]
+    }
+
+    function ZW(WW, iW) {
+      return WW[0] === iW[0] && WW[1] === iW[1]
+    }
+
+    function xW(WW, iW) {
+      return WW[0] * iW[0] + WW[1] * iW[1] === 0
+    }
+    const lW = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1]
+    ];
+    var AW = OW(5790);
+
+    function bW(WW, iW, OW, mW, EW) {
+      return iW < AW.p || iW >= AW.p + AW.t || Math.floor(WW / AW.A) === Math.floor(mW / AW.A) && Math.floor(OW / AW.A) === Math.floor(EW / AW.A)
+    }
+    const jW = "Splitter",
+      UW = "Sorting Gate",
+      kW = new Set(AW.O),
+      sW = new Set([...AW.O, "Belt Loader", "Fast Loader", UW]),
+      MW = new Set(AW.w),
+      KW = [
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 0, 1],
+        [0, 0, -1],
+        [0, 1, 0],
+        [0, -1, 0]
+      ];
+
+    function SW(WW) {
+      var iW, OW;
+      return null !== (iW = null === (OW = mW.j[WW]) || void 0 === OW ? void 0 : OW.meta.rootName) && void 0 !== iW ? iW : ""
+    }
+
+    function YW(WW) {
+      return SW(WW) === AW.i && (0, AW.V)(mW.j[WW].name)
+    }
+    var yW = OW(5762),
+      TW = OW(5780);
+    const JW = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1]
+    ];
+
+    function hW(WW) {
+      var iW, OW;
+      const EW = null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta;
+      return (null === EW || void 0 === EW ? void 0 : EW.rootName) !== TW.i ? null : {
+        rot: null !== (OW = EW.rot) && void 0 !== OW ? OW : 1,
+        half: (0, TW.e)(EW.rootName, EW.metaStr)
+      }
+    }
+
+    function HW(WW, iW, OW, mW) {
+      return hW(WW(iW, OW, mW))
+    }
+
+    function nW(WW, iW, OW, mW, EW) {
+      let {
+        rot: NW,
+        half: PW
+      } = EW;
+      const [LW, cW] = (0, TW.h)(NW, PW), wW = HW(WW, iW + LW, OW, mW + cW);
+      return null !== wW && wW.rot === NW && wW.half === TW.l[PW]
+    }
+    var uW = OW(39602);
+    const oW = [new class {
+      constructor() {
+        this.reshapeOffsets = lW
+      }
+      handles(WW) {
+        var iW;
+        return "Stairs" === (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.model)
+      }
+      affects(WW) {
+        return this.handles(WW)
+      }
+      shape(WW, iW, OW, EW, NW) {
+        const PW = this.stairsOf(NW),
+          LW = this.cornerAt(WW, iW, OW, EW, PW),
+          wW = PW.half === cW.d.top ? "top" : "bot";
+        return (0, mW.l)(`${mW.j[NW].meta.rootName}|meta|rot${PW.rot}|${wW}${null===LW?"":`|${LW}`}`)
+      }
+      stairsOf(WW) {
+        const {
+          rot: iW,
+          halfblockPlacement: OW
+        } = mW.j[WW].meta;
+        return {
+          rot: iW,
+          half: OW
+        }
+      }
+      stairsAt(WW, iW, OW, mW) {
+        const EW = WW(iW, OW, mW);
+        return this.handles(EW) ? this.stairsOf(EW) : null
+      }
+      cornerAt(WW, iW, OW, mW, EW) {
+        let {
+          rot: NW,
+          half: PW
+        } = EW;
+        const LW = wW[NW],
+          cW = EW => {
+            let [LW, cW] = EW;
+            const wW = this.stairsAt(WW, iW + LW, OW, mW + cW);
+            return null !== wW && wW.rot === NW && wW.half === PW
+          },
+          lW = this.stairsAt(WW, iW + LW[0], OW, mW + LW[1]);
+        if (null !== lW && lW.half === PW) {
+          const WW = wW[lW.rot];
+          if (xW(LW, WW) && !cW([-WW[0], -WW[1]])) return ZW(WW, tW(LW)) ? "outerLeft" : "outerRight"
+        }
+        const AW = this.stairsAt(WW, iW - LW[0], OW, mW - LW[1]);
+        if (null !== AW && AW.half === PW) {
+          const WW = wW[AW.rot];
+          if (xW(LW, WW) && !cW(WW)) return ZW(WW, tW(LW)) ? "innerLeft" : "innerRight"
+        }
+        return null
+      }
+    }, new class {
+      constructor() {
+        this.reshapeOffsets = NW, this.rootIds = new Set(EW.k.map((WW => (0, mW.l)(WW))))
+      }
+      handles(WW) {
+        var iW;
+        const OW = null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta;
+        return void 0 !== OW && this.rootIds.has(OW.rootId)
+      }
+      affects(WW) {
+        return this.handles(WW)
+      }
+      placedBy(WW) {
+        return mW.j[WW].meta.rootName === EW.t ? null : EW.t
+      }
+      shape(WW, iW, OW, NW, PW) {
+        const {
+          rootId: LW,
+          rootName: cW,
+          rot: wW
+        } = mW.j[PW].meta;
+        let tW = 0;
+        return EW.y[wW].forEach(((EW, PW) => {
+          var cW;
+          let [ZW, xW, lW] = EW;
+          const AW = null === (cW = mW.j[WW(iW + ZW, OW + xW, NW + lW)]) || void 0 === cW ? void 0 : cW.meta;
+          (null === AW || void 0 === AW ? void 0 : AW.rootId) === LW && AW.rot === wW && (tW |= 1 << PW)
+        })), (0, mW.l)((0, EW.g)(cW, wW, tW))
+      }
+    }, ...PW.c.map((WW => new LW.d(WW))), new class {
+      constructor() {
+        this.reshapeOffsets = KW
+      }
+      handles(WW) {
+        const iW = SW(WW);
+        return kW.has(iW) || iW === AW.i
+      }
+      affects(WW) {
+        const iW = SW(WW);
+        return sW.has(iW) || MW.has(iW) || iW === jW || iW === AW.i || void 0 !== AW.d[iW]
+      }
+      shape(WW, iW, OW, EW, NW, PW) {
+        const {
+          rootName: LW,
+          rot: cW
+        } = mW.j[NW].meta;
+        return LW === AW.i ? PW ? NW : function(WW, iW, OW, EW, NW) {
+          const [PW, LW] = AW.h[NW - 1];
+          for (let cW = 1; cW <= AW.L; cW++) {
+            const [wW, tW] = [iW - PW * cW, EW - LW * cW], ZW = WW(wW, OW, tW);
+            if (SW(ZW) === AW.i && mW.j[ZW].meta.rot === NW && bW(iW, OW, EW, wW, tW)) return (0, mW.l)((0, AW.bb)(NW, !YW(ZW)))
+          }
+          return (0, mW.l)((0, AW.bb)(NW, !1))
+        }(WW, iW, OW, EW, cW) : (0, mW.l)((0, AW.Q)(LW, cW, function(WW, iW, OW, EW, NW) {
+          const [PW, LW] = AW.h[NW - 1], cW = (NW, PW) => function(WW, iW, OW) {
+            var EW;
+            const NW = null === (EW = mW.j[WW]) || void 0 === EW ? void 0 : EW.meta;
+            if (!NW) return !1;
+            const PW = NW.rootName,
+              LW = sW.has(PW) || YW(WW);
+            if (!LW && !MW.has(PW) && PW !== jW) return !1;
+            const [cW, wW] = AW.h[NW.rot - 1];
+            if (LW && cW === -iW && wW === -OW) return !0;
+            if (MW.has(PW)) return cW === iW && wW === OW;
+            const tW = mW.j[WW].name;
+            return (PW === jW ? (0, AW.$)(tW, cW, wW) : PW === UW ? [(0, AW.R)(tW, cW, wW)] : []).some((WW => {
+              let [mW, EW] = WW;
+              return mW === -iW && EW === -OW
+            }))
+          }(WW(iW + NW, OW, EW + PW), NW, PW), wW = WW(iW - PW, OW, EW - LW), tW = SW(wW) === jW && mW.j[wW].meta.rot === NW, ZW = 1 === AW.d[SW(WW(iW, OW - 1, EW))] || -1 === AW.d[SW(WW(iW, OW + 1, EW))];
+          if (ZW || tW || cW(-PW, -LW)) return null;
+          const xW = cW(-LW, PW),
+            lW = cW(LW, -PW);
+          if (xW === lW) return null;
+          return xW ? "turnLeft" : "turnRight"
+        }(WW, iW, OW, EW, cW)))
+      }
+    }, new class {
+      constructor() {
+        this.reshapeOffsets = JW, this.rootId = (0, mW.l)(TW.i)
+      }
+      handles(WW) {
+        var iW;
+        return (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta.rootId) === this.rootId
+      }
+      affects(WW) {
+        return this.handles(WW)
+      }
+      shape(WW, iW, OW, EW, NW, PW) {
+        const LW = hW(NW);
+        return (0, mW.l)((cW = LW.rot, null !== (wW = PW ? this.reshapedHalf(WW, iW, OW, EW, LW) : this.placedHalf(WW, iW, OW, EW, LW.rot)) ? (0, TW.b)(TW.i, cW, wW) : 1 === cW ? TW.i : `${TW.i}|meta|rot${cW}`));
+        var cW, wW
+      }
+      placedHalf(WW, iW, OW, mW, EW) {
+        const [NW, PW] = yW.d[EW];
+        for (const [LW, cW] of [
+            ["right", 1],
+            ["left", -1]
+          ]) {
+          const wW = iW + cW * NW,
+            tW = mW + cW * PW,
+            ZW = HW(WW, wW, OW, tW);
+          if (null !== ZW && ZW.rot === EW && (null === ZW.half || !nW(WW, wW, OW, tW, ZW))) return LW
+        }
+        return null
+      }
+      reshapedHalf(WW, iW, OW, mW, EW) {
+        if (null !== EW.half && nW(WW, iW, OW, mW, EW)) return EW.half;
+        for (const NW of ["right", "left"]) {
+          const [PW, LW] = (0, TW.h)(EW.rot, NW), cW = HW(WW, iW + PW, OW, mW + LW);
+          if (null !== cW && cW.rot === EW.rot && cW.half === TW.l[NW]) return NW
+        }
+        return null
+      }
+    }, new uW.c];
+
+    function dW(WW, iW, OW, mW, EW) {
+      let NW = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const PW of oW)
+        if (PW.handles(EW)) return PW.shape(WW, iW, OW, mW, EW, NW);
+      return EW
+    }
+
+    function eW(WW) {
+      for (const mW of oW) {
+        var iW, OW;
+        if (mW.handles(WW)) return null !== (iW = null === (OW = mW.placedBy) || void 0 === OW ? void 0 : OW.call(mW, WW)) && void 0 !== iW ? iW : null
+      }
+      return null
+    }
+  },
+  39602: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => TW,
+      g: () => MW,
+      i: () => sW
+    });
+    var mW = OW(5725),
+      EW = OW(5745),
+      NW = OW(5797),
+      PW = OW(39606),
+      LW = OW(5790);
+    const cW = (0, PW.M)("pipe"),
+      wW = (0, PW.M)("tank"),
+      tW = (0, PW.M)("port"),
+      ZW = "Reactor Port";
+
+    function xW(WW, iW, OW) {
+      const mW = new Set([NW.h, NW.e, ZW, ...iW, ...OW, ...WW ? [PW.l] : []]);
+      return {
+        makers: new Set(iW),
+        roots: mW
+      }
+    }
+    const lW = {
+        water: xW(!0, ["Condenser"], ["Centrifuge", "Synthesizer", PW.c]),
+        cryo: xW(!1, [PW.c], [])
+      },
+      AW = new Set([...lW.water.roots, ...lW.cryo.roots]),
+      bW = {
+        nx: [-1, 0, 0],
+        ny: [0, -1, 0],
+        nz: [0, 0, -1],
+        px: [1, 0, 0],
+        py: [0, 1, 0],
+        pz: [0, 0, 1]
+      },
+      jW = EW.g.map((WW => bW[WW])),
+      UW = jW.map((WW => {
+        let [iW, OW, mW] = WW;
+        return PW.x.findIndex((WW => {
+          let [EW, NW, PW] = WW;
+          return EW === iW && NW === OW && PW === mW
+        }))
+      }));
+
+    function kW(WW) {
+      let iW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const OW = mW.j[WW],
+        EW = null === OW || void 0 === OW ? void 0 : OW.meta.rootName,
+        xW = lW[iW];
+      if (!EW || !xW.roots.has(EW)) return null;
+      if ((0, NW.p)(EW)) return (0, PW.J)(OW.name) === iW ? cW : null;
+      if (EW === PW.l) return wW;
+      if (EW === ZW) return OW.name.endsWith("|Water") ? tW : null;
+      const [AW, bW] = LW.h[(OW.meta.rot || 1) - 1];
+      return (0, PW.M)(xW.makers.has(EW) ? "maker" : "user", [-AW, 0, -bW])
+    }
+
+    function sW(WW, iW, OW, EW) {
+      let NW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+      const {
+        makers: LW
+      } = lW[NW];
+      return jW.some(((wW, tW) => {
+        var ZW, xW;
+        let [lW, AW, bW] = wW;
+        const jW = WW(iW + lW, OW + AW, EW + bW),
+          sW = kW(jW, NW);
+        return null !== sW && LW.has(null !== (ZW = null === (xW = mW.j[jW]) || void 0 === xW ? void 0 : xW.meta.rootName) && void 0 !== ZW ? ZW : "") && !(0, PW.N)(cW, sW, UW[tW])
+      }))
+    }
+
+    function MW(WW) {
+      const iW = mW.j[WW];
+      return iW ? (0, PW.J)(iW.name) : null
+    }
+    let KW = null;
+
+    function SW(WW) {
+      if (!KW) {
+        KW = new Map;
+        for (const WW of ["water", "cryo"])
+          for (let iW = 0; iW < 64; iW++)
+            for (const OW of [!1, !0]) KW.set((0, NW.s)(WW, iW, OW), {
+              dl: WW,
+              mask: iW,
+              full: OW
+            })
+      }
+      return KW.get(WW)
+    }
+    const YW = new Map(Array.from({
+      length: NW.l + 1
+    }, ((WW, iW) => [(0, NW.u)(iW), iW])));
+
+    function yW(WW, iW, OW, EW, NW, PW) {
+      return jW.some(((LW, cW) => {
+        var wW, tW, ZW;
+        let [xW, lW, AW] = LW;
+        if (0 === (PW >> cW & 1)) return !1;
+        const bW = null !== (wW = null === (tW = mW.j[WW(iW + xW, OW + lW, EW + AW)]) || void 0 === tW ? void 0 : tW.name) && void 0 !== wW ? wW : "",
+          jW = SW(bW);
+        return jW ? jW.dl === NW && jW.full : (null !== (ZW = function(WW) {
+          var iW;
+          return null !== (iW = YW.get(WW)) && void 0 !== iW ? iW : null
+        }(bW)) && void 0 !== ZW ? ZW : 0) > 0
+      }))
+    }
+    class TW {
+      constructor() {
+        this.reshapeOffsets = jW
+      }
+      handles(WW) {
+        return null !== MW(WW)
+      }
+      affects(WW) {
+        var iW, OW;
+        return AW.has(null !== (iW = null === (OW = mW.j[WW]) || void 0 === OW ? void 0 : OW.meta.rootName) && void 0 !== iW ? iW : "")
+      }
+      placedBy(WW) {
+        var iW;
+        return (null === (iW = mW.j[WW]) || void 0 === iW ? void 0 : iW.meta.rootName) === NW.e ? NW.h : null
+      }
+      shape(WW, iW, OW, EW, LW, wW) {
+        var tW, ZW, xW;
+        const lW = null !== (tW = null === (ZW = mW.j[LW]) || void 0 === ZW ? void 0 : ZW.name) && void 0 !== tW ? tW : "",
+          AW = wW || lW !== NW.h ? null !== (xW = (0, PW.J)(lW)) && void 0 !== xW ? xW : "water" : function(WW, iW, OW, mW) {
+            return jW.some(((EW, NW) => {
+              let [LW, wW, tW] = EW;
+              const ZW = kW(WW(iW + LW, OW + wW, mW + tW), "cryo");
+              return null !== ZW && "port" !== ZW.kind && (0, PW.N)(cW, ZW, UW[NW])
+            })) ? "cryo" : "water"
+          }(WW, iW, OW, EW),
+          bW = function(WW, iW, OW, mW) {
+            let EW = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              NW = 0;
+            return jW.forEach(((LW, wW) => {
+              let [tW, ZW, xW] = LW;
+              const lW = kW(WW(iW + tW, OW + ZW, mW + xW), EW);
+              lW && (0, PW.N)(cW, lW, UW[wW]) && (NW |= 1 << wW)
+            })), NW
+          }(WW, iW, OW, EW, AW),
+          sW = wW ? function(WW) {
+            var iW;
+            return !0 === (null === (iW = SW(WW)) || void 0 === iW ? void 0 : iW.full)
+          }(lW) : yW(WW, iW, OW, EW, AW, bW);
+        return (0, mW.l)((0, NW.s)(AW, bW, sW))
+      }
+    }
+  },
+  38048: (WW, iW, OW) => {
+    function mW(WW, iW) {
+      return null === WW || null === iW ? WW === iW : WW[0] === iW[0] && WW[1] === iW[1] && WW[2] === iW[2]
+    }
+
+    function EW(WW) {
+      return [WW[0] + .5, WW[1] + .5, WW[2] + .5]
+    }
+    OW.d(iW, {
+      b: () => EW,
+      f: () => mW
+    })
+  },
+  39352: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW,
+      e: () => NW
+    });
+    const mW = ["Chest", "Loot Chest", "Moonstone Chest"],
+      EW = [{
+        name: "Workbench",
+        exactMatch: !0
+      }, {
+        name: "Furnace",
+        exactMatch: !0
+      }, {
+        name: "Artisan Bench",
+        exactMatch: !0
+      }, {
+        name: "Potion Table",
+        exactMatch: !0
+      }, {
+        name: "Salvaging Table",
+        exactMatch: !0
+      }, {
+        name: "Enchanting Table",
+        exactMatch: !1
+      }];
+
+    function NW(WW) {
+      return EW.find((iW => iW.exactMatch ? WW === iW.name : WW.includes(iW.name)))
+    }
+  },
+  38097: (WW, iW, OW) => {
+    function mW(WW) {
+      return WW.includes("Leaf Bed")
+    }
+
+    function EW(WW) {
+      return / Bed(?: Head)?(?:\||$)/.test(WW) && !mW(WW)
+    }
+
+    function NW(WW) {
+      return WW.includes(" Strongbed")
+    }
+
+    function PW(WW) {
+      return mW(WW) || EW(WW) || NW(WW)
+    }
+    OW.d(iW, {
+      d: () => PW,
+      f: () => mW,
+      j: () => NW,
+      l: () => EW
+    })
+  },
+  38088: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => wW
+    });
+    var mW = OW(38097),
+      EW = OW(5725);
+    const NW = [],
+      PW = [],
+      LW = [],
+      cW = [];
+    for (const tW of Object.keys(EW.p))(0, mW.f)(tW) ? NW.push(tW) : (0, mW.l)(tW) && PW.push(tW), (0, mW.j)(tW) && LW.push(tW), (tW.includes(" Bed Head") || tW.includes(" Strongbed Head")) && cW.push(tW);
+    const wW = {
+      leafBeds: NW,
+      woolBeds: PW,
+      strongBeds: LW,
+      beds: [...NW, ...PW, ...LW],
+      bedHeads: cW,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  39215: BB => {
-    BB.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  39759: WW => {
+    WW.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

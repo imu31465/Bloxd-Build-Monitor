@@ -1,502 +1,393 @@
 export const id = 145;
-export const ids = [145, 152, 153];
+export const ids = [145];
 export const modules = {
-  41498: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => PB,
-      installListedShaderPack: () => MB
+  9972: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW,
+      e: () => NW
     });
-    var YB = GB(7107),
-      DB = GB(5546),
-      QB = GB(1186),
-      oB = GB(7159),
-      jB = GB(5538),
-      yB = GB(7193),
-      JB = GB(7186);
-    async function MB(BB) {
-      const OB = await (0, oB.loadPageShaderPackCompiler)();
-      if (null === OB) return {
-        kind: "failed",
-        reason: "compiler"
-      };
-      const GB = await PB(BB, OB);
-      return "failed" === GB.kind ? GB : await (0, yB.saveShaderPack)(GB.stored, OB) ? ((0, yB.markShaderPackChangePending)(), GB) : {
-        kind: "failed",
-        reason: "save"
-      }
+    var mW = OW(2095);
+    const EW = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      NW = WW => "string" === typeof WW.icon && "" !== WW.icon && "string" === typeof WW.keycode && EW.test(WW.keycode),
+      PW = WW => "Space" === WW ? "_" : mW.h[WW]
+  },
+  37735: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => EW,
+      g: () => NW
+    });
+    let mW = !1;
+
+    function EW() {
+      return mW
     }
-    async function PB(BB, OB) {
-      const GB = await async function(BB) {
-        let {
-          packId: OB,
-          sourceHash: GB
-        } = BB;
-        try {
-          const BB = await fetch(`${QB.clientSideServerUrls.s3Url}/${(0,YB.Q)(OB,GB)}`, {
-            headers: {
-              Accept: "application/json"
-            }
-          });
-          if (!BB.ok) return console.error(`Failed to download shader pack ${OB} (${BB.status})`), null;
-          const DB = await BB.json();
-          return "object" !== typeof DB || null === DB ? (console.error(`Shader pack ${OB}'s source isn't an object`), null) : DB
-        } catch (DB) {
-          return console.error(`Failed to download shader pack ${OB}`, DB), null
-        }
-      }(BB);
-      if (null === GB) return {
-        kind: "failed",
-        reason: "download"
-      };
-      if (!(0, jB.g)(GB.apiVersion)) return {
-        kind: "failed",
-        reason: "apiVersion"
-      };
-      const oB = (0, DB.v)(GB.files);
-      if ("string" === typeof oB) return console.error(`A listed shader pack breaks the pack rules: ${oB}`), {
-        kind: "failed",
-        reason: "invalid"
-      };
-      const MB = await (0, JB.f)(OB, oB);
-      if (!1 === (null === MB || void 0 === MB ? void 0 : MB.ok)) return {
-        kind: "failed",
-        reason: "errors"
-      };
-      const PB = {
-        manifest: {
-          apiVersion: GB.apiVersion,
-          name: BB.name,
-          author: BB.ownerName,
-          description: BB.description || null,
-          keepCircleShadows: !0 === GB.keepCircleShadows
-        },
-        files: oB
-      };
-      return {
-        kind: "loaded",
-        stored: (0, yB.toStoredShaderPack)(PB, MB, {
-          packId: BB.packId,
-          sourceHash: BB.sourceHash
+
+    function NW(WW) {
+      return mW !== WW && (mW = WW, !0)
+    }
+  },
+  41091: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => mW
+    });
+    class mW {
+      constructor(WW) {
+        this.events = WW, this.recent = [], this.episode = null, this.sampleSum = 0, this.sampleCount = 0, this.minWindowAvg = null
+      }
+      addSample(WW, iW) {
+        if (null === WW) return this.recent.length = 0, void this.endEpisode(iW);
+        if (this.sampleSum += WW, this.sampleCount++, this.recent.push(WW), this.recent.length > 5 && this.recent.shift(), null !== this.episode && (this.episode.minFps = Math.min(this.episode.minFps, WW), this.episode.sum += WW, this.episode.count++), this.recent.length < 5) return;
+        const OW = function(WW) {
+          let iW = 0;
+          for (const OW of WW) iW += OW;
+          return iW / WW.length
+        }(this.recent);
+        this.minWindowAvg = null === this.minWindowAvg ? OW : Math.min(this.minWindowAvg, OW), null === this.episode && OW < 20 ? (this.episode = {
+          startedAtMs: iW - 5e3,
+          minFps: Math.min(...this.recent),
+          sum: 5 * OW,
+          count: 5
+        }, this.events.onEpisodeStarted(OW)) : null !== this.episode && OW >= 25 && this.endEpisode(iW)
+      }
+      endEpisode(WW) {
+        if (null === this.episode) return;
+        const {
+          startedAtMs: iW,
+          minFps: OW,
+          sum: mW,
+          count: EW
+        } = this.episode;
+        this.episode = null, this.events.onEpisodeEnded({
+          startedAtMs: iW,
+          durationMs: WW - iW,
+          minFps: NW(OW),
+          avgFps: NW(mW / EW)
         })
       }
-    }
-  },
-  44453: (BB, OB, GB) => {
-    GB.d(OB, {
-      followListingUpdates: () => zB
-    });
-    var YB = GB(204),
-      DB = GB(16),
-      QB = GB(1540),
-      oB = GB(1121),
-      jB = GB(7159),
-      yB = GB(5538),
-      JB = GB(41498),
-      MB = GB(7193);
-    const PB = ["apiVersion", "invalid", "errors"];
-    async function zB(BB, OB) {
-      const GB = await oB.userContextManager.getCurrentUserContext(),
-        zB = await QB.b.getShaderPackVersions(GB, [OB.packId]),
-        lB = function(BB, OB, GB) {
-          var YB;
-          if (void 0 === GB || "unlisted" === GB.status) return {
-            kind: "none"
-          };
-          if ("banned" === GB.status) return {
-            kind: "remove"
-          };
-          if (!(0, yB.g)(GB.apiVersion)) return {
-            kind: "none"
-          };
-          const {
-            sourceHash: DB,
-            name: QB,
-            ownerName: oB,
-            description: jB
-          } = GB;
-          return DB !== OB.sourceHash && DB !== OB.rejectedSourceHash ? {
-            kind: "update",
-            sourceHash: DB,
-            name: QB,
-            ownerName: oB,
-            description: jB
-          } : QB !== BB.manifest.name || oB !== BB.manifest.author || (jB || null) !== (null !== (YB = BB.manifest.description) && void 0 !== YB ? YB : null) ? {
-            kind: "rename",
-            name: QB,
-            ownerName: oB,
-            description: jB
-          } : {
-            kind: "none"
-          }
-        }(BB, OB, (0, YB.c)(zB, OB.packId));
-      if ("update" === lB.kind && "landingPage" !== DB.c.get("gameState")) return !1;
-      const pB = "update" === lB.kind || "rename" === lB.kind,
-        qB = pB ? await (0, jB.loadPageShaderPackCompiler)() : null;
-      if (pB && null === qB) return console.warn(`Didn't follow shader pack ${OB.packId}'s listing: the shader pack compiler couldn't load`), !0;
-      const ZB = await async function(BB, OB, GB, YB) {
-        switch (GB.kind) {
-          case "none":
-            return;
-          case "remove":
-            return null;
-          case "rename":
-            return {
-              ...BB, manifest: {
-                ...BB.manifest,
-                name: GB.name,
-                author: GB.ownerName,
-                description: GB.description || null
-              }
-            };
-          case "update": {
-            if (null === YB) return;
-            const {
-              sourceHash: DB,
-              name: QB,
-              ownerName: oB,
-              description: jB
-            } = GB, yB = await (0, JB.b)({
-              packId: OB.packId,
-              sourceHash: DB,
-              name: QB,
-              ownerName: oB,
-              description: jB
-            }, YB);
-            if ("loaded" === yB.kind && null !== yB.stored.validation) return yB.stored;
-            const MB = "failed" === yB.kind ? yB.reason : "no WebGPU device could check it";
-            return console.warn(`Didn't update shader pack ${OB.packId}: ${MB}`), "failed" === yB.kind && PB.includes(yB.reason) ? {
-              ...BB,
-              listing: {
-                ...OB,
-                rejectedSourceHash: DB
-              }
-            } : void 0
-          }
-        }
-      }(BB, OB, lB, qB);
-      return void 0 === ZB || (await (0, MB.replaceShaderPack)(BB, ZB, qB) ? (null !== ZB && ZB.files === BB.files || (0, MB.markShaderPackChangePending)(), !0) : (console.warn("Didn't apply the shader pack listing's update: the stored pack changed or couldn't be written"), !0))
-    }
-  },
-  7193: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      forgetShaderPackActiveHint: () => KB,
-      isOtherApiVersion: () => UB,
-      isShaderPackActive: () => AB,
-      isShaderPackChangePending: () => nB,
-      markShaderPackChangePending: () => SB,
-      pageShaderPackValidationVersion: () => fB,
-      reconcileStoredShaderPackHint: () => dB,
-      removeShaderPack: () => WB,
-      replaceShaderPack: () => ZB,
-      saveShaderPack: () => qB,
-      shaderPackNeedsCheck: () => kB,
-      storedPackOutcome: () => VB,
-      storedShaderPackFiles: () => zB,
-      toStoredShaderPack: () => PB
-    });
-    var YB = GB(5546),
-      DB = GB(5538),
-      QB = GB(31),
-      oB = GB(3885),
-      jB = GB(7198),
-      yB = GB(7174);
-    const JB = "shaderPackChangePending";
-    let MB = null;
-
-    function PB(BB, OB, GB) {
-      return {
-        manifest: BB.manifest,
-        files: (0, YB.y)(BB.files),
-        validation: OB,
-        ...GB && {
-          listing: GB
+      getTags() {
+        return null === this.minWindowAvg ? null : {
+          fps_min_bucket: EW(this.minWindowAvg),
+          fps_avg_bucket: EW(this.sampleSum / this.sampleCount)
         }
       }
     }
 
-    function zB(BB) {
-      return Object.keys(BB.files).map((OB => ({
-        path: OB,
-        source: BB.files[OB]
-      })))
-    }
-    let lB = Promise.resolve();
-
-    function pB(BB) {
-      const OB = lB.then(BB);
-      return lB = OB.catch((() => {})), OB
+    function EW(WW) {
+      return WW < 15 ? "<15" : WW < 30 ? "15-30" : WW < 50 ? "30-50" : "50+"
     }
 
-    function qB(BB, OB) {
-      return pB((() => NB(BB, OB)))
-    }
-
-    function ZB(BB, OB, GB) {
-      return pB((async () => JSON.stringify(await (0, jB.e)()) === JSON.stringify(BB) && (null === OB ? (await RB(), !0) : NB(OB, GB))))
-    }
-    async function NB(BB, OB) {
-      const GB = await QB.d.setItem(jB.c, BB);
-      return GB && uB(BB, OB), GB
-    }
-    async function RB() {
-      await QB.d.removeItem(jB.c), QB.g.removeItem(oB.d)
-    }
-
-    function WB() {
-      return pB(RB)
-    }
-
-    function AB(BB, OB) {
-      return "active" === VB(BB, OB).kind
-    }
-
-    function VB(BB, OB) {
-      var GB;
-      return null === BB ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : UB(BB) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) || BB.validation.fromRecheck ? null === OB ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : kB(BB, OB) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : BB.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function SB() {
-      QB.i.setItem(JB, performance.timeOrigin)
-    }
-
-    function nB() {
-      return QB.i.getItem(JB) === performance.timeOrigin
-    }
-
-    function UB(BB) {
-      return !(0, DB.g)(BB.manifest.apiVersion)
-    }
-
-    function fB(BB) {
-      return MB ??= BB.yI((0, yB.shaderPackTextures)()), MB
-    }
-
-    function kB(BB, OB) {
-      var GB;
-      return (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.headerVersion) !== fB(OB)
-    }
-
-    function dB(BB) {
-      return pB((async () => {
-        uB(await (0, jB.e)(!0), BB)
-      }))
-    }
-
-    function KB() {
-      return pB((async () => {
-        QB.g.removeItem(oB.d)
-      }))
-    }
-
-    function uB(BB, OB) {
-      AB(BB, OB) ? QB.g.setItem(oB.d, !0) : QB.g.removeItem(oB.d)
+    function NW(WW) {
+      return Math.round(10 * WW) / 10
     }
   },
-  7174: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadShaderPackTextures: () => oB,
-      shaderPackTextures: () => jB
+  41073: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW
     });
-    var YB = GB(5546);
-    let DB = null,
-      QB = null;
+    var mW = OW(1305);
 
-    function oB() {
-      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: OB,
-          textureNameToIndex: GB,
-          textureAnimationData: QB
-        } = BB;
-        return DB ??= (0, YB.o)(GB, QB, OB), DB
-      })), QB
-    }
-
-    function jB() {
-      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return DB
+    function EW(WW) {
+      if ("error" === WW.type) {
+        const {
+          error: iW,
+          filename: OW
+        } = WW;
+        return iW instanceof Error && (OW.startsWith(window.location.origin) || OW.startsWith("wasm://"))
+      }
+      const iW = WW.reason;
+      if (iW instanceof Error) {
+        var OW;
+        const WW = `${iW.name}: ${iW.message}`;
+        return !(0, mW.k)(null !== (OW = iW.stack) && void 0 !== OW ? OW : "") && !(0, mW.f)(WW) && !(0, mW.g)(WW)
+      }
+      return "string" === typeof iW && !(0, mW.f)(iW)
     }
   },
-  7186: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => yB,
-      f: () => jB
+  41082: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => JW
     });
-    var YB = GB(7193),
-      DB = GB(7174),
-      QB = GB(113);
-    const oB = 100;
-    async function jB(BB, OB) {
-      var GB;
-      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GB = navigator.gpu) && void 0 !== GB ? GB : null;
-      const oB = BB.VOB(OB, (0, DB.shaderPackTextures)());
-      if (oB.errors.length > 0) return JB(BB, oB.errors, oB.offInStrict);
-      const jB = await async function(BB) {
-        if (!BB) return null;
-        try {
-          const OB = await (0, QB.w)(BB);
-          return OB ? await OB.requestDevice() : null
-        } catch (OB) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", OB), null
-        }
-      }(YB);
-      if (!jB) return null;
-      let yB = !1;
-      jB.lost.then((() => {
-        yB = !0
-      }));
-      try {
-        const OB = await Promise.all(oB.validationModules.map((OB => async function(BB, OB, GB) {
-          OB.pushErrorScope("validation");
-          const YB = OB.createShaderModule({
-              code: GB.code
-            }),
-            DB = OB.popErrorScope(),
-            {
-              messages: QB
-            } = await YB.getCompilationInfo(),
-            oB = QB.filter((BB => "error" === BB.type)).map((OB => BB.mapValidationMessage(GB, OB))),
-            jB = await DB;
-          jB && 0 === oB.length && oB.push({
-            file: null,
-            line: 0,
-            message: jB.message,
-            variants: [GB.key]
-          });
-          return oB
-        }(BB, jB, OB))));
-        return yB ? null : JB(BB, BB.lDB(OB.flat()), oB.offInStrict)
-      } catch (MB) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", MB), null
-      } finally {
-        jB.destroy()
+    var mW = OW(25),
+      EW = OW(2061),
+      NW = OW(37735),
+      PW = OW(27),
+      LW = OW(1729),
+      cW = OW(40814),
+      wW = OW(9972),
+      tW = OW(1856),
+      ZW = OW(2085),
+      xW = OW(39),
+      lW = OW(41052),
+      AW = OW(2093),
+      bW = OW(7502);
+    const jW = [...Object.values(AW.e).flat(), "ShiftLeft", "ShiftRight", "Enter", "KeyT", "Slash", "Escape", "Tab", "MetaLeft", "MetaRight", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", "F1", "F5", "F6", "F7", "F11", "F12", "Mouse4", "Mouse5"],
+      UW = [
+        [1, "Mouse1"],
+        [4, "Mouse2"],
+        [2, "Mouse3"],
+        [8, "Mouse4"],
+        [16, "Mouse5"]
+      ],
+      kW = {
+        forward: "forward",
+        backward: "backward",
+        left: "left",
+        right: "right",
+        jump: "jump",
+        sprint: "sprint",
+        crouch: "crouch",
+        "primary-fire": "primary",
+        "alt-fire": "secondary",
+        "mid-fire": "middle"
+      };
+    class sW {
+      constructor(WW) {
+        this.source = WW, this.keyListeners = [], this.actionsListeners = [], this.pointerLockListeners = [], this.BL = new Uint8Array(bW.c.length), this.heldCount = 0, this.actionBits = 0, this.typing = !1, this.pointerLocked = !1, this.mouseButtons = 0, this.keyTable = null, WW.onBindingsChanged((() => {
+          this.keyTable = null
+        }))
       }
-    }
-    async function yB(BB, OB) {
-      var GB;
-      if (!(0, YB.shaderPackNeedsCheck)(BB, OB) || (0, YB.isOtherApiVersion)(BB)) return BB;
-      const DB = await jB(OB, (0, YB.storedShaderPackFiles)(BB));
-      if (!DB) return BB;
-      const QB = !1 === (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) && !BB.validation.fromRecheck,
-        oB = {
-          ...BB,
-          validation: QB ? DB : {
-            ...DB,
-            fromRecheck: !0
-          }
+      onKey(WW) {
+        return KW(this.keyListeners, WW)
+      }
+      onUnboundKey(WW) {
+        return this.onKey(((iW, OW, mW, EW, NW, PW) => {
+          OW && EW && !mW && WW(iW, PW)
+        }))
+      }
+      onActions(WW) {
+        return KW(this.actionsListeners, WW)
+      }
+      onPointerLock(WW) {
+        return KW(this.pointerLockListeners, WW)
+      }
+      getActionBits() {
+        return this.actionBits
+      }
+      listen(WW, iW) {
+        this.typing = this.source.isTyping(iW.activeElement), this.pointerLocked = null !== iW.pointerLockElement;
+        const OW = {
+          capture: !0,
+          passive: !0
         };
-      return await (0, YB.replaceShaderPack)(BB, oB, OB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), oB
-    }
-
-    function JB(BB, OB, GB) {
-      return {
-        headerVersion: (0, YB.pageShaderPackValidationVersion)(BB),
-        ok: 0 === OB.length,
-        errors: OB.slice(0, oB),
-        moreErrors: Math.max(0, OB.length - oB),
-        offInStrict: GB
+        WW.addEventListener("keydown", (WW => {
+          this.setTyping(this.source.isTyping(MW(WW))), WW.isComposing || this.typing || this.keyDown(WW.code, WW.altKey || WW.ctrlKey || WW.metaKey)
+        }), OW), WW.addEventListener("keyup", (WW => {
+          this.typing || ("MetaLeft" === WW.code || "MetaRight" === WW.code ? this.releaseAll() : this.keyUp((0, bW.e)(WW.code)))
+        }), OW);
+        const mW = WW => {
+          "mouse" === WW.pointerType && WW.isTrusted && this.setMouseButtons(WW.buttons, WW.altKey || WW.ctrlKey || WW.metaKey)
+        };
+        WW.addEventListener("pointerdown", mW, OW), WW.addEventListener("pointermove", mW, OW), WW.addEventListener("pointerup", mW, OW), WW.addEventListener("focusin", (WW => {
+          this.setTyping(this.source.isTyping(MW(WW)))
+        }), OW), WW.addEventListener("focusout", (WW => {
+          this.setTyping(this.source.isTyping(WW.relatedTarget))
+        }), OW), WW.addEventListener("blur", (iW => {
+          iW.target === WW && this.releaseAll()
+        }), OW), iW.addEventListener("visibilitychange", (() => {
+          iW.hidden && this.releaseAll()
+        })), iW.addEventListener("pointerlockchange", (() => {
+          const WW = null !== iW.pointerLockElement;
+          if (WW !== this.pointerLocked) {
+            this.pointerLocked = WW;
+            const iW = this.source.now();
+            for (const OW of this.pointerLockListeners) OW(WW, iW)
+          }
+        }))
+      }
+      keyDown(WW, iW) {
+        const OW = (0, bW.e)(WW);
+        if (0 !== this.BL[OW]) return;
+        const mW = this.source.isInPlay(),
+          EW = mW ? this.getKeyTable() : null,
+          NW = null === EW || iW || 1 === EW.bound[OW],
+          PW = null !== EW && 0 !== EW.actionBits[OW];
+        this.BL[OW] = 1 + (NW ? 1 : 0) + (mW ? 2 : 0) + (PW ? 4 : 0), this.heldCount++, this.emit(OW, !0, NW, mW, PW), PW && this.updateActionBits()
+      }
+      keyUp(WW) {
+        this.release(WW) && this.updateActionBits()
+      }
+      setMouseButtons(WW, iW) {
+        const OW = WW ^ this.mouseButtons;
+        if (0 !== OW) {
+          this.mouseButtons = WW;
+          for (const [mW, EW] of UW) 0 !== (OW & mW) && (0 === (WW & mW) ? this.keyUp((0, bW.e)(EW)) : !this.typing && this.source.isInPlay() && this.keyDown(EW, iW))
+        }
+      }
+      releaseAll() {
+        let WW = !1;
+        for (let iW = 0; this.heldCount > 0 && iW < this.BL.length; iW++) WW = this.release(iW) || WW;
+        this.mouseButtons = 0, WW && this.updateActionBits()
+      }
+      release(WW) {
+        const iW = this.BL[WW];
+        if (0 === iW) return !1;
+        this.BL[WW] = 0, this.heldCount--;
+        const OW = 0 !== (iW - 1 & 2);
+        return this.emit(WW, !1, 0 !== (iW - 1 & 1), OW, 0 !== (iW - 1 & 4)), OW
+      }
+      updateActionBits() {
+        let WW = 0;
+        if (this.heldCount > 0) {
+          const iW = this.getKeyTable().actionBits;
+          for (let OW = 0; OW < this.BL.length; OW++) {
+            const mW = this.BL[OW];
+            0 !== mW && 0 !== (mW - 1 & 2) && (WW |= iW[OW])
+          }
+        }
+        if (WW === this.actionBits) return;
+        this.actionBits = WW;
+        const iW = this.source.now();
+        for (const OW of this.actionsListeners) OW(WW, iW)
+      }
+      getKeyTable() {
+        return this.keyTable ??= function(WW, iW) {
+          const OW = new Uint8Array(bW.c.length),
+            mW = new Uint16Array(bW.c.length);
+          OW[0] = 1;
+          for (const EW of jW) OW[(0, bW.e)(EW)] = 1;
+          for (const [EW, NW] of Object.entries(WW)) {
+            if (iW.has(EW)) continue;
+            const WW = kW[EW],
+              PW = void 0 === WW ? 0 : (0, bW.j)(WW);
+            for (const iW of NW) {
+              const WW = (0, bW.e)(iW);
+              OW[WW] = 1, 0 !== WW && (mW[WW] |= PW)
+            }
+          }
+          return {
+            bound: OW,
+            actionBits: mW
+          }
+        }(this.source.getBindings(), this.source.ignoredActions), this.keyTable
+      }
+      setTyping(WW) {
+        WW && !this.typing && (this.typing = !0, this.releaseAll()), this.typing = WW
+      }
+      emit(WW, iW, OW, mW, EW) {
+        const NW = bW.c[WW],
+          PW = this.source.now();
+        for (const LW of this.keyListeners) LW(NW, iW, OW, mW, EW, PW)
       }
     }
+
+    function MW(WW) {
+      var iW;
+      return null !== (iW = WW.composedPath()[0]) && void 0 !== iW ? iW : WW.target
+    }
+
+    function KW(WW, iW) {
+      return WW.push(iW), () => {
+        const OW = WW.indexOf(iW); - 1 !== OW && WW.splice(OW, 1)
+      }
+    }
+    const SW = "replayInput",
+      YW = new Set([...ZW.F, ...ZW.j].filter((WW => "replayViewerOpen" !== WW && "toggleFreeCam" !== WW)));
+    let yW = null;
+
+    function TW() {
+      var WW;
+      return (null !== (WW = EW.d.get("customButtons")) && void 0 !== WW ? WW : []).filter(wW.e).map((WW => WW.keycode))
+    }
+
+    function JW() {
+      return null === yW && "0" !== String(xW.i.getItem(SW)) && (yW = new sW({
+        isInPlay: () => "inGame" === mW.d.get("gameState") && !(0, LW.l)() && !(0, NW.e)(),
+        isTyping: tW.isTextEntry,
+        getBindings: () => ({
+          ...ZW.v,
+          customButtons: TW(),
+          pageKeys: (0, cW.g)()
+        }),
+        ignoredActions: YW,
+        onBindingsChanged: WW => {
+          PW.l.subscribe("customBindingsChanged", WW), EW.d.subscribe("customButtons", WW), EW.d.subscribeReset(WW), (0, cW.k)(WW)
+        },
+        now: lW.e
+      }), yW.listen(window, document)), yW
+    }
   },
-  7107: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => jB,
-      E: () => oB,
-      F: () => YB,
-      I: () => zB,
-      M: () => MB,
-      Q: () => AB,
-      U: () => PB,
-      X: () => JB,
-      e: () => pB,
-      h: () => ZB,
-      i: () => qB,
-      l: () => lB,
-      n: () => WB,
-      q: () => SB,
-      r: () => yB,
-      t: () => DB,
-      x: () => VB,
-      z: () => QB
+  40814: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => PW,
+      g: () => LW,
+      k: () => cW
     });
-    const YB = ["forest", "desert", "water", "night", "cave"];
-    const DB = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
-        }
-      },
-      QB = ["popular", "updated", "newest"],
-      oB = 3,
-      jB = 32,
-      yB = 300;
+    const mW = new Map,
+      EW = [];
 
-    function JB(BB, OB) {
-      return BB.slice(0, OB).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const MB = 64,
-      PB = 512,
-      zB = 18e5;
-
-    function lB(BB) {
-      const OB = BB,
-        GB = null === OB || void 0 === OB ? void 0 : OB.files;
-      return "number" === typeof(null === OB || void 0 === OB ? void 0 : OB.apiVersion) && "string" === typeof OB.name && (null === OB.author || "string" === typeof OB.author) && (void 0 === OB.keepCircleShadows || "boolean" === typeof OB.keepCircleShadows) && "object" === typeof GB && null !== GB && Object.values(GB).every((BB => "string" === typeof BB))
-    }
-    const pB = "Bloxdhub",
-      qB = "https://bloxdhub.com/shaders";
-
-    function ZB(BB) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(BB)}`
-    }
-    const NB = "Screenshot generation failed.",
-      RB = "Its screenshots couldn't be generated:";
-
-    function WB(BB) {
-      var OB;
-      return BB === NB || null !== (OB = null === BB || void 0 === BB ? void 0 : BB.startsWith(RB)) && void 0 !== OB && OB
+    function NW() {
+      for (const WW of EW) WW()
     }
 
-    function AB(BB, OB) {
-      return `shaderPacks/${BB}/${OB}.json`
+    function PW(WW) {
+      var iW;
+      return mW.set(WW, (null !== (iW = mW.get(WW)) && void 0 !== iW ? iW : 0) + 1), NW(), () => {
+        const iW = mW.get(WW) - 1;
+        0 === iW ? mW.delete(WW) : mW.set(WW, iW), NW()
+      }
     }
 
-    function VB(BB, OB, GB, YB) {
-      return null === OB.renderId ? SB(BB, OB.baselineVersion, GB, YB) : `${BB}/${function(BB,OB,GB,YB){return`shaderPacks/${BB}/${OB}/${GB}-${YB}.webp`}(OB.packId,OB.renderId,GB,YB)}`
+    function LW() {
+      return [...mW.keys()]
     }
 
-    function SB(BB, OB, GB, YB) {
-      return `${BB}/${function(BB,OB,GB){return`shaderPacks/baseline/${BB}/${OB}-${GB}.webp`}(OB,GB,YB)}`
+    function cW(WW) {
+      EW.push(WW)
+    }
+  },
+  7493: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => mW,
+      h: () => NW,
+      j: () => EW,
+      n: () => PW,
+      o: () => cW,
+      r: () => LW
+    });
+    const mW = ["page_loaded", "game_loading", "game_playable", "first_input", "pointer_locked", "first_move", "first_block", "played_60s", "second_game"],
+      EW = ["joined", "game_playable", "first_input", "pointer_locked", "first_move", "first_block", "played_60s"],
+      NW = ["unbound_key_burst", "idle_pointer_locked", "menu_toggling", "block_change_refused", "pointer_lock_failed", "rage_quit"],
+      PW = 3;
+
+    function LW(WW) {
+      return void 0 === WW ? -1 : EW.indexOf(WW)
+    }
+
+    function cW(WW, iW) {
+      return LW(iW) > LW(WW) ? iW : WW
+    }
+  },
+  7502: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => mW,
+      e: () => NW,
+      g: () => LW,
+      j: () => wW
+    });
+    const mW = ["Unidentified", ...[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((WW => `Key${WW}`)), ...Array.from({
+        length: 10
+      }, ((WW, iW) => `Digit${iW}`)), ...Array.from({
+        length: 12
+      }, ((WW, iW) => `F${iW+1}`)), "Escape", "Tab", "CapsLock", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "Space", "Enter", "Backspace", "Delete", "Insert", "Home", "End", "PageUp", "PageDown", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", ...Array.from({
+        length: 10
+      }, ((WW, iW) => `Numpad${iW}`)), "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal", "NumpadEnter", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"],
+      EW = new Map(mW.map(((WW, iW) => [WW, iW])));
+
+    function NW(WW) {
+      var iW;
+      return null !== (iW = EW.get(WW)) && void 0 !== iW ? iW : 0
+    }
+    const PW = new Set(["Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal"]);
+
+    function LW(WW) {
+      return /^Key[A-Z]$/.test(WW) ? "letter" : /^(Digit|Numpad)\d$/.test(WW) ? "digit" : PW.has(WW) ? "symbol" : null
+    }
+    const cW = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"];
+
+    function wW(WW) {
+      return 1 << cW.indexOf(WW)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,318 +1,475 @@
 export const id = 130;
-export const ids = [130, 131, 152];
+export const ids = [130, 715];
 export const modules = {
-  5538: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB.k,
-      c: () => DB,
-      g: () => YB.r
-    });
-    var YB = GB(5546);
-    const DB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((OB => ({
-      strict: BB,
-      program: OB
-    })))))
-  },
-  39925: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      ShaderPackPage: () => yB,
-      harnessShaderPackMode: () => zB,
-      setHarnessUrlShaderPack: () => PB,
-      shaderPackPage: () => MB
-    });
-    var YB = GB(92),
-      DB = GB(31),
-      QB = (GB(3890), GB(5538), GB(3885)),
-      oB = GB(7198);
-    GB(7174);
-    const jB = {
-      status: "none"
-    };
-    class yB {
-      constructor() {
-        this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
-      }
-      preload() {
-        if (null === this.stored) {
-          if ((0, QB.j)(YB.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), JB().then((BB => {
-            BB && DB.g.removeItem(QB.d)
-          })), this.stored;
-          this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
+  5877: (WW, iW, OW) => {
+    var mW = OW(5886);
+
+    function EW() {}
+
+    function NW() {}
+    NW.resetWarningCache = EW, WW.exports = function() {
+      function WW(WW, iW, OW, EW, NW, PW) {
+        if (PW !== mW) {
+          var LW = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw LW.name = "Invariant Violation", LW
         }
-        return this.stored
       }
-      prefetchHint() {
-        return (0, QB.f)(YB.featureFlags.settings.canUseShaderPacks)
-      }
-      async loadActive() {
-        const BB = await this.load();
-        return "active" === BB.status ? BB.pack : null
-      }
-      load() {
-        return this.pagePack ??= this.read().catch((BB => (console.error("Failed to load the shader pack", BB), jB))).then((BB => (this.resolved ??= BB, BB))), this.pagePack
-      }
-      hasNone() {
-        var BB;
-        return "none" === (null === (BB = this.resolved) || void 0 === BB ? void 0 : BB.status)
-      }
-      block(BB) {
-        this.resolved = {
-          status: "blocked",
-          messageKey: BB,
-          variants: null
-        }, this.pagePack = Promise.resolve(this.resolved)
-      }
-      compiler() {
-        return this.compiling ??= Promise.all([GB.e(89), GB.e(149), GB.e(156)]).then((() => GB(44873))).then((BB => (BB.prefetchCompiler(), BB))), this.compiling
-      }
-      async readStored() {
-        const BB = await JB();
-        return BB && this.compiler().then((BB => BB.reconcileHint())).catch((BB => {
-          console.error("Failed to correct the shader pack hint", BB)
-        })), BB
-      }
-      async read() {
-        const BB = await this.preload();
-        return BB ? (await this.compiler()).compilePagePack(BB) : jB
-      }
-    }
-    async function JB() {
-      if (!(0, QB.n)(YB.featureFlags.settings.canUseShaderPacks)) return null;
-      try {
-        const BB = await (0, oB.e)(!0);
-        return BB || DB.g.setItem(QB.d, !1), BB
-      } catch (BB) {
-        return console.error("Failed to read the stored shader pack", BB), DB.g.removeItem(QB.d), null
-      }
-    }
-    const MB = new yB;
 
-    function PB(BB, OB) {}
-
-    function zB() {
-      return null
+      function iW() {
+        return WW
+      }
+      WW.isRequired = WW;
+      var OW = {
+        array: WW,
+        bigint: WW,
+        bool: WW,
+        func: WW,
+        number: WW,
+        object: WW,
+        string: WW,
+        symbol: WW,
+        any: WW,
+        arrayOf: iW,
+        element: WW,
+        elementType: WW,
+        instanceOf: iW,
+        node: WW,
+        objectOf: iW,
+        oneOf: iW,
+        oneOfType: iW,
+        shape: iW,
+        exact: iW,
+        checkPropTypes: NW,
+        resetWarningCache: EW
+      };
+      return OW.PropTypes = OW, OW
     }
   },
-  7198: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      e: () => QB
+  5868: (WW, iW, OW) => {
+    WW.exports = OW(5877)()
+  },
+  5886: WW => {
+    WW.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  7595: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      default: () => tW
     });
-    var YB = GB(31);
-    const DB = "shaderPack";
-    async function QB() {
-      var BB;
-      let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (BB = await YB.d.getItem(DB, OB)) && void 0 !== BB ? BB : null
+    var mW = OW(1605),
+      EW = OW(1532),
+      NW = OW(1172),
+      PW = OW(7600),
+      LW = OW(7577),
+      cW = OW(7567),
+      wW = OW(1283);
+
+    function tW() {
+      const {
+        t: WW
+      } = (0, NW.B)(), iW = (0, mW.useNavigatePreserveSearch)();
+      return (0, LW.b)(), (0, wW.jsxs)("div", {
+        className: "ShaderPackPublishPage AnimFadeIn",
+        children: [(0, wW.jsx)("div", {
+          className: "ShaderPackPublishBack",
+          children: (0, wW.jsx)(EW.b, {
+            onClick: () => {
+              iW(cW.W)
+            },
+            children: WW("shaderPackListing:backToPacks")
+          })
+        }), (0, wW.jsx)("h1", {
+          className: "ShaderPackPublishTitle",
+          children: WW("shaderPackListing:publishTitle")
+        }), (0, wW.jsx)(PW.ShaderPackPublishForm, {
+          existing: null,
+          onPublished: WW => {
+            iW((0, cW.$)(WW.packId), {
+              replace: !0
+            })
+          }
+        })]
+      })
     }
   },
-  7174: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadShaderPackTextures: () => oB,
-      shaderPackTextures: () => jB
+  7577: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => xW,
+      c: () => lW,
+      f: () => ZW,
+      j: () => AW
     });
-    var YB = GB(5546);
-    let DB = null,
-      QB = null;
+    var mW = OW(62),
+      EW = OW(7570),
+      NW = OW(1584),
+      PW = OW(7567),
+      LW = OW(7583),
+      cW = OW(1107);
+    const wW = "shaderPackListingView",
+      tW = "shaderPackListingFilterOpen";
 
-    function oB() {
-      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: OB,
-          textureNameToIndex: GB,
-          textureAnimationData: QB
-        } = BB;
-        return DB ??= (0, YB.o)(GB, QB, OB), DB
-      })), QB
+    function ZW() {
+      var WW;
+      const [iW, OW] = (0, LW.d)(wW, EW.F[0]);
+      return [null !== (WW = EW.F.find((WW => WW === iW))) && void 0 !== WW ? WW : EW.F[0], OW]
     }
 
-    function jB() {
-      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return DB
+    function xW() {
+      (0, mW.useEffect)((() => () => {
+        window.location.pathname.startsWith(PW.W) || (0, PW.j)()
+      }), [])
+    }
+
+    function lW() {
+      return (0, LW.d)(tW, !1)
+    }
+
+    function AW() {
+      const {
+        userContext: WW,
+        isUserContextUpdating: iW
+      } = (0, cW.e)(), [OW, EW] = (0, mW.useState)(null), PW = (0, mW.useRef)(new Set);
+
+      function LW(WW, iW) {
+        EW((OW => {
+          const mW = new Set(OW);
+          return iW ? mW.add(WW) : mW.delete(WW), mW
+        }))
+      }
+      return (0, mW.useEffect)((() => {
+        if (iW) return;
+        let OW = !1;
+        return NW.e.getFavouriteShaderPacks(WW).then((WW => {
+          OW || EW(new Set(WW))
+        })).catch((WW => {
+          console.error("Failed to get favourite shader packs", WW), OW || EW(new Set)
+        })), () => {
+          OW = !0
+        }
+      }), [WW, iW]), {
+        isFavourite: WW => null === OW ? null : OW.has(WW),
+        toggle: function(iW) {
+          if (null === OW || PW.current.has(iW)) return;
+          PW.current.add(iW);
+          const mW = !OW.has(iW);
+          LW(iW, mW), (mW ? NW.e.favouriteShaderPack(WW, iW) : NW.e.unfavouriteShaderPack(WW, iW)).catch((WW => {
+            console.error("Failed to change a favourite shader pack", WW), LW(iW, !mW)
+          })).finally((() => {
+            PW.current.delete(iW)
+          }))
+        }
+      }
     }
   },
-  5546: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => zB,
-      e: () => jB,
-      h: () => oB,
-      k: () => YB,
-      o: () => qB,
-      p: () => PB,
-      r: () => DB,
-      u: () => QB,
-      v: () => JB,
-      y: () => MB
+  7567: (WW, iW, OW) => {
+    OW.d(iW, {
+      $: () => cW,
+      B: () => AW,
+      E: () => UW,
+      G: () => hW,
+      K: () => tW,
+      M: () => nW,
+      N: () => bW,
+      Q: () => VW,
+      S: () => gW,
+      W: () => PW,
+      _: () => DW,
+      bb: () => LW,
+      cb: () => eW,
+      d: () => kW,
+      e: () => TW,
+      f: () => jW,
+      fb: () => vW,
+      j: () => xW,
+      jb: () => sW,
+      kb: () => HW,
+      l: () => ZW,
+      p: () => uW,
+      q: () => lW,
+      u: () => oW,
+      y: () => pW
     });
-    const YB = 5;
+    var mW = OW(7570),
+      EW = OW(154),
+      NW = OW(5268);
+    const PW = "/shader-packs",
+      LW = `${PW}/publish`;
 
-    function DB(BB) {
-      return BB === YB
+    function cW(WW) {
+      return `${PW}/${encodeURIComponent(WW)}`
+    }
+    let wW = null;
+
+    function tW(WW) {
+      wW = WW
     }
 
-    function QB(BB) {
-      return [...BB.features]
+    function ZW() {
+      return wW
     }
-    const oB = 262144,
-      jB = 256,
-      yB = 256;
 
-    function JB(BB) {
-      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
-      const OB = [];
-      for (const [GB, YB] of Object.entries(BB)) {
-        if ("string" !== typeof YB) return `${GB} isn't text.`;
-        OB.push({
-          path: GB,
-          source: YB
+    function xW() {
+      wW = null
+    }
+
+    function lW(WW) {
+      return WW.playerHasRank("developer") || WW.playerHasRank("admin")
+    }
+    const AW = ["terrain", "water", "models", "sunShadows", "strict"],
+      bW = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function jW(WW, iW) {
+      return WW.withFeatures.includes(iW) ? "with" : WW.withoutFeatures.includes(iW) ? "without" : null
+    }
+
+    function UW(WW) {
+      return null === WW ? "with" : "with" === WW ? "without" : null
+    }
+
+    function kW(WW) {
+      return "with" === WW ? "only" : null === WW ? "include" : void 0
+    }
+
+    function sW(WW, iW) {
+      const OW = jW(WW, iW),
+        mW = WW => WW.filter((WW => WW !== iW));
+      return {
+        withFeatures: null === OW ? [...WW.withFeatures, iW] : mW(WW.withFeatures),
+        withoutFeatures: "with" === OW ? [...WW.withoutFeatures, iW] : mW(WW.withoutFeatures)
+      }
+    }
+    const MW = "section",
+      KW = "sort",
+      SW = "filters",
+      YW = "q",
+      yW = "banned",
+      TW = "popular",
+      JW = "strict";
+
+    function hW(WW) {
+      var iW, OW, EW;
+      const PW = WW.get(MW),
+        LW = (null !== (iW = WW.get(SW)) && void 0 !== iW ? iW : JW).split(","),
+        cW = WW.get(yW);
+      return {
+        section: "favourites" === PW || "mine" === PW ? PW : "explore",
+        sort: null !== (OW = mW.u.find((iW => iW === WW.get(KW)))) && void 0 !== OW ? OW : TW,
+        withFeatures: AW.filter((WW => LW.includes(WW) && !LW.includes(`-${WW}`))),
+        withoutFeatures: AW.filter((WW => LW.includes(`-${WW}`))),
+        searchQuery: (null === (EW = WW.get(YW)) || void 0 === EW ? void 0 : EW.slice(0, mW.K)) || null,
+        pageNumber: (0, NW.f)(WW.get(NW.b)),
+        banned: "only" === cW ? "with" : "include" === cW ? null : "without"
+      }
+    }
+
+    function HW(WW, iW) {
+      var OW;
+      const mW = dW(iW);
+      (0, NW.j)(WW, MW, "explore" === iW.section ? null : iW.section), (0, NW.j)(WW, KW, iW.sort === TW ? null : iW.sort), (0, NW.j)(WW, SW, mW === JW ? null : mW), (0, NW.j)(WW, YW, iW.searchQuery), (0, NW.j)(WW, yW, null !== (OW = kW(iW.banned)) && void 0 !== OW ? OW : null), (0, NW.m)(WW, iW.pageNumber)
+    }
+
+    function nW(WW) {
+      const iW = new URLSearchParams;
+      return HW(iW, {
+        section: "explore",
+        sort: TW,
+        withFeatures: "strict" === WW ? [WW] : [WW, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${PW}?${iW.toString()}`
+    }
+
+    function uW(WW) {
+      return dW(WW) === JW
+    }
+
+    function oW(WW) {
+      return null !== WW.searchQuery || "with" === WW.banned || dW(WW) !== JW
+    }
+
+    function dW(WW) {
+      return AW.flatMap((iW => {
+        const OW = jW(WW, iW);
+        return "with" === OW ? [iW] : "without" === OW ? [`-${iW}`] : []
+      })).join(",")
+    }
+    const eW = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
+      },
+      vW = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function gW(WW) {
+      return Math.round(100 * Math.max(0, 1 - 1 / WW))
+    }
+
+    function DW(WW, iW, OW, EW) {
+      const NW = [];
+      WW.isBanned && NW.push({
+        tone: "warning",
+        text: EW("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: PW
+      } = WW;
+      if (null === WW.brokenError || PW && !PW.error || NW.push({
+          tone: "warning",
+          text: EW("shaderPackListing:ownerBroken"),
+          detail: WW.brokenError
+        }), null !== PW && void 0 !== PW && PW.error) NW.push({
+        tone: "warning",
+        text: EW(iW ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, mW.g)(PW.error) ? null : PW.error
+      });
+      else if (PW) {
+        const WW = null === PW.renderNotBefore ? 0 : PW.renderNotBefore - OW,
+          mW = String(Math.ceil(WW / 6e4)),
+          LW = EW(iW ? WW > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : WW > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: mW
+          });
+        NW.push({
+          tone: "info",
+          text: LW,
+          detail: null
         })
       }
-      return OB.sort(((BB, OB) => PB(BB.path, OB.path))),
-        function(BB) {
-          if (0 === BB.length) return "The pack has no .wgsl files.";
-          if (BB.length > jB) return `The pack has more than ${jB} .wgsl files.`;
-          const OB = new Set;
-          for (const {
-              path: GB
-            }
-            of BB) {
-            const BB = lB(GB);
-            if (null !== BB) return BB;
-            if (OB.has(GB)) return `The pack has two files at ${GB}.`;
-            OB.add(GB)
-          }
-          return zB(BB) > oB ? `The pack's .wgsl files are over ${oB/1024} KB in total.` : null
-        }(OB) ?? OB
+      return WW.listed || NW.push({
+        tone: "info",
+        text: EW("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), NW
     }
 
-    function MB(BB) {
-      const OB = {};
-      for (const GB of BB) OB[GB.path] = GB.source;
-      return OB
+    function VW(WW) {
+      return Math.max(1, Math.round(WW / 1024))
     }
 
-    function PB(BB, OB) {
-      return BB < OB ? -1 : BB > OB ? 1 : 0
+    function pW(WW, iW, OW) {
+      return WW instanceof EW.c && WW.errorMessageForUser ? WW.errorMessageForUser : iW(OW)
     }
+  },
+  7583: (WW, iW, OW) => {
+    OW.d(iW, {
+      d: () => NW
+    });
+    var mW = OW(62),
+      EW = OW(39);
 
-    function zB(BB) {
-      const OB = new TextEncoder;
-      let GB = 0;
-      for (const {
-          source: YB
-        }
-        of BB) GB += OB.encode(YB).byteLength;
-      return GB
+    function NW(WW, iW) {
+      var OW;
+      const [NW, PW] = (0, mW.useState)(null !== (OW = EW.i.getItem(WW)) && void 0 !== OW ? OW : iW);
+      return [NW, iW => {
+        EW.i.setItem(WW, iW), PW(iW)
+      }]
     }
-
-    function lB(BB) {
-      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
-      if (BB.length > yB) return `A file path is over ${yB} characters.`;
-      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
-      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
+  },
+  7659: (WW, iW, OW) => {
+    OW.d(iW, {
+      c: () => EW,
+      g: () => NW
+    });
+    var mW = OW(39);
+    const EW = "shaderPack";
+    async function NW() {
+      var WW;
+      let iW = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (WW = await mW.f.getItem(EW, iW)) && void 0 !== WW ? WW : null
     }
-    const pB = /^(.*)\[rot\[([1-4])$/;
-
-    function qB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const YB = new Map;
-      OB.forEach(((BB, OB) => {
-        let {
-          numAnimStates: GB,
-          animStartIdx: DB
-        } = BB;
-        for (let QB = 1; QB < GB; QB++) YB.set(DB + QB - 1, OB)
-      }));
-      const DB = Object.entries(BB),
-        QB = new Map;
-      for (const [qB, ZB] of DB) {
-        const BB = pB.exec(qB);
-        "1" === BB?.[2] && QB.set(BB[1], ZB + 1)
-      }
-      const oB = BB => {
-          const OB = pB.exec(BB);
-          return OB && QB.has(OB[1]) ? {
-            root: OB[1],
-            rotation: Number(OB[2]) - 1
-          } : null
+  },
+  7570: (WW, iW, OW) => {
+    OW.d(iW, {
+      B: () => PW,
+      F: () => mW,
+      G: () => xW,
+      K: () => tW,
+      L: () => MW,
+      M: () => ZW,
+      N: () => wW,
+      c: () => AW,
+      d: () => jW,
+      e: () => bW,
+      f: () => lW,
+      g: () => sW,
+      i: () => SW,
+      j: () => cW,
+      n: () => EW,
+      q: () => KW,
+      u: () => NW,
+      x: () => LW
+    });
+    const mW = ["forest", "desert", "water", "night", "cave"];
+    const EW = {
+        full: {
+          width: 3840,
+          height: 2160
         },
-        jB = new Set(DB.map((BB => {
-          let [OB] = BB;
-          return oB(OB)?.root ?? OB
-        }))),
-        yB = (BB, GB) => {
-          const YB = BB.replace(/_?0$/, "");
-          return (OB[GB]?.numAnimStates ?? 0) > 1 && !jB.has(YB) ? YB : BB
+        large: {
+          width: 1920,
+          height: 1080
         },
-        JB = new Map;
-      for (const [pB, qB] of DB) JB.set(qB, yB(oB(pB)?.root ?? pB, qB));
-      const MB = DB.reduce(((BB, OB) => {
-          let [, GB] = OB;
-          return Math.max(BB, GB + 1)
-        }), 0),
-        PB = Array.from({
-          length: MB
-        }, ((BB, OB) => ({
-          id: OB + 1,
-          rotation: 0
-        }))),
-        zB = new Map,
-        lB = new Map;
-      for (const [pB, qB] of DB) {
-        const BB = oB(pB),
-          OB = YB.get(qB);
-        if (void 0 !== OB) {
-          const GB = JB.get(OB);
-          lB.set(pB, {
-            name: pB,
-            texture: GB,
-            kind: "frame"
-          }), BB && !lB.has(BB.root) && lB.set(BB.root, {
-            name: BB.root,
-            texture: GB,
-            kind: "frame"
-          });
-          continue
+        thumb: {
+          width: 640,
+          height: 360
         }
-        const GB = JB.get(qB),
-          DB = BB?.root ?? pB;
-        if (GB !== DB && lB.set(DB, {
-            name: DB,
-            texture: GB,
-            kind: "frame"
-          }), BB) {
-          const OB = QB.get(BB.root);
-          PB[qB] = {
-            id: OB,
-            rotation: BB.rotation
-          }, zB.set(GB, OB), lB.set(pB, {
-            name: pB,
-            texture: GB,
-            kind: "rotation"
-          })
-        } else zB.set(GB, qB + 1)
-      }
-      for (const pB of zB.keys()) lB.delete(pB);
-      for (const [pB, qB] of GB) {
-        const BB = zB.get(qB);
-        void 0 === BB || zB.has(pB) || (zB.set(pB, BB), lB.delete(pB))
-      }
-      return {
-        named: [...zB].sort(((BB, OB) => {
-          let [GB] = BB, [YB] = OB;
-          return GB < YB ? -1 : GB > YB ? 1 : 0
-        })).map((BB => {
-          let [OB, GB] = BB;
-          return {
-            name: OB,
-            id: GB
-          }
-        })),
-        aliases: [...lB.values()],
-        layers: PB
-      }
+      },
+      NW = ["popular", "updated", "newest"],
+      PW = 3,
+      LW = 32,
+      cW = 300;
+
+    function wW(WW, iW) {
+      return WW.slice(0, iW).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const tW = 64,
+      ZW = 512,
+      xW = 18e5;
+
+    function lW(WW) {
+      const iW = WW,
+        OW = null === iW || void 0 === iW ? void 0 : iW.files;
+      return "number" === typeof(null === iW || void 0 === iW ? void 0 : iW.apiVersion) && "string" === typeof iW.name && (null === iW.author || "string" === typeof iW.author) && (void 0 === iW.keepCircleShadows || "boolean" === typeof iW.keepCircleShadows) && "object" === typeof OW && null !== OW && Object.values(OW).every((WW => "string" === typeof WW))
+    }
+    const AW = "Bloxdhub",
+      bW = "https://bloxdhub.com/shaders";
+
+    function jW(WW) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(WW)}`
+    }
+    const UW = "Screenshot generation failed.",
+      kW = "Its screenshots couldn't be generated:";
+
+    function sW(WW) {
+      var iW;
+      return WW === UW || null !== (iW = null === WW || void 0 === WW ? void 0 : WW.startsWith(kW)) && void 0 !== iW && iW
+    }
+
+    function MW(WW, iW) {
+      return `shaderPacks/${WW}/${iW}.json`
+    }
+
+    function KW(WW, iW, OW, mW) {
+      return null === iW.renderId ? SW(WW, iW.baselineVersion, OW, mW) : `${WW}/${function(WW,iW,OW,mW){return`shaderPacks/${WW}/${iW}/${OW}-${mW}.webp`}(iW.packId,iW.renderId,OW,mW)}`
+    }
+
+    function SW(WW, iW, OW, mW) {
+      return `${WW}/${function(WW,iW,OW){return`shaderPacks/baseline/${WW}/${iW}-${OW}.webp`}(iW,OW,mW)}`
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

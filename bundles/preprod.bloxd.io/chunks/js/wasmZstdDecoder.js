@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var BB = __webpack_require__.u,
-        OB = __webpack_require__.e,
-        GB = {},
-        YB = {};
-      __webpack_require__.u = function(OB) {
-        return BB(OB) + (GB.hasOwnProperty(OB) ? "?" + GB[OB] : "")
-      }, __webpack_require__.e = function(DB) {
-        return OB(DB).catch((function(OB) {
-          var QB = YB.hasOwnProperty(DB) ? YB[DB] : 4;
-          if (QB < 1) {
-            var oB = BB(DB);
-            if (OB.message = "Loading chunk " + DB + " failed after 4 retries.\n(" + oB + ")", OB.request = oB, GB[DB] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete YB[DB]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === OB.code) {
-              var jB = __webpack_require__.miniCssF(DB);
-              OB.message = OB.message.replace("Loading chunk", "Loading CSS chunk").replace(oB, jB), OB.request = jB
+      var WW = __webpack_require__.u,
+        iW = __webpack_require__.e,
+        OW = {},
+        mW = {};
+      __webpack_require__.u = function(iW) {
+        return WW(iW) + (OW.hasOwnProperty(iW) ? "?" + OW[iW] : "")
+      }, __webpack_require__.e = function(EW) {
+        return iW(EW).catch((function(iW) {
+          var NW = mW.hasOwnProperty(EW) ? mW[EW] : 4;
+          if (NW < 1) {
+            var PW = WW(EW);
+            if (iW.message = "Loading chunk " + EW + " failed after 4 retries.\n(" + PW + ")", iW.request = PW, OW[EW] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete mW[EW]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === iW.code) {
+              var LW = __webpack_require__.miniCssF(EW);
+              iW.message = iW.message.replace("Loading chunk", "Loading CSS chunk").replace(PW, LW), iW.request = LW
             }
-            throw OB
+            throw iW
           }
-          return new Promise((function(BB) {
-            var OB = 4 - QB + 1;
+          return new Promise((function(WW) {
+            var iW = 4 - NW + 1;
             setTimeout((function() {
-              var OB = "cache-bust=" + Date.now();
-              GB[DB] = OB, YB[DB] = QB - 1, BB(__webpack_require__.e(DB))
-            }), function(BB) {
-              return 500 * Math.pow(2, BB)
-            }(OB))
+              var iW = "cache-bust=" + Date.now();
+              OW[EW] = iW, mW[EW] = NW - 1, WW(__webpack_require__.e(EW))
+            }), function(WW) {
+              return 500 * Math.pow(2, WW)
+            }(iW))
           }))
         }))
       }
     }
   })();
 
-  function BB(BB) {
-    return BB instanceof Error ? BB.message : String(BB)
+  function WW(WW) {
+    return WW instanceof Error ? WW.message : String(WW)
   }
-  const OB = ArrayBuffer,
-    GB = Uint8Array,
-    YB = Uint16Array,
-    DB = Int16Array,
-    QB = Int32Array,
-    oB = (BB, OB, YB) => {
-      if (GB.prototype.slice) return GB.prototype.slice.call(BB, OB, YB);
-      (null == OB || OB < 0) && (OB = 0), (null == YB || YB > BB.length) && (YB = BB.length);
-      const DB = new GB(YB - OB);
-      return DB.set(BB.subarray(OB, YB)), DB
+  const iW = ArrayBuffer,
+    OW = Uint8Array,
+    mW = Uint16Array,
+    EW = Int16Array,
+    NW = Int32Array,
+    PW = (WW, iW, mW) => {
+      if (OW.prototype.slice) return OW.prototype.slice.call(WW, iW, mW);
+      (null == iW || iW < 0) && (iW = 0), (null == mW || mW > WW.length) && (mW = WW.length);
+      const EW = new OW(mW - iW);
+      return EW.set(WW.subarray(iW, mW)), EW
     },
-    jB = (BB, OB, YB, DB) => {
-      if (GB.prototype.fill) return GB.prototype.fill.call(BB, OB, YB, DB);
-      for ((null == YB || YB < 0) && (YB = 0), (null == DB || DB > BB.length) && (DB = BB.length); YB < DB; ++YB) BB[YB] = OB;
-      return BB
+    LW = (WW, iW, mW, EW) => {
+      if (OW.prototype.fill) return OW.prototype.fill.call(WW, iW, mW, EW);
+      for ((null == mW || mW < 0) && (mW = 0), (null == EW || EW > WW.length) && (EW = WW.length); mW < EW; ++mW) WW[mW] = iW;
+      return WW
     },
-    yB = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    JB = (BB, OB, GB) => {
-      const YB = new Error(OB || yB[BB]);
-      if (YB.code = BB, Error.captureStackTrace && Error.captureStackTrace(YB, JB), !GB) throw YB;
-      return YB
+    cW = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    wW = (WW, iW, OW) => {
+      const mW = new Error(iW || cW[WW]);
+      if (mW.code = WW, Error.captureStackTrace && Error.captureStackTrace(mW, wW), !OW) throw mW;
+      return mW
     },
-    MB = (BB, OB, GB) => {
-      let YB = 0,
-        DB = 0;
-      for (; YB < GB; ++YB) DB |= BB[OB++] << (YB << 3);
-      return DB
+    tW = (WW, iW, OW) => {
+      let mW = 0,
+        EW = 0;
+      for (; mW < OW; ++mW) EW |= WW[iW++] << (mW << 3);
+      return EW
     },
-    PB = (BB, OB) => {
-      const YB = BB[0] | BB[1] << 8 | BB[2] << 16;
-      if (3126568 == YB && 253 == BB[3]) {
-        const YB = BB[4],
-          DB = YB >> 5 & 1,
-          oB = YB >> 2 & 1,
-          jB = 3 & YB,
-          yB = YB >> 6;
-        8 & YB && JB(0);
-        let PB = 6 - DB;
-        const zB = 3 == jB ? 4 : jB,
-          lB = MB(BB, PB, zB);
-        PB += zB;
-        const pB = yB ? 1 << yB : DB,
-          qB = MB(BB, PB, pB) + (1 == yB && 256);
-        let ZB = qB;
-        if (!DB) {
-          const OB = 1 << 10 + (BB[5] >> 3);
-          ZB = OB + (OB >> 3) * (7 & BB[5])
+    ZW = (WW, iW) => {
+      const mW = WW[0] | WW[1] << 8 | WW[2] << 16;
+      if (3126568 == mW && 253 == WW[3]) {
+        const mW = WW[4],
+          EW = mW >> 5 & 1,
+          PW = mW >> 2 & 1,
+          LW = 3 & mW,
+          cW = mW >> 6;
+        8 & mW && wW(0);
+        let ZW = 6 - EW;
+        const xW = 3 == LW ? 4 : LW,
+          lW = tW(WW, ZW, xW);
+        ZW += xW;
+        const AW = cW ? 1 << cW : EW,
+          bW = tW(WW, ZW, AW) + (1 == cW && 256);
+        let jW = bW;
+        if (!EW) {
+          const iW = 1 << 10 + (WW[5] >> 3);
+          jW = iW + (iW >> 3) * (7 & WW[5])
         }
-        ZB > 2145386496 && JB(1);
-        const NB = new GB((1 == OB ? qB || ZB : OB ? 0 : ZB) + 12);
-        return NB[0] = 1, NB[4] = 4, NB[8] = 8, {
-          b: PB + pB,
+        jW > 2145386496 && wW(1);
+        const UW = new OW((1 == iW ? bW || jW : iW ? 0 : jW) + 12);
+        return UW[0] = 1, UW[4] = 4, UW[8] = 8, {
+          b: ZW + AW,
           y: 0,
           l: 0,
-          d: lB,
-          w: OB && 1 != OB ? OB : NB.subarray(12),
-          e: ZB,
-          o: new QB(NB.buffer, 0, 3),
-          u: qB,
-          c: oB,
-          m: Math.min(131072, ZB)
+          d: lW,
+          w: iW && 1 != iW ? iW : UW.subarray(12),
+          e: jW,
+          o: new NW(UW.buffer, 0, 3),
+          u: bW,
+          c: PW,
+          m: Math.min(131072, jW)
         }
       }
-      if (25481893 == (YB >> 4 | BB[3] << 20)) return 8 + (((DB = BB)[oB = 4] | DB[oB + 1] << 8 | DB[oB + 2] << 16 | DB[oB + 3] << 24) >>> 0);
-      var DB, oB;
-      JB(0)
+      if (25481893 == (mW >> 4 | WW[3] << 20)) return 8 + (((EW = WW)[PW = 4] | EW[PW + 1] << 8 | EW[PW + 2] << 16 | EW[PW + 3] << 24) >>> 0);
+      var EW, PW;
+      wW(0)
     },
-    zB = BB => {
-      let OB = 0;
-      for (; 1 << OB <= BB; ++OB);
-      return OB - 1
+    xW = WW => {
+      let iW = 0;
+      for (; 1 << iW <= WW; ++iW);
+      return iW - 1
     },
-    lB = (BB, QB, oB) => {
-      let jB = 4 + (QB << 3);
-      const yB = 5 + (15 & BB[QB]);
-      yB > oB && JB(3);
-      const MB = 1 << yB;
-      let PB = MB,
-        lB = -1,
-        pB = -1,
-        qB = -1,
-        ZB = MB;
-      const NB = new OB(512 + (MB << 2)),
-        RB = new DB(NB, 0, 256),
-        WB = new YB(NB, 0, 256),
-        AB = new YB(NB, 512, MB),
-        VB = 512 + (MB << 1),
-        SB = new GB(NB, VB, MB),
-        nB = new GB(NB, VB + MB);
-      for (; lB < 255 && PB > 0;) {
-        const OB = zB(PB + 1),
-          GB = jB >> 3,
-          YB = (1 << OB + 1) - 1;
-        let DB = (BB[GB] | BB[GB + 1] << 8 | BB[GB + 2] << 16) >> (7 & jB) & YB;
-        const QB = (1 << OB) - 1,
-          oB = YB - PB - 1,
-          yB = DB & QB;
-        if (yB < oB ? (jB += OB, DB = yB) : (jB += OB + 1, DB > QB && (DB -= oB)), RB[++lB] = --DB, -1 == DB ? (PB += DB, SB[--ZB] = lB) : PB -= DB, !DB)
+    lW = (WW, NW, PW) => {
+      let LW = 4 + (NW << 3);
+      const cW = 5 + (15 & WW[NW]);
+      cW > PW && wW(3);
+      const tW = 1 << cW;
+      let ZW = tW,
+        lW = -1,
+        AW = -1,
+        bW = -1,
+        jW = tW;
+      const UW = new iW(512 + (tW << 2)),
+        kW = new EW(UW, 0, 256),
+        sW = new mW(UW, 0, 256),
+        MW = new mW(UW, 512, tW),
+        KW = 512 + (tW << 1),
+        SW = new OW(UW, KW, tW),
+        YW = new OW(UW, KW + tW);
+      for (; lW < 255 && ZW > 0;) {
+        const iW = xW(ZW + 1),
+          OW = LW >> 3,
+          mW = (1 << iW + 1) - 1;
+        let EW = (WW[OW] | WW[OW + 1] << 8 | WW[OW + 2] << 16) >> (7 & LW) & mW;
+        const NW = (1 << iW) - 1,
+          PW = mW - ZW - 1,
+          cW = EW & NW;
+        if (cW < PW ? (LW += iW, EW = cW) : (LW += iW + 1, EW > NW && (EW -= PW)), kW[++lW] = --EW, -1 == EW ? (ZW += EW, SW[--jW] = lW) : ZW -= EW, !EW)
           do {
-            const OB = jB >> 3;
-            pB = (BB[OB] | BB[OB + 1] << 8) >> (7 & jB) & 3, jB += 2, lB += pB
-          } while (3 == pB)
-      }(lB > 255 || PB) && JB(0);
-      let UB = 0;
-      const fB = (MB >> 1) + (MB >> 3) + 3,
-        kB = MB - 1;
-      for (let OB = 0; OB <= lB; ++OB) {
-        const BB = RB[OB];
-        if (BB < 1) WB[OB] = -BB;
+            const iW = LW >> 3;
+            AW = (WW[iW] | WW[iW + 1] << 8) >> (7 & LW) & 3, LW += 2, lW += AW
+          } while (3 == AW)
+      }(lW > 255 || ZW) && wW(0);
+      let yW = 0;
+      const TW = (tW >> 1) + (tW >> 3) + 3,
+        JW = tW - 1;
+      for (let iW = 0; iW <= lW; ++iW) {
+        const WW = kW[iW];
+        if (WW < 1) sW[iW] = -WW;
         else
-          for (qB = 0; qB < BB; ++qB) {
-            SB[UB] = OB;
+          for (bW = 0; bW < WW; ++bW) {
+            SW[yW] = iW;
             do {
-              UB = UB + fB & kB
-            } while (UB >= ZB)
+              yW = yW + TW & JW
+            } while (yW >= jW)
           }
       }
-      for (UB && JB(0), qB = 0; qB < MB; ++qB) {
-        const BB = WB[SB[qB]]++,
-          OB = nB[qB] = yB - zB(BB);
-        AB[qB] = (BB << OB) - MB
+      for (yW && wW(0), bW = 0; bW < tW; ++bW) {
+        const WW = sW[SW[bW]]++,
+          iW = YW[bW] = cW - xW(WW);
+        MW[bW] = (WW << iW) - tW
       }
-      return [jB + 7 >> 3, {
-        b: yB,
-        s: SB,
-        n: nB,
-        t: AB
+      return [LW + 7 >> 3, {
+        b: cW,
+        s: SW,
+        n: YW,
+        t: MW
       }]
     },
-    pB = lB(new GB([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    qB = lB(new GB([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    ZB = lB(new GB([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    NB = (BB, OB) => {
-      const GB = BB.length,
-        YB = new QB(GB);
-      for (let DB = 0; DB < GB; ++DB) YB[DB] = OB, OB += 1 << BB[DB];
-      return YB
+    AW = lW(new OW([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    bW = lW(new OW([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    jW = lW(new OW([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    UW = (WW, iW) => {
+      const OW = WW.length,
+        mW = new NW(OW);
+      for (let EW = 0; EW < OW; ++EW) mW[EW] = iW, iW += 1 << WW[EW];
+      return mW
     },
-    RB = new GB(new QB([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    WB = NB(RB, 0),
-    AB = new GB(new QB([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    VB = NB(AB, 3),
-    SB = (BB, OB, GB) => {
-      const YB = BB.length,
-        DB = OB.length,
-        QB = BB[YB - 1],
-        oB = (1 << GB.b) - 1,
-        jB = -GB.b;
-      QB || JB(0);
-      let yB = 0,
-        MB = GB.b,
-        PB = (YB << 3) - 8 + zB(QB) - MB,
-        lB = -1;
-      for (; PB > jB && lB < DB;) {
-        const YB = PB >> 3;
-        yB = (yB << MB | (BB[YB] | BB[YB + 1] << 8 | BB[YB + 2] << 16) >> (7 & PB)) & oB, OB[++lB] = GB.s[yB], PB -= MB = GB.n[yB]
+    kW = new OW(new NW([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    sW = UW(kW, 0),
+    MW = new OW(new NW([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    KW = UW(MW, 3),
+    SW = (WW, iW, OW) => {
+      const mW = WW.length,
+        EW = iW.length,
+        NW = WW[mW - 1],
+        PW = (1 << OW.b) - 1,
+        LW = -OW.b;
+      NW || wW(0);
+      let cW = 0,
+        tW = OW.b,
+        ZW = (mW << 3) - 8 + xW(NW) - tW,
+        lW = -1;
+      for (; ZW > LW && lW < EW;) {
+        const mW = ZW >> 3;
+        cW = (cW << tW | (WW[mW] | WW[mW + 1] << 8 | WW[mW + 2] << 16) >> (7 & ZW)) & PW, iW[++lW] = OW.s[cW], ZW -= tW = OW.n[cW]
       }
-      PB == jB && lB + 1 == DB || JB(0)
+      ZW == LW && lW + 1 == EW || wW(0)
     },
-    nB = (BB, OB, GB) => {
-      let YB = 6;
-      const DB = OB.length + 3 >> 2,
-        QB = DB << 1,
-        oB = DB + QB;
-      SB(BB.subarray(YB, YB += BB[0] | BB[1] << 8), OB.subarray(0, DB), GB), SB(BB.subarray(YB, YB += BB[2] | BB[3] << 8), OB.subarray(DB, QB), GB), SB(BB.subarray(YB, YB += BB[4] | BB[5] << 8), OB.subarray(QB, oB), GB), SB(BB.subarray(YB), OB.subarray(oB), GB)
+    YW = (WW, iW, OW) => {
+      let mW = 6;
+      const EW = iW.length + 3 >> 2,
+        NW = EW << 1,
+        PW = EW + NW;
+      SW(WW.subarray(mW, mW += WW[0] | WW[1] << 8), iW.subarray(0, EW), OW), SW(WW.subarray(mW, mW += WW[2] | WW[3] << 8), iW.subarray(EW, NW), OW), SW(WW.subarray(mW, mW += WW[4] | WW[5] << 8), iW.subarray(NW, PW), OW), SW(WW.subarray(mW), iW.subarray(PW), OW)
     },
-    UB = (BB, OB, DB) => {
-      let QB = OB.b;
-      const yB = BB[QB],
-        MB = yB >> 1 & 3;
-      OB.l = 1 & yB;
-      const PB = yB >> 3 | BB[QB + 1] << 5 | BB[QB + 2] << 13,
-        NB = (QB += 3) + PB;
-      if (1 == MB) {
-        if (QB >= BB.length) return;
-        return OB.b = QB + 1, DB ? (jB(DB, BB[QB], OB.y, OB.y += PB), DB) : jB(new GB(PB), BB[QB])
+    yW = (WW, iW, EW) => {
+      let NW = iW.b;
+      const cW = WW[NW],
+        tW = cW >> 1 & 3;
+      iW.l = 1 & cW;
+      const ZW = cW >> 3 | WW[NW + 1] << 5 | WW[NW + 2] << 13,
+        UW = (NW += 3) + ZW;
+      if (1 == tW) {
+        if (NW >= WW.length) return;
+        return iW.b = NW + 1, EW ? (LW(EW, WW[NW], iW.y, iW.y += ZW), EW) : LW(new OW(ZW), WW[NW])
       }
-      if (!(NB > BB.length)) {
-        if (0 == MB) return OB.b = NB, DB ? (DB.set(BB.subarray(QB, NB), OB.y), OB.y += PB, DB) : oB(BB, QB, NB);
-        if (2 == MB) {
-          const yB = BB[QB],
-            MB = 3 & yB,
-            PB = yB >> 2 & 3;
-          let UB = yB >> 4,
-            fB = 0,
-            kB = 0;
-          MB < 2 ? 1 & PB ? UB |= BB[++QB] << 4 | (2 & PB && BB[++QB] << 12) : UB = yB >> 3 : (kB = PB, PB < 2 ? (UB |= (63 & BB[++QB]) << 4, fB = BB[QB] >> 6 | BB[++QB] << 2) : 2 == PB ? (UB |= BB[++QB] << 4 | (3 & BB[++QB]) << 12, fB = BB[QB] >> 2 | BB[++QB] << 6) : (UB |= BB[++QB] << 4 | (63 & BB[++QB]) << 12, fB = BB[QB] >> 6 | BB[++QB] << 2 | BB[++QB] << 10)), ++QB;
-          let dB = DB ? DB.subarray(OB.y, OB.y + OB.m) : new GB(OB.m),
-            KB = dB.length - UB;
-          if (KB < 0 && JB(0), 0 == MB) dB.set(BB.subarray(QB, QB += UB), KB);
-          else if (1 == MB) jB(dB, BB[QB++], KB);
+      if (!(UW > WW.length)) {
+        if (0 == tW) return iW.b = UW, EW ? (EW.set(WW.subarray(NW, UW), iW.y), iW.y += ZW, EW) : PW(WW, NW, UW);
+        if (2 == tW) {
+          const cW = WW[NW],
+            tW = 3 & cW,
+            ZW = cW >> 2 & 3;
+          let yW = cW >> 4,
+            TW = 0,
+            JW = 0;
+          tW < 2 ? 1 & ZW ? yW |= WW[++NW] << 4 | (2 & ZW && WW[++NW] << 12) : yW = cW >> 3 : (JW = ZW, ZW < 2 ? (yW |= (63 & WW[++NW]) << 4, TW = WW[NW] >> 6 | WW[++NW] << 2) : 2 == ZW ? (yW |= WW[++NW] << 4 | (3 & WW[++NW]) << 12, TW = WW[NW] >> 2 | WW[++NW] << 6) : (yW |= WW[++NW] << 4 | (63 & WW[++NW]) << 12, TW = WW[NW] >> 6 | WW[++NW] << 2 | WW[++NW] << 10)), ++NW;
+          let hW = EW ? EW.subarray(iW.y, iW.y + iW.m) : new OW(iW.m),
+            HW = hW.length - yW;
+          if (HW < 0 && wW(0), 0 == tW) hW.set(WW.subarray(NW, NW += yW), HW);
+          else if (1 == tW) LW(hW, WW[NW++], HW);
           else {
-            let DB = OB.h;
-            if (2 == MB) {
-              const oB = ((BB, OB) => {
-                let DB = 0,
-                  QB = -1;
-                const oB = new GB(292),
-                  yB = BB[OB],
-                  MB = oB.subarray(0, 256),
-                  PB = oB.subarray(256, 268),
-                  pB = new YB(oB.buffer, 268);
-                if (yB < 128) {
-                  const [GB, YB] = lB(BB, OB + 1, 6), DB = GB << 3, oB = BB[OB += yB];
-                  oB || JB(0);
-                  let jB = 0,
-                    PB = 0,
-                    pB = YB.b,
-                    qB = pB,
-                    ZB = (++OB << 3) - 8 + zB(oB);
-                  for (; QB > 254 && JB(0), ZB -= pB, !(ZB < DB);) {
-                    let OB = ZB >> 3;
-                    if (jB += (BB[OB] | BB[OB + 1] << 8) >> (7 & ZB) & (1 << pB) - 1, MB[++QB] = YB.s[jB], ZB -= qB, ZB < DB) break;
-                    OB = ZB >> 3, PB += (BB[OB] | BB[OB + 1] << 8) >> (7 & ZB) & (1 << qB) - 1, MB[++QB] = YB.s[PB], pB = YB.n[jB], jB = YB.t[jB], qB = YB.n[PB], PB = YB.t[PB]
-                  }++QB > 255 && JB(0)
+            let EW = iW.h;
+            if (2 == tW) {
+              const PW = ((WW, iW) => {
+                let EW = 0,
+                  NW = -1;
+                const PW = new OW(292),
+                  cW = WW[iW],
+                  tW = PW.subarray(0, 256),
+                  ZW = PW.subarray(256, 268),
+                  AW = new mW(PW.buffer, 268);
+                if (cW < 128) {
+                  const [OW, mW] = lW(WW, iW + 1, 6), EW = OW << 3, PW = WW[iW += cW];
+                  PW || wW(0);
+                  let LW = 0,
+                    ZW = 0,
+                    AW = mW.b,
+                    bW = AW,
+                    jW = (++iW << 3) - 8 + xW(PW);
+                  for (; NW > 254 && wW(0), jW -= AW, !(jW < EW);) {
+                    let iW = jW >> 3;
+                    if (LW += (WW[iW] | WW[iW + 1] << 8) >> (7 & jW) & (1 << AW) - 1, tW[++NW] = mW.s[LW], jW -= bW, jW < EW) break;
+                    iW = jW >> 3, ZW += (WW[iW] | WW[iW + 1] << 8) >> (7 & jW) & (1 << bW) - 1, tW[++NW] = mW.s[ZW], AW = mW.n[LW], LW = mW.t[LW], bW = mW.n[ZW], ZW = mW.t[ZW]
+                  }++NW > 255 && wW(0)
                 } else {
-                  for (QB = yB - 127; DB < QB; DB += 2) {
-                    const GB = BB[++OB];
-                    MB[DB] = GB >> 4, MB[DB + 1] = 15 & GB
-                  }++OB
+                  for (NW = cW - 127; EW < NW; EW += 2) {
+                    const OW = WW[++iW];
+                    tW[EW] = OW >> 4, tW[EW + 1] = 15 & OW
+                  }++iW
                 }
-                let qB = 0;
-                for (DB = 0; DB < QB; ++DB) {
-                  const BB = MB[DB];
-                  BB > 11 && JB(0), qB += BB && 1 << BB - 1
+                let bW = 0;
+                for (EW = 0; EW < NW; ++EW) {
+                  const WW = tW[EW];
+                  WW > 11 && wW(0), bW += WW && 1 << WW - 1
                 }
-                const ZB = zB(qB) + 1,
-                  NB = 1 << ZB,
-                  RB = NB - qB;
-                for (RB & RB - 1 && JB(0), MB[QB++] = zB(RB) + 1, DB = 0; DB < QB; ++DB) {
-                  const BB = MB[DB];
-                  ++PB[MB[DB] = BB && ZB + 1 - BB]
+                const jW = xW(bW) + 1,
+                  UW = 1 << jW,
+                  kW = UW - bW;
+                for (kW & kW - 1 && wW(0), tW[NW++] = xW(kW) + 1, EW = 0; EW < NW; ++EW) {
+                  const WW = tW[EW];
+                  ++ZW[tW[EW] = WW && jW + 1 - WW]
                 }
-                const WB = new GB(NB << 1),
-                  AB = WB.subarray(0, NB),
-                  VB = WB.subarray(NB);
-                for (pB[ZB] = 0, DB = ZB; DB > 0; --DB) {
-                  const BB = pB[DB];
-                  jB(VB, DB, BB, pB[DB - 1] = BB + PB[DB] * (1 << ZB - DB))
+                const sW = new OW(UW << 1),
+                  MW = sW.subarray(0, UW),
+                  KW = sW.subarray(UW);
+                for (AW[jW] = 0, EW = jW; EW > 0; --EW) {
+                  const WW = AW[EW];
+                  LW(KW, EW, WW, AW[EW - 1] = WW + ZW[EW] * (1 << jW - EW))
                 }
-                for (pB[0] != NB && JB(0), DB = 0; DB < QB; ++DB) {
-                  const BB = MB[DB];
-                  if (BB) {
-                    const OB = pB[BB];
-                    jB(AB, DB, OB, pB[BB] = OB + (1 << ZB - BB))
+                for (AW[0] != UW && wW(0), EW = 0; EW < NW; ++EW) {
+                  const WW = tW[EW];
+                  if (WW) {
+                    const iW = AW[WW];
+                    LW(MW, EW, iW, AW[WW] = iW + (1 << jW - WW))
                   }
                 }
-                return [OB, {
-                  n: VB,
-                  b: ZB,
-                  s: AB
+                return [iW, {
+                  n: KW,
+                  b: jW,
+                  s: MW
                 }]
-              })(BB, QB);
-              fB += QB - (QB = oB[0]), OB.h = DB = oB[1]
-            } else DB || JB(0);
-            (kB ? nB : SB)(BB.subarray(QB, QB += fB), dB.subarray(KB), DB)
+              })(WW, NW);
+              TW += NW - (NW = PW[0]), iW.h = EW = PW[1]
+            } else EW || wW(0);
+            (JW ? YW : SW)(WW.subarray(NW, NW += TW), hW.subarray(HW), EW)
           }
-          let uB = BB[QB++];
-          if (uB) {
-            255 == uB ? uB = 32512 + (BB[QB++] | BB[QB++] << 8) : uB > 127 && (uB = uB - 128 << 8 | BB[QB++]);
-            const jB = BB[QB++];
-            3 & jB && JB(0);
-            const yB = [qB, ZB, pB];
-            for (let DB = 2; DB > -1; --DB) {
-              const oB = jB >> 2 + (DB << 1) & 3;
-              if (1 == oB) {
-                const OB = new GB([0, 0, BB[QB++]]);
-                yB[DB] = {
-                  s: OB.subarray(2, 3),
-                  n: OB.subarray(0, 1),
-                  t: new YB(OB.buffer, 0, 1),
+          let nW = WW[NW++];
+          if (nW) {
+            255 == nW ? nW = 32512 + (WW[NW++] | WW[NW++] << 8) : nW > 127 && (nW = nW - 128 << 8 | WW[NW++]);
+            const LW = WW[NW++];
+            3 & LW && wW(0);
+            const cW = [bW, jW, AW];
+            for (let EW = 2; EW > -1; --EW) {
+              const PW = LW >> 2 + (EW << 1) & 3;
+              if (1 == PW) {
+                const iW = new OW([0, 0, WW[NW++]]);
+                cW[EW] = {
+                  s: iW.subarray(2, 3),
+                  n: iW.subarray(0, 1),
+                  t: new mW(iW.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == oB ? [QB, yB[DB]] = lB(BB, QB, 9 - (1 & DB)) : 3 == oB && (OB.t || JB(0), yB[DB] = OB.t[DB])
+              } else 2 == PW ? [NW, cW[EW]] = lW(WW, NW, 9 - (1 & EW)) : 3 == PW && (iW.t || wW(0), cW[EW] = iW.t[EW])
             }
-            const [MB, PB, SB] = OB.t = yB, nB = BB[NB - 1];
-            nB || JB(0);
-            let UB = (NB << 3) - 8 + zB(nB) - SB.b,
-              fB = UB >> 3,
-              kB = 0,
-              mB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << SB.b) - 1;
-            fB = (UB -= PB.b) >> 3;
-            let IB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << PB.b) - 1;
-            fB = (UB -= MB.b) >> 3;
-            let FB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << MB.b) - 1;
-            for (++uB; --uB;) {
-              const GB = SB.s[mB],
-                YB = SB.n[mB],
-                DB = MB.s[FB],
-                QB = MB.n[FB],
-                oB = PB.s[IB],
-                jB = PB.n[IB];
-              fB = (UB -= oB) >> 3;
-              const yB = 1 << oB;
-              let zB = yB + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16 | BB[fB + 3] << 24) >>> (7 & UB) & yB - 1);
-              fB = (UB -= AB[DB]) >> 3;
-              let lB = VB[DB] + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16) >> (7 & UB) & (1 << AB[DB]) - 1);
-              fB = (UB -= RB[GB]) >> 3;
-              const pB = WB[GB] + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16) >> (7 & UB) & (1 << RB[GB]) - 1);
-              if ((UB < 0 || KB + pB > dB.length || kB + pB + lB > dB.length) && JB(0), fB = (UB -= YB) >> 3, mB = SB.t[mB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << YB) - 1), fB = (UB -= QB) >> 3, FB = MB.t[FB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << QB) - 1), fB = (UB -= jB) >> 3, IB = PB.t[IB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << jB) - 1), zB > 3) OB.o[2] = OB.o[1], OB.o[1] = OB.o[0], OB.o[0] = zB -= 3;
+            const [tW, ZW, SW] = iW.t = cW, YW = WW[UW - 1];
+            YW || wW(0);
+            let yW = (UW << 3) - 8 + xW(YW) - SW.b,
+              TW = yW >> 3,
+              JW = 0,
+              uW = (WW[TW] | WW[TW + 1] << 8) >> (7 & yW) & (1 << SW.b) - 1;
+            TW = (yW -= ZW.b) >> 3;
+            let oW = (WW[TW] | WW[TW + 1] << 8) >> (7 & yW) & (1 << ZW.b) - 1;
+            TW = (yW -= tW.b) >> 3;
+            let dW = (WW[TW] | WW[TW + 1] << 8) >> (7 & yW) & (1 << tW.b) - 1;
+            for (++nW; --nW;) {
+              const OW = SW.s[uW],
+                mW = SW.n[uW],
+                EW = tW.s[dW],
+                NW = tW.n[dW],
+                PW = ZW.s[oW],
+                LW = ZW.n[oW];
+              TW = (yW -= PW) >> 3;
+              const cW = 1 << PW;
+              let xW = cW + ((WW[TW] | WW[TW + 1] << 8 | WW[TW + 2] << 16 | WW[TW + 3] << 24) >>> (7 & yW) & cW - 1);
+              TW = (yW -= MW[EW]) >> 3;
+              let lW = KW[EW] + ((WW[TW] | WW[TW + 1] << 8 | WW[TW + 2] << 16) >> (7 & yW) & (1 << MW[EW]) - 1);
+              TW = (yW -= kW[OW]) >> 3;
+              const AW = sW[OW] + ((WW[TW] | WW[TW + 1] << 8 | WW[TW + 2] << 16) >> (7 & yW) & (1 << kW[OW]) - 1);
+              if ((yW < 0 || HW + AW > hW.length || JW + AW + lW > hW.length) && wW(0), TW = (yW -= mW) >> 3, uW = SW.t[uW] + ((WW[TW] | WW[TW + 1] << 8) >> (7 & yW) & (1 << mW) - 1), TW = (yW -= NW) >> 3, dW = tW.t[dW] + ((WW[TW] | WW[TW + 1] << 8) >> (7 & yW) & (1 << NW) - 1), TW = (yW -= LW) >> 3, oW = ZW.t[oW] + ((WW[TW] | WW[TW + 1] << 8) >> (7 & yW) & (1 << LW) - 1), xW > 3) iW.o[2] = iW.o[1], iW.o[1] = iW.o[0], iW.o[0] = xW -= 3;
               else {
-                const BB = zB - (0 != pB);
-                BB ? (zB = 3 == BB ? OB.o[0] - 1 : OB.o[BB], BB > 1 && (OB.o[2] = OB.o[1]), OB.o[1] = OB.o[0], OB.o[0] = zB) : zB = OB.o[0]
+                const WW = xW - (0 != AW);
+                WW ? (xW = 3 == WW ? iW.o[0] - 1 : iW.o[WW], WW > 1 && (iW.o[2] = iW.o[1]), iW.o[1] = iW.o[0], iW.o[0] = xW) : xW = iW.o[0]
               }
-              for (let BB = 0; BB < pB; ++BB) dB[kB + BB] = dB[KB + BB];
-              kB += pB, KB += pB;
-              let qB = kB - zB;
-              if (qB < 0) {
-                let BB = -qB;
-                const GB = OB.e + qB;
-                GB < 0 && JB(4), BB > lB && (BB = lB);
-                for (let YB = 0; YB < BB; ++YB) dB[kB + YB] = OB.w[GB + YB];
-                kB += BB, lB -= BB, qB = 0
+              for (let WW = 0; WW < AW; ++WW) hW[JW + WW] = hW[HW + WW];
+              JW += AW, HW += AW;
+              let bW = JW - xW;
+              if (bW < 0) {
+                let WW = -bW;
+                const OW = iW.e + bW;
+                OW < 0 && wW(4), WW > lW && (WW = lW);
+                for (let mW = 0; mW < WW; ++mW) hW[JW + mW] = iW.w[OW + mW];
+                JW += WW, lW -= WW, bW = 0
               }
-              for (let BB = 0; BB < lB; ++BB) dB[kB + BB] = dB[qB + BB];
-              kB += lB
+              for (let WW = 0; WW < lW; ++WW) hW[JW + WW] = hW[bW + WW];
+              JW += lW
             }
-            if (kB != KB)
-              for (; KB < dB.length;) dB[kB++] = dB[KB++];
-            else kB = dB.length;
-            DB ? OB.y += kB : dB = oB(dB, 0, kB)
-          } else if (DB) {
-            if (OB.y += UB, KB)
-              for (let BB = 0; BB < UB; ++BB) dB[BB] = dB[KB + BB]
-          } else KB && (dB = oB(dB, KB));
-          return OB.b = NB, dB
+            if (JW != HW)
+              for (; HW < hW.length;) hW[JW++] = hW[HW++];
+            else JW = hW.length;
+            EW ? iW.y += JW : hW = PW(hW, 0, JW)
+          } else if (EW) {
+            if (iW.y += yW, HW)
+              for (let WW = 0; WW < yW; ++WW) hW[WW] = hW[HW + WW]
+          } else HW && (hW = PW(hW, HW));
+          return iW.b = UW, hW
         }
-        JB(2)
+        wW(2)
       }
     };
-  class fB {
+  class TW {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    sJ = 0;
+    BL = 0;
     needed = 18;
     size;
-    constructor(BB) {
-      this.size = BB
+    constructor(WW) {
+      this.size = WW
     }
-    push(BB) {
+    push(WW) {
       if (this.done) return;
-      if (this.parts.push(BB), this.sJ += BB.length, this.sJ < this.needed) return;
-      const OB = ((BB, OB) => {
-        if (1 == BB.length) return BB[0];
-        const YB = new GB(OB);
-        for (let GB = 0, DB = 0; GB < BB.length; ++GB) {
-          const OB = BB[GB];
-          YB.set(OB, DB), DB += OB.length
+      if (this.parts.push(WW), this.BL += WW.length, this.BL < this.needed) return;
+      const iW = ((WW, iW) => {
+        if (1 == WW.length) return WW[0];
+        const mW = new OW(iW);
+        for (let OW = 0, EW = 0; OW < WW.length; ++OW) {
+          const iW = WW[OW];
+          mW.set(iW, EW), EW += iW.length
         }
-        return YB
-      })(this.parts, this.sJ);
-      let YB = this.st;
-      if (!YB) {
-        const BB = PB(OB, new GB(0));
-        "number" != typeof BB && BB.u === this.size || JB(0, `not a zstd frame of ${this.size} bytes`), YB = this.st = PB(OB, 1), YB.e = 0, this.output = YB.w
+        return mW
+      })(this.parts, this.BL);
+      let mW = this.st;
+      if (!mW) {
+        const WW = ZW(iW, new OW(0));
+        "number" != typeof WW && WW.u === this.size || wW(0, `not a zstd frame of ${this.size} bytes`), mW = this.st = ZW(iW, 1), mW.e = 0, this.output = mW.w
       }
       for (;;) {
-        const BB = OB.length - YB.b;
-        if (BB < 3) {
+        const WW = iW.length - mW.b;
+        if (WW < 3) {
           this.needed = 3;
           break
         }
-        const GB = OB[YB.b],
-          DB = GB >> 1 & 3;
-        3 == DB && JB(2);
-        const QB = GB >> 3 | OB[YB.b + 1] << 5 | OB[YB.b + 2] << 13;
-        QB > YB.m && JB(0), 0 == DB && YB.y + QB > YB.u && JB(0);
-        const oB = 1 == DB ? 4 : 3 + QB;
-        if (BB < oB) {
-          this.needed = oB;
+        const OW = iW[mW.b],
+          EW = OW >> 1 & 3;
+        3 == EW && wW(2);
+        const NW = OW >> 3 | iW[mW.b + 1] << 5 | iW[mW.b + 2] << 13;
+        NW > mW.m && wW(0), 0 == EW && mW.y + NW > mW.u && wW(0);
+        const PW = 1 == EW ? 4 : 3 + NW;
+        if (WW < PW) {
+          this.needed = PW;
           break
         }
-        if (UB(OB, YB, YB.w) || JB(5), YB.e = YB.y, (YB.y > YB.u || YB.l && YB.y != YB.u) && JB(0), YB.l) {
+        if (yW(iW, mW, mW.w) || wW(5), mW.e = mW.y, (mW.y > mW.u || mW.l && mW.y != mW.u) && wW(0), mW.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = YB.y;
-      const DB = OB.subarray(YB.b);
-      this.parts = DB.length ? [DB] : [], this.sJ = DB.length, YB.b = 0
+      this.decoded = mW.y;
+      const EW = iW.subarray(mW.b);
+      this.parts = EW.length ? [EW] : [], this.BL = EW.length, mW.b = 0
     }
   }
-  class kB {
+  class JW {
     post;
     href = "";
-    yP = null;
+    tZ = null;
     given = 0;
     stopped = !1;
-    constructor(BB) {
-      this.post = BB
+    constructor(WW) {
+      this.post = WW
     }
-    take(OB) {
+    take(iW) {
       if (!this.stopped) try {
-        this.answer(OB)
-      } catch (GB) {
-        this.stop(GB instanceof RangeError ? `out of memory decoding ${this.href}: ${BB(GB)}` : `${this.href} did not decode: ${BB(GB)}`)
+        this.answer(iW)
+      } catch (OW) {
+        this.stop(OW instanceof RangeError ? `out of memory decoding ${this.href}: ${WW(OW)}` : `${this.href} did not decode: ${WW(OW)}`)
       }
     }
-    answer(BB) {
-      if (null === this.yP) {
-        const [OB, GB] = BB;
-        return this.href = OB, void(this.yP = new fB(GB))
+    answer(WW) {
+      if (null === this.tZ) {
+        const [iW, OW] = WW;
+        return this.href = iW, void(this.tZ = new TW(OW))
       }
-      if (null === BB) return void this.stop(`${this.href} ended before its module did`);
-      const OB = this.yP;
-      OB.push(BB);
+      if (null === WW) return void this.stop(`${this.href} ended before its module did`);
+      const iW = this.tZ;
+      iW.push(WW);
       const {
-        output: GB,
-        decoded: YB
-      } = OB;
-      if (null !== GB && YB > this.given) {
-        const BB = GB.slice(this.given, YB).buffer;
-        this.given = YB, this.post(BB, [BB])
+        output: OW,
+        decoded: mW
+      } = iW;
+      if (null !== OW && mW > this.given) {
+        const WW = OW.slice(this.given, mW).buffer;
+        this.given = mW, this.post(WW, [WW])
       }
-      OB.done && this.stop(!0)
+      iW.done && this.stop(!0)
     }
-    stop(BB) {
-      this.stopped = !0, this.post(BB)
+    stop(WW) {
+      this.stopped = !0, this.post(WW)
     }
   }
-  const dB = globalThis.WorkerGlobalScope;
-  if (void 0 !== dB && globalThis instanceof dB) {
-    const BB = globalThis,
-      OB = new kB((function(OB) {
-        let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        BB.postMessage(OB, GB)
+  const hW = globalThis.WorkerGlobalScope;
+  if (void 0 !== hW && globalThis instanceof hW) {
+    const WW = globalThis,
+      iW = new JW((function(iW) {
+        let OW = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        WW.postMessage(iW, OW)
       }));
-    BB.addEventListener("message", (BB => {
+    WW.addEventListener("message", (WW => {
       let {
-        data: GB
-      } = BB;
-      OB.take(GB)
+        data: OW
+      } = WW;
+      iW.take(OW)
     }))
   }
 })();

@@ -1,37 +1,46 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  9690: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      pageBody: () => YB
+  10229: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      pageBody: () => mW
     });
-    const YB = {
-      whatIs: ["Your own little slice of the world to shape, share and show off. Bloxd Plots gives every player their own plot in a shared creative world. Each plot starts out completely blank, so you can build whatever you like with whoever you like. It's different from the open world of Bloxd Creative because your plot really is yours. Only you and the players you add can change it."],
-      howToPlay: ["Join Plots and claim a plot. Each one is a 91\xd791 block build area, with 5-block-wide roads between the plots. There's no height limit, so build as tall as you dare. You're in creative mode, which means no health to worry about and nothing stopping you from building.", "Want to build with friends? Add them to your plot and they can build with you, or use Go To Shared Plot to visit plots they've shared with you. You can own up to 5 plots and hop between them. Tp To Plot takes you to any plot in the world if you know its coordinates. Change at least 500 blocks and your plot is saved for good."],
-      features: ["Your Own 91\xd791 Plot to Build On", "Own Up to 5 Plots", "No Height Limit", "Add Friends to Build Together", "Teleport to Any Plot with Coordinates", "Plots Saved Forever Once You've Built Enough", "Spawn Mobs on Your Own Plot"],
-      tips: ["Get to 500 changed blocks quickly, because unsaved plots can be reset", "Add Player to Plot lets a friend build with you", "If you don't want someone editing anymore, use Remove Player from Plot", "Starting something new? Get New Plot gives you a fresh one without losing your old build", "Use Tp To Plot to check out other players' plots for ideas", "Keep your build inside the plot edges, since you can't place blocks on the roads", "Place spawner blocks if you want mobs on your plot"],
-      similarGames: ["classic_creative", "greenville", "classic", "parkourPlace"],
+    const mW = {
+      whatIs: ["Protect your bed, destroy theirs. That's the whole idea of Bedwars, the team PvP strategy mode that's free to play online. Every team starts on its own floating island with a bed to protect. Collect resources, buy gear and team upgrades, then bridge across to the other islands and destroy their beds. Once a team's bed is gone they can't respawn. The last team standing wins. Want every item to come from a Lucky Block instead of the shop? Try Lucky Bedwars."],
+      howToPlay: ["Play Bedwars Solos, Duos, Trios, 4v4, 4v4v4v4 or 1v1. Generators on your island drop Coal, Iron Bars and Diamond. Spend them at the Item Shop on blocks, weapons, armour and tools, or at the Upgrades shopkeeper on team upgrades like Protection, Damage, Feather Falling, Health Regeneration and an Alarm. The generators in the centre of the map drop Diamond and Moonstone for the most powerful items.", "As the match goes on, bed defences are unfortified, the Diamond and Moonstone generators level up, and eventually every bed is destroyed. Then the arena shrinks until only one team is left."],
+      features: ["Solos, Duos, Trios, 4v4v4v4 and 4v4", "Ranked Bedwars Lobby", "Team Upgrades: Protection, Damage, Feather Falling, Health Regeneration and Alarm", "Match Modifiers like Lucky Chaos, Weapon Roulette, Treasure Guardians and Specialists", "Dozens of Maps", "Leaderboards"],
+      tips: ["Rush other teams' beds before they can upgrade their defences", "Split up attack and defence with your team", "Upgrade your gear in the shop before leaving your island", "Bridging backwards is faster than ez bridging", "Fight for the centre generators, because Diamond and Moonstone buy the best gear", "Buy an Alarm so you know when enemies reach your base"],
+      similarGames: ["luckyBedwars", "skywars", "luckyTowers"],
       faq: [{
-        question: "What is Bloxd Plots?",
-        answer: "A building mode where you get your own 91\xd791 plot and can build anything you like in creative mode."
+        question: "What is Bedwars?",
+        answer: "Bedwars is a team PvP strategy game where you protect your bed and destroy everyone else's. Bloxd's version adds team upgrades, match modifiers and a Ranked lobby."
       }, {
-        question: "How do I save my plot in Bloxd Plots?",
-        answer: "Change at least 500 blocks on it. From then on your plot is saved permanently. Plots that haven't been saved yet can be reset."
+        question: "How do you win Bedwars?",
+        answer: "Be the last team standing. Destroy the other teams' beds so they can't respawn, then eliminate them before the arena shrinks."
       }, {
-        question: "How do I build with friends in Bloxd Plots?",
-        answer: "Use Add Player to Plot to give a friend access. They can find it with Go To Shared Plot, and you can remove them whenever you want."
+        question: "What happens after your bed is destroyed?",
+        answer: "You can't respawn. If you die after your bed is gone, you become a spectator."
       }, {
-        question: "Can other players break my build?",
-        answer: "No. Only you and the players you've added can change blocks on your plot. Changed your mind about someone? Use Remove Player from Plot."
+        question: "What do the Bedwars generators do?",
+        answer: "Your island's generators drop Coal, Iron Bars and Diamond for items and upgrades. The generators in the centre drop Diamond and Moonstone for the most powerful items."
       }, {
-        question: "How big is a plot in Bloxd Plots?",
-        answer: "Each plot is a 91\xd791 block build area with no height limit. Roads 5 blocks wide run between them."
+        question: "What modes can I play in Bloxd Bedwars?",
+        answer: "Solos, Duos, Trios, 4v4, 4v4v4v4 and 1v1. There's also a Ranked Bedwars lobby if you want to climb the leaderboards."
       }, {
-        question: "How many plots can one player own?",
-        answer: "Up to 5 each."
+        question: "What are match modifiers?",
+        answer: "Some matches add a twist. In Supercharged, every generator starts at Level 2. In Boom, explosives are half price. Weapon Roulette gives you a new random weapon every respawn, and in Specialists you pick a role with special perks."
+      }, {
+        question: "Can I attack my teammates?",
+        answer: "No, you can't attack players on your own team."
+      }, {
+        question: "How many Bedwars maps are there?",
+        answer: "Dozens, including Scary Hollow, Wood Factory, Ahoy!, Colosseum and Rooftops."
+      }, {
+        question: "What's the difference between Bedwars and Lucky Bedwars?",
+        answer: "In Bedwars you collect Coal, Iron Bars, Diamond and Moonstone from generators and choose what to buy. Lucky Bedwars hands out gear through Lucky Blocks instead, so no two matches play out the same."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);

@@ -1,197 +1,96 @@
 export const id = 701;
 export const ids = [701];
 export const modules = {
-  64471: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      rebuildScenePbrPipelines: () => jB,
-      rebuildSceneRenderables: () => yB
+  64786: (WW, iW, OW) => {
+    OW.d(iW, {
+      e: () => PW
     });
-    var YB = GB(44838),
-      DB = (BB, OB) => BB.order - OB.order,
-      QB = 8,
-      oB = BB => yB(BB);
-    async function jB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await JB(BB, "pbr", OB)
+    var mW = OW(41392);
+    const EW = "harmonicsFunctions",
+      NW = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {return uniforms.vSphericalL00\n+ uniforms.vSphericalL1_1*(normal.y)\n+ uniforms.vSphericalL10*(normal.z)\n+ uniforms.vSphericalL11*(normal.x)\n+ uniforms.vSphericalL2_2*(normal.y*normal.x)\n+ uniforms.vSphericalL2_1*(normal.y*normal.z)\n+ uniforms.vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ uniforms.vSphericalL21*(normal.z*normal.x)\n+ uniforms.vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {var Nx: f32=normal.x;var Ny: f32=normal.y;var Nz: f32=normal.z;var C1: vec3f=uniforms.vSphericalZZ.rgb;var Cx: vec3f=uniforms.vSphericalX.rgb;var Cy: vec3f=uniforms.vSphericalY.rgb;var Cz: vec3f=uniforms.vSphericalZ.rgb;var Cxx_zz: vec3f=uniforms.vSphericalXX_ZZ.rgb;var Cyy_zz: vec3f=uniforms.vSphericalYY_ZZ.rgb;var Cxy: vec3f=uniforms.vSphericalXY.rgb;var Cyz: vec3f=uniforms.vSphericalYZ.rgb;var Czx: vec3f=uniforms.vSphericalZX.rgb;var a1: vec3f=Cyy_zz*Ny+Cy;var a2: vec3f=Cyz*Nz+a1;var b1: vec3f=Czx*Nz+Cx;var b2: vec3f=Cxy*Ny+b1;var b3: vec3f=Cxx_zz*Nx+b2;var t1: vec3f=Cz *Nz+C1;var t2: vec3f=a2 *Ny+t1;var t3: vec3f=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
+    mW.c.IncludesShadersStoreWGSL[EW] || (mW.c.IncludesShadersStoreWGSL[EW] = NW);
+    const PW = {
+      name: EW,
+      shader: NW
     }
-    async function yB(BB) {
-      await JB(BB, void 0, !1)
+  },
+  64956: (WW, iW, OW) => {
+    OW.d(iW, {
+      b: () => PW
+    });
+    var mW = OW(41392);
+    OW(54392), OW(54394);
+    const EW = "openpbrUboDeclaration",
+      NW = "uniform vTangentSpaceParams: vec2f;uniform vLightingIntensity: vec4f;uniform pointSize: f32;uniform vDebugMode: vec2f;uniform renderTargetSize: vec2f;uniform cameraInfo: vec4f;uniform vTextureRepetitionHexTilingParams: vec4f;uniform backgroundRefractionMatrix: mat4x4f;uniform vBackgroundRefractionInfos: vec3f;uniform vReflectionInfos: vec2f;uniform reflectionMatrix: mat4x4f;uniform vReflectionMicrosurfaceInfos: vec3f;uniform vReflectionPosition: vec3f;uniform vReflectionSize: vec3f;uniform vReflectionFilteringInfo: vec2f;uniform vReflectionDominantDirection: vec3f;uniform vReflectionColor: vec3f;uniform vSphericalL00: vec3f;uniform vSphericalL1_1: vec3f;uniform vSphericalL10: vec3f;uniform vSphericalL11: vec3f;uniform vSphericalL2_2: vec3f;uniform vSphericalL2_1: vec3f;uniform vSphericalL20: vec3f;uniform vSphericalL21: vec3f;uniform vSphericalL22: vec3f;uniform vSphericalX: vec3f;uniform vSphericalY: vec3f;uniform vSphericalZ: vec3f;uniform vSphericalXX_ZZ: vec3f;uniform vSphericalYY_ZZ: vec3f;uniform vSphericalZZ: vec3f;uniform vSphericalXY: vec3f;uniform vSphericalYZ: vec3f;uniform vSphericalZX: vec3f;uniform vBaseWeight: f32;uniform vBaseColor: vec4f;uniform vBaseDiffuseRoughness: f32;uniform vReflectanceInfo: vec4f;uniform vSpecularColor: vec4f;uniform vSpecularAnisotropy: vec3f;uniform vTransmissionWeight : f32;uniform vTransmissionColor : vec3f;uniform vTransmissionDepth : f32;uniform vTransmissionScatter : vec3f;uniform vTransmissionScatterAnisotropy : f32;uniform vTransmissionDispersionScale : f32;uniform vTransmissionDispersionAbbeNumber : f32;uniform vSubsurfaceWeight: f32;uniform vSubsurfaceColor: vec3f;uniform vSubsurfaceRadius: f32;uniform vSubsurfaceRadiusScale: vec3f;uniform vSubsurfaceScatterAnisotropy: f32;uniform vCoatWeight: f32;uniform vCoatColor: vec3f;uniform vCoatRoughness: f32;uniform vCoatRoughnessAnisotropy: f32;uniform vCoatIor: f32;uniform vCoatDarkening : f32;uniform vFuzzWeight: f32;uniform vFuzzColor: vec3f;uniform vFuzzRoughness: f32;uniform vGeometryThinWalled: f32;uniform vGeometryCoatTangent: vec2f;uniform vGeometryThickness: f32;uniform vEmissionColor: vec3f;uniform vThinFilmWeight: f32;uniform vThinFilmThickness: vec2f;uniform vThinFilmIor: f32;uniform vBaseWeightInfos: vec2f;uniform baseWeightMatrix: mat4x4f;uniform vBaseColorInfos: vec2f;uniform baseColorMatrix: mat4x4f;uniform vBaseDiffuseRoughnessInfos: vec2f;uniform baseDiffuseRoughnessMatrix: mat4x4f;uniform vBaseMetalnessInfos: vec2f;uniform baseMetalnessMatrix: mat4x4f;uniform vSpecularWeightInfos: vec2f;uniform specularWeightMatrix: mat4x4f;uniform vSpecularColorInfos: vec2f;uniform specularColorMatrix: mat4x4f;uniform vSpecularRoughnessInfos: vec2f;uniform specularRoughnessMatrix: mat4x4f;uniform vSpecularRoughnessAnisotropyInfos: vec2f;uniform specularRoughnessAnisotropyMatrix: mat4x4f;uniform vTransmissionWeightInfos : vec2f;uniform transmissionWeightMatrix : mat4x4f;uniform vTransmissionColorInfos : vec2f;uniform transmissionColorMatrix : mat4x4f;uniform vTransmissionDepthInfos : vec2f;uniform transmissionDepthMatrix : mat4x4f;uniform vTransmissionScatterInfos : vec2f;uniform transmissionScatterMatrix : mat4x4f;uniform vTransmissionDispersionScaleInfos : vec2f;uniform transmissionDispersionScaleMatrix : mat4x4f;uniform vSubsurfaceWeightInfos: vec2f;uniform subsurfaceWeightMatrix: mat4x4f;uniform vSubsurfaceColorInfos: vec2f;uniform subsurfaceColorMatrix: mat4x4f;uniform vSubsurfaceRadiusScaleInfos: vec2f;uniform subsurfaceRadiusScaleMatrix: mat4x4f;uniform vCoatWeightInfos: vec2f;uniform coatWeightMatrix: mat4x4f;uniform vCoatColorInfos: vec2f;uniform coatColorMatrix: mat4x4f;uniform vCoatRoughnessInfos: vec2f;uniform coatRoughnessMatrix: mat4x4f;uniform vCoatRoughnessAnisotropyInfos: vec2f;uniform coatRoughnessAnisotropyMatrix: mat4x4f;uniform vCoatDarkeningInfos : vec2f;uniform coatDarkeningMatrix : mat4x4f;uniform vFuzzWeightInfos: vec2f;uniform fuzzWeightMatrix: mat4x4f;uniform vFuzzColorInfos: vec2f;uniform fuzzColorMatrix: mat4x4f;uniform vFuzzRoughnessInfos: vec2f;uniform fuzzRoughnessMatrix: mat4x4f;uniform vGeometryNormalInfos: vec2f;uniform geometryNormalMatrix: mat4x4f;uniform vGeometryTangentInfos: vec2f;uniform geometryTangentMatrix: mat4x4f;uniform vGeometryCoatNormalInfos: vec2f;uniform geometryCoatNormalMatrix: mat4x4f;uniform vGeometryCoatTangentInfos: vec2f;uniform geometryCoatTangentMatrix: mat4x4f;uniform vGeometryOpacityInfos: vec2f;uniform geometryOpacityMatrix: mat4x4f;uniform vGeometryThicknessInfos: vec2f;uniform geometryThicknessMatrix: mat4x4f;uniform vEmissionColorInfos: vec2f;uniform emissionColorMatrix: mat4x4f;uniform vThinFilmWeightInfos: vec2f;uniform thinFilmWeightMatrix: mat4x4f;uniform vThinFilmThicknessInfos: vec2f;uniform thinFilmThicknessMatrix: mat4x4f;uniform vAmbientOcclusionInfos: vec2f;uniform ambientOcclusionMatrix: mat4x4f;\n#define ADDITIONAL_UBO_DECLARATION\n#include<sceneUboDeclaration>\n#include<meshUboDeclaration>\n";
+    mW.c.IncludesShadersStoreWGSL[EW] || (mW.c.IncludesShadersStoreWGSL[EW] = NW);
+    const PW = {
+      name: EW,
+      shader: NW
     }
-    async function JB(BB, OB, jB) {
-      const yB = BB;
-      if (!yB._built && !jB) return;
-      const JB = yB._lightListVersion ?? 0,
-        MB = yB.surface.engine,
-        PB = BB => {
-          yB._z ? BB.forEach((BB => BB())) : (0, YB.e)(MB, (() => BB.forEach((BB => BB()))))
-        };
-      let zB = !1,
-        lB = !1,
-        pB = !1,
-        qB = !1;
-      try {
-        for (let BB = 1;; BB++) {
-          if (void 0 !== OB) {
-            await ZB();
-            break
-          }
-          if (RB(yB), await ZB(), !NB(yB)) break;
-          if (BB >= QB) {
-            yB._rebuildHook = oB, qB = !0, lB = !0;
-            break
-          }
-        }
-        pB = !0
-      } finally {
-        if (zB && (yB._renderables.sort(DB), yB._renderableVersion++, yB._materialEpoch++, yB._built && yB._frameGraph.build()), void 0 === OB && pB && !lB && (yB._lightListVersion ?? 0) === JB) {
-          const BB = yB._pendingTopologyRetirements?.splice(0);
-          BB?.length && PB(BB), qB || (yB._rebuildHook = void 0)
-        }
-      }
-      async function ZB() {
-        for (const [BB, YB] of yB._groups) {
-          if (void 0 !== OB && BB._materialFamily !== OB) continue;
-          if (0 === YB.length) {
-            (YB.o || YB.r) && (WB(BB, YB), zB = !0);
-            continue
-          }
-          const DB = yB._runtimeBuilds;
-          await (DB?.wait(YB));
-          let QB = !1;
-          const jB = async () => {
-            const OB = yB._runtimeBuilds,
-              GB = [...YB].filter((OB => yB.meshes.includes(OB) && OB.material?._buildGroup === BB));
-            if (0 === GB.length) return void WB(BB, YB);
-            const oB = !!YB.r,
-              jB = yB._disposables.length,
-              JB = new Map,
-              MB = new Map(GB.map((BB => [BB, BB.material])));
-            for (const BB of GB) {
-              const GB = yB._meshDisposables.get(BB);
-              GB && (JB.set(BB, GB), yB._meshDisposables.delete(BB), OB?.holdPendingDisposers(BB, GB))
-            }
-            let zB, lB;
-            yB._p = BB => (lB = BB, !0);
-            try {
-              zB = await BB(yB, GB)
-            } catch (SB) {
-              lB?.[1]();
-              for (const DB of GB) {
-                const GB = JB.get(DB),
-                  QB = yB._meshDisposables.get(DB);
-                if (QB && QB !== GB)
-                  for (const BB of QB) BB();
-                const oB = yB.meshes.includes(DB) && DB.material === MB.get(DB) && DB.material?._buildGroup === BB && YB.includes(DB);
-                GB && oB ? yB._meshDisposables.set(DB, GB) : (yB._meshDisposables.delete(DB), GB && PB(GB)), GB && OB?.releasePendingDisposers(DB, GB)
-              }
-              throw SB
-            } finally {
-              delete yB._p
-            }
-            if (yB._z || DB?._d()) {
-              lB?.[1]();
-              for (const OB of GB) {
-                const BB = yB._meshDisposables.get(OB),
-                  GB = JB.get(OB);
-                if (BB && BB !== GB)
-                  for (const OB of BB) OB();
-                yB._meshDisposables.delete(OB)
-              }
-              for (const OB of yB._disposables.splice(0)) OB();
-              const BB = [...JB.values()].flat();
-              PB(BB);
-              for (const [GB, YB] of JB) OB?.releasePendingDisposers(GB, YB);
-              return
-            }
-            lB?.[0](), BB._rebuildSingle = zB.rebuildSingle, YB.r = yB._runtimeBuilds?.base(BB, zB.rebuildSingle) ?? zB.rebuildSingle, "pbr" === BB._materialFamily && zB._G && (YB._w = null), oB && AB(yB, jB);
-            const pB = new Set(GB.filter((OB => yB.meshes.includes(OB) && OB.material === MB.get(OB) && OB.material?._buildGroup === BB && YB.includes(OB))));
-            if (pB.size !== GB.length && zB.renderables.some((BB => !BB.mesh))) {
-              for (const BB of GB) {
-                const GB = yB._meshDisposables.get(BB),
-                  YB = JB.get(BB);
-                if (GB && GB !== YB)
-                  for (const BB of GB) BB();
-                YB && yB.meshes.includes(BB) ? yB._meshDisposables.set(BB, YB) : (yB._meshDisposables.delete(BB), YB && PB(YB)), YB && OB?.releasePendingDisposers(BB, YB)
-              }
-              return void(QB = !0)
-            }
-            const qB = new Set;
-            for (const BB of GB)
-              if (pB.has(BB)) qB.add(BB.material), yB._runtimeBuilds?.reset(BB);
-              else {
-                const GB = JB.get(BB),
-                  YB = yB._meshDisposables.get(BB);
-                if (YB && YB !== GB)
-                  for (const BB of YB) BB();
-                GB && yB.meshes.includes(BB) ? (yB._meshDisposables.set(BB, GB), JB.delete(BB), OB?.releasePendingDisposers(BB, GB)) : yB._meshDisposables.delete(BB)
-              } for (const BB of qB) BB._csmGen = (BB._csmGen ?? 0) + 1;
-            const ZB = YB.o,
-              NB = ZB?.length ? new Set(ZB) : null;
-            for (let BB = yB._renderables.length - 1; BB >= 0; BB--) {
-              const OB = yB._renderables[BB];
-              (pB.has(OB.mesh) || NB?.has(OB)) && yB._renderables.splice(BB, 1)
-            }
-            const RB = zB.renderables.filter((BB => !BB.mesh || pB.has(BB.mesh)));
-            yB._renderables.push(...RB), YB.o = RB;
-            const VB = [...JB.values()].flat();
-            PB(VB);
-            for (const [BB, YB] of JB) OB?.releasePendingDisposers(BB, YB)
-          }, {
-            X: JB
-          } = await Promise.resolve().then((() => GB(63982))), MB = 3;
-          for (let OB = 1;; OB++) {
-            if (QB = !1, await JB(yB, BB, jB), yB._z || DB?._d()) return void(lB = !0);
-            if (!QB) break;
-            if (OB >= MB) {
-              WB(BB, YB), yB._rebuildHook = oB, qB = !0, lB = !0;
-              break
-            }
-          }
-          QB ? zB = !0 : zB = !0
-        }
-      }
-
-      function NB(BB) {
-        for (const OB of BB.meshes) {
-          const GB = OB.material?._buildGroup;
-          if (GB && !BB._groups.get(GB)?.includes(OB)) return !0
-        }
-        return !1
-      }
-
-      function RB(BB) {
-        const OB = new Map;
-        for (const GB of BB.meshes) {
-          const BB = GB.material?._buildGroup;
-          if (!BB) continue;
-          const YB = OB.get(BB);
-          YB ? YB.push(GB) : OB.set(BB, [GB])
-        }
-        for (const [GB, YB] of BB._groups) {
-          const BB = OB.get(GB) ?? [];
-          (YB.length !== BB.length || BB.some(((BB, OB) => YB[OB] !== BB))) && (YB.length = 0, YB.push(...BB)), OB.delete(GB)
-        }
-        for (const [GB, YB] of OB) {
-          const OB = YB;
-          BB._groups.set(GB, OB)
-        }
-      }
-
-      function WB(BB, OB) {
-        const GB = OB.o;
-        if (GB?.length) {
-          const BB = new Set(GB);
-          for (let OB = yB._renderables.length - 1; OB >= 0; OB--) BB.has(yB._renderables[OB]) && yB._renderables.splice(OB, 1)
-        }
-        OB.o = void 0, OB.r = void 0, yB._runtimeBuilds?.dropBase(BB), yB._rebuildHook = oB, qB = !0
-      }
-
-      function AB(BB, OB) {
-        const GB = new Set(BB._disposables.slice(0, OB));
-        for (let YB = BB._disposables.length - 1; YB >= OB; YB--) GB.has(BB._disposables[YB]) && BB._disposables.splice(YB, 1)
-      }
+  },
+  64954: (WW, iW, OW) => {
+    OW.r(iW), OW.d(iW, {
+      openpbrVertexShaderWGSL: () => aW
+    });
+    var mW = OW(41392),
+      EW = OW(54392),
+      NW = OW(54394),
+      PW = OW(64956),
+      LW = OW(54405),
+      cW = OW(54432),
+      wW = OW(54407),
+      tW = OW(64779),
+      ZW = OW(54409),
+      xW = OW(54413),
+      lW = OW(54416),
+      AW = OW(54424),
+      bW = OW(54435),
+      jW = OW(64786);
+    const UW = "openpbrNormalMapVertexDeclaration",
+      kW = "#if defined(GEOMETRY_NORMAL) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC) || defined(FUZZ)\n#if defined(TANGENT) && defined(NORMAL) \nvarying vTBN0: vec3f;varying vTBN1: vec3f;varying vTBN2: vec3f;\n#endif\n#endif\n";
+    mW.c.IncludesShadersStoreWGSL[UW] || (mW.c.IncludesShadersStoreWGSL[UW] = kW);
+    const sW = {
+      name: UW,
+      shader: kW
+    };
+    var MW = OW(54450),
+      KW = OW(54459),
+      SW = OW(54461),
+      YW = OW(54466),
+      yW = OW(54470),
+      TW = OW(54478),
+      JW = OW(54484),
+      hW = OW(54493),
+      HW = OW(54496),
+      nW = OW(54503),
+      uW = OW(54509),
+      oW = OW(54517),
+      dW = OW(54524),
+      eW = OW(54533),
+      vW = OW(54538),
+      gW = OW(54545);
+    const DW = "openpbrNormalMapVertex",
+      VW = "#if defined(GEOMETRY_NORMAL) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC) || defined(FUZZ)\n#if defined(TANGENT) && defined(NORMAL)\nvar tbnNormal: vec3f=normalize(normalUpdated);var tbnTangent: vec3f=normalize(tangentUpdated.xyz);var tbnBitangent: vec3f=cross(tbnNormal,tbnTangent)*tangentUpdated.w;var matTemp= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz)* mat3x3f(tbnTangent,tbnBitangent,tbnNormal);vertexOutputs.vTBN0=matTemp[0];vertexOutputs.vTBN1=matTemp[1];vertexOutputs.vTBN2=matTemp[2];\n#endif\n#endif\n";
+    mW.c.IncludesShadersStoreWGSL[DW] || (mW.c.IncludesShadersStoreWGSL[DW] = VW);
+    const pW = {
+      name: DW,
+      shader: VW
+    };
+    var fW = OW(54555),
+      CW = OW(54558),
+      XW = OW(54566),
+      BW = OW(54568),
+      qW = OW(54572);
+    const RW = "openpbrVertexShader",
+      GW = "#define OPENPBR_VERTEX_SHADER\n#include<openpbrUboDeclaration>\n#define CUSTOM_VERTEX_BEGIN\n#ifndef USE_VERTEX_PULLING\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef TANGENT\nattribute tangent: vec4f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#include<uvAttributeDeclaration>[2..7]\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n#endif\n#include<mainUVVaryingDeclaration>[1..7]\n#include<helperFunctions>\n#include<pbrBRDFFunctions>\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<instancesDeclaration>\n#include<prePassVertexDeclaration>\n#include<samplerVertexDeclaration>(_DEFINENAME_,BASE_COLOR,_VARYINGNAME_,BaseColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,BASE_WEIGHT,_VARYINGNAME_,BaseWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,BASE_DIFFUSE_ROUGHNESS,_VARYINGNAME_,BaseDiffuseRoughness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,BASE_METALNESS,_VARYINGNAME_,BaseMetalness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SPECULAR_WEIGHT,_VARYINGNAME_,SpecularWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SPECULAR_COLOR,_VARYINGNAME_,SpecularColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SPECULAR_ROUGHNESS,_VARYINGNAME_,SpecularRoughness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SPECULAR_ROUGHNESS_ANISOTROPY,_VARYINGNAME_,SpecularRoughnessAnisotropy)\n#include<samplerVertexDeclaration>(_DEFINENAME_,TRANSMISSION_WEIGHT,_VARYINGNAME_,TransmissionWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,TRANSMISSION_COLOR,_VARYINGNAME_,TransmissionColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,TRANSMISSION_DEPTH,_VARYINGNAME_,TransmissionDepth)\n#include<samplerVertexDeclaration>(_DEFINENAME_,TRANSMISSION_SCATTER,_VARYINGNAME_,TransmissionScatter)\n#include<samplerVertexDeclaration>(_DEFINENAME_,TRANSMISSION_DISPERSION_SCALE,_VARYINGNAME_,TransmissionDispersionScale)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SUBSURFACE_WEIGHT,_VARYINGNAME_,SubsurfaceWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SUBSURFACE_COLOR,_VARYINGNAME_,SubsurfaceColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,SUBSURFACE_RADIUS_SCALE,_VARYINGNAME_,SubsurfaceRadiusScale)\n#include<samplerVertexDeclaration>(_DEFINENAME_,COAT_WEIGHT,_VARYINGNAME_,CoatWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,COAT_COLOR,_VARYINGNAME_,CoatColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,COAT_ROUGHNESS,_VARYINGNAME_,CoatRoughness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,COAT_ROUGHNESS_ANISOTROPY,_VARYINGNAME_,CoatRoughnessAnisotropy)\n#include<samplerVertexDeclaration>(_DEFINENAME_,COAT_DARKENING,_VARYINGNAME_,CoatDarkening)\n#include<samplerVertexDeclaration>(_DEFINENAME_,FUZZ_WEIGHT,_VARYINGNAME_,FuzzWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,FUZZ_COLOR,_VARYINGNAME_,FuzzColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,FUZZ_ROUGHNESS,_VARYINGNAME_,FuzzRoughness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,GEOMETRY_NORMAL,_VARYINGNAME_,GeometryNormal)\n#include<samplerVertexDeclaration>(_DEFINENAME_,GEOMETRY_TANGENT,_VARYINGNAME_,GeometryTangent)\n#include<samplerVertexDeclaration>(_DEFINENAME_,GEOMETRY_COAT_NORMAL,_VARYINGNAME_,GeometryCoatNormal)\n#include<samplerVertexDeclaration>(_DEFINENAME_,GEOMETRY_OPACITY,_VARYINGNAME_,GeometryOpacity)\n#include<samplerVertexDeclaration>(_DEFINENAME_,GEOMETRY_THICKNESS,_VARYINGNAME_,GeometryThickness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,EMISSION_COLOR,_VARYINGNAME_,EmissionColor)\n#include<samplerVertexDeclaration>(_DEFINENAME_,THIN_FILM_WEIGHT,_VARYINGNAME_,ThinFilmWeight)\n#include<samplerVertexDeclaration>(_DEFINENAME_,THIN_FILM_THICKNESS,_VARYINGNAME_,ThinFilmThickness)\n#include<samplerVertexDeclaration>(_DEFINENAME_,AMBIENT_OCCLUSION,_VARYINGNAME_,AmbientOcclusion)\n#include<samplerVertexDeclaration>(_DEFINENAME_,DECAL,_VARYINGNAME_,Decal)\n#include<samplerVertexDeclaration>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail)\nvarying vPositionW: vec3f;\n#if DEBUGMODE>0\nvarying vClipSpacePosition: vec4f;\n#endif\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#if defined(USESPHERICALFROMREFLECTIONMAP) && defined(USESPHERICALINVERTEX)\nvarying vEnvironmentIrradiance: vec3f;\n#include<harmonicsFunctions>\n#endif\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#include<openpbrNormalMapVertexDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<lightVxUboDeclaration>[0..maxSimultaneousLights]\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvarying vDirectionW: vec3f;\n#endif\n#include<logDepthDeclaration>\n#include<vertexPullingDeclaration>\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\n#ifdef USE_VERTEX_PULLING\nvar positionUpdated: vec3f=vec3f(0.0);\n#ifdef NORMAL\nvar normalUpdated: vec3f=vec3f(0.0);\n#endif\n#ifdef TANGENT\nvar tangentUpdated: vec4f=vec4f(0.0);\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vec2f(0.0);\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vec2f(0.0);\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vec4f(0.0);\n#endif\n#else\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef TANGENT\nvar tangentUpdated: vec4f=vertexInputs.tangent;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#endif\n#include<vertexPullingVertex>\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n#include<instancesVertex>\n#if defined(PREPASS) && ((defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvertexOutputs.vCurrentPosition=scene.viewProjection*finalWorld*vec4f(positionUpdated,1.0);vertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld*vec4f(positionUpdated,1.0);\n#endif\n#ifdef USE_VERTEX_PULLING\n#include<bonesVertex>(vertexInputs.matricesIndices,vp_matricesIndices,vertexInputs.matricesWeights,vp_matricesWeights,vertexInputs.matricesIndicesExtra,vp_matricesIndicesExtra,vertexInputs.matricesWeightsExtra,vp_matricesWeightsExtra)\n#include<bakedVertexAnimation>(vertexInputs.matricesIndices,vp_matricesIndices,vertexInputs.matricesWeights,vp_matricesWeights,vertexInputs.matricesIndicesExtra,vp_matricesIndicesExtra,vertexInputs.matricesWeightsExtra,vp_matricesWeightsExtra)\n#else\n#include<bonesVertex>\n#include<bakedVertexAnimation>\n#endif\nvar worldPos: vec4f=finalWorld* vec4f(positionUpdated,1.0);vertexOutputs.vPositionW= worldPos.xyz;\n#ifdef PREPASS\n#include<prePassVertex>\n#endif\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transposeMat3(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#if defined(USESPHERICALFROMREFLECTIONMAP) && defined(USESPHERICALINVERTEX)\n#if BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LAMBERT && BASE_DIFFUSE_MODEL != BRDF_DIFFUSE_MODEL_LEGACY\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-vertexOutputs.vPositionW);var NdotV: f32=max(dot(vertexOutputs.vNormalW,viewDirectionW),0.0);var roughNormal: vec3f=mix(vertexOutputs.vNormalW,viewDirectionW,(0.5*(1.0-NdotV))*uniforms.vBaseDiffuseRoughness);var reflectionVector: vec3f= (uniforms.reflectionMatrix* vec4f(roughNormal,0)).xyz;\n#else\nvar reflectionVector: vec3f= (uniforms.reflectionMatrix* vec4f(vertexOutputs.vNormalW,0)).xyz;\n#endif\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\nvertexOutputs.vEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\n#ifdef MULTIVIEW\nif (gl_ViewID_OVR==0u) {vertexOutputs.position=scene.viewProjection*worldPos;} else {vertexOutputs.position=scene.viewProjectionR*worldPos;}\n#else\nvertexOutputs.position=scene.viewProjection*worldPos;\n#endif\n#if DEBUGMODE>0\nvertexOutputs.vClipSpacePosition=vertexOutputs.position;\n#endif\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvertexOutputs.vDirectionW=normalize((finalWorld*vec4f(positionUpdated,0.0)).xyz);\n#endif\n#ifndef UV1\nvar uvUpdated: vec2f= vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f= vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#include<uvVariableDeclaration>[3..7]\n#include<samplerVertexImplementation>(_DEFINENAME_,BASE_COLOR,_VARYINGNAME_,BaseColor,_MATRIXNAME_,baseColor,_INFONAME_,BaseColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,BASE_WEIGHT,_VARYINGNAME_,BaseWeight,_MATRIXNAME_,baseWeight,_INFONAME_,BaseWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,BASE_DIFFUSE_ROUGHNESS,_VARYINGNAME_,BaseDiffuseRoughness,_MATRIXNAME_,baseDiffuseRoughness,_INFONAME_,BaseDiffuseRoughnessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,BASE_METALNESS,_VARYINGNAME_,BaseMetalness,_MATRIXNAME_,baseMetalness,_INFONAME_,BaseMetalnessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SPECULAR_WEIGHT,_VARYINGNAME_,SpecularWeight,_MATRIXNAME_,specularWeight,_INFONAME_,SpecularWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SPECULAR_COLOR,_VARYINGNAME_,SpecularColor,_MATRIXNAME_,specularColor,_INFONAME_,SpecularColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SPECULAR_ROUGHNESS,_VARYINGNAME_,SpecularRoughness,_MATRIXNAME_,specularRoughness,_INFONAME_,SpecularRoughnessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SPECULAR_ROUGHNESS_ANISOTROPY,_VARYINGNAME_,SpecularRoughnessAnisotropy,_MATRIXNAME_,specularRoughnessAnisotropy,_INFONAME_,SpecularRoughnessAnisotropyInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,TRANSMISSION_WEIGHT,_VARYINGNAME_,TransmissionWeight,_MATRIXNAME_,transmissionWeight,_INFONAME_,TransmissionWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,TRANSMISSION_COLOR,_VARYINGNAME_,TransmissionColor,_MATRIXNAME_,transmissionColor,_INFONAME_,TransmissionColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,TRANSMISSION_DEPTH,_VARYINGNAME_,TransmissionDepth,_MATRIXNAME_,transmissionDepth,_INFONAME_,TransmissionDepthInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,TRANSMISSION_SCATTER,_VARYINGNAME_,TransmissionScatter,_MATRIXNAME_,transmissionScatter,_INFONAME_,TransmissionScatterInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,TRANSMISSION_DISPERSION_SCALE,_VARYINGNAME_,TransmissionDispersionScale,_MATRIXNAME_,transmissionDispersionScale,_INFONAME_,TransmissionDispersionScaleInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SUBSURFACE_WEIGHT,_VARYINGNAME_,SubsurfaceWeight,_MATRIXNAME_,subsurfaceWeight,_INFONAME_,SubsurfaceWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SUBSURFACE_COLOR,_VARYINGNAME_,SubsurfaceColor,_MATRIXNAME_,subsurfaceColor,_INFONAME_,SubsurfaceColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,SUBSURFACE_RADIUS_SCALE,_VARYINGNAME_,SubsurfaceRadiusScale,_MATRIXNAME_,subsurfaceRadiusScale,_INFONAME_,SubsurfaceRadiusScaleInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,COAT_WEIGHT,_VARYINGNAME_,CoatWeight,_MATRIXNAME_,coatWeight,_INFONAME_,CoatWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,COAT_COLOR,_VARYINGNAME_,CoatColor,_MATRIXNAME_,coatColor,_INFONAME_,CoatColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,COAT_ROUGHNESS,_VARYINGNAME_,CoatRoughness,_MATRIXNAME_,coatRoughness,_INFONAME_,CoatRoughnessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,COAT_ROUGHNESS_ANISOTROPY,_VARYINGNAME_,CoatRoughnessAnisotropy,_MATRIXNAME_,coatRoughnessAnisotropy,_INFONAME_,CoatRoughnessAnisotropyInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,COAT_DARKENING,_VARYINGNAME_,CoatDarkening,_MATRIXNAME_,coatDarkening,_INFONAME_,CoatDarkeningInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,FUZZ_WEIGHT,_VARYINGNAME_,FuzzWeight,_MATRIXNAME_,fuzzWeight,_INFONAME_,FuzzWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,FUZZ_COLOR,_VARYINGNAME_,FuzzColor,_MATRIXNAME_,fuzzColor,_INFONAME_,FuzzColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,FUZZ_ROUGHNESS,_VARYINGNAME_,FuzzRoughness,_MATRIXNAME_,fuzzRoughness,_INFONAME_,FuzzRoughnessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,GEOMETRY_NORMAL,_VARYINGNAME_,GeometryNormal,_MATRIXNAME_,geometryNormal,_INFONAME_,GeometryNormalInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,GEOMETRY_TANGENT,_VARYINGNAME_,GeometryTangent,_MATRIXNAME_,geometryTangent,_INFONAME_,GeometryTangentInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,GEOMETRY_COAT_NORMAL,_VARYINGNAME_,GeometryCoatNormal,_MATRIXNAME_,geometryCoatNormal,_INFONAME_,GeometryCoatNormalInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,GEOMETRY_OPACITY,_VARYINGNAME_,GeometryOpacity,_MATRIXNAME_,geometryOpacity,_INFONAME_,GeometryOpacityInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,GEOMETRY_THICKNESS,_VARYINGNAME_,GeometryThickness,_MATRIXNAME_,geometryThickness,_INFONAME_,GeometryThicknessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,EMISSION_COLOR,_VARYINGNAME_,EmissionColor,_MATRIXNAME_,emissionColor,_INFONAME_,EmissionColorInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,THIN_FILM_WEIGHT,_VARYINGNAME_,ThinFilmWeight,_MATRIXNAME_,thinFilmWeight,_INFONAME_,ThinFilmWeightInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,THIN_FILM_THICKNESS,_VARYINGNAME_,ThinFilmThickness,_MATRIXNAME_,thinFilmThickness,_INFONAME_,ThinFilmThicknessInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,AMBIENT_OCCLUSION,_VARYINGNAME_,AmbientOcclusion,_MATRIXNAME_,ambientOcclusion,_INFONAME_,AmbientOcclusionInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,DECAL,_VARYINGNAME_,Decal,_MATRIXNAME_,decal,_INFONAME_,DecalInfos.x)\n#include<samplerVertexImplementation>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail,_MATRIXNAME_,detail,_INFONAME_,DetailInfos.x)\n#include<openpbrNormalMapVertex>\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<shadowsVertex>[0..maxSimultaneousLights]\n#include<vertexColorMixing>\n#include<logDepthVertex>\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    mW.c.ShadersStoreWGSL[RW] || (mW.c.ShadersStoreWGSL[RW] = GW);
+    const IW = [EW.c, NW.c, PW.b, LW.b, cW.d, wW.e, tW.d, ZW.d, xW.c, lW.e, AW.e, bW.e, jW.e, sW, MW.b, KW.b, SW.d, YW.b, yW.c, TW.c, JW.b, hW.d, HW.c, nW.e, uW.c, oW.e, dW.e, eW.e, vW.b, gW.c, pW, fW.d, CW.c, XW.b, BW.d, qW.b];
+    for (const rW of IW) mW.c.IncludesShadersStoreWGSL[rW.name] || (mW.c.IncludesShadersStoreWGSL[rW.name] = rW.shader);
+    const aW = {
+      name: RW,
+      shader: GW
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const WW in modules) Object.freeze(modules[WW]);
