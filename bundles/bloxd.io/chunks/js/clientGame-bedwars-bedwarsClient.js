@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  39987: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => DB
+  40119: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => be
     });
-    var YB = GB(38703);
-    const DB = function(BB, OB, GB) {
-      let DB;
+    var ye = He(38876);
+    const be = function(ee, ie, He) {
+      let be;
       return {
         plugins: {
-          placeAgainstBeds: (0, YB.e)()
+          placeAgainstBeds: (0, ye.e)()
         },
-        onCreate: BB => {
-          DB = BB
+        onCreate: ee => {
+          be = ee
         },
-        onPlayerAltAction: (BB, OB, GB, YB, QB, oB) => {
-          ((BB, OB) => {
-            if (!OB || "Mesh" !== DB.getEntityType(OB)) return;
-            const GB = DB.getEntityName(OB);
-            "Upgrades" === GB ? DB.openShop(BB, !1, "Upgrades") : "Items" === GB && DB.openShop(BB, !1, "Recommended")
-          })(BB, oB)
+        onPlayerAltAction: (ee, ie, He, ye, Me, Ke) => {
+          ((ee, ie) => {
+            if (!ie || "Mesh" !== be.getEntityType(ie)) return;
+            const He = be.getEntityName(ie);
+            "Upgrades" === He ? be.openShop(ee, !1, "Upgrades") : "Items" === He && be.openShop(ee, !1, "Recommended")
+          })(ee, Ke)
         }
       }
     }
   },
-  38703: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB
+  38876: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Ue
     });
-    var YB = GB(353),
-      DB = GB(37633),
-      QB = GB(4896);
-    const oB = ["Leaf Bed", "_Leaf Bed Head", ...YB.Vc.flatMap((BB => [`${BB} Bed`, `_${BB} Bed Head`, `${BB} Strongbed`, `_${BB} Strongbed Head`]))];
+    var ye = He(347),
+      be = He(37770),
+      Me = He(4870);
+    const Ke = ["Leaf Bed", "_Leaf Bed Head", ...ye.Lc.flatMap((ee => [`${ee} Bed`, `_${ee} Bed Head`, `${ee} Strongbed`, `_${ee} Strongbed Head`]))];
 
-    function jB() {
-      let BB;
+    function Ue() {
+      let ee;
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(ie) {
+          ee = ie
         },
-        altVetoBlocks: oB,
-        onPlayerAttemptAltAction(OB, GB, YB, oB, jB, yB) {
-          var JB;
-          if ((0, DB.b)(BB.getMetaInfo(jB).rootName) && !BB.isEntityInteractable(yB) && (0, QB.h)(null === (JB = BB.MYB(OB)) || void 0 === JB ? void 0 : JB.typeObj.type)) return "preventAction"
+        altVetoBlocks: Ke,
+        onPlayerAttemptAltAction(ie, He, ye, Ke, Ue, Fe) {
+          var Je;
+          if ((0, be.e)(ee.getMetaInfo(Ue).rootName) && !ee.isEntityInteractable(Fe) && (0, Me.e)(null === (Je = ee.Vye(ie)) || void 0 === Je ? void 0 : Je.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37633: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.includes("Leaf Bed")
+  37770: (ee, ie, He) => {
+    function ye(ee) {
+      return ee.includes("Leaf Bed")
     }
 
-    function DB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
+    function be(ee) {
+      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
     }
 
-    function QB(BB) {
-      return BB.includes(" Strongbed")
+    function Me(ee) {
+      return ee.includes(" Strongbed")
     }
 
-    function oB(BB) {
-      return YB(BB) || DB(BB) || QB(BB)
+    function Ke(ee) {
+      return ye(ee) || be(ee) || Me(ee)
     }
-    GB.d(OB, {
-      b: () => oB,
-      d: () => YB,
-      f: () => QB,
-      i: () => DB
+    He.d(ie, {
+      e: () => Ke,
+      i: () => ye,
+      k: () => Me,
+      m: () => be
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

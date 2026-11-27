@@ -1,30 +1,30 @@
-/*! For license information please see gw4e3a.wasmMatchmaking.e6d6a2c1.chunk.js.LICENSE.txt */
+/*! For license information please see u88b9b.wasmMatchmaking.fe76c754.chunk.js.LICENSE.txt */
 export const id = 74;
 export const ids = [74, 176];
 export const modules = {
-  37206: (BB, OB) => {
-    function GB(BB) {
-      if (BB && "object" === typeof BB) {
-        var OB = BB.which || BB.keyCode || BB.charCode;
-        OB && (BB = OB)
+  37358: (ee, ie) => {
+    function He(ee) {
+      if (ee && "object" === typeof ee) {
+        var ie = ee.which || ee.keyCode || ee.charCode;
+        ie && (ee = ie)
       }
-      if ("number" === typeof BB) return oB[BB];
-      var GB, QB = String(BB);
-      return (GB = YB[QB.toLowerCase()]) ? GB : (GB = DB[QB.toLowerCase()]) || (1 === QB.length ? QB.charCodeAt(0) : void 0)
+      if ("number" === typeof ee) return Ke[ee];
+      var He, Me = String(ee);
+      return (He = ye[Me.toLowerCase()]) ? He : (He = be[Me.toLowerCase()]) || (1 === Me.length ? Me.charCodeAt(0) : void 0)
     }
-    GB.isEventKey = function(BB, OB) {
-      if (BB && "object" === typeof BB) {
-        var GB = BB.which || BB.keyCode || BB.charCode;
-        if (null === GB || void 0 === GB) return !1;
-        if ("string" === typeof OB) {
-          var QB;
-          if (QB = YB[OB.toLowerCase()]) return QB === GB;
-          if (QB = DB[OB.toLowerCase()]) return QB === GB
-        } else if ("number" === typeof OB) return OB === GB;
+    He.isEventKey = function(ee, ie) {
+      if (ee && "object" === typeof ee) {
+        var He = ee.which || ee.keyCode || ee.charCode;
+        if (null === He || void 0 === He) return !1;
+        if ("string" === typeof ie) {
+          var Me;
+          if (Me = ye[ie.toLowerCase()]) return Me === He;
+          if (Me = be[ie.toLowerCase()]) return Me === He
+        } else if ("number" === typeof ie) return ie === He;
         return !1
       }
     };
-    var YB = (OB = BB.exports = GB).code = OB.codes = {
+    var ye = (ie = ee.exports = He).code = ie.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      DB = OB.aliases = {
+      be = ie.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (QB = 97; QB < 123; QB++) YB[String.fromCharCode(QB)] = QB - 32;
-    for (var QB = 48; QB < 58; QB++) YB[QB - 48] = QB;
-    for (QB = 1; QB < 13; QB++) YB["f" + QB] = QB + 111;
-    for (QB = 0; QB < 10; QB++) YB["numpad " + QB] = QB + 96;
-    var oB = OB.names = OB.title = {};
-    for (QB in YB) oB[YB[QB]] = QB;
-    for (var jB in DB) YB[jB] = DB[jB]
+    for (Me = 97; Me < 123; Me++) ye[String.fromCharCode(Me)] = Me - 32;
+    for (var Me = 48; Me < 58; Me++) ye[Me - 48] = Me;
+    for (Me = 1; Me < 13; Me++) ye["f" + Me] = Me + 111;
+    for (Me = 0; Me < 10; Me++) ye["numpad " + Me] = Me + 96;
+    var Ke = ie.names = ie.title = {};
+    for (Me in ye) Ke[ye[Me]] = Me;
+    for (var Ue in be) ye[Ue] = be[Ue]
   },
-  37378: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB
+  37529: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ke
     });
-    var YB = GB(56);
-    const DB = YB.useLayoutEffect;
-    const QB = function(BB) {
-      var OB = (0, YB.useRef)(BB);
-      return DB((function() {
-        OB.current = BB
-      })), OB
+    var ye = He(59);
+    const be = ye.useLayoutEffect;
+    const Me = function(ee) {
+      var ie = (0, ye.useRef)(ee);
+      return be((function() {
+        ie.current = ee
+      })), ie
     };
-    var oB = function(BB) {
-      var OB = QB(BB);
-      (0, YB.useEffect)((function() {
-        var BB = function(BB) {
-          var GB;
-          if (null != OB.current && (GB = OB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof GB) return BB.returnValue = GB, GB
+    var Ke = function(ee) {
+      var ie = Me(ee);
+      (0, ye.useEffect)((function() {
+        var ee = function(ee) {
+          var He;
+          if (null != ie.current && (He = ie.current(ee)), ee.defaultPrevented && (ee.returnValue = ""), "string" === typeof He) return ee.returnValue = He, He
         };
-        return window.addEventListener("beforeunload", BB),
+        return window.addEventListener("beforeunload", ee),
           function() {
-            window.removeEventListener("beforeunload", BB)
+            window.removeEventListener("beforeunload", ee)
           }
       }), [])
     }
   },
-  37244: BB => {
-    var OB, GB = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      YB = /OS X/.test(GB),
-      DB = /Opera/.test(GB),
-      QB = !/like Gecko/.test(GB) && !DB,
-      oB = BB.exports = {
-        0: YB ? "<menu>" : "<UNK>",
+  37400: ee => {
+    var ie, He = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      ye = /OS X/.test(He),
+      be = /Opera/.test(He),
+      Me = !/like Gecko/.test(He) && !be,
+      Ke = ee.exports = {
+        0: ye ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: YB ? "<meta>" : "<menu>",
+        93: ye ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: YB && QB ? "-" : "<volume-mute>",
+        173: ye && Me ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: DB ? "`" : "<unicode>",
+        231: be ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,308 +234,308 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (OB = 58; OB < 65; ++OB) oB[OB] = String.fromCharCode(OB);
-    for (OB = 48; OB < 58; ++OB) oB[OB] = OB - 48 + "";
-    for (OB = 65; OB < 91; ++OB) oB[OB] = String.fromCharCode(OB);
-    for (OB = 96; OB < 106; ++OB) oB[OB] = "<num-" + (OB - 96) + ">";
-    for (OB = 112; OB < 136; ++OB) oB[OB] = "F" + (OB - 111)
+    for (ie = 58; ie < 65; ++ie) Ke[ie] = String.fromCharCode(ie);
+    for (ie = 48; ie < 58; ++ie) Ke[ie] = ie - 48 + "";
+    for (ie = 65; ie < 91; ++ie) Ke[ie] = String.fromCharCode(ie);
+    for (ie = 96; ie < 106; ++ie) Ke[ie] = "<num-" + (ie - 96) + ">";
+    for (ie = 112; ie < 136; ++ie) Ke[ie] = "F" + (ie - 111)
   },
-  37263: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => ZB,
-      e: () => NB,
-      h: () => zB,
-      l: () => PB
+  37420: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => pe,
+      d: () => Xe,
+      h: () => ke,
+      j: () => Re
     });
-    var YB = GB(34790),
-      DB = GB(37267),
-      QB = GB(37270),
-      oB = GB(9391),
-      jB = GB(1480),
-      yB = GB(56),
-      JB = GB(70),
-      MB = GB(1282);
+    var ye = He(34867),
+      be = He(37424),
+      Me = He(37427),
+      Ke = He(9446),
+      Ue = He(1432),
+      Fe = He(59),
+      Je = He(77),
+      oe = He(1228);
 
-    function PB() {
-      var BB;
-      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
-        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
+    function Re() {
+      var ee;
+      return (0, Ue.j)(be.b, (0, be.p)()), (0, oe.jsx)(oe.Fragment, {
+        children: null === (ee = (0, be.p)()) || void 0 === ee ? void 0 : ee.content
       })
     }
 
-    function zB(BB) {
-      var OB;
+    function ke(ee) {
+      var ie;
       let {
-        show: GB
-      } = BB;
-      (0, jB.i)(DB.d, (0, DB.n)());
-      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
-      return (0, yB.useEffect)((() => {
-        var BB;
-        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
-      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
-        showing: GB,
+        show: He
+      } = ee;
+      (0, Ue.j)(be.b, (0, be.p)());
+      const Je = null === (ie = (0, be.p)()) || void 0 === ie ? void 0 : ie.menu;
+      return (0, Fe.useEffect)((() => {
+        var ee;
+        He || (null === Je || void 0 === Je || null === (ee = Je.onClose) || void 0 === ee || ee.call(Je), (0, Me.l)())
+      }), [He, Je]), (0, Fe.useEffect)((() => He ? (0, Ke.g)(Me.r, Me.e) : void 0), [He]), (0, oe.jsx)(ye.e, {
+        showing: He,
         globallyUniqueKey: "clientGameMenu",
-        children: null === JB || void 0 === JB ? void 0 : JB.content
+        children: null === Je || void 0 === Je ? void 0 : Je.content
       })
     }
-    const lB = new Map,
-      pB = new Set;
+    const qe = new Map,
+      fe = new Set;
 
-    function qB(BB, OB) {
-      OB ? lB.set(BB, OB) : lB.delete(BB);
-      for (const GB of pB) GB()
+    function Te(ee, ie) {
+      ie ? qe.set(ee, ie) : qe.delete(ee);
+      for (const He of fe) He()
     }
 
-    function ZB(BB) {
+    function pe(ee) {
       let {
-        placement: OB = "bottom"
-      } = BB;
-      const GB = (0, yB.useRef)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = GB.current;
-        return qB(OB, BB), () => {
-          lB.get(OB) === BB && qB(OB, null)
+        placement: ie = "bottom"
+      } = ee;
+      const He = (0, Fe.useRef)(null);
+      return (0, Fe.useLayoutEffect)((() => {
+        const ee = He.current;
+        return Te(ie, ee), () => {
+          qe.get(ie) === ee && Te(ie, null)
         }
-      }), [OB]), (0, MB.jsx)("div", {
-        ref: GB,
-        id: `clientGameHud-${OB}`,
+      }), [ie]), (0, oe.jsx)("div", {
+        ref: He,
+        id: `clientGameHud-${ie}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function Xe(ee) {
       let {
-        children: OB,
-        placement: GB = "bottom"
-      } = BB;
-      const [YB, DB] = (0, yB.useState)((() => {
-        var BB;
-        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
+        children: ie,
+        placement: He = "bottom"
+      } = ee;
+      const [ye, be] = (0, Fe.useState)((() => {
+        var ee;
+        return null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null
       }));
-      return (0, yB.useEffect)((() => {
-        const BB = () => {
-          var BB;
-          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
+      return (0, Fe.useEffect)((() => {
+        const ee = () => {
+          var ee;
+          be(null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null)
         };
-        return pB.add(BB), BB(), () => {
-          pB.delete(BB)
+        return fe.add(ee), ee(), () => {
+          fe.delete(ee)
         }
-      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
+      }), [He]), ye ? (0, Je.createPortal)(ie, ye) : null
     }
   },
-  9391: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9446: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      g: () => be
     });
-    let YB = null;
-    const DB = function(BB) {
-        const OB = {
-          cycle: BB,
+    let ye = null;
+    const be = function(ee) {
+        const ie = {
+          cycle: ee,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return YB = OB, () => {
-          YB === OB && (YB = null)
+        return ye = ie, () => {
+          ye === ie && (ye = null)
         }
       },
-      QB = () => {
-        var BB;
-        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
+      Me = () => {
+        var ee;
+        return null !== (ee = ye) && void 0 !== ee && ee.canCycle() ? ye.cycle : null
       }
   },
-  9614: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9683: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me,
+      g: () => be
     });
-    let YB = !1;
+    let ye = !1;
 
-    function DB() {
-      YB = !0
+    function be() {
+      ye = !0
     }
 
-    function QB() {
-      return YB
+    function Me() {
+      return ye
     }
   },
-  37120: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      InGameUi: () => VB.e,
-      LobbyLeaderboard: () => SB.d,
-      loadCharacterCustomisationUI: () => nB,
-      loadCharacterPreview: () => UB,
-      matchmakeAndPlay: () => KB,
-      matchmakeForAhead: () => jB.f,
-      setUpGame: () => fB
+  37233: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      InGameUi: () => ge.b,
+      LobbyLeaderboard: () => Oe.e,
+      loadCharacterCustomisationUI: () => de,
+      loadCharacterPreview: () => We,
+      matchmakeAndPlay: () => De,
+      matchmakeForAhead: () => Ue.i,
+      setUpGame: () => te
     });
-    var YB = GB(1246),
-      DB = GB(162),
-      QB = GB(16),
-      oB = GB(37127),
-      jB = GB(37129),
-      yB = GB(2050),
-      JB = GB(37163);
+    var ye = He(1192),
+      be = He(153),
+      Me = He(18),
+      Ke = He(37239),
+      Ue = He(37244),
+      Fe = He(2018),
+      Je = He(37294);
 
-    function MB() {
-      return !1 !== yB.e.get("canCustomiseChar")
+    function oe() {
+      return !1 !== Fe.c.get("canCustomiseChar")
     }
-    let PB = !1;
-    var zB = GB(1350),
-      lB = GB(1253),
-      pB = GB(244),
-      qB = GB(4018),
-      ZB = GB(9614),
-      NB = GB(9608);
+    let Re = !1;
+    var ke = He(1305),
+      qe = He(1196),
+      fe = He(242),
+      Te = He(3977),
+      pe = He(9683),
+      Xe = He(9674);
 
-    function RB() {
-      (0, ZB.c)() || (0, NB.loadWasmPlayAhead)().catch((BB => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", BB)
+    function ze() {
+      (0, pe.d)() || (0, Xe.loadWasmPlayAhead)().catch((ee => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", ee)
       }))
     }
-    var WB = GB(3873),
-      AB = GB(1837);
-    var VB = GB(37170),
-      SB = GB(37701);
+    var Be = He(3791),
+      Ee = He(1798);
+    var ge = He(37305),
+      Oe = He(37836);
 
-    function nB() {
-      return Promise.all([GB.e(170), GB.e(236)]).then((() => GB(44444)))
+    function de() {
+      return Promise.all([He.e(170), He.e(236)]).then((() => He(44474)))
     }
 
-    function UB() {
-      return Promise.all([GB.e(170), GB.e(237)]).then((() => GB(44451)))
+    function We() {
+      return Promise.all([He.e(170), He.e(237)]).then((() => He(44481)))
     }
 
-    function fB() {
-      return (0, NB.loadWasmPreviews)()
+    function te() {
+      return (0, Xe.loadWasmPreviews)()
     }
-    PB || (PB = !0, document.addEventListener("keydown", (BB => {
-        (0, JB.d)(BB, MB)
+    Re || (Re = !0, document.addEventListener("keydown", (ee => {
+        (0, Je.c)(ee, oe)
       }))),
-      function(BB) {
-        var OB;
-        return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (OB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== OB ? OB : "")
-      }(navigator.connection) && (0, qB.e)((() => {
-        (0, ZB.c)() || Promise.all([GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(155), GB.e(70)]).then((() => GB(42053))).then((async BB => {
-          if ((0, ZB.c)()) return;
-          const OB = BB.startLoadAheadOfJoin({
-            joinStarted: ZB.c,
-            language: lB.e.get().getCurrentLanguageCode()
+      function(ee) {
+        var ie;
+        return !0 !== (null === ee || void 0 === ee ? void 0 : ee.saveData) && !/2g$/.test(null !== (ie = null === ee || void 0 === ee ? void 0 : ee.effectiveType) && void 0 !== ie ? ie : "")
+      }(navigator.connection) && (0, Te.e)((() => {
+        (0, pe.d)() || Promise.all([He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(155), He.e(70)]).then((() => He(42125))).then((async ee => {
+          if ((0, pe.d)()) return;
+          const ie = ee.startLoadAheadOfJoin({
+            joinStarted: pe.d,
+            language: qe.f.get().getCurrentLanguageCode()
           });
-          (0, pB.b)((() => {
-            (0, ZB.c)() || BB.probeWebgl2AheadOfJoin()
-          })), await OB, (0, pB.b)(RB)
-        }), (BB => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", BB)
+          (0, fe.e)((() => {
+            (0, pe.d)() || ee.probeWebgl2AheadOfJoin()
+          })), await ie, (0, fe.e)(ze)
+        }), (ee => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", ee)
         }))
       }));
-    const kB = QB.c.get("router");
-    null === kB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(OB) {
-      if ((0, AB.c)(OB.state.location.pathname)) return void(0, NB.loadWasmPlay)().catch((() => {}));
-      const GB = OB.subscribe((YB => {
-        (0, AB.c)(YB.location.pathname) && (GB(), (0, WB.e)().then((() => {
-          BB(OB)
+    const Ze = Me.e.get("router");
+    null === Ze ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function ee(ie) {
+      if ((0, Ee.c)(ie.state.location.pathname)) return void(0, Xe.loadWasmPlay)().catch((() => {}));
+      const He = ie.subscribe((ye => {
+        (0, Ee.c)(ye.location.pathname) && (He(), (0, Be.f)().then((() => {
+          ee(ie)
         })))
       }))
-    }(kB), (0, oB.c)();
-    const dB = (0, jB.b)((async function(BB, OB) {
+    }(Ze), (0, Ke.c)();
+    const we = (0, Ue.e)((async function(ee, ie) {
       let {
-        place: GB,
-        userContext: QB,
-        direct: oB,
-        matchedAt: jB,
-        rematch: yB
-      } = BB;
-      const JB = oB ? 1 / 0 : jB;
-      let MB;
+        place: He,
+        userContext: Me,
+        direct: Ke,
+        matchedAt: Ue,
+        rematch: Fe
+      } = ee;
+      const Je = Ke ? 1 / 0 : Ue;
+      let oe;
       try {
-        MB = await (0, NB.loadWasmPlay)()
-      } catch (PB) {
-        return console.error("The wasm client did not load:", PB), (0, zB.n)({
+        oe = await (0, Xe.loadWasmPlay)()
+      } catch (Re) {
+        return console.error("The wasm client did not load:", Re), (0, ke.v)({
           websocketUrl: null
-        }), YB.c.errorWithCode(String(PB), DB.l.CONNECT_TO_GAME_SERVER, {
-          error: PB,
-          severity: OB.aborted ? "low" : "medium",
-          rB: OB.aborted
+        }), ye.e.errorWithCode(String(Re), be.k.CONNECT_TO_GAME_SERVER, {
+          error: Re,
+          severity: ie.aborted ? "low" : "medium",
+          Ce: ie.aborted
         })
       }
-      return MB.playWasmGame({
-        userContext: QB,
-        place: GB,
-        matchedAt: JB,
-        rematch: yB
-      }, OB)
+      return oe.playWasmGame({
+        userContext: Me,
+        place: He,
+        matchedAt: Je,
+        rematch: Fe
+      }, ie)
     }));
 
-    function KB() {
-      return (0, NB.loadWasmPlay)().catch((() => {})), dB(...arguments)
+    function De() {
+      return (0, Xe.loadWasmPlay)().catch((() => {})), we(...arguments)
     }
   },
-  9608: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadWasmPlay: () => zB,
-      loadWasmPlayAhead: () => lB,
-      loadWasmPreviews: () => pB
+  9674: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      loadWasmPlay: () => ke,
+      loadWasmPlayAhead: () => qe,
+      loadWasmPreviews: () => fe
     });
-    var YB = GB(3573),
-      DB = GB(2457),
-      QB = GB(2250),
-      oB = GB(5065),
-      jB = GB(3944),
-      yB = GB(9614);
-    let JB = null;
+    var ye = He(3465),
+      be = He(2342),
+      Me = He(2170),
+      Ke = He(5046),
+      Ue = He(3892),
+      Fe = He(9683);
+    let Je = null;
 
-    function MB() {
-      return Promise.all([GB.e(86), GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(216), GB.e(243), GB.e(155), GB.e(101), GB.e(244), GB.e(75)]).then((() => GB(41683)))
+    function oe() {
+      return Promise.all([He.e(86), He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(216), He.e(243), He.e(155), He.e(101), He.e(244), He.e(75)]).then((() => He(41771)))
     }
 
-    function PB() {
-      Promise.all([GB.e(84), GB.e(87), GB.e(85), GB.e(86), GB.e(103), GB.e(100), GB.e(300), GB.e(207), GB.e(250), GB.e(274), GB.e(244), GB.e(54)]).then((() => GB(42017))).catch((() => {}))
+    function Re() {
+      Promise.all([He.e(84), He.e(87), He.e(85), He.e(86), He.e(103), He.e(100), He.e(300), He.e(207), He.e(250), He.e(274), He.e(244), He.e(54)]).then((() => He(42095))).catch((() => {}))
     }
 
-    function zB() {
-      return oB.b.cancelDownloadForJoin(), (0, jB.d)(), (0, DB.h)(), (0, yB.d)(), (0, QB.j)(), PB(), Promise.all([GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(155), GB.e(70)]).then((() => GB(42053))).then((BB => {
+    function ke() {
+      return Ke.d.cancelDownloadForJoin(), (0, Ue.b)(), (0, be.g)(), (0, Fe.g)(), (0, Me.i)(), Re(), Promise.all([He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(155), He.e(70)]).then((() => He(42125))).then((ee => {
         let {
-          startJoinLoad: OB
-        } = BB;
-        OB()
-      }), (() => {})), JB ??= MB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        YB.c.showGamePack(BB)
-      })), BB)), (BB => {
-        throw JB = null, BB
-      })), JB
+          startJoinLoad: ie
+        } = ee;
+        ie()
+      }), (() => {})), Je ??= oe().then((ee => (ee.startWasmPlay(), ee.followPageUiPack((ee => {
+        ye.c.showGamePack(ee)
+      })), ee)), (ee => {
+        throw Je = null, ee
+      })), Je
     }
 
-    function lB() {
-      return PB(), GB.e(124).then((() => GB(42056))).catch((() => {})), MB().then((() => {}))
+    function qe() {
+      return Re(), He.e(124).then((() => He(42130))).catch((() => {})), oe().then((() => {}))
     }
 
-    function pB() {
-      return MB().then((BB => {
-        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
+    function fe() {
+      return oe().then((ee => {
+        ee.startWasmPreviews(), ee.prefetchWasmPreviews()
       }))
     }
   },
-  37536: (BB, OB, GB) => {
-    function YB(BB) {
-      return "fetch" === BB || "timeout" === BB || "integrity" === BB ? "download" : "browser"
+  37669: (ee, ie, He) => {
+    function ye(ee) {
+      return "fetch" === ee || "timeout" === ee || "integrity" === ee ? "download" : "browser"
     }
-    GB.d(OB, {
-      b: () => DB,
-      c: () => yB,
-      g: () => MB,
-      h: () => jB,
-      l: () => oB,
-      m: () => JB,
-      p: () => YB,
-      q: () => QB
+    He.d(ie, {
+      c: () => be,
+      g: () => Fe,
+      i: () => oe,
+      j: () => Ue,
+      m: () => Ke,
+      o: () => Je,
+      s: () => ye,
+      u: () => Me
     });
-    const DB = "https://discord.gg/playbloxd";
+    const be = "https://discord.gg/playbloxd";
 
-    function QB(BB, OB) {
-      return "download" === BB ? {
+    function Me(ee, ie) {
+      return "download" === ee ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -543,18 +543,18 @@ export const modules = {
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
-      } : "memory" === BB || "noContext" === BB || "graphicsLost" === BB ? {
+      } : "memory" === ee || "noContext" === ee || "graphicsLost" === ee ? {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${BB}Title`,
-        help: `wasmUnsupported:${BB}Help${OB?"App":""}`,
+        title: `wasmUnsupported:${ee}Title`,
+        help: `wasmUnsupported:${ee}Help${ie?"App":""}`,
         helpValues: {},
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
       } : {
         icon: "face-dizzy",
-        title: OB ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
-        help: OB ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === BB ? "noWebAssemblyHelp" : "help"),
+        title: ie ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: ie ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === ee ? "noWebAssemblyHelp" : "help"),
         helpValues: {},
         discordLink: !1,
         confirm: "general:ok",
@@ -562,17 +562,17 @@ export const modules = {
       }
     }
 
-    function oB(BB, OB) {
+    function Ke(ee, ie) {
       return {
-        ...QB(BB, OB),
-        help: OB ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${BB}StillHelp`
+        ...Me(ee, ie),
+        help: ie ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${ee}StillHelp`
       }
     }
 
-    function jB() {
+    function Ue(ee) {
       return {
         icon: "face-dizzy",
-        title: "wasmScreens:noContextTitle",
+        title: `wasmUnsupported:${ee}Title`,
         help: "wasmScreens:noContextHelp",
         helpValues: {},
         discordLink: !1,
@@ -581,21 +581,21 @@ export const modules = {
       }
     }
 
-    function yB(BB, OB) {
+    function Fe(ee, ie) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: OB ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: ie ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: BB.code
+          code: ee.code
         },
-        discordLink: OB,
+        discordLink: ie,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function JB() {
+    function Je() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -607,37 +607,37 @@ export const modules = {
       }
     }
 
-    function MB(BB, OB, GB) {
+    function oe(ee, ie, He) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: GB ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: He ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: BB.reason
+          reason: ee.reason
         },
-        discordLink: null === BB.name,
-        confirm: OB ? "general:reconnect" : BB.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === ee.name,
+        confirm: ie ? "general:reconnect" : ee.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  36977: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => lB,
-      C: () => pB,
-      F: () => qB,
-      G: () => NB,
-      b: () => YB,
-      e: () => PB,
-      f: () => DB,
-      h: () => zB,
-      i: () => ZB,
-      m: () => MB,
-      q: () => RB,
-      t: () => yB,
-      x: () => JB
+  37068: (ee, ie, He) => {
+    He.d(ie, {
+      D: () => fe,
+      E: () => Te,
+      G: () => Xe,
+      d: () => ye,
+      g: () => Re,
+      h: () => be,
+      i: () => ke,
+      j: () => pe,
+      n: () => oe,
+      r: () => ze,
+      v: () => Fe,
+      y: () => Je,
+      z: () => qe
     });
-    const YB = [{
+    const ye = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -654,64 +654,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function DB(BB, OB) {
+    function be(ee, ie) {
       const {
-        numLines: GB,
-        charsPerLine: DB
-      } = YB[OB];
-      return WB(BB, GB, DB, !1)
+        numLines: He,
+        charsPerLine: be
+      } = ye[ie];
+      return Be(ee, He, be, !1)
     }
-    const QB = 7 / 8,
-      oB = .25,
-      jB = 8;
+    const Me = 7 / 8,
+      Ke = .25,
+      Ue = 8;
 
-    function yB(BB, OB) {
+    function Fe(ee, ie) {
       return {
-        width: Math.min(BB, jB) - 2 * oB,
-        height: Math.min(OB, jB) - 2 * oB
+        width: Math.min(ee, Ue) - 2 * Ke,
+        height: Math.min(ie, Ue) - 2 * Ke
       }
     }
 
-    function JB(BB, OB, GB) {
-      const DB = yB(BB, OB),
+    function Je(ee, ie, He) {
+      const be = Fe(ee, ie),
         {
-          numLines: oB,
-          charsPerLine: jB
-        } = YB[GB];
+          numLines: Ke,
+          charsPerLine: Ue
+        } = ye[He];
       return {
-        numLines: Math.max(1, Math.floor(oB / QB * DB.height)),
-        charsPerLine: Math.max(1, Math.floor(jB * DB.width))
+        numLines: Math.max(1, Math.floor(Ke / Me * be.height)),
+        charsPerLine: Math.max(1, Math.floor(Ue * be.width))
       }
     }
 
-    function MB(BB, OB, GB, YB) {
+    function oe(ee, ie, He, ye) {
       const {
-        numLines: DB,
-        charsPerLine: QB
-      } = JB(GB, YB, OB);
-      return WB(BB, DB, QB, !1)
+        numLines: be,
+        charsPerLine: Me
+      } = Je(He, ye, ie);
+      return Be(ee, be, Me, !1)
     }
-    const PB = 32e3;
+    const Re = 32e3;
 
-    function zB(BB) {
-      return BB.slice(0, PB)
+    function ke(ee) {
+      return ee.slice(0, Re)
     }
-    const lB = 512e3,
-      pB = 64,
-      qB = lB;
+    const qe = 512e3,
+      fe = 64,
+      Te = qe;
 
-    function ZB(BB, OB) {
-      const GB = Math.max(0, qB - OB),
-        YB = Math.min(lB, GB);
-      return BB.slice(0, YB)
+    function pe(ee, ie) {
+      const He = Math.max(0, Te - ie),
+        ye = Math.min(qe, He);
+      return ee.slice(0, ye)
     }
-    const NB = {
+    const Xe = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      KJ: {
+      EJ: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -723,34 +723,34 @@ export const modules = {
       }
     };
 
-    function RB(BB, OB) {
+    function ze(ee, ie) {
       const {
-        numLines: GB,
-        charsPerLine: YB
-      } = NB[OB];
-      return WB(BB, GB, YB, !1)
+        numLines: He,
+        charsPerLine: ye
+      } = Xe[ie];
+      return Be(ee, He, ye, !1)
     }
 
-    function WB(BB, OB, GB, YB, DB) {
-      (DB || YB) && (BB = BB.slice(0, null !== DB && void 0 !== DB ? DB : OB * GB));
-      const QB = BB.split("\n");
-      if (QB.length > OB && QB.splice(OB, QB.length - OB), !YB)
-        for (let oB = 0; oB < QB.length; oB++) {
-          const BB = QB[oB];
-          BB.length > GB && (QB[oB] = BB.substring(0, GB), QB.length < OB && QB.splice(oB + 1, 0, BB.substring(GB)))
+    function Be(ee, ie, He, ye, be) {
+      (be || ye) && (ee = ee.slice(0, null !== be && void 0 !== be ? be : ie * He));
+      const Me = ee.split("\n");
+      if (Me.length > ie && Me.splice(ie, Me.length - ie), !ye)
+        for (let Ke = 0; Ke < Me.length; Ke++) {
+          const ee = Me[Ke];
+          ee.length > He && (Me[Ke] = ee.substring(0, He), Me.length < ie && Me.splice(Ke + 1, 0, ee.substring(He)))
         }
-      return QB.join("\n")
+      return Me.join("\n")
     }
   },
-  10027: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      g: () => QB
+  10063: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be,
+      f: () => Me
     });
-    var YB = GB(9974);
-    const DB = "Air",
-      QB = Object.freeze(new YB.g(DB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var ye = He(10008);
+    const be = "Air",
+      Me = Object.freeze(new ye.e(be, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

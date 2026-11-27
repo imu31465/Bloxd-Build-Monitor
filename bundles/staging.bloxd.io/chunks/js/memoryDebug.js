@@ -1,66 +1,66 @@
 export const id = 47;
 export const ids = [47];
 export const modules = {
-  5186: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      startMemoryDebug: () => MB
+  5179: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      startMemoryDebug: () => oe
     });
-    var YB = GB(3206),
-      DB = GB(3136);
-    const QB = 6e4,
-      oB = 5,
-      jB = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var yB = GB(670);
-    const JB = [];
+    var ye = He(3094),
+      be = He(3037);
+    const Me = 6e4,
+      Ke = 5,
+      Ue = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var Fe = He(649);
+    const Je = [];
 
-    function MB() {
-      (0, DB.u)() && (0, DB.B)(zB), PB(), setInterval(PB, QB)
+    function oe() {
+      (0, be.r)() && (0, be.x)(ke), Re(), setInterval(Re, Me)
     }
 
-    function PB() {
-      var BB;
+    function Re() {
+      var ee;
       const {
-        client: OB,
-        playedS: GB,
-        snapshot: QB
-      } = (0, yB.p)(), MB = null !== (BB = QB.wasmMainMiB) && void 0 !== BB ? BB : function() {
+        client: ie,
+        playedS: He,
+        snapshot: Me
+      } = (0, Fe.n)(), oe = null !== (ee = Me.wasmMainMiB) && void 0 !== ee ? ee : function() {
         try {
-          return (0, yB.O)((0, YB.u)().buffer.byteLength)
+          return (0, Fe.P)((0, ye.t)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), PB = function(BB) {
+      }(), Re = function(ee) {
         let {
-          client: OB,
-          playedS: GB,
-          hidden: YB,
-          snapshot: DB
-        } = BB;
-        const QB = [`client=${null!==OB&&void 0!==OB?OB:"none"}`];
-        null !== GB && QB.push(`playedS=${GB}`);
-        const oB = DB.pageAgeS;
-        "number" === typeof oB && QB.push(`pageAgeS=${oB}`), QB.push("hidden=" + (YB ? 1 : 0));
-        for (const yB of jB) {
-          const BB = DB[yB];
-          "number" === typeof BB && Number.isFinite(BB) && QB.push(`${yB}=${BB}`)
+          client: ie,
+          playedS: He,
+          hidden: ye,
+          snapshot: be
+        } = ee;
+        const Me = [`client=${null!==ie&&void 0!==ie?ie:"none"}`];
+        null !== He && Me.push(`playedS=${He}`);
+        const Ke = be.pageAgeS;
+        "number" === typeof Ke && Me.push(`pageAgeS=${Ke}`), Me.push("hidden=" + (ye ? 1 : 0));
+        for (const Fe of Ue) {
+          const ee = be[Fe];
+          "number" === typeof ee && Number.isFinite(ee) && Me.push(`${Fe}=${ee}`)
         }
-        return QB.join(" ")
+        return Me.join(" ")
       }({
-        client: OB,
-        playedS: GB,
+        client: ie,
+        playedS: He,
         hidden: document.hidden,
         snapshot: {
-          ...QB,
-          wasmMainMiB: MB
+          ...Me,
+          wasmMainMiB: oe
         }
       });
-      (0, DB.u)() ? (JB.push(PB), JB.length >= oB && zB()) : (0, DB.m)("memory", PB)
+      (0, be.r)() ? (Je.push(Re), Je.length >= Ke && ke()) : (0, be.m)("memory", Re)
     }
 
-    function zB() {
-      for (const BB of JB.splice(0))(0, DB.m)("memory", BB)
+    function ke() {
+      for (const ee of Je.splice(0))(0, be.m)("memory", ee)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

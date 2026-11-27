@@ -1,530 +1,530 @@
 export const id = 127;
 export const ids = [127];
 export const modules = {
-  5549: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => MB,
-      d: () => JB
+  5578: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => oe,
+      f: () => Je
     });
-    var YB = GB(56),
-      DB = GB(1485),
-      QB = GB(1175),
-      oB = GB(92),
-      jB = GB(3558),
-      yB = GB(1282);
+    var ye = He(59),
+      be = He(1438),
+      Me = He(1127),
+      Ke = He(97),
+      Ue = He(3447),
+      Fe = He(1228);
 
-    function JB() {
-      return !(0, oB.isMobile)()
+    function Je() {
+      return !(0, Ke.isMobile)()
     }
 
-    function MB(BB) {
+    function oe(ee) {
       let {
-        disabled: OB,
-        openFolderPicker: GB,
-        onFiles: oB
-      } = BB;
+        disabled: ie,
+        openFolderPicker: He,
+        onFiles: Ke
+      } = ee;
       const {
-        t: MB
-      } = (0, QB.H)(), PB = (0, YB.useRef)(null);
-      return (0, yB.jsxs)("div", {
+        t: oe
+      } = (0, Me.v)(), Re = (0, ye.useRef)(null);
+      return (0, Fe.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, yB.jsx)("input", {
-          ref: PB,
+        children: [(0, Fe.jsx)("input", {
+          ref: Re,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(BB) {
-            const OB = Array.from(BB.target.files);
-            BB.target.value = "", oB(OB)
+          onChange: function(ee) {
+            const ie = Array.from(ee.target.files);
+            ee.target.value = "", Ke(ie)
           }
-        }), JB() && (0, yB.jsx)(DB.f, {
-          disabled: OB,
-          onClick: GB,
-          children: MB("general:chooseFolder")
-        }), (0, yB.jsx)(DB.f, {
-          disabled: OB,
+        }), Je() && (0, Fe.jsx)(be.c, {
+          disabled: ie,
+          onClick: He,
+          children: oe("general:chooseFolder")
+        }), (0, Fe.jsx)(be.c, {
+          disabled: ie,
           onClick: () => {
-            (0, jB.e)(PB.current)
+            (0, Ue.f)(Re.current)
           },
-          children: MB("general:chooseZip")
+          children: oe("general:chooseZip")
         })]
       })
     }
   },
-  5531: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB,
-      g: () => oB,
-      j: () => QB
+  5557: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ue,
+      e: () => Ke,
+      i: () => Me
     });
-    var YB = GB(5538);
-    const DB = [BB => BB.strict ? "strict" : "nonStrict", BB => BB.program];
+    var ye = He(5563);
+    const be = [ee => ee.strict ? "strict" : "nonStrict", ee => ee.program];
 
-    function QB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const YB = {};
-      for (const DB in GB) YB[DB] = `\0${DB}\0`;
-      return BB(OB, YB).replace(/\0(\w+)\0/g, ((BB, OB) => GB[OB]))
+    function Me(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const ye = {};
+      for (const be in He) ye[be] = `\0${be}\0`;
+      return ee(ie, ye).replace(/\0(\w+)\0/g, ((ee, ie) => He[ie]))
     }
 
-    function oB(BB) {
-      return null === BB.file ? null : BB.line > 0 ? `${BB.file}:${BB.line}` : BB.file
+    function Ke(ee) {
+      return null === ee.file ? null : ee.line > 0 ? `${ee.file}:${ee.line}` : ee.file
     }
 
-    function jB(BB) {
-      const OB = new Map(BB.map((BB => [yB(BB).join("."), BB])));
-      if (0 === OB.size) return [];
-      const GB = MB([...OB.values()]);
-      return 0 === GB[0].length ? [] : GB
+    function Ue(ee) {
+      const ie = new Map(ee.map((ee => [Fe(ee).join("."), ee])));
+      if (0 === ie.size) return [];
+      const He = oe([...ie.values()]);
+      return 0 === He[0].length ? [] : He
     }
 
-    function yB(BB) {
-      return DB.map((OB => OB(BB)))
+    function Fe(ee) {
+      return be.map((ie => ie(ee)))
     }
-    const JB = DB.map((BB => new Set(YB.c.map(BB)).size));
+    const Je = be.map((ee => new Set(ye.g.map(ee)).size));
 
-    function MB(BB) {
-      const OB = DB.map((OB => new Set(BB.map(OB)))),
-        GB = OB.reduce(((BB, OB) => BB * OB.size), 1),
-        YB = OB.every(((BB, OB) => 1 === BB.size || BB.size === JB[OB]));
-      if (GB === BB.length && YB) return [DB.filter(((BB, GB) => 1 === OB[GB].size)).map((OB => OB(BB[0])))];
-      let QB = null;
-      for (let oB = 0; oB < DB.length; oB++) {
-        if (1 === OB[oB].size) continue;
-        const GB = PB(BB, DB[oB]).flatMap(MB);
-        (null === QB || GB.length < QB.length) && (QB = GB)
+    function oe(ee) {
+      const ie = be.map((ie => new Set(ee.map(ie)))),
+        He = ie.reduce(((ee, ie) => ee * ie.size), 1),
+        ye = ie.every(((ee, ie) => 1 === ee.size || ee.size === Je[ie]));
+      if (He === ee.length && ye) return [be.filter(((ee, He) => 1 === ie[He].size)).map((ie => ie(ee[0])))];
+      let Me = null;
+      for (let Ke = 0; Ke < be.length; Ke++) {
+        if (1 === ie[Ke].size) continue;
+        const He = Re(ee, be[Ke]).flatMap(oe);
+        (null === Me || He.length < Me.length) && (Me = He)
       }
-      return QB
+      return Me
     }
 
-    function PB(BB, OB) {
-      const GB = new Map;
-      for (const DB of BB) {
-        var YB;
-        const BB = OB(DB);
-        GB.set(BB, [...null !== (YB = GB.get(BB)) && void 0 !== YB ? YB : [], DB])
+    function Re(ee, ie) {
+      const He = new Map;
+      for (const be of ee) {
+        var ye;
+        const ee = ie(be);
+        He.set(ee, [...null !== (ye = He.get(ee)) && void 0 !== ye ? ye : [], be])
       }
-      return [...GB.values()]
+      return [...He.values()]
     }
   },
-  7139: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      ShaderPackPublishForm: () => WB
+  7238: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      ShaderPackPublishForm: () => Be
     });
-    var YB = GB(56),
-      DB = GB(7107),
-      QB = GB(200),
-      oB = GB(5546),
-      jB = GB(1383),
-      yB = GB(1485),
-      JB = GB(1735),
-      MB = GB(1112),
-      PB = GB(7147),
-      zB = GB(7152),
-      lB = GB(1540),
-      pB = GB(1175),
-      qB = GB(7159),
-      ZB = GB(7186),
-      NB = GB(7099),
-      RB = GB(1282);
+    var ye = He(59),
+      be = He(7206),
+      Me = He(189),
+      Ke = He(5570),
+      Ue = He(1323),
+      Fe = He(1438),
+      Je = He(1674),
+      oe = He(1075),
+      Re = He(7242),
+      ke = He(7247),
+      qe = He(1490),
+      fe = He(1127),
+      Te = He(7249),
+      pe = He(7283),
+      Xe = He(7201),
+      ze = He(1228);
 
-    function WB(BB) {
-      var OB, GB, PB;
+    function Be(ee) {
+      var ie, He, Re;
       let {
-        existing: WB,
-        onPublished: VB
-      } = BB;
+        existing: Be,
+        onPublished: ge
+      } = ee;
       const {
-        t: nB
-      } = (0, pB.H)(), {
-        userContext: UB,
-        isUserContextUpdating: fB
-      } = (0, MB.d)(), [kB, dB] = (0, YB.useState)(null), [KB, uB] = (0, YB.useState)(0), [mB, IB] = (0, YB.useState)(null !== (OB = null === WB || void 0 === WB ? void 0 : WB.name) && void 0 !== OB ? OB : ""), FB = (0, YB.useRef)(mB), iB = (0, YB.useRef)(""), LB = BB => {
-        FB.current = BB, IB(BB)
-      }, [gB, rB] = (0, YB.useState)(null !== (GB = null === WB || void 0 === WB ? void 0 : WB.description) && void 0 !== GB ? GB : ""), XB = (0, YB.useRef)(gB), wB = (0, YB.useRef)(""), EB = BB => {
-        XB.current = BB, rB(BB)
-      }, [cB, hB] = (0, YB.useState)(!1), {
-        loading: aB,
-        error: eB,
-        setError: TB,
-        onFiles: bB
-      } = (0, zB.e)((async BB => {
-        const OB = await (0, qB.loadPageShaderPackCompiler)();
-        if (!OB) return void TB(nB("shaderPack:compilerUnavailable"));
-        const GB = await (0, ZB.f)(OB, BB.files);
-        if (dB({
-            pack: BB,
-            validation: GB,
-            sourceBytes: (0, oB.B)(BB.files)
-          }), !WB) {
-          var YB;
-          if ("" !== FB.current.trim() && FB.current !== iB.current || (iB.current = (0, DB.X)(BB.manifest.name.trim(), DB.B), LB(iB.current)), "" === XB.current.trim() || XB.current === wB.current) wB.current = (0, DB.X)((null !== (YB = BB.manifest.description) && void 0 !== YB ? YB : "").trim(), DB.r), EB(wB.current);
-          uB((BB => BB + 1))
+        t: de
+      } = (0, fe.v)(), {
+        userContext: We,
+        isUserContextUpdating: te
+      } = (0, oe.b)(), [Ze, we] = (0, ye.useState)(null), [De, Pe] = (0, ye.useState)(0), [Ae, Ye] = (0, ye.useState)(null !== (ie = null === Be || void 0 === Be ? void 0 : Be.name) && void 0 !== ie ? ie : ""), Ve = (0, ye.useRef)(Ae), ae = (0, ye.useRef)(""), ce = ee => {
+        Ve.current = ee, Ye(ee)
+      }, [xe, Le] = (0, ye.useState)(null !== (He = null === Be || void 0 === Be ? void 0 : Be.description) && void 0 !== He ? He : ""), Ce = (0, ye.useRef)(xe), ve = (0, ye.useRef)(""), ue = ee => {
+        Ce.current = ee, Le(ee)
+      }, [me, le] = (0, ye.useState)(!1), {
+        loading: Se,
+        error: ne,
+        setError: je,
+        onFiles: se
+      } = (0, ke.f)((async ee => {
+        const ie = await (0, Te.loadPageShaderPackCompiler)();
+        if (!ie) return void je(de("shaderPack:compilerUnavailable"));
+        const He = await (0, pe.g)(ie, ee.files);
+        if (we({
+            pack: ee,
+            validation: He,
+            sourceBytes: (0, Ke.t)(ee.files)
+          }), !Be) {
+          var ye;
+          if ("" !== Ve.current.trim() && Ve.current !== ae.current || (ae.current = (0, be.M)(ee.manifest.name.trim(), be.y), ce(ae.current)), "" === Ce.current.trim() || Ce.current === ve.current) ve.current = (0, be.M)((null !== (ye = ee.manifest.description) && void 0 !== ye ? ye : "").trim(), be.o), ue(ve.current);
+          Pe((ee => ee + 1))
         }
-      })), CB = !fB && !UB.isLoggedIn() && !QB.c.offlineMode, HB = mB.trim(), vB = HB.length < DB.E, sB = null !== kB && !1 !== (null === (PB = kB.validation) || void 0 === PB ? void 0 : PB.ok) && !aB && !vB && !CB && !fB;
-      return (0, RB.jsxs)("div", {
+      })), Ie = !te && !We.isLoggedIn() && !Me.e.offlineMode, he = Ae.trim(), Ne = he.length < be.A, Ge = null !== Ze && !1 !== (null === (Re = Ze.validation) || void 0 === Re ? void 0 : Re.ok) && !Se && !Ne && !Ie && !te;
+      return (0, ze.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, RB.jsx)("p", {
+        children: [(0, ze.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: WB ? nB("shaderPackListing:uploadIntro", {
-            minutes: String(DB.I / 6e4)
-          }) : nB("shaderPackListing:publishIntro")
-        }), (0, RB.jsx)(SB, {}), CB && (0, RB.jsx)("div", {
+          children: Be ? de("shaderPackListing:uploadIntro", {
+            minutes: String(be.D / 6e4)
+          }) : de("shaderPackListing:publishIntro")
+        }), (0, ze.jsx)(Oe, {}), Ie && (0, ze.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: nB("shaderPackListing:publishNeedsLogin")
-        }), (0, RB.jsx)(zB.b, {
-          busy: aB,
-          disabled: aB || cB,
-          onFiles: BB => {
-            dB(null), bB(BB)
+          children: de("shaderPackListing:publishNeedsLogin")
+        }), (0, ze.jsx)(ke.b, {
+          busy: Se,
+          disabled: Se || me,
+          onFiles: ee => {
+            we(null), se(ee)
           }
-        }), kB && (0, RB.jsxs)("div", {
+        }), Ze && (0, ze.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, RB.jsx)("div", {
+          children: [(0, ze.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: kB.pack.manifest.name
-          }), (0, RB.jsxs)("div", {
+            children: Ze.pack.manifest.name
+          }), (0, ze.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [nB("shaderPackListing:sizeValue", {
-              kilobytes: String((0, NB.P)(kB.sourceBytes))
-            }), " \xb7", " ", nB("shaderPackListing:filesValue", {
-              files: String(kB.pack.files.length)
+            children: [de("shaderPackListing:sizeValue", {
+              kilobytes: String((0, Xe.T)(Ze.sourceBytes))
+            }), " \xb7", " ", de("shaderPackListing:filesValue", {
+              files: String(Ze.pack.files.length)
             })]
-          }), (0, RB.jsx)(AB, {
-            picked: kB
+          }), (0, ze.jsx)(Ee, {
+            picked: Ze
           })]
-        }), !WB && (0, RB.jsxs)(RB.Fragment, {
-          children: [(0, RB.jsxs)("label", {
+        }), !Be && (0, ze.jsxs)(ze.Fragment, {
+          children: [(0, ze.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, RB.jsx)("span", {
-              children: nB("general:name")
-            }), (0, RB.jsx)(JB.b, {
+            children: [(0, ze.jsx)("span", {
+              children: de("general:name")
+            }), (0, ze.jsx)(Je.d, {
               className: "ShaderPackPublishInput",
-              defaultValue: mB,
-              maxLength: DB.B,
-              onValueChange: LB
-            }, KB), kB && vB && (0, RB.jsx)("span", {
+              defaultValue: Ae,
+              maxLength: be.y,
+              onValueChange: ce
+            }, De), Ze && Ne && (0, ze.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: nB("shaderPackListing:nameTooShort", {
-                min: String(DB.E)
+              children: de("shaderPackListing:nameTooShort", {
+                min: String(be.A)
               })
             })]
-          }), (0, RB.jsxs)("label", {
+          }), (0, ze.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, RB.jsx)("span", {
-              children: nB("general:description")
-            }), (0, RB.jsx)(JB.b, {
+            children: [(0, ze.jsx)("span", {
+              children: de("general:description")
+            }), (0, ze.jsx)(Je.d, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: gB,
-              maxLength: DB.r,
-              onValueChange: EB,
+              defaultValue: xe,
+              maxLength: be.o,
+              onValueChange: ue,
               useTextarea: !0
-            }, KB)]
+            }, De)]
           })]
-        }), eB && (0, RB.jsx)("div", {
+        }), ne && (0, ze.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: eB
-        }), (0, RB.jsxs)(yB.q, {
+          children: ne
+        }), (0, ze.jsxs)(Fe.m, {
           className: "ShaderPackPublishButton",
-          disabled: !sB,
-          loading: cB,
+          disabled: !Ge,
+          loading: me,
           onClick: () => {
             !async function() {
-              var BB;
-              if (!kB) return;
+              var ee;
+              if (!Ze) return;
               const {
-                name: OB,
-                description: GB
-              } = null !== WB && void 0 !== WB ? WB : {
-                name: HB,
-                description: gB.trim()
-              }, YB = {
-                packId: null !== (BB = null === WB || void 0 === WB ? void 0 : WB.packId) && void 0 !== BB ? BB : null,
-                name: OB,
-                description: GB,
-                apiVersion: kB.pack.manifest.apiVersion,
-                files: (0, oB.y)(kB.pack.files),
-                keepCircleShadows: !0 === kB.pack.manifest.keepCircleShadows
+                name: ie,
+                description: He
+              } = null !== Be && void 0 !== Be ? Be : {
+                name: he,
+                description: xe.trim()
+              }, ye = {
+                packId: null !== (ee = null === Be || void 0 === Be ? void 0 : Be.packId) && void 0 !== ee ? ee : null,
+                name: ie,
+                description: He,
+                apiVersion: Ze.pack.manifest.apiVersion,
+                files: (0, Ke.s)(Ze.pack.files),
+                keepCircleShadows: !0 === Ze.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(YB)).byteLength > 1024 * DB.U) TB(nB("shaderPackListing:publishTooBig", {
-                kilobytes: String(DB.U)
+              if ((new TextEncoder).encode(JSON.stringify(ye)).byteLength > 1024 * be.L) je(de("shaderPackListing:publishTooBig", {
+                kilobytes: String(be.L)
               }));
               else {
-                hB(!0), TB(null);
+                le(!0), je(null);
                 try {
-                  VB(await lB.b.publishShaderPack(UB, YB))
-                } catch (QB) {
-                  console.error("Failed to publish the shader pack", QB), TB((0, NB.u)(QB, nB, "shaderPackListing:publishFailed"))
+                  ge(await qe.b.publishShaderPack(We, ye))
+                } catch (Me) {
+                  console.error("Failed to publish the shader pack", Me), je((0, Xe.z)(Me, de, "shaderPackListing:publishFailed"))
                 } finally {
-                  hB(!1)
+                  le(!1)
                 }
               }
             }()
           },
-          children: [(0, RB.jsx)(jB.b, {
+          children: [(0, ze.jsx)(Ue.e, {
             name: "upload"
-          }), " ", nB(WB ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", de(Be ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function AB(BB) {
+    function Ee(ee) {
       let {
-        picked: OB
-      } = BB;
+        picked: ie
+      } = ee;
       const {
-        t: GB
-      } = (0, pB.H)(), {
-        validation: YB
-      } = OB;
-      return null === YB ? (0, RB.jsx)("div", {
+        t: He
+      } = (0, fe.v)(), {
+        validation: ye
+      } = ie;
+      return null === ye ? (0, ze.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: GB("shaderPackListing:publishUnchecked")
-      }) : YB.ok ? (0, RB.jsxs)(RB.Fragment, {
-        children: [(0, RB.jsxs)("div", {
+        children: He("shaderPackListing:publishUnchecked")
+      }) : ye.ok ? (0, ze.jsxs)(ze.Fragment, {
+        children: [(0, ze.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, RB.jsx)(jB.b, {
+          children: [(0, ze.jsx)(Ue.e, {
             name: "circle-check"
-          }), " ", GB("shaderPackListing:publishReady")]
-        }), YB.offInStrict.length > 0 && (0, RB.jsxs)(RB.Fragment, {
-          children: [(0, RB.jsxs)("div", {
+          }), " ", He("shaderPackListing:publishReady")]
+        }), ye.offInStrict.length > 0 && (0, ze.jsxs)(ze.Fragment, {
+          children: [(0, ze.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, RB.jsx)(jB.b, {
+            children: [(0, ze.jsx)(Ue.e, {
               name: "triangle-exclamation"
-            }), " ", GB("shaderPack:offInStrict")]
-          }), (0, RB.jsx)(PB.c, {
-            diagnostics: YB.offInStrict,
-            t: GB
+            }), " ", He("shaderPack:offInStrict")]
+          }), (0, ze.jsx)(Re.b, {
+            diagnostics: ye.offInStrict,
+            t: He
           })]
         })]
-      }) : (0, RB.jsxs)(RB.Fragment, {
-        children: [(0, RB.jsxs)("div", {
+      }) : (0, ze.jsxs)(ze.Fragment, {
+        children: [(0, ze.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, RB.jsx)(jB.b, {
+          children: [(0, ze.jsx)(Ue.e, {
             name: "triangle-exclamation"
-          }), " ", GB("shaderPackListing:publishHasErrors")]
-        }), (0, RB.jsx)(PB.c, {
-          diagnostics: YB.errors,
-          more: YB.moreErrors,
-          t: GB
+          }), " ", He("shaderPackListing:publishHasErrors")]
+        }), (0, ze.jsx)(Re.b, {
+          diagnostics: ye.errors,
+          more: ye.moreErrors,
+          t: He
         })]
       })
     }
-    const VB = "\0";
+    const ge = "\0";
 
-    function SB() {
+    function Oe() {
       const {
-        t: BB
-      } = (0, pB.H)(), [OB, GB] = BB("shaderPackListing:bloxdhubHelp", {
-        site: VB
-      }).split(VB);
-      return (0, RB.jsxs)("p", {
+        t: ee
+      } = (0, fe.v)(), [ie, He] = ee("shaderPackListing:bloxdhubHelp", {
+        site: ge
+      }).split(ge);
+      return (0, ze.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [OB, (0, RB.jsx)("a", {
+        children: [ie, (0, ze.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: DB.i,
+          href: be.i,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: DB.e
-        }), GB]
+          children: be.d
+        }), He]
       })
     }
   },
-  5538: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB.k,
-      c: () => DB,
-      g: () => YB.r
+  5563: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye.e,
+      g: () => be,
+      h: () => ye.m
     });
-    var YB = GB(5546);
-    const DB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((OB => ({
-      strict: BB,
-      program: OB
+    var ye = He(5570);
+    const be = [!1, !0].flatMap((ee => ["terrain", "liquid", "model"].map((ie => ({
+      strict: ee,
+      program: ie
     })))))
   },
-  5546: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => zB,
-      e: () => jB,
-      h: () => oB,
-      k: () => YB,
-      o: () => qB,
-      p: () => PB,
-      r: () => DB,
-      u: () => QB,
-      v: () => JB,
-      y: () => MB
+  5570: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue,
+      d: () => Ke,
+      e: () => ye,
+      h: () => Te,
+      k: () => Re,
+      m: () => be,
+      q: () => Me,
+      r: () => Je,
+      s: () => oe,
+      t: () => ke
     });
-    const YB = 5;
+    const ye = 5;
 
-    function DB(BB) {
-      return BB === YB
+    function be(ee) {
+      return ee === ye
     }
 
-    function QB(BB) {
-      return [...BB.features]
+    function Me(ee) {
+      return [...ee.features]
     }
-    const oB = 262144,
-      jB = 256,
-      yB = 256;
+    const Ke = 262144,
+      Ue = 256,
+      Fe = 256;
 
-    function JB(BB) {
-      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
-      const OB = [];
-      for (const [GB, YB] of Object.entries(BB)) {
-        if ("string" !== typeof YB) return `${GB} isn't text.`;
-        OB.push({
-          path: GB,
-          source: YB
+    function Je(ee) {
+      if ("object" !== typeof ee || null === ee || Array.isArray(ee)) return "The pack has no files.";
+      const ie = [];
+      for (const [He, ye] of Object.entries(ee)) {
+        if ("string" !== typeof ye) return `${He} isn't text.`;
+        ie.push({
+          path: He,
+          source: ye
         })
       }
-      return OB.sort(((BB, OB) => PB(BB.path, OB.path))),
-        function(BB) {
-          if (0 === BB.length) return "The pack has no .wgsl files.";
-          if (BB.length > jB) return `The pack has more than ${jB} .wgsl files.`;
-          const OB = new Set;
+      return ie.sort(((ee, ie) => Re(ee.path, ie.path))),
+        function(ee) {
+          if (0 === ee.length) return "The pack has no .wgsl files.";
+          if (ee.length > Ue) return `The pack has more than ${Ue} .wgsl files.`;
+          const ie = new Set;
           for (const {
-              path: GB
+              path: He
             }
-            of BB) {
-            const BB = lB(GB);
-            if (null !== BB) return BB;
-            if (OB.has(GB)) return `The pack has two files at ${GB}.`;
-            OB.add(GB)
+            of ee) {
+            const ee = qe(He);
+            if (null !== ee) return ee;
+            if (ie.has(He)) return `The pack has two files at ${He}.`;
+            ie.add(He)
           }
-          return zB(BB) > oB ? `The pack's .wgsl files are over ${oB/1024} KB in total.` : null
-        }(OB) ?? OB
+          return ke(ee) > Ke ? `The pack's .wgsl files are over ${Ke/1024} KB in total.` : null
+        }(ie) ?? ie
     }
 
-    function MB(BB) {
-      const OB = {};
-      for (const GB of BB) OB[GB.path] = GB.source;
-      return OB
+    function oe(ee) {
+      const ie = {};
+      for (const He of ee) ie[He.path] = He.source;
+      return ie
     }
 
-    function PB(BB, OB) {
-      return BB < OB ? -1 : BB > OB ? 1 : 0
+    function Re(ee, ie) {
+      return ee < ie ? -1 : ee > ie ? 1 : 0
     }
 
-    function zB(BB) {
-      const OB = new TextEncoder;
-      let GB = 0;
+    function ke(ee) {
+      const ie = new TextEncoder;
+      let He = 0;
       for (const {
-          source: YB
+          source: ye
         }
-        of BB) GB += OB.encode(YB).byteLength;
-      return GB
+        of ee) He += ie.encode(ye).byteLength;
+      return He
     }
 
-    function lB(BB) {
-      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
-      if (BB.length > yB) return `A file path is over ${yB} characters.`;
-      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
-      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
+    function qe(ee) {
+      if (!ee.toLowerCase().endsWith(".wgsl")) return `${ee} isn't a .wgsl file.`;
+      if (ee.length > Fe) return `A file path is over ${Fe} characters.`;
+      if (ee.includes("\\") || /[\u0000-\u001f]/.test(ee)) return `${ee} isn't a valid file path.`;
+      return ee.split("/").some((ee => "" === ee || "." === ee || ".." === ee)) ? `${ee} isn't a valid file path.` : null
     }
-    const pB = /^(.*)\[rot\[([1-4])$/;
+    const fe = /^(.*)\[rot\[([1-4])$/;
 
-    function qB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const YB = new Map;
-      OB.forEach(((BB, OB) => {
+    function Te(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const ye = new Map;
+      ie.forEach(((ee, ie) => {
         let {
-          numAnimStates: GB,
-          animStartIdx: DB
-        } = BB;
-        for (let QB = 1; QB < GB; QB++) YB.set(DB + QB - 1, OB)
+          numAnimStates: He,
+          animStartIdx: be
+        } = ee;
+        for (let Me = 1; Me < He; Me++) ye.set(be + Me - 1, ie)
       }));
-      const DB = Object.entries(BB),
-        QB = new Map;
-      for (const [qB, ZB] of DB) {
-        const BB = pB.exec(qB);
-        "1" === BB?.[2] && QB.set(BB[1], ZB + 1)
+      const be = Object.entries(ee),
+        Me = new Map;
+      for (const [Te, pe] of be) {
+        const ee = fe.exec(Te);
+        "1" === ee?.[2] && Me.set(ee[1], pe + 1)
       }
-      const oB = BB => {
-          const OB = pB.exec(BB);
-          return OB && QB.has(OB[1]) ? {
-            root: OB[1],
-            rotation: Number(OB[2]) - 1
+      const Ke = ee => {
+          const ie = fe.exec(ee);
+          return ie && Me.has(ie[1]) ? {
+            root: ie[1],
+            rotation: Number(ie[2]) - 1
           } : null
         },
-        jB = new Set(DB.map((BB => {
-          let [OB] = BB;
-          return oB(OB)?.root ?? OB
+        Ue = new Set(be.map((ee => {
+          let [ie] = ee;
+          return Ke(ie)?.root ?? ie
         }))),
-        yB = (BB, GB) => {
-          const YB = BB.replace(/_?0$/, "");
-          return (OB[GB]?.numAnimStates ?? 0) > 1 && !jB.has(YB) ? YB : BB
+        Fe = (ee, He) => {
+          const ye = ee.replace(/_?0$/, "");
+          return (ie[He]?.numAnimStates ?? 0) > 1 && !Ue.has(ye) ? ye : ee
         },
-        JB = new Map;
-      for (const [pB, qB] of DB) JB.set(qB, yB(oB(pB)?.root ?? pB, qB));
-      const MB = DB.reduce(((BB, OB) => {
-          let [, GB] = OB;
-          return Math.max(BB, GB + 1)
+        Je = new Map;
+      for (const [fe, Te] of be) Je.set(Te, Fe(Ke(fe)?.root ?? fe, Te));
+      const oe = be.reduce(((ee, ie) => {
+          let [, He] = ie;
+          return Math.max(ee, He + 1)
         }), 0),
-        PB = Array.from({
-          length: MB
-        }, ((BB, OB) => ({
-          id: OB + 1,
+        Re = Array.from({
+          length: oe
+        }, ((ee, ie) => ({
+          id: ie + 1,
           rotation: 0
         }))),
-        zB = new Map,
-        lB = new Map;
-      for (const [pB, qB] of DB) {
-        const BB = oB(pB),
-          OB = YB.get(qB);
-        if (void 0 !== OB) {
-          const GB = JB.get(OB);
-          lB.set(pB, {
-            name: pB,
-            texture: GB,
+        ke = new Map,
+        qe = new Map;
+      for (const [fe, Te] of be) {
+        const ee = Ke(fe),
+          ie = ye.get(Te);
+        if (void 0 !== ie) {
+          const He = Je.get(ie);
+          qe.set(fe, {
+            name: fe,
+            texture: He,
             kind: "frame"
-          }), BB && !lB.has(BB.root) && lB.set(BB.root, {
-            name: BB.root,
-            texture: GB,
+          }), ee && !qe.has(ee.root) && qe.set(ee.root, {
+            name: ee.root,
+            texture: He,
             kind: "frame"
           });
           continue
         }
-        const GB = JB.get(qB),
-          DB = BB?.root ?? pB;
-        if (GB !== DB && lB.set(DB, {
-            name: DB,
-            texture: GB,
+        const He = Je.get(Te),
+          be = ee?.root ?? fe;
+        if (He !== be && qe.set(be, {
+            name: be,
+            texture: He,
             kind: "frame"
-          }), BB) {
-          const OB = QB.get(BB.root);
-          PB[qB] = {
-            id: OB,
-            rotation: BB.rotation
-          }, zB.set(GB, OB), lB.set(pB, {
-            name: pB,
-            texture: GB,
+          }), ee) {
+          const ie = Me.get(ee.root);
+          Re[Te] = {
+            id: ie,
+            rotation: ee.rotation
+          }, ke.set(He, ie), qe.set(fe, {
+            name: fe,
+            texture: He,
             kind: "rotation"
           })
-        } else zB.set(GB, qB + 1)
+        } else ke.set(He, Te + 1)
       }
-      for (const pB of zB.keys()) lB.delete(pB);
-      for (const [pB, qB] of GB) {
-        const BB = zB.get(qB);
-        void 0 === BB || zB.has(pB) || (zB.set(pB, BB), lB.delete(pB))
+      for (const fe of ke.keys()) qe.delete(fe);
+      for (const [fe, Te] of He) {
+        const ee = ke.get(Te);
+        void 0 === ee || ke.has(fe) || (ke.set(fe, ee), qe.delete(fe))
       }
       return {
-        named: [...zB].sort(((BB, OB) => {
-          let [GB] = BB, [YB] = OB;
-          return GB < YB ? -1 : GB > YB ? 1 : 0
-        })).map((BB => {
-          let [OB, GB] = BB;
+        named: [...ke].sort(((ee, ie) => {
+          let [He] = ee, [ye] = ie;
+          return He < ye ? -1 : He > ye ? 1 : 0
+        })).map((ee => {
+          let [ie, He] = ee;
           return {
-            name: OB,
-            id: GB
+            name: ie,
+            id: He
           }
         })),
-        aliases: [...lB.values()],
-        layers: PB
+        aliases: [...qe.values()],
+        layers: Re
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

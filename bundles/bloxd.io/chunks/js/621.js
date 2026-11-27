@@ -1,176 +1,176 @@
 export const id = 621;
 export const ids = [621];
 export const modules = {
-  44986: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      _HDRTextureLoader: () => MB
+  45043: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      _HDRTextureLoader: () => oe
     });
-    var YB = GB(37778);
-    class DB {
-      static ConvertPanoramaToCubemap(BB, OB, GB, YB) {
-        let DB, QB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          oB = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        if (!BB) throw "ConvertPanoramaToCubemap: input cannot be null";
-        if (BB.length != OB * GB * 3) {
-          if (BB.length != OB * GB * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
-          DB = 4
-        } else DB = 3;
+    var ye = He(37917);
+    class be {
+      static ConvertPanoramaToCubemap(ee, ie, He, ye) {
+        let be, Me = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          Ke = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        if (!ee) throw "ConvertPanoramaToCubemap: input cannot be null";
+        if (ee.length != ie * He * 3) {
+          if (ee.length != ie * He * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
+          be = 4
+        } else be = 3;
         return {
-          front: this.CreateCubemapTexture(YB, this.FACE_FRONT, BB, OB, GB, QB, oB, DB),
-          back: this.CreateCubemapTexture(YB, this.FACE_BACK, BB, OB, GB, QB, oB, DB),
-          left: this.CreateCubemapTexture(YB, this.FACE_LEFT, BB, OB, GB, QB, oB, DB),
-          right: this.CreateCubemapTexture(YB, this.FACE_RIGHT, BB, OB, GB, QB, oB, DB),
-          up: this.CreateCubemapTexture(YB, this.FACE_UP, BB, OB, GB, QB, oB, DB),
-          down: this.CreateCubemapTexture(YB, this.FACE_DOWN, BB, OB, GB, QB, oB, DB),
-          size: YB,
+          front: this.CreateCubemapTexture(ye, this.FACE_FRONT, ee, ie, He, Me, Ke, be),
+          back: this.CreateCubemapTexture(ye, this.FACE_BACK, ee, ie, He, Me, Ke, be),
+          left: this.CreateCubemapTexture(ye, this.FACE_LEFT, ee, ie, He, Me, Ke, be),
+          right: this.CreateCubemapTexture(ye, this.FACE_RIGHT, ee, ie, He, Me, Ke, be),
+          up: this.CreateCubemapTexture(ye, this.FACE_UP, ee, ie, He, Me, Ke, be),
+          down: this.CreateCubemapTexture(ye, this.FACE_DOWN, ee, ie, He, Me, Ke, be),
+          size: ye,
           type: 1,
           format: 4,
           gammaSpace: !1
         }
       }
-      static CreateCubemapTexture(BB, OB, GB, YB, DB, QB, oB, jB) {
-        const yB = new ArrayBuffer(BB * BB * 4 * 3),
-          JB = new Float32Array(yB),
-          MB = QB ? Math.max(1, Math.round(YB / 4 / BB)) : 1,
-          PB = 1 / MB,
-          zB = PB * PB,
-          lB = OB[1].subtract(OB[0]).scale(PB / BB),
-          pB = OB[3].subtract(OB[2]).scale(PB / BB),
-          qB = 1 / BB;
-        let ZB = 0;
-        for (let NB = 0; NB < BB; NB++)
-          for (let QB = 0; QB < MB; QB++) {
-            let QB = OB[0],
-              yB = OB[2];
-            for (let OB = 0; OB < BB; OB++)
-              for (let PB = 0; PB < MB; PB++) {
-                const MB = yB.subtract(QB).scale(ZB).add(QB);
-                MB.normalize();
-                const PB = this.CalcProjectionSpherical(MB, GB, YB, DB, jB, oB);
-                JB[NB * BB * 3 + 3 * OB + 0] += PB.r * zB, JB[NB * BB * 3 + 3 * OB + 1] += PB.g * zB, JB[NB * BB * 3 + 3 * OB + 2] += PB.b * zB, QB = QB.add(lB), yB = yB.add(pB)
+      static CreateCubemapTexture(ee, ie, He, ye, be, Me, Ke, Ue) {
+        const Fe = new ArrayBuffer(ee * ee * 4 * 3),
+          Je = new Float32Array(Fe),
+          oe = Me ? Math.max(1, Math.round(ye / 4 / ee)) : 1,
+          Re = 1 / oe,
+          ke = Re * Re,
+          qe = ie[1].subtract(ie[0]).scale(Re / ee),
+          fe = ie[3].subtract(ie[2]).scale(Re / ee),
+          Te = 1 / ee;
+        let pe = 0;
+        for (let Xe = 0; Xe < ee; Xe++)
+          for (let Me = 0; Me < oe; Me++) {
+            let Me = ie[0],
+              Fe = ie[2];
+            for (let ie = 0; ie < ee; ie++)
+              for (let Re = 0; Re < oe; Re++) {
+                const oe = Fe.subtract(Me).scale(pe).add(Me);
+                oe.normalize();
+                const Re = this.CalcProjectionSpherical(oe, He, ye, be, Ue, Ke);
+                Je[Xe * ee * 3 + 3 * ie + 0] += Re.r * ke, Je[Xe * ee * 3 + 3 * ie + 1] += Re.g * ke, Je[Xe * ee * 3 + 3 * ie + 2] += Re.b * ke, Me = Me.add(qe), Fe = Fe.add(fe)
               }
-            ZB += qB * PB
+            pe += Te * Re
           }
-        return JB
+        return Je
       }
-      static CalcProjectionSpherical(BB, OB, GB, YB, DB, QB) {
-        let oB = Math.atan2(BB.z, BB.x);
-        const jB = Math.acos(BB.y);
-        for (; oB < -Math.PI;) oB += 2 * Math.PI;
-        for (; oB > Math.PI;) oB -= 2 * Math.PI;
-        let yB = oB / Math.PI;
-        const JB = jB / Math.PI;
-        yB = .5 * yB + .5;
-        let MB = Math.round(yB * GB);
-        MB < 0 ? MB = 0 : MB >= GB && (MB = GB - 1);
-        let PB = Math.round(JB * YB);
-        PB < 0 ? PB = 0 : PB >= YB && (PB = YB - 1);
-        const zB = QB ? YB - PB - 1 : PB;
+      static CalcProjectionSpherical(ee, ie, He, ye, be, Me) {
+        let Ke = Math.atan2(ee.z, ee.x);
+        const Ue = Math.acos(ee.y);
+        for (; Ke < -Math.PI;) Ke += 2 * Math.PI;
+        for (; Ke > Math.PI;) Ke -= 2 * Math.PI;
+        let Fe = Ke / Math.PI;
+        const Je = Ue / Math.PI;
+        Fe = .5 * Fe + .5;
+        let oe = Math.round(Fe * He);
+        oe < 0 ? oe = 0 : oe >= He && (oe = He - 1);
+        let Re = Math.round(Je * ye);
+        Re < 0 ? Re = 0 : Re >= ye && (Re = ye - 1);
+        const ke = Me ? ye - Re - 1 : Re;
         return {
-          r: OB[zB * GB * DB + MB * DB + 0],
-          g: OB[zB * GB * DB + MB * DB + 1],
-          b: OB[zB * GB * DB + MB * DB + 2]
+          r: ie[ke * He * be + oe * be + 0],
+          g: ie[ke * He * be + oe * be + 1],
+          b: ie[ke * He * be + oe * be + 2]
         }
       }
     }
 
-    function QB(BB, OB, GB, YB, DB, QB) {
-      DB > 0 ? (DB = function(BB, OB) {
-        return OB > 1023 ? BB * Math.pow(2, 1023) * Math.pow(2, OB - 1023) : OB < -1074 ? BB * Math.pow(2, -1074) * Math.pow(2, OB + 1074) : BB * Math.pow(2, OB)
-      }(1, DB - 136), BB[QB + 0] = OB * DB, BB[QB + 1] = GB * DB, BB[QB + 2] = YB * DB) : (BB[QB + 0] = 0, BB[QB + 1] = 0, BB[QB + 2] = 0)
+    function Me(ee, ie, He, ye, be, Me) {
+      be > 0 ? (be = function(ee, ie) {
+        return ie > 1023 ? ee * Math.pow(2, 1023) * Math.pow(2, ie - 1023) : ie < -1074 ? ee * Math.pow(2, -1074) * Math.pow(2, ie + 1074) : ee * Math.pow(2, ie)
+      }(1, be - 136), ee[Me + 0] = ie * be, ee[Me + 1] = He * be, ee[Me + 2] = ye * be) : (ee[Me + 0] = 0, ee[Me + 1] = 0, ee[Me + 2] = 0)
     }
 
-    function oB(BB, OB) {
-      let GB, YB = "";
-      for (let DB = OB; DB < BB.length - OB && (GB = String.fromCharCode(BB[DB]), "\n" != GB); DB++) YB += GB;
-      return YB
+    function Ke(ee, ie) {
+      let He, ye = "";
+      for (let be = ie; be < ee.length - ie && (He = String.fromCharCode(ee[be]), "\n" != He); be++) ye += He;
+      return ye
     }
 
-    function jB(BB) {
-      let OB = oB(BB, 0);
-      if ("#" != OB[0] || "?" != OB[1]) throw "Bad HDR Format.";
-      let GB = !1,
-        YB = !1,
-        DB = 0;
+    function Ue(ee) {
+      let ie = Ke(ee, 0);
+      if ("#" != ie[0] || "?" != ie[1]) throw "Bad HDR Format.";
+      let He = !1,
+        ye = !1,
+        be = 0;
       do {
-        DB += OB.length + 1, OB = oB(BB, DB), "FORMAT=32-bit_rle_rgbe" == OB ? YB = !0 : 0 == OB.length && (GB = !0)
-      } while (!GB);
-      if (!YB) throw "HDR Bad header format, unsupported FORMAT";
-      DB += OB.length + 1, OB = oB(BB, DB);
-      const QB = /^-Y (.*) \+X (.*)$/g.exec(OB);
-      if (!QB || QB.length < 3) throw "HDR Bad header format, no size";
-      const jB = parseInt(QB[2]),
-        yB = parseInt(QB[1]);
-      if (jB < 8 || jB > 32767) throw "HDR Bad header format, unsupported size";
-      return DB += OB.length + 1, {
-        height: yB,
-        width: jB,
-        dataPosition: DB
+        be += ie.length + 1, ie = Ke(ee, be), "FORMAT=32-bit_rle_rgbe" == ie ? ye = !0 : 0 == ie.length && (He = !0)
+      } while (!He);
+      if (!ye) throw "HDR Bad header format, unsupported FORMAT";
+      be += ie.length + 1, ie = Ke(ee, be);
+      const Me = /^-Y (.*) \+X (.*)$/g.exec(ie);
+      if (!Me || Me.length < 3) throw "HDR Bad header format, no size";
+      const Ue = parseInt(Me[2]),
+        Fe = parseInt(Me[1]);
+      if (Ue < 8 || Ue > 32767) throw "HDR Bad header format, unsupported size";
+      return be += ie.length + 1, {
+        height: Fe,
+        width: Ue,
+        dataPosition: be
       }
     }
 
-    function yB(BB, OB) {
-      return function(BB, OB) {
-        let GB = OB.height;
-        const YB = OB.width;
-        let DB, oB, jB, yB, MB, PB, zB, lB, pB = OB.dataPosition;
-        const qB = new ArrayBuffer(4 * YB),
-          ZB = new Uint8Array(qB),
-          NB = new ArrayBuffer(OB.width * OB.height * 4 * 3),
-          RB = new Float32Array(NB);
-        for (; GB > 0;) {
-          if (DB = BB[pB++], oB = BB[pB++], jB = BB[pB++], yB = BB[pB++], 2 != DB || 2 != oB || 128 & jB || OB.width < 8 || OB.width > 32767) return JB(BB, OB);
-          if ((jB << 8 | yB) != YB) throw "HDR Bad header format, wrong scan line width";
-          for (PB = 0, lB = 0; lB < 4; lB++)
-            for (zB = (lB + 1) * YB; PB < zB;)
-              if (DB = BB[pB++], oB = BB[pB++], DB > 128) {
-                if (MB = DB - 128, 0 == MB || MB > zB - PB) throw "HDR Bad Format, bad scanline data (run)";
-                for (; MB-- > 0;) ZB[PB++] = oB
+    function Fe(ee, ie) {
+      return function(ee, ie) {
+        let He = ie.height;
+        const ye = ie.width;
+        let be, Ke, Ue, Fe, oe, Re, ke, qe, fe = ie.dataPosition;
+        const Te = new ArrayBuffer(4 * ye),
+          pe = new Uint8Array(Te),
+          Xe = new ArrayBuffer(ie.width * ie.height * 4 * 3),
+          ze = new Float32Array(Xe);
+        for (; He > 0;) {
+          if (be = ee[fe++], Ke = ee[fe++], Ue = ee[fe++], Fe = ee[fe++], 2 != be || 2 != Ke || 128 & Ue || ie.width < 8 || ie.width > 32767) return Je(ee, ie);
+          if ((Ue << 8 | Fe) != ye) throw "HDR Bad header format, wrong scan line width";
+          for (Re = 0, qe = 0; qe < 4; qe++)
+            for (ke = (qe + 1) * ye; Re < ke;)
+              if (be = ee[fe++], Ke = ee[fe++], be > 128) {
+                if (oe = be - 128, 0 == oe || oe > ke - Re) throw "HDR Bad Format, bad scanline data (run)";
+                for (; oe-- > 0;) pe[Re++] = Ke
               } else {
-                if (MB = DB, 0 == MB || MB > zB - PB) throw "HDR Bad Format, bad scanline data (non-run)";
-                if (ZB[PB++] = oB, --MB > 0)
-                  for (let OB = 0; OB < MB; OB++) ZB[PB++] = BB[pB++]
-              } for (lB = 0; lB < YB; lB++) DB = ZB[lB], oB = ZB[lB + YB], jB = ZB[lB + 2 * YB], yB = ZB[lB + 3 * YB], QB(RB, DB, oB, jB, yB, (OB.height - GB) * YB * 3 + 3 * lB);
-          GB--
+                if (oe = be, 0 == oe || oe > ke - Re) throw "HDR Bad Format, bad scanline data (non-run)";
+                if (pe[Re++] = Ke, --oe > 0)
+                  for (let ie = 0; ie < oe; ie++) pe[Re++] = ee[fe++]
+              } for (qe = 0; qe < ye; qe++) be = pe[qe], Ke = pe[qe + ye], Ue = pe[qe + 2 * ye], Fe = pe[qe + 3 * ye], Me(ze, be, Ke, Ue, Fe, (ie.height - He) * ye * 3 + 3 * qe);
+          He--
         }
-        return RB
-      }(BB, OB)
+        return ze
+      }(ee, ie)
     }
 
-    function JB(BB, OB) {
-      let GB = OB.height;
-      const YB = OB.width;
-      let DB, oB, jB, yB, JB, MB = OB.dataPosition;
-      const PB = new ArrayBuffer(OB.width * OB.height * 4 * 3),
-        zB = new Float32Array(PB);
-      for (; GB > 0;) {
-        for (JB = 0; JB < OB.width; JB++) DB = BB[MB++], oB = BB[MB++], jB = BB[MB++], yB = BB[MB++], QB(zB, DB, oB, jB, yB, (OB.height - GB) * YB * 3 + 3 * JB);
-        GB--
+    function Je(ee, ie) {
+      let He = ie.height;
+      const ye = ie.width;
+      let be, Ke, Ue, Fe, Je, oe = ie.dataPosition;
+      const Re = new ArrayBuffer(ie.width * ie.height * 4 * 3),
+        ke = new Float32Array(Re);
+      for (; He > 0;) {
+        for (Je = 0; Je < ie.width; Je++) be = ee[oe++], Ke = ee[oe++], Ue = ee[oe++], Fe = ee[oe++], Me(ke, be, Ke, Ue, Fe, (ie.height - He) * ye * 3 + 3 * Je);
+        He--
       }
-      return zB
+      return ke
     }
-    DB.FACE_LEFT = [new YB.r(-1, -1, -1), new YB.r(1, -1, -1), new YB.r(-1, 1, -1), new YB.r(1, 1, -1)], DB.FACE_RIGHT = [new YB.r(1, -1, 1), new YB.r(-1, -1, 1), new YB.r(1, 1, 1), new YB.r(-1, 1, 1)], DB.FACE_FRONT = [new YB.r(1, -1, -1), new YB.r(1, -1, 1), new YB.r(1, 1, -1), new YB.r(1, 1, 1)], DB.FACE_BACK = [new YB.r(-1, -1, 1), new YB.r(-1, -1, -1), new YB.r(-1, 1, 1), new YB.r(-1, 1, -1)], DB.FACE_DOWN = [new YB.r(1, 1, -1), new YB.r(1, 1, 1), new YB.r(-1, 1, -1), new YB.r(-1, 1, 1)], DB.FACE_UP = [new YB.r(-1, -1, -1), new YB.r(-1, -1, 1), new YB.r(1, -1, -1), new YB.r(1, -1, 1)];
-    class MB {
+    be.FACE_LEFT = [new ye.p(-1, -1, -1), new ye.p(1, -1, -1), new ye.p(-1, 1, -1), new ye.p(1, 1, -1)], be.FACE_RIGHT = [new ye.p(1, -1, 1), new ye.p(-1, -1, 1), new ye.p(1, 1, 1), new ye.p(-1, 1, 1)], be.FACE_FRONT = [new ye.p(1, -1, -1), new ye.p(1, -1, 1), new ye.p(1, 1, -1), new ye.p(1, 1, 1)], be.FACE_BACK = [new ye.p(-1, -1, 1), new ye.p(-1, -1, -1), new ye.p(-1, 1, 1), new ye.p(-1, 1, -1)], be.FACE_DOWN = [new ye.p(1, 1, -1), new ye.p(1, 1, 1), new ye.p(-1, 1, -1), new ye.p(-1, 1, 1)], be.FACE_UP = [new ye.p(-1, -1, -1), new ye.p(-1, -1, 1), new ye.p(1, -1, -1), new ye.p(1, -1, 1)];
+    class oe {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".hdr not supported in Cube."
       }
-      loadData(BB, OB, GB) {
-        const YB = new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength),
-          DB = jB(YB),
-          QB = yB(YB, DB),
-          oB = DB.width * DB.height,
-          JB = new Float32Array(4 * oB);
-        for (let jB = 0; jB < oB; jB += 1) JB[4 * jB] = QB[3 * jB], JB[4 * jB + 1] = QB[3 * jB + 1], JB[4 * jB + 2] = QB[3 * jB + 2], JB[4 * jB + 3] = 1;
-        GB(DB.width, DB.height, OB.generateMipMaps, !1, (() => {
-          const BB = OB.Lp();
-          OB.type = 1, OB.format = 5, OB._gammaSpace = !1, BB._uploadDataToTextureDirectly(OB, JB)
+      loadData(ee, ie, He) {
+        const ye = new Uint8Array(ee.buffer, ee.byteOffset, ee.byteLength),
+          be = Ue(ye),
+          Me = Fe(ye, be),
+          Ke = be.width * be.height,
+          Je = new Float32Array(4 * Ke);
+        for (let Ue = 0; Ue < Ke; Ue += 1) Je[4 * Ue] = Me[3 * Ue], Je[4 * Ue + 1] = Me[3 * Ue + 1], Je[4 * Ue + 2] = Me[3 * Ue + 2], Je[4 * Ue + 3] = 1;
+        He(be.width, be.height, ie.generateMipMaps, !1, (() => {
+          const ee = ie.Nf();
+          ie.type = 1, ie.format = 5, ie._gammaSpace = !1, ee._uploadDataToTextureDirectly(ie, Je)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

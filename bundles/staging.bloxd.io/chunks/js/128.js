@@ -1,186 +1,186 @@
 export const id = 128;
 export const ids = [128, 131, 152, 153];
 export const modules = {
-  5538: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB.k,
-      c: () => DB,
-      g: () => YB.r
+  5563: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye.e,
+      g: () => be,
+      h: () => ye.m
     });
-    var YB = GB(5546);
-    const DB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((OB => ({
-      strict: BB,
-      program: OB
+    var ye = He(5570);
+    const be = [!1, !0].flatMap((ee => ["terrain", "liquid", "model"].map((ie => ({
+      strict: ee,
+      program: ie
     })))))
   },
-  41498: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => PB,
-      installListedShaderPack: () => MB
+  41618: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Re,
+      installListedShaderPack: () => oe
     });
-    var YB = GB(7107),
-      DB = GB(5546),
-      QB = GB(1186),
-      oB = GB(7159),
-      jB = GB(5538),
-      yB = GB(7193),
-      JB = GB(7186);
-    async function MB(BB) {
-      const OB = await (0, oB.loadPageShaderPackCompiler)();
-      if (null === OB) return {
+    var ye = He(7206),
+      be = He(5570),
+      Me = He(1141),
+      Ke = He(7249),
+      Ue = He(5563),
+      Fe = He(7290),
+      Je = He(7283);
+    async function oe(ee) {
+      const ie = await (0, Ke.loadPageShaderPackCompiler)();
+      if (null === ie) return {
         kind: "failed",
         reason: "compiler"
       };
-      const GB = await PB(BB, OB);
-      return "failed" === GB.kind ? GB : await (0, yB.saveShaderPack)(GB.stored, OB) ? ((0, yB.markShaderPackChangePending)(), GB) : {
+      const He = await Re(ee, ie);
+      return "failed" === He.kind ? He : await (0, Fe.saveShaderPack)(He.stored, ie) ? ((0, Fe.markShaderPackChangePending)(), He) : {
         kind: "failed",
         reason: "save"
       }
     }
-    async function PB(BB, OB) {
-      const GB = await async function(BB) {
+    async function Re(ee, ie) {
+      const He = await async function(ee) {
         let {
-          packId: OB,
-          sourceHash: GB
-        } = BB;
+          packId: ie,
+          sourceHash: He
+        } = ee;
         try {
-          const BB = await fetch(`${QB.clientSideServerUrls.s3Url}/${(0,YB.Q)(OB,GB)}`, {
+          const ee = await fetch(`${Me.clientSideServerUrls.s3Url}/${(0,ye.H)(ie,He)}`, {
             headers: {
               Accept: "application/json"
             }
           });
-          if (!BB.ok) return console.error(`Failed to download shader pack ${OB} (${BB.status})`), null;
-          const DB = await BB.json();
-          return "object" !== typeof DB || null === DB ? (console.error(`Shader pack ${OB}'s source isn't an object`), null) : DB
-        } catch (DB) {
-          return console.error(`Failed to download shader pack ${OB}`, DB), null
+          if (!ee.ok) return console.error(`Failed to download shader pack ${ie} (${ee.status})`), null;
+          const be = await ee.json();
+          return "object" !== typeof be || null === be ? (console.error(`Shader pack ${ie}'s source isn't an object`), null) : be
+        } catch (be) {
+          return console.error(`Failed to download shader pack ${ie}`, be), null
         }
-      }(BB);
-      if (null === GB) return {
+      }(ee);
+      if (null === He) return {
         kind: "failed",
         reason: "download"
       };
-      if (!(0, jB.g)(GB.apiVersion)) return {
+      if (!(0, Ue.h)(He.apiVersion)) return {
         kind: "failed",
         reason: "apiVersion"
       };
-      const oB = (0, DB.v)(GB.files);
-      if ("string" === typeof oB) return console.error(`A listed shader pack breaks the pack rules: ${oB}`), {
+      const Ke = (0, be.r)(He.files);
+      if ("string" === typeof Ke) return console.error(`A listed shader pack breaks the pack rules: ${Ke}`), {
         kind: "failed",
         reason: "invalid"
       };
-      const MB = await (0, JB.f)(OB, oB);
-      if (!1 === (null === MB || void 0 === MB ? void 0 : MB.ok)) return {
+      const oe = await (0, Je.g)(ie, Ke);
+      if (!1 === (null === oe || void 0 === oe ? void 0 : oe.ok)) return {
         kind: "failed",
         reason: "errors"
       };
-      const PB = {
+      const Re = {
         manifest: {
-          apiVersion: GB.apiVersion,
-          name: BB.name,
-          author: BB.ownerName,
-          description: BB.description || null,
-          keepCircleShadows: !0 === GB.keepCircleShadows
+          apiVersion: He.apiVersion,
+          name: ee.name,
+          author: ee.ownerName,
+          description: ee.description || null,
+          keepCircleShadows: !0 === He.keepCircleShadows
         },
-        files: oB
+        files: Ke
       };
       return {
         kind: "loaded",
-        stored: (0, yB.toStoredShaderPack)(PB, MB, {
-          packId: BB.packId,
-          sourceHash: BB.sourceHash
+        stored: (0, Fe.toStoredShaderPack)(Re, oe, {
+          packId: ee.packId,
+          sourceHash: ee.sourceHash
         })
       }
     }
   },
-  7193: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      forgetShaderPackActiveHint: () => KB,
-      isOtherApiVersion: () => UB,
-      isShaderPackActive: () => AB,
-      isShaderPackChangePending: () => nB,
-      markShaderPackChangePending: () => SB,
-      pageShaderPackValidationVersion: () => fB,
-      reconcileStoredShaderPackHint: () => dB,
-      removeShaderPack: () => WB,
-      replaceShaderPack: () => ZB,
-      saveShaderPack: () => qB,
-      shaderPackNeedsCheck: () => kB,
-      storedPackOutcome: () => VB,
-      storedShaderPackFiles: () => zB,
-      toStoredShaderPack: () => PB
+  7290: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      forgetShaderPackActiveHint: () => De,
+      isOtherApiVersion: () => We,
+      isShaderPackActive: () => Ee,
+      isShaderPackChangePending: () => de,
+      markShaderPackChangePending: () => Oe,
+      pageShaderPackValidationVersion: () => te,
+      reconcileStoredShaderPackHint: () => we,
+      removeShaderPack: () => Be,
+      replaceShaderPack: () => pe,
+      saveShaderPack: () => Te,
+      shaderPackNeedsCheck: () => Ze,
+      storedPackOutcome: () => ge,
+      storedShaderPackFiles: () => ke,
+      toStoredShaderPack: () => Re
     });
-    var YB = GB(5546),
-      DB = GB(5538),
-      QB = GB(31),
-      oB = GB(3885),
-      jB = GB(7198),
-      yB = GB(7174);
-    const JB = "shaderPackChangePending";
-    let MB = null;
+    var ye = He(5570),
+      be = He(5563),
+      Me = He(35),
+      Ke = He(3808),
+      Ue = He(7296),
+      Fe = He(7262);
+    const Je = "shaderPackChangePending";
+    let oe = null;
 
-    function PB(BB, OB, GB) {
+    function Re(ee, ie, He) {
       return {
-        manifest: BB.manifest,
-        files: (0, YB.y)(BB.files),
-        validation: OB,
-        ...GB && {
-          listing: GB
+        manifest: ee.manifest,
+        files: (0, ye.s)(ee.files),
+        validation: ie,
+        ...He && {
+          listing: He
         }
       }
     }
 
-    function zB(BB) {
-      return Object.keys(BB.files).map((OB => ({
-        path: OB,
-        source: BB.files[OB]
+    function ke(ee) {
+      return Object.keys(ee.files).map((ie => ({
+        path: ie,
+        source: ee.files[ie]
       })))
     }
-    let lB = Promise.resolve();
+    let qe = Promise.resolve();
 
-    function pB(BB) {
-      const OB = lB.then(BB);
-      return lB = OB.catch((() => {})), OB
-    }
-
-    function qB(BB, OB) {
-      return pB((() => NB(BB, OB)))
+    function fe(ee) {
+      const ie = qe.then(ee);
+      return qe = ie.catch((() => {})), ie
     }
 
-    function ZB(BB, OB, GB) {
-      return pB((async () => JSON.stringify(await (0, jB.e)()) === JSON.stringify(BB) && (null === OB ? (await RB(), !0) : NB(OB, GB))))
-    }
-    async function NB(BB, OB) {
-      const GB = await QB.d.setItem(jB.c, BB);
-      return GB && uB(BB, OB), GB
-    }
-    async function RB() {
-      await QB.d.removeItem(jB.c), QB.g.removeItem(oB.d)
+    function Te(ee, ie) {
+      return fe((() => Xe(ee, ie)))
     }
 
-    function WB() {
-      return pB(RB)
+    function pe(ee, ie, He) {
+      return fe((async () => JSON.stringify(await (0, Ue.h)()) === JSON.stringify(ee) && (null === ie ? (await ze(), !0) : Xe(ie, He))))
+    }
+    async function Xe(ee, ie) {
+      const He = await Me.e.setItem(Ue.e, ee);
+      return He && Pe(ee, ie), He
+    }
+    async function ze() {
+      await Me.e.removeItem(Ue.e), Me.i.removeItem(Ke.b)
     }
 
-    function AB(BB, OB) {
-      return "active" === VB(BB, OB).kind
+    function Be() {
+      return fe(ze)
     }
 
-    function VB(BB, OB) {
-      var GB;
-      return null === BB ? {
+    function Ee(ee, ie) {
+      return "active" === ge(ee, ie).kind
+    }
+
+    function ge(ee, ie) {
+      var He;
+      return null === ee ? {
         kind: "none",
         reason: "nothingStored"
-      } : UB(BB) ? {
+      } : We(ee) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) || BB.validation.fromRecheck ? null === OB ? {
+      } : !1 !== (null === (He = ee.validation) || void 0 === He ? void 0 : He.ok) || ee.validation.fromRecheck ? null === ie ? {
         kind: "none",
         reason: "noCompiler"
-      } : kB(BB, OB) ? {
+      } : Ze(ee, ie) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : BB.validation.ok ? {
+      } : ee.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -191,331 +191,331 @@ export const modules = {
       }
     }
 
-    function SB() {
-      QB.i.setItem(JB, performance.timeOrigin)
+    function Oe() {
+      Me.m.setItem(Je, performance.timeOrigin)
     }
 
-    function nB() {
-      return QB.i.getItem(JB) === performance.timeOrigin
+    function de() {
+      return Me.m.getItem(Je) === performance.timeOrigin
     }
 
-    function UB(BB) {
-      return !(0, DB.g)(BB.manifest.apiVersion)
+    function We(ee) {
+      return !(0, be.h)(ee.manifest.apiVersion)
     }
 
-    function fB(BB) {
-      return MB ??= BB.yI((0, yB.shaderPackTextures)()), MB
+    function te(ee) {
+      return oe ??= ee.cV((0, Fe.shaderPackTextures)()), oe
     }
 
-    function kB(BB, OB) {
-      var GB;
-      return (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.headerVersion) !== fB(OB)
+    function Ze(ee, ie) {
+      var He;
+      return (null === (He = ee.validation) || void 0 === He ? void 0 : He.headerVersion) !== te(ie)
     }
 
-    function dB(BB) {
-      return pB((async () => {
-        uB(await (0, jB.e)(!0), BB)
+    function we(ee) {
+      return fe((async () => {
+        Pe(await (0, Ue.h)(!0), ee)
       }))
     }
 
-    function KB() {
-      return pB((async () => {
-        QB.g.removeItem(oB.d)
+    function De() {
+      return fe((async () => {
+        Me.i.removeItem(Ke.b)
       }))
     }
 
-    function uB(BB, OB) {
-      AB(BB, OB) ? QB.g.setItem(oB.d, !0) : QB.g.removeItem(oB.d)
+    function Pe(ee, ie) {
+      Ee(ee, ie) ? Me.i.setItem(Ke.b, !0) : Me.i.removeItem(Ke.b)
     }
   },
-  7174: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadShaderPackTextures: () => oB,
-      shaderPackTextures: () => jB
+  7262: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      loadShaderPackTextures: () => Ke,
+      shaderPackTextures: () => Ue
     });
-    var YB = GB(5546);
-    let DB = null,
-      QB = null;
+    var ye = He(5570);
+    let be = null,
+      Me = null;
 
-    function oB() {
-      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
+    function Ke() {
+      return Me ??= Promise.all([He.e(84), He.e(206)]).then((() => He(41616))).then((ee => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: OB,
-          textureNameToIndex: GB,
-          textureAnimationData: QB
-        } = BB;
-        return DB ??= (0, YB.o)(GB, QB, OB), DB
-      })), QB
+          FORMER_BLOCK_IMAGE_NAMES: ie,
+          textureNameToIndex: He,
+          textureAnimationData: Me
+        } = ee;
+        return be ??= (0, ye.h)(He, Me, ie), be
+      })), Me
     }
 
-    function jB() {
-      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return DB
+    function Ue() {
+      if (null === be) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return be
     }
   },
-  7186: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => yB,
-      f: () => jB
+  7283: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Fe,
+      g: () => Ue
     });
-    var YB = GB(7193),
-      DB = GB(7174),
-      QB = GB(113);
-    const oB = 100;
-    async function jB(BB, OB) {
-      var GB;
-      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GB = navigator.gpu) && void 0 !== GB ? GB : null;
-      const oB = BB.VOB(OB, (0, DB.shaderPackTextures)());
-      if (oB.errors.length > 0) return JB(BB, oB.errors, oB.offInStrict);
-      const jB = await async function(BB) {
-        if (!BB) return null;
+    var ye = He(7290),
+      be = He(7262),
+      Me = He(115);
+    const Ke = 100;
+    async function Ue(ee, ie) {
+      var He;
+      let ye = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (He = navigator.gpu) && void 0 !== He ? He : null;
+      const Ke = ee.vie(ie, (0, be.shaderPackTextures)());
+      if (Ke.errors.length > 0) return Je(ee, Ke.errors, Ke.offInStrict);
+      const Ue = await async function(ee) {
+        if (!ee) return null;
         try {
-          const OB = await (0, QB.w)(BB);
-          return OB ? await OB.requestDevice() : null
-        } catch (OB) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", OB), null
+          const ie = await (0, Me.v)(ee);
+          return ie ? await ie.requestDevice() : null
+        } catch (ie) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", ie), null
         }
-      }(YB);
-      if (!jB) return null;
-      let yB = !1;
-      jB.lost.then((() => {
-        yB = !0
+      }(ye);
+      if (!Ue) return null;
+      let Fe = !1;
+      Ue.lost.then((() => {
+        Fe = !0
       }));
       try {
-        const OB = await Promise.all(oB.validationModules.map((OB => async function(BB, OB, GB) {
-          OB.pushErrorScope("validation");
-          const YB = OB.createShaderModule({
-              code: GB.code
+        const ie = await Promise.all(Ke.validationModules.map((ie => async function(ee, ie, He) {
+          ie.pushErrorScope("validation");
+          const ye = ie.createShaderModule({
+              code: He.code
             }),
-            DB = OB.popErrorScope(),
+            be = ie.popErrorScope(),
             {
-              messages: QB
-            } = await YB.getCompilationInfo(),
-            oB = QB.filter((BB => "error" === BB.type)).map((OB => BB.mapValidationMessage(GB, OB))),
-            jB = await DB;
-          jB && 0 === oB.length && oB.push({
+              messages: Me
+            } = await ye.getCompilationInfo(),
+            Ke = Me.filter((ee => "error" === ee.type)).map((ie => ee.mapValidationMessage(He, ie))),
+            Ue = await be;
+          Ue && 0 === Ke.length && Ke.push({
             file: null,
             line: 0,
-            message: jB.message,
-            variants: [GB.key]
+            message: Ue.message,
+            variants: [He.key]
           });
-          return oB
-        }(BB, jB, OB))));
-        return yB ? null : JB(BB, BB.lDB(OB.flat()), oB.offInStrict)
-      } catch (MB) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", MB), null
+          return Ke
+        }(ee, Ue, ie))));
+        return Fe ? null : Je(ee, ee.Lbe(ie.flat()), Ke.offInStrict)
+      } catch (oe) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", oe), null
       } finally {
-        jB.destroy()
+        Ue.destroy()
       }
     }
-    async function yB(BB, OB) {
-      var GB;
-      if (!(0, YB.shaderPackNeedsCheck)(BB, OB) || (0, YB.isOtherApiVersion)(BB)) return BB;
-      const DB = await jB(OB, (0, YB.storedShaderPackFiles)(BB));
-      if (!DB) return BB;
-      const QB = !1 === (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) && !BB.validation.fromRecheck,
-        oB = {
-          ...BB,
-          validation: QB ? DB : {
-            ...DB,
+    async function Fe(ee, ie) {
+      var He;
+      if (!(0, ye.shaderPackNeedsCheck)(ee, ie) || (0, ye.isOtherApiVersion)(ee)) return ee;
+      const be = await Ue(ie, (0, ye.storedShaderPackFiles)(ee));
+      if (!be) return ee;
+      const Me = !1 === (null === (He = ee.validation) || void 0 === He ? void 0 : He.ok) && !ee.validation.fromRecheck,
+        Ke = {
+          ...ee,
+          validation: Me ? be : {
+            ...be,
             fromRecheck: !0
           }
         };
-      return await (0, YB.replaceShaderPack)(BB, oB, OB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), oB
+      return await (0, ye.replaceShaderPack)(ee, Ke, ie) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), Ke
     }
 
-    function JB(BB, OB, GB) {
+    function Je(ee, ie, He) {
       return {
-        headerVersion: (0, YB.pageShaderPackValidationVersion)(BB),
-        ok: 0 === OB.length,
-        errors: OB.slice(0, oB),
-        moreErrors: Math.max(0, OB.length - oB),
-        offInStrict: GB
+        headerVersion: (0, ye.pageShaderPackValidationVersion)(ee),
+        ok: 0 === ie.length,
+        errors: ie.slice(0, Ke),
+        moreErrors: Math.max(0, ie.length - Ke),
+        offInStrict: He
       }
     }
   },
-  5546: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => zB,
-      e: () => jB,
-      h: () => oB,
-      k: () => YB,
-      o: () => qB,
-      p: () => PB,
-      r: () => DB,
-      u: () => QB,
-      v: () => JB,
-      y: () => MB
+  5570: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue,
+      d: () => Ke,
+      e: () => ye,
+      h: () => Te,
+      k: () => Re,
+      m: () => be,
+      q: () => Me,
+      r: () => Je,
+      s: () => oe,
+      t: () => ke
     });
-    const YB = 5;
+    const ye = 5;
 
-    function DB(BB) {
-      return BB === YB
+    function be(ee) {
+      return ee === ye
     }
 
-    function QB(BB) {
-      return [...BB.features]
+    function Me(ee) {
+      return [...ee.features]
     }
-    const oB = 262144,
-      jB = 256,
-      yB = 256;
+    const Ke = 262144,
+      Ue = 256,
+      Fe = 256;
 
-    function JB(BB) {
-      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
-      const OB = [];
-      for (const [GB, YB] of Object.entries(BB)) {
-        if ("string" !== typeof YB) return `${GB} isn't text.`;
-        OB.push({
-          path: GB,
-          source: YB
+    function Je(ee) {
+      if ("object" !== typeof ee || null === ee || Array.isArray(ee)) return "The pack has no files.";
+      const ie = [];
+      for (const [He, ye] of Object.entries(ee)) {
+        if ("string" !== typeof ye) return `${He} isn't text.`;
+        ie.push({
+          path: He,
+          source: ye
         })
       }
-      return OB.sort(((BB, OB) => PB(BB.path, OB.path))),
-        function(BB) {
-          if (0 === BB.length) return "The pack has no .wgsl files.";
-          if (BB.length > jB) return `The pack has more than ${jB} .wgsl files.`;
-          const OB = new Set;
+      return ie.sort(((ee, ie) => Re(ee.path, ie.path))),
+        function(ee) {
+          if (0 === ee.length) return "The pack has no .wgsl files.";
+          if (ee.length > Ue) return `The pack has more than ${Ue} .wgsl files.`;
+          const ie = new Set;
           for (const {
-              path: GB
+              path: He
             }
-            of BB) {
-            const BB = lB(GB);
-            if (null !== BB) return BB;
-            if (OB.has(GB)) return `The pack has two files at ${GB}.`;
-            OB.add(GB)
+            of ee) {
+            const ee = qe(He);
+            if (null !== ee) return ee;
+            if (ie.has(He)) return `The pack has two files at ${He}.`;
+            ie.add(He)
           }
-          return zB(BB) > oB ? `The pack's .wgsl files are over ${oB/1024} KB in total.` : null
-        }(OB) ?? OB
+          return ke(ee) > Ke ? `The pack's .wgsl files are over ${Ke/1024} KB in total.` : null
+        }(ie) ?? ie
     }
 
-    function MB(BB) {
-      const OB = {};
-      for (const GB of BB) OB[GB.path] = GB.source;
-      return OB
+    function oe(ee) {
+      const ie = {};
+      for (const He of ee) ie[He.path] = He.source;
+      return ie
     }
 
-    function PB(BB, OB) {
-      return BB < OB ? -1 : BB > OB ? 1 : 0
+    function Re(ee, ie) {
+      return ee < ie ? -1 : ee > ie ? 1 : 0
     }
 
-    function zB(BB) {
-      const OB = new TextEncoder;
-      let GB = 0;
+    function ke(ee) {
+      const ie = new TextEncoder;
+      let He = 0;
       for (const {
-          source: YB
+          source: ye
         }
-        of BB) GB += OB.encode(YB).byteLength;
-      return GB
+        of ee) He += ie.encode(ye).byteLength;
+      return He
     }
 
-    function lB(BB) {
-      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
-      if (BB.length > yB) return `A file path is over ${yB} characters.`;
-      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
-      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
+    function qe(ee) {
+      if (!ee.toLowerCase().endsWith(".wgsl")) return `${ee} isn't a .wgsl file.`;
+      if (ee.length > Fe) return `A file path is over ${Fe} characters.`;
+      if (ee.includes("\\") || /[\u0000-\u001f]/.test(ee)) return `${ee} isn't a valid file path.`;
+      return ee.split("/").some((ee => "" === ee || "." === ee || ".." === ee)) ? `${ee} isn't a valid file path.` : null
     }
-    const pB = /^(.*)\[rot\[([1-4])$/;
+    const fe = /^(.*)\[rot\[([1-4])$/;
 
-    function qB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const YB = new Map;
-      OB.forEach(((BB, OB) => {
+    function Te(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const ye = new Map;
+      ie.forEach(((ee, ie) => {
         let {
-          numAnimStates: GB,
-          animStartIdx: DB
-        } = BB;
-        for (let QB = 1; QB < GB; QB++) YB.set(DB + QB - 1, OB)
+          numAnimStates: He,
+          animStartIdx: be
+        } = ee;
+        for (let Me = 1; Me < He; Me++) ye.set(be + Me - 1, ie)
       }));
-      const DB = Object.entries(BB),
-        QB = new Map;
-      for (const [qB, ZB] of DB) {
-        const BB = pB.exec(qB);
-        "1" === BB?.[2] && QB.set(BB[1], ZB + 1)
+      const be = Object.entries(ee),
+        Me = new Map;
+      for (const [Te, pe] of be) {
+        const ee = fe.exec(Te);
+        "1" === ee?.[2] && Me.set(ee[1], pe + 1)
       }
-      const oB = BB => {
-          const OB = pB.exec(BB);
-          return OB && QB.has(OB[1]) ? {
-            root: OB[1],
-            rotation: Number(OB[2]) - 1
+      const Ke = ee => {
+          const ie = fe.exec(ee);
+          return ie && Me.has(ie[1]) ? {
+            root: ie[1],
+            rotation: Number(ie[2]) - 1
           } : null
         },
-        jB = new Set(DB.map((BB => {
-          let [OB] = BB;
-          return oB(OB)?.root ?? OB
+        Ue = new Set(be.map((ee => {
+          let [ie] = ee;
+          return Ke(ie)?.root ?? ie
         }))),
-        yB = (BB, GB) => {
-          const YB = BB.replace(/_?0$/, "");
-          return (OB[GB]?.numAnimStates ?? 0) > 1 && !jB.has(YB) ? YB : BB
+        Fe = (ee, He) => {
+          const ye = ee.replace(/_?0$/, "");
+          return (ie[He]?.numAnimStates ?? 0) > 1 && !Ue.has(ye) ? ye : ee
         },
-        JB = new Map;
-      for (const [pB, qB] of DB) JB.set(qB, yB(oB(pB)?.root ?? pB, qB));
-      const MB = DB.reduce(((BB, OB) => {
-          let [, GB] = OB;
-          return Math.max(BB, GB + 1)
+        Je = new Map;
+      for (const [fe, Te] of be) Je.set(Te, Fe(Ke(fe)?.root ?? fe, Te));
+      const oe = be.reduce(((ee, ie) => {
+          let [, He] = ie;
+          return Math.max(ee, He + 1)
         }), 0),
-        PB = Array.from({
-          length: MB
-        }, ((BB, OB) => ({
-          id: OB + 1,
+        Re = Array.from({
+          length: oe
+        }, ((ee, ie) => ({
+          id: ie + 1,
           rotation: 0
         }))),
-        zB = new Map,
-        lB = new Map;
-      for (const [pB, qB] of DB) {
-        const BB = oB(pB),
-          OB = YB.get(qB);
-        if (void 0 !== OB) {
-          const GB = JB.get(OB);
-          lB.set(pB, {
-            name: pB,
-            texture: GB,
+        ke = new Map,
+        qe = new Map;
+      for (const [fe, Te] of be) {
+        const ee = Ke(fe),
+          ie = ye.get(Te);
+        if (void 0 !== ie) {
+          const He = Je.get(ie);
+          qe.set(fe, {
+            name: fe,
+            texture: He,
             kind: "frame"
-          }), BB && !lB.has(BB.root) && lB.set(BB.root, {
-            name: BB.root,
-            texture: GB,
+          }), ee && !qe.has(ee.root) && qe.set(ee.root, {
+            name: ee.root,
+            texture: He,
             kind: "frame"
           });
           continue
         }
-        const GB = JB.get(qB),
-          DB = BB?.root ?? pB;
-        if (GB !== DB && lB.set(DB, {
-            name: DB,
-            texture: GB,
+        const He = Je.get(Te),
+          be = ee?.root ?? fe;
+        if (He !== be && qe.set(be, {
+            name: be,
+            texture: He,
             kind: "frame"
-          }), BB) {
-          const OB = QB.get(BB.root);
-          PB[qB] = {
-            id: OB,
-            rotation: BB.rotation
-          }, zB.set(GB, OB), lB.set(pB, {
-            name: pB,
-            texture: GB,
+          }), ee) {
+          const ie = Me.get(ee.root);
+          Re[Te] = {
+            id: ie,
+            rotation: ee.rotation
+          }, ke.set(He, ie), qe.set(fe, {
+            name: fe,
+            texture: He,
             kind: "rotation"
           })
-        } else zB.set(GB, qB + 1)
+        } else ke.set(He, Te + 1)
       }
-      for (const pB of zB.keys()) lB.delete(pB);
-      for (const [pB, qB] of GB) {
-        const BB = zB.get(qB);
-        void 0 === BB || zB.has(pB) || (zB.set(pB, BB), lB.delete(pB))
+      for (const fe of ke.keys()) qe.delete(fe);
+      for (const [fe, Te] of He) {
+        const ee = ke.get(Te);
+        void 0 === ee || ke.has(fe) || (ke.set(fe, ee), qe.delete(fe))
       }
       return {
-        named: [...zB].sort(((BB, OB) => {
-          let [GB] = BB, [YB] = OB;
-          return GB < YB ? -1 : GB > YB ? 1 : 0
-        })).map((BB => {
-          let [OB, GB] = BB;
+        named: [...ke].sort(((ee, ie) => {
+          let [He] = ee, [ye] = ie;
+          return He < ye ? -1 : He > ye ? 1 : 0
+        })).map((ee => {
+          let [ie, He] = ee;
           return {
-            name: OB,
-            id: GB
+            name: ie,
+            id: He
           }
         })),
-        aliases: [...lB.values()],
-        layers: PB
+        aliases: [...qe.values()],
+        layers: Re
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

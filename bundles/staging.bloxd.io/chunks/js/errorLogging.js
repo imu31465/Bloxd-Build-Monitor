@@ -1,139 +1,139 @@
 export const id = 37;
 export const ids = [37];
 export const modules = {
-  7225: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      BaseExtension: () => BG,
-      BaseInstrumentation: () => OG,
-      BaseTransport: () => sD,
-      CSPInstrumentation: () => UD,
-      ConsoleInstrumentation: () => IG,
-      ConsoleTransport: () => GQ,
-      EVENT_CLICK: () => WO,
-      EVENT_NAVIGATION: () => AO,
-      EVENT_ROUTE_CHANGE: () => kO,
-      EVENT_SESSION_EXTEND: () => UO,
-      EVENT_SESSION_RESUME: () => nO,
-      EVENT_SESSION_START: () => SO,
-      EVENT_VIEW_CHANGED: () => VO,
-      ErrorsInstrumentation: () => iG,
-      FetchTransport: () => AQ,
-      InternalLoggerLevel: () => eO,
-      LogLevel: () => WG,
-      MAX_SESSION_PERSISTENCE_TIME: () => yB,
-      NavigationInstrumentation: () => ED,
-      Observable: () => RG,
-      PerformanceInstrumentation: () => bY,
-      PersistentSessionsManager: () => rO,
-      SESSION_EXPIRATION_TIME: () => QB,
-      SESSION_INACTIVITY_TIME: () => oB,
-      STORAGE_KEY: () => DB,
-      SessionInstrumentation: () => YG,
-      TransportItemType: () => xD,
-      UserActionInstrumentation: () => nD,
-      UserActionState: () => pD,
-      VERSION: () => GG,
-      ViewInstrumentation: () => gG,
-      VolatileSessionsManager: () => XO,
-      WebVitalsInstrumentation: () => FY,
-      allLogLevels: () => VG,
-      browserMeta: () => bD,
-      buildStackFrame: () => DG,
-      captureMetas: () => gQ,
-      createInternalLogger: () => fQ,
-      createPromiseBuffer: () => zQ,
-      createSession: () => HD,
-      deepEqual: () => RO,
-      defaultEventDomain: () => YB,
-      defaultExceptionType: () => fG,
-      defaultGlobalObjectKey: () => kQ,
-      defaultInternalLoggerLevel: () => bO,
-      defaultLogLevel: () => AG,
-      faro: () => qB,
-      genShortID: () => NO,
-      getCurrentTimestamp: () => pO,
-      getDataFromSafariExtensions: () => zG,
-      getIgnoreUrls: () => CB,
-      getInternalFaroFromGlobalObject: () => zB,
-      getStackFramesFromError: () => pG,
-      getTransportBody: () => OQ,
-      getUrlFromResource: () => vB,
-      getWebInstrumentations: () => cD,
-      globalObject: () => MB,
-      initializeFaro: () => sQ,
-      internalGlobalObjectKey: () => PB,
-      isArray: () => uB,
-      isBoolean: () => fB,
-      isDomError: () => wB,
-      isDomException: () => EB,
-      isElement: () => hB,
-      isElementDefined: () => cB,
-      NP: () => bB,
-      isError: () => rB,
-      isErrorDefined: () => gB,
-      isErrorEvent: () => XB,
-      isEvent: () => LB,
-      isEventDefined: () => iB,
-      isFunction: () => KB,
-      isInstanceOf: () => WB,
-      isInt: () => UB,
-      isInternalFaroOnGlobalObject: () => pB,
-      isMap: () => eB,
-      isMapDefined: () => aB,
-      isNull: () => VB,
-      isNumber: () => nB,
-      isObject: () => dB,
-      isPrimitive: () => FB,
-      isRegExp: () => mB,
-      isString: () => SB,
-      isSymbol: () => kB,
-      isSyntheticEvent: () => TB,
-      isThenable: () => IB,
-      isToString: () => RB,
-      isTypeof: () => NB,
-      isUndefined: () => AB,
-      makeCoreConfig: () => uQ,
-      noop: () => aO,
-      osMeta: () => CD,
-      parseStacktrace: () => qG,
-      sdkMeta: () => vD,
-      setInternalFaroOnGlobalObject: () => lB,
-      transportItemTypeToBodyKey: () => tD,
-      unknownString: () => LG,
-      userActionDataAttribute: () => CY,
-      userActionTimeoutDataAttribute: () => HY
+  7320: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      BaseExtension: () => HH,
+      BaseInstrumentation: () => yH,
+      BaseTransport: () => Qb,
+      CSPInstrumentation: () => Zb,
+      ConsoleInstrumentation: () => aH,
+      ConsoleTransport: () => bM,
+      EVENT_CLICK: () => Ei,
+      EVENT_NAVIGATION: () => gi,
+      EVENT_ROUTE_CHANGE: () => wi,
+      EVENT_SESSION_EXTEND: () => ti,
+      EVENT_SESSION_RESUME: () => Wi,
+      EVENT_SESSION_START: () => di,
+      EVENT_VIEW_CHANGED: () => Oi,
+      ErrorsInstrumentation: () => xH,
+      FetchTransport: () => OM,
+      InternalLoggerLevel: () => ji,
+      LogLevel: () => gH,
+      MAX_SESSION_PERSISTENCE_TIME: () => Fe,
+      NavigationInstrumentation: () => lb,
+      Observable: () => EH,
+      PerformanceInstrumentation: () => hy,
+      PersistentSessionsManager: () => Ci,
+      SESSION_EXPIRATION_TIME: () => Me,
+      SESSION_INACTIVITY_TIME: () => Ke,
+      STORAGE_KEY: () => be,
+      SessionInstrumentation: () => MH,
+      TransportItemType: () => eM,
+      UserActionInstrumentation: () => tb,
+      UserActionState: () => pb,
+      VERSION: () => bH,
+      ViewInstrumentation: () => CH,
+      VolatileSessionsManager: () => vi,
+      WebVitalsInstrumentation: () => cy,
+      allLogLevels: () => dH,
+      browserMeta: () => hb,
+      buildStackFrame: () => KH,
+      captureMetas: () => CM,
+      createInternalLogger: () => wM,
+      createPromiseBuffer: () => fM,
+      createSession: () => Gb,
+      deepEqual: () => Bi,
+      defaultEventDomain: () => ye,
+      defaultExceptionType: () => wH,
+      defaultGlobalObjectKey: () => DM,
+      defaultInternalLoggerLevel: () => Ii,
+      defaultLogLevel: () => OH,
+      faro: () => Te,
+      genShortID: () => zi,
+      getCurrentTimestamp: () => fi,
+      getDataFromSafariExtensions: () => fH,
+      getIgnoreUrls: () => Ie,
+      getInternalFaroFromGlobalObject: () => ke,
+      getStackFramesFromError: () => pH,
+      getTransportBody: () => yM,
+      getUrlFromResource: () => Ne,
+      getWebInstrumentations: () => Sb,
+      globalObject: () => oe,
+      initializeFaro: () => QM,
+      internalGlobalObjectKey: () => Re,
+      isArray: () => Pe,
+      isBoolean: () => te,
+      isDomError: () => ve,
+      isDomException: () => ue,
+      isElement: () => le,
+      isElementDefined: () => me,
+      dR: () => se,
+      isError: () => Le,
+      isErrorDefined: () => xe,
+      isErrorEvent: () => Ce,
+      isEvent: () => ce,
+      isEventDefined: () => ae,
+      isFunction: () => De,
+      isInstanceOf: () => Be,
+      isInt: () => We,
+      isInternalFaroOnGlobalObject: () => fe,
+      isMap: () => ne,
+      isMapDefined: () => Se,
+      isNull: () => ge,
+      isNumber: () => de,
+      isObject: () => we,
+      isPrimitive: () => Ve,
+      isRegExp: () => Ae,
+      isString: () => Oe,
+      isSymbol: () => Ze,
+      isSyntheticEvent: () => je,
+      isThenable: () => Ye,
+      isToString: () => ze,
+      isTypeof: () => Xe,
+      isUndefined: () => Ee,
+      makeCoreConfig: () => YM,
+      noop: () => ni,
+      osMeta: () => Nb,
+      parseStacktrace: () => XH,
+      sdkMeta: () => rb,
+      setInternalFaroOnGlobalObject: () => qe,
+      transportItemTypeToBodyKey: () => iM,
+      unknownString: () => LH,
+      userActionDataAttribute: () => Ny,
+      userActionTimeoutDataAttribute: () => Gy
     });
-    const YB = "browser",
-      DB = "com.grafana.faro.session",
-      QB = 144e5,
-      oB = 9e5,
-      jB = 1e3,
-      yB = oB,
-      JB = {
+    const ye = "browser",
+      be = "com.grafana.faro.session",
+      Me = 144e5,
+      Ke = 9e5,
+      Ue = 1e3,
+      Fe = Ke,
+      Je = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: yB
+        maxSessionPersistenceTime: Fe
       };
-    const MB = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof GB.g ? GB.g : "undefined" !== typeof self ? self : void 0;
-    const PB = "_faroInternal";
+    const oe = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof He.g ? He.g : "undefined" !== typeof self ? self : void 0;
+    const Re = "_faroInternal";
 
-    function zB() {
-      return MB[PB]
+    function ke() {
+      return oe[Re]
     }
 
-    function lB(BB) {
-      BB.config.isolate ? BB.internalLogger.debug("Skipping registering internal Faro instance on global object") : (BB.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(MB, PB, {
+    function qe(ee) {
+      ee.config.isolate ? ee.internalLogger.debug("Skipping registering internal Faro instance on global object") : (ee.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(oe, Re, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: BB
+        value: ee
       }))
     }
 
-    function pB() {
-      return PB in MB
+    function fe() {
+      return Re in oe
     }
-    let qB = {
+    let Te = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function ZB(BB, OB, GB, YB, DB, QB, oB) {
-      return OB.debug("Initializing Faro"), qB = {
-          api: QB,
-          config: GB,
-          instrumentations: oB,
-          internalLogger: OB,
-          metas: YB,
-          pause: DB.pause,
-          transports: DB,
-          unpatchedConsole: BB,
-          unpause: DB.unpause
-        }, lB(qB),
-        function(BB) {
-          if (BB.config.preventGlobalExposure) BB.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function pe(ee, ie, He, ye, be, Me, Ke) {
+      return ie.debug("Initializing Faro"), Te = {
+          api: Me,
+          config: He,
+          instrumentations: Ke,
+          internalLogger: ie,
+          metas: ye,
+          pause: be.pause,
+          transports: be,
+          unpatchedConsole: ee,
+          unpause: be.unpause
+        }, qe(Te),
+        function(ee) {
+          if (ee.config.preventGlobalExposure) ee.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (BB.internalLogger.debug(`Registering public faro reference in the global scope using "${BB.config.globalObjectKey}" key`), BB.config.globalObjectKey in MB) return void BB.internalLogger.warn(`Skipping global registration due to key "${BB.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(MB, BB.config.globalObjectKey, {
+            if (ee.internalLogger.debug(`Registering public faro reference in the global scope using "${ee.config.globalObjectKey}" key`), ee.config.globalObjectKey in oe) return void ee.internalLogger.warn(`Skipping global registration due to key "${ee.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(oe, ee.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: BB
+              value: ee
             })
           }
-        }(qB), qB
+        }(Te), Te
     }
 
-    function NB(BB, OB) {
-      return typeof BB === OB
+    function Xe(ee, ie) {
+      return typeof ee === ie
     }
 
-    function RB(BB, OB) {
-      return Object.prototype.toString.call(BB) === `[object ${OB}]`
+    function ze(ee, ie) {
+      return Object.prototype.toString.call(ee) === `[object ${ie}]`
     }
 
-    function WB(BB, OB) {
+    function Be(ee, ie) {
       try {
-        return BB instanceof OB
-      } catch (GB) {
+        return ee instanceof ie
+      } catch (He) {
         return !1
       }
     }
-    const AB = BB => NB(BB, "undefined"),
-      VB = BB => NB(BB, "null"),
-      SB = BB => NB(BB, "string"),
-      nB = BB => NB(BB, "number") && !isNaN(BB) || NB(BB, "bigint"),
-      UB = BB => nB(BB) && Number.isInteger(BB),
-      fB = BB => NB(BB, "boolean"),
-      kB = BB => NB(BB, "symbol"),
-      dB = BB => !VB(BB) && NB(BB, "object"),
-      KB = BB => NB(BB, "function"),
-      uB = BB => RB(BB, "Array"),
-      mB = BB => RB(BB, "RegExp"),
-      IB = BB => KB(null === BB || void 0 === BB ? void 0 : BB.then),
-      FB = BB => !dB(BB) && !KB(BB),
-      iB = "undefined" !== typeof Event,
-      LB = BB => iB && WB(BB, Event),
-      gB = "undefined" !== typeof Error,
-      rB = BB => gB && WB(BB, Error),
-      XB = BB => RB(BB, "ErrorEvent"),
-      wB = BB => RB(BB, "DOMError"),
-      EB = BB => RB(BB, "DOMException"),
-      cB = "undefined" !== typeof Element,
-      hB = BB => cB && WB(BB, Element),
-      aB = "undefined" !== typeof Map,
-      eB = BB => aB && WB(BB, Map),
-      TB = BB => dB(BB) && "nativeEvent" in BB && "preventDefault" in BB && "stopPropagation" in BB;
+    const Ee = ee => Xe(ee, "undefined"),
+      ge = ee => Xe(ee, "null"),
+      Oe = ee => Xe(ee, "string"),
+      de = ee => Xe(ee, "number") && !isNaN(ee) || Xe(ee, "bigint"),
+      We = ee => de(ee) && Number.isInteger(ee),
+      te = ee => Xe(ee, "boolean"),
+      Ze = ee => Xe(ee, "symbol"),
+      we = ee => !ge(ee) && Xe(ee, "object"),
+      De = ee => Xe(ee, "function"),
+      Pe = ee => ze(ee, "Array"),
+      Ae = ee => ze(ee, "RegExp"),
+      Ye = ee => De(null === ee || void 0 === ee ? void 0 : ee.then),
+      Ve = ee => !we(ee) && !De(ee),
+      ae = "undefined" !== typeof Event,
+      ce = ee => ae && Be(ee, Event),
+      xe = "undefined" !== typeof Error,
+      Le = ee => xe && Be(ee, Error),
+      Ce = ee => ze(ee, "ErrorEvent"),
+      ve = ee => ze(ee, "DOMError"),
+      ue = ee => ze(ee, "DOMException"),
+      me = "undefined" !== typeof Element,
+      le = ee => me && Be(ee, Element),
+      Se = "undefined" !== typeof Map,
+      ne = ee => Se && Be(ee, Map),
+      je = ee => we(ee) && "nativeEvent" in ee && "preventDefault" in ee && "stopPropagation" in ee;
 
-    function bB(BB) {
-      return null == BB || (uB(BB) || SB(BB) ? 0 === BB.length : !!dB(BB) && 0 === Object.keys(BB).length)
+    function se(ee) {
+      return null == ee || (Pe(ee) || Oe(ee) ? 0 === ee.length : !!we(ee) && 0 === Object.keys(ee).length)
     }
 
-    function CB() {
-      return qB.transports.transports.flatMap((BB => BB.getIgnoreUrls()))
+    function Ie() {
+      return Te.transports.transports.flatMap((ee => ee.getIgnoreUrls()))
     }
 
-    function HB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return CB().some((OB => BB && null != BB.match(OB)))
+    function he() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return Ie().some((ie => ee && null != ee.match(ie)))
     }
 
-    function vB(BB) {
-      return SB(BB) ? BB : BB instanceof URL ? BB.href : !bB(BB) && KB(null === BB || void 0 === BB ? void 0 : BB.toString) ? BB.toString() : void 0
+    function Ne(ee) {
+      return Oe(ee) ? ee : ee instanceof URL ? ee.href : !se(ee) && De(null === ee || void 0 === ee ? void 0 : ee.toString) ? ee.toString() : void 0
     }
-    const sB = "sessionStorage",
-      xB = "localStorage";
+    const Ge = "sessionStorage",
+      re = "localStorage";
 
-    function tB(BB) {
+    function Qe(ee) {
       try {
-        let OB;
-        OB = window[BB];
-        const GB = "__faro_storage_test__";
-        return OB.setItem(GB, GB), OB.removeItem(GB), !0
-      } catch (GB) {
-        var OB;
-        return null === (OB = qB.internalLogger) || void 0 === OB || OB.info(`Web storage of type ${BB} is not available. Reason: ${GB}`), !1
+        let ie;
+        ie = window[ee];
+        const He = "__faro_storage_test__";
+        return ie.setItem(He, He), ie.removeItem(He), !0
+      } catch (He) {
+        var ie;
+        return null === (ie = Te.internalLogger) || void 0 === ie || ie.info(`Web storage of type ${ee} is not available. Reason: ${He}`), !1
       }
     }
 
-    function BO(BB, OB) {
-      return QO(OB) ? window[OB].getItem(BB) : null
+    function ei(ee, ie) {
+      return Mi(ie) ? window[ie].getItem(ee) : null
     }
 
-    function OO(BB, OB, GB) {
-      if (QO(GB)) try {
-        window[GB].setItem(BB, OB)
-      } catch (YB) {}
+    function ii(ee, ie, He) {
+      if (Mi(He)) try {
+        window[He].setItem(ee, ie)
+      } catch (ye) {}
     }
 
-    function GO(BB, OB) {
-      QO(OB) && window[OB].removeItem(BB)
+    function Hi(ee, ie) {
+      Mi(ie) && window[ie].removeItem(ee)
     }
-    const YO = tB(xB),
-      DO = tB(sB);
+    const yi = Qe(re),
+      bi = Qe(Ge);
 
-    function QO(BB) {
-      return BB === xB ? YO : BB === sB && DO
-    }
-
-    function oO(BB) {
-      return oO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
-        return typeof BB
-      } : function(BB) {
-        return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-      }, oO(BB)
+    function Mi(ee) {
+      return ee === re ? yi : ee === Ge && bi
     }
 
-    function jO(BB) {
-      var OB = function(BB, OB) {
-        if ("object" != oO(BB) || !BB) return BB;
-        var GB = BB[Symbol.toPrimitive];
-        if (void 0 !== GB) {
-          var YB = GB.call(BB, OB || "default");
-          if ("object" != oO(YB)) return YB;
+    function Ki(ee) {
+      return Ki = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(ee) {
+        return typeof ee
+      } : function(ee) {
+        return ee && "function" == typeof Symbol && ee.constructor === Symbol && ee !== Symbol.prototype ? "symbol" : typeof ee
+      }, Ki(ee)
+    }
+
+    function Ui(ee) {
+      var ie = function(ee, ie) {
+        if ("object" != Ki(ee) || !ee) return ee;
+        var He = ee[Symbol.toPrimitive];
+        if (void 0 !== He) {
+          var ye = He.call(ee, ie || "default");
+          if ("object" != Ki(ye)) return ye;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === OB ? String : Number)(BB)
-      }(BB, "string");
-      return "symbol" == oO(OB) ? OB : OB + ""
+        return ("string" === ie ? String : Number)(ee)
+      }(ee, "string");
+      return "symbol" == Ki(ie) ? ie : ie + ""
     }
 
-    function yO(BB, OB, GB) {
-      return (OB = jO(OB)) in BB ? Object.defineProperty(BB, OB, {
-        value: GB,
+    function Fi(ee, ie, He) {
+      return (ie = Ui(ie)) in ee ? Object.defineProperty(ee, ie, {
+        value: He,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : BB[OB] = GB, BB
+      }) : ee[ie] = He, ee
     }
 
-    function JO(BB, OB) {
-      var GB = Object.keys(BB);
+    function Ji(ee, ie) {
+      var He = Object.keys(ee);
       if (Object.getOwnPropertySymbols) {
-        var YB = Object.getOwnPropertySymbols(BB);
-        OB && (YB = YB.filter((function(OB) {
-          return Object.getOwnPropertyDescriptor(BB, OB).enumerable
-        }))), GB.push.apply(GB, YB)
+        var ye = Object.getOwnPropertySymbols(ee);
+        ie && (ye = ye.filter((function(ie) {
+          return Object.getOwnPropertyDescriptor(ee, ie).enumerable
+        }))), He.push.apply(He, ye)
       }
-      return GB
+      return He
     }
 
-    function MO(BB) {
-      for (var OB = 1; OB < arguments.length; OB++) {
-        var GB = null != arguments[OB] ? arguments[OB] : {};
-        OB % 2 ? JO(Object(GB), !0).forEach((function(OB) {
-          yO(BB, OB, GB[OB])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(GB)) : JO(Object(GB)).forEach((function(OB) {
-          Object.defineProperty(BB, OB, Object.getOwnPropertyDescriptor(GB, OB))
+    function oi(ee) {
+      for (var ie = 1; ie < arguments.length; ie++) {
+        var He = null != arguments[ie] ? arguments[ie] : {};
+        ie % 2 ? Ji(Object(He), !0).forEach((function(ie) {
+          Fi(ee, ie, He[ie])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(ee, Object.getOwnPropertyDescriptors(He)) : Ji(Object(He)).forEach((function(ie) {
+          Object.defineProperty(ee, ie, Object.getOwnPropertyDescriptor(He, ie))
         }))
       }
-      return BB
+      return ee
     }
 
-    function PO() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : qB;
-      var OB, GB, YB;
-      const DB = BB.config.sessionTracking,
-        QB = null !== (OB = null !== (GB = null === DB || void 0 === DB || null === (YB = DB.sampler) || void 0 === YB ? void 0 : YB.call(DB, {
-          metas: BB.metas.value
-        })) && void 0 !== GB ? GB : null === DB || void 0 === DB ? void 0 : DB.samplingRate) && void 0 !== OB ? OB : 1,
-        oB = "number" === typeof QB ? function(BB) {
-          return Math.min(1, Math.max(0, BB))
-        }(QB) : 0;
-      if (!(oB > 0)) return !1;
-      if (1 === oB) return !0;
+    function Ri() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Te;
+      var ie, He, ye;
+      const be = ee.config.sessionTracking,
+        Me = null !== (ie = null !== (He = null === be || void 0 === be || null === (ye = be.sampler) || void 0 === ye ? void 0 : ye.call(be, {
+          metas: ee.metas.value
+        })) && void 0 !== He ? He : null === be || void 0 === be ? void 0 : be.samplingRate) && void 0 !== ie ? ie : 1,
+        Ke = "number" === typeof Me ? function(ee) {
+          return Math.min(1, Math.max(0, ee))
+        }(Me) : 0;
+      if (!(Ke > 0)) return !1;
+      if (1 === Ke) return !0;
       try {
-        const BB = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === BB || void 0 === BB ? void 0 : BB.getRandomValues)) {
-          const OB = new Uint32Array(1);
-          return BB.getRandomValues(OB), OB[0] / Math.pow(2, 32) < oB
+        const ee = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === ee || void 0 === ee ? void 0 : ee.getRandomValues)) {
+          const ie = new Uint32Array(1);
+          return ee.getRandomValues(ie), ie[0] / Math.pow(2, 32) < Ke
         }
-      } catch (jB) {}
-      return Math.random() < oB
+      } catch (Ue) {}
+      return Math.random() < Ke
     }
 
-    function zO() {
+    function ki() {
       return Date.now()
     }
 
-    function lO() {
+    function qi() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function pO() {
+    function fi() {
       return (new Date).toISOString()
     }
 
-    function qO(BB) {
-      return new Date(BB).toISOString()
+    function Ti(ee) {
+      return new Date(ee).toISOString()
     }
-    const ZO = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const Xi = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function NO() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const OB = new Uint32Array(BB),
-        GB = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === GB || void 0 === GB ? void 0 : GB.getRandomValues) GB.getRandomValues(OB);
+    function zi() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const ie = new Uint32Array(ee),
+        He = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === He || void 0 === He ? void 0 : He.getRandomValues) He.getRandomValues(ie);
       else
-        for (let DB = 0; DB < BB; DB++) OB[DB] = Math.floor(4294967296 * Math.random());
-      let YB = "";
-      for (let DB = 0; DB < BB; DB++) YB += ZO[OB[DB] % 59];
-      return YB
+        for (let be = 0; be < ee; be++) ie[be] = Math.floor(4294967296 * Math.random());
+      let ye = "";
+      for (let be = 0; be < ee; be++) ye += Xi[ie[be] % 59];
+      return ye
     }
 
-    function RO(BB, OB) {
-      if (BB === OB) return !0;
-      if (NB(BB, "number") && isNaN(BB)) return NB(OB, "number") && isNaN(OB);
-      const GB = uB(BB),
-        YB = uB(OB);
-      if (GB !== YB) return !1;
-      if (GB && YB) {
-        const GB = BB.length;
-        if (GB !== OB.length) return !1;
-        for (let YB = GB; 0 !== YB--;)
-          if (!RO(BB[YB], OB[YB])) return !1;
+    function Bi(ee, ie) {
+      if (ee === ie) return !0;
+      if (Xe(ee, "number") && isNaN(ee)) return Xe(ie, "number") && isNaN(ie);
+      const He = Pe(ee),
+        ye = Pe(ie);
+      if (He !== ye) return !1;
+      if (He && ye) {
+        const He = ee.length;
+        if (He !== ie.length) return !1;
+        for (let ye = He; 0 !== ye--;)
+          if (!Bi(ee[ye], ie[ye])) return !1;
         return !0
       }
-      const DB = dB(BB),
-        QB = dB(OB);
-      if (DB !== QB) return !1;
-      if (BB && OB && DB && QB) {
-        const GB = Object.keys(BB),
-          YB = Object.keys(OB);
-        if (GB.length !== YB.length) return !1;
-        for (let BB of GB)
-          if (!YB.includes(BB)) return !1;
-        for (let DB of GB)
-          if (!RO(BB[DB], OB[DB])) return !1;
+      const be = we(ee),
+        Me = we(ie);
+      if (be !== Me) return !1;
+      if (ee && ie && be && Me) {
+        const He = Object.keys(ee),
+          ye = Object.keys(ie);
+        if (He.length !== ye.length) return !1;
+        for (let ee of He)
+          if (!ye.includes(ee)) return !1;
+        for (let be of He)
+          if (!Bi(ee[be], ie[be])) return !1;
         return !0
       }
       return !1
     }
-    const WO = "click",
-      AO = "navigation",
-      VO = "view_changed",
-      SO = "session_start",
-      nO = "session_resume",
-      UO = "session_extend",
-      fO = "service_name_override",
-      kO = "route_change";
+    const Ei = "click",
+      gi = "navigation",
+      Oi = "view_changed",
+      di = "session_start",
+      Wi = "session_resume",
+      ti = "session_extend",
+      Zi = "service_name_override",
+      wi = "route_change";
 
-    function dO() {
+    function Di() {
       let {
-        sessionId: BB,
-        started: OB,
-        lastActivity: GB,
-        isSampled: YB = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, DB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qB;
-      var QB;
-      const oB = zO(),
-        jB = null === (QB = DB.config) || void 0 === QB || null === (QB = QB.sessionTracking) || void 0 === QB ? void 0 : QB.generateSessionId;
-      return null == BB && (BB = "function" === typeof jB ? jB() : NO()), {
-        sessionId: BB,
-        lastActivity: null !== GB && void 0 !== GB ? GB : oB,
-        started: null !== OB && void 0 !== OB ? OB : oB,
-        isSampled: YB
+        sessionId: ee,
+        started: ie,
+        lastActivity: He,
+        isSampled: ye = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, be = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Te;
+      var Me;
+      const Ke = ki(),
+        Ue = null === (Me = be.config) || void 0 === Me || null === (Me = Me.sessionTracking) || void 0 === Me ? void 0 : Me.generateSessionId;
+      return null == ee && (ee = "function" === typeof Ue ? Ue() : zi()), {
+        sessionId: ee,
+        lastActivity: null !== He && void 0 !== He ? He : Ke,
+        started: null !== ie && void 0 !== ie ? ie : Ke,
+        isSampled: ye
       }
     }
 
-    function KO(BB) {
-      if (null == BB) return !1;
-      const OB = zO();
-      return OB - BB.started < 144e5 && OB - BB.lastActivity < oB
+    function Pi(ee) {
+      if (null == ee) return !1;
+      const ie = ki();
+      return ie - ee.started < 144e5 && ie - ee.lastActivity < Ke
     }
 
-    function uO(BB) {
+    function Ai(ee) {
       let {
-        fetchUserSession: OB,
-        storeUserSession: GB,
-        adoptSession: YB,
-        updateInterval: DB = 0
-      } = BB, jB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qB, yB = 0;
+        fetchUserSession: ie,
+        storeUserSession: He,
+        adoptSession: ye,
+        updateInterval: be = 0
+      } = ee, Ue = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Te, Fe = 0;
       return function() {
         let {
-          forceSessionExtend: BB = !1,
-          refreshActivity: JB = !0
+          forceSessionExtend: ee = !1,
+          refreshActivity: Je = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var MB, PB;
-        if (!OB || !GB) return;
-        const zB = zO();
-        if (!BB && zB < yB && yB - zB <= DB) return;
-        const lB = jB.config.sessionTracking,
-          pB = null === lB || void 0 === lB ? void 0 : lB.persistent;
-        if (pB && !YO || !pB && !DO) return;
-        const qB = OB();
-        if (yB = Math.min(zB + DB, (null !== (MB = null === qB || void 0 === qB ? void 0 : qB.started) && void 0 !== MB ? MB : zB) + QB, (null !== (PB = null === qB || void 0 === qB ? void 0 : qB.lastActivity) && void 0 !== PB ? PB : zB) + oB), !1 === BB && KO(qB)) {
-          var ZB;
-          JB && GB(MO(MO({}, qB), {}, {
-            lastActivity: zB
+        var oe, Re;
+        if (!ie || !He) return;
+        const ke = ki();
+        if (!ee && ke < Fe && Fe - ke <= be) return;
+        const qe = Ue.config.sessionTracking,
+          fe = null === qe || void 0 === qe ? void 0 : qe.persistent;
+        if (fe && !yi || !fe && !bi) return;
+        const Te = ie();
+        if (Fe = Math.min(ke + be, (null !== (oe = null === Te || void 0 === Te ? void 0 : Te.started) && void 0 !== oe ? oe : ke) + Me, (null !== (Re = null === Te || void 0 === Te ? void 0 : Te.lastActivity) && void 0 !== Re ? Re : ke) + Ke), !1 === ee && Pi(Te)) {
+          var pe;
+          Je && He(oi(oi({}, Te), {}, {
+            lastActivity: ke
           }));
-          const BB = null === (ZB = jB.metas.value.session) || void 0 === ZB ? void 0 : ZB.id;
-          null != YB && null != qB.sessionMeta && qB.sessionId !== BB && YB(qB.sessionMeta)
+          const ee = null === (pe = Ue.metas.value.session) || void 0 === pe ? void 0 : pe.id;
+          null != ye && null != Te.sessionMeta && Te.sessionId !== ee && ye(Te.sessionMeta)
         } else {
-          var NB, RB, WB;
-          let BB = IO(dO({
-            isSampled: PO(jB)
-          }, jB), qB, jB);
-          yB = zB + DB, GB(BB), null === (NB = jB.api) || void 0 === NB || NB.setSession(BB.sessionMeta), null === lB || void 0 === lB || null === (RB = lB.onSessionChange) || void 0 === RB || RB.call(lB, null !== (WB = null === qB || void 0 === qB ? void 0 : qB.sessionMeta) && void 0 !== WB ? WB : null, BB.sessionMeta)
+          var Xe, ze, Be;
+          let ee = Vi(Di({
+            isSampled: Ri(Ue)
+          }, Ue), Te, Ue);
+          Fe = ke + be, He(ee), null === (Xe = Ue.api) || void 0 === Xe || Xe.setSession(ee.sessionMeta), null === qe || void 0 === qe || null === (ze = qe.onSessionChange) || void 0 === ze || ze.call(qe, null !== (Be = null === Te || void 0 === Te ? void 0 : Te.sessionMeta) && void 0 !== Be ? Be : null, ee.sessionMeta)
         }
       }
     }
 
-    function mO(BB) {
-      let OB, {
-          fetchUserSession: GB,
-          storeUserSession: YB,
-          updateInterval: DB = 0
-        } = BB,
-        QB = 0;
-      return BB => {
-        const oB = zO();
-        if (BB === OB && oB < QB && QB - oB <= DB) return;
-        OB = BB, QB = oB + DB;
-        const jB = GB();
-        (null === jB || void 0 === jB ? void 0 : jB.sessionId) === BB && KO(jB) && YB(MO(MO({}, jB), {}, {
-          lastActivity: oB
+    function Yi(ee) {
+      let ie, {
+          fetchUserSession: He,
+          storeUserSession: ye,
+          updateInterval: be = 0
+        } = ee,
+        Me = 0;
+      return ee => {
+        const Ke = ki();
+        if (ee === ie && Ke < Me && Me - Ke <= be) return;
+        ie = ee, Me = Ke + be;
+        const Ue = He();
+        (null === Ue || void 0 === Ue ? void 0 : Ue.sessionId) === ee && Pi(Ue) && ye(oi(oi({}, Ue), {}, {
+          lastActivity: Ke
         }))
       }
     }
 
-    function IO(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qB;
-      var YB, DB, QB, oB, jB, yB;
-      const JB = MO(MO({}, BB), {}, {
+    function Vi(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Te;
+      var ye, be, Me, Ke, Ue, Fe;
+      const Je = oi(oi({}, ee), {}, {
           sessionMeta: {
-            id: BB.sessionId,
-            attributes: iO(MO(MO(MO({}, null === (YB = GB.config.sessionTracking) || void 0 === YB || null === (YB = YB.session) || void 0 === YB ? void 0 : YB.attributes), null !== (DB = null === (QB = GB.metas.value.session) || void 0 === QB ? void 0 : QB.attributes) && void 0 !== DB ? DB : {}), {}, {
-              isSampled: BB.isSampled.toString()
+            id: ee.sessionId,
+            attributes: ci(oi(oi(oi({}, null === (ye = He.config.sessionTracking) || void 0 === ye || null === (ye = ye.session) || void 0 === ye ? void 0 : ye.attributes), null !== (be = null === (Me = He.metas.value.session) || void 0 === Me ? void 0 : Me.attributes) && void 0 !== be ? be : {}), {}, {
+              isSampled: ee.isSampled.toString()
             }))
           }
         }),
-        MB = null !== (oB = null === (jB = GB.metas.value.session) || void 0 === jB ? void 0 : jB.overrides) && void 0 !== oB ? oB : null === OB || void 0 === OB || null === (yB = OB.sessionMeta) || void 0 === yB ? void 0 : yB.overrides;
-      bB(MB) || (JB.sessionMeta.overrides = MB);
-      const PB = null === OB || void 0 === OB ? void 0 : OB.sessionId;
-      return null != PB && (JB.sessionMeta.attributes.previousSession = PB), JB
+        oe = null !== (Ke = null === (Ue = He.metas.value.session) || void 0 === Ue ? void 0 : Ue.overrides) && void 0 !== Ke ? Ke : null === ie || void 0 === ie || null === (Fe = ie.sessionMeta) || void 0 === Fe ? void 0 : Fe.overrides;
+      se(oe) || (Je.sessionMeta.overrides = oe);
+      const Re = null === ie || void 0 === ie ? void 0 : ie.sessionId;
+      return null != Re && (Je.sessionMeta.attributes.previousSession = Re), Je
     }
 
-    function FO(BB) {
+    function ai(ee) {
       let {
-        fetchUserSession: OB,
-        storeUserSession: GB
-      } = BB, YB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qB, DB = !1;
-      return function(BB) {
-        if (DB) return;
-        const QB = BB.session,
-          oB = OB();
-        let jB = null === QB || void 0 === QB ? void 0 : QB.id;
-        const yB = null === QB || void 0 === QB ? void 0 : QB.attributes,
-          JB = null === QB || void 0 === QB ? void 0 : QB.overrides,
-          MB = null === oB || void 0 === oB ? void 0 : oB.sessionMeta,
-          PB = null === MB || void 0 === MB ? void 0 : MB.overrides,
-          zB = !!JB && !RO(JB, PB),
-          lB = !!yB && !RO(yB, null === MB || void 0 === MB ? void 0 : MB.attributes);
-        if (QB && jB !== (null === oB || void 0 === oB ? void 0 : oB.sessionId) || lB || zB) {
-          var pB, qB;
-          const BB = null != oB && jB === oB.sessionId,
-            OB = IO(BB ? oB : dO({
-              sessionId: jB,
-              isSampled: PO(YB)
-            }, YB), oB, YB),
-            QB = null === oB || void 0 === oB || null === (pB = oB.sessionMeta) || void 0 === pB || null === (pB = pB.attributes) || void 0 === pB ? void 0 : pB.previousSession;
-          BB && null != QB && QB !== OB.sessionId && (OB.sessionMeta.attributes.previousSession = QB), (null === (qB = OB.sessionMeta.attributes) || void 0 === qB ? void 0 : qB.previousSession) === OB.sessionId && delete OB.sessionMeta.attributes.previousSession, GB(OB),
-            function(BB, OB) {
-              let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var DB, QB, oB;
-              if (!OB) return;
-              const jB = GB.serviceName,
-                yB = null !== (DB = null !== (QB = YB.serviceName) && void 0 !== QB ? QB : null === (oB = BB.metas.value.app) || void 0 === oB ? void 0 : oB.name) && void 0 !== DB ? DB : "";
-              jB && jB !== yB && BB.api.pushEvent(fO, {
-                serviceName: jB,
-                previousServiceName: yB
+        fetchUserSession: ie,
+        storeUserSession: He
+      } = ee, ye = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Te, be = !1;
+      return function(ee) {
+        if (be) return;
+        const Me = ee.session,
+          Ke = ie();
+        let Ue = null === Me || void 0 === Me ? void 0 : Me.id;
+        const Fe = null === Me || void 0 === Me ? void 0 : Me.attributes,
+          Je = null === Me || void 0 === Me ? void 0 : Me.overrides,
+          oe = null === Ke || void 0 === Ke ? void 0 : Ke.sessionMeta,
+          Re = null === oe || void 0 === oe ? void 0 : oe.overrides,
+          ke = !!Je && !Bi(Je, Re),
+          qe = !!Fe && !Bi(Fe, null === oe || void 0 === oe ? void 0 : oe.attributes);
+        if (Me && Ue !== (null === Ke || void 0 === Ke ? void 0 : Ke.sessionId) || qe || ke) {
+          var fe, Te;
+          const ee = null != Ke && Ue === Ke.sessionId,
+            ie = Vi(ee ? Ke : Di({
+              sessionId: Ue,
+              isSampled: Ri(ye)
+            }, ye), Ke, ye),
+            Me = null === Ke || void 0 === Ke || null === (fe = Ke.sessionMeta) || void 0 === fe || null === (fe = fe.attributes) || void 0 === fe ? void 0 : fe.previousSession;
+          ee && null != Me && Me !== ie.sessionId && (ie.sessionMeta.attributes.previousSession = Me), (null === (Te = ie.sessionMeta.attributes) || void 0 === Te ? void 0 : Te.previousSession) === ie.sessionId && delete ie.sessionMeta.attributes.previousSession, He(ie),
+            function(ee, ie) {
+              let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var be, Me, Ke;
+              if (!ie) return;
+              const Ue = He.serviceName,
+                Fe = null !== (be = null !== (Me = ye.serviceName) && void 0 !== Me ? Me : null === (Ke = ee.metas.value.app) || void 0 === Ke ? void 0 : Ke.name) && void 0 !== be ? be : "";
+              Ue && Ue !== Fe && ee.api.pushEvent(Zi, {
+                serviceName: Ue,
+                previousServiceName: Fe
               })
-            }(YB, zB, JB, PB), DB = !0;
+            }(ye, ke, Je, Re), be = !0;
           try {
-            YB.api.setSession(OB.sessionMeta)
+            ye.api.setSession(ie.sessionMeta)
           } finally {
-            DB = !1
+            be = !1
           }
         }
       }
     }
 
-    function iO(BB) {
-      const OB = {};
-      for (const GB of Object.keys(BB)) {
-        const YB = BB[GB];
-        void 0 !== YB && (OB[GB] = YB)
+    function ci(ee) {
+      const ie = {};
+      for (const He of Object.keys(ee)) {
+        const ye = ee[He];
+        void 0 !== ye && (ie[He] = ye)
       }
-      return OB
+      return ie
     }
 
-    function LO() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== BB && void 0 !== BB ? BB : {}, function() {
-        const BB = new WeakSet;
-        return function(OB, GB) {
-          if (dB(GB) && null !== GB) {
-            if (BB.has(GB)) return null;
-            BB.add(GB)
+    function xi() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== ee && void 0 !== ee ? ee : {}, function() {
+        const ee = new WeakSet;
+        return function(ie, He) {
+          if (we(He) && null !== He) {
+            if (ee.has(He)) return null;
+            ee.add(He)
           }
-          return GB
+          return He
         }
       }())
     }
 
-    function gO() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const OB = {};
-      for (const [GB, YB] of Object.entries(BB)) OB[GB] = dB(YB) && null !== YB ? LO(YB) : String(YB);
-      return OB
+    function Li() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ie = {};
+      for (const [He, ye] of Object.entries(ee)) ie[He] = we(ye) && null !== ye ? xi(ye) : String(ye);
+      return ie
     }
-    var rO = class BB {
+    var Ci = class ee {
       constructor() {
-        var OB = this;
-        let GB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : qB;
-        this.context = GB, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = BB => {
+        var ie = this;
+        let He = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Te;
+        this.context = He, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = ee => {
           this.adopting = !0;
           try {
-            var OB;
-            null === (OB = this.context.api) || void 0 === OB || OB.setSession(BB)
+            var ie;
+            null === (ie = this.context.api) || void 0 === ie || ie.setSession(ee)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: BB = !0
+            refreshActivity: ee = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return OB.updateUserSession({
-            refreshActivity: BB
+          return ie.updateUserSession({
+            refreshActivity: ee
           })
-        }, this.recordActivity = mO({
-          fetchUserSession: BB.fetchUserSession,
-          storeUserSession: BB.storeUserSession,
-          updateInterval: jB
-        }), this.updateUserSession = uO({
-          fetchUserSession: BB.fetchUserSession,
-          storeUserSession: BB.storeUserSession,
+        }, this.recordActivity = Yi({
+          fetchUserSession: ee.fetchUserSession,
+          storeUserSession: ee.storeUserSession,
+          updateInterval: Ue
+        }), this.updateUserSession = Ai({
+          fetchUserSession: ee.fetchUserSession,
+          storeUserSession: ee.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: jB
-        }, GB), this.init()
+          updateInterval: Ue
+        }, He), this.init()
       }
       static removeUserSession() {
-        GO(DB, BB.storageTypeLocal)
+        Hi(be, ee.storageTypeLocal)
       }
-      static storeUserSession(OB) {
-        OO(DB, LO(OB), BB.storageTypeLocal)
+      static storeUserSession(ie) {
+        ii(be, xi(ie), ee.storageTypeLocal)
       }
       static fetchUserSession() {
-        const OB = BO(DB, BB.storageTypeLocal);
-        return OB ? JSON.parse(OB) : null
+        const ie = ei(be, ee.storageTypeLocal);
+        return ie ? JSON.parse(ie) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var BB;
+            var ee;
             this.updateSession({
               refreshActivity: !1
             });
-            const OB = null === (BB = this.context.api) || void 0 === BB || null === (BB = BB.getSession()) || void 0 === BB ? void 0 : BB.id;
-            OB && this.recordActivity(OB)
+            const ie = null === (ee = this.context.api) || void 0 === ee || null === (ee = ee.getSession()) || void 0 === ee ? void 0 : ee.id;
+            ie && this.recordActivity(ie)
           }
-        })), this.context.metas.addListener(FO({
-          fetchUserSession: BB.fetchUserSession,
-          storeUserSession: BB.storeUserSession
+        })), this.context.metas.addListener(ai({
+          fetchUserSession: ee.fetchUserSession,
+          storeUserSession: ee.storeUserSession
         }, this.context))
       }
     };
-    rO.storageTypeLocal = xB;
-    var XO = class BB {
+    Ci.storageTypeLocal = re;
+    var vi = class ee {
       constructor() {
-        var OB = this;
-        let GB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : qB;
-        this.context = GB, this.isAdopting = () => !1, this.updateSession = function() {
+        var ie = this;
+        let He = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Te;
+        this.context = He, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: BB = !0
+            refreshActivity: ee = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return OB.updateUserSession({
-            refreshActivity: BB
+          return ie.updateUserSession({
+            refreshActivity: ee
           })
-        }, this.recordActivity = mO({
-          fetchUserSession: BB.fetchUserSession,
-          storeUserSession: BB.storeUserSession,
-          updateInterval: jB
-        }), this.updateUserSession = uO({
-          fetchUserSession: BB.fetchUserSession,
-          storeUserSession: BB.storeUserSession,
-          updateInterval: jB
-        }, GB), this.init()
+        }, this.recordActivity = Yi({
+          fetchUserSession: ee.fetchUserSession,
+          storeUserSession: ee.storeUserSession,
+          updateInterval: Ue
+        }), this.updateUserSession = Ai({
+          fetchUserSession: ee.fetchUserSession,
+          storeUserSession: ee.storeUserSession,
+          updateInterval: Ue
+        }, He), this.init()
       }
       static removeUserSession() {
-        GO(DB, BB.storageTypeSession)
+        Hi(be, ee.storageTypeSession)
       }
-      static storeUserSession(OB) {
-        OO(DB, LO(OB), BB.storageTypeSession)
+      static storeUserSession(ie) {
+        ii(be, xi(ie), ee.storageTypeSession)
       }
       static fetchUserSession() {
-        const OB = BO(DB, BB.storageTypeSession);
-        return OB ? JSON.parse(OB) : null
+        const ie = ei(be, ee.storageTypeSession);
+        return ie ? JSON.parse(ie) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var BB;
+            var ee;
             this.updateSession({
               refreshActivity: !1
             });
-            const OB = null === (BB = this.context.api) || void 0 === BB || null === (BB = BB.getSession()) || void 0 === BB ? void 0 : BB.id;
-            OB && this.recordActivity(OB)
+            const ie = null === (ee = this.context.api) || void 0 === ee || null === (ee = ee.getSession()) || void 0 === ee ? void 0 : ee.id;
+            ie && this.recordActivity(ie)
           }
-        })), this.context.metas.addListener(FO({
-          fetchUserSession: BB.fetchUserSession,
-          storeUserSession: BB.storeUserSession
+        })), this.context.metas.addListener(ai({
+          fetchUserSession: ee.fetchUserSession,
+          storeUserSession: ee.storeUserSession
         }, this.context))
       }
     };
-    XO.storageTypeSession = sB;
-    const wO = new WeakMap;
+    vi.storageTypeSession = Ge;
+    const ui = new WeakMap;
 
-    function EO(BB) {
-      let OB = wO.get(BB);
-      if (!OB) {
-        let GB = [],
-          YB = [];
-        OB = {
-          addSessionUpdateListener: BB => {
-            GB.push(BB)
+    function mi(ee) {
+      let ie = ui.get(ee);
+      if (!ie) {
+        let He = [],
+          ye = [];
+        ie = {
+          addSessionUpdateListener: ee => {
+            He.push(ee)
           },
-          removeSessionUpdateListener: BB => {
-            GB = GB.filter((OB => OB !== BB))
+          removeSessionUpdateListener: ee => {
+            He = He.filter((ie => ie !== ee))
           },
-          notifySessionUpdate: BB => {
-            GB.forEach((OB => OB(BB)))
+          notifySessionUpdate: ee => {
+            He.forEach((ie => ie(ee)))
           },
-          shouldCapture: () => YB.every((BB => BB())),
-          addCaptureFilter: BB => {
-            YB.push(BB)
+          shouldCapture: () => ye.every((ee => ee())),
+          addCaptureFilter: ee => {
+            ye.push(ee)
           },
-          removeCaptureFilter: BB => {
-            YB = YB.filter((OB => OB !== BB))
+          removeCaptureFilter: ee => {
+            ye = ye.filter((ie => ie !== ee))
           }
-        }, wO.set(BB, OB)
+        }, ui.set(ee, ie)
       }
-      return OB
+      return ie
     }
-    var cO = class {
-      constructor(BB, OB, GB) {
-        this.metas = BB, this.transports = OB, this.onActivate = GB, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = BB => {
-          var OB, GB, YB;
-          const DB = this.pending;
-          var QB, oB;
-          if ("overrides" === BB.type) return void(this.pending = {
-            reset: null !== (QB = null === DB || void 0 === DB ? void 0 : DB.reset) && void 0 !== QB && QB,
-            inheritOverrides: null === (oB = null === DB || void 0 === DB ? void 0 : DB.inheritOverrides) || void 0 === oB || oB,
-            session: MO(MO({}, null === DB || void 0 === DB ? void 0 : DB.session), {}, {
-              overrides: MO(MO({}, null === DB || void 0 === DB ? void 0 : DB.session.overrides), BB.overrides)
+    var li = class {
+      constructor(ee, ie, He) {
+        this.metas = ee, this.transports = ie, this.onActivate = He, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = ee => {
+          var ie, He, ye;
+          const be = this.pending;
+          var Me, Ke;
+          if ("overrides" === ee.type) return void(this.pending = {
+            reset: null !== (Me = null === be || void 0 === be ? void 0 : be.reset) && void 0 !== Me && Me,
+            inheritOverrides: null === (Ke = null === be || void 0 === be ? void 0 : be.inheritOverrides) || void 0 === Ke || Ke,
+            session: oi(oi({}, null === be || void 0 === be ? void 0 : be.session), {}, {
+              overrides: oi(oi({}, null === be || void 0 === be ? void 0 : be.session.overrides), ee.overrides)
             })
           });
-          const jB = BB.session,
-            yB = bB(jB) || null != jB && "id" in jB && !jB.id,
-            JB = null !== (OB = null === jB || void 0 === jB ? void 0 : jB.overrides) && void 0 !== OB ? OB : null === DB || void 0 === DB ? void 0 : DB.session.overrides;
+          const Ue = ee.session,
+            Fe = se(Ue) || null != Ue && "id" in Ue && !Ue.id,
+            Je = null !== (ie = null === Ue || void 0 === Ue ? void 0 : Ue.overrides) && void 0 !== ie ? ie : null === be || void 0 === be ? void 0 : be.session.overrides;
           this.pending = {
-            reset: yB || !(null === jB || void 0 === jB ? void 0 : jB.id) && null !== (GB = null === DB || void 0 === DB ? void 0 : DB.reset) && void 0 !== GB && GB,
-            inheritOverrides: !(!BB.overrides && void 0 !== (null === jB || void 0 === jB ? void 0 : jB.overrides)) && (null === (YB = null === DB || void 0 === DB ? void 0 : DB.inheritOverrides) || void 0 === YB || YB),
+            reset: Fe || !(null === Ue || void 0 === Ue ? void 0 : Ue.id) && null !== (He = null === be || void 0 === be ? void 0 : be.reset) && void 0 !== He && He,
+            inheritOverrides: !(!ee.overrides && void 0 !== (null === Ue || void 0 === Ue ? void 0 : Ue.overrides)) && (null === (ye = null === be || void 0 === be ? void 0 : be.inheritOverrides) || void 0 === ye || ye),
             session: {
-              id: null === jB || void 0 === jB ? void 0 : jB.id,
-              attributes: (null === jB || void 0 === jB ? void 0 : jB.attributes) && MO({}, jB.attributes),
-              overrides: BB.overrides ? MO(MO({}, null === DB || void 0 === DB ? void 0 : DB.session.overrides), BB.overrides) : JB && MO({}, JB)
+              id: null === Ue || void 0 === Ue ? void 0 : Ue.id,
+              attributes: (null === Ue || void 0 === Ue ? void 0 : Ue.attributes) && oi({}, Ue.attributes),
+              overrides: ee.overrides ? oi(oi({}, null === be || void 0 === be ? void 0 : be.session.overrides), ee.overrides) : Je && oi({}, Je)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var BB, OB;
-        this.waiting = !0, EO(this.metas).addSessionUpdateListener(this.recordUpdate), EO(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (BB = (OB = this.metas).addCaptureListener) || void 0 === BB || BB.call(OB, this.activate), this.activate()
+        var ee, ie;
+        this.waiting = !0, mi(this.metas).addSessionUpdateListener(this.recordUpdate), mi(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (ee = (ie = this.metas).addCaptureListener) || void 0 === ee || ee.call(ie, this.activate), this.activate()
       }
       destroy() {
-        var BB, OB;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), EO(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (BB = (OB = this.metas).removeCaptureListener) || void 0 === BB || BB.call(OB, this.activate), EO(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var ee, ie;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), mi(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (ee = (ie = this.metas).removeCaptureListener) || void 0 === ee || ee.call(ie, this.activate), mi(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function hO(BB) {
-      return (null === BB || void 0 === BB ? void 0 : BB.persistent) ? rO : XO
+    function Si(ee) {
+      return (null === ee || void 0 === ee ? void 0 : ee.persistent) ? Ci : vi
     }
 
-    function aO() {}
-    let eO = function(BB) {
-      return BB[BB.OFF = 0] = "OFF", BB[BB.ERROR = 1] = "ERROR", BB[BB.WARN = 2] = "WARN", BB[BB.INFO = 3] = "INFO", BB[BB.VERBOSE = 4] = "VERBOSE", BB
+    function ni() {}
+    let ji = function(ee) {
+      return ee[ee.OFF = 0] = "OFF", ee[ee.ERROR = 1] = "ERROR", ee[ee.WARN = 2] = "WARN", ee[ee.INFO = 3] = "INFO", ee[ee.VERBOSE = 4] = "VERBOSE", ee
     }({});
-    const TO = {
-        debug: aO,
-        error: aO,
-        info: aO,
+    const si = {
+        debug: ni,
+        error: ni,
+        info: ni,
         prefix: "Faro",
-        warn: aO
+        warn: ni
       },
-      bO = 1;
+      Ii = 1;
 
-    function CO(BB) {
-      return CO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(BB) {
-        return typeof BB
-      } : function(BB) {
-        return BB && "function" == typeof Symbol && BB.constructor === Symbol && BB !== Symbol.prototype ? "symbol" : typeof BB
-      }, CO(BB)
+    function Ni(ee) {
+      return Ni = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(ee) {
+        return typeof ee
+      } : function(ee) {
+        return ee && "function" == typeof Symbol && ee.constructor === Symbol && ee !== Symbol.prototype ? "symbol" : typeof ee
+      }, Ni(ee)
     }
 
-    function HO(BB) {
-      var OB = function(BB, OB) {
-        if ("object" != CO(BB) || !BB) return BB;
-        var GB = BB[Symbol.toPrimitive];
-        if (void 0 !== GB) {
-          var YB = GB.call(BB, OB || "default");
-          if ("object" != CO(YB)) return YB;
+    function Gi(ee) {
+      var ie = function(ee, ie) {
+        if ("object" != Ni(ee) || !ee) return ee;
+        var He = ee[Symbol.toPrimitive];
+        if (void 0 !== He) {
+          var ye = He.call(ee, ie || "default");
+          if ("object" != Ni(ye)) return ye;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === OB ? String : Number)(BB)
-      }(BB, "string");
-      return "symbol" == CO(OB) ? OB : OB + ""
+        return ("string" === ie ? String : Number)(ee)
+      }(ee, "string");
+      return "symbol" == Ni(ie) ? ie : ie + ""
     }
 
-    function vO(BB, OB, GB) {
-      return (OB = HO(OB)) in BB ? Object.defineProperty(BB, OB, {
-        value: GB,
+    function ri(ee, ie, He) {
+      return (ie = Gi(ie)) in ee ? Object.defineProperty(ee, ie, {
+        value: He,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : BB[OB] = GB, BB
+      }) : ee[ie] = He, ee
     }
 
-    function sO(BB, OB) {
-      var GB = Object.keys(BB);
+    function Qi(ee, ie) {
+      var He = Object.keys(ee);
       if (Object.getOwnPropertySymbols) {
-        var YB = Object.getOwnPropertySymbols(BB);
-        OB && (YB = YB.filter((function(OB) {
-          return Object.getOwnPropertyDescriptor(BB, OB).enumerable
-        }))), GB.push.apply(GB, YB)
+        var ye = Object.getOwnPropertySymbols(ee);
+        ie && (ye = ye.filter((function(ie) {
+          return Object.getOwnPropertyDescriptor(ee, ie).enumerable
+        }))), He.push.apply(He, ye)
       }
-      return GB
+      return He
     }
 
-    function xO(BB) {
-      for (var OB = 1; OB < arguments.length; OB++) {
-        var GB = null != arguments[OB] ? arguments[OB] : {};
-        OB % 2 ? sO(Object(GB), !0).forEach((function(OB) {
-          vO(BB, OB, GB[OB])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(BB, Object.getOwnPropertyDescriptors(GB)) : sO(Object(GB)).forEach((function(OB) {
-          Object.defineProperty(BB, OB, Object.getOwnPropertyDescriptor(GB, OB))
+    function eH(ee) {
+      for (var ie = 1; ie < arguments.length; ie++) {
+        var He = null != arguments[ie] ? arguments[ie] : {};
+        ie % 2 ? Qi(Object(He), !0).forEach((function(ie) {
+          ri(ee, ie, He[ie])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(ee, Object.getOwnPropertyDescriptors(He)) : Qi(Object(He)).forEach((function(ie) {
+          Object.defineProperty(ee, ie, Object.getOwnPropertyDescriptor(He, ie))
         }))
       }
-      return BB
+      return ee
     }
-    const tO = xO({}, console);
-    var BG = class {
+    const iH = eH({}, console);
+    var HH = class {
         constructor() {
-          this.unpatchedConsole = tO, this.internalLogger = TO, this.config = {}, this.metas = {}
+          this.unpatchedConsole = iH, this.internalLogger = si, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-          this.internalLogger.debug(`${this.name}\n`, ...OB)
+          for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+          this.internalLogger.debug(`${this.name}\n`, ...ie)
         }
         logInfo() {
-          for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-          this.internalLogger.info(`${this.name}\n`, ...OB)
+          for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+          this.internalLogger.info(`${this.name}\n`, ...ie)
         }
         logWarn() {
-          for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-          this.internalLogger.warn(`${this.name}\n`, ...OB)
+          for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+          this.internalLogger.warn(`${this.name}\n`, ...ie)
         }
         logError() {
-          for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-          this.internalLogger.error(`${this.name}\n`, ...OB)
+          for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+          this.internalLogger.error(`${this.name}\n`, ...ie)
         }
       },
-      OG = class extends BG {
+      yH = class extends HH {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const GG = "2.12.1";
-    var YG = class extends OG {
+    const bH = "2.12.1";
+    var MH = class extends yH {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = GG, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = bH, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(BB) {
-        var OB;
-        const GB = BB.session;
-        if (GB && GB.id !== (null === (OB = this.notifiedSession) || void 0 === OB ? void 0 : OB.id)) {
-          var YB;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = GB);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (YB = GB.attributes) || void 0 === YB ? void 0 : YB.previousSession)) return this.api.pushEvent(UO, {}, void 0, {
+      sendSessionStartEvent(ee) {
+        var ie;
+        const He = ee.session;
+        if (He && He.id !== (null === (ie = this.notifiedSession) || void 0 === ie ? void 0 : ie.id)) {
+          var ye;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = He);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (ye = He.attributes) || void 0 === ye ? void 0 : ye.previousSession)) return this.api.pushEvent(ti, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = GB);
-          this.notifiedSession = GB, this.api.pushEvent(SO, {}, void 0, {
+          }), void(this.notifiedSession = He);
+          this.notifiedSession = He, this.api.pushEvent(di, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(BB, OB, GB) {
-        const YB = null === GB || void 0 === GB ? void 0 : GB.session;
-        let DB, QB, oB = BB.fetchUserSession();
-        if (OB.persistent && OB.maxSessionPersistenceTime && oB) {
-          const BB = zO();
-          oB.lastActivity < BB - OB.maxSessionPersistenceTime && (rO.removeUserSession(), oB = null)
+      createInitialSession(ee, ie, He) {
+        const ye = null === He || void 0 === He ? void 0 : He.session;
+        let be, Me, Ke = ee.fetchUserSession();
+        if (ie.persistent && ie.maxSessionPersistenceTime && Ke) {
+          const ee = ki();
+          Ke.lastActivity < ee - ie.maxSessionPersistenceTime && (Ci.removeUserSession(), Ke = null)
         }
-        const jB = KO(oB);
-        if ((null === GB || void 0 === GB ? void 0 : GB.reset) || !jB || (null === YB || void 0 === YB ? void 0 : YB.id) && YB.id !== (null === oB || void 0 === oB ? void 0 : oB.sessionId)) {
-          var yB, JB, MB, PB, zB, lB;
-          QB = dO({
-            sessionId: (null === GB || void 0 === GB ? void 0 : GB.reset) ? void 0 : null !== (yB = null === YB || void 0 === YB ? void 0 : YB.id) && void 0 !== yB ? yB : null === (JB = OB.session) || void 0 === JB ? void 0 : JB.id,
-            isSampled: PO(this)
+        const Ue = Pi(Ke);
+        if ((null === He || void 0 === He ? void 0 : He.reset) || !Ue || (null === ye || void 0 === ye ? void 0 : ye.id) && ye.id !== (null === Ke || void 0 === Ke ? void 0 : Ke.sessionId)) {
+          var Fe, Je, oe, Re, ke, qe;
+          Me = Di({
+            sessionId: (null === He || void 0 === He ? void 0 : He.reset) ? void 0 : null !== (Fe = null === ye || void 0 === ye ? void 0 : ye.id) && void 0 !== Fe ? Fe : null === (Je = ie.session) || void 0 === Je ? void 0 : Je.id,
+            isSampled: Ri(this)
           }, this);
-          const BB = QB.sessionId,
-            pB = GB && jB ? null === oB || void 0 === oB || null === (MB = oB.sessionMeta) || void 0 === MB ? void 0 : MB.overrides : void 0,
-            qB = pB ? MO(MO({}, null === (PB = OB.session) || void 0 === PB ? void 0 : PB.overrides), pB) : null === (zB = OB.session) || void 0 === zB ? void 0 : zB.overrides;
-          QB.sessionMeta = MO({
-            id: BB,
-            attributes: MO({
-              isSampled: QB.isSampled.toString()
-            }, null === (lB = OB.session) || void 0 === lB ? void 0 : lB.attributes)
-          }, qB ? {
-            overrides: qB
-          } : {}), DB = SO
+          const ee = Me.sessionId,
+            fe = He && Ue ? null === Ke || void 0 === Ke || null === (oe = Ke.sessionMeta) || void 0 === oe ? void 0 : oe.overrides : void 0,
+            Te = fe ? oi(oi({}, null === (Re = ie.session) || void 0 === Re ? void 0 : Re.overrides), fe) : null === (ke = ie.session) || void 0 === ke ? void 0 : ke.overrides;
+          Me.sessionMeta = oi({
+            id: ee,
+            attributes: oi({
+              isSampled: Me.isSampled.toString()
+            }, null === (qe = ie.session) || void 0 === qe ? void 0 : qe.attributes)
+          }, Te ? {
+            overrides: Te
+          } : {}), be = di
         } else {
-          var pB, qB;
-          const BB = null === oB || void 0 === oB ? void 0 : oB.sessionId;
-          QB = dO({
-            sessionId: BB,
-            isSampled: oB.isSampled || !1,
-            started: null === oB || void 0 === oB ? void 0 : oB.started
+          var fe, Te;
+          const ee = null === Ke || void 0 === Ke ? void 0 : Ke.sessionId;
+          Me = Di({
+            sessionId: ee,
+            isSampled: Ke.isSampled || !1,
+            started: null === Ke || void 0 === Ke ? void 0 : Ke.started
           }, this);
-          const GB = null === oB || void 0 === oB ? void 0 : oB.sessionMeta,
-            YB = MO(MO({}, null === (pB = OB.session) || void 0 === pB ? void 0 : pB.overrides), null === GB || void 0 === GB ? void 0 : GB.overrides);
-          QB.sessionMeta = MO(MO({}, OB.session), {}, {
-            id: BB,
-            attributes: MO(MO(MO({}, null === (qB = OB.session) || void 0 === qB ? void 0 : qB.attributes), null === GB || void 0 === GB ? void 0 : GB.attributes), {}, {
-              isSampled: QB.isSampled.toString()
+          const He = null === Ke || void 0 === Ke ? void 0 : Ke.sessionMeta,
+            ye = oi(oi({}, null === (fe = ie.session) || void 0 === fe ? void 0 : fe.overrides), null === He || void 0 === He ? void 0 : He.overrides);
+          Me.sessionMeta = oi(oi({}, ie.session), {}, {
+            id: ee,
+            attributes: oi(oi(oi({}, null === (Te = ie.session) || void 0 === Te ? void 0 : Te.attributes), null === He || void 0 === He ? void 0 : He.attributes), {}, {
+              isSampled: Me.isSampled.toString()
             }),
-            overrides: YB
-          }), DB = nO
+            overrides: ye
+          }), be = Wi
         }
-        var ZB;
-        if (YB && (QB.sessionMeta = MO(MO({}, QB.sessionMeta), {}, {
-            attributes: MO(MO(MO({}, null === (ZB = QB.sessionMeta) || void 0 === ZB ? void 0 : ZB.attributes), YB.attributes), {}, {
-              isSampled: QB.isSampled.toString()
+        var pe;
+        if (ye && (Me.sessionMeta = oi(oi({}, Me.sessionMeta), {}, {
+            attributes: oi(oi(oi({}, null === (pe = Me.sessionMeta) || void 0 === pe ? void 0 : pe.attributes), ye.attributes), {}, {
+              isSampled: Me.isSampled.toString()
             })
-          }), YB.overrides)) {
-          const BB = (null === GB || void 0 === GB ? void 0 : GB.inheritOverrides) ? MO(MO({}, QB.sessionMeta.overrides), YB.overrides) : YB.overrides;
-          Object.keys(BB).length > 0 ? QB.sessionMeta.overrides = BB : delete QB.sessionMeta.overrides
+          }), ye.overrides)) {
+          const ee = (null === He || void 0 === He ? void 0 : He.inheritOverrides) ? oi(oi({}, Me.sessionMeta.overrides), ye.overrides) : ye.overrides;
+          Object.keys(ee).length > 0 ? Me.sessionMeta.overrides = ee : delete Me.sessionMeta.overrides
         }
         return {
-          initialSession: QB,
-          lifecycleType: DB
+          initialSession: Me,
+          lifecycleType: be
         }
       }
-      registerBeforeSendHook(BB) {
-        var OB;
-        this.beforeSendHook = OB => {
-          var GB, YB;
-          const DB = null === (GB = OB.meta.session) || void 0 === GB ? void 0 : GB.id;
-          DB && !this.transports.isPaused() && BB(DB);
-          const QB = null === (YB = OB.meta.session) || void 0 === YB ? void 0 : YB.attributes;
-          if (QB && "true" === (null === QB || void 0 === QB ? void 0 : QB.isSampled)) {
-            var oB;
-            let BB = JSON.parse(JSON.stringify(OB));
-            const GB = null === (oB = BB.meta.session) || void 0 === oB ? void 0 : oB.attributes;
-            var jB;
-            if (null === GB || void 0 === GB || delete GB.isSampled, 0 === Object.keys(null !== GB && void 0 !== GB ? GB : {}).length) null === (jB = BB.meta.session) || void 0 === jB || delete jB.attributes;
-            return BB
+      registerBeforeSendHook(ee) {
+        var ie;
+        this.beforeSendHook = ie => {
+          var He, ye;
+          const be = null === (He = ie.meta.session) || void 0 === He ? void 0 : He.id;
+          be && !this.transports.isPaused() && ee(be);
+          const Me = null === (ye = ie.meta.session) || void 0 === ye ? void 0 : ye.attributes;
+          if (Me && "true" === (null === Me || void 0 === Me ? void 0 : Me.isSampled)) {
+            var Ke;
+            let ee = JSON.parse(JSON.stringify(ie));
+            const He = null === (Ke = ee.meta.session) || void 0 === Ke ? void 0 : Ke.attributes;
+            var Ue;
+            if (null === He || void 0 === He || delete He.isSampled, 0 === Object.keys(null !== He && void 0 !== He ? He : {}).length) null === (Ue = ee.meta.session) || void 0 === Ue || delete Ue.attributes;
+            return ee
           }
           return null
-        }, null === (OB = this.transports) || void 0 === OB || OB.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (ie = this.transports) || void 0 === ie || ie.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var BB;
+        var ee;
         this.logDebug("init session instrumentation");
-        const OB = document.prerendering;
-        var GB;
-        if ((null === (BB = this.config.sessionTracking) || void 0 === BB ? void 0 : BB.enabled) && (OB || this.prerenderSession)) return null !== (GB = this.prerenderSession) && void 0 !== GB || (this.prerenderSession = new cO(this.metas, this.transports, (BB => {
-          this.prerenderSession = void 0, this.initializeSession(BB)
+        const ie = document.prerendering;
+        var He;
+        if ((null === (ee = this.config.sessionTracking) || void 0 === ee ? void 0 : ee.enabled) && (ie || this.prerenderSession)) return null !== (He = this.prerenderSession) && void 0 !== He || (this.prerenderSession = new li(this.metas, this.transports, (ee => {
+          this.prerenderSession = void 0, this.initializeSession(ee)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(BB) {
-        const OB = this.config.sessionTracking;
-        if (null === OB || void 0 === OB ? void 0 : OB.enabled) {
-          var GB, YB;
-          const DB = hO(OB),
-            QB = new DB(this);
-          this.isAdoptingSession = QB.isAdopting, this.registerBeforeSendHook(QB.recordActivity);
+      initializeSession(ee) {
+        const ie = this.config.sessionTracking;
+        if (null === ie || void 0 === ie ? void 0 : ie.enabled) {
+          var He, ye;
+          const be = Si(ie),
+            Me = new be(this);
+          this.isAdoptingSession = Me.isAdopting, this.registerBeforeSendHook(Me.recordActivity);
           const {
-            initialSession: oB,
-            lifecycleType: jB
-          } = this.createInitialSession(DB, OB, BB);
-          DB.storeUserSession(oB);
-          const yB = oB.sessionMeta;
-          this.notifiedSession = yB, this.api.setSession(yB), this.captureListener = () => {
-            this.transports.isPaused() || QB.updateSession({
+            initialSession: Ke,
+            lifecycleType: Ue
+          } = this.createInitialSession(be, ie, ee);
+          be.storeUserSession(Ke);
+          const Fe = Ke.sessionMeta;
+          this.notifiedSession = Fe, this.api.setSession(Fe), this.captureListener = () => {
+            this.transports.isPaused() || Me.updateSession({
               refreshActivity: !1
             })
-          }, null === (GB = (YB = this.metas).addCaptureListener) || void 0 === GB || GB.call(YB, this.captureListener), jB === SO && this.api.pushEvent(SO, {}, void 0, {
+          }, null === (He = (ye = this.metas).addCaptureListener) || void 0 === He || He.call(ye, this.captureListener), Ue === di && this.api.pushEvent(di, {}, void 0, {
             skipDedupe: !0
-          }), jB === nO && this.api.pushEvent(nO, {}, void 0, {
+          }), Ue === Wi && this.api.pushEvent(Wi, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var BB, OB, GB;
-        (null === (BB = this.prerenderSession) || void 0 === BB || BB.destroy(), this.captureListener) && (null === (OB = (GB = this.metas).removeCaptureListener) || void 0 === OB || OB.call(GB, this.captureListener), this.captureListener = void 0);
+        var ee, ie, He;
+        (null === (ee = this.prerenderSession) || void 0 === ee || ee.destroy(), this.captureListener) && (null === (ie = (He = this.metas).removeCaptureListener) || void 0 === ie || ie.call(He, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function DG(BB, OB, GB, YB) {
-      const DB = {
-        filename: BB || document.location.href,
-        function: OB || "?"
+    function KH(ee, ie, He, ye) {
+      const be = {
+        filename: ee || document.location.href,
+        function: ie || "?"
       };
-      return void 0 !== GB && (DB.lineno = GB), void 0 !== YB && (DB.colno = YB), DB
+      return void 0 !== He && (be.lineno = He), void 0 !== ye && (be.colno = ye), be
     }
-    const QG = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      oG = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      jG = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      yG = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      JG = "safari-extension",
-      MG = "safari-web-extension",
-      PG = /Minified React error #\d+;/i;
+    const UH = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      FH = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      JH = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      oH = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      RH = "safari-extension",
+      kH = "safari-web-extension",
+      qH = /Minified React error #\d+;/i;
 
-    function zG(BB, OB) {
-      const GB = null === BB || void 0 === BB ? void 0 : BB.includes(JG),
-        YB = !GB && (null === BB || void 0 === BB ? void 0 : BB.includes("safari-web-extension"));
-      return GB || YB ? [(null === BB || void 0 === BB ? void 0 : BB.includes("@")) ? BB.split("@")[0] : BB, GB ? `${JG}:${OB}` : `${MG}:${OB}`] : [BB, OB]
+    function fH(ee, ie) {
+      const He = null === ee || void 0 === ee ? void 0 : ee.includes(RH),
+        ye = !He && (null === ee || void 0 === ee ? void 0 : ee.includes("safari-web-extension"));
+      return He || ye ? [(null === ee || void 0 === ee ? void 0 : ee.includes("@")) ? ee.split("@")[0] : ee, He ? `${RH}:${ie}` : `${kH}:${ie}`] : [ee, ie]
     }
-    const lG = 1024;
+    const TH = 1024;
 
-    function pG(BB) {
-      let OB = [];
-      BB.stacktrace ? OB = BB.stacktrace.split("\n").filter(((BB, OB) => OB % 2 === 0)) : BB.stack && (OB = BB.stack.split("\n"));
-      const GB = OB.reduce(((OB, GB, YB) => {
-        if (GB.length > lG) return OB;
-        let DB, QB, oB, jB, yB;
-        if (DB = QG.exec(GB)) {
-          if (QB = DB[1], oB = DB[2], jB = DB[3], yB = DB[4], null === oB || void 0 === oB ? void 0 : oB.startsWith("eval")) {
-            const BB = oG.exec(oB);
-            BB && (oB = BB[1], jB = BB[2], yB = BB[3])
+    function pH(ee) {
+      let ie = [];
+      ee.stacktrace ? ie = ee.stacktrace.split("\n").filter(((ee, ie) => ie % 2 === 0)) : ee.stack && (ie = ee.stack.split("\n"));
+      const He = ie.reduce(((ie, He, ye) => {
+        if (He.length > TH) return ie;
+        let be, Me, Ke, Ue, Fe;
+        if (be = UH.exec(He)) {
+          if (Me = be[1], Ke = be[2], Ue = be[3], Fe = be[4], null === Ke || void 0 === Ke ? void 0 : Ke.startsWith("eval")) {
+            const ee = FH.exec(Ke);
+            ee && (Ke = ee[1], Ue = ee[2], Fe = ee[3])
           }
-          oB = (null === oB || void 0 === oB ? void 0 : oB.startsWith("address at ")) ? oB.substring(11) : oB, [QB, oB] = zG(QB, oB)
-        } else if (DB = jG.exec(GB)) {
-          if (QB = DB[1], oB = DB[3], jB = DB[4], yB = DB[5], oB && oB.includes(" > eval")) {
-            const BB = yG.exec(oB);
-            BB && (QB = QB || "eval", oB = BB[1], jB = BB[2])
-          } else 0 === YB && !yB && nB(BB.columnNumber) && (yB = String(BB.columnNumber + 1));
-          [QB, oB] = zG(QB, oB)
+          Ke = (null === Ke || void 0 === Ke ? void 0 : Ke.startsWith("address at ")) ? Ke.substring(11) : Ke, [Me, Ke] = fH(Me, Ke)
+        } else if (be = JH.exec(He)) {
+          if (Me = be[1], Ke = be[3], Ue = be[4], Fe = be[5], Ke && Ke.includes(" > eval")) {
+            const ee = oH.exec(Ke);
+            ee && (Me = Me || "eval", Ke = ee[1], Ue = ee[2])
+          } else 0 === ye && !Fe && de(ee.columnNumber) && (Fe = String(ee.columnNumber + 1));
+          [Me, Ke] = fH(Me, Ke)
         }
-        return (oB || QB) && OB.push(DG(oB, QB, jB ? Number(jB) : void 0, yB ? Number(yB) : void 0)), OB
+        return (Ke || Me) && ie.push(KH(Ke, Me, Ue ? Number(Ue) : void 0, Fe ? Number(Fe) : void 0)), ie
       }), []);
-      return PG.test(BB.message) ? GB.slice(1) : GB
+      return qH.test(ee.message) ? He.slice(1) : He
     }
 
-    function qG(BB) {
+    function XH(ee) {
       return {
-        frames: pG(BB)
+        frames: pH(ee)
       }
     }
-    const ZG = "http-request-start",
-      NG = "http-request-end";
-    var RG = class BB {
+    const zH = "http-request-start",
+      BH = "http-request-end";
+    var EH = class ee {
       constructor() {
         this.subscribers = []
       }
-      subscribe(BB) {
-        return this.subscribers.push(BB), {
-          unsubscribe: () => this.unsubscribe(BB)
+      subscribe(ee) {
+        return this.subscribers.push(ee), {
+          unsubscribe: () => this.unsubscribe(ee)
         }
       }
-      unsubscribe(BB) {
-        this.subscribers = this.subscribers.filter((OB => OB !== BB))
+      unsubscribe(ee) {
+        this.subscribers = this.subscribers.filter((ie => ie !== ee))
       }
-      notify(BB) {
-        this.subscribers.forEach((OB => OB(BB)))
+      notify(ee) {
+        this.subscribers.forEach((ie => ie(ee)))
       }
       first() {
-        const OB = new BB,
-          GB = BB => {
-            OB.notify(BB), YB.unsubscribe()
+        const ie = new ee,
+          He = ee => {
+            ie.notify(ee), ye.unsubscribe()
           },
-          YB = this.subscribe(GB),
-          DB = OB.unsubscribe.bind(OB);
-        return this.withUnsubscribeOverride(OB, DB, GB)
+          ye = this.subscribe(He),
+          be = ie.unsubscribe.bind(ie);
+        return this.withUnsubscribeOverride(ie, be, He)
       }
-      takeWhile(OB) {
-        const GB = new BB,
-          YB = BB => {
-            OB(BB) ? GB.notify(BB) : GB.unsubscribe(YB)
+      takeWhile(ie) {
+        const He = new ee,
+          ye = ee => {
+            ie(ee) ? He.notify(ee) : He.unsubscribe(ye)
           };
-        this.subscribe(YB);
-        const DB = GB.unsubscribe.bind(GB);
-        return this.withUnsubscribeOverride(GB, DB, YB)
+        this.subscribe(ye);
+        const be = He.unsubscribe.bind(He);
+        return this.withUnsubscribeOverride(He, be, ye)
       }
-      filter(OB) {
-        const GB = new BB,
-          YB = BB => {
-            OB(BB) && GB.notify(BB)
+      filter(ie) {
+        const He = new ee,
+          ye = ee => {
+            ie(ee) && He.notify(ee)
           };
-        this.subscribe(YB);
-        const DB = GB.unsubscribe.bind(GB);
-        return this.withUnsubscribeOverride(GB, DB, YB)
+        this.subscribe(ye);
+        const be = He.unsubscribe.bind(He);
+        return this.withUnsubscribeOverride(He, be, ye)
       }
       merge() {
-        const OB = new BB,
-          GB = [];
-        for (var YB = arguments.length, DB = new Array(YB), QB = 0; QB < YB; QB++) DB[QB] = arguments[QB];
-        DB.forEach((BB => {
-          const YB = BB.subscribe((BB => {
-            OB.notify(BB)
+        const ie = new ee,
+          He = [];
+        for (var ye = arguments.length, be = new Array(ye), Me = 0; Me < ye; Me++) be[Me] = arguments[Me];
+        be.forEach((ee => {
+          const ye = ee.subscribe((ee => {
+            ie.notify(ee)
           }));
-          GB.push(YB)
+          He.push(ye)
         }));
-        const oB = OB.unsubscribeAll.bind(OB);
-        return OB.unsubscribe = () => {
-          GB.forEach((BB => BB.unsubscribe())), oB()
-        }, OB
+        const Ke = ie.unsubscribeAll.bind(ie);
+        return ie.unsubscribe = () => {
+          He.forEach((ee => ee.unsubscribe())), Ke()
+        }, ie
       }
-      withUnsubscribeOverride(BB, OB, GB) {
-        return BB.unsubscribe = BB => {
-          OB(BB), this.unsubscribe(GB)
-        }, BB
+      withUnsubscribeOverride(ee, ie, He) {
+        return ee.unsubscribe = ee => {
+          ie(ee), this.unsubscribe(He)
+        }, ee
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let WG = function(BB) {
-      return BB.TRACE = "trace", BB.DEBUG = "debug", BB.INFO = "info", BB.LOG = "log", BB.WARN = "warn", BB.ERROR = "error", BB
+    let gH = function(ee) {
+      return ee.TRACE = "trace", ee.DEBUG = "debug", ee.INFO = "info", ee.LOG = "log", ee.WARN = "warn", ee.ERROR = "error", ee
     }({});
-    const AG = "log",
-      VG = ["trace", "debug", "info", "log", "warn", "error"];
-    let SG, nG = !1;
-    const UG = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      fG = "Error",
-      kG = BB => BB.map((BB => dB(BB) ? LO(BB) : String(BB))).join(" ");
+    const OH = "log",
+      dH = ["trace", "debug", "info", "log", "warn", "error"];
+    let WH, tH = !1;
+    const ZH = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      wH = "Error",
+      DH = ee => ee.map((ee => we(ee) ? xi(ee) : String(ee))).join(" ");
 
-    function dG(BB) {
-      let OB, GB, YB, DB, QB = [];
-      if (XB(BB) && BB.error) OB = BB.error.message, GB = BB.error.name, QB = pG(BB.error);
-      else if ((YB = wB(BB)) || EB(BB)) {
+    function PH(ee) {
+      let ie, He, ye, be, Me = [];
+      if (Ce(ee) && ee.error) ie = ee.error.message, He = ee.error.name, Me = pH(ee.error);
+      else if ((ye = ve(ee)) || ue(ee)) {
         const {
-          name: DB,
-          message: QB
-        } = BB;
-        GB = null !== DB && void 0 !== DB ? DB : YB ? "DOMError" : "DOMException", OB = QB ? `${GB}: ${QB}` : GB
-      } else rB(BB) ? (GB = BB.name, OB = BB.message, QB = pG(BB)) : (dB(BB) || (DB = LB(BB))) && (GB = DB ? BB.constructor.name : void 0, OB = `Non-Error exception captured with keys: ${Object.keys(BB)}`);
-      return [OB, GB, QB]
+          name: be,
+          message: Me
+        } = ee;
+        He = null !== be && void 0 !== be ? be : ye ? "DOMError" : "DOMException", ie = Me ? `${He}: ${Me}` : He
+      } else Le(ee) ? (He = ee.name, ie = ee.message, Me = pH(ee)) : (we(ee) || (be = ce(ee))) && (He = be ? ee.constructor.name : void 0, ie = `Non-Error exception captured with keys: ${Object.keys(ee)}`);
+      return [ie, He, Me]
     }
 
-    function KG(BB) {
-      const [OB, GB, YB, DB, QB] = BB;
-      let oB, jB, yB = [];
-      const JB = SB(OB),
-        MB = DG(GB, "?", YB, DB);
-      return QB || !JB ? ([oB, jB, yB] = dG(null !== QB && void 0 !== QB ? QB : OB), 0 === yB.length && (yB = [MB])) : JB && ([oB, jB] = function(BB) {
-        var OB, GB;
-        const YB = BB.match(UG),
-          DB = null !== (OB = null === YB || void 0 === YB ? void 0 : YB[1]) && void 0 !== OB ? OB : fG;
-        return [null !== (GB = null === YB || void 0 === YB ? void 0 : YB[2]) && void 0 !== GB ? GB : BB, DB]
-      }(OB), yB = [MB]), {
-        value: oB,
-        type: jB,
-        stackFrames: yB
+    function AH(ee) {
+      const [ie, He, ye, be, Me] = ee;
+      let Ke, Ue, Fe = [];
+      const Je = Oe(ie),
+        oe = KH(He, "?", ye, be);
+      return Me || !Je ? ([Ke, Ue, Fe] = PH(null !== Me && void 0 !== Me ? Me : ie), 0 === Fe.length && (Fe = [oe])) : Je && ([Ke, Ue] = function(ee) {
+        var ie, He;
+        const ye = ee.match(ZH),
+          be = null !== (ie = null === ye || void 0 === ye ? void 0 : ye[1]) && void 0 !== ie ? ie : wH;
+        return [null !== (He = null === ye || void 0 === ye ? void 0 : ye[2]) && void 0 !== He ? He : ee, be]
+      }(ie), Fe = [oe]), {
+        value: Ke,
+        type: Ue,
+        stackFrames: Fe
       }
     }
 
-    function uG(BB, OB) {
-      return rB(BB[0]) ? KG(BB) : {
-        value: OB(BB)
+    function YH(ee, ie) {
+      return Le(ee[0]) ? AH(ee) : {
+        value: ie(ee)
       }
     }
-    const mG = BB => BB.map((BB => {
+    const VH = ee => ee.map((ee => {
       try {
-        return String(BB)
-      } catch (OB) {
+        return String(ee)
+      } catch (ie) {
         return ""
       }
     })).join(" ");
-    var IG = class BB extends OG {
+    var aH = class ee extends yH {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = GG, this.errorSerializer = mG
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = bH, this.errorSerializer = VH
       }
       initialize() {
-        var OB, GB;
-        const YB = this.config.consoleInstrumentation,
-          DB = (null === YB || void 0 === YB ? void 0 : YB.serializeErrors) || !!(null === YB || void 0 === YB ? void 0 : YB.errorSerializer);
-        this.errorSerializer = DB ? null !== (OB = null === YB || void 0 === YB ? void 0 : YB.errorSerializer) && void 0 !== OB ? OB : kG : mG;
-        const QB = null !== (GB = null === YB || void 0 === YB ? void 0 : YB.disabledLevels) && void 0 !== GB ? GB : BB.defaultDisabledLevels,
-          oB = function(BB) {
-            if (SG || (SG = new RG), !nG) {
-              const OB = null !== BB && void 0 !== BB ? BB : tO;
-              VG.forEach((BB => {
-                console[BB] = function() {
-                  for (var GB, YB = arguments.length, DB = new Array(YB), QB = 0; QB < YB; QB++) DB[QB] = arguments[QB];
-                  SG.notify({
+        var ie, He;
+        const ye = this.config.consoleInstrumentation,
+          be = (null === ye || void 0 === ye ? void 0 : ye.serializeErrors) || !!(null === ye || void 0 === ye ? void 0 : ye.errorSerializer);
+        this.errorSerializer = be ? null !== (ie = null === ye || void 0 === ye ? void 0 : ye.errorSerializer) && void 0 !== ie ? ie : DH : VH;
+        const Me = null !== (He = null === ye || void 0 === ye ? void 0 : ye.disabledLevels) && void 0 !== He ? He : ee.defaultDisabledLevels,
+          Ke = function(ee) {
+            if (WH || (WH = new EH), !tH) {
+              const ie = null !== ee && void 0 !== ee ? ee : iH;
+              dH.forEach((ee => {
+                console[ee] = function() {
+                  for (var He, ye = arguments.length, be = new Array(ye), Me = 0; Me < ye; Me++) be[Me] = arguments[Me];
+                  WH.notify({
                     type: "console",
-                    level: BB,
-                    args: DB
-                  }), null === (GB = OB[BB]) || void 0 === GB || GB.apply(console, DB)
+                    level: ee,
+                    args: be
+                  }), null === (He = ie[ee]) || void 0 === He || He.apply(console, be)
                 }
-              })), nG = !0
+              })), tH = !0
             }
-            return SG
+            return WH
           }(this.unpatchedConsole);
-        this.subscription = oB.subscribe((OB => {
+        this.subscription = Ke.subscribe((ie => {
           let {
-            level: GB,
-            args: DB
-          } = OB;
-          if (!QB.includes(GB)) try {
-            if (GB !== WG.ERROR || (null === YB || void 0 === YB ? void 0 : YB.consoleErrorAsLog))
-              if (GB === WG.ERROR && (null === YB || void 0 === YB ? void 0 : YB.consoleErrorAsLog)) {
+            level: He,
+            args: be
+          } = ie;
+          if (!Me.includes(He)) try {
+            if (He !== gH.ERROR || (null === ye || void 0 === ye ? void 0 : ye.consoleErrorAsLog))
+              if (He === gH.ERROR && (null === ye || void 0 === ye ? void 0 : ye.consoleErrorAsLog)) {
                 const {
-                  value: OB,
-                  type: YB,
-                  stackFrames: QB
-                } = uG(DB, this.errorSerializer);
-                this.api.pushLog(OB ? [BB.consoleErrorPrefix + OB] : DB, {
-                  level: GB,
+                  value: ie,
+                  type: ye,
+                  stackFrames: Me
+                } = YH(be, this.errorSerializer);
+                this.api.pushLog(ie ? [ee.consoleErrorPrefix + ie] : be, {
+                  level: He,
                   context: {
-                    value: null !== OB && void 0 !== OB ? OB : "",
-                    type: null !== YB && void 0 !== YB ? YB : "",
-                    stackFrames: (null === QB || void 0 === QB ? void 0 : QB.length) ? kG(QB) : ""
+                    value: null !== ie && void 0 !== ie ? ie : "",
+                    type: null !== ye && void 0 !== ye ? ye : "",
+                    stackFrames: (null === Me || void 0 === Me ? void 0 : Me.length) ? DH(Me) : ""
                   }
                 })
-              } else this.api.pushLog(DB, {
-                level: GB
+              } else this.api.pushLog(be, {
+                level: He
               });
             else {
               const {
-                value: OB,
-                type: GB,
-                stackFrames: YB
-              } = uG(DB, this.errorSerializer);
-              if (OB && !GB && !YB) return void this.api.pushError(new Error(BB.consoleErrorPrefix + OB));
-              this.api.pushError(new Error(BB.consoleErrorPrefix + OB), {
-                type: GB,
-                stackFrames: YB
+                value: ie,
+                type: He,
+                stackFrames: ye
+              } = YH(be, this.errorSerializer);
+              if (ie && !He && !ye) return void this.api.pushError(new Error(ee.consoleErrorPrefix + ie));
+              this.api.pushError(new Error(ee.consoleErrorPrefix + ie), {
+                type: He,
+                stackFrames: ye
               })
             }
-          } catch (oB) {
-            this.logError(oB)
+          } catch (Ke) {
+            this.logError(Ke)
           }
         }))
       }
       destroy() {
-        var BB;
-        null === (BB = this.subscription) || void 0 === BB || BB.unsubscribe(), this.subscription = void 0
+        var ee;
+        null === (ee = this.subscription) || void 0 === ee || ee.unsubscribe(), this.subscription = void 0
       }
     };
-    IG.defaultDisabledLevels = [WG.DEBUG, WG.TRACE, WG.LOG], IG.consoleErrorPrefix = "console.error: ";
-    const FG = [];
-    var iG = class extends OG {
+    aH.defaultDisabledLevels = [gH.DEBUG, gH.TRACE, gH.LOG], aH.consoleErrorPrefix = "console.error: ";
+    const cH = [];
+    var xH = class extends yH {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = GG
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = bH
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(BB) {
-            const OB = window.onerror;
+          function(ee) {
+            const ie = window.onerror;
             window.onerror = function() {
-              for (var GB = arguments.length, YB = new Array(GB), DB = 0; DB < GB; DB++) YB[DB] = arguments[DB];
+              for (var He = arguments.length, ye = new Array(He), be = 0; be < He; be++) ye[be] = arguments[be];
               try {
                 const {
-                  value: OB,
-                  type: GB,
-                  stackFrames: DB
-                } = KG(YB), QB = YB[4];
-                if (OB) {
-                  const YB = {
-                    type: GB,
-                    stackFrames: DB
+                  value: ie,
+                  type: He,
+                  stackFrames: be
+                } = AH(ye), Me = ye[4];
+                if (ie) {
+                  const ye = {
+                    type: He,
+                    stackFrames: be
                   };
-                  null != QB && (YB.originalError = QB), BB.pushError(new Error(OB), YB)
+                  null != Me && (ye.originalError = Me), ee.pushError(new Error(ie), ye)
                 }
               } finally {
-                null === OB || void 0 === OB || OB.apply(window, YB)
+                null === ie || void 0 === ie || ie.apply(window, ye)
               }
             }
           }(this.api),
-          function(BB) {
-            const OB = OB => {
-              var GB;
-              let YB, DB, QB = OB;
-              if (QB.reason) QB = OB.reason;
-              else if (null === (GB = OB.detail) || void 0 === GB ? void 0 : GB.reason) {
-                var oB;
-                QB = null === (oB = OB.detail) || void 0 === oB ? void 0 : oB.reason
+          function(ee) {
+            const ie = ie => {
+              var He;
+              let ye, be, Me = ie;
+              if (Me.reason) Me = ie.reason;
+              else if (null === (He = ie.detail) || void 0 === He ? void 0 : He.reason) {
+                var Ke;
+                Me = null === (Ke = ie.detail) || void 0 === Ke ? void 0 : Ke.reason
               }
-              let jB = [];
-              FB(QB) ? (YB = `Non-Error promise rejection captured with value: ${String(QB)}`, DB = "UnhandledRejection") : [YB, DB, jB] = dG(QB), YB && BB.pushError(new Error(YB), {
-                type: DB,
-                stackFrames: jB
+              let Ue = [];
+              Ve(Me) ? (ye = `Non-Error promise rejection captured with value: ${String(Me)}`, be = "UnhandledRejection") : [ye, be, Ue] = PH(Me), ye && ee.pushError(new Error(ye), {
+                type: be,
+                stackFrames: Ue
               })
             };
-            window.addEventListener("unhandledrejection", OB), FG.push(OB)
+            window.addEventListener("unhandledrejection", ie), cH.push(ie)
           }(this.api)
       }
     };
-    const LG = "unknown";
-    var gG = class extends OG {
+    const LH = "unknown";
+    var CH = class extends yH {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = GG, this.waitingForActivation = !1, this.sendViewChangedEvent = BB => {
-          var OB;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = bH, this.waitingForActivation = !1, this.sendViewChangedEvent = ee => {
+          var ie;
           if (this.waitingForActivation || document.prerendering) return;
-          const GB = BB.view;
-          if (GB && GB.name !== (null === (OB = this.notifiedView) || void 0 === OB ? void 0 : OB.name)) {
-            var YB, DB, QB;
-            const BB = null !== (YB = null === (DB = this.notifiedView) || void 0 === DB ? void 0 : DB.name) && void 0 !== YB ? YB : LG;
-            this.notifiedView = GB, this.api.pushEvent(VO, {
-              fromView: BB,
-              toView: null !== (QB = GB.name) && void 0 !== QB ? QB : LG
+          const He = ee.view;
+          if (He && He.name !== (null === (ie = this.notifiedView) || void 0 === ie ? void 0 : ie.name)) {
+            var ye, be, Me;
+            const ee = null !== (ye = null === (be = this.notifiedView) || void 0 === be ? void 0 : be.name) && void 0 !== ye ? ye : LH;
+            this.notifiedView = He, this.api.pushEvent(Oi, {
+              fromView: ee,
+              toView: null !== (Me = He.name) && void 0 !== Me ? Me : LH
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class rG {
+    class vH {
       t;
       o = 0;
       i = [];
-      l(BB) {
-        if (BB.hadRecentInput) return;
-        const OB = this.i[0],
-          GB = this.i.at(-1);
-        this.o && OB && GB && BB.startTime - GB.startTime < 1e3 && BB.startTime - OB.startTime < 5e3 ? (this.o += BB.value, this.i.push(BB)) : (this.o = BB.value, this.i = [BB]), this.t?.(BB)
+      l(ee) {
+        if (ee.hadRecentInput) return;
+        const ie = this.i[0],
+          He = this.i.at(-1);
+        this.o && ie && He && ee.startTime - He.startTime < 1e3 && ee.startTime - ie.startTime < 5e3 ? (this.o += ee.value, this.i.push(ee)) : (this.o = ee.value, this.i = [ee]), this.t?.(ee)
       }
     }
-    const XG = () => {
-        const BB = performance.getEntriesByType("navigation")[0];
-        if (BB && BB.responseStart > 0 && BB.responseStart < performance.now()) return BB
+    const uH = () => {
+        const ee = performance.getEntriesByType("navigation")[0];
+        if (ee && ee.responseStart > 0 && ee.responseStart < performance.now()) return ee
       },
-      wG = BB => {
+      mH = ee => {
         if ("loading" === document.readyState) return "loading";
-        const OB = XG();
-        if (OB) {
-          if (BB < OB.domInteractive) return "loading";
-          if (0 === OB.domContentLoadedEventStart || BB < OB.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === OB.domComplete || BB < OB.domComplete) return "dom-content-loaded"
+        const ie = uH();
+        if (ie) {
+          if (ee < ie.domInteractive) return "loading";
+          if (0 === ie.domContentLoadedEventStart || ee < ie.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === ie.domComplete || ee < ie.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      EG = BB => {
-        const OB = BB.nodeName;
-        return 1 === BB.nodeType ? OB.toLowerCase() : OB.toUpperCase().replace(/^#/, "")
+      lH = ee => {
+        const ie = ee.nodeName;
+        return 1 === ee.nodeType ? ie.toLowerCase() : ie.toUpperCase().replace(/^#/, "")
       },
-      cG = BB => {
-        let OB = "";
+      SH = ee => {
+        let ie = "";
         try {
-          for (; 9 !== BB?.nodeType;) {
-            const GB = BB,
-              YB = GB.id ? "#" + GB.id : [EG(GB), ...Array.from(GB.classList ?? []).sort()].join(".");
-            if (OB.length + YB.length > 99) return OB || YB;
-            if (OB = OB ? YB + ">" + OB : YB, GB.id) break;
-            BB = GB.parentNode
+          for (; 9 !== ee?.nodeType;) {
+            const He = ee,
+              ye = He.id ? "#" + He.id : [lH(He), ...Array.from(He.classList ?? []).sort()].join(".");
+            if (ie.length + ye.length > 99) return ie || ye;
+            if (ie = ie ? ye + ">" + ie : ye, He.id) break;
+            ee = He.parentNode
           }
         } catch {}
-        return OB
+        return ie
       },
-      hG = new WeakMap;
+      nH = new WeakMap;
 
-    function aG(BB, OB) {
-      let GB = hG.get(OB);
-      return GB || (GB = new WeakMap, hG.set(OB, GB)), GB.get(BB) || GB.set(BB, new OB), GB.get(BB)
+    function jH(ee, ie) {
+      let He = nH.get(ie);
+      return He || (He = new WeakMap, nH.set(ie, He)), He.get(ee) || He.set(ee, new ie), He.get(ee)
     }
-    let eG = -1;
-    const TG = () => eG,
-      bG = BB => {
-        addEventListener("pageshow", (OB => {
-          OB.persisted && (eG = OB.timeStamp, BB(OB))
+    let sH = -1;
+    const IH = () => sH,
+      hH = ee => {
+        addEventListener("pageshow", (ie => {
+          ie.persisted && (sH = ie.timeStamp, ee(ie))
         }), !0)
       },
-      CG = (BB, OB, GB, YB) => {
-        let DB, QB;
-        return oB => {
-          OB.value >= 0 && (oB || YB) && (QB = OB.value - (DB ?? 0), (QB || void 0 === DB) && (DB = OB.value, OB.delta = QB, OB.rating = ((BB, OB) => BB > OB[1] ? "poor" : BB > OB[0] ? "needs-improvement" : "good")(OB.value, GB), BB(OB)))
+      NH = (ee, ie, He, ye) => {
+        let be, Me;
+        return Ke => {
+          ie.value >= 0 && (Ke || ye) && (Me = ie.value - (be ?? 0), (Me || void 0 === be) && (be = ie.value, ie.delta = Me, ie.rating = ((ee, ie) => ee > ie[1] ? "poor" : ee > ie[0] ? "needs-improvement" : "good")(ie.value, He), ee(ie)))
         }
       },
-      HG = BB => {
-        requestAnimationFrame((() => requestAnimationFrame((() => BB()))))
+      GH = ee => {
+        requestAnimationFrame((() => requestAnimationFrame((() => ee()))))
       },
-      vG = () => XG()?.activationStart ?? 0;
-    let sG = -1;
-    const xG = new Set,
-      tG = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      BY = BB => {
+      rH = () => uH()?.activationStart ?? 0;
+    let QH = -1;
+    const ey = new Set,
+      iy = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      Hy = ee => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === BB.type)
-            for (const BB of xG) BB();
-          isFinite(sG) || (sG = "visibilitychange" === BB.type ? BB.timeStamp : 0, removeEventListener("prerenderingchange", BY, !0))
+          if ("visibilitychange" === ee.type)
+            for (const ee of ey) ee();
+          isFinite(QH) || (QH = "visibilitychange" === ee.type ? ee.timeStamp : 0, removeEventListener("prerenderingchange", Hy, !0))
         }
       },
-      OY = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (sG = 1 / 0), sG < 0) {
-          const BB = vG(),
-            OB = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((OB => "hidden" === OB.name && OB.startTime >= BB))?.startTime;
-          sG = OB ?? tG(), addEventListener("visibilitychange", BY, !0), addEventListener("prerenderingchange", BY, !0), bG((() => {
+      yy = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (QH = 1 / 0), QH < 0) {
+          const ee = rH(),
+            ie = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((ie => "hidden" === ie.name && ie.startTime >= ee))?.startTime;
+          QH = ie ?? iy(), addEventListener("visibilitychange", Hy, !0), addEventListener("prerenderingchange", Hy, !0), hH((() => {
             setTimeout((() => {
-              sG = tG()
+              QH = iy()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return sG
+            return QH
           },
-          onHidden(BB) {
-            xG.add(BB)
+          onHidden(ee) {
+            ey.add(ee)
           }
         }
       },
-      GY = function(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          GB = arguments.length > 2 ? arguments[2] : void 0,
-          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          DB = arguments.length > 4 ? arguments[4] : void 0,
-          QB = arguments.length > 5 ? arguments[5] : void 0,
-          oB = arguments.length > 6 ? arguments[6] : void 0;
-        const jB = XG(),
-          yB = jB?.navigationId || 0;
-        let JB = "navigate";
-        return GB ? JB = GB : TG() >= 0 ? JB = "back-forward-cache" : jB && (document.prerendering || vG() > 0 ? JB = "prerender" : document.wasDiscarded ? JB = "restore" : jB.type && (JB = jB.type.replace(/_/g, "-"))), {
-          name: BB,
-          value: OB,
+      by = function(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          He = arguments.length > 2 ? arguments[2] : void 0,
+          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          be = arguments.length > 4 ? arguments[4] : void 0,
+          Me = arguments.length > 5 ? arguments[5] : void 0,
+          Ke = arguments.length > 6 ? arguments[6] : void 0;
+        const Ue = uH(),
+          Fe = Ue?.navigationId || 0;
+        let Je = "navigate";
+        return He ? Je = He : IH() >= 0 ? Je = "back-forward-cache" : Ue && (document.prerendering || rH() > 0 ? Je = "prerender" : document.wasDiscarded ? Je = "restore" : Ue.type && (Je = Ue.type.replace(/_/g, "-"))), {
+          name: ee,
+          value: ie,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: JB,
-          navigationId: YB || yB,
-          navigationInteractionId: DB,
-          navigationURL: QB || jB?.name,
-          navigationStartTime: oB || 0
+          navigationType: Je,
+          navigationId: ye || Fe,
+          navigationInteractionId: be,
+          navigationURL: Me || Ue?.name,
+          navigationStartTime: Ke || 0
         }
       },
-      YY = function(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      My = function(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const YB = BB.filter((BB => PerformanceObserver.supportedEntryTypes.includes(BB)));
-          if (YB.length > 0) {
-            const BB = new PerformanceObserver((BB => {
+          const ye = ee.filter((ee => PerformanceObserver.supportedEntryTypes.includes(ee)));
+          if (ye.length > 0) {
+            const ee = new PerformanceObserver((ee => {
               queueMicrotask((() => {
-                const GB = BB.getEntries();
-                YB.length > 1 && GB.sort(((BB, OB) => BB.startTime + BB.duration - (OB.startTime + OB.duration))), OB(GB)
+                const He = ee.getEntries();
+                ye.length > 1 && He.sort(((ee, ie) => ee.startTime + ee.duration - (ie.startTime + ie.duration))), ie(He)
               }))
             }));
-            for (const OB of YB) BB.observe({
-              type: OB,
+            for (const ie of ye) ee.observe({
+              type: ie,
               buffered: !0,
-              ...GB
+              ...He
             });
-            return BB
+            return ee
           }
         } catch {}
       },
-      DY = BB => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && BB && BB.reportSoftNavs,
-      QY = (BB, OB) => {
-        if (BB.set(OB.navigationId, OB), BB.size > 2) {
-          const OB = BB.keys().next().value;
-          void 0 !== OB && BB.delete(OB)
+      Ky = ee => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && ee && ee.reportSoftNavs,
+      Uy = (ee, ie) => {
+        if (ee.set(ie.navigationId, ie), ee.size > 2) {
+          const ie = ee.keys().next().value;
+          void 0 !== ie && ee.delete(ie)
         }
       },
-      oY = BB => {
-        let OB = !1;
+      Fy = ee => {
+        let ie = !1;
         return () => {
-          OB || (BB(), OB = !0)
+          ie || (ee(), ie = !0)
         }
       };
-    class jY {
+    class Jy {
       u
     }
-    const yY = BB => {
-        document.prerendering ? addEventListener("prerenderingchange", BB, !0) : BB()
+    const oy = ee => {
+        document.prerendering ? addEventListener("prerenderingchange", ee, !0) : ee()
       },
-      JY = [1800, 3e3],
-      MY = function(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const GB = DY(OB);
-        yY((() => {
-          const YB = aG(OB, jY),
-            DB = OY();
-          let QB, oB = GY("FCP");
-          const jB = YY(["paint"], (BB => {
-            for (const OB of BB) "first-contentful-paint" === OB.name && (jB.disconnect(), OB.startTime < DB.firstHiddenTime && (oB.value = Math.max(OB.startTime - vG(), 0), oB.entries.push(OB), oB.navigationId = OB.navigationId || oB.navigationId, QB(!0)))
+      Ry = [1800, 3e3],
+      ky = function(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const He = Ky(ie);
+        oy((() => {
+          const ye = jH(ie, Jy),
+            be = yy();
+          let Me, Ke = by("FCP");
+          const Ue = My(["paint"], (ee => {
+            for (const ie of ee) "first-contentful-paint" === ie.name && (Ue.disconnect(), ie.startTime < be.firstHiddenTime && (Ke.value = Math.max(ie.startTime - rH(), 0), Ke.entries.push(ie), Ke.navigationId = ie.navigationId || Ke.navigationId, Me(!0)))
           }));
-          jB && (QB = CG(BB, oB, JY, OB.reportAllChanges), bG((GB => {
-            oB = GY("FCP", -1, "back-forward-cache", oB.navigationId, oB.navigationInteractionId, oB.navigationURL, TG()), QB = CG(BB, oB, JY, OB.reportAllChanges), HG((() => {
-              oB.value = performance.now() - GB.timeStamp, QB(!0)
+          Ue && (Me = NH(ee, Ke, Ry, ie.reportAllChanges), hH((He => {
+            Ke = by("FCP", -1, "back-forward-cache", Ke.navigationId, Ke.navigationInteractionId, Ke.navigationURL, IH()), Me = NH(ee, Ke, Ry, ie.reportAllChanges), GH((() => {
+              Ke.value = performance.now() - He.timeStamp, Me(!0)
             }))
-          }))), GB && YY(["soft-navigation"], (GB => {
-            GB.forEach((GB => {
-              YB.u && GB.navigationId && QY(YB.u, GB);
-              const DB = Math.max((GB.presentationTime || GB.paintTime || 0) - GB.startTime, 0);
-              oB = GY("FCP", DB, "soft-navigation", GB.navigationId, GB.interactionId, GB.name, GB.startTime), QB = CG(BB, oB, JY, OB.reportAllChanges), QB(!0)
+          }))), He && My(["soft-navigation"], (He => {
+            He.forEach((He => {
+              ye.u && He.navigationId && Uy(ye.u, He);
+              const be = Math.max((He.presentationTime || He.paintTime || 0) - He.startTime, 0);
+              Ke = by("FCP", be, "soft-navigation", He.navigationId, He.interactionId, He.name, He.startTime), Me = NH(ee, Ke, Ry, ie.reportAllChanges), Me(!0)
             }))
-          }), OB)
+          }), ie)
         }))
       },
-      PY = [.1, .25],
-      zY = BB => BB.find((BB => 1 === BB.node?.nodeType)) || BB[0];
-    let lY = 0,
-      pY = 1 / 0,
-      qY = 0;
-    const ZY = BB => {
-      for (const OB of BB) OB.interactionId && (pY = Math.min(pY, OB.interactionId), qY = Math.max(qY, OB.interactionId), lY = qY ? (qY - pY) / 7 + 1 : 0)
+      qy = [.1, .25],
+      fy = ee => ee.find((ee => 1 === ee.node?.nodeType)) || ee[0];
+    let Ty = 0,
+      py = 1 / 0,
+      Xy = 0;
+    const zy = ee => {
+      for (const ie of ee) ie.interactionId && (py = Math.min(py, ie.interactionId), Xy = Math.max(Xy, ie.interactionId), Ty = Xy ? (Xy - py) / 7 + 1 : 0)
     };
-    let NY;
-    const RY = () => NY ? lY : performance.interactionCount ?? 0;
-    class WY {
+    let By;
+    const Ey = () => By ? Ty : performance.interactionCount ?? 0;
+    class gy {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return RY() - this.h
+        return Ey() - this.h
       }
       D() {
-        this.h = RY(), this.v.length = 0, this.p.clear()
+        this.h = Ey(), this.v.length = 0, this.p.clear()
       }
-      S(BB) {
-        const OB = this.T(),
-          GB = Math.min(this.v.length - 1, Math.floor(OB / 50));
-        return !OB || -1 !== GB || "soft-navigation" !== BB && "back-forward-cache" !== BB ? this.v[GB] : {
+      S(ee) {
+        const ie = this.T(),
+          He = Math.min(this.v.length - 1, Math.floor(ie / 50));
+        return !ie || -1 !== He || "soft-navigation" !== ee && "back-forward-cache" !== ee ? this.v[He] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(BB) {
-        if (this.m?.(BB), !BB.interactionId) return;
-        const OB = this.v.at(-1);
-        let GB = this.p.get(BB.interactionId);
-        if (GB || this.v.length < 10 || BB.duration > OB.k) {
-          if (GB ? BB.duration > GB.k ? (GB.entries = [BB], GB.k = BB.duration) : BB.duration === GB.k && BB.startTime === GB.entries[0].startTime && GB.entries.push(BB) : (GB = {
-              id: BB.interactionId,
-              entries: [BB],
-              k: BB.duration
-            }, this.p.set(GB.id, GB), this.v.push(GB)), this.v.sort(((BB, OB) => OB.k - BB.k)), this.v.length > 10) {
-            const BB = this.v.splice(10);
-            for (const OB of BB) this.p.delete(OB.id)
+      l(ee) {
+        if (this.m?.(ee), !ee.interactionId) return;
+        const ie = this.v.at(-1);
+        let He = this.p.get(ee.interactionId);
+        if (He || this.v.length < 10 || ee.duration > ie.k) {
+          if (He ? ee.duration > He.k ? (He.entries = [ee], He.k = ee.duration) : ee.duration === He.k && ee.startTime === He.entries[0].startTime && He.entries.push(ee) : (He = {
+              id: ee.interactionId,
+              entries: [ee],
+              k: ee.duration
+            }, this.p.set(He.id, He), this.v.push(He)), this.v.sort(((ee, ie) => ie.k - ee.k)), this.v.length > 10) {
+            const ee = this.v.splice(10);
+            for (const ie of ee) this.p.delete(ie.id)
           }
-          this.M?.(GB)
+          this.M?.(He)
         }
       }
     }
-    const AY = BB => {
-        const OB = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          GB = globalThis.requestIdleCallback || setTimeout,
-          YB = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) BB();
+    const Oy = ee => {
+        const ie = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          He = globalThis.requestIdleCallback || setTimeout,
+          ye = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) ee();
         else {
-          const DB = oY(BB);
-          let QB = -1;
-          const oB = () => {
-            YB(QB), DB()
+          const be = Fy(ee);
+          let Me = -1;
+          const Ke = () => {
+            ye(Me), be()
           };
-          addEventListener("visibilitychange", oB, {
+          addEventListener("visibilitychange", Ke, {
             once: !0,
             capture: !0
-          }), QB = GB((() => {
-            removeEventListener("visibilitychange", oB, {
+          }), Me = He((() => {
+            removeEventListener("visibilitychange", Ke, {
               capture: !0
-            }), DB()
+            }), be()
           }), {
-            timeout: OB
+            timeout: ie
           })
         }
       },
-      VY = [200, 500],
-      SY = function(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const GB = aG(OB = Object.assign({}, OB), WY);
-        let YB = [],
-          DB = [],
-          QB = 0;
-        const oB = new WeakMap,
-          jB = new WeakMap;
-        let yB = !1;
-        const JB = () => {
-            yB || (yB = !0, AY(MB))
+      dy = [200, 500],
+      Wy = function(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const He = jH(ie = Object.assign({}, ie), gy);
+        let ye = [],
+          be = [],
+          Me = 0;
+        const Ke = new WeakMap,
+          Ue = new WeakMap;
+        let Fe = !1;
+        const Je = () => {
+            Fe || (Fe = !0, Oy(oe))
           },
-          MB = () => {
-            const BB = new Set(GB.v.map((BB => oB.get(BB.entries[0])))),
-              OB = DB.length - 10;
-            DB = DB.filter(((GB, YB) => YB >= OB || BB.has(GB)));
-            const jB = new Set;
-            for (const GB of DB) {
-              const BB = PB(GB.startTime, GB.processingEnd);
-              for (const OB of BB) jB.add(OB)
+          oe = () => {
+            const ee = new Set(He.v.map((ee => Ke.get(ee.entries[0])))),
+              ie = be.length - 10;
+            be = be.filter(((He, ye) => ye >= ie || ee.has(He)));
+            const Ue = new Set;
+            for (const He of be) {
+              const ee = Re(He.startTime, He.processingEnd);
+              for (const ie of ee) Ue.add(ie)
             }
-            const JB = YB.length - 10;
-            YB = YB.filter(((BB, OB) => jB.has(BB) || OB >= JB && BB.startTime > QB)), yB = !1
+            const Je = ye.length - 10;
+            ye = ye.filter(((ee, ie) => Ue.has(ee) || ie >= Je && ee.startTime > Me)), Fe = !1
           };
-        GB.m = BB => {
-          const GB = BB.startTime + BB.duration;
-          let YB;
-          QB = Math.max(QB, BB.processingEnd);
-          for (let QB = DB.length - 1; QB >= 0; QB--) {
-            const oB = DB[QB];
-            if (Math.abs(GB - oB.renderTime) <= 8) {
-              YB = oB, YB.startTime = Math.min(BB.startTime, YB.startTime), YB.processingStart = Math.min(BB.processingStart, YB.processingStart), YB.processingEnd = Math.max(BB.processingEnd, YB.processingEnd), OB.includeProcessedEventEntries && YB.entries.push(BB);
+        He.m = ee => {
+          const He = ee.startTime + ee.duration;
+          let ye;
+          Me = Math.max(Me, ee.processingEnd);
+          for (let Me = be.length - 1; Me >= 0; Me--) {
+            const Ke = be[Me];
+            if (Math.abs(He - Ke.renderTime) <= 8) {
+              ye = Ke, ye.startTime = Math.min(ee.startTime, ye.startTime), ye.processingStart = Math.min(ee.processingStart, ye.processingStart), ye.processingEnd = Math.max(ee.processingEnd, ye.processingEnd), ie.includeProcessedEventEntries && ye.entries.push(ee);
               break
             }
           }
-          YB || (YB = {
-            startTime: BB.startTime,
-            processingStart: BB.processingStart,
-            processingEnd: BB.processingEnd,
-            renderTime: GB,
-            entries: OB.includeProcessedEventEntries ? [BB] : []
-          }, DB.push(YB)), BB.interactionId && oB.set(BB, YB), JB()
-        }, GB.M = BB => {
-          if (!jB.get(BB)) {
-            const GB = BB.entries.find((BB => BB.target))?.target;
-            if (GB) {
-              const YB = OB.generateTarget?.(GB) ?? cG(GB);
-              jB.set(BB, YB)
+          ye || (ye = {
+            startTime: ee.startTime,
+            processingStart: ee.processingStart,
+            processingEnd: ee.processingEnd,
+            renderTime: He,
+            entries: ie.includeProcessedEventEntries ? [ee] : []
+          }, be.push(ye)), ee.interactionId && Ke.set(ee, ye), Je()
+        }, He.M = ee => {
+          if (!Ue.get(ee)) {
+            const He = ee.entries.find((ee => ee.target))?.target;
+            if (He) {
+              const ye = ie.generateTarget?.(He) ?? SH(He);
+              Ue.set(ee, ye)
             } else {
-              const OB = BB.entries.find((BB => BB.targetSelector))?.targetSelector;
-              OB && jB.set(BB, OB)
+              const ie = ee.entries.find((ee => ee.targetSelector))?.targetSelector;
+              ie && Ue.set(ee, ie)
             }
           }
         };
-        const PB = (BB, OB) => {
-          const GB = [];
-          for (const DB of YB)
-            if (!(DB.startTime + DB.duration < BB)) {
-              if (DB.startTime > OB) break;
-              GB.push(DB)
-            } return GB
+        const Re = (ee, ie) => {
+          const He = [];
+          for (const be of ye)
+            if (!(be.startTime + be.duration < ee)) {
+              if (be.startTime > ie) break;
+              He.push(be)
+            } return He
         };
-        YY(["long-animation-frame"], (BB => {
-            YB = YB.concat(BB), JB()
-          }), OB),
-          function(BB) {
-            let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        My(["long-animation-frame"], (ee => {
+            ye = ye.concat(ee), Je()
+          }), ie),
+          function(ee) {
+            let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const GB = OY();
-            yY((() => {
-              "interactionCount" in performance || NY || (NY = YY(["event"], ZY, {
+            const He = yy();
+            oy((() => {
+              "interactionCount" in performance || By || (By = My(["event"], zy, {
                 durationThreshold: 0
               }));
-              let YB, DB = GY("INP");
-              const QB = aG(OB, WY),
-                oB = (GB, oB, jB, yB, JB) => {
-                  QB.D(), DB = GY("INP", -1, GB, oB, jB, yB, JB), YB = CG(BB, DB, VY, OB.reportAllChanges)
+              let ye, be = by("INP");
+              const Me = jH(ie, gy),
+                Ke = (He, Ke, Ue, Fe, Je) => {
+                  Me.D(), be = by("INP", -1, He, Ke, Ue, Fe, Je), ye = NH(ee, be, dy, ie.reportAllChanges)
                 },
-                jB = () => {
-                  const BB = QB.S(DB.navigationType);
-                  BB && BB.k !== DB.value && (DB.value = BB.k, DB.entries = BB.entries, YB())
+                Ue = () => {
+                  const ee = Me.S(be.navigationType);
+                  ee && ee.k !== be.value && (be.value = ee.k, be.entries = ee.entries, ye())
                 },
-                yB = BB => {
-                  jB(), YB(!0), oB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime)
+                Fe = ee => {
+                  Ue(), ye(!0), Ke("soft-navigation", ee.navigationId, ee.interactionId, ee.name, ee.startTime)
                 },
-                JB = function(BB) {
-                  let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  AY((() => {
-                    for (const OB of BB) "soft-navigation" !== OB.entryType ? QB.l(OB) : yB(OB);
-                    jB(), OB && YB(!0)
+                Je = function(ee) {
+                  let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  Oy((() => {
+                    for (const ie of ee) "soft-navigation" !== ie.entryType ? Me.l(ie) : Fe(ie);
+                    Ue(), ie && ye(!0)
                   }))
                 },
-                MB = ["event", "first-input"];
-              DY(OB) && MB.push("soft-navigation");
-              const PB = YY(MB, JB, {
-                ...OB,
-                durationThreshold: OB.durationThreshold ?? 40
+                oe = ["event", "first-input"];
+              Ky(ie) && oe.push("soft-navigation");
+              const Re = My(oe, Je, {
+                ...ie,
+                durationThreshold: ie.durationThreshold ?? 40
               });
-              YB = CG(BB, DB, VY, OB.reportAllChanges), PB && (GB.onHidden((() => {
-                JB(PB.takeRecords(), !0)
-              })), bG((() => {
-                oB("back-forward-cache", DB.navigationId, DB.navigationInteractionId, DB.navigationURL, TG())
+              ye = NH(ee, be, dy, ie.reportAllChanges), Re && (He.onHidden((() => {
+                Je(Re.takeRecords(), !0)
+              })), hH((() => {
+                Ke("back-forward-cache", be.navigationId, be.navigationInteractionId, be.navigationURL, IH())
               })))
             }))
-          }((OB => {
-            BB((BB => {
-              if (0 === BB.entries.length) {
-                const OB = BB.navigationStartTime || 0,
-                  GB = {
+          }((ie => {
+            ee((ee => {
+              if (0 === ee.entries.length) {
+                const ie = ee.navigationStartTime || 0,
+                  He = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: BB.value,
-                    loadState: wG(OB)
+                    presentationDelay: ee.value,
+                    loadState: mH(ie)
                   };
-                return Object.assign(BB, {
-                  attribution: GB
+                return Object.assign(ee, {
+                  attribution: He
                 })
               }
-              const OB = BB.entries[0],
-                YB = oB.get(OB),
-                DB = Math.max(YB.processingStart, OB.startTime),
-                QB = Math.max(OB.startTime + OB.duration, DB),
-                yB = Math.min(YB.processingEnd, QB),
-                JB = YB.entries.sort(((BB, OB) => BB.processingStart - OB.processingStart)),
-                MB = PB(OB.startTime, yB),
-                zB = GB.p.get(OB.interactionId),
-                lB = {
-                  interactionTarget: jB.get(zB),
-                  interactionType: OB.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: OB.startTime,
-                  nextPaintTime: QB,
-                  processedEventEntries: JB,
-                  longAnimationFrameEntries: MB,
-                  inputDelay: DB - OB.startTime,
-                  processingDuration: yB - DB,
-                  presentationDelay: QB - yB,
-                  loadState: wG(OB.startTime),
+              const ie = ee.entries[0],
+                ye = Ke.get(ie),
+                be = Math.max(ye.processingStart, ie.startTime),
+                Me = Math.max(ie.startTime + ie.duration, be),
+                Fe = Math.min(ye.processingEnd, Me),
+                Je = ye.entries.sort(((ee, ie) => ee.processingStart - ie.processingStart)),
+                oe = Re(ie.startTime, Fe),
+                ke = He.p.get(ie.interactionId),
+                qe = {
+                  interactionTarget: Ue.get(ke),
+                  interactionType: ie.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: ie.startTime,
+                  nextPaintTime: Me,
+                  processedEventEntries: Je,
+                  longAnimationFrameEntries: oe,
+                  inputDelay: be - ie.startTime,
+                  processingDuration: Fe - be,
+                  presentationDelay: Me - Fe,
+                  loadState: mH(ie.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (BB => {
-                const OB = BB.interactionTime,
-                  GB = BB.nextPaintTime;
-                if (!BB.longAnimationFrameEntries?.length || !OB || !GB) return;
-                const YB = BB.inputDelay,
-                  DB = BB.processingDuration;
-                let QB, oB, jB = 0,
-                  yB = 0,
-                  JB = 0,
-                  MB = 0;
-                for (const lB of BB.longAnimationFrameEntries) {
-                  yB = yB + lB.startTime + lB.duration - lB.styleAndLayoutStart;
-                  for (const BB of lB.scripts) {
-                    const GB = BB.startTime + BB.duration;
-                    if (GB < OB) continue;
-                    const JB = GB - Math.max(OB, BB.startTime),
-                      PB = BB.duration ? JB / BB.duration * BB.forcedStyleAndLayoutDuration : 0;
-                    jB += JB - PB, yB += PB, JB > MB && (oB = BB.startTime < OB + YB ? "input-delay" : BB.startTime >= OB + YB + DB ? "presentation-delay" : "processing-duration", QB = BB, MB = JB)
+              return (ee => {
+                const ie = ee.interactionTime,
+                  He = ee.nextPaintTime;
+                if (!ee.longAnimationFrameEntries?.length || !ie || !He) return;
+                const ye = ee.inputDelay,
+                  be = ee.processingDuration;
+                let Me, Ke, Ue = 0,
+                  Fe = 0,
+                  Je = 0,
+                  oe = 0;
+                for (const qe of ee.longAnimationFrameEntries) {
+                  Fe = Fe + qe.startTime + qe.duration - qe.styleAndLayoutStart;
+                  for (const ee of qe.scripts) {
+                    const He = ee.startTime + ee.duration;
+                    if (He < ie) continue;
+                    const Je = He - Math.max(ie, ee.startTime),
+                      Re = ee.duration ? Je / ee.duration * ee.forcedStyleAndLayoutDuration : 0;
+                    Ue += Je - Re, Fe += Re, Je > oe && (Ke = ee.startTime < ie + ye ? "input-delay" : ee.startTime >= ie + ye + be ? "presentation-delay" : "processing-duration", Me = ee, oe = Je)
                   }
                 }
-                const PB = BB.longAnimationFrameEntries.at(-1),
-                  zB = PB ? PB.startTime + PB.duration : 0;
-                zB >= OB + YB + DB && (JB = GB - zB), QB && oB && (BB.longestScript = {
-                  entry: QB,
-                  subpart: oB,
-                  intersectingDuration: MB
-                }), BB.totalScriptDuration = jB, BB.totalStyleAndLayoutDuration = yB, BB.totalPaintDuration = JB, BB.totalUnattributedDuration = GB - OB - jB - yB - JB
-              })(lB), Object.assign(BB, {
-                attribution: lB
+                const Re = ee.longAnimationFrameEntries.at(-1),
+                  ke = Re ? Re.startTime + Re.duration : 0;
+                ke >= ie + ye + be && (Je = He - ke), Me && Ke && (ee.longestScript = {
+                  entry: Me,
+                  subpart: Ke,
+                  intersectingDuration: oe
+                }), ee.totalScriptDuration = Ue, ee.totalStyleAndLayoutDuration = Fe, ee.totalPaintDuration = Je, ee.totalUnattributedDuration = He - ie - Ue - Fe - Je
+              })(qe), Object.assign(ee, {
+                attribution: qe
               })
-            })(OB))
-          }), OB)
+            })(ie))
+          }), ie)
       };
-    class nY {
+    class ty {
       m;
       u;
-      l(BB) {
-        this.m?.(BB)
+      l(ee) {
+        this.m?.(ee)
       }
     }
-    const UY = [2500, 4e3];
-    let fY = 50;
-    const kY = [];
-    YY(["resource"], (BB => {
-      for (const OB of BB) kY.push(OB), kY.length > fY && kY.shift()
+    const Zy = [2500, 4e3];
+    let wy = 50;
+    const Dy = [];
+    My(["resource"], (ee => {
+      for (const ie of ee) Dy.push(ie), Dy.length > wy && Dy.shift()
     }));
-    const dY = [800, 1800],
-      KY = BB => {
-        document.prerendering ? yY((() => KY(BB))) : "complete" !== document.readyState ? addEventListener("load", (() => KY(BB)), !0) : setTimeout(BB)
+    const Py = [800, 1800],
+      Ay = ee => {
+        document.prerendering ? oy((() => Ay(ee))) : "complete" !== document.readyState ? addEventListener("load", (() => Ay(ee)), !0) : setTimeout(ee)
       },
-      uY = "load_state",
-      mY = "time_to_first_byte";
-    var IY = class {
-        constructor(BB, OB) {
-          this.corePushMeasurement = BB, this.webVitalConfig = OB
+      Yy = "load_state",
+      Vy = "time_to_first_byte";
+    var ay = class {
+        constructor(ee, ie) {
+          this.corePushMeasurement = ee, this.webVitalConfig = ie
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var BB;
-          ! function(BB) {
-            let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const GB = aG(OB = Object.assign({}, OB), rG),
-              YB = new WeakMap;
-            GB.t = BB => {
-                if (BB?.sources?.length) {
-                  const GB = zY(BB.sources),
-                    DB = GB?.node;
-                  if (DB) {
-                    const BB = OB.generateTarget?.(DB) ?? cG(DB);
-                    YB.set(GB, BB)
+          var ee;
+          ! function(ee) {
+            let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const He = jH(ie = Object.assign({}, ie), vH),
+              ye = new WeakMap;
+            He.t = ee => {
+                if (ee?.sources?.length) {
+                  const He = fy(ee.sources),
+                    be = He?.node;
+                  if (be) {
+                    const ee = ie.generateTarget?.(be) ?? SH(be);
+                    ye.set(He, ee)
                   }
                 }
               },
-              function(BB) {
-                let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const GB = OY();
-                MY(oY((() => {
-                  let YB, DB = GY("CLS", 0);
-                  const QB = aG(OB, rG),
-                    oB = (GB, oB, jB, yB, JB) => {
-                      DB = GY("CLS", 0, GB, oB, jB, yB, JB), QB.o = 0, YB = CG(BB, DB, PY, OB.reportAllChanges)
+              function(ee) {
+                let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const He = yy();
+                ky(Fy((() => {
+                  let ye, be = by("CLS", 0);
+                  const Me = jH(ie, vH),
+                    Ke = (He, Ke, Ue, Fe, Je) => {
+                      be = by("CLS", 0, He, Ke, Ue, Fe, Je), Me.o = 0, ye = NH(ee, be, qy, ie.reportAllChanges)
                     },
-                    jB = function() {
-                      let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      QB.o > DB.value && (DB.value = QB.o, DB.entries = QB.i), YB(BB)
+                    Ue = function() {
+                      let ee = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      Me.o > be.value && (be.value = Me.o, be.entries = Me.i), ye(ee)
                     },
-                    yB = BB => {
-                      jB(!0), oB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime)
+                    Fe = ee => {
+                      Ue(!0), Ke("soft-navigation", ee.navigationId, ee.interactionId, ee.name, ee.startTime)
                     },
-                    JB = BB => {
-                      for (const OB of BB) "soft-navigation" !== OB.entryType ? QB.l(OB) : yB(OB);
-                      jB()
+                    Je = ee => {
+                      for (const ie of ee) "soft-navigation" !== ie.entryType ? Me.l(ie) : Fe(ie);
+                      Ue()
                     },
-                    MB = ["layout-shift"];
-                  DY(OB) && MB.push("soft-navigation");
-                  const PB = YY(MB, JB);
-                  PB && (YB = CG(BB, DB, PY, OB.reportAllChanges), GB.onHidden((() => {
-                    JB(PB.takeRecords()), YB(!0)
-                  })), bG((() => {
-                    oB("back-forward-cache", DB.navigationId, DB.navigationInteractionId, DB.navigationURL, TG()), HG(YB)
-                  })), setTimeout(YB))
+                    oe = ["layout-shift"];
+                  Ky(ie) && oe.push("soft-navigation");
+                  const Re = My(oe, Je);
+                  Re && (ye = NH(ee, be, qy, ie.reportAllChanges), He.onHidden((() => {
+                    Je(Re.takeRecords()), ye(!0)
+                  })), hH((() => {
+                    Ke("back-forward-cache", be.navigationId, be.navigationInteractionId, be.navigationURL, IH()), GH(ye)
+                  })), setTimeout(ye))
                 })))
-              }((OB => {
-                BB((BB => {
-                  let OB = {};
-                  if (BB.entries.length) {
-                    const GB = BB.entries.reduce(((BB, OB) => BB.value > OB.value ? BB : OB));
-                    if (GB?.sources?.length) {
-                      const BB = zY(GB.sources);
-                      BB && (OB = {
-                        largestShiftTarget: YB.get(BB),
-                        largestShiftTime: GB.startTime,
-                        largestShiftValue: GB.value,
-                        largestShiftSource: BB,
-                        largestShiftEntry: GB,
-                        loadState: wG(GB.startTime)
+              }((ie => {
+                ee((ee => {
+                  let ie = {};
+                  if (ee.entries.length) {
+                    const He = ee.entries.reduce(((ee, ie) => ee.value > ie.value ? ee : ie));
+                    if (He?.sources?.length) {
+                      const ee = fy(He.sources);
+                      ee && (ie = {
+                        largestShiftTarget: ye.get(ee),
+                        largestShiftTime: He.startTime,
+                        largestShiftValue: He.value,
+                        largestShiftSource: ee,
+                        largestShiftEntry: He,
+                        loadState: mH(He.startTime)
                       })
                     }
                   }
-                  return Object.assign(BB, {
-                    attribution: OB
+                  return Object.assign(ee, {
+                    attribution: ie
                   })
-                })(OB))
-              }), OB)
-          }((BB => {
+                })(ie))
+              }), ie)
+          }((ee => {
             const {
-              loadState: OB,
-              largestShiftValue: GB,
-              largestShiftTime: YB,
-              largestShiftTarget: DB
-            } = BB.attribution, QB = this.buildInitialValues(BB);
-            this.addIfPresent(QB, "largest_shift_value", GB), this.addIfPresent(QB, "largest_shift_time", YB);
-            const oB = this.buildInitialContext(BB);
-            this.addIfPresent(oB, uY, OB), this.addIfPresent(oB, "largest_shift_target", DB), this.pushMeasurement(QB, oB)
+              loadState: ie,
+              largestShiftValue: He,
+              largestShiftTime: ye,
+              largestShiftTarget: be
+            } = ee.attribution, Me = this.buildInitialValues(ee);
+            this.addIfPresent(Me, "largest_shift_value", He), this.addIfPresent(Me, "largest_shift_time", ye);
+            const Ke = this.buildInitialContext(ee);
+            this.addIfPresent(Ke, Yy, ie), this.addIfPresent(Ke, "largest_shift_target", be), this.pushMeasurement(Me, Ke)
           }), {
-            reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
+            reportAllChanges: null === (ee = this.webVitalConfig) || void 0 === ee ? void 0 : ee.reportAllChanges
           })
         }
         measureFCP() {
-          var BB;
-          ! function(BB) {
-            let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const GB = aG(OB = Object.assign({}, OB), jY);
-            DY(OB) && (GB.u = new Map), MY((OB => {
-              BB((BB => {
-                let OB = {
+          var ee;
+          ! function(ee) {
+            let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const He = jH(ie = Object.assign({}, ie), Jy);
+            Ky(ie) && (He.u = new Map), ky((ie => {
+              ee((ee => {
+                let ie = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: BB.value,
-                  loadState: wG(TG())
+                  firstByteToFCP: ee.value,
+                  loadState: mH(IH())
                 };
-                if ("soft-navigation" !== BB.navigationType) {
-                  if (BB.entries.length) {
-                    const GB = XG(),
-                      YB = BB.entries.at(-1);
-                    if (GB) {
-                      const DB = GB.responseStart,
-                        QB = GB.activationStart || 0,
-                        oB = Math.max(0, DB - QB);
-                      OB = {
-                        timeToFirstByte: oB,
-                        firstByteToFCP: BB.value - oB,
-                        loadState: wG(BB.entries[0].startTime),
-                        navigationEntry: GB,
-                        fcpEntry: YB
+                if ("soft-navigation" !== ee.navigationType) {
+                  if (ee.entries.length) {
+                    const He = uH(),
+                      ye = ee.entries.at(-1);
+                    if (He) {
+                      const be = He.responseStart,
+                        Me = He.activationStart || 0,
+                        Ke = Math.max(0, be - Me);
+                      ie = {
+                        timeToFirstByte: Ke,
+                        firstByteToFCP: ee.value - Ke,
+                        loadState: mH(ee.entries[0].startTime),
+                        navigationEntry: He,
+                        fcpEntry: ye
                       }
                     }
                   }
                 } else {
-                  const YB = GB.u?.get(BB.navigationId);
-                  YB && (OB = {
+                  const ye = He.u?.get(ee.navigationId);
+                  ye && (ie = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: BB.value,
+                    firstByteToFCP: ee.value,
                     loadState: "complete",
-                    navigationEntry: YB
+                    navigationEntry: ye
                   })
                 }
-                return Object.assign(BB, {
-                  attribution: OB
+                return Object.assign(ee, {
+                  attribution: ie
                 })
-              })(OB))
-            }), OB)
-          }((BB => {
+              })(ie))
+            }), ie)
+          }((ee => {
             const {
-              firstByteToFCP: OB,
-              timeToFirstByte: GB,
-              loadState: YB
-            } = BB.attribution, DB = this.buildInitialValues(BB);
-            this.addIfPresent(DB, "first_byte_to_fcp", OB), this.addIfPresent(DB, mY, GB);
-            const QB = this.buildInitialContext(BB);
-            this.addIfPresent(QB, uY, YB), this.pushMeasurement(DB, QB)
+              firstByteToFCP: ie,
+              timeToFirstByte: He,
+              loadState: ye
+            } = ee.attribution, be = this.buildInitialValues(ee);
+            this.addIfPresent(be, "first_byte_to_fcp", ie), this.addIfPresent(be, Vy, He);
+            const Me = this.buildInitialContext(ee);
+            this.addIfPresent(Me, Yy, ye), this.pushMeasurement(be, Me)
           }), {
-            reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
+            reportAllChanges: null === (ee = this.webVitalConfig) || void 0 === ee ? void 0 : ee.reportAllChanges
           })
         }
         measureINP() {
-          var BB;
-          SY((BB => {
-            var OB;
+          var ee;
+          Wy((ee => {
+            var ie;
             const {
-              interactionTime: GB,
-              presentationDelay: YB,
-              inputDelay: DB,
-              processingDuration: QB,
-              nextPaintTime: oB,
-              loadState: jB,
-              interactionTarget: yB,
-              interactionType: JB,
-              totalScriptDuration: MB,
-              totalStyleAndLayoutDuration: PB,
-              totalPaintDuration: zB,
-              totalUnattributedDuration: lB,
-              longestScript: pB
-            } = BB.attribution, qB = this.buildInitialValues(BB);
-            this.addIfPresent(qB, "interaction_time", GB), this.addIfPresent(qB, "presentation_delay", YB), this.addIfPresent(qB, "input_delay", DB), this.addIfPresent(qB, "processing_duration", QB), this.addIfPresent(qB, "next_paint_time", oB), this.addNumberIfDefined(qB, "total_script_duration", MB), this.addNumberIfDefined(qB, "total_style_and_layout_duration", PB), this.addNumberIfDefined(qB, "total_paint_duration", zB), this.addNumberIfDefined(qB, "total_unattributed_duration", lB), this.addNumberIfDefined(qB, "longest_script_intersecting_duration", null === pB || void 0 === pB ? void 0 : pB.intersectingDuration);
-            const ZB = this.buildInitialContext(BB);
-            this.addIfPresent(ZB, uY, jB), this.addIfPresent(ZB, "interaction_target", yB), this.addIfPresent(ZB, "interaction_type", JB), this.addIfPresent(ZB, "longest_script_subpart", null === pB || void 0 === pB ? void 0 : pB.subpart), this.addIfPresent(ZB, "longest_script_invoker_type", null === pB || void 0 === pB ? void 0 : pB.entry.invokerType), (null === (OB = this.webVitalConfig) || void 0 === OB ? void 0 : OB.trackAttributionSources) && (this.addIfPresent(ZB, "longest_script_invoker", null === pB || void 0 === pB ? void 0 : pB.entry.invoker), this.addIfPresent(ZB, "longest_script_source_url", null === pB || void 0 === pB ? void 0 : pB.entry.sourceURL), this.addIfPresent(ZB, "longest_script_source_function_name", null === pB || void 0 === pB ? void 0 : pB.entry.sourceFunctionName), this.addIfPresent(ZB, "longest_script_source_char_position", void 0 !== (null === pB || void 0 === pB ? void 0 : pB.entry.sourceCharPosition) ? String(pB.entry.sourceCharPosition) : void 0)), this.pushMeasurement(qB, ZB)
+              interactionTime: He,
+              presentationDelay: ye,
+              inputDelay: be,
+              processingDuration: Me,
+              nextPaintTime: Ke,
+              loadState: Ue,
+              interactionTarget: Fe,
+              interactionType: Je,
+              totalScriptDuration: oe,
+              totalStyleAndLayoutDuration: Re,
+              totalPaintDuration: ke,
+              totalUnattributedDuration: qe,
+              longestScript: fe
+            } = ee.attribution, Te = this.buildInitialValues(ee);
+            this.addIfPresent(Te, "interaction_time", He), this.addIfPresent(Te, "presentation_delay", ye), this.addIfPresent(Te, "input_delay", be), this.addIfPresent(Te, "processing_duration", Me), this.addIfPresent(Te, "next_paint_time", Ke), this.addNumberIfDefined(Te, "total_script_duration", oe), this.addNumberIfDefined(Te, "total_style_and_layout_duration", Re), this.addNumberIfDefined(Te, "total_paint_duration", ke), this.addNumberIfDefined(Te, "total_unattributed_duration", qe), this.addNumberIfDefined(Te, "longest_script_intersecting_duration", null === fe || void 0 === fe ? void 0 : fe.intersectingDuration);
+            const pe = this.buildInitialContext(ee);
+            this.addIfPresent(pe, Yy, Ue), this.addIfPresent(pe, "interaction_target", Fe), this.addIfPresent(pe, "interaction_type", Je), this.addIfPresent(pe, "longest_script_subpart", null === fe || void 0 === fe ? void 0 : fe.subpart), this.addIfPresent(pe, "longest_script_invoker_type", null === fe || void 0 === fe ? void 0 : fe.entry.invokerType), (null === (ie = this.webVitalConfig) || void 0 === ie ? void 0 : ie.trackAttributionSources) && (this.addIfPresent(pe, "longest_script_invoker", null === fe || void 0 === fe ? void 0 : fe.entry.invoker), this.addIfPresent(pe, "longest_script_source_url", null === fe || void 0 === fe ? void 0 : fe.entry.sourceURL), this.addIfPresent(pe, "longest_script_source_function_name", null === fe || void 0 === fe ? void 0 : fe.entry.sourceFunctionName), this.addIfPresent(pe, "longest_script_source_char_position", void 0 !== (null === fe || void 0 === fe ? void 0 : fe.entry.sourceCharPosition) ? String(fe.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Te, pe)
           }), {
-            reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
+            reportAllChanges: null === (ee = this.webVitalConfig) || void 0 === ee ? void 0 : ee.reportAllChanges
           })
         }
         measureLCP() {
-          var BB;
-          ! function(BB) {
-            let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (OB = Object.assign({}, OB)).resourceBufferSize && (fY = OB.resourceBufferSize);
-            const GB = aG(OB, nY),
-              YB = new WeakMap;
-            DY(OB) && (GB.u = new Map), GB.m = BB => {
-                const GB = BB.element;
-                if (GB) {
-                  const DB = OB.generateTarget?.(GB) ?? cG(GB);
-                  YB.set(BB, DB)
-                } else BB.id && YB.set(BB, `#${BB.id}`)
+          var ee;
+          ! function(ee) {
+            let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (ie = Object.assign({}, ie)).resourceBufferSize && (wy = ie.resourceBufferSize);
+            const He = jH(ie, ty),
+              ye = new WeakMap;
+            Ky(ie) && (He.u = new Map), He.m = ee => {
+                const He = ee.element;
+                if (He) {
+                  const be = ie.generateTarget?.(He) ?? SH(He);
+                  ye.set(ee, be)
+                } else ee.id && ye.set(ee, `#${ee.id}`)
               },
-              function(BB) {
-                let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  GB = !1;
-                const YB = DY(OB);
-                yY((() => {
-                  let DB, QB = OY(),
-                    oB = GY("LCP");
-                  const jB = aG(OB, nY),
-                    yB = (YB, jB, yB, JB, MB) => {
-                      oB = GY("LCP", -1, YB, jB, yB, JB, MB), DB = CG(BB, oB, UY, OB.reportAllChanges), GB = !1, "soft-navigation" === YB && (QB = OY(!0))
+              function(ee) {
+                let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  He = !1;
+                const ye = Ky(ie);
+                oy((() => {
+                  let be, Me = yy(),
+                    Ke = by("LCP");
+                  const Ue = jH(ie, ty),
+                    Fe = (ye, Ue, Fe, Je, oe) => {
+                      Ke = by("LCP", -1, ye, Ue, Fe, Je, oe), be = NH(ee, Ke, Zy, ie.reportAllChanges), He = !1, "soft-navigation" === ye && (Me = yy(!0))
                     },
-                    JB = BB => {
-                      jB.u && BB.navigationId && QY(jB.u, BB), GB || DB(!0), yB("soft-navigation", BB.navigationId, BB.interactionId, BB.name, BB.startTime);
-                      const OB = BB.getLargestInteractionContentfulPaint?.();
-                      OB && MB([OB])
+                    Je = ee => {
+                      Ue.u && ee.navigationId && Uy(Ue.u, ee), He || be(!0), Fe("soft-navigation", ee.navigationId, ee.interactionId, ee.name, ee.startTime);
+                      const ie = ee.getLargestInteractionContentfulPaint?.();
+                      ie && oe([ie])
                     },
-                    MB = BB => {
-                      OB.reportAllChanges || YB || (BB = BB.slice(-1));
-                      for (const OB of BB) {
-                        if (!OB) continue;
-                        if ("soft-navigation" === OB.entryType) {
-                          JB(OB);
+                    oe = ee => {
+                      ie.reportAllChanges || ye || (ee = ee.slice(-1));
+                      for (const ie of ee) {
+                        if (!ie) continue;
+                        if ("soft-navigation" === ie.entryType) {
+                          Je(ie);
                           continue
                         }
-                        let BB = 0,
-                          GB = [],
-                          YB = OB.startTime;
-                        if ("largest-contentful-paint" === OB.entryType) BB = Math.max(OB.startTime - vG(), 0), jB.l(OB), GB = [OB];
-                        else if ("interaction-contentful-paint" === OB.entryType) {
-                          const DB = OB;
-                          if (!oB.navigationId) continue;
-                          if ("interactionId" in DB && DB.interactionId != oB.navigationInteractionId) continue;
-                          YB = DB.largestContentfulPaint?.renderTime || 0, BB = Math.max(YB - OB.startTime, 0), DB.largestContentfulPaint && (jB.l(DB.largestContentfulPaint), GB = [DB.largestContentfulPaint])
+                        let ee = 0,
+                          He = [],
+                          ye = ie.startTime;
+                        if ("largest-contentful-paint" === ie.entryType) ee = Math.max(ie.startTime - rH(), 0), Ue.l(ie), He = [ie];
+                        else if ("interaction-contentful-paint" === ie.entryType) {
+                          const be = ie;
+                          if (!Ke.navigationId) continue;
+                          if ("interactionId" in be && be.interactionId != Ke.navigationInteractionId) continue;
+                          ye = be.largestContentfulPaint?.renderTime || 0, ee = Math.max(ye - ie.startTime, 0), be.largestContentfulPaint && (Ue.l(be.largestContentfulPaint), He = [be.largestContentfulPaint])
                         }
-                        YB < QB.firstHiddenTime && (oB.value = BB, oB.entries = GB, DB())
+                        ye < Me.firstHiddenTime && (Ke.value = ee, Ke.entries = He, be())
                       }
                     },
-                    PB = ["largest-contentful-paint"];
-                  YB && PB.push("interaction-contentful-paint", "soft-navigation");
-                  const zB = YY(PB, MB);
-                  if (zB) {
-                    DB = CG(BB, oB, UY, OB.reportAllChanges);
-                    const QB = ["keydown", "click", "visibilitychange"],
-                      jB = BB => {
-                        if (BB.isTrusted && !GB) {
-                          const BB = oB.id;
-                          AY((() => {
-                            if (!GB) {
-                              if (!YB) {
-                                zB.disconnect();
-                                for (const BB of QB) removeEventListener(BB, jB, {
+                    Re = ["largest-contentful-paint"];
+                  ye && Re.push("interaction-contentful-paint", "soft-navigation");
+                  const ke = My(Re, oe);
+                  if (ke) {
+                    be = NH(ee, Ke, Zy, ie.reportAllChanges);
+                    const Me = ["keydown", "click", "visibilitychange"],
+                      Ue = ee => {
+                        if (ee.isTrusted && !He) {
+                          const ee = Ke.id;
+                          Oy((() => {
+                            if (!He) {
+                              if (!ye) {
+                                ke.disconnect();
+                                for (const ee of Me) removeEventListener(ee, Ue, {
                                   capture: !0
                                 })
                               }
-                              BB === oB.id && (GB = !0, DB(!0))
+                              ee === Ke.id && (He = !0, be(!0))
                             }
                           }))
                         }
                       };
-                    for (const BB of QB) addEventListener(BB, jB, {
+                    for (const ee of Me) addEventListener(ee, Ue, {
                       capture: !0
                     });
-                    bG((YB => {
-                      yB("back-forward-cache", oB.navigationId, oB.navigationInteractionId, oB.navigationURL, TG()), DB = CG(BB, oB, UY, OB.reportAllChanges), HG((() => {
-                        oB.value = performance.now() - YB.timeStamp, GB = !0, DB(!0)
+                    hH((ye => {
+                      Fe("back-forward-cache", Ke.navigationId, Ke.navigationInteractionId, Ke.navigationURL, IH()), be = NH(ee, Ke, Zy, ie.reportAllChanges), GH((() => {
+                        Ke.value = performance.now() - ye.timeStamp, He = !0, be(!0)
                       }))
                     }))
                   }
                 }))
-              }((OB => {
-                BB((BB => {
-                  let OB = {
+              }((ie => {
+                ee((ee => {
+                  let ie = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: BB.value
+                    elementRenderDelay: ee.value
                   };
-                  if (BB.entries.length) {
-                    const DB = BB.entries.at(-1),
-                      QB = BB => BB.name === DB.url && (BB.requestStart || BB.startTime) <= DB.startTime,
-                      oB = DB.url && (kY.findLast(QB) || performance.getEntriesByType("resource").findLast(QB));
-                    let jB;
-                    OB.target = YB.get(DB), OB.lcpEntry = DB, DB.url && (OB.url = DB.url), oB && (OB.lcpResourceEntry = oB);
-                    let yB = 0,
-                      JB = 0;
-                    if ("soft-navigation" !== BB.navigationType ? (jB = XG(), yB = jB?.activationStart ?? 0, JB = jB?.responseStart ?? 0) : (yB = BB.navigationStartTime || 0, jB = GB.u?.get(BB.navigationId)), jB) {
-                      const GB = Math.max(0, JB - yB),
-                        YB = Math.max(GB, oB ? (oB.requestStart || oB.startTime) - yB : 0),
-                        DB = Math.min(BB.value, Math.max(YB, oB ? oB.responseEnd - yB : 0));
-                      OB = {
-                        ...OB,
-                        timeToFirstByte: GB,
-                        resourceLoadDelay: YB - GB,
-                        resourceLoadDuration: DB - YB,
-                        elementRenderDelay: BB.value - DB,
-                        navigationEntry: jB
+                  if (ee.entries.length) {
+                    const be = ee.entries.at(-1),
+                      Me = ee => ee.name === be.url && (ee.requestStart || ee.startTime) <= be.startTime,
+                      Ke = be.url && (Dy.findLast(Me) || performance.getEntriesByType("resource").findLast(Me));
+                    let Ue;
+                    ie.target = ye.get(be), ie.lcpEntry = be, be.url && (ie.url = be.url), Ke && (ie.lcpResourceEntry = Ke);
+                    let Fe = 0,
+                      Je = 0;
+                    if ("soft-navigation" !== ee.navigationType ? (Ue = uH(), Fe = Ue?.activationStart ?? 0, Je = Ue?.responseStart ?? 0) : (Fe = ee.navigationStartTime || 0, Ue = He.u?.get(ee.navigationId)), Ue) {
+                      const He = Math.max(0, Je - Fe),
+                        ye = Math.max(He, Ke ? (Ke.requestStart || Ke.startTime) - Fe : 0),
+                        be = Math.min(ee.value, Math.max(ye, Ke ? Ke.responseEnd - Fe : 0));
+                      ie = {
+                        ...ie,
+                        timeToFirstByte: He,
+                        resourceLoadDelay: ye - He,
+                        resourceLoadDuration: be - ye,
+                        elementRenderDelay: ee.value - be,
+                        navigationEntry: Ue
                       }
                     }
                   }
-                  return Object.assign(BB, {
-                    attribution: OB
+                  return Object.assign(ee, {
+                    attribution: ie
                   })
-                })(OB))
-              }), OB)
-          }((BB => {
-            var OB;
+                })(ie))
+              }), ie)
+          }((ee => {
+            var ie;
             const {
-              elementRenderDelay: GB,
-              resourceLoadDelay: YB,
-              resourceLoadDuration: DB,
-              timeToFirstByte: QB,
-              target: oB,
-              url: jB,
-              lcpResourceEntry: yB
-            } = BB.attribution, JB = this.buildInitialValues(BB);
-            this.addIfPresent(JB, "element_render_delay", GB), this.addIfPresent(JB, "resource_load_delay", YB), this.addIfPresent(JB, "resource_load_duration", DB), this.addIfPresent(JB, mY, QB);
-            const MB = this.buildInitialContext(BB);
-            this.addIfPresent(MB, "element", oB), (null === (OB = this.webVitalConfig) || void 0 === OB ? void 0 : OB.trackAttributionSources) && (this.addIfPresent(MB, "resource_url", jB), this.addIfPresent(MB, "resource_delivery_type", null === yB || void 0 === yB ? void 0 : yB.deliveryType), this.addIfPresent(MB, "resource_initiator_type", null === yB || void 0 === yB ? void 0 : yB.initiatorType)), this.pushMeasurement(JB, MB)
+              elementRenderDelay: He,
+              resourceLoadDelay: ye,
+              resourceLoadDuration: be,
+              timeToFirstByte: Me,
+              target: Ke,
+              url: Ue,
+              lcpResourceEntry: Fe
+            } = ee.attribution, Je = this.buildInitialValues(ee);
+            this.addIfPresent(Je, "element_render_delay", He), this.addIfPresent(Je, "resource_load_delay", ye), this.addIfPresent(Je, "resource_load_duration", be), this.addIfPresent(Je, Vy, Me);
+            const oe = this.buildInitialContext(ee);
+            this.addIfPresent(oe, "element", Ke), (null === (ie = this.webVitalConfig) || void 0 === ie ? void 0 : ie.trackAttributionSources) && (this.addIfPresent(oe, "resource_url", Ue), this.addIfPresent(oe, "resource_delivery_type", null === Fe || void 0 === Fe ? void 0 : Fe.deliveryType), this.addIfPresent(oe, "resource_initiator_type", null === Fe || void 0 === Fe ? void 0 : Fe.initiatorType)), this.pushMeasurement(Je, oe)
           }), {
-            reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
+            reportAllChanges: null === (ee = this.webVitalConfig) || void 0 === ee ? void 0 : ee.reportAllChanges
           })
         }
         measureTTFB() {
-          var BB;
-          ! function(BB) {
-            ! function(BB) {
-              let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const GB = DY(OB);
-              let YB = GY("TTFB"),
-                DB = CG(BB, YB, dY, OB.reportAllChanges);
-              KY((() => {
-                const QB = XG();
-                if (QB) {
-                  const oB = QB.responseStart;
-                  YB.value = Math.max(oB - vG(), 0), YB.entries = [QB], DB(!0), bG((() => {
-                    YB = GY("TTFB", 0, "back-forward-cache", YB.navigationId, YB.navigationInteractionId, YB.navigationURL, TG()), DB = CG(BB, YB, dY, OB.reportAllChanges), DB(!0)
-                  })), GB && YY(["soft-navigation"], (GB => {
-                    GB.forEach((GB => {
-                      GB.navigationId && (YB = GY("TTFB", 0, "soft-navigation", GB.navigationId, GB.interactionId, GB.name, GB.startTime), YB.entries = [GB], DB = CG(BB, YB, dY, OB.reportAllChanges), DB(!0))
+          var ee;
+          ! function(ee) {
+            ! function(ee) {
+              let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const He = Ky(ie);
+              let ye = by("TTFB"),
+                be = NH(ee, ye, Py, ie.reportAllChanges);
+              Ay((() => {
+                const Me = uH();
+                if (Me) {
+                  const Ke = Me.responseStart;
+                  ye.value = Math.max(Ke - rH(), 0), ye.entries = [Me], be(!0), hH((() => {
+                    ye = by("TTFB", 0, "back-forward-cache", ye.navigationId, ye.navigationInteractionId, ye.navigationURL, IH()), be = NH(ee, ye, Py, ie.reportAllChanges), be(!0)
+                  })), He && My(["soft-navigation"], (He => {
+                    He.forEach((He => {
+                      He.navigationId && (ye = by("TTFB", 0, "soft-navigation", He.navigationId, He.interactionId, He.name, He.startTime), ye.entries = [He], be = NH(ee, ye, Py, ie.reportAllChanges), be(!0))
                     }))
-                  }), OB)
+                  }), ie)
                 }
               }))
-            }((OB => {
-              BB((BB => {
-                const OB = BB.entries[0];
-                let GB = {
+            }((ie => {
+              ee((ee => {
+                const ie = ee.entries[0];
+                let He = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: OB
+                  navigationEntry: ie
                 };
-                if (BB.entries.length && OB instanceof PerformanceNavigationTiming) {
-                  const YB = OB.activationStart || 0,
-                    DB = Math.max((OB.workerStart || OB.fetchStart || 0) - YB, 0),
-                    QB = Math.max(OB.domainLookupStart - YB, 0),
-                    oB = Math.max(OB.connectStart - YB, 0),
-                    jB = Math.max(OB.connectEnd - YB, 0);
-                  GB = {
-                    waitingDuration: DB,
-                    cacheDuration: QB - DB,
-                    dnsDuration: oB - QB,
-                    connectionDuration: jB - oB,
-                    requestDuration: BB.value - jB,
-                    navigationEntry: OB
+                if (ee.entries.length && ie instanceof PerformanceNavigationTiming) {
+                  const ye = ie.activationStart || 0,
+                    be = Math.max((ie.workerStart || ie.fetchStart || 0) - ye, 0),
+                    Me = Math.max(ie.domainLookupStart - ye, 0),
+                    Ke = Math.max(ie.connectStart - ye, 0),
+                    Ue = Math.max(ie.connectEnd - ye, 0);
+                  He = {
+                    waitingDuration: be,
+                    cacheDuration: Me - be,
+                    dnsDuration: Ke - Me,
+                    connectionDuration: Ue - Ke,
+                    requestDuration: ee.value - Ue,
+                    navigationEntry: ie
                   }
                 }
-                return Object.assign(BB, {
-                  attribution: GB
+                return Object.assign(ee, {
+                  attribution: He
                 })
-              })(OB))
+              })(ie))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((BB => {
+          }((ee => {
             const {
-              dnsDuration: OB,
-              connectionDuration: GB,
-              requestDuration: YB,
-              waitingDuration: DB,
-              cacheDuration: QB
-            } = BB.attribution, oB = this.buildInitialValues(BB);
-            this.addIfPresent(oB, "dns_duration", OB), this.addIfPresent(oB, "connection_duration", GB), this.addIfPresent(oB, "request_duration", YB), this.addIfPresent(oB, "waiting_duration", DB), this.addIfPresent(oB, "cache_duration", QB);
-            const jB = this.buildInitialContext(BB);
-            this.pushMeasurement(oB, jB)
+              dnsDuration: ie,
+              connectionDuration: He,
+              requestDuration: ye,
+              waitingDuration: be,
+              cacheDuration: Me
+            } = ee.attribution, Ke = this.buildInitialValues(ee);
+            this.addIfPresent(Ke, "dns_duration", ie), this.addIfPresent(Ke, "connection_duration", He), this.addIfPresent(Ke, "request_duration", ye), this.addIfPresent(Ke, "waiting_duration", be), this.addIfPresent(Ke, "cache_duration", Me);
+            const Ue = this.buildInitialContext(ee);
+            this.pushMeasurement(Ke, Ue)
           }), {
-            reportAllChanges: null === (BB = this.webVitalConfig) || void 0 === BB ? void 0 : BB.reportAllChanges
+            reportAllChanges: null === (ee = this.webVitalConfig) || void 0 === ee ? void 0 : ee.reportAllChanges
           })
         }
-        buildInitialValues(BB) {
+        buildInitialValues(ee) {
           return {
-            [BB.name.toLowerCase()]: BB.value,
-            delta: BB.delta
+            [ee.name.toLowerCase()]: ee.value,
+            delta: ee.delta
           }
         }
-        buildInitialContext(BB) {
-          var OB;
-          const GB = null !== (OB = BO("com.grafana.faro.lastNavigationId", sB)) && void 0 !== OB ? OB : LG;
+        buildInitialContext(ee) {
+          var ie;
+          const He = null !== (ie = ei("com.grafana.faro.lastNavigationId", Ge)) && void 0 !== ie ? ie : LH;
           return {
-            id: BB.id,
-            rating: BB.rating,
-            navigation_type: BB.navigationType,
-            navigation_entry_id: GB
+            id: ee.id,
+            rating: ee.rating,
+            navigation_type: ee.navigationType,
+            navigation_entry_id: He
           }
         }
-        pushMeasurement(BB, OB) {
+        pushMeasurement(ee, ie) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: BB
+            values: ee
           }, {
-            context: OB
+            context: ie
           })
         }
-        addIfPresent(BB, OB, GB) {
-          GB && (BB[OB] = GB)
+        addIfPresent(ee, ie, He) {
+          He && (ee[ie] = He)
         }
-        addNumberIfDefined(BB, OB, GB) {
-          void 0 !== GB && (BB[OB] = GB)
+        addNumberIfDefined(ee, ie, He) {
+          void 0 !== He && (ee[ie] = He)
         }
       },
-      FY = class extends OG {
+      cy = class extends yH {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = GG
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = bH
         }
         initialize() {
-          this.logDebug("Initializing"), new IY(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new ay(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const iY = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const xy = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function LY() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const OB of BB)
-        if ("traceparent" === OB.name) {
-          if (!iY.test(OB.description)) continue;
-          const [, BB, GB] = OB.description.split("-");
-          if (null != BB && null != GB) return {
-            traceId: BB,
-            spanId: GB
+    function Ly() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const ie of ee)
+        if ("traceparent" === ie.name) {
+          if (!xy.test(ie.description)) continue;
+          const [, ee, He] = ie.description.split("-");
+          if (null != ee && null != He) return {
+            traceId: ee,
+            spanId: He
           };
           break
         }
     }
 
-    function gY(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function Cy(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: GB,
-        monoNow: YB
-      } = OB;
-      return Math.min(GB, GB - (YB - BB))
+        wallNow: He,
+        monoNow: ye
+      } = ie;
+      return Math.min(He, He - (ye - ee))
     }
 
-    function rY(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [GB, YB] of Object.entries(OB)) {
-        const OB = BB[GB];
-        return null != OB && (uB(YB) ? YB.includes(OB) : OB === YB)
+    function vy(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [He, ye] of Object.entries(ie)) {
+        const ie = ee[He];
+        return null != ie && (Pe(ye) ? ye.includes(ie) : ie === ye)
       }
       return !0
     }
 
-    function XY(BB) {
+    function uy(ee) {
       const {
-        connectEnd: OB,
-        connectStart: GB,
-        decodedBodySize: YB,
-        domainLookupEnd: DB,
-        domainLookupStart: QB,
-        duration: oB,
-        encodedBodySize: jB,
-        fetchStart: yB,
-        initiatorType: JB,
-        name: MB,
-        nextHopProtocol: PB,
-        redirectEnd: zB,
-        redirectStart: lB,
-        renderBlockingStatus: pB,
-        requestStart: qB,
-        responseEnd: ZB,
-        responseStart: NB,
-        responseStatus: RB,
-        secureConnectionStart: WB,
-        transferSize: AB,
-        workerStart: VB
-      } = BB;
+        connectEnd: ie,
+        connectStart: He,
+        decodedBodySize: ye,
+        domainLookupEnd: be,
+        domainLookupStart: Me,
+        duration: Ke,
+        encodedBodySize: Ue,
+        fetchStart: Fe,
+        initiatorType: Je,
+        name: oe,
+        nextHopProtocol: Re,
+        redirectEnd: ke,
+        redirectStart: qe,
+        renderBlockingStatus: fe,
+        requestStart: Te,
+        responseEnd: pe,
+        responseStart: Xe,
+        responseStatus: ze,
+        secureConnectionStart: Be,
+        transferSize: Ee,
+        workerStart: ge
+      } = ee;
       return {
-        name: MB,
-        httpHost: EY(MB),
-        duration: cY(oB),
-        tcpHandshakeTime: cY(OB - GB),
-        dnsLookupTime: cY(DB - QB),
-        tlsNegotiationTime: cY(OB - WB),
-        responseStatus: cY(RB),
-        redirectTime: cY(zB - lB),
-        requestTime: cY(NB - qB),
-        responseTime: cY(ZB - NB),
-        fetchTime: cY(ZB - yB),
-        serviceWorkerTime: cY(VB > 0 ? yB - VB : 0),
-        decodedBodySize: cY(YB),
-        encodedBodySize: cY(jB),
+        name: oe,
+        httpHost: ly(oe),
+        duration: Sy(Ke),
+        tcpHandshakeTime: Sy(ie - He),
+        dnsLookupTime: Sy(be - Me),
+        tlsNegotiationTime: Sy(ie - Be),
+        responseStatus: Sy(ze),
+        redirectTime: Sy(ke - qe),
+        requestTime: Sy(Xe - Te),
+        responseTime: Sy(pe - Xe),
+        fetchTime: Sy(pe - Fe),
+        serviceWorkerTime: Sy(ge > 0 ? Fe - ge : 0),
+        decodedBodySize: Sy(ye),
+        encodedBodySize: Sy(Ue),
         cacheHitStatus: function() {
-          let BB = "fullLoad";
-          0 === AB ? YB > 0 && (BB = "cache") : null != RB ? 304 === RB && (BB = "conditionalFetch") : jB > 0 && AB < jB && (BB = "conditionalFetch");
-          return BB
+          let ee = "fullLoad";
+          0 === Ee ? ye > 0 && (ee = "cache") : null != ze ? 304 === ze && (ee = "conditionalFetch") : Ue > 0 && Ee < Ue && (ee = "conditionalFetch");
+          return ee
         }(),
-        renderBlockingStatus: cY(pB),
-        protocol: PB,
-        initiatorType: JB,
+        renderBlockingStatus: Sy(fe),
+        protocol: Re,
+        initiatorType: Je,
         visibilityState: document.visibilityState,
-        ttfb: cY(NB - qB),
-        transferSize: cY(AB)
+        ttfb: Sy(Xe - Te),
+        transferSize: Sy(Ee)
       }
     }
 
-    function wY(BB) {
+    function my(ee) {
       const {
-        activationStart: OB,
-        domComplete: GB,
-        domContentLoadedEventEnd: YB,
-        domContentLoadedEventStart: DB,
-        domInteractive: QB,
-        fetchStart: oB,
-        loadEventEnd: jB,
-        loadEventStart: yB,
-        responseStart: JB,
-        type: MB
-      } = BB, PB = function() {
-        var BB;
-        return null != (null === (BB = performance.timing) || void 0 === BB ? void 0 : BB.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: ie,
+        domComplete: He,
+        domContentLoadedEventEnd: ye,
+        domContentLoadedEventStart: be,
+        domInteractive: Me,
+        fetchStart: Ke,
+        loadEventEnd: Ue,
+        loadEventStart: Fe,
+        responseStart: Je,
+        type: oe
+      } = ee, Re = function() {
+        var ee;
+        return null != (null === (ee = performance.timing) || void 0 === ee ? void 0 : ee.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return MO(MO({}, XY(BB)), {}, {
-        pageLoadTime: cY(GB - oB),
-        documentParsingTime: cY(PB ? QB - PB : null),
-        domProcessingTime: cY(GB - QB),
-        domContentLoadHandlerTime: cY(YB - DB),
-        onLoadTime: cY(jB - yB),
-        ttfb: cY(Math.max(JB - (null !== OB && void 0 !== OB ? OB : 0), 0)),
-        type: MB
+      return oi(oi({}, uy(ee)), {}, {
+        pageLoadTime: Sy(He - Ke),
+        documentParsingTime: Sy(Re ? Me - Re : null),
+        domProcessingTime: Sy(He - Me),
+        domContentLoadHandlerTime: Sy(ye - be),
+        onLoadTime: Sy(Ue - Fe),
+        ttfb: Sy(Math.max(Je - (null !== ie && void 0 !== ie ? ie : 0), 0)),
+        type: oe
       })
     }
 
-    function EY(BB) {
+    function ly(ee) {
       try {
-        return new URL(BB).host || LG
-      } catch (OB) {
-        return LG
+        return new URL(ee).host || LH
+      } catch (ie) {
+        return LH
       }
     }
 
-    function cY(BB) {
-      return null == BB ? LG : "number" === typeof BB ? Math.round(BB > 0 ? BB : 0).toString() : BB.toString()
+    function Sy(ee) {
+      return null == ee ? LH : "number" === typeof ee ? Math.round(ee > 0 ? ee : 0).toString() : ee.toString()
     }
-    const hY = {
+    const ny = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function aY(BB, OB, GB, YB, DB, QB, oB) {
+    function jy(ee, ie, He, ye, be, Me, Ke) {
       try {
-        var jB = BB[QB](oB),
-          yB = jB.value
-      } catch (BB) {
-        return void GB(BB)
+        var Ue = ee[Me](Ke),
+          Fe = Ue.value
+      } catch (ee) {
+        return void He(ee)
       }
-      jB.done ? OB(yB) : Promise.resolve(yB).then(YB, DB)
+      Ue.done ? ie(Fe) : Promise.resolve(Fe).then(ye, be)
     }
 
-    function eY(BB) {
+    function sy(ee) {
       return function() {
-        var OB = this,
-          GB = arguments;
-        return new Promise((function(YB, DB) {
-          var QB = BB.apply(OB, GB);
+        var ie = this,
+          He = arguments;
+        return new Promise((function(ye, be) {
+          var Me = ee.apply(ie, He);
 
-          function oB(BB) {
-            aY(QB, YB, DB, oB, jB, "next", BB)
+          function Ke(ee) {
+            jy(Me, ye, be, Ke, Ue, "next", ee)
           }
 
-          function jB(BB) {
-            aY(QB, YB, DB, oB, jB, "throw", BB)
+          function Ue(ee) {
+            jy(Me, ye, be, Ke, Ue, "throw", ee)
           }
-          oB(void 0)
+          Ke(void 0)
         }))
       }
     }
-    const TY = new RG;
-    var bY = class extends OG {
+    const Iy = new EH;
+    var hy = class extends yH {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = GG
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = bH
       }
       initialize() {
-        var BB = this;
+        var ee = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let OB = !1;
-        const GB = () => {
-          ! function(BB) {
-            if ("complete" === document.readyState) BB();
+        let ie = !1;
+        const He = () => {
+          ! function(ee) {
+            if ("complete" === document.readyState) ee();
             else {
-              const OB = () => {
-                "complete" === document.readyState && (BB(), document.removeEventListener("readystatechange", OB))
+              const ie = () => {
+                "complete" === document.readyState && (ee(), document.removeEventListener("readystatechange", ie))
               };
-              document.addEventListener("readystatechange", OB)
+              document.addEventListener("readystatechange", ie)
             }
-          }(eY((function*() {
-            if (OB) return;
-            const GB = BB.api.pushEvent,
+          }(sy((function*() {
+            if (ie) return;
+            const He = ee.api.pushEvent,
               {
-                faroNavigationId: YB
-              } = yield function(BB) {
-                let OB;
-                const GB = new Promise((BB => {
-                  OB = BB
+                faroNavigationId: ye
+              } = yield function(ee) {
+                let ie;
+                const He = new Promise((ee => {
+                  ie = ee
                 }));
-                return new PerformanceObserver((GB => {
-                  var YB;
-                  const [DB] = GB.getEntries();
-                  if (null == DB || HB(DB.name)) return;
-                  const QB = DB.toJSON();
-                  let oB = LY(null === QB || void 0 === QB ? void 0 : QB.serverTiming);
-                  const jB = null !== (YB = BO("com.grafana.faro.lastNavigationId", sB)) && void 0 !== YB ? YB : LG,
-                    yB = MO(MO({}, wY(QB)), {}, {
-                      faroNavigationId: NO(),
-                      faroPreviousNavigationId: jB
+                return new PerformanceObserver((He => {
+                  var ye;
+                  const [be] = He.getEntries();
+                  if (null == be || he(be.name)) return;
+                  const Me = be.toJSON();
+                  let Ke = Ly(null === Me || void 0 === Me ? void 0 : Me.serverTiming);
+                  const Ue = null !== (ye = ei("com.grafana.faro.lastNavigationId", Ge)) && void 0 !== ye ? ye : LH,
+                    Fe = oi(oi({}, my(Me)), {}, {
+                      faroNavigationId: zi(),
+                      faroPreviousNavigationId: Ue
                     });
-                  OO("com.grafana.faro.lastNavigationId", yB.faroNavigationId, sB), BB("faro.performance.navigation", yB, void 0, {
-                    spanContext: oB,
-                    timestampOverwriteMs: gY(QB.startTime)
-                  }), OB(yB)
+                  ii("com.grafana.faro.lastNavigationId", Fe.faroNavigationId, Ge), ee("faro.performance.navigation", Fe, void 0, {
+                    spanContext: Ke,
+                    timestampOverwriteMs: Cy(Me.startTime)
+                  }), ie(Fe)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), GB
-              }(GB);
-            OB || null == YB || function(BB, OB, GB, YB) {
-              const DB = YB.trackResources;
-              new PerformanceObserver((YB => {
-                const QB = YB.getEntries(),
-                  oB = {
+                }), He
+              }(He);
+            ie || null == ye || function(ee, ie, He, ye) {
+              const be = ye.trackResources;
+              new PerformanceObserver((ye => {
+                const Me = ye.getEntries(),
+                  Ke = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const jB of QB) {
-                  if (HB(jB.name)) continue;
-                  null === GB || void 0 === GB || GB.notify({
+                for (const Ue of Me) {
+                  if (he(Ue.name)) continue;
+                  null === He || void 0 === He || He.notify({
                     type: "resource"
                   });
-                  const YB = jB.toJSON();
-                  let QB = LY(null === YB || void 0 === YB ? void 0 : YB.serverTiming);
-                  (null == DB && rY(YB, hY) || DB) && OB("faro.performance.resource", MO(MO({}, XY(YB)), {}, {
-                    faroNavigationId: BB,
-                    faroResourceId: NO()
+                  const ye = Ue.toJSON();
+                  let Me = Ly(null === ye || void 0 === ye ? void 0 : ye.serverTiming);
+                  (null == be && vy(ye, ny) || be) && ie("faro.performance.resource", oi(oi({}, uy(ye)), {}, {
+                    faroNavigationId: ee,
+                    faroResourceId: zi()
                   }), void 0, {
-                    spanContext: QB,
-                    timestampOverwriteMs: gY(YB.startTime, oB)
+                    spanContext: Me,
+                    timestampOverwriteMs: Cy(ye.startTime, Ke)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(YB, GB, TY, BB.config)
+            }(ye, He, Iy, ee.config)
           })))
         };
         this.cancelInitialization = () => {
-          OB = !0, document.removeEventListener("prerenderingchange", GB)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", GB, {
+          ie = !0, document.removeEventListener("prerenderingchange", He)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", He, {
           once: !0
-        }) : GB()
+        }) : He()
       }
       destroy() {
-        var BB;
-        null === (BB = this.cancelInitialization) || void 0 === BB || BB.call(this), this.cancelInitialization = void 0
+        var ee;
+        null === (ee = this.cancelInitialization) || void 0 === ee || ee.call(this), this.cancelInitialization = void 0
       }
     };
-    const CY = "data-faro-user-action-name",
-      HY = CY.replace(/-name$/, "-timeout"),
-      vY = 1e3;
+    const Ny = "data-faro-user-action-name",
+      Gy = Ny.replace(/-name$/, "-timeout"),
+      ry = 1e3;
 
-    function sY(BB) {
-      return `data-${(BB.startsWith("data-")?BB.slice(5):BB).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function Qy(ee) {
+      return `data-${(ee.startsWith("data-")?ee.slice(5):ee).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function xY(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : aO;
-      if (void 0 === BB) return OB;
-      let YB = NaN;
+    function eb(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ni;
+      if (void 0 === ee) return ie;
+      let ye = NaN;
       try {
-        YB = "string" === typeof BB && "" === BB.trim() ? NaN : Number(BB)
-      } catch (DB) {}
-      return !Number.isFinite(YB) || YB <= 0 ? (GB(`initialActivityTimeout must be a finite number greater than zero; using ${OB} ms`), OB) : YB > 1e3 ? (GB(`initialActivityTimeout cannot exceed ${vY} ms; clamping to the maximum`), vY) : YB
+        ye = "string" === typeof ee && "" === ee.trim() ? NaN : Number(ee)
+      } catch (be) {}
+      return !Number.isFinite(ye) || ye <= 0 ? (He(`initialActivityTimeout must be a finite number greater than zero; using ${ie} ms`), ie) : ye > 1e3 ? (He(`initialActivityTimeout cannot exceed ${ry} ms; clamping to the maximum`), ry) : ye
     }
 
-    function tY(BB, OB, GB) {
-      return void 0 !== BB && window.clearTimeout(BB), window.setTimeout((() => {
-        OB()
-      }), GB)
+    function ib(ee, ie, He) {
+      return void 0 !== ee && window.clearTimeout(ee), window.setTimeout((() => {
+        ie()
+      }), He)
     }
 
-    function BD(BB) {
-      return BB.type === NG
+    function Hb(ee) {
+      return ee.type === BH
     }
-    let OD, GD;
+    let yb, bb;
 
-    function YD() {
-      return OD || (OD = new RG), GD || (GD = new MutationObserver(((BB, OB) => {
-        OD.notify({
+    function Mb() {
+      return yb || (yb = new EH), bb || (bb = new MutationObserver(((ee, ie) => {
+        yb.notify({
           type: "dom-mutation"
         })
-      })), GD.observe(document, {
+      })), bb.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), OD
+      })), yb
     }
-    const DD = "fetch",
-      QD = "xhr";
-    let oD, jD, yD, JD, MD = !1;
+    const Kb = "fetch",
+      Ub = "xhr";
+    let Fb, Jb, ob, Rb, kb = !1;
 
-    function PD() {
-      if (oD) return oD;
+    function qb() {
+      if (Fb) return Fb;
 
-      function BB(BB) {
-        oD.notify({
-          type: ZG,
-          request: BB
+      function ee(ee) {
+        Fb.notify({
+          type: zH,
+          request: ee
         })
       }
 
-      function OB(BB) {
-        oD.notify({
-          type: NG,
-          request: BB
+      function ie(ee) {
+        Fb.notify({
+          type: BH,
+          request: ee
         })
       }
-      return oD = new RG, MD || (! function(BB) {
+      return Fb = new EH, kb || (! function(ee) {
         let {
-          onRequestEnd: OB,
-          onRequestStart: GB
-        } = BB;
-        yD || (yD = window.fetch);
+          onRequestEnd: ie,
+          onRequestStart: He
+        } = ee;
+        ob || (ob = window.fetch);
         window.fetch = function() {
-          var BB, YB;
-          const DB = null !== (BB = vB(arguments[0])) && void 0 !== BB ? BB : "",
-            QB = HB(DB),
-            oB = (null !== (YB = arguments[1]) && void 0 !== YB ? YB : {}).method,
-            jB = NO();
-          return QB || GB({
-            url: DB,
-            method: oB,
-            requestId: jB,
-            apiType: DD
-          }), yD.apply(this, arguments).then((BB => (QB || OB({
-            url: DB,
-            method: oB,
-            requestId: jB,
-            apiType: DD
-          }), BB))).catch((BB => {
-            throw QB || OB({
-              url: DB,
-              method: oB,
-              requestId: jB,
-              apiType: DD
-            }), BB
+          var ee, ye;
+          const be = null !== (ee = Ne(arguments[0])) && void 0 !== ee ? ee : "",
+            Me = he(be),
+            Ke = (null !== (ye = arguments[1]) && void 0 !== ye ? ye : {}).method,
+            Ue = zi();
+          return Me || He({
+            url: be,
+            method: Ke,
+            requestId: Ue,
+            apiType: Kb
+          }), ob.apply(this, arguments).then((ee => (Me || ie({
+            url: be,
+            method: Ke,
+            requestId: Ue,
+            apiType: Kb
+          }), ee))).catch((ee => {
+            throw Me || ie({
+              url: be,
+              method: Ke,
+              requestId: Ue,
+              apiType: Kb
+            }), ee
           }))
         }
       }({
-        onRequestStart: BB,
-        onRequestEnd: OB
-      }), function(BB) {
+        onRequestStart: ee,
+        onRequestEnd: ie
+      }), function(ee) {
         let {
-          onRequestStart: OB,
-          onRequestEnd: GB
-        } = BB;
-        jD || (jD = XMLHttpRequest.prototype.open);
+          onRequestStart: ie,
+          onRequestEnd: He
+        } = ee;
+        Jb || (Jb = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const BB = arguments[1],
-            YB = HB(BB),
-            DB = arguments[0],
-            QB = NO();
+          const ee = arguments[1],
+            ye = he(ee),
+            be = arguments[0],
+            Me = zi();
           this.addEventListener("loadstart", (function() {
-            YB || OB({
-              url: BB,
-              method: DB,
-              requestId: QB,
-              apiType: QD
+            ye || ie({
+              url: ee,
+              method: be,
+              requestId: Me,
+              apiType: Ub
             })
           })), this.addEventListener("load", (function() {
-            YB || GB({
-              url: BB,
-              method: DB,
-              requestId: QB,
-              apiType: QD
+            ye || He({
+              url: ee,
+              method: be,
+              requestId: Me,
+              apiType: Ub
             })
           })), this.addEventListener("error", (function() {
-            YB || GB({
-              url: BB,
-              method: DB,
-              requestId: QB,
-              apiType: QD
+            ye || He({
+              url: ee,
+              method: be,
+              requestId: Me,
+              apiType: Ub
             })
           })), this.addEventListener("abort", (function() {
-            YB || GB({
-              url: BB,
-              method: DB,
-              requestId: QB,
-              apiType: QD
+            ye || He({
+              url: ee,
+              method: be,
+              requestId: Me,
+              apiType: Ub
             })
-          })), jD.apply(this, arguments)
+          })), Jb.apply(this, arguments)
         }
       }({
-        onRequestStart: BB,
-        onRequestEnd: OB
-      }), MD = !0), oD
+        onRequestStart: ee,
+        onRequestEnd: ie
+      }), kb = !0), Fb
     }
-    let zD, lD = !1;
-    let pD = function(BB) {
-      return BB[BB.Started = 0] = "Started", BB[BB.Halted = 1] = "Halted", BB[BB.Cancelled = 2] = "Cancelled", BB[BB.Ended = 3] = "Ended", BB
+    let fb, Tb = !1;
+    let pb = function(ee) {
+      return ee[ee.Started = 0] = "Started", ee[ee.Halted = 1] = "Halted", ee[ee.Cancelled = 2] = "Cancelled", ee[ee.Ended = 3] = "Ended", ee
     }({});
-    var qD = class {
-      constructor(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = BB, this.logDebug = OB, this.initialActivityTimeout = GB, this.http = PD(), this.dom = YD(), this.perf = (JD || (JD = new RG), lD || (zD = TY.subscribe((BB => {
-          "resource" === BB.type && JD.notify({
+    var Xb = class {
+      constructor(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = ee, this.logDebug = ie, this.initialActivityTimeout = He, this.http = qb(), this.dom = Mb(), this.perf = (Rb || (Rb = new EH), Tb || (fb = Iy.subscribe((ee => {
+          "resource" === ee.type && Rb.notify({
             type: "resource-entry"
           })
-        })), lD = !0), JD), this.isValid = !1, this.runningRequests = new Map
+        })), Tb = !0), Rb), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new RG).merge(this.http, this.dom, this.perf).takeWhile((() => [pD.Started, pD.Halted].includes(this.userAction.getState()))).filter((BB => !!(this.userAction.getState() !== pD.Halted || BD(BB) && this.runningRequests.has(BB.request.requestId)))).subscribe((BB => {
-          (function(BB) {
-            return BB.type === ZG
-          })(BB) && this.runningRequests.set(BB.request.requestId, BB.request), BD(BB) && this.runningRequests.delete(BB.request.requestId), BD(BB) ? this.userAction.getState() === pD.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((BB => [pD.Ended, pD.Cancelled].includes(BB))).first().subscribe((() => this.cleanup())), this.startupTid = tY(this.startupTid, (() => {
+        this.allMonitorsSub = (new EH).merge(this.http, this.dom, this.perf).takeWhile((() => [pb.Started, pb.Halted].includes(this.userAction.getState()))).filter((ee => !!(this.userAction.getState() !== pb.Halted || Hb(ee) && this.runningRequests.has(ee.request.requestId)))).subscribe((ee => {
+          (function(ee) {
+            return ee.type === zH
+          })(ee) && this.runningRequests.set(ee.request.requestId, ee.request), Hb(ee) && this.runningRequests.delete(ee.request.requestId), Hb(ee) ? this.userAction.getState() === pb.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((ee => [pb.Ended, pb.Cancelled].includes(ee))).first().subscribe((() => this.cleanup())), this.startupTid = ib(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === pD.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === pb.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === pD.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === pb.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = tY(this.haltTid, (() => {
-          this.userAction.getState() === pD.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = ib(this.haltTid, (() => {
+          this.userAction.getState() === pb.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var BB, OB;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (BB = this.allMonitorsSub) || void 0 === BB || BB.unsubscribe(), null === (OB = this.stateSub) || void 0 === OB || OB.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var ee, ie;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (ee = this.allMonitorsSub) || void 0 === ee || ee.unsubscribe(), null === (ie = this.stateSub) || void 0 === ie || ie.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(BB) {
-        void 0 !== BB && window.clearTimeout(BB)
+      clearTimer(ee) {
+        void 0 !== ee && window.clearTimeout(ee)
       }
     };
 
-    function ZD(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aO;
-      var GB;
+    function zb(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ni;
+      var He;
       const {
-        api: YB,
-        config: DB,
-        internalLogger: QB
-      } = BB, oB = xY(null === (GB = DB.userActionsInstrumentation) || void 0 === GB ? void 0 : GB.initialActivityTimeout, 100, OB);
+        api: ye,
+        config: be,
+        internalLogger: Me
+      } = ee, Ke = eb(null === (He = be.userActionsInstrumentation) || void 0 === He ? void 0 : He.initialActivityTimeout, 100, ie);
       return {
-        processUserEvent: function(BB) {
-          var OB, GB;
-          const QB = null !== (OB = null === (GB = DB.userActionsInstrumentation) || void 0 === GB ? void 0 : GB.dataAttributeName) && void 0 !== OB ? OB : CY,
-            oB = BB.target;
-          if (!(oB instanceof Element)) return;
-          const jB = function(BB, OB) {
-              let GB = BB;
-              for (; GB;) {
-                if (GB.hasAttribute(OB)) return GB;
-                GB = GB.parentElement
+        processUserEvent: function(ee) {
+          var ie, He;
+          const Me = null !== (ie = null === (He = be.userActionsInstrumentation) || void 0 === He ? void 0 : He.dataAttributeName) && void 0 !== ie ? ie : Ny,
+            Ke = ee.target;
+          if (!(Ke instanceof Element)) return;
+          const Ue = function(ee, ie) {
+              let He = ee;
+              for (; He;) {
+                if (He.hasAttribute(ie)) return He;
+                He = He.parentElement
               }
               return null
-            }(oB, sY(QB)),
-            yB = function(BB, OB) {
-              if (!BB) return;
-              const GB = function(BB) {
-                  return sY(BB).slice(5).replace(/-(.)/g, ((BB, OB) => OB.toUpperCase()))
-                }(OB),
-                YB = BB.dataset;
-              for (const DB in YB)
-                if (DB === GB) return YB[DB]
-            }(jB, QB);
-          if (!jB || !yB) return;
-          const JB = function(BB, OB) {
-            const GB = BB.getAttribute(function(BB) {
-              const OB = sY(BB);
-              return OB.endsWith("-name") ? `${OB.slice(0,-5)}-timeout` : `${OB}-timeout`
-            }(OB));
-            return null === GB ? void 0 : Number(GB)
-          }(jB, QB);
-          YB.startUserAction(yB, {}, {
-            triggerName: BB.type,
-            initialActivityTimeout: JB
+            }(Ke, Qy(Me)),
+            Fe = function(ee, ie) {
+              if (!ee) return;
+              const He = function(ee) {
+                  return Qy(ee).slice(5).replace(/-(.)/g, ((ee, ie) => ie.toUpperCase()))
+                }(ie),
+                ye = ee.dataset;
+              for (const be in ye)
+                if (be === He) return ye[be]
+            }(Ue, Me);
+          if (!Ue || !Fe) return;
+          const Je = function(ee, ie) {
+            const He = ee.getAttribute(function(ee) {
+              const ie = Qy(ee);
+              return ie.endsWith("-name") ? `${ie.slice(0,-5)}-timeout` : `${ie}-timeout`
+            }(ie));
+            return null === He ? void 0 : Number(He)
+          }(Ue, Me);
+          ye.startUserAction(Fe, {}, {
+            triggerName: ee.type,
+            initialActivityTimeout: Je
           })
         },
-        processUserActionStarted: function(BB, GB) {
-          const YB = BB,
-            DB = xY(GB, oB, OB);
-          new qD(YB, QB.debug, DB).attach()
+        processUserActionStarted: function(ee, He) {
+          const ye = ee,
+            be = eb(He, Ke, ie);
+          new Xb(ye, Me.debug, be).attach()
         }
       }
     }
-    const ND = "user_action_start",
-      RD = {
+    const Bb = "user_action_start",
+      Eb = {
         Normal: "normal",
         Critical: "critical"
       };
-    var WD = class {
+    var gb = class {
         constructor() {
           this.buffer = []
         }
-        addItem(BB) {
-          this.buffer.push(BB)
+        addItem(ee) {
+          this.buffer.push(ee)
         }
-        flushBuffer(BB) {
-          if (KB(BB))
-            for (const OB of this.buffer) BB(OB);
+        flushBuffer(ee) {
+          if (De(ee))
+            for (const ie of this.buffer) ee(ie);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      AD = class extends RG {
-        constructor(BB) {
+      Ob = class extends EH {
+        constructor(ee) {
           let {
-            name: OB,
-            parentId: GB,
-            trigger: YB,
-            transports: DB,
-            attributes: QB,
-            trackUserActionsExcludeItem: oB,
-            importance: jB = RD.Normal,
-            pushEvent: yB
-          } = BB;
-          super(), this.name = OB, this.attributes = QB, this.id = NO(), this.trigger = YB, this.parentId = null !== GB && void 0 !== GB ? GB : this.id, this.trackUserActionsExcludeItem = oB, this.importance = jB, this._pushEvent = yB, this._itemBuffer = new WD, this._transports = DB, this._state = 0, this._start()
+            name: ie,
+            parentId: He,
+            trigger: ye,
+            transports: be,
+            attributes: Me,
+            trackUserActionsExcludeItem: Ke,
+            importance: Ue = Eb.Normal,
+            pushEvent: Fe
+          } = ee;
+          super(), this.name = ie, this.attributes = Me, this.id = zi(), this.trigger = ye, this.parentId = null !== He && void 0 !== He ? He : this.id, this.trackUserActionsExcludeItem = Ke, this.importance = Ue, this._pushEvent = Fe, this._itemBuffer = new gb, this._transports = be, this._state = 0, this._start()
         }
-        addItem(BB) {
-          return 0 === this._state && (this._itemBuffer.addItem(BB), !0)
+        addItem(ee) {
+          return 0 === this._state && (this._itemBuffer.addItem(ee), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = zO(), this._startTimeMono = lO())
+          this._state = 0, 0 === this._state && (this.startTime = ki(), this._startTimeMono = qi())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((BB => {
-            this._transports.execute(BB)
+          0 === this._state && this._itemBuffer.flushBuffer((ee => {
+            this._transports.execute(ee)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const BB = zO(),
-            OB = lO() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((BB => {
-            if (function(BB, OB) {
-                return (null === OB || void 0 === OB ? void 0 : OB(BB)) || "measurement" === BB.type && "web-vitals" === BB.payload.type
-              }(BB, this.trackUserActionsExcludeItem)) return void this._transports.execute(BB);
-            const OB = xO(xO({}, BB), {}, {
-              payload: xO(xO({}, BB.payload), {}, {
+          const ee = ki(),
+            ie = qi() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((ee => {
+            if (function(ee, ie) {
+                return (null === ie || void 0 === ie ? void 0 : ie(ee)) || "measurement" === ee.type && "web-vitals" === ee.payload.type
+              }(ee, this.trackUserActionsExcludeItem)) return void this._transports.execute(ee);
+            const ie = eH(eH({}, ee), {}, {
+              payload: eH(eH({}, ee.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(OB)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", xO({
+            this._transports.execute(ie)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", eH({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: BB.toString(),
-            userActionDuration: OB.toString(),
+            userActionEndTime: ee.toString(),
+            userActionDuration: ie.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, gO(this.attributes)), void 0, {
+          }, Li(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: BB => (BB.action = {
+            customPayloadTransformer: ee => (ee.action = {
               id: this.id,
               name: this.name
-            }, BB)
+            }, ee)
           })
         }
         getState() {
           return this._state
         }
       };
-    const VD = new RG;
+    const db = new EH;
 
-    function SD(BB, OB) {
-      return !!BB && (0 === (null === BB || void 0 === BB ? void 0 : BB.getState()) && (BB.addItem(OB), !0))
+    function Wb(ee, ie) {
+      return !!ee && (0 === (null === ee || void 0 === ee ? void 0 : ee.getState()) && (ee.addItem(ie), !0))
     }
-    var nD = class extends OG {
+    var tb = class extends yH {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = GG
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = bH
         }
         initialize() {
           const {
-            processUserEvent: BB,
-            processUserActionStarted: OB
-          } = ZD(qB, (BB => this.logWarn(BB)));
-          this._processUserEvent = BB, this._processKeydown = OB => {
-            [" ", "Enter"].includes(OB.key) && BB(OB)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = VD.subscribe((BB => {
+            processUserEvent: ee,
+            processUserActionStarted: ie
+          } = zb(Te, (ee => this.logWarn(ee)));
+          this._processUserEvent = ee, this._processKeydown = ie => {
+            [" ", "Enter"].includes(ie.key) && ee(ie)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = db.subscribe((ee => {
             let {
-              type: GB,
-              userAction: YB,
-              initialActivityTimeout: DB
-            } = BB;
-            "user_action_start" === GB && OB(YB, DB)
+              type: He,
+              userAction: ye,
+              initialActivityTimeout: be
+            } = ee;
+            "user_action_start" === He && ie(ye, be)
           }))
         }
         destroy() {
-          var BB;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (BB = this._userActionSub) || void 0 === BB || BB.unsubscribe()
+          var ee;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (ee = this._userActionSub) || void 0 === ee || ee.unsubscribe()
         }
       },
-      UD = class extends OG {
+      Zb = class extends yH {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = GG, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = bH, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(BB) {
-          const OB = {
-            blockedURI: BB.blockedURI,
-            columnNumber: BB.columnNumber,
-            disposition: BB.disposition,
-            documentURI: BB.documentURI,
-            effectiveDirective: BB.effectiveDirective,
-            lineNumber: BB.lineNumber,
-            originalPolicy: BB.originalPolicy,
-            referrer: BB.referrer,
-            sample: BB.sample,
-            sourceFile: BB.sourceFile,
-            statusCode: BB.statusCode,
-            violatedDirective: BB.violatedDirective
+        securitypolicyviolationHandler(ee) {
+          const ie = {
+            blockedURI: ee.blockedURI,
+            columnNumber: ee.columnNumber,
+            disposition: ee.disposition,
+            documentURI: ee.documentURI,
+            effectiveDirective: ee.effectiveDirective,
+            lineNumber: ee.lineNumber,
+            originalPolicy: ee.originalPolicy,
+            referrer: ee.referrer,
+            sample: ee.sample,
+            sourceFile: ee.sourceFile,
+            statusCode: ee.statusCode,
+            violatedDirective: ee.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", gO(OB))
+          this.api.pushEvent("securitypolicyviolation", Li(ie))
         }
       };
-    var fD = class extends RG {
-      constructor(BB, OB) {
-        var GB, YB, DB, QB;
-        super(), this._tracking = !1, this.eventsObservable = BB, this._options = {
-          inactivityMs: null !== (GB = null === OB || void 0 === OB ? void 0 : OB.inactivityMs) && void 0 !== GB ? GB : 100,
-          drainTimeoutMs: null !== (YB = null === OB || void 0 === OB ? void 0 : OB.drainTimeoutMs) && void 0 !== YB ? YB : 1e4,
-          isOperationStart: null !== (DB = null === OB || void 0 === OB ? void 0 : OB.isOperationStart) && void 0 !== DB ? DB : () => {},
-          isOperationEnd: null !== (QB = null === OB || void 0 === OB ? void 0 : OB.isOperationEnd) && void 0 !== QB ? QB : () => {}
+    var wb = class extends EH {
+      constructor(ee, ie) {
+        var He, ye, be, Me;
+        super(), this._tracking = !1, this.eventsObservable = ee, this._options = {
+          inactivityMs: null !== (He = null === ie || void 0 === ie ? void 0 : ie.inactivityMs) && void 0 !== He ? He : 100,
+          drainTimeoutMs: null !== (ye = null === ie || void 0 === ie ? void 0 : ie.drainTimeoutMs) && void 0 !== ye ? ye : 1e4,
+          isOperationStart: null !== (be = null === ie || void 0 === ie ? void 0 : ie.isOperationStart) && void 0 !== be ? be : () => {},
+          isOperationEnd: null !== (Me = null === ie || void 0 === ie ? void 0 : ie.isOperationEnd) && void 0 !== Me ? Me : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((BB => {
-          var OB;
-          this._lastEventTime = lO(), null === (OB = this._currentEvents) || void 0 === OB || OB.push(BB);
-          const GB = this._options.isOperationStart(BB);
-          var YB;
-          GB && (null === (YB = this._activeOperations) || void 0 === YB || YB.set(GB, !0));
-          const DB = this._options.isOperationEnd(BB);
-          var QB;
-          DB && (null === (QB = this._activeOperations) || void 0 === QB || QB.delete(DB));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((ee => {
+          var ie;
+          this._lastEventTime = qi(), null === (ie = this._currentEvents) || void 0 === ie || ie.push(ee);
+          const He = this._options.isOperationStart(ee);
+          var ye;
+          He && (null === (ye = this._activeOperations) || void 0 === ye || ye.set(He, !0));
+          const be = this._options.isOperationEnd(ee);
+          var Me;
+          be && (null === (Me = this._activeOperations) || void 0 === Me || Me.delete(be));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = lO(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = qi(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let BB;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), BB = this.hasActiveOperations() ? lO() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let ee;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), ee = this.hasActiveOperations() ? qi() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: BB
+          duration: ee
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = kD(this._inactivityTid, (() => {
+        this._inactivityTid = Db(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = kD(this._drainTid, (() => {
+        this._drainTid = Db(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(BB) {
-        BB && clearTimeout(BB)
+      _clearTimer(ee) {
+        ee && clearTimeout(ee)
       }
     };
 
-    function kD(BB, OB, GB) {
-      return BB && clearTimeout(BB), BB = setTimeout((() => {
-        OB()
-      }), GB)
+    function Db(ee, ie, He) {
+      return ee && clearTimeout(ee), ee = setTimeout((() => {
+        ie()
+      }), He)
     }
-    let dD;
-    const KD = new Set,
-      uD = new Map;
-    let mD, ID, FD, iD, LD, gD, rD, XD, wD = !1;
-    var ED = class extends OG {
+    let Pb;
+    const Ab = new Set,
+      Yb = new Map;
+    let Vb, ab, cb, xb, Lb, Cb, vb, ub, mb = !1;
+    var lb = class extends yH {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = GG
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = bH
       }
       initialize() {
-        const BB = PD(),
-          OB = YD(),
-          GB = function() {
-            function BB(BB, OB) {
-              const GB = null !== OB && void 0 !== OB ? OB : location.href;
-              GB !== ID && (mD.notify({
+        const ee = qb(),
+          ie = Mb(),
+          He = function() {
+            function ee(ee, ie) {
+              const He = null !== ie && void 0 !== ie ? ie : location.href;
+              He !== ab && (Vb.notify({
                 type: "url-change",
-                from: ID,
-                to: GB,
-                trigger: BB
-              }), ID = GB)
+                from: ab,
+                to: He,
+                trigger: ee
+              }), ab = He)
             }
-            if (mD || (mD = new RG, ID = location.href), !wD)
+            if (Vb || (Vb = new EH, ab = location.href), !mb)
               if ("navigation" in window && "NavigateEvent" in window) {
-                rD = OB => {
+                vb = ie => {
                   try {
-                    const GB = null === OB || void 0 === OB ? void 0 : OB.destination;
-                    (null === GB || void 0 === GB ? void 0 : GB.sameDocument) && "string" === typeof GB.url && BB("navigate", GB.url)
-                  } catch (GB) {}
-                }, window.navigation.addEventListener("navigate", rD);
-                const OB = window.NavigateEvent;
-                OB && OB.prototype && "function" === typeof OB.prototype.intercept && (XD || (XD = OB.prototype.intercept), OB.prototype.intercept = function(OB) {
+                    const He = null === ie || void 0 === ie ? void 0 : ie.destination;
+                    (null === He || void 0 === He ? void 0 : He.sameDocument) && "string" === typeof He.url && ee("navigate", He.url)
+                  } catch (He) {}
+                }, window.navigation.addEventListener("navigate", vb);
+                const ie = window.NavigateEvent;
+                ie && ie.prototype && "function" === typeof ie.prototype.intercept && (ub || (ub = ie.prototype.intercept), ie.prototype.intercept = function(ie) {
                   try {
-                    const OB = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      GB = null === this || void 0 === this ? void 0 : this.destination;
-                    OB && GB && !1 === GB.sameDocument && "string" === typeof GB.url && BB("navigate-intercept", GB.url)
-                  } catch (GB) {}
-                  return XD.call(this, OB)
-                }), wD = !0
-              } else FD || (FD = window.history.pushState), window.history.pushState = function() {
-                for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-                const DB = FD.apply(window.history, GB);
-                return BB("pushState"), DB
-              }, iD || (iD = window.history.replaceState), window.history.replaceState = function() {
-                for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-                const DB = iD.apply(window.history, GB);
-                return BB("replaceState"), DB
-              }, LD = () => BB("popstate"), gD = () => BB("hashchange"), window.addEventListener("popstate", LD), window.addEventListener("hashchange", gD), wD = !0;
-            return mD
+                    const ie = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      He = null === this || void 0 === this ? void 0 : this.destination;
+                    ie && He && !1 === He.sameDocument && "string" === typeof He.url && ee("navigate-intercept", He.url)
+                  } catch (He) {}
+                  return ub.call(this, ie)
+                }), mb = !0
+              } else cb || (cb = window.history.pushState), window.history.pushState = function() {
+                for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
+                const be = cb.apply(window.history, He);
+                return ee("pushState"), be
+              }, xb || (xb = window.history.replaceState), window.history.replaceState = function() {
+                for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
+                const be = xb.apply(window.history, He);
+                return ee("replaceState"), be
+              }, Lb = () => ee("popstate"), Cb = () => ee("hashchange"), window.addEventListener("popstate", Lb), window.addEventListener("hashchange", Cb), mb = !0;
+            return Vb
           }(),
-          YB = (DB = ["pointerdown", "keydown"], dD || (dD = new RG), DB.forEach((BB => {
-            if (!KD.has(BB)) {
-              const OB = () => {
-                dD.notify({
+          ye = (be = ["pointerdown", "keydown"], Pb || (Pb = new EH), be.forEach((ee => {
+            if (!Ab.has(ee)) {
+              const ie = () => {
+                Pb.notify({
                   type: "interaction",
-                  name: BB
+                  name: ee
                 })
               };
-              window.addEventListener(BB, OB), KD.add(BB), uD.set(BB, OB)
+              window.addEventListener(ee, ie), Ab.add(ee), Yb.set(ee, ie)
             }
-          })), dD);
-        var DB;
-        const QB = new fD((new RG).merge(BB, OB, GB), {
+          })), Pb);
+        var be;
+        const Me = new wb((new EH).merge(ee, ie, He), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: BB => function(BB) {
-            return BB.type === ZG
-          }(BB) ? BB.request.requestId : void 0,
-          isOperationEnd: BB => function(BB) {
-            return BB.type === NG
-          }(BB) ? BB.request.requestId : void 0
+          isOperationStart: ee => function(ee) {
+            return ee.type === zH
+          }(ee) ? ee.request.requestId : void 0,
+          isOperationEnd: ee => function(ee) {
+            return ee.type === BH
+          }(ee) ? ee.request.requestId : void 0
         });
-        QB.filter((BB => "tracking-ended" === BB.message)).subscribe((BB => {
-          var OB, GB;
-          if ((null === (OB = BB.events) || void 0 === OB ? void 0 : OB.some((BB => "url-change" === BB.type))) && (null === (GB = BB.events) || void 0 === GB ? void 0 : GB.some((BB => "dom-mutation" === BB.type)))) {
-            var YB;
-            const OB = null === (YB = BB.events) || void 0 === YB ? void 0 : YB.find((BB => "url-change" === BB.type));
-            qB.api.pushEvent("faro.navigation", {
-              fromUrl: null === OB || void 0 === OB ? void 0 : OB.from,
-              toUrl: null === OB || void 0 === OB ? void 0 : OB.to,
+        Me.filter((ee => "tracking-ended" === ee.message)).subscribe((ee => {
+          var ie, He;
+          if ((null === (ie = ee.events) || void 0 === ie ? void 0 : ie.some((ee => "url-change" === ee.type))) && (null === (He = ee.events) || void 0 === He ? void 0 : He.some((ee => "dom-mutation" === ee.type)))) {
+            var ye;
+            const ie = null === (ye = ee.events) || void 0 === ye ? void 0 : ye.find((ee => "url-change" === ee.type));
+            Te.api.pushEvent("faro.navigation", {
+              fromUrl: null === ie || void 0 === ie ? void 0 : ie.from,
+              toUrl: null === ie || void 0 === ie ? void 0 : ie.to,
               sameDocument: String(!0),
-              duration: BB.duration
+              duration: ee.duration
             })
           }
-        })), YB.subscribe((() => {
-          QB.startTracking()
+        })), ye.subscribe((() => {
+          Me.startTracking()
         }))
       }
     };
 
-    function cD() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const OB = [new nD, new iG, new FY, new YG, new gG, new ED];
-      return !1 !== BB.enablePerformanceInstrumentation && OB.unshift(new bY), !1 !== BB.enableContentSecurityPolicyInstrumentation && OB.push(new UD), !1 !== BB.captureConsole && OB.push(new IG), OB
+    function Sb() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ie = [new tb, new xH, new cy, new MH, new CH, new lb];
+      return !1 !== ee.enablePerformanceInstrumentation && ie.unshift(new hy), !1 !== ee.enableContentSecurityPolicyInstrumentation && ie.push(new Zb), !1 !== ee.captureConsole && ie.push(new aH), ie
     }
-    var hD = GB(7227);
-    let aD, eD;
+    var nb = He(7323);
+    let jb, sb;
 
-    function TD() {
-      const BB = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return aD === BB && eD || (eD = new hD.UAParser(BB).getResult(), aD = BB), eD
+    function Ib() {
+      const ee = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return jb === ee && sb || (sb = new nb.UAParser(ee).getResult(), jb = ee), sb
     }
-    const bD = () => {
+    const hb = () => {
         const {
-          browser: BB,
-          os: OB,
-          ua: GB
-        } = TD(), {
-          name: YB,
-          version: DB
-        } = BB, {
-          name: QB,
-          version: oB
-        } = OB, jB = navigator.language, yB = GB.includes("Mobi"), JB = function() {
-          if (!YB || !DB) return;
+          browser: ee,
+          os: ie,
+          ua: He
+        } = Ib(), {
+          name: ye,
+          version: be
+        } = ee, {
+          name: Me,
+          version: Ke
+        } = ie, Ue = navigator.language, Fe = He.includes("Mobi"), Je = function() {
+          if (!ye || !be) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== YB && void 0 !== YB ? YB : LG,
-            version: null !== DB && void 0 !== DB ? DB : LG,
-            os: `${null!==QB&&void 0!==QB?QB:LG} ${null!==oB&&void 0!==oB?oB:LG}`,
-            userAgent: null !== GB && void 0 !== GB ? GB : LG,
-            language: null !== jB && void 0 !== jB ? jB : LG,
-            mobile: yB,
-            brands: null !== JB && void 0 !== JB ? JB : LG,
+            name: null !== ye && void 0 !== ye ? ye : LH,
+            version: null !== be && void 0 !== be ? be : LH,
+            os: `${null!==Me&&void 0!==Me?Me:LH} ${null!==Ke&&void 0!==Ke?Ke:LH}`,
+            userAgent: null !== He && void 0 !== He ? He : LH,
+            language: null !== Ue && void 0 !== Ue ? Ue : LH,
+            mobile: Fe,
+            brands: null !== Je && void 0 !== Je ? Je : LH,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      CD = () => {
+      Nb = () => {
         const {
-          name: BB,
-          version: OB
-        } = TD().os;
-        if (!BB && !OB) return {};
-        const GB = {};
-        return BB && (GB.name = BB), OB && (GB.version = OB), {
-          os: GB
+          name: ee,
+          version: ie
+        } = Ib().os;
+        if (!ee && !ie) return {};
+        const He = {};
+        return ee && (He.name = ee), ie && (He.version = ie), {
+          os: He
         }
       };
 
-    function HD(BB) {
-      var OB, GB, YB;
+    function Gb(ee) {
+      var ie, He, ye;
       return {
-        id: null !== (OB = null === (GB = qB.config) || void 0 === GB || null === (GB = GB.sessionTracking) || void 0 === GB || null === (YB = GB.generateSessionId) || void 0 === YB ? void 0 : YB.call(GB)) && void 0 !== OB ? OB : NO(),
-        attributes: BB
+        id: null !== (ie = null === (He = Te.config) || void 0 === He || null === (He = He.sessionTracking) || void 0 === He || null === (ye = He.generateSessionId) || void 0 === ye ? void 0 : ye.call(He)) && void 0 !== ie ? ie : zi(),
+        attributes: ee
       }
     }
-    const vD = () => ({
+    const rb = () => ({
       sdk: {
         name: "faro-web",
-        version: GG
+        version: bH
       }
     });
-    var sD = class extends BG {
+    var Qb = class extends HH {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let xD = function(BB) {
-      return BB.EXCEPTION = "exception", BB.LOG = "log", BB.MEASUREMENT = "measurement", BB.TRACE = "trace", BB.EVENT = "event", BB
+    let eM = function(ee) {
+      return ee.EXCEPTION = "exception", ee.LOG = "log", ee.MEASUREMENT = "measurement", ee.TRACE = "trace", ee.EVENT = "event", ee
     }({});
-    const tD = {
+    const iM = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function BQ(BB, OB) {
-      var GB, YB;
-      if (void 0 === OB) return BB;
-      if (void 0 === BB) return {
-        resourceSpans: OB
+    function HM(ee, ie) {
+      var He, ye;
+      if (void 0 === ie) return ee;
+      if (void 0 === ee) return {
+        resourceSpans: ie
       };
-      const DB = null === (GB = BB.resourceSpans) || void 0 === GB ? void 0 : GB[0];
-      if (void 0 === DB) return BB;
-      const QB = (null === DB || void 0 === DB ? void 0 : DB.scopeSpans) || [],
-        oB = (null === OB || void 0 === OB || null === (YB = OB[0]) || void 0 === YB ? void 0 : YB.scopeSpans) || [];
-      return xO(xO({}, BB), {}, {
-        resourceSpans: [xO(xO({}, DB), {}, {
-          scopeSpans: [...QB, ...oB]
+      const be = null === (He = ee.resourceSpans) || void 0 === He ? void 0 : He[0];
+      if (void 0 === be) return ee;
+      const Me = (null === be || void 0 === be ? void 0 : be.scopeSpans) || [],
+        Ke = (null === ie || void 0 === ie || null === (ye = ie[0]) || void 0 === ye ? void 0 : ye.scopeSpans) || [];
+      return eH(eH({}, ee), {}, {
+        resourceSpans: [eH(eH({}, be), {}, {
+          scopeSpans: [...Me, ...Ke]
         })]
       })
     }
 
-    function OQ(BB) {
-      let OB = {
+    function yM(ee) {
+      let ie = {
         meta: {}
       };
-      return void 0 !== BB[0] && (OB.meta = BB[0].meta), BB.forEach((BB => {
-        switch (BB.type) {
+      return void 0 !== ee[0] && (ie.meta = ee[0].meta), ee.forEach((ee => {
+        switch (ee.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const GB = tD[BB.type],
-              YB = OB[GB];
-            OB = xO(xO({}, OB), {}, {
-              [GB]: void 0 === YB ? [BB.payload] : [...YB, BB.payload]
+            const He = iM[ee.type],
+              ye = ie[He];
+            ie = eH(eH({}, ie), {}, {
+              [He]: void 0 === ye ? [ee.payload] : [...ye, ee.payload]
             });
             break
           }
           case "trace":
-            OB = xO(xO({}, OB), {}, {
-              traces: BQ(OB.traces, BB.payload.resourceSpans)
+            ie = eH(eH({}, ie), {}, {
+              traces: HM(ie.traces, ee.payload.resourceSpans)
             })
         }
-      })), OB
+      })), ie
     }
-    var GQ = class extends sD {
+    var bM = class extends Qb {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = BB, this.name = "@grafana/faro-web-sdk:transport-console", this.version = GG
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = ee, this.name = "@grafana/faro-web-sdk:transport-console", this.version = bH
       }
-      send(BB) {
-        var OB;
-        return this.unpatchedConsole[null !== (OB = this.options.level) && void 0 !== OB ? OB : WG.DEBUG]("New event", OQ([BB]))
+      send(ee) {
+        var ie;
+        return this.unpatchedConsole[null !== (ie = this.options.level) && void 0 !== ie ? ie : gH.DEBUG]("New event", yM([ee]))
       }
     };
-    const YQ = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      DQ = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      QQ = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      oQ = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      jQ = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      yQ = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const MM = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      KM = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      UM = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      FM = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      JM = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      oM = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function JQ(BB) {
+    function RM(ee) {
       let {
-        weekday: OB,
-        day: GB,
-        month: YB,
-        year: DB,
-        hour: QB,
-        minute: oB,
-        second: jB
-      } = BB;
-      if (DB < 1900 || GB < 1 || QB > 23 || oB > 59 || jB > 60) return;
-      const yB = 60 === jB,
-        JB = new Date(0);
-      return JB.setUTCFullYear(DB, YB, GB), JB.setUTCHours(QB, oB, yB ? 59 : jB, 0), JB.getUTCDay() === OB && JB.getUTCDate() === GB && JB.getUTCMonth() === YB && JB.getUTCFullYear() === DB && JB.getUTCHours() === QB && JB.getUTCMinutes() === oB && JB.getUTCSeconds() === (yB ? 59 : jB) ? JB.getTime() + (yB ? 1e3 : 0) : void 0
+        weekday: ie,
+        day: He,
+        month: ye,
+        year: be,
+        hour: Me,
+        minute: Ke,
+        second: Ue
+      } = ee;
+      if (be < 1900 || He < 1 || Me > 23 || Ke > 59 || Ue > 60) return;
+      const Fe = 60 === Ue,
+        Je = new Date(0);
+      return Je.setUTCFullYear(be, ye, He), Je.setUTCHours(Me, Ke, Fe ? 59 : Ue, 0), Je.getUTCDay() === ie && Je.getUTCDate() === He && Je.getUTCMonth() === ye && Je.getUTCFullYear() === be && Je.getUTCHours() === Me && Je.getUTCMinutes() === Ke && Je.getUTCSeconds() === (Fe ? 59 : Ue) ? Je.getTime() + (Fe ? 1e3 : 0) : void 0
     }
-    var MQ = class {
-      constructor(BB) {
-        this.options = BB, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var kM = class {
+      constructor(ee) {
+        this.options = ee, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var BB = this;
+        var ee = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const OB = this.sequence++;
-        let GB = !1;
+        const ie = this.sequence++;
+        let He = !1;
         return {
           deliver: function() {
-            var GB = eY((function*(GB) {
-              const YB = BB.options.getNow();
-              let DB, QB = 0;
+            var He = sy((function*(He) {
+              const ye = ee.options.getNow();
+              let be, Me = 0;
               for (;;) {
-                var oB, jB, yB;
-                const JB = BB.options.retry.maxAttempts - QB,
-                  MB = yield BB.runAttempt((() => GB(JB, BB.unloading)), QB > 0);
-                if (QB += MB.attemptsMade, "success" === MB.kind) return {
+                var Ke, Ue, Fe;
+                const Je = ee.options.retry.maxAttempts - Me,
+                  oe = yield ee.runAttempt((() => He(Je, ee.unloading)), Me > 0);
+                if (Me += oe.attemptsMade, "success" === oe.kind) return {
                   kind: "success",
-                  attempts: QB,
-                  elapsedTimeMs: BB.options.getNow() - YB
+                  attempts: Me,
+                  elapsedTimeMs: ee.options.getNow() - ye
                 };
-                if (DB = MB.failure, "terminal" === MB.kind || BB.unloading) return {
+                if (be = oe.failure, "terminal" === oe.kind || ee.unloading) return {
                   kind: "terminal",
-                  attempts: QB,
-                  elapsedTimeMs: BB.options.getNow() - YB,
-                  failure: DB
+                  attempts: Me,
+                  elapsedTimeMs: ee.options.getNow() - ye,
+                  failure: be
                 };
-                if (QB >= BB.options.retry.maxAttempts) return {
+                if (Me >= ee.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: QB,
-                  elapsedTimeMs: BB.options.getNow() - YB,
-                  failure: DB,
+                  attempts: Me,
+                  elapsedTimeMs: ee.options.getNow() - ye,
+                  failure: be,
                   reason: "retries-exhausted"
                 };
-                if (null != MB.retryAfterMs && MB.retryAfterMs > BB.options.retry.maxBackoffMs) return {
+                if (null != oe.retryAfterMs && oe.retryAfterMs > ee.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: QB,
-                  elapsedTimeMs: BB.options.getNow() - YB,
-                  failure: DB,
+                  attempts: Me,
+                  elapsedTimeMs: ee.options.getNow() - ye,
+                  failure: be,
                   reason: "retry-after-too-long"
                 };
-                const PB = Math.min(null !== (oB = MB.retryAfterMs) && void 0 !== oB ? oB : BB.options.retry.initialBackoffMs * Math.pow(BB.options.retry.backoffMultiplier, QB - 1), BB.options.retry.maxBackoffMs);
-                if (null === (jB = (yB = BB.options).onRetry) || void 0 === jB || jB.call(yB, PB, QB + 1), yield BB.waitForTurn(OB, PB)) {
-                  const OB = BB.options.retry.maxAttempts - QB,
-                    DB = yield BB.runAttempt((() => GB(OB, !0)));
-                  return QB += DB.attemptsMade, {
-                    kind: "success" === DB.kind ? "success" : "terminal",
-                    attempts: QB,
-                    elapsedTimeMs: BB.options.getNow() - YB,
-                    failure: "success" === DB.kind ? void 0 : DB.failure
+                const Re = Math.min(null !== (Ke = oe.retryAfterMs) && void 0 !== Ke ? Ke : ee.options.retry.initialBackoffMs * Math.pow(ee.options.retry.backoffMultiplier, Me - 1), ee.options.retry.maxBackoffMs);
+                if (null === (Ue = (Fe = ee.options).onRetry) || void 0 === Ue || Ue.call(Fe, Re, Me + 1), yield ee.waitForTurn(ie, Re)) {
+                  const ie = ee.options.retry.maxAttempts - Me,
+                    be = yield ee.runAttempt((() => He(ie, !0)));
+                  return Me += be.attemptsMade, {
+                    kind: "success" === be.kind ? "success" : "terminal",
+                    attempts: Me,
+                    elapsedTimeMs: ee.options.getNow() - ye,
+                    failure: "success" === be.kind ? void 0 : be.failure
                   }
                 }
               }
             }));
-            return function(BB) {
-              return GB.apply(this, arguments)
+            return function(ee) {
+              return He.apply(this, arguments)
             }
           }(),
           release: () => {
-            GB || (GB = !0, this.admitted--)
+            He || (He = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const BB = this.waiting.splice(0);
+        const ee = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const OB of BB) OB.resolve(!0);
+        for (const ie of ee) ie.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((GB, YB) => {
+      runAttempt(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((He, ye) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const OB = () => {
+              const ie = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              BB().then((BB => {
-                OB(), GB(BB)
-              }), (BB => {
-                OB(), YB(BB)
+              ee().then((ee => {
+                ie(), He(ee)
+              }), (ee => {
+                ie(), ye(ee)
               }))
             },
-            isRedelivery: OB
+            isRedelivery: ie
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const BB = this.options.getNow(),
-            OB = this.attemptQueue.findIndex((OB => {
+          const ee = this.options.getNow(),
+            ie = this.attemptQueue.findIndex((ie => {
               let {
-                isRedelivery: GB
-              } = OB;
-              return this.unloading || !GB || BB >= this.nextSendAt
+                isRedelivery: He
+              } = ie;
+              return this.unloading || !He || ee >= this.nextSendAt
             }));
-          if (OB < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (ie < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - BB)));
-          const [GB] = this.attemptQueue.splice(OB, 1);
-          GB.isRedelivery && !this.unloading && (this.nextSendAt = BB + 1), GB.run()
+          }), Math.max(0, this.nextSendAt - ee)));
+          const [He] = this.attemptQueue.splice(ie, 1);
+          He.isRedelivery && !this.unloading && (this.nextSendAt = ee + 1), He.run()
         }
       }
-      waitForTurn(BB, OB) {
-        const GB = Math.min(OB * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((OB => {
+      waitForTurn(ee, ie) {
+        const He = Math.min(ie * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((ie => {
           this.waiting.push({
-            sequence: BB,
-            readyAt: this.options.getNow() + GB,
-            resolve: OB
-          }), this.waiting.sort(((BB, OB) => BB.readyAt === OB.readyAt ? BB.sequence - OB.sequence : BB.readyAt - OB.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: ee,
+            readyAt: this.options.getNow() + He,
+            resolve: ie
+          }), this.waiting.sort(((ee, ie) => ee.readyAt === ie.readyAt ? ee.sequence - ie.sequence : ee.readyAt - ie.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const BB = this.waiting[0],
-          OB = BB.readyAt;
+        const ee = this.waiting[0],
+          ie = ee.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const OB = this.waiting.indexOf(BB);
-          OB >= 0 && this.waiting.splice(OB, 1), BB.resolve(!1), this.scheduleNext()
-        }), Math.max(0, OB - this.options.getNow()))
+          const ie = this.waiting.indexOf(ee);
+          ie >= 0 && this.waiting.splice(ie, 1), ee.resolve(!1), this.scheduleNext()
+        }), Math.max(0, ie - this.options.getNow()))
       }
     };
 
-    function PQ(BB, OB) {
-      if (null == BB) return {};
-      var GB, YB, DB = function(BB, OB) {
-        if (null == BB) return {};
-        var GB = {};
-        for (var YB in BB)
-          if ({}.hasOwnProperty.call(BB, YB)) {
-            if (OB.includes(YB)) continue;
-            GB[YB] = BB[YB]
-          } return GB
-      }(BB, OB);
+    function qM(ee, ie) {
+      if (null == ee) return {};
+      var He, ye, be = function(ee, ie) {
+        if (null == ee) return {};
+        var He = {};
+        for (var ye in ee)
+          if ({}.hasOwnProperty.call(ee, ye)) {
+            if (ie.includes(ye)) continue;
+            He[ye] = ee[ye]
+          } return He
+      }(ee, ie);
       if (Object.getOwnPropertySymbols) {
-        var QB = Object.getOwnPropertySymbols(BB);
-        for (YB = 0; YB < QB.length; YB++) GB = QB[YB], OB.includes(GB) || {}.propertyIsEnumerable.call(BB, GB) && (DB[GB] = BB[GB])
+        var Me = Object.getOwnPropertySymbols(ee);
+        for (ye = 0; ye < Me.length; ye++) He = Me[ye], ie.includes(He) || {}.propertyIsEnumerable.call(ee, He) && (be[He] = ee[He])
       }
-      return DB
+      return be
     }
 
-    function zQ(BB) {
+    function fM(ee) {
       const {
-        size: OB,
-        concurrency: GB
-      } = BB, YB = [];
-      let DB = 0;
-      const QB = () => {
-        if (DB < GB && YB.length) {
+        size: ie,
+        concurrency: He
+      } = ee, ye = [];
+      let be = 0;
+      const Me = () => {
+        if (be < He && ye.length) {
           const {
-            producer: BB,
-            resolve: OB,
-            reject: GB
-          } = YB.shift();
-          DB++, BB().then((BB => {
-            DB--, QB(), OB(BB)
-          }), (BB => {
-            DB--, QB(), GB(BB)
+            producer: ee,
+            resolve: ie,
+            reject: He
+          } = ye.shift();
+          be++, ee().then((ee => {
+            be--, Me(), ie(ee)
+          }), (ee => {
+            be--, Me(), He(ee)
           }))
         }
       };
       return {
-        add: BB => {
-          if (YB.length + DB >= OB) throw new Error("Task buffer full");
-          return new Promise(((OB, GB) => {
-            YB.push({
-              producer: BB,
-              resolve: OB,
-              reject: GB
-            }), QB()
+        add: ee => {
+          if (ye.length + be >= ie) throw new Error("Task buffer full");
+          return new Promise(((ie, He) => {
+            ye.push({
+              producer: ee,
+              resolve: ie,
+              reject: He
+            }), Me()
           }))
         }
       }
     }
-    const lQ = ["headers"],
-      pQ = ["keepalive", "signal"],
-      qQ = new Set([408, 425, 429, 500, 502, 503, 504]),
-      ZQ = new Set([429, 503]);
-    let NQ = 0,
-      RQ = 0;
-    var WQ = class extends Error {};
-    var AQ = class extends sD {
-      constructor(BB) {
-        var OB, GB, YB, DB, QB, oB, jB, yB, JB, MB, PB, zB, lB, pB, qB, ZB, NB;
-        super(), this.options = BB, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = GG, this.pendingCustomSends = 0, this.getNow = null !== (OB = BB.getNow) && void 0 !== OB ? OB : Date.now, this.requestTimeoutMs = null !== (GB = BB.requestTimeoutMs) && void 0 !== GB ? GB : 1e4, this.compressionEnabled = null !== (YB = BB.requestCompression) && void 0 !== YB && YB && "undefined" !== typeof CompressionStream, BB.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new MQ({
-          bufferSize: null !== (DB = BB.bufferSize) && void 0 !== DB ? DB : 30,
-          concurrency: null !== (QB = BB.concurrency) && void 0 !== QB ? QB : 5,
+    const TM = ["headers"],
+      pM = ["keepalive", "signal"],
+      XM = new Set([408, 425, 429, 500, 502, 503, 504]),
+      zM = new Set([429, 503]);
+    let BM = 0,
+      EM = 0;
+    var gM = class extends Error {};
+    var OM = class extends Qb {
+      constructor(ee) {
+        var ie, He, ye, be, Me, Ke, Ue, Fe, Je, oe, Re, ke, qe, fe, Te, pe, Xe;
+        super(), this.options = ee, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = bH, this.pendingCustomSends = 0, this.getNow = null !== (ie = ee.getNow) && void 0 !== ie ? ie : Date.now, this.requestTimeoutMs = null !== (He = ee.requestTimeoutMs) && void 0 !== He ? He : 1e4, this.compressionEnabled = null !== (ye = ee.requestCompression) && void 0 !== ye && ye && "undefined" !== typeof CompressionStream, ee.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new kM({
+          bufferSize: null !== (be = ee.bufferSize) && void 0 !== be ? be : 30,
+          concurrency: null !== (Me = ee.concurrency) && void 0 !== Me ? Me : 5,
           retry: {
-            maxAttempts: null !== (oB = null === (jB = BB.retry) || void 0 === jB ? void 0 : jB.maxAttempts) && void 0 !== oB ? oB : 3,
-            initialBackoffMs: null !== (yB = null !== (JB = null === (MB = BB.retry) || void 0 === MB ? void 0 : MB.initialBackoffMs) && void 0 !== JB ? JB : BB.defaultRateLimitBackoffMs) && void 0 !== yB ? yB : 1e3,
-            maxBackoffMs: null !== (PB = null === (zB = BB.retry) || void 0 === zB ? void 0 : zB.maxBackoffMs) && void 0 !== PB ? PB : 3e4,
-            backoffMultiplier: null !== (lB = null === (pB = BB.retry) || void 0 === pB ? void 0 : pB.backoffMultiplier) && void 0 !== lB ? lB : 2
+            maxAttempts: null !== (Ke = null === (Ue = ee.retry) || void 0 === Ue ? void 0 : Ue.maxAttempts) && void 0 !== Ke ? Ke : 3,
+            initialBackoffMs: null !== (Fe = null !== (Je = null === (oe = ee.retry) || void 0 === oe ? void 0 : oe.initialBackoffMs) && void 0 !== Je ? Je : ee.defaultRateLimitBackoffMs) && void 0 !== Fe ? Fe : 1e3,
+            maxBackoffMs: null !== (Re = null === (ke = ee.retry) || void 0 === ke ? void 0 : ke.maxBackoffMs) && void 0 !== Re ? Re : 3e4,
+            backoffMultiplier: null !== (qe = null === (fe = ee.retry) || void 0 === fe ? void 0 : fe.backoffMultiplier) && void 0 !== qe ? qe : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (qB = BB.getRandom) && void 0 !== qB ? qB : Math.random,
-          onRetry: (BB, OB) => {
-            this.logDebug(`Retrying failed request after ${BB}ms. Attempt ${OB}.`)
+          getRandom: null !== (Te = ee.getRandom) && void 0 !== Te ? Te : Math.random,
+          onRetry: (ee, ie) => {
+            this.logDebug(`Retrying failed request after ${ee}ms. Attempt ${ie}.`)
           }
-        }), this.customPromiseBuffer = zQ({
-          size: null !== (ZB = BB.bufferSize) && void 0 !== ZB ? ZB : 30,
-          concurrency: null !== (NB = BB.concurrency) && void 0 !== NB ? NB : 5
+        }), this.customPromiseBuffer = fM({
+          size: null !== (pe = ee.bufferSize) && void 0 !== pe ? pe : 30,
+          concurrency: null !== (Xe = ee.concurrency) && void 0 !== Xe ? Xe : 5
         }), this.defaultPromiseBuffer = {
-          add: BB => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(BB);
-            const OB = this.deliveryQueue.reserve();
-            if (!OB) throw new Error("Task buffer full");
-            return this.runBufferedTask(OB, BB)
+          add: ee => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(ee);
+            const ie = this.deliveryQueue.reserve();
+            if (!ie) throw new Error("Task buffer full");
+            return this.runBufferedTask(ie, ee)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (BB => {
-          BB.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (ee => {
+          ee.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(BB) {
-        var OB = this;
-        return eY((function*() {
-          const GB = OB.promiseBuffer;
-          if (GB !== OB.defaultPromiseBuffer || GB.add !== OB.defaultBufferAdd) {
-            OB.pendingCustomSends++;
+      send(ee) {
+        var ie = this;
+        return sy((function*() {
+          const He = ie.promiseBuffer;
+          if (He !== ie.defaultPromiseBuffer || He.add !== ie.defaultBufferAdd) {
+            ie.pendingCustomSends++;
             try {
-              yield GB.add((() => OB.deliver(BB)))
-            } catch (YB) {
-              OB.logError("Permanent delivery failure", {
-                error: YB,
+              yield He.add((() => ie.deliver(ee)))
+            } catch (ye) {
+              ie.logError("Permanent delivery failure", {
+                error: ye,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              OB.pendingCustomSends--
+              ie.pendingCustomSends--
             }
-          } else yield OB.deliver(BB)
+          } else yield ie.deliver(ee)
         }))()
       }
-      runBufferedTask(BB, OB) {
-        return eY((function*() {
-          let GB;
+      runBufferedTask(ee, ie) {
+        return sy((function*() {
+          let He;
           try {
-            return yield BB.deliver(eY((function*() {
-              return GB = yield OB(), {
+            return yield ee.deliver(sy((function*() {
+              return He = yield ie(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), GB
+            }))), He
           } finally {
-            BB.release()
+            ee.release()
           }
         }))()
       }
-      deliver(BB) {
-        var OB = this;
-        return eY((function*() {
-          const GB = OB.deliveryQueue.reserve();
-          if (GB) try {
-            const YB = yield OB.prepareRequest(BB), DB = yield GB.deliver(((BB, GB) => OB.performAttempt(YB, BB, GB)));
-            "terminal" === DB.kind && OB.logError("retries-exhausted" === DB.reason ? "Delivery retries exhausted" : "Permanent delivery failure", MO(MO({}, DB.failure), {}, {
-              reason: DB.reason,
-              attempts: DB.attempts,
-              elapsedTimeMs: DB.elapsedTimeMs
+      deliver(ee) {
+        var ie = this;
+        return sy((function*() {
+          const He = ie.deliveryQueue.reserve();
+          if (He) try {
+            const ye = yield ie.prepareRequest(ee), be = yield He.deliver(((ee, He) => ie.performAttempt(ye, ee, He)));
+            "terminal" === be.kind && ie.logError("retries-exhausted" === be.reason ? "Delivery retries exhausted" : "Permanent delivery failure", oi(oi({}, be.failure), {}, {
+              reason: be.reason,
+              attempts: be.attempts,
+              elapsedTimeMs: be.elapsedTimeMs
             }))
-          } catch (YB) {
-            OB.logError("Permanent delivery failure", {
-              error: YB,
+          } catch (ye) {
+            ie.logError("Permanent delivery failure", {
+              error: ye,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            GB.release()
-          } else OB.logError("Permanent delivery failure", {
+            He.release()
+          } else ie.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var BB;
-        return [this.options.url].concat(null !== (BB = this.config.ignoreUrls) && void 0 !== BB ? BB : [])
+        var ee;
+        return [this.options.url].concat(null !== (ee = this.config.ignoreUrls) && void 0 !== ee ? ee : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(BB) {
-        var OB = this;
-        return eY((function*() {
-          var GB, YB;
-          const DB = OQ(BB),
-            QB = null === (GB = DB.meta.session) || void 0 === GB ? void 0 : GB.id,
-            oB = JSON.stringify(DB),
-            jB = null !== (YB = OB.options.requestOptions) && void 0 !== YB ? YB : {},
+      prepareRequest(ee) {
+        var ie = this;
+        return sy((function*() {
+          var He, ye;
+          const be = yM(ee),
+            Me = null === (He = be.meta.session) || void 0 === He ? void 0 : He.id,
+            Ke = JSON.stringify(be),
+            Ue = null !== (ye = ie.options.requestOptions) && void 0 !== ye ? ye : {},
             {
-              headers: yB = {}
-            } = jB,
-            JB = PQ(jB, lQ),
+              headers: Fe = {}
+            } = Ue,
+            Je = qM(Ue, TM),
             {
-              keepalive: MB,
-              signal: PB
-            } = JB,
-            zB = PQ(JB, pQ),
-            lB = {};
-          for (const [BB, OB] of Object.entries(yB)) lB[BB] = "function" === typeof OB ? yield OB(): OB;
-          let pB = oB,
-            qB = function(BB) {
-              return "undefined" === typeof TextEncoder ? BB.length : (new TextEncoder).encode(BB).byteLength
-            }(oB);
-          const ZB = {};
-          return OB.compressionEnabled && (pB = yield OB.compress(oB), qB = pB.size, ZB["Content-Encoding"] = "gzip"), {
-            bodySize: qB,
-            sessionId: QB,
-            requestInit: MO({
+              keepalive: oe,
+              signal: Re
+            } = Je,
+            ke = qM(Je, pM),
+            qe = {};
+          for (const [ee, ie] of Object.entries(Fe)) qe[ee] = "function" === typeof ie ? yield ie(): ie;
+          let fe = Ke,
+            Te = function(ee) {
+              return "undefined" === typeof TextEncoder ? ee.length : (new TextEncoder).encode(ee).byteLength
+            }(Ke);
+          const pe = {};
+          return ie.compressionEnabled && (fe = yield ie.compress(Ke), Te = fe.size, pe["Content-Encoding"] = "gzip"), {
+            bodySize: Te,
+            sessionId: Me,
+            requestInit: oi({
               method: "POST",
-              headers: MO(MO(MO(MO(MO({
+              headers: oi(oi(oi(oi(oi({
                 "Content-Type": "application/json"
-              }, ZB), lB), OB.options.apiKey ? {
-                "x-api-key": OB.options.apiKey
-              } : {}), QB ? {
-                "x-faro-session-id": QB
+              }, pe), qe), ie.options.apiKey ? {
+                "x-api-key": ie.options.apiKey
+              } : {}), Me ? {
+                "x-faro-session-id": Me
               } : {}), {}, {
-                "Idempotency-Key": NO(20)
+                "Idempotency-Key": zi(20)
               }),
-              body: pB
-            }, zB)
+              body: fe
+            }, ke)
           }
         }))()
       }
-      performAttempt(BB, OB, GB) {
-        var YB = this;
-        return eY((function*() {
-          var DB;
-          const QB = null === (DB = YB.options.requestOptions) || void 0 === DB ? void 0 : DB.signal;
-          if (null === QB || void 0 === QB ? void 0 : QB.aborted) return {
+      performAttempt(ee, ie, He) {
+        var ye = this;
+        return sy((function*() {
+          var be;
+          const Me = null === (be = ye.options.requestOptions) || void 0 === be ? void 0 : be.signal;
+          if (null === Me || void 0 === Me ? void 0 : Me.aborted) return {
             kind: "terminal",
             failure: {
-              error: QB.reason
+              error: Me.reason
             },
             attemptsMade: 0
           };
-          let oB = 0;
+          let Ke = 0;
           try {
-            var jB;
-            const DB = yield YB.fetchWithKeepaliveFallback(BB.requestInit, BB.bodySize, !!GB || (null === (jB = YB.options.requestOptions) || void 0 === jB ? void 0 : jB.keepalive), OB, (() => oB++));
-            if (YB.handleResponse(DB, BB.sessionId), DB.status >= 200 && DB.status < 300) return {
+            var Ue;
+            const be = yield ye.fetchWithKeepaliveFallback(ee.requestInit, ee.bodySize, !!He || (null === (Ue = ye.options.requestOptions) || void 0 === Ue ? void 0 : Ue.keepalive), ie, (() => Ke++));
+            if (ye.handleResponse(be, ee.sessionId), be.status >= 200 && be.status < 300) return {
               kind: "success",
-              attemptsMade: oB
+              attemptsMade: Ke
             };
-            const QB = {
-              status: DB.status
+            const Me = {
+              status: be.status
             };
-            return !qQ.has(DB.status) || GB ? {
+            return !XM.has(be.status) || He ? {
               kind: "terminal",
-              failure: QB,
-              attemptsMade: oB
+              failure: Me,
+              attemptsMade: Ke
             } : {
               kind: "retry",
-              failure: QB,
-              attemptsMade: oB,
-              retryAfterMs: ZQ.has(DB.status) ? YB.getRetryAfterDelayMs(DB) : void 0
+              failure: Me,
+              attemptsMade: Ke,
+              retryAfterMs: zM.has(be.status) ? ye.getRetryAfterDelayMs(be) : void 0
             }
-          } catch (yB) {
-            const BB = {
-              error: yB
+          } catch (Fe) {
+            const ee = {
+              error: Fe
             };
-            return (null === QB || void 0 === QB ? void 0 : QB.aborted) || !YB.isFetchNetworkError(yB) || GB ? {
+            return (null === Me || void 0 === Me ? void 0 : Me.aborted) || !ye.isFetchNetworkError(Fe) || He ? {
               kind: "terminal",
-              failure: BB,
-              attemptsMade: oB
+              failure: ee,
+              attemptsMade: Ke
             } : {
               kind: "retry",
-              failure: BB,
-              attemptsMade: oB
+              failure: ee,
+              attemptsMade: Ke
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(BB, OB, GB, YB, DB) {
-        var QB = this;
-        return eY((function*() {
-          const oB = QB.getNow(),
-            jB = QB.reserveKeepalive(OB, GB);
+      fetchWithKeepaliveFallback(ee, ie, He, ye, be) {
+        var Me = this;
+        return sy((function*() {
+          const Ke = Me.getNow(),
+            Ue = Me.reserveKeepalive(ie, He);
           try {
-            return yield QB.fetchWithTimeout(MO(MO({}, BB), {}, {
-              keepalive: jB.keepalive
-            }), QB.requestTimeoutMs, DB)
-          } catch (JB) {
-            var yB;
-            if (jB.keepalive && YB > 1 && QB.isFetchNetworkError(JB) && !(JB instanceof WQ) && !(null === (yB = QB.options.requestOptions) || void 0 === yB || null === (yB = yB.signal) || void 0 === yB ? void 0 : yB.aborted)) {
-              QB.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const OB = QB.requestTimeoutMs - (QB.getNow() - oB);
-              return QB.fetchWithTimeout(MO(MO({}, BB), {}, {
+            return yield Me.fetchWithTimeout(oi(oi({}, ee), {}, {
+              keepalive: Ue.keepalive
+            }), Me.requestTimeoutMs, be)
+          } catch (Je) {
+            var Fe;
+            if (Ue.keepalive && ye > 1 && Me.isFetchNetworkError(Je) && !(Je instanceof gM) && !(null === (Fe = Me.options.requestOptions) || void 0 === Fe || null === (Fe = Fe.signal) || void 0 === Fe ? void 0 : Fe.aborted)) {
+              Me.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const ie = Me.requestTimeoutMs - (Me.getNow() - Ke);
+              return Me.fetchWithTimeout(oi(oi({}, ee), {}, {
                 keepalive: !1
-              }), OB, DB)
+              }), ie, be)
             }
-            throw JB
+            throw Je
           } finally {
-            jB.release()
+            Ue.release()
           }
         }))()
       }
-      fetchWithTimeout(BB, OB, GB) {
-        var YB = this;
-        return eY((function*() {
-          var DB;
-          const QB = null === (DB = YB.options.requestOptions) || void 0 === DB ? void 0 : DB.signal;
-          if (YB.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return GB(), fetch(YB.options.url, MO(MO({}, BB), {}, {
-            signal: QB
+      fetchWithTimeout(ee, ie, He) {
+        var ye = this;
+        return sy((function*() {
+          var be;
+          const Me = null === (be = ye.options.requestOptions) || void 0 === be ? void 0 : be.signal;
+          if (ye.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return He(), fetch(ye.options.url, oi(oi({}, ee), {}, {
+            signal: Me
           }));
-          if (OB <= 0) throw new WQ("Request timed out");
-          const oB = new AbortController,
-            jB = () => oB.abort(null === QB || void 0 === QB ? void 0 : QB.reason);
-          null === QB || void 0 === QB || QB.addEventListener("abort", jB, {
+          if (ie <= 0) throw new gM("Request timed out");
+          const Ke = new AbortController,
+            Ue = () => Ke.abort(null === Me || void 0 === Me ? void 0 : Me.reason);
+          null === Me || void 0 === Me || Me.addEventListener("abort", Ue, {
             once: !0
           });
-          let yB = !1;
-          const JB = setTimeout((() => {
-            yB = !0, oB.abort()
-          }), OB);
+          let Fe = !1;
+          const Je = setTimeout((() => {
+            Fe = !0, Ke.abort()
+          }), ie);
           try {
-            return GB(), yield fetch(YB.options.url, MO(MO({}, BB), {}, {
-              signal: oB.signal
+            return He(), yield fetch(ye.options.url, oi(oi({}, ee), {}, {
+              signal: Ke.signal
             }))
-          } catch (MB) {
-            if (yB && !(null === QB || void 0 === QB ? void 0 : QB.aborted)) throw new WQ("Request timed out");
-            throw MB
+          } catch (oe) {
+            if (Fe && !(null === Me || void 0 === Me ? void 0 : Me.aborted)) throw new gM("Request timed out");
+            throw oe
           } finally {
-            clearTimeout(JB), null === QB || void 0 === QB || QB.removeEventListener("abort", jB)
+            clearTimeout(Je), null === Me || void 0 === Me || Me.removeEventListener("abort", Ue)
           }
         }))()
       }
-      getRetryAfterDelayMs(BB) {
-        const OB = BB.headers.get("Retry-After");
-        if (!OB) return;
-        if (/^\d+$/.test(OB)) {
-          const BB = 1e3 * Number(OB);
-          return Number.isFinite(BB) ? BB : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(ee) {
+        const ie = ee.headers.get("Retry-After");
+        if (!ie) return;
+        if (/^\d+$/.test(ie)) {
+          const ee = 1e3 * Number(ie);
+          return Number.isFinite(ee) ? ee : Number.POSITIVE_INFINITY
         }
-        const GB = this.getNow(),
-          YB = function(BB, OB) {
-            const GB = YQ.exec(BB);
-            if (GB) {
-              const [, BB, OB, YB, DB, QB, oB, jB] = GB;
-              return JQ({
-                weekday: oQ.indexOf(BB),
-                day: Number(OB),
-                month: yQ.indexOf(YB),
-                year: Number(DB),
-                hour: Number(QB),
-                minute: Number(oB),
-                second: Number(jB)
+        const He = this.getNow(),
+          ye = function(ee, ie) {
+            const He = MM.exec(ee);
+            if (He) {
+              const [, ee, ie, ye, be, Me, Ke, Ue] = He;
+              return RM({
+                weekday: FM.indexOf(ee),
+                day: Number(ie),
+                month: oM.indexOf(ye),
+                year: Number(be),
+                hour: Number(Me),
+                minute: Number(Ke),
+                second: Number(Ue)
               })
             }
-            const YB = DQ.exec(BB);
-            if (YB) {
-              const [, BB, GB, oB, jB, yB, JB, MB] = YB, PB = new Date(OB);
-              if (Number.isNaN(PB.getTime())) return;
-              const zB = PB.getUTCFullYear();
-              let lB = 100 * Math.floor(zB / 100) + Number(jB);
-              lB < zB && (lB += 100);
-              const pB = yQ.indexOf(oB),
-                qB = {
-                  month: pB,
-                  day: Number(GB),
-                  hour: Number(yB),
-                  minute: Number(JB),
-                  second: Number(MB),
+            const ye = KM.exec(ee);
+            if (ye) {
+              const [, ee, He, Ke, Ue, Fe, Je, oe] = ye, Re = new Date(ie);
+              if (Number.isNaN(Re.getTime())) return;
+              const ke = Re.getUTCFullYear();
+              let qe = 100 * Math.floor(ke / 100) + Number(Ue);
+              qe < ke && (qe += 100);
+              const fe = oM.indexOf(Ke),
+                Te = {
+                  month: fe,
+                  day: Number(He),
+                  hour: Number(Fe),
+                  minute: Number(Je),
+                  second: Number(oe),
                   millisecond: 0
                 },
-                ZB = {
-                  month: PB.getUTCMonth(),
-                  day: PB.getUTCDate(),
-                  hour: PB.getUTCHours(),
-                  minute: PB.getUTCMinutes(),
-                  second: PB.getUTCSeconds(),
-                  millisecond: PB.getUTCMilliseconds()
+                pe = {
+                  month: Re.getUTCMonth(),
+                  day: Re.getUTCDate(),
+                  hour: Re.getUTCHours(),
+                  minute: Re.getUTCMinutes(),
+                  second: Re.getUTCSeconds(),
+                  millisecond: Re.getUTCMilliseconds()
                 };
-              return (lB > zB + 50 || lB === zB + 50 && (QB = ZB, ((DB = qB).month - QB.month || DB.day - QB.day || DB.hour - QB.hour || DB.minute - QB.minute || DB.second - QB.second || DB.millisecond - QB.millisecond) > 0)) && (lB -= 100), JQ({
-                weekday: jQ.indexOf(BB),
-                day: Number(GB),
-                month: pB,
-                year: lB,
-                hour: Number(yB),
-                minute: Number(JB),
-                second: Number(MB)
+              return (qe > ke + 50 || qe === ke + 50 && (Me = pe, ((be = Te).month - Me.month || be.day - Me.day || be.hour - Me.hour || be.minute - Me.minute || be.second - Me.second || be.millisecond - Me.millisecond) > 0)) && (qe -= 100), RM({
+                weekday: JM.indexOf(ee),
+                day: Number(He),
+                month: fe,
+                year: qe,
+                hour: Number(Fe),
+                minute: Number(Je),
+                second: Number(oe)
               })
             }
-            var DB, QB;
-            const oB = QQ.exec(BB);
-            if (!oB) return;
-            const [, jB, yB, JB, MB, PB, zB, lB, pB] = oB;
-            return JQ({
-              weekday: oQ.indexOf(jB),
-              day: Number(null !== JB && void 0 !== JB ? JB : MB),
-              month: yQ.indexOf(yB),
-              year: Number(pB),
-              hour: Number(PB),
-              minute: Number(zB),
-              second: Number(lB)
+            var be, Me;
+            const Ke = UM.exec(ee);
+            if (!Ke) return;
+            const [, Ue, Fe, Je, oe, Re, ke, qe, fe] = Ke;
+            return RM({
+              weekday: FM.indexOf(Ue),
+              day: Number(null !== Je && void 0 !== Je ? Je : oe),
+              month: oM.indexOf(Fe),
+              year: Number(fe),
+              hour: Number(Re),
+              minute: Number(ke),
+              second: Number(qe)
             })
-          }(OB, GB);
-        return null == YB ? void 0 : Math.max(0, YB - GB)
+          }(ie, He);
+        return null == ye ? void 0 : Math.max(0, ye - He)
       }
-      reserveKeepalive(BB, OB) {
-        if (!1 === OB || BB > 6e4 || NQ + BB > 6e4 || RQ >= 9) return {
+      reserveKeepalive(ee, ie) {
+        if (!1 === ie || ee > 6e4 || BM + ee > 6e4 || EM >= 9) return {
           keepalive: !1,
-          release: aO
+          release: ni
         };
-        NQ += BB, RQ++;
-        let GB = !1;
+        BM += ee, EM++;
+        let He = !1;
         return {
           keepalive: !0,
           release: () => {
-            GB || (GB = !0, NQ -= BB, RQ--)
+            He || (He = !0, BM -= ee, EM--)
           }
         }
       }
-      handleResponse(BB, OB) {
-        202 === BB.status && "invalid" === BB.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), OB), BB.text().catch(aO)
+      handleResponse(ee, ie) {
+        202 === ee.status && "invalid" === ee.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), ie), ee.text().catch(ni)
       }
-      isFetchNetworkError(BB) {
-        return BB instanceof TypeError || BB instanceof WQ || BB instanceof DOMException && "AbortError" === BB.name
+      isFetchNetworkError(ee) {
+        return ee instanceof TypeError || ee instanceof gM || ee instanceof DOMException && "AbortError" === ee.name
       }
-      compress(BB) {
-        return eY((function*() {
-          const OB = [],
-            GB = new ReadableStream({
-              start(OB) {
-                OB.enqueue((new TextEncoder).encode(BB)), OB.close()
+      compress(ee) {
+        return sy((function*() {
+          const ie = [],
+            He = new ReadableStream({
+              start(ie) {
+                ie.enqueue((new TextEncoder).encode(ee)), ie.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: BB,
-              value: YB
-            } = yield GB.read();
-            if (BB) return new Blob(OB);
-            OB.push(YB)
+              done: ee,
+              value: ye
+            } = yield He.read();
+            if (ee) return new Blob(ie);
+            ie.push(ye)
           }
         }))()
       }
-      extendFaroSession(BB, OB, GB) {
-        var YB, DB;
-        const QB = BB.sessionTracking;
-        if (!(null === QB || void 0 === QB ? void 0 : QB.enabled)) return void OB("Session expired.");
+      extendFaroSession(ee, ie, He) {
+        var ye, be;
+        const Me = ee.sessionTracking;
+        if (!(null === Me || void 0 === Me ? void 0 : Me.enabled)) return void ie("Session expired.");
         const {
-          fetchUserSession: oB,
-          storeUserSession: jB
-        } = hO(QB), yB = null === (YB = this.metas.value.session) || void 0 === YB ? void 0 : YB.id, JB = null === (DB = oB()) || void 0 === DB ? void 0 : DB.sessionId;
-        GB && GB === yB && GB === JB ? (uO({
-          fetchUserSession: oB,
-          storeUserSession: jB
+          fetchUserSession: Ke,
+          storeUserSession: Ue
+        } = Si(Me), Fe = null === (ye = this.metas.value.session) || void 0 === ye ? void 0 : ye.id, Je = null === (be = Ke()) || void 0 === be ? void 0 : be.sessionId;
+        He && He === Fe && He === Je ? (Ai({
+          fetchUserSession: Ke,
+          storeUserSession: Ue
         })({
           forceSessionExtend: !0
-        }), OB("Session expired; created new session.")) : OB("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), ie("Session expired; created new session.")) : ie("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const VQ = () => {
-      const BB = window.k6;
+    const dM = () => {
+      const ee = window.k6;
       return {
-        k6: MO({
+        k6: oi({
           isK6Browser: !0
-        }, (null === BB || void 0 === BB ? void 0 : BB.testRunId) && {
-          testRunId: null === BB || void 0 === BB ? void 0 : BB.testRunId
+        }, (null === ee || void 0 === ee ? void 0 : ee.testRunId) && {
+          testRunId: null === ee || void 0 === ee ? void 0 : ee.testRunId
         })
       }
     };
-    let SQ, nQ;
+    let WM, tM;
 
-    function UQ() {
+    function ZM() {
       let {
-        generatePageId: BB,
-        initialPageMeta: OB
+        generatePageId: ee,
+        initialPageMeta: ie
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const GB = location.href;
-        return KB(BB) && SQ !== GB && (SQ = GB, nQ = BB(location)), {
-          page: MO(MO({
-            url: GB
-          }, nQ ? {
-            id: nQ
-          } : {}), OB)
+        const He = location.href;
+        return De(ee) && WM !== He && (WM = He, tM = ee(location)), {
+          page: oi(oi({
+            url: He
+          }, tM ? {
+            id: tM
+          } : {}), ie)
         }
       }
     }
 
-    function fQ() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tO,
-        OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const GB = TO;
-      return OB > 0 && (GB.error = OB >= 1 ? function() {
-        for (var OB = arguments.length, YB = new Array(OB), DB = 0; DB < OB; DB++) YB[DB] = arguments[DB];
-        BB.error(`${GB.prefix}\n`, ...YB)
-      } : aO, GB.warn = OB >= 2 ? function() {
-        for (var OB = arguments.length, YB = new Array(OB), DB = 0; DB < OB; DB++) YB[DB] = arguments[DB];
-        BB.warn(`${GB.prefix}\n`, ...YB)
-      } : aO, GB.info = OB >= 3 ? function() {
-        for (var OB = arguments.length, YB = new Array(OB), DB = 0; DB < OB; DB++) YB[DB] = arguments[DB];
-        BB.info(`${GB.prefix}\n`, ...YB)
-      } : aO, GB.debug = OB >= 4 ? function() {
-        for (var OB = arguments.length, YB = new Array(OB), DB = 0; DB < OB; DB++) YB[DB] = arguments[DB];
-        BB.debug(`${GB.prefix}\n`, ...YB)
-      } : aO), GB
+    function wM() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : iH,
+        ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const He = si;
+      return ie > 0 && (He.error = ie >= 1 ? function() {
+        for (var ie = arguments.length, ye = new Array(ie), be = 0; be < ie; be++) ye[be] = arguments[be];
+        ee.error(`${He.prefix}\n`, ...ye)
+      } : ni, He.warn = ie >= 2 ? function() {
+        for (var ie = arguments.length, ye = new Array(ie), be = 0; be < ie; be++) ye[be] = arguments[be];
+        ee.warn(`${He.prefix}\n`, ...ye)
+      } : ni, He.info = ie >= 3 ? function() {
+        for (var ie = arguments.length, ye = new Array(ie), be = 0; be < ie; be++) ye[be] = arguments[be];
+        ee.info(`${He.prefix}\n`, ...ye)
+      } : ni, He.debug = ie >= 4 ? function() {
+        for (var ie = arguments.length, ye = new Array(ie), be = 0; be < ie; be++) ye[be] = arguments[be];
+        ee.debug(`${He.prefix}\n`, ...ye)
+      } : ni), He
     }
-    const kQ = "faro",
-      dQ = {
+    const DM = "faro",
+      PM = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      KQ = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      AM = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function uQ(BB) {
-      var OB, GB, DB, QB, oB, jB;
-      const yB = [],
-        MB = fQ(BB.unpatchedConsole, BB.internalLoggerLevel);
-      BB.transports ? ((BB.url || BB.apiKey) && MB.error('if "transports" is defined, "url" and "apiKey" should not be defined'), yB.push(...BB.transports)) : BB.url ? yB.push(new AQ({
-        url: BB.url,
-        apiKey: BB.apiKey,
-        requestCompression: BB.requestCompression
-      })) : MB.error('either "url" or "transports" must be defined');
+    function YM(ee) {
+      var ie, He, be, Me, Ke, Ue;
+      const Fe = [],
+        oe = wM(ee.unpatchedConsole, ee.internalLoggerLevel);
+      ee.transports ? ((ee.url || ee.apiKey) && oe.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Fe.push(...ee.transports)) : ee.url ? Fe.push(new OM({
+        url: ee.url,
+        apiKey: ee.apiKey,
+        requestCompression: ee.requestCompression
+      })) : oe.error('either "url" or "transports" must be defined');
       const {
-        dedupe: PB = !0,
-        eventDomain: zB = YB,
-        globalObjectKey: lB = kQ,
-        instrumentations: pB = cD(),
-        internalLoggerLevel: qB = bO,
-        isolate: ZB = !1,
-        logArgsSerializer: NB = mG,
-        metas: RB = IQ(BB),
-        paused: WB = !1,
-        preventGlobalExposure: AB = !1,
-        unpatchedConsole: VB = tO,
-        url: SB,
-        experimental: nB
-      } = BB, UB = PQ(BB, KQ), fB = null !== (OB = null === nB || void 0 === nB ? void 0 : nB.trackNavigation) && void 0 !== OB && OB, kB = {
-        dataAttributeName: sY(null !== (GB = null === (DB = BB.userActionsInstrumentation) || void 0 === DB ? void 0 : DB.dataAttributeName) && void 0 !== GB ? GB : CY),
-        excludeItem: null === (QB = BB.userActionsInstrumentation) || void 0 === QB ? void 0 : QB.excludeItem,
-        initialActivityTimeout: xY(null === (oB = BB.userActionsInstrumentation) || void 0 === oB ? void 0 : oB.initialActivityTimeout, 100, (BB => MB.warn(BB)))
+        dedupe: Re = !0,
+        eventDomain: ke = ye,
+        globalObjectKey: qe = DM,
+        instrumentations: fe = Sb(),
+        internalLoggerLevel: Te = Ii,
+        isolate: pe = !1,
+        logArgsSerializer: Xe = VH,
+        metas: ze = aM(ee),
+        paused: Be = !1,
+        preventGlobalExposure: Ee = !1,
+        unpatchedConsole: ge = iH,
+        url: Oe,
+        experimental: de
+      } = ee, We = qM(ee, AM), te = null !== (ie = null === de || void 0 === de ? void 0 : de.trackNavigation) && void 0 !== ie && ie, Ze = {
+        dataAttributeName: Qy(null !== (He = null === (be = ee.userActionsInstrumentation) || void 0 === be ? void 0 : be.dataAttributeName) && void 0 !== He ? He : Ny),
+        excludeItem: null === (Me = ee.userActionsInstrumentation) || void 0 === Me ? void 0 : Me.excludeItem,
+        initialActivityTimeout: eb(null === (Ke = ee.userActionsInstrumentation) || void 0 === Ke ? void 0 : Ke.initialActivityTimeout, 100, (ee => oe.warn(ee)))
       };
-      return MO(MO({}, UB), {}, {
-        batching: MO(MO({}, dQ), BB.batching),
-        dedupe: PB,
-        globalObjectKey: lB,
-        instrumentations: mQ(pB, BB),
-        internalLoggerLevel: qB,
-        isolate: ZB,
-        logArgsSerializer: NB,
-        metas: RB,
-        parseStacktrace: qG,
-        paused: WB,
-        preventGlobalExposure: AB,
-        transports: yB,
-        unpatchedConsole: VB,
-        eventDomain: zB,
-        ignoreUrls: [...null !== (jB = BB.ignoreUrls) && void 0 !== jB ? jB : [], ...SB ? [SB] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: MO(MO(MO({}, JB), BB.sessionTracking), FQ({
-          trackGeolocation: BB.trackGeolocation,
-          sessionTracking: BB.sessionTracking
+      return oi(oi({}, We), {}, {
+        batching: oi(oi({}, PM), ee.batching),
+        dedupe: Re,
+        globalObjectKey: qe,
+        instrumentations: VM(fe, ee),
+        internalLoggerLevel: Te,
+        isolate: pe,
+        logArgsSerializer: Xe,
+        metas: ze,
+        parseStacktrace: XH,
+        paused: Be,
+        preventGlobalExposure: Ee,
+        transports: Fe,
+        unpatchedConsole: ge,
+        eventDomain: ke,
+        ignoreUrls: [...null !== (Ue = ee.ignoreUrls) && void 0 !== Ue ? Ue : [], ...Oe ? [Oe] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: oi(oi(oi({}, Je), ee.sessionTracking), cM({
+          trackGeolocation: ee.trackGeolocation,
+          sessionTracking: ee.sessionTracking
         })),
-        userActionsInstrumentation: kB,
+        userActionsInstrumentation: Ze,
         experimental: {
-          trackNavigation: fB
+          trackNavigation: te
         }
       })
     }
 
-    function mQ(BB, OB) {
+    function VM(ee, ie) {
       let {
-        experimental: GB
-      } = OB;
-      var YB;
-      const DB = null !== (YB = null === GB || void 0 === GB ? void 0 : GB.trackNavigation) && void 0 !== YB && YB;
-      return BB.filter((BB => !("@grafana/faro-web-sdk:instrumentation-navigation" === BB.name && !DB)))
+        experimental: He
+      } = ie;
+      var ye;
+      const be = null !== (ye = null === He || void 0 === He ? void 0 : He.trackNavigation) && void 0 !== ye && ye;
+      return ee.filter((ee => !("@grafana/faro-web-sdk:instrumentation-navigation" === ee.name && !be)))
     }
 
-    function IQ(BB) {
-      var OB, GB, YB;
+    function aM(ee) {
+      var ie, He, ye;
       const {
-        page: DB,
-        generatePageId: QB
-      } = null !== (OB = null === BB || void 0 === BB ? void 0 : BB.pageTracking) && void 0 !== OB ? OB : {}, oB = [bD, CD, UQ({
-        generatePageId: QB,
-        initialPageMeta: DB
-      }), ...null !== (GB = BB.metas) && void 0 !== GB ? GB : [], vD];
-      return dB(null === (YB = window) || void 0 === YB ? void 0 : YB.k6) ? [...oB, VQ] : oB
+        page: be,
+        generatePageId: Me
+      } = null !== (ie = null === ee || void 0 === ee ? void 0 : ee.pageTracking) && void 0 !== ie ? ie : {}, Ke = [hb, Nb, ZM({
+        generatePageId: Me,
+        initialPageMeta: be
+      }), ...null !== (He = ee.metas) && void 0 !== He ? He : [], rb];
+      return we(null === (ye = window) || void 0 === ye ? void 0 : ye.k6) ? [...Ke, dM] : Ke
     }
 
-    function FQ(BB) {
+    function cM(ee) {
       let {
-        trackGeolocation: OB,
-        sessionTracking: GB
-      } = BB;
-      var YB;
-      const DB = {};
-      return fB(OB) && (DB.geoLocationTrackingEnabled = OB), bB(DB) ? {} : {
-        session: MO(MO({}, null !== (YB = null === GB || void 0 === GB ? void 0 : GB.session) && void 0 !== YB ? YB : {}), {}, {
-          overrides: DB
+        trackGeolocation: ie,
+        sessionTracking: He
+      } = ee;
+      var ye;
+      const be = {};
+      return te(ie) && (be.geoLocationTrackingEnabled = ie), se(be) ? {} : {
+        session: oi(oi({}, null !== (ye = null === He || void 0 === He ? void 0 : He.session) && void 0 !== ye ? ye : {}), {}, {
+          overrides: be
         })
       }
     }
-    const iQ = new WeakSet;
+    const xM = new WeakSet;
 
-    function LQ(BB) {
-      return iQ.add(BB), BB
+    function LM(ee) {
+      return xM.add(ee), ee
     }
 
-    function gQ(BB, OB) {
-      if (BB.capture) return LQ(BB.capture(OB));
-      const GB = LQ(BB.value);
-      return null === OB || void 0 === OB || OB(), GB
+    function CM(ee, ie) {
+      if (ee.capture) return LM(ee.capture(ie));
+      const He = LM(ee.value);
+      return null === ie || void 0 === ie || ie(), He
     }
 
-    function rQ(BB) {
-      const OB = `__faroBundleId_${BB}`,
-        GB = null === MB || void 0 === MB ? void 0 : MB[OB];
-      if ("string" === typeof GB && "" !== GB) return GB;
-      const YB = "undefined" !== typeof window ? window[OB] : void 0;
-      return "string" === typeof YB && "" !== YB ? YB : void 0
+    function vM(ee) {
+      const ie = `__faroBundleId_${ee}`,
+        He = null === oe || void 0 === oe ? void 0 : oe[ie];
+      if ("string" === typeof He && "" !== He) return He;
+      const ye = "undefined" !== typeof window ? window[ie] : void 0;
+      return "string" === typeof ye && "" !== ye ? ye : void 0
     }
 
-    function XQ(BB) {
-      var OB, GB;
-      const YB = BB.config.app.name,
-        DB = YB ? function(BB) {
-          return null === MB || void 0 === MB ? void 0 : MB[`__faroGitHash_${BB}`]
-        }(YB) : void 0,
-        QB = {
+    function uM(ee) {
+      var ie, He;
+      const ye = ee.config.app.name,
+        be = ye ? function(ee) {
+          return null === oe || void 0 === oe ? void 0 : oe[`__faroGitHash_${ee}`]
+        }(ye) : void 0,
+        Me = {
           sdk: {
-            version: GG,
+            version: bH,
             name: "faro"
           },
-          app: xO({
-            bundleId: YB && rQ(YB)
-          }, void 0 !== DB ? {
-            gitHash: DB
+          app: eH({
+            bundleId: ye && vM(ye)
+          }, void 0 !== be ? {
+            gitHash: be
           } : {})
         },
-        oB = null === (OB = BB.config.sessionTracking) || void 0 === OB ? void 0 : OB.session;
-      oB && BB.api.setSession(oB), BB.config.app && (QB.app = xO(xO({}, BB.config.app), QB.app)), BB.config.user && (QB.user = BB.config.user), BB.config.view && (QB.view = BB.config.view), BB.metas.add(QB, ...null !== (GB = BB.config.metas) && void 0 !== GB ? GB : [])
+        Ke = null === (ie = ee.config.sessionTracking) || void 0 === ie ? void 0 : ie.session;
+      Ke && ee.api.setSession(Ke), ee.config.app && (Me.app = eH(eH({}, ee.config.app), Me.app)), ee.config.user && (Me.user = ee.config.user), ee.config.view && (Me.view = ee.config.view), ee.metas.add(Me, ...null !== (He = ee.config.metas) && void 0 !== He ? He : [])
     }
-    var wQ = class {
-      constructor(BB, OB) {
-        var GB, YB;
-        this.signalBuffer = [], this.itemLimit = null !== (GB = null === OB || void 0 === OB ? void 0 : OB.itemLimit) && void 0 !== GB ? GB : 50, this.sendTimeout = null !== (YB = null === OB || void 0 === OB ? void 0 : OB.sendTimeout) && void 0 !== YB ? YB : 250, this.paused = (null === OB || void 0 === OB ? void 0 : OB.paused) || !1, this.sendFn = BB, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var mM = class {
+      constructor(ee, ie) {
+        var He, ye;
+        this.signalBuffer = [], this.itemLimit = null !== (He = null === ie || void 0 === ie ? void 0 : ie.itemLimit) && void 0 !== He ? He : 50, this.sendTimeout = null !== (ye = null === ie || void 0 === ie ? void 0 : ie.sendTimeout) && void 0 !== ye ? ye : 250, this.paused = (null === ie || void 0 === ie ? void 0 : ie.paused) || !1, this.sendFn = ee, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(BB) {
-        this.paused || (this.signalBuffer.push(BB), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(ee) {
+        this.paused || (this.signalBuffer.push(ee), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(BB) {
-        const OB = new Map;
-        return BB.forEach((BB => {
-          const GB = JSON.stringify(BB.meta);
-          let YB = OB.get(GB);
-          YB = void 0 === YB ? [BB] : [...YB, BB], OB.set(GB, YB)
-        })), Array.from(OB.values())
+      groupItems(ee) {
+        const ie = new Map;
+        return ee.forEach((ee => {
+          const He = JSON.stringify(ee.meta);
+          let ye = ie.get(He);
+          ye = void 0 === ye ? [ee] : [...ye, ee], ie.set(He, ye)
+        })), Array.from(ie.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const BB = this.signalBuffer;
+        const ee = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(BB).forEach(this.sendFn)
-        } catch (OB) {
-          throw this.signalBuffer = [...BB, ...this.signalBuffer], this.trimBufferToLimit(), OB
+          this.groupItems(ee).forEach(this.sendFn)
+        } catch (ie) {
+          throw this.signalBuffer = [...ee, ...this.signalBuffer], this.trimBufferToLimit(), ie
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function EQ(BB, OB, GB, YB) {
-      var DB;
-      OB.debug("Initializing transports");
-      const QB = [];
-      let oB = [];
-      const jB = BB => {
-        let OB = BB;
-        for (const YB of oB) {
-          const BB = OB.map(YB).filter(Boolean);
-          if (0 === BB.length) return [];
-          OB = cQ(BB, GB)
+    function lM(ee, ie, He, ye) {
+      var be;
+      ie.debug("Initializing transports");
+      const Me = [];
+      let Ke = [];
+      const Ue = ee => {
+        let ie = ee;
+        for (const ye of Ke) {
+          const ee = ie.map(ye).filter(Boolean);
+          if (0 === ee.length) return [];
+          ie = SM(ee, He)
         }
-        return OB
+        return ie
       };
-      let yB;
-      (null === (DB = GB.batching) || void 0 === DB ? void 0 : DB.enabled) && (yB = new wQ((BB => {
-        const GB = jB(BB);
-        if (0 !== GB.length)
-          for (const YB of QB) OB.debug(`Transporting item using ${YB.name}\n`, GB), YB.isBatched() && YB.send(GB)
+      let Fe;
+      (null === (be = He.batching) || void 0 === be ? void 0 : be.enabled) && (Fe = new mM((ee => {
+        const He = Ue(ee);
+        if (0 !== He.length)
+          for (const ye of Me) ie.debug(`Transporting item using ${ye.name}\n`, He), ye.isBatched() && ye.send(He)
       }), {
-        sendTimeout: GB.batching.sendTimeout,
-        itemLimit: GB.batching.itemLimit,
-        paused: GB.paused
+        sendTimeout: He.batching.sendTimeout,
+        itemLimit: He.batching.itemLimit,
+        paused: He.paused
       }));
       return {
         add: function() {
-          OB.debug("Adding transports");
-          for (var DB = arguments.length, oB = new Array(DB), jB = 0; jB < DB; jB++) oB[jB] = arguments[jB];
-          oB.forEach((DB => {
-            OB.debug(`Adding "${DB.name}" transport`), QB.some((BB => BB === DB)) ? OB.warn(`Transport ${DB.name} is already added`) : (DB.unpatchedConsole = BB, DB.internalLogger = OB, DB.config = GB, DB.metas = YB, QB.push(DB))
+          ie.debug("Adding transports");
+          for (var be = arguments.length, Ke = new Array(be), Ue = 0; Ue < be; Ue++) Ke[Ue] = arguments[Ue];
+          Ke.forEach((be => {
+            ie.debug(`Adding "${be.name}" transport`), Me.some((ee => ee === be)) ? ie.warn(`Transport ${be.name} is already added`) : (be.unpatchedConsole = ee, be.internalLogger = ie, be.config = He, be.metas = ye, Me.push(be))
           }))
         },
         addBeforeSendHooks: function() {
-          OB.debug("Adding beforeSendHooks\n", oB);
-          for (var BB = arguments.length, GB = new Array(BB), YB = 0; YB < BB; YB++) GB[YB] = arguments[YB];
-          GB.forEach((BB => {
-            BB && oB.push(BB)
+          ie.debug("Adding beforeSendHooks\n", Ke);
+          for (var ee = arguments.length, He = new Array(ee), ye = 0; ye < ee; ye++) He[ye] = arguments[ye];
+          He.forEach((ee => {
+            ee && Ke.push(ee)
           }))
         },
-        getBeforeSendHooks: () => [...oB],
-        execute: BB => {
-          var DB;
-          if (!GB.paused && EO(YB).shouldCapture()) {
-            if (PB = BB.meta, !iQ.has(PB)) {
-              var oB, JB, MB;
-              const OB = null === (oB = YB.value.session) || void 0 === oB ? void 0 : oB.id,
-                DB = gQ(YB);
-              if (GB.paused) return;
-              const QB = xO({}, BB.meta);
-              (null === (JB = QB.session) || void 0 === JB ? void 0 : JB.id) === OB && (null === (MB = DB.session) || void 0 === MB ? void 0 : MB.id) !== OB && (void 0 === DB.session ? delete QB.session : QB.session = DB.session), BB = xO(xO({}, BB), {}, {
-                meta: LQ(QB)
+        getBeforeSendHooks: () => [...Ke],
+        execute: ee => {
+          var be;
+          if (!He.paused && mi(ye).shouldCapture()) {
+            if (Re = ee.meta, !xM.has(Re)) {
+              var Ke, Je, oe;
+              const ie = null === (Ke = ye.value.session) || void 0 === Ke ? void 0 : Ke.id,
+                be = CM(ye);
+              if (He.paused) return;
+              const Me = eH({}, ee.meta);
+              (null === (Je = Me.session) || void 0 === Je ? void 0 : Je.id) === ie && (null === (oe = be.session) || void 0 === oe ? void 0 : oe.id) !== ie && (void 0 === be.session ? delete Me.session : Me.session = be.session), ee = eH(eH({}, ee), {}, {
+                meta: LM(Me)
               })
             }
-            var PB;
-            (null === (DB = GB.batching) || void 0 === DB ? void 0 : DB.enabled) && (null === yB || void 0 === yB || yB.addItem(BB)), (BB => {
-              var YB;
-              if ((null === (YB = GB.batching) || void 0 === YB ? void 0 : YB.enabled) && QB.every((BB => BB.isBatched()))) return;
-              const [DB] = jB([BB]);
-              if (void 0 !== DB)
-                for (const jB of QB) {
-                  var oB;
-                  OB.debug(`Transporting item using ${jB.name}\n`, DB), jB.isBatched() ? (null === (oB = GB.batching) || void 0 === oB ? void 0 : oB.enabled) || jB.send([DB]) : jB.send(DB)
+            var Re;
+            (null === (be = He.batching) || void 0 === be ? void 0 : be.enabled) && (null === Fe || void 0 === Fe || Fe.addItem(ee)), (ee => {
+              var ye;
+              if ((null === (ye = He.batching) || void 0 === ye ? void 0 : ye.enabled) && Me.every((ee => ee.isBatched()))) return;
+              const [be] = Ue([ee]);
+              if (void 0 !== be)
+                for (const Ue of Me) {
+                  var Ke;
+                  ie.debug(`Transporting item using ${Ue.name}\n`, be), Ue.isBatched() ? (null === (Ke = He.batching) || void 0 === Ke ? void 0 : Ke.enabled) || Ue.send([be]) : Ue.send(be)
                 }
-            })(BB)
+            })(ee)
           }
         },
-        isPaused: () => GB.paused,
+        isPaused: () => He.paused,
         pause: () => {
-          OB.debug("Pausing transports"), null === yB || void 0 === yB || yB.pause(), GB.paused = !0
+          ie.debug("Pausing transports"), null === Fe || void 0 === Fe || Fe.pause(), He.paused = !0
         },
         remove: function() {
-          OB.debug("Removing transports");
-          for (var BB = arguments.length, GB = new Array(BB), YB = 0; YB < BB; YB++) GB[YB] = arguments[YB];
-          GB.forEach((BB => {
-            OB.debug(`Removing "${BB.name}" transport`);
-            const GB = QB.indexOf(BB); - 1 !== GB ? QB.splice(GB, 1) : OB.warn(`Transport "${BB.name}" is not added`)
+          ie.debug("Removing transports");
+          for (var ee = arguments.length, He = new Array(ee), ye = 0; ye < ee; ye++) He[ye] = arguments[ye];
+          He.forEach((ee => {
+            ie.debug(`Removing "${ee.name}" transport`);
+            const He = Me.indexOf(ee); - 1 !== He ? Me.splice(He, 1) : ie.warn(`Transport "${ee.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var BB = arguments.length, GB = new Array(BB), YB = 0; YB < BB; YB++) GB[YB] = arguments[YB];
-          OB.debug("Removing beforeSendHooks"), oB = oB.filter((BB => !GB.includes(BB)))
+          for (var ee = arguments.length, He = new Array(ee), ye = 0; ye < ee; ye++) He[ye] = arguments[ye];
+          ie.debug("Removing beforeSendHooks"), Ke = Ke.filter((ee => !He.includes(ee)))
         },
         get transports() {
-          return [...QB]
+          return [...Me]
         },
         unpause: () => {
-          OB.debug("Unpausing transports"), null === yB || void 0 === yB || yB.start(), GB.paused = !1
+          ie.debug("Unpausing transports"), null === Fe || void 0 === Fe || Fe.start(), He.paused = !1
         }
       }
     }
 
-    function cQ(BB, OB) {
-      if (OB.preserveOriginalError)
-        for (const GB of BB) "exception" === GB.type && delete GB.payload.originalError;
-      return BB
+    function SM(ee, ie) {
+      if (ie.preserveOriginalError)
+        for (const He of ee) "exception" === He.type && delete He.payload.originalError;
+      return ee
     }
-    let hQ = tO;
+    let nM = iH;
 
-    function aQ(BB) {
-      var OB;
-      return hQ = null !== (OB = BB.unpatchedConsole) && void 0 !== OB ? OB : hQ, hQ
+    function jM(ee) {
+      var ie;
+      return nM = null !== (ie = ee.unpatchedConsole) && void 0 !== ie ? ie : nM, nM
     }
-    let eQ, TQ = TO;
+    let sM, IM = si;
 
-    function bQ(BB, OB) {
-      return TQ = fQ(BB, OB.internalLoggerLevel), TQ
+    function hM(ee, ie) {
+      return IM = wM(ee, ie.internalLoggerLevel), IM
     }
 
-    function CQ(BB) {
+    function NM(ee) {
       let {
-        internalLogger: OB,
-        config: GB,
-        metas: YB,
-        transports: DB,
-        tracesApi: QB,
-        userActionsApi: oB
-      } = BB;
-      var jB;
-      OB.debug("Initializing exceptions API");
-      let yB = null;
-      eQ = null !== (jB = GB.parseStacktrace) && void 0 !== jB ? jB : eQ;
-      const JB = BB => {
-          OB.debug("Changing stacktrace parser"), eQ = null !== BB && void 0 !== BB ? BB : eQ
+        internalLogger: ie,
+        config: He,
+        metas: ye,
+        transports: be,
+        tracesApi: Me,
+        userActionsApi: Ke
+      } = ee;
+      var Ue;
+      ie.debug("Initializing exceptions API");
+      let Fe = null;
+      sM = null !== (Ue = He.parseStacktrace) && void 0 !== Ue ? Ue : sM;
+      const Je = ee => {
+          ie.debug("Changing stacktrace parser"), sM = null !== ee && void 0 !== ee ? ee : sM
         },
         {
-          ignoreErrors: MB = [],
-          preserveOriginalError: PB
-        } = GB;
-      return JB(GB.parseStacktrace), {
-        changeStacktraceParser: JB,
-        getStacktraceParser: () => eQ,
-        pushError: function(BB) {
+          ignoreErrors: oe = [],
+          preserveOriginalError: Re
+        } = He;
+      return Je(He.parseStacktrace), {
+        changeStacktraceParser: Je,
+        getStacktraceParser: () => sM,
+        pushError: function(ee) {
           let {
-            skipDedupe: jB,
-            stackFrames: JB,
-            type: zB,
-            context: lB,
-            spanContext: pB,
-            timestampOverwriteMs: qB,
-            originalError: ZB,
-            fingerprint: NB,
-            fatal: RB
+            skipDedupe: Ue,
+            stackFrames: Je,
+            type: ke,
+            context: qe,
+            spanContext: fe,
+            timestampOverwriteMs: Te,
+            originalError: pe,
+            fingerprint: Xe,
+            fatal: ze
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(BB, OB) {
+          if (! function(ee, ie) {
               const {
-                message: GB,
-                name: YB,
-                stack: DB
-              } = OB;
-              return QB = BB, oB = GB + " " + YB + " " + DB, QB.some((BB => SB(BB) ? oB.includes(BB) : !!oB.match(BB)));
-              var QB, oB
-            }(MB, null !== ZB && void 0 !== ZB ? ZB : BB)) try {
-            var WB, AB;
-            if (!EO(YB).shouldCapture()) return;
-            const MB = gO(xO(xO({}, function(BB) {
-                let OB = BB.cause;
-                rB(OB) ? OB = BB.cause.toString() : null !== OB && (dB(BB.cause) || uB(BB.cause)) ? OB = LO(BB.cause) : null != OB && (OB = BB.cause.toString());
-                return null == OB ? {} : {
-                  cause: OB
+                message: He,
+                name: ye,
+                stack: be
+              } = ie;
+              return Me = ee, Ke = He + " " + ye + " " + be, Me.some((ee => Oe(ee) ? Ke.includes(ee) : !!Ke.match(ee)));
+              var Me, Ke
+            }(oe, null !== pe && void 0 !== pe ? pe : ee)) try {
+            var Be, Ee;
+            if (!mi(ye).shouldCapture()) return;
+            const oe = Li(eH(eH({}, function(ee) {
+                let ie = ee.cause;
+                Le(ie) ? ie = ee.cause.toString() : null !== ie && (we(ee.cause) || Pe(ee.cause)) ? ie = xi(ee.cause) : null != ie && (ie = ee.cause.toString());
+                return null == ie ? {} : {
+                  cause: ie
                 }
-              }(null !== ZB && void 0 !== ZB ? ZB : BB)), null !== lB && void 0 !== lB ? lB : {})),
-              SB = xO(xO(xO(xO({
-                type: zB || BB.name || "Error",
-                value: BB.message,
-                timestamp: qB ? qO(qB) : pO(),
-                trace: pB ? {
-                  trace_id: pB.traceId,
-                  span_id: pB.spanId
-                } : QB.getTraceContext()
-              }, bB(MB) ? {} : {
-                context: MB
-              }), PB ? {
-                originalError: ZB
-              } : {}), NB ? {
-                fingerprint: NB
-              } : {}), void 0 !== RB ? {
-                fatal: RB
+              }(null !== pe && void 0 !== pe ? pe : ee)), null !== qe && void 0 !== qe ? qe : {})),
+              Oe = eH(eH(eH(eH({
+                type: ke || ee.name || "Error",
+                value: ee.message,
+                timestamp: Te ? Ti(Te) : fi(),
+                trace: fe ? {
+                  trace_id: fe.traceId,
+                  span_id: fe.spanId
+                } : Me.getTraceContext()
+              }, se(oe) ? {} : {
+                context: oe
+              }), Re ? {
+                originalError: pe
+              } : {}), Xe ? {
+                fingerprint: Xe
+              } : {}), void 0 !== ze ? {
+                fatal: ze
               } : {});
-            JB = null !== (WB = JB) && void 0 !== WB ? WB : BB.stack ? null === eQ || void 0 === eQ ? void 0 : eQ(BB).frames : void 0, (null === JB || void 0 === JB ? void 0 : JB.length) && (SB.stacktrace = {
-              frames: JB
+            Je = null !== (Be = Je) && void 0 !== Be ? Be : ee.stack ? null === sM || void 0 === sM ? void 0 : sM(ee).frames : void 0, (null === Je || void 0 === Je ? void 0 : Je.length) && (Oe.stacktrace = {
+              frames: Je
             });
-            const nB = {
-              type: SB.type,
-              value: SB.value,
-              stacktrace: SB.stacktrace,
-              context: SB.context,
-              fingerprint: SB.fingerprint,
-              fatal: null !== (AB = SB.fatal) && void 0 !== AB && AB
+            const de = {
+              type: Oe.type,
+              value: Oe.value,
+              stacktrace: Oe.stacktrace,
+              context: Oe.context,
+              fingerprint: Oe.fingerprint,
+              fatal: null !== (Ee = Oe.fatal) && void 0 !== Ee && Ee
             };
-            if (!jB && GB.dedupe && !VB(yB) && RO(nB, yB)) return void OB.debug("Skipping error push because it is the same as the last one\n", SB);
-            const UB = yB,
-              fB = gQ(YB);
-            if (yB !== UB && !jB && GB.dedupe && RO(nB, yB)) return;
-            yB = nB;
-            const kB = {
-              meta: fB,
-              payload: SB,
+            if (!Ue && He.dedupe && !ge(Fe) && Bi(de, Fe)) return void ie.debug("Skipping error push because it is the same as the last one\n", Oe);
+            const We = Fe,
+              te = CM(ye);
+            if (Fe !== We && !Ue && He.dedupe && Bi(de, Fe)) return;
+            Fe = de;
+            const Ze = {
+              meta: te,
+              payload: Oe,
               type: "exception"
             };
-            OB.debug("Pushing exception\n", kB), SD(oB.getActiveUserAction(), kB) || DB.execute(kB)
-          } catch (nB) {
-            OB.error("Error pushing event", nB)
+            ie.debug("Pushing exception\n", Ze), Wb(Ke.getActiveUserAction(), Ze) || be.execute(Ze)
+          } catch (de) {
+            ie.error("Error pushing event", de)
           }
         }
       }
     }
 
-    function HQ(BB, OB, GB, YB, DB) {
-      OB.debug("Initializing API");
-      let QB = null;
-      const oB = function(BB) {
+    function GM(ee, ie, He, ye, be) {
+      ie.debug("Initializing API");
+      let Me = null;
+      const Ke = function(ee) {
           let {
-            transports: OB,
-            internalLogger: GB,
-            config: YB,
-            pushEvent: DB
-          } = BB;
-          var QB;
-          const oB = null === (QB = YB.userActionsInstrumentation) || void 0 === QB ? void 0 : QB.excludeItem;
-          let jB;
-          const yB = () => jB;
+            transports: ie,
+            internalLogger: He,
+            config: ye,
+            pushEvent: be
+          } = ee;
+          var Me;
+          const Ke = null === (Me = ye.userActionsInstrumentation) || void 0 === Me ? void 0 : Me.excludeItem;
+          let Ue;
+          const Fe = () => Ue;
           return {
-            startUserAction: (BB, YB, QB) => {
-              if (void 0 === yB()) {
-                const GB = new AD({
-                  name: BB,
-                  transports: OB,
-                  attributes: YB,
-                  trigger: (null === QB || void 0 === QB ? void 0 : QB.triggerName) || "faroApiCall",
-                  importance: (null === QB || void 0 === QB ? void 0 : QB.importance) || RD.Normal,
-                  trackUserActionsExcludeItem: oB,
-                  pushEvent: DB
+            startUserAction: (ee, ye, Me) => {
+              if (void 0 === Fe()) {
+                const He = new Ob({
+                  name: ee,
+                  transports: ie,
+                  attributes: ye,
+                  trigger: (null === Me || void 0 === Me ? void 0 : Me.triggerName) || "faroApiCall",
+                  importance: (null === Me || void 0 === Me ? void 0 : Me.importance) || Eb.Normal,
+                  trackUserActionsExcludeItem: Ke,
+                  pushEvent: be
                 });
-                return GB.filter((BB => [3, 2].includes(BB))).first().subscribe((() => {
-                  jB = void 0
-                })), VD.notify({
-                  type: ND,
-                  userAction: GB,
-                  initialActivityTimeout: null === QB || void 0 === QB ? void 0 : QB.initialActivityTimeout
-                }), jB = GB, jB
+                return He.filter((ee => [3, 2].includes(ee))).first().subscribe((() => {
+                  Ue = void 0
+                })), db.notify({
+                  type: Bb,
+                  userAction: He,
+                  initialActivityTimeout: null === Me || void 0 === Me ? void 0 : Me.initialActivityTimeout
+                }), Ue = He, Ue
               }
-              GB.error("Attempted to create a new user action while one is already running. This is not possible.")
+              He.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: yB
+            getActiveUserAction: Fe
           }
         }({
-          transports: DB,
-          config: GB,
-          internalLogger: OB,
-          pushEvent: (BB, GB, YB, DB) => {
-            QB ? QB(BB, GB, YB, DB) : OB.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: BB,
-              attributes: GB,
-              domain: YB,
-              options: DB
+          transports: be,
+          config: He,
+          internalLogger: ie,
+          pushEvent: (ee, He, ye, be) => {
+            Me ? Me(ee, He, ye, be) : ie.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: ee,
+              attributes: He,
+              domain: ye,
+              options: be
             })
           }
         }),
-        jB = function(BB, OB, GB, YB, DB) {
-          let QB;
-          return OB.debug("Initializing traces API"), {
-            getOTEL: () => QB,
+        Ue = function(ee, ie, He, ye, be) {
+          let Me;
+          return ie.debug("Initializing traces API"), {
+            getOTEL: () => Me,
             getTraceContext: () => {
-              const BB = null === QB || void 0 === QB ? void 0 : QB.trace.getSpanContext(QB.context.active());
-              return BB ? {
-                trace_id: BB.traceId,
-                span_id: BB.spanId
+              const ee = null === Me || void 0 === Me ? void 0 : Me.trace.getSpanContext(Me.context.active());
+              return ee ? {
+                trace_id: ee.traceId,
+                span_id: ee.spanId
               } : void 0
             },
-            initOTEL: (BB, GB) => {
-              OB.debug("Initializing OpenTelemetry"), QB = {
-                trace: BB,
-                context: GB
+            initOTEL: (ee, He) => {
+              ie.debug("Initializing OpenTelemetry"), Me = {
+                trace: ee,
+                context: He
               }
             },
-            isOTELInitialized: () => !!QB,
-            pushTraces: BB => {
+            isOTELInitialized: () => !!Me,
+            pushTraces: ee => {
               try {
-                if (!EO(YB).shouldCapture()) return;
-                const GB = {
+                if (!mi(ye).shouldCapture()) return;
+                const He = {
                   type: "trace",
-                  payload: BB,
-                  meta: gQ(YB)
+                  payload: ee,
+                  meta: CM(ye)
                 };
-                OB.debug("Pushing trace\n", GB), DB.execute(GB)
-              } catch (GB) {
-                OB.error("Error pushing trace\n", GB)
+                ie.debug("Pushing trace\n", He), be.execute(He)
+              } catch (He) {
+                ie.error("Error pushing trace\n", He)
               }
             }
           }
-        }(0, OB, 0, YB, DB),
-        yB = {
-          unpatchedConsole: BB,
-          internalLogger: OB,
-          userActionsApi: oB,
-          config: GB,
-          metas: YB,
-          transports: DB,
-          tracesApi: jB
+        }(0, ie, 0, ye, be),
+        Fe = {
+          unpatchedConsole: ee,
+          internalLogger: ie,
+          userActionsApi: Ke,
+          config: He,
+          metas: ye,
+          transports: be,
+          tracesApi: Ue
         },
-        JB = function(BB) {
+        Je = function(ee) {
           let {
-            internalLogger: OB,
-            config: GB,
-            metas: YB,
-            transports: DB,
-            tracesApi: QB,
-            userActionsApi: oB
-          } = BB, jB = null;
+            internalLogger: ie,
+            config: He,
+            metas: ye,
+            transports: be,
+            tracesApi: Me,
+            userActionsApi: Ke
+          } = ee, Ue = null;
           return {
-            pushEvent: function(BB, yB, JB) {
+            pushEvent: function(ee, Fe, Je) {
               let {
-                skipDedupe: MB,
-                spanContext: PB,
-                timestampOverwriteMs: zB,
-                customPayloadTransformer: lB = BB => BB
+                skipDedupe: oe,
+                spanContext: Re,
+                timestampOverwriteMs: ke,
+                customPayloadTransformer: qe = ee => ee
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!EO(YB).shouldCapture()) return;
-                const pB = gO(yB),
-                  qB = lB({
-                    name: BB,
-                    domain: null !== JB && void 0 !== JB ? JB : GB.eventDomain,
-                    attributes: bB(pB) ? void 0 : pB,
-                    timestamp: zB ? qO(zB) : pO(),
-                    trace: PB ? {
-                      trace_id: PB.traceId,
-                      span_id: PB.spanId
-                    } : QB.getTraceContext()
+                if (!mi(ye).shouldCapture()) return;
+                const fe = Li(Fe),
+                  Te = qe({
+                    name: ee,
+                    domain: null !== Je && void 0 !== Je ? Je : He.eventDomain,
+                    attributes: se(fe) ? void 0 : fe,
+                    timestamp: ke ? Ti(ke) : fi(),
+                    trace: Re ? {
+                      trace_id: Re.traceId,
+                      span_id: Re.spanId
+                    } : Me.getTraceContext()
                   }),
-                  ZB = {
-                    name: qB.name,
-                    attributes: qB.attributes,
-                    domain: qB.domain
+                  pe = {
+                    name: Te.name,
+                    attributes: Te.attributes,
+                    domain: Te.domain
                   };
-                if (!MB && GB.dedupe && !VB(jB) && RO(ZB, jB)) return void OB.debug("Skipping event push because it is the same as the last one\n", qB);
-                const NB = jB,
-                  RB = gQ(YB);
-                if (jB !== NB && !MB && GB.dedupe && RO(ZB, jB)) return;
-                jB = ZB;
-                const WB = {
-                  meta: RB,
-                  payload: qB,
+                if (!oe && He.dedupe && !ge(Ue) && Bi(pe, Ue)) return void ie.debug("Skipping event push because it is the same as the last one\n", Te);
+                const Xe = Ue,
+                  ze = CM(ye);
+                if (Ue !== Xe && !oe && He.dedupe && Bi(pe, Ue)) return;
+                Ue = pe;
+                const Be = {
+                  meta: ze,
+                  payload: Te,
                   type: "event"
                 };
-                OB.debug("Pushing event\n", WB), SD(oB.getActiveUserAction(), WB) || DB.execute(WB)
-              } catch (pB) {
-                OB.error("Error pushing event", pB)
+                ie.debug("Pushing event\n", Be), Wb(Ke.getActiveUserAction(), Be) || be.execute(Be)
+              } catch (fe) {
+                ie.error("Error pushing event", fe)
               }
             }
           }
-        }(yB);
-      return QB = JB.pushEvent, xO(xO(xO(xO(xO(xO(xO({}, jB), CQ(yB)), function(BB) {
-        let OB, GB, YB, DB, {
-          internalLogger: QB,
-          metas: oB
-        } = BB;
-        QB.debug("Initializing meta API");
-        const jB = BB => {
-            GB && oB.remove(GB), GB = {
-              user: BB
-            }, oB.add(GB)
+        }(Fe);
+      return Me = Je.pushEvent, eH(eH(eH(eH(eH(eH(eH({}, Ue), NM(Fe)), function(ee) {
+        let ie, He, ye, be, {
+          internalLogger: Me,
+          metas: Ke
+        } = ee;
+        Me.debug("Initializing meta API");
+        const Ue = ee => {
+            He && Ke.remove(He), He = {
+              user: ee
+            }, Ke.add(He)
           },
-          yB = (BB, GB) => {
-            var YB;
-            const DB = null === GB || void 0 === GB ? void 0 : GB.overrides,
-              QB = DB ? {
-                overrides: xO(xO({}, null === OB || void 0 === OB || null === (YB = OB.session) || void 0 === YB ? void 0 : YB.overrides), DB)
+          Fe = (ee, He) => {
+            var ye;
+            const be = null === He || void 0 === He ? void 0 : He.overrides,
+              Me = be ? {
+                overrides: eH(eH({}, null === ie || void 0 === ie || null === (ye = ie.session) || void 0 === ye ? void 0 : ye.overrides), be)
               } : {};
-            OB && oB.remove(OB), OB = {
-              session: xO(xO({}, bB(BB) ? void 0 : BB), QB)
-            }, oB.add(OB)
+            ie && Ke.remove(ie), ie = {
+              session: eH(eH({}, se(ee) ? void 0 : ee), Me)
+            }, Ke.add(ie)
           },
-          JB = (BB, OB) => {
-            EO(oB).notifySessionUpdate({
+          Je = (ee, ie) => {
+            mi(Ke).notifySessionUpdate({
               type: "replace",
-              session: BB,
-              overrides: null === OB || void 0 === OB ? void 0 : OB.overrides
-            }), yB(BB, OB)
+              session: ee,
+              overrides: null === ie || void 0 === ie ? void 0 : ie.overrides
+            }), Fe(ee, ie)
           },
-          MB = () => oB.value.session,
-          PB = () => oB.value.page;
+          oe = () => Ke.value.session,
+          Re = () => Ke.value.page;
         return {
-          setUser: jB,
-          resetUser: jB,
-          setSession: JB,
-          resetSession: JB,
-          getSession: MB,
-          setView: (BB, OB) => {
-            var GB;
-            if ((null === OB || void 0 === OB ? void 0 : OB.overrides) && (EO(oB).notifySessionUpdate({
+          setUser: Ue,
+          resetUser: Ue,
+          setSession: Je,
+          resetSession: Je,
+          getSession: oe,
+          setView: (ee, ie) => {
+            var He;
+            if ((null === ie || void 0 === ie ? void 0 : ie.overrides) && (mi(Ke).notifySessionUpdate({
                 type: "overrides",
-                overrides: OB.overrides
-              }), yB(MB(), {
-                overrides: OB.overrides
-              })), (null === YB || void 0 === YB || null === (GB = YB.view) || void 0 === GB ? void 0 : GB.name) === (null === BB || void 0 === BB ? void 0 : BB.name)) return;
-            const DB = YB;
-            YB = {
-              view: BB
-            }, oB.add(YB), DB && oB.remove(DB)
+                overrides: ie.overrides
+              }), Fe(oe(), {
+                overrides: ie.overrides
+              })), (null === ye || void 0 === ye || null === (He = ye.view) || void 0 === He ? void 0 : He.name) === (null === ee || void 0 === ee ? void 0 : ee.name)) return;
+            const be = ye;
+            ye = {
+              view: ee
+            }, Ke.add(ye), be && Ke.remove(be)
           },
-          getView: () => oB.value.view,
-          setPage: BB => {
-            var OB;
-            const GB = SB(BB) ? xO(xO({}, null !== (OB = null === DB || void 0 === DB ? void 0 : DB.page) && void 0 !== OB ? OB : PB()), {}, {
-              id: BB
-            }) : BB;
-            DB && oB.remove(DB), DB = {
-              page: GB
-            }, oB.add(DB)
+          getView: () => Ke.value.view,
+          setPage: ee => {
+            var ie;
+            const He = Oe(ee) ? eH(eH({}, null !== (ie = null === be || void 0 === be ? void 0 : be.page) && void 0 !== ie ? ie : Re()), {}, {
+              id: ee
+            }) : ee;
+            be && Ke.remove(be), be = {
+              page: He
+            }, Ke.add(be)
           },
-          getPage: PB
+          getPage: Re
         }
-      }(yB)), function(BB) {
+      }(Fe)), function(ee) {
         let {
-          internalLogger: OB,
-          config: GB,
-          metas: YB,
-          transports: DB,
-          tracesApi: QB,
-          userActionsApi: oB
-        } = BB;
-        var jB;
-        OB.debug("Initializing logs API");
-        let yB = null;
-        const JB = null !== (jB = GB.logArgsSerializer) && void 0 !== jB ? jB : mG;
+          internalLogger: ie,
+          config: He,
+          metas: ye,
+          transports: be,
+          tracesApi: Me,
+          userActionsApi: Ke
+        } = ee;
+        var Ue;
+        ie.debug("Initializing logs API");
+        let Fe = null;
+        const Je = null !== (Ue = He.logArgsSerializer) && void 0 !== Ue ? Ue : VH;
         return {
-          pushLog: function(BB) {
+          pushLog: function(ee) {
             let {
-              context: jB,
-              level: MB,
-              skipDedupe: PB,
-              spanContext: zB,
-              timestampOverwriteMs: lB
+              context: Ue,
+              level: oe,
+              skipDedupe: Re,
+              spanContext: ke,
+              timestampOverwriteMs: qe
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!EO(YB).shouldCapture()) return;
-              const pB = gO(jB),
-                qB = {
-                  message: JB(BB),
-                  level: null !== MB && void 0 !== MB ? MB : "log",
-                  context: bB(pB) ? void 0 : pB,
-                  timestamp: lB ? qO(lB) : pO(),
-                  trace: zB ? {
-                    trace_id: zB.traceId,
-                    span_id: zB.spanId
-                  } : QB.getTraceContext()
+              if (!mi(ye).shouldCapture()) return;
+              const fe = Li(Ue),
+                Te = {
+                  message: Je(ee),
+                  level: null !== oe && void 0 !== oe ? oe : "log",
+                  context: se(fe) ? void 0 : fe,
+                  timestamp: qe ? Ti(qe) : fi(),
+                  trace: ke ? {
+                    trace_id: ke.traceId,
+                    span_id: ke.spanId
+                  } : Me.getTraceContext()
                 },
-                ZB = {
-                  message: qB.message,
-                  level: qB.level,
-                  context: qB.context
+                pe = {
+                  message: Te.message,
+                  level: Te.level,
+                  context: Te.context
                 };
-              if (!PB && GB.dedupe && !VB(yB) && RO(ZB, yB)) return void OB.debug("Skipping log push because it is the same as the last one\n", qB);
-              const NB = yB,
-                RB = gQ(YB);
-              if (yB !== NB && !PB && GB.dedupe && RO(ZB, yB)) return;
-              yB = ZB;
-              const WB = {
+              if (!Re && He.dedupe && !ge(Fe) && Bi(pe, Fe)) return void ie.debug("Skipping log push because it is the same as the last one\n", Te);
+              const Xe = Fe,
+                ze = CM(ye);
+              if (Fe !== Xe && !Re && He.dedupe && Bi(pe, Fe)) return;
+              Fe = pe;
+              const Be = {
                 type: "log",
-                payload: qB,
-                meta: RB
+                payload: Te,
+                meta: ze
               };
-              OB.debug("Pushing log\n", WB), SD(oB.getActiveUserAction(), WB) || DB.execute(WB)
-            } catch (pB) {
-              OB.error("Error pushing log\n", pB)
+              ie.debug("Pushing log\n", Be), Wb(Ke.getActiveUserAction(), Be) || be.execute(Be)
+            } catch (fe) {
+              ie.error("Error pushing log\n", fe)
             }
           }
         }
-      }(yB)), function(BB) {
+      }(Fe)), function(ee) {
         let {
-          internalLogger: OB,
-          config: GB,
-          metas: YB,
-          transports: DB,
-          tracesApi: QB,
-          userActionsApi: oB
-        } = BB;
-        OB.debug("Initializing measurements API");
-        let jB = null;
+          internalLogger: ie,
+          config: He,
+          metas: ye,
+          transports: be,
+          tracesApi: Me,
+          userActionsApi: Ke
+        } = ee;
+        ie.debug("Initializing measurements API");
+        let Ue = null;
         return {
-          pushMeasurement: function(BB) {
+          pushMeasurement: function(ee) {
             let {
-              skipDedupe: yB,
-              context: JB,
-              spanContext: MB,
-              timestampOverwriteMs: PB
+              skipDedupe: Fe,
+              context: Je,
+              spanContext: oe,
+              timestampOverwriteMs: Re
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!EO(YB).shouldCapture()) return;
-              const zB = gO(JB),
-                lB = xO(xO({}, BB), {}, {
-                  trace: MB ? {
-                    trace_id: MB.traceId,
-                    span_id: MB.spanId
-                  } : QB.getTraceContext(),
-                  timestamp: PB ? qO(PB) : pO(),
-                  context: bB(zB) ? void 0 : zB
+              if (!mi(ye).shouldCapture()) return;
+              const ke = Li(Je),
+                qe = eH(eH({}, ee), {}, {
+                  trace: oe ? {
+                    trace_id: oe.traceId,
+                    span_id: oe.spanId
+                  } : Me.getTraceContext(),
+                  timestamp: Re ? Ti(Re) : fi(),
+                  context: se(ke) ? void 0 : ke
                 }),
-                pB = {
-                  type: lB.type,
-                  values: lB.values,
-                  context: lB.context
+                fe = {
+                  type: qe.type,
+                  values: qe.values,
+                  context: qe.context
                 };
-              if (!yB && GB.dedupe && !VB(jB) && RO(pB, jB)) return void OB.debug("Skipping measurement push because it is the same as the last one\n", lB);
-              const qB = jB,
-                ZB = gQ(YB);
-              if (jB !== qB && !yB && GB.dedupe && RO(pB, jB)) return;
-              jB = pB;
-              const NB = {
+              if (!Fe && He.dedupe && !ge(Ue) && Bi(fe, Ue)) return void ie.debug("Skipping measurement push because it is the same as the last one\n", qe);
+              const Te = Ue,
+                pe = CM(ye);
+              if (Ue !== Te && !Fe && He.dedupe && Bi(fe, Ue)) return;
+              Ue = fe;
+              const Xe = {
                 type: "measurement",
-                payload: lB,
-                meta: ZB
+                payload: qe,
+                meta: pe
               };
-              OB.debug("Pushing measurement\n", NB), SD(oB.getActiveUserAction(), NB) || DB.execute(NB)
-            } catch (zB) {
-              OB.error("Error pushing measurement\n", zB)
+              ie.debug("Pushing measurement\n", Xe), Wb(Ke.getActiveUserAction(), Xe) || be.execute(Xe)
+            } catch (ke) {
+              ie.error("Error pushing measurement\n", ke)
             }
           }
         }
-      }(yB)), JB), oB)
+      }(Fe)), Je), Ke)
     }
 
-    function vQ(BB) {
-      const OB = aQ(BB),
-        GB = bQ(OB, BB);
-      if (pB() && !BB.isolate) return void GB.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      GB.debug("Initializing");
-      const YB = function(BB, OB) {
-          let GB, YB = [],
-            DB = [],
-            QB = [],
-            oB = 0,
-            jB = 0;
-          const yB = () => YB.reduce(((BB, OB) => Object.assign(BB, KB(OB) ? OB() : OB)), {}),
-            JB = () => {
-              if (DB.length) {
-                const BB = yB();
-                DB.forEach((OB => OB(BB)))
+    function rM(ee) {
+      const ie = jM(ee),
+        He = hM(ie, ee);
+      if (fe() && !ee.isolate) return void He.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      He.debug("Initializing");
+      const ye = function(ee, ie) {
+          let He, ye = [],
+            be = [],
+            Me = [],
+            Ke = 0,
+            Ue = 0;
+          const Fe = () => ye.reduce(((ee, ie) => Object.assign(ee, De(ie) ? ie() : ie)), {}),
+            Je = () => {
+              if (be.length) {
+                const ee = Fe();
+                be.forEach((ie => ie(ee)))
               }
             };
           return {
             add: function() {
-              for (var BB = arguments.length, GB = new Array(BB), DB = 0; DB < BB; DB++) GB[DB] = arguments[DB];
-              OB.debug("Adding metas\n", GB), YB.push(...GB), JB()
+              for (var ee = arguments.length, He = new Array(ee), be = 0; be < ee; be++) He[be] = arguments[be];
+              ie.debug("Adding metas\n", He), ye.push(...He), Je()
             },
             remove: function() {
-              for (var BB = arguments.length, GB = new Array(BB), DB = 0; DB < BB; DB++) GB[DB] = arguments[DB];
-              OB.debug("Removing metas\n", GB), YB = YB.filter((BB => !GB.includes(BB))), JB()
+              for (var ee = arguments.length, He = new Array(ee), be = 0; be < ee; be++) He[be] = arguments[be];
+              ie.debug("Removing metas\n", He), ye = ye.filter((ee => !He.includes(ee))), Je()
             },
-            addListener: BB => {
-              OB.debug("Adding metas listener\n", BB), DB.push(BB)
+            addListener: ee => {
+              ie.debug("Adding metas listener\n", ee), be.push(ee)
             },
-            removeListener: BB => {
-              OB.debug("Removing metas listener\n", BB), DB = DB.filter((OB => OB !== BB))
+            removeListener: ee => {
+              ie.debug("Removing metas listener\n", ee), be = be.filter((ie => ie !== ee))
             },
-            capture: BB => {
-              var OB;
-              const YB = void 0 !== GB,
-                DB = null !== (OB = GB) && void 0 !== OB ? OB : QB;
-              YB || (GB = DB, oB = 0, jB = DB.length);
+            capture: ee => {
+              var ie;
+              const ye = void 0 !== He,
+                be = null !== (ie = He) && void 0 !== ie ? ie : Me;
+              ye || (He = be, Ke = 0, Ue = be.length);
               try {
-                for (; oB < jB;) {
-                  const BB = DB[oB++];
-                  null === BB || void 0 === BB || BB()
+                for (; Ke < Ue;) {
+                  const ee = be[Ke++];
+                  null === ee || void 0 === ee || ee()
                 }
-                const OB = LQ(yB());
-                return null === BB || void 0 === BB || BB(), OB
+                const ie = LM(Fe());
+                return null === ee || void 0 === ee || ee(), ie
               } finally {
-                YB || (GB = void 0)
+                ye || (He = void 0)
               }
             },
-            addCaptureListener: BB => {
-              QB.push(BB)
+            addCaptureListener: ee => {
+              Me.push(ee)
             },
-            removeCaptureListener: BB => {
-              QB = QB.filter((OB => OB !== BB))
+            removeCaptureListener: ee => {
+              Me = Me.filter((ie => ie !== ee))
             },
             get value() {
-              return yB()
+              return Fe()
             }
           }
-        }(0, GB),
-        DB = EQ(OB, GB, BB, YB),
-        QB = HQ(OB, GB, BB, YB, DB),
-        oB = function(BB, OB, GB, YB, DB, QB) {
-          OB.debug("Initializing instrumentations");
-          const oB = [];
+        }(0, He),
+        be = lM(ie, He, ee, ye),
+        Me = GM(ie, He, ee, ye, be),
+        Ke = function(ee, ie, He, ye, be, Me) {
+          ie.debug("Initializing instrumentations");
+          const Ke = [];
           return {
             add: function() {
-              OB.debug("Adding instrumentations");
-              for (var jB = arguments.length, yB = new Array(jB), JB = 0; JB < jB; JB++) yB[JB] = arguments[JB];
-              yB.forEach((jB => {
-                OB.debug(`Adding "${jB.name}" instrumentation`), oB.some((BB => BB.name === jB.name)) ? OB.warn(`Instrumentation ${jB.name} is already added`) : (jB.unpatchedConsole = BB, jB.internalLogger = OB, jB.config = GB, jB.metas = YB, jB.transports = DB, jB.api = QB, oB.push(jB), jB.initialize())
+              ie.debug("Adding instrumentations");
+              for (var Ue = arguments.length, Fe = new Array(Ue), Je = 0; Je < Ue; Je++) Fe[Je] = arguments[Je];
+              Fe.forEach((Ue => {
+                ie.debug(`Adding "${Ue.name}" instrumentation`), Ke.some((ee => ee.name === Ue.name)) ? ie.warn(`Instrumentation ${Ue.name} is already added`) : (Ue.unpatchedConsole = ee, Ue.internalLogger = ie, Ue.config = He, Ue.metas = ye, Ue.transports = be, Ue.api = Me, Ke.push(Ue), Ue.initialize())
               }))
             },
             get instrumentations() {
-              return [...oB]
+              return [...Ke]
             },
             remove: function() {
-              OB.debug("Removing instrumentations");
-              for (var BB = arguments.length, GB = new Array(BB), YB = 0; YB < BB; YB++) GB[YB] = arguments[YB];
-              GB.forEach((BB => {
-                var GB, YB;
-                OB.debug(`Removing "${BB.name}" instrumentation`);
-                const DB = oB.reduce(((OB, GB, YB) => null === OB && GB.name === BB.name ? YB : null), null);
-                null !== DB ? (null === (GB = (YB = oB[DB]).destroy) || void 0 === GB || GB.call(YB), oB.splice(DB, 1)) : OB.warn(`Instrumentation "${BB.name}" is not added`)
+              ie.debug("Removing instrumentations");
+              for (var ee = arguments.length, He = new Array(ee), ye = 0; ye < ee; ye++) He[ye] = arguments[ye];
+              He.forEach((ee => {
+                var He, ye;
+                ie.debug(`Removing "${ee.name}" instrumentation`);
+                const be = Ke.reduce(((ie, He, ye) => null === ie && He.name === ee.name ? ye : null), null);
+                null !== be ? (null === (He = (ye = Ke[be]).destroy) || void 0 === He || He.call(ye), Ke.splice(be, 1)) : ie.warn(`Instrumentation "${ee.name}" is not added`)
               }))
             }
           }
-        }(OB, GB, BB, YB, DB, QB),
-        jB = ZB(OB, GB, BB, YB, DB, QB, oB);
-      return XQ(jB),
-        function(BB) {
-          BB.transports.add(...BB.config.transports), BB.transports.addBeforeSendHooks(BB.config.beforeSend)
-        }(jB),
-        function(BB) {
-          BB.instrumentations.add(...BB.config.instrumentations)
-        }(jB), jB
+        }(ie, He, ee, ye, be, Me),
+        Ue = pe(ie, He, ee, ye, be, Me, Ke);
+      return uM(Ue),
+        function(ee) {
+          ee.transports.add(...ee.config.transports), ee.transports.addBeforeSendHooks(ee.config.beforeSend)
+        }(Ue),
+        function(ee) {
+          ee.instrumentations.add(...ee.config.instrumentations)
+        }(Ue), Ue
     }
 
-    function sQ(BB) {
-      const OB = uQ(BB);
-      if (OB) return vQ(OB)
+    function QM(ee) {
+      const ie = YM(ee);
+      if (ie) return rM(ie)
     }
   },
-  7227: function(BB, OB, GB) {
-    var YB;
-    ! function(DB, QB) {
-      var oB = "function",
-        jB = "undefined",
-        yB = "object",
-        JB = "string",
-        MB = "major",
-        PB = "model",
-        zB = "name",
-        lB = "type",
-        pB = "vendor",
-        qB = "version",
-        ZB = "architecture",
-        NB = "console",
-        RB = "mobile",
-        WB = "tablet",
-        AB = "smarttv",
-        VB = "wearable",
-        SB = "embedded",
-        nB = "Amazon",
-        UB = "Apple",
-        fB = "ASUS",
-        kB = "BlackBerry",
-        dB = "Browser",
-        KB = "Chrome",
-        uB = "Firefox",
-        mB = "Google",
-        IB = "Honor",
-        FB = "Huawei",
-        iB = "LG",
-        LB = "Microsoft",
-        gB = "Motorola",
-        rB = "Nvidia",
-        XB = "OnePlus",
-        wB = "Opera",
-        EB = "OPPO",
-        cB = "Samsung",
-        hB = "Sharp",
-        aB = "Sony",
-        eB = "Xiaomi",
-        TB = "Zebra",
-        bB = "Facebook",
-        CB = "Chromium OS",
-        HB = "Mac OS",
-        vB = " Browser",
-        sB = function(BB) {
-          for (var OB = {}, GB = 0; GB < BB.length; GB++) OB[BB[GB].toUpperCase()] = BB[GB];
-          return OB
+  7323: function(ee, ie, He) {
+    var ye;
+    ! function(be, Me) {
+      var Ke = "function",
+        Ue = "undefined",
+        Fe = "object",
+        Je = "string",
+        oe = "major",
+        Re = "model",
+        ke = "name",
+        qe = "type",
+        fe = "vendor",
+        Te = "version",
+        pe = "architecture",
+        Xe = "console",
+        ze = "mobile",
+        Be = "tablet",
+        Ee = "smarttv",
+        ge = "wearable",
+        Oe = "embedded",
+        de = "Amazon",
+        We = "Apple",
+        te = "ASUS",
+        Ze = "BlackBerry",
+        we = "Browser",
+        De = "Chrome",
+        Pe = "Firefox",
+        Ae = "Google",
+        Ye = "Honor",
+        Ve = "Huawei",
+        ae = "LG",
+        ce = "Microsoft",
+        xe = "Motorola",
+        Le = "Nvidia",
+        Ce = "OnePlus",
+        ve = "Opera",
+        ue = "OPPO",
+        me = "Samsung",
+        le = "Sharp",
+        Se = "Sony",
+        ne = "Xiaomi",
+        je = "Zebra",
+        se = "Facebook",
+        Ie = "Chromium OS",
+        he = "Mac OS",
+        Ne = " Browser",
+        Ge = function(ee) {
+          for (var ie = {}, He = 0; He < ee.length; He++) ie[ee[He].toUpperCase()] = ee[He];
+          return ie
         },
-        xB = function(BB, OB) {
-          return typeof BB === JB && -1 !== tB(OB).indexOf(tB(BB))
+        re = function(ee, ie) {
+          return typeof ee === Je && -1 !== Qe(ie).indexOf(Qe(ee))
         },
-        tB = function(BB) {
-          return BB.toLowerCase()
+        Qe = function(ee) {
+          return ee.toLowerCase()
         },
-        BO = function(BB, OB) {
-          if (typeof BB === JB) return BB = BB.replace(/^\s\s*/, ""), typeof OB === jB ? BB : BB.substring(0, 500)
+        ei = function(ee, ie) {
+          if (typeof ee === Je) return ee = ee.replace(/^\s\s*/, ""), typeof ie === Ue ? ee : ee.substring(0, 500)
         },
-        OO = function(BB, OB) {
-          for (var GB, YB, DB, jB, JB, MB, PB = 0; PB < OB.length && !JB;) {
-            var zB = OB[PB],
-              lB = OB[PB + 1];
-            for (GB = YB = 0; GB < zB.length && !JB && zB[GB];)
-              if (JB = zB[GB++].exec(BB))
-                for (DB = 0; DB < lB.length; DB++) MB = JB[++YB], typeof(jB = lB[DB]) === yB && jB.length > 0 ? 2 === jB.length ? typeof jB[1] == oB ? this[jB[0]] = jB[1].call(this, MB) : this[jB[0]] = jB[1] : 3 === jB.length ? typeof jB[1] !== oB || jB[1].exec && jB[1].test ? this[jB[0]] = MB ? MB.replace(jB[1], jB[2]) : QB : this[jB[0]] = MB ? jB[1].call(this, MB, jB[2]) : QB : 4 === jB.length && (this[jB[0]] = MB ? jB[3].call(this, MB.replace(jB[1], jB[2])) : QB) : this[jB] = MB || QB;
-            PB += 2
+        ii = function(ee, ie) {
+          for (var He, ye, be, Ue, Je, oe, Re = 0; Re < ie.length && !Je;) {
+            var ke = ie[Re],
+              qe = ie[Re + 1];
+            for (He = ye = 0; He < ke.length && !Je && ke[He];)
+              if (Je = ke[He++].exec(ee))
+                for (be = 0; be < qe.length; be++) oe = Je[++ye], typeof(Ue = qe[be]) === Fe && Ue.length > 0 ? 2 === Ue.length ? typeof Ue[1] == Ke ? this[Ue[0]] = Ue[1].call(this, oe) : this[Ue[0]] = Ue[1] : 3 === Ue.length ? typeof Ue[1] !== Ke || Ue[1].exec && Ue[1].test ? this[Ue[0]] = oe ? oe.replace(Ue[1], Ue[2]) : Me : this[Ue[0]] = oe ? Ue[1].call(this, oe, Ue[2]) : Me : 4 === Ue.length && (this[Ue[0]] = oe ? Ue[3].call(this, oe.replace(Ue[1], Ue[2])) : Me) : this[Ue] = oe || Me;
+            Re += 2
           }
         },
-        GO = function(BB, OB) {
-          for (var GB in OB)
-            if (typeof OB[GB] === yB && OB[GB].length > 0) {
-              for (var YB = 0; YB < OB[GB].length; YB++)
-                if (xB(OB[GB][YB], BB)) return "?" === GB ? QB : GB
-            } else if (xB(OB[GB], BB)) return "?" === GB ? QB : GB;
-          return OB.hasOwnProperty("*") ? OB["*"] : BB
+        Hi = function(ee, ie) {
+          for (var He in ie)
+            if (typeof ie[He] === Fe && ie[He].length > 0) {
+              for (var ye = 0; ye < ie[He].length; ye++)
+                if (re(ie[He][ye], ee)) return "?" === He ? Me : He
+            } else if (re(ie[He], ee)) return "?" === He ? Me : He;
+          return ie.hasOwnProperty("*") ? ie["*"] : ee
         },
-        YO = {
+        yi = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        DO = {
+        bi = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [qB, [zB, "Chrome"]],
+            [Te, [ke, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [qB, [zB, "Edge"]],
+            [Te, [ke, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/opios[\/ ]+([\w\.]+)/i],
-            [qB, [zB, wB + " Mini"]],
+            [Te, [ke, ve + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [qB, [zB, wB + " GX"]],
+            [Te, [ke, ve + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [qB, [zB, wB]],
+            [Te, [ke, ve]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [qB, [zB, "Baidu"]],
+            [Te, [ke, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [qB, [zB, "Maxthon"]],
+            [Te, [ke, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [qB, [zB, "Quark"]],
+            [Te, [ke, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [qB, [zB, "DuckDuckGo"]],
+            [Te, [ke, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [qB, [zB, "UC" + dB]],
+            [Te, [ke, "UC" + we]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [qB, [zB, "WeChat"]],
+            [Te, [ke, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [qB, [zB, "Konqueror"]],
+            [Te, [ke, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [qB, [zB, "IE"]],
+            [Te, [ke, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [qB, [zB, "Yandex"]],
+            [Te, [ke, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [qB, [zB, "Smart Lenovo " + dB]],
+            [Te, [ke, "Smart Lenovo " + we]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [zB, /(.+)/, "$1 Secure " + dB], qB
+              [ke, /(.+)/, "$1 Secure " + we], Te
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [qB, [zB, uB + " Focus"]],
+            [Te, [ke, Pe + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [qB, [zB, wB + " Touch"]],
+            [Te, [ke, ve + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [qB, [zB, "Coc Coc"]],
+            [Te, [ke, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [qB, [zB, "Dolphin"]],
+            [Te, [ke, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [qB, [zB, wB + " Coast"]],
+            [Te, [ke, ve + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [qB, [zB, "MIUI" + vB]],
+            [Te, [ke, "MIUI" + Ne]],
             [/fxios\/([\w\.-]+)/i],
-            [qB, [zB, uB]],
+            [Te, [ke, Pe]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [qB, [zB, "360"]],
+            [Te, [ke, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [zB, /(.+)/, "$1Browser"], qB
+              [ke, /(.+)/, "$1Browser"], Te
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [zB, /(.+)/, "$1" + vB], qB
+              [ke, /(.+)/, "$1" + Ne], Te
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [qB, [zB, cB + " Internet"]],
+            [Te, [ke, me + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [qB, [zB, "Sogou Explorer"]],
+            [Te, [ke, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [zB, "Sogou Mobile"], qB
+              [ke, "Sogou Mobile"], Te
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [zB],
+            [ke],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [qB, zB],
+            [Te, ke],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [zB, bB], qB
+              [ke, se], Te
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [qB, [zB, "GSA"]],
+            [Te, [ke, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [qB, [zB, "TikTok"]],
+            [Te, [ke, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [qB, [zB, KB + " Headless"]],
+            [Te, [ke, De + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [zB, KB + " WebView"], qB
+              [ke, De + " WebView"], Te
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [qB, [zB, "Android " + dB]],
+            [Te, [ke, "Android " + we]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [qB, [zB, "Mobile Safari"]],
+            [Te, [ke, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [qB, zB],
+            [Te, ke],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [zB, [qB, GO, {
+            [ke, [Te, Hi, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [zB, "Netscape"], qB
+              [ke, "Netscape"], Te
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [qB, [zB, uB + " Reality"]],
+            [Te, [ke, Pe + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [zB, [qB, /_/g, "."]],
+            [ke, [Te, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [zB, [qB, /master.|lts./, ""]]
+            [ke, [Te, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [ZB, "amd64"]
+              [pe, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [ZB, "ia32"]
+              [pe, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [ZB, "arm64"]
+              [pe, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [ZB, "armhf"]
+              [pe, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [ZB, "arm"]
+              [pe, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [ZB, /ower/, "", tB]
+              [pe, /ower/, "", Qe]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [ZB, "sparc"]
+              [pe, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [ZB, tB]
+              [pe, Qe]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [PB, [pB, cB],
-              [lB, WB]
+            [Re, [fe, me],
+              [qe, Be]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [PB, [pB, cB],
-              [lB, RB]
+            [Re, [fe, me],
+              [qe, ze]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [PB, [pB, UB],
-              [lB, RB]
+            [Re, [fe, We],
+              [qe, ze]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [PB, [pB, UB],
-              [lB, WB]
+            [Re, [fe, We],
+              [qe, Be]
             ],
             [/(macintosh);/i],
-            [PB, [pB, UB]],
+            [Re, [fe, We]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [PB, [pB, hB],
-              [lB, RB]
+            [Re, [fe, le],
+              [qe, ze]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [PB, [pB, IB],
-              [lB, WB]
+            [Re, [fe, Ye],
+              [qe, Be]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [PB, [pB, IB],
-              [lB, RB]
+            [Re, [fe, Ye],
+              [qe, ze]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [PB, [pB, FB],
-              [lB, WB]
+            [Re, [fe, Ve],
+              [qe, Be]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [PB, [pB, FB],
-              [lB, RB]
+            [Re, [fe, Ve],
+              [qe, ze]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [PB, /_/g, " "],
-              [pB, eB],
-              [lB, WB]
+              [Re, /_/g, " "],
+              [fe, ne],
+              [qe, Be]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [PB, /_/g, " "],
-              [pB, eB],
-              [lB, RB]
+              [Re, /_/g, " "],
+              [fe, ne],
+              [qe, ze]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [PB, [pB, EB],
-              [lB, RB]
+            [Re, [fe, ue],
+              [qe, ze]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [PB, [pB, GO, {
+            [Re, [fe, Hi, {
                 OnePlus: ["304", "403", "203"],
-                "*": EB
+                "*": ue
               }],
-              [lB, WB]
+              [qe, Be]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [PB, [pB, "Vivo"],
-              [lB, RB]
+            [Re, [fe, "Vivo"],
+              [qe, ze]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [PB, [pB, "Realme"],
-              [lB, RB]
+            [Re, [fe, "Realme"],
+              [qe, ze]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [PB, [pB, gB],
-              [lB, RB]
+            [Re, [fe, xe],
+              [qe, ze]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [PB, [pB, gB],
-              [lB, WB]
+            [Re, [fe, xe],
+              [qe, Be]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [PB, [pB, iB],
-              [lB, WB]
+            [Re, [fe, ae],
+              [qe, Be]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [PB, [pB, iB],
-              [lB, RB]
+            [Re, [fe, ae],
+              [qe, ze]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [PB, [pB, "Lenovo"],
-              [lB, WB]
+            [Re, [fe, "Lenovo"],
+              [qe, Be]
             ],
             [/(nokia) (t[12][01])/i],
-            [pB, PB, [lB, WB]],
+            [fe, Re, [qe, Be]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [PB, /_/g, " "],
-              [lB, RB],
-              [pB, "Nokia"]
+              [Re, /_/g, " "],
+              [qe, ze],
+              [fe, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [PB, [pB, mB],
-              [lB, WB]
+            [Re, [fe, Ae],
+              [qe, Be]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [PB, [pB, mB],
-              [lB, RB]
+            [Re, [fe, Ae],
+              [qe, ze]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [PB, [pB, aB],
-              [lB, RB]
+            [Re, [fe, Se],
+              [qe, ze]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [PB, "Xperia Tablet"],
-              [pB, aB],
-              [lB, WB]
+              [Re, "Xperia Tablet"],
+              [fe, Se],
+              [qe, Be]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [PB, [pB, XB],
-              [lB, RB]
+            [Re, [fe, Ce],
+              [qe, ze]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [PB, [pB, nB],
-              [lB, WB]
+            [Re, [fe, de],
+              [qe, Be]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [PB, /(.+)/g, "Fire Phone $1"],
-              [pB, nB],
-              [lB, RB]
+              [Re, /(.+)/g, "Fire Phone $1"],
+              [fe, de],
+              [qe, ze]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [PB, pB, [lB, WB]],
+            [Re, fe, [qe, Be]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [PB, [pB, kB],
-              [lB, RB]
+            [Re, [fe, Ze],
+              [qe, ze]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [PB, [pB, fB],
-              [lB, WB]
+            [Re, [fe, te],
+              [qe, Be]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [PB, [pB, fB],
-              [lB, RB]
+            [Re, [fe, te],
+              [qe, ze]
             ],
             [/(nexus 9)/i],
-            [PB, [pB, "HTC"],
-              [lB, WB]
+            [Re, [fe, "HTC"],
+              [qe, Be]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [pB, [PB, /_/g, " "],
-              [lB, RB]
+            [fe, [Re, /_/g, " "],
+              [qe, ze]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [PB, [pB, "TCL"],
-              [lB, WB]
+            [Re, [fe, "TCL"],
+              [qe, Be]
             ],
             [/(itel) ((\w+))/i],
             [
-              [pB, tB], PB, [lB, GO, {
+              [fe, Qe], Re, [qe, Hi, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [PB, [pB, "Acer"],
-              [lB, WB]
+            [Re, [fe, "Acer"],
+              [qe, Be]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [PB, [pB, "Meizu"],
-              [lB, RB]
+            [Re, [fe, "Meizu"],
+              [qe, ze]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [PB, [pB, "Ulefone"],
-              [lB, RB]
+            [Re, [fe, "Ulefone"],
+              [qe, ze]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [PB, [pB, "Energizer"],
-              [lB, RB]
+            [Re, [fe, "Energizer"],
+              [qe, ze]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [PB, [pB, "Cat"],
-              [lB, RB]
+            [Re, [fe, "Cat"],
+              [qe, ze]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [PB, [pB, "Smartfren"],
-              [lB, RB]
+            [Re, [fe, "Smartfren"],
+              [qe, ze]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [PB, [pB, "Nothing"],
-              [lB, RB]
+            [Re, [fe, "Nothing"],
+              [qe, ze]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [PB, [pB, "Archos"],
-              [lB, WB]
+            [Re, [fe, "Archos"],
+              [qe, Be]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [PB, [pB, "Archos"],
-              [lB, RB]
+            [Re, [fe, "Archos"],
+              [qe, ze]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [pB, PB, [lB, WB]],
+            [fe, Re, [qe, Be]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [pB, PB, [lB, RB]],
+            [fe, Re, [qe, ze]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [pB, PB, [lB, WB]],
+            [fe, Re, [qe, Be]],
             [/(surface duo)/i],
-            [PB, [pB, LB],
-              [lB, WB]
+            [Re, [fe, ce],
+              [qe, Be]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [PB, [pB, "Fairphone"],
-              [lB, RB]
+            [Re, [fe, "Fairphone"],
+              [qe, ze]
             ],
             [/(u304aa)/i],
-            [PB, [pB, "AT&T"],
-              [lB, RB]
+            [Re, [fe, "AT&T"],
+              [qe, ze]
             ],
             [/\bsie-(\w*)/i],
-            [PB, [pB, "Siemens"],
-              [lB, RB]
+            [Re, [fe, "Siemens"],
+              [qe, ze]
             ],
             [/\b(rct\w+) b/i],
-            [PB, [pB, "RCA"],
-              [lB, WB]
+            [Re, [fe, "RCA"],
+              [qe, Be]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [PB, [pB, "Dell"],
-              [lB, WB]
+            [Re, [fe, "Dell"],
+              [qe, Be]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [PB, [pB, "Verizon"],
-              [lB, WB]
+            [Re, [fe, "Verizon"],
+              [qe, Be]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [PB, [pB, "Barnes & Noble"],
-              [lB, WB]
+            [Re, [fe, "Barnes & Noble"],
+              [qe, Be]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [PB, [pB, "NuVision"],
-              [lB, WB]
+            [Re, [fe, "NuVision"],
+              [qe, Be]
             ],
             [/\b(k88) b/i],
-            [PB, [pB, "ZTE"],
-              [lB, WB]
+            [Re, [fe, "ZTE"],
+              [qe, Be]
             ],
             [/\b(nx\d{3}j) b/i],
-            [PB, [pB, "ZTE"],
-              [lB, RB]
+            [Re, [fe, "ZTE"],
+              [qe, ze]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [PB, [pB, "Swiss"],
-              [lB, RB]
+            [Re, [fe, "Swiss"],
+              [qe, ze]
             ],
             [/\b(zur\d{3}) b/i],
-            [PB, [pB, "Swiss"],
-              [lB, WB]
+            [Re, [fe, "Swiss"],
+              [qe, Be]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [PB, [pB, "Zeki"],
-              [lB, WB]
+            [Re, [fe, "Zeki"],
+              [qe, Be]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [pB, "Dragon Touch"], PB, [lB, WB]
+              [fe, "Dragon Touch"], Re, [qe, Be]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [PB, [pB, "Insignia"],
-              [lB, WB]
+            [Re, [fe, "Insignia"],
+              [qe, Be]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [PB, [pB, "NextBook"],
-              [lB, WB]
+            [Re, [fe, "NextBook"],
+              [qe, Be]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [pB, "Voice"], PB, [lB, RB]
+              [fe, "Voice"], Re, [qe, ze]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [pB, "LvTel"], PB, [lB, RB]
+              [fe, "LvTel"], Re, [qe, ze]
             ],
             [/\b(ph-1) /i],
-            [PB, [pB, "Essential"],
-              [lB, RB]
+            [Re, [fe, "Essential"],
+              [qe, ze]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [PB, [pB, "Envizen"],
-              [lB, WB]
+            [Re, [fe, "Envizen"],
+              [qe, Be]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [PB, [pB, "MachSpeed"],
-              [lB, WB]
+            [Re, [fe, "MachSpeed"],
+              [qe, Be]
             ],
             [/\btu_(1491) b/i],
-            [PB, [pB, "Rotor"],
-              [lB, WB]
+            [Re, [fe, "Rotor"],
+              [qe, Be]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [PB, [pB, rB],
-              [lB, WB]
+            [Re, [fe, Le],
+              [qe, Be]
             ],
             [/(sprint) (\w+)/i],
-            [pB, PB, [lB, RB]],
+            [fe, Re, [qe, ze]],
             [/(kin\.[onetw]{3})/i],
             [
-              [PB, /\./g, " "],
-              [pB, LB],
-              [lB, RB]
+              [Re, /\./g, " "],
+              [fe, ce],
+              [qe, ze]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [PB, [pB, TB],
-              [lB, WB]
+            [Re, [fe, je],
+              [qe, Be]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [PB, [pB, TB],
-              [lB, RB]
+            [Re, [fe, je],
+              [qe, ze]
             ],
             [/smart-tv.+(samsung)/i],
-            [pB, [lB, AB]],
+            [fe, [qe, Ee]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [PB, /^/, "SmartTV"],
-              [pB, cB],
-              [lB, AB]
+              [Re, /^/, "SmartTV"],
+              [fe, me],
+              [qe, Ee]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [pB, iB],
-              [lB, AB]
+              [fe, ae],
+              [qe, Ee]
             ],
             [/(apple) ?tv/i],
-            [pB, [PB, UB + " TV"],
-              [lB, AB]
+            [fe, [Re, We + " TV"],
+              [qe, Ee]
             ],
             [/crkey/i],
             [
-              [PB, KB + "cast"],
-              [pB, mB],
-              [lB, AB]
+              [Re, De + "cast"],
+              [fe, Ae],
+              [qe, Ee]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [PB, [pB, nB],
-              [lB, AB]
+            [Re, [fe, de],
+              [qe, Ee]
             ],
             [/(shield \w+ tv)/i],
-            [PB, [pB, rB],
-              [lB, AB]
+            [Re, [fe, Le],
+              [qe, Ee]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [PB, [pB, hB],
-              [lB, AB]
+            [Re, [fe, le],
+              [qe, Ee]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [PB, [pB, aB],
-              [lB, AB]
+            [Re, [fe, Se],
+              [qe, Ee]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [PB, [pB, eB],
-              [lB, AB]
+            [Re, [fe, ne],
+              [qe, Ee]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [pB, PB, [lB, AB]],
+            [fe, Re, [qe, Ee]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [pB, BO],
-              [PB, BO],
-              [lB, AB]
+              [fe, ei],
+              [Re, ei],
+              [qe, Ee]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [PB, [lB, AB]],
+            [Re, [qe, Ee]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [lB, AB]
+              [qe, Ee]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [pB, PB, [lB, NB]],
+            [fe, Re, [qe, Xe]],
             [/droid.+; (shield)( bui|\))/i],
-            [PB, [pB, rB],
-              [lB, NB]
+            [Re, [fe, Le],
+              [qe, Xe]
             ],
             [/(playstation \w+)/i],
-            [PB, [pB, aB],
-              [lB, NB]
+            [Re, [fe, Se],
+              [qe, Xe]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [PB, [pB, LB],
-              [lB, NB]
+            [Re, [fe, ce],
+              [qe, Xe]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [PB, [pB, cB],
-              [lB, VB]
+            [Re, [fe, me],
+              [qe, ge]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [pB, PB, [lB, VB]],
+            [fe, Re, [qe, ge]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [PB, [pB, EB],
-              [lB, VB]
+            [Re, [fe, ue],
+              [qe, ge]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [PB, [pB, UB],
-              [lB, VB]
+            [Re, [fe, We],
+              [qe, ge]
             ],
             [/(opwwe\d{3})/i],
-            [PB, [pB, XB],
-              [lB, VB]
+            [Re, [fe, Ce],
+              [qe, ge]
             ],
             [/(moto 360)/i],
-            [PB, [pB, gB],
-              [lB, VB]
+            [Re, [fe, xe],
+              [qe, ge]
             ],
             [/(smartwatch 3)/i],
-            [PB, [pB, aB],
-              [lB, VB]
+            [Re, [fe, Se],
+              [qe, ge]
             ],
             [/(g watch r)/i],
-            [PB, [pB, iB],
-              [lB, VB]
+            [Re, [fe, ae],
+              [qe, ge]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [PB, [pB, TB],
-              [lB, VB]
+            [Re, [fe, je],
+              [qe, ge]
             ],
             [/droid.+; (glass) \d/i],
-            [PB, [pB, mB],
-              [lB, VB]
+            [Re, [fe, Ae],
+              [qe, ge]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [pB, PB, [lB, VB]],
+            [fe, Re, [qe, ge]],
             [/; (quest( \d| pro)?)/i],
-            [PB, [pB, bB],
-              [lB, VB]
+            [Re, [fe, se],
+              [qe, ge]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [pB, [lB, SB]],
+            [fe, [qe, Oe]],
             [/(aeobc)\b/i],
-            [PB, [pB, nB],
-              [lB, SB]
+            [Re, [fe, de],
+              [qe, Oe]
             ],
             [/(homepod).+mac os/i],
-            [PB, [pB, UB],
-              [lB, SB]
+            [Re, [fe, We],
+              [qe, Oe]
             ],
             [/windows iot/i],
             [
-              [lB, SB]
+              [qe, Oe]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [PB, [lB, RB]],
+            [Re, [qe, ze]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [PB, [lB, WB]],
+            [Re, [qe, Be]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [lB, WB]
+              [qe, Be]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [lB, RB]
+              [qe, ze]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [PB, [pB, "Generic"]]
+            [Re, [fe, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [qB, [zB, "EdgeHTML"]],
+            [Te, [ke, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [zB, qB],
+            [ke, Te],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [qB, [zB, "Blink"]],
+            [Te, [ke, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [zB, qB],
+            [ke, Te],
             [/ladybird\//i],
             [
-              [zB, "LibWeb"]
+              [ke, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [qB, zB]
+            [Te, ke]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [zB, qB],
+            [ke, Te],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [zB, [qB, GO, YO]],
+            [ke, [Te, Hi, yi]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [qB, GO, YO],
-              [zB, "Windows"]
+              [Te, Hi, yi],
+              [ke, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [qB, /_/g, "."],
-              [zB, "iOS"]
+              [Te, /_/g, "."],
+              [ke, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [zB, HB],
-              [qB, /_/g, "."]
+              [ke, he],
+              [Te, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [qB, zB],
+            [Te, ke],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [zB, /(.+)/, "$1 Touch"], qB
+              [ke, /(.+)/, "$1 Touch"], Te
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [zB, qB],
+            [ke, Te],
             [/\(bb(10);/i],
-            [qB, [zB, kB]],
+            [Te, [ke, Ze]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [qB, [zB, "Symbian"]],
+            [Te, [ke, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [qB, [zB, uB + " OS"]],
+            [Te, [ke, Pe + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [qB, [zB, "webOS"]],
+            [Te, [ke, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [qB, [zB, "watchOS"]],
+            [Te, [ke, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [qB, [zB, KB + "cast"]],
+            [Te, [ke, De + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [zB, CB], qB
+              [ke, Ie], Te
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [zB, qB],
+            [ke, Te],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [zB, "Solaris"], qB
+              [ke, "Solaris"], Te
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [zB, qB]
+            [ke, Te]
           ]
         },
-        QO = function(BB, OB) {
-          if (typeof BB === yB && (OB = BB, BB = QB), !(this instanceof QO)) return new QO(BB, OB).getResult();
-          var GB = typeof DB !== jB && DB.navigator ? DB.navigator : QB,
-            YB = BB || (GB && GB.userAgent ? GB.userAgent : ""),
-            NB = GB && GB.userAgentData ? GB.userAgentData : QB,
-            AB = OB ? function(BB, OB) {
-              var GB = {};
-              for (var YB in BB) OB[YB] && OB[YB].length % 2 === 0 ? GB[YB] = OB[YB].concat(BB[YB]) : GB[YB] = BB[YB];
-              return GB
-            }(DO, OB) : DO,
-            VB = GB && GB.userAgent == YB;
+        Mi = function(ee, ie) {
+          if (typeof ee === Fe && (ie = ee, ee = Me), !(this instanceof Mi)) return new Mi(ee, ie).getResult();
+          var He = typeof be !== Ue && be.navigator ? be.navigator : Me,
+            ye = ee || (He && He.userAgent ? He.userAgent : ""),
+            Xe = He && He.userAgentData ? He.userAgentData : Me,
+            Ee = ie ? function(ee, ie) {
+              var He = {};
+              for (var ye in ee) ie[ye] && ie[ye].length % 2 === 0 ? He[ye] = ie[ye].concat(ee[ye]) : He[ye] = ee[ye];
+              return He
+            }(bi, ie) : bi,
+            ge = He && He.userAgent == ye;
           return this.getBrowser = function() {
-            var BB, OB = {};
-            return OB[zB] = QB, OB[qB] = QB, OO.call(OB, YB, AB.browser), OB[MB] = typeof(BB = OB[qB]) === JB ? BB.replace(/[^\d\.]/g, "").split(".")[0] : QB, VB && GB && GB.brave && typeof GB.brave.isBrave == oB && (OB[zB] = "Brave"), OB
+            var ee, ie = {};
+            return ie[ke] = Me, ie[Te] = Me, ii.call(ie, ye, Ee.browser), ie[oe] = typeof(ee = ie[Te]) === Je ? ee.replace(/[^\d\.]/g, "").split(".")[0] : Me, ge && He && He.brave && typeof He.brave.isBrave == Ke && (ie[ke] = "Brave"), ie
           }, this.getCPU = function() {
-            var BB = {};
-            return BB[ZB] = QB, OO.call(BB, YB, AB.cpu), BB
+            var ee = {};
+            return ee[pe] = Me, ii.call(ee, ye, Ee.cpu), ee
           }, this.getDevice = function() {
-            var BB = {};
-            return BB[pB] = QB, BB[PB] = QB, BB[lB] = QB, OO.call(BB, YB, AB.device), VB && !BB[lB] && NB && NB.mobile && (BB[lB] = RB), VB && "Macintosh" == BB[PB] && GB && typeof GB.standalone !== jB && GB.maxTouchPoints && GB.maxTouchPoints > 2 && (BB[PB] = "iPad", BB[lB] = WB), BB
-          }, this.Lp = function() {
-            var BB = {};
-            return BB[zB] = QB, BB[qB] = QB, OO.call(BB, YB, AB.engine), BB
+            var ee = {};
+            return ee[fe] = Me, ee[Re] = Me, ee[qe] = Me, ii.call(ee, ye, Ee.device), ge && !ee[qe] && Xe && Xe.mobile && (ee[qe] = ze), ge && "Macintosh" == ee[Re] && He && typeof He.standalone !== Ue && He.maxTouchPoints && He.maxTouchPoints > 2 && (ee[Re] = "iPad", ee[qe] = Be), ee
+          }, this.Nf = function() {
+            var ee = {};
+            return ee[ke] = Me, ee[Te] = Me, ii.call(ee, ye, Ee.engine), ee
           }, this.getOS = function() {
-            var BB = {};
-            return BB[zB] = QB, BB[qB] = QB, OO.call(BB, YB, AB.os), VB && !BB[zB] && NB && NB.platform && "Unknown" != NB.platform && (BB[zB] = NB.platform.replace(/chrome os/i, CB).replace(/macos/i, HB)), BB
+            var ee = {};
+            return ee[ke] = Me, ee[Te] = Me, ii.call(ee, ye, Ee.os), ge && !ee[ke] && Xe && Xe.platform && "Unknown" != Xe.platform && (ee[ke] = Xe.platform.replace(/chrome os/i, Ie).replace(/macos/i, he)), ee
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.Lp(),
+              engine: this.Nf(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return YB
-          }, this.setUA = function(BB) {
-            return YB = typeof BB === JB && BB.length > 500 ? BO(BB, 500) : BB, this
-          }, this.setUA(YB), this
+            return ye
+          }, this.setUA = function(ee) {
+            return ye = typeof ee === Je && ee.length > 500 ? ei(ee, 500) : ee, this
+          }, this.setUA(ye), this
         };
-      QO.VERSION = "1.0.41", QO.BROWSER = sB([zB, qB, MB]), QO.CPU = sB([ZB]), QO.DEVICE = sB([PB, pB, lB, NB, RB, AB, WB, VB, SB]), QO.ENGINE = QO.OS = sB([zB, qB]), typeof OB !== jB ? (BB.exports && (OB = BB.exports = QO), OB.UAParser = QO) : GB.amdO ? (YB = function() {
-        return QO
-      }.call(OB, GB, OB, BB)) === QB || (BB.exports = YB) : typeof DB !== jB && (DB.UAParser = QO);
-      var oO = typeof DB !== jB && (DB.jQuery || DB.Zepto);
-      if (oO && !oO.ua) {
-        var jO = new QO;
-        oO.ua = jO.getResult(), oO.ua.get = function() {
-          return jO.getUA()
-        }, oO.ua.set = function(BB) {
-          jO.setUA(BB);
-          var OB = jO.getResult();
-          for (var GB in OB) oO.ua[GB] = OB[GB]
+      Mi.VERSION = "1.0.41", Mi.BROWSER = Ge([ke, Te, oe]), Mi.CPU = Ge([pe]), Mi.DEVICE = Ge([Re, fe, qe, Xe, ze, Ee, Be, ge, Oe]), Mi.ENGINE = Mi.OS = Ge([ke, Te]), typeof ie !== Ue ? (ee.exports && (ie = ee.exports = Mi), ie.UAParser = Mi) : He.amdO ? (ye = function() {
+        return Mi
+      }.call(ie, He, ie, ee)) === Me || (ee.exports = ye) : typeof be !== Ue && (be.UAParser = Mi);
+      var Ki = typeof be !== Ue && (be.jQuery || be.Zepto);
+      if (Ki && !Ki.ua) {
+        var Ui = new Mi;
+        Ki.ua = Ui.getResult(), Ki.ua.get = function() {
+          return Ui.getUA()
+        }, Ki.ua.set = function(ee) {
+          Ui.setUA(ee);
+          var ie = Ui.getResult();
+          for (var He in ie) Ki.ua[He] = ie[He]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

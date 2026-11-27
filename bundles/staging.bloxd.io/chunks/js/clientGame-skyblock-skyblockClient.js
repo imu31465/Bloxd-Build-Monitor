@@ -1,370 +1,370 @@
 export const id = 30;
 export const ids = [30];
 export const modules = {
-  5326: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => ZB,
-      i: () => NB
+  5311: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => pe,
+      e: () => Xe
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(56),
-      oB = GB(1175),
-      jB = GB(5335),
-      yB = GB(2e3),
-      JB = GB(2653),
-      MB = GB(5337),
-      PB = GB(1282);
-    const zB = new WeakMap;
-    let lB = 0;
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(59),
+      Ke = He(1127),
+      Ue = He(5317),
+      Fe = He(1956),
+      Je = He(2532),
+      oe = He(5319),
+      Re = He(1228);
+    const ke = new WeakMap;
+    let qe = 0;
 
-    function pB(BB) {
-      let OB = zB.get(BB);
-      return void 0 === OB && (OB = lB++, zB.set(BB, OB)), OB
+    function fe(ee) {
+      let ie = ke.get(ee);
+      return void 0 === ie && (ie = qe++, ke.set(ee, ie)), ie
     }
 
-    function qB(BB) {
+    function Te(ee) {
       let {
-        piece: OB
-      } = BB;
-      return "space" === OB.kind ? (0, PB.jsx)(PB.Fragment, {
-        children: OB.text
-      }) : (0, PB.jsx)("span", {
+        piece: ie
+      } = ee;
+      return "space" === ie.kind ? (0, Re.jsx)(Re.Fragment, {
+        children: ie.text
+      }) : (0, Re.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${OB.delayMs}ms`
+          "--word-delay": `${ie.delayMs}ms`
         },
-        children: (0, PB.jsx)(jB.c, {
-          text: "icon" === OB.kind ? `[[${OB.icon}]]` : OB.text
+        children: (0, Re.jsx)(Ue.c, {
+          text: "icon" === ie.kind ? `[[${ie.icon}]]` : ie.text
         })
       })
     }
 
-    function ZB(BB) {
+    function pe(ee) {
       let {
-        display: OB
-      } = BB;
+        display: ie
+      } = ee;
       const {
-        selectedLanguage: GB
-      } = (0, oB.H)(), YB = (0, QB.useMemo)((() => (0, MB.b)((0, MB.c)(OB).plan.pieces)), [OB, GB.code]);
-      return (0, PB.jsxs)("div", {
-        className: DB()("Dialogue", {
-          DialogueAnimateIn: !1 !== OB.animateIn
+        selectedLanguage: He
+      } = (0, Ke.v)(), ye = (0, Me.useMemo)((() => (0, oe.e)((0, oe.g)(ie).plan.pieces)), [ie, He.code]);
+      return (0, Re.jsxs)("div", {
+        className: be()("Dialogue", {
+          DialogueAnimateIn: !1 !== ie.animateIn
         }),
-        children: [OB.speakerName && (0, PB.jsx)(yB.b, {
-          text: OB.speakerName,
+        children: [ie.speakerName && (0, Re.jsx)(Fe.e, {
+          text: ie.speakerName,
           className: "DialogueSpeaker"
-        }), (0, PB.jsx)("p", {
+        }), (0, Re.jsx)("p", {
           className: "DialogueLine",
-          children: YB.map(((BB, OB) => 1 === BB.length && "space" === BB[0].kind ? BB[0].text : (0, PB.jsx)("span", {
+          children: ye.map(((ee, ie) => 1 === ee.length && "space" === ee[0].kind ? ee[0].text : (0, Re.jsx)("span", {
             className: "DialogueGlue",
-            children: BB.map(((BB, OB) => (0, PB.jsx)(qB, {
-              piece: BB
-            }, OB)))
-          }, OB)))
+            children: ee.map(((ee, ie) => (0, Re.jsx)(Te, {
+              piece: ee
+            }, ie)))
+          }, ie)))
         })]
       })
     }
-    const NB = (0, QB.memo)((function() {
-      const BB = (0, JB.g)("dialogue");
-      return (0, PB.jsx)("div", {
+    const Xe = (0, Me.memo)((function() {
+      const ee = (0, Je.i)("dialogue");
+      return (0, Re.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: BB && (0, PB.jsx)(ZB, {
-          display: BB
-        }, pB(BB))
+        children: ee && (0, Re.jsx)(pe, {
+          display: ee
+        }, fe(ee))
       })
     }))
   },
-  5335: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => jB
+  5317: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ue
     });
-    var YB = GB(56),
-      DB = GB(331),
-      QB = GB(2012),
-      oB = GB(1282);
+    var ye = He(59),
+      be = He(335),
+      Me = He(1970),
+      Ke = He(1228);
 
-    function jB(BB) {
+    function Ue(ee) {
       let {
-        text: OB
-      } = BB;
-      const GB = [];
-      let jB = "";
-      return (0, DB.hc)(OB).forEach(((BB, OB) => {
-        if ("string" === typeof BB || !(0, QB.d)(BB.icon)) return void(jB += "string" === typeof BB ? BB : BB.icon);
-        const DB = Math.max(0, jB.trimEnd().search(/\S{1,12}$/));
-        GB.push((0, oB.jsxs)(YB.Fragment, {
-          children: [jB.slice(0, DB), (0, oB.jsxs)("span", {
+        text: ie
+      } = ee;
+      const He = [];
+      let Ue = "";
+      return (0, be.kc)(ie).forEach(((ee, ie) => {
+        if ("string" === typeof ee || !(0, Me.e)(ee.icon)) return void(Ue += "string" === typeof ee ? ee : ee.icon);
+        const be = Math.max(0, Ue.trimEnd().search(/\S{1,12}$/));
+        He.push((0, Ke.jsxs)(ye.Fragment, {
+          children: [Ue.slice(0, be), (0, Ke.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [jB.slice(DB), (0, oB.jsx)("span", {
+            children: [Ue.slice(be), (0, Ke.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": BB.icon,
-              children: (0, oB.jsx)(QB.c, {
-                itemName: BB.icon,
+              "aria-label": ee.icon,
+              children: (0, Ke.jsx)(Me.c, {
+                itemName: ee.icon,
                 amount: 0
               })
             })]
           })]
-        }, OB)), jB = ""
-      })), GB.push(jB), (0, oB.jsx)(oB.Fragment, {
-        children: GB
+        }, ie)), Ue = ""
+      })), He.push(Ue), (0, Ke.jsx)(Ke.Fragment, {
+        children: He
       })
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  34867: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var ye = He(4931),
+      be = He(4937);
 
-    function QB(BB) {
+    function Me(ee) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: ie,
+        showing: He,
+        globallyUniqueKey: Me,
+        alwaysMountChildren: Ke = !1,
+        doGameplayStartStopOnShow: Ue = !0,
+        keepsMovement: Fe = !1
+      } = ee;
+      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
     }
   },
-  5337: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => iB,
-      c: () => FB
+  5319: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => ae,
+      g: () => Ve
     });
-    var YB = GB(5345),
-      DB = GB(331);
-    const QB = 120,
-      oB = 260,
-      jB = 1.15,
-      yB = 1.2,
-      JB = 2,
-      MB = 1.08,
-      PB = .8,
-      zB = .95,
-      lB = 8,
-      pB = "[\"')\\]\u300d\u300f\uff09]*",
-      qB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${pB}$`),
-      ZB = new RegExp(`[?\uff1f]${pB}$`),
-      NB = new RegExp(`[!\uff01]${pB}$`),
-      RB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      WB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      AB = new RegExp(`[${WB}]`),
-      VB = new RegExp(`[${WB}]|[^${WB}]+`, "g"),
-      SB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var ye = He(5326),
+      be = He(335);
+    const Me = 120,
+      Ke = 260,
+      Ue = 1.15,
+      Fe = 1.2,
+      Je = 2,
+      oe = 1.08,
+      Re = .8,
+      ke = .95,
+      qe = 8,
+      fe = "[\"')\\]\u300d\u300f\uff09]*",
+      Te = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${fe}$`),
+      pe = new RegExp(`[?\uff1f]${fe}$`),
+      Xe = new RegExp(`[!\uff01]${fe}$`),
+      ze = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Be = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Ee = new RegExp(`[${Be}]`),
+      ge = new RegExp(`[${Be}]|[^${Be}]+`, "g"),
+      Oe = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function nB(BB) {
-      let OB = 2166136261;
-      for (let GB = 0; GB < BB.length; GB++) OB ^= BB.charCodeAt(GB), OB = Math.imul(OB, 16777619);
-      return (OB >>> 0) / 4294967295 * 2 - 1
+    function de(ee) {
+      let ie = 2166136261;
+      for (let He = 0; He < ee.length; He++) ie ^= ee.charCodeAt(He), ie = Math.imul(ie, 16777619);
+      return (ie >>> 0) / 4294967295 * 2 - 1
     }
 
-    function UB(BB) {
-      var OB;
-      if (AB.test(BB)) return 1;
-      const GB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        YB = GB.replace(/[^0-9]/g, "");
-      if (YB.length > 0 && !/\p{L}/u.test(GB)) return Math.min(YB.length, 4);
-      const DB = null !== (OB = GB.match(SB)) && void 0 !== OB ? OB : [];
-      if (0 === DB.length) {
-        var QB, oB;
-        const BB = null !== (QB = null === (oB = GB.match(/\p{L}/gu)) || void 0 === oB ? void 0 : oB.length) && void 0 !== QB ? QB : 0;
-        return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), lB)
+    function We(ee) {
+      var ie;
+      if (Ee.test(ee)) return 1;
+      const He = ee.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        ye = He.replace(/[^0-9]/g, "");
+      if (ye.length > 0 && !/\p{L}/u.test(He)) return Math.min(ye.length, 4);
+      const be = null !== (ie = He.match(Oe)) && void 0 !== ie ? ie : [];
+      if (0 === be.length) {
+        var Me, Ke;
+        const ee = null !== (Me = null === (Ke = He.match(/\p{L}/gu)) || void 0 === Ke ? void 0 : Ke.length) && void 0 !== Me ? Me : 0;
+        return 0 === ee ? 0 : Math.min(Math.max(1, Math.round(ee / 2.5)), qe)
       }
-      const jB = GB.replace(/[^\p{L}]/gu, ""),
-        yB = DB.length > 1 && "e" === DB.at(-1) && jB.endsWith("e") && !jB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
-      return Math.min(DB.length - (yB ? 1 : 0), lB)
+      const Ue = He.replace(/[^\p{L}]/gu, ""),
+        Fe = be.length > 1 && "e" === be.at(-1) && Ue.endsWith("e") && !Ue.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(ee.replace(/[^\p{L}]/gu, ""));
+      return Math.min(be.length - (Fe ? 1 : 0), qe)
     }
 
-    function fB(BB) {
-      return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function te(ee) {
+      return ee.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function kB(BB) {
-      const OB = BB.replace(/[^\p{L}]/gu, "");
-      return OB.length >= 2 && OB === OB.toUpperCase() && OB !== OB.toLowerCase()
+    function Ze(ee) {
+      const ie = ee.replace(/[^\p{L}]/gu, "");
+      return ie.length >= 2 && ie === ie.toUpperCase() && ie !== ie.toLowerCase()
     }
 
-    function dB(BB, OB) {
-      var GB;
-      const lB = OB && (0, YB.j)(OB),
-        pB = null !== (GB = null === lB || void 0 === lB ? void 0 : lB.syllableMs) && void 0 !== GB ? GB : YB.d,
-        WB = function(BB) {
-          const OB = [];
-          for (const YB of (0, DB.hc)(BB))
-            if ("string" === typeof YB)
-              for (const BB of YB.split(/(\s+)/)) {
-                if ("" === BB) continue;
-                if (/^\s+$/.test(BB)) {
-                  OB.push({
+    function we(ee, ie) {
+      var He;
+      const qe = ie && (0, ye.l)(ie),
+        fe = null !== (He = null === qe || void 0 === qe ? void 0 : qe.syllableMs) && void 0 !== He ? He : ye.d,
+        Be = function(ee) {
+          const ie = [];
+          for (const ye of (0, be.kc)(ee))
+            if ("string" === typeof ye)
+              for (const ee of ye.split(/(\s+)/)) {
+                if ("" === ee) continue;
+                if (/^\s+$/.test(ee)) {
+                  ie.push({
                     kind: "space",
-                    text: BB
+                    text: ee
                   });
                   continue
                 }
-                if (!AB.test(BB)) {
-                  OB.push({
+                if (!Ee.test(ee)) {
+                  ie.push({
                     kind: "word",
-                    text: BB,
+                    text: ee,
                     delayMs: 0
                   });
                   continue
                 }
-                let YB = !0;
-                for (const DB of null !== (GB = BB.match(VB)) && void 0 !== GB ? GB : []) {
-                  var GB;
-                  const BB = OB.at(-1);
-                  YB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || AB.test(DB) || /[\p{L}\p{N}]/u.test(DB) ? (YB || OB.push({
+                let ye = !0;
+                for (const be of null !== (He = ee.match(ge)) && void 0 !== He ? He : []) {
+                  var He;
+                  const ee = ie.at(-1);
+                  ye || "word" !== (null === ee || void 0 === ee ? void 0 : ee.kind) || Ee.test(be) || /[\p{L}\p{N}]/u.test(be) ? (ye || ie.push({
                     kind: "space",
                     text: "\u200b"
-                  }), OB.push({
+                  }), ie.push({
                     kind: "word",
-                    text: DB,
+                    text: be,
                     delayMs: 0
-                  }), YB = !1) : BB.text += DB
+                  }), ye = !1) : ee.text += be
                 }
-              } else OB.push({
+              } else ie.push({
                 kind: "icon",
-                text: YB.icon,
+                text: ye.icon,
                 delayMs: 0
               });
-          return OB
-        }(BB),
-        SB = [];
-      let dB = [];
-      for (const YB of WB) "space" !== YB.kind && (dB.push(YB), qB.test(YB.text) && (SB.push(dB), dB = []));
-      SB.push(dB);
-      const KB = [];
-      let uB = 0;
-      for (const YB of SB) {
-        var mB, IB;
-        const BB = null !== (mB = null === (IB = YB.at(-1)) || void 0 === IB ? void 0 : IB.text) && void 0 !== mB ? mB : "",
-          OB = ZB.test(BB),
-          GB = NB.test(BB),
-          DB = YB.map((BB => "word" === BB.kind ? UB(BB.text) : 1)),
-          WB = DB.findLastIndex((BB => BB > 0));
-        for (const [ZB, NB] of YB.entries()) {
-          const BB = "word" === NB.kind,
-            YB = DB[ZB];
-          NB.delayMs = uB;
-          for (let DB = 0; lB && DB < YB; DB++) {
+          return ie
+        }(ee),
+        Oe = [];
+      let we = [];
+      for (const ye of Be) "space" !== ye.kind && (we.push(ye), Te.test(ye.text) && (Oe.push(we), we = []));
+      Oe.push(we);
+      const De = [];
+      let Pe = 0;
+      for (const ye of Oe) {
+        var Ae, Ye;
+        const ee = null !== (Ae = null === (Ye = ye.at(-1)) || void 0 === Ye ? void 0 : Ye.text) && void 0 !== Ae ? Ae : "",
+          ie = pe.test(ee),
+          He = Xe.test(ee),
+          be = ye.map((ee => "word" === ee.kind ? We(ee.text) : 1)),
+          Be = be.findLastIndex((ee => ee > 0));
+        for (const [pe, Xe] of ye.entries()) {
+          const ee = "word" === Xe.kind,
+            ye = be[pe];
+          Xe.delayMs = Pe;
+          for (let be = 0; qe && be < ye; be++) {
             const {
-              intonation: QB
-            } = lB;
-            let oB = WB > 0 ? -QB.declineSemitones * (ZB / WB) : 0;
-            oB += nB(`${fB(NB.text)}|${DB}`) * QB.variationSemitones;
-            const qB = Math.min(1, QB.variationSemitones);
-            let RB = lB.glideSemitones,
-              AB = 1;
-            GB && (oB += QB.exclaimLiftSemitones, AB *= jB), OB && ZB === WB && (oB += QB.questionRiseSemitones * (YB > 1 ? .5 + .5 * DB / (YB - 1) : 1), DB === YB - 1 && (RB = Math.abs(RB) + QB.questionRiseSemitones / 2)), BB && kB(NB.text) && (oB += JB * qB, AB *= yB), YB > 1 && 0 === DB && (oB += PB * qB, AB *= MB), KB.push({
-              atMs: uB + DB * pB,
-              semitones: oB,
-              glideSemitones: RB,
-              durationMs: DB < YB - 1 ? Math.min(lB.durationMs, pB * zB) : lB.durationMs,
-              level: AB
+              intonation: Me
+            } = qe;
+            let Ke = Be > 0 ? -Me.declineSemitones * (pe / Be) : 0;
+            Ke += de(`${te(Xe.text)}|${be}`) * Me.variationSemitones;
+            const Te = Math.min(1, Me.variationSemitones);
+            let ze = qe.glideSemitones,
+              Ee = 1;
+            He && (Ke += Me.exclaimLiftSemitones, Ee *= Ue), ie && pe === Be && (Ke += Me.questionRiseSemitones * (ye > 1 ? .5 + .5 * be / (ye - 1) : 1), be === ye - 1 && (ze = Math.abs(ze) + Me.questionRiseSemitones / 2)), ee && Ze(Xe.text) && (Ke += Je * Te, Ee *= Fe), ye > 1 && 0 === be && (Ke += Re * Te, Ee *= oe), De.push({
+              atMs: Pe + be * fe,
+              semitones: Ke,
+              glideSemitones: ze,
+              durationMs: be < ye - 1 ? Math.min(qe.durationMs, fe * ke) : qe.durationMs,
+              level: Ee
             })
           }
-          uB += YB * pB + (qB.test(NB.text) ? oB : RB.test(NB.text) ? QB : 0)
+          Pe += ye * fe + (Te.test(Xe.text) ? Ke : ze.test(Xe.text) ? Me : 0)
         }
       }
       return {
-        pieces: WB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
+        pieces: Be.map((ee => "space" === ee.kind ? ee : "icon" === ee.kind ? {
           kind: "icon",
-          icon: BB.text,
-          delayMs: BB.delayMs
+          icon: ee.text,
+          delayMs: ee.delayMs
         } : {
           kind: "word",
-          text: BB.text,
-          delayMs: BB.delayMs
+          text: ee.text,
+          delayMs: ee.delayMs
         })),
-        blips: KB
+        blips: De
       }
     }
-    var KB = GB(1175),
-      uB = GB(1253),
-      mB = GB(2027);
+    var De = He(1127),
+      Pe = He(1196),
+      Ae = He(1988);
 
-    function IB(BB) {
-      if ("string" === typeof BB) return BB;
-      const OB = uB.e.get().getCurrentLanguageCode();
-      return (0, KB.x)(OB, BB.translationKey, (0, KB.v)(BB.params, mB.d.shown))
+    function Ye(ee) {
+      if ("string" === typeof ee) return ee;
+      const ie = Pe.f.get().getCurrentLanguageCode();
+      return (0, De.o)(ie, ee.translationKey, (0, De.m)(ee.params, Ae.c.shown))
     }
 
-    function FB(BB) {
-      const OB = void 0 === BB.voice ? null : (0, YB.k)(BB.voice),
-        GB = OB && (0, YB.j)(OB);
+    function Ve(ee) {
+      const ie = void 0 === ee.voice ? null : (0, ye.n)(ee.voice),
+        He = ie && (0, ye.l)(ie);
       return {
-        plan: dB(IB(BB.line), GB),
-        synth: GB
+        plan: we(Ye(ee.line), He),
+        synth: He
       }
     }
 
-    function iB(BB) {
-      const OB = [];
-      let GB = [];
-      for (const [DB, QB] of BB.entries()) {
-        var YB;
-        "space" === QB.kind && (" " !== QB.text || "icon" !== (null === (YB = BB[DB + 1]) || void 0 === YB ? void 0 : YB.kind)) ? (GB.length > 0 && OB.push(GB), OB.push([QB]), GB = []) : GB.push(QB)
+    function ae(ee) {
+      const ie = [];
+      let He = [];
+      for (const [be, Me] of ee.entries()) {
+        var ye;
+        "space" === Me.kind && (" " !== Me.text || "icon" !== (null === (ye = ee[be + 1]) || void 0 === ye ? void 0 : ye.kind)) ? (He.length > 0 && ie.push(He), ie.push([Me]), He = []) : He.push(Me)
       }
-      return GB.length > 0 && OB.push(GB), OB
+      return He.length > 0 && ie.push(He), ie
     }
   },
-  39173: (BB, OB, GB) => {
-    function YB(BB, OB, GB) {
-      const YB = new Set,
-        DB = new ResizeObserver(GB),
-        QB = () => {
-          const OB = new Set(document.querySelectorAll(BB));
-          let QB = !1;
-          for (const BB of YB) OB.has(BB) || (DB.unobserve(BB), YB.delete(BB), QB = !0);
-          for (const BB of OB) YB.has(BB) || (DB.observe(BB), oB.observe(BB, {
+  39309: (ee, ie, He) => {
+    function ye(ee, ie, He) {
+      const ye = new Set,
+        be = new ResizeObserver(He),
+        Me = () => {
+          const ie = new Set(document.querySelectorAll(ee));
+          let Me = !1;
+          for (const ee of ye) ie.has(ee) || (be.unobserve(ee), ye.delete(ee), Me = !0);
+          for (const ee of ie) ye.has(ee) || (be.observe(ee), Ke.observe(ee, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), YB.add(BB));
-          QB && GB()
+          }), ye.add(ee));
+          Me && He()
         },
-        oB = new MutationObserver((OB => {
-          OB.some((BB => "attributes" === BB.type)) && GB(), OB.some((OB => function(BB, OB, GB) {
-            if ("childList" !== BB.type) return !1;
-            for (const YB of BB.addedNodes)
-              if (YB instanceof Element && (YB.matches(OB) || YB.querySelector(OB))) return !0;
-            for (const YB of BB.removedNodes)
-              if (YB instanceof Element)
-                for (const BB of GB)
-                  if (YB.contains(BB)) return !0;
+        Ke = new MutationObserver((ie => {
+          ie.some((ee => "attributes" === ee.type)) && He(), ie.some((ie => function(ee, ie, He) {
+            if ("childList" !== ee.type) return !1;
+            for (const ye of ee.addedNodes)
+              if (ye instanceof Element && (ye.matches(ie) || ye.querySelector(ie))) return !0;
+            for (const ye of ee.removedNodes)
+              if (ye instanceof Element)
+                for (const ee of He)
+                  if (ye.contains(ee)) return !0;
             return !1
-          }(OB, BB, YB))) && QB()
+          }(ie, ee, ye))) && Me()
         }));
-      oB.observe(document.body, {
+      Ke.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const jB of OB) DB.observe(jB);
-      return window.addEventListener("resize", GB), QB(), GB(), () => {
-        DB.disconnect(), oB.disconnect(), window.removeEventListener("resize", GB)
+      for (const Ue of ie) be.observe(Ue);
+      return window.addEventListener("resize", He), Me(), He(), () => {
+        be.disconnect(), Ke.disconnect(), window.removeEventListener("resize", He)
       }
     }
-    GB.d(OB, {
-      d: () => YB
+    He.d(ie, {
+      b: () => ye
     })
   },
-  9545: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      h: () => yB
+  9609: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ue,
+      h: () => Fe
     });
-    var YB = GB(16),
-      DB = GB(1350),
-      QB = GB(92);
-    const oB = {
+    var ye = He(18),
+      be = He(1305),
+      Me = He(97);
+    const Ke = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -407,41 +407,41 @@ export const modules = {
       }
     };
 
-    function jB() {
-      return (0, QB.isMobile)() && "function" === typeof navigator.vibrate
+    function Ue() {
+      return (0, Me.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const yB = new class {
-      constructor(BB) {
-        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Fe = new class {
+      constructor(ee) {
+        this.deps = ee, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(BB, OB) {
-        var GB;
+      play(ee, ie) {
+        var He;
         if (!this.deps.enabled()) return;
-        const YB = oB[BB],
-          DB = null !== OB && void 0 !== OB ? OB : YB.pattern;
-        if (null === DB) return void console.warn("No vibration pattern for", BB);
-        const QB = this.deps.now();
-        QB - this.lastAnyAt < 40 && YB.priority < this.playingPriority || QB - (null !== (GB = this.lastAt.get(BB)) && void 0 !== GB ? GB : -1 / 0) < YB.minGapMs || QB < this.playingUntil && YB.priority < this.playingPriority || (this.lastAt.set(BB, QB), this.lastAnyAt = QB, this.playingUntil = QB + DB.reduce(((BB, OB) => BB + OB), 0), this.playingPriority = YB.priority, this.deps.vibrate(DB))
+        const ye = Ke[ee],
+          be = null !== ie && void 0 !== ie ? ie : ye.pattern;
+        if (null === be) return void console.warn("No vibration pattern for", ee);
+        const Me = this.deps.now();
+        Me - this.lastAnyAt < 40 && ye.priority < this.playingPriority || Me - (null !== (He = this.lastAt.get(ee)) && void 0 !== He ? He : -1 / 0) < ye.minGapMs || Me < this.playingUntil && ye.priority < this.playingPriority || (this.lastAt.set(ee, Me), this.lastAnyAt = Me, this.playingUntil = Me + be.reduce(((ee, ie) => ee + ie), 0), this.playingPriority = ye.priority, this.deps.vibrate(be))
       }
     }({
-      vibrate: BB => {
-        navigator.vibrate([...BB])
+      vibrate: ee => {
+        navigator.vibrate([...ee])
       },
       now: () => performance.now(),
-      enabled: () => jB() && YB.c.get("isTouchScreen") && YB.c.get("clientEscMenuOptions").vibration && !(0, DB.f)()
+      enabled: () => Ue() && ye.e.get("isTouchScreen") && ye.e.get("clientEscMenuOptions").vibration && !(0, be.g)()
     })
   },
-  5345: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB,
-      e: () => YB,
-      g: () => QB,
-      j: () => yB,
-      k: () => oB
+  5326: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => be,
+      h: () => ye,
+      k: () => Me,
+      l: () => Fe,
+      n: () => Ke
     });
-    const YB = ["sine", "triangle", "square", "sawtooth"],
-      DB = 55,
-      QB = {
+    const ye = ["sine", "triangle", "square", "sawtooth"],
+      be = 55,
+      Me = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -580,39 +580,39 @@ export const modules = {
         }
       };
 
-    function oB(BB) {
-      return "string" !== typeof BB ? BB : Object.hasOwn(QB, BB) ? QB[BB] : null
+    function Ke(ee) {
+      return "string" !== typeof ee ? ee : Object.hasOwn(Me, ee) ? Me[ee] : null
     }
 
-    function jB(BB, OB, GB) {
-      return Math.min(GB, Math.max(OB, BB))
+    function Ue(ee, ie, He) {
+      return Math.min(He, Math.max(ie, ee))
     }
 
-    function yB(BB) {
-      const OB = jB(BB.durationMs, 10, 500),
-        GB = jB(BB.attackMs, 0, OB),
+    function Fe(ee) {
+      const ie = Ue(ee.durationMs, 10, 500),
+        He = Ue(ee.attackMs, 0, ie),
         {
-          intonation: DB
-        } = BB;
+          intonation: be
+        } = ee;
       return {
-        waveform: YB.includes(BB.waveform) ? BB.waveform : "sine",
-        pitchHz: jB(BB.pitchHz, 20, 4e3),
-        glideSemitones: jB(BB.glideSemitones, -24, 24),
-        durationMs: OB,
-        attackMs: GB,
-        releaseMs: jB(BB.releaseMs, 0, OB - GB),
-        lowpassHz: null === BB.lowpassHz ? null : jB(BB.lowpassHz, 20, 2e4),
-        volume: jB(BB.volume, 0, 2),
+        waveform: ye.includes(ee.waveform) ? ee.waveform : "sine",
+        pitchHz: Ue(ee.pitchHz, 20, 4e3),
+        glideSemitones: Ue(ee.glideSemitones, -24, 24),
+        durationMs: ie,
+        attackMs: He,
+        releaseMs: Ue(ee.releaseMs, 0, ie - He),
+        lowpassHz: null === ee.lowpassHz ? null : Ue(ee.lowpassHz, 20, 2e4),
+        volume: Ue(ee.volume, 0, 2),
         intonation: {
-          variationSemitones: jB(DB.variationSemitones, 0, 6),
-          declineSemitones: jB(DB.declineSemitones, 0, 12),
-          questionRiseSemitones: jB(DB.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: jB(DB.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Ue(be.variationSemitones, 0, 6),
+          declineSemitones: Ue(be.declineSemitones, 0, 12),
+          questionRiseSemitones: Ue(be.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Ue(be.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: jB(BB.syllableMs, 25, 200)
+        syllableMs: Ue(ee.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

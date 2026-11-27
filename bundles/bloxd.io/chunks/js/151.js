@@ -1,386 +1,386 @@
 export const id = 151;
 export const ids = [151];
 export const modules = {
-  36849: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      WasmTextureWorker: () => RB
+  36934: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      WasmTextureWorker: () => ze
     });
-    var YB = GB(633),
-      DB = GB(3622),
-      QB = GB(36856),
-      oB = GB.n(QB);
+    var ye = He(604),
+      be = He(3517),
+      Me = He(36938),
+      Ke = He.n(Me);
 
-    function jB() {
-      return oB()('(()=>{var BB={d:(OB,GB)=>{for(var YB in GB)BB.o(GB,YB)&&!BB.o(OB,YB)&&Object.defineProperty(OB,YB,{enumerable:!0,get:GB[YB]})},o:(BB,OB)=>Object.prototype.hasOwnProperty.call(BB,OB),r:BB=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(BB,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(BB,"__esModule",{value:!0})}},OB={};BB.r(OB),BB.d(OB,{MB:()=>GB,sy:()=>YB,default:()=>mB,initSync:()=>uB,VP:()=>DB});class GB{__destroy_into_raw(){const BB=this.__wbg_ptr;return this.__wbg_ptr=0,oB.unregister(this),BB}free(){const BB=this.__destroy_into_raw();kB.NEUW(BB,0)}ID(BB){const OB=function(BB,OB){const GB=OB(1*BB.length,1)>>>0;return pB().set(BB,GB/1),dB=BB.length,GB}(BB,kB.DG88),GB=dB;return kB.d6In(this.__wbg_ptr,OB,GB)>>>0}So(){const BB=kB.nnsm(this.__wbg_ptr);var OB=jB(BB[0],BB[1]).slice();return kB.uiBk(BB[0],4*BB[1],4),OB}do(){let BB,OB;try{const GB=kB.LAIW(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}io(){return kB.ggfF(this.__wbg_ptr)>>>0}To(){return kB.P0KA(this.__wbg_ptr)>>>0}oz(){let BB,OB;try{const GB=kB.Jatt(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}uz(){const BB=kB.yVoD(this.__wbg_ptr);var OB=jB(BB[0],BB[1]).slice();return kB.uiBk(BB[0],4*BB[1],4),OB}cz(){const BB=kB.BxVb(this.__wbg_ptr);var OB,GB,YB=(OB=BB[0],GB=BB[1],OB>>>=0,JB().subarray(OB/8,OB/8+GB)).slice();return kB.uiBk(BB[0],8*BB[1],8),YB}op(){return kB.dhrx(this.__wbg_ptr)>>>0}RZ(BB){const OB=kB.uIW4(this.__wbg_ptr,BB);if(OB[1])throw WB(OB[0])}WZ(){kB.uVaX(this.__wbg_ptr)}VZ(){kB.SxN0(this.__wbg_ptr)}NZ(){const BB=kB.fWjm(this.__wbg_ptr);if(BB[1])throw WB(BB[0])}nZ(){return kB.XSG0(this.__wbg_ptr)>>>0}AZ(){const BB=kB.kKdn(this.__wbg_ptr);if(BB[1])throw WB(BB[0])}UZ(BB,OB){const GB=kB.buAo(this.__wbg_ptr,BB,OB);if(GB[1])throw WB(GB[0])}fZ(BB){let OB,GB;try{const QB=kB.HnHJ(this.__wbg_ptr,BB);var YB=QB[0],DB=QB[1];if(QB[3])throw YB=0,DB=0,WB(QB[2]);return OB=YB,GB=DB,MB(YB,DB)}finally{kB.uiBk(OB,GB,1)}}kZ(BB){return kB.W6d7(this.__wbg_ptr,BB)>>>0}dZ(BB){return kB.k9XB(this.__wbg_ptr,BB)>>>0}qZ(){const BB=kB.LA3T(this.__wbg_ptr);var OB=jB(BB[0],BB[1]).slice();return kB.uiBk(BB[0],4*BB[1],4),OB}KZ(){return 0!==kB.BGEC(this.__wbg_ptr)}constructor(BB,OB,GB,YB,DB,QB){const jB=RB(BB,kB.DG88,kB.U7M8),yB=dB,MB=NB(OB,kB.DG88),PB=dB,zB=function(BB,OB){const GB=OB(8*BB.length,8)>>>0;return JB().set(BB,GB/8),dB=BB.length,GB}(GB,kB.DG88),lB=dB,pB=NB(YB,kB.DG88),qB=dB,ZB=NB(DB,kB.DG88),AB=dB,VB=kB.vDOO(jB,yB,MB,PB,zB,lB,pB,qB,ZB,AB,QB);if(VB[2])throw WB(VB[1]);return this.__wbg_ptr=VB[0],oB.register(this,this.__wbg_ptr,this),this}uZ(){let BB,OB;try{const GB=kB.NY9t(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}mZ(BB,OB){const GB=RB(BB,kB.DG88,kB.U7M8),YB=dB,DB=NB(OB,kB.DG88),QB=dB,oB=kB.g8nq(this.__wbg_ptr,GB,YB,DB,QB);if(oB[1])throw WB(oB[0])}IZ(){return kB.klnX(this.__wbg_ptr)>>>0}FZ(){return kB.ar7o(this.__wbg_ptr)>>>0}SZ(){return kB.Oa0w(this.__wbg_ptr)>>>0}ZZ(){return kB.jcz7(this.__wbg_ptr)>>>0}warnings(){let BB,OB;try{const GB=kB.S0OO(this.__wbg_ptr);return BB=GB[0],OB=GB[1],MB(GB[0],GB[1])}finally{kB.uiBk(BB,OB,1)}}}function YB(BB,OB){const GB=RB(BB,kB.DG88,kB.U7M8),YB=dB,DB=kB.YjQw(GB,YB,OB);if(DB[1])throw WB(DB[0])}function DB(){kB.p5tg()}function QB(){return{__proto__:null,JeCw:{__proto__:null,qKIi:function(BB,OB){return function(BB){ZB===qB.length&&qB.push(qB.length+1);const OB=ZB;return ZB=qB[OB],qB[OB]=BB,OB}(Error(MB(BB,OB)))},WD8i:function(BB,OB){throw new Error(MB(BB,OB))},EhNK:function(BB,OB){console.error(MB(BB,OB))}}}}Symbol.dispose&&(GB.prototype[Symbol.dispose]=GB.prototype.free);const oB="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((BB=>kB.NEUW(BB,1)));function jB(BB,OB){return BB>>>=0,zB().subarray(BB/4,BB/4+OB)}let yB=null;function JB(){return null!==yB&&0!==yB.byteLength||(yB=new Float64Array(kB.memory.buffer)),yB}function MB(BB,OB){return function(BB,OB){SB+=OB,SB>=VB&&(AB=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),AB.decode(),SB=OB);return AB.decode(pB().subarray(BB,BB+OB))}(BB>>>0,OB)}let PB=null;function zB(){return null!==PB&&0!==PB.byteLength||(PB=new Uint32Array(kB.memory.buffer)),PB}let lB=null;function pB(){return null!==lB&&0!==lB.byteLength||(lB=new Uint8Array(kB.memory.buffer)),lB}let qB=new Array(1024).fill(void 0);qB.push(void 0,null,!0,!1);let ZB=qB.length;function NB(BB,OB){const GB=OB(4*BB.length,4)>>>0;return zB().set(BB,GB/4),dB=BB.length,GB}function RB(BB,OB,GB){if(void 0===GB){const GB=nB.encode(BB),YB=OB(GB.length,1)>>>0;return pB().subarray(YB,YB+GB.length).set(GB),dB=GB.length,YB}let YB=BB.length,DB=OB(YB,1)>>>0;const QB=pB();let oB=0;for(;oB<YB;oB++){const OB=BB.charCodeAt(oB);if(OB>127)break;QB[DB+oB]=OB}if(oB!==YB){0!==oB&&(BB=BB.slice(oB)),DB=GB(DB,YB,YB=oB+3*BB.length,1)>>>0;const OB=pB().subarray(DB+oB,DB+YB);oB+=nB.encodeInto(BB,OB).written,DB=GB(DB,YB,oB,1)>>>0}return dB=oB,DB}function WB(BB){const OB=function(BB){return qB[BB]}(BB);return function(BB){BB<1028||(qB[BB]=ZB,ZB=BB)}(BB),OB}let AB=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});AB.decode();const VB=2146435072;let SB=0;const nB=new TextEncoder;"encodeInto"in nB||(nB.encodeInto=function(BB,OB){const GB=nB.encode(BB);return OB.set(GB),{read:BB.length,written:GB.length}});let UB,fB,kB,dB=0;function KB(BB,OB){return fB=BB,kB=BB.exports,UB=OB,yB=null,PB=null,lB=null,kB.SttG(),kB}function uB(BB){if(void 0!==kB)return kB;void 0!==BB&&(Object.getPrototypeOf(BB)===Object.prototype?({module:BB}=BB):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const OB=QB();BB instanceof WebAssembly.Module||(BB=new WebAssembly.Module(BB));return KB(new WebAssembly.Instance(BB,OB),BB)}async function mB(BB){if(void 0!==kB)return kB;void 0!==BB&&(Object.getPrototypeOf(BB)===Object.prototype?({module_or_path:BB}=BB):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const OB=QB();("string"===typeof BB||"function"===typeof Request&&BB instanceof Request||"function"===typeof URL&&BB instanceof URL)&&(BB=fetch(BB));const{instance:GB,module:YB}=await async function(BB,OB){if("function"===typeof Response&&BB instanceof Response){if(!BB.ok)throw new Error(`failed to fetch Wasm: ${BB.status} ${BB.statusText} fetching \'${BB.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(BB,OB)}catch(GB){if(!function(BB){switch(BB){case"basic":case"cors":case"default":return!0}return!1}(BB.type)||"application/wasm"===BB.headers.get("Content-Type"))throw GB;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",GB)}const YB=await BB.arrayBuffer();return await WebAssembly.instantiate(YB,OB)}{const GB=await WebAssembly.instantiate(BB,OB);return GB instanceof WebAssembly.Instance?{instance:GB,module:BB}:GB}}(await BB,OB);return KB(GB,YB)}let IB=null,FB=null;function iB(BB){if(null!==FB)throw FB;if(null===IB)try{const{memory:GB}=uB({module:BB});IB={wasm:OB,memory:GB}}catch(GB){throw FB=function(BB,OB){return new Error(`${BB}: ${OB instanceof Error?`${OB.name}: ${OB.message}`:String(OB)}`,{cause:OB})}("instantiate",GB),FB}return IB}function LB(BB){return BB instanceof Error?BB.message:String(BB)}const gB=0,rB=1,XB=2,wB=3,EB=4;Error;function cB(BB){return`the texture module didn\'t load (${LB(BB)})`}function hB(BB){return""===BB?[]:BB.split("\\0")}const aB=self;let eB=null,TB=null,bB=gB,CB=0;function HB(BB){const OB=performance.now();var GB,YB;(BB!==bB||OB-CB>=1e3)&&(bB=BB,CB=OB,aB.postMessage({type:"progress",stage:BB,wasmBytes:null!==(GB=null===(YB=TB)||void 0===YB?void 0:YB.buffer.byteLength)&&void 0!==GB?GB:0}))}const{FileReaderSync:vB}=self;function sB(BB){return(new vB).readAsDataURL(new Blob([BB],{type:"image/png"}))}function xB(BB,OB){aB.postMessage({type:"sheet",sheet:BB,pixels:OB},[OB.buffer])}function tB(BB){let OB;HB(rB);try{OB=iB(BB.module)}catch(oB){return void aB.postMessage({type:"failed",reason:cB(oB),moduleLoad:!0})}TB=OB.memory,HB(XB);const{assets:GB,layerCap:YB,warnings:DB,generator:QB}=function(BB,OB,GB,YB,DB,QB,oB){var jB;const{wasm:yB,memory:JB}=BB,{strings:MB,blocks:PB,numbers:zB,index:lB,armour:pB}=OB,qB=new yB.MB(MB,PB,zB,lB,pB,GB),ZB=YB.sources.map((BB=>(null===QB||void 0===QB||QB(XB),qB.ID(BB)))),NB=new Uint32Array(2*YB.sourceOfName.length);for(const[dB,KB]of YB.sourceOfName.entries())NB[2*dB]=dB,NB[2*dB+1]=ZB[KB];qB.mZ(YB.names,NB),null===QB||void 0===QB||QB(wB),qB.UZ(DB,null!==(jB=null===oB||void 0===oB?void 0:oB.layers)&&void 0!==jB?jB:0),null===QB||void 0===QB||QB(EB);const RB={};for(const[dB,KB]of hB(qB.uZ()).entries())null===QB||void 0===QB||QB(EB),RB[KB]=qB.fZ(dB);const WB={},AB=qB.So(),VB=new Map;for(const[dB,KB]of hB(qB.do()).entries()){const BB=AB[dB];VB.has(BB)||(null===QB||void 0===QB||QB(EB),VB.set(BB,qB.fZ(BB))),WB[KB]=VB.get(BB)}qB.WZ();const SB=Array.from(qB.qZ()),nB=[],UB=[],fB=(BB,OB)=>new Uint8ClampedArray(JB.buffer,BB,OB).slice();if(oB){for(let BB=0;BB<SB.length;BB++)null===QB||void 0===QB||QB(EB),qB.RZ(BB),qB.NZ(),nB.push(oB.dataUrl(new Uint8Array(JB.buffer,qB.SZ(),qB.FZ()))),oB.onSheet(BB,fB(qB.ZZ(),qB.IZ()));qB.VZ()}const kB=qB.nZ();for(let dB=kB;dB<kB+qB.To();dB++)null===QB||void 0===QB||QB(EB),nB.push(qB.fZ(dB)),UB.push(fB(qB.dZ(dB),qB.kZ(dB)));return{assets:{rotatedBlockTextures:RB,animatedBlockTextures:WB,blockAtlasArr:nB,blockAtlasPixels:UB,armourAtlas:qB.fZ(qB.io()),imagesPerAtlas:SB,blockAtlasWidth:qB.op()},layerCap:qB.KZ()?DB:0,warnings:qB.warnings(),generator:qB}}(OB,BB.inputs,BB.isDefaultPack,{sources:BB.sources,names:BB.names,sourceOfName:BB.sourceOfName},BB.maxLayerWidth,HB,BB.sheetLayers>0?{layers:BB.sheetLayers,onSheet:xB,dataUrl:sB}:void 0);eB=QB,aB.postMessage({type:"required",assets:GB,layerCap:YB,warnings:DB},GB.blockAtlasPixels.map((BB=>BB.buffer)))}self.onmessageerror=()=>{aB.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=BB=>{let{data:OB}=BB;try{"required"===OB.type?tB(OB):function(){if(!eB)throw new Error("No required assets to follow");const{colours:BB,warnings:OB}=function(BB){return BB.AZ(),{colours:{blocks:BB.oz(),counts:BB.uz(),values:BB.cz()},warnings:BB.warnings()}}(eB);aB.postMessage({type:"optional",...BB,warnings:OB},[BB.counts.buffer,BB.values.buffer])}()}catch(GB){const BB=LB(GB),OB=GB instanceof WebAssembly.RuntimeError?`wasm trapped (${BB})`:BB;aB.postMessage({type:"failed",reason:OB,stack:GB instanceof Error?GB.stack:void 0})}}})();', "Worker", void 0, GB.p + "generation.worker.e68fcfc7.worker.js")
+    function Ue() {
+      return Ke()('(()=>{var ee={d:(ie,He)=>{for(var ye in He)ee.o(He,ye)&&!ee.o(ie,ye)&&Object.defineProperty(ie,ye,{enumerable:!0,get:He[ye]})},o:(ee,ie)=>Object.prototype.hasOwnProperty.call(ee,ie),r:ee=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(ee,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(ee,"__esModule",{value:!0})}},ie={};ee.r(ie),ee.d(ie,{We:()=>He,vR:()=>ye,default:()=>Ae,initSync:()=>Pe,uR:()=>be});class He{__destroy_into_raw(){const ee=this.__wbg_ptr;return this.__wbg_ptr=0,Ke.unregister(this),ee}free(){const ee=this.__destroy_into_raw();Ze.O7dN(ee,0)}we(ee){const ie=function(ee,ie){const He=ie(1*ee.length,1)>>>0;return fe().set(ee,He/1),we=ee.length,He}(ee,Ze.My3j),He=we;return Ze.ESye(this.__wbg_ptr,ie,He)>>>0}me(){const ee=Ze.uf4k(this.__wbg_ptr);var ie=Ue(ee[0],ee[1]).slice();return Ze.odFW(ee[0],4*ee[1],4),ie}re(){let ee,ie;try{const He=Ze.wkrC(this.__wbg_ptr);return ee=He[0],ie=He[1],oe(He[0],He[1])}finally{Ze.odFW(ee,ie,1)}}io(){return Ze.XtRc(this.__wbg_ptr)>>>0}To(){return Ze.cIsx(this.__wbg_ptr)>>>0}do(){let ee,ie;try{const He=Ze.eCS9(this.__wbg_ptr);return ee=He[0],ie=He[1],oe(He[0],He[1])}finally{Ze.odFW(ee,ie,1)}}So(){const ee=Ze.xuUH(this.__wbg_ptr);var ie=Ue(ee[0],ee[1]).slice();return Ze.odFW(ee[0],4*ee[1],4),ie}dk(){const ee=Ze.vv55(this.__wbg_ptr);var ie,He,ye=(ie=ee[0],He=ee[1],ie>>>=0,Je().subarray(ie/8,ie/8+He)).slice();return Ze.odFW(ee[0],8*ee[1],8),ye}If(){return Ze.A9kZ(this.__wbg_ptr)>>>0}Zp(ee){const ie=Ze.NvRv(this.__wbg_ptr,ee);if(ie[1])throw Be(ie[0])}wp(){Ze.q7Zj(this.__wbg_ptr)}Pp(){Ze.vrnd(this.__wbg_ptr)}tp(){const ee=Ze.N7NY(this.__wbg_ptr);if(ee[1])throw Be(ee[0])}Yp(){return Ze.WJnf(this.__wbg_ptr)>>>0}Dp(){const ee=Ze.fVpd(this.__wbg_ptr);if(ee[1])throw Be(ee[0])}Vp(ee,ie){const He=Ze.cXiP(this.__wbg_ptr,ee,ie);if(He[1])throw Be(He[0])}ap(ee){let ie,He;try{const Me=Ze.W8nf(this.__wbg_ptr,ee);var ye=Me[0],be=Me[1];if(Me[3])throw ye=0,be=0,Be(Me[2]);return ie=ye,He=be,oe(ye,be)}finally{Ze.odFW(ie,He,1)}}cp(ee){return Ze.dbJz(this.__wbg_ptr,ee)>>>0}xp(ee){return Ze.hMMD(this.__wbg_ptr,ee)>>>0}op(){const ee=Ze.aL8I(this.__wbg_ptr);var ie=Ue(ee[0],ee[1]).slice();return Ze.odFW(ee[0],4*ee[1],4),ie}Lp(){return 0!==Ze.Vfz1(this.__wbg_ptr)}constructor(ee,ie,He,ye,be,Me){const Ue=ze(ee,Ze.My3j,Ze.essA),Fe=we,oe=Xe(ie,Ze.My3j),Re=we,ke=function(ee,ie){const He=ie(8*ee.length,8)>>>0;return Je().set(ee,He/8),we=ee.length,He}(He,Ze.My3j),qe=we,fe=Xe(ye,Ze.My3j),Te=we,pe=Xe(be,Ze.My3j),Ee=we,ge=Ze.DGPt(Ue,Fe,oe,Re,ke,qe,fe,Te,pe,Ee,Me);if(ge[2])throw Be(ge[1]);return this.__wbg_ptr=ge[0],Ke.register(this,this.__wbg_ptr,this),this}Cp(){let ee,ie;try{const He=Ze.TjdP(this.__wbg_ptr);return ee=He[0],ie=He[1],oe(He[0],He[1])}finally{Ze.odFW(ee,ie,1)}}vp(ee,ie){const He=ze(ee,Ze.My3j,Ze.essA),ye=we,be=Xe(ie,Ze.My3j),Me=we,Ke=Ze.BTZG(this.__wbg_ptr,He,ye,be,Me);if(Ke[1])throw Be(Ke[0])}mp(){return Ze.TUWg(this.__wbg_ptr)>>>0}lp(){return Ze.NEnb(this.__wbg_ptr)>>>0}Ap(){return Ze.EiTY(this.__wbg_ptr)>>>0}Wp(){return Ze.QJVr(this.__wbg_ptr)>>>0}warnings(){let ee,ie;try{const He=Ze.XV6E(this.__wbg_ptr);return ee=He[0],ie=He[1],oe(He[0],He[1])}finally{Ze.odFW(ee,ie,1)}}}function ye(ee,ie){const He=ze(ee,Ze.My3j,Ze.essA),ye=we,be=Ze.N7ru(He,ye,ie);if(be[1])throw Be(be[0])}function be(){Ze.U2Iu()}function Me(){return{__proto__:null,lH7p:{__proto__:null,ElcS:function(ee,ie){return function(ee){pe===Te.length&&Te.push(Te.length+1);const ie=pe;return pe=Te[ie],Te[ie]=ee,ie}(Error(oe(ee,ie)))},BfNj:function(ee,ie){throw new Error(oe(ee,ie))},EjRL:function(ee,ie){console.error(oe(ee,ie))}}}}Symbol.dispose&&(He.prototype[Symbol.dispose]=He.prototype.free);const Ke="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((ee=>Ze.O7dN(ee,1)));function Ue(ee,ie){return ee>>>=0,ke().subarray(ee/4,ee/4+ie)}let Fe=null;function Je(){return null!==Fe&&0!==Fe.byteLength||(Fe=new Float64Array(Ze.memory.buffer)),Fe}function oe(ee,ie){return function(ee,ie){Oe+=ie,Oe>=ge&&(Ee=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),Ee.decode(),Oe=ie);return Ee.decode(fe().subarray(ee,ee+ie))}(ee>>>0,ie)}let Re=null;function ke(){return null!==Re&&0!==Re.byteLength||(Re=new Uint32Array(Ze.memory.buffer)),Re}let qe=null;function fe(){return null!==qe&&0!==qe.byteLength||(qe=new Uint8Array(Ze.memory.buffer)),qe}let Te=new Array(1024).fill(void 0);Te.push(void 0,null,!0,!1);let pe=Te.length;function Xe(ee,ie){const He=ie(4*ee.length,4)>>>0;return ke().set(ee,He/4),we=ee.length,He}function ze(ee,ie,He){if(void 0===He){const He=de.encode(ee),ye=ie(He.length,1)>>>0;return fe().subarray(ye,ye+He.length).set(He),we=He.length,ye}let ye=ee.length,be=ie(ye,1)>>>0;const Me=fe();let Ke=0;for(;Ke<ye;Ke++){const ie=ee.charCodeAt(Ke);if(ie>127)break;Me[be+Ke]=ie}if(Ke!==ye){0!==Ke&&(ee=ee.slice(Ke)),be=He(be,ye,ye=Ke+3*ee.length,1)>>>0;const ie=fe().subarray(be+Ke,be+ye);Ke+=de.encodeInto(ee,ie).written,be=He(be,ye,Ke,1)>>>0}return we=Ke,be}function Be(ee){const ie=function(ee){return Te[ee]}(ee);return function(ee){ee<1028||(Te[ee]=pe,pe=ee)}(ee),ie}let Ee=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});Ee.decode();const ge=2146435072;let Oe=0;const de=new TextEncoder;"encodeInto"in de||(de.encodeInto=function(ee,ie){const He=de.encode(ee);return ie.set(He),{read:ee.length,written:He.length}});let We,te,Ze,we=0;function De(ee,ie){return te=ee,Ze=ee.exports,We=ie,Fe=null,Re=null,qe=null,Ze.BaDO(),Ze}function Pe(ee){if(void 0!==Ze)return Ze;void 0!==ee&&(Object.getPrototypeOf(ee)===Object.prototype?({module:ee}=ee):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const ie=Me();ee instanceof WebAssembly.Module||(ee=new WebAssembly.Module(ee));return De(new WebAssembly.Instance(ee,ie),ee)}async function Ae(ee){if(void 0!==Ze)return Ze;void 0!==ee&&(Object.getPrototypeOf(ee)===Object.prototype?({module_or_path:ee}=ee):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const ie=Me();("string"===typeof ee||"function"===typeof Request&&ee instanceof Request||"function"===typeof URL&&ee instanceof URL)&&(ee=fetch(ee));const{instance:He,module:ye}=await async function(ee,ie){if("function"===typeof Response&&ee instanceof Response){if(!ee.ok)throw new Error(`failed to fetch Wasm: ${ee.status} ${ee.statusText} fetching \'${ee.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(ee,ie)}catch(He){if(!function(ee){switch(ee){case"basic":case"cors":case"default":return!0}return!1}(ee.type)||"application/wasm"===ee.headers.get("Content-Type"))throw He;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",He)}const ye=await ee.arrayBuffer();return await WebAssembly.instantiate(ye,ie)}{const He=await WebAssembly.instantiate(ee,ie);return He instanceof WebAssembly.Instance?{instance:He,module:ee}:He}}(await ee,ie);return De(He,ye)}let Ye=null,Ve=null;function ae(ee){if(null!==Ve)throw Ve;if(null===Ye)try{const{memory:He}=Pe({module:ee});Ye={wasm:ie,memory:He}}catch(He){throw Ve=function(ee,ie){return new Error(`${ee}: ${ie instanceof Error?`${ie.name}: ${ie.message}`:String(ie)}`,{cause:ie})}("instantiate",He),Ve}return Ye}function ce(ee){return ee instanceof Error?ee.message:String(ee)}const xe=0,Le=1,Ce=2,ve=3,ue=4;Error;function me(ee){return`the texture module didn\'t load (${ce(ee)})`}function le(ee){return""===ee?[]:ee.split("\\0")}const Se=self;let ne=null,je=null,se=xe,Ie=0;function he(ee){const ie=performance.now();var He,ye;(ee!==se||ie-Ie>=1e3)&&(se=ee,Ie=ie,Se.postMessage({type:"progress",stage:ee,wasmBytes:null!==(He=null===(ye=je)||void 0===ye?void 0:ye.buffer.byteLength)&&void 0!==He?He:0}))}const{FileReaderSync:Ne}=self;function Ge(ee){return(new Ne).readAsDataURL(new Blob([ee],{type:"image/png"}))}function re(ee,ie){Se.postMessage({type:"sheet",sheet:ee,pixels:ie},[ie.buffer])}function Qe(ee){let ie;he(Le);try{ie=ae(ee.module)}catch(Ke){return void Se.postMessage({type:"failed",reason:me(Ke),moduleLoad:!0})}je=ie.memory,he(Ce);const{assets:He,layerCap:ye,warnings:be,generator:Me}=function(ee,ie,He,ye,be,Me,Ke){var Ue;const{wasm:Fe,memory:Je}=ee,{strings:oe,blocks:Re,numbers:ke,index:qe,armour:fe}=ie,Te=new Fe.We(oe,Re,ke,qe,fe,He),pe=ye.sources.map((ee=>(null===Me||void 0===Me||Me(Ce),Te.we(ee)))),Xe=new Uint32Array(2*ye.sourceOfName.length);for(const[we,De]of ye.sourceOfName.entries())Xe[2*we]=we,Xe[2*we+1]=pe[De];Te.vp(ye.names,Xe),null===Me||void 0===Me||Me(ve),Te.Vp(be,null!==(Ue=null===Ke||void 0===Ke?void 0:Ke.layers)&&void 0!==Ue?Ue:0),null===Me||void 0===Me||Me(ue);const ze={};for(const[we,De]of le(Te.Cp()).entries())null===Me||void 0===Me||Me(ue),ze[De]=Te.ap(we);const Be={},Ee=Te.me(),ge=new Map;for(const[we,De]of le(Te.re()).entries()){const ee=Ee[we];ge.has(ee)||(null===Me||void 0===Me||Me(ue),ge.set(ee,Te.ap(ee))),Be[De]=ge.get(ee)}Te.wp();const Oe=Array.from(Te.op()),de=[],We=[],te=(ee,ie)=>new Uint8ClampedArray(Je.buffer,ee,ie).slice();if(Ke){for(let ee=0;ee<Oe.length;ee++)null===Me||void 0===Me||Me(ue),Te.Zp(ee),Te.tp(),de.push(Ke.dataUrl(new Uint8Array(Je.buffer,Te.Ap(),Te.lp()))),Ke.onSheet(ee,te(Te.Wp(),Te.mp()));Te.Pp()}const Ze=Te.Yp();for(let we=Ze;we<Ze+Te.To();we++)null===Me||void 0===Me||Me(ue),de.push(Te.ap(we)),We.push(te(Te.xp(we),Te.cp(we)));return{assets:{rotatedBlockTextures:ze,animatedBlockTextures:Be,blockAtlasArr:de,blockAtlasPixels:We,armourAtlas:Te.ap(Te.io()),imagesPerAtlas:Oe,blockAtlasWidth:Te.If()},layerCap:Te.Lp()?be:0,warnings:Te.warnings(),generator:Te}}(ie,ee.inputs,ee.isDefaultPack,{sources:ee.sources,names:ee.names,sourceOfName:ee.sourceOfName},ee.maxLayerWidth,he,ee.sheetLayers>0?{layers:ee.sheetLayers,onSheet:re,dataUrl:Ge}:void 0);ne=Me,Se.postMessage({type:"required",assets:He,layerCap:ye,warnings:be},He.blockAtlasPixels.map((ee=>ee.buffer)))}self.onmessageerror=()=>{Se.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=ee=>{let{data:ie}=ee;try{"required"===ie.type?Qe(ie):function(){if(!ne)throw new Error("No required assets to follow");const{colours:ee,warnings:ie}=function(ee){return ee.Dp(),{colours:{blocks:ee.do(),counts:ee.So(),values:ee.dk()},warnings:ee.warnings()}}(ne);Se.postMessage({type:"optional",...ee,warnings:ie},[ee.counts.buffer,ee.values.buffer])}()}catch(He){const ee=ce(He),ie=He instanceof WebAssembly.RuntimeError?`wasm trapped (${ee})`:ee;Se.postMessage({type:"failed",reason:ie,stack:He instanceof Error?He.stack:void 0})}}})();', "Worker", void 0, He.p + "generation.worker.25f3cbaf.worker.js")
     }
-    var yB = GB(36862),
-      JB = GB(3641),
-      MB = GB(3659),
-      PB = GB(3647),
-      zB = GB(3626);
+    var Fe = He(36942),
+      Je = He(3543),
+      oe = He(3572),
+      Re = He(3559),
+      ke = He(3520);
 
-    function lB(BB) {
-      return "" === BB ? [] : BB.split("\0")
-    }
-
-    function pB(BB) {
-      if ("" !== BB)
-        for (const OB of BB.split("\n")) console.error(OB)
+    function qe(ee) {
+      return "" === ee ? [] : ee.split("\0")
     }
 
-    function qB(BB, OB) {
-      return async function(BB, OB) {
-        const GB = Object.keys(BB),
-          YB = [],
-          DB = new Map,
-          QB = new Uint32Array(GB.length);
-        for (const [oB, jB] of GB.entries()) {
+    function fe(ee) {
+      if ("" !== ee)
+        for (const ie of ee.split("\n")) console.error(ie)
+    }
+
+    function Te(ee, ie) {
+      return async function(ee, ie) {
+        const He = Object.keys(ee),
+          ye = [],
+          be = new Map,
+          Me = new Uint32Array(He.length);
+        for (const [Ke, Ue] of He.entries()) {
           const {
-            url: OB
-          } = BB[jB];
-          DB.has(OB) || (DB.set(OB, YB.length), YB.push(OB)), QB[oB] = DB.get(OB)
+            url: ie
+          } = ee[Ue];
+          be.has(ie) || (be.set(ie, ye.length), ye.push(ie)), Me[Ke] = be.get(ie)
         }
         return {
-          sources: await OB(YB),
-          names: GB.join("\0"),
-          sourceOfName: QB
+          sources: await ie(ye),
+          names: He.join("\0"),
+          sourceOfName: Me
         }
-      }(BB, (async BB => {
-        const GB = await async function(BB, OB) {
-          const GB = new AbortController,
-            YB = () => {
-              GB.abort()
+      }(ee, (async ee => {
+        const He = await async function(ee, ie) {
+          const He = new AbortController,
+            ye = () => {
+              He.abort()
             };
-          OB.addEventListener("abort", YB);
+          ie.addEventListener("abort", ye);
           try {
-            const OB = await Promise.all(BB.map((async BB => {
+            const ie = await Promise.all(ee.map((async ee => {
               try {
-                const OB = await fetch(BB, {
-                  signal: GB.signal
+                const ie = await fetch(ee, {
+                  signal: He.signal
                 });
-                if (!OB.ok) throw new Error(`HTTP ${OB.status}`);
-                return [BB, await OB.blob()]
-              } catch (OB) {
-                throw GB.abort(), new MB.p(MB.m.Fetch, `fetching ${BB} failed: ${(0,PB.e)(OB)}`)
+                if (!ie.ok) throw new Error(`HTTP ${ie.status}`);
+                return [ee, await ie.blob()]
+              } catch (ie) {
+                throw He.abort(), new oe.k(oe.j.Fetch, `fetching ${ee} failed: ${(0,Re.g)(ie)}`)
               }
             })));
-            return new Map(OB)
+            return new Map(ie)
           } finally {
-            OB.removeEventListener("abort", YB)
+            ie.removeEventListener("abort", ye)
           }
-        }(BB.filter((BB => !BB.startsWith("data:"))), OB);
-        return Promise.all(BB.map((BB => {
-          var OB;
-          return (0, zB.g)(null !== (OB = GB.get(BB)) && void 0 !== OB ? OB : BB)
+        }(ee.filter((ee => !ee.startsWith("data:"))), ie);
+        return Promise.all(ee.map((ee => {
+          var ie;
+          return (0, ke.f)(null !== (ie = He.get(ee)) && void 0 !== ie ? ie : ee)
         })))
       }))
     }
 
-    function ZB(BB, OB) {
-      const GB = MB.p.from(BB, OB ? MB.m.Optional : MB.m.Error);
-      return GB.code !== MB.m.Fetch && GB.code !== MB.m.Error && (0, JB.d)(GB.message), GB
+    function pe(ee, ie) {
+      const He = oe.k.from(ee, ie ? oe.j.Optional : oe.j.Error);
+      return He.code !== oe.j.Fetch && He.code !== oe.j.Error && (0, Je.e)(He.message), He
     }
 
-    function NB(BB) {
-      return BB.message ? new Error(`the texture worker failed: ${BB.message}`) : new MB.p(MB.m.Load, "the texture worker failed to start")
+    function Xe(ee) {
+      return ee.message ? new Error(`the texture worker failed: ${ee.message}`) : new oe.k(oe.j.Load, "the texture worker failed to start")
     }
-    class RB {
-      constructor(BB) {
-        this.worker = BB, this.failure = void 0, this.abandonStep = null, BB.addEventListener("error", (BB => {
-          BB.preventDefault(), this.failure ??= NB(BB)
+    class ze {
+      constructor(ee) {
+        this.worker = ee, this.failure = void 0, this.abandonStep = null, ee.addEventListener("error", (ee => {
+          ee.preventDefault(), this.failure ??= Xe(ee)
         }))
       }
-      static async generateRequired(BB, OB, GB, QB) {
-        let oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : MB.c,
-          JB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const zB = (0, yB.h)();
-        if (null !== zB) throw ZB(new MB.p(MB.m.Load, zB), !1);
-        let lB;
-        const NB = new AbortController;
+      static async generateRequired(ee, ie, He, Me) {
+        let Ke = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : oe.d,
+          Je = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const ke = (0, Fe.g)();
+        if (null !== ke) throw pe(new oe.k(oe.j.Load, ke), !1);
+        let qe;
+        const Xe = new AbortController;
         try {
-          lB = new RB(function() {
+          qe = new ze(function() {
             try {
-              return new jB
-            } catch (BB) {
-              throw new MB.p(MB.m.Load, `the texture worker failed to start: ${(0,PB.e)(BB)}`)
+              return new Ue
+            } catch (ee) {
+              throw new oe.k(oe.j.Load, `the texture worker failed to start: ${(0,Re.g)(ee)}`)
             }
           }());
-          const zB = (0, yB.c)().catch((BB => {
-              throw new MB.p(MB.m.Load, function(BB) {
-                return `the texture module didn't load (${(0,PB.e)(BB)})`
-              }(BB))
+          const ke = (0, Fe.b)().catch((ee => {
+              throw new oe.k(oe.j.Load, function(ee) {
+                return `the texture module didn't load (${(0,Re.g)(ee)})`
+              }(ee))
             })),
-            ZB = (async () => {
-              const QB = function(BB, OB, GB) {
-                const YB = [],
-                  DB = new Map,
-                  QB = BB => {
-                    let OB = DB.get(BB);
-                    return void 0 === OB && (OB = YB.length, YB.push(BB), DB.set(BB, OB)), OB
+            pe = (async () => {
+              const Me = function(ee, ie, He) {
+                const ye = [],
+                  be = new Map,
+                  Me = ee => {
+                    let ie = be.get(ee);
+                    return void 0 === ie && (ie = ye.length, ye.push(ee), be.set(ee, ie)), ie
                   },
-                  oB = [],
-                  jB = [],
-                  yB = new Map,
-                  JB = (BB, OB) => {
-                    const GB = "object" === typeof BB && null !== BB && "animTextures" in BB ? BB.animTextures : void 0;
-                    if (!Array.isArray(GB) || !GB.every((BB => "string" === typeof BB))) throw new Error(`Block ${OB} has textureInfo the encoding doesn't cover`);
-                    oB.push(GB.length, ...GB.map(QB))
+                  Ke = [],
+                  Ue = [],
+                  Fe = new Map,
+                  Je = (ee, ie) => {
+                    const He = "object" === typeof ee && null !== ee && "animTextures" in ee ? ee.animTextures : void 0;
+                    if (!Array.isArray(He) || !He.every((ee => "string" === typeof ee))) throw new Error(`Block ${ie} has textureInfo the encoding doesn't cover`);
+                    Ke.push(He.length, ...He.map(Me))
                   };
-                let MB = 0;
-                for (const lB in BB) {
-                  const OB = BB[lB];
-                  oB.push(QB(lB));
-                  const GB = (OB.transTex ? 1 : 0) | (OB.fl ? 2 : 0) | (OB.particlesIgnoreBlack ? 4 : 0),
-                    YB = "string" === typeof OB.itemTexture ? QB(OB.itemTexture) : 4294967295,
-                    DB = `${GB},${YB}`,
-                    PB = OB.textureInfo,
-                    zB = yB.get(PB);
-                  if ((null === zB || void 0 === zB ? void 0 : zB.fields) !== DB)
-                    if (yB.set(PB, {
-                        entry: MB++,
-                        fields: DB
-                      }), oB.push(1, GB, YB), "string" === typeof PB) oB.push(1, QB(PB));
-                    else if (Array.isArray(PB)) {
-                    oB.push(3, PB.length);
-                    for (const BB of PB) "string" === typeof BB ? oB.push(0, QB(BB)) : "number" === typeof BB ? (oB.push(2, jB.length), jB.push(BB)) : (oB.push(1), JB(BB, lB))
-                  } else PB ? (oB.push(2), JB(PB, lB)) : oB.push(0);
-                  else oB.push(0, zB.entry), MB++
+                let oe = 0;
+                for (const qe in ee) {
+                  const ie = ee[qe];
+                  Ke.push(Me(qe));
+                  const He = (ie.transTex ? 1 : 0) | (ie.Lq ? 2 : 0) | (ie.particlesIgnoreBlack ? 4 : 0),
+                    ye = "string" === typeof ie.itemTexture ? Me(ie.itemTexture) : 4294967295,
+                    be = `${He},${ye}`,
+                    Re = ie.textureInfo,
+                    ke = Fe.get(Re);
+                  if ((null === ke || void 0 === ke ? void 0 : ke.fields) !== be)
+                    if (Fe.set(Re, {
+                        entry: oe++,
+                        fields: be
+                      }), Ke.push(1, He, ye), "string" === typeof Re) Ke.push(1, Me(Re));
+                    else if (Array.isArray(Re)) {
+                    Ke.push(3, Re.length);
+                    for (const ee of Re) "string" === typeof ee ? Ke.push(0, Me(ee)) : "number" === typeof ee ? (Ke.push(2, Ue.length), Ue.push(ee)) : (Ke.push(1), Je(ee, qe))
+                  } else Re ? (Ke.push(2), Je(Re, qe)) : Ke.push(0);
+                  else Ke.push(0, ke.entry), oe++
                 }
-                const PB = [];
-                for (const lB in OB) PB.push(QB(lB), OB[lB]);
-                const zB = new Uint32Array(GB.map(QB));
+                const Re = [];
+                for (const qe in ie) Re.push(Me(qe), ie[qe]);
+                const ke = new Uint32Array(He.map(Me));
                 return {
-                  strings: YB.join("\0"),
-                  blocks: new Uint32Array(oB),
-                  numbers: new Float64Array(jB),
-                  index: new Uint32Array(PB),
-                  armour: zB
+                  strings: ye.join("\0"),
+                  blocks: new Uint32Array(Ke),
+                  numbers: new Float64Array(Ue),
+                  index: new Uint32Array(Re),
+                  armour: ke
                 }
-              }(BB, OB, YB.d.map(DB.h));
+              }(ee, ie, ye.d.map(be.i));
               return {
-                inputs: QB,
-                sources: await qB(GB, NB.signal)
+                inputs: Me,
+                sources: await Te(He, Xe.signal)
               }
             })(),
-            [WB, {
-              inputs: AB,
-              sources: VB
-            }] = await Promise.all([zB, ZB]),
-            SB = [AB.blocks.buffer, AB.numbers.buffer, AB.index.buffer, AB.armour.buffer, VB.sourceOfName.buffer];
-          for (const BB of VB.sources) SB.push(BB.buffer);
-          const nB = [],
+            [Be, {
+              inputs: Ee,
+              sources: ge
+            }] = await Promise.all([ke, pe]),
+            Oe = [Ee.blocks.buffer, Ee.numbers.buffer, Ee.index.buffer, Ee.armour.buffer, ge.sourceOfName.buffer];
+          for (const ee of ge.sources) Oe.push(ee.buffer);
+          const de = [],
             {
-              assets: UB,
-              layerCap: fB,
-              warnings: kB
-            } = await lB.request({
+              assets: We,
+              layerCap: te,
+              warnings: Ze
+            } = await qe.request({
               type: "required",
-              module: WB,
-              inputs: AB,
-              isDefaultPack: QB,
-              maxLayerWidth: oB,
-              sheetLayers: JB,
-              ...VB
-            }, SB, ((BB, OB) => {
-              nB[BB] = OB
+              module: Be,
+              inputs: Ee,
+              isDefaultPack: Me,
+              maxLayerWidth: Ke,
+              sheetLayers: Je,
+              ...ge
+            }, Oe, ((ee, ie) => {
+              de[ee] = ie
             }));
-          return JB > 0 && (UB.blockAtlasPixels = function(BB, OB) {
-            const GB = [];
-            for (let YB = 0; YB < OB; YB++) {
-              const DB = BB[YB];
-              if (void 0 === DB) throw new Error(`the texture worker's sheet ${YB} of ${OB} didn't arrive`);
-              GB.push(DB)
+          return Je > 0 && (We.blockAtlasPixels = function(ee, ie) {
+            const He = [];
+            for (let ye = 0; ye < ie; ye++) {
+              const be = ee[ye];
+              if (void 0 === be) throw new Error(`the texture worker's sheet ${ye} of ${ie} didn't arrive`);
+              He.push(be)
             }
-            return GB
-          }(nB, UB.imagesPerAtlas.length)), pB(kB), {
-            assets: UB,
-            layerCap: fB,
-            worker: lB
+            return He
+          }(de, We.imagesPerAtlas.length)), fe(Ze), {
+            assets: We,
+            layerCap: te,
+            worker: qe
           }
-        } catch (AB) {
-          var WB;
-          throw NB.abort(), null === (WB = lB) || void 0 === WB || WB.terminate(), ZB(AB, !1)
+        } catch (Ee) {
+          var Be;
+          throw Xe.abort(), null === (Be = qe) || void 0 === Be || Be.terminate(), pe(Ee, !1)
         }
       }
       async generateOptional() {
-        let BB;
+        let ee;
         try {
-          BB = await this.request({
+          ee = await this.request({
             type: "optional"
           }, [])
-        } catch (OB) {
-          throw ZB(OB, !0)
+        } catch (ie) {
+          throw pe(ie, !0)
         } finally {
           this.terminate()
         }
-        return pB(BB.warnings),
-          function(BB) {
+        return fe(ee.warnings),
+          function(ee) {
             let {
-              blocks: OB,
-              counts: GB,
-              values: YB
-            } = BB;
-            const DB = {};
-            let QB = 0;
-            for (const [oB, jB] of lB(OB).entries()) {
-              const BB = [];
-              for (let OB = 0; OB < GB[oB]; OB++, QB += 3) BB.push([YB[QB], YB[QB + 1], YB[QB + 2]]);
-              DB[jB] = BB
+              blocks: ie,
+              counts: He,
+              values: ye
+            } = ee;
+            const be = {};
+            let Me = 0;
+            for (const [Ke, Ue] of qe(ie).entries()) {
+              const ee = [];
+              for (let ie = 0; ie < He[Ke]; ie++, Me += 3) ee.push([ye[Me], ye[Me + 1], ye[Me + 2]]);
+              be[Ue] = ee
             }
-            return DB
-          }(BB)
+            return be
+          }(ee)
       }
       terminate() {
-        var BB;
-        this.worker.terminate(), null === (BB = this.abandonStep) || void 0 === BB || BB.call(this)
+        var ee;
+        this.worker.terminate(), null === (ee = this.abandonStep) || void 0 === ee || ee.call(this)
       }
-      request(BB, OB, GB) {
-        return new Promise(((YB, DB) => {
-          if (void 0 !== this.failure) return void DB(this.failure);
-          let QB = MB.t.None,
-            oB = 0,
-            jB = null;
-          const yB = () => {
-            var BB;
-            null === (BB = jB) || void 0 === BB || BB.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(ee, ie, He) {
+        return new Promise(((ye, be) => {
+          if (void 0 !== this.failure) return void be(this.failure);
+          let Me = oe.o.None,
+            Ke = 0,
+            Ue = null;
+          const Fe = () => {
+            var ee;
+            null === (ee = Ue) || void 0 === ee || ee.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            yB(), DB(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = OB => {
+            Fe(), be(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = ie => {
             let {
-              data: JB
-            } = OB;
-            var PB;
-            if ("progress" === JB.type) return QB = JB.stage, oB = JB.wasmBytes, void(null === (PB = jB) || void 0 === PB || PB.restart(QB === MB.t.Generating ? MB.e : MB.i));
-            "sheet" === JB.type && GB ? GB(JB.sheet, JB.pixels) : (yB(), "failed" === JB.type ? DB(JB.moduleLoad ? new MB.p(MB.m.Load, JB.reason) : function(BB, OB) {
+              data: Je
+            } = ie;
+            var Re;
+            if ("progress" === Je.type) return Me = Je.stage, Ke = Je.wasmBytes, void(null === (Re = Ue) || void 0 === Re || Re.restart(Me === oe.o.Generating ? oe.f : oe.g));
+            "sheet" === Je.type && He ? He(Je.sheet, Je.pixels) : (Fe(), "failed" === Je.type ? be(Je.moduleLoad ? new oe.k(oe.j.Load, Je.reason) : function(ee, ie) {
               let {
-                reason: GB,
-                stack: YB
-              } = BB;
-              const DB = new Error(WB(GB, OB));
-              void 0 !== YB && (DB.stack = YB);
-              return DB
-            }(JB, oB)) : JB.type !== BB.type ? DB(new Error(`the texture worker answered ${JB.type} to ${BB.type}`)) : YB(JB))
-          }, this.worker.onerror = BB => {
-            yB(), DB(NB(BB))
+                reason: He,
+                stack: ye
+              } = ee;
+              const be = new Error(Be(He, ie));
+              void 0 !== ye && (be.stack = ye);
+              return be
+            }(Je, Ke)) : Je.type !== ee.type ? be(new Error(`the texture worker answered ${Je.type} to ${ee.type}`)) : ye(Je))
+          }, this.worker.onerror = ee => {
+            Fe(), be(Xe(ee))
           }, this.worker.onmessageerror = () => {
-            yB(), DB(new Error("the texture worker's answer couldn't be read"))
+            Fe(), be(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(BB, OB), jB = (0, MB.w)((() => {
-              yB();
-              const OB = new MB.p("required" === BB.type ? `${MB.m.Stalled}${QB}` : MB.m.Optional, WB("the texture worker stopped responding", oB));
-              DB(OB)
+            this.worker.postMessage(ee, ie), Ue = (0, oe.p)((() => {
+              Fe();
+              const ie = new oe.k("required" === ee.type ? `${oe.j.Stalled}${Me}` : oe.j.Optional, Be("the texture worker stopped responding", Ke));
+              be(ie)
             }))
-          } catch (JB) {
-            yB(), DB(JB)
+          } catch (Je) {
+            Fe(), be(Je)
           }
         }))
       }
     }
 
-    function WB(BB, OB) {
-      return OB > 0 ? `${BB}, its module's memory ${Math.round(OB/2**20)} MiB` : BB
+    function Be(ee, ie) {
+      return ie > 0 ? `${ee}, its module's memory ${Math.round(ie/2**20)} MiB` : ee
     }
   },
-  36874: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => YB,
-      h: () => DB,
-      l: () => QB,
-      p: () => oB
+  36956: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye,
+      g: () => be,
+      k: () => Me,
+      m: () => Ke
     });
-    const YB = 1024,
-      DB = 1024 * YB;
+    const ye = 1024,
+      be = 1024 * ye;
 
-    function QB(BB) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, BB / DB)))
+    function Me(ee) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, ee / be)))
     }
 
-    function oB(BB) {
-      return (BB / DB).toFixed(1)
+    function Ke(ee) {
+      return (ee / be).toFixed(1)
     }
   },
-  36856: BB => {
-    BB.exports = function(BB, OB, GB, YB) {
-      var DB = self || window;
+  36938: ee => {
+    ee.exports = function(ee, ie, He, ye) {
+      var be = self || window;
       try {
         try {
-          var QB;
+          var Me;
           try {
-            QB = new DB.Blob([BB])
-          } catch (JB) {
-            (QB = new(DB.BlobBuilder || DB.WebKitBlobBuilder || DB.MozBlobBuilder || DB.MSBlobBuilder)).append(BB), QB = QB.getBlob()
+            Me = new be.Blob([ee])
+          } catch (Je) {
+            (Me = new(be.BlobBuilder || be.WebKitBlobBuilder || be.MozBlobBuilder || be.MSBlobBuilder)).append(ee), Me = Me.getBlob()
           }
-          var oB = DB.URL || DB.webkitURL,
-            jB = oB.createObjectURL(QB),
-            yB = new DB[OB](jB, GB);
-          return oB.revokeObjectURL(jB), yB
-        } catch (JB) {
-          return new DB[OB]("data:application/javascript,".concat(encodeURIComponent(BB)), GB)
+          var Ke = be.URL || be.webkitURL,
+            Ue = Ke.createObjectURL(Me),
+            Fe = new be[ie](Ue, He);
+          return Ke.revokeObjectURL(Ue), Fe
+        } catch (Je) {
+          return new be[ie]("data:application/javascript,".concat(encodeURIComponent(ee)), He)
         }
-      } catch (JB) {
-        if (!YB) throw Error("Inline worker is not supported");
-        return new DB[OB](YB, GB)
+      } catch (Je) {
+        if (!ye) throw Error("Inline worker is not supported");
+        return new be[ie](ye, He)
       }
     }
   },
-  36912: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => tB,
-      g: () => YO,
-      h: () => vB,
-      j: () => OO,
-      m: () => sB,
-      o: () => xB
+  37003: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Qe,
+      g: () => yi,
+      i: () => Ne,
+      j: () => ii,
+      m: () => Ge,
+      q: () => re
     });
-    var YB = GB(3206),
-      DB = GB(3224),
-      QB = GB(7161),
-      oB = GB(5165),
-      jB = GB(3219),
-      yB = GB(3210);
-    const JB = "bloxd-wasmDownloaded",
-      MB = 12;
+    var ye = He(3094),
+      be = He(3105),
+      Me = He(7251),
+      Ke = He(5153),
+      Ue = He(3103),
+      Fe = He(3101);
+    const Je = "bloxd-wasmDownloaded",
+      oe = 12;
 
-    function PB(BB) {
-      return BB.pathname.slice(BB.pathname.lastIndexOf("/") + 1)
+    function Re(ee) {
+      return ee.pathname.slice(ee.pathname.lastIndexOf("/") + 1)
     }
 
-    function zB() {
+    function ke() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const BB = JSON.parse(localStorage.getItem(JB) ?? "[]");
-        return Array.isArray(BB) ? BB.filter((BB => "string" === typeof BB)) : []
-      } catch (BB) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", BB), null
+        const ee = JSON.parse(localStorage.getItem(Je) ?? "[]");
+        return Array.isArray(ee) ? ee.filter((ee => "string" === typeof ee)) : []
+      } catch (ee) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", ee), null
       }
     }
-    const lB = Reflect.apply,
-      pB = "undefined" === typeof Worker ? void 0 : Worker,
-      qB = pB?.prototype.postMessage,
-      ZB = pB?.prototype.terminate,
-      NB = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      RB = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      WB = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      AB = function() {
+    const qe = Reflect.apply,
+      fe = "undefined" === typeof Worker ? void 0 : Worker,
+      Te = fe?.prototype.postMessage,
+      pe = fe?.prototype.terminate,
+      Xe = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      ze = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Be = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Ee = function() {
         try {
-          return (0, oB.i)(pB, "Worker", !0) && (0, oB.i)(qB, "postMessage") && (0, oB.i)(ZB, "terminate") && (0, oB.i)(WB, "buffer") && void 0 !== NB && void 0 !== RB
+          return (0, Ke.l)(fe, "Worker", !0) && (0, Ke.l)(Te, "postMessage") && (0, Ke.l)(pe, "terminate") && (0, Ke.l)(Be, "buffer") && void 0 !== Xe && void 0 !== ze
         } catch {
           return !1
         }
       }();
-    let VB = !1;
+    let ge = !1;
 
-    function SB() {
-      return AB && !VB
+    function Oe() {
+      return Ee && !ge
     }
-    class nB {
+    class de {
       worker = null;
       failed = !1;
       constructor() {
-        if (SB()) try {
-          this.worker = fB(), lB(NB, this.worker, ["error", () => {
+        if (Oe()) try {
+          this.worker = te(), qe(Xe, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -388,125 +388,125 @@ export const modules = {
         }
       }
       take() {
-        const BB = this.worker;
-        if (this.worker = null, null !== BB && this.failed) throw lB(ZB, BB, []), new Error("it did not run");
-        return BB
+        const ee = this.worker;
+        if (this.worker = null, null !== ee && this.failed) throw qe(pe, ee, []), new Error("it did not run");
+        return ee
       }
       stop() {
-        const BB = this.worker;
-        this.worker = null, null !== BB && lB(ZB, BB, [])
+        const ee = this.worker;
+        this.worker = null, null !== ee && qe(pe, ee, [])
       }
     }
-    class UB {
+    class We {
       decoded;
       worker;
       reject;
-      constructor(BB, OB, GB, YB, QB) {
+      constructor(ee, ie, He, ye, Me) {
         try {
-          this.worker = QB?.take() ?? fB()
-        } catch (JB) {
-          throw VB = !0, new Error(`The zstd decoder's worker did not start: ${(0,jB.h)(JB)}`)
+          this.worker = Me?.take() ?? te()
+        } catch (Je) {
+          throw ge = !0, new Error(`The zstd decoder's worker did not start: ${(0,Ue.e)(Je)}`)
         }
-        const oB = this.worker;
-        this.decoded = (0, DB.f)(((OB, DB) => {
-          this.reject = DB;
-          const QB = (BB, OB) => {
-            lB(NB, oB, [BB, OB])
+        const Ke = this.worker;
+        this.decoded = (0, be.h)(((ie, be) => {
+          this.reject = be;
+          const Me = (ee, ie) => {
+            qe(Xe, Ke, [ee, ie])
           };
-          QB("message", (BB => {
-            YB();
+          Me("message", (ee => {
+            ye();
             try {
-              const YB = lB(RB, BB, []);
-              if (!0 === YB) OB();
+              const ye = qe(ze, ee, []);
+              if (!0 === ye) ie();
               else {
-                if ("string" === typeof YB) throw YB.startsWith(jB.d) && (VB = !0), new Error(YB);
-                GB(YB, lB(yB.x, YB, []))
+                if ("string" === typeof ye) throw ye.startsWith(Ue.b) && (ge = !0), new Error(ye);
+                He(ye, qe(Fe.s, ye, []))
               }
-            } catch (JB) {
-              DB(JB)
+            } catch (Je) {
+              be(Je)
             }
-          })), QB("error", (() => {
-            VB = !0, DB(new Error("The zstd decoder's worker did not run"))
-          })), QB("messageerror", (() => {
-            DB(new Error(`${BB}'s decoder sent a piece that could not be read`))
+          })), Me("error", (() => {
+            ge = !0, be(new Error("The zstd decoder's worker did not run"))
+          })), Me("messageerror", (() => {
+            be(new Error(`${ee}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, yB.X)(this.decoded), lB(qB, oB, [
-          [BB, OB]
+        })), (0, Fe.U)(this.decoded), qe(Te, Ke, [
+          [ee, ie]
         ])
       }
-      push(BB) {
-        lB(qB, this.worker, [BB, [lB(WB, BB, [])]])
+      push(ee) {
+        qe(Te, this.worker, [ee, [qe(Be, ee, [])]])
       }
       end() {
-        lB(qB, this.worker, [null])
+        qe(Te, this.worker, [null])
       }
       markWorkerFailed() {
-        VB = !0
+        ge = !0
       }
-      fail(BB) {
-        this.reject(BB), this.terminate()
+      fail(ee) {
+        this.reject(ee), this.terminate()
       }
       terminate() {
-        lB(ZB, this.worker, [])
+        qe(pe, this.worker, [])
       }
     }
 
-    function fB() {
-      if (globalThis.Worker !== pB) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(GB.p + GB.u(79), GB.b), {
+    function te() {
+      if (globalThis.Worker !== fe) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(He.p + He.u(79), He.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const kB = Reflect.apply,
-      dB = ArrayBuffer,
-      KB = "undefined" === typeof Response ? void 0 : Response,
-      uB = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      mB = function() {
-        let BB;
-        void 0 !== uB && new uB({
+    const Ze = Reflect.apply,
+      we = ArrayBuffer,
+      De = "undefined" === typeof Response ? void 0 : Response,
+      Pe = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      Ae = function() {
+        let ee;
+        void 0 !== Pe && new Pe({
           __proto__: null,
-          start(OB) {
+          start(ie) {
             const {
-              enqueue: GB,
-              close: YB,
-              error: DB
-            } = Object.getPrototypeOf(OB);
-            BB = {
-              enqueue: GB,
-              close: YB,
-              error: DB
+              enqueue: He,
+              close: ye,
+              error: be
+            } = Object.getPrototypeOf(ie);
+            ee = {
+              enqueue: He,
+              close: ye,
+              error: be
             }
           }
         }, {
           __proto__: null
         });
-        return BB
+        return ee
       }(),
-      IB = function() {
+      Ye = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== mB && (0, oB.i)(KB, "Response", !0) && (0, oB.i)(uB, "ReadableStream", !0) && (0, oB.i)(mB.enqueue, "enqueue") && (0, oB.i)(mB.close, "close") && (0, oB.i)(mB.error, "error") && (0, oB.i)(yB.ab, "body") && (0, oB.i)(yB.P, "getReader") && (0, oB.i)(yB.Z, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Ae && (0, Ke.l)(De, "Response", !0) && (0, Ke.l)(Pe, "ReadableStream", !0) && (0, Ke.l)(Ae.enqueue, "enqueue") && (0, Ke.l)(Ae.close, "close") && (0, Ke.l)(Ae.error, "error") && (0, Ke.l)(Fe.X, "body") && (0, Ke.l)(Fe.K, "getReader") && (0, Ke.l)(Fe.W, "read")
         } catch {
           return !1
         }
       }();
-    async function FB(BB, OB, GB, YB, QB, oB, JB) {
-      const MB = new dB(OB),
+    async function Ve(ee, ie, He, ye, Me, Ke, Je) {
+      const oe = new we(ie),
         {
-          controller: PB,
-          compiled: zB
-        } = function(BB) {
+          controller: Re,
+          compiled: ke
+        } = function(ee) {
           try {
-            let BB;
-            const OB = new uB({
+            let ee;
+            const ie = new Pe({
                 __proto__: null,
-                start(OB) {
-                  BB = OB
+                start(ie) {
+                  ee = ie
                 }
               }, {
                 __proto__: null
               }),
-              GB = new KB(OB, {
+              He = new De(ie, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -514,374 +514,374 @@ export const modules = {
                 }
               });
             return {
-              controller: BB,
-              compiled: (0, yB.X)((0, yB.B)((0, yB.hb)(GB)))
+              controller: ee,
+              compiled: (0, Fe.U)((0, Fe.x)((0, Fe.eb)(He)))
             }
-          } catch (OB) {
-            throw new Error(`${BB} could not be streamed into a compile: ${(0,jB.h)(OB)}`)
+          } catch (ie) {
+            throw new Error(`${ee} could not be streamed into a compile: ${(0,Ue.e)(ie)}`)
           }
-        }(BB),
+        }(ee),
         {
-          enqueue: lB,
-          close: pB,
-          error: qB
-        } = mB,
-        ZB = BB => {
+          enqueue: qe,
+          close: fe,
+          error: Te
+        } = Ae,
+        pe = ee => {
           try {
-            kB(qB, PB, [BB])
+            Ze(Te, Re, [ee])
           } catch {}
         };
-      let NB = 0;
-      const RB = (GB, YB) => {
-        if (NB + YB > OB) throw new Error(`${BB} decoded past its module's ${OB} bytes`);
-        kB(yB.cb, new yB.k(MB), [new yB.k(GB), NB]);
+      let Xe = 0;
+      const ze = (He, ye) => {
+        if (Xe + ye > ie) throw new Error(`${ee} decoded past its module's ${ie} bytes`);
+        Ze(Fe.Z, new Fe.l(oe), [new Fe.l(He), Xe]);
         try {
-          kB(lB, PB, [new yB.k(MB, NB, YB)])
+          Ze(qe, Re, [new Fe.l(oe, Xe, ye)])
         } catch {}
-        NB += YB
+        Xe += ye
       };
-      let WB, AB;
+      let Be, Ee;
       try {
-        WB = new UB(BB, OB, RB, YB, JB)
-      } catch (fB) {
-        throw ZB(fB), fB
+        Be = new We(ee, ie, ze, ye, Je)
+      } catch (te) {
+        throw pe(te), te
       }
-      const VB = BB => {
-        WB.fail(BB), void 0 !== AB && iB(AB)
+      const ge = ee => {
+        Be.fail(ee), void 0 !== Ee && ae(Ee)
       };
-      let SB = !1;
-      GB.addEventListener("abort", (() => {
-        SB && WB.markWorkerFailed(), VB(new Error(`${BB} stalled`))
+      let Oe = !1;
+      He.addEventListener("abort", (() => {
+        Oe && Be.markWorkerFailed(), ge(new Error(`${ee} stalled`))
       }), {
         once: !0
-      }), (0, DB.s)(zB, (() => {}), VB);
+      }), (0, be.r)(ke, (() => {}), ge);
       try {
-        let oB;
+        let Ke;
         try {
-          oB = await fetch(BB, {
-            signal: GB
+          Ke = await fetch(ee, {
+            signal: He
           })
-        } catch (fB) {
-          throw new Error(`Fetching ${BB} failed: ${(0,jB.h)(fB)}`)
+        } catch (te) {
+          throw new Error(`Fetching ${ee} failed: ${(0,Ue.e)(te)}`)
         }
         const {
-          ok: JB,
-          status: MB,
-          body: PB
-        } = function(BB, OB) {
+          ok: Je,
+          status: oe,
+          body: Re
+        } = function(ee, ie) {
           try {
             const {
-              ok: BB,
-              status: GB
-            } = OB;
+              ok: ee,
+              status: He
+            } = ie;
             return {
-              ok: BB,
-              status: GB,
-              body: kB(yB.ab, OB, [])
+              ok: ee,
+              status: He,
+              body: Ze(Fe.X, ie, [])
             }
           } catch {
-            throw new Error(`${BB} came in a response a page script made`)
+            throw new Error(`${ee} came in a response a page script made`)
           }
-        }(BB, oB);
-        if (!JB) throw new Error(`Fetching ${BB} failed: HTTP ${MB}`);
-        YB();
-        const zB = kB(yB.P, PB, []);
-        AB = zB;
-        const lB = () => {
-          iB(zB)
+        }(ee, Ke);
+        if (!Je) throw new Error(`Fetching ${ee} failed: HTTP ${oe}`);
+        ye();
+        const ke = Ze(Fe.K, Re, []);
+        Ee = ke;
+        const qe = () => {
+          ae(ke)
         };
-        for ((0, DB.s)(WB.decoded, lB, lB);;) {
-          let OB;
+        for ((0, be.r)(Be.decoded, qe, qe);;) {
+          let ie;
           try {
-            OB = await kB(yB.Z, zB, [])
-          } catch (fB) {
-            throw new Error(`Downloading ${BB} failed: ${(0,jB.h)(fB)}`)
+            ie = await Ze(Fe.W, ke, [])
+          } catch (te) {
+            throw new Error(`Downloading ${ee} failed: ${(0,Ue.e)(te)}`)
           }
-          if (OB.done) break;
-          YB(), WB.push(OB.value)
+          if (ie.done) break;
+          ye(), Be.push(ie.value)
         }
-        if (SB = !0, WB.end(), await WB.decoded, QB(), NB !== OB) throw new Error(`${BB} ended before its module did`)
-      } catch (fB) {
-        throw ZB(fB), VB(fB), fB
+        if (Oe = !0, Be.end(), await Be.decoded, Me(), Xe !== ie) throw new Error(`${ee} ended before its module did`)
+      } catch (te) {
+        throw pe(te), ge(te), te
       }
-      WB.terminate();
+      Be.terminate();
       try {
-        kB(pB, PB, [])
+        Ze(fe, Re, [])
       } catch {}
-      const nB = await zB;
-      return void 0 !== oB && await (0, yB.y)(BB, new yB.k(MB), {
-        sha256: oB.sha256,
+      const de = await ke;
+      return void 0 !== Ke && await (0, Fe.t)(ee, new Fe.l(oe), {
+        sha256: Ke.sha256,
         onMismatch: () => {}
-      }), nB
+      }), de
     }
 
-    function iB(BB) {
+    function ae(ee) {
       try {
-        (0, yB.X)(BB.cancel())
+        (0, Fe.U)(ee.cancel())
       } catch {}
     }
-    const LB = ".zst.bin",
-      gB = 1e3;
-    let rB = null;
+    const ce = ".zst.bin",
+      xe = 1e3;
+    let Le = null;
 
-    function XB(BB) {
-      return rB ??= function() {
-        const BB = new Map,
-          OB = "bloxd_wasm_webgpu:5162719,bloxd_wasm_webgl:5545853,bloxd_wasm_webgl1:4879367,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732388";
-        for (const GB of OB?.split(",") ?? []) {
-          const [OB = "", YB] = GB.split(":"), DB = Number(YB);
-          Number.isInteger(DB) && DB > 0 && BB.set(OB, DB)
+    function Ce(ee) {
+      return Le ??= function() {
+        const ee = new Map,
+          ie = "bloxd_wasm_webgpu:5162719,bloxd_wasm_webgl:5545853,bloxd_wasm_webgl1:4879367,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732388";
+        for (const He of ie?.split(",") ?? []) {
+          const [ie = "", ye] = He.split(":"), be = Number(ye);
+          Number.isInteger(be) && be > 0 && ee.set(ie, be)
         }
-        return BB
-      }(), rB.get(BB)
+        return ee
+      }(), Le.get(ee)
     }
-    async function wB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const YB = XB(BB.name);
-      if (void 0 === YB) return EB(await cB(BB, OB, GB), "cold-wasm");
-      const QB = IB ? new nB : null;
-      let oB;
+    async function ve(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const ye = Ce(ee.name);
+      if (void 0 === ye) return ue(await me(ee, ie, He), "cold-wasm");
+      const Me = Ye ? new de : null;
+      let Ke;
       try {
-        if (JB = BB.url(), zB()?.includes(PB(JB)) && await async function(BB) {
-            const OB = new AbortController;
-            let GB;
-            const YB = (0, DB.f)((BB => {
-              GB = setTimeout((() => {
-                OB.abort(), BB(null)
-              }), gB)
+        if (Je = ee.url(), ke()?.includes(Re(Je)) && await async function(ee) {
+            const ie = new AbortController;
+            let He;
+            const ye = (0, be.h)((ee => {
+              He = setTimeout((() => {
+                ie.abort(), ee(null)
+              }), xe)
             }));
             try {
-              const GB = fetch(BB.href, {
+              const He = fetch(ee.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: OB.signal
+                  signal: ie.signal
                 }),
-                QB = await (0, DB.p)([GB, YB]);
-              return !!QB?.ok && ((0, yB.X)(QB.body.cancel()), !0)
+                Me = await (0, be.q)([He, ye]);
+              return !!Me?.ok && ((0, Fe.U)(Me.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(GB)
+              clearTimeout(He)
             }
-          }(BB.url())) return QB?.stop(), await async function(BB, OB, GB, YB) {
-          let DB = !1;
-          const QB = GB && {
-            sha256: GB.sha256,
+          }(ee.url())) return Me?.stop(), await async function(ee, ie, He, ye) {
+          let be = !1;
+          const Me = He && {
+            sha256: He.sha256,
             onMismatch: () => {
-              DB = !0
+              be = !0
             }
           };
           try {
-            return EB(await cB(BB, QB, YB), "warm")
-          } catch (oB) {
-            const YB = await hB(BB, OB, GB, null);
-            if (null === YB) throw DB && GB.onMismatch(), oB;
-            return console.warn(`${BB.url().href} from the HTTP cache failed: ${(0,jB.h)(oB)}: loaded its copy instead`), EB(YB, DB ? "warm-refused" : "warm-broken")
+            return ue(await me(ee, Me, ye), "warm")
+          } catch (Ke) {
+            const ye = await le(ee, ie, He, null);
+            if (null === ye) throw be && He.onMismatch(), Ke;
+            return console.warn(`${ee.url().href} from the HTTP cache failed: ${(0,Ue.e)(Ke)}: loaded its copy instead`), ue(ye, be ? "warm-refused" : "warm-broken")
           }
-        }(BB, YB, OB, GB);
-        oB = await hB(BB, YB, OB, QB)
+        }(ee, ye, ie, He);
+        Ke = await le(ee, ye, ie, Me)
       } finally {
-        QB?.stop()
+        Me?.stop()
       }
-      var JB;
-      return null !== oB ? EB(oB, "cold-worker") : EB(await cB(BB, OB, GB), "cold-wasm")
+      var Je;
+      return null !== Ke ? ue(Ke, "cold-worker") : ue(await me(ee, ie, He), "cold-wasm")
     }
 
-    function EB(BB, OB) {
+    function ue(ee, ie) {
       return {
         __proto__: null,
-        module: BB,
-        path: OB
+        module: ee,
+        path: ie
       }
     }
 
-    function cB(BB, OB, GB) {
-      return void 0 === XB(BB.name) ? (0, yB.G)(BB.url(), OB, GB) : (0, yB.G)(BB.url(), OB, {
-        ...GB,
+    function me(ee, ie, He) {
+      return void 0 === Ce(ee.name) ? (0, Fe.B)(ee.url(), ie, He) : (0, Fe.B)(ee.url(), ie, {
+        ...He,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(BB) {
-            const OB = zB();
-            if (null === OB) return;
-            const GB = PB(BB),
-              YB = OB.filter((BB => BB !== GB));
-            YB.push(GB);
+          ! function(ee) {
+            const ie = ke();
+            if (null === ie) return;
+            const He = Re(ee),
+              ye = ie.filter((ee => ee !== He));
+            ye.push(He);
             try {
-              localStorage.setItem(JB, JSON.stringify(YB.slice(-MB)))
-            } catch (DB) {
-              console.warn(`Bloxd wasm: ${GB} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, DB)
+              localStorage.setItem(Je, JSON.stringify(ye.slice(-oe)))
+            } catch (be) {
+              console.warn(`Bloxd wasm: ${He} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, be)
             }
-          }(BB.url()), GB.onDownloaded?.()
+          }(ee.url()), He.onDownloaded?.()
         }
       })
     }
-    async function hB(BB, OB, GB, YB) {
-      if (!IB || !SB()) return null;
-      const DB = BB.url(),
-        QB = `${DB.href}${LB}`;
+    async function le(ee, ie, He, ye) {
+      if (!Ye || !Oe()) return null;
+      const be = ee.url(),
+        Me = `${be.href}${ce}`;
       try {
-        return await (0, yB.gb)(QB, ((BB, DB, oB) => FB(QB, OB, BB, DB, oB, GB, YB)))
-      } catch (oB) {
-        return console.warn(`${(0,jB.h)(oB)}: loading ${DB.href} instead`), null
+        return await (0, Fe.bb)(Me, ((ee, be, Ke) => Ve(Me, ie, ee, be, Ke, He, ye)))
+      } catch (Ke) {
+        return console.warn(`${(0,Ue.e)(Ke)}: loading ${be.href} instead`), null
       }
     }
-    let aB = null,
-      eB = !1;
-    const TB = new Map,
-      bB = new Map;
-    let CB = null;
+    let Se = null,
+      ne = !1;
+    const je = new Map,
+      se = new Map;
+    let Ie = null;
 
-    function HB(BB) {
-      const OB = OB => BB.filter((BB => TB.get(BB)?.state === OB)).length,
-        GB = OB("compiled");
-      return GB > 0 && GB === BB.length ? "compiled" : GB + OB("compiling") > 0 ? "compiling" : "none"
+    function he(ee) {
+      const ie = ie => ee.filter((ee => je.get(ee)?.state === ie)).length,
+        He = ie("compiled");
+      return He > 0 && He === ee.length ? "compiled" : He + ie("compiling") > 0 ? "compiling" : "none"
     }
 
-    function vB() {
-      return CB ?? HB([...TB.keys()])
+    function Ne() {
+      return Ie ?? he([...je.keys()])
     }
 
-    function sB(BB, OB, GB) {
-      return null === aB ? aB = BO(BB, OB, GB?.memoryMaximumBytes) : BB !== aB.build ? console.warn(`Bloxd wasm: ${BB.name} was asked for after ${aB.build.name} started loading, which this thread keeps`) : OB.name !== aB.workers.name && console.warn(`Bloxd wasm: ${OB.name} was asked for workers after ${aB.workers.name}, which this thread keeps`), GB?.reloadFailedDownload && !eB && (0, YB.$)() && (eB = !0, aB = BO(aB.build, aB.workers, aB.memoryMaximumBytes)), aB.loaded
+    function Ge(ee, ie, He) {
+      return null === Se ? Se = ei(ee, ie, He?.memoryMaximumBytes) : ee !== Se.build ? console.warn(`Bloxd wasm: ${ee.name} was asked for after ${Se.build.name} started loading, which this thread keeps`) : ie.name !== Se.workers.name && console.warn(`Bloxd wasm: ${ie.name} was asked for workers after ${Se.workers.name}, which this thread keeps`), He?.reloadFailedDownload && !ne && (0, ye.hb)() && (ne = !0, Se = ei(Se.build, Se.workers, Se.memoryMaximumBytes)), Se.loaded
     }
 
-    function xB(BB) {
-      return null === aB ? (0, DB.f)((BB => {
-        BB(!1)
-      })) : ((0, YB._)() && (aB = BO(aB.build, aB.workers, BB ?? aB.memoryMaximumBytes)), aB.loaded)
+    function re(ee) {
+      return null === Se ? (0, be.h)((ee => {
+        ee(!1)
+      })) : ((0, ye.gb)() && (Se = ei(Se.build, Se.workers, ee ?? Se.memoryMaximumBytes)), Se.loaded)
     }
 
-    function tB(BB, OB) {
-      if (null !== aB) return (0, DB.d)([]);
-      const GB = BB.filter((BB => !TB.has(BB.name))).map((BB => {
-        const GB = new AbortController,
-          YB = {
-            compiled: cB(BB, (0, QB.d)(BB.name), {
-              priority: OB,
-              rB: GB.signal,
+    function Qe(ee, ie) {
+      if (null !== Se) return (0, be.g)([]);
+      const He = ee.filter((ee => !je.has(ee.name))).map((ee => {
+        const He = new AbortController,
+          ye = {
+            compiled: me(ee, (0, Me.d)(ee.name), {
+              priority: ie,
+              Ce: He.signal,
               onDownloaded: () => {
-                YB.downloaded = !0
+                ye.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  YB.downloaded = !1, null !== aB && GB.abort()
+                  ye.downloaded = !1, null !== Se && He.abort()
                 }
               }
             }),
-            cancel: GB,
+            cancel: He,
             downloaded: !1,
             state: "compiling"
           };
-        return TB.set(BB.name, YB), (0, DB.f)((OB => {
-          (0, DB.s)(YB.compiled, (() => {
-            YB.downloaded = !0, YB.state = "compiled", OB()
-          }), (DB => {
-            YB.state = "failed", GB.signal.aborted || console.warn(`Bloxd wasm: ${BB.name}'s compile ahead of the load failed: the load compiles it afresh`, DB), OB()
+        return je.set(ee.name, ye), (0, be.h)((ie => {
+          (0, be.r)(ye.compiled, (() => {
+            ye.downloaded = !0, ye.state = "compiled", ie()
+          }), (be => {
+            ye.state = "failed", He.signal.aborted || console.warn(`Bloxd wasm: ${ee.name}'s compile ahead of the load failed: the load compiles it afresh`, be), ie()
           }))
         }))
       }));
-      return (0, DB.d)(GB)
+      return (0, be.g)(He)
     }
 
-    function BO(BB, OB, GB) {
-      CB ??= HB(OB.name === BB.name ? [BB.name] : [BB.name, OB.name]);
-      const QB = (0, YB.F)((async () => {
-        (0, oB.w)(), bB.clear();
-        const GB = GO(BB),
-          YB = OB.name === BB.name ? GB : GO(OB);
+    function ei(ee, ie, He) {
+      Ie ??= he(ie.name === ee.name ? [ee.name] : [ee.name, ie.name]);
+      const Me = (0, ye.M)((async () => {
+        (0, Ke.E)(), se.clear();
+        const He = Hi(ee),
+          ye = ie.name === ee.name ? He : Hi(ie);
         for (const {
-            cancel: BB
+            cancel: ee
           }
-          of TB.values()) BB.abort();
-        TB.clear(), await (0, DB.d)([GB, YB]);
-        const QB = await GB,
-          jB = await YB;
-        return (0, oB.w)(), {
-          module: QB,
-          workerModule: jB
+          of je.values()) ee.abort();
+        je.clear(), await (0, be.g)([He, ye]);
+        const Me = await He,
+          Ue = await ye;
+        return (0, Ke.E)(), {
+          module: Me,
+          workerModule: Ue
         }
-      }), BB, GB);
+      }), ee, He);
       return {
-        build: BB,
-        workers: OB,
-        memoryMaximumBytes: GB,
-        loaded: QB
+        build: ee,
+        workers: ie,
+        memoryMaximumBytes: He,
+        loaded: Me
       }
     }
 
-    function OO(BB) {
-      return bB.get(BB)
+    function ii(ee) {
+      return se.get(ee)
     }
 
-    function GO(BB) {
-      const OB = performance.now(),
-        GB = TB.get(BB.name);
-      TB.delete(BB.name);
-      const YB = !0 === GB?.downloaded ? GB : void 0;
-      return void 0 !== GB && void 0 === YB && GB.cancel.abort(), (0, DB.f)(((GB, QB) => {
-        const oB = (YB, DB) => {
-            bB.set(BB.name, {
-              path: DB,
-              ms: performance.now() - OB
-            }), GB(YB)
+    function Hi(ee) {
+      const ie = performance.now(),
+        He = je.get(ee.name);
+      je.delete(ee.name);
+      const ye = !0 === He?.downloaded ? He : void 0;
+      return void 0 !== He && void 0 === ye && He.cancel.abort(), (0, be.h)(((He, Me) => {
+        const Ke = (ye, be) => {
+            se.set(ee.name, {
+              path: be,
+              ms: performance.now() - ie
+            }), He(ye)
           },
-          jB = () => {
-            (0, DB.s)(DO(BB), (BB => {
+          Ue = () => {
+            (0, be.r)(bi(ee), (ee => {
               let {
-                module: OB,
-                path: GB
-              } = BB;
-              oB(OB, GB)
-            }), QB)
+                module: ie,
+                path: He
+              } = ee;
+              Ke(ie, He)
+            }), Me)
           };
-        void 0 === YB ? jB() : (0, DB.s)(YB.compiled, (BB => {
-          oB(BB, "ahead")
-        }), jB)
+        void 0 === ye ? Ue() : (0, be.r)(ye.compiled, (ee => {
+          Ke(ee, "ahead")
+        }), Ue)
       }))
     }
-    async function YO(BB, OB) {
+    async function yi(ee, ie) {
       const {
-        module: GB
-      } = await DO(BB, {
-        retries: OB
+        module: He
+      } = await bi(ee, {
+        retries: ie
       });
-      return GB
+      return He
     }
-    async function DO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await wB(BB, (0, QB.d)(BB.name), OB)
+    async function bi(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await ve(ee, (0, Me.d)(ee.name), ie)
     }
   },
-  7161: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
+  7251: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke
     });
-    var YB = GB(3210);
-    const DB = {
-      bloxd_wasm: () => "bbd4532b4204ac6b037d21981a0077e27c49bf77bad5ade13596319f1c6101a5",
-      bloxd_wasm_client: () => "8365f73c3472844058a4a0f574b2102c245aef505acbb602a81be3847509c8fa",
-      bloxd_wasm_workers: () => "8409ee2ec92a1f5bf3cf7df6088eeb4c89a7f9ab0b6c537ab5e6bee5e1c85a52",
-      bloxd_wasm_models: () => "4297705d02ef7091b212436b1b1d90f181427336ab1bf97d3c1a2eebcb00ef44",
-      bloxd_wasm_webgpu: () => "feb1e82520617426b733fd3101371d0a4d1be5eea8eb5f7115ad8b481c5ecc2a",
-      bloxd_wasm_webgl: () => "ccc8a64ee7a944567fefa835e06af6da6175cc2ce9d8d4fb5fc2acb63861821b",
-      bloxd_wasm_webgl1: () => "ef3b6328394821ae9f35e9d6eb203b2d9872f6911c2948b8b5bd2bd784af58be",
-      bloxd_wasm_replay: () => "e6bfd69259d4961ba1c2eff287fb0493dd998b3af1045ea9988589f9c1c784a6",
-      bloxd_wasm_recorder: () => "61e54a37d20be582fb8a73e1f48e79e660cbedc06e1fc696d3d52ad467693eb7",
-      bloxd_wasm_anim: () => "412a9ead222a90865e84867e83bc25acfd52a0e1c584c793e1f272639ce5dc2c",
-      bloxd_wasm_textures: () => "43d7ae101efe7b39af19b5e650a2896a40d167bca827906978d39975a015e416",
-      bloxd_wasm_shader_pack: () => "072b43f08a8ed6ea1336897ed9d7881ce755636d8b8a8f34eaa208a897665b42"
+    var ye = He(3101);
+    const be = {
+      bloxd_wasm: () => "e02d54b065b2f499b180e1b3347d16df55a2947d0e605d2078a3d3b6da48d9a9",
+      bloxd_wasm_client: () => "c679f6743194014168c148d06b29ff43ac2ebd65af96551ab04742237da2cbc0",
+      bloxd_wasm_workers: () => "64996202cfa4b1e69476b5072e56b0cfcea62edff120e603bbcded9c0cc2f2b2",
+      bloxd_wasm_models: () => "d8940e8e7ccbe7fea2cc7bbf2297c0d75ddbf7e4f7faf3d9bb2ad0765fbba5c2",
+      bloxd_wasm_webgpu: () => "cf5aebafb7e2919918851e5ade65769e47a6978ba139ea29c093aa7d03105200",
+      bloxd_wasm_webgl: () => "8ae617ef40b6df6e9c6b2b4fb13fbb620e731d320ec11ddc75acee07da832d88",
+      bloxd_wasm_webgl1: () => "5541e97c52b53f4d16d1e55f9d8eb127812f263b741e67830d3bb080322b1915",
+      bloxd_wasm_replay: () => "fa06c4ee5e806830b3ad4c2e2323335346c04bf67f500d15ce0c53d3a6cad80e",
+      bloxd_wasm_recorder: () => "f6eb834fb863f1cd66bacc3bb3d9505f0a66acb7d26cea69ffc0ae9f1664e920",
+      bloxd_wasm_anim: () => "b7f47661c5c9230379971e76cc8f09962d7323de4ff12c8fdf43c1fd62033f90",
+      bloxd_wasm_textures: () => "5c62f6a16c856ae74984e597d42471c5a63fb99862f370b47f78d95328e7a101",
+      bloxd_wasm_shader_pack: () => "e3e6a3571f741530e11f118b8afcc85da15081a89450db4b464665c2ed09dc09"
     };
-    var QB = GB(5165);
+    var Me = He(5153);
 
-    function oB(BB) {
-      const OB = Object.prototype.hasOwnProperty.call(DB, BB) ? DB[BB]() : void 0;
-      if (void 0 !== OB) return {
-        sha256: OB,
-        onMismatch: QB.s
+    function Ke(ee) {
+      const ie = Object.prototype.hasOwnProperty.call(be, ee) ? be[ee]() : void 0;
+      if (void 0 !== ie) return {
+        sha256: ie,
+        onMismatch: Me.B
       };
-      throw new YB.g(`${BB} has no release digest, so this build refuses it`)
+      throw new ye.i(`${ee} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

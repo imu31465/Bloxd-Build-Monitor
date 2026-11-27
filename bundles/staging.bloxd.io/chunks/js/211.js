@@ -1,84 +1,84 @@
 export const id = 211;
 export const ids = [211, 212];
 export const modules = {
-  34624: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      reportJsMainStall: () => jB,
-      resetJsMainStallReport: () => yB
+  34699: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      reportJsMainStall: () => Ue,
+      resetJsMainStallReport: () => Fe
     });
-    var YB = GB(34626),
-      DB = GB(1856),
-      QB = GB(34631);
-    let oB = !1;
+    var ye = He(34708),
+      be = He(1814),
+      Me = He(34712);
+    let Ke = !1;
 
-    function jB(BB, OB, GB, jB) {
-      oB || (oB = !0, (0, DB.reportClientError)("wasm_load", (0, QB.b)(BB, OB, GB, jB, (0, QB.d)()), "JS-mainStall", !0, YB.CAPPED_COUNTS_VISIT_CAP))
+    function Ue(ee, ie, He, Ue) {
+      Ke || (Ke = !0, (0, be.reportClientError)("wasm_load", (0, Me.c)(ee, ie, He, Ue, (0, Me.e)()), "JS-mainStall", !0, ye.CAPPED_COUNTS_VISIT_CAP))
     }
 
-    function yB() {
-      oB = !1
+    function Fe() {
+      Ke = !1
     }
   },
-  34631: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => jB,
-      d: () => oB
+  34712: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ue,
+      e: () => Ke
     });
-    var YB = GB(258),
-      DB = GB(118),
-      QB = GB(34637);
+    var ye = He(260),
+      be = He(123),
+      Me = He(34717);
 
-    function oB() {
-      var BB, OB, GB;
-      return null !== (BB = (0, YB.j)(null !== (OB = null === (GB = (0, DB.o)()) || void 0 === GB ? void 0 : GB.renderer) && void 0 !== OB ? OB : null, (0, DB.m)())) && void 0 !== BB ? BB : "unknown"
+    function Ke() {
+      var ee, ie, He;
+      return null !== (ee = (0, ye.j)(null !== (ie = null === (He = (0, be.p)()) || void 0 === He ? void 0 : He.renderer) && void 0 !== ie ? ie : null, (0, be.n)())) && void 0 !== ee ? ee : "unknown"
     }
 
-    function jB(BB, OB, GB, YB, DB) {
-      const oB = null === OB ? "untimed" : `${Math.round(OB)} ms`;
-      return `frames stalled, ${GB}, gpu ${(0,QB.c)(DB)}, blocking ${oB}, drawn ${Math.round(BB)} ms apart, timers ${YB.timers}, timer gap ${Math.round(YB.longestGapMs)} ms`
+    function Ue(ee, ie, He, ye, be) {
+      const Ke = null === ie ? "untimed" : `${Math.round(ie)} ms`;
+      return `frames stalled, ${He}, gpu ${(0,Me.d)(be)}, blocking ${Ke}, drawn ${Math.round(ee)} ms apart, timers ${ye.timers}, timer gap ${Math.round(ye.longestGapMs)} ms`
     }
   },
-  34626: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      CAPPED_COUNTS_VISIT_CAP: () => QB,
-      reportCappedWasmFailure: () => yB,
-      reportUncappedWasmFailure: () => jB,
-      reportWasmCrash: () => DB,
-      reportWasmFailure: () => oB
+  34708: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      CAPPED_COUNTS_VISIT_CAP: () => Me,
+      reportCappedWasmFailure: () => Fe,
+      reportUncappedWasmFailure: () => Ue,
+      reportWasmCrash: () => be,
+      reportWasmFailure: () => Ke
     });
-    var YB = GB(1856);
+    var ye = He(1814);
 
-    function DB(BB) {
-      (0, YB.reportClientError)("wasm_load", BB.message, BB.code)
+    function be(ee) {
+      (0, ye.reportClientError)("wasm_load", ee.message, ee.code)
     }
-    const QB = YB.MAX_ERRORS_PER_VISIT - 4;
+    const Me = ye.MAX_ERRORS_PER_VISIT - 4;
 
-    function oB(BB, OB, GB, DB) {
-      (0, YB.reportClientError)(BB, OB, GB, !1, YB.MAX_ERRORS_PER_VISIT, {
-        context: DB
+    function Ke(ee, ie, He, be) {
+      (0, ye.reportClientError)(ee, ie, He, !1, ye.MAX_ERRORS_PER_VISIT, {
+        context: be
       })
     }
 
-    function jB(BB, OB, GB, DB) {
-      (0, YB.reportClientError)(BB, OB, GB, !1, 1 / 0, {
-        context: DB
+    function Ue(ee, ie, He, be) {
+      (0, ye.reportClientError)(ee, ie, He, !1, 1 / 0, {
+        context: be
       })
     }
 
-    function yB(BB, OB, GB, DB) {
-      (0, YB.reportClientError)(BB, OB, GB, !1, QB, {
-        context: DB
+    function Fe(ee, ie, He, be) {
+      (0, ye.reportClientError)(ee, ie, He, !1, Me, {
+        context: be
       })
     }
   },
-  34637: (BB, OB, GB) => {
-    function YB(BB) {
-      return String(BB).replace(/\d/g, (BB => String.fromCharCode(97 + Number(BB))))
+  34717: (ee, ie, He) => {
+    function ye(ee) {
+      return String(ee).replace(/\d/g, (ee => String.fromCharCode(97 + Number(ee))))
     }
-    GB.d(OB, {
-      c: () => YB
+    He.d(ie, {
+      d: () => ye
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

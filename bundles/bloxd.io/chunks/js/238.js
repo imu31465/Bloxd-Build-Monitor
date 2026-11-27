@@ -1,22 +1,22 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  36972: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => jB
+  37066: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue
     });
-    var YB = GB(1217);
+    var ye = He(1169);
 
-    function DB(BB) {
-      const OB = /(\d*\.?\d+)px/.exec(BB);
-      return OB ? Number(OB[1]) : null
+    function be(ee) {
+      const ie = /(\d*\.?\d+)px/.exec(ee);
+      return ie ? Number(ie[1]) : null
     }
 
-    function QB(BB) {
-      return BB.split(/[\s,]+/).pop()
+    function Me(ee) {
+      return ee.split(/[\s,]+/).pop()
     }
-    let oB = !1;
-    const jB = {
+    let Ke = !1;
+    const Ue = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -27,342 +27,342 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(BB, OB, YB, jB, yB, JB) {
-        if (yB <= 0 || JB <= 0 || this.fontSize <= 0) return {
+      drawText: function(ee, ie, ye, Ue, Fe, Je) {
+        if (Fe <= 0 || Je <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: MB,
-          fontVariant: PB,
-          fontWeight: zB,
-          fontSize: lB,
-          font: pB
-        } = this, qB = [MB, PB, zB, `${lB}px`, pB].filter(Boolean).join(" "), ZB = [
-          [zB, `${lB}px`, QB(pB)].filter(Boolean).join(" "), `${lB}px sans-serif`
-        ], NB = BB.font, RB = function(BB, OB, GB) {
-          for (const YB of OB) {
-            BB.font = YB;
-            const OB = DB(BB.font),
-              oB = QB(YB);
-            if (null !== OB && Math.abs(OB - GB) <= .5 && BB.font.toLowerCase().includes(oB.toLowerCase())) return YB
+          fontStyle: oe,
+          fontVariant: Re,
+          fontWeight: ke,
+          fontSize: qe,
+          font: fe
+        } = this, Te = [oe, Re, ke, `${qe}px`, fe].filter(Boolean).join(" "), pe = [
+          [ke, `${qe}px`, Me(fe)].filter(Boolean).join(" "), `${qe}px sans-serif`
+        ], Xe = ee.font, ze = function(ee, ie, He) {
+          for (const ye of ie) {
+            ee.font = ye;
+            const ie = be(ee.font),
+              Ke = Me(ye);
+            if (null !== ie && Math.abs(ie - He) <= .5 && ee.font.toLowerCase().includes(Ke.toLowerCase())) return ye
           }
           return null
-        }(BB, [qB, ...ZB], lB);
-        RB !== qB && function(BB, OB, YB) {
-          oB || (oB = !0, Promise.resolve().then((() => GB(1308))).then((GB => {
+        }(ee, [Te, ...pe], qe);
+        ze !== Te && function(ee, ie, ye) {
+          Ke || (Ke = !0, Promise.resolve().then((() => He(1268))).then((He => {
             let {
-              kq: DB
-            } = GB;
-            DB(new Error("A canvas didn't take canvasTxt's font"), {
-              font: BB,
-              GP: OB,
-              drawnWith: null !== YB && void 0 !== YB ? YB : "the kept font, scaled"
+              vT: be
+            } = He;
+            be(new Error("A canvas didn't take canvasTxt's font"), {
+              font: ee,
+              KR: ie,
+              drawnWith: null !== ye && void 0 !== ye ? ye : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(qB, NB, RB);
-        const WB = DB(BB.font);
-        if (null === RB && null !== WB && WB > 0) {
-          const GB = lB / WB;
-          BB.save();
+        }(Te, Xe, ze);
+        const Be = be(ee.font);
+        if (null === ze && null !== Be && Be > 0) {
+          const He = qe / Be;
+          ee.save();
           try {
-            return BB.scale(GB, GB), {
-              height: this.drawLines(BB, OB, YB / GB, jB / GB, yB / GB, JB / GB, WB).height * GB
+            return ee.scale(He, He), {
+              height: this.drawLines(ee, ie, ye / He, Ue / He, Fe / He, Je / He, Be).height * He
             }
           } finally {
-            BB.restore()
+            ee.restore()
           }
         }
-        return this.drawLines(BB, OB, YB, jB, yB, JB, lB)
+        return this.drawLines(ee, ie, ye, Ue, Fe, Je, qe)
       },
-      drawLines: function(BB, OB, GB, DB, QB, oB, jB) {
-        const yB = GB + QB,
-          JB = DB + oB;
-        let MB, PB = DB + oB / 2 + jB / 2;
-        "right" === this.align ? (MB = yB, BB.textAlign = "right") : "left" === this.align ? (MB = GB, BB.textAlign = "left") : (MB = GB + QB / 2, BB.textAlign = "center");
-        for (const YB of OB) {
-          BB.measureText(YB).width >= QB && (OB = OB.replace(YB, ""))
+      drawLines: function(ee, ie, He, be, Me, Ke, Ue) {
+        const Fe = He + Me,
+          Je = be + Ke;
+        let oe, Re = be + Ke / 2 + Ue / 2;
+        "right" === this.align ? (oe = Fe, ee.textAlign = "right") : "left" === this.align ? (oe = He, ee.textAlign = "left") : (oe = He + Me / 2, ee.textAlign = "center");
+        for (const ye of ie) {
+          ee.measureText(ye).width >= Me && (ie = ie.replace(ye, ""))
         }
-        OB = (0, YB.Y)(OB);
-        const zB = [],
-          lB = OB.split("\n"),
-          pB = this.justify ? BB.measureText("\u200a").width : 0;
-        lB.forEach((OB => {
-          let GB = BB.measureText(OB).width;
-          if (GB <= QB) zB.push(OB);
+        ie = (0, ye.R)(ie);
+        const ke = [],
+          qe = ie.split("\n"),
+          fe = this.justify ? ee.measureText("\u200a").width : 0;
+        qe.forEach((ie => {
+          let He = ee.measureText(ie).width;
+          if (He <= Me) ke.push(ie);
           else {
-            let YB = OB;
-            const DB = QB;
-            let oB, jB, yB;
-            for (GB = BB.measureText(YB).width; GB > DB;) {
-              for (oB = 0, jB = 0, yB = ""; jB < DB;) oB++, yB = YB.substr(0, oB), jB = BB.measureText(yB).width;
-              oB--, yB = yB.substr(0, oB);
-              const OB = oB;
-              if (" " !== YB.substr(oB, 1)) {
+            let ye = ie;
+            const be = Me;
+            let Ke, Ue, Fe;
+            for (He = ee.measureText(ye).width; He > be;) {
+              for (Ke = 0, Ue = 0, Fe = ""; Ue < be;) Ke++, Fe = ye.substr(0, Ke), Ue = ee.measureText(Fe).width;
+              Ke--, Fe = Fe.substr(0, Ke);
+              const ie = Ke;
+              if (" " !== ye.substr(Ke, 1)) {
                 for (;
-                  " " !== YB.substr(oB, 1) && 0 !== oB;) oB--;
-                0 === oB && (oB = OB), yB = YB.substr(0, oB)
+                  " " !== ye.substr(Ke, 1) && 0 !== Ke;) Ke--;
+                0 === Ke && (Ke = ie), Fe = ye.substr(0, Ke)
               }
-              yB = this.justify ? this.justifyLine(BB, yB, pB, "\u200a", QB) : yB, YB = YB.substr(oB), GB = BB.measureText(YB).width, zB.push(yB)
+              Fe = this.justify ? this.justifyLine(ee, Fe, fe, "\u200a", Me) : Fe, ye = ye.substr(Ke), He = ee.measureText(ye).width, ke.push(Fe)
             }
-            GB > 0 && zB.push(YB)
+            He > 0 && ke.push(ye)
           }
         }));
-        const qB = this.lineHeight ? this.lineHeight : this.getTextHeight(BB, OB),
-          ZB = qB * (zB.length - 1),
-          NB = ZB / 2;
-        let RB = DB;
-        "top" === this.vAlign ? PB = DB + jB : "bottom" === this.vAlign ? (PB = JB - ZB, RB = JB) : (RB = DB + oB / 2, PB -= NB), zB.forEach((OB => {
-          OB = OB.trim(), BB.fillText(OB, MB, PB), PB += qB
-        })), this.debug && (BB.lineWidth = 3, BB.strokeStyle = "#00909e", BB.strokeRect(GB, DB, QB, oB), BB.lineWidth = 2, BB.strokeStyle = "#f6d743", BB.beginPath(), BB.moveTo(MB, DB), BB.lineTo(MB, JB), BB.stroke(), BB.strokeStyle = "#ff6363", BB.beginPath(), BB.moveTo(GB, RB), BB.lineTo(yB, RB), BB.stroke());
+        const Te = this.lineHeight ? this.lineHeight : this.getTextHeight(ee, ie),
+          pe = Te * (ke.length - 1),
+          Xe = pe / 2;
+        let ze = be;
+        "top" === this.vAlign ? Re = be + Ue : "bottom" === this.vAlign ? (Re = Je - pe, ze = Je) : (ze = be + Ke / 2, Re -= Xe), ke.forEach((ie => {
+          ie = ie.trim(), ee.fillText(ie, oe, Re), Re += Te
+        })), this.debug && (ee.lineWidth = 3, ee.strokeStyle = "#00909e", ee.strokeRect(He, be, Me, Ke), ee.lineWidth = 2, ee.strokeStyle = "#f6d743", ee.beginPath(), ee.moveTo(oe, be), ee.lineTo(oe, Je), ee.stroke(), ee.strokeStyle = "#ff6363", ee.beginPath(), ee.moveTo(He, ze), ee.lineTo(Fe, ze), ee.stroke());
         return {
-          height: ZB + qB
+          height: pe + Te
         }
       },
-      getTextHeight: function(BB, OB) {
-        const GB = BB.textBaseline;
-        BB.textBaseline = "bottom";
+      getTextHeight: function(ee, ie) {
+        const He = ee.textBaseline;
+        ee.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: YB
-        } = BB.measureText(OB);
-        return BB.textBaseline = GB, YB
+          actualBoundingBoxAscent: ye
+        } = ee.measureText(ie);
+        return ee.textBaseline = He, ye
       },
-      justifyLine: function(BB, OB, GB, YB, DB) {
-        const QB = OB.trim(),
-          oB = BB.measureText(QB).width,
-          jB = QB.split(/\s+/).length - 1,
-          yB = Math.floor((DB - oB) / GB);
-        if (jB <= 0 || yB <= 0) return QB;
-        const JB = Math.floor(yB / jB);
-        let MB = yB - jB * JB,
-          PB = [];
-        for (let zB = 0; zB < JB; zB++) PB.push(YB);
-        PB = PB.join("");
-        return QB.replace(/\s+/g, (BB => {
-          const OB = MB > 0 ? PB + YB : PB;
-          return MB--, BB + OB
+      justifyLine: function(ee, ie, He, ye, be) {
+        const Me = ie.trim(),
+          Ke = ee.measureText(Me).width,
+          Ue = Me.split(/\s+/).length - 1,
+          Fe = Math.floor((be - Ke) / He);
+        if (Ue <= 0 || Fe <= 0) return Me;
+        const Je = Math.floor(Fe / Ue);
+        let oe = Fe - Ue * Je,
+          Re = [];
+        for (let ke = 0; ke < Je; ke++) Re.push(ye);
+        Re = Re.join("");
+        return Me.replace(/\s+/g, (ee => {
+          const ie = oe > 0 ? Re + ye : Re;
+          return oe--, ee + ie
         }))
       }
     }
   },
-  36985: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => qB,
-      f: () => pB,
-      h: () => zB,
-      i: () => MB,
-      l: () => PB
+  37076: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Te,
+      f: () => fe,
+      g: () => ke,
+      k: () => oe,
+      m: () => Re
     });
-    var YB = GB(4642),
-      DB = GB(353);
-    const QB = 1024,
-      oB = 1536,
-      jB = 2 * YB.k + 1,
-      yB = new Intl.NumberFormat("en", {
+    var ye = He(4598),
+      be = He(347);
+    const Me = 1024,
+      Ke = 1536,
+      Ue = 2 * ye.m + 1,
+      Fe = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      JB = 1.5;
+      Je = 1.5;
 
-    function MB(BB, OB, GB) {
-      if ("string" !== typeof BB) return OB;
+    function oe(ee, ie, He) {
+      if ("string" !== typeof ee) return ie;
       try {
-        const GB = JSON.parse(BB);
-        return GB && "object" === typeof GB ? GB : OB
-      } catch (YB) {
-        return void 0 !== GB && console.error(`Couldn't parse ${GB}`, YB), OB
+        const He = JSON.parse(ee);
+        return He && "object" === typeof He ? He : ie
+      } catch (ye) {
+        return void 0 !== He && console.error(`Couldn't parse ${He}`, ye), ie
       }
     }
 
-    function PB(BB) {
-      return MB(BB, null, "a leaderboard's rows")
+    function Re(ee) {
+      return oe(ee, null, "a leaderboard's rows")
     }
 
-    function zB(BB, OB) {
-      var GB, YB;
-      return null !== OB && void 0 !== OB ? OB : {
-        status: null !== (GB = BB.status) && void 0 !== GB ? GB : "loading",
-        entries: null !== (YB = BB.entries) && void 0 !== YB ? YB : []
+    function ke(ee, ie) {
+      var He, ye;
+      return null !== ie && void 0 !== ie ? ie : {
+        status: null !== (He = ee.status) && void 0 !== He ? He : "loading",
+        entries: null !== (ye = ee.entries) && void 0 !== ye ? ye : []
       }
     }
 
-    function lB(BB, OB) {
-      return "number" === typeof BB && Number.isFinite(BB) && BB > 0 ? BB : OB
+    function qe(ee, ie) {
+      return "number" === typeof ee && Number.isFinite(ee) && ee > 0 ? ee : ie
     }
 
-    function pB(BB, OB) {
-      const GB = lB(BB.size, 1);
-      let YB = lB(BB.width, lB(2.5 * GB, 2.5)),
-        DB = lB(BB.height, lB(3.75 * GB, 3.75));
-      Number.isFinite(QB * DB / YB) && Number.isFinite(oB * YB / DB) || (YB = 2.5, DB = 3.75);
-      const jB = DB / YB,
-        yB = Math.max(1, Math.min(QB, OB / jB));
+    function fe(ee, ie) {
+      const He = qe(ee.size, 1);
+      let ye = qe(ee.width, qe(2.5 * He, 2.5)),
+        be = qe(ee.height, qe(3.75 * He, 3.75));
+      Number.isFinite(Me * be / ye) && Number.isFinite(Ke * ye / be) || (ye = 2.5, be = 3.75);
+      const Ue = be / ye,
+        Fe = Math.max(1, Math.min(Me, ie / Ue));
       return {
-        width: YB,
-        height: DB,
-        layoutWidth: Math.max(QB, oB / jB),
-        layoutHeight: Math.max(oB, QB * jB),
-        pixelWidth: Math.round(yB),
-        pixelHeight: Math.round(Math.max(1, Math.min(OB, yB * jB)))
+        width: ye,
+        height: be,
+        layoutWidth: Math.max(Me, Ke / Ue),
+        layoutHeight: Math.max(Ke, Me * Ue),
+        pixelWidth: Math.round(Fe),
+        pixelHeight: Math.round(Math.max(1, Math.min(ie, Fe * Ue)))
       }
     }
 
-    function qB(BB, OB, GB, oB, MB, PB) {
-      BB.setTransform(1, 0, 0, 1, 0, 0), BB.fillStyle = DB.J.defaultNameTagBackground, BB.fillRect(0, 0, OB, GB), BB.scale(OB / oB.layoutWidth, GB / oB.layoutHeight), BB.translate((oB.layoutWidth - QB) / 2, 0),
-        function(BB, OB, GB, QB) {
-          var oB, MB, PB, zB;
+    function Te(ee, ie, He, Ke, oe, Re) {
+      ee.setTransform(1, 0, 0, 1, 0, 0), ee.fillStyle = be.L.defaultNameTagBackground, ee.fillRect(0, 0, ie, He), ee.scale(ie / Ke.layoutWidth, He / Ke.layoutHeight), ee.translate((Ke.layoutWidth - Me) / 2, 0),
+        function(ee, ie, He, Me) {
+          var Ke, oe, Re, ke;
           const {
-            top: lB,
-            around: pB,
-            showPlayerText: qB,
-            localPlayerDbId: RB
-          } = GB, {
-            whiteUiText: WB,
-            grayUiText: AB,
-            yellowUiText: VB
-          } = DB.J;
-          BB.textBaseline = "middle";
-          const SB = function(OB, GB, YB, DB, QB, oB) {
-              let jB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              BB.font = `bold ${DB}px 'Jetbrains Mono', monospace`, BB.fillStyle = QB, BB.textAlign = jB;
-              let yB = OB.replace(/[\r\n\t]/g, " ");
-              if (BB.measureText(yB).width > oB) {
-                for (; yB.length > 0 && BB.measureText(`${yB}\u2026`).width > oB;) yB = yB.slice(0, -1);
-                yB += "\u2026"
+            top: qe,
+            around: fe,
+            showPlayerText: Te,
+            localPlayerDbId: ze
+          } = He, {
+            whiteUiText: Be,
+            grayUiText: Ee,
+            yellowUiText: ge
+          } = be.L;
+          ee.textBaseline = "middle";
+          const Oe = function(ie, He, ye, be, Me, Ke) {
+              let Ue = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              ee.font = `bold ${be}px 'Jetbrains Mono', monospace`, ee.fillStyle = Me, ee.textAlign = Ue;
+              let Fe = ie.replace(/[\r\n\t]/g, " ");
+              if (ee.measureText(Fe).width > Ke) {
+                for (; Fe.length > 0 && ee.measureText(`${Fe}\u2026`).width > Ke;) Fe = Fe.slice(0, -1);
+                Fe += "\u2026"
               }
-              BB.fillText(yB, GB, YB)
+              ee.fillText(Fe, He, ye)
             },
-            nB = OB => {
-              BB.fillStyle = WB, BB.globalAlpha = .15, BB.fillRect(24, OB, 976, 2), BB.globalAlpha = 1
+            de = ie => {
+              ee.fillStyle = Be, ee.globalAlpha = .15, ee.fillRect(24, ie, 976, 2), ee.globalAlpha = 1
             },
-            UB = null === RB ? null : (0, DB.Ac)(RB),
-            fB = BB => null !== UB && BB.playerHash === UB,
-            kB = ZB(lB.entries, YB.n),
-            dB = "ready" === lB.status && kB.length > 0,
-            KB = null === pB ? [] : ZB(pB.entries, jB),
-            uB = kB.some(fB),
-            mB = null === pB ? null : function(BB) {
-              const OB = BB;
-              if (!OB || !Number.isFinite(OB.rank) || !Number.isFinite(OB.tied) || !Number.isFinite(OB.total)) return null;
-              return OB
-            }(pB.standing),
-            IB = KB.find(fB),
-            FB = kB.find(fB),
-            iB = null === mB || void 0 === IB ? null : {
-              value: IB.value,
-              rank: mB.rank
+            We = null === ze ? null : (0, be.oc)(ze),
+            te = ee => null !== We && ee.playerHash === We,
+            Ze = pe(qe.entries, ye.o),
+            we = "ready" === qe.status && Ze.length > 0,
+            De = null === fe ? [] : pe(fe.entries, Ue),
+            Pe = Ze.some(te),
+            Ae = null === fe ? null : function(ee) {
+              const ie = ee;
+              if (!ie || !Number.isFinite(ie.rank) || !Number.isFinite(ie.tied) || !Number.isFinite(ie.total)) return null;
+              return ie
+            }(fe.standing),
+            Ye = De.find(te),
+            Ve = Ze.find(te),
+            ae = null === Ae || void 0 === Ye ? null : {
+              value: Ye.value,
+              rank: Ae.rank
             },
-            LB = NB(kB, void 0 === FB || FB.value === (null === iB || void 0 === iB ? void 0 : iB.value) ? iB : null),
-            gB = NB(KB, iB),
-            rB = (BB, OB) => {
-              const GB = BB.findIndex(fB);
-              return GB >= 0 ? OB[GB] : null
+            ce = Xe(Ze, void 0 === Ve || Ve.value === (null === ae || void 0 === ae ? void 0 : ae.value) ? ae : null),
+            xe = Xe(De, ae),
+            Le = (ee, ie) => {
+              const He = ee.findIndex(te);
+              return He >= 0 ? ie[He] : null
             },
-            XB = null !== (oB = null !== (MB = null === mB || void 0 === mB ? void 0 : mB.rank) && void 0 !== MB ? MB : rB(KB, gB)) && void 0 !== oB ? oB : rB(kB, LB);
-          BB.font = "bold 34px 'Jetbrains Mono', monospace";
-          const wB = [...dB ? LB : [], ...uB ? [] : gB],
-            EB = Math.min(280, Math.max(0, ...wB.map((OB => BB.measureText(yB.format(OB)).width)))),
-            cB = EB <= 80,
-            hB = cB ? 80 : 32 + EB,
-            aB = cB ? 148 : hB + 28,
-            eB = 660 - aB;
-          SB(`TOP ${YB.n}  /  ALL TIME`, 24, 52, 28, AB, 976), SB(qB ? String(null !== (PB = OB.title) && void 0 !== PB ? PB : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, WB, 976), SB("RANK", 32, 174, 28, AB, aB - 40), SB("PLAYER", aB, 174, 28, AB, eB), SB(qB ? String(null !== (zB = OB.scoreLabel) && void 0 !== zB ? zB : "Score").slice(0, 24) : "Score", 992, 174, 28, AB, 304, "right"), nB(202);
-          const TB = (QB - 232) / (YB.n + JB + jB),
-            bB = 208 + YB.n * TB,
-            CB = bB + JB * TB,
-            HB = (OB, GB, YB, DB) => {
-              const QB = fB(OB);
-              BB.fillStyle = QB ? VB : WB, BB.globalAlpha = QB ? .15 : DB ? .035 : 0, BB.fillRect(24, YB - TB / 2 + 1, 976, TB - 2), BB.globalAlpha = 1;
-              const oB = QB ? VB : WB;
-              SB(yB.format(GB), hB, YB, 34, oB, cB ? 80 : EB, cB ? "center" : "right"), SB(qB ? String(OB.name).slice(0, 64) : "Player", aB, YB, 34, oB, eB);
-              const jB = yB.format(OB.value);
-              SB(BB.measureText(jB).width > 304 ? OB.value.toExponential(6) : jB, 992, YB, 34, oB, 304, "right")
+            Ce = null !== (Ke = null !== (oe = null === Ae || void 0 === Ae ? void 0 : Ae.rank) && void 0 !== oe ? oe : Le(De, xe)) && void 0 !== Ke ? Ke : Le(Ze, ce);
+          ee.font = "bold 34px 'Jetbrains Mono', monospace";
+          const ve = [...we ? ce : [], ...Pe ? [] : xe],
+            ue = Math.min(280, Math.max(0, ...ve.map((ie => ee.measureText(Fe.format(ie)).width)))),
+            me = ue <= 80,
+            le = me ? 80 : 32 + ue,
+            Se = me ? 148 : le + 28,
+            ne = 660 - Se;
+          Oe(`TOP ${ye.o}  /  ALL TIME`, 24, 52, 28, Ee, 976), Oe(Te ? String(null !== (Re = ie.title) && void 0 !== Re ? Re : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Be, 976), Oe("RANK", 32, 174, 28, Ee, Se - 40), Oe("PLAYER", Se, 174, 28, Ee, ne), Oe(Te ? String(null !== (ke = ie.scoreLabel) && void 0 !== ke ? ke : "Score").slice(0, 24) : "Score", 992, 174, 28, Ee, 304, "right"), de(202);
+          const je = (Me - 232) / (ye.o + Je + Ue),
+            se = 208 + ye.o * je,
+            Ie = se + Je * je,
+            he = (ie, He, ye, be) => {
+              const Me = te(ie);
+              ee.fillStyle = Me ? ge : Be, ee.globalAlpha = Me ? .15 : be ? .035 : 0, ee.fillRect(24, ye - je / 2 + 1, 976, je - 2), ee.globalAlpha = 1;
+              const Ke = Me ? ge : Be;
+              Oe(Fe.format(He), le, ye, 34, Ke, me ? 80 : ue, me ? "center" : "right"), Oe(Te ? String(ie.name).slice(0, 64) : "Player", Se, ye, 34, Ke, ne);
+              const Ue = Fe.format(ie.value);
+              Oe(ee.measureText(Ue).width > 304 ? ie.value.toExponential(6) : Ue, 992, ye, 34, Ke, 304, "right")
             };
-          if (dB)
-            for (const [YB, DB] of kB.entries()) HB(DB, LB[YB], 208 + (YB + .5) * TB, YB % 2 === 0);
+          if (we)
+            for (const [ye, be] of Ze.entries()) he(be, ce[ye], 208 + (ye + .5) * je, ye % 2 === 0);
           else {
-            const BB = "error" === lB.status,
-              OB = BB ? "Couldn't load leaderboard" : "ready" === lB.status ? "No scores yet" : "Loading leaderboard\u2026",
-              GB = BB ? "Trying again shortly" : "ready" === lB.status ? "Be the first on the board!" : "Fetching the top players",
-              YB = (208 + bB) / 2;
-            SB(OB, 512, YB - 28, 40, BB ? DB.J.redUiText : WB, 960, "center"), SB(GB, 512, YB + 27, 30, AB, 960, "center")
+            const ee = "error" === qe.status,
+              ie = ee ? "Couldn't load leaderboard" : "ready" === qe.status ? "No scores yet" : "Loading leaderboard\u2026",
+              He = ee ? "Trying again shortly" : "ready" === qe.status ? "Be the first on the board!" : "Fetching the top players",
+              ye = (208 + se) / 2;
+            Oe(ie, 512, ye - 28, 40, ee ? be.L.redUiText : Be, 960, "center"), Oe(He, 512, ye + 27, 30, Ee, 960, "center")
           }
-          const vB = bB + JB * TB / 2;
-          if (null === XB) nB(vB);
+          const Ne = se + Je * je / 2;
+          if (null === Ce) de(Ne);
           else {
-            const OB = null === mB ? 0 : mB.tied - 1,
-              GB = `YOUR RANK #${yB.format(XB)}${null===mB?"":` of ${yB.format(mB.total)}`}`;
-            BB.font = "bold 36px 'Jetbrains Mono', monospace";
-            const YB = Math.max(20, Math.min(36, Math.floor(34560 / BB.measureText(GB).width)));
-            SB(GB, 512, vB - (OB > 0 ? 15 : 0), YB, VB, 960, "center"), OB > 0 && SB(`Tied with ${yB.format(OB)} other${1===OB?"":"s"}`, 512, vB + 24, 24, AB, 960, "center")
+            const ie = null === Ae ? 0 : Ae.tied - 1,
+              He = `YOUR RANK #${Fe.format(Ce)}${null===Ae?"":` of ${Fe.format(Ae.total)}`}`;
+            ee.font = "bold 36px 'Jetbrains Mono', monospace";
+            const ye = Math.max(20, Math.min(36, Math.floor(34560 / ee.measureText(He).width)));
+            Oe(He, 512, Ne - (ie > 0 ? 15 : 0), ye, ge, 960, "center"), ie > 0 && Oe(`Tied with ${Fe.format(ie)} other${1===ie?"":"s"}`, 512, Ne + 24, 24, Ee, 960, "center")
           }
-          if (null === pB) return;
-          const sB = CB + jB * TB / 2;
-          if (uB) SB(`You're in the top ${YB.n}!`, 512, sB, 40, VB, 960, "center");
-          else if (0 === KB.length) SB("You're not on this board yet", 512, sB, 34, AB, 960, "center");
+          if (null === fe) return;
+          const Ge = Ie + Ue * je / 2;
+          if (Pe) Oe(`You're in the top ${ye.o}!`, 512, Ge, 40, ge, 960, "center");
+          else if (0 === De.length) Oe("You're not on this board yet", 512, Ge, 34, Ee, 960, "center");
           else
-            for (const [YB, DB] of KB.entries()) HB(DB, gB[YB], CB + (YB + .5) * TB, YB % 2 === 0)
-        }(BB, MB, PB, oB.layoutHeight)
+            for (const [ye, be] of De.entries()) he(be, xe[ye], Ie + (ye + .5) * je, ye % 2 === 0)
+        }(ee, oe, Re, Ke.layoutHeight)
     }
 
-    function ZB(BB, OB) {
-      return Array.isArray(BB) ? BB.slice(0, OB).filter((BB => BB && Number.isFinite(BB.rank) && Number.isFinite(BB.value))) : []
+    function pe(ee, ie) {
+      return Array.isArray(ee) ? ee.slice(0, ie).filter((ee => ee && Number.isFinite(ee.rank) && Number.isFinite(ee.value))) : []
     }
 
-    function NB(BB, OB) {
-      const GB = [];
-      let YB = !1;
-      return BB.forEach(((DB, QB) => {
-        if (null !== OB && DB.value === OB.value) return void GB.push(OB.rank);
-        const oB = QB > 0 && DB.value === BB[QB - 1].value;
-        oB || (YB = 0 === QB && 1 !== DB.rank), GB.push(oB && !YB ? GB[QB - 1] : DB.rank)
-      })), GB
+    function Xe(ee, ie) {
+      const He = [];
+      let ye = !1;
+      return ee.forEach(((be, Me) => {
+        if (null !== ie && be.value === ie.value) return void He.push(ie.rank);
+        const Ke = Me > 0 && be.value === ee[Me - 1].value;
+        Ke || (ye = 0 === Me && 1 !== be.rank), He.push(Ke && !ye ? He[Me - 1] : be.rank)
+      })), He
     }
   },
-  36954: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      d: () => QB
+  37058: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be,
+      i: () => Me
     });
-    const YB = 32;
+    const ye = 32;
 
-    function DB(BB) {
-      return Array.from(BB).length
+    function be(ee) {
+      return Array.from(ee).length
     }
 
-    function QB(BB) {
-      const OB = [""];
-      let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        DB = "";
-      const QB = () => {
-        OB.push(""), GB = 0, DB = ""
+    function Me(ee) {
+      const ie = [""];
+      let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        be = "";
+      const Me = () => {
+        ie.push(""), He = 0, be = ""
       };
-      for (const oB of BB.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(oB)) QB();
-        else if (/^\s+$/.test(oB)) DB += oB;
-      else if (oB.length > 0) {
-        const BB = Array.from(oB);
-        GB > 0 && GB + DB.length + BB.length > YB && QB(), OB[OB.length - 1] += DB, GB += DB.length, DB = "";
-        for (const DB of BB) GB >= YB && QB(), OB[OB.length - 1] += DB, GB++
+      for (const Ke of ee.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(Ke)) Me();
+        else if (/^\s+$/.test(Ke)) be += Ke;
+      else if (Ke.length > 0) {
+        const ee = Array.from(Ke);
+        He > 0 && He + be.length + ee.length > ye && Me(), ie[ie.length - 1] += be, He += be.length, be = "";
+        for (const be of ee) He >= ye && Me(), ie[ie.length - 1] += be, He++
       }
-      return OB[OB.length - 1] += DB, OB
+      return ie[ie.length - 1] += be, ie
     }
   },
-  36977: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => lB,
-      C: () => pB,
-      F: () => qB,
-      G: () => NB,
-      b: () => YB,
-      e: () => PB,
-      f: () => DB,
-      h: () => zB,
-      i: () => ZB,
-      m: () => MB,
-      q: () => RB,
-      t: () => yB,
-      x: () => JB
+  37068: (ee, ie, He) => {
+    He.d(ie, {
+      D: () => fe,
+      E: () => Te,
+      G: () => Xe,
+      d: () => ye,
+      g: () => Re,
+      h: () => be,
+      i: () => ke,
+      j: () => pe,
+      n: () => oe,
+      r: () => ze,
+      v: () => Fe,
+      y: () => Je,
+      z: () => qe
     });
-    const YB = [{
+    const ye = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -379,64 +379,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function DB(BB, OB) {
+    function be(ee, ie) {
       const {
-        numLines: GB,
-        charsPerLine: DB
-      } = YB[OB];
-      return WB(BB, GB, DB, !1)
+        numLines: He,
+        charsPerLine: be
+      } = ye[ie];
+      return Be(ee, He, be, !1)
     }
-    const QB = 7 / 8,
-      oB = .25,
-      jB = 8;
+    const Me = 7 / 8,
+      Ke = .25,
+      Ue = 8;
 
-    function yB(BB, OB) {
+    function Fe(ee, ie) {
       return {
-        width: Math.min(BB, jB) - 2 * oB,
-        height: Math.min(OB, jB) - 2 * oB
+        width: Math.min(ee, Ue) - 2 * Ke,
+        height: Math.min(ie, Ue) - 2 * Ke
       }
     }
 
-    function JB(BB, OB, GB) {
-      const DB = yB(BB, OB),
+    function Je(ee, ie, He) {
+      const be = Fe(ee, ie),
         {
-          numLines: oB,
-          charsPerLine: jB
-        } = YB[GB];
+          numLines: Ke,
+          charsPerLine: Ue
+        } = ye[He];
       return {
-        numLines: Math.max(1, Math.floor(oB / QB * DB.height)),
-        charsPerLine: Math.max(1, Math.floor(jB * DB.width))
+        numLines: Math.max(1, Math.floor(Ke / Me * be.height)),
+        charsPerLine: Math.max(1, Math.floor(Ue * be.width))
       }
     }
 
-    function MB(BB, OB, GB, YB) {
+    function oe(ee, ie, He, ye) {
       const {
-        numLines: DB,
-        charsPerLine: QB
-      } = JB(GB, YB, OB);
-      return WB(BB, DB, QB, !1)
+        numLines: be,
+        charsPerLine: Me
+      } = Je(He, ye, ie);
+      return Be(ee, be, Me, !1)
     }
-    const PB = 32e3;
+    const Re = 32e3;
 
-    function zB(BB) {
-      return BB.slice(0, PB)
+    function ke(ee) {
+      return ee.slice(0, Re)
     }
-    const lB = 512e3,
-      pB = 64,
-      qB = lB;
+    const qe = 512e3,
+      fe = 64,
+      Te = qe;
 
-    function ZB(BB, OB) {
-      const GB = Math.max(0, qB - OB),
-        YB = Math.min(lB, GB);
-      return BB.slice(0, YB)
+    function pe(ee, ie) {
+      const He = Math.max(0, Te - ie),
+        ye = Math.min(qe, He);
+      return ee.slice(0, ye)
     }
-    const NB = {
+    const Xe = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      KJ: {
+      EJ: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -448,25 +448,25 @@ export const modules = {
       }
     };
 
-    function RB(BB, OB) {
+    function ze(ee, ie) {
       const {
-        numLines: GB,
-        charsPerLine: YB
-      } = NB[OB];
-      return WB(BB, GB, YB, !1)
+        numLines: He,
+        charsPerLine: ye
+      } = Xe[ie];
+      return Be(ee, He, ye, !1)
     }
 
-    function WB(BB, OB, GB, YB, DB) {
-      (DB || YB) && (BB = BB.slice(0, null !== DB && void 0 !== DB ? DB : OB * GB));
-      const QB = BB.split("\n");
-      if (QB.length > OB && QB.splice(OB, QB.length - OB), !YB)
-        for (let oB = 0; oB < QB.length; oB++) {
-          const BB = QB[oB];
-          BB.length > GB && (QB[oB] = BB.substring(0, GB), QB.length < OB && QB.splice(oB + 1, 0, BB.substring(GB)))
+    function Be(ee, ie, He, ye, be) {
+      (be || ye) && (ee = ee.slice(0, null !== be && void 0 !== be ? be : ie * He));
+      const Me = ee.split("\n");
+      if (Me.length > ie && Me.splice(ie, Me.length - ie), !ye)
+        for (let Ke = 0; Ke < Me.length; Ke++) {
+          const ee = Me[Ke];
+          ee.length > He && (Me[Ke] = ee.substring(0, He), Me.length < ie && Me.splice(Ke + 1, 0, ee.substring(He)))
         }
-      return QB.join("\n")
+      return Me.join("\n")
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

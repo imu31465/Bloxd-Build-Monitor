@@ -1,32 +1,32 @@
 export const id = 150;
 export const ids = [150];
 export const modules = {
-  39470: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => JB,
-      g: () => zB,
-      i: () => lB,
-      l: () => ZB,
-      n: () => PB,
-      q: () => MB,
-      s: () => oB,
-      u: () => pB
+  39553: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Je,
+      e: () => ke,
+      f: () => qe,
+      i: () => pe,
+      j: () => Re,
+      k: () => oe,
+      m: () => Ke,
+      n: () => fe
     });
-    var YB = GB(328),
-      DB = GB(1790);
-    const QB = "A valid external Instance reference no longer exists.";
+    var ye = He(330),
+      be = He(1728);
+    const Me = "A valid external Instance reference no longer exists.";
 
-    function oB(BB) {
-      return BB.includes(QB)
+    function Ke(ee) {
+      return ee.includes(Me)
     }
-    const jB = [
+    const Ue = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      yB = [
+      Fe = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -34,204 +34,204 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const JB = {
+    const Je = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function MB(BB, OB) {
-      return BB ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(BB) {
-        var OB;
-        const GB = null !== (OB = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(BB)) && void 0 !== OB ? OB : /failed with ([A-Z][A-Z0-9_]+)/.exec(BB);
-        return GB ? GB[1] : oB(BB) ? "gpu_process_lost" : "other"
-      }(OB)
+    function oe(ee, ie) {
+      return ee ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(ee) {
+        var ie;
+        const He = null !== (ie = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(ee)) && void 0 !== ie ? ie : /failed with ([A-Z][A-Z0-9_]+)/.exec(ee);
+        return He ? He[1] : Ke(ee) ? "gpu_process_lost" : "other"
+      }(ie)
     }
 
-    function PB(BB) {
-      return `${(null===BB||void 0===BB?void 0:BB.vendor)||"unknown vendor"} ${(null===BB||void 0===BB?void 0:BB.architecture)||"unknown architecture"}`
+    function Re(ee) {
+      return `${(null===ee||void 0===ee?void 0:ee.vendor)||"unknown vendor"} ${(null===ee||void 0===ee?void 0:ee.architecture)||"unknown architecture"}`
     }
 
-    function zB(BB) {
-      return NB(BB)[1]
+    function ke(ee) {
+      return Xe(ee)[1]
     }
 
-    function lB(BB) {
-      return NB(BB)[2]
+    function qe(ee) {
+      return Xe(ee)[2]
     }
 
-    function pB(BB, OB, GB) {
-      const DB = (0, YB.c)(),
-        QB = null !== DB && DB >= OB,
-        oB = document.hidden ? "hidden" : QB ? "shown" : "visible",
-        jB = QB ? GB - DB : null;
+    function fe(ee, ie, He) {
+      const be = (0, ye.f)(),
+        Me = null !== be && be >= ie,
+        Ke = document.hidden ? "hidden" : Me ? "shown" : "visible",
+        Ue = Me ? He - be : null;
       return {
-        page: null === jB ? oB : `${oB}${zB(jB)}`,
-        code: `${BB}_${null===jB?oB:`${oB}_${lB(jB)}`}_${qB(GB)}`
+        page: null === Ue ? Ke : `${Ke}${ke(Ue)}`,
+        code: `${ee}_${null===Ue?Ke:`${Ke}_${qe(Ue)}`}_${Te(He)}`
       }
     }
 
-    function qB(BB) {
-      if ((0, DB.g)()) return "ad_open";
-      const OB = (0, DB.e)();
-      return null === OB ? "ad_none" : `ad_${lB(BB-OB.endedAt)}_${OB.pageHid?"h":"v"}`
+    function Te(ee) {
+      if ((0, be.g)()) return "ad_open";
+      const ie = (0, be.e)();
+      return null === ie ? "ad_none" : `ad_${qe(ee-ie.endedAt)}_${ie.pageHid?"h":"v"}`
     }
 
-    function ZB(BB) {
-      return RB(yB, BB)[1]
+    function pe(ee) {
+      return ze(Fe, ee)[1]
     }
 
-    function NB(BB) {
-      return RB(jB, BB)
+    function Xe(ee) {
+      return ze(Ue, ee)
     }
 
-    function RB(BB, OB) {
-      var GB;
-      return null !== (GB = BB.find((BB => {
-        let [GB] = BB;
-        return OB < GB
-      }))) && void 0 !== GB ? GB : BB[BB.length - 1]
+    function ze(ee, ie) {
+      var He;
+      return null !== (He = ee.find((ee => {
+        let [He] = ee;
+        return ie < He
+      }))) && void 0 !== He ? He : ee[ee.length - 1]
     }
   },
-  39769: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => yB
+  39845: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Fe
     });
-    var YB = GB(9599),
-      DB = GB(37160),
-      QB = GB(39772);
-    const oB = {
+    var ye = He(9669),
+      be = He(37286),
+      Me = He(39854);
+    const Ke = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      jB = {
+      Ue = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function yB(BB, OB) {
-      if (BB instanceof DB.d) return {
-        at: oB[OB],
+    function Fe(ee, ie) {
+      if (ee instanceof be.d) return {
+        at: Ke[ie],
         code: 0
       };
-      const GB = (0, YB.d)(BB),
-        yB = "number" === typeof GB ? GB : 0;
-      return null !== (0, QB.i)(yB).name ? {
+      const He = (0, ye.h)(ee),
+        Fe = "number" === typeof He ? He : 0;
+      return null !== (0, Me.g)(Fe).name ? {
         at: "refused",
-        code: yB
+        code: Fe
       } : {
-        at: jB[OB],
-        code: yB
+        at: Ue[ie],
+        code: Fe
       }
     }
   },
-  9599: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => oB,
-      h: () => jB,
-      k: () => JB,
-      m: () => yB
+  9669: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me,
+      h: () => Ke,
+      l: () => Ue,
+      n: () => Je,
+      o: () => Fe
     });
-    var YB = GB(192),
-      DB = GB(5047);
+    var ye = He(186),
+      be = He(5018);
 
-    function QB(BB) {
-      return oB(BB) === YB.c.gameOrPluginOnPlayerAuthRejected.code
+    function Me(ee) {
+      return Ke(ee) === ye.c.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function oB(BB) {
-      return "object" === typeof BB && null !== BB ? BB.code : void 0
+    function Ke(ee) {
+      return "object" === typeof ee && null !== ee ? ee.code : void 0
     }
 
-    function jB(BB) {
-      var OB;
-      return null !== (OB = Object.keys(DB.b).find((OB => DB.b[OB] === BB))) && void 0 !== OB ? OB : null
+    function Ue(ee) {
+      var ie;
+      return null !== (ie = Object.keys(be.e).find((ie => be.e[ie] === ee))) && void 0 !== ie ? ie : null
     }
 
-    function yB(BB) {
-      return "notWhitelisted" === BB ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function Fe(ee) {
+      return "notWhitelisted" === ee ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const JB = {
+    const Je = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  39772: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB,
-      e: () => QB,
-      f: () => jB,
-      i: () => MB,
-      k: () => yB,
-      m: () => oB
+  39854: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => be,
+      d: () => Me,
+      e: () => Ue,
+      g: () => oe,
+      h: () => Fe,
+      k: () => Ke
     });
-    var YB = GB(192);
-    const DB = 3e3,
-      QB = 15e3;
+    var ye = He(186);
+    const be = 3e3,
+      Me = 15e3;
 
-    function oB(BB) {
-      const OB = BB.endsWith(YB.m);
+    function Ke(ee) {
+      const ie = ee.endsWith(ye.l);
       return {
-        text: (OB ? BB.slice(0, -YB.m.length) : BB) || null,
-        dropsCache: OB
+        text: (ie ? ee.slice(0, -ye.l.length) : ee) || null,
+        dropsCache: ie
       }
     }
-    const jB = "Either your internet isn't working or this is a bug.";
+    const Ue = "Either your internet isn't working or this is a bug.";
 
-    function yB(BB, OB) {
-      const GB = MB(BB);
-      return null !== GB.name && "" === YB.c[GB.name].text && null !== OB ? OB : GB.reason
+    function Fe(ee, ie) {
+      const He = oe(ee);
+      return null !== He.name && "" === ye.c[He.name].text && null !== ie ? ie : He.reason
     }
-    const JB = "You were removed from the game.";
+    const Je = "You were removed from the game.";
 
-    function MB(BB) {
-      var OB;
-      let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const DB = null !== (OB = Object.keys(YB.c).find((OB => YB.c[OB].code === BB))) && void 0 !== OB ? OB : null;
-      if (null === DB) return {
-        code: BB,
-        name: DB,
-        reason: null !== GB && void 0 !== GB ? GB : `${jB}\nCode: ${BB}`,
+    function oe(ee) {
+      var ie;
+      let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const be = null !== (ie = Object.keys(ye.c).find((ie => ye.c[ie].code === ee))) && void 0 !== ie ? ie : null;
+      if (null === be) return {
+        code: ee,
+        name: be,
+        reason: null !== He && void 0 !== He ? He : `${Ue}\nCode: ${ee}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: QB,
-        canReconnect: oB = !1
-      } = YB.c[DB], yB = BB === YB.c.outdatedVersion.code || BB === YB.c.loadRecaptchaError.code;
+        text: Me,
+        canReconnect: Ke = !1
+      } = ye.c[be], Fe = ee === ye.c.outdatedVersion.code || ee === ye.c.loadRecaptchaError.code;
       return {
-        code: BB,
-        name: DB,
-        reason: "" !== QB ? QB : null !== GB && void 0 !== GB ? GB : BB === YB.c.gameOrPluginKick.code ? JB : `Code: ${BB}`,
-        canReconnect: oB,
-        automaticallyReconnect: BB === YB.c.customGameUpdated.code || BB === YB.c.duplicateLobbyNameError.code,
-        requiresRefresh: yB
+        code: ee,
+        name: be,
+        reason: "" !== Me ? Me : null !== He && void 0 !== He ? He : ee === ye.c.gameOrPluginKick.code ? Je : `Code: ${ee}`,
+        canReconnect: Ke,
+        automaticallyReconnect: ee === ye.c.customGameUpdated.code || ee === ye.c.duplicateLobbyNameError.code,
+        requiresRefresh: Fe
       }
     }
   },
-  37536: (BB, OB, GB) => {
-    function YB(BB) {
-      return "fetch" === BB || "timeout" === BB || "integrity" === BB ? "download" : "browser"
+  37669: (ee, ie, He) => {
+    function ye(ee) {
+      return "fetch" === ee || "timeout" === ee || "integrity" === ee ? "download" : "browser"
     }
-    GB.d(OB, {
-      b: () => DB,
-      c: () => yB,
-      g: () => MB,
-      h: () => jB,
-      l: () => oB,
-      m: () => JB,
-      p: () => YB,
-      q: () => QB
+    He.d(ie, {
+      c: () => be,
+      g: () => Fe,
+      i: () => oe,
+      j: () => Ue,
+      m: () => Ke,
+      o: () => Je,
+      s: () => ye,
+      u: () => Me
     });
-    const DB = "https://discord.gg/playbloxd";
+    const be = "https://discord.gg/playbloxd";
 
-    function QB(BB, OB) {
-      return "download" === BB ? {
+    function Me(ee, ie) {
+      return "download" === ee ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -239,18 +239,18 @@ export const modules = {
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
-      } : "memory" === BB || "noContext" === BB || "graphicsLost" === BB ? {
+      } : "memory" === ee || "noContext" === ee || "graphicsLost" === ee ? {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${BB}Title`,
-        help: `wasmUnsupported:${BB}Help${OB?"App":""}`,
+        title: `wasmUnsupported:${ee}Title`,
+        help: `wasmUnsupported:${ee}Help${ie?"App":""}`,
         helpValues: {},
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
       } : {
         icon: "face-dizzy",
-        title: OB ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
-        help: OB ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === BB ? "noWebAssemblyHelp" : "help"),
+        title: ie ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: ie ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === ee ? "noWebAssemblyHelp" : "help"),
         helpValues: {},
         discordLink: !1,
         confirm: "general:ok",
@@ -258,17 +258,17 @@ export const modules = {
       }
     }
 
-    function oB(BB, OB) {
+    function Ke(ee, ie) {
       return {
-        ...QB(BB, OB),
-        help: OB ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${BB}StillHelp`
+        ...Me(ee, ie),
+        help: ie ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${ee}StillHelp`
       }
     }
 
-    function jB() {
+    function Ue(ee) {
       return {
         icon: "face-dizzy",
-        title: "wasmScreens:noContextTitle",
+        title: `wasmUnsupported:${ee}Title`,
         help: "wasmScreens:noContextHelp",
         helpValues: {},
         discordLink: !1,
@@ -277,21 +277,21 @@ export const modules = {
       }
     }
 
-    function yB(BB, OB) {
+    function Fe(ee, ie) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: OB ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: ie ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: BB.code
+          code: ee.code
         },
-        discordLink: OB,
+        discordLink: ie,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function JB() {
+    function Je() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -303,76 +303,76 @@ export const modules = {
       }
     }
 
-    function MB(BB, OB, GB) {
+    function oe(ee, ie, He) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: GB ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: He ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: BB.reason
+          reason: ee.reason
         },
-        discordLink: null === BB.name,
-        confirm: OB ? "general:reconnect" : BB.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === ee.name,
+        confirm: ie ? "general:reconnect" : ee.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  36912: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => tB,
-      g: () => YO,
-      h: () => vB,
-      j: () => OO,
-      m: () => sB,
-      o: () => xB
+  37003: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Qe,
+      g: () => yi,
+      i: () => Ne,
+      j: () => ii,
+      m: () => Ge,
+      q: () => re
     });
-    var YB = GB(3206),
-      DB = GB(3224),
-      QB = GB(7161),
-      oB = GB(5165),
-      jB = GB(3219),
-      yB = GB(3210);
-    const JB = "bloxd-wasmDownloaded",
-      MB = 12;
+    var ye = He(3094),
+      be = He(3105),
+      Me = He(7251),
+      Ke = He(5153),
+      Ue = He(3103),
+      Fe = He(3101);
+    const Je = "bloxd-wasmDownloaded",
+      oe = 12;
 
-    function PB(BB) {
-      return BB.pathname.slice(BB.pathname.lastIndexOf("/") + 1)
+    function Re(ee) {
+      return ee.pathname.slice(ee.pathname.lastIndexOf("/") + 1)
     }
 
-    function zB() {
+    function ke() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const BB = JSON.parse(localStorage.getItem(JB) ?? "[]");
-        return Array.isArray(BB) ? BB.filter((BB => "string" === typeof BB)) : []
-      } catch (BB) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", BB), null
+        const ee = JSON.parse(localStorage.getItem(Je) ?? "[]");
+        return Array.isArray(ee) ? ee.filter((ee => "string" === typeof ee)) : []
+      } catch (ee) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", ee), null
       }
     }
-    const lB = Reflect.apply,
-      pB = "undefined" === typeof Worker ? void 0 : Worker,
-      qB = pB?.prototype.postMessage,
-      ZB = pB?.prototype.terminate,
-      NB = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      RB = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      WB = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      AB = function() {
+    const qe = Reflect.apply,
+      fe = "undefined" === typeof Worker ? void 0 : Worker,
+      Te = fe?.prototype.postMessage,
+      pe = fe?.prototype.terminate,
+      Xe = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      ze = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Be = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Ee = function() {
         try {
-          return (0, oB.i)(pB, "Worker", !0) && (0, oB.i)(qB, "postMessage") && (0, oB.i)(ZB, "terminate") && (0, oB.i)(WB, "buffer") && void 0 !== NB && void 0 !== RB
+          return (0, Ke.l)(fe, "Worker", !0) && (0, Ke.l)(Te, "postMessage") && (0, Ke.l)(pe, "terminate") && (0, Ke.l)(Be, "buffer") && void 0 !== Xe && void 0 !== ze
         } catch {
           return !1
         }
       }();
-    let VB = !1;
+    let ge = !1;
 
-    function SB() {
-      return AB && !VB
+    function Oe() {
+      return Ee && !ge
     }
-    class nB {
+    class de {
       worker = null;
       failed = !1;
       constructor() {
-        if (SB()) try {
-          this.worker = fB(), lB(NB, this.worker, ["error", () => {
+        if (Oe()) try {
+          this.worker = te(), qe(Xe, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -380,125 +380,125 @@ export const modules = {
         }
       }
       take() {
-        const BB = this.worker;
-        if (this.worker = null, null !== BB && this.failed) throw lB(ZB, BB, []), new Error("it did not run");
-        return BB
+        const ee = this.worker;
+        if (this.worker = null, null !== ee && this.failed) throw qe(pe, ee, []), new Error("it did not run");
+        return ee
       }
       stop() {
-        const BB = this.worker;
-        this.worker = null, null !== BB && lB(ZB, BB, [])
+        const ee = this.worker;
+        this.worker = null, null !== ee && qe(pe, ee, [])
       }
     }
-    class UB {
+    class We {
       decoded;
       worker;
       reject;
-      constructor(BB, OB, GB, YB, QB) {
+      constructor(ee, ie, He, ye, Me) {
         try {
-          this.worker = QB?.take() ?? fB()
-        } catch (JB) {
-          throw VB = !0, new Error(`The zstd decoder's worker did not start: ${(0,jB.h)(JB)}`)
+          this.worker = Me?.take() ?? te()
+        } catch (Je) {
+          throw ge = !0, new Error(`The zstd decoder's worker did not start: ${(0,Ue.e)(Je)}`)
         }
-        const oB = this.worker;
-        this.decoded = (0, DB.f)(((OB, DB) => {
-          this.reject = DB;
-          const QB = (BB, OB) => {
-            lB(NB, oB, [BB, OB])
+        const Ke = this.worker;
+        this.decoded = (0, be.h)(((ie, be) => {
+          this.reject = be;
+          const Me = (ee, ie) => {
+            qe(Xe, Ke, [ee, ie])
           };
-          QB("message", (BB => {
-            YB();
+          Me("message", (ee => {
+            ye();
             try {
-              const YB = lB(RB, BB, []);
-              if (!0 === YB) OB();
+              const ye = qe(ze, ee, []);
+              if (!0 === ye) ie();
               else {
-                if ("string" === typeof YB) throw YB.startsWith(jB.d) && (VB = !0), new Error(YB);
-                GB(YB, lB(yB.x, YB, []))
+                if ("string" === typeof ye) throw ye.startsWith(Ue.b) && (ge = !0), new Error(ye);
+                He(ye, qe(Fe.s, ye, []))
               }
-            } catch (JB) {
-              DB(JB)
+            } catch (Je) {
+              be(Je)
             }
-          })), QB("error", (() => {
-            VB = !0, DB(new Error("The zstd decoder's worker did not run"))
-          })), QB("messageerror", (() => {
-            DB(new Error(`${BB}'s decoder sent a piece that could not be read`))
+          })), Me("error", (() => {
+            ge = !0, be(new Error("The zstd decoder's worker did not run"))
+          })), Me("messageerror", (() => {
+            be(new Error(`${ee}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, yB.X)(this.decoded), lB(qB, oB, [
-          [BB, OB]
+        })), (0, Fe.U)(this.decoded), qe(Te, Ke, [
+          [ee, ie]
         ])
       }
-      push(BB) {
-        lB(qB, this.worker, [BB, [lB(WB, BB, [])]])
+      push(ee) {
+        qe(Te, this.worker, [ee, [qe(Be, ee, [])]])
       }
       end() {
-        lB(qB, this.worker, [null])
+        qe(Te, this.worker, [null])
       }
       markWorkerFailed() {
-        VB = !0
+        ge = !0
       }
-      fail(BB) {
-        this.reject(BB), this.terminate()
+      fail(ee) {
+        this.reject(ee), this.terminate()
       }
       terminate() {
-        lB(ZB, this.worker, [])
+        qe(pe, this.worker, [])
       }
     }
 
-    function fB() {
-      if (globalThis.Worker !== pB) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(GB.p + GB.u(79), GB.b), {
+    function te() {
+      if (globalThis.Worker !== fe) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(He.p + He.u(79), He.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const kB = Reflect.apply,
-      dB = ArrayBuffer,
-      KB = "undefined" === typeof Response ? void 0 : Response,
-      uB = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      mB = function() {
-        let BB;
-        void 0 !== uB && new uB({
+    const Ze = Reflect.apply,
+      we = ArrayBuffer,
+      De = "undefined" === typeof Response ? void 0 : Response,
+      Pe = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      Ae = function() {
+        let ee;
+        void 0 !== Pe && new Pe({
           __proto__: null,
-          start(OB) {
+          start(ie) {
             const {
-              enqueue: GB,
-              close: YB,
-              error: DB
-            } = Object.getPrototypeOf(OB);
-            BB = {
-              enqueue: GB,
-              close: YB,
-              error: DB
+              enqueue: He,
+              close: ye,
+              error: be
+            } = Object.getPrototypeOf(ie);
+            ee = {
+              enqueue: He,
+              close: ye,
+              error: be
             }
           }
         }, {
           __proto__: null
         });
-        return BB
+        return ee
       }(),
-      IB = function() {
+      Ye = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== mB && (0, oB.i)(KB, "Response", !0) && (0, oB.i)(uB, "ReadableStream", !0) && (0, oB.i)(mB.enqueue, "enqueue") && (0, oB.i)(mB.close, "close") && (0, oB.i)(mB.error, "error") && (0, oB.i)(yB.ab, "body") && (0, oB.i)(yB.P, "getReader") && (0, oB.i)(yB.Z, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Ae && (0, Ke.l)(De, "Response", !0) && (0, Ke.l)(Pe, "ReadableStream", !0) && (0, Ke.l)(Ae.enqueue, "enqueue") && (0, Ke.l)(Ae.close, "close") && (0, Ke.l)(Ae.error, "error") && (0, Ke.l)(Fe.X, "body") && (0, Ke.l)(Fe.K, "getReader") && (0, Ke.l)(Fe.W, "read")
         } catch {
           return !1
         }
       }();
-    async function FB(BB, OB, GB, YB, QB, oB, JB) {
-      const MB = new dB(OB),
+    async function Ve(ee, ie, He, ye, Me, Ke, Je) {
+      const oe = new we(ie),
         {
-          controller: PB,
-          compiled: zB
-        } = function(BB) {
+          controller: Re,
+          compiled: ke
+        } = function(ee) {
           try {
-            let BB;
-            const OB = new uB({
+            let ee;
+            const ie = new Pe({
                 __proto__: null,
-                start(OB) {
-                  BB = OB
+                start(ie) {
+                  ee = ie
                 }
               }, {
                 __proto__: null
               }),
-              GB = new KB(OB, {
+              He = new De(ie, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -506,406 +506,406 @@ export const modules = {
                 }
               });
             return {
-              controller: BB,
-              compiled: (0, yB.X)((0, yB.B)((0, yB.hb)(GB)))
+              controller: ee,
+              compiled: (0, Fe.U)((0, Fe.x)((0, Fe.eb)(He)))
             }
-          } catch (OB) {
-            throw new Error(`${BB} could not be streamed into a compile: ${(0,jB.h)(OB)}`)
+          } catch (ie) {
+            throw new Error(`${ee} could not be streamed into a compile: ${(0,Ue.e)(ie)}`)
           }
-        }(BB),
+        }(ee),
         {
-          enqueue: lB,
-          close: pB,
-          error: qB
-        } = mB,
-        ZB = BB => {
+          enqueue: qe,
+          close: fe,
+          error: Te
+        } = Ae,
+        pe = ee => {
           try {
-            kB(qB, PB, [BB])
+            Ze(Te, Re, [ee])
           } catch {}
         };
-      let NB = 0;
-      const RB = (GB, YB) => {
-        if (NB + YB > OB) throw new Error(`${BB} decoded past its module's ${OB} bytes`);
-        kB(yB.cb, new yB.k(MB), [new yB.k(GB), NB]);
+      let Xe = 0;
+      const ze = (He, ye) => {
+        if (Xe + ye > ie) throw new Error(`${ee} decoded past its module's ${ie} bytes`);
+        Ze(Fe.Z, new Fe.l(oe), [new Fe.l(He), Xe]);
         try {
-          kB(lB, PB, [new yB.k(MB, NB, YB)])
+          Ze(qe, Re, [new Fe.l(oe, Xe, ye)])
         } catch {}
-        NB += YB
+        Xe += ye
       };
-      let WB, AB;
+      let Be, Ee;
       try {
-        WB = new UB(BB, OB, RB, YB, JB)
-      } catch (fB) {
-        throw ZB(fB), fB
+        Be = new We(ee, ie, ze, ye, Je)
+      } catch (te) {
+        throw pe(te), te
       }
-      const VB = BB => {
-        WB.fail(BB), void 0 !== AB && iB(AB)
+      const ge = ee => {
+        Be.fail(ee), void 0 !== Ee && ae(Ee)
       };
-      let SB = !1;
-      GB.addEventListener("abort", (() => {
-        SB && WB.markWorkerFailed(), VB(new Error(`${BB} stalled`))
+      let Oe = !1;
+      He.addEventListener("abort", (() => {
+        Oe && Be.markWorkerFailed(), ge(new Error(`${ee} stalled`))
       }), {
         once: !0
-      }), (0, DB.s)(zB, (() => {}), VB);
+      }), (0, be.r)(ke, (() => {}), ge);
       try {
-        let oB;
+        let Ke;
         try {
-          oB = await fetch(BB, {
-            signal: GB
+          Ke = await fetch(ee, {
+            signal: He
           })
-        } catch (fB) {
-          throw new Error(`Fetching ${BB} failed: ${(0,jB.h)(fB)}`)
+        } catch (te) {
+          throw new Error(`Fetching ${ee} failed: ${(0,Ue.e)(te)}`)
         }
         const {
-          ok: JB,
-          status: MB,
-          body: PB
-        } = function(BB, OB) {
+          ok: Je,
+          status: oe,
+          body: Re
+        } = function(ee, ie) {
           try {
             const {
-              ok: BB,
-              status: GB
-            } = OB;
+              ok: ee,
+              status: He
+            } = ie;
             return {
-              ok: BB,
-              status: GB,
-              body: kB(yB.ab, OB, [])
+              ok: ee,
+              status: He,
+              body: Ze(Fe.X, ie, [])
             }
           } catch {
-            throw new Error(`${BB} came in a response a page script made`)
+            throw new Error(`${ee} came in a response a page script made`)
           }
-        }(BB, oB);
-        if (!JB) throw new Error(`Fetching ${BB} failed: HTTP ${MB}`);
-        YB();
-        const zB = kB(yB.P, PB, []);
-        AB = zB;
-        const lB = () => {
-          iB(zB)
+        }(ee, Ke);
+        if (!Je) throw new Error(`Fetching ${ee} failed: HTTP ${oe}`);
+        ye();
+        const ke = Ze(Fe.K, Re, []);
+        Ee = ke;
+        const qe = () => {
+          ae(ke)
         };
-        for ((0, DB.s)(WB.decoded, lB, lB);;) {
-          let OB;
+        for ((0, be.r)(Be.decoded, qe, qe);;) {
+          let ie;
           try {
-            OB = await kB(yB.Z, zB, [])
-          } catch (fB) {
-            throw new Error(`Downloading ${BB} failed: ${(0,jB.h)(fB)}`)
+            ie = await Ze(Fe.W, ke, [])
+          } catch (te) {
+            throw new Error(`Downloading ${ee} failed: ${(0,Ue.e)(te)}`)
           }
-          if (OB.done) break;
-          YB(), WB.push(OB.value)
+          if (ie.done) break;
+          ye(), Be.push(ie.value)
         }
-        if (SB = !0, WB.end(), await WB.decoded, QB(), NB !== OB) throw new Error(`${BB} ended before its module did`)
-      } catch (fB) {
-        throw ZB(fB), VB(fB), fB
+        if (Oe = !0, Be.end(), await Be.decoded, Me(), Xe !== ie) throw new Error(`${ee} ended before its module did`)
+      } catch (te) {
+        throw pe(te), ge(te), te
       }
-      WB.terminate();
+      Be.terminate();
       try {
-        kB(pB, PB, [])
+        Ze(fe, Re, [])
       } catch {}
-      const nB = await zB;
-      return void 0 !== oB && await (0, yB.y)(BB, new yB.k(MB), {
-        sha256: oB.sha256,
+      const de = await ke;
+      return void 0 !== Ke && await (0, Fe.t)(ee, new Fe.l(oe), {
+        sha256: Ke.sha256,
         onMismatch: () => {}
-      }), nB
+      }), de
     }
 
-    function iB(BB) {
+    function ae(ee) {
       try {
-        (0, yB.X)(BB.cancel())
+        (0, Fe.U)(ee.cancel())
       } catch {}
     }
-    const LB = ".zst.bin",
-      gB = 1e3;
-    let rB = null;
+    const ce = ".zst.bin",
+      xe = 1e3;
+    let Le = null;
 
-    function XB(BB) {
-      return rB ??= function() {
-        const BB = new Map,
-          OB = "bloxd_wasm_webgpu:5162719,bloxd_wasm_webgl:5545853,bloxd_wasm_webgl1:4879367,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732388";
-        for (const GB of OB?.split(",") ?? []) {
-          const [OB = "", YB] = GB.split(":"), DB = Number(YB);
-          Number.isInteger(DB) && DB > 0 && BB.set(OB, DB)
+    function Ce(ee) {
+      return Le ??= function() {
+        const ee = new Map,
+          ie = "bloxd_wasm_webgpu:5162719,bloxd_wasm_webgl:5545853,bloxd_wasm_webgl1:4879367,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3732388";
+        for (const He of ie?.split(",") ?? []) {
+          const [ie = "", ye] = He.split(":"), be = Number(ye);
+          Number.isInteger(be) && be > 0 && ee.set(ie, be)
         }
-        return BB
-      }(), rB.get(BB)
+        return ee
+      }(), Le.get(ee)
     }
-    async function wB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const YB = XB(BB.name);
-      if (void 0 === YB) return EB(await cB(BB, OB, GB), "cold-wasm");
-      const QB = IB ? new nB : null;
-      let oB;
+    async function ve(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const ye = Ce(ee.name);
+      if (void 0 === ye) return ue(await me(ee, ie, He), "cold-wasm");
+      const Me = Ye ? new de : null;
+      let Ke;
       try {
-        if (JB = BB.url(), zB()?.includes(PB(JB)) && await async function(BB) {
-            const OB = new AbortController;
-            let GB;
-            const YB = (0, DB.f)((BB => {
-              GB = setTimeout((() => {
-                OB.abort(), BB(null)
-              }), gB)
+        if (Je = ee.url(), ke()?.includes(Re(Je)) && await async function(ee) {
+            const ie = new AbortController;
+            let He;
+            const ye = (0, be.h)((ee => {
+              He = setTimeout((() => {
+                ie.abort(), ee(null)
+              }), xe)
             }));
             try {
-              const GB = fetch(BB.href, {
+              const He = fetch(ee.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: OB.signal
+                  signal: ie.signal
                 }),
-                QB = await (0, DB.p)([GB, YB]);
-              return !!QB?.ok && ((0, yB.X)(QB.body.cancel()), !0)
+                Me = await (0, be.q)([He, ye]);
+              return !!Me?.ok && ((0, Fe.U)(Me.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(GB)
+              clearTimeout(He)
             }
-          }(BB.url())) return QB?.stop(), await async function(BB, OB, GB, YB) {
-          let DB = !1;
-          const QB = GB && {
-            sha256: GB.sha256,
+          }(ee.url())) return Me?.stop(), await async function(ee, ie, He, ye) {
+          let be = !1;
+          const Me = He && {
+            sha256: He.sha256,
             onMismatch: () => {
-              DB = !0
+              be = !0
             }
           };
           try {
-            return EB(await cB(BB, QB, YB), "warm")
-          } catch (oB) {
-            const YB = await hB(BB, OB, GB, null);
-            if (null === YB) throw DB && GB.onMismatch(), oB;
-            return console.warn(`${BB.url().href} from the HTTP cache failed: ${(0,jB.h)(oB)}: loaded its copy instead`), EB(YB, DB ? "warm-refused" : "warm-broken")
+            return ue(await me(ee, Me, ye), "warm")
+          } catch (Ke) {
+            const ye = await le(ee, ie, He, null);
+            if (null === ye) throw be && He.onMismatch(), Ke;
+            return console.warn(`${ee.url().href} from the HTTP cache failed: ${(0,Ue.e)(Ke)}: loaded its copy instead`), ue(ye, be ? "warm-refused" : "warm-broken")
           }
-        }(BB, YB, OB, GB);
-        oB = await hB(BB, YB, OB, QB)
+        }(ee, ye, ie, He);
+        Ke = await le(ee, ye, ie, Me)
       } finally {
-        QB?.stop()
+        Me?.stop()
       }
-      var JB;
-      return null !== oB ? EB(oB, "cold-worker") : EB(await cB(BB, OB, GB), "cold-wasm")
+      var Je;
+      return null !== Ke ? ue(Ke, "cold-worker") : ue(await me(ee, ie, He), "cold-wasm")
     }
 
-    function EB(BB, OB) {
+    function ue(ee, ie) {
       return {
         __proto__: null,
-        module: BB,
-        path: OB
+        module: ee,
+        path: ie
       }
     }
 
-    function cB(BB, OB, GB) {
-      return void 0 === XB(BB.name) ? (0, yB.G)(BB.url(), OB, GB) : (0, yB.G)(BB.url(), OB, {
-        ...GB,
+    function me(ee, ie, He) {
+      return void 0 === Ce(ee.name) ? (0, Fe.B)(ee.url(), ie, He) : (0, Fe.B)(ee.url(), ie, {
+        ...He,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(BB) {
-            const OB = zB();
-            if (null === OB) return;
-            const GB = PB(BB),
-              YB = OB.filter((BB => BB !== GB));
-            YB.push(GB);
+          ! function(ee) {
+            const ie = ke();
+            if (null === ie) return;
+            const He = Re(ee),
+              ye = ie.filter((ee => ee !== He));
+            ye.push(He);
             try {
-              localStorage.setItem(JB, JSON.stringify(YB.slice(-MB)))
-            } catch (DB) {
-              console.warn(`Bloxd wasm: ${GB} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, DB)
+              localStorage.setItem(Je, JSON.stringify(ye.slice(-oe)))
+            } catch (be) {
+              console.warn(`Bloxd wasm: ${He} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, be)
             }
-          }(BB.url()), GB.onDownloaded?.()
+          }(ee.url()), He.onDownloaded?.()
         }
       })
     }
-    async function hB(BB, OB, GB, YB) {
-      if (!IB || !SB()) return null;
-      const DB = BB.url(),
-        QB = `${DB.href}${LB}`;
+    async function le(ee, ie, He, ye) {
+      if (!Ye || !Oe()) return null;
+      const be = ee.url(),
+        Me = `${be.href}${ce}`;
       try {
-        return await (0, yB.gb)(QB, ((BB, DB, oB) => FB(QB, OB, BB, DB, oB, GB, YB)))
-      } catch (oB) {
-        return console.warn(`${(0,jB.h)(oB)}: loading ${DB.href} instead`), null
+        return await (0, Fe.bb)(Me, ((ee, be, Ke) => Ve(Me, ie, ee, be, Ke, He, ye)))
+      } catch (Ke) {
+        return console.warn(`${(0,Ue.e)(Ke)}: loading ${be.href} instead`), null
       }
     }
-    let aB = null,
-      eB = !1;
-    const TB = new Map,
-      bB = new Map;
-    let CB = null;
+    let Se = null,
+      ne = !1;
+    const je = new Map,
+      se = new Map;
+    let Ie = null;
 
-    function HB(BB) {
-      const OB = OB => BB.filter((BB => TB.get(BB)?.state === OB)).length,
-        GB = OB("compiled");
-      return GB > 0 && GB === BB.length ? "compiled" : GB + OB("compiling") > 0 ? "compiling" : "none"
+    function he(ee) {
+      const ie = ie => ee.filter((ee => je.get(ee)?.state === ie)).length,
+        He = ie("compiled");
+      return He > 0 && He === ee.length ? "compiled" : He + ie("compiling") > 0 ? "compiling" : "none"
     }
 
-    function vB() {
-      return CB ?? HB([...TB.keys()])
+    function Ne() {
+      return Ie ?? he([...je.keys()])
     }
 
-    function sB(BB, OB, GB) {
-      return null === aB ? aB = BO(BB, OB, GB?.memoryMaximumBytes) : BB !== aB.build ? console.warn(`Bloxd wasm: ${BB.name} was asked for after ${aB.build.name} started loading, which this thread keeps`) : OB.name !== aB.workers.name && console.warn(`Bloxd wasm: ${OB.name} was asked for workers after ${aB.workers.name}, which this thread keeps`), GB?.reloadFailedDownload && !eB && (0, YB.$)() && (eB = !0, aB = BO(aB.build, aB.workers, aB.memoryMaximumBytes)), aB.loaded
+    function Ge(ee, ie, He) {
+      return null === Se ? Se = ei(ee, ie, He?.memoryMaximumBytes) : ee !== Se.build ? console.warn(`Bloxd wasm: ${ee.name} was asked for after ${Se.build.name} started loading, which this thread keeps`) : ie.name !== Se.workers.name && console.warn(`Bloxd wasm: ${ie.name} was asked for workers after ${Se.workers.name}, which this thread keeps`), He?.reloadFailedDownload && !ne && (0, ye.hb)() && (ne = !0, Se = ei(Se.build, Se.workers, Se.memoryMaximumBytes)), Se.loaded
     }
 
-    function xB(BB) {
-      return null === aB ? (0, DB.f)((BB => {
-        BB(!1)
-      })) : ((0, YB._)() && (aB = BO(aB.build, aB.workers, BB ?? aB.memoryMaximumBytes)), aB.loaded)
+    function re(ee) {
+      return null === Se ? (0, be.h)((ee => {
+        ee(!1)
+      })) : ((0, ye.gb)() && (Se = ei(Se.build, Se.workers, ee ?? Se.memoryMaximumBytes)), Se.loaded)
     }
 
-    function tB(BB, OB) {
-      if (null !== aB) return (0, DB.d)([]);
-      const GB = BB.filter((BB => !TB.has(BB.name))).map((BB => {
-        const GB = new AbortController,
-          YB = {
-            compiled: cB(BB, (0, QB.d)(BB.name), {
-              priority: OB,
-              rB: GB.signal,
+    function Qe(ee, ie) {
+      if (null !== Se) return (0, be.g)([]);
+      const He = ee.filter((ee => !je.has(ee.name))).map((ee => {
+        const He = new AbortController,
+          ye = {
+            compiled: me(ee, (0, Me.d)(ee.name), {
+              priority: ie,
+              Ce: He.signal,
               onDownloaded: () => {
-                YB.downloaded = !0
+                ye.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  YB.downloaded = !1, null !== aB && GB.abort()
+                  ye.downloaded = !1, null !== Se && He.abort()
                 }
               }
             }),
-            cancel: GB,
+            cancel: He,
             downloaded: !1,
             state: "compiling"
           };
-        return TB.set(BB.name, YB), (0, DB.f)((OB => {
-          (0, DB.s)(YB.compiled, (() => {
-            YB.downloaded = !0, YB.state = "compiled", OB()
-          }), (DB => {
-            YB.state = "failed", GB.signal.aborted || console.warn(`Bloxd wasm: ${BB.name}'s compile ahead of the load failed: the load compiles it afresh`, DB), OB()
+        return je.set(ee.name, ye), (0, be.h)((ie => {
+          (0, be.r)(ye.compiled, (() => {
+            ye.downloaded = !0, ye.state = "compiled", ie()
+          }), (be => {
+            ye.state = "failed", He.signal.aborted || console.warn(`Bloxd wasm: ${ee.name}'s compile ahead of the load failed: the load compiles it afresh`, be), ie()
           }))
         }))
       }));
-      return (0, DB.d)(GB)
+      return (0, be.g)(He)
     }
 
-    function BO(BB, OB, GB) {
-      CB ??= HB(OB.name === BB.name ? [BB.name] : [BB.name, OB.name]);
-      const QB = (0, YB.F)((async () => {
-        (0, oB.w)(), bB.clear();
-        const GB = GO(BB),
-          YB = OB.name === BB.name ? GB : GO(OB);
+    function ei(ee, ie, He) {
+      Ie ??= he(ie.name === ee.name ? [ee.name] : [ee.name, ie.name]);
+      const Me = (0, ye.M)((async () => {
+        (0, Ke.E)(), se.clear();
+        const He = Hi(ee),
+          ye = ie.name === ee.name ? He : Hi(ie);
         for (const {
-            cancel: BB
+            cancel: ee
           }
-          of TB.values()) BB.abort();
-        TB.clear(), await (0, DB.d)([GB, YB]);
-        const QB = await GB,
-          jB = await YB;
-        return (0, oB.w)(), {
-          module: QB,
-          workerModule: jB
+          of je.values()) ee.abort();
+        je.clear(), await (0, be.g)([He, ye]);
+        const Me = await He,
+          Ue = await ye;
+        return (0, Ke.E)(), {
+          module: Me,
+          workerModule: Ue
         }
-      }), BB, GB);
+      }), ee, He);
       return {
-        build: BB,
-        workers: OB,
-        memoryMaximumBytes: GB,
-        loaded: QB
+        build: ee,
+        workers: ie,
+        memoryMaximumBytes: He,
+        loaded: Me
       }
     }
 
-    function OO(BB) {
-      return bB.get(BB)
+    function ii(ee) {
+      return se.get(ee)
     }
 
-    function GO(BB) {
-      const OB = performance.now(),
-        GB = TB.get(BB.name);
-      TB.delete(BB.name);
-      const YB = !0 === GB?.downloaded ? GB : void 0;
-      return void 0 !== GB && void 0 === YB && GB.cancel.abort(), (0, DB.f)(((GB, QB) => {
-        const oB = (YB, DB) => {
-            bB.set(BB.name, {
-              path: DB,
-              ms: performance.now() - OB
-            }), GB(YB)
+    function Hi(ee) {
+      const ie = performance.now(),
+        He = je.get(ee.name);
+      je.delete(ee.name);
+      const ye = !0 === He?.downloaded ? He : void 0;
+      return void 0 !== He && void 0 === ye && He.cancel.abort(), (0, be.h)(((He, Me) => {
+        const Ke = (ye, be) => {
+            se.set(ee.name, {
+              path: be,
+              ms: performance.now() - ie
+            }), He(ye)
           },
-          jB = () => {
-            (0, DB.s)(DO(BB), (BB => {
+          Ue = () => {
+            (0, be.r)(bi(ee), (ee => {
               let {
-                module: OB,
-                path: GB
-              } = BB;
-              oB(OB, GB)
-            }), QB)
+                module: ie,
+                path: He
+              } = ee;
+              Ke(ie, He)
+            }), Me)
           };
-        void 0 === YB ? jB() : (0, DB.s)(YB.compiled, (BB => {
-          oB(BB, "ahead")
-        }), jB)
+        void 0 === ye ? Ue() : (0, be.r)(ye.compiled, (ee => {
+          Ke(ee, "ahead")
+        }), Ue)
       }))
     }
-    async function YO(BB, OB) {
+    async function yi(ee, ie) {
       const {
-        module: GB
-      } = await DO(BB, {
-        retries: OB
+        module: He
+      } = await bi(ee, {
+        retries: ie
       });
-      return GB
+      return He
     }
-    async function DO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await wB(BB, (0, QB.d)(BB.name), OB)
+    async function bi(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await ve(ee, (0, Me.d)(ee.name), ie)
     }
   },
-  7161: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
+  7251: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke
     });
-    var YB = GB(3210);
-    const DB = {
-      bloxd_wasm: () => "bbd4532b4204ac6b037d21981a0077e27c49bf77bad5ade13596319f1c6101a5",
-      bloxd_wasm_client: () => "8365f73c3472844058a4a0f574b2102c245aef505acbb602a81be3847509c8fa",
-      bloxd_wasm_workers: () => "8409ee2ec92a1f5bf3cf7df6088eeb4c89a7f9ab0b6c537ab5e6bee5e1c85a52",
-      bloxd_wasm_models: () => "4297705d02ef7091b212436b1b1d90f181427336ab1bf97d3c1a2eebcb00ef44",
-      bloxd_wasm_webgpu: () => "feb1e82520617426b733fd3101371d0a4d1be5eea8eb5f7115ad8b481c5ecc2a",
-      bloxd_wasm_webgl: () => "ccc8a64ee7a944567fefa835e06af6da6175cc2ce9d8d4fb5fc2acb63861821b",
-      bloxd_wasm_webgl1: () => "ef3b6328394821ae9f35e9d6eb203b2d9872f6911c2948b8b5bd2bd784af58be",
-      bloxd_wasm_replay: () => "e6bfd69259d4961ba1c2eff287fb0493dd998b3af1045ea9988589f9c1c784a6",
-      bloxd_wasm_recorder: () => "61e54a37d20be582fb8a73e1f48e79e660cbedc06e1fc696d3d52ad467693eb7",
-      bloxd_wasm_anim: () => "412a9ead222a90865e84867e83bc25acfd52a0e1c584c793e1f272639ce5dc2c",
-      bloxd_wasm_textures: () => "43d7ae101efe7b39af19b5e650a2896a40d167bca827906978d39975a015e416",
-      bloxd_wasm_shader_pack: () => "072b43f08a8ed6ea1336897ed9d7881ce755636d8b8a8f34eaa208a897665b42"
+    var ye = He(3101);
+    const be = {
+      bloxd_wasm: () => "e02d54b065b2f499b180e1b3347d16df55a2947d0e605d2078a3d3b6da48d9a9",
+      bloxd_wasm_client: () => "c679f6743194014168c148d06b29ff43ac2ebd65af96551ab04742237da2cbc0",
+      bloxd_wasm_workers: () => "64996202cfa4b1e69476b5072e56b0cfcea62edff120e603bbcded9c0cc2f2b2",
+      bloxd_wasm_models: () => "d8940e8e7ccbe7fea2cc7bbf2297c0d75ddbf7e4f7faf3d9bb2ad0765fbba5c2",
+      bloxd_wasm_webgpu: () => "cf5aebafb7e2919918851e5ade65769e47a6978ba139ea29c093aa7d03105200",
+      bloxd_wasm_webgl: () => "8ae617ef40b6df6e9c6b2b4fb13fbb620e731d320ec11ddc75acee07da832d88",
+      bloxd_wasm_webgl1: () => "5541e97c52b53f4d16d1e55f9d8eb127812f263b741e67830d3bb080322b1915",
+      bloxd_wasm_replay: () => "fa06c4ee5e806830b3ad4c2e2323335346c04bf67f500d15ce0c53d3a6cad80e",
+      bloxd_wasm_recorder: () => "f6eb834fb863f1cd66bacc3bb3d9505f0a66acb7d26cea69ffc0ae9f1664e920",
+      bloxd_wasm_anim: () => "b7f47661c5c9230379971e76cc8f09962d7323de4ff12c8fdf43c1fd62033f90",
+      bloxd_wasm_textures: () => "5c62f6a16c856ae74984e597d42471c5a63fb99862f370b47f78d95328e7a101",
+      bloxd_wasm_shader_pack: () => "e3e6a3571f741530e11f118b8afcc85da15081a89450db4b464665c2ed09dc09"
     };
-    var QB = GB(5165);
+    var Me = He(5153);
 
-    function oB(BB) {
-      const OB = Object.prototype.hasOwnProperty.call(DB, BB) ? DB[BB]() : void 0;
-      if (void 0 !== OB) return {
-        sha256: OB,
-        onMismatch: QB.s
+    function Ke(ee) {
+      const ie = Object.prototype.hasOwnProperty.call(be, ee) ? be[ee]() : void 0;
+      if (void 0 !== ie) return {
+        sha256: ie,
+        onMismatch: Me.B
       };
-      throw new YB.g(`${BB} has no release digest, so this build refuses it`)
+      throw new ye.i(`${ee} has no release digest, so this build refuses it`)
     }
   },
-  7179: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => YB,
-      g: () => oB,
-      k: () => jB,
-      o: () => DB,
-      r: () => QB
+  7276: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye,
+      h: () => Ke,
+      l: () => Ue,
+      m: () => be,
+      o: () => Me
     });
-    const YB = ["terrain", "liquid", "model"];
+    const ye = ["terrain", "liquid", "model"];
 
-    function DB() {
-      const BB = [];
-      for (const OB of [!1, !0])
-        for (const GB of YB) BB.push({
-          strict: OB,
-          program: GB
+    function be() {
+      const ee = [];
+      for (const ie of [!1, !0])
+        for (const He of ye) ee.push({
+          strict: ie,
+          program: He
         });
-      return BB
+      return ee
     }
 
-    function QB(BB) {
-      return `${BB.strict?"strict":"allow"}.${BB.program}`
+    function Me(ee) {
+      return `${ee.strict?"strict":"allow"}.${ee.program}`
     }
 
-    function oB(BB) {
-      return !BB.hooks.vertex && !BB.hooks.surface && !BB.hooks.light
+    function Ke(ee) {
+      return !ee.hooks.vertex && !ee.hooks.surface && !ee.hooks.light
     }
 
-    function jB(BB, OB) {
-      return "off" !== OB && (null === BB || BB.some((BB => BB.key.strict === ("strict" === OB) && !oB(BB))))
+    function Ue(ee, ie) {
+      return "off" !== ie && (null === ee || ee.some((ee => ee.key.strict === ("strict" === ie) && !Ke(ee))))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,94 +1,94 @@
 export const id = 153;
 export const ids = [152, 153];
 export const modules = {
-  7193: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      forgetShaderPackActiveHint: () => KB,
-      isOtherApiVersion: () => UB,
-      isShaderPackActive: () => AB,
-      isShaderPackChangePending: () => nB,
-      markShaderPackChangePending: () => SB,
-      pageShaderPackValidationVersion: () => fB,
-      reconcileStoredShaderPackHint: () => dB,
-      removeShaderPack: () => WB,
-      replaceShaderPack: () => ZB,
-      saveShaderPack: () => qB,
-      shaderPackNeedsCheck: () => kB,
-      storedPackOutcome: () => VB,
-      storedShaderPackFiles: () => zB,
-      toStoredShaderPack: () => PB
+  7290: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      forgetShaderPackActiveHint: () => De,
+      isOtherApiVersion: () => We,
+      isShaderPackActive: () => Ee,
+      isShaderPackChangePending: () => de,
+      markShaderPackChangePending: () => Oe,
+      pageShaderPackValidationVersion: () => te,
+      reconcileStoredShaderPackHint: () => we,
+      removeShaderPack: () => Be,
+      replaceShaderPack: () => pe,
+      saveShaderPack: () => Te,
+      shaderPackNeedsCheck: () => Ze,
+      storedPackOutcome: () => ge,
+      storedShaderPackFiles: () => ke,
+      toStoredShaderPack: () => Re
     });
-    var YB = GB(5546),
-      DB = GB(5538),
-      QB = GB(31),
-      oB = GB(3885),
-      jB = GB(7198),
-      yB = GB(7174);
-    const JB = "shaderPackChangePending";
-    let MB = null;
+    var ye = He(5570),
+      be = He(5563),
+      Me = He(35),
+      Ke = He(3808),
+      Ue = He(7296),
+      Fe = He(7262);
+    const Je = "shaderPackChangePending";
+    let oe = null;
 
-    function PB(BB, OB, GB) {
+    function Re(ee, ie, He) {
       return {
-        manifest: BB.manifest,
-        files: (0, YB.y)(BB.files),
-        validation: OB,
-        ...GB && {
-          listing: GB
+        manifest: ee.manifest,
+        files: (0, ye.s)(ee.files),
+        validation: ie,
+        ...He && {
+          listing: He
         }
       }
     }
 
-    function zB(BB) {
-      return Object.keys(BB.files).map((OB => ({
-        path: OB,
-        source: BB.files[OB]
+    function ke(ee) {
+      return Object.keys(ee.files).map((ie => ({
+        path: ie,
+        source: ee.files[ie]
       })))
     }
-    let lB = Promise.resolve();
+    let qe = Promise.resolve();
 
-    function pB(BB) {
-      const OB = lB.then(BB);
-      return lB = OB.catch((() => {})), OB
-    }
-
-    function qB(BB, OB) {
-      return pB((() => NB(BB, OB)))
+    function fe(ee) {
+      const ie = qe.then(ee);
+      return qe = ie.catch((() => {})), ie
     }
 
-    function ZB(BB, OB, GB) {
-      return pB((async () => JSON.stringify(await (0, jB.e)()) === JSON.stringify(BB) && (null === OB ? (await RB(), !0) : NB(OB, GB))))
-    }
-    async function NB(BB, OB) {
-      const GB = await QB.d.setItem(jB.c, BB);
-      return GB && uB(BB, OB), GB
-    }
-    async function RB() {
-      await QB.d.removeItem(jB.c), QB.g.removeItem(oB.d)
+    function Te(ee, ie) {
+      return fe((() => Xe(ee, ie)))
     }
 
-    function WB() {
-      return pB(RB)
+    function pe(ee, ie, He) {
+      return fe((async () => JSON.stringify(await (0, Ue.h)()) === JSON.stringify(ee) && (null === ie ? (await ze(), !0) : Xe(ie, He))))
+    }
+    async function Xe(ee, ie) {
+      const He = await Me.e.setItem(Ue.e, ee);
+      return He && Pe(ee, ie), He
+    }
+    async function ze() {
+      await Me.e.removeItem(Ue.e), Me.i.removeItem(Ke.b)
     }
 
-    function AB(BB, OB) {
-      return "active" === VB(BB, OB).kind
+    function Be() {
+      return fe(ze)
     }
 
-    function VB(BB, OB) {
-      var GB;
-      return null === BB ? {
+    function Ee(ee, ie) {
+      return "active" === ge(ee, ie).kind
+    }
+
+    function ge(ee, ie) {
+      var He;
+      return null === ee ? {
         kind: "none",
         reason: "nothingStored"
-      } : UB(BB) ? {
+      } : We(ee) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.ok) || BB.validation.fromRecheck ? null === OB ? {
+      } : !1 !== (null === (He = ee.validation) || void 0 === He ? void 0 : He.ok) || ee.validation.fromRecheck ? null === ie ? {
         kind: "none",
         reason: "noCompiler"
-      } : kB(BB, OB) ? {
+      } : Ze(ee, ie) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : BB.validation.ok ? {
+      } : ee.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -99,68 +99,68 @@ export const modules = {
       }
     }
 
-    function SB() {
-      QB.i.setItem(JB, performance.timeOrigin)
+    function Oe() {
+      Me.m.setItem(Je, performance.timeOrigin)
     }
 
-    function nB() {
-      return QB.i.getItem(JB) === performance.timeOrigin
+    function de() {
+      return Me.m.getItem(Je) === performance.timeOrigin
     }
 
-    function UB(BB) {
-      return !(0, DB.g)(BB.manifest.apiVersion)
+    function We(ee) {
+      return !(0, be.h)(ee.manifest.apiVersion)
     }
 
-    function fB(BB) {
-      return MB ??= BB.yI((0, yB.shaderPackTextures)()), MB
+    function te(ee) {
+      return oe ??= ee.cV((0, Fe.shaderPackTextures)()), oe
     }
 
-    function kB(BB, OB) {
-      var GB;
-      return (null === (GB = BB.validation) || void 0 === GB ? void 0 : GB.headerVersion) !== fB(OB)
+    function Ze(ee, ie) {
+      var He;
+      return (null === (He = ee.validation) || void 0 === He ? void 0 : He.headerVersion) !== te(ie)
     }
 
-    function dB(BB) {
-      return pB((async () => {
-        uB(await (0, jB.e)(!0), BB)
+    function we(ee) {
+      return fe((async () => {
+        Pe(await (0, Ue.h)(!0), ee)
       }))
     }
 
-    function KB() {
-      return pB((async () => {
-        QB.g.removeItem(oB.d)
+    function De() {
+      return fe((async () => {
+        Me.i.removeItem(Ke.b)
       }))
     }
 
-    function uB(BB, OB) {
-      AB(BB, OB) ? QB.g.setItem(oB.d, !0) : QB.g.removeItem(oB.d)
+    function Pe(ee, ie) {
+      Ee(ee, ie) ? Me.i.setItem(Ke.b, !0) : Me.i.removeItem(Ke.b)
     }
   },
-  7174: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadShaderPackTextures: () => oB,
-      shaderPackTextures: () => jB
+  7262: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      loadShaderPackTextures: () => Ke,
+      shaderPackTextures: () => Ue
     });
-    var YB = GB(5546);
-    let DB = null,
-      QB = null;
+    var ye = He(5570);
+    let be = null,
+      Me = null;
 
-    function oB() {
-      return QB ??= Promise.all([GB.e(84), GB.e(206)]).then((() => GB(41493))).then((BB => {
+    function Ke() {
+      return Me ??= Promise.all([He.e(84), He.e(206)]).then((() => He(41616))).then((ee => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: OB,
-          textureNameToIndex: GB,
-          textureAnimationData: QB
-        } = BB;
-        return DB ??= (0, YB.o)(GB, QB, OB), DB
-      })), QB
+          FORMER_BLOCK_IMAGE_NAMES: ie,
+          textureNameToIndex: He,
+          textureAnimationData: Me
+        } = ee;
+        return be ??= (0, ye.h)(He, Me, ie), be
+      })), Me
     }
 
-    function jB() {
-      if (null === DB) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return DB
+    function Ue() {
+      if (null === be) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return be
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,48 +1,48 @@
 export const id = 138;
 export const ids = [138];
 export const modules = {
-  7062: (BB, OB, GB) => {
-    GB.d(OB, {
-      WorldCodeAiChatGptNotice: () => MB,
-      WorldCodeAiDeepSeekNotice: () => JB,
-      e: () => oB,
-      h: () => yB,
-      j: () => jB
+  7160: (ee, ie, He) => {
+    He.d(ie, {
+      WorldCodeAiChatGptNotice: () => oe,
+      WorldCodeAiDeepSeekNotice: () => Je,
+      b: () => Ke,
+      f: () => Fe,
+      h: () => Ue
     });
-    var YB = GB(1175),
-      DB = GB(7067),
-      QB = GB(1282);
-    const oB = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
-      jB = "https://openai.com/policies/terms-of-use/",
-      yB = "https://openai.com/policies/privacy-policy/";
+    var ye = He(1127),
+      be = He(7169),
+      Me = He(1228);
+    const Ke = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+      Ue = "https://openai.com/policies/terms-of-use/",
+      Fe = "https://openai.com/policies/privacy-policy/";
 
-    function JB() {
+    function Je() {
       const {
-        t: BB
-      } = (0, YB.H)();
-      return (0, QB.jsxs)(QB.Fragment, {
-        children: [BB("superBotXd:deepSeekNotice"), " ", (0, QB.jsx)(DB.c, {
-          href: oB,
-          children: BB("superBotXd:deepSeekPrivacyPolicy")
+        t: ee
+      } = (0, ye.v)();
+      return (0, Me.jsxs)(Me.Fragment, {
+        children: [ee("superBotXd:deepSeekNotice"), " ", (0, Me.jsx)(be.b, {
+          href: Ke,
+          children: ee("superBotXd:deepSeekPrivacyPolicy")
         })]
       })
     }
 
-    function MB() {
+    function oe() {
       const {
-        t: BB
-      } = (0, YB.H)();
-      return (0, QB.jsxs)(QB.Fragment, {
-        children: [BB("aiHelperChatGpt:notice"), " ", (0, QB.jsx)(DB.c, {
-          href: jB,
-          children: BB("aiHelperChatGpt:terms")
-        }), " ", (0, QB.jsx)(DB.c, {
-          href: yB,
-          children: BB("aiHelperChatGpt:privacyPolicy")
+        t: ee
+      } = (0, ye.v)();
+      return (0, Me.jsxs)(Me.Fragment, {
+        children: [ee("aiHelperChatGpt:notice"), " ", (0, Me.jsx)(be.b, {
+          href: Ue,
+          children: ee("aiHelperChatGpt:terms")
+        }), " ", (0, Me.jsx)(be.b, {
+          href: Fe,
+          children: ee("aiHelperChatGpt:privacyPolicy")
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

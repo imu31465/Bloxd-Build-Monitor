@@ -1,380 +1,380 @@
 export const id = 76;
 export const ids = [76];
 export const modules = {
-  64060: (BB, OB, GB) => {
-    BB.exports = GB.p + "static/media/bloxd_wasm_recorder_bg.a44eb04a0dc2f5189767.wasm"
+  64029: (ee, ie, He) => {
+    ee.exports = He.p + "static/media/bloxd_wasm_recorder_bg.c4568df370b658aabbb9.wasm"
   },
-  64058: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      BloxdRecorderWasmError: () => iB,
-      RECORDER_MODULE_ID: () => FB,
-      loadRecorderModule: () => rB,
-      markRecorderTrapped: () => wB,
-      prefetchRecorderModule: () => XB,
-      recorderMemoryBytes: () => cB,
-      unloadRecorderModule: () => EB
+  64027: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      BloxdRecorderWasmError: () => ae,
+      RECORDER_MODULE_ID: () => Ve,
+      loadRecorderModule: () => Le,
+      markRecorderTrapped: () => ve,
+      prefetchRecorderModule: () => Ce,
+      recorderMemoryBytes: () => me,
+      unloadRecorderModule: () => ue
     });
-    var YB = {};
-    GB.r(YB), GB.d(YB, {
-      PoB: () => DB,
-      oyB: () => uB,
-      sy: () => QB,
-      default: () => KB,
-      initSync: () => dB,
-      VP: () => oB,
-      JoB: () => jB,
-      GoB: () => yB
+    var ye = {};
+    He.r(ye), He.d(ye, {
+      LKe: () => be,
+      DFe: () => Pe,
+      vR: () => Me,
+      default: () => De,
+      initSync: () => we,
+      uR: () => Ke,
+      cKe: () => Ue,
+      wKe: () => Fe
     });
-    class DB {
+    class be {
       __destroy_into_raw() {
-        const BB = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, MB.unregister(this), BB
+        const ee = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, oe.unregister(this), ee
       }
       free() {
-        const BB = this.__destroy_into_raw();
-        UB.hOsm(BB, 0)
+        const ee = this.__destroy_into_raw();
+        We.H1TV(ee, 0)
       }
       busy() {
-        return 0 !== UB.icTy(this.__wbg_ptr)
+        return 0 !== We.JiWD(this.__wbg_ptr)
       }
-      command(BB, OB) {
-        return 0 !== UB.YslN(this.__wbg_ptr, BB, OB)
+      command(ee, ie) {
+        return 0 !== We.SgmW(this.__wbg_ptr, ee, ie)
       }
-      YoB(BB) {
-        return UB.cb8x(this.__wbg_ptr, BB) >>> 0
+      DKe(ee) {
+        return We.PAXw(this.__wbg_ptr, ee) >>> 0
       }
-      OoB() {
-        UB.Of2N(this.__wbg_ptr)
+      ZKe() {
+        We.Cq2A(this.__wbg_ptr)
       }
-      BoB() {
-        return UB.w6lz(this.__wbg_ptr) >>> 0
+      tKe() {
+        return We.AKgJ(this.__wbg_ptr) >>> 0
       }
-      tQB() {
-        return UB.mjNZ(this.__wbg_ptr)
+      WKe() {
+        return We.zjVs(this.__wbg_ptr)
       }
-      ooB() {
-        return UB.BOWk(this.__wbg_ptr) >>> 0
+      YKe() {
+        return We.X7Fh(this.__wbg_ptr) >>> 0
       }
-      joB() {
-        return UB.A4hq(this.__wbg_ptr) >>> 0
+      VKe() {
+        return We.V3zF(this.__wbg_ptr) >>> 0
       }
-      feed(BB) {
-        return UB.inqv(this.__wbg_ptr, BB) >>> 0
+      feed(ee) {
+        return We.s6Xe(this.__wbg_ptr, ee) >>> 0
       }
       constructor() {
-        const BB = UB.AUf6();
-        return this.__wbg_ptr = BB, MB.register(this, this.__wbg_ptr, this), this
+        const ee = We.yLUP();
+        return this.__wbg_ptr = ee, oe.register(this, this.__wbg_ptr, this), this
       }
-      QoB() {
-        return UB.FcBX(this.__wbg_ptr) >>> 0
+      AKe() {
+        return We.T6UV(this.__wbg_ptr) >>> 0
       }
-      jyB() {
-        return UB.rUXw(this.__wbg_ptr) >>> 0
+      PFe() {
+        return We.Wh9z(this.__wbg_ptr) >>> 0
       }
-      xQB(BB, OB, GB) {
-        return 0 !== UB.nEAZ(this.__wbg_ptr, BB, OB, GB)
+      dKe(ee, ie, He) {
+        return 0 !== We.bRvo(this.__wbg_ptr, ee, ie, He)
       }
-      stage(BB) {
-        return UB.sEPk(this.__wbg_ptr, BB) >>> 0
+      stage(ee) {
+        return We.uw5O(this.__wbg_ptr, ee) >>> 0
       }
       step() {
-        return UB.ocZU(this.__wbg_ptr) >>> 0
+        return We.KMhY(this.__wbg_ptr) >>> 0
       }
     }
 
-    function QB(BB, OB) {
-      const GB = function(BB, OB, GB) {
-          if (void 0 === GB) {
-            const GB = VB.encode(BB),
-              YB = OB(GB.length, 1) >>> 0;
-            return pB().subarray(YB, YB + GB.length).set(GB), fB = GB.length, YB
+    function Me(ee, ie) {
+      const He = function(ee, ie, He) {
+          if (void 0 === He) {
+            const He = ge.encode(ee),
+              ye = ie(He.length, 1) >>> 0;
+            return fe().subarray(ye, ye + He.length).set(He), te = He.length, ye
           }
-          let YB = BB.length,
-            DB = OB(YB, 1) >>> 0;
-          const QB = pB();
-          let oB = 0;
-          for (; oB < YB; oB++) {
-            const OB = BB.charCodeAt(oB);
-            if (OB > 127) break;
-            QB[DB + oB] = OB
+          let ye = ee.length,
+            be = ie(ye, 1) >>> 0;
+          const Me = fe();
+          let Ke = 0;
+          for (; Ke < ye; Ke++) {
+            const ie = ee.charCodeAt(Ke);
+            if (ie > 127) break;
+            Me[be + Ke] = ie
           }
-          if (oB !== YB) {
-            0 !== oB && (BB = BB.slice(oB)), DB = GB(DB, YB, YB = oB + 3 * BB.length, 1) >>> 0;
-            const OB = pB().subarray(DB + oB, DB + YB);
-            oB += VB.encodeInto(BB, OB).written, DB = GB(DB, YB, oB, 1) >>> 0
+          if (Ke !== ye) {
+            0 !== Ke && (ee = ee.slice(Ke)), be = He(be, ye, ye = Ke + 3 * ee.length, 1) >>> 0;
+            const ie = fe().subarray(be + Ke, be + ye);
+            Ke += ge.encodeInto(ee, ie).written, be = He(be, ye, Ke, 1) >>> 0
           }
-          return fB = oB, DB
-        }(BB, UB.sM3B, UB.NAND),
-        YB = fB,
-        DB = UB.wIDs(GB, YB, OB);
-      if (DB[1]) throw NB(DB[0])
+          return te = Ke, be
+        }(ee, We.NYuO, We.hoQJ),
+        ye = te,
+        be = We.raEf(He, ye, ie);
+      if (be[1]) throw Xe(be[0])
     }
 
-    function oB() {
-      UB.M1vZ()
+    function Ke() {
+      We.EHT3()
     }
 
-    function jB() {
-      return UB.t9IS() >>> 0
+    function Ue() {
+      return We.bTSz() >>> 0
     }
 
-    function yB() {
-      return NB(UB.f78i())
+    function Fe() {
+      return Xe(We.IJOJ())
     }
 
-    function JB() {
+    function Je() {
       return {
         __proto__: null,
-        AOBA: {
+        BvMy: {
           __proto__: null,
-          o4TJ: function(BB, OB) {
-            return PB(Error(zB(BB, OB)))
+          vRNZ: function(ee, ie) {
+            return Re(Error(ke(ee, ie)))
           },
-          tlt6: function() {
-            return PB(UB.memory)
+          l2V2: function() {
+            return Re(We.memory)
           },
-          zFII: function(BB, OB) {
-            throw new Error(zB(BB, OB))
+          y7C5: function(ee, ie) {
+            throw new Error(ke(ee, ie))
           },
-          sDRc: function(BB, OB) {
-            console.error(zB(BB, OB))
+          QAfA: function(ee, ie) {
+            console.error(ke(ee, ie))
           },
-          mTyt: function() {
+          DX6s: function() {
             return performance.now()
           }
         }
       }
     }
-    Symbol.dispose && (DB.prototype[Symbol.dispose] = DB.prototype.free);
-    const MB = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (be.prototype[Symbol.dispose] = be.prototype.free);
+    const oe = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((BB => UB?.__wbg_recordermodule_free(BB, 1)));
+    } : new FinalizationRegistry((ee => We?.__wbg_recordermodule_free(ee, 1)));
 
-    function PB(BB) {
-      ZB === qB.length && qB.push(qB.length + 1);
-      const OB = ZB;
-      return ZB = qB[OB], qB[OB] = BB, OB
+    function Re(ee) {
+      pe === Te.length && Te.push(Te.length + 1);
+      const ie = pe;
+      return pe = Te[ie], Te[ie] = ee, ie
     }
 
-    function zB(BB, OB) {
-      return function(BB, OB) {
-        AB += OB, AB >= WB && (RB = new TextDecoder("utf-8", {
+    function ke(ee, ie) {
+      return function(ee, ie) {
+        Ee += ie, Ee >= Be && (ze = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), RB.decode(), AB = OB);
-        return RB.decode(pB().subarray(BB, BB + OB))
-      }(BB >>> 0, OB)
+        }), ze.decode(), Ee = ie);
+        return ze.decode(fe().subarray(ee, ee + ie))
+      }(ee >>> 0, ie)
     }
-    let lB = null;
+    let qe = null;
 
-    function pB() {
-      return null !== lB && 0 !== lB.byteLength || (lB = new Uint8Array(UB.memory.buffer)), lB
+    function fe() {
+      return null !== qe && 0 !== qe.byteLength || (qe = new Uint8Array(We.memory.buffer)), qe
     }
-    let qB = new Array(1024).fill(void 0);
-    qB.push(void 0, null, !0, !1);
-    let ZB = qB.length;
+    let Te = new Array(1024).fill(void 0);
+    Te.push(void 0, null, !0, !1);
+    let pe = Te.length;
 
-    function NB(BB) {
-      const OB = function(BB) {
-        return qB[BB]
-      }(BB);
-      return function(BB) {
-        BB < 1028 || (qB[BB] = ZB, ZB = BB)
-      }(BB), OB
+    function Xe(ee) {
+      const ie = function(ee) {
+        return Te[ee]
+      }(ee);
+      return function(ee) {
+        ee < 1028 || (Te[ee] = pe, pe = ee)
+      }(ee), ie
     }
-    let RB = new TextDecoder("utf-8", {
+    let ze = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    RB.decode();
-    const WB = 2146435072;
-    let AB = 0;
-    const VB = new TextEncoder;
-    "encodeInto" in VB || (VB.encodeInto = function(BB, OB) {
-      const GB = VB.encode(BB);
-      return OB.set(GB), {
-        read: BB.length,
-        written: GB.length
+    ze.decode();
+    const Be = 2146435072;
+    let Ee = 0;
+    const ge = new TextEncoder;
+    "encodeInto" in ge || (ge.encodeInto = function(ee, ie) {
+      const He = ge.encode(ee);
+      return ie.set(He), {
+        read: ee.length,
+        written: He.length
       }
     });
-    let SB, nB, UB, fB = 0;
+    let Oe, de, We, te = 0;
 
-    function kB(BB, OB) {
-      return nB = BB, UB = BB.exports, SB = OB, lB = null, UB.cSXA(), UB
+    function Ze(ee, ie) {
+      return de = ee, We = ee.exports, Oe = ie, qe = null, We.ZnUB(), We
     }
 
-    function dB(BB) {
-      if (void 0 !== UB) return UB;
-      void 0 !== BB && (Object.getPrototypeOf(BB) === Object.prototype ? ({
-        module: BB
-      } = BB) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const OB = JB();
-      BB instanceof WebAssembly.Module || (BB = new WebAssembly.Module(BB));
-      return kB(new WebAssembly.Instance(BB, OB), BB)
+    function we(ee) {
+      if (void 0 !== We) return We;
+      void 0 !== ee && (Object.getPrototypeOf(ee) === Object.prototype ? ({
+        module: ee
+      } = ee) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const ie = Je();
+      ee instanceof WebAssembly.Module || (ee = new WebAssembly.Module(ee));
+      return Ze(new WebAssembly.Instance(ee, ie), ee)
     }
-    async function KB(BB) {
-      if (void 0 !== UB) return UB;
-      void 0 !== BB && (Object.getPrototypeOf(BB) === Object.prototype ? ({
-        module_or_path: BB
-      } = BB) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const OB = JB();
-      ("string" === typeof BB || "function" === typeof Request && BB instanceof Request || "function" === typeof URL && BB instanceof URL) && (BB = fetch(BB));
+    async function De(ee) {
+      if (void 0 !== We) return We;
+      void 0 !== ee && (Object.getPrototypeOf(ee) === Object.prototype ? ({
+        module_or_path: ee
+      } = ee) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const ie = Je();
+      ("string" === typeof ee || "function" === typeof Request && ee instanceof Request || "function" === typeof URL && ee instanceof URL) && (ee = fetch(ee));
       const {
-        instance: GB,
-        module: YB
-      } = await async function(BB, OB) {
-        if ("function" === typeof Response && BB instanceof Response) {
-          if (!BB.ok) throw new Error(`failed to fetch Wasm: ${BB.status} ${BB.statusText} fetching '${BB.url}'`);
+        instance: He,
+        module: ye
+      } = await async function(ee, ie) {
+        if ("function" === typeof Response && ee instanceof Response) {
+          if (!ee.ok) throw new Error(`failed to fetch Wasm: ${ee.status} ${ee.statusText} fetching '${ee.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(BB, OB)
-          } catch (GB) {
-            if (! function(BB) {
-                switch (BB) {
+            return await WebAssembly.instantiateStreaming(ee, ie)
+          } catch (He) {
+            if (! function(ee) {
+                switch (ee) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(BB.type) || "application/wasm" === BB.headers.get("Content-Type")) throw GB;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", GB)
+              }(ee.type) || "application/wasm" === ee.headers.get("Content-Type")) throw He;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", He)
           }
-          const YB = await BB.arrayBuffer();
-          return await WebAssembly.instantiate(YB, OB)
+          const ye = await ee.arrayBuffer();
+          return await WebAssembly.instantiate(ye, ie)
         } {
-          const GB = await WebAssembly.instantiate(BB, OB);
-          return GB instanceof WebAssembly.Instance ? {
-            instance: GB,
-            module: BB
-          } : GB
+          const He = await WebAssembly.instantiate(ee, ie);
+          return He instanceof WebAssembly.Instance ? {
+            instance: He,
+            module: ee
+          } : He
         }
-      }(await BB, OB);
-      return kB(GB, YB)
+      }(await ee, ie);
+      return Ze(He, ye)
     }
 
-    function uB() {
-      UB = void 0, nB = void 0, lB = null, qB = new Array(1024).fill(void 0), qB.push(void 0, null, !0, !1), ZB = qB.length
+    function Pe() {
+      We = void 0, de = void 0, qe = null, Te = new Array(1024).fill(void 0), Te.push(void 0, null, !0, !1), pe = Te.length
     }
-    var mB = GB(3210),
-      IB = GB(7161);
-    const FB = 2;
-    class iB extends Error {
+    var Ae = He(3101),
+      Ye = He(7251);
+    const Ve = 2;
+    class ae extends Error {
       stage;
-      constructor(BB, OB) {
-        super((0, mB.C)(BB, OB), {
-          cause: OB
-        }), this.name = "BloxdRecorderWasmError", this.stage = BB
+      constructor(ee, ie) {
+        super((0, Ae.A)(ee, ie), {
+          cause: ie
+        }), this.name = "BloxdRecorderWasmError", this.stage = ee
       }
     }
-    let LB = null;
-    const gB = function(BB) {
-      let OB = null,
-        GB = null,
-        YB = null,
-        DB = null;
-      const QB = async () => {
-        let GB = null;
+    let ce = null;
+    const xe = function(ee) {
+      let ie = null,
+        He = null,
+        ye = null,
+        be = null;
+      const Me = async () => {
+        let He = null;
         try {
-          return GB = OB ??= (0, mB.G)(BB.url(), (0, IB.d)(BB.name)), await GB
-        } catch (YB) {
-          throw OB === GB && (OB = null), BB.error((0, mB.M)(YB), YB)
+          return He = ie ??= (0, Ae.B)(ee.url(), (0, Ye.d)(ee.name)), await He
+        } catch (ye) {
+          throw ie === He && (ie = null), ee.error((0, Ae.J)(ye), ye)
         }
       };
       return {
         load: () => {
-          if (DB) return Promise.reject(DB);
-          if (GB) return GB;
-          const OB = (async () => {
-            const OB = await QB();
+          if (be) return Promise.reject(be);
+          if (He) return He;
+          const ie = (async () => {
+            const ie = await Me();
             try {
-              await BB.init(OB)
-            } catch (GB) {
-              throw BB.error("instantiate", GB)
+              await ee.init(ie)
+            } catch (He) {
+              throw ee.error("instantiate", He)
             }
-            return BB.bindings
+            return ee.bindings
           })();
-          GB = OB, YB = OB;
-          const oB = () => {
-            YB === OB && (YB = null)
+          He = ie, ye = ie;
+          const Ke = () => {
+            ye === ie && (ye = null)
           };
-          return OB.then(oB, (() => {
-            oB(), GB === OB && (GB = null)
-          })), OB
+          return ie.then(Ke, (() => {
+            Ke(), He === ie && (He = null)
+          })), ie
         },
         prefetch: async () => {
-          DB || GB || await QB()
+          be || He || await Me()
         },
-        markTrapped: OB => (DB ??= BB.error("call", OB), DB),
+        markTrapped: ie => (be ??= ee.error("call", ie), be),
         unload: () => {
-          DB || !BB.reset || YB || (BB.reset(), GB = null)
+          be || !ee.reset || ye || (ee.reset(), He = null)
         }
       }
     }({
       name: "bloxd_wasm_recorder",
-      url: () => new GB.U(GB(64060)),
-      init: async BB => {
-        await KB({
-          module_or_path: BB
-        }), LB = yB()
+      url: () => new He.U(He(64029)),
+      init: async ee => {
+        await De({
+          module_or_path: ee
+        }), ce = Fe()
       },
-      bindings: YB,
-      error: (BB, OB) => new iB(BB, OB),
+      bindings: ye,
+      error: (ee, ie) => new ae(ee, ie),
       reset: () => {
-        uB(), LB = null
+        Pe(), ce = null
       }
     });
 
-    function rB() {
-      return gB.load()
+    function Le() {
+      return xe.load()
     }
 
-    function XB() {
-      return gB.prefetch()
+    function Ce() {
+      return xe.prefetch()
     }
 
-    function wB(BB) {
-      return gB.markTrapped(BB)
+    function ve(ee) {
+      return xe.markTrapped(ee)
     }
 
-    function EB() {
-      gB.unload()
+    function ue() {
+      xe.unload()
     }
 
-    function cB() {
-      return LB?.buffer.byteLength ?? 0
+    function me() {
+      return ce?.buffer.byteLength ?? 0
     }
   },
-  7161: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
+  7251: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke
     });
-    var YB = GB(3210);
-    const DB = {
-      bloxd_wasm: () => "bbd4532b4204ac6b037d21981a0077e27c49bf77bad5ade13596319f1c6101a5",
-      bloxd_wasm_client: () => "8365f73c3472844058a4a0f574b2102c245aef505acbb602a81be3847509c8fa",
-      bloxd_wasm_workers: () => "8409ee2ec92a1f5bf3cf7df6088eeb4c89a7f9ab0b6c537ab5e6bee5e1c85a52",
-      bloxd_wasm_models: () => "4297705d02ef7091b212436b1b1d90f181427336ab1bf97d3c1a2eebcb00ef44",
-      bloxd_wasm_webgpu: () => "feb1e82520617426b733fd3101371d0a4d1be5eea8eb5f7115ad8b481c5ecc2a",
-      bloxd_wasm_webgl: () => "ccc8a64ee7a944567fefa835e06af6da6175cc2ce9d8d4fb5fc2acb63861821b",
-      bloxd_wasm_webgl1: () => "ef3b6328394821ae9f35e9d6eb203b2d9872f6911c2948b8b5bd2bd784af58be",
-      bloxd_wasm_replay: () => "e6bfd69259d4961ba1c2eff287fb0493dd998b3af1045ea9988589f9c1c784a6",
-      bloxd_wasm_recorder: () => "61e54a37d20be582fb8a73e1f48e79e660cbedc06e1fc696d3d52ad467693eb7",
-      bloxd_wasm_anim: () => "412a9ead222a90865e84867e83bc25acfd52a0e1c584c793e1f272639ce5dc2c",
-      bloxd_wasm_textures: () => "43d7ae101efe7b39af19b5e650a2896a40d167bca827906978d39975a015e416",
-      bloxd_wasm_shader_pack: () => "072b43f08a8ed6ea1336897ed9d7881ce755636d8b8a8f34eaa208a897665b42"
+    var ye = He(3101);
+    const be = {
+      bloxd_wasm: () => "e02d54b065b2f499b180e1b3347d16df55a2947d0e605d2078a3d3b6da48d9a9",
+      bloxd_wasm_client: () => "c679f6743194014168c148d06b29ff43ac2ebd65af96551ab04742237da2cbc0",
+      bloxd_wasm_workers: () => "64996202cfa4b1e69476b5072e56b0cfcea62edff120e603bbcded9c0cc2f2b2",
+      bloxd_wasm_models: () => "d8940e8e7ccbe7fea2cc7bbf2297c0d75ddbf7e4f7faf3d9bb2ad0765fbba5c2",
+      bloxd_wasm_webgpu: () => "cf5aebafb7e2919918851e5ade65769e47a6978ba139ea29c093aa7d03105200",
+      bloxd_wasm_webgl: () => "8ae617ef40b6df6e9c6b2b4fb13fbb620e731d320ec11ddc75acee07da832d88",
+      bloxd_wasm_webgl1: () => "5541e97c52b53f4d16d1e55f9d8eb127812f263b741e67830d3bb080322b1915",
+      bloxd_wasm_replay: () => "fa06c4ee5e806830b3ad4c2e2323335346c04bf67f500d15ce0c53d3a6cad80e",
+      bloxd_wasm_recorder: () => "f6eb834fb863f1cd66bacc3bb3d9505f0a66acb7d26cea69ffc0ae9f1664e920",
+      bloxd_wasm_anim: () => "b7f47661c5c9230379971e76cc8f09962d7323de4ff12c8fdf43c1fd62033f90",
+      bloxd_wasm_textures: () => "5c62f6a16c856ae74984e597d42471c5a63fb99862f370b47f78d95328e7a101",
+      bloxd_wasm_shader_pack: () => "e3e6a3571f741530e11f118b8afcc85da15081a89450db4b464665c2ed09dc09"
     };
-    var QB = GB(5165);
+    var Me = He(5153);
 
-    function oB(BB) {
-      const OB = Object.prototype.hasOwnProperty.call(DB, BB) ? DB[BB]() : void 0;
-      if (void 0 !== OB) return {
-        sha256: OB,
-        onMismatch: QB.s
+    function Ke(ee) {
+      const ie = Object.prototype.hasOwnProperty.call(be, ee) ? be[ee]() : void 0;
+      if (void 0 !== ie) return {
+        sha256: ie,
+        onMismatch: Me.B
       };
-      throw new YB.g(`${BB} has no release digest, so this build refuses it`)
+      throw new ye.i(`${ee} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

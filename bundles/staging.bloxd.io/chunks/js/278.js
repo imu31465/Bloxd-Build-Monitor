@@ -1,78 +1,78 @@
 export const id = 278;
 export const ids = [278];
 export const modules = {
-  40812: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      playDocsSound: () => yB
+  40891: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      playDocsSound: () => Fe
     });
-    var YB = GB(5353),
-      DB = GB(37436),
-      QB = GB(1186),
-      oB = GB(37443);
-    const jB = new Map;
+    var ye = He(5338),
+      be = He(37578),
+      Me = He(1141),
+      Ke = He(37584);
+    const Ue = new Map;
 
-    function yB(BB, OB, GB, yB, JB) {
-      let MB, PB = 0;
-      if (OB) MB = new YB.Howl({
-        src: [`${QB.clientSideServerUrls.staticUrl}/sounds/music/${BB}.mp3`],
+    function Fe(ee, ie, He, Fe, Je) {
+      let oe, Re = 0;
+      if (ie) oe = new ye.Howl({
+        src: [`${Me.clientSideServerUrls.staticUrl}/sounds/music/${ee}.mp3`],
         html5: !0,
-        volume: GB
+        volume: He
       });
       else {
-        const OB = (0, DB.t)(BB);
-        PB = OB.ms / 1e3, MB = jB.get(BB), MB || (MB = new YB.Howl({
-          src: [...OB.src],
+        const ie = (0, be.s)(ee);
+        Re = ie.ms / 1e3, oe = Ue.get(ee), oe || (oe = new ye.Howl({
+          src: [...ie.src],
           volume: 1
-        }), jB.set(BB, MB))
+        }), Ue.set(ee, oe))
       }
-      const zB = OB ? MB.play() : MB.play(oB.d);
-      MB.volume(GB, zB), yB > 0 && MB.seek(yB, zB);
-      const lB = () => {
-        const BB = MB.duration();
-        return OB || BB > 0 ? BB : PB
+      const ke = ie ? oe.play() : oe.play(Ke.b);
+      oe.volume(He, ke), Fe > 0 && oe.seek(Fe, ke);
+      const qe = () => {
+        const ee = oe.duration();
+        return ie || ee > 0 ? ee : Re
       };
-      let pB = !1;
-      const qB = BB => {
-          pB || (pB = !0, MB.off("play", ZB, zB), MB.off("end", NB, zB), MB.off("loaderror", WB), MB.off("playerror", RB, zB), OB && MB.unload(), JB.onEnd(BB))
+      let fe = !1;
+      const Te = ee => {
+          fe || (fe = !0, oe.off("play", pe, ke), oe.off("end", Xe, ke), oe.off("loaderror", Be), oe.off("playerror", ze, ke), ie && oe.unload(), Je.onEnd(ee))
         },
-        ZB = () => {
-          JB.onPlay(lB())
+        pe = () => {
+          Je.onPlay(qe())
         },
-        NB = () => {
-          qB(!1)
+        Xe = () => {
+          Te(!1)
         },
-        RB = (OB, GB) => {
-          console.error(`Could not play docs sound ${BB}`, GB), qB(!0)
+        ze = (ie, He) => {
+          console.error(`Could not play docs sound ${ee}`, He), Te(!0)
         },
-        WB = (GB, YB) => {
-          OB || jB.get(BB) !== MB || (jB.delete(BB), MB.unload()), RB(GB, YB)
+        Be = (He, ye) => {
+          ie || Ue.get(ee) !== oe || (Ue.delete(ee), oe.unload()), ze(He, ye)
         };
-      return MB.on("play", ZB, zB), MB.once("end", NB, zB), MB.once("loaderror", WB), MB.once("playerror", RB, zB), {
+      return oe.on("play", pe, ke), oe.once("end", Xe, ke), oe.once("loaderror", Be), oe.once("playerror", ze, ke), {
         pause: () => {
-          MB.pause(zB)
+          oe.pause(ke)
         },
         resume: () => {
-          MB.play(zB)
+          oe.play(ke)
         },
-        seek: BB => {
-          const OB = lB(),
-            GB = Math.max(BB, 0);
-          MB.seek(OB > 0 ? Math.min(GB, OB) : GB, zB)
+        seek: ee => {
+          const ie = qe(),
+            He = Math.max(ee, 0);
+          oe.seek(ie > 0 ? Math.min(He, ie) : He, ke)
         },
-        pR: () => {
-          const BB = MB.seek(zB);
-          return "number" === typeof BB ? Math.max(0, BB) : 0
+        pE: () => {
+          const ee = oe.seek(ke);
+          return "number" === typeof ee ? Math.max(0, ee) : 0
         },
-        getDuration: lB,
-        setVolume: BB => {
-          MB.volume(BB, zB)
+        getDuration: qe,
+        setVolume: ee => {
+          oe.volume(ee, ke)
         },
         stop: () => {
-          pB || (MB.stop(zB), qB(!1))
+          fe || (oe.stop(ke), Te(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

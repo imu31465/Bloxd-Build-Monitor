@@ -1,167 +1,167 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  5177: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      LEAVE_POINTER_MARGIN_PX: () => oB,
-      RECHECK_MS: () => QB,
-      iframeHost: () => MB,
-      isNear: () => qB,
-      leaveCoverLine: () => zB,
-      overlaps: () => pB,
-      resetLeaveCoverDebugForTest: () => RB,
-      startLeaveCoverDebug: () => AB,
-      startLeaveCoverProbe: () => WB,
-      whereIs: () => PB
+  5166: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      LEAVE_POINTER_MARGIN_PX: () => Ke,
+      RECHECK_MS: () => Me,
+      iframeHost: () => oe,
+      isNear: () => Te,
+      leaveCoverLine: () => ke,
+      overlaps: () => fe,
+      resetLeaveCoverDebugForTest: () => ze,
+      startLeaveCoverDebug: () => Ee,
+      startLeaveCoverProbe: () => Be,
+      whereIs: () => Re
     });
-    var YB = GB(5181),
-      DB = GB(3136);
-    const QB = 2e3,
-      oB = 32,
-      jB = 80,
-      yB = ".EverythingMenuBannerDiv";
+    var ye = He(5175),
+      be = He(3037);
+    const Me = 2e3,
+      Ke = 32,
+      Ue = 80,
+      Fe = ".EverythingMenuBannerDiv";
 
-    function JB(BB) {
-      const OB = BB.trim().replace(/[\s=]+/g, ".").slice(0, jB);
-      return "" === OB ? "-" : OB
+    function Je(ee) {
+      const ie = ee.trim().replace(/[\s=]+/g, ".").slice(0, Ue);
+      return "" === ie ? "-" : ie
     }
 
-    function MB(BB, OB) {
-      const GB = BB.getAttribute("src");
-      if (null === GB || "" === GB.trim()) return "none";
+    function oe(ee, ie) {
+      const He = ee.getAttribute("src");
+      if (null === He || "" === He.trim()) return "none";
       try {
-        const BB = new URL(GB, OB);
-        return "http:" === BB.protocol || "https:" === BB.protocol ? BB.hostname : BB.protocol.replace(":", "")
+        const ee = new URL(He, ie);
+        return "http:" === ee.protocol || "https:" === ee.protocol ? ee.hostname : ee.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function PB(BB, OB) {
-      return null !== BB.closest(yB) ? "banner" : null !== OB && OB.contains(BB) ? "app" : "body"
+    function Re(ee, ie) {
+      return null !== ee.closest(Fe) ? "banner" : null !== ie && ie.contains(ee) ? "app" : "body"
     }
 
-    function zB(BB, OB, GB, YB) {
-      var DB, QB, oB, jB;
-      if (null === BB || BB === OB || OB.contains(BB)) return null;
-      const yB = null === (DB = BB.ownerDocument.defaultView) || void 0 === DB ? void 0 : DB.getComputedStyle(BB),
-        zB = BB.getBoundingClientRect();
-      return `leave covered ${[["trigger",YB],["where",PB(BB,GB)],["tag",BB.tagName.toLowerCase()],["id",JB(BB.id)],["class",JB(null!==(QB=BB.getAttribute("class"))&&void 0!==QB?QB:"")],["z",JB(null!==(oB=null===yB||void 0===yB?void 0:yB.zIndex)&&void 0!==oB?oB:"")],["position",JB(null!==(jB=null===yB||void 0===yB?void 0:yB.position)&&void 0!==jB?jB:"")],["size",`${Math.round(zB.width)}x${Math.round(zB.height)}`],["iframe","IFRAME"===BB.tagName?JB(MB(BB,BB.ownerDocument.baseURI)):"-"]].map((BB=>{let[OB,GB]=BB;return`${OB}=${GB}`})).join(" ")}`
+    function ke(ee, ie, He, ye) {
+      var be, Me, Ke, Ue;
+      if (null === ee || ee === ie || ie.contains(ee)) return null;
+      const Fe = null === (be = ee.ownerDocument.defaultView) || void 0 === be ? void 0 : be.getComputedStyle(ee),
+        ke = ee.getBoundingClientRect();
+      return `leave covered ${[["trigger",ye],["where",Re(ee,He)],["tag",ee.tagName.toLowerCase()],["id",Je(ee.id)],["class",Je(null!==(Me=ee.getAttribute("class"))&&void 0!==Me?Me:"")],["z",Je(null!==(Ke=null===Fe||void 0===Fe?void 0:Fe.zIndex)&&void 0!==Ke?Ke:"")],["position",Je(null!==(Ue=null===Fe||void 0===Fe?void 0:Fe.position)&&void 0!==Ue?Ue:"")],["size",`${Math.round(ke.width)}x${Math.round(ke.height)}`],["iframe","IFRAME"===ee.tagName?Je(oe(ee,ee.ownerDocument.baseURI)):"-"]].map((ee=>{let[ie,He]=ee;return`${ie}=${He}`})).join(" ")}`
     }
 
-    function lB(BB) {
-      const OB = BB.getBoundingClientRect();
-      return 0 === OB.width || 0 === OB.height ? null : {
-        x: OB.left + OB.width / 2,
-        y: OB.top + OB.height / 2
+    function qe(ee) {
+      const ie = ee.getBoundingClientRect();
+      return 0 === ie.width || 0 === ie.height ? null : {
+        x: ie.left + ie.width / 2,
+        y: ie.top + ie.height / 2
       }
     }
 
-    function pB(BB, OB) {
-      const GB = BB.getBoundingClientRect(),
-        YB = OB.getBoundingClientRect();
-      return Math.max(GB.left, YB.left) < Math.min(GB.right, YB.right) && Math.max(GB.top, YB.top) < Math.min(GB.bottom, YB.bottom)
+    function fe(ee, ie) {
+      const He = ee.getBoundingClientRect(),
+        ye = ie.getBoundingClientRect();
+      return Math.max(He.left, ye.left) < Math.min(He.right, ye.right) && Math.max(He.top, ye.top) < Math.min(He.bottom, ye.bottom)
     }
 
-    function qB(BB, OB, GB, YB) {
-      const DB = BB.getBoundingClientRect();
-      return OB >= DB.left - YB && OB <= DB.right + YB && GB >= DB.top - YB && GB <= DB.bottom + YB
+    function Te(ee, ie, He, ye) {
+      const be = ee.getBoundingClientRect();
+      return ie >= be.left - ye && ie <= be.right + ye && He >= be.top - ye && He <= be.bottom + ye
     }
 
-    function ZB(BB) {
-      (0, DB.m)("leavecover", BB)
+    function pe(ee) {
+      (0, be.m)("leavecover", ee)
     }
-    const NB = new Set;
+    const Xe = new Set;
 
-    function RB() {
-      NB.clear()
+    function ze() {
+      Xe.clear()
     }
 
-    function WB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZB;
-      const GB = BB.ownerDocument,
-        YB = GB.defaultView;
-      if (null === YB) return () => {};
-      const DB = (BB, GB) => {
-          null === BB || NB.has(GB) || (NB.add(GB), OB(BB))
+    function Be(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pe;
+      const He = ee.ownerDocument,
+        ye = He.defaultView;
+      if (null === ye) return () => {};
+      const be = (ee, He) => {
+          null === ee || Xe.has(He) || (Xe.add(He), ie(ee))
         },
-        jB = OB => {
-          const YB = BB.isConnected ? lB(BB) : null;
-          if (null === YB) return;
-          const QB = GB.elementFromPoint(YB.x, YB.y);
-          if (null !== QB) {
-            const YB = GB.getElementById("root");
-            DB(zB(QB, BB, YB, OB), PB(QB, YB))
+        Ue = ie => {
+          const ye = ee.isConnected ? qe(ee) : null;
+          if (null === ye) return;
+          const Me = He.elementFromPoint(ye.x, ye.y);
+          if (null !== Me) {
+            const ye = He.getElementById("root");
+            be(ke(Me, ee, ye, ie), Re(Me, ye))
           }
         };
-      let yB = null;
-      const JB = BB => {
-        yB = {
-          x: BB.clientX,
-          y: BB.clientY
+      let Fe = null;
+      const Je = ee => {
+        Fe = {
+          x: ee.clientX,
+          y: ee.clientY
         }
       };
-      let MB = null;
-      const RB = () => {
-          MB = setTimeout((() => {
-            MB = null;
-            const OB = GB.activeElement;
-            if ("IFRAME" !== (null === OB || void 0 === OB ? void 0 : OB.tagName) || !BB.isConnected) return;
-            const YB = lB(BB),
-              QB = null !== YB && qB(OB, YB.x, YB.y, 0),
-              jB = yB,
-              JB = null !== jB && qB(BB, jB.x, jB.y, oB);
-            if (pB(OB, BB) && (QB || JB)) {
-              const YB = GB.getElementById("root");
-              DB(zB(OB, BB, YB, "blurIframe"), PB(OB, YB))
+      let oe = null;
+      const ze = () => {
+          oe = setTimeout((() => {
+            oe = null;
+            const ie = He.activeElement;
+            if ("IFRAME" !== (null === ie || void 0 === ie ? void 0 : ie.tagName) || !ee.isConnected) return;
+            const ye = qe(ee),
+              Me = null !== ye && Te(ie, ye.x, ye.y, 0),
+              Ue = Fe,
+              Je = null !== Ue && Te(ee, Ue.x, Ue.y, Ke);
+            if (fe(ie, ee) && (Me || Je)) {
+              const ye = He.getElementById("root");
+              be(ke(ie, ee, ye, "blurIframe"), Re(ie, ye))
             }
           }), 0)
         },
-        WB = YB.requestAnimationFrame((() => {
-          jB("open")
+        Be = ye.requestAnimationFrame((() => {
+          Ue("open")
         })),
-        AB = setTimeout((() => {
-          jB("recheck")
-        }), QB);
-      return YB.addEventListener("pointermove", JB, {
+        Ee = setTimeout((() => {
+          Ue("recheck")
+        }), Me);
+      return ye.addEventListener("pointermove", Je, {
         capture: !0,
         passive: !0
-      }), YB.addEventListener("pointerdown", JB, {
+      }), ye.addEventListener("pointerdown", Je, {
         capture: !0,
         passive: !0
-      }), YB.addEventListener("blur", RB), () => {
-        YB.cancelAnimationFrame(WB), clearTimeout(AB), null !== MB && clearTimeout(MB), YB.removeEventListener("pointermove", JB, {
+      }), ye.addEventListener("blur", ze), () => {
+        ye.cancelAnimationFrame(Be), clearTimeout(Ee), null !== oe && clearTimeout(oe), ye.removeEventListener("pointermove", Je, {
           capture: !0
-        }), YB.removeEventListener("pointerdown", JB, {
+        }), ye.removeEventListener("pointerdown", Je, {
           capture: !0
-        }), YB.removeEventListener("blur", RB)
+        }), ye.removeEventListener("blur", ze)
       }
     }
 
-    function AB() {
-      (0, YB.k)(WB)
+    function Ee() {
+      (0, ye.i)(Be)
     }
   },
-  5181: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB,
-      g: () => QB,
-      k: () => DB
+  5175: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      e: () => Me,
+      i: () => be
     });
-    let YB = null;
+    let ye = null;
 
-    function DB(BB) {
-      YB = BB
+    function be(ee) {
+      ye = ee
     }
 
-    function QB() {
-      return YB
+    function Me() {
+      return ye
     }
 
-    function oB(BB) {
-      return "bloxd" === BB.site && !BB.isMobileApp && !BB.isTouchScreen
+    function Ke(ee) {
+      return "bloxd" === ee.site && !ee.isMobileApp && !ee.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

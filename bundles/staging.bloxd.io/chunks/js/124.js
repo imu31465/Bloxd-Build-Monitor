@@ -1,36 +1,36 @@
 export const id = 124;
 export const ids = [124];
 export const modules = {
-  5473: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => DB
+  5491: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be
     });
-    var YB = GB(1186);
-    async function DB(BB) {
-      const OB = await fetch(`${YB.clientSideServerUrls.s3Url}/${BB}`, {
+    var ye = He(1141);
+    async function be(ee) {
+      const ie = await fetch(`${ye.clientSideServerUrls.s3Url}/${ee}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === OB.status || 403 === OB.status) return null;
-      if (!OB.ok) throw new Error(`Failed to download the texture pack (${OB.status})`);
-      return await OB.json()
+      if (404 === ie.status || 403 === ie.status) return null;
+      if (!ie.ok) throw new Error(`Failed to download the texture pack (${ie.status})`);
+      return await ie.json()
     }
   },
-  42056: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      gamePackSource: () => QB
+  42130: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      gamePackSource: () => Me
     });
-    var YB = GB(5473),
-      DB = GB(1540);
+    var ye = He(5491),
+      be = He(1490);
 
-    function QB(BB) {
+    function Me(ee) {
       return {
-        packKey: async OB => (await DB.b.getGame(BB, OB, !0)).customTexturePackKey,
-        fetchPack: YB.e
+        packKey: async ie => (await be.b.getGame(ee, ie, !0)).customTexturePackKey,
+        fetchPack: ye.e
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

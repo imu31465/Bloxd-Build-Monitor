@@ -1,30 +1,30 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  34867: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var ye = He(4931),
+      be = He(4937);
 
-    function QB(BB) {
+    function Me(ee) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: ie,
+        showing: He,
+        globallyUniqueKey: Me,
+        alwaysMountChildren: Ke = !1,
+        doGameplayStartStopOnShow: Ue = !0,
+        keepsMovement: Fe = !1
+      } = ee;
+      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
     }
   },
-  37361: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB
+  37509: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be
     });
-    const YB = [{
+    const ye = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -41,58 +41,58 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function DB(BB, OB, GB) {
-      const DB = Math.abs(BB - OB),
-        QB = Date.now() - GB;
-      for (const oB of YB)
-        if (BB < oB.maxDist) return DB >= oB.hardUpdateDist || QB > oB.timeBetweenSoftChecks && DB >= oB.softUpdateDist;
+    function be(ee, ie, He) {
+      const be = Math.abs(ee - ie),
+        Me = Date.now() - He;
+      for (const Ke of ye)
+        if (ee < Ke.maxDist) return be >= Ke.hardUpdateDist || Me > Ke.timeBetweenSoftChecks && be >= Ke.softUpdateDist;
       return !1
     }
   },
-  39151: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      g: () => jB
+  39289: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Ke,
+      f: () => Ue
     });
-    var YB = GB(353),
-      DB = GB(34813),
-      QB = GB(3708);
+    var ye = He(347),
+      be = He(34897),
+      Me = He(3608);
 
-    function oB(BB) {
-      const OB = (0, QB.c)(BB);
-      return (0, YB.bc)(BB, void 0 === OB ? void 0 : (0, DB.displayNameOf)(OB))
+    function Ke(ee) {
+      const ie = (0, Me.c)(ee);
+      return (0, ye.Yb)(ee, void 0 === ie ? void 0 : (0, be.displayNameOf)(ie))
     }
 
-    function jB(BB, OB) {
-      return BB(oB(OB))
+    function Ue(ee, ie) {
+      return ee(Ke(ie))
     }
   },
-  39154: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      f: () => QB
+  39291: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      g: () => Me
     });
-    const YB = new WeakMap;
+    const ye = new WeakMap;
 
-    function DB(BB) {
-      let OB = YB.get(BB);
-      return OB || (OB = {
-        hidden: BB.hidden,
+    function be(ee) {
+      let ie = ye.get(ee);
+      return ie || (ie = {
+        hidden: ee.hidden,
         x: NaN,
         y: NaN
-      }, YB.set(BB, OB)), OB
+      }, ye.set(ee, ie)), ie
     }
 
-    function QB(BB, OB) {
-      const GB = DB(BB);
-      GB.hidden !== OB && (GB.hidden = OB, BB.hidden = OB)
+    function Me(ee, ie) {
+      const He = be(ee);
+      He.hidden !== ie && (He.hidden = ie, ee.hidden = ie)
     }
 
-    function oB(BB, OB, GB) {
-      const YB = DB(BB);
-      YB.x === OB && YB.y === GB || (YB.x = OB, YB.y = GB, BB.style.translate = `${OB}vw ${GB}vh`)
+    function Ke(ee, ie, He) {
+      const ye = be(ee);
+      ye.x === ie && ye.y === He || (ye.x = ie, ye.y = He, ee.style.translate = `${ie}vw ${He}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

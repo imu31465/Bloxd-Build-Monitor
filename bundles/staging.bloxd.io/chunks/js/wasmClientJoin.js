@@ -1,31 +1,31 @@
 export const id = 69;
 export const ids = [69];
 export const modules = {
-  41630: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB,
-      e: () => MB
+  41734: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => be,
+      f: () => oe
     });
-    const YB = new TextDecoder;
+    const ye = new TextDecoder;
 
-    function DB(BB) {
-      const OB = new QB(BB),
-        GB = OB.value();
-      if (OB.at !== BB.length) throw new Error(`msgpack: ${BB.length-OB.at} bytes after the value`);
-      return GB
+    function be(ee) {
+      const ie = new Me(ee),
+        He = ie.value();
+      if (ie.at !== ee.length) throw new Error(`msgpack: ${ee.length-ie.at} bytes after the value`);
+      return He
     }
-    class QB {
-      constructor(BB) {
-        this.bytes = BB, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(BB.buffer, BB.byteOffset, BB.byteLength)
+    class Me {
+      constructor(ee) {
+        this.bytes = ee, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(ee.buffer, ee.byteOffset, ee.byteLength)
       }
       value() {
-        const BB = this.u8();
-        if (BB <= 127) return BB;
-        if (BB >= 224) return BB - 256;
-        if (BB >= 128 && BB <= 143) return this.map(15 & BB);
-        if (BB >= 144 && BB <= 159) return this.array(15 & BB);
-        if (BB >= 160 && BB <= 191) return this.str(31 & BB);
-        switch (BB) {
+        const ee = this.u8();
+        if (ee <= 127) return ee;
+        if (ee >= 224) return ee - 256;
+        if (ee >= 128 && ee <= 143) return this.map(15 & ee);
+        if (ee >= 144 && ee <= 159) return this.array(15 & ee);
+        if (ee >= 160 && ee <= 191) return this.str(31 & ee);
+        switch (ee) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${BB.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${ee.toString(16)} at ${this.at-1}`)
         }
       }
-      take(BB) {
-        const OB = this.at;
-        if (OB + BB > this.bytes.length) throw new Error(`msgpack: ${BB} bytes past the end at ${OB}`);
-        return this.at = OB + BB, OB
+      take(ee) {
+        const ie = this.at;
+        if (ie + ee > this.bytes.length) throw new Error(`msgpack: ${ee} bytes past the end at ${ie}`);
+        return this.at = ie + ee, ie
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(BB) {
-        const OB = this.take(8);
-        return BB ? this.view.getBigInt64(OB, !1) : this.view.getBigUint64(OB, !1)
+      int64(ee) {
+        const ie = this.take(8);
+        return ee ? this.view.getBigInt64(ie, !1) : this.view.getBigUint64(ie, !1)
       }
-      str(BB) {
-        const OB = this.take(BB),
-          GB = this.bytes;
-        if (BB < 16) {
-          let DB = "";
-          for (let QB = OB; QB < OB + BB; QB++) {
-            const oB = GB[QB];
-            if (oB >= 128) return YB.decode(GB.subarray(OB, OB + BB));
-            DB += String.fromCharCode(oB)
+      str(ee) {
+        const ie = this.take(ee),
+          He = this.bytes;
+        if (ee < 16) {
+          let be = "";
+          for (let Me = ie; Me < ie + ee; Me++) {
+            const Ke = He[Me];
+            if (Ke >= 128) return ye.decode(He.subarray(ie, ie + ee));
+            be += String.fromCharCode(Ke)
           }
-          return DB
+          return be
         }
-        return YB.decode(GB.subarray(OB, OB + BB))
+        return ye.decode(He.subarray(ie, ie + ee))
       }
-      bin(BB) {
-        const OB = this.take(BB);
-        return this.bytes.subarray(OB, OB + BB)
+      bin(ee) {
+        const ie = this.take(ee);
+        return this.bytes.subarray(ie, ie + ee)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(BB) {
+      array(ee) {
         this.enter();
-        const OB = [];
-        for (let GB = 0; GB < BB; GB++) OB.push(this.value());
-        return this.depth--, OB
+        const ie = [];
+        for (let He = 0; He < ee; He++) ie.push(this.value());
+        return this.depth--, ie
       }
-      map(BB) {
+      map(ee) {
         this.enter();
-        const OB = {};
-        for (let GB = 0; GB < BB; GB++) {
-          const BB = this.value(),
-            GB = this.value();
-          OB["__proto__" === BB ? "__proto_" : String(BB)] = GB
+        const ie = {};
+        for (let He = 0; He < ee; He++) {
+          const ee = this.value(),
+            He = this.value();
+          ie["__proto__" === ee ? "__proto_" : String(ee)] = He
         }
-        return this.depth--, OB
+        return this.depth--, ie
       }
-      ext(BB) {
-        const OB = this.view.getInt8(this.take(1)),
-          GB = this.take(BB);
-        if (0 !== OB) {
-          if (-1 === OB) {
-            if (1 === BB) return new Date(NaN);
-            if (4 === BB) return new Date(1e3 * this.view.getUint32(GB, !1));
-            if (8 === BB) {
-              const BB = this.view.getUint32(GB, !1),
-                OB = BB >>> 2,
-                YB = 4294967296 * (3 & BB) + this.view.getUint32(GB + 4, !1);
-              return new Date(1e3 * YB + OB / 1e6)
+      ext(ee) {
+        const ie = this.view.getInt8(this.take(1)),
+          He = this.take(ee);
+        if (0 !== ie) {
+          if (-1 === ie) {
+            if (1 === ee) return new Date(NaN);
+            if (4 === ee) return new Date(1e3 * this.view.getUint32(He, !1));
+            if (8 === ee) {
+              const ee = this.view.getUint32(He, !1),
+                ie = ee >>> 2,
+                ye = 4294967296 * (3 & ee) + this.view.getUint32(He + 4, !1);
+              return new Date(1e3 * ye + ie / 1e6)
             }
-            if (12 === BB) {
-              const BB = this.view.getUint32(GB, !1),
-                OB = 4294967296 * this.view.getInt32(GB + 4, !1) + this.view.getUint32(GB + 8, !1);
-              return new Date(1e3 * OB + BB / 1e6)
+            if (12 === ee) {
+              const ee = this.view.getUint32(He, !1),
+                ie = 4294967296 * this.view.getInt32(He + 4, !1) + this.view.getUint32(He + 8, !1);
+              return new Date(1e3 * ie + ee / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${OB} of ${BB} bytes`)
+          throw new Error(`msgpack: ext type ${ie} of ${ee} bytes`)
         }
       }
     }
-    const oB = new TextEncoder,
-      jB = -(2n ** 63n),
-      yB = 2n ** 63n - 1n,
-      JB = 2n ** 64n - 1n;
+    const Ke = new TextEncoder,
+      Ue = -(2n ** 63n),
+      Fe = 2n ** 63n - 1n,
+      Je = 2n ** 64n - 1n;
 
-    function MB(BB) {
-      const OB = new PB;
-      return OB.value(BB, 0), OB.bytes()
+    function oe(ee) {
+      const ie = new Re;
+      return ie.value(ee, 0), ie.bytes()
     }
-    class PB {
+    class Re {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(BB, OB) {
-        if (OB > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof BB) {
+      value(ee, ie) {
+        if (ie > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof ee) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(BB ? 195 : 194);
+            return void this.u8(ee ? 195 : 194);
           case "number":
-            return void this.number(BB);
+            return void this.number(ee);
           case "bigint":
-            return void this.bigint(BB);
+            return void this.bigint(ee);
           case "string":
-            return void this.string(BB);
+            return void this.string(ee);
           case "object":
-            if (null === BB) this.u8(192);
-            else if (BB instanceof Uint8Array) this.head(BB.length, 196, -1, 197, 198), this.room(BB.length), this.buf.set(BB, this.at), this.at += BB.length;
-            else if (Array.isArray(BB)) {
-              this.head(BB.length, 220, 144, 220, 221);
-              for (const GB of BB) this.value(GB, OB + 1)
+            if (null === ee) this.u8(192);
+            else if (ee instanceof Uint8Array) this.head(ee.length, 196, -1, 197, 198), this.room(ee.length), this.buf.set(ee, this.at), this.at += ee.length;
+            else if (Array.isArray(ee)) {
+              this.head(ee.length, 220, 144, 220, 221);
+              for (const He of ee) this.value(He, ie + 1)
             } else {
-              var GB, YB;
-              if (Object.getPrototypeOf(BB) !== Object.prototype && null !== Object.getPrototypeOf(BB)) throw new Error(`msgpack: can't encode a ${null!==(GB=null===(YB=BB.constructor)||void 0===YB?void 0:YB.name)&&void 0!==GB?GB:"object"}`);
+              var He, ye;
+              if (Object.getPrototypeOf(ee) !== Object.prototype && null !== Object.getPrototypeOf(ee)) throw new Error(`msgpack: can't encode a ${null!==(He=null===(ye=ee.constructor)||void 0===ye?void 0:ye.name)&&void 0!==He?He:"object"}`);
               {
-                const GB = Object.keys(BB);
-                this.head(GB.length, 222, 128, 222, 223);
-                for (const YB of GB) this.string(YB), this.value(BB[YB], OB + 1)
+                const He = Object.keys(ee);
+                this.head(He.length, 222, 128, 222, 223);
+                for (const ye of He) this.string(ye), this.value(ee[ye], ie + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof BB)
+            throw new Error("msgpack: can't encode a " + typeof ee)
         }
       }
-      number(BB) {
-        Number.isInteger(BB) && BB >= -2147483648 && BB <= 4294967295 ? BB >= 0 ? BB < 128 ? this.u8(BB) : BB < 256 ? (this.u8(204), this.u8(BB)) : BB < 65536 ? (this.u8(205), this.u16(BB)) : (this.u8(206), this.u32(BB)) : BB >= -32 ? this.u8(BB + 256) : BB >= -128 ? (this.u8(208), this.u8(BB + 256)) : BB >= -32768 ? (this.u8(209), this.u16(BB + 65536)) : (this.u8(210), this.u32(BB >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, BB, !1), this.at += 8)
+      number(ee) {
+        Number.isInteger(ee) && ee >= -2147483648 && ee <= 4294967295 ? ee >= 0 ? ee < 128 ? this.u8(ee) : ee < 256 ? (this.u8(204), this.u8(ee)) : ee < 65536 ? (this.u8(205), this.u16(ee)) : (this.u8(206), this.u32(ee)) : ee >= -32 ? this.u8(ee + 256) : ee >= -128 ? (this.u8(208), this.u8(ee + 256)) : ee >= -32768 ? (this.u8(209), this.u16(ee + 65536)) : (this.u8(210), this.u32(ee >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, ee, !1), this.at += 8)
       }
-      bigint(BB) {
-        const OB = BB >= jB && BB <= yB;
-        if (!OB && (BB < 0n || BB > JB)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(OB ? 211 : 207), this.room(8), OB ? this.view.setBigInt64(this.at, BB, !1) : this.view.setBigUint64(this.at, BB, !1), this.at += 8
+      bigint(ee) {
+        const ie = ee >= Ue && ee <= Fe;
+        if (!ie && (ee < 0n || ee > Je)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(ie ? 211 : 207), this.room(8), ie ? this.view.setBigInt64(this.at, ee, !1) : this.view.setBigUint64(this.at, ee, !1), this.at += 8
       }
-      string(BB) {
-        const OB = oB.encode(BB);
-        this.head(OB.length, 217, 160, 218, 219), this.room(OB.length), this.buf.set(OB, this.at), this.at += OB.length
+      string(ee) {
+        const ie = Ke.encode(ee);
+        this.head(ie.length, 217, 160, 218, 219), this.room(ie.length), this.buf.set(ie, this.at), this.at += ie.length
       }
-      head(BB, OB, GB, YB, DB) {
-        GB >= 0 && BB < (160 === GB ? 32 : 16) ? this.u8(GB | BB) : OB !== YB && BB < 256 ? (this.u8(OB), this.u8(BB)) : BB < 65536 ? (this.u8(YB), this.u16(BB)) : (this.u8(DB), this.u32(BB))
+      head(ee, ie, He, ye, be) {
+        He >= 0 && ee < (160 === He ? 32 : 16) ? this.u8(He | ee) : ie !== ye && ee < 256 ? (this.u8(ie), this.u8(ee)) : ee < 65536 ? (this.u8(ye), this.u16(ee)) : (this.u8(be), this.u32(ee))
       }
-      room(BB) {
-        if (this.at + BB <= this.buf.length) return;
-        let OB = 2 * this.buf.length;
-        for (; OB < this.at + BB;) OB *= 2;
-        const GB = new Uint8Array(OB);
-        GB.set(this.buf.subarray(0, this.at)), this.buf = GB, this.view = new DataView(GB.buffer)
+      room(ee) {
+        if (this.at + ee <= this.buf.length) return;
+        let ie = 2 * this.buf.length;
+        for (; ie < this.at + ee;) ie *= 2;
+        const He = new Uint8Array(ie);
+        He.set(this.buf.subarray(0, this.at)), this.buf = He, this.view = new DataView(He.buffer)
       }
-      u8(BB) {
-        this.room(1), this.buf[this.at++] = BB
+      u8(ee) {
+        this.room(1), this.buf[this.at++] = ee
       }
-      u16(BB) {
-        this.room(2), this.view.setUint16(this.at, BB, !1), this.at += 2
+      u16(ee) {
+        this.room(2), this.view.setUint16(this.at, ee, !1), this.at += 2
       }
-      u32(BB) {
-        this.room(4), this.view.setUint32(this.at, BB, !1), this.at += 4
+      u32(ee) {
+        this.room(4), this.view.setUint32(this.at, ee, !1), this.at += 4
       }
     }
   },
-  54057: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      joinRoom: () => PB,
-      leaveHeldSeat: () => NB,
-      resumeRoom: () => lB
+  54258: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      joinRoom: () => Re,
+      leaveHeldSeat: () => Xe,
+      resumeRoom: () => qe
     });
-    var YB = GB(162),
-      DB = GB(1200),
-      QB = GB(37160),
-      oB = GB(41630),
-      jB = GB(5281),
-      yB = GB(41692),
-      JB = GB(41916);
-    const MB = Uint8Array.of(13, ...(0, oB.e)(YB.g));
-    async function PB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var ye = He(153),
+      be = He(1155),
+      Me = He(37286),
+      Ke = He(41734),
+      Ue = He(5271),
+      Fe = He(41782),
+      Je = He(41999);
+    const oe = Uint8Array.of(13, ...(0, Ke.f)(ye.f));
+    async function Re(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await zB(BB, OB, GB)
-      } catch (DB) {
-        var YB;
-        const QB = await (null === (YB = OB.optionsAfterRefusal) || void 0 === YB ? void 0 : YB.call(OB, DB));
-        if (!QB) throw DB;
-        return zB(BB, {
-          ...OB,
-          joinOptions: QB
+        return await ke(ee, ie, He)
+      } catch (be) {
+        var ye;
+        const Me = await (null === (ye = ie.optionsAfterRefusal) || void 0 === ye ? void 0 : ye.call(ie, be));
+        if (!Me) throw be;
+        return ke(ee, {
+          ...ie,
+          joinOptions: Me
         }, {
-          ...GB,
+          ...He,
           early: void 0
         })
       }
     }
-    async function zB(BB, OB, GB) {
-      var YB;
+    async function ke(ee, ie, He) {
+      var ye;
       const {
-        signal: QB
-      } = GB, oB = () => (0, JB.i)(OB.endpoint, OB.roomName, OB.joinOptions, GB), {
-        early: jB
-      } = GB, yB = jB ? null !== (YB = await jB.take(QB)) && void 0 !== YB ? YB : await jB.reserveInstead(oB, QB) : await oB();
-      return (0, DB.r)(QB), ZB(BB, OB.endpoint, yB, GB, !1)
+        signal: Me
+      } = He, Ke = () => (0, Je.g)(ie.endpoint, ie.roomName, ie.joinOptions, He), {
+        early: Ue
+      } = He, Fe = Ue ? null !== (ye = await Ue.take(Me)) && void 0 !== ye ? ye : await Ue.reserveInstead(Ke, Me) : await Ke();
+      return (0, be.r)(Me), pe(ee, ie.endpoint, Fe, He, !1)
     }
-    async function lB(BB, OB, GB, YB) {
-      let QB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const oB = await (0, JB.g)(OB, GB, YB, QB);
-      return (0, DB.r)(QB.signal), ZB(BB, OB, oB, QB, !0)
-    }
-
-    function pB(BB, OB, GB) {
-      const YB = (0, JB.k)(BB, OB);
-      return GB.createSocket ? GB.createSocket(YB) : new WebSocket(YB)
+    async function qe(ee, ie, He, ye) {
+      let Me = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const Ke = await (0, Je.f)(ie, He, ye, Me);
+      return (0, be.r)(Me.signal), pe(ee, ie, Ke, Me, !0)
     }
 
-    function qB(BB, OB, GB) {
-      var YB;
-      let DB = !1;
-      return (null !== (YB = BB.setTimer) && void 0 !== YB ? YB : (BB, OB) => {
-        setTimeout(BB, OB)
+    function fe(ee, ie, He) {
+      const ye = (0, Je.j)(ee, ie);
+      return He.createSocket ? He.createSocket(ye) : new WebSocket(ye)
+    }
+
+    function Te(ee, ie, He) {
+      var ye;
+      let be = !1;
+      return (null !== (ye = ee.setTimer) && void 0 !== ye ? ye : (ee, ie) => {
+        setTimeout(ee, ie)
       })((() => {
-        DB || OB()
-      }), GB), () => {
-        DB = !0
+        be || ie()
+      }), He), () => {
+        be = !0
       }
     }
-    async function ZB(BB, OB, GB, YB, oB) {
+    async function pe(ee, ie, He, ye, Ke) {
       const {
-        signal: JB
-      } = YB, PB = pB(OB, GB, YB);
-      let zB = !1,
-        lB = null,
-        ZB = null;
-      const NB = [];
-      let RB = !1,
-        WB = !1;
-      const AB = BB => {
-        var OB;
-        WB = !0, null === (OB = ZB) || void 0 === OB || OB.reject(new yB.d("the room socket closed before the resume", "closed", BB.code))
+        signal: Je
+      } = ye, Re = fe(ie, He, ye);
+      let ke = !1,
+        qe = null,
+        pe = null;
+      const Xe = [];
+      let ze = !1,
+        Be = !1;
+      const Ee = ee => {
+        var ie;
+        Be = !0, null === (ie = pe) || void 0 === ie || ie.reject(new Fe.c("the room socket closed before the resume", "closed", ee.code))
       };
-      oB && PB.addEventListener("close", AB);
-      const VB = (BB, OB) => {
-          var GB;
-          if (BB === (oB ? jB.E.Resumed : jB.E.Activated)) RB = !0, null === (GB = ZB) || void 0 === GB || GB.resolve();
-          else if (!oB || BB !== jB.E.ResumeRefused && BB !== jB.E.Activated)
-            if (BB === jB.E.Error) {
-              var YB;
-              null === (YB = ZB) || void 0 === YB || YB.reject(new yB.d(`the room refused the join (code ${OB})`, "roomError", OB))
+      Ke && Re.addEventListener("close", Ee);
+      const ge = (ee, ie) => {
+          var He;
+          if (ee === (Ke ? Ue.x.Resumed : Ue.x.Activated)) ze = !0, null === (He = pe) || void 0 === He || He.resolve();
+          else if (!Ke || ee !== Ue.x.ResumeRefused && ee !== Ue.x.Activated)
+            if (ee === Ue.x.Error) {
+              var ye;
+              null === (ye = pe) || void 0 === ye || ye.reject(new Fe.c(`the room refused the join (code ${ie})`, "roomError", ie))
             } else {
-              var DB;
-              null === (DB = ZB) || void 0 === DB || DB.reject(new yB.d("the room socket closed before the join", "closed", OB, null, zB))
+              var be;
+              null === (be = pe) || void 0 === be || be.reject(new Fe.c("the room socket closed before the join", "closed", ie, null, ke))
             }
           else {
-            var QB;
-            null === (QB = ZB) || void 0 === QB || QB.reject(new yB.m("the core refused the resume: it held no game"))
+            var Me;
+            null === (Me = pe) || void 0 === Me || Me.reject(new Fe.k("the core refused the resume: it held no game"))
           }
         },
-        SB = BB.onConnection(((BB, OB, GB) => {
-          null === lB ? NB.push([BB, OB, GB]) : BB === lB && VB(OB, GB)
+        Oe = ee.onConnection(((ee, ie, He) => {
+          null === qe ? Xe.push([ee, ie, He]) : ee === qe && ge(ie, He)
         })),
-        nB = BB.attachSocket(PB);
-      if (null === nB) throw SB(), new yB.d("the core could not take the room socket", "attach");
-      var UB;
-      (lB = nB, oB) && (null === (UB = YB.onAttached) || void 0 === UB || UB.call(YB));
-      const fB = oB ? null : new QB.c((() => {
-        var OB, GB;
-        null === (OB = BB.flushNet) || void 0 === OB || OB.call(BB), null === (GB = ZB) || void 0 === GB || GB.reject(new QB.d(zB ? "socket" : "socket_unopened"))
+        de = ee.attachSocket(Re);
+      if (null === de) throw Oe(), new Fe.c("the core could not take the room socket", "attach");
+      var We;
+      (qe = de, Ke) && (null === (We = ye.onAttached) || void 0 === We || We.call(ye));
+      const te = Ke ? null : new Me.c((() => {
+        var ie, He;
+        null === (ie = ee.flushNet) || void 0 === ie || ie.call(ee), null === (He = pe) || void 0 === He || He.reject(new Me.d(ke ? "socket" : "socket_unopened"))
       }));
-      PB.addEventListener("open", (() => {
-        zB = !0, null === fB || void 0 === fB || fB.socketOpened()
+      Re.addEventListener("open", (() => {
+        ke = !0, null === te || void 0 === te || te.socketOpened()
       }), {
         once: !0
       });
-      let kB = !1;
-      const dB = () => {
-        if (kB) return;
-        if (kB = !0, SB(), oB && (PB.removeEventListener("close", AB), !RB && !(null !== JB && void 0 !== JB && JB.aborted && (0, DB.i)(JB) instanceof yB.o))) return void(WB || BB.closeSocket(nB));
-        RB && BB.leaveRoom(nB) || BB.sendRaw(nB, yB.h) ? qB(YB, (() => {
-          BB.closeSocket(nB)
-        }), yB.f) : BB.closeSocket(nB)
+      let Ze = !1;
+      const we = () => {
+        if (Ze) return;
+        if (Ze = !0, Oe(), Ke && (Re.removeEventListener("close", Ee), !ze && !(null !== Je && void 0 !== Je && Je.aborted && (0, be.f)(Je) instanceof Fe.o))) return void(Be || ee.closeSocket(de));
+        ze && ee.leaveRoom(de) || ee.sendRaw(de, Fe.f) ? Te(ye, (() => {
+          ee.closeSocket(de)
+        }), Fe.d) : ee.closeSocket(de)
       };
       try {
-        await new Promise(((OB, GB) => {
-          const YB = () => {
-            var OB;
-            oB && (null === (OB = BB.flushNet) || void 0 === OB || OB.call(BB));
-            GB((0, DB.i)(JB))
+        await new Promise(((ie, He) => {
+          const ye = () => {
+            var ie;
+            Ke && (null === (ie = ee.flushNet) || void 0 === ie || ie.call(ee));
+            He((0, be.f)(Je))
           };
-          null === JB || void 0 === JB || JB.addEventListener("abort", YB, {
+          null === Je || void 0 === Je || Je.addEventListener("abort", ye, {
             once: !0
-          }), ZB = {
+          }), pe = {
             resolve: () => {
-              null === JB || void 0 === JB || JB.removeEventListener("abort", YB), OB()
+              null === Je || void 0 === Je || Je.removeEventListener("abort", ye), ie()
             },
-            reject: BB => {
-              null === JB || void 0 === JB || JB.removeEventListener("abort", YB), GB(BB)
+            reject: ee => {
+              null === Je || void 0 === Je || Je.removeEventListener("abort", ye), He(ee)
             }
           };
-          for (const [BB, DB, QB] of NB.splice(0)) BB === lB && VB(DB, QB)
-        })), null === fB || void 0 === fB || fB.answered()
-      } catch (KB) {
-        throw dB(), KB
+          for (const [ee, be, Me] of Xe.splice(0)) ee === qe && ge(be, Me)
+        })), null === te || void 0 === te || te.answered()
+      } catch (De) {
+        throw we(), De
       } finally {
-        null === fB || void 0 === fB || fB.stop()
+        null === te || void 0 === te || te.stop()
       }
-      oB && PB.removeEventListener("close", AB);
+      Ke && Re.removeEventListener("close", Ee);
       return {
-        conn: nB,
-        seat: GB,
-        leave: dB,
+        conn: de,
+        seat: He,
+        leave: we,
         detach: () => {
-          kB = !0, SB()
+          Ze = !0, Oe()
         },
-        endJoinAd: () => !kB && BB.sendRaw(nB, MB)
+        endJoinAd: () => !Ze && ee.sendRaw(de, oe)
       }
     }
-    async function NB(BB, OB, GB) {
-      let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function Xe(ee, ie, He) {
+      let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const DB = pB(BB, await (0, JB.g)(BB, OB, GB, YB), YB);
-        DB.binaryType = "arraybuffer", await new Promise((BB => {
-          const OB = qB(YB, (() => {
-            DB.close(), BB()
-          }), yB.f);
-          DB.addEventListener("open", (() => {
-            DB.send(yB.h)
-          })), DB.addEventListener("close", (() => {
-            OB(), BB()
+        const be = fe(ee, await (0, Je.f)(ee, ie, He, ye), ye);
+        be.binaryType = "arraybuffer", await new Promise((ee => {
+          const ie = Te(ye, (() => {
+            be.close(), ee()
+          }), Fe.d);
+          be.addEventListener("open", (() => {
+            be.send(Fe.f)
+          })), be.addEventListener("close", (() => {
+            ie(), ee()
           }))
         }))
-      } catch (DB) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", DB)
+      } catch (be) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", be)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

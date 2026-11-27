@@ -1,156 +1,156 @@
 export const id = 207;
 export const ids = [207];
 export const modules = {
-  41624: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => yB,
-      h: () => jB,
-      l: () => oB
+  41728: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Fe,
+      g: () => Ue,
+      h: () => Ke
     });
-    var YB = GB(41630),
-      DB = GB(5281),
-      QB = GB(41635);
+    var ye = He(41734),
+      be = He(5271),
+      Me = He(41736);
 
-    function oB(BB) {
-      return BB.payloadKind === DB.sc.Msgpack ? (0, YB.b)(BB.payload) : void 0
+    function Ke(ee) {
+      return ee.payloadKind === be.dc.Msgpack ? (0, ye.b)(ee.payload) : void 0
     }
 
-    function jB(BB, OB) {
-      if (OB.payloadKind === DB.sc.Bytes || OB.payloadKind === DB.sc.MsgpackBin) return (0, QB.e)(BB, OB.payload)
+    function Ue(ee, ie) {
+      if (ie.payloadKind === be.dc.Bytes || ie.payloadKind === be.dc.MsgpackBin) return (0, Me.d)(ee, ie.payload)
     }
 
-    function yB(BB) {
-      return null !== BB && "object" === typeof BB
+    function Fe(ee) {
+      return null !== ee && "object" === typeof ee
     }
   },
-  41637: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => PB,
-      d: () => zB,
-      e: () => lB,
-      g: () => MB,
-      i: () => ZB
+  41739: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Re,
+      g: () => ke,
+      i: () => qe,
+      j: () => oe,
+      k: () => pe
     });
-    var YB = GB(5281),
-      DB = GB(41646);
-    const QB = new Map,
-      oB = new Set,
-      jB = new Set;
-    let yB = 0,
-      JB = 0;
+    var ye = He(5271),
+      be = He(41743);
+    const Me = new Map,
+      Ke = new Set,
+      Ue = new Set;
+    let Fe = 0,
+      Je = 0;
 
-    function MB(BB, OB) {
-      let GB = QB.get(BB);
-      return GB || (GB = new Set, QB.set(BB, GB)), GB.add(OB), () => {
-        GB.delete(OB)
+    function oe(ee, ie) {
+      let He = Me.get(ee);
+      return He || (He = new Set, Me.set(ee, He)), He.add(ie), () => {
+        He.delete(ie)
       }
     }
 
-    function PB() {
-      return 0 !== yB
+    function Re() {
+      return 0 !== Fe
     }
 
-    function zB(BB) {
-      return oB.add(BB), () => {
-        oB.delete(BB)
+    function ke(ee) {
+      return Ke.add(ee), () => {
+        Ke.delete(ee)
       }
     }
 
-    function lB(BB) {
-      return jB.add(BB), () => {
-        jB.delete(BB)
+    function qe(ee) {
+      return Ue.add(ee), () => {
+        Ue.delete(ee)
       }
     }
-    const pB = "A raw message listener threw";
+    const fe = "A raw message listener threw";
 
-    function qB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oB;
-      for (const YB of OB) try {
-        YB()
-      } catch (GB) {
-        BB ? (0, DB.j)(GB, pB) : console.error(pB, GB)
+    function Te(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ke;
+      for (const ye of ie) try {
+        ye()
+      } catch (He) {
+        ee ? (0, be.j)(He, fe) : console.error(fe, He)
       }
     }
-    const ZB = {
-      fire: function(BB) {
-        if ("connection" === BB.type) {
-          const OB = BB.phase === YB.E.Activated && BB.conn !== yB && BB.conn > JB,
-            GB = (BB.phase === YB.E.Left || BB.phase === YB.E.Closed) && BB.conn === yB;
-          return void(OB || GB ? (yB = OB ? BB.conn : 0, qB(!0)) : BB.phase === YB.E.Resumed && 0 !== yB && BB.conn > JB && (yB = BB.conn, qB(!0, jB)))
+    const pe = {
+      fire: function(ee) {
+        if ("connection" === ee.type) {
+          const ie = ee.phase === ye.x.Activated && ee.conn !== Fe && ee.conn > Je,
+            He = (ee.phase === ye.x.Left || ee.phase === ye.x.Closed) && ee.conn === Fe;
+          return void(ie || He ? (Fe = ie ? ee.conn : 0, Te(!0)) : ee.phase === ye.x.Resumed && 0 !== Fe && ee.conn > Je && (Fe = ee.conn, Te(!0, Ue)))
         }
-        const OB = QB.get(BB.ty);
-        if (OB && BB.conn === yB && 0 !== yB)
-          for (const YB of OB) try {
-            YB(BB)
-          } catch (GB) {
-            (0, DB.j)(GB, pB)
+        const ie = Me.get(ee.nF);
+        if (ie && ee.conn === Fe && 0 !== Fe)
+          for (const ye of ie) try {
+            ye(ee)
+          } catch (He) {
+            (0, be.j)(He, fe)
           }
       },
-      close: function(BB) {
-        JB = Math.max(JB, BB, yB), 0 !== yB && (yB = 0, qB(!1))
+      close: function(ee) {
+        Je = Math.max(Je, ee, Fe), 0 !== Fe && (Fe = 0, Te(!1))
       }
     }
   },
-  41611: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => JB,
-      f: () => yB,
-      j: () => jB
+  41721: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Je,
+      e: () => Fe,
+      i: () => Ue
     });
-    var YB = GB(1262),
-      DB = GB(41579);
-    const QB = new TextDecoder,
-      oB = new TextEncoder;
+    var ye = He(1207),
+      be = He(41694);
+    const Me = new TextDecoder,
+      Ke = new TextEncoder;
 
-    function jB(BB, OB) {
-      const GB = BB.queries.entityName(OB);
-      if (GB === DB.Mc) return;
-      const oB = BB.memoryData(BB.scratch(), 4 + GB, 4, "entity_name's answer");
-      if (!oB) return;
-      const jB = oB.getUint32(0, !0),
-        yB = QB.decode(new Uint8Array(oB.buffer, oB.byteOffset + 4, GB));
-      return (0, YB.e)(yB, !1, jB === DB.Td ? null : jB)
+    function Ue(ee, ie) {
+      const He = ee.queries.entityName(ie);
+      if (He === be.Ic) return;
+      const Ke = ee.memoryData(ee.scratch(), 4 + He, 4, "entity_name's answer");
+      if (!Ke) return;
+      const Ue = Ke.getUint32(0, !0),
+        Fe = Me.decode(new Uint8Array(Ke.buffer, Ke.byteOffset + 4, He));
+      return (0, ye.e)(Fe, !1, Ue === be.be ? null : Ue)
     }
 
-    function yB(BB, OB, GB) {
-      const YB = oB.encode(GB);
-      if (YB.length > DB.Gb) return !1;
-      const QB = BB.memoryView(Uint8Array, BB.scratch(), YB.length, "has_effect's name");
-      return !!QB && (QB.set(YB), 1 === BB.queries.hasEffect(OB, YB.length))
+    function Fe(ee, ie, He) {
+      const ye = Ke.encode(He);
+      if (ye.length > be.xb) return !1;
+      const Me = ee.memoryView(Uint8Array, ee.scratch(), ye.length, "has_effect's name");
+      return !!Me && (Me.set(ye), 1 === ee.queries.hasEffect(ie, ye.length))
     }
 
-    function JB(BB, OB, GB, YB) {
-      const oB = BB.queries.blockData(OB, GB, YB);
-      if (oB === DB.Mc) return;
-      const jB = BB.memoryView(Uint8Array, BB.scratch(), oB, "block_data's answer");
-      return jB ? JSON.parse(QB.decode(jB)) : void 0
+    function Je(ee, ie, He, ye) {
+      const Ke = ee.queries.blockData(ie, He, ye);
+      if (Ke === be.Ic) return;
+      const Ue = ee.memoryView(Uint8Array, ee.scratch(), Ke, "block_data's answer");
+      return Ue ? JSON.parse(Me.decode(Ue)) : void 0
     }
   },
-  41630: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB,
-      e: () => MB
+  41734: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => be,
+      f: () => oe
     });
-    const YB = new TextDecoder;
+    const ye = new TextDecoder;
 
-    function DB(BB) {
-      const OB = new QB(BB),
-        GB = OB.value();
-      if (OB.at !== BB.length) throw new Error(`msgpack: ${BB.length-OB.at} bytes after the value`);
-      return GB
+    function be(ee) {
+      const ie = new Me(ee),
+        He = ie.value();
+      if (ie.at !== ee.length) throw new Error(`msgpack: ${ee.length-ie.at} bytes after the value`);
+      return He
     }
-    class QB {
-      constructor(BB) {
-        this.bytes = BB, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(BB.buffer, BB.byteOffset, BB.byteLength)
+    class Me {
+      constructor(ee) {
+        this.bytes = ee, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(ee.buffer, ee.byteOffset, ee.byteLength)
       }
       value() {
-        const BB = this.u8();
-        if (BB <= 127) return BB;
-        if (BB >= 224) return BB - 256;
-        if (BB >= 128 && BB <= 143) return this.map(15 & BB);
-        if (BB >= 144 && BB <= 159) return this.array(15 & BB);
-        if (BB >= 160 && BB <= 191) return this.str(31 & BB);
-        switch (BB) {
+        const ee = this.u8();
+        if (ee <= 127) return ee;
+        if (ee >= 224) return ee - 256;
+        if (ee >= 128 && ee <= 143) return this.map(15 & ee);
+        if (ee >= 144 && ee <= 159) return this.array(15 & ee);
+        if (ee >= 160 && ee <= 191) return this.str(31 & ee);
+        switch (ee) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${BB.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${ee.toString(16)} at ${this.at-1}`)
         }
       }
-      take(BB) {
-        const OB = this.at;
-        if (OB + BB > this.bytes.length) throw new Error(`msgpack: ${BB} bytes past the end at ${OB}`);
-        return this.at = OB + BB, OB
+      take(ee) {
+        const ie = this.at;
+        if (ie + ee > this.bytes.length) throw new Error(`msgpack: ${ee} bytes past the end at ${ie}`);
+        return this.at = ie + ee, ie
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(BB) {
-        const OB = this.take(8);
-        return BB ? this.view.getBigInt64(OB, !1) : this.view.getBigUint64(OB, !1)
+      int64(ee) {
+        const ie = this.take(8);
+        return ee ? this.view.getBigInt64(ie, !1) : this.view.getBigUint64(ie, !1)
       }
-      str(BB) {
-        const OB = this.take(BB),
-          GB = this.bytes;
-        if (BB < 16) {
-          let DB = "";
-          for (let QB = OB; QB < OB + BB; QB++) {
-            const oB = GB[QB];
-            if (oB >= 128) return YB.decode(GB.subarray(OB, OB + BB));
-            DB += String.fromCharCode(oB)
+      str(ee) {
+        const ie = this.take(ee),
+          He = this.bytes;
+        if (ee < 16) {
+          let be = "";
+          for (let Me = ie; Me < ie + ee; Me++) {
+            const Ke = He[Me];
+            if (Ke >= 128) return ye.decode(He.subarray(ie, ie + ee));
+            be += String.fromCharCode(Ke)
           }
-          return DB
+          return be
         }
-        return YB.decode(GB.subarray(OB, OB + BB))
+        return ye.decode(He.subarray(ie, ie + ee))
       }
-      bin(BB) {
-        const OB = this.take(BB);
-        return this.bytes.subarray(OB, OB + BB)
+      bin(ee) {
+        const ie = this.take(ee);
+        return this.bytes.subarray(ie, ie + ee)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(BB) {
+      array(ee) {
         this.enter();
-        const OB = [];
-        for (let GB = 0; GB < BB; GB++) OB.push(this.value());
-        return this.depth--, OB
+        const ie = [];
+        for (let He = 0; He < ee; He++) ie.push(this.value());
+        return this.depth--, ie
       }
-      map(BB) {
+      map(ee) {
         this.enter();
-        const OB = {};
-        for (let GB = 0; GB < BB; GB++) {
-          const BB = this.value(),
-            GB = this.value();
-          OB["__proto__" === BB ? "__proto_" : String(BB)] = GB
+        const ie = {};
+        for (let He = 0; He < ee; He++) {
+          const ee = this.value(),
+            He = this.value();
+          ie["__proto__" === ee ? "__proto_" : String(ee)] = He
         }
-        return this.depth--, OB
+        return this.depth--, ie
       }
-      ext(BB) {
-        const OB = this.view.getInt8(this.take(1)),
-          GB = this.take(BB);
-        if (0 !== OB) {
-          if (-1 === OB) {
-            if (1 === BB) return new Date(NaN);
-            if (4 === BB) return new Date(1e3 * this.view.getUint32(GB, !1));
-            if (8 === BB) {
-              const BB = this.view.getUint32(GB, !1),
-                OB = BB >>> 2,
-                YB = 4294967296 * (3 & BB) + this.view.getUint32(GB + 4, !1);
-              return new Date(1e3 * YB + OB / 1e6)
+      ext(ee) {
+        const ie = this.view.getInt8(this.take(1)),
+          He = this.take(ee);
+        if (0 !== ie) {
+          if (-1 === ie) {
+            if (1 === ee) return new Date(NaN);
+            if (4 === ee) return new Date(1e3 * this.view.getUint32(He, !1));
+            if (8 === ee) {
+              const ee = this.view.getUint32(He, !1),
+                ie = ee >>> 2,
+                ye = 4294967296 * (3 & ee) + this.view.getUint32(He + 4, !1);
+              return new Date(1e3 * ye + ie / 1e6)
             }
-            if (12 === BB) {
-              const BB = this.view.getUint32(GB, !1),
-                OB = 4294967296 * this.view.getInt32(GB + 4, !1) + this.view.getUint32(GB + 8, !1);
-              return new Date(1e3 * OB + BB / 1e6)
+            if (12 === ee) {
+              const ee = this.view.getUint32(He, !1),
+                ie = 4294967296 * this.view.getInt32(He + 4, !1) + this.view.getUint32(He + 8, !1);
+              return new Date(1e3 * ie + ee / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${OB} of ${BB} bytes`)
+          throw new Error(`msgpack: ext type ${ie} of ${ee} bytes`)
         }
       }
     }
-    const oB = new TextEncoder,
-      jB = -(2n ** 63n),
-      yB = 2n ** 63n - 1n,
-      JB = 2n ** 64n - 1n;
+    const Ke = new TextEncoder,
+      Ue = -(2n ** 63n),
+      Fe = 2n ** 63n - 1n,
+      Je = 2n ** 64n - 1n;
 
-    function MB(BB) {
-      const OB = new PB;
-      return OB.value(BB, 0), OB.bytes()
+    function oe(ee) {
+      const ie = new Re;
+      return ie.value(ee, 0), ie.bytes()
     }
-    class PB {
+    class Re {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(BB, OB) {
-        if (OB > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof BB) {
+      value(ee, ie) {
+        if (ie > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof ee) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(BB ? 195 : 194);
+            return void this.u8(ee ? 195 : 194);
           case "number":
-            return void this.number(BB);
+            return void this.number(ee);
           case "bigint":
-            return void this.bigint(BB);
+            return void this.bigint(ee);
           case "string":
-            return void this.string(BB);
+            return void this.string(ee);
           case "object":
-            if (null === BB) this.u8(192);
-            else if (BB instanceof Uint8Array) this.head(BB.length, 196, -1, 197, 198), this.room(BB.length), this.buf.set(BB, this.at), this.at += BB.length;
-            else if (Array.isArray(BB)) {
-              this.head(BB.length, 220, 144, 220, 221);
-              for (const GB of BB) this.value(GB, OB + 1)
+            if (null === ee) this.u8(192);
+            else if (ee instanceof Uint8Array) this.head(ee.length, 196, -1, 197, 198), this.room(ee.length), this.buf.set(ee, this.at), this.at += ee.length;
+            else if (Array.isArray(ee)) {
+              this.head(ee.length, 220, 144, 220, 221);
+              for (const He of ee) this.value(He, ie + 1)
             } else {
-              var GB, YB;
-              if (Object.getPrototypeOf(BB) !== Object.prototype && null !== Object.getPrototypeOf(BB)) throw new Error(`msgpack: can't encode a ${null!==(GB=null===(YB=BB.constructor)||void 0===YB?void 0:YB.name)&&void 0!==GB?GB:"object"}`);
+              var He, ye;
+              if (Object.getPrototypeOf(ee) !== Object.prototype && null !== Object.getPrototypeOf(ee)) throw new Error(`msgpack: can't encode a ${null!==(He=null===(ye=ee.constructor)||void 0===ye?void 0:ye.name)&&void 0!==He?He:"object"}`);
               {
-                const GB = Object.keys(BB);
-                this.head(GB.length, 222, 128, 222, 223);
-                for (const YB of GB) this.string(YB), this.value(BB[YB], OB + 1)
+                const He = Object.keys(ee);
+                this.head(He.length, 222, 128, 222, 223);
+                for (const ye of He) this.string(ye), this.value(ee[ye], ie + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof BB)
+            throw new Error("msgpack: can't encode a " + typeof ee)
         }
       }
-      number(BB) {
-        Number.isInteger(BB) && BB >= -2147483648 && BB <= 4294967295 ? BB >= 0 ? BB < 128 ? this.u8(BB) : BB < 256 ? (this.u8(204), this.u8(BB)) : BB < 65536 ? (this.u8(205), this.u16(BB)) : (this.u8(206), this.u32(BB)) : BB >= -32 ? this.u8(BB + 256) : BB >= -128 ? (this.u8(208), this.u8(BB + 256)) : BB >= -32768 ? (this.u8(209), this.u16(BB + 65536)) : (this.u8(210), this.u32(BB >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, BB, !1), this.at += 8)
+      number(ee) {
+        Number.isInteger(ee) && ee >= -2147483648 && ee <= 4294967295 ? ee >= 0 ? ee < 128 ? this.u8(ee) : ee < 256 ? (this.u8(204), this.u8(ee)) : ee < 65536 ? (this.u8(205), this.u16(ee)) : (this.u8(206), this.u32(ee)) : ee >= -32 ? this.u8(ee + 256) : ee >= -128 ? (this.u8(208), this.u8(ee + 256)) : ee >= -32768 ? (this.u8(209), this.u16(ee + 65536)) : (this.u8(210), this.u32(ee >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, ee, !1), this.at += 8)
       }
-      bigint(BB) {
-        const OB = BB >= jB && BB <= yB;
-        if (!OB && (BB < 0n || BB > JB)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(OB ? 211 : 207), this.room(8), OB ? this.view.setBigInt64(this.at, BB, !1) : this.view.setBigUint64(this.at, BB, !1), this.at += 8
+      bigint(ee) {
+        const ie = ee >= Ue && ee <= Fe;
+        if (!ie && (ee < 0n || ee > Je)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(ie ? 211 : 207), this.room(8), ie ? this.view.setBigInt64(this.at, ee, !1) : this.view.setBigUint64(this.at, ee, !1), this.at += 8
       }
-      string(BB) {
-        const OB = oB.encode(BB);
-        this.head(OB.length, 217, 160, 218, 219), this.room(OB.length), this.buf.set(OB, this.at), this.at += OB.length
+      string(ee) {
+        const ie = Ke.encode(ee);
+        this.head(ie.length, 217, 160, 218, 219), this.room(ie.length), this.buf.set(ie, this.at), this.at += ie.length
       }
-      head(BB, OB, GB, YB, DB) {
-        GB >= 0 && BB < (160 === GB ? 32 : 16) ? this.u8(GB | BB) : OB !== YB && BB < 256 ? (this.u8(OB), this.u8(BB)) : BB < 65536 ? (this.u8(YB), this.u16(BB)) : (this.u8(DB), this.u32(BB))
+      head(ee, ie, He, ye, be) {
+        He >= 0 && ee < (160 === He ? 32 : 16) ? this.u8(He | ee) : ie !== ye && ee < 256 ? (this.u8(ie), this.u8(ee)) : ee < 65536 ? (this.u8(ye), this.u16(ee)) : (this.u8(be), this.u32(ee))
       }
-      room(BB) {
-        if (this.at + BB <= this.buf.length) return;
-        let OB = 2 * this.buf.length;
-        for (; OB < this.at + BB;) OB *= 2;
-        const GB = new Uint8Array(OB);
-        GB.set(this.buf.subarray(0, this.at)), this.buf = GB, this.view = new DataView(GB.buffer)
+      room(ee) {
+        if (this.at + ee <= this.buf.length) return;
+        let ie = 2 * this.buf.length;
+        for (; ie < this.at + ee;) ie *= 2;
+        const He = new Uint8Array(ie);
+        He.set(this.buf.subarray(0, this.at)), this.buf = He, this.view = new DataView(He.buffer)
       }
-      u8(BB) {
-        this.room(1), this.buf[this.at++] = BB
+      u8(ee) {
+        this.room(1), this.buf[this.at++] = ee
       }
-      u16(BB) {
-        this.room(2), this.view.setUint16(this.at, BB, !1), this.at += 2
+      u16(ee) {
+        this.room(2), this.view.setUint16(this.at, ee, !1), this.at += 2
       }
-      u32(BB) {
-        this.room(4), this.view.setUint32(this.at, BB, !1), this.at += 4
+      u32(ee) {
+        this.room(4), this.view.setUint32(this.at, ee, !1), this.at += 4
       }
     }
   },
-  41635: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => oB
+  41736: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke
     });
-    var YB = GB(41616);
-    const DB = new TextDecoder("utf-8", {
+    var ye = He(41725);
+    const be = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class QB {
-      constructor(BB) {
-        this.buf = BB, this.at = 0, this.view = null
+    class Me {
+      constructor(ee) {
+        this.buf = ee, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let BB = this.u8(),
-          OB = 127 & BB,
-          GB = 128;
-        for (; 128 & BB;) {
-          if (GB > 2 ** 63) throw new RangeError("avro: varint too long");
-          BB = this.u8(), OB += (127 & BB) * GB, GB *= 128
+        let ee = this.u8(),
+          ie = 127 & ee,
+          He = 128;
+        for (; 128 & ee;) {
+          if (He > 2 ** 63) throw new RangeError("avro: varint too long");
+          ee = this.u8(), ie += (127 & ee) * He, He *= 128
         }
-        return OB % 2 === 1 ? -(OB + 1) / 2 : OB / 2
+        return ie % 2 === 1 ? -(ie + 1) / 2 : ie / 2
       }
       float() {
-        const BB = this.take(4);
-        return this.floats().getFloat32(BB, !0)
+        const ee = this.take(4);
+        return this.floats().getFloat32(ee, !0)
       }
       double() {
-        const BB = this.take(8);
-        return this.floats().getFloat64(BB, !0)
+        const ee = this.take(8);
+        return this.floats().getFloat64(ee, !0)
       }
       str() {
-        const BB = this.size(),
-          OB = this.take(BB),
-          GB = OB + BB;
-        if (BB <= 32) {
-          let BB = "";
-          for (let YB = OB; YB < GB; YB++) {
-            const QB = this.buf[YB];
-            if (QB >= 128) return DB.decode(this.buf.subarray(OB, GB));
-            BB += String.fromCharCode(QB)
+        const ee = this.size(),
+          ie = this.take(ee),
+          He = ie + ee;
+        if (ee <= 32) {
+          let ee = "";
+          for (let ye = ie; ye < He; ye++) {
+            const Me = this.buf[ye];
+            if (Me >= 128) return be.decode(this.buf.subarray(ie, He));
+            ee += String.fromCharCode(Me)
           }
-          return BB
+          return ee
         }
-        return DB.decode(this.buf.subarray(OB, GB))
+        return be.decode(this.buf.subarray(ie, He))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(BB) {
-        const OB = this.take(BB);
-        return this.buf.slice(OB, OB + BB)
+      fixed(ee) {
+        const ie = this.take(ee);
+        return this.buf.slice(ie, ie + ee)
       }
-      index(BB) {
-        const OB = this.long();
-        if (!(OB >= 0 && OB < BB)) throw new RangeError(`avro: index ${OB} of ${BB}`);
-        return OB
+      index(ee) {
+        const ie = this.long();
+        if (!(ie >= 0 && ie < ee)) throw new RangeError(`avro: index ${ie} of ${ee}`);
+        return ie
       }
-      QP(BB) {
-        const OB = [];
-        for (let GB = this.long(); 0 !== GB; GB = this.long()) {
-          GB = this.block(GB);
-          for (let YB = 0; YB < GB; YB++) OB.push(BB(this))
+      JR(ee) {
+        const ie = [];
+        for (let He = this.long(); 0 !== He; He = this.long()) {
+          He = this.block(He);
+          for (let ye = 0; ye < He; ye++) ie.push(ee(this))
         }
-        return OB
+        return ie
       }
-      map(BB) {
-        const OB = {};
-        for (let GB = this.long(); 0 !== GB; GB = this.long()) {
-          GB = this.block(GB);
-          for (let YB = 0; YB < GB; YB++) {
-            OB[this.str()] = BB(this)
+      map(ee) {
+        const ie = {};
+        for (let He = this.long(); 0 !== He; He = this.long()) {
+          He = this.block(He);
+          for (let ye = 0; ye < He; ye++) {
+            ie[this.str()] = ee(this)
           }
         }
-        return OB
+        return ie
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(BB) {
-        let OB = BB;
-        if (OB < 0 && (OB = -OB, this.long()), OB > this.buf.length - this.at) throw new RangeError(`avro: block of ${OB} items in ${this.buf.length-this.at} bytes`);
-        return OB
+      block(ee) {
+        let ie = ee;
+        if (ie < 0 && (ie = -ie, this.long()), ie > this.buf.length - this.at) throw new RangeError(`avro: block of ${ie} items in ${this.buf.length-this.at} bytes`);
+        return ie
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const BB = this.long();
-        if (BB < 0) throw new RangeError(`avro: length ${BB}`);
-        return BB
+        const ee = this.long();
+        if (ee < 0) throw new RangeError(`avro: length ${ee}`);
+        return ee
       }
       u8() {
-        const BB = this.buf[this.at];
-        if (void 0 === BB) throw new RangeError("avro: truncated");
-        return this.at++, BB
+        const ee = this.buf[this.at];
+        if (void 0 === ee) throw new RangeError("avro: truncated");
+        return this.at++, ee
       }
-      take(BB) {
-        const OB = this.at;
-        if (BB > this.buf.length - OB) throw new RangeError("avro: truncated");
-        return this.at = OB + BB, OB
+      take(ee) {
+        const ie = this.at;
+        if (ee > this.buf.length - ie) throw new RangeError("avro: truncated");
+        return this.at = ie + ee, ie
       }
     }
 
-    function oB(BB, OB) {
-      const GB = new QB(OB),
-        DB = (0, YB.ib)(BB, GB);
-      return GB.end(), DB
+    function Ke(ee, ie) {
+      const He = new Me(ie),
+        be = (0, ye.gb)(ee, He);
+      return He.end(), be
     }
   },
-  41616: (BB, OB, GB) => {
-    GB.d(OB, {
-      $: () => pB,
-      B: () => oB,
-      C: () => dB,
-      D: () => DB,
-      F: () => jB,
-      I: () => lB,
-      M: () => fB,
-      P: () => UB,
-      Q: () => SB,
-      T: () => MB,
-      V: () => PB,
-      X: () => kB,
-      bb: () => WB,
-      d: () => VB,
-      fb: () => qB,
-      g: () => ZB,
-      hb: () => yB,
-      ib: () => KB,
-      j: () => NB,
-      k: () => RB,
-      n: () => nB,
-      r: () => YB,
-      t: () => QB,
-      w: () => AB,
-      x: () => zB,
-      z: () => JB
+  41725: (ee, ie, He) => {
+    He.d(ie, {
+      $: () => fe,
+      A: () => we,
+      C: () => be,
+      E: () => Ue,
+      H: () => qe,
+      K: () => te,
+      N: () => We,
+      Q: () => Oe,
+      T: () => oe,
+      V: () => Re,
+      X: () => Ze,
+      ab: () => Be,
+      db: () => Te,
+      e: () => ge,
+      fb: () => Fe,
+      gb: () => De,
+      h: () => pe,
+      i: () => Xe,
+      j: () => ze,
+      l: () => de,
+      o: () => ye,
+      p: () => Me,
+      t: () => Ee,
+      v: () => ke,
+      x: () => Je,
+      z: () => Ke
     });
-    const YB = 2,
-      DB = 12,
-      QB = 27,
-      oB = 40,
-      jB = 52,
-      yB = 59,
-      JB = 63,
-      MB = 83,
-      PB = 84,
-      zB = 89,
-      lB = 91,
-      pB = 93,
-      qB = 94,
-      ZB = 95,
-      NB = 97,
-      RB = 101,
-      WB = 102,
-      AB = 73,
-      VB = 16,
-      SB = 86,
-      nB = 60,
-      UB = 17,
-      fB = 56,
-      kB = 100,
-      dB = 81;
+    const ye = 2,
+      be = 12,
+      Me = 27,
+      Ke = 40,
+      Ue = 52,
+      Fe = 59,
+      Je = 63,
+      oe = 83,
+      Re = 84,
+      ke = 89,
+      qe = 91,
+      fe = 93,
+      Te = 94,
+      pe = 95,
+      Xe = 97,
+      ze = 101,
+      Be = 102,
+      Ee = 73,
+      ge = 16,
+      Oe = 86,
+      de = 60,
+      We = 17,
+      te = 56,
+      Ze = 100,
+      we = 81;
 
-    function KB(BB, OB) {
-      switch (BB) {
-        case YB:
-          return function(BB) {
+    function De(ee, ie) {
+      switch (ee) {
+        case ye:
+          return function(ee) {
             return {
-              RB: HB(BB),
-              VB: BB.float(),
-              SB: BB.long()
+              ze: he(ee),
+              ge: ee.float(),
+              Oe: ee.long()
             }
-          }(OB);
-        case DB:
-          return function(BB) {
+          }(ie);
+        case be:
+          return function(ee) {
             return {
-              BB: iB(BB),
-              OB: iB(BB)
+              ee: ae(ee),
+              ie: ae(ee)
             }
-          }(OB);
-        case QB:
-          return function(BB) {
+          }(ie);
+        case Me:
+          return function(ee) {
             return {
-              fO: BB.bool(),
-              kO: iB(BB)
+              Yi: ee.bool(),
+              Vi: ae(ee)
             }
-          }(OB);
-        case oB:
-          return OB.str();
-        case jB:
-          return function(BB) {
+          }(ie);
+        case Ke:
+          return ie.str();
+        case Ue:
+          return function(ee) {
             return {
-              id: BB.long(),
-              IO: oO(BB)
+              id: ee.long(),
+              Ci: Ki(ee)
             }
-          }(OB);
-        case yB:
-          return function(BB) {
+          }(ie);
+        case Fe:
+          return function(ee) {
             return {
-              SY: iB(BB),
-              nY: yO(BB)
+              Yy: ae(ee),
+              Vy: Fi(ee)
             }
-          }(OB);
-        case JB:
-          return OB.str();
-        case MB:
-        case PB:
-          return OB.long();
-        case zB:
-          return function(BB) {
+          }(ie);
+        case Je:
+          return ie.str();
+        case oe:
+        case Re:
+          return ie.long();
+        case ke:
+          return function(ee) {
             return {
-              tG: BB.long(),
-              BY: BB.bool(),
-              OY: BB.float()
+              Ky: ee.long(),
+              Uy: ee.bool(),
+              Fy: ee.float()
             }
-          }(OB);
-        case lB:
-          return OB.long();
-        case pB:
-          return function(BB) {
+          }(ie);
+        case qe:
+          return ie.long();
+        case fe:
+          return function(ee) {
             return {
-              GD: BB.bool(),
-              bG: PO(BB)
+              Tb: ee.bool(),
+              QH: Ri(ee)
             }
-          }(OB);
-        case qB:
-          return function(BB) {
+          }(ie);
+        case Te:
+          return function(ee) {
             return {
-              id: BB.str(),
-              position: MO(BB),
-              DO: zO(BB),
-              style: EB(BB),
-              oO: BB.bool()
+              id: ee.str(),
+              position: oi(ee),
+              Ji: ki(ee),
+              style: ue(ee),
+              Ri: ee.bool()
             }
-          }(OB);
-        case ZB:
-          return function(BB) {
+          }(ie);
+        case pe:
+          return function(ee) {
             return {
-              id: iB(BB)
+              id: ae(ee)
             }
-          }(OB);
-        case NB:
-          return function(BB) {
+          }(ie);
+        case Xe:
+          return function(ee) {
             return {
-              XB: BB.long(),
-              wB: BB.str(),
-              EB: DO(BB),
-              cB: DO(BB),
-              hB: iB(BB),
-              aB: iB(BB),
-              eB: iB(BB),
-              TB: iB(BB),
-              bB: iB(BB),
-              CB: DO(BB),
-              HB: DO(BB),
-              vB: iB(BB),
-              sB: iB(BB),
-              xB: iB(BB)
+              ue: ee.long(),
+              Se: ee.str(),
+              ne: bi(ee),
+              je: bi(ee),
+              se: ae(ee),
+              Ie: ae(ee),
+              he: ae(ee),
+              Ne: ae(ee),
+              Ge: ae(ee),
+              Qe: bi(ee),
+              ei: bi(ee),
+              ii: ae(ee),
+              Hi: ae(ee),
+              yi: ae(ee)
             }
-          }(OB);
-        case RB:
-          return OB.str();
-        case WB:
-          return OB.long();
-        case AB:
-          return function(BB) {
+          }(ie);
+        case ze:
+          return ie.str();
+        case Be:
+          return ie.long();
+        case Ee:
+          return function(ee) {
             return {
-              fY: BB.long(),
-              kY: BB.str(),
-              dY: BB.float()
+              Ly: ee.long(),
+              Cy: ee.str(),
+              vy: ee.float()
             }
-          }(OB);
-        case VB:
-          return function(BB) {
+          }(ie);
+        case ge:
+          return function(ee) {
             return {
-              lO: BB.bool(),
-              pO: iB(BB),
-              qO: BB.str(),
-              ZO: pO(BB),
-              RO: pO(BB),
-              WO: BB.bool(),
-              AO: BB.long(),
-              VO: qO(BB)
+              Ei: ee.bool(),
+              gi: ae(ee),
+              Oi: ee.str(),
+              di: fi(ee),
+              Wi: fi(ee),
+              ti: ee.bool(),
+              Zi: ee.long(),
+              wi: Ti(ee)
             }
-          }(OB);
-        case SB:
-          return function(BB) {
+          }(ie);
+        case Oe:
+          return function(ee) {
             return {
-              IQ: iB(BB)
+              SM: ae(ee)
             }
-          }(OB);
-        case nB:
-          return function(BB) {
+          }(ie);
+        case de:
+          return function(ee) {
             return {
-              pY: BB.str(),
-              qY: BB.str(),
-              ZY: ZO(BB),
-              NY: BB.str(),
-              RY: xB(BB),
-              WY: BB.float()
+              Oy: ee.str(),
+              Wy: ee.str(),
+              ty: Xi(ee),
+              Zy: ee.str(),
+              wy: re(ee),
+              Dy: ee.float()
             }
-          }(OB);
-        case UB:
-          return function(BB) {
+          }(ie);
+        case We:
+          return function(ee) {
             return {
-              pY: BB.str(),
-              qY: BB.str(),
-              ZY: ZO(BB)
+              Oy: ee.str(),
+              Wy: ee.str(),
+              ty: Xi(ee)
             }
-          }(OB);
-        case fB:
-          return function(BB) {
-            return BB.QP(NO)
-          }(OB);
-        case kB:
-          return function(BB) {
+          }(ie);
+        case te:
+          return function(ee) {
+            return ee.JR(zi)
+          }(ie);
+        case Ze:
+          return function(ee) {
             return {
-              YY: WO(BB),
-              yY: aB(BB)
+              oy: Ei(ee),
+              py: Se(ee)
             }
-          }(OB);
-        case dB:
-          return function(BB) {
+          }(ie);
+        case we:
+          return function(ee) {
             return {
-              KD: BB.bool(),
-              uD: iB(BB),
-              mD: VO(BB),
-              LD: rO(BB)
+              nb: ee.bool(),
+              jb: ae(ee),
+              sb: Oi(ee),
+              hb: Ci(ee)
             }
-          }(OB);
+          }(ie);
         default:
-          throw new Error(`no reader for to-client message ${BB}`)
+          throw new Error(`no reader for to-client message ${ee}`)
       }
     }
 
-    function uB(BB) {
+    function Pe(ee) {
       return {
-        entityName: BB.str()
+        entityName: ee.str()
       }
     }
 
-    function mB(BB) {
-      const OB = BB.index(4);
-      return 0 === OB ? BB.str() : 1 === OB ? BB.long() : 2 === OB ? BB.bool() : uB(BB)
+    function Ae(ee) {
+      const ie = ee.index(4);
+      return 0 === ie ? ee.str() : 1 === ie ? ee.long() : 2 === ie ? ee.bool() : Pe(ee)
     }
 
-    function IB(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
-        return BB.map(mB)
-      }(BB)
+    function Ye(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
+        return ee.map(Ae)
+      }(ee)
     }
 
-    function FB(BB) {
+    function Ve(ee) {
       return {
-        translationKey: BB.str(),
-        params: IB(BB)
+        translationKey: ee.str(),
+        params: Ye(ee)
       }
     }
 
-    function iB(BB) {
-      return 0 === BB.index(2) ? null : BB.str()
+    function ae(ee) {
+      return 0 === ee.index(2) ? null : ee.str()
     }
 
-    function LB(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function ce(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          color: iB(BB),
-          colour: iB(BB),
-          fontSize: iB(BB)
+          color: ae(ee),
+          colour: ae(ee),
+          fontSize: ae(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function gB(BB) {
+    function xe(ee) {
       return {
-        icon: BB.str(),
-        style: LB(BB)
+        icon: ee.str(),
+        style: ce(ee)
       }
     }
 
-    function rB(BB) {
-      const OB = BB.index(3);
-      return 0 === OB ? {
-        string: BB.str()
-      } : 1 === OB ? {
-        styledEntityName: uB(BB)
+    function Le(ee) {
+      const ie = ee.index(3);
+      return 0 === ie ? {
+        string: ee.str()
+      } : 1 === ie ? {
+        styledEntityName: Pe(ee)
       } : {
-        styledTranslatedText: FB(BB)
+        styledTranslatedText: Ve(ee)
       }
     }
 
-    function XB(BB) {
-      const OB = BB.index(3);
-      return 0 === OB ? null : 1 === OB ? BB.str() : BB.long()
+    function Ce(ee) {
+      const ie = ee.index(3);
+      return 0 === ie ? null : 1 === ie ? ee.str() : ee.long()
     }
 
-    function wB(BB) {
-      return 0 === BB.index(2) ? null : BB.float()
+    function ve(ee) {
+      return 0 === ee.index(2) ? null : ee.float()
     }
 
-    function EB(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function ue(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          color: iB(BB),
-          colour: iB(BB),
-          fontWeight: XB(BB),
-          fontStyle: iB(BB),
-          fontSize: iB(BB),
-          opacity: wB(BB)
+          color: ae(ee),
+          colour: ae(ee),
+          fontWeight: Ce(ee),
+          fontStyle: ae(ee),
+          fontSize: ae(ee),
+          opacity: ve(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function cB(BB) {
+    function me(ee) {
       return {
-        str: rB(BB),
-        style: EB(BB),
-        clickableUrl: iB(BB)
+        str: Le(ee),
+        style: ue(ee),
+        clickableUrl: ae(ee)
       }
     }
 
-    function hB(BB) {
-      return BB.str()
+    function le(ee) {
+      return ee.str()
     }
 
-    function aB(BB) {
-      return BB.QP(hB)
+    function Se(ee) {
+      return ee.JR(le)
     }
 
-    function eB(BB) {
-      return 0 === BB.index(2) ? null : aB(BB)
+    function ne(ee) {
+      return 0 === ee.index(2) ? null : Se(ee)
     }
 
-    function TB(BB) {
+    function je(ee) {
       return {
-        type: BB.str(),
-        progress: BB.float(),
-        width: iB(BB),
-        height: iB(BB),
-        colours: eB(BB),
-        backgroundColour: iB(BB)
+        type: ee.str(),
+        progress: ee.float(),
+        width: ae(ee),
+        height: ae(ee),
+        colours: ne(ee),
+        backgroundColour: ae(ee)
       }
     }
 
-    function bB(BB) {
+    function se(ee) {
       return {
-        type: BB.str(),
-        action: BB.str(),
-        style: EB(BB)
+        type: ee.str(),
+        action: ee.str(),
+        style: ue(ee)
       }
     }
 
-    function CB(BB) {
-      const OB = BB.index(7);
-      return 0 === OB ? {
-        string: BB.str()
-      } : 1 === OB ? {
-        entityName: uB(BB)
-      } : 2 === OB ? {
-        translatedText: FB(BB)
-      } : 3 === OB ? {
-        styledIcon: gB(BB)
-      } : 4 === OB ? {
-        WB: cB(BB)
-      } : 5 === OB ? {
-        styledProgressBar: TB(BB)
+    function Ie(ee) {
+      const ie = ee.index(7);
+      return 0 === ie ? {
+        string: ee.str()
+      } : 1 === ie ? {
+        entityName: Pe(ee)
+      } : 2 === ie ? {
+        translatedText: Ve(ee)
+      } : 3 === ie ? {
+        styledIcon: xe(ee)
+      } : 4 === ie ? {
+        Be: me(ee)
+      } : 5 === ie ? {
+        styledProgressBar: je(ee)
       } : {
-        styledKeyBinding: bB(BB)
+        styledKeyBinding: se(ee)
       }
     }
 
-    function HB(BB) {
-      return BB.QP(CB)
+    function he(ee) {
+      return ee.JR(Ie)
     }
-    const vB = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const Ne = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function sB(BB) {
-      return vB[BB.index(5)]
-    }
-
-    function xB(BB) {
-      return 0 === BB.index(2) ? null : BB.double()
+    function Ge(ee) {
+      return Ne[ee.index(5)]
     }
 
-    function tB(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function re(ee) {
+      return 0 === ee.index(2) ? null : ee.double()
+    }
+
+    function Qe(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          gO: xB(BB),
-          rO: BB.double(),
-          XO: BB.double(),
-          wO: BB.bool(),
-          description: HB(BB),
-          EO: BB.str(),
-          scale: xB(BB),
-          rotation: xB(BB)
+          Si: re(ee),
+          ni: ee.double(),
+          ji: ee.double(),
+          si: ee.bool(),
+          description: he(ee),
+          Ii: ee.str(),
+          scale: re(ee),
+          rotation: re(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function BO(BB) {
-      return 0 === BB.index(2) ? null : BB.bool()
+    function ei(ee) {
+      return 0 === ee.index(2) ? null : ee.bool()
     }
 
-    function OO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function ii(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          hO: BB.double(),
-          icon: BB.str(),
-          label: HB(BB),
-          aO: BB.bool(),
-          scale: xB(BB),
-          rotation: xB(BB),
-          eO: BO(BB)
+          Gi: ee.double(),
+          icon: ee.str(),
+          label: he(ee),
+          ri: ee.bool(),
+          scale: re(ee),
+          rotation: re(ee),
+          Qi: ei(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function GO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function Hi(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          gO: xB(BB),
-          CO: BB.double(),
-          HO: BB.double(),
-          vO: BB.double(),
-          gravity: BB.double(),
-          sO: BB.double(),
-          xO: BB.double(),
-          tO: BB.double(),
-          wO: BB.bool(),
-          description: HB(BB),
-          icon: iB(BB)
+          Si: re(ee),
+          iH: ee.double(),
+          HH: ee.double(),
+          yH: ee.double(),
+          gravity: ee.double(),
+          bH: ee.double(),
+          KH: ee.double(),
+          UH: ee.double(),
+          si: ee.bool(),
+          description: he(ee),
+          icon: ae(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function YO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function yi(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          speed: BB.double(),
-          GG: BB.double(),
-          label: HB(BB),
-          icon: iB(BB),
-          scale: xB(BB),
-          rotation: xB(BB)
+          speed: ee.double(),
+          JH: ee.double(),
+          label: he(ee),
+          icon: ae(ee),
+          scale: re(ee),
+          rotation: re(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function DO(BB) {
-      return 0 === BB.index(2) ? null : BB.long()
+    function bi(ee) {
+      return 0 === ee.index(2) ? null : ee.long()
     }
 
-    function QO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function Mi(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          DG: BB.long(),
-          QG: BB.double(),
-          oG: BB.double(),
-          jG: DO(BB),
-          label: HB(BB),
-          icon: iB(BB)
+          RH: ee.long(),
+          kH: ee.double(),
+          qH: ee.double(),
+          fH: bi(ee),
+          label: he(ee),
+          icon: ae(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function oO(BB) {
+    function Ki(ee) {
       return {
-        type: sB(BB),
-        progressBar: tB(BB),
-        timedClick: OO(BB),
-        gravityBar: GO(BB),
-        precisionBar: YO(BB),
-        rhythmClick: QO(BB)
+        type: Ge(ee),
+        progressBar: Qe(ee),
+        timedClick: ii(ee),
+        gravityBar: Hi(ee),
+        precisionBar: yi(ee),
+        rhythmClick: Mi(ee)
       }
     }
-    const jO = ["playerGone", "rateLimited"];
+    const Ui = ["playerGone", "rateLimited"];
 
-    function yO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
-        return jO[BB.index(2)]
-      }(BB)
+    function Fi(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
+        return Ui[ee.index(2)]
+      }(ee)
     }
 
-    function JO(BB) {
-      return BB.float()
+    function Ji(ee) {
+      return ee.float()
     }
 
-    function MO(BB) {
-      return BB.QP(JO)
+    function oi(ee) {
+      return ee.JR(Ji)
     }
 
-    function PO(BB) {
-      return 0 === BB.index(2) ? null : MO(BB)
+    function Ri(ee) {
+      return 0 === ee.index(2) ? null : oi(ee)
     }
 
-    function zO(BB) {
-      return 0 === BB.index(2) ? null : HB(BB)
+    function ki(ee) {
+      return 0 === ee.index(2) ? null : he(ee)
     }
 
-    function lO(BB) {
-      return BB.long()
+    function qi(ee) {
+      return ee.long()
     }
 
-    function pO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
-        return BB.QP(lO)
-      }(BB)
+    function fi(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
+        return ee.JR(qi)
+      }(ee)
     }
 
-    function qO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function Ti(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          nO: BB.str(),
-          UO: BB.long()
+          Pi: ee.str(),
+          Ai: ee.long()
         }
-      }(BB)
+      }(ee)
     }
 
-    function ZO(BB) {
-      const OB = BB.index(3);
-      return 0 === OB ? null : 1 === OB ? BB.str() : FB(BB)
+    function Xi(ee) {
+      const ie = ee.index(3);
+      return 0 === ie ? null : 1 === ie ? ee.str() : Ve(ee)
     }
 
-    function NO(BB) {
+    function zi(ee) {
       return {
-        nB: BB.str(),
-        UB: BB.str(),
-        fB: BB.str()
+        de: ee.str(),
+        te: ee.str(),
+        Ze: ee.str()
       }
     }
 
-    function RO(BB) {
+    function Bi(ee) {
       return {
-        DY: BB.str(),
-        QY: iB(BB),
-        oY: iB(BB),
-        jY: aB(BB)
+        Ry: ee.str(),
+        ky: ae(ee),
+        qy: ae(ee),
+        Ty: Se(ee)
       }
     }
 
-    function WO(BB) {
-      return BB.QP(RO)
+    function Ei(ee) {
+      return ee.JR(Bi)
     }
 
-    function AO(BB) {
+    function gi(ee) {
       return {
-        iD: BB.str(),
-        x: BB.long(),
-        y: BB.long(),
-        z: BB.long()
+        Ib: ee.str(),
+        x: ee.long(),
+        y: ee.long(),
+        z: ee.long()
       }
     }
 
-    function VO(BB) {
-      return BB.QP(AO)
+    function Oi(ee) {
+      return ee.JR(gi)
     }
 
-    function SO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function di(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          YQ: BB.float(),
-          DQ: BB.long(),
-          QQ: BB.long()
+          TM: ee.float(),
+          pM: ee.long(),
+          XM: ee.long()
         }
-      }(BB)
+      }(ee)
     }
 
-    function nO(BB) {
+    function Wi(ee) {
       return {
-        blockName: BB.str(),
-        CD: BB.bool(),
-        vD: BB.bool(),
-        sD: BB.bool(),
-        xD: BB.float(),
-        tD: BB.float(),
-        BQ: BB.long(),
-        OQ: SO(BB)
+        blockName: ee.str(),
+        UM: ee.bool(),
+        FM: ee.bool(),
+        JM: ee.bool(),
+        oM: ee.float(),
+        RM: ee.float(),
+        kM: ee.long(),
+        qM: di(ee)
       }
     }
 
-    function UO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
-        return BB.QP(nO)
-      }(BB)
+    function ti(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
+        return ee.JR(Wi)
+      }(ee)
     }
 
-    function fO(BB) {
+    function Zi(ee) {
       return {
-        eD: BB.str(),
-        TD: UO(BB)
+        bM: ee.str(),
+        MM: ti(ee)
       }
     }
 
-    function kO(BB) {
+    function wi(ee) {
       return {
-        blockName: BB.str(),
-        frequency: BB.float()
+        blockName: ee.str(),
+        frequency: ee.float()
       }
     }
 
-    function dO(BB) {
-      return BB.QP(kO)
+    function Di(ee) {
+      return ee.JR(wi)
     }
 
-    function KO(BB) {
+    function Pi(ee) {
       return {
-        yQ: BB.str(),
-        JQ: BB.str(),
-        frequency: BB.float(),
-        MQ: dO(BB)
+        EM: ee.str(),
+        gM: ee.str(),
+        frequency: ee.float(),
+        OM: Di(ee)
       }
     }
 
-    function uO(BB) {
-      return BB.QP(KO)
+    function Ai(ee) {
+      return ee.JR(Pi)
     }
 
-    function mO(BB) {
+    function Yi(ee) {
       return {
-        blockName: BB.str(),
-        radius: BB.long(),
-        qQ: BB.long(),
-        XD: BB.long(),
-        wD: BB.long(),
-        ZQ: BB.float()
+        blockName: ee.str(),
+        radius: ee.long(),
+        ZM: ee.long(),
+        rb: ee.long(),
+        Qb: ee.long(),
+        wM: ee.float()
       }
     }
 
-    function IO(BB) {
-      return BB.QP(mO)
+    function Vi(ee) {
+      return ee.JR(Yi)
     }
 
-    function FO(BB) {
+    function ai(ee) {
       return {
-        XD: BB.long(),
-        wD: BB.long(),
-        ED: BB.long(),
-        cD: BB.bool(),
-        hD: fO(BB),
-        oQ: uO(BB),
-        lQ: IO(BB)
+        rb: ee.long(),
+        Qb: ee.long(),
+        eM: ee.long(),
+        iM: ee.bool(),
+        HM: Zi(ee),
+        zM: Ai(ee),
+        WM: Vi(ee)
       }
     }
 
-    function iO(BB) {
-      return BB.QP(FO)
+    function ci(ee) {
+      return ee.JR(ai)
     }
 
-    function LO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function xi(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          name: BB.str(),
-          AQ: iB(BB)
+          name: ee.str(),
+          YM: ae(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function gO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function Li(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          terrain: LO(BB),
-          VQ: IO(BB)
+          terrain: xi(ee),
+          VM: Vi(ee)
         }
-      }(BB)
+      }(ee)
     }
 
-    function rO(BB) {
-      return 0 === BB.index(2) ? null : function(BB) {
+    function Ci(ee) {
+      return 0 === ee.index(2) ? null : function(ee) {
         return {
-          layers: iO(BB),
-          NQ: gO(BB)
+          layers: ci(ee),
+          DM: Li(ee)
         }
-      }(BB)
+      }(ee)
     }
   },
-  41600: (BB, OB, GB) => {
-    GB.d(OB, {
-      $: () => SB,
-      B: () => VB,
-      E: () => ZB,
-      I: () => kB,
-      K: () => IB,
-      M: () => pB,
-      O: () => iB,
-      S: () => RB,
-      V: () => NB,
-      Z: () => WB,
-      c: () => DB,
-      g: () => FB,
-      h: () => mB,
-      i: () => lB,
-      j: () => qB,
-      m: () => KB,
-      o: () => UB,
-      p: () => dB,
-      s: () => fB,
-      u: () => nB,
-      x: () => uB,
-      y: () => AB
+  41712: (ee, ie, He) => {
+    He.d(ie, {
+      $: () => Xe,
+      B: () => de,
+      D: () => Pe,
+      E: () => Ee,
+      F: () => ge,
+      I: () => pe,
+      J: () => Ze,
+      N: () => Ye,
+      R: () => fe,
+      U: () => ae,
+      X: () => ze,
+      ab: () => Be,
+      db: () => Oe,
+      e: () => be,
+      g: () => Ve,
+      i: () => Ae,
+      j: () => qe,
+      m: () => Te,
+      p: () => De,
+      r: () => We,
+      v: () => we,
+      x: () => te
     });
-    var YB = GB(3362);
-    const DB = {
+    var ye = He(3246);
+    const be = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function QB(BB, OB) {
-      return !ArrayBuffer.isView(BB) || BB instanceof DataView ? Array.isArray(BB) ? BB.map((BB => OB(BB))) : BB : Array.from(BB, (BB => OB(BB)))
+    function Me(ee, ie) {
+      return !ArrayBuffer.isView(ee) || ee instanceof DataView ? Array.isArray(ee) ? ee.map((ee => ie(ee))) : ee : Array.from(ee, (ee => ie(ee)))
     }
 
-    function oB(BB) {
-      if ("string" !== typeof BB) return BB;
-      for (let OB = 0; OB < BB.length; OB++) {
-        const GB = BB.charCodeAt(OB);
-        if (GB >= 55296 && GB <= 57343) return yB.decode(jB.encode(BB))
+    function Ke(ee) {
+      if ("string" !== typeof ee) return ee;
+      for (let ie = 0; ie < ee.length; ie++) {
+        const He = ee.charCodeAt(ie);
+        if (He >= 55296 && He <= 57343) return Fe.decode(Ue.encode(ee))
       }
-      return BB
+      return ee
     }
-    const jB = new TextEncoder,
-      yB = new TextDecoder;
+    const Ue = new TextEncoder,
+      Fe = new TextDecoder;
 
-    function JB(BB) {
-      return BB
+    function Je(ee) {
+      return ee
     }
-    let MB;
+    let oe;
 
-    function PB(BB) {
-      return null === BB || "object" !== typeof BB ? BB : [oB(BB.policy), oB(BB.Jy)]
-    }
-
-    function zB(BB) {
-      return null === BB || "object" !== typeof BB ? BB : [QB(BB.ZO, JB), QB(BB.xy, JB)]
+    function Re(ee) {
+      return null === ee || "object" !== typeof ee ? ee : [Ke(ee.policy), Ke(ee.UF)]
     }
 
-    function lB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.ty), oB(OB.BJ)];
-      var OB
+    function ke(ee) {
+      return null === ee || "object" !== typeof ee ? ee : [Me(ee.di, Je), Me(ee.SF, Je)]
     }
 
-    function pB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [OB.id, OB.UJ];
-      var OB
+    function qe(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.nF), Ke(ie.jF)];
+      var ie
     }
 
-    function qB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [OB.XB, oB(OB.wB), OB.EB, oB(OB.aB), OB.CB, OB.HB, OB.Ay, oB(OB.Vy), oB(OB.Sy)];
-      var OB
+    function fe(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [ie.id, ie.pJ];
+      var ie
     }
 
-    function ZB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [QB(OB.VM, JB), OB.SM];
-      var OB
+    function Te(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [ie.ue, Ke(ie.Se), ie.ne, Ke(ie.Ie), ie.Qe, ie.ei, ie.zF, Ke(ie.BF), Ke(ie.EF)];
+      var ie
     }
 
-    function NB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [QB(OB.dJ, (BB => oB(BB))), oB(OB.KJ), OB.uJ];
-      var OB
+    function pe(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Me(ie.fo, Je), ie.po];
+      var ie
     }
 
-    function RB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [QB(OB.JJ, JB), oB(OB.MJ), OB.PJ];
-      var OB
+    function Xe(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Me(ie.BJ, (ee => Ke(ee))), Ke(ie.EJ), ie.gJ];
+      var ie
     }
 
-    function WB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.UB), oB(OB.fB)];
-      var OB
+    function ze(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Me(ie.iJ, Je), Ke(ie.HJ), ie.yJ];
+      var ie
     }
 
-    function AB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.NM)];
-      var OB
+    function Be(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.te), Ke(ie.Ze)];
+      var ie
     }
 
-    function VB(BB) {
-      return oB(BB)
+    function Ee(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.oo)];
+      var ie
     }
 
-    function SB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.Hy), oB(OB.vy), oB(OB.policy), oB(OB.Jy)];
-      var OB
+    function ge(ee) {
+      return Ke(ee)
     }
 
-    function nB(BB) {
-      return PB(BB)
+    function Oe(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.mF), Ke(ie.lF), Ke(ie.policy), Ke(ie.UF)];
+      var ie
     }
 
-    function UB(BB) {
-      return PB(BB)
+    function de(ee) {
+      return Re(ee)
     }
 
-    function fB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.nM)];
-      var OB
+    function We(ee) {
+      return Re(ee)
     }
 
-    function kB(BB) {
-      return BB
+    function te(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.Xo)];
+      var ie
     }
 
-    function dB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.zJ), oB(OB.lJ)];
-      var OB
+    function Ze(ee) {
+      return ee
     }
 
-    function KB(BB) {
-      return oB(BB)
+    function we(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.bJ), Ke(ie.MJ)];
+      var ie
     }
 
-    function uB(BB) {
-      return zB(BB)
+    function De(ee) {
+      return Ke(ee)
     }
 
-    function mB(BB) {
-      return zB(BB)
+    function Pe(ee) {
+      return ke(ee)
     }
 
-    function IB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [oB(OB.fJ)];
-      var OB
+    function Ae(ee) {
+      return ke(ee)
     }
 
-    function FB(BB) {
-      return (MB ??= (0, YB.h)().map((BB => BB.name)), MB).map((OB => {
-        return "string" === typeof(GB = BB[OB]) ? oB(GB) : QB(GB, JB);
-        var GB
+    function Ye(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [Ke(ie.XJ)];
+      var ie
+    }
+
+    function Ve(ee) {
+      return (oe ??= (0, ye.f)().map((ee => ee.name)), oe).map((ie => {
+        return "string" === typeof(He = ee[ie]) ? Ke(He) : Me(He, Je);
+        var He
       }))
     }
 
-    function iB(BB) {
-      return null === (OB = BB) || "object" !== typeof OB ? OB : [OB.RM, OB.WM, OB.AM];
-      var OB
+    function ae(ee) {
+      return null === (ie = ee) || "object" !== typeof ie ? ie : [ie.Ro, ie.ko, ie.qo];
+      var ie
     }
   },
-  10027: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      g: () => QB
+  10063: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be,
+      f: () => Me
     });
-    var YB = GB(9974);
-    const DB = "Air",
-      QB = Object.freeze(new YB.g(DB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var ye = He(10008);
+    const be = "Air",
+      Me = Object.freeze(new ye.e(be, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39954: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB,
-      f: () => jB
+  40091: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me,
+      h: () => Ue
     });
-    var YB = GB(353),
-      DB = GB(4886);
-    const QB = new Set(DB.o),
-      oB = new Map;
+    var ye = He(347),
+      be = He(4861);
+    const Me = new Set(be.p),
+      Ke = new Map;
 
-    function jB(BB, OB) {
-      let GB = oB.get(OB);
-      void 0 === GB && (GB = new Map, oB.set(OB, GB));
-      let DB = GB.get(BB);
-      return void 0 === DB && (DB = `${BB}${(0,YB.A)(OB)}`, GB.set(BB, DB)), DB
+    function Ue(ee, ie) {
+      let He = Ke.get(ie);
+      void 0 === He && (He = new Map, Ke.set(ie, He));
+      let be = He.get(ee);
+      return void 0 === be && (be = `${ee}${(0,ye.G)(ie)}`, He.set(ee, be)), be
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

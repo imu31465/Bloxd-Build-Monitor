@@ -1,134 +1,134 @@
 export const id = 136;
 export const ids = [136];
 export const modules = {
-  9414: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      e: () => QB
+  9476: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      g: () => Me
     });
-    var YB = GB(2098);
-    const DB = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
-      QB = BB => "string" === typeof BB.icon && "" !== BB.icon && "string" === typeof BB.keycode && DB.test(BB.keycode),
-      oB = BB => "Space" === BB ? "_" : YB.h[BB]
+    var ye = He(2054);
+    const be = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      Me = ee => "string" === typeof ee.icon && "" !== ee.icon && "string" === typeof ee.keycode && be.test(ee.keycode),
+      Ke = ee => "Space" === ee ? "_" : ye.k[ee]
   },
-  37166: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => DB,
-      f: () => QB
+  37301: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be,
+      g: () => Me
     });
-    let YB = !1;
+    let ye = !1;
 
-    function DB() {
-      return YB
+    function be() {
+      return ye
     }
 
-    function QB(BB) {
-      return YB !== BB && (YB = BB, !0)
+    function Me(ee) {
+      return ye !== ee && (ye = ee, !0)
     }
   },
-  40546: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB
+  40638: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye
     });
-    class YB {
-      constructor(BB) {
-        this.events = BB, this.recent = [], this.episode = null, this.sampleSum = 0, this.sampleCount = 0, this.minWindowAvg = null
+    class ye {
+      constructor(ee) {
+        this.events = ee, this.recent = [], this.episode = null, this.sampleSum = 0, this.sampleCount = 0, this.minWindowAvg = null
       }
-      addSample(BB, OB) {
-        if (null === BB) return this.recent.length = 0, void this.endEpisode(OB);
-        if (this.sampleSum += BB, this.sampleCount++, this.recent.push(BB), this.recent.length > 5 && this.recent.shift(), null !== this.episode && (this.episode.minFps = Math.min(this.episode.minFps, BB), this.episode.sum += BB, this.episode.count++), this.recent.length < 5) return;
-        const GB = function(BB) {
-          let OB = 0;
-          for (const GB of BB) OB += GB;
-          return OB / BB.length
+      addSample(ee, ie) {
+        if (null === ee) return this.recent.length = 0, void this.endEpisode(ie);
+        if (this.sampleSum += ee, this.sampleCount++, this.recent.push(ee), this.recent.length > 5 && this.recent.shift(), null !== this.episode && (this.episode.minFps = Math.min(this.episode.minFps, ee), this.episode.sum += ee, this.episode.count++), this.recent.length < 5) return;
+        const He = function(ee) {
+          let ie = 0;
+          for (const He of ee) ie += He;
+          return ie / ee.length
         }(this.recent);
-        this.minWindowAvg = null === this.minWindowAvg ? GB : Math.min(this.minWindowAvg, GB), null === this.episode && GB < 20 ? (this.episode = {
-          startedAtMs: OB - 5e3,
+        this.minWindowAvg = null === this.minWindowAvg ? He : Math.min(this.minWindowAvg, He), null === this.episode && He < 20 ? (this.episode = {
+          startedAtMs: ie - 5e3,
           minFps: Math.min(...this.recent),
-          sum: 5 * GB,
+          sum: 5 * He,
           count: 5
-        }, this.events.onEpisodeStarted(GB)) : null !== this.episode && GB >= 25 && this.endEpisode(OB)
+        }, this.events.onEpisodeStarted(He)) : null !== this.episode && He >= 25 && this.endEpisode(ie)
       }
-      endEpisode(BB) {
+      endEpisode(ee) {
         if (null === this.episode) return;
         const {
-          startedAtMs: OB,
-          minFps: GB,
-          sum: YB,
-          count: DB
+          startedAtMs: ie,
+          minFps: He,
+          sum: ye,
+          count: be
         } = this.episode;
         this.episode = null, this.events.onEpisodeEnded({
-          startedAtMs: OB,
-          durationMs: BB - OB,
-          minFps: QB(GB),
-          avgFps: QB(YB / DB)
+          startedAtMs: ie,
+          durationMs: ee - ie,
+          minFps: Me(He),
+          avgFps: Me(ye / be)
         })
       }
       getTags() {
         return null === this.minWindowAvg ? null : {
-          fps_min_bucket: DB(this.minWindowAvg),
-          fps_avg_bucket: DB(this.sampleSum / this.sampleCount)
+          fps_min_bucket: be(this.minWindowAvg),
+          fps_avg_bucket: be(this.sampleSum / this.sampleCount)
         }
       }
     }
 
-    function DB(BB) {
-      return BB < 15 ? "<15" : BB < 30 ? "15-30" : BB < 50 ? "30-50" : "50+"
+    function be(ee) {
+      return ee < 15 ? "<15" : ee < 30 ? "15-30" : ee < 50 ? "30-50" : "50+"
     }
 
-    function QB(BB) {
-      return Math.round(10 * BB) / 10
+    function Me(ee) {
+      return Math.round(10 * ee) / 10
     }
   },
-  40523: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB
+  40619: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => be
     });
-    var YB = GB(1314);
+    var ye = He(1272);
 
-    function DB(BB) {
-      if ("error" === BB.type) {
+    function be(ee) {
+      if ("error" === ee.type) {
         const {
-          error: OB,
-          filename: GB
-        } = BB;
-        return OB instanceof Error && (GB.startsWith(window.location.origin) || GB.startsWith("wasm://"))
+          error: ie,
+          filename: He
+        } = ee;
+        return ie instanceof Error && (He.startsWith(window.location.origin) || He.startsWith("wasm://"))
       }
-      const OB = BB.reason;
-      if (OB instanceof Error) {
-        var GB;
-        const BB = `${OB.name}: ${OB.message}`;
-        return !(0, YB.h)(null !== (GB = OB.stack) && void 0 !== GB ? GB : "") && !(0, YB.c)(BB) && !(0, YB.f)(BB)
+      const ie = ee.reason;
+      if (ie instanceof Error) {
+        var He;
+        const ee = `${ie.name}: ${ie.message}`;
+        return !(0, ye.j)(null !== (He = ie.stack) && void 0 !== He ? He : "") && !(0, ye.e)(ee) && !(0, ye.i)(ee)
       }
-      return "string" === typeof OB && !(0, YB.c)(OB)
+      return "string" === typeof ie && !(0, ye.e)(ie)
     }
   },
-  40529: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => kB
+  40627: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ze
     });
-    var YB = GB(16),
-      DB = GB(2050),
-      QB = GB(37166),
-      oB = GB(25),
-      jB = GB(1699),
-      yB = GB(40244),
-      JB = GB(9414),
-      MB = GB(1822),
-      PB = GB(2085),
-      zB = GB(31),
-      lB = GB(40497),
-      pB = GB(2091),
-      qB = GB(7043);
-    const ZB = [...Object.values(pB.g).flat(), "ShiftLeft", "ShiftRight", "Enter", "KeyT", "Slash", "Escape", "Tab", "MetaLeft", "MetaRight", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", "F1", "F5", "F6", "F7", "F11", "F12", "Mouse4", "Mouse5"],
-      NB = [
+    var ye = He(18),
+      be = He(2018),
+      Me = He(37301),
+      Ke = He(27),
+      Ue = He(1620),
+      Fe = He(40352),
+      Je = He(9476),
+      oe = He(1768),
+      Re = He(2046),
+      ke = He(35),
+      qe = He(40602),
+      fe = He(2048),
+      Te = He(7142);
+    const pe = [...Object.values(fe.j).flat(), "ShiftLeft", "ShiftRight", "Enter", "KeyT", "Slash", "Escape", "Tab", "MetaLeft", "MetaRight", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", "F1", "F5", "F6", "F7", "F11", "F12", "Mouse4", "Mouse5"],
+      Xe = [
         [1, "Mouse1"],
         [4, "Mouse2"],
         [2, "Mouse3"],
         [8, "Mouse4"],
         [16, "Mouse5"]
       ],
-      RB = {
+      ze = {
         forward: "forward",
         backward: "backward",
         left: "left",
@@ -140,254 +140,254 @@ export const modules = {
         "alt-fire": "secondary",
         "mid-fire": "middle"
       };
-    class WB {
-      constructor(BB) {
-        this.source = BB, this.keyListeners = [], this.actionsListeners = [], this.pointerLockListeners = [], this.sJ = new Uint8Array(qB.b.length), this.heldCount = 0, this.actionBits = 0, this.typing = !1, this.pointerLocked = !1, this.mouseButtons = 0, this.keyTable = null, BB.onBindingsChanged((() => {
+    class Be {
+      constructor(ee) {
+        this.source = ee, this.keyListeners = [], this.actionsListeners = [], this.pointerLockListeners = [], this.lJ = new Uint8Array(Te.d.length), this.heldCount = 0, this.actionBits = 0, this.typing = !1, this.pointerLocked = !1, this.mouseButtons = 0, this.keyTable = null, ee.onBindingsChanged((() => {
           this.keyTable = null
         }))
       }
-      onKey(BB) {
-        return VB(this.keyListeners, BB)
+      onKey(ee) {
+        return ge(this.keyListeners, ee)
       }
-      onUnboundKey(BB) {
-        return this.onKey(((OB, GB, YB, DB, QB, oB) => {
-          GB && DB && !YB && BB(OB, oB)
+      onUnboundKey(ee) {
+        return this.onKey(((ie, He, ye, be, Me, Ke) => {
+          He && be && !ye && ee(ie, Ke)
         }))
       }
-      onActions(BB) {
-        return VB(this.actionsListeners, BB)
+      onActions(ee) {
+        return ge(this.actionsListeners, ee)
       }
-      onPointerLock(BB) {
-        return VB(this.pointerLockListeners, BB)
+      onPointerLock(ee) {
+        return ge(this.pointerLockListeners, ee)
       }
       getActionBits() {
         return this.actionBits
       }
-      listen(BB, OB) {
-        this.typing = this.source.isTyping(OB.activeElement), this.pointerLocked = null !== OB.pointerLockElement;
-        const GB = {
+      listen(ee, ie) {
+        this.typing = this.source.isTyping(ie.activeElement), this.pointerLocked = null !== ie.pointerLockElement;
+        const He = {
           capture: !0,
           passive: !0
         };
-        BB.addEventListener("keydown", (BB => {
-          this.setTyping(this.source.isTyping(AB(BB))), BB.isComposing || this.typing || this.keyDown(BB.code, BB.altKey || BB.ctrlKey || BB.metaKey)
-        }), GB), BB.addEventListener("keyup", (BB => {
-          this.typing || ("MetaLeft" === BB.code || "MetaRight" === BB.code ? this.releaseAll() : this.keyUp((0, qB.c)(BB.code)))
-        }), GB);
-        const YB = BB => {
-          "mouse" === BB.pointerType && BB.isTrusted && this.setMouseButtons(BB.buttons, BB.altKey || BB.ctrlKey || BB.metaKey)
+        ee.addEventListener("keydown", (ee => {
+          this.setTyping(this.source.isTyping(Ee(ee))), ee.isComposing || this.typing || this.keyDown(ee.code, ee.altKey || ee.ctrlKey || ee.metaKey)
+        }), He), ee.addEventListener("keyup", (ee => {
+          this.typing || ("MetaLeft" === ee.code || "MetaRight" === ee.code ? this.releaseAll() : this.keyUp((0, Te.e)(ee.code)))
+        }), He);
+        const ye = ee => {
+          "mouse" === ee.pointerType && ee.isTrusted && this.setMouseButtons(ee.buttons, ee.altKey || ee.ctrlKey || ee.metaKey)
         };
-        BB.addEventListener("pointerdown", YB, GB), BB.addEventListener("pointermove", YB, GB), BB.addEventListener("pointerup", YB, GB), BB.addEventListener("focusin", (BB => {
-          this.setTyping(this.source.isTyping(AB(BB)))
-        }), GB), BB.addEventListener("focusout", (BB => {
-          this.setTyping(this.source.isTyping(BB.relatedTarget))
-        }), GB), BB.addEventListener("blur", (OB => {
-          OB.target === BB && this.releaseAll()
-        }), GB), OB.addEventListener("visibilitychange", (() => {
-          OB.hidden && this.releaseAll()
-        })), OB.addEventListener("pointerlockchange", (() => {
-          const BB = null !== OB.pointerLockElement;
-          if (BB !== this.pointerLocked) {
-            this.pointerLocked = BB;
-            const OB = this.source.now();
-            for (const GB of this.pointerLockListeners) GB(BB, OB)
+        ee.addEventListener("pointerdown", ye, He), ee.addEventListener("pointermove", ye, He), ee.addEventListener("pointerup", ye, He), ee.addEventListener("focusin", (ee => {
+          this.setTyping(this.source.isTyping(Ee(ee)))
+        }), He), ee.addEventListener("focusout", (ee => {
+          this.setTyping(this.source.isTyping(ee.relatedTarget))
+        }), He), ee.addEventListener("blur", (ie => {
+          ie.target === ee && this.releaseAll()
+        }), He), ie.addEventListener("visibilitychange", (() => {
+          ie.hidden && this.releaseAll()
+        })), ie.addEventListener("pointerlockchange", (() => {
+          const ee = null !== ie.pointerLockElement;
+          if (ee !== this.pointerLocked) {
+            this.pointerLocked = ee;
+            const ie = this.source.now();
+            for (const He of this.pointerLockListeners) He(ee, ie)
           }
         }))
       }
-      keyDown(BB, OB) {
-        const GB = (0, qB.c)(BB);
-        if (0 !== this.sJ[GB]) return;
-        const YB = this.source.isInPlay(),
-          DB = YB ? this.getKeyTable() : null,
-          QB = null === DB || OB || 1 === DB.bound[GB],
-          oB = null !== DB && 0 !== DB.actionBits[GB];
-        this.sJ[GB] = 1 + (QB ? 1 : 0) + (YB ? 2 : 0) + (oB ? 4 : 0), this.heldCount++, this.emit(GB, !0, QB, YB, oB), oB && this.updateActionBits()
+      keyDown(ee, ie) {
+        const He = (0, Te.e)(ee);
+        if (0 !== this.lJ[He]) return;
+        const ye = this.source.isInPlay(),
+          be = ye ? this.getKeyTable() : null,
+          Me = null === be || ie || 1 === be.bound[He],
+          Ke = null !== be && 0 !== be.actionBits[He];
+        this.lJ[He] = 1 + (Me ? 1 : 0) + (ye ? 2 : 0) + (Ke ? 4 : 0), this.heldCount++, this.emit(He, !0, Me, ye, Ke), Ke && this.updateActionBits()
       }
-      keyUp(BB) {
-        this.release(BB) && this.updateActionBits()
+      keyUp(ee) {
+        this.release(ee) && this.updateActionBits()
       }
-      setMouseButtons(BB, OB) {
-        const GB = BB ^ this.mouseButtons;
-        if (0 !== GB) {
-          this.mouseButtons = BB;
-          for (const [YB, DB] of NB) 0 !== (GB & YB) && (0 === (BB & YB) ? this.keyUp((0, qB.c)(DB)) : !this.typing && this.source.isInPlay() && this.keyDown(DB, OB))
+      setMouseButtons(ee, ie) {
+        const He = ee ^ this.mouseButtons;
+        if (0 !== He) {
+          this.mouseButtons = ee;
+          for (const [ye, be] of Xe) 0 !== (He & ye) && (0 === (ee & ye) ? this.keyUp((0, Te.e)(be)) : !this.typing && this.source.isInPlay() && this.keyDown(be, ie))
         }
       }
       releaseAll() {
-        let BB = !1;
-        for (let OB = 0; this.heldCount > 0 && OB < this.sJ.length; OB++) BB = this.release(OB) || BB;
-        this.mouseButtons = 0, BB && this.updateActionBits()
+        let ee = !1;
+        for (let ie = 0; this.heldCount > 0 && ie < this.lJ.length; ie++) ee = this.release(ie) || ee;
+        this.mouseButtons = 0, ee && this.updateActionBits()
       }
-      release(BB) {
-        const OB = this.sJ[BB];
-        if (0 === OB) return !1;
-        this.sJ[BB] = 0, this.heldCount--;
-        const GB = 0 !== (OB - 1 & 2);
-        return this.emit(BB, !1, 0 !== (OB - 1 & 1), GB, 0 !== (OB - 1 & 4)), GB
+      release(ee) {
+        const ie = this.lJ[ee];
+        if (0 === ie) return !1;
+        this.lJ[ee] = 0, this.heldCount--;
+        const He = 0 !== (ie - 1 & 2);
+        return this.emit(ee, !1, 0 !== (ie - 1 & 1), He, 0 !== (ie - 1 & 4)), He
       }
       updateActionBits() {
-        let BB = 0;
+        let ee = 0;
         if (this.heldCount > 0) {
-          const OB = this.getKeyTable().actionBits;
-          for (let GB = 0; GB < this.sJ.length; GB++) {
-            const YB = this.sJ[GB];
-            0 !== YB && 0 !== (YB - 1 & 2) && (BB |= OB[GB])
+          const ie = this.getKeyTable().actionBits;
+          for (let He = 0; He < this.lJ.length; He++) {
+            const ye = this.lJ[He];
+            0 !== ye && 0 !== (ye - 1 & 2) && (ee |= ie[He])
           }
         }
-        if (BB === this.actionBits) return;
-        this.actionBits = BB;
-        const OB = this.source.now();
-        for (const GB of this.actionsListeners) GB(BB, OB)
+        if (ee === this.actionBits) return;
+        this.actionBits = ee;
+        const ie = this.source.now();
+        for (const He of this.actionsListeners) He(ee, ie)
       }
       getKeyTable() {
-        return this.keyTable ??= function(BB, OB) {
-          const GB = new Uint8Array(qB.b.length),
-            YB = new Uint16Array(qB.b.length);
-          GB[0] = 1;
-          for (const DB of ZB) GB[(0, qB.c)(DB)] = 1;
-          for (const [DB, QB] of Object.entries(BB)) {
-            if (OB.has(DB)) continue;
-            const BB = RB[DB],
-              oB = void 0 === BB ? 0 : (0, qB.f)(BB);
-            for (const OB of QB) {
-              const BB = (0, qB.c)(OB);
-              GB[BB] = 1, 0 !== BB && (YB[BB] |= oB)
+        return this.keyTable ??= function(ee, ie) {
+          const He = new Uint8Array(Te.d.length),
+            ye = new Uint16Array(Te.d.length);
+          He[0] = 1;
+          for (const be of pe) He[(0, Te.e)(be)] = 1;
+          for (const [be, Me] of Object.entries(ee)) {
+            if (ie.has(be)) continue;
+            const ee = ze[be],
+              Ke = void 0 === ee ? 0 : (0, Te.j)(ee);
+            for (const ie of Me) {
+              const ee = (0, Te.e)(ie);
+              He[ee] = 1, 0 !== ee && (ye[ee] |= Ke)
             }
           }
           return {
-            bound: GB,
-            actionBits: YB
+            bound: He,
+            actionBits: ye
           }
         }(this.source.getBindings(), this.source.ignoredActions), this.keyTable
       }
-      setTyping(BB) {
-        BB && !this.typing && (this.typing = !0, this.releaseAll()), this.typing = BB
+      setTyping(ee) {
+        ee && !this.typing && (this.typing = !0, this.releaseAll()), this.typing = ee
       }
-      emit(BB, OB, GB, YB, DB) {
-        const QB = qB.b[BB],
-          oB = this.source.now();
-        for (const jB of this.keyListeners) jB(QB, OB, GB, YB, DB, oB)
-      }
-    }
-
-    function AB(BB) {
-      var OB;
-      return null !== (OB = BB.composedPath()[0]) && void 0 !== OB ? OB : BB.target
-    }
-
-    function VB(BB, OB) {
-      return BB.push(OB), () => {
-        const GB = BB.indexOf(OB); - 1 !== GB && BB.splice(GB, 1)
+      emit(ee, ie, He, ye, be) {
+        const Me = Te.d[ee],
+          Ke = this.source.now();
+        for (const Ue of this.keyListeners) Ue(Me, ie, He, ye, be, Ke)
       }
     }
-    const SB = "replayInput",
-      nB = new Set([...PB.y, ...PB.k].filter((BB => "replayViewerOpen" !== BB && "toggleFreeCam" !== BB)));
-    let UB = null;
 
-    function fB() {
-      var BB;
-      return (null !== (BB = DB.e.get("customButtons")) && void 0 !== BB ? BB : []).filter(JB.e).map((BB => BB.keycode))
+    function Ee(ee) {
+      var ie;
+      return null !== (ie = ee.composedPath()[0]) && void 0 !== ie ? ie : ee.target
     }
 
-    function kB() {
-      return null === UB && "0" !== String(zB.g.getItem(SB)) && (UB = new WB({
-        isInPlay: () => "inGame" === YB.c.get("gameState") && !(0, jB.r)() && !(0, QB.b)(),
-        isTyping: MB.isTextEntry,
+    function ge(ee, ie) {
+      return ee.push(ie), () => {
+        const He = ee.indexOf(ie); - 1 !== He && ee.splice(He, 1)
+      }
+    }
+    const Oe = "replayInput",
+      de = new Set([...Re.B, ...Re.j].filter((ee => "replayViewerOpen" !== ee && "toggleFreeCam" !== ee)));
+    let We = null;
+
+    function te() {
+      var ee;
+      return (null !== (ee = be.c.get("customButtons")) && void 0 !== ee ? ee : []).filter(Je.g).map((ee => ee.keycode))
+    }
+
+    function Ze() {
+      return null === We && "0" !== String(ke.i.getItem(Oe)) && (We = new Be({
+        isInPlay: () => "inGame" === ye.e.get("gameState") && !(0, Ue.o)() && !(0, Me.e)(),
+        isTyping: oe.isTextEntry,
         getBindings: () => ({
-          ...PB.t,
-          customButtons: fB(),
-          pageKeys: (0, yB.e)()
+          ...Re.q,
+          customButtons: te(),
+          pageKeys: (0, Fe.f)()
         }),
-        ignoredActions: nB,
-        onBindingsChanged: BB => {
-          oB.o.subscribe("customBindingsChanged", BB), DB.e.subscribe("customButtons", BB), DB.e.subscribeReset(BB), (0, yB.i)(BB)
+        ignoredActions: de,
+        onBindingsChanged: ee => {
+          Ke.h.subscribe("customBindingsChanged", ee), be.c.subscribe("customButtons", ee), be.c.subscribeReset(ee), (0, Fe.j)(ee)
         },
-        now: lB.e
-      }), UB.listen(window, document)), UB
+        now: qe.e
+      }), We.listen(window, document)), We
     }
   },
-  40244: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      e: () => jB,
-      i: () => yB
+  40352: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Ke,
+      f: () => Ue,
+      j: () => Fe
     });
-    const YB = new Map,
-      DB = [];
+    const ye = new Map,
+      be = [];
 
-    function QB() {
-      for (const BB of DB) BB()
+    function Me() {
+      for (const ee of be) ee()
     }
 
-    function oB(BB) {
-      var OB;
-      return YB.set(BB, (null !== (OB = YB.get(BB)) && void 0 !== OB ? OB : 0) + 1), QB(), () => {
-        const OB = YB.get(BB) - 1;
-        0 === OB ? YB.delete(BB) : YB.set(BB, OB), QB()
+    function Ke(ee) {
+      var ie;
+      return ye.set(ee, (null !== (ie = ye.get(ee)) && void 0 !== ie ? ie : 0) + 1), Me(), () => {
+        const ie = ye.get(ee) - 1;
+        0 === ie ? ye.delete(ee) : ye.set(ee, ie), Me()
       }
     }
 
-    function jB() {
-      return [...YB.keys()]
+    function Ue() {
+      return [...ye.keys()]
     }
 
-    function yB(BB) {
-      DB.push(BB)
+    function Fe(ee) {
+      be.push(ee)
     }
   },
-  7028: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      h: () => QB,
-      j: () => DB,
-      k: () => oB,
-      l: () => yB,
-      n: () => jB
+  7132: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye,
+      e: () => Me,
+      f: () => be,
+      g: () => Ke,
+      i: () => Fe,
+      k: () => Ue
     });
-    const YB = ["page_loaded", "game_loading", "game_playable", "first_input", "pointer_locked", "first_move", "first_block", "played_60s", "second_game"],
-      DB = ["joined", "game_playable", "first_input", "pointer_locked", "first_move", "first_block", "played_60s"],
-      QB = ["unbound_key_burst", "idle_pointer_locked", "menu_toggling", "block_change_refused", "pointer_lock_failed", "rage_quit"],
-      oB = 3;
+    const ye = ["page_loaded", "game_loading", "game_playable", "first_input", "pointer_locked", "first_move", "first_block", "played_60s", "second_game"],
+      be = ["joined", "game_playable", "first_input", "pointer_locked", "first_move", "first_block", "played_60s"],
+      Me = ["unbound_key_burst", "idle_pointer_locked", "menu_toggling", "block_change_refused", "pointer_lock_failed", "rage_quit"],
+      Ke = 3;
 
-    function jB(BB) {
-      return void 0 === BB ? -1 : DB.indexOf(BB)
+    function Ue(ee) {
+      return void 0 === ee ? -1 : be.indexOf(ee)
     }
 
-    function yB(BB, OB) {
-      return jB(OB) > jB(BB) ? OB : BB
+    function Fe(ee, ie) {
+      return Ue(ie) > Ue(ee) ? ie : ee
     }
   },
-  7043: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB,
-      c: () => QB,
-      e: () => jB,
-      f: () => JB
+  7142: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye,
+      e: () => Me,
+      g: () => Ue,
+      j: () => Je
     });
-    const YB = ["Unidentified", ...[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((BB => `Key${BB}`)), ...Array.from({
+    const ye = ["Unidentified", ...[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((ee => `Key${ee}`)), ...Array.from({
         length: 10
-      }, ((BB, OB) => `Digit${OB}`)), ...Array.from({
+      }, ((ee, ie) => `Digit${ie}`)), ...Array.from({
         length: 12
-      }, ((BB, OB) => `F${OB+1}`)), "Escape", "Tab", "CapsLock", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "Space", "Enter", "Backspace", "Delete", "Insert", "Home", "End", "PageUp", "PageDown", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", ...Array.from({
+      }, ((ee, ie) => `F${ie+1}`)), "Escape", "Tab", "CapsLock", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "Space", "Enter", "Backspace", "Delete", "Insert", "Home", "End", "PageUp", "PageDown", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", ...Array.from({
         length: 10
-      }, ((BB, OB) => `Numpad${OB}`)), "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal", "NumpadEnter", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"],
-      DB = new Map(YB.map(((BB, OB) => [BB, OB])));
+      }, ((ee, ie) => `Numpad${ie}`)), "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal", "NumpadEnter", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"],
+      be = new Map(ye.map(((ee, ie) => [ee, ie])));
 
-    function QB(BB) {
-      var OB;
-      return null !== (OB = DB.get(BB)) && void 0 !== OB ? OB : 0
+    function Me(ee) {
+      var ie;
+      return null !== (ie = be.get(ee)) && void 0 !== ie ? ie : 0
     }
-    const oB = new Set(["Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal"]);
+    const Ke = new Set(["Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal"]);
 
-    function jB(BB) {
-      return /^Key[A-Z]$/.test(BB) ? "letter" : /^(Digit|Numpad)\d$/.test(BB) ? "digit" : oB.has(BB) ? "symbol" : null
+    function Ue(ee) {
+      return /^Key[A-Z]$/.test(ee) ? "letter" : /^(Digit|Numpad)\d$/.test(ee) ? "digit" : Ke.has(ee) ? "symbol" : null
     }
-    const yB = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"];
+    const Fe = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"];
 
-    function JB(BB) {
-      return 1 << yB.indexOf(BB)
+    function Je(ee) {
+      return 1 << Fe.indexOf(ee)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

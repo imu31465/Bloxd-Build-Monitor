@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  39993: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => YB
+  40121: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => ye
     });
-    const YB = function(BB, OB, GB) {
-      let YB;
+    const ye = function(ee, ie, He) {
+      let ye;
       return {
-        onCreate: BB => {
-          YB = BB
+        onCreate: ee => {
+          ye = ee
         },
-        onPlayerAltAction: (BB, OB, GB, DB, QB, oB) => {
-          oB && "Mesh" === YB.getEntityType(oB) && ("Permanent Upgrades" === YB.getEntityName(oB) ? YB.openShop(BB, !1, "Upgrades") : "Items" === YB.getEntityName(oB) ? YB.openShop(BB, !1, "Items") : "Prestige" === YB.getEntityName(oB) && YB.openShop(BB, !1, "Prestige"))
+        onPlayerAltAction: (ee, ie, He, be, Me, Ke) => {
+          Ke && "Mesh" === ye.getEntityType(Ke) && ("Permanent Upgrades" === ye.getEntityName(Ke) ? ye.openShop(ee, !1, "Upgrades") : "Items" === ye.getEntityName(Ke) ? ye.openShop(ee, !1, "Items") : "Prestige" === ye.getEntityName(Ke) && ye.openShop(ee, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

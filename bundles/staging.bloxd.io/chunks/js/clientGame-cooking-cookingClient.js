@@ -1,26 +1,26 @@
 export const id = 16;
 export const ids = [16];
 export const modules = {
-  40147: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => DB
+  40265: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => be
     });
-    const YB = [
+    const ye = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      DB = function(BB, OB, GB) {
-        let DB;
+      be = function(ee, ie, He) {
+        let be;
         return {
-          onCreate: BB => {
-            DB = BB
+          onCreate: ee => {
+            be = ee
           },
-          onPlayerAltAction: (BB, OB, GB, QB, oB, jB) => {
-            YB.some((BB => BB[0] === OB && BB[2] === QB)) && DB.openShop(BB, !1)
+          onPlayerAltAction: (ee, ie, He, Me, Ke, Ue) => {
+            ye.some((ee => ee[0] === ie && ee[2] === Me)) && be.openShop(ee, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

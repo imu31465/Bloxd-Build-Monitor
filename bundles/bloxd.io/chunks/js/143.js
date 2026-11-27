@@ -1,203 +1,203 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7113: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => jB
+  7210: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(1175),
-      oB = GB(1282);
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(1127),
+      Ke = He(1228);
 
-    function jB(BB) {
+    function Ue(ee) {
       let {
-        item: OB,
-        className: GB
-      } = BB;
+        item: ie,
+        className: He
+      } = ee;
       const {
-        t: YB
-      } = (0, QB.H)();
-      return null === OB.renderId || OB.previewsOutdated ? (0, oB.jsx)("div", {
-        className: DB()("ShaderPackPreviewsNotice", GB),
-        children: (0, oB.jsx)("span", {
-          children: YB(null === OB.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: ye
+      } = (0, Me.v)();
+      return null === ie.renderId || ie.previewsOutdated ? (0, Ke.jsx)("div", {
+        className: be()("ShaderPackPreviewsNotice", He),
+        children: (0, Ke.jsx)("span", {
+          children: ye(null === ie.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  7125: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => JB
+  7227: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Je
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(7107),
-      oB = GB(1175),
-      jB = GB(7099),
-      yB = GB(1282);
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(7206),
+      Ke = He(1127),
+      Ue = He(7201),
+      Fe = He(1228);
 
-    function JB(BB) {
+    function Je(ee) {
       let {
-        selected: OB,
-        onSelect: GB,
-        imageUrl: YB
-      } = BB;
+        selected: ie,
+        onSelect: He,
+        imageUrl: ye
+      } = ee;
       const {
-        t: JB
-      } = (0, oB.H)();
-      return (0, yB.jsx)("div", {
+        t: Je
+      } = (0, Ke.v)();
+      return (0, Fe.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: QB.F.map((BB => {
-          const QB = YB(BB);
-          return (0, yB.jsxs)("button", {
+        children: Me.C.map((ee => {
+          const Me = ye(ee);
+          return (0, Fe.jsxs)("button", {
             type: "button",
-            "aria-pressed": BB === OB,
-            className: DB()("ShaderPackViewOption", {
-              Selected: BB === OB
+            "aria-pressed": ee === ie,
+            className: be()("ShaderPackViewOption", {
+              Selected: ee === ie
             }),
             onClick: () => {
-              GB(BB)
+              He(ee)
             },
-            children: [null !== QB && (0, yB.jsx)("img", {
-              src: QB,
+            children: [null !== Me && (0, Fe.jsx)("img", {
+              src: Me,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, yB.jsx)("span", {
+            }), (0, Fe.jsx)("span", {
               className: "SmallTextBold",
-              children: JB(jB.hb[BB])
+              children: Je(Ue.lb[ee])
             })]
-          }, BB)
+          }, ee)
         }))
       })
     }
   },
-  7116: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => zB,
-      e: () => lB,
-      i: () => PB,
-      k: () => pB
+  7213: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => ke,
+      e: () => qe,
+      i: () => Re,
+      l: () => fe
     });
-    var YB = GB(56),
-      DB = GB(7107),
-      QB = GB(1540),
-      oB = GB(7099),
-      jB = GB(7122),
-      yB = GB(1112);
-    const JB = "shaderPackListingView",
-      MB = "shaderPackListingFilterOpen";
+    var ye = He(59),
+      be = He(7206),
+      Me = He(1490),
+      Ke = He(7201),
+      Ue = He(7220),
+      Fe = He(1075);
+    const Je = "shaderPackListingView",
+      oe = "shaderPackListingFilterOpen";
 
-    function PB() {
-      var BB;
-      const [OB, GB] = (0, jB.e)(JB, DB.F[0]);
-      return [null !== (BB = DB.F.find((BB => BB === OB))) && void 0 !== BB ? BB : DB.F[0], GB]
+    function Re() {
+      var ee;
+      const [ie, He] = (0, Ue.d)(Je, be.C[0]);
+      return [null !== (ee = be.C.find((ee => ee === ie))) && void 0 !== ee ? ee : be.C[0], He]
     }
 
-    function zB() {
-      (0, YB.useEffect)((() => () => {
-        window.location.pathname.startsWith(oB.V) || (0, oB.g)()
+    function ke() {
+      (0, ye.useEffect)((() => () => {
+        window.location.pathname.startsWith(Ke.Y) || (0, Ke.l)()
       }), [])
     }
 
-    function lB() {
-      return (0, jB.e)(MB, !1)
+    function qe() {
+      return (0, Ue.d)(oe, !1)
     }
 
-    function pB() {
+    function fe() {
       const {
-        userContext: BB,
-        isUserContextUpdating: OB
-      } = (0, yB.d)(), [GB, DB] = (0, YB.useState)(null), oB = (0, YB.useRef)(new Set);
+        userContext: ee,
+        isUserContextUpdating: ie
+      } = (0, Fe.b)(), [He, be] = (0, ye.useState)(null), Ke = (0, ye.useRef)(new Set);
 
-      function jB(BB, OB) {
-        DB((GB => {
-          const YB = new Set(GB);
-          return OB ? YB.add(BB) : YB.delete(BB), YB
+      function Ue(ee, ie) {
+        be((He => {
+          const ye = new Set(He);
+          return ie ? ye.add(ee) : ye.delete(ee), ye
         }))
       }
-      return (0, YB.useEffect)((() => {
-        if (OB) return;
-        let GB = !1;
-        return QB.b.getFavouriteShaderPacks(BB).then((BB => {
-          GB || DB(new Set(BB))
-        })).catch((BB => {
-          console.error("Failed to get favourite shader packs", BB), GB || DB(new Set)
+      return (0, ye.useEffect)((() => {
+        if (ie) return;
+        let He = !1;
+        return Me.b.getFavouriteShaderPacks(ee).then((ee => {
+          He || be(new Set(ee))
+        })).catch((ee => {
+          console.error("Failed to get favourite shader packs", ee), He || be(new Set)
         })), () => {
-          GB = !0
+          He = !0
         }
-      }), [BB, OB]), {
-        isFavourite: BB => null === GB ? null : GB.has(BB),
-        toggle: function(OB) {
-          if (null === GB || oB.current.has(OB)) return;
-          oB.current.add(OB);
-          const YB = !GB.has(OB);
-          jB(OB, YB), (YB ? QB.b.favouriteShaderPack(BB, OB) : QB.b.unfavouriteShaderPack(BB, OB)).catch((BB => {
-            console.error("Failed to change a favourite shader pack", BB), jB(OB, !YB)
+      }), [ee, ie]), {
+        isFavourite: ee => null === He ? null : He.has(ee),
+        toggle: function(ie) {
+          if (null === He || Ke.current.has(ie)) return;
+          Ke.current.add(ie);
+          const ye = !He.has(ie);
+          Ue(ie, ye), (ye ? Me.b.favouriteShaderPack(ee, ie) : Me.b.unfavouriteShaderPack(ee, ie)).catch((ee => {
+            console.error("Failed to change a favourite shader pack", ee), Ue(ie, !ye)
           })).finally((() => {
-            oB.current.delete(OB)
+            Ke.current.delete(ie)
           }))
         }
       }
     }
   },
-  7099: (BB, OB, GB) => {
-    GB.d(OB, {
-      $: () => yB,
-      C: () => dB,
-      E: () => MB,
-      H: () => uB,
-      L: () => qB,
-      P: () => XB,
-      R: () => gB,
-      V: () => oB,
-      X: () => rB,
-      ab: () => jB,
-      b: () => RB,
-      c: () => fB,
-      eb: () => iB,
-      f: () => ZB,
-      g: () => zB,
-      hb: () => LB,
-      ib: () => WB,
-      j: () => PB,
-      lb: () => KB,
-      n: () => mB,
-      p: () => lB,
-      q: () => IB,
-      u: () => wB,
-      x: () => pB,
-      y: () => NB
+  7201: (ee, ie, He) => {
+    He.d(ie, {
+      C: () => fe,
+      F: () => Xe,
+      H: () => we,
+      J: () => oe,
+      N: () => Pe,
+      P: () => Te,
+      T: () => Ce,
+      V: () => xe,
+      Y: () => Ke,
+      ab: () => Le,
+      c: () => ze,
+      eb: () => Fe,
+      g: () => te,
+      hb: () => Ue,
+      i: () => pe,
+      ib: () => ae,
+      l: () => ke,
+      lb: () => ce,
+      p: () => Re,
+      pb: () => Be,
+      r: () => Ae,
+      rb: () => De,
+      t: () => qe,
+      w: () => Ye,
+      z: () => ve
     });
-    var YB = GB(7107),
-      DB = GB(162),
-      QB = GB(4975);
-    const oB = "/shader-packs",
-      jB = `${oB}/publish`;
+    var ye = He(7206),
+      be = He(153),
+      Me = He(4947);
+    const Ke = "/shader-packs",
+      Ue = `${Ke}/publish`;
 
-    function yB(BB) {
-      return `${oB}/${encodeURIComponent(BB)}`
+    function Fe(ee) {
+      return `${Ke}/${encodeURIComponent(ee)}`
     }
-    let JB = null;
+    let Je = null;
 
-    function MB(BB) {
-      JB = BB
-    }
-
-    function PB() {
-      return JB
+    function oe(ee) {
+      Je = ee
     }
 
-    function zB() {
-      JB = null
+    function Re() {
+      return Je
     }
 
-    function lB(BB) {
-      return BB.playerHasRank("developer") || BB.playerHasRank("admin")
+    function ke() {
+      Je = null
     }
-    const pB = ["terrain", "water", "models", "sunShadows", "strict"],
-      qB = {
+
+    function qe(ee) {
+      return ee.playerHasRank("developer") || ee.playerHasRank("admin")
+    }
+    const fe = ["terrain", "water", "models", "sunShadows", "strict"],
+      Te = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function ZB(BB, OB) {
-      return BB.withFeatures.includes(OB) ? "with" : BB.withoutFeatures.includes(OB) ? "without" : null
+    function pe(ee, ie) {
+      return ee.withFeatures.includes(ie) ? "with" : ee.withoutFeatures.includes(ie) ? "without" : null
     }
 
-    function NB(BB) {
-      return null === BB ? "with" : "with" === BB ? "without" : null
+    function Xe(ee) {
+      return null === ee ? "with" : "with" === ee ? "without" : null
     }
 
-    function RB(BB) {
-      return "with" === BB ? "only" : null === BB ? "include" : void 0
+    function ze(ee) {
+      return "with" === ee ? "only" : null === ee ? "include" : void 0
     }
 
-    function WB(BB, OB) {
-      const GB = ZB(BB, OB),
-        YB = BB => BB.filter((BB => BB !== OB));
+    function Be(ee, ie) {
+      const He = pe(ee, ie),
+        ye = ee => ee.filter((ee => ee !== ie));
       return {
-        withFeatures: null === GB ? [...BB.withFeatures, OB] : YB(BB.withFeatures),
-        withoutFeatures: "with" === GB ? [...BB.withoutFeatures, OB] : YB(BB.withoutFeatures)
+        withFeatures: null === He ? [...ee.withFeatures, ie] : ye(ee.withFeatures),
+        withoutFeatures: "with" === He ? [...ee.withoutFeatures, ie] : ye(ee.withoutFeatures)
       }
     }
-    const AB = "section",
-      VB = "sort",
-      SB = "filters",
-      nB = "q",
-      UB = "banned",
-      fB = "popular",
-      kB = "strict";
+    const Ee = "section",
+      ge = "sort",
+      Oe = "filters",
+      de = "q",
+      We = "banned",
+      te = "popular",
+      Ze = "strict";
 
-    function dB(BB) {
-      var OB, GB, DB;
-      const oB = BB.get(AB),
-        jB = (null !== (OB = BB.get(SB)) && void 0 !== OB ? OB : kB).split(","),
-        yB = BB.get(UB);
+    function we(ee) {
+      var ie, He, be;
+      const Ke = ee.get(Ee),
+        Ue = (null !== (ie = ee.get(Oe)) && void 0 !== ie ? ie : Ze).split(","),
+        Fe = ee.get(We);
       return {
-        section: "favourites" === oB || "mine" === oB ? oB : "explore",
-        sort: null !== (GB = YB.z.find((OB => OB === BB.get(VB)))) && void 0 !== GB ? GB : fB,
-        withFeatures: pB.filter((BB => jB.includes(BB) && !jB.includes(`-${BB}`))),
-        withoutFeatures: pB.filter((BB => jB.includes(`-${BB}`))),
-        searchQuery: (null === (DB = BB.get(nB)) || void 0 === DB ? void 0 : DB.slice(0, YB.M)) || null,
-        pageNumber: (0, QB.h)(BB.get(QB.d)),
-        banned: "only" === yB ? "with" : "include" === yB ? null : "without"
+        section: "favourites" === Ke || "mine" === Ke ? Ke : "explore",
+        sort: null !== (He = ye.w.find((ie => ie === ee.get(ge)))) && void 0 !== He ? He : te,
+        withFeatures: fe.filter((ee => Ue.includes(ee) && !Ue.includes(`-${ee}`))),
+        withoutFeatures: fe.filter((ee => Ue.includes(`-${ee}`))),
+        searchQuery: (null === (be = ee.get(de)) || void 0 === be ? void 0 : be.slice(0, ye.G)) || null,
+        pageNumber: (0, Me.g)(ee.get(Me.e)),
+        banned: "only" === Fe ? "with" : "include" === Fe ? null : "without"
       }
     }
 
-    function KB(BB, OB) {
-      var GB;
-      const YB = FB(OB);
-      (0, QB.i)(BB, AB, "explore" === OB.section ? null : OB.section), (0, QB.i)(BB, VB, OB.sort === fB ? null : OB.sort), (0, QB.i)(BB, SB, YB === kB ? null : YB), (0, QB.i)(BB, nB, OB.searchQuery), (0, QB.i)(BB, UB, null !== (GB = RB(OB.banned)) && void 0 !== GB ? GB : null), (0, QB.k)(BB, OB.pageNumber)
+    function De(ee, ie) {
+      var He;
+      const ye = Ve(ie);
+      (0, Me.i)(ee, Ee, "explore" === ie.section ? null : ie.section), (0, Me.i)(ee, ge, ie.sort === te ? null : ie.sort), (0, Me.i)(ee, Oe, ye === Ze ? null : ye), (0, Me.i)(ee, de, ie.searchQuery), (0, Me.i)(ee, We, null !== (He = ze(ie.banned)) && void 0 !== He ? He : null), (0, Me.k)(ee, ie.pageNumber)
     }
 
-    function uB(BB) {
-      const OB = new URLSearchParams;
-      return KB(OB, {
+    function Pe(ee) {
+      const ie = new URLSearchParams;
+      return De(ie, {
         section: "explore",
-        sort: fB,
-        withFeatures: "strict" === BB ? [BB] : [BB, "strict"],
+        sort: te,
+        withFeatures: "strict" === ee ? [ee] : [ee, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${oB}?${OB.toString()}`
+      }), `${Ke}?${ie.toString()}`
     }
 
-    function mB(BB) {
-      return FB(BB) === kB
+    function Ae(ee) {
+      return Ve(ee) === Ze
     }
 
-    function IB(BB) {
-      return null !== BB.searchQuery || "with" === BB.banned || FB(BB) !== kB
+    function Ye(ee) {
+      return null !== ee.searchQuery || "with" === ee.banned || Ve(ee) !== Ze
     }
 
-    function FB(BB) {
-      return pB.flatMap((OB => {
-        const GB = ZB(BB, OB);
-        return "with" === GB ? [OB] : "without" === GB ? [`-${OB}`] : []
+    function Ve(ee) {
+      return fe.flatMap((ie => {
+        const He = pe(ee, ie);
+        return "with" === He ? [ie] : "without" === He ? [`-${ie}`] : []
       })).join(",")
     }
-    const iB = {
+    const ae = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      LB = {
+      ce = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function gB(BB) {
-      return Math.round(100 * Math.max(0, 1 - 1 / BB))
+    function xe(ee) {
+      return Math.round(100 * Math.max(0, 1 - 1 / ee))
     }
 
-    function rB(BB, OB, GB, DB) {
-      const QB = [];
-      BB.isBanned && QB.push({
+    function Le(ee, ie, He, be) {
+      const Me = [];
+      ee.isBanned && Me.push({
         tone: "warning",
-        text: DB("shaderPackListing:ownerBanned"),
+        text: be("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: oB
-      } = BB;
-      if (null === BB.brokenError || oB && !oB.error || QB.push({
+        pending: Ke
+      } = ee;
+      if (null === ee.brokenError || Ke && !Ke.error || Me.push({
           tone: "warning",
-          text: DB("shaderPackListing:ownerBroken"),
-          detail: BB.brokenError
-        }), null !== oB && void 0 !== oB && oB.error) QB.push({
+          text: be("shaderPackListing:ownerBroken"),
+          detail: ee.brokenError
+        }), null !== Ke && void 0 !== Ke && Ke.error) Me.push({
         tone: "warning",
-        text: DB(OB ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, YB.n)(oB.error) ? null : oB.error
+        text: be(ie ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, ye.l)(Ke.error) ? null : Ke.error
       });
-      else if (oB) {
-        const BB = null === oB.renderNotBefore ? 0 : oB.renderNotBefore - GB,
-          YB = String(Math.ceil(BB / 6e4)),
-          jB = DB(OB ? BB > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : BB > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: YB
+      else if (Ke) {
+        const ee = null === Ke.renderNotBefore ? 0 : Ke.renderNotBefore - He,
+          ye = String(Math.ceil(ee / 6e4)),
+          Ue = be(ie ? ee > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : ee > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: ye
           });
-        QB.push({
+        Me.push({
           tone: "info",
-          text: jB,
+          text: Ue,
           detail: null
         })
       }
-      return BB.listed || QB.push({
+      return ee.listed || Me.push({
         tone: "info",
-        text: DB("shaderPackListing:ownerUnlisted"),
+        text: be("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), QB
+      }), Me
     }
 
-    function XB(BB) {
-      return Math.max(1, Math.round(BB / 1024))
+    function Ce(ee) {
+      return Math.max(1, Math.round(ee / 1024))
     }
 
-    function wB(BB, OB, GB) {
-      return BB instanceof DB.d && BB.errorMessageForUser ? BB.errorMessageForUser : OB(GB)
+    function ve(ee, ie, He) {
+      return ee instanceof be.b && ee.errorMessageForUser ? ee.errorMessageForUser : ie(He)
     }
   },
-  7122: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB
+  7220: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me
     });
-    var YB = GB(56),
-      DB = GB(31);
+    var ye = He(59),
+      be = He(35);
 
-    function QB(BB, OB) {
-      var GB;
-      const [QB, oB] = (0, YB.useState)(null !== (GB = DB.g.getItem(BB)) && void 0 !== GB ? GB : OB);
-      return [QB, OB => {
-        DB.g.setItem(BB, OB), oB(OB)
+    function Me(ee, ie) {
+      var He;
+      const [Me, Ke] = (0, ye.useState)(null !== (He = be.i.getItem(ee)) && void 0 !== He ? He : ie);
+      return [Me, ie => {
+        be.i.setItem(ee, ie), Ke(ie)
       }]
     }
   },
-  7107: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => jB,
-      E: () => oB,
-      F: () => YB,
-      I: () => zB,
-      M: () => MB,
-      Q: () => AB,
-      U: () => PB,
-      X: () => JB,
-      e: () => pB,
-      h: () => ZB,
-      i: () => qB,
-      l: () => lB,
-      n: () => WB,
-      q: () => SB,
-      r: () => yB,
-      t: () => DB,
-      x: () => VB,
-      z: () => QB
+  7206: (ee, ie, He) => {
+    He.d(ie, {
+      A: () => Ke,
+      C: () => ye,
+      D: () => ke,
+      G: () => oe,
+      H: () => Ee,
+      L: () => Re,
+      M: () => Je,
+      d: () => fe,
+      h: () => pe,
+      i: () => Te,
+      j: () => qe,
+      l: () => Be,
+      m: () => Oe,
+      o: () => Fe,
+      s: () => be,
+      t: () => ge,
+      w: () => Me,
+      y: () => Ue
     });
-    const YB = ["forest", "desert", "water", "night", "cave"];
-    const DB = {
+    const ye = ["forest", "desert", "water", "night", "cave"];
+    const be = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      QB = ["popular", "updated", "newest"],
-      oB = 3,
-      jB = 32,
-      yB = 300;
+      Me = ["popular", "updated", "newest"],
+      Ke = 3,
+      Ue = 32,
+      Fe = 300;
 
-    function JB(BB, OB) {
-      return BB.slice(0, OB).replace(/[\uD800-\uDBFF]$/, "")
+    function Je(ee, ie) {
+      return ee.slice(0, ie).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const MB = 64,
-      PB = 512,
-      zB = 18e5;
+    const oe = 64,
+      Re = 512,
+      ke = 18e5;
 
-    function lB(BB) {
-      const OB = BB,
-        GB = null === OB || void 0 === OB ? void 0 : OB.files;
-      return "number" === typeof(null === OB || void 0 === OB ? void 0 : OB.apiVersion) && "string" === typeof OB.name && (null === OB.author || "string" === typeof OB.author) && (void 0 === OB.keepCircleShadows || "boolean" === typeof OB.keepCircleShadows) && "object" === typeof GB && null !== GB && Object.values(GB).every((BB => "string" === typeof BB))
+    function qe(ee) {
+      const ie = ee,
+        He = null === ie || void 0 === ie ? void 0 : ie.files;
+      return "number" === typeof(null === ie || void 0 === ie ? void 0 : ie.apiVersion) && "string" === typeof ie.name && (null === ie.author || "string" === typeof ie.author) && (void 0 === ie.keepCircleShadows || "boolean" === typeof ie.keepCircleShadows) && "object" === typeof He && null !== He && Object.values(He).every((ee => "string" === typeof ee))
     }
-    const pB = "Bloxdhub",
-      qB = "https://bloxdhub.com/shaders";
+    const fe = "Bloxdhub",
+      Te = "https://bloxdhub.com/shaders";
 
-    function ZB(BB) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(BB)}`
+    function pe(ee) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(ee)}`
     }
-    const NB = "Screenshot generation failed.",
-      RB = "Its screenshots couldn't be generated:";
+    const Xe = "Screenshot generation failed.",
+      ze = "Its screenshots couldn't be generated:";
 
-    function WB(BB) {
-      var OB;
-      return BB === NB || null !== (OB = null === BB || void 0 === BB ? void 0 : BB.startsWith(RB)) && void 0 !== OB && OB
-    }
-
-    function AB(BB, OB) {
-      return `shaderPacks/${BB}/${OB}.json`
+    function Be(ee) {
+      var ie;
+      return ee === Xe || null !== (ie = null === ee || void 0 === ee ? void 0 : ee.startsWith(ze)) && void 0 !== ie && ie
     }
 
-    function VB(BB, OB, GB, YB) {
-      return null === OB.renderId ? SB(BB, OB.baselineVersion, GB, YB) : `${BB}/${function(BB,OB,GB,YB){return`shaderPacks/${BB}/${OB}/${GB}-${YB}.webp`}(OB.packId,OB.renderId,GB,YB)}`
+    function Ee(ee, ie) {
+      return `shaderPacks/${ee}/${ie}.json`
     }
 
-    function SB(BB, OB, GB, YB) {
-      return `${BB}/${function(BB,OB,GB){return`shaderPacks/baseline/${BB}/${OB}-${GB}.webp`}(OB,GB,YB)}`
+    function ge(ee, ie, He, ye) {
+      return null === ie.renderId ? Oe(ee, ie.baselineVersion, He, ye) : `${ee}/${function(ee,ie,He,ye){return`shaderPacks/${ee}/${ie}/${He}-${ye}.webp`}(ie.packId,ie.renderId,He,ye)}`
+    }
+
+    function Oe(ee, ie, He, ye) {
+      return `${ee}/${function(ee,ie,He){return`shaderPacks/baseline/${ee}/${ie}-${He}.webp`}(ie,He,ye)}`
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

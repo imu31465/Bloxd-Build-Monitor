@@ -1,197 +1,197 @@
 export const id = 701;
 export const ids = [701];
 export const modules = {
-  64471: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      rebuildScenePbrPipelines: () => jB,
-      rebuildSceneRenderables: () => yB
+  64466: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      rebuildScenePbrPipelines: () => Ue,
+      rebuildSceneRenderables: () => Fe
     });
-    var YB = GB(44838),
-      DB = (BB, OB) => BB.order - OB.order,
-      QB = 8,
-      oB = BB => yB(BB);
-    async function jB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await JB(BB, "pbr", OB)
+    var ye = He(44904),
+      be = (ee, ie) => ee.order - ie.order,
+      Me = 8,
+      Ke = ee => Fe(ee);
+    async function Ue(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await Je(ee, "pbr", ie)
     }
-    async function yB(BB) {
-      await JB(BB, void 0, !1)
+    async function Fe(ee) {
+      await Je(ee, void 0, !1)
     }
-    async function JB(BB, OB, jB) {
-      const yB = BB;
-      if (!yB._built && !jB) return;
-      const JB = yB._lightListVersion ?? 0,
-        MB = yB.surface.engine,
-        PB = BB => {
-          yB._z ? BB.forEach((BB => BB())) : (0, YB.e)(MB, (() => BB.forEach((BB => BB()))))
+    async function Je(ee, ie, Ue) {
+      const Fe = ee;
+      if (!Fe._built && !Ue) return;
+      const Je = Fe._lightListVersion ?? 0,
+        oe = Fe.surface.engine,
+        Re = ee => {
+          Fe._z ? ee.forEach((ee => ee())) : (0, ye.c)(oe, (() => ee.forEach((ee => ee()))))
         };
-      let zB = !1,
-        lB = !1,
-        pB = !1,
-        qB = !1;
+      let ke = !1,
+        qe = !1,
+        fe = !1,
+        Te = !1;
       try {
-        for (let BB = 1;; BB++) {
-          if (void 0 !== OB) {
-            await ZB();
+        for (let ee = 1;; ee++) {
+          if (void 0 !== ie) {
+            await pe();
             break
           }
-          if (RB(yB), await ZB(), !NB(yB)) break;
-          if (BB >= QB) {
-            yB._rebuildHook = oB, qB = !0, lB = !0;
+          if (ze(Fe), await pe(), !Xe(Fe)) break;
+          if (ee >= Me) {
+            Fe._rebuildHook = Ke, Te = !0, qe = !0;
             break
           }
         }
-        pB = !0
+        fe = !0
       } finally {
-        if (zB && (yB._renderables.sort(DB), yB._renderableVersion++, yB._materialEpoch++, yB._built && yB._frameGraph.build()), void 0 === OB && pB && !lB && (yB._lightListVersion ?? 0) === JB) {
-          const BB = yB._pendingTopologyRetirements?.splice(0);
-          BB?.length && PB(BB), qB || (yB._rebuildHook = void 0)
+        if (ke && (Fe._renderables.sort(be), Fe._renderableVersion++, Fe._materialEpoch++, Fe._built && Fe._frameGraph.build()), void 0 === ie && fe && !qe && (Fe._lightListVersion ?? 0) === Je) {
+          const ee = Fe._pendingTopologyRetirements?.splice(0);
+          ee?.length && Re(ee), Te || (Fe._rebuildHook = void 0)
         }
       }
-      async function ZB() {
-        for (const [BB, YB] of yB._groups) {
-          if (void 0 !== OB && BB._materialFamily !== OB) continue;
-          if (0 === YB.length) {
-            (YB.o || YB.r) && (WB(BB, YB), zB = !0);
+      async function pe() {
+        for (const [ee, ye] of Fe._groups) {
+          if (void 0 !== ie && ee._materialFamily !== ie) continue;
+          if (0 === ye.length) {
+            (ye.o || ye.r) && (Be(ee, ye), ke = !0);
             continue
           }
-          const DB = yB._runtimeBuilds;
-          await (DB?.wait(YB));
-          let QB = !1;
-          const jB = async () => {
-            const OB = yB._runtimeBuilds,
-              GB = [...YB].filter((OB => yB.meshes.includes(OB) && OB.material?._buildGroup === BB));
-            if (0 === GB.length) return void WB(BB, YB);
-            const oB = !!YB.r,
-              jB = yB._disposables.length,
-              JB = new Map,
-              MB = new Map(GB.map((BB => [BB, BB.material])));
-            for (const BB of GB) {
-              const GB = yB._meshDisposables.get(BB);
-              GB && (JB.set(BB, GB), yB._meshDisposables.delete(BB), OB?.holdPendingDisposers(BB, GB))
+          const be = Fe._runtimeBuilds;
+          await (be?.wait(ye));
+          let Me = !1;
+          const Ue = async () => {
+            const ie = Fe._runtimeBuilds,
+              He = [...ye].filter((ie => Fe.meshes.includes(ie) && ie.material?._buildGroup === ee));
+            if (0 === He.length) return void Be(ee, ye);
+            const Ke = !!ye.r,
+              Ue = Fe._disposables.length,
+              Je = new Map,
+              oe = new Map(He.map((ee => [ee, ee.material])));
+            for (const ee of He) {
+              const He = Fe._meshDisposables.get(ee);
+              He && (Je.set(ee, He), Fe._meshDisposables.delete(ee), ie?.holdPendingDisposers(ee, He))
             }
-            let zB, lB;
-            yB._p = BB => (lB = BB, !0);
+            let ke, qe;
+            Fe._p = ee => (qe = ee, !0);
             try {
-              zB = await BB(yB, GB)
-            } catch (SB) {
-              lB?.[1]();
-              for (const DB of GB) {
-                const GB = JB.get(DB),
-                  QB = yB._meshDisposables.get(DB);
-                if (QB && QB !== GB)
-                  for (const BB of QB) BB();
-                const oB = yB.meshes.includes(DB) && DB.material === MB.get(DB) && DB.material?._buildGroup === BB && YB.includes(DB);
-                GB && oB ? yB._meshDisposables.set(DB, GB) : (yB._meshDisposables.delete(DB), GB && PB(GB)), GB && OB?.releasePendingDisposers(DB, GB)
+              ke = await ee(Fe, He)
+            } catch (Oe) {
+              qe?.[1]();
+              for (const be of He) {
+                const He = Je.get(be),
+                  Me = Fe._meshDisposables.get(be);
+                if (Me && Me !== He)
+                  for (const ee of Me) ee();
+                const Ke = Fe.meshes.includes(be) && be.material === oe.get(be) && be.material?._buildGroup === ee && ye.includes(be);
+                He && Ke ? Fe._meshDisposables.set(be, He) : (Fe._meshDisposables.delete(be), He && Re(He)), He && ie?.releasePendingDisposers(be, He)
               }
-              throw SB
+              throw Oe
             } finally {
-              delete yB._p
+              delete Fe._p
             }
-            if (yB._z || DB?._d()) {
-              lB?.[1]();
-              for (const OB of GB) {
-                const BB = yB._meshDisposables.get(OB),
-                  GB = JB.get(OB);
-                if (BB && BB !== GB)
-                  for (const OB of BB) OB();
-                yB._meshDisposables.delete(OB)
+            if (Fe._z || be?._d()) {
+              qe?.[1]();
+              for (const ie of He) {
+                const ee = Fe._meshDisposables.get(ie),
+                  He = Je.get(ie);
+                if (ee && ee !== He)
+                  for (const ie of ee) ie();
+                Fe._meshDisposables.delete(ie)
               }
-              for (const OB of yB._disposables.splice(0)) OB();
-              const BB = [...JB.values()].flat();
-              PB(BB);
-              for (const [GB, YB] of JB) OB?.releasePendingDisposers(GB, YB);
+              for (const ie of Fe._disposables.splice(0)) ie();
+              const ee = [...Je.values()].flat();
+              Re(ee);
+              for (const [He, ye] of Je) ie?.releasePendingDisposers(He, ye);
               return
             }
-            lB?.[0](), BB._rebuildSingle = zB.rebuildSingle, YB.r = yB._runtimeBuilds?.base(BB, zB.rebuildSingle) ?? zB.rebuildSingle, "pbr" === BB._materialFamily && zB._G && (YB._w = null), oB && AB(yB, jB);
-            const pB = new Set(GB.filter((OB => yB.meshes.includes(OB) && OB.material === MB.get(OB) && OB.material?._buildGroup === BB && YB.includes(OB))));
-            if (pB.size !== GB.length && zB.renderables.some((BB => !BB.mesh))) {
-              for (const BB of GB) {
-                const GB = yB._meshDisposables.get(BB),
-                  YB = JB.get(BB);
-                if (GB && GB !== YB)
-                  for (const BB of GB) BB();
-                YB && yB.meshes.includes(BB) ? yB._meshDisposables.set(BB, YB) : (yB._meshDisposables.delete(BB), YB && PB(YB)), YB && OB?.releasePendingDisposers(BB, YB)
+            qe?.[0](), ee._rebuildSingle = ke.rebuildSingle, ye.r = Fe._runtimeBuilds?.base(ee, ke.rebuildSingle) ?? ke.rebuildSingle, "pbr" === ee._materialFamily && ke._G && (ye._w = null), Ke && Ee(Fe, Ue);
+            const fe = new Set(He.filter((ie => Fe.meshes.includes(ie) && ie.material === oe.get(ie) && ie.material?._buildGroup === ee && ye.includes(ie))));
+            if (fe.size !== He.length && ke.renderables.some((ee => !ee.mesh))) {
+              for (const ee of He) {
+                const He = Fe._meshDisposables.get(ee),
+                  ye = Je.get(ee);
+                if (He && He !== ye)
+                  for (const ee of He) ee();
+                ye && Fe.meshes.includes(ee) ? Fe._meshDisposables.set(ee, ye) : (Fe._meshDisposables.delete(ee), ye && Re(ye)), ye && ie?.releasePendingDisposers(ee, ye)
               }
-              return void(QB = !0)
+              return void(Me = !0)
             }
-            const qB = new Set;
-            for (const BB of GB)
-              if (pB.has(BB)) qB.add(BB.material), yB._runtimeBuilds?.reset(BB);
+            const Te = new Set;
+            for (const ee of He)
+              if (fe.has(ee)) Te.add(ee.material), Fe._runtimeBuilds?.reset(ee);
               else {
-                const GB = JB.get(BB),
-                  YB = yB._meshDisposables.get(BB);
-                if (YB && YB !== GB)
-                  for (const BB of YB) BB();
-                GB && yB.meshes.includes(BB) ? (yB._meshDisposables.set(BB, GB), JB.delete(BB), OB?.releasePendingDisposers(BB, GB)) : yB._meshDisposables.delete(BB)
-              } for (const BB of qB) BB._csmGen = (BB._csmGen ?? 0) + 1;
-            const ZB = YB.o,
-              NB = ZB?.length ? new Set(ZB) : null;
-            for (let BB = yB._renderables.length - 1; BB >= 0; BB--) {
-              const OB = yB._renderables[BB];
-              (pB.has(OB.mesh) || NB?.has(OB)) && yB._renderables.splice(BB, 1)
+                const He = Je.get(ee),
+                  ye = Fe._meshDisposables.get(ee);
+                if (ye && ye !== He)
+                  for (const ee of ye) ee();
+                He && Fe.meshes.includes(ee) ? (Fe._meshDisposables.set(ee, He), Je.delete(ee), ie?.releasePendingDisposers(ee, He)) : Fe._meshDisposables.delete(ee)
+              } for (const ee of Te) ee._csmGen = (ee._csmGen ?? 0) + 1;
+            const pe = ye.o,
+              Xe = pe?.length ? new Set(pe) : null;
+            for (let ee = Fe._renderables.length - 1; ee >= 0; ee--) {
+              const ie = Fe._renderables[ee];
+              (fe.has(ie.mesh) || Xe?.has(ie)) && Fe._renderables.splice(ee, 1)
             }
-            const RB = zB.renderables.filter((BB => !BB.mesh || pB.has(BB.mesh)));
-            yB._renderables.push(...RB), YB.o = RB;
-            const VB = [...JB.values()].flat();
-            PB(VB);
-            for (const [BB, YB] of JB) OB?.releasePendingDisposers(BB, YB)
+            const ze = ke.renderables.filter((ee => !ee.mesh || fe.has(ee.mesh)));
+            Fe._renderables.push(...ze), ye.o = ze;
+            const ge = [...Je.values()].flat();
+            Re(ge);
+            for (const [ee, ye] of Je) ie?.releasePendingDisposers(ee, ye)
           }, {
-            X: JB
-          } = await Promise.resolve().then((() => GB(63982))), MB = 3;
-          for (let OB = 1;; OB++) {
-            if (QB = !1, await JB(yB, BB, jB), yB._z || DB?._d()) return void(lB = !0);
-            if (!QB) break;
-            if (OB >= MB) {
-              WB(BB, YB), yB._rebuildHook = oB, qB = !0, lB = !0;
+            X: Je
+          } = await Promise.resolve().then((() => He(63923))), oe = 3;
+          for (let ie = 1;; ie++) {
+            if (Me = !1, await Je(Fe, ee, Ue), Fe._z || be?._d()) return void(qe = !0);
+            if (!Me) break;
+            if (ie >= oe) {
+              Be(ee, ye), Fe._rebuildHook = Ke, Te = !0, qe = !0;
               break
             }
           }
-          QB ? zB = !0 : zB = !0
+          Me ? ke = !0 : ke = !0
         }
       }
 
-      function NB(BB) {
-        for (const OB of BB.meshes) {
-          const GB = OB.material?._buildGroup;
-          if (GB && !BB._groups.get(GB)?.includes(OB)) return !0
+      function Xe(ee) {
+        for (const ie of ee.meshes) {
+          const He = ie.material?._buildGroup;
+          if (He && !ee._groups.get(He)?.includes(ie)) return !0
         }
         return !1
       }
 
-      function RB(BB) {
-        const OB = new Map;
-        for (const GB of BB.meshes) {
-          const BB = GB.material?._buildGroup;
-          if (!BB) continue;
-          const YB = OB.get(BB);
-          YB ? YB.push(GB) : OB.set(BB, [GB])
+      function ze(ee) {
+        const ie = new Map;
+        for (const He of ee.meshes) {
+          const ee = He.material?._buildGroup;
+          if (!ee) continue;
+          const ye = ie.get(ee);
+          ye ? ye.push(He) : ie.set(ee, [He])
         }
-        for (const [GB, YB] of BB._groups) {
-          const BB = OB.get(GB) ?? [];
-          (YB.length !== BB.length || BB.some(((BB, OB) => YB[OB] !== BB))) && (YB.length = 0, YB.push(...BB)), OB.delete(GB)
+        for (const [He, ye] of ee._groups) {
+          const ee = ie.get(He) ?? [];
+          (ye.length !== ee.length || ee.some(((ee, ie) => ye[ie] !== ee))) && (ye.length = 0, ye.push(...ee)), ie.delete(He)
         }
-        for (const [GB, YB] of OB) {
-          const OB = YB;
-          BB._groups.set(GB, OB)
+        for (const [He, ye] of ie) {
+          const ie = ye;
+          ee._groups.set(He, ie)
         }
       }
 
-      function WB(BB, OB) {
-        const GB = OB.o;
-        if (GB?.length) {
-          const BB = new Set(GB);
-          for (let OB = yB._renderables.length - 1; OB >= 0; OB--) BB.has(yB._renderables[OB]) && yB._renderables.splice(OB, 1)
+      function Be(ee, ie) {
+        const He = ie.o;
+        if (He?.length) {
+          const ee = new Set(He);
+          for (let ie = Fe._renderables.length - 1; ie >= 0; ie--) ee.has(Fe._renderables[ie]) && Fe._renderables.splice(ie, 1)
         }
-        OB.o = void 0, OB.r = void 0, yB._runtimeBuilds?.dropBase(BB), yB._rebuildHook = oB, qB = !0
+        ie.o = void 0, ie.r = void 0, Fe._runtimeBuilds?.dropBase(ee), Fe._rebuildHook = Ke, Te = !0
       }
 
-      function AB(BB, OB) {
-        const GB = new Set(BB._disposables.slice(0, OB));
-        for (let YB = BB._disposables.length - 1; YB >= OB; YB--) GB.has(BB._disposables[YB]) && BB._disposables.splice(YB, 1)
+      function Ee(ee, ie) {
+        const He = new Set(ee._disposables.slice(0, ie));
+        for (let ye = ee._disposables.length - 1; ye >= ie; ye--) He.has(ee._disposables[ye]) && ee._disposables.splice(ye, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

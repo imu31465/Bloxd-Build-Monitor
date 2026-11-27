@@ -1,15 +1,15 @@
 export const id = 661;
 export const ids = [661];
 export const modules = {
-  63880: (BB, OB, GB) => {
-    var YB;
-    GB.r(OB), GB.d(OB, {
-        ShaderLanguage: () => YB
+  63827: (ee, ie, He) => {
+    var ye;
+    He.r(ie), He.d(ie, {
+        ShaderLanguage: () => ye
       }),
-      function(BB) {
-        BB[BB.GLSL = 0] = "GLSL", BB[BB.WGSL = 1] = "WGSL"
-      }(YB || (YB = {}))
+      function(ee) {
+        ee[ee.GLSL = 0] = "GLSL", ee[ee.WGSL = 1] = "WGSL"
+      }(ye || (ye = {}))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,135 +1,135 @@
 export const id = 147;
 export const ids = [147, 214];
 export const modules = {
-  34794: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  34872: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me
     });
-    var YB = GB(353),
-      DB = GB(34799);
+    var ye = He(347),
+      be = He(34880);
 
-    function QB(BB, OB, GB) {
-      const QB = Object.entries(OB).sort(((BB, OB) => OB[1] - BB[1])),
-        oB = (0, YB.zb)(BB);
-      oB.push(BB ? "\n\n" : "\n");
-      for (const [DB, pB] of QB) {
-        var jB, yB, JB;
-        const BB = null !== (jB = null === GB || void 0 === GB || null === (yB = GB[DB]) || void 0 === yB ? void 0 : yB.icon) && void 0 !== jB ? jB : `${DB} Enchantment`;
-        oB.push({
-          icon: BB,
+    function Me(ee, ie, He) {
+      const Me = Object.entries(ie).sort(((ee, ie) => ie[1] - ee[1])),
+        Ke = (0, ye.Cb)(ee);
+      Ke.push(ee ? "\n\n" : "\n");
+      for (const [be, fe] of Me) {
+        var Ue, Fe, Je;
+        const ee = null !== (Ue = null === He || void 0 === He || null === (Fe = He[be]) || void 0 === Fe ? void 0 : Fe.icon) && void 0 !== Ue ? Ue : `${be} Enchantment`;
+        Ke.push({
+          icon: ee,
           style: {
             fontSize: "1.5rem"
           }
-        }), oB.push({
-          str: `${DB} ${null!==(JB=(0,YB.S)(pB))&&void 0!==JB?JB:pB}\n`
+        }), Ke.push({
+          str: `${be} ${null!==(Je=(0,ye.T)(fe))&&void 0!==Je?Je:fe}\n`
         })
       }
-      oB.push({
+      Ke.push({
         str: "\n"
       });
-      for (const [YB, pB] of QB) {
-        var MB, PB, zB, lB;
-        const BB = null !== (MB = null === GB || void 0 === GB || null === (PB = GB[YB]) || void 0 === PB ? void 0 : PB.icon) && void 0 !== MB ? MB : `${YB} Enchantment`,
-          OB = null !== (zB = null === GB || void 0 === GB || null === (lB = GB[YB]) || void 0 === lB ? void 0 : lB.description) && void 0 !== zB ? zB : (0, DB.h)(YB);
-        oB.push({
-          icon: BB,
+      for (const [ye, fe] of Me) {
+        var oe, Re, ke, qe;
+        const ee = null !== (oe = null === He || void 0 === He || null === (Re = He[ye]) || void 0 === Re ? void 0 : Re.icon) && void 0 !== oe ? oe : `${ye} Enchantment`,
+          ie = null !== (ke = null === He || void 0 === He || null === (qe = He[ye]) || void 0 === qe ? void 0 : qe.description) && void 0 !== ke ? ke : (0, be.o)(ye);
+        Ke.push({
+          icon: ee,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), oB.push({
-          str: OB,
+        }), Ke.push({
+          str: ie,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), oB.push({
+        }), Ke.push({
           str: "\n"
         })
       }
-      return oB
+      return Ke
     }
   },
-  34807: (BB, OB, GB) => {
-    GB.d(OB, {
-      A: () => PB,
-      d: () => JB,
-      f: () => RB,
-      j: () => ZB,
-      m: () => yB,
-      n: () => NB,
-      p: () => MB,
-      t: () => zB,
-      x: () => qB
+  34889: (ee, ie, He) => {
+    He.d(ie, {
+      B: () => Re,
+      d: () => Je,
+      e: () => ze,
+      i: () => pe,
+      m: () => Fe,
+      p: () => Xe,
+      s: () => oe,
+      v: () => ke,
+      x: () => Te
     });
-    var YB = GB(331),
-      DB = GB(641),
-      QB = GB(353),
-      oB = GB(4634),
-      jB = GB(34794);
+    var ye = He(335),
+      be = He(610),
+      Me = He(347),
+      Ke = He(4585),
+      Ue = He(34872);
 
-    function yB(BB, OB) {
-      var GB;
+    function Fe(ee, ie) {
+      var He;
       let {
-        player: YB,
-        chestOrCreative: DB
-      } = BB;
-      var QB;
-      return OB < YB.length ? null !== (QB = YB[OB]) && void 0 !== QB ? QB : null : null !== (GB = DB[OB - YB.length]) && void 0 !== GB ? GB : null
+        player: ye,
+        chestOrCreative: be
+      } = ee;
+      var Me;
+      return ie < ye.length ? null !== (Me = ye[ie]) && void 0 !== Me ? Me : null : null !== (He = be[ie - ye.length]) && void 0 !== He ? He : null
     }
 
-    function JB(BB) {
-      var OB;
-      return null !== (OB = BB.amount) && void 0 !== OB ? OB : 0
+    function Je(ee) {
+      var ie;
+      return null !== (ie = ee.amount) && void 0 !== ie ? ie : 0
     }
 
-    function MB(BB) {
-      return 0 === BB.button || void 0 === BB.button
+    function oe(ee) {
+      return 0 === ee.button || void 0 === ee.button
     }
 
-    function PB(BB) {
-      return !!BB.shiftKey
+    function Re(ee) {
+      return !!ee.shiftKey
     }
 
-    function zB(BB) {
-      return "touches" in BB || "touch" === BB.pointerType || "pen" === BB.pointerType
+    function ke(ee) {
+      return "touches" in ee || "touch" === ee.pointerType || "pen" === ee.pointerType
     }
-    const lB = new Set,
-      pB = 50;
+    const qe = new Set,
+      fe = 50;
 
-    function qB(BB, OB) {
-      var GB;
-      const YB = null === (GB = BB[OB]) || void 0 === GB ? void 0 : GB.displayName;
-      return (0, DB.Q)(YB) ? "string" !== typeof OB ? "" : (!lB.has(OB) && lB.size < pB && (lB.add(OB), console.warn(`No item called "${OB}", so its hover shows the name as given`)), OB) : YB
+    function Te(ee, ie) {
+      var He;
+      const ye = null === (He = ee[ie]) || void 0 === He ? void 0 : He.displayName;
+      return (0, be.P)(ye) ? "string" !== typeof ie ? "" : (!qe.has(ie) && qe.size < fe && (qe.add(ie), console.warn(`No item called "${ie}", so its hover shows the name as given`)), ie) : ye
     }
 
-    function ZB(BB, OB, GB) {
-      var yB, JB, MB, PB, zB, lB, pB, ZB, NB, RB, WB, AB, VB, SB;
-      const nB = BB.attributes,
-        UB = null !== (yB = null === (JB = OB[BB.name]) || void 0 === JB ? void 0 : JB.rootName) && void 0 !== yB ? yB : BB.name,
-        fB = null !== (MB = null !== (PB = nB.customDisplayName) && void 0 !== PB ? PB : null === (zB = OB[BB.name]) || void 0 === zB ? void 0 : zB.displayName) && void 0 !== MB ? MB : qB(OB, UB);
-      let kB = fB;
-      const dB = null === (lB = nB.customAttributes) || void 0 === lB ? void 0 : lB.enchantmentTier;
-      dB && (kB = (0, QB.zb)(fB, {
-        colour: QB.ub[dB]
+    function pe(ee, ie, He) {
+      var Fe, Je, oe, Re, ke, qe, fe, pe, Xe, ze, Be, Ee, ge, Oe;
+      const de = ee.attributes,
+        We = null !== (Fe = null === (Je = ie[ee.name]) || void 0 === Je ? void 0 : Je.rootName) && void 0 !== Fe ? Fe : ee.name,
+        te = null !== (oe = null !== (Re = de.customDisplayName) && void 0 !== Re ? Re : null === (ke = ie[ee.name]) || void 0 === ke ? void 0 : ke.displayName) && void 0 !== oe ? oe : Te(ie, We);
+      let Ze = te;
+      const we = null === (qe = de.customAttributes) || void 0 === qe ? void 0 : qe.enchantmentTier;
+      we && (Ze = (0, Me.Cb)(te, {
+        colour: Me.xb[we]
       }));
-      const KB = null !== (pB = null !== (ZB = null !== (NB = function(BB, OB) {
-        var GB;
-        if (void 0 === BB || null !== (GB = OB.customAttributes) && void 0 !== GB && GB.author) return BB;
-        const DB = (0, YB.hc)(BB);
-        return DB.every((BB => "string" === typeof BB)) ? BB : DB.map((BB => "string" === typeof BB ? BB : {
-          icon: BB.icon,
+      const De = null !== (fe = null !== (pe = null !== (Xe = function(ee, ie) {
+        var He;
+        if (void 0 === ee || null !== (He = ie.customAttributes) && void 0 !== He && He.author) return ee;
+        const be = (0, ye.kc)(ee);
+        return be.every((ee => "string" === typeof ee)) ? ee : be.map((ee => "string" === typeof ee ? ee : {
+          icon: ee.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(nB.customDescription, nB)) && void 0 !== NB ? NB : null === (RB = OB[BB.name]) || void 0 === RB ? void 0 : RB.description) && void 0 !== ZB ? ZB : null === (WB = OB[UB]) || void 0 === WB ? void 0 : WB.description) && void 0 !== pB ? pB : "";
-      let uB = KB;
-      if (null !== (AB = nB.customAttributes) && void 0 !== AB && AB.enchantments) uB = (0, jB.d)(KB, nB.customAttributes.enchantments, nB.customAttributes.enchantmentData);
-      else if (GB[UB]) uB = (0, QB.zb)(KB), uB.push({
+      }(de.customDescription, de)) && void 0 !== Xe ? Xe : null === (ze = ie[ee.name]) || void 0 === ze ? void 0 : ze.description) && void 0 !== pe ? pe : null === (Be = ie[We]) || void 0 === Be ? void 0 : Be.description) && void 0 !== fe ? fe : "";
+      let Pe = De;
+      if (null !== (Ee = de.customAttributes) && void 0 !== Ee && Ee.enchantments) Pe = (0, Ue.c)(De, de.customAttributes.enchantments, de.customAttributes.enchantmentData);
+      else if (He[We]) Pe = (0, Me.Cb)(De), Pe.push({
         str: "\n"
-      }), uB.push({
+      }), Pe.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -137,874 +137,874 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (VB = nB.customAttributes) && void 0 !== VB && VB.mobSettings) {
-        var mB, IB;
-        const BB = nB.customAttributes.mobSettings;
-        var FB, iB;
-        if (uB = [], (0, DB.Q)(nB.customAttributes.health) || (uB.push({
+      else if (null !== (ge = de.customAttributes) && void 0 !== ge && ge.mobSettings) {
+        var Ae, Ye;
+        const ee = de.customAttributes.mobSettings;
+        var Ve, ae;
+        if (Pe = [], (0, be.P)(de.customAttributes.health) || (Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
-          }), uB.push({
-            str: nB.customAttributes.health.toString()
-          }), (0, DB.Q)(BB.maxHealth) || (uB.push({
+          }), Pe.push({
+            str: de.customAttributes.health.toString()
+          }), (0, be.P)(ee.maxHealth) || (Pe.push({
             str: "/"
-          }), uB.push({
-            str: BB.maxHealth.toString()
-          }))), !(0, DB.Q)(BB.attackDamage) && BB.attackDamage > 0 && (uB.push({
+          }), Pe.push({
+            str: ee.maxHealth.toString()
+          }))), !(0, be.P)(ee.attackDamage) && ee.attackDamage > 0 && (Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
-          }), uB.push({
-            str: BB.attackDamage.toString()
-          })), !(0, DB.Q)(BB.secondaryAttackDamage) && BB.secondaryAttackDamage > 0 && (uB.push({
+          }), Pe.push({
+            str: ee.attackDamage.toString()
+          })), !(0, be.P)(ee.secondaryAttackDamage) && ee.secondaryAttackDamage > 0 && (Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
-          }), uB.push({
-            str: BB.secondaryAttackDamage.toString()
-          })), (0, DB.Q)(BB.baseRunningSpeed) || (uB.push({
+          }), Pe.push({
+            str: ee.secondaryAttackDamage.toString()
+          })), (0, be.P)(ee.baseRunningSpeed) || (Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
-          }), uB.push({
-            str: BB.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === BB.metaInfo) uB.push({
+          }), Pe.push({
+            str: ee.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === ee.metaInfo) Pe.push({
           str: "\n"
-        }), uB.push({
+        }), Pe.push({
           str: {
             translationKey: "general:has"
           }
-        }), uB.push({
+        }), Pe.push({
           str: " "
-        }), uB.push({
-          icon: null !== (FB = null === (iB = BB.tameInfo) || void 0 === iB ? void 0 : iB.saddleItemName) && void 0 !== FB ? FB : "Saddle",
+        }), Pe.push({
+          icon: null !== (Ve = null === (ae = ee.tameInfo) || void 0 === ae ? void 0 : ae.saddleItemName) && void 0 !== Ve ? Ve : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (uB.push({
+        if (Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             str: "\n"
-          }), BB.petInfo && null !== (mB = BB.tameInfo) && void 0 !== mB && mB.supportsFriendship) {
-          const OB = oB.d.getIconsFromFriendshipPoints(BB.petInfo.friendshipPoints);
-          for (const BB of OB) uB.push({
-            icon: BB,
+          }), ee.petInfo && null !== (Ae = ee.tameInfo) && void 0 !== Ae && Ae.supportsFriendship) {
+          const ie = Ke.d.getIconsFromFriendshipPoints(ee.petInfo.friendshipPoints);
+          for (const ee of ie) Pe.push({
+            icon: ee,
             style: {
               fontSize: "1.5em"
             }
           });
-          uB.push({
+          Pe.push({
             str: "\n"
           });
-          const GB = oB.d.getMobHungerLevel(BB.petInfo.lastFedAt);
-          for (const BB of oB.d.hungerLevelIcons[GB]) uB.push({
-            icon: BB,
+          const He = Ke.d.getMobHungerLevel(ee.petInfo.lastFedAt);
+          for (const ee of Ke.d.hungerLevelIcons[He]) Pe.push({
+            icon: ee,
             style: {
               fontSize: "1.5em"
             }
           });
-          uB.push({
+          Pe.push({
             str: " "
-          }), uB.push({
-            str: oB.d.hungerLevelTranslations[GB],
+          }), Pe.push({
+            str: Ke.d.hungerLevelTranslations[He],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (BB.tameInfo && null !== (IB = BB.tameInfo) && void 0 !== IB && IB.supportsFriendship) {
-          var LB, gB;
-          let OB = null !== (LB = BB.tameInfo.likedFoods) && void 0 !== LB ? LB : [];
-          uB.push({
+        if (ee.tameInfo && null !== (Ye = ee.tameInfo) && void 0 !== Ye && Ye.supportsFriendship) {
+          var ce, xe;
+          let ie = null !== (ce = ee.tameInfo.likedFoods) && void 0 !== ce ? ce : [];
+          Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: oB.d.feedTextColours[oB.d.MobFoodType.Superliked]
+              color: Ke.d.feedTextColours[Ke.d.MobFoodType.Superliked]
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
-          }), null !== (gB = BB.petInfo) && void 0 !== gB && gB.superlikedFoodKnown ? (uB.push({
-            icon: BB.petInfo.superlikedFood,
+          }), null !== (xe = ee.petInfo) && void 0 !== xe && xe.superlikedFoodKnown ? (Pe.push({
+            icon: ee.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), OB = OB.filter((OB => OB !== BB.petInfo.superlikedFood))) : uB.push({
+          }), ie = ie.filter((ie => ie !== ee.petInfo.superlikedFood))) : Pe.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), uB.push({
+          }), Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: oB.d.feedTextColours[oB.d.MobFoodType.Liked]
+              color: Ke.d.feedTextColours[Ke.d.MobFoodType.Liked]
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
           });
-          for (const BB of OB) uB.push({
-            icon: BB,
+          for (const ee of ie) Pe.push({
+            icon: ee,
             style: {
               fontSize: "1.5em"
             }
           });
-          uB.push({
+          Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: oB.d.feedTextColours[oB.d.MobFoodType.Neutral]
+              color: Ke.d.feedTextColours[Ke.d.MobFoodType.Neutral]
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
           });
-          for (const GB of null !== (rB = BB.tameInfo.neutralFoods) && void 0 !== rB ? rB : []) {
-            var rB;
-            uB.push({
-              icon: GB,
+          for (const He of null !== (Le = ee.tameInfo.neutralFoods) && void 0 !== Le ? Le : []) {
+            var Le;
+            Pe.push({
+              icon: He,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          uB.push({
+          Pe.push({
             str: "\n"
-          }), uB.push({
+          }), Pe.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: oB.d.feedTextColours[oB.d.MobFoodType.Disliked]
+              color: Ke.d.feedTextColours[Ke.d.MobFoodType.Disliked]
             }
-          }), uB.push({
+          }), Pe.push({
             str: " "
           });
-          for (const GB of null !== (XB = BB.tameInfo.dislikedFoods) && void 0 !== XB ? XB : []) {
-            var XB;
-            uB.push({
-              icon: GB,
+          for (const He of null !== (Ce = ee.tameInfo.dislikedFoods) && void 0 !== Ce ? Ce : []) {
+            var Ce;
+            Pe.push({
+              icon: He,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        uB.length > 0 ? (uB.shift(), uB.unshift(...(0, QB.zb)(KB))) : uB = (0, QB.zb)(KB)
+        Pe.length > 0 ? (Pe.shift(), Pe.unshift(...(0, Me.Cb)(De))) : Pe = (0, Me.Cb)(De)
       }
       return {
-        name: kB,
-        desc: uB,
-        fontStyle: null !== (SB = nB.customAttributes) && void 0 !== SB && SB.author ? "italic" : "normal"
+        name: Ze,
+        desc: Pe,
+        fontStyle: null !== (Oe = de.customAttributes) && void 0 !== Oe && Oe.author ? "italic" : "normal"
       }
     }
 
-    function NB(BB, OB, GB, YB) {
-      const DB = yB(BB, GB),
-        QB = yB(BB, YB);
-      if (!DB) return !1;
-      const oB = OB[DB.name].armourReduction,
-        jB = OB[QB.name].armourReduction;
-      if (jB === oB) {
-        var JB, MB, PB, zB;
-        const BB = null !== (JB = null === (MB = DB.attributes.customAttributes) || void 0 === MB ? void 0 : MB.enchantmentTier) && void 0 !== JB ? JB : "Tier 0",
-          OB = null !== (PB = null === (zB = QB.attributes.customAttributes) || void 0 === zB ? void 0 : zB.enchantmentTier) && void 0 !== PB ? PB : "Tier 0";
-        return parseInt(BB.replace("Tier ", "")) >= parseInt(OB.replace("Tier ", ""))
+    function Xe(ee, ie, He, ye) {
+      const be = Fe(ee, He),
+        Me = Fe(ee, ye);
+      if (!be) return !1;
+      const Ke = ie[be.name].armourReduction,
+        Ue = ie[Me.name].armourReduction;
+      if (Ue === Ke) {
+        var Je, oe, Re, ke;
+        const ee = null !== (Je = null === (oe = be.attributes.customAttributes) || void 0 === oe ? void 0 : oe.enchantmentTier) && void 0 !== Je ? Je : "Tier 0",
+          ie = null !== (Re = null === (ke = Me.attributes.customAttributes) || void 0 === ke ? void 0 : ke.enchantmentTier) && void 0 !== Re ? Re : "Tier 0";
+        return parseInt(ee.replace("Tier ", "")) >= parseInt(ie.replace("Tier ", ""))
       }
-      return oB > jB
+      return Ke > Ue
     }
 
-    function RB(BB) {
-      let OB;
-      if ("number" === typeof BB) {
-        const GB = document.querySelector(`[data-inven-idx="${BB}"]`);
-        if (!GB) return null;
-        OB = GB.getBoundingClientRect()
-      } else OB = BB.getBoundingClientRect();
+    function ze(ee) {
+      let ie;
+      if ("number" === typeof ee) {
+        const He = document.querySelector(`[data-inven-idx="${ee}"]`);
+        if (!He) return null;
+        ie = He.getBoundingClientRect()
+      } else ie = ee.getBoundingClientRect();
       return {
-        x: OB.left + OB.width / 2,
-        y: OB.top + OB.height / 2
+        x: ie.left + ie.width / 2,
+        y: ie.top + ie.height / 2
       }
     }
   },
-  9570: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => kB,
-      h: () => uB
+  9654: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Ze,
+      h: () => Pe
     });
-    var YB = GB(56),
-      DB = GB(25),
-      QB = GB(2697),
-      oB = GB(3831);
-    const jB = 6,
-      yB = 4,
-      JB = ["HudMove-inventory", "HudLocked-inventory"];
+    var ye = He(59),
+      be = He(27),
+      Me = He(2591),
+      Ke = He(3760);
+    const Ue = 6,
+      Fe = 4,
+      Je = ["HudMove-inventory", "HudLocked-inventory"];
 
-    function MB(BB) {
+    function oe(ee) {
       let {
-        left: OB,
-        right: GB,
-        height: YB,
-        rowTop: DB,
-        besideBottom: QB,
-        obstacles: oB
-      } = BB;
-      const JB = oB.filter((BB => BB.left < GB + jB && BB.right > OB - jB));
-      let MB = QB;
-      for (let jB = 0; jB <= JB.length; jB++) {
-        const BB = JB.filter((BB => BB.top < MB + yB && BB.bottom > MB - YB - yB));
-        if (0 === BB.length) break;
-        MB = Math.min(...BB.map((BB => BB.top))) - yB
+        left: ie,
+        right: He,
+        height: ye,
+        rowTop: be,
+        besideBottom: Me,
+        obstacles: Ke
+      } = ee;
+      const Je = Ke.filter((ee => ee.left < He + Ue && ee.right > ie - Ue));
+      let oe = Me;
+      for (let Ue = 0; Ue <= Je.length; Ue++) {
+        const ee = Je.filter((ee => ee.top < oe + Fe && ee.bottom > oe - ye - Fe));
+        if (0 === ee.length) break;
+        oe = Math.min(...ee.map((ee => ee.top))) - Fe
       }
-      return MB === QB ? null : Math.ceil(DB - MB)
+      return oe === Me ? null : Math.ceil(be - oe)
     }
 
-    function PB(BB) {
-      return Array.from(BB.children).filter((BB => !BB.classList.contains("HotBarRow")))
+    function Re(ee) {
+      return Array.from(ee.children).filter((ee => !ee.classList.contains("HotBarRow")))
     }
 
-    function zB(BB) {
-      return function(BB) {
-        const OB = [],
-          GB = (BB, YB) => {
-            const DB = BB.getBoundingClientRect();
-            if (DB.width > 0 && DB.height > 0) OB.push(BB);
-            else if (YB < 2)
-              for (const OB of Array.from(BB.children)) GB(OB, YB + 1)
+    function ke(ee) {
+      return function(ee) {
+        const ie = [],
+          He = (ee, ye) => {
+            const be = ee.getBoundingClientRect();
+            if (be.width > 0 && be.height > 0) ie.push(ee);
+            else if (ye < 2)
+              for (const ie of Array.from(ee.children)) He(ie, ye + 1)
           };
-        for (const YB of BB) GB(YB, 0);
-        return OB
-      }(PB(BB).flatMap((BB => BB.classList.contains("AuraBarWrapper") ? [] : BB.classList.contains("BottomScreenStatBarList") ? Array.from(BB.children) : [BB])))
+        for (const ye of ee) He(ye, 0);
+        return ie
+      }(Re(ee).flatMap((ee => ee.classList.contains("AuraBarWrapper") ? [] : ee.classList.contains("BottomScreenStatBarList") ? Array.from(ee.children) : [ee])))
     }
 
-    function lB(BB, OB) {
-      var GB;
-      const YB = null === (GB = BB.querySelector(":scope > .AuraBarWrapper")) || void 0 === GB ? void 0 : GB.getBoundingClientRect();
-      return (YB && YB.height > 0 ? YB.top : OB) - yB
+    function qe(ee, ie) {
+      var He;
+      const ye = null === (He = ee.querySelector(":scope > .AuraBarWrapper")) || void 0 === He ? void 0 : He.getBoundingClientRect();
+      return (ye && ye.height > 0 ? ye.top : ie) - Fe
     }
-    const pB = ".BottomScreenMessage, [role='status']";
+    const fe = ".BottomScreenMessage, [role='status']";
 
-    function qB(BB, OB, GB, YB, DB) {
-      const QB = BB => BB.map((BB => BB.getBoundingClientRect())),
-        oB = MB({
-          ...GB,
-          obstacles: QB(GB.obstacles.filter((BB => !BB.matches(pB))))
+    function Te(ee, ie, He, ye, be) {
+      const Me = ee => ee.map((ee => ee.getBoundingClientRect())),
+        Ke = oe({
+          ...He,
+          obstacles: Me(He.obstacles.filter((ee => !ee.matches(fe))))
         }),
-        jB = OB.ownerDocument.defaultView,
-        yB = `${null===jB||void 0===jB?void 0:jB.innerWidth}x${null===jB||void 0===jB?void 0:jB.innerHeight}:${YB}:${Math.round(GB.rowTop)}`,
-        JB = BB.get(OB),
-        PB = (null === JB || void 0 === JB ? void 0 : JB.at) === yB ? (zB = JB.rise, lB = oB, null === zB ? lB : null === lB ? zB : Math.max(zB, lB)) : oB;
-      var zB, lB;
-      const qB = MB({
-        ...GB,
-        besideBottom: null === PB ? GB.besideBottom : GB.rowTop - PB,
-        obstacles: QB(GB.obstacles)
+        Ue = ie.ownerDocument.defaultView,
+        Fe = `${null===Ue||void 0===Ue?void 0:Ue.innerWidth}x${null===Ue||void 0===Ue?void 0:Ue.innerHeight}:${ye}:${Math.round(He.rowTop)}`,
+        Je = ee.get(ie),
+        Re = (null === Je || void 0 === Je ? void 0 : Je.at) === Fe ? (ke = Je.rise, qe = Ke, null === ke ? qe : null === qe ? ke : Math.max(ke, qe)) : Ke;
+      var ke, qe;
+      const Te = oe({
+        ...He,
+        besideBottom: null === Re ? He.besideBottom : He.rowTop - Re,
+        obstacles: Me(He.obstacles)
       });
-      return DB && BB.set(OB, {
-        at: yB,
-        rise: PB
-      }), null !== qB && void 0 !== qB ? qB : PB
+      return be && ee.set(ie, {
+        at: Fe,
+        rise: Re
+      }), null !== Te && void 0 !== Te ? Te : Re
     }
 
-    function ZB(BB, OB, GB, YB) {
-      BB.classList.toggle(OB, null !== YB), null === YB ? BB.style.removeProperty(GB) : BB.style.setProperty(GB, `${YB}px`)
+    function pe(ee, ie, He, ye) {
+      ee.classList.toggle(ie, null !== ye), null === ye ? ee.style.removeProperty(He) : ee.style.setProperty(He, `${ye}px`)
     }
-    const NB = new WeakMap,
-      RB = new WeakMap,
-      WB = "(orientation: portrait) and (max-width: 600px)";
+    const Xe = new WeakMap,
+      ze = new WeakMap,
+      Be = "(orientation: portrait) and (max-width: 600px)";
 
-    function AB(BB, OB) {
-      const GB = BB.getBoundingClientRect();
-      if (0 === GB.width) return null;
-      const YB = [GB, ...Array.from(BB.children).filter((BB => !(BB => OB.contains(BB.classList.contains("ShopKey") ? "HudMove-shop" : "HudMove-bag"))(BB))).map((BB => BB.getBoundingClientRect())).filter((BB => BB.width > 0))];
+    function Ee(ee, ie) {
+      const He = ee.getBoundingClientRect();
+      if (0 === He.width) return null;
+      const ye = [He, ...Array.from(ee.children).filter((ee => !(ee => ie.contains(ee.classList.contains("ShopKey") ? "HudMove-shop" : "HudMove-bag"))(ee))).map((ee => ee.getBoundingClientRect())).filter((ee => ee.width > 0))];
       return {
-        left: Math.min(...YB.map((BB => BB.left))),
-        top: Math.min(...YB.map((BB => BB.top))),
-        right: Math.max(...YB.map((BB => BB.right))),
-        bottom: Math.max(...YB.map((BB => BB.bottom)))
+        left: Math.min(...ye.map((ee => ee.left))),
+        top: Math.min(...ye.map((ee => ee.top))),
+        right: Math.max(...ye.map((ee => ee.right))),
+        bottom: Math.max(...ye.map((ee => ee.bottom)))
       }
     }
 
-    function VB(BB) {
+    function ge(ee) {
       let {
-        slotsLeft: OB,
-        slotsRight: GB,
-        width: YB,
-        zoneRight: DB
-      } = BB;
-      const QB = Math.max(0, Math.floor(GB - OB - YB));
-      return null === DB ? 0 : Math.min(QB, Math.max(0, Math.ceil(DB + jB - OB)))
+        slotsLeft: ie,
+        slotsRight: He,
+        width: ye,
+        zoneRight: be
+      } = ee;
+      const Me = Math.max(0, Math.floor(He - ie - ye));
+      return null === be ? 0 : Math.min(Me, Math.max(0, Math.ceil(be + Ue - ie)))
     }
 
-    function SB(BB) {
-      var OB;
-      const GB = BB.getBoundingClientRect();
-      if (0 === GB.width) return null;
-      const YB = null === (OB = BB.parentElement) || void 0 === OB ? void 0 : OB.getBoundingClientRect();
-      return YB && YB.width > 0 ? Math.min(GB.right, YB.left + YB.width * nB) : GB.right
+    function Oe(ee) {
+      var ie;
+      const He = ee.getBoundingClientRect();
+      if (0 === He.width) return null;
+      const ye = null === (ie = ee.parentElement) || void 0 === ie ? void 0 : ie.getBoundingClientRect();
+      return ye && ye.width > 0 ? Math.min(He.right, ye.left + ye.width * de) : He.right
     }
-    const nB = .35,
-      UB = new WeakMap,
-      fB = new WeakMap;
+    const de = .35,
+      We = new WeakMap,
+      te = new WeakMap;
 
-    function kB(BB) {
-      dB(BB) && dB(BB),
-        function(BB) {
-          var OB, GB;
-          const YB = BB.documentElement.classList;
-          if (!YB.contains("TouchHotbar") || !YB.contains("TouchHotbarKeysAbove") || JB.some((BB => YB.contains(BB))) || !1 !== (null === (OB = BB.defaultView) || void 0 === OB || null === (GB = OB.matchMedia) || void 0 === GB ? void 0 : GB.call(OB, WB).matches)) return;
-          const DB = BB.querySelector(".HotBarContainer.Touch.KeysAbove .TouchInventoryKeys"),
-            QB = null === DB || void 0 === DB ? void 0 : DB.closest(".BottomMiddleElements"),
-            oB = null === DB || void 0 === DB ? void 0 : DB.parentElement;
-          if (!DB || !QB || !oB || QB.classList.contains("TouchInventoryOpen") || DB.querySelector("[data-pressing]")) return;
-          const jB = AB(DB, YB),
-            yB = oB.getBoundingClientRect().top,
-            MB = jB && qB(NB, QB, {
-              left: jB.left,
-              right: jB.right,
-              height: jB.bottom - jB.top,
-              rowTop: yB,
-              besideBottom: lB(QB, yB),
-              obstacles: zB(QB).filter((BB => !BB.classList.contains("BottomScreenMessage")))
-            }, `${Math.round(jB.left)}:${Math.round(jB.right-jB.left)}x${Math.round(jB.bottom-jB.top)}`, !0);
-          RB.has(QB) && RB.get(QB) === MB || (ZB(QB, "KeysAboveUp", "--touch-keys-above-rise", MB), RB.set(QB, MB))
-        }(BB)
+    function Ze(ee) {
+      we(ee) && we(ee),
+        function(ee) {
+          var ie, He;
+          const ye = ee.documentElement.classList;
+          if (!ye.contains("TouchHotbar") || !ye.contains("TouchHotbarKeysAbove") || Je.some((ee => ye.contains(ee))) || !1 !== (null === (ie = ee.defaultView) || void 0 === ie || null === (He = ie.matchMedia) || void 0 === He ? void 0 : He.call(ie, Be).matches)) return;
+          const be = ee.querySelector(".HotBarContainer.Touch.KeysAbove .TouchInventoryKeys"),
+            Me = null === be || void 0 === be ? void 0 : be.closest(".BottomMiddleElements"),
+            Ke = null === be || void 0 === be ? void 0 : be.parentElement;
+          if (!be || !Me || !Ke || Me.classList.contains("TouchInventoryOpen") || be.querySelector("[data-pressing]")) return;
+          const Ue = Ee(be, ye),
+            Fe = Ke.getBoundingClientRect().top,
+            oe = Ue && Te(Xe, Me, {
+              left: Ue.left,
+              right: Ue.right,
+              height: Ue.bottom - Ue.top,
+              rowTop: Fe,
+              besideBottom: qe(Me, Fe),
+              obstacles: ke(Me).filter((ee => !ee.classList.contains("BottomScreenMessage")))
+            }, `${Math.round(Ue.left)}:${Math.round(Ue.right-Ue.left)}x${Math.round(Ue.bottom-Ue.top)}`, !0);
+          ze.has(Me) && ze.get(Me) === oe || (pe(Me, "KeysAboveUp", "--touch-keys-above-rise", oe), ze.set(Me, oe))
+        }(ee)
     }
 
-    function dB(BB) {
-      var OB, GB, YB, DB;
-      const QB = BB.documentElement.classList;
-      if (!QB.contains("TouchHotbar") || QB.contains("TouchHotbarKeysAbove") || JB.some((BB => QB.contains(BB))) || null === (OB = BB.defaultView) || void 0 === OB || null === (GB = OB.matchMedia) || void 0 === GB || !GB.call(OB, KB).matches) return !1;
-      const oB = BB.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
-        jB = null === oB || void 0 === oB ? void 0 : oB.parentElement,
-        yB = null === oB || void 0 === oB ? void 0 : oB.closest(".BottomMiddleElements"),
-        MB = null === yB || void 0 === yB ? void 0 : yB.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
-      if (!oB || !jB || !yB || !MB || yB.classList.contains("TouchInventoryOpen")) return !1;
-      const PB = oB.getBoundingClientRect();
-      if (0 === PB.width) return !1;
-      const pB = BB.querySelector(".JoystickZone"),
-        NB = MB.getBoundingClientRect(),
-        RB = jB.getBoundingClientRect().top,
-        WB = VB({
-          slotsLeft: NB.left,
-          slotsRight: NB.right,
-          width: PB.width,
-          zoneRight: pB ? SB(pB) : null
+    function we(ee) {
+      var ie, He, ye, be;
+      const Me = ee.documentElement.classList;
+      if (!Me.contains("TouchHotbar") || Me.contains("TouchHotbarKeysAbove") || Je.some((ee => Me.contains(ee))) || null === (ie = ee.defaultView) || void 0 === ie || null === (He = ie.matchMedia) || void 0 === He || !He.call(ie, De).matches) return !1;
+      const Ke = ee.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
+        Ue = null === Ke || void 0 === Ke ? void 0 : Ke.parentElement,
+        Fe = null === Ke || void 0 === Ke ? void 0 : Ke.closest(".BottomMiddleElements"),
+        oe = null === Fe || void 0 === Fe ? void 0 : Fe.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
+      if (!Ke || !Ue || !Fe || !oe || Fe.classList.contains("TouchInventoryOpen")) return !1;
+      const Re = Ke.getBoundingClientRect();
+      if (0 === Re.width) return !1;
+      const fe = ee.querySelector(".JoystickZone"),
+        Xe = oe.getBoundingClientRect(),
+        ze = Ue.getBoundingClientRect().top,
+        Be = ge({
+          slotsLeft: Xe.left,
+          slotsRight: Xe.right,
+          width: Re.width,
+          zoneRight: fe ? Oe(fe) : null
         }),
-        AB = UB.get(yB),
-        nB = NB.left + WB,
-        kB = {
-          shift: WB,
-          rise: qB(fB, yB, {
-            left: nB,
-            right: nB + PB.width,
-            height: PB.height,
-            rowTop: RB,
-            besideBottom: lB(yB, RB),
-            obstacles: zB(yB)
-          }, `${WB}:${Math.round(PB.width)}`, (null !== (YB = null === AB || void 0 === AB ? void 0 : AB.shift) && void 0 !== YB ? YB : 0) === WB)
+        Ee = We.get(Fe),
+        de = Xe.left + Be,
+        Ze = {
+          shift: Be,
+          rise: Te(te, Fe, {
+            left: de,
+            right: de + Re.width,
+            height: Re.height,
+            rowTop: ze,
+            besideBottom: qe(Fe, ze),
+            obstacles: ke(Fe)
+          }, `${Be}:${Math.round(Re.width)}`, (null !== (ye = null === Ee || void 0 === Ee ? void 0 : Ee.shift) && void 0 !== ye ? ye : 0) === Be)
         };
-      return (null === AB || void 0 === AB ? void 0 : AB.shift) !== kB.shift && yB.style.setProperty("--touch-shop-above-shift", `${kB.shift}px`), (null === AB || void 0 === AB ? void 0 : AB.rise) !== kB.rise && ZB(yB, "ShopAboveUp", "--touch-shop-above-rise", kB.rise), UB.set(yB, kB), (null !== (DB = null === AB || void 0 === AB ? void 0 : AB.shift) && void 0 !== DB ? DB : 0) !== kB.shift
+      return (null === Ee || void 0 === Ee ? void 0 : Ee.shift) !== Ze.shift && Fe.style.setProperty("--touch-shop-above-shift", `${Ze.shift}px`), (null === Ee || void 0 === Ee ? void 0 : Ee.rise) !== Ze.rise && pe(Fe, "ShopAboveUp", "--touch-shop-above-rise", Ze.rise), We.set(Fe, Ze), (null !== (be = null === Ee || void 0 === Ee ? void 0 : Ee.shift) && void 0 !== be ? be : 0) !== Ze.shift
     }
-    const KB = "(orientation: landscape) and (max-height: 500px)";
+    const De = "(orientation: landscape) and (max-height: 500px)";
 
-    function uB(BB, OB, GB) {
-      (0, YB.useLayoutEffect)((() => {
-        var OB;
-        const YB = null === (OB = BB.current) || void 0 === OB ? void 0 : OB.closest(".BottomMiddleElements");
-        if (!YB || GB) return;
-        const jB = new ResizeObserver((() => {
-            lB(!1)
+    function Pe(ee, ie, He) {
+      (0, ye.useLayoutEffect)((() => {
+        var ie;
+        const ye = null === (ie = ee.current) || void 0 === ie ? void 0 : ie.closest(".BottomMiddleElements");
+        if (!ye || He) return;
+        const Ue = new ResizeObserver((() => {
+            qe(!1)
           })),
-          yB = () => {
-            jB.disconnect();
-            const BB = document.querySelector(".JoystickZone");
-            for (const OB of [BB, YB, YB.querySelector(".HotBarGameItemsContainer"), ...zB(YB)]) OB && jB.observe(OB)
+          Fe = () => {
+            Ue.disconnect();
+            const ee = document.querySelector(".JoystickZone");
+            for (const ie of [ee, ye, ye.querySelector(".HotBarGameItemsContainer"), ...ke(ye)]) ie && Ue.observe(ie)
           };
-        let JB = null,
-          MB = !1;
-        const lB = BB => {
-            MB ||= BB, JB ??= requestAnimationFrame((() => {
-              JB = null, MB && (MB = !1, yB()), kB(document)
+        let Je = null,
+          oe = !1;
+        const qe = ee => {
+            oe ||= ee, Je ??= requestAnimationFrame((() => {
+              Je = null, oe && (oe = !1, Fe()), Ze(document)
             }))
           },
-          pB = new MutationObserver((() => {
-            lB(!0)
+          fe = new MutationObserver((() => {
+            qe(!0)
           }));
-        pB.observe(YB, {
+        fe.observe(ye, {
           childList: !0
         });
-        for (const BB of PB(YB)) pB.observe(BB, {
+        for (const ee of Re(ye)) fe.observe(ee, {
           childList: !0,
           subtree: !0
         });
-        kB(document), yB();
-        const qB = () => {
-            lB(!0)
+        Ze(document), Fe();
+        const Te = () => {
+            qe(!0)
           },
-          ZB = [(0, DB.p)(QB.e, qB), (0, DB.p)(oB.c, qB)],
-          NB = new MutationObserver((() => {
-            lB(!1)
+          pe = [(0, be.j)(Me.f, Te), (0, be.j)(Ke.c, Te)],
+          Xe = new MutationObserver((() => {
+            qe(!1)
           }));
-        return BB.current && NB.observe(BB.current, {
+        return ee.current && Xe.observe(ee.current, {
           attributes: !0,
           attributeFilter: ["data-pressing"],
           subtree: !0
         }), () => {
-          NB.disconnect(), null !== JB && cancelAnimationFrame(JB), jB.disconnect(), pB.disconnect();
-          for (const BB of ZB) BB()
+          Xe.disconnect(), null !== Je && cancelAnimationFrame(Je), Ue.disconnect(), fe.disconnect();
+          for (const ee of pe) ee()
         }
-      }), [BB, OB, GB])
+      }), [ee, ie, He])
     }
   },
-  34693: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => zB,
-      e: () => lB,
-      i: () => pB
+  34767: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => ke,
+      c: () => qe,
+      d: () => fe
     });
-    var YB = GB(56),
-      DB = GB(34688),
-      QB = GB(1338),
-      oB = GB(4946),
-      jB = GB(2544),
-      yB = GB(92),
-      JB = GB(2063),
-      MB = GB(1375),
-      PB = GB(1282);
+    var ye = He(59),
+      be = He(34765),
+      Me = He(1294),
+      Ke = He(4922),
+      Ue = He(2415),
+      Fe = He(97),
+      Je = He(2029),
+      oe = He(1320),
+      Re = He(1228);
 
-    function zB(BB) {
+    function ke(ee) {
       let {
-        show: OB,
-        onClose: GB
-      } = BB;
+        show: ie,
+        onClose: He
+      } = ee;
       const {
-        requestedGameNameWithVariation: YB,
-        lobbyName: DB,
-        shownLobbyName: QB
-      } = (0, JB.g)("connectedGame"), zB = (0, jB.b)(YB, DB, !1);
-      return yB.featureFlags.canUseInviteLinks && (0, PB.jsx)(oB.d, {
-        show: OB,
-        close: GB,
+        requestedGameNameWithVariation: ye,
+        lobbyName: be,
+        shownLobbyName: Me
+      } = (0, Je.k)("connectedGame"), ke = (0, Ue.c)(ye, be, !1);
+      return Fe.featureFlags.canUseInviteLinks && (0, Re.jsx)(Ke.e, {
+        show: ie,
+        close: He,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, PB.jsxs)("div", {
+        children: (0, Re.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, PB.jsx)("div", {
+          children: [(0, Re.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, PB.jsxs)("div", {
+          }), (0, Re.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, PB.jsx)("div", {
+            children: [(0, Re.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === zB ? (0, PB.jsx)(MB.b, {}) : zB, (0, PB.jsx)("br", {}), "Lobby Name: ", QB, (0, PB.jsx)("br", {}), (0, PB.jsx)("br", {}), (0, PB.jsx)("br", {}), (0, PB.jsx)("div", {
+            }), "Game: ", null === ke ? (0, Re.jsx)(oe.b, {}) : ke, (0, Re.jsx)("br", {}), "Lobby Name: ", Me, (0, Re.jsx)("br", {}), (0, Re.jsx)("br", {}), (0, Re.jsx)("br", {}), (0, Re.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, PB.jsx)(lB, {})]
+          }), (0, Re.jsx)(qe, {})]
         })
       })
     }
 
-    function lB() {
-      var BB;
-      const OB = null !== (BB = pB(yB.featureFlags.canUseInviteLinks)) && void 0 !== BB ? BB : "Loading Link...";
-      return yB.featureFlags.canUseInviteLinks && (0, PB.jsx)(DB.c, {
-        text: OB
+    function qe() {
+      var ee;
+      const ie = null !== (ee = fe(Fe.featureFlags.canUseInviteLinks)) && void 0 !== ee ? ee : "Loading Link...";
+      return Fe.featureFlags.canUseInviteLinks && (0, Re.jsx)(be.e, {
+        text: ie
       })
     }
 
-    function pB(BB) {
-      const [OB, GB] = (0, YB.useState)(null);
-      return (0, YB.useEffect)((() => {
-        if (!BB) return;
-        let OB = !0;
-        return (0, QB.u)().then((BB => {
-          OB && GB(BB)
-        })).catch((BB => {
-          console.error("Failed to get invite link:", BB)
+    function fe(ee) {
+      const [ie, He] = (0, ye.useState)(null);
+      return (0, ye.useEffect)((() => {
+        if (!ee) return;
+        let ie = !0;
+        return (0, Me.B)().then((ee => {
+          ie && He(ee)
+        })).catch((ee => {
+          console.error("Failed to get invite link:", ee)
         })), () => {
-          OB = !1
+          ie = !1
         }
-      }), [BB]), OB
+      }), [ee]), ie
     }
   },
-  34785: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => JB
+  34863: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Je
     });
-    var YB = GB(56),
-      DB = GB(1090),
-      QB = GB.n(DB),
-      oB = GB(2063),
-      jB = GB(1282);
+    var ye = He(59),
+      be = He(1053),
+      Me = He.n(be),
+      Ke = He(2029),
+      Ue = He(1228);
 
-    function yB(BB) {
-      const OB = Math.floor(BB / 3600),
-        GB = Math.floor(BB % 3600 / 60),
-        YB = Math.floor(BB % 60),
-        DB = `${GB.toString().padStart(2,"0")}:${YB.toString().padStart(2,"0")}`;
-      return OB > 0 ? `${OB}:${DB}` : DB
+    function Fe(ee) {
+      const ie = Math.floor(ee / 3600),
+        He = Math.floor(ee % 3600 / 60),
+        ye = Math.floor(ee % 60),
+        be = `${He.toString().padStart(2,"0")}:${ye.toString().padStart(2,"0")}`;
+      return ie > 0 ? `${ie}:${be}` : be
     }
-    const JB = (0, YB.memo)((function(BB) {
+    const Je = (0, ye.memo)((function(ee) {
       let {
-        className: OB
-      } = BB;
+        className: ie
+      } = ee;
       const {
-        recording: GB,
-        clipping: YB,
-        seconds: DB
-      } = (0, oB.g)("replayRecorder");
-      return GB || YB ? (0, jB.jsxs)("div", {
-        className: QB()("RecordingIndicator", {
-          RecordingIndicatorClipping: !GB
-        }, OB),
+        recording: He,
+        clipping: ye,
+        seconds: be
+      } = (0, Ke.k)("replayRecorder");
+      return He || ye ? (0, Ue.jsxs)("div", {
+        className: Me()("RecordingIndicator", {
+          RecordingIndicatorClipping: !He
+        }, ie),
         "data-camera-keeper": "",
-        children: [(0, jB.jsx)("span", {
+        children: [(0, Ue.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, jB.jsx)("span", {
+        }), (0, Ue.jsx)("span", {
           className: "RecordingIndicatorLabel",
-          children: GB ? "REC" : "CLIP"
-        }), GB && (0, jB.jsx)("span", {
+          children: He ? "REC" : "CLIP"
+        }), He && (0, Ue.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: yB(DB)
+          children: Fe(be)
         })]
       }) : null
     }))
   },
-  34848: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => yB
+  34959: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Fe
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(1282);
-    const oB = 21,
-      jB = 2 * Math.PI * oB;
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(1228);
+    const Ke = 21,
+      Ue = 2 * Math.PI * Ke;
 
-    function yB(BB) {
+    function Fe(ee) {
       let {
-        tier: OB,
-        state: GB,
-        progress: YB,
-        size: yB = "large"
-      } = BB;
-      const JB = DB()("SeasonPassTierNode", {
-        SeasonPassTierNodeSmall: "small" === yB,
-        SeasonPassTierNodeLarge: "large" === yB,
-        SeasonPassTierNodeReached: "reached" === GB,
-        SeasonPassTierNodeEarning: "earning" === GB
+        tier: ie,
+        state: He,
+        progress: ye,
+        size: Fe = "large"
+      } = ee;
+      const Je = be()("SeasonPassTierNode", {
+        SeasonPassTierNodeSmall: "small" === Fe,
+        SeasonPassTierNodeLarge: "large" === Fe,
+        SeasonPassTierNodeReached: "reached" === He,
+        SeasonPassTierNodeEarning: "earning" === He
       });
-      if ("earning" !== GB || "large" === yB) return (0, QB.jsx)("span", {
-        className: JB,
-        children: (0, QB.jsx)("span", {
+      if ("earning" !== He || "large" === Fe) return (0, Me.jsx)("span", {
+        className: Je,
+        children: (0, Me.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: OB
+          children: ie
         })
       });
-      const MB = Math.max(0, Math.min(1, YB));
-      return (0, QB.jsxs)("span", {
-        className: JB,
+      const oe = Math.max(0, Math.min(1, ye));
+      return (0, Me.jsxs)("span", {
+        className: Je,
         role: "progressbar",
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(100 * MB),
-        children: [(0, QB.jsxs)("svg", {
+        "aria-valuenow": Math.round(100 * oe),
+        children: [(0, Me.jsxs)("svg", {
           className: "SeasonPassTierNodeRing",
           viewBox: "0 0 56 56",
           "aria-hidden": "true",
-          children: [(0, QB.jsx)("circle", {
+          children: [(0, Me.jsx)("circle", {
             className: "SeasonPassTierNodeRingEdge",
             cx: "28",
             cy: "28",
             r: "26"
-          }), (0, QB.jsx)("circle", {
+          }), (0, Me.jsx)("circle", {
             className: "SeasonPassTierNodeRingTrack",
             cx: "28",
             cy: "28",
-            r: oB
-          }), (0, QB.jsx)("circle", {
+            r: Ke
+          }), (0, Me.jsx)("circle", {
             className: "SeasonPassTierNodeRingFill",
             cx: "28",
             cy: "28",
-            r: oB,
-            strokeDasharray: `${MB*jB} ${jB}`,
+            r: Ke,
+            strokeDasharray: `${oe*Ue} ${Ue}`,
             transform: "rotate(-90 28 28)"
-          }), (0, QB.jsx)("circle", {
+          }), (0, Me.jsx)("circle", {
             className: "SeasonPassTierNodeRingCore",
             cx: "28",
             cy: "28",
             r: "16"
           })]
-        }), (0, QB.jsx)("span", {
+        }), (0, Me.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: OB
+          children: ie
         })]
       })
     }
   },
-  34688: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => yB
+  34765: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Fe
     });
-    var YB = GB(4773),
-      DB = GB(1175),
-      QB = GB(2953),
-      oB = GB(1485),
-      jB = GB(1282);
+    var ye = He(4721),
+      be = He(1127),
+      Me = He(2841),
+      Ke = He(1438),
+      Ue = He(1228);
 
-    function yB(BB) {
+    function Fe(ee) {
       let {
-        text: OB
-      } = BB;
+        text: ie
+      } = ee;
       const {
-        t: GB
-      } = (0, DB.H)(), [yB, JB] = (0, QB.j)();
-      return (0, jB.jsxs)("div", {
+        t: He
+      } = (0, be.v)(), [Fe, Je] = (0, Me.i)();
+      return (0, Ue.jsxs)("div", {
         className: "CopyTextRow",
-        children: [(0, jB.jsx)("div", {
+        children: [(0, Ue.jsx)("div", {
           className: "CopyTextRowText",
-          children: OB
-        }), (0, jB.jsx)(oB.f, {
+          children: ie
+        }), (0, Ue.jsx)(Ke.c, {
           className: "CopyTextRowButton",
           onClick: () => {
-            (0, YB.b)(OB).catch((BB => {
-              console.error("Failed to copy text:", BB)
-            })), JB()
+            (0, ye.e)(ie).catch((ee => {
+              console.error("Failed to copy text:", ee)
+            })), Je()
           },
-          disabled: yB,
-          children: GB(yB ? "general:copied" : "general:copy")
+          disabled: Fe,
+          children: He(Fe ? "general:copied" : "general:copy")
         })]
       })
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  34867: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var ye = He(4931),
+      be = He(4937);
 
-    function QB(BB) {
+    function Me(ee) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: ie,
+        showing: He,
+        globallyUniqueKey: Me,
+        alwaysMountChildren: Ke = !1,
+        doGameplayStartStopOnShow: Ue = !0,
+        keepsMovement: Fe = !1
+      } = ee;
+      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
     }
   },
-  7122: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB
+  7220: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me
     });
-    var YB = GB(56),
-      DB = GB(31);
+    var ye = He(59),
+      be = He(35);
 
-    function QB(BB, OB) {
-      var GB;
-      const [QB, oB] = (0, YB.useState)(null !== (GB = DB.g.getItem(BB)) && void 0 !== GB ? GB : OB);
-      return [QB, OB => {
-        DB.g.setItem(BB, OB), oB(OB)
+    function Me(ee, ie) {
+      var He;
+      const [Me, Ke] = (0, ye.useState)(null !== (He = be.i.getItem(ee)) && void 0 !== He ? He : ie);
+      return [Me, ie => {
+        be.i.setItem(ee, ie), Ke(ie)
       }]
     }
   },
-  9553: (BB, OB, GB) => {
-    GB.d(OB, {
-      A: () => PB,
-      D: () => yB,
-      H: () => zB,
-      K: () => JB,
-      N: () => pB,
-      Q: () => QB,
-      d: () => DB,
-      f: () => jB,
-      h: () => YB,
-      k: () => qB,
-      o: () => lB,
-      r: () => MB,
-      v: () => oB,
-      x: () => ZB
+  9629: (ee, ie, He) => {
+    He.d(ie, {
+      A: () => Re,
+      E: () => Fe,
+      G: () => ke,
+      I: () => Je,
+      K: () => fe,
+      N: () => Me,
+      d: () => be,
+      g: () => Ue,
+      i: () => ye,
+      k: () => Te,
+      n: () => qe,
+      r: () => oe,
+      u: () => Ke,
+      y: () => pe
     });
-    const YB = BB => ({
-      left: BB.left,
-      top: BB.top,
-      right: BB.right,
-      bottom: BB.bottom
+    const ye = ee => ({
+      left: ee.left,
+      top: ee.top,
+      right: ee.right,
+      bottom: ee.bottom
     });
 
-    function DB(BB) {
+    function be(ee) {
       return {
-        x: (BB.left + BB.right) / 2,
-        y: (BB.top + BB.bottom) / 2
+        x: (ee.left + ee.right) / 2,
+        y: (ee.top + ee.bottom) / 2
       }
     }
 
-    function QB(BB) {
-      return 0 === BB.length ? null : BB.reduce(((BB, OB) => ({
-        left: Math.min(BB.left, OB.left),
-        top: Math.min(BB.top, OB.top),
-        right: Math.max(BB.right, OB.right),
-        bottom: Math.max(BB.bottom, OB.bottom)
+    function Me(ee) {
+      return 0 === ee.length ? null : ee.reduce(((ee, ie) => ({
+        left: Math.min(ee.left, ie.left),
+        top: Math.min(ee.top, ie.top),
+        right: Math.max(ee.right, ie.right),
+        bottom: Math.max(ee.bottom, ie.bottom)
       })))
     }
 
-    function oB(BB, OB) {
-      const GB = Math.max(0, (OB - (BB.right - BB.left)) / 2),
-        YB = Math.max(0, (OB - (BB.bottom - BB.top)) / 2);
+    function Ke(ee, ie) {
+      const He = Math.max(0, (ie - (ee.right - ee.left)) / 2),
+        ye = Math.max(0, (ie - (ee.bottom - ee.top)) / 2);
       return {
-        left: BB.left - GB,
-        top: BB.top - YB,
-        right: BB.right + GB,
-        bottom: BB.bottom + YB
+        left: ee.left - He,
+        top: ee.top - ye,
+        right: ee.right + He,
+        bottom: ee.bottom + ye
       }
     }
 
-    function jB(BB, OB) {
-      return OB.x >= BB.left && OB.x <= BB.right && OB.y >= BB.top && OB.y <= BB.bottom
+    function Ue(ee, ie) {
+      return ie.x >= ee.left && ie.x <= ee.right && ie.y >= ee.top && ie.y <= ee.bottom
     }
 
-    function yB(BB, OB, GB) {
-      let YB = null,
-        QB = 1 / 0;
+    function Fe(ee, ie, He) {
+      let ye = null,
+        Me = 1 / 0;
       for (const {
-          id: DB,
-          box: oB
+          id: be,
+          box: Ke
         }
-        of OB) {
-        const OB = (oB.right - oB.left) * (oB.bottom - oB.top);
-        jB(oB, BB) && OB < QB && (QB = OB, YB = DB)
+        of ie) {
+        const ie = (Ke.right - Ke.left) * (Ke.bottom - Ke.top);
+        Ue(Ke, ee) && ie < Me && (Me = ie, ye = be)
       }
-      if (null !== YB) return YB;
-      let yB = 1 / 0;
+      if (null !== ye) return ye;
+      let Fe = 1 / 0;
       for (const {
-          id: JB,
-          box: MB
+          id: Je,
+          box: oe
         }
-        of OB) {
-        if (!jB(oB(MB, GB), BB)) continue;
-        const OB = DB(MB),
-          QB = Math.hypot(BB.x - OB.x, BB.y - OB.y);
-        QB < yB && (yB = QB, YB = JB)
+        of ie) {
+        if (!Ue(Ke(oe, He), ee)) continue;
+        const ie = be(oe),
+          Me = Math.hypot(ee.x - ie.x, ee.y - ie.y);
+        Me < Fe && (Fe = Me, ye = Je)
       }
-      return YB
+      return ye
     }
 
-    function JB(BB, OB, GB) {
+    function Je(ee, ie, He) {
       return {
-        left: GB.left,
-        top: GB.top,
-        right: BB - GB.right,
-        bottom: OB - GB.bottom
+        left: He.left,
+        top: He.top,
+        right: ee - He.right,
+        bottom: ie - He.bottom
       }
     }
 
-    function MB(BB, OB, GB, YB) {
-      const DB = (BB, OB, GB) => Math.max(Math.min(OB, 0), Math.min(Math.max(GB, 0), BB));
+    function oe(ee, ie, He, ye) {
+      const be = (ee, ie, He) => Math.max(Math.min(ie, 0), Math.min(Math.max(He, 0), ee));
       return {
-        x: DB(OB, YB.left - BB.left, YB.right - BB.right),
-        y: DB(GB, YB.top - BB.top, YB.bottom - BB.bottom)
+        x: be(ie, ye.left - ee.left, ye.right - ee.right),
+        y: be(He, ye.top - ee.top, ye.bottom - ee.bottom)
       }
     }
 
-    function PB(BB, OB, GB, YB, DB) {
-      const QB = BB.dx * YB + OB,
-        oB = BB.dy * DB + GB,
-        jB = BB => Math.max(-1, Math.min(1, BB));
+    function Re(ee, ie, He, ye, be) {
+      const Me = ee.dx * ye + ie,
+        Ke = ee.dy * be + He,
+        Ue = ee => Math.max(-1, Math.min(1, ee));
       return {
-        dx: jB(QB / YB),
-        dy: jB(oB / DB)
+        dx: Ue(Me / ye),
+        dy: Ue(Ke / be)
       }
     }
 
-    function zB(BB, OB, GB, YB) {
-      return OB <= 0 || GB <= 0 ? 1 : Math.max(.05, Math.min(1, BB / OB, YB / GB))
+    function ke(ee, ie, He, ye) {
+      return ie <= 0 || He <= 0 ? 1 : Math.max(.05, Math.min(1, ee / ie, ye / He))
     }
 
-    function lB(BB, OB, GB) {
-      return Math.min(BB.right, OB.right) - Math.max(BB.left, OB.left) > GB && Math.min(BB.bottom, OB.bottom) - Math.max(BB.top, OB.top) > GB
+    function qe(ee, ie, He) {
+      return Math.min(ee.right, ie.right) - Math.max(ee.left, ie.left) > He && Math.min(ee.bottom, ie.bottom) - Math.max(ee.top, ie.top) > He
     }
 
-    function pB(BB, OB) {
-      const GB = (BB, OB, GB, YB) => OB - BB > YB - GB ? GB - BB > OB - YB ? YB - OB : GB - BB : BB < GB ? GB - BB : OB > YB ? YB - OB : 0;
+    function fe(ee, ie) {
+      const He = (ee, ie, He, ye) => ie - ee > ye - He ? He - ee > ie - ye ? ye - ie : He - ee : ee < He ? He - ee : ie > ye ? ye - ie : 0;
       return {
-        x: GB(BB.left, BB.right, OB.left, OB.right),
-        y: GB(BB.top, BB.bottom, OB.top, OB.bottom)
+        x: He(ee.left, ee.right, ie.left, ie.right),
+        y: He(ee.top, ee.bottom, ie.top, ie.bottom)
       }
     }
 
-    function qB(BB, OB, GB) {
-      return lB(BB, {
+    function Te(ee, ie, He) {
+      return qe(ee, {
         left: 0,
         top: 0,
-        right: OB,
-        bottom: GB
+        right: ie,
+        bottom: He
       }, 0)
     }
 
-    function ZB(BB, OB) {
+    function pe(ee, ie) {
       let {
-        avoid: GB = null,
-        bounds: YB = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, DB = 0, QB = 1 / 0;
-      return BB.forEach(((BB, oB) => {
-        const jB = OB.filter((OB => lB(BB, OB, 0))).length,
-          yB = null !== YB && (BB.left < YB.left || BB.top < YB.top || BB.right > YB.right || BB.bottom > YB.bottom),
-          JB = jB + (GB && lB(BB, GB, 0) ? 1e3 : 0) + (yB ? 1e6 : 0);
-        JB < QB && (DB = oB, QB = JB)
-      })), DB
+        avoid: He = null,
+        bounds: ye = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, be = 0, Me = 1 / 0;
+      return ee.forEach(((ee, Ke) => {
+        const Ue = ie.filter((ie => qe(ee, ie, 0))).length,
+          Fe = null !== ye && (ee.left < ye.left || ee.top < ye.top || ee.right > ye.right || ee.bottom > ye.bottom),
+          Je = Ue + (He && qe(ee, He, 0) ? 1e3 : 0) + (Fe ? 1e6 : 0);
+        Je < Me && (be = Ke, Me = Je)
+      })), be
     }
   },
-  9549: (BB, OB, GB) => {
-    GB.d(OB, {
-      C: () => lB,
-      D: () => zB,
-      H: () => PB,
-      b: () => jB,
-      d: () => AB,
-      g: () => WB,
-      h: () => RB,
-      j: () => yB,
-      m: () => pB,
-      q: () => MB,
-      u: () => SB,
-      v: () => VB,
-      y: () => JB
+  9620: (ee, ie, He) => {
+    He.d(ie, {
+      B: () => ge,
+      E: () => Je,
+      F: () => qe,
+      J: () => ke,
+      M: () => Re,
+      e: () => Ue,
+      h: () => Ee,
+      l: () => Be,
+      p: () => ze,
+      q: () => Fe,
+      s: () => fe,
+      u: () => oe,
+      y: () => Oe
     });
-    var YB = GB(9553),
-      DB = GB(2679);
-    const QB = {
+    var ye = He(9629),
+      be = He(2560);
+    const Me = {
         sprint: "joystick",
         jump: "cluster",
         crouch: "cluster",
@@ -1016,87 +1016,87 @@ export const modules = {
         inventory: "hotbar",
         shop: "inventory",
         bag: "inventory",
-        ...Object.fromEntries(DB.F.map((BB => [BB, "menu"])))
+        ...Object.fromEntries(be.A.map((ee => [ee, "menu"])))
       },
-      oB = BB => DB.A.filter((OB => QB[OB] === BB)),
-      jB = new Set(oB("cluster")),
-      yB = new Set(oB("inventory")),
-      JB = BB => "inventory" === BB || yB.has(BB),
-      MB = BB => {
-        const OB = QB[BB];
-        return void 0 === OB ? [] : [OB, ...MB(OB)]
+      Ke = ee => be.t.filter((ie => Me[ie] === ee)),
+      Ue = new Set(Ke("cluster")),
+      Fe = new Set(Ke("inventory")),
+      Je = ee => "inventory" === ee || Fe.has(ee),
+      oe = ee => {
+        const ie = Me[ee];
+        return void 0 === ie ? [] : [ie, ...oe(ie)]
       },
-      PB = BB => [BB, ...MB(BB)],
-      zB = (BB, OB, GB) => "shop" === BB && OB ? GB("inventory") ? ["inventory"] : GB("bag") ? [BB, "bag"] : [BB] : [BB],
-      lB = (BB, OB, GB, DB) => {
-        const QB = BB => {
-          const QB = OB[BB],
+      Re = ee => [ee, ...oe(ee)],
+      ke = (ee, ie, He) => "shop" === ee && ie ? He("inventory") ? ["inventory"] : He("bag") ? [ee, "bag"] : [ee] : [ee],
+      qe = (ee, ie, He, be) => {
+        const Me = ee => {
+          const Me = ie[ee],
             {
-              x: oB,
-              y: jB
-            } = QB && DB(BB) ? (0, YB.N)(QB, GB) : {
+              x: Ke,
+              y: Ue
+            } = Me && be(ee) ? (0, ye.K)(Me, He) : {
               x: 0,
               y: 0
             };
-          return QB && {
-            left: QB.left + oB,
-            top: QB.top + jB,
-            right: QB.right + oB,
-            bottom: QB.bottom + jB
+          return Me && {
+            left: Me.left + Ke,
+            top: Me.top + Ue,
+            right: Me.right + Ke,
+            bottom: Me.bottom + Ue
           }
         };
-        return BB.flatMap((BB => {
-          const oB = OB[BB];
-          if ("inventory" !== BB || !oB || oB.right - oB.left <= GB.right - GB.left && oB.bottom - oB.top <= GB.bottom - GB.top) return [BB];
-          const [jB, yB] = [QB("shop"), QB("bag")];
-          return jB && yB && !(0, YB.o)(jB, yB, 0) ? ["shop", "bag"].filter(DB) : [BB]
+        return ee.flatMap((ee => {
+          const Ke = ie[ee];
+          if ("inventory" !== ee || !Ke || Ke.right - Ke.left <= He.right - He.left && Ke.bottom - Ke.top <= He.bottom - He.top) return [ee];
+          const [Ue, Fe] = [Me("shop"), Me("bag")];
+          return Ue && Fe && !(0, ye.n)(Ue, Fe, 0) ? ["shop", "bag"].filter(be) : [ee]
         }))
       },
-      pB = new Map([
-        ["cluster", jB],
-        ["inventory", yB]
+      fe = new Map([
+        ["cluster", Ue],
+        ["inventory", Fe]
       ]),
-      qB = ["cluster"],
-      ZB = [...qB, ...DB.A.filter((BB => !qB.includes(BB) && !QB[BB]))],
-      NB = BB => [BB, ...oB(BB).flatMap(NB)],
-      RB = ZB.flatMap(NB).map((BB => ({
-        id: BB,
-        label: `hudLayout:${BB}`,
-        ...DB.x[BB],
-        parent: QB[BB]
+      Te = ["cluster"],
+      pe = [...Te, ...be.t.filter((ee => !Te.includes(ee) && !Me[ee]))],
+      Xe = ee => [ee, ...Ke(ee).flatMap(Xe)],
+      ze = pe.flatMap(Xe).map((ee => ({
+        id: ee,
+        label: `hudLayout:${ee}`,
+        ...be.q[ee],
+        parent: Me[ee]
       }))),
-      WB = Object.fromEntries(RB.map((BB => [BB.id, BB]))),
-      AB = "data-hud-el";
+      Be = Object.fromEntries(ze.map((ee => [ee.id, ee]))),
+      Ee = "data-hud-el";
 
-    function VB(BB, OB, GB, YB) {
-      const DB = GB(function(BB, OB) {
-          return "attack" !== BB || OB ? WB[BB].label : "hudLayout:attackContext"
-        }(BB, OB)),
-        QB = YB[BB];
-      return QB ? GB("hudLayout:slotWithKey", {
-        slot: DB,
-        key: QB
-      }) : DB
+    function ge(ee, ie, He, ye) {
+      const be = He(function(ee, ie) {
+          return "attack" !== ee || ie ? Be[ee].label : "hudLayout:attackContext"
+        }(ee, ie)),
+        Me = ye[ee];
+      return Me ? He("hudLayout:slotWithKey", {
+        slot: be,
+        key: Me
+      }) : be
     }
 
-    function SB(BB, OB, GB, YB) {
-      return BB.map((BB => VB(BB, OB, GB, YB))).join(", ")
+    function Oe(ee, ie, He, ye) {
+      return ee.map((ee => ge(ee, ie, He, ye))).join(", ")
     }
   },
-  9566: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => jB,
-      f: () => QB,
-      g: () => DB,
-      j: () => oB,
-      n: () => PB,
-      r: () => MB,
-      t: () => JB,
-      v: () => yB
+  9645: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ue,
+      d: () => Me,
+      e: () => be,
+      g: () => Ke,
+      j: () => Re,
+      l: () => oe,
+      n: () => Je,
+      r: () => Fe
     });
-    var YB = GB(2679);
-    const DB = ["J", "C", "A", "P", "U", "X", "G"],
-      QB = {
+    var ye = He(2560);
+    const be = ["J", "C", "A", "P", "U", "X", "G"],
+      Me = {
         J: "jump",
         C: "crouch",
         A: "attack",
@@ -1106,280 +1106,280 @@ export const modules = {
         G: "game"
       };
 
-    function oB(BB) {
-      return BB ? ["X"] : ["P", "X"]
+    function Ke(ee) {
+      return ee ? ["X"] : ["P", "X"]
     }
-    const jB = Object.freeze({
+    const Ue = Object.freeze({
       faces: null,
       names: Object.freeze({}),
       shop: !0,
       bag: !0,
       sprint: !0,
       items: null,
-      rowIcons: YB.F,
+      rowIcons: ye.A,
       pinnedIcons: Object.freeze({
         rightOfCamera: null,
         leftEnd: null
       })
     });
 
-    function yB(BB, OB, GB) {
-      const YB = BB.querySelector(".InGameUi .TouchComponentsButtons");
-      if (!YB) return jB;
-      const QB = {},
-        oB = {};
-      for (const jB of DB) {
-        const BB = YB.querySelector(`.TouchSlot${jB} > .TouchKey`);
-        if (BB) {
-          var yB, JB;
-          QB[jB] = BB.cloneNode(!0);
-          const OB = (null !== (yB = null === (JB = BB.querySelector(".TouchKeyLabel")) || void 0 === JB ? void 0 : JB.textContent) && void 0 !== yB ? yB : "").split(/\s+/).filter((BB => !/[\d\xd7]/.test(BB))).join(" ");
-          OB && (oB[jB] = OB)
+    function Fe(ee, ie, He) {
+      const ye = ee.querySelector(".InGameUi .TouchComponentsButtons");
+      if (!ye) return Ue;
+      const Me = {},
+        Ke = {};
+      for (const Ue of be) {
+        const ee = ye.querySelector(`.TouchSlot${Ue} > .TouchKey`);
+        if (ee) {
+          var Fe, Je;
+          Me[Ue] = ee.cloneNode(!0);
+          const ie = (null !== (Fe = null === (Je = ee.querySelector(".TouchKeyLabel")) || void 0 === Je ? void 0 : Je.textContent) && void 0 !== Fe ? Fe : "").split(/\s+/).filter((ee => !/[\d\xd7]/.test(ee))).join(" ");
+          ie && (Ke[Ue] = ie)
         }
       }
-      const MB = OB => {
-          const GB = BB.querySelector(`.InGameUi ${OB}`);
-          return null !== GB && !GB.classList.contains("Hidden")
+      const oe = ie => {
+          const He = ee.querySelector(`.InGameUi ${ie}`);
+          return null !== He && !He.classList.contains("Hidden")
         },
-        PB = [...BB.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((BB => BB.cloneNode(!0)));
+        Re = [...ee.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((ee => ee.cloneNode(!0)));
       return {
-        faces: Object.keys(QB).length > 0 ? QB : null,
-        names: oB,
-        shop: MB(".TouchInventoryKey.ShopKey"),
-        bag: MB(".TouchInventoryKey.BagKey"),
-        sprint: MB(".TouchSprintHit"),
-        items: PB.length > 0 ? PB : null,
-        rowIcons: OB,
-        pinnedIcons: GB
+        faces: Object.keys(Me).length > 0 ? Me : null,
+        names: Ke,
+        shop: oe(".TouchInventoryKey.ShopKey"),
+        bag: oe(".TouchInventoryKey.BagKey"),
+        sprint: oe(".TouchSprintHit"),
+        items: Re.length > 0 ? Re : null,
+        rowIcons: ie,
+        pinnedIcons: He
       }
     }
 
-    function JB(BB, OB) {
-      const GB = {};
-      for (const YB of [...oB(OB), "G"]) {
-        const OB = BB.names[YB];
-        OB && (GB[QB[YB]] = OB)
+    function Je(ee, ie) {
+      const He = {};
+      for (const ye of [...Ke(ie), "G"]) {
+        const ie = ee.names[ye];
+        ie && (He[Me[ye]] = ie)
       }
-      return GB
+      return He
     }
 
-    function MB(BB, OB) {
+    function oe(ee, ie) {
       const {
-        faces: GB
-      } = BB;
-      if (null === GB) return [];
-      const YB = new Set(Object.keys(GB).map((BB => QB[BB])));
-      return oB(OB).filter((BB => !YB.has(QB[BB])))
+        faces: He
+      } = ee;
+      if (null === He) return [];
+      const ye = new Set(Object.keys(He).map((ee => Me[ee])));
+      return Ke(ie).filter((ee => !ye.has(Me[ee])))
     }
 
-    function PB(BB, OB) {
-      BB.replaceChildren(...[...OB.childNodes].map((BB => BB.cloneNode(!0))))
+    function Re(ee, ie) {
+      ee.replaceChildren(...[...ie.childNodes].map((ee => ee.cloneNode(!0))))
     }
   },
-  9562: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => jB,
-      f: () => JB
+  9637: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ue,
+      f: () => Je
     });
-    var YB = GB(9553),
-      DB = GB(9549),
-      QB = GB(2679),
-      oB = GB(2682);
-    const jB = 2,
-      yB = (BB, OB, GB) => {
-        const YB = (0, DB.q)(OB).includes(BB) ? BB : (0, DB.q)(BB).includes(OB) ? OB : null;
-        if (null === YB || "joystick" === YB) return !1;
-        const jB = YB === BB ? OB : BB;
-        if ("menu" === YB) return (0, oB.y)(jB, GB.hudElements[jB]);
-        if ("hotbar" !== YB || !(0, DB.y)(jB)) return !0;
-        if ((0, QB.P)(GB.hudElements[jB]) || (0, QB.P)(GB.hudElements.inventory)) return !1;
-        return !(GB.hudLocked.includes(jB) || GB.hudLocked.includes("inventory")) || (0, QB.N)(GB.hudElements.hotbar)
+    var ye = He(9629),
+      be = He(9620),
+      Me = He(2560),
+      Ke = He(2565);
+    const Ue = 2,
+      Fe = (ee, ie, He) => {
+        const ye = (0, be.u)(ie).includes(ee) ? ee : (0, be.u)(ee).includes(ie) ? ie : null;
+        if (null === ye || "joystick" === ye) return !1;
+        const Ue = ye === ee ? ie : ee;
+        if ("menu" === ye) return (0, Ke.u)(Ue, He.hudElements[Ue]);
+        if ("hotbar" !== ye || !(0, be.E)(Ue)) return !0;
+        if ((0, Me.K)(He.hudElements[Ue]) || (0, Me.K)(He.hudElements.inventory)) return !1;
+        return !(He.hudLocked.includes(Ue) || He.hudLocked.includes("inventory")) || (0, Me.I)(He.hudElements.hotbar)
       };
 
-    function JB(BB, OB, GB, JB) {
-      const MB = BB => (0, DB.H)(BB).some((BB => (0, QB.t)(GB.hudElements, BB) || (0, oB.w)(BB, GB, JB)));
-      if (MB(BB)) return [];
-      const PB = BB => {
-          var OB, YB;
-          return "bag" === BB && 1 !== (null !== (OB = null === (YB = GB.hudElements.shop) || void 0 === YB ? void 0 : YB[2]) && void 0 !== OB ? OB : 1) || (0, DB.H)(BB).some((BB => void 0 !== GB.hudElements[BB]))
+    function Je(ee, ie, He, Je) {
+      const oe = ee => (0, be.M)(ee).some((ee => (0, Me.m)(He.hudElements, ee) || (0, Ke.t)(ee, He, Je)));
+      if (oe(ee)) return [];
+      const Re = ee => {
+          var ie, ye;
+          return "bag" === ee && 1 !== (null !== (ie = null === (ye = He.hudElements.shop) || void 0 === ye ? void 0 : ye[2]) && void 0 !== ie ? ie : 1) || (0, be.M)(ee).some((ee => void 0 !== He.hudElements[ee]))
         },
-        zB = DB.m.get(BB),
-        lB = OB.filter((OB => {
+        ke = be.s.get(ee),
+        qe = ie.filter((ie => {
           let {
-            id: GB
-          } = OB;
-          return zB ? zB.has(GB) && !MB(GB) : GB === BB
+            id: He
+          } = ie;
+          return ke ? ke.has(He) && !oe(He) : He === ee
         })),
-        pB = new Set;
-      for (const DB of OB) DB.id === BB || null !== zB && void 0 !== zB && zB.has(DB.id) || pB.has(DB.id) || MB(DB.id) || lB.some((BB => {
+        fe = new Set;
+      for (const be of ie) be.id === ee || null !== ke && void 0 !== ke && ke.has(be.id) || fe.has(be.id) || oe(be.id) || qe.some((ee => {
         let {
-          id: OB,
-          box: QB
-        } = BB;
-        return !yB(OB, DB.id, GB) && (PB(OB) || PB(DB.id)) && (0, YB.o)(QB, DB.box, jB)
-      })) && pB.add(DB.id);
-      return [...pB]
+          id: ie,
+          box: Me
+        } = ee;
+        return !Fe(ie, be.id, He) && (Re(ie) || Re(be.id)) && (0, ye.n)(Me, be.box, Ue)
+      })) && fe.add(be.id);
+      return [...fe]
     }
   },
-  34706: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      d: () => YB
+  34774: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => be,
+      e: () => ye
     });
-    const YB = "image/jpeg",
-      DB = "jpg"
+    const ye = "image/jpeg",
+      be = "jpg"
   },
-  34713: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => yB,
-      e: () => JB,
-      i: () => MB
+  34783: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Fe,
+      g: () => Je,
+      j: () => oe
     });
-    var YB = GB(1748),
-      DB = GB(3629),
-      QB = GB(92),
-      oB = GB(1834),
-      jB = GB(34706);
+    var ye = He(1682),
+      be = He(3529),
+      Me = He(97),
+      Ke = He(1790),
+      Ue = He(34774);
 
-    function yB() {
-      return !(0, QB.isMobileApp)() || YB.e.supports("photos")
+    function Fe() {
+      return !(0, Me.isMobileApp)() || ye.c.supports("photos")
     }
-    async function JB(BB) {
-      var OB, GB;
-      if ((0, QB.isMobileApp)()) {
+    async function Je(ee) {
+      var ie, He;
+      if ((0, Me.isMobileApp)()) {
         const {
-          saved: OB
-        } = await YB.e.request("photos.save", {
-          data: await (0, DB.h)(BB),
-          mimeType: jB.d
+          saved: ie
+        } = await ye.c.request("photos.save", {
+          data: await (0, be.h)(ee),
+          mimeType: Ue.e
         });
-        return OB ? "saved" : "denied"
+        return ie ? "saved" : "denied"
       }
-      return (0, QB.isIOS)() && null !== (OB = (GB = navigator).canShare) && void 0 !== OB && OB.call(GB, {
-        files: [BB]
-      }) ? MB(BB) : ((0, oB.c)(BB, BB.name), "saved")
+      return (0, Me.isIOS)() && null !== (ie = (He = navigator).canShare) && void 0 !== ie && ie.call(He, {
+        files: [ee]
+      }) ? oe(ee) : ((0, Ke.e)(ee, ee.name), "saved")
     }
-    async function MB(BB) {
+    async function oe(ee) {
       try {
         return await navigator.share({
-          files: [BB]
+          files: [ee]
         }), "shared"
-      } catch (OB) {
-        if (OB instanceof DOMException && "AbortError" === OB.name) return "rB";
-        if (OB instanceof DOMException && "NotAllowedError" === OB.name) return "needsTap";
-        throw OB
+      } catch (ie) {
+        if (ie instanceof DOMException && "AbortError" === ie.name) return "Ce";
+        if (ie instanceof DOMException && "NotAllowedError" === ie.name) return "needsTap";
+        throw ie
       }
     }
   },
-  34702: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => JB,
-      h: () => MB,
-      k: () => PB
+  34770: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Je,
+      i: () => oe,
+      j: () => Re
     });
-    var YB = GB(16),
-      DB = GB(34668),
-      QB = GB(1699),
-      oB = GB(34706);
-    const jB = 8294400,
-      yB = .92;
+    var ye = He(18),
+      be = He(34751),
+      Me = He(1620),
+      Ke = He(34774);
+    const Ue = 8294400,
+      Fe = .92;
 
-    function JB() {
-      (0, QB.f)(), YB.c.set({
+    function Je() {
+      (0, Me.e)(), ye.e.set({
         screenshotMode: !0
       })
     }
 
-    function MB() {
-      YB.c.set({
+    function oe() {
+      ye.e.set({
         screenshotMode: !1
       })
     }
-    async function PB() {
+    async function Re() {
       const {
-        width: BB,
-        height: OB,
-        scale: GB
-      } = function(BB, OB, GB) {
-        const YB = Math.max(1, BB),
-          DB = Math.max(1, OB),
-          QB = Math.min(Math.max(1, GB), Math.sqrt(jB / (YB * DB)));
+        width: ee,
+        height: ie,
+        scale: He
+      } = function(ee, ie, He) {
+        const ye = Math.max(1, ee),
+          be = Math.max(1, ie),
+          Me = Math.min(Math.max(1, He), Math.sqrt(Ue / (ye * be)));
         return {
-          width: Math.round(YB * QB),
-          height: Math.round(DB * QB),
-          scale: QB
+          width: Math.round(ye * Me),
+          height: Math.round(be * Me),
+          scale: Me
         }
       }(window.innerWidth, window.innerHeight, window.devicePixelRatio), {
-        blob: YB
-      } = await DB.devTools.capturePhoto(BB, OB, {
-        scale: GB,
-        type: oB.d,
-        quality: yB
+        blob: ye
+      } = await be.devTools.capturePhoto(ee, ie, {
+        scale: He,
+        type: Ke.e,
+        quality: Fe
       });
-      return new File([YB], function(BB) {
-        const OB = BB => String(BB).padStart(2, "0"),
-          GB = `${BB.getFullYear()}${OB(BB.getMonth()+1)}${OB(BB.getDate())}`,
-          YB = `${OB(BB.getHours())}${OB(BB.getMinutes())}${OB(BB.getSeconds())}`;
-        return `bloxd-${GB}-${YB}.${oB.c}`
+      return new File([ye], function(ee) {
+        const ie = ee => String(ee).padStart(2, "0"),
+          He = `${ee.getFullYear()}${ie(ee.getMonth()+1)}${ie(ee.getDate())}`,
+          ye = `${ie(ee.getHours())}${ie(ee.getMinutes())}${ie(ee.getSeconds())}`;
+        return `bloxd-${He}-${ye}.${Ke.c}`
       }(new Date), {
-        type: oB.d
+        type: Ke.e
       })
     }
   },
-  9346: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB,
-      f: () => YB
+  9413: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => be,
+      e: () => ye
     });
-    const YB = "controllerOpenKeyboard",
-      DB = "controllerKeyboardVisible"
+    const ye = "controllerOpenKeyboard",
+      be = "controllerKeyboardVisible"
   },
-  34675: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB
+  34754: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye
     });
-    const YB = new Set(["chunkBorders"])
+    const ye = new Set(["chunkBorders"])
   },
-  34668: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      ALL_DEV_TOOLS: () => oB,
-      coreDevTools: () => JB,
-      devTools: () => yB
+  34751: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      ALL_DEV_TOOLS: () => Ke,
+      coreDevTools: () => Je,
+      devTools: () => Fe
     });
-    var YB = GB(662),
-      DB = GB(1299),
-      QB = GB(34675);
-    const oB = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function jB() {
+    var ye = He(645),
+      be = He(1260),
+      Me = He(34754);
+    const Ke = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ue() {
       const {
-        noaDevTools: BB
-      } = await GB.e(264).then((() => GB(42066)));
-      return BB
+        noaDevTools: ee
+      } = await He.e(264).then((() => He(42142)));
+      return ee
     }
-    const yB = new class {
+    const Fe = new class {
         constructor() {
-          this.loadHost = jB, this.tools = oB
+          this.loadHost = Ue, this.tools = Ke
         }
-        setHost(BB) {
-          this.tools = null === BB ? oB : BB.tools, this.loadHost = null === BB ? jB : async () => BB
+        setHost(ee) {
+          this.tools = null === ee ? Ke : ee.tools, this.loadHost = null === ee ? Ue : async () => ee
         }
-        supports(BB) {
-          return this.tools.has(BB)
+        supports(ee) {
+          return this.tools.has(ee)
         }
-        async downloadScene(BB, OB) {
-          const GB = await this.loadHost();
-          await GB.downloadScene(BB, OB)
+        async downloadScene(ee, ie) {
+          const He = await this.loadHost();
+          await He.downloadScene(ee, ie)
         }
-        async setAmbientLightIntensity(BB) {
-          const OB = await this.loadHost();
-          await OB.setAmbientLightIntensity(BB)
+        async setAmbientLightIntensity(ee) {
+          const ie = await this.loadHost();
+          await ie.setAmbientLightIntensity(ee)
         }
-        async capturePhoto(BB, OB, GB) {
-          return (await this.loadHost()).capturePhoto(BB, OB, GB)
+        async capturePhoto(ee, ie, He) {
+          return (await this.loadHost()).capturePhoto(ee, ie, He)
         }
       },
-      JB = {
-        tools: QB.c,
+      Je = {
+        tools: Me.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -1390,121 +1390,121 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    YB.D && yB.setHost(JB), (0, DB.y)((() => {
-      yB.setHost(JB)
+    ye.I && Fe.setHost(Je), (0, be.s)((() => {
+      Fe.setHost(Je)
     }))
   },
-  34832: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      h: () => DB,
-      i: () => MB
+  34927: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ke,
+      d: () => be,
+      h: () => oe
     });
-    var YB = GB(1611);
+    var ye = He(1557);
 
-    function DB(BB) {
-      var OB;
+    function be(ee) {
+      var ie;
       return {
-        ...oB.store,
-        yaw: oB.store.yaw + (null !== (OB = YB.d[BB].previewYaw) && void 0 !== OB ? OB : 0)
+        ...Ke.store,
+        yaw: Ke.store.yaw + (null !== (ie = ye.b[ee].previewYaw) && void 0 !== ie ? ie : 0)
       }
     }
-    const QB = {
+    const Me = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      oB = {
-        player: QB,
+      Ke = {
+        player: Me,
         store: {
-          ...QB,
+          ...Me,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function jB(BB, OB) {
-      BB instanceof Promise ? BB.then(OB).catch((BB => {
-        console.error("Couldn't open the preview", BB)
-      })) : OB(BB)
+    function Ue(ee, ie) {
+      ee instanceof Promise ? ee.then(ie).catch((ee => {
+        console.error("Couldn't open the preview", ee)
+      })) : ie(ee)
     }
-    class yB {
-      constructor(BB) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, jB(BB, (BB => {
-          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height), null !== this.view && BB.show(this.view))
+    class Fe {
+      constructor(ee) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ue(ee, (ee => {
+          this.closed ? ee.close() : (this.opened = ee, null !== this.size && ee.resize(this.size.width, this.size.height), null !== this.view && ee.show(this.view))
         }))
       }
-      show(BB) {
-        var OB;
-        this.view = BB, null === (OB = this.opened) || void 0 === OB || OB.show(BB)
+      show(ee) {
+        var ie;
+        this.view = ee, null === (ie = this.opened) || void 0 === ie || ie.show(ee)
       }
-      resize(BB, OB) {
-        var GB;
+      resize(ee, ie) {
+        var He;
         this.size = {
-          width: BB,
-          height: OB
-        }, null === (GB = this.opened) || void 0 === GB || GB.resize(BB, OB)
+          width: ee,
+          height: ie
+        }, null === (He = this.opened) || void 0 === He || He.resize(ee, ie)
       }
       close() {
-        var BB;
-        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
+        var ee;
+        this.closed = !0, null === (ee = this.opened) || void 0 === ee || ee.close(), this.opened = null
       }
     }
-    class JB {
-      constructor(BB) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(BB).then((BB => BB.ready)), jB(BB, (BB => {
-          this.closed ? BB.close() : (this.opened = BB, null !== this.size && BB.resize(this.size.width, this.size.height))
+    class Je {
+      constructor(ee) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(ee).then((ee => ee.ready)), Ue(ee, (ee => {
+          this.closed ? ee.close() : (this.opened = ee, null !== this.size && ee.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var BB, OB;
-        return null !== (BB = null === (OB = this.opened) || void 0 === OB ? void 0 : OB.isReady()) && void 0 !== BB && BB
+        var ee, ie;
+        return null !== (ee = null === (ie = this.opened) || void 0 === ie ? void 0 : ie.isReady()) && void 0 !== ee && ee
       }
-      setCosmetic(BB, OB) {
-        var GB;
-        null === (GB = this.opened) || void 0 === GB || GB.setCosmetic(BB, OB)
+      setCosmetic(ee, ie) {
+        var He;
+        null === (He = this.opened) || void 0 === He || He.setCosmetic(ee, ie)
       }
-      playEmote(BB) {
-        var OB;
-        null === (OB = this.opened) || void 0 === OB || OB.playEmote(BB)
+      playEmote(ee) {
+        var ie;
+        null === (ie = this.opened) || void 0 === ie || ie.playEmote(ee)
       }
-      setOrbit(BB) {
-        var OB;
-        null === (OB = this.opened) || void 0 === OB || OB.setOrbit(BB)
+      setOrbit(ee) {
+        var ie;
+        null === (ie = this.opened) || void 0 === ie || ie.setOrbit(ee)
       }
       resetCamera() {
-        var BB;
-        null === (BB = this.opened) || void 0 === BB || BB.resetCamera()
+        var ee;
+        null === (ee = this.opened) || void 0 === ee || ee.resetCamera()
       }
-      async untilDrawn(BB) {
-        var OB;
-        await this.ready, await (null === (OB = this.opened) || void 0 === OB ? void 0 : OB.untilDrawn(BB))
+      async untilDrawn(ee) {
+        var ie;
+        await this.ready, await (null === (ie = this.opened) || void 0 === ie ? void 0 : ie.untilDrawn(ee))
       }
-      resize(BB, OB) {
-        var GB;
+      resize(ee, ie) {
+        var He;
         this.size = {
-          width: BB,
-          height: OB
-        }, null === (GB = this.opened) || void 0 === GB || GB.resize(BB, OB)
+          width: ee,
+          height: ie
+        }, null === (He = this.opened) || void 0 === He || He.resize(ee, ie)
       }
       close() {
-        var BB;
-        this.closed = !0, null === (BB = this.opened) || void 0 === BB || BB.close(), this.opened = null
+        var ee;
+        this.closed = !0, null === (ee = this.opened) || void 0 === ee || ee.close(), this.opened = null
       }
     }
-    const MB = new class {
+    const oe = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(BB) {
-        this.host = BB
+      setHost(ee) {
+        this.host = ee
       }
-      setDefaultHost(BB) {
-        this.makeDefault = BB
+      setDefaultHost(ee) {
+        this.makeDefault = ee
       }
       current() {
         if (null === this.host) {
@@ -1513,78 +1513,78 @@ export const modules = {
         }
         return this.host
       }
-      openMob(BB) {
-        return new yB(this.current().openMob(BB))
+      openMob(ee) {
+        return new Fe(this.current().openMob(ee))
       }
-      openPet(BB) {
-        return new yB(this.current().openPet(BB))
+      openPet(ee) {
+        return new Fe(this.current().openPet(ee))
       }
-      openMobLineup(BB) {
-        return new yB(this.current().openMobLineup(BB))
+      openMobLineup(ee) {
+        return new Fe(this.current().openMobLineup(ee))
       }
-      openCharacter(BB, OB) {
-        return new JB(this.current().openCharacter(BB, OB))
+      openCharacter(ee, ie) {
+        return new Je(this.current().openCharacter(ee, ie))
       }
     }
   },
-  34828: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB.d,
-      e: () => YB.h,
-      g: () => YB.i
+  34919: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => ye.b,
+      f: () => ye.d,
+      i: () => ye.h
     });
-    var YB = GB(34832);
-    class DB {
-      constructor(BB) {
-        this.load = BB, this.loaded = null, this.loading = null
+    var ye = He(34927);
+    class be {
+      constructor(ee) {
+        this.load = ee, this.loaded = null, this.loading = null
       }
-      run(BB) {
-        return null !== this.loaded ? BB(this.loaded) : (this.loading ??= this.load().then((BB => (this.loaded = BB, BB)), (BB => {
-          throw this.loading = null, BB
-        })), this.loading.then(BB))
+      run(ee) {
+        return null !== this.loaded ? ee(this.loaded) : (this.loading ??= this.load().then((ee => (this.loaded = ee, ee)), (ee => {
+          throw this.loading = null, ee
+        })), this.loading.then(ee))
       }
     }
-    class QB {
+    class Me {
       constructor() {
-        this.mobScene = new DB((() => Promise.all([GB.e(84), GB.e(259), GB.e(258), GB.e(283), GB.e(111), GB.e(284), GB.e(87), GB.e(281), GB.e(85), GB.e(86), GB.e(291), GB.e(285), GB.e(290), GB.e(288), GB.e(280), GB.e(303), GB.e(255), GB.e(272), GB.e(286), GB.e(289), GB.e(89), GB.e(249), GB.e(204), GB.e(109), GB.e(261), GB.e(252), GB.e(268), GB.e(219), GB.e(269), GB.e(88), GB.e(273)]).then((() => GB(42079))))), this.characterScene = new DB((() => Promise.all([GB.e(84), GB.e(259), GB.e(258), GB.e(283), GB.e(111), GB.e(284), GB.e(87), GB.e(281), GB.e(85), GB.e(86), GB.e(291), GB.e(285), GB.e(290), GB.e(288), GB.e(280), GB.e(303), GB.e(255), GB.e(272), GB.e(286), GB.e(289), GB.e(89), GB.e(249), GB.e(204), GB.e(109), GB.e(261), GB.e(252), GB.e(268), GB.e(219), GB.e(269), GB.e(88), GB.e(218)]).then((() => GB(42186)))))
+        this.mobScene = new be((() => Promise.all([He.e(84), He.e(259), He.e(258), He.e(283), He.e(111), He.e(284), He.e(87), He.e(281), He.e(85), He.e(86), He.e(291), He.e(285), He.e(290), He.e(288), He.e(280), He.e(303), He.e(255), He.e(272), He.e(286), He.e(289), He.e(89), He.e(249), He.e(204), He.e(109), He.e(261), He.e(252), He.e(268), He.e(219), He.e(269), He.e(88), He.e(273)]).then((() => He(42155))))), this.characterScene = new be((() => Promise.all([He.e(84), He.e(259), He.e(258), He.e(283), He.e(111), He.e(284), He.e(87), He.e(281), He.e(85), He.e(86), He.e(291), He.e(285), He.e(290), He.e(288), He.e(280), He.e(303), He.e(255), He.e(272), He.e(286), He.e(289), He.e(89), He.e(249), He.e(204), He.e(109), He.e(261), He.e(252), He.e(268), He.e(219), He.e(269), He.e(88), He.e(218)]).then((() => He(42256)))))
       }
-      openMob(BB) {
-        return this.mobScene.run((OB => OB.openMobPreview(BB)))
+      openMob(ee) {
+        return this.mobScene.run((ie => ie.openMobPreview(ee)))
       }
-      openPet(BB) {
-        return this.mobScene.run((OB => OB.openPetPreview(BB)))
+      openPet(ee) {
+        return this.mobScene.run((ie => ie.openPetPreview(ee)))
       }
-      openMobLineup(BB) {
-        return this.mobScene.run((OB => OB.openMobLineupPreview(BB)))
+      openMobLineup(ee) {
+        return this.mobScene.run((ie => ie.openMobLineupPreview(ee)))
       }
-      openCharacter(BB, OB) {
-        return this.characterScene.run((GB => GB.openCharacterPreview(BB, OB)))
+      openCharacter(ee, ie) {
+        return this.characterScene.run((He => He.openCharacterPreview(ee, ie)))
       }
     }
-    YB.i.setDefaultHost((() => new QB))
+    ye.h.setDefaultHost((() => new Me))
   },
-  7198: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      e: () => QB
+  7296: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be,
+      h: () => Me
     });
-    var YB = GB(31);
-    const DB = "shaderPack";
-    async function QB() {
-      var BB;
-      let OB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (BB = await YB.d.getItem(DB, OB)) && void 0 !== BB ? BB : null
+    var ye = He(35);
+    const be = "shaderPack";
+    async function Me() {
+      var ee;
+      let ie = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (ee = await ye.e.getItem(be, ie)) && void 0 !== ee ? ee : null
     }
   },
-  9545: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      h: () => yB
+  9609: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ue,
+      h: () => Fe
     });
-    var YB = GB(16),
-      DB = GB(1350),
-      QB = GB(92);
-    const oB = {
+    var ye = He(18),
+      be = He(1305),
+      Me = He(97);
+    const Ke = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -1627,61 +1627,61 @@ export const modules = {
       }
     };
 
-    function jB() {
-      return (0, QB.isMobile)() && "function" === typeof navigator.vibrate
+    function Ue() {
+      return (0, Me.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const yB = new class {
-      constructor(BB) {
-        this.deps = BB, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Fe = new class {
+      constructor(ee) {
+        this.deps = ee, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(BB, OB) {
-        var GB;
+      play(ee, ie) {
+        var He;
         if (!this.deps.enabled()) return;
-        const YB = oB[BB],
-          DB = null !== OB && void 0 !== OB ? OB : YB.pattern;
-        if (null === DB) return void console.warn("No vibration pattern for", BB);
-        const QB = this.deps.now();
-        QB - this.lastAnyAt < 40 && YB.priority < this.playingPriority || QB - (null !== (GB = this.lastAt.get(BB)) && void 0 !== GB ? GB : -1 / 0) < YB.minGapMs || QB < this.playingUntil && YB.priority < this.playingPriority || (this.lastAt.set(BB, QB), this.lastAnyAt = QB, this.playingUntil = QB + DB.reduce(((BB, OB) => BB + OB), 0), this.playingPriority = YB.priority, this.deps.vibrate(DB))
+        const ye = Ke[ee],
+          be = null !== ie && void 0 !== ie ? ie : ye.pattern;
+        if (null === be) return void console.warn("No vibration pattern for", ee);
+        const Me = this.deps.now();
+        Me - this.lastAnyAt < 40 && ye.priority < this.playingPriority || Me - (null !== (He = this.lastAt.get(ee)) && void 0 !== He ? He : -1 / 0) < ye.minGapMs || Me < this.playingUntil && ye.priority < this.playingPriority || (this.lastAt.set(ee, Me), this.lastAnyAt = Me, this.playingUntil = Me + be.reduce(((ee, ie) => ee + ie), 0), this.playingPriority = ye.priority, this.deps.vibrate(be))
       }
     }({
-      vibrate: BB => {
-        navigator.vibrate([...BB])
+      vibrate: ee => {
+        navigator.vibrate([...ee])
       },
       now: () => performance.now(),
-      enabled: () => jB() && YB.c.get("isTouchScreen") && YB.c.get("clientEscMenuOptions").vibration && !(0, DB.f)()
+      enabled: () => Ue() && ye.e.get("isTouchScreen") && ye.e.get("clientEscMenuOptions").vibration && !(0, be.g)()
     })
   },
-  9448: (BB, OB, GB) => {
-    function YB(BB, OB) {
-      return !BB.hidden && (OB || !BB.isRewardedAd)
+  9509: (ee, ie, He) => {
+    function ye(ee, ie) {
+      return !ee.hidden && (ie || !ee.isRewardedAd)
     }
 
-    function DB(BB) {
-      return "object" === typeof BB ? BB.option : BB
+    function be(ee) {
+      return "object" === typeof ee ? ee.option : ee
     }
 
-    function QB(BB, OB) {
-      var GB;
-      if ("dropdown" === (null === (GB = BB.userInput) || void 0 === GB ? void 0 : GB.type) && "object" === typeof BB.userInput.dropdownOptions[0]) {
-        for (const GB of BB.userInput.dropdownOptions)
-          if (DB(GB) === OB) return "object" === typeof GB ? GB.cost : BB.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", BB, "input:", OB)
+    function Me(ee, ie) {
+      var He;
+      if ("dropdown" === (null === (He = ee.userInput) || void 0 === He ? void 0 : He.type) && "object" === typeof ee.userInput.dropdownOptions[0]) {
+        for (const He of ee.userInput.dropdownOptions)
+          if (be(He) === ie) return "object" === typeof He ? He.cost : ee.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", ee, "input:", ie)
       }
-      return BB.cost
+      return ee.cost
     }
 
-    function oB(BB, OB, GB) {
-      var YB;
-      const DB = null !== (YB = GB.excludedPlayers) && void 0 !== YB ? YB : [OB];
-      return BB.filter((BB => !DB.includes(BB)))
+    function Ke(ee, ie, He) {
+      var ye;
+      const be = null !== (ye = He.excludedPlayers) && void 0 !== ye ? ye : [ie];
+      return ee.filter((ee => !be.includes(ee)))
     }
-    GB.d(OB, {
-      b: () => QB,
-      f: () => DB,
-      g: () => oB,
-      h: () => YB
+    He.d(ie, {
+      d: () => Me,
+      f: () => be,
+      h: () => Ke,
+      i: () => ye
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

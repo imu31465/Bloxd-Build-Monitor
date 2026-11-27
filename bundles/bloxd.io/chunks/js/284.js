@@ -1,583 +1,583 @@
 export const id = 284;
 export const ids = [284];
 export const modules = {
-  41103: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  41212: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me
     });
-    var YB = GB(39366),
-      DB = GB(37823);
-    class QB {
-      static Instantiate(BB) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[BB]) return this.RegisteredExternalClasses[BB];
-        const OB = (0, DB.c)(BB);
-        if (OB) return OB;
-        YB.b.Warn(BB + " not found, you may have missed an import.");
-        const GB = BB.split(".");
-        let QB = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let YB = 0, DB = GB.length; YB < DB; YB++) QB = QB[GB[YB]];
-        return "function" !== typeof QB ? null : QB
+    var ye = He(39467),
+      be = He(37949);
+    class Me {
+      static Instantiate(ee) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[ee]) return this.RegisteredExternalClasses[ee];
+        const ie = (0, be.c)(ee);
+        if (ie) return ie;
+        ye.e.Warn(ee + " not found, you may have missed an import.");
+        const He = ee.split(".");
+        let Me = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let ye = 0, be = He.length; ye < be; ye++) Me = Me[He[ye]];
+        return "function" !== typeof Me ? null : Me
       }
     }
-    QB.RegisteredExternalClasses = {}
+    Me.RegisteredExternalClasses = {}
   },
-  40911: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => DB
+  41005: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => be
     });
-    var YB = GB(40870);
-    class DB {
+    var ye = He(40968);
+    class be {
       static get Now() {
-        return (0, YB.j)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+        return (0, ye.m)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  40932: (BB, OB, GB) => {
-    function YB(BB) {
-      let OB = 1;
+  41044: (ee, ie, He) => {
+    function ye(ee) {
+      let ie = 1;
       do {
-        OB *= 2
-      } while (OB < BB);
-      return OB === BB
+        ie *= 2
+      } while (ie < ee);
+      return ie === ee
     }
 
-    function DB(BB, OB, GB) {
-      return BB * (1 - GB) + OB * GB
+    function be(ee, ie, He) {
+      return ee * (1 - He) + ie * He
     }
 
-    function QB(BB) {
-      const OB = oB(BB),
-        GB = jB(BB);
-      return OB - BB > BB - GB ? GB : OB
+    function Me(ee) {
+      const ie = Ke(ee),
+        He = Ue(ee);
+      return ie - ee > ee - He ? He : ie
     }
 
-    function oB(BB) {
-      return BB--, BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, BB |= BB >> 16, ++BB
+    function Ke(ee) {
+      return ee--, ee |= ee >> 1, ee |= ee >> 2, ee |= ee >> 4, ee |= ee >> 8, ee |= ee >> 16, ++ee
     }
 
-    function jB(BB) {
-      return BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, (BB |= BB >> 16) - (BB >> 1)
+    function Ue(ee) {
+      return ee |= ee >> 1, ee |= ee >> 2, ee |= ee >> 4, ee |= ee >> 8, (ee |= ee >> 16) - (ee >> 1)
     }
 
-    function yB(BB, OB) {
-      let GB;
+    function Fe(ee, ie) {
+      let He;
       switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
         case 1:
-          GB = jB(BB);
+          He = Ue(ee);
           break;
         case 2:
-          GB = QB(BB);
+          He = Me(ee);
           break;
         default:
-          GB = oB(BB)
+          He = Ke(ee)
       }
-      return Math.min(GB, OB)
+      return Math.min(He, ie)
     }
-    GB.d(OB, {
-      b: () => jB,
-      f: () => yB,
-      h: () => YB,
-      k: () => DB,
-      m: () => QB
+    He.d(ie, {
+      d: () => Ue,
+      h: () => Fe,
+      l: () => ye,
+      m: () => be,
+      q: () => Me
     })
   },
-  41097: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => WB,
-      f: () => VB,
-      j: () => NB,
-      k: () => RB
+  41203: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Be,
+      g: () => ge,
+      h: () => Xe,
+      k: () => ze
     });
-    var YB, DB = GB(37802),
-      QB = GB(40870),
-      oB = GB(39366),
-      jB = GB(39358),
-      yB = GB(40911),
-      JB = GB(40890),
-      MB = GB(41041),
-      PB = GB(37796),
-      zB = GB(41035),
-      lB = GB(40899),
-      pB = GB(41103),
-      qB = GB(38589),
-      ZB = GB(40932);
-    class NB {
+    var ye, be = He(37931),
+      Me = He(40968),
+      Ke = He(39467),
+      Ue = He(39463),
+      Fe = He(41005),
+      Je = He(40985),
+      oe = He(41161),
+      Re = He(37929),
+      ke = He(41159),
+      qe = He(40995),
+      fe = He(41212),
+      Te = He(38745),
+      pe = He(41044);
+    class Xe {
       static get BaseUrl() {
-        return zB.e.BaseUrl
+        return ke.f.BaseUrl
       }
-      static set BaseUrl(BB) {
-        zB.e.BaseUrl = BB
+      static set BaseUrl(ee) {
+        ke.f.BaseUrl = ee
       }
       static get CleanUrl() {
-        return zB.e.CleanUrl
+        return ke.f.CleanUrl
       }
-      static set CleanUrl(BB) {
-        zB.e.CleanUrl = BB
+      static set CleanUrl(ee) {
+        ke.f.CleanUrl = ee
       }
-      static IsAbsoluteUrl(BB) {
-        return 0 === BB.indexOf("//") || -1 !== BB.indexOf("://") && (-1 !== BB.indexOf(".") && (-1 !== BB.indexOf("/") && (!(BB.indexOf(":") > BB.indexOf("/")) && (BB.indexOf("://") < BB.indexOf(".") || (0 === BB.indexOf("data:") || 0 === BB.indexOf("blob:"))))))
+      static IsAbsoluteUrl(ee) {
+        return 0 === ee.indexOf("//") || -1 !== ee.indexOf("://") && (-1 !== ee.indexOf(".") && (-1 !== ee.indexOf("/") && (!(ee.indexOf(":") > ee.indexOf("/")) && (ee.indexOf("://") < ee.indexOf(".") || (0 === ee.indexOf("data:") || 0 === ee.indexOf("blob:"))))))
       }
-      static set ScriptBaseUrl(BB) {
-        zB.e.ScriptBaseUrl = BB
+      static set ScriptBaseUrl(ee) {
+        ke.f.ScriptBaseUrl = ee
       }
       static get ScriptBaseUrl() {
-        return zB.e.ScriptBaseUrl
+        return ke.f.ScriptBaseUrl
       }
-      static set CDNBaseUrl(BB) {
-        YB.ScriptBaseUrl = BB, YB.AssetBaseUrl = BB
+      static set CDNBaseUrl(ee) {
+        ye.ScriptBaseUrl = ee, ye.AssetBaseUrl = ee
       }
-      static set ScriptPreprocessUrl(BB) {
-        zB.e.ScriptPreprocessUrl = BB
+      static set ScriptPreprocessUrl(ee) {
+        ke.f.ScriptPreprocessUrl = ee
       }
       static get ScriptPreprocessUrl() {
-        return zB.e.ScriptPreprocessUrl
+        return ke.f.ScriptPreprocessUrl
       }
       static get DefaultRetryStrategy() {
-        return zB.e.DefaultRetryStrategy
+        return ke.f.DefaultRetryStrategy
       }
-      static set DefaultRetryStrategy(BB) {
-        zB.e.DefaultRetryStrategy = BB
+      static set DefaultRetryStrategy(ee) {
+        ke.f.DefaultRetryStrategy = ee
       }
       static get CorsBehavior() {
-        return zB.e.CorsBehavior
+        return ke.f.CorsBehavior
       }
-      static set CorsBehavior(BB) {
-        zB.e.CorsBehavior = BB
+      static set CorsBehavior(ee) {
+        ke.f.CorsBehavior = ee
       }
       static get UseFallbackTexture() {
-        return PB.b.UseFallbackTexture
+        return Re.b.UseFallbackTexture
       }
-      static set UseFallbackTexture(BB) {
-        PB.b.UseFallbackTexture = BB
+      static set UseFallbackTexture(ee) {
+        Re.b.UseFallbackTexture = ee
       }
       static get RegisteredExternalClasses() {
-        return pB.d.RegisteredExternalClasses
+        return fe.d.RegisteredExternalClasses
       }
-      static set RegisteredExternalClasses(BB) {
-        pB.d.RegisteredExternalClasses = BB
+      static set RegisteredExternalClasses(ee) {
+        fe.d.RegisteredExternalClasses = ee
       }
       static get fallbackTexture() {
-        return PB.b.FallbackTexture
+        return Re.b.FallbackTexture
       }
-      static set fallbackTexture(BB) {
-        PB.b.FallbackTexture = BB
+      static set fallbackTexture(ee) {
+        Re.b.FallbackTexture = ee
       }
-      static FetchToRef(BB, OB, GB, YB, DB, QB) {
-        const oB = 4 * ((Math.abs(BB) * GB % GB | 0) + (Math.abs(OB) * YB % YB | 0) * GB);
-        QB.r = DB[oB] / 255, QB.g = DB[oB + 1] / 255, QB.b = DB[oB + 2] / 255, QB.a = DB[oB + 3] / 255
+      static FetchToRef(ee, ie, He, ye, be, Me) {
+        const Ke = 4 * ((Math.abs(ee) * He % He | 0) + (Math.abs(ie) * ye % ye | 0) * He);
+        Me.r = be[Ke] / 255, Me.g = be[Ke + 1] / 255, Me.b = be[Ke + 2] / 255, Me.a = be[Ke + 3] / 255
       }
-      static Mix(BB, OB, GB) {
+      static Mix(ee, ie, He) {
         return 0
       }
-      static Instantiate(BB) {
-        return pB.d.Instantiate(BB)
+      static Instantiate(ee) {
+        return fe.d.Instantiate(ee)
       }
-      static SetImmediate(BB) {
-        lB.c.SetImmediate(BB)
+      static SetImmediate(ee) {
+        qe.c.SetImmediate(ee)
       }
-      static IsExponentOfTwo(BB) {
+      static IsExponentOfTwo(ee) {
         return !0
       }
-      static FloatRound(BB) {
-        return Math.fround(BB)
+      static FloatRound(ee) {
+        return Math.fround(ee)
       }
-      static GetFilename(BB) {
-        const OB = BB.lastIndexOf("/");
-        return OB < 0 ? BB : BB.substring(OB + 1)
+      static GetFilename(ee) {
+        const ie = ee.lastIndexOf("/");
+        return ie < 0 ? ee : ee.substring(ie + 1)
       }
-      static GetFolderPath(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const GB = BB.lastIndexOf("/");
-        return GB < 0 ? OB ? BB : "" : BB.substring(0, GB + 1)
+      static GetFolderPath(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const He = ee.lastIndexOf("/");
+        return He < 0 ? ie ? ee : "" : ee.substring(0, He + 1)
       }
-      static ToDegrees(BB) {
-        return 180 * BB / Math.PI
+      static ToDegrees(ee) {
+        return 180 * ee / Math.PI
       }
-      static ToRadians(BB) {
-        return BB * Math.PI / 180
+      static ToRadians(ee) {
+        return ee * Math.PI / 180
       }
-      static SmoothAngleChange(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const YB = this.ToRadians(BB),
-          DB = this.ToRadians(OB);
-        return this.ToDegrees(Math.atan2((1 - GB) * Math.sin(DB) + GB * Math.sin(YB), (1 - GB) * Math.cos(DB) + GB * Math.cos(YB)))
+      static SmoothAngleChange(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const ye = this.ToRadians(ee),
+          be = this.ToRadians(ie);
+        return this.ToDegrees(Math.atan2((1 - He) * Math.sin(be) + He * Math.sin(ye), (1 - He) * Math.cos(be) + He * Math.cos(ye)))
       }
-      static MakeArray(BB, OB) {
-        return !0 === OB || void 0 !== BB && null != BB ? Array.isArray(BB) ? BB : [BB] : null
+      static MakeArray(ee, ie) {
+        return !0 === ie || void 0 !== ee && null != ee ? Array.isArray(ee) ? ee : [ee] : null
       }
-      static GetPointerPrefix(BB) {
-        return (0, QB.j)() && !window.PointerEvent ? "mouse" : "pointer"
+      static GetPointerPrefix(ee) {
+        return (0, Me.m)() && !window.PointerEvent ? "mouse" : "pointer"
       }
-      static SetCorsBehavior(BB, OB) {
-        (0, zB.s)(BB, OB)
+      static SetCorsBehavior(ee, ie) {
+        (0, ke.z)(ee, ie)
       }
-      static SetReferrerPolicyBehavior(BB, OB) {
-        OB.referrerPolicy = BB
+      static SetReferrerPolicyBehavior(ee, ie) {
+        ie.referrerPolicy = ee
       }
       static get PreprocessUrl() {
-        return zB.e.PreprocessUrl
+        return ke.f.PreprocessUrl
       }
-      static set PreprocessUrl(BB) {
-        zB.e.PreprocessUrl = BB
+      static set PreprocessUrl(ee) {
+        ke.f.PreprocessUrl = ee
       }
-      static LoadImage(BB, OB, GB, YB, DB, QB) {
-        return (0, zB.n)(BB, OB, GB, YB, DB, QB)
+      static LoadImage(ee, ie, He, ye, be, Me) {
+        return (0, ke.r)(ee, ie, He, ye, be, Me)
       }
-      static LoadFile(BB, OB, GB, YB, DB, QB) {
-        return (0, zB.m)(BB, OB, GB, YB, DB, QB)
+      static LoadFile(ee, ie, He, ye, be, Me) {
+        return (0, ke.o)(ee, ie, He, ye, be, Me)
       }
-      static async LoadFileAsync(BB) {
-        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((GB, YB) => {
-          (0, zB.m)(BB, (BB => {
-            GB(BB)
-          }), void 0, void 0, OB, ((BB, OB) => {
-            YB(OB)
+      static async LoadFileAsync(ee) {
+        let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((He, ye) => {
+          (0, ke.o)(ee, (ee => {
+            He(ee)
+          }), void 0, void 0, ie, ((ee, ie) => {
+            ye(ie)
           }))
         }))
       }
-      static GetAssetUrl(BB) {
-        if (!BB) return "";
-        if (YB.AssetBaseUrl && BB.startsWith(YB._DefaultAssetsUrl)) {
-          const OB = YB.AssetBaseUrl.endsWith("/") ? YB.AssetBaseUrl.slice(0, -1) : YB.AssetBaseUrl;
-          return BB.replace(YB._DefaultAssetsUrl, OB)
+      static GetAssetUrl(ee) {
+        if (!ee) return "";
+        if (ye.AssetBaseUrl && ee.startsWith(ye._DefaultAssetsUrl)) {
+          const ie = ye.AssetBaseUrl.endsWith("/") ? ye.AssetBaseUrl.slice(0, -1) : ye.AssetBaseUrl;
+          return ee.replace(ye._DefaultAssetsUrl, ie)
         }
-        return BB
+        return ee
       }
-      static GetBabylonScriptURL(BB, OB) {
-        if (!BB) return "";
-        if (BB.startsWith(YB._DefaultCdnUrl))
-          if (YB.ScriptBaseUrl) {
-            const OB = YB.ScriptBaseUrl.endsWith("/") ? YB.ScriptBaseUrl.slice(0, -1) : YB.ScriptBaseUrl;
-            BB = BB.replace(YB._DefaultCdnUrl, OB)
-          } else if (YB._CdnVersion) {
-          const OB = `${YB._DefaultCdnUrl}/v${YB._CdnVersion}`;
-          BB.startsWith(OB) || (BB = BB.replace(YB._DefaultCdnUrl, OB))
+      static GetBabylonScriptURL(ee, ie) {
+        if (!ee) return "";
+        if (ee.startsWith(ye._DefaultCdnUrl))
+          if (ye.ScriptBaseUrl) {
+            const ie = ye.ScriptBaseUrl.endsWith("/") ? ye.ScriptBaseUrl.slice(0, -1) : ye.ScriptBaseUrl;
+            ee = ee.replace(ye._DefaultCdnUrl, ie)
+          } else if (ye._CdnVersion) {
+          const ie = `${ye._DefaultCdnUrl}/v${ye._CdnVersion}`;
+          ee.startsWith(ie) || (ee = ee.replace(ye._DefaultCdnUrl, ie))
         }
-        return BB = YB.ScriptPreprocessUrl(BB), OB && !YB.IsAbsoluteUrl(BB) && (BB = YB.GetAbsoluteUrl(BB)), BB
+        return ee = ye.ScriptPreprocessUrl(ee), ie && !ye.IsAbsoluteUrl(ee) && (ee = ye.GetAbsoluteUrl(ee)), ee
       }
-      static LoadBabylonScript(BB, OB, GB, DB) {
-        BB = YB.GetBabylonScriptURL(BB), YB.LoadScript(BB, OB, GB)
+      static LoadBabylonScript(ee, ie, He, be) {
+        ee = ye.GetBabylonScriptURL(ee), ye.LoadScript(ee, ie, He)
       }
-      static async LoadBabylonScriptAsync(BB) {
-        return BB = YB.GetBabylonScriptURL(BB), await YB.LoadScriptAsync(BB)
+      static async LoadBabylonScriptAsync(ee) {
+        return ee = ye.GetBabylonScriptURL(ee), await ye.LoadScriptAsync(ee)
       }
-      static _LoadScriptNative(BB, OB, GB, DB) {
+      static _LoadScriptNative(ee, ie, He, be) {
         if (_native) {
           if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const BB = "Loading a script as an ES module is not supported in Babylon Native";
-            return void GB?.(BB, new Error(BB))
+            const ee = "Loading a script as an ES module is not supported in Babylon Native";
+            return void He?.(ee, new Error(ee))
           }
-          YB.LoadFile(BB, (BB => {
+          ye.LoadFile(ee, (ee => {
             try {
-              Function(BB).apply(null), OB && OB()
-            } catch (YB) {
-              GB && GB("LoadScript Error", YB)
+              Function(ee).apply(null), ie && ie()
+            } catch (ye) {
+              He && He("LoadScript Error", ye)
             }
-          }), void 0, void 0, !1, ((BB, OB) => {
-            GB && GB("LoadScript Error", OB)
+          }), void 0, void 0, !1, ((ee, ie) => {
+            He && He("LoadScript Error", ie)
           }))
         }
       }
-      static _LoadScriptWeb(BB, OB, GB, YB) {
-        let DB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      static _LoadScriptWeb(ee, ie, He, ye) {
+        let be = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if ("function" === typeof importScripts) {
           try {
-            importScripts(BB), OB && OB()
-          } catch (yB) {
-            GB?.(`Unable to load script '${BB}' in worker`, yB)
+            importScripts(ee), ie && ie()
+          } catch (Fe) {
+            He?.(`Unable to load script '${ee}' in worker`, Fe)
           }
           return
         }
-        if (!(0, QB.j)()) return void GB?.(`Cannot load script '${BB}' outside of a window or a worker`);
-        const oB = document.getElementsByTagName("head")[0],
-          jB = document.createElement("script");
-        DB ? (jB.setAttribute("type", "module"), jB.innerText = BB) : (jB.setAttribute("type", "text/javascript"), jB.setAttribute("src", BB)), YB && (jB.id = YB), jB.onload = () => {
-          OB && OB()
-        }, jB.onerror = OB => {
-          GB && GB(`Unable to load script '${BB}'`, OB)
-        }, oB.appendChild(jB)
+        if (!(0, Me.m)()) return void He?.(`Cannot load script '${ee}' outside of a window or a worker`);
+        const Ke = document.getElementsByTagName("head")[0],
+          Ue = document.createElement("script");
+        be ? (Ue.setAttribute("type", "module"), Ue.innerText = ee) : (Ue.setAttribute("type", "text/javascript"), Ue.setAttribute("src", ee)), ye && (Ue.id = ye), Ue.onload = () => {
+          ie && ie()
+        }, Ue.onerror = ie => {
+          He && He(`Unable to load script '${ee}'`, ie)
+        }, Ke.appendChild(Ue)
       }
-      static async LoadScriptAsync(BB, OB) {
-        return await new Promise(((GB, YB) => {
-          this.LoadScript(BB, (() => {
-            GB()
-          }), ((BB, OB) => {
-            YB(OB || new Error(BB))
-          }), OB)
+      static async LoadScriptAsync(ee, ie) {
+        return await new Promise(((He, ye) => {
+          this.LoadScript(ee, (() => {
+            He()
+          }), ((ee, ie) => {
+            ye(ie || new Error(ee))
+          }), ie)
         }))
       }
-      static ReadFileAsDataURL(BB, OB, GB) {
-        const YB = new FileReader,
-          QB = {
-            onCompleteObservable: new DB.b,
-            abort: () => YB.abort()
+      static ReadFileAsDataURL(ee, ie, He) {
+        const ye = new FileReader,
+          Me = {
+            onCompleteObservable: new be.d,
+            abort: () => ye.abort()
           };
-        return YB.onloadend = () => {
-          QB.onCompleteObservable.notifyObservers(QB)
-        }, YB.onload = BB => {
-          OB(BB.target.result)
-        }, YB.onprogress = GB, YB.readAsDataURL(BB), QB
+        return ye.onloadend = () => {
+          Me.onCompleteObservable.notifyObservers(Me)
+        }, ye.onload = ee => {
+          ie(ee.target.result)
+        }, ye.onprogress = He, ye.readAsDataURL(ee), Me
       }
-      static ReadFile(BB, OB, GB, YB, DB) {
-        return (0, zB.o)(BB, OB, GB, YB, DB)
+      static ReadFile(ee, ie, He, ye, be) {
+        return (0, ke.s)(ee, ie, He, ye, be)
       }
-      static FileAsURL(BB) {
-        const OB = new Blob([BB]);
-        return window.URL.createObjectURL(OB)
+      static FileAsURL(ee) {
+        const ie = new Blob([ee]);
+        return window.URL.createObjectURL(ie)
       }
-      static Format(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return BB.toFixed(OB)
+      static Format(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return ee.toFixed(ie)
       }
-      static DeepCopy(BB, OB, GB, YB) {
-        jB.b.DeepCopy(BB, OB, GB, YB)
+      static DeepCopy(ee, ie, He, ye) {
+        Ue.b.DeepCopy(ee, ie, He, ye)
       }
-      static IsEmpty(BB) {
-        for (const OB in BB)
-          if (Object.prototype.hasOwnProperty.call(BB, OB)) return !1;
+      static IsEmpty(ee) {
+        for (const ie in ee)
+          if (Object.prototype.hasOwnProperty.call(ee, ie)) return !1;
         return !0
       }
-      static RegisterTopRootEvents(BB, OB) {
-        for (let YB = 0; YB < OB.length; YB++) {
-          const DB = OB[YB];
-          BB.addEventListener(DB.name, DB.handler, !1);
+      static RegisterTopRootEvents(ee, ie) {
+        for (let ye = 0; ye < ie.length; ye++) {
+          const be = ie[ye];
+          ee.addEventListener(be.name, be.handler, !1);
           try {
-            window.parent && window.parent.addEventListener(DB.name, DB.handler, !1)
-          } catch (GB) {}
+            window.parent && window.parent.addEventListener(be.name, be.handler, !1)
+          } catch (He) {}
         }
       }
-      static UnregisterTopRootEvents(BB, OB) {
-        for (let YB = 0; YB < OB.length; YB++) {
-          const DB = OB[YB];
-          BB.removeEventListener(DB.name, DB.handler);
+      static UnregisterTopRootEvents(ee, ie) {
+        for (let ye = 0; ye < ie.length; ye++) {
+          const be = ie[ye];
+          ee.removeEventListener(be.name, be.handler);
           try {
-            BB.parent && BB.parent.removeEventListener(DB.name, DB.handler)
-          } catch (GB) {}
+            ee.parent && ee.parent.removeEventListener(be.name, be.handler)
+          } catch (He) {}
         }
       }
-      static async DumpFramebuffer(BB, OB, GB, YB) {
-        throw (0, JB.j)("DumpTools")
+      static async DumpFramebuffer(ee, ie, He, ye) {
+        throw (0, Je.l)("DumpTools")
       }
-      static DumpData(BB, OB, GB, YB) {
-        throw (0, JB.j)("DumpTools")
+      static DumpData(ee, ie, He, ye) {
+        throw (0, Je.l)("DumpTools")
       }
-      static async DumpDataAsync(BB, OB, GB) {
-        throw (0, JB.j)("DumpTools")
+      static async DumpDataAsync(ee, ie, He) {
+        throw (0, Je.l)("DumpTools")
       }
-      static _IsOffScreenCanvas(BB) {
-        return void 0 !== BB.convertToBlob
+      static _IsOffScreenCanvas(ee) {
+        return void 0 !== ee.convertToBlob
       }
-      static ToBlob(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          DB = arguments.length > 3 ? arguments[3] : void 0;
-        YB._IsOffScreenCanvas(BB) || BB.toBlob || (BB.toBlob = function(BB, OB, GB) {
+      static ToBlob(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          be = arguments.length > 3 ? arguments[3] : void 0;
+        ye._IsOffScreenCanvas(ee) || ee.toBlob || (ee.toBlob = function(ee, ie, He) {
           setTimeout((() => {
-            const YB = atob(this.toDataURL(OB, GB).split(",")[1]),
-              DB = YB.length,
-              QB = new Uint8Array(DB);
-            for (let BB = 0; BB < DB; BB++) QB[BB] = YB.charCodeAt(BB);
-            BB(new Blob([QB]))
+            const ye = atob(this.toDataURL(ie, He).split(",")[1]),
+              be = ye.length,
+              Me = new Uint8Array(be);
+            for (let ee = 0; ee < be; ee++) Me[ee] = ye.charCodeAt(ee);
+            ee(new Blob([Me]))
           }))
-        }), YB._IsOffScreenCanvas(BB) ? BB.convertToBlob({
-          type: GB,
-          quality: DB
-        }).then((BB => OB(BB))) : BB.toBlob((function(BB) {
-          OB(BB)
-        }), GB, DB)
+        }), ye._IsOffScreenCanvas(ee) ? ee.convertToBlob({
+          type: He,
+          quality: be
+        }).then((ee => ie(ee))) : ee.toBlob((function(ee) {
+          ie(ee)
+        }), He, be)
       }
-      static DownloadBlob(BB, OB) {
+      static DownloadBlob(ee, ie) {
         if ("download" in document.createElement("a")) {
-          if (!OB) {
-            const BB = new Date;
-            OB = "screenshot_" + ((BB.getFullYear() + "-" + (BB.getMonth() + 1)).slice(2) + "-" + BB.getDate() + "_" + BB.getHours() + "-" + ("0" + BB.getMinutes()).slice(-2)) + ".png"
+          if (!ie) {
+            const ee = new Date;
+            ie = "screenshot_" + ((ee.getFullYear() + "-" + (ee.getMonth() + 1)).slice(2) + "-" + ee.getDate() + "_" + ee.getHours() + "-" + ("0" + ee.getMinutes()).slice(-2)) + ".png"
           }
-          YB.Download(BB, OB)
-        } else if (BB && "undefined" !== typeof URL) {
-          const OB = URL.createObjectURL(BB),
-            GB = window.open("");
-          if (!GB) return;
-          const YB = GB.document.createElement("img");
-          YB.onload = function() {
-            URL.revokeObjectURL(OB)
-          }, YB.src = OB, GB.document.body.appendChild(YB)
+          ye.Download(ee, ie)
+        } else if (ee && "undefined" !== typeof URL) {
+          const ie = URL.createObjectURL(ee),
+            He = window.open("");
+          if (!He) return;
+          const ye = He.document.createElement("img");
+          ye.onload = function() {
+            URL.revokeObjectURL(ie)
+          }, ye.src = ie, He.document.body.appendChild(ye)
         }
       }
-      static EncodeScreenshotCanvasData(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          DB = arguments.length > 3 ? arguments[3] : void 0,
-          QB = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof DB && OB) {
-          if (OB) {
-            if (YB._IsOffScreenCanvas(BB)) return void BB.convertToBlob({
-              type: GB,
-              quality: QB
-            }).then((BB => {
-              const GB = new FileReader;
-              GB.readAsDataURL(BB), GB.onloadend = () => {
-                const BB = GB.result;
-                OB(BB)
+      static EncodeScreenshotCanvasData(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          be = arguments.length > 3 ? arguments[3] : void 0,
+          Me = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof be && ie) {
+          if (ie) {
+            if (ye._IsOffScreenCanvas(ee)) return void ee.convertToBlob({
+              type: He,
+              quality: Me
+            }).then((ee => {
+              const He = new FileReader;
+              He.readAsDataURL(ee), He.onloadend = () => {
+                const ee = He.result;
+                ie(ee)
               }
             }));
-            const DB = BB.toDataURL(GB, QB);
-            OB(DB)
+            const be = ee.toDataURL(He, Me);
+            ie(be)
           }
-        } else this.ToBlob(BB, (function(BB) {
-          BB && YB.DownloadBlob(BB, DB), OB && OB("")
-        }), GB, QB)
+        } else this.ToBlob(ee, (function(ee) {
+          ee && ye.DownloadBlob(ee, be), ie && ie("")
+        }), He, Me)
       }
-      static Download(BB, OB) {
+      static Download(ee, ie) {
         if ("undefined" === typeof URL) return;
-        const GB = window.URL.createObjectURL(BB),
-          YB = document.createElement("a");
-        document.body.appendChild(YB), YB.style.display = "none", YB.href = GB, YB.download = OB, YB.addEventListener("click", (() => {
-          YB.parentElement && YB.parentElement.removeChild(YB)
-        })), YB.click(), window.URL.revokeObjectURL(GB)
+        const He = window.URL.createObjectURL(ee),
+          ye = document.createElement("a");
+        document.body.appendChild(ye), ye.style.display = "none", ye.href = He, ye.download = ie, ye.addEventListener("click", (() => {
+          ye.parentElement && ye.parentElement.removeChild(ye)
+        })), ye.click(), window.URL.revokeObjectURL(He)
       }
-      static BackCompatCameraNoPreventDefault(BB) {
-        return "boolean" === typeof BB[0] ? BB[0] : "boolean" === typeof BB[1] && BB[1]
+      static BackCompatCameraNoPreventDefault(ee) {
+        return "boolean" === typeof ee[0] ? ee[0] : "boolean" === typeof ee[1] && ee[1]
       }
-      static CreateScreenshot(BB, OB, GB, YB) {
-        throw (0, JB.j)("ScreenshotTools")
+      static CreateScreenshot(ee, ie, He, ye) {
+        throw (0, Je.l)("ScreenshotTools")
       }
-      static async CreateScreenshotAsync(BB, OB, GB) {
-        throw (0, JB.j)("ScreenshotTools")
+      static async CreateScreenshotAsync(ee, ie, He) {
+        throw (0, Je.l)("ScreenshotTools")
       }
-      static CreateScreenshotUsingRenderTarget(BB, OB, GB, YB) {
-        throw (0, JB.j)("ScreenshotTools")
+      static CreateScreenshotUsingRenderTarget(ee, ie, He, ye) {
+        throw (0, Je.l)("ScreenshotTools")
       }
-      static async CreateScreenshotUsingRenderTargetAsync(BB, OB, GB) {
-        throw (0, JB.j)("ScreenshotTools")
+      static async CreateScreenshotUsingRenderTargetAsync(ee, ie, He) {
+        throw (0, Je.l)("ScreenshotTools")
       }
       static RandomId() {
-        return (0, qB.e)()
+        return (0, Te.d)()
       }
-      static IsBase64(BB) {
-        return (0, zB.j)(BB)
+      static IsBase64(ee) {
+        return (0, ke.m)(ee)
       }
-      static DecodeBase64(BB) {
-        return (0, zB.c)(BB)
+      static DecodeBase64(ee) {
+        return (0, ke.d)(ee)
       }
       static get errorsCount() {
-        return oB.b.errorsCount
+        return Ke.e.errorsCount
       }
-      static Log(BB) {
-        oB.b.Log(BB)
+      static Log(ee) {
+        Ke.e.Log(ee)
       }
-      static Warn(BB) {
-        oB.b.Warn(BB)
+      static Warn(ee) {
+        Ke.e.Warn(ee)
       }
-      static Error(BB) {
-        oB.b.Error(BB)
+      static Error(ee) {
+        Ke.e.Error(ee)
       }
       static get LogCache() {
-        return oB.b.LogCache
+        return Ke.e.LogCache
       }
       static ClearLogCache() {
-        oB.b.ClearLogCache()
+        Ke.e.ClearLogCache()
       }
-      static set LogLevels(BB) {
-        oB.b.LogLevels = BB
+      static set LogLevels(ee) {
+        Ke.e.LogLevels = ee
       }
-      static set PerformanceLogLevel(BB) {
-        (BB & YB.PerformanceUserMarkLogLevel) !== YB.PerformanceUserMarkLogLevel ? (BB & YB.PerformanceConsoleLogLevel) !== YB.PerformanceConsoleLogLevel ? (YB.StartPerformanceCounter = YB._StartPerformanceCounterDisabled, YB.EndPerformanceCounter = YB._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), YB.StartPerformanceCounter = YB._StartMarkNative, YB.EndPerformanceCounter = YB._EndMarkNative) : (YB.StartPerformanceCounter = YB._StartPerformanceConsole, YB.EndPerformanceCounter = YB._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), YB.StartPerformanceCounter = YB._StartMarkNative, YB.EndPerformanceCounter = YB._EndMarkNative) : (YB.StartPerformanceCounter = YB._StartUserMark, YB.EndPerformanceCounter = YB._EndUserMark)
+      static set PerformanceLogLevel(ee) {
+        (ee & ye.PerformanceUserMarkLogLevel) !== ye.PerformanceUserMarkLogLevel ? (ee & ye.PerformanceConsoleLogLevel) !== ye.PerformanceConsoleLogLevel ? (ye.StartPerformanceCounter = ye._StartPerformanceCounterDisabled, ye.EndPerformanceCounter = ye._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), ye.StartPerformanceCounter = ye._StartMarkNative, ye.EndPerformanceCounter = ye._EndMarkNative) : (ye.StartPerformanceCounter = ye._StartPerformanceConsole, ye.EndPerformanceCounter = ye._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), ye.StartPerformanceCounter = ye._StartMarkNative, ye.EndPerformanceCounter = ye._EndMarkNative) : (ye.StartPerformanceCounter = ye._StartUserMark, ye.EndPerformanceCounter = ye._EndUserMark)
       }
-      static _StartPerformanceCounterDisabled(BB, OB) {}
-      static _EndPerformanceCounterDisabled(BB, OB) {}
-      static _StartUserMark(BB) {
-        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!YB._Performance) {
-          if (!(0, QB.j)()) return;
-          YB._Performance = window.performance
+      static _StartPerformanceCounterDisabled(ee, ie) {}
+      static _EndPerformanceCounterDisabled(ee, ie) {}
+      static _StartUserMark(ee) {
+        let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!ye._Performance) {
+          if (!(0, Me.m)()) return;
+          ye._Performance = window.performance
         }
-        OB && YB._Performance.mark && YB._Performance.mark(BB + "-Begin")
+        ie && ye._Performance.mark && ye._Performance.mark(ee + "-Begin")
       }
-      static _EndUserMark(BB) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && YB._Performance.mark && (YB._Performance.mark(BB + "-End"), YB._Performance.measure(BB, BB + "-Begin", BB + "-End"))
+      static _EndUserMark(ee) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && ye._Performance.mark && (ye._Performance.mark(ee + "-End"), ye._Performance.measure(ee, ee + "-Begin", ee + "-End"))
       }
-      static _StartPerformanceConsole(BB) {
-        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        OB && (YB._StartUserMark(BB, OB), console.time && console.time(BB))
+      static _StartPerformanceConsole(ee) {
+        let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        ie && (ye._StartUserMark(ee, ie), console.time && console.time(ee))
       }
-      static _EndPerformanceConsole(BB) {
-        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        OB && (YB._EndUserMark(BB, OB), console.timeEnd(BB))
+      static _EndPerformanceConsole(ee) {
+        let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        ie && (ye._EndUserMark(ee, ie), console.timeEnd(ee))
       }
-      static _StartMarkNative(BB) {
+      static _StartMarkNative(ee) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (YB._NativePerformanceCounterHandles.has(BB)) YB.Warn(`Performance counter with name ${BB} is already started.`);
+          if (ye._NativePerformanceCounterHandles.has(ee)) ye.Warn(`Performance counter with name ${ee} is already started.`);
           else {
-            const OB = _native.startPerformanceCounter(BB);
-            YB._NativePerformanceCounterHandles.set(BB, OB)
+            const ie = _native.startPerformanceCounter(ee);
+            ye._NativePerformanceCounterHandles.set(ee, ie)
           }
       }
-      static _EndMarkNative(BB) {
+      static _EndMarkNative(ee) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const OB = YB._NativePerformanceCounterHandles.get(BB);
-          OB ? (_native.endPerformanceCounter(OB), YB._NativePerformanceCounterHandles.delete(BB)) : YB.Warn(`Performance counter with name ${BB} was not started.`)
+          const ie = ye._NativePerformanceCounterHandles.get(ee);
+          ie ? (_native.endPerformanceCounter(ie), ye._NativePerformanceCounterHandles.delete(ee)) : ye.Warn(`Performance counter with name ${ee} was not started.`)
         }
       }
       static get Now() {
-        return yB.e.Now
+        return Fe.e.Now
       }
-      static GetClassName(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GB = null;
-        if (!OB && BB.getClassName) GB = BB.getClassName();
+      static GetClassName(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          He = null;
+        if (!ie && ee.getClassName) He = ee.getClassName();
         else {
-          if (BB instanceof Object) {
-            GB = (OB ? BB : Object.getPrototypeOf(BB)).constructor.__bjsclassName__
+          if (ee instanceof Object) {
+            He = (ie ? ee : Object.getPrototypeOf(ee)).constructor.__bjsclassName__
           }
-          GB || (GB = typeof BB)
+          He || (He = typeof ee)
         }
-        return GB
+        return He
       }
-      static First(BB, OB) {
-        for (const GB of BB)
-          if (OB(GB)) return GB;
+      static First(ee, ie) {
+        for (const He of ee)
+          if (ie(He)) return He;
         return null
       }
-      static getFullClassName(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GB = null,
-          YB = null;
-        if (!OB && BB.getClassName) GB = BB.getClassName();
+      static getFullClassName(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          He = null,
+          ye = null;
+        if (!ie && ee.getClassName) He = ee.getClassName();
         else {
-          if (BB instanceof Object) {
-            const DB = OB ? BB : Object.getPrototypeOf(BB);
-            GB = DB.constructor.__bjsclassName__, YB = DB.constructor.__bjsmoduleName__
+          if (ee instanceof Object) {
+            const be = ie ? ee : Object.getPrototypeOf(ee);
+            He = be.constructor.__bjsclassName__, ye = be.constructor.__bjsmoduleName__
           }
-          GB || (GB = typeof BB)
+          He || (He = typeof ee)
         }
-        return GB ? (null != YB ? YB + "." : "") + GB : null
+        return He ? (null != ye ? ye + "." : "") + He : null
       }
-      static async DelayAsync(BB) {
-        await new Promise((OB => {
+      static async DelayAsync(ee) {
+        await new Promise((ie => {
           setTimeout((() => {
-            OB()
-          }), BB)
+            ie()
+          }), ee)
         }))
       }
       static IsSafari() {
-        return !!(0, QB.g)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        return !!(0, Me.k)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function RB(BB, OB) {
-      return GB => {
-        GB.__bjsclassName__ = BB, GB.__bjsmoduleName__ = null != OB ? OB : null
+    function ze(ee, ie) {
+      return He => {
+        He.__bjsclassName__ = ee, He.__bjsmoduleName__ = null != ie ? ie : null
       }
     }
-    YB = NB, NB.AssetBaseUrl = "", NB.UseCustomRequestHeaders = !1, NB.CustomRequestHeaders = MB.e.CustomRequestHeaders, NB.GetDOMTextContent = QB.b, NB._DefaultCdnUrl = "https://cdn.babylonjs.com", NB._CdnVersion = "9.28.0", NB._DefaultAssetsUrl = "https://assets.babylonjs.com/core", NB.LoadScript = "undefined" === typeof _native ? YB._LoadScriptWeb : YB._LoadScriptNative, NB.GetAbsoluteUrl = "object" === typeof document ? BB => {
-      const OB = document.createElement("a");
-      return OB.href = BB, OB.href
-    } : "function" === typeof URL && "object" === typeof location ? BB => new URL(BB, location.origin).href : () => {
+    ye = Xe, Xe.AssetBaseUrl = "", Xe.UseCustomRequestHeaders = !1, Xe.CustomRequestHeaders = oe.c.CustomRequestHeaders, Xe.GetDOMTextContent = Me.e, Xe._DefaultCdnUrl = "https://cdn.babylonjs.com", Xe._CdnVersion = "9.28.0", Xe._DefaultAssetsUrl = "https://assets.babylonjs.com/core", Xe.LoadScript = "undefined" === typeof _native ? ye._LoadScriptWeb : ye._LoadScriptNative, Xe.GetAbsoluteUrl = "object" === typeof document ? ee => {
+      const ie = document.createElement("a");
+      return ie.href = ee, ie.href
+    } : "function" === typeof URL && "object" === typeof location ? ee => new URL(ee, location.origin).href : () => {
       throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, NB.NoneLogLevel = oB.b.NoneLogLevel, NB.MessageLogLevel = oB.b.MessageLogLevel, NB.WarningLogLevel = oB.b.WarningLogLevel, NB.ErrorLogLevel = oB.b.ErrorLogLevel, NB.AllLogLevel = oB.b.AllLogLevel, NB.IsWindowObjectExist = QB.j, NB.PerformanceNoneLogLevel = 0, NB.PerformanceUserMarkLogLevel = 1, NB.PerformanceConsoleLogLevel = 2, NB._NativePerformanceCounterHandles = new Map, NB.StartPerformanceCounter = YB._StartPerformanceCounterDisabled, NB.EndPerformanceCounter = YB._EndPerformanceCounterDisabled;
-    class WB {
-      constructor(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = BB, this.index = YB - 1, this._done = !1, this._fn = OB, this._successCallback = GB
+    }, Xe.NoneLogLevel = Ke.e.NoneLogLevel, Xe.MessageLogLevel = Ke.e.MessageLogLevel, Xe.WarningLogLevel = Ke.e.WarningLogLevel, Xe.ErrorLogLevel = Ke.e.ErrorLogLevel, Xe.AllLogLevel = Ke.e.AllLogLevel, Xe.IsWindowObjectExist = Me.m, Xe.PerformanceNoneLogLevel = 0, Xe.PerformanceUserMarkLogLevel = 1, Xe.PerformanceConsoleLogLevel = 2, Xe._NativePerformanceCounterHandles = new Map, Xe.StartPerformanceCounter = ye._StartPerformanceCounterDisabled, Xe.EndPerformanceCounter = ye._EndPerformanceCounterDisabled;
+    class Be {
+      constructor(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = ee, this.index = ye - 1, this._done = !1, this._fn = ie, this._successCallback = He
       }
       executeNext() {
         this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
@@ -585,33 +585,33 @@ export const modules = {
       breakLoop() {
         this._done = !0, this._successCallback()
       }
-      static Run(BB, OB, GB) {
-        const YB = new WB(BB, OB, GB, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return YB.executeNext(), YB
+      static Run(ee, ie, He) {
+        const ye = new Be(ee, ie, He, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return ye.executeNext(), ye
       }
-      static SyncAsyncForLoop(BB, OB, GB, YB, DB) {
-        let QB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return WB.Run(Math.ceil(BB / OB), (YB => {
-          DB && DB() ? YB.breakLoop() : setTimeout((() => {
-            for (let QB = 0; QB < OB; ++QB) {
-              const oB = YB.index * OB + QB;
-              if (oB >= BB) break;
-              if (GB(oB), DB && DB()) {
-                YB.breakLoop();
+      static SyncAsyncForLoop(ee, ie, He, ye, be) {
+        let Me = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return Be.Run(Math.ceil(ee / ie), (ye => {
+          be && be() ? ye.breakLoop() : setTimeout((() => {
+            for (let Me = 0; Me < ie; ++Me) {
+              const Ke = ye.index * ie + Me;
+              if (Ke >= ee) break;
+              if (He(Ke), be && be()) {
+                ye.breakLoop();
                 break
               }
             }
-            YB.executeNext()
-          }), QB)
-        }), YB)
+            ye.executeNext()
+          }), Me)
+        }), ye)
       }
     }
-    let AB = !1;
+    let Ee = !1;
 
-    function VB() {
-      AB || (AB = !0, NB.Mix = ZB.k, NB.IsExponentOfTwo = ZB.h, PB.b.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    function ge() {
+      Ee || (Ee = !0, Xe.Mix = pe.m, Xe.IsExponentOfTwo = pe.l, Re.b.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

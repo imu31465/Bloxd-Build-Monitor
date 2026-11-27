@@ -1,23 +1,23 @@
 export const id = 24;
 export const ids = [24];
 export const modules = {
-  40232: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => DB
+  40340: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => be
     });
-    var YB = GB(25);
-    const DB = function(BB, OB, GB) {
-      let DB;
+    var ye = He(27);
+    const be = function(ee, ie, He) {
+      let be;
       return {
-        onCreate: BB => {
-          DB = BB
+        onCreate: ee => {
+          be = ee
         },
-        onPlayerClick: (BB, OB, GB, QB, oB, jB) => {
-          OB || "Workbench" !== DB.getMetaInfo(jB).rootName || YB.o.tM("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (ee, ie, He, Me, Ke, Ue) => {
+          ie || "Workbench" !== be.getMetaInfo(Ue).rootName || ye.h.yR("toggleMenu", "inventory|Workbench")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

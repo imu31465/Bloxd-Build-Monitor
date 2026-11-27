@@ -1,15 +1,15 @@
 export const id = 268;
 export const ids = [268];
 export const modules = {
-  38488: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => PB,
-      f: () => oB
+  38639: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Re,
+      g: () => Ke
     });
-    var YB = GB(9955),
-      DB = GB(9927),
-      QB = GB(353);
-    const oB = {
+    var ye = He(9985),
+      be = He(9961),
+      Me = He(347);
+    const Ke = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...jB("White"),
-      ...jB("Orange"),
-      ...jB("Magenta"),
-      ...jB("Light Blue"),
-      ...jB("Yellow"),
-      ...jB("Lime"),
-      ...jB("Pink"),
-      ...jB("Gray"),
-      ...jB("Light Gray"),
-      ...jB("Cyan"),
-      ...jB("Purple"),
-      ...jB("Blue"),
-      ...jB("Brown"),
-      ...jB("Green"),
-      ...jB("Red"),
-      ...jB("Black"),
-      ...jB("Draugr"),
-      ...jB("Skull"),
-      ...jB("Rainbow"),
-      ...yB("Sheep"),
-      ...yB("Cow"),
-      ...yB("Pig"),
-      ...yB("Horse"),
-      ...yB("Camel"),
-      ...yB("Wolf"),
-      ...yB("Deer"),
-      ...yB("Wildcat"),
-      ...JB("Radar"),
-      ...JB("Inactive Radar"),
-      ...JB("Active Radar"),
-      ...MB("Magenta"),
-      ...MB("Light Gray"),
-      ...MB("Red"),
-      ...MB("White"),
-      ...MB("Orange"),
-      ...MB("Light Blue"),
-      ...MB("Yellow"),
-      ...MB("Lime"),
-      ...MB("Pink"),
-      ...MB("Gray"),
-      ...MB("Cyan"),
-      ...MB("Purple"),
-      ...MB("Blue"),
-      ...MB("Brown"),
-      ...MB("Green"),
-      ...MB("Black"),
+      ...Ue("White"),
+      ...Ue("Orange"),
+      ...Ue("Magenta"),
+      ...Ue("Light Blue"),
+      ...Ue("Yellow"),
+      ...Ue("Lime"),
+      ...Ue("Pink"),
+      ...Ue("Gray"),
+      ...Ue("Light Gray"),
+      ...Ue("Cyan"),
+      ...Ue("Purple"),
+      ...Ue("Blue"),
+      ...Ue("Brown"),
+      ...Ue("Green"),
+      ...Ue("Red"),
+      ...Ue("Black"),
+      ...Ue("Draugr"),
+      ...Ue("Skull"),
+      ...Ue("Rainbow"),
+      ...Fe("Sheep"),
+      ...Fe("Cow"),
+      ...Fe("Pig"),
+      ...Fe("Horse"),
+      ...Fe("Camel"),
+      ...Fe("Wolf"),
+      ...Fe("Deer"),
+      ...Fe("Wildcat"),
+      ...Je("Radar"),
+      ...Je("Inactive Radar"),
+      ...Je("Active Radar"),
+      ...oe("Magenta"),
+      ...oe("Light Gray"),
+      ...oe("Red"),
+      ...oe("White"),
+      ...oe("Orange"),
+      ...oe("Light Blue"),
+      ...oe("Yellow"),
+      ...oe("Lime"),
+      ...oe("Pink"),
+      ...oe("Gray"),
+      ...oe("Cyan"),
+      ...oe("Purple"),
+      ...oe("Blue"),
+      ...oe("Brown"),
+      ...oe("Green"),
+      ...oe("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3107,11 +3107,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const BB = "Lunite Auto Miner";
+        const ee = "Lunite Auto Miner";
         return {
-          [BB]: {
+          [ee]: {
             positions: [{
-              block: BB,
+              block: ee,
               x: 0,
               y: 0,
               z: 0
@@ -3137,9 +3137,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${BB}|meta|rot2`]: {
+          [`${ee}|meta|rot2`]: {
             positions: [{
-              block: `${BB}|meta|rot2`,
+              block: `${ee}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3165,9 +3165,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${BB}|meta|rot3`]: {
+          [`${ee}|meta|rot3`]: {
             positions: [{
-              block: `${BB}|meta|rot3`,
+              block: `${ee}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3193,9 +3193,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${BB}|meta|rot4`]: {
+          [`${ee}|meta|rot4`]: {
             positions: [{
-              block: `${BB}|meta|rot4`,
+              block: `${ee}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3224,74 +3224,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const BB = {
-            1: BB => ({
+        const ee = {
+            1: ee => ({
               x: 0,
-              z: BB
+              z: ee
             }),
-            2: BB => ({
-              x: BB,
+            2: ee => ({
+              x: ee,
               z: 0
             }),
-            3: BB => ({
+            3: ee => ({
               x: 0,
-              z: -BB
+              z: -ee
             }),
-            4: BB => ({
-              x: -BB,
+            4: ee => ({
+              x: -ee,
               z: 0
             })
           },
-          OB = {};
-        for (let GB = 1; GB <= 4; GB++) {
-          const DB = 1 === GB ? "" : `|meta|rot${GB}`;
-          OB[`${YB.b[0].block}${DB}`] = {
-            positions: YB.b.map((OB => {
+          ie = {};
+        for (let He = 1; He <= 4; He++) {
+          const be = 1 === He ? "" : `|meta|rot${He}`;
+          ie[`${ye.b[0].block}${be}`] = {
+            positions: ye.b.map((ie => {
               let {
-                block: YB,
-                y: QB,
-                z: oB
-              } = OB;
+                block: ye,
+                y: Me,
+                z: Ke
+              } = ie;
               return {
-                block: `${YB}${DB}`,
-                y: QB,
-                ...BB[GB](oB)
+                block: `${ye}${be}`,
+                y: Me,
+                ...ee[He](Ke)
               }
             }))
           }
         }
-        return OB
+        return ie
       }(),
       ... function() {
-        const BB = {};
-        for (let OB = 1; OB <= YB.k; OB++) {
-          const GB = (0, YB.ic)(OB),
-            DB = YB.l[OB - 1],
-            QB = [{
-              block: GB,
+        const ee = {};
+        for (let ie = 1; ie <= ye.l; ie++) {
+          const He = (0, ye.bc)(ie),
+            be = ye.o[ie - 1],
+            Me = [{
+              block: He,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const BB of YB.f)
-            for (let OB = 1; OB <= DB; OB++) {
-              if ("southwest" === BB && 1 === OB) continue;
+          for (const ee of ye.h)
+            for (let ie = 1; ie <= be; ie++) {
+              if ("southwest" === ee && 1 === ie) continue;
               const {
-                x: GB,
-                z: DB
-              } = YB.j[BB];
-              QB.push({
-                block: (0, YB.fc)(BB, OB),
-                x: GB,
-                y: OB - 1,
-                z: DB
+                x: He,
+                z: be
+              } = ye.k[ee];
+              Me.push({
+                block: (0, ye._b)(ee, ie),
+                x: He,
+                y: ie - 1,
+                z: be
               })
             }
-          BB[GB] = {
-            positions: QB
+          ee[He] = {
+            positions: Me
           }
         }
-        return BB
+        return ee
       }(),
       "Solar Panel": {
         positions: [{
@@ -3405,159 +3405,159 @@ export const modules = {
       }
     };
 
-    function jB(BB) {
+    function Ue(ee) {
       return {
-        [`${BB} Banner`]: {
+        [`${ee} Banner`]: {
           positions: [{
-            block: `${BB} Banner`,
+            block: `${ee} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot1|bot`,
+            block: `_${ee} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot2|bot`]: {
+        [`${ee} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot2|bot`,
+            block: `${ee} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot2|bot`,
+            block: `_${ee} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot3|bot`]: {
+        [`${ee} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot3|bot`,
+            block: `${ee} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot3|bot`,
+            block: `_${ee} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot4|bot`]: {
+        [`${ee} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot4|bot`,
+            block: `${ee} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot4|bot`,
+            block: `_${ee} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot1|side`]: {
+        [`${ee} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot1|side`,
+            block: `${ee} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot1|side`,
+            block: `_${ee} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot2|side`]: {
+        [`${ee} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot2|side`,
+            block: `${ee} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot2|side`,
+            block: `_${ee} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot3|side`]: {
+        [`${ee} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot3|side`,
+            block: `${ee} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot3|side`,
+            block: `_${ee} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot4|side`]: {
+        [`${ee} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot4|side`,
+            block: `${ee} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot4|side`,
+            block: `_${ee} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot1|top`]: {
+        [`${ee} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot1|top`,
+            block: `${ee} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag`,
+            block: `_${ee} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot2|top`]: {
+        [`${ee} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot2|top`,
+            block: `${ee} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot2|top`,
+            block: `_${ee} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot3|top`]: {
+        [`${ee} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot3|top`,
+            block: `${ee} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot3|top`,
+            block: `_${ee} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${BB} Banner|meta|rot4|top`]: {
+        [`${ee} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${BB} Banner|meta|rot4|top`,
+            block: `${ee} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${BB} Banner Flag|meta|rot4|top`,
+            block: `_${ee} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function yB(BB) {
-      const OB = (0, QB.ec)(BB);
+    function Fe(ee) {
+      const ie = (0, Me._b)(ee);
       return {
-        [OB]: {
+        [ie]: {
           positions: [{
-            block: OB,
+            block: ie,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${OB} Top Left`,
+            block: `_${ie} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${OB} Top Right`,
+            block: `_${ie} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${OB} Bottom Right`,
+            block: `_${ie} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${OB}|meta|rot2`]: {
+        [`${ie}|meta|rot2`]: {
           positions: [{
-            block: `${OB}|meta|rot2`,
+            block: `${ie}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${OB} Top Left|meta|rot2`,
+            block: `_${ie} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${OB} Top Right|meta|rot2`,
+            block: `_${ie} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${OB} Bottom Right|meta|rot2`,
+            block: `_${ie} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${OB}|meta|rot3`]: {
+        [`${ie}|meta|rot3`]: {
           positions: [{
-            block: `${OB}|meta|rot3`,
+            block: `${ie}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${OB} Top Left|meta|rot3`,
+            block: `_${ie} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${OB} Top Right|meta|rot3`,
+            block: `_${ie} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${OB} Bottom Right|meta|rot3`,
+            block: `_${ie} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${OB}|meta|rot4`]: {
+        [`${ie}|meta|rot4`]: {
           positions: [{
-            block: `${OB}|meta|rot4`,
+            block: `${ie}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${OB} Top Left|meta|rot4`,
+            block: `_${ie} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${OB} Top Right|meta|rot4`,
+            block: `_${ie} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${OB} Bottom Right|meta|rot4`,
+            block: `_${ie} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,77 +3664,77 @@ export const modules = {
       }
     }
 
-    function JB(BB) {
-      const OB = `_${BB} Back`,
-        GB = `_${BB} Dish`;
+    function Je(ee) {
+      const ie = `_${ee} Back`,
+        He = `_${ee} Dish`;
       return {
-        [BB]: {
+        [ee]: {
           positions: [{
-            block: BB,
+            block: ee,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: OB,
+            block: ie,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: GB,
+            block: He,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${BB}|meta|rot2`]: {
+        [`${ee}|meta|rot2`]: {
           positions: [{
-            block: `${BB}|meta|rot2`,
+            block: `${ee}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${OB}|meta|rot2`,
+            block: `${ie}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${GB}|meta|rot2`,
+            block: `${He}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${BB}|meta|rot3`]: {
+        [`${ee}|meta|rot3`]: {
           positions: [{
-            block: `${BB}|meta|rot3`,
+            block: `${ee}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${OB}|meta|rot3`,
+            block: `${ie}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${GB}|meta|rot3`,
+            block: `${He}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${BB}|meta|rot4`]: {
+        [`${ee}|meta|rot4`]: {
           positions: [{
-            block: `${BB}|meta|rot4`,
+            block: `${ee}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${OB}|meta|rot4`,
+            block: `${ie}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${GB}|meta|rot4`,
+            block: `${He}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,22 +3743,22 @@ export const modules = {
       }
     }
 
-    function MB(BB) {
-      const OB = `Small ${BB} Pod`;
+    function oe(ee) {
+      const ie = `Small ${ee} Pod`;
       return {
-        [OB]: {
+        [ie]: {
           positions: [{
-            block: OB,
+            block: ie,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${BB} Pod Mid`,
+            block: `_Small ${ee} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${BB} Pod Top`,
+            block: `_Small ${ee} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3766,286 +3766,286 @@ export const modules = {
         }
       }
     }
-    for (const zB in oB) {
-      for (const BB of oB[zB].positions)
-        if (BB.id = DB.h[BB.block].id, zB === BB.block && (0 !== BB.x || 0 !== BB.y || 0 !== BB.z)) throw new Error(`Multiblock "${zB}" has main block "${BB.block}" at non-origin position (${BB.x}, ${BB.y}, ${BB.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      oB[DB.h[zB].id] = oB[zB]
+    for (const ke in Ke) {
+      for (const ee of Ke[ke].positions)
+        if (ee.id = be.i[ee.block].id, ke === ee.block && (0 !== ee.x || 0 !== ee.y || 0 !== ee.z)) throw new Error(`Multiblock "${ke}" has main block "${ee.block}" at non-origin position (${ee.x}, ${ee.y}, ${ee.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      Ke[be.i[ke].id] = Ke[ke]
     }
-    const PB = {};
-    for (const zB in oB)
+    const Re = {};
+    for (const ke in Ke)
       for (const {
-          block: BB,
-          x: OB,
-          y: GB,
-          z: YB
+          block: ee,
+          x: ie,
+          y: He,
+          z: ye
         }
-        of oB[zB].positions) {
-        const QB = {
-          mainMultiblock: zB,
-          compX: OB,
-          compY: GB,
-          compZ: YB
+        of Ke[ke].positions) {
+        const Me = {
+          mainMultiblock: ke,
+          compX: ie,
+          compY: He,
+          compZ: ye
         };
-        PB[BB] = QB, PB[DB.h[BB].id] = QB
+        Re[ee] = Me, Re[be.i[ee].id] = Me
       }
   },
-  38888: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => yB,
-      f: () => jB
+  39031: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Fe,
+      d: () => Ue
     });
-    var YB = GB(9927),
-      DB = GB(9983),
-      QB = GB(9985);
-    const oB = DB.q.map((BB => {
+    var ye = He(9961),
+      be = He(10012),
+      Me = He(10019);
+    const Ke = be.y.map((ee => {
       let {
-        dx: OB,
-        dz: GB
-      } = BB;
-      return [OB, 0, GB]
+        dx: ie,
+        dz: He
+      } = ee;
+      return [ie, 0, He]
     }));
 
-    function jB(BB) {
-      const OB = YB.h[BB];
-      return !!OB && BB !== YB.b && !OB.model && !OB.fl && !1 !== OB.solid && !OB.MZ
+    function Ue(ee) {
+      const ie = ye.i[ee];
+      return !!ie && ee !== ye.b && !ie.model && !ie.Lq && !1 !== ie.solid && !ie.Bp
     }
-    class yB {
-      constructor(BB) {
-        this.model = BB, this.reshapeOffsets = [...oB, [0, -1, 0]]
+    class Fe {
+      constructor(ee) {
+        this.model = ee, this.reshapeOffsets = [...Ke, [0, -1, 0]]
       }
-      handles(BB) {
-        const OB = YB.h[BB];
-        return (null === OB || void 0 === OB ? void 0 : OB.model) === this.model && void 0 !== OB.attachedTop
+      handles(ee) {
+        const ie = ye.i[ee];
+        return (null === ie || void 0 === ie ? void 0 : ie.model) === this.model && void 0 !== ie.attachedTop
       }
-      affects(BB) {
-        return this.handles(BB) || jB(BB) || (0, QB.x)(YB.h[BB])
+      affects(ee) {
+        return this.handles(ee) || Ue(ee) || (0, Me.z)(ye.i[ee])
       }
-      shape(BB, OB, GB, oB, yB) {
-        let JB = this.handles(BB(OB, GB + 1, oB)) ? DB.g : 0;
-        return DB.q.forEach(((yB, MB) => {
+      shape(ee, ie, He, Ke, Fe) {
+        let Je = this.handles(ee(ie, He + 1, Ke)) ? be.m : 0;
+        return be.y.forEach(((Fe, oe) => {
           let {
-            dx: PB,
-            dz: zB
-          } = yB;
-          const lB = BB(OB + PB, GB, oB + zB);
-          (this.handles(lB) || jB(lB) || function(BB, OB) {
-            const GB = YB.h[BB];
-            return (0, QB.x)(GB) && (0, QB.s)(GB.meta.rot) === (0 !== DB.q[OB].dx)
-          }(lB, MB)) && (JB |= 1 << MB)
-        })), (0, YB.j)((0, DB.h)(YB.h[yB].meta.rootName, JB))
+            dx: Re,
+            dz: ke
+          } = Fe;
+          const qe = ee(ie + Re, He, Ke + ke);
+          (this.handles(qe) || Ue(qe) || function(ee, ie) {
+            const He = ye.i[ee];
+            return (0, Me.z)(He) && (0, Me.r)(He.meta.rot) === (0 !== be.y[ie].dx)
+          }(qe, oe)) && (Je |= 1 << oe)
+        })), (0, ye.j)((0, be.q)(ye.i[Fe].meta.rootName, Je))
       }
     }
   },
-  38675: (BB, OB, GB) => {
-    function YB(BB, OB) {
-      var GB;
-      OB || (OB = {});
-      const YB = null !== (GB = OB.customAttributes) && void 0 !== GB ? GB : {};
-      var DB, QB, oB;
-      "Gun" === (null === BB || void 0 === BB ? void 0 : BB.type) && (YB.shotsLeft = null !== (DB = null !== (QB = YB.shotsLeft) && void 0 !== QB ? QB : null === (oB = YB.gunStats) || void 0 === oB ? void 0 : oB.clipSize) && void 0 !== DB ? DB : BB.clipSize);
-      if (YB.enchantmentTier && (YB.enchantmentTier = YB.enchantmentTier.toString()), YB.enchantments)
-        for (const PB in YB.enchantments) {
-          const BB = YB.enchantments[PB];
-          if ("number" !== typeof BB) {
-            const OB = parseInt(BB);
-            isNaN(OB) || OB < 0 ? YB.enchantments[PB] = void 0 : YB.enchantments[PB] = OB > 1e9 ? 1e9 : OB
+  38835: (ee, ie, He) => {
+    function ye(ee, ie) {
+      var He;
+      ie || (ie = {});
+      const ye = null !== (He = ie.customAttributes) && void 0 !== He ? He : {};
+      var be, Me, Ke;
+      "Gun" === (null === ee || void 0 === ee ? void 0 : ee.type) && (ye.shotsLeft = null !== (be = null !== (Me = ye.shotsLeft) && void 0 !== Me ? Me : null === (Ke = ye.gunStats) || void 0 === Ke ? void 0 : Ke.clipSize) && void 0 !== be ? be : ee.clipSize);
+      if (ye.enchantmentTier && (ye.enchantmentTier = ye.enchantmentTier.toString()), ye.enchantments)
+        for (const Re in ye.enchantments) {
+          const ee = ye.enchantments[Re];
+          if ("number" !== typeof ee) {
+            const ie = parseInt(ee);
+            isNaN(ie) || ie < 0 ? ye.enchantments[Re] = void 0 : ye.enchantments[Re] = ie > 1e9 ? 1e9 : ie
           }
         }
-      if (YB.enchantmentData)
-        for (const PB in YB.enchantmentData) {
-          const BB = YB.enchantmentData[PB];
-          if (!BB) continue;
-          if ("object" !== typeof BB) {
-            YB.enchantmentData[PB] = void 0;
+      if (ye.enchantmentData)
+        for (const Re in ye.enchantmentData) {
+          const ee = ye.enchantmentData[Re];
+          if (!ee) continue;
+          if ("object" !== typeof ee) {
+            ye.enchantmentData[Re] = void 0;
             continue
           }
-          const OB = BB.icon,
-            GB = BB.description;
-          var jB, yB, JB, MB;
-          if ("string" !== typeof OB) YB.enchantmentData[PB].icon = null !== (jB = null === OB || void 0 === OB || null === (yB = OB.toString) || void 0 === yB ? void 0 : yB.call(OB)) && void 0 !== jB ? jB : void 0;
-          if ("string" !== typeof GB) YB.enchantmentData[PB].description = null !== (JB = null === GB || void 0 === GB || null === (MB = GB.toString) || void 0 === MB ? void 0 : MB.call(GB)) && void 0 !== JB ? JB : void 0
+          const ie = ee.icon,
+            He = ee.description;
+          var Ue, Fe, Je, oe;
+          if ("string" !== typeof ie) ye.enchantmentData[Re].icon = null !== (Ue = null === ie || void 0 === ie || null === (Fe = ie.toString) || void 0 === Fe ? void 0 : Fe.call(ie)) && void 0 !== Ue ? Ue : void 0;
+          if ("string" !== typeof He) ye.enchantmentData[Re].description = null !== (Je = null === He || void 0 === He || null === (oe = He.toString) || void 0 === oe ? void 0 : oe.call(He)) && void 0 !== Je ? Je : void 0
         }
-      return OB.customAttributes = YB, OB
+      return ie.customAttributes = ye, ie
     }
-    GB.d(OB, {
-      b: () => YB
+    He.d(ie, {
+      d: () => ye
     })
   },
-  38884: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => nB,
-      h: () => NB,
-      k: () => yB,
-      m: () => PB,
-      p: () => UB
+  39023: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => de,
+      h: () => Xe,
+      i: () => Fe,
+      l: () => Re,
+      p: () => We
     });
-    var YB = GB(9927),
-      DB = GB(9965),
-      QB = GB(38888);
-    const oB = (0, YB.j)("Noticeboard"),
-      jB = (0, YB.j)("Standing Noticeboard|meta|rot4|lrud");
+    var ye = He(9961),
+      be = He(1e4),
+      Me = He(39031);
+    const Ke = (0, ye.j)("Noticeboard"),
+      Ue = (0, ye.j)("Standing Noticeboard|meta|rot4|lrud");
 
-    function yB(BB) {
-      return oB <= BB && BB <= jB
+    function Fe(ee) {
+      return Ke <= ee && ee <= Ue
     }
-    const JB = new Uint8Array(jB - oB + 1);
-    for (let fB = oB; fB <= jB; fB++) JB[fB - oB] = (0, DB.u)(YB.h[fB].meta.metaStr);
-    const MB = 64,
-      PB = MB * MB,
-      [zB, lB, pB, qB] = [0, 1, 2, 3];
+    const Je = new Uint8Array(Ue - Ke + 1);
+    for (let te = Ke; te <= Ue; te++) Je[te - Ke] = (0, be.o)(ye.i[te].meta.metaStr);
+    const oe = 64,
+      Re = oe * oe,
+      [ke, qe, fe, Te] = [0, 1, 2, 3];
 
-    function ZB(BB) {
-      var OB, GB;
-      return "string" === typeof(null === BB || void 0 === BB || null === (OB = BB.persisted) || void 0 === OB || null === (GB = OB.shared) || void 0 === GB ? void 0 : GB.text)
-    }
-
-    function NB(BB) {
-      return ZB(BB) && "" !== BB.persisted.shared.text.trim()
+    function pe(ee) {
+      var ie, He;
+      return "string" === typeof(null === ee || void 0 === ee || null === (ie = ee.persisted) || void 0 === ie || null === (He = ie.shared) || void 0 === He ? void 0 : He.text)
     }
 
-    function RB(BB, OB) {
-      let [GB, , YB] = OB;
-      const [QB, , oB] = DB.z[BB][lB];
-      return GB * QB + YB * oB
+    function Xe(ee) {
+      return pe(ee) && "" !== ee.persisted.shared.text.trim()
     }
 
-    function WB(BB, OB, GB) {
-      return GB[1] - OB[1] || RB(BB, OB) - RB(BB, GB)
+    function ze(ee, ie) {
+      let [He, , ye] = ie;
+      const [Me, , Ke] = be.s[ee][qe];
+      return He * Me + ye * Ke
     }
 
-    function AB(BB, OB, GB, QB, jB) {
-      var yB;
-      let MB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : BB(OB[0], OB[1], OB[2]);
-      if (!(JB[MB - oB] & 1 << GB)) return null;
-      const [PB, zB, lB] = DB.z[jB][GB], pB = [OB[0] + PB, OB[1] + zB, OB[2] + lB], qB = BB(pB[0], pB[1], pB[2]), ZB = null === (yB = YB.h[qB]) || void 0 === yB ? void 0 : yB.meta;
-      return (null === ZB || void 0 === ZB ? void 0 : ZB.rootId) === QB && ZB.rot === jB && JB[qB - oB] & 1 << (1 ^ GB) ? pB : null
+    function Be(ee, ie, He) {
+      return He[1] - ie[1] || ze(ee, ie) - ze(ee, He)
     }
 
-    function VB(BB, OB, GB, QB) {
-      const oB = BB(OB, GB, QB);
-      if (!yB(oB)) return null;
+    function Ee(ee, ie, He, Me, Ue) {
+      var Fe;
+      let oe = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ee(ie[0], ie[1], ie[2]);
+      if (!(Je[oe - Ke] & 1 << He)) return null;
+      const [Re, ke, qe] = be.s[Ue][He], fe = [ie[0] + Re, ie[1] + ke, ie[2] + qe], Te = ee(fe[0], fe[1], fe[2]), pe = null === (Fe = ye.i[Te]) || void 0 === Fe ? void 0 : Fe.meta;
+      return (null === pe || void 0 === pe ? void 0 : pe.rootId) === Me && pe.rot === Ue && Je[Te - Ke] & 1 << (1 ^ He) ? fe : null
+    }
+
+    function ge(ee, ie, He, Me) {
+      const Ke = ee(ie, He, Me);
+      if (!Fe(Ke)) return null;
       const {
-        rootId: jB,
-        rot: JB
-      } = YB.h[oB].meta, PB = (OB, GB) => {
-        let YB = OB,
-          DB = 1;
-        for (let QB = AB(BB, YB, GB, jB, JB); QB && DB < MB; QB = AB(BB, YB, GB, jB, JB)) YB = QB, DB++;
+        rootId: Ue,
+        rot: Je
+      } = ye.i[Ke].meta, Re = (ie, He) => {
+        let ye = ie,
+          be = 1;
+        for (let Me = Ee(ee, ye, He, Ue, Je); Me && be < oe; Me = Ee(ee, ye, He, Ue, Je)) ye = Me, be++;
         return {
-          end: YB,
-          cells: DB
+          end: ye,
+          cells: be
         }
-      }, ZB = PB(PB([OB, GB, QB], zB).end, pB).end, NB = PB(ZB, lB).cells, [RB, , WB] = DB.z[JB][lB];
-      let VB = 1;
-      BB: for (; VB < MB; VB++)
-        for (let OB = 0; OB < NB; OB++)
-          if (!AB(BB, [ZB[0] + RB * OB, ZB[1] - VB + 1, ZB[2] + WB * OB], qB, jB, JB)) break BB;
+      }, pe = Re(Re([ie, He, Me], ke).end, fe).end, Xe = Re(pe, qe).cells, [ze, , Be] = be.s[Je][qe];
+      let ge = 1;
+      ee: for (; ge < oe; ge++)
+        for (let ie = 0; ie < Xe; ie++)
+          if (!Ee(ee, [pe[0] + ze * ie, pe[1] - ge + 1, pe[2] + Be * ie], Te, Ue, Je)) break ee;
       return {
-        anchor: ZB,
-        rootId: jB,
-        rot: JB,
-        width: NB,
-        height: VB
+        anchor: pe,
+        rootId: Ue,
+        rot: Je,
+        width: Xe,
+        height: ge
       }
     }
 
-    function SB(BB, OB) {
-      for (const GB of function(BB) {
+    function Oe(ee, ie) {
+      for (const He of function(ee) {
           let {
-            anchor: OB,
-            rot: GB,
-            width: YB,
-            height: QB
-          } = BB;
-          const [oB, , jB] = DB.z[GB][lB], yB = [];
-          for (let DB = 0; DB < QB; DB++)
-            for (let BB = 0; BB < YB; BB++) yB.push([OB[0] + oB * BB, OB[1] - DB, OB[2] + jB * BB]);
-          return yB
-        }(BB))
-        if (ZB(OB(GB[0], GB[1], GB[2]))) return GB;
+            anchor: ie,
+            rot: He,
+            width: ye,
+            height: Me
+          } = ee;
+          const [Ke, , Ue] = be.s[He][qe], Fe = [];
+          for (let be = 0; be < Me; be++)
+            for (let ee = 0; ee < ye; ee++) Fe.push([ie[0] + Ke * ee, ie[1] - be, ie[2] + Ue * ee]);
+          return Fe
+        }(ee))
+        if (pe(ie(He[0], He[1], He[2]))) return He;
       return null
     }
 
-    function nB(BB, OB, GB, DB, QB) {
-      const oB = BB(GB, DB, QB);
-      if (!yB(oB)) return null;
+    function de(ee, ie, He, be, Me) {
+      const Ke = ee(He, be, Me);
+      if (!Fe(Ke)) return null;
       const {
-        rootId: jB,
-        rot: JB
-      } = YB.h[oB].meta, MB = [
-        [GB, DB, QB]
-      ], zB = new Set([MB[0].join()]);
-      let lB = MB[0],
-        pB = null;
-      for (let YB = 0; YB < MB.length; YB++) {
-        const GB = MB[YB];
-        if (WB(JB, GB, lB) < 0 && (lB = GB), ZB(OB(GB[0], GB[1], GB[2]))) {
-          const OB = VB(BB, GB[0], GB[1], GB[2]);
-          (!pB || WB(JB, OB.anchor, pB.anchor) < 0) && (pB = OB)
+        rootId: Ue,
+        rot: Je
+      } = ye.i[Ke].meta, oe = [
+        [He, be, Me]
+      ], ke = new Set([oe[0].join()]);
+      let qe = oe[0],
+        fe = null;
+      for (let ye = 0; ye < oe.length; ye++) {
+        const He = oe[ye];
+        if (Be(Je, He, qe) < 0 && (qe = He), pe(ie(He[0], He[1], He[2]))) {
+          const ie = ge(ee, He[0], He[1], He[2]);
+          (!fe || Be(Je, ie.anchor, fe.anchor) < 0) && (fe = ie)
         }
-        for (let OB = 0; OB < 4 && MB.length < PB; OB++) {
-          const YB = AB(BB, GB, OB, jB, JB);
-          YB && !zB.has(YB.join()) && (zB.add(YB.join()), MB.push(YB))
+        for (let ie = 0; ie < 4 && oe.length < Re; ie++) {
+          const ye = Ee(ee, He, ie, Ue, Je);
+          ye && !ke.has(ye.join()) && (ke.add(ye.join()), oe.push(ye))
         }
       }
-      return pB ??= VB(BB, lB[0], lB[1], lB[2]), {
-        cells: MB,
-        topLeft: lB,
-        rect: pB,
-        textCell: SB(pB, OB)
+      return fe ??= ge(ee, qe[0], qe[1], qe[2]), {
+        cells: oe,
+        topLeft: qe,
+        rect: fe,
+        textCell: Oe(fe, ie)
       }
     }
 
-    function UB(BB, OB, GB, oB, jB) {
-      if (null !== GB && yB(GB)) {
+    function We(ee, ie, He, Ke, Ue) {
+      if (null !== He && Fe(He)) {
         const {
-          rootName: BB,
-          rot: OB
-        } = YB.h[GB].meta;
-        if (DB.z[OB].some((BB => {
-            let [OB, GB, YB] = BB;
-            return OB === oB[0] && GB === oB[1] && YB === oB[2]
+          rootName: ee,
+          rot: ie
+        } = ye.i[He].meta;
+        if (be.s[ie].some((ee => {
+            let [ie, He, ye] = ee;
+            return ie === Ke[0] && He === Ke[1] && ye === Ke[2]
           }))) return {
-          root: BB,
-          rot: OB
+          root: ee,
+          rot: ie
         }
       }
-      const [JB, MB] = DB.p[jB], PB = BB(OB[0] - JB, OB[1], OB[2] - MB);
+      const [Je, oe] = be.j[Ue], Re = ee(ie[0] - Je, ie[1], ie[2] - oe);
       return {
-        root: (0, QB.f)(PB) ? DB.F : DB.D,
-        rot: jB
+        root: (0, Me.d)(Re) ? be.z : be.w,
+        rot: Ue
       }
     }
   },
-  38879: (BB, OB, GB) => {
-    GB.d(OB, {
-      C: () => zB,
-      d: () => NB,
-      h: () => AB,
-      k: () => nB,
-      m: () => UB,
-      o: () => pB,
-      r: () => PB,
-      u: () => lB,
-      v: () => fB,
-      z: () => kB
+  39015: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Xe,
+      h: () => Ee,
+      j: () => de,
+      m: () => We,
+      q: () => fe,
+      t: () => Re,
+      u: () => qe,
+      v: () => te,
+      x: () => Ze,
+      z: () => ke
     });
-    var YB = GB(6991),
-      DB = GB(37745),
-      QB = GB(9927);
-    const oB = (0, QB.j)("Water"),
-      jB = (0, QB.j)("Lava"),
-      yB = (0, QB.j)("Air"),
-      JB = {
+    var ye = He(7083),
+      be = He(37883),
+      Me = He(9961);
+    const Ke = (0, Me.j)("Water"),
+      Ue = (0, Me.j)("Lava"),
+      Fe = (0, Me.j)("Air"),
+      Je = {
         physicsState: {
-          type: YB.o.CAR,
-          tier: YB.j.KART
+          type: ye.s.CAR,
+          tier: ye.j.KART
         },
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null
       },
-      MB = {
+      oe = {
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null,
@@ -4054,41 +4054,41 @@ export const modules = {
           localOffset: [0, .75, -.35]
         }]
       },
-      PB = {
+      Re = {
         Boat: {
           meshItemName: "INTERNAL_MESH_Boat",
           physicsState: {
-            type: YB.o.BOAT,
-            tier: YB.h.WOOD
+            type: ye.s.BOAT,
+            tier: ye.f.WOOD
           },
-          validBlockIds: [oB, jB],
+          validBlockIds: [Ke, Ue],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         "Obsidian Boat": {
           meshItemName: "INTERNAL_MESH_Obsidian Boat",
           physicsState: {
-            type: YB.o.BOAT,
-            tier: YB.h.OBSIDIAN
+            type: ye.s.BOAT,
+            tier: ye.f.OBSIDIAN
           },
-          validBlockIds: [oB, jB],
+          validBlockIds: [Ke, Ue],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Speedboat: {
           meshItemName: "INTERNAL_MESH_Speedboat",
           physicsState: {
-            type: YB.o.BOAT,
-            tier: YB.h.SPEED
+            type: ye.s.BOAT,
+            tier: ye.f.SPEED
           },
-          validBlockIds: [oB],
+          validBlockIds: [Ke],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Hovercraft: {
           meshItemName: "INTERNAL_MESH_Hovercraft",
           physicsState: {
-            type: YB.o.HOVERCRAFT,
+            type: ye.s.HOVERCRAFT,
             tier: null
           },
           validBlockIds: "solidBlocksOrFluid",
@@ -4096,74 +4096,74 @@ export const modules = {
           placeSound: null
         },
         "Yellow Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Yellow Kart"
         },
         "White Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_White Kart"
         },
         "Red Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Red Kart"
         },
         "Purple Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Purple Kart"
         },
         "Pink Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Pink Kart"
         },
         "Orange Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Orange Kart"
         },
         "Magenta Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Magenta Kart"
         },
         "Lime Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Lime Kart"
         },
         "Light Gray Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Light Gray Kart"
         },
         "Light Blue Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Light Blue Kart"
         },
         "Green Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Green Kart"
         },
         "Gray Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Gray Kart"
         },
         "Cyan Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Cyan Kart"
         },
         "Brown Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Brown Kart"
         },
         "Blue Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Blue Kart"
         },
         "Black Kart": {
-          ...JB,
+          ...Je,
           meshItemName: "INTERNAL_MESH_Black Kart"
         },
         "Off Roader": {
           meshItemName: "INTERNAL_MESH_Off Roader",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.OFF_ROADER
+            type: ye.s.CAR,
+            tier: ye.j.OFF_ROADER
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4177,42 +4177,42 @@ export const modules = {
           }]
         },
         "Gold Mining Drill": {
-          ...MB,
+          ...oe,
           meshItemName: "INTERNAL_MESH_Gold Mining Drill",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.GOLD_MINING_DRILL
+            type: ye.s.CAR,
+            tier: ye.j.GOLD_MINING_DRILL
           }
         },
         "Iron Mining Drill": {
-          ...MB,
+          ...oe,
           meshItemName: "INTERNAL_MESH_Iron Mining Drill",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.IRON_MINING_DRILL
+            type: ye.s.CAR,
+            tier: ye.j.IRON_MINING_DRILL
           }
         },
         "Diamond Mining Drill": {
-          ...MB,
+          ...oe,
           meshItemName: "INTERNAL_MESH_Diamond Mining Drill",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.DIAMOND_MINING_DRILL
+            type: ye.s.CAR,
+            tier: ye.j.DIAMOND_MINING_DRILL
           }
         },
         "Moonstone Mining Drill": {
-          ...MB,
+          ...oe,
           meshItemName: "INTERNAL_MESH_Moonstone Mining Drill",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.MOONSTONE_MINING_DRILL
+            type: ye.s.CAR,
+            tier: ye.j.MOONSTONE_MINING_DRILL
           }
         },
         "Armored Car": {
           meshItemName: "INTERNAL_MESH_Armored Car",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.ARMORED_CAR
+            type: ye.s.CAR,
+            tier: ye.j.ARMORED_CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4228,242 +4228,242 @@ export const modules = {
         "Light Blue Car": {
           meshItemName: "INTERNAL_MESH_Car",
           physicsState: {
-            type: YB.o.CAR,
-            tier: YB.j.CAR
+            type: ye.s.CAR,
+            tier: ye.j.CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
           placeSound: null
         }
       },
-      zB = Object.values(PB).map((BB => BB.meshItemName));
+      ke = Object.values(Re).map((ee => ee.meshItemName));
 
-    function lB(BB) {
-      for (const OB of DB.b)
-        if (PB[OB].meshItemName === BB) return OB;
+    function qe(ee) {
+      for (const ie of be.d)
+        if (Re[ie].meshItemName === ee) return ie;
       return null
     }
 
-    function pB(BB, OB) {
-      const GB = BB.validBlockIds;
-      if (Array.isArray(GB)) return GB.includes(OB);
-      if (OB === yB) return !1;
-      if ("solidBlocks" === GB) return !0 !== QB.h[OB].fl;
-      if ("solidBlocksOrFluid" === GB) return !0;
-      throw new Error(`Unsupported validBlockIds for ${OB}: ${JSON.stringify(GB)}`)
+    function fe(ee, ie) {
+      const He = ee.validBlockIds;
+      if (Array.isArray(He)) return He.includes(ie);
+      if (ie === Fe) return !1;
+      if ("solidBlocks" === He) return !0 !== Me.i[ie].Lq;
+      if ("solidBlocksOrFluid" === He) return !0;
+      throw new Error(`Unsupported validBlockIds for ${ie}: ${JSON.stringify(He)}`)
     }
-    const qB = {
+    const Te = {
         meshAttachment: {
           size: .12,
           offset: [0, 1.8, -.24],
           rotation: [0, 0, 0]
         }
       },
-      ZB = {
+      pe = {
         "Yellow Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.YELLOW
+            type: ye.s.BALLOON,
+            tier: ye.d.YELLOW
           }
         },
         "White Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.WHITE
+            type: ye.s.BALLOON,
+            tier: ye.d.WHITE
           }
         },
         "Red Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.RED
+            type: ye.s.BALLOON,
+            tier: ye.d.RED
           }
         },
         "Purple Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.PURPLE
+            type: ye.s.BALLOON,
+            tier: ye.d.PURPLE
           }
         },
         "Pink Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.PINK
+            type: ye.s.BALLOON,
+            tier: ye.d.PINK
           }
         },
         "Orange Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.ORANGE
+            type: ye.s.BALLOON,
+            tier: ye.d.ORANGE
           }
         },
         "Magenta Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.MAGENTA
+            type: ye.s.BALLOON,
+            tier: ye.d.MAGENTA
           }
         },
         "Lime Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.LIME
+            type: ye.s.BALLOON,
+            tier: ye.d.LIME
           }
         },
         "Light Gray Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.LIGHT_GRAY
+            type: ye.s.BALLOON,
+            tier: ye.d.LIGHT_GRAY
           }
         },
         "Light Blue Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.LIGHT_BLUE
+            type: ye.s.BALLOON,
+            tier: ye.d.LIGHT_BLUE
           }
         },
         "Green Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.GREEN
+            type: ye.s.BALLOON,
+            tier: ye.d.GREEN
           }
         },
         "Gray Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.GRAY
+            type: ye.s.BALLOON,
+            tier: ye.d.GRAY
           }
         },
         "Cyan Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.CYAN
+            type: ye.s.BALLOON,
+            tier: ye.d.CYAN
           }
         },
         "Brown Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.BROWN
+            type: ye.s.BALLOON,
+            tier: ye.d.BROWN
           }
         },
         "Blue Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.BLUE
+            type: ye.s.BALLOON,
+            tier: ye.d.BLUE
           }
         },
         "Black Balloon": {
-          ...qB,
+          ...Te,
           physicsState: {
-            type: YB.o.BALLOON,
-            tier: YB.e.BLACK
+            type: ye.s.BALLOON,
+            tier: ye.d.BLACK
           }
         }
       };
 
-    function NB(BB) {
-      var OB;
-      return null === BB || void 0 === BB ? null : null !== (OB = ZB[BB]) && void 0 !== OB ? OB : null
+    function Xe(ee) {
+      var ie;
+      return null === ee || void 0 === ee ? null : null !== (ie = pe[ee]) && void 0 !== ie ? ie : null
     }
-    const RB = {
+    const ze = {
         meshAttachment: {
           size: 3,
           offset: [0, .72, .3],
           rotation: [-Math.PI / 2, Math.PI, Math.PI]
         }
       },
-      WB = {
+      Be = {
         "Wood Hang Glider": {
-          ...RB,
+          ...ze,
           physicsState: {
-            type: YB.o.GLIDER,
-            tier: YB.k.WOOD
+            type: ye.s.GLIDER,
+            tier: ye.m.WOOD
           }
         },
         "Iron Hang Glider": {
-          ...RB,
+          ...ze,
           physicsState: {
-            type: YB.o.GLIDER,
-            tier: YB.k.IRON
+            type: ye.s.GLIDER,
+            tier: ye.m.IRON
           }
         },
         "Gold Hang Glider": {
-          ...RB,
+          ...ze,
           physicsState: {
-            type: YB.o.GLIDER,
-            tier: YB.k.GOLD
+            type: ye.s.GLIDER,
+            tier: ye.m.GOLD
           }
         },
         "Diamond Hang Glider": {
-          ...RB,
+          ...ze,
           physicsState: {
-            type: YB.o.GLIDER,
-            tier: YB.k.DIAMOND
+            type: ye.s.GLIDER,
+            tier: ye.m.DIAMOND
           }
         }
       };
 
-    function AB(BB) {
-      var OB;
-      return null === BB || void 0 === BB ? null : null !== (OB = WB[BB]) && void 0 !== OB ? OB : null
+    function Ee(ee) {
+      var ie;
+      return null === ee || void 0 === ee ? null : null !== (ie = Be[ee]) && void 0 !== ie ? ie : null
     }
-    const VB = new Set(Object.values(ZB).map((BB => BB.physicsState.type))),
-      SB = new Set(Object.values(WB).map((BB => BB.physicsState.type)));
+    const ge = new Set(Object.values(pe).map((ee => ee.physicsState.type))),
+      Oe = new Set(Object.values(Be).map((ee => ee.physicsState.type)));
 
-    function nB(BB) {
-      return VB.has(BB)
-    }
-
-    function UB(BB) {
-      return SB.has(BB)
+    function de(ee) {
+      return ge.has(ee)
     }
 
-    function fB(BB) {
-      return BB === YB.o.DEFAULT || function(BB) {
-        return VB.has(BB) || SB.has(BB)
-      }(BB)
+    function We(ee) {
+      return Oe.has(ee)
     }
 
-    function kB(BB) {
-      return !fB(BB) && BB !== YB.o.SLEEPING
+    function te(ee) {
+      return ee === ye.s.DEFAULT || function(ee) {
+        return ge.has(ee) || Oe.has(ee)
+      }(ee)
+    }
+
+    function Ze(ee) {
+      return !te(ee) && ee !== ye.s.SLEEPING
     }
   },
-  38894: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB,
-      i: () => oB,
-      j: () => DB,
-      n: () => jB
+  39037: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      e: () => Ke,
+      i: () => be,
+      l: () => Ue
     });
-    var YB = GB(358);
-    const DB = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...GB(635).w.map((BB => `${BB} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...YB.k, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      QB = ["Obby RPG"];
+    var ye = He(349);
+    const be = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...He(608).r.map((ee => `${ee} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...ye.j, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      Me = ["Obby RPG"];
 
-    function oB(BB) {
-      const OB = BB.indexOf("|");
-      return -1 === OB ? {
-        item: BB,
+    function Ke(ee) {
+      const ie = ee.indexOf("|");
+      return -1 === ie ? {
+        item: ee,
         clientPredictedThrower: null
       } : {
-        item: BB.slice(0, OB),
-        clientPredictedThrower: BB.slice(OB + 1)
+        item: ee.slice(0, ie),
+        clientPredictedThrower: ee.slice(ie + 1)
       }
     }
-    const jB = [...DB, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const Ue = [...be, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

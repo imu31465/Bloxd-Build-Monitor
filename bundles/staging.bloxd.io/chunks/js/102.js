@@ -1,373 +1,373 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  41543: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      startWasmPadGameplay: () => XB
+  41658: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      startWasmPadGameplay: () => Ce
     });
-    GB(41548);
-    var YB = GB(41553),
-      DB = GB(41562),
-      QB = GB(2050),
-      oB = GB(41579),
-      jB = GB(5287),
-      yB = GB(5274),
-      JB = GB(41587),
-      MB = GB(41593),
-      PB = GB(5305),
-      zB = GB(41675),
-      lB = GB(2619),
-      pB = GB(9518),
-      qB = GB(41555),
-      ZB = GB(9490),
-      NB = GB(39804);
-    const RB = BB => {
-        const OB = PB.c.indexOf(BB);
-        if (OB < 0) throw new Error(`No core action "${BB}"`);
-        return OB
+    He(41666);
+    var ye = He(41670),
+      be = He(41688),
+      Me = He(2018),
+      Ke = He(41694),
+      Ue = He(5279),
+      Fe = He(5262),
+      Je = He(41702),
+      oe = He(41704),
+      Re = He(5286),
+      ke = He(41766),
+      qe = He(2495),
+      fe = He(9584),
+      Te = He(41679),
+      pe = He(9558),
+      Xe = He(39896);
+    const ze = ee => {
+        const ie = Re.d.indexOf(ee);
+        if (ie < 0) throw new Error(`No core action "${ee}"`);
+        return ie
       },
-      WB = RB("primary-fire"),
-      AB = RB("alt-fire"),
-      VB = RB("mid-fire"),
-      SB = RB("jump"),
-      nB = RB("ReloadGun"),
-      UB = RB("SwapCameraZoom"),
-      fB = RB("TouchAction1"),
-      kB = {
-        SpecialAction1: RB("SpecialAction1"),
-        SpecialAction2: RB("SpecialAction2")
+      Be = ze("primary-fire"),
+      Ee = ze("alt-fire"),
+      ge = ze("mid-fire"),
+      Oe = ze("jump"),
+      de = ze("ReloadGun"),
+      We = ze("SwapCameraZoom"),
+      te = ze("TouchAction1"),
+      Ze = {
+        SpecialAction1: ze("SpecialAction1"),
+        SpecialAction2: ze("SpecialAction2")
       },
-      dB = (BB, OB) => {
-        (0, lB.o)(jB.Q.PadAction, BB, 0, 0, (0, lB.m)(OB, performance.now()))
+      we = (ee, ie) => {
+        (0, qe.v)(Ue.J.PadAction, ee, 0, 0, (0, qe.s)(ie, performance.now()))
       },
-      KB = BB => {
-        dB(BB, oB.zd.Down)
+      De = ee => {
+        we(ee, Ke.Bd.Down)
       },
-      uB = BB => {
-        dB(BB, 0)
+      Pe = ee => {
+        we(ee, 0)
       },
-      mB = BB => {
-        KB(BB), uB(BB)
+      Ae = ee => {
+        De(ee), Pe(ee)
       },
-      IB = () => {
-        const BB = (0, MB.j)();
-        return null !== BB && void 0 !== BB && BB.isCoreRunning ? BB : null
+      Ye = () => {
+        const ee = (0, oe.h)();
+        return null !== ee && void 0 !== ee && ee.isCoreRunning ? ee : null
       },
-      FB = BB => oB.u.playerFlags(BB.api.apiView, 0),
-      iB = BB => null !== BB && oB.u.targetBlockId(BB.api.apiView, 0) !== oB.fd,
-      LB = () => {
-        const BB = (0, pB.b)(),
-          OB = new qB.d;
-        let GB = !1;
-        const YB = (BB, OB) => {
-            (0, lB.o)(jB.Q.PadLook, oB.Fd.Rate, BB, OB, 0)
+      Ve = ee => Ke.v.playerFlags(ee.api.apiView, 0),
+      ae = ee => null !== ee && Ke.v.targetBlockId(ee.api.apiView, 0) !== Ke.ad,
+      ce = () => {
+        const ee = (0, fe.d)(),
+          ie = new Te.d;
+        let He = !1;
+        const ye = (ee, ie) => {
+            (0, qe.v)(Ue.J.PadLook, Ke.Ld.Rate, ee, ie, 0)
           },
-          DB = () => {
-            GB = !1, OB.reset(), YB(0, 0)
+          be = () => {
+            He = !1, ie.reset(), ye(0, 0)
           };
         return {
-          update: (DB, QB, yB) => {
-            GB || (BB.discardPending(), GB = !0);
-            const JB = (0, qB.q)(OB, DB, QB, yB, performance.now());
-            YB(JB.yawRadPerSec, JB.pitchRadPerSec);
-            const MB = BB.drainLookDelta();
-            0 === MB.Rm && 0 === MB.Wm || (0, lB.o)(jB.Q.PadLook, oB.Fd.Gyro, MB.Rm, MB.Wm, 0)
+          update: (be, Me, Fe) => {
+            He || (ee.discardPending(), He = !0);
+            const Je = (0, Te.u)(ie, be, Me, Fe, performance.now());
+            ye(Je.yawRadPerSec, Je.pitchRadPerSec);
+            const oe = ee.drainLookDelta();
+            0 === oe.XV && 0 === oe.zV || (0, qe.v)(Ue.J.PadLook, Ke.Ld.Gyro, oe.XV, oe.zV, 0)
           },
-          release: DB,
-          uninstall: DB
+          release: be,
+          uninstall: be
         }
       },
-      gB = () => {
-        const BB = IB();
-        return null !== BB && 0 !== (FB(BB) & oB.Id.PadSneakToggled)
+      xe = () => {
+        const ee = Ye();
+        return null !== ee && 0 !== (Ve(ee) & Ke.Pd.PadSneakToggled)
       },
-      rB = () => {
-        const BB = (BB => {
-          const OB = BB => function() {
-            return (0, zB.d)(), BB(...arguments)
+      Le = () => {
+        const ee = (ee => {
+          const ie = ee => function() {
+            return (0, ke.c)(), ee(...arguments)
           };
           return {
-            primaryFireDown: OB((BB => (dB(WB, oB.zd.Down | (BB ? oB.zd.Repeat : 0)), 0))),
-            primaryFireUp: OB((() => {
-              uB(WB)
+            primaryFireDown: ie((ee => (we(Be, Ke.Bd.Down | (ee ? Ke.Bd.Repeat : 0)), 0))),
+            primaryFireUp: ie((() => {
+              Pe(Be)
             })),
-            altFireDown: OB((() => (KB(AB), 0))),
-            altFireUp: OB((() => {
-              uB(AB)
+            altFireDown: ie((() => (De(Ee), 0))),
+            altFireUp: ie((() => {
+              Pe(Ee)
             })),
-            jumpDown: OB((() => {
-              mB(SB)
+            jumpDown: ie((() => {
+              Ae(Oe)
             })),
-            specialActionDown: OB((BB => {
-              KB(kB[BB])
+            specialActionDown: ie((ee => {
+              De(Ze[ee])
             })),
-            specialActionUp: OB((BB => {
-              uB(kB[BB])
+            specialActionUp: ie((ee => {
+              Pe(Ze[ee])
             })),
-            reloadGun: OB((() => {
-              mB(nB)
+            reloadGun: ie((() => {
+              Ae(de)
             })),
-            dropItem: OB((BB => {
-              dB(oB.Cd.Drop, oB.zd.Down | (BB ? oB.zd.Stack : 0))
+            dropItem: ie((ee => {
+              we(Ke.Fd.Drop, Ke.Bd.Down | (ee ? Ke.Bd.Stack : 0))
             })),
-            swapCameraZoom: OB((() => {
-              mB(UB)
+            swapCameraZoom: ie((() => {
+              Ae(We)
             })),
-            pickBlock: OB((() => (mB(VB), iB(BB()))))
+            pickBlock: ie((() => (Ae(ge), ae(ee()))))
           }
-        })(IB);
-        let OB = !1,
-          GB = null;
-        const YB = () => {
-          var BB;
-          null === (BB = GB) || void 0 === BB || BB(), GB = null
+        })(Ye);
+        let ie = !1,
+          He = null;
+        const ye = () => {
+          var ee;
+          null === (ee = He) || void 0 === ee || ee(), He = null
         };
         return {
-          bodies: () => BB,
-          look: LB(),
-          move: (BB, GB) => {
-            var DB;
-            YB();
+          bodies: () => ee,
+          look: ce(),
+          move: (ee, He) => {
+            var be;
+            ye();
             const {
-              bits: QB,
-              flips: jB
-            } = (BB => {
-              if (null === BB) return {
-                bits: oB.Ed.Peek,
+              bits: Me,
+              flips: Ue
+            } = (ee => {
+              if (null === ee) return {
+                bits: Ke.Hd.Peek,
                 flips: 0
               };
-              const OB = BB.sneakHeld ? oB.Ed.SneakHeld : 0;
-              return "hold" === BB.mode ? {
-                bits: OB | oB.Ed.SneakHoldMode,
-                flips: BB.sneakTogglePressed ? 1 : 0
+              const ie = ee.sneakHeld ? Ke.Hd.SneakHeld : 0;
+              return "hold" === ee.mode ? {
+                bits: ie | Ke.Hd.SneakHoldMode,
+                flips: ee.sneakTogglePressed ? 1 : 0
               } : {
-                bits: OB,
-                flips: BB.sneakPressed || BB.sneakTogglePressed ? 1 : 0
+                bits: ie,
+                flips: ee.sneakPressed || ee.sneakTogglePressed ? 1 : 0
               }
-            })(GB);
-            null !== (DB = IB()) && void 0 !== DB && DB.padMove(BB.x, BB.y, BB.magnitude, BB.headingOffset, (BB => oB.Ed.Active | (BB.jumpHeld ? oB.Ed.JumpHeld : 0) | (BB.jumpPressed ? oB.Ed.JumpPressed : 0) | (BB.running ? oB.Ed.Running : 0) | (BB.sprintHeld ? oB.Ed.SprintHeld : 0))(BB) | QB, jB) && (OB = !0), (0, ZB.h)(gB())
+            })(He);
+            null !== (be = Ye()) && void 0 !== be && be.padMove(ee.x, ee.y, ee.magnitude, ee.headingOffset, (ee => Ke.Hd.Active | (ee.jumpHeld ? Ke.Hd.JumpHeld : 0) | (ee.jumpPressed ? Ke.Hd.JumpPressed : 0) | (ee.running ? Ke.Hd.Running : 0) | (ee.sprintHeld ? Ke.Hd.SprintHeld : 0))(ee) | Me, Ue) && (ie = !0), (0, pe.f)(xe())
           },
           stopMoving: () => {
-            var BB;
-            OB && (OB = !(null !== (BB = IB()) && void 0 !== BB && BB.padMove(0, 0, 0, 0, 0, 0)), YB(), GB = (0, yB.z)((() => {
-              YB(), (0, ZB.h)(gB())
+            var ee;
+            ie && (ie = !(null !== (ee = Ye()) && void 0 !== ee && ee.padMove(0, 0, 0, 0, 0, 0)), ye(), He = (0, Fe.w)((() => {
+              ye(), (0, pe.f)(xe())
             })))
           },
-          uninstall: YB,
-          deviceChanged: BB => {
-            var GB;
-            "touch" === BB ? ((0, ZB.h)(!1), null !== (GB = IB()) && void 0 !== GB && GB.padMove(0, 0, 0, 0, oB.Ed.EndToggle, 0) && (OB = !1)) : "gamepad" === BB && (0, ZB.h)(gB())
+          uninstall: ye,
+          deviceChanged: ee => {
+            var He;
+            "touch" === ee ? ((0, pe.f)(!1), null !== (He = Ye()) && void 0 !== He && He.padMove(0, 0, 0, 0, Ke.Hd.EndToggle, 0) && (ie = !1)) : "gamepad" === ee && (0, pe.f)(xe())
           },
-          hasPlayer: () => null !== IB(),
+          hasPlayer: () => null !== Ye(),
           isPlayerDead: () => {
-            var BB;
-            return !1 === (null === (BB = IB()) || void 0 === BB ? void 0 : BB.localPlayerAlive())
+            var ee;
+            return !1 === (null === (ee = Ye()) || void 0 === ee ? void 0 : ee.localPlayerAlive())
           },
           isReplayMode: () => {
-            const BB = IB();
-            return null !== BB && 0 !== (FB(BB) & oB.Id.Replay)
+            const ee = Ye();
+            return null !== ee && 0 !== (Ve(ee) & Ke.Pd.Replay)
           },
           isFreeCameraOn: () => {
-            const BB = IB();
-            return null !== BB && 0 !== (FB(BB) & oB.Id.FreeCam)
+            const ee = Ye();
+            return null !== ee && 0 !== (Ve(ee) & Ke.Pd.FreeCam)
           },
-          targetsBlock: () => iB(IB()),
+          targetsBlock: () => ae(Ye()),
           selectedSlotEmpty: () => {
-            var BB;
-            return !(null !== (BB = IB()) && void 0 !== BB && BB.items.sJ())
+            var ee;
+            return !(null !== (ee = Ye()) && void 0 !== ee && ee.items.lJ())
           },
-          pickBlockAllowed: () => !!QB.e.get("creative") && !!QB.e.get("canPickBlocks"),
-          scrollHotbar: BB => {
-            dB(oB.Cd.Hotbar, oB.zd.Down | (BB > 0 ? oB.zd.Next : 0))
+          pickBlockAllowed: () => !!Me.c.get("creative") && !!Me.c.get("canPickBlocks"),
+          scrollHotbar: ee => {
+            we(Ke.Fd.Hotbar, Ke.Bd.Down | (ee > 0 ? Ke.Bd.Next : 0))
           },
-          hasFullInventory: JB.k,
-          hasLobbyTab: () => (0, NB.b)({
-            lobbyLeaderboardInfo: QB.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: QB.e.get("lobbyManage")
+          hasFullInventory: Je.l,
+          hasLobbyTab: () => (0, Xe.e)({
+            lobbyLeaderboardInfo: Me.c.get("lobbyLeaderboardInfo"),
+            lobbyManage: Me.c.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var BB, OB, GB, YB;
-            const DB = IB();
+            var ee, ie, He, ye;
+            const be = Ye();
             return {
-              holdingGun: !1 !== (null === DB || void 0 === DB ? void 0 : DB.localPlayerAlive()) && "Gun" === (null === DB || void 0 === DB || null === (BB = DB.items.sJ()) || void 0 === BB || null === (OB = BB.typeObj) || void 0 === OB ? void 0 : OB.type),
-              customButtons: null !== (GB = QB.e.get("customButtons")) && void 0 !== GB ? GB : null,
-              touchscreenActionButton: null !== (YB = QB.e.get("touchscreenActionButton")) && void 0 !== YB ? YB : null
+              holdingGun: !1 !== (null === be || void 0 === be ? void 0 : be.localPlayerAlive()) && "Gun" === (null === be || void 0 === be || null === (ee = be.items.lJ()) || void 0 === ee || null === (ie = ee.typeObj) || void 0 === ie ? void 0 : ie.type),
+              customButtons: null !== (He = Me.c.get("customButtons")) && void 0 !== He ? He : null,
+              touchscreenActionButton: null !== (ye = Me.c.get("touchscreenActionButton")) && void 0 !== ye ? ye : null
             }
           },
-          pressTouchButton: BB => {
-            BB ? KB(fB) : uB(fB)
+          pressTouchButton: ee => {
+            ee ? De(te) : Pe(te)
           }
         }
       },
-      XB = () => {
-        const BB = (0, DB.e)(rB()),
-          OB = (0, YB.b)(),
-          GB = null;
+      Ce = () => {
+        const ee = (0, be.d)(Le()),
+          ie = (0, ye.b)(),
+          He = null;
         return () => {
-          BB(), OB(), null === GB || void 0 === GB || GB()
+          ee(), ie(), null === He || void 0 === He || He()
         }
       }
   },
-  5274: (BB, OB, GB) => {
-    GB.d(OB, {
-      C: () => dB,
-      E: () => KB,
-      I: () => RB,
-      M: () => oB,
-      O: () => jB,
-      P: () => fB,
-      d: () => UB,
-      e: () => AB,
-      i: () => mB,
-      m: () => uB,
-      o: () => NB,
-      s: () => SB,
-      v: () => WB,
-      w: () => VB,
-      z: () => kB
+  5262: (ee, ie, He) => {
+    He.d(ie, {
+      A: () => we,
+      E: () => De,
+      H: () => ze,
+      K: () => Ke,
+      O: () => Ue,
+      Q: () => te,
+      c: () => We,
+      d: () => Ee,
+      e: () => Ae,
+      g: () => Pe,
+      k: () => Xe,
+      o: () => Oe,
+      q: () => Be,
+      u: () => ge,
+      w: () => Ze
     });
-    var YB = GB(5276);
-    const DB = {
+    var ye = He(5265);
+    const be = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let QB = DB;
+    let Me = be;
 
-    function oB(BB) {
-      QB = null !== BB && void 0 !== BB ? BB : DB
+    function Ke(ee) {
+      Me = null !== ee && void 0 !== ee ? ee : be
     }
 
-    function jB() {
-      return QB
+    function Ue() {
+      return Me
     }
-    const yB = new Set,
-      JB = new Set;
-    let MB = -1;
-    const PB = new Set,
-      zB = new Set;
-    let lB = 0,
-      pB = 0;
-    const qB = new Set,
-      ZB = new Set;
+    const Fe = new Set,
+      Je = new Set;
+    let oe = -1;
+    const Re = new Set,
+      ke = new Set;
+    let qe = 0,
+      fe = 0;
+    const Te = new Set,
+      pe = new Set;
 
-    function NB(BB) {
-      return yB.add(BB), () => {
-        yB.delete(BB)
+    function Xe(ee) {
+      return Fe.add(ee), () => {
+        Fe.delete(ee)
       }
     }
 
-    function RB(BB, OB) {
-      for (const YB of yB) try {
-        YB(BB)
-      } catch (GB) {
-        OB(GB)
+    function ze(ee, ie) {
+      for (const ye of Fe) try {
+        ye(ee)
+      } catch (He) {
+        ie(He)
       }
     }
 
-    function WB(BB) {
-      return JB.add(BB), () => {
-        JB.delete(BB)
+    function Be(ee) {
+      return Je.add(ee), () => {
+        Je.delete(ee)
       }
     }
 
-    function AB(BB, OB) {
-      const GB = MB < 0 ? 0 : BB - MB;
-      MB = BB;
-      for (const DB of JB) try {
-        DB(GB)
-      } catch (YB) {
-        OB(YB)
+    function Ee(ee, ie) {
+      const He = oe < 0 ? 0 : ee - oe;
+      oe = ee;
+      for (const be of Je) try {
+        be(He)
+      } catch (ye) {
+        ie(ye)
       }
     }
 
-    function VB(BB) {
-      return PB.add(BB), () => {
-        PB.delete(BB)
+    function ge(ee) {
+      return Re.add(ee), () => {
+        Re.delete(ee)
       }
     }
 
-    function SB(BB) {
-      return zB.add(BB), () => {
-        zB.delete(BB)
+    function Oe(ee) {
+      return ke.add(ee), () => {
+        ke.delete(ee)
       }
     }
-    let nB = 0;
+    let de = 0;
 
-    function UB(BB) {
-      nB += BB
+    function We(ee) {
+      de += ee
     }
 
-    function fB() {
-      const BB = nB;
-      return nB = 0, BB
+    function te() {
+      const ee = de;
+      return de = 0, ee
     }
 
-    function kB(BB) {
-      return qB.add(BB), () => {
-        qB.delete(BB)
-      }
-    }
-
-    function dB(BB) {
-      return ZB.add(BB), () => {
-        ZB.delete(BB)
+    function Ze(ee) {
+      return Te.add(ee), () => {
+        Te.delete(ee)
       }
     }
 
-    function KB() {
-      lB = 0, pB = 0, MB = -1
+    function we(ee) {
+      return pe.add(ee), () => {
+        pe.delete(ee)
+      }
     }
 
-    function uB(BB, OB) {
-      if ("paced" === BB) return pB += OB, null;
-      if ("drawn" !== BB && "skipped" !== BB) return null;
-      const GB = OB + pB;
-      return pB = 0, GB
+    function De() {
+      qe = 0, fe = 0, oe = -1
     }
 
-    function mB(BB, OB, GB, DB) {
-      const QB = (0, YB.k)(OB),
-        oB = BB > 0 ? performance.now() : 0;
-      for (let YB = 0; YB < BB; YB++)
-        for (const BB of qB) try {
-          BB()
-        } catch (jB) {
-          DB(jB)
+    function Pe(ee, ie) {
+      if ("paced" === ee) return fe += ie, null;
+      if ("drawn" !== ee && "skipped" !== ee) return null;
+      const He = ie + fe;
+      return fe = 0, He
+    }
+
+    function Ae(ee, ie, He, be) {
+      const Me = (0, ye.h)(ie),
+        Ke = ee > 0 ? performance.now() : 0;
+      for (let ye = 0; ye < ee; ye++)
+        for (const ee of Te) try {
+          ee()
+        } catch (Ue) {
+          be(Ue)
         }
-      if (BB > 0 && UB(performance.now() - oB), null !== GB) {
-        for (const BB of PB) try {
-          BB(GB)
-        } catch (jB) {
-          DB(jB)
+      if (ee > 0 && We(performance.now() - Ke), null !== He) {
+        for (const ee of Re) try {
+          ee(He)
+        } catch (Ue) {
+          be(Ue)
         }
-        lB += GB
+        qe += He
       }
-      if ("drawn" === OB) {
-        const BB = lB;
-        lB = 0;
-        for (const OB of zB) try {
-          OB(BB)
-        } catch (jB) {
-          DB(jB)
+      if ("drawn" === ie) {
+        const ee = qe;
+        qe = 0;
+        for (const ie of ke) try {
+          ie(ee)
+        } catch (Ue) {
+          be(Ue)
         }
       }
-      for (const YB of ZB) try {
-        YB(BB, QB)
-      } catch (jB) {
-        DB(jB)
+      for (const ye of pe) try {
+        ye(ee, Me)
+      } catch (Ue) {
+        be(Ue)
       }
     }
   },
-  5305: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => DB,
-      d: () => QB,
-      g: () => oB,
-      i: () => YB,
-      l: () => jB
+  5286: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => be,
+      h: () => Me,
+      l: () => Ke,
+      p: () => ye,
+      t: () => Ue
     });
-    const YB = {
+    const ye = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      DB = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      QB = {
+      be = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Me = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      oB = {
+      Ke = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      jB = [16]
+      Ue = [16]
   },
-  41675: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      f: () => QB,
-      j: () => DB
+  41766: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      d: () => Me,
+      g: () => be
     });
-    let YB = null;
+    let ye = null;
 
-    function DB(BB) {
-      YB = BB
+    function be(ee) {
+      ye = ee
     }
 
-    function QB(BB) {
-      YB === BB && (YB = null)
+    function Me(ee) {
+      ye === ee && (ye = null)
     }
 
-    function oB() {
-      var BB;
-      null === (BB = YB) || void 0 === BB || BB()
+    function Ke() {
+      var ee;
+      null === (ee = ye) || void 0 === ee || ee()
     }
   },
-  5313: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB,
-      i: () => oB,
-      m: () => JB
+  5291: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue,
+      d: () => Ke,
+      h: () => Je
     });
-    var YB = GB(2617),
-      DB = GB(2619);
-    const QB = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var ye = He(2492),
+      be = He(2495);
+    const Me = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function oB(BB) {
-      return BB instanceof HTMLElement && (!!(BB.isContentEditable || BB instanceof HTMLTextAreaElement || BB instanceof HTMLSelectElement) || BB instanceof HTMLInputElement && !QB.has(BB.type))
+    function Ke(ee) {
+      return ee instanceof HTMLElement && (!!(ee.isContentEditable || ee instanceof HTMLTextAreaElement || ee instanceof HTMLSelectElement) || ee instanceof HTMLInputElement && !Me.has(ee.type))
     }
 
-    function jB(BB) {
-      let OB = null;
-      const GB = GB => {
-          const DB = oB(GB);
-          DB !== OB && (OB = DB, BB(YB.f.UiCapture, YB.y.Keyboard, 0, 0, DB ? YB.y.Keyboard : 0))
+    function Ue(ee) {
+      let ie = null;
+      const He = He => {
+          const be = Ke(He);
+          be !== ie && (ie = be, ee(ye.f.UiCapture, ye.p.Keyboard, 0, 0, be ? ye.p.Keyboard : 0))
         },
-        DB = BB => {
-          GB(BB.target)
+        be = ee => {
+          He(ee.target)
         },
-        QB = BB => {
-          GB(BB.relatedTarget)
+        Me = ee => {
+          He(ee.relatedTarget)
         },
-        jB = () => {
-          GB(document.activeElement)
+        Ue = () => {
+          He(document.activeElement)
         },
-        yB = {
+        Fe = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", DB, yB), document.addEventListener("focusout", QB, yB), document.addEventListener("keydown", jB, yB), GB(document.activeElement), () => {
-        document.removeEventListener("focusin", DB, yB), document.removeEventListener("focusout", QB, yB), document.removeEventListener("keydown", jB, yB)
+      return document.addEventListener("focusin", be, Fe), document.addEventListener("focusout", Me, Fe), document.addEventListener("keydown", Ue, Fe), He(document.activeElement), () => {
+        document.removeEventListener("focusin", be, Fe), document.removeEventListener("focusout", Me, Fe), document.removeEventListener("keydown", Ue, Fe)
       }
     }
-    const yB = new Map;
+    const Fe = new Map;
 
-    function JB(BB, OB) {
-      var GB;
-      let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      yB.set(YB, (null !== (GB = yB.get(YB)) && void 0 !== GB ? GB : 0) & ~BB | OB & BB);
-      let QB = 0;
-      for (const DB of yB.values()) QB |= DB;
-      return (0, DB.u)(BB, QB & BB)
+    function Je(ee, ie) {
+      var He;
+      let ye = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Fe.set(ye, (null !== (He = Fe.get(ye)) && void 0 !== He ? He : 0) & ~ee | ie & ee);
+      let Me = 0;
+      for (const be of Fe.values()) Me |= be;
+      return (0, be.A)(ee, Me & ee)
     }
   },
-  37633: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.includes("Leaf Bed")
+  37770: (ee, ie, He) => {
+    function ye(ee) {
+      return ee.includes("Leaf Bed")
     }
 
-    function DB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
+    function be(ee) {
+      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
     }
 
-    function QB(BB) {
-      return BB.includes(" Strongbed")
+    function Me(ee) {
+      return ee.includes(" Strongbed")
     }
 
-    function oB(BB) {
-      return YB(BB) || DB(BB) || QB(BB)
+    function Ke(ee) {
+      return ye(ee) || be(ee) || Me(ee)
     }
-    GB.d(OB, {
-      b: () => oB,
-      d: () => YB,
-      f: () => QB,
-      i: () => DB
+    He.d(ie, {
+      e: () => Ke,
+      i: () => ye,
+      k: () => Me,
+      m: () => be
     })
   },
-  37627: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => JB
+  37765: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Je
     });
-    var YB = GB(37633),
-      DB = GB(9927);
-    const QB = [],
-      oB = [],
-      jB = [],
-      yB = [];
-    for (const MB of Object.keys(DB.n))(0, YB.d)(MB) ? QB.push(MB) : (0, YB.i)(MB) && oB.push(MB), (0, YB.f)(MB) && jB.push(MB), (MB.includes(" Bed Head") || MB.includes(" Strongbed Head")) && yB.push(MB);
-    const JB = {
-      leafBeds: QB,
-      woolBeds: oB,
-      strongBeds: jB,
-      beds: [...QB, ...oB, ...jB],
-      bedHeads: yB,
+    var ye = He(37770),
+      be = He(9961);
+    const Me = [],
+      Ke = [],
+      Ue = [],
+      Fe = [];
+    for (const oe of Object.keys(be.m))(0, ye.i)(oe) ? Me.push(oe) : (0, ye.m)(oe) && Ke.push(oe), (0, ye.k)(oe) && Ue.push(oe), (oe.includes(" Bed Head") || oe.includes(" Strongbed Head")) && Fe.push(oe);
+    const Je = {
+      leafBeds: Me,
+      woolBeds: Ke,
+      strongBeds: Ue,
+      beds: [...Me, ...Ke, ...Ue],
+      bedHeads: Fe,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6991: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => oB,
-      h: () => DB,
-      j: () => yB,
-      k: () => QB,
-      n: () => JB,
-      o: () => YB,
-      p: () => jB
+  7083: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke,
+      f: () => be,
+      j: () => Fe,
+      m: () => Me,
+      o: () => Je,
+      s: () => ye,
+      u: () => Ue
     });
-    let YB = function(BB) {
-        return BB[BB.DEFAULT = 0] = "DEFAULT", BB[BB.BOAT = 1] = "BOAT", BB[BB.GLIDER = 2] = "GLIDER", BB[BB.BALLOON = 3] = "BALLOON", BB[BB.SLEEPING = 4] = "SLEEPING", BB[BB.RIDING_MOB = 5] = "RIDING_MOB", BB[BB.CAR = 6] = "CAR", BB[BB.HOVERCRAFT = 7] = "HOVERCRAFT", BB
+    let ye = function(ee) {
+        return ee[ee.DEFAULT = 0] = "DEFAULT", ee[ee.BOAT = 1] = "BOAT", ee[ee.GLIDER = 2] = "GLIDER", ee[ee.BALLOON = 3] = "BALLOON", ee[ee.SLEEPING = 4] = "SLEEPING", ee[ee.RIDING_MOB = 5] = "RIDING_MOB", ee[ee.CAR = 6] = "CAR", ee[ee.HOVERCRAFT = 7] = "HOVERCRAFT", ee
       }({}),
-      DB = function(BB) {
-        return BB[BB.WOOD = 0] = "WOOD", BB[BB.OBSIDIAN = 1] = "OBSIDIAN", BB[BB.SPEED = 2] = "SPEED", BB
+      be = function(ee) {
+        return ee[ee.WOOD = 0] = "WOOD", ee[ee.OBSIDIAN = 1] = "OBSIDIAN", ee[ee.SPEED = 2] = "SPEED", ee
       }({}),
-      QB = function(BB) {
-        return BB[BB.WOOD = 0] = "WOOD", BB[BB.IRON = 1] = "IRON", BB[BB.GOLD = 2] = "GOLD", BB[BB.DIAMOND = 3] = "DIAMOND", BB
+      Me = function(ee) {
+        return ee[ee.WOOD = 0] = "WOOD", ee[ee.IRON = 1] = "IRON", ee[ee.GOLD = 2] = "GOLD", ee[ee.DIAMOND = 3] = "DIAMOND", ee
       }({}),
-      oB = function(BB) {
-        return BB[BB.YELLOW = 0] = "YELLOW", BB[BB.WHITE = 1] = "WHITE", BB[BB.RED = 2] = "RED", BB[BB.PURPLE = 3] = "PURPLE", BB[BB.PINK = 4] = "PINK", BB[BB.ORANGE = 5] = "ORANGE", BB[BB.MAGENTA = 6] = "MAGENTA", BB[BB.LIME = 7] = "LIME", BB[BB.LIGHT_GRAY = 8] = "LIGHT_GRAY", BB[BB.LIGHT_BLUE = 9] = "LIGHT_BLUE", BB[BB.GREEN = 10] = "GREEN", BB[BB.GRAY = 11] = "GRAY", BB[BB.CYAN = 12] = "CYAN", BB[BB.BROWN = 13] = "BROWN", BB[BB.BLUE = 14] = "BLUE", BB[BB.BLACK = 15] = "BLACK", BB
+      Ke = function(ee) {
+        return ee[ee.YELLOW = 0] = "YELLOW", ee[ee.WHITE = 1] = "WHITE", ee[ee.RED = 2] = "RED", ee[ee.PURPLE = 3] = "PURPLE", ee[ee.PINK = 4] = "PINK", ee[ee.ORANGE = 5] = "ORANGE", ee[ee.MAGENTA = 6] = "MAGENTA", ee[ee.LIME = 7] = "LIME", ee[ee.LIGHT_GRAY = 8] = "LIGHT_GRAY", ee[ee.LIGHT_BLUE = 9] = "LIGHT_BLUE", ee[ee.GREEN = 10] = "GREEN", ee[ee.GRAY = 11] = "GRAY", ee[ee.CYAN = 12] = "CYAN", ee[ee.BROWN = 13] = "BROWN", ee[ee.BLUE = 14] = "BLUE", ee[ee.BLACK = 15] = "BLACK", ee
       }({}),
-      jB = function(BB) {
-        return BB[BB.ROTATION_1 = 0] = "ROTATION_1", BB[BB.ROTATION_2 = 1] = "ROTATION_2", BB[BB.ROTATION_3 = 2] = "ROTATION_3", BB[BB.ROTATION_4 = 3] = "ROTATION_4", BB
+      Ue = function(ee) {
+        return ee[ee.ROTATION_1 = 0] = "ROTATION_1", ee[ee.ROTATION_2 = 1] = "ROTATION_2", ee[ee.ROTATION_3 = 2] = "ROTATION_3", ee[ee.ROTATION_4 = 3] = "ROTATION_4", ee
       }({}),
-      yB = function(BB) {
-        return BB[BB.KART = 0] = "KART", BB[BB.OFF_ROADER = 1] = "OFF_ROADER", BB[BB.CAR = 2] = "CAR", BB[BB.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", BB[BB.ARMORED_CAR = 4] = "ARMORED_CAR", BB[BB.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", BB[BB.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", BB[BB.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", BB
+      Fe = function(ee) {
+        return ee[ee.KART = 0] = "KART", ee[ee.OFF_ROADER = 1] = "OFF_ROADER", ee[ee.CAR = 2] = "CAR", ee[ee.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", ee[ee.ARMORED_CAR = 4] = "ARMORED_CAR", ee[ee.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", ee[ee.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", ee[ee.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", ee
       }({});
-    YB.DEFAULT, YB.BOAT, DB.SPEED, YB.GLIDER, QB.DIAMOND, YB.BALLOON, oB.BLACK, YB.SLEEPING, jB.ROTATION_4, YB.RIDING_MOB, YB.CAR, yB.MOONSTONE_MINING_DRILL, YB.HOVERCRAFT;
-    let JB = function(BB) {
-      return BB[BB.NORMAL = 0] = "NORMAL", BB[BB.GLIDING = 1] = "GLIDING", BB[BB.FLOATING = 2] = "FLOATING", BB
+    ye.DEFAULT, ye.BOAT, be.SPEED, ye.GLIDER, Me.DIAMOND, ye.BALLOON, Ke.BLACK, ye.SLEEPING, Ue.ROTATION_4, ye.RIDING_MOB, ye.CAR, Fe.MOONSTONE_MINING_DRILL, ye.HOVERCRAFT;
+    let Je = function(ee) {
+      return ee[ee.NORMAL = 0] = "NORMAL", ee[ee.GLIDING = 1] = "GLIDING", ee[ee.FLOATING = 2] = "FLOATING", ee
     }({})
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

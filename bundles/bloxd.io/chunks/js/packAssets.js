@@ -1,291 +1,291 @@
 export const id = 52;
 export const ids = [52, 226];
 export const modules = {
-  34861: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      packDisplayName: () => qB,
-      packModelMessage: () => ZB,
-      packModelSummary: () => RB,
-      refusedPackModels: () => NB
+  34975: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      packDisplayName: () => Te,
+      packModelMessage: () => pe,
+      packModelSummary: () => ze,
+      refusedPackModels: () => Xe
     });
-    var YB = GB(34869),
-      DB = GB(34875);
-    const QB = "DRACO",
-      oB = 0,
-      jB = 1,
-      yB = 0,
-      JB = 1,
-      MB = 32768;
+    var ye = He(34984),
+      be = He(34988);
+    const Me = "DRACO",
+      Ke = 0,
+      Ue = 1,
+      Fe = 0,
+      Je = 1,
+      oe = 32768;
 
-    function PB(BB) {
-      const OB = new DataView(BB.buffer, BB.byteOffset, BB.byteLength);
-      let GB = 0;
-      const YB = () => {
-          if (GB >= BB.byteLength) throw new RangeError("past the stream");
-          return BB[GB++]
+    function Re(ee) {
+      const ie = new DataView(ee.buffer, ee.byteOffset, ee.byteLength);
+      let He = 0;
+      const ye = () => {
+          if (He >= ee.byteLength) throw new RangeError("past the stream");
+          return ee[He++]
         },
-        DB = () => {
-          if (GB + 4 > BB.byteLength) throw new RangeError("past the stream");
-          const YB = OB.getUint32(GB, !0);
-          return GB += 4, YB
+        be = () => {
+          if (He + 4 > ee.byteLength) throw new RangeError("past the stream");
+          const ye = ie.getUint32(He, !0);
+          return He += 4, ye
         },
-        PB = () => {
-          let BB = 0;
-          for (let OB = 0; OB < 35; OB += 7) {
-            const GB = YB();
-            if (BB += (127 & GB) * 2 ** OB, 0 === (128 & GB)) return BB
+        Re = () => {
+          let ee = 0;
+          for (let ie = 0; ie < 35; ie += 7) {
+            const He = ye();
+            if (ee += (127 & He) * 2 ** ie, 0 === (128 & He)) return ee
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let BB = 0; BB < QB.length; BB++)
-          if (YB() !== QB.charCodeAt(BB)) return null;
-        const OB = YB(),
-          zB = YB(),
-          lB = YB(),
-          pB = YB(),
-          qB = YB() | YB() << 8;
-        if (2 !== OB) return null;
-        0 !== (qB & MB) && function(BB, OB, GB) {
-          const YB = () => {
-              OB(GB())
+        for (let ee = 0; ee < Me.length; ee++)
+          if (ye() !== Me.charCodeAt(ee)) return null;
+        const ie = ye(),
+          ke = ye(),
+          qe = ye(),
+          fe = ye(),
+          Te = ye() | ye() << 8;
+        if (2 !== ie) return null;
+        0 !== (Te & oe) && function(ee, ie, He) {
+          const ye = () => {
+              ie(He())
             },
-            DB = () => {
-              let GB = 1,
-                DB = !0;
-              for (; GB > 0;) {
-                GB--, DB || YB(), DB = !1;
-                const QB = BB();
-                for (let GB = 0; GB < QB; GB++) YB(), OB(BB());
-                GB += BB()
+            be = () => {
+              let He = 1,
+                be = !0;
+              for (; He > 0;) {
+                He--, be || ye(), be = !1;
+                const Me = ee();
+                for (let He = 0; He < Me; He++) ye(), ie(ee());
+                He += ee()
               }
             },
-            QB = BB();
-          for (let oB = 0; oB < QB; oB++) BB(), DB();
-          DB()
-        }(PB, (OB => {
-          if (GB + OB > BB.byteLength) throw new RangeError("past the stream");
-          GB += OB
-        }), YB);
-        const ZB = zB < 2 ? DB : PB;
-        if (lB === oB) return {
+            Me = ee();
+          for (let Ke = 0; Ke < Me; Ke++) ee(), be();
+          be()
+        }(Re, (ie => {
+          if (He + ie > ee.byteLength) throw new RangeError("past the stream");
+          He += ie
+        }), ye);
+        const pe = ke < 2 ? be : Re;
+        if (qe === Ke) return {
           faces: 0,
-          vertices: DB(),
-          minor: zB
+          vertices: be(),
+          minor: ke
         };
-        if (lB !== jB) return null;
-        if (pB === yB) {
+        if (qe !== Ue) return null;
+        if (fe === Fe) {
           return {
-            faces: ZB(),
-            vertices: ZB(),
-            minor: zB
+            faces: pe(),
+            vertices: pe(),
+            minor: ke
           }
         }
-        if (pB !== JB) return null;
-        YB(), zB < 2 && PB();
-        const NB = PB();
+        if (fe !== Je) return null;
+        ye(), ke < 2 && Re();
+        const Xe = Re();
         return {
-          faces: PB(),
-          vertices: NB,
-          minor: zB
+          faces: Re(),
+          vertices: Xe,
+          minor: ke
         }
       } catch {
         return null
       }
     }
 
-    function zB(BB, OB, GB) {
-      var YB, DB;
-      if (null === (YB = null === (DB = BB.extensionsUsed) || void 0 === DB ? void 0 : DB.includes("KHR_draco_mesh_compression")) || void 0 === YB || !YB) return null;
-      for (const qB of null !== (QB = BB.meshes) && void 0 !== QB ? QB : []) {
-        var QB;
-        for (const YB of qB.primitives) {
-          var oB, jB, yB, JB, MB, zB;
-          const DB = null === (oB = YB.extensions) || void 0 === oB ? void 0 : oB.KHR_draco_mesh_compression;
-          if ("object" !== typeof DB || null === DB) continue;
-          const QB = null === (jB = BB.bufferViews) || void 0 === jB ? void 0 : jB[DB.bufferView];
-          if (null === OB || void 0 === QB) return lB;
-          const qB = null !== (yB = QB.byteOffset) && void 0 !== yB ? yB : 0,
-            ZB = PB(OB.subarray(qB, qB + QB.byteLength));
-          if (null === ZB && !GB) continue;
-          const NB = null !== (JB = BB.accessors) && void 0 !== JB ? JB : [],
-            RB = null === (MB = NB[YB.attributes.POSITION]) || void 0 === MB ? void 0 : MB.count,
-            WB = void 0 === YB.indices ? 0 : null === (zB = NB[YB.indices]) || void 0 === zB ? void 0 : zB.count;
-          if (null === ZB || void 0 === RB || void 0 === WB || 3 * ZB.faces !== WB || ZB.vertices > RB) return lB;
-          if (GB && ZB.minor < 2) return pB
+    function ke(ee, ie, He) {
+      var ye, be;
+      if (null === (ye = null === (be = ee.extensionsUsed) || void 0 === be ? void 0 : be.includes("KHR_draco_mesh_compression")) || void 0 === ye || !ye) return null;
+      for (const Te of null !== (Me = ee.meshes) && void 0 !== Me ? Me : []) {
+        var Me;
+        for (const ye of Te.primitives) {
+          var Ke, Ue, Fe, Je, oe, ke;
+          const be = null === (Ke = ye.extensions) || void 0 === Ke ? void 0 : Ke.KHR_draco_mesh_compression;
+          if ("object" !== typeof be || null === be) continue;
+          const Me = null === (Ue = ee.bufferViews) || void 0 === Ue ? void 0 : Ue[be.bufferView];
+          if (null === ie || void 0 === Me) return qe;
+          const Te = null !== (Fe = Me.byteOffset) && void 0 !== Fe ? Fe : 0,
+            pe = Re(ie.subarray(Te, Te + Me.byteLength));
+          if (null === pe && !He) continue;
+          const Xe = null !== (Je = ee.accessors) && void 0 !== Je ? Je : [],
+            ze = null === (oe = Xe[ye.attributes.POSITION]) || void 0 === oe ? void 0 : oe.count,
+            Be = void 0 === ye.indices ? 0 : null === (ke = Xe[ye.indices]) || void 0 === ke ? void 0 : ke.count;
+          if (null === pe || void 0 === ze || void 0 === Be || 3 * pe.faces !== Be || pe.vertices > ze) return qe;
+          if (He && pe.minor < 2) return fe
         }
       }
       return null
     }
-    const lB = "has a Draco stream whose counts don't match its accessors",
-      pB = "has a Draco stream too old to decode: export it again";
+    const qe = "has a Draco stream whose counts don't match its accessors",
+      fe = "has a Draco stream too old to decode: export it again";
 
-    function qB(BB) {
-      var OB;
-      return null !== (OB = BB.name) && void 0 !== OB ? OB : BB.fromFolderName || BB.id
+    function Te(ee) {
+      var ie;
+      return null !== (ie = ee.name) && void 0 !== ie ? ie : ee.fromFolderName || ee.id
     }
 
-    function ZB(BB, OB, GB) {
-      return `Texture pack "${BB}": model "${OB}" was not loaded because it ${GB}. The default model is used instead.`
+    function pe(ee, ie, He) {
+      return `Texture pack "${ee}": model "${ie}" was not loaded because it ${He}. The default model is used instead.`
     }
 
-    function NB(BB, OB, GB) {
+    function Xe(ee, ie, He) {
       let {
-        strictDraco: QB = !1
+        strictDraco: Me = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const oB = {};
-      for (const [jB, yB] of Object.entries(OB)) {
-        let OB;
-        if (yB.startsWith("data:")) try {
-          const BB = new Uint8Array((0, DB.k)(yB));
-          if (OB = (0, YB.d)(BB), null === OB) {
+      const Ke = {};
+      for (const [Ue, Fe] of Object.entries(ie)) {
+        let ie;
+        if (Fe.startsWith("data:")) try {
+          const ee = new Uint8Array((0, be.p)(Fe));
+          if (ie = (0, ye.e)(ee), null === ie) {
             const {
-              json: GB,
-              bin: YB
-            } = (0, DB.r)(BB);
-            OB = zB(GB, YB, QB)
+              json: He,
+              bin: ye
+            } = (0, be.y)(ee);
+            ie = ke(He, ye, Me)
           }
         } catch {
-          OB = "is not a binary glTF 2.0 file"
-        } else OB = "loads data from outside the file";
-        OB && (oB[jB] = OB, GB && console.warn(ZB(BB, jB, OB)))
+          ie = "is not a binary glTF 2.0 file"
+        } else ie = "loads data from outside the file";
+        ie && (Ke[Ue] = ie, He && console.warn(pe(ee, Ue, ie)))
       }
-      return oB
+      return Ke
     }
 
-    function RB(BB, OB) {
-      const GB = Object.keys(OB);
-      if (0 === GB.length) return null;
-      if (1 === GB.length) return ZB(BB, GB[0], OB[GB[0]]);
-      const YB = GB.map((BB => `"${BB}" ${OB[BB]}`)).join("; ");
-      return `Texture pack "${BB}": ${GB.length} models were not loaded (${YB}). The default models are used instead.`
+    function ze(ee, ie) {
+      const He = Object.keys(ie);
+      if (0 === He.length) return null;
+      if (1 === He.length) return pe(ee, He[0], ie[He[0]]);
+      const ye = He.map((ee => `"${ee}" ${ie[ee]}`)).join("; ");
+      return `Texture pack "${ee}": ${He.length} models were not loaded (${ye}). The default models are used instead.`
     }
   },
-  64078: (BB, OB, GB) => {
-    GB.d(OB, {
-      packAssets: () => NB
+  64049: (ee, ie, He) => {
+    He.d(ie, {
+      packAssets: () => Xe
     });
-    var YB = GB(2272),
-      DB = GB(2250),
-      QB = GB(34861),
-      oB = GB(3635),
-      jB = GB(3659);
+    var ye = He(2181),
+      be = He(2170),
+      Me = He(34975),
+      Ke = He(3532),
+      Ue = He(3572);
 
-    function yB(BB, OB, GB, YB) {
-      const DB = `${(0,oB.e)(BB,OB)}|sheets${GB}`;
-      return YB === jB.c ? DB : `${DB}|layers${YB}`
+    function Fe(ee, ie, He, ye) {
+      const be = `${(0,Ke.e)(ee,ie)}|sheets${He}`;
+      return ye === Ue.d ? be : `${be}|layers${ye}`
     }
-    var JB = GB(3663),
-      MB = GB(3608),
-      PB = GB(3597),
-      zB = GB(3638);
-    var lB = GB(54085);
-    const pB = 256;
-    let qB = null,
-      ZB = null;
+    var Je = He(3574),
+      oe = He(3502),
+      Re = He(3488),
+      ke = He(3540);
+    var qe = He(54284);
+    const fe = 256;
+    let Te = null,
+      pe = null;
 
-    function NB(BB) {
-      var OB;
-      let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jB.c;
-      if ((null === (OB = qB) || void 0 === OB ? void 0 : OB.pack) === BB.pack && qB.maxLayerWidth === GB) return qB.assets;
-      const NB = (0, lB.f)(BB.pack, (0, lB.k)(BB));
-      if (null === NB || !(0, DB.g)(NB)) return Promise.resolve(null);
-      const WB = async function(BB, OB, GB) {
-        var lB;
-        const qB = null !== (lB = BB.textureOverrides) && void 0 !== lB ? lB : {},
+    function Xe(ee) {
+      var ie;
+      let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ue.d;
+      if ((null === (ie = Te) || void 0 === ie ? void 0 : ie.pack) === ee.pack && Te.maxLayerWidth === He) return Te.assets;
+      const Xe = (0, qe.g)(ee.pack, (0, qe.m)(ee));
+      if (null === Xe || !(0, be.f)(Xe)) return Promise.resolve(null);
+      const Be = async function(ee, ie, He) {
+        var qe;
+        const Te = null !== (qe = ee.textureOverrides) && void 0 !== qe ? qe : {},
           {
-            id: NB,
-            version: WB
-          } = BB.metaData,
-          AB = OB && NB !== YB.t.CUSTOM,
-          VB = {};
-        AB && (ZB = VB);
-        let SB, nB, UB = AB ? await async function(BB, OB, GB, YB) {
-          const DB = yB(BB, OB, GB, jB.c),
-            QB = yB(BB, OB, GB, YB),
-            JB = await (0, oB.k)((BB => BB === DB || BB === QB));
-          return null !== JB && (YB === jB.c || JB.blockAtlasWidth <= YB) ? JB : null
-        }(NB, WB, pB, GB): null;
-        if (null === UB) {
+            id: Xe,
+            version: Be
+          } = ee.metaData,
+          Ee = ie && Xe !== ye.o.CUSTOM,
+          ge = {};
+        Ee && (pe = ge);
+        let Oe, de, We = Ee ? await async function(ee, ie, He, ye) {
+          const be = Fe(ee, ie, He, Ue.d),
+            Me = Fe(ee, ie, He, ye),
+            Je = await (0, Ke.k)((ee => ee === be || ee === Me));
+          return null !== Je && (ye === Ue.d || Je.blockAtlasWidth <= ye) ? Je : null
+        }(Xe, Be, fe, He): null;
+        if (null === We) {
           const {
-            blockMetadata: BB,
-            getDefaultTexture: OB,
-            textureNameToIndex: QB
-          } = await (0, DB.l)(), jB = (0, MB.e)(BB, ((BB, GB) => ({
-            url: RB(qB, OB, BB, "block" === GB ? PB.h.BLOCK : PB.h.ITEM)
-          }))), JB = await
-          function(BB, OB, GB, YB, DB, QB) {
-            return (0, zB.d)((oB => oB.WasmTextureWorker.generateRequired(BB, OB, GB, YB, DB, QB)))
-          }(BB, QB, jB, NB === YB.e, GB, pB), lB = JB.assets;
-          UB = {
-            ...lB,
+            blockMetadata: ee,
+            getDefaultTexture: ie,
+            textureNameToIndex: Me
+          } = await (0, be.k)(), Ue = (0, oe.e)(ee, ((ee, He) => ({
+            url: ze(Te, ie, ee, "block" === He ? Re.f.BLOCK : Re.f.ITEM)
+          }))), Je = await
+          function(ee, ie, He, ye, be, Me) {
+            return (0, ke.c)((Ke => Ke.WasmTextureWorker.generateRequired(ee, ie, He, ye, be, Me)))
+          }(ee, Me, Ue, Xe === ye.b, He, fe), qe = Je.assets;
+          We = {
+            ...qe,
             averageColors: {}
-          }, SB = JB.averageColors(), AB && (nB = SB.then((async BB => {
-            null !== BB && ZB === VB && await
-            function(BB, OB, GB, YB, DB) {
-              return (0, oB.s)(yB(BB, OB, YB, DB), GB)
-            }(NB, WB, {
-              ...lB,
-              averageColors: BB
-            }, pB, JB.layerCap)
+          }, Oe = Je.averageColors(), Ee && (de = Oe.then((async ee => {
+            null !== ee && pe === ge && await
+            function(ee, ie, He, ye, be) {
+              return (0, Ke.p)(Fe(ee, ie, ye, be), He)
+            }(Xe, Be, {
+              ...qe,
+              averageColors: ee
+            }, fe, Je.layerCap)
           })))
         }
-        return function(BB, OB) {
-          var GB, YB;
-          let DB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((jB = BB.averageColors, 0 === Object.keys(null !== jB && void 0 !== jB ? jB : {}).length ? null : BB.averageColors)),
-            oB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var jB;
-          const yB = null !== (GB = OB.textureOverrides) && void 0 !== GB ? GB : {},
-            MB = null !== (YB = OB.modelOverrides) && void 0 !== YB ? YB : {},
-            PB = 0 === Object.keys(MB).length ? {} : (0, QB.refusedPackModels)((0, QB.packDisplayName)(OB.metaData), MB, !0, {
+        return function(ee, ie) {
+          var He, ye;
+          let be = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((Ue = ee.averageColors, 0 === Object.keys(null !== Ue && void 0 !== Ue ? Ue : {}).length ? null : ee.averageColors)),
+            Ke = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var Ue;
+          const Fe = null !== (He = ie.textureOverrides) && void 0 !== He ? He : {},
+            oe = null !== (ye = ie.modelOverrides) && void 0 !== ye ? ye : {},
+            Re = 0 === Object.keys(oe).length ? {} : (0, Me.refusedPackModels)((0, Me.packDisplayName)(ie.metaData), oe, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: zB,
-              rotatedBlockTextures: lB
-            } = BB,
-            pB = BB => {
-              var OB, GB;
-              return null !== (OB = null !== (GB = zB[BB]) && void 0 !== GB ? GB : lB[BB]) && void 0 !== OB ? OB : null
+              animatedBlockTextures: ke,
+              rotatedBlockTextures: qe
+            } = ee,
+            fe = ee => {
+              var ie, He;
+              return null !== (ie = null !== (He = ke[ee]) && void 0 !== He ? He : qe[ee]) && void 0 !== ie ? ie : null
             };
           return {
             terrain: {
-              atlasSheets: BB.blockAtlasArr,
-              texture: pB
+              atlasSheets: ee.blockAtlasArr,
+              texture: fe
             },
-            sheetPixels: [...BB.blockAtlasPixels],
-            heldUntil: oB,
-            sheetLayout: BB.imagesPerAtlas,
-            sheetWidth: BB.blockAtlasWidth,
-            armourAtlasUrl: BB.armourAtlas,
-            texture: BB => {
-              var OB, GB;
-              return null !== (OB = null !== (GB = pB(BB)) && void 0 !== GB ? GB : (0, JB.d)(yB, BB)) && void 0 !== OB ? OB : null
+            sheetPixels: [...ee.blockAtlasPixels],
+            heldUntil: Ke,
+            sheetLayout: ee.imagesPerAtlas,
+            sheetWidth: ee.blockAtlasWidth,
+            armourAtlasUrl: ee.armourAtlas,
+            texture: ee => {
+              var ie, He;
+              return null !== (ie = null !== (He = fe(ee)) && void 0 !== He ? He : (0, Je.b)(Fe, ee)) && void 0 !== ie ? ie : null
             },
-            model: BB => void 0 === PB[BB] && MB[BB] || null,
-            averageColours: DB
+            model: ee => void 0 === Re[ee] && oe[ee] || null,
+            averageColours: be
           }
-        }(UB, BB, SB, nB)
-      }(NB, null === BB.gameSource, GB), AB = {
-        pack: BB.pack,
-        maxLayerWidth: GB,
-        assets: WB
+        }(We, ee, Oe, de)
+      }(Xe, null === ee.gameSource, He), Ee = {
+        pack: ee.pack,
+        maxLayerWidth: He,
+        assets: Be
       };
-      return qB = AB, WB.catch((() => {
-        qB === AB && (qB = null)
-      })), WB
+      return Te = Ee, Be.catch((() => {
+        Te === Ee && (Te = null)
+      })), Be
     }
 
-    function RB(BB, OB, YB, DB) {
-      const QB = (0, JB.d)(BB, YB);
-      if (QB) return QB;
+    function ze(ee, ie, ye, be) {
+      const Me = (0, Je.b)(ee, ye);
+      if (Me) return Me;
       try {
-        return OB(YB, DB).url
+        return ie(ye, be).url
       } catch {
-        return GB(3726)
+        return He(3629)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

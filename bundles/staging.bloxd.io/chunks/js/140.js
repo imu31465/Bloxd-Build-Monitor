@@ -1,107 +1,107 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7081: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => ZB
+  7184: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => pe
     });
-    var YB = GB(1571),
-      DB = GB(1606),
-      QB = GB(3370),
-      oB = GB(2454),
-      jB = GB(1485),
-      yB = GB(1560),
-      JB = GB(1112),
-      MB = GB(56),
-      PB = GB(1383),
-      zB = GB(1282);
+    var ye = He(1515),
+      be = He(1553),
+      Me = He(3259),
+      Ke = He(2337),
+      Ue = He(1438),
+      Fe = He(1502),
+      Je = He(1075),
+      oe = He(59),
+      Re = He(1323),
+      ke = He(1228);
 
-    function lB(BB) {
+    function qe(ee) {
       let {
-        iconName: OB,
-        iconCountPerGroup: GB,
-        animation: YB,
-        midShowerStart: DB = !1,
-        customClass: QB
-      } = BB;
-      const [oB, jB] = (0, MB.useState)({});
-      return (0, MB.useEffect)((() => {
-        const BB = {};
-        for (const OB of Array.from(Array(3).keys())) {
-          BB[OB] = [];
-          for (let YB = 0; YB < GB; YB++) BB[OB].push({
+        iconName: ie,
+        iconCountPerGroup: He,
+        animation: ye,
+        midShowerStart: be = !1,
+        customClass: Me
+      } = ee;
+      const [Ke, Ue] = (0, oe.useState)({});
+      return (0, oe.useEffect)((() => {
+        const ee = {};
+        for (const ie of Array.from(Array(3).keys())) {
+          ee[ie] = [];
+          for (let ye = 0; ye < He; ye++) ee[ie].push({
             left: 100 * Math.random() + "%",
-            animationDelay: 20 * Math.random() * (DB ? -1 : 1) + "s"
+            animationDelay: 20 * Math.random() * (be ? -1 : 1) + "s"
           })
         }
-        jB(BB)
-      }), [GB, DB]), (0, zB.jsx)("div", {
-        className: `IconShower IconShowerAnimation${YB} ${null!==QB&&void 0!==QB?QB:""}`,
-        children: Object.keys(oB).map((BB => oB[BB].map((GB => (0, zB.jsx)("div", {
-          className: `Icon IconGroup${BB}`,
+        Ue(ee)
+      }), [He, be]), (0, ke.jsx)("div", {
+        className: `IconShower IconShowerAnimation${ye} ${null!==Me&&void 0!==Me?Me:""}`,
+        children: Object.keys(Ke).map((ee => Ke[ee].map((He => (0, ke.jsx)("div", {
+          className: `Icon IconGroup${ee}`,
           style: {
-            left: GB.left,
-            animationDelay: GB.animationDelay
+            left: He.left,
+            animationDelay: He.animationDelay
           },
-          children: (0, zB.jsx)(PB.b, {
-            name: OB
+          children: (0, ke.jsx)(Re.e, {
+            name: ie
           })
-        }, GB.left)))))
+        }, He.left)))))
       })
     }
-    var pB = GB(1175),
-      qB = GB(2516);
+    var fe = He(1127),
+      Te = He(2397);
 
-    function ZB() {
-      var BB;
+    function pe() {
+      var ee;
       const {
-        t: OB
-      } = (0, pB.H)(), {
-        pack: GB
-      } = (0, YB.A)(), {
-        userContext: MB
-      } = (0, JB.d)();
-      if (GB) {
-        const BB = DB.d[GB];
-        if (null === BB || void 0 === BB || !BB.purchasable) return (0, zB.jsx)(yB.NavigatePreserveSearch, {
+        t: ie
+      } = (0, fe.v)(), {
+        pack: He
+      } = (0, ye.B)(), {
+        userContext: oe
+      } = (0, Je.b)();
+      if (He) {
+        const ee = be.b[He];
+        if (null === ee || void 0 === ee || !ee.purchasable) return (0, ke.jsx)(Fe.NavigatePreserveSearch, {
           to: "/"
         })
       }
-      const ZB = GB ? DB.d[GB] : null,
-        NB = GB ? QB.k[(0, oB.l)(GB)] : null,
-        RB = void 0 !== (null === ZB || void 0 === ZB ? void 0 : ZB.characterSet) || null !== ZB && void 0 !== ZB && ZB.singleItem ? ZB.displayName : `${null!==(BB=null===ZB||void 0===ZB?void 0:ZB.displayName)&&void 0!==BB?BB:GB} Pack`,
-        WB = Date.now(),
-        AB = OB((0, qB.u)(WB).nameKey),
-        VB = ZB ? `Your ${RB} is Ready!` : `Welcome To ${AB}!`,
-        SB = ZB ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
-        nB = ZB ? !MB.getOwnedCosmeticPacks().includes(GB) : !(0, qB.k)(MB.getPlayerRanks(), WB),
-        UB = ZB ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : `You should get ${AB} instantly, but it could take up to an hour to apply. If you don't have ${AB} after an hour, contact help@bloxd.io.`;
-      return (0, zB.jsxs)("div", {
+      const pe = He ? be.b[He] : null,
+        Xe = He ? Me.l[(0, Ke.k)(He)] : null,
+        ze = void 0 !== (null === pe || void 0 === pe ? void 0 : pe.characterSet) || null !== pe && void 0 !== pe && pe.singleItem ? pe.displayName : `${null!==(ee=null===pe||void 0===pe?void 0:pe.displayName)&&void 0!==ee?ee:He} Pack`,
+        Be = Date.now(),
+        Ee = ie((0, Te.n)(Be).nameKey),
+        ge = pe ? `Your ${ze} is Ready!` : `Welcome To ${Ee}!`,
+        Oe = pe ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
+        de = pe ? !oe.getOwnedCosmeticPacks().includes(He) : !(0, Te.j)(oe.getPlayerRanks(), Be),
+        We = pe ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : `You should get ${Ee} instantly, but it could take up to an hour to apply. If you don't have ${Ee} after an hour, contact help@bloxd.io.`;
+      return (0, ke.jsxs)("div", {
         className: "PurchaseWelcome AnimFadeInScaleUp",
-        children: [NB && (0, zB.jsx)(NB, {}), !ZB && (0, zB.jsx)(lB, {
+        children: [Xe && (0, ke.jsx)(Xe, {}), !pe && (0, ke.jsx)(qe, {
           iconName: "bolt",
           iconCountPerGroup: 10,
           animation: "Fall",
           midShowerStart: !0,
           customClass: "SuperRankWelcomeIconShower"
-        }), (0, zB.jsx)("div", {
+        }), (0, ke.jsx)("div", {
           className: "PurchaseWelcomeTitle FullyFancyText",
-          children: VB
-        }), (0, zB.jsx)("div", {
+          children: ge
+        }), (0, ke.jsx)("div", {
           className: "PurchaseWelcomeText",
-          children: SB
-        }), nB && (0, zB.jsxs)("div", {
+          children: Oe
+        }), de && (0, ke.jsxs)("div", {
           className: "PurchaseWelcomeWarning",
-          children: [(0, zB.jsx)(PB.b, {
+          children: [(0, ke.jsx)(Re.e, {
             name: "circle-info"
-          }), (0, zB.jsx)("div", {
-            children: UB
+          }), (0, ke.jsx)("div", {
+            children: We
           })]
-        }), (0, zB.jsx)(yB.LinkPreserveSearch, {
+        }), (0, ke.jsx)(Fe.LinkPreserveSearch, {
           to: "/",
-          children: (0, zB.jsx)(jB.q, {
+          children: (0, ke.jsx)(Ue.m, {
             className: "PurchaseWelcomeContinue",
-            children: OB("general:continue")
+            children: ie("general:continue")
           })
         })]
       })
@@ -109,4 +109,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

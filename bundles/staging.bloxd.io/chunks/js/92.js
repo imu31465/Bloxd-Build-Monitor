@@ -1,272 +1,272 @@
 export const id = 92;
 export const ids = [92, 108];
 export const modules = {
-    5326: (BB, OB, GB) => {
-      GB.d(OB, {
-        e: () => ZB,
-        i: () => NB
+    5311: (ee, ie, He) => {
+      He.d(ie, {
+        d: () => pe,
+        e: () => Xe
       });
-      var YB = GB(1090),
-        DB = GB.n(YB),
-        QB = GB(56),
-        oB = GB(1175),
-        jB = GB(5335),
-        yB = GB(2e3),
-        JB = GB(2653),
-        MB = GB(5337),
-        PB = GB(1282);
-      const zB = new WeakMap;
-      let lB = 0;
+      var ye = He(1053),
+        be = He.n(ye),
+        Me = He(59),
+        Ke = He(1127),
+        Ue = He(5317),
+        Fe = He(1956),
+        Je = He(2532),
+        oe = He(5319),
+        Re = He(1228);
+      const ke = new WeakMap;
+      let qe = 0;
 
-      function pB(BB) {
-        let OB = zB.get(BB);
-        return void 0 === OB && (OB = lB++, zB.set(BB, OB)), OB
+      function fe(ee) {
+        let ie = ke.get(ee);
+        return void 0 === ie && (ie = qe++, ke.set(ee, ie)), ie
       }
 
-      function qB(BB) {
+      function Te(ee) {
         let {
-          piece: OB
-        } = BB;
-        return "space" === OB.kind ? (0, PB.jsx)(PB.Fragment, {
-          children: OB.text
-        }) : (0, PB.jsx)("span", {
+          piece: ie
+        } = ee;
+        return "space" === ie.kind ? (0, Re.jsx)(Re.Fragment, {
+          children: ie.text
+        }) : (0, Re.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${OB.delayMs}ms`
+            "--word-delay": `${ie.delayMs}ms`
           },
-          children: (0, PB.jsx)(jB.c, {
-            text: "icon" === OB.kind ? `[[${OB.icon}]]` : OB.text
+          children: (0, Re.jsx)(Ue.c, {
+            text: "icon" === ie.kind ? `[[${ie.icon}]]` : ie.text
           })
         })
       }
 
-      function ZB(BB) {
+      function pe(ee) {
         let {
-          display: OB
-        } = BB;
+          display: ie
+        } = ee;
         const {
-          selectedLanguage: GB
-        } = (0, oB.H)(), YB = (0, QB.useMemo)((() => (0, MB.b)((0, MB.c)(OB).plan.pieces)), [OB, GB.code]);
-        return (0, PB.jsxs)("div", {
-          className: DB()("Dialogue", {
-            DialogueAnimateIn: !1 !== OB.animateIn
+          selectedLanguage: He
+        } = (0, Ke.v)(), ye = (0, Me.useMemo)((() => (0, oe.e)((0, oe.g)(ie).plan.pieces)), [ie, He.code]);
+        return (0, Re.jsxs)("div", {
+          className: be()("Dialogue", {
+            DialogueAnimateIn: !1 !== ie.animateIn
           }),
-          children: [OB.speakerName && (0, PB.jsx)(yB.b, {
-            text: OB.speakerName,
+          children: [ie.speakerName && (0, Re.jsx)(Fe.e, {
+            text: ie.speakerName,
             className: "DialogueSpeaker"
-          }), (0, PB.jsx)("p", {
+          }), (0, Re.jsx)("p", {
             className: "DialogueLine",
-            children: YB.map(((BB, OB) => 1 === BB.length && "space" === BB[0].kind ? BB[0].text : (0, PB.jsx)("span", {
+            children: ye.map(((ee, ie) => 1 === ee.length && "space" === ee[0].kind ? ee[0].text : (0, Re.jsx)("span", {
               className: "DialogueGlue",
-              children: BB.map(((BB, OB) => (0, PB.jsx)(qB, {
-                piece: BB
-              }, OB)))
-            }, OB)))
+              children: ee.map(((ee, ie) => (0, Re.jsx)(Te, {
+                piece: ee
+              }, ie)))
+            }, ie)))
           })]
         })
       }
-      const NB = (0, QB.memo)((function() {
-        const BB = (0, JB.g)("dialogue");
-        return (0, PB.jsx)("div", {
+      const Xe = (0, Me.memo)((function() {
+        const ee = (0, Je.i)("dialogue");
+        return (0, Re.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: BB && (0, PB.jsx)(ZB, {
-            display: BB
-          }, pB(BB))
+          children: ee && (0, Re.jsx)(pe, {
+            display: ee
+          }, fe(ee))
         })
       }))
     },
-    5203: (BB, OB, GB) => {
-        GB.r(OB), GB.d(OB, {
-          default: () => tQ
+    5191: (ee, ie, He) => {
+        He.r(ie), He.d(ie, {
+          default: () => iK
         });
-        var YB = GB(56),
-          DB = GB(1090),
-          QB = GB.n(DB),
-          oB = GB(1566),
-          jB = GB(1571),
-          yB = GB(16),
-          JB = GB(70),
-          MB = GB(5207),
-          PB = GB(5217),
-          zB = GB(5224),
-          lB = GB(4773),
-          pB = GB(1282);
-        const qB = "/textures/docs/icons";
+        var ye = He(59),
+          be = He(1053),
+          Me = He.n(be),
+          Ke = He(1511),
+          Ue = He(1515),
+          Fe = He(18),
+          Je = He(77),
+          oe = He(5198),
+          Re = He(5209),
+          ke = He(5212),
+          qe = He(4721),
+          fe = He(1228);
+        const Te = "/textures/docs/icons";
 
-        function ZB(BB) {
+        function pe(ee) {
           let {
-            name: OB,
-            isTinted: GB,
-            className: YB,
-            style: DB
-          } = BB;
-          const oB = `${qB}/${OB}.png`;
-          return GB ? (0, pB.jsxs)("span", {
-            className: QB()("DocsPixelIcon", "Tinted", YB),
+            name: ie,
+            isTinted: He,
+            className: ye,
+            style: be
+          } = ee;
+          const Ke = `${Te}/${ie}.png`;
+          return He ? (0, fe.jsxs)("span", {
+            className: Me()("DocsPixelIcon", "Tinted", ye),
             "aria-hidden": "true",
-            style: DB,
-            children: [(0, pB.jsx)("span", {
+            style: be,
+            children: [(0, fe.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${oB}")`,
-                WebkitMaskImage: `url("${oB}")`
+                maskImage: `url("${Ke}")`,
+                WebkitMaskImage: `url("${Ke}")`
               }
-            }), (0, pB.jsx)("img", {
-              src: oB,
+            }), (0, fe.jsx)("img", {
+              src: Ke,
               alt: ""
             })]
-          }) : (0, pB.jsx)("img", {
-            className: QB()("DocsPixelIcon", YB),
-            src: oB,
+          }) : (0, fe.jsx)("img", {
+            className: Me()("DocsPixelIcon", ye),
+            src: Ke,
             alt: "",
             "aria-hidden": "true",
-            style: DB
+            style: be
           })
         }
-        const NB = 1500;
+        const Xe = 1500;
 
-        function RB() {
-          const [BB, OB] = (0, YB.useState)(null);
-          (0, YB.useEffect)((() => {
-            if (null === BB) return;
-            const GB = setTimeout((() => {
-              OB(null)
-            }), NB);
+        function ze() {
+          const [ee, ie] = (0, ye.useState)(null);
+          (0, ye.useEffect)((() => {
+            if (null === ee) return;
+            const He = setTimeout((() => {
+              ie(null)
+            }), Xe);
             return () => {
-              clearTimeout(GB)
+              clearTimeout(He)
             }
-          }), [BB]);
-          return [BB, BB => {
-            (0, lB.b)(BB).then((() => {
-              OB({
-                text: BB,
+          }), [ee]);
+          return [ee, ee => {
+            (0, qe.e)(ee).then((() => {
+              ie({
+                text: ee,
                 failed: !1
               })
-            }), (GB => {
-              console.error("Could not copy to the clipboard", GB), OB({
-                text: BB,
+            }), (He => {
+              console.error("Could not copy to the clipboard", He), ie({
+                text: ee,
                 failed: !0
               })
             }))
           }]
         }
 
-        function WB(BB) {
+        function Be(ee) {
           let {
-            text: OB,
-            label: GB,
-            className: YB
-          } = BB;
-          const [DB, oB] = RB(), jB = !1 === (null === DB || void 0 === DB ? void 0 : DB.failed);
-          return (0, pB.jsxs)("button", {
+            text: ie,
+            label: He,
+            className: ye
+          } = ee;
+          const [be, Ke] = ze(), Ue = !1 === (null === be || void 0 === be ? void 0 : be.failed);
+          return (0, fe.jsxs)("button", {
             type: "button",
-            className: QB()("DocsCopyButton", YB, {
-              Copied: jB
+            className: Me()("DocsCopyButton", ye, {
+              Copied: Ue
             }),
             title: "Copy to clipboard",
-            "aria-label": GB ? void 0 : `Copy ${OB}`,
-            onClick: BB => {
-              BB.stopPropagation(), oB(OB)
+            "aria-label": He ? void 0 : `Copy ${ie}`,
+            onClick: ee => {
+              ee.stopPropagation(), Ke(ie)
             },
-            children: [(0, pB.jsx)(ZB, {
-              name: jB ? "check" : "copy"
-            }), GB && (0, pB.jsx)("span", {
-              children: jB ? "Copied" : null !== DB && void 0 !== DB && DB.failed ? "Copy failed" : GB
+            children: [(0, fe.jsx)(pe, {
+              name: Ue ? "check" : "copy"
+            }), He && (0, fe.jsx)("span", {
+              children: Ue ? "Copied" : null !== be && void 0 !== be && be.failed ? "Copy failed" : He
             })]
           })
         }
-        MB.d.registerLanguage("javascript", PB.c), MB.d.registerLanguage("typescript", zB.c);
-        const AB = {
+        oe.b.registerLanguage("javascript", Re.b), oe.b.registerLanguage("typescript", ke.b);
+        const Ee = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          VB = {
+          ge = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          SB = 24;
+          Oe = 24;
 
-        function nB(BB) {
+        function de(ee) {
           let {
-            code: OB,
-            lang: GB,
-            compact: DB = !1
-          } = BB;
-          const oB = (0, YB.useMemo)((() => function(BB, OB) {
-              const GB = AB[OB];
-              return GB ? MB.d.highlight(BB, {
-                language: GB
-              }).value : BB.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(OB, GB)), [OB, GB]),
-            jB = OB.split("\n").length,
-            yB = !DB && jB > SB + 6,
-            [JB, PB] = (0, YB.useState)(!1),
-            zB = AB[GB];
-          return (0, pB.jsxs)("div", {
-            className: QB()("DocsCodeBlock", {
-              Compact: DB,
-              Collapsed: yB && !JB
+            code: ie,
+            lang: He,
+            compact: be = !1
+          } = ee;
+          const Ke = (0, ye.useMemo)((() => function(ee, ie) {
+              const He = Ee[ie];
+              return He ? oe.b.highlight(ee, {
+                language: He
+              }).value : ee.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(ie, He)), [ie, He]),
+            Ue = ie.split("\n").length,
+            Fe = !be && Ue > Oe + 6,
+            [Je, Re] = (0, ye.useState)(!1),
+            ke = Ee[He];
+          return (0, fe.jsxs)("div", {
+            className: Me()("DocsCodeBlock", {
+              Compact: be,
+              Collapsed: Fe && !Je
             }),
-            children: [!DB && (0, pB.jsxs)("div", {
+            children: [!be && (0, fe.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, pB.jsx)("span", {
+              children: [(0, fe.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: zB ? VB[zB] : "Text"
-              }), (0, pB.jsx)(WB, {
-                text: OB,
+                children: ke ? ge[ke] : "Text"
+              }), (0, fe.jsx)(Be, {
+                text: ie,
                 label: "Copy"
               })]
-            }), (0, pB.jsx)("pre", {
-              children: (0, pB.jsx)("code", {
+            }), (0, fe.jsx)("pre", {
+              children: (0, fe.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: oB
+                  __html: Ke
                 }
               })
-            }), yB && (0, pB.jsxs)("button", {
+            }), Fe && (0, fe.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": JB,
+              "aria-expanded": Je,
               onClick: () => {
-                PB(!JB)
+                Re(!Je)
               },
-              children: [(0, pB.jsx)(ZB, {
-                name: JB ? "chevron-up" : "chevron-down"
-              }), JB ? "Show less" : `Show all ${jB} lines`]
+              children: [(0, fe.jsx)(pe, {
+                name: Je ? "chevron-up" : "chevron-down"
+              }), Je ? "Show less" : `Show all ${Ue} lines`]
             })]
           })
         }
-        var UB = GB(5228);
-        var fB = GB(5234);
-        const kB = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var We = He(5220);
+        var te = He(5222);
+        const Ze = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function dB(BB) {
-          const OB = new Map;
-          let GB, YB = [],
-            DB = !1;
-          const QB = () => {
-            GB && OB.set(GB.name, GB.lines.join("\n").trimEnd())
+        function we(ee) {
+          const ie = new Map;
+          let He, ye = [],
+            be = !1;
+          const Me = () => {
+            He && ie.set(He.name, He.lines.join("\n").trimEnd())
           };
-          for (const oB of BB.split("\n")) {
-            const BB = oB.match(kB);
-            DB || oB.startsWith("/*") ? (DB || (QB(), GB = void 0), YB.push(oB), DB = !oB.includes("*/")) : BB ? (QB(), GB = {
-              name: BB[1],
-              lines: [...YB, oB]
-            }, YB = []) : GB && (oB.startsWith(" ") || oB.startsWith("\t") || /^[}\])|]/.test(oB)) ? GB.lines.push(oB) : GB && "" !== oB.trim() && (QB(), GB = void 0)
+          for (const Ke of ee.split("\n")) {
+            const ee = Ke.match(Ze);
+            be || Ke.startsWith("/*") ? (be || (Me(), He = void 0), ye.push(Ke), be = !Ke.includes("*/")) : ee ? (Me(), He = {
+              name: ee[1],
+              lines: [...ye, Ke]
+            }, ye = []) : He && (Ke.startsWith(" ") || Ke.startsWith("\t") || /^[}\])|]/.test(Ke)) ? He.lines.push(Ke) : He && "" !== Ke.trim() && (Me(), He = void 0)
           }
-          return QB(), OB
+          return Me(), ie
         }
 
-        function KB(BB) {
-          return "methods" === BB || "callbacks" === BB || "settings" === BB
+        function De(ee) {
+          return "methods" === ee || "callbacks" === ee || "settings" === ee
         }
-        const uB = {
+        const Pe = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (BB, OB) => `api.setClientOption(playerId, "${BB}", ${OB})`
+              setterSnippet: (ee, ie) => `api.setClientOption(playerId, "${ee}", ${ie})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (BB, OB) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${BB}", ${OB})`
+              setterSnippet: (ee, ie) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${ee}", ${ie})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (BB, OB) => `api.setMobSetting(mobId, "${BB}", ${OB})`
+              setterSnippet: (ee, ie) => `api.setMobSetting(mobId, "${ee}", ${ie})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (BB, OB) => `api.setVehicleSetting(vehicleId, "${BB}", ${OB})`
+              setterSnippet: (ee, ie) => `api.setVehicleSetting(vehicleId, "${ee}", ${ie})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          mB = {
+          Ae = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function IB(BB) {
-          return BB.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function Ye(ee) {
+          return ee.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function FB(BB) {
-          let OB = !1;
-          return BB.split("\n").map((BB => (BB.startsWith("```") && (OB = !OB), !OB && /^#{3,} /.test(BB) ? BB.slice(1) : BB))).join("\n")
+        function Ve(ee) {
+          let ie = !1;
+          return ee.split("\n").map((ee => (ee.startsWith("```") && (ie = !ie), !ie && /^#{3,} /.test(ee) ? ee.slice(1) : ee))).join("\n")
         }
 
-        function iB(BB) {
-          return "readme" === BB ? "getting-started" : IB(BB)
+        function ae(ee) {
+          return "readme" === ee ? "getting-started" : Ye(ee)
         }
-        const LB = "## Glossary of Referenced Types";
-        const gB = [{
+        const ce = "## Glossary of Referenced Types";
+        const xe = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...fB.b.flatMap((BB => {
-            const OB = {
-              id: BB.id,
-              slug: iB(BB.id),
-              title: BB.title,
-              markdown: BB.content,
-              ...uB[BB.id]
+          }, ...te.c.flatMap((ee => {
+            const ie = {
+              id: ee.id,
+              slug: ae(ee.id),
+              title: ee.title,
+              markdown: ee.content,
+              ...Pe[ee.id]
             };
-            if ("readme" === BB.id) return function(BB) {
-              const OB = BB.markdown.indexOf(LB),
-                GB = BB.markdown.indexOf("\n```", OB),
-                YB = BB.markdown.indexOf("\n```", GB + 1);
-              if (-1 === OB || -1 === GB || -1 === YB) throw new Error(`Getting started has no "${LB}" section with a code block`);
-              const DB = BB.markdown.slice(OB + 31, GB).trim(),
-                QB = [...dB(BB.markdown.slice(BB.markdown.indexOf("\n", GB + 1) + 1, YB))].map((BB => {
-                  let [OB, GB] = BB;
-                  return `## ${OB}\n\n\`\`\`ts\n${GB}\n\`\`\`\n`
+            if ("readme" === ee.id) return function(ee) {
+              const ie = ee.markdown.indexOf(ce),
+                He = ee.markdown.indexOf("\n```", ie),
+                ye = ee.markdown.indexOf("\n```", He + 1);
+              if (-1 === ie || -1 === He || -1 === ye) throw new Error(`Getting started has no "${ce}" section with a code block`);
+              const be = ee.markdown.slice(ie + 31, He).trim(),
+                Me = [...we(ee.markdown.slice(ee.markdown.indexOf("\n", He + 1) + 1, ye))].map((ee => {
+                  let [ie, He] = ee;
+                  return `## ${ie}\n\n\`\`\`ts\n${He}\n\`\`\`\n`
                 })),
-                oB = BB.markdown.slice(BB.markdown.indexOf("\n", YB + 1) + 1);
+                Ke = ee.markdown.slice(ee.markdown.indexOf("\n", ye + 1) + 1);
               return [{
-                ...BB,
-                markdown: `${BB.markdown.slice(0,OB)}${oB}`
+                ...ee,
+                markdown: `${ee.markdown.slice(0,ie)}${Ke}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${DB}\n\n${QB.join("\n")}`
+                markdown: `# Types\n\n${be}\n\n${Me.join("\n")}`
               }]
-            }(OB);
-            if ("howTo" === BB.id) {
+            }(ie);
+            if ("howTo" === ee.id) {
               const {
-                parent: BB,
-                guides: GB
-              } = function(BB) {
-                const [OB, ...GB] = BB.markdown.split(/^(?=## )/m), YB = [OB], DB = [];
-                for (const oB of GB) {
-                  var QB;
-                  const OB = oB.indexOf("\n"),
-                    GB = oB.slice(3, OB).trim(),
-                    jB = oB.slice(OB + 1);
-                  if (!jB.includes("```")) {
-                    YB.push(oB);
+                parent: ee,
+                guides: He
+              } = function(ee) {
+                const [ie, ...He] = ee.markdown.split(/^(?=## )/m), ye = [ie], be = [];
+                for (const Ke of He) {
+                  var Me;
+                  const ie = Ke.indexOf("\n"),
+                    He = Ke.slice(3, ie).trim(),
+                    Ue = Ke.slice(ie + 1);
+                  if (!Ue.includes("```")) {
+                    ye.push(Ke);
                     continue
                   }
-                  const yB = null !== (QB = mB[GB]) && void 0 !== QB ? QB : {
+                  const Fe = null !== (Me = Ae[He]) && void 0 !== Me ? Me : {
                     icon: "lightbulb",
-                    summary: `How to use ${GB.toLowerCase()} in World Code.`
+                    summary: `How to use ${He.toLowerCase()} in World Code.`
                   };
-                  DB.push({
-                    id: `${BB.id}${GB.split(/[^A-Za-z0-9]+/).map((BB=>BB.charAt(0).toUpperCase()+BB.slice(1))).join("")}`,
-                    slug: `${BB.slug}-${IB(GB)}`,
-                    title: GB,
+                  be.push({
+                    id: `${ee.id}${He.split(/[^A-Za-z0-9]+/).map((ee=>ee.charAt(0).toUpperCase()+ee.slice(1))).join("")}`,
+                    slug: `${ee.slug}-${Ye(He)}`,
+                    title: He,
                     layout: "article",
-                    sourceAnchor: (0, UB.s)(GB),
-                    markdown: `# ${GB}\n\n${FB(jB)}`,
-                    ...yB
+                    sourceAnchor: (0, We.t)(He),
+                    markdown: `# ${He}\n\n${Ve(Ue)}`,
+                    ...Fe
                   })
                 }
                 return {
                   parent: {
-                    ...BB,
-                    markdown: YB.join(""),
-                    childPageIds: DB.map((BB => BB.id))
+                    ...ee,
+                    markdown: ye.join(""),
+                    childPageIds: be.map((ee => ee.id))
                   },
-                  guides: DB
+                  guides: be
                 }
-              }(OB);
-              return [BB, ...GB]
+              }(ie);
+              return [ee, ...He]
             }
-            return [OB]
+            return [ie]
           }))],
-          rB = [{
+          Le = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...gB.filter((BB => void 0 !== BB.sourceAnchor)).map((BB => BB.id))]
+            pageIds: ["howTo", ...xe.filter((ee => void 0 !== ee.sourceAnchor)).map((ee => ee.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function XB(BB) {
-          return gB.find((OB => OB.id === BB))
+        function Ce(ee) {
+          return xe.find((ie => ie.id === ee))
         }
-        const wB = new Map;
+        const ve = new Map;
 
-        function EB(BB) {
-          let OB = wB.get(BB.id);
-          return OB || (OB = (0, UB.u)(BB.markdown, "changelog" === BB.layout ? 3 : 2), wB.set(BB.id, OB)), OB
-        }
-
-        function cB(BB, OB) {
-          return EB(BB).sections.some((BB => BB.heading.anchor === OB || BB.blocks.some((BB => "heading" === BB.kind && BB.anchor === OB))))
+        function ue(ee) {
+          let ie = ve.get(ee.id);
+          return ie || (ie = (0, We.y)(ee.markdown, "changelog" === ee.layout ? 3 : 2), ve.set(ee.id, ie)), ie
         }
 
-        function hB(BB) {
-          const [OB, ...GB] = BB.replace(/^#/, "").split("-"), YB = gB.find((BB => BB.id === OB));
-          if (!YB) return null;
-          const DB = GB.length > 0 ? (0, UB.s)(GB.join("-")) : "";
-          for (const oB of null !== (QB = YB.childPageIds) && void 0 !== QB ? QB : []) {
-            var QB;
-            const BB = XB(oB);
-            if (BB.sourceAnchor === DB) return {
-              page: BB,
+        function me(ee, ie) {
+          return ue(ee).sections.some((ee => ee.heading.anchor === ie || ee.blocks.some((ee => "heading" === ee.kind && ee.anchor === ie))))
+        }
+
+        function le(ee) {
+          const [ie, ...He] = ee.replace(/^#/, "").split("-"), ye = xe.find((ee => ee.id === ie));
+          if (!ye) return null;
+          const be = He.length > 0 ? (0, We.t)(He.join("-")) : "";
+          for (const Ke of null !== (Me = ye.childPageIds) && void 0 !== Me ? Me : []) {
+            var Me;
+            const ee = Ce(Ke);
+            if (ee.sourceAnchor === be) return {
+              page: ee,
               anchor: ""
             };
-            if (cB(BB, DB)) return {
-              page: BB,
-              anchor: DB
+            if (me(ee, be)) return {
+              page: ee,
+              anchor: be
             }
           }
           return {
-            page: YB,
-            anchor: DB
+            page: ye,
+            anchor: be
           }
         }
-        const aB = {
+        const Se = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function eB(BB, OB) {
-          let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const YB = OB.slug ? `${BB}/${OB.slug}` : BB;
-          return GB ? `${YB}#${GB}` : YB
+        function ne(ee, ie) {
+          let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const ye = ie.slug ? `${ee}/${ie.slug}` : ee;
+          return He ? `${ye}#${He}` : ye
         }
-        var TB = GB(5253);
-        const bB = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          CB = new Set(["GameApi", "Console", "_TypeOf"]),
-          HB = 4;
+        var je = He(5239);
+        const se = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          Ie = new Set(["GameApi", "Console", "_TypeOf"]),
+          he = 4;
 
-        function vB(BB) {
-          let OB = BB.length;
-          for (; OB > 0 && "" === BB[OB - 1].trim();) OB--;
-          return BB.slice(0, OB)
+        function Ne(ee) {
+          let ie = ee.length;
+          for (; ie > 0 && "" === ee[ie - 1].trim();) ie--;
+          return ee.slice(0, ie)
         }
 
-        function sB(BB) {
-          var OB;
-          const GB = vB(BB);
-          if (null === (OB = GB.at(-1)) || void 0 === OB || !OB.trimEnd().endsWith("*/")) return {
-            lines: GB,
+        function Ge(ee) {
+          var ie;
+          const He = Ne(ee);
+          if (null === (ie = He.at(-1)) || void 0 === ie || !ie.trimEnd().endsWith("*/")) return {
+            lines: He,
             doc: ""
           };
-          const YB = GB.findLastIndex((BB => BB.startsWith("/**")));
-          return -1 === YB ? {
-            lines: GB,
+          const ye = He.findLastIndex((ee => ee.startsWith("/**")));
+          return -1 === ye ? {
+            lines: He,
             doc: ""
           } : {
-            lines: vB(GB.slice(0, YB)),
-            doc: GB.slice(YB).join("\n")
+            lines: Ne(He.slice(0, ye)),
+            doc: He.slice(ye).join("\n")
           }
         }
 
-        function xB(BB) {
-          var OB;
-          const GB = BB.split("\n"),
-            YB = GB.flatMap(((BB, OB) => bB.test(BB) ? [OB] : []));
-          let DB = sB(GB.slice(0, null !== (OB = YB[0]) && void 0 !== OB ? OB : GB.length)).doc;
-          return YB.map(((BB, OB) => {
-            var QB;
-            const oB = sB(GB.slice(BB, null !== (QB = YB[OB + 1]) && void 0 !== QB ? QB : GB.length)),
-              jB = {
-                name: GB[BB].match(bB)[1],
-                doc: DB,
-                lines: oB.lines
+        function re(ee) {
+          var ie;
+          const He = ee.split("\n"),
+            ye = He.flatMap(((ee, ie) => se.test(ee) ? [ie] : []));
+          let be = Ge(He.slice(0, null !== (ie = ye[0]) && void 0 !== ie ? ie : He.length)).doc;
+          return ye.map(((ee, ie) => {
+            var Me;
+            const Ke = Ge(He.slice(ee, null !== (Me = ye[ie + 1]) && void 0 !== Me ? Me : He.length)),
+              Ue = {
+                name: He[ee].match(se)[1],
+                doc: be,
+                lines: Ke.lines
               };
-            return DB = oB.doc, jB
+            return be = Ke.doc, Ue
           }))
         }
 
-        function tB(BB) {
-          var OB;
-          const GB = BB.match(/^readonly \[([\s\S]*)\]$/);
-          return GB ? null !== (OB = GB[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== OB ? OB : [] : null
+        function Qe(ee) {
+          var ie;
+          const He = ee.match(/^readonly \[([\s\S]*)\]$/);
+          return He ? null !== (ie = He[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== ie ? ie : [] : null
         }
 
-        function BO(BB) {
-          if (!BB.startsWith("{") || !BB.endsWith("}")) return null;
-          const OB = {
+        function ei(ee) {
+          if (!ee.startsWith("{") || !ee.endsWith("}")) return null;
+          const ie = {
               keys: [],
               values: []
             },
-            GB = BB => {
-              const GB = BB.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              GB && (OB.keys.push(GB[1].startsWith('"') ? GB[1] : `"${GB[1]}"`), OB.values.push(GB[2].trim()))
+            He = ee => {
+              const He = ee.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              He && (ie.keys.push(He[1].startsWith('"') ? He[1] : `"${He[1]}"`), ie.values.push(He[2].trim()))
             };
-          let YB = 0,
-            DB = "";
-          for (const QB of BB.slice(1, -1)) "{[(".includes(QB) ? YB++ : "}])".includes(QB) && YB--, ";" === QB && 0 === YB ? (GB(DB), DB = "") : DB += QB;
-          return GB(DB), OB
+          let ye = 0,
+            be = "";
+          for (const Me of ee.slice(1, -1)) "{[(".includes(Me) ? ye++ : "}])".includes(Me) && ye--, ";" === Me && 0 === ye ? (He(be), be = "") : be += Me;
+          return He(be), ie
         }
 
-        function OO(BB) {
-          return BB.length > HB ? `\n\t| ${BB.join("\n\t| ")}` : BB.join(" | ")
+        function ii(ee) {
+          return ee.length > he ? `\n\t| ${ee.join("\n\t| ")}` : ee.join(" | ")
         }
 
-        function GO(BB, OB) {
-          const GB = function(BB, OB) {
-            return BB.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((BB, GB) => {
-              var YB;
-              const DB = null === (YB = OB.get(GB)) || void 0 === YB ? void 0 : YB.object;
-              return DB ? OO(DB.values) : BB
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((BB, GB) => {
-              var YB, DB;
-              const QB = null === (YB = OB.get(GB)) || void 0 === YB || null === (DB = YB.object) || void 0 === DB ? void 0 : DB.values.map(tB);
-              return null !== QB && void 0 !== QB && QB.every((BB => null !== BB)) ? OO([...new Set(QB.flat())]) : BB
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((BB, GB) => {
-              var YB;
-              const DB = null === (YB = OB.get(GB)) || void 0 === YB ? void 0 : YB.members;
-              return DB ? OO(DB) : BB
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((BB, GB) => {
-              var YB;
-              const DB = null === (YB = OB.get(GB)) || void 0 === YB ? void 0 : YB.object;
-              return DB ? OO(DB.keys) : BB
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((BB, GB) => {
-              var YB, DB;
-              return null !== (YB = null === (DB = OB.get(GB)) || void 0 === DB ? void 0 : DB.text) && void 0 !== YB ? YB : BB
+        function Hi(ee, ie) {
+          const He = function(ee, ie) {
+            return ee.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((ee, He) => {
+              var ye;
+              const be = null === (ye = ie.get(He)) || void 0 === ye ? void 0 : ye.object;
+              return be ? ii(be.values) : ee
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((ee, He) => {
+              var ye, be;
+              const Me = null === (ye = ie.get(He)) || void 0 === ye || null === (be = ye.object) || void 0 === be ? void 0 : be.values.map(Qe);
+              return null !== Me && void 0 !== Me && Me.every((ee => null !== ee)) ? ii([...new Set(Me.flat())]) : ee
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((ee, He) => {
+              var ye;
+              const be = null === (ye = ie.get(He)) || void 0 === ye ? void 0 : ye.members;
+              return be ? ii(be) : ee
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((ee, He) => {
+              var ye;
+              const be = null === (ye = ie.get(He)) || void 0 === ye ? void 0 : ye.object;
+              return be ? ii(be.keys) : ee
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((ee, He) => {
+              var ye, be;
+              return null !== (ye = null === (be = ie.get(He)) || void 0 === be ? void 0 : be.text) && void 0 !== ye ? ye : ee
             }))
-          }(BB.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), OB);
-          return [BB.doc, GB].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(ee.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), ie);
+          return [ee.doc, He].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function YO(BB) {
-          const OB = xB(BB),
-            GB = function(BB) {
-              const OB = new Map,
-                GB = BB.find((BB => "_TypeOf" === BB.name));
-              let YB = null;
-              const DB = () => {
-                if (YB) {
-                  const BB = YB.lines.join("\n");
-                  OB.set(YB.name, {
-                    text: BB,
-                    members: tB(BB),
-                    object: BO(BB)
+        function yi(ee) {
+          const ie = re(ee),
+            He = function(ee) {
+              const ie = new Map,
+                He = ee.find((ee => "_TypeOf" === ee.name));
+              let ye = null;
+              const be = () => {
+                if (ye) {
+                  const ee = ye.lines.join("\n");
+                  ie.set(ye.name, {
+                    text: ee,
+                    members: Qe(ee),
+                    object: ei(ee)
                   })
                 }
               };
-              for (const QB of GB.lines.slice(1, -1)) {
-                const BB = QB.match(/^\t([\w$]+): (.+)$/);
-                BB ? (DB(), YB = {
-                  name: BB[1],
-                  lines: [BB[2]]
-                }) : YB && YB.lines.push(QB.replace(/^\t/, ""))
+              for (const Me of He.lines.slice(1, -1)) {
+                const ee = Me.match(/^\t([\w$]+): (.+)$/);
+                ee ? (be(), ye = {
+                  name: ee[1],
+                  lines: [ee[2]]
+                }) : ye && ye.lines.push(Me.replace(/^\t/, ""))
               }
-              return DB(), OB
-            }(OB),
-            YB = new Map;
-          for (const DB of OB) CB.has(DB.name) || YB.has(DB.name) || YB.set(DB.name, GO(DB, GB));
-          return YB
+              return be(), ie
+            }(ie),
+            ye = new Map;
+          for (const be of ie) Ie.has(be.name) || ye.has(be.name) || ye.set(be.name, Hi(be, He));
+          return ye
         }
-        let DO, QO, oO;
+        let bi, Mi, Ki;
 
-        function jO() {
-          return QO ??= function(BB) {
-            const OB = xB(BB).find((BB => "GameApi" === BB.name)),
-              GB = new Map,
-              YB = OB.lines;
-            for (let QB = 0; QB < YB.length; QB++) {
-              var DB;
-              if (!YB[QB].trimStart().startsWith("/**")) continue;
-              const BB = QB;
-              for (; QB < YB.length && !YB[QB].includes("*/");) QB++;
-              const OB = null === (DB = YB[QB + 1]) || void 0 === DB ? void 0 : DB.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!OB) continue;
-              let oB = null;
-              const jB = [];
-              let yB = "description",
-                JB = !1;
-              for (const GB of YB.slice(BB, QB + 1).join("\n").split("\n").map((BB => BB.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const BB = GB.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                BB ? (oB = BB[1].trim(), yB = "deprecation") : GB.startsWith("@") ? (yB = "otherTag", JB = !0) : "" === GB.trim() ? JB || (yB = "description", jB.push(GB)) : "deprecation" !== yB || /^[A-Z]/.test(GB.trim()) ? "otherTag" !== yB && (yB = "description", jB.push(GB)) : oB = `${oB} ${GB.trim()}`.trim()
+        function Ui() {
+          return Mi ??= function(ee) {
+            const ie = re(ee).find((ee => "GameApi" === ee.name)),
+              He = new Map,
+              ye = ie.lines;
+            for (let Me = 0; Me < ye.length; Me++) {
+              var be;
+              if (!ye[Me].trimStart().startsWith("/**")) continue;
+              const ee = Me;
+              for (; Me < ye.length && !ye[Me].includes("*/");) Me++;
+              const ie = null === (be = ye[Me + 1]) || void 0 === be ? void 0 : be.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!ie) continue;
+              let Ke = null;
+              const Ue = [];
+              let Fe = "description",
+                Je = !1;
+              for (const He of ye.slice(ee, Me + 1).join("\n").split("\n").map((ee => ee.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const ee = He.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                ee ? (Ke = ee[1].trim(), Fe = "deprecation") : He.startsWith("@") ? (Fe = "otherTag", Je = !0) : "" === He.trim() ? Je || (Fe = "description", Ue.push(He)) : "deprecation" !== Fe || /^[A-Z]/.test(He.trim()) ? "otherTag" !== Fe && (Fe = "description", Ue.push(He)) : Ke = `${Ke} ${He.trim()}`.trim()
               }
-              GB.set(OB[1], {
-                deprecation: oB,
-                description: jB.join("\n").trim()
+              He.set(ie[1], {
+                deprecation: Ke,
+                description: Ue.join("\n").trim()
               })
             }
-            return GB
-          }(TB.default), QO
+            return He
+          }(je.default), Mi
         }
 
-        function yO() {
-          if (!oO) {
-            oO = new Map;
-            for (const BB of gB) {
-              const OB = (0, UB.t)(EB(BB)).flatMap((BB => BB.blocks));
-              for (const BB of (0, UB.l)(OB))
-                if ("ts" === BB.lang || "typescript" === BB.lang)
-                  for (const [OB, GB] of dB(BB.code)) oO.set(OB, GB)
+        function Fi() {
+          if (!Ki) {
+            Ki = new Map;
+            for (const ee of xe) {
+              const ie = (0, We.x)(ue(ee)).flatMap((ee => ee.blocks));
+              for (const ee of (0, We.l)(ie))
+                if ("ts" === ee.lang || "typescript" === ee.lang)
+                  for (const [ie, He] of we(ee.code)) Ki.set(ie, He)
             }
-            for (const [BB, OB] of(DO ??= YO(TB.default), DO)) oO.has(BB) || oO.set(BB, OB)
+            for (const [ee, ie] of(bi ??= yi(je.default), bi)) Ki.has(ee) || Ki.set(ee, ie)
           }
-          return oO
+          return Ki
         }
-        const JO = {
+        const Ji = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let MO;
+        let oi;
 
-        function PO() {
-          if (!MO) {
-            MO = new Map;
-            for (const BB of gB)
-              if (KB(BB.layout))
-                for (const OB of EB(BB).sections) MO.has(OB.heading.text) || MO.set(OB.heading.text, {
-                  pageId: BB.id,
-                  anchor: OB.heading.anchor
+        function Ri() {
+          if (!oi) {
+            oi = new Map;
+            for (const ee of xe)
+              if (De(ee.layout))
+                for (const ie of ue(ee).sections) oi.has(ie.heading.text) || oi.set(ie.heading.text, {
+                  pageId: ee.id,
+                  anchor: ie.heading.anchor
                 })
           }
-          return MO
+          return oi
         }
 
-        function zO(BB) {
-          const OB = BB.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return OB ? PO().get(OB[1]) : void 0
+        function ki(ee) {
+          const ie = ee.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return ie ? Ri().get(ie[1]) : void 0
         }
-        const lO = (0, YB.createContext)("/docs"),
-          pO = (0, YB.createContext)(null),
-          qO = (0, YB.createContext)(!1),
-          ZO = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const qi = (0, ye.createContext)("/docs"),
+          fi = (0, ye.createContext)(null),
+          Ti = (0, ye.createContext)(!1),
+          Xi = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function NO(BB) {
-          const OB = BB.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return OB ? OB[1] : null
+        function zi(ee) {
+          const ie = ee.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return ie ? ie[1] : null
         }
 
-        function RO(BB) {
+        function Bi(ee) {
           let {
-            colour: OB
-          } = BB;
-          return (0, pB.jsx)("span", {
+            colour: ie
+          } = ee;
+          return (0, fe.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: OB
+              background: ie
             },
             "aria-hidden": "true"
           })
         }
 
-        function WO(BB) {
-          const OB = [];
-          let GB = 0;
-          for (const YB of BB.matchAll(ZO)) OB.push(BB.slice(GB, YB.index), (0, pB.jsx)(RO, {
-            colour: YB[0]
-          }), YB[0]), GB = YB.index + YB[0].length;
-          return OB.push(BB.slice(GB)), OB
+        function Ei(ee) {
+          const ie = [];
+          let He = 0;
+          for (const ye of ee.matchAll(Xi)) ie.push(ee.slice(He, ye.index), (0, fe.jsx)(Bi, {
+            colour: ye[0]
+          }), ye[0]), He = ye.index + ye[0].length;
+          return ie.push(ee.slice(He)), ie
         }
 
-        function AO(BB) {
+        function gi(ee) {
           let {
-            href: OB,
-            children: GB
-          } = BB;
-          const DB = (0, YB.useContext)(lO);
-          if (OB.startsWith("#")) {
-            const BB = hB(OB);
-            if (BB) return (0, pB.jsx)(oB.d, {
-              to: eB(DB, BB.page, BB.anchor),
-              children: (0, pB.jsx)(qO.Provider, {
+            href: ie,
+            children: He
+          } = ee;
+          const be = (0, ye.useContext)(qi);
+          if (ie.startsWith("#")) {
+            const ee = le(ie);
+            if (ee) return (0, fe.jsx)(Ke.e, {
+              to: ne(be, ee.page, ee.anchor),
+              children: (0, fe.jsx)(Ti.Provider, {
                 value: !0,
-                children: GB
+                children: He
               })
             })
           }
-          return (0, pB.jsx)("a", {
-            href: OB,
+          return (0, fe.jsx)("a", {
+            href: ie,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, pB.jsx)(qO.Provider, {
+            children: (0, fe.jsx)(Ti.Provider, {
               value: !0,
-              children: GB
+              children: He
             })
           })
         }
 
-        function VO(BB) {
+        function Oi(ee) {
           let {
-            code: OB
-          } = BB;
-          const GB = (0, YB.useContext)(lO);
-          if ((0, YB.useContext)(qO)) return (0, pB.jsx)("code", {
+            code: ie
+          } = ee;
+          const He = (0, ye.useContext)(qi);
+          if ((0, ye.useContext)(Ti)) return (0, fe.jsx)("code", {
             className: "DocsInlineCode",
-            children: OB
+            children: ie
           });
-          if (yO().has(OB)) return (0, pB.jsx)(fO, {
-            type: OB
+          if (Fi().has(ie)) return (0, fe.jsx)(Zi, {
+            type: ie
           });
-          const DB = zO(OB);
-          if (DB) return (0, pB.jsx)(oB.d, {
+          const be = ki(ie);
+          if (be) return (0, fe.jsx)(Ke.e, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: eB(GB, XB(DB.pageId), DB.anchor),
-            children: OB
+            to: ne(He, Ce(be.pageId), be.anchor),
+            children: ie
           });
-          const QB = NO(OB);
-          return (0, pB.jsxs)("code", {
+          const Me = zi(ie);
+          return (0, fe.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [QB && (0, pB.jsx)(RO, {
-              colour: QB
-            }), OB]
+            children: [Me && (0, fe.jsx)(Bi, {
+              colour: Me
+            }), ie]
           })
         }
 
-        function SO(BB) {
+        function di(ee) {
           let {
-            text: OB
-          } = BB;
-          const GB = [];
-          let DB = 0;
-          for (const YB of OB.matchAll(UB.g)) {
-            YB.index > DB && GB.push(...WO(OB.slice(DB, YB.index)));
-            const [, BB, QB, oB, jB, yB] = YB;
-            BB ? GB.push((0, pB.jsx)(VO, {
-              code: (0, UB.p)(BB, QB)
-            })) : oB ? GB.push((0, pB.jsx)("strong", {
-              children: (0, pB.jsx)(SO, {
-                text: oB
+            text: ie
+          } = ee;
+          const He = [];
+          let be = 0;
+          for (const ye of ie.matchAll(We.h)) {
+            ye.index > be && He.push(...Ei(ie.slice(be, ye.index)));
+            const [, ee, Me, Ke, Ue, Fe] = ye;
+            ee ? He.push((0, fe.jsx)(Oi, {
+              code: (0, We.n)(ee, Me)
+            })) : Ke ? He.push((0, fe.jsx)("strong", {
+              children: (0, fe.jsx)(di, {
+                text: Ke
               })
-            })) : GB.push((0, pB.jsx)(AO, {
-              href: yB,
-              children: (0, pB.jsx)(SO, {
-                text: jB
+            })) : He.push((0, fe.jsx)(gi, {
+              href: Fe,
+              children: (0, fe.jsx)(di, {
+                text: Ue
               })
-            })), DB = YB.index + YB[0].length
+            })), be = ye.index + ye[0].length
           }
-          return DB < OB.length && GB.push(...WO(OB.slice(DB))), (0, pB.jsx)(pB.Fragment, {
-            children: GB.map(((BB, OB) => (0, pB.jsx)(YB.Fragment, {
-              children: BB
-            }, OB)))
+          return be < ie.length && He.push(...Ei(ie.slice(be))), (0, fe.jsx)(fe.Fragment, {
+            children: He.map(((ee, ie) => (0, fe.jsx)(ye.Fragment, {
+              children: ee
+            }, ie)))
           })
         }
-        const nO = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          UO = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const Wi = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          ti = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function fO(BB) {
+        function Zi(ee) {
           let {
-            type: OB
-          } = BB;
-          const GB = yO(),
-            DB = [];
-          for (const YB of OB.trim().matchAll(nO)) {
-            const [BB, OB, QB, oB, jB] = YB;
-            OB ? DB.push((0, pB.jsx)("span", {
+            type: ie
+          } = ee;
+          const He = Fi(),
+            be = [];
+          for (const ye of ie.trim().matchAll(Wi)) {
+            const [ee, ie, Me, Ke, Ue] = ye;
+            ie ? be.push((0, fe.jsx)("span", {
               className: "DocsTypeString",
-              children: BB
-            })) : QB && GB.has(QB) ? DB.push((0, pB.jsx)(mO, {
-              name: QB,
-              definition: GB.get(QB)
-            })) : QB ? DB.push((0, pB.jsx)("span", {
-              className: UO.has(QB) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: BB
-            })) : oB ? DB.push((0, pB.jsx)("span", {
+              children: ee
+            })) : Me && He.has(Me) ? be.push((0, fe.jsx)(Yi, {
+              name: Me,
+              definition: He.get(Me)
+            })) : Me ? be.push((0, fe.jsx)("span", {
+              className: ti.has(Me) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: ee
+            })) : Ke ? be.push((0, fe.jsx)("span", {
               className: "DocsTypeNumber",
-              children: BB
-            })) : jB ? DB.push(" ") : DB.push((0, pB.jsx)("span", {
+              children: ee
+            })) : Ue ? be.push(" ") : be.push((0, fe.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: BB
+              children: ee
             }))
           }
-          return (0, pB.jsx)("code", {
+          return (0, fe.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: DB.map(((BB, OB) => (0, pB.jsx)(YB.Fragment, {
-              children: BB
-            }, OB)))
+            children: be.map(((ee, ie) => (0, fe.jsx)(ye.Fragment, {
+              children: ee
+            }, ie)))
           })
         }
-        const kO = 480,
-          dO = 6,
-          KO = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let uO = 0;
+        const wi = 480,
+          Di = 6,
+          Pi = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let Ai = 0;
 
-        function mO(BB) {
+        function Yi(ee) {
           let {
-            name: OB,
-            definition: GB
-          } = BB;
-          const DB = (0, YB.useContext)(lO),
-            QB = JO[OB],
-            jB = (0, YB.useRef)(null),
-            yB = (0, YB.useRef)(null),
-            MB = (0, YB.useRef)(null),
-            [PB, zB] = (0, YB.useState)(!1),
-            [lB, qB] = (0, YB.useState)(null),
-            NB = (0, YB.useRef)(),
-            RB = (0, YB.useContext)(pO),
-            [WB] = (0, YB.useState)((() => "DocsTypePopover-" + uO++)),
-            AB = () => {
-              clearTimeout(NB.current), zB(!0)
+            name: ie,
+            definition: He
+          } = ee;
+          const be = (0, ye.useContext)(qi),
+            Me = Ji[ie],
+            Ue = (0, ye.useRef)(null),
+            Fe = (0, ye.useRef)(null),
+            oe = (0, ye.useRef)(null),
+            [Re, ke] = (0, ye.useState)(!1),
+            [qe, Te] = (0, ye.useState)(null),
+            Xe = (0, ye.useRef)(),
+            ze = (0, ye.useContext)(fi),
+            [Be] = (0, ye.useState)((() => "DocsTypePopover-" + Ai++)),
+            Ee = () => {
+              clearTimeout(Xe.current), ke(!0)
             },
-            VB = () => {
-              clearTimeout(NB.current), NB.current = setTimeout((() => {
-                zB(!1)
+            ge = () => {
+              clearTimeout(Xe.current), Xe.current = setTimeout((() => {
+                ke(!1)
               }), 120)
             };
-          return (0, YB.useEffect)((() => {
-            if (!PB) return;
-            const BB = BB => {
-              if ("Escape" === BB.key) {
-                var OB, GB;
-                if (null !== (OB = yB.current) && void 0 !== OB && OB.contains(document.activeElement)) null === (GB = jB.current) || void 0 === GB || GB.focus();
-                zB(!1)
+          return (0, ye.useEffect)((() => {
+            if (!Re) return;
+            const ee = ee => {
+              if ("Escape" === ee.key) {
+                var ie, He;
+                if (null !== (ie = Fe.current) && void 0 !== ie && ie.contains(document.activeElement)) null === (He = Ue.current) || void 0 === He || He.focus();
+                ke(!1)
               }
             };
-            return document.addEventListener("keydown", BB), () => {
-              document.removeEventListener("keydown", BB)
+            return document.addEventListener("keydown", ee), () => {
+              document.removeEventListener("keydown", ee)
             }
-          }), [PB]), (0, YB.useEffect)((() => () => {
-            clearTimeout(NB.current)
-          }), []), (0, YB.useLayoutEffect)((() => {
-            if (!PB || !jB.current || !yB.current) return void qB(null);
-            const BB = jB.current.getBoundingClientRect(),
-              OB = yB.current.offsetHeight,
-              GB = Math.min(kO, window.innerWidth - 32),
-              YB = Math.min(Math.max(16, BB.left), window.innerWidth - GB - 16),
-              DB = BB.bottom + dO + OB < window.innerHeight;
-            qB({
-              left: YB,
-              top: DB ? BB.bottom + dO : Math.max(16, BB.top - dO - OB)
+          }), [Re]), (0, ye.useEffect)((() => () => {
+            clearTimeout(Xe.current)
+          }), []), (0, ye.useLayoutEffect)((() => {
+            if (!Re || !Ue.current || !Fe.current) return void Te(null);
+            const ee = Ue.current.getBoundingClientRect(),
+              ie = Fe.current.offsetHeight,
+              He = Math.min(wi, window.innerWidth - 32),
+              ye = Math.min(Math.max(16, ee.left), window.innerWidth - He - 16),
+              be = ee.bottom + Di + ie < window.innerHeight;
+            Te({
+              left: ye,
+              top: be ? ee.bottom + Di : Math.max(16, ee.top - Di - ie)
             })
-          }), [PB]), (0, pB.jsxs)(pB.Fragment, {
-            children: [(0, pB.jsx)("button", {
+          }), [Re]), (0, fe.jsxs)(fe.Fragment, {
+            children: [(0, fe.jsx)("button", {
               type: "button",
-              ref: jB,
+              ref: Ue,
               className: "DocsTypeLink",
-              "aria-expanded": PB,
-              "aria-describedby": PB ? WB : void 0,
-              onMouseEnter: AB,
-              onMouseLeave: VB,
-              onFocus: AB,
-              onBlur: VB,
-              onKeyDown: BB => {
-                "Tab" === BB.key && !BB.shiftKey && MB.current && (BB.preventDefault(), MB.current.focus())
+              "aria-expanded": Re,
+              "aria-describedby": Re ? Be : void 0,
+              onMouseEnter: Ee,
+              onMouseLeave: ge,
+              onFocus: Ee,
+              onBlur: ge,
+              onKeyDown: ee => {
+                "Tab" === ee.key && !ee.shiftKey && oe.current && (ee.preventDefault(), oe.current.focus())
               },
-              onClick: AB,
-              children: OB
-            }), PB && (0, JB.createPortal)((0, pB.jsxs)("span", {
-              ref: yB,
-              id: WB,
+              onClick: Ee,
+              children: ie
+            }), Re && (0, Je.createPortal)((0, fe.jsxs)("span", {
+              ref: Fe,
+              id: Be,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: lB ? {
-                left: lB.left,
-                top: lB.top,
-                maxWidth: kO
+              style: qe ? {
+                left: qe.left,
+                top: qe.top,
+                maxWidth: wi
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: AB,
-              onMouseLeave: VB,
-              onFocus: AB,
-              onBlur: VB,
-              children: [(0, pB.jsxs)("span", {
+              onMouseEnter: Ee,
+              onMouseLeave: ge,
+              onFocus: Ee,
+              onBlur: ge,
+              children: [(0, fe.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, pB.jsx)("span", {
+                children: [(0, fe.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: OB
-                }), QB && (0, pB.jsxs)(oB.d, {
-                  ref: MB,
+                  children: ie
+                }), Me && (0, fe.jsxs)(Ke.e, {
+                  ref: oe,
                   className: "DocsTypePopoverLink",
-                  to: eB(DB, XB(QB)),
+                  to: ne(be, Ce(Me)),
                   onClick: () => {
-                    zB(!1)
+                    ke(!1)
                   },
-                  onKeyDown: BB => {
-                    if ("Tab" === BB.key) {
-                      var OB;
-                      if (BB.preventDefault(), BB.shiftKey || !jB.current || ! function(BB, OB) {
-                          const GB = [...document.querySelectorAll(KO)],
-                            YB = GB.slice(GB.indexOf(BB) + 1).find((BB => BB.getClientRects().length > 0 && !(null !== OB && void 0 !== OB && OB.contains(BB))));
-                          return null === YB || void 0 === YB || YB.focus(), void 0 !== YB
-                        }(jB.current, yB.current)) null === (OB = jB.current) || void 0 === OB || OB.focus();
-                      BB.shiftKey || zB(!1)
+                  onKeyDown: ee => {
+                    if ("Tab" === ee.key) {
+                      var ie;
+                      if (ee.preventDefault(), ee.shiftKey || !Ue.current || ! function(ee, ie) {
+                          const He = [...document.querySelectorAll(Pi)],
+                            ye = He.slice(He.indexOf(ee) + 1).find((ee => ee.getClientRects().length > 0 && !(null !== ie && void 0 !== ie && ie.contains(ee))));
+                          return null === ye || void 0 === ye || ye.focus(), void 0 !== ye
+                        }(Ue.current, Fe.current)) null === (ie = Ue.current) || void 0 === ie || ie.focus();
+                      ee.shiftKey || ke(!1)
                     }
                   },
-                  children: [XB(QB).title, (0, pB.jsx)(ZB, {
+                  children: [Ce(Me).title, (0, fe.jsx)(pe, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, pB.jsx)(nB, {
+              }), (0, fe.jsx)(de, {
                 lang: "ts",
-                code: GB,
+                code: He,
                 compact: !0
               })]
-            }), null !== RB && void 0 !== RB ? RB : document.body)]
+            }), null !== ze && void 0 !== ze ? ze : document.body)]
           })
         }
-        var IO = GB(192),
-          FO = GB(5261),
-          iO = GB(5266),
-          LO = GB(5269);
-        const gO = {
+        var Vi = He(186),
+          ai = He(5245),
+          ci = He(5252),
+          xi = He(5255);
+        const Li = {
           progressBar: {
-            gO: 30,
-            rO: .075,
-            XO: 5,
-            wO: !1,
+            Si: 30,
+            ni: .075,
+            ji: 5,
+            si: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            EO: "fa-solid fa-computer-mouse",
+            Ii: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            hO: 3e3,
+            Gi: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            aO: !0,
+            ri: !0,
             scale: 3,
             rotation: 15,
-            eO: !1
+            Qi: !1
           },
           gravityBar: {
-            gO: 30,
-            CO: .25,
-            HO: 3,
-            vO: .8,
+            Si: 30,
+            iH: .25,
+            HH: 3,
+            yH: .8,
             gravity: 1,
-            sO: 1.5,
-            xO: 8,
-            tO: 4,
-            wO: !1,
+            bH: 1.5,
+            KH: 8,
+            UH: 4,
+            si: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            GG: .15,
+            JH: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            DG: 5,
-            QG: 1200,
-            oG: .15,
-            jG: 3,
+            RH: 5,
+            kH: 1200,
+            qH: .15,
+            fH: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var rO = GB(331),
-          XO = GB(2098);
+        var Ci = He(335),
+          vi = He(2054);
 
-        function wO(BB) {
-          return BB.startsWith("fa-")
+        function ui(ee) {
+          return ee.startsWith("fa-")
         }
-        const EO = {
+        const mi = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          cO = {
+          li = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function hO(BB) {
-          return "string" === typeof BB ? "text" : "entityName" in BB || "translationKey" in BB ? "other" : (0, rO.zb)(BB) ? "progressBar" : (0, rO.wb)(BB) ? "keyBinding" : "icon" in BB ? "icon" : "str" in BB && "string" === typeof BB.str ? "text" : "other"
+        function Si(ee) {
+          return "string" === typeof ee ? "text" : "entityName" in ee || "translationKey" in ee ? "other" : (0, Ci.Db)(ee) ? "progressBar" : (0, Ci.Bb)(ee) ? "keyBinding" : "icon" in ee ? "icon" : "str" in ee && "string" === typeof ee.str ? "text" : "other"
         }
-        const aO = [{
+        const ni = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          eO = {
+          ji = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...aO],
+            }, ...ni],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: XO.j
+                options: vi.m
               },
               isRequired: !0
-            }, ...aO],
+            }, ...ni],
             other: []
           };
 
-        function TO(BB) {
-          return "string" === typeof BB ? {
-            str: BB
-          } : BB
+        function si(ee) {
+          return "string" === typeof ee ? {
+            str: ee
+          } : ee
         }
 
-        function bO(BB, OB) {
-          let GB = TO(BB);
-          for (const YB of OB) GB = GB && "object" === typeof GB ? GB[YB] : void 0;
-          return GB
+        function Ii(ee, ie) {
+          let He = si(ee);
+          for (const ye of ie) He = He && "object" === typeof He ? He[ye] : void 0;
+          return He
         }
 
-        function CO(BB, OB, GB) {
-          const YB = (BB, DB) => {
-            var QB;
-            const oB = OB[DB],
-              jB = {
-                ...BB
+        function Ni(ee, ie, He) {
+          const ye = (ee, be) => {
+            var Me;
+            const Ke = ie[be],
+              Ue = {
+                ...ee
               };
-            if (DB === OB.length - 1) return void 0 === GB ? delete jB[oB] : jB[oB] = GB, jB;
-            const yB = YB(null !== (QB = BB[oB]) && void 0 !== QB ? QB : {}, DB + 1);
-            return 0 === Object.keys(yB).length ? delete jB[oB] : jB[oB] = yB, jB
+            if (be === ie.length - 1) return void 0 === He ? delete Ue[Ke] : Ue[Ke] = He, Ue;
+            const Fe = ye(null !== (Me = ee[Ke]) && void 0 !== Me ? Me : {}, be + 1);
+            return 0 === Object.keys(Fe).length ? delete Ue[Ke] : Ue[Ke] = Fe, Ue
           };
-          return function(BB) {
-            const OB = Object.keys(BB);
-            return "string" === typeof BB.str && 1 === OB.length ? BB.str : BB
-          }(YB(TO(BB), 0))
+          return function(ee) {
+            const ie = Object.keys(ee);
+            return "string" === typeof ee.str && 1 === ie.length ? ee.str : ee
+          }(ye(si(ee), 0))
         }
 
-        function HO(BB, OB) {
-          const GB = hO(BB),
-            YB = eO[GB].find((BB => BB.path.join(".") === OB.join("."))),
-            DB = null !== YB && void 0 !== YB && YB.isRequired && "other" !== GB ? bO(cO[GB], OB) : void 0;
-          return CO(BB, OB, DB)
+        function Gi(ee, ie) {
+          const He = Si(ee),
+            ye = ji[He].find((ee => ee.path.join(".") === ie.join("."))),
+            be = null !== ye && void 0 !== ye && ye.isRequired && "other" !== He ? Ii(li[He], ie) : void 0;
+          return Ni(ee, ie, be)
         }
 
-        function vO(BB) {
-          switch (hO(BB)) {
+        function ri(ee) {
+          switch (Si(ee)) {
             case "text":
-              return String(bO(BB, ["str"]));
+              return String(Ii(ee, ["str"]));
             case "icon":
-              return String(bO(BB, ["icon"]));
+              return String(Ii(ee, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(bO(BB,["progress"])))}%`;
+              return `${Math.round(100*Number(Ii(ee,["progress"])))}%`;
             case "keyBinding":
-              return String(bO(BB, ["action"]));
+              return String(Ii(ee, ["action"]));
             case "other":
-              return JSON.stringify(BB)
+              return JSON.stringify(ee)
           }
         }
-        const sO = /^[A-Za-z_$][\w$]*$/;
+        const Qi = /^[A-Za-z_$][\w$]*$/;
 
-        function xO(BB) {
-          if (Array.isArray(BB)) return `[${BB.map(xO).join(", ")}]`;
-          if (BB && "object" === typeof BB) {
-            const OB = Object.entries(BB).map((BB => {
-              let [OB, GB] = BB;
-              return `${sO.test(OB)?OB:JSON.stringify(OB)}: ${xO(GB)}`
+        function eH(ee) {
+          if (Array.isArray(ee)) return `[${ee.map(eH).join(", ")}]`;
+          if (ee && "object" === typeof ee) {
+            const ie = Object.entries(ee).map((ee => {
+              let [ie, He] = ee;
+              return `${Qi.test(ie)?ie:JSON.stringify(ie)}: ${eH(He)}`
             }));
-            return 0 === OB.length ? "{}" : `{ ${OB.join(", ")} }`
+            return 0 === ie.length ? "{}" : `{ ${ie.join(", ")} }`
           }
-          return JSON.stringify(BB)
+          return JSON.stringify(ee)
         }
 
-        function tO(BB) {
-          const OB = BB.map(xO),
-            GB = `[${OB.join(", ")}]`;
-          return GB.length <= 60 ? GB : `[\n${OB.map((BB=>`    ${BB},`)).join("\n")}\n]`
+        function iH(ee) {
+          const ie = ee.map(eH),
+            He = `[${ie.join(", ")}]`;
+          return He.length <= 60 ? He : `[\n${ie.map((ee=>`    ${ee},`)).join("\n")}\n]`
         }
-        const BG = {
+        const HH = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function OG(BB) {
-          let OB = "";
-          for (let DB = 0; DB < BB.length; DB++) {
-            const QB = BB[DB];
-            if ("\\" === QB) {
-              var GB;
-              const YB = null !== (GB = BB[DB + 1]) && void 0 !== GB ? GB : "";
-              OB += "'" === YB ? "'" : QB + YB, DB++
-            } else if ('"' === QB) OB += '\\"';
+        function yH(ee) {
+          let ie = "";
+          for (let be = 0; be < ee.length; be++) {
+            const Me = ee[be];
+            if ("\\" === Me) {
+              var He;
+              const ye = null !== (He = ee[be + 1]) && void 0 !== He ? He : "";
+              ie += "'" === ye ? "'" : Me + ye, be++
+            } else if ('"' === Me) ie += '\\"';
             else {
-              var YB;
-              OB += null !== (YB = BG[QB]) && void 0 !== YB ? YB : QB
+              var ye;
+              ie += null !== (ye = HH[Me]) && void 0 !== ye ? ye : Me
             }
           }
-          return `"${OB}"`
+          return `"${ie}"`
         }
 
-        function GG(BB) {
-          if ("string" === typeof BB) return !0;
-          if (!BB || "object" !== typeof BB || Array.isArray(BB)) return !1;
-          const OB = BB;
-          return "ProgressBar" === OB.type ? "number" === typeof OB.progress : "StyledKeyBinding" === OB.type ? XO.j.includes(OB.action) : "string" === typeof OB.icon || "string" === typeof OB.str || "string" === typeof OB.entityName || "string" === typeof OB.translationKey
+        function bH(ee) {
+          if ("string" === typeof ee) return !0;
+          if (!ee || "object" !== typeof ee || Array.isArray(ee)) return !1;
+          const ie = ee;
+          return "ProgressBar" === ie.type ? "number" === typeof ie.progress : "StyledKeyBinding" === ie.type ? vi.m.includes(ie.action) : "string" === typeof ie.icon || "string" === typeof ie.str || "string" === typeof ie.entityName || "string" === typeof ie.translationKey
         }
 
-        function YG(BB) {
-          let OB;
+        function MH(ee) {
+          let ie;
           try {
-            OB = function(BB) {
-              let OB = "",
-                GB = "",
-                YB = 0;
-              const DB = () => {
-                OB += GB.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), GB = ""
+            ie = function(ee) {
+              let ie = "",
+                He = "",
+                ye = 0;
+              const be = () => {
+                ie += He.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), He = ""
               };
-              for (; YB < BB.length;) {
-                const QB = BB.slice(YB).search(/["'`]|\/\//);
-                if (-1 === QB) {
-                  GB += BB.slice(YB);
+              for (; ye < ee.length;) {
+                const Me = ee.slice(ye).search(/["'`]|\/\//);
+                if (-1 === Me) {
+                  He += ee.slice(ye);
                   break
                 }
-                GB += BB.slice(YB, YB + QB);
-                const oB = YB + QB,
-                  jB = BB[oB];
-                if ("/" === jB) {
-                  const OB = BB.indexOf("\n", oB);
-                  YB = -1 === OB ? BB.length : OB;
+                He += ee.slice(ye, ye + Me);
+                const Ke = ye + Me,
+                  Ue = ee[Ke];
+                if ("/" === Ue) {
+                  const ie = ee.indexOf("\n", Ke);
+                  ye = -1 === ie ? ee.length : ie;
                   continue
                 }
-                if (DB(), "`" === jB) throw new Error("Use quotes rather than template strings.");
-                let yB = oB + 1;
-                for (; yB < BB.length && BB[yB] !== jB;) yB += "\\" === BB[yB] ? 2 : 1;
-                if (yB >= BB.length) throw new Error("A string is missing its closing quote.");
-                const JB = BB.slice(oB + 1, yB);
-                OB += OG(JB), YB = yB + 1
+                if (be(), "`" === Ue) throw new Error("Use quotes rather than template strings.");
+                let Fe = Ke + 1;
+                for (; Fe < ee.length && ee[Fe] !== Ue;) Fe += "\\" === ee[Fe] ? 2 : 1;
+                if (Fe >= ee.length) throw new Error("A string is missing its closing quote.");
+                const Je = ee.slice(Ke + 1, Fe);
+                ie += yH(Je), ye = Fe + 1
               }
-              return DB(), JSON.parse(OB)
-            }(BB.trim())
-          } catch (YB) {
+              return be(), JSON.parse(ie)
+            }(ee.trim())
+          } catch (ye) {
             return {
               parts: null,
-              error: YB instanceof SyntaxError ? "This isn't a valid array yet." : YB.message
+              error: ye instanceof SyntaxError ? "This isn't a valid array yet." : ye.message
             }
           }
-          if (!Array.isArray(OB)) return {
+          if (!Array.isArray(ie)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const GB = OB.findIndex((BB => !GG(BB)));
-          return -1 !== GB ? {
+          const He = ie.findIndex((ee => !bH(ee)));
+          return -1 !== He ? {
             parts: null,
-            error: `Part ${GB+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${He+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: OB,
+            parts: ie,
             error: null
           }
         }
-        const DG = 1 / IO.f.clientTicksPerSecond,
-          QG = 700,
-          oG = {
+        const KH = 1 / Vi.g.clientTicksPerSecond,
+          UH = 700,
+          FH = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          jG = {
-            progressBar: gO.progressBar.EO,
-            timedClick: gO.timedClick.icon,
-            gravityBar: gO.gravityBar.icon,
-            precisionBar: gO.precisionBar.icon,
-            rhythmClick: gO.rhythmClick.icon
+          JH = {
+            progressBar: Li.progressBar.Ii,
+            timedClick: Li.timedClick.icon,
+            gravityBar: Li.gravityBar.icon,
+            precisionBar: Li.precisionBar.icon,
+            rhythmClick: Li.rhythmClick.icon
           };
 
-        function yG(BB) {
+        function oH(ee) {
           let {
-            type: OB
-          } = BB;
-          const [GB, DB] = (0, YB.useState)("ready"), [oB, jB] = (0, YB.useState)(1), [yB, JB] = (0, YB.useState)(!0), MB = (0, YB.useRef)(null), PB = (0, YB.useRef)(null), zB = (0, YB.useRef)(null), lB = (0, YB.useRef)(new Set), qB = (0, YB.useRef)(!1), NB = jG[OB], RB = (0, YB.useMemo)((() => ({
+            type: ie
+          } = ee;
+          const [He, be] = (0, ye.useState)("ready"), [Ke, Ue] = (0, ye.useState)(1), [Fe, Je] = (0, ye.useState)(!0), oe = (0, ye.useRef)(null), Re = (0, ye.useRef)(null), ke = (0, ye.useRef)(null), qe = (0, ye.useRef)(new Set), Te = (0, ye.useRef)(!1), Xe = JH[ie], ze = (0, ye.useMemo)((() => ({
             getState: () => {
-              var BB, OB;
-              return null !== (BB = null === (OB = zB.current) || void 0 === OB ? void 0 : OB.getState()) && void 0 !== BB ? BB : oG
+              var ee, ie;
+              return null !== (ee = null === (ie = ke.current) || void 0 === ie ? void 0 : ie.getState()) && void 0 !== ee ? ee : FH
             },
-            onFrame: BB => (lB.current.add(BB), () => {
-              lB.current.delete(BB)
+            onFrame: ee => (qe.current.add(ee), () => {
+              qe.current.delete(ee)
             })
           })), []);
-          (0, YB.useEffect)((() => {
-            const BB = MB.current,
-              OB = PB.current;
-            if (!BB || !OB) return;
-            const GB = new ResizeObserver((() => {
-              jB(BB.clientWidth / Math.max(1, OB.offsetWidth))
+          (0, ye.useEffect)((() => {
+            const ee = oe.current,
+              ie = Re.current;
+            if (!ee || !ie) return;
+            const He = new ResizeObserver((() => {
+              Ue(ee.clientWidth / Math.max(1, ie.offsetWidth))
             }));
-            return GB.observe(BB), () => {
-              GB.disconnect()
+            return He.observe(ee), () => {
+              He.disconnect()
             }
-          }), []), (0, YB.useEffect)((() => {
-            var BB;
-            if ("playing" !== GB) return;
-            let YB = !1;
-            const QB = new LO.g[OB](gO[OB], (BB => {
-              YB = !0, JB(!1), DB(BB ? "succeeded" : "failed")
+          }), []), (0, ye.useEffect)((() => {
+            var ee;
+            if ("playing" !== He) return;
+            let ye = !1;
+            const Me = new xi.g[ie](Li[ie], (ee => {
+              ye = !0, Je(!1), be(ee ? "succeeded" : "failed")
             }), (() => {}));
-            zB.current = QB;
-            let oB = 0,
-              jB = performance.now(),
-              yB = requestAnimationFrame((function BB(OB) {
-                for (oB += Math.min(.25, (OB - jB) / 1e3), jB = OB; oB >= DG && !YB;) oB -= DG, QB.handleTick(DG);
-                for (const GB of lB.current) GB();
-                YB || (yB = requestAnimationFrame(BB))
+            ke.current = Me;
+            let Ke = 0,
+              Ue = performance.now(),
+              Fe = requestAnimationFrame((function ee(ie) {
+                for (Ke += Math.min(.25, (ie - Ue) / 1e3), Ue = ie; Ke >= KH && !ye;) Ke -= KH, Me.handleTick(KH);
+                for (const He of qe.current) He();
+                ye || (Fe = requestAnimationFrame(ee))
               }));
-            return null === (BB = MB.current) || void 0 === BB || BB.focus({
+            return null === (ee = oe.current) || void 0 === ee || ee.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(yB), QB.tearDown(), zB.current = null, qB.current = !1
+              cancelAnimationFrame(Fe), Me.tearDown(), ke.current = null, Te.current = !1
             }
-          }), [GB, OB]), (0, YB.useEffect)((() => {
-            if (yB) return;
-            const BB = setTimeout((() => {
-              JB(!0)
-            }), QG);
+          }), [He, ie]), (0, ye.useEffect)((() => {
+            if (Fe) return;
+            const ee = setTimeout((() => {
+              Je(!0)
+            }), UH);
             return () => {
-              clearTimeout(BB)
+              clearTimeout(ee)
             }
-          }), [yB]);
-          const WB = BB => {
-            var OB;
-            "playing" === GB && qB.current !== BB && (qB.current = BB, null === (OB = zB.current) || void 0 === OB || OB.handleMouseInput(BB))
+          }), [Fe]);
+          const Be = ee => {
+            var ie;
+            "playing" === He && Te.current !== ee && (Te.current = ee, null === (ie = ke.current) || void 0 === ie || ie.handleMouseInput(ee))
           };
-          return (0, pB.jsxs)("div", {
+          return (0, fe.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, pB.jsxs)("div", {
-              ref: MB,
-              className: QB()("DocsQteStage", {
-                Playing: "playing" === GB
+            children: [(0, fe.jsxs)("div", {
+              ref: oe,
+              className: Me()("DocsQteStage", {
+                Playing: "playing" === He
               }),
-              tabIndex: "playing" === GB ? 0 : -1,
-              role: "playing" === GB ? "button" : void 0,
-              "aria-label": "playing" === GB ? `${OB} quick time event: click or press Space` : void 0,
-              onPointerDown: BB => {
-                0 === BB.button && WB(!0)
+              tabIndex: "playing" === He ? 0 : -1,
+              role: "playing" === He ? "button" : void 0,
+              "aria-label": "playing" === He ? `${ie} quick time event: click or press Space` : void 0,
+              onPointerDown: ee => {
+                0 === ee.button && Be(!0)
               },
               onPointerUp: () => {
-                WB(!1)
+                Be(!1)
               },
               onPointerLeave: () => {
-                WB(!1)
+                Be(!1)
               },
               onPointerCancel: () => {
-                WB(!1)
+                Be(!1)
               },
-              onKeyDown: BB => {
-                "playing" !== GB || " " !== BB.key && "Enter" !== BB.key || (BB.preventDefault(), WB(!0))
+              onKeyDown: ee => {
+                "playing" !== He || " " !== ee.key && "Enter" !== ee.key || (ee.preventDefault(), Be(!0))
               },
-              onKeyUp: BB => {
-                "playing" !== GB || " " !== BB.key && "Enter" !== BB.key || WB(!1)
+              onKeyUp: ee => {
+                "playing" !== He || " " !== ee.key && "Enter" !== ee.key || Be(!1)
               },
-              children: [(0, pB.jsx)("div", {
-                ref: PB,
+              children: [(0, fe.jsx)("div", {
+                ref: Re,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${oB})`
+                  transform: `scale(${Ke})`
                 },
-                children: "playing" === GB && (0, pB.jsx)(iO.c.Provider, {
-                  value: RB,
-                  children: (0, pB.jsx)(FO.b, {
+                children: "playing" === He && (0, fe.jsx)(ci.d.Provider, {
+                  value: ze,
+                  children: (0, fe.jsx)(ai.e, {
                     qte: {
-                      type: OB,
-                      parameters: gO[OB]
+                      type: ie,
+                      parameters: Li[ie]
                     }
                   })
                 })
-              }), "playing" !== GB && (0, pB.jsxs)("div", {
+              }), "playing" !== He && (0, fe.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== GB && (0, pB.jsxs)("div", {
-                  className: QB()("DocsQteResult", "succeeded" === GB ? "Succeeded" : "Failed"),
-                  children: [(0, pB.jsx)(ZB, {
-                    name: "succeeded" === GB ? "check" : "cross",
+                children: ["ready" !== He && (0, fe.jsxs)("div", {
+                  className: Me()("DocsQteResult", "succeeded" === He ? "Succeeded" : "Failed"),
+                  children: [(0, fe.jsx)(pe, {
+                    name: "succeeded" === He ? "check" : "cross",
                     isTinted: !0
-                  }), (0, pB.jsx)("span", {
-                    children: "succeeded" === GB ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, fe.jsx)("span", {
+                    children: "succeeded" === He ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, pB.jsxs)("button", {
+                }), (0, fe.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !yB,
+                  disabled: !Fe,
                   onClick: () => {
-                    DB("playing")
+                    be("playing")
                   },
-                  children: [(0, pB.jsx)(ZB, {
-                    name: "ready" === GB ? "play" : "replay"
-                  }), (0, pB.jsx)("span", {
-                    children: "ready" === GB ? `Try ${OB}` : "Play again"
+                  children: [(0, fe.jsx)(pe, {
+                    name: "ready" === He ? "play" : "replay"
+                  }), (0, fe.jsx)("span", {
+                    children: "ready" === He ? `Try ${ie}` : "Play again"
                   })]
                 })]
               })]
-            }), NB && !wO(NB) && (0, pB.jsxs)("p", {
+            }), Xe && !ui(Xe) && (0, fe.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, pB.jsx)("code", {
-                children: NB
+              children: ["The ", (0, fe.jsx)("code", {
+                children: Xe
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function JG(BB) {
+        function RH(ee) {
           let {
-            level: OB,
-            text: GB,
-            anchor: YB,
-            className: DB
-          } = BB;
-          const oB = `h${Math.min(OB,6)}`;
-          return (0, pB.jsxs)(oB, {
-                id: YB,
-                className: QB()("DocsHeading", DB),
-                children: [(0, pB.jsx)(SO, {
-                      text: GB
-                    }), (0, pB.jsx)("a", {
+            level: ie,
+            text: He,
+            anchor: ye,
+            className: be
+          } = ee;
+          const Ke = `h${Math.min(ie,6)}`;
+          return (0, fe.jsxs)(Ke, {
+                id: ye,
+                className: Me()("DocsHeading", be),
+                children: [(0, fe.jsx)(di, {
+                      text: He
+                    }), (0, fe.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${YB}`,
-                        "aria-label": `Link to ${GB.replace(/`/g,"")}`,children:"#"})]})}function MG(BB){let{items:OB,ordered:GB}=BB;const YB=GB?"ol":"ul";return(0,pB.jsx)(YB,{className:"DocsList",children:OB.map(((BB,OB)=>(0,pB.jsxs)("li",{children:[(0,pB.jsx)(SO,{text:BB.text}),BB.children.length>0&&(0,pB.jsx)(MG,{items:BB.children,ordered:GB})]},OB)))})}function PG(BB){const OB=BB[0],GB="paragraph"===(null===OB||void 0===OB?void 0:OB.kind)?OB.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(GB)?"warning":/^\*\*(tip|prefer)/.test(GB)?"tip":"note"}function zG(BB){let{block:OB}=BB;switch(OB.kind){case"heading":return(0,pB.jsx)(JG,{level:OB.level,text:OB.text,anchor:OB.anchor});case"paragraph":return(0,pB.jsx)("p",{children:(0,pB.jsx)(SO,{text:OB.text})});case"code":{const BB="ts"===OB.lang?function(BB){const OB=BB.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return OB&&Object.hasOwn(gO,OB[1])?OB[1]:null}(OB.code):null;return(0,pB.jsxs)(pB.Fragment,{children:[(0,pB.jsx)(nB,{code:OB.code,lang:OB.lang}),BB&&(0,pB.jsx)(yG,{type:BB})]})}case"table":return(0,pB.jsx)("div",{className:"DocsTableScroll",children:(0,pB.jsxs)("table",{className:"DocsTable",children:[(0,pB.jsx)("thead",{children:(0,pB.jsx)("tr",{children:OB.header.map(((BB,OB)=>(0,pB.jsx)("th",{children:(0,pB.jsx)(SO,{text:BB})},OB)))})}),(0,pB.jsx)("tbody",{children:OB.rows.map(((BB,OB)=>(0,pB.jsx)("tr",{children:BB.map(((BB,OB)=>(0,pB.jsx)("td",{children:(0,pB.jsx)(SO,{text:BB})},OB)))},OB)))})]})});case"list":return(0,pB.jsx)(MG,{items:OB.items,ordered:OB.ordered});case"quote":return(0,pB.jsx)("aside",{className:QB()("DocsCallout",PG(OB.blocks)),children:(0,pB.jsx)(lG,{blocks:OB.blocks})});case"rule":return(0,pB.jsx)("hr",{className:"DocsRule"})}}function lG(BB){let{blocks:OB}=BB;return(0,pB.jsx)(pB.Fragment,{children:OB.map(((BB,OB)=>(0,pB.jsx)(zG,{block:BB},OB)))})}var pG=GB(5242),qG=GB(5247);function ZG(BB){return"blocks"===BB||"items"===BB}const NG=new Map;function RG(BB){let OB=NG.get(BB);return OB||(OB=function(BB){const OB={entries:[],legend:[],notes:[],examples:[]};let GB=!1;for(const QB of BB.split(/\r?\n/).slice(1)){if(QB.startsWith("#")){const BB=QB.replace(/^# ?/,""),YB=BB.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);YB?OB.legend.push({code:YB[1],meaning:YB[2],usage:YB[3].trim()}):/^Examples:/.test(BB.trim())?GB=!0:GB&&BB.trim()?OB.examples.push(BB.trim()):BB.trim()&&!/^\s/.test(BB)&&OB.notes.push(BB.trim());continue}const BB=QB.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var YB,DB;BB&&OB.entries.push({name:BB[1],variants:null!==(YB=null===(DB=BB[2])||void 0===DB?void 0:DB.split(","))&&void 0!==YB?YB:[]})}return OB}("blocks"===BB?pG:qG),NG.set(BB,OB)),OB}function WG(BB){let{className:OB,value:GB,placeholder:YB,label:DB,onChange:QB,count:oB,children:jB}=BB;return(0,pB.jsxs)("div",{className:OB,children:[(0,pB.jsx)(ZB,{name:"magnifying-glass"}),(0,pB.jsx)("input",{type:"search",value:GB,placeholder:YB,"aria-label":DB,onChange:BB=>{QB(BB.target.value)}}),jB,oB&&(0,pB.jsxs)("span",{className:"DocsFilterCount",children:[oB.visible," of ",oB.total]})]})}var AG=GB(1383);function VG(BB){const OB=BB.trim().match(/^(` {
+                        href: `#${ye}`,
+                        "aria-label": `Link to ${He.replace(/`/g,"")}`,children:"#"})]})}function kH(ee){let{items:ie,ordered:He}=ee;const ye=He?"ol":"ul";return(0,fe.jsx)(ye,{className:"DocsList",children:ie.map(((ee,ie)=>(0,fe.jsxs)("li",{children:[(0,fe.jsx)(di,{text:ee.text}),ee.children.length>0&&(0,fe.jsx)(kH,{items:ee.children,ordered:He})]},ie)))})}function qH(ee){const ie=ee[0],He="paragraph"===(null===ie||void 0===ie?void 0:ie.kind)?ie.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(He)?"warning":/^\*\*(tip|prefer)/.test(He)?"tip":"note"}function fH(ee){let{block:ie}=ee;switch(ie.kind){case"heading":return(0,fe.jsx)(RH,{level:ie.level,text:ie.text,anchor:ie.anchor});case"paragraph":return(0,fe.jsx)("p",{children:(0,fe.jsx)(di,{text:ie.text})});case"code":{const ee="ts"===ie.lang?function(ee){const ie=ee.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return ie&&Object.hasOwn(Li,ie[1])?ie[1]:null}(ie.code):null;return(0,fe.jsxs)(fe.Fragment,{children:[(0,fe.jsx)(de,{code:ie.code,lang:ie.lang}),ee&&(0,fe.jsx)(oH,{type:ee})]})}case"table":return(0,fe.jsx)("div",{className:"DocsTableScroll",children:(0,fe.jsxs)("table",{className:"DocsTable",children:[(0,fe.jsx)("thead",{children:(0,fe.jsx)("tr",{children:ie.header.map(((ee,ie)=>(0,fe.jsx)("th",{children:(0,fe.jsx)(di,{text:ee})},ie)))})}),(0,fe.jsx)("tbody",{children:ie.rows.map(((ee,ie)=>(0,fe.jsx)("tr",{children:ee.map(((ee,ie)=>(0,fe.jsx)("td",{children:(0,fe.jsx)(di,{text:ee})},ie)))},ie)))})]})});case"list":return(0,fe.jsx)(kH,{items:ie.items,ordered:ie.ordered});case"quote":return(0,fe.jsx)("aside",{className:Me()("DocsCallout",qH(ie.blocks)),children:(0,fe.jsx)(TH,{blocks:ie.blocks})});case"rule":return(0,fe.jsx)("hr",{className:"DocsRule"})}}function TH(ee){let{blocks:ie}=ee;return(0,fe.jsx)(fe.Fragment,{children:ie.map(((ee,ie)=>(0,fe.jsx)(fH,{block:ee},ie)))})}var pH=He(5226),XH=He(5234);function zH(ee){return"blocks"===ee||"items"===ee}const BH=new Map;function EH(ee){let ie=BH.get(ee);return ie||(ie=function(ee){const ie={entries:[],legend:[],notes:[],examples:[]};let He=!1;for(const Me of ee.split(/\r?\n/).slice(1)){if(Me.startsWith("#")){const ee=Me.replace(/^# ?/,""),ye=ee.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);ye?ie.legend.push({code:ye[1],meaning:ye[2],usage:ye[3].trim()}):/^Examples:/.test(ee.trim())?He=!0:He&&ee.trim()?ie.examples.push(ee.trim()):ee.trim()&&!/^\s/.test(ee)&&ie.notes.push(ee.trim());continue}const ee=Me.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var ye,be;ee&&ie.entries.push({name:ee[1],variants:null!==(ye=null===(be=ee[2])||void 0===be?void 0:be.split(","))&&void 0!==ye?ye:[]})}return ie}("blocks"===ee?pH:XH),BH.set(ee,ie)),ie}function gH(ee){let{className:ie,value:He,placeholder:ye,label:be,onChange:Me,count:Ke,children:Ue}=ee;return(0,fe.jsxs)("div",{className:ie,children:[(0,fe.jsx)(pe,{name:"magnifying-glass"}),(0,fe.jsx)("input",{type:"search",value:He,placeholder:ye,"aria-label":be,onChange:ee=>{Me(ee.target.value)}}),Ue,Ke&&(0,fe.jsxs)("span",{className:"DocsFilterCount",children:[Ke.visible," of ",Ke.total]})]})}var OH=He(1323);function dH(ee){const ie=ee.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return OB?OB[2]:null}function SG(BB){return"paragraph"===BB.kind&&""===BB.text.trim()}function nG(BB){const OB={name:BB.heading.text,description:[],params:[],returns:null};let GB="description";for(const DB of BB.blocks)if(!SG(DB))if("heading"===DB.kind&&/^Parameters:?$/.test(DB.text))GB="params";else if("heading"===DB.kind&&/^Returns:?$/.test(DB.text))GB="returns",OB.returns={type:"",description:[]};else if("params"!==GB||"table"!==DB.kind){if("returns"===GB&&"paragraph"===DB.kind&&""===OB.returns.type){const BB=VG(DB.text);if(null!==BB){OB.returns.type=BB.replaceAll("\\|","|");continue}}"returns"===GB?OB.returns.description.push(DB):OB.description.push(DB)}else for(const[BB,GB,QB]of DB.rows){var YB;OB.params.push({name:BB,type:null!==(YB=VG(GB))&&void 0!==YB?YB:GB,description:null!==QB&&void 0!==QB?QB:""})}return OB}const UG=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function fG(BB){return BB.filter((BB=>!SG(BB)))}const kG=/^[\w][\w .'&!:()-]*$/,dG=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function KG(BB){var OB;if("code"===BB.kind&&"text"===BB.lang){const OB=BB.code.split("\n").map((BB=>BB.trim())).filter(Boolean);return OB.length>0&&OB.every((BB=>kG.test(BB)))?OB.map((BB=>({name:BB}))):null}return"paragraph"===BB.kind&&dG.test(BB.text.trim())?[...BB.text.matchAll(/`([ ^ `]+)` / g)].flatMap((BB => BB[1].split(/,\s*/).map((BB => ({
-                              name: BB.trim()
-                            }))))): "table" === BB.kind && null !== (OB = BB.header[0]) && void 0 !== OB && OB.startsWith("Song") ? BB.rows.map((BB => {
-                              let [OB, GB] = BB;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return ie?ie[2]:null}function WH(ee){return"paragraph"===ee.kind&&""===ee.text.trim()}function tH(ee){const ie={name:ee.heading.text,description:[],params:[],returns:null};let He="description";for(const be of ee.blocks)if(!WH(be))if("heading"===be.kind&&/^Parameters:?$/.test(be.text))He="params";else if("heading"===be.kind&&/^Returns:?$/.test(be.text))He="returns",ie.returns={type:"",description:[]};else if("params"!==He||"table"!==be.kind){if("returns"===He&&"paragraph"===be.kind&&""===ie.returns.type){const ee=dH(be.text);if(null!==ee){ie.returns.type=ee.replaceAll("\\|","|");continue}}"returns"===He?ie.returns.description.push(be):ie.description.push(be)}else for(const[ee,He,Me]of be.rows){var ye;ie.params.push({name:ee,type:null!==(ye=dH(He))&&void 0!==ye?ye:He,description:null!==Me&&void 0!==Me?Me:""})}return ie}const ZH=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function wH(ee){return ee.filter((ee=>!WH(ee)))}const DH=/^[\w][\w .'&!:()-]*$/,PH=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function AH(ee){var ie;if("code"===ee.kind&&"text"===ee.lang){const ie=ee.code.split("\n").map((ee=>ee.trim())).filter(Boolean);return ie.length>0&&ie.every((ee=>DH.test(ee)))?ie.map((ee=>({name:ee}))):null}return"paragraph"===ee.kind&&PH.test(ee.text.trim())?[...ee.text.matchAll(/`([ ^ `]+)` / g)].flatMap((ee => ee[1].split(/,\s*/).map((ee => ({
+                              name: ee.trim()
+                            }))))): "table" === ee.kind && null !== (ie = ee.header[0]) && void 0 !== ie && ie.startsWith("Song") ? ee.rows.map((ee => {
+                              let [ie, He] = ee;
                               return {
-                                name: OB.replace(/`/g, ""),
-                                caption: GB
+                                name: ie.replace(/`/g, ""),
+                                caption: He
                               }
                             })) : null
                           }
 
-                          function uG(BB) {
-                            const OB = [];
-                            for (const GB of BB) {
-                              const BB = KG(GB),
-                                YB = OB.at(-1),
-                                DB = "table" === GB.kind;
-                              BB ? "names" === (null === YB || void 0 === YB ? void 0 : YB.kind) && YB.isSongs === DB ? YB.names.push(...BB) : OB.push({
+                          function YH(ee) {
+                            const ie = [];
+                            for (const He of ee) {
+                              const ee = AH(He),
+                                ye = ie.at(-1),
+                                be = "table" === He.kind;
+                              ee ? "names" === (null === ye || void 0 === ye ? void 0 : ye.kind) && ye.isSongs === be ? ye.names.push(...ee) : ie.push({
                                 kind: "names",
-                                names: BB,
-                                isSongs: DB
-                              }) : OB.push({
+                                names: ee,
+                                isSongs: be
+                              }) : ie.push({
                                 kind: "block",
-                                block: GB
+                                block: He
                               })
                             }
-                            return OB
+                            return ie
                           }
-                          const mG = {
+                          const VH = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function IG(BB, OB) {
-                            return `${mG[BB]}-${(0,UB.s)(OB)}`
+                          function aH(ee, ie) {
+                            return `${VH[ee]}-${(0,We.t)(ie)}`
                           }
-                          const FG = new WeakMap;
+                          const cH = new WeakMap;
 
-                          function iG(BB, OB, GB) {
-                            let YB = FG.get(OB);
-                            if (!YB) {
-                              YB = new Map;
-                              const GB = new Set;
-                              for (const DB of (0, UB.t)(OB)) {
-                                const OB = uG(fG(DB.blocks)).map((OB => {
-                                  if ("block" === OB.kind) return OB;
+                          function xH(ee, ie, He) {
+                            let ye = cH.get(ie);
+                            if (!ye) {
+                              ye = new Map;
+                              const He = new Set;
+                              for (const be of (0, We.x)(ie)) {
+                                const ie = YH(wH(be.blocks)).map((ie => {
+                                  if ("block" === ie.kind) return ie;
                                   return {
                                     kind: "names",
-                                    names: OB.names.map((OB => {
-                                      var YB, QB;
-                                      const oB = IG(BB, OB.name);
-                                      let jB = oB;
-                                      for (let BB = 2; GB.has(jB); BB++) jB = `${oB}-${BB}`;
-                                      return GB.add(jB), {
-                                        ...OB,
-                                        anchor: jB,
-                                        heading: null !== (YB = null === (QB = DB.heading) || void 0 === QB ? void 0 : QB.text) && void 0 !== YB ? YB : ""
+                                    names: ie.names.map((ie => {
+                                      var ye, Me;
+                                      const Ke = aH(ee, ie.name);
+                                      let Ue = Ke;
+                                      for (let ee = 2; He.has(Ue); ee++) Ue = `${Ke}-${ee}`;
+                                      return He.add(Ue), {
+                                        ...ie,
+                                        anchor: Ue,
+                                        heading: null !== (ye = null === (Me = be.heading) || void 0 === Me ? void 0 : Me.text) && void 0 !== ye ? ye : ""
                                       }
                                     })),
-                                    isSongs: OB.isSongs
+                                    isSongs: ie.isSongs
                                   }
                                 }));
-                                YB.set(DB.blocks, OB)
+                                ye.set(be.blocks, ie)
                               }
-                              FG.set(OB, YB)
+                              cH.set(ie, ye)
                             }
-                            const DB = YB.get(GB);
-                            if (!DB) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return DB
+                            const be = ye.get(He);
+                            if (!be) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return be
                           }
-                          const LG = "/textures/docs/skinPreviews",
-                            gG = [{
+                          const LH = "/textures/docs/skinPreviews",
+                            CH = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var rG = GB(4631),
-                            XG = GB(4642);
+                          var vH = He(4582),
+                            uH = He(4598);
 
-                          function wG(BB) {
-                            return Object.hasOwn(rG.i, BB) ? rG.i[BB] : null
+                          function mH(ee) {
+                            return Object.hasOwn(vH.f, ee) ? vH.f[ee] : null
                           }
-                          const EG = {
+                          const lH = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: XG.f.Standard
+                            blendMode: uH.e.Standard
                           };
 
-                          function cG(BB, OB, GB) {
-                            return OB + (GB - OB) * BB()
+                          function SH(ee, ie, He) {
+                            return ie + (He - ie) * ee()
                           }
 
-                          function hG(BB, OB, GB) {
-                            return BB + (OB - BB) * GB
+                          function nH(ee, ie, He) {
+                            return ee + (ie - ee) * He
                           }
 
-                          function aG(BB) {
-                            return BB.length > 0 && "timeFraction" in BB[0]
+                          function jH(ee) {
+                            return ee.length > 0 && "timeFraction" in ee[0]
                           }
 
-                          function eG(BB, OB) {
-                            if (0 === BB.colorGradients.length) return [{
+                          function sH(ee, ie) {
+                            if (0 === ee.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!aG(BB.colorGradients)) {
-                              const GB = BB.colorGradients,
+                            if (!jH(ee.colorGradients)) {
+                              const He = ee.colorGradients,
                                 {
-                                  color: YB
-                                } = GB[Math.floor(OB() * GB.length) % GB.length];
+                                  color: ye
+                                } = He[Math.floor(ie() * He.length) % He.length];
                               return [{
                                 at: 0,
-                                colour: [YB[0] / 255, YB[1] / 255, YB[2] / 255, 1]
+                                colour: [ye[0] / 255, ye[1] / 255, ye[2] / 255, 1]
                               }]
                             }
-                            return [...BB.colorGradients].sort(((BB, OB) => BB.timeFraction - OB.timeFraction)).map((BB => {
-                              var GB, YB, DB;
-                              const QB = BB.minColor,
-                                oB = null !== (GB = BB.maxColor) && void 0 !== GB ? GB : QB,
-                                jB = OB(),
-                                yB = [hG(QB[0], oB[0], jB) / 255, hG(QB[1], oB[1], jB) / 255, hG(QB[2], oB[2], jB) / 255, hG(null !== (YB = QB[3]) && void 0 !== YB ? YB : 1, null !== (DB = oB[3]) && void 0 !== DB ? DB : 1, jB)];
+                            return [...ee.colorGradients].sort(((ee, ie) => ee.timeFraction - ie.timeFraction)).map((ee => {
+                              var He, ye, be;
+                              const Me = ee.minColor,
+                                Ke = null !== (He = ee.maxColor) && void 0 !== He ? He : Me,
+                                Ue = ie(),
+                                Fe = [nH(Me[0], Ke[0], Ue) / 255, nH(Me[1], Ke[1], Ue) / 255, nH(Me[2], Ke[2], Ue) / 255, nH(null !== (ye = Me[3]) && void 0 !== ye ? ye : 1, null !== (be = Ke[3]) && void 0 !== be ? be : 1, Ue)];
                               return {
-                                at: BB.timeFraction,
-                                colour: yB
+                                at: ee.timeFraction,
+                                colour: Fe
                               }
                             }))
                           }
 
-                          function TG(BB, OB, GB, YB) {
-                            const DB = cG(YB, BB.minEmitPower, BB.maxEmitPower),
-                              QB = OB => cG(YB, Math.min(BB.dir1[OB], BB.dir2[OB]), Math.max(BB.dir1[OB], BB.dir2[OB])) * DB,
-                              oB = [...BB.velocityGradients].sort(((BB, OB) => BB.timeFraction - OB.timeFraction)).map((BB => ({
-                                at: BB.timeFraction,
-                                factor: cG(YB, BB.factor, BB.factor2)
+                          function IH(ee, ie, He, ye) {
+                            const be = SH(ye, ee.minEmitPower, ee.maxEmitPower),
+                              Me = ie => SH(ye, Math.min(ee.dir1[ie], ee.dir2[ie]), Math.max(ee.dir1[ie], ee.dir2[ie])) * be,
+                              Ke = [...ee.velocityGradients].sort(((ee, ie) => ee.timeFraction - ie.timeFraction)).map((ee => ({
+                                at: ee.timeFraction,
+                                factor: SH(ye, ee.factor, ee.factor2)
                               })));
                             return {
-                              pos: [cG(YB, OB[0], GB[0]), cG(YB, OB[1], GB[1]), cG(YB, OB[2], GB[2])],
-                              dir: [QB(0), QB(1), QB(2)],
+                              pos: [SH(ye, ie[0], He[0]), SH(ye, ie[1], He[1]), SH(ye, ie[2], He[2])],
+                              dir: [Me(0), Me(1), Me(2)],
                               age: 0,
-                              life: cG(YB, BB.minLifeTime, BB.maxLifeTime),
-                              size: cG(YB, BB.minSize, BB.maxSize),
-                              colours: eG(BB, YB),
-                              velocityFactors: oB
+                              life: SH(ye, ee.minLifeTime, ee.maxLifeTime),
+                              size: SH(ye, ee.minSize, ee.maxSize),
+                              colours: sH(ee, ye),
+                              velocityFactors: Ke
                             }
                           }
 
-                          function bG(BB, OB, GB, YB) {
-                            if (OB < BB[0].at) return GB(Math.min(1, BB.length - 1));
-                            for (let DB = 0; DB < BB.length - 1; DB++)
-                              if (OB <= BB[DB + 1].at) {
-                                const QB = BB[DB + 1].at - BB[DB].at;
-                                return YB(GB(DB), GB(DB + 1), QB > 0 ? (OB - BB[DB].at) / QB : 1)
-                              } return GB(BB.length - 1)
+                          function hH(ee, ie, He, ye) {
+                            if (ie < ee[0].at) return He(Math.min(1, ee.length - 1));
+                            for (let be = 0; be < ee.length - 1; be++)
+                              if (ie <= ee[be + 1].at) {
+                                const Me = ee[be + 1].at - ee[be].at;
+                                return ye(He(be), He(be + 1), Me > 0 ? (ie - ee[be].at) / Me : 1)
+                              } return He(ee.length - 1)
                           }
 
-                          function CG(BB) {
-                            return bG(BB.colours, BB.age / BB.life, (OB => BB.colours[OB].colour), ((BB, OB, GB) => [hG(BB[0], OB[0], GB), hG(BB[1], OB[1], GB), hG(BB[2], OB[2], GB), hG(BB[3], OB[3], GB)]))
+                          function NH(ee) {
+                            return hH(ee.colours, ee.age / ee.life, (ie => ee.colours[ie].colour), ((ee, ie, He) => [nH(ee[0], ie[0], He), nH(ee[1], ie[1], He), nH(ee[2], ie[2], He), nH(ee[3], ie[3], He)]))
                           }
 
-                          function HG(BB, OB, GB) {
-                            if (BB.age += GB, BB.age >= BB.life) return !1;
-                            const YB = function(BB) {
-                              return 0 === BB.velocityFactors.length ? 1 : bG(BB.velocityFactors, BB.age / BB.life, (OB => BB.velocityFactors[OB].factor), hG)
-                            }(BB) * GB;
-                            for (let QB = 0; QB < 3; QB++) {
-                              var DB;
-                              BB.pos[QB] += BB.dir[QB] * YB, BB.dir[QB] += (null !== (DB = OB[QB]) && void 0 !== DB ? DB : 0) * GB
+                          function GH(ee, ie, He) {
+                            if (ee.age += He, ee.age >= ee.life) return !1;
+                            const ye = function(ee) {
+                              return 0 === ee.velocityFactors.length ? 1 : hH(ee.velocityFactors, ee.age / ee.life, (ie => ee.velocityFactors[ie].factor), nH)
+                            }(ee) * He;
+                            for (let Me = 0; Me < 3; Me++) {
+                              var be;
+                              ee.pos[Me] += ee.dir[Me] * ye, ee.dir[Me] += (null !== (be = ie[Me]) && void 0 !== be ? be : 0) * He
                             }
                             return !0
                           }
 
-                          function vG(BB) {
-                            return String(Math.round(1e6 * BB) / 1e6)
+                          function rH(ee) {
+                            return String(Math.round(1e6 * ee) / 1e6)
                           }
 
-                          function sG(BB) {
-                            return `[${BB.map(vG).join(", ")}]`
+                          function QH(ee) {
+                            return `[${ee.map(rH).join(", ")}]`
                           }
 
-                          function xG(BB, OB) {
-                            const GB = `${OB}    `;
-                            return `[\n${(aG(BB)?BB.map((BB=>{const OB=[`${GB}    timeFraction: ${vG(BB.timeFraction)},`,`${GB}    minColor: ${sG(BB.minColor)},`];return BB.maxColor&&OB.push(`${GB}    maxColor: ${sG(BB.maxColor)},`),`${GB}{\n${OB.join("\n")}\n${GB}},`})):BB.map((BB=>`
+                          function ey(ee, ie) {
+                            const He = `${ie}    `;
+                            return `[\n${(jH(ee)?ee.map((ee=>{const ie=[`${He}    timeFraction: ${rH(ee.timeFraction)},`,`${He}    minColor: ${QH(ee.minColor)},`];return ee.maxColor&&ie.push(`${He}    maxColor: ${QH(ee.maxColor)},`),`${He}{\n${ie.join("\n")}\n${He}},`})):ee.map((ee=>`
                             $ {
-                              GB
+                              He
                             } {
                               color: $ {
-                                sG(BB.color)
+                                QH(ee.color)
                               }
-                            }, `))).join("\n")}\n${OB}]`
+                            }, `))).join("\n")}\n${ie}]`
                           }
-                          const tG = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            BY = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const OY = .6;
+                          const iy = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            Hy = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const yy = .6;
 
-                          function GY(BB, OB) {
-                            return `${OB?"song":"sound"}:${BB}`
+                          function by(ee, ie) {
+                            return `${ie?"song":"sound"}:${ee}`
                           }
-                          let YY = {
+                          let My = {
                               track: null,
-                              volume: OY
+                              volume: yy
                             },
-                            DY = null,
-                            QY = 0,
-                            oY = 0;
-                          const jY = new Set;
+                            Ky = null,
+                            Uy = 0,
+                            Fy = 0;
+                          const Jy = new Set;
 
-                          function yY(BB) {
-                            YY = {
-                              ...YY,
-                              ...BB
-                            }, jY.forEach((BB => {
-                              BB()
+                          function oy(ee) {
+                            My = {
+                              ...My,
+                              ...ee
+                            }, Jy.forEach((ee => {
+                              ee()
                             }))
                           }
 
-                          function JY(BB) {
-                            YY.track && yY({
+                          function Ry(ee) {
+                            My.track && oy({
                               track: {
-                                ...YY.track,
-                                ...BB
+                                ...My.track,
+                                ...ee
                               }
                             })
                           }
 
-                          function MY(BB) {
-                            const [OB, GB] = (0, YB.useState)((() => BB(YY))), DB = (0, YB.useRef)(BB);
-                            return DB.current = BB, (0, YB.useEffect)((() => {
-                              const BB = () => {
-                                GB((() => DB.current(YY)))
+                          function ky(ee) {
+                            const [ie, He] = (0, ye.useState)((() => ee(My))), be = (0, ye.useRef)(ee);
+                            return be.current = ee, (0, ye.useEffect)((() => {
+                              const ee = () => {
+                                He((() => be.current(My)))
                               };
-                              return jY.add(BB), BB(), () => {
-                                jY.delete(BB)
+                              return Jy.add(ee), ee(), () => {
+                                Jy.delete(ee)
                               }
-                            }), []), OB
+                            }), []), ie
                           }
 
-                          function PY() {
-                            QY++;
-                            const BB = DY;
-                            DY = null, null === BB || void 0 === BB || BB.stop()
+                          function qy() {
+                            Uy++;
+                            const ee = Ky;
+                            Ky = null, null === ee || void 0 === ee || ee.stop()
                           }
 
-                          function zY(BB, OB) {
-                            let YB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            PY();
-                            const DB = QY,
+                          function fy(ee, ie) {
+                            let ye = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            qy();
+                            const be = Uy,
                               {
-                                track: QB
-                              } = YY,
-                              oB = QB && QB.name === BB && QB.isSong === OB ? QB.duration : 0;
-                            oY = YB, yY({
+                                track: Me
+                              } = My,
+                              Ke = Me && Me.name === ee && Me.isSong === ie ? Me.duration : 0;
+                            Fy = ye, oy({
                               track: {
-                                name: BB,
-                                isSong: OB,
+                                name: ee,
+                                isSong: ie,
                                 status: "loading",
-                                duration: oB
+                                duration: Ke
                               }
-                            }), Promise.all([GB.e(249), GB.e(278)]).then((() => GB(40812))).then((GB => {
+                            }), Promise.all([He.e(249), He.e(278)]).then((() => He(40891))).then((He => {
                               let {
-                                playDocsSound: QB
-                              } = GB;
-                              DB === QY && (DY = QB(BB, OB, YY.volume, YB, {
-                                onPlay: BB => {
-                                  DB === QY && JY({
+                                playDocsSound: Me
+                              } = He;
+                              be === Uy && (Ky = Me(ee, ie, My.volume, ye, {
+                                onPlay: ee => {
+                                  be === Uy && Ry({
                                     status: "playing",
-                                    duration: BB
+                                    duration: ee
                                   })
                                 },
-                                onEnd: BB => {
-                                  var OB, GB;
-                                  DB === QY && (DY = null, BB ? yY({
+                                onEnd: ee => {
+                                  var ie, He;
+                                  be === Uy && (Ky = null, ee ? oy({
                                     track: null
-                                  }) : (oY = null !== (OB = null === (GB = YY.track) || void 0 === GB ? void 0 : GB.duration) && void 0 !== OB ? OB : 0, JY({
+                                  }) : (Fy = null !== (ie = null === (He = My.track) || void 0 === He ? void 0 : He.duration) && void 0 !== ie ? ie : 0, Ry({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((OB => {
-                              console.error(`Could not play docs sound ${BB}`, OB), DB === QY && yY({
+                            })).catch((ie => {
+                              console.error(`Could not play docs sound ${ee}`, ie), be === Uy && oy({
                                 track: null
                               })
                             }))
                           }
 
-                          function lY() {
+                          function Ty() {
                             const {
-                              track: BB
-                            } = YY;
-                            if (!BB) return;
-                            if ("playing" === BB.status && DY) return oY = DY.pR(), DY.pause(), void JY({
+                              track: ee
+                            } = My;
+                            if (!ee) return;
+                            if ("playing" === ee.status && Ky) return Fy = Ky.pE(), Ky.pause(), void Ry({
                               status: "paused"
                             });
-                            if ("loading" === BB.status) return PY(), void JY({
+                            if ("loading" === ee.status) return qy(), void Ry({
                               status: "paused"
                             });
-                            if (DY) return void DY.resume();
-                            const OB = BB.duration > 0 && oY >= BB.duration - .05;
-                            zY(BB.name, BB.isSong, OB ? 0 : oY)
+                            if (Ky) return void Ky.resume();
+                            const ie = ee.duration > 0 && Fy >= ee.duration - .05;
+                            fy(ee.name, ee.isSong, ie ? 0 : Fy)
                           }
 
-                          function pY() {
-                            var BB;
-                            return DY && "playing" === (null === (BB = YY.track) || void 0 === BB ? void 0 : BB.status) ? DY.pR() : oY
+                          function py() {
+                            var ee;
+                            return Ky && "playing" === (null === (ee = My.track) || void 0 === ee ? void 0 : ee.status) ? Ky.pE() : Fy
                           }
 
-                          function qY(BB) {
-                            var OB;
-                            null === (OB = DY) || void 0 === OB || OB.setVolume(BB), yY({
-                              volume: BB
+                          function Xy(ee) {
+                            var ie;
+                            null === (ie = Ky) || void 0 === ie || ie.setVolume(ee), oy({
+                              volume: ee
                             })
                           }
 
-                          function ZY() {
-                            PY(), oY = 0, yY({
+                          function zy() {
+                            qy(), Fy = 0, oy({
                               track: null
                             })
                           }
-                          const NY = (0, YB.createContext)(null);
-                          let RY = null;
+                          const By = (0, ye.createContext)(null);
+                          let Ey = null;
 
-                          function WY() {
-                            const [BB, OB] = (0, YB.useState)(null);
-                            return (0, YB.useEffect)((() => {
-                              let BB = !1;
-                              return RY ??= Promise.all([GB.e(84), GB.e(87), GB.e(85), GB.e(86), GB.e(204), GB.e(35), GB.e(253)]).then((() => GB(40803))), RY.then((GB => {
-                                BB || OB(GB)
-                              }), (BB => {
-                                console.error("Could not load the docs gallery's textures", BB), RY = null
+                          function gy() {
+                            const [ee, ie] = (0, ye.useState)(null);
+                            return (0, ye.useEffect)((() => {
+                              let ee = !1;
+                              return Ey ??= Promise.all([He.e(84), He.e(87), He.e(85), He.e(86), He.e(204), He.e(35), He.e(253)]).then((() => He(40888))), Ey.then((He => {
+                                ee || ie(He)
+                              }), (ee => {
+                                console.error("Could not load the docs gallery's textures", ee), Ey = null
                               })), () => {
-                                BB = !0
+                                ee = !0
                               }
-                            }), []), BB
+                            }), []), ee
                           }
-                          const AY = 24,
-                            VY = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const Oy = 24,
+                            dy = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function SY(BB, OB) {
-                            const GB = "skins" === BB ? function(BB, OB) {
-                              const GB = gG.find((OB => BB.startsWith(OB.heading)));
-                              return GB ? function(BB, OB) {
-                                return `${BB}-${OB}`
-                              }(GB.prefix, OB) : null
-                            }(OB.heading, OB.name) : null;
-                            return null === GB ? null : `${LG}/${GB}.webp`
+                          function Wy(ee, ie) {
+                            const He = "skins" === ee ? function(ee, ie) {
+                              const He = CH.find((ie => ee.startsWith(ie.heading)));
+                              return He ? function(ee, ie) {
+                                return `${ee}-${ie}`
+                              }(He.prefix, ie) : null
+                            }(ie.heading, ie.name) : null;
+                            return null === He ? null : `${LH}/${He}.webp`
                           }
 
-                          function nY(BB) {
+                          function ty(ee) {
                             let {
-                              kind: OB,
-                              entry: GB,
-                              assets: DB,
-                              renderedUrl: oB
-                            } = BB;
+                              kind: ie,
+                              entry: He,
+                              assets: be,
+                              renderedUrl: Ke
+                            } = ee;
                             const {
-                              name: jB
-                            } = GB, [yB, JB] = (0, YB.useState)(!1);
-                            if ("icons" === OB && wO(jB)) return (0, pB.jsx)(AG.b, {
+                              name: Ue
+                            } = He, [Fe, Je] = (0, ye.useState)(!1);
+                            if ("icons" === ie && ui(Ue)) return (0, fe.jsx)(OH.e, {
                               className: "DocsTileIcon",
-                              name: jB
+                              name: Ue
                             });
-                            let MB = null;
-                            var PB;
-                            if ("icons" === OB) MB = null !== (PB = null === DB || void 0 === DB ? void 0 : DB.getIngameIconUrl(jB)) && void 0 !== PB ? PB : null;
-                            else if ("particles" === OB) {
-                              var zB, lB, qB;
-                              MB = null !== (zB = null === DB || void 0 === DB ? void 0 : DB.getParticleTextureUrl(null !== (lB = null === (qB = wG(jB)) || void 0 === qB ? void 0 : qB.texture) && void 0 !== lB ? lB : jB)) && void 0 !== zB ? zB : null
-                            } else "skins" === OB && (MB = null !== oB && void 0 !== oB ? oB : VY.test(jB) ? `/textures/charSkins/previews/${jB}_preview.png` : null);
-                            return !MB || yB ? (0, pB.jsx)(ZB, {
+                            let oe = null;
+                            var Re;
+                            if ("icons" === ie) oe = null !== (Re = null === be || void 0 === be ? void 0 : be.getIngameIconUrl(Ue)) && void 0 !== Re ? Re : null;
+                            else if ("particles" === ie) {
+                              var ke, qe, Te;
+                              oe = null !== (ke = null === be || void 0 === be ? void 0 : be.getParticleTextureUrl(null !== (qe = null === (Te = mH(Ue)) || void 0 === Te ? void 0 : Te.texture) && void 0 !== qe ? qe : Ue)) && void 0 !== ke ? ke : null
+                            } else "skins" === ie && (oe = null !== Ke && void 0 !== Ke ? Ke : dy.test(Ue) ? `/textures/charSkins/previews/${Ue}_preview.png` : null);
+                            return !oe || Fe ? (0, fe.jsx)(pe, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === OB ? "person" : "image"
-                            }) : (0, pB.jsx)("img", {
-                              className: QB()("DocsTileImage", {
-                                Pixelated: "skins" !== OB
+                              name: "skins" === ie ? "person" : "image"
+                            }) : (0, fe.jsx)("img", {
+                              className: Me()("DocsTileImage", {
+                                Pixelated: "skins" !== ie
                               }),
-                              src: MB,
-                              srcSet: MB === oB ? `${MB} 2x` : void 0,
+                              src: oe,
+                              srcSet: oe === Ke ? `${oe} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${MB}`), JB(!0)
+                                console.warn(`Docs gallery: could not load ${oe}`), Je(!0)
                               }
                             })
                           }
 
-                          function UY(BB) {
+                          function Zy(ee) {
                             let {
-                              entry: OB,
-                              isSong: GB
-                            } = BB;
-                            const YB = MY((BB => {
+                              entry: ie,
+                              isSong: He
+                            } = ee;
+                            const ye = ky((ee => {
                                 let {
-                                  track: YB
-                                } = BB;
-                                return (null === YB || void 0 === YB ? void 0 : YB.name) === OB.name && YB.isSong === GB ? YB.status : null
+                                  track: ye
+                                } = ee;
+                                return (null === ye || void 0 === ye ? void 0 : ye.name) === ie.name && ye.isSong === He ? ye.status : null
                               })),
-                              DB = null !== YB && "paused" !== YB;
-                            return (0, pB.jsxs)("button", {
+                              be = null !== ye && "paused" !== ye;
+                            return (0, fe.jsxs)("button", {
                               type: "button",
-                              id: OB.anchor,
-                              className: QB()("DocsSoundTile", {
-                                Playing: DB
+                              id: ie.anchor,
+                              className: Me()("DocsSoundTile", {
+                                Playing: be
                               }),
-                              "data-docs-track": GY(OB.name, GB),
-                              "aria-label": DB ? `Pause ${OB.name}` : `Play ${OB.name}`,
+                              "data-docs-track": by(ie.name, He),
+                              "aria-label": be ? `Pause ${ie.name}` : `Play ${ie.name}`,
                               onClick: () => {
-                                null !== YB ? lY() : zY(OB.name, GB)
+                                null !== ye ? Ty() : fy(ie.name, He)
                               },
-                              children: [(0, pB.jsx)("span", {
+                              children: [(0, fe.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, pB.jsx)(ZB, {
-                                  name: DB ? "pause" : "play"
+                                children: (0, fe.jsx)(pe, {
+                                  name: be ? "pause" : "play"
                                 })
-                              }), (0, pB.jsx)("code", {
+                              }), (0, fe.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: OB.name
-                              }), OB.caption && (0, pB.jsx)("span", {
+                                children: ie.name
+                              }), ie.caption && (0, fe.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: OB.caption
+                                children: ie.caption
                               })]
                             })
                           }
 
-                          function fY(BB) {
+                          function wy(ee) {
                             let {
-                              kind: OB,
-                              names: GB,
-                              isSongs: DB
-                            } = BB;
-                            const oB = WY(),
-                              [jB, yB] = RB(),
-                              JB = !1 === (null === jB || void 0 === jB ? void 0 : jB.failed) ? jB.text : null,
-                              MB = (0, YB.useContext)(NY),
-                              [PB, zB] = (0, YB.useState)(""),
-                              lB = PB.trim().toLowerCase(),
-                              qB = lB ? GB.filter((BB => BB.name.toLowerCase().includes(lB))) : GB;
-                            return (0, pB.jsxs)("div", {
+                              kind: ie,
+                              names: He,
+                              isSongs: be
+                            } = ee;
+                            const Ke = gy(),
+                              [Ue, Fe] = ze(),
+                              Je = !1 === (null === Ue || void 0 === Ue ? void 0 : Ue.failed) ? Ue.text : null,
+                              oe = (0, ye.useContext)(By),
+                              [Re, ke] = (0, ye.useState)(""),
+                              qe = Re.trim().toLowerCase(),
+                              Te = qe ? He.filter((ee => ee.name.toLowerCase().includes(qe))) : He;
+                            return (0, fe.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [GB.length > AY && (0, pB.jsx)(WG, {
+                              children: [He.length > Oy && (0, fe.jsx)(gH, {
                                 className: "DocsGalleryFilter",
-                                value: PB,
-                                placeholder: `Filter ${GB.length} names\u2026`,
+                                value: Re,
+                                placeholder: `Filter ${He.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: zB,
-                                count: lB ? {
-                                  visible: qB.length,
-                                  total: GB.length
+                                onChange: ke,
+                                count: qe ? {
+                                  visible: Te.length,
+                                  total: He.length
                                 } : null
-                              }), (0, pB.jsx)("div", {
-                                className: QB()("DocsGalleryGrid", `Kind-${OB}`, {
-                                  Songs: DB
+                              }), (0, fe.jsx)("div", {
+                                className: Me()("DocsGalleryGrid", `Kind-${ie}`, {
+                                  Songs: be
                                 }),
-                                children: qB.map((BB => {
-                                  if ("sounds" === OB) return (0, pB.jsx)(UY, {
-                                    entry: BB,
-                                    isSong: DB
-                                  }, BB.anchor);
-                                  if (MB && "particles" === OB && wG(BB.name)) return (0, pB.jsxs)("button", {
+                                children: Te.map((ee => {
+                                  if ("sounds" === ie) return (0, fe.jsx)(Zy, {
+                                    entry: ee,
+                                    isSong: be
+                                  }, ee.anchor);
+                                  if (oe && "particles" === ie && mH(ee.name)) return (0, fe.jsxs)("button", {
                                     type: "button",
-                                    id: BB.anchor,
-                                    className: QB()("DocsTile Previewable", {
-                                      Copied: JB === BB.name
+                                    id: ee.anchor,
+                                    className: Me()("DocsTile Previewable", {
+                                      Copied: Je === ee.name
                                     }),
-                                    title: `Play "${BB.name}" in the playground and copy its name`,
+                                    title: `Play "${ee.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      MB(BB.name), yB(BB.name)
+                                      oe(ee.name), Fe(ee.name)
                                     },
-                                    children: [(0, pB.jsxs)("span", {
+                                    children: [(0, fe.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, pB.jsx)(nY, {
-                                        kind: OB,
-                                        entry: BB,
-                                        assets: oB,
+                                      children: [(0, fe.jsx)(ty, {
+                                        kind: ie,
+                                        entry: ee,
+                                        assets: Ke,
                                         renderedUrl: null
-                                      }), (0, pB.jsx)("span", {
+                                      }), (0, fe.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, pB.jsx)(ZB, {
+                                        children: (0, fe.jsx)(pe, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, pB.jsx)("span", {
+                                    }), (0, fe.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: JB === BB.name ? "Copied!" : BB.name
+                                      children: Je === ee.name ? "Copied!" : ee.name
                                     })]
-                                  }, BB.anchor);
-                                  const GB = SY(OB, BB);
-                                  return (0, pB.jsxs)("button", {
+                                  }, ee.anchor);
+                                  const He = Wy(ie, ee);
+                                  return (0, fe.jsxs)("button", {
                                     type: "button",
-                                    id: BB.anchor,
-                                    className: QB()("DocsTile", {
-                                      Copied: JB === BB.name
+                                    id: ee.anchor,
+                                    className: Me()("DocsTile", {
+                                      Copied: Je === ee.name
                                     }),
-                                    title: `Copy "${BB.name}"`,
+                                    title: `Copy "${ee.name}"`,
                                     onClick: () => {
-                                      yB(BB.name)
+                                      Fe(ee.name)
                                     },
-                                    children: [(0, pB.jsx)("span", {
-                                      className: QB()("DocsTilePreview", {
-                                        Rendered: null !== GB
+                                    children: [(0, fe.jsx)("span", {
+                                      className: Me()("DocsTilePreview", {
+                                        Rendered: null !== He
                                       }),
-                                      children: (0, pB.jsx)(nY, {
-                                        kind: OB,
-                                        entry: BB,
-                                        assets: oB,
-                                        renderedUrl: GB
+                                      children: (0, fe.jsx)(ty, {
+                                        kind: ie,
+                                        entry: ee,
+                                        assets: Ke,
+                                        renderedUrl: He
                                       })
-                                    }), (0, pB.jsx)("span", {
+                                    }), (0, fe.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: JB === BB.name ? "Copied!" : BB.name
+                                      children: Je === ee.name ? "Copied!" : ee.name
                                     })]
-                                  }, BB.anchor)
+                                  }, ee.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function kY(BB) {
+                          function Dy(ee) {
                             let {
-                              kind: OB,
-                              content: GB,
-                              blocks: YB
-                            } = BB;
-                            return (0, pB.jsx)(pB.Fragment, {
-                              children: iG(OB, GB, YB).map(((BB, GB) => "block" === BB.kind ? (0, pB.jsx)(zG, {
-                                block: BB.block
-                              }, GB) : (0, pB.jsx)(fY, {
-                                kind: OB,
-                                names: BB.names,
-                                isSongs: BB.isSongs
-                              }, GB)))
+                              kind: ie,
+                              content: He,
+                              blocks: ye
+                            } = ee;
+                            return (0, fe.jsx)(fe.Fragment, {
+                              children: xH(ie, He, ye).map(((ee, He) => "block" === ee.kind ? (0, fe.jsx)(fH, {
+                                block: ee.block
+                              }, He) : (0, fe.jsx)(wy, {
+                                kind: ie,
+                                names: ee.names,
+                                isSongs: ee.isSongs
+                              }, He)))
                             })
                           }
-                          const dY = [{
+                          const Py = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function KY(BB) {
+                          function Ay(ee) {
                             let {
-                              cards: OB = dY,
-                              label: GB = "Start here"
-                            } = BB;
-                            const DB = (0, YB.useContext)(lO);
-                            return (0, pB.jsx)("nav", {
+                              cards: ie = Py,
+                              label: He = "Start here"
+                            } = ee;
+                            const be = (0, ye.useContext)(qi);
+                            return (0, fe.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": GB,
-                              children: OB.map((BB => {
+                              "aria-label": He,
+                              children: ie.map((ee => {
                                 let {
-                                  pageId: OB,
-                                  countNoun: GB
-                                } = BB;
-                                const YB = XB(OB);
-                                return (0, pB.jsxs)(oB.d, {
-                                  to: eB(DB, YB),
+                                  pageId: ie,
+                                  countNoun: He
+                                } = ee;
+                                const ye = Ce(ie);
+                                return (0, fe.jsxs)(Ke.e, {
+                                  to: ne(be, ye),
                                   className: "DocsLandingCard",
-                                  children: [(0, pB.jsx)("span", {
+                                  children: [(0, fe.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, pB.jsx)(ZB, {
-                                      name: YB.icon
+                                    children: (0, fe.jsx)(pe, {
+                                      name: ye.icon
                                     })
-                                  }), (0, pB.jsx)("span", {
+                                  }), (0, fe.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: YB.title
-                                  }), (0, pB.jsx)("span", {
+                                    children: ye.title
+                                  }), (0, fe.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: YB.summary
-                                  }), GB && (0, pB.jsxs)("span", {
+                                    children: ye.summary
+                                  }), He && (0, fe.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [EB(YB).sections.length, " ", GB]
+                                    children: [ue(ye).sections.length, " ", He]
                                   })]
-                                }, OB)
+                                }, ie)
                               }))
                             })
                           }
-                          const uY = 240;
+                          const Yy = 240;
 
-                          function mY(BB) {
+                          function Vy(ee) {
                             let {
-                              faces: OB
-                            } = BB;
-                            return (0, pB.jsxs)("span", {
+                              faces: ie
+                            } = ee;
+                            return (0, fe.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, pB.jsx)("span", {
+                              children: [(0, fe.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${OB.top}")`
+                                  backgroundImage: `url("${ie.top}")`
                                 }
-                              }), (0, pB.jsx)("span", {
+                              }), (0, fe.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${OB.left}")`
+                                  backgroundImage: `url("${ie.left}")`
                                 }
-                              }), (0, pB.jsx)("span", {
+                              }), (0, fe.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${OB.right}")`
+                                  backgroundImage: `url("${ie.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function IY(BB) {
+                          function ay(ee) {
                             let {
-                              src: OB
-                            } = BB;
-                            const [GB, DB] = (0, YB.useState)(!1);
-                            return GB ? null : (0, pB.jsx)("img", {
-                              src: OB,
+                              src: ie
+                            } = ee;
+                            const [He, be] = (0, ye.useState)(!1);
+                            return He ? null : (0, fe.jsx)("img", {
+                              src: ie,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${OB}`), DB(!0)
+                                console.warn(`Docs catalogue: could not load ${ie}`), be(!0)
                               }
                             })
                           }
 
-                          function FY(BB) {
+                          function cy(ee) {
                             let {
-                              kind: OB
-                            } = BB;
-                            const GB = RG(OB),
-                              DB = WY(),
-                              oB = (0, jB.r)(),
-                              [yB, JB] = (0, YB.useState)(""),
-                              [MB, PB] = (0, YB.useState)(null),
-                              [zB, lB] = (0, YB.useState)(uY),
-                              [qB, NB] = (0, YB.useState)(null),
-                              RB = (0, YB.useRef)(null),
-                              AB = yB.trim().toLowerCase();
-                            (0, YB.useEffect)((() => {
-                              const BB = (0, UB.r)(oB.hash),
-                                YB = GB.entries.find((GB => IG(OB, GB.name) === BB));
-                              if (YB) RB.current = YB.name, JB(YB.name), PB(null), NB(YB.name);
-                              else if (null !== RB.current) {
-                                const BB = RB.current;
-                                RB.current = null, JB((OB => OB === BB ? "" : OB)), NB(null)
+                              kind: ie
+                            } = ee;
+                            const He = EH(ie),
+                              be = gy(),
+                              Ke = (0, Ue.u)(),
+                              [Fe, Je] = (0, ye.useState)(""),
+                              [oe, Re] = (0, ye.useState)(null),
+                              [ke, qe] = (0, ye.useState)(Yy),
+                              [Te, Xe] = (0, ye.useState)(null),
+                              ze = (0, ye.useRef)(null),
+                              Ee = Fe.trim().toLowerCase();
+                            (0, ye.useEffect)((() => {
+                              const ee = (0, We.q)(Ke.hash),
+                                ye = He.entries.find((He => aH(ie, He.name) === ee));
+                              if (ye) ze.current = ye.name, Je(ye.name), Re(null), Xe(ye.name);
+                              else if (null !== ze.current) {
+                                const ee = ze.current;
+                                ze.current = null, Je((ie => ie === ee ? "" : ie)), Xe(null)
                               }
-                            }), [GB, OB, oB.hash, oB.key]), (0, YB.useEffect)((() => {
-                              var BB;
-                              null !== qB && (null === (BB = document.getElementById(IG(OB, qB))) || void 0 === BB || BB.scrollIntoView({
+                            }), [He, ie, Ke.hash, Ke.key]), (0, ye.useEffect)((() => {
+                              var ee;
+                              null !== Te && (null === (ee = document.getElementById(aH(ie, Te))) || void 0 === ee || ee.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [OB, qB]);
-                            const VB = GB.entries.filter((BB => (!AB || BB.name.toLowerCase().includes(AB)) && (!MB || BB.variants.includes(MB))));
-                            return (0, pB.jsxs)("div", {
+                            }), [ie, Te]);
+                            const ge = He.entries.filter((ee => (!Ee || ee.name.toLowerCase().includes(Ee)) && (!oe || ee.variants.includes(oe))));
+                            return (0, fe.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [GB.notes.length > 0 && (0, pB.jsx)("div", {
+                              children: [He.notes.length > 0 && (0, fe.jsx)("div", {
                                 className: "DocsProse",
-                                children: GB.notes.map((BB => (0, pB.jsx)("p", {
-                                  children: BB
-                                }, BB)))
-                              }), GB.legend.length > 0 && (0, pB.jsx)("div", {
+                                children: He.notes.map((ee => (0, fe.jsx)("p", {
+                                  children: ee
+                                }, ee)))
+                              }), He.legend.length > 0 && (0, fe.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, pB.jsxs)("table", {
+                                children: (0, fe.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, pB.jsx)("thead", {
-                                    children: (0, pB.jsxs)("tr", {
-                                      children: [(0, pB.jsx)("th", {
+                                  children: [(0, fe.jsx)("thead", {
+                                    children: (0, fe.jsxs)("tr", {
+                                      children: [(0, fe.jsx)("th", {
                                         children: "Code"
-                                      }), (0, pB.jsx)("th", {
+                                      }), (0, fe.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, pB.jsx)("th", {
+                                      }), (0, fe.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, pB.jsx)("tbody", {
-                                    children: GB.legend.map((BB => (0, pB.jsxs)("tr", {
-                                      children: [(0, pB.jsx)("td", {
-                                        children: (0, pB.jsx)("button", {
+                                  }), (0, fe.jsx)("tbody", {
+                                    children: He.legend.map((ee => (0, fe.jsxs)("tr", {
+                                      children: [(0, fe.jsx)("td", {
+                                        children: (0, fe.jsx)("button", {
                                           type: "button",
-                                          className: QB()("DocsVariantChip", {
-                                            Active: MB === BB.code
+                                          className: Me()("DocsVariantChip", {
+                                            Active: oe === ee.code
                                           }),
-                                          "aria-pressed": MB === BB.code,
-                                          title: `Show only ${OB} with ${BB.meaning} variants`,
+                                          "aria-pressed": oe === ee.code,
+                                          title: `Show only ${ie} with ${ee.meaning} variants`,
                                           onClick: () => {
-                                            PB(MB === BB.code ? null : BB.code)
+                                            Re(oe === ee.code ? null : ee.code)
                                           },
-                                          children: BB.code
+                                          children: ee.code
                                         })
-                                      }), (0, pB.jsx)("td", {
-                                        children: BB.meaning
-                                      }), (0, pB.jsx)("td", {
-                                        children: (0, pB.jsx)("code", {
+                                      }), (0, fe.jsx)("td", {
+                                        children: ee.meaning
+                                      }), (0, fe.jsx)("td", {
+                                        children: (0, fe.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: BB.usage
+                                          children: ee.usage
                                         })
                                       })]
-                                    }, BB.code)))
+                                    }, ee.code)))
                                   })]
                                 })
-                              }), GB.examples.length > 0 && (0, pB.jsx)(nB, {
+                              }), He.examples.length > 0 && (0, fe.jsx)(de, {
                                 lang: "text",
-                                code: GB.examples.join("\n")
-                              }), (0, pB.jsx)(WG, {
+                                code: He.examples.join("\n")
+                              }), (0, fe.jsx)(gH, {
                                 className: "DocsFilterBar",
-                                value: yB,
-                                placeholder: `Search ${GB.entries.length} ${OB}\u2026`,
-                                label: `Search ${OB}`,
-                                onChange: BB => {
-                                  JB(BB), lB(uY)
+                                value: Fe,
+                                placeholder: `Search ${He.entries.length} ${ie}\u2026`,
+                                label: `Search ${ie}`,
+                                onChange: ee => {
+                                  Je(ee), qe(Yy)
                                 },
-                                count: AB || MB ? {
-                                  visible: VB.length,
-                                  total: GB.entries.length
+                                count: Ee || oe ? {
+                                  visible: ge.length,
+                                  total: He.entries.length
                                 } : null,
-                                children: MB && (0, pB.jsxs)("button", {
+                                children: oe && (0, fe.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    PB(null)
+                                    Re(null)
                                   },
-                                  children: [MB, " ", (0, pB.jsx)(ZB, {
+                                  children: [oe, " ", (0, fe.jsx)(pe, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, pB.jsx)("div", {
+                              }), (0, fe.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: VB.slice(0, zB).map((BB => {
-                                  const GB = "blocks" === OB ? null === DB || void 0 === DB ? void 0 : DB.getBlockFaces(BB.name) : null,
-                                    YB = DB && !GB ? DB.getItemTextureUrl(BB.name) : null;
-                                  return (0, pB.jsxs)("div", {
-                                    id: IG(OB, BB.name),
-                                    className: QB()("DocsCatalogueTile", {
-                                      Linked: BB.name === qB
+                                children: ge.slice(0, ke).map((ee => {
+                                  const He = "blocks" === ie ? null === be || void 0 === be ? void 0 : be.getBlockFaces(ee.name) : null,
+                                    ye = be && !He ? be.getItemTextureUrl(ee.name) : null;
+                                  return (0, fe.jsxs)("div", {
+                                    id: aH(ie, ee.name),
+                                    className: Me()("DocsCatalogueTile", {
+                                      Linked: ee.name === Te
                                     }),
-                                    children: [(0, pB.jsxs)("span", {
+                                    children: [(0, fe.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [GB && (0, pB.jsx)(mY, {
-                                        faces: GB
-                                      }), YB && (0, pB.jsx)(IY, {
-                                        src: YB
+                                      children: [He && (0, fe.jsx)(Vy, {
+                                        faces: He
+                                      }), ye && (0, fe.jsx)(ay, {
+                                        src: ye
                                       })]
-                                    }), (0, pB.jsx)("span", {
+                                    }), (0, fe.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: BB.name
-                                    }), BB.variants.length > 0 && (0, pB.jsx)("span", {
+                                      children: ee.name
+                                    }), ee.variants.length > 0 && (0, fe.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: BB.variants.map((BB => (0, pB.jsx)("span", {
-                                        children: BB
-                                      }, BB)))
-                                    }), (0, pB.jsx)(WB, {
-                                      text: BB.name,
+                                      children: ee.variants.map((ee => (0, fe.jsx)("span", {
+                                        children: ee
+                                      }, ee)))
+                                    }), (0, fe.jsx)(Be, {
+                                      text: ee.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, BB.name)
+                                  }, ee.name)
                                 }))
-                              }), VB.length > zB && (0, pB.jsxs)("button", {
+                              }), ge.length > ke && (0, fe.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  lB(VB.length)
+                                  qe(ge.length)
                                 },
-                                children: ["Show all ", VB.length]
-                              }), 0 === VB.length && (0, pB.jsxs)("p", {
+                                children: ["Show all ", ge.length]
+                              }), 0 === ge.length && (0, fe.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", OB, " match."]
+                                children: ["No ", ie, " match."]
                               })]
                             })
                           }
-                          var iY = GB(5320),
-                            LY = GB(1650);
-                          const gY = .95 * iY.c;
+                          var xy = He(5294),
+                            Ly = He(1585);
+                          const Cy = .95 * xy.e;
 
-                          function rY(BB) {
-                            return /^\s*```/.test(BB)
+                          function vy(ee) {
+                            return /^\s*```/.test(ee)
                           }
 
-                          function XY(BB, OB) {
-                            const GB = [
+                          function uy(ee, ie) {
+                            const He = [
                               []
                             ];
-                            let YB = !1;
-                            for (const DB of BB.split("\n")) !YB && OB(DB) && GB.at(-1).length > 0 && GB.push([]), rY(DB) && (YB = !YB), GB.at(-1).push(DB);
-                            return GB.map((BB => BB.join("\n").trim())).filter(Boolean)
+                            let ye = !1;
+                            for (const be of ee.split("\n")) !ye && ie(be) && He.at(-1).length > 0 && He.push([]), vy(be) && (ye = !ye), He.at(-1).push(be);
+                            return He.map((ee => ee.join("\n").trim())).filter(Boolean)
                           }
 
-                          function wY(BB, OB) {
-                            const GB = `${"#".repeat(OB)} `,
-                              YB = [];
-                            let DB = !1;
-                            for (const QB of BB.split("\n")) rY(QB) ? DB = !DB : !DB && QB.startsWith(GB) && YB.push(QB.slice(GB.length).trim());
-                            return YB
+                          function my(ee, ie) {
+                            const He = `${"#".repeat(ie)} `,
+                              ye = [];
+                            let be = !1;
+                            for (const Me of ee.split("\n")) vy(Me) ? be = !be : !be && Me.startsWith(He) && ye.push(Me.slice(He.length).trim());
+                            return ye
                           }
 
-                          function EY(BB) {
-                            return BB.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function ly(ee) {
+                            return ee.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class cY {
-                            constructor(BB, OB) {
-                              this.origin = OB, this.pages = void 0, this.partPaths = new Map;
-                              const GB = BB.map((BB => {
-                                const OB = OB => this.resolveLinks(BB, OB).length,
-                                  GB = function(BB, OB) {
-                                    const GB = BB.map((BB => OB(BB.markdown) + 2)),
-                                      YB = GB.reduce(((BB, OB) => BB + OB), 0),
-                                      DB = YB / Math.ceil(YB / gY),
-                                      QB = [];
-                                    let oB = 0;
-                                    return BB.forEach(((BB, OB) => {
-                                      const YB = GB[OB];
-                                      (0 === QB.length || oB + YB > gY || oB + YB / 2 > DB) && (QB.push([]), oB = 0), QB.at(-1).push(BB), oB += YB
-                                    })), QB
-                                  }(function(BB, OB) {
-                                    return XY(BB, (BB => BB.startsWith("## "))).flatMap((BB => {
-                                      var GB;
-                                      const YB = null !== (GB = wY(BB, 2)[0]) && void 0 !== GB ? GB : "";
-                                      if (OB(BB) <= gY) return [{
-                                        markdown: BB,
-                                        section: YB
+                          class Sy {
+                            constructor(ee, ie) {
+                              this.origin = ie, this.pages = void 0, this.partPaths = new Map;
+                              const He = ee.map((ee => {
+                                const ie = ie => this.resolveLinks(ee, ie).length,
+                                  He = function(ee, ie) {
+                                    const He = ee.map((ee => ie(ee.markdown) + 2)),
+                                      ye = He.reduce(((ee, ie) => ee + ie), 0),
+                                      be = ye / Math.ceil(ye / Cy),
+                                      Me = [];
+                                    let Ke = 0;
+                                    return ee.forEach(((ee, ie) => {
+                                      const ye = He[ie];
+                                      (0 === Me.length || Ke + ye > Cy || Ke + ye / 2 > be) && (Me.push([]), Ke = 0), Me.at(-1).push(ee), Ke += ye
+                                    })), Me
+                                  }(function(ee, ie) {
+                                    return uy(ee, (ee => ee.startsWith("## "))).flatMap((ee => {
+                                      var He;
+                                      const ye = null !== (He = my(ee, 2)[0]) && void 0 !== He ? He : "";
+                                      if (ie(ee) <= Cy) return [{
+                                        markdown: ee,
+                                        section: ye
                                       }];
-                                      let DB = !1,
-                                        QB = "";
-                                      return XY(BB, (BB => {
-                                        const OB = DB && "" !== BB.trim();
-                                        return DB = "" === BB.trim(), OB
-                                      })).map((BB => {
-                                        var OB;
-                                        const GB = wY(BB, 3),
-                                          DB = BB.startsWith("### ") ? GB[0] : QB;
-                                        return QB = null !== (OB = GB.at(-1)) && void 0 !== OB ? OB : QB, {
-                                          markdown: BB,
-                                          section: YB || DB
+                                      let be = !1,
+                                        Me = "";
+                                      return uy(ee, (ee => {
+                                        const ie = be && "" !== ee.trim();
+                                        return be = "" === ee.trim(), ie
+                                      })).map((ee => {
+                                        var ie;
+                                        const He = my(ee, 3),
+                                          be = ee.startsWith("### ") ? He[0] : Me;
+                                        return Me = null !== (ie = He.at(-1)) && void 0 !== ie ? ie : Me, {
+                                          markdown: ee,
+                                          section: ye || be
                                         }
                                       }))
                                     }))
-                                  }(EY(BB), OB), OB);
+                                  }(ly(ee), ie), ie);
                                 return {
-                                  page: BB,
-                                  groups: GB.length > 1 ? GB : []
+                                  page: ee,
+                                  groups: He.length > 1 ? He : []
                                 }
                               }));
                               for (const {
-                                  page: YB,
-                                  groups: DB
+                                  page: ye,
+                                  groups: be
                                 }
-                                of GB) DB.forEach(((BB, OB) => {
-                                const GB = (0, iY.s)(YB.slug, OB);
-                                for (const DB of BB.flatMap((BB => [...wY(BB.markdown, 2), ...wY(BB.markdown, 3)]))) {
-                                  const BB = `${YB.id}#${(0,UB.s)(DB)}`;
-                                  this.partPaths.has(BB) || this.partPaths.set(BB, GB)
+                                of He) be.forEach(((ee, ie) => {
+                                const He = (0, xy.B)(ye.slug, ie);
+                                for (const be of ee.flatMap((ee => [...my(ee.markdown, 2), ...my(ee.markdown, 3)]))) {
+                                  const ee = `${ye.id}#${(0,We.t)(be)}`;
+                                  this.partPaths.has(ee) || this.partPaths.set(ee, He)
                                 }
                               }));
-                              this.pages = GB.map((BB => {
+                              this.pages = He.map((ee => {
                                 let {
-                                  page: OB,
-                                  groups: GB
-                                } = BB;
+                                  page: ie,
+                                  groups: He
+                                } = ee;
                                 return {
-                                  page: OB,
-                                  path: (0, iY.r)(OB.slug),
-                                  markdown: `# ${OB.title}\n\n${this.resolveLinks(OB,EY(OB))}\n`,
-                                  parts: GB.map(((BB, YB) => this.renderPart(OB, BB, YB, GB.length)))
+                                  page: ie,
+                                  path: (0, xy.z)(ie.slug),
+                                  markdown: `# ${ie.title}\n\n${this.resolveLinks(ie,ly(ie))}\n`,
+                                  parts: He.map(((ee, ye) => this.renderPart(ie, ee, ye, He.length)))
                                 }
                               }))
                             }
-                            url(BB) {
-                              return `${this.origin}${BB}`
+                            url(ee) {
+                              return `${this.origin}${ee}`
                             }
-                            getPage(BB) {
-                              return this.pages.find((OB => OB.page.id === BB))
+                            getPage(ee) {
+                              return this.pages.find((ie => ie.page.id === ee))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((BB => (BB.parts.length > 0 ? BB.parts : [{
-                                path: BB.path,
+                              return this.pages.flatMap((ee => (ee.parts.length > 0 ? ee.parts : [{
+                                path: ee.path,
                                 label: "",
-                                markdown: BB.markdown
-                              }]).filter((BB => BB.markdown.length > iY.c))))
+                                markdown: ee.markdown
+                              }]).filter((ee => ee.markdown.length > xy.e))))
                             }
-                            markdownUrl(BB, OB) {
-                              const GB = OB && this.partPaths.get(`${BB.id}#${OB}`) || (0, iY.r)(BB.slug);
-                              return this.url(OB ? `${GB}#${OB}` : GB)
+                            markdownUrl(ee, ie) {
+                              const He = ie && this.partPaths.get(`${ee.id}#${ie}`) || (0, xy.z)(ee.slug);
+                              return this.url(ie ? `${He}#${ie}` : He)
                             }
-                            resolveLinks(BB, OB) {
-                              return OB.replace(/\]\((#[^)]+)\)/g, ((OB, GB) => {
-                                var YB;
-                                const DB = null !== (YB = hB(GB)) && void 0 !== YB ? YB : this.samePageTarget(BB, GB);
-                                return DB ? `](${this.markdownUrl(DB.page,DB.anchor)})` : OB
+                            resolveLinks(ee, ie) {
+                              return ie.replace(/\]\((#[^)]+)\)/g, ((ie, He) => {
+                                var ye;
+                                const be = null !== (ye = le(He)) && void 0 !== ye ? ye : this.samePageTarget(ee, He);
+                                return be ? `](${this.markdownUrl(be.page,be.anchor)})` : ie
                               }))
                             }
-                            samePageTarget(BB, OB) {
-                              const GB = (0, UB.s)(OB.slice(1));
-                              return cB(BB, GB) ? {
-                                page: BB,
-                                anchor: GB
+                            samePageTarget(ee, ie) {
+                              const He = (0, We.t)(ie.slice(1));
+                              return me(ee, He) ? {
+                                page: ee,
+                                anchor: He
                               } : null
                             }
-                            renderPart(BB, OB, GB, YB) {
-                              const DB = function(BB) {
-                                  const OB = BB.map((BB => BB.section)).filter(Boolean);
-                                  if (0 === OB.length) return "";
-                                  const GB = OB[0],
-                                    YB = OB.at(-1);
-                                  return GB === YB ? GB : `${GB} to ${YB}`
-                                }(OB),
-                                QB = OB.map((BB => BB.markdown)).join("\n\n"),
-                                oB = DB ? `It covers ${DB}. ` : "",
-                                jB = `Part ${GB+1} of ${YB} of [${BB.title}](${this.url((0,iY.r)(BB.slug))}). ${oB}[llms.txt](${this.url(iY.h)}) lists every part.`;
+                            renderPart(ee, ie, He, ye) {
+                              const be = function(ee) {
+                                  const ie = ee.map((ee => ee.section)).filter(Boolean);
+                                  if (0 === ie.length) return "";
+                                  const He = ie[0],
+                                    ye = ie.at(-1);
+                                  return He === ye ? He : `${He} to ${ye}`
+                                }(ie),
+                                Me = ie.map((ee => ee.markdown)).join("\n\n"),
+                                Ke = be ? `It covers ${be}. ` : "",
+                                Ue = `Part ${He+1} of ${ye} of [${ee.title}](${this.url((0,xy.z)(ee.slug))}). ${Ke}[llms.txt](${this.url(xy.k)}) lists every part.`;
                               return {
-                                path: (0, iY.s)(BB.slug, GB),
-                                label: DB,
-                                markdown: `# ${BB.title}, part ${GB+1} of ${YB}\n\n${jB}\n\n${this.resolveLinks(BB,QB)}\n`
+                                path: (0, xy.B)(ee.slug, He),
+                                label: be,
+                                markdown: `# ${ee.title}, part ${He+1} of ${ye}\n\n${Ue}\n\n${this.resolveLinks(ee,Me)}\n`
                               }
                             }
-                            llmsTxt(BB) {
-                              const OB = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${hY(iY.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const GB of rB) {
-                                OB.push("", `## ${GB.title}`, "");
-                                for (const BB of GB.pageIds) {
-                                  const GB = this.getPage(BB),
+                            llmsTxt(ee) {
+                              const ie = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${ny(xy.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const He of Le) {
+                                ie.push("", `## ${He.title}`, "");
+                                for (const ee of He.pageIds) {
+                                  const He = this.getPage(ee),
                                     {
-                                      page: YB,
-                                      parts: DB
-                                    } = GB,
-                                    QB = `About ${hY(GB.markdown.length)} tokens${DB.length>0?`, in ${DB.length} parts:`:"."}`;
-                                  OB.push(`- [${YB.title}](${this.url(GB.path)}): ${YB.summary} ${QB}`), DB.forEach(((BB, GB) => {
-                                    OB.push(`  - [Part ${GB+1}${BB.label?`: ${BB.label}`:""}](${this.url(BB.path)})`)
+                                      page: ye,
+                                      parts: be
+                                    } = He,
+                                    Me = `About ${ny(He.markdown.length)} tokens${be.length>0?`, in ${be.length} parts:`:"."}`;
+                                  ie.push(`- [${ye.title}](${this.url(He.path)}): ${ye.summary} ${Me}`), be.forEach(((ee, He) => {
+                                    ie.push(`  - [Part ${He+1}${ee.label?`: ${ee.label}`:""}](${this.url(ee.path)})`)
                                   }))
                                 }
                               }
-                              return OB.push("", "## Optional", "", `- [Every page in one file](${this.url(iY.e)}): About ${hY(BB.length)} tokens, for a model with a large context window.`, ""), OB.join("\n")
+                              return ie.push("", "## Optional", "", `- [Every page in one file](${this.url(xy.h)}): About ${ny(ee.length)} tokens, for a model with a large context window.`, ""), ie.join("\n")
                             }
                             llmsFullTxt() {
-                              return rB.flatMap((BB => BB.pageIds.map((BB => this.getPage(BB).markdown)))).join("\n---\n\n")
+                              return Le.flatMap((ee => ee.pageIds.map((ee => this.getPage(ee).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const BB = this.llmsFullTxt(),
-                                OB = this.llmsTxt(BB),
-                                GB = new Map([
-                                  [iY.n, OB],
-                                  [iY.h, OB],
-                                  [iY.e, BB]
+                              const ee = this.llmsFullTxt(),
+                                ie = this.llmsTxt(ee),
+                                He = new Map([
+                                  [xy.r, ie],
+                                  [xy.k, ie],
+                                  [xy.h, ee]
                                 ]);
-                              for (const YB of this.pages) {
-                                GB.set(YB.path, YB.markdown);
-                                for (const BB of YB.parts) GB.set(BB.path, BB.markdown)
+                              for (const ye of this.pages) {
+                                He.set(ye.path, ye.markdown);
+                                for (const ee of ye.parts) He.set(ee.path, ee.markdown)
                               }
-                              return GB
+                              return He
                             }
                           }
 
-                          function hY(BB) {
-                            return `${Math.max(1,Math.round(BB/4e3))}K`
+                          function ny(ee) {
+                            return `${Math.max(1,Math.round(ee/4e3))}K`
                           }
-                          let aY = null;
+                          let jy = null;
 
-                          function eY() {
-                            return aY ??= new cY(gB, LY.d), aY
+                          function sy() {
+                            return jy ??= new Sy(xe, Ly.b), jy
                           }
-                          var TY = GB(5322);
-                          const bY = [TY.d, TY.i];
+                          var Iy = He(5303);
+                          const hy = [Iy.d, Iy.p];
 
-                          function CY(BB) {
-                            return eY().getPage(BB.id).parts.length > 0 ? `Read ${iY.l}, then the parts of the Bloxd Code API's ${BB.title} page it lists, so I can ask questions about it.` : `Read ${LY.d}${(0,iY.r)(BB.slug)} so I can ask questions about it. ${TY.h}`
+                          function Ny(ee) {
+                            return sy().getPage(ee.id).parts.length > 0 ? `Read ${xy.n}, then the parts of the Bloxd Code API's ${ee.title} page it lists, so I can ask questions about it.` : `Read ${Ly.b}${(0,xy.z)(ee.slug)} so I can ask questions about it. ${Iy.l}`
                           }
 
-                          function HY(BB) {
+                          function Gy(ee) {
                             let {
-                              page: OB
-                            } = BB;
-                            const [GB, YB] = RB();
-                            return (0, pB.jsxs)("div", {
+                              page: ie
+                            } = ee;
+                            const [He, ye] = ze();
+                            return (0, fe.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, pB.jsxs)("button", {
+                              children: [(0, fe.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  YB(eY().getPage(OB.id).markdown)
+                                  ye(sy().getPage(ie.id).markdown)
                                 },
-                                children: [(0, pB.jsx)(ZB, {
-                                  name: !1 === (null === GB || void 0 === GB ? void 0 : GB.failed) ? "check" : "copy"
-                                }), (0, pB.jsx)("span", {
-                                  children: GB ? GB.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, fe.jsx)(pe, {
+                                  name: !1 === (null === He || void 0 === He ? void 0 : He.failed) ? "check" : "copy"
+                                }), (0, fe.jsx)("span", {
+                                  children: He ? He.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), bY.map((BB => (0, pB.jsxs)("a", {
+                              }), hy.map((ee => (0, fe.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, TY.b)(BB, CY(OB)),
+                                href: (0, Iy.b)(ee, Ny(ie)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, pB.jsx)(ZB, {
+                                children: [(0, fe.jsx)(pe, {
                                   name: "external-link"
-                                }), (0, pB.jsxs)("span", {
-                                  children: ["Open in ", BB.name]
+                                }), (0, fe.jsxs)("span", {
+                                  children: ["Open in ", ee.name]
                                 })]
-                              }, BB.name)))]
+                              }, ee.name)))]
                             })
                           }
 
-                          function vY(BB) {
-                            return `#${[0,1,2].map((OB=>Math.round(Math.min(255,Math.max(0,BB[OB]))).toString(16).padStart(2,"0"))).join("")}`
+                          function ry(ee) {
+                            return `#${[0,1,2].map((ie=>Math.round(Math.min(255,Math.max(0,ee[ie]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function sY(BB) {
-                            return [parseInt(BB.slice(1, 3), 16), parseInt(BB.slice(3, 5), 16), parseInt(BB.slice(5, 7), 16)]
+                          function Qy(ee) {
+                            return [parseInt(ee.slice(1, 3), 16), parseInt(ee.slice(3, 5), 16), parseInt(ee.slice(5, 7), 16)]
                           }
 
-                          function xY(BB) {
+                          function eb(ee) {
                             let {
-                              label: OB,
-                              min: GB,
-                              max: YB,
-                              step: DB,
-                              low: QB,
-                              high: oB,
-                              onChange: jB
-                            } = BB;
-                            return (0, pB.jsxs)("div", {
+                              label: ie,
+                              min: He,
+                              max: ye,
+                              step: be,
+                              low: Me,
+                              high: Ke,
+                              onChange: Ue
+                            } = ee;
+                            return (0, fe.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pB.jsxs)("div", {
+                              children: [(0, fe.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, pB.jsx)("span", {
-                                  children: OB
-                                }), (0, pB.jsx)("span", {
+                                children: [(0, fe.jsx)("span", {
+                                  children: ie
+                                }), (0, fe.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: QB === oB ? QB : `${QB}\u2013${oB}`
+                                  children: Me === Ke ? Me : `${Me}\u2013${Ke}`
                                 })]
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, pB.jsx)("input", {
+                                children: [(0, fe.jsx)("input", {
                                   type: "range",
-                                  min: GB,
-                                  max: YB,
-                                  step: DB,
-                                  value: Math.min(YB, QB),
-                                  "aria-label": `Minimum ${OB.toLowerCase()}`,
-                                  onChange: BB => {
-                                    const OB = Number(BB.target.value);
-                                    jB(OB, Math.max(OB, oB))
+                                  min: He,
+                                  max: ye,
+                                  step: be,
+                                  value: Math.min(ye, Me),
+                                  "aria-label": `Minimum ${ie.toLowerCase()}`,
+                                  onChange: ee => {
+                                    const ie = Number(ee.target.value);
+                                    Ue(ie, Math.max(ie, Ke))
                                   }
-                                }), (0, pB.jsx)("input", {
+                                }), (0, fe.jsx)("input", {
                                   type: "range",
-                                  min: GB,
-                                  max: YB,
-                                  step: DB,
-                                  value: Math.min(YB, oB),
-                                  "aria-label": `Maximum ${OB.toLowerCase()}`,
-                                  onChange: BB => {
-                                    const OB = Number(BB.target.value);
-                                    jB(Math.min(OB, QB), OB)
+                                  min: He,
+                                  max: ye,
+                                  step: be,
+                                  value: Math.min(ye, Ke),
+                                  "aria-label": `Maximum ${ie.toLowerCase()}`,
+                                  onChange: ee => {
+                                    const ie = Number(ee.target.value);
+                                    Ue(Math.min(ie, Me), ie)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function tY(BB) {
+                          function ib(ee) {
                             let {
-                              label: OB,
-                              min: GB,
-                              max: YB,
-                              step: DB,
-                              value: QB,
-                              onChange: oB,
-                              format: jB = String
-                            } = BB;
-                            return (0, pB.jsxs)("div", {
+                              label: ie,
+                              min: He,
+                              max: ye,
+                              step: be,
+                              value: Me,
+                              onChange: Ke,
+                              format: Ue = String
+                            } = ee;
+                            return (0, fe.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pB.jsxs)("div", {
+                              children: [(0, fe.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, pB.jsx)("span", {
-                                  children: OB
-                                }), (0, pB.jsx)("span", {
+                                children: [(0, fe.jsx)("span", {
+                                  children: ie
+                                }), (0, fe.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: jB(QB)
+                                  children: Ue(Me)
                                 })]
-                              }), (0, pB.jsx)("input", {
+                              }), (0, fe.jsx)("input", {
                                 type: "range",
-                                min: GB,
-                                max: YB,
-                                step: DB,
-                                value: Math.min(YB, Math.max(GB, QB)),
-                                "aria-label": OB,
-                                onChange: BB => {
-                                  oB(Number(BB.target.value))
+                                min: He,
+                                max: ye,
+                                step: be,
+                                value: Math.min(ye, Math.max(He, Me)),
+                                "aria-label": ie,
+                                onChange: ee => {
+                                  Ke(Number(ee.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function BD(BB) {
+                          function Hb(ee) {
                             let {
-                              opts: OB,
-                              onChange: GB
-                            } = BB;
-                            const YB = OB.colorGradients;
-                            if (!aG(YB)) return (0, pB.jsxs)("div", {
+                              opts: ie,
+                              onChange: He
+                            } = ee;
+                            const ye = ie.colorGradients;
+                            if (!jH(ye)) return (0, fe.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pB.jsx)("div", {
+                              children: [(0, fe.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, pB.jsx)("span", {
+                                children: (0, fe.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, pB.jsx)("div", {
+                              }), (0, fe.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: YB.map(((BB, OB) => (0, pB.jsx)("input", {
+                                children: ye.map(((ee, ie) => (0, fe.jsx)("input", {
                                   type: "color",
-                                  value: vY(BB.color),
-                                  "aria-label": `Colour ${OB+1}`,
-                                  onChange: BB => {
-                                    const DB = [...YB];
-                                    DB[OB] = {
-                                      color: sY(BB.target.value)
-                                    }, GB(DB)
+                                  value: ry(ee.color),
+                                  "aria-label": `Colour ${ie+1}`,
+                                  onChange: ee => {
+                                    const be = [...ye];
+                                    be[ie] = {
+                                      color: Qy(ee.target.value)
+                                    }, He(be)
                                   }
-                                }, OB)))
+                                }, ie)))
                               })]
                             });
-                            const DB = (BB, OB) => {
-                              const DB = [...YB];
-                              DB[BB] = OB, GB(DB)
+                            const be = (ee, ie) => {
+                              const be = [...ye];
+                              be[ee] = ie, He(be)
                             };
-                            return (0, pB.jsxs)("div", {
+                            return (0, fe.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, pB.jsxs)("div", {
+                              children: [(0, fe.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, pB.jsx)("span", {
+                                children: [(0, fe.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, pB.jsx)("span", {
+                                }), (0, fe.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), YB.map(((BB, OB) => {
-                                var GB;
-                                const YB = null !== (GB = BB.maxColor) && void 0 !== GB ? GB : BB.minColor;
-                                return (0, pB.jsxs)("div", {
+                              }), ye.map(((ee, ie) => {
+                                var He;
+                                const ye = null !== (He = ee.maxColor) && void 0 !== He ? He : ee.minColor;
+                                return (0, fe.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, pB.jsxs)("span", {
+                                  children: [(0, fe.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * BB.timeFraction), "%"]
-                                  }), (0, pB.jsx)("span", {
+                                    children: [Math.round(100 * ee.timeFraction), "%"]
+                                  }), (0, fe.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${vY(BB.minColor)}, ${vY(YB)})`
+                                      background: `linear-gradient(90deg, ${ry(ee.minColor)}, ${ry(ye)})`
                                     }
-                                  }), (0, pB.jsx)("input", {
+                                  }), (0, fe.jsx)("input", {
                                     type: "color",
-                                    value: vY(BB.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*BB.timeFraction)}%`,
-                                    onChange: GB => {
-                                      DB(OB, {
-                                        ...BB,
-                                        minColor: [...sY(GB.target.value), BB.minColor[3]]
+                                    value: ry(ee.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*ee.timeFraction)}%`,
+                                    onChange: He => {
+                                      be(ie, {
+                                        ...ee,
+                                        minColor: [...Qy(He.target.value), ee.minColor[3]]
                                       })
                                     }
-                                  }), (0, pB.jsx)("input", {
+                                  }), (0, fe.jsx)("input", {
                                     type: "color",
-                                    value: vY(YB),
-                                    "aria-label": `Maximum colour at ${Math.round(100*BB.timeFraction)}%`,
-                                    onChange: GB => {
-                                      DB(OB, {
-                                        ...BB,
-                                        maxColor: [...sY(GB.target.value), YB[3]]
+                                    value: ry(ye),
+                                    "aria-label": `Maximum colour at ${Math.round(100*ee.timeFraction)}%`,
+                                    onChange: He => {
+                                      be(ie, {
+                                        ...ee,
+                                        maxColor: [...Qy(He.target.value), ye[3]]
                                       })
                                     }
                                   })]
-                                }, OB)
+                                }, ie)
                               }))]
                             })
                           }
-                          const OD = [-.5, -.5, -.5],
-                            GD = [.5, .5, .5],
-                            YD = [0, 1, 2, 3, 4, 5, 6, 7].map((BB => [1 & BB ? GD[0] : OD[0], 2 & BB ? GD[1] : OD[1], 4 & BB ? GD[2] : OD[2]]));class DD {
+                          const yb = [-.5, -.5, -.5],
+                            bb = [.5, .5, .5],
+                            Mb = [0, 1, 2, 3, 4, 5, 6, 7].map((ee => [1 & ee ? bb[0] : yb[0], 2 & ee ? bb[1] : yb[1], 4 & ee ? bb[2] : yb[2]]));class Kb {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(BB, OB, GB, YB) {
-                              const DB = Math.round(31 * OB),
-                                QB = Math.round(31 * GB),
-                                oB = Math.round(31 * YB),
-                                jB = `${DB}|${QB}|${oB}`;
-                              let yB = this.tints.get(BB);
-                              (!yB || yB.size > 2e3) && (yB = new Map, this.tints.set(BB, yB));
-                              let JB = yB.get(jB);
-                              if (JB) return JB;
-                              JB = document.createElement("canvas"), JB.width = BB.naturalWidth || 16, JB.height = BB.naturalHeight || 16;
-                              const MB = JB.getContext("2d");
-                              return MB ? (MB.imageSmoothingEnabled = !1, MB.drawImage(BB, 0, 0, JB.width, JB.height), MB.globalCompositeOperation = "multiply", MB.fillStyle = `rgb(${DB/31*255}, ${QB/31*255}, ${oB/31*255})`, MB.fillRect(0, 0, JB.width, JB.height), MB.globalCompositeOperation = "destination-in", MB.drawImage(BB, 0, 0, JB.width, JB.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), yB.set(jB, JB), JB
+                            get(ee, ie, He, ye) {
+                              const be = Math.round(31 * ie),
+                                Me = Math.round(31 * He),
+                                Ke = Math.round(31 * ye),
+                                Ue = `${be}|${Me}|${Ke}`;
+                              let Fe = this.tints.get(ee);
+                              (!Fe || Fe.size > 2e3) && (Fe = new Map, this.tints.set(ee, Fe));
+                              let Je = Fe.get(Ue);
+                              if (Je) return Je;
+                              Je = document.createElement("canvas"), Je.width = ee.naturalWidth || 16, Je.height = ee.naturalHeight || 16;
+                              const oe = Je.getContext("2d");
+                              return oe ? (oe.imageSmoothingEnabled = !1, oe.drawImage(ee, 0, 0, Je.width, Je.height), oe.globalCompositeOperation = "multiply", oe.fillStyle = `rgb(${be/31*255}, ${Me/31*255}, ${Ke/31*255})`, oe.fillRect(0, 0, Je.width, Je.height), oe.globalCompositeOperation = "destination-in", oe.drawImage(ee, 0, 0, Je.width, Je.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Fe.set(Ue, Je), Je
                             }
                           }
 
-                          function QD(BB) {
+                          function Ub(ee) {
                             let {
-                              opts: OB,
-                              textureUrl: GB,
-                              burst: DB,
-                              paused: QB
-                            } = BB;
-                            const oB = (0, YB.useRef)(null),
-                              jB = (0, YB.useRef)(OB);
-                            jB.current = OB;
-                            const yB = (0, YB.useRef)(QB);
-                            yB.current = QB;
-                            const JB = (0, YB.useRef)(null),
-                              MB = (0, YB.useRef)(null),
-                              PB = (0, YB.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(BB) {
-                                let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const GB = [-.5, -.5, -.5],
-                                  YB = [.5, .5, .5];
-                                let DB = .5;
-                                for (let QB = 0; QB < 40; QB++) {
-                                  const QB = TG(BB, GB, YB, OB),
-                                    oB = Math.max(QB.life / 30, .001);
-                                  for (; HG(QB, BB.gravity, oB);) DB = Math.max(DB, Math.hypot(QB.pos[0], QB.pos[1], QB.pos[2]) + QB.size / 2)
+                              opts: ie,
+                              textureUrl: He,
+                              burst: be,
+                              paused: Me
+                            } = ee;
+                            const Ke = (0, ye.useRef)(null),
+                              Ue = (0, ye.useRef)(ie);
+                            Ue.current = ie;
+                            const Fe = (0, ye.useRef)(Me);
+                            Fe.current = Me;
+                            const Je = (0, ye.useRef)(null),
+                              oe = (0, ye.useRef)(null),
+                              Re = (0, ye.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(ee) {
+                                let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const He = [-.5, -.5, -.5],
+                                  ye = [.5, .5, .5];
+                                let be = .5;
+                                for (let Me = 0; Me < 40; Me++) {
+                                  const Me = IH(ee, He, ye, ie),
+                                    Ke = Math.max(Me.life / 30, .001);
+                                  for (; GH(Me, ee.gravity, Ke);) be = Math.max(be, Math.hypot(Me.pos[0], Me.pos[1], Me.pos[2]) + Me.size / 2)
                                 }
-                                return DB
-                              }(OB)))), [OB]),
-                              zB = (0, YB.useRef)(PB);
-                            return zB.current = PB, (0, YB.useEffect)((() => {
-                              if (JB.current = null, !GB) return;
-                              const BB = new Image;
-                              let OB = !1;
-                              return BB.onload = () => {
-                                OB || (JB.current = BB)
-                              }, BB.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${GB}`)
-                              }, BB.src = GB, () => {
-                                OB = !0
+                                return be
+                              }(ie)))), [ie]),
+                              ke = (0, ye.useRef)(Re);
+                            return ke.current = Re, (0, ye.useEffect)((() => {
+                              if (Je.current = null, !He) return;
+                              const ee = new Image;
+                              let ie = !1;
+                              return ee.onload = () => {
+                                ie || (Je.current = ee)
+                              }, ee.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${He}`)
+                              }, ee.src = He, () => {
+                                ie = !0
                               }
-                            }), [GB]), (0, YB.useEffect)((() => {
-                              var BB;
-                              null === (BB = MB.current) || void 0 === BB || BB.call(MB)
-                            }), [OB, DB]), (0, YB.useEffect)((() => {
-                              const BB = oB.current,
-                                OB = null === BB || void 0 === BB ? void 0 : BB.getContext("2d");
-                              if (!BB || !OB) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const GB = new DD;
-                              let YB = [],
-                                DB = 0,
-                                QB = -.7,
-                                PB = zB.current,
-                                lB = performance.now(),
-                                pB = 0,
-                                qB = !0,
-                                ZB = null;
-                              const NB = () => {
-                                const BB = jB.current,
-                                  OB = Math.min(400, Math.max(0, Math.ceil(BB.manualEmitCount)));
-                                YB = [];
-                                for (let GB = 0; GB < OB; GB++) YB.push(TG(BB, OD, GD, Math.random));
-                                DB = 0
+                            }), [He]), (0, ye.useEffect)((() => {
+                              var ee;
+                              null === (ee = oe.current) || void 0 === ee || ee.call(oe)
+                            }), [ie, be]), (0, ye.useEffect)((() => {
+                              const ee = Ke.current,
+                                ie = null === ee || void 0 === ee ? void 0 : ee.getContext("2d");
+                              if (!ee || !ie) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const He = new Kb;
+                              let ye = [],
+                                be = 0,
+                                Me = -.7,
+                                Re = ke.current,
+                                qe = performance.now(),
+                                fe = 0,
+                                Te = !0,
+                                pe = null;
+                              const Xe = () => {
+                                const ee = Ue.current,
+                                  ie = Math.min(400, Math.max(0, Math.ceil(ee.manualEmitCount)));
+                                ye = [];
+                                for (let He = 0; He < ie; He++) ye.push(IH(ee, yb, bb, Math.random));
+                                be = 0
                               };
-                              MB.current = NB, NB();
-                              const RB = oB => {
-                                pB = requestAnimationFrame(RB);
-                                const MB = Math.min(.05, (oB - lB) / 1e3);
-                                if (lB = oB, !qB) return;
-                                const WB = window.devicePixelRatio || 1,
-                                  AB = Math.round(BB.clientWidth * WB),
-                                  VB = Math.round(BB.clientHeight * WB);
-                                if (0 === AB || 0 === VB) return;
-                                BB.width === AB && BB.height === VB || (BB.width = AB, BB.height = VB);
-                                const SB = jB.current;
-                                null === ZB && (QB += .18 * MB), PB += (zB.current - PB) * Math.min(1, 4 * MB);
-                                const nB = .6 * MB;
-                                YB = YB.filter((BB => HG(BB, SB.gravity, nB))), 0 !== YB.length || yB.current || (DB += MB, DB > .6 && NB());
-                                const UB = function(BB, OB, GB, YB) {
-                                  const DB = 3.2 * YB,
-                                    QB = .44 * Math.min(BB, OB) * DB / YB,
-                                    oB = Math.cos(GB),
-                                    jB = Math.sin(GB),
-                                    yB = Math.cos(.42),
-                                    JB = Math.sin(.42);
-                                  return (GB, YB, MB) => {
-                                    const PB = GB * jB + MB * oB,
-                                      zB = DB - (YB * JB + PB * yB);
-                                    if (zB < .05) return null;
-                                    const lB = QB / zB;
+                              oe.current = Xe, Xe();
+                              const ze = Ke => {
+                                fe = requestAnimationFrame(ze);
+                                const oe = Math.min(.05, (Ke - qe) / 1e3);
+                                if (qe = Ke, !Te) return;
+                                const Be = window.devicePixelRatio || 1,
+                                  Ee = Math.round(ee.clientWidth * Be),
+                                  ge = Math.round(ee.clientHeight * Be);
+                                if (0 === Ee || 0 === ge) return;
+                                ee.width === Ee && ee.height === ge || (ee.width = Ee, ee.height = ge);
+                                const Oe = Ue.current;
+                                null === pe && (Me += .18 * oe), Re += (ke.current - Re) * Math.min(1, 4 * oe);
+                                const de = .6 * oe;
+                                ye = ye.filter((ee => GH(ee, Oe.gravity, de))), 0 !== ye.length || Fe.current || (be += oe, be > .6 && Xe());
+                                const We = function(ee, ie, He, ye) {
+                                  const be = 3.2 * ye,
+                                    Me = .44 * Math.min(ee, ie) * be / ye,
+                                    Ke = Math.cos(He),
+                                    Ue = Math.sin(He),
+                                    Fe = Math.cos(.42),
+                                    Je = Math.sin(.42);
+                                  return (He, ye, oe) => {
+                                    const Re = He * Ue + oe * Ke,
+                                      ke = be - (ye * Je + Re * Fe);
+                                    if (ke < .05) return null;
+                                    const qe = Me / ke;
                                     return {
-                                      x: BB / 2 + (GB * oB - MB * jB) * lB,
-                                      y: OB / 2 - (YB * yB - PB * JB) * lB,
-                                      scale: lB,
-                                      depth: zB
+                                      x: ee / 2 + (He * Ke - oe * Ue) * qe,
+                                      y: ie / 2 - (ye * Fe - Re * Je) * qe,
+                                      scale: qe,
+                                      depth: ke
                                     }
                                   }
-                                }(AB, VB, QB, PB);
-                                ! function(BB, OB, GB, YB, DB) {
-                                  const QB = BB.createLinearGradient(0, 0, 0, GB);
-                                  QB.addColorStop(0, "#23262d"), QB.addColorStop(1, "#16181c"), BB.globalCompositeOperation = "source-over", BB.globalAlpha = 1, BB.fillStyle = QB, BB.fillRect(0, 0, OB, GB);
-                                  const oB = (OB, GB) => {
-                                      const DB = YB(OB[0], OB[1], OB[2]),
-                                        QB = YB(GB[0], GB[1], GB[2]);
-                                      DB && QB && (BB.beginPath(), BB.moveTo(DB.x, DB.y), BB.lineTo(QB.x, QB.y), BB.stroke())
+                                }(Ee, ge, Me, Re);
+                                ! function(ee, ie, He, ye, be) {
+                                  const Me = ee.createLinearGradient(0, 0, 0, He);
+                                  Me.addColorStop(0, "#23262d"), Me.addColorStop(1, "#16181c"), ee.globalCompositeOperation = "source-over", ee.globalAlpha = 1, ee.fillStyle = Me, ee.fillRect(0, 0, ie, He);
+                                  const Ke = (ie, He) => {
+                                      const be = ye(ie[0], ie[1], ie[2]),
+                                        Me = ye(He[0], He[1], He[2]);
+                                      be && Me && (ee.beginPath(), ee.moveTo(be.x, be.y), ee.lineTo(Me.x, Me.y), ee.stroke())
                                     },
-                                    jB = Math.ceil(DB) + 1,
-                                    yB = OD[1];
-                                  BB.lineWidth = 1, BB.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let JB = -jB; JB <= jB; JB++) oB([JB + .5, yB, .5 - jB], [JB + .5, yB, jB + .5]), oB([.5 - jB, yB, JB + .5], [jB + .5, yB, JB + .5]);
-                                  BB.strokeStyle = "rgba(255, 255, 255, 0.28)", BB.setLineDash([4, 4]);
-                                  for (const JB of YD)
-                                    for (const BB of YD) {
-                                      const OB = [0, 1, 2].filter((OB => JB[OB] !== BB[OB]));
-                                      1 === OB.length && JB[OB[0]] < BB[OB[0]] && oB(JB, BB)
+                                    Ue = Math.ceil(be) + 1,
+                                    Fe = yb[1];
+                                  ee.lineWidth = 1, ee.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let Je = -Ue; Je <= Ue; Je++) Ke([Je + .5, Fe, .5 - Ue], [Je + .5, Fe, Ue + .5]), Ke([.5 - Ue, Fe, Je + .5], [Ue + .5, Fe, Je + .5]);
+                                  ee.strokeStyle = "rgba(255, 255, 255, 0.28)", ee.setLineDash([4, 4]);
+                                  for (const Je of Mb)
+                                    for (const ee of Mb) {
+                                      const ie = [0, 1, 2].filter((ie => Je[ie] !== ee[ie]));
+                                      1 === ie.length && Je[ie[0]] < ee[ie[0]] && Ke(Je, ee)
                                     }
-                                  BB.setLineDash([])
-                                }(OB, AB, VB, UB, PB);
-                                const fB = JB.current,
-                                  kB = YB.map((BB => ({
-                                    particle: BB,
-                                    at: UB(BB.pos[0], BB.pos[1], BB.pos[2])
-                                  }))).filter((BB => null !== BB.at)).sort(((BB, OB) => OB.at.depth - BB.at.depth));
-                                OB.imageSmoothingEnabled = !1;
-                                for (const BB of function(BB) {
-                                    switch (BB) {
-                                      case XG.f.OneOne:
+                                  ee.setLineDash([])
+                                }(ie, Ee, ge, We, Re);
+                                const te = Je.current,
+                                  Ze = ye.map((ee => ({
+                                    particle: ee,
+                                    at: We(ee.pos[0], ee.pos[1], ee.pos[2])
+                                  }))).filter((ee => null !== ee.at)).sort(((ee, ie) => ie.at.depth - ee.at.depth));
+                                ie.imageSmoothingEnabled = !1;
+                                for (const ee of function(ee) {
+                                    switch (ee) {
+                                      case uH.e.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case XG.f.Add:
+                                      case uH.e.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case XG.f.Multiply:
+                                      case uH.e.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case XG.f.MultiplyAdd:
+                                      case uH.e.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(SB.blendMode)) {
-                                  OB.globalCompositeOperation = BB.operation;
+                                  }(Oe.blendMode)) {
+                                  ie.globalCompositeOperation = ee.operation;
                                   for (const {
-                                      particle: YB,
-                                      at: DB
+                                      particle: ye,
+                                      at: be
                                     }
-                                    of kB) {
-                                    const [QB, oB, jB, yB] = CG(YB), JB = Math.max(1, YB.size * DB.scale);
-                                    OB.globalAlpha = BB.usesAlpha ? Math.min(1, Math.max(0, yB)) : 1, fB ? OB.drawImage(GB.get(fB, QB, oB, jB), DB.x - JB / 2, DB.y - JB / 2, JB, JB) : (OB.fillStyle = `rgb(${255*QB}, ${255*oB}, ${255*jB})`, OB.fillRect(DB.x - JB / 2, DB.y - JB / 2, JB, JB))
+                                    of Ze) {
+                                    const [Me, Ke, Ue, Fe] = NH(ye), Je = Math.max(1, ye.size * be.scale);
+                                    ie.globalAlpha = ee.usesAlpha ? Math.min(1, Math.max(0, Fe)) : 1, te ? ie.drawImage(He.get(te, Me, Ke, Ue), be.x - Je / 2, be.y - Je / 2, Je, Je) : (ie.fillStyle = `rgb(${255*Me}, ${255*Ke}, ${255*Ue})`, ie.fillRect(be.x - Je / 2, be.y - Je / 2, Je, Je))
                                   }
                                 }
-                                OB.globalCompositeOperation = "source-over", OB.globalAlpha = 1
+                                ie.globalCompositeOperation = "source-over", ie.globalAlpha = 1
                               };
-                              pB = requestAnimationFrame(RB);
-                              const WB = new IntersectionObserver((BB => {
-                                let [OB] = BB;
-                                qB = OB.isIntersecting
+                              fe = requestAnimationFrame(ze);
+                              const Be = new IntersectionObserver((ee => {
+                                let [ie] = ee;
+                                Te = ie.isIntersecting
                               }));
-                              WB.observe(BB);
-                              const AB = OB => {
-                                  ZB = OB.clientX, BB.setPointerCapture(OB.pointerId)
+                              Be.observe(ee);
+                              const Ee = ie => {
+                                  pe = ie.clientX, ee.setPointerCapture(ie.pointerId)
                                 },
-                                VB = BB => {
-                                  null !== ZB && (QB += .01 * (BB.clientX - ZB), ZB = BB.clientX)
+                                ge = ee => {
+                                  null !== pe && (Me += .01 * (ee.clientX - pe), pe = ee.clientX)
                                 },
-                                SB = () => {
-                                  ZB = null
+                                Oe = () => {
+                                  pe = null
                                 };
-                              return BB.addEventListener("pointerdown", AB), BB.addEventListener("pointermove", VB), BB.addEventListener("pointerup", SB), BB.addEventListener("pointercancel", SB), () => {
-                                cancelAnimationFrame(pB), WB.disconnect(), MB.current = null, BB.removeEventListener("pointerdown", AB), BB.removeEventListener("pointermove", VB), BB.removeEventListener("pointerup", SB), BB.removeEventListener("pointercancel", SB)
+                              return ee.addEventListener("pointerdown", Ee), ee.addEventListener("pointermove", ge), ee.addEventListener("pointerup", Oe), ee.addEventListener("pointercancel", Oe), () => {
+                                cancelAnimationFrame(fe), Be.disconnect(), oe.current = null, ee.removeEventListener("pointerdown", Ee), ee.removeEventListener("pointermove", ge), ee.removeEventListener("pointerup", Oe), ee.removeEventListener("pointercancel", Oe)
                               }
-                            }), []), (0, pB.jsx)("canvas", {
-                              ref: oB,
+                            }), []), (0, fe.jsx)("canvas", {
+                              ref: Ke,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${OB.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${ie.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const oD = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            jD = [{
-                              mode: XG.f.OneOne,
+                          const Fb = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            Jb = [{
+                              mode: uH.e.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: XG.f.Standard,
+                              mode: uH.e.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: XG.f.Add,
+                              mode: uH.e.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: XG.f.Multiply,
+                              mode: uH.e.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: XG.f.MultiplyAdd,
+                              mode: uH.e.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            yD = (0, YB.forwardRef)((function(BB, OB) {
-                              var GB, DB;
+                            ob = (0, ye.forwardRef)((function(ee, ie) {
+                              var He, be;
                               let {
-                                textures: oB
-                              } = BB;
-                              const jB = WY(),
-                                yB = (0, YB.useRef)(null),
-                                [JB, MB] = (0, YB.useState)(EG),
-                                [PB, zB] = (0, YB.useState)("example"),
-                                [lB, qB] = (0, YB.useState)(0),
-                                [NB, RB] = (0, YB.useState)(!1),
-                                AB = BB => {
-                                  const OB = "example" === BB ? EG : wG(BB);
-                                  OB && (MB(OB), zB(BB))
+                                textures: Ke
+                              } = ee;
+                              const Ue = gy(),
+                                Fe = (0, ye.useRef)(null),
+                                [Je, oe] = (0, ye.useState)(lH),
+                                [Re, ke] = (0, ye.useState)("example"),
+                                [qe, Te] = (0, ye.useState)(0),
+                                [Xe, ze] = (0, ye.useState)(!1),
+                                Ee = ee => {
+                                  const ie = "example" === ee ? lH : mH(ee);
+                                  ie && (oe(ie), ke(ee))
                                 };
-                              (0, YB.useImperativeHandle)(OB, (() => ({
-                                preview: BB => {
-                                  var OB;
-                                  AB(BB), null === (OB = yB.current) || void 0 === OB || OB.scrollIntoView({
+                              (0, ye.useImperativeHandle)(ie, (() => ({
+                                preview: ee => {
+                                  var ie;
+                                  Ee(ee), null === (ie = Fe.current) || void 0 === ie || ie.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const VB = BB => {
-                                  MB({
-                                    ...JB,
-                                    ...BB
-                                  }), zB(null)
+                              const ge = ee => {
+                                  oe({
+                                    ...Je,
+                                    ...ee
+                                  }), ke(null)
                                 },
-                                SB = function(BB, OB) {
-                                  if (null !== OB) return `${tG}    presetId: "${OB}",\n${BY}\n})`;
-                                  const GB = BB.velocityGradients.map((BB => `        {\n            timeFraction: ${vG(BB.timeFraction)},\n            factor: ${vG(BB.factor)},\n            factor2: ${vG(BB.factor2)},\n        },`)),
-                                    YB = [`    dir1: ${sG(BB.dir1)},`, `    dir2: ${sG(BB.dir2)},`, BY, `    texture: "${BB.texture}",`, `    minLifeTime: ${vG(BB.minLifeTime)},`, `    maxLifeTime: ${vG(BB.maxLifeTime)},`, `    minEmitPower: ${vG(BB.minEmitPower)},`, `    maxEmitPower: ${vG(BB.maxEmitPower)},`, `    minSize: ${vG(BB.minSize)},`, `    maxSize: ${vG(BB.maxSize)},`, `    manualEmitCount: ${vG(BB.manualEmitCount)},`, `    gravity: ${sG(BB.gravity)},`, `    colorGradients: ${xG(BB.colorGradients,"    ")},`, `    velocityGradients: ${GB.length>0?`[\n${GB.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${vG(BB.blendMode)},`];
-                                  return void 0 !== BB.hideDist && YB.push(`    hideDist: ${vG(BB.hideDist)},`), `${tG}${YB.join("\n")}\n})`
-                                }(JB, null === PB || "example" === PB ? null : PB),
-                                UB = oB.includes(JB.texture) ? oB : [...oB, JB.texture];
-                              return (0, pB.jsxs)("section", {
-                                ref: yB,
+                                Oe = function(ee, ie) {
+                                  if (null !== ie) return `${iy}    presetId: "${ie}",\n${Hy}\n})`;
+                                  const He = ee.velocityGradients.map((ee => `        {\n            timeFraction: ${rH(ee.timeFraction)},\n            factor: ${rH(ee.factor)},\n            factor2: ${rH(ee.factor2)},\n        },`)),
+                                    ye = [`    dir1: ${QH(ee.dir1)},`, `    dir2: ${QH(ee.dir2)},`, Hy, `    texture: "${ee.texture}",`, `    minLifeTime: ${rH(ee.minLifeTime)},`, `    maxLifeTime: ${rH(ee.maxLifeTime)},`, `    minEmitPower: ${rH(ee.minEmitPower)},`, `    maxEmitPower: ${rH(ee.maxEmitPower)},`, `    minSize: ${rH(ee.minSize)},`, `    maxSize: ${rH(ee.maxSize)},`, `    manualEmitCount: ${rH(ee.manualEmitCount)},`, `    gravity: ${QH(ee.gravity)},`, `    colorGradients: ${ey(ee.colorGradients,"    ")},`, `    velocityGradients: ${He.length>0?`[\n${He.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${rH(ee.blendMode)},`];
+                                  return void 0 !== ee.hideDist && ye.push(`    hideDist: ${rH(ee.hideDist)},`), `${iy}${ye.join("\n")}\n})`
+                                }(Je, null === Re || "example" === Re ? null : Re),
+                                We = Ke.includes(Je.texture) ? Ke : [...Ke, Je.texture];
+                              return (0, fe.jsxs)("section", {
+                                ref: Fe,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, pB.jsxs)("header", {
+                                children: [(0, fe.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, pB.jsxs)("div", {
-                                    children: [(0, pB.jsx)("div", {
+                                  children: [(0, fe.jsxs)("div", {
+                                    children: [(0, fe.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, pB.jsx)("div", {
+                                    }), (0, fe.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, pB.jsx)(WB, {
-                                    text: SB,
+                                  }), (0, fe.jsx)(Be, {
+                                    text: Oe,
                                     label: "Copy code"
                                   })]
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, pB.jsx)("button", {
+                                  children: [(0, fe.jsx)("button", {
                                     type: "button",
-                                    className: QB()("DocsVariantChip", {
-                                      Active: "example" === PB
+                                    className: Me()("DocsVariantChip", {
+                                      Active: "example" === Re
                                     }),
                                     onClick: () => {
-                                      AB("example")
+                                      Ee("example")
                                     },
                                     children: "Example"
-                                  }), oD.filter((BB => null !== wG(BB))).map((BB => (0, pB.jsx)("button", {
+                                  }), Fb.filter((ee => null !== mH(ee))).map((ee => (0, fe.jsx)("button", {
                                     type: "button",
-                                    className: QB()("DocsVariantChip", {
-                                      Active: PB === BB
+                                    className: Me()("DocsVariantChip", {
+                                      Active: Re === ee
                                     }),
                                     onClick: () => {
-                                      AB(BB)
+                                      Ee(ee)
                                     },
-                                    children: BB
-                                  }, BB))), (0, pB.jsxs)("select", {
+                                    children: ee
+                                  }, ee))), (0, fe.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== PB && void 0 !== PB ? PB : "custom",
+                                    value: null !== Re && void 0 !== Re ? Re : "custom",
                                     "aria-label": "Preset",
-                                    onChange: BB => {
-                                      AB(BB.target.value)
+                                    onChange: ee => {
+                                      Ee(ee.target.value)
                                     },
-                                    children: [(0, pB.jsx)("option", {
+                                    children: [(0, fe.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === PB && (0, pB.jsx)("option", {
+                                    }), null === Re && (0, fe.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), rG.e.map((BB => (0, pB.jsx)("option", {
-                                      value: BB,
-                                      children: BB
-                                    }, BB)))]
+                                    }), vH.b.map((ee => (0, fe.jsx)("option", {
+                                      value: ee,
+                                      children: ee
+                                    }, ee)))]
                                   })]
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, pB.jsxs)("div", {
+                                  children: [(0, fe.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, pB.jsx)(QD, {
-                                      opts: JB,
-                                      textureUrl: null !== (GB = null === jB || void 0 === jB ? void 0 : jB.getParticleTextureUrl(JB.texture)) && void 0 !== GB ? GB : null,
-                                      burst: lB,
-                                      paused: NB
-                                    }), (0, pB.jsxs)("div", {
+                                    children: [(0, fe.jsx)(Ub, {
+                                      opts: Je,
+                                      textureUrl: null !== (He = null === Ue || void 0 === Ue ? void 0 : Ue.getParticleTextureUrl(Je.texture)) && void 0 !== He ? He : null,
+                                      burst: qe,
+                                      paused: Xe
+                                    }), (0, fe.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, pB.jsxs)("button", {
+                                      children: [(0, fe.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          qB(lB + 1)
+                                          Te(qe + 1)
                                         },
-                                        children: [(0, pB.jsx)(ZB, {
+                                        children: [(0, fe.jsx)(pe, {
                                           name: "replay"
-                                        }), (0, pB.jsx)("span", {
+                                        }), (0, fe.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, pB.jsxs)("button", {
+                                      }), (0, fe.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": NB,
+                                        "aria-pressed": Xe,
                                         onClick: () => {
-                                          RB(!NB)
+                                          ze(!Xe)
                                         },
-                                        children: [(0, pB.jsx)(ZB, {
-                                          name: NB ? "play" : "pause"
-                                        }), (0, pB.jsx)("span", {
-                                          children: NB ? "Loop" : "Stop looping"
+                                        children: [(0, fe.jsx)(pe, {
+                                          name: Xe ? "play" : "pause"
+                                        }), (0, fe.jsx)("span", {
+                                          children: Xe ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, pB.jsxs)("div", {
+                                  }), (0, fe.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, pB.jsxs)("div", {
+                                    children: [(0, fe.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, pB.jsxs)("div", {
+                                      children: [(0, fe.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, pB.jsx)("span", {
+                                        children: [(0, fe.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, pB.jsx)("code", {
+                                        }), (0, fe.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: JB.texture
+                                          children: Je.texture
                                         })]
-                                      }), (0, pB.jsx)("div", {
+                                      }), (0, fe.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: UB.map((BB => {
-                                          var OB;
-                                          const GB = null !== (OB = null === jB || void 0 === jB ? void 0 : jB.getParticleTextureUrl(BB)) && void 0 !== OB ? OB : null;
-                                          return (0, pB.jsx)("button", {
+                                        children: We.map((ee => {
+                                          var ie;
+                                          const He = null !== (ie = null === Ue || void 0 === Ue ? void 0 : Ue.getParticleTextureUrl(ee)) && void 0 !== ie ? ie : null;
+                                          return (0, fe.jsx)("button", {
                                             type: "button",
-                                            className: QB()("DocsParticleTexture", {
-                                              Active: JB.texture === BB
+                                            className: Me()("DocsParticleTexture", {
+                                              Active: Je.texture === ee
                                             }),
-                                            title: BB,
-                                            "aria-label": BB,
-                                            "aria-pressed": JB.texture === BB,
+                                            title: ee,
+                                            "aria-label": ee,
+                                            "aria-pressed": Je.texture === ee,
                                             onClick: () => {
-                                              VB({
-                                                texture: BB
+                                              ge({
+                                                texture: ee
                                               })
                                             },
-                                            children: GB ? (0, pB.jsx)("img", {
-                                              src: GB,
+                                            children: He ? (0, fe.jsx)("img", {
+                                              src: He,
                                               alt: ""
-                                            }) : (0, pB.jsx)(ZB, {
+                                            }) : (0, fe.jsx)(pe, {
                                               name: "image"
                                             })
-                                          }, BB)
+                                          }, ee)
                                         }))
                                       })]
-                                    }), (0, pB.jsx)(tY, {
+                                    }), (0, fe.jsx)(ib, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: JB.manualEmitCount,
-                                      onChange: BB => {
-                                        VB({
-                                          manualEmitCount: BB
+                                      value: Je.manualEmitCount,
+                                      onChange: ee => {
+                                        ge({
+                                          manualEmitCount: ee
                                         })
                                       }
-                                    }), (0, pB.jsx)(xY, {
+                                    }), (0, fe.jsx)(eb, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: JB.minLifeTime,
-                                      high: JB.maxLifeTime,
-                                      onChange: (BB, OB) => {
-                                        VB({
-                                          minLifeTime: BB,
-                                          maxLifeTime: OB
+                                      low: Je.minLifeTime,
+                                      high: Je.maxLifeTime,
+                                      onChange: (ee, ie) => {
+                                        ge({
+                                          minLifeTime: ee,
+                                          maxLifeTime: ie
                                         })
                                       }
-                                    }), (0, pB.jsx)(xY, {
+                                    }), (0, fe.jsx)(eb, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: JB.minEmitPower,
-                                      high: JB.maxEmitPower,
-                                      onChange: (BB, OB) => {
-                                        VB({
-                                          minEmitPower: BB,
-                                          maxEmitPower: OB
+                                      low: Je.minEmitPower,
+                                      high: Je.maxEmitPower,
+                                      onChange: (ee, ie) => {
+                                        ge({
+                                          minEmitPower: ee,
+                                          maxEmitPower: ie
                                         })
                                       }
-                                    }), (0, pB.jsx)(xY, {
+                                    }), (0, fe.jsx)(eb, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: JB.minSize,
-                                      high: JB.maxSize,
-                                      onChange: (BB, OB) => {
-                                        VB({
-                                          minSize: BB,
-                                          maxSize: OB
+                                      low: Je.minSize,
+                                      high: Je.maxSize,
+                                      onChange: (ee, ie) => {
+                                        ge({
+                                          minSize: ee,
+                                          maxSize: ie
                                         })
                                       }
-                                    }), (0, pB.jsx)(tY, {
+                                    }), (0, fe.jsx)(ib, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (DB = JB.gravity[1]) && void 0 !== DB ? DB : 0,
-                                      onChange: BB => {
-                                        var OB, GB;
-                                        VB({
-                                          gravity: [null !== (OB = JB.gravity[0]) && void 0 !== OB ? OB : 0, BB, null !== (GB = JB.gravity[2]) && void 0 !== GB ? GB : 0]
+                                      value: null !== (be = Je.gravity[1]) && void 0 !== be ? be : 0,
+                                      onChange: ee => {
+                                        var ie, He;
+                                        ge({
+                                          gravity: [null !== (ie = Je.gravity[0]) && void 0 !== ie ? ie : 0, ee, null !== (He = Je.gravity[2]) && void 0 !== He ? He : 0]
                                         })
                                       }
-                                    }), (0, pB.jsxs)("div", {
+                                    }), (0, fe.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, pB.jsx)("div", {
+                                      children: [(0, fe.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, pB.jsx)("span", {
+                                        children: (0, fe.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, pB.jsx)("select", {
+                                      }), (0, fe.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: JB.blendMode,
+                                        value: Je.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: BB => {
-                                          VB({
-                                            blendMode: Number(BB.target.value)
+                                        onChange: ee => {
+                                          ge({
+                                            blendMode: Number(ee.target.value)
                                           })
                                         },
-                                        children: jD.map((BB => {
+                                        children: Jb.map((ee => {
                                           let {
-                                            mode: OB,
-                                            label: GB
-                                          } = BB;
-                                          return (0, pB.jsx)("option", {
-                                            value: OB,
-                                            children: GB
-                                          }, OB)
+                                            mode: ie,
+                                            label: He
+                                          } = ee;
+                                          return (0, fe.jsx)("option", {
+                                            value: ie,
+                                            children: He
+                                          }, ie)
                                         }))
                                       })]
-                                    }), (0, pB.jsx)(BD, {
-                                      opts: JB,
-                                      onChange: BB => {
-                                        VB({
-                                          colorGradients: BB
+                                    }), (0, fe.jsx)(Hb, {
+                                      opts: Je,
+                                      onChange: ee => {
+                                        ge({
+                                          colorGradients: ee
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, pB.jsx)(nB, {
-                                  code: SB,
+                                }), (0, fe.jsx)(de, {
+                                  code: Oe,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var JD = GB(4893),
-                            MD = GB(2e3);
+                          var Rb = He(4868),
+                            kb = He(1956);
 
-                          function PD(BB, OB) {
-                            return BB ? JD.d.includes(OB) ? BB.getIngameIconUrl(OB) : BB.getItemIconUrl(OB) : null
+                          function qb(ee, ie) {
+                            return ee ? Rb.d.includes(ie) ? ee.getIngameIconUrl(ie) : ee.getItemIconUrl(ie) : null
                           }
 
-                          function zD(BB) {
-                            var OB, GB, YB;
+                          function fb(ee) {
+                            var ie, He, ye;
                             let {
-                              part: DB,
-                              assets: oB
-                            } = BB;
-                            const jB = PD(oB, DB.icon),
-                              yB = null !== (OB = null === (GB = DB.style) || void 0 === GB ? void 0 : GB.fontSize) && void 0 !== OB ? OB : "1.8em",
-                              JB = (0, rO.cc)(DB.style);
-                            return (0, pB.jsxs)("span", {
-                              className: QB()("DocsBloxdTextIcon", {
-                                Missing: !jB
+                              part: be,
+                              assets: Ke
+                            } = ee;
+                            const Ue = qb(Ke, be.icon),
+                              Fe = null !== (ie = null === (He = be.style) || void 0 === He ? void 0 : He.fontSize) && void 0 !== ie ? ie : "1.8em",
+                              Je = (0, Ci.ec)(be.style);
+                            return (0, fe.jsxs)("span", {
+                              className: Me()("DocsBloxdTextIcon", {
+                                Missing: !Ue
                               }),
                               style: {
-                                width: yB,
-                                height: yB,
-                                opacity: null === (YB = DB.style) || void 0 === YB ? void 0 : YB.opacity
+                                width: Fe,
+                                height: Fe,
+                                opacity: null === (ye = be.style) || void 0 === ye ? void 0 : ye.opacity
                               },
-                              title: jB ? void 0 : "No Bloxd icon, item or block has this name",
-                              children: [jB && JB && (0, pB.jsx)("span", {
+                              title: Ue ? void 0 : "No Bloxd icon, item or block has this name",
+                              children: [Ue && Je && (0, fe.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: JB,
-                                  maskImage: `url("${jB}")`,
-                                  WebkitMaskImage: `url("${jB}")`
+                                  background: Je,
+                                  maskImage: `url("${Ue}")`,
+                                  WebkitMaskImage: `url("${Ue}")`
                                 }
-                              }), jB ? (0, pB.jsx)("img", {
-                                src: jB,
+                              }), Ue ? (0, fe.jsx)("img", {
+                                src: Ue,
                                 alt: "",
-                                className: QB()({
-                                  Tinted: JB
+                                className: Me()({
+                                  Tinted: Je
                                 })
-                              }) : (0, pB.jsx)(ZB, {
+                              }) : (0, fe.jsx)(pe, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function lD(BB) {
+                          function Tb(ee) {
                             let {
-                              parts: OB,
-                              className: GB
-                            } = BB;
-                            const YB = WY(),
-                              DB = [];
-                            let oB = [];
-                            const jB = BB => {
-                              oB.length > 0 && (DB.push((0, pB.jsx)(MD.b, {
-                                text: oB
-                              }, `run-${BB}`)), oB = [])
+                              parts: ie,
+                              className: He
+                            } = ee;
+                            const ye = gy(),
+                              be = [];
+                            let Ke = [];
+                            const Ue = ee => {
+                              Ke.length > 0 && (be.push((0, fe.jsx)(kb.e, {
+                                text: Ke
+                              }, `run-${ee}`)), Ke = [])
                             };
-                            return OB.forEach(((BB, OB) => {
-                              "icon" !== hO(BB) || wO(BB.icon) ? oB.push(BB) : (jB(OB), DB.push((0, pB.jsx)(zD, {
-                                part: BB,
-                                assets: YB
-                              }, `icon-${OB}`)))
-                            })), jB(OB.length), (0, pB.jsx)("div", {
-                              className: QB()("DocsStyledTextPreview", GB),
-                              children: DB
+                            return ie.forEach(((ee, ie) => {
+                              "icon" !== Si(ee) || ui(ee.icon) ? Ke.push(ee) : (Ue(ie), be.push((0, fe.jsx)(fb, {
+                                part: ee,
+                                assets: ye
+                              }, `icon-${ie}`)))
+                            })), Ue(ie.length), (0, fe.jsx)("div", {
+                              className: Me()("DocsStyledTextPreview", He),
+                              children: be
                             })
                           }
-                          const pD = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let qD = null;
+                          const pb = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Xb = null;
 
-                          function ZD(BB) {
-                            if (qD ??= document.createElement("canvas").getContext("2d"), !qD) return "#000000";
-                            qD.fillStyle = "#000000", qD.fillStyle = BB;
-                            const OB = qD.fillStyle;
-                            return OB.startsWith("#") ? OB : "#000000"
+                          function zb(ee) {
+                            if (Xb ??= document.createElement("canvas").getContext("2d"), !Xb) return "#000000";
+                            Xb.fillStyle = "#000000", Xb.fillStyle = ee;
+                            const ie = Xb.fillStyle;
+                            return ie.startsWith("#") ? ie : "#000000"
                           }
 
-                          function ND(BB) {
+                          function Bb(ee) {
                             let {
-                              value: OB,
-                              label: GB,
-                              onChange: YB
-                            } = BB;
-                            return (0, pB.jsxs)("span", {
+                              value: ie,
+                              label: He,
+                              onChange: ye
+                            } = ee;
+                            return (0, fe.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, pB.jsx)("input", {
+                              children: [(0, fe.jsx)("input", {
                                 type: "color",
-                                value: ZD(OB),
-                                "aria-label": `${GB} picker`,
-                                onChange: BB => {
-                                  YB(BB.target.value)
+                                value: zb(ie),
+                                "aria-label": `${He} picker`,
+                                onChange: ee => {
+                                  ye(ee.target.value)
                                 }
-                              }), (0, pB.jsx)("input", {
+                              }), (0, fe.jsx)("input", {
                                 type: "text",
-                                value: OB,
+                                value: ie,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": GB,
+                                "aria-label": He,
                                 spellCheck: !1,
-                                onChange: BB => {
-                                  YB(BB.target.value)
+                                onChange: ee => {
+                                  ye(ee.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function RD(BB) {
+                          function Eb(ee) {
                             let {
-                              value: OB,
-                              fontAwesomeIcons: GB,
-                              onChange: DB
-                            } = BB;
-                            const oB = WY(),
-                              [jB, yB] = (0, YB.useState)(wO(OB) ? "fontAwesome" : "bloxd"),
-                              [JB, MB] = (0, YB.useState)(""),
-                              PB = JB.trim().toLowerCase(),
-                              zB = "bloxd" === jB ? JD.d : GB,
-                              lB = PB ? zB.filter((BB => BB.toLowerCase().includes(PB))) : zB;
-                            return (0, pB.jsxs)("div", {
+                              value: ie,
+                              fontAwesomeIcons: He,
+                              onChange: be
+                            } = ee;
+                            const Ke = gy(),
+                              [Ue, Fe] = (0, ye.useState)(ui(ie) ? "fontAwesome" : "bloxd"),
+                              [Je, oe] = (0, ye.useState)(""),
+                              Re = Je.trim().toLowerCase(),
+                              ke = "bloxd" === Ue ? Rb.d : He,
+                              qe = Re ? ke.filter((ee => ee.toLowerCase().includes(Re))) : ke;
+                            return (0, fe.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, pB.jsx)("input", {
+                              children: [(0, fe.jsx)("input", {
                                 type: "text",
-                                value: OB,
+                                value: ie,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: BB => {
-                                  DB(BB.target.value)
+                                onChange: ee => {
+                                  be(ee.target.value)
                                 }
-                              }), (0, pB.jsx)("p", {
+                              }), (0, fe.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((BB => (0, pB.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((ee => (0, fe.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": jB === BB,
-                                    className: QB()("DocsVariantChip", {
-                                      Active: jB === BB
+                                    "aria-selected": Ue === ee,
+                                    className: Me()("DocsVariantChip", {
+                                      Active: Ue === ee
                                     }),
                                     onClick: () => {
-                                      yB(BB)
+                                      Fe(ee)
                                     },
-                                    children: "bloxd" === BB ? `Bloxd icons (${JD.d.length})` : `Font Awesome (${GB.length})`
-                                  }, BB))), (0, pB.jsx)("input", {
+                                    children: "bloxd" === ee ? `Bloxd icons (${Rb.d.length})` : `Font Awesome (${He.length})`
+                                  }, ee))), (0, fe.jsx)("input", {
                                     type: "search",
-                                    value: JB,
+                                    value: Je,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: BB => {
-                                      MB(BB.target.value)
+                                    onChange: ee => {
+                                      oe(ee.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [lB.map((BB => {
-                                  const GB = "bloxd" === jB ? PD(oB, BB) : null;
-                                  return (0, pB.jsx)("button", {
+                                children: [qe.map((ee => {
+                                  const He = "bloxd" === Ue ? qb(Ke, ee) : null;
+                                  return (0, fe.jsx)("button", {
                                     type: "button",
-                                    title: BB,
-                                    "aria-label": BB,
-                                    "aria-pressed": BB === OB,
-                                    className: QB()("DocsIconPickerOption", {
-                                      Active: BB === OB
+                                    title: ee,
+                                    "aria-label": ee,
+                                    "aria-pressed": ee === ie,
+                                    className: Me()("DocsIconPickerOption", {
+                                      Active: ee === ie
                                     }),
                                     onClick: () => {
-                                      DB(BB)
+                                      be(ee)
                                     },
-                                    children: "fontAwesome" === jB ? (0, pB.jsx)(AG.b, {
-                                      name: BB
-                                    }) : GB ? (0, pB.jsx)("img", {
-                                      src: GB,
+                                    children: "fontAwesome" === Ue ? (0, fe.jsx)(OH.e, {
+                                      name: ee
+                                    }) : He ? (0, fe.jsx)("img", {
+                                      src: He,
                                       alt: ""
-                                    }) : (0, pB.jsx)(ZB, {
+                                    }) : (0, fe.jsx)(pe, {
                                       name: "image"
                                     })
-                                  }, BB)
-                                })), 0 === lB.length && (0, pB.jsxs)("p", {
+                                  }, ee)
+                                })), 0 === qe.length && (0, fe.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", JB, "\u201d."]
+                                  children: ["No icons match \u201c", Je, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function WD(BB) {
+                          function gb(ee) {
                             let {
-                              property: OB,
-                              value: GB,
-                              fontAwesomeIcons: YB,
-                              onChange: DB
-                            } = BB;
+                              property: ie,
+                              value: He,
+                              fontAwesomeIcons: ye,
+                              onChange: be
+                            } = ee;
                             const {
-                              field: QB,
-                              label: oB
-                            } = OB, jB = BB => "" !== BB || OB.isRequired ? BB : void 0;
-                            switch (QB.kind) {
+                              field: Me,
+                              label: Ke
+                            } = ie, Ue = ee => "" !== ee || ie.isRequired ? ee : void 0;
+                            switch (Me.kind) {
                               case "text":
-                                return QB.multiline ? (0, pB.jsx)("textarea", {
-                                  value: String(null !== GB && void 0 !== GB ? GB : ""),
+                                return Me.multiline ? (0, fe.jsx)("textarea", {
+                                  value: String(null !== He && void 0 !== He ? He : ""),
                                   rows: 2,
-                                  "aria-label": oB,
-                                  onChange: BB => {
-                                    DB(BB.target.value)
+                                  "aria-label": Ke,
+                                  onChange: ee => {
+                                    be(ee.target.value)
                                   }
-                                }) : (0, pB.jsx)("input", {
+                                }) : (0, fe.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== GB && void 0 !== GB ? GB : ""),
-                                  "aria-label": oB,
-                                  onChange: BB => {
-                                    DB(jB(BB.target.value))
+                                  value: String(null !== He && void 0 !== He ? He : ""),
+                                  "aria-label": Ke,
+                                  onChange: ee => {
+                                    be(Ue(ee.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, pB.jsx)("input", {
+                                return (0, fe.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== GB && void 0 !== GB ? GB : ""),
-                                  placeholder: OB.defaultText,
+                                  value: String(null !== He && void 0 !== He ? He : ""),
+                                  placeholder: ie.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": oB,
+                                  "aria-label": Ke,
                                   spellCheck: !1,
-                                  onChange: BB => {
-                                    DB(jB(BB.target.value.trim()))
+                                  onChange: ee => {
+                                    be(Ue(ee.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, pB.jsx)(ND, {
-                                  value: String(null !== GB && void 0 !== GB ? GB : ""),
-                                  label: oB,
-                                  onChange: BB => {
-                                    DB(jB(BB))
+                                return (0, fe.jsx)(Bb, {
+                                  value: String(null !== He && void 0 !== He ? He : ""),
+                                  label: Ke,
+                                  onChange: ee => {
+                                    be(Ue(ee))
                                   }
                                 });
                               case "colours": {
-                                const BB = Array.isArray(GB) ? GB : [],
-                                  OB = BB => {
-                                    DB(BB.length > 0 ? BB : void 0)
+                                const ee = Array.isArray(He) ? He : [],
+                                  ie = ee => {
+                                    be(ee.length > 0 ? ee : void 0)
                                   };
-                                return (0, pB.jsxs)("div", {
+                                return (0, fe.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [BB.map(((GB, YB) => (0, pB.jsxs)("span", {
+                                  children: [ee.map(((He, ye) => (0, fe.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, pB.jsx)(ND, {
-                                      value: GB,
-                                      label: `${oB} ${YB+1}`,
-                                      onChange: GB => {
-                                        OB(BB.map(((BB, OB) => OB === YB ? GB : BB)))
+                                    children: [(0, fe.jsx)(Bb, {
+                                      value: He,
+                                      label: `${Ke} ${ye+1}`,
+                                      onChange: He => {
+                                        ie(ee.map(((ee, ie) => ie === ye ? He : ee)))
                                       }
-                                    }), (0, pB.jsx)("button", {
+                                    }), (0, fe.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${YB+1}`,
+                                      "aria-label": `Remove colour ${ye+1}`,
                                       onClick: () => {
-                                        OB(BB.filter(((BB, OB) => OB !== YB)))
+                                        ie(ee.filter(((ee, ie) => ie !== ye)))
                                       },
-                                      children: (0, pB.jsx)(ZB, {
+                                      children: (0, fe.jsx)(pe, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, YB))), (0, pB.jsxs)("button", {
+                                  }, ye))), (0, fe.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var GB;
-                                      OB([...BB, null !== (GB = BB.at(-1)) && void 0 !== GB ? GB : "#ffffff"])
+                                      var He;
+                                      ie([...ee, null !== (He = ee.at(-1)) && void 0 !== He ? He : "#ffffff"])
                                     },
-                                    children: [(0, pB.jsx)(ZB, {
+                                    children: [(0, fe.jsx)(pe, {
                                       name: "plus"
-                                    }), 0 === BB.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === ee.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var yB;
-                                const BB = "number" === typeof GB ? GB : Number(null !== (yB = OB.defaultText) && void 0 !== yB ? yB : 0);
-                                return (0, pB.jsxs)("span", {
+                                var Fe;
+                                const ee = "number" === typeof He ? He : Number(null !== (Fe = ie.defaultText) && void 0 !== Fe ? Fe : 0);
+                                return (0, fe.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, pB.jsx)("input", {
+                                  children: [(0, fe.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: BB,
-                                    "aria-label": oB,
-                                    onChange: BB => {
-                                      DB(Number(BB.target.value))
+                                    value: ee,
+                                    "aria-label": Ke,
+                                    onChange: ee => {
+                                      be(Number(ee.target.value))
                                     }
-                                  }), (0, pB.jsx)("output", {
-                                    children: BB.toFixed(2)
+                                  }), (0, fe.jsx)("output", {
+                                    children: ee.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, pB.jsxs)("select", {
-                                  value: String(null !== GB && void 0 !== GB ? GB : ""),
-                                  "aria-label": oB,
-                                  onChange: BB => {
-                                    DB(jB(BB.target.value))
+                                return (0, fe.jsxs)("select", {
+                                  value: String(null !== He && void 0 !== He ? He : ""),
+                                  "aria-label": Ke,
+                                  onChange: ee => {
+                                    be(Ue(ee.target.value))
                                   },
-                                  children: [!OB.isRequired && (0, pB.jsxs)("option", {
+                                  children: [!ie.isRequired && (0, fe.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", OB.defaultText, ")"]
-                                  }), QB.options.map((BB => (0, pB.jsx)("option", {
-                                    value: BB,
-                                    children: BB
-                                  }, BB)))]
+                                    children: ["Default (", ie.defaultText, ")"]
+                                  }), Me.options.map((ee => (0, fe.jsx)("option", {
+                                    value: ee,
+                                    children: ee
+                                  }, ee)))]
                                 });
                               case "icon":
-                                return (0, pB.jsx)(RD, {
-                                  value: String(null !== GB && void 0 !== GB ? GB : ""),
-                                  fontAwesomeIcons: YB,
-                                  onChange: DB
+                                return (0, fe.jsx)(Eb, {
+                                  value: String(null !== He && void 0 !== He ? He : ""),
+                                  fontAwesomeIcons: ye,
+                                  onChange: be
                                 })
                             }
                           }
 
-                          function AD(BB) {
-                            let OB;
+                          function Ob(ee) {
+                            let ie;
                             try {
-                              OB = JSON.parse(BB)
-                            } catch (GB) {
+                              ie = JSON.parse(ee)
+                            } catch (He) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${GB.message}`
+                                error: `Not valid JSON yet: ${He.message}`
                               }
                             }
-                            return GG(OB) ? {
-                              part: OB,
+                            return bH(ie) ? {
+                              part: ie,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function VD(BB) {
+                          function db(ee) {
                             let {
-                              parts: OB,
-                              index: GB,
-                              fontAwesomeIcons: DB,
-                              onChange: QB,
-                              Qm: oB,
-                              onClose: jB
-                            } = BB;
-                            const yB = (0, YB.useContext)(pO),
-                              MB = (0, YB.useRef)(null),
-                              PB = OB[GB],
-                              zB = hO(PB),
-                              [lB, qB] = (0, YB.useState)((() => JSON.stringify(PB, null, 2))),
-                              NB = (0, YB.useMemo)((() => "other" === zB ? AD(lB).error : null), [zB, lB]);
-                            (0, YB.useEffect)((() => {
-                              var BB;
-                              null === (BB = MB.current) || void 0 === BB || BB.focus()
+                              parts: ie,
+                              index: He,
+                              fontAwesomeIcons: be,
+                              onChange: Me,
+                              JV: Ke,
+                              onClose: Ue
+                            } = ee;
+                            const Fe = (0, ye.useContext)(fi),
+                              oe = (0, ye.useRef)(null),
+                              Re = ie[He],
+                              ke = Si(Re),
+                              [qe, Te] = (0, ye.useState)((() => JSON.stringify(Re, null, 2))),
+                              Xe = (0, ye.useMemo)((() => "other" === ke ? Ob(qe).error : null), [ke, qe]);
+                            (0, ye.useEffect)((() => {
+                              var ee;
+                              null === (ee = oe.current) || void 0 === ee || ee.focus()
                             }), []);
-                            const RB = (0, pB.jsx)("div", {
+                            const ze = (0, fe.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: BB => {
-                                BB.target === BB.currentTarget && jB()
+                              onMouseDown: ee => {
+                                ee.target === ee.currentTarget && Ue()
                               },
-                              children: (0, pB.jsxs)("div", {
-                                ref: MB,
+                              children: (0, fe.jsxs)("div", {
+                                ref: oe,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${GB+1}: ${EO[zB]}`,
+                                "aria-label": `Edit part ${He+1}: ${mi[ke]}`,
                                 tabIndex: -1,
-                                onKeyDown: BB => {
-                                  "Escape" === BB.key ? (BB.stopPropagation(), jB()) : "Tab" === BB.key && MB.current && function(BB, OB) {
-                                    const GB = Array.from(BB.querySelectorAll(KO)),
-                                      YB = GB[0],
-                                      DB = GB.at(-1);
-                                    if (!YB || !DB) return;
-                                    const QB = document.activeElement;
-                                    !OB.shiftKey || QB !== YB && QB !== BB ? OB.shiftKey || QB !== DB || (OB.preventDefault(), YB.focus()) : (OB.preventDefault(), DB.focus())
-                                  }(MB.current, BB)
+                                onKeyDown: ee => {
+                                  "Escape" === ee.key ? (ee.stopPropagation(), Ue()) : "Tab" === ee.key && oe.current && function(ee, ie) {
+                                    const He = Array.from(ee.querySelectorAll(Pi)),
+                                      ye = He[0],
+                                      be = He.at(-1);
+                                    if (!ye || !be) return;
+                                    const Me = document.activeElement;
+                                    !ie.shiftKey || Me !== ye && Me !== ee ? ie.shiftKey || Me !== be || (ie.preventDefault(), ye.focus()) : (ie.preventDefault(), be.focus())
+                                  }(oe.current, ee)
                                 },
-                                children: [(0, pB.jsxs)("header", {
+                                children: [(0, fe.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, pB.jsxs)("div", {
-                                    children: [(0, pB.jsxs)("div", {
+                                  children: [(0, fe.jsxs)("div", {
+                                    children: [(0, fe.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", GB + 1]
-                                    }), (0, pB.jsx)("div", {
+                                      children: ["Part ", He + 1]
+                                    }), (0, fe.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: EO[zB]
+                                      children: mi[ke]
                                     })]
-                                  }), (0, pB.jsx)("button", {
+                                  }), (0, fe.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: jB,
-                                    children: (0, pB.jsx)(ZB, {
+                                    onClick: Ue,
+                                    children: (0, fe.jsx)(pe, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, pB.jsx)(lD, {
-                                  parts: OB,
+                                }), (0, fe.jsx)(Tb, {
+                                  parts: ie,
                                   className: "DocsTextDialogPreview"
-                                }), (0, pB.jsx)("div", {
+                                }), (0, fe.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === zB ? (0, pB.jsxs)("label", {
+                                  children: "other" === ke ? (0, fe.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, pB.jsx)("span", {
+                                    children: [(0, fe.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, pB.jsx)("textarea", {
+                                    }), (0, fe.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: lB,
+                                      value: qe,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: BB => {
-                                        qB(BB.target.value);
-                                        const OB = AD(BB.target.value);
-                                        null !== OB.part && QB(OB.part)
+                                      onChange: ee => {
+                                        Te(ee.target.value);
+                                        const ie = Ob(ee.target.value);
+                                        null !== ie.part && Me(ie.part)
                                       }
-                                    }), NB && (0, pB.jsx)("span", {
+                                    }), Xe && (0, fe.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: NB
+                                      children: Xe
                                     })]
-                                  }) : eO[zB].map((BB => {
-                                    const OB = bO(PB, BB.path),
-                                      GB = BB.isRequired ? JSON.stringify(HO(PB, BB.path)) === JSON.stringify(PB) : void 0 === OB;
-                                    return (0, pB.jsxs)("div", {
+                                  }) : ji[ke].map((ee => {
+                                    const ie = Ii(Re, ee.path),
+                                      He = ee.isRequired ? JSON.stringify(Gi(Re, ee.path)) === JSON.stringify(Re) : void 0 === ie;
+                                    return (0, fe.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, pB.jsxs)("div", {
+                                      children: [(0, fe.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, pB.jsx)("span", {
-                                          children: BB.label
-                                        }), (0, pB.jsxs)("button", {
+                                        children: [(0, fe.jsx)("span", {
+                                          children: ee.label
+                                        }), (0, fe.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: GB,
-                                          "aria-label": `Reset ${BB.label.toLowerCase()} to default`,
+                                          disabled: He,
+                                          "aria-label": `Reset ${ee.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            QB(HO(PB, BB.path))
+                                            Me(Gi(Re, ee.path))
                                           },
-                                          children: [(0, pB.jsx)(ZB, {
+                                          children: [(0, fe.jsx)(pe, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, pB.jsx)(WD, {
-                                        property: BB,
-                                        value: OB,
-                                        fontAwesomeIcons: DB,
-                                        onChange: OB => {
-                                          QB(CO(PB, BB.path, OB))
+                                      }), (0, fe.jsx)(gb, {
+                                        property: ee,
+                                        value: ie,
+                                        fontAwesomeIcons: be,
+                                        onChange: ie => {
+                                          Me(Ni(Re, ee.path, ie))
                                         }
-                                      }), !BB.isRequired && (0, pB.jsxs)("span", {
+                                      }), !ee.isRequired && (0, fe.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", BB.defaultText]
+                                        children: ["Default: ", ee.defaultText]
                                       })]
-                                    }, BB.path.join("."))
+                                    }, ee.path.join("."))
                                   }))
-                                }), (0, pB.jsxs)("footer", {
+                                }), (0, fe.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, pB.jsxs)("button", {
+                                  children: [(0, fe.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: oB,
-                                    children: [(0, pB.jsx)(ZB, {
+                                    onClick: Ke,
+                                    children: [(0, fe.jsx)(pe, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, pB.jsx)("button", {
+                                  }), (0, fe.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: jB,
+                                    onClick: Ue,
                                     children: "Done"
                                   })]
-                                }), (0, pB.jsx)("datalist", {
+                                }), (0, fe.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: pD.map((BB => (0, pB.jsx)("option", {
-                                    value: BB
-                                  }, BB)))
+                                  children: pb.map((ee => (0, fe.jsx)("option", {
+                                    value: ee
+                                  }, ee)))
                                 })]
                               })
                             });
-                            return yB ? (0, JB.createPortal)(RB, yB) : RB
+                            return Fe ? (0, Je.createPortal)(ze, Fe) : ze
                           }
-                          const SD = [{
+                          const Wb = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            nD = Object.keys(cO);
+                            tb = Object.keys(li);
 
-                          function UD(BB) {
+                          function Zb(ee) {
                             let {
-                              fontAwesomeIcons: OB
-                            } = BB;
-                            const [GB, DB] = (0, YB.useState)(SD[0].parts), [oB, jB] = (0, YB.useState)((() => tO(SD[0].parts))), [yB, JB] = (0, YB.useState)(null), [MB, PB] = (0, YB.useState)(!1), [zB, lB] = (0, YB.useState)(null), [qB, NB] = (0, YB.useState)(!1), [RB, WB] = (0, YB.useState)(null), AB = (0, YB.useRef)(null), VB = tO(GB);
-                            (0, YB.useLayoutEffect)((() => {
-                              var BB;
-                              if (!RB) return;
-                              const OB = BB => {
-                                  var OB;
-                                  return null === (OB = AB.current) || void 0 === OB ? void 0 : OB.querySelector(`[data-focus-key="${BB}"]`)
+                              fontAwesomeIcons: ie
+                            } = ee;
+                            const [He, be] = (0, ye.useState)(Wb[0].parts), [Ke, Ue] = (0, ye.useState)((() => iH(Wb[0].parts))), [Fe, Je] = (0, ye.useState)(null), [oe, Re] = (0, ye.useState)(!1), [ke, qe] = (0, ye.useState)(null), [Te, Xe] = (0, ye.useState)(!1), [ze, Be] = (0, ye.useState)(null), Ee = (0, ye.useRef)(null), ge = iH(He);
+                            (0, ye.useLayoutEffect)((() => {
+                              var ee;
+                              if (!ze) return;
+                              const ie = ee => {
+                                  var ie;
+                                  return null === (ie = Ee.current) || void 0 === ie ? void 0 : ie.querySelector(`[data-focus-key="${ee}"]`)
                                 },
-                                GB = OB(RB.key);
-                              null === (BB = GB && !GB.disabled ? GB : OB(RB.fallback)) || void 0 === BB || BB.focus(), WB(null)
-                            }), [RB]);
-                            const SB = BB => {
-                                DB(BB), jB(tO(BB)), JB(null)
+                                He = ie(ze.key);
+                              null === (ee = He && !He.disabled ? He : ie(ze.fallback)) || void 0 === ee || ee.focus(), Be(null)
+                            }), [ze]);
+                            const Oe = ee => {
+                                be(ee), Ue(iH(ee)), Je(null)
                               },
-                              UB = BB => {
-                                SB(GB.filter(((OB, GB) => GB !== BB))), WB({
-                                  key: `edit-${Math.min(BB,GB.length-2)}`,
+                              We = ee => {
+                                Oe(He.filter(((ie, He) => He !== ee))), Be({
+                                  key: `edit-${Math.min(ee,He.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              fB = (BB, OB) => {
-                                const YB = [...GB],
-                                  [DB] = YB.splice(BB, 1);
-                                YB.splice(BB + OB, 0, DB), SB(YB);
-                                WB({
-                                  key: `${OB<0?"up":"down"}-${BB+OB}`,
-                                  fallback: `edit-${BB+OB}`
+                              te = (ee, ie) => {
+                                const ye = [...He],
+                                  [be] = ye.splice(ee, 1);
+                                ye.splice(ee + ie, 0, be), Oe(ye);
+                                Be({
+                                  key: `${ie<0?"up":"down"}-${ee+ie}`,
+                                  fallback: `edit-${ee+ie}`
                                 })
                               };
-                            return (0, pB.jsxs)("section", {
-                              ref: AB,
+                            return (0, fe.jsxs)("section", {
+                              ref: Ee,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, pB.jsx)("header", {
+                              children: [(0, fe.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, pB.jsxs)("div", {
-                                  children: [(0, pB.jsx)("div", {
+                                children: (0, fe.jsxs)("div", {
+                                  children: [(0, fe.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, pB.jsx)("div", {
+                                  }), (0, fe.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, pB.jsx)("div", {
+                              }), (0, fe.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: SD.map((BB => (0, pB.jsx)("button", {
+                                children: Wb.map((ee => (0, fe.jsx)("button", {
                                   type: "button",
-                                  className: QB()("DocsVariantChip", {
-                                    Active: VB === tO(BB.parts)
+                                  className: Me()("DocsVariantChip", {
+                                    Active: ge === iH(ee.parts)
                                   }),
                                   onClick: () => {
-                                    SB(BB.parts)
+                                    Oe(ee.parts)
                                   },
-                                  children: BB.label
-                                }, BB.label)))
-                              }), (0, pB.jsx)(lD, {
-                                parts: GB,
+                                  children: ee.label
+                                }, ee.label)))
+                              }), (0, fe.jsx)(Tb, {
+                                parts: He,
                                 className: "DocsTextEditorPreview"
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, pB.jsxs)("div", {
+                                children: [(0, fe.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, pB.jsx)("div", {
+                                  children: [(0, fe.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, pB.jsxs)("ol", {
+                                  }), (0, fe.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [GB.map(((BB, OB) => {
-                                      const YB = hO(BB);
-                                      return (0, pB.jsxs)("li", {
+                                    children: [He.map(((ee, ie) => {
+                                      const ye = Si(ee);
+                                      return (0, fe.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, pB.jsxs)("button", {
+                                        children: [(0, fe.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${OB}`,
-                                          "aria-label": `Edit part ${OB+1}, ${EO[YB]}`,
+                                          "data-focus-key": `edit-${ie}`,
+                                          "aria-label": `Edit part ${ie+1}, ${mi[ye]}`,
                                           onClick: () => {
-                                            lB(OB)
+                                            qe(ie)
                                           },
-                                          children: [(0, pB.jsx)("span", {
+                                          children: [(0, fe.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: EO[YB]
-                                          }), (0, pB.jsx)(lD, {
-                                            parts: [BB],
+                                            children: mi[ye]
+                                          }), (0, fe.jsx)(Tb, {
+                                            parts: [ee],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== YB && (0, pB.jsx)("code", {
+                                          }), "text" !== ye && (0, fe.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: vO(BB)
+                                            children: ri(ee)
                                           })]
-                                        }), (0, pB.jsxs)("span", {
+                                        }), (0, fe.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, pB.jsx)("button", {
+                                          children: [(0, fe.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${OB+1} up`,
-                                            "data-focus-key": `up-${OB}`,
-                                            disabled: 0 === OB,
+                                            "aria-label": `Move part ${ie+1} up`,
+                                            "data-focus-key": `up-${ie}`,
+                                            disabled: 0 === ie,
                                             onClick: () => {
-                                              fB(OB, -1)
+                                              te(ie, -1)
                                             },
-                                            children: (0, pB.jsx)(ZB, {
+                                            children: (0, fe.jsx)(pe, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, pB.jsx)("button", {
+                                          }), (0, fe.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${OB+1} down`,
-                                            "data-focus-key": `down-${OB}`,
-                                            disabled: OB === GB.length - 1,
+                                            "aria-label": `Move part ${ie+1} down`,
+                                            "data-focus-key": `down-${ie}`,
+                                            disabled: ie === He.length - 1,
                                             onClick: () => {
-                                              fB(OB, 1)
+                                              te(ie, 1)
                                             },
-                                            children: (0, pB.jsx)(ZB, {
+                                            children: (0, fe.jsx)(pe, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, pB.jsx)("button", {
+                                          }), (0, fe.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${OB+1}`,
+                                            "aria-label": `Remove part ${ie+1}`,
                                             onClick: () => {
-                                              UB(OB)
+                                              We(ie)
                                             },
-                                            children: (0, pB.jsx)(ZB, {
+                                            children: (0, fe.jsx)(pe, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, OB)
-                                    })), 0 === GB.length && (0, pB.jsx)("li", {
+                                      }, ie)
+                                    })), 0 === He.length && (0, fe.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, pB.jsxs)("div", {
+                                  }), (0, fe.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: BB => {
-                                      "Escape" === BB.key && qB && (BB.stopPropagation(), NB(!1), WB({
+                                    onKeyDown: ee => {
+                                      "Escape" === ee.key && Te && (ee.stopPropagation(), Xe(!1), Be({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, pB.jsxs)("button", {
+                                    children: [(0, fe.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": qB,
+                                      "aria-expanded": Te,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        NB(!qB)
+                                        Xe(!Te)
                                       },
-                                      children: [(0, pB.jsx)(ZB, {
+                                      children: [(0, fe.jsx)(pe, {
                                         name: "plus"
-                                      }), "Add a part", (0, pB.jsx)(ZB, {
-                                        name: qB ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, fe.jsx)(pe, {
+                                        name: Te ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), qB && (0, pB.jsx)("ul", {
+                                    }), Te && (0, fe.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: nD.map((BB => (0, pB.jsx)("li", {
-                                        children: (0, pB.jsx)("button", {
+                                      children: tb.map((ee => (0, fe.jsx)("li", {
+                                        children: (0, fe.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (BB => {
-                                              SB([...GB, cO[BB]]), NB(!1), lB(GB.length)
-                                            })(BB)
+                                            (ee => {
+                                              Oe([...He, li[ee]]), Xe(!1), qe(He.length)
+                                            })(ee)
                                           },
-                                          children: EO[BB]
+                                          children: mi[ee]
                                         })
-                                      }, BB)))
+                                      }, ee)))
                                     })]
                                   })]
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, pB.jsxs)("div", {
+                                  children: [(0, fe.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, pB.jsxs)("button", {
+                                    children: ["Code", (0, fe.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": MB,
+                                      "aria-pressed": oe,
                                       onClick: () => {
-                                        PB(!MB)
+                                        Re(!oe)
                                       },
-                                      children: [(0, pB.jsx)(ZB, {
-                                        name: MB ? "check" : "pencil"
-                                      }), MB ? "Done" : "Edit"]
+                                      children: [(0, fe.jsx)(pe, {
+                                        name: oe ? "check" : "pencil"
+                                      }), oe ? "Done" : "Edit"]
                                     })]
-                                  }), MB ? (0, pB.jsxs)(pB.Fragment, {
-                                    children: [(0, pB.jsx)("textarea", {
+                                  }), oe ? (0, fe.jsxs)(fe.Fragment, {
+                                    children: [(0, fe.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: oB,
+                                      value: Ke,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: BB => {
-                                        jB(BB.target.value);
-                                        const OB = YG(BB.target.value);
-                                        JB(OB.error), OB.parts && DB(OB.parts)
+                                      onChange: ee => {
+                                        Ue(ee.target.value);
+                                        const ie = MH(ee.target.value);
+                                        Je(ie.error), ie.parts && be(ie.parts)
                                       }
-                                    }), yB && (0, pB.jsx)("p", {
+                                    }), Fe && (0, fe.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: yB
+                                      children: Fe
                                     })]
-                                  }) : (0, pB.jsx)(nB, {
+                                  }) : (0, fe.jsx)(de, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${VB})`
+                                    code: `api.sendMessage(playerId, ${ge})`
                                   })]
                                 })]
-                              }), null !== zB && zB < GB.length && (0, pB.jsx)(VD, {
-                                parts: GB,
-                                index: zB,
-                                fontAwesomeIcons: OB,
-                                onChange: BB => {
-                                  ((BB, OB) => {
-                                    SB(GB.map(((GB, YB) => YB === BB ? OB : GB)))
-                                  })(zB, BB)
+                              }), null !== ke && ke < He.length && (0, fe.jsx)(db, {
+                                parts: He,
+                                index: ke,
+                                fontAwesomeIcons: ie,
+                                onChange: ee => {
+                                  ((ee, ie) => {
+                                    Oe(He.map(((He, ye) => ye === ee ? ie : He)))
+                                  })(ke, ee)
                                 },
-                                Qm: () => {
-                                  UB(zB), lB(null)
+                                JV: () => {
+                                  We(ke), qe(null)
                                 },
                                 onClose: () => {
-                                  lB(null), WB({
-                                    key: `edit-${zB}`,
+                                  qe(null), Be({
+                                    key: `edit-${ke}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var fD = GB(5345),
-                            kD = GB(5326),
-                            dD = GB(5337),
-                            KD = GB(5349);
-                          const uD = 40,
-                            mD = 800,
-                            ID = 150,
-                            FD = 8e3,
-                            iD = 2e3;
+                          var wb = He(5326),
+                            Db = He(5311),
+                            Pb = He(5319),
+                            Ab = He(5333);
+                          const Yb = 40,
+                            Vb = 800,
+                            ab = 150,
+                            cb = 8e3,
+                            xb = 2e3;
 
-                          function LD(BB, OB) {
-                            return 12 * Math.log2(OB / BB)
+                          function Lb(ee, ie) {
+                            return 12 * Math.log2(ie / ee)
                           }
 
-                          function gD(BB, OB) {
-                            return Math.round(BB * 2 ** (OB / 12) * 10) / 10
+                          function Cb(ee, ie) {
+                            return Math.round(ee * 2 ** (ie / 12) * 10) / 10
                           }
 
-                          function rD(BB) {
-                            return `${BB} ms`
+                          function vb(ee) {
+                            return `${ee} ms`
                           }
 
-                          function XD(BB) {
-                            return `${BB} st`
+                          function ub(ee) {
+                            return `${ee} st`
                           }
-                          const wD = [{
+                          const mb = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function ED(BB) {
+                          function lb(ee) {
                             let {
-                              synth: OB,
-                              onChange: GB
-                            } = BB;
-                            const YB = (0, fD.j)(OB);
-                            return (0, pB.jsxs)("div", {
+                              synth: ie,
+                              onChange: He
+                            } = ee;
+                            const ye = (0, wb.l)(ie);
+                            return (0, fe.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, pB.jsxs)("div", {
+                              children: [(0, fe.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, pB.jsx)("div", {
+                                children: [(0, fe.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, pB.jsx)("div", {
+                                  children: [(0, fe.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, pB.jsx)("span", {
+                                    children: (0, fe.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, pB.jsx)("div", {
+                                  }), (0, fe.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: fD.e.map((BB => (0, pB.jsx)("button", {
+                                    children: wb.h.map((ee => (0, fe.jsx)("button", {
                                       type: "button",
-                                      className: QB()("DocsVariantChip", {
-                                        Active: OB.waveform === BB
+                                      className: Me()("DocsVariantChip", {
+                                        Active: ie.waveform === ee
                                       }),
-                                      "aria-pressed": OB.waveform === BB,
+                                      "aria-pressed": ie.waveform === ee,
                                       onClick: () => {
-                                        GB({
-                                          waveform: BB
+                                        He({
+                                          waveform: ee
                                         })
                                       },
-                                      children: BB
-                                    }, BB)))
+                                      children: ee
+                                    }, ee)))
                                   })]
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: LD(uD, mD),
+                                  max: Lb(Yb, Vb),
                                   step: .1,
-                                  value: LD(uD, OB.pitchHz),
-                                  format: () => `${OB.pitchHz} Hz`,
-                                  onChange: BB => {
-                                    GB({
-                                      pitchHz: gD(uD, BB)
+                                  value: Lb(Yb, ie.pitchHz),
+                                  format: () => `${ie.pitchHz} Hz`,
+                                  onChange: ee => {
+                                    He({
+                                      pitchHz: Cb(Yb, ee)
                                     })
                                   }
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: OB.syllableMs,
-                                  format: rD,
-                                  onChange: BB => {
-                                    GB({
-                                      syllableMs: BB
+                                  value: ie.syllableMs,
+                                  format: vb,
+                                  onChange: ee => {
+                                    He({
+                                      syllableMs: ee
                                     })
                                   }
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: OB.volume,
-                                  onChange: BB => {
-                                    GB({
-                                      volume: BB
+                                  value: ie.volume,
+                                  onChange: ee => {
+                                    He({
+                                      volume: ee
                                     })
                                   }
                                 })]
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, pB.jsx)("div", {
+                                children: [(0, fe.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: OB.durationMs,
-                                  format: rD,
-                                  onChange: BB => {
-                                    GB({
-                                      durationMs: BB
+                                  value: ie.durationMs,
+                                  format: vb,
+                                  onChange: ee => {
+                                    He({
+                                      durationMs: ee
                                     })
                                   }
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: YB.durationMs,
+                                  max: ye.durationMs,
                                   step: 1,
-                                  value: YB.attackMs,
-                                  format: rD,
-                                  onChange: BB => {
-                                    GB({
-                                      attackMs: BB
+                                  value: ye.attackMs,
+                                  format: vb,
+                                  onChange: ee => {
+                                    He({
+                                      attackMs: ee
                                     })
                                   }
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: YB.durationMs - YB.attackMs,
+                                  max: ye.durationMs - ye.attackMs,
                                   step: 1,
-                                  value: YB.releaseMs,
-                                  format: rD,
-                                  onChange: BB => {
-                                    GB({
-                                      releaseMs: BB
+                                  value: ye.releaseMs,
+                                  format: vb,
+                                  onChange: ee => {
+                                    He({
+                                      releaseMs: ee
                                     })
                                   }
-                                }), (0, pB.jsx)(tY, {
+                                }), (0, fe.jsx)(ib, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: OB.glideSemitones,
-                                  format: XD,
-                                  onChange: BB => {
-                                    GB({
-                                      glideSemitones: BB
+                                  value: ie.glideSemitones,
+                                  format: ub,
+                                  onChange: ee => {
+                                    He({
+                                      glideSemitones: ee
                                     })
                                   }
-                                }), (0, pB.jsxs)("label", {
+                                }), (0, fe.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, pB.jsx)("input", {
+                                  children: [(0, fe.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== OB.lowpassHz,
-                                    onChange: BB => {
-                                      GB({
-                                        lowpassHz: BB.target.checked ? iD : null
+                                    checked: null !== ie.lowpassHz,
+                                    onChange: ee => {
+                                      He({
+                                        lowpassHz: ee.target.checked ? xb : null
                                       })
                                     }
-                                  }), (0, pB.jsx)("span", {
+                                  }), (0, fe.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== OB.lowpassHz && (0, pB.jsx)(tY, {
+                                }), null !== ie.lowpassHz && (0, fe.jsx)(ib, {
                                   label: "Filter",
                                   min: 0,
-                                  max: LD(ID, FD),
+                                  max: Lb(ab, cb),
                                   step: .1,
-                                  value: LD(ID, OB.lowpassHz),
-                                  format: () => `${OB.lowpassHz} Hz`,
-                                  onChange: BB => {
-                                    GB({
-                                      lowpassHz: gD(ID, BB)
+                                  value: Lb(ab, ie.lowpassHz),
+                                  format: () => `${ie.lowpassHz} Hz`,
+                                  onChange: ee => {
+                                    He({
+                                      lowpassHz: Cb(ab, ee)
                                     })
                                   }
                                 })]
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, pB.jsx)("div", {
+                                children: [(0, fe.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), wD.map((BB => {
+                                }), mb.map((ee => {
                                   let {
-                                    key: YB,
-                                    label: DB,
-                                    max: QB
-                                  } = BB;
-                                  return (0, pB.jsx)(tY, {
-                                    label: DB,
+                                    key: ye,
+                                    label: be,
+                                    max: Me
+                                  } = ee;
+                                  return (0, fe.jsx)(ib, {
+                                    label: be,
                                     min: 0,
-                                    max: QB,
+                                    max: Me,
                                     step: .1,
-                                    value: OB.intonation[YB],
-                                    format: XD,
-                                    onChange: BB => {
-                                      GB({
+                                    value: ie.intonation[ye],
+                                    format: ub,
+                                    onChange: ee => {
+                                      He({
                                         intonation: {
-                                          ...OB.intonation,
-                                          [YB]: BB
+                                          ...ie.intonation,
+                                          [ye]: ee
                                         }
                                       })
                                     }
-                                  }, YB)
+                                  }, ye)
                                 }))]
                               })]
                             })
                           }
-                          const cD = Object.keys(fD.g),
-                            hD = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const Sb = Object.keys(wb.k),
+                            nb = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function aD(BB) {
-                            var OB;
-                            const GB = JSON.stringify((0, fD.j)(BB));
-                            return null !== (OB = cD.find((BB => JSON.stringify((0, fD.j)(fD.g[BB])) === GB))) && void 0 !== OB ? OB : null
+                          function jb(ee) {
+                            var ie;
+                            const He = JSON.stringify((0, wb.l)(ee));
+                            return null !== (ie = Sb.find((ee => JSON.stringify((0, wb.l)(wb.k[ee])) === He))) && void 0 !== ie ? ie : null
                           }
 
-                          function eD(BB) {
-                            let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof BB || null === BB) return JSON.stringify(BB);
-                            return `{\n${Object.entries(BB).map((BB=>{let[GB,YB]=BB;return`${OB}    ${GB}: ${eD(YB,`${OB}    `)},`})).join("\n")}\n${OB}}`
+                          function sb(ee) {
+                            let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof ee || null === ee) return JSON.stringify(ee);
+                            return `{\n${Object.entries(ee).map((ee=>{let[He,ye]=ee;return`${ie}    ${He}: ${sb(ye,`${ie}    `)},`})).join("\n")}\n${ie}}`
                           }
 
-                          function TD(BB, OB, GB) {
-                            const YB = aD(BB),
-                              DB = [`    line: ${JSON.stringify(OB)},`];
-                            return GB && DB.push(`    speakerName: ${JSON.stringify(GB)},`), DB.push("    voice,"), `const voice = ${YB?JSON.stringify(YB):eD((0,fD.j)(BB))}\n\napi.setClientOption(playerId, "dialogue", {\n${DB.join("\n")}\n})`
+                          function Ib(ee, ie, He) {
+                            const ye = jb(ee),
+                              be = [`    line: ${JSON.stringify(ie)},`];
+                            return He && be.push(`    speakerName: ${JSON.stringify(He)},`), be.push("    voice,"), `const voice = ${ye?JSON.stringify(ye):sb((0,wb.l)(ee))}\n\napi.setClientOption(playerId, "dialogue", {\n${be.join("\n")}\n})`
                           }
-                          const bD = 400,
-                            CD = 90;
-                          let HD = null;
+                          const hb = 400,
+                            Nb = 90;
+                          let Gb = null;
 
-                          function vD(BB, OB, GB) {
-                            return HD ??= new AudioContext, HD.resume(), (0, KD.c)(HD, HD.destination, BB, OB, GB, (() => {}))
+                          function rb(ee, ie, He) {
+                            return Gb ??= new AudioContext, Gb.resume(), (0, Ab.e)(Gb, Gb.destination, ee, ie, He, (() => {}))
                           }
 
-                          function sD() {
-                            const [BB, OB] = (0, YB.useState)(fD.g.regular), [GB, DB] = (0, YB.useState)(hD[0]), [oB, jB] = (0, YB.useState)("Innkeeper"), [yB, JB] = (0, YB.useState)(0), MB = MY((BB => BB.volume)), PB = (0, YB.useRef)(null), zB = (0, YB.useRef)(0), lB = (0, YB.useRef)(0), qB = () => {
-                              var BB;
-                              null === (BB = PB.current) || void 0 === BB || BB.call(PB), PB.current = null
+                          function Qb() {
+                            const [ee, ie] = (0, ye.useState)(wb.k.regular), [He, be] = (0, ye.useState)(nb[0]), [Ke, Ue] = (0, ye.useState)("Innkeeper"), [Fe, Je] = (0, ye.useState)(0), oe = ky((ee => ee.volume)), Re = (0, ye.useRef)(null), ke = (0, ye.useRef)(0), qe = (0, ye.useRef)(0), Te = () => {
+                              var ee;
+                              null === (ee = Re.current) || void 0 === ee || ee.call(Re), Re.current = null
                             };
-                            (0, YB.useEffect)((() => () => {
-                              var BB;
-                              null === (BB = PB.current) || void 0 === BB || BB.call(PB), window.clearTimeout(zB.current)
+                            (0, ye.useEffect)((() => () => {
+                              var ee;
+                              null === (ee = Re.current) || void 0 === ee || ee.call(Re), window.clearTimeout(ke.current)
                             }), []);
-                            const NB = (0, YB.useMemo)((() => ({
-                                line: GB,
-                                speakerName: oB || void 0,
-                                voice: BB
-                              })), [GB, oB, BB]),
-                              RB = (0, YB.useRef)(NB);
-                            RB.current = NB;
-                            const AB = aD(BB),
-                              VB = BB => {
-                                window.clearTimeout(zB.current), qB();
+                            const Xe = (0, ye.useMemo)((() => ({
+                                line: He,
+                                speakerName: Ke || void 0,
+                                voice: ee
+                              })), [He, Ke, ee]),
+                              ze = (0, ye.useRef)(Xe);
+                            ze.current = Xe;
+                            const Ee = jb(ee),
+                              ge = ee => {
+                                window.clearTimeout(ke.current), Te();
                                 const {
-                                  plan: OB,
-                                  synth: GB
-                                } = (0, dD.c)(BB);
-                                GB && (PB.current = vD(GB, OB.blips, MB)), JB((BB => BB + 1))
+                                  plan: ie,
+                                  synth: He
+                                } = (0, Pb.g)(ee);
+                                He && (Re.current = rb(He, ie.blips, oe)), Je((ee => ee + 1))
                               },
-                              SB = TD(BB, GB, oB);
-                            return (0, pB.jsxs)("section", {
+                              Oe = Ib(ee, He, Ke);
+                            return (0, fe.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, pB.jsxs)("header", {
+                              children: [(0, fe.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, pB.jsxs)("div", {
-                                  children: [(0, pB.jsx)("div", {
+                                children: [(0, fe.jsxs)("div", {
+                                  children: [(0, fe.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, pB.jsx)("div", {
+                                  }), (0, fe.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, pB.jsx)(WB, {
-                                  text: SB,
+                                }), (0, fe.jsx)(Be, {
+                                  text: Oe,
                                   label: "Copy code"
                                 })]
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [cD.map((BB => (0, pB.jsx)("button", {
+                                children: [Sb.map((ee => (0, fe.jsx)("button", {
                                   type: "button",
-                                  className: QB()("DocsVariantChip", {
-                                    Active: AB === BB
+                                  className: Me()("DocsVariantChip", {
+                                    Active: Ee === ee
                                   }),
-                                  "aria-pressed": AB === BB,
+                                  "aria-pressed": Ee === ee,
                                   onClick: () => {
-                                    (BB => {
-                                      const GB = fD.g[BB];
-                                      OB(GB), VB({
-                                        ...NB,
-                                        voice: GB
+                                    (ee => {
+                                      const He = wb.k[ee];
+                                      ie(He), ge({
+                                        ...Xe,
+                                        voice: He
                                       })
-                                    })(BB)
+                                    })(ee)
                                   },
-                                  children: BB
-                                }, BB))), !AB && (0, pB.jsx)("span", {
+                                  children: ee
+                                }, ee))), !Ee && (0, fe.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, pB.jsxs)("div", {
+                              }), (0, fe.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, pB.jsxs)("div", {
+                                children: [(0, fe.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, pB.jsx)("div", {
+                                  children: [(0, fe.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, pB.jsx)(kD.e, {
-                                      display: NB
-                                    }, yB)
-                                  }), (0, pB.jsxs)("form", {
+                                    children: (0, fe.jsx)(Db.d, {
+                                      display: Xe
+                                    }, Fe)
+                                  }), (0, fe.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: BB => {
-                                      BB.preventDefault(), VB(NB)
+                                    onSubmit: ee => {
+                                      ee.preventDefault(), ge(Xe)
                                     },
-                                    children: [(0, pB.jsx)("input", {
-                                      value: GB,
+                                    children: [(0, fe.jsx)("input", {
+                                      value: He,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: BB => {
-                                        DB(BB.target.value)
+                                      onChange: ee => {
+                                        be(ee.target.value)
                                       }
-                                    }), (0, pB.jsxs)("button", {
+                                    }), (0, fe.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, pB.jsx)(ZB, {
+                                      children: [(0, fe.jsx)(pe, {
                                         name: "play"
-                                      }), (0, pB.jsx)("span", {
+                                      }), (0, fe.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, pB.jsx)("div", {
+                                  }), (0, fe.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: hD.map((BB => (0, pB.jsx)("button", {
+                                    children: nb.map((ee => (0, fe.jsx)("button", {
                                       type: "button",
-                                      className: QB()("DocsVariantChip", {
-                                        Active: GB === BB
+                                      className: Me()("DocsVariantChip", {
+                                        Active: He === ee
                                       }),
                                       onClick: () => {
-                                        var OB;
-                                        DB(OB = BB), VB({
-                                          ...NB,
-                                          line: OB
+                                        var ie;
+                                        be(ie = ee), ge({
+                                          ...Xe,
+                                          line: ie
                                         })
                                       },
-                                      children: BB
-                                    }, BB)))
-                                  }), (0, pB.jsxs)("label", {
+                                      children: ee
+                                    }, ee)))
+                                  }), (0, fe.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, pB.jsx)("span", {
+                                    children: [(0, fe.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, pB.jsx)("input", {
-                                      value: oB,
+                                    }), (0, fe.jsx)("input", {
+                                      value: Ke,
                                       placeholder: "No name",
-                                      onChange: BB => {
-                                        jB(BB.target.value)
+                                      onChange: ee => {
+                                        Ue(ee.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, pB.jsx)(ED, {
-                                  synth: BB,
-                                  onChange: GB => {
-                                    const YB = {
-                                      ...BB,
-                                      ...GB
+                                }), (0, fe.jsx)(lb, {
+                                  synth: ee,
+                                  onChange: He => {
+                                    const ye = {
+                                      ...ee,
+                                      ...He
                                     };
-                                    OB(YB);
-                                    const DB = {
-                                        ...NB,
-                                        voice: YB
+                                    ie(ye);
+                                    const be = {
+                                        ...Xe,
+                                        voice: ye
                                       },
-                                      QB = performance.now();
-                                    if (QB - lB.current >= CD) {
-                                      lB.current = QB, qB();
-                                      const BB = (0, dD.c)(DB).plan.blips[0];
-                                      BB && (PB.current = vD((0, fD.j)(YB), [{
-                                        ...BB,
+                                      Me = performance.now();
+                                    if (Me - qe.current >= Nb) {
+                                      qe.current = Me, Te();
+                                      const ee = (0, Pb.g)(be).plan.blips[0];
+                                      ee && (Re.current = rb((0, wb.l)(ye), [{
+                                        ...ee,
                                         atMs: 0
-                                      }], MB))
+                                      }], oe))
                                     }
-                                    window.clearTimeout(zB.current), zB.current = window.setTimeout((() => {
-                                      VB(RB.current)
-                                    }), bD)
+                                    window.clearTimeout(ke.current), ke.current = window.setTimeout((() => {
+                                      ge(ze.current)
+                                    }), hb)
                                   }
                                 })]
-                              }), (0, pB.jsx)(nB, {
-                                code: SB,
+                              }), (0, fe.jsx)(de, {
+                                code: Oe,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var xD = GB(5366);
-                          const tD = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            BQ = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            OQ = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${BQ}`, "g"), xD.p],
+                          var eM = He(5343);
+                          const iM = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            HM = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            yM = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${HM}`, "g"), eM.n],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, xD.p]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, eM.n]
                             ];
 
-                          function GQ(BB) {
-                            return `${BB.pageId}#${BB.anchor}`
+                          function bM(ee) {
+                            return `${ee.pageId}#${ee.anchor}`
                           }
-                          let YQ, DQ, QQ;
+                          let MM, KM, UM;
 
-                          function oQ(BB) {
-                            const OB = (0, UB.k)(BB),
-                              GB = new Set;
-                            for (const [, , YB] of OB.matchAll(UB.d)) {
-                              const BB = YB.startsWith("#") ? hB(YB) : null,
-                                OB = BB ? GQ({
-                                  pageId: BB.page.id,
-                                  anchor: BB.anchor
+                          function FM(ee) {
+                            const ie = (0, We.i)(ee),
+                              He = new Set;
+                            for (const [, , ye] of ie.matchAll(We.e)) {
+                              const ee = ye.startsWith("#") ? le(ye) : null,
+                                ie = ee ? bM({
+                                  pageId: ee.page.id,
+                                  anchor: ee.anchor
                                 }) : null;
-                              null !== OB && (YQ || (YQ = new Set(gB.flatMap((BB => KB(BB.layout) ? EB(BB).sections.map((OB => GQ({
-                                pageId: BB.id,
-                                anchor: OB.heading.anchor
-                              }))) : [])))), YQ).has(OB) && GB.add(OB)
+                              null !== ie && (MM || (MM = new Set(xe.flatMap((ee => De(ee.layout) ? ue(ee).sections.map((ie => bM({
+                                pageId: ee.id,
+                                anchor: ie.heading.anchor
+                              }))) : [])))), MM).has(ie) && He.add(ie)
                             }
-                            for (const [, , YB] of OB.matchAll(tD)) {
-                              const BB = zO(YB);
-                              BB && GB.add(GQ(BB))
+                            for (const [, , ye] of ie.matchAll(iM)) {
+                              const ee = ki(ye);
+                              ee && He.add(bM(ee))
                             }
-                            return GB
+                            return He
                           }
 
-                          function jQ(BB, OB) {
-                            const GB = new Set,
-                              YB = function(BB) {
-                                return BB.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(BB);
-                            for (const [, DB] of YB.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) GB.add(DB);
-                            for (const [DB, QB] of OQ)
-                              for (const [, BB] of(0, xD.f)(YB, DB, QB)) OB.has(BB) && GB.add(BB);
-                            return GB
+                          function JM(ee, ie) {
+                            const He = new Set,
+                              ye = function(ee) {
+                                return ee.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(ee);
+                            for (const [, be] of ye.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) He.add(be);
+                            for (const [be, Me] of yM)
+                              for (const [, ee] of(0, eM.g)(ye, be, Me)) ie.has(ee) && He.add(ee);
+                            return He
                           }
 
-                          function yQ(BB, OB, GB, YB) {
-                            const DB = BB.get(OB);
-                            DB ? !YB && DB.some((BB => BB.pageId === GB.pageId)) || DB.push(GB) : BB.set(OB, [GB])
+                          function oM(ee, ie, He, ye) {
+                            const be = ee.get(ie);
+                            be ? !ye && be.some((ee => ee.pageId === He.pageId)) || be.push(He) : ee.set(ie, [He])
                           }
-                          const JQ = /^[A-Za-z_$][\w$]*$/;
+                          const RM = /^[A-Za-z_$][\w$]*$/;
 
-                          function MQ(BB) {
-                            return JQ.test(BB.name) ? BB.name : "options"
-                          }
-
-                          function PQ(BB, OB) {
-                            const GB = BB.params.map(MQ).join(", ");
-                            return OB ? `${BB.name} = (${GB}) => {\n\t\n}` : `api.${BB.name}(${GB})`
+                          function kM(ee) {
+                            return RM.test(ee.name) ? ee.name : "options"
                           }
 
-                          function zQ(BB) {
+                          function qM(ee, ie) {
+                            const He = ee.params.map(kM).join(", ");
+                            return ie ? `${ee.name} = (${He}) => {\n\t\n}` : `api.${ee.name}(${He})`
+                          }
+
+                          function fM(ee) {
                             let {
-                              method: OB,
-                              isCallback: GB
-                            } = BB;
-                            return (0, pB.jsxs)("div", {
+                              method: ie,
+                              isCallback: He
+                            } = ee;
+                            return (0, fe.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, pB.jsxs)("span", {
+                              children: [(0, fe.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [GB ? (0, pB.jsxs)(pB.Fragment, {
-                                  children: [(0, pB.jsx)("span", {
+                                children: [He ? (0, fe.jsxs)(fe.Fragment, {
+                                  children: [(0, fe.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: OB.name
-                                  }), (0, pB.jsx)("span", {
+                                    children: ie.name
+                                  }), (0, fe.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, pB.jsxs)(pB.Fragment, {
-                                  children: [(0, pB.jsx)("span", {
+                                }) : (0, fe.jsxs)(fe.Fragment, {
+                                  children: [(0, fe.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, pB.jsx)("span", {
+                                  }), (0, fe.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: OB.name
-                                  }), (0, pB.jsx)("span", {
+                                    children: ie.name
+                                  }), (0, fe.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), OB.params.map(((BB, GB) => (0, pB.jsxs)(YB.Fragment, {
-                                  children: [GB > 0 && (0, pB.jsx)("span", {
+                                }), ie.params.map(((ee, He) => (0, fe.jsxs)(ye.Fragment, {
+                                  children: [He > 0 && (0, fe.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, pB.jsx)("a", {
+                                  }), (0, fe.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${OB.name}-${MQ(BB)}`,
-                                    children: BB.name
+                                    href: `#${ie.name}-${kM(ee)}`,
+                                    children: ee.name
                                   })]
-                                }, BB.name))), (0, pB.jsx)("span", {
+                                }, ee.name))), (0, fe.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: GB ? ") => " : ")"
-                                }), GB && !OB.returns && (0, pB.jsx)("span", {
+                                  children: He ? ") => " : ")"
+                                }), He && !ie.returns && (0, fe.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), OB.returns && OB.returns.type && (0, pB.jsxs)("span", {
+                              }), ie.returns && ie.returns.type && (0, fe.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!GB && (0, pB.jsx)("span", {
+                                children: [!He && (0, fe.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, pB.jsx)(fO, {
-                                  type: OB.returns.type
+                                }), (0, fe.jsx)(Zi, {
+                                  type: ie.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function lQ(BB) {
+                          function TM(ee) {
                             let {
-                              title: OB,
-                              references: GB
-                            } = BB;
-                            const DB = (0, YB.useContext)(lO);
-                            return (0, pB.jsxs)("div", {
+                              title: ie,
+                              references: He
+                            } = ee;
+                            const be = (0, ye.useContext)(qi);
+                            return (0, fe.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, pB.jsx)("span", {
+                              children: [(0, fe.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: OB
-                              }), GB.map((BB => (0, pB.jsx)(oB.d, {
-                                to: eB(DB, XB(BB.pageId), BB.anchor),
-                                children: BB.label
-                              }, `${BB.pageId}#${BB.anchor}`)))]
+                                children: ie
+                              }), He.map((ee => (0, fe.jsx)(Ke.e, {
+                                to: ne(be, Ce(ee.pageId), ee.anchor),
+                                children: ee.label
+                              }, `${ee.pageId}#${ee.anchor}`)))]
                             })
                           }
 
-                          function pQ(BB) {
-                            var OB, GB;
+                          function pM(ee) {
+                            var ie, He;
                             let {
-                              pageId: YB,
-                              anchor: DB
-                            } = BB;
-                            const QB = GQ({
-                                pageId: YB,
-                                anchor: DB
+                              pageId: ye,
+                              anchor: be
+                            } = ee;
+                            const Me = bM({
+                                pageId: ye,
+                                anchor: be
                               }),
-                              oB = null !== (OB = function() {
-                                if (!QQ) {
-                                  QQ = new Map;
-                                  const YB = new Set(gB.filter((BB => "callbacks" === BB.layout)).flatMap((BB => EB(BB).sections.map((BB => BB.heading.text)))));
-                                  for (const DB of gB)
-                                    if ("article" === DB.layout || "snippets" === DB.layout)
-                                      for (const QB of (0, UB.t)(EB(DB)))
+                              Ke = null !== (ie = function() {
+                                if (!UM) {
+                                  UM = new Map;
+                                  const ye = new Set(xe.filter((ee => "callbacks" === ee.layout)).flatMap((ee => ue(ee).sections.map((ee => ee.heading.text)))));
+                                  for (const be of xe)
+                                    if ("article" === be.layout || "snippets" === be.layout)
+                                      for (const Me of (0, We.x)(ue(be)))
                                         for (const {
-                                            code: oB
+                                            code: Ke
                                           }
-                                          of(0, UB.l)(QB.blocks))
-                                          for (const jB of jQ(oB, YB)) {
-                                            const YB = PO().get(jB);
-                                            if (YB) {
-                                              var BB, OB, GB;
-                                              const oB = {
-                                                pageId: DB.id,
-                                                anchor: null !== (BB = null === (OB = QB.heading) || void 0 === OB ? void 0 : OB.anchor) && void 0 !== BB ? BB : "",
-                                                label: null !== (GB = DB.navTitle) && void 0 !== GB ? GB : DB.title
+                                          of(0, We.l)(Me.blocks))
+                                          for (const Ue of JM(Ke, ye)) {
+                                            const ye = Ri().get(Ue);
+                                            if (ye) {
+                                              var ee, ie, He;
+                                              const Ke = {
+                                                pageId: be.id,
+                                                anchor: null !== (ee = null === (ie = Me.heading) || void 0 === ie ? void 0 : ie.anchor) && void 0 !== ee ? ee : "",
+                                                label: null !== (He = be.navTitle) && void 0 !== He ? He : be.title
                                               };
-                                              yQ(QQ, GQ(YB), oB, !1)
+                                              oM(UM, bM(ye), Ke, !1)
                                             }
                                           }
                                 }
-                                return QQ
-                              }().get(QB)) && void 0 !== OB ? OB : [],
-                              jB = null !== (GB = function() {
-                                if (!DQ) {
-                                  DQ = new Map;
-                                  const BB = XB("changelog");
-                                  for (const OB of EB(BB).sections) {
-                                    const GB = new Set(OB.blocks.flatMap((BB => [...oQ(BB)])));
-                                    for (const YB of GB) {
-                                      const GB = {
-                                        pageId: BB.id,
-                                        anchor: OB.heading.anchor,
-                                        label: OB.heading.text
+                                return UM
+                              }().get(Me)) && void 0 !== ie ? ie : [],
+                              Ue = null !== (He = function() {
+                                if (!KM) {
+                                  KM = new Map;
+                                  const ee = Ce("changelog");
+                                  for (const ie of ue(ee).sections) {
+                                    const He = new Set(ie.blocks.flatMap((ee => [...FM(ee)])));
+                                    for (const ye of He) {
+                                      const He = {
+                                        pageId: ee.id,
+                                        anchor: ie.heading.anchor,
+                                        label: ie.heading.text
                                       };
-                                      yQ(DQ, YB, GB, !0)
+                                      oM(KM, ye, He, !0)
                                     }
                                   }
                                 }
-                                return DQ
-                              }().get(QB)) && void 0 !== GB ? GB : [];
-                            return 0 === oB.length && 0 === jB.length ? null : (0, pB.jsxs)("footer", {
+                                return KM
+                              }().get(Me)) && void 0 !== He ? He : [];
+                            return 0 === Ke.length && 0 === Ue.length ? null : (0, fe.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [oB.length > 0 && (0, pB.jsx)(lQ, {
+                              children: [Ke.length > 0 && (0, fe.jsx)(TM, {
                                 title: "Used in",
-                                references: oB
-                              }), jB.length > 0 && (0, pB.jsx)(lQ, {
+                                references: Ke
+                              }), Ue.length > 0 && (0, fe.jsx)(TM, {
                                 title: "Changelog",
-                                references: jB
+                                references: Ue
                               })]
                             })
                           }
 
-                          function qQ(BB) {
+                          function XM(ee) {
                             let {
-                              method: OB,
-                              pageId: GB,
-                              anchor: YB,
-                              isCallback: DB
-                            } = BB;
-                            const QB = DB ? void 0 : jO().get(OB.name),
-                              oB = OB.description.length > 0 || null === QB || void 0 === QB || !QB.description ? OB.description : (0, UB.v)(QB.description);
-                            return (0, pB.jsxs)("article", {
+                              method: ie,
+                              pageId: He,
+                              anchor: ye,
+                              isCallback: be
+                            } = ee;
+                            const Me = be ? void 0 : Ui().get(ie.name),
+                              Ke = ie.description.length > 0 || null === Me || void 0 === Me || !Me.description ? ie.description : (0, We.C)(Me.description);
+                            return (0, fe.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, pB.jsxs)("header", {
+                              children: [(0, fe.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, pB.jsx)(JG, {
+                                children: [(0, fe.jsx)(RH, {
                                   level: 2,
-                                  text: OB.name,
-                                  anchor: YB,
+                                  text: ie.name,
+                                  anchor: ye,
                                   className: "DocsCardTitle"
-                                }), (0, pB.jsx)(WB, {
-                                  text: PQ(OB, DB),
-                                  label: DB ? "Copy handler" : "Copy call",
+                                }), (0, fe.jsx)(Be, {
+                                  text: qM(ie, be),
+                                  label: be ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, pB.jsx)(zQ, {
-                                method: OB,
-                                isCallback: DB
-                              }), QB && null !== QB.deprecation && (0, pB.jsxs)("aside", {
+                              }), (0, fe.jsx)(fM, {
+                                method: ie,
+                                isCallback: be
+                              }), Me && null !== Me.deprecation && (0, fe.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, pB.jsx)("strong", {
+                                children: [(0, fe.jsx)("strong", {
                                   children: "Deprecated"
-                                }), QB.deprecation && (0, pB.jsxs)(pB.Fragment, {
-                                  children: [": ", (0, pB.jsx)(SO, {
-                                    text: (jB = QB.deprecation, (0, xD.z)(jB, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, xD.n)("`\\w"), (BB => {
-                                      let [OB] = BB;
-                                      return PO().has(OB) ? `\`${OB}\`` : OB
+                                }), Me.deprecation && (0, fe.jsxs)(fe.Fragment, {
+                                  children: [": ", (0, fe.jsx)(di, {
+                                    text: (Ue = Me.deprecation, (0, eM.t)(Ue, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, eM.m)("`\\w"), (ee => {
+                                      let [ie] = ee;
+                                      return Ri().has(ie) ? `\`${ie}\`` : ie
                                     })))
                                   })]
                                 })]
-                              }), oB.length > 0 && (0, pB.jsx)("div", {
+                              }), Ke.length > 0 && (0, fe.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, pB.jsx)(lG, {
-                                  blocks: oB
+                                children: (0, fe.jsx)(TH, {
+                                  blocks: Ke
                                 })
-                              }), OB.params.length > 0 && (0, pB.jsxs)("section", {
+                              }), ie.params.length > 0 && (0, fe.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, pB.jsx)("h3", {
+                                children: [(0, fe.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, pB.jsx)("dl", {
+                                }), (0, fe.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: OB.params.map((BB => (0, pB.jsxs)("div", {
-                                    id: `${OB.name}-${MQ(BB)}`,
+                                  children: ie.params.map((ee => (0, fe.jsxs)("div", {
+                                    id: `${ie.name}-${kM(ee)}`,
                                     className: "DocsParam",
-                                    children: [(0, pB.jsxs)("dt", {
-                                      children: [(0, pB.jsx)("code", {
+                                    children: [(0, fe.jsxs)("dt", {
+                                      children: [(0, fe.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: BB.name
-                                      }), (0, pB.jsx)(fO, {
-                                        type: BB.type
+                                        children: ee.name
+                                      }), (0, fe.jsx)(Zi, {
+                                        type: ee.type
                                       })]
-                                    }), BB.description && (0, pB.jsx)("dd", {
-                                      children: (0, pB.jsx)(SO, {
-                                        text: BB.description
+                                    }), ee.description && (0, fe.jsx)("dd", {
+                                      children: (0, fe.jsx)(di, {
+                                        text: ee.description
                                       })
                                     })]
-                                  }, BB.name)))
+                                  }, ee.name)))
                                 })]
-                              }), OB.returns && (OB.returns.type || OB.returns.description.length > 0) && (0, pB.jsxs)("section", {
+                              }), ie.returns && (ie.returns.type || ie.returns.description.length > 0) && (0, fe.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, pB.jsx)("h3", {
+                                children: [(0, fe.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [OB.returns.type && (0, pB.jsx)(fO, {
-                                    type: OB.returns.type
-                                  }), OB.returns.description.length > 0 && (0, pB.jsx)("div", {
+                                  children: [ie.returns.type && (0, fe.jsx)(Zi, {
+                                    type: ie.returns.type
+                                  }), ie.returns.description.length > 0 && (0, fe.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, pB.jsx)(lG, {
-                                      blocks: OB.returns.description
+                                    children: (0, fe.jsx)(TH, {
+                                      blocks: ie.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, pB.jsx)(pQ, {
-                                pageId: GB,
-                                anchor: YB
+                              }), (0, fe.jsx)(pM, {
+                                pageId: He,
+                                anchor: ye
                               })]
                             });
-                            var jB
+                            var Ue
                           }
 
-                          function ZQ(BB) {
-                            var OB;
-                            return null !== BB.defaultValue && "undefined" !== BB.defaultValue ? BB.defaultValue : null !== (OB = BB.example) && void 0 !== OB ? OB : "value"
+                          function zM(ee) {
+                            var ie;
+                            return null !== ee.defaultValue && "undefined" !== ee.defaultValue ? ee.defaultValue : null !== (ie = ee.example) && void 0 !== ie ? ie : "value"
                           }
 
-                          function NQ(BB) {
+                          function BM(ee) {
                             let {
-                              setting: OB,
-                              pageId: GB,
-                              anchor: YB,
-                              setterSnippet: DB
-                            } = BB;
-                            const QB = null === OB.defaultValue ? null : NO(OB.defaultValue);
-                            return (0, pB.jsxs)("article", {
+                              setting: ie,
+                              pageId: He,
+                              anchor: ye,
+                              setterSnippet: be
+                            } = ee;
+                            const Me = null === ie.defaultValue ? null : zi(ie.defaultValue);
+                            return (0, fe.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, pB.jsxs)("header", {
+                              children: [(0, fe.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, pB.jsx)(JG, {
+                                children: [(0, fe.jsx)(RH, {
                                   level: 2,
-                                  text: OB.name,
-                                  anchor: YB,
+                                  text: ie.name,
+                                  anchor: ye,
                                   className: "DocsCardTitle"
-                                }), (0, pB.jsx)(WB, {
-                                  text: DB(OB.name, ZQ(OB)),
+                                }), (0, fe.jsx)(Be, {
+                                  text: be(ie.name, zM(ie)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, pB.jsxs)("dl", {
+                              }), (0, fe.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, pB.jsxs)("div", {
-                                  children: [(0, pB.jsx)("dt", {
+                                children: [(0, fe.jsxs)("div", {
+                                  children: [(0, fe.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, pB.jsx)("dd", {
-                                    children: (0, pB.jsx)(fO, {
-                                      type: OB.type
+                                  }), (0, fe.jsx)("dd", {
+                                    children: (0, fe.jsx)(Zi, {
+                                      type: ie.type
                                     })
                                   })]
-                                }), null !== OB.defaultValue && (0, pB.jsxs)("div", {
-                                  children: [(0, pB.jsx)("dt", {
+                                }), null !== ie.defaultValue && (0, fe.jsxs)("div", {
+                                  children: [(0, fe.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, pB.jsx)("dd", {
-                                    children: (0, pB.jsxs)("code", {
+                                  }), (0, fe.jsx)("dd", {
+                                    children: (0, fe.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [QB && (0, pB.jsx)(RO, {
-                                        colour: QB
-                                      }), OB.defaultValue]
+                                      children: [Me && (0, fe.jsx)(Bi, {
+                                        colour: Me
+                                      }), ie.defaultValue]
                                     })
                                   })]
-                                }), null !== OB.example && (0, pB.jsxs)("div", {
-                                  children: [(0, pB.jsx)("dt", {
+                                }), null !== ie.example && (0, fe.jsxs)("div", {
+                                  children: [(0, fe.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, pB.jsx)("dd", {
-                                    children: (0, pB.jsx)("code", {
+                                  }), (0, fe.jsx)("dd", {
+                                    children: (0, fe.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: OB.example
+                                      children: ie.example
                                     })
                                   })]
                                 })]
-                              }), OB.description.length > 0 && (0, pB.jsx)("div", {
+                              }), ie.description.length > 0 && (0, fe.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, pB.jsx)(lG, {
-                                  blocks: OB.description
+                                children: (0, fe.jsx)(TH, {
+                                  blocks: ie.description
                                 })
-                              }), (0, pB.jsx)(pQ, {
-                                pageId: GB,
-                                anchor: YB
+                              }), (0, fe.jsx)(pM, {
+                                pageId: He,
+                                anchor: ye
                               })]
                             })
                           }
 
-                          function RQ(BB) {
+                          function EM(ee) {
                             let {
-                              section: OB
-                            } = BB;
-                            return (0, pB.jsxs)("article", {
+                              section: ie
+                            } = ee;
+                            return (0, fe.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, pB.jsx)(JG, {
+                              children: [(0, fe.jsx)(RH, {
                                 level: 2,
-                                text: OB.heading.text,
-                                anchor: OB.heading.anchor,
+                                text: ie.heading.text,
+                                anchor: ie.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, pB.jsx)("div", {
+                              }), (0, fe.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, pB.jsx)(lG, {
-                                  blocks: OB.blocks
+                                children: (0, fe.jsx)(TH, {
+                                  blocks: ie.blocks
                                 })
                               })]
                             })
                           }
 
-                          function WQ(BB) {
+                          function gM(ee) {
                             let {
-                              section: OB
-                            } = BB;
-                            return (0, pB.jsxs)("section", {
+                              section: ie
+                            } = ee;
+                            return (0, fe.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, pB.jsx)(JG, {
-                                level: OB.heading.level,
-                                text: OB.heading.text,
-                                anchor: OB.heading.anchor
-                              }), (0, pB.jsx)(lG, {
-                                blocks: OB.blocks
+                              children: [(0, fe.jsx)(RH, {
+                                level: ie.heading.level,
+                                text: ie.heading.text,
+                                anchor: ie.heading.anchor
+                              }), (0, fe.jsx)(TH, {
+                                blocks: ie.blocks
                               })]
                             })
                           }
-                          const AQ = {
+                          const OM = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function VQ(BB) {
+                          function dM(ee) {
                             let {
-                              page: OB,
-                              section: GB
-                            } = BB;
-                            if ("methods" === OB.layout || "callbacks" === OB.layout) return (0, pB.jsx)(qQ, {
-                              method: nG(GB),
-                              pageId: OB.id,
-                              anchor: GB.heading.anchor,
-                              isCallback: "callbacks" === OB.layout
+                              page: ie,
+                              section: He
+                            } = ee;
+                            if ("methods" === ie.layout || "callbacks" === ie.layout) return (0, fe.jsx)(XM, {
+                              method: tH(He),
+                              pageId: ie.id,
+                              anchor: He.heading.anchor,
+                              isCallback: "callbacks" === ie.layout
                             });
-                            if ("settings" === OB.layout) {
-                              const BB = function(BB) {
-                                const OB = {
-                                  name: BB.heading.text,
+                            if ("settings" === ie.layout) {
+                              const ee = function(ee) {
+                                const ie = {
+                                  name: ee.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const YB of BB.blocks) {
-                                  var GB;
-                                  if (SG(YB)) continue;
-                                  const BB = "paragraph" === YB.kind ? YB.text.match(UG) : null;
-                                  if (!BB) {
-                                    OB.description.push(YB);
+                                for (const ye of ee.blocks) {
+                                  var He;
+                                  if (WH(ye)) continue;
+                                  const ee = "paragraph" === ye.kind ? ye.text.match(ZH) : null;
+                                  if (!ee) {
+                                    ie.description.push(ye);
                                     continue
                                   }
-                                  const DB = null !== (GB = VG(BB[2])) && void 0 !== GB ? GB : BB[2];
-                                  "Type" === BB[1] ? OB.type = DB : "Default" === BB[1] ? OB.defaultValue = DB : "" !== DB && (OB.example = DB)
+                                  const be = null !== (He = dH(ee[2])) && void 0 !== He ? He : ee[2];
+                                  "Type" === ee[1] ? ie.type = be : "Default" === ee[1] ? ie.defaultValue = be : "" !== be && (ie.example = be)
                                 }
-                                return OB.type ? OB : null
-                              }(GB);
-                              if (BB) return (0, pB.jsx)(NQ, {
-                                setting: BB,
-                                pageId: OB.id,
-                                anchor: GB.heading.anchor,
-                                setterSnippet: OB.setterSnippet
+                                return ie.type ? ie : null
+                              }(He);
+                              if (ee) return (0, fe.jsx)(BM, {
+                                setting: ee,
+                                pageId: ie.id,
+                                anchor: He.heading.anchor,
+                                setterSnippet: ie.setterSnippet
                               })
                             }
-                            return "snippets" === OB.layout ? (0, pB.jsx)(RQ, {
-                              section: GB
-                            }) : "changelog" === OB.layout ? (0, pB.jsxs)("section", {
+                            return "snippets" === ie.layout ? (0, fe.jsx)(EM, {
+                              section: He
+                            }) : "changelog" === ie.layout ? (0, fe.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, pB.jsx)("div", {
+                              children: [(0, fe.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, pB.jsx)(JG, {
+                                children: (0, fe.jsx)(RH, {
                                   level: 2,
-                                  text: GB.heading.text,
-                                  anchor: GB.heading.anchor
+                                  text: He.heading.text,
+                                  anchor: He.heading.anchor
                                 })
-                              }), (0, pB.jsx)("div", {
+                              }), (0, fe.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, pB.jsx)(lG, {
-                                  blocks: fG(GB.blocks)
+                                children: (0, fe.jsx)(TH, {
+                                  blocks: wH(He.blocks)
                                 })
                               })]
-                            }) : OB.gallery ? (0, pB.jsxs)("section", {
+                            }) : ie.gallery ? (0, fe.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, pB.jsx)(JG, {
-                                level: GB.heading.level,
-                                text: GB.heading.text,
-                                anchor: GB.heading.anchor
-                              }), (0, pB.jsx)(kY, {
-                                kind: OB.gallery,
-                                content: EB(OB),
-                                blocks: GB.blocks
+                              children: [(0, fe.jsx)(RH, {
+                                level: He.heading.level,
+                                text: He.heading.text,
+                                anchor: He.heading.anchor
+                              }), (0, fe.jsx)(Dy, {
+                                kind: ie.gallery,
+                                content: ue(ie),
+                                blocks: He.blocks
                               })]
-                            }) : (0, pB.jsx)(WQ, {
-                              section: GB
+                            }) : (0, fe.jsx)(gM, {
+                              section: He
                             })
                           }
 
-                          function SQ(BB) {
+                          function WM(ee) {
                             let {
-                              page: OB,
-                              onTocChange: GB
-                            } = BB;
-                            const DB = EB(OB),
-                              [QB, oB] = (0, YB.useState)(""),
-                              jB = "article" !== OB.layout,
-                              yB = ZG(OB.gallery) ? OB.gallery : null,
-                              JB = null !== yB,
-                              MB = QB.trim().toLowerCase(),
-                              PB = (0, YB.useRef)(null),
-                              zB = (0, YB.useCallback)((BB => {
-                                var OB;
-                                null === (OB = PB.current) || void 0 === OB || OB.preview(BB)
+                              page: ie,
+                              onTocChange: He
+                            } = ee;
+                            const be = ue(ie),
+                              [Me, Ke] = (0, ye.useState)(""),
+                              Ue = "article" !== ie.layout,
+                              Fe = zH(ie.gallery) ? ie.gallery : null,
+                              Je = null !== Fe,
+                              oe = Me.trim().toLowerCase(),
+                              Re = (0, ye.useRef)(null),
+                              ke = (0, ye.useCallback)((ee => {
+                                var ie;
+                                null === (ie = Re.current) || void 0 === ie || ie.preview(ee)
                               }), []),
-                              lB = (0, YB.useMemo)((() => {
-                                if (!OB.hasParticlePlayground) return [];
-                                const BB = uG(DB.intro).find((BB => "names" === BB.kind && !BB.names.some((BB => null !== wG(BB.name)))));
-                                return "names" === (null === BB || void 0 === BB ? void 0 : BB.kind) ? BB.names.map((BB => BB.name)) : []
-                              }), [OB, DB]),
-                              qB = (0, YB.useMemo)((() => {
-                                if (!OB.hasTextPlayground) return [];
-                                const BB = DB.sections.flatMap((BB => BB.blocks.flatMap((BB => {
-                                  var OB;
-                                  return (null !== (OB = KG(BB)) && void 0 !== OB ? OB : []).flatMap((BB => wO(BB.name) ? [BB.name] : []))
+                              qe = (0, ye.useMemo)((() => {
+                                if (!ie.hasParticlePlayground) return [];
+                                const ee = YH(be.intro).find((ee => "names" === ee.kind && !ee.names.some((ee => null !== mH(ee.name)))));
+                                return "names" === (null === ee || void 0 === ee ? void 0 : ee.kind) ? ee.names.map((ee => ee.name)) : []
+                              }), [ie, be]),
+                              Te = (0, ye.useMemo)((() => {
+                                if (!ie.hasTextPlayground) return [];
+                                const ee = be.sections.flatMap((ee => ee.blocks.flatMap((ee => {
+                                  var ie;
+                                  return (null !== (ie = AH(ee)) && void 0 !== ie ? ie : []).flatMap((ee => ui(ee.name) ? [ee.name] : []))
                                 }))));
-                                return [...new Set(BB)]
-                              }), [OB, DB]),
-                              ZB = (0, YB.useMemo)((() => MB ? DB.sections.filter((BB => function(BB, OB) {
-                                return !!BB.heading.text.toLowerCase().includes(OB) || BB.blocks.some((BB => (0, UB.k)(BB).toLowerCase().includes(OB)))
-                              }(BB, MB))) : DB.sections), [DB, MB]),
-                              NB = (0, YB.useMemo)((() => function(BB, OB) {
-                                return "article" !== BB.layout ? OB.map((BB => ({
-                                  anchor: BB.heading.anchor,
-                                  text: BB.heading.text,
+                                return [...new Set(ee)]
+                              }), [ie, be]),
+                              pe = (0, ye.useMemo)((() => oe ? be.sections.filter((ee => function(ee, ie) {
+                                return !!ee.heading.text.toLowerCase().includes(ie) || ee.blocks.some((ee => (0, We.i)(ee).toLowerCase().includes(ie)))
+                              }(ee, oe))) : be.sections), [be, oe]),
+                              Xe = (0, ye.useMemo)((() => function(ee, ie) {
+                                return "article" !== ee.layout ? ie.map((ee => ({
+                                  anchor: ee.heading.anchor,
+                                  text: ee.heading.text,
                                   level: 2
-                                }))) : OB.flatMap((BB => {
-                                  const OB = BB.blocks.flatMap((BB => "heading" === BB.kind && 3 === BB.level ? [{
-                                    anchor: BB.anchor,
-                                    text: BB.text,
+                                }))) : ie.flatMap((ee => {
+                                  const ie = ee.blocks.flatMap((ee => "heading" === ee.kind && 3 === ee.level ? [{
+                                    anchor: ee.anchor,
+                                    text: ee.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: BB.heading.anchor,
-                                    text: BB.heading.text,
+                                    anchor: ee.heading.anchor,
+                                    text: ee.heading.text,
                                     level: 2
-                                  }, ...OB]
+                                  }, ...ie]
                                 }))
-                              }(OB, ZB)), [OB, ZB]);
-                            return (0, YB.useEffect)((() => {
-                              GB(NB)
-                            }), [NB, GB]), (0, pB.jsxs)("article", {
+                              }(ie, pe)), [ie, pe]);
+                            return (0, ye.useEffect)((() => {
+                              He(Xe)
+                            }), [Xe, He]), (0, fe.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, pB.jsxs)("header", {
+                              children: [(0, fe.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, pB.jsx)("h1", {
+                                children: [(0, fe.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: DB.title || OB.title
-                                }), (0, pB.jsx)("p", {
+                                  children: be.title || ie.title
+                                }), (0, fe.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: OB.summary
-                                }), (0, pB.jsx)(HY, {
-                                  page: OB
-                                }), jB && (0, pB.jsx)("div", {
+                                  children: ie.summary
+                                }), (0, fe.jsx)(Gy, {
+                                  page: ie
+                                }), Ue && (0, fe.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, pB.jsxs)("span", {
-                                    children: [(0, pB.jsx)("strong", {
-                                      children: DB.sections.length
-                                    }), " ", AQ[OB.layout]]
+                                  children: (0, fe.jsxs)("span", {
+                                    children: [(0, fe.jsx)("strong", {
+                                      children: be.sections.length
+                                    }), " ", OM[ie.layout]]
                                   })
                                 })]
-                              }), "" === OB.slug && (0, pB.jsx)(KY, {}), yB && (0, pB.jsx)(FY, {
-                                kind: yB
-                              }, yB), OB.hasParticlePlayground && (0, pB.jsx)(yD, {
-                                ref: PB,
-                                textures: lB
-                              }), !JB && DB.intro.length > 0 && (0, pB.jsx)("div", {
+                              }), "" === ie.slug && (0, fe.jsx)(Ay, {}), Fe && (0, fe.jsx)(cy, {
+                                kind: Fe
+                              }, Fe), ie.hasParticlePlayground && (0, fe.jsx)(ob, {
+                                ref: Re,
+                                textures: qe
+                              }), !Je && be.intro.length > 0 && (0, fe.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: OB.gallery ? (0, pB.jsx)(NY.Provider, {
-                                  value: OB.hasParticlePlayground ? zB : null,
-                                  children: (0, pB.jsx)(kY, {
-                                    kind: OB.gallery,
-                                    content: DB,
-                                    blocks: DB.intro
+                                children: ie.gallery ? (0, fe.jsx)(By.Provider, {
+                                  value: ie.hasParticlePlayground ? ke : null,
+                                  children: (0, fe.jsx)(Dy, {
+                                    kind: ie.gallery,
+                                    content: be,
+                                    blocks: be.intro
                                   })
-                                }) : (0, pB.jsx)(lG, {
-                                  blocks: fG(DB.intro)
+                                }) : (0, fe.jsx)(TH, {
+                                  blocks: wH(be.intro)
                                 })
-                              }), OB.hasTextPlayground && (0, pB.jsx)(UD, {
-                                fontAwesomeIcons: qB
-                              }), OB.hasVoicePlayground && (0, pB.jsx)(sD, {}), OB.childPageIds && (0, pB.jsx)(KY, {
-                                cards: OB.childPageIds.map((BB => ({
-                                  pageId: BB
+                              }), ie.hasTextPlayground && (0, fe.jsx)(Zb, {
+                                fontAwesomeIcons: Te
+                              }), ie.hasVoicePlayground && (0, fe.jsx)(Qb, {}), ie.childPageIds && (0, fe.jsx)(Ay, {
+                                cards: ie.childPageIds.map((ee => ({
+                                  pageId: ee
                                 }))),
-                                label: OB.title
-                              }), jB && (0, pB.jsx)(WG, {
+                                label: ie.title
+                              }), Ue && (0, fe.jsx)(gH, {
                                 className: "DocsFilterBar",
-                                value: QB,
-                                placeholder: `Filter ${DB.sections.length} ${AQ[OB.layout]}\u2026`,
-                                label: `Filter ${AQ[OB.layout]}`,
-                                onChange: oB,
-                                count: MB ? {
-                                  visible: ZB.length,
-                                  total: DB.sections.length
+                                value: Me,
+                                placeholder: `Filter ${be.sections.length} ${OM[ie.layout]}\u2026`,
+                                label: `Filter ${OM[ie.layout]}`,
+                                onChange: Ke,
+                                count: oe ? {
+                                  visible: pe.length,
+                                  total: be.sections.length
                                 } : null
-                              }), !JB && (0, pB.jsxs)("div", {
-                                className: `DocsSections Layout-${OB.layout}`,
-                                children: [ZB.map((BB => (0, pB.jsx)(VQ, {
-                                  page: OB,
-                                  section: BB
-                                }, BB.heading.anchor))), 0 === ZB.length && (0, pB.jsxs)("p", {
+                              }), !Je && (0, fe.jsxs)("div", {
+                                className: `DocsSections Layout-${ie.layout}`,
+                                children: [pe.map((ee => (0, fe.jsx)(dM, {
+                                  page: ie,
+                                  section: ee
+                                }, ee.heading.anchor))), 0 === pe.length && (0, fe.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", AQ[OB.layout], " match \u201c", QB, "\u201d."]
+                                  children: ["No ", OM[ie.layout], " match \u201c", Me, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const nQ = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const tM = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function UQ(BB) {
+                          function ZM(ee) {
                             let {
-                              entry: OB,
-                              isActive: GB,
-                              onNavigate: YB,
-                              label: DB,
-                              children: oB
-                            } = BB;
-                            return (0, pB.jsx)("a", {
-                              href: `#${OB.anchor}`,
-                              "aria-label": DB,
-                              className: QB()(`Level${OB.level}`, {
-                                Active: GB
+                              entry: ie,
+                              isActive: He,
+                              onNavigate: ye,
+                              label: be,
+                              children: Ke
+                            } = ee;
+                            return (0, fe.jsx)("a", {
+                              href: `#${ie.anchor}`,
+                              "aria-label": be,
+                              className: Me()(`Level${ie.level}`, {
+                                Active: He
                               }),
-                              "aria-current": GB ? "location" : void 0,
-                              onClick: BB => {
-                                BB.preventDefault(), YB(OB.anchor)
+                              "aria-current": He ? "location" : void 0,
+                              onClick: ee => {
+                                ee.preventDefault(), ye(ie.anchor)
                               },
-                              children: oB
+                              children: Ke
                             })
                           }
 
-                          function fQ(BB) {
+                          function wM(ee) {
                             let {
-                              toc: OB,
-                              activeAnchor: GB,
-                              onNavigate: DB
-                            } = BB;
-                            const oB = Math.max(0, OB.findIndex((BB => BB.anchor === GB))),
-                              jB = (0, YB.useRef)(null),
-                              yB = (0, YB.useRef)(!1);
-                            (0, YB.useEffect)((() => {
-                              var BB, GB;
-                              const YB = null === (BB = jB.current) || void 0 === BB ? void 0 : BB.closest(".DocsToc"),
-                                DB = null === (GB = jB.current) || void 0 === GB ? void 0 : GB.querySelector(".DocsTimelineNotch.Active");
-                              if (!YB || !DB) return;
-                              let QB = 0;
-                              if (oB === OB.length - 1) QB = YB.scrollHeight;
-                              else if (oB > 0) {
-                                const BB = YB.getBoundingClientRect(),
-                                  OB = DB.getBoundingClientRect();
-                                QB = YB.scrollTop + OB.top + OB.height / 2 - (BB.top + YB.clientHeight / 2)
+                              toc: ie,
+                              activeAnchor: He,
+                              onNavigate: be
+                            } = ee;
+                            const Ke = Math.max(0, ie.findIndex((ee => ee.anchor === He))),
+                              Ue = (0, ye.useRef)(null),
+                              Fe = (0, ye.useRef)(!1);
+                            (0, ye.useEffect)((() => {
+                              var ee, He;
+                              const ye = null === (ee = Ue.current) || void 0 === ee ? void 0 : ee.closest(".DocsToc"),
+                                be = null === (He = Ue.current) || void 0 === He ? void 0 : He.querySelector(".DocsTimelineNotch.Active");
+                              if (!ye || !be) return;
+                              let Me = 0;
+                              if (Ke === ie.length - 1) Me = ye.scrollHeight;
+                              else if (Ke > 0) {
+                                const ee = ye.getBoundingClientRect(),
+                                  ie = be.getBoundingClientRect();
+                                Me = ye.scrollTop + ie.top + ie.height / 2 - (ee.top + ye.clientHeight / 2)
                               }
-                              YB.scrollTo({
-                                top: QB,
-                                behavior: yB.current ? "smooth" : "auto"
-                              }), yB.current = !0
-                            }), [oB, OB.length]);
-                            const JB = [];
-                            return OB.forEach(((BB, OB) => {
-                              var GB, YB, DB;
-                              const QB = function(BB) {
-                                  const OB = BB.trim().match(nQ);
-                                  return OB ? {
-                                    day: OB[1],
-                                    month: `${OB[2]} ${OB[3]}`
+                              ye.scrollTo({
+                                top: Me,
+                                behavior: Fe.current ? "smooth" : "auto"
+                              }), Fe.current = !0
+                            }), [Ke, ie.length]);
+                            const Je = [];
+                            return ie.forEach(((ee, ie) => {
+                              var He, ye, be;
+                              const Me = function(ee) {
+                                  const ie = ee.trim().match(tM);
+                                  return ie ? {
+                                    day: ie[1],
+                                    month: `${ie[2]} ${ie[3]}`
                                   } : null
-                                }(BB.text),
-                                oB = null !== (GB = null === QB || void 0 === QB ? void 0 : QB.month) && void 0 !== GB ? GB : null;
-                              null !== oB && (null === (YB = JB.at(-1)) || void 0 === YB ? void 0 : YB.month) === oB || JB.push({
-                                month: oB,
+                                }(ee.text),
+                                Ke = null !== (He = null === Me || void 0 === Me ? void 0 : Me.month) && void 0 !== He ? He : null;
+                              null !== Ke && (null === (ye = Je.at(-1)) || void 0 === ye ? void 0 : ye.month) === Ke || Je.push({
+                                month: Ke,
                                 entries: []
-                              }), JB.at(-1).entries.push({
-                                entry: BB,
-                                day: null !== (DB = null === QB || void 0 === QB ? void 0 : QB.day) && void 0 !== DB ? DB : null,
-                                index: OB
+                              }), Je.at(-1).entries.push({
+                                entry: ee,
+                                day: null !== (be = null === Me || void 0 === Me ? void 0 : Me.day) && void 0 !== be ? be : null,
+                                index: ie
                               })
-                            })), (0, pB.jsx)("ol", {
-                              ref: jB,
+                            })), (0, fe.jsx)("ol", {
+                              ref: Ue,
                               className: "DocsTimeline",
-                              children: JB.map((BB => {
+                              children: Je.map((ee => {
                                 let {
-                                  month: OB,
-                                  entries: GB
-                                } = BB;
-                                return (0, pB.jsxs)("li", {
+                                  month: ie,
+                                  entries: He
+                                } = ee;
+                                return (0, fe.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [OB && (0, pB.jsx)("span", {
+                                  children: [ie && (0, fe.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: OB
-                                  }), (0, pB.jsx)("ol", {
-                                    children: GB.map((BB => {
+                                    children: ie
+                                  }), (0, fe.jsx)("ol", {
+                                    children: He.map((ee => {
                                       let {
-                                        entry: OB,
-                                        day: GB,
-                                        index: YB
-                                      } = BB;
-                                      return (0, pB.jsx)("li", {
-                                        className: QB()("DocsTimelineNotch", {
-                                          Passed: YB < oB,
-                                          Active: YB === oB
+                                        entry: ie,
+                                        day: He,
+                                        index: ye
+                                      } = ee;
+                                      return (0, fe.jsx)("li", {
+                                        className: Me()("DocsTimelineNotch", {
+                                          Passed: ye < Ke,
+                                          Active: ye === Ke
                                         }),
-                                        children: (0, pB.jsx)(UQ, {
-                                          entry: OB,
-                                          isActive: YB === oB,
-                                          onNavigate: DB,
-                                          label: OB.text,
-                                          children: (0, pB.jsx)("span", {
+                                        children: (0, fe.jsx)(ZM, {
+                                          entry: ie,
+                                          isActive: ye === Ke,
+                                          onNavigate: be,
+                                          label: ie.text,
+                                          children: (0, fe.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== GB && void 0 !== GB ? GB : OB.text
+                                            children: null !== He && void 0 !== He ? He : ie.text
                                           })
                                         })
-                                      }, OB.anchor)
+                                      }, ie.anchor)
                                     }))
                                   })]
-                                }, GB[0].entry.anchor)
+                                }, He[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function kQ(BB) {
+                          function DM(ee) {
                             let {
-                              isChangelog: OB,
-                              toc: GB,
-                              activeAnchor: YB,
-                              onNavigate: DB
-                            } = BB;
-                            return 0 === GB.length ? null : (0, pB.jsxs)(pB.Fragment, {
-                              children: [(0, pB.jsx)("div", {
+                              isChangelog: ie,
+                              toc: He,
+                              activeAnchor: ye,
+                              onNavigate: be
+                            } = ee;
+                            return 0 === He.length ? null : (0, fe.jsxs)(fe.Fragment, {
+                              children: [(0, fe.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: OB ? "Updates" : "On this page"
-                              }), OB ? (0, pB.jsx)(fQ, {
-                                toc: GB,
-                                activeAnchor: YB,
-                                onNavigate: DB
-                              }) : (0, pB.jsx)("ul", {
-                                children: GB.map((BB => (0, pB.jsx)("li", {
-                                  children: (0, pB.jsx)(UQ, {
-                                    entry: BB,
-                                    isActive: BB.anchor === YB,
-                                    onNavigate: DB,
-                                    children: BB.text.replace(/`/g, "")
+                                children: ie ? "Updates" : "On this page"
+                              }), ie ? (0, fe.jsx)(wM, {
+                                toc: He,
+                                activeAnchor: ye,
+                                onNavigate: be
+                              }) : (0, fe.jsx)("ul", {
+                                children: He.map((ee => (0, fe.jsx)("li", {
+                                  children: (0, fe.jsx)(ZM, {
+                                    entry: ee,
+                                    isActive: ee.anchor === ye,
+                                    onNavigate: be,
+                                    children: ee.text.replace(/`/g, "")
                                   })
-                                }, BB.anchor)))
+                                }, ee.anchor)))
                               })]
                             })
                           }
-                          const dQ = {
+                          const PM = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            KQ = {
+                            AM = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            uQ = 20,
-                            mQ = 10,
-                            IQ = 40,
-                            FQ = 120;
-                          let iQ;
+                            YM = 20,
+                            VM = 10,
+                            aM = 40,
+                            cM = 120;
+                          let xM;
 
-                          function LQ(BB) {
-                            const OB = BB.gallery;
-                            if (!OB) return [];
-                            if (ZG(OB)) return function(BB) {
-                              return RG(BB).entries.map((BB => BB.name))
-                            }(OB).map((GB => ({
-                              page: BB,
-                              anchor: IG(OB, GB),
-                              title: GB,
-                              kind: KQ[OB],
+                          function LM(ee) {
+                            const ie = ee.gallery;
+                            if (!ie) return [];
+                            if (zH(ie)) return function(ee) {
+                              return EH(ee).entries.map((ee => ee.name))
+                            }(ie).map((He => ({
+                              page: ee,
+                              anchor: aH(ie, He),
+                              title: He,
+                              kind: AM[ie],
                               text: "",
-                              listedUnder: BB.title
+                              listedUnder: ee.title
                             })));
-                            const GB = EB(BB);
-                            return (0, UB.t)(GB).flatMap((YB => {
-                              const DB = YB.heading ? `${BB.title} \u203a ${YB.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : BB.title;
-                              return iG(OB, GB, YB.blocks).flatMap((GB => "names" !== GB.kind ? [] : GB.names.map((YB => {
-                                const QB = GB.isSongs ? "Song" : KQ[OB];
+                            const He = ue(ee);
+                            return (0, We.x)(He).flatMap((ye => {
+                              const be = ye.heading ? `${ee.title} \u203a ${ye.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : ee.title;
+                              return xH(ie, He, ye.blocks).flatMap((He => "names" !== He.kind ? [] : He.names.map((ye => {
+                                const Me = He.isSongs ? "Song" : AM[ie];
                                 return {
-                                  page: BB,
-                                  anchor: YB.anchor,
-                                  title: YB.name,
-                                  kind: QB,
+                                  page: ee,
+                                  anchor: ye.anchor,
+                                  title: ye.name,
+                                  kind: Me,
                                   text: "",
-                                  listedUnder: DB
+                                  listedUnder: be
                                 }
                               }))))
                             }))
                           }
 
-                          function gQ(BB, OB, GB) {
-                            const YB = BB.title.toLowerCase();
-                            let DB = 0;
-                            if (YB === OB) DB = 100;
-                            else if (YB.startsWith(OB)) DB = 80;
-                            else if (YB.includes(OB)) DB = 60;
-                            else if (GB.every((BB => YB.includes(BB)))) DB = 45;
+                          function CM(ee, ie, He) {
+                            const ye = ee.title.toLowerCase();
+                            let be = 0;
+                            if (ye === ie) be = 100;
+                            else if (ye.startsWith(ie)) be = 80;
+                            else if (ye.includes(ie)) be = 60;
+                            else if (He.every((ee => ye.includes(ee)))) be = 45;
                             else {
-                              if (!BB.text.toLowerCase().includes(OB)) return 0;
-                              DB = 20
+                              if (!ee.text.toLowerCase().includes(ie)) return 0;
+                              be = 20
                             }
-                            return DB - Math.min(YB.length / 10, 9) + ("Page" === BB.kind ? 8 : "Method" === BB.kind ? 3 : 0) - (BB.listedUnder ? uQ : 0)
+                            return be - Math.min(ye.length / 10, 9) + ("Page" === ee.kind ? 8 : "Method" === ee.kind ? 3 : 0) - (ee.listedUnder ? YM : 0)
                           }
 
-                          function rQ(BB, OB) {
-                            const GB = BB.toLowerCase().indexOf(OB),
-                              YB = Math.max(0, GB - FQ / 3);
-                            return `${YB>0?"\u2026":""}${BB.slice(YB,YB+FQ)}${YB+FQ<BB.length?"\u2026":""}`
+                          function vM(ee, ie) {
+                            const He = ee.toLowerCase().indexOf(ie),
+                              ye = Math.max(0, He - cM / 3);
+                            return `${ye>0?"\u2026":""}${ee.slice(ye,ye+cM)}${ye+cM<ee.length?"\u2026":""}`
                           }
 
-                          function XQ(BB) {
+                          function uM(ee) {
                             let {
-                              text: OB,
-                              query: GB
-                            } = BB;
-                            const YB = GB ? OB.toLowerCase().indexOf(GB) : -1;
-                            return -1 === YB ? (0, pB.jsx)(pB.Fragment, {
-                              children: OB
-                            }) : (0, pB.jsxs)(pB.Fragment, {
-                              children: [OB.slice(0, YB), (0, pB.jsx)("mark", {
-                                children: OB.slice(YB, YB + GB.length)
-                              }), OB.slice(YB + GB.length)]
+                              text: ie,
+                              query: He
+                            } = ee;
+                            const ye = He ? ie.toLowerCase().indexOf(He) : -1;
+                            return -1 === ye ? (0, fe.jsx)(fe.Fragment, {
+                              children: ie
+                            }) : (0, fe.jsxs)(fe.Fragment, {
+                              children: [ie.slice(0, ye), (0, fe.jsx)("mark", {
+                                children: ie.slice(ye, ye + He.length)
+                              }), ie.slice(ye + He.length)]
                             })
                           }
 
-                          function wQ(BB) {
+                          function mM(ee) {
                             let {
-                              basePath: OB,
-                              onClose: GB
-                            } = BB;
-                            const DB = (0, jB.v)(),
-                              [oB, yB] = (0, YB.useState)(""),
-                              [JB, MB] = (0, YB.useState)(0),
-                              PB = (0, YB.useRef)(null),
-                              zB = (0, YB.useRef)(null),
-                              lB = oB.trim().toLowerCase(),
-                              qB = (0, YB.useMemo)((() => {
-                                const BB = (iQ || (iQ = gB.flatMap((BB => {
-                                  const OB = EB(BB);
+                              basePath: ie,
+                              onClose: He
+                            } = ee;
+                            const be = (0, Ue.w)(),
+                              [Ke, Fe] = (0, ye.useState)(""),
+                              [Je, oe] = (0, ye.useState)(0),
+                              Re = (0, ye.useRef)(null),
+                              ke = (0, ye.useRef)(null),
+                              qe = Ke.trim().toLowerCase(),
+                              Te = (0, ye.useMemo)((() => {
+                                const ee = (xM || (xM = xe.flatMap((ee => {
+                                  const ie = ue(ee);
                                   return [{
-                                    page: BB,
+                                    page: ee,
                                     anchor: "",
-                                    title: BB.title,
+                                    title: ee.title,
                                     kind: "Page",
-                                    text: BB.summary
-                                  }, ...OB.sections.flatMap((OB => {
-                                    const GB = OB.blocks.filter((BB => "paragraph" === BB.kind)).map(UB.k).join(" ").replace(/[`*]/g, ""),
-                                      YB = {
-                                        page: BB,
-                                        anchor: OB.heading.anchor,
-                                        title: OB.heading.text.replace(/`/g, ""),
-                                        kind: dQ[BB.layout],
-                                        text: GB
+                                    text: ee.summary
+                                  }, ...ie.sections.flatMap((ie => {
+                                    const He = ie.blocks.filter((ee => "paragraph" === ee.kind)).map(We.i).join(" ").replace(/[`*]/g, ""),
+                                      ye = {
+                                        page: ee,
+                                        anchor: ie.heading.anchor,
+                                        title: ie.heading.text.replace(/`/g, ""),
+                                        kind: PM[ee.layout],
+                                        text: He
                                       },
-                                      DB = OB.blocks.flatMap((OB => "article" === BB.layout && "heading" === OB.kind && 3 === OB.level ? [{
-                                        page: BB,
-                                        anchor: OB.anchor,
-                                        title: OB.text.replace(/`/g, ""),
+                                      be = ie.blocks.flatMap((ie => "article" === ee.layout && "heading" === ie.kind && 3 === ie.level ? [{
+                                        page: ee,
+                                        anchor: ie.anchor,
+                                        title: ie.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: YB.title
+                                        text: ye.title
                                       }] : []));
-                                    return [YB, ...DB]
-                                  })), ...LQ(BB)]
-                                }))), iQ);
-                                if (!lB) return BB.filter((BB => "Page" === BB.kind));
-                                const OB = lB.split(/\s+/);
-                                let GB = 0;
-                                return BB.map((BB => ({
-                                  entry: BB,
-                                  score: gQ(BB, lB, OB)
-                                }))).filter((BB => BB.score > 0)).sort(((BB, OB) => OB.score - BB.score)).filter((BB => !BB.entry.listedUnder || (GB++, GB <= mQ))).slice(0, IQ).map((BB => BB.entry))
-                              }), [lB]);
-                            (0, YB.useEffect)((() => {
-                              MB(0)
-                            }), [lB]), (0, YB.useEffect)((() => {
-                              const BB = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [ye, ...be]
+                                  })), ...LM(ee)]
+                                }))), xM);
+                                if (!qe) return ee.filter((ee => "Page" === ee.kind));
+                                const ie = qe.split(/\s+/);
+                                let He = 0;
+                                return ee.map((ee => ({
+                                  entry: ee,
+                                  score: CM(ee, qe, ie)
+                                }))).filter((ee => ee.score > 0)).sort(((ee, ie) => ie.score - ee.score)).filter((ee => !ee.entry.listedUnder || (He++, He <= VM))).slice(0, aM).map((ee => ee.entry))
+                              }), [qe]);
+                            (0, ye.useEffect)((() => {
+                              oe(0)
+                            }), [qe]), (0, ye.useEffect)((() => {
+                              const ee = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === BB || void 0 === BB || BB.focus()
+                                null === ee || void 0 === ee || ee.focus()
                               }
-                            }), []), (0, YB.useEffect)((() => {
-                              var BB, OB;
-                              null === (BB = PB.current) || void 0 === BB || null === (OB = BB.querySelector(".Active")) || void 0 === OB || OB.scrollIntoView({
+                            }), []), (0, ye.useEffect)((() => {
+                              var ee, ie;
+                              null === (ee = Re.current) || void 0 === ee || null === (ie = ee.querySelector(".Active")) || void 0 === ie || ie.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [JB]);
-                            const NB = BB => {
-                              DB(eB(OB, BB.page, BB.anchor)), GB()
+                            }), [Je]);
+                            const Xe = ee => {
+                              be(ne(ie, ee.page, ee.anchor)), He()
                             };
-                            return (0, pB.jsx)("div", {
+                            return (0, fe.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: BB => {
-                                BB.target === BB.currentTarget && GB()
+                              onMouseDown: ee => {
+                                ee.target === ee.currentTarget && He()
                               },
-                              children: (0, pB.jsxs)("div", {
+                              children: (0, fe.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: BB => {
-                                  BB.target !== zB.current && BB.preventDefault()
+                                onMouseDown: ee => {
+                                  ee.target !== ke.current && ee.preventDefault()
                                 },
-                                onKeyDown: BB => {
-                                  if ("Escape" === BB.key) GB();
-                                  else if ("Tab" === BB.key) {
-                                    var OB;
-                                    BB.preventDefault(), null === (OB = zB.current) || void 0 === OB || OB.focus()
+                                onKeyDown: ee => {
+                                  if ("Escape" === ee.key) He();
+                                  else if ("Tab" === ee.key) {
+                                    var ie;
+                                    ee.preventDefault(), null === (ie = ke.current) || void 0 === ie || ie.focus()
                                   }
                                 },
-                                children: [(0, pB.jsxs)("div", {
+                                children: [(0, fe.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, pB.jsx)(ZB, {
+                                  children: [(0, fe.jsx)(pe, {
                                     name: "magnifying-glass"
-                                  }), (0, pB.jsx)("input", {
-                                    ref: zB,
+                                  }), (0, fe.jsx)("input", {
+                                    ref: ke,
                                     autoFocus: !0,
-                                    value: oB,
+                                    value: Ke,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": qB.length > 0 ? `DocsSearchResult-${JB}` : void 0,
-                                    onChange: BB => {
-                                      yB(BB.target.value)
+                                    "aria-activedescendant": Te.length > 0 ? `DocsSearchResult-${Je}` : void 0,
+                                    onChange: ee => {
+                                      Fe(ee.target.value)
                                     },
-                                    onKeyDown: BB => {
-                                      if ("ArrowDown" === BB.key || "ArrowUp" === BB.key) {
-                                        BB.preventDefault();
-                                        const OB = "ArrowDown" === BB.key ? 1 : -1;
-                                        MB((JB + OB + qB.length) % Math.max(qB.length, 1))
-                                      } else "Enter" === BB.key && qB[JB] && NB(qB[JB])
+                                    onKeyDown: ee => {
+                                      if ("ArrowDown" === ee.key || "ArrowUp" === ee.key) {
+                                        ee.preventDefault();
+                                        const ie = "ArrowDown" === ee.key ? 1 : -1;
+                                        oe((Je + ie + Te.length) % Math.max(Te.length, 1))
+                                      } else "Enter" === ee.key && Te[Je] && Xe(Te[Je])
                                     }
-                                  }), (0, pB.jsx)("kbd", {
+                                  }), (0, fe.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, pB.jsxs)("ul", {
+                                }), (0, fe.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: PB,
+                                  ref: Re,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!lB && (0, pB.jsx)("li", {
+                                  children: [!qe && (0, fe.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), qB.map(((BB, OB) => {
-                                    var GB;
-                                    return (0, pB.jsxs)("li", {
-                                      id: `DocsSearchResult-${OB}`,
+                                  }), Te.map(((ee, ie) => {
+                                    var He;
+                                    return (0, fe.jsxs)("li", {
+                                      id: `DocsSearchResult-${ie}`,
                                       role: "option",
-                                      "aria-selected": OB === JB,
-                                      className: QB()("DocsSearchResult", {
-                                        Active: OB === JB
+                                      "aria-selected": ie === Je,
+                                      className: Me()("DocsSearchResult", {
+                                        Active: ie === Je
                                       }),
                                       onMouseMove: () => {
-                                        MB(OB)
+                                        oe(ie)
                                       },
                                       onClick: () => {
-                                        NB(BB)
+                                        Xe(ee)
                                       },
-                                      children: [(0, pB.jsx)(ZB, {
-                                        name: BB.page.icon
-                                      }), (0, pB.jsxs)("div", {
+                                      children: [(0, fe.jsx)(pe, {
+                                        name: ee.page.icon
+                                      }), (0, fe.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, pB.jsx)("div", {
+                                        children: [(0, fe.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, pB.jsx)(XQ, {
-                                            text: BB.title,
-                                            query: lB
+                                          children: (0, fe.jsx)(uM, {
+                                            text: ee.title,
+                                            query: qe
                                           })
-                                        }), BB.text && (0, pB.jsx)("div", {
+                                        }), ee.text && (0, fe.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, pB.jsx)(XQ, {
-                                            text: rQ(BB.text, lB),
-                                            query: lB
+                                          children: (0, fe.jsx)(uM, {
+                                            text: vM(ee.text, qe),
+                                            query: qe
                                           })
                                         })]
-                                      }), (0, pB.jsx)("span", {
+                                      }), (0, fe.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === BB.kind ? "Page" : null !== (GB = BB.listedUnder) && void 0 !== GB ? GB : `${BB.kind} \xb7 ${BB.page.title}`
+                                        children: "Page" === ee.kind ? "Page" : null !== (He = ee.listedUnder) && void 0 !== He ? He : `${ee.kind} \xb7 ${ee.page.title}`
                                       })]
-                                    }, `${BB.page.id}#${BB.anchor}`)
-                                  })), lB && 0 === qB.length && (0, pB.jsxs)("li", {
+                                    }, `${ee.page.id}#${ee.anchor}`)
+                                  })), qe && 0 === Te.length && (0, fe.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", oB, "\u201d."]
+                                    children: ["Nothing matches \u201c", Ke, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function EQ(BB, OB) {
-                            if (OB < 10) return `${BB.toFixed(1)}s`;
-                            const GB = Math.floor(BB);
-                            return `${Math.floor(GB/60)}:${String(GB%60).padStart(2,"0")}`
+                          function lM(ee, ie) {
+                            if (ie < 10) return `${ee.toFixed(1)}s`;
+                            const He = Math.floor(ee);
+                            return `${Math.floor(He/60)}:${String(He%60).padStart(2,"0")}`
                           }
 
-                          function cQ() {
-                            const BB = MY((BB => BB.track)),
-                              OB = MY((BB => BB.volume)),
-                              [GB, DB] = (0, YB.useState)(0),
-                              oB = (0, YB.useRef)(OY);
-                            if ((0, YB.useEffect)((() => {
-                                if (!BB) return;
-                                if (DB(pY()), "playing" !== BB.status) return;
-                                let OB = 0;
-                                const GB = () => {
-                                  DB(pY()), OB = requestAnimationFrame(GB)
+                          function SM() {
+                            const ee = ky((ee => ee.track)),
+                              ie = ky((ee => ee.volume)),
+                              [He, be] = (0, ye.useState)(0),
+                              Ke = (0, ye.useRef)(yy);
+                            if ((0, ye.useEffect)((() => {
+                                if (!ee) return;
+                                if (be(py()), "playing" !== ee.status) return;
+                                let ie = 0;
+                                const He = () => {
+                                  be(py()), ie = requestAnimationFrame(He)
                                 };
-                                return OB = requestAnimationFrame(GB), () => {
-                                  cancelAnimationFrame(OB)
+                                return ie = requestAnimationFrame(He), () => {
+                                  cancelAnimationFrame(ie)
                                 }
-                              }), [BB]), !BB) return null;
-                            const jB = "paused" !== BB.status,
-                              yB = Math.min(GB, BB.duration);
-                            return (0, pB.jsx)("div", {
+                              }), [ee]), !ee) return null;
+                            const Ue = "paused" !== ee.status,
+                              Fe = Math.min(He, ee.duration);
+                            return (0, fe.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, pB.jsxs)("section", {
+                              children: (0, fe.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, pB.jsx)("button", {
+                                children: [(0, fe.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": jB ? `Pause ${BB.name}` : `Play ${BB.name}`,
-                                  onClick: lY,
-                                  children: (0, pB.jsx)(ZB, {
-                                    name: jB ? "pause" : "play"
+                                  "aria-label": Ue ? `Pause ${ee.name}` : `Play ${ee.name}`,
+                                  onClick: Ty,
+                                  children: (0, fe.jsx)(pe, {
+                                    name: Ue ? "pause" : "play"
                                   })
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, pB.jsxs)("div", {
+                                  children: [(0, fe.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, pB.jsx)("code", {
-                                      children: BB.name
-                                    }), (0, pB.jsx)("span", {
-                                      children: BB.isSong ? "Song" : "Sound"
+                                    children: [(0, fe.jsx)("code", {
+                                      children: ee.name
+                                    }), (0, fe.jsx)("span", {
+                                      children: ee.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, pB.jsxs)("div", {
+                                  }), (0, fe.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, pB.jsx)("span", {
-                                      children: EQ(yB, BB.duration)
-                                    }), (0, pB.jsx)("input", {
+                                    children: [(0, fe.jsx)("span", {
+                                      children: lM(Fe, ee.duration)
+                                    }), (0, fe.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: BB.duration || 1,
+                                      max: ee.duration || 1,
                                       step: .01,
-                                      value: yB,
-                                      disabled: 0 === BB.duration,
+                                      value: Fe,
+                                      disabled: 0 === ee.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${EQ(yB,BB.duration)} of ${EQ(BB.duration,BB.duration)}`,
-                                      onChange: BB => {
-                                        const OB = Number(BB.target.value);
-                                        ! function(BB) {
-                                          var OB;
-                                          oY = BB, null === (OB = DY) || void 0 === OB || OB.seek(BB)
-                                        }(OB), DB(OB)
+                                      "aria-valuetext": `${lM(Fe,ee.duration)} of ${lM(ee.duration,ee.duration)}`,
+                                      onChange: ee => {
+                                        const ie = Number(ee.target.value);
+                                        ! function(ee) {
+                                          var ie;
+                                          Fy = ee, null === (ie = Ky) || void 0 === ie || ie.seek(ee)
+                                        }(ie), be(ie)
                                       }
-                                    }), (0, pB.jsx)("span", {
-                                      children: BB.duration > 0 ? EQ(BB.duration, BB.duration) : "\u2013"
+                                    }), (0, fe.jsx)("span", {
+                                      children: ee.duration > 0 ? lM(ee.duration, ee.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, pB.jsxs)("div", {
+                                }), (0, fe.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, pB.jsx)("button", {
+                                  children: [(0, fe.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === OB ? "Unmute" : "Mute",
+                                    "aria-label": 0 === ie ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === OB ? qY(oB.current) : (oB.current = OB, qY(0))
+                                      0 === ie ? Xy(Ke.current) : (Ke.current = ie, Xy(0))
                                     },
-                                    children: (0, pB.jsx)(ZB, {
+                                    children: (0, fe.jsx)(pe, {
                                       name: "volume",
-                                      className: QB()({
-                                        Muted: 0 === OB
+                                      className: Me()({
+                                        Muted: 0 === ie
                                       })
                                     })
-                                  }), (0, pB.jsx)("input", {
+                                  }), (0, fe.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: OB,
+                                    value: ie,
                                     "aria-label": "Volume",
-                                    onChange: BB => {
-                                      qY(Number(BB.target.value))
+                                    onChange: ee => {
+                                      Xy(Number(ee.target.value))
                                     }
                                   })]
-                                }), (0, pB.jsx)("button", {
+                                }), (0, fe.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var OB;
-                                    null === (OB = document.querySelector(`[data-docs-track="${CSS.escape(GY(BB.name,BB.isSong))}"]`)) || void 0 === OB || OB.focus(), ZY()
+                                    var ie;
+                                    null === (ie = document.querySelector(`[data-docs-track="${CSS.escape(by(ee.name,ee.isSong))}"]`)) || void 0 === ie || ie.focus(), zy()
                                   },
-                                  children: (0, pB.jsx)(ZB, {
+                                  children: (0, fe.jsx)(pe, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var hQ = GB(31);
-                          const aQ = "docsTheme",
-                            eQ = window.matchMedia("(prefers-color-scheme: light)");
+                          var nM = He(35);
+                          const jM = "docsTheme",
+                            sM = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function TQ(BB) {
+                          function IM(ee) {
                             let {
-                              theme: OB,
-                              onChange: GB
-                            } = BB;
-                            const YB = "dark" === OB ? "light" : "dark";
-                            return (0, pB.jsx)("button", {
+                              theme: ie,
+                              onChange: He
+                            } = ee;
+                            const ye = "dark" === ie ? "light" : "dark";
+                            return (0, fe.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${YB} theme`,
-                              title: `Switch to ${YB} theme`,
+                              "aria-label": `Switch to ${ye} theme`,
+                              title: `Switch to ${ye} theme`,
                               onClick: () => {
-                                GB(YB)
+                                He(ye)
                               },
-                              children: (0, pB.jsx)(ZB, {
-                                name: "dark" === OB ? "moon" : "sun"
+                              children: (0, fe.jsx)(pe, {
+                                name: "dark" === ie ? "moon" : "sun"
                               })
                             })
                           }
-                          const bQ = "https://github.com/Bloxdy/code-api",
-                            CQ = "https://discord.gg/playbloxd",
-                            HQ = 180,
-                            vQ = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const hM = "https://github.com/Bloxdy/code-api",
+                            NM = "https://discord.gg/playbloxd",
+                            GM = 180,
+                            rM = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function sQ(BB) {
+                          function QM(ee) {
                             let {
-                              basePath: OB,
-                              activePageId: GB,
-                              onNavigate: YB
-                            } = BB;
-                            return (0, pB.jsx)("nav", {
+                              basePath: ie,
+                              activePageId: He,
+                              onNavigate: ye
+                            } = ee;
+                            return (0, fe.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: rB.map((BB => (0, pB.jsxs)("div", {
+                              children: Le.map((ee => (0, fe.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, pB.jsx)("div", {
+                                children: [(0, fe.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: BB.title
-                                }), BB.pageIds.map((BB => {
-                                  var DB;
-                                  const jB = XB(BB);
-                                  return (0, pB.jsxs)(oB.d, {
-                                    to: eB(OB, jB),
-                                    className: QB()("DocsNavLink", {
-                                      Active: jB.id === GB
+                                  children: ee.title
+                                }), ee.pageIds.map((ee => {
+                                  var be;
+                                  const Ue = Ce(ee);
+                                  return (0, fe.jsxs)(Ke.e, {
+                                    to: ne(ie, Ue),
+                                    className: Me()("DocsNavLink", {
+                                      Active: Ue.id === He
                                     }),
-                                    "aria-current": jB.id === GB ? "page" : void 0,
-                                    onClick: YB,
-                                    children: [(0, pB.jsx)(ZB, {
-                                      name: jB.icon
-                                    }), (0, pB.jsx)("span", {
-                                      children: null !== (DB = jB.navTitle) && void 0 !== DB ? DB : jB.title
+                                    "aria-current": Ue.id === He ? "page" : void 0,
+                                    onClick: ye,
+                                    children: [(0, fe.jsx)(pe, {
+                                      name: Ue.icon
+                                    }), (0, fe.jsx)("span", {
+                                      children: null !== (be = Ue.navTitle) && void 0 !== be ? be : Ue.title
                                     })]
-                                  }, jB.id)
+                                  }, Ue.id)
                                 }))]
-                              }, BB.title)))
+                              }, ee.title)))
                             })
                           }
 
-                          function xQ(BB) {
+                          function eK(ee) {
                             let {
-                              basePath: OB,
-                              pageId: GB
-                            } = BB;
-                            const YB = rB.flatMap((BB => BB.pageIds)),
-                              DB = YB.indexOf(GB),
-                              QB = DB > 0 ? XB(YB[DB - 1]) : null,
-                              jB = DB < YB.length - 1 ? XB(YB[DB + 1]) : null;
-                            return (0, pB.jsxs)("nav", {
+                              basePath: ie,
+                              pageId: He
+                            } = ee;
+                            const ye = Le.flatMap((ee => ee.pageIds)),
+                              be = ye.indexOf(He),
+                              Me = be > 0 ? Ce(ye[be - 1]) : null,
+                              Ue = be < ye.length - 1 ? Ce(ye[be + 1]) : null;
+                            return (0, fe.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [QB ? (0, pB.jsxs)(oB.d, {
+                              children: [Me ? (0, fe.jsxs)(Ke.e, {
                                 className: "DocsPagerLink Previous",
-                                to: eB(OB, QB),
-                                children: [(0, pB.jsx)("span", {
+                                to: ne(ie, Me),
+                                children: [(0, fe.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, pB.jsx)("span", {
+                                }), (0, fe.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: QB.title
+                                  children: Me.title
                                 })]
-                              }) : (0, pB.jsx)("span", {}), jB && (0, pB.jsxs)(oB.d, {
+                              }) : (0, fe.jsx)("span", {}), Ue && (0, fe.jsxs)(Ke.e, {
                                 className: "DocsPagerLink Next",
-                                to: eB(OB, jB),
-                                children: [(0, pB.jsx)("span", {
+                                to: ne(ie, Ue),
+                                children: [(0, fe.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, pB.jsx)("span", {
+                                }), (0, fe.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: jB.title
+                                  children: Ue.title
                                 })]
                               })]
                             })
                           }
 
-                          function tQ(BB) {
+                          function iK(ee) {
                             let {
-                              basePath: OB,
-                              embedded: GB = !1
-                            } = BB;
+                              basePath: ie,
+                              embedded: He = !1
+                            } = ee;
                             const {
-                              pageSlug: DB = ""
-                            } = (0, jB.A)(), JB = (0, jB.r)(), MB = (0, jB.v)(), PB = (zB = DB, gB.find((BB => BB.slug === zB)));
-                            var zB;
-                            const [lB, qB] = function() {
-                              const [BB, OB] = (0, YB.useState)((() => {
-                                const BB = hQ.g.getItem(aQ);
-                                return "dark" === BB || "light" === BB ? BB : null
-                              })), [GB, DB] = (0, YB.useState)(eQ.matches ? "light" : "dark");
-                              return (0, YB.useEffect)((() => {
-                                const BB = () => {
-                                  DB(eQ.matches ? "light" : "dark")
+                              pageSlug: be = ""
+                            } = (0, Ue.B)(), Je = (0, Ue.u)(), oe = (0, Ue.w)(), Re = (ke = be, xe.find((ee => ee.slug === ke)));
+                            var ke;
+                            const [qe, Te] = function() {
+                              const [ee, ie] = (0, ye.useState)((() => {
+                                const ee = nM.i.getItem(jM);
+                                return "dark" === ee || "light" === ee ? ee : null
+                              })), [He, be] = (0, ye.useState)(sM.matches ? "light" : "dark");
+                              return (0, ye.useEffect)((() => {
+                                const ee = () => {
+                                  be(sM.matches ? "light" : "dark")
                                 };
-                                return eQ.addEventListener("change", BB), () => {
-                                  eQ.removeEventListener("change", BB)
+                                return sM.addEventListener("change", ee), () => {
+                                  sM.removeEventListener("change", ee)
                                 }
-                              }), []), [null !== BB && void 0 !== BB ? BB : GB, BB => {
-                                hQ.g.setItem(aQ, BB), OB(BB)
+                              }), []), [null !== ee && void 0 !== ee ? ee : He, ee => {
+                                nM.i.setItem(jM, ee), ie(ee)
                               }]
-                            }(), [NB, RB] = (0, YB.useState)(null), [WB, AB] = (0, YB.useState)(!1), [VB, SB] = (0, YB.useState)(!1), [nB, fB] = (0, YB.useState)([]), kB = function(BB, OB) {
-                              const [GB, DB] = (0, YB.useState)("");
-                              return (0, YB.useEffect)((() => {
-                                if (!OB) return;
-                                let GB = 0;
-                                const YB = () => {
-                                    var YB, QB;
-                                    GB = 0;
-                                    const oB = OB.getBoundingClientRect().top + HQ;
-                                    let jB = null !== (YB = null === (QB = BB[0]) || void 0 === QB ? void 0 : QB.anchor) && void 0 !== YB ? YB : "";
-                                    for (const OB of BB) {
-                                      const BB = document.getElementById(OB.anchor);
-                                      BB && BB.getBoundingClientRect().top <= oB && (jB = OB.anchor)
+                            }(), [Xe, ze] = (0, ye.useState)(null), [Be, Ee] = (0, ye.useState)(!1), [ge, Oe] = (0, ye.useState)(!1), [de, te] = (0, ye.useState)([]), Ze = function(ee, ie) {
+                              const [He, be] = (0, ye.useState)("");
+                              return (0, ye.useEffect)((() => {
+                                if (!ie) return;
+                                let He = 0;
+                                const ye = () => {
+                                    var ye, Me;
+                                    He = 0;
+                                    const Ke = ie.getBoundingClientRect().top + GM;
+                                    let Ue = null !== (ye = null === (Me = ee[0]) || void 0 === Me ? void 0 : Me.anchor) && void 0 !== ye ? ye : "";
+                                    for (const ie of ee) {
+                                      const ee = document.getElementById(ie.anchor);
+                                      ee && ee.getBoundingClientRect().top <= Ke && (Ue = ie.anchor)
                                     }
-                                    OB.scrollTop + OB.clientHeight >= OB.scrollHeight - 2 && OB.scrollTop > 0 && BB.length > 0 && (jB = BB[BB.length - 1].anchor), DB(jB)
+                                    ie.scrollTop + ie.clientHeight >= ie.scrollHeight - 2 && ie.scrollTop > 0 && ee.length > 0 && (Ue = ee[ee.length - 1].anchor), be(Ue)
                                   },
-                                  QB = () => {
-                                    GB || (GB = requestAnimationFrame(YB))
+                                  Me = () => {
+                                    He || (He = requestAnimationFrame(ye))
                                   };
-                                return YB(), OB.addEventListener("scroll", QB, {
+                                return ye(), ie.addEventListener("scroll", Me, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(GB), OB.removeEventListener("scroll", QB)
+                                  cancelAnimationFrame(He), ie.removeEventListener("scroll", Me)
                                 }
-                              }), [BB, OB]), GB
-                            }(nB, NB), dB = "" === DB && JB.hash ? function(BB) {
-                              const OB = (0, UB.r)(BB);
-                              if (cB(XB("welcome"), OB)) return null;
-                              const GB = Object.hasOwn(aB, OB) ? aB[OB] : null;
-                              if (GB) return {
-                                page: XB(GB.pageId),
-                                anchor: GB.anchor
+                              }), [ee, ie]), He
+                            }(de, Xe), we = "" === be && Je.hash ? function(ee) {
+                              const ie = (0, We.q)(ee);
+                              if (me(Ce("welcome"), ie)) return null;
+                              const He = Object.hasOwn(Se, ie) ? Se[ie] : null;
+                              if (He) return {
+                                page: Ce(He.pageId),
+                                anchor: He.anchor
                               };
-                              const YB = XB("readme");
-                              return cB(YB, OB) ? {
-                                page: YB,
-                                anchor: OB
-                              } : hB(`#${OB}`)
-                            }(JB.hash) : null;
-                            (0, YB.useEffect)((() => (yB.c.set({
+                              const ye = Ce("readme");
+                              return me(ye, ie) ? {
+                                page: ye,
+                                anchor: ie
+                              } : le(`#${ie}`)
+                            }(Je.hash) : null;
+                            (0, ye.useEffect)((() => (Fe.e.set({
                               musicOnFromPage: !1
                             }), () => {
-                              yB.c.set({
+                              Fe.e.set({
                                 musicOnFromPage: !0
-                              }), ZY()
-                            })), []), (0, YB.useEffect)((() => {
-                              const BB = BB => {
-                                const OB = BB.target;
-                                if (OB.closest(".DocsTextDialog")) return;
-                                const GB = OB.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(OB.tagName);
-                                "k" === BB.key && (BB.metaKey || BB.ctrlKey) || "/" === BB.key && !GB ? (BB.preventDefault(), SB(!0)) : "Escape" === BB.key && AB(!1)
+                              }), zy()
+                            })), []), (0, ye.useEffect)((() => {
+                              const ee = ee => {
+                                const ie = ee.target;
+                                if (ie.closest(".DocsTextDialog")) return;
+                                const He = ie.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(ie.tagName);
+                                "k" === ee.key && (ee.metaKey || ee.ctrlKey) || "/" === ee.key && !He ? (ee.preventDefault(), Oe(!0)) : "Escape" === ee.key && Ee(!1)
                               };
-                              return window.addEventListener("keydown", BB), () => {
-                                window.removeEventListener("keydown", BB)
+                              return window.addEventListener("keydown", ee), () => {
+                                window.removeEventListener("keydown", ee)
                               }
                             }), []);
-                            const KB = (0, YB.useRef)(null);
-                            (0, YB.useLayoutEffect)((() => {
-                              var BB, OB;
-                              if (!NB) return;
-                              const GB = KB.current === JB.pathname;
-                              KB.current = JB.pathname;
-                              const YB = (0, UB.r)(JB.hash),
-                                DB = YB ? document.getElementById(YB) : null;
-                              if (null === (BB = NB.querySelector(".DocsTargeted")) || void 0 === BB || BB.classList.remove("DocsTargeted"), null === DB || void 0 === DB || null === (OB = DB.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === OB || OB.classList.add("DocsTargeted"), DB) {
-                                var QB;
-                                const BB = DB.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (QB = DB.closest(".DocsChangelogEntry")) && void 0 !== QB ? QB : DB).scrollIntoView({
-                                  block: BB ? "center" : "start",
-                                  behavior: GB ? "smooth" : "auto"
+                            const De = (0, ye.useRef)(null);
+                            (0, ye.useLayoutEffect)((() => {
+                              var ee, ie;
+                              if (!Xe) return;
+                              const He = De.current === Je.pathname;
+                              De.current = Je.pathname;
+                              const ye = (0, We.q)(Je.hash),
+                                be = ye ? document.getElementById(ye) : null;
+                              if (null === (ee = Xe.querySelector(".DocsTargeted")) || void 0 === ee || ee.classList.remove("DocsTargeted"), null === be || void 0 === be || null === (ie = be.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === ie || ie.classList.add("DocsTargeted"), be) {
+                                var Me;
+                                const ee = be.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Me = be.closest(".DocsChangelogEntry")) && void 0 !== Me ? Me : be).scrollIntoView({
+                                  block: ee ? "center" : "start",
+                                  behavior: He ? "smooth" : "auto"
                                 })
-                              } else GB || NB.scrollTo({
+                              } else He || Xe.scrollTo({
                                 top: 0
                               })
-                            }), [NB, JB.pathname, JB.hash, JB.key]);
-                            const uB = (0, YB.useCallback)((() => {
-                                AB(!1)
+                            }), [Xe, Je.pathname, Je.hash, Je.key]);
+                            const Pe = (0, ye.useCallback)((() => {
+                                Ee(!1)
                               }), []),
-                              mB = (0, YB.useCallback)((BB => {
-                                MB({
-                                  hash: BB
+                              Ae = (0, ye.useCallback)((ee => {
+                                oe({
+                                  hash: ee
                                 })
-                              }), [MB]);
-                            if (dB) return (0, pB.jsx)(jB.e, {
+                              }), [oe]);
+                            if (we) return (0, fe.jsx)(Ue.b, {
                               replace: !0,
-                              to: eB(OB, dB.page, dB.anchor)
+                              to: ne(ie, we.page, we.anchor)
                             });
-                            if (!PB) return (0, pB.jsx)(jB.e, {
+                            if (!Re) return (0, fe.jsx)(Ue.b, {
                               replace: !0,
-                              to: OB
+                              to: ie
                             });
-                            const IB = GB ? "div" : "main";
-                            return (0, pB.jsx)(lO.Provider, {
-                              value: OB,
-                              children: (0, pB.jsx)(pO.Provider, {
-                                value: NB,
-                                children: (0, pB.jsxs)("div", {
-                                  ref: RB,
-                                  className: QB()("DocsSite", {
-                                    Embedded: GB,
-                                    NavOpen: WB
+                            const Ye = He ? "div" : "main";
+                            return (0, fe.jsx)(qi.Provider, {
+                              value: ie,
+                              children: (0, fe.jsx)(fi.Provider, {
+                                value: Xe,
+                                children: (0, fe.jsxs)("div", {
+                                  ref: ze,
+                                  className: Me()("DocsSite", {
+                                    Embedded: He,
+                                    NavOpen: Be
                                   }),
-                                  "data-theme": lB,
-                                  children: [(0, pB.jsxs)("header", {
+                                  "data-theme": qe,
+                                  children: [(0, fe.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, pB.jsx)("button", {
+                                    children: [(0, fe.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": WB ? "Close menu" : "Open menu",
-                                      "aria-expanded": WB,
+                                      "aria-label": Be ? "Close menu" : "Open menu",
+                                      "aria-expanded": Be,
                                       onClick: () => {
-                                        AB(!WB)
+                                        Ee(!Be)
                                       },
-                                      children: (0, pB.jsx)(ZB, {
-                                        name: WB ? "cross" : "menu"
+                                      children: (0, fe.jsx)(pe, {
+                                        name: Be ? "cross" : "menu"
                                       })
-                                    }), (0, pB.jsxs)(oB.d, {
-                                      to: OB,
+                                    }), (0, fe.jsxs)(Ke.e, {
+                                      to: ie,
                                       className: "DocsBrand",
-                                      children: [(0, pB.jsx)("img", {
+                                      children: [(0, fe.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, pB.jsx)("span", {
+                                      }), (0, fe.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, pB.jsx)("span", {
+                                      }), (0, fe.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, pB.jsxs)("button", {
+                                    }), (0, fe.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        SB(!0)
+                                        Oe(!0)
                                       },
-                                      children: [(0, pB.jsx)(ZB, {
+                                      children: [(0, fe.jsx)(pe, {
                                         name: "magnifying-glass"
-                                      }), (0, pB.jsx)("span", {
+                                      }), (0, fe.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, pB.jsxs)("kbd", {
-                                        children: [vQ ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, fe.jsxs)("kbd", {
+                                        children: [rM ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, pB.jsxs)("div", {
+                                    }), (0, fe.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, pB.jsxs)("a", {
-                                        href: CQ,
+                                      children: [(0, fe.jsxs)("a", {
+                                        href: NM,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, pB.jsx)(ZB, {
+                                        children: [(0, fe.jsx)(pe, {
                                           name: "discord"
-                                        }), (0, pB.jsx)("span", {
+                                        }), (0, fe.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, pB.jsxs)("a", {
-                                        href: bQ,
+                                      }), (0, fe.jsxs)("a", {
+                                        href: hM,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, pB.jsx)(ZB, {
+                                        children: [(0, fe.jsx)(pe, {
                                           name: "external-link"
-                                        }), (0, pB.jsx)("span", {
+                                        }), (0, fe.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !GB && (0, pB.jsxs)(oB.d, {
+                                      }), !He && (0, fe.jsxs)(Ke.e, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, pB.jsx)(ZB, {
+                                        children: [(0, fe.jsx)(pe, {
                                           name: "play"
-                                        }), (0, pB.jsx)("span", {
+                                        }), (0, fe.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, pB.jsx)(TQ, {
-                                        theme: lB,
-                                        onChange: qB
+                                      }), (0, fe.jsx)(IM, {
+                                        theme: qe,
+                                        onChange: Te
                                       })]
                                     })]
-                                  }), (0, pB.jsxs)("div", {
+                                  }), (0, fe.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, pB.jsx)("aside", {
+                                    children: [(0, fe.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, pB.jsx)(sQ, {
-                                        basePath: OB,
-                                        activePageId: PB.id,
-                                        onNavigate: uB
+                                      children: (0, fe.jsx)(QM, {
+                                        basePath: ie,
+                                        activePageId: Re.id,
+                                        onNavigate: Pe
                                       })
-                                    }), (0, pB.jsx)("div", {
+                                    }), (0, fe.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: uB
-                                    }), (0, pB.jsxs)(IB, {
+                                      onClick: Pe
+                                    }), (0, fe.jsxs)(Ye, {
                                       className: "DocsMain",
-                                      children: [(0, pB.jsx)(SQ, {
-                                        page: PB,
-                                        onTocChange: fB
-                                      }, PB.id), (0, pB.jsx)(xQ, {
-                                        basePath: OB,
-                                        pageId: PB.id
+                                      children: [(0, fe.jsx)(WM, {
+                                        page: Re,
+                                        onTocChange: te
+                                      }, Re.id), (0, fe.jsx)(eK, {
+                                        basePath: ie,
+                                        pageId: Re.id
                                       })]
-                                    }), (0, pB.jsx)("aside", {
-                                      className: QB()("DocsToc", {
-                                        Timeline: "changelog" === PB.layout
+                                    }), (0, fe.jsx)("aside", {
+                                      className: Me()("DocsToc", {
+                                        Timeline: "changelog" === Re.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, pB.jsx)(kQ, {
-                                        isChangelog: "changelog" === PB.layout,
-                                        toc: nB,
-                                        activeAnchor: kB,
-                                        onNavigate: mB
+                                      children: (0, fe.jsx)(DM, {
+                                        isChangelog: "changelog" === Re.layout,
+                                        toc: de,
+                                        activeAnchor: Ze,
+                                        onNavigate: Ae
                                       })
                                     })]
-                                  }), (0, pB.jsx)(cQ, {}), VB && (0, pB.jsx)(wQ, {
-                                    basePath: OB,
+                                  }), (0, fe.jsx)(SM, {}), ge && (0, fe.jsx)(mM, {
+                                    basePath: ie,
                                     onClose: () => {
-                                      SB(!1)
+                                      Oe(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 5228: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            d: () => YB,
-                            g: () => oB,
-                            k: () => ZB,
-                            l: () => qB,
-                            p: () => jB,
-                            r: () => DB,
-                            s: () => QB,
-                            t: () => pB,
-                            u: () => lB,
-                            v: () => zB
+                        }, 5220: (ee, ie, He) => {
+                          He.d(ie, {
+                            C: () => ke,
+                            e: () => ye,
+                            h: () => Ke,
+                            i: () => pe,
+                            l: () => Te,
+                            n: () => Ue,
+                            q: () => be,
+                            t: () => Me,
+                            x: () => fe,
+                            y: () => qe
                           });
-                          const YB = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const ye = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function DB(BB) {
+                          function be(ee) {
                             try {
-                              return decodeURIComponent(BB.slice(1))
+                              return decodeURIComponent(ee.slice(1))
                             } catch {
-                              return BB.slice(1)
+                              return ee.slice(1)
                             }
                           }
 
-                          function QB(BB) {
-                            return BB.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function Me(ee) {
+                            return ee.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const oB = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${YB.source}`, "g");
+                          const Ke = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${ye.source}`, "g");
 
-                          function jB(BB, OB) {
-                            return 2 === BB.length ? OB.replace(/^ (.*) $/, "$1") : OB
-                          }
-
-                          function yB(BB) {
-                            return "" === BB.trim()
+                          function Ue(ee, ie) {
+                            return 2 === ee.length ? ie.replace(/^ (.*) $/, "$1") : ie
                           }
 
-                          function JB(BB) {
-                            const OB = [];
-                            for (const GB of BB.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) OB.length > 0 && OB[OB.length - 1].endsWith("\\") ? OB[OB.length - 1] += `|${GB}` : OB.push(GB);
-                            return OB.map((BB => BB.trim().replaceAll("\\|", "|")))
+                          function Fe(ee) {
+                            return "" === ee.trim()
                           }
-                          const MB = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function PB(BB) {
-                            const OB = [],
-                              GB = [{
+                          function Je(ee) {
+                            const ie = [];
+                            for (const He of ee.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ie.length > 0 && ie[ie.length - 1].endsWith("\\") ? ie[ie.length - 1] += `|${He}` : ie.push(He);
+                            return ie.map((ee => ee.trim().replaceAll("\\|", "|")))
+                          }
+                          const oe = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function Re(ee) {
+                            const ie = [],
+                              He = [{
                                 indent: -1,
-                                items: OB
+                                items: ie
                               }];
-                            let YB = null;
-                            for (const DB of BB) {
-                              const BB = DB.match(MB);
-                              if (!BB) {
-                                YB && (YB.text += ` ${DB.trim()}`);
+                            let ye = null;
+                            for (const be of ee) {
+                              const ee = be.match(oe);
+                              if (!ee) {
+                                ye && (ye.text += ` ${be.trim()}`);
                                 continue
                               }
-                              const OB = BB[1].replace(/\t/g, "  ").length;
-                              for (; OB <= GB[GB.length - 1].indent;) GB.pop();
-                              YB = {
-                                text: BB[3].trim(),
+                              const ie = ee[1].replace(/\t/g, "  ").length;
+                              for (; ie <= He[He.length - 1].indent;) He.pop();
+                              ye = {
+                                text: ee[3].trim(),
                                 children: []
-                              }, GB[GB.length - 1].items.push(YB), GB.push({
-                                indent: OB,
-                                items: YB.children
+                              }, He[He.length - 1].items.push(ye), He.push({
+                                indent: ie,
+                                items: ye.children
                               })
                             }
-                            return OB
+                            return ie
                           }
 
-                          function zB(BB) {
-                            const OB = BB.replace(/\r\n/g, "\n").split("\n"),
-                              GB = [];
-                            let YB = 0;
-                            for (; YB < OB.length;) {
-                              const BB = OB[YB];
-                              if (yB(BB)) {
-                                YB++;
+                          function ke(ee) {
+                            const ie = ee.replace(/\r\n/g, "\n").split("\n"),
+                              He = [];
+                            let ye = 0;
+                            for (; ye < ie.length;) {
+                              const ee = ie[ye];
+                              if (Fe(ee)) {
+                                ye++;
                                 continue
                               }
-                              const DB = BB.match(/^\s*```\s*(\w*)\s*$/);
-                              if (DB) {
-                                const BB = [];
-                                for (YB++; YB < OB.length && !/^\s*```\s*$/.test(OB[YB]);) BB.push(OB[YB]), YB++;
-                                YB++, GB.push({
+                              const be = ee.match(/^\s*```\s*(\w*)\s*$/);
+                              if (be) {
+                                const ee = [];
+                                for (ye++; ye < ie.length && !/^\s*```\s*$/.test(ie[ye]);) ee.push(ie[ye]), ye++;
+                                ye++, He.push({
                                   kind: "code",
-                                  lang: DB[1] || "text",
-                                  code: BB.join("\n").replace(/\s+$/, "")
+                                  lang: be[1] || "text",
+                                  code: ee.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const oB = BB.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (oB) {
-                                const BB = oB[2].trim();
-                                GB.push({
+                              const Ke = ee.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (Ke) {
+                                const ee = Ke[2].trim();
+                                He.push({
                                   kind: "heading",
-                                  level: oB[1].length,
-                                  text: BB,
-                                  anchor: QB(BB)
-                                }), YB++;
+                                  level: Ke[1].length,
+                                  text: ee,
+                                  anchor: Me(ee)
+                                }), ye++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(BB)) {
-                                GB.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(ee)) {
+                                He.push({
                                   kind: "rule"
-                                }), YB++;
+                                }), ye++;
                                 continue
                               }
-                              if (BB.trim().startsWith("|") && YB + 1 < OB.length && /^\s*\|[\s:|-]+\|\s*$/.test(OB[YB + 1])) {
-                                const DB = JB(BB),
-                                  QB = [];
-                                for (YB += 2; YB < OB.length && OB[YB].trim().startsWith("|");) QB.push(JB(OB[YB])), YB++;
-                                GB.push({
+                              if (ee.trim().startsWith("|") && ye + 1 < ie.length && /^\s*\|[\s:|-]+\|\s*$/.test(ie[ye + 1])) {
+                                const be = Je(ee),
+                                  Me = [];
+                                for (ye += 2; ye < ie.length && ie[ye].trim().startsWith("|");) Me.push(Je(ie[ye])), ye++;
+                                He.push({
                                   kind: "table",
-                                  header: DB,
-                                  rows: QB
+                                  header: be,
+                                  rows: Me
                                 });
                                 continue
                               }
-                              if (BB.startsWith(">")) {
-                                const BB = [];
-                                for (; YB < OB.length && OB[YB].startsWith(">");) BB.push(OB[YB].replace(/^>\s?/, "")), YB++;
-                                GB.push({
+                              if (ee.startsWith(">")) {
+                                const ee = [];
+                                for (; ye < ie.length && ie[ye].startsWith(">");) ee.push(ie[ye].replace(/^>\s?/, "")), ye++;
+                                He.push({
                                   kind: "quote",
-                                  blocks: zB(BB.join("\n"))
+                                  blocks: ke(ee.join("\n"))
                                 });
                                 continue
                               }
-                              if (MB.test(BB)) {
-                                const DB = [],
-                                  QB = /^\s*\d+\./.test(BB);
-                                for (; YB < OB.length && !yB(OB[YB]) && (MB.test(OB[YB]) || /^\s+\S/.test(OB[YB]));) DB.push(OB[YB]), YB++;
-                                GB.push({
+                              if (oe.test(ee)) {
+                                const be = [],
+                                  Me = /^\s*\d+\./.test(ee);
+                                for (; ye < ie.length && !Fe(ie[ye]) && (oe.test(ie[ye]) || /^\s+\S/.test(ie[ye]));) be.push(ie[ye]), ye++;
+                                He.push({
                                   kind: "list",
-                                  ordered: QB,
-                                  items: PB(DB)
+                                  ordered: Me,
+                                  items: Re(be)
                                 });
                                 continue
                               }
-                              const jB = [];
-                              for (; YB < OB.length && !yB(OB[YB]) && !/^\s*```/.test(OB[YB]) && !/^#{1,6}\s/.test(OB[YB]) && !OB[YB].startsWith(">") && !MB.test(OB[YB]) && (!OB[YB].trim().startsWith("|") || 0 !== jB.length);) jB.push(OB[YB].trim()), YB++;
-                              0 === jB.length && (jB.push(OB[YB].trim()), YB++), GB.push({
+                              const Ue = [];
+                              for (; ye < ie.length && !Fe(ie[ye]) && !/^\s*```/.test(ie[ye]) && !/^#{1,6}\s/.test(ie[ye]) && !ie[ye].startsWith(">") && !oe.test(ie[ye]) && (!ie[ye].trim().startsWith("|") || 0 !== Ue.length);) Ue.push(ie[ye].trim()), ye++;
+                              0 === Ue.length && (Ue.push(ie[ye].trim()), ye++), He.push({
                                 kind: "paragraph",
-                                text: jB.join(" ")
+                                text: Ue.join(" ")
                               })
                             }
-                            return GB
+                            return He
                           }
 
-                          function lB(BB) {
-                            let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const GB = zB(BB);
-                            let YB = "";
-                            const DB = [],
-                              QB = [],
-                              oB = new Map;
-                            for (const JB of GB) {
-                              if ("heading" === JB.kind) {
-                                var jB;
-                                const BB = (null !== (jB = oB.get(JB.anchor)) && void 0 !== jB ? jB : 0) + 1;
-                                oB.set(JB.anchor, BB), BB > 1 && (JB.anchor = `${JB.anchor}-${BB}`)
+                          function qe(ee) {
+                            let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const He = ke(ee);
+                            let ye = "";
+                            const be = [],
+                              Me = [],
+                              Ke = new Map;
+                            for (const Je of He) {
+                              if ("heading" === Je.kind) {
+                                var Ue;
+                                const ee = (null !== (Ue = Ke.get(Je.anchor)) && void 0 !== Ue ? Ue : 0) + 1;
+                                Ke.set(Je.anchor, ee), ee > 1 && (Je.anchor = `${Je.anchor}-${ee}`)
                               }
-                              if ("heading" === JB.kind && 1 === JB.level && !YB) {
-                                YB = JB.text;
+                              if ("heading" === Je.kind && 1 === Je.level && !ye) {
+                                ye = Je.text;
                                 continue
                               }
-                              if ("heading" === JB.kind && JB.level <= OB) {
-                                QB.push({
-                                  heading: JB,
+                              if ("heading" === Je.kind && Je.level <= ie) {
+                                Me.push({
+                                  heading: Je,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const BB = QB.at(-1);
-                              BB ? BB.blocks.push(JB) : DB.push(JB)
+                              const ee = Me.at(-1);
+                              ee ? ee.blocks.push(Je) : be.push(Je)
                             }
-                            const yB = BB => {
+                            const Fe = ee => {
                               for (;
-                                "rule" === (null === (OB = BB.at(-1)) || void 0 === OB ? void 0 : OB.kind);) {
-                                var OB;
-                                BB.pop()
+                                "rule" === (null === (ie = ee.at(-1)) || void 0 === ie ? void 0 : ie.kind);) {
+                                var ie;
+                                ee.pop()
                               }
                             };
-                            yB(DB);
-                            for (const JB of QB) yB(JB.blocks);
+                            Fe(be);
+                            for (const Je of Me) Fe(Je.blocks);
                             return {
-                              title: YB,
-                              intro: DB,
-                              sections: QB
+                              title: ye,
+                              intro: be,
+                              sections: Me
                             }
                           }
 
-                          function pB(BB) {
+                          function fe(ee) {
                             return [{
                               heading: null,
-                              blocks: BB.intro
-                            }, ...BB.sections.map((BB => ({
-                              heading: BB.heading,
-                              blocks: BB.blocks
+                              blocks: ee.intro
+                            }, ...ee.sections.map((ee => ({
+                              heading: ee.heading,
+                              blocks: ee.blocks
                             })))]
                           }
 
-                          function qB(BB) {
-                            return BB.flatMap((BB => "code" === BB.kind ? [BB] : "quote" === BB.kind ? qB(BB.blocks) : []))
+                          function Te(ee) {
+                            return ee.flatMap((ee => "code" === ee.kind ? [ee] : "quote" === ee.kind ? Te(ee.blocks) : []))
                           }
 
-                          function ZB(BB) {
-                            switch (BB.kind) {
+                          function pe(ee) {
+                            switch (ee.kind) {
                               case "heading":
                               case "paragraph":
-                                return BB.text;
+                                return ee.text;
                               case "code":
-                                return BB.code;
+                                return ee.code;
                               case "table":
-                                return [BB.header, ...BB.rows].map((BB => BB.join(" "))).join(" ");
+                                return [ee.header, ...ee.rows].map((ee => ee.join(" "))).join(" ");
                               case "list": {
-                                const OB = BB => BB.map((BB => `${BB.text} ${OB(BB.children)}`)).join(" ");
-                                return OB(BB.items)
+                                const ie = ee => ee.map((ee => `${ee.text} ${ie(ee.children)}`)).join(" ");
+                                return ie(ee.items)
                               }
                               case "quote":
-                                return BB.blocks.map(ZB).join(" ");
+                                return ee.blocks.map(pe).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5335: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            c: () => jB
+                        }, 5317: (ee, ie, He) => {
+                          He.d(ie, {
+                            c: () => Ue
                           });
-                          var YB = GB(56),
-                            DB = GB(331),
-                            QB = GB(2012),
-                            oB = GB(1282);
+                          var ye = He(59),
+                            be = He(335),
+                            Me = He(1970),
+                            Ke = He(1228);
 
-                          function jB(BB) {
+                          function Ue(ee) {
                             let {
-                              text: OB
-                            } = BB;
-                            const GB = [];
-                            let jB = "";
-                            return (0, DB.hc)(OB).forEach(((BB, OB) => {
-                              if ("string" === typeof BB || !(0, QB.d)(BB.icon)) return void(jB += "string" === typeof BB ? BB : BB.icon);
-                              const DB = Math.max(0, jB.trimEnd().search(/\S{1,12}$/));
-                              GB.push((0, oB.jsxs)(YB.Fragment, {
-                                children: [jB.slice(0, DB), (0, oB.jsxs)("span", {
+                              text: ie
+                            } = ee;
+                            const He = [];
+                            let Ue = "";
+                            return (0, be.kc)(ie).forEach(((ee, ie) => {
+                              if ("string" === typeof ee || !(0, Me.e)(ee.icon)) return void(Ue += "string" === typeof ee ? ee : ee.icon);
+                              const be = Math.max(0, Ue.trimEnd().search(/\S{1,12}$/));
+                              He.push((0, Ke.jsxs)(ye.Fragment, {
+                                children: [Ue.slice(0, be), (0, Ke.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [jB.slice(DB), (0, oB.jsx)("span", {
+                                  children: [Ue.slice(be), (0, Ke.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": BB.icon,
-                                    children: (0, oB.jsx)(QB.c, {
-                                      itemName: BB.icon,
+                                    "aria-label": ee.icon,
+                                    children: (0, Ke.jsx)(Me.c, {
+                                      itemName: ee.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, OB)), jB = ""
-                            })), GB.push(jB), (0, oB.jsx)(oB.Fragment, {
-                              children: GB
+                              }, ie)), Ue = ""
+                            })), He.push(Ue), (0, Ke.jsx)(Ke.Fragment, {
+                              children: He
                             })
                           }
-                        }, 5261: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            f: () => RB,
-                            b: () => NB
+                        }, 5245: (ee, ie, He) => {
+                          He.d(ie, {
+                            h: () => ze,
+                            e: () => Xe
                           });
-                          var YB = GB(56),
-                            DB = GB(1480),
-                            QB = GB(2e3),
-                            oB = GB(5266),
-                            jB = GB(1282);
-                          const yB = (0, YB.memo)((function(BB) {
+                          var ye = He(59),
+                            be = He(1432),
+                            Me = He(1956),
+                            Ke = He(5252),
+                            Ue = He(1228);
+                          const Fe = (0, ye.memo)((function(ee) {
                             let {
-                              initialParameters: OB
-                            } = BB;
-                            const GB = (0, YB.useRef)(null),
-                              DB = (0, YB.useRef)(null),
-                              yB = (0, YB.useRef)(0),
-                              JB = (0, YB.useRef)(null),
-                              MB = OB.description,
-                              PB = OB.EO,
+                              initialParameters: ie
+                            } = ee;
+                            const He = (0, ye.useRef)(null),
+                              be = (0, ye.useRef)(null),
+                              Fe = (0, ye.useRef)(0),
+                              Je = (0, ye.useRef)(null),
+                              oe = ie.description,
+                              Re = ie.Ii,
                               {
-                                scale: zB,
-                                rotation: lB
-                              } = null !== OB && void 0 !== OB ? OB : {},
-                              pB = (0, oB.f)();
-                            return (0, YB.useEffect)((() => {
-                              const BB = pB.onFrame((() => {
-                                const BB = pB.getState();
-                                if (!BB.isActive || !GB.current || !DB.current) return;
-                                const OB = BB.state;
-                                if (GB.current.value = OB.progress, OB.clickCount > yB.current) {
-                                  yB.current = OB.clickCount;
-                                  const BB = DB.current;
-                                  BB.classList.add("pulse"), JB.current = setTimeout((() => {
-                                    BB.classList.remove("pulse")
+                                scale: ke,
+                                rotation: qe
+                              } = null !== ie && void 0 !== ie ? ie : {},
+                              fe = (0, Ke.e)();
+                            return (0, ye.useEffect)((() => {
+                              const ee = fe.onFrame((() => {
+                                const ee = fe.getState();
+                                if (!ee.isActive || !He.current || !be.current) return;
+                                const ie = ee.state;
+                                if (He.current.value = ie.progress, ie.clickCount > Fe.current) {
+                                  Fe.current = ie.clickCount;
+                                  const ee = be.current;
+                                  ee.classList.add("pulse"), Je.current = setTimeout((() => {
+                                    ee.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(JB.current), BB()
+                                clearTimeout(Je.current), ee()
                               }
-                            }), [pB]), (0, jB.jsx)(jB.Fragment, {
-                              children: (0, jB.jsxs)("div", {
+                            }), [fe]), (0, Ue.jsx)(Ue.Fragment, {
+                              children: (0, Ue.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== zB && {
-                                    "--scale": zB
+                                  ...null !== ke && {
+                                    "--scale": ke
                                   },
-                                  ...null !== lB && {
-                                    "--rotation": `${lB}deg`
+                                  ...null !== qe && {
+                                    "--rotation": `${qe}deg`
                                   }
                                 },
-                                children: [(0, jB.jsx)("progress", {
+                                children: [(0, Ue.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: GB
-                                }), (0, jB.jsx)("span", {
+                                  ref: He
+                                }), (0, Ue.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: DB,
-                                  children: (0, jB.jsx)(QB.b, {
+                                  ref: be,
+                                  children: (0, Ue.jsx)(Me.e, {
                                     text: [{
-                                      icon: PB
+                                      icon: Re
                                     }]
                                   })
-                                }), (0, jB.jsx)("div", {
+                                }), (0, Ue.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, jB.jsx)(QB.b, {
-                                    text: MB
+                                  children: (0, Ue.jsx)(Me.e, {
+                                    text: oe
                                   })
                                 })]
                               })
                             })
                           }));
-                          var JB = GB(1090),
-                            MB = GB.n(JB);
-                          const PB = 2 * Math.PI * 90,
-                            zB = (0, YB.memo)((function(BB) {
+                          var Je = He(1053),
+                            oe = He.n(Je);
+                          const Re = 2 * Math.PI * 90,
+                            ke = (0, ye.memo)((function(ee) {
                               let {
-                                initialParameters: OB
-                              } = BB;
-                              const GB = (0, YB.useRef)(null),
-                                DB = (0, YB.useRef)(null),
-                                yB = (0, YB.useRef)(null),
-                                JB = OB.label,
-                                zB = OB.icon,
-                                lB = OB.aO,
+                                initialParameters: ie
+                              } = ee;
+                              const He = (0, ye.useRef)(null),
+                                be = (0, ye.useRef)(null),
+                                Fe = (0, ye.useRef)(null),
+                                Je = ie.label,
+                                ke = ie.icon,
+                                qe = ie.ri,
                                 {
-                                  scale: pB,
-                                  rotation: qB,
-                                  eO: ZB
-                                } = null !== OB && void 0 !== OB ? OB : {},
-                                NB = (0, oB.f)();
-                              return (0, YB.useEffect)((() => {
-                                const BB = NB.onFrame((() => {
-                                  var BB, OB;
-                                  const YB = NB.getState();
-                                  if (!YB.isActive || !DB.current) return;
-                                  const QB = YB.state,
-                                    oB = null !== (BB = QB.timeRemaining) && void 0 !== BB ? BB : 0,
-                                    jB = null !== (OB = QB.hO) && void 0 !== OB ? OB : 1,
-                                    JB = PB * (1 - oB / jB);
-                                  DB.current.style.strokeDashoffset = `${JB}`, GB.current && (GB.current.style.opacity = oB > 0 ? "1" : "0"), yB.current && lB && (yB.current.textContent = `${(oB/1e3).toFixed(1)}s`)
+                                  scale: fe,
+                                  rotation: Te,
+                                  Qi: pe
+                                } = null !== ie && void 0 !== ie ? ie : {},
+                                Xe = (0, Ke.e)();
+                              return (0, ye.useEffect)((() => {
+                                const ee = Xe.onFrame((() => {
+                                  var ee, ie;
+                                  const ye = Xe.getState();
+                                  if (!ye.isActive || !be.current) return;
+                                  const Me = ye.state,
+                                    Ke = null !== (ee = Me.timeRemaining) && void 0 !== ee ? ee : 0,
+                                    Ue = null !== (ie = Me.Gi) && void 0 !== ie ? ie : 1,
+                                    Je = Re * (1 - Ke / Ue);
+                                  be.current.style.strokeDashoffset = `${Je}`, He.current && (He.current.style.opacity = Ke > 0 ? "1" : "0"), Fe.current && qe && (Fe.current.textContent = `${(Ke/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  BB()
+                                  ee()
                                 }
-                              }), [NB, lB]), (0, jB.jsxs)("div", {
+                              }), [Xe, qe]), (0, Ue.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: GB,
+                                ref: He,
                                 style: {
-                                  ...null !== pB && {
-                                    "--scale": pB
+                                  ...null !== fe && {
+                                    "--scale": fe
                                   },
-                                  ...null !== qB && {
-                                    "--rotation": `${qB}deg`
+                                  ...null !== Te && {
+                                    "--rotation": `${Te}deg`
                                   }
                                 },
-                                children: [(0, jB.jsxs)("div", {
+                                children: [(0, Ue.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, jB.jsxs)("svg", {
+                                  children: [(0, Ue.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, jB.jsx)("circle", {
+                                    children: [(0, Ue.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, jB.jsx)("circle", {
+                                    }), (0, Ue.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: PB,
-                                      ref: DB
+                                      strokeDasharray: Re,
+                                      ref: be
                                     })]
-                                  }), (0, jB.jsx)("div", {
+                                  }), (0, Ue.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, jB.jsx)(QB.b, {
+                                    children: (0, Ue.jsx)(Me.e, {
                                       text: [{
-                                        icon: zB
+                                        icon: ke
                                       }],
-                                      className: MB()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: ZB
+                                      className: oe()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: pe
                                       })
                                     })
                                   })]
-                                }), (0, jB.jsxs)("div", {
+                                }), (0, Ue.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, jB.jsx)(QB.b, {
-                                    text: JB,
+                                  children: [(0, Ue.jsx)(Me.e, {
+                                    text: Je,
                                     className: "QTETimedClickLabelText"
-                                  }), lB && (0, jB.jsx)("span", {
+                                  }), qe && (0, Ue.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: yB
+                                    ref: Fe
                                   })]
                                 })]
                               })
                             })),
-                            lB = (0, YB.memo)((function(BB) {
+                            qe = (0, ye.memo)((function(ee) {
                               let {
-                                initialParameters: OB
-                              } = BB;
-                              const GB = (0, YB.useRef)(null),
-                                DB = (0, YB.useRef)(null),
-                                yB = (0, YB.useRef)(null),
-                                JB = (0, YB.useRef)(!1),
-                                MB = OB.description,
-                                PB = null === OB || void 0 === OB ? void 0 : OB.icon,
-                                zB = (0, oB.f)();
-                              return (0, YB.useEffect)((() => {
-                                const BB = zB.onFrame((() => {
-                                  const BB = zB.getState();
-                                  if (!BB.isActive) return;
-                                  const OB = BB.state;
-                                  if (GB.current) {
-                                    const BB = 100 * (OB.catchZonePosition - OB.CO / 2);
-                                    GB.current.style.left = `${BB}%`, GB.current.style.width = 100 * OB.CO + "%", OB.isCatching !== JB.current && (JB.current = OB.isCatching, OB.isCatching ? GB.current.classList.add("catching") : GB.current.classList.remove("catching"))
+                                initialParameters: ie
+                              } = ee;
+                              const He = (0, ye.useRef)(null),
+                                be = (0, ye.useRef)(null),
+                                Fe = (0, ye.useRef)(null),
+                                Je = (0, ye.useRef)(!1),
+                                oe = ie.description,
+                                Re = null === ie || void 0 === ie ? void 0 : ie.icon,
+                                ke = (0, Ke.e)();
+                              return (0, ye.useEffect)((() => {
+                                const ee = ke.onFrame((() => {
+                                  const ee = ke.getState();
+                                  if (!ee.isActive) return;
+                                  const ie = ee.state;
+                                  if (He.current) {
+                                    const ee = 100 * (ie.catchZonePosition - ie.iH / 2);
+                                    He.current.style.left = `${ee}%`, He.current.style.width = 100 * ie.iH + "%", ie.isCatching !== Je.current && (Je.current = ie.isCatching, ie.isCatching ? He.current.classList.add("catching") : He.current.classList.remove("catching"))
                                   }
-                                  DB.current && (DB.current.style.left = 100 * OB.moverPosition + "%"), yB.current && (yB.current.value = OB.progress)
+                                  be.current && (be.current.style.left = 100 * ie.moverPosition + "%"), Fe.current && (Fe.current.value = ie.progress)
                                 }));
                                 return () => {
-                                  BB()
+                                  ee()
                                 }
-                              }), [zB]), (0, jB.jsxs)("div", {
+                              }), [ke]), (0, Ue.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, jB.jsx)("div", {
+                                children: [(0, Ue.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, jB.jsx)(QB.b, {
-                                    text: MB
+                                  children: (0, Ue.jsx)(Me.e, {
+                                    text: oe
                                   })
-                                }), (0, jB.jsx)("progress", {
+                                }), (0, Ue.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: yB
-                                }), (0, jB.jsxs)("div", {
+                                  ref: Fe
+                                }), (0, Ue.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, jB.jsx)("div", {
+                                  children: [(0, Ue.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: GB
-                                  }), (0, jB.jsx)("div", {
+                                    ref: He
+                                  }), (0, Ue.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: DB,
-                                    children: (0, jB.jsx)("span", {
-                                      children: PB && (0, jB.jsx)(QB.b, {
+                                    ref: be,
+                                    children: (0, Ue.jsx)("span", {
+                                      children: Re && (0, Ue.jsx)(Me.e, {
                                         text: [{
-                                          icon: PB,
+                                          icon: Re,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var pB = GB(641);
-                          const qB = (0, YB.memo)((function(BB) {
+                          var fe = He(610);
+                          const Te = (0, ye.memo)((function(ee) {
                               let {
-                                initialParameters: OB
-                              } = BB;
-                              const GB = (0, YB.useRef)(null),
-                                DB = OB.label,
-                                yB = OB.GG,
+                                initialParameters: ie
+                              } = ee;
+                              const He = (0, ye.useRef)(null),
+                                be = ie.label,
+                                Fe = ie.JH,
                                 {
-                                  icon: JB,
-                                  scale: MB,
-                                  rotation: PB
-                                } = null !== OB && void 0 !== OB ? OB : {},
-                                zB = 100 * (.5 - yB / 2),
-                                lB = 100 * yB,
-                                qB = (0, oB.f)();
-                              return (0, YB.useEffect)((() => {
-                                const BB = qB.onFrame((() => {
-                                  const BB = qB.getState();
-                                  if (!BB.isActive || !GB.current) return;
-                                  const OB = BB.state;
-                                  GB.current.style.left = 100 * OB.markerPosition + "%"
+                                  icon: Je,
+                                  scale: oe,
+                                  rotation: Re
+                                } = null !== ie && void 0 !== ie ? ie : {},
+                                ke = 100 * (.5 - Fe / 2),
+                                qe = 100 * Fe,
+                                Te = (0, Ke.e)();
+                              return (0, ye.useEffect)((() => {
+                                const ee = Te.onFrame((() => {
+                                  const ee = Te.getState();
+                                  if (!ee.isActive || !He.current) return;
+                                  const ie = ee.state;
+                                  He.current.style.left = 100 * ie.markerPosition + "%"
                                 }));
                                 return () => {
-                                  BB()
+                                  ee()
                                 }
-                              }), [qB]), (0, jB.jsxs)("div", {
+                              }), [Te]), (0, Ue.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, pB.Q)(MB) && {
-                                    "--scale": MB
+                                  ...!(0, fe.P)(oe) && {
+                                    "--scale": oe
                                   },
-                                  ...!(0, pB.Q)(PB) && {
-                                    "--rotation": `${PB}deg`
+                                  ...!(0, fe.P)(Re) && {
+                                    "--rotation": `${Re}deg`
                                   }
                                 },
-                                children: [JB && (0, jB.jsx)(QB.b, {
+                                children: [Je && (0, Ue.jsx)(Me.e, {
                                   text: [{
-                                    icon: JB
+                                    icon: Je
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, jB.jsxs)("div", {
+                                }), (0, Ue.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, jB.jsx)("div", {
+                                  children: [(0, Ue.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${zB}%`,
-                                      width: `${lB}%`
+                                      left: `${ke}%`,
+                                      width: `${qe}%`
                                     }
-                                  }), (0, jB.jsx)("div", {
+                                  }), (0, Ue.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: GB
+                                    ref: He
                                   })]
-                                }), (0, jB.jsx)("div", {
+                                }), (0, Ue.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, jB.jsx)(QB.b, {
-                                    text: DB
+                                  children: (0, Ue.jsx)(Me.e, {
+                                    text: be
                                   })
                                 })]
                               })
                             })),
-                            ZB = (0, YB.memo)((function(BB) {
+                            pe = (0, ye.memo)((function(ee) {
                               let {
-                                initialParameters: OB
-                              } = BB;
-                              const GB = (0, YB.useRef)(null),
-                                [DB, yB] = (0, YB.useState)((() => new Array(OB.DG).fill("pending"))),
-                                [JB, MB] = (0, YB.useState)((() => {
-                                  const BB = OB.jG;
-                                  return (0, pB.Q)(BB) || BB <= 0 ? [] : new Array(BB).fill("pending")
+                                initialParameters: ie
+                              } = ee;
+                              const He = (0, ye.useRef)(null),
+                                [be, Fe] = (0, ye.useState)((() => new Array(ie.RH).fill("pending"))),
+                                [Je, oe] = (0, ye.useState)((() => {
+                                  const ee = ie.fH;
+                                  return (0, fe.P)(ee) || ee <= 0 ? [] : new Array(ee).fill("pending")
                                 })),
-                                PB = OB.label,
+                                Re = ie.label,
                                 {
-                                  icon: zB
-                                } = OB,
-                                lB = (0, YB.useRef)(0),
-                                qB = (0, YB.useRef)(0),
-                                ZB = (0, YB.useRef)([]),
-                                NB = (0, oB.f)();
-                              return (0, YB.useEffect)((() => {
-                                const BB = NB.onFrame((() => {
-                                  const BB = NB.getState();
-                                  if (!BB.isActive || !GB.current) return;
-                                  const OB = BB.state,
-                                    YB = 30 + 60 * OB.outerCircleProgress;
-                                  if (GB.current.setAttribute("r", String(YB)), !0 === OB.lastClickResult && OB.successes > lB.current) {
-                                    GB.current.classList.remove("QTERhythmClickOuterCircle--miss"), GB.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const BB = setTimeout((() => {
-                                      var BB;
-                                      null === (BB = GB.current) || void 0 === BB || BB.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: ke
+                                } = ie,
+                                qe = (0, ye.useRef)(0),
+                                Te = (0, ye.useRef)(0),
+                                pe = (0, ye.useRef)([]),
+                                Xe = (0, Ke.e)();
+                              return (0, ye.useEffect)((() => {
+                                const ee = Xe.onFrame((() => {
+                                  const ee = Xe.getState();
+                                  if (!ee.isActive || !He.current) return;
+                                  const ie = ee.state,
+                                    ye = 30 + 60 * ie.outerCircleProgress;
+                                  if (He.current.setAttribute("r", String(ye)), !0 === ie.lastClickResult && ie.successes > qe.current) {
+                                    He.current.classList.remove("QTERhythmClickOuterCircle--miss"), He.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const ee = setTimeout((() => {
+                                      var ee;
+                                      null === (ee = He.current) || void 0 === ee || ee.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    ZB.current.push(BB)
-                                  } else if (!1 === OB.lastClickResult && OB.misses > qB.current) {
-                                    GB.current.classList.remove("QTERhythmClickOuterCircle--hit"), GB.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const BB = setTimeout((() => {
-                                      var BB;
-                                      null === (BB = GB.current) || void 0 === BB || BB.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    pe.current.push(ee)
+                                  } else if (!1 === ie.lastClickResult && ie.misses > Te.current) {
+                                    He.current.classList.remove("QTERhythmClickOuterCircle--hit"), He.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const ee = setTimeout((() => {
+                                      var ee;
+                                      null === (ee = He.current) || void 0 === ee || ee.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    ZB.current.push(BB)
+                                    pe.current.push(ee)
                                   }
-                                  OB.successes === lB.current && OB.misses === qB.current || (lB.current = OB.successes, qB.current = OB.misses, yB((BB => {
-                                    const GB = [...BB];
-                                    for (let YB = 0; YB < OB.DG; YB++) GB[YB] = YB < OB.successes ? "success" : "pending";
-                                    return GB
-                                  })), MB((BB => {
-                                    if (0 === BB.length) return BB;
-                                    const GB = [...BB];
-                                    for (let YB = 0; YB < GB.length; YB++) GB[YB] = YB < OB.misses ? "miss" : "pending";
-                                    return GB
+                                  ie.successes === qe.current && ie.misses === Te.current || (qe.current = ie.successes, Te.current = ie.misses, Fe((ee => {
+                                    const He = [...ee];
+                                    for (let ye = 0; ye < ie.RH; ye++) He[ye] = ye < ie.successes ? "success" : "pending";
+                                    return He
+                                  })), oe((ee => {
+                                    if (0 === ee.length) return ee;
+                                    const He = [...ee];
+                                    for (let ye = 0; ye < He.length; ye++) He[ye] = ye < ie.misses ? "miss" : "pending";
+                                    return He
                                   })))
                                 }));
                                 return () => {
-                                  BB();
-                                  for (const BB of ZB.current) clearTimeout(BB);
-                                  ZB.current = []
+                                  ee();
+                                  for (const ee of pe.current) clearTimeout(ee);
+                                  pe.current = []
                                 }
-                              }), [NB]), (0, jB.jsxs)("div", {
+                              }), [Xe]), (0, Ue.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, jB.jsx)("div", {
+                                children: [(0, Ue.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: DB.map(((BB, OB) => (0, jB.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === BB ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, OB)))
-                                }), (0, jB.jsxs)("div", {
+                                  children: be.map(((ee, ie) => (0, Ue.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === ee ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, ie)))
+                                }), (0, Ue.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, jB.jsxs)("svg", {
+                                  children: [(0, Ue.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, jB.jsx)("circle", {
+                                    children: [(0, Ue.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, jB.jsx)("circle", {
+                                    }), (0, Ue.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: GB
+                                      ref: He
                                     })]
-                                  }), zB && (0, jB.jsx)("div", {
+                                  }), ke && (0, Ue.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, jB.jsx)(QB.b, {
+                                    children: (0, Ue.jsx)(Me.e, {
                                       text: [{
-                                        icon: zB
+                                        icon: ke
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), JB.length > 0 && (0, jB.jsx)("div", {
+                                }), Je.length > 0 && (0, Ue.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: JB.map(((BB, OB) => (0, jB.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === BB ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, OB)))
-                                }), (0, jB.jsx)("div", {
+                                  children: Je.map(((ee, ie) => (0, Ue.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === ee ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, ie)))
+                                }), (0, Ue.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, jB.jsx)(QB.b, {
-                                    text: PB
+                                  children: (0, Ue.jsx)(Me.e, {
+                                    text: Re
                                   })
                                 })]
                               })
                             }));
 
-                          function NB(BB) {
+                          function Xe(ee) {
                             let {
-                              qte: OB
-                            } = BB;
-                            switch (OB.type) {
+                              qte: ie
+                            } = ee;
+                            switch (ie.type) {
                               case "progressBar":
-                                return (0, jB.jsx)(yB, {
-                                  initialParameters: OB.parameters
+                                return (0, Ue.jsx)(Fe, {
+                                  initialParameters: ie.parameters
                                 });
                               case "timedClick":
-                                return (0, jB.jsx)(zB, {
-                                  initialParameters: OB.parameters
+                                return (0, Ue.jsx)(ke, {
+                                  initialParameters: ie.parameters
                                 });
                               case "gravityBar":
-                                return (0, jB.jsx)(lB, {
-                                  initialParameters: OB.parameters
+                                return (0, Ue.jsx)(qe, {
+                                  initialParameters: ie.parameters
                                 });
                               case "precisionBar":
-                                return (0, jB.jsx)(qB, {
-                                  initialParameters: OB.parameters
+                                return (0, Ue.jsx)(Te, {
+                                  initialParameters: ie.parameters
                                 });
                               case "rhythmClick":
-                                return (0, jB.jsx)(ZB, {
-                                  initialParameters: OB.parameters
+                                return (0, Ue.jsx)(pe, {
+                                  initialParameters: ie.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const RB = (0, YB.memo)((function() {
-                            const [BB, OB] = (0, YB.useState)({
+                          const ze = (0, ye.memo)((function() {
+                            const [ee, ie] = (0, ye.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, DB.f)("qteStateUpdated", (BB => {
-                              OB(BB)
-                            })), BB.isActive && BB.type ? (0, jB.jsx)("div", {
+                            return (0, be.f)("qteStateUpdated", (ee => {
+                              ie(ee)
+                            })), ee.isActive && ee.type ? (0, Ue.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, jB.jsx)(NB, {
-                                qte: BB
+                              children: (0, Ue.jsx)(Xe, {
+                                qte: ee
                               })
                             }) : null
                           }))
-                        }, 5266: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            c: () => jB,
-                            f: () => yB
+                        }, 5252: (ee, ie, He) => {
+                          He.d(ie, {
+                            d: () => Ue,
+                            e: () => Fe
                           });
-                          var YB = GB(56),
-                            DB = GB(1299),
-                            QB = GB(5269);
-                          const oB = {
-                              getState: () => QB.d.getCurrentState(),
-                              onFrame: DB.q
+                          var ye = He(59),
+                            be = He(1260),
+                            Me = He(5255);
+                          const Ke = {
+                              getState: () => Me.d.getCurrentState(),
+                              onFrame: be.q
                             },
-                            jB = (0, YB.createContext)(oB);
+                            Ue = (0, ye.createContext)(Ke);
 
-                          function yB() {
-                            return (0, YB.useContext)(jB)
+                          function Fe() {
+                            return (0, ye.useContext)(Ue)
                           }
-                        }, 5337: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            b: () => iB,
-                            c: () => FB
+                        }, 5319: (ee, ie, He) => {
+                          He.d(ie, {
+                            e: () => ae,
+                            g: () => Ve
                           });
-                          var YB = GB(5345),
-                            DB = GB(331);
-                          const QB = 120,
-                            oB = 260,
-                            jB = 1.15,
-                            yB = 1.2,
-                            JB = 2,
-                            MB = 1.08,
-                            PB = .8,
-                            zB = .95,
-                            lB = 8,
-                            pB = "[\"')\\]\u300d\u300f\uff09]*",
-                            qB = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${pB}$`),
-                            ZB = new RegExp(`[?\uff1f]${pB}$`),
-                            NB = new RegExp(`[!\uff01]${pB}$`),
-                            RB = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            WB = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            AB = new RegExp(`[${WB}]`),
-                            VB = new RegExp(`[${WB}]|[^${WB}]+`, "g"),
-                            SB = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var ye = He(5326),
+                            be = He(335);
+                          const Me = 120,
+                            Ke = 260,
+                            Ue = 1.15,
+                            Fe = 1.2,
+                            Je = 2,
+                            oe = 1.08,
+                            Re = .8,
+                            ke = .95,
+                            qe = 8,
+                            fe = "[\"')\\]\u300d\u300f\uff09]*",
+                            Te = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${fe}$`),
+                            pe = new RegExp(`[?\uff1f]${fe}$`),
+                            Xe = new RegExp(`[!\uff01]${fe}$`),
+                            ze = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Be = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            Ee = new RegExp(`[${Be}]`),
+                            ge = new RegExp(`[${Be}]|[^${Be}]+`, "g"),
+                            Oe = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function nB(BB) {
-                            let OB = 2166136261;
-                            for (let GB = 0; GB < BB.length; GB++) OB ^= BB.charCodeAt(GB), OB = Math.imul(OB, 16777619);
-                            return (OB >>> 0) / 4294967295 * 2 - 1
+                          function de(ee) {
+                            let ie = 2166136261;
+                            for (let He = 0; He < ee.length; He++) ie ^= ee.charCodeAt(He), ie = Math.imul(ie, 16777619);
+                            return (ie >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function UB(BB) {
-                            var OB;
-                            if (AB.test(BB)) return 1;
-                            const GB = BB.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              YB = GB.replace(/[^0-9]/g, "");
-                            if (YB.length > 0 && !/\p{L}/u.test(GB)) return Math.min(YB.length, 4);
-                            const DB = null !== (OB = GB.match(SB)) && void 0 !== OB ? OB : [];
-                            if (0 === DB.length) {
-                              var QB, oB;
-                              const BB = null !== (QB = null === (oB = GB.match(/\p{L}/gu)) || void 0 === oB ? void 0 : oB.length) && void 0 !== QB ? QB : 0;
-                              return 0 === BB ? 0 : Math.min(Math.max(1, Math.round(BB / 2.5)), lB)
+                          function We(ee) {
+                            var ie;
+                            if (Ee.test(ee)) return 1;
+                            const He = ee.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              ye = He.replace(/[^0-9]/g, "");
+                            if (ye.length > 0 && !/\p{L}/u.test(He)) return Math.min(ye.length, 4);
+                            const be = null !== (ie = He.match(Oe)) && void 0 !== ie ? ie : [];
+                            if (0 === be.length) {
+                              var Me, Ke;
+                              const ee = null !== (Me = null === (Ke = He.match(/\p{L}/gu)) || void 0 === Ke ? void 0 : Ke.length) && void 0 !== Me ? Me : 0;
+                              return 0 === ee ? 0 : Math.min(Math.max(1, Math.round(ee / 2.5)), qe)
                             }
-                            const jB = GB.replace(/[^\p{L}]/gu, ""),
-                              yB = DB.length > 1 && "e" === DB.at(-1) && jB.endsWith("e") && !jB.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(BB.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(DB.length - (yB ? 1 : 0), lB)
+                            const Ue = He.replace(/[^\p{L}]/gu, ""),
+                              Fe = be.length > 1 && "e" === be.at(-1) && Ue.endsWith("e") && !Ue.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(ee.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(be.length - (Fe ? 1 : 0), qe)
                           }
 
-                          function fB(BB) {
-                            return BB.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function te(ee) {
+                            return ee.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function kB(BB) {
-                            const OB = BB.replace(/[^\p{L}]/gu, "");
-                            return OB.length >= 2 && OB === OB.toUpperCase() && OB !== OB.toLowerCase()
+                          function Ze(ee) {
+                            const ie = ee.replace(/[^\p{L}]/gu, "");
+                            return ie.length >= 2 && ie === ie.toUpperCase() && ie !== ie.toLowerCase()
                           }
 
-                          function dB(BB, OB) {
-                            var GB;
-                            const lB = OB && (0, YB.j)(OB),
-                              pB = null !== (GB = null === lB || void 0 === lB ? void 0 : lB.syllableMs) && void 0 !== GB ? GB : YB.d,
-                              WB = function(BB) {
-                                const OB = [];
-                                for (const YB of (0, DB.hc)(BB))
-                                  if ("string" === typeof YB)
-                                    for (const BB of YB.split(/(\s+)/)) {
-                                      if ("" === BB) continue;
-                                      if (/^\s+$/.test(BB)) {
-                                        OB.push({
+                          function we(ee, ie) {
+                            var He;
+                            const qe = ie && (0, ye.l)(ie),
+                              fe = null !== (He = null === qe || void 0 === qe ? void 0 : qe.syllableMs) && void 0 !== He ? He : ye.d,
+                              Be = function(ee) {
+                                const ie = [];
+                                for (const ye of (0, be.kc)(ee))
+                                  if ("string" === typeof ye)
+                                    for (const ee of ye.split(/(\s+)/)) {
+                                      if ("" === ee) continue;
+                                      if (/^\s+$/.test(ee)) {
+                                        ie.push({
                                           kind: "space",
-                                          text: BB
+                                          text: ee
                                         });
                                         continue
                                       }
-                                      if (!AB.test(BB)) {
-                                        OB.push({
+                                      if (!Ee.test(ee)) {
+                                        ie.push({
                                           kind: "word",
-                                          text: BB,
+                                          text: ee,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let YB = !0;
-                                      for (const DB of null !== (GB = BB.match(VB)) && void 0 !== GB ? GB : []) {
-                                        var GB;
-                                        const BB = OB.at(-1);
-                                        YB || "word" !== (null === BB || void 0 === BB ? void 0 : BB.kind) || AB.test(DB) || /[\p{L}\p{N}]/u.test(DB) ? (YB || OB.push({
+                                      let ye = !0;
+                                      for (const be of null !== (He = ee.match(ge)) && void 0 !== He ? He : []) {
+                                        var He;
+                                        const ee = ie.at(-1);
+                                        ye || "word" !== (null === ee || void 0 === ee ? void 0 : ee.kind) || Ee.test(be) || /[\p{L}\p{N}]/u.test(be) ? (ye || ie.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), OB.push({
+                                        }), ie.push({
                                           kind: "word",
-                                          text: DB,
+                                          text: be,
                                           delayMs: 0
-                                        }), YB = !1) : BB.text += DB
+                                        }), ye = !1) : ee.text += be
                                       }
-                                    } else OB.push({
+                                    } else ie.push({
                                       kind: "icon",
-                                      text: YB.icon,
+                                      text: ye.icon,
                                       delayMs: 0
                                     });
-                                return OB
-                              }(BB),
-                              SB = [];
-                            let dB = [];
-                            for (const YB of WB) "space" !== YB.kind && (dB.push(YB), qB.test(YB.text) && (SB.push(dB), dB = []));
-                            SB.push(dB);
-                            const KB = [];
-                            let uB = 0;
-                            for (const YB of SB) {
-                              var mB, IB;
-                              const BB = null !== (mB = null === (IB = YB.at(-1)) || void 0 === IB ? void 0 : IB.text) && void 0 !== mB ? mB : "",
-                                OB = ZB.test(BB),
-                                GB = NB.test(BB),
-                                DB = YB.map((BB => "word" === BB.kind ? UB(BB.text) : 1)),
-                                WB = DB.findLastIndex((BB => BB > 0));
-                              for (const [ZB, NB] of YB.entries()) {
-                                const BB = "word" === NB.kind,
-                                  YB = DB[ZB];
-                                NB.delayMs = uB;
-                                for (let DB = 0; lB && DB < YB; DB++) {
+                                return ie
+                              }(ee),
+                              Oe = [];
+                            let we = [];
+                            for (const ye of Be) "space" !== ye.kind && (we.push(ye), Te.test(ye.text) && (Oe.push(we), we = []));
+                            Oe.push(we);
+                            const De = [];
+                            let Pe = 0;
+                            for (const ye of Oe) {
+                              var Ae, Ye;
+                              const ee = null !== (Ae = null === (Ye = ye.at(-1)) || void 0 === Ye ? void 0 : Ye.text) && void 0 !== Ae ? Ae : "",
+                                ie = pe.test(ee),
+                                He = Xe.test(ee),
+                                be = ye.map((ee => "word" === ee.kind ? We(ee.text) : 1)),
+                                Be = be.findLastIndex((ee => ee > 0));
+                              for (const [pe, Xe] of ye.entries()) {
+                                const ee = "word" === Xe.kind,
+                                  ye = be[pe];
+                                Xe.delayMs = Pe;
+                                for (let be = 0; qe && be < ye; be++) {
                                   const {
-                                    intonation: QB
-                                  } = lB;
-                                  let oB = WB > 0 ? -QB.declineSemitones * (ZB / WB) : 0;
-                                  oB += nB(`${fB(NB.text)}|${DB}`) * QB.variationSemitones;
-                                  const qB = Math.min(1, QB.variationSemitones);
-                                  let RB = lB.glideSemitones,
-                                    AB = 1;
-                                  GB && (oB += QB.exclaimLiftSemitones, AB *= jB), OB && ZB === WB && (oB += QB.questionRiseSemitones * (YB > 1 ? .5 + .5 * DB / (YB - 1) : 1), DB === YB - 1 && (RB = Math.abs(RB) + QB.questionRiseSemitones / 2)), BB && kB(NB.text) && (oB += JB * qB, AB *= yB), YB > 1 && 0 === DB && (oB += PB * qB, AB *= MB), KB.push({
-                                    atMs: uB + DB * pB,
-                                    semitones: oB,
-                                    glideSemitones: RB,
-                                    durationMs: DB < YB - 1 ? Math.min(lB.durationMs, pB * zB) : lB.durationMs,
-                                    level: AB
+                                    intonation: Me
+                                  } = qe;
+                                  let Ke = Be > 0 ? -Me.declineSemitones * (pe / Be) : 0;
+                                  Ke += de(`${te(Xe.text)}|${be}`) * Me.variationSemitones;
+                                  const Te = Math.min(1, Me.variationSemitones);
+                                  let ze = qe.glideSemitones,
+                                    Ee = 1;
+                                  He && (Ke += Me.exclaimLiftSemitones, Ee *= Ue), ie && pe === Be && (Ke += Me.questionRiseSemitones * (ye > 1 ? .5 + .5 * be / (ye - 1) : 1), be === ye - 1 && (ze = Math.abs(ze) + Me.questionRiseSemitones / 2)), ee && Ze(Xe.text) && (Ke += Je * Te, Ee *= Fe), ye > 1 && 0 === be && (Ke += Re * Te, Ee *= oe), De.push({
+                                    atMs: Pe + be * fe,
+                                    semitones: Ke,
+                                    glideSemitones: ze,
+                                    durationMs: be < ye - 1 ? Math.min(qe.durationMs, fe * ke) : qe.durationMs,
+                                    level: Ee
                                   })
                                 }
-                                uB += YB * pB + (qB.test(NB.text) ? oB : RB.test(NB.text) ? QB : 0)
+                                Pe += ye * fe + (Te.test(Xe.text) ? Ke : ze.test(Xe.text) ? Me : 0)
                               }
                             }
                             return {
-                              pieces: WB.map((BB => "space" === BB.kind ? BB : "icon" === BB.kind ? {
+                              pieces: Be.map((ee => "space" === ee.kind ? ee : "icon" === ee.kind ? {
                                 kind: "icon",
-                                icon: BB.text,
-                                delayMs: BB.delayMs
+                                icon: ee.text,
+                                delayMs: ee.delayMs
                               } : {
                                 kind: "word",
-                                text: BB.text,
-                                delayMs: BB.delayMs
+                                text: ee.text,
+                                delayMs: ee.delayMs
                               })),
-                              blips: KB
+                              blips: De
                             }
                           }
-                          var KB = GB(1175),
-                            uB = GB(1253),
-                            mB = GB(2027);
+                          var De = He(1127),
+                            Pe = He(1196),
+                            Ae = He(1988);
 
-                          function IB(BB) {
-                            if ("string" === typeof BB) return BB;
-                            const OB = uB.e.get().getCurrentLanguageCode();
-                            return (0, KB.x)(OB, BB.translationKey, (0, KB.v)(BB.params, mB.d.shown))
+                          function Ye(ee) {
+                            if ("string" === typeof ee) return ee;
+                            const ie = Pe.f.get().getCurrentLanguageCode();
+                            return (0, De.o)(ie, ee.translationKey, (0, De.m)(ee.params, Ae.c.shown))
                           }
 
-                          function FB(BB) {
-                            const OB = void 0 === BB.voice ? null : (0, YB.k)(BB.voice),
-                              GB = OB && (0, YB.j)(OB);
+                          function Ve(ee) {
+                            const ie = void 0 === ee.voice ? null : (0, ye.n)(ee.voice),
+                              He = ie && (0, ye.l)(ie);
                             return {
-                              plan: dB(IB(BB.line), GB),
-                              synth: GB
+                              plan: we(Ye(ee.line), He),
+                              synth: He
                             }
                           }
 
-                          function iB(BB) {
-                            const OB = [];
-                            let GB = [];
-                            for (const [DB, QB] of BB.entries()) {
-                              var YB;
-                              "space" === QB.kind && (" " !== QB.text || "icon" !== (null === (YB = BB[DB + 1]) || void 0 === YB ? void 0 : YB.kind)) ? (GB.length > 0 && OB.push(GB), OB.push([QB]), GB = []) : GB.push(QB)
+                          function ae(ee) {
+                            const ie = [];
+                            let He = [];
+                            for (const [be, Me] of ee.entries()) {
+                              var ye;
+                              "space" === Me.kind && (" " !== Me.text || "icon" !== (null === (ye = ee[be + 1]) || void 0 === ye ? void 0 : ye.kind)) ? (He.length > 0 && ie.push(He), ie.push([Me]), He = []) : He.push(Me)
                             }
-                            return GB.length > 0 && OB.push(GB), OB
+                            return He.length > 0 && ie.push(He), ie
                           }
-                        }, 5349: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            c: () => MB,
-                            f: () => PB
+                        }, 5333: (ee, ie, He) => {
+                          He.d(ie, {
+                            e: () => oe,
+                            f: () => Re
                           });
-                          var YB = GB(5353),
-                            DB = GB(16);
-                          const QB = .25,
-                            oB = .85,
-                            jB = .02,
-                            yB = .01;
+                          var ye = He(5338),
+                            be = He(18);
+                          const Me = .25,
+                            Ke = .85,
+                            Ue = .02,
+                            Fe = .01;
 
-                          function JB(BB, OB, GB, YB, DB, QB, jB) {
+                          function Je(ee, ie, He, ye, be, Me, Ue) {
                             const {
-                              waveform: yB,
-                              pitchHz: JB,
-                              attackMs: MB,
-                              releaseMs: PB,
-                              lowpassHz: zB
-                            } = GB, lB = DB + YB.durationMs / 1e3, pB = JB * 2 ** (YB.semitones / 12), qB = BB.createOscillator();
-                            qB.type = yB, qB.frequency.setValueAtTime(pB, DB), qB.frequency.exponentialRampToValueAtTime(pB * 2 ** (YB.glideSemitones / 12), lB);
-                            const ZB = DB + Math.min(MB, YB.durationMs) / 1e3,
-                              NB = BB.createGain();
-                            NB.gain.setValueAtTime(0, DB), NB.gain.linearRampToValueAtTime(QB, ZB), NB.gain.linearRampToValueAtTime(QB * oB, Math.max(ZB, lB - PB / 1e3)), NB.gain.linearRampToValueAtTime(0, lB);
-                            const RB = [qB];
-                            if (null !== zB) {
-                              const OB = BB.createBiquadFilter();
-                              OB.type = "lowpass", OB.frequency.value = zB, RB.push(OB)
+                              waveform: Fe,
+                              pitchHz: Je,
+                              attackMs: oe,
+                              releaseMs: Re,
+                              lowpassHz: ke
+                            } = He, qe = be + ye.durationMs / 1e3, fe = Je * 2 ** (ye.semitones / 12), Te = ee.createOscillator();
+                            Te.type = Fe, Te.frequency.setValueAtTime(fe, be), Te.frequency.exponentialRampToValueAtTime(fe * 2 ** (ye.glideSemitones / 12), qe);
+                            const pe = be + Math.min(oe, ye.durationMs) / 1e3,
+                              Xe = ee.createGain();
+                            Xe.gain.setValueAtTime(0, be), Xe.gain.linearRampToValueAtTime(Me, pe), Xe.gain.linearRampToValueAtTime(Me * Ke, Math.max(pe, qe - Re / 1e3)), Xe.gain.linearRampToValueAtTime(0, qe);
+                            const ze = [Te];
+                            if (null !== ke) {
+                              const ie = ee.createBiquadFilter();
+                              ie.type = "lowpass", ie.frequency.value = ke, ze.push(ie)
                             }
-                            RB.push(NB, OB);
-                            for (let oB = 1; oB < RB.length; oB++) RB[oB - 1].connect(RB[oB]);
-                            return qB.onended = () => {
-                              for (const BB of RB.slice(0, -1)) BB.disconnect();
-                              jB()
-                            }, qB.start(DB), qB.stop(lB), qB
+                            ze.push(Xe, ie);
+                            for (let Ke = 1; Ke < ze.length; Ke++) ze[Ke - 1].connect(ze[Ke]);
+                            return Te.onended = () => {
+                              for (const ee of ze.slice(0, -1)) ee.disconnect();
+                              Ue()
+                            }, Te.start(be), Te.stop(qe), Te
                           }
 
-                          function MB(BB, OB, GB, YB, DB, oB) {
-                            if (0 === YB.length) return oB(), () => {};
-                            const MB = QB * GB.volume * DB,
-                              PB = BB.createGain();
-                            PB.connect(OB);
-                            const zB = BB.currentTime + jB,
-                              lB = new Set;
-                            for (const QB of YB) {
-                              const OB = JB(BB, PB, GB, QB, zB + QB.atMs / 1e3, MB * QB.level, (() => {
-                                lB.delete(OB), 0 === lB.size && (PB.disconnect(), oB())
+                          function oe(ee, ie, He, ye, be, Ke) {
+                            if (0 === ye.length) return Ke(), () => {};
+                            const oe = Me * He.volume * be,
+                              Re = ee.createGain();
+                            Re.connect(ie);
+                            const ke = ee.currentTime + Ue,
+                              qe = new Set;
+                            for (const Me of ye) {
+                              const ie = Je(ee, Re, He, Me, ke + Me.atMs / 1e3, oe * Me.level, (() => {
+                                qe.delete(ie), 0 === qe.size && (Re.disconnect(), Ke())
                               }));
-                              lB.add(OB)
+                              qe.add(ie)
                             }
                             return () => {
-                              const OB = BB.currentTime;
-                              PB.gain.setTargetAtTime(0, OB, yB);
-                              for (const BB of lB) try {
-                                BB.stop(OB + 5 * yB)
+                              const ie = ee.currentTime;
+                              Re.gain.setTargetAtTime(0, ie, Fe);
+                              for (const ee of qe) try {
+                                ee.stop(ie + 5 * Fe)
                               } catch {}
                             }
                           }
 
-                          function PB(BB, OB) {
-                            var GB;
-                            const QB = YB.Howler.ctx,
-                              oB = YB.Howler.masterGain;
-                            if (!QB || !oB || !DB.c.get("soundOnFromAd")) return () => {};
-                            const jB = YB.Howler;
-                            return null === (GB = jB._autoResume) || void 0 === GB || GB.call(jB), MB(QB, oB, BB, OB, DB.c.get("soundVolume"), (() => {
-                              var BB;
-                              null === (BB = jB._autoSuspend) || void 0 === BB || BB.call(jB)
+                          function Re(ee, ie) {
+                            var He;
+                            const Me = ye.Howler.ctx,
+                              Ke = ye.Howler.masterGain;
+                            if (!Me || !Ke || !be.e.get("soundOnFromAd")) return () => {};
+                            const Ue = ye.Howler;
+                            return null === (He = Ue._autoResume) || void 0 === He || He.call(Ue), oe(Me, Ke, ee, ie, be.e.get("soundVolume"), (() => {
+                              var ee;
+                              null === (ee = Ue._autoSuspend) || void 0 === ee || ee.call(Ue)
                             }))
                           }
-                        }, 5322: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            b: () => jB,
-                            d: () => DB,
-                            g: () => yB,
-                            h: () => oB,
-                            i: () => QB
+                        }, 5303: (ee, ie, He) => {
+                          He.d(ie, {
+                            b: () => Ue,
+                            d: () => be,
+                            h: () => Fe,
+                            l: () => Ke,
+                            p: () => Me
                           });
-                          var YB = GB(5320);
-                          const DB = {
+                          var ye = He(5294);
+                          const be = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            QB = {
+                            Me = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            oB = `${YB.l} lists every page of the Bloxd Code API docs.`;
+                            Ke = `${ye.n} lists every page of the Bloxd Code API docs.`;
 
-                          function jB(BB, OB) {
-                            return `${BB.url}${encodeURIComponent(OB.toWellFormed())}`
+                          function Ue(ee, ie) {
+                            return `${ee.url}${encodeURIComponent(ie.toWellFormed())}`
                           }
 
-                          function yB(BB) {
-                            const OB = jB(DB, BB);
-                            return OB.length <= 3e4 ? {
-                              url: OB,
+                          function Fe(ee) {
+                            const ie = Ue(be, ee);
+                            return ie.length <= 3e4 ? {
+                              url: ie,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(DB.url).origin,
+                              url: new URL(be.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5353: (BB, OB, GB) => {
-                          GB.r(OB), GB.d(OB, {
-                            Howl: () => DB.Howl,
-                            Howler: () => DB.Howler,
-                            musicOutput: () => ZB,
-                            readyAudioContext: () => NB
+                        }, 5338: (ee, ie, He) => {
+                          He.r(ie), He.d(ie, {
+                            Howl: () => be.Howl,
+                            Howler: () => be.Howler,
+                            musicOutput: () => pe,
+                            readyAudioContext: () => Xe
                           });
-                          var YB, DB = GB(5362),
-                            QB = GB(3873),
-                            oB = GB(5073);
-                          const jB = DB.Howler;
+                          var ye, be = He(5340),
+                            Me = He(3791),
+                            Ke = He(5055);
+                          const Ue = be.Howler;
 
-                          function yB() {
-                            var BB, OB;
-                            if (jB.ctx || !jB.usingWebAudio || "undefined" === typeof AudioContext || !(0, oB.h)()) return;
-                            const GB = navigator.audioSession;
-                            let YB;
-                            "auto" === (null === GB || void 0 === GB ? void 0 : GB.type) && (GB.type = "ambient");
+                          function Fe() {
+                            var ee, ie;
+                            if (Ue.ctx || !Ue.usingWebAudio || "undefined" === typeof AudioContext || !(0, Ke.f)()) return;
+                            const He = navigator.audioSession;
+                            let ye;
+                            "auto" === (null === He || void 0 === He ? void 0 : He.type) && (He.type = "ambient");
                             try {
-                              YB = new AudioContext({
+                              ye = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const DB = YB.createGain();
-                            DB.gain.setValueAtTime(jB._muted ? 0 : null !== (BB = jB._volume) && void 0 !== BB ? BB : 1, YB.currentTime), DB.connect(YB.destination), jB.ctx = YB, jB.masterGain = DB, null === (OB = jB._setup) || void 0 === OB || OB.call(jB)
+                            const be = ye.createGain();
+                            be.gain.setValueAtTime(Ue._muted ? 0 : null !== (ee = Ue._volume) && void 0 !== ee ? ee : 1, ye.currentTime), be.connect(ye.destination), Ue.ctx = ye, Ue.masterGain = be, null === (ie = Ue._setup) || void 0 === ie || ie.call(Ue)
                           }
-                          jB._mobileUnloaded = !0;
-                          const JB = jB.volume.bind(DB.Howler);
-                          jB.volume = function() {
-                            return yB(), JB(...arguments)
+                          Ue._mobileUnloaded = !0;
+                          const Je = Ue.volume.bind(be.Howler);
+                          Ue.volume = function() {
+                            return Fe(), Je(...arguments)
                           };
-                          const MB = jB.mute.bind(DB.Howler);
-                          jB.mute = BB => (yB(), MB(BB));
-                          const PB = DB.Howl.prototype,
-                            zB = PB.init;
+                          const oe = Ue.mute.bind(be.Howler);
+                          Ue.mute = ee => (Fe(), oe(ee));
+                          const Re = be.Howl.prototype,
+                            ke = Re.init;
 
-                          function lB() {
-                            for (; jB._html5AudioPool.length < jB.html5PoolSize;) {
-                              const BB = new Audio;
-                              BB._unlocked = !0, jB._releaseHtml5Audio(BB)
+                          function qe() {
+                            for (; Ue._html5AudioPool.length < Ue.html5PoolSize;) {
+                              const ee = new Audio;
+                              ee._unlocked = !0, Ue._releaseHtml5Audio(ee)
                             }
-                            for (const OB of jB._howls)
-                              if (!OB._webAudio)
-                                for (const GB of OB._getSoundIds()) {
-                                  var BB;
-                                  const YB = null === (BB = OB._soundById(GB)) || void 0 === BB ? void 0 : BB._node;
-                                  YB && !YB._unlocked && (YB._unlocked = !0, YB.load())
+                            for (const ie of Ue._howls)
+                              if (!ie._webAudio)
+                                for (const He of ie._getSoundIds()) {
+                                  var ee;
+                                  const ye = null === (ee = ie._soundById(He)) || void 0 === ee ? void 0 : ee._node;
+                                  ye && !ye._unlocked && (ye._unlocked = !0, ye.load())
                                 }
                           }
-                          PB.init = function(BB) {
-                            return yB(), zB.call(this, BB)
-                          }, (0, oB.h)() && (jB._unlockAudio = () => {
-                            const BB = jB.ctx;
-                            if (jB._audioUnlocked || !BB) return;
-                            jB.autoUnlock = !1;
-                            const OB = BB.createBuffer(1, 1, 22050);
-                            jB._scratchBuffer = OB;
-                            const GB = new AbortController;
-                            let YB = "afterPaint";
-                            const DB = () => {
-                                var YB;
-                                if (jB._audioUnlocked) return;
-                                null === (YB = jB._autoResume) || void 0 === YB || YB.call(jB);
-                                const DB = BB.createBufferSource();
-                                DB.buffer = OB, DB.connect(BB.destination), DB.start(0), BB.resume().catch((() => {})), DB.onended = () => {
-                                  DB.disconnect(0), jB._audioUnlocked = !0, GB.abort();
-                                  for (const BB of jB._howls) BB._emit("unlock")
+                          Re.init = function(ee) {
+                            return Fe(), ke.call(this, ee)
+                          }, (0, Ke.f)() && (Ue._unlockAudio = () => {
+                            const ee = Ue.ctx;
+                            if (Ue._audioUnlocked || !ee) return;
+                            Ue.autoUnlock = !1;
+                            const ie = ee.createBuffer(1, 1, 22050);
+                            Ue._scratchBuffer = ie;
+                            const He = new AbortController;
+                            let ye = "afterPaint";
+                            const be = () => {
+                                var ye;
+                                if (Ue._audioUnlocked) return;
+                                null === (ye = Ue._autoResume) || void 0 === ye || ye.call(Ue);
+                                const be = ee.createBufferSource();
+                                be.buffer = ie, be.connect(ee.destination), be.start(0), ee.resume().catch((() => {})), be.onended = () => {
+                                  be.disconnect(0), Ue._audioUnlocked = !0, He.abort();
+                                  for (const ee of Ue._howls) ee._emit("unlock")
                                 }
                               },
-                              yB = () => {
-                                lB(), DB()
+                              Fe = () => {
+                                qe(), be()
                               },
-                              JB = OB => {
-                                if (lB(), "inTap" === YB) {
-                                  if ("running" === BB.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), DB()
-                                } else "afterPaint" === YB && (YB = "queued", (0, QB.c)(OB.timeStamp, (() => {
-                                  YB = "inTap", DB()
+                              Je = ie => {
+                                if (qe(), "inTap" === ye) {
+                                  if ("running" === ee.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), be()
+                                } else "afterPaint" === ye && (ye = "queued", (0, Me.c)(ie.timeStamp, (() => {
+                                  ye = "inTap", be()
                                 })))
                               };
-                            for (const QB of ["touchstart", "touchend"]) document.addEventListener(QB, yB, {
+                            for (const Me of ["touchstart", "touchend"]) document.addEventListener(Me, Fe, {
                               capture: !0,
-                              signal: GB.signal
+                              signal: He.signal
                             });
-                            for (const QB of oB.c) document.addEventListener(QB, JB, {
+                            for (const Me of Ke.b) document.addEventListener(Me, Je, {
                               capture: !0,
-                              signal: GB.signal
+                              signal: He.signal
                             })
                           });
-                          let pB = 0;
-                          const qB = null === (YB = jB._autoSuspend) || void 0 === YB ? void 0 : YB.bind(DB.Howler);
+                          let fe = 0;
+                          const Te = null === (ye = Ue._autoSuspend) || void 0 === ye ? void 0 : ye.bind(be.Howler);
 
-                          function ZB() {
-                            NB();
+                          function pe() {
+                            Xe();
                             const {
-                              ctx: BB,
-                              masterGain: OB
-                            } = jB;
-                            return BB && OB ? {
-                              ctx: BB,
-                              destination: OB,
-                              holdAwake: BB => {
-                                var OB, GB;
-                                (pB += BB ? 1 : -1, BB) ? null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB): null === (GB = jB._autoSuspend) || void 0 === GB || GB.call(jB)
+                              ctx: ee,
+                              masterGain: ie
+                            } = Ue;
+                            return ee && ie ? {
+                              ctx: ee,
+                              destination: ie,
+                              holdAwake: ee => {
+                                var ie, He;
+                                (fe += ee ? 1 : -1, ee) ? null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue): null === (He = Ue._autoSuspend) || void 0 === He || He.call(Ue)
                               },
                               wake: () => {
-                                var OB;
-                                "running" !== BB.state && (null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB), BB.resume().catch((() => {})))
+                                var ie;
+                                "running" !== ee.state && (null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue), ee.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function NB() {
-                            var BB;
-                            (jB.volume(), jB.ctx && jB.autoUnlock) && (null === (BB = jB._unlockAudio) || void 0 === BB || BB.call(jB))
+                          function Xe() {
+                            var ee;
+                            (Ue.volume(), Ue.ctx && Ue.autoUnlock) && (null === (ee = Ue._unlockAudio) || void 0 === ee || ee.call(Ue))
                           }
-                          qB && (jB._autoSuspend = () => pB > 0 ? DB.Howler : qB())
-                        }, 5366: (BB, OB, GB) => {
-                          function YB(BB) {
+                          Te && (Ue._autoSuspend = () => fe > 0 ? be.Howler : Te())
+                        }, 5343: (ee, ie, He) => {
+                          function ye(ee) {
                             return {
-                              notAfter: BB
+                              notAfter: ee
                             }
                           }
-                          GB.d(OB, {
-                            C: () => PB,
-                            b: () => yB,
-                            f: () => JB,
-                            j: () => jB,
-                            n: () => YB,
-                            p: () => DB,
-                            t: () => QB,
-                            w: () => oB,
-                            z: () => MB
+                          He.d(ie, {
+                            e: () => Fe,
+                            g: () => Je,
+                            k: () => Ue,
+                            m: () => ye,
+                            n: () => be,
+                            p: () => Me,
+                            s: () => Ke,
+                            t: () => oe,
+                            v: () => Re
                           });
-                          const DB = YB("\\w$."),
-                            QB = YB("\\w.,");
+                          const be = ye("\\w$."),
+                            Me = ye("\\w.,");
 
-                          function oB(BB) {
-                            return OB => yB(OB, BB)
+                          function Ke(ee) {
+                            return ie => Fe(ie, ee)
                           }
 
-                          function jB(BB) {
-                            return OB => !BB.test(OB.input.slice(0, OB.index))
+                          function Ue(ee) {
+                            return ie => !ee.test(ie.input.slice(0, ie.index))
                           }
 
-                          function yB(BB, OB) {
-                            return BB.index > 0 && new RegExp(`[${OB}]`).test(BB.input[BB.index - 1])
+                          function Fe(ee, ie) {
+                            return ee.index > 0 && new RegExp(`[${ie}]`).test(ee.input[ee.index - 1])
                           }
 
-                          function JB(BB, OB, GB) {
-                            return function(BB) {
-                              return void 0 !== BB && "function" !== typeof BB
-                            }(GB) ? function(BB, OB, GB) {
-                              const YB = OB.flags.replace(/[gy]/g, ""),
-                                DB = new RegExp(`[^${GB}](?:${OB.source})`, `${YB}g`),
-                                QB = [],
-                                oB = GB => {
-                                  const YB = GB.index + GB[0].length;
-                                  return ("" === GB[0] ? zB(BB, OB, YB) : YB) - 1
+                          function Je(ee, ie, He) {
+                            return function(ee) {
+                              return void 0 !== ee && "function" !== typeof ee
+                            }(He) ? function(ee, ie, He) {
+                              const ye = ie.flags.replace(/[gy]/g, ""),
+                                be = new RegExp(`[^${He}](?:${ie.source})`, `${ye}g`),
+                                Me = [],
+                                Ke = He => {
+                                  const ye = He.index + He[0].length;
+                                  return ("" === He[0] ? ke(ee, ie, ye) : ye) - 1
                                 },
-                                jB = new RegExp(`(?:${OB.source})`, `${YB}y`).exec(BB);
-                              if (jB) {
-                                if (QB.push(jB), !OB.global) return QB;
-                                DB.lastIndex = oB(jB)
+                                Ue = new RegExp(`(?:${ie.source})`, `${ye}y`).exec(ee);
+                              if (Ue) {
+                                if (Me.push(Ue), !ie.global) return Me;
+                                be.lastIndex = Ke(Ue)
                               }
-                              for (let yB = DB.exec(BB); yB; yB = DB.exec(BB)) {
-                                const GB = zB(BB, OB, yB.index) - yB.index;
-                                if (yB[0] = yB[0].slice(GB), yB.index += GB, QB.push(yB), !OB.global) break;
-                                DB.lastIndex = oB(yB)
+                              for (let Fe = be.exec(ee); Fe; Fe = be.exec(ee)) {
+                                const He = ke(ee, ie, Fe.index) - Fe.index;
+                                if (Fe[0] = Fe[0].slice(He), Fe.index += He, Me.push(Fe), !ie.global) break;
+                                be.lastIndex = Ke(Fe)
                               }
-                              return QB
-                            }(BB, OB, GB.notAfter) : function(BB, OB, GB) {
-                              const YB = new RegExp(OB.source, `${OB.flags.replace(/[gy]/g,"")}g`),
-                                DB = [];
-                              for (let QB = YB.exec(BB); QB; QB = YB.exec(BB))
-                                if (!GB || GB(QB)) {
-                                  if (DB.push(QB), !OB.global) break;
-                                  "" === QB[0] && (YB.lastIndex = zB(BB, OB, YB.lastIndex))
-                                } else YB.lastIndex = zB(BB, OB, QB.index);
-                              return DB
-                            }(BB, OB, GB)
+                              return Me
+                            }(ee, ie, He.notAfter) : function(ee, ie, He) {
+                              const ye = new RegExp(ie.source, `${ie.flags.replace(/[gy]/g,"")}g`),
+                                be = [];
+                              for (let Me = ye.exec(ee); Me; Me = ye.exec(ee))
+                                if (!He || He(Me)) {
+                                  if (be.push(Me), !ie.global) break;
+                                  "" === Me[0] && (ye.lastIndex = ke(ee, ie, ye.lastIndex))
+                                } else ye.lastIndex = ke(ee, ie, Me.index);
+                              return be
+                            }(ee, ie, He)
                           }
 
-                          function MB(BB, OB, GB, YB) {
-                            let DB = "",
-                              QB = 0;
-                            for (const oB of JB(BB, OB, GB)) DB += BB.slice(QB, oB.index) + YB(oB), QB = oB.index + oB[0].length;
-                            return DB + BB.slice(QB)
+                          function oe(ee, ie, He, ye) {
+                            let be = "",
+                              Me = 0;
+                            for (const Ke of Je(ee, ie, He)) be += ee.slice(Me, Ke.index) + ye(Ke), Me = Ke.index + Ke[0].length;
+                            return be + ee.slice(Me)
                           }
 
-                          function PB(BB, OB, GB) {
-                            const YB = [];
-                            let DB = 0;
-                            for (const QB of JB(BB, OB, GB)) YB.push(BB.slice(DB, QB.index)), DB = QB.index + QB[0].length;
-                            return [...YB, BB.slice(DB)]
+                          function Re(ee, ie, He) {
+                            const ye = [];
+                            let be = 0;
+                            for (const Me of Je(ee, ie, He)) ye.push(ee.slice(be, Me.index)), be = Me.index + Me[0].length;
+                            return [...ye, ee.slice(be)]
                           }
 
-                          function zB(BB, OB, GB) {
-                            var YB;
-                            return GB + (OB.unicode && (null !== (YB = BB.codePointAt(GB)) && void 0 !== YB ? YB : 0) > 65535 ? 2 : 1)
+                          function ke(ee, ie, He) {
+                            var ye;
+                            return He + (ie.unicode && (null !== (ye = ee.codePointAt(He)) && void 0 !== ye ? ye : 0) > 65535 ? 2 : 1)
                           }
-                        }, 5320: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            c: () => DB,
-                            e: () => yB,
-                            h: () => QB,
-                            l: () => oB,
-                            n: () => jB,
-                            q: () => ZB,
-                            r: () => MB,
-                            s: () => PB,
-                            v: () => qB,
-                            y: () => lB
+                        }, 5294: (ee, ie, He) => {
+                          He.d(ie, {
+                            B: () => Re,
+                            D: () => Te,
+                            H: () => qe,
+                            e: () => be,
+                            h: () => Fe,
+                            k: () => Me,
+                            n: () => Ke,
+                            r: () => Ue,
+                            v: () => pe,
+                            z: () => oe
                           });
-                          var YB = GB(1650);
-                          const DB = 24e3,
-                            QB = "/docs/llms.txt",
-                            oB = `${YB.d}${QB}`,
-                            jB = "/llms.txt",
-                            yB = "/docs/llms-full.txt";
+                          var ye = He(1585);
+                          const be = 24e3,
+                            Me = "/docs/llms.txt",
+                            Ke = `${ye.b}${Me}`,
+                            Ue = "/llms.txt",
+                            Fe = "/docs/llms-full.txt";
 
-                          function JB(BB) {
-                            return BB || "index"
+                          function Je(ee) {
+                            return ee || "index"
                           }
 
-                          function MB(BB) {
-                            return `/docs/${JB(BB)}.md`
+                          function oe(ee) {
+                            return `/docs/${Je(ee)}.md`
                           }
 
-                          function PB(BB, OB) {
-                            return `/docs/${JB(BB)}/${OB+1}.md`
+                          function Re(ee, ie) {
+                            return `/docs/${Je(ee)}/${ie+1}.md`
                           }
-                          const zB = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const ke = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function lB(BB) {
-                            const OB = zB.exec(BB);
-                            return null === OB ? null : {
-                              name: OB[1],
-                              part: void 0 === OB[2] ? null : Number(OB[2])
+                          function qe(ee) {
+                            const ie = ke.exec(ee);
+                            return null === ie ? null : {
+                              name: ie[1],
+                              part: void 0 === ie[2] ? null : Number(ie[2])
                             }
                           }
-                          const pB = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const fe = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function qB(BB) {
-                            const OB = pB.exec(BB);
-                            if (null === OB) return null;
-                            const [, GB = "", YB] = OB;
-                            return void 0 === YB ? MB(GB) : PB(GB, Number(YB) - 1)
+                          function Te(ee) {
+                            const ie = fe.exec(ee);
+                            if (null === ie) return null;
+                            const [, He = "", ye] = ie;
+                            return void 0 === ye ? oe(He) : Re(He, Number(ye) - 1)
                           }
 
-                          function ZB(BB) {
-                            return `/docsHtml/${JB(BB)}.html`
+                          function pe(ee) {
+                            return `/docsHtml/${Je(ee)}.html`
                           }
-                        }, 5345: (BB, OB, GB) => {
-                          GB.d(OB, {
-                            d: () => DB,
-                            e: () => YB,
-                            g: () => QB,
-                            j: () => yB,
-                            k: () => oB
+                        }, 5326: (ee, ie, He) => {
+                          He.d(ie, {
+                            d: () => be,
+                            h: () => ye,
+                            k: () => Me,
+                            l: () => Fe,
+                            n: () => Ke
                           });
-                          const YB = ["sine", "triangle", "square", "sawtooth"],
-                            DB = 55,
-                            QB = {
+                          const ye = ["sine", "triangle", "square", "sawtooth"],
+                            be = 55,
+                            Me = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function oB(BB) {
-                            return "string" !== typeof BB ? BB : Object.hasOwn(QB, BB) ? QB[BB] : null
+                          function Ke(ee) {
+                            return "string" !== typeof ee ? ee : Object.hasOwn(Me, ee) ? Me[ee] : null
                           }
 
-                          function jB(BB, OB, GB) {
-                            return Math.min(GB, Math.max(OB, BB))
+                          function Ue(ee, ie, He) {
+                            return Math.min(He, Math.max(ie, ee))
                           }
 
-                          function yB(BB) {
-                            const OB = jB(BB.durationMs, 10, 500),
-                              GB = jB(BB.attackMs, 0, OB),
+                          function Fe(ee) {
+                            const ie = Ue(ee.durationMs, 10, 500),
+                              He = Ue(ee.attackMs, 0, ie),
                               {
-                                intonation: DB
-                              } = BB;
+                                intonation: be
+                              } = ee;
                             return {
-                              waveform: YB.includes(BB.waveform) ? BB.waveform : "sine",
-                              pitchHz: jB(BB.pitchHz, 20, 4e3),
-                              glideSemitones: jB(BB.glideSemitones, -24, 24),
-                              durationMs: OB,
-                              attackMs: GB,
-                              releaseMs: jB(BB.releaseMs, 0, OB - GB),
-                              lowpassHz: null === BB.lowpassHz ? null : jB(BB.lowpassHz, 20, 2e4),
-                              volume: jB(BB.volume, 0, 2),
+                              waveform: ye.includes(ee.waveform) ? ee.waveform : "sine",
+                              pitchHz: Ue(ee.pitchHz, 20, 4e3),
+                              glideSemitones: Ue(ee.glideSemitones, -24, 24),
+                              durationMs: ie,
+                              attackMs: He,
+                              releaseMs: Ue(ee.releaseMs, 0, ie - He),
+                              lowpassHz: null === ee.lowpassHz ? null : Ue(ee.lowpassHz, 20, 2e4),
+                              volume: Ue(ee.volume, 0, 2),
                               intonation: {
-                                variationSemitones: jB(DB.variationSemitones, 0, 6),
-                                declineSemitones: jB(DB.declineSemitones, 0, 12),
-                                questionRiseSemitones: jB(DB.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: jB(DB.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: Ue(be.variationSemitones, 0, 6),
+                                declineSemitones: Ue(be.declineSemitones, 0, 12),
+                                questionRiseSemitones: Ue(be.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: Ue(be.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: jB(BB.syllableMs, 25, 200)
+                              syllableMs: Ue(ee.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const BB in modules) Object.freeze(modules[BB]);
+                      for (const ee in modules) Object.freeze(modules[ee]);

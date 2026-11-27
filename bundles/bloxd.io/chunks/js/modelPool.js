@@ -1,26 +1,26 @@
 export const id = 50;
 export const ids = [50];
 export const modules = {
-  54113: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => qB,
-      pageModelPool: () => RB
+  54314: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => Te,
+      pageModelPool: () => ze
     });
-    var YB = GB(3210),
-      DB = GB(36912),
-      QB = GB(41882),
-      oB = GB(4808),
-      jB = GB(4820),
-      yB = GB(3656),
-      JB = GB(3257),
-      MB = GB(41834),
-      PB = GB(41842),
-      zB = GB(36876),
-      lB = GB(41944);
-    class pB {
-      constructor(BB) {
-        this.opts = BB, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
-        for (let OB = 0; OB < Math.max(1, BB.count); OB++) this.slots.push({
+    var ye = He(3101),
+      be = He(37003),
+      Me = He(41955),
+      Ke = He(4771),
+      Ue = He(4781),
+      Fe = He(3565),
+      Je = He(3136),
+      oe = He(41925),
+      Re = He(41933),
+      ke = He(36965),
+      qe = He(42021);
+    class fe {
+      constructor(ee) {
+        this.opts = ee, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
+        for (let ie = 0; ie < Math.max(1, ee.count); ie++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
@@ -33,15 +33,15 @@ export const modules = {
         this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((BB => null !== BB.job)).length
+        return this.queue.length + this.slots.filter((ee => null !== ee.job)).length
       }
-      build(BB, OB) {
-        return null !== this.stopped ? Promise.resolve((0, PB.o)(BB, this.stopped)) : new Promise((GB => {
+      build(ee, ie) {
+        return null !== this.stopped ? Promise.resolve((0, Re.s)(ee, this.stopped)) : new Promise((He => {
           this.queue.push({
-            word: BB,
-            glb: OB,
+            word: ee,
+            glb: ie,
             attempts: 0,
-            resolve: GB
+            resolve: He
           }), this.pump()
         }))
       }
@@ -55,152 +55,152 @@ export const modules = {
         this.fail(null)
       }
       pump() {
-        const BB = this.resting && 0 === this.queue.length;
-        for (const OB of this.slots) {
+        const ee = this.resting && 0 === this.queue.length;
+        for (const ie of this.slots) {
           if (null !== this.stopped) return;
-          if (OB.gaveUp || OB.starting) continue;
-          if (null === OB.worker) {
-            BB || this.start(OB);
+          if (ie.gaveUp || ie.starting) continue;
+          if (null === ie.worker) {
+            ee || this.start(ie);
             continue
           }
-          if (BB) {
-            null === OB.job && this.end(OB);
+          if (ee) {
+            null === ie.job && this.end(ie);
             continue
           }
-          const GB = null === OB.job ? this.queue.shift() : void 0;
-          void 0 !== GB && this.run(OB, OB.worker, GB)
+          const He = null === ie.job ? this.queue.shift() : void 0;
+          void 0 !== He && this.run(ie, ie.worker, He)
         }
       }
-      start(BB) {
-        if (BB.losses >= 6) return BB.gaveUp = !0, void(this.slots.every((BB => BB.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        BB.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((OB => {
-          let [GB, YB] = OB;
-          null === this.stopped && this.launch(BB, GB, YB)
-        }), (BB => {
-          this.fail(BB)
+      start(ee) {
+        if (ee.losses >= 6) return ee.gaveUp = !0, void(this.slots.every((ee => ee.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        ee.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((ie => {
+          let [He, ye] = ie;
+          null === this.stopped && this.launch(ee, He, ye)
+        }), (ee => {
+          this.fail(ee)
         }))
       }
-      launch(BB, OB, GB) {
-        let YB;
+      launch(ee, ie, He) {
+        let ye;
         try {
-          YB = OB()
-        } catch (DB) {
-          return void this.lose(BB, `a model worker could not be created (${String(DB)})`)
+          ye = ie()
+        } catch (be) {
+          return void this.lose(ee, `a model worker could not be created (${String(be)})`)
         }
-        BB.worker = YB, BB.timer = new lB.g(3e4, (OB => {
-          BB.timer = null, this.lose(BB, `a model worker did not start: ${(0,lB.k)(OB)}`)
-        }), void 0, this.opts.visibility), YB.onmessage = OB => {
+        ee.worker = ye, ee.timer = new qe.h(3e4, (ie => {
+          ee.timer = null, this.lose(ee, `a model worker did not start: ${(0,qe.l)(ie)}`)
+        }), void 0, this.opts.visibility), ye.onmessage = ie => {
           let {
-            data: GB
-          } = OB;
-          this.answered(BB, GB)
-        }, YB.onerror = OB => {
-          this.lose(BB, BB.starting ? `a model worker failed to start: ${OB.message}` : `a model worker failed: ${OB.message}`)
-        }, YB.postMessage({
+            data: He
+          } = ie;
+          this.answered(ee, He)
+        }, ye.onerror = ie => {
+          this.lose(ee, ee.starting ? `a model worker failed to start: ${ie.message}` : `a model worker failed: ${ie.message}`)
+        }, ye.postMessage({
           type: "start",
-          module: GB
+          module: He
         })
       }
-      end(BB) {
-        const OB = BB.worker;
-        null !== OB && (OB.onmessage = null, OB.onerror = null, OB.terminate()), BB.worker = null, BB.startedAt = void 0
+      end(ee) {
+        const ie = ee.worker;
+        null !== ie && (ie.onmessage = null, ie.onerror = null, ie.terminate()), ee.worker = null, ee.startedAt = void 0
       }
-      clearTimer(BB) {
-        var OB;
-        null === (OB = BB.timer) || void 0 === OB || OB.cancel(), BB.timer = null
+      clearTimer(ee) {
+        var ie;
+        null === (ie = ee.timer) || void 0 === ie || ie.cancel(), ee.timer = null
       }
-      answered(BB, OB) {
-        if ("lost" === OB.type) return void this.lose(BB, OB.reason);
-        if (BB.starting) return "started" !== OB.type ? void this.lose(BB, `a model worker answered ${OB.type} before it started`) : (this.clearTimer(BB), BB.starting = !1, BB.startedAt = performance.now(), void this.pump());
-        const GB = BB.job;
-        null !== GB && "started" !== OB.type && OB.seq === BB.seq && ("trapped" !== OB.type ? (BB.job = null, BB.losses = 0, this.jobLosses = 0, GB.resolve(new Uint8Array(OB.record)), this.pump()) : this.lose(BB, OB.trap))
+      answered(ee, ie) {
+        if ("lost" === ie.type) return void this.lose(ee, ie.reason);
+        if (ee.starting) return "started" !== ie.type ? void this.lose(ee, `a model worker answered ${ie.type} before it started`) : (this.clearTimer(ee), ee.starting = !1, ee.startedAt = performance.now(), void this.pump());
+        const He = ee.job;
+        null !== He && "started" !== ie.type && ie.seq === ee.seq && ("trapped" !== ie.type ? (ee.job = null, ee.losses = 0, this.jobLosses = 0, He.resolve(new Uint8Array(ie.record)), this.pump()) : this.lose(ee, ie.trap))
       }
-      run(BB, OB, GB) {
-        const YB = this.nextSeq++;
-        BB.seq = YB, BB.job = GB, GB.attempts++;
-        const DB = GB.glb.slice();
-        OB.postMessage({
+      run(ee, ie, He) {
+        const ye = this.nextSeq++;
+        ee.seq = ye, ee.job = He, He.attempts++;
+        const be = He.glb.slice();
+        ie.postMessage({
           type: "job",
-          seq: YB,
-          word: GB.word,
-          glb: DB.buffer
-        }, [DB.buffer])
+          seq: ye,
+          word: He.word,
+          glb: be.buffer
+        }, [be.buffer])
       }
-      lose(BB, OB) {
-        this.clearTimer(BB), void 0 !== BB.startedAt && performance.now() - BB.startedAt >= 6e4 && (BB.losses = 0), this.end(BB), BB.starting = !1;
-        const GB = BB.job;
-        BB.job = null, null === GB && BB.losses++, this.opts.onWorkerLost(OB), null !== GB && (GB.attempts < 2 ? this.queue.unshift(GB) : GB.resolve((0, PB.m)(GB.word, OB)), 0 === (GB.word & MB.c) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
+      lose(ee, ie) {
+        this.clearTimer(ee), void 0 !== ee.startedAt && performance.now() - ee.startedAt >= 6e4 && (ee.losses = 0), this.end(ee), ee.starting = !1;
+        const He = ee.job;
+        ee.job = null, null === He && ee.losses++, this.opts.onWorkerLost(ie), null !== He && (He.attempts < 2 ? this.queue.unshift(He) : He.resolve((0, Re.q)(He.word, ie)), 0 === (He.word & oe.e) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
       }
-      fail(BB) {
+      fail(ee) {
         if (null !== this.stopped) return;
-        this.stopped = null === BB ? "the model workers stopped" : `the model workers could not start: ${(0,zB.l)(BB)}`;
-        const OB = this.stopped,
-          GB = BB => {
-            BB.resolve((0, PB.o)(BB.word, OB))
+        this.stopped = null === ee ? "the model workers stopped" : `the model workers could not start: ${(0,ke.n)(ee)}`;
+        const ie = this.stopped,
+          He = ee => {
+            ee.resolve((0, Re.s)(ee.word, ie))
           };
-        for (const DB of this.slots) {
-          var YB;
-          this.clearTimer(DB), null === (YB = DB.worker) || void 0 === YB || YB.terminate(), DB.worker = null, null !== DB.job && GB(DB.job), DB.job = null
+        for (const be of this.slots) {
+          var ye;
+          this.clearTimer(be), null === (ye = be.worker) || void 0 === ye || ye.terminate(), be.worker = null, null !== be.job && He(be.job), be.job = null
         }
-        this.queue.splice(0).forEach(GB), null !== BB && this.opts.onUnavailable(BB)
+        this.queue.splice(0).forEach(He), null !== ee && this.opts.onUnavailable(ee)
       }
     }
-    const qB = [...YB.r, 5e3, 15e3, 3e4];
-    let ZB = null;
-    const NB = new Set;
+    const Te = [...ye.o, 5e3, 15e3, 3e4];
+    let pe = null;
+    const Xe = new Set;
 
-    function RB(BB) {
-      return NB.add(BB), ZB ??= function() {
-        let BB = "fix" === (0, jB.n)() || (0, jB.e)() || (0, oB.i)() ? 1 : (OB = navigator.hardwareConcurrency, MB = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, OB > 2 && !(0, JB.q)(MB) ? 2 : 1);
-        var OB, MB;
-        const PB = new pB({
-          module: (0, DB.g)(QB.d, {
-            delays: qB,
-            onRetry: (BB, OB) => {
-              ZB === PB && WB((GB => {
-                GB.onModuleRetry(BB, OB)
+    function ze(ee) {
+      return Xe.add(ee), pe ??= function() {
+        let ee = "fix" === (0, Ue.h)() || (0, Ue.c)() || (0, Ke.o)() ? 1 : (ie = navigator.hardwareConcurrency, oe = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, ie > 2 && !(0, Je.o)(oe) ? 2 : 1);
+        var ie, oe;
+        const Re = new fe({
+          module: (0, be.g)(Me.c, {
+            delays: Te,
+            onRetry: (ee, ie) => {
+              pe === Re && Be((He => {
+                He.onModuleRetry(ee, ie)
               }))
             }
           }),
           loadWorker: async () => {
-            const [BB] = await Promise.all([GB.e(51).then((() => GB(64086))), (0, yB.g)()]);
-            return BB.createModelWorker
+            const [ee] = await Promise.all([He.e(51).then((() => He(64057))), (0, Fe.g)()]);
+            return ee.createModelWorker
           },
-          count: BB,
-          onUnavailable: BB => {
-            if (ZB === PB) {
-              ZB = null;
-              const OB = function(BB) {
-                return BB instanceof YB.b ? [QB.d.url().href] : void 0
-              }(BB);
-              WB((GB => {
-                GB.onUnavailable(BB, OB)
+          count: ee,
+          onUnavailable: ee => {
+            if (pe === Re) {
+              pe = null;
+              const ie = function(ee) {
+                return ee instanceof ye.b ? [Me.c.url().href] : void 0
+              }(ee);
+              Be((He => {
+                He.onUnavailable(ee, ie)
               }))
             }
           },
-          onWorkerLost: BB => {
-            ZB === PB && WB((OB => {
-              OB.onWorkerLost(BB)
+          onWorkerLost: ee => {
+            pe === Re && Be((ie => {
+              ie.onWorkerLost(ee)
             }))
           }
         });
-        return PB
+        return Re
       }(), {
-        pool: ZB,
+        pool: pe,
         unlisten: () => {
-          NB.delete(BB)
+          Xe.delete(ee)
         }
       }
     }
 
-    function WB(BB) {
-      for (const GB of [...NB]) try {
-        BB(GB)
-      } catch (OB) {
-        console.error("[pageModelPool] a listener threw", OB)
+    function Be(ee) {
+      for (const He of [...Xe]) try {
+        ee(He)
+      } catch (ie) {
+        console.error("[pageModelPool] a listener threw", ie)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,116 +1,116 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  40322: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => jB
+  40439: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => Ue
     });
-    var YB = GB(34815);
-    const DB = 1e3 / 3;
+    var ye = He(34905);
+    const be = 1e3 / 3;
 
-    function QB(BB, OB, GB) {
-      if ("parenthetical-seconds" === OB) return ` (${BB}s)`;
-      const YB = `${Math.floor(BB/60)}:${(BB%60).toString().padStart(2,"0")}`;
-      return GB ? `${GB}${YB}` : YB
+    function Me(ee, ie, He) {
+      if ("parenthetical-seconds" === ie) return ` (${ee}s)`;
+      const ye = `${Math.floor(ee/60)}:${(ee%60).toString().padStart(2,"0")}`;
+      return He ? `${He}${ye}` : ye
     }
 
-    function oB(BB, OB, GB, DB, QB) {
-      var oB;
-      const jB = {
-        ...DB.baseNametag
+    function Ke(ee, ie, He, be, Me) {
+      var Ke;
+      const Ue = {
+        ...be.baseNametag
       };
-      jB.content = [...null !== (oB = DB.baseNametag.content) && void 0 !== oB ? oB : [], {
+      Ue.content = [...null !== (Ke = be.baseNametag.content) && void 0 !== Ke ? Ke : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,YB.d)(QB)}`
-      }], BB.setOtherEntitySetting(OB, GB, "nameTagInfo", jB)
+        str: `: ${(0,ye.d)(Me)}`
+      }], ee.setOtherEntitySetting(ie, He, "nameTagInfo", Ue)
     }
-    const jB = function(BB, OB, GB, YB) {
-      let jB, {
-        localPlayerId: yB
-      } = YB;
-      const JB = new Map,
-        MB = new Map;
-      let PB = 0,
-        zB = 0;
+    const Ue = function(ee, ie, He, ye) {
+      let Ue, {
+        localPlayerId: Fe
+      } = ye;
+      const Je = new Map,
+        oe = new Map;
+      let Re = 0,
+        ke = 0;
       return {
-        onCreate: BB => {
-          jB = BB
+        onCreate: ee => {
+          Ue = ee
         },
-        kP: BB => {
-          const OB = Date.now();
-          for (const [YB, DB] of JB) {
-            const BB = Math.floor((OB - DB.startTime) / 1e3),
-              oB = Math.max(0, DB.remainingSeconds - BB);
-            if (oB === DB.lastRenderedSecond) continue;
-            DB.lastRenderedSecond = oB;
-            const MB = {
-                str: QB(oB, DB.format, DB.prefix),
-                style: DB.style
+        YR: ee => {
+          const ie = Date.now();
+          for (const [ye, be] of Je) {
+            const ee = Math.floor((ie - be.startTime) / 1e3),
+              Ke = Math.max(0, be.remainingSeconds - ee);
+            if (Ke === be.lastRenderedSecond) continue;
+            be.lastRenderedSecond = Ke;
+            const oe = {
+                str: Me(Ke, be.format, be.prefix),
+                style: be.style
               },
-              PB = {
-                ...DB.baseNametag
+              Re = {
+                ...be.baseNametag
               };
-            var GB;
-            if ("content" === DB.location) PB.content = [...null !== (GB = DB.baseNametag.content) && void 0 !== GB ? GB : [], MB];
-            else PB.subtitle = [MB];
-            jB.setOtherEntitySetting(yB, YB, "nameTagInfo", PB), oB <= 0 && JB.delete(YB)
+            var He;
+            if ("content" === be.location) Re.content = [...null !== (He = be.baseNametag.content) && void 0 !== He ? He : [], oe];
+            else Re.subtitle = [oe];
+            Ue.setOtherEntitySetting(Fe, ye, "nameTagInfo", Re), Ke <= 0 && Je.delete(ye)
           }
-          if (MB.size > 0 && OB - PB >= DB) {
-            PB = OB, zB = (zB + 1) % 3;
-            let BB = 0;
-            for (const [GB, YB] of MB) {
-              if (BB++ % 3 !== zB) continue;
-              const DB = Math.floor((OB - YB.startTime) / 1e3);
-              if (DB === YB.lastRenderedSecond) continue;
-              YB.lastRenderedSecond = DB;
-              const QB = YB.accumulatedIncome + YB.incomePerSecond * BigInt(DB);
-              oB(jB, yB, GB, YB, QB)
+          if (oe.size > 0 && ie - Re >= be) {
+            Re = ie, ke = (ke + 1) % 3;
+            let ee = 0;
+            for (const [He, ye] of oe) {
+              if (ee++ % 3 !== ke) continue;
+              const be = Math.floor((ie - ye.startTime) / 1e3);
+              if (be === ye.lastRenderedSecond) continue;
+              ye.lastRenderedSecond = be;
+              const Me = ye.accumulatedIncome + ye.incomePerSecond * BigInt(be);
+              Ke(Ue, Fe, He, ye, Me)
             }
           }
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          if ("startCountdown" === BB) JB.set(OB.eId, {
-            baseNametag: OB.baseNametag,
-            remainingSeconds: OB.remainingSeconds,
+        onReceivedMessageFromServer: (ee, ie) => {
+          if ("startCountdown" === ee) Je.set(ie.eId, {
+            baseNametag: ie.baseNametag,
+            remainingSeconds: ie.remainingSeconds,
             startTime: Date.now(),
-            format: OB.format,
-            location: OB.location,
-            prefix: OB.prefix,
-            style: OB.style,
+            format: ie.format,
+            location: ie.location,
+            prefix: ie.prefix,
+            style: ie.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === BB) JB.delete(OB.eId);
-          else if ("startIncomeTicking" === BB) {
-            const BB = {
-              baseNametag: OB.baseNametag,
-              accumulatedIncome: BigInt(OB.accumulatedIncome),
-              incomePerSecond: BigInt(OB.incomePerSecond),
+          else if ("stopCountdown" === ee) Je.delete(ie.eId);
+          else if ("startIncomeTicking" === ee) {
+            const ee = {
+              baseNametag: ie.baseNametag,
+              accumulatedIncome: BigInt(ie.accumulatedIncome),
+              incomePerSecond: BigInt(ie.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            MB.set(OB.eId, BB), oB(jB, yB, OB.eId, BB, BB.accumulatedIncome)
-          } else "stopIncomeTicking" === BB && MB.delete(OB.eId) && jB.setOtherEntitySetting(yB, OB.eId, "nameTagInfo", {
+            oe.set(ie.eId, ee), Ke(Ue, Fe, ie.eId, ee, ee.accumulatedIncome)
+          } else "stopIncomeTicking" === ee && oe.delete(ie.eId) && Ue.setOtherEntitySetting(Fe, ie.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (BB, OB, GB, YB, DB, QB) => {
-          if (QB && "Mesh" === jB.getEntityType(QB)) {
-            const OB = jB.getEntityName(QB);
-            "Upgrades" === OB ? jB.openShop(BB, !1, "Upgrades") : "Items" === OB ? jB.openShop(BB, !1, "Items") : "Prestige" === OB ? jB.openShop(BB, !1, "Prestige") : "Collections" === OB ? jB.openShop(BB, !1, "Collections") : "Base Skins" === OB ? jB.openShop(BB, !1, "Base Skins") : "Gauntlet" === OB ? jB.openShop(BB, !1, "Gauntlet") : "Diamond Shop" === OB && jB.openShop(BB, !1, "Diamond Shop")
+        onPlayerAltAction: (ee, ie, He, ye, be, Me) => {
+          if (Me && "Mesh" === Ue.getEntityType(Me)) {
+            const ie = Ue.getEntityName(Me);
+            "Upgrades" === ie ? Ue.openShop(ee, !1, "Upgrades") : "Items" === ie ? Ue.openShop(ee, !1, "Items") : "Prestige" === ie ? Ue.openShop(ee, !1, "Prestige") : "Collections" === ie ? Ue.openShop(ee, !1, "Collections") : "Base Skins" === ie ? Ue.openShop(ee, !1, "Base Skins") : "Gauntlet" === ie ? Ue.openShop(ee, !1, "Gauntlet") : "Diamond Shop" === ie && Ue.openShop(ee, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34815: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => DB,
-      g: () => oB
+  34905: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => be,
+      h: () => Ke
     });
-    const YB = [{
+    const ye = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function DB(BB) {
-      let OB, GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof BB) {
-        if (!Number.isFinite(BB)) return "0";
-        if (Math.abs(BB) < 100) {
-          const OB = BB < 0 ? "-" : "",
-            GB = Math.abs(BB);
-          return GB >= 10 ? `${OB}${GB.toFixed(1).replace(/\.0$/,"")}` : `${OB}${GB.toFixed(2).replace(/\.?0+$/,"")}`
+    function be(ee) {
+      let ie, He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof ee) {
+        if (!Number.isFinite(ee)) return "0";
+        if (Math.abs(ee) < 100) {
+          const ie = ee < 0 ? "-" : "",
+            He = Math.abs(ee);
+          return He >= 10 ? `${ie}${He.toFixed(1).replace(/\.0$/,"")}` : `${ie}${He.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        OB = BigInt(Math.floor(BB))
-      } else OB = BB;
-      const DB = OB < 0n ? -OB : OB,
-        QB = OB < 0n ? "-" : "",
-        oB = DB.toString();
-      if (oB.length <= GB) return `${QB}${oB}`;
-      const jB = 3 * Math.floor((oB.length - 1) / 3);
-      if (jB < 3) return `${QB}${oB}`;
-      if (jB > 3 * YB.length) {
-        const BB = oB[0],
-          OB = oB.slice(1, 3).replace(/0+$/, "");
-        return `${QB}${OB?`${BB}.${OB}`:BB}e${oB.length-1}`
+        ie = BigInt(Math.floor(ee))
+      } else ie = ee;
+      const be = ie < 0n ? -ie : ie,
+        Me = ie < 0n ? "-" : "",
+        Ke = be.toString();
+      if (Ke.length <= He) return `${Me}${Ke}`;
+      const Ue = 3 * Math.floor((Ke.length - 1) / 3);
+      if (Ue < 3) return `${Me}${Ke}`;
+      if (Ue > 3 * ye.length) {
+        const ee = Ke[0],
+          ie = Ke.slice(1, 3).replace(/0+$/, "");
+        return `${Me}${ie?`${ee}.${ie}`:ee}e${Ke.length-1}`
       }
       const {
-        threshold: yB,
-        suffix: JB
-      } = YB[YB.length - jB / 3], MB = DB / yB, PB = Number(1000n * (DB % yB) / yB), zB = Number(MB) + PB / 1e3;
-      let lB;
-      return lB = zB >= 100 ? Math.floor(zB).toString() : zB >= 10 ? zB.toFixed(1).replace(/\.0$/, "") : zB.toFixed(2).replace(/\.?0+$/, ""), `${QB}${lB}${JB}`
+        threshold: Fe,
+        suffix: Je
+      } = ye[ye.length - Ue / 3], oe = be / Fe, Re = Number(1000n * (be % Fe) / Fe), ke = Number(oe) + Re / 1e3;
+      let qe;
+      return qe = ke >= 100 ? Math.floor(ke).toString() : ke >= 10 ? ke.toFixed(1).replace(/\.0$/, "") : ke.toFixed(2).replace(/\.?0+$/, ""), `${Me}${qe}${Je}`
     }
-    const QB = YB.map((BB => {
+    const Me = ye.map((ee => {
       let {
-        threshold: OB,
-        suffix: GB
-      } = BB;
+        threshold: ie,
+        suffix: He
+      } = ee;
       return {
-        threshold: Number(OB),
-        suffix: GB
+        threshold: Number(ie),
+        suffix: He
       }
-    })).filter((BB => {
+    })).filter((ee => {
       let {
-        threshold: OB
-      } = BB;
-      return Number.isFinite(OB)
+        threshold: ie
+      } = ee;
+      return Number.isFinite(ie)
     }));
 
-    function oB(BB) {
-      const OB = Math.abs(BB),
-        GB = BB < 0 ? "-" : "";
+    function Ke(ee) {
+      const ie = Math.abs(ee),
+        He = ee < 0 ? "-" : "";
       for (const {
-          threshold: YB,
-          suffix: DB
+          threshold: ye,
+          suffix: be
         }
-        of QB)
-        if (OB >= YB) {
-          const BB = OB / YB;
-          if (BB >= 1e3) return `${GB}${OB.toExponential(2).replace("e+","e")}`;
-          let QB;
-          return QB = BB >= 100 ? Math.floor(BB).toString() : BB >= 10 ? BB.toFixed(1).replace(/\.0$/, "") : BB.toFixed(2).replace(/\.?0+$/, ""), `${GB}${QB}${DB}`
-        } return `${GB}${OB}`
+        of Me)
+        if (ie >= ye) {
+          const ee = ie / ye;
+          if (ee >= 1e3) return `${He}${ie.toExponential(2).replace("e+","e")}`;
+          let Me;
+          return Me = ee >= 100 ? Math.floor(ee).toString() : ee >= 10 ? ee.toFixed(1).replace(/\.0$/, "") : ee.toFixed(2).replace(/\.?0+$/, ""), `${He}${Me}${be}`
+        } return `${He}${ie}`
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

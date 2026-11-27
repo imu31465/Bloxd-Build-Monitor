@@ -1,42 +1,42 @@
 export const id = 294;
 export const ids = [294];
 export const modules = {
-  41478: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => mG
+  41609: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => VH
     });
-    var YB = GB(56),
-      DB = GB(1090),
-      QB = GB.n(DB);
-    const oB = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"],
-      jB = 3e3;
+    var ye = He(59),
+      be = He(1053),
+      Me = He.n(be);
+    const Ke = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"],
+      Ue = 3e3;
 
-    function yB(BB) {
-      return BB.down && BB.inPlay && !BB.bound
+    function Fe(ee) {
+      return ee.down && ee.inPlay && !ee.bound
     }
 
-    function JB(BB, OB) {
-      let GB = 0,
-        YB = BB.length;
-      for (; GB < YB;) {
-        const DB = GB + YB >> 1;
-        BB[DB].atMs <= OB ? GB = DB + 1 : YB = DB
+    function Je(ee, ie) {
+      let He = 0,
+        ye = ee.length;
+      for (; He < ye;) {
+        const be = He + ye >> 1;
+        ee[be].atMs <= ie ? He = be + 1 : ye = be
       }
-      return GB - 1
+      return He - 1
     }
 
-    function MB(BB) {
+    function oe(ee) {
       let {
-        code: OB,
-        unbound: GB
-      } = BB;
-      return `${OB}:${GB}`
+        code: ie,
+        unbound: He
+      } = ee;
+      return `${ie}:${He}`
     }
 
-    function PB(BB, OB) {
-      return OB[1] - BB[1] || (BB[0] < OB[0] ? -1 : 1)
+    function Re(ee, ie) {
+      return ie[1] - ee[1] || (ee[0] < ie[0] ? -1 : 1)
     }
-    const zB = {
+    const ke = {
       Mouse1: "Left click",
       Mouse2: "Middle click",
       Mouse3: "Right click",
@@ -71,370 +71,370 @@ export const modules = {
       Unidentified: "Another key"
     };
 
-    function lB(BB) {
-      var OB;
-      const GB = zB[BB];
-      if (void 0 !== GB) return GB;
-      const YB = null !== (OB = /^(?:Key|Digit)(.)$/.exec(BB)) && void 0 !== OB ? OB : /^Numpad(.+)$/.exec(BB);
-      return null !== YB ? BB.startsWith("Numpad") ? `Num ${YB[1]}` : YB[1] : BB
+    function qe(ee) {
+      var ie;
+      const He = ke[ee];
+      if (void 0 !== He) return He;
+      const ye = null !== (ie = /^(?:Key|Digit)(.)$/.exec(ee)) && void 0 !== ie ? ie : /^Numpad(.+)$/.exec(ee);
+      return null !== ye ? ee.startsWith("Numpad") ? `Num ${ye[1]}` : ye[1] : ee
     }
-    const pB = 250,
-      qB = 60;
-    var ZB = GB(1282);
-    const NB = 6;
+    const fe = 250,
+      Te = 60;
+    var pe = He(1228);
+    const Xe = 6;
 
-    function RB(BB) {
-      const OB = Math.max(0, Math.floor(BB / 1e3)),
-        GB = Math.floor(OB / 3600),
-        YB = Math.floor(OB % 3600 / 60),
-        DB = String(OB % 60).padStart(2, "0");
-      return GB > 0 ? `${GB}:${String(YB).padStart(2,"0")}:${DB}` : `${YB}:${DB}`
-    }
-
-    function WB(BB, OB) {
-      return getComputedStyle(BB).getPropertyValue(OB).trim()
+    function ze(ee) {
+      const ie = Math.max(0, Math.floor(ee / 1e3)),
+        He = Math.floor(ie / 3600),
+        ye = Math.floor(ie % 3600 / 60),
+        be = String(ie % 60).padStart(2, "0");
+      return He > 0 ? `${He}:${String(ye).padStart(2,"0")}:${be}` : `${ye}:${be}`
     }
 
-    function AB(BB, OB) {
-      switch (BB.kind) {
+    function Be(ee, ie) {
+      return getComputedStyle(ee).getPropertyValue(ie).trim()
+    }
+
+    function Ee(ee, ie) {
+      switch (ee.kind) {
         case "note":
-          return BB.label;
+          return ee.label;
         case "hidden":
-          return OB.tabHidden;
+          return ie.tabHidden;
         default:
-          return OB[BB.kind]
+          return ie[ee.kind]
       }
     }
 
-    function VB(BB) {
+    function ge(ee) {
       let {
-        draw: OB,
-        className: GB
-      } = BB;
-      const DB = (0, YB.useRef)(null);
-      return (0, YB.useEffect)((() => {
-        const BB = DB.current,
-          GB = BB.getContext("2d");
-        if (null === OB || null === GB) return;
+        draw: ie,
+        className: He
+      } = ee;
+      const be = (0, ye.useRef)(null);
+      return (0, ye.useEffect)((() => {
+        const ee = be.current,
+          He = ee.getContext("2d");
+        if (null === ie || null === He) return;
         const {
-          clientWidth: YB,
-          clientHeight: QB
-        } = BB, oB = window.devicePixelRatio;
-        BB.width = Math.round(YB * oB), BB.height = Math.round(QB * oB), GB.setTransform(oB, 0, 0, oB, 0, 0), OB(GB, YB, QB, BB)
-      }), [OB]), (0, ZB.jsx)("canvas", {
-        ref: DB,
-        className: GB
+          clientWidth: ye,
+          clientHeight: Me
+        } = ee, Ke = window.devicePixelRatio;
+        ee.width = Math.round(ye * Ke), ee.height = Math.round(Me * Ke), He.setTransform(Ke, 0, 0, Ke, 0, 0), ie(He, ye, Me, ee)
+      }), [ie]), (0, pe.jsx)("canvas", {
+        ref: be,
+        className: He
       })
     }
 
-    function SB(BB) {
+    function Oe(ee) {
       let {
-        controller: OB,
-        frames: GB,
-        input: DB,
-        markers: QB,
-        inactiveRanges: oB,
-        videoGaps: JB,
-        labels: MB
-      } = BB;
+        controller: ie,
+        frames: He,
+        input: be,
+        markers: Me,
+        inactiveRanges: Ke,
+        videoGaps: Je,
+        labels: oe
+      } = ee;
       const {
-        timeline: zB
-      } = OB, SB = (0, YB.useRef)(null), [nB, UB] = (0, YB.useState)(0), [fB, kB] = (0, YB.useState)(null), dB = (0, YB.useRef)(null), KB = Math.max(1, zB.durationMs);
-      ! function(BB, OB, GB) {
-        (0, YB.useEffect)((() => {
-          let YB = 0,
-            DB = NaN;
-          const QB = () => {
-            var oB;
-            YB = requestAnimationFrame(QB);
-            const jB = (null !== (oB = OB.current) && void 0 !== oB ? oB : BB.getPositionMs()) / Math.max(1, BB.timeline.durationMs) * 100;
-            jB !== DB && (DB = jB, GB.current.style.setProperty("--brv-position", `${jB}%`))
+        timeline: ke
+      } = ie, Oe = (0, ye.useRef)(null), [de, We] = (0, ye.useState)(0), [te, Ze] = (0, ye.useState)(null), we = (0, ye.useRef)(null), De = Math.max(1, ke.durationMs);
+      ! function(ee, ie, He) {
+        (0, ye.useEffect)((() => {
+          let ye = 0,
+            be = NaN;
+          const Me = () => {
+            var Ke;
+            ye = requestAnimationFrame(Me);
+            const Ue = (null !== (Ke = ie.current) && void 0 !== Ke ? Ke : ee.getPositionMs()) / Math.max(1, ee.timeline.durationMs) * 100;
+            Ue !== be && (be = Ue, He.current.style.setProperty("--brv-position", `${Ue}%`))
           };
-          return QB(), () => {
-            cancelAnimationFrame(YB)
+          return Me(), () => {
+            cancelAnimationFrame(ye)
           }
-        }), [BB])
-      }(OB, dB, SB), (0, YB.useEffect)((() => {
-        const BB = SB.current,
-          OB = new ResizeObserver((() => {
-            UB(BB.clientWidth)
+        }), [ee])
+      }(ie, we, Oe), (0, ye.useEffect)((() => {
+        const ee = Oe.current,
+          ie = new ResizeObserver((() => {
+            We(ee.clientWidth)
           }));
-        return OB.observe(BB), () => {
-          OB.disconnect()
+        return ie.observe(ee), () => {
+          ie.disconnect()
         }
       }), []);
-      const uB = (0, YB.useMemo)((() => 0 === nB ? null : function(BB, OB, GB) {
-          const YB = Math.max(1, Math.min(GB, Math.floor(OB.durationMs / pB))),
-            DB = OB.durationMs / YB,
-            QB = new Array(YB).fill(0);
-          for (const oB of BB) OB.contains(oB.atMs) && QB[Math.min(YB - 1, Math.floor(OB.toPosition(oB.atMs) / DB))]++;
+      const Pe = (0, ye.useMemo)((() => 0 === de ? null : function(ee, ie, He) {
+          const ye = Math.max(1, Math.min(He, Math.floor(ie.durationMs / fe))),
+            be = ie.durationMs / ye,
+            Me = new Array(ye).fill(0);
+          for (const Ke of ee) ie.contains(Ke.atMs) && Me[Math.min(ye - 1, Math.floor(ie.toPosition(Ke.atMs) / be))]++;
           return {
-            bucketMs: DB,
-            fps: QB.map((BB => 0 === BB ? null : 1e3 * BB / DB))
+            bucketMs: be,
+            fps: Me.map((ee => 0 === ee ? null : 1e3 * ee / be))
           }
-        }(GB, zB, Math.round(nB))), [GB, zB, nB]),
-        mB = OB.lowFps,
-        IB = (0, YB.useMemo)((() => null === uB ? null : (BB, OB, GB, YB) => {
-          ! function(BB, OB, GB, YB, DB, QB) {
-            BB.clearRect(0, 0, GB, YB);
-            const oB = GB / OB.fps.length;
-            OB.fps.forEach(((OB, GB) => {
-              if (null === OB) return;
-              const jB = Math.max(1, Math.min(OB, qB) / qB * YB);
-              BB.fillStyle = OB < DB ? QB.lowFps : QB.fps, BB.fillRect(GB * oB, YB - jB, Math.max(1, oB), jB)
+        }(He, ke, Math.round(de))), [He, ke, de]),
+        Ae = ie.lowFps,
+        Ye = (0, ye.useMemo)((() => null === Pe ? null : (ee, ie, He, ye) => {
+          ! function(ee, ie, He, ye, be, Me) {
+            ee.clearRect(0, 0, He, ye);
+            const Ke = He / ie.fps.length;
+            ie.fps.forEach(((ie, He) => {
+              if (null === ie) return;
+              const Ue = Math.max(1, Math.min(ie, Te) / Te * ye);
+              ee.fillStyle = ie < be ? Me.lowFps : Me.fps, ee.fillRect(He * Ke, ye - Ue, Math.max(1, Ke), Ue)
             }))
-          }(BB, uB, OB, GB, mB, {
-            fps: WB(YB, "--brv-fps"),
-            lowFps: WB(YB, "--brv-low-fps")
+          }(ee, Pe, ie, He, Ae, {
+            fps: Be(ye, "--brv-fps"),
+            lowFps: Be(ye, "--brv-low-fps")
           })
-        }), [uB, mB]),
-        FB = (0, YB.useMemo)((() => {
-          if (0 === nB || !DB.inputRecorded) return null;
-          const BB = function(BB, OB, GB) {
-            const YB = Math.max(1, OB.durationMs) / GB,
-              DB = new Array(GB).fill(0),
-              QB = new Array(GB).fill(0);
-            for (const oB of BB) {
-              if (!oB.down || !OB.contains(oB.atMs)) continue;
-              const BB = Math.min(GB - 1, Math.floor(OB.toPosition(oB.atMs) / YB));
-              DB[BB]++, yB(oB) && QB[BB]++
+        }), [Pe, Ae]),
+        Ve = (0, ye.useMemo)((() => {
+          if (0 === de || !be.inputRecorded) return null;
+          const ee = function(ee, ie, He) {
+            const ye = Math.max(1, ie.durationMs) / He,
+              be = new Array(He).fill(0),
+              Me = new Array(He).fill(0);
+            for (const Ke of ee) {
+              if (!Ke.down || !ie.contains(Ke.atMs)) continue;
+              const ee = Math.min(He - 1, Math.floor(ie.toPosition(Ke.atMs) / ye));
+              be[ee]++, Fe(Ke) && Me[ee]++
             }
             return {
-              presses: DB,
-              unbound: QB
+              presses: be,
+              unbound: Me
             }
-          }(DB.keys, zB, Math.max(1, Math.round(nB)));
-          return (OB, GB, YB, DB) => {
-            ! function(BB, OB, GB, YB, DB) {
-              BB.clearRect(0, 0, GB, YB);
-              const QB = GB / OB.presses.length;
-              OB.presses.forEach(((GB, oB) => {
-                if (0 === GB) return;
-                const jB = OB.unbound[oB] > 0;
-                BB.globalAlpha = jB ? 1 : Math.min(1, .35 + .15 * GB), BB.fillStyle = jB ? DB.unbound : DB.presses, BB.fillRect(oB * QB, 0, Math.max(jB ? 2 : 1, QB), YB)
-              })), BB.globalAlpha = 1
-            }(OB, BB, GB, YB, {
-              presses: WB(DB, "--brv-key-press"),
-              unbound: WB(DB, "--brv-key-unbound")
+          }(be.keys, ke, Math.max(1, Math.round(de)));
+          return (ie, He, ye, be) => {
+            ! function(ee, ie, He, ye, be) {
+              ee.clearRect(0, 0, He, ye);
+              const Me = He / ie.presses.length;
+              ie.presses.forEach(((He, Ke) => {
+                if (0 === He) return;
+                const Ue = ie.unbound[Ke] > 0;
+                ee.globalAlpha = Ue ? 1 : Math.min(1, .35 + .15 * He), ee.fillStyle = Ue ? be.unbound : be.presses, ee.fillRect(Ke * Me, 0, Math.max(Ue ? 2 : 1, Me), ye)
+              })), ee.globalAlpha = 1
+            }(ie, ee, He, ye, {
+              presses: Be(be, "--brv-key-press"),
+              unbound: Be(be, "--brv-key-unbound")
             })
           }
-        }), [DB, zB, nB]),
-        iB = (0, YB.useMemo)((() => function(BB) {
-          const OB = [];
-          for (const YB of BB) {
-            var GB;
-            if (!yB(YB)) continue;
-            let BB = OB.at(-1);
-            (void 0 === BB || YB.atMs - BB.endMs > jB) && (BB = {
-              startMs: YB.atMs,
-              endMs: YB.atMs,
+        }), [be, ke, de]),
+        ae = (0, ye.useMemo)((() => function(ee) {
+          const ie = [];
+          for (const ye of ee) {
+            var He;
+            if (!Fe(ye)) continue;
+            let ee = ie.at(-1);
+            (void 0 === ee || ye.atMs - ee.endMs > Ue) && (ee = {
+              startMs: ye.atMs,
+              endMs: ye.atMs,
               counts: new Map
-            }, OB.push(BB)), BB.endMs = YB.atMs, BB.counts.set(YB.code, (null !== (GB = BB.counts.get(YB.code)) && void 0 !== GB ? GB : 0) + 1)
+            }, ie.push(ee)), ee.endMs = ye.atMs, ee.counts.set(ye.code, (null !== (He = ee.counts.get(ye.code)) && void 0 !== He ? He : 0) + 1)
           }
-          return OB.map((BB => {
+          return ie.map((ee => {
             let {
-              startMs: OB,
-              endMs: GB,
-              counts: YB
-            } = BB;
+              startMs: ie,
+              endMs: He,
+              counts: ye
+            } = ee;
             return {
-              startMs: OB,
-              endMs: GB,
-              keys: [...YB].sort(PB)
+              startMs: ie,
+              endMs: He,
+              keys: [...ye].sort(Re)
             }
           }))
-        }(DB.keys.filter((BB => zB.contains(BB.atMs))))), [DB.keys, zB]),
-        LB = BB => zB.toPosition(BB) / KB * 100,
-        gB = BB => LB(BB) / 100 * nB,
-        rB = BB => {
-          const OB = SB.current.getBoundingClientRect();
+        }(be.keys.filter((ee => ke.contains(ee.atMs))))), [be.keys, ke]),
+        ce = ee => ke.toPosition(ee) / De * 100,
+        xe = ee => ce(ee) / 100 * de,
+        Le = ee => {
+          const ie = Oe.current.getBoundingClientRect();
           return {
-            px: BB - OB.left,
-            positionMs: Math.max(0, Math.min(OB.width, BB - OB.left)) / OB.width * KB
+            px: ee - ie.left,
+            positionMs: Math.max(0, Math.min(ie.width, ee - ie.left)) / ie.width * De
           }
         },
-        XB = null === fB || 0 === nB ? null : {
-          px: fB,
-          positionMs: Math.max(0, Math.min(nB, fB)) / nB * KB
+        Ce = null === te || 0 === de ? null : {
+          px: te,
+          positionMs: Math.max(0, Math.min(de, te)) / de * De
         },
-        wB = null === XB || null === uB ? null : function(BB, OB) {
-          const GB = Math.max(0, Math.min(BB.fps.length - 1, Math.floor(OB / BB.bucketMs))),
-            YB = BB.fps[GB];
-          return null === YB ? null : Math.round(YB)
-        }(uB, XB.positionMs),
-        EB = null !== XB && JB.some((BB => XB.px >= gB(BB.startMs) && XB.px < gB(BB.endMs))),
-        cB = null === XB ? void 0 : QB.find((BB => {
-          var OB;
-          return XB.px >= gB(BB.atMs) - NB && XB.px <= gB(null !== (OB = BB.endMs) && void 0 !== OB ? OB : BB.atMs) + NB
+        ve = null === Ce || null === Pe ? null : function(ee, ie) {
+          const He = Math.max(0, Math.min(ee.fps.length - 1, Math.floor(ie / ee.bucketMs))),
+            ye = ee.fps[He];
+          return null === ye ? null : Math.round(ye)
+        }(Pe, Ce.positionMs),
+        ue = null !== Ce && Je.some((ee => Ce.px >= xe(ee.startMs) && Ce.px < xe(ee.endMs))),
+        me = null === Ce ? void 0 : Me.find((ee => {
+          var ie;
+          return Ce.px >= xe(ee.atMs) - Xe && Ce.px <= xe(null !== (ie = ee.endMs) && void 0 !== ie ? ie : ee.atMs) + Xe
         })),
-        hB = null === XB ? void 0 : iB.find((BB => XB.px >= gB(BB.startMs) - NB && XB.px <= gB(BB.endMs) + NB));
-      return (0, ZB.jsxs)("div", {
-        ref: SB,
-        className: DB.inputRecorded ? "brv-seekbar brv-seekbar-with-input" : "brv-seekbar",
-        onPointerDown: BB => {
-          BB.currentTarget.setPointerCapture(BB.pointerId);
-          const OB = rB(BB.clientX);
-          kB(OB.px), dB.current = OB.positionMs
+        le = null === Ce ? void 0 : ae.find((ee => Ce.px >= xe(ee.startMs) - Xe && Ce.px <= xe(ee.endMs) + Xe));
+      return (0, pe.jsxs)("div", {
+        ref: Oe,
+        className: be.inputRecorded ? "brv-seekbar brv-seekbar-with-input" : "brv-seekbar",
+        onPointerDown: ee => {
+          ee.currentTarget.setPointerCapture(ee.pointerId);
+          const ie = Le(ee.clientX);
+          Ze(ie.px), we.current = ie.positionMs
         },
-        onPointerMove: BB => {
-          const OB = rB(BB.clientX);
-          kB(OB.px), null !== dB.current && (dB.current = OB.positionMs)
+        onPointerMove: ee => {
+          const ie = Le(ee.clientX);
+          Ze(ie.px), null !== we.current && (we.current = ie.positionMs)
         },
-        onPointerUp: BB => {
-          null !== dB.current && (OB.seekToPosition(rB(BB.clientX).positionMs), dB.current = null)
+        onPointerUp: ee => {
+          null !== we.current && (ie.seekToPosition(Le(ee.clientX).positionMs), we.current = null)
         },
         onPointerCancel: () => {
-          dB.current = null, kB(null)
+          we.current = null, Ze(null)
         },
         onPointerLeave: () => {
-          kB(null)
+          Ze(null)
         },
-        children: [(0, ZB.jsxs)("div", {
+        children: [(0, pe.jsxs)("div", {
           className: "brv-seekbar-track",
-          children: [(0, ZB.jsx)(VB, {
-            draw: IB,
+          children: [(0, pe.jsx)(ge, {
+            draw: Ye,
             className: "brv-seekbar-canvas"
-          }), oB.map((BB => {
-            const OB = LB(BB.startMs);
-            return (0, ZB.jsx)("div", {
+          }), Ke.map((ee => {
+            const ie = ce(ee.startMs);
+            return (0, pe.jsx)("div", {
               className: "brv-seekbar-inactive",
               style: {
-                left: `${OB}%`,
-                width: LB(BB.endMs) - OB + "%"
+                left: `${ie}%`,
+                width: ce(ee.endMs) - ie + "%"
               }
-            }, BB.startMs)
-          })), JB.map((BB => {
-            const OB = LB(BB.startMs);
-            return (0, ZB.jsx)("div", {
+            }, ee.startMs)
+          })), Je.map((ee => {
+            const ie = ce(ee.startMs);
+            return (0, pe.jsx)("div", {
               className: "brv-seekbar-video-gap",
               style: {
-                left: `${OB}%`,
-                width: LB(BB.endMs) - OB + "%"
+                left: `${ie}%`,
+                width: ce(ee.endMs) - ie + "%"
               }
-            }, BB.startMs)
-          })), (0, ZB.jsx)("div", {
+            }, ee.startMs)
+          })), (0, pe.jsx)("div", {
             className: "brv-seekbar-progress"
-          }), null !== XB && (0, ZB.jsx)("div", {
+          }), null !== Ce && (0, pe.jsx)("div", {
             className: "brv-seekbar-hover",
             style: {
-              left: XB.px
+              left: Ce.px
             }
           })]
-        }), DB.inputRecorded && (0, ZB.jsx)(VB, {
-          draw: FB,
+        }), be.inputRecorded && (0, pe.jsx)(ge, {
+          draw: Ve,
           className: "brv-seekbar-input"
-        }), (0, ZB.jsx)("div", {
+        }), (0, pe.jsx)("div", {
           className: "brv-seekbar-markers",
-          children: QB.map(((BB, OB) => {
-            var GB;
-            const YB = LB(BB.atMs),
-              DB = void 0 !== BB.endMs;
-            return (0, ZB.jsx)("div", {
-              className: `brv-marker brv-marker-${BB.kind}${DB?" brv-marker-range":""}`,
+          children: Me.map(((ee, ie) => {
+            var He;
+            const ye = ce(ee.atMs),
+              be = void 0 !== ee.endMs;
+            return (0, pe.jsx)("div", {
+              className: `brv-marker brv-marker-${ee.kind}${be?" brv-marker-range":""}`,
               style: {
-                left: `${YB}%`,
-                width: DB ? LB(null !== (GB = BB.endMs) && void 0 !== GB ? GB : BB.atMs) - YB + "%" : void 0
+                left: `${ye}%`,
+                width: be ? ce(null !== (He = ee.endMs) && void 0 !== He ? He : ee.atMs) - ye + "%" : void 0
               }
-            }, OB)
+            }, ie)
           }))
-        }), (0, ZB.jsx)("div", {
+        }), (0, pe.jsx)("div", {
           className: "brv-seekbar-playhead"
-        }), null !== XB && (0, ZB.jsxs)("div", {
+        }), null !== Ce && (0, pe.jsxs)("div", {
           className: "brv-tooltip",
           style: {
-            left: XB.px
+            left: Ce.px
           },
-          children: [RB(XB.positionMs), null !== wB && ` \xb7 ${MB.fps(wB)}`, void 0 !== cB && ` \xb7 ${AB(cB,MB)}`, EB && ` \xb7 ${MB.videoGap}`, void 0 !== hB && ` \xb7 ${MB.unboundKeys((aB=hB.keys,aB.map((BB=>{let[OB,GB]=BB;return GB>1?`${lB(OB)} \xd7${GB}`:lB(OB)})).join(", ")))}`]
+          children: [ze(Ce.positionMs), null !== ve && ` \xb7 ${oe.fps(ve)}`, void 0 !== me && ` \xb7 ${Ee(me,oe)}`, ue && ` \xb7 ${oe.videoGap}`, void 0 !== le && ` \xb7 ${oe.unboundKeys((Se=le.keys,Se.map((ee=>{let[ie,He]=ee;return He>1?`${qe(ie)} \xd7${He}`:qe(ie)})).join(", ")))}`]
         })]
       });
-      var aB
+      var Se
     }
-    var nB = GB(5090),
-      UB = GB(1175),
-      fB = GB(4975),
-      kB = GB(1375),
-      dB = GB(1485),
-      KB = GB(1383),
-      uB = GB(7023),
-      mB = GB(5578),
-      IB = GB(5575);
-    const FB = [.5, 1, 2, 4, 8, 16];
-    var iB = GB(41487);
+    var de = He(5075),
+      We = He(1127),
+      te = He(4947),
+      Ze = He(1320),
+      we = He(1438),
+      De = He(1323),
+      Pe = He(7123),
+      Ae = He(5628),
+      Ye = He(5619);
+    const Ve = [.5, 1, 2, 4, 8, 16];
+    var ae = He(41612);
 
-    function LB(BB) {
-      const OB = BB.filter((BB => BB.endMs > BB.startMs)).sort(((BB, OB) => BB.startMs - OB.startMs)),
-        GB = [];
-      for (const YB of OB) {
-        const BB = GB.at(-1);
-        void 0 !== BB && YB.startMs <= BB.endMs ? BB.endMs = Math.max(BB.endMs, YB.endMs) : GB.push({
-          ...YB
+    function ce(ee) {
+      const ie = ee.filter((ee => ee.endMs > ee.startMs)).sort(((ee, ie) => ee.startMs - ie.startMs)),
+        He = [];
+      for (const ye of ie) {
+        const ee = He.at(-1);
+        void 0 !== ee && ye.startMs <= ee.endMs ? ee.endMs = Math.max(ee.endMs, ye.endMs) : He.push({
+          ...ye
         })
       }
-      return GB
+      return He
     }
-    class gB {
-      constructor(BB) {
-        this.JZ = void 0, this.durationMs = void 0, this.positionStarts = void 0, this.JZ = LB(BB), this.positionStarts = [];
-        let OB = 0;
-        for (const GB of this.JZ) this.positionStarts.push(OB), OB += GB.endMs - GB.startMs;
-        this.durationMs = OB
+    class xe {
+      constructor(ee) {
+        this.zp = void 0, this.durationMs = void 0, this.positionStarts = void 0, this.zp = ce(ee), this.positionStarts = [];
+        let ie = 0;
+        for (const He of this.zp) this.positionStarts.push(ie), ie += He.endMs - He.startMs;
+        this.durationMs = ie
       }
       get startMs() {
-        var BB, OB;
-        return null !== (BB = null === (OB = this.JZ[0]) || void 0 === OB ? void 0 : OB.startMs) && void 0 !== BB ? BB : 0
+        var ee, ie;
+        return null !== (ee = null === (ie = this.zp[0]) || void 0 === ie ? void 0 : ie.startMs) && void 0 !== ee ? ee : 0
       }
       get endMs() {
-        var BB, OB;
-        return null !== (BB = null === (OB = this.JZ.at(-1)) || void 0 === OB ? void 0 : OB.endMs) && void 0 !== BB ? BB : 0
+        var ee, ie;
+        return null !== (ee = null === (ie = this.zp.at(-1)) || void 0 === ie ? void 0 : ie.endMs) && void 0 !== ee ? ee : 0
       }
-      toPosition(BB) {
-        for (let OB = 0; OB < this.JZ.length; OB++) {
-          const GB = this.JZ[OB];
-          if (BB < GB.endMs) return this.positionStarts[OB] + Math.max(0, BB - GB.startMs)
+      toPosition(ee) {
+        for (let ie = 0; ie < this.zp.length; ie++) {
+          const He = this.zp[ie];
+          if (ee < He.endMs) return this.positionStarts[ie] + Math.max(0, ee - He.startMs)
         }
         return this.durationMs
       }
-      toTime(BB) {
-        const OB = Math.max(0, Math.min(this.durationMs, BB));
-        for (let GB = this.JZ.length - 1; GB >= 0; GB--)
-          if (OB >= this.positionStarts[GB]) return this.JZ[GB].startMs + (OB - this.positionStarts[GB]);
+      toTime(ee) {
+        const ie = Math.max(0, Math.min(this.durationMs, ee));
+        for (let He = this.zp.length - 1; He >= 0; He--)
+          if (ie >= this.positionStarts[He]) return this.zp[He].startMs + (ie - this.positionStarts[He]);
         return this.startMs
       }
-      contains(BB) {
-        return this.JZ.some((OB => BB >= OB.startMs && BB < OB.endMs))
+      contains(ee) {
+        return this.zp.some((ie => ee >= ie.startMs && ee < ie.endMs))
       }
-      nextPlayableTime(BB) {
-        for (const OB of this.JZ) {
-          if (BB < OB.startMs) return OB.startMs;
-          if (BB < OB.endMs) return BB
+      nextPlayableTime(ee) {
+        for (const ie of this.zp) {
+          if (ee < ie.startMs) return ie.startMs;
+          if (ee < ie.endMs) return ee
         }
         return null
       }
     }
 
-    function rB(BB) {
-      return [...BB].sort(((BB, OB) => BB.startMs - OB.startMs))
+    function Le(ee) {
+      return [...ee].sort(((ee, ie) => ee.startMs - ie.startMs))
     }
 
-    function XB(BB, OB) {
-      let GB = 1 / 0,
-        YB = -1 / 0;
-      const DB = BB => {
-        GB = Math.min(GB, BB), YB = Math.max(YB, BB)
+    function Ce(ee, ie) {
+      let He = 1 / 0,
+        ye = -1 / 0;
+      const be = ee => {
+        He = Math.min(He, ee), ye = Math.max(ye, ee)
       };
-      for (const QB of [...BB.videoSegments, ...BB.telemetryChunks]) DB(QB.startMs), DB(QB.endMs);
-      for (const QB of BB.domEvents) DB(OB.toEpoch(QB.timestamp));
-      return GB < YB ? {
-        startMs: GB,
-        endMs: YB
+      for (const Me of [...ee.videoSegments, ...ee.telemetryChunks]) be(Me.startMs), be(Me.endMs);
+      for (const Me of ee.domEvents) be(ie.toEpoch(Me.timestamp));
+      return He < ye ? {
+        startMs: He,
+        endMs: ye
       } : {
         startMs: 0,
         endMs: 0
       }
     }
-    class wB {
-      constructor(BB, OB) {
-        this.wallNowMs = OB, this.anchorTimeMs = void 0, this.anchorWallMs = void 0, this.playingState = !1, this.speedState = 1, this.anchorTimeMs = BB, this.anchorWallMs = OB()
+    class ve {
+      constructor(ee, ie) {
+        this.wallNowMs = ie, this.anchorTimeMs = void 0, this.anchorWallMs = void 0, this.playingState = !1, this.speedState = 1, this.anchorTimeMs = ee, this.anchorWallMs = ie()
       }
       get playing() {
         return this.playingState
@@ -445,8 +445,8 @@ export const modules = {
       timeMs() {
         return this.timeAtWall(this.wallNowMs())
       }
-      timeAtWall(BB) {
-        return this.playingState ? this.anchorTimeMs + (BB - this.anchorWallMs) * this.speedState : this.anchorTimeMs
+      timeAtWall(ee) {
+        return this.playingState ? this.anchorTimeMs + (ee - this.anchorWallMs) * this.speedState : this.anchorTimeMs
       }
       play() {
         this.reanchor(), this.playingState = !0
@@ -454,119 +454,119 @@ export const modules = {
       pause() {
         this.reanchor(), this.playingState = !1
       }
-      seek(BB) {
-        this.anchorTimeMs = BB, this.anchorWallMs = this.wallNowMs()
+      seek(ee) {
+        this.anchorTimeMs = ee, this.anchorWallMs = this.wallNowMs()
       }
-      setSpeed(BB) {
-        this.reanchor(), this.speedState = BB
+      setSpeed(ee) {
+        this.reanchor(), this.speedState = ee
       }
       reanchor() {
-        const BB = this.wallNowMs();
-        this.anchorTimeMs = this.timeAtWall(BB), this.anchorWallMs = BB
+        const ee = this.wallNowMs();
+        this.anchorTimeMs = this.timeAtWall(ee), this.anchorWallMs = ee
       }
     }
-    const EB = "bloxd-clock";
-    class cB {
-      constructor(BB) {
+    const ue = "bloxd-clock";
+    class me {
+      constructor(ee) {
         this.samples = void 0, this.samples = [];
-        for (const GB of BB) {
-          var OB;
-          const BB = GB.data;
-          GB.type === iB.e.Custom && (null === BB || void 0 === BB ? void 0 : BB.tag) === EB && "number" === typeof(null === (OB = BB.payload) || void 0 === OB ? void 0 : OB.epochMs) && this.samples.push({
-            domMs: GB.timestamp,
-            offsetMs: BB.payload.epochMs - GB.timestamp
+        for (const He of ee) {
+          var ie;
+          const ee = He.data;
+          He.type === ae.c.Custom && (null === ee || void 0 === ee ? void 0 : ee.tag) === ue && "number" === typeof(null === (ie = ee.payload) || void 0 === ie ? void 0 : ie.epochMs) && this.samples.push({
+            domMs: He.timestamp,
+            offsetMs: ee.payload.epochMs - He.timestamp
           })
         }
-        this.samples.sort(((BB, OB) => BB.domMs - OB.domMs))
+        this.samples.sort(((ee, ie) => ee.domMs - ie.domMs))
       }
-      toEpoch(BB) {
-        return BB + this.offsetAtDom(BB)
+      toEpoch(ee) {
+        return ee + this.offsetAtDom(ee)
       }
-      toDom(BB) {
-        return BB - this.offsetAtDom(BB)
+      toDom(ee) {
+        return ee - this.offsetAtDom(ee)
       }
-      offsetAtDom(BB) {
-        var OB, GB;
-        let YB = 0,
-          DB = this.samples.length - 1;
-        for (; YB < DB;) {
-          const OB = Math.ceil((YB + DB) / 2);
-          this.samples[OB].domMs <= BB ? YB = OB : DB = OB - 1
+      offsetAtDom(ee) {
+        var ie, He;
+        let ye = 0,
+          be = this.samples.length - 1;
+        for (; ye < be;) {
+          const ie = Math.ceil((ye + be) / 2);
+          this.samples[ie].domMs <= ee ? ye = ie : be = ie - 1
         }
-        return null !== (OB = null === (GB = this.samples[YB]) || void 0 === GB ? void 0 : GB.offsetMs) && void 0 !== OB ? OB : 0
+        return null !== (ie = null === (He = this.samples[ye]) || void 0 === He ? void 0 : He.offsetMs) && void 0 !== ie ? ie : 0
       }
     }
-    const hB = new Set([iB.g.MouseMove, iB.g.MouseInteraction, iB.g.Scroll, iB.g.Input, iB.g.TouchMove, iB.g.Drag]),
-      aB = "bloxd-active",
-      eB = "player_death",
-      TB = "error",
-      bB = {
+    const le = new Set([ae.d.MouseMove, ae.d.MouseInteraction, ae.d.Scroll, ae.d.Input, ae.d.TouchMove, ae.d.Drag]),
+      Se = "bloxd-active",
+      ne = "player_death",
+      je = "error",
+      se = {
         $exception: "error",
-        [TB]: "error",
+        [je]: "error",
         death: "death",
-        [eB]: "death"
+        [ne]: "death"
       };
 
-    function CB(BB, OB, GB) {
-      return function(BB, OB) {
-        const GB = [];
-        for (const YB of BB) {
-          let BB = YB.startMs;
-          for (const DB of OB) DB.endMs <= BB || DB.startMs >= YB.endMs || (DB.startMs > BB && GB.push({
-            startMs: BB,
-            endMs: DB.startMs
-          }), BB = Math.max(BB, DB.endMs));
-          BB < YB.endMs && GB.push({
-            startMs: BB,
-            endMs: YB.endMs
+    function Ie(ee, ie, He) {
+      return function(ee, ie) {
+        const He = [];
+        for (const ye of ee) {
+          let ee = ye.startMs;
+          for (const be of ie) be.endMs <= ee || be.startMs >= ye.endMs || (be.startMs > ee && He.push({
+            startMs: ee,
+            endMs: be.startMs
+          }), ee = Math.max(ee, be.endMs));
+          ee < ye.endMs && He.push({
+            startMs: ee,
+            endMs: ye.endMs
           })
         }
-        return GB
-      }(function(BB) {
-        const OB = [];
-        for (const GB of BB) {
-          const BB = OB.at(-1);
-          void 0 !== BB && GB.atMs - BB.endMs <= 5e3 ? BB.endMs = GB.atMs : OB.push({
-            startMs: GB.atMs,
-            endMs: GB.atMs
+        return He
+      }(function(ee) {
+        const ie = [];
+        for (const He of ee) {
+          const ee = ie.at(-1);
+          void 0 !== ee && He.atMs - ee.endMs <= 5e3 ? ee.endMs = He.atMs : ie.push({
+            startMs: He.atMs,
+            endMs: He.atMs
           })
         }
-        return OB
-      }(BB), LB([...OB, ...GB])).filter((BB => BB.endMs - BB.startMs >= 1e3))
+        return ie
+      }(ee), ce([...ie, ...He])).filter((ee => ee.endMs - ee.startMs >= 1e3))
     }
 
-    function HB(BB) {
-      var OB, GB, YB;
-      return BB.type === iB.e.IncrementalSnapshot ? hB.has(null !== (GB = null === (YB = BB.data) || void 0 === YB ? void 0 : YB.source) && void 0 !== GB ? GB : -1) : BB.type === iB.e.Custom && (null === (OB = BB.data) || void 0 === OB ? void 0 : OB.tag) === aB
+    function he(ee) {
+      var ie, He, ye;
+      return ee.type === ae.c.IncrementalSnapshot ? le.has(null !== (He = null === (ye = ee.data) || void 0 === ye ? void 0 : ye.source) && void 0 !== He ? He : -1) : ee.type === ae.c.Custom && (null === (ie = ee.data) || void 0 === ie ? void 0 : ie.tag) === Se
     }
 
-    function vB(BB, OB) {
-      const GB = [];
-      for (const oB of BB)
-        if (oB.type === iB.e.Custom) {
-          var YB;
-          const BB = null === (YB = oB.data) || void 0 === YB ? void 0 : YB.tag,
-            DB = void 0 === BB ? void 0 : bB[BB];
-          void 0 !== DB && GB.push({
-            kind: DB,
-            atMs: OB.toEpoch(oB.timestamp)
+    function Ne(ee, ie) {
+      const He = [];
+      for (const Ke of ee)
+        if (Ke.type === ae.c.Custom) {
+          var ye;
+          const ee = null === (ye = Ke.data) || void 0 === ye ? void 0 : ye.tag,
+            be = void 0 === ee ? void 0 : se[ee];
+          void 0 !== be && He.push({
+            kind: be,
+            atMs: ie.toEpoch(Ke.timestamp)
           })
-        } else if (oB.type === iB.e.Plugin) {
-        var DB, QB;
-        const BB = oB.data;
-        "rrweb/console@1" !== (null === BB || void 0 === BB ? void 0 : BB.plugin) || "error" !== (null === (DB = BB.payload) || void 0 === DB ? void 0 : DB.level) && "assert" !== (null === (QB = BB.payload) || void 0 === QB ? void 0 : QB.level) || GB.push({
+        } else if (Ke.type === ae.c.Plugin) {
+        var be, Me;
+        const ee = Ke.data;
+        "rrweb/console@1" !== (null === ee || void 0 === ee ? void 0 : ee.plugin) || "error" !== (null === (be = ee.payload) || void 0 === be ? void 0 : be.level) && "assert" !== (null === (Me = ee.payload) || void 0 === Me ? void 0 : Me.level) || He.push({
           kind: "error",
-          atMs: OB.toEpoch(oB.timestamp)
+          atMs: ie.toEpoch(Ke.timestamp)
         })
       }
-      return GB
+      return He
     }
-    const sB = 3e6;
-    class xB {
-      constructor(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
-          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sB;
-        this.fetchUrls = BB, this.onUrls = OB, this.wallNowMs = GB, this.refreshableAfterMs = YB, this.lastRefreshWallMs = -1 / 0, this.urlsFetchedAtWallMs = void 0, this.inFlight = !1, this.timer = null, this.destroyed = !1, this.urlsFetchedAtWallMs = GB()
+    const Ge = 3e6;
+    class re {
+      constructor(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
+          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ge;
+        this.fetchUrls = ee, this.onUrls = ie, this.wallNowMs = He, this.refreshableAfterMs = ye, this.lastRefreshWallMs = -1 / 0, this.urlsFetchedAtWallMs = void 0, this.inFlight = !1, this.timer = null, this.destroyed = !1, this.urlsFetchedAtWallMs = He()
       }
       get refreshing() {
         return this.inFlight
@@ -574,91 +574,91 @@ export const modules = {
       request() {
         if (null === this.fetchUrls || this.destroyed || null !== this.timer || this.inFlight) return;
         if (this.wallNowMs() - this.urlsFetchedAtWallMs < this.refreshableAfterMs) return;
-        const BB = this.lastRefreshWallMs + 6e4 - this.wallNowMs();
-        BB > 0 ? this.timer = setTimeout((() => {
+        const ee = this.lastRefreshWallMs + 6e4 - this.wallNowMs();
+        ee > 0 ? this.timer = setTimeout((() => {
           this.timer = null, this.request()
-        }), BB) : this.start(this.fetchUrls)
+        }), ee) : this.start(this.fetchUrls)
       }
       destroy() {
         this.destroyed = !0, null !== this.timer && clearTimeout(this.timer)
       }
-      start(BB) {
+      start(ee) {
         this.inFlight = !0;
-        const OB = this.wallNowMs();
-        this.lastRefreshWallMs = OB;
-        let GB = !1;
-        BB().then((BB => {
-          this.destroyed || (this.urlsFetchedAtWallMs = OB, this.onUrls(BB))
-        })).catch((BB => {
-          console.error("Failed to refresh the replay's URLs.", BB), GB = !0
+        const ie = this.wallNowMs();
+        this.lastRefreshWallMs = ie;
+        let He = !1;
+        ee().then((ee => {
+          this.destroyed || (this.urlsFetchedAtWallMs = ie, this.onUrls(ee))
+        })).catch((ee => {
+          console.error("Failed to refresh the replay's URLs.", ee), He = !0
         })).finally((() => {
-          this.inFlight = !1, GB && this.request()
+          this.inFlight = !1, He && this.request()
         }))
       }
     }
-    class tB {
-      constructor(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
-          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : sB;
-        this.source = BB, this.description = OB, this.wallNowMs = GB, this.refreshableAfterMs = YB, this.entries = new Map, this.unavailable = new Set, this.inFlight = !1, this.failedFetches = 0, this.retryAtWallMs = -1 / 0, this.destroyed = !1
+    class Qe {
+      constructor(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
+          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ge;
+        this.source = ee, this.description = ie, this.wallNowMs = He, this.refreshableAfterMs = ye, this.entries = new Map, this.unavailable = new Set, this.inFlight = !1, this.failedFetches = 0, this.retryAtWallMs = -1 / 0, this.destroyed = !1
       }
-      reset(BB) {
+      reset(ee) {
         this.entries.clear(), this.unavailable.clear(), this.failedFetches = 0, this.retryAtWallMs = -1 / 0;
-        const OB = this.wallNowMs();
-        for (const GB of BB) this.entries.set(GB.sequence, {
-          urls: GB,
-          fetchedAtWallMs: OB
+        const ie = this.wallNowMs();
+        for (const He of ee) this.entries.set(He.sequence, {
+          urls: He,
+          fetchedAtWallMs: ie
         })
       }
-      get(BB) {
-        const OB = this.getFresh(BB);
-        return null !== OB ? OB : null === this.source || this.unavailable.has(BB) || this.failedFetches > 0 ? "failed" : "pending"
+      get(ee) {
+        const ie = this.getFresh(ee);
+        return null !== ie ? ie : null === this.source || this.unavailable.has(ee) || this.failedFetches > 0 ? "failed" : "pending"
       }
-      needs(BB) {
-        return null === this.getFresh(BB) && !this.unavailable.has(BB)
+      needs(ee) {
+        return null === this.getFresh(ee) && !this.unavailable.has(ee)
       }
-      request(BB) {
+      request(ee) {
         if (null === this.source || this.inFlight || this.failedFetches >= 3 || this.wallNowMs() < this.retryAtWallMs) return;
-        const OB = BB.filter((BB => this.needs(BB)));
-        OB.length > 0 && this.fetch(this.source, OB.slice(0, this.source.maxSequences))
+        const ie = ee.filter((ee => this.needs(ee)));
+        ie.length > 0 && this.fetch(this.source, ie.slice(0, this.source.maxSequences))
       }
       destroy() {
         this.destroyed = !0
       }
-      getFresh(BB) {
-        const OB = this.entries.get(BB);
-        return void 0 === OB ? null : null === this.source || this.wallNowMs() - OB.fetchedAtWallMs < this.refreshableAfterMs ? OB.urls : null
+      getFresh(ee) {
+        const ie = this.entries.get(ee);
+        return void 0 === ie ? null : null === this.source || this.wallNowMs() - ie.fetchedAtWallMs < this.refreshableAfterMs ? ie.urls : null
       }
-      fetch(BB, OB) {
+      fetch(ee, ie) {
         this.inFlight = !0;
-        const GB = this.wallNowMs();
-        BB.load(OB).then((BB => {
+        const He = this.wallNowMs();
+        ee.load(ie).then((ee => {
           if (this.destroyed) return;
           this.failedFetches = 0;
-          const YB = new Set;
-          for (const OB of BB) this.entries.set(OB.sequence, {
-            urls: OB,
-            fetchedAtWallMs: GB
-          }), YB.add(OB.sequence);
-          for (const GB of OB) YB.has(GB) || (console.warn(`Replay sequence ${GB} has no ${this.description}.`), this.unavailable.add(GB))
-        })).catch((BB => {
-          console.error(`Failed to fetch the replay's ${this.description}.`, BB), this.failedFetches++, this.retryAtWallMs = this.wallNowMs() + 6e4
+          const ye = new Set;
+          for (const ie of ee) this.entries.set(ie.sequence, {
+            urls: ie,
+            fetchedAtWallMs: He
+          }), ye.add(ie.sequence);
+          for (const He of ie) ye.has(He) || (console.warn(`Replay sequence ${He} has no ${this.description}.`), this.unavailable.add(He))
+        })).catch((ee => {
+          console.error(`Failed to fetch the replay's ${this.description}.`, ee), this.failedFetches++, this.retryAtWallMs = this.wallNowMs() + 6e4
         })).finally((() => {
           this.inFlight = !1
         }))
       }
     }
-    class BO {
-      constructor(BB, OB, GB, YB) {
-        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          QB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          oB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : sB;
-        this.load = OB, this.onLoaded = GB, this.onFailed = YB, this.chunks = void 0, this.urls = void 0, this.loading = 0, this.merged = OO([]), this.hidden = [], this.destroyed = !1, this.chunks = [...BB].sort(((BB, OB) => BB.startMs - OB.startMs)).map((BB => ({
-          chunk: BB,
+    class ei {
+      constructor(ee, ie, He, ye) {
+        let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          Me = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          Ke = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Ge;
+        this.load = ie, this.onLoaded = He, this.onFailed = ye, this.chunks = void 0, this.urls = void 0, this.loading = 0, this.merged = ii([]), this.hidden = [], this.destroyed = !1, this.chunks = [...ee].sort(((ee, ie) => ee.startMs - ie.startMs)).map((ee => ({
+          chunk: ee,
           status: "idle",
           attempts: 0,
           telemetry: null
-        }))), this.urls = new tB(DB, "telemetry URLs", QB, oB), this.urls.reset(YO(BB))
+        }))), this.urls = new Qe(be, "telemetry URLs", Me, Ke), this.urls.reset(yi(ee))
       }
       get telemetry() {
         return this.merged
@@ -667,145 +667,145 @@ export const modules = {
         return this.hidden
       }
       get loadedCount() {
-        return this.chunks.filter((BB => "loaded" === BB.status)).length
+        return this.chunks.filter((ee => "loaded" === ee.status)).length
       }
-      update(BB, OB, GB) {
+      update(ee, ie, He) {
         if (null === this.load || this.destroyed) return;
-        const YB = OB.toPosition(BB),
-          DB = OB.toTime(YB - 1e4),
-          QB = OB.toTime(YB + 6e4 * Math.max(1, GB)),
-          oB = OB.toTime(YB + 12e4 * Math.max(1, GB)),
-          jB = this.chunks.filter((BB => "idle" === BB.status && BB.chunk.endMs >= DB && BB.chunk.startMs <= oB)).sort(((OB, GB) => DO(BB, OB.chunk) - DO(BB, GB.chunk)));
-        this.urls.request(jB.flatMap((BB => {
-          var OB;
+        const ye = ie.toPosition(ee),
+          be = ie.toTime(ye - 1e4),
+          Me = ie.toTime(ye + 6e4 * Math.max(1, He)),
+          Ke = ie.toTime(ye + 12e4 * Math.max(1, He)),
+          Ue = this.chunks.filter((ee => "idle" === ee.status && ee.chunk.endMs >= be && ee.chunk.startMs <= Ke)).sort(((ie, He) => bi(ee, ie.chunk) - bi(ee, He.chunk)));
+        this.urls.request(Ue.flatMap((ee => {
+          var ie;
           let {
-            chunk: GB
-          } = BB;
-          return null !== (OB = GB.sequence) && void 0 !== OB ? OB : []
+            chunk: He
+          } = ee;
+          return null !== (ie = He.sequence) && void 0 !== ie ? ie : []
         })));
-        for (const yB of jB) {
+        for (const Fe of Ue) {
           if (this.loading >= 3) return;
-          const BB = yB.chunk.startMs <= QB ? this.getUrl(yB.chunk) : null;
-          null !== BB && this.startLoad(yB, BB, this.load)
+          const ee = Fe.chunk.startMs <= Me ? this.getUrl(Fe.chunk) : null;
+          null !== ee && this.startLoad(Fe, ee, this.load)
         }
       }
-      replaceUrls(BB) {
-        this.urls.reset(YO(BB));
-        for (const OB of this.chunks) {
-          const GB = BB.find((BB => BB.startMs === OB.chunk.startMs && BB.endMs === OB.chunk.endMs));
-          void 0 !== GB && (OB.chunk = GB, "failed" === OB.status && (OB.status = "idle"))
+      replaceUrls(ee) {
+        this.urls.reset(yi(ee));
+        for (const ie of this.chunks) {
+          const He = ee.find((ee => ee.startMs === ie.chunk.startMs && ee.endMs === ie.chunk.endMs));
+          void 0 !== He && (ie.chunk = He, "failed" === ie.status && (ie.status = "idle"))
         }
       }
       destroy() {
         this.destroyed = !0, this.urls.destroy()
       }
-      getUrl(BB) {
-        var OB;
-        if (void 0 === BB.sequence) return null !== (OB = BB.url) && void 0 !== OB ? OB : null;
-        const GB = this.urls.get(BB.sequence);
-        return "string" === typeof GB ? null : GB.url
+      getUrl(ee) {
+        var ie;
+        if (void 0 === ee.sequence) return null !== (ie = ee.url) && void 0 !== ie ? ie : null;
+        const He = this.urls.get(ee.sequence);
+        return "string" === typeof He ? null : He.url
       }
-      startLoad(BB, OB, GB) {
-        BB.status = "loading", BB.attempts++, this.loading++, GB(OB).then((OB => {
-          this.destroyed || (BB.status = "loaded", BB.telemetry = OB, this.merge(), this.onLoaded())
-        })).catch((OB => {
-          this.destroyed || (console.error(`Failed to load replay telemetry for ${BB.chunk.startMs}-${BB.chunk.endMs}.`, OB), BB.status = BB.attempts < 2 ? "idle" : "failed", this.onFailed())
+      startLoad(ee, ie, He) {
+        ee.status = "loading", ee.attempts++, this.loading++, He(ie).then((ie => {
+          this.destroyed || (ee.status = "loaded", ee.telemetry = ie, this.merge(), this.onLoaded())
+        })).catch((ie => {
+          this.destroyed || (console.error(`Failed to load replay telemetry for ${ee.chunk.startMs}-${ee.chunk.endMs}.`, ie), ee.status = ee.attempts < 2 ? "idle" : "failed", this.onFailed())
         })).finally((() => {
           this.loading--
         }))
       }
       merge() {
-        const BB = [];
-        let OB = !1;
-        for (const YB of this.chunks) {
-          const GB = BB.at(-1);
-          if (null === YB.telemetry) {
-            OB = !1;
+        const ee = [];
+        let ie = !1;
+        for (const ye of this.chunks) {
+          const He = ee.at(-1);
+          if (null === ye.telemetry) {
+            ie = !1;
             continue
           }
-          const DB = GO(YB.telemetry, YB.chunk);
-          void 0 !== GB && OB && YB.chunk.startMs <= GB.endMs + 1e3 ? (GB.telemetry.push(DB), GB.endMs = YB.chunk.endMs) : (BB.push({
-            telemetry: [DB],
-            endMs: YB.chunk.endMs
-          }), OB = !0)
+          const be = Hi(ye.telemetry, ye.chunk);
+          void 0 !== He && ie && ye.chunk.startMs <= He.endMs + 1e3 ? (He.telemetry.push(be), He.endMs = ye.chunk.endMs) : (ee.push({
+            telemetry: [be],
+            endMs: ye.chunk.endMs
+          }), ie = !0)
         }
-        const GB = BB.map((BB => function(BB, OB) {
-          const GB = BB.actions.at(-1);
-          if (void 0 === GB || 0 === GB.bits) return BB;
+        const He = ee.map((ee => function(ee, ie) {
+          const He = ee.actions.at(-1);
+          if (void 0 === He || 0 === He.bits) return ee;
           return {
-            ...BB,
-            actions: [...BB.actions, {
-              atMs: OB,
+            ...ee,
+            actions: [...ee.actions, {
+              atMs: ie,
               bits: 0
             }]
           }
-        }(OO(BB.telemetry), BB.endMs)));
-        this.merged = OO(GB), this.hidden = GB.flatMap(((OB, GB) => function(BB, OB) {
-          const GB = [];
-          let YB = null;
+        }(ii(ee.telemetry), ee.endMs)));
+        this.merged = ii(He), this.hidden = He.flatMap(((ie, He) => function(ee, ie) {
+          const He = [];
+          let ye = null;
           for (const {
-              atMs: DB,
-              event: QB
+              atMs: be,
+              event: Me
             }
-            of BB.events) "hidden" === QB && null === YB ? YB = DB : "visible" === QB && null !== YB && (GB.push({
-            startMs: YB,
-            endMs: DB
-          }), YB = null);
-          return null !== YB && GB.push({
-            startMs: YB,
-            endMs: OB
-          }), LB(GB)
-        }(OB, BB[GB].endMs)))
+            of ee.events) "hidden" === Me && null === ye ? ye = be : "visible" === Me && null !== ye && (He.push({
+            startMs: ye,
+            endMs: be
+          }), ye = null);
+          return null !== ye && He.push({
+            startMs: ye,
+            endMs: ie
+          }), ce(He)
+        }(ie, ee[He].endMs)))
       }
     }
 
-    function OO(BB) {
+    function ii(ee) {
       return {
-        inputRecorded: BB.some((BB => BB.keys.length > 0)),
-        frames: BB.flatMap((BB => BB.frames)),
-        states: BB.flatMap((BB => BB.states)),
-        events: BB.flatMap((BB => BB.events)),
-        actions: BB.flatMap((BB => BB.actions)),
-        keys: BB.flatMap((BB => BB.keys))
+        inputRecorded: ee.some((ee => ee.keys.length > 0)),
+        frames: ee.flatMap((ee => ee.frames)),
+        states: ee.flatMap((ee => ee.states)),
+        events: ee.flatMap((ee => ee.events)),
+        actions: ee.flatMap((ee => ee.actions)),
+        keys: ee.flatMap((ee => ee.keys))
       }
     }
 
-    function GO(BB, OB) {
+    function Hi(ee, ie) {
       const {
-        actions: GB
-      } = BB;
-      return !BB.inputRecorded || GB.length > 0 && GB[0].atMs <= OB.startMs + 1 ? BB : {
-        ...BB,
+        actions: He
+      } = ee;
+      return !ee.inputRecorded || He.length > 0 && He[0].atMs <= ie.startMs + 1 ? ee : {
+        ...ee,
         actions: [{
-          atMs: OB.startMs,
+          atMs: ie.startMs,
           bits: 0
-        }, ...GB]
+        }, ...He]
       }
     }
 
-    function YO(BB) {
-      return BB.flatMap((BB => {
+    function yi(ee) {
+      return ee.flatMap((ee => {
         let {
-          sequence: OB,
-          url: GB
-        } = BB;
-        return void 0 === OB || void 0 === GB ? [] : [{
-          sequence: OB,
-          url: GB
+          sequence: ie,
+          url: He
+        } = ee;
+        return void 0 === ie || void 0 === He ? [] : [{
+          sequence: ie,
+          url: He
         }]
       }))
     }
 
-    function DO(BB, OB) {
-      return BB < OB.startMs ? OB.startMs - BB : BB > OB.endMs ? 2 * (BB - OB.endMs) : 0
+    function bi(ee, ie) {
+      return ee < ie.startMs ? ie.startMs - ee : ee > ie.endMs ? 2 * (ee - ie.endMs) : 0
     }
-    class QO {
-      constructor(BB, OB, GB, YB) {
-        this.data = BB, this.domClock = OB, this.timeline = GB, this.options = YB, this.telemetry = void 0, this.activityTimes = void 0, this.markerList = [], this.inactiveRangeList = [], this.videoGapRanges = [], this.activityTimes = function(BB, OB) {
-          return BB.filter(HB).map((BB => OB.toEpoch(BB.timestamp)))
-        }(BB.domEvents, OB), this.telemetry = new BO(BB.telemetryChunks, YB.loadTelemetryChunk, (() => {
+    class Mi {
+      constructor(ee, ie, He, ye) {
+        this.data = ee, this.domClock = ie, this.timeline = He, this.options = ye, this.telemetry = void 0, this.activityTimes = void 0, this.markerList = [], this.inactiveRangeList = [], this.videoGapRanges = [], this.activityTimes = function(ee, ie) {
+          return ee.filter(he).map((ee => ie.toEpoch(ee.timestamp)))
+        }(ee.domEvents, ie), this.telemetry = new ei(ee.telemetryChunks, ye.loadTelemetryChunk, (() => {
           this.rebuild()
-        }), YB.onTelemetryFailed, YB.telemetryUrls), this.rebuild()
+        }), ye.onTelemetryFailed, ye.telemetryUrls), this.rebuild()
       }
       get markers() {
         return this.markerList
@@ -825,257 +825,257 @@ export const modules = {
       get telemetryChunksLoaded() {
         return this.telemetry.loadedCount
       }
-      update(BB, OB) {
-        this.telemetry.update(BB, this.timeline, OB)
+      update(ee, ie) {
+        this.telemetry.update(ee, this.timeline, ie)
       }
-      replaceTelemetryUrls(BB) {
-        this.telemetry.replaceUrls(BB)
+      replaceTelemetryUrls(ee) {
+        this.telemetry.replaceUrls(ee)
       }
       destroy() {
         this.telemetry.destroy()
       }
-      isHiddenAt(BB) {
-        return this.telemetry.hiddenRanges.some(oO(BB))
+      isHiddenAt(ee) {
+        return this.telemetry.hiddenRanges.some(Ki(ee))
       }
-      isVideoGapAt(BB) {
-        return this.videoGapRanges.some(oO(BB))
+      isVideoGapAt(ee) {
+        return this.videoGapRanges.some(Ki(ee))
       }
       rebuild() {
-        const BB = this.telemetry.telemetry,
-          OB = this.telemetry.hiddenRanges;
-        this.videoGapRanges = CB(BB.frames, this.data.videoSegments, OB), this.inactiveRangeList = function(BB, OB, GB, YB) {
-          const DB = [...OB];
-          if (BB.length > 0) {
-            const OB = [GB.startMs, ...BB, GB.endMs];
-            for (let BB = 1; BB < OB.length; BB++) {
-              const GB = OB[BB - 1],
-                QB = OB[BB] - 1e3;
-              QB - GB >= YB && DB.push({
-                startMs: GB,
-                endMs: QB
+        const ee = this.telemetry.telemetry,
+          ie = this.telemetry.hiddenRanges;
+        this.videoGapRanges = Ie(ee.frames, this.data.videoSegments, ie), this.inactiveRangeList = function(ee, ie, He, ye) {
+          const be = [...ie];
+          if (ee.length > 0) {
+            const ie = [He.startMs, ...ee, He.endMs];
+            for (let ee = 1; ee < ie.length; ee++) {
+              const He = ie[ee - 1],
+                Me = ie[ee] - 1e3;
+              Me - He >= ye && be.push({
+                startMs: He,
+                endMs: Me
               })
             }
           }
-          return LB(DB).filter((BB => BB.endMs - BB.startMs >= YB))
-        }(this.activityTimes, OB, this.timeline, this.options.inactivityThresholdMs), this.markerList = function(BB) {
+          return ce(be).filter((ee => ee.endMs - ee.startMs >= ye))
+        }(this.activityTimes, ie, this.timeline, this.options.inactivityThresholdMs), this.markerList = function(ee) {
           const {
-            timeline: OB
-          } = BB;
-          return [...vB(BB.domEvents, BB.domClock), ...BB.telemetry.events.filter((BB => {
+            timeline: ie
+          } = ee;
+          return [...Ne(ee.domEvents, ee.domClock), ...ee.telemetry.events.filter((ee => {
             let {
-              event: OB
-            } = BB;
-            return "contextLost" === OB
-          })).map((BB => {
+              event: ie
+            } = ee;
+            return "contextLost" === ie
+          })).map((ee => {
             let {
-              atMs: OB
-            } = BB;
+              atMs: ie
+            } = ee;
             return {
               kind: "graphicsCrash",
-              atMs: OB
+              atMs: ie
             }
-          })), ...BB.hidden.map((BB => ({
+          })), ...ee.hidden.map((ee => ({
             kind: "hidden",
-            atMs: BB.startMs,
-            endMs: BB.endMs
-          }))), ...BB.extraMarkers].filter((BB => BB.atMs >= OB.startMs && BB.atMs <= OB.endMs && (OB.contains(BB.atMs) || OB.contains(BB.atMs - 1)))).sort(((BB, OB) => BB.atMs - OB.atMs))
+            atMs: ee.startMs,
+            endMs: ee.endMs
+          }))), ...ee.extraMarkers].filter((ee => ee.atMs >= ie.startMs && ee.atMs <= ie.endMs && (ie.contains(ee.atMs) || ie.contains(ee.atMs - 1)))).sort(((ee, ie) => ee.atMs - ie.atMs))
         }({
           domEvents: this.data.domEvents,
           domClock: this.domClock,
-          telemetry: BB,
+          telemetry: ee,
           extraMarkers: this.data.markers,
-          hidden: OB,
+          hidden: ie,
           timeline: this.timeline
         })
       }
     }
 
-    function oO(BB) {
-      return OB => BB >= OB.startMs && BB < OB.endMs
+    function Ki(ee) {
+      return ie => ee >= ie.startMs && ee < ie.endMs
     }
-    class jO {
+    class Ui {
       constructor() {
         this.addedAt = new Map, this.settleQueued = !1, this.plugin = {
-          handler: (BB, OB, GB) => {
+          handler: (ee, ie, He) => {
             let {
-              replayer: YB
-            } = GB;
-            this.record(BB), OB && !this.settleQueued && (this.settleQueued = !0, queueMicrotask((() => {
-              this.settleQueued = !1, this.settle(YB)
+              replayer: ye
+            } = He;
+            this.record(ee), ie && !this.settleQueued && (this.settleQueued = !0, queueMicrotask((() => {
+              this.settleQueued = !1, this.settle(ye)
             })))
           }
         }
       }
-      settle(BB) {
-        const OB = BB.iframe.contentDocument;
-        if (null === OB || void 0 === OB || !OB.documentElement.classList.contains("rrweb-paused")) return;
-        const GB = BB.getMetaData().startTime + BB.getCurrentTime();
-        ! function(BB, OB, GB, YB) {
-          for (const DB of BB) {
-            const BB = DB.effect,
-              QB = GB.get(OB.getId(BB.target)),
-              oB = void 0 === QB ? 1 / 0 : YB - QB,
-              jB = Math.min(Math.max(oB, Number(DB.currentTime)), Number(BB.getComputedTiming().endTime));
-            Number.isFinite(jB) && (DB.currentTime = jB)
+      settle(ee) {
+        const ie = ee.iframe.contentDocument;
+        if (null === ie || void 0 === ie || !ie.documentElement.classList.contains("rrweb-paused")) return;
+        const He = ee.getMetaData().startTime + ee.getCurrentTime();
+        ! function(ee, ie, He, ye) {
+          for (const be of ee) {
+            const ee = be.effect,
+              Me = He.get(ie.getId(ee.target)),
+              Ke = void 0 === Me ? 1 / 0 : ye - Me,
+              Ue = Math.min(Math.max(Ke, Number(be.currentTime)), Number(ee.getComputedTiming().endTime));
+            Number.isFinite(Ue) && (be.currentTime = Ue)
           }
-        }(OB.getAnimations(), BB.getMirror(), this.addedAt, GB)
+        }(ie.getAnimations(), ee.getMirror(), this.addedAt, He)
       }
-      record(BB) {
-        if (BB.type === iB.e.FullSnapshot) this.addedAt.clear();
-        else if (BB.type === iB.e.IncrementalSnapshot && BB.data.source === iB.g.Mutation) {
+      record(ee) {
+        if (ee.type === ae.c.FullSnapshot) this.addedAt.clear();
+        else if (ee.type === ae.c.IncrementalSnapshot && ee.data.source === ae.d.Mutation) {
           for (const {
-              id: OB
+              id: ie
             }
-            of BB.data.removes) this.addedAt.delete(OB);
+            of ee.data.removes) this.addedAt.delete(ie);
           for (const {
-              node: OB
+              node: ie
             }
-            of BB.data.adds) this.addedAt.set(OB.id, BB.timestamp)
+            of ee.data.adds) this.addedAt.set(ie.id, ee.timestamp)
         }
       }
     }
-    const yO = new Set(["src", "href", "xlink:href", "poster", "data", "background", "lowsrc", "dynsrc", "manifest", "icon", "action", "formaction", "ping", "codebase", "archive", "longdesc", "rr_src", "rr_dataurl"]),
-      JO = new Set(["srcset", "imagesrcset"]),
-      MO = new Set(["to", "from", "by", "values"]),
-      PO = new Set(["srcdoc", "http-equiv", "attributionsrc"]),
-      zO = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^"')\s]*))\s*\)|@import\s*(?:"([^"]*)"|'([^']*)')|"\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^"]*)"|'\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^']*)'/gi,
-      lO = /url\(|@import|image-set|\\|["']\s*(?:[a-z][a-z\d+.-]*:|\/\/)/i,
-      pO = /\\(?:([\da-f]{1,6})\s?|(.))/gis,
-      qO = /url\(|@import(?!\s*"")|\/\\|\\[/\\]/i,
-      ZO = /^(?:[a-z][a-z\d+.-]*:|\/\/|\\\\)/i,
-      NO = /^data:image\/(?!svg)/i,
-      RO = "about:invalid";
+    const Fi = new Set(["src", "href", "xlink:href", "poster", "data", "background", "lowsrc", "dynsrc", "manifest", "icon", "action", "formaction", "ping", "codebase", "archive", "longdesc", "rr_src", "rr_dataurl"]),
+      Ji = new Set(["srcset", "imagesrcset"]),
+      oi = new Set(["to", "from", "by", "values"]),
+      Ri = new Set(["srcdoc", "http-equiv", "attributionsrc"]),
+      ki = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^"')\s]*))\s*\)|@import\s*(?:"([^"]*)"|'([^']*)')|"\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^"]*)"|'\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^']*)'/gi,
+      qi = /url\(|@import|image-set|\\|["']\s*(?:[a-z][a-z\d+.-]*:|\/\/)/i,
+      fi = /\\(?:([\da-f]{1,6})\s?|(.))/gis,
+      Ti = /url\(|@import(?!\s*"")|\/\\|\\[/\\]/i,
+      Xi = /^(?:[a-z][a-z\d+.-]*:|\/\/|\\\\)/i,
+      zi = /^data:image\/(?!svg)/i,
+      Bi = "about:invalid";
 
-    function WO(BB, OB) {
+    function Ei(ee, ie) {
       let {
-        hosts: GB
-      } = OB, YB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const DB = BB.trim();
-      if (/[\\\u0000-\u001f]/.test(DB)) return !1;
-      if (!ZO.test(DB)) return !0;
-      let QB;
+        hosts: He
+      } = ie, ye = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const be = ee.trim();
+      if (/[\\\u0000-\u001f]/.test(be)) return !1;
+      if (!Xi.test(be)) return !0;
+      let Me;
       try {
-        QB = new URL(DB.startsWith("//") ? `https:${DB}` : DB)
+        Me = new URL(be.startsWith("//") ? `https:${be}` : be)
       } catch {
         return !1
       }
-      return "data:" === QB.protocol ? YB ? "text/css" !== DB.slice(5).split(/[,;]/)[0].trim().toLowerCase() : NO.test(DB) : "blob:" === QB.protocol || ("http:" === QB.protocol || "https:" === QB.protocol) && GB.some((BB => QB.hostname === BB || QB.hostname.endsWith(`.${BB}`)))
+      return "data:" === Me.protocol ? ye ? "text/css" !== be.slice(5).split(/[,;]/)[0].trim().toLowerCase() : zi.test(be) : "blob:" === Me.protocol || ("http:" === Me.protocol || "https:" === Me.protocol) && He.some((ee => Me.hostname === ee || Me.hostname.endsWith(`.${ee}`)))
     }
 
-    function AO(BB, OB) {
-      return BB.replace(zO, (function(BB) {
-        for (var GB = arguments.length, YB = new Array(GB > 1 ? GB - 1 : 0), DB = 1; DB < GB; DB++) YB[DB - 1] = arguments[DB];
-        if (WO(YB.slice(0, 7).find((BB => "string" === typeof BB)), OB, !0)) return BB;
-        const QB = BB.slice(0, 4).toLowerCase();
-        return "url(" === QB ? `url("${RO}")` : "@imp" === QB ? `@import "${RO}"` : `"${RO}"`
+    function gi(ee, ie) {
+      return ee.replace(ki, (function(ee) {
+        for (var He = arguments.length, ye = new Array(He > 1 ? He - 1 : 0), be = 1; be < He; be++) ye[be - 1] = arguments[be];
+        if (Ei(ye.slice(0, 7).find((ee => "string" === typeof ee)), ie, !0)) return ee;
+        const Me = ee.slice(0, 4).toLowerCase();
+        return "url(" === Me ? `url("${Bi}")` : "@imp" === Me ? `@import "${Bi}"` : `"${Bi}"`
       }))
     }
 
-    function VO(BB) {
-      return qO.test(BB.replace(zO, '""'))
+    function Oi(ee) {
+      return Ti.test(ee.replace(ki, '""'))
     }
 
-    function SO(BB) {
-      let OB = "between";
-      for (let GB = 0; GB < BB.length; GB++) {
-        const YB = BB[GB];
-        if ("/" === YB && "*" === BB[GB + 1]) {
-          if (GB = BB.indexOf("*/", GB + 2), -1 === GB) return "open";
-          GB++, OB = "between"
-        } else if ('"' === YB || "'" === YB) {
-          for (GB++; GB < BB.length && BB[GB] !== YB && !/[\n\r\f]/.test(BB[GB]); GB++) "\\" === BB[GB] && GB++;
-          if (GB >= BB.length) return "open";
-          OB = "token"
-        } else "\\" === YB ? (GB++, OB = "token") : ";" === YB || "{" === YB || "}" === YB ? OB = "between" : /\s/.test(YB) || (OB = "token")
+    function di(ee) {
+      let ie = "between";
+      for (let He = 0; He < ee.length; He++) {
+        const ye = ee[He];
+        if ("/" === ye && "*" === ee[He + 1]) {
+          if (He = ee.indexOf("*/", He + 2), -1 === He) return "open";
+          He++, ie = "between"
+        } else if ('"' === ye || "'" === ye) {
+          for (He++; He < ee.length && ee[He] !== ye && !/[\n\r\f]/.test(ee[He]); He++) "\\" === ee[He] && He++;
+          if (He >= ee.length) return "open";
+          ie = "token"
+        } else "\\" === ye ? (He++, ie = "token") : ";" === ye || "{" === ye || "}" === ye ? ie = "between" : /\s/.test(ye) || (ie = "token")
       }
-      return OB
+      return ie
     }
 
-    function nO(BB, OB) {
-      const GB = AO(BB, OB);
-      if (VO(GB) || "open" === SO(GB)) return "";
-      if (!GB.includes("\\")) return GB;
-      const YB = function(BB) {
-        return BB.replace(pO, ((BB, OB, GB) => void 0 !== OB ? String.fromCodePoint(Math.min(parseInt(OB, 16), 1114111)) : null !== GB && void 0 !== GB ? GB : ""))
-      }(GB);
-      return AO(YB, OB) !== YB || VO(YB) ? "" : GB
+    function Wi(ee, ie) {
+      const He = gi(ee, ie);
+      if (Oi(He) || "open" === di(He)) return "";
+      if (!He.includes("\\")) return He;
+      const ye = function(ee) {
+        return ee.replace(fi, ((ee, ie, He) => void 0 !== ie ? String.fromCodePoint(Math.min(parseInt(ie, 16), 1114111)) : null !== He && void 0 !== He ? He : ""))
+      }(He);
+      return gi(ye, ie) !== ye || Oi(ye) ? "" : He
     }
 
-    function UO(BB, OB) {
-      const GB = lO.test(BB) ? nO(BB, OB) : BB;
-      return GB.split("/* rr_split */").every((BB => "between" === SO(BB))) ? GB : ""
+    function ti(ee, ie) {
+      const He = qi.test(ee) ? Wi(ee, ie) : ee;
+      return He.split("/* rr_split */").every((ee => "between" === di(ee))) ? He : ""
     }
 
-    function fO(BB, OB, GB) {
-      if ("string" === typeof OB) {
-        const YB = BB.toLowerCase();
-        if (PO.has(YB)) return null;
-        if (JO.has(YB)) return function(BB, OB) {
-          return BB.split(",").every((BB => {
-            const GB = BB.trim().split(/\s+/)[0];
-            return void 0 === GB || "" === GB || WO(GB, OB)
+    function Zi(ee, ie, He) {
+      if ("string" === typeof ie) {
+        const ye = ee.toLowerCase();
+        if (Ri.has(ye)) return null;
+        if (Ji.has(ye)) return function(ee, ie) {
+          return ee.split(",").every((ee => {
+            const He = ee.trim().split(/\s+/)[0];
+            return void 0 === He || "" === He || Ei(He, ie)
           }))
-        }(OB, GB) ? OB : null;
-        if (MO.has(YB)) {
-          return OB.split(";").every((BB => WO(BB, GB))) ? fO("", OB, GB) : null
+        }(ie, He) ? ie : null;
+        if (oi.has(ye)) {
+          return ie.split(";").every((ee => Ei(ee, He))) ? Zi("", ie, He) : null
         }
-        return yO.has(YB) ? WO(OB, GB) ? OB : null : "_csstext" === YB ? UO(OB, GB) : lO.test(OB) ? nO(OB, GB) : OB
+        return Fi.has(ye) ? Ei(ie, He) ? ie : null : "_csstext" === ye ? ti(ie, He) : qi.test(ie) ? Wi(ie, He) : ie
       }
-      if (Array.isArray(OB)) return OB.map((BB => fO("", BB, GB)));
-      if (null !== OB && "object" === typeof OB) {
-        const YB = "style" === BB.toLowerCase(),
-          DB = {};
-        for (const [BB, oB] of Object.entries(OB)) DB[BB] = fO(YB ? "" : BB, oB, GB);
+      if (Array.isArray(ie)) return ie.map((ee => Zi("", ee, He)));
+      if (null !== ie && "object" === typeof ie) {
+        const ye = "style" === ee.toLowerCase(),
+          be = {};
+        for (const [ee, Ke] of Object.entries(ie)) be[ee] = Zi(ye ? "" : ee, Ke, He);
         const {
-          id: QB
-        } = DB;
-        if ("number" === typeof QB && GB.styleTextIds.has(QB))
-          for (const BB of ["textContent", "value"]) {
-            const OB = DB[BB];
-            "string" === typeof OB && (DB[BB] = UO(OB, GB))
+          id: Me
+        } = be;
+        if ("number" === typeof Me && He.styleTextIds.has(Me))
+          for (const ee of ["textContent", "value"]) {
+            const ie = be[ee];
+            "string" === typeof ie && (be[ee] = ti(ie, He))
           }
-        return DB
+        return be
       }
-      return OB
+      return ie
     }
 
-    function kO(BB, OB) {
-      const GB = (BB, YB) => {
-        if (null === BB || "object" !== typeof BB) return;
-        const DB = BB;
-        if (OB(DB, YB), Array.isArray(DB.childNodes))
-          for (const OB of DB.childNodes) GB(OB, DB.id)
+    function wi(ee, ie) {
+      const He = (ee, ye) => {
+        if (null === ee || "object" !== typeof ee) return;
+        const be = ee;
+        if (ie(be, ye), Array.isArray(be.childNodes))
+          for (const ie of be.childNodes) He(ie, be.id)
       };
-      for (const YB of BB) {
-        const BB = YB.data;
-        if (YB.type === iB.e.FullSnapshot) GB(null === BB || void 0 === BB ? void 0 : BB.node, null);
-        else if (YB.type === iB.e.IncrementalSnapshot && Array.isArray(null === BB || void 0 === BB ? void 0 : BB.adds))
-          for (const OB of BB.adds) GB(null === OB || void 0 === OB ? void 0 : OB.node, null === OB || void 0 === OB ? void 0 : OB.parentId)
+      for (const ye of ee) {
+        const ee = ye.data;
+        if (ye.type === ae.c.FullSnapshot) He(null === ee || void 0 === ee ? void 0 : ee.node, null);
+        else if (ye.type === ae.c.IncrementalSnapshot && Array.isArray(null === ee || void 0 === ee ? void 0 : ee.adds))
+          for (const ie of ee.adds) He(null === ie || void 0 === ie ? void 0 : ie.node, null === ie || void 0 === ie ? void 0 : ie.parentId)
       }
     }
 
-    function dO(BB) {
-      const OB = new Set,
-        GB = [];
-      kO(BB, ((BB, YB) => {
+    function Di(ee) {
+      const ie = new Set,
+        He = [];
+      wi(ee, ((ee, ye) => {
         let {
-          id: DB,
-          tagName: QB
-        } = BB;
-        "number" === typeof DB && ("string" === typeof QB && "style" === QB.toLowerCase() && OB.add(DB), GB.push({
-          id: DB,
-          parentId: YB
+          id: be,
+          tagName: Me
+        } = ee;
+        "number" === typeof be && ("string" === typeof Me && "style" === Me.toLowerCase() && ie.add(be), He.push({
+          id: be,
+          parentId: ye
         }))
       }));
-      const YB = new Set;
+      const ye = new Set;
       for (const {
-          id: DB,
-          parentId: QB
+          id: be,
+          parentId: Me
         }
-        of GB) "number" === typeof QB && OB.has(QB) && YB.add(DB);
-      return YB
+        of He) "number" === typeof Me && ie.has(Me) && ye.add(be);
+      return ye
     }
-    const KO = {
+    const Pi = {
         coarse: {
           pointer: "coarse",
           "any-pointer": "coarse",
@@ -1089,135 +1089,135 @@ export const modules = {
           "any-hover": "hover"
         }
       },
-      uO = {
+      Ai = {
         pointer: ["none", "coarse", "fine"],
         "any-pointer": ["none", "coarse", "fine"],
         hover: ["none", "hover"],
         "any-hover": ["none", "hover"]
       },
-      mO = "(min-width: 0px)",
-      IO = "(not (min-width: 0px))",
-      FO = /@media\b[^{;]*/gi,
-      iO = /\(\s*((?:any-)?(?:pointer|hover))\s*(?::\s*([a-z]+)\s*)?\)/gi,
-      LO = new Set(["_cssText", "rule", "replace", "replaceSync"]);
+      Yi = "(min-width: 0px)",
+      Vi = "(not (min-width: 0px))",
+      ai = /@media\b[^{;]*/gi,
+      ci = /\(\s*((?:any-)?(?:pointer|hover))\s*(?::\s*([a-z]+)\s*)?\)/gi,
+      xi = new Set(["_cssText", "rule", "replace", "replaceSync"]);
 
-    function gO(BB, OB) {
-      return BB.replace(FO, (BB => BB.replace(iO, ((BB, GB, YB) => {
-        const DB = GB.toLowerCase(),
-          QB = KO[OB][DB];
-        if (void 0 === YB) return "none" === QB ? IO : mO;
-        const oB = YB.toLowerCase();
-        return uO[DB].includes(oB) ? oB === QB ? mO : IO : BB
+    function Li(ee, ie) {
+      return ee.replace(ai, (ee => ee.replace(ci, ((ee, He, ye) => {
+        const be = He.toLowerCase(),
+          Me = Pi[ie][be];
+        if (void 0 === ye) return "none" === Me ? Vi : Yi;
+        const Ke = ye.toLowerCase();
+        return Ai[be].includes(Ke) ? Ke === Me ? Yi : Vi : ee
       }))))
     }
 
-    function rO(BB) {
-      const OB = BB.attributes,
-        GB = null === OB || void 0 === OB ? void 0 : OB.rel,
-        YB = null === OB || void 0 === OB ? void 0 : OB.href;
-      return "link" === BB.tagName && "string" === typeof GB && GB.toLowerCase().split(/\s+/).includes("stylesheet") && "string" === typeof YB ? YB : null
+    function Ci(ee) {
+      const ie = ee.attributes,
+        He = null === ie || void 0 === ie ? void 0 : ie.rel,
+        ye = null === ie || void 0 === ie ? void 0 : ie.href;
+      return "link" === ee.tagName && "string" === typeof He && He.toLowerCase().split(/\s+/).includes("stylesheet") && "string" === typeof ye ? ye : null
     }
 
-    function XO(BB) {
-      const OB = new Map;
-      kO(BB, (BB => {
-        const GB = rO(BB);
-        null !== GB && OB.set(BB.id, GB)
+    function vi(ee) {
+      const ie = new Map;
+      wi(ee, (ee => {
+        const He = Ci(ee);
+        null !== He && ie.set(ee.id, He)
       }));
-      const GB = new Map;
-      for (const DB of BB) {
-        const BB = DB.data;
-        if (DB.type === iB.e.IncrementalSnapshot && (null === BB || void 0 === BB ? void 0 : BB.source) === iB.g.Mutation)
-          for (const DB of null !== (YB = BB.attributes) && void 0 !== YB ? YB : []) {
-            var YB;
-            const BB = DB.attributes._cssText,
-              QB = OB.get(DB.id);
-            "string" !== typeof BB || void 0 === QB || GB.has(QB) || GB.set(QB, BB)
+      const He = new Map;
+      for (const be of ee) {
+        const ee = be.data;
+        if (be.type === ae.c.IncrementalSnapshot && (null === ee || void 0 === ee ? void 0 : ee.source) === ae.d.Mutation)
+          for (const be of null !== (ye = ee.attributes) && void 0 !== ye ? ye : []) {
+            var ye;
+            const ee = be.attributes._cssText,
+              Me = ie.get(be.id);
+            "string" !== typeof ee || void 0 === Me || He.has(Me) || He.set(Me, ee)
           }
       }
-      return GB
+      return He
     }
 
-    function wO(BB, OB, GB) {
-      var YB;
-      if ("string" === typeof BB) return null !== GB.pointer && LO.has(OB) ? gO(BB, GB.pointer) : BB;
-      if (Array.isArray(BB)) {
-        let OB = !1;
-        const YB = BB.map((BB => {
-          const YB = wO(BB, "", GB);
-          return OB ||= YB !== BB, YB
+    function ui(ee, ie, He) {
+      var ye;
+      if ("string" === typeof ee) return null !== He.pointer && xi.has(ie) ? Li(ee, He.pointer) : ee;
+      if (Array.isArray(ee)) {
+        let ie = !1;
+        const ye = ee.map((ee => {
+          const ye = ui(ee, "", He);
+          return ie ||= ye !== ee, ye
         }));
-        return OB ? YB : BB
+        return ie ? ye : ee
       }
-      if (null === BB || "object" !== typeof BB) return BB;
-      const DB = function(BB, OB) {
-        const GB = BB.attributes,
-          YB = rO(BB),
-          DB = null !== YB && void 0 === (null === GB || void 0 === GB ? void 0 : GB._cssText) ? OB.sheets.get(YB) : void 0;
-        return void 0 === DB ? BB : {
-          ...BB,
+      if (null === ee || "object" !== typeof ee) return ee;
+      const be = function(ee, ie) {
+        const He = ee.attributes,
+          ye = Ci(ee),
+          be = null !== ye && void 0 === (null === He || void 0 === He ? void 0 : He._cssText) ? ie.sheets.get(ye) : void 0;
+        return void 0 === be ? ee : {
+          ...ee,
           attributes: {
-            ...GB,
-            _cssText: DB
+            ...He,
+            _cssText: be
           }
         }
-      }(BB, GB);
-      let QB = null;
-      for (const [jB, yB] of Object.entries(DB)) {
-        const BB = wO(yB, jB, GB);
-        BB !== yB && (QB ??= {
-          ...DB
-        }, QB[jB] = BB)
+      }(ee, He);
+      let Me = null;
+      for (const [Ue, Fe] of Object.entries(be)) {
+        const ee = ui(Fe, Ue, He);
+        ee !== Fe && (Me ??= {
+          ...be
+        }, Me[Ue] = ee)
       }
       const {
-        id: oB
-      } = DB;
-      if (null !== GB.pointer && "number" === typeof oB && GB.styleTextIds.has(oB))
-        for (const jB of ["textContent", "value"]) {
-          const BB = DB[jB],
-            OB = "string" === typeof BB ? gO(BB, GB.pointer) : BB;
-          OB !== BB && (QB ??= {
-            ...DB
-          }, QB[jB] = OB)
+        id: Ke
+      } = be;
+      if (null !== He.pointer && "number" === typeof Ke && He.styleTextIds.has(Ke))
+        for (const Ue of ["textContent", "value"]) {
+          const ee = be[Ue],
+            ie = "string" === typeof ee ? Li(ee, He.pointer) : ee;
+          ie !== ee && (Me ??= {
+            ...be
+          }, Me[Ue] = ie)
         }
-      return null !== (YB = QB) && void 0 !== YB ? YB : DB
+      return null !== (ye = Me) && void 0 !== ye ? ye : be
     }
-    const EO = "brv-styles",
-      cO = [".brv-video-layer { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }", ".brv-video-layer { overflow: hidden !important; pointer-events: none !important; background: none !important; transform: none !important; }", ".brv-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-video { object-fit: fill !important; visibility: hidden !important; }", ".brv-video.brv-video-shown { visibility: visible !important; }", ".brv-still { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-still { object-fit: fill !important; visibility: hidden !important; max-width: none !important; }", ".brv-still.brv-still-shown { visibility: visible !important; }"],
-      hO = `\n.brv-player {\n\t--brv-bg: #22283b;\n\t--brv-panel: #2b3249;\n\t--brv-text: #f2f2f2;\n\t--brv-muted: #a4a4a4;\n\t--brv-accent: #ffb914;\n\t--brv-track: #3c4b68;\n\t--brv-fps: #1dd06d;\n\t--brv-low-fps: #e34f4f;\n\t--brv-inactive: rgba(164, 164, 164, 0.18);\n\t--brv-video-gap: rgba(10, 12, 20, 0.62);\n\t--brv-marker-error: #fc6464;\n\t--brv-marker-death: #6ec1ff;\n\t--brv-marker-note: #fcd373;\n\t--brv-key-press: #a4a4a4;\n\t--brv-key-unbound: #ff5a5a;\n\tdisplay: flex;\n\tflex-direction: column;\n\tmin-height: 0;\n\tbackground: var(--brv-bg);\n\tcolor: var(--brv-text);\n\tfont: inherit;\n\toutline: none;\n\tuser-select: none;\n}\n.brv-player:focus-visible { box-shadow: inset 0 0 0 2px var(--brv-accent); }\n.brv-player:fullscreen { width: 100%; height: 100%; }\n.brv-viewport { position: relative; flex: 1 1 auto; min-height: 12rem; overflow: hidden; background: #000; cursor: pointer; }\n.brv-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }\n.brv-stage .replayer-wrapper { position: relative; }\n.brv-stage .replayer-wrapper > iframe { position: relative; z-index: 1; display: block; border: 0; background: transparent; color-scheme: normal; pointer-events: none; }\n.brv-stage .replayer-mouse { position: absolute; z-index: 2; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center / contain; transition: left 0.05s linear, top 0.05s linear; }\n.brv-stage .replayer-mouse.touch-device { width: 48px; height: 48px; margin: -24px 0 0 -24px; background: none; border: 3px solid transparent; border-radius: 50%; }\n.brv-stage .replayer-mouse.touch-device.touch-active { border-color: color-mix(in srgb, var(--brv-accent) 90%, transparent); }\n.brv-stage .replayer-mouse-tail { position: absolute; pointer-events: none; }\n${cO.join("\n")}\n.brv-video-layer { z-index: 0; }\n.brv-stage-video-only .brv-video-layer { inset: 0; }\n.brv-overlay { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--brv-text); background: rgba(0, 0, 0, 0.55); pointer-events: none; }\n.brv-seekbar { position: relative; height: 2.75rem; margin: 0.5rem 0.75rem 0; cursor: pointer; touch-action: none; }\n.brv-seekbar-track { position: absolute; left: 0; right: 0; top: 0; height: 1.75rem; background: var(--brv-track); overflow: hidden; }\n.brv-seekbar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }\n.brv-seekbar-video-gap { position: absolute; top: 0; bottom: 0; background: var(--brv-video-gap); box-shadow: inset 0 -2px 0 var(--brv-muted); }\n.brv-seekbar-inactive { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--brv-inactive) 0 4px, transparent 4px 8px); }\n.brv-seekbar-progress { position: absolute; left: 0; top: 0; bottom: 0; width: var(--brv-position, 0); background: color-mix(in srgb, var(--brv-accent) 18%, transparent); pointer-events: none; }\n.brv-seekbar-hover { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.6); pointer-events: none; }\n.brv-seekbar-playhead { position: absolute; left: var(--brv-position, 0); top: -3px; bottom: -3px; width: 3px; margin-left: -1px; background: var(--brv-accent); pointer-events: none; }\n.brv-seekbar-markers { position: absolute; left: 0; right: 0; top: 1.75rem; height: 1rem; }\n.brv-seekbar-with-input { height: 3.25rem; }\n.brv-seekbar-input { position: absolute; left: 0; top: calc(1.75rem + 2px); width: 100%; height: 0.4rem; background: color-mix(in srgb, var(--brv-track) 55%, transparent); }\n.brv-seekbar-with-input .brv-seekbar-markers { top: calc(2.15rem + 4px); }\n.brv-input { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; pointer-events: none; font-size: 0.8rem; }\n.brv-input-slot { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }\n.brv-input-press { padding: 0.15rem 0.5rem; color: var(--brv-text); background: rgba(0, 0, 0, 0.7); white-space: nowrap; }\n.brv-input-press-unbound { background: color-mix(in srgb, var(--brv-key-unbound) 85%, black); font-weight: bold; }\n.brv-input-devices { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.4rem; background: rgba(0, 0, 0, 0.7); }\n.brv-keys { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }\n.brv-keys-row { display: flex; gap: 0.2rem; }\n.brv-key { min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--brv-muted); border: 1px solid var(--brv-muted); font-size: 0.7rem; }\n.brv-key-wide { min-width: 4.5rem; }\n.brv-key-held { color: #000; background: var(--brv-accent); border-color: var(--brv-accent); }\n.brv-mouse { position: relative; width: 2.4rem; height: 3.4rem; border: 1px solid var(--brv-muted); border-radius: 1.05rem 1.05rem 0.9rem 0.9rem; overflow: hidden; } /* round by design: the mouse's body */\n.brv-mouse-left, .brv-mouse-right { position: absolute; top: 0; width: 50%; height: 45%; box-sizing: border-box; border-bottom: 1px solid var(--brv-muted); }\n.brv-mouse-left { left: 0; border-right: 1px solid var(--brv-muted); }\n.brv-mouse-right { right: 0; }\n.brv-mouse-middle { position: absolute; left: calc(50% - 0.2rem); top: 0.35rem; z-index: 1; width: 0.4rem; height: 0.7rem; box-sizing: border-box; border: 1px solid var(--brv-muted); border-radius: 0.2rem; background: var(--brv-bg); } /* round by design: the scroll wheel */\n.brv-mouse .brv-key-held { background: var(--brv-accent); }\n.brv-marker { position: absolute; top: 2px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--brv-marker-note); }\n.brv-marker-range { margin-left: 0; height: 4px; top: 4px; min-width: 3px; }\n.brv-marker-error, .brv-marker-graphicsCrash { background: var(--brv-marker-error); }\n.brv-marker-death { background: var(--brv-marker-death); }\n.brv-marker-hidden { background: var(--brv-muted); }\n.brv-tooltip { position: absolute; bottom: calc(100% + 6px); transform: translateX(-50%); padding: 0.2rem 0.45rem; white-space: nowrap; font-size: 0.75rem; background: rgba(0, 0, 0, 0.85); pointer-events: none; z-index: 4; }\n.brv-chapters { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.25rem 0.75rem 0; }\n.brv-chapter { padding: 0.15rem 0.5rem; font: inherit; font-size: 0.75rem; color: var(--brv-text); background: var(--brv-panel); border: 1px solid transparent; cursor: pointer; }\n.brv-chapter.brv-chapter-current { border-color: var(--brv-accent); }\n.brv-controls { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.5rem 0.75rem 0.75rem; }\n.brv-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: 2.25rem; height: 2.25rem; padding: 0 0.55rem; font: inherit; font-size: 0.85rem; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-button:hover { filter: brightness(1.2); }\n.brv-button svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }\n.brv-time { font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--brv-muted); margin-right: auto; }\n.brv-speed { height: 2.25rem; padding: 0 0.4rem; font: inherit; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-speed:hover { filter: brightness(1.2); }\n.brv-speed option { color: var(--brv-text); background: var(--brv-bg); }\n.brv-switch { display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem; font: inherit; font-size: 0.85rem; color: var(--brv-muted); background: transparent; border: 0; cursor: pointer; }\n.brv-switch:hover { color: var(--brv-text); }\n.brv-switch[aria-checked="true"] { color: var(--brv-text); }\n.brv-switch-track { position: relative; width: 1.9rem; height: 1.05rem; background: var(--brv-track); transition: background 0.15s; }\n.brv-switch-track::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.05rem - 4px); height: calc(1.05rem - 4px); background: var(--brv-text); transition: transform 0.15s; }\n.brv-switch[aria-checked="true"] .brv-switch-track { background: var(--brv-accent); }\n.brv-switch[aria-checked="true"] .brv-switch-track::after { transform: translateX(0.85rem); }\n.brv-player button:focus-visible, .brv-speed:focus-visible { outline: 2px solid var(--brv-accent); outline-offset: 1px; }\n`;
-    class aO {
-      static create(BB, OB, GB, YB, DB, QB, oB, jB) {
-        if (!OB.some((BB => BB.type === iB.e.FullSnapshot))) return null;
-        const yB = function(BB, OB) {
-          const GB = {
-            sheets: XO(BB),
-            styleTextIds: dO(BB),
-            pointer: OB
+    const mi = "brv-styles",
+      li = [".brv-video-layer { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }", ".brv-video-layer { overflow: hidden !important; pointer-events: none !important; background: none !important; transform: none !important; }", ".brv-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-video { object-fit: fill !important; visibility: hidden !important; }", ".brv-video.brv-video-shown { visibility: visible !important; }", ".brv-still { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-still { object-fit: fill !important; visibility: hidden !important; max-width: none !important; }", ".brv-still.brv-still-shown { visibility: visible !important; }"],
+      Si = `\n.brv-player {\n\t--brv-bg: #22283b;\n\t--brv-panel: #2b3249;\n\t--brv-text: #f2f2f2;\n\t--brv-muted: #a4a4a4;\n\t--brv-accent: #ffb914;\n\t--brv-track: #3c4b68;\n\t--brv-fps: #1dd06d;\n\t--brv-low-fps: #e34f4f;\n\t--brv-inactive: rgba(164, 164, 164, 0.18);\n\t--brv-video-gap: rgba(10, 12, 20, 0.62);\n\t--brv-marker-error: #fc6464;\n\t--brv-marker-death: #6ec1ff;\n\t--brv-marker-note: #fcd373;\n\t--brv-key-press: #a4a4a4;\n\t--brv-key-unbound: #ff5a5a;\n\tdisplay: flex;\n\tflex-direction: column;\n\tmin-height: 0;\n\tbackground: var(--brv-bg);\n\tcolor: var(--brv-text);\n\tfont: inherit;\n\toutline: none;\n\tuser-select: none;\n}\n.brv-player:focus-visible { box-shadow: inset 0 0 0 2px var(--brv-accent); }\n.brv-player:fullscreen { width: 100%; height: 100%; }\n.brv-viewport { position: relative; flex: 1 1 auto; min-height: 12rem; overflow: hidden; background: #000; cursor: pointer; }\n.brv-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }\n.brv-stage .replayer-wrapper { position: relative; }\n.brv-stage .replayer-wrapper > iframe { position: relative; z-index: 1; display: block; border: 0; background: transparent; color-scheme: normal; pointer-events: none; }\n.brv-stage .replayer-mouse { position: absolute; z-index: 2; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center / contain; transition: left 0.05s linear, top 0.05s linear; }\n.brv-stage .replayer-mouse.touch-device { width: 48px; height: 48px; margin: -24px 0 0 -24px; background: none; border: 3px solid transparent; border-radius: 50%; }\n.brv-stage .replayer-mouse.touch-device.touch-active { border-color: color-mix(in srgb, var(--brv-accent) 90%, transparent); }\n.brv-stage .replayer-mouse-tail { position: absolute; pointer-events: none; }\n${li.join("\n")}\n.brv-video-layer { z-index: 0; }\n.brv-stage-video-only .brv-video-layer { inset: 0; }\n.brv-overlay { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--brv-text); background: rgba(0, 0, 0, 0.55); pointer-events: none; }\n.brv-seekbar { position: relative; height: 2.75rem; margin: 0.5rem 0.75rem 0; cursor: pointer; touch-action: none; }\n.brv-seekbar-track { position: absolute; left: 0; right: 0; top: 0; height: 1.75rem; background: var(--brv-track); overflow: hidden; }\n.brv-seekbar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }\n.brv-seekbar-video-gap { position: absolute; top: 0; bottom: 0; background: var(--brv-video-gap); box-shadow: inset 0 -2px 0 var(--brv-muted); }\n.brv-seekbar-inactive { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--brv-inactive) 0 4px, transparent 4px 8px); }\n.brv-seekbar-progress { position: absolute; left: 0; top: 0; bottom: 0; width: var(--brv-position, 0); background: color-mix(in srgb, var(--brv-accent) 18%, transparent); pointer-events: none; }\n.brv-seekbar-hover { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.6); pointer-events: none; }\n.brv-seekbar-playhead { position: absolute; left: var(--brv-position, 0); top: -3px; bottom: -3px; width: 3px; margin-left: -1px; background: var(--brv-accent); pointer-events: none; }\n.brv-seekbar-markers { position: absolute; left: 0; right: 0; top: 1.75rem; height: 1rem; }\n.brv-seekbar-with-input { height: 3.25rem; }\n.brv-seekbar-input { position: absolute; left: 0; top: calc(1.75rem + 2px); width: 100%; height: 0.4rem; background: color-mix(in srgb, var(--brv-track) 55%, transparent); }\n.brv-seekbar-with-input .brv-seekbar-markers { top: calc(2.15rem + 4px); }\n.brv-input { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; pointer-events: none; font-size: 0.8rem; }\n.brv-input-slot { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }\n.brv-input-press { padding: 0.15rem 0.5rem; color: var(--brv-text); background: rgba(0, 0, 0, 0.7); white-space: nowrap; }\n.brv-input-press-unbound { background: color-mix(in srgb, var(--brv-key-unbound) 85%, black); font-weight: bold; }\n.brv-input-devices { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.4rem; background: rgba(0, 0, 0, 0.7); }\n.brv-keys { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }\n.brv-keys-row { display: flex; gap: 0.2rem; }\n.brv-key { min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--brv-muted); border: 1px solid var(--brv-muted); font-size: 0.7rem; }\n.brv-key-wide { min-width: 4.5rem; }\n.brv-key-held { color: #000; background: var(--brv-accent); border-color: var(--brv-accent); }\n.brv-mouse { position: relative; width: 2.4rem; height: 3.4rem; border: 1px solid var(--brv-muted); border-radius: 1.05rem 1.05rem 0.9rem 0.9rem; overflow: hidden; } /* round by design: the mouse's body */\n.brv-mouse-left, .brv-mouse-right { position: absolute; top: 0; width: 50%; height: 45%; box-sizing: border-box; border-bottom: 1px solid var(--brv-muted); }\n.brv-mouse-left { left: 0; border-right: 1px solid var(--brv-muted); }\n.brv-mouse-right { right: 0; }\n.brv-mouse-middle { position: absolute; left: calc(50% - 0.2rem); top: 0.35rem; z-index: 1; width: 0.4rem; height: 0.7rem; box-sizing: border-box; border: 1px solid var(--brv-muted); border-radius: 0.2rem; background: var(--brv-bg); } /* round by design: the scroll wheel */\n.brv-mouse .brv-key-held { background: var(--brv-accent); }\n.brv-marker { position: absolute; top: 2px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--brv-marker-note); }\n.brv-marker-range { margin-left: 0; height: 4px; top: 4px; min-width: 3px; }\n.brv-marker-error, .brv-marker-graphicsCrash { background: var(--brv-marker-error); }\n.brv-marker-death { background: var(--brv-marker-death); }\n.brv-marker-hidden { background: var(--brv-muted); }\n.brv-tooltip { position: absolute; bottom: calc(100% + 6px); transform: translateX(-50%); padding: 0.2rem 0.45rem; white-space: nowrap; font-size: 0.75rem; background: rgba(0, 0, 0, 0.85); pointer-events: none; z-index: 4; }\n.brv-chapters { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.25rem 0.75rem 0; }\n.brv-chapter { padding: 0.15rem 0.5rem; font: inherit; font-size: 0.75rem; color: var(--brv-text); background: var(--brv-panel); border: 1px solid transparent; cursor: pointer; }\n.brv-chapter.brv-chapter-current { border-color: var(--brv-accent); }\n.brv-controls { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.5rem 0.75rem 0.75rem; }\n.brv-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: 2.25rem; height: 2.25rem; padding: 0 0.55rem; font: inherit; font-size: 0.85rem; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-button:hover { filter: brightness(1.2); }\n.brv-button svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }\n.brv-time { font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--brv-muted); margin-right: auto; }\n.brv-speed { height: 2.25rem; padding: 0 0.4rem; font: inherit; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-speed:hover { filter: brightness(1.2); }\n.brv-speed option { color: var(--brv-text); background: var(--brv-bg); }\n.brv-switch { display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem; font: inherit; font-size: 0.85rem; color: var(--brv-muted); background: transparent; border: 0; cursor: pointer; }\n.brv-switch:hover { color: var(--brv-text); }\n.brv-switch[aria-checked="true"] { color: var(--brv-text); }\n.brv-switch-track { position: relative; width: 1.9rem; height: 1.05rem; background: var(--brv-track); transition: background 0.15s; }\n.brv-switch-track::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.05rem - 4px); height: calc(1.05rem - 4px); background: var(--brv-text); transition: transform 0.15s; }\n.brv-switch[aria-checked="true"] .brv-switch-track { background: var(--brv-accent); }\n.brv-switch[aria-checked="true"] .brv-switch-track::after { transform: translateX(0.85rem); }\n.brv-player button:focus-visible, .brv-speed:focus-visible { outline: 2px solid var(--brv-accent); outline-offset: 1px; }\n`;
+    class ni {
+      static create(ee, ie, He, ye, be, Me, Ke, Ue) {
+        if (!ie.some((ee => ee.type === ae.c.FullSnapshot))) return null;
+        const Fe = function(ee, ie) {
+          const He = {
+            sheets: vi(ee),
+            styleTextIds: Di(ee),
+            pointer: ie
           };
-          return BB.map((BB => {
-            if (BB.type !== iB.e.FullSnapshot && BB.type !== iB.e.IncrementalSnapshot) return BB;
-            const OB = wO(BB.data, "data", GB);
-            return OB === BB.data ? BB : {
-              ...BB,
-              data: OB
+          return ee.map((ee => {
+            if (ee.type !== ae.c.FullSnapshot && ee.type !== ae.c.IncrementalSnapshot) return ee;
+            const ie = ui(ee.data, "data", He);
+            return ie === ee.data ? ee : {
+              ...ee,
+              data: ie
             }
           }))
-        }(function(BB, OB) {
-          const GB = {
-            hosts: OB,
-            styleTextIds: dO(BB)
+        }(function(ee, ie) {
+          const He = {
+            hosts: ie,
+            styleTextIds: Di(ee)
           };
-          return BB.map((BB => BB.type === iB.e.Meta ? BB : {
-            ...BB,
-            data: fO("data", BB.data, GB)
+          return ee.map((ee => ee.type === ae.c.Meta ? ee : {
+            ...ee,
+            data: Zi("data", ee.data, He)
           }))
-        }(OB, QB), GB);
-        return new aO(BB, yB, YB, DB, oB, jB)
+        }(ie, Me), He);
+        return new ni(ee, Fe, ye, be, Ke, Ue)
       }
-      constructor(BB, OB, GB, YB, DB, QB) {
-        var oB, jB, yB, JB;
-        this.domClock = GB, this.canvasSelectors = YB, this.videoLayer = DB, this.replayer = void 0, this.pausedAnimations = new jO, this.firstDomMs = void 0, this.lastDomMs = void 0, this.lastCanvasRectMs = -1 / 0, this.lastDomCheckMs = -1 / 0, this.firstDomMs = null !== (oB = null === (jB = OB[0]) || void 0 === jB ? void 0 : jB.timestamp) && void 0 !== oB ? oB : 0, this.lastDomMs = null !== (yB = null === (JB = OB.at(-1)) || void 0 === JB ? void 0 : JB.timestamp) && void 0 !== yB ? yB : 0, this.replayer = new iB.j(OB, {
-          root: BB,
+      constructor(ee, ie, He, ye, be, Me) {
+        var Ke, Ue, Fe, Je;
+        this.domClock = He, this.canvasSelectors = ye, this.videoLayer = be, this.replayer = void 0, this.pausedAnimations = new Ui, this.firstDomMs = void 0, this.lastDomMs = void 0, this.lastCanvasRectMs = -1 / 0, this.lastDomCheckMs = -1 / 0, this.firstDomMs = null !== (Ke = null === (Ue = ie[0]) || void 0 === Ue ? void 0 : Ue.timestamp) && void 0 !== Ke ? Ke : 0, this.lastDomMs = null !== (Fe = null === (Je = ie.at(-1)) || void 0 === Je ? void 0 : Je.timestamp) && void 0 !== Fe ? Fe : 0, this.replayer = new ae.e(ie, {
+          root: ee,
           speed: 1,
           skipInactive: !1,
           mouseTail: !1,
@@ -1225,30 +1225,30 @@ export const modules = {
           triggerFocus: !1,
           pauseAnimation: !0,
           plugins: [this.pausedAnimations.plugin],
-          insertStyleRules: cO
-        }), this.replayer.on("resize", (BB => {
+          insertStyleRules: li
+        }), this.replayer.on("resize", (ee => {
           const {
-            width: OB,
-            height: GB
-          } = BB;
-          QB({
-            width: OB,
-            height: GB
+            width: ie,
+            height: He
+          } = ee;
+          Me({
+            width: ie,
+            height: He
           })
         })), this.replayer.on("fullsnapshot-rebuilded", (() => {
           this.invalidateCanvasRect(), this.pausedAnimations.settle(this.replayer)
         }))
       }
-      sync(BB, OB) {
-        const GB = this.domOffsetAt(BB);
-        OB ? this.replayer.play(GB) : this.replayer.pause(GB), this.lastDomCheckMs = performance.now()
+      sync(ee, ie) {
+        const He = this.domOffsetAt(ee);
+        ie ? this.replayer.play(He) : this.replayer.pause(He), this.lastDomCheckMs = performance.now()
       }
-      update(BB, OB, GB) {
-        GB - this.lastCanvasRectMs >= 250 && (this.lastCanvasRectMs = GB, this.placeVideoOverCanvas()), OB && GB - this.lastDomCheckMs >= 500 && (this.lastDomCheckMs = GB, this.checkDrift(BB))
+      update(ee, ie, He) {
+        He - this.lastCanvasRectMs >= 250 && (this.lastCanvasRectMs = He, this.placeVideoOverCanvas()), ie && He - this.lastDomCheckMs >= 500 && (this.lastDomCheckMs = He, this.checkDrift(ee))
       }
-      setSpeed(BB) {
+      setSpeed(ee) {
         this.replayer.setConfig({
-          speed: BB
+          speed: ee
         })
       }
       invalidateCanvasRect() {
@@ -1257,283 +1257,283 @@ export const modules = {
       destroy() {
         this.replayer.destroy()
       }
-      domOffsetAt(BB) {
-        return Math.max(0, Math.min(this.lastDomMs + 1, this.domClock.toDom(BB)) - this.firstDomMs)
+      domOffsetAt(ee) {
+        return Math.max(0, Math.min(this.lastDomMs + 1, this.domClock.toDom(ee)) - this.firstDomMs)
       }
-      checkDrift(BB) {
-        const OB = this.domOffsetAt(BB);
-        OB >= this.lastDomMs - this.firstDomMs || Math.abs(this.replayer.getCurrentTime() - OB) > 400 && this.replayer.play(OB)
+      checkDrift(ee) {
+        const ie = this.domOffsetAt(ee);
+        ie >= this.lastDomMs - this.firstDomMs || Math.abs(this.replayer.getCurrentTime() - ie) > 400 && this.replayer.play(ie)
       }
       placeVideoOverCanvas() {
-        const BB = this.replayer.iframe.contentDocument,
-          OB = null === BB ? null : function(BB, OB) {
-            for (const GB of OB) {
-              const OB = BB.querySelector(GB);
-              if (null !== OB) return OB
+        const ee = this.replayer.iframe.contentDocument,
+          ie = null === ee ? null : function(ee, ie) {
+            for (const He of ie) {
+              const ie = ee.querySelector(He);
+              if (null !== ie) return ie
             }
             return null
-          }(BB, this.canvasSelectors),
-          GB = this.videoLayer.element;
-        null !== OB ? (GB.previousSibling !== OB && OB.after(GB), GB.style.display = "", GB.style.left = `${OB.offsetLeft}px`, GB.style.top = `${OB.offsetTop}px`, GB.style.width = `${OB.offsetWidth}px`, GB.style.height = `${OB.offsetHeight}px`) : GB.style.display = "none"
+          }(ee, this.canvasSelectors),
+          He = this.videoLayer.element;
+        null !== ie ? (He.previousSibling !== ie && ie.after(He), He.style.display = "", He.style.left = `${ie.offsetLeft}px`, He.style.top = `${ie.offsetTop}px`, He.style.width = `${ie.offsetWidth}px`, He.style.height = `${ie.offsetHeight}px`) : He.style.display = "none"
       }
     }
-    const eO = {
+    const ji = {
       width: 1280,
       height: 720
     };
-    class TO {
-      constructor(BB, OB) {
-        this.root = BB, this.onViewportChanged = OB, this.element = void 0, this.viewport = null, this.resizeObserver = void 0, this.element = document.createElement("div"), this.element.className = "brv-stage", BB.appendChild(this.element), this.resizeObserver = new ResizeObserver((() => {
+    class si {
+      constructor(ee, ie) {
+        this.root = ee, this.onViewportChanged = ie, this.element = void 0, this.viewport = null, this.resizeObserver = void 0, this.element = document.createElement("div"), this.element.className = "brv-stage", ee.appendChild(this.element), this.resizeObserver = new ResizeObserver((() => {
           this.fit()
-        })), this.resizeObserver.observe(BB)
+        })), this.resizeObserver.observe(ee)
       }
-      setViewport(BB) {
-        var OB;
-        null === BB || BB.width <= 0 || BB.height <= 0 || BB.width === (null === (OB = this.viewport) || void 0 === OB ? void 0 : OB.width) && BB.height === this.viewport.height || (this.viewport = BB, this.element.style.width = `${BB.width}px`, this.element.style.height = `${BB.height}px`, this.onViewportChanged(), this.fit())
+      setViewport(ee) {
+        var ie;
+        null === ee || ee.width <= 0 || ee.height <= 0 || ee.width === (null === (ie = this.viewport) || void 0 === ie ? void 0 : ie.width) && ee.height === this.viewport.height || (this.viewport = ee, this.element.style.width = `${ee.width}px`, this.element.style.height = `${ee.height}px`, this.onViewportChanged(), this.fit())
       }
       destroy() {
         this.resizeObserver.disconnect(), this.element.remove()
       }
       fit() {
-        var BB;
-        const OB = null !== (BB = this.viewport) && void 0 !== BB ? BB : eO,
-          GB = this.root.getBoundingClientRect(),
-          YB = Math.min(GB.width / OB.width, GB.height / OB.height),
-          DB = (GB.width - OB.width * YB) / 2,
-          QB = (GB.height - OB.height * YB) / 2;
-        this.element.style.transform = `translate(${DB}px, ${QB}px) scale(${YB})`
+        var ee;
+        const ie = null !== (ee = this.viewport) && void 0 !== ee ? ee : ji,
+          He = this.root.getBoundingClientRect(),
+          ye = Math.min(He.width / ie.width, He.height / ie.height),
+          be = (He.width - ie.width * ye) / 2,
+          Me = (He.height - ie.height * ye) / 2;
+        this.element.style.transform = `translate(${be}px, ${Me}px) scale(${ye})`
       }
     }
-    class bO {
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : sB;
-        this.urls = void 0, this.urls = new tB(BB, "video URLs", OB, GB)
+    class Ii {
+      constructor(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ge;
+        this.urls = void 0, this.urls = new Qe(ee, "video URLs", ie, He)
       }
-      reset(BB) {
-        this.urls.reset(BB.flatMap((BB => {
-          var OB;
-          return null !== (OB = function(BB) {
-            return "url" in BB ? null === BB.url ? null : {
-              sequence: BB.sequence,
-              url: BB.url
-            } : void 0 === BB.partUrls ? null : {
-              sequence: BB.sequence,
-              partUrls: BB.partUrls
+      reset(ee) {
+        this.urls.reset(ee.flatMap((ee => {
+          var ie;
+          return null !== (ie = function(ee) {
+            return "url" in ee ? null === ee.url ? null : {
+              sequence: ee.sequence,
+              url: ee.url
+            } : void 0 === ee.partUrls ? null : {
+              sequence: ee.sequence,
+              partUrls: ee.partUrls
             }
-          }(BB)) && void 0 !== OB ? OB : []
+          }(ee)) && void 0 !== ie ? ie : []
         })))
       }
-      get(BB) {
-        return this.urls.get(BB)
+      get(ee) {
+        return this.urls.get(ee)
       }
-      update(BB, OB, GB) {
-        this.urls.request(function(BB, OB, GB, YB) {
-          return BB.filter((BB => BB.endMs > OB && BB.startMs < OB + GB && YB(BB.sequence))).map((BB => BB.sequence))
-        }(BB, OB, 12e4 * Math.max(1, GB), (BB => this.urls.needs(BB))))
+      update(ee, ie, He) {
+        this.urls.request(function(ee, ie, He, ye) {
+          return ee.filter((ee => ee.endMs > ie && ee.startMs < ie + He && ye(ee.sequence))).map((ee => ee.sequence))
+        }(ee, ie, 12e4 * Math.max(1, He), (ee => this.urls.needs(ee))))
       }
       destroy() {
         this.urls.destroy()
       }
     }
-    async function CO(BB, OB, GB) {
-      const YB = [];
-      let DB = BB.length,
-        QB = 0;
+    async function Ni(ee, ie, He) {
+      const ye = [];
+      let be = ee.length,
+        Me = 0;
       return await Promise.all(Array.from({
-        length: Math.min(3, BB.length)
+        length: Math.min(3, ee.length)
       }, (() => (async () => {
-        for (; QB < DB;) {
-          const jB = QB++;
+        for (; Me < be;) {
+          const Ue = Me++;
           try {
-            YB[jB] = await OB(BB[jB], GB)
-          } catch (oB) {
-            if (GB.aborted) throw oB;
-            console.warn(`Replay video part ${jB} failed to load; playing the parts before it.`, oB), DB = Math.min(DB, jB)
+            ye[Ue] = await ie(ee[Ue], He)
+          } catch (Ke) {
+            if (He.aborted) throw Ke;
+            console.warn(`Replay video part ${Ue} failed to load; playing the parts before it.`, Ke), be = Math.min(be, Ue)
           }
         }
-      })()))), YB.slice(0, DB)
+      })()))), ye.slice(0, be)
     }
 
-    function HO(BB) {
-      const OB = [];
-      let GB = 0;
-      for (const MB of BB) OB.push(GB), GB += MB.byteLength;
-      let YB = 0;
-      const DB = GB => {
-          for (; OB[YB] > GB;) YB--;
-          for (; YB + 1 < OB.length && OB[YB + 1] <= GB;) YB++;
-          return BB[YB][GB - OB[YB]]
+    function Gi(ee) {
+      const ie = [];
+      let He = 0;
+      for (const oe of ee) ie.push(He), He += oe.byteLength;
+      let ye = 0;
+      const be = He => {
+          for (; ie[ye] > He;) ye--;
+          for (; ye + 1 < ie.length && ie[ye + 1] <= He;) ye++;
+          return ee[ye][He - ie[ye]]
         },
-        QB = BB => DB(BB) * 2 ** 24 + 65536 * DB(BB + 1) + 256 * DB(BB + 2) + DB(BB + 3);
-      let oB = 0,
-        jB = !1,
-        yB = !1,
-        JB = 0;
-      for (; oB + 8 <= GB;) {
-        const BB = String.fromCharCode(DB(oB + 4), DB(oB + 5), DB(oB + 6), DB(oB + 7));
-        let OB = QB(oB);
-        if (1 === OB) {
-          if (oB + 16 > GB) break;
-          OB = QB(oB + 8) * 2 ** 32 + QB(oB + 12)
-        } else 0 === OB && (OB = GB - oB);
-        if (OB < 8 || oB + OB > GB) break;
-        oB += OB, "moov" === BB ? jB = !0 : "moof" === BB ? yB = !0 : "mdat" === BB && yB ? (yB = !1, JB = oB) : !yB && JB > 0 && (JB = oB)
+        Me = ee => be(ee) * 2 ** 24 + 65536 * be(ee + 1) + 256 * be(ee + 2) + be(ee + 3);
+      let Ke = 0,
+        Ue = !1,
+        Fe = !1,
+        Je = 0;
+      for (; Ke + 8 <= He;) {
+        const ee = String.fromCharCode(be(Ke + 4), be(Ke + 5), be(Ke + 6), be(Ke + 7));
+        let ie = Me(Ke);
+        if (1 === ie) {
+          if (Ke + 16 > He) break;
+          ie = Me(Ke + 8) * 2 ** 32 + Me(Ke + 12)
+        } else 0 === ie && (ie = He - Ke);
+        if (ie < 8 || Ke + ie > He) break;
+        Ke += ie, "moov" === ee ? Ue = !0 : "moof" === ee ? Fe = !0 : "mdat" === ee && Fe ? (Fe = !1, Je = Ke) : !Fe && Je > 0 && (Je = Ke)
       }
-      return jB && JB > 0 ? JB : null
+      return Ue && Je > 0 ? Je : null
     }
-    async function vO(BB, OB) {
-      const GB = await fetch(BB, {
-        signal: OB
+    async function ri(ee, ie) {
+      const He = await fetch(ee, {
+        signal: ie
       });
-      if (!GB.ok) throw new Error(`HTTP ${GB.status}`);
-      return GB.arrayBuffer()
+      if (!He.ok) throw new Error(`HTTP ${He.status}`);
+      return He.arrayBuffer()
     }
-    class sO {
+    class Qi {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : vO,
-          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        this.fetchPart = BB, this.CP = OB, this.blobs = new Map
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ri,
+          ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        this.fetchPart = ee, this.bk = ie, this.blobs = new Map
       }
-      get(BB, OB) {
-        const GB = xO(BB, OB),
-          YB = this.blobs.get(GB);
-        return void 0 === YB ? null : (this.remember(GB, YB), YB)
+      get(ee, ie) {
+        const He = eH(ee, ie),
+          ye = this.blobs.get(He);
+        return void 0 === ye ? null : (this.remember(He, ye), ye)
       }
-      async load(BB, OB, GB) {
-        const YB = await CO(OB, this.fetchPart, GB),
-          DB = function(BB) {
-            const OB = BB.map((BB => new Uint8Array(BB))),
-              GB = HO(OB);
-            return null === GB ? null : new Blob(function(BB, OB) {
-              const GB = [];
-              let YB = OB;
-              for (const DB of BB) {
-                if (YB <= 0) break;
-                GB.push(DB.byteLength <= YB ? DB : DB.subarray(0, YB)), YB -= DB.byteLength
+      async load(ee, ie, He) {
+        const ye = await Ni(ie, this.fetchPart, He),
+          be = function(ee) {
+            const ie = ee.map((ee => new Uint8Array(ee))),
+              He = Gi(ie);
+            return null === He ? null : new Blob(function(ee, ie) {
+              const He = [];
+              let ye = ie;
+              for (const be of ee) {
+                if (ye <= 0) break;
+                He.push(be.byteLength <= ye ? be : be.subarray(0, ye)), ye -= be.byteLength
               }
-              return GB
-            }(OB, GB), {
+              return He
+            }(ie, He), {
               type: "video/mp4"
             })
-          }(YB);
-        return null !== DB && YB.length === OB.length && this.remember(xO(BB, OB.length), DB), DB
+          }(ye);
+        return null !== be && ye.length === ie.length && this.remember(eH(ee, ie.length), be), be
       }
-      remember(BB, OB) {
-        this.blobs.delete(BB), this.blobs.set(BB, OB), this.blobs.size > this.CP && this.blobs.delete(this.blobs.keys().next().value)
+      remember(ee, ie) {
+        this.blobs.delete(ee), this.blobs.set(ee, ie), this.blobs.size > this.bk && this.blobs.delete(this.blobs.keys().next().value)
       }
     }
 
-    function xO(BB, OB) {
-      return `${BB}/${OB}`
+    function eH(ee, ie) {
+      return `${ee}/${ie}`
     }
 
-    function tO(BB) {
-      const OB = function(BB) {
-        return BB.map(((OB, GB) => {
-          const YB = BB[GB + 1];
-          return void 0 === YB ? OB.endMs : Math.min(OB.endMs, YB.startMs)
+    function iH(ee) {
+      const ie = function(ee) {
+        return ee.map(((ie, He) => {
+          const ye = ee[He + 1];
+          return void 0 === ye ? ie.endMs : Math.min(ie.endMs, ye.startMs)
         }))
-      }(BB);
-      return BB.map(((BB, GB) => ({
-        ...BB,
-        endMs: OB[GB]
-      }))).filter((BB => BB.endMs > BB.startMs))
+      }(ee);
+      return ee.map(((ee, He) => ({
+        ...ee,
+        endMs: ie[He]
+      }))).filter((ee => ee.endMs > ee.startMs))
     }
 
-    function BG(BB, OB) {
-      let GB = 0,
-        YB = BB.length - 1;
-      for (; GB <= YB;) {
-        const DB = GB + YB >> 1,
-          QB = BB[DB];
-        if (OB < QB.startMs) YB = DB - 1;
+    function HH(ee, ie) {
+      let He = 0,
+        ye = ee.length - 1;
+      for (; He <= ye;) {
+        const be = He + ye >> 1,
+          Me = ee[be];
+        if (ie < Me.startMs) ye = be - 1;
         else {
-          if (!(OB >= QB.endMs)) return QB;
-          GB = DB + 1
+          if (!(ie >= Me.endMs)) return Me;
+          He = be + 1
         }
       }
       return null
     }
 
-    function OG(BB, OB) {
-      return (OB - BB.startMs) / 1e3
+    function yH(ee, ie) {
+      return (ie - ee.startMs) / 1e3
     }
 
-    function GG(BB) {
-      return Math.max(.4, .1 * BB)
+    function bH(ee) {
+      return Math.max(.4, .1 * ee)
     }
 
-    function YG(BB) {
-      return Math.max(.0625, Math.min(16, BB))
+    function MH(ee) {
+      return Math.max(.0625, Math.min(16, ee))
     }
-    class DG {
-      constructor(BB, OB, GB, YB, DB, QB, oB) {
-        this.still = OB, this.clock = GB, this.frameDurationS = YB, this.wallNowMs = DB, this.onLoadFailed = oB, this.element = void 0, this.slots = new Map, this.shown = null, this.seekLatencyS = .15, this.lastSeekWallMs = -1 / 0, this.lastPresented = null, this.stats = {
+    class KH {
+      constructor(ee, ie, He, ye, be, Me, Ke) {
+        this.still = ie, this.clock = He, this.frameDurationS = ye, this.wallNowMs = be, this.onLoadFailed = Ke, this.element = void 0, this.slots = new Map, this.shown = null, this.seekLatencyS = .15, this.lastSeekWallMs = -1 / 0, this.lastPresented = null, this.stats = {
           frames: 0,
           sumAbsDriftMs: 0,
           maxAbsDriftMs: 0,
           withinOneFrame: 0,
           seeks: 0
-        }, this.failed = new Set, this.segments = void 0, this.segmentUrls = void 0, this.blobs = new sO, this.stillImage = void 0, this.stillShown = !1, this.failedStillUrl = null, this.segments = tO(BB), this.segmentUrls = new bO(QB), this.segmentUrls.reset(this.segments), this.element = document.createElement("div"), this.element.className = "brv-video-layer", this.stillImage = document.createElement("img"), this.stillImage.className = "brv-still", this.stillImage.alt = "", this.stillImage.addEventListener("error", (() => {
+        }, this.failed = new Set, this.segments = void 0, this.segmentUrls = void 0, this.blobs = new Qi, this.stillImage = void 0, this.stillShown = !1, this.failedStillUrl = null, this.segments = iH(ee), this.segmentUrls = new Ii(Me), this.segmentUrls.reset(this.segments), this.element = document.createElement("div"), this.element.className = "brv-video-layer", this.stillImage = document.createElement("img"), this.stillImage.className = "brv-still", this.stillImage.alt = "", this.stillImage.addEventListener("error", (() => {
           console.warn("Replay still failed to load."), this.failedStillUrl = this.stillImage.getAttribute("src"), this.stillImage.removeAttribute("src"), this.onLoadFailed()
         })), this.element.appendChild(this.stillImage)
       }
       get visible() {
         return null !== this.shown || this.stillShown
       }
-      getVideoSizeAt(BB) {
-        var OB, GB;
-        const YB = null !== (OB = null !== (GB = BG(this.segments, BB)) && void 0 !== GB ? GB : this.segments.find((OB => OB.startMs > BB))) && void 0 !== OB ? OB : this.segments.at(-1);
-        return void 0 === YB ? null : {
-          width: YB.width,
-          height: YB.height
+      getVideoSizeAt(ee) {
+        var ie, He;
+        const ye = null !== (ie = null !== (He = HH(this.segments, ee)) && void 0 !== He ? He : this.segments.find((ie => ie.startMs > ee))) && void 0 !== ie ? ie : this.segments.at(-1);
+        return void 0 === ye ? null : {
+          width: ye.width,
+          height: ye.height
         }
       }
-      failedAt(BB) {
-        const OB = BG(this.segments, BB);
-        return null !== OB && this.failed.has(OB.sequence)
+      failedAt(ee) {
+        const ie = HH(this.segments, ee);
+        return null !== ie && this.failed.has(ie.sequence)
       }
-      replaceSegments(BB, OB) {
-        for (const GB of this.slots.values()) this.release(GB);
-        this.slots.clear(), this.failed.clear(), this.segments = tO(BB), this.segmentUrls.reset(this.segments), this.still = OB
+      replaceSegments(ee, ie) {
+        for (const He of this.slots.values()) this.release(He);
+        this.slots.clear(), this.failed.clear(), this.segments = iH(ee), this.segmentUrls.reset(this.segments), this.still = ie
       }
-      update(BB) {
-        var OB, GB;
-        this.segmentUrls.update(this.segments, BB, this.clock.speed);
-        const YB = BG(this.segments, BB),
-          DB = function(BB, OB) {
-            const GB = BB.find((BB => BB.startMs > OB));
-            return void 0 === GB ? null : GB.startMs - OB <= ("parts" in GB ? 15e3 : 8e3) ? GB : null
-          }(this.segments, BB);
-        this.evictExcept([YB, DB, null !== (OB = null === (GB = this.shown) || void 0 === GB ? void 0 : GB.segment) && void 0 !== OB ? OB : null]), null !== DB && this.getSlot(DB), this.showStill(null === YB ? function(BB, OB, GB) {
-          if (null === OB) return null;
-          const YB = BB.at(-1);
-          return void 0 === YB ? GB >= OB.atMs - 1e4 ? OB : null : GB >= YB.endMs && Math.abs(OB.atMs - YB.endMs) <= 1e4 ? OB : null
-        }(this.segments, this.still, BB) : null);
-        const QB = null === YB ? null : this.getSlot(YB);
-        if (null !== QB) {
-          this.sync(QB, OG(QB.segment, BB)), QB.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && !QB.video.seeking && this.show(QB);
-          for (const BB of this.slots.values()) BB === QB || BB.video.paused || BB.video.pause()
+      update(ee) {
+        var ie, He;
+        this.segmentUrls.update(this.segments, ee, this.clock.speed);
+        const ye = HH(this.segments, ee),
+          be = function(ee, ie) {
+            const He = ee.find((ee => ee.startMs > ie));
+            return void 0 === He ? null : He.startMs - ie <= ("parts" in He ? 15e3 : 8e3) ? He : null
+          }(this.segments, ee);
+        this.evictExcept([ye, be, null !== (ie = null === (He = this.shown) || void 0 === He ? void 0 : He.segment) && void 0 !== ie ? ie : null]), null !== be && this.getSlot(be), this.showStill(null === ye ? function(ee, ie, He) {
+          if (null === ie) return null;
+          const ye = ee.at(-1);
+          return void 0 === ye ? He >= ie.atMs - 1e4 ? ie : null : He >= ye.endMs && Math.abs(ie.atMs - ye.endMs) <= 1e4 ? ie : null
+        }(this.segments, this.still, ee) : null);
+        const Me = null === ye ? null : this.getSlot(ye);
+        if (null !== Me) {
+          this.sync(Me, yH(Me.segment, ee)), Me.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && !Me.video.seeking && this.show(Me);
+          for (const ee of this.slots.values()) ee === Me || ee.video.paused || ee.video.pause()
         } else {
-          null === YB && this.show(null);
-          for (const BB of this.slots.values()) BB.video.pause()
+          null === ye && this.show(null);
+          for (const ee of this.slots.values()) ee.video.pause()
         }
       }
       getSyncStats() {
         const {
-          frames: BB,
-          sumAbsDriftMs: OB,
-          maxAbsDriftMs: GB,
-          withinOneFrame: YB,
-          seeks: DB
+          frames: ee,
+          sumAbsDriftMs: ie,
+          maxAbsDriftMs: He,
+          withinOneFrame: ye,
+          seeks: be
         } = this.stats;
         return {
-          frames: BB,
-          meanAbsDriftMs: 0 === BB ? 0 : OB / BB,
-          maxAbsDriftMs: GB,
-          withinOneFrame: 0 === BB ? 1 : YB / BB,
-          seeks: DB
+          frames: ee,
+          meanAbsDriftMs: 0 === ee ? 0 : ie / ee,
+          maxAbsDriftMs: He,
+          withinOneFrame: 0 === ee ? 1 : ye / ee,
+          seeks: be
         }
       }
       resetSyncStats() {
@@ -1549,181 +1549,181 @@ export const modules = {
         this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null
       }
       destroy() {
-        for (const BB of this.slots.values()) this.release(BB);
+        for (const ee of this.slots.values()) this.release(ee);
         this.slots.clear(), this.segmentUrls.destroy(), this.element.remove()
       }
-      sync(BB, OB) {
+      sync(ee, ie) {
         const {
-          video: GB
-        } = BB;
-        if (GB.seeking) return;
+          video: He
+        } = ee;
+        if (He.seeking) return;
         const {
-          playing: YB,
-          speed: DB
-        } = this.clock, QB = YB && DB < 16, oB = function(BB) {
+          playing: ye,
+          speed: be
+        } = this.clock, Me = ye && be < 16, Ke = function(ee) {
           let {
-            targetS: OB,
-            currentS: GB,
-            playing: YB,
-            speed: DB,
-            frameDurationS: QB
-          } = BB;
-          const oB = GB - OB;
-          if (!YB) return Math.abs(oB) > QB / 2 ? {
+            targetS: ie,
+            currentS: He,
+            playing: ye,
+            speed: be,
+            frameDurationS: Me
+          } = ee;
+          const Ke = He - ie;
+          if (!ye) return Math.abs(Ke) > Me / 2 ? {
             kind: "seek",
-            mediaTimeS: OB
+            mediaTimeS: ie
           } : {
             kind: "none"
           };
-          if (Math.abs(oB) > GG(DB)) return {
+          if (Math.abs(Ke) > bH(be)) return {
             kind: "seek",
-            mediaTimeS: OB
+            mediaTimeS: ie
           };
-          if (Math.abs(oB) < QB / 4) return {
+          if (Math.abs(Ke) < Me / 4) return {
             kind: "rate",
-            playbackRate: YG(DB)
+            playbackRate: MH(be)
           };
-          const jB = DB - oB / .5;
+          const Ue = be - Ke / .5;
           return {
             kind: "rate",
-            playbackRate: YG(Math.max(.5 * DB, Math.min(1.5 * DB, jB)))
+            playbackRate: MH(Math.max(.5 * be, Math.min(1.5 * be, Ue)))
           }
         }({
-          targetS: OB,
-          currentS: GB.currentTime,
-          playing: QB,
-          speed: DB,
+          targetS: ie,
+          currentS: He.currentTime,
+          playing: Me,
+          speed: be,
           frameDurationS: this.frameDurationS
         });
-        if ("seek" === oB.kind) {
-          const OB = this.seekLatencyS * DB,
-            jB = YB ? QB ? Math.min(OB, GG(DB) / 2) : OB : 0;
-          BB.seekStartedWallMs = this.wallNowMs(), this.stats.seeks++, QB && (this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null), GB.currentTime = Math.max(0, oB.mediaTimeS + jB)
-        } else "rate" === oB.kind && Math.abs(GB.playbackRate - oB.playbackRate) > .001 && (GB.playbackRate = oB.playbackRate);
-        QB && GB.paused && GB.currentTime < GB.duration ? (GB.playbackRate = YG(DB), GB.play().catch((BB => {
-          console.warn("Replay video refused to play.", BB)
-        }))) : QB || GB.paused || GB.pause()
+        if ("seek" === Ke.kind) {
+          const ie = this.seekLatencyS * be,
+            Ue = ye ? Me ? Math.min(ie, bH(be) / 2) : ie : 0;
+          ee.seekStartedWallMs = this.wallNowMs(), this.stats.seeks++, Me && (this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null), He.currentTime = Math.max(0, Ke.mediaTimeS + Ue)
+        } else "rate" === Ke.kind && Math.abs(He.playbackRate - Ke.playbackRate) > .001 && (He.playbackRate = Ke.playbackRate);
+        Me && He.paused && He.currentTime < He.duration ? (He.playbackRate = MH(be), He.play().catch((ee => {
+          console.warn("Replay video refused to play.", ee)
+        }))) : Me || He.paused || He.pause()
       }
-      getSlot(BB) {
-        const OB = this.slots.get(BB.sequence);
-        if (void 0 !== OB) return OB;
-        const GB = "parts" in BB ? this.blobs.get(BB.sequence, BB.parts) : null,
-          YB = null === GB ? this.segmentUrls.get(BB.sequence) : null;
-        if ("pending" === YB) return null;
-        if ("failed" === YB) return this.failed.has(BB.sequence) || (console.error(`Replay video segment ${BB.sequence} has no URLs to load.`), this.markFailed(BB)), null;
-        const DB = document.createElement("video");
-        DB.className = "brv-video", DB.muted = !0, DB.playsInline = !0, DB.preload = "auto", DB.disablePictureInPicture = !0;
-        const QB = {
-          segment: BB,
-          video: DB,
+      getSlot(ee) {
+        const ie = this.slots.get(ee.sequence);
+        if (void 0 !== ie) return ie;
+        const He = "parts" in ee ? this.blobs.get(ee.sequence, ee.parts) : null,
+          ye = null === He ? this.segmentUrls.get(ee.sequence) : null;
+        if ("pending" === ye) return null;
+        if ("failed" === ye) return this.failed.has(ee.sequence) || (console.error(`Replay video segment ${ee.sequence} has no URLs to load.`), this.markFailed(ee)), null;
+        const be = document.createElement("video");
+        be.className = "brv-video", be.muted = !0, be.playsInline = !0, be.preload = "auto", be.disablePictureInPicture = !0;
+        const Me = {
+          segment: ee,
+          video: be,
           seekStartedWallMs: null,
           objectUrl: null,
           abort: new AbortController
         };
-        return null !== GB ? this.playBlob(QB, GB) : null !== YB && ("url" in YB ? DB.src = YB.url : this.loadParts(QB, YB.partUrls)), DB.addEventListener("seeked", (() => {
-          if (null !== QB.seekStartedWallMs) {
-            const BB = (this.wallNowMs() - QB.seekStartedWallMs) / 1e3;
-            this.seekLatencyS = .7 * this.seekLatencyS + .3 * Math.min(1, BB), QB.seekStartedWallMs = null
+        return null !== He ? this.playBlob(Me, He) : null !== ye && ("url" in ye ? be.src = ye.url : this.loadParts(Me, ye.partUrls)), be.addEventListener("seeked", (() => {
+          if (null !== Me.seekStartedWallMs) {
+            const ee = (this.wallNowMs() - Me.seekStartedWallMs) / 1e3;
+            this.seekLatencyS = .7 * this.seekLatencyS + .3 * Math.min(1, ee), Me.seekStartedWallMs = null
           }
-        })), DB.addEventListener("loadeddata", (() => {
-          this.slots.get(BB.sequence) === QB && this.failed.delete(BB.sequence)
-        })), DB.addEventListener("error", (() => {
-          this.slots.get(BB.sequence) === QB && (console.error(`Replay video segment ${BB.sequence} failed to load.`, DB.error), this.markFailed(BB))
-        })), this.watchFrames(QB), this.element.appendChild(DB), this.slots.set(BB.sequence, QB), QB
+        })), be.addEventListener("loadeddata", (() => {
+          this.slots.get(ee.sequence) === Me && this.failed.delete(ee.sequence)
+        })), be.addEventListener("error", (() => {
+          this.slots.get(ee.sequence) === Me && (console.error(`Replay video segment ${ee.sequence} failed to load.`, be.error), this.markFailed(ee))
+        })), this.watchFrames(Me), this.element.appendChild(be), this.slots.set(ee.sequence, Me), Me
       }
-      loadParts(BB, OB) {
-        this.blobs.load(BB.segment.sequence, OB, BB.abort.signal).then((OB => {
-          if (this.slots.get(BB.segment.sequence) === BB) return null === OB ? (console.error(`Replay video segment ${BB.segment.sequence} has no playable parts.`), void this.markFailed(BB.segment)) : void this.playBlob(BB, OB)
-        }), (OB => {
-          this.slots.get(BB.segment.sequence) === BB && (console.error(`Replay video segment ${BB.segment.sequence} failed to load.`, OB), this.markFailed(BB.segment))
+      loadParts(ee, ie) {
+        this.blobs.load(ee.segment.sequence, ie, ee.abort.signal).then((ie => {
+          if (this.slots.get(ee.segment.sequence) === ee) return null === ie ? (console.error(`Replay video segment ${ee.segment.sequence} has no playable parts.`), void this.markFailed(ee.segment)) : void this.playBlob(ee, ie)
+        }), (ie => {
+          this.slots.get(ee.segment.sequence) === ee && (console.error(`Replay video segment ${ee.segment.sequence} failed to load.`, ie), this.markFailed(ee.segment))
         }))
       }
-      playBlob(BB, OB) {
-        BB.objectUrl = URL.createObjectURL(OB), BB.video.src = BB.objectUrl
+      playBlob(ee, ie) {
+        ee.objectUrl = URL.createObjectURL(ie), ee.video.src = ee.objectUrl
       }
-      markFailed(BB) {
-        this.failed.add(BB.sequence), this.onLoadFailed()
+      markFailed(ee) {
+        this.failed.add(ee.sequence), this.onLoadFailed()
       }
-      showStill(BB) {
-        const OB = null !== BB && BB.url !== this.failedStillUrl ? BB : null;
-        null !== OB && this.stillImage.getAttribute("src") !== OB.url && (this.stillImage.src = OB.url);
-        const GB = null !== OB && this.stillImage.complete && this.stillImage.naturalWidth > 0;
-        GB !== this.stillShown && (this.stillImage.classList.toggle("brv-still-shown", GB), this.stillShown = GB)
+      showStill(ee) {
+        const ie = null !== ee && ee.url !== this.failedStillUrl ? ee : null;
+        null !== ie && this.stillImage.getAttribute("src") !== ie.url && (this.stillImage.src = ie.url);
+        const He = null !== ie && this.stillImage.complete && this.stillImage.naturalWidth > 0;
+        He !== this.stillShown && (this.stillImage.classList.toggle("brv-still-shown", He), this.stillShown = He)
       }
-      show(BB) {
-        var OB;
-        this.shown !== BB && (null === (OB = this.shown) || void 0 === OB || OB.video.classList.remove("brv-video-shown"), null === BB || void 0 === BB || BB.video.classList.add("brv-video-shown"), this.shown = BB)
+      show(ee) {
+        var ie;
+        this.shown !== ee && (null === (ie = this.shown) || void 0 === ie || ie.video.classList.remove("brv-video-shown"), null === ee || void 0 === ee || ee.video.classList.add("brv-video-shown"), this.shown = ee)
       }
-      evictExcept(BB) {
-        for (const [OB, GB] of this.slots) BB.includes(GB.segment) || (this.release(GB), this.slots.delete(OB))
+      evictExcept(ee) {
+        for (const [ie, He] of this.slots) ee.includes(He.segment) || (this.release(He), this.slots.delete(ie))
       }
-      release(BB) {
-        this.shown === BB && (this.shown = null), BB.abort.abort(), BB.video.pause(), BB.video.removeAttribute("src"), BB.video.load(), BB.video.remove(), null !== BB.objectUrl && URL.revokeObjectURL(BB.objectUrl)
+      release(ee) {
+        this.shown === ee && (this.shown = null), ee.abort.abort(), ee.video.pause(), ee.video.removeAttribute("src"), ee.video.load(), ee.video.remove(), null !== ee.objectUrl && URL.revokeObjectURL(ee.objectUrl)
       }
-      watchFrames(BB) {
+      watchFrames(ee) {
         const {
-          video: OB
-        } = BB;
-        if ("function" !== typeof OB.requestVideoFrameCallback) return;
-        const GB = (YB, DB) => {
-          if (!this.slots.has(BB.segment.sequence)) return;
-          const QB = OB.ownerDocument.defaultView,
-            oB = null === QB ? 0 : QB.performance.timeOrigin - performance.timeOrigin,
-            jB = OG(BB.segment, this.clock.timeAtWall(DB.expectedDisplayTime + oB)),
-            yB = this.lastPresented,
-            JB = this.wallNowMs() - this.lastSeekWallMs > 1e3;
-          if (null !== yB && yB.slot === BB && JB && this.clock.playing && DB.mediaTime > yB.mediaTimeS) {
-            const BB = Math.abs(function(BB, OB, GB) {
-              return GB < BB ? 1e3 * (GB - BB) : 1e3 * Math.max(0, GB - OB)
-            }(yB.mediaTimeS, DB.mediaTime, yB.clockMediaTimeS));
-            this.stats.frames++, this.stats.sumAbsDriftMs += BB, this.stats.maxAbsDriftMs = Math.max(this.stats.maxAbsDriftMs, BB), BB <= 1e3 * this.frameDurationS && this.stats.withinOneFrame++
+          video: ie
+        } = ee;
+        if ("function" !== typeof ie.requestVideoFrameCallback) return;
+        const He = (ye, be) => {
+          if (!this.slots.has(ee.segment.sequence)) return;
+          const Me = ie.ownerDocument.defaultView,
+            Ke = null === Me ? 0 : Me.performance.timeOrigin - performance.timeOrigin,
+            Ue = yH(ee.segment, this.clock.timeAtWall(be.expectedDisplayTime + Ke)),
+            Fe = this.lastPresented,
+            Je = this.wallNowMs() - this.lastSeekWallMs > 1e3;
+          if (null !== Fe && Fe.slot === ee && Je && this.clock.playing && be.mediaTime > Fe.mediaTimeS) {
+            const ee = Math.abs(function(ee, ie, He) {
+              return He < ee ? 1e3 * (He - ee) : 1e3 * Math.max(0, He - ie)
+            }(Fe.mediaTimeS, be.mediaTime, Fe.clockMediaTimeS));
+            this.stats.frames++, this.stats.sumAbsDriftMs += ee, this.stats.maxAbsDriftMs = Math.max(this.stats.maxAbsDriftMs, ee), ee <= 1e3 * this.frameDurationS && this.stats.withinOneFrame++
           }
           this.lastPresented = {
-            slot: BB,
-            mediaTimeS: DB.mediaTime,
-            clockMediaTimeS: jB
-          }, OB.requestVideoFrameCallback(GB)
+            slot: ee,
+            mediaTimeS: be.mediaTime,
+            clockMediaTimeS: Ue
+          }, ie.requestVideoFrameCallback(He)
         };
-        OB.requestVideoFrameCallback(GB)
+        ie.requestVideoFrameCallback(He)
       }
     }
-    const QG = 1 / 30,
-      oG = ["#noa-canvas", "#noa-container"];
-    class jG {
-      constructor(BB, OB) {
-        var GB, YB, DB, QB, oB, jB, yB, JB;
-        let MB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.timeline = void 0, this.chapters = void 0, this.lowFps = void 0, this.stage = void 0, this.clock = void 0, this.annotations = void 0, this.videoLayer = void 0, this.domLayer = void 0, this.listeners = new Set, this.skipInactive = !0, this.ended = !1, this.frame = 0, this.lastState = null, this.urlRefresher = void 0, this.kP = () => {
-          this.frame = requestAnimationFrame(this.kP);
-          const BB = performance.now();
+    const UH = 1 / 30,
+      FH = ["#noa-canvas", "#noa-container"];
+    class JH {
+      constructor(ee, ie) {
+        var He, ye, be, Me, Ke, Ue, Fe, Je;
+        let oe = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.timeline = void 0, this.chapters = void 0, this.lowFps = void 0, this.stage = void 0, this.clock = void 0, this.annotations = void 0, this.videoLayer = void 0, this.domLayer = void 0, this.listeners = new Set, this.skipInactive = !0, this.ended = !1, this.frame = 0, this.lastState = null, this.urlRefresher = void 0, this.YR = () => {
+          this.frame = requestAnimationFrame(this.YR);
+          const ee = performance.now();
           this.applySkips();
-          const OB = this.clock.timeMs();
-          this.annotations.update(OB, this.clock.speed), this.videoLayer.update(OB), null === this.domLayer ? this.stage.setViewport(this.videoLayer.getVideoSizeAt(OB)) : this.domLayer.update(OB, this.clock.playing, BB);
-          const GB = this.getState();
-          (null === this.lastState || function(BB, OB) {
-            return Object.keys(BB).some((GB => "positionMs" === GB ? Math.floor(BB.positionMs / 1e3) !== Math.floor(OB.positionMs / 1e3) : BB[GB] !== OB[GB]))
-          }(GB, this.lastState)) && this.emitState(GB)
+          const ie = this.clock.timeMs();
+          this.annotations.update(ie, this.clock.speed), this.videoLayer.update(ie), null === this.domLayer ? this.stage.setViewport(this.videoLayer.getVideoSizeAt(ie)) : this.domLayer.update(ie, this.clock.playing, ee);
+          const He = this.getState();
+          (null === this.lastState || function(ee, ie) {
+            return Object.keys(ee).some((He => "positionMs" === He ? Math.floor(ee.positionMs / 1e3) !== Math.floor(ie.positionMs / 1e3) : ee[He] !== ie[He]))
+          }(He, this.lastState)) && this.emitState(He)
         };
-        const PB = () => performance.now();
-        this.lowFps = null !== (GB = MB.lowFps) && void 0 !== GB ? GB : 25;
-        const zB = new cB(OB.domEvents);
-        this.timeline = new gB(OB.windows.length > 0 ? OB.windows : [XB(OB, zB)]), this.chapters = [...OB.chapters].sort(((BB, OB) => BB.startMs - OB.startMs)), this.annotations = new QO(OB, zB, this.timeline, {
-          inactivityThresholdMs: null !== (YB = MB.inactivityThresholdMs) && void 0 !== YB ? YB : 1e4,
-          loadTelemetryChunk: null !== (DB = MB.loadTelemetryChunk) && void 0 !== DB ? DB : null,
-          telemetryUrls: null !== (QB = MB.telemetryUrls) && void 0 !== QB ? QB : null,
+        const Re = () => performance.now();
+        this.lowFps = null !== (He = oe.lowFps) && void 0 !== He ? He : 25;
+        const ke = new me(ie.domEvents);
+        this.timeline = new xe(ie.windows.length > 0 ? ie.windows : [Ce(ie, ke)]), this.chapters = [...ie.chapters].sort(((ee, ie) => ee.startMs - ie.startMs)), this.annotations = new Mi(ie, ke, this.timeline, {
+          inactivityThresholdMs: null !== (ye = oe.inactivityThresholdMs) && void 0 !== ye ? ye : 1e4,
+          loadTelemetryChunk: null !== (be = oe.loadTelemetryChunk) && void 0 !== be ? be : null,
+          telemetryUrls: null !== (Me = oe.telemetryUrls) && void 0 !== Me ? Me : null,
           onTelemetryFailed: () => {
             this.urlRefresher.request()
           }
-        }), this.urlRefresher = new xB(null !== (oB = MB.refreshUrls) && void 0 !== oB ? oB : null, (BB => {
-          this.videoLayer.replaceSegments(rB(BB.videoSegments), BB.still), this.videoLayer.noteClockJump(), this.annotations.replaceTelemetryUrls(BB.telemetryChunks)
-        })), this.clock = new wB(this.timeline.startMs, PB), this.stage = new TO(BB, (() => {
-          var BB;
-          null === (BB = this.domLayer) || void 0 === BB || BB.invalidateCanvasRect()
-        })), this.videoLayer = new DG(rB(OB.videoSegments), OB.still, this.clock, QG, PB, null !== (jB = MB.segmentUrls) && void 0 !== jB ? jB : null, (() => {
+        }), this.urlRefresher = new re(null !== (Ke = oe.refreshUrls) && void 0 !== Ke ? Ke : null, (ee => {
+          this.videoLayer.replaceSegments(Le(ee.videoSegments), ee.still), this.videoLayer.noteClockJump(), this.annotations.replaceTelemetryUrls(ee.telemetryChunks)
+        })), this.clock = new ve(this.timeline.startMs, Re), this.stage = new si(ee, (() => {
+          var ee;
+          null === (ee = this.domLayer) || void 0 === ee || ee.invalidateCanvasRect()
+        })), this.videoLayer = new KH(Le(ie.videoSegments), ie.still, this.clock, UH, Re, null !== (Ue = oe.segmentUrls) && void 0 !== Ue ? Ue : null, (() => {
           this.urlRefresher.request()
-        })), this.domLayer = aO.create(this.stage.element, OB.domEvents, OB.recordedPointer, zB, null !== (yB = MB.canvasSelectors) && void 0 !== yB ? yB : oG, null !== (JB = MB.resourceHosts) && void 0 !== JB ? JB : [], this.videoLayer, (BB => {
-          this.stage.setViewport(BB)
-        })), null === this.domLayer && (this.stage.element.classList.add("brv-stage-video-only"), this.stage.element.appendChild(this.videoLayer.element)), this.syncDom(), this.kP()
+        })), this.domLayer = ni.create(this.stage.element, ie.domEvents, ie.recordedPointer, ke, null !== (Fe = oe.canvasSelectors) && void 0 !== Fe ? Fe : FH, null !== (Je = oe.resourceHosts) && void 0 !== Je ? Je : [], this.videoLayer, (ee => {
+          this.stage.setViewport(ee)
+        })), null === this.domLayer && (this.stage.element.classList.add("brv-stage-video-only"), this.stage.element.appendChild(this.videoLayer.element)), this.syncDom(), this.YR()
       }
       get markers() {
         return this.annotations.markers
@@ -1740,21 +1740,21 @@ export const modules = {
       get input() {
         return this.annotations.input
       }
-      subscribe(BB) {
-        return this.listeners.add(BB), BB(this.getState()), () => {
-          this.listeners.delete(BB)
+      subscribe(ee) {
+        return this.listeners.add(ee), ee(this.getState()), () => {
+          this.listeners.delete(ee)
         }
       }
       getState() {
-        const BB = this.clock.timeMs();
+        const ee = this.clock.timeMs();
         return {
-          positionMs: this.timeline.toPosition(BB),
+          positionMs: this.timeline.toPosition(ee),
           durationMs: this.timeline.durationMs,
           playing: this.clock.playing,
           speed: this.clock.speed,
           skipInactive: this.skipInactive,
           ended: this.ended,
-          notice: this.getNotice(BB),
+          notice: this.getNotice(ee),
           telemetryChunksLoaded: this.annotations.telemetryChunksLoaded
         }
       }
@@ -1776,74 +1776,74 @@ export const modules = {
       togglePlay() {
         this.clock.playing ? this.pause() : this.play()
       }
-      seekToPosition(BB) {
-        this.seekToTime(this.timeline.toTime(BB))
+      seekToPosition(ee) {
+        this.seekToTime(this.timeline.toTime(ee))
       }
-      seekBy(BB) {
-        this.seekToPosition(this.timeline.toPosition(this.clock.timeMs()) + BB)
+      seekBy(ee) {
+        this.seekToPosition(this.timeline.toPosition(this.clock.timeMs()) + ee)
       }
-      stepFrame(BB) {
-        this.clock.pause(), this.seekBy(BB * QG * 1e3)
+      stepFrame(ee) {
+        this.clock.pause(), this.seekBy(ee * UH * 1e3)
       }
-      setSpeed(BB) {
-        var OB;
-        this.clock.setSpeed(BB), null === (OB = this.domLayer) || void 0 === OB || OB.setSpeed(BB), this.emit()
+      setSpeed(ee) {
+        var ie;
+        this.clock.setSpeed(ee), null === (ie = this.domLayer) || void 0 === ie || ie.setSpeed(ee), this.emit()
       }
-      setSkipInactive(BB) {
-        this.skipInactive = BB, this.emit()
+      setSkipInactive(ee) {
+        this.skipInactive = ee, this.emit()
       }
-      goToChapter(BB) {
-        const OB = this.clock.timeMs(),
-          GB = 1 === BB ? this.chapters.find((BB => BB.startMs > OB + 500)) : this.chapters.findLast((BB => BB.startMs < OB - 2e3));
-        void 0 !== GB && this.seekToTime(GB.startMs)
+      goToChapter(ee) {
+        const ie = this.clock.timeMs(),
+          He = 1 === ee ? this.chapters.find((ee => ee.startMs > ie + 500)) : this.chapters.findLast((ee => ee.startMs < ie - 2e3));
+        void 0 !== He && this.seekToTime(He.startMs)
       }
       destroy() {
-        var BB;
-        cancelAnimationFrame(this.frame), this.urlRefresher.destroy(), this.annotations.destroy(), null === (BB = this.domLayer) || void 0 === BB || BB.destroy(), this.videoLayer.destroy(), this.stage.destroy(), this.listeners.clear()
+        var ee;
+        cancelAnimationFrame(this.frame), this.urlRefresher.destroy(), this.annotations.destroy(), null === (ee = this.domLayer) || void 0 === ee || ee.destroy(), this.videoLayer.destroy(), this.stage.destroy(), this.listeners.clear()
       }
-      getNotice(BB) {
-        return this.annotations.isHiddenAt(BB) ? "tabHidden" : this.videoLayer.failedAt(BB) && !this.urlRefresher.refreshing ? "videoFailed" : null !== this.domLayer || this.videoLayer.visible ? this.annotations.isVideoGapAt(BB) ? "videoGap" : null : "nothingToShow"
+      getNotice(ee) {
+        return this.annotations.isHiddenAt(ee) ? "tabHidden" : this.videoLayer.failedAt(ee) && !this.urlRefresher.refreshing ? "videoFailed" : null !== this.domLayer || this.videoLayer.visible ? this.annotations.isVideoGapAt(ee) ? "videoGap" : null : "nothingToShow"
       }
       applySkips() {
-        var BB;
+        var ee;
         if (!this.clock.playing) return;
-        const OB = this.clock.timeMs(),
-          GB = this.timeline.nextPlayableTime(OB);
-        if (null === GB) return this.clock.pause(), this.clock.seek(this.timeline.endMs), this.ended = !0, this.syncDom(), void this.emit();
-        const YB = this.skipInactive ? this.annotations.inactiveRanges.find((BB => GB >= BB.startMs && GB < BB.endMs - 500)) : void 0,
-          DB = null !== (BB = null === YB || void 0 === YB ? void 0 : YB.endMs) && void 0 !== BB ? BB : GB;
-        DB !== OB && this.seekToTime(DB)
+        const ie = this.clock.timeMs(),
+          He = this.timeline.nextPlayableTime(ie);
+        if (null === He) return this.clock.pause(), this.clock.seek(this.timeline.endMs), this.ended = !0, this.syncDom(), void this.emit();
+        const ye = this.skipInactive ? this.annotations.inactiveRanges.find((ee => He >= ee.startMs && He < ee.endMs - 500)) : void 0,
+          be = null !== (ee = null === ye || void 0 === ye ? void 0 : ye.endMs) && void 0 !== ee ? ee : He;
+        be !== ie && this.seekToTime(be)
       }
-      seekToTime(BB) {
-        this.ended = !1, this.clock.seek(Math.max(this.timeline.startMs, Math.min(this.timeline.endMs, BB))), this.videoLayer.noteClockJump(), this.syncDom(), this.emit()
+      seekToTime(ee) {
+        this.ended = !1, this.clock.seek(Math.max(this.timeline.startMs, Math.min(this.timeline.endMs, ee))), this.videoLayer.noteClockJump(), this.syncDom(), this.emit()
       }
       syncDom() {
-        var BB;
-        null === (BB = this.domLayer) || void 0 === BB || BB.sync(this.clock.timeMs(), this.clock.playing)
+        var ee;
+        null === (ee = this.domLayer) || void 0 === ee || ee.sync(this.clock.timeMs(), this.clock.playing)
       }
       emit() {
         this.emitState(this.getState())
       }
-      emitState(BB) {
-        this.lastState = BB;
-        for (const OB of this.listeners) OB(BB)
+      emitState(ee) {
+        this.lastState = ee;
+        for (const ie of this.listeners) ie(ee)
       }
     }
-    const yG = 2500,
-      JG = 5;
+    const oH = 2500,
+      RH = 5;
 
-    function MG(BB) {
+    function kH(ee) {
       let {
-        label: OB,
-        sJ: GB,
-        wide: YB = !1
-      } = BB;
-      return (0, ZB.jsx)("span", {
-        className: `brv-key${GB?" brv-key-held":""}${YB?" brv-key-wide":""}`,
-        children: OB
+        label: ie,
+        lJ: He,
+        wide: ye = !1
+      } = ee;
+      return (0, pe.jsx)("span", {
+        className: `brv-key${He?" brv-key-held":""}${ye?" brv-key-wide":""}`,
+        children: ie
       })
     }
-    const PG = [{
+    const qH = [{
       action: "primary",
       className: "brv-mouse-left"
     }, {
@@ -1854,136 +1854,136 @@ export const modules = {
       className: "brv-mouse-right"
     }];
 
-    function zG(BB) {
-      const [OB, GB] = (0, YB.useState)({
+    function fH(ee) {
+      const [ie, He] = (0, ye.useState)({
         bits: 0,
         presses: []
       });
-      return (0, YB.useEffect)((() => {
-        let OB = 0,
-          YB = "";
-        const DB = () => {
-          OB = requestAnimationFrame(DB);
-          const QB = BB.timeline.toTime(BB.getPositionMs()),
+      return (0, ye.useEffect)((() => {
+        let ie = 0,
+          ye = "";
+        const be = () => {
+          ie = requestAnimationFrame(be);
+          const Me = ee.timeline.toTime(ee.getPositionMs()),
             {
-              actions: oB,
-              keys: jB
-            } = BB.input,
-            zB = function(BB, OB) {
-              const GB = JB(BB, OB);
-              return GB < 0 ? 0 : BB[GB].bits
-            }(oB, QB),
-            lB = function(BB, OB, GB, YB) {
-              const DB = Math.floor(OB / GB) * GB,
-                QB = new Map;
-              for (let oB = JB(BB, DB + GB); oB >= 0 && BB[oB].atMs >= DB; oB--) {
-                const OB = BB[oB];
-                if (!OB.down || !OB.inPlay || OB.atMs === DB + GB) continue;
-                const YB = {
-                    code: OB.code,
-                    unbound: yB(OB)
+              actions: Ke,
+              keys: Ue
+            } = ee.input,
+            ke = function(ee, ie) {
+              const He = Je(ee, ie);
+              return He < 0 ? 0 : ee[He].bits
+            }(Ke, Me),
+            qe = function(ee, ie, He, ye) {
+              const be = Math.floor(ie / He) * He,
+                Me = new Map;
+              for (let Ke = Je(ee, be + He); Ke >= 0 && ee[Ke].atMs >= be; Ke--) {
+                const ie = ee[Ke];
+                if (!ie.down || !ie.inPlay || ie.atMs === be + He) continue;
+                const ye = {
+                    code: ie.code,
+                    unbound: Fe(ie)
                   },
-                  jB = MB(YB),
-                  JB = QB.get(jB);
-                void 0 === JB ? QB.set(jB, {
-                  key: YB,
+                  Ue = oe(ye),
+                  Je = Me.get(Ue);
+                void 0 === Je ? Me.set(Ue, {
+                  key: ye,
                   presses: 1
-                }) : JB.presses++
+                }) : Je.presses++
               }
-              return [...QB].sort(((BB, OB) => PB([BB[0], BB[1].presses], [OB[0], OB[1].presses]))).slice(0, YB).map((BB => {
+              return [...Me].sort(((ee, ie) => Re([ee[0], ee[1].presses], [ie[0], ie[1].presses]))).slice(0, ye).map((ee => {
                 let [, {
-                  key: OB
-                }] = BB;
-                return OB
+                  key: ie
+                }] = ee;
+                return ie
               }))
-            }(jB, QB, yG, JG),
-            pB = `${zB};${lB.map((BB=>MB(BB))).join(",")}`;
-          pB !== YB && (YB = pB, GB({
-            bits: zB,
-            presses: lB
+            }(Ue, Me, oH, RH),
+            fe = `${ke};${qe.map((ee=>oe(ee))).join(",")}`;
+          fe !== ye && (ye = fe, He({
+            bits: ke,
+            presses: qe
           }))
         };
-        return DB(), () => {
-          cancelAnimationFrame(OB)
+        return be(), () => {
+          cancelAnimationFrame(ie)
         }
-      }), [BB]), OB
+      }), [ee]), ie
     }
 
-    function lG(BB) {
+    function TH(ee) {
       let {
-        controller: OB,
-        labels: GB
-      } = BB;
+        controller: ie,
+        labels: He
+      } = ee;
       const {
-        bits: YB,
-        presses: DB
-      } = zG(OB), QB = BB => function(BB, OB) {
-        return 0 !== (BB & 1 << oB.indexOf(OB))
-      }(YB, BB);
-      return (0, ZB.jsxs)("div", {
+        bits: ye,
+        presses: be
+      } = fH(ie), Me = ee => function(ee, ie) {
+        return 0 !== (ee & 1 << Ke.indexOf(ie))
+      }(ye, ee);
+      return (0, pe.jsxs)("div", {
         className: "brv-input",
         "aria-hidden": !0,
-        children: [(0, ZB.jsx)("div", {
+        children: [(0, pe.jsx)("div", {
           className: "brv-input-slot",
-          children: DB.map((BB => {
-            const OB = lB(BB.code);
-            return (0, ZB.jsx)("span", {
-              className: BB.unbound ? "brv-input-press brv-input-press-unbound" : "brv-input-press",
-              children: BB.unbound ? GB.unboundKey(OB) : OB
-            }, MB(BB))
+          children: be.map((ee => {
+            const ie = qe(ee.code);
+            return (0, pe.jsx)("span", {
+              className: ee.unbound ? "brv-input-press brv-input-press-unbound" : "brv-input-press",
+              children: ee.unbound ? He.unboundKey(ie) : ie
+            }, oe(ee))
           }))
-        }), (0, ZB.jsxs)("div", {
+        }), (0, pe.jsxs)("div", {
           className: "brv-input-devices",
-          children: [(0, ZB.jsxs)("div", {
+          children: [(0, pe.jsxs)("div", {
             className: "brv-keys",
-            children: [(0, ZB.jsx)("div", {
+            children: [(0, pe.jsx)("div", {
               className: "brv-keys-row",
-              children: (0, ZB.jsx)(MG, {
+              children: (0, pe.jsx)(kH, {
                 label: "W",
-                sJ: QB("forward")
+                lJ: Me("forward")
               })
-            }), (0, ZB.jsxs)("div", {
+            }), (0, pe.jsxs)("div", {
               className: "brv-keys-row",
-              children: [(0, ZB.jsx)(MG, {
+              children: [(0, pe.jsx)(kH, {
                 label: "A",
-                sJ: QB("left")
-              }), (0, ZB.jsx)(MG, {
+                lJ: Me("left")
+              }), (0, pe.jsx)(kH, {
                 label: "S",
-                sJ: QB("backward")
-              }), (0, ZB.jsx)(MG, {
+                lJ: Me("backward")
+              }), (0, pe.jsx)(kH, {
                 label: "D",
-                sJ: QB("right")
+                lJ: Me("right")
               })]
-            }), (0, ZB.jsxs)("div", {
+            }), (0, pe.jsxs)("div", {
               className: "brv-keys-row",
-              children: [(0, ZB.jsx)(MG, {
+              children: [(0, pe.jsx)(kH, {
                 label: "Shift",
-                sJ: QB("sprint")
-              }), (0, ZB.jsx)(MG, {
+                lJ: Me("sprint")
+              }), (0, pe.jsx)(kH, {
                 label: "Ctrl",
-                sJ: QB("crouch")
-              }), (0, ZB.jsx)(MG, {
+                lJ: Me("crouch")
+              }), (0, pe.jsx)(kH, {
                 label: "Space",
-                sJ: QB("jump"),
+                lJ: Me("jump"),
                 wide: !0
               })]
             })]
-          }), (0, ZB.jsx)("div", {
+          }), (0, pe.jsx)("div", {
             className: "brv-mouse",
-            children: PG.map((BB => {
+            children: qH.map((ee => {
               let {
-                action: OB,
-                className: GB
-              } = BB;
-              return (0, ZB.jsx)("span", {
-                className: `${GB}${QB(OB)?" brv-key-held":""}`
-              }, OB)
+                action: ie,
+                className: He
+              } = ee;
+              return (0, pe.jsx)("span", {
+                className: `${He}${Me(ie)?" brv-key-held":""}`
+              }, ie)
             }))
           })]
         })]
       })
     }
-    const pG = {
+    const pH = {
       play: "Play (space)",
       pause: "Pause (space)",
       speed: "Playback speed",
@@ -1996,113 +1996,113 @@ export const modules = {
       error: "Error",
       graphicsCrash: "The game's graphics crashed",
       death: "Died",
-      fps: BB => `${BB} FPS`,
+      fps: ee => `${ee} FPS`,
       keys: "Keys",
-      unboundKey: BB => `${BB} does nothing here`,
-      unboundKeys: BB => `${BB} did nothing`
+      unboundKey: ee => `${ee} does nothing here`,
+      unboundKeys: ee => `${ee} did nothing`
     };
 
-    function qG(BB) {
+    function XH(ee) {
       let {
-        path: OB
-      } = BB;
-      return (0, ZB.jsx)("svg", {
+        path: ie
+      } = ee;
+      return (0, pe.jsx)("svg", {
         viewBox: "0 0 24 24",
         "aria-hidden": !0,
-        children: (0, ZB.jsx)("path", {
-          d: OB
+        children: (0, pe.jsx)("path", {
+          d: ie
         })
       })
     }
-    const ZG = {
+    const zH = {
       play: "M7 4v16l13-8z",
       pause: "M6 4h4v16H6zm8 0h4v16h-4z",
       fullscreen: "M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"
     };
 
-    function NG(BB) {
+    function BH(ee) {
       let {
-        label: OB,
-        onClick: GB,
-        children: YB
-      } = BB;
-      return (0, ZB.jsx)("button", {
+        label: ie,
+        onClick: He,
+        children: ye
+      } = ee;
+      return (0, pe.jsx)("button", {
         type: "button",
         className: "brv-button",
-        title: OB,
-        "aria-label": OB,
-        onClick: GB,
-        children: YB
+        title: ie,
+        "aria-label": ie,
+        onClick: He,
+        children: ye
       })
     }
 
-    function RG(BB) {
+    function EH(ee) {
       if (!document.fullscreenEnabled) return;
-      (document.fullscreenElement === BB ? document.exitFullscreen() : BB.requestFullscreen()).catch((BB => {
-        console.warn("Couldn't toggle fullscreen.", BB)
+      (document.fullscreenElement === ee ? document.exitFullscreen() : ee.requestFullscreen()).catch((ee => {
+        console.warn("Couldn't toggle fullscreen.", ee)
       }))
     }
 
-    function WG(BB) {
+    function gH(ee) {
       let {
-        data: OB,
-        className: GB,
-        autoPlay: DB = !1,
-        options: QB,
-        labels: oB = pG,
-        onController: jB
-      } = BB;
-      const yB = (0, YB.useRef)(null),
-        JB = (0, YB.useRef)(null),
-        MB = (0, YB.useRef)(QB);
-      MB.current = QB;
-      const PB = (0, YB.useRef)(DB);
-      PB.current = DB;
-      const zB = (0, YB.useRef)(jB);
-      zB.current = jB;
-      const [lB, pB] = (0, YB.useState)(null), [qB, NB] = (0, YB.useState)(null), [WB, AB] = (0, YB.useState)(!0), VB = () => {
-        AB((BB => !BB))
+        data: ie,
+        className: He,
+        autoPlay: be = !1,
+        options: Me,
+        labels: Ke = pH,
+        onController: Ue
+      } = ee;
+      const Fe = (0, ye.useRef)(null),
+        Je = (0, ye.useRef)(null),
+        oe = (0, ye.useRef)(Me);
+      oe.current = Me;
+      const Re = (0, ye.useRef)(be);
+      Re.current = be;
+      const ke = (0, ye.useRef)(Ue);
+      ke.current = Ue;
+      const [qe, fe] = (0, ye.useState)(null), [Te, Xe] = (0, ye.useState)(null), [Be, Ee] = (0, ye.useState)(!0), ge = () => {
+        Ee((ee => !ee))
       };
-      (0, YB.useEffect)((() => {
-        var BB;
-        ! function(BB) {
-          if (null !== BB.getElementById(EO)) return;
-          const OB = BB.createElement("style");
-          OB.id = EO, OB.textContent = hO, BB.head.appendChild(OB)
+      (0, ye.useEffect)((() => {
+        var ee;
+        ! function(ee) {
+          if (null !== ee.getElementById(mi)) return;
+          const ie = ee.createElement("style");
+          ie.id = mi, ie.textContent = Si, ee.head.appendChild(ie)
         }(document);
-        const GB = new jG(yB.current, OB, MB.current),
-          YB = GB.subscribe(NB);
-        return pB(GB), null === (BB = zB.current) || void 0 === BB || BB.call(zB, GB), PB.current && GB.play(), JB.current.focus({
+        const He = new JH(Fe.current, ie, oe.current),
+          ye = He.subscribe(Xe);
+        return fe(He), null === (ee = ke.current) || void 0 === ee || ee.call(ke, He), Re.current && He.play(), Je.current.focus({
           preventScroll: !0
         }), () => {
-          var BB;
-          YB(), GB.destroy(), null === (BB = zB.current) || void 0 === BB || BB.call(zB, null)
+          var ee;
+          ye(), He.destroy(), null === (ee = ke.current) || void 0 === ee || ee.call(ke, null)
         }
-      }), [OB]);
-      const nB = null !== lB && lB.input.inputRecorded,
-        UB = null === lB || null === qB ? void 0 : lB.chapters.findLast((BB => lB.timeline.toPosition(BB.startMs) <= qB.positionMs));
-      return (0, ZB.jsxs)("div", {
-        ref: JB,
-        className: void 0 === GB ? "brv-player" : `brv-player ${GB}`,
+      }), [ie]);
+      const de = null !== qe && qe.input.inputRecorded,
+        We = null === qe || null === Te ? void 0 : qe.chapters.findLast((ee => qe.timeline.toPosition(ee.startMs) <= Te.positionMs));
+      return (0, pe.jsxs)("div", {
+        ref: Je,
+        className: void 0 === He ? "brv-player" : `brv-player ${He}`,
         tabIndex: 0,
-        onKeyDown: BB => {
-          if (BB.target instanceof HTMLSelectElement) return;
-          if (" " === BB.key && BB.target !== BB.currentTarget && BB.target instanceof HTMLButtonElement) return;
-          const OB = function(BB) {
+        onKeyDown: ee => {
+          if (ee.target instanceof HTMLSelectElement) return;
+          if (" " === ee.key && ee.target !== ee.currentTarget && ee.target instanceof HTMLButtonElement) return;
+          const ie = function(ee) {
             let {
-              key: OB,
-              shiftKey: GB,
-              ctrlKey: YB,
-              metaKey: DB,
-              altKey: QB
-            } = BB;
-            if (YB || DB || QB) return null;
-            const oB = Number(OB) - 1;
-            if (/^[1-9]$/.test(OB) && oB < FB.length) return {
+              key: ie,
+              shiftKey: He,
+              ctrlKey: ye,
+              metaKey: be,
+              altKey: Me
+            } = ee;
+            if (ye || be || Me) return null;
+            const Ke = Number(ie) - 1;
+            if (/^[1-9]$/.test(ie) && Ke < Ve.length) return {
               type: "setSpeed",
-              speed: FB[oB]
+              speed: Ve[Ke]
             };
-            switch (OB.toLowerCase()) {
+            switch (ie.toLowerCase()) {
               case " ":
               case "k":
                 return {
@@ -2110,11 +2110,11 @@ export const modules = {
                 };
               case "arrowleft":
                 return {
-                  type: "seekBy", deltaMs: GB ? -1e3 : -5e3
+                  type: "seekBy", deltaMs: He ? -1e3 : -5e3
                 };
               case "arrowright":
                 return {
-                  type: "seekBy", deltaMs: GB ? 1e3 : 5e3
+                  type: "seekBy", deltaMs: He ? 1e3 : 5e3
                 };
               case "j":
                 return {
@@ -2134,7 +2134,7 @@ export const modules = {
                 };
               case "n":
                 return {
-                  type: "chapter", direction: GB ? -1 : 1
+                  type: "chapter", direction: He ? -1 : 1
                 };
               case "s":
                 return {
@@ -2151,265 +2151,265 @@ export const modules = {
               default:
                 return null
             }
-          }(BB);
-          null !== OB && null !== lB && null !== qB && (BB.preventDefault(), function(BB, OB, GB, YB) {
-            switch (OB.type) {
+          }(ee);
+          null !== ie && null !== qe && null !== Te && (ee.preventDefault(), function(ee, ie, He, ye) {
+            switch (ie.type) {
               case "togglePlay":
-                BB.togglePlay();
+                ee.togglePlay();
                 break;
               case "seekBy":
-                BB.seekBy(OB.deltaMs);
+                ee.seekBy(ie.deltaMs);
                 break;
               case "stepFrame":
-                BB.stepFrame(OB.direction);
+                ee.stepFrame(ie.direction);
                 break;
               case "setSpeed":
-                BB.setSpeed(OB.speed);
+                ee.setSpeed(ie.speed);
                 break;
               case "chapter":
-                BB.goToChapter(OB.direction);
+                ee.goToChapter(ie.direction);
                 break;
               case "toggleSkipInactive":
-                BB.setSkipInactive(!GB.skipInactive);
+                ee.setSkipInactive(!He.skipInactive);
                 break;
               case "toggleFullscreen":
-                RG(YB.root);
+                EH(ye.root);
                 break;
               case "toggleKeys":
-                YB.toggleKeys()
+                ye.toggleKeys()
             }
-          }(lB, OB, qB, {
-            root: BB.currentTarget,
-            toggleKeys: VB
+          }(qe, ie, Te, {
+            root: ee.currentTarget,
+            toggleKeys: ge
           }))
         },
-        children: [(0, ZB.jsxs)("div", {
-          ref: yB,
+        children: [(0, pe.jsxs)("div", {
+          ref: Fe,
           className: "brv-viewport",
           onClick: () => {
-            null === lB || void 0 === lB || lB.togglePlay()
+            null === qe || void 0 === qe || qe.togglePlay()
           },
-          children: [null !== qB && null !== qB.notice && (0, ZB.jsx)("div", {
+          children: [null !== Te && null !== Te.notice && (0, pe.jsx)("div", {
             className: "brv-overlay",
-            children: oB[qB.notice]
-          }), null !== lB && WB && nB && (0, ZB.jsx)(lG, {
-            controller: lB,
-            labels: oB
+            children: Ke[Te.notice]
+          }), null !== qe && Be && de && (0, pe.jsx)(TH, {
+            controller: qe,
+            labels: Ke
           })]
-        }), null !== lB && null !== qB && (0, ZB.jsxs)(ZB.Fragment, {
-          children: [(0, ZB.jsx)(SB, {
-            controller: lB,
-            frames: lB.frames,
-            input: lB.input,
-            markers: lB.markers,
-            inactiveRanges: lB.inactiveRanges,
-            videoGaps: lB.videoGaps,
-            labels: oB
-          }), lB.chapters.length > 1 && (0, ZB.jsx)("div", {
+        }), null !== qe && null !== Te && (0, pe.jsxs)(pe.Fragment, {
+          children: [(0, pe.jsx)(Oe, {
+            controller: qe,
+            frames: qe.frames,
+            input: qe.input,
+            markers: qe.markers,
+            inactiveRanges: qe.inactiveRanges,
+            videoGaps: qe.videoGaps,
+            labels: Ke
+          }), qe.chapters.length > 1 && (0, pe.jsx)("div", {
             className: "brv-chapters",
-            children: lB.chapters.map((BB => (0, ZB.jsxs)("button", {
+            children: qe.chapters.map((ee => (0, pe.jsxs)("button", {
               type: "button",
-              className: BB === UB ? "brv-chapter brv-chapter-current" : "brv-chapter",
+              className: ee === We ? "brv-chapter brv-chapter-current" : "brv-chapter",
               onClick: () => {
-                lB.seekToPosition(lB.timeline.toPosition(BB.startMs))
+                qe.seekToPosition(qe.timeline.toPosition(ee.startMs))
               },
-              children: [BB.label, " \xb7 ", RB(BB.endMs - BB.startMs)]
-            }, BB.startMs)))
-          }), (0, ZB.jsxs)("div", {
+              children: [ee.label, " \xb7 ", ze(ee.endMs - ee.startMs)]
+            }, ee.startMs)))
+          }), (0, pe.jsxs)("div", {
             className: "brv-controls",
-            children: [(0, ZB.jsx)(NG, {
-              label: qB.playing ? oB.pause : oB.play,
+            children: [(0, pe.jsx)(BH, {
+              label: Te.playing ? Ke.pause : Ke.play,
               onClick: () => {
-                lB.togglePlay()
+                qe.togglePlay()
               },
-              children: (0, ZB.jsx)(qG, {
-                path: qB.playing ? ZG.pause : ZG.play
+              children: (0, pe.jsx)(XH, {
+                path: Te.playing ? zH.pause : zH.play
               })
-            }), (0, ZB.jsxs)("span", {
+            }), (0, pe.jsxs)("span", {
               className: "brv-time",
-              children: [RB(qB.positionMs), " / ", RB(qB.durationMs)]
-            }), (0, ZB.jsx)("select", {
+              children: [ze(Te.positionMs), " / ", ze(Te.durationMs)]
+            }), (0, pe.jsx)("select", {
               className: "brv-speed",
-              value: qB.speed,
-              title: `${oB.speed} (1-${FB.length})`,
-              "aria-label": oB.speed,
-              onChange: BB => {
-                lB.setSpeed(Number(BB.target.value))
+              value: Te.speed,
+              title: `${Ke.speed} (1-${Ve.length})`,
+              "aria-label": Ke.speed,
+              onChange: ee => {
+                qe.setSpeed(Number(ee.target.value))
               },
-              children: FB.map((BB => (0, ZB.jsxs)("option", {
-                value: BB,
-                children: [BB, "x"]
-              }, BB)))
-            }), (0, ZB.jsxs)("button", {
+              children: Ve.map((ee => (0, pe.jsxs)("option", {
+                value: ee,
+                children: [ee, "x"]
+              }, ee)))
+            }), (0, pe.jsxs)("button", {
               type: "button",
               role: "switch",
               className: "brv-switch",
-              "aria-checked": qB.skipInactive,
-              title: `${oB.skipInactive} (S)`,
+              "aria-checked": Te.skipInactive,
+              title: `${Ke.skipInactive} (S)`,
               onClick: () => {
-                lB.setSkipInactive(!qB.skipInactive)
+                qe.setSkipInactive(!Te.skipInactive)
               },
-              children: [(0, ZB.jsx)("span", {
+              children: [(0, pe.jsx)("span", {
                 className: "brv-switch-track",
                 "aria-hidden": !0
-              }), oB.skipInactive]
-            }), nB && (0, ZB.jsxs)("button", {
+              }), Ke.skipInactive]
+            }), de && (0, pe.jsxs)("button", {
               type: "button",
               role: "switch",
               className: "brv-switch",
-              "aria-checked": WB,
-              title: `${oB.keys} (I)`,
-              onClick: VB,
-              children: [(0, ZB.jsx)("span", {
+              "aria-checked": Be,
+              title: `${Ke.keys} (I)`,
+              onClick: ge,
+              children: [(0, pe.jsx)("span", {
                 className: "brv-switch-track",
                 "aria-hidden": !0
-              }), oB.keys]
-            }), document.fullscreenEnabled && (0, ZB.jsx)(NG, {
-              label: oB.fullscreen,
+              }), Ke.keys]
+            }), document.fullscreenEnabled && (0, pe.jsx)(BH, {
+              label: Ke.fullscreen,
               onClick: () => {
-                RG(JB.current)
+                EH(Je.current)
               },
-              children: (0, ZB.jsx)(qG, {
-                path: ZG.fullscreen
+              children: (0, pe.jsx)(XH, {
+                path: zH.fullscreen
               })
             })]
           })]
         })]
       })
     }
-    var AG = GB(5570);
-    const VG = ["bloxd.io", window.location.hostname];
+    var OH = He(5613);
+    const dH = ["bloxd.io", window.location.hostname];
 
-    function SG(BB) {
+    function WH(ee) {
       let {
-        gameAnalyticsId: OB,
-        recordingId: GB,
-        userContext: DB,
-        autoPlay: QB
-      } = BB;
+        gameAnalyticsId: ie,
+        recordingId: He,
+        userContext: be,
+        autoPlay: Me
+      } = ee;
       const {
-        t: oB
-      } = (0, UB.H)(), [jB, yB] = (0, YB.useState)({
+        t: Ke
+      } = (0, We.v)(), [Ue, Fe] = (0, ye.useState)({
         status: "loading"
-      }), [JB, MB] = (0, YB.useState)(0), PB = (0, YB.useMemo)((() => function(BB) {
+      }), [Je, oe] = (0, ye.useState)(0), Re = (0, ye.useMemo)((() => function(ee) {
         return {
-          play: BB("studio:replayPlay"),
-          pause: BB("studio:replayPause"),
-          speed: BB("studio:replaySpeed"),
-          skipInactive: BB("studio:replaySkipIdle"),
-          fullscreen: BB("studio:replayFullscreen"),
-          tabHidden: BB("studio:replayTabHidden"),
-          videoFailed: BB("studio:replayVideoFailed"),
-          nothingToShow: BB("studio:replayNothingToShow"),
-          videoGap: BB("studio:replayVideoGap"),
-          error: BB("general:error"),
-          graphicsCrash: BB("studio:replayMarkerGraphicsCrash"),
-          death: BB("studio:replayMarkerDeath"),
-          fps: OB => BB("studio:replayFps", {
-            fps: OB
+          play: ee("studio:replayPlay"),
+          pause: ee("studio:replayPause"),
+          speed: ee("studio:replaySpeed"),
+          skipInactive: ee("studio:replaySkipIdle"),
+          fullscreen: ee("studio:replayFullscreen"),
+          tabHidden: ee("studio:replayTabHidden"),
+          videoFailed: ee("studio:replayVideoFailed"),
+          nothingToShow: ee("studio:replayNothingToShow"),
+          videoGap: ee("studio:replayVideoGap"),
+          error: ee("general:error"),
+          graphicsCrash: ee("studio:replayMarkerGraphicsCrash"),
+          death: ee("studio:replayMarkerDeath"),
+          fps: ie => ee("studio:replayFps", {
+            fps: ie
           }),
-          keys: BB("studio:replayKeys"),
-          unboundKey: OB => BB("studio:replayUnboundKey", {
-            key: OB
+          keys: ee("studio:replayKeys"),
+          unboundKey: ie => ee("studio:replayUnboundKey", {
+            key: ie
           }),
-          unboundKeys: OB => BB("studio:replayUnboundKeys", {
-            keys: OB
+          unboundKeys: ie => ee("studio:replayUnboundKeys", {
+            keys: ie
           })
         }
-      }(oB)), [oB]), zB = (0, YB.useMemo)((() => ({
-        resourceHosts: VG,
-        loadTelemetryChunk: uB.C,
-        refreshUrls: async () => (0, uB.x)(await AG.e.getReplay(DB, OB, GB)),
+      }(Ke)), [Ke]), ke = (0, ye.useMemo)((() => ({
+        resourceHosts: dH,
+        loadTelemetryChunk: Pe.D,
+        refreshUrls: async () => (0, Pe.u)(await OH.d.getReplay(be, ie, He)),
         segmentUrls: {
-          load: async BB => (await AG.e.getReplaySegmentUrls(DB, OB, GB, BB, [])).videoSegments,
-          maxSequences: IB.b
+          load: async ee => (await OH.d.getReplaySegmentUrls(be, ie, He, ee, [])).videoSegments,
+          maxSequences: Ye.d
         },
         telemetryUrls: {
-          load: async BB => (await AG.e.getReplaySegmentUrls(DB, OB, GB, [], BB)).telemetrySegments,
-          maxSequences: IB.g
+          load: async ee => (await OH.d.getReplaySegmentUrls(be, ie, He, [], ee)).telemetrySegments,
+          maxSequences: Ye.h
         }
-      })), [OB, GB]);
-      return (0, YB.useEffect)((() => {
-        let BB = !1;
-        return yB({
+      })), [ie, He]);
+      return (0, ye.useEffect)((() => {
+        let ee = !1;
+        return Fe({
           status: "loading"
-        }), (0, uB.E)({
-          getReplay: () => AG.e.getReplay(DB, OB, GB),
-          loadDomEvents: uB.z,
+        }), (0, Pe.H)({
+          getReplay: () => OH.d.getReplay(be, ie, He),
+          loadDomEvents: Pe.A,
           onPreparing: () => {
-            yB({
+            Fe({
               status: "preparing"
             })
           },
-          wait: BB => new Promise((OB => {
-            setTimeout(OB, BB)
+          wait: ee => new Promise((ie => {
+            setTimeout(ie, ee)
           })),
-          isCancelled: () => BB
-        }).then((OB => {
-          if (!BB && null !== OB) {
-            const BB = (0, uB.y)(OB.replay, OB.domEvents, (BB => oB("studio:replayVisit", {
-              number: BB
+          isCancelled: () => ee
+        }).then((ie => {
+          if (!ee && null !== ie) {
+            const ee = (0, Pe.y)(ie.replay, ie.domEvents, (ee => Ke("studio:replayVisit", {
+              number: ee
             })));
-            yB({
+            Fe({
               status: "loaded",
-              value: BB
+              value: ee
             })
           }
-        })).catch((OB => {
-          console.error("Failed to load studio replay", OB), BB || yB({
+        })).catch((ie => {
+          console.error("Failed to load studio replay", ie), ee || Fe({
             status: "error",
-            message: (0, uB.r)(OB, oB("studio:replayLoadFailed"))
+            message: (0, Pe.s)(ie, Ke("studio:replayLoadFailed"))
           })
         })), () => {
-          BB = !0
+          ee = !0
         }
-      }), [OB, GB, JB]), "loading" === jB.status ? (0, ZB.jsx)("div", {
+      }), [ie, He, Je]), "loading" === Ue.status ? (0, pe.jsx)("div", {
         className: "StudioReplaysMessage",
-        children: (0, ZB.jsx)(kB.b, {})
-      }) : "preparing" === jB.status ? (0, ZB.jsxs)("div", {
+        children: (0, pe.jsx)(Ze.b, {})
+      }) : "preparing" === Ue.status ? (0, pe.jsxs)("div", {
         className: "StudioReplaysMessage",
-        children: [(0, ZB.jsx)(kB.b, {}), oB("studio:replayPreparing")]
-      }) : "error" === jB.status ? (0, ZB.jsxs)("div", {
+        children: [(0, pe.jsx)(Ze.b, {}), Ke("studio:replayPreparing")]
+      }) : "error" === Ue.status ? (0, pe.jsxs)("div", {
         className: "StudioReplaysMessage",
-        children: [jB.message, (0, ZB.jsx)(dB.Z, {
+        children: [Ue.message, (0, pe.jsx)(we.M, {
           onClick: () => {
-            MB((BB => BB + 1))
+            oe((ee => ee + 1))
           },
-          children: oB("general:tryAgain")
+          children: Ke("general:tryAgain")
         })]
-      }) : (0, ZB.jsx)(WG, {
+      }) : (0, pe.jsx)(gH, {
         className: "StudioReplayPlayer",
-        data: jB.value,
-        labels: PB,
-        options: zB,
-        autoPlay: QB || JB > 0
+        data: Ue.value,
+        labels: Re,
+        options: ke,
+        autoPlay: Me || Je > 0
       })
     }
 
-    function nG(BB) {
+    function tH(ee) {
       let {
-        onPlay: OB
-      } = BB;
+        onPlay: ie
+      } = ee;
       const {
-        t: GB
-      } = (0, UB.H)();
-      return (0, ZB.jsx)("button", {
+        t: He
+      } = (0, We.v)();
+      return (0, pe.jsx)("button", {
         type: "button",
         className: "StudioReplayPlaceholder",
-        "aria-label": GB("general:play"),
-        onClick: OB,
-        children: (0, ZB.jsx)("span", {
+        "aria-label": He("general:play"),
+        onClick: ie,
+        children: (0, pe.jsx)("span", {
           className: "StudioReplayPlaceholderPlay",
-          children: (0, ZB.jsx)(KB.b, {
+          children: (0, pe.jsx)(De.e, {
             name: "play"
           })
         })
       })
     }
-    const UG = uB.Q.replay,
-      fG = uB.Q.filters,
-      kG = uB.Q.endedAt,
-      dG = {
+    const ZH = Pe.T.replay,
+      wH = Pe.T.filters,
+      DH = Pe.T.endedAt,
+      PH = {
         newPlayers: "studio:replaysFilterNewPlayers",
         quickQuits: "studio:replaysFilterQuickQuits",
         neverMoved: "studio:replaysFilterNeverMoved",
@@ -2420,7 +2420,7 @@ export const modules = {
         chromebooks: "studio:replaysFilterChromebooks",
         errors: "studio:replaysFilterErrors"
       },
-      KG = {
+      AH = {
         mobile: "studio:replayTagMobile",
         tablet: "studio:replayTagTablet",
         chromebook: "studio:replayTagChromebook",
@@ -2433,204 +2433,204 @@ export const modules = {
         error: "studio:replayTagError"
       };
 
-    function uG(BB) {
+    function YH(ee) {
       let {
-        item: OB,
-        selected: GB,
-        onSelect: YB
-      } = BB;
+        item: ie,
+        selected: He,
+        onSelect: ye
+      } = ee;
       const {
-        t: DB
-      } = (0, UB.H)(), oB = (0, uB.v)(OB);
-      return (0, ZB.jsxs)("button", {
+        t: be
+      } = (0, We.v)(), Ke = (0, Pe.t)(ie);
+      return (0, pe.jsxs)("button", {
         type: "button",
-        className: QB()("StudioReplayListItem", {
-          StudioReplayListItemSelected: GB
+        className: Me()("StudioReplayListItem", {
+          StudioReplayListItemSelected: He
         }),
-        onClick: YB,
-        children: [(0, ZB.jsxs)("div", {
+        onClick: ye,
+        children: [(0, pe.jsxs)("div", {
           className: "StudioReplayListItemTop",
-          children: [(0, ZB.jsx)("span", {
-            children: (0, uB.n)(OB.startedAtMs)
-          }), (0, ZB.jsx)("span", {
+          children: [(0, pe.jsx)("span", {
+            children: (0, Pe.o)(ie.startedAtMs)
+          }), (0, pe.jsx)("span", {
             className: "StudioReplayListItemDuration",
-            children: RB(OB.inGameDurationMs)
+            children: ze(ie.inGameDurationMs)
           })]
-        }), oB.length > 0 && (0, ZB.jsx)("div", {
+        }), Ke.length > 0 && (0, pe.jsx)("div", {
           className: "StudioReplayListItemTags",
-          children: oB.map((BB => (0, ZB.jsx)("span", {
-            className: QB()("StudioReplayTag", `StudioReplayTag-${BB}`),
-            children: DB(KG[BB])
-          }, BB)))
+          children: Ke.map((ee => (0, pe.jsx)("span", {
+            className: Me()("StudioReplayTag", `StudioReplayTag-${ee}`),
+            children: be(AH[ee])
+          }, ee)))
         })]
       })
     }
 
-    function mG(BB) {
+    function VH(ee) {
       let {
-        gameAnalyticsId: OB,
-        userContext: GB,
-        availability: YB
-      } = BB;
+        gameAnalyticsId: ie,
+        userContext: He,
+        availability: ye
+      } = ee;
       const {
-        t: DB
-      } = (0, UB.H)();
-      return "on" === YB ? (0, ZB.jsx)(IG, {
-        gameAnalyticsId: OB,
-        userContext: GB
-      }) : "failed" === YB ? (0, ZB.jsxs)("div", {
+        t: be
+      } = (0, We.v)();
+      return "on" === ye ? (0, pe.jsx)(aH, {
+        gameAnalyticsId: ie,
+        userContext: He
+      }) : "failed" === ye ? (0, pe.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, ZB.jsx)(KB.b, {
+        children: [(0, pe.jsx)(De.e, {
           name: "face-dizzy"
-        }), DB("studio:replaysStartFailed"), (0, ZB.jsx)(dB.Z, {
+        }), be("studio:replaysStartFailed"), (0, pe.jsx)(we.M, {
           onClick: () => {
-            nB.b.startNow()
+            de.b.startNow()
           },
-          children: DB("general:tryAgain")
+          children: be("general:tryAgain")
         })]
-      }) : (0, ZB.jsx)("div", {
+      }) : (0, pe.jsx)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: (0, ZB.jsx)(kB.b, {})
+        children: (0, pe.jsx)(Ze.b, {})
       })
     }
 
-    function IG(BB) {
-      var OB, GB;
+    function aH(ee) {
+      var ie, He;
       let {
-        gameAnalyticsId: DB,
-        userContext: oB
-      } = BB;
+        gameAnalyticsId: be,
+        userContext: Ke
+      } = ee;
       const {
-        t: jB
-      } = (0, UB.H)(), yB = function(BB, OB) {
+        t: Ue
+      } = (0, We.v)(), Fe = function(ee, ie) {
         const {
-          t: GB
-        } = (0, UB.H)(), [DB, QB] = (0, YB.useState)({
+          t: He
+        } = (0, We.v)(), [be, Me] = (0, ye.useState)({
           status: "loading"
         });
-        return (0, YB.useEffect)((() => {
-          let YB = !1;
-          return QB({
+        return (0, ye.useEffect)((() => {
+          let ye = !1;
+          return Me({
             status: "loading"
-          }), AG.e.listReplays(OB, BB).then((BB => {
-            YB || QB({
+          }), OH.d.listReplays(ie, ee).then((ee => {
+            ye || Me({
               status: "loaded",
-              value: BB
+              value: ee
             })
-          })).catch((BB => {
-            console.error("Failed to list studio replays", BB), YB || QB({
+          })).catch((ee => {
+            console.error("Failed to list studio replays", ee), ye || Me({
               status: "error",
-              message: (0, uB.r)(BB, GB("studio:replaysLoadFailed"))
+              message: (0, Pe.s)(ee, He("studio:replaysLoadFailed"))
             })
           })), () => {
-            YB = !0
+            ye = !0
           }
-        }), [BB]), DB
-      }(DB, oB), [JB, MB] = (0, fB.l)(), PB = (0, uB.M)(JB.get(fG)), zB = (0, uB.J)(JB.get(kG)), lB = JB.get(UG), pB = "loaded" === yB.status ? (0, uB.d)(yB.value.recordings, PB, zB) : [], qB = "loaded" === yB.status ? (0, uB.U)(yB.value.recordings, pB, lB) : [], NB = null !== (OB = null !== lB && void 0 !== lB ? lB : null === (GB = qB[0]) || void 0 === GB ? void 0 : GB.recordingId) && void 0 !== OB ? OB : null, [RB, WB] = (0, YB.useState)(lB), [AB, VB] = (0, YB.useState)(!1), SB = (0, YB.useRef)(null), nB = (0, YB.useRef)(null !== lB), IB = (0, YB.useRef)(null);
+        }), [ee]), be
+      }(be, Ke), [Je, oe] = (0, te.l)(), Re = (0, Pe.Q)(Je.get(wH)), ke = (0, Pe.M)(Je.get(DH)), qe = Je.get(ZH), fe = "loaded" === Fe.status ? (0, Pe.e)(Fe.value.recordings, Re, ke) : [], Te = "loaded" === Fe.status ? (0, Pe.U)(Fe.value.recordings, fe, qe) : [], Xe = null !== (ie = null !== qe && void 0 !== qe ? qe : null === (He = Te[0]) || void 0 === He ? void 0 : He.recordingId) && void 0 !== ie ? ie : null, [ze, Be] = (0, ye.useState)(qe), [Ee, ge] = (0, ye.useState)(!1), Oe = (0, ye.useRef)(null), de = (0, ye.useRef)(null !== qe), Ye = (0, ye.useRef)(null);
 
-      function FB(BB) {
-        BB === RB && BB === NB || (IB.current = null, nB.current = !0, VB(!0), WB(BB), MB((OB => {
-          (0, fB.i)(OB, UG, BB)
+      function Ve(ee) {
+        ee === ze && ee === Xe || (Ye.current = null, de.current = !0, ge(!0), Be(ee), oe((ie => {
+          (0, te.i)(ie, ZH, ee)
         }), {
           push: !0
         }))
       }
 
-      function iB(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        NB !== RB && (IB.current = NB), MB((GB => {
-          (0, fB.i)(GB, UG, NB), (0, fB.i)(GB, fG, (0, uB.l)(BB)), OB && (0, fB.i)(GB, kG, null)
+      function ae(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        Xe !== ze && (Ye.current = Xe), oe((He => {
+          (0, te.i)(He, ZH, Xe), (0, te.i)(He, wH, (0, Pe.k)(ee)), ie && (0, te.i)(He, DH, null)
         }))
       }
-      if ((0, YB.useEffect)((() => {
-          null !== lB && lB !== IB.current && WB(lB)
-        }), [lB]), (0, YB.useEffect)((() => {
-          nB.current && null !== SB.current && (nB.current = !1, SB.current.scrollIntoView({
+      if ((0, ye.useEffect)((() => {
+          null !== qe && qe !== Ye.current && Be(qe)
+        }), [qe]), (0, ye.useEffect)((() => {
+          de.current && null !== Oe.current && (de.current = !1, Oe.current.scrollIntoView({
             block: "nearest",
             behavior: "smooth"
           }))
-        }), [RB, yB.status]), "loading" === yB.status) return (0, ZB.jsx)("div", {
+        }), [ze, Fe.status]), "loading" === Fe.status) return (0, pe.jsx)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: (0, ZB.jsx)(kB.b, {})
+        children: (0, pe.jsx)(Ze.b, {})
       });
-      if ("error" === yB.status) return (0, ZB.jsxs)("div", {
+      if ("error" === Fe.status) return (0, pe.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, ZB.jsx)(KB.b, {
+        children: [(0, pe.jsx)(De.e, {
           name: "face-dizzy"
-        }), yB.message]
+        }), Fe.message]
       });
       const {
-        recordings: LB,
-        dailyQuota: gB
-      } = yB.value;
-      if (0 === LB.length) return (0, ZB.jsxs)("div", {
+        recordings: ce,
+        dailyQuota: xe
+      } = Fe.value;
+      if (0 === ce.length) return (0, pe.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, ZB.jsx)(KB.b, {
+        children: [(0, pe.jsx)(De.e, {
           name: "video"
-        }), jB(0 === gB ? "studio:replaysOff" : "studio:replaysEmpty")]
+        }), Ue(0 === xe ? "studio:replaysOff" : "studio:replaysEmpty")]
       });
-      const rB = uB.P.filter((BB => LB.some((OB => (0, uB.F)(OB, BB))))),
-        XB = NB !== RB;
-      return (0, ZB.jsxs)("div", {
+      const Le = Pe.S.filter((ee => ce.some((ie => (0, Pe.L)(ie, ee))))),
+        Ce = Xe !== ze;
+      return (0, pe.jsxs)("div", {
         className: "StudioReplaysTab",
-        children: [(0, ZB.jsxs)("div", {
+        children: [(0, pe.jsxs)("div", {
           className: "StudioReplaysToolbar",
-          children: [null !== zB && (0, ZB.jsxs)(dB.Z, {
+          children: [null !== ke && (0, pe.jsxs)(we.M, {
             active: !0,
             onClick: () => {
-              iB(PB, !0)
+              ae(Re, !0)
             },
-            children: [jB("studio:replaysFilterEndedAt", {
-              minutes: (0, mB.C)(zB.minute, zB.orLonger ? zB.minute : 1 / 0)
-            }), (0, ZB.jsx)(KB.b, {
+            children: [Ue("studio:replaysFilterEndedAt", {
+              minutes: (0, Ae.x)(ke.minute, ke.orLonger ? ke.minute : 1 / 0)
+            }), (0, pe.jsx)(De.e, {
               name: "xmark"
             })]
-          }), rB.map((BB => (0, ZB.jsx)(dB.Z, {
-            active: PB.includes(BB),
+          }), Le.map((ee => (0, pe.jsx)(we.M, {
+            active: Re.includes(ee),
             onClick: () => {
-              ! function(BB) {
-                iB(PB.includes(BB) ? PB.filter((OB => OB !== BB)) : [...PB, BB])
-              }(BB)
+              ! function(ee) {
+                ae(Re.includes(ee) ? Re.filter((ie => ie !== ee)) : [...Re, ee])
+              }(ee)
             },
-            children: jB(dG[BB])
-          }, BB))), gB > 0 && (0, ZB.jsx)("span", {
+            children: Ue(PH[ee])
+          }, ee))), xe > 0 && (0, pe.jsx)("span", {
             className: "StudioReplaysQuota",
-            children: jB("studio:replaysQuota", {
-              count: gB
+            children: Ue("studio:replaysQuota", {
+              count: xe
             })
           })]
-        }), (0, ZB.jsxs)("div", {
+        }), (0, pe.jsxs)("div", {
           className: "StudioReplaysBody",
-          children: [(0, ZB.jsxs)("div", {
+          children: [(0, pe.jsxs)("div", {
             className: "StudioReplaysList",
-            children: [0 === pB.length && (0, ZB.jsxs)("div", {
+            children: [0 === fe.length && (0, pe.jsxs)("div", {
               className: "StudioReplaysListEmpty",
-              children: [jB("studio:replaysNoMatch"), (0, ZB.jsx)(dB.Z, {
+              children: [Ue("studio:replaysNoMatch"), (0, pe.jsx)(we.M, {
                 onClick: () => {
-                  iB([], !0)
+                  ae([], !0)
                 },
-                children: jB("studio:replaysClearFilters")
+                children: Ue("studio:replaysClearFilters")
               })]
-            }), qB.map((BB => (0, ZB.jsx)(uG, {
-              item: BB,
-              selected: BB.recordingId === NB,
+            }), Te.map((ee => (0, pe.jsx)(YH, {
+              item: ee,
+              selected: ee.recordingId === Xe,
               onSelect: () => {
-                FB(BB.recordingId)
+                Ve(ee.recordingId)
               }
-            }, BB.recordingId)))]
-          }), null !== NB && (0, ZB.jsxs)("div", {
-            ref: SB,
-            className: QB()("StudioReplayViewer", {
-              StudioReplayViewerWaiting: XB
+            }, ee.recordingId)))]
+          }), null !== Xe && (0, pe.jsxs)("div", {
+            ref: Oe,
+            className: Me()("StudioReplayViewer", {
+              StudioReplayViewerWaiting: Ce
             }),
-            children: [!XB && (0, ZB.jsx)(SG, {
-              gameAnalyticsId: DB,
-              recordingId: NB,
-              userContext: oB,
-              autoPlay: AB
-            }, NB), XB && (0, ZB.jsx)(nG, {
+            children: [!Ce && (0, pe.jsx)(WH, {
+              gameAnalyticsId: be,
+              recordingId: Xe,
+              userContext: Ke,
+              autoPlay: Ee
+            }, Xe), Ce && (0, pe.jsx)(tH, {
               onPlay: () => {
-                FB(NB)
+                Ve(Xe)
               }
             })]
           })]
@@ -2640,4 +2640,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

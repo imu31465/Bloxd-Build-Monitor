@@ -1,8 +1,8 @@
 export const id = 248;
 export const ids = [248];
 export const modules = {
-  37312: BB => {
-    BB.exports = {
+  37464: ee => {
+    ee.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  37305: (BB, OB, GB) => {
-    var YB = GB(37312),
-      DB = GB(37318),
-      QB = Object.hasOwnProperty,
-      oB = Object.create(null);
-    for (var jB in YB) QB.call(YB, jB) && (oB[YB[jB]] = jB);
-    var yB = BB.exports = {
+  37459: (ee, ie, He) => {
+    var ye = He(37464),
+      be = He(37471),
+      Me = Object.hasOwnProperty,
+      Ke = Object.create(null);
+    for (var Ue in ye) Me.call(ye, Ue) && (Ke[ye[Ue]] = Ue);
+    var Fe = ee.exports = {
       to: {},
       get: {}
     };
 
-    function JB(BB, OB, GB) {
-      return Math.min(Math.max(OB, BB), GB)
+    function Je(ee, ie, He) {
+      return Math.min(Math.max(ie, ee), He)
     }
 
-    function MB(BB) {
-      var OB = Math.round(BB).toString(16).toUpperCase();
-      return OB.length < 2 ? "0" + OB : OB
+    function oe(ee) {
+      var ie = Math.round(ee).toString(16).toUpperCase();
+      return ie.length < 2 ? "0" + ie : ie
     }
-    yB.get = function(BB) {
-      var OB, GB;
-      switch (BB.substring(0, 3).toLowerCase()) {
+    Fe.get = function(ee) {
+      var ie, He;
+      switch (ee.substring(0, 3).toLowerCase()) {
         case "hsl":
-          OB = yB.get.hsl(BB), GB = "hsl";
+          ie = Fe.get.hsl(ee), He = "hsl";
           break;
         case "hwb":
-          OB = yB.get.hwb(BB), GB = "hwb";
+          ie = Fe.get.hwb(ee), He = "hwb";
           break;
         default:
-          OB = yB.get.rgb(BB), GB = "rgb"
+          ie = Fe.get.rgb(ee), He = "rgb"
       }
-      return OB ? {
-        model: GB,
-        value: OB
+      return ie ? {
+        model: He,
+        value: ie
       } : null
-    }, yB.get.rgb = function(BB) {
-      if (!BB) return null;
-      var OB, GB, DB, oB = [0, 0, 0, 1];
-      if (OB = BB.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (DB = OB[2], OB = OB[1], GB = 0; GB < 3; GB++) {
-          var jB = 2 * GB;
-          oB[GB] = parseInt(OB.slice(jB, jB + 2), 16)
+    }, Fe.get.rgb = function(ee) {
+      if (!ee) return null;
+      var ie, He, be, Ke = [0, 0, 0, 1];
+      if (ie = ee.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (be = ie[2], ie = ie[1], He = 0; He < 3; He++) {
+          var Ue = 2 * He;
+          Ke[He] = parseInt(ie.slice(Ue, Ue + 2), 16)
         }
-        DB && (oB[3] = parseInt(DB, 16) / 255)
-      } else if (OB = BB.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (DB = (OB = OB[1])[3], GB = 0; GB < 3; GB++) oB[GB] = parseInt(OB[GB] + OB[GB], 16);
-        DB && (oB[3] = parseInt(DB + DB, 16) / 255)
-      } else if (OB = BB.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (GB = 0; GB < 3; GB++) oB[GB] = parseInt(OB[GB + 1], 0);
-        OB[4] && (OB[5] ? oB[3] = .01 * parseFloat(OB[4]) : oB[3] = parseFloat(OB[4]))
+        be && (Ke[3] = parseInt(be, 16) / 255)
+      } else if (ie = ee.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (be = (ie = ie[1])[3], He = 0; He < 3; He++) Ke[He] = parseInt(ie[He] + ie[He], 16);
+        be && (Ke[3] = parseInt(be + be, 16) / 255)
+      } else if (ie = ee.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (He = 0; He < 3; He++) Ke[He] = parseInt(ie[He + 1], 0);
+        ie[4] && (ie[5] ? Ke[3] = .01 * parseFloat(ie[4]) : Ke[3] = parseFloat(ie[4]))
       } else {
-        if (!(OB = BB.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (OB = BB.match(/^(\w+)$/)) ? "transparent" === OB[1] ? [0, 0, 0, 0] : QB.call(YB, OB[1]) ? ((oB = YB[OB[1]])[3] = 1, oB) : null : null;
-        for (GB = 0; GB < 3; GB++) oB[GB] = Math.round(2.55 * parseFloat(OB[GB + 1]));
-        OB[4] && (OB[5] ? oB[3] = .01 * parseFloat(OB[4]) : oB[3] = parseFloat(OB[4]))
+        if (!(ie = ee.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (ie = ee.match(/^(\w+)$/)) ? "transparent" === ie[1] ? [0, 0, 0, 0] : Me.call(ye, ie[1]) ? ((Ke = ye[ie[1]])[3] = 1, Ke) : null : null;
+        for (He = 0; He < 3; He++) Ke[He] = Math.round(2.55 * parseFloat(ie[He + 1]));
+        ie[4] && (ie[5] ? Ke[3] = .01 * parseFloat(ie[4]) : Ke[3] = parseFloat(ie[4]))
       }
-      for (GB = 0; GB < 3; GB++) oB[GB] = JB(oB[GB], 0, 255);
-      return oB[3] = JB(oB[3], 0, 1), oB
-    }, yB.get.hsl = function(BB) {
-      if (!BB) return null;
-      var OB = BB.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (OB) {
-        var GB = parseFloat(OB[4]);
-        return [(parseFloat(OB[1]) % 360 + 360) % 360, JB(parseFloat(OB[2]), 0, 100), JB(parseFloat(OB[3]), 0, 100), JB(isNaN(GB) ? 1 : GB, 0, 1)]
-      }
-      return null
-    }, yB.get.hwb = function(BB) {
-      if (!BB) return null;
-      var OB = BB.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (OB) {
-        var GB = parseFloat(OB[4]);
-        return [(parseFloat(OB[1]) % 360 + 360) % 360, JB(parseFloat(OB[2]), 0, 100), JB(parseFloat(OB[3]), 0, 100), JB(isNaN(GB) ? 1 : GB, 0, 1)]
+      for (He = 0; He < 3; He++) Ke[He] = Je(Ke[He], 0, 255);
+      return Ke[3] = Je(Ke[3], 0, 1), Ke
+    }, Fe.get.hsl = function(ee) {
+      if (!ee) return null;
+      var ie = ee.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (ie) {
+        var He = parseFloat(ie[4]);
+        return [(parseFloat(ie[1]) % 360 + 360) % 360, Je(parseFloat(ie[2]), 0, 100), Je(parseFloat(ie[3]), 0, 100), Je(isNaN(He) ? 1 : He, 0, 1)]
       }
       return null
-    }, yB.to.hex = function() {
-      var BB = DB(arguments);
-      return "#" + MB(BB[0]) + MB(BB[1]) + MB(BB[2]) + (BB[3] < 1 ? MB(Math.round(255 * BB[3])) : "")
-    }, yB.to.rgb = function() {
-      var BB = DB(arguments);
-      return BB.length < 4 || 1 === BB[3] ? "rgb(" + Math.round(BB[0]) + ", " + Math.round(BB[1]) + ", " + Math.round(BB[2]) + ")" : "rgba(" + Math.round(BB[0]) + ", " + Math.round(BB[1]) + ", " + Math.round(BB[2]) + ", " + BB[3] + ")"
-    }, yB.to.rgb.percent = function() {
-      var BB = DB(arguments),
-        OB = Math.round(BB[0] / 255 * 100),
-        GB = Math.round(BB[1] / 255 * 100),
-        YB = Math.round(BB[2] / 255 * 100);
-      return BB.length < 4 || 1 === BB[3] ? "rgb(" + OB + "%, " + GB + "%, " + YB + "%)" : "rgba(" + OB + "%, " + GB + "%, " + YB + "%, " + BB[3] + ")"
-    }, yB.to.hsl = function() {
-      var BB = DB(arguments);
-      return BB.length < 4 || 1 === BB[3] ? "hsl(" + BB[0] + ", " + BB[1] + "%, " + BB[2] + "%)" : "hsla(" + BB[0] + ", " + BB[1] + "%, " + BB[2] + "%, " + BB[3] + ")"
-    }, yB.to.hwb = function() {
-      var BB = DB(arguments),
-        OB = "";
-      return BB.length >= 4 && 1 !== BB[3] && (OB = ", " + BB[3]), "hwb(" + BB[0] + ", " + BB[1] + "%, " + BB[2] + "%" + OB + ")"
-    }, yB.to.keyword = function(BB) {
-      return oB[BB.slice(0, 3)]
+    }, Fe.get.hwb = function(ee) {
+      if (!ee) return null;
+      var ie = ee.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (ie) {
+        var He = parseFloat(ie[4]);
+        return [(parseFloat(ie[1]) % 360 + 360) % 360, Je(parseFloat(ie[2]), 0, 100), Je(parseFloat(ie[3]), 0, 100), Je(isNaN(He) ? 1 : He, 0, 1)]
+      }
+      return null
+    }, Fe.to.hex = function() {
+      var ee = be(arguments);
+      return "#" + oe(ee[0]) + oe(ee[1]) + oe(ee[2]) + (ee[3] < 1 ? oe(Math.round(255 * ee[3])) : "")
+    }, Fe.to.rgb = function() {
+      var ee = be(arguments);
+      return ee.length < 4 || 1 === ee[3] ? "rgb(" + Math.round(ee[0]) + ", " + Math.round(ee[1]) + ", " + Math.round(ee[2]) + ")" : "rgba(" + Math.round(ee[0]) + ", " + Math.round(ee[1]) + ", " + Math.round(ee[2]) + ", " + ee[3] + ")"
+    }, Fe.to.rgb.percent = function() {
+      var ee = be(arguments),
+        ie = Math.round(ee[0] / 255 * 100),
+        He = Math.round(ee[1] / 255 * 100),
+        ye = Math.round(ee[2] / 255 * 100);
+      return ee.length < 4 || 1 === ee[3] ? "rgb(" + ie + "%, " + He + "%, " + ye + "%)" : "rgba(" + ie + "%, " + He + "%, " + ye + "%, " + ee[3] + ")"
+    }, Fe.to.hsl = function() {
+      var ee = be(arguments);
+      return ee.length < 4 || 1 === ee[3] ? "hsl(" + ee[0] + ", " + ee[1] + "%, " + ee[2] + "%)" : "hsla(" + ee[0] + ", " + ee[1] + "%, " + ee[2] + "%, " + ee[3] + ")"
+    }, Fe.to.hwb = function() {
+      var ee = be(arguments),
+        ie = "";
+      return ee.length >= 4 && 1 !== ee[3] && (ie = ", " + ee[3]), "hwb(" + ee[0] + ", " + ee[1] + "%, " + ee[2] + "%" + ie + ")"
+    }, Fe.to.keyword = function(ee) {
+      return Ke[ee.slice(0, 3)]
     }
   },
-  37300: (BB, OB, GB) => {
-    const YB = GB(37305),
-      DB = GB(37328),
-      QB = ["keyword", "gray", "hex"],
-      oB = {};
-    for (const lB of Object.keys(DB)) oB[[...DB[lB].labels].sort().join("")] = lB;
-    const jB = {};
+  37454: (ee, ie, He) => {
+    const ye = He(37459),
+      be = He(37482),
+      Me = ["keyword", "gray", "hex"],
+      Ke = {};
+    for (const qe of Object.keys(be)) Ke[[...be[qe].labels].sort().join("")] = qe;
+    const Ue = {};
 
-    function yB(BB, OB) {
-      if (!(this instanceof yB)) return new yB(BB, OB);
-      if (OB && OB in QB && (OB = null), OB && !(OB in DB)) throw new Error("Unknown model: " + OB);
-      let GB, JB;
-      if (null == BB) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (BB instanceof yB) this.model = BB.model, this.color = [...BB.color], this.valpha = BB.valpha;
-      else if ("string" === typeof BB) {
-        const OB = YB.get(BB);
-        if (null === OB) throw new Error("Unable to parse color from string: " + BB);
-        this.model = OB.model, JB = DB[this.model].channels, this.color = OB.value.slice(0, JB), this.valpha = "number" === typeof OB.value[JB] ? OB.value[JB] : 1
-      } else if (BB.length > 0) {
-        this.model = OB || "rgb", JB = DB[this.model].channels;
-        const GB = Array.prototype.slice.call(BB, 0, JB);
-        this.color = zB(GB, JB), this.valpha = "number" === typeof BB[JB] ? BB[JB] : 1
-      } else if ("number" === typeof BB) this.model = "rgb", this.color = [BB >> 16 & 255, BB >> 8 & 255, 255 & BB], this.valpha = 1;
+    function Fe(ee, ie) {
+      if (!(this instanceof Fe)) return new Fe(ee, ie);
+      if (ie && ie in Me && (ie = null), ie && !(ie in be)) throw new Error("Unknown model: " + ie);
+      let He, Je;
+      if (null == ee) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (ee instanceof Fe) this.model = ee.model, this.color = [...ee.color], this.valpha = ee.valpha;
+      else if ("string" === typeof ee) {
+        const ie = ye.get(ee);
+        if (null === ie) throw new Error("Unable to parse color from string: " + ee);
+        this.model = ie.model, Je = be[this.model].channels, this.color = ie.value.slice(0, Je), this.valpha = "number" === typeof ie.value[Je] ? ie.value[Je] : 1
+      } else if (ee.length > 0) {
+        this.model = ie || "rgb", Je = be[this.model].channels;
+        const He = Array.prototype.slice.call(ee, 0, Je);
+        this.color = ke(He, Je), this.valpha = "number" === typeof ee[Je] ? ee[Je] : 1
+      } else if ("number" === typeof ee) this.model = "rgb", this.color = [ee >> 16 & 255, ee >> 8 & 255, 255 & ee], this.valpha = 1;
       else {
         this.valpha = 1;
-        const OB = Object.keys(BB);
-        "alpha" in BB && (OB.splice(OB.indexOf("alpha"), 1), this.valpha = "number" === typeof BB.alpha ? BB.alpha : 0);
-        const YB = OB.sort().join("");
-        if (!(YB in oB)) throw new Error("Unable to parse color from object: " + JSON.stringify(BB));
-        this.model = oB[YB];
+        const ie = Object.keys(ee);
+        "alpha" in ee && (ie.splice(ie.indexOf("alpha"), 1), this.valpha = "number" === typeof ee.alpha ? ee.alpha : 0);
+        const ye = ie.sort().join("");
+        if (!(ye in Ke)) throw new Error("Unable to parse color from object: " + JSON.stringify(ee));
+        this.model = Ke[ye];
         const {
-          labels: QB
-        } = DB[this.model], jB = [];
-        for (GB = 0; GB < QB.length; GB++) jB.push(BB[QB[GB]]);
-        this.color = zB(jB)
+          labels: Me
+        } = be[this.model], Ue = [];
+        for (He = 0; He < Me.length; He++) Ue.push(ee[Me[He]]);
+        this.color = ke(Ue)
       }
-      if (jB[this.model])
-        for (JB = DB[this.model].channels, GB = 0; GB < JB; GB++) {
-          const BB = jB[this.model][GB];
-          BB && (this.color[GB] = BB(this.color[GB]))
+      if (Ue[this.model])
+        for (Je = be[this.model].channels, He = 0; He < Je; He++) {
+          const ee = Ue[this.model][He];
+          ee && (this.color[He] = ee(this.color[He]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    yB.prototype = {
+    Fe.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(BB) {
-        let OB = this.model in YB.to ? this : this.rgb();
-        OB = OB.round("number" === typeof BB ? BB : 1);
-        const GB = 1 === OB.valpha ? OB.color : [...OB.color, this.valpha];
-        return YB.to[OB.model](GB)
+      string(ee) {
+        let ie = this.model in ye.to ? this : this.rgb();
+        ie = ie.round("number" === typeof ee ? ee : 1);
+        const He = 1 === ie.valpha ? ie.color : [...ie.color, this.valpha];
+        return ye.to[ie.model](He)
       },
-      percentString(BB) {
-        const OB = this.rgb().round("number" === typeof BB ? BB : 1),
-          GB = 1 === OB.valpha ? OB.color : [...OB.color, this.valpha];
-        return YB.to.rgb.percent(GB)
+      percentString(ee) {
+        const ie = this.rgb().round("number" === typeof ee ? ee : 1),
+          He = 1 === ie.valpha ? ie.color : [...ie.color, this.valpha];
+        return ye.to.rgb.percent(He)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const BB = {},
+        const ee = {},
           {
-            channels: OB
-          } = DB[this.model],
+            channels: ie
+          } = be[this.model],
           {
-            labels: GB
-          } = DB[this.model];
-        for (let YB = 0; YB < OB; YB++) BB[GB[YB]] = this.color[YB];
-        return 1 !== this.valpha && (BB.alpha = this.valpha), BB
+            labels: He
+          } = be[this.model];
+        for (let ye = 0; ye < ie; ye++) ee[He[ye]] = this.color[ye];
+        return 1 !== this.valpha && (ee.alpha = this.valpha), ee
       },
       unitArray() {
-        const BB = this.rgb().color;
-        return BB[0] /= 255, BB[1] /= 255, BB[2] /= 255, 1 !== this.valpha && BB.push(this.valpha), BB
+        const ee = this.rgb().color;
+        return ee[0] /= 255, ee[1] /= 255, ee[2] /= 255, 1 !== this.valpha && ee.push(this.valpha), ee
       },
       unitObject() {
-        const BB = this.rgb().object();
-        return BB.r /= 255, BB.g /= 255, BB.b /= 255, 1 !== this.valpha && (BB.alpha = this.valpha), BB
+        const ee = this.rgb().object();
+        return ee.r /= 255, ee.g /= 255, ee.b /= 255, 1 !== this.valpha && (ee.alpha = this.valpha), ee
       },
-      round(BB) {
-        return BB = Math.max(BB || 0, 0), new yB([...this.color.map(JB(BB)), this.valpha], this.model)
+      round(ee) {
+        return ee = Math.max(ee || 0, 0), new Fe([...this.color.map(Je(ee)), this.valpha], this.model)
       },
-      alpha(BB) {
-        return void 0 !== BB ? new yB([...this.color, Math.max(0, Math.min(1, BB))], this.model) : this.valpha
+      alpha(ee) {
+        return void 0 !== ee ? new Fe([...this.color, Math.max(0, Math.min(1, ee))], this.model) : this.valpha
       },
-      red: MB("rgb", 0, PB(255)),
-      green: MB("rgb", 1, PB(255)),
-      blue: MB("rgb", 2, PB(255)),
-      hue: MB(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (BB => (BB % 360 + 360) % 360)),
-      saturationl: MB("hsl", 1, PB(100)),
-      lightness: MB("hsl", 2, PB(100)),
-      saturationv: MB("hsv", 1, PB(100)),
-      value: MB("hsv", 2, PB(100)),
-      chroma: MB("hcg", 1, PB(100)),
-      gray: MB("hcg", 2, PB(100)),
-      white: MB("hwb", 1, PB(100)),
-      wblack: MB("hwb", 2, PB(100)),
-      cyan: MB("cmyk", 0, PB(100)),
-      magenta: MB("cmyk", 1, PB(100)),
-      yellow: MB("cmyk", 2, PB(100)),
-      black: MB("cmyk", 3, PB(100)),
-      x: MB("xyz", 0, PB(95.047)),
-      y: MB("xyz", 1, PB(100)),
-      z: MB("xyz", 2, PB(108.833)),
-      l: MB("lab", 0, PB(100)),
-      a: MB("lab", 1),
-      b: MB("lab", 2),
-      keyword(BB) {
-        return void 0 !== BB ? new yB(BB) : DB[this.model].keyword(this.color)
+      red: oe("rgb", 0, Re(255)),
+      green: oe("rgb", 1, Re(255)),
+      blue: oe("rgb", 2, Re(255)),
+      hue: oe(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (ee => (ee % 360 + 360) % 360)),
+      saturationl: oe("hsl", 1, Re(100)),
+      lightness: oe("hsl", 2, Re(100)),
+      saturationv: oe("hsv", 1, Re(100)),
+      value: oe("hsv", 2, Re(100)),
+      chroma: oe("hcg", 1, Re(100)),
+      gray: oe("hcg", 2, Re(100)),
+      white: oe("hwb", 1, Re(100)),
+      wblack: oe("hwb", 2, Re(100)),
+      cyan: oe("cmyk", 0, Re(100)),
+      magenta: oe("cmyk", 1, Re(100)),
+      yellow: oe("cmyk", 2, Re(100)),
+      black: oe("cmyk", 3, Re(100)),
+      x: oe("xyz", 0, Re(95.047)),
+      y: oe("xyz", 1, Re(100)),
+      z: oe("xyz", 2, Re(108.833)),
+      l: oe("lab", 0, Re(100)),
+      a: oe("lab", 1),
+      b: oe("lab", 2),
+      keyword(ee) {
+        return void 0 !== ee ? new Fe(ee) : be[this.model].keyword(this.color)
       },
-      hex(BB) {
-        return void 0 !== BB ? new yB(BB) : YB.to.hex(this.rgb().round().color)
+      hex(ee) {
+        return void 0 !== ee ? new Fe(ee) : ye.to.hex(this.rgb().round().color)
       },
-      hexa(BB) {
-        if (void 0 !== BB) return new yB(BB);
-        const OB = this.rgb().round().color;
-        let GB = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === GB.length && (GB = "0" + GB), YB.to.hex(OB) + GB
+      hexa(ee) {
+        if (void 0 !== ee) return new Fe(ee);
+        const ie = this.rgb().round().color;
+        let He = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === He.length && (He = "0" + He), ye.to.hex(ie) + He
       },
       rgbNumber() {
-        const BB = this.rgb().color;
-        return (255 & BB[0]) << 16 | (255 & BB[1]) << 8 | 255 & BB[2]
+        const ee = this.rgb().color;
+        return (255 & ee[0]) << 16 | (255 & ee[1]) << 8 | 255 & ee[2]
       },
       luminosity() {
-        const BB = this.rgb().color,
-          OB = [];
-        for (const [GB, YB] of BB.entries()) {
-          const BB = YB / 255;
-          OB[GB] = BB <= .04045 ? BB / 12.92 : ((BB + .055) / 1.055) ** 2.4
+        const ee = this.rgb().color,
+          ie = [];
+        for (const [He, ye] of ee.entries()) {
+          const ee = ye / 255;
+          ie[He] = ee <= .04045 ? ee / 12.92 : ((ee + .055) / 1.055) ** 2.4
         }
-        return .2126 * OB[0] + .7152 * OB[1] + .0722 * OB[2]
+        return .2126 * ie[0] + .7152 * ie[1] + .0722 * ie[2]
       },
-      contrast(BB) {
-        const OB = this.luminosity(),
-          GB = BB.luminosity();
-        return OB > GB ? (OB + .05) / (GB + .05) : (GB + .05) / (OB + .05)
+      contrast(ee) {
+        const ie = this.luminosity(),
+          He = ee.luminosity();
+        return ie > He ? (ie + .05) / (He + .05) : (He + .05) / (ie + .05)
       },
-      level(BB) {
-        const OB = this.contrast(BB);
-        return OB >= 7 ? "AAA" : OB >= 4.5 ? "AA" : ""
+      level(ee) {
+        const ie = this.contrast(ee);
+        return ie >= 7 ? "AAA" : ie >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const BB = this.rgb().color;
-        return (2126 * BB[0] + 7152 * BB[1] + 722 * BB[2]) / 1e4 < 128
+        const ee = this.rgb().color;
+        return (2126 * ee[0] + 7152 * ee[1] + 722 * ee[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      ep() {
-        const BB = this.rgb();
-        for (let OB = 0; OB < 3; OB++) BB.color[OB] = 255 - BB.color[OB];
-        return BB
+      ck() {
+        const ee = this.rgb();
+        for (let ie = 0; ie < 3; ie++) ee.color[ie] = 255 - ee.color[ie];
+        return ee
       },
-      lighten(BB) {
-        const OB = this.hsl();
-        return OB.color[2] += OB.color[2] * BB, OB
+      lighten(ee) {
+        const ie = this.hsl();
+        return ie.color[2] += ie.color[2] * ee, ie
       },
-      darken(BB) {
-        const OB = this.hsl();
-        return OB.color[2] -= OB.color[2] * BB, OB
+      darken(ee) {
+        const ie = this.hsl();
+        return ie.color[2] -= ie.color[2] * ee, ie
       },
-      saturate(BB) {
-        const OB = this.hsl();
-        return OB.color[1] += OB.color[1] * BB, OB
+      saturate(ee) {
+        const ie = this.hsl();
+        return ie.color[1] += ie.color[1] * ee, ie
       },
-      desaturate(BB) {
-        const OB = this.hsl();
-        return OB.color[1] -= OB.color[1] * BB, OB
+      desaturate(ee) {
+        const ie = this.hsl();
+        return ie.color[1] -= ie.color[1] * ee, ie
       },
-      whiten(BB) {
-        const OB = this.hwb();
-        return OB.color[1] += OB.color[1] * BB, OB
+      whiten(ee) {
+        const ie = this.hwb();
+        return ie.color[1] += ie.color[1] * ee, ie
       },
-      blacken(BB) {
-        const OB = this.hwb();
-        return OB.color[2] += OB.color[2] * BB, OB
+      blacken(ee) {
+        const ie = this.hwb();
+        return ie.color[2] += ie.color[2] * ee, ie
       },
       grayscale() {
-        const BB = this.rgb().color,
-          OB = .3 * BB[0] + .59 * BB[1] + .11 * BB[2];
-        return yB.rgb(OB, OB, OB)
+        const ee = this.rgb().color,
+          ie = .3 * ee[0] + .59 * ee[1] + .11 * ee[2];
+        return Fe.rgb(ie, ie, ie)
       },
-      fade(BB) {
-        return this.alpha(this.valpha - this.valpha * BB)
+      fade(ee) {
+        return this.alpha(this.valpha - this.valpha * ee)
       },
-      opaquer(BB) {
-        return this.alpha(this.valpha + this.valpha * BB)
+      opaquer(ee) {
+        return this.alpha(this.valpha + this.valpha * ee)
       },
-      rotate(BB) {
-        const OB = this.hsl();
-        let GB = OB.color[0];
-        return GB = (GB + BB) % 360, GB = GB < 0 ? 360 + GB : GB, OB.color[0] = GB, OB
+      rotate(ee) {
+        const ie = this.hsl();
+        let He = ie.color[0];
+        return He = (He + ee) % 360, He = He < 0 ? 360 + He : He, ie.color[0] = He, ie
       },
-      mix(BB, OB) {
-        if (!BB || !BB.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof BB);
-        const GB = BB.rgb(),
-          YB = this.rgb(),
-          DB = void 0 === OB ? .5 : OB,
-          QB = 2 * DB - 1,
-          oB = GB.alpha() - YB.alpha(),
-          jB = ((QB * oB === -1 ? QB : (QB + oB) / (1 + QB * oB)) + 1) / 2,
-          JB = 1 - jB;
-        return yB.rgb(jB * GB.red() + JB * YB.red(), jB * GB.green() + JB * YB.green(), jB * GB.blue() + JB * YB.blue(), GB.alpha() * DB + YB.alpha() * (1 - DB))
+      mix(ee, ie) {
+        if (!ee || !ee.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof ee);
+        const He = ee.rgb(),
+          ye = this.rgb(),
+          be = void 0 === ie ? .5 : ie,
+          Me = 2 * be - 1,
+          Ke = He.alpha() - ye.alpha(),
+          Ue = ((Me * Ke === -1 ? Me : (Me + Ke) / (1 + Me * Ke)) + 1) / 2,
+          Je = 1 - Ue;
+        return Fe.rgb(Ue * He.red() + Je * ye.red(), Ue * He.green() + Je * ye.green(), Ue * He.blue() + Je * ye.blue(), He.alpha() * be + ye.alpha() * (1 - be))
       }
     };
-    for (const lB of Object.keys(DB)) {
-      if (QB.includes(lB)) continue;
+    for (const qe of Object.keys(be)) {
+      if (Me.includes(qe)) continue;
       const {
-        channels: BB
-      } = DB[lB];
-      yB.prototype[lB] = function() {
-        if (this.model === lB) return new yB(this);
-        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-        return OB.length > 0 ? new yB(OB, lB) : new yB([...(YB = DB[this.model][lB].raw(this.color), Array.isArray(YB) ? YB : [YB]), this.valpha], lB);
-        var YB
-      }, yB[lB] = function() {
-        for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-        let DB = GB[0];
-        return "number" === typeof DB && (DB = zB(GB, BB)), new yB(DB, lB)
+        channels: ee
+      } = be[qe];
+      Fe.prototype[qe] = function() {
+        if (this.model === qe) return new Fe(this);
+        for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+        return ie.length > 0 ? new Fe(ie, qe) : new Fe([...(ye = be[this.model][qe].raw(this.color), Array.isArray(ye) ? ye : [ye]), this.valpha], qe);
+        var ye
+      }, Fe[qe] = function() {
+        for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
+        let be = He[0];
+        return "number" === typeof be && (be = ke(He, ee)), new Fe(be, qe)
       }
     }
 
-    function JB(BB) {
-      return function(OB) {
-        return function(BB, OB) {
-          return Number(BB.toFixed(OB))
-        }(OB, BB)
+    function Je(ee) {
+      return function(ie) {
+        return function(ee, ie) {
+          return Number(ee.toFixed(ie))
+        }(ie, ee)
       }
     }
 
-    function MB(BB, OB, GB) {
-      BB = Array.isArray(BB) ? BB : [BB];
-      for (const YB of BB)(jB[YB] || (jB[YB] = []))[OB] = GB;
-      return BB = BB[0],
-        function(YB) {
-          let DB;
-          return void 0 !== YB ? (GB && (YB = GB(YB)), DB = this[BB](), DB.color[OB] = YB, DB) : (DB = this[BB]().color[OB], GB && (DB = GB(DB)), DB)
+    function oe(ee, ie, He) {
+      ee = Array.isArray(ee) ? ee : [ee];
+      for (const ye of ee)(Ue[ye] || (Ue[ye] = []))[ie] = He;
+      return ee = ee[0],
+        function(ye) {
+          let be;
+          return void 0 !== ye ? (He && (ye = He(ye)), be = this[ee](), be.color[ie] = ye, be) : (be = this[ee]().color[ie], He && (be = He(be)), be)
         }
     }
 
-    function PB(BB) {
-      return function(OB) {
-        return Math.max(0, Math.min(BB, OB))
+    function Re(ee) {
+      return function(ie) {
+        return Math.max(0, Math.min(ee, ie))
       }
     }
 
-    function zB(BB, OB) {
-      for (let GB = 0; GB < OB; GB++) "number" !== typeof BB[GB] && (BB[GB] = 0);
-      return BB
+    function ke(ee, ie) {
+      for (let He = 0; He < ie; He++) "number" !== typeof ee[He] && (ee[He] = 0);
+      return ee
     }
-    BB.exports = yB
+    ee.exports = Fe
   },
-  37334: (BB, OB, GB) => {
-    const YB = GB(37340),
-      DB = {};
-    for (const oB of Object.keys(YB)) DB[YB[oB]] = oB;
-    const QB = {
+  37486: (ee, ie, He) => {
+    const ye = He(37495),
+      be = {};
+    for (const Ke of Object.keys(ye)) be[ye[Ke]] = Ke;
+    const Me = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    BB.exports = QB;
-    for (const oB of Object.keys(QB)) {
-      if (!("channels" in QB[oB])) throw new Error("missing channels property: " + oB);
-      if (!("labels" in QB[oB])) throw new Error("missing channel labels property: " + oB);
-      if (QB[oB].labels.length !== QB[oB].channels) throw new Error("channel and label counts mismatch: " + oB);
+    ee.exports = Me;
+    for (const Ke of Object.keys(Me)) {
+      if (!("channels" in Me[Ke])) throw new Error("missing channels property: " + Ke);
+      if (!("labels" in Me[Ke])) throw new Error("missing channel labels property: " + Ke);
+      if (Me[Ke].labels.length !== Me[Ke].channels) throw new Error("channel and label counts mismatch: " + Ke);
       const {
-        channels: BB,
-        labels: OB
-      } = QB[oB];
-      delete QB[oB].channels, delete QB[oB].labels, Object.defineProperty(QB[oB], "channels", {
-        value: BB
-      }), Object.defineProperty(QB[oB], "labels", {
-        value: OB
+        channels: ee,
+        labels: ie
+      } = Me[Ke];
+      delete Me[Ke].channels, delete Me[Ke].labels, Object.defineProperty(Me[Ke], "channels", {
+        value: ee
+      }), Object.defineProperty(Me[Ke], "labels", {
+        value: ie
       })
     }
-    QB.rgb.hsl = function(BB) {
-      const OB = BB[0] / 255,
-        GB = BB[1] / 255,
-        YB = BB[2] / 255,
-        DB = Math.min(OB, GB, YB),
-        QB = Math.max(OB, GB, YB),
-        oB = QB - DB;
-      let jB, yB;
-      QB === DB ? jB = 0 : OB === QB ? jB = (GB - YB) / oB : GB === QB ? jB = 2 + (YB - OB) / oB : YB === QB && (jB = 4 + (OB - GB) / oB), jB = Math.min(60 * jB, 360), jB < 0 && (jB += 360);
-      const JB = (DB + QB) / 2;
-      return yB = QB === DB ? 0 : JB <= .5 ? oB / (QB + DB) : oB / (2 - QB - DB), [jB, 100 * yB, 100 * JB]
-    }, QB.rgb.hsv = function(BB) {
-      let OB, GB, YB, DB, QB;
-      const oB = BB[0] / 255,
-        jB = BB[1] / 255,
-        yB = BB[2] / 255,
-        JB = Math.max(oB, jB, yB),
-        MB = JB - Math.min(oB, jB, yB),
-        PB = function(BB) {
-          return (JB - BB) / 6 / MB + .5
+    Me.rgb.hsl = function(ee) {
+      const ie = ee[0] / 255,
+        He = ee[1] / 255,
+        ye = ee[2] / 255,
+        be = Math.min(ie, He, ye),
+        Me = Math.max(ie, He, ye),
+        Ke = Me - be;
+      let Ue, Fe;
+      Me === be ? Ue = 0 : ie === Me ? Ue = (He - ye) / Ke : He === Me ? Ue = 2 + (ye - ie) / Ke : ye === Me && (Ue = 4 + (ie - He) / Ke), Ue = Math.min(60 * Ue, 360), Ue < 0 && (Ue += 360);
+      const Je = (be + Me) / 2;
+      return Fe = Me === be ? 0 : Je <= .5 ? Ke / (Me + be) : Ke / (2 - Me - be), [Ue, 100 * Fe, 100 * Je]
+    }, Me.rgb.hsv = function(ee) {
+      let ie, He, ye, be, Me;
+      const Ke = ee[0] / 255,
+        Ue = ee[1] / 255,
+        Fe = ee[2] / 255,
+        Je = Math.max(Ke, Ue, Fe),
+        oe = Je - Math.min(Ke, Ue, Fe),
+        Re = function(ee) {
+          return (Je - ee) / 6 / oe + .5
         };
-      return 0 === MB ? (DB = 0, QB = 0) : (QB = MB / JB, OB = PB(oB), GB = PB(jB), YB = PB(yB), oB === JB ? DB = YB - GB : jB === JB ? DB = 1 / 3 + OB - YB : yB === JB && (DB = 2 / 3 + GB - OB), DB < 0 ? DB += 1 : DB > 1 && (DB -= 1)), [360 * DB, 100 * QB, 100 * JB]
-    }, QB.rgb.hwb = function(BB) {
-      const OB = BB[0],
-        GB = BB[1];
-      let YB = BB[2];
-      const DB = QB.rgb.hsl(BB)[0],
-        oB = 1 / 255 * Math.min(OB, Math.min(GB, YB));
-      return YB = 1 - 1 / 255 * Math.max(OB, Math.max(GB, YB)), [DB, 100 * oB, 100 * YB]
-    }, QB.rgb.cmyk = function(BB) {
-      const OB = BB[0] / 255,
-        GB = BB[1] / 255,
-        YB = BB[2] / 255,
-        DB = Math.min(1 - OB, 1 - GB, 1 - YB);
-      return [100 * ((1 - OB - DB) / (1 - DB) || 0), 100 * ((1 - GB - DB) / (1 - DB) || 0), 100 * ((1 - YB - DB) / (1 - DB) || 0), 100 * DB]
-    }, QB.rgb.keyword = function(BB) {
-      const OB = DB[BB];
-      if (OB) return OB;
-      let GB, QB = 1 / 0;
-      for (const DB of Object.keys(YB)) {
-        const OB = YB[DB],
-          yB = (jB = OB, ((oB = BB)[0] - jB[0]) ** 2 + (oB[1] - jB[1]) ** 2 + (oB[2] - jB[2]) ** 2);
-        yB < QB && (QB = yB, GB = DB)
+      return 0 === oe ? (be = 0, Me = 0) : (Me = oe / Je, ie = Re(Ke), He = Re(Ue), ye = Re(Fe), Ke === Je ? be = ye - He : Ue === Je ? be = 1 / 3 + ie - ye : Fe === Je && (be = 2 / 3 + He - ie), be < 0 ? be += 1 : be > 1 && (be -= 1)), [360 * be, 100 * Me, 100 * Je]
+    }, Me.rgb.hwb = function(ee) {
+      const ie = ee[0],
+        He = ee[1];
+      let ye = ee[2];
+      const be = Me.rgb.hsl(ee)[0],
+        Ke = 1 / 255 * Math.min(ie, Math.min(He, ye));
+      return ye = 1 - 1 / 255 * Math.max(ie, Math.max(He, ye)), [be, 100 * Ke, 100 * ye]
+    }, Me.rgb.cmyk = function(ee) {
+      const ie = ee[0] / 255,
+        He = ee[1] / 255,
+        ye = ee[2] / 255,
+        be = Math.min(1 - ie, 1 - He, 1 - ye);
+      return [100 * ((1 - ie - be) / (1 - be) || 0), 100 * ((1 - He - be) / (1 - be) || 0), 100 * ((1 - ye - be) / (1 - be) || 0), 100 * be]
+    }, Me.rgb.keyword = function(ee) {
+      const ie = be[ee];
+      if (ie) return ie;
+      let He, Me = 1 / 0;
+      for (const be of Object.keys(ye)) {
+        const ie = ye[be],
+          Fe = (Ue = ie, ((Ke = ee)[0] - Ue[0]) ** 2 + (Ke[1] - Ue[1]) ** 2 + (Ke[2] - Ue[2]) ** 2);
+        Fe < Me && (Me = Fe, He = be)
       }
-      var oB, jB;
-      return GB
-    }, QB.keyword.rgb = function(BB) {
-      return YB[BB]
-    }, QB.rgb.xyz = function(BB) {
-      let OB = BB[0] / 255,
-        GB = BB[1] / 255,
-        YB = BB[2] / 255;
-      OB = OB > .04045 ? ((OB + .055) / 1.055) ** 2.4 : OB / 12.92, GB = GB > .04045 ? ((GB + .055) / 1.055) ** 2.4 : GB / 12.92, YB = YB > .04045 ? ((YB + .055) / 1.055) ** 2.4 : YB / 12.92;
-      return [100 * (.4124 * OB + .3576 * GB + .1805 * YB), 100 * (.2126 * OB + .7152 * GB + .0722 * YB), 100 * (.0193 * OB + .1192 * GB + .9505 * YB)]
-    }, QB.rgb.lab = function(BB) {
-      const OB = QB.rgb.xyz(BB);
-      let GB = OB[0],
-        YB = OB[1],
-        DB = OB[2];
-      GB /= 95.047, YB /= 100, DB /= 108.883, GB = GB > .008856 ? GB ** (1 / 3) : 7.787 * GB + 16 / 116, YB = YB > .008856 ? YB ** (1 / 3) : 7.787 * YB + 16 / 116, DB = DB > .008856 ? DB ** (1 / 3) : 7.787 * DB + 16 / 116;
-      return [116 * YB - 16, 500 * (GB - YB), 200 * (YB - DB)]
-    }, QB.hsl.rgb = function(BB) {
-      const OB = BB[0] / 360,
-        GB = BB[1] / 100,
-        YB = BB[2] / 100;
-      let DB, QB, oB;
-      if (0 === GB) return oB = 255 * YB, [oB, oB, oB];
-      DB = YB < .5 ? YB * (1 + GB) : YB + GB - YB * GB;
-      const jB = 2 * YB - DB,
-        yB = [0, 0, 0];
-      for (let JB = 0; JB < 3; JB++) QB = OB + 1 / 3 * -(JB - 1), QB < 0 && QB++, QB > 1 && QB--, oB = 6 * QB < 1 ? jB + 6 * (DB - jB) * QB : 2 * QB < 1 ? DB : 3 * QB < 2 ? jB + (DB - jB) * (2 / 3 - QB) * 6 : jB, yB[JB] = 255 * oB;
-      return yB
-    }, QB.hsl.hsv = function(BB) {
-      const OB = BB[0];
-      let GB = BB[1] / 100,
-        YB = BB[2] / 100,
-        DB = GB;
-      const QB = Math.max(YB, .01);
-      YB *= 2, GB *= YB <= 1 ? YB : 2 - YB, DB *= QB <= 1 ? QB : 2 - QB;
-      return [OB, 100 * (0 === YB ? 2 * DB / (QB + DB) : 2 * GB / (YB + GB)), 100 * ((YB + GB) / 2)]
-    }, QB.hsv.rgb = function(BB) {
-      const OB = BB[0] / 60,
-        GB = BB[1] / 100;
-      let YB = BB[2] / 100;
-      const DB = Math.floor(OB) % 6,
-        QB = OB - Math.floor(OB),
-        oB = 255 * YB * (1 - GB),
-        jB = 255 * YB * (1 - GB * QB),
-        yB = 255 * YB * (1 - GB * (1 - QB));
-      switch (YB *= 255, DB) {
+      var Ke, Ue;
+      return He
+    }, Me.keyword.rgb = function(ee) {
+      return ye[ee]
+    }, Me.rgb.xyz = function(ee) {
+      let ie = ee[0] / 255,
+        He = ee[1] / 255,
+        ye = ee[2] / 255;
+      ie = ie > .04045 ? ((ie + .055) / 1.055) ** 2.4 : ie / 12.92, He = He > .04045 ? ((He + .055) / 1.055) ** 2.4 : He / 12.92, ye = ye > .04045 ? ((ye + .055) / 1.055) ** 2.4 : ye / 12.92;
+      return [100 * (.4124 * ie + .3576 * He + .1805 * ye), 100 * (.2126 * ie + .7152 * He + .0722 * ye), 100 * (.0193 * ie + .1192 * He + .9505 * ye)]
+    }, Me.rgb.lab = function(ee) {
+      const ie = Me.rgb.xyz(ee);
+      let He = ie[0],
+        ye = ie[1],
+        be = ie[2];
+      He /= 95.047, ye /= 100, be /= 108.883, He = He > .008856 ? He ** (1 / 3) : 7.787 * He + 16 / 116, ye = ye > .008856 ? ye ** (1 / 3) : 7.787 * ye + 16 / 116, be = be > .008856 ? be ** (1 / 3) : 7.787 * be + 16 / 116;
+      return [116 * ye - 16, 500 * (He - ye), 200 * (ye - be)]
+    }, Me.hsl.rgb = function(ee) {
+      const ie = ee[0] / 360,
+        He = ee[1] / 100,
+        ye = ee[2] / 100;
+      let be, Me, Ke;
+      if (0 === He) return Ke = 255 * ye, [Ke, Ke, Ke];
+      be = ye < .5 ? ye * (1 + He) : ye + He - ye * He;
+      const Ue = 2 * ye - be,
+        Fe = [0, 0, 0];
+      for (let Je = 0; Je < 3; Je++) Me = ie + 1 / 3 * -(Je - 1), Me < 0 && Me++, Me > 1 && Me--, Ke = 6 * Me < 1 ? Ue + 6 * (be - Ue) * Me : 2 * Me < 1 ? be : 3 * Me < 2 ? Ue + (be - Ue) * (2 / 3 - Me) * 6 : Ue, Fe[Je] = 255 * Ke;
+      return Fe
+    }, Me.hsl.hsv = function(ee) {
+      const ie = ee[0];
+      let He = ee[1] / 100,
+        ye = ee[2] / 100,
+        be = He;
+      const Me = Math.max(ye, .01);
+      ye *= 2, He *= ye <= 1 ? ye : 2 - ye, be *= Me <= 1 ? Me : 2 - Me;
+      return [ie, 100 * (0 === ye ? 2 * be / (Me + be) : 2 * He / (ye + He)), 100 * ((ye + He) / 2)]
+    }, Me.hsv.rgb = function(ee) {
+      const ie = ee[0] / 60,
+        He = ee[1] / 100;
+      let ye = ee[2] / 100;
+      const be = Math.floor(ie) % 6,
+        Me = ie - Math.floor(ie),
+        Ke = 255 * ye * (1 - He),
+        Ue = 255 * ye * (1 - He * Me),
+        Fe = 255 * ye * (1 - He * (1 - Me));
+      switch (ye *= 255, be) {
         case 0:
-          return [YB, yB, oB];
+          return [ye, Fe, Ke];
         case 1:
-          return [jB, YB, oB];
+          return [Ue, ye, Ke];
         case 2:
-          return [oB, YB, yB];
+          return [Ke, ye, Fe];
         case 3:
-          return [oB, jB, YB];
+          return [Ke, Ue, ye];
         case 4:
-          return [yB, oB, YB];
+          return [Fe, Ke, ye];
         case 5:
-          return [YB, oB, jB]
+          return [ye, Ke, Ue]
       }
-    }, QB.hsv.hsl = function(BB) {
-      const OB = BB[0],
-        GB = BB[1] / 100,
-        YB = BB[2] / 100,
-        DB = Math.max(YB, .01);
-      let QB, oB;
-      oB = (2 - GB) * YB;
-      const jB = (2 - GB) * DB;
-      return QB = GB * DB, QB /= jB <= 1 ? jB : 2 - jB, QB = QB || 0, oB /= 2, [OB, 100 * QB, 100 * oB]
-    }, QB.hwb.rgb = function(BB) {
-      const OB = BB[0] / 360;
-      let GB = BB[1] / 100,
-        YB = BB[2] / 100;
-      const DB = GB + YB;
-      let QB;
-      DB > 1 && (GB /= DB, YB /= DB);
-      const oB = Math.floor(6 * OB),
-        jB = 1 - YB;
-      QB = 6 * OB - oB, 0 !== (1 & oB) && (QB = 1 - QB);
-      const yB = GB + QB * (jB - GB);
-      let JB, MB, PB;
-      switch (oB) {
+    }, Me.hsv.hsl = function(ee) {
+      const ie = ee[0],
+        He = ee[1] / 100,
+        ye = ee[2] / 100,
+        be = Math.max(ye, .01);
+      let Me, Ke;
+      Ke = (2 - He) * ye;
+      const Ue = (2 - He) * be;
+      return Me = He * be, Me /= Ue <= 1 ? Ue : 2 - Ue, Me = Me || 0, Ke /= 2, [ie, 100 * Me, 100 * Ke]
+    }, Me.hwb.rgb = function(ee) {
+      const ie = ee[0] / 360;
+      let He = ee[1] / 100,
+        ye = ee[2] / 100;
+      const be = He + ye;
+      let Me;
+      be > 1 && (He /= be, ye /= be);
+      const Ke = Math.floor(6 * ie),
+        Ue = 1 - ye;
+      Me = 6 * ie - Ke, 0 !== (1 & Ke) && (Me = 1 - Me);
+      const Fe = He + Me * (Ue - He);
+      let Je, oe, Re;
+      switch (Ke) {
         default:
         case 6:
         case 0:
-          JB = jB, MB = yB, PB = GB;
+          Je = Ue, oe = Fe, Re = He;
           break;
         case 1:
-          JB = yB, MB = jB, PB = GB;
+          Je = Fe, oe = Ue, Re = He;
           break;
         case 2:
-          JB = GB, MB = jB, PB = yB;
+          Je = He, oe = Ue, Re = Fe;
           break;
         case 3:
-          JB = GB, MB = yB, PB = jB;
+          Je = He, oe = Fe, Re = Ue;
           break;
         case 4:
-          JB = yB, MB = GB, PB = jB;
+          Je = Fe, oe = He, Re = Ue;
           break;
         case 5:
-          JB = jB, MB = GB, PB = yB
+          Je = Ue, oe = He, Re = Fe
       }
-      return [255 * JB, 255 * MB, 255 * PB]
-    }, QB.cmyk.rgb = function(BB) {
-      const OB = BB[0] / 100,
-        GB = BB[1] / 100,
-        YB = BB[2] / 100,
-        DB = BB[3] / 100;
-      return [255 * (1 - Math.min(1, OB * (1 - DB) + DB)), 255 * (1 - Math.min(1, GB * (1 - DB) + DB)), 255 * (1 - Math.min(1, YB * (1 - DB) + DB))]
-    }, QB.xyz.rgb = function(BB) {
-      const OB = BB[0] / 100,
-        GB = BB[1] / 100,
-        YB = BB[2] / 100;
-      let DB, QB, oB;
-      return DB = 3.2406 * OB + -1.5372 * GB + -.4986 * YB, QB = -.9689 * OB + 1.8758 * GB + .0415 * YB, oB = .0557 * OB + -.204 * GB + 1.057 * YB, DB = DB > .0031308 ? 1.055 * DB ** (1 / 2.4) - .055 : 12.92 * DB, QB = QB > .0031308 ? 1.055 * QB ** (1 / 2.4) - .055 : 12.92 * QB, oB = oB > .0031308 ? 1.055 * oB ** (1 / 2.4) - .055 : 12.92 * oB, DB = Math.min(Math.max(0, DB), 1), QB = Math.min(Math.max(0, QB), 1), oB = Math.min(Math.max(0, oB), 1), [255 * DB, 255 * QB, 255 * oB]
-    }, QB.xyz.lab = function(BB) {
-      let OB = BB[0],
-        GB = BB[1],
-        YB = BB[2];
-      OB /= 95.047, GB /= 100, YB /= 108.883, OB = OB > .008856 ? OB ** (1 / 3) : 7.787 * OB + 16 / 116, GB = GB > .008856 ? GB ** (1 / 3) : 7.787 * GB + 16 / 116, YB = YB > .008856 ? YB ** (1 / 3) : 7.787 * YB + 16 / 116;
-      return [116 * GB - 16, 500 * (OB - GB), 200 * (GB - YB)]
-    }, QB.lab.xyz = function(BB) {
-      let OB, GB, YB;
-      GB = (BB[0] + 16) / 116, OB = BB[1] / 500 + GB, YB = GB - BB[2] / 200;
-      const DB = GB ** 3,
-        QB = OB ** 3,
-        oB = YB ** 3;
-      return GB = DB > .008856 ? DB : (GB - 16 / 116) / 7.787, OB = QB > .008856 ? QB : (OB - 16 / 116) / 7.787, YB = oB > .008856 ? oB : (YB - 16 / 116) / 7.787, OB *= 95.047, GB *= 100, YB *= 108.883, [OB, GB, YB]
-    }, QB.lab.lch = function(BB) {
-      const OB = BB[0],
-        GB = BB[1],
-        YB = BB[2];
-      let DB;
-      DB = 360 * Math.atan2(YB, GB) / 2 / Math.PI, DB < 0 && (DB += 360);
-      return [OB, Math.sqrt(GB * GB + YB * YB), DB]
-    }, QB.lch.lab = function(BB) {
-      const OB = BB[0],
-        GB = BB[1],
-        YB = BB[2] / 360 * 2 * Math.PI;
-      return [OB, GB * Math.cos(YB), GB * Math.sin(YB)]
-    }, QB.rgb.ansi16 = function(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [GB, YB, DB] = BB;
-      let oB = null === OB ? QB.rgb.hsv(BB)[2] : OB;
-      if (oB = Math.round(oB / 50), 0 === oB) return 30;
-      let jB = 30 + (Math.round(DB / 255) << 2 | Math.round(YB / 255) << 1 | Math.round(GB / 255));
-      return 2 === oB && (jB += 60), jB
-    }, QB.hsv.ansi16 = function(BB) {
-      return QB.rgb.ansi16(QB.hsv.rgb(BB), BB[2])
-    }, QB.rgb.ansi256 = function(BB) {
-      const OB = BB[0],
-        GB = BB[1],
-        YB = BB[2];
-      if (OB === GB && GB === YB) return OB < 8 ? 16 : OB > 248 ? 231 : Math.round((OB - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(OB / 255 * 5) + 6 * Math.round(GB / 255 * 5) + Math.round(YB / 255 * 5)
-    }, QB.ansi16.rgb = function(BB) {
-      let OB = BB % 10;
-      if (0 === OB || 7 === OB) return BB > 50 && (OB += 3.5), OB = OB / 10.5 * 255, [OB, OB, OB];
-      const GB = .5 * (1 + ~~(BB > 50));
-      return [(1 & OB) * GB * 255, (OB >> 1 & 1) * GB * 255, (OB >> 2 & 1) * GB * 255]
-    }, QB.ansi256.rgb = function(BB) {
-      if (BB >= 232) {
-        const OB = 10 * (BB - 232) + 8;
-        return [OB, OB, OB]
+      return [255 * Je, 255 * oe, 255 * Re]
+    }, Me.cmyk.rgb = function(ee) {
+      const ie = ee[0] / 100,
+        He = ee[1] / 100,
+        ye = ee[2] / 100,
+        be = ee[3] / 100;
+      return [255 * (1 - Math.min(1, ie * (1 - be) + be)), 255 * (1 - Math.min(1, He * (1 - be) + be)), 255 * (1 - Math.min(1, ye * (1 - be) + be))]
+    }, Me.xyz.rgb = function(ee) {
+      const ie = ee[0] / 100,
+        He = ee[1] / 100,
+        ye = ee[2] / 100;
+      let be, Me, Ke;
+      return be = 3.2406 * ie + -1.5372 * He + -.4986 * ye, Me = -.9689 * ie + 1.8758 * He + .0415 * ye, Ke = .0557 * ie + -.204 * He + 1.057 * ye, be = be > .0031308 ? 1.055 * be ** (1 / 2.4) - .055 : 12.92 * be, Me = Me > .0031308 ? 1.055 * Me ** (1 / 2.4) - .055 : 12.92 * Me, Ke = Ke > .0031308 ? 1.055 * Ke ** (1 / 2.4) - .055 : 12.92 * Ke, be = Math.min(Math.max(0, be), 1), Me = Math.min(Math.max(0, Me), 1), Ke = Math.min(Math.max(0, Ke), 1), [255 * be, 255 * Me, 255 * Ke]
+    }, Me.xyz.lab = function(ee) {
+      let ie = ee[0],
+        He = ee[1],
+        ye = ee[2];
+      ie /= 95.047, He /= 100, ye /= 108.883, ie = ie > .008856 ? ie ** (1 / 3) : 7.787 * ie + 16 / 116, He = He > .008856 ? He ** (1 / 3) : 7.787 * He + 16 / 116, ye = ye > .008856 ? ye ** (1 / 3) : 7.787 * ye + 16 / 116;
+      return [116 * He - 16, 500 * (ie - He), 200 * (He - ye)]
+    }, Me.lab.xyz = function(ee) {
+      let ie, He, ye;
+      He = (ee[0] + 16) / 116, ie = ee[1] / 500 + He, ye = He - ee[2] / 200;
+      const be = He ** 3,
+        Me = ie ** 3,
+        Ke = ye ** 3;
+      return He = be > .008856 ? be : (He - 16 / 116) / 7.787, ie = Me > .008856 ? Me : (ie - 16 / 116) / 7.787, ye = Ke > .008856 ? Ke : (ye - 16 / 116) / 7.787, ie *= 95.047, He *= 100, ye *= 108.883, [ie, He, ye]
+    }, Me.lab.lch = function(ee) {
+      const ie = ee[0],
+        He = ee[1],
+        ye = ee[2];
+      let be;
+      be = 360 * Math.atan2(ye, He) / 2 / Math.PI, be < 0 && (be += 360);
+      return [ie, Math.sqrt(He * He + ye * ye), be]
+    }, Me.lch.lab = function(ee) {
+      const ie = ee[0],
+        He = ee[1],
+        ye = ee[2] / 360 * 2 * Math.PI;
+      return [ie, He * Math.cos(ye), He * Math.sin(ye)]
+    }, Me.rgb.ansi16 = function(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [He, ye, be] = ee;
+      let Ke = null === ie ? Me.rgb.hsv(ee)[2] : ie;
+      if (Ke = Math.round(Ke / 50), 0 === Ke) return 30;
+      let Ue = 30 + (Math.round(be / 255) << 2 | Math.round(ye / 255) << 1 | Math.round(He / 255));
+      return 2 === Ke && (Ue += 60), Ue
+    }, Me.hsv.ansi16 = function(ee) {
+      return Me.rgb.ansi16(Me.hsv.rgb(ee), ee[2])
+    }, Me.rgb.ansi256 = function(ee) {
+      const ie = ee[0],
+        He = ee[1],
+        ye = ee[2];
+      if (ie === He && He === ye) return ie < 8 ? 16 : ie > 248 ? 231 : Math.round((ie - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(ie / 255 * 5) + 6 * Math.round(He / 255 * 5) + Math.round(ye / 255 * 5)
+    }, Me.ansi16.rgb = function(ee) {
+      let ie = ee % 10;
+      if (0 === ie || 7 === ie) return ee > 50 && (ie += 3.5), ie = ie / 10.5 * 255, [ie, ie, ie];
+      const He = .5 * (1 + ~~(ee > 50));
+      return [(1 & ie) * He * 255, (ie >> 1 & 1) * He * 255, (ie >> 2 & 1) * He * 255]
+    }, Me.ansi256.rgb = function(ee) {
+      if (ee >= 232) {
+        const ie = 10 * (ee - 232) + 8;
+        return [ie, ie, ie]
       }
-      let OB;
-      BB -= 16;
-      return [Math.floor(BB / 36) / 5 * 255, Math.floor((OB = BB % 36) / 6) / 5 * 255, OB % 6 / 5 * 255]
-    }, QB.rgb.hex = function(BB) {
-      const OB = (((255 & Math.round(BB[0])) << 16) + ((255 & Math.round(BB[1])) << 8) + (255 & Math.round(BB[2]))).toString(16).toUpperCase();
-      return "000000".substring(OB.length) + OB
-    }, QB.hex.rgb = function(BB) {
-      const OB = BB.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!OB) return [0, 0, 0];
-      let GB = OB[0];
-      3 === OB[0].length && (GB = GB.split("").map((BB => BB + BB)).join(""));
-      const YB = parseInt(GB, 16);
-      return [YB >> 16 & 255, YB >> 8 & 255, 255 & YB]
-    }, QB.rgb.hcg = function(BB) {
-      const OB = BB[0] / 255,
-        GB = BB[1] / 255,
-        YB = BB[2] / 255,
-        DB = Math.max(Math.max(OB, GB), YB),
-        QB = Math.min(Math.min(OB, GB), YB),
-        oB = DB - QB;
-      let jB, yB;
-      return jB = oB < 1 ? QB / (1 - oB) : 0, yB = oB <= 0 ? 0 : DB === OB ? (GB - YB) / oB % 6 : DB === GB ? 2 + (YB - OB) / oB : 4 + (OB - GB) / oB, yB /= 6, yB %= 1, [360 * yB, 100 * oB, 100 * jB]
-    }, QB.hsl.hcg = function(BB) {
-      const OB = BB[1] / 100,
-        GB = BB[2] / 100,
-        YB = GB < .5 ? 2 * OB * GB : 2 * OB * (1 - GB);
-      let DB = 0;
-      return YB < 1 && (DB = (GB - .5 * YB) / (1 - YB)), [BB[0], 100 * YB, 100 * DB]
-    }, QB.hsv.hcg = function(BB) {
-      const OB = BB[1] / 100,
-        GB = BB[2] / 100,
-        YB = OB * GB;
-      let DB = 0;
-      return YB < 1 && (DB = (GB - YB) / (1 - YB)), [BB[0], 100 * YB, 100 * DB]
-    }, QB.hcg.rgb = function(BB) {
-      const OB = BB[0] / 360,
-        GB = BB[1] / 100,
-        YB = BB[2] / 100;
-      if (0 === GB) return [255 * YB, 255 * YB, 255 * YB];
-      const DB = [0, 0, 0],
-        QB = OB % 1 * 6,
-        oB = QB % 1,
-        jB = 1 - oB;
-      let yB = 0;
-      switch (Math.floor(QB)) {
+      let ie;
+      ee -= 16;
+      return [Math.floor(ee / 36) / 5 * 255, Math.floor((ie = ee % 36) / 6) / 5 * 255, ie % 6 / 5 * 255]
+    }, Me.rgb.hex = function(ee) {
+      const ie = (((255 & Math.round(ee[0])) << 16) + ((255 & Math.round(ee[1])) << 8) + (255 & Math.round(ee[2]))).toString(16).toUpperCase();
+      return "000000".substring(ie.length) + ie
+    }, Me.hex.rgb = function(ee) {
+      const ie = ee.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!ie) return [0, 0, 0];
+      let He = ie[0];
+      3 === ie[0].length && (He = He.split("").map((ee => ee + ee)).join(""));
+      const ye = parseInt(He, 16);
+      return [ye >> 16 & 255, ye >> 8 & 255, 255 & ye]
+    }, Me.rgb.hcg = function(ee) {
+      const ie = ee[0] / 255,
+        He = ee[1] / 255,
+        ye = ee[2] / 255,
+        be = Math.max(Math.max(ie, He), ye),
+        Me = Math.min(Math.min(ie, He), ye),
+        Ke = be - Me;
+      let Ue, Fe;
+      return Ue = Ke < 1 ? Me / (1 - Ke) : 0, Fe = Ke <= 0 ? 0 : be === ie ? (He - ye) / Ke % 6 : be === He ? 2 + (ye - ie) / Ke : 4 + (ie - He) / Ke, Fe /= 6, Fe %= 1, [360 * Fe, 100 * Ke, 100 * Ue]
+    }, Me.hsl.hcg = function(ee) {
+      const ie = ee[1] / 100,
+        He = ee[2] / 100,
+        ye = He < .5 ? 2 * ie * He : 2 * ie * (1 - He);
+      let be = 0;
+      return ye < 1 && (be = (He - .5 * ye) / (1 - ye)), [ee[0], 100 * ye, 100 * be]
+    }, Me.hsv.hcg = function(ee) {
+      const ie = ee[1] / 100,
+        He = ee[2] / 100,
+        ye = ie * He;
+      let be = 0;
+      return ye < 1 && (be = (He - ye) / (1 - ye)), [ee[0], 100 * ye, 100 * be]
+    }, Me.hcg.rgb = function(ee) {
+      const ie = ee[0] / 360,
+        He = ee[1] / 100,
+        ye = ee[2] / 100;
+      if (0 === He) return [255 * ye, 255 * ye, 255 * ye];
+      const be = [0, 0, 0],
+        Me = ie % 1 * 6,
+        Ke = Me % 1,
+        Ue = 1 - Ke;
+      let Fe = 0;
+      switch (Math.floor(Me)) {
         case 0:
-          DB[0] = 1, DB[1] = oB, DB[2] = 0;
+          be[0] = 1, be[1] = Ke, be[2] = 0;
           break;
         case 1:
-          DB[0] = jB, DB[1] = 1, DB[2] = 0;
+          be[0] = Ue, be[1] = 1, be[2] = 0;
           break;
         case 2:
-          DB[0] = 0, DB[1] = 1, DB[2] = oB;
+          be[0] = 0, be[1] = 1, be[2] = Ke;
           break;
         case 3:
-          DB[0] = 0, DB[1] = jB, DB[2] = 1;
+          be[0] = 0, be[1] = Ue, be[2] = 1;
           break;
         case 4:
-          DB[0] = oB, DB[1] = 0, DB[2] = 1;
+          be[0] = Ke, be[1] = 0, be[2] = 1;
           break;
         default:
-          DB[0] = 1, DB[1] = 0, DB[2] = jB
+          be[0] = 1, be[1] = 0, be[2] = Ue
       }
-      return yB = (1 - GB) * YB, [255 * (GB * DB[0] + yB), 255 * (GB * DB[1] + yB), 255 * (GB * DB[2] + yB)]
-    }, QB.hcg.hsv = function(BB) {
-      const OB = BB[1] / 100,
-        GB = OB + BB[2] / 100 * (1 - OB);
-      let YB = 0;
-      return GB > 0 && (YB = OB / GB), [BB[0], 100 * YB, 100 * GB]
-    }, QB.hcg.hsl = function(BB) {
-      const OB = BB[1] / 100,
-        GB = BB[2] / 100 * (1 - OB) + .5 * OB;
-      let YB = 0;
-      return GB > 0 && GB < .5 ? YB = OB / (2 * GB) : GB >= .5 && GB < 1 && (YB = OB / (2 * (1 - GB))), [BB[0], 100 * YB, 100 * GB]
-    }, QB.hcg.hwb = function(BB) {
-      const OB = BB[1] / 100,
-        GB = OB + BB[2] / 100 * (1 - OB);
-      return [BB[0], 100 * (GB - OB), 100 * (1 - GB)]
-    }, QB.hwb.hcg = function(BB) {
-      const OB = BB[1] / 100,
-        GB = 1 - BB[2] / 100,
-        YB = GB - OB;
-      let DB = 0;
-      return YB < 1 && (DB = (GB - YB) / (1 - YB)), [BB[0], 100 * YB, 100 * DB]
-    }, QB.apple.rgb = function(BB) {
-      return [BB[0] / 65535 * 255, BB[1] / 65535 * 255, BB[2] / 65535 * 255]
-    }, QB.rgb.apple = function(BB) {
-      return [BB[0] / 255 * 65535, BB[1] / 255 * 65535, BB[2] / 255 * 65535]
-    }, QB.gray.rgb = function(BB) {
-      return [BB[0] / 100 * 255, BB[0] / 100 * 255, BB[0] / 100 * 255]
-    }, QB.gray.hsl = function(BB) {
-      return [0, 0, BB[0]]
-    }, QB.gray.hsv = QB.gray.hsl, QB.gray.hwb = function(BB) {
-      return [0, 100, BB[0]]
-    }, QB.gray.cmyk = function(BB) {
-      return [0, 0, 0, BB[0]]
-    }, QB.gray.lab = function(BB) {
-      return [BB[0], 0, 0]
-    }, QB.gray.hex = function(BB) {
-      const OB = 255 & Math.round(BB[0] / 100 * 255),
-        GB = ((OB << 16) + (OB << 8) + OB).toString(16).toUpperCase();
-      return "000000".substring(GB.length) + GB
-    }, QB.rgb.gray = function(BB) {
-      return [(BB[0] + BB[1] + BB[2]) / 3 / 255 * 100]
+      return Fe = (1 - He) * ye, [255 * (He * be[0] + Fe), 255 * (He * be[1] + Fe), 255 * (He * be[2] + Fe)]
+    }, Me.hcg.hsv = function(ee) {
+      const ie = ee[1] / 100,
+        He = ie + ee[2] / 100 * (1 - ie);
+      let ye = 0;
+      return He > 0 && (ye = ie / He), [ee[0], 100 * ye, 100 * He]
+    }, Me.hcg.hsl = function(ee) {
+      const ie = ee[1] / 100,
+        He = ee[2] / 100 * (1 - ie) + .5 * ie;
+      let ye = 0;
+      return He > 0 && He < .5 ? ye = ie / (2 * He) : He >= .5 && He < 1 && (ye = ie / (2 * (1 - He))), [ee[0], 100 * ye, 100 * He]
+    }, Me.hcg.hwb = function(ee) {
+      const ie = ee[1] / 100,
+        He = ie + ee[2] / 100 * (1 - ie);
+      return [ee[0], 100 * (He - ie), 100 * (1 - He)]
+    }, Me.hwb.hcg = function(ee) {
+      const ie = ee[1] / 100,
+        He = 1 - ee[2] / 100,
+        ye = He - ie;
+      let be = 0;
+      return ye < 1 && (be = (He - ye) / (1 - ye)), [ee[0], 100 * ye, 100 * be]
+    }, Me.apple.rgb = function(ee) {
+      return [ee[0] / 65535 * 255, ee[1] / 65535 * 255, ee[2] / 65535 * 255]
+    }, Me.rgb.apple = function(ee) {
+      return [ee[0] / 255 * 65535, ee[1] / 255 * 65535, ee[2] / 255 * 65535]
+    }, Me.gray.rgb = function(ee) {
+      return [ee[0] / 100 * 255, ee[0] / 100 * 255, ee[0] / 100 * 255]
+    }, Me.gray.hsl = function(ee) {
+      return [0, 0, ee[0]]
+    }, Me.gray.hsv = Me.gray.hsl, Me.gray.hwb = function(ee) {
+      return [0, 100, ee[0]]
+    }, Me.gray.cmyk = function(ee) {
+      return [0, 0, 0, ee[0]]
+    }, Me.gray.lab = function(ee) {
+      return [ee[0], 0, 0]
+    }, Me.gray.hex = function(ee) {
+      const ie = 255 & Math.round(ee[0] / 100 * 255),
+        He = ((ie << 16) + (ie << 8) + ie).toString(16).toUpperCase();
+      return "000000".substring(He.length) + He
+    }, Me.rgb.gray = function(ee) {
+      return [(ee[0] + ee[1] + ee[2]) / 3 / 255 * 100]
     }
   },
-  37328: (BB, OB, GB) => {
-    const YB = GB(37334),
-      DB = GB(37345),
-      QB = {};
-    Object.keys(YB).forEach((BB => {
-      QB[BB] = {}, Object.defineProperty(QB[BB], "channels", {
-        value: YB[BB].channels
-      }), Object.defineProperty(QB[BB], "labels", {
-        value: YB[BB].labels
+  37482: (ee, ie, He) => {
+    const ye = He(37486),
+      be = He(37497),
+      Me = {};
+    Object.keys(ye).forEach((ee => {
+      Me[ee] = {}, Object.defineProperty(Me[ee], "channels", {
+        value: ye[ee].channels
+      }), Object.defineProperty(Me[ee], "labels", {
+        value: ye[ee].labels
       });
-      const OB = DB(BB);
-      Object.keys(OB).forEach((GB => {
-        const YB = OB[GB];
-        QB[BB][GB] = function(BB) {
-          const OB = function() {
-            for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-            const DB = GB[0];
-            if (void 0 === DB || null === DB) return DB;
-            DB.length > 1 && (GB = DB);
-            const QB = BB(GB);
-            if ("object" === typeof QB)
-              for (let BB = QB.length, oB = 0; oB < BB; oB++) QB[oB] = Math.round(QB[oB]);
-            return QB
+      const ie = be(ee);
+      Object.keys(ie).forEach((He => {
+        const ye = ie[He];
+        Me[ee][He] = function(ee) {
+          const ie = function() {
+            for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
+            const be = He[0];
+            if (void 0 === be || null === be) return be;
+            be.length > 1 && (He = be);
+            const Me = ee(He);
+            if ("object" === typeof Me)
+              for (let ee = Me.length, Ke = 0; Ke < ee; Ke++) Me[Ke] = Math.round(Me[Ke]);
+            return Me
           };
-          return "conversion" in BB && (OB.conversion = BB.conversion), OB
-        }(YB), QB[BB][GB].raw = function(BB) {
-          const OB = function() {
-            for (var OB = arguments.length, GB = new Array(OB), YB = 0; YB < OB; YB++) GB[YB] = arguments[YB];
-            const DB = GB[0];
-            return void 0 === DB || null === DB ? DB : (DB.length > 1 && (GB = DB), BB(GB))
+          return "conversion" in ee && (ie.conversion = ee.conversion), ie
+        }(ye), Me[ee][He].raw = function(ee) {
+          const ie = function() {
+            for (var ie = arguments.length, He = new Array(ie), ye = 0; ye < ie; ye++) He[ye] = arguments[ye];
+            const be = He[0];
+            return void 0 === be || null === be ? be : (be.length > 1 && (He = be), ee(He))
           };
-          return "conversion" in BB && (OB.conversion = BB.conversion), OB
-        }(YB)
+          return "conversion" in ee && (ie.conversion = ee.conversion), ie
+        }(ye)
       }))
-    })), BB.exports = QB
+    })), ee.exports = Me
   },
-  37345: (BB, OB, GB) => {
-    const YB = GB(37334);
+  37497: (ee, ie, He) => {
+    const ye = He(37486);
 
-    function DB(BB) {
-      const OB = function() {
-          const BB = {},
-            OB = Object.keys(YB);
-          for (let GB = OB.length, YB = 0; YB < GB; YB++) BB[OB[YB]] = {
+    function be(ee) {
+      const ie = function() {
+          const ee = {},
+            ie = Object.keys(ye);
+          for (let He = ie.length, ye = 0; ye < He; ye++) ee[ie[ye]] = {
             distance: -1,
             parent: null
           };
-          return BB
+          return ee
         }(),
-        GB = [BB];
-      for (OB[BB].distance = 0; GB.length;) {
-        const BB = GB.pop(),
-          DB = Object.keys(YB[BB]);
-        for (let YB = DB.length, QB = 0; QB < YB; QB++) {
-          const YB = DB[QB],
-            oB = OB[YB]; - 1 === oB.distance && (oB.distance = OB[BB].distance + 1, oB.parent = BB, GB.unshift(YB))
+        He = [ee];
+      for (ie[ee].distance = 0; He.length;) {
+        const ee = He.pop(),
+          be = Object.keys(ye[ee]);
+        for (let ye = be.length, Me = 0; Me < ye; Me++) {
+          const ye = be[Me],
+            Ke = ie[ye]; - 1 === Ke.distance && (Ke.distance = ie[ee].distance + 1, Ke.parent = ee, He.unshift(ye))
         }
       }
-      return OB
+      return ie
     }
 
-    function QB(BB, OB) {
-      return function(GB) {
-        return OB(BB(GB))
+    function Me(ee, ie) {
+      return function(He) {
+        return ie(ee(He))
       }
     }
 
-    function oB(BB, OB) {
-      const GB = [OB[BB].parent, BB];
-      let DB = YB[OB[BB].parent][BB],
-        oB = OB[BB].parent;
-      for (; OB[oB].parent;) GB.unshift(OB[oB].parent), DB = QB(YB[OB[oB].parent][oB], DB), oB = OB[oB].parent;
-      return DB.conversion = GB, DB
+    function Ke(ee, ie) {
+      const He = [ie[ee].parent, ee];
+      let be = ye[ie[ee].parent][ee],
+        Ke = ie[ee].parent;
+      for (; ie[Ke].parent;) He.unshift(ie[Ke].parent), be = Me(ye[ie[Ke].parent][Ke], be), Ke = ie[Ke].parent;
+      return be.conversion = He, be
     }
-    BB.exports = function(BB) {
-      const OB = DB(BB),
-        GB = {},
-        YB = Object.keys(OB);
-      for (let DB = YB.length, QB = 0; QB < DB; QB++) {
-        const BB = YB[QB];
-        null !== OB[BB].parent && (GB[BB] = oB(BB, OB))
+    ee.exports = function(ee) {
+      const ie = be(ee),
+        He = {},
+        ye = Object.keys(ie);
+      for (let be = ye.length, Me = 0; Me < be; Me++) {
+        const ee = ye[Me];
+        null !== ie[ee].parent && (He[ee] = Ke(ee, ie))
       }
-      return GB
+      return He
     }
   },
-  37340: BB => {
-    BB.exports = {
+  37495: ee => {
+    ee.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  37318: (BB, OB, GB) => {
-    var YB = GB(37321),
-      DB = Array.prototype.concat,
-      QB = Array.prototype.slice,
-      oB = BB.exports = function(BB) {
-        for (var OB = [], GB = 0, oB = BB.length; GB < oB; GB++) {
-          var jB = BB[GB];
-          YB(jB) ? OB = DB.call(OB, QB.call(jB)) : OB.push(jB)
+  37471: (ee, ie, He) => {
+    var ye = He(37479),
+      be = Array.prototype.concat,
+      Me = Array.prototype.slice,
+      Ke = ee.exports = function(ee) {
+        for (var ie = [], He = 0, Ke = ee.length; He < Ke; He++) {
+          var Ue = ee[He];
+          ye(Ue) ? ie = be.call(ie, Me.call(Ue)) : ie.push(Ue)
         }
-        return OB
+        return ie
       };
-    oB.wrap = function(BB) {
+    Ke.wrap = function(ee) {
       return function() {
-        return BB(oB(arguments))
+        return ee(Ke(arguments))
       }
     }
   },
-  37321: BB => {
-    BB.exports = function(BB) {
-      return !(!BB || "string" === typeof BB) && (BB instanceof Array || Array.isArray(BB) || BB.length >= 0 && (BB.splice instanceof Function || Object.getOwnPropertyDescriptor(BB, BB.length - 1) && "String" !== BB.constructor.name))
+  37479: ee => {
+    ee.exports = function(ee) {
+      return !(!ee || "string" === typeof ee) && (ee instanceof Array || Array.isArray(ee) || ee.length >= 0 && (ee.splice instanceof Function || Object.getOwnPropertyDescriptor(ee, ee.length - 1) && "String" !== ee.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

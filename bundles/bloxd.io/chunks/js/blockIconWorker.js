@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var BB = __webpack_require__.u,
-        OB = __webpack_require__.e,
-        GB = {},
-        YB = {};
-      __webpack_require__.u = function(OB) {
-        return BB(OB) + (GB.hasOwnProperty(OB) ? "?" + GB[OB] : "")
-      }, __webpack_require__.e = function(DB) {
-        return OB(DB).catch((function(OB) {
-          var QB = YB.hasOwnProperty(DB) ? YB[DB] : 4;
-          if (QB < 1) {
-            var oB = BB(DB);
-            if (OB.message = "Loading chunk " + DB + " failed after 4 retries.\n(" + oB + ")", OB.request = oB, GB[DB] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete YB[DB]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === OB.code) {
-              var jB = __webpack_require__.miniCssF(DB);
-              OB.message = OB.message.replace("Loading chunk", "Loading CSS chunk").replace(oB, jB), OB.request = jB
+      var ee = __webpack_require__.u,
+        ie = __webpack_require__.e,
+        He = {},
+        ye = {};
+      __webpack_require__.u = function(ie) {
+        return ee(ie) + (He.hasOwnProperty(ie) ? "?" + He[ie] : "")
+      }, __webpack_require__.e = function(be) {
+        return ie(be).catch((function(ie) {
+          var Me = ye.hasOwnProperty(be) ? ye[be] : 4;
+          if (Me < 1) {
+            var Ke = ee(be);
+            if (ie.message = "Loading chunk " + be + " failed after 4 retries.\n(" + Ke + ")", ie.request = Ke, He[be] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete ye[be]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === ie.code) {
+              var Ue = __webpack_require__.miniCssF(be);
+              ie.message = ie.message.replace("Loading chunk", "Loading CSS chunk").replace(Ke, Ue), ie.request = Ue
             }
-            throw OB
+            throw ie
           }
-          return new Promise((function(BB) {
-            var OB = 4 - QB + 1;
+          return new Promise((function(ee) {
+            var ie = 4 - Me + 1;
             setTimeout((function() {
-              var OB = "cache-bust=" + Date.now();
-              GB[DB] = OB, YB[DB] = QB - 1, BB(__webpack_require__.e(DB))
-            }), function(BB) {
-              return 500 * Math.pow(2, BB)
-            }(OB))
+              var ie = "cache-bust=" + Date.now();
+              He[be] = ie, ye[be] = Me - 1, ee(__webpack_require__.e(be))
+            }), function(ee) {
+              return 500 * Math.pow(2, ee)
+            }(ie))
           }))
         }))
       }
     }
   })();
-  const BB = Math.SQRT1_2,
-    OB = Math.SQRT1_2 / 2,
-    GB = Math.sqrt(3) / 2,
-    YB = 2 * BB,
-    DB = 2 * OB + GB;
+  const ee = Math.SQRT1_2,
+    ie = Math.SQRT1_2 / 2,
+    He = Math.sqrt(3) / 2,
+    ye = 2 * ee,
+    be = 2 * ie + He;
 
-  function QB(OB, GB) {
-    const YB = GB > 0 ? GB + 1 : 0,
-      QB = .6 * OB - GB / BB;
-    return Math.max(0, Math.min(QB, (OB - 2 * YB) / DB))
+  function Me(ie, He) {
+    const ye = He > 0 ? He + 1 : 0,
+      Me = .6 * ie - He / ee;
+    return Math.max(0, Math.min(Me, (ie - 2 * ye) / be))
   }
-  const oB = [15, 15, 15],
-    jB = {
+  const Ke = [15, 15, 15],
+    Ue = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function yB(BB, OB, GB, oB) {
+  function Fe(ee, ie, He, Ke) {
     const {
-      vertices: jB,
-      uvs: yB,
-      indices: JB,
-      shades: MB
-    } = BB, zB = function(BB, OB) {
-      const GB = QB(BB, OB),
-        oB = YB * GB,
-        jB = DB * GB;
+      vertices: Ue,
+      uvs: Fe,
+      indices: Je,
+      shades: oe
+    } = ee, ke = function(ee, ie) {
+      const He = Me(ee, ie),
+        Ke = ye * He,
+        Ue = be * He;
       return {
-        left: (BB - oB) / 2,
-        top: (BB - jB) / 2,
-        width: oB,
-        height: jB
+        left: (ee - Ke) / 2,
+        top: (ee - Ue) / 2,
+        width: Ke,
+        height: Ue
       }
-    }(GB, oB), lB = new Float32Array(jB.length);
-    for (let YB = 0; YB < jB.length; YB += 3) lB[YB] = zB.left + jB[YB] * zB.width, lB[YB + 1] = zB.top + jB[YB + 1] * zB.height, lB[YB + 2] = jB[YB + 2];
-    const pB = new Float32Array(GB * GB).fill(-1 / 0),
-      qB = new Uint8ClampedArray(GB * GB * 4),
-      ZB = 255 * BB.alphaCutoff;
-    for (let YB = 0; YB < JB.length; YB += 3) {
-      const [BB, DB, QB] = [JB[YB], JB[YB + 1], JB[YB + 2]], [oB, jB, PB] = [3 * BB, 3 * DB, 3 * QB], [zB, NB, RB, WB, AB, VB] = [lB[oB], lB[oB + 1], lB[jB], lB[jB + 1], lB[PB], lB[PB + 1]], SB = (RB - zB) * (VB - NB) - (AB - zB) * (WB - NB);
-      if (Math.abs(SB) < 1e-9) continue;
-      const nB = MB[YB / 3],
-        [UB, fB, kB, dB, KB, uB] = [yB[2 * BB], yB[2 * BB + 1], yB[2 * DB], yB[2 * DB + 1], yB[2 * QB], yB[2 * QB + 1]],
-        mB = Math.max(0, Math.floor(Math.min(zB, RB, AB))),
-        IB = Math.min(GB - 1, Math.ceil(Math.max(zB, RB, AB))),
-        FB = Math.max(0, Math.floor(Math.min(NB, WB, VB))),
-        iB = Math.min(GB - 1, Math.ceil(Math.max(NB, WB, VB)));
-      for (let YB = FB; YB <= iB; YB++)
-        for (let BB = mB; BB <= IB; BB++) {
-          const [DB, QB] = [BB + .5, YB + .5], yB = ((DB - zB) * (VB - NB) - (AB - zB) * (QB - NB)) / SB, JB = ((RB - zB) * (QB - NB) - (DB - zB) * (WB - NB)) / SB, MB = 1 - yB - JB;
-          if (MB < 0 || yB < 0 || JB < 0) continue;
-          const mB = MB * lB[oB + 2] + yB * lB[jB + 2] + JB * lB[PB + 2],
-            IB = YB * GB + BB;
-          if (mB <= pB[IB]) continue;
-          const FB = Math.max(0, Math.min(OB.width - 1, Math.floor((MB * UB + yB * kB + JB * KB) * OB.width))),
-            iB = 4 * (Math.max(0, Math.min(OB.height - 1, Math.floor((MB * fB + yB * dB + JB * uB) * OB.height))) * OB.width + FB);
-          OB.pixels[iB + 3] < ZB || (pB[IB] = mB, qB[4 * IB] = OB.pixels[iB] * nB, qB[4 * IB + 1] = OB.pixels[iB + 1] * nB, qB[4 * IB + 2] = OB.pixels[iB + 2] * nB, qB[4 * IB + 3] = 255)
+    }(He, Ke), qe = new Float32Array(Ue.length);
+    for (let ye = 0; ye < Ue.length; ye += 3) qe[ye] = ke.left + Ue[ye] * ke.width, qe[ye + 1] = ke.top + Ue[ye + 1] * ke.height, qe[ye + 2] = Ue[ye + 2];
+    const fe = new Float32Array(He * He).fill(-1 / 0),
+      Te = new Uint8ClampedArray(He * He * 4),
+      pe = 255 * ee.alphaCutoff;
+    for (let ye = 0; ye < Je.length; ye += 3) {
+      const [ee, be, Me] = [Je[ye], Je[ye + 1], Je[ye + 2]], [Ke, Ue, Re] = [3 * ee, 3 * be, 3 * Me], [ke, Xe, ze, Be, Ee, ge] = [qe[Ke], qe[Ke + 1], qe[Ue], qe[Ue + 1], qe[Re], qe[Re + 1]], Oe = (ze - ke) * (ge - Xe) - (Ee - ke) * (Be - Xe);
+      if (Math.abs(Oe) < 1e-9) continue;
+      const de = oe[ye / 3],
+        [We, te, Ze, we, De, Pe] = [Fe[2 * ee], Fe[2 * ee + 1], Fe[2 * be], Fe[2 * be + 1], Fe[2 * Me], Fe[2 * Me + 1]],
+        Ae = Math.max(0, Math.floor(Math.min(ke, ze, Ee))),
+        Ye = Math.min(He - 1, Math.ceil(Math.max(ke, ze, Ee))),
+        Ve = Math.max(0, Math.floor(Math.min(Xe, Be, ge))),
+        ae = Math.min(He - 1, Math.ceil(Math.max(Xe, Be, ge)));
+      for (let ye = Ve; ye <= ae; ye++)
+        for (let ee = Ae; ee <= Ye; ee++) {
+          const [be, Me] = [ee + .5, ye + .5], Fe = ((be - ke) * (ge - Xe) - (Ee - ke) * (Me - Xe)) / Oe, Je = ((ze - ke) * (Me - Xe) - (be - ke) * (Be - Xe)) / Oe, oe = 1 - Fe - Je;
+          if (oe < 0 || Fe < 0 || Je < 0) continue;
+          const Ae = oe * qe[Ke + 2] + Fe * qe[Ue + 2] + Je * qe[Re + 2],
+            Ye = ye * He + ee;
+          if (Ae <= fe[Ye]) continue;
+          const Ve = Math.max(0, Math.min(ie.width - 1, Math.floor((oe * We + Fe * Ze + Je * De) * ie.width))),
+            ae = 4 * (Math.max(0, Math.min(ie.height - 1, Math.floor((oe * te + Fe * we + Je * Pe) * ie.height))) * ie.width + Ve);
+          ie.pixels[ae + 3] < pe || (fe[Ye] = Ae, Te[4 * Ye] = ie.pixels[ae] * de, Te[4 * Ye + 1] = ie.pixels[ae + 1] * de, Te[4 * Ye + 2] = ie.pixels[ae + 2] * de, Te[4 * Ye + 3] = 255)
         }
     }
-    return PB(qB, GB, oB), qB
+    return Re(Te, He, Ke), Te
   }
-  let JB = NaN,
-    MB = new Int32Array(0);
+  let Je = NaN,
+    oe = new Int32Array(0);
 
-  function PB(BB, OB, GB) {
-    let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : OB => 0 !== BB[4 * OB + 3];
-    const DB = new Uint8Array(OB * OB);
-    for (let oB = 0; oB < OB * OB; oB++) DB[oB] = YB(oB) ? 1 : 0;
-    const QB = (BB, GB) => BB >= 0 && GB >= 0 && BB < OB && GB < OB && 0 === DB[GB * OB + BB],
-      jB = new Float32Array(OB * OB).fill(1 / 0),
-      yB = function(BB) {
-        if (BB !== JB) {
-          const OB = Math.ceil(BB + 1),
-            GB = [];
-          for (let YB = -OB; YB <= OB; YB++)
-            for (let DB = -OB; DB <= OB; DB++) {
-              const OB = DB * DB + YB * YB;
-              OB > 0 && OB < (BB + 1) ** 2 && GB.push(DB, YB, OB)
+  function Re(ee, ie, He) {
+    let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ie => 0 !== ee[4 * ie + 3];
+    const be = new Uint8Array(ie * ie);
+    for (let Ke = 0; Ke < ie * ie; Ke++) be[Ke] = ye(Ke) ? 1 : 0;
+    const Me = (ee, He) => ee >= 0 && He >= 0 && ee < ie && He < ie && 0 === be[He * ie + ee],
+      Ue = new Float32Array(ie * ie).fill(1 / 0),
+      Fe = function(ee) {
+        if (ee !== Je) {
+          const ie = Math.ceil(ee + 1),
+            He = [];
+          for (let ye = -ie; ye <= ie; ye++)
+            for (let be = -ie; be <= ie; be++) {
+              const ie = be * be + ye * ye;
+              ie > 0 && ie < (ee + 1) ** 2 && He.push(be, ye, ie)
             }
-          JB = BB, MB = Int32Array.from(GB)
+          Je = ee, oe = Int32Array.from(He)
         }
-        return MB
-      }(GB);
-    for (let oB = 0; oB < OB; oB++)
-      for (let BB = 0; BB < OB; BB++) {
-        if (1 === DB[oB * OB + BB] && (QB(BB - 1, oB) || QB(BB + 1, oB) || QB(BB, oB - 1) || QB(BB, oB + 1)))
-          for (let GB = 0; GB < yB.length; GB += 3) {
-            const YB = BB + yB[GB],
-              DB = oB + yB[GB + 1];
-            if (YB >= 0 && DB >= 0 && YB < OB && DB < OB) {
-              const BB = DB * OB + YB;
-              jB[BB] = Math.min(jB[BB], yB[GB + 2])
+        return oe
+      }(He);
+    for (let Ke = 0; Ke < ie; Ke++)
+      for (let ee = 0; ee < ie; ee++) {
+        if (1 === be[Ke * ie + ee] && (Me(ee - 1, Ke) || Me(ee + 1, Ke) || Me(ee, Ke - 1) || Me(ee, Ke + 1)))
+          for (let He = 0; He < Fe.length; He += 3) {
+            const ye = ee + Fe[He],
+              be = Ke + Fe[He + 1];
+            if (ye >= 0 && be >= 0 && ye < ie && be < ie) {
+              const ee = be * ie + ye;
+              Ue[ee] = Math.min(Ue[ee], Fe[He + 2])
             }
           }
       }
-    for (let JB = 0; JB < OB * OB; JB++) 1 !== DB[JB] && jB[JB] !== 1 / 0 && (BB.set(oB, 4 * JB), BB[4 * JB + 3] = Math.round(255 * Math.min(1, GB + 1 - Math.sqrt(jB[JB]))))
+    for (let Je = 0; Je < ie * ie; Je++) 1 !== be[Je] && Ue[Je] !== 1 / 0 && (ee.set(Ke, 4 * Je), ee[4 * Je + 3] = Math.round(255 * Math.min(1, He + 1 - Math.sqrt(Ue[Je]))))
   }
-  const zB = {
+  const ke = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    lB = {
+    qe = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    pB = {
+    fe = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const qB = 1e-6;
+  const Te = 1e-6;
 
-  function ZB(BB, OB, GB, YB) {
+  function pe(ee, ie, He, ye) {
     let {
-      origin: DB,
-      across: QB,
-      down: oB,
-      texture: jB,
-      rect: [yB, JB, MB, PB],
-      shade: zB
-    } = YB;
-    const lB = QB.x * oB.y - QB.y * oB.x;
-    if (Math.abs(lB) < 1e-9) return;
-    const pB = [DB.x, DB.x + QB.x, DB.x + oB.x, DB.x + QB.x + oB.x],
-      ZB = [DB.y, DB.y + QB.y, DB.y + oB.y, DB.y + QB.y + oB.y],
-      NB = Math.max(0, Math.floor(Math.min(...pB))),
-      RB = Math.min(GB - 1, Math.ceil(Math.max(...pB))),
-      WB = Math.max(0, Math.floor(Math.min(...ZB))),
-      AB = Math.min(GB - 1, Math.ceil(Math.max(...ZB)));
-    for (let VB = WB; VB <= AB; VB++)
-      for (let YB = NB; YB <= RB; YB++) {
-        const pB = YB + .5 - DB.x,
-          ZB = VB + .5 - DB.y,
-          NB = (pB * oB.y - ZB * oB.x) / lB,
-          RB = (QB.x * ZB - QB.y * pB) / lB;
-        if (NB < -qB || NB > 1 + qB || RB < -qB || RB > 1 + qB) continue;
-        const WB = VB * GB + YB;
-        OB[WB] = 1;
-        const AB = yB + Math.min(Math.max(NB, 0), 1) * (MB - yB),
-          SB = JB + Math.min(Math.max(RB, 0), 1) * (PB - JB),
-          nB = Math.min(jB.width - 1, Math.floor(AB * jB.width)),
-          UB = 4 * (Math.min(jB.height - 1, Math.floor(SB * jB.height)) * jB.width + nB),
-          fB = jB.pixels[UB + 3] / 255;
-        if (0 === fB) continue;
-        const kB = 4 * WB,
-          dB = BB[kB + 3] / 255 * (1 - fB),
-          KB = fB + dB;
-        for (let OB = 0; OB < 3; OB++) BB[kB + OB] = (jB.pixels[UB + OB] * zB * fB + BB[kB + OB] * dB) / KB;
-        BB[kB + 3] = 255 * KB
+      origin: be,
+      across: Me,
+      down: Ke,
+      texture: Ue,
+      rect: [Fe, Je, oe, Re],
+      shade: ke
+    } = ye;
+    const qe = Me.x * Ke.y - Me.y * Ke.x;
+    if (Math.abs(qe) < 1e-9) return;
+    const fe = [be.x, be.x + Me.x, be.x + Ke.x, be.x + Me.x + Ke.x],
+      pe = [be.y, be.y + Me.y, be.y + Ke.y, be.y + Me.y + Ke.y],
+      Xe = Math.max(0, Math.floor(Math.min(...fe))),
+      ze = Math.min(He - 1, Math.ceil(Math.max(...fe))),
+      Be = Math.max(0, Math.floor(Math.min(...pe))),
+      Ee = Math.min(He - 1, Math.ceil(Math.max(...pe)));
+    for (let ge = Be; ge <= Ee; ge++)
+      for (let ye = Xe; ye <= ze; ye++) {
+        const fe = ye + .5 - be.x,
+          pe = ge + .5 - be.y,
+          Xe = (fe * Ke.y - pe * Ke.x) / qe,
+          ze = (Me.x * pe - Me.y * fe) / qe;
+        if (Xe < -Te || Xe > 1 + Te || ze < -Te || ze > 1 + Te) continue;
+        const Be = ge * He + ye;
+        ie[Be] = 1;
+        const Ee = Fe + Math.min(Math.max(Xe, 0), 1) * (oe - Fe),
+          Oe = Je + Math.min(Math.max(ze, 0), 1) * (Re - Je),
+          de = Math.min(Ue.width - 1, Math.floor(Ee * Ue.width)),
+          We = 4 * (Math.min(Ue.height - 1, Math.floor(Oe * Ue.height)) * Ue.width + de),
+          te = Ue.pixels[We + 3] / 255;
+        if (0 === te) continue;
+        const Ze = 4 * Be,
+          we = ee[Ze + 3] / 255 * (1 - te),
+          De = te + we;
+        for (let ie = 0; ie < 3; ie++) ee[Ze + ie] = (Ue.pixels[We + ie] * ke * te + ee[Ze + ie] * we) / De;
+        ee[Ze + 3] = 255 * De
       }
   }
 
-  function NB(BB, OB, GB) {
-    const YB = BB.get(OB);
-    if (void 0 === YB) throw new Error(`no ${GB} was sent for ${OB.slice(0,100)}`);
-    return YB
+  function Xe(ee, ie, He) {
+    const ye = ee.get(ie);
+    if (void 0 === ye) throw new Error(`no ${He} was sent for ${ie.slice(0,100)}`);
+    return ye
   }
-  const RB = {
-      pixelsOf(BB) {
-        const OB = new OffscreenCanvas(BB.width, BB.height),
-          GB = OB.getContext("2d");
-        if (!GB) throw new Error("no 2D context");
-        return GB.drawImage(BB, 0, 0), BB.close(), {
-          width: OB.width,
-          height: OB.height,
-          pixels: GB.getImageData(0, 0, OB.width, OB.height).data
+  const ze = {
+      pixelsOf(ee) {
+        const ie = new OffscreenCanvas(ee.width, ee.height),
+          He = ie.getContext("2d");
+        if (!He) throw new Error("no 2D context");
+        return He.drawImage(ee, 0, 0), ee.close(), {
+          width: ie.width,
+          height: ie.height,
+          pixels: He.getImageData(0, 0, ie.width, ie.height).data
         }
       },
-      async encode(BB, OB) {
-        const GB = new OffscreenCanvas(OB, OB),
-          YB = GB.getContext("2d");
-        if (!YB) throw new Error("no 2D context");
-        YB.putImageData(new ImageData(BB, OB, OB), 0, 0);
-        const DB = await GB.convertToBlob();
-        return new Promise(((BB, OB) => {
-          const GB = new FileReader;
-          GB.onload = () => {
-            BB(GB.result)
-          }, GB.onerror = () => {
-            var BB;
-            OB(null !== (BB = GB.error) && void 0 !== BB ? BB : new Error("the icon did not encode"))
-          }, GB.readAsDataURL(DB)
+      async encode(ee, ie) {
+        const He = new OffscreenCanvas(ie, ie),
+          ye = He.getContext("2d");
+        if (!ye) throw new Error("no 2D context");
+        ye.putImageData(new ImageData(ee, ie, ie), 0, 0);
+        const be = await He.convertToBlob();
+        return new Promise(((ee, ie) => {
+          const He = new FileReader;
+          He.onload = () => {
+            ee(He.result)
+          }, He.onerror = () => {
+            var ee;
+            ie(null !== (ee = He.error) && void 0 !== ee ? ee : new Error("the icon did not encode"))
+          }, He.readAsDataURL(be)
         }))
       }
     },
-    WB = globalThis.WorkerGlobalScope;
-  void 0 !== WB && globalThis instanceof WB && function(YB, DB) {
-    const oB = new Map,
-      JB = new Map,
-      MB = (BB, OB, GB) => {
+    Be = globalThis.WorkerGlobalScope;
+  void 0 !== Be && globalThis instanceof Be && function(ye, be) {
+    const Ke = new Map,
+      Je = new Map,
+      oe = (ee, ie, He) => {
         (async () => {
           try {
-            YB.postMessage({
+            ye.postMessage({
               type: "drawn",
-              id: BB,
-              url: await DB.encode(GB(), OB)
+              id: ee,
+              url: await be.encode(He(), ie)
             })
-          } catch (QB) {
-            YB.postMessage({
+          } catch (Me) {
+            ye.postMessage({
               type: "failed",
-              message: String(QB)
+              message: String(Me)
             })
           }
         })()
       };
-    YB.onmessage = YB => {
+    ye.onmessage = ye => {
       let {
-        data: qB
-      } = YB;
-      if ("texture" === qB.type) oB.set(qB.url, DB.pixelsOf(qB.bitmap));
-      else if ("model" === qB.type) JB.set(qB.name, {
-        geometry: qB.geometry,
-        texture: DB.pixelsOf(qB.bitmap)
+        data: Te
+      } = ye;
+      if ("texture" === Te.type) Ke.set(Te.url, be.pixelsOf(Te.bitmap));
+      else if ("model" === Te.type) Je.set(Te.name, {
+        geometry: Te.geometry,
+        texture: be.pixelsOf(Te.bitmap)
       });
-      else if ("draw" === qB.type) {
+      else if ("draw" === Te.type) {
         const {
-          id: YB,
-          top: DB,
-          left: yB,
-          right: JB,
-          itemType: RB,
-          size: WB,
-          outlineWidth: AB
-        } = qB;
-        MB(YB, WB, (() => function(YB, DB, oB, yB) {
-          const JB = QB(oB, yB),
-            MB = JB * BB,
-            zB = JB * OB,
-            lB = JB * GB,
-            pB = Math.max(...DB.boxes.map((BB => BB[4]))),
-            qB = oB / 2,
-            NB = zB + (oB - zB - zB - pB * lB) / 2,
-            RB = (BB, OB, GB) => ({
-              x: qB + (BB - GB) * MB,
-              y: NB - zB + (BB + GB) * zB + (pB - OB) * lB
+          id: ye,
+          top: be,
+          left: Fe,
+          right: Je,
+          itemType: ze,
+          size: Be,
+          outlineWidth: Ee
+        } = Te;
+        oe(ye, Be, (() => function(ye, be, Ke, Fe) {
+          const Je = Me(Ke, Fe),
+            oe = Je * ee,
+            ke = Je * ie,
+            qe = Je * He,
+            fe = Math.max(...be.boxes.map((ee => ee[4]))),
+            Te = Ke / 2,
+            Xe = ke + (Ke - ke - ke - fe * qe) / 2,
+            ze = (ee, ie, He) => ({
+              x: Te + (ee - He) * oe,
+              y: Xe - ke + (ee + He) * ke + (fe - ie) * qe
             }),
-            WB = (BB, OB, GB, YB, QB, oB) => ({
-              origin: BB,
+            Be = (ee, ie, He, ye, Me, Ke) => ({
+              origin: ee,
               across: {
-                x: OB.x - BB.x,
-                y: OB.y - BB.y
+                x: ie.x - ee.x,
+                y: ie.y - ee.y
               },
               down: {
-                x: GB.x - BB.x,
-                y: GB.y - BB.y
+                x: He.x - ee.x,
+                y: He.y - ee.y
               },
-              texture: YB,
-              rect: DB.cropFaces ? QB : [0, 0, 1, 1],
-              shade: oB
+              texture: ye,
+              rect: be.cropFaces ? Me : [0, 0, 1, 1],
+              shade: Ke
             }),
-            AB = new Uint8ClampedArray(oB * oB * 4),
-            VB = new Uint8Array(oB * oB),
-            SB = jB;
-          for (const [BB, OB, GB, QB, jB, PB] of DB.boxes) {
-            const DB = WB(RB(QB, jB, PB), RB(QB, jB, GB), RB(QB, OB, PB), YB.right, [1 - PB, 1 - jB, 1 - GB, 1 - OB], SB.right),
-              yB = WB(RB(BB, jB, PB), RB(QB, jB, PB), RB(BB, OB, PB), YB.left, [BB, 1 - jB, QB, 1 - OB], SB.left),
-              JB = WB(RB(BB, jB, GB), RB(QB, jB, GB), RB(BB, jB, PB), YB.top, [BB, GB, QB, PB], SB.top);
-            for (const BB of [DB, yB, JB]) ZB(AB, VB, oB, BB)
+            Ee = new Uint8ClampedArray(Ke * Ke * 4),
+            ge = new Uint8Array(Ke * Ke),
+            Oe = Ue;
+          for (const [ee, ie, He, Me, Ue, Re] of be.boxes) {
+            const be = Be(ze(Me, Ue, Re), ze(Me, Ue, He), ze(Me, ie, Re), ye.right, [1 - Re, 1 - Ue, 1 - He, 1 - ie], Oe.right),
+              Fe = Be(ze(ee, Ue, Re), ze(Me, Ue, Re), ze(ee, ie, Re), ye.left, [ee, 1 - Ue, Me, 1 - ie], Oe.left),
+              Je = Be(ze(ee, Ue, He), ze(Me, Ue, He), ze(ee, Ue, Re), ye.top, [ee, He, Me, Re], Oe.top);
+            for (const ee of [be, Fe, Je]) pe(Ee, ge, Ke, ee)
           }
-          return PB(AB, oB, yB, (BB => 1 === VB[BB])), AB
+          return Re(Ee, Ke, Fe, (ee => 1 === ge[ee])), Ee
         }({
-          top: NB(oB, DB, "texture"),
-          left: NB(oB, yB, "texture"),
-          right: NB(oB, JB, "texture")
-        }, function(BB) {
-          return "SlabBlock" === BB ? lB : "StairsBlock" === BB ? pB : zB
-        }(RB), WB, AB)))
+          top: Xe(Ke, be, "texture"),
+          left: Xe(Ke, Fe, "texture"),
+          right: Xe(Ke, Je, "texture")
+        }, function(ee) {
+          return "SlabBlock" === ee ? qe : "StairsBlock" === ee ? fe : ke
+        }(ze), Be, Ee)))
       } else {
         const {
-          id: BB,
-          name: OB,
-          size: GB,
-          outlineWidth: YB
-        } = qB;
-        MB(BB, GB, (() => {
+          id: ee,
+          name: ie,
+          size: He,
+          outlineWidth: ye
+        } = Te;
+        oe(ee, He, (() => {
           const {
-            geometry: BB,
-            texture: DB
-          } = NB(JB, OB, "model");
-          return yB(BB, DB, GB, YB)
+            geometry: ee,
+            texture: be
+          } = Xe(Je, ie, "model");
+          return Fe(ee, be, He, ye)
         }))
       }
-    }, YB.postMessage({
+    }, ye.postMessage({
       type: "started"
     })
-  }(globalThis, RB)
+  }(globalThis, ze)
 })();

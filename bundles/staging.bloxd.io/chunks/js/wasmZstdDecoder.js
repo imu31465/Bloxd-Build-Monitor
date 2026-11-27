@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var BB = __webpack_require__.u,
-        OB = __webpack_require__.e,
-        GB = {},
-        YB = {};
-      __webpack_require__.u = function(OB) {
-        return BB(OB) + (GB.hasOwnProperty(OB) ? "?" + GB[OB] : "")
-      }, __webpack_require__.e = function(DB) {
-        return OB(DB).catch((function(OB) {
-          var QB = YB.hasOwnProperty(DB) ? YB[DB] : 4;
-          if (QB < 1) {
-            var oB = BB(DB);
-            if (OB.message = "Loading chunk " + DB + " failed after 4 retries.\n(" + oB + ")", OB.request = oB, GB[DB] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete YB[DB]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === OB.code) {
-              var jB = __webpack_require__.miniCssF(DB);
-              OB.message = OB.message.replace("Loading chunk", "Loading CSS chunk").replace(oB, jB), OB.request = jB
+      var ee = __webpack_require__.u,
+        ie = __webpack_require__.e,
+        He = {},
+        ye = {};
+      __webpack_require__.u = function(ie) {
+        return ee(ie) + (He.hasOwnProperty(ie) ? "?" + He[ie] : "")
+      }, __webpack_require__.e = function(be) {
+        return ie(be).catch((function(ie) {
+          var Me = ye.hasOwnProperty(be) ? ye[be] : 4;
+          if (Me < 1) {
+            var Ke = ee(be);
+            if (ie.message = "Loading chunk " + be + " failed after 4 retries.\n(" + Ke + ")", ie.request = Ke, He[be] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete ye[be]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === ie.code) {
+              var Ue = __webpack_require__.miniCssF(be);
+              ie.message = ie.message.replace("Loading chunk", "Loading CSS chunk").replace(Ke, Ue), ie.request = Ue
             }
-            throw OB
+            throw ie
           }
-          return new Promise((function(BB) {
-            var OB = 4 - QB + 1;
+          return new Promise((function(ee) {
+            var ie = 4 - Me + 1;
             setTimeout((function() {
-              var OB = "cache-bust=" + Date.now();
-              GB[DB] = OB, YB[DB] = QB - 1, BB(__webpack_require__.e(DB))
-            }), function(BB) {
-              return 500 * Math.pow(2, BB)
-            }(OB))
+              var ie = "cache-bust=" + Date.now();
+              He[be] = ie, ye[be] = Me - 1, ee(__webpack_require__.e(be))
+            }), function(ee) {
+              return 500 * Math.pow(2, ee)
+            }(ie))
           }))
         }))
       }
     }
   })();
 
-  function BB(BB) {
-    return BB instanceof Error ? BB.message : String(BB)
+  function ee(ee) {
+    return ee instanceof Error ? ee.message : String(ee)
   }
-  const OB = ArrayBuffer,
-    GB = Uint8Array,
-    YB = Uint16Array,
-    DB = Int16Array,
-    QB = Int32Array,
-    oB = (BB, OB, YB) => {
-      if (GB.prototype.slice) return GB.prototype.slice.call(BB, OB, YB);
-      (null == OB || OB < 0) && (OB = 0), (null == YB || YB > BB.length) && (YB = BB.length);
-      const DB = new GB(YB - OB);
-      return DB.set(BB.subarray(OB, YB)), DB
+  const ie = ArrayBuffer,
+    He = Uint8Array,
+    ye = Uint16Array,
+    be = Int16Array,
+    Me = Int32Array,
+    Ke = (ee, ie, ye) => {
+      if (He.prototype.slice) return He.prototype.slice.call(ee, ie, ye);
+      (null == ie || ie < 0) && (ie = 0), (null == ye || ye > ee.length) && (ye = ee.length);
+      const be = new He(ye - ie);
+      return be.set(ee.subarray(ie, ye)), be
     },
-    jB = (BB, OB, YB, DB) => {
-      if (GB.prototype.fill) return GB.prototype.fill.call(BB, OB, YB, DB);
-      for ((null == YB || YB < 0) && (YB = 0), (null == DB || DB > BB.length) && (DB = BB.length); YB < DB; ++YB) BB[YB] = OB;
-      return BB
+    Ue = (ee, ie, ye, be) => {
+      if (He.prototype.fill) return He.prototype.fill.call(ee, ie, ye, be);
+      for ((null == ye || ye < 0) && (ye = 0), (null == be || be > ee.length) && (be = ee.length); ye < be; ++ye) ee[ye] = ie;
+      return ee
     },
-    yB = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    JB = (BB, OB, GB) => {
-      const YB = new Error(OB || yB[BB]);
-      if (YB.code = BB, Error.captureStackTrace && Error.captureStackTrace(YB, JB), !GB) throw YB;
-      return YB
+    Fe = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    Je = (ee, ie, He) => {
+      const ye = new Error(ie || Fe[ee]);
+      if (ye.code = ee, Error.captureStackTrace && Error.captureStackTrace(ye, Je), !He) throw ye;
+      return ye
     },
-    MB = (BB, OB, GB) => {
-      let YB = 0,
-        DB = 0;
-      for (; YB < GB; ++YB) DB |= BB[OB++] << (YB << 3);
-      return DB
+    oe = (ee, ie, He) => {
+      let ye = 0,
+        be = 0;
+      for (; ye < He; ++ye) be |= ee[ie++] << (ye << 3);
+      return be
     },
-    PB = (BB, OB) => {
-      const YB = BB[0] | BB[1] << 8 | BB[2] << 16;
-      if (3126568 == YB && 253 == BB[3]) {
-        const YB = BB[4],
-          DB = YB >> 5 & 1,
-          oB = YB >> 2 & 1,
-          jB = 3 & YB,
-          yB = YB >> 6;
-        8 & YB && JB(0);
-        let PB = 6 - DB;
-        const zB = 3 == jB ? 4 : jB,
-          lB = MB(BB, PB, zB);
-        PB += zB;
-        const pB = yB ? 1 << yB : DB,
-          qB = MB(BB, PB, pB) + (1 == yB && 256);
-        let ZB = qB;
-        if (!DB) {
-          const OB = 1 << 10 + (BB[5] >> 3);
-          ZB = OB + (OB >> 3) * (7 & BB[5])
+    Re = (ee, ie) => {
+      const ye = ee[0] | ee[1] << 8 | ee[2] << 16;
+      if (3126568 == ye && 253 == ee[3]) {
+        const ye = ee[4],
+          be = ye >> 5 & 1,
+          Ke = ye >> 2 & 1,
+          Ue = 3 & ye,
+          Fe = ye >> 6;
+        8 & ye && Je(0);
+        let Re = 6 - be;
+        const ke = 3 == Ue ? 4 : Ue,
+          qe = oe(ee, Re, ke);
+        Re += ke;
+        const fe = Fe ? 1 << Fe : be,
+          Te = oe(ee, Re, fe) + (1 == Fe && 256);
+        let pe = Te;
+        if (!be) {
+          const ie = 1 << 10 + (ee[5] >> 3);
+          pe = ie + (ie >> 3) * (7 & ee[5])
         }
-        ZB > 2145386496 && JB(1);
-        const NB = new GB((1 == OB ? qB || ZB : OB ? 0 : ZB) + 12);
-        return NB[0] = 1, NB[4] = 4, NB[8] = 8, {
-          b: PB + pB,
+        pe > 2145386496 && Je(1);
+        const Xe = new He((1 == ie ? Te || pe : ie ? 0 : pe) + 12);
+        return Xe[0] = 1, Xe[4] = 4, Xe[8] = 8, {
+          b: Re + fe,
           y: 0,
           l: 0,
-          d: lB,
-          w: OB && 1 != OB ? OB : NB.subarray(12),
-          e: ZB,
-          o: new QB(NB.buffer, 0, 3),
-          u: qB,
-          c: oB,
-          m: Math.min(131072, ZB)
+          d: qe,
+          w: ie && 1 != ie ? ie : Xe.subarray(12),
+          e: pe,
+          o: new Me(Xe.buffer, 0, 3),
+          u: Te,
+          c: Ke,
+          m: Math.min(131072, pe)
         }
       }
-      if (25481893 == (YB >> 4 | BB[3] << 20)) return 8 + (((DB = BB)[oB = 4] | DB[oB + 1] << 8 | DB[oB + 2] << 16 | DB[oB + 3] << 24) >>> 0);
-      var DB, oB;
-      JB(0)
+      if (25481893 == (ye >> 4 | ee[3] << 20)) return 8 + (((be = ee)[Ke = 4] | be[Ke + 1] << 8 | be[Ke + 2] << 16 | be[Ke + 3] << 24) >>> 0);
+      var be, Ke;
+      Je(0)
     },
-    zB = BB => {
-      let OB = 0;
-      for (; 1 << OB <= BB; ++OB);
-      return OB - 1
+    ke = ee => {
+      let ie = 0;
+      for (; 1 << ie <= ee; ++ie);
+      return ie - 1
     },
-    lB = (BB, QB, oB) => {
-      let jB = 4 + (QB << 3);
-      const yB = 5 + (15 & BB[QB]);
-      yB > oB && JB(3);
-      const MB = 1 << yB;
-      let PB = MB,
-        lB = -1,
-        pB = -1,
-        qB = -1,
-        ZB = MB;
-      const NB = new OB(512 + (MB << 2)),
-        RB = new DB(NB, 0, 256),
-        WB = new YB(NB, 0, 256),
-        AB = new YB(NB, 512, MB),
-        VB = 512 + (MB << 1),
-        SB = new GB(NB, VB, MB),
-        nB = new GB(NB, VB + MB);
-      for (; lB < 255 && PB > 0;) {
-        const OB = zB(PB + 1),
-          GB = jB >> 3,
-          YB = (1 << OB + 1) - 1;
-        let DB = (BB[GB] | BB[GB + 1] << 8 | BB[GB + 2] << 16) >> (7 & jB) & YB;
-        const QB = (1 << OB) - 1,
-          oB = YB - PB - 1,
-          yB = DB & QB;
-        if (yB < oB ? (jB += OB, DB = yB) : (jB += OB + 1, DB > QB && (DB -= oB)), RB[++lB] = --DB, -1 == DB ? (PB += DB, SB[--ZB] = lB) : PB -= DB, !DB)
+    qe = (ee, Me, Ke) => {
+      let Ue = 4 + (Me << 3);
+      const Fe = 5 + (15 & ee[Me]);
+      Fe > Ke && Je(3);
+      const oe = 1 << Fe;
+      let Re = oe,
+        qe = -1,
+        fe = -1,
+        Te = -1,
+        pe = oe;
+      const Xe = new ie(512 + (oe << 2)),
+        ze = new be(Xe, 0, 256),
+        Be = new ye(Xe, 0, 256),
+        Ee = new ye(Xe, 512, oe),
+        ge = 512 + (oe << 1),
+        Oe = new He(Xe, ge, oe),
+        de = new He(Xe, ge + oe);
+      for (; qe < 255 && Re > 0;) {
+        const ie = ke(Re + 1),
+          He = Ue >> 3,
+          ye = (1 << ie + 1) - 1;
+        let be = (ee[He] | ee[He + 1] << 8 | ee[He + 2] << 16) >> (7 & Ue) & ye;
+        const Me = (1 << ie) - 1,
+          Ke = ye - Re - 1,
+          Fe = be & Me;
+        if (Fe < Ke ? (Ue += ie, be = Fe) : (Ue += ie + 1, be > Me && (be -= Ke)), ze[++qe] = --be, -1 == be ? (Re += be, Oe[--pe] = qe) : Re -= be, !be)
           do {
-            const OB = jB >> 3;
-            pB = (BB[OB] | BB[OB + 1] << 8) >> (7 & jB) & 3, jB += 2, lB += pB
-          } while (3 == pB)
-      }(lB > 255 || PB) && JB(0);
-      let UB = 0;
-      const fB = (MB >> 1) + (MB >> 3) + 3,
-        kB = MB - 1;
-      for (let OB = 0; OB <= lB; ++OB) {
-        const BB = RB[OB];
-        if (BB < 1) WB[OB] = -BB;
+            const ie = Ue >> 3;
+            fe = (ee[ie] | ee[ie + 1] << 8) >> (7 & Ue) & 3, Ue += 2, qe += fe
+          } while (3 == fe)
+      }(qe > 255 || Re) && Je(0);
+      let We = 0;
+      const te = (oe >> 1) + (oe >> 3) + 3,
+        Ze = oe - 1;
+      for (let ie = 0; ie <= qe; ++ie) {
+        const ee = ze[ie];
+        if (ee < 1) Be[ie] = -ee;
         else
-          for (qB = 0; qB < BB; ++qB) {
-            SB[UB] = OB;
+          for (Te = 0; Te < ee; ++Te) {
+            Oe[We] = ie;
             do {
-              UB = UB + fB & kB
-            } while (UB >= ZB)
+              We = We + te & Ze
+            } while (We >= pe)
           }
       }
-      for (UB && JB(0), qB = 0; qB < MB; ++qB) {
-        const BB = WB[SB[qB]]++,
-          OB = nB[qB] = yB - zB(BB);
-        AB[qB] = (BB << OB) - MB
+      for (We && Je(0), Te = 0; Te < oe; ++Te) {
+        const ee = Be[Oe[Te]]++,
+          ie = de[Te] = Fe - ke(ee);
+        Ee[Te] = (ee << ie) - oe
       }
-      return [jB + 7 >> 3, {
-        b: yB,
-        s: SB,
-        n: nB,
-        t: AB
+      return [Ue + 7 >> 3, {
+        b: Fe,
+        s: Oe,
+        n: de,
+        t: Ee
       }]
     },
-    pB = lB(new GB([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    qB = lB(new GB([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    ZB = lB(new GB([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    NB = (BB, OB) => {
-      const GB = BB.length,
-        YB = new QB(GB);
-      for (let DB = 0; DB < GB; ++DB) YB[DB] = OB, OB += 1 << BB[DB];
-      return YB
+    fe = qe(new He([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    Te = qe(new He([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    pe = qe(new He([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    Xe = (ee, ie) => {
+      const He = ee.length,
+        ye = new Me(He);
+      for (let be = 0; be < He; ++be) ye[be] = ie, ie += 1 << ee[be];
+      return ye
     },
-    RB = new GB(new QB([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    WB = NB(RB, 0),
-    AB = new GB(new QB([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    VB = NB(AB, 3),
-    SB = (BB, OB, GB) => {
-      const YB = BB.length,
-        DB = OB.length,
-        QB = BB[YB - 1],
-        oB = (1 << GB.b) - 1,
-        jB = -GB.b;
-      QB || JB(0);
-      let yB = 0,
-        MB = GB.b,
-        PB = (YB << 3) - 8 + zB(QB) - MB,
-        lB = -1;
-      for (; PB > jB && lB < DB;) {
-        const YB = PB >> 3;
-        yB = (yB << MB | (BB[YB] | BB[YB + 1] << 8 | BB[YB + 2] << 16) >> (7 & PB)) & oB, OB[++lB] = GB.s[yB], PB -= MB = GB.n[yB]
+    ze = new He(new Me([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    Be = Xe(ze, 0),
+    Ee = new He(new Me([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    ge = Xe(Ee, 3),
+    Oe = (ee, ie, He) => {
+      const ye = ee.length,
+        be = ie.length,
+        Me = ee[ye - 1],
+        Ke = (1 << He.b) - 1,
+        Ue = -He.b;
+      Me || Je(0);
+      let Fe = 0,
+        oe = He.b,
+        Re = (ye << 3) - 8 + ke(Me) - oe,
+        qe = -1;
+      for (; Re > Ue && qe < be;) {
+        const ye = Re >> 3;
+        Fe = (Fe << oe | (ee[ye] | ee[ye + 1] << 8 | ee[ye + 2] << 16) >> (7 & Re)) & Ke, ie[++qe] = He.s[Fe], Re -= oe = He.n[Fe]
       }
-      PB == jB && lB + 1 == DB || JB(0)
+      Re == Ue && qe + 1 == be || Je(0)
     },
-    nB = (BB, OB, GB) => {
-      let YB = 6;
-      const DB = OB.length + 3 >> 2,
-        QB = DB << 1,
-        oB = DB + QB;
-      SB(BB.subarray(YB, YB += BB[0] | BB[1] << 8), OB.subarray(0, DB), GB), SB(BB.subarray(YB, YB += BB[2] | BB[3] << 8), OB.subarray(DB, QB), GB), SB(BB.subarray(YB, YB += BB[4] | BB[5] << 8), OB.subarray(QB, oB), GB), SB(BB.subarray(YB), OB.subarray(oB), GB)
+    de = (ee, ie, He) => {
+      let ye = 6;
+      const be = ie.length + 3 >> 2,
+        Me = be << 1,
+        Ke = be + Me;
+      Oe(ee.subarray(ye, ye += ee[0] | ee[1] << 8), ie.subarray(0, be), He), Oe(ee.subarray(ye, ye += ee[2] | ee[3] << 8), ie.subarray(be, Me), He), Oe(ee.subarray(ye, ye += ee[4] | ee[5] << 8), ie.subarray(Me, Ke), He), Oe(ee.subarray(ye), ie.subarray(Ke), He)
     },
-    UB = (BB, OB, DB) => {
-      let QB = OB.b;
-      const yB = BB[QB],
-        MB = yB >> 1 & 3;
-      OB.l = 1 & yB;
-      const PB = yB >> 3 | BB[QB + 1] << 5 | BB[QB + 2] << 13,
-        NB = (QB += 3) + PB;
-      if (1 == MB) {
-        if (QB >= BB.length) return;
-        return OB.b = QB + 1, DB ? (jB(DB, BB[QB], OB.y, OB.y += PB), DB) : jB(new GB(PB), BB[QB])
+    We = (ee, ie, be) => {
+      let Me = ie.b;
+      const Fe = ee[Me],
+        oe = Fe >> 1 & 3;
+      ie.l = 1 & Fe;
+      const Re = Fe >> 3 | ee[Me + 1] << 5 | ee[Me + 2] << 13,
+        Xe = (Me += 3) + Re;
+      if (1 == oe) {
+        if (Me >= ee.length) return;
+        return ie.b = Me + 1, be ? (Ue(be, ee[Me], ie.y, ie.y += Re), be) : Ue(new He(Re), ee[Me])
       }
-      if (!(NB > BB.length)) {
-        if (0 == MB) return OB.b = NB, DB ? (DB.set(BB.subarray(QB, NB), OB.y), OB.y += PB, DB) : oB(BB, QB, NB);
-        if (2 == MB) {
-          const yB = BB[QB],
-            MB = 3 & yB,
-            PB = yB >> 2 & 3;
-          let UB = yB >> 4,
-            fB = 0,
-            kB = 0;
-          MB < 2 ? 1 & PB ? UB |= BB[++QB] << 4 | (2 & PB && BB[++QB] << 12) : UB = yB >> 3 : (kB = PB, PB < 2 ? (UB |= (63 & BB[++QB]) << 4, fB = BB[QB] >> 6 | BB[++QB] << 2) : 2 == PB ? (UB |= BB[++QB] << 4 | (3 & BB[++QB]) << 12, fB = BB[QB] >> 2 | BB[++QB] << 6) : (UB |= BB[++QB] << 4 | (63 & BB[++QB]) << 12, fB = BB[QB] >> 6 | BB[++QB] << 2 | BB[++QB] << 10)), ++QB;
-          let dB = DB ? DB.subarray(OB.y, OB.y + OB.m) : new GB(OB.m),
-            KB = dB.length - UB;
-          if (KB < 0 && JB(0), 0 == MB) dB.set(BB.subarray(QB, QB += UB), KB);
-          else if (1 == MB) jB(dB, BB[QB++], KB);
+      if (!(Xe > ee.length)) {
+        if (0 == oe) return ie.b = Xe, be ? (be.set(ee.subarray(Me, Xe), ie.y), ie.y += Re, be) : Ke(ee, Me, Xe);
+        if (2 == oe) {
+          const Fe = ee[Me],
+            oe = 3 & Fe,
+            Re = Fe >> 2 & 3;
+          let We = Fe >> 4,
+            te = 0,
+            Ze = 0;
+          oe < 2 ? 1 & Re ? We |= ee[++Me] << 4 | (2 & Re && ee[++Me] << 12) : We = Fe >> 3 : (Ze = Re, Re < 2 ? (We |= (63 & ee[++Me]) << 4, te = ee[Me] >> 6 | ee[++Me] << 2) : 2 == Re ? (We |= ee[++Me] << 4 | (3 & ee[++Me]) << 12, te = ee[Me] >> 2 | ee[++Me] << 6) : (We |= ee[++Me] << 4 | (63 & ee[++Me]) << 12, te = ee[Me] >> 6 | ee[++Me] << 2 | ee[++Me] << 10)), ++Me;
+          let we = be ? be.subarray(ie.y, ie.y + ie.m) : new He(ie.m),
+            De = we.length - We;
+          if (De < 0 && Je(0), 0 == oe) we.set(ee.subarray(Me, Me += We), De);
+          else if (1 == oe) Ue(we, ee[Me++], De);
           else {
-            let DB = OB.h;
-            if (2 == MB) {
-              const oB = ((BB, OB) => {
-                let DB = 0,
-                  QB = -1;
-                const oB = new GB(292),
-                  yB = BB[OB],
-                  MB = oB.subarray(0, 256),
-                  PB = oB.subarray(256, 268),
-                  pB = new YB(oB.buffer, 268);
-                if (yB < 128) {
-                  const [GB, YB] = lB(BB, OB + 1, 6), DB = GB << 3, oB = BB[OB += yB];
-                  oB || JB(0);
-                  let jB = 0,
-                    PB = 0,
-                    pB = YB.b,
-                    qB = pB,
-                    ZB = (++OB << 3) - 8 + zB(oB);
-                  for (; QB > 254 && JB(0), ZB -= pB, !(ZB < DB);) {
-                    let OB = ZB >> 3;
-                    if (jB += (BB[OB] | BB[OB + 1] << 8) >> (7 & ZB) & (1 << pB) - 1, MB[++QB] = YB.s[jB], ZB -= qB, ZB < DB) break;
-                    OB = ZB >> 3, PB += (BB[OB] | BB[OB + 1] << 8) >> (7 & ZB) & (1 << qB) - 1, MB[++QB] = YB.s[PB], pB = YB.n[jB], jB = YB.t[jB], qB = YB.n[PB], PB = YB.t[PB]
-                  }++QB > 255 && JB(0)
+            let be = ie.h;
+            if (2 == oe) {
+              const Ke = ((ee, ie) => {
+                let be = 0,
+                  Me = -1;
+                const Ke = new He(292),
+                  Fe = ee[ie],
+                  oe = Ke.subarray(0, 256),
+                  Re = Ke.subarray(256, 268),
+                  fe = new ye(Ke.buffer, 268);
+                if (Fe < 128) {
+                  const [He, ye] = qe(ee, ie + 1, 6), be = He << 3, Ke = ee[ie += Fe];
+                  Ke || Je(0);
+                  let Ue = 0,
+                    Re = 0,
+                    fe = ye.b,
+                    Te = fe,
+                    pe = (++ie << 3) - 8 + ke(Ke);
+                  for (; Me > 254 && Je(0), pe -= fe, !(pe < be);) {
+                    let ie = pe >> 3;
+                    if (Ue += (ee[ie] | ee[ie + 1] << 8) >> (7 & pe) & (1 << fe) - 1, oe[++Me] = ye.s[Ue], pe -= Te, pe < be) break;
+                    ie = pe >> 3, Re += (ee[ie] | ee[ie + 1] << 8) >> (7 & pe) & (1 << Te) - 1, oe[++Me] = ye.s[Re], fe = ye.n[Ue], Ue = ye.t[Ue], Te = ye.n[Re], Re = ye.t[Re]
+                  }++Me > 255 && Je(0)
                 } else {
-                  for (QB = yB - 127; DB < QB; DB += 2) {
-                    const GB = BB[++OB];
-                    MB[DB] = GB >> 4, MB[DB + 1] = 15 & GB
-                  }++OB
+                  for (Me = Fe - 127; be < Me; be += 2) {
+                    const He = ee[++ie];
+                    oe[be] = He >> 4, oe[be + 1] = 15 & He
+                  }++ie
                 }
-                let qB = 0;
-                for (DB = 0; DB < QB; ++DB) {
-                  const BB = MB[DB];
-                  BB > 11 && JB(0), qB += BB && 1 << BB - 1
+                let Te = 0;
+                for (be = 0; be < Me; ++be) {
+                  const ee = oe[be];
+                  ee > 11 && Je(0), Te += ee && 1 << ee - 1
                 }
-                const ZB = zB(qB) + 1,
-                  NB = 1 << ZB,
-                  RB = NB - qB;
-                for (RB & RB - 1 && JB(0), MB[QB++] = zB(RB) + 1, DB = 0; DB < QB; ++DB) {
-                  const BB = MB[DB];
-                  ++PB[MB[DB] = BB && ZB + 1 - BB]
+                const pe = ke(Te) + 1,
+                  Xe = 1 << pe,
+                  ze = Xe - Te;
+                for (ze & ze - 1 && Je(0), oe[Me++] = ke(ze) + 1, be = 0; be < Me; ++be) {
+                  const ee = oe[be];
+                  ++Re[oe[be] = ee && pe + 1 - ee]
                 }
-                const WB = new GB(NB << 1),
-                  AB = WB.subarray(0, NB),
-                  VB = WB.subarray(NB);
-                for (pB[ZB] = 0, DB = ZB; DB > 0; --DB) {
-                  const BB = pB[DB];
-                  jB(VB, DB, BB, pB[DB - 1] = BB + PB[DB] * (1 << ZB - DB))
+                const Be = new He(Xe << 1),
+                  Ee = Be.subarray(0, Xe),
+                  ge = Be.subarray(Xe);
+                for (fe[pe] = 0, be = pe; be > 0; --be) {
+                  const ee = fe[be];
+                  Ue(ge, be, ee, fe[be - 1] = ee + Re[be] * (1 << pe - be))
                 }
-                for (pB[0] != NB && JB(0), DB = 0; DB < QB; ++DB) {
-                  const BB = MB[DB];
-                  if (BB) {
-                    const OB = pB[BB];
-                    jB(AB, DB, OB, pB[BB] = OB + (1 << ZB - BB))
+                for (fe[0] != Xe && Je(0), be = 0; be < Me; ++be) {
+                  const ee = oe[be];
+                  if (ee) {
+                    const ie = fe[ee];
+                    Ue(Ee, be, ie, fe[ee] = ie + (1 << pe - ee))
                   }
                 }
-                return [OB, {
-                  n: VB,
-                  b: ZB,
-                  s: AB
+                return [ie, {
+                  n: ge,
+                  b: pe,
+                  s: Ee
                 }]
-              })(BB, QB);
-              fB += QB - (QB = oB[0]), OB.h = DB = oB[1]
-            } else DB || JB(0);
-            (kB ? nB : SB)(BB.subarray(QB, QB += fB), dB.subarray(KB), DB)
+              })(ee, Me);
+              te += Me - (Me = Ke[0]), ie.h = be = Ke[1]
+            } else be || Je(0);
+            (Ze ? de : Oe)(ee.subarray(Me, Me += te), we.subarray(De), be)
           }
-          let uB = BB[QB++];
-          if (uB) {
-            255 == uB ? uB = 32512 + (BB[QB++] | BB[QB++] << 8) : uB > 127 && (uB = uB - 128 << 8 | BB[QB++]);
-            const jB = BB[QB++];
-            3 & jB && JB(0);
-            const yB = [qB, ZB, pB];
-            for (let DB = 2; DB > -1; --DB) {
-              const oB = jB >> 2 + (DB << 1) & 3;
-              if (1 == oB) {
-                const OB = new GB([0, 0, BB[QB++]]);
-                yB[DB] = {
-                  s: OB.subarray(2, 3),
-                  n: OB.subarray(0, 1),
-                  t: new YB(OB.buffer, 0, 1),
+          let Pe = ee[Me++];
+          if (Pe) {
+            255 == Pe ? Pe = 32512 + (ee[Me++] | ee[Me++] << 8) : Pe > 127 && (Pe = Pe - 128 << 8 | ee[Me++]);
+            const Ue = ee[Me++];
+            3 & Ue && Je(0);
+            const Fe = [Te, pe, fe];
+            for (let be = 2; be > -1; --be) {
+              const Ke = Ue >> 2 + (be << 1) & 3;
+              if (1 == Ke) {
+                const ie = new He([0, 0, ee[Me++]]);
+                Fe[be] = {
+                  s: ie.subarray(2, 3),
+                  n: ie.subarray(0, 1),
+                  t: new ye(ie.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == oB ? [QB, yB[DB]] = lB(BB, QB, 9 - (1 & DB)) : 3 == oB && (OB.t || JB(0), yB[DB] = OB.t[DB])
+              } else 2 == Ke ? [Me, Fe[be]] = qe(ee, Me, 9 - (1 & be)) : 3 == Ke && (ie.t || Je(0), Fe[be] = ie.t[be])
             }
-            const [MB, PB, SB] = OB.t = yB, nB = BB[NB - 1];
-            nB || JB(0);
-            let UB = (NB << 3) - 8 + zB(nB) - SB.b,
-              fB = UB >> 3,
-              kB = 0,
-              mB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << SB.b) - 1;
-            fB = (UB -= PB.b) >> 3;
-            let IB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << PB.b) - 1;
-            fB = (UB -= MB.b) >> 3;
-            let FB = (BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << MB.b) - 1;
-            for (++uB; --uB;) {
-              const GB = SB.s[mB],
-                YB = SB.n[mB],
-                DB = MB.s[FB],
-                QB = MB.n[FB],
-                oB = PB.s[IB],
-                jB = PB.n[IB];
-              fB = (UB -= oB) >> 3;
-              const yB = 1 << oB;
-              let zB = yB + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16 | BB[fB + 3] << 24) >>> (7 & UB) & yB - 1);
-              fB = (UB -= AB[DB]) >> 3;
-              let lB = VB[DB] + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16) >> (7 & UB) & (1 << AB[DB]) - 1);
-              fB = (UB -= RB[GB]) >> 3;
-              const pB = WB[GB] + ((BB[fB] | BB[fB + 1] << 8 | BB[fB + 2] << 16) >> (7 & UB) & (1 << RB[GB]) - 1);
-              if ((UB < 0 || KB + pB > dB.length || kB + pB + lB > dB.length) && JB(0), fB = (UB -= YB) >> 3, mB = SB.t[mB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << YB) - 1), fB = (UB -= QB) >> 3, FB = MB.t[FB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << QB) - 1), fB = (UB -= jB) >> 3, IB = PB.t[IB] + ((BB[fB] | BB[fB + 1] << 8) >> (7 & UB) & (1 << jB) - 1), zB > 3) OB.o[2] = OB.o[1], OB.o[1] = OB.o[0], OB.o[0] = zB -= 3;
+            const [oe, Re, Oe] = ie.t = Fe, de = ee[Xe - 1];
+            de || Je(0);
+            let We = (Xe << 3) - 8 + ke(de) - Oe.b,
+              te = We >> 3,
+              Ze = 0,
+              Ae = (ee[te] | ee[te + 1] << 8) >> (7 & We) & (1 << Oe.b) - 1;
+            te = (We -= Re.b) >> 3;
+            let Ye = (ee[te] | ee[te + 1] << 8) >> (7 & We) & (1 << Re.b) - 1;
+            te = (We -= oe.b) >> 3;
+            let Ve = (ee[te] | ee[te + 1] << 8) >> (7 & We) & (1 << oe.b) - 1;
+            for (++Pe; --Pe;) {
+              const He = Oe.s[Ae],
+                ye = Oe.n[Ae],
+                be = oe.s[Ve],
+                Me = oe.n[Ve],
+                Ke = Re.s[Ye],
+                Ue = Re.n[Ye];
+              te = (We -= Ke) >> 3;
+              const Fe = 1 << Ke;
+              let ke = Fe + ((ee[te] | ee[te + 1] << 8 | ee[te + 2] << 16 | ee[te + 3] << 24) >>> (7 & We) & Fe - 1);
+              te = (We -= Ee[be]) >> 3;
+              let qe = ge[be] + ((ee[te] | ee[te + 1] << 8 | ee[te + 2] << 16) >> (7 & We) & (1 << Ee[be]) - 1);
+              te = (We -= ze[He]) >> 3;
+              const fe = Be[He] + ((ee[te] | ee[te + 1] << 8 | ee[te + 2] << 16) >> (7 & We) & (1 << ze[He]) - 1);
+              if ((We < 0 || De + fe > we.length || Ze + fe + qe > we.length) && Je(0), te = (We -= ye) >> 3, Ae = Oe.t[Ae] + ((ee[te] | ee[te + 1] << 8) >> (7 & We) & (1 << ye) - 1), te = (We -= Me) >> 3, Ve = oe.t[Ve] + ((ee[te] | ee[te + 1] << 8) >> (7 & We) & (1 << Me) - 1), te = (We -= Ue) >> 3, Ye = Re.t[Ye] + ((ee[te] | ee[te + 1] << 8) >> (7 & We) & (1 << Ue) - 1), ke > 3) ie.o[2] = ie.o[1], ie.o[1] = ie.o[0], ie.o[0] = ke -= 3;
               else {
-                const BB = zB - (0 != pB);
-                BB ? (zB = 3 == BB ? OB.o[0] - 1 : OB.o[BB], BB > 1 && (OB.o[2] = OB.o[1]), OB.o[1] = OB.o[0], OB.o[0] = zB) : zB = OB.o[0]
+                const ee = ke - (0 != fe);
+                ee ? (ke = 3 == ee ? ie.o[0] - 1 : ie.o[ee], ee > 1 && (ie.o[2] = ie.o[1]), ie.o[1] = ie.o[0], ie.o[0] = ke) : ke = ie.o[0]
               }
-              for (let BB = 0; BB < pB; ++BB) dB[kB + BB] = dB[KB + BB];
-              kB += pB, KB += pB;
-              let qB = kB - zB;
-              if (qB < 0) {
-                let BB = -qB;
-                const GB = OB.e + qB;
-                GB < 0 && JB(4), BB > lB && (BB = lB);
-                for (let YB = 0; YB < BB; ++YB) dB[kB + YB] = OB.w[GB + YB];
-                kB += BB, lB -= BB, qB = 0
+              for (let ee = 0; ee < fe; ++ee) we[Ze + ee] = we[De + ee];
+              Ze += fe, De += fe;
+              let Te = Ze - ke;
+              if (Te < 0) {
+                let ee = -Te;
+                const He = ie.e + Te;
+                He < 0 && Je(4), ee > qe && (ee = qe);
+                for (let ye = 0; ye < ee; ++ye) we[Ze + ye] = ie.w[He + ye];
+                Ze += ee, qe -= ee, Te = 0
               }
-              for (let BB = 0; BB < lB; ++BB) dB[kB + BB] = dB[qB + BB];
-              kB += lB
+              for (let ee = 0; ee < qe; ++ee) we[Ze + ee] = we[Te + ee];
+              Ze += qe
             }
-            if (kB != KB)
-              for (; KB < dB.length;) dB[kB++] = dB[KB++];
-            else kB = dB.length;
-            DB ? OB.y += kB : dB = oB(dB, 0, kB)
-          } else if (DB) {
-            if (OB.y += UB, KB)
-              for (let BB = 0; BB < UB; ++BB) dB[BB] = dB[KB + BB]
-          } else KB && (dB = oB(dB, KB));
-          return OB.b = NB, dB
+            if (Ze != De)
+              for (; De < we.length;) we[Ze++] = we[De++];
+            else Ze = we.length;
+            be ? ie.y += Ze : we = Ke(we, 0, Ze)
+          } else if (be) {
+            if (ie.y += We, De)
+              for (let ee = 0; ee < We; ++ee) we[ee] = we[De + ee]
+          } else De && (we = Ke(we, De));
+          return ie.b = Xe, we
         }
-        JB(2)
+        Je(2)
       }
     };
-  class fB {
+  class te {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    sJ = 0;
+    lJ = 0;
     needed = 18;
     size;
-    constructor(BB) {
-      this.size = BB
+    constructor(ee) {
+      this.size = ee
     }
-    push(BB) {
+    push(ee) {
       if (this.done) return;
-      if (this.parts.push(BB), this.sJ += BB.length, this.sJ < this.needed) return;
-      const OB = ((BB, OB) => {
-        if (1 == BB.length) return BB[0];
-        const YB = new GB(OB);
-        for (let GB = 0, DB = 0; GB < BB.length; ++GB) {
-          const OB = BB[GB];
-          YB.set(OB, DB), DB += OB.length
+      if (this.parts.push(ee), this.lJ += ee.length, this.lJ < this.needed) return;
+      const ie = ((ee, ie) => {
+        if (1 == ee.length) return ee[0];
+        const ye = new He(ie);
+        for (let He = 0, be = 0; He < ee.length; ++He) {
+          const ie = ee[He];
+          ye.set(ie, be), be += ie.length
         }
-        return YB
-      })(this.parts, this.sJ);
-      let YB = this.st;
-      if (!YB) {
-        const BB = PB(OB, new GB(0));
-        "number" != typeof BB && BB.u === this.size || JB(0, `not a zstd frame of ${this.size} bytes`), YB = this.st = PB(OB, 1), YB.e = 0, this.output = YB.w
+        return ye
+      })(this.parts, this.lJ);
+      let ye = this.st;
+      if (!ye) {
+        const ee = Re(ie, new He(0));
+        "number" != typeof ee && ee.u === this.size || Je(0, `not a zstd frame of ${this.size} bytes`), ye = this.st = Re(ie, 1), ye.e = 0, this.output = ye.w
       }
       for (;;) {
-        const BB = OB.length - YB.b;
-        if (BB < 3) {
+        const ee = ie.length - ye.b;
+        if (ee < 3) {
           this.needed = 3;
           break
         }
-        const GB = OB[YB.b],
-          DB = GB >> 1 & 3;
-        3 == DB && JB(2);
-        const QB = GB >> 3 | OB[YB.b + 1] << 5 | OB[YB.b + 2] << 13;
-        QB > YB.m && JB(0), 0 == DB && YB.y + QB > YB.u && JB(0);
-        const oB = 1 == DB ? 4 : 3 + QB;
-        if (BB < oB) {
-          this.needed = oB;
+        const He = ie[ye.b],
+          be = He >> 1 & 3;
+        3 == be && Je(2);
+        const Me = He >> 3 | ie[ye.b + 1] << 5 | ie[ye.b + 2] << 13;
+        Me > ye.m && Je(0), 0 == be && ye.y + Me > ye.u && Je(0);
+        const Ke = 1 == be ? 4 : 3 + Me;
+        if (ee < Ke) {
+          this.needed = Ke;
           break
         }
-        if (UB(OB, YB, YB.w) || JB(5), YB.e = YB.y, (YB.y > YB.u || YB.l && YB.y != YB.u) && JB(0), YB.l) {
+        if (We(ie, ye, ye.w) || Je(5), ye.e = ye.y, (ye.y > ye.u || ye.l && ye.y != ye.u) && Je(0), ye.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = YB.y;
-      const DB = OB.subarray(YB.b);
-      this.parts = DB.length ? [DB] : [], this.sJ = DB.length, YB.b = 0
+      this.decoded = ye.y;
+      const be = ie.subarray(ye.b);
+      this.parts = be.length ? [be] : [], this.lJ = be.length, ye.b = 0
     }
   }
-  class kB {
+  class Ze {
     post;
     href = "";
-    yP = null;
+    kR = null;
     given = 0;
     stopped = !1;
-    constructor(BB) {
-      this.post = BB
+    constructor(ee) {
+      this.post = ee
     }
-    take(OB) {
+    take(ie) {
       if (!this.stopped) try {
-        this.answer(OB)
-      } catch (GB) {
-        this.stop(GB instanceof RangeError ? `out of memory decoding ${this.href}: ${BB(GB)}` : `${this.href} did not decode: ${BB(GB)}`)
+        this.answer(ie)
+      } catch (He) {
+        this.stop(He instanceof RangeError ? `out of memory decoding ${this.href}: ${ee(He)}` : `${this.href} did not decode: ${ee(He)}`)
       }
     }
-    answer(BB) {
-      if (null === this.yP) {
-        const [OB, GB] = BB;
-        return this.href = OB, void(this.yP = new fB(GB))
+    answer(ee) {
+      if (null === this.kR) {
+        const [ie, He] = ee;
+        return this.href = ie, void(this.kR = new te(He))
       }
-      if (null === BB) return void this.stop(`${this.href} ended before its module did`);
-      const OB = this.yP;
-      OB.push(BB);
+      if (null === ee) return void this.stop(`${this.href} ended before its module did`);
+      const ie = this.kR;
+      ie.push(ee);
       const {
-        output: GB,
-        decoded: YB
-      } = OB;
-      if (null !== GB && YB > this.given) {
-        const BB = GB.slice(this.given, YB).buffer;
-        this.given = YB, this.post(BB, [BB])
+        output: He,
+        decoded: ye
+      } = ie;
+      if (null !== He && ye > this.given) {
+        const ee = He.slice(this.given, ye).buffer;
+        this.given = ye, this.post(ee, [ee])
       }
-      OB.done && this.stop(!0)
+      ie.done && this.stop(!0)
     }
-    stop(BB) {
-      this.stopped = !0, this.post(BB)
+    stop(ee) {
+      this.stopped = !0, this.post(ee)
     }
   }
-  const dB = globalThis.WorkerGlobalScope;
-  if (void 0 !== dB && globalThis instanceof dB) {
-    const BB = globalThis,
-      OB = new kB((function(OB) {
-        let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        BB.postMessage(OB, GB)
+  const we = globalThis.WorkerGlobalScope;
+  if (void 0 !== we && globalThis instanceof we) {
+    const ee = globalThis,
+      ie = new Ze((function(ie) {
+        let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        ee.postMessage(ie, He)
       }));
-    BB.addEventListener("message", (BB => {
+    ee.addEventListener("message", (ee => {
       let {
-        data: GB
-      } = BB;
-      OB.take(GB)
+        data: He
+      } = ee;
+      ie.take(He)
     }))
   }
 })();

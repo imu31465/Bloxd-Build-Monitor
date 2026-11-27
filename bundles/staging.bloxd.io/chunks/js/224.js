@@ -1,135 +1,135 @@
 export const id = 224;
 export const ids = [224];
 export const modules = {
-  37065: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => GO
+  37181: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => Hi
     });
-    var YB = GB(56);
-    const DB = "newPlayerDeal",
-      QB = 36e5,
-      oB = [4, 12, 20, 20, 30];
-    const jB = 12 * QB;
+    var ye = He(59);
+    const be = "newPlayerDeal",
+      Me = 36e5,
+      Ke = [4, 12, 20, 20, 30];
+    const Ue = 12 * Me;
 
-    function yB(BB) {
-      return BB - jB
+    function Fe(ee) {
+      return ee - Ue
     }
 
-    function JB(BB, OB, GB) {
-      const YB = yB(GB);
-      return OB >= YB && OB < GB && (null === BB.lastShownAt || BB.lastShownAt < YB)
+    function Je(ee, ie, He) {
+      const ye = Fe(He);
+      return ie >= ye && ie < He && (null === ee.lastShownAt || ee.lastShownAt < ye)
     }
 
-    function MB(BB, OB) {
+    function oe(ee, ie) {
       const {
-        arrival: GB,
-        now: YB,
-        endsAt: DB,
-        playedOnDevice: jB
-      } = OB;
-      return !(YB >= DB || !jB) && (!(!JB(BB, YB, DB) && 0 !== BB.shownCount && null !== BB.lastShownAt) || "open" === GB && YB - BB.lastShownAt >= (yB = BB.shownCount, oB[Math.min(Math.max(yB, 1), oB.length) - 1] * QB));
-      var yB
+        arrival: He,
+        now: ye,
+        endsAt: be,
+        playedOnDevice: Ue
+      } = ie;
+      return !(ye >= be || !Ue) && (!(!Je(ee, ye, be) && 0 !== ee.shownCount && null !== ee.lastShownAt) || "open" === He && ye - ee.lastShownAt >= (Fe = ee.shownCount, Ke[Math.min(Math.max(Fe, 1), Ke.length) - 1] * Me));
+      var Fe
     }
-    var PB = GB(331),
-      zB = GB(1516),
-      lB = GB(16),
-      pB = GB(2444),
-      qB = GB(3393),
-      ZB = GB(3396),
-      NB = GB(2042),
-      RB = GB(1186),
-      WB = GB(1121);
-    var AB = GB(1400),
-      VB = GB(31),
-      SB = GB(677),
-      nB = GB(2756),
-      UB = GB(1403),
-      fB = GB(2763),
-      kB = GB(2437),
-      dB = GB(1112),
-      KB = GB(2807),
-      uB = GB(2814),
-      mB = GB(3435),
-      IB = GB(1175),
-      FB = GB(1485),
-      iB = GB(3458),
-      LB = GB(34838),
-      gB = GB(2822),
-      rB = GB(34845),
-      XB = GB(1282);
+    var Re = He(335),
+      ke = He(1464),
+      qe = He(18),
+      fe = He(2330),
+      Te = He(3285),
+      pe = He(3293),
+      Xe = He(2009),
+      ze = He(1141),
+      Be = He(1083);
+    var Ee = He(1340),
+      ge = He(35),
+      Oe = He(660),
+      de = He(2648),
+      We = He(1342),
+      te = He(2656),
+      Ze = He(2326),
+      we = He(1075),
+      De = He(2694),
+      Pe = He(2697),
+      Ae = He(3335),
+      Ye = He(1127),
+      Ve = He(1438),
+      ae = He(3355),
+      ce = He(34945),
+      xe = He(2703),
+      Le = He(34951),
+      Ce = He(1228);
 
-    function wB(BB) {
+    function ve(ee) {
       let {
-        shownView: OB,
-        close: GB
-      } = BB;
+        shownView: ie,
+        close: He
+      } = ee;
       const {
-        t: DB
-      } = (0, IB.H)(), QB = (0, KB.S)(), {
-        purchaseUnderWay: oB,
-        notice: jB,
-        needsLogin: yB,
-        buyPack: JB
-      } = (0, rB.c)("popup", ((BB, OB) => {
-        GB(!1), (0, mB.e)(BB, OB)
-      })), MB = null === QB;
-      (0, YB.useEffect)((() => {
-        MB && GB(!1)
-      }), [MB, GB]);
-      const PB = null !== QB && void 0 !== QB ? QB : OB;
-      return (0, XB.jsxs)("div", {
+        t: be
+      } = (0, Ye.v)(), Me = (0, De.M)(), {
+        purchaseUnderWay: Ke,
+        notice: Ue,
+        needsLogin: Fe,
+        buyPack: Je
+      } = (0, Le.h)("popup", ((ee, ie) => {
+        He(!1), (0, Ae.b)(ee, ie)
+      })), oe = null === Me;
+      (0, ye.useEffect)((() => {
+        oe && He(!1)
+      }), [oe, He]);
+      const Re = null !== Me && void 0 !== Me ? Me : ie;
+      return (0, Ce.jsxs)("div", {
         className: "NewPlayerDealPopup",
-        children: [(0, XB.jsx)("div", {
+        children: [(0, Ce.jsx)("div", {
           className: "NewPlayerDealPopupTitle",
-          children: DB("newPlayerDeal:title")
-        }), (0, XB.jsx)("div", {
+          children: be("newPlayerDeal:title")
+        }), (0, Ce.jsx)("div", {
           className: "NewPlayerDealPopupSub",
-          children: DB("newPlayerDeal:samePrice")
-        }), (0, XB.jsx)(LB.d, {
+          children: be("newPlayerDeal:samePrice")
+        }), (0, Ce.jsx)(ce.d, {
           className: "NewPlayerDealClockBig",
-          endsAt: PB.endsAt
-        }), (0, XB.jsx)(LB.g, {
-          view: PB,
-          needsLogin: yB,
-          busy: oB,
+          endsAt: Re.endsAt
+        }), (0, Ce.jsx)(ce.g, {
+          view: Re,
+          needsLogin: Fe,
+          busy: Ke,
           highlight: null,
-          onBuy: BB => {
-            JB(PB, BB)
+          onBuy: ee => {
+            Je(Re, ee)
           }
-        }), (0, XB.jsx)(iB.i, {
-          notice: jB,
+        }), (0, Ce.jsx)(ae.i, {
+          notice: Ue,
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, XB.jsx)(iB.d, {
+        }), (0, Ce.jsx)(ae.d, {
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, XB.jsx)(FB.f, {
+        }), (0, Ce.jsx)(Ve.c, {
           className: "NewPlayerDealNoThanks",
           onClick: () => {
-            GB(!0)
+            He(!0)
           },
-          children: DB("newPlayerDeal:noThanks")
+          children: be("newPlayerDeal:noThanks")
         })]
       })
     }
 
-    function EB(BB) {
+    function ue(ee) {
       let {
-        arm: OB,
-        children: GB
-      } = BB;
-      return (0, YB.useEffect)((() => {
-        (0, KB.I)(!0)
-      }), []), (0, KB.T)(OB, "popup"), GB
+        arm: ie,
+        children: He
+      } = ee;
+      return (0, ye.useEffect)((() => {
+        (0, De.G)(!0)
+      }), []), (0, De.O)(ie, "popup"), He
     }
 
-    function cB(BB) {
-      let OB = null;
-      AB.NotificationProvider.showCustomPopup({
-        body: GB => (0, XB.jsx)(EB, {
-          arm: BB.arm,
-          children: (0, XB.jsx)(wB, {
-            shownView: BB,
-            close: BB => {
-              OB ??= BB, GB()
+    function me(ee) {
+      let ie = null;
+      Ee.NotificationProvider.showCustomPopup({
+        body: He => (0, Ce.jsx)(ue, {
+          arm: ee.arm,
+          children: (0, Ce.jsx)(ve, {
+            shownView: ee,
+            close: ee => {
+              ie ??= ee, He()
             }
           })
         }),
@@ -137,477 +137,477 @@ export const modules = {
         middleScreenPopupClassName: "NewPlayerDealPopupPanel",
         disableExitButton: !0,
         unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((GB => {
-        (0, KB.I)(!1), !1 !== OB && "notificationTornDown" !== GB && (0, KB.D)("new_player_deal.close", (0, gB.b)(BB.arm, "popup"))
+      }).getResult().then((He => {
+        (0, De.G)(!1), !1 !== ie && "notificationTornDown" !== He && (0, De.z)("new_player_deal.close", (0, xe.b)(ee.arm, "popup"))
       }))
     }
-    const hB = 2500,
-      aB = 6e4;
-    const eB = 500,
-      TB = 6e4;
+    const le = 2500,
+      Se = 6e4;
+    const ne = 500,
+      je = 6e4;
 
-    function bB(BB) {
-      const OB = Date.now() + TB;
-      return new Promise((GB => {
-        const YB = () => {
-          BB() ? (0, fB.g)() || AB.NotificationProvider.hasPopup() || (0, UB.k)() || (0, KB.q)() || null !== lB.c.get("openEverythingMenuName") ? Date.now() > OB ? GB(!1) : setTimeout(YB, eB) : GB(!0) : GB(!1)
+    function se(ee) {
+      const ie = Date.now() + je;
+      return new Promise((He => {
+        const ye = () => {
+          ee() ? (0, te.d)() || Ee.NotificationProvider.hasPopup() || (0, We.l)() || (0, De.s)() || null !== qe.e.get("openEverythingMenuName") ? Date.now() > ie ? He(!1) : setTimeout(ye, ne) : He(!0) : He(!1)
         };
-        YB()
+        ye()
       }))
     }
-    const CB = "newPlayerDealPointerDeferred_";
-    let HB = !1,
-      vB = null;
+    const Ie = "newPlayerDealPointerDeferred_";
+    let he = !1,
+      Ne = null;
 
-    function sB(BB, OB) {
-      var GB;
-      return (null === (GB = vB) || void 0 === GB ? void 0 : GB.accountId) === OB && vB.shownCount === BB.shownCount
+    function Ge(ee, ie) {
+      var He;
+      return (null === (He = Ne) || void 0 === He ? void 0 : He.accountId) === ie && Ne.shownCount === ee.shownCount
     }
 
-    function xB(BB, OB, GB) {
-      return !!sB(OB, GB) && (vB = null, (0, KB.v)(GB), cB(BB), !0)
+    function re(ee, ie, He) {
+      return !!Ge(ie, He) && (Ne = null, (0, De.v)(He), me(ee), !0)
     }
-    async function tB(BB, OB, GB, YB) {
-      if (HB) return !1;
-      let DB;
-      HB = !0;
+    async function Qe(ee, ie, He, ye) {
+      if (he) return !1;
+      let be;
+      he = !0;
       try {
-        DB = await async function(BB) {
+        be = await async function(ee) {
           const {
-            newPlayerDeal: OB,
-            counted: GB
-          } = await (0, WB.postJsonWithMetricsCookiesAndJsonResponse)(`${RB.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: BB
+            newPlayerDeal: ie,
+            counted: He
+          } = await (0, Be.postJsonWithMetricsCookiesAndJsonResponse)(`${ze.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
+            shownCount: ee
           }, {
             retries: 1
           });
           return {
-            newPlayerDeal: OB,
-            counted: !0 === GB
+            newPlayerDeal: ie,
+            counted: !0 === He
           }
-        }(OB.shownCount)
-      } catch (QB) {
-        return console.error("New player deal: counting a showing of its popup failed", QB), !1
+        }(ie.shownCount)
+      } catch (Me) {
+        return console.error("New player deal: counting a showing of its popup failed", Me), !1
       } finally {
-        HB = !1
+        he = !1
       }
-      return (0, KB.M)(GB, DB.newPlayerDeal), DB.counted && null !== DB.newPlayerDeal && (vB = {
-        accountId: YB,
-        shownCount: DB.newPlayerDeal.shownCount
-      }, "landingPage" === lB.c.get("gameState") && xB(BB, DB.newPlayerDeal, YB)), !0
+      return (0, De.H)(He, be.newPlayerDeal), be.counted && null !== be.newPlayerDeal && (Ne = {
+        accountId: ye,
+        shownCount: be.newPlayerDeal.shownCount
+      }, "landingPage" === qe.e.get("gameState") && re(ee, be.newPlayerDeal, ye)), !0
     }
-    let BO = null;
+    let ei = null;
 
-    function OO(BB, OB, GB, DB, QB) {
-      var oB;
+    function ii(ee, ie, He, be, Me) {
+      var Ke;
       const {
-        gameState: jB
-      } = (0, lB.o)(["gameState"]), zB = "landingPage" === jB, {
-        pointing: pB
-      } = (0, nB.h)(), qB = (0, YB.useRef)(pB);
-      qB.current = pB;
-      const ZB = (0, YB.useRef)(BB);
-      ZB.current = BB;
-      const RB = (0, YB.useRef)(OB);
-      RB.current = OB;
-      const WB = (0, YB.useRef)(GB);
-      WB.current = GB;
-      const [AB, UB] = (0, YB.useState)(null), fB = (0, YB.useRef)(0), kB = (0, YB.useRef)(0), dB = (0, YB.useRef)(!1), KB = (0, YB.useCallback)((BB => {
-        "open" === function(BB) {
-          const OB = BB ? (0, SB.getVisitSessionId)() : (0, SB.peekVisitSessionId)(),
-            GB = null !== OB && OB === BO ? "return" : "open";
-          return BO = OB, GB
-        }(BB) && (dB.current = !0), fB.current++, UB({
-          seq: fB.current,
-          kind: dB.current ? "open" : "return"
+        gameState: Ue
+      } = (0, qe.m)(["gameState"]), ke = "landingPage" === Ue, {
+        pointing: fe
+      } = (0, de.j)(), Te = (0, ye.useRef)(fe);
+      Te.current = fe;
+      const pe = (0, ye.useRef)(ee);
+      pe.current = ee;
+      const ze = (0, ye.useRef)(ie);
+      ze.current = ie;
+      const Be = (0, ye.useRef)(He);
+      Be.current = He;
+      const [Ee, We] = (0, ye.useState)(null), te = (0, ye.useRef)(0), Ze = (0, ye.useRef)(0), we = (0, ye.useRef)(!1), De = (0, ye.useCallback)((ee => {
+        "open" === function(ee) {
+          const ie = ee ? (0, Oe.getVisitSessionId)() : (0, Oe.peekVisitSessionId)(),
+            He = null !== ie && ie === ei ? "return" : "open";
+          return ei = ie, He
+        }(ee) && (we.current = !0), te.current++, We({
+          seq: te.current,
+          kind: we.current ? "open" : "return"
         })
       }), []);
-      (0, YB.useEffect)((() => {
-        if (!zB) return void UB(null);
-        KB(!0);
-        const BB = () => {
-          "visible" === document.visibilityState && KB(!0)
+      (0, ye.useEffect)((() => {
+        if (!ke) return void We(null);
+        De(!0);
+        const ee = () => {
+          "visible" === document.visibilityState && De(!0)
         };
-        return document.addEventListener("visibilitychange", BB), () => {
-          document.removeEventListener("visibilitychange", BB)
+        return document.addEventListener("visibilitychange", ee), () => {
+          document.removeEventListener("visibilitychange", ee)
         }
-      }), [zB, KB]);
-      const uB = null !== (oB = null === BB || void 0 === BB ? void 0 : BB.endsAt) && void 0 !== oB ? oB : null;
-      (0, YB.useEffect)((() => {
-        if (!zB || null === uB) return;
-        const BB = yB(uB) - Date.now();
-        if (BB <= 0 || BB > NB.b) return;
-        const OB = setTimeout((() => {
-          KB(!1)
-        }), BB);
+      }), [ke, De]);
+      const Pe = null !== (Ke = null === ee || void 0 === ee ? void 0 : ee.endsAt) && void 0 !== Ke ? Ke : null;
+      (0, ye.useEffect)((() => {
+        if (!ke || null === Pe) return;
+        const ee = Fe(Pe) - Date.now();
+        if (ee <= 0 || ee > Xe.c) return;
+        const ie = setTimeout((() => {
+          De(!1)
+        }), ee);
         return () => {
-          clearTimeout(OB)
+          clearTimeout(ie)
         }
-      }), [zB, uB, KB]);
-      const mB = null !== BB && null !== DB && null === QB;
-      (0, YB.useEffect)((() => {
-        if (null === AB || !mB || kB.current >= AB.seq) return;
-        const BB = () => fB.current === AB.seq && "landingPage" === lB.c.get("gameState"),
-          OB = setTimeout((() => {
-            const OB = ZB.current,
-              GB = RB.current;
-            if (null === OB || null === GB || !BB()) return;
-            kB.current = AB.seq;
-            const YB = Date.now(),
-              QB = sB(GB, DB);
-            if (!(QB || MB(GB, {
-                arrival: AB.kind,
-                now: YB,
-                endsAt: OB.endsAt,
-                playedOnDevice: VB.g.getItem(PB.Mb) > 0
-              }))) return void(dB.current = !1);
-            const oB = JB(GB, YB, OB.endsAt);
-            bB(BB).then((async BB => {
-              const OB = ZB.current;
-              BB && null !== OB && RB.current === GB && (!qB.current || oB || function(BB, OB) {
-                return VB.g.getItem(CB + BB) === OB
-              }(DB, GB.shownCount) ? QB ? xB(OB, GB, DB) && (dB.current = !1) : await tB(OB, GB, WB.current, DB) && (dB.current = !1) : function(BB, OB) {
-                VB.g.setItem(CB + BB, OB)
-              }(DB, GB.shownCount))
+      }), [ke, Pe, De]);
+      const Ae = null !== ee && null !== be && null === Me;
+      (0, ye.useEffect)((() => {
+        if (null === Ee || !Ae || Ze.current >= Ee.seq) return;
+        const ee = () => te.current === Ee.seq && "landingPage" === qe.e.get("gameState"),
+          ie = setTimeout((() => {
+            const ie = pe.current,
+              He = ze.current;
+            if (null === ie || null === He || !ee()) return;
+            Ze.current = Ee.seq;
+            const ye = Date.now(),
+              Me = Ge(He, be);
+            if (!(Me || oe(He, {
+                arrival: Ee.kind,
+                now: ye,
+                endsAt: ie.endsAt,
+                playedOnDevice: ge.i.getItem(Re.Ob) > 0
+              }))) return void(we.current = !1);
+            const Ke = Je(He, ye, ie.endsAt);
+            se(ee).then((async ee => {
+              const ie = pe.current;
+              ee && null !== ie && ze.current === He && (!Te.current || Ke || function(ee, ie) {
+                return ge.i.getItem(Ie + ee) === ie
+              }(be, He.shownCount) ? Me ? re(ie, He, be) && (we.current = !1) : await Qe(ie, He, Be.current, be) && (we.current = !1) : function(ee, ie) {
+                ge.i.setItem(Ie + ee, ie)
+              }(be, He.shownCount))
             }))
-          }), hB);
+          }), le);
         return () => {
-          clearTimeout(OB)
+          clearTimeout(ie)
         }
-      }), [AB, mB, DB])
+      }), [Ee, Ae, be])
     }
 
-    function GO() {
+    function Hi() {
       const {
-        userContext: BB
-      } = (0, dB.d)(), OB = (0, pB.usePurchasesAllowed)(), [GB, QB] = (0, YB.useState)(uB.j);
-      (0, YB.useEffect)((() => (QB((0, uB.j)()), (0, uB.l)(QB))), []);
-      const oB = (0, KB.c)(BB);
-      ! function(BB, OB, GB) {
-        const [QB, oB] = (0, YB.useState)(0);
-        (0, YB.useEffect)((() => {
-          if (!OB || null === BB) return;
-          if (null !== GB) return void(0, KB.G)(BB, (0, uB.e)());
-          if (null !== (0, KB.h)(BB)) return;
-          let YB, QB = !1;
-          return (0, ZB.getBillingClient)().getOfferings(DB).then((OB => {
+        userContext: ee
+      } = (0, we.b)(), ie = (0, fe.usePurchasesAllowed)(), [He, Me] = (0, ye.useState)(Pe.k);
+      (0, ye.useEffect)((() => (Me((0, Pe.k)()), (0, Pe.m)(Me))), []);
+      const Ke = (0, De.c)(ee);
+      ! function(ee, ie, He) {
+        const [Me, Ke] = (0, ye.useState)(0);
+        (0, ye.useEffect)((() => {
+          if (!ie || null === ee) return;
+          if (null !== He) return void(0, De.D)(ee, (0, Pe.d)());
+          if (null !== (0, De.h)(ee)) return;
+          let ye, Me = !1;
+          return (0, pe.getBillingClient)().getOfferings(be).then((ie => {
             let {
-              offering: GB
-            } = OB;
-            (0, KB.G)(BB, null === GB ? [] : GB.packages.filter(qB.isPricedPackage))
-          }), (BB => {
-            console.error("New player deal: loading its prices failed", BB), QB || (YB = setTimeout((() => {
-              oB((BB => BB + 1))
-            }), aB))
+              offering: He
+            } = ie;
+            (0, De.D)(ee, null === He ? [] : He.packages.filter(Te.isPricedPackage))
+          }), (ee => {
+            console.error("New player deal: loading its prices failed", ee), Me || (ye = setTimeout((() => {
+              Ke((ee => ee + 1))
+            }), Se))
           })), () => {
-            QB = !0, clearTimeout(YB)
+            Me = !0, clearTimeout(ye)
           }
-        }), [BB, OB, GB, QB])
-      }(oB, null !== (0, KB.i)(BB) && (OB || null !== GB), GB);
-      const jB = (0, KB.S)();
-      return OO(jB, (0, KB.i)(BB), BB, oB, GB),
+        }), [ee, ie, He, Me])
+      }(Ke, null !== (0, De.l)(ee) && (ie || null !== He), He);
+      const Ue = (0, De.M)();
+      return ii(Ue, (0, De.l)(ee), ee, Ke, He),
         function() {
           const {
-            userContext: BB
-          } = (0, dB.d)(), {
-            gameState: OB
-          } = (0, lB.o)(["gameState"]);
-          (0, YB.useEffect)((() => {
-            if ("landingPage" !== OB || !BB.isLoggedIn() && !(0, pB.guestsMayBuy)()) return;
-            const GB = (0, KB.g)(BB),
-              YB = (0, kB.B)((BB => GB.includes(BB.item)));
-            null !== YB && ((0, zB.reportAnalyticsClick)({
+            userContext: ee
+          } = (0, we.b)(), {
+            gameState: ie
+          } = (0, qe.m)(["gameState"]);
+          (0, ye.useEffect)((() => {
+            if ("landingPage" !== ie || !ee.isLoggedIn() && !(0, fe.guestsMayBuy)()) return;
+            const He = (0, De.f)(ee),
+              ye = (0, Ze.F)((ee => He.includes(ee.item)));
+            null !== ye && ((0, ke.reportAnalyticsClick)({
               id: "store.login_resume",
-              value: YB.item
-            }), (0, kB.p)({
+              value: ye.item
+            }), (0, Ze.r)({
               mode: "self",
               source: "loginResume",
-              highlight: YB.item
+              highlight: ye.item
             }))
-          }), [BB, OB])
+          }), [ee, ie])
         }(),
-        function(BB, OB, GB) {
-          const DB = (0, YB.useRef)(null);
-          (0, YB.useEffect)((() => {
-            if (null === GB || null === BB || null === OB || DB.current === GB) return;
-            DB.current = GB;
-            const YB = BB.packs[0].pack;
-            switch (GB.show) {
+        function(ee, ie, He) {
+          const be = (0, ye.useRef)(null);
+          (0, ye.useEffect)((() => {
+            if (null === He || null === ee || null === ie || be.current === He) return;
+            be.current = He;
+            const ye = ee.packs[0].pack;
+            switch (He.show) {
               case "popup":
-                (0, KB.v)(OB), cB(BB);
+                (0, De.v)(ie), me(ee);
                 break;
               case "store":
-                (0, kB.p)({
+                (0, Ze.r)({
                   mode: "self",
                   source: "newPlayerDeal"
                 });
                 break;
               case "resume":
-                (0, kB.p)({
+                (0, Ze.r)({
                   mode: "self",
                   source: "loginResume",
-                  highlight: YB.packageId
+                  highlight: ye.packageId
                 });
                 break;
               case "bought":
-                (0, kB.p)({
+                (0, Ze.r)({
                   mode: "self",
                   source: "newPlayerDeal"
-                }), (0, KB.r)(OB), (0, rB.b)(YB.gems);
+                }), (0, De.t)(ie), (0, Le.d)(ye.gems);
                 break;
               case "gift":
-                (0, kB.p)({
+                (0, Ze.r)({
                   mode: "gift",
                   source: "newPlayerDeal",
                   giftRecipientName: "Friend"
                 })
             }
-          }), [GB, BB, OB])
-        }(jB, oB, GB), null
+          }), [He, ee, ie])
+        }(Ue, Ke, He), null
     }
   },
-  34838: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => pB,
-      g: () => ZB
+  34945: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => fe,
+      g: () => pe
     });
-    GB(34842);
-    var YB = GB(56),
-      DB = GB(1090),
-      QB = GB.n(DB),
-      oB = GB(1175),
-      jB = GB(1485),
-      yB = GB(2831),
-      JB = GB(1383),
-      MB = GB(2598),
-      PB = GB(3451),
-      zB = GB(2454),
-      lB = GB(1282);
+    He(34947);
+    var ye = He(59),
+      be = He(1053),
+      Me = He.n(be),
+      Ke = He(1127),
+      Ue = He(1438),
+      Fe = He(2714),
+      Je = He(1323),
+      oe = He(2479),
+      Re = He(3349),
+      ke = He(2337),
+      qe = He(1228);
 
-    function pB(BB) {
+    function fe(ee) {
       let {
-        endsAt: OB,
-        className: GB
-      } = BB;
-      return (0, lB.jsxs)("span", {
-        className: QB()("NewPlayerDealClock", GB),
-        children: [(0, lB.jsx)(JB.b, {
+        endsAt: ie,
+        className: He
+      } = ee;
+      return (0, qe.jsxs)("span", {
+        className: Me()("NewPlayerDealClock", He),
+        children: [(0, qe.jsx)(Je.e, {
           name: "hourglass"
-        }), (0, lB.jsx)(yB.e, {
-          toTime: OB
+        }), (0, qe.jsx)(Fe.f, {
+          toTime: ie
         })]
       })
     }
 
-    function qB(BB) {
+    function Te(ee) {
       let {
-        offered: OB,
-        needsLogin: GB,
-        busy: YB,
-        highlight: DB,
-        onBuy: yB
-      } = BB;
+        offered: ie,
+        needsLogin: He,
+        busy: ye,
+        highlight: be,
+        onBuy: Fe
+      } = ee;
       const {
-        t: JB
-      } = (0, oB.H)(), {
-        pack: pB
-      } = OB, qB = (0, PB.g)(OB.package);
-      return (0, lB.jsxs)("div", {
-        className: QB()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: DB
+        t: Je
+      } = (0, Ke.v)(), {
+        pack: fe
+      } = ie, Te = (0, Re.h)(ie.package);
+      return (0, qe.jsxs)("div", {
+        className: Me()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: be
         }),
-        children: [(0, lB.jsxs)("div", {
+        children: [(0, qe.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, lB.jsx)("img", {
-            src: zB.e[OB.tier],
+          children: [(0, qe.jsx)("img", {
+            src: ke.c[ie.tier],
             alt: "",
             draggable: !1
-          }), (0, lB.jsx)("span", {
+          }), (0, qe.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: JB("newPlayerDeal:tag")
+            children: Je("newPlayerDeal:tag")
           })]
-        }), (0, lB.jsx)("div", {
+        }), (0, qe.jsx)("div", {
           className: "NewPlayerDealPackText",
-          children: (0, lB.jsx)(MB.b, {
+          children: (0, qe.jsx)(oe.d, {
             className: "NewPlayerDealPackAmount",
-            amount: pB.gems
+            amount: fe.gems
           })
-        }), (0, lB.jsx)(jB.q, {
+        }), (0, qe.jsx)(Ue.m, {
           className: "NewPlayerDealBuy",
-          loading: YB,
-          onClick: yB,
-          ariaLabel: JB("newPlayerDeal:buyLabel", {
-            amount: pB.gems.toLocaleString(),
-            price: qB
+          loading: ye,
+          onClick: Fe,
+          ariaLabel: Je("newPlayerDeal:buyLabel", {
+            amount: fe.gems.toLocaleString(),
+            price: Te
           }),
-          children: JB(GB ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: qB
+          children: Je(He ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: Te
           })
         })]
       })
     }
 
-    function ZB(BB) {
+    function pe(ee) {
       let {
-        view: OB,
-        needsLogin: GB,
-        busy: DB,
-        highlight: jB,
-        onBuy: yB
-      } = BB;
+        view: ie,
+        needsLogin: He,
+        busy: be,
+        highlight: Ue,
+        onBuy: Fe
+      } = ee;
       const {
-        t: JB
-      } = (0, oB.H)();
-      return (0, lB.jsxs)("div", {
-        className: QB()("NewPlayerDealPacks", OB.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [OB.packs.map(((BB, OB) => (0, lB.jsxs)(YB.Fragment, {
-          children: [OB > 0 && (0, lB.jsx)("div", {
+        t: Je
+      } = (0, Ke.v)();
+      return (0, qe.jsxs)("div", {
+        className: Me()("NewPlayerDealPacks", ie.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [ie.packs.map(((ee, ie) => (0, qe.jsxs)(ye.Fragment, {
+          children: [ie > 0 && (0, qe.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, lB.jsx)("i", {})
-          }), (0, lB.jsx)(qB, {
-            offered: BB,
-            needsLogin: GB,
-            busy: DB,
-            highlight: jB === BB.pack.packageId,
+            children: (0, qe.jsx)("i", {})
+          }), (0, qe.jsx)(Te, {
+            offered: ee,
+            needsLogin: He,
+            busy: be,
+            highlight: Ue === ee.pack.packageId,
             onBuy: () => {
-              yB(BB)
+              Fe(ee)
             }
           })]
-        }, BB.pack.packageId))), (0, lB.jsx)("div", {
+        }, ee.pack.packageId))), (0, qe.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, lB.jsx)("span", {
+          children: (0, qe.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: JB("newPlayerDeal:limit")
+            children: Je("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  34845: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => fB,
-      c: () => dB
+  34951: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => te,
+      h: () => we
     });
-    GB(34842);
-    var YB = GB(3442),
-      DB = GB(1516),
-      QB = GB(2444),
-      oB = GB(3435),
-      jB = GB(3409),
-      yB = GB(3437),
-      JB = GB(3396),
-      MB = GB(1175),
-      PB = GB(1400),
-      zB = GB(1112),
-      lB = GB(1485),
-      pB = GB(1383),
-      qB = GB(2598),
-      ZB = GB(2965),
-      NB = GB(2807),
-      RB = GB(2814),
-      WB = GB(2822),
-      AB = GB(1282);
-    const VB = new yB.d(JB.getBillingClient, JB.addPurchaseRecordListener);
-    let SB = !1;
+    He(34947);
+    var ye = He(3345),
+      be = He(1464),
+      Me = He(2330),
+      Ke = He(3335),
+      Ue = He(3307),
+      Fe = He(3341),
+      Je = He(3293),
+      oe = He(1127),
+      Re = He(1340),
+      ke = He(1075),
+      qe = He(1438),
+      fe = He(1323),
+      Te = He(2479),
+      pe = He(2854),
+      Xe = He(2694),
+      ze = He(2697),
+      Be = He(2703),
+      Ee = He(1228);
+    const ge = new Fe.d(Je.getBillingClient, Je.addPurchaseRecordListener);
+    let Oe = !1;
 
-    function nB(BB, OB) {
-      null !== BB && (0, NB.p)(BB) || ((0, DB.reportAnalyticsClick)({
+    function de(ee, ie) {
+      null !== ee && (0, Xe.q)(ee) || ((0, be.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${OB.pack.packageId}`
-      }), null !== BB && (0, NB.r)(BB), fB(OB.pack.gems))
+        value: `self:${ie.pack.packageId}`
+      }), null !== ee && (0, Xe.t)(ee), te(ie.pack.gems))
     }
 
-    function UB(BB, OB, GB) {
-      const DB = (0, NB.c)(OB);
-      switch (BB.kind) {
+    function We(ee, ie, He) {
+      const be = (0, Xe.c)(ie);
+      switch (ee.kind) {
         case "completed":
-          nB(DB, GB);
+          de(be, He);
           break;
         case "pending":
-          QB = BB.intentId, oB = () => {
-            ZB.h.refresh(), nB(DB, GB)
-          }, SB || (SB = !0, VB.listen()), VB.follow(QB, oB);
+          Me = ee.intentId, Ke = () => {
+            pe.h.refresh(), de(be, He)
+          }, Oe || (Oe = !0, ge.listen()), ge.follow(Me, Ke);
           break;
         case "unknownPackage":
-          (0, NB.M)(OB, null);
+          (0, Xe.H)(ie, null);
           break;
         case "failed":
-          BB.errorKey === YB.e.newPlayerDealUnavailable && (0, NB.M)(OB, null)
+          ee.errorKey === ye.c.newPlayerDealUnavailable && (0, Xe.H)(ie, null)
       }
-      var QB, oB
+      var Me, Ke
     }
 
-    function fB(BB) {
-      PB.NotificationProvider.showCustomPopup({
-        body: OB => (0, AB.jsx)(kB, {
-          gems: BB,
-          close: OB
+    function te(ee) {
+      Re.NotificationProvider.showCustomPopup({
+        body: ie => (0, Ee.jsx)(Ze, {
+          gems: ee,
+          close: ie
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function kB(BB) {
+    function Ze(ee) {
       let {
-        gems: OB,
-        close: GB
-      } = BB;
+        gems: ie,
+        close: He
+      } = ee;
       const {
-        t: YB
-      } = (0, MB.H)();
-      return (0, AB.jsxs)("div", {
+        t: ye
+      } = (0, oe.v)();
+      return (0, Ee.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, AB.jsxs)("div", {
+        children: [(0, Ee.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, AB.jsx)(pB.b, {
+          children: [(0, Ee.jsx)(fe.e, {
             name: "circle-check"
-          }), (0, AB.jsx)(qB.b, {
-            amount: OB
-          }), (0, AB.jsx)("span", {
-            children: YB("newPlayerDeal:added")
+          }), (0, Ee.jsx)(Te.d, {
+            amount: ie
+          }), (0, Ee.jsx)("span", {
+            children: ye("newPlayerDeal:added")
           })]
-        }), (0, AB.jsx)(lB.q, {
+        }), (0, Ee.jsx)(qe.m, {
           className: "NewPlayerDealAddedOk",
-          onClick: GB,
-          children: YB("general:ok")
+          onClick: He,
+          children: ye("general:ok")
         })]
       })
     }
 
-    function dB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oB.e;
+    function we(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ke.b;
       const {
-        userContext: GB
-      } = (0, zB.d)(), {
-        purchaseUnderWay: YB,
-        notice: DB,
-        buy: yB
-      } = (0, jB.c)(OB), JB = (0, RB.j)(), MB = GB.mayBuy() || (0, QB.guestsMayBuy)(), PB = null === JB ? !MB : JB.guest && !GB.isLoggedIn();
+        userContext: He
+      } = (0, ke.b)(), {
+        purchaseUnderWay: ye,
+        notice: be,
+        buy: Fe
+      } = (0, Ue.c)(ie), Je = (0, ze.k)(), oe = He.mayBuy() || (0, Me.guestsMayBuy)(), Re = null === Je ? !oe : Je.guest && !He.isLoggedIn();
       return {
-        purchaseUnderWay: YB,
-        notice: DB,
-        needsLogin: PB,
-        buyPack: function(YB, DB) {
-          (0, NB.D)("new_player_deal.buy", (0, WB.b)(YB.arm, BB, DB.pack.packageId)), null === JB ? yB(function(BB) {
+        purchaseUnderWay: ye,
+        notice: be,
+        needsLogin: Re,
+        buyPack: function(ye, be) {
+          (0, Xe.z)("new_player_deal.buy", (0, Be.b)(ye.arm, ee, be.pack.packageId)), null === Je ? Fe(function(ee) {
             return {
-              sku: BB.pack.packageId,
-              tier: BB.tier,
-              amount: BB.pack.gems,
+              sku: ee.pack.packageId,
+              tier: ee.tier,
+              amount: ee.pack.gems,
               bonusPercent: 0,
-              package: BB.package
+              package: ee.package
             }
-          }(DB), null, {
+          }(be), null, {
             followPending: !1
-          }).then((BB => {
-            UB(BB, GB, DB)
-          })) : PB ? OB(DB.pack.packageId, null) : nB((0, NB.c)(GB), DB)
+          }).then((ee => {
+            We(ee, He, be)
+          })) : Re ? ie(be.pack.packageId, null) : de((0, Xe.c)(He), be)
         }
       }
     }
   },
-  34842: () => {}
+  34947: () => {}
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

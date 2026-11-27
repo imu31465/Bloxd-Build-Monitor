@@ -1,66 +1,66 @@
 export const id = 602;
 export const ids = [602];
 export const modules = {
-  44461: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => TO
+  44499: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => si
     });
-    var YB = GB(44467),
-      DB = GB(44500),
-      QB = GB(44508),
-      oB = GB(56),
-      jB = GB(70),
-      yB = GB(44523),
-      JB = GB(44529),
-      MB = GB(5253),
-      PB = GB(44535),
-      zB = GB(2e3),
-      lB = GB(44538),
-      pB = GB(44559),
-      qB = GB.n(pB),
-      ZB = GB(44514),
-      NB = GB(44517),
-      RB = GB(1375),
-      WB = GB(37541),
-      AB = GB(1238),
-      VB = GB(2646),
-      SB = GB(36977),
-      nB = GB(1480),
-      UB = GB(641),
-      fB = GB(1246),
-      kB = GB(44612),
-      dB = GB(44470),
-      KB = GB(44474),
-      uB = GB(2023),
-      mB = GB(4166),
-      IB = GB(25),
-      FB = GB(1121);
-    const iB = 1e4,
-      LB = 250,
-      gB = 250;
-    var rB = GB(44485);
-    const XB = 50,
-      wB = 100;
-    const EB = 2e3,
-      cB = dB.D.define(),
-      hB = dB.D.define(),
-      aB = dB.D.define();
-    class eB extends KB.o {
-      constructor(BB, OB, GB) {
-        super(), this.colour = BB, this.playerName = OB, this.showName = GB
+    var ye = He(44501),
+      be = He(44546),
+      Me = He(44548),
+      Ke = He(59),
+      Ue = He(77),
+      Fe = He(44567),
+      Je = He(44571),
+      oe = He(5239),
+      Re = He(44574),
+      ke = He(1956),
+      qe = He(44581),
+      fe = He(44595),
+      Te = He.n(fe),
+      pe = He(44551),
+      Xe = He(44559),
+      ze = He(1320),
+      Be = He(37675),
+      Ee = He(1189),
+      ge = He(2523),
+      Oe = He(37068),
+      de = He(1432),
+      We = He(610),
+      te = He(1192),
+      Ze = He(44643),
+      we = He(44509),
+      De = He(44518),
+      Pe = He(1983),
+      Ae = He(4142),
+      Ye = He(27),
+      Ve = He(1083);
+    const ae = 1e4,
+      ce = 250,
+      xe = 250;
+    var Le = He(44533);
+    const Ce = 50,
+      ve = 100;
+    const ue = 2e3,
+      me = we.K.define(),
+      le = we.K.define(),
+      Se = we.K.define();
+    class ne extends De.p {
+      constructor(ee, ie, He) {
+        super(), this.colour = ee, this.playerName = ie, this.showName = He
       }
       toDOM() {
-        const BB = document.createElement("span");
-        BB.className = "cm-remote-cursor-wrapper", BB.style.borderLeftColor = this.colour;
-        const OB = document.createElement("span");
-        if (OB.className = "cm-remote-cursor", OB.style.borderLeftColor = this.colour, BB.appendChild(OB), this.showName) {
-          const OB = document.createElement("span");
-          OB.className = "cm-remote-cursor-name", OB.style.backgroundColor = this.colour, OB.textContent = this.playerName, BB.appendChild(OB)
+        const ee = document.createElement("span");
+        ee.className = "cm-remote-cursor-wrapper", ee.style.borderLeftColor = this.colour;
+        const ie = document.createElement("span");
+        if (ie.className = "cm-remote-cursor", ie.style.borderLeftColor = this.colour, ee.appendChild(ie), this.showName) {
+          const ie = document.createElement("span");
+          ie.className = "cm-remote-cursor-name", ie.style.backgroundColor = this.colour, ie.textContent = this.playerName, ee.appendChild(ie)
         }
-        return BB
+        return ee
       }
-      eq(BB) {
-        return this.colour === BB.colour && this.playerName === BB.playerName && this.showName === BB.showName
+      eq(ee) {
+        return this.colour === ee.colour && this.playerName === ee.playerName && this.showName === ee.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function TB(BB, OB) {
-      const GB = [],
-        YB = [];
-      for (const [, oB] of BB) {
-        const BB = OB - oB.lastMoved < EB;
-        if (GB.push({
-            pos: oB.head,
-            decoration: KB.c.widget({
-              widget: new eB(oB.colour, oB.playerName, BB),
+    function je(ee, ie) {
+      const He = [],
+        ye = [];
+      for (const [, Ke] of ee) {
+        const ee = ie - Ke.lastMoved < ue;
+        if (He.push({
+            pos: Ke.head,
+            decoration: De.e.widget({
+              widget: new ne(Ke.colour, Ke.playerName, ee),
               side: 1
             })
-          }), oB.anchor !== oB.head) {
-          const BB = Math.min(oB.anchor, oB.head),
-            OB = Math.max(oB.anchor, oB.head);
-          YB.push({
-            from: BB,
-            to: OB,
-            decoration: KB.c.mark({
+          }), Ke.anchor !== Ke.head) {
+          const ee = Math.min(Ke.anchor, Ke.head),
+            ie = Math.max(Ke.anchor, Ke.head);
+          ye.push({
+            from: ee,
+            to: ie,
+            decoration: De.e.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${oB.colour}33`
+                style: `background-color: ${Ke.colour}33`
               }
             })
           })
         }
       }
-      const DB = new dB.v,
-        QB = [];
-      for (const oB of GB) QB.push({
+      const be = new we.z,
+        Me = [];
+      for (const Ke of He) Me.push({
         bias: 1,
-        deco: oB.decoration,
-        from: oB.pos,
-        to: oB.pos
+        deco: Ke.decoration,
+        from: Ke.pos,
+        to: Ke.pos
       });
-      for (const oB of YB) QB.push({
+      for (const Ke of ye) Me.push({
         bias: 0,
-        deco: oB.decoration,
-        from: oB.from,
-        to: oB.to
+        deco: Ke.decoration,
+        from: Ke.from,
+        to: Ke.to
       });
-      QB.sort(((BB, OB) => BB.from - OB.from || BB.deco.startSide - OB.deco.startSide || BB.bias - OB.bias));
-      for (const oB of QB) DB.add(oB.from, oB.to, oB.deco);
-      return DB.finish()
+      Me.sort(((ee, ie) => ee.from - ie.from || ee.deco.startSide - ie.deco.startSide || ee.bias - ie.bias));
+      for (const Ke of Me) be.add(Ke.from, Ke.to, Ke.deco);
+      return be.finish()
     }
-    const bB = dB.G.define({
+    const se = we.N.define({
       create: () => ({
         cursors: new Map,
-        TD: KB.c.none
+        MM: De.e.none
       }),
-      update(BB, OB) {
-        let GB = BB.cursors,
-          YB = !1;
-        if (OB.docChanged) {
-          const BB = new Map;
-          for (const [YB, DB] of GB) BB.set(YB, {
-            ...DB,
-            anchor: OB.changes.mapPos(DB.anchor, 1),
-            head: OB.changes.mapPos(DB.head, 1)
+      update(ee, ie) {
+        let He = ee.cursors,
+          ye = !1;
+        if (ie.docChanged) {
+          const ee = new Map;
+          for (const [ye, be] of He) ee.set(ye, {
+            ...be,
+            anchor: ie.changes.mapPos(be.anchor, 1),
+            head: ie.changes.mapPos(be.head, 1)
           });
-          GB = BB, YB = !0
+          He = ee, ye = !0
         }
-        for (const DB of OB.effects)
-          if (DB.is(cB)) {
-            if (!Number.isInteger(DB.value.anchor) || !Number.isInteger(DB.value.head)) {
-              console.warn(`Code Editor: ignored player ${DB.value.playerId}'s cursor at ${DB.value.anchor}-${DB.value.head}`);
+        for (const be of ie.effects)
+          if (be.is(me)) {
+            if (!Number.isInteger(be.value.anchor) || !Number.isInteger(be.value.head)) {
+              console.warn(`Code Editor: ignored player ${be.value.playerId}'s cursor at ${be.value.anchor}-${be.value.head}`);
               continue
             }
-            const QB = OB.state.doc.length,
-              oB = {
-                ...DB.value,
-                anchor: Math.min(DB.value.anchor, QB),
-                head: Math.min(DB.value.head, QB)
+            const Me = ie.state.doc.length,
+              Ke = {
+                ...be.value,
+                anchor: Math.min(be.value.anchor, Me),
+                head: Math.min(be.value.head, Me)
               };
-            GB === BB.cursors && (GB = new Map(GB)), GB.set(oB.playerId, oB), YB = !0
-          } else DB.is(hB) ? GB.has(DB.value) && (GB === BB.cursors && (GB = new Map(GB)), GB.delete(DB.value), YB = !0) : DB.is(aB) && (YB = !0);
-        return YB ? {
-          cursors: GB,
-          TD: TB(GB, Date.now())
-        } : BB
+            He === ee.cursors && (He = new Map(He)), He.set(Ke.playerId, Ke), ye = !0
+          } else be.is(le) ? He.has(be.value) && (He === ee.cursors && (He = new Map(He)), He.delete(be.value), ye = !0) : be.is(Se) && (ye = !0);
+        return ye ? {
+          cursors: He,
+          MM: je(He, Date.now())
+        } : ee
       },
-      provide: BB => KB.h.TD.from(BB, (BB => BB.TD))
+      provide: ee => De.i.MM.from(ee, (ee => ee.MM))
     });
-    const CB = dB.D.define(),
-      HB = KB.c.mark({
+    const Ie = we.K.define(),
+      he = De.e.mark({
         class: "CodeInsertFlash"
       }),
-      vB = dB.G.define({
-        create: () => KB.c.none,
-        update(BB, OB) {
-          let GB = BB.map(OB.changes);
-          for (const YB of OB.effects) YB.is(CB) && (GB = YB.value ? KB.c.set(HB.range(YB.value.from, YB.value.to)) : KB.c.none);
-          return GB
+      Ne = we.N.define({
+        create: () => De.e.none,
+        update(ee, ie) {
+          let He = ee.map(ie.changes);
+          for (const ye of ie.effects) ye.is(Ie) && (He = ye.value ? De.e.set(he.range(ye.value.from, ye.value.to)) : De.e.none);
+          return He
         },
-        provide: BB => KB.h.TD.from(BB)
+        provide: ee => De.i.MM.from(ee)
       }),
-      sB = dB.G.define({
+      Ge = we.N.define({
         create: () => !1,
-        update: (BB, OB) => BB || void 0 !== OB.annotation(dB.L.userEvent) && !OB.annotation(dB.L.remote)
+        update: (ee, ie) => ee || void 0 !== ie.annotation(we.T.userEvent) && !ie.annotation(we.T.remote)
       }),
-      xB = [vB, sB];
+      re = [Ne, Ge];
 
-    function tB(BB) {
-      return BB.field(sB)
+    function Qe(ee) {
+      return ee.field(Ge)
     }
-    const BO = 3e4;
+    const ei = 3e4;
 
-    function OO(BB, OB) {
-      const GB = (0, oB.useRef)(null);
-      (0, oB.useEffect)((() => {
-        var BB;
-        (null === (BB = GB.current) || void 0 === BB ? void 0 : BB.path) !== OB && (GB.current = null)
-      }), [OB]);
-      const YB = BB => {
-        var YB;
-        const DB = GB.current;
-        if (null === BB || void 0 === BB || !BB.dom.isConnected || !DB || DB.path !== OB) return;
-        GB.current = null;
+    function ii(ee, ie) {
+      const He = (0, Ke.useRef)(null);
+      (0, Ke.useEffect)((() => {
+        var ee;
+        (null === (ee = He.current) || void 0 === ee ? void 0 : ee.path) !== ie && (He.current = null)
+      }), [ie]);
+      const ye = ee => {
+        var ye;
+        const be = He.current;
+        if (null === ee || void 0 === ee || !ee.dom.isConnected || !be || be.path !== ie) return;
+        He.current = null;
         const {
-          GP: oB
-        } = DB;
-        if (oB && null !== oB.text && performance.now() - oB.at < BO) {
-          const OB = function(BB, OB) {
-            if (BB === OB) return null;
-            const GB = Math.min(BB.length, OB.length);
-            let YB = 0;
-            for (; YB < GB && BB[YB] === OB[YB];) YB++;
-            let DB = 0;
-            for (; DB < GB - YB && BB[BB.length - 1 - DB] === OB[OB.length - 1 - DB];) DB++;
+          KR: Ke
+        } = be;
+        if (Ke && null !== Ke.text && performance.now() - Ke.at < ei) {
+          const ie = function(ee, ie) {
+            if (ee === ie) return null;
+            const He = Math.min(ee.length, ie.length);
+            let ye = 0;
+            for (; ye < He && ee[ye] === ie[ye];) ye++;
+            let be = 0;
+            for (; be < He - ye && ee[ee.length - 1 - be] === ie[ie.length - 1 - be];) be++;
             return {
-              from: YB,
-              to: BB.length - DB,
-              insert: OB.slice(YB, OB.length - DB)
+              from: ye,
+              to: ee.length - be,
+              insert: ie.slice(ye, ie.length - be)
             }
-          }(BB.state.doc.toString(), oB.text);
-          null !== OB && BB.dispatch({
-            changes: OB,
-            userEvent: oB.placed ? "input" : void 0
+          }(ee.state.doc.toString(), Ke.text);
+          null !== ie && ee.dispatch({
+            changes: ie,
+            userEvent: Ke.placed ? "input" : void 0
           })
         }
         const {
-          doc: jB
-        } = BB.state, yB = jB.line(Math.min(Math.max(DB.line, 1), jB.lines)), JB = yB.from + Math.min(null !== (YB = DB.column) && void 0 !== YB ? YB : 0, yB.length);
-        BB.dispatch({
+          doc: Ue
+        } = ee.state, Fe = Ue.line(Math.min(Math.max(be.line, 1), Ue.lines)), Je = Fe.from + Math.min(null !== (ye = be.column) && void 0 !== ye ? ye : 0, Fe.length);
+        ee.dispatch({
           selection: {
-            anchor: JB
+            anchor: Je
           },
-          effects: QB.d.scrollIntoView(JB, {
+          effects: Me.d.scrollIntoView(Je, {
             y: "center"
           }),
-          userEvent: null !== oB && void 0 !== oB && oB.placed ? "select" : void 0
-        }), !1 !== (null === oB || void 0 === oB ? void 0 : oB.focused) && BB.focus()
+          userEvent: null !== Ke && void 0 !== Ke && Ke.placed ? "select" : void 0
+        }), !1 !== (null === Ke || void 0 === Ke ? void 0 : Ke.focused) && ee.focus()
       };
-      return (0, nB.f)("CodeEditorGoToLine", (OB => {
-        GB.current = OB, YB(BB.current)
-      })), (0, nB.f)("CodeEditorKeepEdits", (() => {
-        const YB = BB.current;
-        if (null === YB || !YB.dom.isConnected || null === OB) return;
+      return (0, de.f)("CodeEditorGoToLine", (ie => {
+        He.current = ie, ye(ee.current)
+      })), (0, de.f)("CodeEditorKeepEdits", (() => {
+        const ye = ee.current;
+        if (null === ye || !ye.dom.isConnected || null === ie) return;
         const {
-          doc: DB,
-          selection: QB
-        } = YB.state, {
-          head: oB
-        } = QB.main, jB = DB.lineAt(oB), yB = {
-          text: (0, kB.m)(YB.state).length > 0 ? DB.toString() : null,
+          doc: be,
+          selection: Me
+        } = ye.state, {
+          head: Ke
+        } = Me.main, Ue = be.lineAt(Ke), Fe = {
+          text: (0, Ze.k)(ye.state).length > 0 ? be.toString() : null,
           at: performance.now(),
-          focused: YB.hasFocus,
-          placed: tB(YB.state)
+          focused: ye.hasFocus,
+          placed: Qe(ye.state)
         };
-        GB.current = {
-          path: OB,
-          line: jB.number,
-          column: oB - jB.from,
-          GP: yB
+        He.current = {
+          path: ie,
+          line: Ue.number,
+          column: Ke - Ue.from,
+          KR: Fe
         }
-      })), BB => {
-        var DB;
-        const QB = GB.current;
-        !1 === (null === QB || void 0 === QB || null === (DB = QB.GP) || void 0 === DB ? void 0 : DB.focused) && QB.path === OB || BB.focus(), YB(BB)
+      })), ee => {
+        var be;
+        const Me = He.current;
+        !1 === (null === Me || void 0 === Me || null === (be = Me.KR) || void 0 === be ? void 0 : be.focused) && Me.path === ie || ee.focus(), ye(ee)
       }
     }
-    var GO = GB(4773),
-      YO = GB(1175);
+    var Hi = He(4721),
+      yi = He(1127);
 
-    function DO(BB, OB) {
+    function bi(ee, ie) {
       const {
-        t: GB
-      } = (0, YO.H)();
-      (0, nB.f)("CodeEditorInsertText", (YB => {
+        t: He
+      } = (0, yi.v)();
+      (0, de.f)("CodeEditorInsertText", (ye => {
         let {
-          text: DB,
-          focus: QB
-        } = YB;
-        const oB = BB.current,
-          jB = null !== oB && void 0 !== oB && oB.dom.isConnected ? function(BB, OB) {
-            if (!tB(BB)) return null;
+          text: be,
+          focus: Me
+        } = ye;
+        const Ke = ee.current,
+          Ue = null !== Ke && void 0 !== Ke && Ke.dom.isConnected ? function(ee, ie) {
+            if (!Qe(ee)) return null;
             const {
-              from: GB,
-              to: YB
-            } = BB.selection.main, DB = GB + OB.length;
+              from: He,
+              to: ye
+            } = ee.selection.main, be = He + ie.length;
             return {
               changes: {
-                from: GB,
-                to: YB,
-                insert: OB
+                from: He,
+                to: ye,
+                insert: ie
               },
               selection: {
-                anchor: DB
+                anchor: be
               },
-              effects: [KB.h.scrollIntoView(DB, {
+              effects: [De.i.scrollIntoView(be, {
                 y: "center"
-              }), CB.of({
-                from: GB,
-                to: DB
+              }), Ie.of({
+                from: He,
+                to: be
               })],
               userEvent: "input"
             }
-          }(oB.state, DB) : null;
-        null !== oB && null !== jB ? (oB.dispatch(jB), QB && oB.focus(), setTimeout((() => {
-          oB.dom.isConnected && oB.dispatch({
-            effects: CB.of(null)
+          }(Ke.state, be) : null;
+        null !== Ke && null !== Ue ? (Ke.dispatch(Ue), Me && Ke.focus(), setTimeout((() => {
+          Ke.dom.isConnected && Ke.dispatch({
+            effects: Ie.of(null)
           })
-        }), 1500)) : (0, GO.b)(DB).then((() => {
-          OB({
-            message: GB("codeEditorWorld:pickCopied", {
-              coords: DB
+        }), 1500)) : (0, Hi.e)(be).then((() => {
+          ie({
+            message: He("codeEditorWorld:pickCopied", {
+              coords: be
             }),
             type: "success"
           })
-        }), (BB => {
-          console.error("Pick could not copy the coordinates", BB), OB({
-            message: GB("codeEditorWorld:pickPlaceCursor", {
-              coords: DB
+        }), (ee => {
+          console.error("Pick could not copy the coordinates", ee), ie({
+            message: He("codeEditorWorld:pickPlaceCursor", {
+              coords: be
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var QO = GB(44493);
-    const oO = "#e45649",
-      jO = "#383a42",
-      yO = "#696c77",
-      JO = "#986801",
-      MO = "#e5e5e6",
-      PO = "#fafafa",
-      zO = "#eaeaeb",
-      lO = "#526fff",
-      pO = KB.h.theme({
+    var Mi = He(44543);
+    const Ki = "#e45649",
+      Ui = "#383a42",
+      Fi = "#696c77",
+      Ji = "#986801",
+      oi = "#e5e5e6",
+      Ri = "#fafafa",
+      ki = "#eaeaeb",
+      qi = "#526fff",
+      fi = De.i.theme({
         "&": {
-          color: jO,
-          backgroundColor: PO
+          color: Ui,
+          backgroundColor: Ri
         },
         ".cm-content": {
-          caretColor: lO
+          caretColor: qi
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: lO
+          borderLeftColor: qi
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: jO
+          color: Ui
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: PO,
-          color: yO,
+          backgroundColor: Ri,
+          color: Fi,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: MO
+          backgroundColor: oi
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: zO
+          backgroundColor: ki
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: zO,
-          borderBottomColor: zO
+          borderTopColor: ki,
+          borderBottomColor: ki
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: MO,
-            color: jO
+            backgroundColor: oi,
+            color: Ui
           }
         }
       }, {
         dark: !1
       }),
-      qO = rB.c.define([{
-        tag: QO.i.keyword,
+      Ti = Le.d.define([{
+        tag: Mi.n.keyword,
         color: "#a626a4"
       }, {
-        tag: [QO.i.name, QO.i.deleted, QO.i.character, QO.i.propertyName, QO.i.macroName],
-        color: oO
+        tag: [Mi.n.name, Mi.n.deleted, Mi.n.character, Mi.n.propertyName, Mi.n.macroName],
+        color: Ki
       }, {
-        tag: [QO.i.function(QO.i.variableName), QO.i.labelName],
+        tag: [Mi.n.function(Mi.n.variableName), Mi.n.labelName],
         color: "#4078f2"
       }, {
-        tag: [QO.i.color, QO.i.constant(QO.i.name), QO.i.standard(QO.i.name)],
-        color: JO
+        tag: [Mi.n.color, Mi.n.constant(Mi.n.name), Mi.n.standard(Mi.n.name)],
+        color: Ji
       }, {
-        tag: [QO.i.definition(QO.i.name), QO.i.separator],
-        color: jO
+        tag: [Mi.n.definition(Mi.n.name), Mi.n.separator],
+        color: Ui
       }, {
-        tag: [QO.i.typeName, QO.i.className, QO.i.number, QO.i.changed, QO.i.annotation, QO.i.modifier, QO.i.self, QO.i.namespace],
+        tag: [Mi.n.typeName, Mi.n.className, Mi.n.number, Mi.n.changed, Mi.n.annotation, Mi.n.modifier, Mi.n.self, Mi.n.namespace],
         color: "#c18401"
       }, {
-        tag: [QO.i.operator, QO.i.operatorKeyword, QO.i.url, QO.i.escape, QO.i.regexp, QO.i.link, QO.i.special(QO.i.string)],
+        tag: [Mi.n.operator, Mi.n.operatorKeyword, Mi.n.url, Mi.n.escape, Mi.n.regexp, Mi.n.link, Mi.n.special(Mi.n.string)],
         color: "#0184bc"
       }, {
-        tag: [QO.i.meta, QO.i.comment],
-        color: yO
+        tag: [Mi.n.meta, Mi.n.comment],
+        color: Fi
       }, {
-        tag: QO.i.strong,
+        tag: Mi.n.strong,
         fontWeight: "bold"
       }, {
-        tag: QO.i.emphasis,
+        tag: Mi.n.emphasis,
         fontStyle: "italic"
       }, {
-        tag: QO.i.strikethrough,
+        tag: Mi.n.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: QO.i.link,
-        color: yO,
+        tag: Mi.n.link,
+        color: Fi,
         textDecoration: "underline"
       }, {
-        tag: QO.i.heading,
+        tag: Mi.n.heading,
         fontWeight: "bold",
-        color: oO
+        color: Ki
       }, {
-        tag: [QO.i.atom, QO.i.bool, QO.i.special(QO.i.variableName)],
-        color: JO
+        tag: [Mi.n.atom, Mi.n.bool, Mi.n.special(Mi.n.variableName)],
+        color: Ji
       }, {
-        tag: [QO.i.processingInstruction, QO.i.string, QO.i.inserted],
+        tag: [Mi.n.processingInstruction, Mi.n.string, Mi.n.inserted],
         color: "#50a14f"
       }, {
-        tag: QO.i.invalid,
+        tag: Mi.n.invalid,
         color: "#000000"
       }]),
-      ZO = [pO, (0, rB.kb)(qO)];
-    var NO = GB(37601),
-      RO = GB(44618);
-    const WO = QB.k.define(),
-      AO = QB.m.define({
+      Xi = [fi, (0, Le.mb)(Ti)];
+    var zi = He(37745),
+      Bi = He(44647);
+    const Ei = Me.j.define(),
+      gi = Me.n.define({
         create: () => !1,
-        update(BB, OB) {
-          for (const GB of OB.effects) GB.is(WO) && (BB = GB.value);
-          return BB
+        update(ee, ie) {
+          for (const He of ie.effects) He.is(Ei) && (ee = He.value);
+          return ee
         }
       }),
-      VO = [{
+      Oi = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function SO(BB, OB) {
-      return [AO, QB.p.fromClass(class {
-        constructor(BB) {
-          this.view = BB, this.onDown = BB => {
-            const OB = BB.target instanceof Element && null !== BB.target.closest(".cm-tooltip");
-            0 !== BB.button || OB || this.view.state.field(AO) || this.view.dispatch({
-              effects: WO.of(!0)
+    function di(ee, ie) {
+      return [gi, Me.r.fromClass(class {
+        constructor(ee) {
+          this.view = ee, this.onDown = ee => {
+            const ie = ee.target instanceof Element && null !== ee.target.closest(".cm-tooltip");
+            0 !== ee.button || ie || this.view.state.field(gi) || this.view.dispatch({
+              effects: Ei.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(AO) && this.view.dispatch({
-              effects: WO.of(!1)
+            this.view.state.field(gi) && this.view.dispatch({
+              effects: Ei.of(!1)
             })
-          }, BB.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, ee.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), QB.w.compute(["selection", AO], (GB => function(BB, OB, GB) {
-        const YB = BB.selection.main;
-        return YB.empty || BB.field(AO) || BB.sliceDoc(YB.from, YB.to).trim().length < 2 ? null : {
-          pos: YB.from,
+      }), Me.z.compute(["selection", gi], (He => function(ee, ie, He) {
+        const ye = ee.selection.main;
+        return ye.empty || ee.field(gi) || ee.sliceDoc(ye.from, ye.to).trim().length < 2 ? null : {
+          pos: ye.from,
           above: !0,
-          create: BB => {
-            const YB = document.createElement("div");
-            YB.className = "CodeSelectionActions", YB.setAttribute("role", "toolbar"), YB.setAttribute("aria-label", "AI Helper: picked code");
+          create: ee => {
+            const ye = document.createElement("div");
+            ye.className = "CodeSelectionActions", ye.setAttribute("role", "toolbar"), ye.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: DB,
-                label: QB
+                action: be,
+                label: Me
               }
-              of VO) {
-              if (!GB && "explain" !== DB) continue;
-              const oB = document.createElement("button");
-              oB.type = "button", oB.textContent = QB, "change" !== DB && (oB.title = RO.e, oB.dataset.asksAi = "true"), oB.addEventListener("mousedown", (BB => {
-                BB.preventDefault()
-              })), oB.addEventListener("click", (() => {
-                const GB = BB.state.selection.main;
-                if (GB.empty) return;
-                const YB = {
-                  action: DB,
-                  path: OB,
-                  fromLine: BB.state.doc.lineAt(GB.from).number,
-                  toLine: BB.state.doc.lineAt(GB.to > GB.from && BB.state.doc.lineAt(GB.to).from === GB.to ? GB.to - 1 : GB.to).number,
-                  text: BB.state.sliceDoc(GB.from, GB.to)
+              of Oi) {
+              if (!He && "explain" !== be) continue;
+              const Ke = document.createElement("button");
+              Ke.type = "button", Ke.textContent = Me, "change" !== be && (Ke.title = Bi.c, Ke.dataset.asksAi = "true"), Ke.addEventListener("mousedown", (ee => {
+                ee.preventDefault()
+              })), Ke.addEventListener("click", (() => {
+                const He = ee.state.selection.main;
+                if (He.empty) return;
+                const ye = {
+                  action: be,
+                  path: ie,
+                  fromLine: ee.state.doc.lineAt(He.from).number,
+                  toLine: ee.state.doc.lineAt(He.to > He.from && ee.state.doc.lineAt(He.to).from === He.to ? He.to - 1 : He.to).number,
+                  text: ee.state.sliceDoc(He.from, He.to)
                 };
-                IB.o.tM("WorldCodeAiSelection", YB), BB.dispatch({
+                Ye.h.yR("WorldCodeAiSelection", ye), ee.dispatch({
                   selection: {
-                    anchor: GB.to
+                    anchor: He.to
                   }
                 })
-              })), YB.appendChild(oB)
+              })), ye.appendChild(Ke)
             }
             return {
-              dom: YB
+              dom: ye
             }
           }
         }
-      }(GB, BB, OB)))]
+      }(He, ee, ie)))]
     }
-    var nO = GB(1282);
-    const UO = new Set(["(", "{", "[", "<"]),
-      fO = new Set([")", "}", "]", ">"]),
-      kO = {
+    var Wi = He(1228);
+    const ti = new Set(["(", "{", "[", "<"]),
+      Zi = new Set([")", "}", "]", ">"]),
+      wi = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function dO(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function Di(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function GB(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const YB = [];
-        for (const DB of BB) {
-          let BB;
-          BB = "punctuation" === DB.kind ? kO.text : "parameterName" === DB.kind ? kO.parameterName : OB, YB.push({
-            str: DB.text,
+      function He(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const ye = [];
+        for (const be of ee) {
+          let ee;
+          ee = "punctuation" === be.kind ? wi.text : "parameterName" === be.kind ? wi.parameterName : ie, ye.push({
+            str: be.text,
             style: {
-              color: BB,
-              opacity: GB ? .5 : void 0
+              color: ee,
+              opacity: He ? .5 : void 0
             }
           })
         }
-        return YB
+        return ye
       }
-      const YB = [];
-      if (YB.push(...GB(BB.prefixDisplayParts, kO.text)), BB.parameters.length > 0) {
-        YB.push("\n");
-        for (let DB = 0; DB < BB.parameters.length; DB++) {
-          const QB = BB.parameters[DB];
-          YB.push("\t"), YB.push(...GB(QB.displayParts, kO.parameter, null !== OB && DB !== OB)), YB.push("\n")
+      const ye = [];
+      if (ye.push(...He(ee.prefixDisplayParts, wi.text)), ee.parameters.length > 0) {
+        ye.push("\n");
+        for (let be = 0; be < ee.parameters.length; be++) {
+          const Me = ee.parameters[be];
+          ye.push("\t"), ye.push(...He(Me.displayParts, wi.parameter, null !== ie && be !== ie)), ye.push("\n")
         }
       }
-      return YB.push(...GB(BB.suffixDisplayParts, kO.suffix)), BB.documentation && (YB.push("\n\n"), YB.push(...GB(BB.documentation, kO.docs))), YB
+      return ye.push(...He(ee.suffixDisplayParts, wi.suffix)), ee.documentation && (ye.push("\n\n"), ye.push(...He(ee.documentation, wi.docs))), ye
     }
-    var KO = function(BB) {
-      return BB[BB.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", BB[BB.DuplicateIdentifier = 2300] = "DuplicateIdentifier", BB
-    }(KO || {});
-    const uO = new Set([KO.DuplicateIdentifier]),
-      mO = new Set([KO.VariableDefinedElsewhere]),
-      IO = new Set([]),
-      FO = "/index.js";
+    var Pi = function(ee) {
+      return ee[ee.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", ee[ee.DuplicateIdentifier = 2300] = "DuplicateIdentifier", ee
+    }(Pi || {});
+    const Ai = new Set([Pi.DuplicateIdentifier]),
+      Yi = new Set([Pi.VariableDefinedElsewhere]),
+      Vi = new Set([]),
+      ai = "/index.js";
 
-    function iO(BB) {
-      return "/" + BB
-    }
-
-    function LO(BB, OB, GB) {
-      BB.getSourceFile(OB) && BB.deleteFile(OB), BB.createFile(OB, GB)
+    function ci(ee) {
+      return "/" + ee
     }
 
-    function gO(BB) {
-      return !!BB && ((0, VB.o)(BB) || (0, VB.k)(BB))
+    function xi(ee, ie, He) {
+      ee.getSourceFile(ie) && ee.deleteFile(ie), ee.createFile(ie, He)
     }
 
-    function rO(BB, OB, GB) {
+    function Li(ee) {
+      return !!ee && ((0, ge.p)(ee) || (0, ge.n)(ee))
+    }
+
+    function Ci(ee, ie, He) {
       return () => {
-        let YB = [...OB.languageService.getSemanticDiagnostics(GB), ...OB.languageService.getSyntacticDiagnostics(GB)];
-        return YB = YB.filter((BB => !(0, UB.Q)(BB.start) && !(0, UB.Q)(BB.length) && !uO.has(BB.code))), BB || (YB = YB.filter((BB => !mO.has(BB.code)))), YB.map((BB => ({
-          from: BB.start,
-          to: BB.start + BB.length,
-          message: "string" === typeof BB.messageText ? BB.messageText : BB.messageText.messageText,
-          severity: IO.has(BB.code) ? "warning" : "error"
+        let ye = [...ie.languageService.getSemanticDiagnostics(He), ...ie.languageService.getSyntacticDiagnostics(He)];
+        return ye = ye.filter((ee => !(0, We.P)(ee.start) && !(0, We.P)(ee.length) && !Ai.has(ee.code))), ee || (ye = ye.filter((ee => !Yi.has(ee.code)))), ye.map((ee => ({
+          from: ee.start,
+          to: ee.start + ee.length,
+          message: "string" === typeof ee.messageText ? ee.messageText : ee.messageText.messageText,
+          severity: Vi.has(ee.code) ? "warning" : "error"
         })))
       }
     }
 
-    function XO(BB, OB) {
-      return GB => {
-        var YB, DB;
-        const QB = BB.languageService.getCompletionsAtPosition(OB, GB.pos, {});
-        if (!QB) return {
-          from: GB.pos,
+    function vi(ee, ie) {
+      return He => {
+        var ye, be;
+        const Me = ee.languageService.getCompletionsAtPosition(ie, He.pos, {});
+        if (!Me) return {
+          from: He.pos,
           options: []
         };
-        let oB = null !== (YB = null === (DB = QB.optionalReplacementSpan) || void 0 === DB ? void 0 : DB.start) && void 0 !== YB ? YB : GB.pos;
-        if (!QB.optionalReplacementSpan) {
-          const BB = GB.state.doc.sliceString(0, GB.pos);
-          for (; oB > 0 && /[\w$]/.test(BB[oB - 1]);) oB--
+        let Ke = null !== (ye = null === (be = Me.optionalReplacementSpan) || void 0 === be ? void 0 : be.start) && void 0 !== ye ? ye : He.pos;
+        if (!Me.optionalReplacementSpan) {
+          const ee = He.state.doc.sliceString(0, He.pos);
+          for (; Ke > 0 && /[\w$]/.test(ee[Ke - 1]);) Ke--
         }
-        return QB.entries = QB.entries.filter((BB => BB.kind !== qB().ScriptElementKind.warning)), {
-          from: oB,
-          options: QB.entries.map((YB => {
-            var DB, QB, jB, yB;
-            const JB = BB.languageService.getCompletionEntryDetails(OB, GB.pos, YB.name, {}, YB.source, {}, YB.data),
-              MB = null !== (DB = null === (QB = YB.replacementSpan) || void 0 === QB ? void 0 : QB.start) && void 0 !== DB ? DB : oB,
-              PB = YB.replacementSpan ? YB.replacementSpan.start + YB.replacementSpan.length : GB.pos,
-              zB = null !== (jB = YB.insertText) && void 0 !== jB ? jB : YB.name;
+        return Me.entries = Me.entries.filter((ee => ee.kind !== Te().ScriptElementKind.warning)), {
+          from: Ke,
+          options: Me.entries.map((ye => {
+            var be, Me, Ue, Fe;
+            const Je = ee.languageService.getCompletionEntryDetails(ie, He.pos, ye.name, {}, ye.source, {}, ye.data),
+              oe = null !== (be = null === (Me = ye.replacementSpan) || void 0 === Me ? void 0 : Me.start) && void 0 !== be ? be : Ke,
+              Re = ye.replacementSpan ? ye.replacementSpan.start + ye.replacementSpan.length : He.pos,
+              ke = null !== (Ue = ye.insertText) && void 0 !== Ue ? Ue : ye.name;
             return {
-              label: YB.name,
-              detail: null === JB || void 0 === JB ? void 0 : JB.displayParts.map((BB => BB.text)).join(""),
-              info: null === JB || void 0 === JB || null === (yB = JB.documentation) || void 0 === yB ? void 0 : yB.map((BB => BB.text)).join(""),
-              apply: BB => {
-                BB.dispatch({
+              label: ye.name,
+              detail: null === Je || void 0 === Je ? void 0 : Je.displayParts.map((ee => ee.text)).join(""),
+              info: null === Je || void 0 === Je || null === (Fe = Je.documentation) || void 0 === Fe ? void 0 : Fe.map((ee => ee.text)).join(""),
+              apply: ee => {
+                ee.dispatch({
                   changes: {
-                    from: MB,
-                    to: PB,
-                    insert: zB
+                    from: oe,
+                    to: Re,
+                    insert: ke
                   },
                   selection: {
-                    anchor: MB + zB.length
+                    anchor: oe + ke.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function wO(BB) {
-      return OB => {
-        const GB = document.createElement("div");
-        GB.className = "CodeEditorTooltip";
-        let YB = !1;
+    function ui(ee) {
+      return ie => {
+        const He = document.createElement("div");
+        He.className = "CodeEditorTooltip";
+        let ye = !1;
         return queueMicrotask((() => {
-          YB || (jB.render((0, nO.jsx)(zB.b, {
-            text: BB
-          }), GB), OB.requestMeasure())
+          ye || (Ue.render((0, Wi.jsx)(ke.e, {
+            text: ee
+          }), He), ie.requestMeasure())
         })), {
-          dom: GB,
+          dom: He,
           destroy() {
-            YB = !0, queueMicrotask((() => {
-              jB.unmountComponentAtNode(GB)
+            ye = !0, queueMicrotask((() => {
+              Ue.unmountComponentAtNode(He)
             }))
           }
         }
       }
     }
 
-    function EO(BB, OB, GB) {
-      return YB => {
-        var DB;
-        if (!OB) return [];
-        const QB = null === (DB = YB.selection.JZ[0]) || void 0 === DB ? void 0 : DB.head;
-        if (void 0 === QB) return [];
-        const oB = BB.languageService.getSignatureHelpItems(GB, QB, {});
-        if (!oB || !oB.items.length) return [];
-        const jB = oB.applicableSpan.start - oB.items[0].prefixDisplayParts.map((BB => BB.text)).join("").length,
-          yB = oB.applicableSpan.start,
-          JB = YB.doc.lineAt(QB),
-          MB = JB.from,
-          PB = Math.min(JB.to, QB);
-        let zB, lB;
-        return jB < MB ? (zB = MB, lB = PB) : (zB = jB, lB = yB), [{
-          pos: zB,
-          end: lB,
+    function mi(ee, ie, He) {
+      return ye => {
+        var be;
+        if (!ie) return [];
+        const Me = null === (be = ye.selection.zp[0]) || void 0 === be ? void 0 : be.head;
+        if (void 0 === Me) return [];
+        const Ke = ee.languageService.getSignatureHelpItems(He, Me, {});
+        if (!Ke || !Ke.items.length) return [];
+        const Ue = Ke.applicableSpan.start - Ke.items[0].prefixDisplayParts.map((ee => ee.text)).join("").length,
+          Fe = Ke.applicableSpan.start,
+          Je = ye.doc.lineAt(Me),
+          oe = Je.from,
+          Re = Math.min(Je.to, Me);
+        let ke, qe;
+        return Ue < oe ? (ke = oe, qe = Re) : (ke = Ue, qe = Fe), [{
+          pos: ke,
+          end: qe,
           above: !1,
-          create: wO(dO(oB.items[0], oB.argumentIndex))
+          create: ui(Di(Ke.items[0], Ke.argumentIndex))
         }]
       }
     }
 
-    function cO(BB, OB) {
-      return (GB, YB, DB) => {
-        const QB = BB.languageService.getQuickInfoAtPosition(OB, YB);
-        if (!QB) return [];
-        const oB = QB.textSpan.start,
-          jB = QB.textSpan.start + QB.textSpan.length;
-        if (YB < oB || YB >= jB) return [];
-        if (QB.kind === qB().ScriptElementKind.memberFunctionElement || QB.kind === qB().ScriptElementKind.variableElement && "declare" === QB.kindModifiers) {
-          const BB = QB.displayParts.findIndex((BB => "space" === BB.kind)); - 1 !== BB && (QB.displayParts = QB.displayParts.slice(BB));
-          const OB = {
+    function li(ee, ie) {
+      return (He, ye, be) => {
+        const Me = ee.languageService.getQuickInfoAtPosition(ie, ye);
+        if (!Me) return [];
+        const Ke = Me.textSpan.start,
+          Ue = Me.textSpan.start + Me.textSpan.length;
+        if (ye < Ke || ye >= Ue) return [];
+        if (Me.kind === Te().ScriptElementKind.memberFunctionElement || Me.kind === Te().ScriptElementKind.variableElement && "declare" === Me.kindModifiers) {
+          const ee = Me.displayParts.findIndex((ee => "space" === ee.kind)); - 1 !== ee && (Me.displayParts = Me.displayParts.slice(ee));
+          const ie = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            GB = QB.displayParts.findIndex((BB => "punctuation" === BB.kind && "(" === BB.text)); - 1 !== GB && (OB.prefixDisplayParts = QB.displayParts.slice(0, GB + 1), QB.displayParts = QB.displayParts.slice(GB + 1));
-          const YB = QB.displayParts.findLastIndex((BB => "punctuation" === BB.kind && ")" === BB.text)); - 1 !== YB && (OB.suffixDisplayParts = QB.displayParts.slice(YB), QB.displayParts = QB.displayParts.slice(0, YB));
-          let DB = 0,
-            yB = [];
-          for (const oB of QB.displayParts)
-            if (UO.has(oB.text) ? DB++ : fO.has(oB.text) && DB--, "lineBreak" !== oB.kind) {
-              if ("space" === oB.kind) {
-                if (0 === yB.length) continue;
-                yB.push({
+            He = Me.displayParts.findIndex((ee => "punctuation" === ee.kind && "(" === ee.text)); - 1 !== He && (ie.prefixDisplayParts = Me.displayParts.slice(0, He + 1), Me.displayParts = Me.displayParts.slice(He + 1));
+          const ye = Me.displayParts.findLastIndex((ee => "punctuation" === ee.kind && ")" === ee.text)); - 1 !== ye && (ie.suffixDisplayParts = Me.displayParts.slice(ye), Me.displayParts = Me.displayParts.slice(0, ye));
+          let be = 0,
+            Fe = [];
+          for (const Ke of Me.displayParts)
+            if (ti.has(Ke.text) ? be++ : Zi.has(Ke.text) && be--, "lineBreak" !== Ke.kind) {
+              if ("space" === Ke.kind) {
+                if (0 === Fe.length) continue;
+                Fe.push({
                   kind: "space",
                   text: " "
                 })
-              } else yB.push(oB);
-              0 === DB && "," === oB.text && (OB.parameters.push({
-                displayParts: yB
-              }), yB = [])
-            } return yB.length > 0 && OB.parameters.push({
-            displayParts: yB
-          }), OB.documentation = QB.documentation, [{
-            pos: oB,
-            end: jB,
+              } else Fe.push(Ke);
+              0 === be && "," === Ke.text && (ie.parameters.push({
+                displayParts: Fe
+              }), Fe = [])
+            } return Fe.length > 0 && ie.parameters.push({
+            displayParts: Fe
+          }), ie.documentation = Me.documentation, [{
+            pos: Ke,
+            end: Ue,
             above: !0,
-            create: wO(dO(OB))
+            create: ui(Di(ie))
           }]
         }
-        const yB = [];
-        for (const BB of QB.displayParts) yB.push({
-          str: BB.text,
+        const Fe = [];
+        for (const ee of Me.displayParts) Fe.push({
+          str: ee.text,
           style: {
-            color: kO.text
+            color: wi.text
           }
         });
-        if (QB.documentation) {
-          yB.push("\n\n");
-          for (const BB of QB.documentation) yB.push({
-            str: BB.text,
+        if (Me.documentation) {
+          Fe.push("\n\n");
+          for (const ee of Me.documentation) Fe.push({
+            str: ee.text,
             style: {
-              color: kO.docs
+              color: wi.docs
             }
           })
         }
         return [{
-          pos: oB,
-          end: jB,
+          pos: Ke,
+          end: Ue,
           above: !0,
-          create: wO(yB)
+          create: ui(Fe)
         }]
       }
     }
-    const hO = {
+    const Si = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: qB().SemicolonPreference.Insert
+      semicolons: Te().SemicolonPreference.Insert
     };
-    const aO = QB.k.define(),
-      eO = {
+    const ni = Me.j.define(),
+      ji = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function TO(BB) {
+    function si(ee) {
       let {
-        isLobbyCode: OB,
-        code: GB,
-        onChange: jB,
-        canEditCode: zB,
-        setTemporaryMessage: pB,
-        close: UB,
-        showTooltips: eB,
-        lightMode: TB,
-        collabState: CB,
-        onRemoteDocChange: HB,
-        files: vB,
-        activePath: sB,
-        pluginName: tB,
-        pluginFile: BO,
-        pluginSource: GO,
-        setActiveDocReplacer: YO,
-        showAiHints: QO,
-        canAiChangeCode: oO = zB
-      } = BB;
-      const [jO, yO] = (0, oB.useState)(null), JO = null === CB || void 0 === CB ? void 0 : CB.version, MO = null === CB || void 0 === CB ? void 0 : CB.clientID, PO = (0, oB.useRef)({
-        isLobbyCode: OB,
-        files: vB,
-        code: GB,
-        activePath: sB
-      }), zO = (0, oB.useRef)(HB);
-      zO.current = HB;
-      const lO = (0, oB.useRef)(null),
-        pO = (0, oB.useRef)(CB);
-      pO.current = CB;
-      const qO = (0, oB.useRef)(null),
-        RO = (0, oB.useRef)(null),
-        WO = (0, oB.useRef)(null),
-        AO = (0, oB.useRef)(UB);
-      AO.current = UB;
-      const VO = (0, oB.useRef)(GB);
-      VO.current = GB;
-      const UO = (0, oB.useRef)(GO);
-      UO.current = GO;
-      const fO = function(BB, OB, GB, YB) {
-        return GB ? `/plugin-preview/${GB}/${null!==YB&&void 0!==YB?YB:"index.ts"}` : BB ? iO(null !== OB && void 0 !== OB ? OB : AB.f) : FO
-      }(OB, sB, tB, BO);
-      (0, oB.useEffect)((() => {
+        isLobbyCode: ie,
+        code: He,
+        onChange: Ue,
+        canEditCode: ke,
+        setTemporaryMessage: fe,
+        close: We,
+        showTooltips: ne,
+        lightMode: je,
+        collabState: Ie,
+        onRemoteDocChange: he,
+        files: Ne,
+        activePath: Ge,
+        pluginName: Qe,
+        pluginFile: ei,
+        pluginSource: Hi,
+        setActiveDocReplacer: yi,
+        showAiHints: Mi,
+        canAiChangeCode: Ki = ke
+      } = ee;
+      const [Ui, Fi] = (0, Ke.useState)(null), Ji = null === Ie || void 0 === Ie ? void 0 : Ie.version, oi = null === Ie || void 0 === Ie ? void 0 : Ie.clientID, Ri = (0, Ke.useRef)({
+        isLobbyCode: ie,
+        files: Ne,
+        code: He,
+        activePath: Ge
+      }), ki = (0, Ke.useRef)(he);
+      ki.current = he;
+      const qi = (0, Ke.useRef)(null),
+        fi = (0, Ke.useRef)(Ie);
+      fi.current = Ie;
+      const Ti = (0, Ke.useRef)(null),
+        Bi = (0, Ke.useRef)(null),
+        Ei = (0, Ke.useRef)(null),
+        gi = (0, Ke.useRef)(We);
+      gi.current = We;
+      const Oi = (0, Ke.useRef)(He);
+      Oi.current = He;
+      const ti = (0, Ke.useRef)(Hi);
+      ti.current = Hi;
+      const Zi = function(ee, ie, He, ye) {
+        return He ? `/plugin-preview/${He}/${null!==ye&&void 0!==ye?ye:"index.ts"}` : ee ? ci(null !== ie && void 0 !== ie ? ie : Ee.j) : ai
+      }(ie, Ge, Qe, ei);
+      (0, Ke.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: BB,
-            files: OB,
-            code: GB,
-            activePath: YB
-          } = PO.current, DB = {
+            isLobbyCode: ee,
+            files: ie,
+            code: He,
+            activePath: ye
+          } = Ri.current, be = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: qB().ModuleKind.ESNext,
-            moduleResolution: qB().ModuleResolutionKind.Bundler,
-            target: qB().ScriptTarget.ES2015,
+            module: Te().ModuleKind.ESNext,
+            moduleResolution: Te().ModuleResolutionKind.Bundler,
+            target: Te().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(WB.f).map((BB => [BB.specifier, [BB.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(Be.h).map((ee => [ee.specifier, [ee.typesVfsPath]])))
             }
-          }, QB = new Map, oB = [];
-          if (BB) {
-            const BB = null !== OB && void 0 !== OB ? OB : {
-              [AB.f]: GB || "\n"
+          }, Me = new Map, Ke = [];
+          if (ee) {
+            const ee = null !== ie && void 0 !== ie ? ie : {
+              [Ee.j]: He || "\n"
             };
-            for (const [OB, GB] of Object.entries(BB)) {
-              const BB = iO(OB);
-              QB.set(BB, GB || "\n"), oB.push(BB)
+            for (const [ie, He] of Object.entries(ee)) {
+              const ee = ci(ie);
+              Me.set(ee, He || "\n"), Ke.push(ee)
             }
-            const DB = iO(null !== YB && void 0 !== YB ? YB : AB.f);
-            QB.has(DB) ? QB.set(DB, GB || "\n") : (QB.set(DB, GB || "\n"), oB.push(DB)), QB.set("/node_modules/@bloxd/index.d.ts", MB.default), oB.push("/node_modules/@bloxd/index.d.ts");
-            for (const OB of Object.values(WB.f)) {
-              QB.set(OB.typesVfsPath, OB.types), oB.push(OB.typesVfsPath);
-              for (const [BB, GB] of Object.entries(OB.files)) {
-                const YB = `/plugin-preview/${OB.name}/${BB}`;
-                QB.set(YB, GB || "\n"), oB.push(YB)
+            const be = ci(null !== ye && void 0 !== ye ? ye : Ee.j);
+            Me.has(be) ? Me.set(be, He || "\n") : (Me.set(be, He || "\n"), Ke.push(be)), Me.set("/node_modules/@bloxd/index.d.ts", oe.default), Ke.push("/node_modules/@bloxd/index.d.ts");
+            for (const ie of Object.values(Be.h)) {
+              Me.set(ie.typesVfsPath, ie.types), Ke.push(ie.typesVfsPath);
+              for (const [ee, He] of Object.entries(ie.files)) {
+                const ye = `/plugin-preview/${ie.name}/${ee}`;
+                Me.set(ye, He || "\n"), Ke.push(ye)
               }
             }
-          } else QB.set(FO, GB || "\n"), oB.push(FO);
-          QB.set("/globals.d.ts", BB ? JB.d : yB.e), QB.set("/lib.d.ts", PB.c), oB.push("/globals.d.ts", "/lib.d.ts");
-          const jB = lB.e(QB),
-            zB = lB.h(jB, oB, qB(), DB);
-          yO({
-            RP: zB,
-            fsMap: QB
+          } else Me.set(ai, He || "\n"), Ke.push(ai);
+          Me.set("/globals.d.ts", ee ? Je.d : Fe.e), Me.set("/lib.d.ts", Re.d), Ke.push("/globals.d.ts", "/lib.d.ts");
+          const Ue = qe.d(Me),
+            ke = qe.g(Ue, Ke, Te(), be);
+          Fi({
+            WR: ke,
+            fsMap: Me
           })
         }()
-      }), []), (0, oB.useEffect)((() => {
-        var BB, YB;
-        if (!jO || !OB) return;
+      }), []), (0, Ke.useEffect)((() => {
+        var ee, ye;
+        if (!Ui || !ie) return;
         const {
-          RP: DB,
-          fsMap: QB
-        } = jO;
-        if (function(BB, OB, GB) {
-            const YB = new Set;
-            for (const [DB, QB] of Object.entries(GB)) {
-              const GB = iO(DB);
-              YB.add(GB);
-              const oB = QB || "\n";
-              OB.get(GB) !== oB && (OB.set(GB, oB), LO(BB, GB, oB))
+          WR: be,
+          fsMap: Me
+        } = Ui;
+        if (function(ee, ie, He) {
+            const ye = new Set;
+            for (const [be, Me] of Object.entries(He)) {
+              const He = ci(be);
+              ye.add(He);
+              const Ke = Me || "\n";
+              ie.get(He) !== Ke && (ie.set(He, Ke), xi(ee, He, Ke))
             }
-            for (const DB of [...OB.keys()]) "/globals.d.ts" === DB || "/lib.d.ts" === DB || DB.startsWith("/node_modules/") || DB.startsWith("/plugin-preview/") || YB.has(DB) || (OB.delete(DB), BB.getSourceFile(DB) && BB.deleteFile(DB))
-          }(DB, QB, null !== vB && void 0 !== vB ? vB : {
-            [AB.f]: GB || "\n"
-          }), tB) return void LO(DB, fO, GO || "\n");
-        const oB = null !== (BB = null === (YB = lO.current) || void 0 === YB ? void 0 : YB.state.doc.toString()) && void 0 !== BB ? BB : GB;
-        LO(DB, fO, oB || "\n")
-      }), [vB, sB, jO, tB, GO, fO, GB, OB]), (0, oB.useEffect)((() => {
-        if (!jO) return;
+            for (const be of [...ie.keys()]) "/globals.d.ts" === be || "/lib.d.ts" === be || be.startsWith("/node_modules/") || be.startsWith("/plugin-preview/") || ye.has(be) || (ie.delete(be), ee.getSourceFile(be) && ee.deleteFile(be))
+          }(be, Me, null !== Ne && void 0 !== Ne ? Ne : {
+            [Ee.j]: He || "\n"
+          }), Qe) return void xi(be, Zi, Hi || "\n");
+        const Ke = null !== (ee = null === (ye = qi.current) || void 0 === ye ? void 0 : ye.state.doc.toString()) && void 0 !== ee ? ee : He;
+        xi(be, Zi, Ke || "\n")
+      }), [Ne, Ge, Ui, Qe, Hi, Zi, He, ie]), (0, Ke.useEffect)((() => {
+        if (!Ui) return;
         const {
-          RP: BB
-        } = jO;
-        LO(BB, fO, (tB ? GO : GB) || "\n")
-      }), [GB, tB, GO, fO, jO]), (0, oB.useEffect)((() => () => {
-        RO.current && (RO.current(), RO.current = null)
-      }), []), (0, oB.useEffect)((() => (YO(((BB, OB) => {
-        if (tB) return !1;
-        const GB = lO.current,
-          YB = pO.current,
-          DB = YB ? (0, VB.w)(YB.docKey) : null;
-        if (!GB || !YB || qO.current !== YB.clientID || BB !== DB) return !1;
-        const QB = GB.state.doc.toString();
-        return QB !== OB && GB.dispatch({
+          WR: ee
+        } = Ui;
+        xi(ee, Zi, (Qe ? Hi : He) || "\n")
+      }), [He, Qe, Hi, Zi, Ui]), (0, Ke.useEffect)((() => () => {
+        Bi.current && (Bi.current(), Bi.current = null)
+      }), []), (0, Ke.useEffect)((() => (yi(((ee, ie) => {
+        if (Qe) return !1;
+        const He = qi.current,
+          ye = fi.current,
+          be = ye ? (0, ge.x)(ye.docKey) : null;
+        if (!He || !ye || Ti.current !== ye.clientID || ee !== be) return !1;
+        const Me = He.state.doc.toString();
+        return Me !== ie && He.dispatch({
           changes: {
             from: 0,
-            to: QB.length,
-            insert: OB
+            to: Me.length,
+            insert: ie
           }
         }), !0
       })), () => {
-        lO.current = null, qO.current = null, YO(null)
-      })), [YO, tB]);
-      const kO = OB ? tB ? null : null !== sB && void 0 !== sB ? sB : AB.f : NO.c,
-        dO = OO(lO, kO);
-      DO(lO, pB), (0, nB.f)("FormatCode", (() => {
-        if (!jO || !lO.current || tB) return;
+        qi.current = null, Ti.current = null, yi(null)
+      })), [yi, Qe]);
+      const wi = ie ? Qe ? null : null !== Ge && void 0 !== Ge ? Ge : Ee.j : zi.c,
+        Di = ii(qi, wi);
+      bi(qi, fe), (0, de.f)("FormatCode", (() => {
+        if (!Ui || !qi.current || Qe) return;
         const {
-          RP: BB,
-          fsMap: GB
-        } = jO, YB = BB.getSourceFile(fO).getFullText();
-        let DB = 0;
-        if (OB && vB)
-          for (const [OB, jB] of Object.entries(vB)) OB !== (null !== sB && void 0 !== sB ? sB : AB.f) && (DB += jB.length);
-        const QB = function(BB, OB, GB, YB, DB) {
-          const QB = BB.languageService.getFormattingEditsForDocument(YB, hO);
-          if (!QB.length) return fB.c.error("Code is already formatted.");
-          QB.sort(((BB, OB) => OB.span.start - BB.span.start));
-          let oB = BB.getSourceFile(YB).getFullText();
-          for (const jB of QB) oB = oB.slice(0, jB.span.start) + jB.MJ + oB.slice(jB.span.start + jB.span.length);
-          return oB !== (GB ? (0, SB.i)(oB, DB) : (0, SB.h)(oB)) ? fB.c.error("Formatting the code will go beyond the character limit.") : fB.c.value(oB)
-        }(BB, 0, OB, fO, DB);
-        if (QB.isError()) return void pB({
-          message: QB.asError().message,
+          WR: ee,
+          fsMap: He
+        } = Ui, ye = ee.getSourceFile(Zi).getFullText();
+        let be = 0;
+        if (ie && Ne)
+          for (const [ie, Ue] of Object.entries(Ne)) ie !== (null !== Ge && void 0 !== Ge ? Ge : Ee.j) && (be += Ue.length);
+        const Me = function(ee, ie, He, ye, be) {
+          const Me = ee.languageService.getFormattingEditsForDocument(ye, Si);
+          if (!Me.length) return te.e.error("Code is already formatted.");
+          Me.sort(((ee, ie) => ie.span.start - ee.span.start));
+          let Ke = ee.getSourceFile(ye).getFullText();
+          for (const Ue of Me) Ke = Ke.slice(0, Ue.span.start) + Ue.HJ + Ke.slice(Ue.span.start + Ue.span.length);
+          return Ke !== (He ? (0, Oe.j)(Ke, be) : (0, Oe.i)(Ke)) ? te.e.error("Formatting the code will go beyond the character limit.") : te.e.value(Ke)
+        }(ee, 0, ie, Zi, be);
+        if (Me.isError()) return void fe({
+          message: Me.asError().message,
           type: "warning"
         });
-        const oB = QB.getValue();
-        oB && (lO.current.dispatch({
+        const Ke = Me.getValue();
+        Ke && (qi.current.dispatch({
           changes: {
             from: 0,
-            to: YB.length,
-            insert: oB
+            to: ye.length,
+            insert: Ke
           },
           selection: {
-            anchor: oB.length
+            anchor: Ke.length
           }
-        }), LO(BB, fO, oB), jB(oB))
+        }), xi(ee, Zi, Ke), Ue(Ke))
       }));
-      const KO = (0, oB.useMemo)((() => {
-        if (!jO) return [];
+      const Pi = (0, Ke.useMemo)((() => {
+        if (!Ui) return [];
         const {
-          RP: BB,
-          fsMap: GB
-        } = jO;
-        ! function(BB, OB, GB, YB) {
-          if (BB.getSourceFile(GB)) return;
-          const DB = YB || "\n";
-          OB.set(GB, DB), BB.createFile(GB, DB)
-        }(BB, GB, fO, (tB ? UO.current : VO.current) || "\n");
-        const oB = OB && gO(tB ? null !== BO && void 0 !== BO ? BO : "index.ts" : sB),
-          jB = [(0, DB.b)({
+          WR: ee,
+          fsMap: He
+        } = Ui;
+        ! function(ee, ie, He, ye) {
+          if (ee.getSourceFile(He)) return;
+          const be = ye || "\n";
+          ie.set(He, be), ee.createFile(He, be)
+        }(ee, He, Zi, (Qe ? ti.current : Oi.current) || "\n");
+        const Ke = ie && Li(Qe ? null !== ei && void 0 !== ei ? ei : "index.ts" : Ge),
+          Ue = [(0, be.c)({
             jsx: !1,
-            typescript: oB
-          }), QB.h.highest(QB.d.domEventHandlers({
-            keydown: BB => "Escape" === BB.key ? (AO.current(), BB.stopPropagation(), !0) : (BB.stopPropagation(), !1)
-          })), (0, YB.d)({
-            override: [XO(BB, fO)]
-          }), KB.l.fromClass(class {
-            constructor(BB) {
-              this.view = BB, this.timeout = null, this.scheduleParse()
+            typescript: Ke
+          }), Me.h.highest(Me.d.domEventHandlers({
+            keydown: ee => "Escape" === ee.key ? (gi.current(), ee.stopPropagation(), !0) : (ee.stopPropagation(), !1)
+          })), (0, ye.e)({
+            override: [vi(ee, Zi)]
+          }), De.o.fromClass(class {
+            constructor(ee) {
+              this.view = ee, this.timeout = null, this.scheduleParse()
             }
-            update(BB) {
-              (BB.docChanged || BB.viewportChanged) && this.scheduleParse()
+            update(ee) {
+              (ee.docChanged || ee.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const BB = this.view.viewport.to;
-                (0, rB.lb)(this.view.state, BB) || (0, rB.T)(this.view, BB, XB) || this.scheduleParse()
-              }), wB))
+                const ee = this.view.viewport.to;
+                (0, Le.qb)(this.view.state, ee) || (0, Le.K)(this.view, ee, Ce) || this.scheduleParse()
+              }), ve))
             }
-          }), ...xB, QB.d.lineWrapping, QB.m.define({
-            create: EO(BB, eB, fO),
-            update(OB, GB) {
-              const YB = GB.effects.some((BB => BB.is(aO)));
-              return GB.docChanged || GB.selection || YB ? (LO(BB, fO, GB.state.doc.toString() || " "), EO(BB, eB, fO)(GB.state)) : OB
+          }), ...re, Me.d.lineWrapping, Me.n.define({
+            create: mi(ee, ne, Zi),
+            update(ie, He) {
+              const ye = He.effects.some((ee => ee.is(ni)));
+              return He.docChanged || He.selection || ye ? (xi(ee, Zi, He.state.doc.toString() || " "), mi(ee, ne, Zi)(He.state)) : ie
             },
-            provide: BB => QB.w.computeN([BB], (OB => OB.field(BB)))
-          }), (0, QB.u)(cO(BB, fO)), (0, NB.e)(rO(OB, BB, fO)), QB.p.fromClass(class {
-            constructor(BB) {
-              this.view = BB, this.searchPanel = null
+            provide: ee => Me.z.computeN([ee], (ie => ie.field(ee)))
+          }), (0, Me.w)(li(ee, Zi)), (0, Xe.h)(Ci(ie, ee, Zi)), Me.r.fromClass(class {
+            constructor(ee) {
+              this.view = ee, this.searchPanel = null
             }
-            update(BB) {
-              const OB = BB.view.dom.querySelector(".cm-search");
-              if (OB !== this.searchPanel) {
-                if (this.searchPanel = OB, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (BB => {
-                  "Escape" === BB.key && (0, ZB.b)(this.view), BB.stopPropagation()
+            update(ee) {
+              const ie = ee.view.dom.querySelector(".cm-search");
+              if (ie !== this.searchPanel) {
+                if (this.searchPanel = ie, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (ee => {
+                  "Escape" === ee.key && (0, pe.d)(this.view), ee.stopPropagation()
                 }))
               }
             }
           })];
-        QO && !tB && jB.push(SO(OB ? null !== sB && void 0 !== sB ? sB : AB.f : NO.c, oO));
-        const yB = pO.current;
-        if (yB && !tB) {
-          jB.push(... function(BB, OB, GB, YB, DB) {
-            let QB = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const oB = (0, VB.w)(GB),
-              jB = KB.l.fromClass(class {
-                constructor(BB) {
-                  this.view = BB, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = IB.o.subscribe("codeCollab", (BB => {
-                    BB.docKey === oB && BB.type === VB.f.Updates && (BB.updates ? this.applyUpdates(BB.updates) : this.pull())
+        Mi && !Qe && Ue.push(di(ie ? null !== Ge && void 0 !== Ge ? Ge : Ee.j : zi.c, Ki));
+        const Fe = fi.current;
+        if (Fe && !Qe) {
+          Ue.push(... function(ee, ie, He, ye, be) {
+            let Me = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const Ke = (0, ge.x)(He),
+              Ue = De.o.fromClass(class {
+                constructor(ee) {
+                  this.view = ee, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = Ye.h.subscribe("codeCollab", (ee => {
+                    ee.docKey === Ke && ee.type === ge.e.Updates && (ee.updates ? this.applyUpdates(ee.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(BB) {
-                  const OB = JSON.parse(BB).map((BB => ({
-                    clientID: BB.clientID,
-                    changes: dB.ChangeSet.fromJSON(BB.changes)
+                applyUpdates(ee) {
+                  const ie = JSON.parse(ee).map((ee => ({
+                    clientID: ee.clientID,
+                    changes: we.ChangeSet.fromJSON(ee.changes)
                   })));
-                  OB.length > 0 && (this.view.dispatch((0, kB.j)(this.view.state, OB)), DB && DB(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  ie.length > 0 && (this.view.dispatch((0, Ze.h)(this.view.state, ie)), be && be(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(BB) {
-                  QB && (BB.docChanged && this.push(), this.sendCursor())
+                update(ee) {
+                  Me && (ee.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const BB = (0, kB.m)(this.view.state);
-                  if (this.pushing || !BB.length) return;
-                  const OB = Date.now() - this.lastPushTime;
-                  if (OB < gB) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const ee = (0, Ze.k)(this.view.state);
+                  if (this.pushing || !ee.length) return;
+                  const ie = Date.now() - this.lastPushTime;
+                  if (ie < xe) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), gB - OB)));
+                  }), xe - ie)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), iB);
-                  const GB = (0, kB.h)(this.view.state),
-                    DB = BB.map((BB => ({
-                      clientID: BB.clientID,
-                      changes: BB.changes.toJSON()
+                  }), ae);
+                  const He = (0, Ze.e)(this.view.state),
+                    be = ee.map((ee => ({
+                      clientID: ee.clientID,
+                      changes: ee.changes.toJSON()
                     }))),
-                    QB = JSON.stringify(DB);
-                  QB.length <= VB.g ? uB.gameBridge.send("sendCodeCollab", {
-                    XB: VB.c.Push,
-                    wB: oB,
-                    EB: GB,
-                    aB: QB
-                  }) : (0, FB.postJsonWithMetricsCookiesAndJsonResponse)(`${YB.gsUrl}/code/collab-push`, mB.r["collab-push"].toBuffer({
-                    gameNameWithVariation: YB.gameNameWithVariation,
-                    lobbyName: YB.lobbyName,
-                    docKey: oB,
-                    version: GB,
-                    updates: QB
+                    Me = JSON.stringify(be);
+                  Me.length <= ge.i ? Pe.gameBridge.send("sendCodeCollab", {
+                    ue: ge.c.Push,
+                    Se: Ke,
+                    ne: He,
+                    Ie: Me
+                  }) : (0, Ve.postJsonWithMetricsCookiesAndJsonResponse)(`${ye.gsUrl}/code/collab-push`, Ae.w["collab-push"].toBuffer({
+                    gameNameWithVariation: ye.gameNameWithVariation,
+                    lobbyName: ye.lobbyName,
+                    docKey: Ke,
+                    version: He,
+                    updates: Me
                   }), {
                     retries: 0
-                  }).catch((BB => {
-                    console.error("[CodeCollab] HTTP push failed", BB)
+                  }).catch((ee => {
+                    console.error("[CodeCollab] HTTP push failed", ee)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const BB = (0, kB.h)(this.view.state);
-                  (0, FB.postJsonWithMetricsCookiesAndJsonResponse)(`${YB.gsUrl}/code/collab-pull`, mB.r["collab-pull"].toBuffer({
-                    gameNameWithVariation: YB.gameNameWithVariation,
-                    lobbyName: YB.lobbyName,
-                    docKey: oB,
-                    fromVersion: BB
+                  const ee = (0, Ze.e)(this.view.state);
+                  (0, Ve.postJsonWithMetricsCookiesAndJsonResponse)(`${ye.gsUrl}/code/collab-pull`, Ae.w["collab-pull"].toBuffer({
+                    gameNameWithVariation: ye.gameNameWithVariation,
+                    lobbyName: ye.lobbyName,
+                    docKey: Ke,
+                    fromVersion: ee
                   }), {
                     retries: 1
-                  }).then((BB => {
-                    this.destroyed || (BB.fullDoc ? IB.o.tM("codeCollabRejoin", {
-                      docKey: oB,
-                      doc: BB.fullDoc,
-                      version: BB.version
-                    }) : this.applyUpdates(BB.updates))
-                  })).catch((BB => {
-                    console.error("[CodeCollab] Pull failed", BB)
+                  }).then((ee => {
+                    this.destroyed || (ee.fullDoc ? Ye.h.yR("codeCollabRejoin", {
+                      docKey: Ke,
+                      doc: ee.fullDoc,
+                      version: ee.version
+                    }) : this.applyUpdates(ee.updates))
+                  })).catch((ee => {
+                    console.error("[CodeCollab] Pull failed", ee)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const BB = Date.now();
-                  if (BB - this.lastCursorSent < LB) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const ee = Date.now();
+                  if (ee - this.lastCursorSent < ce) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), LB)));
-                  this.lastCursorSent = BB;
-                  const OB = this.view.state.selection.main;
-                  uB.gameBridge.send("sendCodeCollab", {
-                    XB: VB.c.Cursor,
-                    wB: oB,
-                    CB: OB.anchor,
-                    HB: OB.head
+                  }), ce)));
+                  this.lastCursorSent = ee;
+                  const ie = this.view.state.selection.main;
+                  Pe.gameBridge.send("sendCodeCollab", {
+                    ue: ge.c.Cursor,
+                    Se: Ke,
+                    Qe: ie.anchor,
+                    ei: ie.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, IB.o.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, Ye.h.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, kB.e)({
-              startVersion: BB,
-              clientID: OB
-            }), jB]
-          }(JO, MO, yB.docKey, yB.httpConfig, (BB => {
-            var OB;
-            null === (OB = zO.current) || void 0 === OB || OB.call(zO, BB)
-          }), zB));
-          const BB = function(BB, OB) {
-            const GB = (0, VB.w)(BB);
+            return [(0, Ze.b)({
+              startVersion: ee,
+              clientID: ie
+            }), Ue]
+          }(Ji, oi, Fe.docKey, Fe.httpConfig, (ee => {
+            var ie;
+            null === (ie = ki.current) || void 0 === ie || ie.call(ki, ee)
+          }), ke));
+          const ee = function(ee, ie) {
+            const He = (0, ge.x)(ee);
             return {
-              extensions: [bB],
-              connect(BB) {
-                if (OB) {
-                  const GB = OB.map((BB => cB.of({
-                    playerId: BB.playerId,
-                    playerName: BB.playerName,
-                    colour: BB.colour,
-                    anchor: BB.anchor,
-                    head: BB.head,
+              extensions: [se],
+              connect(ee) {
+                if (ie) {
+                  const He = ie.map((ee => me.of({
+                    playerId: ee.playerId,
+                    playerName: ee.playerName,
+                    colour: ee.colour,
+                    anchor: ee.anchor,
+                    head: ee.head,
                     lastMoved: Date.now()
                   })));
-                  GB.length > 0 && BB.dispatch({
-                    effects: GB
+                  He.length > 0 && ee.dispatch({
+                    effects: He
                   })
                 }
-                const YB = IB.o.subscribe("codeCollab", (OB => {
-                    if (OB.docKey === GB)
-                      if (OB.type === VB.f.RemoteCursor) BB.dispatch({
-                        effects: cB.of({
-                          playerId: OB.playerId,
-                          playerName: OB.playerName,
-                          colour: OB.colour,
-                          anchor: OB.anchor,
-                          head: OB.head,
+                const ye = Ye.h.subscribe("codeCollab", (ie => {
+                    if (ie.docKey === He)
+                      if (ie.type === ge.e.RemoteCursor) ee.dispatch({
+                        effects: me.of({
+                          playerId: ie.playerId,
+                          playerName: ie.playerName,
+                          colour: ie.colour,
+                          anchor: ie.anchor,
+                          head: ie.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (OB.type === VB.f.Presence) {
-                      const GB = JSON.parse(OB.peers),
-                        YB = new Set(GB.map((BB => BB.playerId))),
-                        DB = BB.state.field(bB),
-                        QB = [];
-                      for (const [BB] of DB.cursors) YB.has(BB) || QB.push(hB.of(BB));
-                      QB.length > 0 && BB.dispatch({
-                        effects: QB
+                      else if (ie.type === ge.e.Presence) {
+                      const He = JSON.parse(ie.peers),
+                        ye = new Set(He.map((ee => ee.playerId))),
+                        be = ee.state.field(se),
+                        Me = [];
+                      for (const [ee] of be.cursors) ye.has(ee) || Me.push(le.of(ee));
+                      Me.length > 0 && ee.dispatch({
+                        effects: Me
                       })
                     }
                   })),
-                  DB = setInterval((() => {
-                    BB.dom.isConnected ? BB.dispatch({
-                      effects: aB.of(Date.now())
-                    }) : clearInterval(DB)
-                  }), EB);
+                  be = setInterval((() => {
+                    ee.dom.isConnected ? ee.dispatch({
+                      effects: Se.of(Date.now())
+                    }) : clearInterval(be)
+                  }), ue);
                 return () => {
-                  IB.o.unsubscribe(YB), clearInterval(DB)
+                  Ye.h.unsubscribe(ye), clearInterval(be)
                 }
               }
             }
-          }(yB.docKey, yB.existingCursors);
-          jB.push(...BB.extensions), WO.current = BB.connect
-        } else WO.current = null;
-        return jB
-      }), [OB, jO, eB, JO, MO, fO, sB, tB, BO, zB, QO, oO]);
-      if (!jO || !CB && !tB) return (0, nO.jsx)("div", {
+          }(Fe.docKey, Fe.existingCursors);
+          Ue.push(...ee.extensions), Ei.current = ee.connect
+        } else Ei.current = null;
+        return Ue
+      }), [ie, Ui, ne, Ji, oi, Zi, Ge, Qe, ei, ke, Mi, Ki]);
+      if (!Ui || !Ie && !Qe) return (0, Wi.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, nO.jsx)(RB.b, {})
+        children: (0, Wi.jsx)(ze.b, {})
       });
-      const uO = tB ? `plugin-${tB}-${null!==BO&&void 0!==BO?BO:"index.ts"}` : CB ? `collab-${CB.clientID}` : `local-${OB}`;
-      return (0, nO.jsx)(QB.s, {
-        value: tB ? null !== GO && void 0 !== GO ? GO : "" : GB,
-        onChange: jB,
-        extensions: KO,
+      const Ai = Qe ? `plugin-${Qe}-${null!==ei&&void 0!==ei?ei:"index.ts"}` : Ie ? `collab-${Ie.clientID}` : `local-${ie}`;
+      return (0, Wi.jsx)(Me.t, {
+        value: Qe ? null !== Hi && void 0 !== Hi ? Hi : "" : He,
+        onChange: Ue,
+        extensions: Pi,
         className: "CodeEditorContent",
-        theme: TB ? ZO : "dark",
-        editable: zB && !tB,
-        basicSetup: eO,
-        onCreateEditor: BB => {
-          var OB;
-          lO.current = BB, qO.current = null !== (OB = null === CB || void 0 === CB ? void 0 : CB.clientID) && void 0 !== OB ? OB : null, dO(BB), RO.current && RO.current(), WO.current && (RO.current = WO.current(BB))
+        theme: je ? Xi : "dark",
+        editable: ke && !Qe,
+        basicSetup: ji,
+        onCreateEditor: ee => {
+          var ie;
+          qi.current = ee, Ti.current = null !== (ie = null === Ie || void 0 === Ie ? void 0 : Ie.clientID) && void 0 !== ie ? ie : null, Di(ee), Bi.current && Bi.current(), Ei.current && (Bi.current = Ei.current(ee))
         }
-      }, uO)
+      }, Ai)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

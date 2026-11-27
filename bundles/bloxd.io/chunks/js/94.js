@@ -1,377 +1,377 @@
 export const id = 94;
 export const ids = [94];
 export const modules = {
-  5228: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      g: () => oB,
-      k: () => ZB,
-      l: () => qB,
-      p: () => jB,
-      r: () => DB,
-      s: () => QB,
-      t: () => pB,
-      u: () => lB,
-      v: () => zB
+  5220: (ee, ie, He) => {
+    He.d(ie, {
+      C: () => ke,
+      e: () => ye,
+      h: () => Ke,
+      i: () => pe,
+      l: () => Te,
+      n: () => Ue,
+      q: () => be,
+      t: () => Me,
+      x: () => fe,
+      y: () => qe
     });
-    const YB = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const ye = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function DB(BB) {
+    function be(ee) {
       try {
-        return decodeURIComponent(BB.slice(1))
+        return decodeURIComponent(ee.slice(1))
       } catch {
-        return BB.slice(1)
+        return ee.slice(1)
       }
     }
 
-    function QB(BB) {
-      return BB.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function Me(ee) {
+      return ee.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const oB = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${YB.source}`, "g");
+    const Ke = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${ye.source}`, "g");
 
-    function jB(BB, OB) {
-      return 2 === BB.length ? OB.replace(/^ (.*) $/, "$1") : OB
-    }
-
-    function yB(BB) {
-      return "" === BB.trim()
+    function Ue(ee, ie) {
+      return 2 === ee.length ? ie.replace(/^ (.*) $/, "$1") : ie
     }
 
-    function JB(BB) {
-      const OB = [];
-      for (const GB of BB.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) OB.length > 0 && OB[OB.length - 1].endsWith("\\") ? OB[OB.length - 1] += `|${GB}` : OB.push(GB);
-      return OB.map((BB => BB.trim().replaceAll("\\|", "|")))
+    function Fe(ee) {
+      return "" === ee.trim()
     }
-    const MB = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function PB(BB) {
-      const OB = [],
-        GB = [{
+    function Je(ee) {
+      const ie = [];
+      for (const He of ee.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) ie.length > 0 && ie[ie.length - 1].endsWith("\\") ? ie[ie.length - 1] += `|${He}` : ie.push(He);
+      return ie.map((ee => ee.trim().replaceAll("\\|", "|")))
+    }
+    const oe = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function Re(ee) {
+      const ie = [],
+        He = [{
           indent: -1,
-          items: OB
+          items: ie
         }];
-      let YB = null;
-      for (const DB of BB) {
-        const BB = DB.match(MB);
-        if (!BB) {
-          YB && (YB.text += ` ${DB.trim()}`);
+      let ye = null;
+      for (const be of ee) {
+        const ee = be.match(oe);
+        if (!ee) {
+          ye && (ye.text += ` ${be.trim()}`);
           continue
         }
-        const OB = BB[1].replace(/\t/g, "  ").length;
-        for (; OB <= GB[GB.length - 1].indent;) GB.pop();
-        YB = {
-          text: BB[3].trim(),
+        const ie = ee[1].replace(/\t/g, "  ").length;
+        for (; ie <= He[He.length - 1].indent;) He.pop();
+        ye = {
+          text: ee[3].trim(),
           children: []
-        }, GB[GB.length - 1].items.push(YB), GB.push({
-          indent: OB,
-          items: YB.children
+        }, He[He.length - 1].items.push(ye), He.push({
+          indent: ie,
+          items: ye.children
         })
       }
-      return OB
+      return ie
     }
 
-    function zB(BB) {
-      const OB = BB.replace(/\r\n/g, "\n").split("\n"),
-        GB = [];
-      let YB = 0;
-      for (; YB < OB.length;) {
-        const BB = OB[YB];
-        if (yB(BB)) {
-          YB++;
+    function ke(ee) {
+      const ie = ee.replace(/\r\n/g, "\n").split("\n"),
+        He = [];
+      let ye = 0;
+      for (; ye < ie.length;) {
+        const ee = ie[ye];
+        if (Fe(ee)) {
+          ye++;
           continue
         }
-        const DB = BB.match(/^\s*```\s*(\w*)\s*$/);
-        if (DB) {
-          const BB = [];
-          for (YB++; YB < OB.length && !/^\s*```\s*$/.test(OB[YB]);) BB.push(OB[YB]), YB++;
-          YB++, GB.push({
+        const be = ee.match(/^\s*```\s*(\w*)\s*$/);
+        if (be) {
+          const ee = [];
+          for (ye++; ye < ie.length && !/^\s*```\s*$/.test(ie[ye]);) ee.push(ie[ye]), ye++;
+          ye++, He.push({
             kind: "code",
-            lang: DB[1] || "text",
-            code: BB.join("\n").replace(/\s+$/, "")
+            lang: be[1] || "text",
+            code: ee.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const oB = BB.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (oB) {
-          const BB = oB[2].trim();
-          GB.push({
+        const Ke = ee.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (Ke) {
+          const ee = Ke[2].trim();
+          He.push({
             kind: "heading",
-            level: oB[1].length,
-            text: BB,
-            anchor: QB(BB)
-          }), YB++;
+            level: Ke[1].length,
+            text: ee,
+            anchor: Me(ee)
+          }), ye++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(BB)) {
-          GB.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(ee)) {
+          He.push({
             kind: "rule"
-          }), YB++;
+          }), ye++;
           continue
         }
-        if (BB.trim().startsWith("|") && YB + 1 < OB.length && /^\s*\|[\s:|-]+\|\s*$/.test(OB[YB + 1])) {
-          const DB = JB(BB),
-            QB = [];
-          for (YB += 2; YB < OB.length && OB[YB].trim().startsWith("|");) QB.push(JB(OB[YB])), YB++;
-          GB.push({
+        if (ee.trim().startsWith("|") && ye + 1 < ie.length && /^\s*\|[\s:|-]+\|\s*$/.test(ie[ye + 1])) {
+          const be = Je(ee),
+            Me = [];
+          for (ye += 2; ye < ie.length && ie[ye].trim().startsWith("|");) Me.push(Je(ie[ye])), ye++;
+          He.push({
             kind: "table",
-            header: DB,
-            rows: QB
+            header: be,
+            rows: Me
           });
           continue
         }
-        if (BB.startsWith(">")) {
-          const BB = [];
-          for (; YB < OB.length && OB[YB].startsWith(">");) BB.push(OB[YB].replace(/^>\s?/, "")), YB++;
-          GB.push({
+        if (ee.startsWith(">")) {
+          const ee = [];
+          for (; ye < ie.length && ie[ye].startsWith(">");) ee.push(ie[ye].replace(/^>\s?/, "")), ye++;
+          He.push({
             kind: "quote",
-            blocks: zB(BB.join("\n"))
+            blocks: ke(ee.join("\n"))
           });
           continue
         }
-        if (MB.test(BB)) {
-          const DB = [],
-            QB = /^\s*\d+\./.test(BB);
-          for (; YB < OB.length && !yB(OB[YB]) && (MB.test(OB[YB]) || /^\s+\S/.test(OB[YB]));) DB.push(OB[YB]), YB++;
-          GB.push({
+        if (oe.test(ee)) {
+          const be = [],
+            Me = /^\s*\d+\./.test(ee);
+          for (; ye < ie.length && !Fe(ie[ye]) && (oe.test(ie[ye]) || /^\s+\S/.test(ie[ye]));) be.push(ie[ye]), ye++;
+          He.push({
             kind: "list",
-            ordered: QB,
-            items: PB(DB)
+            ordered: Me,
+            items: Re(be)
           });
           continue
         }
-        const jB = [];
-        for (; YB < OB.length && !yB(OB[YB]) && !/^\s*```/.test(OB[YB]) && !/^#{1,6}\s/.test(OB[YB]) && !OB[YB].startsWith(">") && !MB.test(OB[YB]) && (!OB[YB].trim().startsWith("|") || 0 !== jB.length);) jB.push(OB[YB].trim()), YB++;
-        0 === jB.length && (jB.push(OB[YB].trim()), YB++), GB.push({
+        const Ue = [];
+        for (; ye < ie.length && !Fe(ie[ye]) && !/^\s*```/.test(ie[ye]) && !/^#{1,6}\s/.test(ie[ye]) && !ie[ye].startsWith(">") && !oe.test(ie[ye]) && (!ie[ye].trim().startsWith("|") || 0 !== Ue.length);) Ue.push(ie[ye].trim()), ye++;
+        0 === Ue.length && (Ue.push(ie[ye].trim()), ye++), He.push({
           kind: "paragraph",
-          text: jB.join(" ")
+          text: Ue.join(" ")
         })
       }
-      return GB
+      return He
     }
 
-    function lB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const GB = zB(BB);
-      let YB = "";
-      const DB = [],
-        QB = [],
-        oB = new Map;
-      for (const JB of GB) {
-        if ("heading" === JB.kind) {
-          var jB;
-          const BB = (null !== (jB = oB.get(JB.anchor)) && void 0 !== jB ? jB : 0) + 1;
-          oB.set(JB.anchor, BB), BB > 1 && (JB.anchor = `${JB.anchor}-${BB}`)
+    function qe(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const He = ke(ee);
+      let ye = "";
+      const be = [],
+        Me = [],
+        Ke = new Map;
+      for (const Je of He) {
+        if ("heading" === Je.kind) {
+          var Ue;
+          const ee = (null !== (Ue = Ke.get(Je.anchor)) && void 0 !== Ue ? Ue : 0) + 1;
+          Ke.set(Je.anchor, ee), ee > 1 && (Je.anchor = `${Je.anchor}-${ee}`)
         }
-        if ("heading" === JB.kind && 1 === JB.level && !YB) {
-          YB = JB.text;
+        if ("heading" === Je.kind && 1 === Je.level && !ye) {
+          ye = Je.text;
           continue
         }
-        if ("heading" === JB.kind && JB.level <= OB) {
-          QB.push({
-            heading: JB,
+        if ("heading" === Je.kind && Je.level <= ie) {
+          Me.push({
+            heading: Je,
             blocks: []
           });
           continue
         }
-        const BB = QB.at(-1);
-        BB ? BB.blocks.push(JB) : DB.push(JB)
+        const ee = Me.at(-1);
+        ee ? ee.blocks.push(Je) : be.push(Je)
       }
-      const yB = BB => {
+      const Fe = ee => {
         for (;
-          "rule" === (null === (OB = BB.at(-1)) || void 0 === OB ? void 0 : OB.kind);) {
-          var OB;
-          BB.pop()
+          "rule" === (null === (ie = ee.at(-1)) || void 0 === ie ? void 0 : ie.kind);) {
+          var ie;
+          ee.pop()
         }
       };
-      yB(DB);
-      for (const JB of QB) yB(JB.blocks);
+      Fe(be);
+      for (const Je of Me) Fe(Je.blocks);
       return {
-        title: YB,
-        intro: DB,
-        sections: QB
+        title: ye,
+        intro: be,
+        sections: Me
       }
     }
 
-    function pB(BB) {
+    function fe(ee) {
       return [{
         heading: null,
-        blocks: BB.intro
-      }, ...BB.sections.map((BB => ({
-        heading: BB.heading,
-        blocks: BB.blocks
+        blocks: ee.intro
+      }, ...ee.sections.map((ee => ({
+        heading: ee.heading,
+        blocks: ee.blocks
       })))]
     }
 
-    function qB(BB) {
-      return BB.flatMap((BB => "code" === BB.kind ? [BB] : "quote" === BB.kind ? qB(BB.blocks) : []))
+    function Te(ee) {
+      return ee.flatMap((ee => "code" === ee.kind ? [ee] : "quote" === ee.kind ? Te(ee.blocks) : []))
     }
 
-    function ZB(BB) {
-      switch (BB.kind) {
+    function pe(ee) {
+      switch (ee.kind) {
         case "heading":
         case "paragraph":
-          return BB.text;
+          return ee.text;
         case "code":
-          return BB.code;
+          return ee.code;
         case "table":
-          return [BB.header, ...BB.rows].map((BB => BB.join(" "))).join(" ");
+          return [ee.header, ...ee.rows].map((ee => ee.join(" "))).join(" ");
         case "list": {
-          const OB = BB => BB.map((BB => `${BB.text} ${OB(BB.children)}`)).join(" ");
-          return OB(BB.items)
+          const ie = ee => ee.map((ee => `${ee.text} ${ie(ee.children)}`)).join(" ");
+          return ie(ee.items)
         }
         case "quote":
-          return BB.blocks.map(ZB).join(" ");
+          return ee.blocks.map(pe).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  7009: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => PB,
-      i: () => oB,
-      j: () => jB
+  7107: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Re,
+      f: () => Ke,
+      j: () => Ue
     });
-    GB(7006);
-    var YB = GB(56),
-      DB = GB(5228),
-      QB = GB(1282);
-    const oB = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    He(7099);
+    var ye = He(59),
+      be = He(5220),
+      Me = He(1228);
+    const Ke = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function jB(BB, OB) {
-      return BB === OB ? BB : `${BB} (${OB})`
+    function Ue(ee, ie) {
+      return ee === ie ? ee : `${ee} (${ie})`
     }
 
-    function yB(BB) {
-      const OB = [];
-      let GB = 0;
-      for (const YB of BB.matchAll(oB)) {
-        YB.index > GB && OB.push(BB.slice(GB, YB.index));
-        const [, DB, oB, yB, JB, MB, PB] = YB;
-        void 0 !== DB ? OB.push(jB(DB, oB)) : void 0 !== yB || void 0 !== JB ? OB.push((0, QB.jsx)("strong", {
-          children: null !== yB && void 0 !== yB ? yB : JB
-        }, YB.index)) : void 0 !== MB ? OB.push((0, QB.jsx)("em", {
-          children: MB
-        }, YB.index)) : OB.push((0, QB.jsx)("code", {
-          children: PB
-        }, YB.index)), GB = YB.index + YB[0].length
+    function Fe(ee) {
+      const ie = [];
+      let He = 0;
+      for (const ye of ee.matchAll(Ke)) {
+        ye.index > He && ie.push(ee.slice(He, ye.index));
+        const [, be, Ke, Fe, Je, oe, Re] = ye;
+        void 0 !== be ? ie.push(Ue(be, Ke)) : void 0 !== Fe || void 0 !== Je ? ie.push((0, Me.jsx)("strong", {
+          children: null !== Fe && void 0 !== Fe ? Fe : Je
+        }, ye.index)) : void 0 !== oe ? ie.push((0, Me.jsx)("em", {
+          children: oe
+        }, ye.index)) : ie.push((0, Me.jsx)("code", {
+          children: Re
+        }, ye.index)), He = ye.index + ye[0].length
       }
-      return GB < BB.length && OB.push(BB.slice(GB)), OB
+      return He < ee.length && ie.push(ee.slice(He)), ie
     }
 
-    function JB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const YB = BB.map(((BB, OB) => (0, QB.jsxs)("li", {
-        children: [yB(BB.text), BB.children.length > 0 && JB(BB.children, !1)]
-      }, OB)));
-      return OB ? (0, QB.jsx)("ol", {
-        start: GB,
-        children: YB
-      }) : (0, QB.jsx)("ul", {
-        children: YB
+    function Je(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const ye = ee.map(((ee, ie) => (0, Me.jsxs)("li", {
+        children: [Fe(ee.text), ee.children.length > 0 && Je(ee.children, !1)]
+      }, ie)));
+      return ie ? (0, Me.jsx)("ol", {
+        start: He,
+        children: ye
+      }) : (0, Me.jsx)("ul", {
+        children: ye
       })
     }
 
-    function MB(BB, OB) {
-      switch (BB.kind) {
+    function oe(ee, ie) {
+      switch (ee.kind) {
         case "heading":
-          return BB.level <= 2 ? (0, QB.jsx)("h3", {
-            children: yB(BB.text)
-          }, OB) : (0, QB.jsx)("h4", {
-            children: yB(BB.text)
-          }, OB);
+          return ee.level <= 2 ? (0, Me.jsx)("h3", {
+            children: Fe(ee.text)
+          }, ie) : (0, Me.jsx)("h4", {
+            children: Fe(ee.text)
+          }, ie);
         case "paragraph":
-          return (0, QB.jsx)("p", {
-            children: yB(BB.text)
-          }, OB);
+          return (0, Me.jsx)("p", {
+            children: Fe(ee.text)
+          }, ie);
         case "list":
-          return (0, QB.jsx)(YB.Fragment, {
-            children: JB(BB.items, BB.ordered)
-          }, OB);
+          return (0, Me.jsx)(ye.Fragment, {
+            children: Je(ee.items, ee.ordered)
+          }, ie);
         case "quote":
-          return (0, QB.jsx)("blockquote", {
-            children: BB.blocks.map(((BB, OB) => MB(BB, OB)))
-          }, OB);
+          return (0, Me.jsx)("blockquote", {
+            children: ee.blocks.map(((ee, ie) => oe(ee, ie)))
+          }, ie);
         case "code":
-          return (0, QB.jsx)("pre", {
-            children: (0, QB.jsx)("code", {
-              children: BB.code
+          return (0, Me.jsx)("pre", {
+            children: (0, Me.jsx)("code", {
+              children: ee.code
             })
-          }, OB);
+          }, ie);
         case "table":
-          return (0, QB.jsxs)("table", {
-            children: [(0, QB.jsx)("thead", {
-              children: (0, QB.jsx)("tr", {
-                children: BB.header.map(((BB, OB) => (0, QB.jsx)("th", {
-                  children: yB(BB)
-                }, OB)))
+          return (0, Me.jsxs)("table", {
+            children: [(0, Me.jsx)("thead", {
+              children: (0, Me.jsx)("tr", {
+                children: ee.header.map(((ee, ie) => (0, Me.jsx)("th", {
+                  children: Fe(ee)
+                }, ie)))
               })
-            }), (0, QB.jsx)("tbody", {
-              children: BB.rows.map(((BB, OB) => (0, QB.jsx)("tr", {
-                children: BB.map(((BB, OB) => (0, QB.jsx)("td", {
-                  children: yB(BB)
-                }, OB)))
-              }, OB)))
+            }), (0, Me.jsx)("tbody", {
+              children: ee.rows.map(((ee, ie) => (0, Me.jsx)("tr", {
+                children: ee.map(((ee, ie) => (0, Me.jsx)("td", {
+                  children: Fe(ee)
+                }, ie)))
+              }, ie)))
             })]
-          }, OB);
+          }, ie);
         case "rule":
-          return (0, QB.jsx)("hr", {}, OB)
+          return (0, Me.jsx)("hr", {}, ie)
       }
     }
 
-    function PB(BB) {
+    function Re(ee) {
       let {
-        markdown: OB
-      } = BB, GB = 0;
-      return (0, QB.jsx)("div", {
+        markdown: ie
+      } = ee, He = 0;
+      return (0, Me.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, DB.v)(OB).map(((BB, OB) => {
-          if ("list" !== BB.kind || !BB.ordered) return GB = 0, MB(BB, OB);
-          const DB = GB + 1;
-          return GB += BB.items.length, (0, QB.jsx)(YB.Fragment, {
-            children: JB(BB.items, !0, DB)
-          }, OB)
+        children: (0, be.C)(ie).map(((ee, ie) => {
+          if ("list" !== ee.kind || !ee.ordered) return He = 0, oe(ee, ie);
+          const be = He + 1;
+          return He += ee.items.length, (0, Me.jsx)(ye.Fragment, {
+            children: Je(ee.items, !0, be)
+          }, ie)
         }))
       })
     }
   },
-  7004: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => RB,
-      l: () => WB,
-      h: () => VB,
-      m: () => pB
+  7094: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => ze,
+      i: () => Be,
+      g: () => ge,
+      j: () => fe
     });
-    var YB = GB(1200),
-      DB = GB(6960),
-      QB = GB(5366);
-    const oB = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var ye = He(1155),
+      be = He(7052),
+      Me = He(5343);
+    const Ke = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function jB(BB) {
-      return (0, QB.f)(BB, oB, (OB => !/^my/i.test(OB[0]) || !/follow $/i.test(BB.slice(0, OB.index)))).length > 0
+    function Ue(ee) {
+      return (0, Me.g)(ee, Ke, (ie => !/^my/i.test(ie[0]) || !/follow $/i.test(ee.slice(0, ie.index)))).length > 0
     }
-    const yB = /\byou(?:r|'re|'ll)?\b/i,
-      JB = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      MB = 2;
+    const Fe = /\byou(?:r|'re|'ll)?\b/i,
+      Je = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      oe = 2;
 
-    function PB(BB) {
-      return function(BB) {
-        const OB = [];
-        let GB = !1;
-        for (const YB of BB.split("\n")) {
-          if (/^\s*(```|~~~)/.test(YB)) {
-            GB = !GB;
+    function Re(ee) {
+      return function(ee) {
+        const ie = [];
+        let He = !1;
+        for (const ye of ee.split("\n")) {
+          if (/^\s*(```|~~~)/.test(ye)) {
+            He = !He;
             continue
           }
-          if (GB || /^\s*>/.test(YB)) continue;
-          const BB = YB.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          OB.push(...(0, DB.l)(BB))
+          if (He || /^\s*>/.test(ye)) continue;
+          const ee = ye.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          ie.push(...(0, be.q)(ee))
         }
-        return OB
-      }(BB).filter((BB => jB(BB) || JB.test(BB) && !yB.test(BB)))
+        return ie
+      }(ee).filter((ee => Ue(ee) || Je.test(ee) && !Fe.test(ee)))
     }
-    const zB = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      lB = [{
+    const ke = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      qe = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function pB(BB) {
-      const OB = lB.findIndex((OB => OB.name === BB));
-      return -1 === OB ? lB.length : OB
+    function fe(ee) {
+      const ie = qe.findIndex((ie => ie.name === ee));
+      return -1 === ie ? qe.length : ie
     }
-    const qB = 2500,
-      ZB = 12e4;
-    class NB extends Error {
-      constructor(BB) {
-        super(`Studio AI chat ${BB}`), this.reason = BB
+    const Te = 2500,
+      pe = 12e4;
+    class Xe extends Error {
+      constructor(ee) {
+        super(`Studio AI chat ${ee}`), this.reason = ee
       }
     }
 
-    function RB(BB, OB) {
-      const GB = new AbortController,
-        YB = () => {
-          GB.abort()
+    function ze(ee, ie) {
+      const He = new AbortController,
+        ye = () => {
+          He.abort()
         },
-        DB = setTimeout(YB, BB);
-      return null !== OB && void 0 !== OB && OB.aborted && YB(), null === OB || void 0 === OB || OB.addEventListener("abort", YB, {
+        be = setTimeout(ye, ee);
+      return null !== ie && void 0 !== ie && ie.aborted && ye(), null === ie || void 0 === ie || ie.addEventListener("abort", ye, {
         once: !0
       }), {
-        signal: GB.signal,
+        signal: He.signal,
         clear: () => {
-          clearTimeout(DB), null === OB || void 0 === OB || OB.removeEventListener("abort", YB)
+          clearTimeout(be), null === ie || void 0 === ie || ie.removeEventListener("abort", ye)
         }
       }
     }
 
-    function WB(BB, OB, GB) {
-      return new Promise(((DB, QB) => {
-        const oB = new AbortController,
-          jB = () => {
-            oB.abort(), QB((0, YB.i)(GB))
+    function Be(ee, ie, He) {
+      return new Promise(((be, Me) => {
+        const Ke = new AbortController,
+          Ue = () => {
+            Ke.abort(), Me((0, ye.f)(He))
           };
-        if (null !== GB && void 0 !== GB && GB.aborted) return void jB();
-        null === GB || void 0 === GB || GB.addEventListener("abort", jB, {
+        if (null !== He && void 0 !== He && He.aborted) return void Ue();
+        null === He || void 0 === He || He.addEventListener("abort", Ue, {
           once: !0
         });
-        const yB = lB.map((() => !1));
-        let JB = null;
-        const MB = lB.map((() => !1)),
-          PB = lB.map((() => !1));
-        lB.forEach(((YB, zB) => {
-          const pB = RB(ZB, oB.signal);
-          SB(YB, [{
+        const Fe = qe.map((() => !1));
+        let Je = null;
+        const oe = qe.map((() => !1)),
+          Re = qe.map((() => !1));
+        qe.forEach(((ye, ke) => {
+          const fe = ze(pe, Ke.signal);
+          Oe(ye, [{
             role: "user",
-            content: BB
-          }], pB.signal).then((BB => {
-            oB.signal.aborted || ("busy" === BB || "failed" === BB ? (MB[zB] = "busy" === BB, PB[zB] = !0) : null !== BB && (null === JB || zB < JB.rank) && (JB = {
-              rank: zB,
+            content: ee
+          }], fe.signal).then((ee => {
+            Ke.signal.aborted || ("busy" === ee || "failed" === ee ? (oe[ke] = "busy" === ee, Re[ke] = !0) : null !== ee && (null === Je || ke < Je.rank) && (Je = {
+              rank: ke,
               answer: {
-                text: BB.text,
-                model: YB.name
+                text: ee.text,
+                model: ye.name
               }
-            }, OB(JB.answer)))
-          }), (BB => {
-            oB.signal.aborted || (PB[zB] = !0, console.warn(`Studio AI: ${YB.name} couldn't be reached`, BB))
+            }, ie(Je.answer)))
+          }), (ee => {
+            Ke.signal.aborted || (Re[ke] = !0, console.warn(`Studio AI: ${ye.name} couldn't be reached`, ee))
           })).finally((() => {
-            pB.clear(), yB[zB] = !0, oB.signal.aborted || (() => {
-              var BB, OB;
-              const YB = null !== (BB = null === (OB = JB) || void 0 === OB ? void 0 : OB.rank) && void 0 !== BB ? BB : lB.length;
-              yB.slice(0, YB).includes(!1) || (null === GB || void 0 === GB || GB.removeEventListener("abort", jB), oB.abort(), null !== JB ? DB({
-                ...JB.answer,
-                isFinal: !PB.slice(0, JB.rank).includes(!0)
-              }) : QB(new NB(MB.includes(!0) ? "busy" : "failed")))
+            fe.clear(), Fe[ke] = !0, Ke.signal.aborted || (() => {
+              var ee, ie;
+              const ye = null !== (ee = null === (ie = Je) || void 0 === ie ? void 0 : ie.rank) && void 0 !== ee ? ee : qe.length;
+              Fe.slice(0, ye).includes(!1) || (null === He || void 0 === He || He.removeEventListener("abort", Ue), Ke.abort(), null !== Je ? be({
+                ...Je.answer,
+                isFinal: !Re.slice(0, Je.rank).includes(!0)
+              }) : Me(new Xe(oe.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((BB => {
-            console.error("Studio AI: showing an answer failed", BB)
+          })).catch((ee => {
+            console.error("Studio AI: showing an answer failed", ee)
           }))
         }))
       }))
     }
 
-    function AB(BB) {
-      var OB, GB;
-      return "length" === (null === BB || void 0 === BB || null === (OB = BB.choices) || void 0 === OB || null === (GB = OB[0]) || void 0 === GB ? void 0 : GB.finish_reason)
+    function Ee(ee) {
+      var ie, He;
+      return "length" === (null === ee || void 0 === ee || null === (ie = ee.choices) || void 0 === ie || null === (He = ie[0]) || void 0 === He ? void 0 : He.finish_reason)
     }
-    async function VB(BB, OB, GB) {
-      const YB = lB.find((OB => OB.name === BB));
-      if (void 0 === YB) return "failed";
-      const DB = RB(ZB, GB);
+    async function ge(ee, ie, He) {
+      const ye = qe.find((ie => ie.name === ee));
+      if (void 0 === ye) return "failed";
+      const be = ze(pe, He);
       try {
-        const BB = await SB(YB, OB, DB.signal);
-        return null !== BB && "object" === typeof BB ? BB.isCutOff ? (console.warn(`Studio AI: ${YB.name}'s answer was cut off at the token limit`), null) : {
-          text: BB.text
-        } : BB
+        const ee = await Oe(ye, ie, be.signal);
+        return null !== ee && "object" === typeof ee ? ee.isCutOff ? (console.warn(`Studio AI: ${ye.name}'s answer was cut off at the token limit`), null) : {
+          text: ee.text
+        } : ee
       } finally {
-        DB.clear()
+        be.clear()
       }
     }
-    async function SB(BB, OB, GB) {
-      const YB = await fetch(zB, {
+    async function Oe(ee, ie, He) {
+      const ye = await fetch(ke, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: BB.name,
-          messages: OB,
-          max_tokens: qB,
-          temperature: BB.temperature,
-          reasoning_effort: BB.reasoningEffort
+          model: ee.name,
+          messages: ie,
+          max_tokens: Te,
+          temperature: ee.temperature,
+          reasoning_effort: ee.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: GB
+        signal: He
       });
-      if (429 === YB.status) return "busy";
-      if (!YB.ok) return console.warn(`Studio AI: ${BB.name} answered ${YB.status}`), "failed";
-      const DB = await YB.json().catch((() => null)),
-        QB = function(BB) {
-          var OB, GB, YB;
-          const DB = null === BB || void 0 === BB || null === (OB = BB.choices) || void 0 === OB || null === (GB = OB[0]) || void 0 === GB || null === (YB = GB.message) || void 0 === YB ? void 0 : YB.content;
-          if ("string" !== typeof DB) return null;
-          const QB = DB.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === QB ? null : QB
-        }(DB);
-      return null !== QB && function(BB) {
-        const OB = PB(BB);
-        return OB.length >= MB || OB.some((BB => jB(BB)))
-      }(QB) ? (console.warn(`Studio AI: ${BB.name} thought out loud instead of answering`), "failed") : null === QB ? null : {
-        text: QB,
-        isCutOff: AB(DB)
+      if (429 === ye.status) return "busy";
+      if (!ye.ok) return console.warn(`Studio AI: ${ee.name} answered ${ye.status}`), "failed";
+      const be = await ye.json().catch((() => null)),
+        Me = function(ee) {
+          var ie, He, ye;
+          const be = null === ee || void 0 === ee || null === (ie = ee.choices) || void 0 === ie || null === (He = ie[0]) || void 0 === He || null === (ye = He.message) || void 0 === ye ? void 0 : ye.content;
+          if ("string" !== typeof be) return null;
+          const Me = be.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === Me ? null : Me
+        }(be);
+      return null !== Me && function(ee) {
+        const ie = Re(ee);
+        return ie.length >= oe || ie.some((ee => Ue(ee)))
+      }(Me) ? (console.warn(`Studio AI: ${ee.name} thought out loud instead of answering`), "failed") : null === Me ? null : {
+        text: Me,
+        isCutOff: Ee(be)
       }
     }
   },
-  6960: (BB, OB, GB) => {
-    GB.d(OB, {
-      A: () => RB,
-      C: () => PB,
-      D: () => JB,
-      E: () => lB,
-      e: () => pB,
-      f: () => jB,
-      h: () => oB,
-      i: () => qB,
-      k: () => zB,
-      l: () => MB,
-      n: () => QB,
-      o: () => DB,
-      q: () => AB,
-      r: () => SB,
-      u: () => ZB,
-      v: () => WB,
-      x: () => VB
+  7052: (ee, ie, He) => {
+    He.d(ie, {
+      D: () => pe,
+      G: () => Be,
+      H: () => ge,
+      I: () => ze,
+      J: () => Re,
+      K: () => Je,
+      L: () => qe,
+      b: () => fe,
+      e: () => Ue,
+      f: () => Ke,
+      j: () => Te,
+      n: () => ke,
+      q: () => oe,
+      s: () => Me,
+      t: () => be,
+      v: () => Ee,
+      z: () => Oe
     });
-    var YB = GB(5366);
-    const DB = 2e3,
-      QB = 2e4;
+    var ye = He(5343);
+    const be = 2e3,
+      Me = 2e4;
 
-    function oB(BB) {
-      return BB.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function Ke(ee) {
+      return ee.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function jB(BB) {
-      return BB.replace(/\$/g, "\\$")
+    function Ue(ee) {
+      return ee.replace(/\$/g, "\\$")
     }
-    const yB = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const Fe = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function JB(BB, OB) {
-      yB.lastIndex = OB;
-      const GB = yB.exec(BB);
-      return GB.index + GB[0].length
-    }
-
-    function MB(BB) {
-      return (0, YB.C)(BB, /\s+/g, (0, YB.w)(".!?")).flatMap((BB => BB.split("\n")))
+    function Je(ee, ie) {
+      Fe.lastIndex = ie;
+      const He = Fe.exec(ee);
+      return He.index + He[0].length
     }
 
-    function PB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OB;
-      const YB = [...BB.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((BB => BB.index)),
-        DB = YB.filter((BB => BB < OB)),
-        QB = YB.find((BB => BB >= GB));
-      return [0 === DB.length ? 0 : DB.at(-1) + 1, void 0 === QB ? BB.length : QB + 1]
+    function oe(ee) {
+      return (0, ye.v)(ee, /\s+/g, (0, ye.s)(".!?")).flatMap((ee => ee.split("\n")))
     }
 
-    function zB(BB, OB) {
-      const GB = BB.charCodeAt(OB - 1);
-      return BB.slice(0, OB > 0 && OB < BB.length && GB >= 55296 && GB <= 56319 ? OB - 1 : OB)
+    function Re(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ie;
+      const ye = [...ee.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((ee => ee.index)),
+        be = ye.filter((ee => ee < ie)),
+        Me = ye.find((ee => ee >= He));
+      return [0 === be.length ? 0 : be.at(-1) + 1, void 0 === Me ? ee.length : Me + 1]
     }
 
-    function lB(BB, OB) {
-      return `${OB}${BB.replace(/\\/g,"\\\\").split(OB).join(`\\${OB}`)}${OB}`
+    function ke(ee, ie) {
+      const He = ee.charCodeAt(ie - 1);
+      return ee.slice(0, ie > 0 && ie < ee.length && He >= 55296 && He <= 56319 ? ie - 1 : ie)
     }
 
-    function pB(BB) {
-      return BB.charAt(0).toUpperCase() + BB.slice(1)
+    function qe(ee, ie) {
+      return `${ie}${ee.replace(/\\/g,"\\\\").split(ie).join(`\\${ie}`)}${ie}`
     }
 
-    function qB(BB) {
-      return Math.round(BB).toLocaleString("en-US")
+    function fe(ee) {
+      return ee.charAt(0).toUpperCase() + ee.slice(1)
     }
 
-    function ZB(BB) {
-      return BB.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((BB => "" !== BB))
-    }
-    const NB = 3;
-
-    function RB(BB, OB) {
-      return ZB(BB).filter((BB => BB.length >= NB && !/\d/.test(BB))).map((BB => `${BB} ${OB}`))
+    function Te(ee) {
+      return Math.round(ee).toLocaleString("en-US")
     }
 
-    function WB(BB) {
-      return BB.split(/[\s:_]+/).filter((BB => "" !== BB)).map(oB).join("[`:_\\s]+")
+    function pe(ee) {
+      return ee.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((ee => "" !== ee))
+    }
+    const Xe = 3;
+
+    function ze(ee, ie) {
+      return pe(ee).filter((ee => ee.length >= Xe && !/\d/.test(ee))).map((ee => `${ee} ${ie}`))
     }
 
-    function AB(BB) {
-      return ZB(BB.split(".").pop())
+    function Be(ee) {
+      return ee.split(/[\s:_]+/).filter((ee => "" !== ee)).map(Ke).join("[`:_\\s]+")
     }
 
-    function VB(BB) {
-      return BB.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function Ee(ee) {
+      return pe(ee.split(".").pop())
     }
 
-    function SB(BB) {
-      let OB = null;
+    function ge(ee) {
+      return ee.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function Oe(ee) {
+      let ie = null;
       return () => {
-        const GB = OB ??= BB();
-        return GB.catch((() => {
-          OB === GB && (OB = null)
-        })), GB
+        const He = ie ??= ee();
+        return He.catch((() => {
+          ie === He && (ie = null)
+        })), He
       }
     }
   },
-  5366: (BB, OB, GB) => {
-    function YB(BB) {
+  5343: (ee, ie, He) => {
+    function ye(ee) {
       return {
-        notAfter: BB
+        notAfter: ee
       }
     }
-    GB.d(OB, {
-      C: () => PB,
-      b: () => yB,
-      f: () => JB,
-      j: () => jB,
-      n: () => YB,
-      p: () => DB,
-      t: () => QB,
-      w: () => oB,
-      z: () => MB
+    He.d(ie, {
+      e: () => Fe,
+      g: () => Je,
+      k: () => Ue,
+      m: () => ye,
+      n: () => be,
+      p: () => Me,
+      s: () => Ke,
+      t: () => oe,
+      v: () => Re
     });
-    const DB = YB("\\w$."),
-      QB = YB("\\w.,");
+    const be = ye("\\w$."),
+      Me = ye("\\w.,");
 
-    function oB(BB) {
-      return OB => yB(OB, BB)
+    function Ke(ee) {
+      return ie => Fe(ie, ee)
     }
 
-    function jB(BB) {
-      return OB => !BB.test(OB.input.slice(0, OB.index))
+    function Ue(ee) {
+      return ie => !ee.test(ie.input.slice(0, ie.index))
     }
 
-    function yB(BB, OB) {
-      return BB.index > 0 && new RegExp(`[${OB}]`).test(BB.input[BB.index - 1])
+    function Fe(ee, ie) {
+      return ee.index > 0 && new RegExp(`[${ie}]`).test(ee.input[ee.index - 1])
     }
 
-    function JB(BB, OB, GB) {
-      return function(BB) {
-        return void 0 !== BB && "function" !== typeof BB
-      }(GB) ? function(BB, OB, GB) {
-        const YB = OB.flags.replace(/[gy]/g, ""),
-          DB = new RegExp(`[^${GB}](?:${OB.source})`, `${YB}g`),
-          QB = [],
-          oB = GB => {
-            const YB = GB.index + GB[0].length;
-            return ("" === GB[0] ? zB(BB, OB, YB) : YB) - 1
+    function Je(ee, ie, He) {
+      return function(ee) {
+        return void 0 !== ee && "function" !== typeof ee
+      }(He) ? function(ee, ie, He) {
+        const ye = ie.flags.replace(/[gy]/g, ""),
+          be = new RegExp(`[^${He}](?:${ie.source})`, `${ye}g`),
+          Me = [],
+          Ke = He => {
+            const ye = He.index + He[0].length;
+            return ("" === He[0] ? ke(ee, ie, ye) : ye) - 1
           },
-          jB = new RegExp(`(?:${OB.source})`, `${YB}y`).exec(BB);
-        if (jB) {
-          if (QB.push(jB), !OB.global) return QB;
-          DB.lastIndex = oB(jB)
+          Ue = new RegExp(`(?:${ie.source})`, `${ye}y`).exec(ee);
+        if (Ue) {
+          if (Me.push(Ue), !ie.global) return Me;
+          be.lastIndex = Ke(Ue)
         }
-        for (let yB = DB.exec(BB); yB; yB = DB.exec(BB)) {
-          const GB = zB(BB, OB, yB.index) - yB.index;
-          if (yB[0] = yB[0].slice(GB), yB.index += GB, QB.push(yB), !OB.global) break;
-          DB.lastIndex = oB(yB)
+        for (let Fe = be.exec(ee); Fe; Fe = be.exec(ee)) {
+          const He = ke(ee, ie, Fe.index) - Fe.index;
+          if (Fe[0] = Fe[0].slice(He), Fe.index += He, Me.push(Fe), !ie.global) break;
+          be.lastIndex = Ke(Fe)
         }
-        return QB
-      }(BB, OB, GB.notAfter) : function(BB, OB, GB) {
-        const YB = new RegExp(OB.source, `${OB.flags.replace(/[gy]/g,"")}g`),
-          DB = [];
-        for (let QB = YB.exec(BB); QB; QB = YB.exec(BB))
-          if (!GB || GB(QB)) {
-            if (DB.push(QB), !OB.global) break;
-            "" === QB[0] && (YB.lastIndex = zB(BB, OB, YB.lastIndex))
-          } else YB.lastIndex = zB(BB, OB, QB.index);
-        return DB
-      }(BB, OB, GB)
+        return Me
+      }(ee, ie, He.notAfter) : function(ee, ie, He) {
+        const ye = new RegExp(ie.source, `${ie.flags.replace(/[gy]/g,"")}g`),
+          be = [];
+        for (let Me = ye.exec(ee); Me; Me = ye.exec(ee))
+          if (!He || He(Me)) {
+            if (be.push(Me), !ie.global) break;
+            "" === Me[0] && (ye.lastIndex = ke(ee, ie, ye.lastIndex))
+          } else ye.lastIndex = ke(ee, ie, Me.index);
+        return be
+      }(ee, ie, He)
     }
 
-    function MB(BB, OB, GB, YB) {
-      let DB = "",
-        QB = 0;
-      for (const oB of JB(BB, OB, GB)) DB += BB.slice(QB, oB.index) + YB(oB), QB = oB.index + oB[0].length;
-      return DB + BB.slice(QB)
+    function oe(ee, ie, He, ye) {
+      let be = "",
+        Me = 0;
+      for (const Ke of Je(ee, ie, He)) be += ee.slice(Me, Ke.index) + ye(Ke), Me = Ke.index + Ke[0].length;
+      return be + ee.slice(Me)
     }
 
-    function PB(BB, OB, GB) {
-      const YB = [];
-      let DB = 0;
-      for (const QB of JB(BB, OB, GB)) YB.push(BB.slice(DB, QB.index)), DB = QB.index + QB[0].length;
-      return [...YB, BB.slice(DB)]
+    function Re(ee, ie, He) {
+      const ye = [];
+      let be = 0;
+      for (const Me of Je(ee, ie, He)) ye.push(ee.slice(be, Me.index)), be = Me.index + Me[0].length;
+      return [...ye, ee.slice(be)]
     }
 
-    function zB(BB, OB, GB) {
-      var YB;
-      return GB + (OB.unicode && (null !== (YB = BB.codePointAt(GB)) && void 0 !== YB ? YB : 0) > 65535 ? 2 : 1)
+    function ke(ee, ie, He) {
+      var ye;
+      return He + (ie.unicode && (null !== (ye = ee.codePointAt(He)) && void 0 !== ye ? ye : 0) > 65535 ? 2 : 1)
     }
   },
-  7006: () => {}
+  7099: () => {}
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,26 +1,26 @@
 export const id = 113;
 export const ids = [113];
 export const modules = {
-  5379: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => AB
+  5364: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => Ee
     });
-    var YB = GB(1571),
-      DB = GB(56),
-      QB = GB(1175),
-      oB = GB(1112),
-      jB = GB(1106),
-      yB = GB(2177),
-      JB = GB(1560),
-      MB = GB(1375),
-      PB = GB(1099),
-      zB = GB(16),
-      lB = GB(1485),
-      pB = GB(1383),
-      qB = GB(2847),
-      ZB = GB(1586),
-      NB = GB(1282);
-    const RB = [{
+    var ye = He(1515),
+      be = He(59),
+      Me = He(1127),
+      Ke = He(1075),
+      Ue = He(1062),
+      Fe = He(2129),
+      Je = He(1502),
+      oe = He(1320),
+      Re = He(1057),
+      ke = He(18),
+      qe = He(1438),
+      fe = He(1323),
+      Te = He(2729),
+      pe = He(1536),
+      Xe = He(1228);
+    const ze = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      WB = {
+      Be = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function AB() {
+    function Ee() {
       const {
-        t: BB
-      } = (0, QB.H)(), OB = (0, JB.useNavigatePreserveSearch)(), GB = (0, YB.r)(), {
-        isUserContextUpdating: AB
-      } = (0, oB.d)(), VB = (0, yB.c)(), SB = (0, jB.g)(), nB = (UB = GB.pathname).startsWith(ZB.y) ? null : UB.startsWith(WB.docs) ? "docs" : UB.startsWith(WB.leaderboard) ? "leaderboard" : "myGames";
-      var UB;
-      const fB = function(BB) {
-        if (!BB.startsWith(ZB.y)) return {
+        t: ee
+      } = (0, Me.v)(), ie = (0, Je.useNavigatePreserveSearch)(), He = (0, ye.u)(), {
+        isUserContextUpdating: Ee
+      } = (0, Ke.b)(), ge = (0, Fe.e)(), Oe = (0, Ue.g)(), de = (We = He.pathname).startsWith(pe.v) ? null : We.startsWith(Be.docs) ? "docs" : We.startsWith(Be.leaderboard) ? "leaderboard" : "myGames";
+      var We;
+      const te = function(ee) {
+        if (!ee.startsWith(pe.v)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const OB = (0, JB.getPreviousLocation)();
+        const ie = (0, Je.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== OB && OB.startsWith(WB.myGames) ? -1 : WB.myGames
+          to: null !== ie && ie.startsWith(Be.myGames) ? -1 : Be.myGames
         }
-      }(GB.pathname);
-      return (0, DB.useEffect)((() => {
-        zB.c.set({
+      }(He.pathname);
+      return (0, be.useEffect)((() => {
+        ke.e.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, NB.jsxs)("div", {
+      }), []), (0, Xe.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [VB && (0, NB.jsx)("aside", {
+        children: [ge && (0, Xe.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, NB.jsx)(qB.e, {})
-        }), (0, NB.jsxs)("div", {
+          children: (0, Xe.jsx)(Te.c, {})
+        }), (0, Xe.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, NB.jsxs)("div", {
+          children: [(0, Xe.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, NB.jsx)(PB.b, {
+            children: [(0, Xe.jsx)(Re.b, {
               show: !0,
-              socialBarIsDocked: VB
-            }), (0, NB.jsxs)("nav", {
+              socialBarIsDocked: ge
+            }), (0, Xe.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, NB.jsx)(lB.c, {
-                icon: fB.icon,
+              children: [(0, Xe.jsx)(qe.b, {
+                icon: te.icon,
                 onClick: () => {
-                  OB(fB.to)
+                  ie(te.to)
                 },
-                children: BB(fB.title)
-              }), (0, NB.jsx)("div", {
+                children: ee(te.title)
+              }), (0, Xe.jsx)("div", {
                 className: "StudioNavTabs",
-                children: RB.map((GB => (0, NB.jsxs)(lB.Z, {
-                  active: nB === GB.id,
-                  href: WB[GB.id],
+                children: ze.map((He => (0, Xe.jsxs)(qe.M, {
+                  active: de === He.id,
+                  href: Be[He.id],
                   onClick: () => {
-                    OB(WB[GB.id])
+                    ie(Be[He.id])
                   },
-                  children: [(0, NB.jsx)(pB.b, {
-                    name: GB.icon
-                  }), !SB && BB(GB.title)]
-                }, GB.id)))
+                  children: [(0, Xe.jsx)(fe.e, {
+                    name: He.icon
+                  }), !Oe && ee(He.title)]
+                }, He.id)))
               })]
             })]
-          }), (0, NB.jsxs)("main", {
+          }), (0, Xe.jsxs)("main", {
             className: "StudioBottom",
-            children: [AB && (0, NB.jsx)("div", {
+            children: [Ee && (0, Xe.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, NB.jsx)(MB.b, {})
-            }), !AB && (0, NB.jsx)("div", {
+              children: (0, Xe.jsx)(oe.b, {})
+            }), !Ee && (0, Xe.jsx)("div", {
               className: "StudioContent",
-              children: (0, NB.jsx)(YB.g, {})
+              children: (0, Xe.jsx)(ye.e, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,66 +1,66 @@
 export const id = 219;
 export const ids = [219];
 export const modules = {
-  37279: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => qB,
-      g: () => SB
+  37436: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Te,
+      d: () => Oe
     });
-    GB(34769);
-    var YB = GB(56),
-      DB = GB(1480),
-      QB = GB(2023),
-      oB = GB(2063),
-      jB = GB(16),
-      yB = GB(2653),
-      JB = GB(37288),
-      MB = GB(37292),
-      PB = GB(34755),
-      zB = GB(34765),
-      lB = GB(34777),
-      pB = GB(1282);
-    const qB = (0, YB.memo)((function() {
-      var BB;
+    He(34844);
+    var ye = He(59),
+      be = He(1432),
+      Me = He(1983),
+      Ke = He(2029),
+      Ue = He(18),
+      Fe = He(2532),
+      Je = He(37440),
+      oe = He(37447),
+      Re = He(34824),
+      ke = He(34836),
+      qe = He(34859),
+      fe = He(1228);
+    const Te = (0, ye.memo)((function() {
+      var ee;
       const {
-        isTouchScreen: OB,
-        clientEscMenuOptions: GB,
-        scriptedCameraFacing: QB,
-        crosshairShownOverride: qB,
-        crosshairGameView: NB
-      } = (0, jB.o)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), RB = (0, yB.g)("gunshotOrigin"), WB = (0, YB.useRef)(null), AB = (0, YB.useRef)(!1), [VB, nB] = (0, YB.useState)(ZB);
-      (0, DB.f)("cameraZoomSet", nB), (0, YB.useEffect)((() => {
-        nB(ZB())
+        isTouchScreen: ie,
+        clientEscMenuOptions: He,
+        scriptedCameraFacing: Me,
+        crosshairShownOverride: Te,
+        crosshairGameView: Xe
+      } = (0, Ue.m)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), ze = (0, Fe.i)("gunshotOrigin"), Be = (0, ye.useRef)(null), Ee = (0, ye.useRef)(!1), [ge, de] = (0, ye.useState)(pe);
+      (0, be.f)("cameraZoomSet", de), (0, ye.useEffect)((() => {
+        de(pe())
       }), []);
-      const UB = (0, oB.g)("heldItemAim"),
-        kB = UB.gun,
-        dB = (0, lB.f)(),
-        KB = (0, YB.useRef)(dB);
-      KB.current = dB;
-      const [uB, mB] = (0, YB.useState)(!1);
-      (0, YB.useEffect)((() => (0, MB.g)("crosshairAccuracy", SB)), []), (0, DB.f)("mouseState", (BB => {
+      const We = (0, Ke.k)("heldItemAim"),
+        Ze = We.gun,
+        we = (0, qe.f)(),
+        De = (0, ye.useRef)(we);
+      De.current = we;
+      const [Pe, Ae] = (0, ye.useState)(!1);
+      (0, ye.useEffect)((() => (0, oe.e)("crosshairAccuracy", Oe)), []), (0, be.f)("mouseState", (ee => {
         let {
-          isDown: OB
-        } = BB;
-        AB.current = OB, WB.current && (WB.current.style.transform = (0, zB.g)(OB, KB.current.growOnClick)), "shapes" === KB.current.style && mB(OB)
+          isDown: ie
+        } = ee;
+        Ee.current = ie, Be.current && (Be.current.style.transform = (0, ke.f)(ie, De.current.growOnClick)), "shapes" === De.current.style && Ae(ie)
       }));
-      const IB = (0, PB.h)(OB, GB.touchActionButtons);
-      return (null !== (BB = (0, JB.e)(NB, qB)) && void 0 !== BB ? BB : (0, JB.h)(UB, VB > 1, IB, RB)) ? "movement" === QB || "cursor" === QB ? null : (0, pB.jsxs)(pB.Fragment, {
-        children: [kB && (0, pB.jsx)(fB, {
-          custom: dB.forGuns && "shapes" === dB.style ? dB : null,
-          touch: OB
-        }), !kB && (0, pB.jsx)(zB.c, {
-          settings: dB,
-          touch: OB,
-          pressRef: WB,
-          pressed: "shapes" === dB.style ? uB : AB.current
+      const Ye = (0, Re.e)(ie, He.touchActionButtons);
+      return (null !== (ee = (0, Je.b)(Xe, Te)) && void 0 !== ee ? ee : (0, Je.e)(We, ge > 1, Ye, ze)) ? "movement" === Me || "cursor" === Me ? null : (0, fe.jsxs)(fe.Fragment, {
+        children: [Ze && (0, fe.jsx)(te, {
+          custom: we.forGuns && "shapes" === we.style ? we : null,
+          touch: ie
+        }), !Ze && (0, fe.jsx)(ke.b, {
+          settings: we,
+          touch: ie,
+          pressRef: Be,
+          pressed: "shapes" === we.style ? Pe : Ee.current
         })]
       }) : null
     }));
 
-    function ZB() {
-      return QB.gameBridge.lookup("cameraZoom", null)
+    function pe() {
+      return Me.gameBridge.lookup("cameraZoom", null)
     }
-    const NB = [{
+    const Xe = [{
         current: null
       }, {
         current: null
@@ -69,340 +69,340 @@ export const modules = {
       }, {
         current: null
       }],
-      RB = {
+      ze = {
         current: null
       },
-      WB = {
+      Be = {
         current: null
       };
-    let AB = 0,
-      VB = 0;
+    let Ee = 0,
+      ge = 0;
 
-    function SB(BB) {
-      VB = BB, NB[0].current || RB.current || WB.current ? UB(BB) : AB = BB
+    function Oe(ee) {
+      ge = ee, Xe[0].current || ze.current || Be.current ? We(ee) : Ee = ee
     }
 
-    function nB(BB) {
-      return ((0, JB.f)(BB) - (0, JB.f)(0)) * window.innerHeight / 100
+    function de(ee) {
+      return ((0, Je.d)(ee) - (0, Je.d)(0)) * window.innerHeight / 100
     }
 
-    function UB(BB) {
-      var OB;
-      if (null === (OB = WB.current) || void 0 === OB || OB.call(WB, nB(BB)), NB[0].current) {
-        const OB = `${(0,JB.f)(BB)}vh`;
-        NB[0].current.style.transform = `translateX(calc(0px - ${OB}))`, NB[1].current.style.transform = `translateX(calc(0px + ${OB}))`, NB[2].current.style.transform = `translateY(calc(0px - ${OB}))`, NB[3].current.style.transform = `translateY(calc(0px + ${OB}))`
+    function We(ee) {
+      var ie;
+      if (null === (ie = Be.current) || void 0 === ie || ie.call(Be, de(ee)), Xe[0].current) {
+        const ie = `${(0,Je.d)(ee)}vh`;
+        Xe[0].current.style.transform = `translateX(calc(0px - ${ie}))`, Xe[1].current.style.transform = `translateX(calc(0px + ${ie}))`, Xe[2].current.style.transform = `translateY(calc(0px - ${ie}))`, Xe[3].current.style.transform = `translateY(calc(0px + ${ie}))`
       }
-      RB.current && (RB.current.style.filter = `blur(${Math.round(BB/10)}px)`)
+      ze.current && (ze.current.style.filter = `blur(${Math.round(ee/10)}px)`)
     }
 
-    function fB(BB) {
+    function te(ee) {
       let {
-        custom: OB,
-        touch: GB
-      } = BB;
-      const QB = (0, DB.i)("aimingOverlay", "none"),
-        oB = "1.2vh",
-        jB = "0.3vh";
-      (0, YB.useEffect)((() => {
-        AB && UB(AB)
+        custom: ie,
+        touch: He
+      } = ee;
+      const Me = (0, be.j)("aimingOverlay", "none"),
+        Ke = "1.2vh",
+        Ue = "0.3vh";
+      (0, ye.useEffect)((() => {
+        Ee && We(Ee)
       }), []);
-      const yB = (0, YB.useRef)(null !== OB);
-      return (0, YB.useLayoutEffect)((() => {
-        var BB;
-        OB ? null === (BB = WB.current) || void 0 === BB || BB.call(WB, nB(VB)) : yB.current && UB(VB);
-        yB.current = null !== OB
-      }), [OB]), (0, pB.jsxs)(pB.Fragment, {
-        children: ["sniper" === QB && (0, pB.jsxs)("div", {
-          ref: RB,
+      const Fe = (0, ye.useRef)(null !== ie);
+      return (0, ye.useLayoutEffect)((() => {
+        var ee;
+        ie ? null === (ee = Be.current) || void 0 === ee || ee.call(Be, de(ge)) : Fe.current && We(ge);
+        Fe.current = null !== ie
+      }), [ie]), (0, fe.jsxs)(fe.Fragment, {
+        children: ["sniper" === Me && (0, fe.jsxs)("div", {
+          ref: ze,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, pB.jsx)("div", {
+          children: [(0, fe.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, pB.jsx)("div", {
+          }), (0, fe.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, pB.jsx)("div", {
+          }), (0, fe.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, pB.jsx)("div", {
+          }), (0, fe.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, pB.jsxs)("div", {
+        }), (0, fe.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === QB ? 0 : 1
+            opacity: "sniper" === Me ? 0 : 1
           },
-          children: [OB && (0, pB.jsx)(zB.c, {
-            settings: OB,
-            touch: GB,
-            spreadRef: WB
-          }), !OB && (0, pB.jsxs)(pB.Fragment, {
-            children: [(0, pB.jsx)("div", {
+          children: [ie && (0, fe.jsx)(ke.b, {
+            settings: ie,
+            touch: He,
+            spreadRef: Be
+          }), !ie && (0, fe.jsxs)(fe.Fragment, {
+            children: [(0, fe.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: oB,
-                height: jB,
+                width: Ke,
+                height: Ue,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: NB[0]
-            }), (0, pB.jsx)("div", {
+              ref: Xe[0]
+            }), (0, fe.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: oB,
-                height: jB,
+                width: Ke,
+                height: Ue,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: NB[1]
-            }), (0, pB.jsx)("div", {
+              ref: Xe[1]
+            }), (0, fe.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: jB,
-                height: oB,
+                width: Ue,
+                height: Ke,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: NB[2]
-            }), (0, pB.jsx)("div", {
+              ref: Xe[2]
+            }), (0, fe.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: jB,
-                height: oB,
+                width: Ue,
+                height: Ke,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: NB[3]
+              ref: Xe[3]
             })]
           })]
         })]
       })
     }
   },
-  34765: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => qB,
-      g: () => pB
+  34836: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Te,
+      f: () => fe
     });
-    GB(34769);
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(56),
-      oB = GB(34757);
+    He(34844);
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(59),
+      Ke = He(34829);
 
-    function jB(BB, OB) {
-      return Math.max(1, Math.round(BB * OB))
+    function Ue(ee, ie) {
+      return Math.max(1, Math.round(ee * ie))
     }
 
-    function yB(BB, OB) {
-      const GB = OB * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        YB = function(BB, OB) {
-          if (BB.lines) return jB(BB.lineThickness, OB) % 2;
-          if (BB.dot) return jB(BB.dotSize, OB) % 2;
-          return JB(BB, OB) % 2
-        }(BB, OB),
-        DB = MB(BB.lineThickness * GB, YB),
-        QB = jB(BB.lineLength, GB),
-        oB = Math.round(BB.gap * GB),
-        yB = BB.outline > 0 ? jB(BB.outline, GB) : 0,
-        zB = [];
-      if (BB.lines && (zB.push({
-          x: DB + oB,
+    function Fe(ee, ie) {
+      const He = ie * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        ye = function(ee, ie) {
+          if (ee.lines) return Ue(ee.lineThickness, ie) % 2;
+          if (ee.dot) return Ue(ee.dotSize, ie) % 2;
+          return Je(ee, ie) % 2
+        }(ee, ie),
+        be = oe(ee.lineThickness * He, ye),
+        Me = Ue(ee.lineLength, He),
+        Ke = Math.round(ee.gap * He),
+        Fe = ee.outline > 0 ? Ue(ee.outline, He) : 0,
+        ke = [];
+      if (ee.lines && (ke.push({
+          x: be + Ke,
           y: 0,
-          w: QB,
-          h: DB,
+          w: Me,
+          h: be,
           arm: "right"
-        }), zB.push({
-          x: -oB - QB,
+        }), ke.push({
+          x: -Ke - Me,
           y: 0,
-          w: QB,
-          h: DB,
+          w: Me,
+          h: be,
           arm: "left"
-        }), zB.push({
+        }), ke.push({
           x: 0,
-          y: DB + oB,
-          w: DB,
-          h: QB,
+          y: be + Ke,
+          w: be,
+          h: Me,
           arm: "down"
-        }), BB.tStyle || zB.push({
+        }), ee.tStyle || ke.push({
           x: 0,
-          y: -oB - QB,
-          w: DB,
-          h: QB,
+          y: -Ke - Me,
+          w: be,
+          h: Me,
           arm: "up"
-        }), 0 === oB && zB.push({
+        }), 0 === Ke && ke.push({
           x: 0,
           y: 0,
-          w: DB,
-          h: DB
-        })), BB.dot) {
-        const OB = MB(BB.dotSize * GB, YB),
-          QB = BB.lines && 0 === oB && BB.dotSize > BB.lineThickness ? Math.max(OB, DB + 2) : OB,
-          jB = (DB - QB) / 2;
-        zB.push({
-          x: jB,
-          y: jB,
-          w: QB,
-          h: QB
+          w: be,
+          h: be
+        })), ee.dot) {
+        const ie = oe(ee.dotSize * He, ye),
+          Me = ee.lines && 0 === Ke && ee.dotSize > ee.lineThickness ? Math.max(ie, be + 2) : ie,
+          Ue = (be - Me) / 2;
+        ke.push({
+          x: Ue,
+          y: Ue,
+          w: Me,
+          h: Me
         })
       }
-      const lB = zB.map((BB => ({
-        ...BB,
-        x: BB.x - yB,
-        y: BB.y - yB,
-        w: BB.w + 2 * yB,
-        h: BB.h + 2 * yB
+      const qe = ke.map((ee => ({
+        ...ee,
+        x: ee.x - Fe,
+        y: ee.y - Fe,
+        w: ee.w + 2 * Fe,
+        h: ee.h + 2 * Fe
       })));
-      let pB = null,
-        qB = null;
-      if (BB.circle) {
-        const OB = jB(BB.circleThickness, GB),
-          QB = function(BB, OB) {
-            return BB + (BB % 2 === OB ? 0 : 1)
-          }(JB(BB, GB), YB),
-          oB = (DB - QB) / 2;
-        pB = PB(oB, QB, OB), yB > 0 && (qB = PB(oB - yB, QB + 2 * yB, OB + 2 * yB))
+      let fe = null,
+        Te = null;
+      if (ee.circle) {
+        const ie = Ue(ee.circleThickness, He),
+          Me = function(ee, ie) {
+            return ee + (ee % 2 === ie ? 0 : 1)
+          }(Je(ee, He), ye),
+          Ke = (be - Me) / 2;
+        fe = Re(Ke, Me, ie), Fe > 0 && (Te = Re(Ke - Fe, Me + 2 * Fe, ie + 2 * Fe))
       }
       return {
-        cell: DB,
-        fills: zB,
-        outlines: yB > 0 ? lB : [],
-        ring: pB,
-        ringOutline: qB
+        cell: be,
+        fills: ke,
+        outlines: Fe > 0 ? qe : [],
+        ring: fe,
+        ringOutline: Te
       }
     }
 
-    function JB(BB, OB) {
-      return Math.round(BB.circleRadius * OB * 2 + jB(BB.circleThickness, OB))
+    function Je(ee, ie) {
+      return Math.round(ee.circleRadius * ie * 2 + Ue(ee.circleThickness, ie))
     }
 
-    function MB(BB, OB) {
-      return Math.max(2 - OB, 2 * Math.round((BB - OB) / 2) + OB)
+    function oe(ee, ie) {
+      return Math.max(2 - ie, 2 * Math.round((ee - ie) / 2) + ie)
     }
 
-    function PB(BB, OB, GB) {
-      const YB = 2 * GB >= OB - 1;
+    function Re(ee, ie, He) {
+      const ye = 2 * He >= ie - 1;
       return {
-        x: BB,
-        y: BB,
-        size: OB,
-        border: Math.min(GB, Math.floor(OB / 2)),
-        filled: YB
+        x: ee,
+        y: ee,
+        size: ie,
+        border: Math.min(He, Math.floor(ie / 2)),
+        filled: ye
       }
     }
-    var zB = GB(1282);
-    const lB = 1.4;
+    var ke = He(1228);
+    const qe = 1.4;
 
-    function pB(BB, OB) {
-      return BB && OB ? `scale(${lB})` : "scale(1)"
+    function fe(ee, ie) {
+      return ee && ie ? `scale(${qe})` : "scale(1)"
     }
 
-    function qB(BB) {
-      return "classic" === BB.settings.style ? (0, zB.jsx)(RB, {
-        ...BB
-      }) : (0, zB.jsx)(fB, {
-        ...BB
+    function Te(ee) {
+      return "classic" === ee.settings.style ? (0, ke.jsx)(ze, {
+        ...ee
+      }) : (0, ke.jsx)(te, {
+        ...ee
       })
     }
-    const ZB = .125;
+    const pe = .125;
 
-    function NB(BB, OB) {
-      const GB = {};
-      if (BB.color !== oB.d.color && (GB.color = (0, oB.l)(BB.color)), BB.opacity !== oB.d.opacity && (GB.opacity = BB.opacity / 100), BB.outline !== oB.d.outline || BB.outlineColor !== oB.d.outlineColor) {
-        const OB = BB.outline,
-          YB = (0, oB.l)(BB.outlineColor);
-        GB.textShadow = OB > 0 ? `-${OB}px 0 ${YB}, 0 ${OB}px ${YB}, ${OB}px 0 ${YB}, 0 -${OB}px ${YB}` : "none"
+    function Xe(ee, ie) {
+      const He = {};
+      if (ee.color !== Ke.e.color && (He.color = (0, Ke.j)(ee.color)), ee.opacity !== Ke.e.opacity && (He.opacity = ee.opacity / 100), ee.outline !== Ke.e.outline || ee.outlineColor !== Ke.e.outlineColor) {
+        const ie = ee.outline,
+          ye = (0, Ke.j)(ee.outlineColor);
+        He.textShadow = ie > 0 ? `-${ie}px 0 ${ye}, 0 ${ie}px ${ye}, ${ie}px 0 ${ye}, 0 -${ie}px ${ye}` : "none"
       }
-      if (BB.size !== oB.d.size) {
-        const YB = BB.size / 100;
-        GB.fontSize = OB ? `calc(max(1.3rem, 18px) * ${YB})` : `calc(1.3rem * ${YB})`, GB.marginTop = `-${ZB}em`, GB.transformOrigin = `50% calc(50% + ${ZB}em)`
+      if (ee.size !== Ke.e.size) {
+        const ye = ee.size / 100;
+        He.fontSize = ie ? `calc(max(1.3rem, 18px) * ${ye})` : `calc(1.3rem * ${ye})`, He.marginTop = `-${pe}em`, He.transformOrigin = `50% calc(50% + ${pe}em)`
       }
-      return GB
+      return He
     }
 
-    function RB(BB) {
+    function ze(ee) {
       let {
-        settings: OB,
-        touch: GB,
-        inPreview: YB,
-        inEditor: QB,
-        pressed: oB = !1,
-        pressRef: jB
-      } = BB;
-      return (0, zB.jsx)("div", {
-        className: DB()("Crosshair", {
-          Touch: GB,
-          CrosshairInPreview: YB,
-          CrosshairInEditor: QB || YB
+        settings: ie,
+        touch: He,
+        inPreview: ye,
+        inEditor: Me,
+        pressed: Ke = !1,
+        pressRef: Ue
+      } = ee;
+      return (0, ke.jsx)("div", {
+        className: be()("Crosshair", {
+          Touch: He,
+          CrosshairInPreview: ye,
+          CrosshairInEditor: Me || ye
         }),
-        ref: jB,
+        ref: Ue,
         style: {
-          transform: pB(oB, OB.growOnClick),
-          ...NB(OB, GB)
+          transform: fe(Ke, ie.growOnClick),
+          ...Xe(ie, He)
         },
         children: "+"
       })
     }
 
-    function WB(BB, OB) {
-      return BB / OB + "px"
+    function Be(ee, ie) {
+      return ee / ie + "px"
     }
 
-    function AB(BB, OB, GB, YB) {
+    function Ee(ee, ie, He, ye) {
       return {
-        ...nB(BB, OB, GB),
-        width: WB(BB.w, GB),
-        height: WB(BB.h, GB),
-        background: YB
+        ...de(ee, ie, He),
+        width: Be(ee.w, He),
+        height: Be(ee.h, He),
+        background: ye
       }
     }
 
-    function VB(BB, OB, GB) {
+    function ge(ee, ie, He) {
       return {
-        left: WB(BB.x, OB),
-        top: WB(BB.y, OB),
-        width: WB(BB.size, OB),
-        height: WB(BB.size, OB),
-        borderWidth: WB(BB.border, OB),
-        borderColor: GB,
-        background: BB.filled ? GB : void 0
+        left: Be(ee.x, ie),
+        top: Be(ee.y, ie),
+        width: Be(ee.size, ie),
+        height: Be(ee.size, ie),
+        borderWidth: Be(ee.border, ie),
+        borderColor: He,
+        background: ee.filled ? He : void 0
       }
     }
-    const SB = {
+    const Oe = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function nB(BB, OB, GB) {
-      const [YB, DB] = BB.arm ? SB[BB.arm] : [0, 0], QB = Math.round(OB * GB);
+    function de(ee, ie, He) {
+      const [ye, be] = ee.arm ? Oe[ee.arm] : [0, 0], Me = Math.round(ie * He);
       return {
-        left: WB(BB.x + YB * QB, GB),
-        top: WB(BB.y + DB * QB, GB)
+        left: Be(ee.x + ye * Me, He),
+        top: Be(ee.y + be * Me, He)
       }
     }
 
-    function UB(BB) {
-      return BB.arm ? {
-        "data-arm": BB.arm,
-        "data-x": BB.x,
-        "data-y": BB.y
+    function We(ee) {
+      return ee.arm ? {
+        "data-arm": ee.arm,
+        "data-x": ee.x,
+        "data-y": ee.y
       } : {}
     }
 
-    function fB(BB) {
+    function te(ee) {
       let {
-        settings: OB,
-        inPreview: GB,
-        inEditor: YB,
-        pressed: jB = !1,
-        spread: JB,
-        spreadRef: MB
-      } = BB;
-      const PB = (0, QB.useRef)(null),
+        settings: ie,
+        inPreview: He,
+        inEditor: ye,
+        pressed: Ue = !1,
+        spread: Je,
+        spreadRef: oe
+      } = ee;
+      const Re = (0, Me.useRef)(null),
         {
-          box: pB,
-          dpr: qB
-        } = function(BB) {
-          const [OB, GB] = (0, QB.useState)({
+          box: fe,
+          dpr: Te
+        } = function(ee) {
+          const [ie, He] = (0, Me.useState)({
             box: {
               left: 0,
               top: 0,
@@ -411,200 +411,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, QB.useLayoutEffect)((() => {
-            const OB = BB.current;
-            if (!OB) return;
-            const YB = () => {
-              const BB = OB.getBoundingClientRect(),
-                YB = window.devicePixelRatio || 1;
-              GB((OB => OB.dpr === YB && OB.box.left === BB.left && OB.box.top === BB.top && OB.box.width === BB.width && OB.box.height === BB.height ? OB : {
+          return (0, Me.useLayoutEffect)((() => {
+            const ie = ee.current;
+            if (!ie) return;
+            const ye = () => {
+              const ee = ie.getBoundingClientRect(),
+                ye = window.devicePixelRatio || 1;
+              He((ie => ie.dpr === ye && ie.box.left === ee.left && ie.box.top === ee.top && ie.box.width === ee.width && ie.box.height === ee.height ? ie : {
                 box: {
-                  left: BB.left,
-                  top: BB.top,
-                  width: BB.width,
-                  height: BB.height
+                  left: ee.left,
+                  top: ee.top,
+                  width: ee.width,
+                  height: ee.height
                 },
-                dpr: YB
+                dpr: ye
               }))
             };
-            YB();
-            const DB = new ResizeObserver(YB);
-            return DB.observe(OB), window.addEventListener("resize", YB), window.addEventListener("scroll", YB, !0), () => {
-              DB.disconnect(), window.removeEventListener("resize", YB), window.removeEventListener("scroll", YB, !0)
+            ye();
+            const be = new ResizeObserver(ye);
+            return be.observe(ie), window.addEventListener("resize", ye), window.addEventListener("scroll", ye, !0), () => {
+              be.disconnect(), window.removeEventListener("resize", ye), window.removeEventListener("scroll", ye, !0)
             }
-          }), [BB]), OB
-        }(PB),
-        ZB = (0, QB.useRef)(qB);
-      ZB.current = qB;
-      const NB = yB(OB, qB, jB && OB.growOnClick ? lB : 1),
-        RB = function(BB, OB, GB) {
-          const YB = Math.round((BB.left + BB.width / 2) * GB - OB / 2),
-            DB = Math.round((BB.top + BB.height / 2) * GB - OB / 2);
+          }), [ee]), ie
+        }(Re),
+        pe = (0, Me.useRef)(Te);
+      pe.current = Te;
+      const Xe = Fe(ie, Te, Ue && ie.growOnClick ? qe : 1),
+        ze = function(ee, ie, He) {
+          const ye = Math.round((ee.left + ee.width / 2) * He - ie / 2),
+            be = Math.round((ee.top + ee.height / 2) * He - ie / 2);
           return {
-            x: YB / GB - BB.left,
-            y: DB / GB - BB.top
+            x: ye / He - ee.left,
+            y: be / He - ee.top
           }
-        }(pB, NB.cell, qB),
-        WB = (0, oB.l)(OB.color),
-        SB = (0, oB.l)(OB.outlineColor),
-        fB = (0, QB.useRef)(0);
-      (0, QB.useLayoutEffect)((() => {
-        if (MB) return MB.current = BB => {
-          var OB;
-          fB.current = BB, null === (OB = PB.current) || void 0 === OB || OB.querySelectorAll("[data-arm]").forEach((OB => {
-            Object.assign(OB.style, nB(function(BB) {
+        }(fe, Xe.cell, Te),
+        Be = (0, Ke.j)(ie.color),
+        Oe = (0, Ke.j)(ie.outlineColor),
+        te = (0, Me.useRef)(0);
+      (0, Me.useLayoutEffect)((() => {
+        if (oe) return oe.current = ee => {
+          var ie;
+          te.current = ee, null === (ie = Re.current) || void 0 === ie || ie.querySelectorAll("[data-arm]").forEach((ie => {
+            Object.assign(ie.style, de(function(ee) {
               return {
-                x: Number(BB.dataset.x),
-                y: Number(BB.dataset.y),
-                arm: BB.dataset.arm
+                x: Number(ee.dataset.x),
+                y: Number(ee.dataset.y),
+                arm: ee.dataset.arm
               }
-            }(OB), BB, ZB.current))
+            }(ie), ee, pe.current))
           }))
         }, () => {
-          MB.current = null
+          oe.current = null
         }
-      }), [MB]);
-      const kB = null !== JB && void 0 !== JB ? JB : fB.current;
-      return (0, zB.jsx)("div", {
-        ref: PB,
-        className: DB()("CrosshairShapes", {
-          CrosshairInPreview: GB,
-          CrosshairInEditor: YB || GB,
-          CrosshairSpreads: void 0 !== MB
+      }), [oe]);
+      const Ze = null !== Je && void 0 !== Je ? Je : te.current;
+      return (0, ke.jsx)("div", {
+        ref: Re,
+        className: be()("CrosshairShapes", {
+          CrosshairInPreview: He,
+          CrosshairInEditor: ye || He,
+          CrosshairSpreads: void 0 !== oe
         }),
-        children: (0, zB.jsx)("div", {
+        children: (0, ke.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: RB.x,
-            top: RB.y,
-            opacity: OB.opacity / 100
+            left: ze.x,
+            top: ze.y,
+            opacity: ie.opacity / 100
           },
-          children: (0, zB.jsxs)("div", {
+          children: (0, ke.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [NB.ringOutline && (0, zB.jsx)("div", {
+            children: [Xe.ringOutline && (0, ke.jsx)("div", {
               className: "CrosshairRing",
-              style: VB(NB.ringOutline, qB, SB)
-            }), NB.outlines.map(((BB, OB) => (0, zB.jsx)("div", {
+              style: ge(Xe.ringOutline, Te, Oe)
+            }), Xe.outlines.map(((ee, ie) => (0, ke.jsx)("div", {
               className: "CrosshairPart",
-              ...UB(BB),
-              style: AB(BB, kB, qB, SB)
-            }, `o${OB}`))), NB.ring && (0, zB.jsx)("div", {
+              ...We(ee),
+              style: Ee(ee, Ze, Te, Oe)
+            }, `o${ie}`))), Xe.ring && (0, ke.jsx)("div", {
               className: "CrosshairRing",
-              style: VB(NB.ring, qB, WB)
-            }), NB.fills.map(((BB, OB) => (0, zB.jsx)("div", {
+              style: ge(Xe.ring, Te, Be)
+            }), Xe.fills.map(((ee, ie) => (0, ke.jsx)("div", {
               className: "CrosshairPart",
-              ...UB(BB),
-              style: AB(BB, kB, qB, WB)
-            }, `f${OB}`)))]
+              ...We(ee),
+              style: Ee(ee, Ze, Te, Be)
+            }, `f${ie}`)))]
           })
         })
       })
     }
   },
-  34773: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => MB,
-      d: () => ZB,
-      g: () => qB
+  34851: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => oe,
+      h: () => pe,
+      j: () => Te
     });
-    var YB = GB(34757);
-    const DB = "XH1-",
-      QB = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      oB = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      jB = ["color", "outlineColor"],
-      yB = 1 + 3 * jB.length + oB.length + 1,
-      JB = Math.ceil(8 * yB / Math.log2(62)),
-      MB = DB.length + JB;
+    var ye = He(34829);
+    const be = "XH1-",
+      Me = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Ke = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      Ue = ["color", "outlineColor"],
+      Fe = 1 + 3 * Ue.length + Ke.length + 1,
+      Je = Math.ceil(8 * Fe / Math.log2(62)),
+      oe = be.length + Je;
 
-    function PB(BB) {
-      let OB = 90;
-      for (const GB of BB) OB = 31 * OB + GB & 255;
-      return OB
+    function Re(ee) {
+      let ie = 90;
+      for (const He of ee) ie = 31 * ie + He & 255;
+      return ie
     }
-    const zB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      lB = BigInt(zB.length);
+    const ke = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      qe = BigInt(ke.length);
 
-    function pB(BB, OB) {
-      let GB = 0n;
-      for (const DB of BB) {
-        const BB = zB.indexOf(DB);
-        if (BB < 0) return null;
-        GB = GB * lB + BigInt(BB)
+    function fe(ee, ie) {
+      let He = 0n;
+      for (const be of ee) {
+        const ee = ke.indexOf(be);
+        if (ee < 0) return null;
+        He = He * qe + BigInt(ee)
       }
-      if (GB >> BigInt(8 * OB) !== 0n) return null;
-      const YB = [];
-      for (let DB = 0; DB < OB; DB++) YB.unshift(Number(0xffn & GB)), GB >>= 8n;
-      return YB
+      if (He >> BigInt(8 * ie) !== 0n) return null;
+      const ye = [];
+      for (let be = 0; be < ie; be++) ye.unshift(Number(0xffn & He)), He >>= 8n;
+      return ye
     }
 
-    function qB(BB) {
-      let OB = "shapes" === BB.style ? 1 : 0;
-      QB.forEach(((GB, YB) => {
-        BB[GB] && (OB |= 1 << YB + 1)
+    function Te(ee) {
+      let ie = "shapes" === ee.style ? 1 : 0;
+      Me.forEach(((He, ye) => {
+        ee[He] && (ie |= 1 << ye + 1)
       }));
-      const GB = [OB];
-      for (const DB of jB) {
-        const OB = (0, YB.h)(DB, BB[DB]);
-        GB.push(OB >> 16 & 255, OB >> 8 & 255, 255 & OB)
+      const He = [ie];
+      for (const be of Ue) {
+        const ie = (0, ye.f)(be, ee[be]);
+        He.push(ie >> 16 & 255, ie >> 8 & 255, 255 & ie)
       }
-      for (const DB of oB) {
+      for (const be of Ke) {
         const {
-          min: OB,
-          step: QB
-        } = YB.c[DB];
-        GB.push(Math.round(((0, YB.h)(DB, BB[DB]) - OB) / QB))
+          min: ie,
+          step: Me
+        } = ye.d[be];
+        He.push(Math.round(((0, ye.f)(be, ee[be]) - ie) / Me))
       }
-      return GB.push(PB(GB)), DB + function(BB, OB) {
-        let GB = 0n;
-        for (const DB of BB) GB = GB << 8n | BigInt(DB);
-        let YB = "";
-        for (let DB = 0; DB < OB; DB++) YB = zB[Number(GB % lB)] + YB, GB /= lB;
-        return YB
-      }(GB, JB)
+      return He.push(Re(He)), be + function(ee, ie) {
+        let He = 0n;
+        for (const be of ee) He = He << 8n | BigInt(be);
+        let ye = "";
+        for (let be = 0; be < ie; be++) ye = ke[Number(He % qe)] + ye, He /= qe;
+        return ye
+      }(He, Je)
     }
 
-    function ZB(BB) {
-      for (const OB of BB.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${JB}})`, "gi"))) {
-        const BB = NB(pB(OB[1], yB));
-        if (BB) return BB
+    function pe(ee) {
+      for (const ie of ee.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Je}})`, "gi"))) {
+        const ee = Xe(fe(ie[1], Fe));
+        if (ee) return ee
       }
       return null
     }
 
-    function NB(BB) {
-      if (!BB || BB.length !== yB || PB(BB.slice(0, -1)) !== BB[BB.length - 1]) return null;
-      const OB = BB[0],
-        GB = {
-          ...YB.d,
-          style: 1 & OB ? "shapes" : "classic"
+    function Xe(ee) {
+      if (!ee || ee.length !== Fe || Re(ee.slice(0, -1)) !== ee[ee.length - 1]) return null;
+      const ie = ee[0],
+        He = {
+          ...ye.e,
+          style: 1 & ie ? "shapes" : "classic"
         };
-      QB.forEach(((BB, YB) => {
-        GB[BB] = 0 !== (OB & 1 << YB + 1)
+      Me.forEach(((ee, ye) => {
+        He[ee] = 0 !== (ie & 1 << ye + 1)
       }));
-      let DB = 1;
-      for (const YB of jB) GB[YB] = BB[DB] << 16 | BB[DB + 1] << 8 | BB[DB + 2], DB += 3;
-      for (const QB of oB) {
+      let be = 1;
+      for (const ye of Ue) He[ye] = ee[be] << 16 | ee[be + 1] << 8 | ee[be + 2], be += 3;
+      for (const Me of Ke) {
         const {
-          min: OB,
-          step: oB
-        } = YB.c[QB];
-        GB[QB] = (0, YB.h)(QB, OB + BB[DB] * oB), DB++
+          min: ie,
+          step: Ke
+        } = ye.d[Me];
+        He[Me] = (0, ye.f)(Me, ie + ee[be] * Ke), be++
       }
-      return GB
+      return He
     }
   },
-  34757: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB,
-      d: () => DB,
-      h: () => QB,
-      l: () => JB,
-      p: () => yB,
-      t: () => MB,
-      v: () => jB,
-      w: () => oB
+  34829: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye,
+      e: () => be,
+      f: () => Me,
+      j: () => Je,
+      k: () => Fe,
+      l: () => oe,
+      n: () => Ue,
+      o: () => Ke
     });
-    const YB = {
+    const ye = {
         opacity: {
           min: 5,
           max: 100,
@@ -661,7 +661,7 @@ export const modules = {
           step: 1
         }
       },
-      DB = Object.freeze({
+      be = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -682,212 +682,212 @@ export const modules = {
         forGuns: !1
       });
 
-    function QB(BB, OB) {
-      var GB;
+    function Me(ee, ie) {
+      var He;
       const {
-        min: QB,
-        max: oB,
-        step: jB
-      } = YB[BB];
-      if (!Number.isFinite(OB)) return DB[BB];
-      const yB = (null !== (GB = String(jB).split(".")[1]) && void 0 !== GB ? GB : "").length,
-        JB = Number((Math.round(OB / jB) * jB).toFixed(yB));
-      return Math.min(oB, Math.max(QB, JB))
+        min: Me,
+        max: Ke,
+        step: Ue
+      } = ye[ee];
+      if (!Number.isFinite(ie)) return be[ee];
+      const Fe = (null !== (He = String(Ue).split(".")[1]) && void 0 !== He ? He : "").length,
+        Je = Number((Math.round(ie / Ue) * Ue).toFixed(Fe));
+      return Math.min(Ke, Math.max(Me, Je))
     }
 
-    function oB(BB, OB, GB) {
-      const YB = "number" === typeof GB ? QB(OB, GB) : GB;
+    function Ke(ee, ie, He) {
+      const ye = "number" === typeof He ? Me(ie, He) : He;
       return {
-        ...BB,
-        [OB]: YB
+        ...ee,
+        [ie]: ye
       }
     }
 
-    function jB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(DB).every((YB => GB.includes(YB) || BB[YB] === OB[YB]))
+    function Ue(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(be).every((ye => He.includes(ye) || ee[ye] === ie[ye]))
     }
 
-    function yB(BB) {
-      return jB(BB, DB)
+    function Fe(ee) {
+      return Ue(ee, be)
     }
 
-    function JB(BB) {
-      return `#${BB.toString(16).padStart(6,"0")}`
+    function Je(ee) {
+      return `#${ee.toString(16).padStart(6,"0")}`
     }
 
-    function MB(BB) {
-      const OB = /^#?([0-9a-f]{6})$/i.exec(BB.trim());
-      return OB ? parseInt(OB[1], 16) : null
+    function oe(ee) {
+      const ie = /^#?([0-9a-f]{6})$/i.exec(ee.trim());
+      return ie ? parseInt(ie[1], 16) : null
     }
   },
-  34777: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => PB,
-      f: () => zB
+  34859: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Re,
+      f: () => ke
     });
-    var YB = GB(56),
-      DB = GB(31),
-      QB = GB(34773),
-      oB = GB(34757);
-    const jB = "crosshairCode";
-    let yB = null;
-    const JB = new Set;
+    var ye = He(59),
+      be = He(35),
+      Me = He(34851),
+      Ke = He(34829);
+    const Ue = "crosshairCode";
+    let Fe = null;
+    const Je = new Set;
 
-    function MB() {
-      if (null === yB) {
-        var BB;
-        const OB = DB.g.getItem(jB);
-        yB = null !== (BB = "string" === typeof OB ? (0, QB.d)(OB) : null) && void 0 !== BB ? BB : oB.d
+    function oe() {
+      if (null === Fe) {
+        var ee;
+        const ie = be.i.getItem(Ue);
+        Fe = null !== (ee = "string" === typeof ie ? (0, Me.h)(ie) : null) && void 0 !== ee ? ee : Ke.e
       }
-      return yB
+      return Fe
     }
 
-    function PB(BB) {
-      yB = BB, (0, oB.p)(BB) ? DB.g.removeItem(jB) : DB.g.setItem(jB, (0, QB.g)(BB));
-      for (const OB of JB) OB()
+    function Re(ee) {
+      Fe = ee, (0, Ke.k)(ee) ? be.i.removeItem(Ue) : be.i.setItem(Ue, (0, Me.j)(ee));
+      for (const ie of Je) ie()
     }
 
-    function zB() {
-      const [BB, OB] = (0, YB.useState)(MB);
-      return (0, YB.useEffect)((() => {
-        const BB = () => {
-          OB(MB())
+    function ke() {
+      const [ee, ie] = (0, ye.useState)(oe);
+      return (0, ye.useEffect)((() => {
+        const ee = () => {
+          ie(oe())
         };
-        return BB(), GB = BB, JB.add(GB), () => {
-          JB.delete(GB)
+        return ee(), He = ee, Je.add(He), () => {
+          Je.delete(He)
         };
-        var GB
-      }), []), BB
+        var He
+      }), []), ee
     }
   },
-  37452: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      d: () => yB,
-      g: () => oB
+  37590: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Me,
+      e: () => Fe,
+      f: () => Ke
     });
-    var YB = GB(641),
-      DB = GB(3088);
+    var ye = He(610),
+      be = He(2969);
 
-    function QB(BB) {
-      return BB === (0, DB.g)().QGB ? (0, DB.g)().EX : BB
+    function Me(ee) {
+      return ee === (0, be.h)().dHe ? (0, be.h)().gC : ee
     }
 
-    function oB(BB) {
-      return !(0, YB.Q)(BB) && QB(BB) === (0, DB.g)().EX
+    function Ke(ee) {
+      return !(0, ye.P)(ee) && Me(ee) === (0, be.h)().gC
     }
-    const jB = "gravity";
+    const Ue = "gravity";
 
-    function yB() {
-      return (0, DB.g)().physics[jB][1]
+    function Fe() {
+      return (0, be.h)().physics[Ue][1]
     }
   },
-  37434: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => nB
+  37574: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => de
     });
-    var YB = GB(37436),
-      DB = GB(192),
-      QB = GB(5353),
-      oB = GB(37443),
-      jB = GB(37113),
-      yB = GB(37490),
-      JB = GB(37452),
-      MB = GB(363),
-      PB = GB.n(MB),
-      zB = GB(3088),
-      lB = GB(37486),
-      pB = GB(25),
-      qB = GB(16),
-      ZB = GB(37461),
-      NB = GB(37466),
-      RB = GB(37475),
-      WB = GB(37477);
-    const AB = new Set(["note"]);
-    const VB = {
-      stop: () => VB,
-      fade: () => VB,
-      rate: () => VB,
+    var ye = He(37578),
+      be = He(186),
+      Me = He(5338),
+      Ke = He(37584),
+      Ue = He(37224),
+      Fe = He(37627),
+      Je = He(37590),
+      oe = He(352),
+      Re = He.n(oe),
+      ke = He(2969),
+      qe = He(37620),
+      fe = He(27),
+      Te = He(18),
+      pe = He(37596),
+      Xe = He(37601),
+      ze = He(37605),
+      Be = He(37612);
+    const Ee = new Set(["note"]);
+    const ge = {
+      stop: () => ge,
+      fade: () => ge,
+      rate: () => ge,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => VB,
-      setPannerAttr: () => VB,
-      setPosition: () => VB
+      setRelativeVolume: () => ge,
+      setPannerAttr: () => ge,
+      setPosition: () => ge
     };
-    class SB {
-      constructor(BB) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new yB.i, this._howl = (0, jB.countDecodesAs)(new QB.Howl({
-          src: [...(0, YB.t)(BB).src],
+    class Oe {
+      constructor(ee) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new Fe.i, this._howl = (0, Ue.countDecodesAs)(new Me.Howl({
+          src: [...(0, ye.s)(ee).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const OB = this._howl.play(oB.d);
-        BB && this._howl.loop(!0, OB);
-        let GB = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), OB);
-        const YB = {
+        let ee = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const ie = this._howl.play(Ke.b);
+        ee && this._howl.loop(!0, ie);
+        let He = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), ie);
+        const ye = {
           stop: () => {
-            var BB;
-            return null === (BB = this.liveHowl()) || void 0 === BB || BB.stop(OB), YB
+            var ee;
+            return null === (ee = this.liveHowl()) || void 0 === ee || ee.stop(ie), ye
           },
-          fade: (BB, GB, DB) => {
-            var QB;
-            return null === (QB = this.liveHowl()) || void 0 === QB || QB.fade(BB, GB, DB, OB), YB
+          fade: (ee, He, be) => {
+            var Me;
+            return null === (Me = this.liveHowl()) || void 0 === Me || Me.fade(ee, He, be, ie), ye
           },
-          rate: BB => {
-            var GB;
-            return null === (GB = this.liveHowl()) || void 0 === GB || GB.rate(BB, OB), YB
+          rate: ee => {
+            var He;
+            return null === (He = this.liveHowl()) || void 0 === He || He.rate(ee, ie), ye
           },
-          stopsAtOnce: () => this._howl.playing(OB) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(ie) && !this._howl._playLock,
           isAlive: () => {
-            const BB = this._howl._soundById(OB);
-            return !this._loadFailed && !!BB && !BB._ended
+            const ee = this._howl._soundById(ie);
+            return !this._loadFailed && !!ee && !ee._ended
           },
-          getDurationMs: () => this._howl._soundById(OB) ? 1e3 * this._howl.duration(OB) / this._howl.rate(OB) : 0,
-          getVolume: () => GB * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => GB,
-          setRelativeVolume: BB => {
-            var DB;
-            if (BB > 1) throw new Error("Volume should be <= 1");
-            return GB = qB.c.get("soundOnFromAd") ? BB : 0, null === (DB = this.liveHowl()) || void 0 === DB || DB.volume(Math.min(1, GB * this._volumeMultiplier.getTotalMultipliedVal()), OB), YB
+          getDurationMs: () => this._howl._soundById(ie) ? 1e3 * this._howl.duration(ie) / this._howl.rate(ie) : 0,
+          getVolume: () => He * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => He,
+          setRelativeVolume: ee => {
+            var be;
+            if (ee > 1) throw new Error("Volume should be <= 1");
+            return He = Te.e.get("soundOnFromAd") ? ee : 0, null === (be = this.liveHowl()) || void 0 === be || be.volume(Math.min(1, He * this._volumeMultiplier.getTotalMultipliedVal()), ie), ye
           },
-          setPannerAttr: BB => {
+          setPannerAttr: ee => {
             let {
-              coneInnerAngle: GB,
-              coneOuterAngle: DB = 360,
-              coneOuterGain: QB,
-              distanceModel: oB,
-              maxDistance: jB,
-              panningModel: yB,
-              refDistance: JB,
-              rolloffFactor: MB
-            } = BB;
+              coneInnerAngle: He,
+              coneOuterAngle: be = 360,
+              coneOuterGain: Me,
+              distanceModel: Ke,
+              maxDistance: Ue,
+              panningModel: Fe,
+              refDistance: Je,
+              rolloffFactor: oe
+            } = ee;
             return this._setPannerAttr({
-              id: OB,
-              coneInnerAngle: GB,
-              coneOuterAngle: DB,
-              coneOuterGain: QB,
-              distanceModel: oB,
-              maxDistance: jB,
-              panningModel: yB,
-              refDistance: JB,
-              rolloffFactor: MB
-            }), YB
+              id: ie,
+              coneInnerAngle: He,
+              coneOuterAngle: be,
+              coneOuterGain: Me,
+              distanceModel: Ke,
+              maxDistance: Ue,
+              panningModel: Fe,
+              refDistance: Je,
+              rolloffFactor: oe
+            }), ye
           },
-          setPosition: BB => {
-            var GB;
-            return null === (GB = this.liveHowl()) || void 0 === GB || GB.pos(BB[2], BB[1], BB[0], OB), YB
+          setPosition: ee => {
+            var He;
+            return null === (He = this.liveHowl()) || void 0 === He || He.pos(ee[2], ee[1], ee[0], ie), ye
           }
         };
-        return YB
+        return ye
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -896,196 +896,196 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, oB.e)(this._howl, (() => {
+        (0, Ke.f)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(BB) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", BB), this._howl.volume(BB)
+      setGlobalVolume(ee) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", ee), this._howl.volume(ee)
       }
-      _setPannerAttr(BB) {
+      _setPannerAttr(ee) {
         let {
-          id: OB,
-          coneInnerAngle: GB = 360,
-          coneOuterAngle: YB = 360,
-          coneOuterGain: DB = 0,
-          distanceModel: QB = "inverse",
-          maxDistance: oB = 1e3,
-          panningModel: jB = "HRTF",
-          refDistance: yB = lB.g,
-          rolloffFactor: JB = 1
-        } = BB;
-        const MB = this.liveHowl();
-        if (null === MB) return;
-        MB.pannerAttr({
-          coneOuterAngle: YB
-        }, OB);
-        const PB = {
-          coneInnerAngle: GB,
-          coneOuterAngle: YB,
-          coneOuterGain: DB,
-          distanceModel: QB,
-          maxDistance: oB,
-          panningModel: jB,
-          refDistance: yB,
-          rolloffFactor: JB
+          id: ie,
+          coneInnerAngle: He = 360,
+          coneOuterAngle: ye = 360,
+          coneOuterGain: be = 0,
+          distanceModel: Me = "inverse",
+          maxDistance: Ke = 1e3,
+          panningModel: Ue = "HRTF",
+          refDistance: Fe = qe.j,
+          rolloffFactor: Je = 1
+        } = ee;
+        const oe = this.liveHowl();
+        if (null === oe) return;
+        oe.pannerAttr({
+          coneOuterAngle: ye
+        }, ie);
+        const Re = {
+          coneInnerAngle: He,
+          coneOuterAngle: ye,
+          coneOuterGain: be,
+          distanceModel: Me,
+          maxDistance: Ke,
+          panningModel: Ue,
+          refDistance: Fe,
+          rolloffFactor: Je
         };
-        MB.pannerAttr(PB, OB)
+        oe.pannerAttr(Re, ie)
       }
     }
-    const nB = new class {
+    const de = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new ZB.e, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, pB.o.subscribe("appManagerUpdated|soundVolume", (BB => {
-          const OB = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const GB of OB) GB.setGlobalVolume(BB)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new pe.c, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, fe.h.subscribe("appManagerUpdated|soundVolume", (ee => {
+          const ie = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const He of ie) He.setGlobalVolume(ee)
         }))
       }
-      play(BB, OB) {
-        var GB;
-        let QB, oB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (GB = (0, zB.g)()) || void 0 === GB ? void 0 : GB.EX,
-          jB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : lB.f,
-          yB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : lB.g,
-          MB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var pB;
-        (0, zB.g)() ? QB = !!Array.isArray(oB) || (0, JB.b)(oB) !== (null === (pB = (0, zB.g)()) || void 0 === pB ? void 0 : pB.EX): QB = !1;
-        const qB = (0, YB.n)(BB),
-          NB = this.loadSound(QB ? this.spatialSounds : this.stereoSounds, BB);
-        if (!QB) {
-          const BB = NB.play(MB);
-          return BB.setRelativeVolume(OB), BB
+      play(ee, ie) {
+        var He;
+        let Me, Ke = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (He = (0, ke.h)()) || void 0 === He ? void 0 : He.gC,
+          Ue = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qe.f,
+          Fe = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : qe.j,
+          oe = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var fe;
+        (0, ke.h)() ? Me = !!Array.isArray(Ke) || (0, Je.b)(Ke) !== (null === (fe = (0, ke.h)()) || void 0 === fe ? void 0 : fe.gC): Me = !1;
+        const Te = (0, ye.j)(ee),
+          Xe = this.loadSound(Me ? this.spatialSounds : this.stereoSounds, ee);
+        if (!Me) {
+          const ee = Xe.play(oe);
+          return ee.setRelativeVolume(ie), ee
         }
-        const RB = (0, zB.g)(),
-          WB = Array.isArray(oB) ? oB : RB.DW.pR(oB),
-          SB = RB.DW.pR(RB.EX);
-        if (!WB || PB().sqrDist(WB, SB) > jB * jB) return VB;
-        let nB;
-        if (!MB) {
+        const ze = (0, ke.h)(),
+          Be = Array.isArray(Ke) ? Ke : ze.sE.pE(Ke),
+          Oe = ze.sE.pE(ze.gC);
+        if (!Be || Re().sqrDist(Be, Oe) > Ue * Ue) return ge;
+        let de;
+        if (!oe) {
           if (!this.spatialVoices.admit({
-              group: AB.has(qB) ? null : (0, ZB.j)(BB),
-              loudness: (0, ZB.f)(OB, PB().IM(WB, SB), yB),
+              group: Ee.has(Te) ? null : (0, pe.i)(ee),
+              loudness: (0, pe.f)(ie, Re().Po(Be, Oe), Fe),
               startMs: performance.now(),
               getDurationMs: () => {
-                var BB, OB;
-                return null !== (BB = null === (OB = nB) || void 0 === OB ? void 0 : OB.getDurationMs()) && void 0 !== BB ? BB : 0
+                var ee, ie;
+                return null !== (ee = null === (ie = de) || void 0 === ie ? void 0 : ie.getDurationMs()) && void 0 !== ee ? ee : 0
               },
               isAlive: () => {
-                var BB, OB;
-                return null !== (BB = null === (OB = nB) || void 0 === OB ? void 0 : OB.isAlive()) && void 0 !== BB && BB
+                var ee, ie;
+                return null !== (ee = null === (ie = de) || void 0 === ie ? void 0 : ie.isAlive()) && void 0 !== ee && ee
               },
               canStop: () => {
-                var BB, OB;
-                return null !== (BB = null === (OB = nB) || void 0 === OB ? void 0 : OB.stopsAtOnce()) && void 0 !== BB && BB
+                var ee, ie;
+                return null !== (ee = null === (ie = de) || void 0 === ie ? void 0 : ie.stopsAtOnce()) && void 0 !== ee && ee
               },
               stop: () => {
-                var BB;
-                null === (BB = nB) || void 0 === BB || BB.stop()
+                var ee;
+                null === (ee = de) || void 0 === ee || ee.stop()
               }
-            })) return VB
+            })) return ge
         }
-        return nB = NB.play(MB), nB.setRelativeVolume(OB), nB.setPannerAttr({
-          refDistance: yB
-        }), nB.setPosition([WB[0], WB[1] + DB.f.xZ * DB.f.playerEyeToHeightRatio, WB[2]]), nB
+        return de = Xe.play(oe), de.setRelativeVolume(ie), de.setPannerAttr({
+          refDistance: Fe
+        }), de.setPosition([Be[0], Be[1] + be.g.UX * be.g.playerEyeToHeightRatio, Be[2]]), de
       }
-      preload(BB) {
-        const OB = (0, YB.q)(BB) ? [BB] : (0, YB.w)(BB);
-        if (0 === OB.length) throw new Error(`Invalid sound name ${BB} (no sound has it or starts with it)`);
-        for (const GB of OB) this.loadSound(this.stereoSounds, GB)
+      preload(ee) {
+        const ie = (0, ye.o)(ee) ? [ee] : (0, ye.w)(ee);
+        if (0 === ie.length) throw new Error(`Invalid sound name ${ee} (no sound has it or starts with it)`);
+        for (const He of ie) this.loadSound(this.stereoSounds, He)
       }
-      preloadAtIdle(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WB.c;
-        const GB = BB.filter((BB => !this.idlePreloads.has(BB)));
-        for (const DB of GB) this.idlePreloads.add(DB);
-        const YB = this.idlePreloadGeneration;
-        (0, RB.b)(GB, {
-          ...OB,
-          rB: () => YB !== this.idlePreloadGeneration,
-          fetchFile: BB => {
-            this.idlePreloads.delete(BB);
+      preloadAtIdle(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Be.e;
+        const He = ee.filter((ee => !this.idlePreloads.has(ee)));
+        for (const be of He) this.idlePreloads.add(be);
+        const ye = this.idlePreloadGeneration;
+        (0, ze.c)(He, {
+          ...ie,
+          Ce: () => ye !== this.idlePreloadGeneration,
+          fetchFile: ee => {
+            this.idlePreloads.delete(ee);
             try {
-              return this.preload(BB), Promise.resolve()
-            } catch (OB) {
-              return Promise.reject(OB)
+              return this.preload(ee), Promise.resolve()
+            } catch (ie) {
+              return Promise.reject(ie)
             }
           }
         })
       }
-      loadSound(BB, OB) {
-        const GB = BB[OB];
-        if (GB) return GB;
-        const DB = this.makeSound(BB, OB);
-        for (const oB of null !== (QB = (0, YB.r)(OB)) && void 0 !== QB ? QB : []) {
-          var QB;
-          BB[oB] || this.makeSound(BB, oB)
+      loadSound(ee, ie) {
+        const He = ee[ie];
+        if (He) return He;
+        const be = this.makeSound(ee, ie);
+        for (const Ke of null !== (Me = (0, ye.r)(ie)) && void 0 !== Me ? Me : []) {
+          var Me;
+          ee[Ke] || this.makeSound(ee, Ke)
         }
-        return DB
+        return be
       }
-      makeSound(BB, OB) {
-        (0, WB.e)(OB);
-        const GB = new SB(OB);
-        return GB.setGlobalVolume(qB.c.get("soundVolume")), BB[OB] = GB, GB
+      makeSound(ee, ie) {
+        (0, Be.h)(ie);
+        const He = new Oe(ie);
+        return He.setGlobalVolume(Te.e.get("soundVolume")), ee[ie] = He, He
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const BB of [this.stereoSounds, this.spatialSounds])
-          for (const [OB, GB] of Object.entries(BB)) !NB.b.has((0, YB.n)(OB)) && GB.loaded() && (GB.unloadOnceIdle(), delete BB[OB])
+        for (const ee of [this.stereoSounds, this.spatialSounds])
+          for (const [ie, He] of Object.entries(ee)) !Xe.b.has((0, ye.j)(ie)) && He.loaded() && (He.unloadOnceIdle(), delete ee[ie])
       }
     }
   },
-  37533: (BB, OB, GB) => {
-    function YB(BB, OB) {
-      var GB, YB, DB, QB, oB, jB, yB, JB;
-      return BB.name === OB.name && ((null === (GB = BB.attributes) || void 0 === GB || null === (YB = GB.customAttributes) || void 0 === YB ? void 0 : YB.stackKey) === (null === (DB = OB.attributes) || void 0 === DB || null === (QB = DB.customAttributes) || void 0 === QB ? void 0 : QB.stackKey) && (!0 !== (null === (oB = BB.attributes) || void 0 === oB || null === (jB = oB.customAttributes) || void 0 === jB ? void 0 : jB.unstackable) && !0 !== (null === (yB = OB.attributes) || void 0 === yB || null === (JB = yB.customAttributes) || void 0 === JB ? void 0 : JB.unstackable)))
+  37666: (ee, ie, He) => {
+    function ye(ee, ie) {
+      var He, ye, be, Me, Ke, Ue, Fe, Je;
+      return ee.name === ie.name && ((null === (He = ee.attributes) || void 0 === He || null === (ye = He.customAttributes) || void 0 === ye ? void 0 : ye.stackKey) === (null === (be = ie.attributes) || void 0 === be || null === (Me = be.customAttributes) || void 0 === Me ? void 0 : Me.stackKey) && (!0 !== (null === (Ke = ee.attributes) || void 0 === Ke || null === (Ue = Ke.customAttributes) || void 0 === Ue ? void 0 : Ue.unstackable) && !0 !== (null === (Fe = ie.attributes) || void 0 === Fe || null === (Je = Fe.customAttributes) || void 0 === Je ? void 0 : Je.unstackable)))
     }
-    GB.d(OB, {
-      e: () => YB
+    He.d(ie, {
+      d: () => ye
     })
   },
-  37633: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.includes("Leaf Bed")
+  37770: (ee, ie, He) => {
+    function ye(ee) {
+      return ee.includes("Leaf Bed")
     }
 
-    function DB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
+    function be(ee) {
+      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
     }
 
-    function QB(BB) {
-      return BB.includes(" Strongbed")
+    function Me(ee) {
+      return ee.includes(" Strongbed")
     }
 
-    function oB(BB) {
-      return YB(BB) || DB(BB) || QB(BB)
+    function Ke(ee) {
+      return ye(ee) || be(ee) || Me(ee)
     }
-    GB.d(OB, {
-      b: () => oB,
-      d: () => YB,
-      f: () => QB,
-      i: () => DB
+    He.d(ie, {
+      e: () => Ke,
+      i: () => ye,
+      k: () => Me,
+      m: () => be
     })
   },
-  37627: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => JB
+  37765: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Je
     });
-    var YB = GB(37633),
-      DB = GB(9927);
-    const QB = [],
-      oB = [],
-      jB = [],
-      yB = [];
-    for (const MB of Object.keys(DB.n))(0, YB.d)(MB) ? QB.push(MB) : (0, YB.i)(MB) && oB.push(MB), (0, YB.f)(MB) && jB.push(MB), (MB.includes(" Bed Head") || MB.includes(" Strongbed Head")) && yB.push(MB);
-    const JB = {
-      leafBeds: QB,
-      woolBeds: oB,
-      strongBeds: jB,
-      beds: [...QB, ...oB, ...jB],
-      bedHeads: yB,
+    var ye = He(37770),
+      be = He(9961);
+    const Me = [],
+      Ke = [],
+      Ue = [],
+      Fe = [];
+    for (const oe of Object.keys(be.m))(0, ye.i)(oe) ? Me.push(oe) : (0, ye.m)(oe) && Ke.push(oe), (0, ye.k)(oe) && Ue.push(oe), (oe.includes(" Bed Head") || oe.includes(" Strongbed Head")) && Fe.push(oe);
+    const Je = {
+      leafBeds: Me,
+      woolBeds: Ke,
+      strongBeds: Ue,
+      beds: [...Me, ...Ke, ...Ue],
+      bedHeads: Fe,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  34769: () => {}
+  34844: () => {}
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

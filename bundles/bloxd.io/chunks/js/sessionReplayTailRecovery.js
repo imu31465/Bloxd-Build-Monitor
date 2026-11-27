@@ -1,560 +1,560 @@
 export const id = 64;
 export const ids = [64];
 export const modules = {
-  40567: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      recoverReplayTails: () => LB
+  40657: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      recoverReplayTails: () => ce
     });
-    var YB = GB(40469),
-      DB = GB(31),
-      QB = GB(40457),
-      oB = GB(40432),
-      jB = GB(40464),
-      yB = GB(1200);
-    const JB = 35e3;
-    async function MB(BB, OB, GB) {
-      const YB = {
-          token: BB.token,
-          sequence: OB
+    var ye = He(40579),
+      be = He(35),
+      Me = He(40570),
+      Ke = He(40548),
+      Ue = He(40572),
+      Fe = He(1155);
+    const Je = 35e3;
+    async function oe(ee, ie, He) {
+      const ye = {
+          token: ee.token,
+          sequence: ie
         },
-        DB = (0, yB.t)(JB),
-        QB = void 0 === GB ? DB : (0, yB.p)([GB, DB]);
-      let oB = !1;
+        be = (0, Fe.v)(Je),
+        Me = void 0 === He ? be : (0, Fe.k)([He, be]);
+      let Ke = !1;
       try {
-        const OB = await fetch(BB.releaseUrl, {
+        const ie = await fetch(ee.releaseUrl, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
           },
-          body: JSON.stringify(YB),
-          signal: QB
+          body: JSON.stringify(ye),
+          signal: Me
         });
-        if (503 === OB.status) {
+        if (503 === ie.status) {
           const {
-            reason: BB
-          } = await OB.json();
-          oB = "release_retrying" === BB || "shutting_down" === BB
+            reason: ee
+          } = await ie.json();
+          Ke = "release_retrying" === ee || "shutting_down" === ee
         }
-        if (!OB.ok) throw new Error(`HTTP ${OB.status}`);
-        const GB = await OB.json();
-        return "stored" === GB.outcome ? GB.stored : null
-      } catch (jB) {
-        if (QB.aborted || oB) throw jB;
-        return console.warn(`Session replay couldn't ask the part joiner about video segment ${OB}; uploading it from the journal.`, jB), null
+        if (!ie.ok) throw new Error(`HTTP ${ie.status}`);
+        const He = await ie.json();
+        return "stored" === He.outcome ? He.stored : null
+      } catch (Ue) {
+        if (Me.aborted || Ke) throw Ue;
+        return console.warn(`Session replay couldn't ask the part joiner about video segment ${ie}; uploading it from the journal.`, Ue), null
       }
     }
-    var PB = GB(40505),
-      zB = GB(40537),
-      lB = GB(5122),
-      pB = GB(40514);
-    async function qB(BB, OB, GB) {
-      if (!BB.mayStartUpload()) return "retryLater";
+    var Re = He(40606),
+      ke = He(40631),
+      qe = He(5106),
+      fe = He(40609);
+    async function Te(ee, ie, He) {
+      if (!ee.mayStartUpload()) return "retryLater";
       const {
-        kind: YB,
-        sequence: DB,
-        contentType: QB
-      } = GB;
-      let oB;
+        kind: ye,
+        sequence: be,
+        contentType: Me
+      } = He;
+      let Ke;
       try {
-        oB = await GB.bytes()
-      } catch (jB) {
-        return console.warn(`Session replay couldn't mux late ${YB} segment ${DB}; skipping it.`, jB), "refused"
+        Ke = await He.bytes()
+      } catch (Ue) {
+        return console.warn(`Session replay couldn't mux late ${ye} segment ${be}; skipping it.`, Ue), "refused"
       }
       try {
-        const GB = BB.transportFor(OB),
-          jB = await GB.requestPutUrl({
-            uploadToken: OB.uploadToken,
-            kind: YB,
-            sequence: DB,
-            contentType: QB,
-            byteLength: oB.byteLength,
+        const He = ee.transportFor(ie),
+          Ue = await He.requestPutUrl({
+            uploadToken: ie.uploadToken,
+            kind: ye,
+            sequence: be,
+            contentType: Me,
+            byteLength: Ke.byteLength,
             late: !0
           });
-        return "rejected" in jB ? (console.warn(`Session replay late ${YB} segment ${DB} refused: ${jB.reason}`), jB.retryable ? "retryLater" : "refused") : (await GB.put(jB.uploadUrl, oB, QB, jB.ifNoneMatch), "uploaded")
-      } catch (jB) {
-        return console.warn(`Session replay late ${YB} segment ${DB} upload failed; trying again later.`, jB), "retryLater"
+        return "rejected" in Ue ? (console.warn(`Session replay late ${ye} segment ${be} refused: ${Ue.reason}`), Ue.retryable ? "retryLater" : "refused") : (await He.put(Ue.uploadUrl, Ke, Me, Ue.ifNoneMatch), "uploaded")
+      } catch (Ue) {
+        return console.warn(`Session replay late ${ye} segment ${be} upload failed; trying again later.`, Ue), "retryLater"
       }
     }
-    async function ZB(BB, OB, GB) {
-      var YB;
-      const DB = BB.nowMs(),
-        QB = (null !== (YB = GB.domSegments) && void 0 !== YB ? YB : []).filter((BB => BB.endMs <= DB));
-      for (const oB of [...GB.videoSegments, ...GB.telemetrySegments, ...QB]) GB.endedAtMs = Math.max(GB.endedAtMs, oB.endMs);
-      for (const oB of (0, pB.g)({
-          uploadToken: OB.uploadToken,
-          manifest: GB,
+    async function pe(ee, ie, He) {
+      var ye;
+      const be = ee.nowMs(),
+        Me = (null !== (ye = He.domSegments) && void 0 !== ye ? ye : []).filter((ee => ee.endMs <= be));
+      for (const Ke of [...He.videoSegments, ...He.telemetrySegments, ...Me]) He.endedAtMs = Math.max(He.endedAtMs, Ke.endMs);
+      for (const Ke of (0, fe.e)({
+          uploadToken: ie.uploadToken,
+          manifest: He,
           creatorGrants: [],
           late: !0
         })) {
-        const GB = await BB.postManifest(OB, oB);
-        if ("uploaded" !== GB) return GB
+        const He = await ee.postManifest(ie, Ke);
+        if ("uploaded" !== He) return He
       }
       return "uploaded"
     }
-    var NB = GB(40572),
-      RB = GB(40589),
-      WB = GB(40641),
-      AB = GB(40669),
-      VB = GB(40650);
-    class SB {
-      constructor(BB, OB, GB, YB, DB) {
-        this.frameDurationS = GB, this.onFragment = DB, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = OB, this.lastTimestampUs = OB;
-        const QB = BB => {
-          this.boxes.push(BB)
+    var Xe = He(40665),
+      ze = He(40679),
+      Be = He(40726),
+      Ee = He(40750),
+      ge = He(40738);
+    class Oe {
+      constructor(ee, ie, He, ye, be) {
+        this.frameDurationS = He, this.onFragment = be, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = ie, this.lastTimestampUs = ie;
+        const Me = ee => {
+          this.boxes.push(ee)
         };
-        this.output = new NB.e({
-          format: new RB.g({
+        this.output = new Xe.c({
+          format: new ze.i({
             fastStart: "fragmented",
-            minimumFragmentDuration: YB,
-            onFtyp: QB,
-            onMoov: QB,
-            onMoof: QB,
-            onMdat: BB => {
-              QB(BB), this.fragmentDone()
+            minimumFragmentDuration: ye,
+            onFtyp: Me,
+            onMoov: Me,
+            onMoof: Me,
+            onMdat: ee => {
+              Me(ee), this.fragmentDone()
             }
           }),
-          target: new WB.e
-        }), this.source = new AB.i(BB), this.output.addVideoTrack(this.source), this.pending = this.output.start()
+          target: new Be.e
+        }), this.source = new Ee.g(ee), this.output.addVideoTrack(this.source), this.pending = this.output.start()
       }
       get durationUs() {
         return this.lastTimestampUs - this.firstTimestampUs
       }
-      add(BB, OB) {
-        const GB = new Uint8Array(BB.byteLength);
-        BB.copyTo(GB), this.addData(GB, BB.type, BB.timestamp, OB)
+      add(ee, ie) {
+        const He = new Uint8Array(ee.byteLength);
+        ee.copyTo(He), this.addData(He, ee.type, ee.timestamp, ie)
       }
-      addData(BB, OB, GB, YB) {
-        const DB = new VB.d(BB, OB, (GB - this.firstTimestampUs) / 1e6, this.frameDurationS),
-          QB = 0 === this.chunkCount++;
-        this.lastTimestampUs = Math.max(this.lastTimestampUs, GB), this.pending = this.pending.then((() => (this.addingTimestampUs = GB, this.source.add(DB, QB ? {
-          decoderConfig: YB
+      addData(ee, ie, He, ye) {
+        const be = new ge.c(ee, ie, (He - this.firstTimestampUs) / 1e6, this.frameDurationS),
+          Me = 0 === this.chunkCount++;
+        this.lastTimestampUs = Math.max(this.lastTimestampUs, He), this.pending = this.pending.then((() => (this.addingTimestampUs = He, this.source.add(be, Me ? {
+          decoderConfig: ye
         } : void 0))))
       }
       async finish() {
         await this.pending, this.addingTimestampUs = null, await this.output.finalize()
       }
       fragmentDone() {
-        var BB;
-        const OB = nB(this.boxes);
+        var ee;
+        const ie = de(this.boxes);
         this.boxes = [], this.onFragment({
-          bytes: OB,
-          endUs: null !== (BB = this.addingTimestampUs) && void 0 !== BB ? BB : this.lastTimestampUs + 1e6 * this.frameDurationS
+          bytes: ie,
+          endUs: null !== (ee = this.addingTimestampUs) && void 0 !== ee ? ee : this.lastTimestampUs + 1e6 * this.frameDurationS
         })
       }
     }
 
-    function nB(BB) {
-      const OB = new Uint8Array(BB.reduce(((BB, OB) => BB + OB.byteLength), 0));
-      let GB = 0;
-      for (const YB of BB) OB.set(YB, GB), GB += YB.byteLength;
-      return OB
+    function de(ee) {
+      const ie = new Uint8Array(ee.reduce(((ee, ie) => ee + ie.byteLength), 0));
+      let He = 0;
+      for (const ye of ee) ie.set(ye, He), He += ye.byteLength;
+      return ie
     }
-    GB(40497);
+    He(40602);
 
-    function UB(BB, OB, GB, YB) {
-      const DB = BB / 1e3 + GB;
+    function We(ee, ie, He, ye) {
+      const be = ee / 1e3 + He;
       return {
-        startMs: DB,
-        endMs: DB + OB / 1e3 + 1e3 / YB
+        startMs: be,
+        endMs: be + ie / 1e3 + 1e3 / ye
       }
     }
-    const fB = 2,
-      kB = 18e5;
+    const te = 2,
+      Ze = 18e5;
 
-    function dB(BB, OB) {
-      const GB = OB[OB.length - 1].timestampUs - BB.firstTimestampUs,
+    function we(ee, ie) {
+      const He = ie[ie.length - 1].timestampUs - ee.firstTimestampUs,
         {
-          startMs: YB,
-          endMs: DB
-        } = UB(BB.firstTimestampUs, GB, BB.epochOffsetMs, BB.fps);
+          startMs: ye,
+          endMs: be
+        } = We(ee.firstTimestampUs, He, ee.epochOffsetMs, ee.fps);
       return {
-        startMs: Math.round(YB),
-        endMs: Math.round(DB),
-        width: BB.width,
-        height: BB.height,
-        codec: BB.codec
+        startMs: Math.round(ye),
+        endMs: Math.round(be),
+        width: ee.width,
+        height: ee.height,
+        codec: ee.codec
       }
     }
-    async function KB(BB, OB) {
-      const GB = [],
-        YB = new SB(BB.containerCodec, BB.firstTimestampUs, 1 / BB.fps, fB, (BB => {
+    async function De(ee, ie) {
+      const He = [],
+        ye = new Oe(ee.containerCodec, ee.firstTimestampUs, 1 / ee.fps, te, (ee => {
           let {
-            bytes: OB
-          } = BB;
-          GB.push(OB)
+            bytes: ie
+          } = ee;
+          He.push(ie)
         }));
-      for (const DB of OB) YB.addData(DB.data, DB.key ? "key" : "delta", DB.timestampUs, BB.decoderConfig);
-      return await YB.finish(), nB(GB).buffer
+      for (const be of ie) ye.addData(be.data, be.key ? "key" : "delta", be.timestampUs, ee.decoderConfig);
+      return await ye.finish(), de(He).buffer
     }
 
-    function uB(BB, OB, GB) {
-      var YB;
-      const DB = null === (YB = BB.videoProgress) || void 0 === YB ? void 0 : YB.find((BB => BB.segmentId === OB));
-      return void 0 !== DB && (null === GB || DB.partsLanded > GB.partsLanded) ? DB : GB
+    function Pe(ee, ie, He) {
+      var ye;
+      const be = null === (ye = ee.videoProgress) || void 0 === ye ? void 0 : ye.find((ee => ee.segmentId === ie));
+      return void 0 !== be && (null === He || be.partsLanded > He.partsLanded) ? be : He
     }
-    const mB = 6e5;
-    async function IB(BB, OB) {
-      const GB = {
-        recordingId: OB.recordingId,
+    const Ae = 6e5;
+    async function Ye(ee, ie) {
+      const He = {
+        recordingId: ie.recordingId,
         outcome: "nothing",
         videoSegments: 0,
         telemetrySegments: 0,
         domSegments: 0
       };
-      if (BB.nowMs() > BB.lateUploadUntilMs(OB) - mB) return {
-        ...GB,
+      if (ee.nowMs() > ee.lateUploadUntilMs(ie) - Ae) return {
+        ...He,
         outcome: "expired"
       };
-      const YB = new Set;
-      let DB;
+      const ye = new Set;
+      let be;
       try {
-        DB = await async function(BB, OB, GB, YB) {
+        be = await async function(ee, ie, He, ye) {
           const {
-            partJoiner: DB
-          } = OB;
-          if (void 0 === DB) return GB;
-          const QB = BB.nowMs() > OB.manifest.endedAtMs + kB,
-            oB = new Map;
+            partJoiner: be
+          } = ie;
+          if (void 0 === be) return He;
+          const Me = ee.nowMs() > ie.manifest.endedAtMs + Ze,
+            Ke = new Map;
           for (const {
-              header: yB,
-              sequence: JB,
-              progress: MB
+              header: Fe,
+              sequence: Je,
+              progress: oe
             }
-            of GB.video)
-            if (null !== JB && null === uB(OB, yB.segmentId, MB)) {
-              let OB;
+            of He.video)
+            if (null !== Je && null === Pe(ie, Fe.segmentId, oe)) {
+              let ie;
               try {
-                OB = await BB.releaseJoined(DB, JB)
-              } catch (jB) {
-                if (!QB) {
-                  YB.add(yB.segmentId);
+                ie = await ee.releaseJoined(be, Je)
+              } catch (Ue) {
+                if (!Me) {
+                  ye.add(Fe.segmentId);
                   continue
                 }
-                console.warn(`Session replay's part joiner didn't answer about video segment ${JB} in time; uploading it from the journal.`, jB), OB = null
+                console.warn(`Session replay's part joiner didn't answer about video segment ${Je} in time; uploading it from the journal.`, Ue), ie = null
               }
-              null !== OB && oB.set(yB.segmentId, OB)
+              null !== ie && Ke.set(Fe.segmentId, ie)
             } return {
-            ...GB,
-            joined: oB
+            ...He,
+            joined: Ke
           }
-        }(BB, OB, await BB.store.read(OB), YB)
-      } catch (NB) {
-        return console.warn(`Session replay couldn't read what an earlier page load left of ${OB.recordingId}; trying again later.`, NB), {
-          ...GB,
+        }(ee, ie, await ee.store.read(ie), ye)
+      } catch (Xe) {
+        return console.warn(`Session replay couldn't read what an earlier page load left of ${ie.recordingId}; trying again later.`, Xe), {
+          ...He,
           outcome: "retryLater"
         }
       }
-      const QB = [],
-        oB = {
-          ...OB.manifest,
+      const Me = [],
+        Ke = {
+          ...ie.manifest,
           videoSegments: [],
           telemetrySegments: [],
-          ...DB.dom.length + DB.domTails.length > 0 ? {
-            domSegments: QB
+          ...be.dom.length + be.domTails.length > 0 ? {
+            domSegments: Me
           } : {}
         },
-        jB = () => oB.videoSegments.length + oB.telemetrySegments.length + QB.length > 0,
-        yB = function(BB, OB) {
-          let GB = BB.video.reduce(((BB, OB) => {
+        Ue = () => Ke.videoSegments.length + Ke.telemetrySegments.length + Me.length > 0,
+        Fe = function(ee, ie) {
+          let He = ee.video.reduce(((ee, ie) => {
             let {
-              sequence: GB
-            } = OB;
-            return null === GB ? BB : Math.max(BB, GB + 1)
-          }), OB.nextVideoSequence);
+              sequence: He
+            } = ie;
+            return null === He ? ee : Math.max(ee, He + 1)
+          }), ie.nextVideoSequence);
           return {
-            segments: [...BB.video].sort(((BB, OB) => BB.header.segmentId - OB.header.segmentId)).map((YB => {
-              var DB, QB, oB;
+            segments: [...ee.video].sort(((ee, ie) => ee.header.segmentId - ie.header.segmentId)).map((ye => {
+              var be, Me, Ke;
               let {
-                header: jB,
-                sequence: yB,
-                progress: JB,
-                chunks: MB
-              } = YB;
-              const PB = uB(OB, jB.segmentId, JB),
-                zB = null === (DB = BB.joined) || void 0 === DB ? void 0 : DB.get(jB.segmentId),
-                lB = null !== yB && void 0 !== zB ? {
-                  sequence: yB,
-                  ...zB.meta
-                } : null !== yB && null !== PB ? {
-                  sequence: yB,
-                  ...PB.meta,
-                  startMs: Math.round(PB.meta.startMs),
-                  endMs: Math.round(PB.meta.endMs),
-                  parts: PB.partsLanded
+                header: Ue,
+                sequence: Fe,
+                progress: Je,
+                chunks: oe
+              } = ye;
+              const Re = Pe(ie, Ue.segmentId, Je),
+                ke = null === (be = ee.joined) || void 0 === be ? void 0 : be.get(Ue.segmentId),
+                qe = null !== Fe && void 0 !== ke ? {
+                  sequence: Fe,
+                  ...ke.meta
+                } : null !== Fe && null !== Re ? {
+                  sequence: Fe,
+                  ...Re.meta,
+                  startMs: Math.round(Re.meta.startMs),
+                  endMs: Math.round(Re.meta.endMs),
+                  parts: Re.partsLanded
                 } : null,
-                pB = null !== (QB = null !== (oB = null === zB || void 0 === zB ? void 0 : zB.completeUntilUs) && void 0 !== oB ? oB : null === PB || void 0 === PB ? void 0 : PB.completeUntilUs) && void 0 !== QB ? QB : null,
-                qB = function(BB) {
-                  const OB = [...BB].sort(((BB, OB) => BB.index - OB.index)),
-                    GB = [];
-                  for (const YB of OB) {
-                    if (0 === GB.length ? !YB.key : YB.index !== GB[0].index + GB.length) break;
-                    GB.push(YB)
+                fe = null !== (Me = null !== (Ke = null === ke || void 0 === ke ? void 0 : ke.completeUntilUs) && void 0 !== Ke ? Ke : null === Re || void 0 === Re ? void 0 : Re.completeUntilUs) && void 0 !== Me ? Me : null,
+                Te = function(ee) {
+                  const ie = [...ee].sort(((ee, ie) => ee.index - ie.index)),
+                    He = [];
+                  for (const ye of ie) {
+                    if (0 === He.length ? !ye.key : ye.index !== He[0].index + He.length) break;
+                    He.push(ye)
                   }
-                  return GB
-                }(null === pB ? MB : MB.filter((BB => BB.timestampUs >= pB))),
-                ZB = 0 === qB.length ? null : {
-                  sequence: GB++,
+                  return He
+                }(null === fe ? oe : oe.filter((ee => ee.timestampUs >= fe))),
+                pe = 0 === Te.length ? null : {
+                  sequence: He++,
                   header: {
-                    ...jB,
-                    firstTimestampUs: qB[0].timestampUs
+                    ...Ue,
+                    firstTimestampUs: Te[0].timestampUs
                   },
-                  chunks: qB
+                  chunks: Te
                 };
               return {
-                segmentId: jB.segmentId,
-                landed: lB,
-                tail: ZB
+                segmentId: Ue.segmentId,
+                landed: qe,
+                tail: pe
               }
             })),
-            nextSequence: GB
+            nextSequence: He
           }
-        }(DB, OB),
-        JB = function(BB, OB) {
-          var GB;
-          let YB = BB.dom.reduce(((BB, OB) => {
+        }(be, ie),
+        Je = function(ee, ie) {
+          var He;
+          let ye = ee.dom.reduce(((ee, ie) => {
             let {
-              sequence: GB
-            } = OB;
-            return Math.max(BB, GB + 1)
-          }), null !== (GB = OB.nextDomSequence) && void 0 !== GB ? GB : 0);
-          const DB = [...BB.domTails].sort(((BB, OB) => BB.chunkIndex - OB.chunkIndex || BB.fromChar - OB.fromChar)),
-            QB = [];
-          for (const oB of DB) {
-            const BB = QB[QB.length - 1],
-              OB = (null === BB || void 0 === BB ? void 0 : BB.chunkIndex) === oB.chunkIndex;
-            oB.fromChar === (OB ? BB.text.length : 0) && (OB ? (BB.text += oB.text, BB.last = oB) : QB.push({
-              chunkIndex: oB.chunkIndex,
-              sequence: YB++,
-              text: oB.text,
-              last: oB
+              sequence: He
+            } = ie;
+            return Math.max(ee, He + 1)
+          }), null !== (He = ie.nextDomSequence) && void 0 !== He ? He : 0);
+          const be = [...ee.domTails].sort(((ee, ie) => ee.chunkIndex - ie.chunkIndex || ee.fromChar - ie.fromChar)),
+            Me = [];
+          for (const Ke of be) {
+            const ee = Me[Me.length - 1],
+              ie = (null === ee || void 0 === ee ? void 0 : ee.chunkIndex) === Ke.chunkIndex;
+            Ke.fromChar === (ie ? ee.text.length : 0) && (ie ? (ee.text += Ke.text, ee.last = Ke) : Me.push({
+              chunkIndex: Ke.chunkIndex,
+              sequence: ye++,
+              text: Ke.text,
+              last: Ke
             }))
           }
           return {
-            tails: QB,
-            nextSequence: YB
+            tails: Me,
+            nextSequence: ye
           }
-        }(DB, OB),
-        MB = {
+        }(be, ie),
+        oe = {
           videoSegmentIds: [],
           telemetrySequences: [],
           domSequences: [],
           domTailChunks: []
         };
-      let PB = !1;
-      const zB = async DB => {
-        if (jB()) {
-          const jB = await ZB(BB, OB, oB);
-          if ("retryLater" === DB && "uploaded" === jB) try {
-            var QB;
-            const GB = JB.tails.find((BB => {
+      let Re = !1;
+      const ke = async be => {
+        if (Ue()) {
+          const Ue = await pe(ee, ie, Ke);
+          if ("retryLater" === be && "uploaded" === Ue) try {
+            var Me;
+            const He = Je.tails.find((ee => {
                 let {
-                  chunkIndex: OB
-                } = BB;
-                return !MB.domTailChunks.includes(OB)
+                  chunkIndex: ie
+                } = ee;
+                return !oe.domTailChunks.includes(ie)
               })),
-              YB = null !== (QB = null === GB || void 0 === GB ? void 0 : GB.sequence) && void 0 !== QB ? QB : JB.nextSequence;
-            await BB.store.forgetSent({
-              ...OB,
-              nextVideoSequence: yB.nextSequence,
-              nextDomSequence: YB
-            }, MB)
-          } catch (NB) {
-            console.warn(`Session replay couldn't drop what it sent of ${OB.recordingId} from its journal.`, NB)
+              ye = null !== (Me = null === He || void 0 === He ? void 0 : He.sequence) && void 0 !== Me ? Me : Je.nextSequence;
+            await ee.store.forgetSent({
+              ...ie,
+              nextVideoSequence: Fe.nextSequence,
+              nextDomSequence: ye
+            }, oe)
+          } catch (Xe) {
+            console.warn(`Session replay couldn't drop what it sent of ${ie.recordingId} from its journal.`, Xe)
           }
-          if ("refused" === jB && YB.size > 0) return {
-            ...GB,
+          if ("refused" === Ue && ye.size > 0) return {
+            ...He,
             outcome: "refused"
           }
         }
         return {
-          ...GB,
-          outcome: DB
+          ...He,
+          outcome: be
         }
       };
       for (const {
-          segmentId: ZB,
-          landed: RB,
-          tail: WB
+          segmentId: pe,
+          landed: ze,
+          tail: Be
         }
-        of yB.segments)
-        if (!YB.has(ZB)) {
-          if (null !== RB && oB.videoSegments.push(RB), null !== WB) {
-            const YB = await qB(BB, OB, {
+        of Fe.segments)
+        if (!ye.has(pe)) {
+          if (null !== ze && Ke.videoSegments.push(ze), null !== Be) {
+            const ye = await Te(ee, ie, {
               kind: "video",
-              sequence: WB.sequence,
+              sequence: Be.sequence,
               contentType: "video/mp4",
-              bytes: () => BB.mux(WB.header, WB.chunks)
+              bytes: () => ee.mux(Be.header, Be.chunks)
             });
-            if ("retryLater" === YB) return await zB(YB);
-            "refused" === YB ? PB = !0 : (oB.videoSegments.push({
-              sequence: WB.sequence,
-              ...dB(WB.header, WB.chunks)
-            }), GB.videoSegments++)
+            if ("retryLater" === ye) return await ke(ye);
+            "refused" === ye ? Re = !0 : (Ke.videoSegments.push({
+              sequence: Be.sequence,
+              ...we(Be.header, Be.chunks)
+            }), He.videoSegments++)
           }
-          MB.videoSegmentIds.push(ZB)
-        } const lB = [...DB.telemetry].sort(((BB, OB) => BB.sequence - OB.sequence));
-      for (const ZB of lB) {
-        const YB = ZB.landed ? "uploaded" : await qB(BB, OB, {
+          oe.videoSegmentIds.push(pe)
+        } const qe = [...be.telemetry].sort(((ee, ie) => ee.sequence - ie.sequence));
+      for (const pe of qe) {
+        const ye = pe.landed ? "uploaded" : await Te(ee, ie, {
           kind: "telemetry",
-          sequence: ZB.sequence,
+          sequence: pe.sequence,
           contentType: "application/octet-stream",
-          bytes: async () => ZB.bytes
+          bytes: async () => pe.bytes
         });
-        if ("retryLater" === YB) return await zB(YB);
-        MB.telemetrySequences.push(ZB.sequence), "refused" !== YB ? (oB.telemetrySegments.push({
-          sequence: ZB.sequence,
-          startMs: Math.round(ZB.startMs),
-          endMs: Math.round(ZB.endMs)
-        }), GB.telemetrySegments++) : PB = !0
+        if ("retryLater" === ye) return await ke(ye);
+        oe.telemetrySequences.push(pe.sequence), "refused" !== ye ? (Ke.telemetrySegments.push({
+          sequence: pe.sequence,
+          startMs: Math.round(pe.startMs),
+          endMs: Math.round(pe.endMs)
+        }), He.telemetrySegments++) : Re = !0
       }
-      const pB = [...DB.dom].sort(((BB, OB) => BB.sequence - OB.sequence));
+      const fe = [...be.dom].sort(((ee, ie) => ee.sequence - ie.sequence));
       for (const {
-          sequence: ZB,
-          chunk: RB,
-          bytes: WB
+          sequence: pe,
+          chunk: ze,
+          bytes: Be
         }
-        of pB) {
-        const YB = null === WB ? "uploaded" : await qB(BB, OB, {
+        of fe) {
+        const ye = null === Be ? "uploaded" : await Te(ee, ie, {
           kind: "dom",
-          sequence: ZB,
+          sequence: pe,
           contentType: "application/octet-stream",
-          bytes: async () => WB
+          bytes: async () => Be
         });
-        if ("retryLater" === YB) return await zB(YB);
-        MB.domSequences.push(ZB), QB.push({
-          sequence: ZB,
-          ...RB
-        }), "uploaded" === YB && GB.domSegments++
+        if ("retryLater" === ye) return await ke(ye);
+        oe.domSequences.push(pe), Me.push({
+          sequence: pe,
+          ...ze
+        }), "uploaded" === ye && He.domSegments++
       }
       for (const {
-          chunkIndex: ZB,
-          sequence: RB,
-          text: WB,
-          last: AB
+          chunkIndex: pe,
+          sequence: ze,
+          text: Be,
+          last: Ee
         }
-        of JB.tails) {
-        let YB;
-        const DB = await qB(BB, OB, {
+        of Je.tails) {
+        let ye;
+        const be = await Te(ee, ie, {
           kind: "dom",
-          sequence: RB,
+          sequence: ze,
           contentType: "application/octet-stream",
-          bytes: async () => (YB = await BB.packDom(WB), YB.bytes.buffer)
+          bytes: async () => (ye = await ee.packDom(Be), ye.bytes.buffer)
         });
-        if ("retryLater" === DB) return await zB(DB);
-        if (MB.domTailChunks.push(ZB), "refused" === DB) {
-          PB = !0;
+        if ("retryLater" === be) return await ke(be);
+        if (oe.domTailChunks.push(pe), "refused" === be) {
+          Re = !0;
           continue
         }
         const {
-          bytes: oB,
-          inflatedBytes: jB
-        } = YB, {
-          startMs: yB,
-          endMs: JB,
-          summary: lB
-        } = AB;
-        QB.push({
-          sequence: RB,
-          startMs: yB,
-          endMs: JB,
-          byteLength: oB.byteLength,
+          bytes: Ke,
+          inflatedBytes: Ue
+        } = ye, {
+          startMs: Fe,
+          endMs: Je,
+          summary: qe
+        } = Ee;
+        Me.push({
+          sequence: ze,
+          startMs: Fe,
+          endMs: Je,
+          byteLength: Ke.byteLength,
           summary: {
-            ...lB,
-            size: jB
+            ...qe,
+            size: Ue
           }
-        }), GB.domSegments++
+        }), He.domSegments++
       }
-      return YB.size > 0 ? await zB("retryLater") : jB() ? {
-        ...GB,
-        outcome: await ZB(BB, OB, oB)
-      } : PB ? {
-        ...GB,
+      return ye.size > 0 ? await ke("retryLater") : Ue() ? {
+        ...He,
+        outcome: await pe(ee, ie, Ke)
+      } : Re ? {
+        ...He,
         outcome: "refused"
-      } : GB
+      } : He
     }
-    var FB = GB(40482),
-      iB = GB(40520);
-    async function LB() {
-      const BB = "undefined" === typeof navigator ? void 0 : navigator.locks;
-      if (!zB.c.supported || void 0 === BB) return;
-      const OB = new zB.c,
-        GB = new FB.e,
-        yB = new QB.b,
-        JB = await async function(BB) {
-          const OB = [];
-          for (const YB of await BB.store.listRecordings()) {
-            let DB = {
-              recordingId: YB.recordingId,
+    var Ve = He(40592),
+      ae = He(40617);
+    async function ce() {
+      const ee = "undefined" === typeof navigator ? void 0 : navigator.locks;
+      if (!ke.b.supported || void 0 === ee) return;
+      const ie = new ke.b,
+        He = new Ve.c,
+        Fe = new Me.e,
+        Je = await async function(ee) {
+          const ie = [];
+          for (const ye of await ee.store.listRecordings()) {
+            let be = {
+              recordingId: ye.recordingId,
               outcome: "live",
               videoSegments: 0,
               telemetrySegments: 0,
               domSegments: 0
             };
             try {
-              await BB.withLock(YB.recordingId, (async () => {
-                const OB = (await BB.store.listRecordings()).find((BB => {
+              await ee.withLock(ye.recordingId, (async () => {
+                const ie = (await ee.store.listRecordings()).find((ee => {
                   let {
-                    recordingId: OB
-                  } = BB;
-                  return OB === YB.recordingId
+                    recordingId: ie
+                  } = ee;
+                  return ie === ye.recordingId
                 }));
-                if (void 0 !== OB) {
+                if (void 0 !== ie) {
                   try {
-                    DB = await IB(BB, OB)
-                  } catch (GB) {
-                    console.warn(`Session replay couldn't recover what an earlier page load left of ${YB.recordingId}; forgetting it.`, GB), DB = {
-                      ...DB,
+                    be = await Ye(ee, ie)
+                  } catch (He) {
+                    console.warn(`Session replay couldn't recover what an earlier page load left of ${ye.recordingId}; forgetting it.`, He), be = {
+                      ...be,
                       outcome: "failed"
                     }
                   }
-                  "retryLater" !== DB.outcome && await BB.store.deleteRecording(YB.recordingId)
-                } else DB = {
-                  ...DB,
+                  "retryLater" !== be.outcome && await ee.store.deleteRecording(ye.recordingId)
+                } else be = {
+                  ...be,
                   outcome: "nothing"
                 }
               }))
-            } catch (GB) {
-              console.warn(`Session replay couldn't forget ${YB.recordingId}'s journal.`, GB)
+            } catch (He) {
+              console.warn(`Session replay couldn't forget ${ye.recordingId}'s journal.`, He)
             }
-            OB.push(DB)
+            ie.push(be)
           }
-          return OB
+          return ie
         }({
-          store: OB,
-          transportFor: BB => {
-            var OB;
-            return new iB.f((null !== (OB = BB.endpoints) && void 0 !== OB ? OB : (0, jB.e)()).segmentUploadUrl, {
-              relay: GB.for(BB)
+          store: ie,
+          transportFor: ee => {
+            var ie;
+            return new ae.i((null !== (ie = ee.endpoints) && void 0 !== ie ? ie : (0, Ue.b)()).segmentUploadUrl, {
+              relay: He.for(ee)
             })
           },
-          postManifest: (BB, OB) => {
-            var GB;
-            return (0, PB.c)((null !== (GB = BB.endpoints) && void 0 !== GB ? GB : (0, jB.e)()).manifestUrl, OB)
+          postManifest: (ee, ie) => {
+            var He;
+            return (0, Re.d)((null !== (He = ee.endpoints) && void 0 !== He ? He : (0, Ue.b)()).manifestUrl, ie)
           },
-          withLock: async (OB, GB) => {
-            await BB.request((0, lB.u)(OB), {
+          withLock: async (ie, He) => {
+            await ee.request((0, qe.w)(ie), {
               ifAvailable: !0
-            }, (async BB => {
-              null !== BB && await GB()
+            }, (async ee => {
+              null !== ee && await He()
             }))
           },
-          mux: KB,
-          packDom: BB => yB.pack(BB).catch((() => (0, oB.c)(BB))),
-          releaseJoined: MB,
+          mux: De,
+          packDom: ee => Fe.pack(ee).catch((() => (0, Ke.c)(ee))),
+          releaseJoined: oe,
           nowMs: Date.now,
-          lateUploadUntilMs: BB => {
-            var OB;
-            return null !== (OB = BB.lateUploadUntilMs) && void 0 !== OB ? OB : BB.expiresAtMs + YB.c
+          lateUploadUntilMs: ee => {
+            var ie;
+            return null !== (ie = ee.lateUploadUntilMs) && void 0 !== ie ? ie : ee.expiresAtMs + ye.d
           },
           mayStartUpload: () => !0
         }).finally((() => {
-          yB.close()
+          Fe.close()
         }));
-      for (const YB of JB) "live" !== YB.outcome && console.info(`Session replay: ${YB.outcome} what an earlier page load left of ${YB.recordingId} (${YB.videoSegments} video, ${YB.telemetrySegments} telemetry, ${YB.domSegments} page recording).`);
-      0 === (await OB.listRecordings()).length && DB.g.removeItem(lB.m)
+      for (const ye of Je) "live" !== ye.outcome && console.info(`Session replay: ${ye.outcome} what an earlier page load left of ${ye.recordingId} (${ye.videoSegments} video, ${ye.telemetrySegments} telemetry, ${ye.domSegments} page recording).`);
+      0 === (await ie.listRecordings()).length && be.i.removeItem(qe.n)
     }
   },
-  40648: () => {}
+  40729: () => {}
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

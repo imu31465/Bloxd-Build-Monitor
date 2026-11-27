@@ -1,285 +1,285 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37263: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => ZB,
-      e: () => NB,
-      h: () => zB,
-      l: () => PB
+  37420: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => pe,
+      d: () => Xe,
+      h: () => ke,
+      j: () => Re
     });
-    var YB = GB(34790),
-      DB = GB(37267),
-      QB = GB(37270),
-      oB = GB(9391),
-      jB = GB(1480),
-      yB = GB(56),
-      JB = GB(70),
-      MB = GB(1282);
+    var ye = He(34867),
+      be = He(37424),
+      Me = He(37427),
+      Ke = He(9446),
+      Ue = He(1432),
+      Fe = He(59),
+      Je = He(77),
+      oe = He(1228);
 
-    function PB() {
-      var BB;
-      return (0, jB.i)(DB.d, (0, DB.n)()), (0, MB.jsx)(MB.Fragment, {
-        children: null === (BB = (0, DB.n)()) || void 0 === BB ? void 0 : BB.content
+    function Re() {
+      var ee;
+      return (0, Ue.j)(be.b, (0, be.p)()), (0, oe.jsx)(oe.Fragment, {
+        children: null === (ee = (0, be.p)()) || void 0 === ee ? void 0 : ee.content
       })
     }
 
-    function zB(BB) {
-      var OB;
+    function ke(ee) {
+      var ie;
       let {
-        show: GB
-      } = BB;
-      (0, jB.i)(DB.d, (0, DB.n)());
-      const JB = null === (OB = (0, DB.n)()) || void 0 === OB ? void 0 : OB.menu;
-      return (0, yB.useEffect)((() => {
-        var BB;
-        GB || (null === JB || void 0 === JB || null === (BB = JB.onClose) || void 0 === BB || BB.call(JB), (0, QB.u)())
-      }), [GB, JB]), (0, yB.useEffect)((() => GB ? (0, oB.d)(QB.D, QB.i) : void 0), [GB]), (0, MB.jsx)(YB.d, {
-        showing: GB,
+        show: He
+      } = ee;
+      (0, Ue.j)(be.b, (0, be.p)());
+      const Je = null === (ie = (0, be.p)()) || void 0 === ie ? void 0 : ie.menu;
+      return (0, Fe.useEffect)((() => {
+        var ee;
+        He || (null === Je || void 0 === Je || null === (ee = Je.onClose) || void 0 === ee || ee.call(Je), (0, Me.l)())
+      }), [He, Je]), (0, Fe.useEffect)((() => He ? (0, Ke.g)(Me.r, Me.e) : void 0), [He]), (0, oe.jsx)(ye.e, {
+        showing: He,
         globallyUniqueKey: "clientGameMenu",
-        children: null === JB || void 0 === JB ? void 0 : JB.content
+        children: null === Je || void 0 === Je ? void 0 : Je.content
       })
     }
-    const lB = new Map,
-      pB = new Set;
+    const qe = new Map,
+      fe = new Set;
 
-    function qB(BB, OB) {
-      OB ? lB.set(BB, OB) : lB.delete(BB);
-      for (const GB of pB) GB()
+    function Te(ee, ie) {
+      ie ? qe.set(ee, ie) : qe.delete(ee);
+      for (const He of fe) He()
     }
 
-    function ZB(BB) {
+    function pe(ee) {
       let {
-        placement: OB = "bottom"
-      } = BB;
-      const GB = (0, yB.useRef)(null);
-      return (0, yB.useLayoutEffect)((() => {
-        const BB = GB.current;
-        return qB(OB, BB), () => {
-          lB.get(OB) === BB && qB(OB, null)
+        placement: ie = "bottom"
+      } = ee;
+      const He = (0, Fe.useRef)(null);
+      return (0, Fe.useLayoutEffect)((() => {
+        const ee = He.current;
+        return Te(ie, ee), () => {
+          qe.get(ie) === ee && Te(ie, null)
         }
-      }), [OB]), (0, MB.jsx)("div", {
-        ref: GB,
-        id: `clientGameHud-${OB}`,
+      }), [ie]), (0, oe.jsx)("div", {
+        ref: He,
+        id: `clientGameHud-${ie}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function Xe(ee) {
       let {
-        children: OB,
-        placement: GB = "bottom"
-      } = BB;
-      const [YB, DB] = (0, yB.useState)((() => {
-        var BB;
-        return null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null
+        children: ie,
+        placement: He = "bottom"
+      } = ee;
+      const [ye, be] = (0, Fe.useState)((() => {
+        var ee;
+        return null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null
       }));
-      return (0, yB.useEffect)((() => {
-        const BB = () => {
-          var BB;
-          DB(null !== (BB = lB.get(GB)) && void 0 !== BB ? BB : null)
+      return (0, Fe.useEffect)((() => {
+        const ee = () => {
+          var ee;
+          be(null !== (ee = qe.get(He)) && void 0 !== ee ? ee : null)
         };
-        return pB.add(BB), BB(), () => {
-          pB.delete(BB)
+        return fe.add(ee), ee(), () => {
+          fe.delete(ee)
         }
-      }), [GB]), YB ? (0, JB.createPortal)(OB, YB) : null
+      }), [He]), ye ? (0, Je.createPortal)(ie, ye) : null
     }
   },
-  34790: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => QB
+  34867: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me
     });
-    var YB = GB(4949),
-      DB = GB(4956);
+    var ye = He(4931),
+      be = He(4937);
 
-    function QB(BB) {
+    function Me(ee) {
       let {
-        children: OB,
-        showing: GB,
-        globallyUniqueKey: QB,
-        alwaysMountChildren: oB = !1,
-        doGameplayStartStopOnShow: jB = !0,
-        keepsMovement: yB = !1
-      } = BB;
-      return (0, DB.e)(!0, GB, QB, yB), (0, YB.c)(jB, GB), GB || oB ? OB : null
+        children: ie,
+        showing: He,
+        globallyUniqueKey: Me,
+        alwaysMountChildren: Ke = !1,
+        doGameplayStartStopOnShow: Ue = !0,
+        keepsMovement: Fe = !1
+      } = ee;
+      return (0, be.e)(!0, He, Me, Fe), (0, ye.c)(Ue, He), He || Ke ? ie : null
     }
   },
-  9391: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9446: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      g: () => be
     });
-    let YB = null;
-    const DB = function(BB) {
-        const OB = {
-          cycle: BB,
+    let ye = null;
+    const be = function(ee) {
+        const ie = {
+          cycle: ee,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return YB = OB, () => {
-          YB === OB && (YB = null)
+        return ye = ie, () => {
+          ye === ie && (ye = null)
         }
       },
-      QB = () => {
-        var BB;
-        return null !== (BB = YB) && void 0 !== BB && BB.canCycle() ? YB.cycle : null
+      Me = () => {
+        var ee;
+        return null !== (ee = ye) && void 0 !== ee && ee.canCycle() ? ye.cycle : null
       }
   },
-  37270: (BB, OB, GB) => {
-    GB.d(OB, {
-      D: () => pB,
-      G: () => RB,
-      e: () => QB,
-      i: () => qB,
-      l: () => ZB,
-      m: () => jB,
-      q: () => zB,
-      u: () => NB,
-      y: () => PB,
-      z: () => WB
+  37427: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      e: () => Te,
+      f: () => pe,
+      h: () => Ue,
+      j: () => ke,
+      l: () => Xe,
+      n: () => Re,
+      p: () => Be,
+      r: () => fe,
+      u: () => ze
     });
-    var YB = GB(16),
-      DB = GB(25);
-    const QB = "clientGameInventoryButtonsChanged",
-      oB = new Map;
+    var ye = He(18),
+      be = He(27);
+    const Me = "clientGameInventoryButtonsChanged",
+      Ke = new Map;
 
-    function jB() {
-      return [...oB.values()].sort(((BB, OB) => {
-        var GB, YB;
-        return (null !== (GB = BB.order) && void 0 !== GB ? GB : 0) - (null !== (YB = OB.order) && void 0 !== YB ? YB : 0)
+    function Ue() {
+      return [...Ke.values()].sort(((ee, ie) => {
+        var He, ye;
+        return (null !== (He = ee.order) && void 0 !== He ? He : 0) - (null !== (ye = ie.order) && void 0 !== ye ? ye : 0)
       }))
     }
-    let yB = null;
+    let Fe = null;
 
-    function JB(BB) {
-      yB = BB
+    function Je(ee) {
+      Fe = ee
     }
-    let MB = !1;
+    let oe = !1;
 
-    function PB(BB) {
-      MB = !0;
+    function Re(ee) {
+      oe = !0;
       try {
-        BB.onClick()
+        ee.onClick()
       } finally {
-        MB = !1
+        oe = !1
       }
-      BB.panel && "clientGame" === YB.c.get("openInGameMenuName") && JB(BB.id)
+      ee.panel && "clientGame" === ye.e.get("openInGameMenuName") && Je(ee.id)
     }
 
-    function zB() {
-      return MB
+    function ke() {
+      return oe
     }
 
-    function lB() {
-      return jB().filter((BB => BB.panel && !BB.disabled))
+    function qe() {
+      return Ue().filter((ee => ee.panel && !ee.disabled))
     }
 
-    function pB(BB) {
-      const OB = lB(),
-        GB = OB.findIndex((BB => BB.id === yB));
-      return !(GB < 0 || OB.length < 2) && (PB(OB[(GB + BB + OB.length) % OB.length]), !0)
+    function fe(ee) {
+      const ie = qe(),
+        He = ie.findIndex((ee => ee.id === Fe));
+      return !(He < 0 || ie.length < 2) && (Re(ie[(He + ee + ie.length) % ie.length]), !0)
     }
 
-    function qB() {
-      return null !== yB && lB().length > 1
+    function Te() {
+      return null !== Fe && qe().length > 1
     }
 
-    function ZB() {
-      JB(null)
+    function pe() {
+      Je(null)
     }
 
-    function NB() {
-      "inventory" !== YB.c.get("openInGameMenuName") && JB(null)
+    function Xe() {
+      "inventory" !== ye.e.get("openInGameMenuName") && Je(null)
     }
 
-    function RB() {
-      const BB = yB;
-      return JB(null), BB
+    function ze() {
+      const ee = Fe;
+      return Je(null), ee
     }
 
-    function WB(BB) {
-      return oB.set(BB.id, BB), DB.o.tM(QB, jB(), !0), () => {
-        oB.get(BB.id) === BB && (oB.delete(BB.id), DB.o.tM(QB, jB()))
+    function Be(ee) {
+      return Ke.set(ee.id, ee), be.h.yR(Me, Ue(), !0), () => {
+        Ke.get(ee.id) === ee && (Ke.delete(ee.id), be.h.yR(Me, Ue()))
       }
     }
   },
-  37267: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      f: () => RB,
-      g: () => ZB,
-      i: () => NB,
-      m: () => zB,
-      n: () => JB,
-      o: () => qB,
-      r: () => lB,
-      s: () => MB
+  37424: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue,
+      d: () => ze,
+      h: () => pe,
+      l: () => Xe,
+      m: () => ke,
+      p: () => Je,
+      s: () => Te,
+      v: () => qe,
+      z: () => oe
     });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(37270);
-    const jB = "clientGameUiChanged";
-    let yB = null;
+    var ye = He(18),
+      be = He(27),
+      Me = He(1246),
+      Ke = He(37427);
+    const Ue = "clientGameUiChanged";
+    let Fe = null;
 
-    function JB() {
-      return yB
+    function Je() {
+      return Fe
     }
 
-    function MB(BB, OB) {
-      const GB = {
-        content: BB,
-        menu: OB
+    function oe(ee, ie) {
+      const He = {
+        content: ee,
+        menu: ie
       };
-      return yB = GB, DB.o.tM(jB, yB, !0), () => {
-        yB === GB && (yB = null, pB = !1, ZB(), DB.o.tM(jB, null))
+      return Fe = He, be.h.yR(Ue, Fe, !0), () => {
+        Fe === He && (Fe = null, fe = !1, pe(), be.h.yR(Ue, null))
       }
     }
-    let PB = null;
+    let Re = null;
 
-    function zB() {
-      return PB
+    function ke() {
+      return Re
     }
 
-    function lB(BB) {
-      return PB = BB, () => {
-        PB === BB && (PB = null)
+    function qe(ee) {
+      return Re = ee, () => {
+        Re === ee && (Re = null)
       }
     }
-    let pB = !1;
+    let fe = !1;
 
-    function qB() {
-      const BB = YB.c.get("openInGameMenuName");
-      "clientGame" !== BB && (pB = "inventory" === BB), (0, oB.q)() || (0, oB.l)(), (0, QB.p)(QB.b), YB.c.set({
+    function Te() {
+      const ee = ye.e.get("openInGameMenuName");
+      "clientGame" !== ee && (fe = "inventory" === ee), (0, Ke.j)() || (0, Ke.f)(), (0, Me.w)(Me.c), ye.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function ZB() {
-      WB(!1)
+    function pe() {
+      Be(!1)
     }
 
-    function NB() {
-      WB(pB)
+    function Xe() {
+      Be(fe)
     }
 
-    function RB() {
-      pB && WB(!1)
+    function ze() {
+      fe && Be(!1)
     }
 
-    function WB(BB) {
-      "clientGame" === YB.c.get("openInGameMenuName") && YB.c.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, oB.l)(), pB = !1
+    function Be(ee) {
+      "clientGame" === ye.e.get("openInGameMenuName") && ye.e.set({
+        openInGameMenuName: ee ? "inventory" : null
+      }), ee || (0, Ke.f)(), fe = !1
     }
   },
-  40220: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => tB
+  40330: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => Qe
     });
-    const YB = {
+    const ye = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -289,270 +289,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var DB = GB(56),
-      QB = GB(38703),
-      oB = GB(353);
-    const jB = ["Basic", "Rare", "Super"];
+    var be = He(59),
+      Me = He(38876),
+      Ke = He(347);
+    const Ue = ["Basic", "Rare", "Super"];
 
-    function yB(BB, OB) {
-      return `${"Basic"===OB?"":`${OB} `}${"Simple"===BB?"":`${BB} `}Lucky Block`
+    function Fe(ee, ie) {
+      return `${"Basic"===ie?"":`${ie} `}${"Simple"===ee?"":`${ee} `}Lucky Block`
     }
-    const JB = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((BB => jB.map((OB => [yB(BB, OB), {
-      category: BB,
-      rarity: OB
+    const Je = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((ee => Ue.map((ie => [Fe(ee, ie), {
+      category: ee,
+      rarity: ie
     }])))));
-    JB.keys();
+    Je.keys();
 
-    function MB(BB) {
-      return JB.get(BB)
+    function oe(ee) {
+      return Je.get(ee)
     }
-    const PB = "Obsidian",
-      zB = ["Cobweb"],
-      lB = [...["Red", "Blue", "Green", "Yellow"].map((BB => `${(0,oB._)(BB)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", PB, ...zB];
+    const Re = "Obsidian",
+      ke = ["Cobweb"],
+      qe = [...["Red", "Blue", "Green", "Yellow"].map((ee => `${(0,Ke.ab)(ee)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Re, ...ke];
 
-    function pB(BB) {
-      return lB.includes(BB)
+    function fe(ee) {
+      return qe.includes(ee)
     }
-    var qB = GB(641);
+    var Te = He(610);
 
-    function ZB(BB, OB) {
-      const GB = MB(BB);
-      if (GB) {
-        const BB = MB(OB);
-        if (!BB) return;
-        const YB = jB.length - 1 - jB.indexOf(BB.rarity);
-        return (BB.category === GB.category ? 0 : 1) * jB.length + YB
+    function pe(ee, ie) {
+      const He = oe(ee);
+      if (He) {
+        const ee = oe(ie);
+        if (!ee) return;
+        const ye = Ue.length - 1 - Ue.indexOf(ee.rarity);
+        return (ee.category === He.category ? 0 : 1) * Ue.length + ye
       }
-      if (!pB(BB)) return;
-      if (OB === BB) return 0;
-      const YB = BB => pB(BB) && !zB.includes(BB) && BB !== PB;
-      return YB(BB) && YB(OB) ? 1 : void 0
+      if (!fe(ee)) return;
+      if (ie === ee) return 0;
+      const ye = ee => fe(ee) && !ke.includes(ee) && ee !== Re;
+      return ye(ee) && ye(ie) ? 1 : void 0
     }
-    const NB = [...Array.from({
-      length: qB.t - qB.r
-    }, ((BB, OB) => qB.r + OB)), ...Array.from({
-      length: qB.r
-    }, ((BB, OB) => OB))];
-    class RB {
-      constructor(BB) {
-        this.inventory = BB, this.pending = new Map
+    const Xe = [...Array.from({
+      length: Te.u - Te.r
+    }, ((ee, ie) => Te.r + ie)), ...Array.from({
+      length: Te.r
+    }, ((ee, ie) => ie))];
+    class ze {
+      constructor(ee) {
+        this.inventory = ee, this.pending = new Map
       }
-      onPlace(BB) {
-        var OB;
-        const GB = this.inventory.selectedSlot(),
-          YB = this.inventory.itemAt(GB);
-        (null === YB || void 0 === YB ? void 0 : YB.name) === BB && (null !== (OB = YB.amount) && void 0 !== OB ? OB : 1) <= 1 && WB(BB) && this.pending.set(GB, BB)
+      onPlace(ee) {
+        var ie;
+        const He = this.inventory.selectedSlot(),
+          ye = this.inventory.itemAt(He);
+        (null === ye || void 0 === ye ? void 0 : ye.name) === ee && (null !== (ie = ye.amount) && void 0 !== ie ? ie : 1) <= 1 && Be(ee) && this.pending.set(He, ee)
       }
-      onDrop(BB, OB) {
-        OB < qB.r && null === this.inventory.itemAt(OB) && WB(BB) && this.refill(OB, BB)
+      onDrop(ee, ie) {
+        ie < Te.r && null === this.inventory.itemAt(ie) && Be(ee) && this.refill(ie, ee)
       }
-      kP() {
-        const BB = [...this.pending];
+      YR() {
+        const ee = [...this.pending];
         this.pending.clear();
-        for (const [OB, GB] of BB) null === this.inventory.itemAt(OB) && this.refill(OB, GB)
+        for (const [ie, He] of ee) null === this.inventory.itemAt(ie) && this.refill(ie, He)
       }
-      refill(BB, OB) {
-        const GB = function(BB, OB, GB, YB) {
-          let DB, QB = 1 / 0;
-          for (const oB of NB) {
-            if (oB === OB) continue;
-            const jB = YB(oB);
-            if (!jB || oB < qB.r && OB !== GB) continue;
-            const yB = ZB(BB, jB.name);
-            void 0 !== yB && yB < QB && (DB = oB, QB = yB)
+      refill(ee, ie) {
+        const He = function(ee, ie, He, ye) {
+          let be, Me = 1 / 0;
+          for (const Ke of Xe) {
+            if (Ke === ie) continue;
+            const Ue = ye(Ke);
+            if (!Ue || Ke < Te.r && ie !== He) continue;
+            const Fe = pe(ee, Ue.name);
+            void 0 !== Fe && Fe < Me && (be = Ke, Me = Fe)
           }
-          return DB
-        }(OB, BB, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== GB && this.inventory.swap(BB, GB)
+          return be
+        }(ie, ee, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== He && this.inventory.swap(ee, He)
       }
     }
 
-    function WB(BB) {
-      return !!MB(BB) || pB(BB)
+    function Be(ee) {
+      return !!oe(ee) || fe(ee)
     }
-    var AB = GB(37267),
-      VB = GB(70),
-      SB = GB(1090),
-      nB = GB.n(SB);
-    const UB = "Lucky Clover",
-      fB = {
+    var Ee = He(37424),
+      ge = He(77),
+      Oe = He(1053),
+      de = He.n(Oe);
+    const We = "Lucky Clover",
+      te = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function kB(BB) {
-      return fB[BB][0]
+    function Ze(ee) {
+      return te[ee][0]
     }
 
-    function dB(BB) {
-      return jB.filter((OB => BB >= kB(OB)))
+    function we(ee) {
+      return Ue.filter((ie => ee >= Ze(ie)))
     }
-    var KB = GB(331),
-      uB = GB(2653),
-      mB = GB(16),
-      IB = GB(2854),
-      FB = GB(2012),
-      iB = GB(37263),
-      LB = GB(1383);
-    var gB = GB(1282);
-    const rB = {
-      Basic: oB.J.whiteUiText,
-      Rare: oB.J.goldUiText,
-      Super: oB.J.cyanUiText
+    var De = He(335),
+      Pe = He(2532),
+      Ae = He(18),
+      Ye = He(2733),
+      Ve = He(1970),
+      ae = He(37420),
+      ce = He(1323);
+    var xe = He(1228);
+    const Le = {
+      Basic: Ke.L.whiteUiText,
+      Rare: Ke.L.goldUiText,
+      Super: Ke.L.cyanUiText
     };
-    let XB = 1;
+    let Ce = 1;
 
-    function wB() {
-      const BB = (0, uB.g)("currencyAmounts"),
-        OB = null === BB || void 0 === BB ? void 0 : BB.Clovers;
-      return !OB || OB.hidden ? null : (0, gB.jsx)(iB.e, {
-        children: (0, gB.jsx)(EB, {
-          amount: OB.amount
+    function ve() {
+      const ee = (0, Pe.i)("currencyAmounts"),
+        ie = null === ee || void 0 === ee ? void 0 : ee.Clovers;
+      return !ie || ie.hidden ? null : (0, xe.jsx)(ae.d, {
+        children: (0, xe.jsx)(ue, {
+          amount: ie.amount
         })
       })
     }
 
-    function EB(BB) {
-      var OB, GB, YB;
+    function ue(ee) {
+      var ie, He, ye;
       let {
-        amount: QB
-      } = BB;
+        amount: Me
+      } = ee;
       const {
-        openEverythingMenuName: yB
-      } = (0, mB.o)(["openEverythingMenuName"]), JB = (0, IB.d)(), [MB, PB] = (0, DB.useState)(QB), [zB, lB] = (0, DB.useState)(null), [pB, qB] = (0, DB.useState)(0), [ZB, NB] = (0, DB.useState)([]), RB = (0, DB.useRef)(QB), WB = (0, DB.useRef)(!1), AB = (0, DB.useRef)(null), SB = yB === KB.p.SHOP;
-      (0, DB.useEffect)((() => {
-        const BB = RB.current;
-        if (RB.current = QB, QB <= BB || SB) return void PB(QB);
-        const OB = JB || ZB.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (GB = QB - BB, YB = !WB.current, GB <= 0 || !YB && GB < 40 ? 0 : Math.min(4, Math.ceil(GB / 30)));
-        var GB, YB;
-        if (WB.current = !0, dB(QB).length > dB(BB).length && qB(XB++), OB > 0) {
-          const BB = [];
-          for (let GB = 0; GB < OB; GB++) BB.push({
-            id: XB++,
+        openEverythingMenuName: Fe
+      } = (0, Ae.m)(["openEverythingMenuName"]), Je = (0, Ye.d)(), [oe, Re] = (0, be.useState)(Me), [ke, qe] = (0, be.useState)(null), [fe, Te] = (0, be.useState)(0), [pe, Xe] = (0, be.useState)([]), ze = (0, be.useRef)(Me), Be = (0, be.useRef)(!1), Ee = (0, be.useRef)(null), Oe = Fe === De.r.SHOP;
+      (0, be.useEffect)((() => {
+        const ee = ze.current;
+        if (ze.current = Me, Me <= ee || Oe) return void Re(Me);
+        const ie = Je || pe.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (He = Me - ee, ye = !Be.current, He <= 0 || !ye && He < 40 ? 0 : Math.min(4, Math.ceil(He / 30)));
+        var He, ye;
+        if (Be.current = !0, we(Me).length > we(ee).length && Te(Ce++), ie > 0) {
+          const ee = [];
+          for (let He = 0; He < ie; He++) ee.push({
+            id: Ce++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * GB
+            delayMs: 70 * He
           });
-          NB((OB => [...OB, ...BB]))
+          Xe((ie => [...ie, ...ee]))
         }
-        const DB = OB > 0 ? 600 : 0;
-        lB({
-          id: XB++,
-          delayMs: DB
+        const be = ie > 0 ? 600 : 0;
+        qe({
+          id: Ce++,
+          delayMs: be
         });
-        const jB = performance.now() + DB;
-        let yB = 0;
-        const MB = OB => {
-          const GB = oB.b.clamp((OB - jB) / 600, 0, 1);
-          PB(Math.round(BB + (QB - BB) * GB)), GB < 1 && (yB = requestAnimationFrame(MB))
+        const Ue = performance.now() + be;
+        let Fe = 0;
+        const oe = ie => {
+          const He = Ke.c.clamp((ie - Ue) / 600, 0, 1);
+          Re(Math.round(ee + (Me - ee) * He)), He < 1 && (Fe = requestAnimationFrame(oe))
         };
-        return yB = requestAnimationFrame(MB), () => {
-          cancelAnimationFrame(yB)
+        return Fe = requestAnimationFrame(oe), () => {
+          cancelAnimationFrame(Fe)
         }
-      }), [QB, SB]);
-      const fB = function(BB) {
-          var OB;
-          const GB = null !== (OB = jB.find((OB => BB < kB(OB)))) && void 0 !== OB ? OB : "Super";
+      }), [Me, Oe]);
+      const te = function(ee) {
+          var ie;
+          const He = null !== (ie = Ue.find((ie => ee < Ze(ie)))) && void 0 !== ie ? ie : "Super";
           return {
-            rarity: GB,
-            progress: oB.b.clamp(BB / kB(GB), 0, 1)
+            rarity: He,
+            progress: Ke.c.clamp(ee / Ze(He), 0, 1)
           }
-        }(MB),
-        uB = dB(MB).at(-1);
-      return (0, gB.jsxs)(gB.Fragment, {
-        children: [(0, gB.jsx)("div", {
+        }(oe),
+        Pe = we(oe).at(-1);
+      return (0, xe.jsxs)(xe.Fragment, {
+        children: [(0, xe.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, gB.jsxs)("div", {
-            className: nB()("LuckyCloverWallet", {
-              Capped: uB && "Basic" !== uB
+          children: (0, xe.jsxs)("div", {
+            className: de()("LuckyCloverWallet", {
+              Capped: Pe && "Basic" !== Pe
             }),
-            style: uB && {
-              "--luckyTierColour": rB[uB]
+            style: Pe && {
+              "--luckyTierColour": Le[Pe]
             },
-            children: [(0, gB.jsx)("div", {
+            children: [(0, xe.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${fB.progress})`
+                transform: `scaleX(${te.progress})`
               }
-            }), pB > 0 && (0, gB.jsx)("div", {
+            }), fe > 0 && (0, xe.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(OB=null===zB||void 0===zB?void 0:zB.delayMs)&&void 0!==OB?OB:0}ms`
+                animationDelay: `${null!==(ie=null===ke||void 0===ke?void 0:ke.delayMs)&&void 0!==ie?ie:0}ms`
               }
-            }, pB), (0, gB.jsx)("div", {
-              ref: AB,
-              className: nB()("LuckyCloverWalletIcon", zB && "Bounce"),
+            }, fe), (0, xe.jsx)("div", {
+              ref: Ee,
+              className: de()("LuckyCloverWalletIcon", ke && "Bounce"),
               style: {
-                animationDelay: `${null!==(YB=null===zB||void 0===zB?void 0:zB.delayMs)&&void 0!==YB?YB:0}ms`
+                animationDelay: `${null!==(ye=null===ke||void 0===ke?void 0:ke.delayMs)&&void 0!==ye?ye:0}ms`
               },
-              children: (0, gB.jsx)(FB.c, {
-                itemName: UB,
+              children: (0, xe.jsx)(Ve.c, {
+                itemName: We,
                 amount: 0
               })
-            }, null !== (GB = null === zB || void 0 === zB ? void 0 : zB.id) && void 0 !== GB ? GB : 0), (0, gB.jsx)("span", {
+            }, null !== (He = null === ke || void 0 === ke ? void 0 : ke.id) && void 0 !== He ? He : 0), (0, xe.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: MB
-            }), uB && (0, gB.jsx)(LB.b, {
+              children: oe
+            }), Pe && (0, xe.jsx)(ce.e, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, VB.createPortal)(ZB.map((BB => (0, gB.jsx)(cB, {
-          flyer: BB,
-          target: AB,
+        }), (0, ge.createPortal)(pe.map((ee => (0, xe.jsx)(me, {
+          flyer: ee,
+          target: Ee,
           onDone: () => {
-            NB((OB => OB.filter((OB => OB.id !== BB.id))))
+            Xe((ie => ie.filter((ie => ie.id !== ee.id))))
           }
-        }, BB.id))), document.body)]
+        }, ee.id))), document.body)]
       })
     }
 
-    function cB(BB) {
+    function me(ee) {
       let {
-        flyer: OB,
-        target: GB,
-        onDone: YB
-      } = BB;
-      const QB = (0, DB.useRef)(null);
-      return (0, DB.useEffect)((() => {
-        var BB;
-        const DB = null === (BB = GB.current) || void 0 === BB ? void 0 : BB.getBoundingClientRect();
-        if (!QB.current || !DB) return void YB();
+        flyer: ie,
+        target: He,
+        onDone: ye
+      } = ee;
+      const Me = (0, be.useRef)(null);
+      return (0, be.useEffect)((() => {
+        var ee;
+        const be = null === (ee = He.current) || void 0 === ee ? void 0 : ee.getBoundingClientRect();
+        if (!Me.current || !be) return void ye();
         const {
-          x: oB,
-          y: jB
-        } = OB, yB = oB + 140 * (Math.random() - .5), JB = jB - 30 - 40 * Math.random(), MB = QB.current.animate([{
-          transform: `translate(${oB}px, ${jB}px) scale(0.3)`,
+          x: Ke,
+          y: Ue
+        } = ie, Fe = Ke + 140 * (Math.random() - .5), Je = Ue - 30 - 40 * Math.random(), oe = Me.current.animate([{
+          transform: `translate(${Ke}px, ${Ue}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${yB}px, ${JB}px) scale(1.3)`,
+          transform: `translate(${Fe}px, ${Je}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${DB.left}px, ${DB.top}px) scale(0.8)`,
+          transform: `translate(${be.left}px, ${be.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: OB.delayMs,
+          delay: ie.delayMs,
           fill: "backwards"
         });
-        return MB.onfinish = YB, () => {
-          MB.cancel()
+        return oe.onfinish = ye, () => {
+          oe.cancel()
         }
-      }), []), (0, gB.jsx)("div", {
-        ref: QB,
+      }), []), (0, xe.jsx)("div", {
+        ref: Me,
         className: "LuckyCloverFlying",
-        children: (0, gB.jsx)(FB.c, {
-          itemName: UB,
+        children: (0, xe.jsx)(Ve.c, {
+          itemName: We,
           amount: 0
         })
       })
     }
-    var hB = GB(25);
-    const aB = "luckyGearUpgradeView",
-      eB = {
+    var le = He(27);
+    const Se = "luckyGearUpgradeView",
+      ne = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -560,13 +560,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function TB(BB) {
-      var OB;
-      return null !== (OB = eB[BB.split(" ")[0]]) && void 0 !== OB ? OB : "#e07bff"
+    function je(ee) {
+      var ie;
+      return null !== (ie = ne[ee.split(" ")[0]]) && void 0 !== ie ? ie : "#e07bff"
     }
-    class bB {
-      constructor(BB, OB) {
-        this.selectedSlot = BB, this.itemAt = OB, this.rings = [], this.unseen = new Map, this.view = {
+    class se {
+      constructor(ee, ie) {
+        this.selectedSlot = ee, this.itemAt = ie, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -574,200 +574,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      nP(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [GB, YB, DB] of BB) this.rings.push({
+      DR(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [He, ye, be] of ee) this.rings.push({
           id: this.nextId++,
-          slot: GB,
-          colour: TB(DB),
-          until: OB + 1200
-        }), GB !== this.selectedSlot() && this.unseen.set(GB, {
-          from: YB,
-          to: DB
+          slot: He,
+          colour: je(be),
+          until: ie + 1200
+        }), He !== this.selectedSlot() && this.unseen.set(He, {
+          from: ye,
+          to: be
         });
-        this.tM()
+        this.yR()
       }
-      kP() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      YR() {
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const OB = this.rings.filter((OB => OB.until > BB));
-        let GB = OB.length !== this.rings.length;
-        this.rings = OB;
-        for (const [YB, {
-            from: DB,
-            to: QB
+        const ie = this.rings.filter((ie => ie.until > ee));
+        let He = ie.length !== this.rings.length;
+        this.rings = ie;
+        for (const [ye, {
+            from: be,
+            to: Me
           }] of this.unseen) {
-          const BB = this.itemAt(YB);
-          (YB === this.selectedSlot() || BB !== QB && BB !== DB) && (this.unseen.delete(YB), GB = !0)
+          const ee = this.itemAt(ye);
+          (ye === this.selectedSlot() || ee !== Me && ee !== be) && (this.unseen.delete(ye), He = !0)
         }
-        GB && this.tM()
+        He && this.yR()
       }
-      tM() {
+      yR() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, hB.o.tM(aB, this.view)
+        }, le.h.yR(Se, this.view)
       }
     }
-    var CB = GB(1480);
+    var Ie = He(1432);
 
-    function HB(BB) {
-      return document.querySelector(`.HotBar [data-inven-idx="${BB}"]`)
+    function he(ee) {
+      return document.querySelector(`.HotBar [data-inven-idx="${ee}"]`)
     }
 
-    function vB(BB) {
+    function Ne(ee) {
       let {
-        ring: OB
-      } = BB;
-      const [GB, YB] = (0, DB.useState)(null);
-      return (0, DB.useLayoutEffect)((() => {
-        var BB, GB;
-        YB(null !== (BB = null === (GB = HB(OB.slot)) || void 0 === GB ? void 0 : GB.getBoundingClientRect()) && void 0 !== BB ? BB : null)
-      }), [OB]), GB ? (0, gB.jsx)("div", {
+        ring: ie
+      } = ee;
+      const [He, ye] = (0, be.useState)(null);
+      return (0, be.useLayoutEffect)((() => {
+        var ee, He;
+        ye(null !== (ee = null === (He = he(ie.slot)) || void 0 === He ? void 0 : He.getBoundingClientRect()) && void 0 !== ee ? ee : null)
+      }), [ie]), He ? (0, xe.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: GB.left,
-          top: GB.top,
-          width: GB.width,
-          height: GB.height,
-          "--ringColour": OB.colour,
+          left: He.left,
+          top: He.top,
+          width: He.width,
+          height: He.height,
+          "--ringColour": ie.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function sB(BB) {
+    function Ge(ee) {
       let {
-        slot: OB
-      } = BB;
-      const [GB, YB] = (0, DB.useState)(null);
-      return (0, DB.useLayoutEffect)((() => {
-        const BB = () => {
-          YB(HB(OB))
+        slot: ie
+      } = ee;
+      const [He, ye] = (0, be.useState)(null);
+      return (0, be.useLayoutEffect)((() => {
+        const ee = () => {
+          ye(he(ie))
         };
-        BB();
-        const GB = new MutationObserver(BB),
-          DB = document.querySelector(".BottomMiddleElements");
-        return DB && GB.observe(DB, {
+        ee();
+        const He = new MutationObserver(ee),
+          be = document.querySelector(".BottomMiddleElements");
+        return be && He.observe(be, {
           childList: !0,
           subtree: !0
         }), () => {
-          GB.disconnect()
+          He.disconnect()
         }
-      }), [OB]), GB ? (0, VB.createPortal)((0, gB.jsx)("div", {
+      }), [ie]), He ? (0, ge.createPortal)((0, xe.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), GB) : null
+      }), He) : null
     }
 
-    function xB(BB) {
+    function re(ee) {
       let {
-        controller: OB
-      } = BB;
-      const GB = (0, CB.i)(aB, OB.getView());
-      return (0, gB.jsxs)(gB.Fragment, {
-        children: [GB.rings.map((BB => (0, gB.jsx)(vB, {
-          ring: BB
-        }, BB.id))), GB.unseenSlots.map((BB => (0, gB.jsx)(sB, {
-          slot: BB
-        }, BB)))]
+        controller: ie
+      } = ee;
+      const He = (0, Ie.j)(Se, ie.getView());
+      return (0, xe.jsxs)(xe.Fragment, {
+        children: [He.rings.map((ee => (0, xe.jsx)(Ne, {
+          ring: ee
+        }, ee.id))), He.unseenSlots.map((ee => (0, xe.jsx)(Ge, {
+          slot: ee
+        }, ee)))]
       })
     }
-    const tB = function(BB, OB, GB, oB) {
-      let jB, {
-          localPlayerId: yB
-        } = oB,
-        JB = null;
-      const MB = new RB({
-          itemAt: BB => jB.getItemSlot(yB, BB),
-          selectedSlot: () => jB.getSelectedInventorySlotI(yB),
-          swap: (BB, OB) => {
-            jB.swapInventorySlots(BB, OB)
+    const Qe = function(ee, ie, He, Ke) {
+      let Ue, {
+          localPlayerId: Fe
+        } = Ke,
+        Je = null;
+      const oe = new ze({
+          itemAt: ee => Ue.getItemSlot(Fe, ee),
+          selectedSlot: () => Ue.getSelectedInventorySlotI(Fe),
+          swap: (ee, ie) => {
+            Ue.swapInventorySlots(ee, ie)
           }
         }),
-        PB = new bB((() => jB.getSelectedInventorySlotI(yB)), (BB => {
-          var OB;
-          return null === (OB = jB.getItemSlot(yB, BB)) || void 0 === OB ? void 0 : OB.name
+        Re = new se((() => Ue.getSelectedInventorySlotI(Fe)), (ee => {
+          var ie;
+          return null === (ie = Ue.getItemSlot(Fe, ee)) || void 0 === ie ? void 0 : ie.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, QB.e)()
+          placeAgainstBeds: (0, Me.e)()
         },
-        onCreate: BB => {
-          jB = BB, JB = (0, AB.s)((0, DB.createElement)(DB.Fragment, null, (0, DB.createElement)(wB), (0, DB.createElement)(xB, {
-            controller: PB
+        onCreate: ee => {
+          Ue = ee, Je = (0, Ee.z)((0, be.createElement)(be.Fragment, null, (0, be.createElement)(ve), (0, be.createElement)(re, {
+            controller: Re
           })))
         },
         onClose: () => {
-          var BB;
-          null === (BB = JB) || void 0 === BB || BB()
+          var ee;
+          null === (ee = Je) || void 0 === ee || ee()
         },
-        kP: () => {
-          MB.kP(), PB.kP()
+        YR: () => {
+          oe.YR(), Re.YR()
         },
-        onReceivedMessageFromServer: (BB, OB) => {
-          "luckyGearUpgrade" === BB && PB.nP(OB)
+        onReceivedMessageFromServer: (ee, ie) => {
+          "luckyGearUpgrade" === ee && Re.DR(ie)
         },
-        onPlayerChangeBlock: (BB, OB, GB, YB, DB, QB) => {
-          "Air" !== QB && MB.onPlace(QB)
+        onPlayerChangeBlock: (ee, ie, He, ye, be, Me) => {
+          "Air" !== Me && oe.onPlace(Me)
         },
-        onPlayerDropItem: (BB, OB, GB, YB) => {
-          MB.onDrop(OB, YB)
+        onPlayerDropItem: (ee, ie, He, ye) => {
+          oe.onDrop(ie, ye)
         },
-        onPlayerAltAction: (BB, OB, GB, DB, QB, oB) => {
-          if (!oB || "Mesh" !== jB.getEntityType(oB)) return;
-          const yB = jB.getEntityName(oB),
-            JB = Object.values(YB).find((BB => BB.name === yB));
-          JB && jB.openShop(BB, !1, JB.shopTab)
+        onPlayerAltAction: (ee, ie, He, be, Me, Ke) => {
+          if (!Ke || "Mesh" !== Ue.getEntityType(Ke)) return;
+          const Fe = Ue.getEntityName(Ke),
+            Je = Object.values(ye).find((ee => ee.name === Fe));
+          Je && Ue.openShop(ee, !1, Je.shopTab)
         }
       }
     }
   },
-  38703: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB
+  38876: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Ue
     });
-    var YB = GB(353),
-      DB = GB(37633),
-      QB = GB(4896);
-    const oB = ["Leaf Bed", "_Leaf Bed Head", ...YB.Vc.flatMap((BB => [`${BB} Bed`, `_${BB} Bed Head`, `${BB} Strongbed`, `_${BB} Strongbed Head`]))];
+    var ye = He(347),
+      be = He(37770),
+      Me = He(4870);
+    const Ke = ["Leaf Bed", "_Leaf Bed Head", ...ye.Lc.flatMap((ee => [`${ee} Bed`, `_${ee} Bed Head`, `${ee} Strongbed`, `_${ee} Strongbed Head`]))];
 
-    function jB() {
-      let BB;
+    function Ue() {
+      let ee;
       return {
-        onCreate(OB) {
-          BB = OB
+        onCreate(ie) {
+          ee = ie
         },
-        altVetoBlocks: oB,
-        onPlayerAttemptAltAction(OB, GB, YB, oB, jB, yB) {
-          var JB;
-          if ((0, DB.b)(BB.getMetaInfo(jB).rootName) && !BB.isEntityInteractable(yB) && (0, QB.h)(null === (JB = BB.MYB(OB)) || void 0 === JB ? void 0 : JB.typeObj.type)) return "preventAction"
+        altVetoBlocks: Ke,
+        onPlayerAttemptAltAction(ie, He, ye, Ke, Ue, Fe) {
+          var Je;
+          if ((0, be.e)(ee.getMetaInfo(Ue).rootName) && !ee.isEntityInteractable(Fe) && (0, Me.e)(null === (Je = ee.Vye(ie)) || void 0 === Je ? void 0 : Je.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37633: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.includes("Leaf Bed")
+  37770: (ee, ie, He) => {
+    function ye(ee) {
+      return ee.includes("Leaf Bed")
     }
 
-    function DB(BB) {
-      return / Bed(?: Head)?(?:\||$)/.test(BB) && !YB(BB)
+    function be(ee) {
+      return / Bed(?: Head)?(?:\||$)/.test(ee) && !ye(ee)
     }
 
-    function QB(BB) {
-      return BB.includes(" Strongbed")
+    function Me(ee) {
+      return ee.includes(" Strongbed")
     }
 
-    function oB(BB) {
-      return YB(BB) || DB(BB) || QB(BB)
+    function Ke(ee) {
+      return ye(ee) || be(ee) || Me(ee)
     }
-    GB.d(OB, {
-      b: () => oB,
-      d: () => YB,
-      f: () => QB,
-      i: () => DB
+    He.d(ie, {
+      e: () => Ke,
+      i: () => ye,
+      k: () => Me,
+      m: () => be
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

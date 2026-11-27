@@ -1,590 +1,590 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  37572: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => UB,
-      f: () => SB,
-      j: () => nB,
-      m: () => pB
+  37708: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => We,
+      d: () => Oe,
+      h: () => de,
+      i: () => fe
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(56),
-      oB = GB(70),
-      jB = GB(1408),
-      yB = GB(1485),
-      JB = GB(1405),
-      MB = GB(1268),
-      PB = GB(1175),
-      zB = GB(37576),
-      lB = GB(1282);
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(59),
+      Ke = He(77),
+      Ue = He(1359),
+      Fe = He(1438),
+      Je = He(1351),
+      oe = He(1215),
+      Re = He(1127),
+      ke = He(37716),
+      qe = He(1228);
 
-    function pB(BB) {
-      const [OB, GB] = (0, QB.useState)((() => (0, zB.n)(BB)));
-      return (0, QB.useEffect)((() => (GB((0, zB.n)(BB)), (0, zB.K)((() => {
-        GB((0, zB.n)(BB))
-      })))), [BB]), OB
+    function fe(ee) {
+      const [ie, He] = (0, Me.useState)((() => (0, ke.n)(ee)));
+      return (0, Me.useEffect)((() => (He((0, ke.n)(ee)), (0, ke.N)((() => {
+        He((0, ke.n)(ee))
+      })))), [ee]), ie
     }
 
-    function qB(BB, OB) {
-      "function" === typeof BB ? BB(OB) : BB && (BB.current = OB)
+    function Te(ee, ie) {
+      "function" === typeof ee ? ee(ie) : ee && (ee.current = ie)
     }
 
-    function ZB(BB) {
+    function pe(ee) {
       let {
-        tutorial: OB,
-        step: GB,
-        enabled: YB = !0
-      } = BB;
-      const DB = pB(OB);
-      return YB && DB === GB
+        tutorial: ie,
+        step: He,
+        enabled: ye = !0
+      } = ee;
+      const be = fe(ie);
+      return ye && be === He
     }
 
-    function NB(BB, OB) {
-      const GB = (0, zB.o)(BB),
-        YB = GB.indexOf(OB);
-      return !GB.slice(YB + 1).some((OB => (0, zB.y)(BB, OB)))
+    function Xe(ee, ie) {
+      const He = (0, ke.q)(ee),
+        ye = He.indexOf(ie);
+      return !He.slice(ye + 1).some((ie => (0, ke.A)(ee, ie)))
     }
 
-    function RB(BB, OB, GB, YB) {
+    function ze(ee, ie, He, ye) {
       let {
-        tutorial: DB,
-        step: QB,
-        waitForClick: oB = !1,
-        onPrevious: jB
-      } = BB;
-      const yB = OB && (0, zB.v)(DB, QB),
-        JB = OB && !NB(DB, QB),
-        PB = oB ? YB : GB;
-      let lB = null;
-      yB ? lB = () => {
-        null === jB || void 0 === jB || jB(), (0, zB.s)(DB, QB)
-      } : JB && (lB = () => {
-        (0, zB.m)(DB)
-      }), (0, MB.v)("popup", null !== PB && void 0 !== PB ? PB : GB, lB, OB && null !== PB, null, yB ? void 0 : "controller:menusSkipTutorial")
+        tutorial: be,
+        step: Me,
+        waitForClick: Ke = !1,
+        onPrevious: Ue
+      } = ee;
+      const Fe = ie && (0, ke.y)(be, Me),
+        Je = ie && !Xe(be, Me),
+        Re = Ke ? ye : He;
+      let qe = null;
+      Fe ? qe = () => {
+        null === Ue || void 0 === Ue || Ue(), (0, ke.u)(be, Me)
+      } : Je && (qe = () => {
+        (0, ke.l)(be)
+      }), (0, oe.t)("popup", null !== Re && void 0 !== Re ? Re : He, qe, ie && null !== Re, null, Fe ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function WB(BB) {
+    function Be(ee) {
       let {
-        tutorial: OB,
-        step: GB,
-        text: YB,
-        waitForClick: DB = !1,
-        onPrevious: QB
-      } = BB;
+        tutorial: ie,
+        step: He,
+        text: ye,
+        waitForClick: be = !1,
+        onPrevious: Me
+      } = ee;
       const {
-        t: oB
-      } = (0, PB.H)(), jB = NB(OB, GB);
-      return (0, lB.jsxs)(lB.Fragment, {
-        children: [(0, lB.jsx)("div", {
+        t: Ke
+      } = (0, Re.v)(), Ue = Xe(ie, He);
+      return (0, qe.jsxs)(qe.Fragment, {
+        children: [(0, qe.jsx)("div", {
           className: "TutorialStepText",
-          children: YB
-        }), (0, lB.jsxs)("div", {
+          children: ye
+        }), (0, qe.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, zB.v)(OB, GB) && (0, lB.jsx)(yB.j, {
+          children: [(0, ke.y)(ie, He) && (0, qe.jsx)(Fe.e, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === QB || void 0 === QB || QB(), (0, zB.s)(OB, GB)
+              null === Me || void 0 === Me || Me(), (0, ke.u)(ie, He)
             },
-            children: oB("tutorial:back")
-          }), !DB && (0, lB.jsx)(yB.f, {
+            children: Ke("tutorial:back")
+          }), !be && (0, qe.jsx)(Fe.c, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, zB.h)(GB)
+              (0, ke.f)(He)
             },
             padDefaultFocus: !0,
-            children: oB(jB ? "tutorial:done" : "tutorial:next")
-          }), !jB && (0, lB.jsx)(yB.j, {
+            children: Ke(Ue ? "tutorial:done" : "tutorial:next")
+          }), !Ue && (0, qe.jsx)(Fe.e, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, zB.m)(OB)
+              (0, ke.l)(ie)
             },
-            children: oB("tutorial:skip")
+            children: Ke("tutorial:skip")
           })]
         })]
       })
     }
-    const AB = 6;
+    const Ee = 6;
 
-    function VB(BB) {
+    function ge(ee) {
       let {
-        rect: OB,
-        margin: GB
-      } = BB;
-      const YB = Math.max(0, OB.top - GB),
-        DB = OB.bottom + GB,
-        QB = Math.max(0, OB.left - GB),
-        oB = OB.right + GB;
-      return (0, lB.jsxs)(lB.Fragment, {
-        children: [(0, lB.jsx)("div", {
+        rect: ie,
+        margin: He
+      } = ee;
+      const ye = Math.max(0, ie.top - He),
+        be = ie.bottom + He,
+        Me = Math.max(0, ie.left - He),
+        Ke = ie.right + He;
+      return (0, qe.jsxs)(qe.Fragment, {
+        children: [(0, qe.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: YB
+            height: ye
           }
-        }), (0, lB.jsx)("div", {
+        }), (0, qe.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: DB,
+            top: be,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, lB.jsx)("div", {
+        }), (0, qe.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: YB,
+            top: ye,
             left: 0,
-            width: QB,
-            height: DB - YB
+            width: Me,
+            height: be - ye
           }
-        }), (0, lB.jsx)("div", {
+        }), (0, qe.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: YB,
-            left: oB,
+            top: ye,
+            left: Ke,
             right: 0,
-            height: DB - YB
+            height: be - ye
           }
         })]
       })
     }
 
-    function SB(BB) {
+    function Oe(ee) {
       let {
-        target: OB,
-        placement: GB,
-        boxRef: YB,
-        className: yB,
-        spotlight: MB = !0,
-        spotlightMargin: PB = AB,
-        children: zB
-      } = BB;
+        target: ie,
+        placement: He,
+        boxRef: ye,
+        className: Fe,
+        spotlight: oe = !0,
+        spotlightMargin: Re = Ee,
+        children: ke
+      } = ee;
       const {
-        getArrowProps: pB,
-        getTooltipProps: qB,
-        setTooltipRef: ZB,
-        setTriggerRef: NB,
-        update: RB
-      } = (0, jB.d)({
-        placement: GB,
+        getArrowProps: fe,
+        getTooltipProps: Te,
+        setTooltipRef: pe,
+        setTriggerRef: Xe,
+        update: ze
+      } = (0, Ue.c)({
+        placement: He,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, PB]
+        offset: [0, Re]
       });
-      (0, QB.useLayoutEffect)((() => {
-        NB(OB)
-      }), [OB, NB]);
-      const WB = function(BB, OB) {
-        const [GB, YB] = (0, QB.useState)(null);
-        return (0, QB.useEffect)((() => {
-          if (!OB || !BB) return void YB(null);
-          let GB = 0,
-            DB = null;
-          const QB = () => {
-            const OB = BB.getBoundingClientRect();
-            DB && OB.left === DB.left && OB.top === DB.top && OB.width === DB.width && OB.height === DB.height || (DB = OB, YB(OB)), GB = requestAnimationFrame(QB)
+      (0, Me.useLayoutEffect)((() => {
+        Xe(ie)
+      }), [ie, Xe]);
+      const Be = function(ee, ie) {
+        const [He, ye] = (0, Me.useState)(null);
+        return (0, Me.useEffect)((() => {
+          if (!ie || !ee) return void ye(null);
+          let He = 0,
+            be = null;
+          const Me = () => {
+            const ie = ee.getBoundingClientRect();
+            be && ie.left === be.left && ie.top === be.top && ie.width === be.width && ie.height === be.height || (be = ie, ye(ie)), He = requestAnimationFrame(Me)
           };
-          return QB(), () => {
-            cancelAnimationFrame(GB)
+          return Me(), () => {
+            cancelAnimationFrame(He)
           }
-        }), [BB, OB]), GB
-      }(OB, MB);
-      (0, QB.useEffect)((() => {
-        null === RB || void 0 === RB || RB()
-      }), [WB, RB]), (0, QB.useEffect)((() => {
-        if (MB || !OB || !RB) return;
-        const BB = new ResizeObserver((() => {
-          RB()
+        }), [ee, ie]), He
+      }(ie, oe);
+      (0, Me.useEffect)((() => {
+        null === ze || void 0 === ze || ze()
+      }), [Be, ze]), (0, Me.useEffect)((() => {
+        if (oe || !ie || !ze) return;
+        const ee = new ResizeObserver((() => {
+          ze()
         }));
-        return BB.observe(OB), OB.parentElement && BB.observe(OB.parentElement), () => {
-          BB.disconnect()
+        return ee.observe(ie), ie.parentElement && ee.observe(ie.parentElement), () => {
+          ee.disconnect()
         }
-      }), [OB, MB, RB]), (0, QB.useEffect)((() => {
-        MB && (null === OB || void 0 === OB || OB.scrollIntoView({
+      }), [ie, oe, ze]), (0, Me.useEffect)((() => {
+        oe && (null === ie || void 0 === ie || ie.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         }))
-      }), [OB, MB]);
-      const SB = (0, QB.useCallback)((BB => {
-        ZB(BB), YB && (YB.current = BB)
-      }), [ZB, YB]);
-      return (0, oB.createPortal)((0, lB.jsxs)(lB.Fragment, {
-        children: [WB && (0, lB.jsx)(VB, {
-          rect: WB,
-          margin: PB
-        }), (0, lB.jsxs)("div", {
-          ref: SB,
-          ...qB({
-            className: DB()("tooltip-container SmallTextLight TutorialStep", yB)
+      }), [ie, oe]);
+      const Oe = (0, Me.useCallback)((ee => {
+        pe(ee), ye && (ye.current = ee)
+      }), [pe, ye]);
+      return (0, Ke.createPortal)((0, qe.jsxs)(qe.Fragment, {
+        children: [Be && (0, qe.jsx)(ge, {
+          rect: Be,
+          margin: Re
+        }), (0, qe.jsxs)("div", {
+          ref: Oe,
+          ...Te({
+            className: be()("tooltip-container SmallTextLight TutorialStep", Fe)
           }),
-          children: [zB, (0, lB.jsx)("div", {
-            ...pB({
+          children: [ke, (0, qe.jsx)("div", {
+            ...fe({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, JB.i)())
+      }), (0, Je.k)())
     }
-    const nB = (0, QB.forwardRef)((function(BB, OB) {
+    const de = (0, Me.forwardRef)((function(ee, ie) {
       let {
-        placement: GB = "right",
-        children: YB,
-        ...DB
-      } = BB;
-      const oB = ZB(DB),
-        jB = (0, QB.useRef)(null),
-        yB = (0, QB.useRef)(null);
-      RB(DB, oB, jB, yB);
-      const [JB, MB] = (0, QB.useState)(null), PB = YB.ref, zB = (0, QB.useCallback)((BB => {
-        yB.current = BB, MB(BB), qB(OB, BB), qB(PB, BB)
-      }), [OB, PB]);
-      return (0, lB.jsxs)(lB.Fragment, {
-        children: [(0, QB.cloneElement)(YB, {
-          ref: zB
-        }), oB && (0, lB.jsx)(SB, {
-          target: JB,
-          placement: GB,
-          boxRef: jB,
-          children: (0, lB.jsx)(WB, {
-            ...DB
+        placement: He = "right",
+        children: ye,
+        ...be
+      } = ee;
+      const Ke = pe(be),
+        Ue = (0, Me.useRef)(null),
+        Fe = (0, Me.useRef)(null);
+      ze(be, Ke, Ue, Fe);
+      const [Je, oe] = (0, Me.useState)(null), Re = ye.ref, ke = (0, Me.useCallback)((ee => {
+        Fe.current = ee, oe(ee), Te(ie, ee), Te(Re, ee)
+      }), [ie, Re]);
+      return (0, qe.jsxs)(qe.Fragment, {
+        children: [(0, Me.cloneElement)(ye, {
+          ref: ke
+        }), Ke && (0, qe.jsx)(Oe, {
+          target: Je,
+          placement: He,
+          boxRef: Ue,
+          children: (0, qe.jsx)(Be, {
+            ...be
           })
         })]
       })
     }));
 
-    function UB(BB) {
-      const OB = ZB(BB),
-        GB = (0, QB.useRef)(null);
-      return RB(BB, OB, GB, null), OB ? (0, oB.createPortal)((0, lB.jsx)("div", {
+    function We(ee) {
+      const ie = pe(ee),
+        He = (0, Me.useRef)(null);
+      return ze(ee, ie, He, null), ie ? (0, Ke.createPortal)((0, qe.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, lB.jsx)("div", {
-          ref: GB,
+        children: (0, qe.jsx)("div", {
+          ref: He,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, lB.jsx)(WB, {
-            ...BB
+          children: (0, qe.jsx)(Be, {
+            ...ee
           })
         })
-      }), (0, JB.i)()) : null
+      }), (0, Je.k)()) : null
     }
   },
-  37270: (BB, OB, GB) => {
-    GB.d(OB, {
-      D: () => pB,
-      G: () => RB,
-      e: () => QB,
-      i: () => qB,
-      l: () => ZB,
-      m: () => jB,
-      q: () => zB,
-      u: () => NB,
-      y: () => PB,
-      z: () => WB
+  37427: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      e: () => Te,
+      f: () => pe,
+      h: () => Ue,
+      j: () => ke,
+      l: () => Xe,
+      n: () => Re,
+      p: () => Be,
+      r: () => fe,
+      u: () => ze
     });
-    var YB = GB(16),
-      DB = GB(25);
-    const QB = "clientGameInventoryButtonsChanged",
-      oB = new Map;
+    var ye = He(18),
+      be = He(27);
+    const Me = "clientGameInventoryButtonsChanged",
+      Ke = new Map;
 
-    function jB() {
-      return [...oB.values()].sort(((BB, OB) => {
-        var GB, YB;
-        return (null !== (GB = BB.order) && void 0 !== GB ? GB : 0) - (null !== (YB = OB.order) && void 0 !== YB ? YB : 0)
+    function Ue() {
+      return [...Ke.values()].sort(((ee, ie) => {
+        var He, ye;
+        return (null !== (He = ee.order) && void 0 !== He ? He : 0) - (null !== (ye = ie.order) && void 0 !== ye ? ye : 0)
       }))
     }
-    let yB = null;
+    let Fe = null;
 
-    function JB(BB) {
-      yB = BB
+    function Je(ee) {
+      Fe = ee
     }
-    let MB = !1;
+    let oe = !1;
 
-    function PB(BB) {
-      MB = !0;
+    function Re(ee) {
+      oe = !0;
       try {
-        BB.onClick()
+        ee.onClick()
       } finally {
-        MB = !1
+        oe = !1
       }
-      BB.panel && "clientGame" === YB.c.get("openInGameMenuName") && JB(BB.id)
+      ee.panel && "clientGame" === ye.e.get("openInGameMenuName") && Je(ee.id)
     }
 
-    function zB() {
-      return MB
+    function ke() {
+      return oe
     }
 
-    function lB() {
-      return jB().filter((BB => BB.panel && !BB.disabled))
+    function qe() {
+      return Ue().filter((ee => ee.panel && !ee.disabled))
     }
 
-    function pB(BB) {
-      const OB = lB(),
-        GB = OB.findIndex((BB => BB.id === yB));
-      return !(GB < 0 || OB.length < 2) && (PB(OB[(GB + BB + OB.length) % OB.length]), !0)
+    function fe(ee) {
+      const ie = qe(),
+        He = ie.findIndex((ee => ee.id === Fe));
+      return !(He < 0 || ie.length < 2) && (Re(ie[(He + ee + ie.length) % ie.length]), !0)
     }
 
-    function qB() {
-      return null !== yB && lB().length > 1
+    function Te() {
+      return null !== Fe && qe().length > 1
     }
 
-    function ZB() {
-      JB(null)
+    function pe() {
+      Je(null)
     }
 
-    function NB() {
-      "inventory" !== YB.c.get("openInGameMenuName") && JB(null)
+    function Xe() {
+      "inventory" !== ye.e.get("openInGameMenuName") && Je(null)
     }
 
-    function RB() {
-      const BB = yB;
-      return JB(null), BB
+    function ze() {
+      const ee = Fe;
+      return Je(null), ee
     }
 
-    function WB(BB) {
-      return oB.set(BB.id, BB), DB.o.tM(QB, jB(), !0), () => {
-        oB.get(BB.id) === BB && (oB.delete(BB.id), DB.o.tM(QB, jB()))
+    function Be(ee) {
+      return Ke.set(ee.id, ee), be.h.yR(Me, Ue(), !0), () => {
+        Ke.get(ee.id) === ee && (Ke.delete(ee.id), be.h.yR(Me, Ue()))
       }
     }
   },
-  37267: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB,
-      f: () => RB,
-      g: () => ZB,
-      i: () => NB,
-      m: () => zB,
-      n: () => JB,
-      o: () => qB,
-      r: () => lB,
-      s: () => MB
+  37424: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue,
+      d: () => ze,
+      h: () => pe,
+      l: () => Xe,
+      m: () => ke,
+      p: () => Je,
+      s: () => Te,
+      v: () => qe,
+      z: () => oe
     });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(1293),
-      oB = GB(37270);
-    const jB = "clientGameUiChanged";
-    let yB = null;
+    var ye = He(18),
+      be = He(27),
+      Me = He(1246),
+      Ke = He(37427);
+    const Ue = "clientGameUiChanged";
+    let Fe = null;
 
-    function JB() {
-      return yB
+    function Je() {
+      return Fe
     }
 
-    function MB(BB, OB) {
-      const GB = {
-        content: BB,
-        menu: OB
+    function oe(ee, ie) {
+      const He = {
+        content: ee,
+        menu: ie
       };
-      return yB = GB, DB.o.tM(jB, yB, !0), () => {
-        yB === GB && (yB = null, pB = !1, ZB(), DB.o.tM(jB, null))
+      return Fe = He, be.h.yR(Ue, Fe, !0), () => {
+        Fe === He && (Fe = null, fe = !1, pe(), be.h.yR(Ue, null))
       }
     }
-    let PB = null;
+    let Re = null;
 
-    function zB() {
-      return PB
+    function ke() {
+      return Re
     }
 
-    function lB(BB) {
-      return PB = BB, () => {
-        PB === BB && (PB = null)
+    function qe(ee) {
+      return Re = ee, () => {
+        Re === ee && (Re = null)
       }
     }
-    let pB = !1;
+    let fe = !1;
 
-    function qB() {
-      const BB = YB.c.get("openInGameMenuName");
-      "clientGame" !== BB && (pB = "inventory" === BB), (0, oB.q)() || (0, oB.l)(), (0, QB.p)(QB.b), YB.c.set({
+    function Te() {
+      const ee = ye.e.get("openInGameMenuName");
+      "clientGame" !== ee && (fe = "inventory" === ee), (0, Ke.j)() || (0, Ke.f)(), (0, Me.w)(Me.c), ye.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function ZB() {
-      WB(!1)
+    function pe() {
+      Be(!1)
     }
 
-    function NB() {
-      WB(pB)
+    function Xe() {
+      Be(fe)
     }
 
-    function RB() {
-      pB && WB(!1)
+    function ze() {
+      fe && Be(!1)
     }
 
-    function WB(BB) {
-      "clientGame" === YB.c.get("openInGameMenuName") && YB.c.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, oB.l)(), pB = !1
+    function Be(ee) {
+      "clientGame" === ye.e.get("openInGameMenuName") && ye.e.set({
+        openInGameMenuName: ee ? "inventory" : null
+      }), ee || (0, Ke.f)(), fe = !1
     }
   },
-  37576: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => gB,
-      D: () => rB,
-      G: () => iB,
-      K: () => XB,
-      d: () => yB,
-      h: () => KB,
-      j: () => jB,
-      m: () => FB,
-      n: () => kB,
-      o: () => SB,
-      s: () => IB,
-      v: () => mB,
-      y: () => fB,
-      z: () => LB
+  37716: (ee, ie, He) => {
+    He.d(ie, {
+      A: () => te,
+      D: () => ce,
+      G: () => xe,
+      J: () => Le,
+      K: () => ae,
+      N: () => Ce,
+      e: () => Fe,
+      f: () => De,
+      i: () => Ue,
+      l: () => Ve,
+      n: () => Ze,
+      q: () => Oe,
+      u: () => Ye,
+      y: () => Ae
     });
-    var YB = GB(31);
-    const DB = {
+    var ye = He(35);
+    const be = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      QB = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      oB = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      jB = QB.filter((BB => "docsButton" !== BB)),
-      yB = oB.filter((BB => "aiHelperButton" !== BB)),
-      JB = "codeEditorTutorials",
-      MB = {
+      Me = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      Ke = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      Ue = Me.filter((ee => "docsButton" !== ee)),
+      Fe = Ke.filter((ee => "aiHelperButton" !== ee)),
+      Je = "codeEditorTutorials",
+      oe = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      PB = {
+      Re = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let zB = null,
-      lB = null;
-    const pB = new Set,
-      qB = new Set;
-    let ZB = null;
-    const NB = new Set,
-      RB = new Set;
+    let ke = null,
+      qe = null;
+    const fe = new Set,
+      Te = new Set;
+    let pe = null;
+    const Xe = new Set,
+      ze = new Set;
 
-    function WB() {
-      RB.forEach((BB => {
-        BB()
+    function Be() {
+      ze.forEach((ee => {
+        ee()
       }))
     }
 
-    function AB() {
-      if (!zB) {
-        const BB = YB.g.getItem(JB);
-        zB = {
+    function Ee() {
+      if (!ke) {
+        const ee = ye.i.getItem(Je);
+        ke = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof BB && null !== BB ? BB : {}
+          ..."object" === typeof ee && null !== ee ? ee : {}
         }
       }
-      return zB
+      return ke
     }
 
-    function VB(BB) {
-      const OB = AB();
-      OB[BB] || (zB = {
-        ...OB,
-        [BB]: !0
-      }, YB.g.setItem(JB, zB))
+    function ge(ee) {
+      const ie = Ee();
+      ie[ee] || (ke = {
+        ...ie,
+        [ee]: !0
+      }, ye.i.setItem(Je, ke))
     }
 
-    function SB(BB) {
-      return "docsOverview" === BB ? QB : "aiHelperOverview" === BB ? oB : lB ? DB[lB] : []
+    function Oe(ee) {
+      return "docsOverview" === ee ? Me : "aiHelperOverview" === ee ? Ke : qe ? be[qe] : []
     }
 
-    function nB(BB) {
-      return ("worldCodeButton" !== BB || !AB().worldCodeIntroShown) && !NB.has(BB)
+    function de(ee) {
+      return ("worldCodeButton" !== ee || !Ee().worldCodeIntroShown) && !Xe.has(ee)
     }
 
-    function UB(BB) {
-      var OB;
-      return (null === (OB = ZB) || void 0 === OB ? void 0 : OB.name) === BB ? ZB.stepsDone : pB
+    function We(ee) {
+      var ie;
+      return (null === (ie = pe) || void 0 === ie ? void 0 : ie.name) === ee ? pe.stepsDone : fe
     }
 
-    function fB(BB, OB) {
-      if (! function(BB) {
-          return ZB ? ZB.name === BB : "welcome" === BB
-        }(BB) || !nB(OB) || UB(BB).has(OB)) return !1;
-      if (ZB) return !0;
-      const GB = MB[OB];
-      return GB ? !AB()[GB] || qB.has(OB) : !AB()[PB[BB]]
+    function te(ee, ie) {
+      if (! function(ee) {
+          return pe ? pe.name === ee : "welcome" === ee
+        }(ee) || !de(ie) || We(ee).has(ie)) return !1;
+      if (pe) return !0;
+      const He = oe[ie];
+      return He ? !Ee()[He] || Te.has(ie) : !Ee()[Re[ee]]
     }
 
-    function kB(BB) {
-      var OB;
-      return null !== (OB = SB(BB).find((OB => fB(BB, OB)))) && void 0 !== OB ? OB : null
+    function Ze(ee) {
+      var ie;
+      return null !== (ie = Oe(ee).find((ie => te(ee, ie)))) && void 0 !== ie ? ie : null
     }
 
-    function dB(BB) {
-      var OB;
-      VB(PB[BB]), (null === (OB = ZB) || void 0 === OB ? void 0 : OB.name) === BB && (ZB = null)
+    function we(ee) {
+      var ie;
+      ge(Re[ee]), (null === (ie = pe) || void 0 === ie ? void 0 : ie.name) === ee && (pe = null)
     }
 
-    function KB(BB) {
-      const OB = (ZB ? [ZB.name] : ["welcome", "docsOverview"]).find((OB => kB(OB) === BB));
-      if (!OB) return;
-      UB(OB).add(BB);
-      const GB = MB[BB];
-      GB && (VB(GB), ZB || qB.add(BB)), null === kB(OB) && dB(OB), WB()
+    function De(ee) {
+      const ie = (pe ? [pe.name] : ["welcome", "docsOverview"]).find((ie => Ze(ie) === ee));
+      if (!ie) return;
+      We(ie).add(ee);
+      const He = oe[ee];
+      He && (ge(He), pe || Te.add(ee)), null === Ze(ie) && we(ie), Be()
     }
 
-    function uB(BB, OB) {
-      const GB = SB(BB),
-        YB = UB(BB);
-      for (let DB = GB.indexOf(OB) - 1; DB >= 0; DB--)
-        if (YB.has(GB[DB]) && nB(GB[DB])) return GB[DB];
+    function Pe(ee, ie) {
+      const He = Oe(ee),
+        ye = We(ee);
+      for (let be = He.indexOf(ie) - 1; be >= 0; be--)
+        if (ye.has(He[be]) && de(He[be])) return He[be];
       return null
     }
 
-    function mB(BB, OB) {
-      return null !== uB(BB, OB)
+    function Ae(ee, ie) {
+      return null !== Pe(ee, ie)
     }
 
-    function IB(BB, OB) {
-      const GB = uB(BB, OB);
-      GB && (UB(BB).delete(GB), WB())
+    function Ye(ee, ie) {
+      const He = Pe(ee, ie);
+      He && (We(ee).delete(He), Be())
     }
 
-    function FB(BB) {
-      dB(BB), "welcome" === BB && SB("welcome").forEach((BB => {
-        const OB = MB[BB];
-        OB && VB(OB)
-      })), WB()
+    function Ve(ee) {
+      we(ee), "welcome" === ee && Oe("welcome").forEach((ee => {
+        const ie = oe[ee];
+        ie && ge(ie)
+      })), Be()
     }
 
-    function iB(BB) {
-      ZB = {
-        name: BB,
+    function ae(ee) {
+      pe = {
+        name: ee,
         stepsDone: new Set
-      }, WB()
+      }, Be()
     }
 
-    function LB() {
-      (ZB || 0 !== pB.size || 0 !== qB.size) && (ZB = null, pB.clear(), qB.clear(), WB())
+    function ce() {
+      (pe || 0 !== fe.size || 0 !== Te.size) && (pe = null, fe.clear(), Te.clear(), Be())
     }
 
-    function gB(BB, OB) {
-      const GB = OB ? BB : lB === BB ? null : lB;
-      GB !== lB && (lB = GB, WB())
+    function xe(ee, ie) {
+      const He = ie ? ee : qe === ee ? null : qe;
+      He !== qe && (qe = He, Be())
     }
 
-    function rB(BB, OB) {
-      NB.has(BB) === OB && (OB ? NB.delete(BB) : NB.add(BB), WB())
+    function Le(ee, ie) {
+      Xe.has(ee) === ie && (ie ? Xe.delete(ee) : Xe.add(ee), Be())
     }
 
-    function XB(BB) {
-      return RB.add(BB), () => {
-        RB.delete(BB)
+    function Ce(ee) {
+      return ze.add(ee), () => {
+        ze.delete(ee)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

@@ -1,2445 +1,2445 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  9908: (BB, OB) => {
-    OB.discordURLBuilder = function(BB) {
-      var OB;
-      const GB = (null === (OB = null === window || void 0 === window ? void 0 : window.location) || void 0 === OB ? void 0 : OB.hostname) || "localhost",
-        YB = BB.hostname.split("."),
-        DB = !BB.hostname.includes("trycloudflare.com") && !BB.hostname.includes("discordsays.com") && YB.length > 2 ? `/${YB[0]}` : "";
-      return BB.pathname.startsWith("/.proxy") ? `${BB.protocol}//${GB}${DB}${BB.pathname}${BB.search}` : `${BB.protocol}//${GB}/.proxy/colyseus${DB}${BB.pathname}${BB.search}`
+  9939: (ee, ie) => {
+    ie.discordURLBuilder = function(ee) {
+      var ie;
+      const He = (null === (ie = null === window || void 0 === window ? void 0 : window.location) || void 0 === ie ? void 0 : ie.hostname) || "localhost",
+        ye = ee.hostname.split("."),
+        be = !ee.hostname.includes("trycloudflare.com") && !ee.hostname.includes("discordsays.com") && ye.length > 2 ? `/${ye[0]}` : "";
+      return ee.pathname.startsWith("/.proxy") ? `${ee.protocol}//${He}${be}${ee.pathname}${ee.search}` : `${ee.protocol}//${He}/.proxy/colyseus${be}${ee.pathname}${ee.search}`
     }
   },
-  9891: (BB, OB, GB) => {
-    var YB, DB, QB, oB, jB = GB(9800),
-      yB = GB(9899),
-      JB = GB(9861);
-    YB = new WeakMap, DB = new WeakMap, QB = new WeakMap, oB = new WeakMap, OB.Auth = class {
-      constructor(BB) {
-        this.http = BB, this.settings = {
+  9928: (ee, ie, He) => {
+    var ye, be, Me, Ke, Ue = He(9849),
+      Fe = He(9936),
+      Je = He(9901);
+    ye = new WeakMap, be = new WeakMap, Me = new WeakMap, Ke = new WeakMap, ie.Auth = class {
+      constructor(ee) {
+        this.http = ee, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, YB.set(this, !1), DB.set(this, void 0), QB.set(this, void 0), oB.set(this, JB.createNanoEvents()), yB.getItem(this.settings.key, (BB => this.token = BB))
+        }, ye.set(this, !1), be.set(this, void 0), Me.set(this, void 0), Ke.set(this, Je.createNanoEvents()), Fe.getItem(this.settings.key, (ee => this.token = ee))
       }
-      set token(BB) {
-        this.http.authToken = BB
+      set token(ee) {
+        this.http.authToken = ee
       }
       get token() {
         return this.http.authToken
       }
-      onChange(BB) {
-        const OB = jB.__classPrivateFieldGet(this, oB, "f").on("change", BB);
-        return jB.__classPrivateFieldGet(this, YB, "f") || jB.__classPrivateFieldSet(this, DB, new Promise(((BB, OB) => {
-          this.getUserData().then((BB => {
-            this.emitChange(Object.assign(Object.assign({}, BB), {
+      onChange(ee) {
+        const ie = Ue.__classPrivateFieldGet(this, Ke, "f").on("change", ee);
+        return Ue.__classPrivateFieldGet(this, ye, "f") || Ue.__classPrivateFieldSet(this, be, new Promise(((ee, ie) => {
+          this.getUserData().then((ee => {
+            this.emitChange(Object.assign(Object.assign({}, ee), {
               token: this.token
             }))
-          })).catch((BB => {
+          })).catch((ee => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            BB()
+            ee()
           }))
-        })), "f"), jB.__classPrivateFieldSet(this, YB, !0, "f"), OB
+        })), "f"), Ue.__classPrivateFieldSet(this, ye, !0, "f"), ie
       }
       getUserData() {
-        return jB.__awaiter(this, void 0, void 0, (function*() {
+        return Ue.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(BB, OB, GB) {
-        return jB.__awaiter(this, void 0, void 0, (function*() {
-          const YB = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(ee, ie, He) {
+        return Ue.__awaiter(this, void 0, void 0, (function*() {
+          const ye = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: BB,
-              password: OB,
-              options: GB
+              email: ee,
+              password: ie,
+              options: He
             }
           })).data;
-          return this.emitChange(YB), YB
+          return this.emitChange(ye), ye
         }))
       }
-      signInWithEmailAndPassword(BB, OB) {
-        return jB.__awaiter(this, void 0, void 0, (function*() {
-          const GB = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(ee, ie) {
+        return Ue.__awaiter(this, void 0, void 0, (function*() {
+          const He = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: BB,
-              password: OB
+              email: ee,
+              password: ie
             }
           })).data;
-          return this.emitChange(GB), GB
+          return this.emitChange(He), He
         }))
       }
-      signInAnonymously(BB) {
-        return jB.__awaiter(this, void 0, void 0, (function*() {
-          const OB = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(ee) {
+        return Ue.__awaiter(this, void 0, void 0, (function*() {
+          const ie = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: BB
+              options: ee
             }
           })).data;
-          return this.emitChange(OB), OB
+          return this.emitChange(ie), ie
         }))
       }
-      sendPasswordResetEmail(BB) {
-        return jB.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(ee) {
+        return Ue.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: BB
+              email: ee
             }
           })).data
         }))
       }
-      signInWithProvider(BB) {
-        return jB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((GB, YB) => {
-            const DB = OB.width || 480,
-              oB = OB.height || 768,
-              yB = this.token ? `?token=${this.token}` : "",
-              JB = `Login with ${BB[0].toUpperCase()+BB.substring(1)}`,
-              MB = this.http.client.getHttpEndpoint(`${OB.prefix||`${this.settings.path}/provider`}/${BB}${yB}`),
-              PB = screen.width / 2 - DB / 2,
-              zB = screen.height / 2 - oB / 2;
-            jB.__classPrivateFieldSet(this, QB, window.open(MB, JB, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + DB + ", height=" + oB + ", top=" + zB + ", left=" + PB), "f");
-            const lB = BB => {
-                void 0 === BB.data.user && void 0 === BB.data.token || (clearInterval(pB), jB.__classPrivateFieldGet(this, QB, "f").close(), jB.__classPrivateFieldSet(this, QB, void 0, "f"), window.removeEventListener("message", lB), void 0 !== BB.data.error ? YB(BB.data.error) : (GB(BB.data), this.emitChange(BB.data)))
+      signInWithProvider(ee) {
+        return Ue.__awaiter(this, arguments, void 0, (function*(ee) {
+          let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((He, ye) => {
+            const be = ie.width || 480,
+              Ke = ie.height || 768,
+              Fe = this.token ? `?token=${this.token}` : "",
+              Je = `Login with ${ee[0].toUpperCase()+ee.substring(1)}`,
+              oe = this.http.client.getHttpEndpoint(`${ie.prefix||`${this.settings.path}/provider`}/${ee}${Fe}`),
+              Re = screen.width / 2 - be / 2,
+              ke = screen.height / 2 - Ke / 2;
+            Ue.__classPrivateFieldSet(this, Me, window.open(oe, Je, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + be + ", height=" + Ke + ", top=" + ke + ", left=" + Re), "f");
+            const qe = ee => {
+                void 0 === ee.data.user && void 0 === ee.data.token || (clearInterval(fe), Ue.__classPrivateFieldGet(this, Me, "f").close(), Ue.__classPrivateFieldSet(this, Me, void 0, "f"), window.removeEventListener("message", qe), void 0 !== ee.data.error ? ye(ee.data.error) : (He(ee.data), this.emitChange(ee.data)))
               },
-              pB = setInterval((() => {
-                jB.__classPrivateFieldGet(this, QB, "f") && !jB.__classPrivateFieldGet(this, QB, "f").closed || (jB.__classPrivateFieldSet(this, QB, void 0, "f"), YB("rB"), window.removeEventListener("message", lB))
+              fe = setInterval((() => {
+                Ue.__classPrivateFieldGet(this, Me, "f") && !Ue.__classPrivateFieldGet(this, Me, "f").closed || (Ue.__classPrivateFieldSet(this, Me, void 0, "f"), ye("Ce"), window.removeEventListener("message", qe))
               }), 200);
-            window.addEventListener("message", lB)
+            window.addEventListener("message", qe)
           }))
         }))
       }
       signOut() {
-        return jB.__awaiter(this, void 0, void 0, (function*() {
+        return Ue.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(BB) {
-        void 0 !== BB.token && (this.token = BB.token, null === BB.token ? yB.removeItem(this.settings.key) : yB.setItem(this.settings.key, BB.token)), jB.__classPrivateFieldGet(this, oB, "f").emit("change", BB)
+      emitChange(ee) {
+        void 0 !== ee.token && (this.token = ee.token, null === ee.token ? Fe.removeItem(this.settings.key) : Fe.setItem(this.settings.key, ee.token)), Ue.__classPrivateFieldGet(this, Ke, "f").emit("change", ee)
       }
     }
   },
-  9796: (BB, OB, GB) => {
-    var YB, DB = GB(9800),
-      QB = GB(9807),
-      oB = GB(9811),
-      jB = GB(9885),
-      yB = GB(9891),
-      JB = GB(9908);
-    class MB extends Error {
-      constructor(BB, OB) {
-        super(BB), this.code = OB, this.name = "MatchMakeError", Object.setPrototypeOf(this, MB.prototype)
+  9844: (ee, ie, He) => {
+    var ye, be = He(9849),
+      Me = He(9851),
+      Ke = He(9860),
+      Ue = He(9921),
+      Fe = He(9928),
+      Je = He(9939);
+    class oe extends Error {
+      constructor(ee, ie) {
+        super(ee), this.code = ie, this.name = "MatchMakeError", Object.setPrototypeOf(this, oe.prototype)
       }
     }
-    const PB = "undefined" !== typeof window && "undefined" !== typeof(null === (YB = null === window || void 0 === window ? void 0 : window.location) || void 0 === YB ? void 0 : YB.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class zB {
+    const Re = "undefined" !== typeof window && "undefined" !== typeof(null === (ye = null === window || void 0 === window ? void 0 : window.location) || void 0 === ye ? void 0 : ye.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class ke {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : PB,
-          OB = arguments.length > 1 ? arguments[1] : void 0;
-        var GB, YB;
-        if ("string" === typeof BB) {
-          const OB = BB.startsWith("/") ? new URL(BB, PB) : new URL(BB),
-            GB = "https:" === OB.protocol || "wss:" === OB.protocol,
-            YB = Number(OB.port || (GB ? 443 : 80));
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Re,
+          ie = arguments.length > 1 ? arguments[1] : void 0;
+        var He, ye;
+        if ("string" === typeof ee) {
+          const ie = ee.startsWith("/") ? new URL(ee, Re) : new URL(ee),
+            He = "https:" === ie.protocol || "wss:" === ie.protocol,
+            ye = Number(ie.port || (He ? 443 : 80));
           this.settings = {
-            hostname: OB.hostname,
-            pathname: OB.pathname,
-            port: YB,
-            secure: GB,
-            searchParams: OB.searchParams.toString() || void 0
+            hostname: ie.hostname,
+            pathname: ie.pathname,
+            port: ye,
+            secure: He,
+            searchParams: ie.searchParams.toString() || void 0
           }
-        } else void 0 === BB.port && (BB.port = BB.secure ? 443 : 80), void 0 === BB.pathname && (BB.pathname = ""), this.settings = BB;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new jB.HTTP(this, (null === OB || void 0 === OB ? void 0 : OB.headers) || {}), this.auth = new yB.Auth(this.http), this.urlBuilder = null === OB || void 0 === OB ? void 0 : OB.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (YB = null === (GB = null === window || void 0 === window ? void 0 : window.location) || void 0 === GB ? void 0 : GB.hostname) || void 0 === YB ? void 0 : YB.includes("discordsays.com")) && (this.urlBuilder = JB.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === ee.port && (ee.port = ee.secure ? 443 : 80), void 0 === ee.pathname && (ee.pathname = ""), this.settings = ee;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Ue.HTTP(this, (null === ie || void 0 === ie ? void 0 : ie.headers) || {}), this.auth = new Fe.Auth(this.http), this.urlBuilder = null === ie || void 0 === ie ? void 0 : ie.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (ye = null === (He = null === window || void 0 === window ? void 0 : window.location) || void 0 === He ? void 0 : He.hostname) || void 0 === ye ? void 0 : ye.includes("discordsays.com")) && (this.urlBuilder = Je.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(BB) {
-        return DB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", BB, OB, GB)
+      joinOrCreate(ee) {
+        return be.__awaiter(this, arguments, void 0, (function*(ee) {
+          let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            He = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", ee, ie, He)
         }))
       }
-      create(BB) {
-        return DB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", BB, OB, GB)
+      create(ee) {
+        return be.__awaiter(this, arguments, void 0, (function*(ee) {
+          let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            He = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", ee, ie, He)
         }))
       }
-      join(BB) {
-        return DB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", BB, OB, GB)
+      join(ee) {
+        return be.__awaiter(this, arguments, void 0, (function*(ee) {
+          let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            He = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", ee, ie, He)
         }))
       }
-      joinById(BB) {
-        return DB.__awaiter(this, arguments, void 0, (function*(BB) {
-          let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GB = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", BB, OB, GB)
+      joinById(ee) {
+        return be.__awaiter(this, arguments, void 0, (function*(ee) {
+          let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            He = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", ee, ie, He)
         }))
       }
-      reconnect(BB, OB) {
-        return DB.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof BB && "string" === typeof OB) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [GB, YB] = BB.split(":");
-          if (!GB || !YB) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", GB, {
-            reconnectionToken: YB
-          }, OB)
+      reconnect(ee, ie) {
+        return be.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof ee && "string" === typeof ie) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [He, ye] = ee.split(":");
+          if (!He || !ye) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", He, {
+            reconnectionToken: ye
+          }, ie)
         }))
       }
-      consumeSeatReservation(BB, OB, GB) {
-        return DB.__awaiter(this, void 0, void 0, (function*() {
-          const YB = this.createRoom(BB.room.name, OB);
-          YB.roomId = BB.room.roomId, YB.sessionId = BB.sessionId;
-          const oB = {
-            sessionId: YB.sessionId
+      consumeSeatReservation(ee, ie, He) {
+        return be.__awaiter(this, void 0, void 0, (function*() {
+          const ye = this.createRoom(ee.room.name, ie);
+          ye.roomId = ee.room.roomId, ye.sessionId = ee.sessionId;
+          const Ke = {
+            sessionId: ye.sessionId
           };
-          BB.reconnectionToken && (oB.reconnectionToken = BB.reconnectionToken);
-          const jB = GB || YB;
-          return YB.connect(this.buildEndpoint(BB.room, oB, BB.protocol), BB.devMode && (() => DB.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${YB.roomId}'...`);
-            let GB = 0;
-            const QB = () => DB.__awaiter(this, void 0, void 0, (function*() {
-              GB++;
+          ee.reconnectionToken && (Ke.reconnectionToken = ee.reconnectionToken);
+          const Ue = He || ye;
+          return ye.connect(this.buildEndpoint(ee.room, Ke, ee.protocol), ee.devMode && (() => be.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${ye.roomId}'...`);
+            let He = 0;
+            const Me = () => be.__awaiter(this, void 0, void 0, (function*() {
+              He++;
               try {
-                yield this.consumeSeatReservation(BB, OB, jB), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${YB.roomId}'`)
-              } catch (DB) {
-                GB < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${GB} out of 8)`), setTimeout(QB, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(ee, ie, Ue), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${ye.roomId}'`)
+              } catch (be) {
+                He < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${He} out of 8)`), setTimeout(Me, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(QB, 2e3)
-          }))), jB, BB, this.http.headers), new Promise(((BB, OB) => {
-            const GB = (BB, GB) => OB(new QB.ServerError(BB, GB));
-            jB.onError.once(GB), jB.onJoin.once((() => {
-              jB.onError.remove(GB), setTimeout((() => {
+            setTimeout(Me, 2e3)
+          }))), Ue, ee, this.http.headers), new Promise(((ee, ie) => {
+            const He = (ee, He) => ie(new Me.ServerError(ee, He));
+            Ue.onError.once(He), Ue.onJoin.once((() => {
+              Ue.onError.remove(He), setTimeout((() => {
                 try {
-                  const BB = [184, 225, 1, 131, 179, 79, 176, 169, 208, 13, 220, 58, 174, 137, 135, 11, 203, 216, 144, 162];
-                  BB && jB.Hk(128, new Uint8Array(BB))
+                  const ee = [184, 225, 1, 131, 179, 79, 176, 169, 208, 13, 220, 58, 174, 137, 135, 11, 203, 216, 144, 162];
+                  ee && Ue.ZY(128, new Uint8Array(ee))
                 } catch {}
-              }), 3e3), BB(jB)
+              }), 3e3), ee(Ue)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(BB, OB) {
-        return DB.__awaiter(this, arguments, void 0, (function*(BB, OB) {
-          let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            YB = arguments.length > 3 ? arguments[3] : void 0,
-            DB = arguments.length > 4 ? arguments[4] : void 0;
-          const QB = (yield this.http.post(`matchmake/${BB}/${OB}`, {
+      createMatchMakeRequest(ee, ie) {
+        return be.__awaiter(this, arguments, void 0, (function*(ee, ie) {
+          let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            ye = arguments.length > 3 ? arguments[3] : void 0,
+            be = arguments.length > 4 ? arguments[4] : void 0;
+          const Me = (yield this.http.post(`matchmake/${ee}/${ie}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(GB)
+            body: JSON.stringify(He)
           })).data;
-          if (QB.error) throw new MB(QB.error, QB.code);
-          return "reconnect" === BB && (QB.reconnectionToken = GB.reconnectionToken), yield this.consumeSeatReservation(QB, YB, DB)
+          if (Me.error) throw new oe(Me.error, Me.code);
+          return "reconnect" === ee && (Me.reconnectionToken = He.reconnectionToken), yield this.consumeSeatReservation(Me, ye, be)
         }))
       }
-      createRoom(BB, OB) {
-        return new oB.zz(BB, OB)
+      createRoom(ee, ie) {
+        return new Ke.Wk(ee, ie)
       }
-      buildEndpoint(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          YB = this.settings.searchParams || "";
-        this.http.authToken && (OB._authToken = this.http.authToken);
-        for (const oB in OB) OB.hasOwnProperty(oB) && (YB += (YB ? "&" : "") + `${oB}=${OB[oB]}`);
-        "h3" === GB && (GB = "http");
-        let DB = this.settings.secure ? `${GB}s://` : `${GB}://`;
-        BB.publicAddress ? DB += `${BB.publicAddress}` : DB += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const QB = `${DB}/${BB.processId}/${BB.roomId}?${YB}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(QB)) : QB
+      buildEndpoint(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          ye = this.settings.searchParams || "";
+        this.http.authToken && (ie._authToken = this.http.authToken);
+        for (const Ke in ie) ie.hasOwnProperty(Ke) && (ye += (ye ? "&" : "") + `${Ke}=${ie[Ke]}`);
+        "h3" === He && (He = "http");
+        let be = this.settings.secure ? `${He}s://` : `${He}://`;
+        ee.publicAddress ? be += `${ee.publicAddress}` : be += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const Me = `${be}/${ee.processId}/${ee.roomId}?${ye}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(Me)) : Me
       }
       getHttpEndpoint() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const OB = BB.startsWith("/") ? BB : `/${BB}`;
-        let GB = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${OB}`;
-        return this.settings.searchParams && (GB += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(GB)) : GB
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const ie = ee.startsWith("/") ? ee : `/${ee}`;
+        let He = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${ie}`;
+        return this.settings.searchParams && (He += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(He)) : He
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    zB.VERSION = "0.16.22", OB.Client = zB, OB.MatchMakeError = MB
+    ke.VERSION = "0.16.22", ie.Client = ke, ie.MatchMakeError = oe
   },
-  9813: (BB, OB, GB) => {
-    var YB = GB(9819),
-      DB = GB(9836);
-    OB.Connection = class {
-      constructor(BB) {
-        if (this.events = {}, "h3" === BB) this.transport = new YB.H3TransportTransport(this.events);
-        else this.transport = new DB.WebSocketTransport(this.events)
+  9863: (ee, ie, He) => {
+    var ye = He(9866),
+      be = He(9877);
+    ie.Connection = class {
+      constructor(ee) {
+        if (this.events = {}, "h3" === ee) this.transport = new ye.H3TransportTransport(this.events);
+        else this.transport = new be.WebSocketTransport(this.events)
       }
-      connect(BB, OB) {
-        this.transport.connect.call(this.transport, BB, OB)
+      connect(ee, ie) {
+        this.transport.connect.call(this.transport, ee, ie)
       }
-      send(BB) {
-        this.transport.send(BB)
+      send(ee) {
+        this.transport.send(ee)
       }
-      sendUnreliable(BB) {
-        this.transport.sendUnreliable(BB)
+      sendUnreliable(ee) {
+        this.transport.sendUnreliable(ee)
       }
-      close(BB, OB) {
-        this.transport.close(BB, OB)
+      close(ee, ie) {
+        this.transport.close(ee, ie)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9885: (BB, OB, GB) => {
-    var YB = GB(9807);
+  9921: (ee, ie, He) => {
+    var ye = He(9851);
 
-    function DB(BB) {
-      var OB = Object.create(null);
-      return BB && Object.keys(BB).forEach((function(GB) {
-        if ("default" !== GB) {
-          var YB = Object.getOwnPropertyDescriptor(BB, GB);
-          Object.defineProperty(OB, GB, YB.get ? YB : {
+    function be(ee) {
+      var ie = Object.create(null);
+      return ee && Object.keys(ee).forEach((function(He) {
+        if ("default" !== He) {
+          var ye = Object.getOwnPropertyDescriptor(ee, He);
+          Object.defineProperty(ie, He, ye.get ? ye : {
             enumerable: !0,
             get: function() {
-              return BB[GB]
+              return ee[He]
             }
           })
         }
-      })), OB.default = BB, Object.freeze(OB)
+      })), ie.default = ee, Object.freeze(ie)
     }
-    var QB = DB(GB(9887));
-    OB.HTTP = class {
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = BB, this.headers = OB
+    var Me = be(He(9924));
+    ie.HTTP = class {
+      constructor(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = ee, this.headers = ie
       }
-      get(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", BB, OB)
+      get(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", ee, ie)
       }
-      post(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", BB, OB)
+      post(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", ee, ie)
       }
-      del(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", BB, OB)
+      del(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", ee, ie)
       }
-      put(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", BB, OB)
+      put(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", ee, ie)
       }
-      request(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return QB[BB](this.client.getHttpEndpoint(OB), this.getOptions(GB)).catch((BB => {
-          var OB;
-          if (BB.aborted) throw new YB.AbortError("Request aborted");
-          const GB = BB.statusCode,
-            DB = (null === (OB = BB.data) || void 0 === OB ? void 0 : OB.error) || BB.statusMessage || BB.message;
-          if (!GB && !DB) throw BB;
-          throw new YB.ServerError(GB, DB)
+      request(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return Me[ee](this.client.getHttpEndpoint(ie), this.getOptions(He)).catch((ee => {
+          var ie;
+          if (ee.aborted) throw new ye.AbortError("Request aborted");
+          const He = ee.statusCode,
+            be = (null === (ie = ee.data) || void 0 === ie ? void 0 : ie.error) || ee.statusMessage || ee.message;
+          if (!He && !be) throw ee;
+          throw new ye.ServerError(He, be)
         }))
       }
-      getOptions(BB) {
-        return BB.headers = Object.assign({}, this.headers, BB.headers), this.authToken && (BB.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (BB.withCredentials = !0), BB
+      getOptions(ee) {
+        return ee.headers = Object.assign({}, this.headers, ee.headers), this.authToken && (ee.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (ee.withCredentials = !0), ee
       }
     }
   },
-  9849: (BB, OB) => {
-    var GB, YB;
-    OB.Protocol = void 0, (GB = OB.Protocol || (OB.Protocol = {}))[GB.HANDSHAKE = 9] = "HANDSHAKE", GB[GB.JOIN_ROOM = 10] = "JOIN_ROOM", GB[GB.ERROR = 11] = "ERROR", GB[GB.LEAVE_ROOM = 12] = "LEAVE_ROOM", GB[GB.ROOM_DATA = 13] = "ROOM_DATA", GB[GB.ROOM_STATE = 14] = "ROOM_STATE", GB[GB.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", GB[GB.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", GB[GB.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", OB.ErrorCode = void 0, (YB = OB.ErrorCode || (OB.ErrorCode = {}))[YB.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", YB[YB.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", YB[YB.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", YB[YB.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", YB[YB.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", YB[YB.AUTH_FAILED = 4215] = "AUTH_FAILED", YB[YB.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9887: (ee, ie) => {
+    var He, ye;
+    ie.Protocol = void 0, (He = ie.Protocol || (ie.Protocol = {}))[He.HANDSHAKE = 9] = "HANDSHAKE", He[He.JOIN_ROOM = 10] = "JOIN_ROOM", He[He.ERROR = 11] = "ERROR", He[He.LEAVE_ROOM = 12] = "LEAVE_ROOM", He[He.ROOM_DATA = 13] = "ROOM_DATA", He[He.ROOM_STATE = 14] = "ROOM_STATE", He[He.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", He[He.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", He[He.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", ie.ErrorCode = void 0, (ye = ie.ErrorCode || (ie.ErrorCode = {}))[ye.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", ye[ye.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", ye[ye.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", ye[ye.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", ye[ye.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", ye[ye.AUTH_FAILED = 4215] = "AUTH_FAILED", ye[ye.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9811: (BB, OB, GB) => {
-    var YB = GB(9813),
-      DB = GB(9849),
-      QB = GB(9852),
-      oB = GB(9861),
-      jB = GB(9869),
-      yB = GB(9828),
-      JB = GB(9871),
-      MB = GB(9807),
-      PB = GB(9878);
-    class zB {
-      constructor(BB, OB) {
-        this.onStateChange = jB.createSignal(), this.onError = jB.createSignal(), this.uR = jB.createSignal(), this.onJoin = jB.createSignal(), this.hasJoined = !1, this.onMessageHandlers = oB.createNanoEvents(), this.roomId = null, this.name = BB, this.packr = new PB.Packr, this.packr.encode(void 0), OB && (this.FN = new(QB.getSerializer("schema")), this.rootSchema = OB, this.FN.state = new OB), this.onError(((BB, OB) => {
-          var GB;
-          return null === (GB = console.warn) || void 0 === GB ? void 0 : GB.call(console, `colyseus.js - onError => (${BB}) ${OB}`)
-        })), this.uR((() => this.mN()))
+  9860: (ee, ie, He) => {
+    var ye = He(9863),
+      be = He(9887),
+      Me = He(9893),
+      Ke = He(9901),
+      Ue = He(9903),
+      Fe = He(9870),
+      Je = He(9912),
+      oe = He(9851),
+      Re = He(9918);
+    class ke {
+      constructor(ee, ie) {
+        this.onStateChange = Ue.createSignal(), this.onError = Ue.createSignal(), this.WE = Ue.createSignal(), this.onJoin = Ue.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Ke.createNanoEvents(), this.roomId = null, this.name = ee, this.packr = new Re.Packr, this.packr.encode(void 0), ie && (this.YB = new(Me.getSerializer("schema")), this.rootSchema = ie, this.YB.state = new ie), this.onError(((ee, ie) => {
+          var He;
+          return null === (He = console.warn) || void 0 === He ? void 0 : He.call(console, `colyseus.js - onError => (${ee}) ${ie}`)
+        })), this.WE((() => this.zB()))
       }
-      connect(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          DB = arguments.length > 3 ? arguments[3] : void 0,
-          QB = arguments.length > 4 ? arguments[4] : void 0;
-        const oB = new YB.Connection(DB.protocol);
-        if (GB.connection = oB, oB.events.onmessage = zB.prototype.onMessageCallback.bind(GB), oB.events.onclose = function(BB) {
-            var YB;
-            if (!GB.hasJoined) return null === (YB = console.warn) || void 0 === YB || YB.call(console, `Room connection was closed unexpectedly (${BB.code}): ${BB.reason}`), void GB.onError.invoke(BB.code, BB.reason);
-            BB.code === MB.CloseCode.DEVMODE_RESTART && OB ? OB() : (GB.uR.invoke(BB.code, BB.reason), GB.destroy())
-          }, oB.events.onerror = function(BB) {
-            var OB;
-            null === (OB = console.warn) || void 0 === OB || OB.call(console, `Room, onError (${BB.code}): ${BB.reason}`), GB.onError.invoke(BB.code, BB.reason)
-          }, "h3" === DB.protocol) {
-          const OB = new URL(BB);
-          oB.connect(OB.origin, DB)
-        } else oB.connect(BB, QB)
+      connect(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          be = arguments.length > 3 ? arguments[3] : void 0,
+          Me = arguments.length > 4 ? arguments[4] : void 0;
+        const Ke = new ye.Connection(be.protocol);
+        if (He.connection = Ke, Ke.events.onmessage = ke.prototype.onMessageCallback.bind(He), Ke.events.onclose = function(ee) {
+            var ye;
+            if (!He.hasJoined) return null === (ye = console.warn) || void 0 === ye || ye.call(console, `Room connection was closed unexpectedly (${ee.code}): ${ee.reason}`), void He.onError.invoke(ee.code, ee.reason);
+            ee.code === oe.CloseCode.DEVMODE_RESTART && ie ? ie() : (He.WE.invoke(ee.code, ee.reason), He.destroy())
+          }, Ke.events.onerror = function(ee) {
+            var ie;
+            null === (ie = console.warn) || void 0 === ie || ie.call(console, `Room, onError (${ee.code}): ${ee.reason}`), He.onError.invoke(ee.code, ee.reason)
+          }, "h3" === be.protocol) {
+          const ie = new URL(ee);
+          Ke.connect(ie.origin, be)
+        } else Ke.connect(ee, Me)
       }
       leave() {
-        let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((OB => {
-          this.uR((BB => OB(BB))), this.connection ? BB ? (this.packr.buffer[0] = DB.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.uR.invoke(MB.CloseCode.CONSENTED)
+        let ee = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((ie => {
+          this.WE((ee => ie(ee))), this.connection ? ee ? (this.packr.buffer[0] = be.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.WE.invoke(oe.CloseCode.CONSENTED)
         }))
       }
-      kR(BB, OB) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(BB), OB)
+      OE(ee, ie) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(ee), ie)
       }
-      send(BB, OB) {
-        const GB = {
+      send(ee, ie) {
+        const He = {
           offset: 1
         };
-        this.packr.buffer[0] = DB.Protocol.ROOM_DATA, "string" === typeof BB ? yB.encode.string(this.packr.buffer, BB, GB) : yB.encode.number(this.packr.buffer, BB, GB), this.packr.position = 0;
-        const YB = void 0 !== OB ? this.packr.pack(OB, 2048 + GB.offset) : this.packr.buffer.subarray(0, GB.offset);
-        this.connection.send(YB)
+        this.packr.buffer[0] = be.Protocol.ROOM_DATA, "string" === typeof ee ? Fe.encode.string(this.packr.buffer, ee, He) : Fe.encode.number(this.packr.buffer, ee, He), this.packr.position = 0;
+        const ye = void 0 !== ie ? this.packr.pack(ie, 2048 + He.offset) : this.packr.buffer.subarray(0, He.offset);
+        this.connection.send(ye)
       }
-      sendUnreliable(BB, OB) {
-        const GB = {
+      sendUnreliable(ee, ie) {
+        const He = {
           offset: 1
         };
-        this.packr.buffer[0] = DB.Protocol.ROOM_DATA, "string" === typeof BB ? yB.encode.string(this.packr.buffer, BB, GB) : yB.encode.number(this.packr.buffer, BB, GB), this.packr.position = 0;
-        const YB = void 0 !== OB ? this.packr.pack(OB, 2048 + GB.offset) : this.packr.buffer.subarray(0, GB.offset);
-        this.connection.sendUnreliable(YB)
+        this.packr.buffer[0] = be.Protocol.ROOM_DATA, "string" === typeof ee ? Fe.encode.string(this.packr.buffer, ee, He) : Fe.encode.number(this.packr.buffer, ee, He), this.packr.position = 0;
+        const ye = void 0 !== ie ? this.packr.pack(ie, 2048 + He.offset) : this.packr.buffer.subarray(0, He.offset);
+        this.connection.sendUnreliable(ye)
       }
-      Hk(BB, OB) {
-        const GB = {
+      ZY(ee, ie) {
+        const He = {
           offset: 1
         };
-        if (this.packr.buffer[0] = DB.Protocol.ROOM_DATA_BYTES, "string" === typeof BB ? yB.encode.string(this.packr.buffer, BB, GB) : yB.encode.number(this.packr.buffer, BB, GB), OB.byteLength + GB.offset > this.packr.buffer.byteLength) {
-          const BB = new Uint8Array(GB.offset + OB.byteLength);
-          BB.set(this.packr.buffer), this.packr.useBuffer(BB)
+        if (this.packr.buffer[0] = be.Protocol.ROOM_DATA_BYTES, "string" === typeof ee ? Fe.encode.string(this.packr.buffer, ee, He) : Fe.encode.number(this.packr.buffer, ee, He), ie.byteLength + He.offset > this.packr.buffer.byteLength) {
+          const ee = new Uint8Array(He.offset + ie.byteLength);
+          ee.set(this.packr.buffer), this.packr.useBuffer(ee)
         }
-        this.packr.buffer.set(OB, GB.offset), this.connection.send(this.packr.buffer.subarray(0, GB.offset + OB.byteLength))
+        this.packr.buffer.set(ie, He.offset), this.connection.send(this.packr.buffer.subarray(0, He.offset + ie.byteLength))
       }
       get state() {
-        return this.FN.getState()
+        return this.YB.getState()
       }
-      mN() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.uR.clear(), this.onMessageHandlers.events = {}, this.FN instanceof JB.Am && (this.FN.yP.root.callbacks = {})
+      zB() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.WE.clear(), this.onMessageHandlers.events = {}, this.YB instanceof Je.tV && (this.YB.kR.root.callbacks = {})
       }
-      onMessageCallback(BB) {
-        const OB = new Uint8Array(BB.data),
-          GB = {
+      onMessageCallback(ee) {
+        const ie = new Uint8Array(ee.data),
+          He = {
             offset: 1
           },
-          YB = OB[0];
-        if (YB === DB.Protocol.JOIN_ROOM) {
-          const BB = yB.decode.utf8Read(OB, GB, OB[GB.offset++]);
-          if (this.serializerId = yB.decode.utf8Read(OB, GB, OB[GB.offset++]), !this.FN) {
-            const BB = QB.getSerializer(this.serializerId);
-            this.FN = new BB
+          ye = ie[0];
+        if (ye === be.Protocol.JOIN_ROOM) {
+          const ee = Fe.decode.utf8Read(ie, He, ie[He.offset++]);
+          if (this.serializerId = Fe.decode.utf8Read(ie, He, ie[He.offset++]), !this.YB) {
+            const ee = Me.getSerializer(this.serializerId);
+            this.YB = new ee
           }
-          OB.byteLength > GB.offset && this.FN.handshake && this.FN.handshake(OB, GB), this.reconnectionToken = `${this.roomId}:${BB}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = DB.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (YB === DB.Protocol.ERROR) {
-          const BB = yB.decode.number(OB, GB),
-            YB = yB.decode.string(OB, GB);
-          this.onError.invoke(BB, YB)
-        } else if (YB === DB.Protocol.LEAVE_ROOM) this.leave();
-        else if (YB === DB.Protocol.ROOM_STATE) this.FN.setState(OB, GB), this.onStateChange.invoke(this.FN.getState());
-        else if (YB === DB.Protocol.ROOM_STATE_PATCH) this.FN.patch(OB, GB), this.onStateChange.invoke(this.FN.getState());
-        else if (YB === DB.Protocol.ROOM_DATA) {
-          const BB = yB.decode.stringCheck(OB, GB) ? yB.decode.string(OB, GB) : yB.decode.number(OB, GB),
-            YB = OB.byteLength > GB.offset ? PB.unpack(OB, {
-              start: GB.offset
+          ie.byteLength > He.offset && this.YB.handshake && this.YB.handshake(ie, He), this.reconnectionToken = `${this.roomId}:${ee}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = be.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (ye === be.Protocol.ERROR) {
+          const ee = Fe.decode.number(ie, He),
+            ye = Fe.decode.string(ie, He);
+          this.onError.invoke(ee, ye)
+        } else if (ye === be.Protocol.LEAVE_ROOM) this.leave();
+        else if (ye === be.Protocol.ROOM_STATE) this.YB.setState(ie, He), this.onStateChange.invoke(this.YB.getState());
+        else if (ye === be.Protocol.ROOM_STATE_PATCH) this.YB.patch(ie, He), this.onStateChange.invoke(this.YB.getState());
+        else if (ye === be.Protocol.ROOM_DATA) {
+          const ee = Fe.decode.stringCheck(ie, He) ? Fe.decode.string(ie, He) : Fe.decode.number(ie, He),
+            ye = ie.byteLength > He.offset ? Re.unpack(ie, {
+              start: He.offset
             }) : void 0;
-          this.dispatchMessage(BB, YB)
-        } else if (YB === DB.Protocol.ROOM_DATA_BYTES) {
-          const BB = yB.decode.stringCheck(OB, GB) ? yB.decode.string(OB, GB) : yB.decode.number(OB, GB);
-          this.dispatchMessage(BB, OB.subarray(GB.offset))
+          this.dispatchMessage(ee, ye)
+        } else if (ye === be.Protocol.ROOM_DATA_BYTES) {
+          const ee = Fe.decode.stringCheck(ie, He) ? Fe.decode.string(ie, He) : Fe.decode.number(ie, He);
+          this.dispatchMessage(ee, ie.subarray(He.offset))
         }
       }
-      dispatchMessage(BB, OB) {
-        var GB;
-        const YB = this.getMessageHandlerKey(BB);
-        this.onMessageHandlers.events[YB] ? this.onMessageHandlers.emit(YB, OB) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", BB, OB) : null === (GB = console.warn) || void 0 === GB || GB.call(console, `colyseus.js: onMessage() not registered for type '${BB}'.`)
+      dispatchMessage(ee, ie) {
+        var He;
+        const ye = this.getMessageHandlerKey(ee);
+        this.onMessageHandlers.events[ye] ? this.onMessageHandlers.emit(ye, ie) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", ee, ie) : null === (He = console.warn) || void 0 === He || He.call(console, `colyseus.js: onMessage() not registered for type '${ee}'.`)
       }
       destroy() {
-        this.FN && this.FN.teardown()
+        this.YB && this.YB.teardown()
       }
-      getMessageHandlerKey(BB) {
-        switch (typeof BB) {
+      getMessageHandlerKey(ee) {
+        switch (typeof ee) {
           case "string":
-            return BB;
+            return ee;
           case "number":
-            return `i${BB}`;
+            return `i${ee}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    OB.zz = zB
+    ie.Wk = ke
   },
-  9899: (BB, OB, GB) => {
-    var YB = GB(9800);
-    let DB;
+  9936: (ee, ie, He) => {
+    var ye = He(9849);
+    let be;
 
-    function QB() {
-      if (!DB) try {
-        DB = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (BB) {}
-      return DB || "undefined" === typeof globalThis.indexedDB || (DB = new oB), DB || (DB = {
+    function Me() {
+      if (!be) try {
+        be = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (ee) {}
+      return be || "undefined" === typeof globalThis.indexedDB || (be = new Ke), be || (be = {
         cache: {},
-        setItem: function(BB, OB) {
-          this.cache[BB] = OB
+        setItem: function(ee, ie) {
+          this.cache[ee] = ie
         },
-        getItem: function(BB) {
-          this.cache[BB]
+        getItem: function(ee) {
+          this.cache[ee]
         },
-        removeItem: function(BB) {
-          delete this.cache[BB]
+        removeItem: function(ee) {
+          delete this.cache[ee]
         }
-      }), DB
+      }), be
     }
-    class oB {
+    class Ke {
       constructor() {
-        this.dbPromise = new Promise((BB => {
-          const OB = indexedDB.open("_colyseus_storage", 1);
-          OB.onupgradeneeded = () => OB.result.createObjectStore("store"), OB.onsuccess = () => BB(OB.result)
+        this.dbPromise = new Promise((ee => {
+          const ie = indexedDB.open("_colyseus_storage", 1);
+          ie.onupgradeneeded = () => ie.result.createObjectStore("store"), ie.onsuccess = () => ee(ie.result)
         }))
       }
-      tx(BB, OB) {
-        return YB.__awaiter(this, void 0, void 0, (function*() {
-          const GB = (yield this.dbPromise).transaction("store", BB).objectStore("store");
-          return OB(GB)
+      tx(ee, ie) {
+        return ye.__awaiter(this, void 0, void 0, (function*() {
+          const He = (yield this.dbPromise).transaction("store", ee).objectStore("store");
+          return ie(He)
         }))
       }
-      setItem(BB, OB) {
-        return this.tx("readwrite", (GB => GB.put(OB, BB))).then()
+      setItem(ee, ie) {
+        return this.tx("readwrite", (He => He.put(ie, ee))).then()
       }
-      getItem(BB) {
-        return YB.__awaiter(this, void 0, void 0, (function*() {
-          const OB = yield this.tx("readonly", (OB => OB.get(BB)));
-          return new Promise((BB => {
-            OB.onsuccess = () => BB(OB.result)
+      getItem(ee) {
+        return ye.__awaiter(this, void 0, void 0, (function*() {
+          const ie = yield this.tx("readonly", (ie => ie.get(ee)));
+          return new Promise((ee => {
+            ie.onsuccess = () => ee(ie.result)
           }))
         }))
       }
-      removeItem(BB) {
-        return this.tx("readwrite", (OB => OB.delete(BB))).then()
+      removeItem(ee) {
+        return this.tx("readwrite", (ie => ie.delete(ee))).then()
       }
     }
-    OB.getItem = function(BB, OB) {
-      const GB = QB().getItem(BB);
-      "undefined" !== typeof Promise && GB instanceof Promise ? GB.then((BB => OB(BB))) : OB(GB)
-    }, OB.removeItem = function(BB) {
-      QB().removeItem(BB)
-    }, OB.setItem = function(BB, OB) {
-      QB().setItem(BB, OB)
+    ie.getItem = function(ee, ie) {
+      const He = Me().getItem(ee);
+      "undefined" !== typeof Promise && He instanceof Promise ? He.then((ee => ie(ee))) : ie(He)
+    }, ie.removeItem = function(ee) {
+      Me().removeItem(ee)
+    }, ie.setItem = function(ee, ie) {
+      Me().setItem(ee, ie)
     }
   },
-  9861: (BB, OB) => {
-    OB.createNanoEvents = () => ({
-      emit(BB) {
-        let OB = this.events[BB] || [];
-        for (var GB = arguments.length, YB = new Array(GB > 1 ? GB - 1 : 0), DB = 1; DB < GB; DB++) YB[DB - 1] = arguments[DB];
-        for (let QB = 0, oB = OB.length; QB < oB; QB++) OB[QB](...YB)
+  9901: (ee, ie) => {
+    ie.createNanoEvents = () => ({
+      emit(ee) {
+        let ie = this.events[ee] || [];
+        for (var He = arguments.length, ye = new Array(He > 1 ? He - 1 : 0), be = 1; be < He; be++) ye[be - 1] = arguments[be];
+        for (let Me = 0, Ke = ie.length; Me < Ke; Me++) ie[Me](...ye)
       },
       events: {},
-      on(BB, OB) {
-        var GB;
-        return (null === (GB = this.events[BB]) || void 0 === GB ? void 0 : GB.push(OB)) || (this.events[BB] = [OB]), () => {
-          var GB;
-          this.events[BB] = null === (GB = this.events[BB]) || void 0 === GB ? void 0 : GB.filter((BB => OB !== BB))
+      on(ee, ie) {
+        var He;
+        return (null === (He = this.events[ee]) || void 0 === He ? void 0 : He.push(ie)) || (this.events[ee] = [ie]), () => {
+          var He;
+          this.events[ee] = null === (He = this.events[ee]) || void 0 === He ? void 0 : He.filter((ee => ie !== ee))
         }
       }
     })
   },
-  9869: (BB, OB) => {
-    class GB {
+  9903: (ee, ie) => {
+    class He {
       constructor() {
         this.handlers = []
       }
-      register(BB) {
-        return this.handlers.push(BB), this
+      register(ee) {
+        return this.handlers.push(ee), this
       }
       invoke() {
-        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-        this.handlers.forEach((BB => BB.apply(this, OB)))
+        for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+        this.handlers.forEach((ee => ee.apply(this, ie)))
       }
       invokeAsync() {
-        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-        return Promise.all(this.handlers.map((BB => BB.apply(this, OB))))
+        for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+        return Promise.all(this.handlers.map((ee => ee.apply(this, ie))))
       }
-      remove(BB) {
-        const OB = this.handlers.indexOf(BB);
-        this.handlers[OB] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(ee) {
+        const ie = this.handlers.indexOf(ee);
+        this.handlers[ie] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    OB.EventEmitter = GB, OB.createSignal = function() {
-      const BB = new GB;
+    ie.EventEmitter = He, ie.createSignal = function() {
+      const ee = new He;
 
-      function OB(OB) {
-        return BB.register(OB, null === this)
+      function ie(ie) {
+        return ee.register(ie, null === this)
       }
-      return OB.once = OB => {
-        const GB = function() {
-          for (var YB = arguments.length, DB = new Array(YB), QB = 0; QB < YB; QB++) DB[QB] = arguments[QB];
-          OB.apply(this, DB), BB.remove(GB)
+      return ie.once = ie => {
+        const He = function() {
+          for (var ye = arguments.length, be = new Array(ye), Me = 0; Me < ye; Me++) be[Me] = arguments[Me];
+          ie.apply(this, be), ee.remove(He)
         };
-        BB.register(GB)
-      }, OB.remove = OB => BB.remove(OB), OB.invoke = function() {
-        return BB.invoke(...arguments)
-      }, OB.invokeAsync = function() {
-        return BB.invokeAsync(...arguments)
-      }, OB.clear = () => BB.clear(), OB
+        ee.register(He)
+      }, ie.remove = ie => ee.remove(ie), ie.invoke = function() {
+        return ee.invoke(...arguments)
+      }, ie.invokeAsync = function() {
+        return ee.invokeAsync(...arguments)
+      }, ie.clear = () => ee.clear(), ie
     }
   },
-  9807: (BB, OB) => {
-    var GB;
-    OB.CloseCode = void 0, (GB = OB.CloseCode || (OB.CloseCode = {}))[GB.CONSENTED = 4e3] = "CONSENTED", GB[GB.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class YB extends Error {
-      constructor(BB, OB) {
-        super(OB), this.name = "ServerError", this.code = BB
+  9851: (ee, ie) => {
+    var He;
+    ie.CloseCode = void 0, (He = ie.CloseCode || (ie.CloseCode = {}))[He.CONSENTED = 4e3] = "CONSENTED", He[He.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class ye extends Error {
+      constructor(ee, ie) {
+        super(ie), this.name = "ServerError", this.code = ee
       }
     }
-    class DB extends Error {
-      constructor(BB) {
-        super(BB), this.name = "AbortError"
+    class be extends Error {
+      constructor(ee) {
+        super(ee), this.name = "AbortError"
       }
     }
-    OB.AbortError = DB, OB.ServerError = YB
+    ie.AbortError = be, ie.ServerError = ye
   },
-  9784: (BB, OB, GB) => {
-    GB(9789);
-    var YB = GB(9796),
-      DB = GB(9849),
-      QB = GB(9811),
-      oB = GB(9891),
-      jB = GB(9807),
-      yB = GB(9871),
-      JB = GB(9915),
-      MB = GB(9852);
-    MB.registerSerializer("schema", yB.Am), MB.registerSerializer("none", JB.NoneSerializer), OB.Client = YB.Client, OB.MatchMakeError = YB.MatchMakeError, Object.defineProperty(OB, "ErrorCode", {
+  9834: (ee, ie, He) => {
+    He(9837);
+    var ye = He(9844),
+      be = He(9887),
+      Me = He(9860),
+      Ke = He(9928),
+      Ue = He(9851),
+      Fe = He(9912),
+      Je = He(9943),
+      oe = He(9893);
+    oe.registerSerializer("schema", Fe.tV), oe.registerSerializer("none", Je.NoneSerializer), ie.Client = ye.Client, ie.MatchMakeError = ye.MatchMakeError, Object.defineProperty(ie, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return DB.ErrorCode
+        return be.ErrorCode
       }
-    }), Object.defineProperty(OB, "Protocol", {
+    }), Object.defineProperty(ie, "Protocol", {
       enumerable: !0,
       get: function() {
-        return DB.Protocol
+        return be.Protocol
       }
-    }), OB.zz = QB.zz, OB.Auth = oB.Auth, OB.ServerError = jB.ServerError, OB.Am = yB.Am, OB.getStateCallbacks = yB.getStateCallbacks, OB.registerSerializer = MB.registerSerializer
+    }), ie.Wk = Me.Wk, ie.Auth = Ke.Auth, ie.ServerError = Ue.ServerError, ie.tV = Fe.tV, ie.getStateCallbacks = Fe.getStateCallbacks, ie.registerSerializer = oe.registerSerializer
   },
-  9789: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = BB => null !== BB && "object" === typeof BB && BB.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9837: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = ee => null !== ee && "object" === typeof ee && ee.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9915: (BB, OB) => {
-    OB.NoneSerializer = class {
-      setState(BB) {}
+  9943: (ee, ie) => {
+    ie.NoneSerializer = class {
+      setState(ee) {}
       getState() {
         return null
       }
-      patch(BB) {}
+      patch(ee) {}
       teardown() {}
-      handshake(BB) {}
+      handshake(ee) {}
     }
   },
-  9871: (BB, OB, GB) => {
-    var YB = GB(9828);
-    OB.Am = class {
-      setState(BB, OB) {
-        this.yP.decode(BB, OB)
+  9912: (ee, ie, He) => {
+    var ye = He(9870);
+    ie.tV = class {
+      setState(ee, ie) {
+        this.kR.decode(ee, ie)
       }
       getState() {
         return this.state
       }
-      patch(BB, OB) {
-        return this.yP.decode(BB, OB)
+      patch(ee, ie) {
+        return this.kR.decode(ee, ie)
       }
       teardown() {
-        this.yP.root.clearRefs()
+        this.kR.root.clearRefs()
       }
-      handshake(BB, OB) {
-        this.state ? (YB.Reflection.decode(BB, OB), this.yP = new YB.Decoder(this.state)) : (this.yP = YB.Reflection.decode(BB, OB), this.state = this.yP.state)
+      handshake(ee, ie) {
+        this.state ? (ye.Reflection.decode(ee, ie), this.kR = new ye.Decoder(this.state)) : (this.kR = ye.Reflection.decode(ee, ie), this.state = this.kR.state)
       }
-    }, OB.getStateCallbacks = function(BB) {
+    }, ie.getStateCallbacks = function(ee) {
       try {
-        return YB.getDecoderStateCallbacks(BB.FN.yP)
-      } catch (OB) {
+        return ye.getDecoderStateCallbacks(ee.YB.kR)
+      } catch (ie) {
         return
       }
     }
   },
-  9852: (BB, OB) => {
-    const GB = {};
-    OB.getSerializer = function(BB) {
-      const OB = GB[BB];
-      if (!OB) throw new Error("missing serializer: " + BB);
-      return OB
-    }, OB.registerSerializer = function(BB, OB) {
-      GB[BB] = OB
+  9893: (ee, ie) => {
+    const He = {};
+    ie.getSerializer = function(ee) {
+      const ie = He[ee];
+      if (!ie) throw new Error("missing serializer: " + ee);
+      return ie
+    }, ie.registerSerializer = function(ee, ie) {
+      He[ee] = ie
     }
   },
-  9819: (BB, OB, GB) => {
-    var YB = GB(9800),
-      DB = GB(9828);
-    OB.H3TransportTransport = class {
-      constructor(BB) {
-        this.events = BB, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9866: (ee, ie, He) => {
+    var ye = He(9849),
+      be = He(9870);
+    ie.H3TransportTransport = class {
+      constructor(ee) {
+        this.events = ee, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const GB = OB.fingerprint && {
+      connect(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const He = ie.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(OB.fingerprint).buffer
+            value: new Uint8Array(ie.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(BB, GB), this.wt.ready.then((BB => {
-          console.log("WebTransport ready!", BB), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((BB => {
-            this.reader = BB.value.readable.getReader(), this.writer = BB.value.writable.getWriter(), this.sendSeatReservation(OB.room.roomId, OB.sessionId, OB.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((BB => {
-            console.error("failed to read incoming stream", BB), console.error("TODO: close the connection")
+        this.wt = new WebTransport(ee, He), this.wt.ready.then((ee => {
+          console.log("WebTransport ready!", ee), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((ee => {
+            this.reader = ee.value.readable.getReader(), this.writer = ee.value.writable.getWriter(), this.sendSeatReservation(ie.room.roomId, ie.sessionId, ie.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((ee => {
+            console.error("failed to read incoming stream", ee), console.error("TODO: close the connection")
           }))
-        })).catch((BB => {
-          console.log("WebTransport not ready!", BB), this._close()
-        })), this.wt.closed.then((BB => {
-          console.log("WebTransport closed w/ success", BB), this.events.onclose({
-            code: BB.closeCode,
-            reason: BB.reason
+        })).catch((ee => {
+          console.log("WebTransport not ready!", ee), this._close()
+        })), this.wt.closed.then((ee => {
+          console.log("WebTransport closed w/ success", ee), this.events.onclose({
+            code: ee.closeCode,
+            reason: ee.reason
           })
-        })).catch((BB => {
-          console.log("WebTransport closed w/ error", BB), this.events.onerror(BB), this.events.onclose({
-            code: BB.closeCode,
-            reason: BB.reason
+        })).catch((ee => {
+          console.log("WebTransport closed w/ error", ee), this.events.onerror(ee), this.events.onclose({
+            code: ee.closeCode,
+            reason: ee.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(BB) {
-        const OB = DB.encode.number(this.lengthPrefixBuffer, BB.length, {
+      send(ee) {
+        const ie = be.encode.number(this.lengthPrefixBuffer, ee.length, {
             offset: 0
           }),
-          GB = new Uint8Array(OB + BB.length);
-        GB.set(this.lengthPrefixBuffer.subarray(0, OB), 0), GB.set(BB, OB), this.writer.write(GB)
+          He = new Uint8Array(ie + ee.length);
+        He.set(this.lengthPrefixBuffer.subarray(0, ie), 0), He.set(ee, ie), this.writer.write(He)
       }
-      sendUnreliable(BB) {
-        const OB = DB.encode.number(this.lengthPrefixBuffer, BB.length, {
+      sendUnreliable(ee) {
+        const ie = be.encode.number(this.lengthPrefixBuffer, ee.length, {
             offset: 0
           }),
-          GB = new Uint8Array(OB + BB.length);
-        GB.set(this.lengthPrefixBuffer.subarray(0, OB), 0), GB.set(BB, OB), this.unreliableWriter.write(GB)
+          He = new Uint8Array(ie + ee.length);
+        He.set(this.lengthPrefixBuffer.subarray(0, ie), 0), He.set(ee, ie), this.unreliableWriter.write(He)
       }
-      close(BB, OB) {
+      close(ee, ie) {
         try {
           this.wt.close({
-            closeCode: BB,
-            reason: OB
+            closeCode: ee,
+            reason: ie
           })
-        } catch (GB) {
-          console.error(GB)
+        } catch (He) {
+          console.error(He)
         }
       }
       readIncomingData() {
-        return YB.__awaiter(this, void 0, void 0, (function*() {
-          let BB;
+        return ye.__awaiter(this, void 0, void 0, (function*() {
+          let ee;
           for (; this.isOpen;) {
             try {
-              BB = yield this.reader.read();
-              const OB = BB.value,
-                GB = {
+              ee = yield this.reader.read();
+              const ie = ee.value,
+                He = {
                   offset: 0
                 };
               do {
-                const BB = DB.decode.number(OB, GB);
+                const ee = be.decode.number(ie, He);
                 this.events.onmessage({
-                  data: OB.subarray(GB.offset, GB.offset + BB)
-                }), GB.offset += BB
-              } while (GB.offset < OB.length)
-            } catch (OB) {
-              -1 === OB.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", OB);
+                  data: ie.subarray(He.offset, He.offset + ee)
+                }), He.offset += ee
+              } while (He.offset < ie.length)
+            } catch (ie) {
+              -1 === ie.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", ie);
               break
             }
-            if (BB.done) break
+            if (ee.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return YB.__awaiter(this, void 0, void 0, (function*() {
-          let BB;
+        return ye.__awaiter(this, void 0, void 0, (function*() {
+          let ee;
           for (; this.isOpen;) {
             try {
-              BB = yield this.unreliableReader.read();
-              const OB = BB.value,
-                GB = {
+              ee = yield this.unreliableReader.read();
+              const ie = ee.value,
+                He = {
                   offset: 0
                 };
               do {
-                const BB = DB.decode.number(OB, GB);
+                const ee = be.decode.number(ie, He);
                 this.events.onmessage({
-                  data: OB.subarray(GB.offset, GB.offset + BB)
-                }), GB.offset += BB
-              } while (GB.offset < OB.length)
-            } catch (OB) {
-              -1 === OB.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", OB);
+                  data: ie.subarray(He.offset, He.offset + ee)
+                }), He.offset += ee
+              } while (He.offset < ie.length)
+            } catch (ie) {
+              -1 === ie.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", ie);
               break
             }
-            if (BB.done) break
+            if (ee.done) break
           }
         }))
       }
-      sendSeatReservation(BB, OB, GB) {
-        const YB = {
+      sendSeatReservation(ee, ie, He) {
+        const ye = {
             offset: 0
           },
-          QB = [];
-        DB.encode.string(QB, BB, YB), DB.encode.string(QB, OB, YB), GB && DB.encode.string(QB, GB, YB), this.writer.write(new Uint8Array(QB).buffer)
+          Me = [];
+        be.encode.string(Me, ee, ye), be.encode.string(Me, ie, ye), He && be.encode.string(Me, He, ye), this.writer.write(new Uint8Array(Me).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9836: (BB, OB, GB) => {
-    var YB = GB(9844);
-    const DB = globalThis.WebSocket || YB;
-    OB.WebSocketTransport = class {
-      constructor(BB) {
-        this.events = BB
+  9877: (ee, ie, He) => {
+    var ye = He(9885);
+    const be = globalThis.WebSocket || ye;
+    ie.WebSocketTransport = class {
+      constructor(ee) {
+        this.events = ee
       }
-      send(BB) {
-        this.ws.send(BB)
+      send(ee) {
+        this.ws.send(ee)
       }
-      sendUnreliable(BB) {
+      sendUnreliable(ee) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(BB, OB) {
+      connect(ee, ie) {
         try {
-          this.ws = new DB(BB, {
-            headers: OB,
+          this.ws = new be(ee, {
+            headers: ie,
             protocols: this.protocols
           })
-        } catch (GB) {
-          this.ws = new DB(BB, this.protocols)
+        } catch (He) {
+          this.ws = new be(ee, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(BB, OB) {
-        this.ws.close(BB, OB)
+      close(ee, ie) {
+        this.ws.close(ee, ie)
       }
       get isOpen() {
-        return this.ws.readyState === DB.OPEN
+        return this.ws.readyState === be.OPEN
       }
     }
   },
-  9844: BB => {
-    BB.exports = function() {
+  9885: ee => {
+    ee.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9887: (BB, OB, GB) => {
-    function YB(BB, OB) {
-      OB.headers = BB.headers || {}, OB.statusMessage = BB.statusText, OB.statusCode = BB.status, OB.data = BB.response
+  9924: (ee, ie, He) => {
+    function ye(ee, ie) {
+      ie.headers = ee.headers || {}, ie.statusMessage = ee.statusText, ie.statusCode = ee.status, ie.data = ee.response
     }
 
-    function DB(BB, OB, GB) {
-      return new Promise((function(DB, QB) {
-        GB = GB || {};
-        var oB, jB, yB, JB = new XMLHttpRequest,
-          MB = GB.body,
-          PB = GB.headers || {};
-        for (oB in GB.timeout && (JB.timeout = GB.timeout), JB.ontimeout = JB.onerror = function(BB) {
-            BB.timeout = "timeout" == BB.type, QB(BB)
-          }, JB.onabort = function(BB) {
-            BB.aborted = !0, QB(BB)
-          }, JB.open(BB, OB.href || OB), JB.onload = function() {
-            for (yB = JB.getAllResponseHeaders().trim().split(/[\r\n]+/), YB(JB, JB); jB = yB.shift();) jB = jB.split(": "), JB.headers[jB.shift().toLowerCase()] = jB.join(": ");
-            if ((jB = JB.headers["content-type"]) && ~jB.indexOf("application/json")) try {
-              JB.data = JSON.parse(JB.data, GB.reviver)
-            } catch (BB) {
-              return YB(JB, BB), QB(BB)
-            }(JB.status >= 400 ? QB : DB)(JB)
-          }, typeof FormData < "u" && MB instanceof FormData || MB && "object" == typeof MB && (PB["content-type"] = "application/json", MB = JSON.stringify(MB)), JB.withCredentials = !!GB.withCredentials, PB) JB.setRequestHeader(oB, PB[oB]);
-        JB.send(MB), GB.signal && GB.signal.addEventListener("abort", (function() {
-          JB.abort()
+    function be(ee, ie, He) {
+      return new Promise((function(be, Me) {
+        He = He || {};
+        var Ke, Ue, Fe, Je = new XMLHttpRequest,
+          oe = He.body,
+          Re = He.headers || {};
+        for (Ke in He.timeout && (Je.timeout = He.timeout), Je.ontimeout = Je.onerror = function(ee) {
+            ee.timeout = "timeout" == ee.type, Me(ee)
+          }, Je.onabort = function(ee) {
+            ee.aborted = !0, Me(ee)
+          }, Je.open(ee, ie.href || ie), Je.onload = function() {
+            for (Fe = Je.getAllResponseHeaders().trim().split(/[\r\n]+/), ye(Je, Je); Ue = Fe.shift();) Ue = Ue.split(": "), Je.headers[Ue.shift().toLowerCase()] = Ue.join(": ");
+            if ((Ue = Je.headers["content-type"]) && ~Ue.indexOf("application/json")) try {
+              Je.data = JSON.parse(Je.data, He.reviver)
+            } catch (ee) {
+              return ye(Je, ee), Me(ee)
+            }(Je.status >= 400 ? Me : be)(Je)
+          }, typeof FormData < "u" && oe instanceof FormData || oe && "object" == typeof oe && (Re["content-type"] = "application/json", oe = JSON.stringify(oe)), Je.withCredentials = !!He.withCredentials, Re) Je.setRequestHeader(Ke, Re[Ke]);
+        Je.send(oe), He.signal && He.signal.addEventListener("abort", (function() {
+          Je.abort()
         }))
       }))
     }
-    GB.r(OB), GB.d(OB, {
-      del: () => yB,
-      get: () => QB,
-      patch: () => jB,
-      post: () => oB,
-      put: () => JB,
-      send: () => DB
+    He.r(ie), He.d(ie, {
+      del: () => Fe,
+      get: () => Me,
+      patch: () => Ue,
+      post: () => Ke,
+      put: () => Je,
+      send: () => be
     });
-    var QB = DB.bind(DB, "GET"),
-      oB = DB.bind(DB, "POST"),
-      jB = DB.bind(DB, "PATCH"),
-      yB = DB.bind(DB, "DELETE"),
-      JB = DB.bind(DB, "PUT")
+    var Me = be.bind(be, "GET"),
+      Ke = be.bind(be, "POST"),
+      Ue = be.bind(be, "PATCH"),
+      Fe = be.bind(be, "DELETE"),
+      Je = be.bind(be, "PUT")
   },
-  9878: (BB, OB, GB) => {
-    var YB, DB, QB;
-    GB.r(OB), GB.d(OB, {
-      ALWAYS: () => bO,
-      C1: () => VB,
-      DECIMAL_FIT: () => HO,
-      DECIMAL_ROUND: () => CO,
-      Decoder: () => yO,
-      Encoder: () => eO,
-      FLOAT32_OPTIONS: () => lO,
-      NEVER: () => TO,
-      Packr: () => iO,
-      RESERVE_START_SPACE: () => xO,
-      RESET_BUFFER_MODE: () => sO,
-      REUSE_BUFFER_MODE: () => vO,
-      Unpackr: () => dB,
-      addExtension: () => wO,
-      clearSource: () => oO,
-      decode: () => zO,
-      decodeIter: () => tO,
-      encode: () => aO,
-      encodeIter: () => BG,
-      isNativeAccelerationEnabled: () => EB,
-      mapsAsObjects: () => GG,
-      pack: () => hO,
-      roundFloat32: () => WO,
-      unpack: () => MO,
-      unpackMultiple: () => PO,
-      useRecords: () => OG
+  9918: (ee, ie, He) => {
+    var ye, be, Me;
+    He.r(ie), He.d(ie, {
+      ALWAYS: () => Ii,
+      C1: () => ge,
+      DECIMAL_FIT: () => Gi,
+      DECIMAL_ROUND: () => Ni,
+      Decoder: () => Fi,
+      Encoder: () => ji,
+      FLOAT32_OPTIONS: () => qi,
+      NEVER: () => si,
+      Packr: () => ci,
+      RESERVE_START_SPACE: () => eH,
+      RESET_BUFFER_MODE: () => Qi,
+      REUSE_BUFFER_MODE: () => ri,
+      Unpackr: () => we,
+      addExtension: () => ui,
+      clearSource: () => Ki,
+      decode: () => ki,
+      decodeIter: () => iH,
+      encode: () => ni,
+      encodeIter: () => HH,
+      isNativeAccelerationEnabled: () => ue,
+      mapsAsObjects: () => bH,
+      pack: () => Si,
+      roundFloat32: () => Ei,
+      unpack: () => oi,
+      unpackMultiple: () => Ri,
+      useRecords: () => yH
     });
     try {
-      YB = new TextDecoder
-    } catch (YG) {}
-    var oB = 0;
-    const jB = [];
-    var yB, JB, MB, PB, zB, lB = jB,
-      pB = 0,
-      qB = {},
-      ZB = 0,
-      NB = 0,
-      RB = [],
-      WB = {
+      ye = new TextDecoder
+    } catch (MH) {}
+    var Ke = 0;
+    const Ue = [];
+    var Fe, Je, oe, Re, ke, qe = Ue,
+      fe = 0,
+      Te = {},
+      pe = 0,
+      Xe = 0,
+      ze = [],
+      Be = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class AB {}
-    const VB = new AB;
-    VB.name = "MessagePack 0xC1";
-    var SB, nB, UB, fB = !1,
-      kB = 2;
+    class Ee {}
+    const ge = new Ee;
+    ge.name = "MessagePack 0xC1";
+    var Oe, de, We, te = !1,
+      Ze = 2;
     try {
       new Function("")
-    } catch (YG) {
-      kB = 1 / 0
+    } catch (MH) {
+      Ze = 1 / 0
     }
-    class dB {
-      constructor(BB) {
-        BB && (!1 === BB.useRecords && void 0 === BB.mapsAsObjects && (BB.mapsAsObjects = !0), BB.sequential && !1 !== BB.trusted && (BB.trusted = !0, BB.structures || 0 == BB.useRecords || (BB.structures = [], BB.maxSharedStructures || (BB.maxSharedStructures = 0))), BB.structures ? BB.structures.sharedLength = BB.structures.length : BB.getStructures && ((BB.structures = []).uninitialized = !0, BB.structures.sharedLength = 0), BB.int64AsNumber && (BB.int64AsType = "number")), Object.assign(this, BB)
+    class we {
+      constructor(ee) {
+        ee && (!1 === ee.useRecords && void 0 === ee.mapsAsObjects && (ee.mapsAsObjects = !0), ee.sequential && !1 !== ee.trusted && (ee.trusted = !0, ee.structures || 0 == ee.useRecords || (ee.structures = [], ee.maxSharedStructures || (ee.maxSharedStructures = 0))), ee.structures ? ee.structures.sharedLength = ee.structures.length : ee.getStructures && ((ee.structures = []).uninitialized = !0, ee.structures.sharedLength = 0), ee.int64AsNumber && (ee.int64AsType = "number")), Object.assign(this, ee)
       }
-      unpack(BB, OB) {
-        if (DB) return QO((() => (oO(), this ? this.unpack(BB, OB) : dB.prototype.unpack.call(WB, BB, OB))));
-        BB.buffer || BB.constructor !== ArrayBuffer || (BB = "undefined" !== typeof Buffer ? Buffer.from(BB) : new Uint8Array(BB)), "object" === typeof OB ? (QB = OB.end || BB.length, oB = OB.start || 0) : (oB = 0, QB = OB > -1 ? OB : BB.length), pB = 0, NB = 0, JB = null, lB = jB, MB = null, DB = BB;
+      unpack(ee, ie) {
+        if (be) return Mi((() => (Ki(), this ? this.unpack(ee, ie) : we.prototype.unpack.call(Be, ee, ie))));
+        ee.buffer || ee.constructor !== ArrayBuffer || (ee = "undefined" !== typeof Buffer ? Buffer.from(ee) : new Uint8Array(ee)), "object" === typeof ie ? (Me = ie.end || ee.length, Ke = ie.start || 0) : (Ke = 0, Me = ie > -1 ? ie : ee.length), fe = 0, Xe = 0, Je = null, qe = Ue, oe = null, be = ee;
         try {
-          zB = BB.dataView || (BB.dataView = new DataView(BB.buffer, BB.byteOffset, BB.byteLength))
-        } catch (YG) {
-          if (DB = null, BB instanceof Uint8Array) throw YG;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (BB && "object" == typeof BB ? BB.constructor.name : typeof BB))
+          ke = ee.dataView || (ee.dataView = new DataView(ee.buffer, ee.byteOffset, ee.byteLength))
+        } catch (MH) {
+          if (be = null, ee instanceof Uint8Array) throw MH;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (ee && "object" == typeof ee ? ee.constructor.name : typeof ee))
         }
-        if (this instanceof dB) {
-          if (qB = this, this.structures) return yB = this.structures, KB(OB);
-          (!yB || yB.length > 0) && (yB = [])
-        } else qB = WB, (!yB || yB.length > 0) && (yB = []);
-        return KB(OB)
+        if (this instanceof we) {
+          if (Te = this, this.structures) return Fe = this.structures, De(ie);
+          (!Fe || Fe.length > 0) && (Fe = [])
+        } else Te = Be, (!Fe || Fe.length > 0) && (Fe = []);
+        return De(ie)
       }
-      unpackMultiple(BB, OB) {
-        let GB, YB = 0;
+      unpackMultiple(ee, ie) {
+        let He, ye = 0;
         try {
-          fB = !0;
-          let DB = BB.length,
-            QB = this ? this.unpack(BB, DB) : JO.unpack(BB, DB);
-          if (!OB) {
-            for (GB = [QB]; oB < DB;) YB = oB, GB.push(KB());
-            return GB
+          te = !0;
+          let be = ee.length,
+            Me = this ? this.unpack(ee, be) : Ji.unpack(ee, be);
+          if (!ie) {
+            for (He = [Me]; Ke < be;) ye = Ke, He.push(De());
+            return He
           }
-          if (!1 === OB(QB, YB, oB)) return;
-          for (; oB < DB;)
-            if (YB = oB, !1 === OB(KB(), YB, oB)) return
-        } catch (YG) {
-          throw YG.lastPosition = YB, YG.values = GB, YG
+          if (!1 === ie(Me, ye, Ke)) return;
+          for (; Ke < be;)
+            if (ye = Ke, !1 === ie(De(), ye, Ke)) return
+        } catch (MH) {
+          throw MH.lastPosition = ye, MH.values = He, MH
         } finally {
-          fB = !1, oO()
+          te = !1, Ki()
         }
       }
-      _mergeStructures(BB, OB) {
-        nB && (BB = nB.call(this, BB)), BB = BB || [], Object.isFrozen(BB) && (BB = BB.map((BB => BB.slice(0))));
-        for (let GB = 0, YB = BB.length; GB < YB; GB++) {
-          let OB = BB[GB];
-          OB && (OB.isShared = !0, GB >= 32 && (OB.highByte = GB - 32 >> 5))
+      _mergeStructures(ee, ie) {
+        de && (ee = de.call(this, ee)), ee = ee || [], Object.isFrozen(ee) && (ee = ee.map((ee => ee.slice(0))));
+        for (let He = 0, ye = ee.length; He < ye; He++) {
+          let ie = ee[He];
+          ie && (ie.isShared = !0, He >= 32 && (ie.highByte = He - 32 >> 5))
         }
-        BB.sharedLength = BB.length;
-        for (let GB in OB || [])
-          if (GB >= 0) {
-            let YB = BB[GB],
-              DB = OB[GB];
-            DB && (YB && ((BB.restoreStructures || (BB.restoreStructures = []))[GB] = YB), BB[GB] = DB)
-          } return this.structures = BB
+        ee.sharedLength = ee.length;
+        for (let He in ie || [])
+          if (He >= 0) {
+            let ye = ee[He],
+              be = ie[He];
+            be && (ye && ((ee.restoreStructures || (ee.restoreStructures = []))[He] = ye), ee[He] = be)
+          } return this.structures = ee
       }
-      decode(BB, OB) {
-        return this.unpack(BB, OB)
+      decode(ee, ie) {
+        return this.unpack(ee, ie)
       }
     }
 
-    function KB(BB) {
+    function De(ee) {
       try {
-        if (!qB.trusted && !fB) {
-          let BB = yB.sharedLength || 0;
-          BB < yB.length && (yB.length = BB)
+        if (!Te.trusted && !te) {
+          let ee = Fe.sharedLength || 0;
+          ee < Fe.length && (Fe.length = ee)
         }
-        let OB;
-        if (qB.randomAccessStructure && DB[oB] < 64 && DB[oB] >= 32 && SB ? (OB = SB(DB, oB, QB, qB), DB = null, BB && BB.lazy || !OB || (OB = OB.toJSON()), oB = QB) : OB = mB(), MB && (oB = MB.postBundlePosition, MB = null), fB && (yB.restoreStructures = null), oB == QB) yB && yB.restoreStructures && uB(), yB = null, DB = null, PB && (PB = null);
+        let ie;
+        if (Te.randomAccessStructure && be[Ke] < 64 && be[Ke] >= 32 && Oe ? (ie = Oe(be, Ke, Me, Te), be = null, ee && ee.lazy || !ie || (ie = ie.toJSON()), Ke = Me) : ie = Ae(), oe && (Ke = oe.postBundlePosition, oe = null), te && (Fe.restoreStructures = null), Ke == Me) Fe && Fe.restoreStructures && Pe(), Fe = null, be = null, Re && (Re = null);
         else {
-          if (oB > QB) throw new Error("Unexpected end of MessagePack data");
-          if (!fB) {
-            let BB;
+          if (Ke > Me) throw new Error("Unexpected end of MessagePack data");
+          if (!te) {
+            let ee;
             try {
-              BB = JSON.stringify(OB, ((BB, OB) => "bigint" === typeof OB ? `${OB}n` : OB)).slice(0, 100)
-            } catch (YG) {
-              BB = "(JSON view not available " + YG + ")"
+              ee = JSON.stringify(ie, ((ee, ie) => "bigint" === typeof ie ? `${ie}n` : ie)).slice(0, 100)
+            } catch (MH) {
+              ee = "(JSON view not available " + MH + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + BB)
+            throw new Error("Data read, but end of buffer not reached " + ee)
           }
         }
-        return OB
-      } catch (YG) {
-        throw yB && yB.restoreStructures && uB(), oO(), (YG instanceof RangeError || YG.message.startsWith("Unexpected end of buffer") || oB > QB) && (YG.incomplete = !0), YG
+        return ie
+      } catch (MH) {
+        throw Fe && Fe.restoreStructures && Pe(), Ki(), (MH instanceof RangeError || MH.message.startsWith("Unexpected end of buffer") || Ke > Me) && (MH.incomplete = !0), MH
       }
     }
 
-    function uB() {
-      for (let BB in yB.restoreStructures) yB[BB] = yB.restoreStructures[BB];
-      yB.restoreStructures = null
+    function Pe() {
+      for (let ee in Fe.restoreStructures) Fe[ee] = Fe.restoreStructures[ee];
+      Fe.restoreStructures = null
     }
 
-    function mB() {
-      let BB = DB[oB++];
-      if (BB < 160) {
-        if (BB < 128) {
-          if (BB < 64) return BB;
+    function Ae() {
+      let ee = be[Ke++];
+      if (ee < 160) {
+        if (ee < 128) {
+          if (ee < 64) return ee;
           {
-            let OB = yB[63 & BB] || qB.getStructures && LB()[63 & BB];
-            return OB ? (OB.read || (OB.read = FB(OB, 63 & BB)), OB.read()) : BB
+            let ie = Fe[63 & ee] || Te.getStructures && ce()[63 & ee];
+            return ie ? (ie.read || (ie.read = Ve(ie, 63 & ee)), ie.read()) : ee
           }
         }
-        if (BB < 144) {
-          if (BB -= 128, qB.mapsAsObjects) {
-            let OB = {};
-            for (let GB = 0; GB < BB; GB++) {
-              let BB = xB();
-              "__proto__" === BB && (BB = "__proto_"), OB[BB] = mB()
+        if (ee < 144) {
+          if (ee -= 128, Te.mapsAsObjects) {
+            let ie = {};
+            for (let He = 0; He < ee; He++) {
+              let ee = re();
+              "__proto__" === ee && (ee = "__proto_"), ie[ee] = Ae()
             }
-            return OB
+            return ie
           } {
-            let OB = new Map;
-            for (let GB = 0; GB < BB; GB++) OB.set(mB(), mB());
-            return OB
+            let ie = new Map;
+            for (let He = 0; He < ee; He++) ie.set(Ae(), Ae());
+            return ie
           }
         } {
-          BB -= 144;
-          let OB = new Array(BB);
-          for (let GB = 0; GB < BB; GB++) OB[GB] = mB();
-          return qB.freezeData ? Object.freeze(OB) : OB
+          ee -= 144;
+          let ie = new Array(ee);
+          for (let He = 0; He < ee; He++) ie[He] = Ae();
+          return Te.freezeData ? Object.freeze(ie) : ie
         }
       }
-      if (BB < 192) {
-        let OB = BB - 160;
-        if (NB >= oB) return JB.slice(oB - ZB, (oB += OB) - ZB);
-        if (0 == NB && QB < 140) {
-          let BB = OB < 16 ? bB(OB) : TB(OB);
-          if (null != BB) return BB
+      if (ee < 192) {
+        let ie = ee - 160;
+        if (Xe >= Ke) return Je.slice(Ke - pe, (Ke += ie) - pe);
+        if (0 == Xe && Me < 140) {
+          let ee = ie < 16 ? se(ie) : je(ie);
+          if (null != ee) return ee
         }
-        return gB(OB)
+        return xe(ie)
       } {
-        let OB;
-        switch (BB) {
+        let ie;
+        switch (ee) {
           case 192:
             return null;
           case 193:
-            return MB ? (OB = mB(), OB > 0 ? MB[1].slice(MB.position1, MB.position1 += OB) : MB[0].slice(MB.position0, MB.position0 -= OB)) : VB;
+            return oe ? (ie = Ae(), ie > 0 ? oe[1].slice(oe.position1, oe.position1 += ie) : oe[0].slice(oe.position0, oe.position0 -= ie)) : ge;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (OB = DB[oB++], void 0 === OB) throw new Error("Unexpected end of buffer");
-            return HB(OB);
+            if (ie = be[Ke++], void 0 === ie) throw new Error("Unexpected end of buffer");
+            return he(ie);
           case 197:
-            return OB = zB.getUint16(oB), oB += 2, HB(OB);
+            return ie = ke.getUint16(Ke), Ke += 2, he(ie);
           case 198:
-            return OB = zB.getUint32(oB), oB += 4, HB(OB);
+            return ie = ke.getUint32(Ke), Ke += 4, he(ie);
           case 199:
-            return vB(DB[oB++]);
+            return Ne(be[Ke++]);
           case 200:
-            return OB = zB.getUint16(oB), oB += 2, vB(OB);
+            return ie = ke.getUint16(Ke), Ke += 2, Ne(ie);
           case 201:
-            return OB = zB.getUint32(oB), oB += 4, vB(OB);
+            return ie = ke.getUint32(Ke), Ke += 4, Ne(ie);
           case 202:
-            if (OB = zB.getFloat32(oB), qB.useFloat32 > 2) {
-              let BB = jO[(127 & DB[oB]) << 1 | DB[oB + 1] >> 7];
-              return oB += 4, (BB * OB + (OB > 0 ? .5 : -.5) | 0) / BB
+            if (ie = ke.getFloat32(Ke), Te.useFloat32 > 2) {
+              let ee = Ui[(127 & be[Ke]) << 1 | be[Ke + 1] >> 7];
+              return Ke += 4, (ee * ie + (ie > 0 ? .5 : -.5) | 0) / ee
             }
-            return oB += 4, OB;
+            return Ke += 4, ie;
           case 203:
-            return OB = zB.getFloat64(oB), oB += 8, OB;
+            return ie = ke.getFloat64(Ke), Ke += 8, ie;
           case 204:
-            return DB[oB++];
+            return be[Ke++];
           case 205:
-            return OB = zB.getUint16(oB), oB += 2, OB;
+            return ie = ke.getUint16(Ke), Ke += 2, ie;
           case 206:
-            return OB = zB.getUint32(oB), oB += 4, OB;
+            return ie = ke.getUint32(Ke), Ke += 4, ie;
           case 207:
-            return "number" === qB.int64AsType ? (OB = 4294967296 * zB.getUint32(oB), OB += zB.getUint32(oB + 4)) : "string" === qB.int64AsType ? OB = zB.getBigUint64(oB).toString() : "auto" === qB.int64AsType ? (OB = zB.getBigUint64(oB), OB <= BigInt(2) << BigInt(52) && (OB = Number(OB))) : OB = zB.getBigUint64(oB), oB += 8, OB;
+            return "number" === Te.int64AsType ? (ie = 4294967296 * ke.getUint32(Ke), ie += ke.getUint32(Ke + 4)) : "string" === Te.int64AsType ? ie = ke.getBigUint64(Ke).toString() : "auto" === Te.int64AsType ? (ie = ke.getBigUint64(Ke), ie <= BigInt(2) << BigInt(52) && (ie = Number(ie))) : ie = ke.getBigUint64(Ke), Ke += 8, ie;
           case 208:
-            return zB.getInt8(oB++);
+            return ke.getInt8(Ke++);
           case 209:
-            return OB = zB.getInt16(oB), oB += 2, OB;
+            return ie = ke.getInt16(Ke), Ke += 2, ie;
           case 210:
-            return OB = zB.getInt32(oB), oB += 4, OB;
+            return ie = ke.getInt32(Ke), Ke += 4, ie;
           case 211:
-            return "number" === qB.int64AsType ? (OB = 4294967296 * zB.getInt32(oB), OB += zB.getUint32(oB + 4)) : "string" === qB.int64AsType ? OB = zB.getBigInt64(oB).toString() : "auto" === qB.int64AsType ? (OB = zB.getBigInt64(oB), OB >= BigInt(-2) << BigInt(52) && OB <= BigInt(2) << BigInt(52) && (OB = Number(OB))) : OB = zB.getBigInt64(oB), oB += 8, OB;
+            return "number" === Te.int64AsType ? (ie = 4294967296 * ke.getInt32(Ke), ie += ke.getUint32(Ke + 4)) : "string" === Te.int64AsType ? ie = ke.getBigInt64(Ke).toString() : "auto" === Te.int64AsType ? (ie = ke.getBigInt64(Ke), ie >= BigInt(-2) << BigInt(52) && ie <= BigInt(2) << BigInt(52) && (ie = Number(ie))) : ie = ke.getBigInt64(Ke), Ke += 8, ie;
           case 212:
-            if (OB = DB[oB++], 114 == OB) return BO(63 & DB[oB++]);
+            if (ie = be[Ke++], 114 == ie) return ei(63 & be[Ke++]);
             {
-              let BB = RB[OB];
-              if (BB) return BB.read ? (oB++, BB.read(mB())) : BB.noBuffer ? (oB++, BB()) : BB(DB.subarray(oB, ++oB));
-              throw new Error("Unknown extension " + OB)
+              let ee = ze[ie];
+              if (ee) return ee.read ? (Ke++, ee.read(Ae())) : ee.noBuffer ? (Ke++, ee()) : ee(be.subarray(Ke, ++Ke));
+              throw new Error("Unknown extension " + ie)
             }
           case 213:
-            return OB = DB[oB], 114 == OB ? (oB++, BO(63 & DB[oB++], DB[oB++])) : vB(2);
+            return ie = be[Ke], 114 == ie ? (Ke++, ei(63 & be[Ke++], be[Ke++])) : Ne(2);
           case 214:
-            return vB(4);
+            return Ne(4);
           case 215:
-            return vB(8);
+            return Ne(8);
           case 216:
-            return vB(16);
+            return Ne(16);
           case 217:
-            return OB = DB[oB++], NB >= oB ? JB.slice(oB - ZB, (oB += OB) - ZB) : rB(OB);
+            return ie = be[Ke++], Xe >= Ke ? Je.slice(Ke - pe, (Ke += ie) - pe) : Le(ie);
           case 218:
-            return OB = zB.getUint16(oB), NB >= (oB += 2) ? JB.slice(oB - ZB, (oB += OB) - ZB) : XB(OB);
+            return ie = ke.getUint16(Ke), Xe >= (Ke += 2) ? Je.slice(Ke - pe, (Ke += ie) - pe) : Ce(ie);
           case 219:
-            return OB = zB.getUint32(oB), NB >= (oB += 4) ? JB.slice(oB - ZB, (oB += OB) - ZB) : wB(OB);
+            return ie = ke.getUint32(Ke), Xe >= (Ke += 4) ? Je.slice(Ke - pe, (Ke += ie) - pe) : ve(ie);
           case 220:
-            return OB = zB.getUint16(oB), oB += 2, hB(OB);
+            return ie = ke.getUint16(Ke), Ke += 2, le(ie);
           case 221:
-            return OB = zB.getUint32(oB), oB += 4, hB(OB);
+            return ie = ke.getUint32(Ke), Ke += 4, le(ie);
           case 222:
-            return OB = zB.getUint16(oB), oB += 2, aB(OB);
+            return ie = ke.getUint16(Ke), Ke += 2, Se(ie);
           case 223:
-            return OB = zB.getUint32(oB), oB += 4, aB(OB);
+            return ie = ke.getUint32(Ke), Ke += 4, Se(ie);
           default:
-            if (BB >= 224) return BB - 256;
-            if (void 0 === BB) {
-              let BB = new Error("Unexpected end of MessagePack data");
-              throw BB.incomplete = !0, BB
+            if (ee >= 224) return ee - 256;
+            if (void 0 === ee) {
+              let ee = new Error("Unexpected end of MessagePack data");
+              throw ee.incomplete = !0, ee
             }
-            throw new Error("Unknown MessagePack token " + BB)
+            throw new Error("Unknown MessagePack token " + ee)
         }
       }
     }
-    const IB = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Ye = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function FB(BB, OB) {
-      function GB() {
-        if (GB.count++ > kB) {
-          let GB = BB.read = new Function("r", "return function(){return " + (qB.freezeData ? "Object.freeze" : "") + "({" + BB.map((BB => "__proto__" === BB ? "__proto_:r()" : IB.test(BB) ? BB + ":r()" : "[" + JSON.stringify(BB) + "]:r()")).join(",") + "})}")(mB);
-          return 0 === BB.highByte && (BB.read = iB(OB, BB.read)), GB()
+    function Ve(ee, ie) {
+      function He() {
+        if (He.count++ > Ze) {
+          let He = ee.read = new Function("r", "return function(){return " + (Te.freezeData ? "Object.freeze" : "") + "({" + ee.map((ee => "__proto__" === ee ? "__proto_:r()" : Ye.test(ee) ? ee + ":r()" : "[" + JSON.stringify(ee) + "]:r()")).join(",") + "})}")(Ae);
+          return 0 === ee.highByte && (ee.read = ae(ie, ee.read)), He()
         }
-        let YB = {};
-        for (let OB = 0, GB = BB.length; OB < GB; OB++) {
-          let GB = BB[OB];
-          "__proto__" === GB && (GB = "__proto_"), YB[GB] = mB()
+        let ye = {};
+        for (let ie = 0, He = ee.length; ie < He; ie++) {
+          let He = ee[ie];
+          "__proto__" === He && (He = "__proto_"), ye[He] = Ae()
         }
-        return qB.freezeData ? Object.freeze(YB) : YB
+        return Te.freezeData ? Object.freeze(ye) : ye
       }
-      return GB.count = 0, 0 === BB.highByte ? iB(OB, GB) : GB
+      return He.count = 0, 0 === ee.highByte ? ae(ie, He) : He
     }
-    const iB = (BB, OB) => function() {
-      let GB = DB[oB++];
-      if (0 === GB) return OB();
-      let YB = BB < 32 ? -(BB + (GB << 5)) : BB + (GB << 5),
-        QB = yB[YB] || LB()[YB];
-      if (!QB) throw new Error("Record id is not defined for " + YB);
-      return QB.read || (QB.read = FB(QB, BB)), QB.read()
+    const ae = (ee, ie) => function() {
+      let He = be[Ke++];
+      if (0 === He) return ie();
+      let ye = ee < 32 ? -(ee + (He << 5)) : ee + (He << 5),
+        Me = Fe[ye] || ce()[ye];
+      if (!Me) throw new Error("Record id is not defined for " + ye);
+      return Me.read || (Me.read = Ve(Me, ee)), Me.read()
     };
 
-    function LB() {
-      let BB = QO((() => (DB = null, qB.getStructures())));
-      return yB = qB._mergeStructures(BB, yB)
+    function ce() {
+      let ee = Mi((() => (be = null, Te.getStructures())));
+      return Fe = Te._mergeStructures(ee, Fe)
     }
-    var gB = cB,
-      rB = cB,
-      XB = cB,
-      wB = cB;
-    let EB = !1;
+    var xe = me,
+      Le = me,
+      Ce = me,
+      ve = me;
+    let ue = !1;
 
-    function cB(BB) {
-      let OB;
-      if (BB < 16 && (OB = bB(BB))) return OB;
-      if (BB > 64 && YB) return YB.decode(DB.subarray(oB, oB += BB));
-      const GB = oB + BB,
-        QB = [];
-      for (OB = ""; oB < GB;) {
-        const BB = DB[oB++];
-        if (0 === (128 & BB)) QB.push(BB);
-        else if (192 === (224 & BB)) {
-          const OB = 63 & DB[oB++];
-          QB.push((31 & BB) << 6 | OB)
-        } else if (224 === (240 & BB)) {
-          const OB = 63 & DB[oB++],
-            GB = 63 & DB[oB++];
-          QB.push((31 & BB) << 12 | OB << 6 | GB)
-        } else if (240 === (248 & BB)) {
-          let OB = (7 & BB) << 18 | (63 & DB[oB++]) << 12 | (63 & DB[oB++]) << 6 | 63 & DB[oB++];
-          OB > 65535 && (OB -= 65536, QB.push(OB >>> 10 & 1023 | 55296), OB = 56320 | 1023 & OB), QB.push(OB)
-        } else QB.push(BB);
-        QB.length >= 4096 && (OB += eB.apply(String, QB), QB.length = 0)
+    function me(ee) {
+      let ie;
+      if (ee < 16 && (ie = se(ee))) return ie;
+      if (ee > 64 && ye) return ye.decode(be.subarray(Ke, Ke += ee));
+      const He = Ke + ee,
+        Me = [];
+      for (ie = ""; Ke < He;) {
+        const ee = be[Ke++];
+        if (0 === (128 & ee)) Me.push(ee);
+        else if (192 === (224 & ee)) {
+          const ie = 63 & be[Ke++];
+          Me.push((31 & ee) << 6 | ie)
+        } else if (224 === (240 & ee)) {
+          const ie = 63 & be[Ke++],
+            He = 63 & be[Ke++];
+          Me.push((31 & ee) << 12 | ie << 6 | He)
+        } else if (240 === (248 & ee)) {
+          let ie = (7 & ee) << 18 | (63 & be[Ke++]) << 12 | (63 & be[Ke++]) << 6 | 63 & be[Ke++];
+          ie > 65535 && (ie -= 65536, Me.push(ie >>> 10 & 1023 | 55296), ie = 56320 | 1023 & ie), Me.push(ie)
+        } else Me.push(ee);
+        Me.length >= 4096 && (ie += ne.apply(String, Me), Me.length = 0)
       }
-      return QB.length > 0 && (OB += eB.apply(String, QB)), OB
+      return Me.length > 0 && (ie += ne.apply(String, Me)), ie
     }
 
-    function hB(BB) {
-      let OB = new Array(BB);
-      for (let GB = 0; GB < BB; GB++) OB[GB] = mB();
-      return qB.freezeData ? Object.freeze(OB) : OB
+    function le(ee) {
+      let ie = new Array(ee);
+      for (let He = 0; He < ee; He++) ie[He] = Ae();
+      return Te.freezeData ? Object.freeze(ie) : ie
     }
 
-    function aB(BB) {
-      if (qB.mapsAsObjects) {
-        let OB = {};
-        for (let GB = 0; GB < BB; GB++) {
-          let BB = xB();
-          "__proto__" === BB && (BB = "__proto_"), OB[BB] = mB()
+    function Se(ee) {
+      if (Te.mapsAsObjects) {
+        let ie = {};
+        for (let He = 0; He < ee; He++) {
+          let ee = re();
+          "__proto__" === ee && (ee = "__proto_"), ie[ee] = Ae()
         }
-        return OB
+        return ie
       } {
-        let OB = new Map;
-        for (let GB = 0; GB < BB; GB++) OB.set(mB(), mB());
-        return OB
+        let ie = new Map;
+        for (let He = 0; He < ee; He++) ie.set(Ae(), Ae());
+        return ie
       }
     }
-    var eB = String.fromCharCode;
+    var ne = String.fromCharCode;
 
-    function TB(BB) {
-      let OB = oB,
-        GB = new Array(BB);
-      for (let YB = 0; YB < BB; YB++) {
-        const BB = DB[oB++];
-        if ((128 & BB) > 0) return void(oB = OB);
-        GB[YB] = BB
+    function je(ee) {
+      let ie = Ke,
+        He = new Array(ee);
+      for (let ye = 0; ye < ee; ye++) {
+        const ee = be[Ke++];
+        if ((128 & ee) > 0) return void(Ke = ie);
+        He[ye] = ee
       }
-      return eB.apply(String, GB)
+      return ne.apply(String, He)
     }
 
-    function bB(BB) {
-      if (BB < 4) {
-        if (BB < 2) {
-          if (0 === BB) return "";
+    function se(ee) {
+      if (ee < 4) {
+        if (ee < 2) {
+          if (0 === ee) return "";
           {
-            let BB = DB[oB++];
-            return (128 & BB) > 1 ? void(oB -= 1) : eB(BB)
+            let ee = be[Ke++];
+            return (128 & ee) > 1 ? void(Ke -= 1) : ne(ee)
           }
         } {
-          let OB = DB[oB++],
-            GB = DB[oB++];
-          if ((128 & OB) > 0 || (128 & GB) > 0) return void(oB -= 2);
-          if (BB < 3) return eB(OB, GB);
-          let YB = DB[oB++];
-          return (128 & YB) > 0 ? void(oB -= 3) : eB(OB, GB, YB)
+          let ie = be[Ke++],
+            He = be[Ke++];
+          if ((128 & ie) > 0 || (128 & He) > 0) return void(Ke -= 2);
+          if (ee < 3) return ne(ie, He);
+          let ye = be[Ke++];
+          return (128 & ye) > 0 ? void(Ke -= 3) : ne(ie, He, ye)
         }
       } {
-        let OB = DB[oB++],
-          GB = DB[oB++],
-          YB = DB[oB++],
-          QB = DB[oB++];
-        if ((128 & OB) > 0 || (128 & GB) > 0 || (128 & YB) > 0 || (128 & QB) > 0) return void(oB -= 4);
-        if (BB < 6) {
-          if (4 === BB) return eB(OB, GB, YB, QB);
+        let ie = be[Ke++],
+          He = be[Ke++],
+          ye = be[Ke++],
+          Me = be[Ke++];
+        if ((128 & ie) > 0 || (128 & He) > 0 || (128 & ye) > 0 || (128 & Me) > 0) return void(Ke -= 4);
+        if (ee < 6) {
+          if (4 === ee) return ne(ie, He, ye, Me);
           {
-            let BB = DB[oB++];
-            return (128 & BB) > 0 ? void(oB -= 5) : eB(OB, GB, YB, QB, BB)
+            let ee = be[Ke++];
+            return (128 & ee) > 0 ? void(Ke -= 5) : ne(ie, He, ye, Me, ee)
           }
         }
-        if (BB < 8) {
-          let jB = DB[oB++],
-            yB = DB[oB++];
-          if ((128 & jB) > 0 || (128 & yB) > 0) return void(oB -= 6);
-          if (BB < 7) return eB(OB, GB, YB, QB, jB, yB);
-          let JB = DB[oB++];
-          return (128 & JB) > 0 ? void(oB -= 7) : eB(OB, GB, YB, QB, jB, yB, JB)
+        if (ee < 8) {
+          let Ue = be[Ke++],
+            Fe = be[Ke++];
+          if ((128 & Ue) > 0 || (128 & Fe) > 0) return void(Ke -= 6);
+          if (ee < 7) return ne(ie, He, ye, Me, Ue, Fe);
+          let Je = be[Ke++];
+          return (128 & Je) > 0 ? void(Ke -= 7) : ne(ie, He, ye, Me, Ue, Fe, Je)
         } {
-          let jB = DB[oB++],
-            yB = DB[oB++],
-            JB = DB[oB++],
-            MB = DB[oB++];
-          if ((128 & jB) > 0 || (128 & yB) > 0 || (128 & JB) > 0 || (128 & MB) > 0) return void(oB -= 8);
-          if (BB < 10) {
-            if (8 === BB) return eB(OB, GB, YB, QB, jB, yB, JB, MB);
+          let Ue = be[Ke++],
+            Fe = be[Ke++],
+            Je = be[Ke++],
+            oe = be[Ke++];
+          if ((128 & Ue) > 0 || (128 & Fe) > 0 || (128 & Je) > 0 || (128 & oe) > 0) return void(Ke -= 8);
+          if (ee < 10) {
+            if (8 === ee) return ne(ie, He, ye, Me, Ue, Fe, Je, oe);
             {
-              let BB = DB[oB++];
-              return (128 & BB) > 0 ? void(oB -= 9) : eB(OB, GB, YB, QB, jB, yB, JB, MB, BB)
+              let ee = be[Ke++];
+              return (128 & ee) > 0 ? void(Ke -= 9) : ne(ie, He, ye, Me, Ue, Fe, Je, oe, ee)
             }
           }
-          if (BB < 12) {
-            let PB = DB[oB++],
-              zB = DB[oB++];
-            if ((128 & PB) > 0 || (128 & zB) > 0) return void(oB -= 10);
-            if (BB < 11) return eB(OB, GB, YB, QB, jB, yB, JB, MB, PB, zB);
-            let lB = DB[oB++];
-            return (128 & lB) > 0 ? void(oB -= 11) : eB(OB, GB, YB, QB, jB, yB, JB, MB, PB, zB, lB)
+          if (ee < 12) {
+            let Re = be[Ke++],
+              ke = be[Ke++];
+            if ((128 & Re) > 0 || (128 & ke) > 0) return void(Ke -= 10);
+            if (ee < 11) return ne(ie, He, ye, Me, Ue, Fe, Je, oe, Re, ke);
+            let qe = be[Ke++];
+            return (128 & qe) > 0 ? void(Ke -= 11) : ne(ie, He, ye, Me, Ue, Fe, Je, oe, Re, ke, qe)
           } {
-            let PB = DB[oB++],
-              zB = DB[oB++],
-              lB = DB[oB++],
-              pB = DB[oB++];
-            if ((128 & PB) > 0 || (128 & zB) > 0 || (128 & lB) > 0 || (128 & pB) > 0) return void(oB -= 12);
-            if (BB < 14) {
-              if (12 === BB) return eB(OB, GB, YB, QB, jB, yB, JB, MB, PB, zB, lB, pB);
+            let Re = be[Ke++],
+              ke = be[Ke++],
+              qe = be[Ke++],
+              fe = be[Ke++];
+            if ((128 & Re) > 0 || (128 & ke) > 0 || (128 & qe) > 0 || (128 & fe) > 0) return void(Ke -= 12);
+            if (ee < 14) {
+              if (12 === ee) return ne(ie, He, ye, Me, Ue, Fe, Je, oe, Re, ke, qe, fe);
               {
-                let BB = DB[oB++];
-                return (128 & BB) > 0 ? void(oB -= 13) : eB(OB, GB, YB, QB, jB, yB, JB, MB, PB, zB, lB, pB, BB)
+                let ee = be[Ke++];
+                return (128 & ee) > 0 ? void(Ke -= 13) : ne(ie, He, ye, Me, Ue, Fe, Je, oe, Re, ke, qe, fe, ee)
               }
             } {
-              let qB = DB[oB++],
-                ZB = DB[oB++];
-              if ((128 & qB) > 0 || (128 & ZB) > 0) return void(oB -= 14);
-              if (BB < 15) return eB(OB, GB, YB, QB, jB, yB, JB, MB, PB, zB, lB, pB, qB, ZB);
-              let NB = DB[oB++];
-              return (128 & NB) > 0 ? void(oB -= 15) : eB(OB, GB, YB, QB, jB, yB, JB, MB, PB, zB, lB, pB, qB, ZB, NB)
+              let Te = be[Ke++],
+                pe = be[Ke++];
+              if ((128 & Te) > 0 || (128 & pe) > 0) return void(Ke -= 14);
+              if (ee < 15) return ne(ie, He, ye, Me, Ue, Fe, Je, oe, Re, ke, qe, fe, Te, pe);
+              let Xe = be[Ke++];
+              return (128 & Xe) > 0 ? void(Ke -= 15) : ne(ie, He, ye, Me, Ue, Fe, Je, oe, Re, ke, qe, fe, Te, pe, Xe)
             }
           }
         }
       }
     }
 
-    function CB() {
-      let BB, OB = DB[oB++];
-      if (OB < 192) BB = OB - 160;
-      else switch (OB) {
+    function Ie() {
+      let ee, ie = be[Ke++];
+      if (ie < 192) ee = ie - 160;
+      else switch (ie) {
         case 217:
-          BB = DB[oB++];
+          ee = be[Ke++];
           break;
         case 218:
-          BB = zB.getUint16(oB), oB += 2;
+          ee = ke.getUint16(Ke), Ke += 2;
           break;
         case 219:
-          BB = zB.getUint32(oB), oB += 4;
+          ee = ke.getUint32(Ke), Ke += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return cB(BB)
+      return me(ee)
     }
 
-    function HB(BB) {
-      return qB.copyBuffers ? Uint8Array.prototype.slice.call(DB, oB, oB += BB) : DB.subarray(oB, oB += BB)
+    function he(ee) {
+      return Te.copyBuffers ? Uint8Array.prototype.slice.call(be, Ke, Ke += ee) : be.subarray(Ke, Ke += ee)
     }
 
-    function vB(BB) {
-      let OB = DB[oB++];
-      if (RB[OB]) {
-        let GB;
-        return RB[OB](DB.subarray(oB, GB = oB += BB), (BB => {
-          oB = BB;
+    function Ne(ee) {
+      let ie = be[Ke++];
+      if (ze[ie]) {
+        let He;
+        return ze[ie](be.subarray(Ke, He = Ke += ee), (ee => {
+          Ke = ee;
           try {
-            return mB()
+            return Ae()
           } finally {
-            oB = GB
+            Ke = He
           }
         }))
       }
-      throw new Error("Unknown extension type " + OB)
+      throw new Error("Unknown extension type " + ie)
     }
-    var sB = new Array(4096);
+    var Ge = new Array(4096);
 
-    function xB() {
-      let BB = DB[oB++];
-      if (!(BB >= 160 && BB < 192)) return oB--, tB(mB());
-      if (BB -= 160, NB >= oB) return JB.slice(oB - ZB, (oB += BB) - ZB);
-      if (!(0 == NB && QB < 180)) return gB(BB);
-      let OB, GB = 4095 & (BB << 5 ^ (BB > 1 ? zB.getUint16(oB) : BB > 0 ? DB[oB] : 0)),
-        YB = sB[GB],
-        jB = oB,
-        yB = oB + BB - 3,
-        MB = 0;
-      if (YB && YB.bytes == BB) {
-        for (; jB < yB;) {
-          if (OB = zB.getUint32(jB), OB != YB[MB++]) {
-            jB = 1879048192;
+    function re() {
+      let ee = be[Ke++];
+      if (!(ee >= 160 && ee < 192)) return Ke--, Qe(Ae());
+      if (ee -= 160, Xe >= Ke) return Je.slice(Ke - pe, (Ke += ee) - pe);
+      if (!(0 == Xe && Me < 180)) return xe(ee);
+      let ie, He = 4095 & (ee << 5 ^ (ee > 1 ? ke.getUint16(Ke) : ee > 0 ? be[Ke] : 0)),
+        ye = Ge[He],
+        Ue = Ke,
+        Fe = Ke + ee - 3,
+        oe = 0;
+      if (ye && ye.bytes == ee) {
+        for (; Ue < Fe;) {
+          if (ie = ke.getUint32(Ue), ie != ye[oe++]) {
+            Ue = 1879048192;
             break
           }
-          jB += 4
+          Ue += 4
         }
-        for (yB += 3; jB < yB;)
-          if (OB = DB[jB++], OB != YB[MB++]) {
-            jB = 1879048192;
+        for (Fe += 3; Ue < Fe;)
+          if (ie = be[Ue++], ie != ye[oe++]) {
+            Ue = 1879048192;
             break
-          } if (jB === yB) return oB = jB, YB.string;
-        yB -= 3, jB = oB
+          } if (Ue === Fe) return Ke = Ue, ye.string;
+        Fe -= 3, Ue = Ke
       }
-      for (YB = [], sB[GB] = YB, YB.bytes = BB; jB < yB;) OB = zB.getUint32(jB), YB.push(OB), jB += 4;
-      for (yB += 3; jB < yB;) OB = DB[jB++], YB.push(OB);
-      let PB = BB < 16 ? bB(BB) : TB(BB);
-      return YB.string = null != PB ? PB : gB(BB)
+      for (ye = [], Ge[He] = ye, ye.bytes = ee; Ue < Fe;) ie = ke.getUint32(Ue), ye.push(ie), Ue += 4;
+      for (Fe += 3; Ue < Fe;) ie = be[Ue++], ye.push(ie);
+      let Re = ee < 16 ? se(ee) : je(ee);
+      return ye.string = null != Re ? Re : xe(ee)
     }
 
-    function tB(BB) {
-      if ("string" === typeof BB) return BB;
-      if ("number" === typeof BB || "boolean" === typeof BB || "bigint" === typeof BB) return BB.toString();
-      if (null == BB) return BB + "";
-      if (qB.allowArraysInMapKeys && Array.isArray(BB) && BB.flat().every((BB => ["string", "number", "boolean", "bigint"].includes(typeof BB)))) return BB.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof BB)
+    function Qe(ee) {
+      if ("string" === typeof ee) return ee;
+      if ("number" === typeof ee || "boolean" === typeof ee || "bigint" === typeof ee) return ee.toString();
+      if (null == ee) return ee + "";
+      if (Te.allowArraysInMapKeys && Array.isArray(ee) && ee.flat().every((ee => ["string", "number", "boolean", "bigint"].includes(typeof ee)))) return ee.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof ee)
     }
-    const BO = (BB, OB) => {
-      let GB = mB().map(tB),
-        YB = BB;
-      void 0 !== OB && (BB = BB < 32 ? -((OB << 5) + BB) : (OB << 5) + BB, GB.highByte = OB);
-      let DB = yB[BB];
-      return DB && (DB.isShared || fB) && ((yB.restoreStructures || (yB.restoreStructures = []))[BB] = DB), yB[BB] = GB, GB.read = FB(GB, YB), GB.read()
+    const ei = (ee, ie) => {
+      let He = Ae().map(Qe),
+        ye = ee;
+      void 0 !== ie && (ee = ee < 32 ? -((ie << 5) + ee) : (ie << 5) + ee, He.highByte = ie);
+      let be = Fe[ee];
+      return be && (be.isShared || te) && ((Fe.restoreStructures || (Fe.restoreStructures = []))[ee] = be), Fe[ee] = He, He.read = Ve(He, ye), He.read()
     };
-    RB[0] = () => {}, RB[0].noBuffer = !0, RB[66] = BB => {
-      let OB = BB.length,
-        GB = BigInt(128 & BB[0] ? BB[0] - 256 : BB[0]);
-      for (let YB = 1; YB < OB; YB++) GB <<= BigInt(8), GB += BigInt(BB[YB]);
-      return GB
+    ze[0] = () => {}, ze[0].noBuffer = !0, ze[66] = ee => {
+      let ie = ee.length,
+        He = BigInt(128 & ee[0] ? ee[0] - 256 : ee[0]);
+      for (let ye = 1; ye < ie; ye++) He <<= BigInt(8), He += BigInt(ee[ye]);
+      return He
     };
-    let OO = {
+    let ii = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    RB[101] = () => {
-      let BB = mB();
-      return (OO[BB[0]] || Error)(BB[1], {
-        cause: BB[2]
+    ze[101] = () => {
+      let ee = Ae();
+      return (ii[ee[0]] || Error)(ee[1], {
+        cause: ee[2]
       })
-    }, RB[105] = BB => {
-      if (!1 === qB.structuredClone) throw new Error("Structured clone extension is disabled");
-      let OB = zB.getUint32(oB - 4);
-      PB || (PB = new Map);
-      let GB, YB = DB[oB];
-      GB = YB >= 144 && YB < 160 || 220 == YB || 221 == YB ? [] : {};
-      let QB = {
-        target: GB
+    }, ze[105] = ee => {
+      if (!1 === Te.structuredClone) throw new Error("Structured clone extension is disabled");
+      let ie = ke.getUint32(Ke - 4);
+      Re || (Re = new Map);
+      let He, ye = be[Ke];
+      He = ye >= 144 && ye < 160 || 220 == ye || 221 == ye ? [] : {};
+      let Me = {
+        target: He
       };
-      PB.set(OB, QB);
-      let jB = mB();
-      return QB.used ? Object.assign(GB, jB) : (QB.target = jB, jB)
-    }, RB[112] = BB => {
-      if (!1 === qB.structuredClone) throw new Error("Structured clone extension is disabled");
-      let OB = zB.getUint32(oB - 4),
-        GB = PB.get(OB);
-      return GB.used = !0, GB.target
-    }, RB[115] = () => new Set(mB());
-    const GO = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((BB => BB + "Array"));
-    let YO = "object" === typeof globalThis ? globalThis : window;
-    RB[116] = BB => {
-      let OB = BB[0],
-        GB = GO[OB];
-      if (!GB) {
-        if (16 === OB) {
-          let OB = new ArrayBuffer(BB.length - 1);
-          return new Uint8Array(OB).set(BB.subarray(1)), OB
+      Re.set(ie, Me);
+      let Ue = Ae();
+      return Me.used ? Object.assign(He, Ue) : (Me.target = Ue, Ue)
+    }, ze[112] = ee => {
+      if (!1 === Te.structuredClone) throw new Error("Structured clone extension is disabled");
+      let ie = ke.getUint32(Ke - 4),
+        He = Re.get(ie);
+      return He.used = !0, He.target
+    }, ze[115] = () => new Set(Ae());
+    const Hi = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((ee => ee + "Array"));
+    let yi = "object" === typeof globalThis ? globalThis : window;
+    ze[116] = ee => {
+      let ie = ee[0],
+        He = Hi[ie];
+      if (!He) {
+        if (16 === ie) {
+          let ie = new ArrayBuffer(ee.length - 1);
+          return new Uint8Array(ie).set(ee.subarray(1)), ie
         }
-        throw new Error("Could not find typed array for code " + OB)
+        throw new Error("Could not find typed array for code " + ie)
       }
-      return new YO[GB](Uint8Array.prototype.slice.call(BB, 1).buffer)
-    }, RB[120] = () => {
-      let BB = mB();
-      return new RegExp(BB[0], BB[1])
+      return new yi[He](Uint8Array.prototype.slice.call(ee, 1).buffer)
+    }, ze[120] = () => {
+      let ee = Ae();
+      return new RegExp(ee[0], ee[1])
     };
-    const DO = [];
+    const bi = [];
 
-    function QO(BB) {
-      UB && UB();
-      let OB = QB,
-        GB = oB,
-        YB = pB,
-        jB = ZB,
-        RB = NB,
-        WB = JB,
-        AB = lB,
-        VB = PB,
-        SB = MB,
-        nB = new Uint8Array(DB.slice(0, QB)),
-        kB = yB,
-        dB = yB.slice(0, yB.length),
-        KB = qB,
-        uB = fB,
-        mB = BB();
-      return QB = OB, oB = GB, pB = YB, ZB = jB, NB = RB, JB = WB, lB = AB, PB = VB, MB = SB, DB = nB, fB = uB, (yB = kB).splice(0, yB.length, ...dB), qB = KB, zB = new DataView(DB.buffer, DB.byteOffset, DB.byteLength), mB
+    function Mi(ee) {
+      We && We();
+      let ie = Me,
+        He = Ke,
+        ye = fe,
+        Ue = pe,
+        ze = Xe,
+        Be = Je,
+        Ee = qe,
+        ge = Re,
+        Oe = oe,
+        de = new Uint8Array(be.slice(0, Me)),
+        Ze = Fe,
+        we = Fe.slice(0, Fe.length),
+        De = Te,
+        Pe = te,
+        Ae = ee();
+      return Me = ie, Ke = He, fe = ye, pe = Ue, Xe = ze, Je = Be, qe = Ee, Re = ge, oe = Oe, be = de, te = Pe, (Fe = Ze).splice(0, Fe.length, ...we), Te = De, ke = new DataView(be.buffer, be.byteOffset, be.byteLength), Ae
     }
 
-    function oO() {
-      DB = null, PB = null, yB = null
+    function Ki() {
+      be = null, Re = null, Fe = null
     }
-    RB[98] = BB => {
-      let OB = (BB[0] << 24) + (BB[1] << 16) + (BB[2] << 8) + BB[3],
-        GB = oB;
-      return oB += OB - BB.length, MB = DO, (MB = [CB(), CB()]).position0 = 0, MB.position1 = 0, MB.postBundlePosition = oB, oB = GB, mB()
-    }, RB[255] = BB => 4 == BB.length ? new Date(1e3 * (16777216 * BB[0] + (BB[1] << 16) + (BB[2] << 8) + BB[3])) : 8 == BB.length ? new Date(((BB[0] << 22) + (BB[1] << 14) + (BB[2] << 6) + (BB[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & BB[3]) + 16777216 * BB[4] + (BB[5] << 16) + (BB[6] << 8) + BB[7])) : 12 == BB.length ? new Date(((BB[0] << 24) + (BB[1] << 16) + (BB[2] << 8) + BB[3]) / 1e6 + 1e3 * ((128 & BB[4] ? -281474976710656 : 0) + 1099511627776 * BB[6] + 4294967296 * BB[7] + 16777216 * BB[8] + (BB[9] << 16) + (BB[10] << 8) + BB[11])) : new Date("invalid");
-    const jO = new Array(147);
-    for (let DG = 0; DG < 256; DG++) jO[DG] = +("1e" + Math.floor(45.15 - .30103 * DG));
-    const yO = dB;
-    var JO = new dB({
+    ze[98] = ee => {
+      let ie = (ee[0] << 24) + (ee[1] << 16) + (ee[2] << 8) + ee[3],
+        He = Ke;
+      return Ke += ie - ee.length, oe = bi, (oe = [Ie(), Ie()]).position0 = 0, oe.position1 = 0, oe.postBundlePosition = Ke, Ke = He, Ae()
+    }, ze[255] = ee => 4 == ee.length ? new Date(1e3 * (16777216 * ee[0] + (ee[1] << 16) + (ee[2] << 8) + ee[3])) : 8 == ee.length ? new Date(((ee[0] << 22) + (ee[1] << 14) + (ee[2] << 6) + (ee[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & ee[3]) + 16777216 * ee[4] + (ee[5] << 16) + (ee[6] << 8) + ee[7])) : 12 == ee.length ? new Date(((ee[0] << 24) + (ee[1] << 16) + (ee[2] << 8) + ee[3]) / 1e6 + 1e3 * ((128 & ee[4] ? -281474976710656 : 0) + 1099511627776 * ee[6] + 4294967296 * ee[7] + 16777216 * ee[8] + (ee[9] << 16) + (ee[10] << 8) + ee[11])) : new Date("invalid");
+    const Ui = new Array(147);
+    for (let KH = 0; KH < 256; KH++) Ui[KH] = +("1e" + Math.floor(45.15 - .30103 * KH));
+    const Fi = we;
+    var Ji = new we({
       useRecords: !1
     });
-    const MO = JO.unpack,
-      PO = JO.unpackMultiple,
-      zO = JO.unpack,
-      lO = {
+    const oi = Ji.unpack,
+      Ri = Ji.unpackMultiple,
+      ki = Ji.unpack,
+      qi = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let pO, qO, ZO, NO = new Float32Array(1),
-      RO = new Uint8Array(NO.buffer, 0, 4);
+    let fi, Ti, Xi, zi = new Float32Array(1),
+      Bi = new Uint8Array(zi.buffer, 0, 4);
 
-    function WO(BB) {
-      NO[0] = BB;
-      let OB = jO[(127 & RO[3]) << 1 | RO[2] >> 7];
-      return (OB * BB + (BB > 0 ? .5 : -.5) | 0) / OB
+    function Ei(ee) {
+      zi[0] = ee;
+      let ie = Ui[(127 & Bi[3]) << 1 | Bi[2] >> 7];
+      return (ie * ee + (ee > 0 ? .5 : -.5) | 0) / ie
     }
     try {
-      pO = new TextEncoder
-    } catch (YG) {}
-    const AO = "undefined" !== typeof Buffer,
-      VO = AO ? function(BB) {
-        return Buffer.allocUnsafeSlow(BB)
+      fi = new TextEncoder
+    } catch (MH) {}
+    const gi = "undefined" !== typeof Buffer,
+      Oi = gi ? function(ee) {
+        return Buffer.allocUnsafeSlow(ee)
       } : Uint8Array,
-      SO = AO ? Buffer : Uint8Array,
-      nO = AO ? 4294967296 : 2144337920;
-    let UO, fO, kO, dO, KO, uO = 0,
-      mO = null;
-    const IO = /[\u0080-\uFFFF]/,
-      FO = Symbol("record-id");
-    class iO extends dB {
-      constructor(BB) {
-        let OB, GB, YB, DB;
-        super(BB), this.offset = 0;
-        let QB = SO.prototype.utf8Write ? function(BB, OB) {
-            return UO.utf8Write(BB, OB, UO.byteLength - OB)
-          } : !(!pO || !pO.encodeInto) && function(BB, OB) {
-            return pO.encodeInto(BB, UO.subarray(OB)).written
+      di = gi ? Buffer : Uint8Array,
+      Wi = gi ? 4294967296 : 2144337920;
+    let ti, Zi, wi, Di, Pi, Ai = 0,
+      Yi = null;
+    const Vi = /[\u0080-\uFFFF]/,
+      ai = Symbol("record-id");
+    class ci extends we {
+      constructor(ee) {
+        let ie, He, ye, be;
+        super(ee), this.offset = 0;
+        let Me = di.prototype.utf8Write ? function(ee, ie) {
+            return ti.utf8Write(ee, ie, ti.byteLength - ie)
+          } : !(!fi || !fi.encodeInto) && function(ee, ie) {
+            return fi.encodeInto(ee, ti.subarray(ie)).written
           },
-          oB = this;
-        BB || (BB = {});
-        let jB = BB && BB.sequential,
-          yB = BB.structures || BB.saveStructures,
-          JB = BB.maxSharedStructures;
-        if (null == JB && (JB = yB ? 32 : 0), JB > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        BB.structuredClone && void 0 == BB.moreTypes && (this.moreTypes = !0);
-        let MB = BB.maxOwnStructures;
-        null == MB && (MB = yB ? 32 : 64), this.structures || 0 == BB.useRecords || (this.structures = []);
-        let PB = JB > 32 || MB + JB > 64,
-          zB = JB + 64,
-          lB = JB + MB + 64;
-        if (lB > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let pB = [],
-          qB = 0,
-          ZB = 0;
-        this.pack = this.encode = function(BB, QB) {
-          if (UO || (UO = new VO(8192), kO = UO.dataView || (UO.dataView = new DataView(UO.buffer, 0, 8192)), uO = 0), dO = UO.length - 10, dO - uO < 2048 ? (UO = new VO(UO.length), kO = UO.dataView || (UO.dataView = new DataView(UO.buffer, 0, UO.length)), dO = UO.length - 10, uO = 0) : uO = uO + 7 & 2147483640, OB = uO, QB & xO && (uO += 255 & QB), DB = oB.structuredClone ? new Map : null, oB.bundleStrings && "string" !== typeof BB ? (mO = [], mO.size = 1 / 0) : mO = null, YB = oB.structures, YB) {
-            YB.uninitialized && (YB = oB._mergeStructures(oB.getStructures()));
-            let BB = YB.sharedLength || 0;
-            if (BB > JB) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + YB.sharedLength);
-            if (!YB.transitions) {
-              YB.transitions = Object.create(null);
-              for (let OB = 0; OB < BB; OB++) {
-                let BB = YB[OB];
-                if (!BB) continue;
-                let GB, DB = YB.transitions;
-                for (let OB = 0, YB = BB.length; OB < YB; OB++) {
-                  let YB = BB[OB];
-                  GB = DB[YB], GB || (GB = DB[YB] = Object.create(null)), DB = GB
+          Ke = this;
+        ee || (ee = {});
+        let Ue = ee && ee.sequential,
+          Fe = ee.structures || ee.saveStructures,
+          Je = ee.maxSharedStructures;
+        if (null == Je && (Je = Fe ? 32 : 0), Je > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        ee.structuredClone && void 0 == ee.moreTypes && (this.moreTypes = !0);
+        let oe = ee.maxOwnStructures;
+        null == oe && (oe = Fe ? 32 : 64), this.structures || 0 == ee.useRecords || (this.structures = []);
+        let Re = Je > 32 || oe + Je > 64,
+          ke = Je + 64,
+          qe = Je + oe + 64;
+        if (qe > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let fe = [],
+          Te = 0,
+          pe = 0;
+        this.pack = this.encode = function(ee, Me) {
+          if (ti || (ti = new Oi(8192), wi = ti.dataView || (ti.dataView = new DataView(ti.buffer, 0, 8192)), Ai = 0), Di = ti.length - 10, Di - Ai < 2048 ? (ti = new Oi(ti.length), wi = ti.dataView || (ti.dataView = new DataView(ti.buffer, 0, ti.length)), Di = ti.length - 10, Ai = 0) : Ai = Ai + 7 & 2147483640, ie = Ai, Me & eH && (Ai += 255 & Me), be = Ke.structuredClone ? new Map : null, Ke.bundleStrings && "string" !== typeof ee ? (Yi = [], Yi.size = 1 / 0) : Yi = null, ye = Ke.structures, ye) {
+            ye.uninitialized && (ye = Ke._mergeStructures(Ke.getStructures()));
+            let ee = ye.sharedLength || 0;
+            if (ee > Je) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + ye.sharedLength);
+            if (!ye.transitions) {
+              ye.transitions = Object.create(null);
+              for (let ie = 0; ie < ee; ie++) {
+                let ee = ye[ie];
+                if (!ee) continue;
+                let He, be = ye.transitions;
+                for (let ie = 0, ye = ee.length; ie < ye; ie++) {
+                  let ye = ee[ie];
+                  He = be[ye], He || (He = be[ye] = Object.create(null)), be = He
                 }
-                DB[FO] = OB + 64
+                be[ai] = ie + 64
               }
-              this.lastNamedStructuresLength = BB
+              this.lastNamedStructuresLength = ee
             }
-            jB || (YB.nextId = BB + 64)
+            Ue || (ye.nextId = ee + 64)
           }
-          let yB;
-          GB && (GB = !1);
+          let Fe;
+          He && (He = !1);
           try {
-            oB.randomAccessStructure && BB && BB.constructor && BB.constructor === Object ? dB(BB) : WB(BB);
-            let GB = mO;
-            if (mO && XO(OB, WB, 0), DB && DB.idsToInsert) {
-              let BB = DB.idsToInsert.sort(((BB, OB) => BB.offset > OB.offset ? 1 : -1)),
-                YB = BB.length,
-                QB = -1;
-              for (; GB && YB > 0;) {
-                let DB = BB[--YB].offset + OB;
-                DB < GB.stringsPosition + OB && -1 === QB && (QB = 0), DB > GB.position + OB ? QB >= 0 && (QB += 6) : (QB >= 0 && (kO.setUint32(GB.position + OB, kO.getUint32(GB.position + OB) + QB), QB = -1), GB = GB.previous, YB++)
+            Ke.randomAccessStructure && ee && ee.constructor && ee.constructor === Object ? we(ee) : Be(ee);
+            let He = Yi;
+            if (Yi && vi(ie, Be, 0), be && be.idsToInsert) {
+              let ee = be.idsToInsert.sort(((ee, ie) => ee.offset > ie.offset ? 1 : -1)),
+                ye = ee.length,
+                Me = -1;
+              for (; He && ye > 0;) {
+                let be = ee[--ye].offset + ie;
+                be < He.stringsPosition + ie && -1 === Me && (Me = 0), be > He.position + ie ? Me >= 0 && (Me += 6) : (Me >= 0 && (wi.setUint32(He.position + ie, wi.getUint32(He.position + ie) + Me), Me = -1), He = He.previous, ye++)
               }
-              QB >= 0 && GB && kO.setUint32(GB.position + OB, kO.getUint32(GB.position + OB) + QB), uO += 6 * BB.length, uO > dO && UB(uO), oB.offset = uO;
-              let jB = function(BB, OB) {
-                let GB, YB = 6 * OB.length,
-                  DB = BB.length - YB;
-                for (; GB = OB.pop();) {
-                  let OB = GB.offset,
-                    QB = GB.id;
-                  BB.copyWithin(OB + YB, OB, DB), YB -= 6;
-                  let oB = OB + YB;
-                  BB[oB++] = 214, BB[oB++] = 105, BB[oB++] = QB >> 24, BB[oB++] = QB >> 16 & 255, BB[oB++] = QB >> 8 & 255, BB[oB++] = 255 & QB, DB = OB
+              Me >= 0 && He && wi.setUint32(He.position + ie, wi.getUint32(He.position + ie) + Me), Ai += 6 * ee.length, Ai > Di && We(Ai), Ke.offset = Ai;
+              let Ue = function(ee, ie) {
+                let He, ye = 6 * ie.length,
+                  be = ee.length - ye;
+                for (; He = ie.pop();) {
+                  let ie = He.offset,
+                    Me = He.id;
+                  ee.copyWithin(ie + ye, ie, be), ye -= 6;
+                  let Ke = ie + ye;
+                  ee[Ke++] = 214, ee[Ke++] = 105, ee[Ke++] = Me >> 24, ee[Ke++] = Me >> 16 & 255, ee[Ke++] = Me >> 8 & 255, ee[Ke++] = 255 & Me, be = ie
                 }
-                return BB
-              }(UO.subarray(OB, uO), BB);
-              return DB = null, jB
+                return ee
+              }(ti.subarray(ie, Ai), ee);
+              return be = null, Ue
             }
-            return oB.offset = uO, QB & vO ? (UO.start = OB, UO.end = uO, UO) : UO.subarray(OB, uO)
-          } catch (YG) {
-            throw yB = YG, YG
+            return Ke.offset = Ai, Me & ri ? (ti.start = ie, ti.end = Ai, ti) : ti.subarray(ie, Ai)
+          } catch (MH) {
+            throw Fe = MH, MH
           } finally {
-            if (YB && (NB(), GB && oB.saveStructures)) {
-              let GB = YB.sharedLength || 0,
-                DB = UO.subarray(OB, uO),
-                jB = EO(YB, oB);
-              if (!yB) return !1 === oB.saveStructures(jB, jB.isCompatible) ? oB.pack(BB, QB) : (oB.lastNamedStructuresLength = GB, UO.length > 1073741824 && (UO = null), DB)
+            if (ye && (Xe(), He && Ke.saveStructures)) {
+              let He = ye.sharedLength || 0,
+                be = ti.subarray(ie, Ai),
+                Ue = mi(ye, Ke);
+              if (!Fe) return !1 === Ke.saveStructures(Ue, Ue.isCompatible) ? Ke.pack(ee, Me) : (Ke.lastNamedStructuresLength = He, ti.length > 1073741824 && (ti = null), be)
             }
-            UO.length > 1073741824 && (UO = null), QB & sO && (uO = OB)
+            ti.length > 1073741824 && (ti = null), Me & Qi && (Ai = ie)
           }
         };
-        const NB = () => {
-            ZB < 10 && ZB++;
-            let BB = YB.sharedLength || 0;
-            if (YB.length > BB && !jB && (YB.length = BB), qB > 1e4) YB.transitions = null, ZB = 0, qB = 0, pB.length > 0 && (pB = []);
-            else if (pB.length > 0 && !jB) {
-              for (let BB = 0, OB = pB.length; BB < OB; BB++) pB[BB][FO] = 0;
-              pB = []
+        const Xe = () => {
+            pe < 10 && pe++;
+            let ee = ye.sharedLength || 0;
+            if (ye.length > ee && !Ue && (ye.length = ee), Te > 1e4) ye.transitions = null, pe = 0, Te = 0, fe.length > 0 && (fe = []);
+            else if (fe.length > 0 && !Ue) {
+              for (let ee = 0, ie = fe.length; ee < ie; ee++) fe[ee][ai] = 0;
+              fe = []
             }
           },
-          RB = BB => {
-            var OB = BB.length;
-            OB < 16 ? UO[uO++] = 144 | OB : OB < 65536 ? (UO[uO++] = 220, UO[uO++] = OB >> 8, UO[uO++] = 255 & OB) : (UO[uO++] = 221, kO.setUint32(uO, OB), uO += 4);
-            for (let GB = 0; GB < OB; GB++) WB(BB[GB])
+          ze = ee => {
+            var ie = ee.length;
+            ie < 16 ? ti[Ai++] = 144 | ie : ie < 65536 ? (ti[Ai++] = 220, ti[Ai++] = ie >> 8, ti[Ai++] = 255 & ie) : (ti[Ai++] = 221, wi.setUint32(Ai, ie), Ai += 4);
+            for (let He = 0; He < ie; He++) Be(ee[He])
           },
-          WB = BB => {
-            uO > dO && (UO = UB(uO));
-            var GB, YB = typeof BB;
-            if ("string" === YB) {
-              let YB, DB = BB.length;
-              if (mO && DB >= 4 && DB < 4096) {
-                if ((mO.size += DB) > 21760) {
-                  let BB, GB, YB = (mO[0] ? 3 * mO[0].length + mO[1].length : 0) + 10;
-                  uO + YB > dO && (UO = UB(uO + YB)), mO.position ? (GB = mO, UO[uO] = 200, uO += 3, UO[uO++] = 98, BB = uO - OB, uO += 4, XO(OB, WB, 0), kO.setUint16(BB + OB - 3, uO - OB - BB)) : (UO[uO++] = 214, UO[uO++] = 98, BB = uO - OB, uO += 4), mO = ["", ""], mO.previous = GB, mO.size = 0, mO.position = BB
+          Be = ee => {
+            Ai > Di && (ti = We(Ai));
+            var He, ye = typeof ee;
+            if ("string" === ye) {
+              let ye, be = ee.length;
+              if (Yi && be >= 4 && be < 4096) {
+                if ((Yi.size += be) > 21760) {
+                  let ee, He, ye = (Yi[0] ? 3 * Yi[0].length + Yi[1].length : 0) + 10;
+                  Ai + ye > Di && (ti = We(Ai + ye)), Yi.position ? (He = Yi, ti[Ai] = 200, Ai += 3, ti[Ai++] = 98, ee = Ai - ie, Ai += 4, vi(ie, Be, 0), wi.setUint16(ee + ie - 3, Ai - ie - ee)) : (ti[Ai++] = 214, ti[Ai++] = 98, ee = Ai - ie, Ai += 4), Yi = ["", ""], Yi.previous = He, Yi.size = 0, Yi.position = ee
                 }
-                let GB = IO.test(BB);
-                return mO[GB ? 0 : 1] += BB, UO[uO++] = 193, void WB(GB ? -DB : DB)
+                let He = Vi.test(ee);
+                return Yi[He ? 0 : 1] += ee, ti[Ai++] = 193, void Be(He ? -be : be)
               }
-              YB = DB < 32 ? 1 : DB < 256 ? 2 : DB < 65536 ? 3 : 5;
-              let oB = 3 * DB;
-              if (uO + oB > dO && (UO = UB(uO + oB)), DB < 64 || !QB) {
-                let OB, QB, oB, jB = uO + YB;
-                for (OB = 0; OB < DB; OB++) QB = BB.charCodeAt(OB), QB < 128 ? UO[jB++] = QB : QB < 2048 ? (UO[jB++] = QB >> 6 | 192, UO[jB++] = 63 & QB | 128) : 55296 === (64512 & QB) && 56320 === (64512 & (oB = BB.charCodeAt(OB + 1))) ? (QB = 65536 + ((1023 & QB) << 10) + (1023 & oB), OB++, UO[jB++] = QB >> 18 | 240, UO[jB++] = QB >> 12 & 63 | 128, UO[jB++] = QB >> 6 & 63 | 128, UO[jB++] = 63 & QB | 128) : (UO[jB++] = QB >> 12 | 224, UO[jB++] = QB >> 6 & 63 | 128, UO[jB++] = 63 & QB | 128);
-                GB = jB - uO - YB
-              } else GB = QB(BB, uO + YB);
-              GB < 32 ? UO[uO++] = 160 | GB : GB < 256 ? (YB < 2 && UO.copyWithin(uO + 2, uO + 1, uO + 1 + GB), UO[uO++] = 217, UO[uO++] = GB) : GB < 65536 ? (YB < 3 && UO.copyWithin(uO + 3, uO + 2, uO + 2 + GB), UO[uO++] = 218, UO[uO++] = GB >> 8, UO[uO++] = 255 & GB) : (YB < 5 && UO.copyWithin(uO + 5, uO + 3, uO + 3 + GB), UO[uO++] = 219, kO.setUint32(uO, GB), uO += 4), uO += GB
-            } else if ("number" === YB)
-              if (BB >>> 0 === BB) BB < 32 || BB < 128 && !1 === this.useRecords || BB < 64 && !this.randomAccessStructure ? UO[uO++] = BB : BB < 256 ? (UO[uO++] = 204, UO[uO++] = BB) : BB < 65536 ? (UO[uO++] = 205, UO[uO++] = BB >> 8, UO[uO++] = 255 & BB) : (UO[uO++] = 206, kO.setUint32(uO, BB), uO += 4);
-              else if ((BB | 0) === BB) BB >= -32 ? UO[uO++] = 256 + BB : BB >= -128 ? (UO[uO++] = 208, UO[uO++] = BB + 256) : BB >= -32768 ? (UO[uO++] = 209, kO.setInt16(uO, BB), uO += 2) : (UO[uO++] = 210, kO.setInt32(uO, BB), uO += 4);
+              ye = be < 32 ? 1 : be < 256 ? 2 : be < 65536 ? 3 : 5;
+              let Ke = 3 * be;
+              if (Ai + Ke > Di && (ti = We(Ai + Ke)), be < 64 || !Me) {
+                let ie, Me, Ke, Ue = Ai + ye;
+                for (ie = 0; ie < be; ie++) Me = ee.charCodeAt(ie), Me < 128 ? ti[Ue++] = Me : Me < 2048 ? (ti[Ue++] = Me >> 6 | 192, ti[Ue++] = 63 & Me | 128) : 55296 === (64512 & Me) && 56320 === (64512 & (Ke = ee.charCodeAt(ie + 1))) ? (Me = 65536 + ((1023 & Me) << 10) + (1023 & Ke), ie++, ti[Ue++] = Me >> 18 | 240, ti[Ue++] = Me >> 12 & 63 | 128, ti[Ue++] = Me >> 6 & 63 | 128, ti[Ue++] = 63 & Me | 128) : (ti[Ue++] = Me >> 12 | 224, ti[Ue++] = Me >> 6 & 63 | 128, ti[Ue++] = 63 & Me | 128);
+                He = Ue - Ai - ye
+              } else He = Me(ee, Ai + ye);
+              He < 32 ? ti[Ai++] = 160 | He : He < 256 ? (ye < 2 && ti.copyWithin(Ai + 2, Ai + 1, Ai + 1 + He), ti[Ai++] = 217, ti[Ai++] = He) : He < 65536 ? (ye < 3 && ti.copyWithin(Ai + 3, Ai + 2, Ai + 2 + He), ti[Ai++] = 218, ti[Ai++] = He >> 8, ti[Ai++] = 255 & He) : (ye < 5 && ti.copyWithin(Ai + 5, Ai + 3, Ai + 3 + He), ti[Ai++] = 219, wi.setUint32(Ai, He), Ai += 4), Ai += He
+            } else if ("number" === ye)
+              if (ee >>> 0 === ee) ee < 32 || ee < 128 && !1 === this.useRecords || ee < 64 && !this.randomAccessStructure ? ti[Ai++] = ee : ee < 256 ? (ti[Ai++] = 204, ti[Ai++] = ee) : ee < 65536 ? (ti[Ai++] = 205, ti[Ai++] = ee >> 8, ti[Ai++] = 255 & ee) : (ti[Ai++] = 206, wi.setUint32(Ai, ee), Ai += 4);
+              else if ((ee | 0) === ee) ee >= -32 ? ti[Ai++] = 256 + ee : ee >= -128 ? (ti[Ai++] = 208, ti[Ai++] = ee + 256) : ee >= -32768 ? (ti[Ai++] = 209, wi.setInt16(Ai, ee), Ai += 2) : (ti[Ai++] = 210, wi.setInt32(Ai, ee), Ai += 4);
             else {
-              let OB;
-              if ((OB = this.useFloat32) > 0 && BB < 4294967296 && BB >= -2147483648) {
-                let GB;
-                if (UO[uO++] = 202, kO.setFloat32(uO, BB), OB < 4 || ((GB = BB * jO[(127 & UO[uO]) << 1 | UO[uO + 1] >> 7]) | 0) === GB) return void(uO += 4);
-                uO--
+              let ie;
+              if ((ie = this.useFloat32) > 0 && ee < 4294967296 && ee >= -2147483648) {
+                let He;
+                if (ti[Ai++] = 202, wi.setFloat32(Ai, ee), ie < 4 || ((He = ee * Ui[(127 & ti[Ai]) << 1 | ti[Ai + 1] >> 7]) | 0) === He) return void(Ai += 4);
+                Ai--
               }
-              UO[uO++] = 203, kO.setFloat64(uO, BB), uO += 8
-            } else if ("object" === YB || "function" === YB)
-              if (BB) {
-                if (DB) {
-                  let GB = DB.get(BB);
-                  if (GB) {
-                    if (!GB.id) {
-                      let BB = DB.idsToInsert || (DB.idsToInsert = []);
-                      GB.id = BB.push(GB)
+              ti[Ai++] = 203, wi.setFloat64(Ai, ee), Ai += 8
+            } else if ("object" === ye || "function" === ye)
+              if (ee) {
+                if (be) {
+                  let He = be.get(ee);
+                  if (He) {
+                    if (!He.id) {
+                      let ee = be.idsToInsert || (be.idsToInsert = []);
+                      He.id = ee.push(He)
                     }
-                    return UO[uO++] = 214, UO[uO++] = 112, kO.setUint32(uO, GB.id), void(uO += 4)
+                    return ti[Ai++] = 214, ti[Ai++] = 112, wi.setUint32(Ai, He.id), void(Ai += 4)
                   }
-                  DB.set(BB, {
-                    offset: uO - OB
+                  be.set(ee, {
+                    offset: Ai - ie
                   })
                 }
-                let QB = BB.constructor;
-                if (QB === Object) nB(BB);
-                else if (QB === Array) RB(BB);
-                else if (QB === Map)
-                  if (this.mapAsEmptyObject) UO[uO++] = 128;
+                let Me = ee.constructor;
+                if (Me === Object) de(ee);
+                else if (Me === Array) ze(ee);
+                else if (Me === Map)
+                  if (this.mapAsEmptyObject) ti[Ai++] = 128;
                   else {
-                    (GB = BB.size) < 16 ? UO[uO++] = 128 | GB : GB < 65536 ? (UO[uO++] = 222, UO[uO++] = GB >> 8, UO[uO++] = 255 & GB) : (UO[uO++] = 223, kO.setUint32(uO, GB), uO += 4);
-                    for (let [OB, GB] of BB) WB(OB), WB(GB)
+                    (He = ee.size) < 16 ? ti[Ai++] = 128 | He : He < 65536 ? (ti[Ai++] = 222, ti[Ai++] = He >> 8, ti[Ai++] = 255 & He) : (ti[Ai++] = 223, wi.setUint32(Ai, He), Ai += 4);
+                    for (let [ie, He] of ee) Be(ie), Be(He)
                   }
                 else {
-                  for (let OB = 0, GB = qO.length; OB < GB; OB++) {
-                    if (BB instanceof ZO[OB]) {
-                      let GB = qO[OB];
-                      if (GB.write) {
-                        GB.type && (UO[uO++] = 212, UO[uO++] = GB.type, UO[uO++] = 0);
-                        let OB = GB.write.call(this, BB);
-                        return void(OB === BB ? Array.isArray(BB) ? RB(BB) : nB(BB) : WB(OB))
+                  for (let ie = 0, He = Ti.length; ie < He; ie++) {
+                    if (ee instanceof Xi[ie]) {
+                      let He = Ti[ie];
+                      if (He.write) {
+                        He.type && (ti[Ai++] = 212, ti[Ai++] = He.type, ti[Ai++] = 0);
+                        let ie = He.write.call(this, ee);
+                        return void(ie === ee ? Array.isArray(ee) ? ze(ee) : de(ee) : Be(ie))
                       }
-                      let YB, DB = UO,
-                        QB = kO,
-                        oB = uO;
-                      UO = null;
+                      let ye, be = ti,
+                        Me = wi,
+                        Ke = Ai;
+                      ti = null;
                       try {
-                        YB = GB.pack.call(this, BB, (BB => (UO = DB, DB = null, uO += BB, uO > dO && UB(uO), {
-                          target: UO,
-                          targetView: kO,
-                          position: uO - BB
-                        })), WB)
+                        ye = He.pack.call(this, ee, (ee => (ti = be, be = null, Ai += ee, Ai > Di && We(Ai), {
+                          target: ti,
+                          targetView: wi,
+                          position: Ai - ee
+                        })), Be)
                       } finally {
-                        DB && (UO = DB, kO = QB, uO = oB, dO = UO.length - 10)
+                        be && (ti = be, wi = Me, Ai = Ke, Di = ti.length - 10)
                       }
-                      return void(YB && (YB.length + uO > dO && UB(YB.length + uO), uO = rO(YB, UO, uO, GB.type)))
+                      return void(ye && (ye.length + Ai > Di && We(ye.length + Ai), Ai = Ci(ye, ti, Ai, He.type)))
                     }
                   }
-                  if (Array.isArray(BB)) RB(BB);
+                  if (Array.isArray(ee)) ze(ee);
                   else {
-                    if (BB.toJSON) {
-                      const OB = BB.toJSON();
-                      if (OB !== BB) return WB(OB)
+                    if (ee.toJSON) {
+                      const ie = ee.toJSON();
+                      if (ie !== ee) return Be(ie)
                     }
-                    if ("function" === YB) return WB(this.writeFunction && this.writeFunction(BB));
-                    nB(BB)
+                    if ("function" === ye) return Be(this.writeFunction && this.writeFunction(ee));
+                    de(ee)
                   }
                 }
-              } else UO[uO++] = 192;
-            else if ("boolean" === YB) UO[uO++] = BB ? 195 : 194;
-            else if ("bigint" === YB) {
-              if (BB < BigInt(1) << BigInt(63) && BB >= -(BigInt(1) << BigInt(63))) UO[uO++] = 211, kO.setBigInt64(uO, BB);
-              else if (BB < BigInt(1) << BigInt(64) && BB > 0) UO[uO++] = 207, kO.setBigUint64(uO, BB);
+              } else ti[Ai++] = 192;
+            else if ("boolean" === ye) ti[Ai++] = ee ? 195 : 194;
+            else if ("bigint" === ye) {
+              if (ee < BigInt(1) << BigInt(63) && ee >= -(BigInt(1) << BigInt(63))) ti[Ai++] = 211, wi.setBigInt64(Ai, ee);
+              else if (ee < BigInt(1) << BigInt(64) && ee > 0) ti[Ai++] = 207, wi.setBigUint64(Ai, ee);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return WB(BB.toString());
-                  if (this.useBigIntExtension && BB < BigInt(2) ** BigInt(1023) && BB > -(BigInt(2) ** BigInt(1023))) {
-                    UO[uO++] = 199, uO++, UO[uO++] = 66;
-                    let OB, GB = [];
+                  if (this.largeBigIntToString) return Be(ee.toString());
+                  if (this.useBigIntExtension && ee < BigInt(2) ** BigInt(1023) && ee > -(BigInt(2) ** BigInt(1023))) {
+                    ti[Ai++] = 199, Ai++, ti[Ai++] = 66;
+                    let ie, He = [];
                     do {
-                      let YB = BB & BigInt(255);
-                      OB = (YB & BigInt(128)) === (BB < BigInt(0) ? BigInt(128) : BigInt(0)), GB.push(YB), BB >>= BigInt(8)
-                    } while (BB !== BigInt(0) && BB !== BigInt(-1) || !OB);
-                    UO[uO - 2] = GB.length;
-                    for (let BB = GB.length; BB > 0;) UO[uO++] = Number(GB[--BB]);
+                      let ye = ee & BigInt(255);
+                      ie = (ye & BigInt(128)) === (ee < BigInt(0) ? BigInt(128) : BigInt(0)), He.push(ye), ee >>= BigInt(8)
+                    } while (ee !== BigInt(0) && ee !== BigInt(-1) || !ie);
+                    ti[Ai - 2] = He.length;
+                    for (let ee = He.length; ee > 0;) ti[Ai++] = Number(He[--ee]);
                     return
                   }
-                  throw new RangeError(BB + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(ee + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                UO[uO++] = 203, kO.setFloat64(uO, Number(BB))
+                ti[Ai++] = 203, wi.setFloat64(Ai, Number(ee))
               }
-              uO += 8
+              Ai += 8
             } else {
-              if ("undefined" !== YB) throw new Error("Unknown type: " + YB);
-              this.encodeUndefinedAsNil ? UO[uO++] = 192 : (UO[uO++] = 212, UO[uO++] = 0, UO[uO++] = 0)
+              if ("undefined" !== ye) throw new Error("Unknown type: " + ye);
+              this.encodeUndefinedAsNil ? ti[Ai++] = 192 : (ti[Ai++] = 212, ti[Ai++] = 0, ti[Ai++] = 0)
             }
           },
-          AB = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? BB => {
-            let OB;
+          Ee = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? ee => {
+            let ie;
             if (this.skipValues) {
-              OB = [];
-              for (let GB in BB) "function" === typeof BB.hasOwnProperty && !BB.hasOwnProperty(GB) || this.skipValues.includes(BB[GB]) || OB.push(GB)
-            } else OB = Object.keys(BB);
-            let GB, YB = OB.length;
-            if (YB < 16 ? UO[uO++] = 128 | YB : YB < 65536 ? (UO[uO++] = 222, UO[uO++] = YB >> 8, UO[uO++] = 255 & YB) : (UO[uO++] = 223, kO.setUint32(uO, YB), uO += 4), this.coercibleKeyAsNumber)
-              for (let DB = 0; DB < YB; DB++) {
-                GB = OB[DB];
-                let YB = Number(GB);
-                WB(isNaN(YB) ? GB : YB), WB(BB[GB])
+              ie = [];
+              for (let He in ee) "function" === typeof ee.hasOwnProperty && !ee.hasOwnProperty(He) || this.skipValues.includes(ee[He]) || ie.push(He)
+            } else ie = Object.keys(ee);
+            let He, ye = ie.length;
+            if (ye < 16 ? ti[Ai++] = 128 | ye : ye < 65536 ? (ti[Ai++] = 222, ti[Ai++] = ye >> 8, ti[Ai++] = 255 & ye) : (ti[Ai++] = 223, wi.setUint32(Ai, ye), Ai += 4), this.coercibleKeyAsNumber)
+              for (let be = 0; be < ye; be++) {
+                He = ie[be];
+                let ye = Number(He);
+                Be(isNaN(ye) ? He : ye), Be(ee[He])
               } else
-                for (let DB = 0; DB < YB; DB++) WB(GB = OB[DB]), WB(BB[GB])
-          } : BB => {
-            UO[uO++] = 222;
-            let GB = uO - OB;
-            uO += 2;
-            let YB = 0;
-            for (let OB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(OB)) && (WB(OB), WB(BB[OB]), YB++);
-            if (YB > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            UO[GB++ + OB] = YB >> 8, UO[GB + OB] = 255 & YB
+                for (let be = 0; be < ye; be++) Be(He = ie[be]), Be(ee[He])
+          } : ee => {
+            ti[Ai++] = 222;
+            let He = Ai - ie;
+            Ai += 2;
+            let ye = 0;
+            for (let ie in ee)("function" !== typeof ee.hasOwnProperty || ee.hasOwnProperty(ie)) && (Be(ie), Be(ee[ie]), ye++);
+            if (ye > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            ti[He++ + ie] = ye >> 8, ti[He + ie] = 255 & ye
           },
-          VB = !1 === this.useRecords ? AB : BB.progressiveRecords && !PB ? BB => {
-            let GB, DB, QB = YB.transitions || (YB.transitions = Object.create(null)),
-              oB = uO++ - OB;
-            for (let jB in BB)
-              if ("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(jB)) {
-                if (GB = QB[jB], GB) QB = GB;
+          ge = !1 === this.useRecords ? Ee : ee.progressiveRecords && !Re ? ee => {
+            let He, be, Me = ye.transitions || (ye.transitions = Object.create(null)),
+              Ke = Ai++ - ie;
+            for (let Ue in ee)
+              if ("function" !== typeof ee.hasOwnProperty || ee.hasOwnProperty(Ue)) {
+                if (He = Me[Ue], He) Me = He;
                 else {
-                  let yB = Object.keys(BB),
-                    JB = QB;
-                  QB = YB.transitions;
-                  let MB = 0;
-                  for (let BB = 0, OB = yB.length; BB < OB; BB++) {
-                    let OB = yB[BB];
-                    GB = QB[OB], GB || (GB = QB[OB] = Object.create(null), MB++), QB = GB
+                  let Fe = Object.keys(ee),
+                    Je = Me;
+                  Me = ye.transitions;
+                  let oe = 0;
+                  for (let ee = 0, ie = Fe.length; ee < ie; ee++) {
+                    let ie = Fe[ee];
+                    He = Me[ie], He || (He = Me[ie] = Object.create(null), oe++), Me = He
                   }
-                  oB + OB + 1 == uO ? (uO--, fB(QB, yB, MB)) : kB(QB, yB, oB, MB), DB = !0, QB = JB[jB]
+                  Ke + ie + 1 == Ai ? (Ai--, te(Me, Fe, oe)) : Ze(Me, Fe, Ke, oe), be = !0, Me = Je[Ue]
                 }
-                WB(BB[jB])
-              } if (!DB) {
-              let GB = QB[FO];
-              GB ? UO[oB + OB] = GB : kB(QB, Object.keys(BB), oB, 0)
+                Be(ee[Ue])
+              } if (!be) {
+              let He = Me[ai];
+              He ? ti[Ke + ie] = He : Ze(Me, Object.keys(ee), Ke, 0)
             }
-          } : BB => {
-            let OB, GB = YB.transitions || (YB.transitions = Object.create(null)),
-              DB = 0;
-            for (let YB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(YB)) && (OB = GB[YB], OB || (OB = GB[YB] = Object.create(null), DB++), GB = OB);
-            let QB = GB[FO];
-            QB ? QB >= 96 && PB ? (UO[uO++] = 96 + (31 & (QB -= 96)), UO[uO++] = QB >> 5) : UO[uO++] = QB : fB(GB, GB.__keys__ || Object.keys(BB), DB);
-            for (let YB in BB)("function" !== typeof BB.hasOwnProperty || BB.hasOwnProperty(YB)) && WB(BB[YB])
+          } : ee => {
+            let ie, He = ye.transitions || (ye.transitions = Object.create(null)),
+              be = 0;
+            for (let ye in ee)("function" !== typeof ee.hasOwnProperty || ee.hasOwnProperty(ye)) && (ie = He[ye], ie || (ie = He[ye] = Object.create(null), be++), He = ie);
+            let Me = He[ai];
+            Me ? Me >= 96 && Re ? (ti[Ai++] = 96 + (31 & (Me -= 96)), ti[Ai++] = Me >> 5) : ti[Ai++] = Me : te(He, He.__keys__ || Object.keys(ee), be);
+            for (let ye in ee)("function" !== typeof ee.hasOwnProperty || ee.hasOwnProperty(ye)) && Be(ee[ye])
           },
-          SB = "function" == typeof this.useRecords && this.useRecords,
-          nB = SB ? BB => {
-            SB(BB) ? VB(BB) : AB(BB)
-          } : VB,
-          UB = BB => {
-            let GB;
-            if (BB > 16777216) {
-              if (BB - OB > nO) throw new Error("Packed buffer would be larger than maximum buffer size");
-              GB = Math.min(nO, 4096 * Math.round(Math.max((BB - OB) * (BB > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else GB = 1 + (Math.max(BB - OB << 2, UO.length - 1) >> 12) << 12;
-            let YB = new VO(GB);
-            return kO = YB.dataView || (YB.dataView = new DataView(YB.buffer, 0, GB)), BB = Math.min(BB, UO.length), UO.copy ? UO.copy(YB, 0, OB, BB) : YB.set(UO.slice(OB, BB)), uO -= OB, OB = 0, dO = YB.length - 10, UO = YB
+          Oe = "function" == typeof this.useRecords && this.useRecords,
+          de = Oe ? ee => {
+            Oe(ee) ? ge(ee) : Ee(ee)
+          } : ge,
+          We = ee => {
+            let He;
+            if (ee > 16777216) {
+              if (ee - ie > Wi) throw new Error("Packed buffer would be larger than maximum buffer size");
+              He = Math.min(Wi, 4096 * Math.round(Math.max((ee - ie) * (ee > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else He = 1 + (Math.max(ee - ie << 2, ti.length - 1) >> 12) << 12;
+            let ye = new Oi(He);
+            return wi = ye.dataView || (ye.dataView = new DataView(ye.buffer, 0, He)), ee = Math.min(ee, ti.length), ti.copy ? ti.copy(ye, 0, ie, ee) : ye.set(ti.slice(ie, ee)), Ai -= ie, ie = 0, Di = ye.length - 10, ti = ye
           },
-          fB = (BB, OB, DB) => {
-            let QB = YB.nextId;
-            QB || (QB = 64), QB < zB && this.shouldShareStructure && !this.shouldShareStructure(OB) ? (QB = YB.nextOwnId, QB < lB || (QB = zB), YB.nextOwnId = QB + 1) : (QB >= lB && (QB = zB), YB.nextId = QB + 1);
-            let oB = OB.highByte = QB >= 96 && PB ? QB - 96 >> 5 : -1;
-            BB[FO] = QB, BB.__keys__ = OB, YB[QB - 64] = OB, QB < zB ? (OB.isShared = !0, YB.sharedLength = QB - 63, GB = !0, oB >= 0 ? (UO[uO++] = 96 + (31 & QB), UO[uO++] = oB) : UO[uO++] = QB) : (oB >= 0 ? (UO[uO++] = 213, UO[uO++] = 114, UO[uO++] = 96 + (31 & QB), UO[uO++] = oB) : (UO[uO++] = 212, UO[uO++] = 114, UO[uO++] = QB), DB && (qB += ZB * DB), pB.length >= MB && (pB.shift()[FO] = 0), pB.push(BB), WB(OB))
+          te = (ee, ie, be) => {
+            let Me = ye.nextId;
+            Me || (Me = 64), Me < ke && this.shouldShareStructure && !this.shouldShareStructure(ie) ? (Me = ye.nextOwnId, Me < qe || (Me = ke), ye.nextOwnId = Me + 1) : (Me >= qe && (Me = ke), ye.nextId = Me + 1);
+            let Ke = ie.highByte = Me >= 96 && Re ? Me - 96 >> 5 : -1;
+            ee[ai] = Me, ee.__keys__ = ie, ye[Me - 64] = ie, Me < ke ? (ie.isShared = !0, ye.sharedLength = Me - 63, He = !0, Ke >= 0 ? (ti[Ai++] = 96 + (31 & Me), ti[Ai++] = Ke) : ti[Ai++] = Me) : (Ke >= 0 ? (ti[Ai++] = 213, ti[Ai++] = 114, ti[Ai++] = 96 + (31 & Me), ti[Ai++] = Ke) : (ti[Ai++] = 212, ti[Ai++] = 114, ti[Ai++] = Me), be && (Te += pe * be), fe.length >= oe && (fe.shift()[ai] = 0), fe.push(ee), Be(ie))
           },
-          kB = (BB, GB, YB, DB) => {
-            let QB = UO,
-              oB = uO,
-              jB = dO,
-              yB = OB;
-            UO = fO, uO = 0, OB = 0, UO || (fO = UO = new VO(8192)), dO = UO.length - 10, fB(BB, GB, DB), fO = UO;
-            let JB = uO;
-            if (UO = QB, uO = oB, dO = jB, OB = yB, JB > 1) {
-              let BB = uO + JB - 1;
-              BB > dO && UB(BB);
-              let GB = YB + OB;
-              UO.copyWithin(GB + JB, GB + 1, uO), UO.set(fO.slice(0, JB), GB), uO = BB
-            } else UO[YB + OB] = fO[0]
+          Ze = (ee, He, ye, be) => {
+            let Me = ti,
+              Ke = Ai,
+              Ue = Di,
+              Fe = ie;
+            ti = Zi, Ai = 0, ie = 0, ti || (Zi = ti = new Oi(8192)), Di = ti.length - 10, te(ee, He, be), Zi = ti;
+            let Je = Ai;
+            if (ti = Me, Ai = Ke, Di = Ue, ie = Fe, Je > 1) {
+              let ee = Ai + Je - 1;
+              ee > Di && We(ee);
+              let He = ye + ie;
+              ti.copyWithin(He + Je, He + 1, Ai), ti.set(Zi.slice(0, Je), He), Ai = ee
+            } else ti[ye + ie] = Zi[0]
           },
-          dB = BB => {
-            let DB = KO(BB, UO, OB, uO, YB, UB, ((BB, OB, YB) => {
-              if (YB) return GB = !0;
-              uO = OB;
-              let DB = UO;
-              return WB(BB), NB(), DB !== UO ? {
-                position: uO,
-                targetView: kO,
-                target: UO
-              } : uO
+          we = ee => {
+            let be = Pi(ee, ti, ie, Ai, ye, We, ((ee, ie, ye) => {
+              if (ye) return He = !0;
+              Ai = ie;
+              let be = ti;
+              return Be(ee), Xe(), be !== ti ? {
+                position: Ai,
+                targetView: wi,
+                target: ti
+              } : Ai
             }), this);
-            if (0 === DB) return nB(BB);
-            uO = DB
+            if (0 === be) return de(ee);
+            Ai = be
           }
       }
-      useBuffer(BB) {
-        UO = BB, kO = UO.dataView || (UO.dataView = new DataView(UO.buffer, UO.byteOffset, UO.byteLength)), uO = 0
+      useBuffer(ee) {
+        ti = ee, wi = ti.dataView || (ti.dataView = new DataView(ti.buffer, ti.byteOffset, ti.byteLength)), Ai = 0
       }
-      set position(BB) {
-        uO = BB
+      set position(ee) {
+        Ai = ee
       }
       get position() {
-        return uO
+        return Ai
       }
-      set buffer(BB) {
-        UO = BB
+      set buffer(ee) {
+        ti = ee
       }
       get buffer() {
-        return UO
+        return ti
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function LO(BB, OB, GB, YB) {
-      let DB = BB.byteLength;
-      if (DB + 1 < 256) {
+    function xi(ee, ie, He, ye) {
+      let be = ee.byteLength;
+      if (be + 1 < 256) {
         var {
-          target: QB,
-          position: oB
-        } = GB(4 + DB);
-        QB[oB++] = 199, QB[oB++] = DB + 1
-      } else if (DB + 1 < 65536) {
+          target: Me,
+          position: Ke
+        } = He(4 + be);
+        Me[Ke++] = 199, Me[Ke++] = be + 1
+      } else if (be + 1 < 65536) {
         var {
-          target: QB,
-          position: oB
-        } = GB(5 + DB);
-        QB[oB++] = 200, QB[oB++] = DB + 1 >> 8, QB[oB++] = DB + 1 & 255
+          target: Me,
+          position: Ke
+        } = He(5 + be);
+        Me[Ke++] = 200, Me[Ke++] = be + 1 >> 8, Me[Ke++] = be + 1 & 255
       } else {
         var {
-          target: QB,
-          position: oB,
-          targetView: jB
-        } = GB(7 + DB);
-        QB[oB++] = 201, jB.setUint32(oB, DB + 1), oB += 4
+          target: Me,
+          position: Ke,
+          targetView: Ue
+        } = He(7 + be);
+        Me[Ke++] = 201, Ue.setUint32(Ke, be + 1), Ke += 4
       }
-      QB[oB++] = 116, QB[oB++] = OB, BB.buffer || (BB = new Uint8Array(BB)), QB.set(new Uint8Array(BB.buffer, BB.byteOffset, BB.byteLength), oB)
+      Me[Ke++] = 116, Me[Ke++] = ie, ee.buffer || (ee = new Uint8Array(ee)), Me.set(new Uint8Array(ee.buffer, ee.byteOffset, ee.byteLength), Ke)
     }
 
-    function gO(BB, OB) {
-      let GB = BB.byteLength;
-      var YB, DB;
-      if (GB < 256) {
+    function Li(ee, ie) {
+      let He = ee.byteLength;
+      var ye, be;
+      if (He < 256) {
         var {
-          target: YB,
-          position: DB
-        } = OB(GB + 2);
-        YB[DB++] = 196, YB[DB++] = GB
-      } else if (GB < 65536) {
+          target: ye,
+          position: be
+        } = ie(He + 2);
+        ye[be++] = 196, ye[be++] = He
+      } else if (He < 65536) {
         var {
-          target: YB,
-          position: DB
-        } = OB(GB + 3);
-        YB[DB++] = 197, YB[DB++] = GB >> 8, YB[DB++] = 255 & GB
+          target: ye,
+          position: be
+        } = ie(He + 3);
+        ye[be++] = 197, ye[be++] = He >> 8, ye[be++] = 255 & He
       } else {
         var {
-          target: YB,
-          position: DB,
-          targetView: QB
-        } = OB(GB + 5);
-        YB[DB++] = 198, QB.setUint32(DB, GB), DB += 4
+          target: ye,
+          position: be,
+          targetView: Me
+        } = ie(He + 5);
+        ye[be++] = 198, Me.setUint32(be, He), be += 4
       }
-      YB.set(BB, DB)
+      ye.set(ee, be)
     }
 
-    function rO(BB, OB, GB, YB) {
-      let DB = BB.length;
-      switch (DB) {
+    function Ci(ee, ie, He, ye) {
+      let be = ee.length;
+      switch (be) {
         case 1:
-          OB[GB++] = 212;
+          ie[He++] = 212;
           break;
         case 2:
-          OB[GB++] = 213;
+          ie[He++] = 213;
           break;
         case 4:
-          OB[GB++] = 214;
+          ie[He++] = 214;
           break;
         case 8:
-          OB[GB++] = 215;
+          ie[He++] = 215;
           break;
         case 16:
-          OB[GB++] = 216;
+          ie[He++] = 216;
           break;
         default:
-          DB < 256 ? (OB[GB++] = 199, OB[GB++] = DB) : DB < 65536 ? (OB[GB++] = 200, OB[GB++] = DB >> 8, OB[GB++] = 255 & DB) : (OB[GB++] = 201, OB[GB++] = DB >> 24, OB[GB++] = DB >> 16 & 255, OB[GB++] = DB >> 8 & 255, OB[GB++] = 255 & DB)
+          be < 256 ? (ie[He++] = 199, ie[He++] = be) : be < 65536 ? (ie[He++] = 200, ie[He++] = be >> 8, ie[He++] = 255 & be) : (ie[He++] = 201, ie[He++] = be >> 24, ie[He++] = be >> 16 & 255, ie[He++] = be >> 8 & 255, ie[He++] = 255 & be)
       }
-      return OB[GB++] = YB, OB.set(BB, GB), GB += DB
+      return ie[He++] = ye, ie.set(ee, He), He += be
     }
 
-    function XO(BB, OB, GB) {
-      if (mO.length > 0) {
-        kO.setUint32(mO.position + BB, uO + GB - mO.position - BB), mO.stringsPosition = uO - BB;
-        let YB = mO;
-        mO = null, OB(YB[0]), OB(YB[1])
+    function vi(ee, ie, He) {
+      if (Yi.length > 0) {
+        wi.setUint32(Yi.position + ee, Ai + He - Yi.position - ee), Yi.stringsPosition = Ai - ee;
+        let ye = Yi;
+        Yi = null, ie(ye[0]), ie(ye[1])
       }
     }
 
-    function wO(BB) {
-      if (BB.Class) {
-        if (!BB.pack && !BB.write) throw new Error("Extension has no pack or write function");
-        if (BB.pack && !BB.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        ZO.unshift(BB.Class), qO.unshift(BB)
-      }! function(BB) {
-        BB.unpack ? RB[BB.type] = BB.unpack : RB[BB.type] = BB
-      }(BB)
+    function ui(ee) {
+      if (ee.Class) {
+        if (!ee.pack && !ee.write) throw new Error("Extension has no pack or write function");
+        if (ee.pack && !ee.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        Xi.unshift(ee.Class), Ti.unshift(ee)
+      }! function(ee) {
+        ee.unpack ? ze[ee.type] = ee.unpack : ze[ee.type] = ee
+      }(ee)
     }
 
-    function EO(BB, OB) {
-      return BB.isCompatible = BB => {
-        let GB = !BB || (OB.lastNamedStructuresLength || 0) === BB.length;
-        return GB || OB._mergeStructures(BB), GB
-      }, BB
+    function mi(ee, ie) {
+      return ee.isCompatible = ee => {
+        let He = !ee || (ie.lastNamedStructuresLength || 0) === ee.length;
+        return He || ie._mergeStructures(ee), He
+      }, ee
     }
-    ZO = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, AB], qO = [{
-      pack(BB, OB, GB) {
-        let YB = BB.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === BB.getMilliseconds()) && YB >= 0 && YB < 4294967296) {
+    Xi = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Ee], Ti = [{
+      pack(ee, ie, He) {
+        let ye = ee.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === ee.getMilliseconds()) && ye >= 0 && ye < 4294967296) {
           let {
-            target: BB,
-            targetView: GB,
-            position: DB
-          } = OB(6);
-          BB[DB++] = 214, BB[DB++] = 255, GB.setUint32(DB, YB)
-        } else if (YB > 0 && YB < 4294967296) {
+            target: ee,
+            targetView: He,
+            position: be
+          } = ie(6);
+          ee[be++] = 214, ee[be++] = 255, He.setUint32(be, ye)
+        } else if (ye > 0 && ye < 4294967296) {
           let {
-            target: GB,
-            targetView: DB,
-            position: QB
-          } = OB(10);
-          GB[QB++] = 215, GB[QB++] = 255, DB.setUint32(QB, 4e6 * BB.getMilliseconds() + (YB / 1e3 / 4294967296 | 0)), DB.setUint32(QB + 4, YB)
-        } else if (isNaN(YB)) {
-          if (this.onInvalidDate) return OB(0), GB(this.onInvalidDate());
+            target: He,
+            targetView: be,
+            position: Me
+          } = ie(10);
+          He[Me++] = 215, He[Me++] = 255, be.setUint32(Me, 4e6 * ee.getMilliseconds() + (ye / 1e3 / 4294967296 | 0)), be.setUint32(Me + 4, ye)
+        } else if (isNaN(ye)) {
+          if (this.onInvalidDate) return ie(0), He(this.onInvalidDate());
           let {
-            target: BB,
-            targetView: YB,
-            position: DB
-          } = OB(3);
-          BB[DB++] = 212, BB[DB++] = 255, BB[DB++] = 255
+            target: ee,
+            targetView: ye,
+            position: be
+          } = ie(3);
+          ee[be++] = 212, ee[be++] = 255, ee[be++] = 255
         } else {
           let {
-            target: GB,
-            targetView: DB,
-            position: QB
-          } = OB(15);
-          GB[QB++] = 199, GB[QB++] = 12, GB[QB++] = 255, DB.setUint32(QB, 1e6 * BB.getMilliseconds()), DB.setBigInt64(QB + 4, BigInt(Math.floor(YB)))
+            target: He,
+            targetView: be,
+            position: Me
+          } = ie(15);
+          He[Me++] = 199, He[Me++] = 12, He[Me++] = 255, be.setUint32(Me, 1e6 * ee.getMilliseconds()), be.setBigInt64(Me + 4, BigInt(Math.floor(ye)))
         }
       }
     }, {
-      pack(BB, OB, GB) {
-        if (this.setAsEmptyObject) return OB(0), GB({});
-        let YB = Array.from(BB),
+      pack(ee, ie, He) {
+        if (this.setAsEmptyObject) return ie(0), He({});
+        let ye = Array.from(ee),
           {
-            target: DB,
-            position: QB
-          } = OB(this.moreTypes ? 3 : 0);
-        this.moreTypes && (DB[QB++] = 212, DB[QB++] = 115, DB[QB++] = 0), GB(YB)
+            target: be,
+            position: Me
+          } = ie(this.moreTypes ? 3 : 0);
+        this.moreTypes && (be[Me++] = 212, be[Me++] = 115, be[Me++] = 0), He(ye)
       }
     }, {
-      pack(BB, OB, GB) {
+      pack(ee, ie, He) {
         let {
-          target: YB,
-          position: DB
-        } = OB(this.moreTypes ? 3 : 0);
-        this.moreTypes && (YB[DB++] = 212, YB[DB++] = 101, YB[DB++] = 0), GB([BB.name, BB.message, BB.cause])
+          target: ye,
+          position: be
+        } = ie(this.moreTypes ? 3 : 0);
+        this.moreTypes && (ye[be++] = 212, ye[be++] = 101, ye[be++] = 0), He([ee.name, ee.message, ee.cause])
       }
     }, {
-      pack(BB, OB, GB) {
+      pack(ee, ie, He) {
         let {
-          target: YB,
-          position: DB
-        } = OB(this.moreTypes ? 3 : 0);
-        this.moreTypes && (YB[DB++] = 212, YB[DB++] = 120, YB[DB++] = 0), GB([BB.source, BB.flags])
+          target: ye,
+          position: be
+        } = ie(this.moreTypes ? 3 : 0);
+        this.moreTypes && (ye[be++] = 212, ye[be++] = 120, ye[be++] = 0), He([ee.source, ee.flags])
       }
     }, {
-      pack(BB, OB) {
-        this.moreTypes ? LO(BB, 16, OB) : gO(AO ? Buffer.from(BB) : new Uint8Array(BB), OB)
+      pack(ee, ie) {
+        this.moreTypes ? xi(ee, 16, ie) : Li(gi ? Buffer.from(ee) : new Uint8Array(ee), ie)
       }
     }, {
-      pack(BB, OB) {
-        let GB = BB.constructor;
-        GB !== SO && this.moreTypes ? LO(BB, GO.indexOf(GB.name), OB) : gO(BB, OB)
+      pack(ee, ie) {
+        let He = ee.constructor;
+        He !== di && this.moreTypes ? xi(ee, Hi.indexOf(He.name), ie) : Li(ee, ie)
       }
     }, {
-      pack(BB, OB) {
+      pack(ee, ie) {
         let {
-          target: GB,
-          position: YB
-        } = OB(1);
-        GB[YB] = 193
+          target: He,
+          position: ye
+        } = ie(1);
+        He[ye] = 193
       }
     }];
-    let cO = new iO({
+    let li = new ci({
       useRecords: !1
     });
-    const hO = cO.pack,
-      aO = cO.pack,
-      eO = iO,
+    const Si = li.pack,
+      ni = li.pack,
+      ji = ci,
       {
-        NEVER: TO,
-        ALWAYS: bO,
-        DECIMAL_ROUND: CO,
-        DECIMAL_FIT: HO
-      } = lO,
-      vO = 512,
-      sO = 1024,
-      xO = 2048;
-    const tO = function(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!BB || "object" !== typeof BB) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const GB = new dB(OB);
-        let YB;
-        const DB = BB => {
-          let OB;
-          YB && (BB = Buffer.concat([YB, BB]), YB = void 0);
+        NEVER: si,
+        ALWAYS: Ii,
+        DECIMAL_ROUND: Ni,
+        DECIMAL_FIT: Gi
+      } = qi,
+      ri = 512,
+      Qi = 1024,
+      eH = 2048;
+    const iH = function(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!ee || "object" !== typeof ee) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const He = new we(ie);
+        let ye;
+        const be = ee => {
+          let ie;
+          ye && (ee = Buffer.concat([ye, ee]), ye = void 0);
           try {
-            OB = GB.unpackMultiple(BB)
-          } catch (DB) {
-            if (!DB.incomplete) throw DB;
-            YB = BB.slice(DB.lastPosition), OB = DB.values
+            ie = He.unpackMultiple(ee)
+          } catch (be) {
+            if (!be.incomplete) throw be;
+            ye = ee.slice(be.lastPosition), ie = be.values
           }
-          return OB
+          return ie
         };
-        return "function" === typeof BB[Symbol.iterator] ? function*() {
-          for (const OB of BB) yield* DB(OB)
-        }() : "function" === typeof BB[Symbol.asyncIterator] ? async function*() {
-          for await (const OB of BB) yield* DB(OB)
+        return "function" === typeof ee[Symbol.iterator] ? function*() {
+          for (const ie of ee) yield* be(ie)
+        }() : "function" === typeof ee[Symbol.asyncIterator] ? async function*() {
+          for await (const ie of ee) yield* be(ie)
         }(): void 0
       },
-      BG = function(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (BB && "object" === typeof BB) {
-          if ("function" === typeof BB[Symbol.iterator]) return function*(BB, OB) {
-            const GB = new iO(OB);
-            for (const YB of BB) yield GB.pack(YB)
-          }(BB, OB);
-          if ("function" === typeof BB.then || "function" === typeof BB[Symbol.asyncIterator]) return async function*(BB, OB) {
-            const GB = new iO(OB);
-            for await (const YB of BB) yield GB.pack(YB)
-          }(BB, OB);
+      HH = function(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (ee && "object" === typeof ee) {
+          if ("function" === typeof ee[Symbol.iterator]) return function*(ee, ie) {
+            const He = new ci(ie);
+            for (const ye of ee) yield He.pack(ye)
+          }(ee, ie);
+          if ("function" === typeof ee.then || "function" === typeof ee[Symbol.asyncIterator]) return async function*(ee, ie) {
+            const He = new ci(ie);
+            for await (const ye of ee) yield He.pack(ye)
+          }(ee, ie);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      OG = !1,
-      GG = !0
+      yH = !1,
+      bH = !0
   },
-  9828: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      $changes: () => qB,
-      $childType: () => ZB,
-      $decoder: () => MB,
-      $deleteByIndex: () => lB,
-      $encoder: () => JB,
-      $filter: () => PB,
-      $getByIndex: () => zB,
-      $numFields: () => kB,
-      $refId: () => jB,
-      $track: () => yB,
-      $values: () => VB,
-      ArraySchema: () => GY,
-      Callbacks: () => GD,
-      ChangeTree: () => uG,
-      CollectionSchema: () => QY,
-      Decoder: () => CY,
-      Encoder: () => aY,
-      FieldBuilder: () => yY,
-      MapSchema: () => DY,
-      Metadata: () => CO,
-      OPERATION: () => DB,
-      Reflection: () => xY,
-      ReflectionField: () => vY,
-      ReflectionType: () => sY,
-      Root: () => mY,
-      Schema: () => KY,
-      SetSchema: () => oY,
-      StateCallbackStrategy: () => OD,
-      StateView: () => gY,
-      StreamSchema: () => jY,
-      TypeContext: () => EO,
-      createPool: () => DD,
-      decode: () => WO,
-      decodeKeyValueOperation: () => vG,
-      decodeSchemaOperation: () => HG,
-      defineCustomTypes: () => nO,
-      defineTypes: () => fY,
-      deprecated: () => nY,
-      dumpChanges: () => dY,
-      encode: () => OO,
-      encodeArray: () => XG,
-      encodeIndexedEntry: () => gG,
-      encodeKeyValueOperation: () => rG,
-      encodeMapEntry: () => LG,
-      encodeSchemaOperation: () => iG,
-      qp: () => qY,
-      fullStateOnly: () => WY,
-      getDecoderStateCallbacks: () => tY,
-      getEncodeDescriptor: () => BG,
-      getRawChangesCallback: () => BD,
-      isBuilder: () => JY,
-      patchOnly: () => RY,
-      registerType: () => SO,
-      schema: () => kY,
-      t: () => lY,
-      type: () => AY,
-      unreliable: () => NY,
-      view: () => ZY
+  9870: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      $changes: () => Te,
+      $childType: () => pe,
+      $decoder: () => oe,
+      $deleteByIndex: () => qe,
+      $encoder: () => Je,
+      $filter: () => Re,
+      $getByIndex: () => ke,
+      $numFields: () => Ze,
+      $refId: () => Ue,
+      $track: () => Fe,
+      $values: () => ge,
+      ArraySchema: () => by,
+      Callbacks: () => bb,
+      ChangeTree: () => YH,
+      CollectionSchema: () => Uy,
+      Decoder: () => Ny,
+      Encoder: () => jy,
+      FieldBuilder: () => oy,
+      MapSchema: () => Ky,
+      Metadata: () => Ni,
+      OPERATION: () => be,
+      Reflection: () => eb,
+      ReflectionField: () => ry,
+      ReflectionType: () => Qy,
+      Root: () => Vy,
+      Schema: () => Ay,
+      SetSchema: () => Fy,
+      StateCallbackStrategy: () => yb,
+      StateView: () => Cy,
+      StreamSchema: () => Jy,
+      TypeContext: () => mi,
+      createPool: () => Kb,
+      decode: () => Ei,
+      decodeKeyValueOperation: () => rH,
+      decodeSchemaOperation: () => GH,
+      defineCustomTypes: () => Wi,
+      defineTypes: () => wy,
+      deprecated: () => ty,
+      dumpChanges: () => Py,
+      encode: () => ii,
+      encodeArray: () => uH,
+      encodeIndexedEntry: () => CH,
+      encodeKeyValueOperation: () => vH,
+      encodeMapEntry: () => LH,
+      encodeSchemaOperation: () => xH,
+      Df: () => Xy,
+      fullStateOnly: () => gy,
+      getDecoderStateCallbacks: () => ib,
+      getEncodeDescriptor: () => HH,
+      getRawChangesCallback: () => Hb,
+      isBuilder: () => Ry,
+      patchOnly: () => Ey,
+      registerType: () => di,
+      schema: () => Dy,
+      t: () => Ty,
+      type: () => Oy,
+      unreliable: () => By,
+      view: () => zy
     });
-    const YB = 255;
-    var DB;
+    const ye = 255;
+    var be;
 
-    function QB(BB) {
-      Object.defineProperty(BB, Symbol.metadata, {
+    function Me(ee) {
+      Object.defineProperty(ee, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(BB) {
-      BB[BB.ADD = 128] = "ADD", BB[BB.REPLACE = 0] = "REPLACE", BB[BB.DELETE = 64] = "DELETE", BB[BB.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", BB[BB.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", BB[BB.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", BB[BB.CLEAR = 10] = "CLEAR", BB[BB.REVERSE = 15] = "REVERSE", BB[BB.MOVE = 32] = "MOVE", BB[BB.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", BB[BB.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(DB || (DB = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const oB = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(ee) {
+      ee[ee.ADD = 128] = "ADD", ee[ee.REPLACE = 0] = "REPLACE", ee[ee.DELETE = 64] = "DELETE", ee[ee.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", ee[ee.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", ee[ee.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", ee[ee.CLEAR = 10] = "CLEAR", ee[ee.REVERSE = 15] = "REVERSE", ee[ee.MOVE = 32] = "MOVE", ee[ee.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", ee[ee.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(be || (be = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const Ke = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const BB = "colyseus.symbolRegistry",
-        OB = oB[BB] || (oB[BB] = Object.create(null));
-      Symbol.for = function(BB) {
-        return OB[BB] || (OB[BB] = Symbol(BB))
-      }, Symbol.keyFor = function(BB) {
-        for (const GB in OB)
-          if (OB[GB] === BB) return GB
+      const ee = "colyseus.symbolRegistry",
+        ie = Ke[ee] || (Ke[ee] = Object.create(null));
+      Symbol.for = function(ee) {
+        return ie[ee] || (ie[ee] = Symbol(ee))
+      }, Symbol.keyFor = function(ee) {
+        for (const He in ie)
+          if (ie[He] === ee) return He
       }
     }
-    const jB = Symbol.for("$refId"),
-      yB = "~track",
-      JB = "~encoder",
-      MB = "~decoder",
-      PB = "~filter",
-      zB = "~getByIndex",
-      lB = "~deleteByIndex",
-      pB = "~resyncPrune",
-      qB = Symbol.for("$changes"),
-      ZB = Symbol.for("$childType"),
-      NB = Symbol.for("$proxyTarget"),
-      RB = "~onEncodeEnd",
-      WB = "~reset",
-      AB = "~onDecodeEnd",
-      VB = Symbol.for("$values"),
-      SB = "~builder",
-      nB = "~descriptors",
-      UB = "~__encodeDescriptor",
-      fB = "~encoders",
-      kB = "~__numFields",
-      dB = "~__refTypeFieldIndexes",
-      KB = "~__viewFieldIndexes",
-      uB = "$__fieldIndexesByViewTag",
-      mB = "~__unreliableFieldIndexes",
-      IB = "~__patchOnlyFieldIndexes",
-      FB = "~__fullSyncSkipIndexes",
-      iB = "~__fullStateOnlyFieldIndexes",
-      LB = "~__streamFieldIndexes",
-      gB = "~__streamPriorities";
-    let rB;
+    const Ue = Symbol.for("$refId"),
+      Fe = "~track",
+      Je = "~encoder",
+      oe = "~decoder",
+      Re = "~filter",
+      ke = "~getByIndex",
+      qe = "~deleteByIndex",
+      fe = "~resyncPrune",
+      Te = Symbol.for("$changes"),
+      pe = Symbol.for("$childType"),
+      Xe = Symbol.for("$proxyTarget"),
+      ze = "~onEncodeEnd",
+      Be = "~reset",
+      Ee = "~onDecodeEnd",
+      ge = Symbol.for("$values"),
+      Oe = "~builder",
+      de = "~descriptors",
+      We = "~__encodeDescriptor",
+      te = "~encoders",
+      Ze = "~__numFields",
+      we = "~__refTypeFieldIndexes",
+      De = "~__viewFieldIndexes",
+      Pe = "$__fieldIndexesByViewTag",
+      Ae = "~__unreliableFieldIndexes",
+      Ye = "~__patchOnlyFieldIndexes",
+      Ve = "~__fullSyncSkipIndexes",
+      ae = "~__fullStateOnlyFieldIndexes",
+      ce = "~__streamFieldIndexes",
+      xe = "~__streamPriorities";
+    let Le;
     try {
-      rB = new TextEncoder
-    } catch (QD) {}
-    const XB = new ArrayBuffer(8),
-      wB = new Int32Array(XB),
-      EB = new Float32Array(XB),
-      cB = new Float64Array(XB),
-      hB = new BigInt64Array(XB),
-      aB = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(BB, OB) {
-        for (var GB = 0, YB = 0, DB = 0, QB = BB.length; DB < QB; DB++)(GB = BB.charCodeAt(DB)) < 128 ? YB += 1 : GB < 2048 ? YB += 2 : GB < 55296 || GB >= 57344 ? YB += 3 : (DB++, YB += 4);
-        return YB
+      Le = new TextEncoder
+    } catch (Ub) {}
+    const Ce = new ArrayBuffer(8),
+      ve = new Int32Array(Ce),
+      ue = new Float32Array(Ce),
+      me = new Float64Array(Ce),
+      le = new BigInt64Array(Ce),
+      Se = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(ee, ie) {
+        for (var He = 0, ye = 0, be = 0, Me = ee.length; be < Me; be++)(He = ee.charCodeAt(be)) < 128 ? ye += 1 : He < 2048 ? ye += 2 : He < 55296 || He >= 57344 ? ye += 3 : (be++, ye += 4);
+        return ye
       };
 
-    function eB(BB, OB, GB) {
-      for (var YB = 0, DB = 0, QB = OB.length; DB < QB; DB++)(YB = OB.charCodeAt(DB)) < 128 ? BB[GB.offset++] = YB : YB < 2048 ? (BB[GB.offset] = 192 | YB >> 6, BB[GB.offset + 1] = 128 | 63 & YB, GB.offset += 2) : YB < 55296 || YB >= 57344 ? (BB[GB.offset] = 224 | YB >> 12, BB[GB.offset + 1] = 128 | YB >> 6 & 63, BB[GB.offset + 2] = 128 | 63 & YB, GB.offset += 3) : (DB++, YB = 65536 + ((1023 & YB) << 10 | 1023 & OB.charCodeAt(DB)), BB[GB.offset] = 240 | YB >> 18, BB[GB.offset + 1] = 128 | YB >> 12 & 63, BB[GB.offset + 2] = 128 | YB >> 6 & 63, BB[GB.offset + 3] = 128 | 63 & YB, GB.offset += 4)
+    function ne(ee, ie, He) {
+      for (var ye = 0, be = 0, Me = ie.length; be < Me; be++)(ye = ie.charCodeAt(be)) < 128 ? ee[He.offset++] = ye : ye < 2048 ? (ee[He.offset] = 192 | ye >> 6, ee[He.offset + 1] = 128 | 63 & ye, He.offset += 2) : ye < 55296 || ye >= 57344 ? (ee[He.offset] = 224 | ye >> 12, ee[He.offset + 1] = 128 | ye >> 6 & 63, ee[He.offset + 2] = 128 | 63 & ye, He.offset += 3) : (be++, ye = 65536 + ((1023 & ye) << 10 | 1023 & ie.charCodeAt(be)), ee[He.offset] = 240 | ye >> 18, ee[He.offset + 1] = 128 | ye >> 12 & 63, ee[He.offset + 2] = 128 | ye >> 6 & 63, ee[He.offset + 3] = 128 | 63 & ye, He.offset += 4)
     }
 
-    function TB(BB, OB, GB) {
-      BB[GB.offset++] = 255 & OB
+    function je(ee, ie, He) {
+      ee[He.offset++] = 255 & ie
     }
 
-    function bB(BB, OB, GB) {
-      BB[GB.offset++] = 255 & OB, BB[GB.offset++] = OB >> 8 & 255
+    function se(ee, ie, He) {
+      ee[He.offset++] = 255 & ie, ee[He.offset++] = ie >> 8 & 255
     }
 
-    function CB(BB, OB, GB) {
-      BB[GB.offset++] = 255 & OB, BB[GB.offset++] = OB >> 8 & 255
+    function Ie(ee, ie, He) {
+      ee[He.offset++] = 255 & ie, ee[He.offset++] = ie >> 8 & 255
     }
 
-    function HB(BB, OB, GB) {
-      BB[GB.offset++] = 255 & OB, BB[GB.offset++] = OB >> 8 & 255, BB[GB.offset++] = OB >> 16 & 255, BB[GB.offset++] = OB >> 24 & 255
+    function he(ee, ie, He) {
+      ee[He.offset++] = 255 & ie, ee[He.offset++] = ie >> 8 & 255, ee[He.offset++] = ie >> 16 & 255, ee[He.offset++] = ie >> 24 & 255
     }
 
-    function vB(BB, OB, GB) {
-      const YB = OB >> 24,
-        DB = OB >> 16,
-        QB = OB >> 8,
-        oB = OB;
-      BB[GB.offset++] = 255 & oB, BB[GB.offset++] = 255 & QB, BB[GB.offset++] = 255 & DB, BB[GB.offset++] = 255 & YB
+    function Ne(ee, ie, He) {
+      const ye = ie >> 24,
+        be = ie >> 16,
+        Me = ie >> 8,
+        Ke = ie;
+      ee[He.offset++] = 255 & Ke, ee[He.offset++] = 255 & Me, ee[He.offset++] = 255 & be, ee[He.offset++] = 255 & ye
     }
 
-    function sB(BB, OB, GB) {
-      const YB = Math.floor(OB / Math.pow(2, 32));
-      vB(BB, OB >>> 0, GB), vB(BB, YB, GB)
+    function Ge(ee, ie, He) {
+      const ye = Math.floor(ie / Math.pow(2, 32));
+      Ne(ee, ie >>> 0, He), Ne(ee, ye, He)
     }
 
-    function xB(BB, OB, GB) {
-      const YB = OB / Math.pow(2, 32) | 0;
-      vB(BB, OB >>> 0, GB), vB(BB, YB, GB)
+    function re(ee, ie, He) {
+      const ye = ie / Math.pow(2, 32) | 0;
+      Ne(ee, ie >>> 0, He), Ne(ee, ye, He)
     }
 
-    function tB(BB, OB, GB) {
-      EB[0] = OB, HB(BB, wB[0], GB)
+    function Qe(ee, ie, He) {
+      ue[0] = ie, he(ee, ve[0], He)
     }
 
-    function BO(BB, OB, GB) {
-      cB[0] = OB, HB(BB, wB[0], GB), HB(BB, wB[1], GB)
+    function ei(ee, ie, He) {
+      me[0] = ie, he(ee, ve[0], He), he(ee, ve[1], He)
     }
-    const OO = {
-        int8: TB,
-        uint8: function(BB, OB, GB) {
-          BB[GB.offset++] = 255 & OB
+    const ii = {
+        int8: je,
+        uint8: function(ee, ie, He) {
+          ee[He.offset++] = 255 & ie
         },
-        int16: bB,
-        uint16: CB,
-        int32: HB,
-        uint32: vB,
-        int64: sB,
-        uint64: xB,
-        bigint64: function(BB, OB, GB) {
-          hB[0] = BigInt.asIntN(64, OB), HB(BB, wB[0], GB), HB(BB, wB[1], GB)
+        int16: se,
+        uint16: Ie,
+        int32: he,
+        uint32: Ne,
+        int64: Ge,
+        uint64: re,
+        bigint64: function(ee, ie, He) {
+          le[0] = BigInt.asIntN(64, ie), he(ee, ve[0], He), he(ee, ve[1], He)
         },
-        biguint64: function(BB, OB, GB) {
-          hB[0] = BigInt.asIntN(64, OB), HB(BB, wB[0], GB), HB(BB, wB[1], GB)
+        biguint64: function(ee, ie, He) {
+          le[0] = BigInt.asIntN(64, ie), he(ee, ve[0], He), he(ee, ve[1], He)
         },
-        float32: tB,
-        float64: BO,
-        boolean: function(BB, OB, GB) {
-          BB[GB.offset++] = OB ? 1 : 0
+        float32: Qe,
+        float64: ei,
+        boolean: function(ee, ie, He) {
+          ee[He.offset++] = ie ? 1 : 0
         },
-        string: function(BB, OB, GB) {
-          OB || (OB = "");
-          let YB = aB(OB, "utf8"),
-            DB = 0;
-          if (YB < 32) BB[GB.offset++] = 160 | YB, DB = 1;
-          else if (YB < 256) BB[GB.offset++] = 217, BB[GB.offset++] = YB, DB = 2;
-          else if (YB < 65536) BB[GB.offset++] = 218, CB(BB, YB, GB), DB = 3;
+        string: function(ee, ie, He) {
+          ie || (ie = "");
+          let ye = Se(ie, "utf8"),
+            be = 0;
+          if (ye < 32) ee[He.offset++] = 160 | ye, be = 1;
+          else if (ye < 256) ee[He.offset++] = 217, ee[He.offset++] = ye, be = 2;
+          else if (ye < 65536) ee[He.offset++] = 218, Ie(ee, ye, He), be = 3;
           else {
-            if (!(YB < 4294967296)) throw new Error("String too long");
-            BB[GB.offset++] = 219, vB(BB, YB, GB), DB = 5
+            if (!(ye < 4294967296)) throw new Error("String too long");
+            ee[He.offset++] = 219, Ne(ee, ye, He), be = 5
           }
-          return eB(BB, OB, GB), DB + YB
+          return ne(ee, ie, He), be + ye
         },
-        number: function BB(OB, GB, YB) {
-          return isNaN(GB) ? BB(OB, 0, YB) : isFinite(GB) ? GB !== (0 | GB) ? Math.abs(GB) <= 34028235e31 && (EB[0] = GB, Math.abs(Math.abs(EB[0]) - Math.abs(GB)) < 1e-4) ? (OB[YB.offset++] = 202, tB(OB, GB, YB), 5) : (OB[YB.offset++] = 203, BO(OB, GB, YB), 9) : GB >= 0 ? GB < 128 ? (OB[YB.offset++] = 255 & GB, 1) : GB < 256 ? (OB[YB.offset++] = 204, OB[YB.offset++] = 255 & GB, 2) : GB < 65536 ? (OB[YB.offset++] = 205, CB(OB, GB, YB), 3) : GB < 4294967296 ? (OB[YB.offset++] = 206, vB(OB, GB, YB), 5) : (OB[YB.offset++] = 207, xB(OB, GB, YB), 9) : GB >= -32 ? (OB[YB.offset++] = 224 | GB + 32, 1) : GB >= -128 ? (OB[YB.offset++] = 208, TB(OB, GB, YB), 2) : GB >= -32768 ? (OB[YB.offset++] = 209, bB(OB, GB, YB), 3) : GB >= -2147483648 ? (OB[YB.offset++] = 210, HB(OB, GB, YB), 5) : (OB[YB.offset++] = 211, sB(OB, GB, YB), 9) : BB(OB, GB > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, YB)
+        number: function ee(ie, He, ye) {
+          return isNaN(He) ? ee(ie, 0, ye) : isFinite(He) ? He !== (0 | He) ? Math.abs(He) <= 34028235e31 && (ue[0] = He, Math.abs(Math.abs(ue[0]) - Math.abs(He)) < 1e-4) ? (ie[ye.offset++] = 202, Qe(ie, He, ye), 5) : (ie[ye.offset++] = 203, ei(ie, He, ye), 9) : He >= 0 ? He < 128 ? (ie[ye.offset++] = 255 & He, 1) : He < 256 ? (ie[ye.offset++] = 204, ie[ye.offset++] = 255 & He, 2) : He < 65536 ? (ie[ye.offset++] = 205, Ie(ie, He, ye), 3) : He < 4294967296 ? (ie[ye.offset++] = 206, Ne(ie, He, ye), 5) : (ie[ye.offset++] = 207, re(ie, He, ye), 9) : He >= -32 ? (ie[ye.offset++] = 224 | He + 32, 1) : He >= -128 ? (ie[ye.offset++] = 208, je(ie, He, ye), 2) : He >= -32768 ? (ie[ye.offset++] = 209, se(ie, He, ye), 3) : He >= -2147483648 ? (ie[ye.offset++] = 210, he(ie, He, ye), 5) : (ie[ye.offset++] = 211, Ge(ie, He, ye), 9) : ee(ie, He > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, ye)
         },
-        utf8Write: eB,
-        utf8Length: aB
+        utf8Write: ne,
+        utf8Length: Se
       },
-      GO = new ArrayBuffer(8),
-      YO = new Int32Array(GO),
-      DO = new Float32Array(GO),
-      QO = new Float64Array(GO),
-      oO = new BigUint64Array(GO),
-      jO = new BigInt64Array(GO);
+      Hi = new ArrayBuffer(8),
+      yi = new Int32Array(Hi),
+      bi = new Float32Array(Hi),
+      Mi = new Float64Array(Hi),
+      Ki = new BigUint64Array(Hi),
+      Ui = new BigInt64Array(Hi);
 
-    function yO(BB, OB, GB) {
-      GB > BB.length - OB.offset && (GB = BB.length - OB.offset);
-      for (var YB = "", DB = 0, QB = OB.offset, oB = OB.offset + GB; QB < oB; QB++) {
-        var jB = BB[QB];
-        if (0 !== (128 & jB))
-          if (192 !== (224 & jB))
-            if (224 !== (240 & jB)) {
-              if (240 !== (248 & jB)) {
-                console.error("decode.utf8Read(): Invalid byte " + jB + " at offset " + QB + ". Skip to end of string: " + (OB.offset + GB));
+    function Fi(ee, ie, He) {
+      He > ee.length - ie.offset && (He = ee.length - ie.offset);
+      for (var ye = "", be = 0, Me = ie.offset, Ke = ie.offset + He; Me < Ke; Me++) {
+        var Ue = ee[Me];
+        if (0 !== (128 & Ue))
+          if (192 !== (224 & Ue))
+            if (224 !== (240 & Ue)) {
+              if (240 !== (248 & Ue)) {
+                console.error("decode.utf8Read(): Invalid byte " + Ue + " at offset " + Me + ". Skip to end of string: " + (ie.offset + He));
                 break
-              }(DB = (7 & jB) << 18 | (63 & BB[++QB]) << 12 | (63 & BB[++QB]) << 6 | 63 & BB[++QB]) >= 65536 ? (DB -= 65536, YB += String.fromCharCode(55296 + (DB >>> 10), 56320 + (1023 & DB))) : YB += String.fromCharCode(DB)
-            } else YB += String.fromCharCode((15 & jB) << 12 | (63 & BB[++QB]) << 6 | 63 & BB[++QB]);
-        else YB += String.fromCharCode((31 & jB) << 6 | 63 & BB[++QB]);
-        else YB += String.fromCharCode(jB)
+              }(be = (7 & Ue) << 18 | (63 & ee[++Me]) << 12 | (63 & ee[++Me]) << 6 | 63 & ee[++Me]) >= 65536 ? (be -= 65536, ye += String.fromCharCode(55296 + (be >>> 10), 56320 + (1023 & be))) : ye += String.fromCharCode(be)
+            } else ye += String.fromCharCode((15 & Ue) << 12 | (63 & ee[++Me]) << 6 | 63 & ee[++Me]);
+        else ye += String.fromCharCode((31 & Ue) << 6 | 63 & ee[++Me]);
+        else ye += String.fromCharCode(Ue)
       }
-      return OB.offset += GB, YB
+      return ie.offset += He, ye
     }
 
-    function JO(BB, OB) {
-      return MO(BB, OB) << 24 >> 24
+    function Ji(ee, ie) {
+      return oi(ee, ie) << 24 >> 24
     }
 
-    function MO(BB, OB) {
-      return BB[OB.offset++]
+    function oi(ee, ie) {
+      return ee[ie.offset++]
     }
 
-    function PO(BB, OB) {
-      return zO(BB, OB) << 16 >> 16
+    function Ri(ee, ie) {
+      return ki(ee, ie) << 16 >> 16
     }
 
-    function zO(BB, OB) {
-      return BB[OB.offset++] | BB[OB.offset++] << 8
+    function ki(ee, ie) {
+      return ee[ie.offset++] | ee[ie.offset++] << 8
     }
 
-    function lO(BB, OB) {
-      return BB[OB.offset++] | BB[OB.offset++] << 8 | BB[OB.offset++] << 16 | BB[OB.offset++] << 24
+    function qi(ee, ie) {
+      return ee[ie.offset++] | ee[ie.offset++] << 8 | ee[ie.offset++] << 16 | ee[ie.offset++] << 24
     }
 
-    function pO(BB, OB) {
-      return lO(BB, OB) >>> 0
+    function fi(ee, ie) {
+      return qi(ee, ie) >>> 0
     }
 
-    function qO(BB, OB) {
-      return YO[0] = lO(BB, OB), DO[0]
+    function Ti(ee, ie) {
+      return yi[0] = qi(ee, ie), bi[0]
     }
 
-    function ZO(BB, OB) {
-      return YO[0] = lO(BB, OB), YO[1] = lO(BB, OB), QO[0]
+    function Xi(ee, ie) {
+      return yi[0] = qi(ee, ie), yi[1] = qi(ee, ie), Mi[0]
     }
 
-    function NO(BB, OB) {
-      const GB = pO(BB, OB);
-      return lO(BB, OB) * Math.pow(2, 32) + GB
+    function zi(ee, ie) {
+      const He = fi(ee, ie);
+      return qi(ee, ie) * Math.pow(2, 32) + He
     }
 
-    function RO(BB, OB) {
-      const GB = pO(BB, OB);
-      return pO(BB, OB) * Math.pow(2, 32) + GB
+    function Bi(ee, ie) {
+      const He = fi(ee, ie);
+      return fi(ee, ie) * Math.pow(2, 32) + He
     }
-    const WO = {
-        utf8Read: yO,
-        int8: JO,
-        uint8: MO,
-        int16: PO,
-        uint16: zO,
-        int32: lO,
-        uint32: pO,
-        float32: qO,
-        float64: ZO,
-        int64: NO,
-        uint64: RO,
-        bigint64: function(BB, OB) {
-          return YO[0] = lO(BB, OB), YO[1] = lO(BB, OB), jO[0]
+    const Ei = {
+        utf8Read: Fi,
+        int8: Ji,
+        uint8: oi,
+        int16: Ri,
+        uint16: ki,
+        int32: qi,
+        uint32: fi,
+        float32: Ti,
+        float64: Xi,
+        int64: zi,
+        uint64: Bi,
+        bigint64: function(ee, ie) {
+          return yi[0] = qi(ee, ie), yi[1] = qi(ee, ie), Ui[0]
         },
-        biguint64: function(BB, OB) {
-          return YO[0] = lO(BB, OB), YO[1] = lO(BB, OB), oO[0]
+        biguint64: function(ee, ie) {
+          return yi[0] = qi(ee, ie), yi[1] = qi(ee, ie), Ki[0]
         },
-        boolean: function(BB, OB) {
-          return MO(BB, OB) > 0
+        boolean: function(ee, ie) {
+          return oi(ee, ie) > 0
         },
-        string: function(BB, OB) {
-          const GB = BB[OB.offset++];
-          let YB;
-          return GB < 192 ? YB = 31 & GB : 217 === GB ? YB = MO(BB, OB) : 218 === GB ? YB = zO(BB, OB) : 219 === GB && (YB = pO(BB, OB)), yO(BB, OB, YB)
+        string: function(ee, ie) {
+          const He = ee[ie.offset++];
+          let ye;
+          return He < 192 ? ye = 31 & He : 217 === He ? ye = oi(ee, ie) : 218 === He ? ye = ki(ee, ie) : 219 === He && (ye = fi(ee, ie)), Fi(ee, ie, ye)
         },
-        number: function(BB, OB) {
-          const GB = BB[OB.offset++];
-          return GB < 128 ? GB : 202 === GB ? qO(BB, OB) : 203 === GB ? ZO(BB, OB) : 204 === GB ? MO(BB, OB) : 205 === GB ? zO(BB, OB) : 206 === GB ? pO(BB, OB) : 207 === GB ? RO(BB, OB) : 208 === GB ? JO(BB, OB) : 209 === GB ? PO(BB, OB) : 210 === GB ? lO(BB, OB) : 211 === GB ? NO(BB, OB) : GB > 223 ? -1 * (255 - GB + 1) : void 0
+        number: function(ee, ie) {
+          const He = ee[ie.offset++];
+          return He < 128 ? He : 202 === He ? Ti(ee, ie) : 203 === He ? Xi(ee, ie) : 204 === He ? oi(ee, ie) : 205 === He ? ki(ee, ie) : 206 === He ? fi(ee, ie) : 207 === He ? Bi(ee, ie) : 208 === He ? Ji(ee, ie) : 209 === He ? Ri(ee, ie) : 210 === He ? qi(ee, ie) : 211 === He ? zi(ee, ie) : He > 223 ? -1 * (255 - He + 1) : void 0
         },
-        stringCheck: function(BB, OB) {
-          const GB = BB[OB.offset];
-          return GB < 192 && GB > 160 || 217 === GB || 218 === GB || 219 === GB
+        stringCheck: function(ee, ie) {
+          const He = ee[ie.offset];
+          return He < 192 && He > 160 || 217 === He || 218 === He || 219 === He
         }
       },
-      AO = {},
-      VO = new Map;
+      gi = {},
+      Oi = new Map;
 
-    function SO(BB, OB) {
-      OB.constructor && (Object.prototype.hasOwnProperty.call(OB, "constructor") && null == OB.constructor[Symbol.metadata] && QB(OB.constructor), VO.set(OB.constructor, BB), AO[BB] = OB), OB.encode && (OO[BB] = OB.encode), OB.decode && (WO[BB] = OB.decode)
+    function di(ee, ie) {
+      ie.constructor && (Object.prototype.hasOwnProperty.call(ie, "constructor") && null == ie.constructor[Symbol.metadata] && Me(ie.constructor), Oi.set(ie.constructor, ee), gi[ee] = ie), ie.encode && (ii[ee] = ie.encode), ie.decode && (Ei[ee] = ie.decode)
     }
 
-    function nO(BB) {
-      for (const OB in BB) SO(OB, BB[OB]);
-      return BB => AY(BB)
+    function Wi(ee) {
+      for (const ie in ee) di(ie, ee[ie]);
+      return ee => Oy(ee)
     }
-    const UO = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const ti = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function fO() {
+    function Zi() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function kO(BB) {
-      return BB._stream ??= fO()
+    function wi(ee) {
+      return ee._stream ??= Zi()
     }
 
-    function dO(BB, OB, GB) {
-      0 === OB.activeViews.size && kO(BB).broadcastPending.add(GB)
+    function Di(ee, ie, He) {
+      0 === ie.activeViews.size && wi(ee).broadcastPending.add(He)
     }
 
-    function KO(BB, OB, GB, YB) {
-      const QB = BB._stream;
-      if (void 0 === QB) return !0;
-      let oB = !1;
-      return QB.broadcastPending.delete(YB) ? oB = !0 : QB.sentBroadcast.delete(YB) && QB.broadcastDeletes.add(YB), OB.forEachActiveView((BB => {
-        const OB = QB.pendingByView.get(BB.id);
-        if (OB?.has(YB)) return OB.delete(YB), void(oB = !0);
-        const jB = QB.sentByView.get(BB.id);
-        if (jB?.has(YB)) {
-          jB.delete(YB);
-          let OB = BB.changes.get(GB);
-          void 0 === OB && (OB = new Map, BB.changes.set(GB, OB)), OB.set(YB, DB.DELETE)
+    function Pi(ee, ie, He, ye) {
+      const Me = ee._stream;
+      if (void 0 === Me) return !0;
+      let Ke = !1;
+      return Me.broadcastPending.delete(ye) ? Ke = !0 : Me.sentBroadcast.delete(ye) && Me.broadcastDeletes.add(ye), ie.forEachActiveView((ee => {
+        const ie = Me.pendingByView.get(ee.id);
+        if (ie?.has(ye)) return ie.delete(ye), void(Ke = !0);
+        const Ue = Me.sentByView.get(ee.id);
+        if (Ue?.has(ye)) {
+          Ue.delete(ye);
+          let ie = ee.changes.get(He);
+          void 0 === ie && (ie = new Map, ee.changes.set(He, ie)), ie.set(ye, be.DELETE)
         }
-      })), oB
+      })), Ke
     }
 
-    function uO(BB, OB) {
-      const GB = BB._stream?.pendingByView;
-      if (void 0 === GB) return !1;
-      for (const [YB, DB] of GB)
-        if (DB.size > 0 && void 0 !== OB.activeViews.get(YB)?.deref()) return !0;
+    function Ai(ee, ie) {
+      const He = ee._stream?.pendingByView;
+      if (void 0 === He) return !1;
+      for (const [ye, be] of He)
+        if (be.size > 0 && void 0 !== ie.activeViews.get(ye)?.deref()) return !0;
       return !1
     }
 
-    function mO(BB) {
-      const OB = BB._stream;
-      return void 0 !== OB && (OB.broadcastPending.size > 0 || OB.broadcastDeletes.size > 0)
+    function Yi(ee) {
+      const ie = ee._stream;
+      return void 0 !== ie && (ie.broadcastPending.size > 0 || ie.broadcastDeletes.size > 0)
     }
 
-    function IO(BB, OB, GB) {
-      const YB = kO(BB);
-      let DB = YB.pendingByView.get(OB);
-      void 0 === DB && (DB = new Set, YB.pendingByView.set(OB, DB)), DB.add(GB)
+    function Vi(ee, ie, He) {
+      const ye = wi(ee);
+      let be = ye.pendingByView.get(ie);
+      void 0 === be && (be = new Set, ye.pendingByView.set(ie, be)), be.add(He)
     }
 
-    function FO(BB, OB) {
-      const GB = BB._stream;
-      void 0 !== GB && (GB.pendingByView.delete(OB), GB.sentByView.delete(OB), GB.priorityByView?.delete(OB))
+    function ai(ee, ie) {
+      const He = ee._stream;
+      void 0 !== He && (He.pendingByView.delete(ie), He.sentByView.delete(ie), He.priorityByView?.delete(ie))
     }
-    const iO = {
+    const ci = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function LO(BB) {
-      if (null == BB || "object" !== typeof BB) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function xi(ee) {
+      if (null == ee || "object" !== typeof ee) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: OB,
-        max: GB
-      } = BB;
-      if ("number" !== typeof OB || "number" !== typeof GB || !(GB > OB) || !Number.isFinite(OB) || !Number.isFinite(GB)) throw new Error(`t.quantized(): require finite min < max (got min=${OB}, max=${GB}).`);
-      const YB = BB.bits ?? 16;
-      if (8 !== YB && 16 !== YB && 32 !== YB) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${YB}).`);
-      const DB = BB.mode ?? "clamp";
-      if ("clamp" !== DB && "wrap" !== DB) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(DB)}).`);
-      const QB = "wrap" === DB,
-        oB = Math.pow(2, YB);
+        min: ie,
+        max: He
+      } = ee;
+      if ("number" !== typeof ie || "number" !== typeof He || !(He > ie) || !Number.isFinite(ie) || !Number.isFinite(He)) throw new Error(`t.quantized(): require finite min < max (got min=${ie}, max=${He}).`);
+      const ye = ee.bits ?? 16;
+      if (8 !== ye && 16 !== ye && 32 !== ye) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${ye}).`);
+      const be = ee.mode ?? "clamp";
+      if ("clamp" !== be && "wrap" !== be) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(be)}).`);
+      const Me = "wrap" === be,
+        Ke = Math.pow(2, ye);
       return {
-        min: OB,
-        max: GB,
-        bits: YB,
-        wrap: QB,
-        wire: iO[YB],
-        range: GB - OB,
-        span: QB ? oB : OB === -GB ? oB - 2 : oB - 1
+        min: ie,
+        max: He,
+        bits: ye,
+        wrap: Me,
+        wire: ci[ye],
+        range: He - ie,
+        span: Me ? Ke : ie === -He ? Ke - 2 : Ke - 1
       }
     }
 
-    function gO(BB) {
-      return null !== BB && "object" === typeof BB && void 0 !== BB.quantized
+    function Li(ee) {
+      return null !== ee && "object" === typeof ee && void 0 !== ee.quantized
     }
 
-    function rO(BB, OB) {
-      if (BB.wrap) {
-        if (!Number.isFinite(OB)) return 0;
-        const GB = BB.range;
-        let YB = (OB - BB.min) % GB;
-        YB < 0 && (YB += GB);
-        const DB = BB.span;
-        return Math.floor(YB / GB * DB + .5) % DB
+    function Ci(ee, ie) {
+      if (ee.wrap) {
+        if (!Number.isFinite(ie)) return 0;
+        const He = ee.range;
+        let ye = (ie - ee.min) % He;
+        ye < 0 && (ye += He);
+        const be = ee.span;
+        return Math.floor(ye / He * be + .5) % be
       }
-      if (OB !== OB) return 0;
-      const GB = OB < BB.min ? BB.min : OB > BB.max ? BB.max : OB;
-      return Math.floor((GB - BB.min) / BB.range * BB.span + .5)
+      if (ie !== ie) return 0;
+      const He = ie < ee.min ? ee.min : ie > ee.max ? ee.max : ie;
+      return Math.floor((He - ee.min) / ee.range * ee.span + .5)
     }
 
-    function XO(BB, OB) {
-      return BB.min + OB / BB.span * BB.range
+    function vi(ee, ie) {
+      return ee.min + ie / ee.span * ee.range
     }
 
-    function wO(BB) {
-      const OB = OO[BB.wire];
-      return (GB, YB, DB) => OB(GB, rO(BB, YB), DB)
+    function ui(ee) {
+      const ie = ii[ee.wire];
+      return (He, ye, be) => ie(He, Ci(ee, ye), be)
     }
-    class EO {
+    class mi {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(BB) {
-        const OB = Object.getPrototypeOf(BB);
-        if (OB !== KY) {
-          let GB = EO.inheritedTypes.get(OB);
-          GB || (GB = new Set, EO.inheritedTypes.set(OB, GB)), GB.add(BB)
+      static register(ee) {
+        const ie = Object.getPrototypeOf(ee);
+        if (ie !== Ay) {
+          let He = mi.inheritedTypes.get(ie);
+          He || (He = new Set, mi.inheritedTypes.set(ie, He)), He.add(ee)
         }
       }
-      static cache(BB) {
-        let OB = EO.cachedContexts.get(BB);
-        return OB || (OB = new EO(BB), EO.cachedContexts.set(BB, OB)), OB
+      static cache(ee) {
+        let ie = mi.cachedContexts.get(ee);
+        return ie || (ie = new mi(ee), mi.cachedContexts.set(ee, ie)), ie
       }
-      constructor(BB) {
-        BB && this.discoverTypes(BB)
+      constructor(ee) {
+        ee && this.discoverTypes(ee)
       }
-      has(BB) {
-        return this.schemas.has(BB)
+      has(ee) {
+        return this.schemas.has(ee)
       }
-      get(BB) {
-        return this.types[BB]
+      get(ee) {
+        return this.types[ee]
       }
-      add(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(BB) && (this.types[OB] = BB, null == BB[Symbol.metadata] && CO.initialize(BB), this.schemas.set(BB, OB), !0)
+      add(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(ee) && (this.types[ie] = ee, null == ee[Symbol.metadata] && Ni.initialize(ee), this.schemas.set(ee, ie), !0)
       }
-      getTypeId(BB) {
-        return this.schemas.get(BB)
+      getTypeId(ee) {
+        return this.schemas.get(ee)
       }
-      discoverTypes(BB) {
-        if (!this.add(BB)) return;
-        EO.inheritedTypes.get(BB)?.forEach((BB => {
-          this.discoverTypes(BB)
+      discoverTypes(ee) {
+        if (!this.add(ee)) return;
+        mi.inheritedTypes.get(ee)?.forEach((ee => {
+          this.discoverTypes(ee)
         }));
-        let OB = BB;
+        let ie = ee;
         for (;
-          (OB = Object.getPrototypeOf(OB)) && OB !== KY && OB !== Function.prototype;) this.discoverTypes(OB);
-        const GB = BB[Symbol.metadata];
-        (GB[KB] || GB[LB]) && (this.hasFilters = !0);
-        for (const YB in GB) {
-          const BB = GB[YB].type;
-          if ("string" !== typeof BB && !gO(BB))
-            if ("function" === typeof BB) this.discoverTypes(BB);
+          (ie = Object.getPrototypeOf(ie)) && ie !== Ay && ie !== Function.prototype;) this.discoverTypes(ie);
+        const He = ee[Symbol.metadata];
+        (He[De] || He[ce]) && (this.hasFilters = !0);
+        for (const ye in He) {
+          const ee = He[ye].type;
+          if ("string" !== typeof ee && !Li(ee))
+            if ("function" === typeof ee) this.discoverTypes(ee);
             else {
-              const OB = Object.values(BB)[0];
-              if ("string" === typeof OB) continue;
-              this.discoverTypes(OB)
+              const ie = Object.values(ee)[0];
+              if ("string" === typeof ie) continue;
+              this.discoverTypes(ie)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function cO(BB) {
-      const OB = aO(BB);
-      return OB ? {
-        complexTypeKlass: AO[OB],
-        childType: BB[OB]
+    function li(ee) {
+      const ie = ni(ee);
+      return ie ? {
+        complexTypeKlass: gi[ie],
+        childType: ee[ie]
       } : {
         complexTypeKlass: !1,
-        childType: BB
+        childType: ee
       }
     }
 
-    function hO(BB, OB) {
-      const GB = eO(BB),
-        YB = aO(GB),
-        DB = YB && aO(GB[YB]);
-      if (DB) throw new Error(`${OB?`${OB}: `:""}@colyseus/schema: nested collections are not supported ("${YB}" of "${DB}"). Collections can only hold primitive types or Schema classes, wrap the inner ${DB} in a Schema class.`);
-      return GB
+    function Si(ee, ie) {
+      const He = ji(ee),
+        ye = ni(He),
+        be = ye && ni(He[ye]);
+      if (be) throw new Error(`${ie?`${ie}: `:""}@colyseus/schema: nested collections are not supported ("${ye}" of "${be}"). Collections can only hold primitive types or Schema classes, wrap the inner ${be} in a Schema class.`);
+      return He
     }
 
-    function aO(BB) {
-      return "object" === typeof BB && null !== BB ? Object.keys(BB).find((BB => void 0 !== AO[BB])) : void 0
+    function ni(ee) {
+      return "object" === typeof ee && null !== ee ? Object.keys(ee).find((ee => void 0 !== gi[ee])) : void 0
     }
 
-    function eO(BB) {
-      if ("object" !== typeof BB || null === BB) return BB;
-      if (Array.isArray(BB)) return {
-        array: eO(BB[0])
+    function ji(ee) {
+      if ("object" !== typeof ee || null === ee) return ee;
+      if (Array.isArray(ee)) return {
+        array: ji(ee[0])
       };
-      const OB = function(BB) {
-        const OB = Object.keys(BB),
-          GB = OB.filter((BB => /\d+/.test(BB)));
-        if (GB.length > 0 && GB.length === OB.length / 2 && BB[BB[GB[0]]] == GB[0]) return "number";
-        if (OB.length > 0 && OB.every((OB => BB[OB] === OB))) return "string"
-      }(BB);
-      if (OB) return OB;
-      if (gO(BB)) return "string" === typeof BB.quantized.wire ? BB : {
-        quantized: LO(BB.quantized)
+      const ie = function(ee) {
+        const ie = Object.keys(ee),
+          He = ie.filter((ee => /\d+/.test(ee)));
+        if (He.length > 0 && He.length === ie.length / 2 && ee[ee[He[0]]] == He[0]) return "number";
+        if (ie.length > 0 && ie.every((ie => ee[ie] === ie))) return "string"
+      }(ee);
+      if (ie) return ie;
+      if (Li(ee)) return "string" === typeof ee.quantized.wire ? ee : {
+        quantized: xi(ee.quantized)
       };
-      if (void 0 !== BB.type) return eO(BB.type);
-      const GB = aO(BB);
-      return GB && (BB[GB] = eO(BB[GB])), BB
+      if (void 0 !== ee.type) return ji(ee.type);
+      const He = ni(ee);
+      return He && (ee[He] = ji(ee[He])), ee
     }
-    const TO = [dB, mB, IB, FB, iB, LB, fB];
+    const si = [we, Ae, Ye, Ve, ae, ce, te];
 
-    function bO(BB, OB, GB) {
-      BB[OB] || Object.defineProperty(BB, OB, {
+    function Ii(ee, ie, He) {
+      ee[ie] || Object.defineProperty(ee, ie, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), BB[OB].push(GB)
+      }), ee[ie].push(He)
     }
-    const CO = {
-        addField(BB, OB, GB, YB, DB) {
-          if (OB >= 63) throw new Error(`Can't define field '${GB}'.\nSchema instances may only have up to 63 fields.`);
-          BB[OB] = Object.assign(BB[OB] || {}, {
-            type: YB,
-            index: OB,
-            name: GB
-          }), Object.defineProperty(BB, nB, {
-            value: BB[nB] || {},
+    const Ni = {
+        addField(ee, ie, He, ye, be) {
+          if (ie >= 63) throw new Error(`Can't define field '${He}'.\nSchema instances may only have up to 63 fields.`);
+          ee[ie] = Object.assign(ee[ie] || {}, {
+            type: ye,
+            index: ie,
+            name: He
+          }), Object.defineProperty(ee, de, {
+            value: ee[de] || {},
             enumerable: !1,
             configurable: !0
-          }), BB[nB][GB] = DB || {
+          }), ee[de][He] = be || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(BB, kB, {
-            value: OB,
+          }, Object.defineProperty(ee, Ze, {
+            value: ie,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(BB, GB, {
-            value: OB,
+          }), Object.defineProperty(ee, He, {
+            value: ie,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof BB[OB].type || gO(BB[OB].type) || (void 0 === BB[dB] && Object.defineProperty(BB, dB, {
+          }), "string" === typeof ee[ie].type || Li(ee[ie].type) || (void 0 === ee[we] && Object.defineProperty(ee, we, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), BB[dB].push(OB));
-          const QB = BB[OB].type;
-          if (QB && "object" === typeof QB && void 0 !== QB.stream) {
-            if (void 0 !== QB.array) throw new Error(UO);
-            BB[OB].stream = !0, BB[LB] || Object.defineProperty(BB, LB, {
+          }), ee[we].push(ie));
+          const Me = ee[ie].type;
+          if (Me && "object" === typeof Me && void 0 !== Me.stream) {
+            if (void 0 !== Me.array) throw new Error(ti);
+            ee[ie].stream = !0, ee[ce] || Object.defineProperty(ee, ce, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), BB[LB].includes(OB) || BB[LB].push(OB);
-            const DB = YB?.priority;
-            "function" === typeof DB && CO.setStreamPriority(BB, GB, DB)
+            }), ee[ce].includes(ie) || ee[ce].push(ie);
+            const be = ye?.priority;
+            "function" === typeof be && Ni.setStreamPriority(ee, He, be)
           }
         },
-        setTag(BB, OB, GB) {
-          const YB = BB[OB];
-          if (BB[YB].tag = GB, BB[KB] || (Object.defineProperty(BB, KB, {
+        setTag(ee, ie, He) {
+          const ye = ee[ie];
+          if (ee[ye].tag = He, ee[De] || (Object.defineProperty(ee, De, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(BB, uB, {
+            }), Object.defineProperty(ee, Pe, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), BB[KB].push(YB), GB < 0) BB[uB][GB] || (BB[uB][GB] = []), BB[uB][GB].push(YB);
+            })), ee[De].push(ye), He < 0) ee[Pe][He] || (ee[Pe][He] = []), ee[Pe][He].push(ye);
           else
-            for (let DB = GB; DB > 0; DB &= DB - 1) {
-              const OB = DB & -DB;
-              BB[uB][OB] || (BB[uB][OB] = []), BB[uB][OB].push(YB)
+            for (let be = He; be > 0; be &= be - 1) {
+              const ie = be & -be;
+              ee[Pe][ie] || (ee[Pe][ie] = []), ee[Pe][ie].push(ye)
             }
         },
-        setUnreliable(BB, OB) {
-          const GB = BB[OB];
-          if ("string" !== typeof BB[GB].type) throw new Error(`@unreliable cannot be applied to ref-type field "${OB}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          BB[GB].unreliable = !0, BB[mB] || Object.defineProperty(BB, mB, {
+        setUnreliable(ee, ie) {
+          const He = ee[ie];
+          if ("string" !== typeof ee[He].type) throw new Error(`@unreliable cannot be applied to ref-type field "${ie}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          ee[He].unreliable = !0, ee[Ae] || Object.defineProperty(ee, Ae, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), BB[mB].push(GB)
+          }), ee[Ae].push(He)
         },
-        setPatchOnly(BB, OB) {
-          const GB = BB[OB];
-          if (BB[GB].fullStateOnly) throw new Error(`field "${OB}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          BB[GB].patchOnly = !0, bO(BB, IB, GB), bO(BB, FB, GB)
+        setPatchOnly(ee, ie) {
+          const He = ee[ie];
+          if (ee[He].fullStateOnly) throw new Error(`field "${ie}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          ee[He].patchOnly = !0, Ii(ee, Ye, He), Ii(ee, Ve, He)
         },
-        setDeprecated(BB, OB) {
-          const GB = BB[OB];
-          BB[GB].deprecated = !0, bO(BB, FB, GB), Object.defineProperty(BB, GB, {
-            value: BB[GB],
+        setDeprecated(ee, ie) {
+          const He = ee[ie];
+          ee[He].deprecated = !0, Ii(ee, Ve, He), Object.defineProperty(ee, He, {
+            value: ee[He],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(BB, OB) {
-          const GB = BB[OB];
-          if (BB[GB].patchOnly) throw new Error(`field "${OB}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          BB[GB].fullStateOnly = !0, bO(BB, iB, GB)
+        setFullStateOnly(ee, ie) {
+          const He = ee[ie];
+          if (ee[He].patchOnly) throw new Error(`field "${ie}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          ee[He].fullStateOnly = !0, Ii(ee, ae, He)
         },
-        setStream(BB, OB) {
-          const GB = BB[OB];
-          BB[GB].stream = !0, BB[LB] || Object.defineProperty(BB, LB, {
+        setStream(ee, ie) {
+          const He = ee[ie];
+          ee[He].stream = !0, ee[ce] || Object.defineProperty(ee, ce, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), BB[LB].push(GB)
+          }), ee[ce].push(He)
         },
-        setStreamPriority(BB, OB, GB) {
-          const YB = BB[OB];
-          BB[gB] || Object.defineProperty(BB, gB, {
+        setStreamPriority(ee, ie, He) {
+          const ye = ee[ie];
+          ee[xe] || Object.defineProperty(ee, xe, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), BB[gB][YB] = GB
+          }), ee[xe][ye] = He
         },
-        getStreamPriority: (BB, OB) => BB?.[gB]?.[OB],
-        defineField(BB, OB, GB, YB, DB) {
-          const QB = hO(DB, `${BB.name}.${YB}`),
+        getStreamPriority: (ee, ie) => ee?.[xe]?.[ie],
+        defineField(ee, ie, He, ye, be) {
+          const Me = Si(be, `${ee.name}.${ye}`),
             {
-              complexTypeKlass: oB,
-              childType: jB
-            } = cO(QB);
-          CO.addField(OB, GB, YB, QB, SY(YB, GB, jB, oB)), OB[nB][YB] && Object.defineProperty(BB.prototype, YB, OB[nB][YB]), ("string" === typeof QB || gO(QB)) && (OB[fB] || Object.defineProperty(OB, fB, {
+              complexTypeKlass: Ke,
+              childType: Ue
+            } = li(Me);
+          Ni.addField(ie, He, ye, Me, Wy(ye, He, Ue, Ke)), ie[de][ye] && Object.defineProperty(ee.prototype, ye, ie[de][ye]), ("string" === typeof Me || Li(Me)) && (ie[te] || Object.defineProperty(ie, te, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), OB[fB][GB] = "string" === typeof QB ? OO[QB] : wO(QB.quantized))
+          }), ie[te][He] = "string" === typeof Me ? ii[Me] : ui(Me.quantized))
         },
-        setFields(BB, OB) {
-          const GB = BB.prototype.constructor;
-          EO.register(GB);
-          const YB = Object.getPrototypeOf(GB),
-            DB = YB && YB[Symbol.metadata],
-            QB = CO.initialize(GB);
-          GB[yB] || (GB[yB] = KY[yB]), GB[JB] || (GB[JB] = KY[JB]), GB[MB] || (GB[MB] = KY[MB]), GB.prototype.toJSON || (GB.prototype.toJSON = KY.prototype.toJSON);
-          let oB = QB[kB] ?? (DB && DB[kB]) ?? -1;
-          oB++, QB[fB] || Object.defineProperty(QB, fB, {
-            value: DB?.[fB] ? [...DB[fB]] : [],
+        setFields(ee, ie) {
+          const He = ee.prototype.constructor;
+          mi.register(He);
+          const ye = Object.getPrototypeOf(He),
+            be = ye && ye[Symbol.metadata],
+            Me = Ni.initialize(He);
+          He[Fe] || (He[Fe] = Ay[Fe]), He[Je] || (He[Je] = Ay[Je]), He[oe] || (He[oe] = Ay[oe]), He.prototype.toJSON || (He.prototype.toJSON = Ay.prototype.toJSON);
+          let Ke = Me[Ze] ?? (be && be[Ze]) ?? -1;
+          Ke++, Me[te] || Object.defineProperty(Me, te, {
+            value: be?.[te] ? [...be[te]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const jB in OB) {
-            if (void 0 !== QB[jB]) throw new Error(`@colyseus/schema: Duplicate '${jB}' definition on '${GB.name||"(anonymous)"}'.`);
-            CO.defineField(GB, QB, oB, jB, OB[jB]), oB++
+          for (const Ue in ie) {
+            if (void 0 !== Me[Ue]) throw new Error(`@colyseus/schema: Duplicate '${Ue}' definition on '${He.name||"(anonymous)"}'.`);
+            Ni.defineField(He, Me, Ke, Ue, ie[Ue]), Ke++
           }
-          return BB
+          return ee
         },
-        isDeprecated: (BB, OB) => !0 === BB[OB].deprecated,
-        initialize(BB) {
-          const OB = Object.getPrototypeOf(BB),
-            GB = OB[Symbol.metadata];
-          let YB = BB[Symbol.metadata] ?? Object.create(null);
-          if (OB !== KY && YB === GB && (YB = Object.create(null), GB)) {
-            Object.setPrototypeOf(YB, GB), Object.defineProperty(YB, kB, {
-              value: GB[kB],
+        isDeprecated: (ee, ie) => !0 === ee[ie].deprecated,
+        initialize(ee) {
+          const ie = Object.getPrototypeOf(ee),
+            He = ie[Symbol.metadata];
+          let ye = ee[Symbol.metadata] ?? Object.create(null);
+          if (ie !== Ay && ye === He && (ye = Object.create(null), He)) {
+            Object.setPrototypeOf(ye, He), Object.defineProperty(ye, Ze, {
+              value: He[Ze],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== GB[KB] && (Object.defineProperty(YB, KB, {
-              value: [...GB[KB]],
+            }), void 0 !== He[De] && (Object.defineProperty(ye, De, {
+              value: [...He[De]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(YB, uB, {
+            }), Object.defineProperty(ye, Pe, {
               value: {
-                ...GB[uB]
+                ...He[Pe]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const BB of TO) {
-              const OB = GB[BB];
-              void 0 !== OB && Object.defineProperty(YB, BB, {
-                value: [...OB],
+            for (const ee of si) {
+              const ie = He[ee];
+              void 0 !== ie && Object.defineProperty(ye, ee, {
+                value: [...ie],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(YB, nB, {
+            Object.defineProperty(ye, de, {
               value: {
-                ...GB[nB]
+                ...He[de]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(BB, Symbol.metadata, {
-            value: YB,
+          return Object.defineProperty(ee, Symbol.metadata, {
+            value: ye,
             writable: !1,
             configurable: !0
-          }), YB
+          }), ye
         },
-        isValidInstance: BB => BB.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(BB.constructor[Symbol.metadata], kB),
-        getFields(BB) {
-          const OB = BB[Symbol.metadata],
-            GB = {};
-          for (let YB = 0; YB <= OB[kB]; YB++) GB[OB[YB].name] = OB[YB].type;
-          return GB
+        isValidInstance: ee => ee.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(ee.constructor[Symbol.metadata], Ze),
+        getFields(ee) {
+          const ie = ee[Symbol.metadata],
+            He = {};
+          for (let ye = 0; ye <= ie[Ze]; ye++) He[ie[ye].name] = ie[ye].type;
+          return He
         },
-        hasViewTagAtIndex: (BB, OB) => BB?.[KB]?.includes(OB),
-        hasUnreliableAtIndex: (BB, OB) => BB?.[mB]?.includes(OB),
-        hasPatchOnlyAtIndex: (BB, OB) => BB?.[IB]?.includes(OB),
-        hasFullStateOnlyAtIndex: (BB, OB) => BB?.[iB]?.includes(OB),
-        hasStreamAtIndex: (BB, OB) => BB?.[LB]?.includes(OB)
+        hasViewTagAtIndex: (ee, ie) => ee?.[De]?.includes(ie),
+        hasUnreliableAtIndex: (ee, ie) => ee?.[Ae]?.includes(ie),
+        hasPatchOnlyAtIndex: (ee, ie) => ee?.[Ye]?.includes(ie),
+        hasFullStateOnlyAtIndex: (ee, ie) => ee?.[ae]?.includes(ie),
+        hasStreamAtIndex: (ee, ie) => ee?.[ce]?.includes(ie)
       },
-      HO = (BB, OB, GB) => BB(OB, GB);
-    class vO {
+      Gi = (ee, ie, He) => ee(ie, He);
+    class ri {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(BB) {
-        this.ops = new Uint8Array(Math.max(BB + 1, 1))
+      constructor(ee) {
+        this.ops = new Uint8Array(Math.max(ee + 1, 1))
       }
-      record(BB, OB) {
-        const GB = this.ops[BB];
-        0 === GB ? this.ops[BB] = OB : (GB === DB.DELETE || GB === DB.ADD && OB === DB.DELETE_AND_ADD) && (this.ops[BB] = DB.DELETE_AND_ADD), BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
+      record(ee, ie) {
+        const He = this.ops[ee];
+        0 === He ? this.ops[ee] = ie : (He === be.DELETE || He === be.ADD && ie === be.DELETE_AND_ADD) && (this.ops[ee] = be.DELETE_AND_ADD), ee < 32 ? this.dirtyLow |= 1 << ee : this.dirtyHigh |= 1 << ee - 32
       }
-      recordDelete(BB, OB) {
-        this.ops[BB] = OB, BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
+      recordDelete(ee, ie) {
+        this.ops[ee] = ie, ee < 32 ? this.dirtyLow |= 1 << ee : this.dirtyHigh |= 1 << ee - 32
       }
-      recordRaw(BB, OB) {
-        this.record(BB, OB)
+      recordRaw(ee, ie) {
+        this.record(ee, ie)
       }
-      operationAt(BB) {
-        const OB = this.ops[BB];
-        return 0 === OB ? void 0 : OB
+      operationAt(ee) {
+        const ie = this.ops[ee];
+        return 0 === ie ? void 0 : ie
       }
-      setOperationAt(BB, OB) {
-        this.ops[BB] = OB
+      setOperationAt(ee, ie) {
+        this.ops[ee] = ie
       }
-      forEach(BB) {
-        this.forEachWithCtx(BB, HO)
+      forEach(ee) {
+        this.forEachWithCtx(ee, Gi)
       }
-      forEachWithCtx(BB, OB) {
-        let GB = this.dirtyLow,
-          YB = this.dirtyHigh;
-        const DB = this.ops;
-        for (; 0 !== GB;) {
-          const YB = GB & -GB,
-            QB = 31 - Math.clz32(YB);
-          GB ^= YB, OB(BB, QB, DB[QB])
+      forEachWithCtx(ee, ie) {
+        let He = this.dirtyLow,
+          ye = this.dirtyHigh;
+        const be = this.ops;
+        for (; 0 !== He;) {
+          const ye = He & -He,
+            Me = 31 - Math.clz32(ye);
+          He ^= ye, ie(ee, Me, be[Me])
         }
-        for (; 0 !== YB;) {
-          const GB = YB & -YB,
-            QB = 31 - Math.clz32(GB) + 32;
-          YB ^= GB, OB(BB, QB, DB[QB])
+        for (; 0 !== ye;) {
+          const He = ye & -ye,
+            Me = 31 - Math.clz32(He) + 32;
+          ye ^= He, ie(ee, Me, be[Me])
         }
       }
       size() {
-        return xO(this.dirtyLow) + xO(this.dirtyHigh)
+        return eH(this.dirtyLow) + eH(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class sO {
-      ap = new Map;
+    class Qi {
+      yT = new Map;
       pureOps = [];
-      record(BB, OB) {
-        const GB = this.ap.get(BB);
-        void 0 === GB ? this.ap.set(BB, OB) : (GB === DB.DELETE || GB === DB.ADD && OB === DB.DELETE_AND_ADD) && this.ap.set(BB, DB.DELETE_AND_ADD)
+      record(ee, ie) {
+        const He = this.yT.get(ee);
+        void 0 === He ? this.yT.set(ee, ie) : (He === be.DELETE || He === be.ADD && ie === be.DELETE_AND_ADD) && this.yT.set(ee, be.DELETE_AND_ADD)
       }
-      recordDelete(BB, OB) {
-        this.ap.set(BB, OB)
+      recordDelete(ee, ie) {
+        this.yT.set(ee, ie)
       }
-      recordRaw(BB, OB) {
-        this.ap.set(BB, OB)
+      recordRaw(ee, ie) {
+        this.yT.set(ee, ie)
       }
-      recordPure(BB) {
-        this.pureOps.push([this.ap.size, BB])
+      recordPure(ee) {
+        this.pureOps.push([this.yT.size, ee])
       }
-      operationAt(BB) {
-        return this.ap.get(BB)
+      operationAt(ee) {
+        return this.yT.get(ee)
       }
-      setOperationAt(BB, OB) {
-        this.ap.has(BB) && this.ap.set(BB, OB)
+      setOperationAt(ee, ie) {
+        this.yT.has(ee) && this.yT.set(ee, ie)
       }
-      forEach(BB) {
-        this.forEachWithCtx(BB, HO)
+      forEach(ee) {
+        this.forEachWithCtx(ee, Gi)
       }
-      forEachWithCtx(BB, OB) {
-        const GB = this.pureOps;
-        if (GB.length > 0) {
-          let YB = 0,
-            DB = 0;
-          for (const [QB, oB] of this.ap) {
-            for (; YB < GB.length && GB[YB][0] <= DB;) {
-              const DB = GB[YB++][1];
-              OB(BB, -DB, DB)
+      forEachWithCtx(ee, ie) {
+        const He = this.pureOps;
+        if (He.length > 0) {
+          let ye = 0,
+            be = 0;
+          for (const [Me, Ke] of this.yT) {
+            for (; ye < He.length && He[ye][0] <= be;) {
+              const be = He[ye++][1];
+              ie(ee, -be, be)
             }
-            OB(BB, QB, oB), DB++
+            ie(ee, Me, Ke), be++
           }
-          for (; YB < GB.length;) {
-            const DB = GB[YB++][1];
-            OB(BB, -DB, DB)
+          for (; ye < He.length;) {
+            const be = He[ye++][1];
+            ie(ee, -be, be)
           }
         } else
-          for (const [YB, DB] of this.ap) OB(BB, YB, DB)
+          for (const [ye, be] of this.yT) ie(ee, ye, be)
       }
       size() {
-        return this.ap.size + this.pureOps.length
+        return this.yT.size + this.pureOps.length
       }
       has() {
-        return this.ap.size > 0 || this.pureOps.length > 0
+        return this.yT.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.ap.clear(), this.pureOps.length = 0
+        this.yT.clear(), this.pureOps.length = 0
       }
-      shift(BB) {
-        const OB = new Map;
-        for (const [GB, YB] of this.ap) OB.set(GB + BB, YB);
-        this.ap = OB
+      shift(ee) {
+        const ie = new Map;
+        for (const [He, ye] of this.yT) ie.set(He + ee, ye);
+        this.yT = ie
       }
     }
 
-    function xO(BB) {
-      return 16843009 * ((BB = (858993459 & (BB -= BB >>> 1 & 1431655765)) + (BB >>> 2 & 858993459)) + (BB >>> 4) & 252645135) >>> 24
+    function eH(ee) {
+      return 16843009 * ((ee = (858993459 & (ee -= ee >>> 1 & 1431655765)) + (ee >>> 2 & 858993459)) + (ee >>> 4) & 252645135) >>> 24
     }
 
-    function tO(BB) {
-      if (void 0 === BB) return 0;
-      let OB = 0;
-      for (let GB = 0, YB = BB.length; GB < YB; GB++) {
-        const YB = BB[GB];
-        YB < 32 && (OB |= 1 << YB)
+    function iH(ee) {
+      if (void 0 === ee) return 0;
+      let ie = 0;
+      for (let He = 0, ye = ee.length; He < ye; He++) {
+        const ye = ee[He];
+        ye < 32 && (ie |= 1 << ye)
       }
-      return OB
+      return ie
     }
 
-    function BG(BB) {
-      const OB = BB.constructor;
-      if (Object.prototype.hasOwnProperty.call(OB, UB)) return OB[UB];
-      const GB = OB[Symbol.metadata],
-        YB = CO.isValidInstance(BB),
-        DB = (GB?.[KB]?.length ?? 0) > 0,
-        QB = function(BB) {
-          const OB = [],
-            GB = [],
-            YB = [],
-            DB = [],
-            QB = BB?.[kB];
-          if (void 0 === QB) return {
-            names: OB,
-            types: GB,
-            tags: YB,
-            encoders: DB
+    function HH(ee) {
+      const ie = ee.constructor;
+      if (Object.prototype.hasOwnProperty.call(ie, We)) return ie[We];
+      const He = ie[Symbol.metadata],
+        ye = Ni.isValidInstance(ee),
+        be = (He?.[De]?.length ?? 0) > 0,
+        Me = function(ee) {
+          const ie = [],
+            He = [],
+            ye = [],
+            be = [],
+            Me = ee?.[Ze];
+          if (void 0 === Me) return {
+            names: ie,
+            types: He,
+            tags: ye,
+            encoders: be
           };
-          const oB = BB[fB];
-          for (let jB = 0; jB <= QB; jB++) {
-            const QB = BB[jB];
-            void 0 !== QB ? (OB[jB] = QB.name, GB[jB] = QB.type, YB[jB] = QB.tag, DB[jB] = oB?.[jB]) : (OB[jB] = void 0, GB[jB] = void 0, YB[jB] = void 0, DB[jB] = void 0)
+          const Ke = ee[te];
+          for (let Ue = 0; Ue <= Me; Ue++) {
+            const Me = ee[Ue];
+            void 0 !== Me ? (ie[Ue] = Me.name, He[Ue] = Me.type, ye[Ue] = Me.tag, be[Ue] = Ke?.[Ue]) : (ie[Ue] = void 0, He[Ue] = void 0, ye[Ue] = void 0, be[Ue] = void 0)
           }
           return {
-            names: OB,
-            types: GB,
-            tags: YB,
-            encoders: DB
+            names: ie,
+            types: He,
+            tags: ye,
+            encoders: be
           }
-        }(GB),
-        oB = YB && !DB ? void 0 : OB[PB],
-        jB = {
-          encoder: OB[JB],
-          filter: oB,
-          metadata: GB,
-          isSchema: YB,
-          filterBitmask: YB ? tO(GB?.[KB]) : 0,
-          hasAnyFullStateOnly: (GB?.[iB]?.length ?? 0) > 0,
-          hasAnyUnreliable: (GB?.[mB]?.length ?? 0) > 0,
-          hasAnyStream: (GB?.[LB]?.length ?? 0) > 0,
-          hasAnyView: DB,
-          fullStateOnlyBitmask: tO(GB?.[iB]),
-          unreliableBitmask: tO(GB?.[mB]),
-          streamBitmask: tO(GB?.[LB]),
-          names: QB.names,
-          types: QB.types,
-          tags: QB.tags,
-          encoders: QB.encoders
+        }(He),
+        Ke = ye && !be ? void 0 : ie[Re],
+        Ue = {
+          encoder: ie[Je],
+          filter: Ke,
+          metadata: He,
+          isSchema: ye,
+          filterBitmask: ye ? iH(He?.[De]) : 0,
+          hasAnyFullStateOnly: (He?.[ae]?.length ?? 0) > 0,
+          hasAnyUnreliable: (He?.[Ae]?.length ?? 0) > 0,
+          hasAnyStream: (He?.[ce]?.length ?? 0) > 0,
+          hasAnyView: be,
+          fullStateOnlyBitmask: iH(He?.[ae]),
+          unreliableBitmask: iH(He?.[Ae]),
+          streamBitmask: iH(He?.[ce]),
+          names: Me.names,
+          types: Me.types,
+          tags: Me.tags,
+          encoders: Me.encoders
         };
-      return Object.defineProperty(OB, UB, {
-        value: jB,
+      return Object.defineProperty(ie, We, {
+        value: Ue,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), jB
+      }), Ue
     }
 
-    function OG(BB, OB) {
-      if (void 0 !== BB.parentRef && OB(BB.parentRef, BB._parentIndex)) return !0;
-      for (let GB = BB.extraParents; void 0 !== GB; GB = GB.next)
-        if (OB(GB.ref, GB.index)) return !0;
+    function yH(ee, ie) {
+      if (void 0 !== ee.parentRef && ie(ee.parentRef, ee._parentIndex)) return !0;
+      for (let He = ee.extraParents; void 0 !== He; He = He.next)
+        if (ie(He.ref, He.index)) return !0;
       return !1
     }
-    const GG = (BB, OB) => {
-        BB.isFieldUnreliable(OB) ? BB.ensureUnreliableRecorder().record(OB, DB.ADD) : BB.record(OB, DB.ADD)
+    const bH = (ee, ie) => {
+        ee.isFieldUnreliable(ie) ? ee.ensureUnreliableRecorder().record(ie, be.ADD) : ee.record(ie, be.ADD)
       },
-      YG = (BB, OB) => BB(OB);
+      MH = (ee, ie) => ee(ie);
 
-    function DG(BB, OB, GB) {
-      const YB = BB.refTarget;
-      if (void 0 !== YB[ZB]) {
-        if (BB.isPatchOnly) return;
-        if (Array.isArray(YB.items)) {
-          const BB = YB.items;
-          for (let YB = 0, DB = BB.length; YB < DB; YB++) void 0 !== BB[YB] && GB(OB, YB)
-        } else if (void 0 !== YB.journal)
-          for (const [BB, DB] of YB.journal.keyByIndex) YB.$items.has(DB) && GB(OB, BB);
-        else if (void 0 !== YB.$items)
-          for (const BB of YB.$items.keys()) GB(OB, BB)
+    function KH(ee, ie, He) {
+      const ye = ee.refTarget;
+      if (void 0 !== ye[pe]) {
+        if (ee.isPatchOnly) return;
+        if (Array.isArray(ye.items)) {
+          const ee = ye.items;
+          for (let ye = 0, be = ee.length; ye < be; ye++) void 0 !== ee[ye] && He(ie, ye)
+        } else if (void 0 !== ye.journal)
+          for (const [ee, be] of ye.journal.keyByIndex) ye.$items.has(be) && He(ie, ee);
+        else if (void 0 !== ye.$items)
+          for (const ee of ye.$items.keys()) He(ie, ee)
       } else {
-        const DB = BB.metadata;
-        if (!DB) return;
-        const QB = DB[kB] ?? -1,
-          oB = DB[FB],
-          jB = BB.encDescriptor.names;
-        for (let BB = 0; BB <= QB; BB++) {
-          const DB = jB[BB];
-          if (void 0 === DB) continue;
-          if (oB && oB.includes(BB)) continue;
-          const QB = YB[DB];
-          void 0 !== QB && null !== QB && GB(OB, BB)
+        const be = ee.metadata;
+        if (!be) return;
+        const Me = be[Ze] ?? -1,
+          Ke = be[Ve],
+          Ue = ee.encDescriptor.names;
+        for (let ee = 0; ee <= Me; ee++) {
+          const be = Ue[ee];
+          if (void 0 === be) continue;
+          if (Ke && Ke.includes(ee)) continue;
+          const Me = ye[be];
+          void 0 !== Me && null !== Me && He(ie, ee)
         }
       }
     }
 
-    function QG(BB, OB, GB, YB) {
-      ! function(BB, OB, GB) {
-        if (!OB) return;
-        const YB = OB[qB],
-          DB = !YB._isSchema;
-        let QB;
-        DB ? (OB = YB.parent, GB = YB.parentIndex, QB = OB?.[qB].metadata) : QB = YB.metadata;
-        const oB = (QB?.[IB]?.includes(GB) ? UG : 0) | (QB?.[iB]?.includes(GB) ? fG : 0),
-          jB = YB.flags & KG | oB,
-          yB = BB.flags;
-        BB.flags = yB | jB;
-        jB & ~yB & fG && (BB.reset(), BB.unreliableRecorder?.reset());
-        const JB = BB.root?.types;
-        if (!JB?.hasFilters) return;
-        const MB = QB?.[KB]?.includes(GB) ?? !1,
-          PB = QB?.[LB]?.includes(GB) ?? !1,
-          zB = YB.isFiltered || MB || PB;
-        if (BB.isFiltered = zB, PB && !DB) {
-          BB.isStreamCollection = !0;
-          const OB = kO(BB.ref);
-          if (void 0 === OB.priority) {
-            const BB = CO.getStreamPriority(QB, GB);
-            void 0 !== BB && (OB.priority = BB)
+    function UH(ee, ie, He, ye) {
+      ! function(ee, ie, He) {
+        if (!ie) return;
+        const ye = ie[Te],
+          be = !ye._isSchema;
+        let Me;
+        be ? (ie = ye.parent, He = ye.parentIndex, Me = ie?.[Te].metadata) : Me = ye.metadata;
+        const Ke = (Me?.[Ye]?.includes(He) ? ZH : 0) | (Me?.[ae]?.includes(He) ? wH : 0),
+          Ue = ye.flags & AH | Ke,
+          Fe = ee.flags;
+        ee.flags = Fe | Ue;
+        Ue & ~Fe & wH && (ee.reset(), ee.unreliableRecorder?.reset());
+        const Je = ee.root?.types;
+        if (!Je?.hasFilters) return;
+        const oe = Me?.[De]?.includes(He) ?? !1,
+          Re = Me?.[ce]?.includes(He) ?? !1,
+          ke = ye.isFiltered || oe || Re;
+        if (ee.isFiltered = ke, Re && !be) {
+          ee.isStreamCollection = !0;
+          const ie = wi(ee.ref);
+          if (void 0 === ie.priority) {
+            const ee = Ni.getStreamPriority(Me, He);
+            void 0 !== ee && (ie.priority = ee)
           }
-          BB.root?.registerStream(BB.ref)
+          ee.root?.registerStream(ee.ref)
         }
-        if (zB) {
-          const OB = jG(BB);
-          BB.isVisibilitySharedWithParent = YB.isFiltered && OB && !PB && (!MB || DB && QB[GB].tag !== pY)
+        if (ke) {
+          const ie = JH(ee);
+          ee.isVisibilitySharedWithParent = ye.isFiltered && ie && !Re && (!oe || be && Me[He].tag !== py)
         }
-      }(BB, OB, GB), BB.isFullStateOnly || (BB.has() && BB.root?.enqueueChangeTree(BB), BB.unreliableRecorder?.has() && BB.root?.enqueueUnreliable(BB), BB.has() || BB.unreliableRecorder?.has() || BB.root?.enqueueChangeTree(BB))
+      }(ee, ie, He), ee.isFullStateOnly || (ee.has() && ee.root?.enqueueChangeTree(ee), ee.unreliableRecorder?.has() && ee.root?.enqueueUnreliable(ee), ee.has() || ee.unreliableRecorder?.has() || ee.root?.enqueueChangeTree(ee))
     }
 
-    function oG(BB) {
-      const OB = BB.pendingFilterRefresh;
-      for (let GB = 0; GB < OB.length; GB++) {
-        const BB = OB[GB];
-        0 !== (BB.flags & dG) && yG(BB)
+    function FH(ee) {
+      const ie = ee.pendingFilterRefresh;
+      for (let He = 0; He < ie.length; He++) {
+        const ee = ie[He];
+        0 !== (ee.flags & PH) && oH(ee)
       }
-      OB.length = 0
+      ie.length = 0
     }
 
-    function jG(BB) {
-      return BB._isSchema || "string" !== typeof BB.refTarget[ZB]
+    function JH(ee) {
+      return ee._isSchema || "string" !== typeof ee.refTarget[pe]
     }
 
-    function yG(BB) {
-      BB.flags &= ~dG;
-      const OB = BB.root;
-      if (void 0 === OB || void 0 === BB.parentRef) return;
-      const GB = jG(BB);
-      let YB = lG(BB, BB.parentRef, BB._parentIndex, GB);
-      for (let QB = BB.extraParents; void 0 !== QB && YB !== zG; QB = QB.next) YB |= lG(BB, QB.ref, QB.index, GB);
-      if (0 === YB) return;
-      BB.isVisibilitySharedWithParent = 0 !== (YB & PG);
-      const DB = 0 === (YB & MG);
-      DB !== BB.isFiltered && (BB.isFiltered = DB, DB || BB.isFullStateOnly || (BB.forEachLiveWithCtx(BB, GG), BB.has() && OB.enqueueChangeTree(BB), BB.unreliableRecorder?.has() && OB.enqueueUnreliable(BB)), BB.forEachChildWithCtx(BB, pG))
+    function oH(ee) {
+      ee.flags &= ~PH;
+      const ie = ee.root;
+      if (void 0 === ie || void 0 === ee.parentRef) return;
+      const He = JH(ee);
+      let ye = TH(ee, ee.parentRef, ee._parentIndex, He);
+      for (let Me = ee.extraParents; void 0 !== Me && ye !== fH; Me = Me.next) ye |= TH(ee, Me.ref, Me.index, He);
+      if (0 === ye) return;
+      ee.isVisibilitySharedWithParent = 0 !== (ye & qH);
+      const be = 0 === (ye & kH);
+      be !== ee.isFiltered && (ee.isFiltered = be, be || ee.isFullStateOnly || (ee.forEachLiveWithCtx(ee, bH), ee.has() && ie.enqueueChangeTree(ee), ee.unreliableRecorder?.has() && ie.enqueueUnreliable(ee)), ee.forEachChildWithCtx(ee, pH))
     }
-    const JG = 1,
-      MG = 2,
-      PG = 4,
-      zG = JG | MG | PG;
+    const RH = 1,
+      kH = 2,
+      qH = 4,
+      fH = RH | kH | qH;
 
-    function lG(BB, OB, GB, YB) {
-      const DB = OB[qB];
-      if (DB.root !== BB.root || ! function(BB, OB, GB) {
-          const YB = OB.refTarget;
-          if (OB.isArray) {
-            const OB = YB.items,
-              DB = OB[GB];
-            if (void 0 !== DB && DB[qB] === BB) return !0;
-            for (let GB = 0, YB = OB.length; GB < YB; GB++) {
-              const YB = OB[GB];
-              if (void 0 !== YB && YB[qB] === BB) return !0
+    function TH(ee, ie, He, ye) {
+      const be = ie[Te];
+      if (be.root !== ee.root || ! function(ee, ie, He) {
+          const ye = ie.refTarget;
+          if (ie.isArray) {
+            const ie = ye.items,
+              be = ie[He];
+            if (void 0 !== be && be[Te] === ee) return !0;
+            for (let He = 0, ye = ie.length; He < ye; He++) {
+              const ye = ie[He];
+              if (void 0 !== ye && ye[Te] === ee) return !0
             }
             return !1
           }
-          const DB = OB.getValue(GB);
-          return void 0 !== DB && DB[qB] === BB
-        }(BB, DB, GB)) return 0;
-      DB.flags & dG && yG(DB);
-      let QB = JG;
-      if (DB._isSchema) {
-        void 0 !== DB.encDescriptor.tags[GB] || DB.isFieldStream(GB) || (DB.isFiltered ? YB && (QB |= PG) : QB |= MG)
-      } else if (DB.isFiltered) {
-        if (YB && !DB.isStreamCollection) {
-          const BB = DB.parent?.[qB];
-          (BB?._isSchema ? BB.encDescriptor.tags[DB.parentIndex] : void 0) !== pY && (QB |= PG)
+          const be = ie.getValue(He);
+          return void 0 !== be && be[Te] === ee
+        }(ee, be, He)) return 0;
+      be.flags & PH && oH(be);
+      let Me = RH;
+      if (be._isSchema) {
+        void 0 !== be.encDescriptor.tags[He] || be.isFieldStream(He) || (be.isFiltered ? ye && (Me |= qH) : Me |= kH)
+      } else if (be.isFiltered) {
+        if (ye && !be.isStreamCollection) {
+          const ee = be.parent?.[Te];
+          (ee?._isSchema ? ee.encDescriptor.tags[be.parentIndex] : void 0) !== py && (Me |= qH)
         }
-      } else QB |= MG;
-      return QB
+      } else Me |= kH;
+      return Me
     }
-    const pG = (BB, OB, GB) => {
-      yG(OB)
+    const pH = (ee, ie, He) => {
+      oH(ie)
     };
 
-    function qG(BB, OB, GB, YB) {
-      if (BB.addParent(OB, YB), !GB) return;
-      const DB = GB.add(BB);
-      GB !== BB.root && (BB.root = GB, QG(BB, OB, YB));
-      const QB = OB?.[qB];
-      if (void 0 !== QB && void 0 !== QB.subscribedViews && void 0 !== OB[ZB] && function(BB, OB, GB, YB) {
-          const DB = BB.subscribedViews;
-          if (void 0 === DB) return;
-          const QB = BB.isStreamCollection,
-            oB = QB ? BB.ref : void 0,
-            jB = QB ? void 0 : GB[qB];
-          for (let yB = 0, JB = DB.length; yB < JB; yB++) {
-            let BB = DB[yB];
-            for (; 0 !== BB;) {
-              const GB = BB & -BB;
-              BB ^= GB;
-              const JB = 32 * yB + (31 - Math.clz32(GB)),
-                MB = YB.activeViews.get(JB),
-                PB = MB?.deref();
-              void 0 !== PB ? QB ? IO(oB, JB, OB) : void 0 !== jB && PB.markVisible(jB) : DB[yB] &= ~GB
+    function XH(ee, ie, He, ye) {
+      if (ee.addParent(ie, ye), !He) return;
+      const be = He.add(ee);
+      He !== ee.root && (ee.root = He, UH(ee, ie, ye));
+      const Me = ie?.[Te];
+      if (void 0 !== Me && void 0 !== Me.subscribedViews && void 0 !== ie[pe] && function(ee, ie, He, ye) {
+          const be = ee.subscribedViews;
+          if (void 0 === be) return;
+          const Me = ee.isStreamCollection,
+            Ke = Me ? ee.ref : void 0,
+            Ue = Me ? void 0 : He[Te];
+          for (let Fe = 0, Je = be.length; Fe < Je; Fe++) {
+            let ee = be[Fe];
+            for (; 0 !== ee;) {
+              const He = ee & -ee;
+              ee ^= He;
+              const Je = 32 * Fe + (31 - Math.clz32(He)),
+                oe = ye.activeViews.get(Je),
+                Re = oe?.deref();
+              void 0 !== Re ? Me ? Vi(Ke, Je, ie) : void 0 !== Ue && Re.markVisible(Ue) : be[Fe] &= ~He
             }
           }
-        }(QB, YB, BB.ref, GB), DB) {
-        let OB = WG[AG];
-        void 0 === OB && (OB = {
+        }(Me, ye, ee.ref, He), be) {
+        let ie = gH[OH];
+        void 0 === ie && (ie = {
           parentRef: void 0,
           root: void 0
-        }, WG[AG] = OB), OB.parentRef = BB.ref, OB.root = GB, AG++, NG(BB, OB, VG), AG--
+        }, gH[OH] = ie), ie.parentRef = ee.ref, ie.root = He, OH++, BH(ee, ie, dH), OH--
       }
     }
 
-    function ZG(BB, OB, GB) {
-      BB(OB, GB)
+    function zH(ee, ie, He) {
+      ee(ie, He)
     }
 
-    function NG(BB, OB, GB) {
-      const YB = BB.refTarget;
-      if (YB[ZB]) {
-        if ("string" !== typeof YB[ZB]) {
-          const BB = YB.items;
-          if (void 0 !== BB)
-            for (let YB = 0, DB = BB.length; YB < DB; YB++) {
-              const DB = BB[YB];
-              DB && GB(OB, DB[qB], YB)
+    function BH(ee, ie, He) {
+      const ye = ee.refTarget;
+      if (ye[pe]) {
+        if ("string" !== typeof ye[pe]) {
+          const ee = ye.items;
+          if (void 0 !== ee)
+            for (let ye = 0, be = ee.length; ye < be; ye++) {
+              const be = ee[ye];
+              be && He(ie, be[Te], ye)
             } else {
-              const BB = YB.$items,
-                DB = YB._collectionIndexes;
-              for (const YB of BB.keys()) {
-                const QB = BB.get(YB);
-                QB && GB(OB, QB[qB], DB?.[YB] ?? YB)
+              const ee = ye.$items,
+                be = ye._collectionIndexes;
+              for (const ye of ee.keys()) {
+                const Me = ee.get(ye);
+                Me && He(ie, Me[Te], be?.[ye] ?? ye)
               }
             }
         }
       } else {
-        const DB = BB.metadata,
-          QB = DB?.[dB];
-        if (!QB) return;
-        const oB = BB.encDescriptor.names;
-        for (let BB = 0, jB = QB.length; BB < jB; BB++) {
-          const DB = QB[BB],
-            jB = YB[oB[DB]];
-          jB && GB(OB, jB[qB], DB)
+        const be = ee.metadata,
+          Me = be?.[we];
+        if (!Me) return;
+        const Ke = ee.encDescriptor.names;
+        for (let ee = 0, Ue = Me.length; ee < Ue; ee++) {
+          const be = Me[ee],
+            Ue = ye[Ke[be]];
+          Ue && He(ie, Ue[Te], be)
         }
       }
     }
 
-    function RG(BB, OB, GB) {
-      OB.root !== BB ? OB.setRoot(BB) : BB.add(OB)
+    function EH(ee, ie, He) {
+      ie.root !== ee ? ie.setRoot(ee) : ee.add(ie)
     }
-    const WG = [];
-    let AG = 0;
+    const gH = [];
+    let OH = 0;
 
-    function VG(BB, OB, GB) {
-      if (OB.root === BB.root) return BB.root.add(OB), void BB.root.moveNextToParent(OB);
-      OB.setParent(BB.parentRef, BB.root, GB)
+    function dH(ee, ie, He) {
+      if (ie.root === ee.root) return ee.root.add(ie), void ee.root.moveNextToParent(ie);
+      ie.setParent(ee.parentRef, ee.root, He)
     }
 
-    function SG(BB, OB, GB) {
-      const YB = (3 & GB) << 3;
-      return GB < 4 ? BB >>> YB & 255 : OB >>> YB & 255
+    function WH(ee, ie, He) {
+      const ye = (3 & He) << 3;
+      return He < 4 ? ee >>> ye & 255 : ie >>> ye & 255
     }
-    const nG = (BB, OB, GB) => BB(OB, GB);
-    const UG = 16,
-      fG = 32,
-      kG = 128,
-      dG = 256,
-      KG = UG | fG;
-    class uG {
+    const tH = (ee, ie, He) => ee(ie, He);
+    const ZH = 16,
+      wH = 32,
+      DH = 128,
+      PH = 256,
+      AH = ZH | wH;
+    class YH {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(BB) {
-        this.flags = BB ? 1 | this.flags : -2 & this.flags
+      set isFiltered(ee) {
+        this.flags = ee ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(BB) {
-        this.flags = BB ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(ee) {
+        this.flags = ee ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(BB) {
-        this.flags = BB ? 4 | this.flags : -5 & this.flags
+      set isNew(ee) {
+        this.flags = ee ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(BB) {
-        this.flags = BB ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(ee) {
+        this.flags = ee ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & UG)
+        return 0 !== (this.flags & ZH)
       }
-      set isPatchOnly(BB) {
-        this.flags = BB ? this.flags | UG : this.flags & ~UG
+      set isPatchOnly(ee) {
+        this.flags = ee ? this.flags | ZH : this.flags & ~ZH
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & fG)
+        return 0 !== (this.flags & wH)
       }
-      set isFullStateOnly(BB) {
-        this.flags = BB ? this.flags | fG : this.flags & ~fG
+      set isFullStateOnly(ee) {
+        this.flags = ee ? this.flags | wH : this.flags & ~wH
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(BB) {
-        this.flags = BB ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(ee) {
+        this.flags = ee ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & kG)
+        return 0 !== (this.flags & DH)
       }
-      set needsRestage(BB) {
-        this.flags = BB ? this.flags | kG : -129 & this.flags
+      set needsRestage(ee) {
+        this.flags = ee ? this.flags | DH : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new vO(this.metadata?.[kB] ?? 0) : new sO), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new ri(this.metadata?.[Ze] ?? 0) : new Qi), this.unreliableRecorder
       }
-      isFieldUnreliable(BB) {
-        const OB = this.encDescriptor;
-        return !!OB.hasAnyUnreliable && (BB < 32 ? 0 !== (OB.unreliableBitmask & 1 << BB) : CO.hasUnreliableAtIndex(this.metadata, BB))
+      isFieldUnreliable(ee) {
+        const ie = this.encDescriptor;
+        return !!ie.hasAnyUnreliable && (ee < 32 ? 0 !== (ie.unreliableBitmask & 1 << ee) : Ni.hasUnreliableAtIndex(this.metadata, ee))
       }
-      isFieldFullStateOnly(BB) {
+      isFieldFullStateOnly(ee) {
         if (this.isFullStateOnly) return !0;
-        const OB = this.encDescriptor;
-        return !!OB.hasAnyFullStateOnly && (BB < 32 ? 0 !== (OB.fullStateOnlyBitmask & 1 << BB) : CO.hasFullStateOnlyAtIndex(this.metadata, BB))
+        const ie = this.encDescriptor;
+        return !!ie.hasAnyFullStateOnly && (ee < 32 ? 0 !== (ie.fullStateOnlyBitmask & 1 << ee) : Ni.hasFullStateOnlyAtIndex(this.metadata, ee))
       }
-      isFieldStream(BB) {
-        const OB = this.encDescriptor;
-        return !!OB.hasAnyStream && (BB < 32 ? 0 !== (OB.streamBitmask & 1 << BB) : CO.hasStreamAtIndex(this.metadata, BB))
+      isFieldStream(ee) {
+        const ie = this.encDescriptor;
+        return !!ie.hasAnyStream && (ee < 32 ? 0 !== (ie.streamBitmask & 1 << ee) : Ni.hasStreamAtIndex(this.metadata, ee))
       }
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
-        this.ref = BB, this.refTarget = OB;
-        const GB = BG(BB);
-        this.encDescriptor = GB, this.metadata = GB.metadata;
-        const YB = GB.isSchema;
-        if (this._isSchema = YB, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, YB) {
-          const BB = this.metadata?.[kB] ?? 0;
-          BB > 7 && (this.ops = new Uint8Array(BB + 1))
+      constructor(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ee;
+        this.ref = ee, this.refTarget = ie;
+        const He = HH(ee);
+        this.encDescriptor = He, this.metadata = He.metadata;
+        const ye = He.isSchema;
+        if (this._isSchema = ye, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, ye) {
+          const ee = this.metadata?.[Ze] ?? 0;
+          ee > 7 && (this.ops = new Uint8Array(ee + 1))
         } else this.collDirty = new Map
       }
-      _opAt(BB) {
-        const OB = this.ops;
-        if (void 0 !== OB) return OB[BB];
-        const GB = (3 & BB) << 3;
-        return BB < 4 ? this.opsLow >>> GB & 255 : this.opsHigh >>> GB & 255
+      _opAt(ee) {
+        const ie = this.ops;
+        if (void 0 !== ie) return ie[ee];
+        const He = (3 & ee) << 3;
+        return ee < 4 ? this.opsLow >>> He & 255 : this.opsHigh >>> He & 255
       }
-      _opPut(BB, OB) {
-        const GB = this.ops;
-        if (void 0 !== GB) return void(GB[BB] = OB);
-        const YB = (3 & BB) << 3,
-          DB = ~(255 << YB);
-        BB < 4 ? this.opsLow = this.opsLow & DB | OB << YB : this.opsHigh = this.opsHigh & DB | OB << YB
+      _opPut(ee, ie) {
+        const He = this.ops;
+        if (void 0 !== He) return void(He[ee] = ie);
+        const ye = (3 & ee) << 3,
+          be = ~(255 << ye);
+        ee < 4 ? this.opsLow = this.opsLow & be | ie << ye : this.opsHigh = this.opsHigh & be | ie << ye
       }
-      _markDirty(BB) {
-        BB < 32 ? this.dirtyLow |= 1 << BB : this.dirtyHigh |= 1 << BB - 32
+      _markDirty(ee) {
+        ee < 32 ? this.dirtyLow |= 1 << ee : this.dirtyHigh |= 1 << ee - 32
       }
-      record(BB, OB) {
+      record(ee, ie) {
         if (this._isSchema) {
-          const GB = this._opAt(BB);
-          0 === GB ? this._opPut(BB, OB) : (GB === DB.DELETE || GB === DB.ADD && OB === DB.DELETE_AND_ADD) && this._opPut(BB, DB.DELETE_AND_ADD), this._markDirty(BB)
+          const He = this._opAt(ee);
+          0 === He ? this._opPut(ee, ie) : (He === be.DELETE || He === be.ADD && ie === be.DELETE_AND_ADD) && this._opPut(ee, be.DELETE_AND_ADD), this._markDirty(ee)
         } else {
-          const GB = this.collDirty,
-            YB = GB.get(BB);
-          let QB;
-          QB = void 0 === YB ? OB : YB === DB.DELETE || YB === DB.ADD && OB === DB.DELETE_AND_ADD ? DB.DELETE_AND_ADD : YB, GB.set(BB, QB)
+          const He = this.collDirty,
+            ye = He.get(ee);
+          let Me;
+          Me = void 0 === ye ? ie : ye === be.DELETE || ye === be.ADD && ie === be.DELETE_AND_ADD ? be.DELETE_AND_ADD : ye, He.set(ee, Me)
         }
       }
-      recordDelete(BB, OB) {
-        this._isSchema ? (this._opPut(BB, OB), this._markDirty(BB)) : this.collDirty.set(BB, OB)
+      recordDelete(ee, ie) {
+        this._isSchema ? (this._opPut(ee, ie), this._markDirty(ee)) : this.collDirty.set(ee, ie)
       }
-      recordRaw(BB, OB) {
-        this._isSchema ? (this._opPut(BB, OB), this._markDirty(BB)) : this.collDirty.set(BB, OB)
+      recordRaw(ee, ie) {
+        this._isSchema ? (this._opPut(ee, ie), this._markDirty(ee)) : this.collDirty.set(ee, ie)
       }
-      recordPure(BB) {
+      recordPure(ee) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, BB])
+        (this.collPureOps ??= []).push([this.collDirty.size, ee])
       }
-      operationAt(BB) {
+      operationAt(ee) {
         if (this._isSchema) {
-          const OB = this._opAt(BB);
-          return 0 === OB ? void 0 : OB
+          const ie = this._opAt(ee);
+          return 0 === ie ? void 0 : ie
         }
-        return this.collDirty.get(BB)
+        return this.collDirty.get(ee)
       }
-      setOperationAt(BB, OB) {
-        if (this._isSchema) this._opPut(BB, OB);
+      setOperationAt(ee, ie) {
+        if (this._isSchema) this._opPut(ee, ie);
         else {
-          const GB = this.collDirty;
-          GB.has(BB) && GB.set(BB, OB)
+          const He = this.collDirty;
+          He.has(ee) && He.set(ee, ie)
         }
       }
-      forEach(BB) {
-        this.forEachWithCtx(BB, nG)
+      forEach(ee) {
+        this.forEachWithCtx(ee, tH)
       }
-      forEachWithCtx(BB, OB) {
+      forEachWithCtx(ee, ie) {
         if (this._isSchema) {
-          let GB = this.dirtyLow,
-            YB = this.dirtyHigh;
-          const DB = this.ops;
-          if (void 0 !== DB) {
-            for (; 0 !== GB;) {
-              const YB = GB & -GB,
-                QB = 31 - Math.clz32(YB);
-              GB ^= YB, OB(BB, QB, DB[QB])
+          let He = this.dirtyLow,
+            ye = this.dirtyHigh;
+          const be = this.ops;
+          if (void 0 !== be) {
+            for (; 0 !== He;) {
+              const ye = He & -He,
+                Me = 31 - Math.clz32(ye);
+              He ^= ye, ie(ee, Me, be[Me])
             }
-            for (; 0 !== YB;) {
-              const GB = YB & -YB,
-                QB = 31 - Math.clz32(GB) + 32;
-              YB ^= GB, OB(BB, QB, DB[QB])
+            for (; 0 !== ye;) {
+              const He = ye & -ye,
+                Me = 31 - Math.clz32(He) + 32;
+              ye ^= He, ie(ee, Me, be[Me])
             }
           } else {
-            const YB = this.opsLow,
-              DB = this.opsHigh;
-            for (; 0 !== GB;) {
-              const QB = GB & -GB,
-                oB = 31 - Math.clz32(QB);
-              GB ^= QB, OB(BB, oB, SG(YB, DB, oB))
+            const ye = this.opsLow,
+              be = this.opsHigh;
+            for (; 0 !== He;) {
+              const Me = He & -He,
+                Ke = 31 - Math.clz32(Me);
+              He ^= Me, ie(ee, Ke, WH(ye, be, Ke))
             }
           }
           return
         }
-        const GB = this.collDirty,
-          YB = this.collPureOps;
-        if (void 0 !== YB && YB.length > 0) {
-          let DB = 0,
-            QB = 0;
-          for (const [oB, jB] of GB) {
-            for (; DB < YB.length && YB[DB][0] <= QB;) {
-              const GB = YB[DB++][1];
-              OB(BB, -GB, GB)
+        const He = this.collDirty,
+          ye = this.collPureOps;
+        if (void 0 !== ye && ye.length > 0) {
+          let be = 0,
+            Me = 0;
+          for (const [Ke, Ue] of He) {
+            for (; be < ye.length && ye[be][0] <= Me;) {
+              const He = ye[be++][1];
+              ie(ee, -He, He)
             }
-            OB(BB, oB, jB), QB++
+            ie(ee, Ke, Ue), Me++
           }
-          for (; DB < YB.length;) {
-            const GB = YB[DB++][1];
-            OB(BB, -GB, GB)
+          for (; be < ye.length;) {
+            const He = ye[be++][1];
+            ie(ee, -He, He)
           }
         } else
-          for (const [DB, QB] of GB) OB(BB, DB, QB)
+          for (const [be, Me] of He) ie(ee, be, Me)
       }
       size() {
-        return this._isSchema ? xO(this.dirtyLow) + xO(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? eH(this.dirtyLow) + eH(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(BB, OB) {
+      insertAt(ee, ie) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const GB = this.collDirty,
-          YB = new Map,
-          QB = !this.paused && !this.isFullStateOnly;
-        if (BB > 0)
-          for (const [DB, oB] of GB) DB < BB && YB.set(DB, oB);
-        if (QB)
-          for (let oB = 0; oB < OB; oB++) YB.set(BB + oB, DB.ADD);
-        for (const [DB, oB] of GB) DB >= BB && YB.set(DB + OB, oB);
-        this.collDirty = YB, QB && this.root?.enqueueChangeTree(this)
+        const He = this.collDirty,
+          ye = new Map,
+          Me = !this.paused && !this.isFullStateOnly;
+        if (ee > 0)
+          for (const [be, Ke] of He) be < ee && ye.set(be, Ke);
+        if (Me)
+          for (let Ke = 0; Ke < ie; Ke++) ye.set(ee + Ke, be.ADD);
+        for (const [be, Ke] of He) be >= ee && ye.set(be + ie, Ke);
+        this.collDirty = ye, Me && this.root?.enqueueChangeTree(this)
       }
-      removeAt(BB, OB) {
+      removeAt(ee, ie) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const GB = this.collDirty,
-          YB = BB + OB;
-        let DB = !1;
-        for (const oB of GB.keys())
-          if (oB >= YB) {
-            DB = !0;
+        const He = this.collDirty,
+          ye = ee + ie;
+        let be = !1;
+        for (const Ke of He.keys())
+          if (Ke >= ye) {
+            be = !0;
             break
-          } if (!DB) {
-          for (let OB = BB; OB < YB; OB++) GB.delete(OB);
+          } if (!be) {
+          for (let ie = ee; ie < ye; ie++) He.delete(ie);
           return
         }
-        const QB = new Map;
-        for (const [oB, jB] of GB) oB < BB ? QB.set(oB, jB) : oB >= YB && QB.set(oB - OB, jB);
-        this.collDirty = QB
+        const Me = new Map;
+        for (const [Ke, Ue] of He) Ke < ee ? Me.set(Ke, Ue) : Ke >= ye && Me.set(Ke - ie, Ue);
+        this.collDirty = Me
       }
-      unshift(BB) {
-        this.insertAt(0, BB)
+      unshift(ee) {
+        this.insertAt(0, ee)
       }
-      setRoot(BB) {
-        ! function(BB, OB) {
-          BB.root = OB;
-          const GB = OB.add(BB);
-          QG(BB, BB.parent, BB.parentIndex), GB && NG(BB, OB, RG)
-        }(this, BB)
+      setRoot(ee) {
+        ! function(ee, ie) {
+          ee.root = ie;
+          const He = ie.add(ee);
+          UH(ee, ee.parent, ee.parentIndex), He && BH(ee, ie, EH)
+        }(this, ee)
       }
-      setParent(BB, OB, GB) {
-        qG(this, BB, OB, GB)
+      setParent(ee, ie, He) {
+        XH(this, ee, ie, He)
       }
-      forEachChild(BB) {
-        NG(this, BB, ZG)
+      forEachChild(ee) {
+        BH(this, ee, zH)
       }
-      forEachChildWithCtx(BB, OB) {
-        NG(this, BB, OB)
+      forEachChildWithCtx(ee, ie) {
+        BH(this, ee, ie)
       }
-      forEachLive(BB) {
-        DG(this, BB, YG)
+      forEachLive(ee) {
+        KH(this, ee, MH)
       }
-      forEachLiveWithCtx(BB, OB) {
-        DG(this, BB, OB)
+      forEachLiveWithCtx(ee, ie) {
+        KH(this, ee, ie)
       }
-      operation(BB) {
-        this.paused || this.isFullStateOnly || (this.recordPure(BB), this.root?.enqueueChangeTree(this))
+      operation(ee) {
+        this.paused || this.isFullStateOnly || (this.recordPure(ee), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(BB, OB, GB) {
-        if (!this.paused && !this.isFieldFullStateOnly(BB)) {
-          if (this.isFieldUnreliable(BB) && !this.isNew) {
-            const YB = this.ensureUnreliableRecorder();
-            return GB ? YB.recordRaw(BB, OB) : YB.record(BB, OB), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(ee, ie, He) {
+        if (!this.paused && !this.isFieldFullStateOnly(ee)) {
+          if (this.isFieldUnreliable(ee) && !this.isNew) {
+            const ye = this.ensureUnreliableRecorder();
+            return He ? ye.recordRaw(ee, ie) : ye.record(ee, ie), void this.root?.enqueueUnreliable(this)
           }
-          GB ? this.recordRaw(BB, OB) : this.record(BB, OB), this.root?.enqueueChangeTree(this)
+          He ? this.recordRaw(ee, ie) : this.record(ee, ie), this.root?.enqueueChangeTree(this)
         }
       }
-      change(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DB.ADD;
-        this._routeAndRecord(BB, OB, !1)
+      change(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : be.ADD;
+        this._routeAndRecord(ee, ie, !1)
       }
-      indexedOperation(BB, OB) {
-        this._routeAndRecord(BB, OB, !0)
+      indexedOperation(ee, ie) {
+        this._routeAndRecord(ee, ie, !0)
       }
-      getChange(BB) {
-        return this.operationAt(BB)
+      getChange(ee) {
+        return this.operationAt(ee)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(BB) {
-        const OB = this.paused;
+      untracked(ee) {
+        const ie = this.paused;
         this.paused = !0;
         try {
-          return BB()
+          return ee()
         } finally {
-          this.paused = OB
+          this.paused = ie
         }
       }
-      markDirty(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DB.ADD;
-        const GB = this.paused;
+      markDirty(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : be.ADD;
+        const He = this.paused;
         this.paused = !1;
         try {
-          this.change(BB, OB)
+          this.change(ee, ie)
         } finally {
-          this.paused = GB
+          this.paused = He
         }
       }
-      getValue(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[zB](BB, OB)
+      getValue(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[ke](ee, ie)
       }
-      delete(BB, OB) {
-        if (void 0 === BB) {
+      delete(ee, ie) {
+        if (void 0 === ee) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${BB}'`)
-          } catch (QD) {
-            console.warn(QD)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${ee}'`)
+          } catch (Ub) {
+            console.warn(Ub)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(BB)) return this.getValue(BB);
-        const GB = this.isFieldUnreliable(BB) && !this.isNew;
-        GB ? this.ensureUnreliableRecorder().recordDelete(BB, OB ?? DB.DELETE) : this.recordDelete(BB, OB ?? DB.DELETE);
-        const YB = this.getValue(BB);
-        return YB && YB[qB] && this.root?.remove(YB[qB]), GB ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), YB
+        if (this.paused || this.isFieldFullStateOnly(ee)) return this.getValue(ee);
+        const He = this.isFieldUnreliable(ee) && !this.isNew;
+        He ? this.ensureUnreliableRecorder().recordDelete(ee, ie ?? be.DELETE) : this.recordDelete(ee, ie ?? be.DELETE);
+        const ye = this.getValue(ee);
+        return ye && ye[Te] && this.root?.remove(ye[Te]), He ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), ye
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[RB]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[ze]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[RB]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[ze]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[RB]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[ze]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const BB = BB => {
-          if (BB < 0) return;
-          const OB = this.getValue(BB);
-          OB && OB[qB] && OB[qB].discardAll()
+        const ee = ee => {
+          if (ee < 0) return;
+          const ie = this.getValue(ee);
+          ie && ie[Te] && ie[Te].discardAll()
         };
-        this.forEach(BB), this.unreliableRecorder?.forEach(BB), this.discard()
+        this.forEach(ee), this.unreliableRecorder?.forEach(ee), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(BB, OB) {
-        ! function(BB, OB, GB) {
-          if (BB.parentRef) {
-            if (BB.parentRef[qB] === OB[qB]) return void(BB._parentIndex = GB);
-            if (OG(BB, ((BB, GB) => BB[qB] === OB[qB]))) return void(BB._parentIndex = GB)
+      addParent(ee, ie) {
+        ! function(ee, ie, He) {
+          if (ee.parentRef) {
+            if (ee.parentRef[Te] === ie[Te]) return void(ee._parentIndex = He);
+            if (yH(ee, ((ee, He) => ee[Te] === ie[Te]))) return void(ee._parentIndex = He)
           }
-          void 0 === BB.parentRef ? (BB.parentRef = OB, BB._parentIndex = GB) : (BB.extraParents = {
-            ref: BB.parentRef,
-            index: BB._parentIndex,
-            next: BB.extraParents
-          }, BB.parentRef = OB, BB._parentIndex = GB)
-        }(this, BB, OB)
+          void 0 === ee.parentRef ? (ee.parentRef = ie, ee._parentIndex = He) : (ee.extraParents = {
+            ref: ee.parentRef,
+            index: ee._parentIndex,
+            next: ee.extraParents
+          }, ee.parentRef = ie, ee._parentIndex = He)
+        }(this, ee, ie)
       }
-      setParentIndex(BB, OB) {
-        ! function(BB, OB, GB) {
-          if (void 0 !== BB.extraParents)
-            if (BB.parentRef[qB] !== OB[qB]) {
-              for (let YB = BB.extraParents; void 0 !== YB; YB = YB.next)
-                if (YB.ref[qB] === OB[qB]) return void(YB.index = GB)
-            } else BB._parentIndex = GB;
-          else BB._parentIndex = GB
-        }(this, BB, OB)
+      setParentIndex(ee, ie) {
+        ! function(ee, ie, He) {
+          if (void 0 !== ee.extraParents)
+            if (ee.parentRef[Te] !== ie[Te]) {
+              for (let ye = ee.extraParents; void 0 !== ye; ye = ye.next)
+                if (ye.ref[Te] === ie[Te]) return void(ye.index = He)
+            } else ee._parentIndex = He;
+          else ee._parentIndex = He
+        }(this, ee, ie)
       }
       removeParent() {
-        return function(BB, OB) {
-          if (BB.parentRef && BB.parentRef[qB] === OB[qB]) return BB.extraParents ? (BB.parentRef = BB.extraParents.ref, BB._parentIndex = BB.extraParents.index, BB.extraParents = BB.extraParents.next) : (BB.parentRef = void 0, BB._parentIndex = void 0), !0;
-          let GB = BB.extraParents,
-            YB = null;
-          for (; GB;) {
-            if (GB.ref[qB] === OB[qB]) return YB ? YB.next = GB.next : BB.extraParents = GB.next, !0;
-            YB = GB, GB = GB.next
+        return function(ee, ie) {
+          if (ee.parentRef && ee.parentRef[Te] === ie[Te]) return ee.extraParents ? (ee.parentRef = ee.extraParents.ref, ee._parentIndex = ee.extraParents.index, ee.extraParents = ee.extraParents.next) : (ee.parentRef = void 0, ee._parentIndex = void 0), !0;
+          let He = ee.extraParents,
+            ye = null;
+          for (; He;) {
+            if (He.ref[Te] === ie[Te]) return ye ? ye.next = He.next : ee.extraParents = He.next, !0;
+            ye = He, He = He.next
           }
-          return void 0 === BB.parentRef
+          return void 0 === ee.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(BB) {
-        return function(BB, OB) {
-          if (void 0 !== BB.parentRef && OB(BB.parentRef, BB._parentIndex)) return {
-            ref: BB.parentRef,
-            index: BB._parentIndex
+      findParent(ee) {
+        return function(ee, ie) {
+          if (void 0 !== ee.parentRef && ie(ee.parentRef, ee._parentIndex)) return {
+            ref: ee.parentRef,
+            index: ee._parentIndex
           };
-          for (let GB = BB.extraParents; void 0 !== GB; GB = GB.next)
-            if (OB(GB.ref, GB.index)) return {
-              ref: GB.ref,
-              index: GB.index
+          for (let He = ee.extraParents; void 0 !== He; He = He.next)
+            if (ie(He.ref, He.index)) return {
+              ref: He.ref,
+              index: He.index
             }
-        }(this, BB)
+        }(this, ee)
       }
-      hasParent(BB) {
-        return OG(this, BB)
+      hasParent(ee) {
+        return yH(this, ee)
       }
-      indexInParent(BB) {
-        return function(BB, OB) {
-          if (BB.parentRef && BB.parentRef[qB] === OB[qB]) return BB._parentIndex;
-          for (let GB = BB.extraParents; void 0 !== GB; GB = GB.next)
-            if (GB.ref[qB] === OB[qB]) return GB.index
-        }(this, BB)
+      indexInParent(ee) {
+        return function(ee, ie) {
+          if (ee.parentRef && ee.parentRef[Te] === ie[Te]) return ee._parentIndex;
+          for (let He = ee.extraParents; void 0 !== He; He = He.next)
+            if (He.ref[Te] === ie[Te]) return He.index
+        }(this, ee)
       }
       getAllParents() {
-        return function(BB) {
-          const OB = [];
-          BB.parentRef && OB.push({
-            ref: BB.parentRef,
-            index: BB._parentIndex
+        return function(ee) {
+          const ie = [];
+          ee.parentRef && ie.push({
+            ref: ee.parentRef,
+            index: ee._parentIndex
           });
-          let GB = BB.extraParents;
-          for (; GB;) OB.push({
-            ref: GB.ref,
-            index: GB.index
-          }), GB = GB.next;
-          return OB
+          let He = ee.extraParents;
+          for (; He;) ie.push({
+            ref: He.ref,
+            index: He.index
+          }), He = He.next;
+          return ie
         }(this)
       }
     }
-    class mG {
+    class VH {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(BB) {
-        this.ref = BB
+      constructor(ee) {
+        this.ref = ee
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(BB) {
-        return BB()
+      untracked(ee) {
+        return ee()
       }
       markDirty() {}
-      forEachChild(BB) {
-        const OB = this.ref;
-        if (OB[ZB]) {
-          if ("string" !== typeof OB[ZB])
-            for (const [GB, YB] of OB.entries()) YB && BB(YB[qB], OB._collectionIndexes?.[GB] ?? GB);
+      forEachChild(ee) {
+        const ie = this.ref;
+        if (ie[pe]) {
+          if ("string" !== typeof ie[pe])
+            for (const [He, ye] of ie.entries()) ye && ee(ye[Te], ie._collectionIndexes?.[He] ?? He);
           return
         }
-        const GB = OB.constructor,
-          YB = GB?.[Symbol.metadata];
-        if (!YB) return;
-        const DB = YB[dB] ?? [];
-        for (let QB = 0; QB < DB.length; QB++) {
-          const GB = DB[QB],
-            oB = OB[YB[GB].name];
-          oB && BB(oB[qB], GB)
+        const He = ie.constructor,
+          ye = He?.[Symbol.metadata];
+        if (!ye) return;
+        const be = ye[we] ?? [];
+        for (let Me = 0; Me < be.length; Me++) {
+          const He = be[Me],
+            Ke = ie[ye[He].name];
+          Ke && ee(Ke[Te], He)
         }
       }
-      forEachChildWithCtx(BB, OB) {
-        this.forEachChild(((GB, YB) => OB(BB, GB, YB)))
+      forEachChildWithCtx(ee, ie) {
+        this.forEachChild(((He, ye) => ie(ee, He, ye)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function IG(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB;
-      var GB;
-      Object.defineProperty(BB, qB, {
-        value: (GB = OB, new mG(GB)),
+    function aH(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ee;
+      var He;
+      Object.defineProperty(ee, Te, {
+        value: (He = ie, new VH(He)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function FG(BB, OB, GB, YB, QB, oB, yB) {
-      void 0 !== yB ? yB(OB, YB, oB) : "string" === typeof GB ? OO[GB]?.(OB, YB, oB) : null != GB[Symbol.metadata] ? (OO.number(OB, YB[jB], oB), (QB & DB.ADD) === DB.ADD && BB.tryEncodeTypeId(OB, GB, YB.constructor, oB)) : OO.number(OB, YB[jB], oB)
+    function cH(ee, ie, He, ye, Me, Ke, Fe) {
+      void 0 !== Fe ? Fe(ie, ye, Ke) : "string" === typeof He ? ii[He]?.(ie, ye, Ke) : null != He[Symbol.metadata] ? (ii.number(ie, ye[Ue], Ke), (Me & be.ADD) === be.ADD && ee.tryEncodeTypeId(ie, He, ye.constructor, Ke)) : ii.number(ie, ye[Ue], Ke)
     }
-    const iG = function(BB, OB, GB, YB, QB, oB, jB, yB) {
-        if (OB[oB.offset++] = 255 & (YB | QB), QB === DB.DELETE) return;
-        const JB = GB.encDescriptor,
-          MB = GB.ref,
-          PB = MB[VB][YB] ?? MB[JB.names[YB]];
-        FG(BB, OB, JB.types[YB], PB, QB, oB, JB.encoders[YB])
+    const xH = function(ee, ie, He, ye, Me, Ke, Ue, Fe) {
+        if (ie[Ke.offset++] = 255 & (ye | Me), Me === be.DELETE) return;
+        const Je = He.encDescriptor,
+          oe = He.ref,
+          Re = oe[ge][ye] ?? oe[Je.names[ye]];
+        cH(ee, ie, Je.types[ye], Re, Me, Ke, Je.encoders[ye])
       },
-      LG = function(BB, OB, GB, YB, QB, oB) {
-        if (OB[oB.offset++] = 255 & QB, OO.number(OB, YB, oB), QB === DB.DELETE) return;
-        const jB = GB.ref;
-        if ((QB & DB.ADD) === DB.ADD) {
-          const BB = jB.$indexes.get(YB);
-          OO.string(OB, BB, oB)
+      LH = function(ee, ie, He, ye, Me, Ke) {
+        if (ie[Ke.offset++] = 255 & Me, ii.number(ie, ye, Ke), Me === be.DELETE) return;
+        const Ue = He.ref;
+        if ((Me & be.ADD) === be.ADD) {
+          const ee = Ue.$indexes.get(ye);
+          ii.string(ie, ee, Ke)
         }
-        FG(BB, OB, jB[ZB], jB[zB](YB), QB, oB)
+        cH(ee, ie, Ue[pe], Ue[ke](ye), Me, Ke)
       },
-      gG = function(BB, OB, GB, YB, QB, oB) {
-        if (OB[oB.offset++] = 255 & QB, OO.number(OB, YB, oB), QB === DB.DELETE) return;
-        const jB = GB.ref;
-        FG(BB, OB, jB[ZB], jB[zB](YB), QB, oB)
+      CH = function(ee, ie, He, ye, Me, Ke) {
+        if (ie[Ke.offset++] = 255 & Me, ii.number(ie, ye, Ke), Me === be.DELETE) return;
+        const Ue = He.ref;
+        cH(ee, ie, Ue[pe], Ue[ke](ye), Me, Ke)
       },
-      rG = function(BB, OB, GB, YB, QB, oB) {
-        const jB = GB.ref;
-        (QB & DB.ADD) === DB.ADD && "function" === typeof jB.set ? LG(BB, OB, GB, YB, QB, oB) : gG(BB, OB, GB, YB, QB, oB)
+      vH = function(ee, ie, He, ye, Me, Ke) {
+        const Ue = He.ref;
+        (Me & be.ADD) === be.ADD && "function" === typeof Ue.set ? LH(ee, ie, He, ye, Me, Ke) : CH(ee, ie, He, ye, Me, Ke)
       },
-      XG = function(BB, OB, GB, YB, QB, oB, yB, JB) {
-        const MB = GB.refTarget,
-          PB = MB[ZB],
-          lB = "string" !== typeof PB;
-        let pB;
-        if (JB && GB.isFiltered && lB) {
-          const BB = MB.tmpItems[YB];
-          if (!BB) return;
-          if (pB = BB[jB], QB === DB.DELETE) QB = DB.DELETE_BY_REFID;
-          else if ((QB & DB.ADD) === DB.ADD) QB = DB.ADD_BY_REFID;
-          else if ((QB & DB.MOVE) === DB.MOVE) return
-        } else if (QB === DB.DELETE && lB) {
-          const BB = MB.tmpItems[YB];
-          if (!BB) return;
-          pB = BB[jB], QB = DB.DELETE_BY_REFID
-        } else pB = YB;
-        if (OB[oB.offset++] = 255 & QB, OO.number(OB, pB, oB), QB === DB.DELETE || QB === DB.DELETE_BY_REFID) return;
-        FG(BB, OB, PB, MB[zB](YB, yB), QB, oB)
+      uH = function(ee, ie, He, ye, Me, Ke, Fe, Je) {
+        const oe = He.refTarget,
+          Re = oe[pe],
+          qe = "string" !== typeof Re;
+        let fe;
+        if (Je && He.isFiltered && qe) {
+          const ee = oe.tmpItems[ye];
+          if (!ee) return;
+          if (fe = ee[Ue], Me === be.DELETE) Me = be.DELETE_BY_REFID;
+          else if ((Me & be.ADD) === be.ADD) Me = be.ADD_BY_REFID;
+          else if ((Me & be.MOVE) === be.MOVE) return
+        } else if (Me === be.DELETE && qe) {
+          const ee = oe.tmpItems[ye];
+          if (!ee) return;
+          fe = ee[Ue], Me = be.DELETE_BY_REFID
+        } else fe = ye;
+        if (ie[Ke.offset++] = 255 & Me, ii.number(ie, fe, Ke), Me === be.DELETE || Me === be.DELETE_BY_REFID) return;
+        cH(ee, ie, Re, oe[ke](ye, Fe), Me, Ke)
       };
 
-    function wG(BB, OB, GB, YB, QB, oB, yB) {
-      const JB = BB.resyncVisited;
-      let MB = JB.get(BB.currentRefId);
-      if (void 0 === MB && JB.set(BB.currentRefId, MB = new Set), MB.add(YB), void 0 !== QB && GB === DB.ADD && QB !== oB) {
-        const GB = QB[jB];
-        void 0 !== GB && (BB.root.removeRef(GB), yB?.push({
-          ref: OB,
-          refId: BB.currentRefId,
-          op: DB.DELETE,
-          dynamicIndex: YB,
+    function mH(ee, ie, He, ye, Me, Ke, Fe) {
+      const Je = ee.resyncVisited;
+      let oe = Je.get(ee.currentRefId);
+      if (void 0 === oe && Je.set(ee.currentRefId, oe = new Set), oe.add(ye), void 0 !== Me && He === be.ADD && Me !== Ke) {
+        const He = Me[Ue];
+        void 0 !== He && (ee.root.removeRef(He), Fe?.push({
+          ref: ie,
+          refId: ee.currentRefId,
+          op: be.DELETE,
+          dynamicIndex: ye,
           value: void 0,
-          previousValue: QB
+          previousValue: Me
         }))
       }
     }
 
-    function EG(BB, OB, GB, YB) {
-      const DB = OB[jB];
-      if (void 0 === DB || GB.has(DB)) return;
-      GB.add(DB);
-      const QB = OB.constructor[Symbol.metadata],
-        oB = QB?.[dB];
-      if (void 0 === oB) return;
-      const yB = QB[IB];
-      for (let jB = 0; jB < oB.length; jB++) {
-        const DB = oB[jB];
-        if (void 0 !== yB && yB.includes(DB)) continue;
-        const JB = QB[DB],
-          MB = OB[JB.name];
-        MB && (KY.is(JB.type) ? EG(BB, MB, GB, YB) : cG(BB, MB, GB, YB))
+    function lH(ee, ie, He, ye) {
+      const be = ie[Ue];
+      if (void 0 === be || He.has(be)) return;
+      He.add(be);
+      const Me = ie.constructor[Symbol.metadata],
+        Ke = Me?.[we];
+      if (void 0 === Ke) return;
+      const Fe = Me[Ye];
+      for (let Ue = 0; Ue < Ke.length; Ue++) {
+        const be = Ke[Ue];
+        if (void 0 !== Fe && Fe.includes(be)) continue;
+        const Je = Me[be],
+          oe = ie[Je.name];
+        oe && (Ay.is(Je.type) ? lH(ee, oe, He, ye) : SH(ee, oe, He, ye))
       }
     }
 
-    function cG(BB, OB, GB, YB) {
-      const QB = OB[NB] ?? OB,
-        oB = QB[jB];
-      if (void 0 === oB || GB.has(oB)) return;
-      GB.add(oB);
-      const yB = BB.resyncVisited.get(oB);
-      if (void 0 === yB) return;
-      const JB = BB.root;
-      QB[pB](yB, ((BB, GB) => {
-        YB?.push({
-          ref: OB,
-          refId: oB,
-          op: DB.DELETE,
-          dynamicIndex: GB,
+    function SH(ee, ie, He, ye) {
+      const Me = ie[Xe] ?? ie,
+        Ke = Me[Ue];
+      if (void 0 === Ke || He.has(Ke)) return;
+      He.add(Ke);
+      const Fe = ee.resyncVisited.get(Ke);
+      if (void 0 === Fe) return;
+      const Je = ee.root;
+      Me[fe](Fe, ((ee, He) => {
+        ye?.push({
+          ref: ie,
+          refId: Ke,
+          op: be.DELETE,
+          dynamicIndex: He,
           value: void 0,
-          previousValue: BB
+          previousValue: ee
         });
-        const QB = BB?.[jB];
-        void 0 !== QB && JB.removeRef(QB)
-      }), (OB => {
-        KY.isSchema(OB) && EG(BB, OB, GB, YB)
+        const Me = ee?.[Ue];
+        void 0 !== Me && Je.removeRef(Me)
+      }), (ie => {
+        Ay.isSchema(ie) && lH(ee, ie, He, ye)
       }))
     }
-    const hG = 1,
-      aG = 2,
-      eG = 3,
-      TG = 4,
-      bG = 5;
+    const nH = 1,
+      jH = 2,
+      sH = 3,
+      IH = 4,
+      hH = 5;
 
-    function CG(BB, OB, GB, YB, QB, oB, yB, JB, MB) {
-      const PB = BB.root;
-      let zB;
-      if ((OB & DB.DELETE) === DB.DELETE) {
-        const BB = QB?.[jB];
-        void 0 !== BB && PB.removeRef(BB), OB !== DB.DELETE_AND_ADD && GB[lB](YB), zB = void 0
+    function NH(ee, ie, He, ye, Me, Ke, Fe, Je, oe) {
+      const Re = ee.root;
+      let ke;
+      if ((ie & be.DELETE) === be.DELETE) {
+        const ee = Me?.[Ue];
+        void 0 !== ee && Re.removeRef(ee), ie !== be.DELETE_AND_ADD && He[qe](ye), ke = void 0
       }
-      if (OB === DB.DELETE);
-      else if ("string" === typeof oB) zB = WO[oB](yB, JB);
-      else if (gO(oB)) zB = function(BB, OB, GB) {
-        return XO(BB, (0, WO[BB.wire])(OB, GB))
-      }(oB.quantized, yB, JB);
-      else if (KY.is(oB)) {
-        const GB = WO.number(yB, JB);
-        if (zB = PB.refs.get(GB), (OB & DB.ADD) === DB.ADD) {
-          const YB = BB.getInstanceType(yB, JB, oB);
-          zB || (zB = BB.createInstanceOfType(YB)), PB.addRef(GB, zB, zB !== QB || OB === DB.DELETE_AND_ADD && zB === QB)
+      if (ie === be.DELETE);
+      else if ("string" === typeof Ke) ke = Ei[Ke](Fe, Je);
+      else if (Li(Ke)) ke = function(ee, ie, He) {
+        return vi(ee, (0, Ei[ee.wire])(ie, He))
+      }(Ke.quantized, Fe, Je);
+      else if (Ay.is(Ke)) {
+        const He = Ei.number(Fe, Je);
+        if (ke = Re.refs.get(He), (ie & be.ADD) === be.ADD) {
+          const ye = ee.getInstanceType(Fe, Je, Ke);
+          ke || (ke = ee.createInstanceOfType(ye)), Re.addRef(He, ke, ke !== Me || ie === be.DELETE_AND_ADD && ke === Me)
         }
       } else {
-        const GB = (pB = Object.keys(oB)[0], AO[pB]),
-          YB = WO.number(yB, JB);
-        null !== BB.resyncVisited && function(BB, OB) {
-          const GB = BB.resyncVisited;
-          GB.has(OB) || GB.set(OB, new Set)
-        }(BB, YB);
-        const lB = PB.refs.has(YB) ? QB || PB.refs.get(YB) : GB.constructor.initializeForDecoder();
-        if (zB = lB.clone(!0), zB[ZB] = Object.values(oB)[0], QB) {
-          let BB = QB[jB];
-          if (void 0 !== BB && YB !== BB) {
-            (OB & DB.DELETE) !== DB.DELETE && PB.removeRef(BB);
-            const GB = QB.entries();
-            let YB;
+        const He = (fe = Object.keys(Ke)[0], gi[fe]),
+          ye = Ei.number(Fe, Je);
+        null !== ee.resyncVisited && function(ee, ie) {
+          const He = ee.resyncVisited;
+          He.has(ie) || He.set(ie, new Set)
+        }(ee, ye);
+        const qe = Re.refs.has(ye) ? Me || Re.refs.get(ye) : He.constructor.initializeForDecoder();
+        if (ke = qe.clone(!0), ke[pe] = Object.values(Ke)[0], Me) {
+          let ee = Me[Ue];
+          if (void 0 !== ee && ye !== ee) {
+            (ie & be.DELETE) !== be.DELETE && Re.removeRef(ee);
+            const He = Me.entries();
+            let ye;
             for (;
-              (YB = GB.next()) && !YB.done;) {
-              const [OB, GB] = YB.value;
-              "object" === typeof GB && (BB = GB[jB]), MB?.push({
-                ref: QB,
-                refId: BB,
-                op: DB.DELETE,
-                field: OB,
+              (ye = He.next()) && !ye.done;) {
+              const [ie, He] = ye.value;
+              "object" === typeof He && (ee = He[Ue]), oe?.push({
+                ref: Me,
+                refId: ee,
+                op: be.DELETE,
+                field: ie,
                 value: void 0,
-                previousValue: GB
+                previousValue: He
               })
             }
           }
         }
-        PB.addRef(YB, zB, lB !== QB || OB === DB.DELETE_AND_ADD && lB === QB)
+        Re.addRef(ye, ke, qe !== Me || ie === be.DELETE_AND_ADD && qe === Me)
       }
-      var pB;
-      return zB
+      var fe;
+      return ke
     }
-    const HG = function(BB, OB, GB, YB, DB) {
-        const QB = OB[GB.offset++],
-          oB = YB.constructor[Symbol.metadata],
-          jB = QB >> 6 << 6,
-          yB = QB % (jB || 255),
-          JB = oB[yB];
-        if (void 0 === JB) return console.warn("@colyseus/schema: field not defined at", {
-          index: yB,
-          ref: YB.constructor.name,
-          metadata: oB
+    const GH = function(ee, ie, He, ye, be) {
+        const Me = ie[He.offset++],
+          Ke = ye.constructor[Symbol.metadata],
+          Ue = Me >> 6 << 6,
+          Fe = Me % (Ue || 255),
+          Je = Ke[Fe];
+        if (void 0 === Je) return console.warn("@colyseus/schema: field not defined at", {
+          index: Fe,
+          ref: ye.constructor.name,
+          metadata: Ke
         }), -1;
-        const MB = !0 === JB.deprecated,
-          PB = MB ? void 0 : YB[zB](yB),
-          lB = CG(BB, jB, YB, yB, PB, JB.type, OB, GB, DB);
-        MB || (null !== lB && void 0 !== lB && (YB[JB.name] = lB), PB !== lB && DB?.push({
-          ref: YB,
-          refId: BB.currentRefId,
-          op: jB,
-          field: JB.name,
-          value: lB,
-          previousValue: PB
+        const oe = !0 === Je.deprecated,
+          Re = oe ? void 0 : ye[ke](Fe),
+          qe = NH(ee, Ue, ye, Fe, Re, Je.type, ie, He, be);
+        oe || (null !== qe && void 0 !== qe && (ye[Je.name] = qe), Re !== qe && be?.push({
+          ref: ye,
+          refId: ee.currentRefId,
+          op: Ue,
+          field: Je.name,
+          value: qe,
+          previousValue: Re
         }))
       },
-      vG = function(BB, OB, GB, YB, QB) {
-        const oB = YB[NB] ?? YB,
-          jB = OB[GB.offset++];
-        if (jB === DB.CLEAR) return BB.removeChildRefs(oB, QB), void oB.clear();
-        const yB = WO.number(OB, GB),
-          JB = oB[ZB],
-          MB = oB.constructor.COLLECTION_KIND;
-        let PB;
-        (jB & DB.ADD) === DB.ADD ? MB === hG ? (PB = WO.string(OB, GB), oB.setIndex(yB, PB)) : PB = yB : PB = oB.getIndex(yB);
-        const lB = oB[zB](yB),
-          pB = CG(BB, jB, YB, yB, lB, JB, OB, GB, QB);
-        if (null !== BB.resyncVisited && wG(BB, YB, jB, PB, lB, pB, QB), null !== pB && void 0 !== pB) switch (MB) {
-          case hG:
-            oB.$items.set(PB, pB);
+      rH = function(ee, ie, He, ye, Me) {
+        const Ke = ye[Xe] ?? ye,
+          Ue = ie[He.offset++];
+        if (Ue === be.CLEAR) return ee.removeChildRefs(Ke, Me), void Ke.clear();
+        const Fe = Ei.number(ie, He),
+          Je = Ke[pe],
+          oe = Ke.constructor.COLLECTION_KIND;
+        let Re;
+        (Ue & be.ADD) === be.ADD ? oe === nH ? (Re = Ei.string(ie, He), Ke.setIndex(Fe, Re)) : Re = Fe : Re = Ke.getIndex(Fe);
+        const qe = Ke[ke](Fe),
+          fe = NH(ee, Ue, ye, Fe, qe, Je, ie, He, Me);
+        if (null !== ee.resyncVisited && mH(ee, ye, Ue, Re, qe, fe, Me), null !== fe && void 0 !== fe) switch (oe) {
+          case nH:
+            Ke.$items.set(Re, fe);
             break;
-          case aG:
-            oB.$setAt(yB, pB, null !== BB.resyncVisited && jB === DB.ADD ? DB.REPLACE : jB);
+          case jH:
+            Ke.$setAt(Fe, fe, null !== ee.resyncVisited && Ue === be.ADD ? be.REPLACE : Ue);
             break;
-          case eG:
-          case TG:
-          case bG:
-            oB.$items.has(yB) || (oB.$items.set(yB, pB), "number" === typeof oB.$refId && yB >= oB.$refId && (oB.$refId = yB + 1));
+          case sH:
+          case IH:
+          case hH:
+            Ke.$items.has(Fe) || (Ke.$items.set(Fe, fe), "number" === typeof Ke.$refId && Fe >= Ke.$refId && (Ke.$refId = Fe + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${oB.constructor?.name} \u2014 item at index ${yB} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Ke.constructor?.name} \u2014 item at index ${Fe} was not stored.`)
         }
-        lB !== pB && QB?.push({
-          ref: YB,
-          refId: BB.currentRefId,
-          op: jB,
-          dynamicIndex: PB,
-          value: pB,
-          previousValue: lB
+        qe !== fe && Me?.push({
+          ref: ye,
+          refId: ee.currentRefId,
+          op: Ue,
+          dynamicIndex: Re,
+          value: fe,
+          previousValue: qe
         })
       },
-      sG = function(BB, OB, GB, YB, QB) {
-        const oB = YB[NB] ?? YB;
-        let jB, yB = OB[GB.offset++];
-        if (yB === DB.CLEAR) return BB.removeChildRefs(oB, QB), void oB.clear();
-        if (yB === DB.REVERSE) return void oB.items.reverse();
-        if (yB === DB.DELETE_BY_REFID) {
-          const yB = WO.number(OB, GB),
-            JB = BB.root.refs.get(yB);
-          if (void 0 === JB) return;
-          if (BB.root.removeRef(yB), jB = oB.findIndex((BB => BB === JB)), -1 === jB) return;
-          return oB[lB](jB), void QB?.push({
-            ref: YB,
-            refId: BB.currentRefId,
-            op: DB.DELETE,
-            dynamicIndex: jB,
+      QH = function(ee, ie, He, ye, Me) {
+        const Ke = ye[Xe] ?? ye;
+        let Ue, Fe = ie[He.offset++];
+        if (Fe === be.CLEAR) return ee.removeChildRefs(Ke, Me), void Ke.clear();
+        if (Fe === be.REVERSE) return void Ke.items.reverse();
+        if (Fe === be.DELETE_BY_REFID) {
+          const Fe = Ei.number(ie, He),
+            Je = ee.root.refs.get(Fe);
+          if (void 0 === Je) return;
+          if (ee.root.removeRef(Fe), Ue = Ke.findIndex((ee => ee === Je)), -1 === Ue) return;
+          return Ke[qe](Ue), void Me?.push({
+            ref: ye,
+            refId: ee.currentRefId,
+            op: be.DELETE,
+            dynamicIndex: Ue,
             value: void 0,
-            previousValue: JB
+            previousValue: Je
           })
         }
-        if (yB === DB.ADD_BY_REFID) {
-          const YB = WO.number(OB, GB),
-            DB = BB.root.refs.get(YB);
-          DB && (jB = oB.findIndex((BB => BB === DB))), -1 !== jB && void 0 !== jB || (jB = oB.length)
-        } else jB = WO.number(OB, GB);
-        const JB = oB[ZB];
-        let MB = jB;
-        const PB = oB.items[jB],
-          zB = CG(BB, yB, YB, jB, PB, JB, OB, GB, QB);
-        null !== BB.resyncVisited && wG(BB, YB, yB, jB, PB, zB, QB), null !== zB && void 0 !== zB && zB !== PB && oB.$setAt(jB, zB, null !== BB.resyncVisited && yB === DB.ADD ? DB.REPLACE : yB), PB !== zB && QB?.push({
-          ref: YB,
-          refId: BB.currentRefId,
-          op: yB,
-          dynamicIndex: MB,
-          value: zB,
-          previousValue: PB
+        if (Fe === be.ADD_BY_REFID) {
+          const ye = Ei.number(ie, He),
+            be = ee.root.refs.get(ye);
+          be && (Ue = Ke.findIndex((ee => ee === be))), -1 !== Ue && void 0 !== Ue || (Ue = Ke.length)
+        } else Ue = Ei.number(ie, He);
+        const Je = Ke[pe];
+        let oe = Ue;
+        const Re = Ke.items[Ue],
+          ke = NH(ee, Fe, ye, Ue, Re, Je, ie, He, Me);
+        null !== ee.resyncVisited && mH(ee, ye, Fe, Ue, Re, ke, Me), null !== ke && void 0 !== ke && ke !== Re && Ke.$setAt(Ue, ke, null !== ee.resyncVisited && Fe === be.ADD ? be.REPLACE : Fe), Re !== ke && Me?.push({
+          ref: ye,
+          refId: ee.currentRefId,
+          op: Fe,
+          dynamicIndex: oe,
+          value: ke,
+          previousValue: Re
         })
       };
-    class xG extends Error {}
+    class ey extends Error {}
 
-    function tG(BB, OB, GB, YB) {
-      if (!(BB instanceof OB)) throw new xG(`a '${OB.name}' was expected, but '${BB&&BB.constructor.name}' was provided in ${GB.constructor.name}#${YB}`)
+    function iy(ee, ie, He, ye) {
+      if (!(ee instanceof ie)) throw new ey(`a '${ie.name}' was expected, but '${ee&&ee.constructor.name}' was provided in ${He.constructor.name}#${ye}`)
     }
-    const BY = (BB, OB) => {
-        const GB = BB.toString(),
-          YB = OB.toString();
-        return GB < YB ? -1 : GB > YB ? 1 : 0
+    const Hy = (ee, ie) => {
+        const He = ee.toString(),
+          ye = ie.toString();
+        return He < ye ? -1 : He > ye ? 1 : 0
       },
-      OY = {
-        get: (BB, OB) => "symbol" === typeof OB || isNaN(OB) ? Reflect.get(BB, OB) : BB.items[OB],
-        set: (BB, OB, GB) => {
-          if ("symbol" !== typeof OB && !isNaN(OB)) {
-            if (void 0 === GB || null === GB) BB.$deleteAt(OB);
+      yy = {
+        get: (ee, ie) => "symbol" === typeof ie || isNaN(ie) ? Reflect.get(ee, ie) : ee.items[ie],
+        set: (ee, ie, He) => {
+          if ("symbol" !== typeof ie && !isNaN(ie)) {
+            if (void 0 === He || null === He) ee.$deleteAt(ie);
             else {
-              let YB;
-              if (GB[qB]) {
-                tG(GB, BB[ZB], BB, OB);
-                const QB = BB.items[OB];
-                BB.isMovingItems ? (YB = BB.$wireIndex(Number(OB)), void 0 !== QB ? GB[qB].isNew ? BB[qB].indexedOperation(YB, DB.MOVE_AND_ADD) : (BB[qB].getChange(YB) & DB.DELETE) === DB.DELETE ? BB[qB].indexedOperation(YB, DB.DELETE_AND_MOVE) : BB[qB].indexedOperation(YB, DB.MOVE) : GB[qB].isNew && BB[qB].indexedOperation(YB, DB.ADD), GB[qB].setParent(BB, BB[qB].root, YB)) : YB = BB.$changeAt(Number(OB), GB), void 0 !== QB && QB[qB].root?.remove(QB[qB])
-              } else YB = BB.$changeAt(Number(OB), GB);
-              BB.items[OB] = GB, void 0 !== YB && (BB.tmpItems[YB] = GB)
+              let ye;
+              if (He[Te]) {
+                iy(He, ee[pe], ee, ie);
+                const Me = ee.items[ie];
+                ee.isMovingItems ? (ye = ee.$wireIndex(Number(ie)), void 0 !== Me ? He[Te].isNew ? ee[Te].indexedOperation(ye, be.MOVE_AND_ADD) : (ee[Te].getChange(ye) & be.DELETE) === be.DELETE ? ee[Te].indexedOperation(ye, be.DELETE_AND_MOVE) : ee[Te].indexedOperation(ye, be.MOVE) : He[Te].isNew && ee[Te].indexedOperation(ye, be.ADD), He[Te].setParent(ee, ee[Te].root, ye)) : ye = ee.$changeAt(Number(ie), He), void 0 !== Me && Me[Te].root?.remove(Me[Te])
+              } else ye = ee.$changeAt(Number(ie), He);
+              ee.items[ie] = He, void 0 !== ye && (ee.tmpItems[ye] = He)
             }
             return !0
           }
-          return Reflect.set(BB, OB, GB)
+          return Reflect.set(ee, ie, He)
         },
-        deleteProperty: (BB, OB) => ("number" === typeof OB ? BB.$deleteAt(OB) : delete BB[OB], !0),
-        has: (BB, OB) => "symbol" === typeof OB || isNaN(Number(OB)) ? Reflect.has(BB, OB) : Reflect.has(BB.items, OB)
+        deleteProperty: (ee, ie) => ("number" === typeof ie ? ee.$deleteAt(ie) : delete ee[ie], !0),
+        has: (ee, ie) => "symbol" === typeof ie || isNaN(Number(ie)) ? Reflect.has(ee, ie) : Reflect.has(ee.items, ie)
       };
-    class GY {
-      [qB];
-      [jB];
-      [NB];
-      [ZB];
+    class by {
+      [Te];
+      [Ue];
+      [Xe];
+      [pe];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[JB] = XG;
-      static[MB] = sG;
-      static COLLECTION_KIND = aG;
-      static[PB](BB, OB, GB) {
-        if (!GB) return !0;
-        const YB = BB[NB] ?? BB;
-        return "string" === typeof YB[ZB] || GB.isChangeTreeVisible(YB.tmpItems[OB]?.[qB])
+      static[Je] = uH;
+      static[oe] = QH;
+      static COLLECTION_KIND = jH;
+      static[Re](ee, ie, He) {
+        if (!He) return !0;
+        const ye = ee[Xe] ?? ee;
+        return "string" === typeof ye[pe] || He.isChangeTreeVisible(ye.tmpItems[ie]?.[Te])
       }
-      static is(BB) {
-        return Array.isArray(BB) || void 0 !== BB.array
+      static is(ee) {
+        return Array.isArray(ee) || void 0 !== ee.array
       }
-      static from(BB) {
-        return new GY(...Array.from(BB))
+      static from(ee) {
+        return new by(...Array.from(ee))
       }
       constructor() {
-        this[ZB] = void 0, this[NB] = this;
-        const BB = new Proxy(this, OY);
-        return Object.defineProperty(this, qB, {
-          value: new uG(BB, this),
+        this[pe] = void 0, this[Xe] = this;
+        const ee = new Proxy(this, yy);
+        return Object.defineProperty(this, Te, {
+          value: new YH(ee, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), BB
+        }), arguments.length > 0 && this.push(...arguments), ee
       }
       static initializeForDecoder() {
-        const BB = Object.create(GY.prototype);
-        BB.items = [], BB.isMovingItems = !1, BB._needsCompaction = !1, BB[ZB] = void 0, BB[NB] = BB;
-        const OB = new Proxy(BB, OY);
-        return IG(BB, OB), OB
+        const ee = Object.create(by.prototype);
+        ee.items = [], ee.isMovingItems = !1, ee._needsCompaction = !1, ee[pe] = void 0, ee[Xe] = ee;
+        const ie = new Proxy(ee, yy);
+        return aH(ee, ie), ie
       }
-      set length(BB) {
-        0 === BB ? this.clear() : BB < this.items.length ? this.splice(BB, this.length - BB) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(ee) {
+        0 === ee ? this.clear() : ee < this.items.length ? this.splice(ee, this.length - ee) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[qB].pause()
+        this[Te].pause()
       }
       resumeTracking() {
-        this[qB].resume()
+        this[Te].resume()
       }
-      untracked(BB) {
-        return this[qB].untracked(BB)
+      untracked(ee) {
+        return this[Te].untracked(ee)
       }
       get isTrackingPaused() {
-        return this[qB].paused
+        return this[Te].paused
       }
       push() {
-        const BB = this[NB],
-          OB = BB.items,
-          GB = BB.tmpItems,
-          YB = BB[qB],
-          QB = BB[ZB];
-        let oB = GB.length;
-        for (let jB = 0, yB = arguments.length; jB < yB; jB++, oB++) {
-          const yB = jB < 0 || arguments.length <= jB ? void 0 : arguments[jB];
-          if (void 0 === yB || null === yB) return;
-          "object" === typeof yB && QB && tG(yB, QB, BB, jB), YB.indexedOperation(oB, DB.ADD), OB.push(yB), GB.push(yB), yB[qB]?.setParent(this, YB.root, oB)
+        const ee = this[Xe],
+          ie = ee.items,
+          He = ee.tmpItems,
+          ye = ee[Te],
+          Me = ee[pe];
+        let Ke = He.length;
+        for (let Ue = 0, Fe = arguments.length; Ue < Fe; Ue++, Ke++) {
+          const Fe = Ue < 0 || arguments.length <= Ue ? void 0 : arguments[Ue];
+          if (void 0 === Fe || null === Fe) return;
+          "object" === typeof Fe && Me && iy(Fe, Me, ee, Ue), ye.indexedOperation(Ke, be.ADD), ie.push(Fe), He.push(Fe), Fe[Te]?.setParent(this, ye.root, Ke)
         }
-        return oB
+        return Ke
       }
       pop() {
-        const BB = this[NB],
-          OB = BB.tmpItems,
-          GB = BB.deletedIndexes;
-        let YB = -1;
-        for (let QB = OB.length - 1; QB >= 0; QB--)
-          if (!0 !== GB[QB]) {
-            YB = QB;
+        const ee = this[Xe],
+          ie = ee.tmpItems,
+          He = ee.deletedIndexes;
+        let ye = -1;
+        for (let Me = ie.length - 1; Me >= 0; Me--)
+          if (!0 !== He[Me]) {
+            ye = Me;
             break
-          } if (YB < 0) return;
-        const DB = BB.$isUnsentAdd(YB);
-        return BB[qB].delete(YB), DB ? BB.$cancelAdd(YB) : GB[YB] = !0, BB.items.pop()
+          } if (ye < 0) return;
+        const be = ee.$isUnsentAdd(ye);
+        return ee[Te].delete(ye), be ? ee.$cancelAdd(ye) : He[ye] = !0, ee.items.pop()
       }
-      at(BB) {
-        return BB < 0 && (BB += this.length), this.items[BB]
+      at(ee) {
+        return ee < 0 && (ee += this.length), this.items[ee]
       }
-      $wireIndex(BB) {
-        const OB = this.deletedIndexes;
-        if (0 === OB.length) return BB;
-        const GB = this.tmpItems;
-        let YB = 0;
-        for (let DB = 0; DB < GB.length; DB++)
-          if (!0 !== OB[DB]) {
-            if (YB === BB) return DB;
-            YB++
-          } return GB.length + (BB - YB)
+      $wireIndex(ee) {
+        const ie = this.deletedIndexes;
+        if (0 === ie.length) return ee;
+        const He = this.tmpItems;
+        let ye = 0;
+        for (let be = 0; be < He.length; be++)
+          if (!0 !== ie[be]) {
+            if (ye === ee) return be;
+            ye++
+          } return He.length + (ee - ye)
       }
-      $isUnsentAdd(BB) {
-        const OB = this[qB];
-        return 0 === (576 & OB.flags) && !OB.paused && "string" !== typeof this[ZB] && OB.operationAt(BB) === DB.ADD
+      $isUnsentAdd(ee) {
+        const ie = this[Te];
+        return 0 === (576 & ie.flags) && !ie.paused && "string" !== typeof this[pe] && ie.operationAt(ee) === be.ADD
       }
-      $cancelAdd(BB) {
-        let OB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const GB = this[qB],
-          YB = this.tmpItems[BB];
-        this.tmpItems.splice(BB, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(BB, 1), GB.removeAt(BB, 1);
-        const DB = YB?.[qB];
-        void 0 !== DB && void 0 === DB.root && DB.removeParent(this), OB && this.$reindexChildren(BB)
+      $cancelAdd(ee) {
+        let ie = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const He = this[Te],
+          ye = this.tmpItems[ee];
+        this.tmpItems.splice(ee, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(ee, 1), He.removeAt(ee, 1);
+        const be = ye?.[Te];
+        void 0 !== be && void 0 === be.root && be.removeParent(this), ie && this.$reindexChildren(ee)
       }
-      $reindexChildren(BB, OB) {
-        if (!this[qB].hasFilteredFields) return;
-        if ("string" === typeof this[ZB]) return;
-        const GB = this.tmpItems,
-          YB = GB.length;
-        if (void 0 !== OB)
-          for (; BB < YB && GB[BB] === OB[BB];) BB++;
-        for (let DB = BB; DB < YB; DB++) GB[DB]?.[qB]?.setParentIndex(this, DB)
+      $reindexChildren(ee, ie) {
+        if (!this[Te].hasFilteredFields) return;
+        if ("string" === typeof this[pe]) return;
+        const He = this.tmpItems,
+          ye = He.length;
+        if (void 0 !== ie)
+          for (; ee < ye && He[ee] === ie[ee];) ee++;
+        for (let be = ee; be < ye; be++) He[be]?.[Te]?.setParentIndex(this, be)
       }
-      $changeAt(BB, OB) {
-        if (void 0 === OB || null === OB) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[BB] === OB) return;
-        const GB = void 0 !== this.items[BB] ? "object" === typeof OB ? DB.DELETE_AND_ADD : DB.REPLACE : DB.ADD,
-          YB = this.$wireIndex(BB),
-          QB = this[qB];
-        return QB.change(YB, GB), OB[qB]?.setParent(this, QB.root, YB), YB
+      $changeAt(ee, ie) {
+        if (void 0 === ie || null === ie) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[ee] === ie) return;
+        const He = void 0 !== this.items[ee] ? "object" === typeof ie ? be.DELETE_AND_ADD : be.REPLACE : be.ADD,
+          ye = this.$wireIndex(ee),
+          Me = this[Te];
+        return Me.change(ye, He), ie[Te]?.setParent(this, Me.root, ye), ye
       }
-      $deleteAt(BB, OB) {
-        this[qB].delete(this.$wireIndex(BB), OB)
+      $deleteAt(ee, ie) {
+        this[Te].delete(this.$wireIndex(ee), ie)
       }
-      $setAt(BB, OB, GB) {
-        GB === DB.ADD && void 0 !== this.items[BB] ? this.items.splice(BB, 0, OB) : GB === DB.DELETE_AND_MOVE ? (this.items.splice(BB, 1), this.items[BB] = OB) : (BB > this.items.length && (this._needsCompaction = !0), this.items[BB] = OB)
+      $setAt(ee, ie, He) {
+        He === be.ADD && void 0 !== this.items[ee] ? this.items.splice(ee, 0, ie) : He === be.DELETE_AND_MOVE ? (this.items.splice(ee, 1), this.items[ee] = ie) : (ee > this.items.length && (this._needsCompaction = !0), this.items[ee] = ie)
       }
       clear() {
-        const BB = this[NB];
-        if (0 === BB.items.length) return;
-        const OB = BB[qB];
-        OB.forEachChild(((BB, GB) => {
-          OB.root?.remove(BB)
-        })), OB.discard(), OB.operation(DB.CLEAR), BB.items.length = 0, BB.tmpItems.length = 0
-      } [WB]() {
-        const BB = this[NB] ?? this,
-          OB = BB[qB];
-        if (OB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const GB = BB.items;
-        for (let YB = 0; YB < GB.length; YB++) GB[YB]?.[WB]?.();
-        BB.items.length = 0, BB.tmpItems.length = 0, BB.deletedIndexes.length = 0, OB.recycle(), BB[jB] = void 0
+        const ee = this[Xe];
+        if (0 === ee.items.length) return;
+        const ie = ee[Te];
+        ie.forEachChild(((ee, He) => {
+          ie.root?.remove(ee)
+        })), ie.discard(), ie.operation(be.CLEAR), ee.items.length = 0, ee.tmpItems.length = 0
+      } [Be]() {
+        const ee = this[Xe] ?? this,
+          ie = ee[Te];
+        if (ie.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const He = ee.items;
+        for (let ye = 0; ye < He.length; ye++) He[ye]?.[Be]?.();
+        ee.items.length = 0, ee.tmpItems.length = 0, ee.deletedIndexes.length = 0, ie.recycle(), ee[Ue] = void 0
       }
       concat() {
-        return new GY(...this.items.concat(...arguments))
+        return new by(...this.items.concat(...arguments))
       }
-      join(BB) {
-        return this.items.join(BB)
+      join(ee) {
+        return this.items.join(ee)
       }
       reverse() {
-        const BB = this[NB],
-          OB = BB[qB];
-        if (OB.has() || BB.deletedIndexes.length > 0) {
-          const OB = BB.items.slice().reverse();
-          return this.clear(), this.push(...OB), this
+        const ee = this[Xe],
+          ie = ee[Te];
+        if (ie.has() || ee.deletedIndexes.length > 0) {
+          const ie = ee.items.slice().reverse();
+          return this.clear(), this.push(...ie), this
         }
-        return OB.operation(DB.REVERSE), BB.items.reverse(), BB.tmpItems.reverse(), BB.$reindexChildren(0), this
+        return ie.operation(be.REVERSE), ee.items.reverse(), ee.tmpItems.reverse(), ee.$reindexChildren(0), this
       }
       shift() {
-        const BB = this[NB],
-          OB = BB.items;
-        if (0 === OB.length) return;
-        const GB = BB[qB],
-          YB = BB.deletedIndexes;
-        let QB = 0;
-        for (; !0 === YB[QB];) QB++;
-        const oB = BB.$isUnsentAdd(QB);
-        return GB.delete(QB, DB.DELETE), oB ? BB.$cancelAdd(QB) : YB[QB] = !0, OB.shift()
+        const ee = this[Xe],
+          ie = ee.items;
+        if (0 === ie.length) return;
+        const He = ee[Te],
+          ye = ee.deletedIndexes;
+        let Me = 0;
+        for (; !0 === ye[Me];) Me++;
+        const Ke = ee.$isUnsentAdd(Me);
+        return He.delete(Me, be.DELETE), Ke ? ee.$cancelAdd(Me) : ye[Me] = !0, ie.shift()
       }
-      slice(BB, OB) {
-        const GB = new GY;
-        return GB.push(...this.items.slice(BB, OB)), GB
+      slice(ee, ie) {
+        const He = new by;
+        return He.push(...this.items.slice(ee, ie)), He
       }
       sort() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BY;
-        const OB = this[NB];
-        OB.isMovingItems = !0;
-        const GB = OB[qB];
-        return OB.items.sort(BB).forEach(((BB, OB) => GB.change(OB, DB.REPLACE))), OB.tmpItems.sort(BB), OB.$reindexChildren(0), OB.isMovingItems = !1, this
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hy;
+        const ie = this[Xe];
+        ie.isMovingItems = !0;
+        const He = ie[Te];
+        return ie.items.sort(ee).forEach(((ee, ie) => He.change(ie, be.REPLACE))), ie.tmpItems.sort(ee), ie.$reindexChildren(0), ie.isMovingItems = !1, this
       }
-      splice(BB, OB) {
-        const GB = this[NB],
-          YB = GB[qB],
-          QB = GB.items,
-          oB = GB.tmpItems,
-          jB = GB.deletedIndexes,
-          yB = QB.length,
-          JB = oB.length;
-        for (var MB = arguments.length, PB = new Array(MB > 2 ? MB - 2 : 0), zB = 2; zB < MB; zB++) PB[zB - 2] = arguments[zB];
-        const lB = PB.length,
-          pB = [];
-        for (let DB = 0; DB < JB; DB++) !0 !== jB[DB] && pB.push(DB);
-        let ZB;
-        if (yB > BB) {
-          void 0 === OB && (OB = yB - BB);
-          for (let QB = BB; QB < BB + OB; QB++) {
-            const BB = pB[QB],
-              OB = GB.$isUnsentAdd(BB);
-            YB.delete(BB, DB.DELETE), OB ? (ZB ??= []).push(BB) : jB[BB] = !0
+      splice(ee, ie) {
+        const He = this[Xe],
+          ye = He[Te],
+          Me = He.items,
+          Ke = He.tmpItems,
+          Ue = He.deletedIndexes,
+          Fe = Me.length,
+          Je = Ke.length;
+        for (var oe = arguments.length, Re = new Array(oe > 2 ? oe - 2 : 0), ke = 2; ke < oe; ke++) Re[ke - 2] = arguments[ke];
+        const qe = Re.length,
+          fe = [];
+        for (let be = 0; be < Je; be++) !0 !== Ue[be] && fe.push(be);
+        let pe;
+        if (Fe > ee) {
+          void 0 === ie && (ie = Fe - ee);
+          for (let Me = ee; Me < ee + ie; Me++) {
+            const ee = fe[Me],
+              ie = He.$isUnsentAdd(ee);
+            ye.delete(ee, be.DELETE), ie ? (pe ??= []).push(ee) : Ue[ee] = !0
           }
-        } else OB = 0;
-        if (lB > 0) {
-          const QB = pB[BB] ?? yB,
-            JB = Math.min(lB, OB);
-          for (let BB = 0; BB < JB; BB++) {
-            const OB = QB + BB;
-            let GB;
-            const yB = void 0 !== ZB ? ZB.indexOf(OB) : -1; - 1 !== yB ? (ZB.splice(yB, 1), GB = DB.ADD) : GB = jB[OB] ? DB.DELETE_AND_ADD : DB.ADD, YB.indexedOperation(OB, GB), oB[OB] = PB[BB], jB[OB] = !1, PB[BB][qB]?.setParent(this, YB.root, OB)
+        } else ie = 0;
+        if (qe > 0) {
+          const Me = fe[ee] ?? Fe,
+            Je = Math.min(qe, ie);
+          for (let ee = 0; ee < Je; ee++) {
+            const ie = Me + ee;
+            let He;
+            const Fe = void 0 !== pe ? pe.indexOf(ie) : -1; - 1 !== Fe ? (pe.splice(Fe, 1), He = be.ADD) : He = Ue[ie] ? be.DELETE_AND_ADD : be.ADD, ye.indexedOperation(ie, He), Ke[ie] = Re[ee], Ue[ie] = !1, Re[ee][Te]?.setParent(this, ye.root, ie)
           }
-          const MB = lB - JB;
-          if (MB > 0) {
-            const BB = QB + JB;
-            YB.insertAt(BB, MB);
-            for (let OB = 0; OB < MB; OB++) PB[JB + OB][qB]?.setParent(this, YB.root, BB + OB);
-            jB.length > 0 && jB.splice(BB, 0, ...new Array(MB).fill(!1)), oB.splice(BB, 0, ...PB.slice(JB)), GB.$reindexChildren(BB + MB)
+          const oe = qe - Je;
+          if (oe > 0) {
+            const ee = Me + Je;
+            ye.insertAt(ee, oe);
+            for (let ie = 0; ie < oe; ie++) Re[Je + ie][Te]?.setParent(this, ye.root, ee + ie);
+            Ue.length > 0 && Ue.splice(ee, 0, ...new Array(oe).fill(!1)), Ke.splice(ee, 0, ...Re.slice(Je)), He.$reindexChildren(ee + oe)
           }
         }
-        if (void 0 !== ZB && ZB.length > 0) {
-          for (let BB = ZB.length - 1; BB >= 0; BB--) GB.$cancelAdd(ZB[BB], !1);
-          GB.$reindexChildren(ZB[0])
+        if (void 0 !== pe && pe.length > 0) {
+          for (let ee = pe.length - 1; ee >= 0; ee--) He.$cancelAdd(pe[ee], !1);
+          He.$reindexChildren(pe[0])
         }
-        return YB.root?.enqueueChangeTree(YB), QB.splice(BB, OB, ...PB)
+        return ye.root?.enqueueChangeTree(ye), Me.splice(ee, ie, ...Re)
       }
       unshift() {
-        const BB = this[NB],
-          OB = BB[qB];
-        OB.unshift(arguments.length);
-        for (let YB = 0; YB < arguments.length; YB++)(YB < 0 || arguments.length <= YB ? void 0 : arguments[YB])?.[qB]?.setParent(this, OB.root, YB);
-        const GB = BB.deletedIndexes;
-        return GB.length > 0 && GB.unshift(...new Array(arguments.length).fill(!1)), BB.tmpItems.unshift(...arguments), BB.$reindexChildren(arguments.length), BB.items.unshift(...arguments)
+        const ee = this[Xe],
+          ie = ee[Te];
+        ie.unshift(arguments.length);
+        for (let ye = 0; ye < arguments.length; ye++)(ye < 0 || arguments.length <= ye ? void 0 : arguments[ye])?.[Te]?.setParent(this, ie.root, ye);
+        const He = ee.deletedIndexes;
+        return He.length > 0 && He.unshift(...new Array(arguments.length).fill(!1)), ee.tmpItems.unshift(...arguments), ee.$reindexChildren(arguments.length), ee.items.unshift(...arguments)
       }
-      indexOf(BB, OB) {
-        return this.items.indexOf(BB, OB)
+      indexOf(ee, ie) {
+        return this.items.indexOf(ee, ie)
       }
-      lastIndexOf(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(BB, OB)
+      lastIndexOf(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(ee, ie)
       }
-      every(BB, OB) {
-        return this.items.every(BB, OB)
+      every(ee, ie) {
+        return this.items.every(ee, ie)
       }
-      some(BB, OB) {
-        return this.items.some(BB, OB)
+      some(ee, ie) {
+        return this.items.some(ee, ie)
       }
-      forEach(BB, OB) {
-        return this.items.forEach(BB, OB)
+      forEach(ee, ie) {
+        return this.items.forEach(ee, ie)
       }
-      map(BB, OB) {
-        return this.items.map(BB, OB)
+      map(ee, ie) {
+        return this.items.map(ee, ie)
       }
-      filter(BB, OB) {
-        return this.items.filter(BB, OB)
+      filter(ee, ie) {
+        return this.items.filter(ee, ie)
       }
-      reduce(BB, OB) {
+      reduce(ee, ie) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(BB, OB) {
+      reduceRight(ee, ie) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(BB, OB) {
-        return this.items.find(BB, OB)
+      find(ee, ie) {
+        return this.items.find(ee, ie)
       }
-      findIndex(BB, OB) {
-        return this.items.findIndex(BB, OB)
+      findIndex(ee, ie) {
+        return this.items.findIndex(ee, ie)
       }
-      fill(BB, OB, GB) {
+      fill(ee, ie, He) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(BB, OB, GB) {
+      copyWithin(ee, ie, He) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return GY
+        return by
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(BB, OB) {
-        return this.items.includes(BB, OB)
+      includes(ee, ie) {
+        return this.items.includes(ee, ie)
       }
-      flatMap(BB, OB) {
+      flatMap(ee, ie) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(BB) {
+      flat(ee) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
+        for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(BB, OB) {
-        const GB = this.items.slice();
-        return BB < 0 && (BB += this.length), GB[BB] = OB, new GY(...GB)
+      with(ee, ie) {
+        const He = this.items.slice();
+        return ee < 0 && (ee += this.length), He[ee] = ie, new by(...He)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(BB) {
-        return this.items.slice().sort(BB)
+      toSorted(ee) {
+        return this.items.slice().sort(ee)
       }
-      toSpliced(BB, OB) {
-        for (var GB = arguments.length, YB = new Array(GB > 2 ? GB - 2 : 0), DB = 2; DB < GB; DB++) YB[DB - 2] = arguments[DB];
-        const QB = this.items.slice();
-        return QB.splice.apply(QB, arguments), QB
+      toSpliced(ee, ie) {
+        for (var He = arguments.length, ye = new Array(He > 2 ? He - 2 : 0), be = 2; be < He; be++) ye[be - 2] = arguments[be];
+        const Me = this.items.slice();
+        return Me.splice.apply(Me, arguments), Me
       }
       shuffle() {
-        return this.move((BB => {
-          let OB = this.items.length;
-          for (; 0 != OB;) {
-            let BB = Math.floor(Math.random() * OB);
-            OB--, [this[OB], this[BB]] = [this[BB], this[OB]]
+        return this.move((ee => {
+          let ie = this.items.length;
+          for (; 0 != ie;) {
+            let ee = Math.floor(Math.random() * ie);
+            ie--, [this[ie], this[ee]] = [this[ee], this[ie]]
           }
         }))
       }
-      move(BB) {
-        return this.isMovingItems = !0, BB(this), this.isMovingItems = !1, this
-      } [zB](BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const GB = this[NB] ?? this;
-        return OB || GB.deletedIndexes[BB] ? GB.items[BB] : GB.tmpItems[BB] || GB.items[BB]
-      } [lB](BB) {
-        const OB = this[NB] ?? this;
-        OB.items[BB] = void 0, OB._needsCompaction = !0
-      } [RB]() {
-        const BB = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, BB), this.deletedIndexes.length = 0)
-      } [AB]() {
-        const BB = this[NB] ?? this;
-        BB._needsCompaction && (BB._needsCompaction = !1, BB.items = BB.items.filter((BB => void 0 !== BB)))
-      } [pB](BB, OB, GB) {
-        const YB = this[NB] ?? this,
-          DB = YB.items;
-        let QB = !1;
-        for (let oB = 0; oB < DB.length; oB++) {
-          const jB = DB[oB];
-          BB.has(oB) ? GB(jB) : (QB = !0, OB(jB, oB), YB[lB](oB))
+      move(ee) {
+        return this.isMovingItems = !0, ee(this), this.isMovingItems = !1, this
+      } [ke](ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const He = this[Xe] ?? this;
+        return ie || He.deletedIndexes[ee] ? He.items[ee] : He.tmpItems[ee] || He.items[ee]
+      } [qe](ee) {
+        const ie = this[Xe] ?? this;
+        ie.items[ee] = void 0, ie._needsCompaction = !0
+      } [ze]() {
+        const ee = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, ee), this.deletedIndexes.length = 0)
+      } [Ee]() {
+        const ee = this[Xe] ?? this;
+        ee._needsCompaction && (ee._needsCompaction = !1, ee.items = ee.items.filter((ee => void 0 !== ee)))
+      } [fe](ee, ie, He) {
+        const ye = this[Xe] ?? this,
+          be = ye.items;
+        let Me = !1;
+        for (let Ke = 0; Ke < be.length; Ke++) {
+          const Ue = be[Ke];
+          ee.has(Ke) ? He(Ue) : (Me = !0, ie(Ue, Ke), ye[qe](Ke))
         }
-        QB && YB[AB]()
+        Me && ye[Ee]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((BB => "function" === typeof BB.toJSON ? BB.toJSON() : BB))
+        return this.toArray().map((ee => "function" === typeof ee.toJSON ? ee.toJSON() : ee))
       }
-      clone(BB) {
-        let OB;
-        return BB ? (OB = new GY, OB.push(...this.items)) : OB = new GY(...this.map((BB => BB[qB] ? BB.clone() : BB))), OB
+      clone(ee) {
+        let ie;
+        return ee ? (ie = new by, ie.push(...this.items)) : ie = new by(...this.map((ee => ee[Te] ? ee.clone() : ee))), ie
       }
     }
-    SO("array", {
-      constructor: GY
+    di("array", {
+      constructor: by
     });
-    class YY {
+    class My {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(BB) {
-        const OB = this.indexByKey[BB];
-        return void 0 === OB ? void 0 : OB
+      indexOf(ee) {
+        const ie = this.indexByKey[ee];
+        return void 0 === ie ? void 0 : ie
       }
-      assign(BB) {
-        const OB = this.nextIndex++;
-        return this.indexByKey[BB] = OB, this.keyByIndex.set(OB, BB), OB
+      assign(ee) {
+        const ie = this.nextIndex++;
+        return this.indexByKey[ee] = ie, this.keyByIndex.set(ie, ee), ie
       }
-      snapshot(BB, OB) {
-        (this.snapshots ??= new Map).set(BB, OB)
+      snapshot(ee, ie) {
+        (this.snapshots ??= new Map).set(ee, ie)
       }
-      forgetSnapshot(BB) {
-        this.snapshots?.delete(BB)
+      forgetSnapshot(ee) {
+        this.snapshots?.delete(ee)
       }
-      snapshotAt(BB) {
-        return this.snapshots?.get(BB)
+      snapshotAt(ee) {
+        return this.snapshots?.get(ee)
       }
-      setIndex(BB, OB) {
-        this.keyByIndex.set(BB, OB), this.indexByKey[OB] = BB
+      setIndex(ee, ie) {
+        this.keyByIndex.set(ee, ie), this.indexByKey[ie] = ee
       }
-      keyOf(BB) {
-        return this.keyByIndex.get(BB)
+      keyOf(ee) {
+        return this.keyByIndex.get(ee)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [BB] of this.snapshots) {
-            const OB = this.keyByIndex.get(BB);
-            void 0 !== OB && (delete this.indexByKey[OB], this.keyByIndex.delete(BB))
+          for (const [ee] of this.snapshots) {
+            const ie = this.keyByIndex.get(ee);
+            void 0 !== ie && (delete this.indexByKey[ie], this.keyByIndex.delete(ee))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class DY {
-      [qB];
-      [jB];
+    class Ky {
+      [Te];
+      [Ue];
       childType;
-      [ZB];
+      [pe];
       $items = new Map;
-      journal = new YY;
+      journal = new My;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(BB) {
-        (this._stream ??= fO()).maxPerTick = BB
+      set maxPerTick(ee) {
+        (this._stream ??= Zi()).maxPerTick = ee
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(BB) {
-        (this._stream ??= fO()).priority = BB
+      set priority(ee) {
+        (this._stream ??= Zi()).priority = ee
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[JB] = LG;
-      static[MB] = vG;
-      static COLLECTION_KIND = hG;
-      static[PB](BB, OB, GB) {
-        if (!GB || "string" === typeof BB[ZB]) return !0;
-        const YB = BB[zB](OB) ?? BB.journal.snapshotAt(OB);
-        return GB.isChangeTreeVisible(YB[qB])
+      static[Je] = LH;
+      static[oe] = rH;
+      static COLLECTION_KIND = nH;
+      static[Re](ee, ie, He) {
+        if (!He || "string" === typeof ee[pe]) return !0;
+        const ye = ee[ke](ie) ?? ee.journal.snapshotAt(ie);
+        return He.isChangeTreeVisible(ye[Te])
       }
-      static is(BB) {
-        return void 0 !== BB.map
+      static is(ee) {
+        return void 0 !== ee.map
       }
-      constructor(BB) {
-        if (Object.defineProperty(this, qB, {
-            value: new uG(this),
+      constructor(ee) {
+        if (Object.defineProperty(this, Te, {
+            value: new YH(this),
             enumerable: !1,
             writable: !0
-          }), this[ZB] = void 0, BB)
-          if (BB instanceof Map || BB instanceof DY) BB.forEach(((BB, OB) => this.set(OB, BB)));
+          }), this[pe] = void 0, ee)
+          if (ee instanceof Map || ee instanceof Ky) ee.forEach(((ee, ie) => this.set(ie, ee)));
           else
-            for (const OB in BB) this.set(OB, BB[OB])
+            for (const ie in ee) this.set(ie, ee[ie])
       }
       static initializeForDecoder() {
-        const BB = Object.create(DY.prototype);
-        return BB.$items = new Map, BB.journal = new YY, BB[ZB] = void 0, IG(BB), BB
+        const ee = Object.create(Ky.prototype);
+        return ee.$items = new Map, ee.journal = new My, ee[pe] = void 0, aH(ee), ee
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return DY
+        return Ky
       }
-      set(BB, OB) {
-        if (void 0 === OB || null === OB) throw new Error(`MapSchema#set('${BB}', ${OB}): trying to set ${OB} value on '${BB}'.`);
-        "object" === typeof OB && this[ZB] && tG(OB, this[ZB], this, BB), BB = BB.toString();
-        const GB = this[qB],
-          YB = void 0 !== OB[qB],
-          QB = this.journal;
-        let oB, jB = QB.indexOf(BB);
-        if (void 0 !== jB) {
-          oB = DB.REPLACE;
-          const GB = this.$items.get(BB);
-          if (GB === OB) return;
-          YB && (oB = DB.DELETE_AND_ADD, void 0 !== GB && GB[qB].root?.remove(GB[qB])), void 0 !== QB.snapshotAt(jB) && QB.forgetSnapshot(jB)
-        } else jB = QB.assign(BB), oB = DB.ADD;
-        return this.$items.set(BB, OB), oB === DB.ADD && GB.isStreamCollection ? void 0 !== GB.root && dO(this, GB.root, jB) : GB.change(jB, oB), YB && OB[qB].setParent(this, GB.root, jB), this
+      set(ee, ie) {
+        if (void 0 === ie || null === ie) throw new Error(`MapSchema#set('${ee}', ${ie}): trying to set ${ie} value on '${ee}'.`);
+        "object" === typeof ie && this[pe] && iy(ie, this[pe], this, ee), ee = ee.toString();
+        const He = this[Te],
+          ye = void 0 !== ie[Te],
+          Me = this.journal;
+        let Ke, Ue = Me.indexOf(ee);
+        if (void 0 !== Ue) {
+          Ke = be.REPLACE;
+          const He = this.$items.get(ee);
+          if (He === ie) return;
+          ye && (Ke = be.DELETE_AND_ADD, void 0 !== He && He[Te].root?.remove(He[Te])), void 0 !== Me.snapshotAt(Ue) && Me.forgetSnapshot(Ue)
+        } else Ue = Me.assign(ee), Ke = be.ADD;
+        return this.$items.set(ee, ie), Ke === be.ADD && He.isStreamCollection ? void 0 !== He.root && Di(this, He.root, Ue) : He.change(Ue, Ke), ye && ie[Te].setParent(this, He.root, Ue), this
       }
-      get(BB) {
-        return this.$items.get(BB)
+      get(ee) {
+        return this.$items.get(ee)
       }
-      getOrInsert(BB, OB) {
-        return this.$items.has(BB) ? this.$items.get(BB) : (this.set(BB, OB), OB)
+      getOrInsert(ee, ie) {
+        return this.$items.has(ee) ? this.$items.get(ee) : (this.set(ee, ie), ie)
       }
-      getOrInsertComputed(BB, OB) {
-        if (this.$items.has(BB)) return this.$items.get(BB);
-        const GB = OB(BB);
-        return this.set(BB, GB), GB
+      getOrInsertComputed(ee, ie) {
+        if (this.$items.has(ee)) return this.$items.get(ee);
+        const He = ie(ee);
+        return this.set(ee, He), He
       }
-      delete(BB) {
-        if (!this.$items.has(BB)) return !1;
-        const OB = this.journal.indexOf(BB),
-          GB = this.$items.get(BB),
-          YB = this[qB];
-        if (YB.isStreamCollection) {
-          const DB = YB.root;
-          let QB = !1;
-          return void 0 !== DB && (QB = KO(this, DB, this[jB], OB)), void 0 !== GB?.[qB] && DB?.remove(GB[qB]), this.$items.delete(BB), QB || this.journal.snapshot(OB, GB), !0
+      delete(ee) {
+        if (!this.$items.has(ee)) return !1;
+        const ie = this.journal.indexOf(ee),
+          He = this.$items.get(ee),
+          ye = this[Te];
+        if (ye.isStreamCollection) {
+          const be = ye.root;
+          let Me = !1;
+          return void 0 !== be && (Me = Pi(this, be, this[Ue], ie)), void 0 !== He?.[Te] && be?.remove(He[Te]), this.$items.delete(ee), Me || this.journal.snapshot(ie, He), !0
         }
-        return this.journal.snapshot(OB, GB), YB.delete(OB), this.$items.delete(BB)
+        return this.journal.snapshot(ie, He), ye.delete(ie), this.$items.delete(ee)
       }
       clear() {
-        const BB = this[qB];
-        BB.discard(), BB.forEachChild(((OB, GB) => {
-          BB.root?.remove(OB)
-        })), this.journal.reset(), this.$items.clear(), BB.operation(DB.CLEAR)
-      } [WB]() {
-        const BB = this[qB];
-        if (BB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((BB => BB?.[WB]?.())), this.$items.clear(), this.journal.reset(), BB.recycle(), this[jB] = void 0
+        const ee = this[Te];
+        ee.discard(), ee.forEachChild(((ie, He) => {
+          ee.root?.remove(ie)
+        })), this.journal.reset(), this.$items.clear(), ee.operation(be.CLEAR)
+      } [Be]() {
+        const ee = this[Te];
+        if (ee.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((ee => ee?.[Be]?.())), this.$items.clear(), this.journal.reset(), ee.recycle(), this[Ue] = void 0
       }
-      has(BB) {
-        return this.$items.has(BB)
+      has(ee) {
+        return this.$items.has(ee)
       }
-      forEach(BB) {
-        this.$items.forEach(BB)
+      forEach(ee) {
+        this.$items.forEach(ee)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[qB].pause()
+        this[Te].pause()
       }
       resumeTracking() {
-        this[qB].resume()
+        this[Te].resume()
       }
-      untracked(BB) {
-        return this[qB].untracked(BB)
+      untracked(ee) {
+        return this[Te].untracked(ee)
       }
       get isTrackingPaused() {
-        return this[qB].paused
+        return this[Te].paused
       }
-      setIndex(BB, OB) {
-        this.journal.setIndex(BB, OB)
+      setIndex(ee, ie) {
+        this.journal.setIndex(ee, ie)
       }
-      getIndex(BB) {
-        return this.journal.keyOf(BB)
-      } [zB](BB) {
-        const OB = this.journal.keyOf(BB);
-        return void 0 !== OB ? this.$items.get(OB) : void 0
-      } [lB](BB) {
-        const OB = this.journal.keyOf(BB);
-        void 0 !== OB && (this.$items.delete(OB), this.journal.keyByIndex.delete(BB))
-      } [pB](BB, OB, GB) {
-        let YB = null;
-        if (this.$items.forEach(((DB, QB) => {
-            BB.has(QB) ? GB(DB) : ((YB ??= new Set).add(QB), OB(DB, QB))
-          })), null !== YB) {
-          YB.forEach((BB => {
-            this.$items.delete(BB), delete this.journal.indexByKey[BB]
+      getIndex(ee) {
+        return this.journal.keyOf(ee)
+      } [ke](ee) {
+        const ie = this.journal.keyOf(ee);
+        return void 0 !== ie ? this.$items.get(ie) : void 0
+      } [qe](ee) {
+        const ie = this.journal.keyOf(ee);
+        void 0 !== ie && (this.$items.delete(ie), this.journal.keyByIndex.delete(ee))
+      } [fe](ee, ie, He) {
+        let ye = null;
+        if (this.$items.forEach(((be, Me) => {
+            ee.has(Me) ? He(be) : ((ye ??= new Set).add(Me), ie(be, Me))
+          })), null !== ye) {
+          ye.forEach((ee => {
+            this.$items.delete(ee), delete this.journal.indexByKey[ee]
           }));
-          const BB = [];
-          this.journal.keyByIndex.forEach(((OB, GB) => {
-            YB.has(OB) && BB.push(GB)
+          const ee = [];
+          this.journal.keyByIndex.forEach(((ie, He) => {
+            ye.has(ie) && ee.push(He)
           }));
-          for (let OB = 0; OB < BB.length; OB++) this.journal.keyByIndex.delete(BB[OB])
+          for (let ie = 0; ie < ee.length; ie++) this.journal.keyByIndex.delete(ee[ie])
         }
-      } [RB]() {
+      } [ze]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(BB) {
-        FO(this, BB)
+      _dropView(ee) {
+        ai(this, ee)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (BB => {
-          let [OB, GB] = BB;
-          return [OB, "function" === typeof GB.toJSON ? GB.toJSON() : GB]
+        return Object.fromEntries(Array.from(this, (ee => {
+          let [ie, He] = ee;
+          return [ie, "function" === typeof He.toJSON ? He.toJSON() : He]
         })))
       }
-      clone(BB) {
-        let OB;
-        return BB ? OB = Object.assign(new DY, this) : (OB = new DY, this.forEach(((BB, GB) => {
-          BB[qB] ? OB.set(GB, BB.clone()) : OB.set(GB, BB)
-        }))), OB
+      clone(ee) {
+        let ie;
+        return ee ? ie = Object.assign(new Ky, this) : (ie = new Ky, this.forEach(((ee, He) => {
+          ee[Te] ? ie.set(He, ee.clone()) : ie.set(He, ee)
+        }))), ie
       }
     }
-    SO("map", {
-      constructor: DY
+    di("map", {
+      constructor: Ky
     });
-    class QY {
-      [qB];
-      [jB];
-      [ZB];
+    class Uy {
+      [Te];
+      [Ue];
+      [pe];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(BB) {
-        (this._stream ??= fO()).maxPerTick = BB
+      set maxPerTick(ee) {
+        (this._stream ??= Zi()).maxPerTick = ee
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(BB) {
-        (this._stream ??= fO()).priority = BB
+      set priority(ee) {
+        (this._stream ??= Zi()).priority = ee
       }
-      static[JB] = gG;
-      static[MB] = vG;
-      static COLLECTION_KIND = TG;
-      static[PB](BB, OB, GB) {
-        return !GB || "string" === typeof BB[ZB] || GB.isChangeTreeVisible((BB[zB](OB) ?? BB.deletedItems[OB])[qB])
+      static[Je] = CH;
+      static[oe] = rH;
+      static COLLECTION_KIND = IH;
+      static[Re](ee, ie, He) {
+        return !He || "string" === typeof ee[pe] || He.isChangeTreeVisible((ee[ke](ie) ?? ee.deletedItems[ie])[Te])
       }
-      static is(BB) {
-        return void 0 !== BB.collection
+      static is(ee) {
+        return void 0 !== ee.collection
       }
-      constructor(BB) {
-        Object.defineProperty(this, qB, {
-          value: new uG(this),
+      constructor(ee) {
+        Object.defineProperty(this, Te, {
+          value: new YH(this),
           enumerable: !1,
           writable: !0
-        }), this[ZB] = void 0, BB && BB.forEach((BB => this.add(BB)))
+        }), this[pe] = void 0, ee && ee.forEach((ee => this.add(ee)))
       }
       static initializeForDecoder() {
-        const BB = Object.create(QY.prototype);
-        return BB.$items = new Map, BB.deletedItems = {}, BB.$refId = 0, BB[ZB] = void 0, IG(BB), BB
+        const ee = Object.create(Uy.prototype);
+        return ee.$items = new Map, ee.deletedItems = {}, ee.$refId = 0, ee[pe] = void 0, aH(ee), ee
       }
-      add(BB) {
-        const OB = this.$refId++,
-          GB = this[qB];
-        return this.$items.set(OB, BB), GB.isStreamCollection ? void 0 !== GB.root && dO(this, GB.root, OB) : GB.change(OB), void 0 !== BB[qB] && BB[qB].setParent(this, GB.root, OB), OB
+      add(ee) {
+        const ie = this.$refId++,
+          He = this[Te];
+        return this.$items.set(ie, ee), He.isStreamCollection ? void 0 !== He.root && Di(this, He.root, ie) : He.change(ie), void 0 !== ee[Te] && ee[Te].setParent(this, He.root, ie), ie
       }
-      at(BB) {
-        const OB = Array.from(this.$items.keys())[BB];
-        return this.$items.get(OB)
+      at(ee) {
+        const ie = Array.from(this.$items.keys())[ee];
+        return this.$items.get(ie)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(BB) {
-        const OB = this.$items.entries();
-        let GB, YB;
+      delete(ee) {
+        const ie = this.$items.entries();
+        let He, ye;
         for (;
-          (YB = OB.next()) && !YB.done;)
-          if (BB === YB.value[1]) {
-            GB = YB.value[0];
+          (ye = ie.next()) && !ye.done;)
+          if (ee === ye.value[1]) {
+            He = ye.value[0];
             break
-          } if (void 0 === GB) return !1;
-        const DB = this[qB];
-        if (DB.isStreamCollection) {
-          const BB = DB.root,
-            OB = this.$items.get(GB);
-          return void 0 !== BB && KO(this, BB, this[jB], GB), void 0 !== OB?.[qB] && BB?.remove(OB[qB]), this.deletedItems[GB] = OB, this.$items.delete(GB)
+          } if (void 0 === He) return !1;
+        const be = this[Te];
+        if (be.isStreamCollection) {
+          const ee = be.root,
+            ie = this.$items.get(He);
+          return void 0 !== ee && Pi(this, ee, this[Ue], He), void 0 !== ie?.[Te] && ee?.remove(ie[Te]), this.deletedItems[He] = ie, this.$items.delete(He)
         }
-        return this.deletedItems[GB] = DB.delete(GB), this.$items.delete(GB)
+        return this.deletedItems[He] = be.delete(He), this.$items.delete(He)
       }
       clear() {
-        const BB = this[qB];
-        BB.discard(), BB.forEachChild(((OB, GB) => {
-          BB.root?.remove(OB)
-        })), this.$items.clear(), BB.operation(DB.CLEAR)
-      } [WB]() {
-        const BB = this[qB];
-        if (BB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((BB => BB?.[WB]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, BB.recycle(), this[jB] = void 0
+        const ee = this[Te];
+        ee.discard(), ee.forEachChild(((ie, He) => {
+          ee.root?.remove(ie)
+        })), this.$items.clear(), ee.operation(be.CLEAR)
+      } [Be]() {
+        const ee = this[Te];
+        if (ee.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((ee => ee?.[Be]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, ee.recycle(), this[Ue] = void 0
       }
-      has(BB) {
-        return Array.from(this.$items.values()).some((OB => OB === BB))
+      has(ee) {
+        return Array.from(this.$items.values()).some((ie => ie === ee))
       }
-      forEach(BB) {
-        this.$items.forEach(((OB, GB, YB) => BB(OB, GB, this)))
+      forEach(ee) {
+        this.$items.forEach(((ie, He, ye) => ee(ie, He, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[qB].pause()
+        this[Te].pause()
       }
       resumeTracking() {
-        this[qB].resume()
+        this[Te].resume()
       }
-      untracked(BB) {
-        return this[qB].untracked(BB)
+      untracked(ee) {
+        return this[Te].untracked(ee)
       }
       get isTrackingPaused() {
-        return this[qB].paused
+        return this[Te].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(BB, OB) {}
-      getIndex(BB) {
-        return BB
-      } [zB](BB) {
-        return this.$items.get(BB)
-      } [lB](BB) {
-        this.$items.delete(BB)
-      } [pB](BB, OB, GB) {
-        let YB = null;
-        if (this.$items.forEach(((DB, QB) => {
-            BB.has(QB) ? GB(DB) : ((YB ??= []).push(QB), OB(DB, QB))
-          })), null !== YB)
-          for (let DB = 0; DB < YB.length; DB++) this[lB](YB[DB])
-      } [RB]() {
-        for (const BB in this.deletedItems) delete this.deletedItems[BB]
+      setIndex(ee, ie) {}
+      getIndex(ee) {
+        return ee
+      } [ke](ee) {
+        return this.$items.get(ee)
+      } [qe](ee) {
+        this.$items.delete(ee)
+      } [fe](ee, ie, He) {
+        let ye = null;
+        if (this.$items.forEach(((be, Me) => {
+            ee.has(Me) ? He(be) : ((ye ??= []).push(Me), ie(be, Me))
+          })), null !== ye)
+          for (let be = 0; be < ye.length; be++) this[qe](ye[be])
+      } [ze]() {
+        for (const ee in this.deletedItems) delete this.deletedItems[ee]
       }
-      _dropView(BB) {
-        FO(this, BB)
+      _dropView(ee) {
+        ai(this, ee)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const BB = [];
-        return this.forEach(((OB, GB) => {
-          BB.push("function" === typeof OB.toJSON ? OB.toJSON() : OB)
-        })), BB
+        const ee = [];
+        return this.forEach(((ie, He) => {
+          ee.push("function" === typeof ie.toJSON ? ie.toJSON() : ie)
+        })), ee
       }
-      clone(BB) {
-        let OB;
-        return BB ? OB = Object.assign(new QY, this) : (OB = new QY, this.forEach((BB => {
-          BB[qB] ? OB.add(BB.clone()) : OB.add(BB)
-        }))), OB
+      clone(ee) {
+        let ie;
+        return ee ? ie = Object.assign(new Uy, this) : (ie = new Uy, this.forEach((ee => {
+          ee[Te] ? ie.add(ee.clone()) : ie.add(ee)
+        }))), ie
       }
     }
-    SO("collection", {
-      constructor: QY
+    di("collection", {
+      constructor: Uy
     });
-    class oY {
-      [qB];
-      [jB];
-      [ZB];
+    class Fy {
+      [Te];
+      [Ue];
+      [pe];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(BB) {
-        (this._stream ??= fO()).maxPerTick = BB
+      set maxPerTick(ee) {
+        (this._stream ??= Zi()).maxPerTick = ee
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(BB) {
-        (this._stream ??= fO()).priority = BB
+      set priority(ee) {
+        (this._stream ??= Zi()).priority = ee
       }
-      static[JB] = gG;
-      static[MB] = vG;
-      static COLLECTION_KIND = eG;
-      static[PB](BB, OB, GB) {
-        return !GB || "string" === typeof BB[ZB] || GB.isVisible((BB[zB](OB) ?? BB.deletedItems[OB])[qB])
+      static[Je] = CH;
+      static[oe] = rH;
+      static COLLECTION_KIND = sH;
+      static[Re](ee, ie, He) {
+        return !He || "string" === typeof ee[pe] || He.isVisible((ee[ke](ie) ?? ee.deletedItems[ie])[Te])
       }
-      static is(BB) {
-        return void 0 !== BB.set
+      static is(ee) {
+        return void 0 !== ee.set
       }
-      constructor(BB) {
-        Object.defineProperty(this, qB, {
-          value: new uG(this),
+      constructor(ee) {
+        Object.defineProperty(this, Te, {
+          value: new YH(this),
           enumerable: !1,
           writable: !0
-        }), this[ZB] = void 0, BB && BB.forEach((BB => this.add(BB)))
+        }), this[pe] = void 0, ee && ee.forEach((ee => this.add(ee)))
       }
       static initializeForDecoder() {
-        const BB = Object.create(oY.prototype);
-        return BB.$items = new Map, BB.deletedItems = {}, BB.$refId = 0, BB[ZB] = void 0, IG(BB), BB
+        const ee = Object.create(Fy.prototype);
+        return ee.$items = new Map, ee.deletedItems = {}, ee.$refId = 0, ee[pe] = void 0, aH(ee), ee
       }
-      add(BB) {
-        if (this.has(BB)) return !1;
-        const OB = this.$refId++,
-          GB = this[qB];
-        return this.$items.set(OB, BB), GB.isStreamCollection ? void 0 !== GB.root && dO(this, GB.root, OB) : GB.change(OB, DB.ADD), void 0 !== BB[qB] && BB[qB].setParent(this, GB.root, OB), OB
+      add(ee) {
+        if (this.has(ee)) return !1;
+        const ie = this.$refId++,
+          He = this[Te];
+        return this.$items.set(ie, ee), He.isStreamCollection ? void 0 !== He.root && Di(this, He.root, ie) : He.change(ie, be.ADD), void 0 !== ee[Te] && ee[Te].setParent(this, He.root, ie), ie
       }
       entries() {
         return this.$items.entries()
       }
-      delete(BB) {
-        const OB = this.$items.entries();
-        let GB, YB;
+      delete(ee) {
+        const ie = this.$items.entries();
+        let He, ye;
         for (;
-          (YB = OB.next()) && !YB.done;)
-          if (BB === YB.value[1]) {
-            GB = YB.value[0];
+          (ye = ie.next()) && !ye.done;)
+          if (ee === ye.value[1]) {
+            He = ye.value[0];
             break
-          } if (void 0 === GB) return !1;
-        const DB = this[qB];
-        if (DB.isStreamCollection) {
-          const BB = DB.root,
-            OB = this.$items.get(GB);
-          return void 0 !== BB && KO(this, BB, this[jB], GB), void 0 !== OB?.[qB] && BB?.remove(OB[qB]), this.deletedItems[GB] = OB, this.$items.delete(GB)
+          } if (void 0 === He) return !1;
+        const be = this[Te];
+        if (be.isStreamCollection) {
+          const ee = be.root,
+            ie = this.$items.get(He);
+          return void 0 !== ee && Pi(this, ee, this[Ue], He), void 0 !== ie?.[Te] && ee?.remove(ie[Te]), this.deletedItems[He] = ie, this.$items.delete(He)
         }
-        return this.deletedItems[GB] = DB.delete(GB), this.$items.delete(GB)
+        return this.deletedItems[He] = be.delete(He), this.$items.delete(He)
       }
       clear() {
-        const BB = this[qB];
-        BB.discard(), this.$items.clear(), BB.operation(DB.CLEAR)
-      } [WB]() {
-        const BB = this[qB];
-        if (BB.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((BB => BB?.[WB]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, BB.recycle(), this[jB] = void 0
+        const ee = this[Te];
+        ee.discard(), this.$items.clear(), ee.operation(be.CLEAR)
+      } [Be]() {
+        const ee = this[Te];
+        if (ee.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((ee => ee?.[Be]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, ee.recycle(), this[Ue] = void 0
       }
-      has(BB) {
-        const OB = this.$items.values();
-        let GB, YB = !1;
+      has(ee) {
+        const ie = this.$items.values();
+        let He, ye = !1;
         for (;
-          (GB = OB.next()) && !GB.done;)
-          if (BB === GB.value) {
-            YB = !0;
+          (He = ie.next()) && !He.done;)
+          if (ee === He.value) {
+            ye = !0;
             break
-          } return YB
+          } return ye
       }
-      forEach(BB) {
-        this.$items.forEach(((OB, GB, YB) => BB(OB, GB, this)))
+      forEach(ee) {
+        this.$items.forEach(((ie, He, ye) => ee(ie, He, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[qB].pause()
+        this[Te].pause()
       }
       resumeTracking() {
-        this[qB].resume()
+        this[Te].resume()
       }
-      untracked(BB) {
-        return this[qB].untracked(BB)
+      untracked(ee) {
+        return this[Te].untracked(ee)
       }
       get isTrackingPaused() {
-        return this[qB].paused
+        return this[Te].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(BB, OB) {}
-      getIndex(BB) {
-        return BB
-      } [zB](BB) {
-        return this.$items.get(BB)
-      } [lB](BB) {
-        this.$items.delete(BB)
-      } [pB](BB, OB, GB) {
-        let YB = null;
-        if (this.$items.forEach(((DB, QB) => {
-            BB.has(QB) ? GB(DB) : ((YB ??= []).push(QB), OB(DB, QB))
-          })), null !== YB)
-          for (let DB = 0; DB < YB.length; DB++) this[lB](YB[DB])
-      } [RB]() {
-        for (const BB in this.deletedItems) delete this.deletedItems[BB]
+      setIndex(ee, ie) {}
+      getIndex(ee) {
+        return ee
+      } [ke](ee) {
+        return this.$items.get(ee)
+      } [qe](ee) {
+        this.$items.delete(ee)
+      } [fe](ee, ie, He) {
+        let ye = null;
+        if (this.$items.forEach(((be, Me) => {
+            ee.has(Me) ? He(be) : ((ye ??= []).push(Me), ie(be, Me))
+          })), null !== ye)
+          for (let be = 0; be < ye.length; be++) this[qe](ye[be])
+      } [ze]() {
+        for (const ee in this.deletedItems) delete this.deletedItems[ee]
       }
-      _dropView(BB) {
-        FO(this, BB)
+      _dropView(ee) {
+        ai(this, ee)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const BB = [];
-        return this.forEach(((OB, GB) => {
-          BB.push("function" === typeof OB.toJSON ? OB.toJSON() : OB)
-        })), BB
+        const ee = [];
+        return this.forEach(((ie, He) => {
+          ee.push("function" === typeof ie.toJSON ? ie.toJSON() : ie)
+        })), ee
       }
-      clone(BB) {
-        let OB;
-        return BB ? OB = Object.assign(new oY, this) : (OB = new oY, this.forEach((BB => {
-          BB[qB] ? OB.add(BB.clone()) : OB.add(BB)
-        }))), OB
+      clone(ee) {
+        let ie;
+        return ee ? ie = Object.assign(new Fy, this) : (ie = new Fy, this.forEach((ee => {
+          ee[Te] ? ie.add(ee.clone()) : ie.add(ee)
+        }))), ie
       }
     }
-    SO("set", {
-      constructor: oY
+    di("set", {
+      constructor: Fy
     });
-    class jY {
-      [qB];
-      [jB];
-      [ZB];
+    class Jy {
+      [Te];
+      [Ue];
+      [pe];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(BB) {
-        (this._stream ??= fO()).maxPerTick = BB
+      set maxPerTick(ee) {
+        (this._stream ??= Zi()).maxPerTick = ee
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(BB) {
-        (this._stream ??= fO()).priority = BB
+      set priority(ee) {
+        (this._stream ??= Zi()).priority = ee
       }
       static $isStream = !0;
-      static[JB] = gG;
-      static[MB] = vG;
-      static COLLECTION_KIND = bG;
-      static[PB](BB, OB, GB) {
-        if (!GB) return !0;
-        const YB = BB[zB](OB);
-        return void 0 !== YB && GB.isVisible(YB[qB])
+      static[Je] = CH;
+      static[oe] = rH;
+      static COLLECTION_KIND = hH;
+      static[Re](ee, ie, He) {
+        if (!He) return !0;
+        const ye = ee[ke](ie);
+        return void 0 !== ye && He.isVisible(ye[Te])
       }
-      static is(BB) {
-        return BB && void 0 !== BB.stream
+      static is(ee) {
+        return ee && void 0 !== ee.stream
       }
       constructor() {
-        Object.defineProperty(this, qB, {
-          value: new uG(this),
+        Object.defineProperty(this, Te, {
+          value: new YH(this),
           enumerable: !1,
           writable: !0
-        }), this[ZB] = void 0
+        }), this[pe] = void 0
       }
       static initializeForDecoder() {
-        const BB = Object.create(jY.prototype);
-        return BB.$items = new Map, BB.$nextPosition = 0, BB._itemIndex = new Map, BB[ZB] = void 0, IG(BB), BB
+        const ee = Object.create(Jy.prototype);
+        return ee.$items = new Map, ee.$nextPosition = 0, ee._itemIndex = new Map, ee[pe] = void 0, aH(ee), ee
       }
-      add(BB) {
-        if (this._itemIndex.has(BB)) return -1;
-        const OB = this.$nextPosition++;
-        this.$items.set(OB, BB), this._itemIndex.set(BB, OB);
-        const GB = this[qB].root;
-        return void 0 !== BB[qB] && BB[qB].setParent(this, GB, OB), void 0 !== GB && dO(this, GB, OB), OB
+      add(ee) {
+        if (this._itemIndex.has(ee)) return -1;
+        const ie = this.$nextPosition++;
+        this.$items.set(ie, ee), this._itemIndex.set(ee, ie);
+        const He = this[Te].root;
+        return void 0 !== ee[Te] && ee[Te].setParent(this, He, ie), void 0 !== He && Di(this, He, ie), ie
       }
-      remove(BB) {
-        const OB = this._itemIndex.get(BB);
-        if (void 0 === OB) return !1;
-        this._itemIndex.delete(BB), this.$items.delete(OB);
-        const GB = this[qB].root;
-        return void 0 !== GB && (KO(this, GB, this[jB], OB), void 0 !== BB[qB] && GB.remove(BB[qB])), !0
+      remove(ee) {
+        const ie = this._itemIndex.get(ee);
+        if (void 0 === ie) return !1;
+        this._itemIndex.delete(ee), this.$items.delete(ie);
+        const He = this[Te].root;
+        return void 0 !== He && (Pi(this, He, this[Ue], ie), void 0 !== ee[Te] && He.remove(ee[Te])), !0
       }
-      has(BB) {
-        return this._itemIndex.has(BB)
+      has(ee) {
+        return this._itemIndex.has(ee)
       }
       clear() {
-        const BB = this[qB].root;
-        if (void 0 !== BB) {
-          ! function(BB, OB, GB) {
-            const YB = BB._stream;
-            if (void 0 !== YB) {
-              YB.broadcastPending.clear();
-              for (const BB of YB.sentBroadcast) YB.broadcastDeletes.add(BB);
-              YB.sentBroadcast.clear(), OB.forEachActiveView((BB => {
-                YB.pendingByView.get(BB.id)?.clear();
-                const OB = YB.sentByView.get(BB.id);
-                if (void 0 !== OB && OB.size > 0) {
-                  let YB = BB.changes.get(GB);
-                  void 0 === YB && (YB = new Map, BB.changes.set(GB, YB));
-                  for (const BB of OB) YB.set(BB, DB.DELETE);
-                  OB.clear()
+        const ee = this[Te].root;
+        if (void 0 !== ee) {
+          ! function(ee, ie, He) {
+            const ye = ee._stream;
+            if (void 0 !== ye) {
+              ye.broadcastPending.clear();
+              for (const ee of ye.sentBroadcast) ye.broadcastDeletes.add(ee);
+              ye.sentBroadcast.clear(), ie.forEachActiveView((ee => {
+                ye.pendingByView.get(ee.id)?.clear();
+                const ie = ye.sentByView.get(ee.id);
+                if (void 0 !== ie && ie.size > 0) {
+                  let ye = ee.changes.get(He);
+                  void 0 === ye && (ye = new Map, ee.changes.set(He, ye));
+                  for (const ee of ie) ye.set(ee, be.DELETE);
+                  ie.clear()
                 }
               }))
             }
-          }(this, BB, this[jB]);
-          for (const OB of this.$items.values()) void 0 !== OB[qB] && BB.remove(OB[qB])
+          }(this, ee, this[Ue]);
+          for (const ie of this.$items.values()) void 0 !== ie[Te] && ee.remove(ie[Te])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(BB) {
-        for (const [OB, GB] of this.$items) BB(GB, OB, this)
+      forEach(ee) {
+        for (const [ie, He] of this.$items) ee(He, ie, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(BB, OB) {}
-      getIndex(BB) {
-        return BB
-      } [zB](BB) {
-        return this.$items.get(BB)
-      } [lB](BB) {
-        const OB = this.$items.get(BB);
-        void 0 !== OB && (this._itemIndex.delete(OB), this.$items.delete(BB))
-      } [pB]() {} [RB]() {}
+      setIndex(ee, ie) {}
+      getIndex(ee) {
+        return ee
+      } [ke](ee) {
+        return this.$items.get(ee)
+      } [qe](ee) {
+        const ie = this.$items.get(ee);
+        void 0 !== ie && (this._itemIndex.delete(ie), this.$items.delete(ee))
+      } [fe]() {} [ze]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const BB = [];
-        return this.forEach((OB => {
-          BB.push("function" === typeof OB?.toJSON ? OB.toJSON() : OB)
-        })), BB
+        const ee = [];
+        return this.forEach((ie => {
+          ee.push("function" === typeof ie?.toJSON ? ie.toJSON() : ie)
+        })), ee
       }
-      clone(BB) {
-        if (BB) {
-          return Object.assign(new jY, this)
+      clone(ee) {
+        if (ee) {
+          return Object.assign(new Jy, this)
         }
-        const OB = new jY;
-        return OB.maxPerTick = this.maxPerTick, this.forEach((BB => {
-          OB.add("function" === typeof BB?.clone ? BB.clone() : BB)
-        })), OB
+        const ie = new Jy;
+        return ie.maxPerTick = this.maxPerTick, this.forEach((ee => {
+          ie.add("function" === typeof ee?.clone ? ee.clone() : ee)
+        })), ie
       }
-      _dropView(BB) {
-        FO(this, BB)
+      _dropView(ee) {
+        ai(this, ee)
       }
       _unregister() {}
     }
-    SO("stream", {
-      constructor: jY
+    di("stream", {
+      constructor: Jy
     });
-    class yY {
-      [SB] = !0;
+    class oy {
+      [Oe] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(BB) {
-        this._type = BB
+      constructor(ee) {
+        this._type = ee
       }
-      default (BB) {
-        return this._default = BB, this._hasDefault = !0, this
+      default (ee) {
+        return this._default = ee, this._hasDefault = !0, this
       }
-      view(BB) {
-        return this._view = BB ?? -1, this
+      view(ee) {
+        return this._view = ee ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const BB = this._type;
-        if (BB && "object" === typeof BB && void 0 !== BB.array) throw new Error(UO);
+        const ee = this._type;
+        if (ee && "object" === typeof ee && void 0 !== ee.array) throw new Error(ti);
         return this._stream = !0, this
       }
-      priority(BB) {
-        return this._streamPriority = BB, this
+      priority(ee) {
+        return this._streamPriority = ee, this
       }
       deprecated() {
-        let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = BB, this
+        let ee = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = ee, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function JY(BB) {
-      return null != BB && !0 === BB[SB]
+    function Ry(ee) {
+      return null != ee && !0 === ee[Oe]
     }
 
-    function MY(BB) {
-      return () => new yY(BB)
+    function ky(ee) {
+      return () => new oy(ee)
     }
 
-    function PY(BB) {
-      if (JY(BB)) {
-        const OB = BB._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof OB?`use the type name instead: t.array("${OB}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function qy(ee) {
+      if (Ry(ee)) {
+        const ie = ee._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof ie?`use the type name instead: t.array("${ie}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return BB
+      return ee
     }
 
-    function zY(BB) {
-      return new yY({
-        quantized: LO(BB)
+    function fy(ee) {
+      return new oy({
+        quantized: xi(ee)
       })
     }
-    const lY = Object.freeze({
-        string: MY("string"),
-        number: MY("number"),
-        boolean: MY("boolean"),
-        int8: MY("int8"),
-        uint8: MY("uint8"),
-        int16: MY("int16"),
-        uint16: MY("uint16"),
-        int32: MY("int32"),
-        uint32: MY("uint32"),
-        int64: MY("int64"),
-        uint64: MY("uint64"),
-        float32: MY("float32"),
-        float64: MY("float64"),
-        bigint64: MY("bigint64"),
-        biguint64: MY("biguint64"),
-        ref: BB => new yY(BB),
-        array: BB => new yY({
-          array: PY(BB)
+    const Ty = Object.freeze({
+        string: ky("string"),
+        number: ky("number"),
+        boolean: ky("boolean"),
+        int8: ky("int8"),
+        uint8: ky("uint8"),
+        int16: ky("int16"),
+        uint16: ky("uint16"),
+        int32: ky("int32"),
+        uint32: ky("uint32"),
+        int64: ky("int64"),
+        uint64: ky("uint64"),
+        float32: ky("float32"),
+        float64: ky("float64"),
+        bigint64: ky("bigint64"),
+        biguint64: ky("biguint64"),
+        ref: ee => new oy(ee),
+        array: ee => new oy({
+          array: qy(ee)
         }),
-        map: BB => new yY({
-          map: PY(BB)
+        map: ee => new oy({
+          map: qy(ee)
         }),
-        set: BB => new yY({
-          set: PY(BB)
+        set: ee => new oy({
+          set: qy(ee)
         }),
-        collection: BB => new yY({
-          collection: PY(BB)
+        collection: ee => new oy({
+          collection: qy(ee)
         }),
-        stream: BB => {
-          const OB = new yY({
-            stream: PY(BB)
+        stream: ee => {
+          const ie = new oy({
+            stream: qy(ee)
           });
-          return OB._stream = !0, OB
+          return ie._stream = !0, ie
         },
-        quantized: zY,
-        angle: BB => zY({
+        quantized: fy,
+        angle: ee => fy({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: BB?.bits ?? 16
+          bits: ee?.bits ?? 16
         })
       }),
-      pY = -1;
+      py = -1;
 
-    function qY(BB) {
-      return EO.register(BB), BB
+    function Xy(ee) {
+      return mi.register(ee), ee
     }
 
-    function ZY() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pY;
-      return function(OB, GB) {
-        const YB = CO.initialize(OB.constructor);
-        CO.setTag(YB, GB, BB)
+    function zy() {
+      let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : py;
+      return function(ie, He) {
+        const ye = Ni.initialize(ie.constructor);
+        Ni.setTag(ye, He, ee)
       }
     }
 
-    function NY(BB, OB) {
-      const GB = CO.initialize(BB.constructor);
-      CO.setUnreliable(GB, OB)
+    function By(ee, ie) {
+      const He = Ni.initialize(ee.constructor);
+      Ni.setUnreliable(He, ie)
     }
 
-    function RY(BB, OB) {
-      const GB = CO.initialize(BB.constructor);
-      CO.setPatchOnly(GB, OB)
+    function Ey(ee, ie) {
+      const He = Ni.initialize(ee.constructor);
+      Ni.setPatchOnly(He, ie)
     }
 
-    function WY(BB, OB) {
-      const GB = CO.initialize(BB.constructor);
-      CO.setFullStateOnly(GB, OB)
+    function gy(ee, ie) {
+      const He = Ni.initialize(ee.constructor);
+      Ni.setFullStateOnly(He, ie)
     }
 
-    function AY(BB, OB) {
-      return function(GB, YB) {
-        const DB = GB.constructor;
-        if (!BB) throw new Error(`${DB.name}: @type() reference provided for "${YB}" is undefined. Make sure you don't have any circular dependencies.`);
-        BB = hO(BB, `${DB.name}.${YB}`), EO.register(DB);
-        const QB = Object.getPrototypeOf(DB)[Symbol.metadata],
-          oB = CO.initialize(DB);
-        let jB = oB[YB];
-        if (void 0 !== oB[jB]) {
-          if (oB[jB].deprecated) return;
-          if (void 0 !== oB[jB].type) {
-            const BB = new Error(`@colyseus/schema: Duplicate '${YB}' definition on '${DB.name}'.\nCheck @type() annotation`);
-            throw new Error(`${BB.message} ${BB.stack.split("\n")[4].trim()}`)
+    function Oy(ee, ie) {
+      return function(He, ye) {
+        const be = He.constructor;
+        if (!ee) throw new Error(`${be.name}: @type() reference provided for "${ye}" is undefined. Make sure you don't have any circular dependencies.`);
+        ee = Si(ee, `${be.name}.${ye}`), mi.register(be);
+        const Me = Object.getPrototypeOf(be)[Symbol.metadata],
+          Ke = Ni.initialize(be);
+        let Ue = Ke[ye];
+        if (void 0 !== Ke[Ue]) {
+          if (Ke[Ue].deprecated) return;
+          if (void 0 !== Ke[Ue].type) {
+            const ee = new Error(`@colyseus/schema: Duplicate '${ye}' definition on '${be.name}'.\nCheck @type() annotation`);
+            throw new Error(`${ee.message} ${ee.stack.split("\n")[4].trim()}`)
           }
-        } else jB = oB[kB] ?? (QB && QB[kB]) ?? -1, jB++;
-        if (OB && OB.manual) CO.addField(oB, jB, YB, BB, {
+        } else Ue = Ke[Ze] ?? (Me && Me[Ze]) ?? -1, Ue++;
+        if (ie && ie.manual) Ni.addField(Ke, Ue, ye, ee, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: OB,
-            childType: GB
-          } = cO(BB);
-          CO.addField(oB, jB, YB, BB, SY(YB, jB, GB, OB))
+            complexTypeKlass: ie,
+            childType: He
+          } = li(ee);
+          Ni.addField(Ke, Ue, ye, ee, Wy(ye, Ue, He, ie))
         }
-        oB[nB][YB] && Object.defineProperty(GB, YB, oB[nB][YB]), ("string" === typeof BB || gO(BB)) && (oB[fB] || Object.defineProperty(oB, fB, {
+        Ke[de][ye] && Object.defineProperty(He, ye, Ke[de][ye]), ("string" === typeof ee || Li(ee)) && (Ke[te] || Object.defineProperty(Ke, te, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), oB[fB][jB] = "string" === typeof BB ? OO[BB] : wO(BB.quantized))
+        }), Ke[te][Ue] = "string" === typeof ee ? ii[ee] : ui(ee.quantized))
       }
     }
-    const VY = {
+    const dy = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function SY(BB, OB, GB, YB) {
-      let QB;
-      return QB = YB ? function(BB, OB, GB, YB) {
-        const QB = YB.constructor === GY,
-          oB = YB.constructor === DY;
-        return function(BB) {
-          const YB = this[VB],
-            jB = YB[OB];
-          if (BB !== jB) {
-            if (void 0 !== BB && null !== BB) {
-              if (!QB || BB instanceof GY)
-                if (!oB || BB instanceof DY) BB[ZB] = GB;
+    function Wy(ee, ie, He, ye) {
+      let Me;
+      return Me = ye ? function(ee, ie, He, ye) {
+        const Me = ye.constructor === by,
+          Ke = ye.constructor === Ky;
+        return function(ee) {
+          const ye = this[ge],
+            Ue = ye[ie];
+          if (ee !== Ue) {
+            if (void 0 !== ee && null !== ee) {
+              if (!Me || ee instanceof by)
+                if (!Ke || ee instanceof Ky) ee[pe] = He;
                 else {
-                  const OB = new DY;
-                  if (OB[ZB] = GB, BB instanceof Map) BB.forEach(((BB, GB) => OB.set(GB, BB)));
+                  const ie = new Ky;
+                  if (ie[pe] = He, ee instanceof Map) ee.forEach(((ee, He) => ie.set(He, ee)));
                   else
-                    for (const GB in BB) OB.set(GB, BB[GB]);
-                  BB = OB
+                    for (const He in ee) ie.set(He, ee[He]);
+                  ee = ie
                 }
               else {
-                const OB = new GY;
-                OB[ZB] = GB, OB.push(...BB), BB = OB
+                const ie = new by;
+                ie[pe] = He, ie.push(...ee), ee = ie
               }
-              const YB = this[qB],
-                JB = this.constructor;
-              void 0 !== jB && null !== jB && jB[qB] ? (YB.root?.remove(jB[qB]), JB[yB](YB, OB, DB.DELETE_AND_ADD)) : JB[yB](YB, OB, DB.ADD), BB[qB]?.setParent(this, YB.root, OB)
-            } else void 0 !== jB && null !== jB && this[qB].delete(OB);
-            YB[OB] = BB
+              const ye = this[Te],
+                Je = this.constructor;
+              void 0 !== Ue && null !== Ue && Ue[Te] ? (ye.root?.remove(Ue[Te]), Je[Fe](ye, ie, be.DELETE_AND_ADD)) : Je[Fe](ye, ie, be.ADD), ee[Te]?.setParent(this, ye.root, ie)
+            } else void 0 !== Ue && null !== Ue && this[Te].delete(ie);
+            ye[ie] = ee
           }
         }
-      }(0, OB, GB, YB) : "string" === typeof GB ? function(BB, OB, GB) {
-        const YB = VY[GB],
-          QB = "string" === GB,
-          oB = "boolean" === GB;
-        return function(GB) {
-          const jB = this[VB],
-            JB = jB[OB];
-          if (GB !== JB) {
-            if (void 0 !== GB && null !== GB) {
-              if (!oB && void 0 !== YB && typeof GB !== YB && (!QB || null !== GB)) {
-                const OB = GB && GB.constructor ? ` (${GB.constructor.name})` : "";
-                throw new xG(`a '${YB}' was expected, but '${JSON.stringify(GB)}'${OB} was provided in ${this.constructor.name}#${BB}`)
+      }(0, ie, He, ye) : "string" === typeof He ? function(ee, ie, He) {
+        const ye = dy[He],
+          Me = "string" === He,
+          Ke = "boolean" === He;
+        return function(He) {
+          const Ue = this[ge],
+            Je = Ue[ie];
+          if (He !== Je) {
+            if (void 0 !== He && null !== He) {
+              if (!Ke && void 0 !== ye && typeof He !== ye && (!Me || null !== He)) {
+                const ie = He && He.constructor ? ` (${He.constructor.name})` : "";
+                throw new ey(`a '${ye}' was expected, but '${JSON.stringify(He)}'${ie} was provided in ${this.constructor.name}#${ee}`)
               }
-              this.constructor[yB](this[qB], OB, DB.ADD)
-            } else void 0 !== JB && null !== JB && this[qB].delete(OB);
-            jB[OB] = GB
+              this.constructor[Fe](this[Te], ie, be.ADD)
+            } else void 0 !== Je && null !== Je && this[Te].delete(ie);
+            Ue[ie] = He
           }
         }
-      }(BB, OB, GB) : gO(GB) ? function(BB, OB, GB) {
-        return function(YB) {
-          const QB = this[VB],
-            oB = QB[OB];
-          if (void 0 !== YB && null !== YB) {
-            if ("number" !== typeof YB) throw new xG(`a 'number' was expected, but '${JSON.stringify(YB)}' was provided in ${this.constructor.name}#${BB}`);
-            if ((YB = XO(GB, rO(GB, YB))) === oB) return;
-            this.constructor[yB](this[qB], OB, DB.ADD)
+      }(ee, ie, He) : Li(He) ? function(ee, ie, He) {
+        return function(ye) {
+          const Me = this[ge],
+            Ke = Me[ie];
+          if (void 0 !== ye && null !== ye) {
+            if ("number" !== typeof ye) throw new ey(`a 'number' was expected, but '${JSON.stringify(ye)}' was provided in ${this.constructor.name}#${ee}`);
+            if ((ye = vi(He, Ci(He, ye))) === Ke) return;
+            this.constructor[Fe](this[Te], ie, be.ADD)
           } else {
-            if (YB === oB) return;
-            void 0 !== oB && null !== oB && this[qB].delete(OB)
+            if (ye === Ke) return;
+            void 0 !== Ke && null !== Ke && this[Te].delete(ie)
           }
-          QB[OB] = YB
+          Me[ie] = ye
         }
-      }(BB, OB, GB.quantized) : function(BB, OB, GB) {
-        return function(YB) {
-          const QB = this[VB],
-            oB = QB[OB];
-          if (YB !== oB) {
-            if (void 0 !== YB && null !== YB) {
-              tG(YB, GB, this, BB);
-              const QB = this[qB],
-                jB = this.constructor;
-              void 0 !== oB && null !== oB && oB[qB] ? (QB.root?.remove(oB[qB]), jB[yB](QB, OB, DB.DELETE_AND_ADD)) : jB[yB](QB, OB, DB.ADD), YB[qB]?.setParent(this, QB.root, OB)
-            } else void 0 !== oB && null !== oB && this[qB].delete(OB);
-            QB[OB] = YB
+      }(ee, ie, He.quantized) : function(ee, ie, He) {
+        return function(ye) {
+          const Me = this[ge],
+            Ke = Me[ie];
+          if (ye !== Ke) {
+            if (void 0 !== ye && null !== ye) {
+              iy(ye, He, this, ee);
+              const Me = this[Te],
+                Ue = this.constructor;
+              void 0 !== Ke && null !== Ke && Ke[Te] ? (Me.root?.remove(Ke[Te]), Ue[Fe](Me, ie, be.DELETE_AND_ADD)) : Ue[Fe](Me, ie, be.ADD), ye[Te]?.setParent(this, Me.root, ie)
+            } else void 0 !== Ke && null !== Ke && this[Te].delete(ie);
+            Me[ie] = ye
           }
         }
-      }(BB, OB, GB), {
+      }(ee, ie, He), {
         get: function() {
-          return this[VB][OB]
+          return this[ge][ie]
         },
-        set: QB,
+        set: Me,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function nY() {
-      let BB = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(OB, GB) {
-        const YB = CO.initialize(OB.constructor);
-        CO.setDeprecated(YB, GB), BB && (YB[nB] ??= {}, YB[nB][GB] = {
+    function ty() {
+      let ee = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(ie, He) {
+        const ye = Ni.initialize(ie.constructor);
+        Ni.setDeprecated(ye, He), ee && (ye[de] ??= {}, ye[de][He] = {
           get: function() {
-            throw new Error(`${GB} is deprecated.`)
+            throw new Error(`${He} is deprecated.`)
           },
-          set: function(BB) {},
+          set: function(ee) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(OB, GB, YB[nB][GB]))
+        }, Object.defineProperty(ie, He, ye[de][He]))
       }
     }
-    let UY = !1;
+    let Zy = !1;
 
-    function fY(BB, OB, GB) {
-      UY || (UY = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let YB in OB) AY(OB[YB], GB)(BB.prototype, YB);
-      return BB
+    function wy(ee, ie, He) {
+      Zy || (Zy = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let ye in ie) Oy(ie[ye], He)(ee.prototype, ye);
+      return ee
     }
 
-    function kY(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : KY;
-      if (null == BB || "object" !== typeof BB) throw new Error(`schema(): first argument must be a fields object (got ${typeof BB}).`);
-      const YB = {},
-        DB = {},
-        QB = {},
-        oB = {},
-        jB = (BB, OB) => {
-          if (OB.hasDefault)((BB, OB) => {
-            "function" === typeof OB ? oB[BB] = OB : OB && "function" === typeof OB.clone ? oB[BB] = () => OB.clone() : QB[BB] = OB
-          })(BB, OB.default);
-          else if (!OB.optional) {
-            const GB = function(BB) {
-              if (BB && "object" === typeof BB) {
-                if (void 0 !== BB.array) return () => new GY;
-                if (void 0 !== BB.map) return () => new DY;
-                if (void 0 !== BB.set) return () => new oY;
-                if (void 0 !== BB.collection) return () => new QY;
-                if (void 0 !== BB.stream) return () => new jY
-              } else if ("function" === typeof BB && KY.is(BB) && (!BB.prototype.initialize || 0 === BB.prototype.initialize.length)) return () => new BB
-            }(OB.type);
-            GB && (oB[BB] = GB)
+    function Dy(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ay;
+      if (null == ee || "object" !== typeof ee) throw new Error(`schema(): first argument must be a fields object (got ${typeof ee}).`);
+      const ye = {},
+        be = {},
+        Me = {},
+        Ke = {},
+        Ue = (ee, ie) => {
+          if (ie.hasDefault)((ee, ie) => {
+            "function" === typeof ie ? Ke[ee] = ie : ie && "function" === typeof ie.clone ? Ke[ee] = () => ie.clone() : Me[ee] = ie
+          })(ee, ie.default);
+          else if (!ie.optional) {
+            const He = function(ee) {
+              if (ee && "object" === typeof ee) {
+                if (void 0 !== ee.array) return () => new by;
+                if (void 0 !== ee.map) return () => new Ky;
+                if (void 0 !== ee.set) return () => new Fy;
+                if (void 0 !== ee.collection) return () => new Uy;
+                if (void 0 !== ee.stream) return () => new Jy
+              } else if ("function" === typeof ee && Ay.is(ee) && (!ee.prototype.initialize || 0 === ee.prototype.initialize.length)) return () => new ee
+            }(ie.type);
+            He && (Ke[ee] = He)
           }
         },
-        yB = {},
-        JB = [],
-        MB = [],
-        PB = {},
-        zB = [],
-        lB = [],
-        pB = {},
-        qB = [];
-      for (const VB in BB) {
-        const GB = BB[VB],
-          QB = `schema(${OB?`'${OB}'`:""}): field '${VB}'`;
-        if (JY(GB)) {
-          const BB = GB.toDefinition();
-          if (BB.noSync) {
-            if (void 0 !== BB.view || BB.unreliable || BB.patchOnly || BB.fullStateOnly || BB.stream) throw new Error(`${QB} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            jB(VB, BB);
+        Fe = {},
+        Je = [],
+        oe = [],
+        Re = {},
+        ke = [],
+        qe = [],
+        fe = {},
+        Te = [];
+      for (const ge in ee) {
+        const He = ee[ge],
+          Me = `schema(${ie?`'${ie}'`:""}): field '${ge}'`;
+        if (Ry(He)) {
+          const ee = He.toDefinition();
+          if (ee.noSync) {
+            if (void 0 !== ee.view || ee.unreliable || ee.patchOnly || ee.fullStateOnly || ee.stream) throw new Error(`${Me} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            Ue(ge, ee);
             continue
           }
-          if (BB.patchOnly && BB.fullStateOnly) throw new Error(`${QB} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const OB = hO(BB.type, QB);
-          if ("function" === typeof OB && !KY.is(OB)) throw new Error(`${QB} is a synced ref to non-Schema class '${OB.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          YB[VB] = OB, void 0 !== BB.view && (yB[VB] = BB.view), BB.unreliable && JB.push(VB), BB.patchOnly && MB.push(VB), BB.deprecated && (PB[VB] = BB.deprecatedThrows), BB.fullStateOnly && zB.push(VB), BB.stream && lB.push(VB), void 0 !== BB.streamPriority && (pB[VB] = BB.streamPriority), BB.optional && qB.push(VB), jB(VB, BB)
+          if (ee.patchOnly && ee.fullStateOnly) throw new Error(`${Me} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const ie = Si(ee.type, Me);
+          if ("function" === typeof ie && !Ay.is(ie)) throw new Error(`${Me} is a synced ref to non-Schema class '${ie.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          ye[ge] = ie, void 0 !== ee.view && (Fe[ge] = ee.view), ee.unreliable && Je.push(ge), ee.patchOnly && oe.push(ge), ee.deprecated && (Re[ge] = ee.deprecatedThrows), ee.fullStateOnly && ke.push(ge), ee.stream && qe.push(ge), void 0 !== ee.streamPriority && (fe[ge] = ee.streamPriority), ee.optional && Te.push(ge), Ue(ge, ee)
         } else {
-          if ("function" !== typeof GB) throw new Error(`${QB} must be a t.* builder, Schema subclass, or method (got ${typeof GB}).`);
-          KY.is(GB) ? (YB[VB] = GB, GB.prototype.initialize && 0 !== GB.prototype.initialize.length || (oB[VB] = () => new GB)) : DB[VB] = GB
+          if ("function" !== typeof He) throw new Error(`${Me} must be a t.* builder, Schema subclass, or method (got ${typeof He}).`);
+          Ay.is(He) ? (ye[ge] = He, He.prototype.initialize && 0 !== He.prototype.initialize.length || (Ke[ge] = () => new He)) : be[ge] = He
         }
       }
-      const ZB = BB => {
-          for (const OB in QB) BB[OB] = QB[OB];
-          for (const OB in oB) BB[OB] = oB[OB]()
+      const pe = ee => {
+          for (const ie in Me) ee[ie] = Me[ie];
+          for (const ie in Ke) ee[ie] = Ke[ie]()
         },
-        NB = () => {
-          const BB = {};
-          return ZB(BB), BB
+        Xe = () => {
+          const ee = {};
+          return pe(ee), ee
         },
-        RB = "function" === typeof DB.initialize,
-        WB = DB.initialize ?? GB._initialize,
-        AB = class extends GB {
+        ze = "function" === typeof be.initialize,
+        Be = be.initialize ?? He._initialize,
+        Ee = class extends He {
           constructor() {
-            for (var BB = arguments.length, OB = new Array(BB), GB = 0; GB < BB; GB++) OB[GB] = arguments[GB];
-            const DB = OB[0];
-            void 0 === DB ? (super(), ZB(this)) : super(Object.assign(NB(), RB ? (BB => {
-              const OB = Object.keys(YB),
-                GB = {};
-              for (const YB in BB) OB.includes(YB) || (GB[YB] = BB[YB]);
-              return GB
-            })(DB) : DB)), WB && new.target === AB && WB.apply(this, OB)
+            for (var ee = arguments.length, ie = new Array(ee), He = 0; He < ee; He++) ie[He] = arguments[He];
+            const be = ie[0];
+            void 0 === be ? (super(), pe(this)) : super(Object.assign(Xe(), ze ? (ee => {
+              const ie = Object.keys(ye),
+                He = {};
+              for (const ye in ee) ie.includes(ye) || (He[ye] = ee[ye]);
+              return He
+            })(be) : be)), Be && new.target === Ee && Be.apply(this, ie)
           }
         };
-      OB && Object.defineProperty(AB, "name", {
-        value: OB
-      }), CO.setFields(AB, YB), AB._getDefaultValues = NB, AB._initialize = WB, Object.assign(AB.prototype, DB);
-      for (const VB in yB) ZY(yB[VB])(AB.prototype, VB);
-      for (const VB of JB) NY(AB.prototype, VB);
-      for (const VB of MB) RY(AB.prototype, VB);
-      for (const VB in PB) nY(PB[VB])(AB.prototype, VB);
-      if (zB.length > 0 || lB.length > 0) {
-        const BB = AB[Symbol.metadata];
-        for (const OB of zB) CO.setFullStateOnly(BB, OB);
-        for (const OB of lB) CO.setStream(BB, OB);
-        for (const OB in pB) CO.setStreamPriority(BB, OB, pB[OB])
+      ie && Object.defineProperty(Ee, "name", {
+        value: ie
+      }), Ni.setFields(Ee, ye), Ee._getDefaultValues = Xe, Ee._initialize = Be, Object.assign(Ee.prototype, be);
+      for (const ge in Fe) zy(Fe[ge])(Ee.prototype, ge);
+      for (const ge of Je) By(Ee.prototype, ge);
+      for (const ge of oe) Ey(Ee.prototype, ge);
+      for (const ge in Re) ty(Re[ge])(Ee.prototype, ge);
+      if (ke.length > 0 || qe.length > 0) {
+        const ee = Ee[Symbol.metadata];
+        for (const ie of ke) Ni.setFullStateOnly(ee, ie);
+        for (const ie of qe) Ni.setStream(ee, ie);
+        for (const ie in fe) Ni.setStreamPriority(ee, ie, fe[ie])
       }
-      if (qB.length > 0) {
-        const BB = AB[Symbol.metadata];
-        for (const OB of qB) BB[BB[OB]].optional = !0
+      if (Te.length > 0) {
+        const ee = Ee[Symbol.metadata];
+        for (const ie of Te) ee[ee[ie]].optional = !0
       }
-      return AB.extend = (BB, OB) => kY(BB, OB, AB), AB
+      return Ee.extend = (ee, ie) => Dy(ee, ie, Ee), Ee
     }
 
-    function dY(BB) {
-      const OB = BB[qB].root,
-        GB = {
+    function Py(ee) {
+      const ie = ee[Te].root,
+        He = {
           ops: {},
           refs: []
         };
-      let YB = OB.changes.next;
-      for (; YB;) {
-        const BB = YB.changeTree;
-        void 0 !== BB ? (GB.refs.push(`refId#${BB.ref[jB]}`), BB.forEach(((BB, OB) => {
-          if (BB < 0 || !OB) return;
-          const YB = DB[OB];
-          GB.ops[YB] || (GB.ops[YB] = 0), GB.ops[YB]++
-        })), YB = YB.next) : YB = YB.next
+      let ye = ie.changes.next;
+      for (; ye;) {
+        const ee = ye.changeTree;
+        void 0 !== ee ? (He.refs.push(`refId#${ee.ref[Ue]}`), ee.forEach(((ee, ie) => {
+          if (ee < 0 || !ie) return;
+          const ye = be[ie];
+          He.ops[ye] || (He.ops[ye] = 0), He.ops[ye]++
+        })), ye = ye.next) : ye = ye.next
       }
-      return GB
+      return He
     }
-    class KY {
-      static[JB] = iG;
-      static[MB] = HG;
-      [jB];
-      [VB];
-      static initialize(BB) {
-        Object.defineProperty(BB, qB, {
-          value: new uG(BB),
+    class Ay {
+      static[Je] = xH;
+      static[oe] = GH;
+      [Ue];
+      [ge];
+      static initialize(ee) {
+        Object.defineProperty(ee, Te, {
+          value: new YH(ee),
           enumerable: !1,
           writable: !0
-        }), BB[VB] = []
+        }), ee[ge] = []
       }
       static initializeForDecoder() {
-        const BB = Object.create(this.prototype);
-        return IG(BB), BB[VB] = [], BB
+        const ee = Object.create(this.prototype);
+        return aH(ee), ee[ge] = [], ee
       }
-      static reset(BB) {
-        const OB = BB?.[qB];
-        if (void 0 === OB || "function" !== typeof OB.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== OB.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${BB.constructor.name}) with multiple parents.`);
-        BB[WB]()
-      } [WB]() {
-        const BB = this.constructor[Symbol.metadata],
-          OB = BB?.[dB] ?? [],
-          GB = this[VB];
-        for (let YB = 0; YB < OB.length; YB++) {
-          const BB = GB[OB[YB]];
-          BB?.[WB]?.()
+      static reset(ee) {
+        const ie = ee?.[Te];
+        if (void 0 === ie || "function" !== typeof ie.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== ie.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${ee.constructor.name}) with multiple parents.`);
+        ee[Be]()
+      } [Be]() {
+        const ee = this.constructor[Symbol.metadata],
+          ie = ee?.[we] ?? [],
+          He = this[ge];
+        for (let ye = 0; ye < ie.length; ye++) {
+          const ee = He[ie[ye]];
+          ee?.[Be]?.()
         }
-        this[qB].recycle(), this[jB] = void 0
+        this[Te].recycle(), this[Ue] = void 0
       }
-      static is(BB) {
-        const OB = BB[Symbol.metadata];
-        return "object" === typeof OB && null !== OB
+      static is(ee) {
+        const ie = ee[Symbol.metadata];
+        return "object" === typeof ie && null !== ie
       }
-      static isSchema(BB) {
-        return "function" === typeof BB?.assign
+      static isSchema(ee) {
+        return "function" === typeof ee?.assign
       }
-      static[yB](BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DB.ADD;
-        BB.change(OB, GB)
+      static[Fe](ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : be.ADD;
+        ee.change(ie, He)
       }
-      static[PB](BB, OB, GB) {
-        const YB = BB.constructor[Symbol.metadata],
-          DB = YB[OB]?.tag;
-        return void 0 === GB ? void 0 === DB : void 0 === DB || (DB === pY ? GB.isChangeTreeVisible(BB[qB]) : GB.hasTagOnTree(BB[qB], DB))
+      static[Re](ee, ie, He) {
+        const ye = ee.constructor[Symbol.metadata],
+          be = ye[ie]?.tag;
+        return void 0 === He ? void 0 === be : void 0 === be || (be === py ? He.isChangeTreeVisible(ee[Te]) : He.hasTagOnTree(ee[Te], be))
       }
-      constructor(BB) {
-        KY.initialize(this), BB && KY.assignProps(this, BB)
+      constructor(ee) {
+        Ay.initialize(this), ee && Ay.assignProps(this, ee)
       }
-      assign(BB) {
-        return KY.assignProps(this, BB), this
+      assign(ee) {
+        return Ay.assignProps(this, ee), this
       }
-      static assignProps(BB, OB) {
-        const GB = BB.constructor[Symbol.metadata];
-        if (GB && void 0 !== GB[kB])
-          for (let DB = 0; DB <= GB[kB]; DB++) {
-            const YB = GB[DB];
-            if (!YB) continue;
-            const QB = OB[YB.name];
-            void 0 !== QB && (BB[YB.name] = QB)
+      static assignProps(ee, ie) {
+        const He = ee.constructor[Symbol.metadata];
+        if (He && void 0 !== He[Ze])
+          for (let be = 0; be <= He[Ze]; be++) {
+            const ye = He[be];
+            if (!ye) continue;
+            const Me = ie[ye.name];
+            void 0 !== Me && (ee[ye.name] = Me)
           }
-        const YB = Object.keys(OB);
-        for (let DB = 0; DB < YB.length; DB++) {
-          const QB = YB[DB];
-          GB && void 0 !== GB[QB] || (BB[QB] = OB[QB])
+        const ye = Object.keys(ie);
+        for (let be = 0; be < ye.length; be++) {
+          const Me = ye[be];
+          He && void 0 !== He[Me] || (ee[Me] = ie[Me])
         }
       }
-      restore(BB) {
-        const OB = this.constructor[Symbol.metadata];
-        for (const GB in OB) {
-          const YB = OB[GB],
-            DB = YB.name,
-            QB = YB.type,
-            oB = BB[DB];
-          if (void 0 !== oB && null !== oB)
-            if ("string" === typeof QB) this[DB] = oB;
-            else if (KY.is(QB)) {
-            const BB = new QB;
-            BB.restore(oB), this[DB] = BB
-          } else if ("object" === typeof QB) {
-            const BB = Object.keys(QB)[0],
-              OB = QB[BB];
-            if ("map" === BB) {
-              const BB = this[DB];
-              for (const GB in oB)
-                if (KY.is(OB)) {
-                  const YB = new OB;
-                  YB.restore(oB[GB]), BB.set(GB, YB)
-                } else BB.set(GB, oB[GB])
-            } else if ("array" === BB) {
-              const BB = this[DB];
-              for (let GB = 0; GB < oB.length; GB++)
-                if (KY.is(OB)) {
-                  const YB = new OB;
-                  YB.restore(oB[GB]), BB.push(YB)
-                } else BB.push(oB[GB])
+      restore(ee) {
+        const ie = this.constructor[Symbol.metadata];
+        for (const He in ie) {
+          const ye = ie[He],
+            be = ye.name,
+            Me = ye.type,
+            Ke = ee[be];
+          if (void 0 !== Ke && null !== Ke)
+            if ("string" === typeof Me) this[be] = Ke;
+            else if (Ay.is(Me)) {
+            const ee = new Me;
+            ee.restore(Ke), this[be] = ee
+          } else if ("object" === typeof Me) {
+            const ee = Object.keys(Me)[0],
+              ie = Me[ee];
+            if ("map" === ee) {
+              const ee = this[be];
+              for (const He in Ke)
+                if (Ay.is(ie)) {
+                  const ye = new ie;
+                  ye.restore(Ke[He]), ee.set(He, ye)
+                } else ee.set(He, Ke[He])
+            } else if ("array" === ee) {
+              const ee = this[be];
+              for (let He = 0; He < Ke.length; He++)
+                if (Ay.is(ie)) {
+                  const ye = new ie;
+                  ye.restore(Ke[He]), ee.push(ye)
+                } else ee.push(Ke[He])
             }
           }
         }
         return this
       }
-      setDirty(BB, OB) {
-        const GB = this.constructor[Symbol.metadata];
-        this[qB].change(GB[GB[BB]].index, OB)
+      setDirty(ee, ie) {
+        const He = this.constructor[Symbol.metadata];
+        this[Te].change(He[He[ee]].index, ie)
       }
       pauseTracking() {
-        this[qB].pause()
+        this[Te].pause()
       }
       resumeTracking() {
-        this[qB].resume()
+        this[Te].resume()
       }
-      untracked(BB) {
-        return this[qB].untracked(BB)
+      untracked(ee) {
+        return this[Te].untracked(ee)
       }
       get isTrackingPaused() {
-        return this[qB].paused
+        return this[Te].paused
       }
       clone() {
-        const BB = Object.create(this.constructor.prototype);
-        KY.initialize(BB);
-        const OB = this.constructor[Symbol.metadata];
-        for (const GB in OB) {
-          const YB = OB[GB].name;
-          "object" === typeof this[YB] && "function" === typeof this[YB]?.clone ? BB[YB] = this[YB].clone() : BB[YB] = this[YB]
+        const ee = Object.create(this.constructor.prototype);
+        Ay.initialize(ee);
+        const ie = this.constructor[Symbol.metadata];
+        for (const He in ie) {
+          const ye = ie[He].name;
+          "object" === typeof this[ye] && "function" === typeof this[ye]?.clone ? ee[ye] = this[ye].clone() : ee[ye] = this[ye]
         }
-        return BB
+        return ee
       }
       toJSON() {
-        const BB = {},
-          OB = this.constructor[Symbol.metadata];
-        for (const GB in OB) {
-          const YB = OB[GB],
-            DB = YB.name;
-          YB.deprecated || null === this[DB] || "undefined" === typeof this[DB] || (BB[DB] = "function" === typeof this[DB].toJSON ? this[DB].toJSON() : this[DB])
+        const ee = {},
+          ie = this.constructor[Symbol.metadata];
+        for (const He in ie) {
+          const ye = ie[He],
+            be = ye.name;
+          ye.deprecated || null === this[be] || "undefined" === typeof this[be] || (ee[be] = "function" === typeof this[be].toJSON ? this[be].toJSON() : this[be])
         }
-        return BB
+        return ee
       }
       discardAllChanges() {
-        this[qB].discardAll()
-      } [zB](BB) {
-        return this[this.constructor[Symbol.metadata][BB].name]
-      } [lB](BB) {
-        this[this.constructor[Symbol.metadata][BB].name] = void 0
+        this[Te].discardAll()
+      } [ke](ee) {
+        return this[this.constructor[Symbol.metadata][ee].name]
+      } [qe](ee) {
+        this[this.constructor[Symbol.metadata][ee].name] = void 0
       }
-      static debugRefIds(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          YB = arguments.length > 3 ? arguments[3] : void 0,
-          DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const QB = OB ? ` - ${JSON.stringify(BB.toJSON())}` : "",
-          oB = BB[qB],
-          yB = BB[jB],
-          JB = YB ? YB.root.refCount[yB] : oB.refCount,
-          MB = JB > 1 ? ` [\xd7${JB}]` : "";
-        let PB = `${function(BB){return new Array(BB).fill(0).map(((OB,GB)=>GB===BB-1?"\u2514\u2500 ":"   ")).join("")}(GB)}${DB}${BB.constructor.name} (refId: ${yB})${MB}${QB}\n`;
-        return oB.forEachChild(((DB, QB) => {
-          let oB = QB;
-          "number" === typeof QB && BB.$indexes && (oB = BB.$indexes.get(QB) ?? QB);
-          const jB = void 0 !== BB.forEach && void 0 !== oB ? `["${oB}"]: ` : "";
-          PB += this.debugRefIds(DB.ref, OB, GB + 1, YB, jB)
-        })), PB
+      static debugRefIds(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          ye = arguments.length > 3 ? arguments[3] : void 0,
+          be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const Me = ie ? ` - ${JSON.stringify(ee.toJSON())}` : "",
+          Ke = ee[Te],
+          Fe = ee[Ue],
+          Je = ye ? ye.root.refCount[Fe] : Ke.refCount,
+          oe = Je > 1 ? ` [\xd7${Je}]` : "";
+        let Re = `${function(ee){return new Array(ee).fill(0).map(((ie,He)=>He===ee-1?"\u2514\u2500 ":"   ")).join("")}(He)}${be}${ee.constructor.name} (refId: ${Fe})${oe}${Me}\n`;
+        return Ke.forEachChild(((be, Me) => {
+          let Ke = Me;
+          "number" === typeof Me && ee.$indexes && (Ke = ee.$indexes.get(Me) ?? Me);
+          const Ue = void 0 !== ee.forEach && void 0 !== Ke ? `["${Ke}"]: ` : "";
+          Re += this.debugRefIds(be.ref, ie, He + 1, ye, Ue)
+        })), Re
       }
-      static debugRefIdEncodingOrder(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const GB = [],
-          YB = BB[qB];
-        if ("changes" === OB) {
-          let BB = YB.root.changes?.next;
-          for (; BB;) BB.changeTree && GB.push(BB.changeTree.ref[jB]), BB = BB.next;
-          return GB
+      static debugRefIdEncodingOrder(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const He = [],
+          ye = ee[Te];
+        if ("changes" === ie) {
+          let ee = ye.root.changes?.next;
+          for (; ee;) ee.changeTree && He.push(ee.changeTree.ref[Ue]), ee = ee.next;
+          return He
         }
-        const DB = "allFilteredChanges" === OB,
-          QB = new Set,
-          oB = BB => {
-            QB.has(BB) || (QB.add(BB), BB.isFiltered === DB && GB.push(BB.ref[jB]), BB.forEachChild(((BB, OB) => oB(BB))))
+        const be = "allFilteredChanges" === ie,
+          Me = new Set,
+          Ke = ee => {
+            Me.has(ee) || (Me.add(ee), ee.isFiltered === be && He.push(ee.ref[Ue]), ee.forEachChild(((ee, ie) => Ke(ee))))
           };
-        return oB(YB), GB
+        return Ke(ye), He
       }
-      static debugRefIdsFromDecoder(BB) {
-        return this.debugRefIds(BB.state, !1, 0, BB)
+      static debugRefIdsFromDecoder(ee) {
+        return this.debugRefIds(ee.state, !1, 0, ee)
       }
-      static debugChanges(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const GB = BB[qB],
-          YB = OB ? "allChanges" : "changes";
-        let QB = `${BB.constructor.name} (${BB[jB]}) -> .${YB}:\n`;
-        return OB ? GB.forEachLive((BB => {
-          QB += `- [${BB}]: ADD (${JSON.stringify(GB.getValue(Number(BB),!0))})\n`
-        })) : GB.forEach(((BB, OB) => {
-          BB < 0 || !OB || (QB += `- [${BB}]: ${DB[OB]} (${JSON.stringify(GB.getValue(Number(BB),!1))})\n`)
-        })), QB
+      static debugChanges(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const He = ee[Te],
+          ye = ie ? "allChanges" : "changes";
+        let Me = `${ee.constructor.name} (${ee[Ue]}) -> .${ye}:\n`;
+        return ie ? He.forEachLive((ee => {
+          Me += `- [${ee}]: ADD (${JSON.stringify(He.getValue(Number(ee),!0))})\n`
+        })) : He.forEach(((ee, ie) => {
+          ee < 0 || !ie || (Me += `- [${ee}]: ${be[ie]} (${JSON.stringify(He.getValue(Number(ee),!1))})\n`)
+        })), Me
       }
     }
-    QB(KY);
-    const uY = {
+    Me(Ay);
+    const Yy = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class mY {
+    class Vy {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const BB = {};
-        for (const OB in this.changeTrees) BB[OB] = this.changeTrees[OB].refCount;
-        return BB
+        const ee = {};
+        for (const ie in this.changeTrees) ee[ie] = this.changeTrees[ie].refCount;
+        return ee
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(BB) {
-        this.types.hasFilters && (BB.flags & dG || (BB.flags |= dG, this.pendingFilterRefresh.push(BB)))
+      enqueueFilterRefresh(ee) {
+        this.types.hasFilters && (ee.flags & PH || (ee.flags |= PH, this.pendingFilterRefresh.push(ee)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(BB) {
-        this._freeViewIds.push(BB)
+      releaseViewId(ee) {
+        this._freeViewIds.push(ee)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(BB) {
-        this.activeViews.set(BB.id, new WeakRef(BB))
+      registerView(ee) {
+        this.activeViews.set(ee.id, new WeakRef(ee))
       }
-      unregisterView(BB) {
-        this.activeViews.delete(BB.id);
-        const OB = BB.id;
-        for (const GB of this.streamTrees) GB._dropView(OB)
+      unregisterView(ee) {
+        this.activeViews.delete(ee.id);
+        const ie = ee.id;
+        for (const He of this.streamTrees) He._dropView(ie)
       }
-      forEachActiveView(BB) {
-        for (const [OB, GB] of this.activeViews) {
-          const YB = GB.deref();
-          if (void 0 !== YB) BB(YB);
+      forEachActiveView(ee) {
+        for (const [ie, He] of this.activeViews) {
+          const ye = He.deref();
+          if (void 0 !== ye) ee(ye);
           else {
-            this.activeViews.delete(OB);
-            for (const BB of this.streamTrees) BB._dropView(OB)
+            this.activeViews.delete(ie);
+            for (const ee of this.streamTrees) ee._dropView(ie)
           }
         }
       }
-      registerStream(BB) {
-        this.streamTrees.add(BB)
+      registerStream(ee) {
+        this.streamTrees.add(ee)
       }
-      unregisterStream(BB) {
-        this.streamTrees.delete(BB)
+      unregisterStream(ee) {
+        this.streamTrees.delete(ee)
       }
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = BB, this.nextUniqueId = OB
+      constructor(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = ee, this.nextUniqueId = ie
       }
-      add(BB) {
-        const OB = BB.ref;
-        void 0 === OB[jB] && (uY.value = this.nextUniqueId++, Object.defineProperty(OB, jB, uY));
-        const GB = OB[jB],
-          YB = void 0 === this.changeTrees[GB];
-        YB && (this.changeTrees[GB] = BB), BB.needsRestage && (BB.needsRestage = !1, BB.forEachLiveWithCtx(BB, GG));
-        const DB = YB ? 0 : BB.refCount;
-        return BB.refCount = DB + 1, DB > 0 && this.enqueueFilterRefresh(BB), YB
+      add(ee) {
+        const ie = ee.ref;
+        void 0 === ie[Ue] && (Yy.value = this.nextUniqueId++, Object.defineProperty(ie, Ue, Yy));
+        const He = ie[Ue],
+          ye = void 0 === this.changeTrees[He];
+        ye && (this.changeTrees[He] = ee), ee.needsRestage && (ee.needsRestage = !1, ee.forEachLiveWithCtx(ee, bH));
+        const be = ye ? 0 : ee.refCount;
+        return ee.refCount = be + 1, be > 0 && this.enqueueFilterRefresh(ee), ye
       }
-      remove(BB) {
-        const OB = BB.refCount - 1;
-        if (OB <= 0) {
-          if (BB.root = void 0, delete this.changeTrees[BB.ref[jB]], BB.isStreamCollection) {
-            const OB = BB.ref;
-            OB._unregister?.(), this.unregisterStream(OB)
+      remove(ee) {
+        const ie = ee.refCount - 1;
+        if (ie <= 0) {
+          if (ee.root = void 0, delete this.changeTrees[ee.ref[Ue]], ee.isStreamCollection) {
+            const ie = ee.ref;
+            ie._unregister?.(), this.unregisterStream(ie)
           }
-          this.removeFromQueue(BB), this.removeFromUnreliableQueue(BB), BB.refCount = 0, BB.needsRestage = !0, BB.forEachChild(((OB, GB) => {
-            OB.removeParent(BB.ref) && (void 0 === OB.parentRef || OB.refCount > 0 ? this.remove(OB) : this.moveNextToParent(OB))
+          this.removeFromQueue(ee), this.removeFromUnreliableQueue(ee), ee.refCount = 0, ee.needsRestage = !0, ee.forEachChild(((ie, He) => {
+            ie.removeParent(ee.ref) && (void 0 === ie.parentRef || ie.refCount > 0 ? this.remove(ie) : this.moveNextToParent(ie))
           }))
-        } else BB.refCount = OB, this.enqueueFilterRefresh(BB), this.recursivelyMoveNextToParent(BB);
-        return OB
+        } else ee.refCount = ie, this.enqueueFilterRefresh(ee), this.recursivelyMoveNextToParent(ee);
+        return ie
       }
-      recursivelyMoveNextToParent(BB) {
-        this.moveNextToParent(BB), BB.forEachChild(((BB, OB) => this.recursivelyMoveNextToParent(BB)))
+      recursivelyMoveNextToParent(ee) {
+        this.moveNextToParent(ee), ee.forEachChild(((ee, ie) => this.recursivelyMoveNextToParent(ee)))
       }
-      moveNextToParent(BB) {
-        BB.changesNode && this._moveNextToParentInList(this.changes, BB, BB.changesNode, "changesNode"), BB.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, BB, BB.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(ee) {
+        ee.changesNode && this._moveNextToParentInList(this.changes, ee, ee.changesNode, "changesNode"), ee.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, ee, ee.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(BB, OB, GB, YB) {
-        const DB = OB.parent;
-        if (!DB || !DB[qB]) return;
-        const QB = DB[qB][YB];
-        QB && QB !== GB && (GB.position > QB.position || (GB.prev ? GB.prev.next = GB.next : BB.next = GB.next, GB.next ? GB.next.prev = GB.prev : BB.tail = GB.prev, GB.prev = BB.tail, GB.next = void 0, BB.tail.next = GB, BB.tail = GB, GB.position = BB.nextPosition++))
+      _moveNextToParentInList(ee, ie, He, ye) {
+        const be = ie.parent;
+        if (!be || !be[Te]) return;
+        const Me = be[Te][ye];
+        Me && Me !== He && (He.position > Me.position || (He.prev ? He.prev.next = He.next : ee.next = He.next, He.next ? He.next.prev = He.prev : ee.tail = He.prev, He.prev = ee.tail, He.next = void 0, ee.tail.next = He, ee.tail = He, He.position = ee.nextPosition++))
       }
-      enqueueChangeTree(BB) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB.changesNode) || (BB.changesNode = this._appendToList(this.changes, BB))
+      enqueueChangeTree(ee) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ee.changesNode) || (ee.changesNode = this._appendToList(this.changes, ee))
       }
-      enqueueUnreliable(BB) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BB.unreliableChangesNode) || (BB.unreliableChangesNode = this._appendToList(this.unreliableChanges, BB))
+      enqueueUnreliable(ee) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ee.unreliableChangesNode) || (ee.unreliableChangesNode = this._appendToList(this.unreliableChanges, ee))
       }
-      _appendToList(BB, OB) {
-        const GB = this._nodePool;
-        let YB;
-        return GB.length > 0 ? (YB = GB.pop(), YB.changeTree = OB, YB.next = void 0, YB.prev = void 0) : YB = {
-          changeTree: OB,
+      _appendToList(ee, ie) {
+        const He = this._nodePool;
+        let ye;
+        return He.length > 0 ? (ye = He.pop(), ye.changeTree = ie, ye.next = void 0, ye.prev = void 0) : ye = {
+          changeTree: ie,
           next: void 0,
           prev: void 0,
           position: 0
-        }, BB.next ? (YB.prev = BB.tail, BB.tail.next = YB, BB.tail = YB) : (BB.nextPosition = 0, BB.next = YB, BB.tail = YB), YB.position = BB.nextPosition++, YB
+        }, ee.next ? (ye.prev = ee.tail, ee.tail.next = ye, ee.tail = ye) : (ee.nextPosition = 0, ee.next = ye, ee.tail = ye), ye.position = ee.nextPosition++, ye
       }
-      releaseNode(BB) {
-        BB.changeTree = void 0, BB.prev = void 0, BB.next = void 0, this._nodePool.push(BB)
+      releaseNode(ee) {
+        ee.changeTree = void 0, ee.prev = void 0, ee.next = void 0, this._nodePool.push(ee)
       }
-      removeFromQueue(BB) {
-        return this._removeNode(this.changes, BB, BB.changesNode, "changesNode")
+      removeFromQueue(ee) {
+        return this._removeNode(this.changes, ee, ee.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(BB) {
-        return this._removeNode(this.unreliableChanges, BB, BB.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(ee) {
+        return this._removeNode(this.unreliableChanges, ee, ee.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(BB, OB, GB, YB) {
-        return !(!GB || GB.changeTree !== OB) && (GB.prev ? GB.prev.next = GB.next : BB.next = GB.next, GB.next ? GB.next.prev = GB.prev : BB.tail = GB.prev, OB[YB] = void 0, this.releaseNode(GB), !0)
+      _removeNode(ee, ie, He, ye) {
+        return !(!He || He.changeTree !== ie) && (He.prev ? He.prev.next = He.next : ee.next = He.next, He.next ? He.next.prev = He.prev : ee.tail = He.prev, ie[ye] = void 0, this.releaseNode(He), !0)
       }
     }
 
-    function IY(BB, OB) {
-      if (-1 === OB || OB >= BB.length) return !1;
-      const GB = BB.length - 1;
-      for (let YB = OB; YB < GB; YB++) BB[YB] = BB[YB + 1];
-      return BB.length = GB, !0
+    function ay(ee, ie) {
+      if (-1 === ie || ie >= ee.length) return !1;
+      const He = ee.length - 1;
+      for (let ye = ie; ye < He; ye++) ee[ye] = ee[ye + 1];
+      return ee.length = He, !0
     }
 
-    function FY(BB, OB, GB) {
-      const YB = ~GB,
-        DB = BB.changeTrees;
-      for (const QB in DB) {
-        const BB = DB[QB],
-          GB = BB.visibleViews;
-        void 0 !== GB && OB < GB.length && (GB[OB] &= YB);
-        const oB = BB.subscribedViews;
-        void 0 !== oB && OB < oB.length && (oB[OB] &= YB);
-        const jB = BB.tagViews;
-        void 0 !== jB && jB.forEach((BB => {
-          OB < BB.length && (BB[OB] &= YB)
+    function cy(ee, ie, He) {
+      const ye = ~He,
+        be = ee.changeTrees;
+      for (const Me in be) {
+        const ee = be[Me],
+          He = ee.visibleViews;
+        void 0 !== He && ie < He.length && (He[ie] &= ye);
+        const Ke = ee.subscribedViews;
+        void 0 !== Ke && ie < Ke.length && (Ke[ie] &= ye);
+        const Ue = ee.tagViews;
+        void 0 !== Ue && Ue.forEach((ee => {
+          ie < ee.length && (ee[ie] &= ye)
         }))
       }
     }
-    const iY = new FinalizationRegistry((BB => {
+    const xy = new FinalizationRegistry((ee => {
       let {
-        root: OB,
-        id: GB,
-        slot: YB,
-        bit: DB
-      } = BB;
-      FY(OB, YB, DB), OB.activeViews.delete(GB);
-      for (const QB of OB.streamTrees) QB._dropView(GB);
-      OB.releaseViewId(GB)
+        root: ie,
+        id: He,
+        slot: ye,
+        bit: be
+      } = ee;
+      cy(ie, ye, be), ie.activeViews.delete(He);
+      for (const Me of ie.streamTrees) Me._dropView(He);
+      ie.releaseViewId(He)
     }));
 
-    function LY(BB) {
-      if (void 0 === BB) return "undefined";
-      if (null === BB) return "null";
-      const OB = typeof BB;
-      return "string" === OB ? JSON.stringify(BB.length > 30 ? `${BB.slice(0,30)}\u2026` : BB) : "object" !== OB && "function" !== OB ? `${OB} ${String(BB)}` : Array.isArray(BB) ? `Array(${BB.length})` : BB.constructor?.name ?? "Object"
+    function Ly(ee) {
+      if (void 0 === ee) return "undefined";
+      if (null === ee) return "null";
+      const ie = typeof ee;
+      return "string" === ie ? JSON.stringify(ee.length > 30 ? `${ee.slice(0,30)}\u2026` : ee) : "object" !== ie && "function" !== ie ? `${ie} ${String(ee)}` : Array.isArray(ee) ? `Array(${ee.length})` : ee.constructor?.name ?? "Object"
     }
-    class gY {
+    class Cy {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = BB, BB && (this.items = [])
+        let ee = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = ee, ee && (this.items = [])
       }
-      _bindRoot(BB) {
-        void 0 === this._root && (this._root = BB, this.id = BB.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), BB.registerView(this), iY.register(this, {
-          root: BB,
+      _bindRoot(ee) {
+        void 0 === this._root && (this._root = ee, this.id = ee.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), ee.registerView(this), xy.register(this, {
+          root: ee,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), FY(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), iY.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), cy(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), xy.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(BB) {
-        const OB = BB.visibleViews,
-          GB = this._slot;
-        return void 0 !== OB && GB < OB.length && 0 !== (OB[GB] & this._bit)
+      isVisible(ee) {
+        const ie = ee.visibleViews,
+          He = this._slot;
+        return void 0 !== ie && He < ie.length && 0 !== (ie[He] & this._bit)
       }
-      markVisible(BB) {
-        const OB = this._slot;
-        let GB = BB.visibleViews;
-        for (void 0 === GB && (GB = BB.visibleViews = []); GB.length <= OB;) GB.push(0);
-        GB[OB] |= this._bit
+      markVisible(ee) {
+        const ie = this._slot;
+        let He = ee.visibleViews;
+        for (void 0 === He && (He = ee.visibleViews = []); He.length <= ie;) He.push(0);
+        He[ie] |= this._bit
       }
-      unmarkVisible(BB) {
-        const OB = BB.visibleViews;
-        if (void 0 === OB) return;
-        const GB = this._slot;
-        GB < OB.length && (OB[GB] &= ~this._bit)
+      unmarkVisible(ee) {
+        const ie = ee.visibleViews;
+        if (void 0 === ie) return;
+        const He = this._slot;
+        He < ie.length && (ie[He] &= ~this._bit)
       }
-      isSubscribed(BB) {
-        const OB = BB.subscribedViews,
-          GB = this._slot;
-        return void 0 !== OB && GB < OB.length && 0 !== (OB[GB] & this._bit)
+      isSubscribed(ee) {
+        const ie = ee.subscribedViews,
+          He = this._slot;
+        return void 0 !== ie && He < ie.length && 0 !== (ie[He] & this._bit)
       }
-      _setSubscribed(BB) {
-        const OB = this._slot;
-        let GB = BB.subscribedViews;
-        for (void 0 === GB && (GB = BB.subscribedViews = []); GB.length <= OB;) GB.push(0);
-        GB[OB] |= this._bit
+      _setSubscribed(ee) {
+        const ie = this._slot;
+        let He = ee.subscribedViews;
+        for (void 0 === He && (He = ee.subscribedViews = []); He.length <= ie;) He.push(0);
+        He[ie] |= this._bit
       }
-      _clearSubscribed(BB) {
-        const OB = BB.subscribedViews;
-        if (void 0 === OB) return;
-        const GB = this._slot;
-        GB < OB.length && (OB[GB] &= ~this._bit)
+      _clearSubscribed(ee) {
+        const ie = ee.subscribedViews;
+        if (void 0 === ie) return;
+        const He = this._slot;
+        He < ie.length && (ie[He] &= ~this._bit)
       }
-      hasTagOnTree(BB, OB) {
-        const GB = BB.tagViews;
-        if (void 0 === GB) return !1;
-        const YB = this._slot,
-          DB = this._bit;
-        for (let QB = OB; 0 !== QB; QB &= QB - 1) {
-          const BB = GB.get(QB & -QB);
-          if (void 0 !== BB && YB < BB.length && 0 !== (BB[YB] & DB)) return !0
+      hasTagOnTree(ee, ie) {
+        const He = ee.tagViews;
+        if (void 0 === He) return !1;
+        const ye = this._slot,
+          be = this._bit;
+        for (let Me = ie; 0 !== Me; Me &= Me - 1) {
+          const ee = He.get(Me & -Me);
+          if (void 0 !== ee && ye < ee.length && 0 !== (ee[ye] & be)) return !0
         }
         return !1
       }
-      addTag(BB, OB) {
-        if (OB === pY) return;
-        let GB = BB.tagViews;
-        void 0 === GB && (GB = BB.tagViews = new Map);
-        const YB = this._slot,
-          DB = this._bit;
-        for (let QB = OB; QB > 0; QB &= QB - 1) {
-          const BB = QB & -QB;
-          let OB = GB.get(BB);
-          for (void 0 === OB && (OB = [], GB.set(BB, OB)); OB.length <= YB;) OB.push(0);
-          OB[YB] |= DB
+      addTag(ee, ie) {
+        if (ie === py) return;
+        let He = ee.tagViews;
+        void 0 === He && (He = ee.tagViews = new Map);
+        const ye = this._slot,
+          be = this._bit;
+        for (let Me = ie; Me > 0; Me &= Me - 1) {
+          const ee = Me & -Me;
+          let ie = He.get(ee);
+          for (void 0 === ie && (ie = [], He.set(ee, ie)); ie.length <= ye;) ie.push(0);
+          ie[ye] |= be
         }
       }
-      removeTag(BB, OB) {
-        if (OB === pY) return;
-        const GB = BB.tagViews;
-        if (void 0 === GB) return;
-        const YB = this._slot,
-          DB = ~this._bit;
-        for (let QB = OB; QB > 0; QB &= QB - 1) {
-          const BB = GB.get(QB & -QB);
-          void 0 !== BB && YB < BB.length && (BB[YB] &= DB)
+      removeTag(ee, ie) {
+        if (ie === py) return;
+        const He = ee.tagViews;
+        if (void 0 === He) return;
+        const ye = this._slot,
+          be = ~this._bit;
+        for (let Me = ie; Me > 0; Me &= Me - 1) {
+          const ee = He.get(Me & -Me);
+          void 0 !== ee && ye < ee.length && (ee[ye] &= be)
         }
       }
-      removeAllTagsOnTree(BB) {
-        const OB = BB.tagViews;
-        if (void 0 === OB) return;
-        const GB = this._slot,
-          YB = ~this._bit;
-        OB.forEach((BB => {
-          GB < BB.length && (BB[GB] &= YB)
+      removeAllTagsOnTree(ee) {
+        const ie = ee.tagViews;
+        if (void 0 === ie) return;
+        const He = this._slot,
+          ye = ~this._bit;
+        ie.forEach((ee => {
+          He < ee.length && (ee[He] &= ye)
         }))
       }
-      add(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pY,
-          GB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(BB, OB, GB, !1)
+      add(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : py,
+          He = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(ee, ie, He, !1)
       }
-      _addImmediate(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pY;
-        this._add(BB, OB, !0, !0)
+      _addImmediate(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : py;
+        this._add(ee, ie, !0, !0)
       }
-      _add(BB, OB, GB, YB) {
-        const QB = BB?.[qB];
-        if (!QB) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${LY(BB)}`), !1;
-        const oB = QB.parent;
-        if (!oB && 0 !== BB[jB]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${QB.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== QB.root && this._bindRoot(QB.root);
-        const yB = oB?.[qB];
-        if (!YB && yB?.isStreamCollection) return IO(oB, this.id, QB.parentIndex), !0;
-        const JB = BB.constructor[Symbol.metadata],
-          MB = this.isVisible(QB);
-        if (!this.iterable || !GB || MB && -1 !== this.items.indexOf(BB) || this.items.push(BB), this.markVisible(QB), GB && oB && this.addParentOf(QB, OB), !YB && QB.isStreamCollection) return !0;
-        if (OB === pY && QB.isNew) return this._markSubtreeVisible(QB, OB), !1;
-        let PB = this.changes.get(BB[jB]);
-        void 0 === PB && (PB = new Map, this.changes.set(BB[jB], PB));
-        let zB = !1;
-        const lB = QB.encDescriptor.tags;
-        if (QB.forEachChild(((BB, GB) => {
-            const YB = lB[GB];
-            if (void 0 !== YB) {
-              if (!(YB === pY || OB !== pY && 0 !== (YB & OB))) return
+      _add(ee, ie, He, ye) {
+        const Me = ee?.[Te];
+        if (!Me) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Ly(ee)}`), !1;
+        const Ke = Me.parent;
+        if (!Ke && 0 !== ee[Ue]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Me.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== Me.root && this._bindRoot(Me.root);
+        const Fe = Ke?.[Te];
+        if (!ye && Fe?.isStreamCollection) return Vi(Ke, this.id, Me.parentIndex), !0;
+        const Je = ee.constructor[Symbol.metadata],
+          oe = this.isVisible(Me);
+        if (!this.iterable || !He || oe && -1 !== this.items.indexOf(ee) || this.items.push(ee), this.markVisible(Me), He && Ke && this.addParentOf(Me, ie), !ye && Me.isStreamCollection) return !0;
+        if (ie === py && Me.isNew) return this._markSubtreeVisible(Me, ie), !1;
+        let Re = this.changes.get(ee[Ue]);
+        void 0 === Re && (Re = new Map, this.changes.set(ee[Ue], Re));
+        let ke = !1;
+        const qe = Me.encDescriptor.tags;
+        if (Me.forEachChild(((ee, He) => {
+            const ye = qe[He];
+            if (void 0 !== ye) {
+              if (!(ye === py || ie !== py && 0 !== (ye & ie))) return
             }
-            this.add(BB.ref, OB, !1) && (zB = !0)
-          })), OB !== pY) {
-          this.addTag(QB, OB);
-          const BB = JB?.[uB];
-          if (void 0 !== BB)
-            for (let GB = OB; GB > 0; GB &= GB - 1) BB[GB & -GB]?.forEach((BB => {
-              QB.getChange(BB) !== DB.DELETE && PB.set(BB, DB.ADD)
+            this.add(ee.ref, ie, !1) && (ke = !0)
+          })), ie !== py) {
+          this.addTag(Me, ie);
+          const ee = Je?.[Pe];
+          if (void 0 !== ee)
+            for (let He = ie; He > 0; He &= He - 1) ee[He & -He]?.forEach((ee => {
+              Me.getChange(ee) !== be.DELETE && Re.set(ee, be.ADD)
             }))
         }
-        if ((OB === pY || !MB) && (!QB.isNew || zB))
-          if (QB.isArray && "string" !== typeof QB.refTarget[ZB]) QB.refTarget.items.length > 0 && (PB.set(-1, DB.ADD), zB = !0);
+        if ((ie === py || !oe) && (!Me.isNew || ke))
+          if (Me.isArray && "string" !== typeof Me.refTarget[pe]) Me.refTarget.items.length > 0 && (Re.set(-1, be.ADD), ke = !0);
           else {
-            const BB = QB.encDescriptor.tags;
-            QB.forEachLive((GB => {
-              const YB = BB[GB];
-              (void 0 === YB || YB === pY || OB !== pY && 0 !== (YB & OB)) && (PB.set(GB, DB.ADD), zB = !0)
+            const ee = Me.encDescriptor.tags;
+            Me.forEachLive((He => {
+              const ye = ee[He];
+              (void 0 === ye || ye === py || ie !== py && 0 !== (ye & ie)) && (Re.set(He, be.ADD), ke = !0)
             }))
-          } return zB
+          } return ke
       }
-      _markSubtreeVisible(BB, OB) {
-        const GB = BB.encDescriptor.tags;
-        BB.forEachChild(((BB, YB) => {
-          const DB = GB[YB];
-          if (void 0 !== DB) {
-            if (!(DB === pY || OB !== pY && 0 !== (DB & OB))) return
+      _markSubtreeVisible(ee, ie) {
+        const He = ee.encDescriptor.tags;
+        ee.forEachChild(((ee, ye) => {
+          const be = He[ye];
+          if (void 0 !== be) {
+            if (!(be === py || ie !== py && 0 !== (be & ie))) return
           }
-          BB.isNew ? (this.markVisible(BB), this._markSubtreeVisible(BB, OB)) : this._add(BB.ref, OB, !1, !1)
+          ee.isNew ? (this.markVisible(ee), this._markSubtreeVisible(ee, ie)) : this._add(ee.ref, ie, !1, !1)
         }))
       }
-      addParentOf(BB, OB) {
-        const GB = BB.parent[qB],
-          YB = BB.parentIndex;
-        this.isVisible(GB) || this.markVisible(GB);
-        const QB = GB.parent?.[qB];
-        if (QB && this.addParentOf(GB, OB), GB.hasFilteredFields && GB.getChange(YB) !== DB.DELETE) {
-          let QB = this.changes.get(GB.ref[jB]);
-          void 0 === QB && (QB = new Map, this.changes.set(GB.ref[jB], QB));
-          const oB = GB.encDescriptor.tags[YB];
-          void 0 !== oB && oB !== pY && 0 !== (oB & OB) && this.addTag(GB, OB), QB.set(GB.isArray ? BB : YB, DB.ADD)
+      addParentOf(ee, ie) {
+        const He = ee.parent[Te],
+          ye = ee.parentIndex;
+        this.isVisible(He) || this.markVisible(He);
+        const Me = He.parent?.[Te];
+        if (Me && this.addParentOf(He, ie), He.hasFilteredFields && He.getChange(ye) !== be.DELETE) {
+          let Me = this.changes.get(He.ref[Ue]);
+          void 0 === Me && (Me = new Map, this.changes.set(He.ref[Ue], Me));
+          const Ke = He.encDescriptor.tags[ye];
+          void 0 !== Ke && Ke !== py && 0 !== (Ke & ie) && this.addTag(He, ie), Me.set(He.isArray ? ee : ye, be.ADD)
         }
       }
-      _touchAncestorsOf(BB) {
-        let OB = BB.parent?.[qB];
-        if (void 0 === OB) return;
-        const GB = [];
-        for (; void 0 !== OB;) {
-          if (OB.hasFilteredFields) {
-            const BB = OB.ref[jB];
-            if (this.changes.has(BB)) break;
-            GB.push(OB)
+      _touchAncestorsOf(ee) {
+        let ie = ee.parent?.[Te];
+        if (void 0 === ie) return;
+        const He = [];
+        for (; void 0 !== ie;) {
+          if (ie.hasFilteredFields) {
+            const ee = ie.ref[Ue];
+            if (this.changes.has(ee)) break;
+            He.push(ie)
           }
-          OB = OB.parent?.[qB]
+          ie = ie.parent?.[Te]
         }
-        for (let YB = GB.length - 1; YB >= 0; YB--) this.changes.set(GB[YB].ref[jB], new Map)
+        for (let ye = He.length - 1; ye >= 0; ye--) this.changes.set(He[ye].ref[Ue], new Map)
       }
-      remove(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pY,
-          GB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const YB = BB?.[qB];
-        if (!YB) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${LY(BB)}`), this;
-        const QB = YB.parent?.[qB];
-        if (QB?.isStreamCollection) return this.unmarkVisible(YB), this.iterable && !GB && IY(this.items, this.items.indexOf(BB)),
-          function(BB, OB, GB, YB, QB) {
-            const oB = BB._stream;
-            if (void 0 === oB) return !1;
-            const jB = oB.pendingByView.get(OB);
-            if (jB?.has(YB)) return jB.delete(YB), !1;
-            const yB = oB.sentByView.get(OB);
-            if (yB?.has(YB)) {
-              yB.delete(YB);
-              let BB = QB.get(GB);
-              return void 0 === BB && (BB = new Map, QB.set(GB, BB)), BB.set(YB, DB.DELETE), !0
+      remove(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : py,
+          He = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const ye = ee?.[Te];
+        if (!ye) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Ly(ee)}`), this;
+        const Me = ye.parent?.[Te];
+        if (Me?.isStreamCollection) return this.unmarkVisible(ye), this.iterable && !He && ay(this.items, this.items.indexOf(ee)),
+          function(ee, ie, He, ye, Me) {
+            const Ke = ee._stream;
+            if (void 0 === Ke) return !1;
+            const Ue = Ke.pendingByView.get(ie);
+            if (Ue?.has(ye)) return Ue.delete(ye), !1;
+            const Fe = Ke.sentByView.get(ie);
+            if (Fe?.has(ye)) {
+              Fe.delete(ye);
+              let ee = Me.get(He);
+              return void 0 === ee && (ee = new Map, Me.set(He, ee)), ee.set(ye, be.DELETE), !0
             }
-          }(YB.parent, this.id, YB.parent[jB], YB.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(YB), this;
-        if (YB.isStreamCollection) {
-          this.unmarkVisible(YB), this.iterable && !GB && IY(this.items, this.items.indexOf(BB));
-          const OB = YB.ref,
-            QB = OB._stream;
-          if (void 0 !== QB) {
-            QB.pendingByView.get(this.id)?.clear();
-            const BB = QB.sentByView.get(this.id);
-            if (void 0 !== BB && BB.size > 0) {
-              const GB = OB[jB];
-              let YB = this.changes.get(GB);
-              void 0 === YB && (YB = new Map, this.changes.set(GB, YB));
-              for (const OB of BB) YB.set(OB, DB.DELETE);
-              BB.clear()
+          }(ye.parent, this.id, ye.parent[Ue], ye.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(ye), this;
+        if (ye.isStreamCollection) {
+          this.unmarkVisible(ye), this.iterable && !He && ay(this.items, this.items.indexOf(ee));
+          const ie = ye.ref,
+            Me = ie._stream;
+          if (void 0 !== Me) {
+            Me.pendingByView.get(this.id)?.clear();
+            const ee = Me.sentByView.get(this.id);
+            if (void 0 !== ee && ee.size > 0) {
+              const He = ie[Ue];
+              let ye = this.changes.get(He);
+              void 0 === ye && (ye = new Map, this.changes.set(He, ye));
+              for (const ie of ee) ye.set(ie, be.DELETE);
+              ee.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(YB), this.iterable && !GB && IY(this.items, this.items.indexOf(BB));
-        const oB = YB.ref,
-          yB = oB.constructor[Symbol.metadata],
-          JB = oB[jB];
-        this._touchAncestorsOf(YB);
-        let MB = this.changes.get(JB);
-        if (void 0 === MB && (MB = new Map, this.changes.set(JB, MB)), OB === pY) {
-          const BB = YB.parent;
-          if (BB && !CO.isValidInstance(BB) && YB.isFiltered) {
-            const OB = QB.isArray ? YB : YB.parentIndex,
-              GB = BB[jB];
-            let oB = this.changes.get(GB);
-            void 0 === oB ? (oB = new Map, this.changes.set(GB, oB)) : oB.get(OB) === DB.ADD && this._dropPendingEntries(YB), oB.set(OB, DB.DELETE), this._recursiveDeleteVisibleChangeTree(YB)
-          } else yB?.[KB]?.forEach((BB => this._removeViewField(YB, MB, BB)))
+        this.unmarkVisible(ye), this.iterable && !He && ay(this.items, this.items.indexOf(ee));
+        const Ke = ye.ref,
+          Fe = Ke.constructor[Symbol.metadata],
+          Je = Ke[Ue];
+        this._touchAncestorsOf(ye);
+        let oe = this.changes.get(Je);
+        if (void 0 === oe && (oe = new Map, this.changes.set(Je, oe)), ie === py) {
+          const ee = ye.parent;
+          if (ee && !Ni.isValidInstance(ee) && ye.isFiltered) {
+            const ie = Me.isArray ? ye : ye.parentIndex,
+              He = ee[Ue];
+            let Ke = this.changes.get(He);
+            void 0 === Ke ? (Ke = new Map, this.changes.set(He, Ke)) : Ke.get(ie) === be.ADD && this._dropPendingEntries(ye), Ke.set(ie, be.DELETE), this._recursiveDeleteVisibleChangeTree(ye)
+          } else Fe?.[De]?.forEach((ee => this._removeViewField(ye, oe, ee)))
         } else {
-          const BB = yB?.[uB];
-          if (void 0 !== BB)
-            for (let GB = OB; GB > 0; GB &= GB - 1) BB[GB & -GB]?.forEach((BB => this._removeViewField(YB, MB, BB)))
+          const ee = Fe?.[Pe];
+          if (void 0 !== ee)
+            for (let He = ie; He > 0; He &= He - 1) ee[He & -He]?.forEach((ee => this._removeViewField(ye, oe, ee)))
         }
-        return void 0 === OB ? this.removeAllTagsOnTree(YB) : this.removeTag(YB, OB), this
+        return void 0 === ie ? this.removeAllTagsOnTree(ye) : this.removeTag(ye, ie), this
       }
-      has(BB) {
-        return this.isVisible(BB[qB])
+      has(ee) {
+        return this.isVisible(ee[Te])
       }
-      hasTag(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pY;
-        return this.hasTagOnTree(BB[qB], OB)
+      hasTag(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : py;
+        return this.hasTagOnTree(ee[Te], ie)
       }
-      subscribe(BB, OB) {
-        const GB = BB?.[qB];
-        if (!GB) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${LY(BB)}`), this;
-        if (void 0 === this._root && void 0 !== GB.root && this._bindRoot(GB.root), void 0 !== OB)
-          if (GB.isStreamCollection) {
-            const GB = kO(BB);
-            null === OB ? GB.priorityByView?.delete(this.id) : (GB.priorityByView ??= new Map).set(this.id, OB)
+      subscribe(ee, ie) {
+        const He = ee?.[Te];
+        if (!He) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Ly(ee)}`), this;
+        if (void 0 === this._root && void 0 !== He.root && this._bindRoot(He.root), void 0 !== ie)
+          if (He.isStreamCollection) {
+            const He = wi(ee);
+            null === ie ? He.priorityByView?.delete(this.id) : (He.priorityByView ??= new Map).set(this.id, ie)
           } else {
-            const OB = BB?.constructor?.name ?? "collection",
-              YB = GB.parent;
-            if (void 0 === YB) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${OB} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const ie = ee?.constructor?.name ?? "collection",
+              ye = He.parent;
+            if (void 0 === ye) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${ie} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const BB = YB?.constructor?.[Symbol.metadata]?.[GB.parentIndex]?.name,
-                DB = BB ? `${YB.constructor.name}#${BB}` : OB;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${DB} is a ${OB}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const ee = ye?.constructor?.[Symbol.metadata]?.[He.parentIndex]?.name,
+                be = ee ? `${ye.constructor.name}#${ee}` : ie;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${be} is a ${ie}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(GB)) return this;
-        const YB = void 0 !== GB.parent && !this.isVisible(GB);
-        if (YB ? (this.addParentOf(GB, pY), this._add(BB, pY, !1, !1)) : this.markVisible(GB), this._setSubscribed(GB), GB.isStreamCollection) {
-          const OB = BB;
-          GB.forEachChild(((BB, GB) => {
-            IO(OB, this.id, GB)
+          } if (this.isSubscribed(He)) return this;
+        const ye = void 0 !== He.parent && !this.isVisible(He);
+        if (ye ? (this.addParentOf(He, py), this._add(ee, py, !1, !1)) : this.markVisible(He), this._setSubscribed(He), He.isStreamCollection) {
+          const ie = ee;
+          He.forEachChild(((ee, He) => {
+            Vi(ie, this.id, He)
           }))
-        } else YB || GB.forEachChild((BB => {
-          this.markVisible(BB)
+        } else ye || He.forEachChild((ee => {
+          this.markVisible(ee)
         }));
         return this
       }
-      unsubscribe(BB) {
-        const OB = BB?.[qB];
-        if (!OB) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${LY(BB)}`), this;
-        if (!this.isSubscribed(OB)) return this;
-        this._clearSubscribed(OB);
-        const GB = OB.ref[jB];
-        if (OB.isStreamCollection) {
-          const OB = BB._stream;
-          if (void 0 !== OB) {
-            OB.pendingByView.get(this.id)?.clear();
-            const BB = OB.sentByView.get(this.id);
-            if (void 0 !== BB && BB.size > 0) {
-              let OB = this.changes.get(GB);
-              void 0 === OB && (OB = new Map, this.changes.set(GB, OB));
-              for (const GB of BB) OB.set(GB, DB.DELETE);
-              BB.clear()
+      unsubscribe(ee) {
+        const ie = ee?.[Te];
+        if (!ie) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Ly(ee)}`), this;
+        if (!this.isSubscribed(ie)) return this;
+        this._clearSubscribed(ie);
+        const He = ie.ref[Ue];
+        if (ie.isStreamCollection) {
+          const ie = ee._stream;
+          if (void 0 !== ie) {
+            ie.pendingByView.get(this.id)?.clear();
+            const ee = ie.sentByView.get(this.id);
+            if (void 0 !== ee && ee.size > 0) {
+              let ie = this.changes.get(He);
+              void 0 === ie && (ie = new Map, this.changes.set(He, ie));
+              for (const He of ee) ie.set(He, be.DELETE);
+              ee.clear()
             }
           }
         } else {
-          const BB = OB.isArray;
-          let YB = this.changes.get(GB);
-          OB.forEachChild(((OB, QB) => {
-            void 0 === YB && (YB = new Map, this.changes.set(GB, YB)), YB.set(BB ? OB : QB, DB.DELETE), this.unmarkVisible(OB)
+          const ee = ie.isArray;
+          let ye = this.changes.get(He);
+          ie.forEachChild(((ie, Me) => {
+            void 0 === ye && (ye = new Map, this.changes.set(He, ye)), ye.set(ee ? ie : Me, be.DELETE), this.unmarkVisible(ie)
           }))
         }
-        return this.unmarkVisible(OB), this
+        return this.unmarkVisible(ie), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let BB = 0, OB = this.items.length; BB < OB; BB++) this.remove(this.items[BB], pY, !0);
+        for (let ee = 0, ie = this.items.length; ee < ie; ee++) this.remove(this.items[ee], py, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(BB) {
-        let OB = this.isVisible(BB);
-        if (!OB && BB.isVisibilitySharedWithParent)
-          if (this.isVisible(BB.parent[qB])) this.markVisible(BB), OB = !0;
+      isChangeTreeVisible(ee) {
+        let ie = this.isVisible(ee);
+        if (!ie && ee.isVisibilitySharedWithParent)
+          if (this.isVisible(ee.parent[Te])) this.markVisible(ee), ie = !0;
           else
-            for (let GB = BB.extraParents; void 0 !== GB; GB = GB.next) {
-              const YB = GB.ref[qB];
-              if (YB.isFiltered && this.isVisible(YB)) {
-                this.markVisible(BB), OB = !0;
+            for (let He = ee.extraParents; void 0 !== He; He = He.next) {
+              const ye = He.ref[Te];
+              if (ye.isFiltered && this.isVisible(ye)) {
+                this.markVisible(ee), ie = !0;
                 break
               }
             }
-        return OB
+        return ie
       }
-      _recursiveDeleteVisibleChangeTree(BB) {
-        BB.forEachChild((BB => {
-          this.unmarkVisible(BB), this._recursiveDeleteVisibleChangeTree(BB)
+      _recursiveDeleteVisibleChangeTree(ee) {
+        ee.forEachChild((ee => {
+          this.unmarkVisible(ee), this._recursiveDeleteVisibleChangeTree(ee)
         }))
       }
-      _dropPendingEntries(BB) {
-        this.changes.delete(BB.ref[jB]), BB.forEachChild((BB => this._dropPendingEntries(BB)))
+      _dropPendingEntries(ee) {
+        this.changes.delete(ee.ref[Ue]), ee.forEachChild((ee => this._dropPendingEntries(ee)))
       }
-      _removeViewField(BB, OB, GB) {
-        const YB = OB.get(GB) === DB.ADD;
-        OB.set(GB, DB.DELETE);
-        const QB = BB.ref[BB.encDescriptor.names[GB]],
-          oB = QB?.[qB];
-        oB && (this.unmarkVisible(oB), this._recursiveDeleteVisibleChangeTree(oB), YB && this._dropPendingEntries(oB))
+      _removeViewField(ee, ie, He) {
+        const ye = ie.get(He) === be.ADD;
+        ie.set(He, be.DELETE);
+        const Me = ee.ref[ee.encDescriptor.names[He]],
+          Ke = Me?.[Te];
+        Ke && (this.unmarkVisible(Ke), this._recursiveDeleteVisibleChangeTree(Ke), ye && this._dropPendingEntries(Ke))
       }
     }
 
-    function rY(BB) {
-      BB.structSwitchEmitted || (BB.shouldEmitSwitch && (BB.buffer[BB.it.offset++] = 255, OO.number(BB.buffer, BB.ref[jB], BB.it)), BB.structSwitchEmitted = !0)
+    function vy(ee) {
+      ee.structSwitchEmitted || (ee.shouldEmitSwitch && (ee.buffer[ee.it.offset++] = 255, ii.number(ee.buffer, ee.ref[Ue], ee.it)), ee.structSwitchEmitted = !0)
     }
 
-    function XY(BB, OB) {
-      cY(BB, OB, DB.ADD)
+    function uy(ee, ie) {
+      Sy(ee, ie, be.ADD)
     }
 
-    function wY(BB, OB) {
-      if (OB._fullSyncGen === BB.gen) return;
-      OB._fullSyncGen = BB.gen;
-      if (!BB.hasView || BB.view.isChangeTreeVisible(OB)) {
-        const GB = OB.encDescriptor;
-        BB.changeTree = OB, BB.ref = OB.ref, BB.encoder = GB.encoder, BB.filter = GB.filter, BB.metadata = GB.metadata, BB.treeIsFiltered = OB.isFiltered, BB.isSchema = GB.isSchema, BB.filterBitmask = GB.filterBitmask, BB.tags = GB.tags, BB.structSwitchEmitted = !1, BB.shouldEmitSwitch = BB.hasView || BB.it.offset > BB.initialOffset || OB !== BB.rootChangeTree, OB.isArray && OB.collDirty.size > 0 && (OB.flags |= 512), DG(OB, BB, XY)
+    function my(ee, ie) {
+      if (ie._fullSyncGen === ee.gen) return;
+      ie._fullSyncGen = ee.gen;
+      if (!ee.hasView || ee.view.isChangeTreeVisible(ie)) {
+        const He = ie.encDescriptor;
+        ee.changeTree = ie, ee.ref = ie.ref, ee.encoder = He.encoder, ee.filter = He.filter, ee.metadata = He.metadata, ee.treeIsFiltered = ie.isFiltered, ee.isSchema = He.isSchema, ee.filterBitmask = He.filterBitmask, ee.tags = He.tags, ee.structSwitchEmitted = !1, ee.shouldEmitSwitch = ee.hasView || ee.it.offset > ee.initialOffset || ie !== ee.rootChangeTree, ie.isArray && ie.collDirty.size > 0 && (ie.flags |= 512), KH(ie, ee, uy)
       }
-      NG(OB, BB, EY)
+      BH(ie, ee, ly)
     }
 
-    function EY(BB, OB, GB) {
-      wY(BB, OB)
+    function ly(ee, ie, He) {
+      my(ee, ie)
     }
 
-    function cY(BB, OB, GB) {
-      if (OB < 0) {
-        if (BB.treeIsFiltered !== BB.emitFiltered) return;
-        return rY(BB), void(BB.buffer[BB.it.offset++] = 255 & Math.abs(OB))
+    function Sy(ee, ie, He) {
+      if (ie < 0) {
+        if (ee.treeIsFiltered !== ee.emitFiltered) return;
+        return vy(ee), void(ee.buffer[ee.it.offset++] = 255 & Math.abs(ie))
       }
-      if ((BB.isSchema ? BB.treeIsFiltered || (OB < 32 ? 0 !== (BB.filterBitmask & 1 << OB) : void 0 !== BB.tags[OB]) : BB.treeIsFiltered) !== BB.emitFiltered) return;
-      const YB = BB.isEncodeAll ? DB.ADD : GB;
-      void 0 !== YB && (void 0 === BB.filter || BB.filter(BB.ref, OB, BB.view)) && (rY(BB), BB.encoder(BB.self, BB.buffer, BB.changeTree, OB, YB, BB.it, BB.isEncodeAll, BB.hasView, BB.metadata))
+      if ((ee.isSchema ? ee.treeIsFiltered || (ie < 32 ? 0 !== (ee.filterBitmask & 1 << ie) : void 0 !== ee.tags[ie]) : ee.treeIsFiltered) !== ee.emitFiltered) return;
+      const ye = ee.isEncodeAll ? be.ADD : He;
+      void 0 !== ye && (void 0 === ee.filter || ee.filter(ee.ref, ie, ee.view)) && (vy(ee), ee.encoder(ee.self, ee.buffer, ee.changeTree, ie, ye, ee.it, ee.isEncodeAll, ee.hasView, ee.metadata))
     }
 
-    function hY(BB, OB) {
-      const GB = new Uint8Array(BB.length + OB.length);
-      return GB.set(BB, 0), GB.set(OB, BB.length), GB
+    function ny(ee, ie) {
+      const He = new Uint8Array(ee.length + ie.length);
+      return He.set(ee, 0), He.set(ie, ee.length), He
     }
-    class aY {
+    class jy {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(aY.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(jy.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(BB, OB) {
-        this.context = EO.cache(BB.constructor), this.root = OB ?? new mY(this.context), this.setState(BB)
+      constructor(ee, ie) {
+        this.context = mi.cache(ee.constructor), this.root = ie ?? new Vy(this.context), this.setState(ee)
       }
-      setState(BB) {
-        this.state = BB, this.state[qB].setRoot(this.root)
+      setState(ee) {
+        this.state = ee, this.state[Te].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          OB = arguments.length > 1 ? arguments[1] : void 0,
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB.offset;
-        return this._encodeChannel(BB, OB, GB, YB, !1)
+          ie = arguments.length > 1 ? arguments[1] : void 0,
+          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ee.offset;
+        return this._encodeChannel(ee, ie, He, ye, !1)
       }
       encodeUnreliable() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          OB = arguments.length > 1 ? arguments[1] : void 0,
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB.offset;
-        return this._encodeChannel(BB, OB, GB, YB, !0)
+          ie = arguments.length > 1 ? arguments[1] : void 0,
+          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ee.offset;
+        return this._encodeChannel(ee, ie, He, ye, !0)
       }
-      _encodeChannel(BB, OB, GB, YB, DB) {
-        this.root.pendingFilterRefresh.length > 0 && oG(this.root);
-        const QB = void 0 !== OB,
-          oB = this.state[qB],
-          jB = this._encodeCtx;
-        jB.self = this, jB.buffer = GB, jB.it = BB, jB.view = OB, jB.isEncodeAll = !1, jB.hasView = QB, jB.emitFiltered = QB;
-        let yB = DB ? this.root.unreliableChanges : this.root.changes;
-        for (; yB = yB.next;) {
-          const GB = yB.changeTree;
-          if (QB && !OB.isChangeTreeVisible(GB)) continue;
-          const JB = DB ? GB.unreliableRecorder : GB;
-          if (!JB || !JB.has()) continue;
-          const MB = GB.encDescriptor;
-          jB.changeTree = GB, jB.ref = GB.ref, jB.encoder = MB.encoder, jB.filter = MB.filter, jB.metadata = MB.metadata, jB.treeIsFiltered = GB.isFiltered, jB.isSchema = MB.isSchema, jB.filterBitmask = MB.filterBitmask, jB.tags = MB.tags, jB.structSwitchEmitted = !1, jB.isRootTree = GB === oB, jB.shouldEmitSwitch = QB || BB.offset > YB || !jB.isRootTree, JB.forEachWithCtx(jB, cY)
+      _encodeChannel(ee, ie, He, ye, be) {
+        this.root.pendingFilterRefresh.length > 0 && FH(this.root);
+        const Me = void 0 !== ie,
+          Ke = this.state[Te],
+          Ue = this._encodeCtx;
+        Ue.self = this, Ue.buffer = He, Ue.it = ee, Ue.view = ie, Ue.isEncodeAll = !1, Ue.hasView = Me, Ue.emitFiltered = Me;
+        let Fe = be ? this.root.unreliableChanges : this.root.changes;
+        for (; Fe = Fe.next;) {
+          const He = Fe.changeTree;
+          if (Me && !ie.isChangeTreeVisible(He)) continue;
+          const Je = be ? He.unreliableRecorder : He;
+          if (!Je || !Je.has()) continue;
+          const oe = He.encDescriptor;
+          Ue.changeTree = He, Ue.ref = He.ref, Ue.encoder = oe.encoder, Ue.filter = oe.filter, Ue.metadata = oe.metadata, Ue.treeIsFiltered = He.isFiltered, Ue.isSchema = oe.isSchema, Ue.filterBitmask = oe.filterBitmask, Ue.tags = oe.tags, Ue.structSwitchEmitted = !1, Ue.isRootTree = He === Ke, Ue.shouldEmitSwitch = Me || ee.offset > ye || !Ue.isRootTree, Je.forEachWithCtx(Ue, Sy)
         }
-        return DB || QB || !this._isStreamBroadcastMode || this._emitStreamBroadcast(GB, BB), BB.offset > GB.byteLength ? (GB = this._resizeBuffer(GB, BB.offset), BB.offset = YB, this._encodeChannel(BB, OB, GB, YB, DB)) : GB.subarray(0, BB.offset)
+        return be || Me || !this._isStreamBroadcastMode || this._emitStreamBroadcast(He, ee), ee.offset > He.byteLength ? (He = this._resizeBuffer(He, ee.offset), ee.offset = ye, this._encodeChannel(ee, ie, He, ye, be)) : He.subarray(0, ee.offset)
       }
-      encodeFullSync(BB, OB, GB, YB) {
-        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : BB.offset;
-        this.root.pendingFilterRefresh.length > 0 && oG(this.root);
-        const QB = void 0 !== YB,
-          oB = this.state[qB],
-          jB = this._encodeCtx;
-        return jB.self = this, jB.buffer = OB, jB.it = BB, jB.view = YB, jB.isEncodeAll = !0, jB.hasView = QB, jB.emitFiltered = GB, jB.gen = ++this._fullSyncGen, jB.initialOffset = DB, jB.rootChangeTree = oB, wY(jB, oB), BB.offset > OB.byteLength ? (OB = this._resizeBuffer(OB, BB.offset), BB.offset = DB, this.encodeFullSync(BB, OB, GB, YB, DB)) : OB.subarray(0, BB.offset)
+      encodeFullSync(ee, ie, He, ye) {
+        let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : ee.offset;
+        this.root.pendingFilterRefresh.length > 0 && FH(this.root);
+        const Me = void 0 !== ye,
+          Ke = this.state[Te],
+          Ue = this._encodeCtx;
+        return Ue.self = this, Ue.buffer = ie, Ue.it = ee, Ue.view = ye, Ue.isEncodeAll = !0, Ue.hasView = Me, Ue.emitFiltered = He, Ue.gen = ++this._fullSyncGen, Ue.initialOffset = be, Ue.rootChangeTree = Ke, my(Ue, Ke), ee.offset > ie.byteLength ? (ie = this._resizeBuffer(ie, ee.offset), ee.offset = be, this.encodeFullSync(ee, ie, He, ye, be)) : ie.subarray(0, ee.offset)
       }
-      _resizeBuffer(BB, OB) {
-        const GB = Math.ceil(OB / aY.BUFFER_SIZE) * aY.BUFFER_SIZE,
-          YB = new Uint8Array(GB);
-        return YB.set(BB), BB === this.sharedBuffer && (this.sharedBuffer = YB), YB
+      _resizeBuffer(ee, ie) {
+        const He = Math.ceil(ie / jy.BUFFER_SIZE) * jy.BUFFER_SIZE,
+          ye = new Uint8Array(He);
+        return ye.set(ee), ee === this.sharedBuffer && (this.sharedBuffer = ye), ye
       }
       encodeAll() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(BB, OB, !1)
+          ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(ee, ie, !1)
       }
-      encodeAllView(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const DB = GB.offset;
-        return YB = this.encodeFullSync(GB, YB, !0, BB, DB), hY(YB.subarray(0, OB), YB.subarray(DB, GB.offset))
+      encodeAllView(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const be = He.offset;
+        return ye = this.encodeFullSync(He, ye, !0, ee, be), ny(ye.subarray(0, ie), ye.subarray(be, He.offset))
       }
-      ensureCapacity(BB, OB) {
-        if (OB + aY.BUFFER_SIZE <= BB.byteLength) return BB;
-        const GB = Math.ceil((OB + aY.BUFFER_SIZE) / aY.BUFFER_SIZE) * aY.BUFFER_SIZE,
-          YB = new Uint8Array(GB);
-        return YB.set(BB.subarray(0, OB)), BB === this.sharedBuffer && (this.sharedBuffer = YB), YB
+      ensureCapacity(ee, ie) {
+        if (ie + jy.BUFFER_SIZE <= ee.byteLength) return ee;
+        const He = Math.ceil((ie + jy.BUFFER_SIZE) / jy.BUFFER_SIZE) * jy.BUFFER_SIZE,
+          ye = new Uint8Array(He);
+        return ye.set(ee.subarray(0, ie)), ee === this.sharedBuffer && (this.sharedBuffer = ye), ye
       }
-      encodeView(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          QB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const oB = GB.offset;
-        this._emitStreamPriority(BB);
-        for (const yB of BB.changes.keys()) {
-          const OB = BB.changes.get(yB),
-            QB = this.root.changeTrees[yB];
-          if (void 0 === QB) {
-            BB.changes.delete(yB);
+      encodeView(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          Me = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const Ke = He.offset;
+        this._emitStreamPriority(ee);
+        for (const Fe of ee.changes.keys()) {
+          const ie = ee.changes.get(Fe),
+            Me = this.root.changeTrees[Fe];
+          if (void 0 === Me) {
+            ee.changes.delete(Fe);
             continue
           }
-          if (0 === OB.size) continue;
-          const oB = QB.encDescriptor,
-            JB = oB.encoder,
-            MB = oB.metadata,
-            PB = QB.ref,
-            lB = QB.refTarget;
-          YB = this.ensureCapacity(YB, GB.offset), YB[GB.offset++] = 255, OO.number(YB, PB[jB], GB);
-          for (const [yB, pB] of OB) {
-            let OB;
-            if (-1 === yB) {
-              const BB = lB.tmpItems,
-                OB = lB.deletedIndexes;
-              for (let oB = 0; oB < BB.length; oB++) void 0 !== BB[oB] && !0 !== OB[oB] && JB(this, YB, QB, oB, DB.ADD, GB, !1, !0, MB);
+          if (0 === ie.size) continue;
+          const Ke = Me.encDescriptor,
+            Je = Ke.encoder,
+            oe = Ke.metadata,
+            Re = Me.ref,
+            qe = Me.refTarget;
+          ye = this.ensureCapacity(ye, He.offset), ye[He.offset++] = 255, ii.number(ye, Re[Ue], He);
+          for (const [Fe, fe] of ie) {
+            let ie;
+            if (-1 === Fe) {
+              const ee = qe.tmpItems,
+                ie = qe.deletedIndexes;
+              for (let Ke = 0; Ke < ee.length; Ke++) void 0 !== ee[Ke] && !0 !== ie[Ke] && Je(this, ye, Me, Ke, be.ADD, He, !1, !0, oe);
               continue
             }
-            if ("number" === typeof yB) OB = yB;
+            if ("number" === typeof Fe) ie = Fe;
             else {
-              const GB = yB.indexInParent(PB);
-              if (void 0 === GB) continue;
-              if (OB = GB, pB === DB.ADD && QB.getChange(OB) === DB.DELETE) {
-                BB.changes.delete(yB.ref[jB]);
+              const He = Fe.indexInParent(Re);
+              if (void 0 === He) continue;
+              if (ie = He, fe === be.ADD && Me.getChange(ie) === be.DELETE) {
+                ee.changes.delete(Fe.ref[Ue]);
                 continue
               }
             }
-            JB(this, YB, QB, OB, void 0 !== lB[zB](OB) && pB || DB.DELETE, GB, !1, !0, MB)
+            Je(this, ye, Me, ie, void 0 !== qe[ke](ie) && fe || be.DELETE, He, !1, !0, oe)
           }
         }
-        return BB.changes.clear(), YB = this.encode(GB, BB, YB), QB ? hY(YB.subarray(0, OB), YB.subarray(oB, GB.offset)) : YB.subarray(oB, GB.offset)
+        return ee.changes.clear(), ye = this.encode(He, ee, ye), Me ? ny(ye.subarray(0, ie), ye.subarray(Ke, He.offset)) : ye.subarray(Ke, He.offset)
       }
-      encodeUnreliableView(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const DB = GB.offset;
-        return YB = this.encodeUnreliable(GB, BB, YB, DB), hY(YB.subarray(0, OB), YB.subarray(DB, GB.offset))
+      encodeUnreliableView(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const be = He.offset;
+        return ye = this.encodeUnreliable(He, ee, ye, be), ny(ye.subarray(0, ie), ye.subarray(be, He.offset))
       }
-      _emitStreamBroadcast(BB, OB) {
-        const GB = this.root.streamTrees;
-        for (const YB of GB) {
-          const GB = YB,
-            QB = GB[qB],
-            oB = GB[jB];
-          if (void 0 === oB) continue;
-          const yB = GB._stream,
-            JB = yB.broadcastDeletes,
-            MB = yB.broadcastPending,
-            PB = yB.sentBroadcast,
-            lB = JB.size > 0,
-            pB = MB.size > 0,
-            ZB = QB.encDescriptor,
-            NB = ZB.encoder,
-            RB = ZB.metadata;
-          if (lB || pB) {
-            if (BB[OB.offset++] = 255, OO.number(BB, oB, OB), lB) {
-              for (const GB of JB) NB(this, BB, QB, GB, DB.DELETE, OB, !1, !1, RB);
-              JB.clear()
+      _emitStreamBroadcast(ee, ie) {
+        const He = this.root.streamTrees;
+        for (const ye of He) {
+          const He = ye,
+            Me = He[Te],
+            Ke = He[Ue];
+          if (void 0 === Ke) continue;
+          const Fe = He._stream,
+            Je = Fe.broadcastDeletes,
+            oe = Fe.broadcastPending,
+            Re = Fe.sentBroadcast,
+            qe = Je.size > 0,
+            fe = oe.size > 0,
+            pe = Me.encDescriptor,
+            Xe = pe.encoder,
+            ze = pe.metadata;
+          if (qe || fe) {
+            if (ee[ie.offset++] = 255, ii.number(ee, Ke, ie), qe) {
+              for (const He of Je) Xe(this, ee, Me, He, be.DELETE, ie, !1, !1, ze);
+              Je.clear()
             }
-            const YB = yB.maxPerTick,
-              pB = [];
-            let ZB = 0;
-            const WB = [];
-            for (const oB of MB) {
-              if (ZB >= YB) break;
-              const jB = GB[zB](oB);
-              void 0 !== jB ? (NB(this, BB, QB, oB, DB.ADD, OB, !1, !1, RB), PB.add(oB), pB.push(jB), WB.push(oB), ZB++) : WB.push(oB)
+            const ye = Fe.maxPerTick,
+              fe = [];
+            let pe = 0;
+            const Be = [];
+            for (const Ke of oe) {
+              if (pe >= ye) break;
+              const Ue = He[ke](Ke);
+              void 0 !== Ue ? (Xe(this, ee, Me, Ke, be.ADD, ie, !1, !1, ze), Re.add(Ke), fe.push(Ue), Be.push(Ke), pe++) : Be.push(Ke)
             }
-            for (const BB of WB) MB.delete(BB);
-            for (const GB of pB) {
-              const YB = GB[qB];
-              if (void 0 === YB) continue;
-              const QB = GB[jB];
-              if (void 0 === QB) continue;
-              BB[OB.offset++] = 255, OO.number(BB, QB, OB);
-              const oB = YB.encDescriptor,
-                yB = oB.encoder,
-                JB = oB.metadata;
-              YB.forEachLive((GB => {
-                CO.hasUnreliableAtIndex(JB, GB) || yB(this, BB, YB, GB, DB.ADD, OB, !1, !1, JB)
+            for (const ee of Be) oe.delete(ee);
+            for (const He of fe) {
+              const ye = He[Te];
+              if (void 0 === ye) continue;
+              const Me = He[Ue];
+              if (void 0 === Me) continue;
+              ee[ie.offset++] = 255, ii.number(ee, Me, ie);
+              const Ke = ye.encDescriptor,
+                Fe = Ke.encoder,
+                Je = Ke.metadata;
+              ye.forEachLive((He => {
+                Ni.hasUnreliableAtIndex(Je, He) || Fe(this, ee, ye, He, be.ADD, ie, !1, !1, Je)
               }))
             }
           }
-          for (const YB of PB) {
-            const DB = GB[zB](YB);
-            if (void 0 === DB) continue;
-            const QB = DB[qB];
-            if (void 0 === QB || !QB.has()) continue;
-            const oB = DB[jB];
-            if (void 0 === oB) continue;
-            BB[OB.offset++] = 255, OO.number(BB, oB, OB);
-            const yB = QB.encDescriptor,
-              JB = yB.encoder,
-              MB = yB.metadata;
-            QB.forEach(((GB, YB) => {
-              GB < 0 || CO.hasUnreliableAtIndex(MB, GB) || JB(this, BB, QB, GB, YB, OB, !1, !1, MB)
+          for (const ye of Re) {
+            const be = He[ke](ye);
+            if (void 0 === be) continue;
+            const Me = be[Te];
+            if (void 0 === Me || !Me.has()) continue;
+            const Ke = be[Ue];
+            if (void 0 === Ke) continue;
+            ee[ie.offset++] = 255, ii.number(ee, Ke, ie);
+            const Fe = Me.encDescriptor,
+              Je = Fe.encoder,
+              oe = Fe.metadata;
+            Me.forEach(((He, ye) => {
+              He < 0 || Ni.hasUnreliableAtIndex(oe, He) || Je(this, ee, Me, He, ye, ie, !1, !1, oe)
             }))
           }
         }
       }
-      _emitStreamPriority(BB) {
-        const OB = this.root.streamTrees;
-        if (0 === OB.size) return;
-        const GB = BB.id;
-        for (const YB of OB) {
-          const OB = YB,
-            QB = OB._stream,
-            oB = QB.pendingByView.get(GB);
-          if (void 0 === oB || 0 === oB.size) continue;
-          const yB = QB.priorityByView?.get(GB),
-            JB = void 0 !== yB,
-            MB = QB.priority,
-            PB = QB.maxPerTick,
-            lB = [],
-            pB = [];
-          if (JB || void 0 !== MB) {
-            const GB = [],
-              YB = [];
-            let DB = 0;
-            for (const QB of oB) {
-              const oB = OB[zB](QB);
-              if (void 0 === oB) {
-                pB.push(QB);
+      _emitStreamPriority(ee) {
+        const ie = this.root.streamTrees;
+        if (0 === ie.size) return;
+        const He = ee.id;
+        for (const ye of ie) {
+          const ie = ye,
+            Me = ie._stream,
+            Ke = Me.pendingByView.get(He);
+          if (void 0 === Ke || 0 === Ke.size) continue;
+          const Fe = Me.priorityByView?.get(He),
+            Je = void 0 !== Fe,
+            oe = Me.priority,
+            Re = Me.maxPerTick,
+            qe = [],
+            fe = [];
+          if (Je || void 0 !== oe) {
+            const He = [],
+              ye = [];
+            let be = 0;
+            for (const Me of Ke) {
+              const Ke = ie[ke](Me);
+              if (void 0 === Ke) {
+                fe.push(Me);
                 continue
               }
-              const jB = JB ? yB(oB) : MB(BB, oB);
-              if (DB < PB) {
-                let BB = DB++;
-                for (; BB > 0 && YB[BB - 1] < jB;) YB[BB] = YB[BB - 1], GB[BB] = GB[BB - 1], BB--;
-                YB[BB] = jB, GB[BB] = QB
-              } else if (jB > YB[PB - 1]) {
-                let BB = PB - 1;
-                for (; BB > 0 && YB[BB - 1] < jB;) YB[BB] = YB[BB - 1], GB[BB] = GB[BB - 1], BB--;
-                YB[BB] = jB, GB[BB] = QB
+              const Ue = Je ? Fe(Ke) : oe(ee, Ke);
+              if (be < Re) {
+                let ee = be++;
+                for (; ee > 0 && ye[ee - 1] < Ue;) ye[ee] = ye[ee - 1], He[ee] = He[ee - 1], ee--;
+                ye[ee] = Ue, He[ee] = Me
+              } else if (Ue > ye[Re - 1]) {
+                let ee = Re - 1;
+                for (; ee > 0 && ye[ee - 1] < Ue;) ye[ee] = ye[ee - 1], He[ee] = He[ee - 1], ee--;
+                ye[ee] = Ue, He[ee] = Me
               }
             }
-            for (let BB = 0; BB < DB; BB++) lB.push(GB[BB])
+            for (let ee = 0; ee < be; ee++) qe.push(He[ee])
           } else
-            for (const BB of oB) {
-              if (lB.length >= PB) break;
-              lB.push(BB)
+            for (const ee of Ke) {
+              if (qe.length >= Re) break;
+              qe.push(ee)
             }
-          for (const BB of pB) oB.delete(BB);
-          const ZB = lB.length;
-          let NB = QB.sentByView.get(GB);
-          void 0 === NB && (NB = new Set, QB.sentByView.set(GB, NB));
-          for (let GB = 0; GB < ZB; GB++) {
-            const YB = lB[GB],
-              QB = OB[zB](YB);
-            if (void 0 === QB) {
-              oB.delete(YB);
+          for (const ee of fe) Ke.delete(ee);
+          const pe = qe.length;
+          let Xe = Me.sentByView.get(He);
+          void 0 === Xe && (Xe = new Set, Me.sentByView.set(He, Xe));
+          for (let He = 0; He < pe; He++) {
+            const ye = qe[He],
+              Me = ie[ke](ye);
+            if (void 0 === Me) {
+              Ke.delete(ye);
               continue
             }
-            BB._addImmediate(QB);
-            const yB = QB[qB];
-            if (void 0 !== yB) {
-              const OB = QB[jB];
-              let GB = BB.changes.get(OB);
-              void 0 === GB && (GB = new Map, BB.changes.set(OB, GB));
-              const YB = yB.metadata;
-              yB.forEachLive((BB => {
-                CO.hasUnreliableAtIndex(YB, BB) || GB.set(BB, DB.ADD)
+            ee._addImmediate(Me);
+            const Fe = Me[Te];
+            if (void 0 !== Fe) {
+              const ie = Me[Ue];
+              let He = ee.changes.get(ie);
+              void 0 === He && (He = new Map, ee.changes.set(ie, He));
+              const ye = Fe.metadata;
+              Fe.forEachLive((ee => {
+                Ni.hasUnreliableAtIndex(ye, ee) || He.set(ee, be.ADD)
               }))
             }
-            oB.delete(YB), NB.add(YB)
+            Ke.delete(ye), Xe.add(ye)
           }
         }
       }
       discardChanges() {
-        const BB = this.root.changes;
-        let OB = BB.next;
-        const GB = this.root;
-        for (; OB;) {
-          const BB = OB.next;
-          OB.changeTree.endEncode(), GB.releaseNode(OB), OB = BB
+        const ee = this.root.changes;
+        let ie = ee.next;
+        const He = this.root;
+        for (; ie;) {
+          const ee = ie.next;
+          ie.changeTree.endEncode(), He.releaseNode(ie), ie = ee
         }
-        BB.next = void 0, BB.tail = void 0
+        ee.next = void 0, ee.tail = void 0
       }
       discardUnreliableChanges() {
-        const BB = this.root.unreliableChanges;
-        let OB = BB.next;
-        const GB = this.root;
-        for (; OB;) {
-          const BB = OB.next;
-          OB.changeTree.endEncodeUnreliable(), GB.releaseNode(OB), OB = BB
+        const ee = this.root.unreliableChanges;
+        let ie = ee.next;
+        const He = this.root;
+        for (; ie;) {
+          const ee = ie.next;
+          ie.changeTree.endEncodeUnreliable(), He.releaseNode(ie), ie = ee
         }
-        BB.next = void 0, BB.tail = void 0
+        ee.next = void 0, ee.tail = void 0
       }
-      tryEncodeTypeId(BB, OB, GB, YB) {
-        const DB = this.context.getTypeId(OB),
-          QB = this.context.getTypeId(GB);
-        void 0 !== QB ? DB !== QB && (BB[YB.offset++] = 213, OO.number(BB, QB, YB)) : console.warn(`@colyseus/schema WARNING: Class "${GB.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(ee, ie, He, ye) {
+        const be = this.context.getTypeId(ie),
+          Me = this.context.getTypeId(He);
+        void 0 !== Me ? be !== Me && (ee[ye.offset++] = 213, ii.number(ee, Me, ye)) : console.warn(`@colyseus/schema WARNING: Class "${He.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const BB = this.root;
-        if (0 === BB.streamTrees.size) return !1;
-        const OB = 0 === BB.activeViews.size;
-        for (const GB of BB.streamTrees)
-          if (OB ? mO(GB) : uO(GB, BB)) return !0;
+        const ee = this.root;
+        if (0 === ee.streamTrees.size) return !1;
+        const ie = 0 === ee.activeViews.size;
+        for (const He of ee.streamTrees)
+          if (ie ? Yi(He) : Ai(He, ee)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class eY extends Error {
-      constructor(BB) {
-        super(BB), this.name = "DecodingWarning"
+    class sy extends Error {
+      constructor(ee) {
+        super(ee), this.name = "DecodingWarning"
       }
     }
-    const TY = {
+    const Iy = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class bY {
+    class hy {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(BB, OB) {
-        let GB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(BB, OB), void 0 === OB[jB] ? (TY.value = BB, Object.defineProperty(OB, jB, TY)) : OB[jB] !== BB && (OB[jB] = BB), GB && (this.refCount[BB] = (this.refCount[BB] || 0) + 1), this.deletedRefs.has(BB) && this.deletedRefs.delete(BB)
+      addRef(ee, ie) {
+        let He = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(ee, ie), void 0 === ie[Ue] ? (Iy.value = ee, Object.defineProperty(ie, Ue, Iy)) : ie[Ue] !== ee && (ie[Ue] = ee), He && (this.refCount[ee] = (this.refCount[ee] || 0) + 1), this.deletedRefs.has(ee) && this.deletedRefs.delete(ee)
       }
-      removeRef(BB) {
-        const OB = this.refCount[BB];
-        if (void 0 !== OB)
-          if (0 !== OB)(this.refCount[BB] = OB - 1) <= 0 && this.deletedRefs.add(BB);
+      removeRef(ee) {
+        const ie = this.refCount[ee];
+        if (void 0 !== ie)
+          if (0 !== ie)(this.refCount[ee] = ie - 1) <= 0 && this.deletedRefs.add(ee);
           else try {
-            const OB = this.refs.get(BB);
-            throw new eY(`trying to remove refId '${BB}' with 0 refCount (${OB.constructor.name}: ${JSON.stringify(OB)})`)
-          } catch (QD) {
-            console.warn(QD)
+            const ie = this.refs.get(ee);
+            throw new sy(`trying to remove refId '${ee}' with 0 refCount (${ie.constructor.name}: ${JSON.stringify(ie)})`)
+          } catch (Ub) {
+            console.warn(Ub)
           } else try {
-            throw new eY("trying to remove refId that doesn't exist: " + BB)
-          } catch (QD) {
-            console.warn(QD)
+            throw new sy("trying to remove refId that doesn't exist: " + ee)
+          } catch (Ub) {
+            console.warn(Ub)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((BB => {
-          if (this.refCount[BB] > 0) return;
-          const OB = this.refs.get(BB),
-            GB = OB.constructor[Symbol.metadata];
-          if (null != GB)
-            for (const YB in GB) {
-              const BB = OB[GB[YB].name];
-              if ("object" === typeof BB && BB) {
-                const OB = BB[jB];
-                void 0 === OB || this.deletedRefs.has(OB) || this.removeRef(OB)
+        this.deletedRefs.forEach((ee => {
+          if (this.refCount[ee] > 0) return;
+          const ie = this.refs.get(ee),
+            He = ie.constructor[Symbol.metadata];
+          if (null != He)
+            for (const ye in He) {
+              const ee = ie[He[ye].name];
+              if ("object" === typeof ee && ee) {
+                const ie = ee[Ue];
+                void 0 === ie || this.deletedRefs.has(ie) || this.removeRef(ie)
               }
-            } else "function" === typeof OB[ZB] && Array.from(OB.values()).forEach((BB => {
-              const OB = BB[jB];
-              void 0 === OB || this.deletedRefs.has(OB) || this.removeRef(OB)
+            } else "function" === typeof ie[pe] && Array.from(ie.values()).forEach((ee => {
+              const ie = ee[Ue];
+              void 0 === ie || this.deletedRefs.has(ie) || this.removeRef(ie)
             }));
-          this.refs.delete(BB), delete this.refCount[BB], delete this.callbacks[BB]
+          this.refs.delete(ee), delete this.refCount[ee], delete this.callbacks[ee]
         })), this.deletedRefs.clear()
       }
-      addCallback(BB, OB, GB) {
-        if (void 0 === BB) {
-          const BB = "number" === typeof OB ? DB[OB] : OB;
-          throw new Error(`Can't addCallback on '${BB}' (refId is undefined)`)
+      addCallback(ee, ie, He) {
+        if (void 0 === ee) {
+          const ee = "number" === typeof ie ? be[ie] : ie;
+          throw new Error(`Can't addCallback on '${ee}' (refId is undefined)`)
         }
-        return this.callbacks[BB] || (this.callbacks[BB] = {}), this.callbacks[BB][OB] || (this.callbacks[BB][OB] = []), this.callbacks[BB][OB].push(GB), () => this.removeCallback(BB, OB, GB)
+        return this.callbacks[ee] || (this.callbacks[ee] = {}), this.callbacks[ee][ie] || (this.callbacks[ee][ie] = []), this.callbacks[ee][ie].push(He), () => this.removeCallback(ee, ie, He)
       }
-      removeCallback(BB, OB, GB) {
-        const YB = this.callbacks?.[BB]?.[OB]?.indexOf(GB);
-        void 0 !== YB && -1 !== YB && IY(this.callbacks[BB][OB], YB)
+      removeCallback(ee, ie, He) {
+        const ye = this.callbacks?.[ee]?.[ie]?.indexOf(He);
+        void 0 !== ye && -1 !== ye && ay(this.callbacks[ee][ie], ye)
       }
     }
-    class CY {
+    class Ny {
       context;
       state;
       root;
       currentRefId = 0;
-      Km;
+      wV;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(BB, OB) {
-        this.setState(BB), this.context = OB || new EO(BB.constructor)
+      constructor(ee, ie) {
+        this.setState(ee), this.context = ie || new mi(ee.constructor)
       }
-      setState(BB) {
-        this.state = BB, this.root = new bY, this.root.addRef(0, BB)
+      setState(ee) {
+        this.state = ee, this.root = new hy, this.root.addRef(0, ee)
       }
-      decode(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const DB = void 0 !== this.Km ? [] : null,
-          QB = this.root,
-          oB = BB.byteLength;
-        let jB = GB.constructor[MB];
-        for (this.currentRefId = 0; OB.offset < oB;) {
-          if (BB[OB.offset] == YB) {
-            OB.offset++, GB[AB]?.();
-            const YB = WO.number(BB, OB),
-              DB = QB.refs.get(YB);
-            DB ? (GB = DB, jB = GB.constructor[MB], this.currentRefId = YB) : (console.error(`"refId" not found: ${YB}`, {
-              previousRef: GB,
+          He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const be = void 0 !== this.wV ? [] : null,
+          Me = this.root,
+          Ke = ee.byteLength;
+        let Ue = He.constructor[oe];
+        for (this.currentRefId = 0; ie.offset < Ke;) {
+          if (ee[ie.offset] == ye) {
+            ie.offset++, He[Ee]?.();
+            const ye = Ei.number(ee, ie),
+              be = Me.refs.get(ye);
+            be ? (He = be, Ue = He.constructor[oe], this.currentRefId = ye) : (console.error(`"refId" not found: ${ye}`, {
+              previousRef: He,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(BB, OB, oB));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(ee, ie, Ke));
             continue
-          } - 1 !== jB(this, BB, OB, GB, DB) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(BB, OB, oB))
+          } - 1 !== Ue(this, ee, ie, He, be) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(ee, ie, Ke))
         }
-        return GB[AB]?.(), null !== this.resyncVisited && function(BB, OB) {
-          BB.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : EG(BB, BB.state, new Set, OB)
-        }(this, DB), null !== DB && this.Km?.(DB), QB.garbageCollectDeletedRefs(), DB
+        return He[Ee]?.(), null !== this.resyncVisited && function(ee, ie) {
+          ee.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : lH(ee, ee.state, new Set, ie)
+        }(this, be), null !== be && this.wV?.(be), Me.garbageCollectDeletedRefs(), be
       }
-      decodeResync(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(BB, OB)
+          return this.decode(ee, ie)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(BB, OB, GB) {
+      skipCurrentStructure(ee, ie, He) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const DB = {
-          offset: OB.offset
+        const be = {
+          offset: ie.offset
         };
-        for (; OB.offset < GB && (BB[OB.offset] !== YB || (DB.offset = OB.offset + 1, !this.root.refs.has(WO.number(BB, DB))));) OB.offset++
+        for (; ie.offset < He && (ee[ie.offset] !== ye || (be.offset = ie.offset + 1, !this.root.refs.has(Ei.number(ee, be))));) ie.offset++
       }
-      getInstanceType(BB, OB, GB) {
-        let YB;
-        if (213 === BB[OB.offset]) {
-          OB.offset++;
-          const GB = WO.number(BB, OB);
-          YB = this.context.get(GB)
+      getInstanceType(ee, ie, He) {
+        let ye;
+        if (213 === ee[ie.offset]) {
+          ie.offset++;
+          const He = Ei.number(ee, ie);
+          ye = this.context.get(He)
         }
-        return YB || GB
+        return ye || He
       }
-      createInstanceOfType(BB) {
-        return BB.initializeForDecoder()
+      createInstanceOfType(ee) {
+        return ee.initializeForDecoder()
       }
-      removeChildRefs(BB, OB) {
-        const GB = "string" !== typeof BB[ZB],
-          YB = BB[jB];
-        BB.forEach(((QB, oB) => {
-          OB?.push({
-            ref: BB,
-            refId: YB,
-            op: DB.DELETE,
-            field: oB,
+      removeChildRefs(ee, ie) {
+        const He = "string" !== typeof ee[pe],
+          ye = ee[Ue];
+        ee.forEach(((Me, Ke) => {
+          ie?.push({
+            ref: ee,
+            refId: ye,
+            op: be.DELETE,
+            field: Ke,
             value: void 0,
-            previousValue: QB
-          }), GB && this.root.removeRef(QB[jB])
+            previousValue: Me
+          }), He && this.root.removeRef(Me[Ue])
         }))
       }
     }
-    const HY = kY({
-        min: lY.float64(),
-        max: lY.float64(),
-        bits: lY.uint8(),
-        mode: lY.uint8()
+    const Gy = Dy({
+        min: Ty.float64(),
+        max: Ty.float64(),
+        bits: Ty.uint8(),
+        mode: Ty.uint8()
       }, "QuantizedDescriptor"),
-      vY = kY({
-        name: lY.string(),
-        type: lY.string(),
-        referencedType: lY.number(),
-        childPrimitive: lY.string(),
-        quantized: lY.ref(HY).optional()
+      ry = Dy({
+        name: Ty.string(),
+        type: Ty.string(),
+        referencedType: Ty.number(),
+        childPrimitive: Ty.string(),
+        quantized: Ty.ref(Gy).optional()
       }, "ReflectionField"),
-      sY = kY({
-        id: lY.number(),
-        extendsId: lY.number(),
-        fields: lY.array(vY)
+      Qy = Dy({
+        id: Ty.number(),
+        extendsId: Ty.number(),
+        fields: Ty.array(ry)
       }, "ReflectionType"),
-      xY = kY({
-        types: lY.array(sY),
-        rootType: lY.number()
+      eb = Dy({
+        types: Ty.array(Qy),
+        rootType: Ty.number()
       }, "Reflection");
 
-    function tY(BB) {
-      const OB = BB.root,
-        GB = OB.callbacks,
-        YB = new WeakMap;
-      let QB;
+    function ib(ee) {
+      const ie = ee.root,
+        He = ie.callbacks,
+        ye = new WeakMap;
+      let Me;
 
-      function oB(BB, GB) {
-        let JB = GB.instance?.constructor[Symbol.metadata] || BB,
-          MB = GB.instance && "function" === typeof GB.instance.forEach || BB && !KY.is(BB);
-        if (JB && !MB) {
-          const BB = function(BB, DB, oB, yB) {
-            return yB && void 0 !== GB.instance[DB] && !YB.has(QB) && oB(GB.instance[DB], void 0), OB.addCallback(BB[jB], DB, oB)
+      function Ke(ee, He) {
+        let Je = He.instance?.constructor[Symbol.metadata] || ee,
+          oe = He.instance && "function" === typeof He.instance.forEach || ee && !Ay.is(ee);
+        if (Je && !oe) {
+          const ee = function(ee, be, Ke, Fe) {
+            return Fe && void 0 !== He.instance[be] && !ye.has(Me) && Ke(He.instance[be], void 0), ie.addCallback(ee[Ue], be, Ke)
           };
           return new Proxy({
-            listen: function(OB, DB) {
-              let oB = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (GB.instance) return BB(GB.instance, OB, DB, oB);
+            listen: function(ie, be) {
+              let Ke = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (He.instance) return ee(He.instance, ie, be, Ke);
               {
-                let jB = () => {};
-                return GB.onInstanceAvailable(((GB, yB) => {
-                  jB = BB(GB, OB, DB, oB && yB && !YB.has(QB))
-                })), () => jB()
+                let Ue = () => {};
+                return He.onInstanceAvailable(((He, Fe) => {
+                  Ue = ee(He, ie, be, Ke && Fe && !ye.has(Me))
+                })), () => Ue()
               }
             },
-            onChange: function(BB) {
-              return OB.addCallback(GB.instance[jB], DB.REPLACE, BB)
+            onChange: function(ee) {
+              return ie.addCallback(He.instance[Ue], be.REPLACE, ee)
             },
-            bindTo: function(BB, YB) {
-              return YB || (YB = Object.keys(JB).map((BB => JB[BB].name))), OB.addCallback(GB.instance[jB], DB.REPLACE, (() => {
-                YB.forEach((OB => BB[OB] = GB.instance[OB]))
+            bindTo: function(ee, ye) {
+              return ye || (ye = Object.keys(Je).map((ee => Je[ee].name))), ie.addCallback(He.instance[Ue], be.REPLACE, (() => {
+                ye.forEach((ie => ee[ie] = He.instance[ie]))
               }))
             }
           }, {
-            get(BB, OB) {
-              const YB = JB[JB[OB]];
-              if (YB) {
-                const BB = GB.instance?.[OB],
-                  DB = YB => {
-                    const DB = yB(GB.instance).listen(OB, ((BB, OB) => {
-                      YB(BB, !1), DB?.()
+            get(ee, ie) {
+              const ye = Je[Je[ie]];
+              if (ye) {
+                const ee = He.instance?.[ie],
+                  be = ye => {
+                    const be = Fe(He.instance).listen(ie, ((ee, ie) => {
+                      ye(ee, !1), be?.()
                     }), !1);
-                    void 0 !== BB?.[jB] && YB(BB, !0)
+                    void 0 !== ee?.[Ue] && ye(ee, !0)
                   };
-                return oB(YB.type, {
-                  instance: void 0 !== BB?.[jB] && BB,
-                  parentInstance: GB.instance,
-                  onInstanceAvailable: DB
+                return Ke(ye.type, {
+                  instance: void 0 !== ee?.[Ue] && ee,
+                  parentInstance: He.instance,
+                  onInstanceAvailable: be
                 })
               }
-              return BB[OB]
+              return ee[ie]
             },
-            has: (BB, OB) => void 0 !== JB[OB],
-            set(BB, OB, GB) {
+            has: (ee, ie) => void 0 !== Je[ie],
+            set(ee, ie, He) {
               throw new Error("not allowed")
             },
-            deleteProperty(BB, OB) {
+            deleteProperty(ee, ie) {
               throw new Error("not allowed")
             }
           })
         } {
-          const BB = function(BB, GB, oB) {
-              return oB && BB.forEach(((BB, OB) => GB(BB, OB))), OB.addCallback(BB[jB], DB.ADD, ((BB, OB) => {
-                YB.set(GB, !0), QB = GB, GB(BB, OB), YB.delete(GB), QB = void 0
+          const ee = function(ee, He, Ke) {
+              return Ke && ee.forEach(((ee, ie) => He(ee, ie))), ie.addCallback(ee[Ue], be.ADD, ((ee, ie) => {
+                ye.set(He, !0), Me = He, He(ee, ie), ye.delete(He), Me = void 0
               }))
             },
-            oB = function(BB, GB) {
-              return OB.addCallback(BB[jB], DB.DELETE, GB)
+            Ke = function(ee, He) {
+              return ie.addCallback(ee[Ue], be.DELETE, He)
             },
-            yB = function(BB, GB) {
-              return OB.addCallback(BB[jB], DB.REPLACE, GB)
+            Fe = function(ee, He) {
+              return ie.addCallback(ee[Ue], be.REPLACE, He)
             };
           return new Proxy({
-            OW: function(OB) {
-              let DB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (GB.instance) return BB(GB.instance, OB, DB && !YB.has(QB));
-              if (GB.onInstanceAvailable) {
-                let oB = () => {};
-                return GB.onInstanceAvailable(((GB, jB) => {
-                  oB = BB(GB, OB, DB && jB && !YB.has(QB))
-                })), () => oB()
+            lE: function(ie) {
+              let be = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (He.instance) return ee(He.instance, ie, be && !ye.has(Me));
+              if (He.onInstanceAvailable) {
+                let Ke = () => {};
+                return He.onInstanceAvailable(((He, Ue) => {
+                  Ke = ee(He, ie, be && Ue && !ye.has(Me))
+                })), () => Ke()
               }
             },
-            Qm: function(BB) {
-              if (GB.instance) return oB(GB.instance, BB);
-              if (GB.onInstanceAvailable) {
-                let OB = () => {};
-                return GB.onInstanceAvailable((GB => {
-                  OB = oB(GB, BB)
-                })), () => OB()
+            JV: function(ee) {
+              if (He.instance) return Ke(He.instance, ee);
+              if (He.onInstanceAvailable) {
+                let ie = () => {};
+                return He.onInstanceAvailable((He => {
+                  ie = Ke(He, ee)
+                })), () => ie()
               }
             },
-            onChange: function(BB) {
-              if (GB.instance) return yB(GB.instance, BB);
-              if (GB.onInstanceAvailable) {
-                let OB = () => {};
-                return GB.onInstanceAvailable((GB => {
-                  OB = yB(GB, BB)
-                })), () => OB()
+            onChange: function(ee) {
+              if (He.instance) return Fe(He.instance, ee);
+              if (He.onInstanceAvailable) {
+                let ie = () => {};
+                return He.onInstanceAvailable((He => {
+                  ie = Fe(He, ee)
+                })), () => ie()
               }
             }
           }, {
-            get(BB, OB) {
-              if (!BB[OB]) throw new Error(`Can't access '${OB}' through callback proxy. access the instance directly.`);
-              return BB[OB]
+            get(ee, ie) {
+              if (!ee[ie]) throw new Error(`Can't access '${ie}' through callback proxy. access the instance directly.`);
+              return ee[ie]
             },
-            has: (BB, OB) => void 0 !== BB[OB],
-            set(BB, OB, GB) {
+            has: (ee, ie) => void 0 !== ee[ie],
+            set(ee, ie, He) {
               throw new Error("not allowed")
             },
-            deleteProperty(BB, OB) {
+            deleteProperty(ee, ie) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function yB(BB) {
-        return oB(void 0, {
-          instance: BB
+      function Fe(ee) {
+        return Ke(void 0, {
+          instance: ee
         })
       }
-      return BB.Km = function(BB) {
-        const OB = new Set;
-        for (let YB = 0, QB = BB.length; YB < QB; YB++) {
-          const QB = BB[YB],
-            oB = QB.refId,
-            yB = QB.ref,
-            JB = GB[oB];
-          if (JB) {
-            if ((QB.op & DB.DELETE) === DB.DELETE && KY.isSchema(QB.previousValue)) {
-              const BB = GB[QB.previousValue[jB]]?.[DB.DELETE];
-              for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB]()
+      return ee.wV = function(ee) {
+        const ie = new Set;
+        for (let ye = 0, Me = ee.length; ye < Me; ye++) {
+          const Me = ee[ye],
+            Ke = Me.refId,
+            Fe = Me.ref,
+            Je = He[Ke];
+          if (Je) {
+            if ((Me.op & be.DELETE) === be.DELETE && Ay.isSchema(Me.previousValue)) {
+              const ee = He[Me.previousValue[Ue]]?.[be.DELETE];
+              for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie]()
             }
-            if (KY.isSchema(yB)) {
-              if (!OB.has(oB)) {
-                const BB = JB?.[DB.REPLACE];
-                for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB]()
+            if (Ay.isSchema(Fe)) {
+              if (!ie.has(Ke)) {
+                const ee = Je?.[be.REPLACE];
+                for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie]()
               }
-              if (JB.hasOwnProperty(QB.field)) {
-                const BB = JB[QB.field];
-                for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB](QB.value, QB.previousValue)
+              if (Je.hasOwnProperty(Me.field)) {
+                const ee = Je[Me.field];
+                for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie](Me.value, Me.previousValue)
               }
             } else {
-              if ((QB.op & DB.DELETE) === DB.DELETE) {
-                if (void 0 !== QB.previousValue) {
-                  const BB = JB[DB.DELETE];
-                  for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB](QB.previousValue, QB.dynamicIndex ?? QB.field)
+              if ((Me.op & be.DELETE) === be.DELETE) {
+                if (void 0 !== Me.previousValue) {
+                  const ee = Je[be.DELETE];
+                  for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie](Me.previousValue, Me.dynamicIndex ?? Me.field)
                 }
-                if ((QB.op & DB.ADD) === DB.ADD) {
-                  const BB = JB[DB.ADD];
-                  for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB](QB.value, QB.dynamicIndex ?? QB.field)
+                if ((Me.op & be.ADD) === be.ADD) {
+                  const ee = Je[be.ADD];
+                  for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie](Me.value, Me.dynamicIndex ?? Me.field)
                 }
-              } else if ((QB.op & DB.ADD) === DB.ADD && QB.previousValue !== QB.value) {
-                const BB = JB[DB.ADD];
-                for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB](QB.value, QB.dynamicIndex ?? QB.field)
+              } else if ((Me.op & be.ADD) === be.ADD && Me.previousValue !== Me.value) {
+                const ee = Je[be.ADD];
+                for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie](Me.value, Me.dynamicIndex ?? Me.field)
               }
-              if (QB.value !== QB.previousValue && (void 0 !== QB.value || void 0 !== QB.previousValue)) {
-                const BB = JB[DB.REPLACE];
-                for (let OB = BB?.length - 1; OB >= 0; OB--) BB[OB](QB.value, QB.dynamicIndex ?? QB.field)
+              if (Me.value !== Me.previousValue && (void 0 !== Me.value || void 0 !== Me.previousValue)) {
+                const ee = Je[be.REPLACE];
+                for (let ie = ee?.length - 1; ie >= 0; ie--) ee[ie](Me.value, Me.dynamicIndex ?? Me.field)
               }
             }
-            OB.add(oB)
+            ie.add(Ke)
           }
         }
-      }, yB
+      }, Fe
     }
 
-    function BD(BB, OB) {
-      BB.Km = OB
+    function Hb(ee, ie) {
+      ee.wV = ie
     }
-    xY.encode = function(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    eb.encode = function(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const GB = BB.context,
-        YB = new xY,
-        DB = new aY(YB),
-        QB = GB.schemas.get(BB.state.constructor);
-      QB > 0 && (YB.rootType = QB);
-      const oB = new Set,
-        jB = {},
-        yB = BB => {
-          if (void 0 === BB.extendsId || oB.has(BB.extendsId)) {
-            oB.add(BB.id), YB.types.push(BB);
-            const OB = jB[BB.id];
-            void 0 !== OB && (delete jB[BB.id], OB.forEach((BB => yB(BB))))
-          } else void 0 === jB[BB.extendsId] && (jB[BB.extendsId] = []), jB[BB.extendsId].push(BB)
+      const He = ee.context,
+        ye = new eb,
+        be = new jy(ye),
+        Me = He.schemas.get(ee.state.constructor);
+      Me > 0 && (ye.rootType = Me);
+      const Ke = new Set,
+        Ue = {},
+        Fe = ee => {
+          if (void 0 === ee.extendsId || Ke.has(ee.extendsId)) {
+            Ke.add(ee.id), ye.types.push(ee);
+            const ie = Ue[ee.id];
+            void 0 !== ie && (delete Ue[ee.id], ie.forEach((ee => Fe(ee))))
+          } else void 0 === Ue[ee.extendsId] && (Ue[ee.extendsId] = []), Ue[ee.extendsId].push(ee)
         };
-      GB.schemas.forEach(((BB, OB) => {
-        const YB = new sY;
-        YB.id = Number(BB);
-        const DB = Object.getPrototypeOf(OB);
-        DB !== KY && (YB.extendsId = GB.schemas.get(DB));
-        const QB = OB[Symbol.metadata];
-        if (QB !== DB[Symbol.metadata]) {
-          const BB = QB[kB] ?? -1;
-          for (let OB = 0; OB <= BB; OB++) {
-            const BB = QB[OB];
-            if (void 0 === BB) continue;
-            const DB = BB.name;
-            if (!Object.prototype.hasOwnProperty.call(QB, DB)) continue;
-            const oB = new vY;
-            let jB;
-            if (oB.name = DB, "string" === typeof BB.type) jB = BB.type;
-            else if (gO(BB.type)) {
-              const OB = BB.type.quantized;
-              jB = "quantized";
-              const GB = new HY;
-              GB.min = OB.min, GB.max = OB.max, GB.bits = OB.bits, GB.mode = OB.wrap ? 1 : 0, oB.quantized = GB
+      He.schemas.forEach(((ee, ie) => {
+        const ye = new Qy;
+        ye.id = Number(ee);
+        const be = Object.getPrototypeOf(ie);
+        be !== Ay && (ye.extendsId = He.schemas.get(be));
+        const Me = ie[Symbol.metadata];
+        if (Me !== be[Symbol.metadata]) {
+          const ee = Me[Ze] ?? -1;
+          for (let ie = 0; ie <= ee; ie++) {
+            const ee = Me[ie];
+            if (void 0 === ee) continue;
+            const be = ee.name;
+            if (!Object.prototype.hasOwnProperty.call(Me, be)) continue;
+            const Ke = new ry;
+            let Ue;
+            if (Ke.name = be, "string" === typeof ee.type) Ue = ee.type;
+            else if (Li(ee.type)) {
+              const ie = ee.type.quantized;
+              Ue = "quantized";
+              const He = new Gy;
+              He.min = ie.min, He.max = ie.max, He.bits = ie.bits, He.mode = ie.wrap ? 1 : 0, Ke.quantized = He
             } else {
-              let OB;
-              KY.is(BB.type) ? (jB = "ref", OB = BB.type) : (jB = Object.keys(BB.type)[0], "string" === typeof BB.type[jB] ? oB.childPrimitive = BB.type[jB] : OB = BB.type[jB]), oB.referencedType = OB ? GB.getTypeId(OB) : -1
+              let ie;
+              Ay.is(ee.type) ? (Ue = "ref", ie = ee.type) : (Ue = Object.keys(ee.type)[0], "string" === typeof ee.type[Ue] ? Ke.childPrimitive = ee.type[Ue] : ie = ee.type[Ue]), Ke.referencedType = ie ? He.getTypeId(ie) : -1
             }
-            oB.type = jB, YB.fields.push(oB)
+            Ke.type = Ue, ye.fields.push(Ke)
           }
         }
-        yB(YB)
+        Fe(ye)
       }));
-      for (const JB in jB) jB[JB].forEach((BB => YB.types.push(BB)));
-      return DB.encodeAll(OB).slice(0, OB.offset)
-    }, xY.decode = function(BB, OB) {
-      const GB = new xY;
-      new CY(GB).decode(BB, OB);
-      const YB = new EO;
-      GB.types.forEach((BB => {
-        const OB = YB.get(BB.extendsId) ?? KY,
-          GB = class extends OB {};
-        EO.register(GB), YB.add(GB, BB.id)
+      for (const Je in Ue) Ue[Je].forEach((ee => ye.types.push(ee)));
+      return be.encodeAll(ie).slice(0, ie.offset)
+    }, eb.decode = function(ee, ie) {
+      const He = new eb;
+      new Ny(He).decode(ee, ie);
+      const ye = new mi;
+      He.types.forEach((ee => {
+        const ie = ye.get(ee.extendsId) ?? Ay,
+          He = class extends ie {};
+        mi.register(He), ye.add(He, ee.id)
       }), {});
-      GB.types.forEach((BB => {
-        const OB = YB.get(BB.id),
-          DB = CO.initialize(OB),
-          QB = [];
-        let oB = BB;
+      He.types.forEach((ee => {
+        const ie = ye.get(ee.id),
+          be = Ni.initialize(ie),
+          Me = [];
+        let Ke = ee;
         do {
-          QB.push(oB), oB = GB.types.find((BB => BB.id === oB.extendsId))
-        } while (oB);
-        let jB = 0;
-        QB.reverse().forEach((BB => {
-          ((BB, OB, GB) => {
-            OB.fields.forEach(((OB, DB) => {
-              const QB = GB + DB;
-              if (void 0 !== OB.quantized) {
-                const GB = OB.quantized;
-                CO.addField(BB, QB, OB.name, {
-                  quantized: LO({
-                    min: GB.min,
-                    max: GB.max,
-                    bits: GB.bits,
-                    mode: 1 === GB.mode ? "wrap" : "clamp"
+          Me.push(Ke), Ke = He.types.find((ee => ee.id === Ke.extendsId))
+        } while (Ke);
+        let Ue = 0;
+        Me.reverse().forEach((ee => {
+          ((ee, ie, He) => {
+            ie.fields.forEach(((ie, be) => {
+              const Me = He + be;
+              if (void 0 !== ie.quantized) {
+                const He = ie.quantized;
+                Ni.addField(ee, Me, ie.name, {
+                  quantized: xi({
+                    min: He.min,
+                    max: He.max,
+                    bits: He.bits,
+                    mode: 1 === He.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== OB.referencedType) {
-                const GB = OB.type,
-                  DB = YB.get(OB.referencedType) ?? OB.childPrimitive;
-                "ref" === GB ? CO.addField(BB, QB, OB.name, DB) : CO.addField(BB, QB, OB.name, {
-                  [GB]: DB
+              } else if (void 0 !== ie.referencedType) {
+                const He = ie.type,
+                  be = ye.get(ie.referencedType) ?? ie.childPrimitive;
+                "ref" === He ? Ni.addField(ee, Me, ie.name, be) : Ni.addField(ee, Me, ie.name, {
+                  [He]: be
                 })
-              } else CO.addField(BB, QB, OB.name, OB.type)
+              } else Ni.addField(ee, Me, ie.name, ie.type)
             }))
-          })(DB, BB, jB), jB += BB.fields.length
+          })(be, ee, Ue), Ue += ee.fields.length
         }))
       }));
-      const DB = new(YB.get(GB.rootType || 0));
-      return new CY(DB, YB)
-    }, xY.makeEncodable = function(BB) {
-      const OB = BB[Symbol.metadata];
-      if (!OB) return BB;
-      const GB = OB[kB];
-      if (void 0 === GB) return BB;
-      for (let YB = 0; YB <= GB; YB++) {
-        const GB = OB[YB];
-        GB && CO.defineField(BB, OB, YB, GB.name, GB.type)
+      const be = new(ye.get(He.rootType || 0));
+      return new Ny(be, ye)
+    }, eb.makeEncodable = function(ee) {
+      const ie = ee[Symbol.metadata];
+      if (!ie) return ee;
+      const He = ie[Ze];
+      if (void 0 === He) return ee;
+      for (let ye = 0; ye <= He; ye++) {
+        const He = ie[ye];
+        He && Ni.defineField(ee, ie, ye, He.name, He.type)
       }
-      return Object.prototype.hasOwnProperty.call(BB, UB) && delete BB[UB], BB
+      return Object.prototype.hasOwnProperty.call(ee, We) && delete ee[We], ee
     };
-    class OD {
-      yP;
+    class yb {
+      kR;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(BB) {
-        this.yP = BB, this.yP.Km = this.Km.bind(this)
+      constructor(ee) {
+        this.kR = ee, this.kR.wV = this.wV.bind(this)
       }
       get callbacks() {
-        return this.yP.root.callbacks
+        return this.kR.root.callbacks
       }
       get state() {
-        return this.yP.state
+        return this.kR.state
       }
-      addCallback(BB, OB, GB) {
-        return this.yP.root.addCallback(BB, OB, GB)
+      addCallback(ee, ie, He) {
+        return this.kR.root.addCallback(ee, ie, He)
       }
-      addCallbackOrWaitCollectionAvailable(BB, OB, GB, YB) {
-        let QB = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          oB = () => {};
-        const yB = () => oB(),
-          JB = BB[OB];
-        if (JB && void 0 !== JB[jB]) return QB = QB && !1 === this.isTriggering, GB === DB.ADD && QB && JB.forEach(((BB, OB) => {
-          YB(BB, OB)
-        })), this.addCallback(JB[jB], GB, YB);
+      addCallbackOrWaitCollectionAvailable(ee, ie, He, ye) {
+        let Me = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          Ke = () => {};
+        const Fe = () => Ke(),
+          Je = ee[ie];
+        if (Je && void 0 !== Je[Ue]) return Me = Me && !1 === this.isTriggering, He === be.ADD && Me && Je.forEach(((ee, ie) => {
+          ye(ee, ie)
+        })), this.addCallback(Je[Ue], He, ye);
         {
-          let DB;
-          return DB = this.addCallback(BB[jB], OB, ((BB, OB) => {
-            null !== BB && void 0 !== BB && (DB(), oB = this.addCallback(BB[jB], GB, YB))
-          })), oB = DB, yB
+          let be;
+          return be = this.addCallback(ee[Ue], ie, ((ee, ie) => {
+            null !== ee && void 0 !== ee && (be(), Ke = this.addCallback(ee[Ue], He, ye))
+          })), Ke = be, Fe
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(BB, OB, GB) {
-        let YB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        YB = YB && !1 === this.isTriggering;
-        const DB = BB[OB];
-        return YB && null !== DB && void 0 !== DB && GB(DB, void 0), this.addCallback(BB[jB], OB, GB)
+      listenInstance(ee, ie, He) {
+        let ye = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        ye = ye && !1 === this.isTriggering;
+        const be = ee[ie];
+        return ye && null !== be && void 0 !== be && He(be, void 0), this.addCallback(ee[Ue], ie, He)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const BB = arguments.length <= 0 ? void 0 : arguments[0],
-            OB = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(BB[jB], DB.REPLACE, OB)
+          const ee = arguments.length <= 0 ? void 0 : arguments[0],
+            ie = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(ee[Ue], be.REPLACE, ie)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], DB.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], DB.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], be.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], be.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      OW() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], DB.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], DB.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      lE() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], be.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], be.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      Qm() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], DB.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], DB.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      JV() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], be.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], be.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(BB, OB, GB) {
-        let YB = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const QB = BB.constructor[Symbol.metadata];
-        GB || (GB = Object.keys(QB).filter((BB => !isNaN(Number(BB)))).map((BB => QB[BB].name)));
-        const oB = () => {
-          for (const YB of GB) {
-            const GB = BB[YB];
-            void 0 !== GB && (OB[YB] = GB)
+      bindTo(ee, ie, He) {
+        let ye = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const Me = ee.constructor[Symbol.metadata];
+        He || (He = Object.keys(Me).filter((ee => !isNaN(Number(ee)))).map((ee => Me[ee].name)));
+        const Ke = () => {
+          for (const ye of He) {
+            const He = ee[ye];
+            void 0 !== He && (ie[ye] = He)
           }
         };
-        return YB && oB(), this.addCallback(BB[jB], DB.REPLACE, oB)
+        return ye && Ke(), this.addCallback(ee[Ue], be.REPLACE, Ke)
       }
-      Km(BB) {
+      wV(ee) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let OB = 0, GB = BB.length; OB < GB; OB++) {
-          const GB = BB[OB],
-            YB = GB.refId,
-            QB = GB.ref,
-            oB = this.callbacks[YB];
-          if (oB) {
-            if ((GB.op & DB.DELETE) === DB.DELETE && KY.isSchema(GB.previousValue)) {
-              const BB = GB.previousValue[jB],
-                OB = this.callbacks[BB]?.[DB.DELETE];
-              if (OB)
-                for (let GB = OB.length - 1; GB >= 0; GB--) try {
-                  OB[GB]()
-                } catch (QD) {
-                  console.error(QD)
+        for (let ie = 0, He = ee.length; ie < He; ie++) {
+          const He = ee[ie],
+            ye = He.refId,
+            Me = He.ref,
+            Ke = this.callbacks[ye];
+          if (Ke) {
+            if ((He.op & be.DELETE) === be.DELETE && Ay.isSchema(He.previousValue)) {
+              const ee = He.previousValue[Ue],
+                ie = this.callbacks[ee]?.[be.DELETE];
+              if (ie)
+                for (let He = ie.length - 1; He >= 0; He--) try {
+                  ie[He]()
+                } catch (Ub) {
+                  console.error(Ub)
                 }
             }
-            if (KY.isSchema(QB)) {
-              if (!this.uniqueRefIds.has(YB)) {
-                const BB = oB[DB.REPLACE];
-                if (BB)
-                  for (let OB = BB.length - 1; OB >= 0; OB--) try {
-                    BB[OB]()
-                  } catch (QD) {
-                    console.error(QD)
+            if (Ay.isSchema(Me)) {
+              if (!this.uniqueRefIds.has(ye)) {
+                const ee = Ke[be.REPLACE];
+                if (ee)
+                  for (let ie = ee.length - 1; ie >= 0; ie--) try {
+                    ee[ie]()
+                  } catch (Ub) {
+                    console.error(Ub)
                   }
               }
-              const BB = oB[GB.field];
-              if (BB)
-                for (let OB = BB.length - 1; OB >= 0; OB--) try {
-                  BB[OB](GB.value, GB.previousValue)
-                } catch (QD) {
-                  console.error(QD)
+              const ee = Ke[He.field];
+              if (ee)
+                for (let ie = ee.length - 1; ie >= 0; ie--) try {
+                  ee[ie](He.value, He.previousValue)
+                } catch (Ub) {
+                  console.error(Ub)
                 }
             } else {
-              const BB = GB.dynamicIndex ?? GB.field;
-              if ((GB.op & DB.DELETE) === DB.DELETE) {
-                if (void 0 !== GB.previousValue) {
-                  const OB = oB[DB.DELETE];
-                  if (OB)
-                    for (let YB = OB.length - 1; YB >= 0; YB--) try {
-                      OB[YB](GB.previousValue, BB)
-                    } catch (QD) {
-                      console.error(QD)
+              const ee = He.dynamicIndex ?? He.field;
+              if ((He.op & be.DELETE) === be.DELETE) {
+                if (void 0 !== He.previousValue) {
+                  const ie = Ke[be.DELETE];
+                  if (ie)
+                    for (let ye = ie.length - 1; ye >= 0; ye--) try {
+                      ie[ye](He.previousValue, ee)
+                    } catch (Ub) {
+                      console.error(Ub)
                     }
                 }
-                if ((GB.op & DB.ADD) === DB.ADD) {
-                  const OB = oB[DB.ADD];
-                  if (OB)
-                    for (let YB = OB.length - 1; YB >= 0; YB--) try {
-                      OB[YB](GB.value, BB)
-                    } catch (QD) {
-                      console.error(QD)
+                if ((He.op & be.ADD) === be.ADD) {
+                  const ie = Ke[be.ADD];
+                  if (ie)
+                    for (let ye = ie.length - 1; ye >= 0; ye--) try {
+                      ie[ye](He.value, ee)
+                    } catch (Ub) {
+                      console.error(Ub)
                     }
                 }
-              } else if ((GB.op & DB.ADD) === DB.ADD && GB.previousValue !== GB.value) {
-                const OB = oB[DB.ADD];
-                if (OB)
-                  for (let YB = OB.length - 1; YB >= 0; YB--) try {
-                    OB[YB](GB.value, BB)
-                  } catch (QD) {
-                    console.error(QD)
+              } else if ((He.op & be.ADD) === be.ADD && He.previousValue !== He.value) {
+                const ie = Ke[be.ADD];
+                if (ie)
+                  for (let ye = ie.length - 1; ye >= 0; ye--) try {
+                    ie[ye](He.value, ee)
+                  } catch (Ub) {
+                    console.error(Ub)
                   }
               }
-              if (GB.value !== GB.previousValue) {
-                const OB = oB[DB.REPLACE];
-                if (OB)
-                  for (let YB = OB.length - 1; YB >= 0; YB--) try {
-                    OB[YB](BB, GB.value)
-                  } catch (QD) {
-                    console.error(QD)
+              if (He.value !== He.previousValue) {
+                const ie = Ke[be.REPLACE];
+                if (ie)
+                  for (let ye = ie.length - 1; ye >= 0; ye--) try {
+                    ie[ye](ee, He.value)
+                  } catch (Ub) {
+                    console.error(Ub)
                   }
               }
             }
-            this.uniqueRefIds.add(YB)
+            this.uniqueRefIds.add(ye)
           }
         }
         this.isTriggering = !1
       }
     }
-    const GD = {
-      get(BB) {
-        if (BB instanceof CY) return new OD(BB);
-        if ("yP" in BB.FN) return new OD(BB.FN.yP);
+    const bb = {
+      get(ee) {
+        if (ee instanceof Ny) return new yb(ee);
+        if ("kR" in ee.YB) return new yb(ee.YB.kR);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(BB) {
-        if (BB instanceof CY) return tY(BB);
-        if ("yP" in BB.FN) return tY(BB.FN.yP);
+      getLegacy(ee) {
+        if (ee instanceof Ny) return ib(ee);
+        if ("kR" in ee.YB) return ib(ee.YB.kR);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (BB, OB) => BD(BB, OB)
+      getRawChanges: (ee, ie) => Hb(ee, ie)
     };
-    class YD {
+    class Mb {
       _free = [];
       _factory;
       _maxSize;
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = BB, this._maxSize = OB.maxSize ?? 1 / 0;
-        const GB = OB.preallocate ?? 0;
-        for (let YB = 0; YB < GB; YB++) this._free.push(BB())
+      constructor(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = ee, this._maxSize = ie.maxSize ?? 1 / 0;
+        const He = ie.preallocate ?? 0;
+        for (let ye = 0; ye < He; ye++) this._free.push(ee())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(BB) {
-        KY.reset(BB), this._free.length < this._maxSize && this._free.push(BB)
+      release(ee) {
+        Ay.reset(ee), this._free.length < this._maxSize && this._free.push(ee)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function DD(BB) {
-      return new YD((() => new BB), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function Kb(ee) {
+      return new Mb((() => new ee), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    SO("map", {
-      constructor: DY
-    }), SO("array", {
-      constructor: GY
-    }), SO("set", {
-      constructor: oY
-    }), SO("collection", {
-      constructor: QY
+    di("map", {
+      constructor: Ky
+    }), di("array", {
+      constructor: by
+    }), di("set", {
+      constructor: Fy
+    }), di("collection", {
+      constructor: Uy
     })
   },
-  9800: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      __addDisposableResource: () => gB,
-      __assign: () => QB,
-      __asyncDelegator: () => fB,
-      __asyncGenerator: () => UB,
-      __asyncValues: () => kB,
-      __await: () => nB,
-      __awaiter: () => pB,
-      __classPrivateFieldGet: () => FB,
-      __classPrivateFieldIn: () => LB,
-      __classPrivateFieldSet: () => iB,
-      __createBinding: () => ZB,
-      __decorate: () => jB,
-      __disposeResources: () => XB,
-      __esDecorate: () => JB,
-      __exportStar: () => NB,
-      __extends: () => DB,
-      __generator: () => qB,
-      __importDefault: () => IB,
-      __importStar: () => mB,
-      __makeTemplateObject: () => dB,
-      __metadata: () => lB,
-      __param: () => yB,
-      __propKey: () => PB,
-      __read: () => WB,
-      __rest: () => oB,
-      __rewriteRelativeImportExtension: () => wB,
-      __runInitializers: () => MB,
-      __setFunctionName: () => zB,
-      __spread: () => AB,
-      __spreadArray: () => SB,
-      __spreadArrays: () => VB,
-      __values: () => RB,
-      default: () => EB
+  9849: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      __addDisposableResource: () => xe,
+      __assign: () => Me,
+      __asyncDelegator: () => te,
+      __asyncGenerator: () => We,
+      __asyncValues: () => Ze,
+      __await: () => de,
+      __awaiter: () => fe,
+      __classPrivateFieldGet: () => Ve,
+      __classPrivateFieldIn: () => ce,
+      __classPrivateFieldSet: () => ae,
+      __createBinding: () => pe,
+      __decorate: () => Ue,
+      __disposeResources: () => Ce,
+      __esDecorate: () => Je,
+      __exportStar: () => Xe,
+      __extends: () => be,
+      __generator: () => Te,
+      __importDefault: () => Ye,
+      __importStar: () => Ae,
+      __makeTemplateObject: () => we,
+      __metadata: () => qe,
+      __param: () => Fe,
+      __propKey: () => Re,
+      __read: () => Be,
+      __rest: () => Ke,
+      __rewriteRelativeImportExtension: () => ve,
+      __runInitializers: () => oe,
+      __setFunctionName: () => ke,
+      __spread: () => Ee,
+      __spreadArray: () => Oe,
+      __spreadArrays: () => ge,
+      __values: () => ze,
+      default: () => ue
     });
-    var YB = function(BB, OB) {
-      return YB = Object.setPrototypeOf || {
+    var ye = function(ee, ie) {
+      return ye = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(BB, OB) {
-        BB.__proto__ = OB
-      } || function(BB, OB) {
-        for (var GB in OB) Object.prototype.hasOwnProperty.call(OB, GB) && (BB[GB] = OB[GB])
-      }, YB(BB, OB)
+      instanceof Array && function(ee, ie) {
+        ee.__proto__ = ie
+      } || function(ee, ie) {
+        for (var He in ie) Object.prototype.hasOwnProperty.call(ie, He) && (ee[He] = ie[He])
+      }, ye(ee, ie)
     };
 
-    function DB(BB, OB) {
-      if ("function" !== typeof OB && null !== OB) throw new TypeError("Class extends value " + String(OB) + " is not a constructor or null");
+    function be(ee, ie) {
+      if ("function" !== typeof ie && null !== ie) throw new TypeError("Class extends value " + String(ie) + " is not a constructor or null");
 
-      function GB() {
-        this.constructor = BB
+      function He() {
+        this.constructor = ee
       }
-      YB(BB, OB), BB.prototype = null === OB ? Object.create(OB) : (GB.prototype = OB.prototype, new GB)
+      ye(ee, ie), ee.prototype = null === ie ? Object.create(ie) : (He.prototype = ie.prototype, new He)
     }
-    var QB = function() {
-      return QB = Object.assign || function(BB) {
-        for (var OB, GB = 1, YB = arguments.length; GB < YB; GB++)
-          for (var DB in OB = arguments[GB]) Object.prototype.hasOwnProperty.call(OB, DB) && (BB[DB] = OB[DB]);
-        return BB
-      }, QB.apply(this, arguments)
+    var Me = function() {
+      return Me = Object.assign || function(ee) {
+        for (var ie, He = 1, ye = arguments.length; He < ye; He++)
+          for (var be in ie = arguments[He]) Object.prototype.hasOwnProperty.call(ie, be) && (ee[be] = ie[be]);
+        return ee
+      }, Me.apply(this, arguments)
     };
 
-    function oB(BB, OB) {
-      var GB = {};
-      for (var YB in BB) Object.prototype.hasOwnProperty.call(BB, YB) && OB.indexOf(YB) < 0 && (GB[YB] = BB[YB]);
-      if (null != BB && "function" === typeof Object.getOwnPropertySymbols) {
-        var DB = 0;
-        for (YB = Object.getOwnPropertySymbols(BB); DB < YB.length; DB++) OB.indexOf(YB[DB]) < 0 && Object.prototype.propertyIsEnumerable.call(BB, YB[DB]) && (GB[YB[DB]] = BB[YB[DB]])
+    function Ke(ee, ie) {
+      var He = {};
+      for (var ye in ee) Object.prototype.hasOwnProperty.call(ee, ye) && ie.indexOf(ye) < 0 && (He[ye] = ee[ye]);
+      if (null != ee && "function" === typeof Object.getOwnPropertySymbols) {
+        var be = 0;
+        for (ye = Object.getOwnPropertySymbols(ee); be < ye.length; be++) ie.indexOf(ye[be]) < 0 && Object.prototype.propertyIsEnumerable.call(ee, ye[be]) && (He[ye[be]] = ee[ye[be]])
       }
-      return GB
+      return He
     }
 
-    function jB(BB, OB, GB, YB) {
-      var DB, QB = arguments.length,
-        oB = QB < 3 ? OB : null === YB ? YB = Object.getOwnPropertyDescriptor(OB, GB) : YB;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) oB = Reflect.decorate(BB, OB, GB, YB);
+    function Ue(ee, ie, He, ye) {
+      var be, Me = arguments.length,
+        Ke = Me < 3 ? ie : null === ye ? ye = Object.getOwnPropertyDescriptor(ie, He) : ye;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Ke = Reflect.decorate(ee, ie, He, ye);
       else
-        for (var jB = BB.length - 1; jB >= 0; jB--)(DB = BB[jB]) && (oB = (QB < 3 ? DB(oB) : QB > 3 ? DB(OB, GB, oB) : DB(OB, GB)) || oB);
-      return QB > 3 && oB && Object.defineProperty(OB, GB, oB), oB
+        for (var Ue = ee.length - 1; Ue >= 0; Ue--)(be = ee[Ue]) && (Ke = (Me < 3 ? be(Ke) : Me > 3 ? be(ie, He, Ke) : be(ie, He)) || Ke);
+      return Me > 3 && Ke && Object.defineProperty(ie, He, Ke), Ke
     }
 
-    function yB(BB, OB) {
-      return function(GB, YB) {
-        OB(GB, YB, BB)
+    function Fe(ee, ie) {
+      return function(He, ye) {
+        ie(He, ye, ee)
       }
     }
 
-    function JB(BB, OB, GB, YB, DB, QB) {
-      function oB(BB) {
-        if (void 0 !== BB && "function" !== typeof BB) throw new TypeError("Function expected");
-        return BB
+    function Je(ee, ie, He, ye, be, Me) {
+      function Ke(ee) {
+        if (void 0 !== ee && "function" !== typeof ee) throw new TypeError("Function expected");
+        return ee
       }
-      for (var jB, yB = YB.kind, JB = "getter" === yB ? "get" : "setter" === yB ? "set" : "value", MB = !OB && BB ? YB.static ? BB : BB.prototype : null, PB = OB || (MB ? Object.getOwnPropertyDescriptor(MB, YB.name) : {}), zB = !1, lB = GB.length - 1; lB >= 0; lB--) {
-        var pB = {};
-        for (var qB in YB) pB[qB] = "access" === qB ? {} : YB[qB];
-        for (var qB in YB.access) pB.access[qB] = YB.access[qB];
-        pB.addInitializer = function(BB) {
-          if (zB) throw new TypeError("Cannot add initializers after decoration has completed");
-          QB.push(oB(BB || null))
+      for (var Ue, Fe = ye.kind, Je = "getter" === Fe ? "get" : "setter" === Fe ? "set" : "value", oe = !ie && ee ? ye.static ? ee : ee.prototype : null, Re = ie || (oe ? Object.getOwnPropertyDescriptor(oe, ye.name) : {}), ke = !1, qe = He.length - 1; qe >= 0; qe--) {
+        var fe = {};
+        for (var Te in ye) fe[Te] = "access" === Te ? {} : ye[Te];
+        for (var Te in ye.access) fe.access[Te] = ye.access[Te];
+        fe.addInitializer = function(ee) {
+          if (ke) throw new TypeError("Cannot add initializers after decoration has completed");
+          Me.push(Ke(ee || null))
         };
-        var ZB = (0, GB[lB])("accessor" === yB ? {
-          get: PB.get,
-          set: PB.set
-        } : PB[JB], pB);
-        if ("accessor" === yB) {
-          if (void 0 === ZB) continue;
-          if (null === ZB || "object" !== typeof ZB) throw new TypeError("Object expected");
-          (jB = oB(ZB.get)) && (PB.get = jB), (jB = oB(ZB.set)) && (PB.set = jB), (jB = oB(ZB.init)) && DB.unshift(jB)
-        } else(jB = oB(ZB)) && ("field" === yB ? DB.unshift(jB) : PB[JB] = jB)
+        var pe = (0, He[qe])("accessor" === Fe ? {
+          get: Re.get,
+          set: Re.set
+        } : Re[Je], fe);
+        if ("accessor" === Fe) {
+          if (void 0 === pe) continue;
+          if (null === pe || "object" !== typeof pe) throw new TypeError("Object expected");
+          (Ue = Ke(pe.get)) && (Re.get = Ue), (Ue = Ke(pe.set)) && (Re.set = Ue), (Ue = Ke(pe.init)) && be.unshift(Ue)
+        } else(Ue = Ke(pe)) && ("field" === Fe ? be.unshift(Ue) : Re[Je] = Ue)
       }
-      MB && Object.defineProperty(MB, YB.name, PB), zB = !0
+      oe && Object.defineProperty(oe, ye.name, Re), ke = !0
     }
 
-    function MB(BB, OB, GB) {
-      for (var YB = arguments.length > 2, DB = 0; DB < OB.length; DB++) GB = YB ? OB[DB].call(BB, GB) : OB[DB].call(BB);
-      return YB ? GB : void 0
+    function oe(ee, ie, He) {
+      for (var ye = arguments.length > 2, be = 0; be < ie.length; be++) He = ye ? ie[be].call(ee, He) : ie[be].call(ee);
+      return ye ? He : void 0
     }
 
-    function PB(BB) {
-      return "symbol" === typeof BB ? BB : "".concat(BB)
+    function Re(ee) {
+      return "symbol" === typeof ee ? ee : "".concat(ee)
     }
 
-    function zB(BB, OB, GB) {
-      return "symbol" === typeof OB && (OB = OB.description ? "[".concat(OB.description, "]") : ""), Object.defineProperty(BB, "name", {
+    function ke(ee, ie, He) {
+      return "symbol" === typeof ie && (ie = ie.description ? "[".concat(ie.description, "]") : ""), Object.defineProperty(ee, "name", {
         configurable: !0,
-        value: GB ? "".concat(GB, " ", OB) : OB
+        value: He ? "".concat(He, " ", ie) : ie
       })
     }
 
-    function lB(BB, OB) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(BB, OB)
+    function qe(ee, ie) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(ee, ie)
     }
 
-    function pB(BB, OB, GB, YB) {
-      return new(GB || (GB = Promise))((function(DB, QB) {
-        function oB(BB) {
+    function fe(ee, ie, He, ye) {
+      return new(He || (He = Promise))((function(be, Me) {
+        function Ke(ee) {
           try {
-            yB(YB.next(BB))
-          } catch (OB) {
-            QB(OB)
+            Fe(ye.next(ee))
+          } catch (ie) {
+            Me(ie)
           }
         }
 
-        function jB(BB) {
+        function Ue(ee) {
           try {
-            yB(YB.throw(BB))
-          } catch (OB) {
-            QB(OB)
+            Fe(ye.throw(ee))
+          } catch (ie) {
+            Me(ie)
           }
         }
 
-        function yB(BB) {
-          var OB;
-          BB.done ? DB(BB.value) : (OB = BB.value, OB instanceof GB ? OB : new GB((function(BB) {
-            BB(OB)
-          }))).then(oB, jB)
+        function Fe(ee) {
+          var ie;
+          ee.done ? be(ee.value) : (ie = ee.value, ie instanceof He ? ie : new He((function(ee) {
+            ee(ie)
+          }))).then(Ke, Ue)
         }
-        yB((YB = YB.apply(BB, OB || [])).next())
+        Fe((ye = ye.apply(ee, ie || [])).next())
       }))
     }
 
-    function qB(BB, OB) {
-      var GB, YB, DB, QB = {
+    function Te(ee, ie) {
+      var He, ye, be, Me = {
           label: 0,
           sent: function() {
-            if (1 & DB[0]) throw DB[1];
-            return DB[1]
+            if (1 & be[0]) throw be[1];
+            return be[1]
           },
           trys: [],
           ops: []
         },
-        oB = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return oB.next = jB(0), oB.throw = jB(1), oB.return = jB(2), "function" === typeof Symbol && (oB[Symbol.iterator] = function() {
+        Ke = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return Ke.next = Ue(0), Ke.throw = Ue(1), Ke.return = Ue(2), "function" === typeof Symbol && (Ke[Symbol.iterator] = function() {
         return this
-      }), oB;
+      }), Ke;
 
-      function jB(jB) {
-        return function(yB) {
-          return function(jB) {
-            if (GB) throw new TypeError("Generator is already executing.");
-            for (; oB && (oB = 0, jB[0] && (QB = 0)), QB;) try {
-              if (GB = 1, YB && (DB = 2 & jB[0] ? YB.return : jB[0] ? YB.throw || ((DB = YB.return) && DB.call(YB), 0) : YB.next) && !(DB = DB.call(YB, jB[1])).done) return DB;
-              switch (YB = 0, DB && (jB = [2 & jB[0], DB.value]), jB[0]) {
+      function Ue(Ue) {
+        return function(Fe) {
+          return function(Ue) {
+            if (He) throw new TypeError("Generator is already executing.");
+            for (; Ke && (Ke = 0, Ue[0] && (Me = 0)), Me;) try {
+              if (He = 1, ye && (be = 2 & Ue[0] ? ye.return : Ue[0] ? ye.throw || ((be = ye.return) && be.call(ye), 0) : ye.next) && !(be = be.call(ye, Ue[1])).done) return be;
+              switch (ye = 0, be && (Ue = [2 & Ue[0], be.value]), Ue[0]) {
                 case 0:
                 case 1:
-                  DB = jB;
+                  be = Ue;
                   break;
                 case 4:
-                  return QB.label++, {
-                    value: jB[1],
+                  return Me.label++, {
+                    value: Ue[1],
                     done: !1
                   };
                 case 5:
-                  QB.label++, YB = jB[1], jB = [0];
+                  Me.label++, ye = Ue[1], Ue = [0];
                   continue;
                 case 7:
-                  jB = QB.ops.pop(), QB.trys.pop();
+                  Ue = Me.ops.pop(), Me.trys.pop();
                   continue;
                 default:
-                  if (!(DB = (DB = QB.trys).length > 0 && DB[DB.length - 1]) && (6 === jB[0] || 2 === jB[0])) {
-                    QB = 0;
+                  if (!(be = (be = Me.trys).length > 0 && be[be.length - 1]) && (6 === Ue[0] || 2 === Ue[0])) {
+                    Me = 0;
                     continue
                   }
-                  if (3 === jB[0] && (!DB || jB[1] > DB[0] && jB[1] < DB[3])) {
-                    QB.label = jB[1];
+                  if (3 === Ue[0] && (!be || Ue[1] > be[0] && Ue[1] < be[3])) {
+                    Me.label = Ue[1];
                     break
                   }
-                  if (6 === jB[0] && QB.label < DB[1]) {
-                    QB.label = DB[1], DB = jB;
+                  if (6 === Ue[0] && Me.label < be[1]) {
+                    Me.label = be[1], be = Ue;
                     break
                   }
-                  if (DB && QB.label < DB[2]) {
-                    QB.label = DB[2], QB.ops.push(jB);
+                  if (be && Me.label < be[2]) {
+                    Me.label = be[2], Me.ops.push(Ue);
                     break
                   }
-                  DB[2] && QB.ops.pop(), QB.trys.pop();
+                  be[2] && Me.ops.pop(), Me.trys.pop();
                   continue
               }
-              jB = OB.call(BB, QB)
-            } catch (yB) {
-              jB = [6, yB], YB = 0
+              Ue = ie.call(ee, Me)
+            } catch (Fe) {
+              Ue = [6, Fe], ye = 0
             } finally {
-              GB = DB = 0
+              He = be = 0
             }
-            if (5 & jB[0]) throw jB[1];
+            if (5 & Ue[0]) throw Ue[1];
             return {
-              value: jB[0] ? jB[1] : void 0,
+              value: Ue[0] ? Ue[1] : void 0,
               done: !0
             }
-          }([jB, yB])
+          }([Ue, Fe])
         }
       }
     }
-    var ZB = Object.create ? function(BB, OB, GB, YB) {
-      void 0 === YB && (YB = GB);
-      var DB = Object.getOwnPropertyDescriptor(OB, GB);
-      DB && !("get" in DB ? !OB.__esModule : DB.writable || DB.configurable) || (DB = {
+    var pe = Object.create ? function(ee, ie, He, ye) {
+      void 0 === ye && (ye = He);
+      var be = Object.getOwnPropertyDescriptor(ie, He);
+      be && !("get" in be ? !ie.__esModule : be.writable || be.configurable) || (be = {
         enumerable: !0,
         get: function() {
-          return OB[GB]
+          return ie[He]
         }
-      }), Object.defineProperty(BB, YB, DB)
-    } : function(BB, OB, GB, YB) {
-      void 0 === YB && (YB = GB), BB[YB] = OB[GB]
+      }), Object.defineProperty(ee, ye, be)
+    } : function(ee, ie, He, ye) {
+      void 0 === ye && (ye = He), ee[ye] = ie[He]
     };
 
-    function NB(BB, OB) {
-      for (var GB in BB) "default" === GB || Object.prototype.hasOwnProperty.call(OB, GB) || ZB(OB, BB, GB)
+    function Xe(ee, ie) {
+      for (var He in ee) "default" === He || Object.prototype.hasOwnProperty.call(ie, He) || pe(ie, ee, He)
     }
 
-    function RB(BB) {
-      var OB = "function" === typeof Symbol && Symbol.iterator,
-        GB = OB && BB[OB],
-        YB = 0;
-      if (GB) return GB.call(BB);
-      if (BB && "number" === typeof BB.length) return {
+    function ze(ee) {
+      var ie = "function" === typeof Symbol && Symbol.iterator,
+        He = ie && ee[ie],
+        ye = 0;
+      if (He) return He.call(ee);
+      if (ee && "number" === typeof ee.length) return {
         next: function() {
-          return BB && YB >= BB.length && (BB = void 0), {
-            value: BB && BB[YB++],
-            done: !BB
+          return ee && ye >= ee.length && (ee = void 0), {
+            value: ee && ee[ye++],
+            done: !ee
           }
         }
       };
-      throw new TypeError(OB ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(ie ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function WB(BB, OB) {
-      var GB = "function" === typeof Symbol && BB[Symbol.iterator];
-      if (!GB) return BB;
-      var YB, DB, QB = GB.call(BB),
-        oB = [];
+    function Be(ee, ie) {
+      var He = "function" === typeof Symbol && ee[Symbol.iterator];
+      if (!He) return ee;
+      var ye, be, Me = He.call(ee),
+        Ke = [];
       try {
         for (;
-          (void 0 === OB || OB-- > 0) && !(YB = QB.next()).done;) oB.push(YB.value)
-      } catch (jB) {
-        DB = {
-          error: jB
+          (void 0 === ie || ie-- > 0) && !(ye = Me.next()).done;) Ke.push(ye.value)
+      } catch (Ue) {
+        be = {
+          error: Ue
         }
       } finally {
         try {
-          YB && !YB.done && (GB = QB.return) && GB.call(QB)
+          ye && !ye.done && (He = Me.return) && He.call(Me)
         } finally {
-          if (DB) throw DB.error
+          if (be) throw be.error
         }
       }
-      return oB
+      return Ke
     }
 
-    function AB() {
-      for (var BB = [], OB = 0; OB < arguments.length; OB++) BB = BB.concat(WB(arguments[OB]));
-      return BB
+    function Ee() {
+      for (var ee = [], ie = 0; ie < arguments.length; ie++) ee = ee.concat(Be(arguments[ie]));
+      return ee
     }
 
-    function VB() {
-      for (var BB = 0, OB = 0, GB = arguments.length; OB < GB; OB++) BB += arguments[OB].length;
-      var YB = Array(BB),
-        DB = 0;
-      for (OB = 0; OB < GB; OB++)
-        for (var QB = arguments[OB], oB = 0, jB = QB.length; oB < jB; oB++, DB++) YB[DB] = QB[oB];
-      return YB
+    function ge() {
+      for (var ee = 0, ie = 0, He = arguments.length; ie < He; ie++) ee += arguments[ie].length;
+      var ye = Array(ee),
+        be = 0;
+      for (ie = 0; ie < He; ie++)
+        for (var Me = arguments[ie], Ke = 0, Ue = Me.length; Ke < Ue; Ke++, be++) ye[be] = Me[Ke];
+      return ye
     }
 
-    function SB(BB, OB, GB) {
-      if (GB || 2 === arguments.length)
-        for (var YB, DB = 0, QB = OB.length; DB < QB; DB++) !YB && DB in OB || (YB || (YB = Array.prototype.slice.call(OB, 0, DB)), YB[DB] = OB[DB]);
-      return BB.concat(YB || Array.prototype.slice.call(OB))
+    function Oe(ee, ie, He) {
+      if (He || 2 === arguments.length)
+        for (var ye, be = 0, Me = ie.length; be < Me; be++) !ye && be in ie || (ye || (ye = Array.prototype.slice.call(ie, 0, be)), ye[be] = ie[be]);
+      return ee.concat(ye || Array.prototype.slice.call(ie))
     }
 
-    function nB(BB) {
-      return this instanceof nB ? (this.v = BB, this) : new nB(BB)
+    function de(ee) {
+      return this instanceof de ? (this.v = ee, this) : new de(ee)
     }
 
-    function UB(BB, OB, GB) {
+    function We(ee, ie, He) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var YB, DB = GB.apply(BB, OB || []),
-        QB = [];
-      return YB = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), oB("next"), oB("throw"), oB("return", (function(BB) {
-        return function(OB) {
-          return Promise.resolve(OB).then(BB, JB)
+      var ye, be = He.apply(ee, ie || []),
+        Me = [];
+      return ye = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Ke("next"), Ke("throw"), Ke("return", (function(ee) {
+        return function(ie) {
+          return Promise.resolve(ie).then(ee, Je)
         }
-      })), YB[Symbol.asyncIterator] = function() {
+      })), ye[Symbol.asyncIterator] = function() {
         return this
-      }, YB;
+      }, ye;
 
-      function oB(BB, OB) {
-        DB[BB] && (YB[BB] = function(OB) {
-          return new Promise((function(GB, YB) {
-            QB.push([BB, OB, GB, YB]) > 1 || jB(BB, OB)
+      function Ke(ee, ie) {
+        be[ee] && (ye[ee] = function(ie) {
+          return new Promise((function(He, ye) {
+            Me.push([ee, ie, He, ye]) > 1 || Ue(ee, ie)
           }))
-        }, OB && (YB[BB] = OB(YB[BB])))
+        }, ie && (ye[ee] = ie(ye[ee])))
       }
 
-      function jB(BB, OB) {
+      function Ue(ee, ie) {
         try {
-          (GB = DB[BB](OB)).value instanceof nB ? Promise.resolve(GB.value.v).then(yB, JB) : MB(QB[0][2], GB)
-        } catch (YB) {
-          MB(QB[0][3], YB)
+          (He = be[ee](ie)).value instanceof de ? Promise.resolve(He.value.v).then(Fe, Je) : oe(Me[0][2], He)
+        } catch (ye) {
+          oe(Me[0][3], ye)
         }
-        var GB
+        var He
       }
 
-      function yB(BB) {
-        jB("next", BB)
+      function Fe(ee) {
+        Ue("next", ee)
       }
 
-      function JB(BB) {
-        jB("throw", BB)
+      function Je(ee) {
+        Ue("throw", ee)
       }
 
-      function MB(BB, OB) {
-        BB(OB), QB.shift(), QB.length && jB(QB[0][0], QB[0][1])
+      function oe(ee, ie) {
+        ee(ie), Me.shift(), Me.length && Ue(Me[0][0], Me[0][1])
       }
     }
 
-    function fB(BB) {
-      var OB, GB;
-      return OB = {}, YB("next"), YB("throw", (function(BB) {
-        throw BB
-      })), YB("return"), OB[Symbol.iterator] = function() {
+    function te(ee) {
+      var ie, He;
+      return ie = {}, ye("next"), ye("throw", (function(ee) {
+        throw ee
+      })), ye("return"), ie[Symbol.iterator] = function() {
         return this
-      }, OB;
+      }, ie;
 
-      function YB(YB, DB) {
-        OB[YB] = BB[YB] ? function(OB) {
-          return (GB = !GB) ? {
-            value: nB(BB[YB](OB)),
+      function ye(ye, be) {
+        ie[ye] = ee[ye] ? function(ie) {
+          return (He = !He) ? {
+            value: de(ee[ye](ie)),
             done: !1
-          } : DB ? DB(OB) : OB
-        } : DB
+          } : be ? be(ie) : ie
+        } : be
       }
     }
 
-    function kB(BB) {
+    function Ze(ee) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var OB, GB = BB[Symbol.asyncIterator];
-      return GB ? GB.call(BB) : (BB = RB(BB), OB = {}, YB("next"), YB("throw"), YB("return"), OB[Symbol.asyncIterator] = function() {
+      var ie, He = ee[Symbol.asyncIterator];
+      return He ? He.call(ee) : (ee = ze(ee), ie = {}, ye("next"), ye("throw"), ye("return"), ie[Symbol.asyncIterator] = function() {
         return this
-      }, OB);
+      }, ie);
 
-      function YB(GB) {
-        OB[GB] = BB[GB] && function(OB) {
-          return new Promise((function(YB, DB) {
-            (function(BB, OB, GB, YB) {
-              Promise.resolve(YB).then((function(OB) {
-                BB({
-                  value: OB,
-                  done: GB
+      function ye(He) {
+        ie[He] = ee[He] && function(ie) {
+          return new Promise((function(ye, be) {
+            (function(ee, ie, He, ye) {
+              Promise.resolve(ye).then((function(ie) {
+                ee({
+                  value: ie,
+                  done: He
                 })
-              }), OB)
-            })(YB, DB, (OB = BB[GB](OB)).done, OB.value)
+              }), ie)
+            })(ye, be, (ie = ee[He](ie)).done, ie.value)
           }))
         }
       }
     }
 
-    function dB(BB, OB) {
-      return Object.defineProperty ? Object.defineProperty(BB, "raw", {
-        value: OB
-      }) : BB.raw = OB, BB
+    function we(ee, ie) {
+      return Object.defineProperty ? Object.defineProperty(ee, "raw", {
+        value: ie
+      }) : ee.raw = ie, ee
     }
-    var KB = Object.create ? function(BB, OB) {
-        Object.defineProperty(BB, "default", {
+    var De = Object.create ? function(ee, ie) {
+        Object.defineProperty(ee, "default", {
           enumerable: !0,
-          value: OB
+          value: ie
         })
-      } : function(BB, OB) {
-        BB.default = OB
+      } : function(ee, ie) {
+        ee.default = ie
       },
-      uB = function(BB) {
-        return uB = Object.getOwnPropertyNames || function(BB) {
-          var OB = [];
-          for (var GB in BB) Object.prototype.hasOwnProperty.call(BB, GB) && (OB[OB.length] = GB);
-          return OB
-        }, uB(BB)
+      Pe = function(ee) {
+        return Pe = Object.getOwnPropertyNames || function(ee) {
+          var ie = [];
+          for (var He in ee) Object.prototype.hasOwnProperty.call(ee, He) && (ie[ie.length] = He);
+          return ie
+        }, Pe(ee)
       };
 
-    function mB(BB) {
-      if (BB && BB.__esModule) return BB;
-      var OB = {};
-      if (null != BB)
-        for (var GB = uB(BB), YB = 0; YB < GB.length; YB++) "default" !== GB[YB] && ZB(OB, BB, GB[YB]);
-      return KB(OB, BB), OB
+    function Ae(ee) {
+      if (ee && ee.__esModule) return ee;
+      var ie = {};
+      if (null != ee)
+        for (var He = Pe(ee), ye = 0; ye < He.length; ye++) "default" !== He[ye] && pe(ie, ee, He[ye]);
+      return De(ie, ee), ie
     }
 
-    function IB(BB) {
-      return BB && BB.__esModule ? BB : {
-        default: BB
+    function Ye(ee) {
+      return ee && ee.__esModule ? ee : {
+        default: ee
       }
     }
 
-    function FB(BB, OB, GB, YB) {
-      if ("a" === GB && !YB) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof OB ? BB !== OB || !YB : !OB.has(BB)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === GB ? YB : "a" === GB ? YB.call(BB) : YB ? YB.value : OB.get(BB)
+    function Ve(ee, ie, He, ye) {
+      if ("a" === He && !ye) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof ie ? ee !== ie || !ye : !ie.has(ee)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === He ? ye : "a" === He ? ye.call(ee) : ye ? ye.value : ie.get(ee)
     }
 
-    function iB(BB, OB, GB, YB, DB) {
-      if ("m" === YB) throw new TypeError("Private method is not writable");
-      if ("a" === YB && !DB) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof OB ? BB !== OB || !DB : !OB.has(BB)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === YB ? DB.call(BB, GB) : DB ? DB.value = GB : OB.set(BB, GB), GB
+    function ae(ee, ie, He, ye, be) {
+      if ("m" === ye) throw new TypeError("Private method is not writable");
+      if ("a" === ye && !be) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof ie ? ee !== ie || !be : !ie.has(ee)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === ye ? be.call(ee, He) : be ? be.value = He : ie.set(ee, He), He
     }
 
-    function LB(BB, OB) {
-      if (null === OB || "object" !== typeof OB && "function" !== typeof OB) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof BB ? OB === BB : BB.has(OB)
+    function ce(ee, ie) {
+      if (null === ie || "object" !== typeof ie && "function" !== typeof ie) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof ee ? ie === ee : ee.has(ie)
     }
 
-    function gB(BB, OB, GB) {
-      if (null !== OB && void 0 !== OB) {
-        if ("object" !== typeof OB && "function" !== typeof OB) throw new TypeError("Object expected.");
-        var YB, DB;
-        if (GB) {
+    function xe(ee, ie, He) {
+      if (null !== ie && void 0 !== ie) {
+        if ("object" !== typeof ie && "function" !== typeof ie) throw new TypeError("Object expected.");
+        var ye, be;
+        if (He) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          YB = OB[Symbol.asyncDispose]
+          ye = ie[Symbol.asyncDispose]
         }
-        if (void 0 === YB) {
+        if (void 0 === ye) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          YB = OB[Symbol.dispose], GB && (DB = YB)
+          ye = ie[Symbol.dispose], He && (be = ye)
         }
-        if ("function" !== typeof YB) throw new TypeError("Object not disposable.");
-        DB && (YB = function() {
+        if ("function" !== typeof ye) throw new TypeError("Object not disposable.");
+        be && (ye = function() {
           try {
-            DB.call(this)
-          } catch (BB) {
-            return Promise.reject(BB)
+            be.call(this)
+          } catch (ee) {
+            return Promise.reject(ee)
           }
-        }), BB.stack.push({
-          value: OB,
-          dispose: YB,
-          async: GB
+        }), ee.stack.push({
+          value: ie,
+          dispose: ye,
+          async: He
         })
-      } else GB && BB.stack.push({
+      } else He && ee.stack.push({
         async: !0
       });
-      return OB
+      return ie
     }
-    var rB = "function" === typeof SuppressedError ? SuppressedError : function(BB, OB, GB) {
-      var YB = new Error(GB);
-      return YB.name = "SuppressedError", YB.error = BB, YB.suppressed = OB, YB
+    var Le = "function" === typeof SuppressedError ? SuppressedError : function(ee, ie, He) {
+      var ye = new Error(He);
+      return ye.name = "SuppressedError", ye.error = ee, ye.suppressed = ie, ye
     };
 
-    function XB(BB) {
-      function OB(OB) {
-        BB.error = BB.hasError ? new rB(OB, BB.error, "An error was suppressed during disposal.") : OB, BB.hasError = !0
+    function Ce(ee) {
+      function ie(ie) {
+        ee.error = ee.hasError ? new Le(ie, ee.error, "An error was suppressed during disposal.") : ie, ee.hasError = !0
       }
-      var GB, YB = 0;
-      return function DB() {
-        for (; GB = BB.stack.pop();) try {
-          if (!GB.async && 1 === YB) return YB = 0, BB.stack.push(GB), Promise.resolve().then(DB);
-          if (GB.dispose) {
-            var QB = GB.dispose.call(GB.value);
-            if (GB.async) return YB |= 2, Promise.resolve(QB).then(DB, (function(BB) {
-              return OB(BB), DB()
+      var He, ye = 0;
+      return function be() {
+        for (; He = ee.stack.pop();) try {
+          if (!He.async && 1 === ye) return ye = 0, ee.stack.push(He), Promise.resolve().then(be);
+          if (He.dispose) {
+            var Me = He.dispose.call(He.value);
+            if (He.async) return ye |= 2, Promise.resolve(Me).then(be, (function(ee) {
+              return ie(ee), be()
             }))
-          } else YB |= 1
-        } catch (oB) {
-          OB(oB)
+          } else ye |= 1
+        } catch (Ke) {
+          ie(Ke)
         }
-        if (1 === YB) return BB.hasError ? Promise.reject(BB.error) : Promise.resolve();
-        if (BB.hasError) throw BB.error
+        if (1 === ye) return ee.hasError ? Promise.reject(ee.error) : Promise.resolve();
+        if (ee.hasError) throw ee.error
       }()
     }
 
-    function wB(BB, OB) {
-      return "string" === typeof BB && /^\.\.?\//.test(BB) ? BB.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(BB, GB, YB, DB, QB) {
-        return GB ? OB ? ".jsx" : ".js" : !YB || DB && QB ? YB + DB + "." + QB.toLowerCase() + "js" : BB
-      })) : BB
+    function ve(ee, ie) {
+      return "string" === typeof ee && /^\.\.?\//.test(ee) ? ee.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(ee, He, ye, be, Me) {
+        return He ? ie ? ".jsx" : ".js" : !ye || be && Me ? ye + be + "." + Me.toLowerCase() + "js" : ee
+      })) : ee
     }
-    const EB = {
-      __extends: DB,
-      __assign: QB,
-      __rest: oB,
-      __decorate: jB,
-      __param: yB,
-      __esDecorate: JB,
-      __runInitializers: MB,
-      __propKey: PB,
-      __setFunctionName: zB,
-      __metadata: lB,
-      __awaiter: pB,
-      __generator: qB,
-      __createBinding: ZB,
-      __exportStar: NB,
-      __values: RB,
-      __read: WB,
-      __spread: AB,
-      __spreadArrays: VB,
-      __spreadArray: SB,
-      __await: nB,
-      __asyncGenerator: UB,
-      __asyncDelegator: fB,
-      __asyncValues: kB,
-      __makeTemplateObject: dB,
-      __importStar: mB,
-      __importDefault: IB,
-      __classPrivateFieldGet: FB,
-      __classPrivateFieldSet: iB,
-      __classPrivateFieldIn: LB,
-      __addDisposableResource: gB,
-      __disposeResources: XB,
-      __rewriteRelativeImportExtension: wB
+    const ue = {
+      __extends: be,
+      __assign: Me,
+      __rest: Ke,
+      __decorate: Ue,
+      __param: Fe,
+      __esDecorate: Je,
+      __runInitializers: oe,
+      __propKey: Re,
+      __setFunctionName: ke,
+      __metadata: qe,
+      __awaiter: fe,
+      __generator: Te,
+      __createBinding: pe,
+      __exportStar: Xe,
+      __values: ze,
+      __read: Be,
+      __spread: Ee,
+      __spreadArrays: ge,
+      __spreadArray: Oe,
+      __await: de,
+      __asyncGenerator: We,
+      __asyncDelegator: te,
+      __asyncValues: Ze,
+      __makeTemplateObject: we,
+      __importStar: Ae,
+      __importDefault: Ye,
+      __classPrivateFieldGet: Ve,
+      __classPrivateFieldSet: ae,
+      __classPrivateFieldIn: ce,
+      __addDisposableResource: xe,
+      __disposeResources: Ce,
+      __rewriteRelativeImportExtension: ve
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

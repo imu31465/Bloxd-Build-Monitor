@@ -1,472 +1,472 @@
 export const id = 116;
 export const ids = [116];
 export const modules = {
-  5392: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => zB
+  5388: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ke
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(1383),
-      oB = GB(1375),
-      jB = GB(3944),
-      yB = GB(120),
-      JB = GB(3982),
-      MB = GB(3968),
-      PB = GB(1282);
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(1323),
+      Ke = He(1320),
+      Ue = He(3892),
+      Fe = He(125),
+      Je = He(3937),
+      oe = He(3927),
+      Re = He(1228);
 
-    function zB(BB) {
+    function ke(ee) {
       let {
-        game: OB
-      } = BB;
-      const GB = (0, yB.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        YB = (0, JB.f)(OB, GB),
-        zB = (0, jB.e)(YB),
-        lB = void 0 !== zB.blurhash;
-      return (0, PB.jsxs)("div", {
+        game: ie
+      } = ee;
+      const He = (0, Fe.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        ye = (0, Je.h)(ie, He),
+        ke = (0, Ue.f)(ye),
+        qe = void 0 !== ke.blurhash;
+      return (0, Re.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [zB.isLoading && !lB && (0, PB.jsx)(oB.b, {
+        children: [ke.isLoading && !qe && (0, Re.jsx)(Ke.b, {
           loaderType: "Secondary"
-        }), !zB.failed && (null !== zB.src || lB) && (0, PB.jsx)("div", {
-          className: DB()("SchematicImage", MB.h, {
-            SchematicImageFadeIn: zB.fadeIn && !lB
+        }), !ke.failed && (null !== ke.src || qe) && (0, Re.jsx)("div", {
+          className: be()("SchematicImage", oe.l, {
+            SchematicImageFadeIn: ke.fadeIn && !qe
           }),
-          style: (0, MB.e)(zB),
-          children: (0, PB.jsx)(MB.d, {
-            image: zB
+          style: (0, oe.i)(ke),
+          children: (0, Re.jsx)(oe.e, {
+            image: ke
           })
-        }), zB.failed && (0, PB.jsx)("div", {
+        }), ke.failed && (0, Re.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, PB.jsx)(QB.b, {
+          children: (0, Re.jsx)(Me.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5524: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => ZB
+  5552: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => pe
     });
-    var YB = GB(56),
-      DB = GB(1090),
-      QB = GB.n(DB),
-      oB = GB(5452),
-      jB = GB(1375),
-      yB = GB(1175),
-      JB = GB(3580),
-      MB = GB(3716),
-      PB = GB(1383),
-      zB = GB(3588),
-      lB = GB(5531),
-      pB = GB(5549),
-      qB = GB(1282);
+    var ye = He(59),
+      be = He(1053),
+      Me = He.n(be),
+      Ke = He(5454),
+      Ue = He(1320),
+      Fe = He(1127),
+      Je = He(3473),
+      oe = He(3618),
+      Re = He(1323),
+      ke = He(3482),
+      qe = He(5557),
+      fe = He(5578),
+      Te = He(1228);
 
-    function ZB(BB) {
+    function pe(ee) {
       let {
-        folderName: OB,
-        onTexturePackUpdated: DB,
-        disabled: ZB = !1,
-        maxFileSizeMb: NB,
-        packOwner: RB
-      } = BB;
+        folderName: ie,
+        onTexturePackUpdated: be,
+        disabled: pe = !1,
+        maxFileSizeMb: Xe,
+        packOwner: ze
+      } = ee;
       const {
-        t: WB
-      } = (0, yB.H)(), [AB, VB] = (0, YB.useState)(!1), [SB, nB] = (0, YB.useState)(null), [UB, fB] = (0, YB.useState)(null), kB = (0, YB.useRef)(null);
-      async function dB(BB) {
-        VB(!0);
+        t: Be
+      } = (0, Fe.v)(), [Ee, ge] = (0, ye.useState)(!1), [Oe, de] = (0, ye.useState)(null), [We, te] = (0, ye.useState)(null), Ze = (0, ye.useRef)(null);
+      async function we(ee) {
+        ge(!0);
         try {
-          const OB = await (0, JB.n)(BB);
-          if ("customGame" === RB && (0, MB.m)(OB)) return void nB(WB(MB.c));
-          if (void 0 !== NB) {
-            const BB = JSON.stringify(OB).length / 1048576;
-            if (BB > NB) return void nB(WB("customTexturePack:packTooBig", {
-              size: BB.toFixed(1),
-              max: NB
+          const ie = await (0, Je.r)(ee);
+          if ("customGame" === ze && (0, oe.l)(ie)) return void de(Be(oe.d));
+          if (void 0 !== Xe) {
+            const ee = JSON.stringify(ie).length / 1048576;
+            if (ee > Xe) return void de(Be("customTexturePack:packTooBig", {
+              size: ee.toFixed(1),
+              max: Xe
             }))
           }
-          nB(null), fB(null), DB(OB), kB.current = OB,
-            function(BB, OB) {
-              const YB = BB.modelOverrides;
-              YB && Promise.all([GB.e(227), GB.e(226)]).then((() => GB(34861))).then((GB => {
+          de(null), te(null), be(ie), Ze.current = ie,
+            function(ee, ie) {
+              const ye = ee.modelOverrides;
+              ye && Promise.all([He.e(227), He.e(226)]).then((() => He(34975))).then((He => {
                 let {
-                  packDisplayName: DB,
-                  refusedPackModels: QB,
-                  packModelSummary: oB
-                } = GB;
-                const jB = DB(BB.metaData);
-                OB(oB(jB, QB(jB, YB, !1)))
-              })).catch((BB => {
-                console.error("Checking the texture pack's models failed:", BB)
+                  packDisplayName: be,
+                  refusedPackModels: Me,
+                  packModelSummary: Ke
+                } = He;
+                const Ue = be(ee.metaData);
+                ie(Ke(Ue, Me(Ue, ye, !1)))
+              })).catch((ee => {
+                console.error("Checking the texture pack's models failed:", ee)
               }))
-            }(OB, (BB => {
-              kB.current === OB && fB(BB)
+            }(ie, (ee => {
+              Ze.current === ie && te(ee)
             }))
-        } catch (OB) {
-          if (OB instanceof zB.b) {
-            const BB = "customTexturePack:invalidPack" !== OB.translationKey || (0, pB.d)() ? OB.translationKey : "customTexturePack:invalidPackZip";
-            nB((0, lB.j)(WB, BB, OB.params))
-          } else console.error("Couldn't read the texture pack", OB), nB(WB("customTexturePack:errorTitle"))
+        } catch (ie) {
+          if (ie instanceof ke.b) {
+            const ee = "customTexturePack:invalidPack" !== ie.translationKey || (0, fe.f)() ? ie.translationKey : "customTexturePack:invalidPackZip";
+            de((0, qe.i)(Be, ee, ie.params))
+          } else console.error("Couldn't read the texture pack", ie), de(Be("customTexturePack:errorTitle"))
         } finally {
-          VB(!1)
+          ge(!1)
         }
       }
       const {
-        getRootProps: KB,
-        getInputProps: uB,
-        isDragActive: mB,
-        open: IB
-      } = (0, oB.e)({
-        onDrop: dB,
+        getRootProps: De,
+        getInputProps: Pe,
+        isDragActive: Ae,
+        open: Ye
+      } = (0, Ke.d)({
+        onDrop: we,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: ZB
+        disabled: pe
       });
-      return (0, qB.jsxs)("div", {
+      return (0, Te.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, qB.jsxs)("div", {
+        children: [(0, Te.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [WB("settingsMenu:customTextureWarning"), ".", (0, qB.jsx)("br", {}), WB("settingsMenu:viewDocumentation"), ":", " ", (0, qB.jsx)("a", {
+          children: [Be("settingsMenu:customTextureWarning"), ".", (0, Te.jsx)("br", {}), Be("settingsMenu:viewDocumentation"), ":", " ", (0, Te.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), SB && (0, qB.jsxs)("div", {
+        }), Oe && (0, Te.jsxs)("div", {
           className: "CustomTextureError",
-          children: [WB("general:error"), ": ", SB]
-        }), UB && (0, qB.jsx)("div", {
+          children: [Be("general:error"), ": ", Oe]
+        }), We && (0, Te.jsx)("div", {
           className: "CustomTextureError",
-          children: UB
-        }), (0, qB.jsxs)("div", {
-          ...KB({
-            className: QB()("CustomTextureFolderUpload", {
-              ActiveDrag: mB,
-              Disabled: ZB
+          children: We
+        }), (0, Te.jsxs)("div", {
+          ...De({
+            className: Me()("CustomTextureFolderUpload", {
+              ActiveDrag: Ae,
+              Disabled: pe
             })
           }),
-          children: [(0, qB.jsx)("input", {
-            ...uB({
+          children: [(0, Te.jsx)("input", {
+            ...Pe({
               webkitdirectory: "true"
             })
-          }), AB && (0, qB.jsx)("div", {
+          }), Ee && (0, Te.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, qB.jsx)(jB.b, {})
-          }), !AB && !mB && OB && (0, qB.jsxs)(qB.Fragment, {
-            children: [(0, qB.jsx)("div", {
+            children: (0, Te.jsx)(Ue.b, {})
+          }), !Ee && !Ae && ie && (0, Te.jsxs)(Te.Fragment, {
+            children: [(0, Te.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, qB.jsx)(PB.b, {
+              children: (0, Te.jsx)(Re.e, {
                 name: "folder-image"
               })
-            }), (0, qB.jsx)("div", {
+            }), (0, Te.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: OB
+              children: ie
             })]
-          }), !AB && (mB || !OB) && (0, qB.jsxs)(qB.Fragment, {
-            children: [(0, qB.jsx)("div", {
+          }), !Ee && (Ae || !ie) && (0, Te.jsxs)(Te.Fragment, {
+            children: [(0, Te.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, qB.jsx)(PB.b, {
+              children: (0, Te.jsx)(Re.e, {
                 name: "up-from-bracket"
               })
-            }), (0, qB.jsx)("div", {
+            }), (0, Te.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: WB((0, pB.d)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: Be((0, fe.f)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !AB && (0, qB.jsx)(pB.b, {
-            disabled: ZB,
-            openFolderPicker: IB,
-            onFiles: BB => {
-              dB(BB)
+          }), !Ee && (0, Te.jsx)(fe.e, {
+            disabled: pe,
+            openFolderPicker: Ye,
+            onFiles: ee => {
+              we(ee)
             }
           })]
         })]
       })
     }
   },
-  5549: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => MB,
-      d: () => JB
+  5578: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => oe,
+      f: () => Je
     });
-    var YB = GB(56),
-      DB = GB(1485),
-      QB = GB(1175),
-      oB = GB(92),
-      jB = GB(3558),
-      yB = GB(1282);
+    var ye = He(59),
+      be = He(1438),
+      Me = He(1127),
+      Ke = He(97),
+      Ue = He(3447),
+      Fe = He(1228);
 
-    function JB() {
-      return !(0, oB.isMobile)()
+    function Je() {
+      return !(0, Ke.isMobile)()
     }
 
-    function MB(BB) {
+    function oe(ee) {
       let {
-        disabled: OB,
-        openFolderPicker: GB,
-        onFiles: oB
-      } = BB;
+        disabled: ie,
+        openFolderPicker: He,
+        onFiles: Ke
+      } = ee;
       const {
-        t: MB
-      } = (0, QB.H)(), PB = (0, YB.useRef)(null);
-      return (0, yB.jsxs)("div", {
+        t: oe
+      } = (0, Me.v)(), Re = (0, ye.useRef)(null);
+      return (0, Fe.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, yB.jsx)("input", {
-          ref: PB,
+        children: [(0, Fe.jsx)("input", {
+          ref: Re,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(BB) {
-            const OB = Array.from(BB.target.files);
-            BB.target.value = "", oB(OB)
+          onChange: function(ee) {
+            const ie = Array.from(ee.target.files);
+            ee.target.value = "", Ke(ie)
           }
-        }), JB() && (0, yB.jsx)(DB.f, {
-          disabled: OB,
-          onClick: GB,
-          children: MB("general:chooseFolder")
-        }), (0, yB.jsx)(DB.f, {
-          disabled: OB,
+        }), Je() && (0, Fe.jsx)(be.c, {
+          disabled: ie,
+          onClick: He,
+          children: oe("general:chooseFolder")
+        }), (0, Fe.jsx)(be.c, {
+          disabled: ie,
           onClick: () => {
-            (0, jB.e)(PB.current)
+            (0, Ue.f)(Re.current)
           },
-          children: MB("general:chooseZip")
+          children: oe("general:chooseZip")
         })]
       })
     }
   },
-  5480: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => pB,
-      d: () => AB,
-      f: () => qB,
-      g: () => WB
+  5501: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => fe,
+      e: () => Ee,
+      f: () => Te,
+      j: () => Be
     });
-    var YB = GB(56),
-      DB = GB(5486),
-      QB = GB(4777),
-      oB = GB(1405),
-      jB = GB(5512),
-      yB = GB(1090),
-      JB = GB.n(yB),
-      MB = GB(1400),
-      PB = GB(1822),
-      zB = GB(5515),
-      lB = GB(1282);
+    var ye = He(59),
+      be = He(5510),
+      Me = He(4729),
+      Ke = He(1351),
+      Ue = He(5537),
+      Fe = He(1053),
+      Je = He.n(Fe),
+      oe = He(1340),
+      Re = He(1768),
+      ke = He(5544),
+      qe = He(1228);
 
-    function pB(BB) {
+    function fe(ee) {
       let {
-        label: OB,
-        onClick: GB,
-        checked: YB,
-        circleInfoText: DB,
-        className: jB,
-        disabled: yB,
-        note: MB
-      } = BB;
-      return (0, lB.jsxs)("div", {
-        "aria-disabled": yB || void 0,
+        label: ie,
+        onClick: He,
+        checked: ye,
+        circleInfoText: be,
+        className: Ue,
+        disabled: Fe,
+        note: oe
+      } = ee;
+      return (0, qe.jsxs)("div", {
+        "aria-disabled": Fe || void 0,
         "data-pad-focusable": !0,
-        className: JB()("SettingBox CheckboxContainer", {
-          [jB]: jB,
-          SettingBoxDisabled: yB
+        className: Je()("SettingBox CheckboxContainer", {
+          [Ue]: Ue,
+          SettingBoxDisabled: Fe
         }),
         onClick: () => {
-          yB || GB(!YB)
+          Fe || He(!ye)
         },
-        children: [(0, lB.jsxs)("div", {
+        children: [(0, qe.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, lB.jsx)("label", {
+          children: [(0, qe.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, lB.jsx)(QB.e, {
+            children: (0, qe.jsx)(Me.d, {
               className: "SettingsCheckbox",
-              checked: YB,
-              disabled: yB,
+              checked: ye,
+              disabled: Fe,
               onChange: () => {}
             })
-          }), (0, lB.jsxs)("div", {
+          }), (0, qe.jsxs)("div", {
             className: "CheckboxText",
-            children: [OB, DB && (0, lB.jsx)("span", {
-              onClick: BB => BB.stopPropagation(),
-              children: (0, lB.jsx)(oB.c, {
+            children: [ie, be && (0, qe.jsx)("span", {
+              onClick: ee => ee.stopPropagation(),
+              children: (0, qe.jsx)(Ke.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: DB
+                hoverInfo: be
               })
             })]
           })]
-        }), MB && (0, lB.jsx)("div", {
+        }), oe && (0, qe.jsx)("div", {
           className: "SettingNote",
-          children: MB
+          children: oe
         })]
       })
     }
 
-    function qB(BB) {
+    function Te(ee) {
       let {
-        name: OB,
-        onChange: GB,
-        min: DB,
-        max: QB,
-        step: jB,
-        initValue: yB,
-        circleInfoText: MB,
-        format: PB,
-        className: zB,
-        padStep: pB,
-        disabled: qB = !1,
-        selectableMax: ZB,
-        cappedNote: NB,
-        note: WB,
-        onChangeComplete: AB
-      } = BB;
-      const [VB, SB] = (0, YB.useState)(yB), nB = (0, YB.useRef)(yB);
-      (0, YB.useEffect)((() => {
-        nB.current = yB, SB(yB)
-      }), [yB]);
-      const UB = void 0 !== ZB && ZB < QB,
-        fB = UB ? {
-          "--slider-selectable": (ZB - DB) / (QB - DB)
+        name: ie,
+        onChange: He,
+        min: be,
+        max: Me,
+        step: Ue,
+        initValue: Fe,
+        circleInfoText: oe,
+        format: Re,
+        className: ke,
+        padStep: fe,
+        disabled: Te = !1,
+        selectableMax: pe,
+        cappedNote: Xe,
+        note: Be,
+        onChangeComplete: Ee
+      } = ee;
+      const [ge, Oe] = (0, ye.useState)(Fe), de = (0, ye.useRef)(Fe);
+      (0, ye.useEffect)((() => {
+        de.current = Fe, Oe(Fe)
+      }), [Fe]);
+      const We = void 0 !== pe && pe < Me,
+        te = We ? {
+          "--slider-selectable": (pe - be) / (Me - be)
         } : void 0,
-        kB = UB && NB ? NB : WB;
-      return (0, lB.jsxs)("div", {
-        className: JB()("SettingBox SettingsSliderDiv", {
-          [zB]: zB,
-          SettingBoxDisabled: qB,
-          SliderCapped: UB
+        Ze = We && Xe ? Xe : Be;
+      return (0, qe.jsxs)("div", {
+        className: Je()("SettingBox SettingsSliderDiv", {
+          [ke]: ke,
+          SettingBoxDisabled: Te,
+          SliderCapped: We
         }),
-        style: fB,
-        children: [(0, lB.jsxs)("div", {
+        style: te,
+        children: [(0, qe.jsxs)("div", {
           className: "SliderText",
-          children: [`${OB}: ${PB?PB(VB):VB}`, MB && (0, lB.jsx)(oB.c, {
+          children: [`${ie}: ${Re?Re(ge):ge}`, oe && (0, qe.jsx)(Ke.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: MB
+            hoverInfo: oe
           })]
-        }), (0, lB.jsx)("div", {
+        }), (0, qe.jsx)("div", {
           className: "SliderDiv",
-          children: (0, lB.jsx)(RB, {
-            value: VB,
-            min: DB,
-            max: QB,
-            step: jB,
-            onChange: BB => {
-              if (UB && BB >= ZB && VB === ZB) return;
-              const OB = UB ? Math.min(BB, ZB) : BB;
-              nB.current = OB, SB(OB), GB(OB)
+          children: (0, qe.jsx)(ze, {
+            value: ge,
+            min: be,
+            max: Me,
+            step: Ue,
+            onChange: ee => {
+              if (We && ee >= pe && ge === pe) return;
+              const ie = We ? Math.min(ee, pe) : ee;
+              de.current = ie, Oe(ie), He(ie)
             },
-            onChangeComplete: AB && (() => {
-              AB(nB.current)
+            onChangeComplete: Ee && (() => {
+              Ee(de.current)
             }),
-            format: PB,
-            padStep: pB,
-            disabled: qB
+            format: Re,
+            padStep: fe,
+            disabled: Te
           })
-        }), kB && (0, lB.jsx)("div", {
+        }), Ze && (0, qe.jsx)("div", {
           className: "SettingNote",
-          children: kB
+          children: Ze
         })]
       })
     }
-    const ZB = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const pe = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function NB(BB) {
-      var OB;
-      return (null !== (OB = String(BB).split(".")[1]) && void 0 !== OB ? OB : "").length
+    function Xe(ee) {
+      var ie;
+      return (null !== (ie = String(ee).split(".")[1]) && void 0 !== ie ? ie : "").length
     }
 
-    function RB(BB) {
+    function ze(ee) {
       let {
-        value: OB,
-        min: GB,
-        max: QB,
-        step: oB,
-        onChange: jB,
-        orientation: yB,
-        reverse: JB,
-        setIsChanging: MB,
-        tooltip: PB,
-        labels: pB,
-        handleLabel: qB,
-        format: RB,
-        onChangeStart: WB,
-        onChangeComplete: AB,
-        padStep: VB,
-        disabled: SB = !1
-      } = BB;
-      const nB = (0, YB.useRef)(null),
-        UB = (0, YB.useRef)(null);
-      (0, YB.useLayoutEffect)((() => {
-        var BB, OB, GB;
-        const YB = null !== (BB = null === (OB = nB.current) || void 0 === OB ? void 0 : OB.querySelector(".rangeslider")) && void 0 !== BB ? BB : null;
-        null === YB || void 0 === YB || YB.setAttribute("data-pad-slider", ""), null === YB || void 0 === YB || YB.setAttribute("data-pad-focusable", ""), null === YB || void 0 === YB || null === (GB = YB.querySelector(".rangeslider__handle")) || void 0 === GB || GB.setAttribute("data-pad-slider-handle", ""), UB.current = YB
-      }), []), (0, YB.useLayoutEffect)((() => {
-        var BB, OB;
-        SB ? null === (BB = UB.current) || void 0 === BB || BB.setAttribute("aria-disabled", "true") : null === (OB = UB.current) || void 0 === OB || OB.removeAttribute("aria-disabled")
-      }), [SB]);
-      const fB = Math.max(NB(oB), NB(GB)),
-        kB = BB => {
-          if (BB >= QB) return QB;
-          if (BB <= GB) return GB;
-          const OB = Number((Math.round((BB - GB) / oB) * oB + GB).toFixed(fB));
-          return Math.min(QB, Math.max(GB, OB))
+        value: ie,
+        min: He,
+        max: Me,
+        step: Ke,
+        onChange: Ue,
+        orientation: Fe,
+        reverse: Je,
+        setIsChanging: oe,
+        tooltip: Re,
+        labels: fe,
+        handleLabel: Te,
+        format: ze,
+        onChangeStart: Be,
+        onChangeComplete: Ee,
+        padStep: ge,
+        disabled: Oe = !1
+      } = ee;
+      const de = (0, ye.useRef)(null),
+        We = (0, ye.useRef)(null);
+      (0, ye.useLayoutEffect)((() => {
+        var ee, ie, He;
+        const ye = null !== (ee = null === (ie = de.current) || void 0 === ie ? void 0 : ie.querySelector(".rangeslider")) && void 0 !== ee ? ee : null;
+        null === ye || void 0 === ye || ye.setAttribute("data-pad-slider", ""), null === ye || void 0 === ye || ye.setAttribute("data-pad-focusable", ""), null === ye || void 0 === ye || null === (He = ye.querySelector(".rangeslider__handle")) || void 0 === He || He.setAttribute("data-pad-slider-handle", ""), We.current = ye
+      }), []), (0, ye.useLayoutEffect)((() => {
+        var ee, ie;
+        Oe ? null === (ee = We.current) || void 0 === ee || ee.setAttribute("aria-disabled", "true") : null === (ie = We.current) || void 0 === ie || ie.removeAttribute("aria-disabled")
+      }), [Oe]);
+      const te = Math.max(Xe(Ke), Xe(He)),
+        Ze = ee => {
+          if (ee >= Me) return Me;
+          if (ee <= He) return He;
+          const ie = Number((Math.round((ee - He) / Ke) * Ke + He).toFixed(te));
+          return Math.min(Me, Math.max(He, ie))
         },
-        dB = (0, YB.useRef)(AB);
-      dB.current = AB, (0, YB.useEffect)((() => {
-        const BB = nB.current;
-        if (!BB) return;
-        const OB = BB => {
-          var OB;
-          ZB.has(BB.key) && (null === (OB = dB.current) || void 0 === OB || OB.call(dB))
+        we = (0, ye.useRef)(Ee);
+      we.current = Ee, (0, ye.useEffect)((() => {
+        const ee = de.current;
+        if (!ee) return;
+        const ie = ee => {
+          var ie;
+          pe.has(ee.key) && (null === (ie = we.current) || void 0 === ie || ie.call(we))
         };
-        return BB.addEventListener("keyup", OB), () => {
-          BB.removeEventListener("keyup", OB)
+        return ee.addEventListener("keyup", ie), () => {
+          ee.removeEventListener("keyup", ie)
         }
       }), []);
-      const KB = (0, YB.useRef)(!1);
-      return (0, zB.e)(UB, {
-        adjust: BB => {
-          if (SB) return;
-          const YB = null !== VB && void 0 !== VB ? VB : Math.max(oB, Math.round((QB - GB) / 20 / oB) * oB),
-            DB = kB(OB + BB * YB * (JB ? -1 : 1));
-          DB !== OB && (null === WB || void 0 === WB || WB(), jB(DB), null === AB || void 0 === AB || AB())
+      const De = (0, ye.useRef)(!1);
+      return (0, ke.d)(We, {
+        adjust: ee => {
+          if (Oe) return;
+          const ye = null !== ge && void 0 !== ge ? ge : Math.max(Ke, Math.round((Me - He) / 20 / Ke) * Ke),
+            be = Ze(ie + ee * ye * (Je ? -1 : 1));
+          be !== ie && (null === Be || void 0 === Be || Be(), Ue(be), null === Ee || void 0 === Ee || Ee())
         },
-        setFraction: BB => {
-          if (SB) return;
-          const YB = kB(GB + (JB ? 1 - BB : BB) * (QB - GB));
-          YB !== OB && (KB.current || (KB.current = !0, null === WB || void 0 === WB || WB()), jB(YB))
+        setFraction: ee => {
+          if (Oe) return;
+          const ye = Ze(He + (Je ? 1 - ee : ee) * (Me - He));
+          ye !== ie && (De.current || (De.current = !0, null === Be || void 0 === Be || Be()), Ue(ye))
         },
         endDrag: () => {
-          KB.current && (KB.current = !1, null === AB || void 0 === AB || AB())
+          De.current && (De.current = !1, null === Ee || void 0 === Ee || Ee())
         }
-      }), (0, lB.jsx)("div", {
-        ref: nB,
+      }), (0, qe.jsx)("div", {
+        ref: de,
         style: {
           display: "contents"
         },
-        children: (0, lB.jsx)(DB.b, {
-          value: OB,
-          min: GB,
-          max: QB,
-          step: oB,
-          onChange: BB => {
-            jB(kB(BB))
+        children: (0, qe.jsx)(be.c, {
+          value: ie,
+          min: He,
+          max: Me,
+          step: Ke,
+          onChange: ee => {
+            Ue(Ze(ee))
           },
-          orientation: yB,
-          reverse: JB,
-          tooltip: PB,
-          labels: pB,
-          handleLabel: qB,
-          format: RB,
+          orientation: Fe,
+          reverse: Je,
+          tooltip: Re,
+          labels: fe,
+          handleLabel: Te,
+          format: ze,
           onChangeStart: () => {
-            null === WB || void 0 === WB || WB(), null === MB || void 0 === MB || MB(!0)
+            null === Be || void 0 === Be || Be(), null === oe || void 0 === oe || oe(!0)
           },
           onChangeComplete: () => {
-            null === MB || void 0 === MB || MB(!1), null === AB || void 0 === AB || AB()
+            null === oe || void 0 === oe || oe(!1), null === Ee || void 0 === Ee || Ee()
           }
         })
       })
     }
-    async function WB() {
-      const BB = MB.NotificationProvider.showPromptPopup({
+    async function Be() {
+      const ee = oe.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -474,75 +474,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await BB.getResult() && (0, PB.reloadBloxd)()
+      !0 === await ee.getResult() && (0, Re.reloadBloxd)()
     }
 
-    function AB(BB) {
+    function Ee(ee) {
       let {
-        label: OB,
-        options: GB,
-        value: YB,
-        onChange: DB,
-        circleInfoText: QB
-      } = BB;
-      return (0, lB.jsxs)("div", {
+        label: ie,
+        options: He,
+        value: ye,
+        onChange: be,
+        circleInfoText: Me
+      } = ee;
+      return (0, qe.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, lB.jsxs)("div", {
+        children: [(0, qe.jsxs)("div", {
           className: "SliderText",
-          children: [OB, QB && (0, lB.jsx)(oB.c, {
+          children: [ie, Me && (0, qe.jsx)(Ke.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: QB
+            hoverInfo: Me
           })]
-        }), (0, lB.jsx)(jB.c, {
-          ariaLabel: OB,
-          options: GB,
-          value: YB,
-          onChange: DB
+        }), (0, qe.jsx)(Ue.b, {
+          ariaLabel: ie,
+          options: He,
+          value: ye,
+          onChange: be
         })]
       })
     }
   },
-  5478: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => ZB,
-      g: () => NB
+  5496: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => pe,
+      f: () => Xe
     });
-    var YB = GB(3580),
-      DB = GB(2272),
-      QB = GB(56),
-      oB = GB(1090),
-      jB = GB.n(oB),
-      yB = GB(1375),
-      JB = GB(3573),
-      MB = GB(1400),
-      PB = GB(5480),
-      zB = GB(5524),
-      lB = GB(662),
-      pB = GB(5552),
-      qB = GB(1282);
+    var ye = He(3473),
+      be = He(2181),
+      Me = He(59),
+      Ke = He(1053),
+      Ue = He.n(Ke),
+      Fe = He(1320),
+      Je = He(3465),
+      oe = He(1340),
+      Re = He(5501),
+      ke = He(5552),
+      qe = He(645),
+      fe = He(5587),
+      Te = He(1228);
 
-    function ZB(BB) {
-      var OB;
+    function pe(ee) {
+      var ie;
       let {
-        setApplySettingsCallback: GB
-      } = BB;
-      const [, oB] = (0, QB.useReducer)((BB => BB + 1), 0), jB = (0, QB.useRef)(!1), yB = (0, QB.useRef)(null);
+        setApplySettingsCallback: He
+      } = ee;
+      const [, Ke] = (0, Me.useReducer)((ee => ee + 1), 0), Ue = (0, Me.useRef)(!1), Fe = (0, Me.useRef)(null);
 
-      function ZB(BB, OB) {
-        JB.c.setFromJson(BB, "player");
-        const YB = JB.c.saveTexturePack();
-        if (lB.D) {
-          const BB = JB.c.toJson();
-          YB.then((OB => {
-            OB && (0, pB.b)(BB)
+      function pe(ee, ie) {
+        Je.c.setFromJson(ee, "player");
+        const ye = Je.c.saveTexturePack();
+        if (qe.I) {
+          const ee = Je.c.toJson();
+          ye.then((ie => {
+            ie && (0, fe.c)(ee)
           }))
-        } else jB.current ||= OB, yB.current !== JB.c.getId() || JB.c.getId() === DB.t.CUSTOM && jB.current ? GB((() => PB.g)) : GB(null);
-        oB()
+        } else Ue.current ||= ie, Fe.current !== Je.c.getId() || Je.c.getId() === be.o.CUSTOM && Ue.current ? He((() => Re.j)) : He(null);
+        Ke()
       }
-      async function RB(BB) {
-        if (JB.c.getId() !== BB.metaData.id) {
-          if (JB.c.getId() === DB.t.CUSTOM && JB.c.getFromFolderName()) {
-            const BB = MB.NotificationProvider.showPromptPopup({
+      async function ze(ee) {
+        if (Je.c.getId() !== ee.metaData.id) {
+          if (Je.c.getId() === be.o.CUSTOM && Je.c.getFromFolderName()) {
+            const ee = oe.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -551,29 +551,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await BB.getResult()) return
+            if (!0 !== await ee.getResult()) return
           }
-          ZB(BB, !1)
+          pe(ee, !1)
         }
-      }(0, QB.useEffect)((() => {
-        yB.current = JB.c.getId()
+      }(0, Me.useEffect)((() => {
+        Fe.current = Je.c.getId()
       }), []);
-      const WB = YB.e,
-        AB = [WB, ...Object.values(DB.t).filter((BB => BB !== WB))];
-      return (0, qB.jsx)(qB.Fragment, {
-        children: (0, qB.jsxs)("div", {
+      const Be = ye.e,
+        Ee = [Be, ...Object.values(be.o).filter((ee => ee !== Be))];
+      return (0, Te.jsx)(Te.Fragment, {
+        children: (0, Te.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, qB.jsx)("div", {
+          children: [(0, Te.jsx)("div", {
             className: "TexturePackList",
-            children: AB.map((BB => (0, qB.jsx)(NB, {
-              id: BB,
-              isSelected: BB === JB.c.getId(),
-              setSelected: RB
-            }, BB)))
-          }), JB.c.getId() === DB.t.CUSTOM && (0, qB.jsx)(zB.b, {
-            folderName: null !== (OB = JB.c.getFromFolderName()) && void 0 !== OB ? OB : null,
-            onTexturePackUpdated: function(BB) {
-              ZB(BB, !0)
+            children: Ee.map((ee => (0, Te.jsx)(Xe, {
+              id: ee,
+              isSelected: ee === Je.c.getId(),
+              setSelected: ze
+            }, ee)))
+          }), Je.c.getId() === be.o.CUSTOM && (0, Te.jsx)(ke.e, {
+            folderName: null !== (ie = Je.c.getFromFolderName()) && void 0 !== ie ? ie : null,
+            onTexturePackUpdated: function(ee) {
+              pe(ee, !0)
             },
             packOwner: "player"
           })]
@@ -581,417 +581,417 @@ export const modules = {
       })
     }
 
-    function NB(BB) {
+    function Xe(ee) {
       let {
-        id: OB,
-        isSelected: GB,
-        setSelected: oB,
-        disabled: JB = !1
-      } = BB;
-      const [MB, PB] = (0, QB.useState)(!0), [zB, lB] = (0, QB.useState)(""), [pB, ZB] = (0, QB.useState)(""), [NB, RB] = (0, QB.useState)(""), WB = (0, QB.useRef)({});
-      return (0, QB.useEffect)((() => {
-        (0, YB.l)(OB).then((BB => {
-          var OB;
-          BB && (WB.current = BB, PB(!1), lB(WB.current.metaData.name), ZB(WB.current.metaData.author), RB(null !== (OB = WB.current.metaData.previewImage) && void 0 !== OB ? OB : ""))
-        })).catch((BB => {
-          console.warn(`Failed to fetch texture pack ${OB}`, BB)
+        id: ie,
+        isSelected: He,
+        setSelected: Ke,
+        disabled: Je = !1
+      } = ee;
+      const [oe, Re] = (0, Me.useState)(!0), [ke, qe] = (0, Me.useState)(""), [fe, pe] = (0, Me.useState)(""), [Xe, ze] = (0, Me.useState)(""), Be = (0, Me.useRef)({});
+      return (0, Me.useEffect)((() => {
+        (0, ye.p)(ie).then((ee => {
+          var ie;
+          ee && (Be.current = ee, Re(!1), qe(Be.current.metaData.name), pe(Be.current.metaData.author), ze(null !== (ie = Be.current.metaData.previewImage) && void 0 !== ie ? ie : ""))
+        })).catch((ee => {
+          console.warn(`Failed to fetch texture pack ${ie}`, ee)
         }))
-      }), [OB]), (0, qB.jsxs)("div", {
+      }), [ie]), (0, Te.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": JB || void 0,
-        className: jB()("TexturePack", {
-          Selected: GB,
-          Custom: OB === DB.t.CUSTOM,
-          Disabled: JB
+        "aria-disabled": Je || void 0,
+        className: Ue()("TexturePack", {
+          Selected: He,
+          Custom: ie === be.o.CUSTOM,
+          Disabled: Je
         }),
         onClick: () => {
-          MB || JB || oB(WB.current)
+          oe || Je || Ke(Be.current)
         },
-        children: [(0, qB.jsx)("div", {
+        children: [(0, Te.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: NB ? `url(${NB})` : void 0
+            backgroundImage: Xe ? `url(${Xe})` : void 0
           }
-        }), MB && (0, qB.jsx)("div", {
+        }), oe && (0, Te.jsx)("div", {
           className: "TexturePackName",
-          children: (0, qB.jsx)(yB.b, {})
-        }), !MB && zB && (0, qB.jsx)("div", {
+          children: (0, Te.jsx)(Fe.b, {})
+        }), !oe && ke && (0, Te.jsx)("div", {
           className: "TexturePackName",
-          children: zB
-        }), !MB && pB && (0, qB.jsx)("div", {
+          children: ke
+        }), !oe && fe && (0, Te.jsx)("div", {
           className: "TexturePackAuthor",
-          children: pB
+          children: fe
         })]
       })
     }
   },
-  5531: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => jB,
-      g: () => oB,
-      j: () => QB
+  5557: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ue,
+      e: () => Ke,
+      i: () => Me
     });
-    var YB = GB(5538);
-    const DB = [BB => BB.strict ? "strict" : "nonStrict", BB => BB.program];
+    var ye = He(5563);
+    const be = [ee => ee.strict ? "strict" : "nonStrict", ee => ee.program];
 
-    function QB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const YB = {};
-      for (const DB in GB) YB[DB] = `\0${DB}\0`;
-      return BB(OB, YB).replace(/\0(\w+)\0/g, ((BB, OB) => GB[OB]))
+    function Me(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const ye = {};
+      for (const be in He) ye[be] = `\0${be}\0`;
+      return ee(ie, ye).replace(/\0(\w+)\0/g, ((ee, ie) => He[ie]))
     }
 
-    function oB(BB) {
-      return null === BB.file ? null : BB.line > 0 ? `${BB.file}:${BB.line}` : BB.file
+    function Ke(ee) {
+      return null === ee.file ? null : ee.line > 0 ? `${ee.file}:${ee.line}` : ee.file
     }
 
-    function jB(BB) {
-      const OB = new Map(BB.map((BB => [yB(BB).join("."), BB])));
-      if (0 === OB.size) return [];
-      const GB = MB([...OB.values()]);
-      return 0 === GB[0].length ? [] : GB
+    function Ue(ee) {
+      const ie = new Map(ee.map((ee => [Fe(ee).join("."), ee])));
+      if (0 === ie.size) return [];
+      const He = oe([...ie.values()]);
+      return 0 === He[0].length ? [] : He
     }
 
-    function yB(BB) {
-      return DB.map((OB => OB(BB)))
+    function Fe(ee) {
+      return be.map((ie => ie(ee)))
     }
-    const JB = DB.map((BB => new Set(YB.c.map(BB)).size));
+    const Je = be.map((ee => new Set(ye.g.map(ee)).size));
 
-    function MB(BB) {
-      const OB = DB.map((OB => new Set(BB.map(OB)))),
-        GB = OB.reduce(((BB, OB) => BB * OB.size), 1),
-        YB = OB.every(((BB, OB) => 1 === BB.size || BB.size === JB[OB]));
-      if (GB === BB.length && YB) return [DB.filter(((BB, GB) => 1 === OB[GB].size)).map((OB => OB(BB[0])))];
-      let QB = null;
-      for (let oB = 0; oB < DB.length; oB++) {
-        if (1 === OB[oB].size) continue;
-        const GB = PB(BB, DB[oB]).flatMap(MB);
-        (null === QB || GB.length < QB.length) && (QB = GB)
+    function oe(ee) {
+      const ie = be.map((ie => new Set(ee.map(ie)))),
+        He = ie.reduce(((ee, ie) => ee * ie.size), 1),
+        ye = ie.every(((ee, ie) => 1 === ee.size || ee.size === Je[ie]));
+      if (He === ee.length && ye) return [be.filter(((ee, He) => 1 === ie[He].size)).map((ie => ie(ee[0])))];
+      let Me = null;
+      for (let Ke = 0; Ke < be.length; Ke++) {
+        if (1 === ie[Ke].size) continue;
+        const He = Re(ee, be[Ke]).flatMap(oe);
+        (null === Me || He.length < Me.length) && (Me = He)
       }
-      return QB
+      return Me
     }
 
-    function PB(BB, OB) {
-      const GB = new Map;
-      for (const DB of BB) {
-        var YB;
-        const BB = OB(DB);
-        GB.set(BB, [...null !== (YB = GB.get(BB)) && void 0 !== YB ? YB : [], DB])
+    function Re(ee, ie) {
+      const He = new Map;
+      for (const be of ee) {
+        var ye;
+        const ee = ie(be);
+        He.set(ee, [...null !== (ye = He.get(ee)) && void 0 !== ye ? ye : [], be])
       }
-      return [...GB.values()]
+      return [...He.values()]
     }
   },
-  5512: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => oB
+  5537: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ke
     });
-    var YB = GB(1090),
-      DB = GB.n(YB),
-      QB = GB(1282);
+    var ye = He(1053),
+      be = He.n(ye),
+      Me = He(1228);
 
-    function oB(BB) {
+    function Ke(ee) {
       let {
-        options: OB,
-        value: GB,
-        onChange: YB,
-        ariaLabel: oB,
-        className: jB,
-        reselectable: yB = !1,
-        keepsFocus: JB = !1,
-        padTabs: MB
-      } = BB;
-      const PB = void 0 !== MB;
-      return (0, QB.jsx)("div", {
-        className: DB()("SegmentedToggle", jB),
+        options: ie,
+        value: He,
+        onChange: ye,
+        ariaLabel: Ke,
+        className: Ue,
+        reselectable: Fe = !1,
+        keepsFocus: Je = !1,
+        padTabs: oe
+      } = ee;
+      const Re = void 0 !== oe;
+      return (0, Me.jsx)("div", {
+        className: be()("SegmentedToggle", Ue),
         role: "group",
-        "aria-label": oB,
-        "data-pad-tabs": MB,
-        children: OB.map((BB => {
-          const OB = BB.value === GB;
-          return (0, QB.jsx)("button", {
+        "aria-label": Ke,
+        "data-pad-tabs": oe,
+        children: ie.map((ee => {
+          const ie = ee.value === He;
+          return (0, Me.jsx)("button", {
             type: "button",
-            "aria-pressed": OB,
-            "data-pad-tab": PB || void 0,
-            "data-pad-selected": PB && OB ? "true" : void 0,
-            "data-pad-default-focus": PB && OB || void 0,
-            "aria-label": BB.ariaLabel,
-            title: BB.ariaLabel,
-            className: DB()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: OB
+            "aria-pressed": ie,
+            "data-pad-tab": Re || void 0,
+            "data-pad-selected": Re && ie ? "true" : void 0,
+            "data-pad-default-focus": Re && ie || void 0,
+            "aria-label": ee.ariaLabel,
+            title: ee.ariaLabel,
+            className: be()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: ie
             }),
-            onMouseDown: JB ? BB => {
-              BB.preventDefault()
+            onMouseDown: Je ? ee => {
+              ee.preventDefault()
             } : void 0,
             onClick: () => {
-              OB && !yB || YB(BB.value)
+              ie && !Fe || ye(ee.value)
             },
-            children: BB.label
-          }, BB.value)
+            children: ee.label
+          }, ee.value)
         }))
       })
     }
   },
-  5515: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      e: () => oB
+  5544: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Me,
+      d: () => Ke
     });
-    var YB = GB(56);
-    const DB = new WeakMap,
-      QB = BB => {
-        var OB;
-        const GB = BB.closest("[data-pad-slider]");
-        return GB && null !== (OB = DB.get(GB)) && void 0 !== OB ? OB : null
+    var ye = He(59);
+    const be = new WeakMap,
+      Me = ee => {
+        var ie;
+        const He = ee.closest("[data-pad-slider]");
+        return He && null !== (ie = be.get(He)) && void 0 !== ie ? ie : null
       },
-      oB = (BB, OB) => {
-        const GB = (0, YB.useRef)(OB);
-        GB.current = OB, (0, YB.useEffect)((() => {
-          if (BB.current) return ((BB, OB) => (DB.set(BB, OB), () => {
-            DB.get(BB) === OB && DB.delete(BB)
-          }))(BB.current, {
-            adjust: BB => {
-              GB.current.adjust(BB)
+      Ke = (ee, ie) => {
+        const He = (0, ye.useRef)(ie);
+        He.current = ie, (0, ye.useEffect)((() => {
+          if (ee.current) return ((ee, ie) => (be.set(ee, ie), () => {
+            be.get(ee) === ie && be.delete(ee)
+          }))(ee.current, {
+            adjust: ee => {
+              He.current.adjust(ee)
             },
-            setFraction: BB => {
-              GB.current.setFraction(BB)
+            setFraction: ee => {
+              He.current.setFraction(ee)
             },
             endDrag: () => {
-              GB.current.endDrag()
+              He.current.endDrag()
             }
           })
-        }), [BB])
+        }), [ee])
       }
   },
-  5538: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB.k,
-      c: () => DB,
-      g: () => YB.r
+  5563: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye.e,
+      g: () => be,
+      h: () => ye.m
     });
-    var YB = GB(5546);
-    const DB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((OB => ({
-      strict: BB,
-      program: OB
+    var ye = He(5570);
+    const be = [!1, !0].flatMap((ee => ["terrain", "liquid", "model"].map((ie => ({
+      strict: ee,
+      program: ie
     })))))
   },
-  5558: (BB, OB, GB) => {
-    function YB(BB, OB) {
-      return DB(BB, OB)
+  5596: (ee, ie, He) => {
+    function ye(ee, ie) {
+      return be(ee, ie)
     }
 
-    function DB(BB, OB) {
-      if (BB === OB) return !0;
-      if ("object" !== typeof BB || "object" !== typeof OB || null === BB || null === OB || Array.isArray(BB) !== Array.isArray(OB)) return !1;
-      const GB = BB,
-        YB = OB,
-        QB = Object.keys(GB);
-      return QB.length === Object.keys(YB).length && QB.every((BB => Object.prototype.hasOwnProperty.call(YB, BB) && DB(GB[BB], YB[BB])))
+    function be(ee, ie) {
+      if (ee === ie) return !0;
+      if ("object" !== typeof ee || "object" !== typeof ie || null === ee || null === ie || Array.isArray(ee) !== Array.isArray(ie)) return !1;
+      const He = ee,
+        ye = ie,
+        Me = Object.keys(He);
+      return Me.length === Object.keys(ye).length && Me.every((ee => Object.prototype.hasOwnProperty.call(ye, ee) && be(He[ee], ye[ee])))
     }
-    GB.d(OB, {
-      b: () => YB
+    He.d(ie, {
+      d: () => ye
     })
   },
-  5552: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB,
-      f: () => jB
+  5587: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      g: () => Ue
     });
-    var YB = GB(2272),
-      DB = GB(5558);
-    let QB = null;
+    var ye = He(2181),
+      be = He(5596);
+    let Me = null;
 
-    function oB(BB) {
-      QB = {
-        pack: BB.metaData.id === YB.e ? null : BB
+    function Ke(ee) {
+      Me = {
+        pack: ee.metaData.id === ye.b ? null : ee
       }
     }
 
-    function jB(BB) {
-      return !(null === QB || !(0, DB.b)(QB.pack, BB)) && (QB = null, !0)
+    function Ue(ee) {
+      return !(null === Me || !(0, be.d)(Me.pack, ee)) && (Me = null, !0)
     }
   },
-  5546: (BB, OB, GB) => {
-    GB.d(OB, {
-      B: () => zB,
-      e: () => jB,
-      h: () => oB,
-      k: () => YB,
-      o: () => qB,
-      p: () => PB,
-      r: () => DB,
-      u: () => QB,
-      v: () => JB,
-      y: () => MB
+  5570: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue,
+      d: () => Ke,
+      e: () => ye,
+      h: () => Te,
+      k: () => Re,
+      m: () => be,
+      q: () => Me,
+      r: () => Je,
+      s: () => oe,
+      t: () => ke
     });
-    const YB = 5;
+    const ye = 5;
 
-    function DB(BB) {
-      return BB === YB
+    function be(ee) {
+      return ee === ye
     }
 
-    function QB(BB) {
-      return [...BB.features]
+    function Me(ee) {
+      return [...ee.features]
     }
-    const oB = 262144,
-      jB = 256,
-      yB = 256;
+    const Ke = 262144,
+      Ue = 256,
+      Fe = 256;
 
-    function JB(BB) {
-      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
-      const OB = [];
-      for (const [GB, YB] of Object.entries(BB)) {
-        if ("string" !== typeof YB) return `${GB} isn't text.`;
-        OB.push({
-          path: GB,
-          source: YB
+    function Je(ee) {
+      if ("object" !== typeof ee || null === ee || Array.isArray(ee)) return "The pack has no files.";
+      const ie = [];
+      for (const [He, ye] of Object.entries(ee)) {
+        if ("string" !== typeof ye) return `${He} isn't text.`;
+        ie.push({
+          path: He,
+          source: ye
         })
       }
-      return OB.sort(((BB, OB) => PB(BB.path, OB.path))),
-        function(BB) {
-          if (0 === BB.length) return "The pack has no .wgsl files.";
-          if (BB.length > jB) return `The pack has more than ${jB} .wgsl files.`;
-          const OB = new Set;
+      return ie.sort(((ee, ie) => Re(ee.path, ie.path))),
+        function(ee) {
+          if (0 === ee.length) return "The pack has no .wgsl files.";
+          if (ee.length > Ue) return `The pack has more than ${Ue} .wgsl files.`;
+          const ie = new Set;
           for (const {
-              path: GB
+              path: He
             }
-            of BB) {
-            const BB = lB(GB);
-            if (null !== BB) return BB;
-            if (OB.has(GB)) return `The pack has two files at ${GB}.`;
-            OB.add(GB)
+            of ee) {
+            const ee = qe(He);
+            if (null !== ee) return ee;
+            if (ie.has(He)) return `The pack has two files at ${He}.`;
+            ie.add(He)
           }
-          return zB(BB) > oB ? `The pack's .wgsl files are over ${oB/1024} KB in total.` : null
-        }(OB) ?? OB
+          return ke(ee) > Ke ? `The pack's .wgsl files are over ${Ke/1024} KB in total.` : null
+        }(ie) ?? ie
     }
 
-    function MB(BB) {
-      const OB = {};
-      for (const GB of BB) OB[GB.path] = GB.source;
-      return OB
+    function oe(ee) {
+      const ie = {};
+      for (const He of ee) ie[He.path] = He.source;
+      return ie
     }
 
-    function PB(BB, OB) {
-      return BB < OB ? -1 : BB > OB ? 1 : 0
+    function Re(ee, ie) {
+      return ee < ie ? -1 : ee > ie ? 1 : 0
     }
 
-    function zB(BB) {
-      const OB = new TextEncoder;
-      let GB = 0;
+    function ke(ee) {
+      const ie = new TextEncoder;
+      let He = 0;
       for (const {
-          source: YB
+          source: ye
         }
-        of BB) GB += OB.encode(YB).byteLength;
-      return GB
+        of ee) He += ie.encode(ye).byteLength;
+      return He
     }
 
-    function lB(BB) {
-      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
-      if (BB.length > yB) return `A file path is over ${yB} characters.`;
-      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
-      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
+    function qe(ee) {
+      if (!ee.toLowerCase().endsWith(".wgsl")) return `${ee} isn't a .wgsl file.`;
+      if (ee.length > Fe) return `A file path is over ${Fe} characters.`;
+      if (ee.includes("\\") || /[\u0000-\u001f]/.test(ee)) return `${ee} isn't a valid file path.`;
+      return ee.split("/").some((ee => "" === ee || "." === ee || ".." === ee)) ? `${ee} isn't a valid file path.` : null
     }
-    const pB = /^(.*)\[rot\[([1-4])$/;
+    const fe = /^(.*)\[rot\[([1-4])$/;
 
-    function qB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const YB = new Map;
-      OB.forEach(((BB, OB) => {
+    function Te(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const ye = new Map;
+      ie.forEach(((ee, ie) => {
         let {
-          numAnimStates: GB,
-          animStartIdx: DB
-        } = BB;
-        for (let QB = 1; QB < GB; QB++) YB.set(DB + QB - 1, OB)
+          numAnimStates: He,
+          animStartIdx: be
+        } = ee;
+        for (let Me = 1; Me < He; Me++) ye.set(be + Me - 1, ie)
       }));
-      const DB = Object.entries(BB),
-        QB = new Map;
-      for (const [qB, ZB] of DB) {
-        const BB = pB.exec(qB);
-        "1" === BB?.[2] && QB.set(BB[1], ZB + 1)
+      const be = Object.entries(ee),
+        Me = new Map;
+      for (const [Te, pe] of be) {
+        const ee = fe.exec(Te);
+        "1" === ee?.[2] && Me.set(ee[1], pe + 1)
       }
-      const oB = BB => {
-          const OB = pB.exec(BB);
-          return OB && QB.has(OB[1]) ? {
-            root: OB[1],
-            rotation: Number(OB[2]) - 1
+      const Ke = ee => {
+          const ie = fe.exec(ee);
+          return ie && Me.has(ie[1]) ? {
+            root: ie[1],
+            rotation: Number(ie[2]) - 1
           } : null
         },
-        jB = new Set(DB.map((BB => {
-          let [OB] = BB;
-          return oB(OB)?.root ?? OB
+        Ue = new Set(be.map((ee => {
+          let [ie] = ee;
+          return Ke(ie)?.root ?? ie
         }))),
-        yB = (BB, GB) => {
-          const YB = BB.replace(/_?0$/, "");
-          return (OB[GB]?.numAnimStates ?? 0) > 1 && !jB.has(YB) ? YB : BB
+        Fe = (ee, He) => {
+          const ye = ee.replace(/_?0$/, "");
+          return (ie[He]?.numAnimStates ?? 0) > 1 && !Ue.has(ye) ? ye : ee
         },
-        JB = new Map;
-      for (const [pB, qB] of DB) JB.set(qB, yB(oB(pB)?.root ?? pB, qB));
-      const MB = DB.reduce(((BB, OB) => {
-          let [, GB] = OB;
-          return Math.max(BB, GB + 1)
+        Je = new Map;
+      for (const [fe, Te] of be) Je.set(Te, Fe(Ke(fe)?.root ?? fe, Te));
+      const oe = be.reduce(((ee, ie) => {
+          let [, He] = ie;
+          return Math.max(ee, He + 1)
         }), 0),
-        PB = Array.from({
-          length: MB
-        }, ((BB, OB) => ({
-          id: OB + 1,
+        Re = Array.from({
+          length: oe
+        }, ((ee, ie) => ({
+          id: ie + 1,
           rotation: 0
         }))),
-        zB = new Map,
-        lB = new Map;
-      for (const [pB, qB] of DB) {
-        const BB = oB(pB),
-          OB = YB.get(qB);
-        if (void 0 !== OB) {
-          const GB = JB.get(OB);
-          lB.set(pB, {
-            name: pB,
-            texture: GB,
+        ke = new Map,
+        qe = new Map;
+      for (const [fe, Te] of be) {
+        const ee = Ke(fe),
+          ie = ye.get(Te);
+        if (void 0 !== ie) {
+          const He = Je.get(ie);
+          qe.set(fe, {
+            name: fe,
+            texture: He,
             kind: "frame"
-          }), BB && !lB.has(BB.root) && lB.set(BB.root, {
-            name: BB.root,
-            texture: GB,
+          }), ee && !qe.has(ee.root) && qe.set(ee.root, {
+            name: ee.root,
+            texture: He,
             kind: "frame"
           });
           continue
         }
-        const GB = JB.get(qB),
-          DB = BB?.root ?? pB;
-        if (GB !== DB && lB.set(DB, {
-            name: DB,
-            texture: GB,
+        const He = Je.get(Te),
+          be = ee?.root ?? fe;
+        if (He !== be && qe.set(be, {
+            name: be,
+            texture: He,
             kind: "frame"
-          }), BB) {
-          const OB = QB.get(BB.root);
-          PB[qB] = {
-            id: OB,
-            rotation: BB.rotation
-          }, zB.set(GB, OB), lB.set(pB, {
-            name: pB,
-            texture: GB,
+          }), ee) {
+          const ie = Me.get(ee.root);
+          Re[Te] = {
+            id: ie,
+            rotation: ee.rotation
+          }, ke.set(He, ie), qe.set(fe, {
+            name: fe,
+            texture: He,
             kind: "rotation"
           })
-        } else zB.set(GB, qB + 1)
+        } else ke.set(He, Te + 1)
       }
-      for (const pB of zB.keys()) lB.delete(pB);
-      for (const [pB, qB] of GB) {
-        const BB = zB.get(qB);
-        void 0 === BB || zB.has(pB) || (zB.set(pB, BB), lB.delete(pB))
+      for (const fe of ke.keys()) qe.delete(fe);
+      for (const [fe, Te] of He) {
+        const ee = ke.get(Te);
+        void 0 === ee || ke.has(fe) || (ke.set(fe, ee), qe.delete(fe))
       }
       return {
-        named: [...zB].sort(((BB, OB) => {
-          let [GB] = BB, [YB] = OB;
-          return GB < YB ? -1 : GB > YB ? 1 : 0
-        })).map((BB => {
-          let [OB, GB] = BB;
+        named: [...ke].sort(((ee, ie) => {
+          let [He] = ee, [ye] = ie;
+          return He < ye ? -1 : He > ye ? 1 : 0
+        })).map((ee => {
+          let [ie, He] = ee;
           return {
-            name: OB,
-            id: GB
+            name: ie,
+            id: He
           }
         })),
-        aliases: [...lB.values()],
-        layers: PB
+        aliases: [...qe.values()],
+        layers: Re
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

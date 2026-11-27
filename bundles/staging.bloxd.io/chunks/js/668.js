@@ -1,28 +1,28 @@
 export const id = 668;
 export const ids = [668];
 export const modules = {
-  63973: (BB, OB, GB) => {
-    function YB(BB) {
-      return BB.features.has("timestamp-query")
+  63906: (ee, ie, He) => {
+    function ye(ee) {
+      return ee.features.has("timestamp-query")
     }
 
-    function DB(BB) {
-      return YB(BB) ? {
-        device: BB,
-        markerPipeline: BB.createComputePipeline({
+    function be(ee) {
+      return ye(ee) ? {
+        device: ee,
+        markerPipeline: ee.createComputePipeline({
           layout: "auto",
           compute: {
-            module: BB.createShaderModule({
+            module: ee.createShaderModule({
               code: "@compute @workgroup_size(1) fn main() {}"
             }),
             entryPoint: "main"
           }
         }),
-        querySet: BB.createQuerySet({
+        querySet: ee.createQuerySet({
           type: "timestamp",
           count: 2
         }),
-        resolveBuf: BB.createBuffer({
+        resolveBuf: ee.createBuffer({
           size: 16,
           usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
         }),
@@ -32,57 +32,57 @@ export const modules = {
       } : null
     }
 
-    function QB(BB, OB) {
-      const GB = OB.beginComputePass({
+    function Me(ee, ie) {
+      const He = ie.beginComputePass({
         timestampWrites: {
-          querySet: BB.querySet,
+          querySet: ee.querySet,
           beginningOfPassWriteIndex: 0
         }
       });
-      GB.setPipeline(BB.markerPipeline), GB.dispatchWorkgroups(1), GB.end()
+      He.setPipeline(ee.markerPipeline), He.dispatchWorkgroups(1), He.end()
     }
 
-    function oB(BB, OB) {
-      const GB = OB.beginComputePass({
+    function Ke(ee, ie) {
+      const He = ie.beginComputePass({
         timestampWrites: {
-          querySet: BB.querySet,
+          querySet: ee.querySet,
           endOfPassWriteIndex: 1
         }
       });
-      GB.setPipeline(BB.markerPipeline), GB.dispatchWorkgroups(1), GB.end()
+      He.setPipeline(ee.markerPipeline), He.dispatchWorkgroups(1), He.end()
     }
 
-    function jB(BB) {
-      if (BB.inFlight > 3) return;
-      const OB = BB.device,
-        GB = BB.pool.pop() ?? OB.createBuffer({
+    function Ue(ee) {
+      if (ee.inFlight > 3) return;
+      const ie = ee.device,
+        He = ee.pool.pop() ?? ie.createBuffer({
           size: 16,
           usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
         }),
-        YB = OB.createCommandEncoder();
-      YB.resolveQuerySet(BB.querySet, 0, 2, BB.resolveBuf, 0), YB.copyBufferToBuffer(BB.resolveBuf, 0, GB, 0, 16), OB.queue.submit([YB.finish()]), BB.inFlight++, GB.mapAsync(GPUMapMode.READ).then((() => {
-        const OB = new BigInt64Array(GB.getMappedRange()),
-          YB = Number(OB[1] - OB[0]) / 1e6;
-        YB >= 0 && YB < 5e3 && (BB.lastMs = BB.lastMs > 0 ? .8 * BB.lastMs + .2 * YB : YB), GB.unmap(), BB.pool.push(GB), BB.inFlight--
+        ye = ie.createCommandEncoder();
+      ye.resolveQuerySet(ee.querySet, 0, 2, ee.resolveBuf, 0), ye.copyBufferToBuffer(ee.resolveBuf, 0, He, 0, 16), ie.queue.submit([ye.finish()]), ee.inFlight++, He.mapAsync(GPUMapMode.READ).then((() => {
+        const ie = new BigInt64Array(He.getMappedRange()),
+          ye = Number(ie[1] - ie[0]) / 1e6;
+        ye >= 0 && ye < 5e3 && (ee.lastMs = ee.lastMs > 0 ? .8 * ee.lastMs + .2 * ye : ye), He.unmap(), ee.pool.push(He), ee.inFlight--
       }), (() => {
-        BB.inFlight--
+        ee.inFlight--
       }))
     }
 
-    function yB(BB) {
-      BB.querySet.destroy(), BB.resolveBuf.destroy();
-      for (const OB of BB.pool) OB.destroy();
-      BB.pool.length = 0
+    function Fe(ee) {
+      ee.querySet.destroy(), ee.resolveBuf.destroy();
+      for (const ie of ee.pool) ie.destroy();
+      ee.pool.length = 0
     }
-    GB.r(OB), GB.d(OB, {
-      createGpuFrameTimer: () => DB,
-      destroyGpuFrameTimer: () => yB,
-      gpuFrameTimerBegin: () => QB,
-      gpuFrameTimerEnd: () => oB,
-      gpuFrameTimerResolve: () => jB,
-      gpuTimingSupportedFor: () => YB
+    He.r(ie), He.d(ie, {
+      createGpuFrameTimer: () => be,
+      destroyGpuFrameTimer: () => Fe,
+      gpuFrameTimerBegin: () => Me,
+      gpuFrameTimerEnd: () => Ke,
+      gpuFrameTimerResolve: () => Ue,
+      gpuTimingSupportedFor: () => ye
     })
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

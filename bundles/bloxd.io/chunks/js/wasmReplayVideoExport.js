@@ -1,77 +1,77 @@
 export const id = 78;
 export const ids = [72, 78, 108];
 export const modules = {
-  37685: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => PB,
-      c: () => zB
+  37813: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Re,
+      g: () => ke
     });
-    var YB = GB(641),
-      DB = GB(31),
-      QB = GB(37641);
-    const oB = "replayFileKeptForReload",
-      jB = "replayFileKeptForReloadAt",
-      yB = "replayFileKeptForReloadTab",
-      JB = 3e5,
-      MB = 5e3;
-    async function PB(BB, OB) {
-      const GB = Date.now(),
-        QB = {
-          at: GB,
-          bytes: BB,
-          source: OB
+    var ye = He(610),
+      be = He(35),
+      Me = He(37775);
+    const Ke = "replayFileKeptForReload",
+      Ue = "replayFileKeptForReloadAt",
+      Fe = "replayFileKeptForReloadTab",
+      Je = 3e5,
+      oe = 5e3;
+    async function Re(ee, ie) {
+      const He = Date.now(),
+        Me = {
+          at: He,
+          bytes: ee,
+          source: ie
         },
-        JB = await Promise.race([(async () => await DB.d.setItem(jB, GB) && DB.d.setItem(oB, QB))(), (0, YB.U)(MB).then((() => !1))]);
-      JB || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const PB = {
-        at: GB,
-        GP: JB
+        Je = await Promise.race([(async () => await be.e.setItem(Ue, He) && be.e.setItem(Ke, Me))(), (0, ye.U)(oe).then((() => !1))]);
+      Je || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const Re = {
+        at: He,
+        KR: Je
       };
-      DB.i.setItem(yB, PB)
+      be.m.setItem(Fe, Re)
     }
-    async function zB() {
-      var BB;
-      const OB = DB.i.getItem(yB);
-      null !== OB && DB.i.removeItem(yB);
-      const GB = Date.now(),
-        YB = await DB.d.getItem(jB),
-        MB = null !== OB && GB - OB.at <= JB,
-        PB = null !== OB && YB === OB.at;
-      let zB = null;
-      if (null !== YB && (PB || ("number" !== typeof YB || GB - YB > JB)) && (zB = MB && PB && OB.GP ? await DB.d.getItem(oB) : null, await Promise.all([DB.d.removeItem(jB), DB.d.removeItem(oB)])), !MB) return null;
-      if ((null === (BB = zB) || void 0 === BB ? void 0 : BB.at) !== OB.at) throw new Error(QB.e.replayNotKept.text);
+    async function ke() {
+      var ee;
+      const ie = be.m.getItem(Fe);
+      null !== ie && be.m.removeItem(Fe);
+      const He = Date.now(),
+        ye = await be.e.getItem(Ue),
+        oe = null !== ie && He - ie.at <= Je,
+        Re = null !== ie && ye === ie.at;
+      let ke = null;
+      if (null !== ye && (Re || ("number" !== typeof ye || He - ye > Je)) && (ke = oe && Re && ie.KR ? await be.e.getItem(Ke) : null, await Promise.all([be.e.removeItem(Ue), be.e.removeItem(Ke)])), !oe) return null;
+      if ((null === (ee = ke) || void 0 === ee ? void 0 : ee.at) !== ie.at) throw new Error(Me.d.replayNotKept.text);
       return {
-        bytes: zB.bytes,
-        source: zB.source
+        bytes: ke.bytes,
+        source: ke.source
       }
     }
   },
-  37682: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      g: () => QB,
-      k: () => DB
+  37807: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye,
+      g: () => Me,
+      j: () => be
     });
-    const YB = [9];
+    const ye = [9];
 
-    function DB(BB) {
-      return YB.includes(BB)
+    function be(ee) {
+      return ye.includes(ee)
     }
 
-    function QB(BB) {
-      return null !== BB && BB >= 3 && BB < YB[0]
+    function Me(ee) {
+      return null !== ee && ee >= 3 && ee < ye[0]
     }
   },
-  37641: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => oB,
-      h: () => JB,
-      j: () => yB
+  37775: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke,
+      g: () => Je,
+      k: () => Fe
     });
-    var YB = GB(25);
-    const DB = 1500,
-      QB = 1e3,
-      oB = {
+    var ye = He(27);
+    const be = 1500,
+      Me = 1e3,
+      Ke = {
         recordingStarted: {
           text: "Started recording",
           type: "Success"
@@ -162,29 +162,29 @@ export const modules = {
           type: "Error"
         }
       },
-      jB = new Set(Object.values(oB).filter((BB => "Error" === BB.type)).map((BB => BB.text)));
+      Ue = new Set(Object.values(Ke).filter((ee => "Error" === ee.type)).map((ee => ee.text)));
 
-    function yB(BB) {
-      return BB instanceof Error && jB.has(BB.message) ? BB.message : void 0
+    function Fe(ee) {
+      return ee instanceof Error && Ue.has(ee.message) ? ee.message : void 0
     }
 
-    function JB(BB) {
-      var OB;
-      const GB = null !== (OB = BB.timeoutMs) && void 0 !== OB ? OB : "Error" === BB.type ? DB : QB;
-      YB.o.tM("showBottomMessage", {
-        message: BB.text,
-        timeoutLength: GB,
-        type: BB.type
+    function Je(ee) {
+      var ie;
+      const He = null !== (ie = ee.timeoutMs) && void 0 !== ie ? ie : "Error" === ee.type ? be : Me;
+      ye.h.yR("showBottomMessage", {
+        message: ee.text,
+        timeoutLength: He,
+        type: ee.type
       })
     }
   },
-  37692: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB,
-      c: () => DB
+  37825: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => ye,
+      d: () => be
     });
-    const YB = "data-replay-ui-active",
-      DB = [{
+    const ye = "data-replay-ui-active",
+      be = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -234,78 +234,78 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37694: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => JB,
-      f: () => PB,
-      i: () => MB
+  37828: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Je,
+      h: () => Re,
+      i: () => oe
     });
-    var YB = GB(16),
-      DB = GB(25),
-      QB = GB(37692);
+    var ye = He(18),
+      be = He(27),
+      Me = He(37825);
 
-    function oB() {
-      const BB = {};
+    function Ke() {
+      const ee = {};
       for (const {
-          group: OB
+          group: ie
         }
-        of QB.c) BB[OB] = !0;
-      return BB
+        of Me.d) ee[ie] = !0;
+      return ee
     }
-    let jB = oB();
+    let Ue = Ke();
 
-    function yB() {
-      DB.o.tM("replayViewer|uiVisibilityChanged")
-    }
-
-    function JB() {
-      return jB
+    function Fe() {
+      be.h.yR("replayViewer|uiVisibilityChanged")
     }
 
-    function MB(BB, OB) {
-      jB[BB] !== OB && (jB = {
-        ...jB,
-        [BB]: OB
-      }, "nametag" === BB && YB.c.set({
-        areNametagsHidden: !OB
-      }), yB())
+    function Je() {
+      return Ue
     }
 
-    function PB() {
-      jB = oB(), YB.c.set({
+    function oe(ee, ie) {
+      Ue[ee] !== ie && (Ue = {
+        ...Ue,
+        [ee]: ie
+      }, "nametag" === ee && ye.e.set({
+        areNametagsHidden: !ie
+      }), Fe())
+    }
+
+    function Re() {
+      Ue = Ke(), ye.e.set({
         areNametagsHidden: !1
-      }), yB()
+      }), Fe()
     }
   },
-  39965: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => uB
+  40101: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Pe
     });
-    var YB = GB(1834),
-      DB = GB(1400),
-      QB = GB(56),
-      oB = GB(1090),
-      jB = GB.n(oB),
-      yB = GB(1485),
-      JB = GB(92);
-    const MB = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
-      PB = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+    var ye = He(1790),
+      be = He(1340),
+      Me = He(59),
+      Ke = He(1053),
+      Ue = He.n(Ke),
+      Fe = He(1438),
+      Je = He(97);
+    const oe = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+      Re = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
 
-    function zB(BB) {
-      return "webm" === BB ? MB : PB
+    function ke(ee) {
+      return "webm" === ee ? oe : Re
     }
 
-    function lB(BB) {
-      for (const OB of BB)
-        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(OB)) return OB;
+    function qe(ee) {
+      for (const ie of ee)
+        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(ie)) return ie;
       return null
     }
 
-    function pB(BB) {
-      return null !== lB(zB(BB))
+    function fe(ee) {
+      return null !== qe(ke(ee))
     }
-    var qB = GB(1282);
-    const ZB = [{
+    var Te = He(1228);
+    const pe = [{
       id: "webm",
       label: "WebM",
       description: "Usually less screen tearing, but may not play in all media players."
@@ -315,177 +315,177 @@ export const modules = {
       description: "Works in more players, but may show graphical glitches on some devices."
     }];
 
-    function NB() {
-      return pB("webm") ? "webm" : pB("mp4") ? "mp4" : "webm"
+    function Xe() {
+      return fe("webm") ? "webm" : fe("mp4") ? "mp4" : "webm"
     }
 
-    function RB(BB) {
+    function ze(ee) {
       let {
-        cards: OB
-      } = BB;
-      return (0, qB.jsx)("div", {
+        cards: ie
+      } = ee;
+      return (0, Te.jsx)("div", {
         className: "ReplayVideoExportOptionCards",
-        children: OB.map((BB => (0, qB.jsxs)("div", {
+        children: ie.map((ee => (0, Te.jsxs)("div", {
           className: "ReplayVideoExportOptionColumn",
-          children: [(0, qB.jsx)("div", {
-            className: jB()("ReplayVideoExportOptionCard", {
-              Selected: BB.selected,
-              Disabled: BB.disabled
+          children: [(0, Te.jsx)("div", {
+            className: Ue()("ReplayVideoExportOptionCard", {
+              Selected: ee.selected,
+              Disabled: ee.disabled
             }),
             onClick: () => {
-              BB.disabled || BB.onSelect()
+              ee.disabled || ee.onSelect()
             },
-            children: (0, qB.jsxs)("div", {
+            children: (0, Te.jsxs)("div", {
               className: "ReplayVideoExportOptionCardBody",
-              children: [(0, qB.jsx)("div", {
+              children: [(0, Te.jsx)("div", {
                 className: "ReplayVideoExportOptionCardLabel",
-                children: BB.label
-              }), (0, qB.jsx)("div", {
+                children: ee.label
+              }), (0, Te.jsx)("div", {
                 className: "ReplayVideoExportOptionCardDescription",
-                children: BB.description
+                children: ee.description
               })]
             })
-          }), BB.disabled && BB.disabledReason && (0, qB.jsx)("div", {
+          }), ee.disabled && ee.disabledReason && (0, Te.jsx)("div", {
             className: "ReplayVideoExportOptionError SmallTextLight",
-            children: BB.disabledReason
+            children: ee.disabledReason
           })]
-        }, BB.id)))
+        }, ee.id)))
       })
     }
-    const WB = (0, QB.memo)((function(BB) {
+    const Be = (0, Me.memo)((function(ee) {
       let {
-        hasPlaybackMark: OB,
-        canIncludeUi: GB,
-        includeUiDisabledReason: YB,
-        selectionRef: DB,
-        closePopup: oB
-      } = BB;
-      const jB = pB("webm") || pB("mp4"),
-        [MB, PB] = (0, QB.useState)(NB),
-        [zB, lB] = (0, QB.useState)(GB),
-        WB = jB && pB(MB);
-      if (!jB) {
-        const BB = (0, JB.isMobile)() ? "screen recording" : "OBS";
-        return (0, qB.jsxs)("div", {
+        hasPlaybackMark: ie,
+        canIncludeUi: He,
+        includeUiDisabledReason: ye,
+        selectionRef: be,
+        closePopup: Ke
+      } = ee;
+      const Ue = fe("webm") || fe("mp4"),
+        [oe, Re] = (0, Me.useState)(Xe),
+        [ke, qe] = (0, Me.useState)(He),
+        Be = Ue && fe(oe);
+      if (!Ue) {
+        const ee = (0, Je.isMobile)() ? "screen recording" : "OBS";
+        return (0, Te.jsxs)("div", {
           className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-          children: [(0, qB.jsx)("div", {
+          children: [(0, Te.jsx)("div", {
             className: "PromptPopupNotificationTitle SmallTextBold",
             children: "Can't export video"
-          }), (0, qB.jsx)("div", {
+          }), (0, Te.jsx)("div", {
             className: "PromptPopupNotificationSubtitle SmallTextLight",
-            children: `Your device does not support exporting. Try recording with an external software like ${BB}.`
-          }), (0, qB.jsx)("div", {
+            children: `Your device does not support exporting. Try recording with an external software like ${ee}.`
+          }), (0, Te.jsx)("div", {
             className: "PromptPopupNotificationBody",
-            children: (0, qB.jsx)(yB.Q, {
+            children: (0, Te.jsx)(Fe.G, {
               className: "PromptPopupNotificationBodyButton",
               onClick: () => {
-                DB.options = null, oB()
+                be.options = null, Ke()
               },
               children: "Close"
             })
           })]
         })
       }
-      const AB = OB ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
-        VB = [{
+      const Ee = ie ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
+        ge = [{
           id: "withoutUi",
           label: "Without UI",
           description: "Usually cleaner and sharper.",
-          selected: !zB,
+          selected: !ke,
           disabled: !1,
           disabledReason: null,
           onSelect: () => {
-            lB(!1)
+            qe(!1)
           }
         }, {
           id: "withUi",
           label: "With UI",
           description: "Includes HUD elements. May look worse on some devices.",
-          selected: zB,
-          disabled: !GB,
-          disabledReason: YB,
+          selected: ke,
+          disabled: !He,
+          disabledReason: ye,
           onSelect: () => {
-            lB(!0)
+            qe(!0)
           }
         }],
-        SB = ZB.map((BB => {
-          const OB = pB(BB.id);
+        Oe = pe.map((ee => {
+          const ie = fe(ee.id);
           return {
-            id: BB.id,
-            label: BB.label,
-            description: BB.description,
-            selected: MB === BB.id,
-            disabled: !OB,
+            id: ee.id,
+            label: ee.label,
+            description: ee.description,
+            selected: oe === ee.id,
+            disabled: !ie,
             disabledReason: "Your device doesn't support this format",
             onSelect: () => {
-              PB(BB.id)
+              Re(ee.id)
             }
           }
         }));
-      return (0, qB.jsxs)("div", {
+      return (0, Te.jsxs)("div", {
         className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-        children: [(0, qB.jsx)("div", {
+        children: [(0, Te.jsx)("div", {
           className: "PromptPopupNotificationTitle SmallTextBold",
           children: "Export video?"
-        }), (0, qB.jsx)("div", {
+        }), (0, Te.jsx)("div", {
           className: "PromptPopupNotificationSubtitle SmallTextLight",
-          children: AB
-        }), (0, qB.jsxs)("div", {
+          children: Ee
+        }), (0, Te.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, qB.jsx)("div", {
+          children: [(0, Te.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "UI"
-          }), (0, qB.jsx)(RB, {
-            cards: VB
+          }), (0, Te.jsx)(ze, {
+            cards: ge
           })]
-        }), (0, qB.jsxs)("div", {
+        }), (0, Te.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, qB.jsx)("div", {
+          children: [(0, Te.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "Format"
-          }), (0, qB.jsx)(RB, {
-            cards: SB
+          }), (0, Te.jsx)(ze, {
+            cards: Oe
           })]
-        }), (0, qB.jsxs)("div", {
+        }), (0, Te.jsxs)("div", {
           className: "PromptPopupNotificationBody",
-          children: [(0, qB.jsx)(yB.q, {
+          children: [(0, Te.jsx)(Fe.m, {
             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
-            disabled: !WB,
+            disabled: !Be,
             onClick: () => {
-              DB.options = {
-                format: MB,
-                includeUi: GB && zB
-              }, oB()
+              be.options = {
+                format: oe,
+                includeUi: He && ke
+              }, Ke()
             },
             children: "Export"
-          }), (0, qB.jsx)(yB.Q, {
+          }), (0, Te.jsx)(Fe.G, {
             className: "PromptPopupNotificationBodyButton",
             onClick: () => {
-              DB.options = null, oB()
+              be.options = null, Ke()
             },
             children: "Cancel"
           })]
         })]
       })
     }));
-    var AB = GB(5353),
-      VB = GB(37692),
-      SB = GB(37694);
-    let nB = null;
+    var Ee = He(5338),
+      ge = He(37825),
+      Oe = He(37828);
+    let de = null;
 
-    function UB() {
+    function We() {
       return function() {
-        const BB = (0, SB.c)();
+        const ee = (0, Oe.e)();
         for (const {
-            group: OB,
-            dataAttr: GB
+            group: ie,
+            dataAttr: He
           }
-          of VB.c)
-          if (GB && BB[OB]) return !0;
+          of ge.d)
+          if (He && ee[ie]) return !0;
         return !1
       }() ? function() {
-        var BB;
-        return "function" === typeof(null === (BB = navigator.mediaDevices) || void 0 === BB ? void 0 : BB.getDisplayMedia)
+        var ee;
+        return "function" === typeof(null === (ee = navigator.mediaDevices) || void 0 === ee ? void 0 : ee.getDisplayMedia)
       }() ? {
         canIncludeUi: !0,
         includeUiDisabledReason: null
@@ -497,344 +497,344 @@ export const modules = {
         includeUiDisabledReason: "No UI to include"
       }
     }
-    async function fB(BB, OB, GB) {
-      return BB ? async function() {
-        const BB = await navigator.mediaDevices.getDisplayMedia({
+    async function te(ee, ie, He) {
+      return ee ? async function() {
+        const ee = await navigator.mediaDevices.getDisplayMedia({
           video: !0,
           audio: !1,
           preferCurrentTab: !0,
           selfBrowserSurface: "include"
         });
-        for (const OB of BB.getAudioTracks()) OB.stop(), BB.removeTrack(OB);
-        return BB
-      }(): OB().captureStream(Math.max(1, Math.round(GB)))
+        for (const ie of ee.getAudioTracks()) ie.stop(), ee.removeTrack(ie);
+        return ee
+      }(): ie().captureStream(Math.max(1, Math.round(He)))
     }
-    var kB = GB(39782);
-    let dB = !1;
+    var Ze = He(39867);
+    let we = !1;
 
-    function KB(BB) {
-      BB.holdInput(!1), (0, kB.e)(!1)
+    function De(ee) {
+      ee.holdInput(!1), (0, Ze.f)(!1)
     }
-    async function uB(BB) {
-      var OB, GB;
-      if ((0, kB.b)() || dB) return;
-      const QB = BB();
-      if (!QB) return;
-      dB = !0;
-      let oB = null;
-      const jB = QB.playbackMarkInTick,
+    async function Pe(ee) {
+      var ie, He;
+      if ((0, Ze.d)() || we) return;
+      const Me = ee();
+      if (!Me) return;
+      we = !0;
+      let Ke = null;
+      const Ue = Me.playbackMarkInTick,
         {
-          canIncludeUi: yB,
-          includeUiDisabledReason: JB
-        } = UB();
+          canIncludeUi: Fe,
+          includeUiDisabledReason: Je
+        } = We();
       try {
-        oB = await async function(BB) {
+        Ke = await async function(ee) {
           let {
-            hasPlaybackMark: OB,
-            canIncludeUi: GB,
-            includeUiDisabledReason: YB
-          } = BB;
-          const QB = {
+            hasPlaybackMark: ie,
+            canIncludeUi: He,
+            includeUiDisabledReason: ye
+          } = ee;
+          const Me = {
               options: null
             },
-            oB = DB.NotificationProvider.showCustomPopup({
-              body: BB => (0, qB.jsx)(WB, {
-                hasPlaybackMark: OB,
-                canIncludeUi: GB,
-                includeUiDisabledReason: YB,
-                selectionRef: QB,
-                closePopup: BB
+            Ke = be.NotificationProvider.showCustomPopup({
+              body: ee => (0, Te.jsx)(Be, {
+                hasPlaybackMark: ie,
+                canIncludeUi: He,
+                includeUiDisabledReason: ye,
+                selectionRef: Me,
+                closePopup: ee
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0,
               unlockPointerKey: "replayVideoExportOptions"
             });
-          return "notificationTornDown" === await oB.getResult() ? null : QB.options
+          return "notificationTornDown" === await Ke.getResult() ? null : Me.options
         }({
-          hasPlaybackMark: null !== jB,
-          canIncludeUi: yB,
-          includeUiDisabledReason: JB
+          hasPlaybackMark: null !== Ue,
+          canIncludeUi: Fe,
+          includeUiDisabledReason: Je
         })
       } finally {
-        dB = !1
+        we = !1
       }
-      if (!oB) return;
-      const MB = null !== (OB = null === (GB = QB.startFailure) || void 0 === GB ? void 0 : GB.call(QB)) && void 0 !== OB ? OB : null;
-      if (null !== MB) return void DB.NotificationProvider.showAlertPopup({
+      if (!Ke) return;
+      const oe = null !== (ie = null === (He = Me.startFailure) || void 0 === He ? void 0 : He.call(Me)) && void 0 !== ie ? ie : null;
+      if (null !== oe) return void be.NotificationProvider.showAlertPopup({
         title: "Video export failed",
-        subtitle: MB
+        subtitle: oe
       });
-      if (! function(BB) {
-          return !(0, kB.b)() && ((0, kB.e)(!0), BB.holdInput(!0), !0)
-        }(QB)) return;
-      let PB = null;
+      if (! function(ee) {
+          return !(0, Ze.d)() && ((0, Ze.f)(!0), ee.holdInput(!0), !0)
+        }(Me)) return;
+      let Re = null;
       try {
-        PB = await fB(oB.includeUi, (() => QB.canvas()), QB.pI)
-      } catch (mB) {
-        return console.error("Failed to create video stream for export", mB), KB(QB), void DB.NotificationProvider.showAlertPopup({
+        Re = await te(Ke.includeUi, (() => Me.canvas()), Me.lV)
+      } catch (Ae) {
+        return console.error("Failed to create video stream for export", Ae), De(Me), void be.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: mB instanceof Error ? mB.message : "Could not start capture."
+          subtitle: Ae instanceof Error ? Ae.message : "Could not start capture."
         })
       }
-      let pB = null;
-      const ZB = [];
-      let NB = null,
-        RB = null;
+      let fe = null;
+      const pe = [];
+      let Xe = null,
+        ze = null;
       try {
-        var VB, SB, uB;
-        pB = QB.playbackSpeed(), QB.closeViewer(), QB.setPlaybackSpeed(1), QB.pause(), QB.seekToTick(null !== jB && void 0 !== jB ? jB : 0);
-        const BB = await async function() {
-          const BB = AB.Howler.masterGain;
-          if (!AB.Howler.ctx || !BB) return null;
-          await AB.Howler.ctx.resume();
-          const OB = AB.Howler.ctx.createMediaStreamDestination();
-          BB.connect(OB), nB = OB;
-          const [GB] = OB.stream.getAudioTracks();
-          return null !== GB && void 0 !== GB ? GB : null
+        var ge, Oe, Pe;
+        fe = Me.playbackSpeed(), Me.closeViewer(), Me.setPlaybackSpeed(1), Me.pause(), Me.seekToTick(null !== Ue && void 0 !== Ue ? Ue : 0);
+        const ee = await async function() {
+          const ee = Ee.Howler.masterGain;
+          if (!Ee.Howler.ctx || !ee) return null;
+          await Ee.Howler.ctx.resume();
+          const ie = Ee.Howler.ctx.createMediaStreamDestination();
+          ee.connect(ie), de = ie;
+          const [He] = ie.stream.getAudioTracks();
+          return null !== He && void 0 !== He ? He : null
         }();
-        RB = new MediaStream;
-        for (const YB of PB.getVideoTracks()) RB.addTrack(YB);
-        BB && RB.addTrack(BB);
-        const OB = function(BB) {
-          const OB = lB(zB(BB));
-          if (!OB) throw new Error(`No MediaRecorder mime type available for ${BB}`);
-          return OB
-        }(oB.format);
-        NB = new MediaRecorder(RB, {
-          mimeType: OB,
+        ze = new MediaStream;
+        for (const ye of Re.getVideoTracks()) ze.addTrack(ye);
+        ee && ze.addTrack(ee);
+        const ie = function(ee) {
+          const ie = qe(ke(ee));
+          if (!ie) throw new Error(`No MediaRecorder mime type available for ${ee}`);
+          return ie
+        }(Ke.format);
+        Xe = new MediaRecorder(ze, {
+          mimeType: ie,
           videoBitsPerSecond: 8e6
-        }), NB.ondataavailable = BB => {
-          BB.data.size > 0 && ZB.push(BB.data)
+        }), Xe.ondataavailable = ee => {
+          ee.data.size > 0 && pe.push(ee.data)
         };
-        const GB = new Promise((BB => {
-          NB.onstop = () => {
-            BB()
+        const He = new Promise((ee => {
+          Xe.onstop = () => {
+            ee()
           }
         }));
-        await (null === (VB = QB.seekSettled) || void 0 === VB ? void 0 : VB.call(QB));
-        const [yB] = PB.getVideoTracks();
-        NB.start(250), QB.play();
-        const JB = await
-        function(BB, OB, GB) {
-          return new Promise((YB => {
-            let DB = !1;
-            const QB = BB => {
-                DB || (DB = !0, jB(), OB.removeEventListener("ended", oB), YB(BB))
+        await (null === (ge = Me.seekSettled) || void 0 === ge ? void 0 : ge.call(Me));
+        const [Fe] = Re.getVideoTracks();
+        Xe.start(250), Me.play();
+        const Je = await
+        function(ee, ie, He) {
+          return new Promise((ye => {
+            let be = !1;
+            const Me = ee => {
+                be || (be = !0, Ue(), ie.removeEventListener("ended", Ke), ye(ee))
               },
-              oB = () => {
-                QB("captureLost")
+              Ke = () => {
+                Me("captureLost")
               },
-              jB = BB.watchPlayback((() => {
-                BB.isPlaying() || QB("completed")
+              Ue = ee.watchPlayback((() => {
+                ee.isPlaying() || Me("completed")
               }));
-            OB.addEventListener("ended", oB), GB.onerror = () => {
-              QB("recorderError")
-            }, "ended" !== OB.readyState ? BB.isPlaying() || QB("completed") : QB("captureLost")
+            ie.addEventListener("ended", Ke), He.onerror = () => {
+              Me("recorderError")
+            }, "ended" !== ie.readyState ? ee.isPlaying() || Me("completed") : Me("captureLost")
           }))
-        }(QB, yB, NB);
-        if (QB.pause(), "inactive" !== NB.state && NB.stop(), await GB, "captureLost" === JB) return void DB.NotificationProvider.showAlertPopup({
+        }(Me, Fe, Xe);
+        if (Me.pause(), "inactive" !== Xe.state && Xe.stop(), await He, "captureLost" === Je) return void be.NotificationProvider.showAlertPopup({
           title: "Video export stopped",
           subtitle: "Screen sharing ended before the replay finished. Nothing was saved."
         });
-        if ("recorderError" === JB) return void DB.NotificationProvider.showAlertPopup({
+        if ("recorderError" === Je) return void be.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "The recorder encountered an error. Nothing was saved."
         });
-        const MB = null !== (SB = null === (uB = QB.playbackFailure) || void 0 === uB ? void 0 : uB.call(QB)) && void 0 !== SB ? SB : null;
-        if (null !== MB) return void DB.NotificationProvider.showAlertPopup({
+        const oe = null !== (Oe = null === (Pe = Me.playbackFailure) || void 0 === Pe ? void 0 : Pe.call(Me)) && void 0 !== Oe ? Oe : null;
+        if (null !== oe) return void be.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: `${MB} Nothing was saved.`
+          subtitle: `${oe} Nothing was saved.`
         });
-        const qB = new Blob(ZB, {
-          type: OB
+        const Te = new Blob(pe, {
+          type: ie
         });
-        qB.size > 0 ? (0, YB.c)(qB, function(BB, OB) {
-          const GB = function(BB) {
-            return "mp4" === BB ? "mp4" : "webm"
-          }(OB);
-          if (BB) return `${BB.replace(/\.bloxdreplay$/i,"")}.${GB}`;
-          return `bloxd-replay-${Date.now()}.${GB}`
-        }(QB.fileName(), oB.format)) : DB.NotificationProvider.showAlertPopup({
+        Te.size > 0 ? (0, ye.e)(Te, function(ee, ie) {
+          const He = function(ee) {
+            return "mp4" === ee ? "mp4" : "webm"
+          }(ie);
+          if (ee) return `${ee.replace(/\.bloxdreplay$/i,"")}.${He}`;
+          return `bloxd-replay-${Date.now()}.${He}`
+        }(Me.fileName(), Ke.format)) : be.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "No video data was captured. Try again."
         })
-      } catch (mB) {
-        console.error("Replay video export failed", mB), DB.NotificationProvider.showAlertPopup({
+      } catch (Ae) {
+        console.error("Replay video export failed", Ae), be.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: mB instanceof Error ? mB.message : "Something went wrong while exporting."
+          subtitle: Ae instanceof Error ? Ae.message : "Something went wrong while exporting."
         })
       } finally {
-        if (NB && "inactive" !== NB.state) try {
-          NB.stop()
-        } catch (mB) {
-          console.error("Failed to stop MediaRecorder", mB)
+        if (Xe && "inactive" !== Xe.state) try {
+          Xe.stop()
+        } catch (Ae) {
+          console.error("Failed to stop MediaRecorder", Ae)
         }! function() {
-          const BB = AB.Howler.masterGain;
-          if (nB && BB) {
+          const ee = Ee.Howler.masterGain;
+          if (de && ee) {
             try {
-              BB.disconnect(nB)
-            } catch (mB) {
-              console.error("Failed to disconnect Howler export tee", mB)
+              ee.disconnect(de)
+            } catch (Ae) {
+              console.error("Failed to disconnect Howler export tee", Ae)
             }
-            nB = null
-          } else nB = null
+            de = null
+          } else de = null
         }();
-        for (const BB of PB.getTracks()) BB.stop();
-        if (RB)
-          for (const BB of RB.getTracks()) BB.stop();
-        null !== pB && QB.setPlaybackSpeed(pB), QB.pause(), KB(QB), QB.reopenViewer()
+        for (const ee of Re.getTracks()) ee.stop();
+        if (ze)
+          for (const ee of ze.getTracks()) ee.stop();
+        null !== fe && Me.setPlaybackSpeed(fe), Me.pause(), De(Me), Me.reopenViewer()
       }
     }
   },
-  5353: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      Howl: () => DB.Howl,
-      Howler: () => DB.Howler,
-      musicOutput: () => ZB,
-      readyAudioContext: () => NB
+  5338: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      Howl: () => be.Howl,
+      Howler: () => be.Howler,
+      musicOutput: () => pe,
+      readyAudioContext: () => Xe
     });
-    var YB, DB = GB(5362),
-      QB = GB(3873),
-      oB = GB(5073);
-    const jB = DB.Howler;
+    var ye, be = He(5340),
+      Me = He(3791),
+      Ke = He(5055);
+    const Ue = be.Howler;
 
-    function yB() {
-      var BB, OB;
-      if (jB.ctx || !jB.usingWebAudio || "undefined" === typeof AudioContext || !(0, oB.h)()) return;
-      const GB = navigator.audioSession;
-      let YB;
-      "auto" === (null === GB || void 0 === GB ? void 0 : GB.type) && (GB.type = "ambient");
+    function Fe() {
+      var ee, ie;
+      if (Ue.ctx || !Ue.usingWebAudio || "undefined" === typeof AudioContext || !(0, Ke.f)()) return;
+      const He = navigator.audioSession;
+      let ye;
+      "auto" === (null === He || void 0 === He ? void 0 : He.type) && (He.type = "ambient");
       try {
-        YB = new AudioContext({
+        ye = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const DB = YB.createGain();
-      DB.gain.setValueAtTime(jB._muted ? 0 : null !== (BB = jB._volume) && void 0 !== BB ? BB : 1, YB.currentTime), DB.connect(YB.destination), jB.ctx = YB, jB.masterGain = DB, null === (OB = jB._setup) || void 0 === OB || OB.call(jB)
+      const be = ye.createGain();
+      be.gain.setValueAtTime(Ue._muted ? 0 : null !== (ee = Ue._volume) && void 0 !== ee ? ee : 1, ye.currentTime), be.connect(ye.destination), Ue.ctx = ye, Ue.masterGain = be, null === (ie = Ue._setup) || void 0 === ie || ie.call(Ue)
     }
-    jB._mobileUnloaded = !0;
-    const JB = jB.volume.bind(DB.Howler);
-    jB.volume = function() {
-      return yB(), JB(...arguments)
+    Ue._mobileUnloaded = !0;
+    const Je = Ue.volume.bind(be.Howler);
+    Ue.volume = function() {
+      return Fe(), Je(...arguments)
     };
-    const MB = jB.mute.bind(DB.Howler);
-    jB.mute = BB => (yB(), MB(BB));
-    const PB = DB.Howl.prototype,
-      zB = PB.init;
+    const oe = Ue.mute.bind(be.Howler);
+    Ue.mute = ee => (Fe(), oe(ee));
+    const Re = be.Howl.prototype,
+      ke = Re.init;
 
-    function lB() {
-      for (; jB._html5AudioPool.length < jB.html5PoolSize;) {
-        const BB = new Audio;
-        BB._unlocked = !0, jB._releaseHtml5Audio(BB)
+    function qe() {
+      for (; Ue._html5AudioPool.length < Ue.html5PoolSize;) {
+        const ee = new Audio;
+        ee._unlocked = !0, Ue._releaseHtml5Audio(ee)
       }
-      for (const OB of jB._howls)
-        if (!OB._webAudio)
-          for (const GB of OB._getSoundIds()) {
-            var BB;
-            const YB = null === (BB = OB._soundById(GB)) || void 0 === BB ? void 0 : BB._node;
-            YB && !YB._unlocked && (YB._unlocked = !0, YB.load())
+      for (const ie of Ue._howls)
+        if (!ie._webAudio)
+          for (const He of ie._getSoundIds()) {
+            var ee;
+            const ye = null === (ee = ie._soundById(He)) || void 0 === ee ? void 0 : ee._node;
+            ye && !ye._unlocked && (ye._unlocked = !0, ye.load())
           }
     }
-    PB.init = function(BB) {
-      return yB(), zB.call(this, BB)
-    }, (0, oB.h)() && (jB._unlockAudio = () => {
-      const BB = jB.ctx;
-      if (jB._audioUnlocked || !BB) return;
-      jB.autoUnlock = !1;
-      const OB = BB.createBuffer(1, 1, 22050);
-      jB._scratchBuffer = OB;
-      const GB = new AbortController;
-      let YB = "afterPaint";
-      const DB = () => {
-          var YB;
-          if (jB._audioUnlocked) return;
-          null === (YB = jB._autoResume) || void 0 === YB || YB.call(jB);
-          const DB = BB.createBufferSource();
-          DB.buffer = OB, DB.connect(BB.destination), DB.start(0), BB.resume().catch((() => {})), DB.onended = () => {
-            DB.disconnect(0), jB._audioUnlocked = !0, GB.abort();
-            for (const BB of jB._howls) BB._emit("unlock")
+    Re.init = function(ee) {
+      return Fe(), ke.call(this, ee)
+    }, (0, Ke.f)() && (Ue._unlockAudio = () => {
+      const ee = Ue.ctx;
+      if (Ue._audioUnlocked || !ee) return;
+      Ue.autoUnlock = !1;
+      const ie = ee.createBuffer(1, 1, 22050);
+      Ue._scratchBuffer = ie;
+      const He = new AbortController;
+      let ye = "afterPaint";
+      const be = () => {
+          var ye;
+          if (Ue._audioUnlocked) return;
+          null === (ye = Ue._autoResume) || void 0 === ye || ye.call(Ue);
+          const be = ee.createBufferSource();
+          be.buffer = ie, be.connect(ee.destination), be.start(0), ee.resume().catch((() => {})), be.onended = () => {
+            be.disconnect(0), Ue._audioUnlocked = !0, He.abort();
+            for (const ee of Ue._howls) ee._emit("unlock")
           }
         },
-        yB = () => {
-          lB(), DB()
+        Fe = () => {
+          qe(), be()
         },
-        JB = OB => {
-          if (lB(), "inTap" === YB) {
-            if ("running" === BB.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), DB()
-          } else "afterPaint" === YB && (YB = "queued", (0, QB.c)(OB.timeStamp, (() => {
-            YB = "inTap", DB()
+        Je = ie => {
+          if (qe(), "inTap" === ye) {
+            if ("running" === ee.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), be()
+          } else "afterPaint" === ye && (ye = "queued", (0, Me.c)(ie.timeStamp, (() => {
+            ye = "inTap", be()
           })))
         };
-      for (const QB of ["touchstart", "touchend"]) document.addEventListener(QB, yB, {
+      for (const Me of ["touchstart", "touchend"]) document.addEventListener(Me, Fe, {
         capture: !0,
-        signal: GB.signal
+        signal: He.signal
       });
-      for (const QB of oB.c) document.addEventListener(QB, JB, {
+      for (const Me of Ke.b) document.addEventListener(Me, Je, {
         capture: !0,
-        signal: GB.signal
+        signal: He.signal
       })
     });
-    let pB = 0;
-    const qB = null === (YB = jB._autoSuspend) || void 0 === YB ? void 0 : YB.bind(DB.Howler);
+    let fe = 0;
+    const Te = null === (ye = Ue._autoSuspend) || void 0 === ye ? void 0 : ye.bind(be.Howler);
 
-    function ZB() {
-      NB();
+    function pe() {
+      Xe();
       const {
-        ctx: BB,
-        masterGain: OB
-      } = jB;
-      return BB && OB ? {
-        ctx: BB,
-        destination: OB,
-        holdAwake: BB => {
-          var OB, GB;
-          (pB += BB ? 1 : -1, BB) ? null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB): null === (GB = jB._autoSuspend) || void 0 === GB || GB.call(jB)
+        ctx: ee,
+        masterGain: ie
+      } = Ue;
+      return ee && ie ? {
+        ctx: ee,
+        destination: ie,
+        holdAwake: ee => {
+          var ie, He;
+          (fe += ee ? 1 : -1, ee) ? null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue): null === (He = Ue._autoSuspend) || void 0 === He || He.call(Ue)
         },
         wake: () => {
-          var OB;
-          "running" !== BB.state && (null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB), BB.resume().catch((() => {})))
+          var ie;
+          "running" !== ee.state && (null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue), ee.resume().catch((() => {})))
         }
       } : null
     }
 
-    function NB() {
-      var BB;
-      (jB.volume(), jB.ctx && jB.autoUnlock) && (null === (BB = jB._unlockAudio) || void 0 === BB || BB.call(jB))
+    function Xe() {
+      var ee;
+      (Ue.volume(), Ue.ctx && Ue.autoUnlock) && (null === (ee = Ue._unlockAudio) || void 0 === ee || ee.call(Ue))
     }
-    qB && (jB._autoSuspend = () => pB > 0 ? DB.Howler : qB())
+    Te && (Ue._autoSuspend = () => fe > 0 ? be.Howler : Te())
   },
-  53993: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB,
-      d: () => DB
+  54196: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => ye,
+      e: () => be
     });
-    const YB = ["recording", "freecam", "keyframe"];
+    const ye = ["recording", "freecam", "keyframe"];
 
-    function DB() {
-      const BB = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(BB[1]) << 32n | BigInt(BB[0])
+    function be() {
+      const ee = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(ee[1]) << 32n | BigInt(ee[0])
     }
   },
-  63857: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      HOLD_TIMEOUT_MS: () => JB,
-      ReplayViewer: () => PB
+  63791: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      HOLD_TIMEOUT_MS: () => Je,
+      ReplayViewer: () => Re
     });
-    var YB = GB(37641),
-      DB = GB(37685),
-      QB = GB(37682),
-      oB = GB(37694),
-      jB = GB(5281),
-      yB = GB(53993);
-    const JB = 1e4,
-      MB = new Set(["zp"]);
-    class PB {
-      constructor(BB) {
-        var OB;
-        this.deps = BB, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (OB = BB.now) && void 0 !== OB ? OB : () => performance.now()
+    var ye = He(37775),
+      be = He(37813),
+      Me = He(37807),
+      Ke = He(37828),
+      Ue = He(5271),
+      Fe = He(54196);
+    const Je = 1e4,
+      oe = new Set(["Zf"]);
+    class Re {
+      constructor(ee) {
+        var ie;
+        this.deps = ee, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (ie = ee.now) && void 0 !== ie ? ie : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -843,123 +843,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== jB.sd.None
+        return null !== this.lastView && this.lastView.state !== Ue.Yc.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get sJ() {
+      get lJ() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? YB.e.cropBusy.text : null
+        return this.cropping ? ye.d.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(BB, OB) {
-        var GB, QB, oB, yB;
+      async open(ee, ie) {
+        var He, Me, Ke, Fe;
         const {
-          client: JB
+          client: Je
         } = this.deps;
         if (!this.playback) {
-          if (!JB.setPlayback(!0)) throw new Error(YB.e.cantOpen.text);
+          if (!Je.setPlayback(!0)) throw new Error(ye.d.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const MB = this.epoch;
-        let PB;
+        const oe = this.epoch;
+        let Re;
         try {
-          PB = await JB.open(BB, (() => (0, DB.b)(BB, OB)))
+          Re = await Je.open(ee, (() => (0, be.c)(ee, ie)))
         } finally {
           this.loadingOpens--
         }
-        if (MB !== this.epoch && "reloading" !== PB) throw new Error(YB.e.coreStopped.text);
-        if ("opening" !== PB) {
+        if (oe !== this.epoch && "reloading" !== Re) throw new Error(ye.d.coreStopped.text);
+        if ("opening" !== Re) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const BB = function(BB) {
-            switch (BB) {
+          const ee = function(ee) {
+            switch (ee) {
               case "reloading":
                 return null;
               case "stopped":
-              case jB.jd.ModuleTrap:
-                return YB.e.coreStopped;
-              case jB.jd.ModuleLoad:
-                return YB.e.viewerLoadFailed;
-              case jB.jd.TooLarge:
-                return YB.e.cantOpen
+              case Ue.Rc.ModuleTrap:
+                return ye.d.coreStopped;
+              case Ue.Rc.ModuleLoad:
+                return ye.d.viewerLoadFailed;
+              case Ue.Rc.TooLarge:
+                return ye.d.cantOpen
             }
-          }(PB);
-          if (null === BB) return;
-          throw new Error(BB.text)
+          }(Re);
+          if (null === ee) return;
+          throw new Error(ee.text)
         }
-        return this.rejectSave(new Error(YB.e.saveClosed.text)), this.fileName = null !== (GB = null !== (QB = OB.fileName) && void 0 !== QB ? QB : null === (oB = OB.fileHandle) || void 0 === oB ? void 0 : oB.name) && void 0 !== GB ? GB : null, this.fileHandle = null !== (yB = OB.fileHandle) && void 0 !== yB ? yB : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((BB, OB) => {
+        return this.rejectSave(new Error(ye.d.saveClosed.text)), this.fileName = null !== (He = null !== (Me = ie.fileName) && void 0 !== Me ? Me : null === (Ke = ie.fileHandle) || void 0 === Ke ? void 0 : Ke.name) && void 0 !== He ? He : null, this.fileHandle = null !== (Fe = ie.fileHandle) && void 0 !== Fe ? Fe : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((ee, ie) => {
           this.pendingOpen = {
-            resolve: BB,
-            reject: OB
+            resolve: ee,
+            reject: ie
           }
         }))
       }
       play() {
-        this.holds.has("zp") || this.deps.client.play()
+        this.holds.has("Zf") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("zp")
+        this.isOpen && this.pause(), this.hold("Zf")
       }
-      seek(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const GB = this.lastView;
-        null !== GB && (OB || BB < GB.kP) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(BB, OB)
+      seek(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const He = this.lastView;
+        null !== He && (ie || ee < He.YR) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(ee, ie)
       }
-      setSpeed(BB) {
-        this.deps.client.setSpeed(BB)
+      setSpeed(ee) {
+        this.deps.client.setSpeed(ee)
       }
-      setCameraMode(BB) {
-        this.deps.client.setCameraMode(BB)
+      setCameraMode(ee) {
+        this.deps.client.setCameraMode(ee)
       }
       cycleCameraMode() {
-        const BB = this.lastView;
-        null !== BB && BB.state !== jB.sd.None && this.setCameraMode(yB.b[(yB.b.indexOf(BB.cameraMode) + 1) % yB.b.length])
+        const ee = this.lastView;
+        null !== ee && ee.state !== Ue.Yc.None && this.setCameraMode(Fe.b[(Fe.b.indexOf(ee.cameraMode) + 1) % Fe.b.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(BB) {
-        this.edited(this.deps.client.setKeyframe(BB))
+      setKeyframe(ee) {
+        this.edited(this.deps.client.setKeyframe(ee))
       }
-      moveKeyframe(BB, OB) {
-        this.edited(this.deps.client.moveKeyframe(BB, OB))
+      moveKeyframe(ee, ie) {
+        this.edited(this.deps.client.moveKeyframe(ee, ie))
       }
-      deleteKeyframes(BB, OB) {
-        this.edited(this.deps.client.deleteKeyframes(BB, OB))
+      deleteKeyframes(ee, ie) {
+        this.edited(this.deps.client.deleteKeyframes(ee, ie))
       }
-      setMark(BB) {
-        this.edited(this.deps.client.setMark(BB))
+      setMark(ee) {
+        this.edited(this.deps.client.setMark(ee))
       }
-      crop(BB, OB) {
-        return !(OB <= BB) && (null !== this.pendingSave ? (this.deps.notify(YB.e.saveBusy), !1) : !!this.deps.client.crop(BB, OB) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(ee, ie) {
+        return !(ie <= ee) && (null !== this.pendingSave ? (this.deps.notify(ye.d.saveBusy), !1) : !!this.deps.client.crop(ee, ie) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(YB.e.saveBusy.text)) : new Promise(((BB, OB) => {
-          const GB = {
-            resolve: BB,
-            reject: OB
+        return null !== this.pendingSave ? Promise.reject(new Error(ye.d.saveBusy.text)) : new Promise(((ee, ie) => {
+          const He = {
+            resolve: ee,
+            reject: ie
           };
-          this.pendingSave = GB, this.editsAtSave = this.edits, this.deps.client.save((0, yB.d)()).then((BB => {
-            this.pendingSave === GB && this.saveStarted(BB)
-          }), (BB => {
-            this.pendingSave === GB && this.rejectSave(BB instanceof Error ? BB : new Error(String(BB)))
+          this.pendingSave = He, this.editsAtSave = this.edits, this.deps.client.save((0, Fe.e)()).then((ee => {
+            this.pendingSave === He && this.saveStarted(ee)
+          }), (ee => {
+            this.pendingSave === He && this.rejectSave(ee instanceof Error ? ee : new Error(String(ee)))
           }))
         }))
       }
-      saveStarted(BB) {
-        switch (BB) {
+      saveStarted(ee) {
+        switch (ee) {
           case "sealing":
             return;
           case "busy":
@@ -970,40 +970,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(BB, OB) {
-        var GB, YB;
-        this.fileHandle = BB, this.fileName = null !== (GB = null !== (YB = null === BB || void 0 === BB ? void 0 : BB.name) && void 0 !== YB ? YB : OB) && void 0 !== GB ? GB : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(ee, ie) {
+        var He, ye;
+        this.fileHandle = ee, this.fileName = null !== (He = null !== (ye = null === ee || void 0 === ee ? void 0 : ee.name) && void 0 !== ye ? ye : ie) && void 0 !== He ? He : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(YB.e.coreStopped.text)), this.rejectSave(new Error(YB.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(ye.d.coreStopped.text)), this.rejectSave(new Error(ye.d.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var BB, OB, GB;
-        const YB = this.deps.client.view(),
-          DB = YB !== this.lastView;
-        this.lastView = YB, this.opening && null !== YB && YB.state !== jB.sd.None && YB.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, oB.f)()), this.cropAsked ? (this.cropAsked = !1, null !== YB && YB.state === jB.sd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== YB && YB.state !== jB.sd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const QB = 0 === this.settleFrames && 0 === (null !== (BB = null === (OB = (GB = this.deps).meshPending) || void 0 === OB ? void 0 : OB.call(GB)) && void 0 !== BB ? BB : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && QB && this.release("opening"), this.holds.has("seek") && QB && this.release("seek"), this.holds.has("crop") && !this.cropRunning && QB && this.release("crop");
-        const yB = this.now();
-        for (const [oB, jB] of this.holds) !MB.has(oB) && yB - jB >= JB && this.release(oB);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), DB && this.deps.onChange()
+        var ee, ie, He;
+        const ye = this.deps.client.view(),
+          be = ye !== this.lastView;
+        this.lastView = ye, this.opening && null !== ye && ye.state !== Ue.Yc.None && ye.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, Ke.h)()), this.cropAsked ? (this.cropAsked = !1, null !== ye && ye.state === Ue.Yc.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== ye && ye.state !== Ue.Yc.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const Me = 0 === this.settleFrames && 0 === (null !== (ee = null === (ie = (He = this.deps).meshPending) || void 0 === ie ? void 0 : ie.call(He)) && void 0 !== ee ? ee : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && Me && this.release("opening"), this.holds.has("seek") && Me && this.release("seek"), this.holds.has("crop") && !this.cropRunning && Me && this.release("crop");
+        const Fe = this.now();
+        for (const [Ke, Ue] of this.holds) !oe.has(Ke) && Fe - Ue >= Je && this.release(Ke);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), be && this.deps.onChange()
       }
       cropped() {
-        (0, oB.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, Ke.h)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(BB) {
-        switch (BB.reason) {
-          case jB.jd.TooLarge:
+      onFailed(ee) {
+        switch (ee.reason) {
+          case Ue.Rc.TooLarge:
             break;
-          case jB.jd.Open:
-          case jB.jd.NothingStaged: {
+          case Ue.Rc.Open:
+          case Ue.Rc.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const OB = (0, QB.g)(BB.version) ? YB.e.replayTooOld : YB.e.cantOpen;
-            null === this.pendingOpen && this.deps.notify(OB), this.settleOpen(new Error(OB.text));
+            const ie = (0, Me.g)(ee.version) ? ye.d.replayTooOld : ye.d.cantOpen;
+            null === this.pendingOpen && this.deps.notify(ie), this.settleOpen(new Error(ie.text));
             break
           }
-          case jB.jd.Crop:
-            if (BB.code === jB.fd.Busy) {
+          case Ue.Rc.Crop:
+            if (ee.code === Ue.Qc.Busy) {
               this.cropBusy();
               break
             }
@@ -1011,166 +1011,166 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(YB.e.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(ye.d.cropFailed);
             break;
-          case jB.jd.ModuleTrap:
-          case jB.jd.ModuleLoad:
-          case jB.jd.Port:
-            this.moduleEnded(BB.reason === jB.jd.ModuleTrap ? YB.e.coreStopped : YB.e.cantOpen);
+          case Ue.Rc.ModuleTrap:
+          case Ue.Rc.ModuleLoad:
+          case Ue.Rc.Port:
+            this.moduleEnded(ee.reason === Ue.Rc.ModuleTrap ? ye.d.coreStopped : ye.d.cantOpen);
             break;
-          case jB.jd.NotLive:
+          case Ue.Rc.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${BB.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${ee.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(BB) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(BB), this.settleOpen(new Error(BB.text))
+      moduleEnded(ee) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(ee), this.settleOpen(new Error(ee.text))
       }
-      saveDone(BB) {
-        const OB = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === OB || void 0 === OB || OB.resolve(BB)
+      saveDone(ee) {
+        const ie = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === ie || void 0 === ie || ie.resolve(ee)
       }
-      saveFailed(BB) {
-        this.rejectSave(new Error(BB ? YB.e.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(ee) {
+        this.rejectSave(new Error(ee ? ye.d.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(BB) {
-        BB && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(ee) {
+        ee && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(YB.e.cropBusy.text)) : this.deps.notify(YB.e.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(ye.d.cropBusy.text)) : this.deps.notify(ye.d.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(BB) {
-        const OB = this.pendingOpen;
-        this.pendingOpen = null, null === BB ? null === OB || void 0 === OB || OB.resolve() : null === OB || void 0 === OB || OB.reject(BB)
+      settleOpen(ee) {
+        const ie = this.pendingOpen;
+        this.pendingOpen = null, null === ee ? null === ie || void 0 === ie || ie.resolve() : null === ie || void 0 === ie || ie.reject(ee)
       }
-      rejectSave(BB) {
-        const OB = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === OB || void 0 === OB || OB.reject(BB)
+      rejectSave(ee) {
+        const ie = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === ie || void 0 === ie || ie.reject(ee)
       }
-      hold(BB) {
-        const OB = 0 === this.holds.size;
-        this.holds.set(BB, this.now()), OB && this.deps.setHoldDraws(!0)
+      hold(ee) {
+        const ie = 0 === this.holds.size;
+        this.holds.set(ee, this.now()), ie && this.deps.setHoldDraws(!0)
       }
-      release(BB) {
-        this.holds.delete(BB) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(ee) {
+        this.holds.delete(ee) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
       }
     }
   },
-  63849: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      MESH_TAIL_MS: () => JB,
-      PLAY_START_TIMEOUT_MS: () => jB,
-      startWasmReplayVideoExport: () => PB
+  63783: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      MESH_TAIL_MS: () => Je,
+      PLAY_START_TIMEOUT_MS: () => Ue,
+      startWasmReplayVideoExport: () => Re
     });
-    var YB = GB(39965),
-      DB = GB(63857),
-      QB = GB(5281),
-      oB = GB(2626);
-    const jB = DB.HOLD_TIMEOUT_MS + 5e3,
-      yB = 50,
-      JB = 200;
+    var ye = He(40101),
+      be = He(63791),
+      Me = He(5271),
+      Ke = He(2503);
+    const Ue = be.HOLD_TIMEOUT_MS + 5e3,
+      Fe = 50,
+      Je = 200;
 
-    function MB(BB) {
-      var OB;
-      return (null === (OB = BB.view) || void 0 === OB ? void 0 : OB.state) === QB.sd.Cropping || BB.sJ.includes("crop")
+    function oe(ee) {
+      var ie;
+      return (null === (ie = ee.view) || void 0 === ie ? void 0 : ie.state) === Me.Yc.Cropping || ee.lJ.includes("crop")
     }
 
-    function PB(BB) {
-      return (0, YB.c)((() => function(BB) {
-        var OB, GB, YB, DB, PB, zB;
-        const lB = BB.viewer(),
-          pB = null !== (OB = null === lB || void 0 === lB ? void 0 : lB.view) && void 0 !== OB ? OB : null,
-          qB = BB.canvas();
-        if (!lB || !pB || pB.state === QB.sd.None || 0 === pB.totalTicks || !qB || MB(lB)) return null;
-        const ZB = null !== (GB = BB.now) && void 0 !== GB ? GB : () => performance.now(),
-          NB = lB.id,
-          RB = () => {
-            const OB = BB.viewer();
-            return OB === lB && OB.id === NB && OB.isOpen ? OB : null
+    function Re(ee) {
+      return (0, ye.e)((() => function(ee) {
+        var ie, He, ye, be, Re, ke;
+        const qe = ee.viewer(),
+          fe = null !== (ie = null === qe || void 0 === qe ? void 0 : qe.view) && void 0 !== ie ? ie : null,
+          Te = ee.canvas();
+        if (!qe || !fe || fe.state === Me.Yc.None || 0 === fe.totalTicks || !Te || oe(qe)) return null;
+        const pe = null !== (He = ee.now) && void 0 !== He ? He : () => performance.now(),
+          Xe = qe.id,
+          ze = () => {
+            const ie = ee.viewer();
+            return ie === qe && ie.id === Xe && ie.isOpen ? ie : null
           },
-          WB = Math.min(null !== (YB = null === (DB = pB.mark) || void 0 === DB ? void 0 : DB.outTick) && void 0 !== YB ? YB : 1 / 0, pB.totalTicks - 1);
-        let AB = null,
-          VB = !1;
-        const SB = () => {
-          var BB, OB;
-          return (null === (BB = RB()) || void 0 === BB || null === (OB = BB.view) || void 0 === OB ? void 0 : OB.state) === QB.sd.Playing
+          Be = Math.min(null !== (ye = null === (be = fe.mark) || void 0 === be ? void 0 : be.outTick) && void 0 !== ye ? ye : 1 / 0, fe.totalTicks - 1);
+        let Ee = null,
+          ge = !1;
+        const Oe = () => {
+          var ee, ie;
+          return (null === (ee = ze()) || void 0 === ee || null === (ie = ee.view) || void 0 === ie ? void 0 : ie.state) === Me.Yc.Playing
         };
         return {
-          pI: QB.Cd,
-          playbackMarkInTick: null !== (PB = null === (zB = pB.mark) || void 0 === zB ? void 0 : zB.inTick) && void 0 !== PB ? PB : null,
+          lV: Me.md,
+          playbackMarkInTick: null !== (Re = null === (ke = fe.mark) || void 0 === ke ? void 0 : ke.inTick) && void 0 !== Re ? Re : null,
           startFailure: () => {
-            const BB = RB();
-            return null === BB ? "Another replay opened. Export it again from there." : MB(BB) ? "Wait for the crop to finish, then export again." : null
+            const ee = ze();
+            return null === ee ? "Another replay opened. Export it again from there." : oe(ee) ? "Wait for the crop to finish, then export again." : null
           },
           fileName: () => {
-            var BB, OB;
-            return null !== (BB = null === (OB = RB()) || void 0 === OB ? void 0 : OB.fileName) && void 0 !== BB ? BB : null
+            var ee, ie;
+            return null !== (ee = null === (ie = ze()) || void 0 === ie ? void 0 : ie.fileName) && void 0 !== ee ? ee : null
           },
           playbackSpeed: () => {
-            var BB, OB, GB;
-            return null !== (BB = null === (OB = RB()) || void 0 === OB || null === (GB = OB.view) || void 0 === GB ? void 0 : GB.speed) && void 0 !== BB ? BB : 1
+            var ee, ie, He;
+            return null !== (ee = null === (ie = ze()) || void 0 === ie || null === (He = ie.view) || void 0 === He ? void 0 : He.speed) && void 0 !== ee ? ee : 1
           },
-          setPlaybackSpeed: BB => {
-            var OB;
-            null === (OB = RB()) || void 0 === OB || OB.setSpeed(BB)
+          setPlaybackSpeed: ee => {
+            var ie;
+            null === (ie = ze()) || void 0 === ie || ie.setSpeed(ee)
           },
           play: () => {
-            var BB;
-            VB = !1, AB = ZB(), null === (BB = RB()) || void 0 === BB || BB.play()
+            var ee;
+            ge = !1, Ee = pe(), null === (ee = ze()) || void 0 === ee || ee.play()
           },
           pause: () => {
-            var BB;
-            null === (BB = RB()) || void 0 === BB || BB.pause()
+            var ee;
+            null === (ee = ze()) || void 0 === ee || ee.pause()
           },
-          seekToTick: BB => {
-            var OB;
-            null === (OB = RB()) || void 0 === OB || OB.seek(BB, !0)
+          seekToTick: ee => {
+            var ie;
+            null === (ie = ze()) || void 0 === ie || ie.seek(ee, !0)
           },
-          seekSettled: () => new Promise((BB => {
-            const OB = setInterval((() => {
-              const GB = RB();
-              null === GB ? (clearInterval(OB), BB()) : GB.sJ.includes("seek") || (clearInterval(OB), setTimeout(BB, JB))
-            }), yB)
+          seekSettled: () => new Promise((ee => {
+            const ie = setInterval((() => {
+              const He = ze();
+              null === He ? (clearInterval(ie), ee()) : He.lJ.includes("seek") || (clearInterval(ie), setTimeout(ee, Je))
+            }), Fe)
           })),
           isPlaying: () => {
-            var BB, OB, GB;
-            return null !== AB && null !== RB() && (!!SB() || !VB && (null !== (BB = null === (OB = RB()) || void 0 === OB || null === (GB = OB.view) || void 0 === GB ? void 0 : GB.kP) && void 0 !== BB ? BB : 0) < WB && ZB() - AB < jB)
+            var ee, ie, He;
+            return null !== Ee && null !== ze() && (!!Oe() || !ge && (null !== (ee = null === (ie = ze()) || void 0 === ie || null === (He = ie.view) || void 0 === He ? void 0 : He.YR) && void 0 !== ee ? ee : 0) < Be && pe() - Ee < Ue)
           },
-          watchPlayback: OB => {
-            const GB = BB.watchViewer((() => {
-                VB ||= null !== AB && SB(), OB()
+          watchPlayback: ie => {
+            const He = ee.watchViewer((() => {
+                ge ||= null !== Ee && Oe(), ie()
               })),
-              YB = setTimeout(OB, jB + 1);
+              ye = setTimeout(ie, Ue + 1);
             return () => {
-              clearTimeout(YB), GB()
+              clearTimeout(ye), He()
             }
           },
           playbackFailure: () => {
-            var BB, OB;
-            const GB = RB();
-            return null === GB ? "The replay closed before the video finished." : (null !== (BB = null === (OB = GB.view) || void 0 === OB ? void 0 : OB.kP) && void 0 !== BB ? BB : 0) >= WB ? null : VB ? "The replay stopped before the video finished." : "The replay didn't start playing."
+            var ee, ie;
+            const He = ze();
+            return null === He ? "The replay closed before the video finished." : (null !== (ee = null === (ie = He.view) || void 0 === ie ? void 0 : ie.YR) && void 0 !== ee ? ee : 0) >= Be ? null : ge ? "The replay stopped before the video finished." : "The replay didn't start playing."
           },
-          canvas: () => qB,
+          canvas: () => Te,
           closeViewer: () => {
-            BB.requestViewer("close")
+            ee.requestViewer("close")
           },
           reopenViewer: () => {
-            BB.requestViewer("open")
+            ee.requestViewer("open")
           },
-          holdInput: oB.g
+          holdInput: Ke.f
         }
-      }(BB)))
+      }(ee)))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

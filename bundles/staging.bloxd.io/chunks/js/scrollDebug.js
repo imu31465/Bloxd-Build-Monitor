@@ -1,25 +1,25 @@
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  5175: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      MAX_LINES: () => jB,
-      MAX_SETTLE_MS: () => oB,
-      SETTLE_MS: () => QB,
-      ScrollDebugLog: () => AB,
-      changeText: () => ZB,
-      elementText: () => RB,
-      fullStateText: () => qB,
-      startScrollDebug: () => VB,
-      touchedText: () => WB
+  5164: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      MAX_LINES: () => Ue,
+      MAX_SETTLE_MS: () => Ke,
+      SETTLE_MS: () => Me,
+      ScrollDebugLog: () => Ee,
+      changeText: () => pe,
+      elementText: () => ze,
+      fullStateText: () => Te,
+      startScrollDebug: () => ge,
+      touchedText: () => Be
     });
-    var YB = GB(16),
-      DB = GB(3136);
-    const QB = 300,
-      oB = 2e3,
-      jB = 40,
-      yB = 2,
-      JB = {
+    var ye = He(18),
+      be = He(3037);
+    const Me = 300,
+      Ke = 2e3,
+      Ue = 40,
+      Fe = 2,
+      Je = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      MB = Object.keys(JB),
-      PB = new Set(["scrollHeight", "innerHeight"]);
+      oe = Object.keys(Je),
+      Re = new Set(["scrollHeight", "innerHeight"]);
 
-    function zB(BB, OB) {
-      const GB = 10 ** OB;
-      return Math.round(BB * GB) / GB
+    function ke(ee, ie) {
+      const He = 10 ** ie;
+      return Math.round(ee * He) / He
     }
 
-    function lB() {
-      const BB = window.visualViewport;
+    function qe() {
+      const ee = window.visualViewport;
       return {
-        vvOffsetTop: zB(BB.offsetTop, 1),
-        vvOffsetLeft: zB(BB.offsetLeft, 1),
-        vvPageTop: zB(BB.pageTop, 1),
-        vvPageLeft: zB(BB.pageLeft, 1),
-        vvHeight: zB(BB.height, 1),
-        vvScale: zB(BB.scale, 3),
-        scrollX: zB(window.scrollX, 1),
-        scrollY: zB(window.scrollY, 1),
+        vvOffsetTop: ke(ee.offsetTop, 1),
+        vvOffsetLeft: ke(ee.offsetLeft, 1),
+        vvPageTop: ke(ee.pageTop, 1),
+        vvPageLeft: ke(ee.pageLeft, 1),
+        vvHeight: ke(ee.height, 1),
+        vvScale: ke(ee.scale, 3),
+        scrollX: ke(window.scrollX, 1),
+        scrollY: ke(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function pB(BB, OB) {
-      return `${JB[BB]} ${OB}`
+    function fe(ee, ie) {
+      return `${Je[ee]} ${ie}`
     }
 
-    function qB(BB) {
-      return MB.map((OB => pB(OB, String(BB[OB])))).join(", ")
+    function Te(ee) {
+      return oe.map((ie => fe(ie, String(ee[ie])))).join(", ")
     }
 
-    function ZB(BB, OB, GB, YB) {
-      return MB.flatMap((DB => {
-        const QB = BB[DB] !== OB[DB],
-          oB = GB[DB] < Math.min(BB[DB], OB[DB]) || YB[DB] > Math.max(BB[DB], OB[DB]);
-        if (!QB && !oB && !PB.has(DB)) return [];
-        return [pB(DB, `${QB?`${BB[DB]} -> ${OB[DB]}`:String(OB[DB])}${oB?` (via ${GB[DB]}..${YB[DB]})`:""}`)]
+    function pe(ee, ie, He, ye) {
+      return oe.flatMap((be => {
+        const Me = ee[be] !== ie[be],
+          Ke = He[be] < Math.min(ee[be], ie[be]) || ye[be] > Math.max(ee[be], ie[be]);
+        if (!Me && !Ke && !Re.has(be)) return [];
+        return [fe(be, `${Me?`${ee[be]} -> ${ie[be]}`:String(ie[be])}${Ke?` (via ${He[be]}..${ye[be]})`:""}`)]
       })).join(", ")
     }
 
-    function NB(BB, OB, GB) {
-      return Object.fromEntries(MB.map((YB => [YB, GB(BB[YB], OB[YB])])))
+    function Xe(ee, ie, He) {
+      return Object.fromEntries(oe.map((ye => [ye, He(ee[ye], ie[ye])])))
     }
 
-    function RB(BB) {
-      var OB;
-      const GB = (null !== (OB = BB.getAttribute("class")) && void 0 !== OB ? OB : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${BB.tagName.toLowerCase()}${GB?`.${GB}`:""}`
+    function ze(ee) {
+      var ie;
+      const He = (null !== (ie = ee.getAttribute("class")) && void 0 !== ie ? ie : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${ee.tagName.toLowerCase()}${He?`.${He}`:""}`
     }
 
-    function WB(BB, OB) {
-      const GB = [];
-      for (let YB = BB.parentElement; null !== YB && GB.length < yB; YB = YB.parentElement) {
-        const BB = OB(YB);
-        "auto" !== BB && GB.push(`${BB} on ${RB(YB)}`)
+    function Be(ee, ie) {
+      const He = [];
+      for (let ye = ee.parentElement; null !== ye && He.length < Fe; ye = ye.parentElement) {
+        const ee = ie(ye);
+        "auto" !== ee && He.push(`${ee} on ${ze(ye)}`)
       }
-      return `${RB(BB)} touch-action ${OB(BB)}${GB.length>0?` (${GB.join(", ")})`:""}`
+      return `${ze(ee)} touch-action ${ie(ee)}${He.length>0?` (${He.join(", ")})`:""}`
     }
-    class AB {
-      constructor(BB) {
-        this.deps = BB, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const BB = this.deps.now(),
-            OB = BB - this.lastEventMs;
-          if (OB < QB && BB - this.burstStartMs < oB) return void(this.timer = setTimeout(this.settle, QB - OB));
+    class Ee {
+      constructor(ee) {
+        this.deps = ee, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const ee = this.deps.now(),
+            ie = ee - this.lastEventMs;
+          if (ie < Me && ee - this.burstStartMs < Ke) return void(this.timer = setTimeout(this.settle, Me - ie));
           this.timer = null;
-          const GB = this.deps.read(),
+          const He = this.deps.read(),
             {
-              last: YB,
-              innerScrolled: DB,
-              burstTouch: yB
+              last: ye,
+              innerScrolled: be,
+              burstTouch: Fe
             } = this,
-            JB = NB(this.low, GB, Math.min),
-            PB = NB(this.high, GB, Math.max);
-          if (this.last = GB, this.low = GB, this.high = GB, this.innerScrolled = null, lB = JB, pB = PB, MB.every((BB => lB[BB] === pB[BB])) || !this.burstInGame || !this.deps.inGame()) return;
-          var lB, pB;
-          if (this.lines === jB) return this.capped = !0, void this.deps.log(`further changes unlogged: ${jB} lines logged`);
+            Je = Xe(this.low, He, Math.min),
+            Re = Xe(this.high, He, Math.max);
+          if (this.last = He, this.low = He, this.high = He, this.innerScrolled = null, qe = Je, fe = Re, oe.every((ee => qe[ee] === fe[ee])) || !this.burstInGame || !this.deps.inGame()) return;
+          var qe, fe;
+          if (this.lines === Ue) return this.capped = !0, void this.deps.log(`further changes unlogged: ${Ue} lines logged`);
           this.lines++;
-          const qB = null === yB ? "no touch yet" : `touch on ${yB.text}, ${Math.round(this.burstStartMs-yB.atMs)} ms before`,
-            WB = null === DB ? "" : `; inner scroll ${RB(DB)} scrollTop ${zB(DB.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(BB-this.burstStartMs)} ms; ${qB}${WB}: ${ZB(YB,GB,JB,PB)}`)
-        }, this.last = BB.read(), this.low = this.last, this.high = this.last, BB.log(`start: ${qB(this.last)}`)
+          const Te = null === Fe ? "no touch yet" : `touch on ${Fe.text}, ${Math.round(this.burstStartMs-Fe.atMs)} ms before`,
+            Be = null === be ? "" : `; inner scroll ${ze(be)} scrollTop ${ke(be.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(ee-this.burstStartMs)} ms; ${Te}${Be}: ${pe(ye,He,Je,Re)}`)
+        }, this.last = ee.read(), this.low = this.last, this.high = this.last, ee.log(`start: ${Te(this.last)}`)
       }
       moved() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const OB = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== BB && (null === OB || !BB.contains(OB.target))) return;
-        const GB = this.deps.now();
-        this.lastEventMs = GB, null === this.timer && (this.burstStartMs = GB, this.burstInGame = this.deps.inGame(), this.burstTouch = OB, this.timer = setTimeout(this.settle, QB));
-        const YB = this.deps.read();
-        this.low = NB(this.low, YB, Math.min), this.high = NB(this.high, YB, Math.max), this.innerScrolled = null !== BB && void 0 !== BB ? BB : this.innerScrolled
+        const ie = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== ee && (null === ie || !ee.contains(ie.target))) return;
+        const He = this.deps.now();
+        this.lastEventMs = He, null === this.timer && (this.burstStartMs = He, this.burstInGame = this.deps.inGame(), this.burstTouch = ie, this.timer = setTimeout(this.settle, Me));
+        const ye = this.deps.read();
+        this.low = Xe(this.low, ye, Math.min), this.high = Xe(this.high, ye, Math.max), this.innerScrolled = null !== ee && void 0 !== ee ? ee : this.innerScrolled
       }
     }
 
-    function VB() {
-      let BB = null;
-      const OB = new AB({
-        read: lB,
-        inGame: () => "inGame" === YB.c.get("gameState"),
-        lastTouch: () => BB,
-        log: BB => {
-          (0, DB.m)("scroll", BB)
+    function ge() {
+      let ee = null;
+      const ie = new Ee({
+        read: qe,
+        inGame: () => "inGame" === ye.e.get("gameState"),
+        lastTouch: () => ee,
+        log: ee => {
+          (0, be.m)("scroll", ee)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (OB => {
-        if (OB.target instanceof Element) {
-          const GB = WB(OB.target, (BB => getComputedStyle(BB).touchAction));
-          BB = {
-            target: OB.target,
-            text: GB,
+      document.addEventListener("touchstart", (ie => {
+        if (ie.target instanceof Element) {
+          const He = Be(ie.target, (ee => getComputedStyle(ee).touchAction));
+          ee = {
+            target: ie.target,
+            text: He,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (BB => {
-        OB.moved(BB.target instanceof Element ? BB.target : null)
+      }), document.addEventListener("scroll", (ee => {
+        ie.moved(ee.target instanceof Element ? ee.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const GB = () => {
-        OB.moved()
+      const He = () => {
+        ie.moved()
       };
-      window.addEventListener("resize", GB, {
+      window.addEventListener("resize", He, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", GB, {
+      }), window.visualViewport.addEventListener("scroll", He, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", GB, {
+      }), window.visualViewport.addEventListener("resize", He, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

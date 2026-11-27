@@ -1,1260 +1,1260 @@
 export const id = 174;
 export const ids = [174];
 export const modules = {
-  39804: (BB, OB, GB) => {
-    function YB(BB) {
-      return !(!BB.lobbyLeaderboardInfo && !BB.lobbyManage)
+  39896: (ee, ie, He) => {
+    function ye(ee) {
+      return !(!ee.lobbyLeaderboardInfo && !ee.lobbyManage)
     }
-    GB.d(OB, {
-      b: () => YB
+    He.d(ie, {
+      e: () => ye
     })
   },
-  39782: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      e: () => oB
+  39867: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me,
+      f: () => Ke
     });
-    var YB = GB(25);
-    let DB = !1;
+    var ye = He(27);
+    let be = !1;
 
-    function QB() {
-      return DB
+    function Me() {
+      return be
     }
 
-    function oB(BB) {
-      DB !== BB && (DB = BB, YB.o.tM("replayViewer|videoExportChanged"))
+    function Ke(ee) {
+      be !== ee && (be = ee, ye.h.yR("replayViewer|videoExportChanged"))
     }
   },
-  39730: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB
+  39818: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me
     });
-    var YB = GB(25),
-      DB = GB(2050);
+    var ye = He(27),
+      be = He(2018);
 
-    function QB(BB) {
+    function Me(ee) {
       let {
-        taskId: OB,
-        progress: GB
-      } = BB;
-      const YB = DB.e.get("_tasks");
-      null !== YB && void 0 !== YB && YB[OB] && DB.e.apply({
+        taskId: ie,
+        progress: He
+      } = ee;
+      const ye = be.c.get("_tasks");
+      null !== ye && void 0 !== ye && ye[ie] && be.c.apply({
         _tasks: {
-          ...YB,
-          [OB]: {
-            ...YB[OB],
-            progress: GB
+          ...ye,
+          [ie]: {
+            ...ye[ie],
+            progress: He
           }
         }
       })
     }
-    YB.o.subscribe("clientTaskProgress", (BB => {
-      QB(BB)
+    ye.h.subscribe("clientTaskProgress", (ee => {
+      Me(ee)
     }))
   },
-  39661: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => GG,
-      f: () => BG,
-      g: () => OG
+  39756: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => bH,
+      h: () => HH,
+      l: () => yH
     });
-    var YB = GB(4111),
-      DB = GB(162),
-      QB = GB(192),
-      oB = GB(645),
-      jB = GB(31),
-      yB = GB(3088),
-      JB = GB(4166),
-      MB = GB(4150),
-      PB = GB(1217);
-    const zB = new WeakMap;
-    class lB {
-      constructor(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-          EMB: !0
+    var ye = He(4075),
+      be = He(153),
+      Me = He(186),
+      Ke = He(618),
+      Ue = He(35),
+      Fe = He(2969),
+      Je = He(4142),
+      oe = He(4128),
+      Re = He(1169);
+    const ke = new WeakMap;
+    class qe {
+      constructor(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          TRe: !0
         };
-        this.callbacks = OB, this.options = GB, this.aYB = void 0, this.sessionId = void 0, this.Rk = [], this.cMB = !1, this.Vp = !1, this.hMB = void 0, this.Nk = 0, this.EQB = 0, this.aMB = (BB, OB) => {
-          if (this.Vp) return;
-          const GB = Number(BB);
-          this.cMB ? this.eMB(GB, OB) : this.Rk.push({
-            id: GB,
-            payload: OB
+        this.callbacks = ie, this.options = He, this.kbe = void 0, this.sessionId = void 0, this.kY = [], this.pRe = !1, this.xf = !1, this.XRe = void 0, this.RY = 0, this.kKe = 0, this.zRe = (ee, ie) => {
+          if (this.xf) return;
+          const He = Number(ee);
+          this.pRe ? this.BRe(He, ie) : this.kY.push({
+            id: He,
+            payload: ie
           })
         }, this.dispose = () => {
-          this.Vp || (this.Vp = !0, zB.delete(this), this.Rk.length = 0, this.hMB())
-        }, this.aYB = BB, this.sessionId = BB.sessionId, zB.set(this, []), this.hMB = this.TMB()
+          this.xf || (this.xf = !0, ke.delete(this), this.kY.length = 0, this.XRe())
+        }, this.kbe = ee, this.sessionId = ee.sessionId, ke.set(this, []), this.XRe = this.ERe()
       }
-      bMB(BB) {
-        this.hMB(), this.aYB = BB, this.sessionId = BB.sessionId, this.Nk = 0, this.EQB = 0, this.hMB = this.TMB()
+      gRe(ee) {
+        this.XRe(), this.kbe = ee, this.sessionId = ee.sessionId, this.RY = 0, this.kKe = 0, this.XRe = this.ERe()
       }
-      get zk() {
-        return this.EQB
+      get FY() {
+        return this.kKe
       }
-      TMB() {
-        const BB = this.aYB.kR("*", this.aMB);
-        return this.options.EMB && this.aYB.uR(this.dispose), BB
+      ERe() {
+        const ee = this.kbe.OE("*", this.zRe);
+        return this.options.TRe && this.kbe.WE(this.dispose), ee
       }
-      eMB(BB, OB) {
+      BRe(ee, ie) {
         try {
-          (0, JB.rc)(BB) && (OB = (0, JB.b)(BB, MB.BP.from(OB)));
-          const GB = zB.get(this)[BB];
-          if ("function" !== typeof GB) {
-            if (this.callbacks.CMB) return void this.callbacks.CMB(BB, OB);
-            throw new Error(`No onMessage handler registered for message id ${BB}`)
+          (0, Je.kc)(ee) && (ie = (0, Je.d)(ee, oe.bR.from(ie)));
+          const He = ke.get(this)[ee];
+          if ("function" !== typeof He) {
+            if (this.callbacks.ORe) return void this.callbacks.ORe(ee, ie);
+            throw new Error(`No onMessage handler registered for message id ${ee}`)
           }
-          GB(OB)
-        } catch (GB) {
-          this.callbacks.HMB(`Error in onMessage ${BB} with payload ${JSON.stringify(OB)}`, GB)
+          He(ie)
+        } catch (He) {
+          this.callbacks.dRe(`Error in onMessage ${ee} with payload ${JSON.stringify(ie)}`, He)
         } finally {
-          this.Nk++
+          this.RY++
         }
       }
-      vMB() {
+      WRe() {
         for (const {
-            id: BB,
-            payload: OB
+            id: ee,
+            payload: ie
           }
-          of this.Rk) {
-          if (this.Vp) break;
-          this.eMB(BB, OB)
+          of this.kY) {
+          if (this.xf) break;
+          this.BRe(ee, ie)
         }
-        this.Rk.length = 0
+        this.kY.length = 0
       }
-      lV() {
-        return this.Vp
+      RZ() {
+        return this.xf
       }
-      sMB() {
-        if (this.cMB || this.Vp) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
+      tRe() {
+        if (this.pRe || this.xf) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
         return {
-          kR: (BB, OB) => {
-            if (this.cMB || this.Vp) throw new Error("Trying to call onMessage after registration finished");
-            this.kR(BB, OB)
+          OE: (ee, ie) => {
+            if (this.pRe || this.xf) throw new Error("Trying to call onMessage after registration finished");
+            this.OE(ee, ie)
           },
           finishRegistration: () => {
-            if (this.Vp) throw new Error("Cannot finish message registration after disposal");
-            this.cMB = !0, this.vMB()
+            if (this.xf) throw new Error("Cannot finish message registration after disposal");
+            this.pRe = !0, this.WRe()
           }
         }
       }
-      kR(BB, OB) {
-        var GB, YB;
-        null === (GB = (YB = this.callbacks).xMB) || void 0 === GB || GB.call(YB);
-        const DB = zB.get(this);
-        for (; BB > DB.length;) DB[DB.length] = null;
-        DB[BB] = OB
+      OE(ee, ie) {
+        var He, ye;
+        null === (He = (ye = this.callbacks).ZRe) || void 0 === He || He.call(ye);
+        const be = ke.get(this);
+        for (; ee > be.length;) be[be.length] = null;
+        be[ee] = ie
       }
-      send(BB, OB) {
-        this.tMB(), (0, PB.K)(OB) ? this.aYB.Hk(BB, OB) : this.aYB.send(BB, OB)
+      send(ee, ie) {
+        this.DRe(), (0, Re.G)(ie) ? this.kbe.ZY(ee, ie) : this.kbe.send(ee, ie)
       }
-      tMB() {
-        var BB, OB;
-        (this.EQB++, 5 === pB++) && (null === (BB = (OB = this.callbacks).xMB) || void 0 === BB || BB.call(OB), pB = 0)
+      DRe() {
+        var ee, ie;
+        (this.kKe++, 5 === fe++) && (null === (ee = (ie = this.callbacks).ZRe) || void 0 === ee || ee.call(ie), fe = 0)
       }
-      mN() {
-        this.dispose(), this.aYB.mN()
+      zB() {
+        this.dispose(), this.kbe.zB()
       }
       leave() {
-        this.dispose(), this.aYB.leave()
+        this.dispose(), this.kbe.leave()
       }
     }
-    let pB = 0;
-    var qB = GB(4125);
-    class ZB extends lB {
-      constructor(BB) {
-        super(BB, {
-          xMB: () => {
-            (0, jB.k)(!0) && (0, YB.Dk)()
+    let fe = 0;
+    var Te = He(4093);
+    class pe extends qe {
+      constructor(ee) {
+        super(ee, {
+          ZRe: () => {
+            (0, Ue.q)(!0) && (0, ye.bY)()
           },
-          HMB: (BB, OB) => {
-            var GB;
-            null === (GB = (0, yB.g)()) || void 0 === GB || GB.fq(BB, OB)
+          dRe: (ee, ie) => {
+            var He;
+            null === (He = (0, Fe.h)()) || void 0 === He || He.CT(ee, ie)
           }
         }, {
-          EMB: !1
-        }), (0, qB.i)(BB)
+          TRe: !1
+        }), (0, Te.e)(ee)
       }
-      Wk(BB, OB) {
-        return !!(0, qB.o)((0, qB.e)(), this.aYB, BB, OB) && (this.tMB(), !0)
+      fY(ee, ie) {
+        return !!(0, Te.j)((0, Te.b)(), this.kbe, ee, ie) && (this.DRe(), !0)
       }
-      bMB(BB) {
-        this.BPB(), super.bMB(BB), (0, qB.i)(BB)
+      gRe(ee) {
+        this.PRe(), super.gRe(ee), (0, Te.e)(ee)
       }
-      mN() {
-        super.mN(), this.BPB()
+      zB() {
+        super.zB(), this.PRe()
       }
-      BPB() {
-        this.aYB.FN.yP.Km = void 0
+      PRe() {
+        this.kbe.YB.kR.wV = void 0
       }
     }
-    var NB = GB(25),
-      RB = GB(2050),
-      WB = GB(1822),
-      AB = GB(37132),
-      VB = GB(39667),
-      SB = GB(38712),
-      nB = GB(38488),
-      UB = GB(641),
-      fB = GB(39071);
+    var Xe = He(27),
+      ze = He(2018),
+      Be = He(1768),
+      Ee = He(37252),
+      ge = He(39760),
+      Oe = He(38878),
+      de = He(38639),
+      We = He(610),
+      te = He(39205);
 
-    function kB(BB, OB, GB) {
-      const YB = function(BB) {
-          const OB = new Int32Array(BB.length * fB.h);
-          return BB.forEach(((BB, GB) => {
-            const YB = GB * fB.h;
-            if (4 === BB.length) {
-              const [GB, DB, QB, oB] = BB;
-              OB.set([GB, DB, QB, GB, DB, QB, oB], YB)
+    function Ze(ee, ie, He) {
+      const ye = function(ee) {
+          const ie = new Int32Array(ee.length * te.g);
+          return ee.forEach(((ee, He) => {
+            const ye = He * te.g;
+            if (4 === ee.length) {
+              const [He, be, Me, Ke] = ee;
+              ie.set([He, be, Me, He, be, Me, Ke], ye)
             } else {
-              const [GB, DB, QB, oB, jB, yB, JB] = BB;
-              OB.set([GB, QB, jB, DB, oB, yB, JB], YB)
+              const [He, be, Me, Ke, Ue, Fe, Je] = ee;
+              ie.set([He, Me, Ue, be, Ke, Fe, Je], ye)
             }
-          })), OB
-        }(GB),
-        DB = (OB, GB, YB, DB) => {
-          BB.setBlockNoMulti(OB, GB, YB, DB, !0)
+          })), ie
+        }(He),
+        be = (ie, He, ye, be) => {
+          ee.setBlockNoMulti(ie, He, ye, be, !0)
         };
-      BB.client.gameRecorder.isCapturing() ? (0, fB.wb)(YB, (0, fB.sb)(YB), DB) : BB.kz.mP.wV(YB, {
-        tC: DB,
-        isHookId: OB => BB.blockChangeHasHooks(OB),
-        watched: () => function(BB, OB, GB) {
-          const YB = [],
-            DB = (BB, OB, GB) => {
-              YB.push(BB, OB, GB)
+      ee.client.gameRecorder.isCapturing() ? (0, te.ub)(ye, (0, te.tb)(ye), be) : ee.uk.xR.Xw(ye, {
+        hN: be,
+        isHookId: ie => ee.blockChangeHasHooks(ie),
+        watched: () => function(ee, ie, He) {
+          const ye = [],
+            be = (ee, ie, He) => {
+              ye.push(ee, ie, He)
             },
-            QB = new Set;
-          for (let oB = 0; oB < GB.length; oB += fB.h)
-            for (let OB = (0, UB.V)(GB[oB]); OB <= (0, UB.V)(GB[oB + 3]); OB++)
-              for (let YB = (0, UB.V)(GB[oB + 1]); YB <= (0, UB.V)(GB[oB + 4]); YB++)
-                for (let jB = (0, UB.V)(GB[oB + 2]); jB <= (0, UB.V)(GB[oB + 5]); jB++) {
-                  const GB = `${OB}|${YB}|${jB}`;
-                  QB.has(GB) || (QB.add(GB), BB.blockDataOwner.forEachDataCell(OB, YB, jB, DB))
+            Me = new Set;
+          for (let Ke = 0; Ke < He.length; Ke += te.g)
+            for (let ie = (0, We.W)(He[Ke]); ie <= (0, We.W)(He[Ke + 3]); ie++)
+              for (let ye = (0, We.W)(He[Ke + 1]); ye <= (0, We.W)(He[Ke + 4]); ye++)
+                for (let Ue = (0, We.W)(He[Ke + 2]); Ue <= (0, We.W)(He[Ke + 5]); Ue++) {
+                  const He = `${ie}|${ye}|${Ue}`;
+                  Me.has(He) || (Me.add(He), ee.blockDataOwner.forEachDataCell(ie, ye, Ue, be))
                 }
-          return OB.forEachCell(DB), Int32Array.from(YB)
-        }(BB, OB, YB)
-      }), BB.kz.eOB()
+          return ie.forEachCell(be), Int32Array.from(ye)
+        }(ee, ie, ye)
+      }), ee.uk.oHe()
     }
 
-    function dB(BB) {
-      BB.IYB = new Set, BB.LYB = new Set, BB.FYB = new Set, BB.gYB = new Set, BB.iYB = [], BB.rYB = [], BB.nC = new Set, BB.JY = [], BB.fC = []
+    function we(ee) {
+      ee.ibe = new Set, ee.bbe = new Set, ee.Hbe = new Set, ee.Mbe = new Set, ee.ybe = [], ee.Kbe = [], ee.oN = new Set, ee.Xy = [], ee.kN = []
     }
-    class KB {
-      constructor(BB) {
-        this.kz = BB
+    class De {
+      constructor(ee) {
+        this.uk = ee
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
-        BB.kR(JB.W, (BB => {
-          OB.mP.IYB.add(BB), OB.mP.LYB.delete(BB)
-        })), BB.kR(JB.eb, (BB => {
-          OB.mP.LYB.add(BB), OB.mP.IYB.delete(BB)
-        })), BB.kR(JB.le, (BB => {
-          OB.mP.LYB.delete(BB), OB.mP.IYB.delete(BB)
-        })), BB.kR(JB.ab, (BB => {
-          OB.mP.FYB.add(BB), OB.mP.gYB.delete(BB)
-        })), BB.kR(JB.ib, (BB => {
-          OB.mP.gYB.add(BB), OB.mP.FYB.delete(BB)
-        })), BB.kR(JB.re, (BB => {
-          OB.mP.gYB.delete(BB), OB.mP.FYB.delete(BB)
-        })), BB.kR(JB.Z, (BB => {
-          (0, PB.lb)(BB, OB.mP.rYB), (0, PB.lb)(BB, OB.mP.iYB), OB.mP.iYB.push(BB)
-        })), BB.kR(JB.fb, (BB => {
-          (0, PB.lb)(BB, OB.mP.iYB), (0, PB.lb)(BB, OB.mP.rYB), OB.mP.rYB.push(BB)
-        })), BB.kR(JB.oe, (BB => {
-          (0, PB.lb)(BB, OB.mP.iYB), (0, PB.lb)(BB, OB.mP.rYB)
-        })), BB.kR(JB.Nf, (BB => {
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
+        ee.OE(Je.cb, (ee => {
+          ie.xR.ibe.add(ee), ie.xR.bbe.delete(ee)
+        })), ee.OE(Je.kb, (ee => {
+          ie.xR.bbe.add(ee), ie.xR.ibe.delete(ee)
+        })), ee.OE(Je.ce, (ee => {
+          ie.xR.bbe.delete(ee), ie.xR.ibe.delete(ee)
+        })), ee.OE(Je.hb, (ee => {
+          ie.xR.Hbe.add(ee), ie.xR.Mbe.delete(ee)
+        })), ee.OE(Je.ob, (ee => {
+          ie.xR.Mbe.add(ee), ie.xR.Hbe.delete(ee)
+        })), ee.OE(Je.je, (ee => {
+          ie.xR.Mbe.delete(ee), ie.xR.Hbe.delete(ee)
+        })), ee.OE(Je.db, (ee => {
+          (0, Re.hb)(ee, ie.xR.Kbe), (0, Re.hb)(ee, ie.xR.ybe), ie.xR.ybe.push(ee)
+        })), ee.OE(Je.lb, (ee => {
+          (0, Re.hb)(ee, ie.xR.ybe), (0, Re.hb)(ee, ie.xR.Kbe), ie.xR.Kbe.push(ee)
+        })), ee.OE(Je.ge, (ee => {
+          (0, Re.hb)(ee, ie.xR.ybe), (0, Re.hb)(ee, ie.xR.Kbe)
+        })), ee.OE(Je.sf, (ee => {
           let {
-            yG: GB,
-            JG: YB
-          } = BB;
-          YB ? OB.mP.nC.delete(GB) : OB.mP.nC.add(GB)
-        })), BB.kR(JB.Lf, (BB => {
+            TH: He,
+            pH: ye
+          } = ee;
+          ye ? ie.xR.oN.delete(He) : ie.xR.oN.add(He)
+        })), ee.OE(Je.pf, (ee => {
           let {
-            JY: YB,
-            MY: DB
-          } = BB;
-          GB.updateWalkThroughRect(OB.EX, YB, DB)
-        })), (0, YB.onGameResetOnce)((() => {
-          dB(OB.mP)
-        })), BB.kR(JB.nc, (BB => {
-          SB.d.applyServerUpdate(BB)
-        })), BB.kR(JB.lb, (BB => {
-          GB.applyServerBlocks((() => {
-            ! function(BB, OB) {
+            Xy: ye,
+            zy: be
+          } = ee;
+          He.updateWalkThroughRect(ie.gC, ye, be)
+        })), (0, ye.onGameResetOnce)((() => {
+          we(ie.xR)
+        })), ee.OE(Je.hc, (ee => {
+          Oe.d.applyServerUpdate(ee)
+        })), ee.OE(Je.rb, (ee => {
+          He.applyServerBlocks((() => {
+            ! function(ee, ie) {
               for (const {
-                  wQ: GB,
-                  EQ: YB
+                  NM: He,
+                  GM: ye
                 }
-                of OB) {
-                const OB = nB.c[YB];
-                if (OB) {
+                of ie) {
+                const ie = de.d[ye];
+                if (ie) {
                   const {
-                    compX: YB,
-                    compY: DB,
-                    compZ: QB,
-                    mainMultiblock: oB
-                  } = OB;
-                  BB.qm(GB[0] - YB, GB[1] - DB, GB[2] - QB, oB)
+                    compX: ye,
+                    compY: be,
+                    compZ: Me,
+                    mainMultiblock: Ke
+                  } = ie;
+                  ee.RV(He[0] - ye, He[1] - be, He[2] - Me, Ke)
                 }
               }
               for (const {
-                  wQ: GB,
-                  EQ: YB,
-                  cQ: DB
+                  NM: He,
+                  GM: ye,
+                  rM: be
                 }
-                of OB) BB.setBlockNoMulti(GB[0], GB[1], GB[2], YB, !0), BB.blockDataOwner.setBlockData(GB[0], GB[1], GB[2], null === DB ? void 0 : JSON.parse(DB)), BB.blockAdded(GB[0], GB[1], GB[2], YB)
-            }(GB, BB)
-          })), NB.o.tM("changeBlockFail", BB), NB.o.tM("blockChangeRefused"), GB.client.triggerGameCallback("onChangeBlockFail", BB), NB.o.tM("EditBoard", {
+                of ie) ee.setBlockNoMulti(He[0], He[1], He[2], ye, !0), ee.blockDataOwner.setBlockData(He[0], He[1], He[2], null === be ? void 0 : JSON.parse(be)), ee.blockAdded(He[0], He[1], He[2], ye)
+            }(He, ee)
+          })), Xe.h.yR("changeBlockFail", ee), Xe.h.yR("blockChangeRefused"), He.client.triggerGameCallback("onChangeBlockFail", ee), Xe.h.yR("EditBoard", {
             pos: null
-          }), NB.o.tM("EditCodeBlock", {
+          }), Xe.h.yR("EditCodeBlock", {
             pos: null,
             canChangePos: null
           })
         }));
-        const DB = BB => {
-          GB.applyServerBlocks((() => {
-            kB(GB, SB.d, BB)
+        const be = ee => {
+          He.applyServerBlocks((() => {
+            Ze(He, Oe.d, ee)
           }))
         };
-        BB.kR(JB.Fb, DB), BB.kR(JB.$b, DB), BB.kR(JB.If, (BB => {
+        ee.OE(Je.Nb, be), ee.OE(Je._b, be), ee.OE(Je.if, (ee => {
           let {
-            jO: OB,
-            yO: YB
-          } = BB;
-          if (GB.Qv(OB[0], OB[1], OB[2])) {
-            const BB = (0, yB.d)().jR(OB[0], OB[1], OB[2]);
-            (0, yB.d)().updateMailboxContents(OB[0], OB[1], OB[2], BB, YB)
+            ki: ie,
+            qi: ye
+          } = ee;
+          if (He.QG(ie[0], ie[1], ie[2])) {
+            const ee = (0, Fe.e)().kE(ie[0], ie[1], ie[2]);
+            (0, Fe.e)().updateMailboxContents(ie[0], ie[1], ie[2], ee, ye)
           }
-        })), BB.kR(JB.Me, (BB => {
+        })), ee.OE(Je.Be, (ee => {
           let {
-            pos: OB,
-            data: YB
-          } = BB;
-          GB.blockDataOwner.setBlockData(OB[0], OB[1], OB[2], YB), GB.blockAdded(OB[0], OB[1], OB[2], GB.jR(OB[0], OB[1], OB[2]))
+            pos: ie,
+            data: ye
+          } = ee;
+          He.blockDataOwner.setBlockData(ie[0], ie[1], ie[2], ye), He.blockAdded(ie[0], ie[1], ie[2], He.kE(ie[0], ie[1], ie[2]))
         }))
       }
     }
-    var uB = GB(37839),
-      mB = GB(37452),
-      IB = GB(38744),
-      FB = GB(38597),
-      iB = GB(38762);
-    class LB {
-      constructor(BB, OB) {
-        this.kz = BB, this.setUpQueuedEntity = OB
+    var Pe = He(37965),
+      Ae = He(37590),
+      Ye = He(38897),
+      Ve = He(38759),
+      ae = He(38915);
+    class ce {
+      constructor(ee, ie) {
+        this.uk = ee, this.setUpQueuedEntity = ie
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
-        BB.kR(JB.T, (BB => {
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
+        ee.OE(Je.$, (ee => {
           let {
-            kB: OB,
-            dB: GB
-          } = BB;
-          this.setUpQueuedEntity(OB), OB = (0, mB.b)(OB), (0, yB.d)().client.gameRecorder.recordBulletShot(OB, GB), NB.o.tM(`bulletShot|${OB}`, {
-            bulletDirections: GB
+            De: ie,
+            Pe: He
+          } = ee;
+          this.setUpQueuedEntity(ie), ie = (0, Ae.b)(ie), (0, Fe.e)().client.gameRecorder.recordBulletShot(ie, He), Xe.h.yR(`bulletShot|${ie}`, {
+            bulletDirections: He
           })
-        })), BB.kR(JB.oc, (BB => {
+        })), ee.OE(Je.jc, (ee => {
           let {
-            kY: OB,
-            dY: GB
-          } = BB;
-          NB.o.tM("damagedByOtherPlayer", {
-            kY: OB,
-            direction: GB
+            Cy: ie,
+            vy: He
+          } = ee;
+          Xe.h.yR("damagedByOtherPlayer", {
+            Cy: ie,
+            direction: He
           }, !0)
-        })), BB.kR(JB.Hd, (BB => {
-          NB.o.tM("playerKilled", BB, !0), (0, mB.g)(BB.killerEId) && !(0, mB.g)(BB.deadEId) && NB.o.tM("sessionReplayPlayerKill", {
-            killstreak: BB.killstreak
-          }), (0, yB.d)().client.gameRecorder.recordPlayerKilled(BB.deadEId, BB.killerEId, BB.withItem, BB.killstreak)
-        })), BB.kR(JB.Qb, (BB => {
-          NB.o.tM("customKillfeed", BB, !0), (0, yB.d)().client.gameRecorder.recordCustomKillfeed(BB.killer, BB.victim, BB.withItem)
-        })), BB.kR(JB.Qd, (BB => {
+        })), ee.OE(Je.wd, (ee => {
+          Xe.h.yR("playerKilled", ee, !0), (0, Ae.f)(ee.killerEId) && !(0, Ae.f)(ee.deadEId) && Xe.h.yR("sessionReplayPlayerKill", {
+            killstreak: ee.killstreak
+          }), (0, Fe.e)().client.gameRecorder.recordPlayerKilled(ee.deadEId, ee.killerEId, ee.withItem, ee.killstreak)
+        })), ee.OE(Je.Sb, (ee => {
+          Xe.h.yR("customKillfeed", ee, !0), (0, Fe.e)().client.gameRecorder.recordCustomKillfeed(ee.killer, ee.victim, ee.withItem)
+        })), ee.OE(Je.Id, (ee => {
           let {
-            uG: GB,
-            mG: YB
-          } = BB;
-          this.setUpQueuedEntity(GB);
-          const DB = OB.DW.MYB(GB);
-          null !== DB && void 0 !== DB && DB.isGun() && DB.reload(Date.now(), YB)
-        })), BB.kR(JB.Fe, (BB => {
+            xH: He,
+            CH: ye
+          } = ee;
+          this.setUpQueuedEntity(He);
+          const be = ie.sE.Vye(He);
+          null !== be && void 0 !== be && be.isGun() && be.reload(Date.now(), ye)
+        })), ee.OE(Je.ve, (ee => {
           let {
-            GD: GB,
-            bG: YB
-          } = BB;
-          const DB = YB ? (0, iB.f)(OB, YB) : void 0;
-          NB.o.tM("sendHitmarker", {
-            GD: GB,
-            screenPos: DB
+            Tb: He,
+            QH: ye
+          } = ee;
+          const be = ye ? (0, ae.d)(ie, ye) : void 0;
+          Xe.h.yR("sendHitmarker", {
+            Tb: He,
+            screenPos: be
           }, !0)
-        })), BB.kR(JB.Vc, (BB => {
+        })), ee.OE(Je.Mc, (ee => {
           let {
-            aG: YB,
-            eG: DB,
-            CG: QB,
-            HG: oB,
-            vG: jB,
-            sG: yB,
-            xG: JB
-          } = BB;
-          this.setUpQueuedEntity(YB), YB = (0, mB.b)(YB);
-          const MB = OB.DW.YYB(YB);
-          if (MB && (MB.lastHurtTime = performance.now()), (0, IB.playRigHurt)(OB, YB, yB), NB.o.tM("lifeformHurt", {
-              eId: YB,
-              xG: JB
-            }), DB) {
-            const BB = (0, iB.f)(OB, DB.bG);
-            NB.o.tM("yourAttackHit", {
-              GD: oB,
-              screenPos: BB,
-              hitSelf: YB === OB.EX
+            NH: ye,
+            GH: be,
+            ey: Me,
+            iy: Ke,
+            Hy: Ue,
+            yy: Fe,
+            My: Je
+          } = ee;
+          this.setUpQueuedEntity(ye), ye = (0, Ae.b)(ye);
+          const oe = ie.sE.Wye(ye);
+          if (oe && (oe.lastHurtTime = performance.now()), (0, Ye.playRigHurt)(ie, ye, Fe), Xe.h.yR("lifeformHurt", {
+              eId: ye,
+              My: Je
+            }), be) {
+            const ee = (0, ae.d)(ie, be.QH);
+            Xe.h.yR("yourAttackHit", {
+              Tb: Ke,
+              screenPos: ee,
+              hitSelf: ye === ie.gC
             })
           }
-          YB === OB.EX && (GB.shakePlayerCamera(YB, jB / 40, 200), NB.o.tM("closeShopOnDamaged", null), NB.o.tM("damagedByOtherPlayer", {
-            kY: null,
-            direction: yB,
-            vG: jB
+          ye === ie.gC && (He.shakePlayerCamera(ye, Ue / 40, 200), Xe.h.yR("closeShopOnDamaged", null), Xe.h.yR("damagedByOtherPlayer", {
+            Cy: null,
+            direction: Fe,
+            Hy: Ue
           }, !0));
-          const PB = OB.DW.pR(YB);
-          if (PB && (QB || oB)) {
-            const BB = [PB[0], PB[1] + 1, PB[2]];
-            QB && (0, FB.o)(OB, FB.B, BB, 15), oB && (0, FB.o)(OB, FB.s, BB, 10)
+          const Re = ie.sE.pE(ye);
+          if (Re && (Me || Ke)) {
+            const ee = [Re[0], Re[1] + 1, Re[2]];
+            Me && (0, Ve.m)(ie, Ve.y, ee, 15), Ke && (0, Ve.m)(ie, Ve.p, ee, 10)
           }
-        })), BB.kR(JB.Sc, (BB => {
+        })), ee.OE(Je.Lc, (ee => {
           let {
-            tY: GB,
-            BD: YB,
-            OD: DB
-          } = BB;
-          (0, uB.c)(OB).setHealthFrac((0, mB.b)(GB), DB), NB.o.tM("lifeformHealthChanged", {
-            eId: (0, mB.b)(GB),
-            BD: YB,
-            OD: DB
+            kb: He,
+            qb: ye,
+            fb: be
+          } = ee;
+          (0, Pe.d)(ie).setHealthFrac((0, Ae.b)(He), be), Xe.h.yR("lifeformHealthChanged", {
+            eId: (0, Ae.b)(He),
+            qb: ye,
+            fb: be
           })
-        })), BB.kR(JB.N, (BB => {
+        })), ee.OE(Je.V, (ee => {
           let {
-            AY: GB,
-            VY: YB
-          } = BB;
-          (0, yB.d)().playerAttacked(OB.EX, GB, YB)
-        })), BB.kR(JB.nb, (() => {
-          const BB = OB.DW.MYB(OB.EX);
-          null !== BB && void 0 !== BB && BB.isChargeable() && BB.finishCharging(!1, Date.now())
-        })), BB.kR(JB.Yb, (BB => {
+            Py: He,
+            Ay: ye
+          } = ee;
+          (0, Fe.e)().playerAttacked(ie.gC, He, ye)
+        })), ee.OE(Je.tb, (() => {
+          const ee = ie.sE.Vye(ie.gC);
+          null !== ee && void 0 !== ee && ee.isChargeable() && ee.finishCharging(!1, Date.now())
+        })), ee.OE(Je.Wb, (ee => {
           let {
-            pY: OB,
-            qY: GB,
-            ZY: YB,
-            NY: DB,
-            RY: QB,
-            WY: oB
-          } = BB;
-          OB = (0, mB.b)(OB), (0, yB.d)().client.updateEffect(OB, GB, {
-            displayName: YB,
-            icon: DB,
-            duration: QB,
-            level: oB
+            Oy: ie,
+            Wy: He,
+            ty: ye,
+            Zy: be,
+            wy: Me,
+            Dy: Ke
+          } = ee;
+          ie = (0, Ae.b)(ie), (0, Fe.e)().client.updateEffect(ie, He, {
+            displayName: ye,
+            icon: be,
+            duration: Me,
+            level: Ke
           })
-        })), BB.kR(JB.Ud, (BB => {
+        })), ee.OE(Je.Jd, (ee => {
           let {
-            pY: OB,
-            qY: GB
-          } = BB;
-          OB = (0, mB.b)(OB), (0, yB.d)().client.removeEffect(OB, GB)
-        })), BB.kR(JB.Cf, (BB => {
-          NB.o.tM("ttbEffectMultiplier", BB)
+            Oy: ie,
+            Wy: He
+          } = ee;
+          ie = (0, Ae.b)(ie), (0, Fe.e)().client.removeEffect(ie, He)
+        })), ee.OE(Je.ef, (ee => {
+          Xe.h.yR("ttbEffectMultiplier", ee)
         }))
       }
     }
-    var gB = GB(39695),
-      rB = GB(37836),
-      XB = GB(4631),
-      wB = GB(38771),
-      EB = GB(37434),
-      cB = GB(37436),
-      hB = GB(37761),
-      aB = GB(37857),
-      eB = GB(38780),
-      TB = GB(39702);
-    class bB {
-      constructor(BB, OB) {
-        this.kz = BB, this.setUpQueuedEntity = OB
+    var xe = He(39784),
+      Le = He(37963),
+      Ce = He(4582),
+      ve = He(38927),
+      ue = He(37574),
+      me = He(37578),
+      le = He(37899),
+      Se = He(37992),
+      ne = He(38933),
+      je = He(39786);
+    class se {
+      constructor(ee, ie) {
+        this.uk = ee, this.setUpQueuedEntity = ie
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
-        BB.kR(JB.hd, (BB => {
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
+        ee.OE(Je.Xc, (ee => {
           let {
-            eId: GB,
-            settings: YB
-          } = BB;
-          (0, aB.g)(GB);
-          for (const OB in YB)(0, aB.e)(GB, OB, YB[OB]);
-          if ("canSee" in YB && OB.DW.YGB(GB, "hidingMeshManager")) {
-            const BB = OB.DW.getState(GB, "hidingMeshManager");
-            BB.canSee = (0, eB.c)("canSee", YB.canSee), BB._forceUpdate = !0
+            eId: He,
+            settings: ye
+          } = ee;
+          (0, Se.f)(He);
+          for (const ie in ye)(0, Se.e)(He, ie, ye[ie]);
+          if ("canSee" in ye && ie.sE.gHe(He, "hidingMeshManager")) {
+            const ee = ie.sE.getState(He, "hidingMeshManager");
+            ee.canSee = (0, ne.e)("canSee", ye.canSee), ee._forceUpdate = !0
           }
-        })), BB.kR(JB.K, (BB => {
+        })), ee.OE(Je.L, (ee => {
           let {
-            MG: GB,
-            PG: YB,
-            animationScript: DB,
-            zG: QB,
-            lG: oB,
-            pG: jB,
-            qG: JB
-          } = BB;
-          GB = (0, mB.b)(GB);
-          const MB = null === DB && null !== jB ? (0, gB.g)(jB, JB) : DB;
-          (0, yB.d)().client.gameRecorder.recordAnimateEntity(GB, YB, MB, QB, oB), (0, uB.c)(OB).animations.animateEntity(GB, YB, DB, QB, oB, jB, JB), null !== DB || GB === OB.EX && YB === rB.f.Emote && (0, yB.d)().client.cameraController.endTemporaryThirdPerson()
-        })), BB.kR(JB.De, (BB => {
-          (0, TB.d)(BB)
-        })), BB.kR(JB.Dd, (BB => {
-          for (const OB of BB)(0, wB.H)(OB);
-          NB.o.tM("playerCosmeticsUpdated", BB, !0)
-        })), BB.kR(JB.M, (BB => {
-          for (const GB of BB)(0, hB.h)(OB, GB)
-        })), BB.kR(JB.id, (BB => {
-          (0, FB.r)(OB, (0, PB.x)(BB))
-        })), BB.kR(JB.md, (BB => {
-          XB.i[BB.GY] ? (0, FB.r)(OB, {
-            ...XB.i[BB.GY],
-            pos1: BB.pos1,
-            pos2: BB.pos2
-          }) : console.error(`Unknown preset id: ${BB.GY}`)
-        })), BB.kR(JB.Cd, (BB => {
-          var OB, GB;
+            XH: He,
+            zH: ye,
+            animationScript: be,
+            BH: Me,
+            EH: Ke,
+            gH: Ue,
+            OH: Je
+          } = ee;
+          He = (0, Ae.b)(He);
+          const oe = null === be && null !== Ue ? (0, xe.e)(Ue, Je) : be;
+          (0, Fe.e)().client.gameRecorder.recordAnimateEntity(He, ye, oe, Me, Ke), (0, Pe.d)(ie).animations.animateEntity(He, ye, be, Me, Ke, Ue, Je), null !== be || He === ie.gC && ye === Le.c.Emote && (0, Fe.e)().client.cameraController.endTemporaryThirdPerson()
+        })), ee.OE(Je.se, (ee => {
+          (0, je.b)(ee)
+        })), ee.OE(Je.td, (ee => {
+          for (const ie of ee)(0, ve.z)(ie);
+          Xe.h.yR("playerCosmeticsUpdated", ee, !0)
+        })), ee.OE(Je.T, (ee => {
+          for (const He of ee)(0, le.e)(ie, He)
+        })), ee.OE(Je._c, (ee => {
+          (0, Ve.n)(ie, (0, Re.w)(ee))
+        })), ee.OE(Je.$c, (ee => {
+          Ce.f[ee.Jy] ? (0, Ve.n)(ie, {
+            ...Ce.f[ee.Jy],
+            pos1: ee.pos1,
+            pos2: ee.pos2
+          }) : console.error(`Unknown preset id: ${ee.Jy}`)
+        })), ee.OE(Je.qd, (ee => {
+          var ie, He;
           let {
-            VD: YB,
-            SD: DB,
-            nD: QB,
-            UD: oB
-          } = BB, {
-            kD: jB,
-            dD: JB
-          } = null !== oB && void 0 !== oB ? oB : {};
+            xb: ye,
+            Lb: be,
+            Cb: Me,
+            ub: Ke
+          } = ee, {
+            lb: Ue,
+            Sb: Je
+          } = null !== Ke && void 0 !== Ke ? Ke : {};
           const {
-            fD: MB
-          } = null !== oB && void 0 !== oB ? oB : {};
-          jB = null !== (OB = jB) && void 0 !== OB ? OB : void 0, JB = null !== (GB = JB) && void 0 !== GB ? GB : void 0, "string" === typeof MB && this.setUpQueuedEntity(MB), (0, yB.d)().client.gameRecorder.recordPlaySound(YB, DB, QB, oB), EB.b.play((0, cB.f)(YB), DB, MB, jB, JB).rate(QB)
-        })), BB.kR(JB.Jf, (BB => {
-          for (const OB in BB) {
-            const YB = BB[OB];
-            for (const BB in YB) GB.client.meshCreator.handleParticleSystemUpdate(OB, BB, YB[BB])
+            mb: oe
+          } = null !== Ke && void 0 !== Ke ? Ke : {};
+          Ue = null !== (ie = Ue) && void 0 !== ie ? ie : void 0, Je = null !== (He = Je) && void 0 !== He ? He : void 0, "string" === typeof oe && this.setUpQueuedEntity(oe), (0, Fe.e)().client.gameRecorder.recordPlaySound(ye, be, Me, Ke), ue.d.play((0, me.g)(ye), be, oe, Ue, Je).rate(Me)
+        })), ee.OE(Je.mf, (ee => {
+          for (const ie in ee) {
+            const ye = ee[ie];
+            for (const ee in ye) He.client.meshCreator.handleParticleSystemUpdate(ie, ee, ye[ee])
           }
         }))
       }
     }
-    var CB = GB(38466),
-      HB = GB(38418);
-    class vB {
-      constructor(BB) {
-        this.kz = BB
+    var Ie = He(38621),
+      he = He(38575);
+    class Ne {
+      constructor(ee) {
+        this.uk = ee
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
 
-        function YB() {
-          return OB.DW.hGB(OB.EX)
+        function ye() {
+          return ie.sE.Jye(ie.gC)
         }
-        BB.kR(JB.Dc, (BB => {
+        ee.OE(Je.xc, (ee => {
           let {
-            SQ: GB,
-            nQ: YB,
-            UQ: DB,
-            fQ: QB,
-            kQ: oB,
-            dQ: jB,
-            KQ: yB,
-            uQ: JB,
-            mQ: MB
-          } = BB;
-          if (!OB.DW.YGB(GB, "itemState")) return void(0, CB.j)(OB, GB, [oB, jB, yB], YB, {
-            amount: DB,
-            attributes: JSON.parse(QB),
-            uQ: JB,
-            size: MB
+            aM: He,
+            cM: ye,
+            xM: be,
+            LM: Me,
+            CM: Ke,
+            vM: Ue,
+            uM: Fe,
+            mM: Je,
+            lM: oe
+          } = ee;
+          if (!ie.sE.gHe(He, "itemState")) return void(0, Ie.m)(ie, He, [Ke, Ue, Fe], ye, {
+            amount: be,
+            attributes: JSON.parse(Me),
+            mM: Je,
+            size: oe
           });
-          const PB = OB.DW.getState(GB, "itemState");
-          PB.amount = DB, PB.uQ = JB, PB.creationTime = Date.now(), (0, HB.setServerPosition)(OB.DW.getState(GB, "smoothToServerPos"), oB, jB, yB)
-        })), BB.kR(JB.jb, (BB => {
-          (0, uB.c)(OB).setCantPickUp(BB, !0), OB.DW.YGB(BB, "itemState") && (OB.DW.getState(BB, "itemState").uQ = !0)
-        })), BB.kR(JB.he, (BB => {
-          (0, uB.c)(OB).setCantPickUp(BB, !1), OB.DW.YGB(BB, "itemState") && (OB.DW.getState(BB, "itemState").uQ = !1)
-        })), BB.kR(JB.yd, (BB => {
+          const Re = ie.sE.getState(He, "itemState");
+          Re.amount = be, Re.mM = Je, Re.creationTime = Date.now(), (0, he.setServerPosition)(ie.sE.getState(He, "smoothToServerPos"), Ke, Ue, Fe)
+        })), ee.OE(Je.pb, (ee => {
+          (0, Pe.d)(ie).setCantPickUp(ee, !0), ie.sE.gHe(ee, "itemState") && (ie.sE.getState(ee, "itemState").mM = !0)
+        })), ee.OE(Je._d, (ee => {
+          (0, Pe.d)(ie).setCantPickUp(ee, !1), ie.sE.gHe(ee, "itemState") && (ie.sE.getState(ee, "itemState").mM = !1)
+        })), ee.OE(Je.md, (ee => {
           let {
-            pickUpItems: OB,
-            pickUpAckSeq: GB
-          } = BB;
+            pickUpItems: ie,
+            pickUpAckSeq: He
+          } = ee;
           for (const {
-              name: DB,
-              amount: QB,
-              attributes: oB
+              name: be,
+              amount: Me,
+              attributes: Ke
             }
-            of OB) YB().pickUpItem({
-            name: DB,
-            amount: QB,
-            typeObj: CB.z[DB],
-            attributes: oB
+            of ie) ye().pickUpItem({
+            name: be,
+            amount: Me,
+            typeObj: Ie.A[be],
+            attributes: Ke
           });
-          (0, yB.d)().client.inventoryPrediction.serverChangeApplied(GB)
-        })), BB.kR(JB.af, (BB => {
+          (0, Fe.e)().client.inventoryPrediction.serverChangeApplied(He)
+        })), ee.OE(Je.Pe, (ee => {
           let {
-            index: GB,
-            name: YB,
-            amount: DB,
-            attributes: QB,
-            setSlotAckSeq: oB
-          } = BB;
-          const jB = OB.DW.aGB(OB.EX);
-          (GB < jB.playerInventory.numSlots || jB.FG || jB.inCreative) && jB.setItemSlot(GB, YB, DB, QB), (0, yB.d)().client.inventoryPrediction.serverChangeApplied(oB)
-        })), BB.kR(JB.Ac, (BB => {
-          (0, yB.d)().client.inventoryPrediction.acknowledge(BB)
-        })), BB.kR(JB.G, (BB => {
+            index: He,
+            name: ye,
+            amount: be,
+            attributes: Me,
+            setSlotAckSeq: Ke
+          } = ee;
+          const Ue = ie.sE.oye(ie.gC);
+          (He < Ue.playerInventory.numSlots || Ue.uH || Ue.inCreative) && Ue.setItemSlot(He, ye, be, Me), (0, Fe.e)().client.inventoryPrediction.serverChangeApplied(Ke)
+        })), ee.OE(Je.uc, (ee => {
+          (0, Fe.e)().client.inventoryPrediction.acknowledge(ee)
+        })), ee.OE(Je.K, (ee => {
           let {
-            hQ: OB,
-            aQ: GB,
-            eQ: YB,
-            TQ: DB
-          } = BB;
-          (0, yB.d)().client.itemDropPrediction.onActionItemDrops(OB, GB, YB, DB)
-        })), BB.kR(JB.Cb, (BB => {
-          YB().clearInventory(), (0, yB.d)().client.inventoryPrediction.serverChangeApplied(BB)
-        })), BB.kR(JB.df, (BB => {
-          NB.o.tM("setSelectedInventorySlotI", BB, !0)
-        })), BB.kR(JB.xb, (BB => {
+            QM: ie,
+            eK: He,
+            iK: ye,
+            HK: be
+          } = ee;
+          (0, Fe.e)().client.itemDropPrediction.onActionItemDrops(ie, He, ye, be)
+        })), ee.OE(Je.Gb, (ee => {
+          ye().clearInventory(), (0, Fe.e)().client.inventoryPrediction.serverChangeApplied(ee)
+        })), ee.OE(Je.Qe, (ee => {
+          Xe.h.yR("setSelectedInventorySlotI", ee, !0)
+        })), ee.OE(Je.yb, (ee => {
           let {
-            lO: GB,
-            pO: YB,
-            qO: DB,
-            ZO: QB,
-            RO: oB,
-            WO: jB,
-            AO: JB,
-            VO: MB
-          } = BB;
-          const PB = OB.DW.aGB(OB.EX);
-          if (jB) {
+            Ei: He,
+            gi: ye,
+            Oi: be,
+            di: Me,
+            Wi: Ke,
+            ti: Ue,
+            Zi: Je,
+            wi: oe
+          } = ee;
+          const Re = ie.sE.oye(ie.gC);
+          if (Ue) {
             const {
-              nO: BB,
-              UO: OB
-            } = MB;
-            return (0, yB.d)().client.inventoryPrediction.POB(OB, (() => {
-              PB.chestRefreshed(YB, DB, QB, JB, BB)
-            })) && NB.o.tM("chestToggleFromServer", !1, !0), void NB.o.tM("chestRefreshedFromServer")
-          }(GB || PB.FG) && (GB ? (PB.chestOpened(YB, DB, QB, oB, JB), null !== oB && (0, yB.d)().client.ironChestPasskeyCache.onChestOpened(QB, oB)) : PB.chestClosed(), NB.o.tM("chestToggleFromServer", GB, !0))
-        })), BB.kR(JB.Ub, (BB => {
+              Pi: ee,
+              Ai: ie
+            } = oe;
+            return (0, Fe.e)().client.inventoryPrediction.Zie(ie, (() => {
+              Re.chestRefreshed(ye, be, Me, Je, ee)
+            })) && Xe.h.yR("chestToggleFromServer", !1, !0), void Xe.h.yR("chestRefreshedFromServer")
+          }(He || Re.uH) && (He ? (Re.chestOpened(ye, be, Me, Ke, Je), null !== Ke && (0, Fe.e)().client.ironChestPasskeyCache.onChestOpened(Me, Ke)) : Re.chestClosed(), Xe.h.yR("chestToggleFromServer", He, !0))
+        })), ee.OE(Je.Vb, (ee => {
           let {
-            craftingRecipeItemName: YB,
-            recipesForItem: DB
-          } = BB;
-          YB ? GB.craftingManager.editRecipesForPlayer(OB.EX, YB, DB) : GB.craftingManager.resetAllPlayerRecipes(OB.EX), NB.o.tM("craftingRecipesEdited", {
-            itemName: YB,
-            recipesForItem: DB
+            craftingRecipeItemName: ye,
+            recipesForItem: be
+          } = ee;
+          ye ? He.craftingManager.editRecipesForPlayer(ie.gC, ye, be) : He.craftingManager.resetAllPlayerRecipes(ie.gC), Xe.h.yR("craftingRecipesEdited", {
+            itemName: ye,
+            recipesForItem: be
           })
-        })), BB.kR(JB.Zd, (BB => {
+        })), ee.OE(Je.Rd, (ee => {
           let {
-            PY: OB,
-            zY: GB,
-            lY: DB
-          } = BB;
-          YB().removeItemName(OB, GB), (0, yB.d)().client.inventoryPrediction.serverChangeApplied(DB)
-        })), BB.kR(JB.Yd, (BB => {
+            By: ie,
+            Ey: He,
+            gy: be
+          } = ee;
+          ye().removeItemName(ie, He), (0, Fe.e)().client.inventoryPrediction.serverChangeApplied(be)
+        })), ee.OE(Je.Nd, (ee => {
           let {
-            IQ: YB
-          } = BB;
-          GB.craftingManager.removeRecipes(OB.EX, YB), NB.o.tM("craftingRecipesEdited", {
-            itemName: YB,
+            SM: ye
+          } = ee;
+          He.craftingManager.removeRecipes(ie.gC, ye), Xe.h.yR("craftingRecipesEdited", {
+            itemName: ye,
             recipesForItem: []
           })
         }))
       }
     }
-    var sB = GB(6991),
-      xB = GB(38282),
-      tB = GB(363),
-      BO = GB.n(tB),
-      OO = GB(4936),
-      GO = GB(38351),
-      YO = GB(38925),
-      DO = GB(38280);
-    class QO {
-      constructor(BB, OB) {
-        this.kz = BB, this.setUpQueuedEntity = OB
+    var Ge = He(7083),
+      re = He(38439),
+      Qe = He(352),
+      ei = He.n(Qe),
+      ii = He(4908),
+      Hi = He(38516),
+      yi = He(39057),
+      bi = He(38433);
+    class Mi {
+      constructor(ee, ie) {
+        this.uk = ee, this.setUpQueuedEntity = ie
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
-        BB.kR(JB.xf, (BB => {
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
+        ee.OE(Je.cf, (ee => {
           let {
-            dO: GB,
-            KO: DB,
-            uO: QB,
-            mO: oB
-          } = BB;
-          const jB = [DB, QB, oB];
-          OB.DW.setPosition(OB.EX, jB), (0, YB.sendColyMessage)(JB.ch, {
-            TM: GB,
-            bM: OO.g
-          }), NB.o.tM("localPlayerTeleported", {
-            pos: jB,
+            ai: He,
+            ci: be,
+            xi: Me,
+            Li: Ke
+          } = ee;
+          const Ue = [be, Me, Ke];
+          ie.sE.setPosition(ie.gC, Ue), (0, ye.sendColyMessage)(Je.Ng, {
+            ho: He,
+            Go: ii.g
+          }), Xe.h.yR("localPlayerTeleported", {
+            pos: Ue,
             isCorrection: !1
           })
-        })), BB.kR(JB.ud, (BB => {
+        })), ee.OE(Je.ed, (ee => {
           let {
-            XG: OB,
-            wG: GB,
-            cG: YB,
-            hG: DB
-          } = BB;
-          this.setUpQueuedEntity(OB);
-          const QB = [GB, YB, DB];
-          NB.o.tM(`otherPlayerTeleported|${OB}`, {
-            pos: QB
+            jH: ie,
+            sH: He,
+            IH: ye,
+            hH: be
+          } = ee;
+          this.setUpQueuedEntity(ie);
+          const Me = [He, ye, be];
+          Xe.h.yR(`otherPlayerTeleported|${ie}`, {
+            pos: Me
           })
-        })), BB.kR(JB.Id, (BB => {
+        })), ee.OE(Je.xd, (ee => {
           let {
-            jD: GB,
-            yD: DB,
-            JD: QB,
-            MD: oB,
-            PD: jB,
-            zD: yB,
-            lD: MB,
-            qD: PB,
-            pD: zB,
-            RD: lB
-          } = BB;
-          const pB = [DB, QB, oB];
-          OB.DW.setPosition(OB.EX, pB);
-          const qB = OB.DW.AGB(OB.EX),
-            ZB = OB.DW.mC(OB.EX);
-          BO().set(ZB.eT, 0, 0, 0), BO().set(ZB.YC, 0, 0, 0), BO().set(ZB.lZ, jB, yB, MB), ZB.JC(), qB._flying = null !== lB, lB ? (qB.flyAccel.WD = lB.WD, qB.flyAccel.AD = lB.AD) : qB.flyAccel.reset(), PB && qB.movementType === sB.n.GLIDING && (qB.ZD = PB.ZD, BO().copy(qB.ND, PB.ND)), (0, YB.sendColyMessage)(JB.ch, {
-            TM: GB,
-            bM: OO.g
-          }), NB.o.tM("localPlayerTeleported", {
-            pos: pB,
+            Eb: He,
+            gb: be,
+            Ob: Me,
+            Wb: Ke,
+            tb: Ue,
+            Zb: Fe,
+            wb: oe,
+            Pb: Re,
+            Db: ke,
+            Vb: qe
+          } = ee;
+          const fe = [be, Me, Ke];
+          ie.sE.setPosition(ie.gC, fe);
+          const Te = ie.sE.CHe(ie.gC),
+            pe = ie.sE.XN(ie.gC);
+          ei().set(pe.JI, 0, 0, 0), ei().set(pe.pI, 0, 0, 0), ei().set(pe.Op, Ue, Fe, oe), pe.xI(), Te._flying = null !== qe, qe ? (Te.flyAccel.ab = qe.ab, Te.flyAccel.cb = qe.cb) : Te.flyAccel.reset(), Re && Te.movementType === Ge.o.GLIDING && (Te.Ab = Re.Ab, ei().copy(Te.Yb, Re.Yb)), (0, ye.sendColyMessage)(Je.Ng, {
+            ho: He,
+            Go: ii.g
+          }), Xe.h.yR("localPlayerTeleported", {
+            pos: fe,
             isCorrection: !0
           })
-        })), BB.kR(JB.gf, (BB => {
+        })), ee.OE(Je.Te, (ee => {
           let {
-            vehicleEId: OB,
-            overrides: GB
-          } = BB;
-          (0, yB.d)().applyRiddenVehicleSettingOverrides(OB, GB)
-        })), BB.kR(JB.Kf, (BB => {
+            vehicleEId: ie,
+            overrides: He
+          } = ee;
+          (0, Fe.e)().applyRiddenVehicleSettingOverrides(ie, He)
+        })), ee.OE(Je.nf, (ee => {
           let {
-            FQ: GB,
-            iQ: YB,
-            LQ: DB
-          } = BB;
-          const QB = OB.DW.AGB(OB.EX).physicsState.type === sB.o.SLEEPING && GB === sB.o.DEFAULT;
-          (0, yB.d)().updatePositionAndPhysics(OB.EX, {
-            type: GB,
-            tier: YB
-          }, !0, DB), QB && (0, yB.d)().updateHeldVehicleStatus()
-        })), BB.kR(JB.mb, (BB => {
+            nM: He,
+            jM: ye,
+            sM: be
+          } = ee;
+          const Me = ie.sE.CHe(ie.gC).physicsState.type === Ge.s.SLEEPING && He === Ge.s.DEFAULT;
+          (0, Fe.e)().updatePositionAndPhysics(ie.gC, {
+            type: He,
+            tier: ye
+          }, !0, be), Me && (0, Fe.e)().updateHeldVehicleStatus()
+        })), ee.OE(Je.sb, (ee => {
           let {
-            QB: GB,
-            oB: YB
-          } = BB;
-          OB.DW.EGB(OB.EX).setPose(GB, YB)
-        })), BB.kR(JB.Pe, (BB => {
+            Ke: He,
+            Ue: ye
+          } = ee;
+          ie.sE.Uye(ie.gC).setPose(He, ye)
+        })), ee.OE(Je.Ce, (ee => {
           const {
-            DP: GB,
-            WYB: YB
-          } = (0, xB.f)([BB[0], BB[1], BB[2]]);
-          DO.b.setLookDirection(OB, GB, YB), (0, GO.u)(GB, YB);
-          const DB = OB.DW.EGB(OB.EX);
-          DB && (DB.heading = GB)
-        })), BB.kR(JB.Se, (BB => {
-          GB.client.cameraController.setCameraZoom(BB)
-        })), BB.kR(JB.kf, (BB => {
+            FR: He,
+            lye: ye
+          } = (0, re.i)([ee[0], ee[1], ee[2]]);
+          bi.d.setLookDirection(ie, He, ye), (0, Hi.s)(He, ye);
+          const be = ie.sE.Uye(ie.gC);
+          be && (be.heading = He)
+        })), ee.OE(Je.Ge, (ee => {
+          He.client.cameraController.setCameraZoom(ee)
+        })), ee.OE(Je.Ye, (ee => {
           let {
-            gQ: YB,
-            rQ: DB
-          } = BB;
-          GB.shakePlayerCamera(OB.EX, YB, DB)
-        })), BB.kR(JB.Fc, (BB => {
-          OB.DW.EGB(OB.EX).jumpMultiplier.setMultiplierType("jumpEffectAmount", BB)
-        })), (0, YB.onGameResetOnce)((() => {
-          OB.DW.EGB(OB.EX).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
-        })), BB.kR(JB.L, (BB => {
-          OB.DW.mC(OB.EX).applyImpulse(BB)
-        })), BB.kR(JB.if, (BB => {
-          const GB = OB.DW.mC(OB.EX);
-          BO().set(GB.eT, 0, 0, 0), BO().set(GB.YC, 0, 0, 0), BO().copy(GB.lZ, BB), GB.JC()
-        })), (0, YB.onGameResetOnce)((() => {
-          (0, YO.setFloatingYValue)(OB.DW.getState(OB.EX, "physics"), OB.DW.f4(OB.EX), null)
-        })), BB.kR(JB._b, (BB => {
+            IM: ye,
+            hM: be
+          } = ee;
+          He.shakePlayerCamera(ie.gC, ye, be)
+        })), ee.OE(Je.Fc, (ee => {
+          ie.sE.Uye(ie.gC).jumpMultiplier.setMultiplierType("jumpEffectAmount", ee)
+        })), (0, ye.onGameResetOnce)((() => {
+          ie.sE.Uye(ie.gC).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
+        })), ee.OE(Je.P, (ee => {
+          ie.sE.XN(ie.gC).applyImpulse(ee)
+        })), ee.OE(Je.We, (ee => {
+          const He = ie.sE.XN(ie.gC);
+          ei().set(He.JI, 0, 0, 0), ei().set(He.pI, 0, 0, 0), ei().copy(He.Op, ee), He.xI()
+        })), (0, ye.onGameResetOnce)((() => {
+          (0, yi.setFloatingYValue)(ie.sE.getState(ie.gC, "physics"), ie.sE.M_(ie.gC), null)
+        })), ee.OE(Je.Zb, (ee => {
           let {
-            GB: GB,
-            YB: YB,
-            DB: DB
-          } = BB;
-          const QB = (0, mB.b)(GB);
-          if (QB === OB.EX) {
-            const BB = OB.DW.f4(OB.EX).position;
-            DB ??= Math.floor(BB[1]) - 1, (0, YO.setFloatingYValue)(OB.DW.getState(OB.EX, "physics"), OB.DW.f4(OB.EX), YB ? DB : null)
-          }(0, uB.c)(OB).setFloating(QB, YB, DB);
-          const oB = OB.DW.getState(QB, "floating");
-          oB && (oB.isFloating = YB, oB.DB = YB ? DB : null)
+            He: He,
+            ye: ye,
+            Me: be
+          } = ee;
+          const Me = (0, Ae.b)(He);
+          if (Me === ie.gC) {
+            const ee = ie.sE.M_(ie.gC).position;
+            be ??= Math.floor(ee[1]) - 1, (0, yi.setFloatingYValue)(ie.sE.getState(ie.gC, "physics"), ie.sE.M_(ie.gC), ye ? be : null)
+          }(0, Pe.d)(ie).setFloating(Me, ye, be);
+          const Ke = ie.sE.getState(Me, "floating");
+          Ke && (Ke.isFloating = ye, Ke.Me = ye ? be : null)
         }))
       }
     }
 
-    function oO(BB, OB, GB, YB, DB) {
-      let QB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!BB.DW.cGB(BB.EX)) return console.log("Got resync inven but don't have inven component"), void OB.acknowledge(YB);
-      QB && console.error("Had to sync inven"), OB.POB(YB, DB) && GB.tM("chestToggleFromServer", !1, !0), GB.tM("syncedInvenFromServer")
+    function Ki(ee, ie, He, ye, be) {
+      let Me = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!ee.sE.Fye(ee.gC)) return console.log("Got resync inven but don't have inven component"), void ie.acknowledge(ye);
+      Me && console.error("Had to sync inven"), ie.Zie(ye, be) && He.yR("chestToggleFromServer", !1, !0), He.yR("syncedInvenFromServer")
     }
-    var jO = GB(39713),
-      yO = GB(9587),
-      JO = GB(39720),
-      MO = GB(2057);
-    var PO = GB(4914);
+    var Ui = He(39802),
+      Fi = He(9663),
+      Ji = He(39808),
+      oi = He(2020);
+    var Ri = He(4891);
 
-    function zO(BB) {
-      const OB = BB.mP;
-      let GB = 0,
-        DB = -1,
-        oB = -1 / 0,
-        jB = null,
-        yB = !0;
-      const MB = () => {
-        if (++GB % 10 !== 0) return;
-        const MB = (0, YB.getLastReceivedPacketId)();
-        if (MB <= DB) return;
-        const [PB, zB, lB] = BB.DW.pR(BB.EX), pB = ! function(BB) {
-          var OB;
-          let GB = null === (OB = BB.DW.nYB(BB.EX)) || void 0 === OB ? void 0 : OB.qp;
-          if (void 0 === GB) return !1;
-          const YB = new Set;
-          for (; void 0 !== GB && !YB.has(GB);) {
-            var DB;
-            YB.add(GB);
-            const OB = BB.DW.getState(GB, "smoothToServerPos"),
-              QB = Array.isArray(OB) ? null : null === OB || void 0 === OB ? void 0 : OB.serverPosition;
-            if (QB) {
-              const OB = BB.DW.pR(GB);
-              if (Math.abs(OB[0] - QB[0]) > 10 || Math.abs(OB[1] - QB[1]) > 10 || Math.abs(OB[2] - QB[2]) > 10) return !0
+    function ki(ee) {
+      const ie = ee.xR;
+      let He = 0,
+        be = -1,
+        Ke = -1 / 0,
+        Ue = null,
+        Fe = !0;
+      const oe = () => {
+        if (++He % 10 !== 0) return;
+        const oe = (0, ye.getLastReceivedPacketId)();
+        if (oe <= be) return;
+        const [Re, ke, qe] = ee.sE.pE(ee.gC), fe = ! function(ee) {
+          var ie;
+          let He = null === (ie = ee.sE.jye(ee.gC)) || void 0 === ie ? void 0 : ie.Df;
+          if (void 0 === He) return !1;
+          const ye = new Set;
+          for (; void 0 !== He && !ye.has(He);) {
+            var be;
+            ye.add(He);
+            const ie = ee.sE.getState(He, "smoothToServerPos"),
+              Me = Array.isArray(ie) ? null : null === ie || void 0 === ie ? void 0 : ie.serverPosition;
+            if (Me) {
+              const ie = ee.sE.pE(He);
+              if (Math.abs(ie[0] - Me[0]) > 10 || Math.abs(ie[1] - Me[1]) > 10 || Math.abs(ie[2] - Me[2]) > 10) return !0
             }
-            GB = null === (DB = BB.DW.nYB(GB)) || void 0 === DB ? void 0 : DB.qp
+            He = null === (be = ee.sE.jye(He)) || void 0 === be ? void 0 : be.Df
           }
           return !1
-        }(BB) && function(BB, OB, GB, YB) {
-          const DB = QB.f.pP;
-          for (let QB = 0; QB < BB.length; QB++) {
-            const oB = BB[QB];
-            if (!(0, PO.i)(OB, GB, YB, oB[0] * DB, oB[1] * DB, oB[2] * DB)) return !1
+        }(ee) && function(ee, ie, He, ye) {
+          const be = Me.g.BR;
+          for (let Me = 0; Me < ee.length; Me++) {
+            const Ke = ee[Me];
+            if (!(0, Ri.h)(ie, He, ye, Ke[0] * be, Ke[1] * be, Ke[2] * be)) return !1
           }
           return !0
-        }(OB.GZ.QP, PB, zB, lB), qB = null === jB || Math.abs(PB - jB[0]) > 8 || Math.abs(zB - jB[1]) > 8 || Math.abs(lB - jB[2]) > 8, ZB = !yB || qB || performance.now() - oB >= 1e4;
-        yB = pB, pB && ZB && (DB = MB, oB = performance.now(), jB = [PB, zB, lB], (0, YB.sendColyMessage)(JB.Hg, {
-          rJ: MB
+        }(ie.Tp.JR, Re, ke, qe), Te = null === Ue || Math.abs(Re - Ue[0]) > 8 || Math.abs(ke - Ue[1]) > 8 || Math.abs(qe - Ue[2]) > 8, pe = !Fe || Te || performance.now() - Ke >= 1e4;
+        Fe = fe, fe && pe && (be = oe, Ke = performance.now(), Ue = [Re, ke, qe], (0, ye.sendColyMessage)(Je.mg, {
+          DJ: oe
         }))
       };
-      return BB.on("kP", MB), () => {
-        BB.off("kP", MB)
+      return ee.on("YR", oe), () => {
+        ee.off("YR", oe)
       }
     }
-    var lO = GB(39726),
-      pO = GB(1560),
-      qO = GB(3085),
-      ZO = GB(1908),
-      NO = GB(3262),
-      RO = GB(5269);
-    class WO {
-      constructor(BB, OB, GB) {
-        this.kz = BB, this.gameNameWithVariation = OB, this.connectionResume = GB, this.stopChunkReports = () => {}, this.replayResume = null
+    var qi = He(39814),
+      fi = He(1502),
+      Ti = He(2966),
+      Xi = He(1857),
+      zi = He(3142),
+      Bi = He(5255);
+    class Ei {
+      constructor(ee, ie, He) {
+        this.uk = ee, this.gameNameWithVariation = ie, this.connectionResume = He, this.stopChunkReports = () => {}, this.replayResume = null
       }
       clearUiRequestsAndQTEs() {
-        RO.d.reset(), (0, jO.c)()
+        Bi.d.reset(), (0, Ui.d)()
       }
       startChunkReports() {
-        const BB = function(BB) {
-            let OB = null,
-              GB = -1 / 0,
-              DB = null;
-            const QB = () => {
-                DB = null;
-                const QB = Math.ceil(BB.WK[0]),
-                  oB = Math.ceil(BB.WK[1]);
-                OB && OB[0] === QB && OB[1] === oB || (OB = [QB, oB], GB = performance.now(), (0, YB.sendColyMessage)(JB.Eg, {
-                  sM: QB,
-                  xM: oB
+        const ee = function(ee) {
+            let ie = null,
+              He = -1 / 0,
+              be = null;
+            const Me = () => {
+                be = null;
+                const Me = Math.ceil(ee.mY[0]),
+                  Ke = Math.ceil(ee.mY[1]);
+                ie && ie[0] === Me && ie[1] === Ke || (ie = [Me, Ke], He = performance.now(), (0, ye.sendColyMessage)(Je.kg, {
+                  iR: Me,
+                  HR: Ke
                 }))
               },
-              oB = () => {
-                null === DB && (DB = setTimeout(QB, Math.max(0, GB + 250 - performance.now())))
+              Ke = () => {
+                null === be && (be = setTimeout(Me, Math.max(0, He + 250 - performance.now())))
               };
-            return QB(), BB.on("addRemoveDistanceChanged", oB), () => {
-              BB.off("addRemoveDistanceChanged", oB), null !== DB && (clearTimeout(DB), DB = null)
+            return Me(), ee.on("addRemoveDistanceChanged", Ke), () => {
+              ee.off("addRemoveDistanceChanged", Ke), null !== be && (clearTimeout(be), be = null)
             }
-          }(this.kz.mP),
-          OB = zO(this.kz);
+          }(this.uk.xR),
+          ie = ki(this.uk);
         this.stopChunkReports = () => {
-          BB(), OB()
+          ee(), ie()
         }
       }
       restartChunkStreaming() {
-        (0, GO.j)(this.kz, (0, yB.d)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - lO.b)), this.startChunkReports()
+        (0, Hi.g)(this.uk, (0, Fe.e)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - qi.e)), this.startChunkReports()
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
-        BB.kR(JB.ed, (BB => {
-          RB.e.applyNewClientOptions(BB)
-        })), BB.kR(JB.zd, (BB => {
-          qO.b.onReceiveColyseusPing(BB)
-        })), BB.kR(JB.We, (BB => {
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
+        ee.OE(Je.Vc, (ee => {
+          ze.c.applyNewClientOptions(ee)
+        })), ee.OE(Je.pd, (ee => {
+          Ti.c.onReceiveColyseusPing(ee)
+        })), ee.OE(Je.Ke, (ee => {
           let {
-            key: OB,
-            value: GB
-          } = BB;
-          (0, WB.setCookie)(this.gameNameWithVariation, OB, GB)
-        })), BB.kR(JB.$e, (BB => {
-          NB.o.tM("setDiscordReportKey", BB)
-        })), (0, YB.onGameResetOnce)((() => {
+            key: ie,
+            value: He
+          } = ee;
+          (0, Be.setCookie)(this.gameNameWithVariation, ie, He)
+        })), ee.OE(Je.Ne, (ee => {
+          Xe.h.yR("setDiscordReportKey", ee)
+        })), (0, ye.onGameResetOnce)((() => {
           this.stopChunkReports()
-        })), BB.kR(JB.tc, (DB => {
+        })), ee.OE(Je.oc, (be => {
           const {
-            jB: QB,
-            yB: oB
-          } = DB;
-          if ((0, YB.setAdjustment)(oB), this.connectionResume.onInitialInfo(DB.JB, DB.PB), YB.offlineInputReplay.Zk(DB.zB), this.connectionResume.isResuming()) {
-            console.log("Resumed the connection as eId", QB);
+            Fe: Me,
+            Je: Ke
+          } = be;
+          if ((0, ye.setAdjustment)(Ke), this.connectionResume.onInitialInfo(be.oe, be.Re), ye.offlineInputReplay.JY(be.ke), this.connectionResume.isResuming()) {
+            console.log("Resumed the connection as eId", Me);
             try {
-              null === DB.lB && (0, yB.d)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), dB(OB.mP), RB.e.apply({
+              null === be.qe && (0, Fe.e)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), we(ie.xR), ze.c.apply({
                 shopInfo: null,
-                _shopVersion: MO.b
+                _shopVersion: oi.c
               });
-              const GB = OB.DW.aGB(OB.EX);
-              GB.FG && (GB.chestClosed(), NB.o.tM("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), NB.o.tM("initInfoReceived", BB)
+              const He = ie.sE.oye(ie.gC);
+              He.uH && (He.chestClosed(), Xe.h.yR("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), Xe.h.yR("initInfoReceived", ee)
             } finally {
-              const BB = null === DB.lB ? null : {
+              const ee = null === be.qe ? null : {
                 sync: null,
                 endSeq: null
               };
-              this.replayResume = BB, this.connectionResume.onResumeInitialInfo(DB.lB, (() => {
-                BB.endSeq = (0, yB.d)().client.inventoryPrediction.lastActionSeq
-              })), null === BB && this.restartChunkStreaming()
+              this.replayResume = ee, this.connectionResume.onResumeInitialInfo(be.qe, (() => {
+                ee.endSeq = (0, Fe.e)().client.inventoryPrediction.lastActionSeq
+              })), null === ee && this.restartChunkStreaming()
             }
-          } else console.log("Local client is eId", QB), NB.o.tM("sessionReplayJoinTicket", DB.NB), ZO.b.markAdmitted(), (0, GO.m)(OB), NB.o.tM("loadingScreenState", "loadingPage:loadingWorld"), OB.QGB = QB, OB.DW.YGB(OB.EX, OB.DW.names.entityName) && OB.DW.dL(OB.EX, OB.DW.names.entityName), (0, yB.d)().setEntityName(OB.QGB, (0, yB.d)().getRawEntityName(OB.EX)), OB.FX[OB.QGB] = {}, OB.DW.RL(OB.EX, OB.DW.names.entityName), NB.o.tM("initInfoReceived", BB), this.startChunkReports(), GB.client.onServerConnectionFinalised()
-        })), BB.kR(JB.Ae, (() => {
+          } else console.log("Local client is eId", Me), Xe.h.yR("sessionReplayJoinTicket", be.Xe), Xi.c.markAdmitted(), (0, Hi.j)(ie), Xe.h.yR("loadingScreenState", "loadingPage:loadingWorld"), ie.dHe = Me, ie.sE.gHe(ie.gC, ie.sE.names.entityName) && ie.sE.lL(ie.gC, ie.sE.names.entityName), (0, Fe.e)().setEntityName(ie.dHe, (0, Fe.e)().getRawEntityName(ie.gC)), ie.zC[ie.dHe] = {}, ie.sE.uL(ie.gC, ie.sE.names.entityName), Xe.h.yR("initInfoReceived", ee), this.startChunkReports(), He.client.onServerConnectionFinalised()
+        })), ee.OE(Je.qe, (() => {
           this.connectionResume.isResuming() ? this.connectionResume.onResumed((() => {
-            const BB = this.replayResume;
-            if (this.replayResume = null, !BB) return;
+            const ee = this.replayResume;
+            if (this.replayResume = null, !ee) return;
             this.restartChunkStreaming();
             const {
-              inventoryPrediction: GB
-            } = (0, yB.d)().client, {
-              sync: DB
-            } = BB, QB = new Set(YB.offlineInputReplay.takeDroppedActions());
-            if (DB) {
-              var oB;
-              const YB = null !== (oB = BB.endSeq) && void 0 !== oB ? oB : GB.lastActionSeq;
-              GB.forget((BB => BB > DB.UO && BB <= YB || QB.has(BB))), oO(OB, GB, NB.o, DB.UO, DB.load)
-            } else GB.dropPending(), GB.askForSnapshot()
+              inventoryPrediction: He
+            } = (0, Fe.e)().client, {
+              sync: be
+            } = ee, Me = new Set(ye.offlineInputReplay.takeDroppedActions());
+            if (be) {
+              var Ke;
+              const ye = null !== (Ke = ee.endSeq) && void 0 !== Ke ? Ke : He.lastActionSeq;
+              He.forget((ee => ee > be.Ai && ee <= ye || Me.has(ee))), Ki(ie, He, Xe.h, be.Ai, be.load)
+            } else He.dropPending(), He.askForSnapshot()
           })) : console.warn("ResumeComplete arrived without a resume")
-        })), BB.kR(JB.rf, (BB => {
+        })), ee.OE(Je.af, (ee => {
           let {
-            IG: GB,
-            rG: YB,
-            UO: DB
-          } = BB;
+            vH: He,
+            nH: ye,
+            Ai: be
+          } = ee;
           const {
-            inventoryPrediction: QB
-          } = (0, yB.d)().client, oB = () => {
-            OB.DW.aGB(OB.EX).loadFromString(GB)
+            inventoryPrediction: Me
+          } = (0, Fe.e)().client, Ke = () => {
+            ie.sE.oye(ie.gC).loadFromString(He)
           };
           this.replayResume && (this.replayResume.sync = {
-            UO: DB,
-            load: oB
-          }), oO(OB, QB, NB.o, DB, oB, YB)
-        })), BB.kR(JB.Od, (BB => {
+            Ai: be,
+            load: Ke
+          }), Ki(ie, Me, Xe.h, be, Ke, ye)
+        })), ee.OE(Je.Ed, (ee => {
           let {
-            type: OB,
-            location1: GB,
-            location2: YB,
-            location3: DB,
-            score: QB
-          } = BB;
-          (0, NO.logProgressionEvent)({
-            type: OB,
-            location1: GB,
-            location2: YB,
-            location3: DB,
-            score: QB
+            type: ie,
+            location1: He,
+            location2: ye,
+            location3: be,
+            score: Me
+          } = ee;
+          (0, zi.logProgressionEvent)({
+            type: ie,
+            location1: He,
+            location2: ye,
+            location3: be,
+            score: Me
           })
-        })), BB.kR(JB.ye, (BB => {
+        })), ee.OE(Je.pe, (ee => {
           let {
-            type: OB,
-            resourceType: GB,
-            amount: YB,
-            category: DB,
-            itemName: QB
-          } = BB;
-          (0, NO.logResourceEvent)({
-            type: OB,
-            resourceType: GB,
-            amount: YB,
-            category: DB,
-            itemName: QB
+            type: ie,
+            resourceType: He,
+            amount: ye,
+            category: be,
+            itemName: Me
+          } = ee;
+          (0, zi.logResourceEvent)({
+            type: ie,
+            resourceType: He,
+            amount: ye,
+            category: be,
+            itemName: Me
           })
-        })), BB.kR(JB.Oc, (BB => {
+        })), ee.OE(Je.Kc, (ee => {
           let {
-            leaveEventType: OB,
-            category: GB,
-            subCategory: YB,
-            value: DB
-          } = BB;
-          (0, NO.updateLeaveValue)({
-            leaveEventType: OB,
-            category: GB,
-            subCategory: YB,
-            value: DB
+            leaveEventType: ie,
+            category: He,
+            subCategory: ye,
+            value: be
+          } = ee;
+          (0, zi.updateLeaveValue)({
+            leaveEventType: ie,
+            category: He,
+            subCategory: ye,
+            value: be
           })
-        })), BB.kR(JB.Mb, (BB => {
+        })), ee.OE(Je.Rb, (ee => {
           let {
-            cat1: OB,
-            cat2: GB,
-            cat3: YB,
-            value: DB
-          } = BB;
-          (0, NO.logCustomAnalyticsEvent)({
-            cat1: OB,
-            cat2: GB,
-            cat3: YB,
-            value: DB
+            cat1: ie,
+            cat2: He,
+            cat3: ye,
+            value: be
+          } = ee;
+          (0, zi.logCustomAnalyticsEvent)({
+            cat1: ie,
+            cat2: He,
+            cat3: ye,
+            value: be
           })
-        })), BB.kR(JB.Ic, (BB => {
-          (0, yB.d)().client.leaveGameUnwanted({
-            reason: (0, yO.b)(BB),
+        })), ee.OE(Je.Gc, (ee => {
+          (0, Fe.e)().client.leaveGameUnwanted({
+            reason: (0, Fi.b)(ee),
             requiresRefresh: !1,
             canReconnect: !1,
             automaticallyReconnect: !1
-          }), (0, pO.navigatePreserveSearch)("/")
-        })), BB.kR(JB.Je, (BB => {
-          NB.o.tM("serverUpdating", Date.now() + BB, !0)
-        })), BB.kR(JB.ad, JO.d), BB.kR(JB.Yc, (BB => {
-          console.error(`[logErrorToConsole]: ${BB}`)
+          }), (0, fi.navigatePreserveSearch)("/")
+        })), ee.OE(Je.ze, (ee => {
+          Xe.h.yR("serverUpdating", Date.now() + ee, !0)
+        })), ee.OE(Je.Tc, Ji.c), ee.OE(Je.Pc, (ee => {
+          console.error(`[logErrorToConsole]: ${ee}`)
         }))
       }
     }
-    var AO = GB(39730),
-      VO = GB(39741),
-      SO = GB(1049),
-      nO = GB(39732),
-      UO = GB(2643),
-      fO = GB(4073);
-    class kO {
-      constructor(BB, OB) {
-        this.kz = BB, this.clientApi = OB
+    var gi = He(39818),
+      Oi = He(39829),
+      di = He(1033),
+      Wi = He(39826),
+      ti = He(2518),
+      Zi = He(4025);
+    class wi {
+      constructor(ee, ie) {
+        this.uk = ee, this.clientApi = ie
       }
-      register(BB) {
-        const OB = this.kz,
-          GB = (0, yB.d)();
-        BB.kR(JB.ub, (BB => {
+      register(ee) {
+        const ie = this.uk,
+          He = (0, Fe.e)();
+        ee.OE(Je.xb, (ee => {
           let {
-            chatMsgId: OB,
-            worldCodeLineId: GB,
-            content: YB,
-            chatterEId: DB,
-            chatterObjectsToReplay: QB
-          } = BB;
-          NB.o.tM("chat", {
-            serverChatMsgId: OB,
-            worldCodeLineId: GB,
-            content: YB,
-            chatterEId: DB,
-            chatterObjectsToReplay: QB
+            chatMsgId: ie,
+            worldCodeLineId: He,
+            content: ye,
+            chatterEId: be,
+            chatterObjectsToReplay: Me
+          } = ee;
+          Xe.h.yR("chat", {
+            serverChatMsgId: ie,
+            worldCodeLineId: He,
+            content: ye,
+            chatterEId: be,
+            chatterObjectsToReplay: Me
           }, !0)
-        })), BB.kR(JB.qb, (BB => {
+        })), ee.OE(Je.vb, (ee => {
           let {
-            chatMsgId: OB
-          } = BB;
-          NB.o.tM("chatRemoved", OB, !0)
-        })), BB.kR(JB.Af, (BB => {
-          NB.o.tM("TopRightHelper", BB, !0)
-        })), BB.kR(JB.uf, (BB => {
-          (0, AO.e)(BB)
-        })), BB.kR(JB.Kc, (BB => {
+            chatMsgId: ie
+          } = ee;
+          Xe.h.yR("chatRemoved", ie, !0)
+        })), ee.OE(Je.df, (ee => {
+          Xe.h.yR("TopRightHelper", ee, !0)
+        })), ee.OE(Je.bf, (ee => {
+          (0, gi.e)(ee)
+        })), ee.OE(Je.Hc, (ee => {
           let {
-            category: OB,
-            timeframe: GB,
-            data: YB
-          } = BB;
-          NB.o.tM("leaderboardResponse", {
-            category: OB,
-            timeframe: GB,
-            data: YB
+            category: ie,
+            timeframe: He,
+            data: ye
+          } = ee;
+          Xe.h.yR("leaderboardResponse", {
+            category: ie,
+            timeframe: He,
+            data: ye
           })
-        })), BB.kR(JB.nf, (() => {
-          NB.o.tM("showShopTutorial", null, !0)
-        })), BB.kR(JB.Md, (BB => {
-          NB.o.tM("progressBarUpdate", BB, !0)
-        })), BB.kR(JB.wc, (BB => {
-          NB.o.tM("middleScreenBarInitiate", {
-            duration: BB.tG,
-            BY: BB.BY,
-            horizBarRemOffset: BB.OY
+        })), ee.OE(Je.$e, (() => {
+          Xe.h.yR("showShopTutorial", null, !0)
+        })), ee.OE(Je.Ad, (ee => {
+          Xe.h.yR("progressBarUpdate", ee, !0)
+        })), ee.OE(Je.sc, (ee => {
+          Xe.h.yR("middleScreenBarInitiate", {
+            duration: ee.Ky,
+            Uy: ee.Uy,
+            horizBarRemOffset: ee.Fy
           }, !0)
-        })), BB.kR(JB.be, (() => {
-          NB.o.tM("middleScreenBarRemove", !0)
-        })), BB.kR(JB._e, (BB => {
+        })), ee.OE(Je.Ud, (() => {
+          Xe.h.yR("middleScreenBarRemove", !0)
+        })), ee.OE(Je.Le, (ee => {
           let {
-            id: OB,
-            position: GB,
-            style: YB,
-            DO: DB,
-            oO: QB
-          } = BB;
-          NB.o.tM("setDirectionArrow", {
-            id: OB,
-            position: GB,
-            style: YB,
-            text: (0, JB.x)(DB),
-            oO: QB
+            id: ie,
+            position: He,
+            style: ye,
+            Ji: be,
+            Ri: Me
+          } = ee;
+          Xe.h.yR("setDirectionArrow", {
+            id: ie,
+            position: He,
+            style: ye,
+            text: (0, Je.D)(be),
+            Ri: Me
           }, !0)
-        })), BB.kR(JB.Bb, (BB => {
+        })), ee.OE(Je.Eb, (ee => {
           let {
-            id: OB
-          } = BB;
-          NB.o.tM("clearDirectionArrow", {
-            id: OB
+            id: ie
+          } = ee;
+          Xe.h.yR("clearDirectionArrow", {
+            id: ie
           }, !0)
-        })), BB.kR(JB.Jb, (BB => {
-          (0, fO.onCosmeticPackGranted)(BB)
-        })), BB.kR(JB.nd, (BB => {
+        })), ee.OE(Je.Qb, (ee => {
+          (0, Zi.onCosmeticPackGranted)(ee)
+        })), ee.OE(Je.ad, (ee => {
           let {
-            id: OB,
-            IO: GB
-          } = BB;
+            id: ie,
+            Ci: He
+          } = ee;
           const {
-            type: DB,
-            params: QB
-          } = (0, VO.f)(GB), oB = {
-            ...QB
+            type: be,
+            params: Me
+          } = (0, Oi.e)(He), Ke = {
+            ...Me
           };
-          for (const YB of VO.d) YB in oB && oB[YB] && (oB[YB] = (0, JB.x)(oB[YB]));
-          RO.d.queueQTE(OB, DB, oB).getResult().then((BB => {
-            "boolean" === typeof BB && (0, YB.sendColyMessage)(JB.zi, {
-              qteId: OB,
-              qteResponse: BB
+          for (const ye of Oi.c) ye in Ke && Ke[ye] && (Ke[ye] = (0, Je.D)(Ke[ye]));
+          Bi.d.queueQTE(ie, be, Ke).getResult().then((ee => {
+            "boolean" === typeof ee && (0, ye.sendColyMessage)(Je.xi, {
+              qteId: ie,
+              qteResponse: ee
             })
           }))
-        })), BB.kR(JB.ee, (BB => {
-          RO.d.cancelQTE(BB)
-        })), (0, YB.onGameResetOnce)((() => {
-          RO.d.reset()
-        })), BB.kR(JB.rd, (BB => {
+        })), ee.OE(Je.Wd, (ee => {
+          Bi.d.cancelQTE(ee)
+        })), (0, ye.onGameResetOnce)((() => {
+          Bi.d.reset()
+        })), ee.OE(Je.cd, (ee => {
           let {
-            id: OB,
-            clientParameters: GB
-          } = BB;
-          (0, jO.d)(OB, GB)
-        })), BB.kR(JB.fe, (BB => {
-          (0, jO.f)(BB)
-        })), BB.kR(JB.Gf, (BB => {
+            id: ie,
+            clientParameters: He
+          } = ee;
+          (0, Ui.f)(ie, He)
+        })), ee.OE(Je.Zd, (ee => {
+          (0, Ui.h)(ee)
+        })), ee.OE(Je.ff, (ee => {
           let {
-            text: OB,
-            id: GB,
-            destructive: DB
-          } = BB;
-          (0, jO.j)(GB, OB, DB, (BB => {
-            (0, YB.sendColyMessage)(JB.Tj, {
-              RM: GB,
-              WM: BB,
-              AM: 5
+            text: ie,
+            id: He,
+            destructive: be
+          } = ee;
+          (0, Ui.k)(He, ie, be, (ee => {
+            (0, ye.sendColyMessage)(Je.Yj, {
+              Ro: He,
+              ko: ee,
+              qo: 5
             })
           }))
-        })), BB.kR(JB.vd, (BB => {
+        })), ee.OE(Je.id, (ee => {
           let {
-            info: OB
-          } = BB;
-          NB.o.tM("overShopInfo", OB, !0)
-        })), BB.kR(JB.gc, (BB => {
+            info: ie
+          } = ee;
+          Xe.h.yR("overShopInfo", ie, !0)
+        })), ee.OE(Je.dc, (ee => {
           let {
-            fO: GB,
-            kO: YB
-          } = BB;
-          this.clientApi.openShop(OB.EX, GB, YB)
-        })), BB.kR(JB.dc, (BB => {
+            Yi: He,
+            Vi: ye
+          } = ee;
+          this.clientApi.openShop(ie.gC, He, ye)
+        })), ee.OE(Je.bc, (ee => {
           let {
-            RB: OB,
-            VB: GB,
-            SB: YB
-          } = BB;
-          NB.o.tM("flyingMiddleMessage", {
-            content: (0, JB.x)(OB),
-            VB: GB,
-            SB: YB
+            ze: ie,
+            ge: He,
+            Oe: ye
+          } = ee;
+          Xe.h.yR("flyingMiddleMessage", {
+            content: (0, Je.D)(ie),
+            ge: He,
+            Oe: ye
           }, !0)
-        })), BB.kR(JB.Of, (BB => {
-          const OB = BB === SO.d ? null : {
-            message: `Currently loaded as variation: ${BB}`,
+        })), ee.OE(Je.vf, (ee => {
+          const ie = ee === di.f ? null : {
+            message: `Currently loaded as variation: ${ee}`,
             type: "Warning"
           };
-          NB.o.tM("showPermanentBottomMessage", OB, !0)
-        })), BB.kR(JB.jc, (BB => {
+          Xe.h.yR("showPermanentBottomMessage", ie, !0)
+        })), ee.OE(Je.ec, (ee => {
           let {
-            messageType: OB,
-            data: YB
-          } = BB;
-          (0, nO.g)(OB) ? (0, nO.c)(OB, YB) : ("freeCamPerms" === OB && GB.client.freeCameraController.setPerms(YB.key, YB.value), GB.client.triggerGameCallback("onReceivedMessageFromServer", OB, YB))
-        })), BB.kR(JB.Db, UO.i)
+            messageType: ie,
+            data: ye
+          } = ee;
+          (0, Wi.g)(ie) ? (0, Wi.c)(ie, ye) : ("freeCamPerms" === ie && He.client.freeCameraController.setPerms(ye.key, ye.value), He.client.triggerGameCallback("onReceivedMessageFromServer", ie, ye))
+        })), ee.OE(Je.Kb, ti.l)
       }
     }
-    class dO {
-      constructor(BB, OB, GB, YB) {
-        this.gameNameWithVariation = BB, this.kz = GB, this.connectionResume = YB, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new VB.d(OB, this.kz)
+    class Di {
+      constructor(ee, ie, He, ye) {
+        this.gameNameWithVariation = ee, this.uk = He, this.connectionResume = ye, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new ge.c(ie, this.uk)
       }
       setupStateReplicationHandlers() {
-        this.stateReplicationHandler.setup(), (0, YB.onGameResetOnce)((() => {
+        this.stateReplicationHandler.setup(), (0, ye.onGameResetOnce)((() => {
           this.stateReplicationHandler.dispose()
         }))
       }
-      bMB(BB) {
-        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new VB.d(BB, this.kz), this.stateReplicationHandler.setup()
+      gRe(ee) {
+        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new ge.c(ee, this.uk), this.stateReplicationHandler.setup()
       }
-      setupOnMessageListeners(BB, OB) {
-        const GB = this.kz,
-          YB = BB => {
-            this.stateReplicationHandler.setUpIfQueued(BB)
+      setupOnMessageListeners(ee, ie) {
+        const He = this.uk,
+          ye = ee => {
+            this.stateReplicationHandler.setUpIfQueued(ee)
           };
-        new WO(GB, this.gameNameWithVariation, this.connectionResume).register(BB), new KB(GB).register(BB), new vB(GB).register(BB), new LB(GB, YB).register(BB), new bB(GB, YB).register(BB), new kO(GB, OB).register(BB), new QO(GB, YB).register(BB)
+        new Ei(He, this.gameNameWithVariation, this.connectionResume).register(ee), new De(He).register(ee), new Ne(He).register(ee), new ce(He, ye).register(ee), new se(He, ye).register(ee), new wi(He, ie).register(ee), new Mi(He, ye).register(ee)
       }
     }
     window.addEventListener("beforeunload", (() => {}));
-    var KO = GB(39748),
-      uO = GB(39757),
-      mO = GB(677),
-      IO = GB(1856);
-    class FO {
-      constructor(BB, OB, GB, YB) {
-        this.msgHandler = GB, this.listener = YB, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new KO.d({
-          reconnect: BB,
-          isLive: () => YB.isLive(),
-          onReconnected: BB => {
-            this.resumeOnRoom(BB)
+    var Pi = He(39832),
+      Ai = He(39834),
+      Yi = He(660),
+      Vi = He(1814);
+    class ai {
+      constructor(ee, ie, He, ye) {
+        this.msgHandler = He, this.listener = ye, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new Pi.b({
+          reconnect: ee,
+          isLive: () => ye.isLive(),
+          onReconnected: ee => {
+            this.resumeOnRoom(ee)
           },
-          onGaveUp: (BB, OB) => {
-            YB.onGaveUp(BB, OB)
+          onGaveUp: (ee, ie) => {
+            ye.onGaveUp(ee, ie)
           },
-          freeze: OB,
-          releaseSeat: OB => {
-            BB(OB).then((BB => {
-              BB.leave(!0)
-            }), (BB => {
-              console.warn("Couldn't release the held seat of a game left while reconnecting", BB)
+          freeze: ie,
+          releaseSeat: ie => {
+            ee(ie).then((ee => {
+              ee.leave(!0)
+            }), (ee => {
+              console.warn("Couldn't release the held seat of a game left while reconnecting", ee)
             }))
           }
         })
       }
-      onInitialInfo(BB, OB) {
-        this.session.onInitialInfo(BB, OB)
+      onInitialInfo(ee, ie) {
+        this.session.onInitialInfo(ee, ie)
       }
       isResuming() {
         return this.session.isResuming()
@@ -1262,174 +1262,174 @@ export const modules = {
       getDroppedAt() {
         return this.droppedAt
       }
-      onResumeInitialInfo(BB, OB) {
-        if (this.session.onResuming(), null === BB) {
+      onResumeInitialInfo(ee, ie) {
+        if (this.session.onResuming(), null === ee) {
           try {
-            (0, yB.d)().client.itemDropPrediction.reset()
-          } catch (GB) {
-            console.error("Error dropping the item drop predictions on resuming", GB)
+            (0, Fe.e)().client.itemDropPrediction.reset()
+          } catch (He) {
+            console.error("Error dropping the item drop predictions on resuming", He)
           }
-          return YB.offlineInputReplay.discard(), void this.setSuspended(!1)
-        }(0, yB.d)().client.itemDropPrediction.onResumeReplayOffered(), YB.offlineInputReplay.replayFrom(BB.qB, OB)
+          return ye.offlineInputReplay.discard(), void this.setSuspended(!1)
+        }(0, Fe.e)().client.itemDropPrediction.onResumeReplayOffered(), ye.offlineInputReplay.replayFrom(ee.Te, ie)
       }
-      onResumed(BB) {
-        this.setSuspended(!1), (0, YB.resendBeacons)();
+      onResumed(ee) {
+        this.setSuspended(!1), (0, ye.resendBeacons)();
         try {
-          BB()
-        } catch (OB) {
-          console.error("Error completing the resume", OB)
+          ee()
+        } catch (ie) {
+          console.error("Error completing the resume", ie)
         } finally {
           this.session.onResumed()
         }
       }
-      attachRoom(BB) {
-        const OB = (0, mO.onVisitSessionGameServerConnected)((() => BB.connection.isOpen));
-        BB.uR(OB);
-        const GB = new uO.d((() => {
-          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(BB, "silent"), BB.leave(!1))
+      attachRoom(ee) {
+        const ie = (0, Yi.onVisitSessionGameServerConnected)((() => ee.connection.isOpen));
+        ee.WE(ie);
+        const He = new Ai.d((() => {
+          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(ee, "silent"), ee.leave(!1))
         }));
-        BB.onStateChange((() => {
-          GB.heard()
+        ee.onStateChange((() => {
+          He.heard()
         }));
-        const YB = OB => {
-          OB.persisted || BB.leave(!0)
+        const ye = ie => {
+          ie.persisted || ee.leave(!0)
         };
-        window.addEventListener("pagehide", YB), BB.uR(((OB, GB) => {
-          if (BB === this.attachedRoom && this.listener.isLive()) return (0, QB.j)(OB) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${OB}, reconnecting`), this.listener.onDropped(OB, GB), void this.onConnectionDropped(BB, String(OB))) : void this.listener.onRoomLeft(OB, GB)
-        })), this.attachedRoom = BB, this.detachRoomListeners = () => {
-          OB(), GB.dispose(), window.removeEventListener("pagehide", YB)
+        window.addEventListener("pagehide", ye), ee.WE(((ie, He) => {
+          if (ee === this.attachedRoom && this.listener.isLive()) return (0, Me.j)(ie) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${ie}, reconnecting`), this.listener.onDropped(ie, He), void this.onConnectionDropped(ee, String(ie))) : void this.listener.onRoomLeft(ie, He)
+        })), this.attachedRoom = ee, this.detachRoomListeners = () => {
+          ie(), He.dispose(), window.removeEventListener("pagehide", ye)
         }
       }
       dispose() {
         this.detachRoom(), this.session.leave(), this.setSuspended(!1)
       }
-      setSuspended(BB) {
-        BB !== this.suspended && (this.suspended = BB, (0, YB.setConnectionSuspended)(BB), (0, yB.d)().client.itemDropPrediction.setSuspended(BB))
+      setSuspended(ee) {
+        ee !== this.suspended && (this.suspended = ee, (0, ye.setConnectionSuspended)(ee), (0, Fe.e)().client.itemDropPrediction.setSuspended(ee))
       }
       detachRoom() {
-        var BB;
-        null === (BB = this.detachRoomListeners) || void 0 === BB || BB.call(this), this.detachRoomListeners = null, this.attachedRoom = null
+        var ee;
+        null === (ee = this.detachRoomListeners) || void 0 === ee || ee.call(this), this.detachRoomListeners = null, this.attachedRoom = null
       }
-      onConnectionDropped(BB, OB) {
-        (0, IO.reportClientError)("disconnect", "Left room", OB), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), YB.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(BB.reconnectionToken)
+      onConnectionDropped(ee, ie) {
+        (0, Vi.reportClientError)("disconnect", "Left room", ie), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), ye.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(ee.reconnectionToken)
       }
-      resumeOnRoom(BB) {
-        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), BB.leave(!0), void this.dispose();
-        console.log("Reconnected to the game server, waiting for the game to resume"), (0, TB.s)(), YB.offlineInputReplay.onConnectionReplaced(), this.msgHandler.bMB(BB), this.listener.onReconnected(BB), this.attachRoom(BB)
+      resumeOnRoom(ee) {
+        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), ee.leave(!0), void this.dispose();
+        console.log("Reconnected to the game server, waiting for the game to resume"), (0, je.r)(), ye.offlineInputReplay.onConnectionReplaced(), this.msgHandler.gRe(ee), this.listener.onReconnected(ee), this.attachRoom(ee)
       }
     }
-    var iO = GB(3351),
-      LO = GB(3355),
-      gO = GB(1350),
-      rO = GB(1299),
-      XO = GB(5150),
-      wO = GB(3573),
-      EO = GB(1308),
-      cO = GB(38371),
-      hO = GB(39761),
-      aO = GB(9599),
-      eO = GB(39763),
-      TO = GB(1200),
-      bO = GB(37160),
-      CO = GB(39769),
-      HO = GB(1790),
-      vO = GB(3094),
-      sO = GB(1540);
+    var ci = He(3228),
+      xi = He(3236),
+      Li = He(1305),
+      Ci = He(1260),
+      vi = He(5129),
+      ui = He(3465),
+      mi = He(1268),
+      li = He(38534),
+      Si = He(39837),
+      ni = He(9669),
+      ji = He(39841),
+      si = He(1155),
+      Ii = He(37286),
+      Ni = He(39845),
+      Gi = He(1728),
+      ri = He(2975),
+      Qi = He(1490);
 
-    function xO(BB) {
-      var OB, GB;
-      if ("object" !== typeof BB || null === BB) return {
-        errType: typeof BB
+    function eH(ee) {
+      var ie, He;
+      if ("object" !== typeof ee || null === ee) return {
+        errType: typeof ee
       };
-      const YB = BB;
+      const ye = ee;
       return {
-        errType: null !== (OB = null === (GB = BB.constructor) || void 0 === GB ? void 0 : GB.name) && void 0 !== OB ? OB : "",
-        errName: "string" === typeof YB.name ? YB.name : "",
-        eventType: "string" === typeof YB.type ? YB.type : "",
-        errStack: "string" === typeof YB.stack ? YB.stack.split("\n").slice(1).join(" | ") : ""
+        errType: null !== (ie = null === (He = ee.constructor) || void 0 === He ? void 0 : He.name) && void 0 !== ie ? ie : "",
+        errName: "string" === typeof ye.name ? ye.name : "",
+        eventType: "string" === typeof ye.type ? ye.type : "",
+        errStack: "string" === typeof ye.stack ? ye.stack.split("\n").slice(1).join(" | ") : ""
       }
     }
 
-    function tO(BB) {
-      if ("undefined" !== typeof ProgressEvent && BB instanceof ProgressEvent) return !0;
-      if (!(BB instanceof Error)) return !1;
-      const OB = BB.code;
-      return "ServerError" === BB.name && void 0 === OB || "AbortError" === BB.name || "seat reservation expired." === BB.message || "early_leave" === BB.message
-    }(0, qB.q)((BB => {
-      (0, IO.reportClientError)("wasm_net", BB)
+    function iH(ee) {
+      if ("undefined" !== typeof ProgressEvent && ee instanceof ProgressEvent) return !0;
+      if (!(ee instanceof Error)) return !1;
+      const ie = ee.code;
+      return "ServerError" === ee.name && void 0 === ie || "AbortError" === ee.name || "seat reservation expired." === ee.message || "early_leave" === ee.message
+    }(0, Te.l)((ee => {
+      (0, Vi.reportClientError)("wasm_net", ee)
     }));
-    let BG = !0;
+    let HH = !0;
 
-    function OG() {
-      BG = !1
+    function yH() {
+      HH = !1
     }
-    class GG {
-      constructor(BB) {
-        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.kz = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = BB.gameNameWithVariation, this.lobbyName = BB.lobbyName, this.colyClient = BB.colyClient, this.userContext = BB.userContext
+    class bH {
+      constructor(ee) {
+        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.uk = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = ee.gameNameWithVariation, this.lobbyName = ee.lobbyName, this.colyClient = ee.colyClient, this.userContext = ee.userContext
       }
-      async connectToServer(BB, OB, GB) {
-        RB.e.reset(), BB.FX = {
-          [BB.EX]: {}
-        }, BB.QGB = void 0, (0, TB.s)(), (0, yB.d)().removeAllEntityNames(), (0, yB.d)().setEntityName(BB.EX, this.userContext.getPlayerName()), (0, gO.n)({
+      async connectToServer(ee, ie, He) {
+        ze.c.reset(), ee.zC = {
+          [ee.gC]: {}
+        }, ee.dHe = void 0, (0, je.r)(), (0, Fe.e)().removeAllEntityNames(), (0, Fe.e)().setEntityName(ee.gC, this.userContext.getPlayerName()), (0, Li.v)({
           lobbyName: this.lobbyName
-        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, HO.g)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
-        const oB = performance.now();
-        GB.aborted || (0, rO.p)("wasm_core_ready", oB);
-        const jB = (0, eO.f)(this.userContext, (() => {
+        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, Gi.g)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
+        const Ke = performance.now();
+        He.aborted || (0, Ci.n)("wasm_core_ready", Ke);
+        const Ue = (0, ji.f)(this.userContext, (() => {
           const {
-            roomName: YB,
-            joinOptions: DB
-          } = (0, AB.d)(this.userContext, this.gameNameWithVariation, this.lobbyName, OB, (BB => wO.c.isUsingCustomGameTexturePack(BB)));
-          return DB.joinAdHold = this.joinAdHold, DB.renderBackend = (0, vO.c)(BB.UP), (0, hO.g)((() => this.colyClient.joinOrCreateUntil(GB, YB, DB)), GB)
+            roomName: ye,
+            joinOptions: be
+          } = (0, Ee.f)(this.userContext, this.gameNameWithVariation, this.lobbyName, ie, (ee => ui.c.isUsingCustomGameTexturePack(ee)));
+          return be.joinAdHold = this.joinAdHold, be.renderBackend = (0, ri.e)(ee.PR), (0, Si.e)((() => this.colyClient.joinOrCreateUntil(He, ye, be)), He)
         }));
-        return NB.o.tM("loadingScreenState", "loadingPage:joiningLobby"), await jB.then((OB => {
-          if (this.joinedAt = performance.now(), (0, rO.p)("wasm_joined", this.joinedAt), this.kz = BB, this.joinAdHold) {
-            const BB = (0, HO.l)((() => {
-              OB.send(DB.g), (0, rO.n)(), ZO.b.markJoinAdEnded()
+        return Xe.h.yR("loadingScreenState", "loadingPage:joiningLobby"), await Ue.then((ie => {
+          if (this.joinedAt = performance.now(), (0, Ci.n)("wasm_joined", this.joinedAt), this.uk = ee, this.joinAdHold) {
+            const ee = (0, Gi.s)((() => {
+              ie.send(be.f), (0, Ci.k)(), Xi.c.markJoinAdEnded()
             }));
-            OB.uR(BB), (0, YB.onGameResetOnce)(BB)
+            ie.WE(ee), (0, ye.onGameResetOnce)(ee)
           }
-          const GB = new ZB(OB);
-          this.connectionResume = new FO((BB => this.colyClient.reconnect(BB)), (OB => {
-            BB.NK(OB)
-          }), GB, {
-            isLive: () => (0, yB.d)().client.getMsgHandler() === GB,
-            onDropped: (BB, OB) => {
-              (0, LO.j)(BB) || this.logUnrecognisedConnectionLoss(BB, void 0, {
+          const He = new pe(ie);
+          this.connectionResume = new ai((ee => this.colyClient.reconnect(ee)), (ie => {
+            ee.vY(ie)
+          }), He, {
+            isLive: () => (0, Fe.e)().client.getMsgHandler() === He,
+            onDropped: (ee, ie) => {
+              (0, xi.i)(ee) || this.logUnrecognisedConnectionLoss(ee, void 0, {
                 site: "drop",
-                closeReason: null !== OB && void 0 !== OB ? OB : "",
+                closeReason: null !== ie && void 0 !== ie ? ie : "",
                 sinceJoined: this.sinceJoined()
               })
             },
-            onRoomLeft: (BB, OB) => {
-              this.onRoomLeft(BB, OB)
+            onRoomLeft: (ee, ie) => {
+              this.onRoomLeft(ee, ie)
             },
-            onReconnected: BB => {
-              this.incomingMsgInitialisor.bMB(BB), this.checkSendPath = (0, cO.e)(GB, BB, qB.r)
+            onReconnected: ee => {
+              this.incomingMsgInitialisor.gRe(ee), this.checkSendPath = (0, li.h)(He, ee, Te.m)
             },
-            onGaveUp: (BB, OB) => {
-              this.onResumeGaveUp(BB, OB)
+            onGaveUp: (ee, ie) => {
+              this.onResumeGaveUp(ee, ie)
             }
-          }), this.connectionResume.attachRoom(OB), (0, YB.onGameResetOnce)((() => {
+          }), this.connectionResume.attachRoom(ie), (0, ye.onGameResetOnce)((() => {
             this.connectionResume.dispose()
           }));
-          const QB = GB.send,
-            oB = GB.kR,
-            jB = GB.aYB.send,
-            JB = GB.aYB.kR,
-            MB = GB.eMB;
-          this.checkSendPath = (0, cO.e)(GB, OB, qB.r);
-          const PB = setInterval((() => {
-            QB === GB.send && oB === GB.kR && jB === GB.aYB.send && JB === GB.aYB.kR && MB === GB.eMB || OG(), this.checkSendPath()
+          const Me = He.send,
+            Ke = He.OE,
+            Ue = He.kbe.send,
+            Je = He.kbe.OE,
+            oe = He.BRe;
+          this.checkSendPath = (0, li.h)(He, ie, Te.m);
+          const Re = setInterval((() => {
+            Me === He.send && Ke === He.OE && Ue === He.kbe.send && Je === He.kbe.OE && oe === He.BRe || yH(), this.checkSendPath()
           }), 1e4);
-          return (0, YB.onGameResetOnce)((() => {
-            clearInterval(PB)
+          return (0, ye.onGameResetOnce)((() => {
+            clearInterval(Re)
           })), {
             success: !0,
-            successDetails: GB
+            successDetails: He
           }
-        })).catch((OB => {
-          if (GB.aborted && OB === (0, TO.i)(GB)) return {
+        })).catch((ie => {
+          if (He.aborted && ie === (0, si.f)(He)) return {
             success: !1,
             failDetails: {
               reason: "Left the game while it loaded",
@@ -1437,22 +1437,22 @@ export const modules = {
               canReconnect: !1
             }
           };
-          if (OB instanceof bO.d) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
+          if (ie instanceof Ii.d) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
             success: !1,
             failDetails: {
-              reason: OB.message,
+              reason: ie.message,
               requiresRefresh: !1,
               canReconnect: !1,
               gameServerUnreachable: "timedOut",
-              joinFailure: (0, CO.c)(OB, OB.leg)
+              joinFailure: (0, Ni.e)(ie, ie.leg)
             }
           };
-          BB.fq(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${OB.code}\n`, OB);
-          const YB = OB.code;
-          return YB === QB.c.serverUpdating.code ? (this.goToUpdateWaiting(), {
+          ee.CT(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${ie.code}\n`, ie);
+          const ye = ie.code;
+          return ye === Me.c.serverUpdating.code ? (this.goToUpdateWaiting(), {
             success: !1,
             failDetails: {
-              reason: QB.c.serverUpdating.text,
+              reason: Me.c.serverUpdating.text,
               requiresRefresh: !1,
               canReconnect: !0,
               goesToUpdateWaiting: !0
@@ -1460,1407 +1460,1407 @@ export const modules = {
           }) : {
             success: !1,
             failDetails: {
-              ...this.onConnectionToServerLost(YB, OB.message, {
+              ...this.onConnectionToServerLost(ye, ie.message, {
                 site: "join",
-                sinceJoinStart: (0, LO.c)(performance.now() - oB),
-                ...xO(OB)
-              }, tO(OB)),
-              rematch: (0, hO.e)(OB),
-              gameRefused: (0, aO.c)(OB),
-              joinFailure: (0, CO.c)(OB, this.colyClient.legReached())
+                sinceJoinStart: (0, xi.e)(performance.now() - Ke),
+                ...eH(ie)
+              }, iH(ie)),
+              rematch: (0, Si.d)(ie),
+              gameRefused: (0, ni.d)(ie),
+              joinFailure: (0, Ni.e)(ie, this.colyClient.legReached())
             }
           }
         }))
       }
-      setupServerListeners(BB, OB, GB) {
-        NB.o.tM("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new dO(this.gameNameWithVariation, OB.aYB, BB, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
-        const DB = OB.sMB();
-        this.incomingMsgInitialisor.setupOnMessageListeners(DB, GB), (0, YB.onConnectionToServerReady)(DB, OB), this.joinAdHold && ZO.b.markAdmissionAwaited(), DB.finishRegistration()
+      setupServerListeners(ee, ie, He) {
+        Xe.h.yR("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new Di(this.gameNameWithVariation, ie.kbe, ee, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
+        const be = ie.tRe();
+        this.incomingMsgInitialisor.setupOnMessageListeners(be, He), (0, ye.onConnectionToServerReady)(be, ie), this.joinAdHold && Xi.c.markAdmissionAwaited(), be.finishRegistration()
       }
       dispose() {
         this.connectionResume.dispose()
       }
-      onResumeGaveUp(BB, OB) {
-        (0, EO.kq)(new Error("Reconnect failed"), {
-          ...(0, iO.j)(OB),
+      onResumeGaveUp(ee, ie) {
+        (0, mi.vT)(new Error("Reconnect failed"), {
+          ...(0, ci.l)(ie),
           game: this.gameNameWithVariation
-        }), (0, IO.reportClientError)("disconnect", "Reconnect failed", OB.reason), (0, yB.d)().client.leaveGameUnwanted({
+        }), (0, Vi.reportClientError)("disconnect", "Reconnect failed", ie.reason), (0, Fe.e)().client.leaveGameUnwanted({
           reason: {
             translationKey: "general:lostConnection"
           },
-          canReconnect: !BB,
-          canPlayAgain: BB,
+          canReconnect: !ee,
+          canPlayAgain: ee,
           requiresRefresh: !1,
           automaticallyReconnect: !1
-        }), (0, pO.navigatePreserveSearch)("/")
+        }), (0, fi.navigatePreserveSearch)("/")
       }
       sinceJoined() {
-        return null === this.joinedAt ? "" : (0, LO.c)(performance.now() - this.joinedAt)
+        return null === this.joinedAt ? "" : (0, xi.e)(performance.now() - this.joinedAt)
       }
-      onRoomLeft(BB, OB) {
-        var GB;
-        if (BB === QB.c.gameOrPluginKick.code) return;
-        if (console.log(`Left room with code ${BB}`), BB === QB.c.serverUpdating.code) return (0, IO.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, yB.d)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
-        this.kz.fq(`Kicked from server with code ${BB}`, new Error);
-        const YB = Object.keys(QB.c).find((OB => QB.c[OB].code === BB));
-        (0, IO.reportClientError)("disconnect", "Left room", null !== YB && void 0 !== YB ? YB : String(BB)), sO.b.leftGame(this.gameNameWithVariation, BB);
-        const DB = this.onConnectionToServerLost(BB, void 0, {
+      onRoomLeft(ee, ie) {
+        var He;
+        if (ee === Me.c.gameOrPluginKick.code) return;
+        if (console.log(`Left room with code ${ee}`), ee === Me.c.serverUpdating.code) return (0, Vi.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, Fe.e)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
+        this.uk.CT(`Kicked from server with code ${ee}`, new Error);
+        const ye = Object.keys(Me.c).find((ie => Me.c[ie].code === ee));
+        (0, Vi.reportClientError)("disconnect", "Left room", null !== ye && void 0 !== ye ? ye : String(ee)), Qi.b.leftGame(this.gameNameWithVariation, ee);
+        const be = this.onConnectionToServerLost(ee, void 0, {
           site: "leave",
-          closeReason: null !== OB && void 0 !== OB ? OB : "",
+          closeReason: null !== ie && void 0 !== ie ? ie : "",
           sinceJoined: this.sinceJoined()
         });
-        (0, yB.d)().client.leaveGameUnwanted({
-          reason: `You have disconnected from the server.\n${DB.reason}`,
-          canReconnect: DB.canReconnect,
-          requiresRefresh: DB.requiresRefresh,
-          automaticallyReconnect: null !== (GB = DB.automaticallyReconnect) && void 0 !== GB && GB
-        }), (0, pO.navigatePreserveSearch)("/")
+        (0, Fe.e)().client.leaveGameUnwanted({
+          reason: `You have disconnected from the server.\n${be.reason}`,
+          canReconnect: be.canReconnect,
+          requiresRefresh: be.requiresRefresh,
+          automaticallyReconnect: null !== (He = be.automaticallyReconnect) && void 0 !== He && He
+        }), (0, fi.navigatePreserveSearch)("/")
       }
       getUpdateWaitingUrl() {
-        return (0, XO.G)(this.gameNameWithVariation, this.lobbyName)
+        return (0, vi.D)(this.gameNameWithVariation, this.lobbyName)
       }
       goToUpdateWaiting() {
-        (0, pO.navigatePreserveSearch)(this.getUpdateWaitingUrl())
+        (0, fi.navigatePreserveSearch)(this.getUpdateWaitingUrl())
       }
-      onConnectionToServerLost(BB, OB, GB) {
-        var YB;
-        let DB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null !== (YB = OB) && void 0 !== YB && YB.endsWith(QB.m) && (this.userContext.invalidateTrafficCode(), OB = OB.replace(QB.m, "")), BB === QB.c.outdatedVersion.code) return console.error("Outdated client with version ", oB.b, ", refreshing page"), (0, WB.reloadBloxd)(), {
+      onConnectionToServerLost(ee, ie, He) {
+        var ye;
+        let be = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null !== (ye = ie) && void 0 !== ye && ye.endsWith(Me.l) && (this.userContext.invalidateTrafficCode(), ie = ie.replace(Me.l, "")), ee === Me.c.outdatedVersion.code) return console.error("Outdated client with version ", Ke.b, ", refreshing page"), (0, Be.reloadBloxd)(), {
           reason: "Outdated client",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        if (BB === QB.c.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, WB.reloadBloxd)(), {
+        if (ee === Me.c.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, Be.reloadBloxd)(), {
           reason: "Failed to load recaptcha",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        for (const oB in QB.c) {
+        for (const Ke in Me.c) {
           const {
-            code: GB,
-            text: YB,
-            canReconnect: DB
-          } = QB.c[oB];
-          if (GB === BB) {
-            console.log("matched known error", BB, "leaving game");
+            code: He,
+            text: ye,
+            canReconnect: be
+          } = Me.c[Ke];
+          if (He === ee) {
+            console.log("matched known error", ee, "leaving game");
             return {
-              reason: "" !== YB ? YB : OB || `Code: ${BB}`,
+              reason: "" !== ye ? ye : ie || `Code: ${ee}`,
               requiresRefresh: !1,
-              canReconnect: DB,
-              automaticallyReconnect: GB === QB.c.customGameUpdated.code || GB === QB.c.duplicateLobbyNameError.code
+              canReconnect: be,
+              automaticallyReconnect: He === Me.c.customGameUpdated.code || He === Me.c.duplicateLobbyNameError.code
             }
           }
         }
-        return console.log("Didn't match known error, leaving game"), (0, LO.f)(BB) || DB ? console.warn("Connection lost", BB, OB) : this.logUnrecognisedConnectionLoss(BB, OB, GB), {
-          reason: `Either your internet isn't working or this is a bug.\nCode: ${BB}`,
+        return console.log("Didn't match known error, leaving game"), (0, xi.h)(ee) || be ? console.warn("Connection lost", ee, ie) : this.logUnrecognisedConnectionLoss(ee, ie, He), {
+          reason: `Either your internet isn't working or this is a bug.\nCode: ${ee}`,
           requiresRefresh: !1,
           canReconnect: !1,
-          gameServerUnreachable: DB ? "failed" : void 0
+          gameServerUnreachable: be ? "failed" : void 0
         }
       }
-      logUnrecognisedConnectionLoss(BB, OB, GB) {
-        (0, EO.kq)(new Error("Unrecognised connection loss"), {
-          code: String(BB),
-          cause: null !== OB && void 0 !== OB ? OB : "",
-          ...GB,
+      logUnrecognisedConnectionLoss(ee, ie, He) {
+        (0, mi.vT)(new Error("Unrecognised connection loss"), {
+          code: String(ee),
+          cause: null !== ie && void 0 !== ie ? ie : "",
+          ...He,
           game: this.gameNameWithVariation,
-          ...(0, LO.l)()
+          ...(0, xi.j)()
         })
       }
     }
   },
-  39667: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => bG,
-      g: () => tG
+  39760: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => hH,
+      f: () => iy
     });
-    var YB, DB, QB, oB, jB, yB, JB, MB, PB, zB, lB, pB, qB, ZB, NB, RB, WB, AB, VB, SB, nB, UB, fB, kB, dB, KB, uB, mB, IB, FB, iB, LB, gB, rB, XB, wB, EB, cB, hB, aB, eB, TB, bB, CB, HB, vB, sB, xB, tB, BO, OO, GO, YO, DO, QO, oO, jO, yO, JO, MO, PO, zO, lO, pO, qO, ZO, NO, RO, WO, AO, VO, SO, nO, UO, fO, kO, dO, KO, uO, mO, IO, FO, iO, LO, gO, rO, XO, wO, EO, cO, hO, aO, eO, TO, bO, CO, HO, vO, sO, xO = GB(25),
-      tO = GB(37839),
-      BG = GB(39684),
-      OG = GB(39686),
-      GG = GB(9828),
-      YG = GB(635),
-      DG = GB(633),
-      QG = GB(37486);
-    let oG = (YB = (0, GG.type)("number"), DB = (0, GG.type)("number"), QB = (0, GG.type)("number"), oB = (0, GG.type)("number"), jB = (0, GG.type)("number"), yB = (0, GG.type)("number"), JB = (0, GG.type)("string"), MB = class extends GG.Schema {
+    var ye, be, Me, Ke, Ue, Fe, Je, oe, Re, ke, qe, fe, Te, pe, Xe, ze, Be, Ee, ge, Oe, de, We, te, Ze, we, De, Pe, Ae, Ye, Ve, ae, ce, xe, Le, Ce, ve, ue, me, le, Se, ne, je, se, Ie, he, Ne, Ge, re, Qe, ei, ii, Hi, yi, bi, Mi, Ki, Ui, Fi, Ji, oi, Ri, ki, qi, fi, Ti, Xi, zi, Bi, Ei, gi, Oi, di, Wi, ti, Zi, wi, Di, Pi, Ai, Yi, Vi, ai, ci, xi, Li, Ci, vi, ui, mi, li, Si, ni, ji, si, Ii, Ni, Gi, ri, Qi, eH = He(27),
+      iH = He(37965),
+      HH = He(39775),
+      yH = He(39778),
+      bH = He(9870),
+      MH = He(608),
+      KH = He(604),
+      UH = He(37620);
+    let FH = (ye = (0, bH.type)("number"), be = (0, bH.type)("number"), Me = (0, bH.type)("number"), Ke = (0, bH.type)("number"), Ue = (0, bH.type)("number"), Fe = (0, bH.type)("number"), Je = (0, bH.type)("string"), oe = class extends bH.Schema {
         constructor() {
-          super(...arguments), (0, BG.d)(this, "id", PB, this), (0, BG.d)(this, "amount", zB, this), (0, BG.d)(this, "x", lB, this), (0, BG.d)(this, "y", pB, this), (0, BG.d)(this, "z", qB, this), (0, BG.d)(this, "size", ZB, this), (0, BG.d)(this, "attributes", NB, this)
+          super(...arguments), (0, HH.e)(this, "id", Re, this), (0, HH.e)(this, "amount", ke, this), (0, HH.e)(this, "x", qe, this), (0, HH.e)(this, "y", fe, this), (0, HH.e)(this, "z", Te, this), (0, HH.e)(this, "size", pe, this), (0, HH.e)(this, "attributes", Xe, this)
         }
-      }, PB = (0, OG.b)(MB.prototype, "id", [YB], {
+      }, Re = (0, yH.e)(oe.prototype, "id", [ye], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), zB = (0, OG.b)(MB.prototype, "amount", [DB], {
+      }), ke = (0, yH.e)(oe.prototype, "amount", [be], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), lB = (0, OG.b)(MB.prototype, "x", [QB], {
+      }), qe = (0, yH.e)(oe.prototype, "x", [Me], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), pB = (0, OG.b)(MB.prototype, "y", [oB], {
+      }), fe = (0, yH.e)(oe.prototype, "y", [Ke], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), qB = (0, OG.b)(MB.prototype, "z", [jB], {
+      }), Te = (0, yH.e)(oe.prototype, "z", [Ue], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ZB = (0, OG.b)(MB.prototype, "size", [yB], {
+      }), pe = (0, yH.e)(oe.prototype, "size", [Fe], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), NB = (0, OG.b)(MB.prototype, "attributes", [JB], {
+      }), Xe = (0, yH.e)(oe.prototype, "attributes", [Je], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "{}"
         }
-      }), MB),
-      jG = (RB = (0, GG.type)("string"), WB = (0, GG.type)("string"), AB = class extends GG.Schema {
+      }), oe),
+      JH = (ze = (0, bH.type)("string"), Be = (0, bH.type)("string"), Ee = class extends bH.Schema {
         constructor() {
-          super(...arguments), (0, BG.d)(this, "itemName", VB, this), (0, BG.d)(this, "enchantmentTier", SB, this)
+          super(...arguments), (0, HH.e)(this, "itemName", ge, this), (0, HH.e)(this, "enchantmentTier", Oe, this)
         }
-      }, VB = (0, OG.b)(AB.prototype, "itemName", [RB], {
+      }, ge = (0, yH.e)(Ee.prototype, "itemName", [ze], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), SB = (0, OG.b)(AB.prototype, "enchantmentTier", [WB], {
+      }), Oe = (0, yH.e)(Ee.prototype, "enchantmentTier", [Be], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), AB),
-      yG = (nB = (0, GG.type)("string"), UB = (0, GG.type)("string"), fB = (0, GG.type)("number"), kB = (0, GG.type)("number"), dB = (0, GG.type)("number"), KB = (0, GG.type)("float32"), uB = (0, GG.type)("float32"), mB = (0, GG.type)("float32"), IB = (0, GG.type)("string"), FB = (0, GG.type)(["number"]), iB = (0, GG.type)("boolean"), LB = class extends GG.Schema {
+      }), Ee),
+      oH = (de = (0, bH.type)("string"), We = (0, bH.type)("string"), te = (0, bH.type)("number"), Ze = (0, bH.type)("number"), we = (0, bH.type)("number"), De = (0, bH.type)("float32"), Pe = (0, bH.type)("float32"), Ae = (0, bH.type)("float32"), Ye = (0, bH.type)("string"), Ve = (0, bH.type)(["number"]), ae = (0, bH.type)("boolean"), ce = class extends bH.Schema {
         constructor() {
-          super(...arguments), (0, BG.d)(this, "type", gB, this), (0, BG.d)(this, "name", rB, this), (0, BG.d)(this, "x", XB, this), (0, BG.d)(this, "y", wB, this), (0, BG.d)(this, "z", EB, this), (0, BG.d)(this, "xRotation", cB, this), (0, BG.d)(this, "yRotation", hB, this), (0, BG.d)(this, "zRotation", aB, this), (0, BG.d)(this, "followingEId", eB, this), (0, BG.d)(this, "followingOffset", TB, this), (0, BG.d)(this, "shouldMatchFollowingEntityRotation", bB, this)
+          super(...arguments), (0, HH.e)(this, "type", xe, this), (0, HH.e)(this, "name", Le, this), (0, HH.e)(this, "x", Ce, this), (0, HH.e)(this, "y", ve, this), (0, HH.e)(this, "z", ue, this), (0, HH.e)(this, "xRotation", me, this), (0, HH.e)(this, "yRotation", le, this), (0, HH.e)(this, "zRotation", Se, this), (0, HH.e)(this, "followingEId", ne, this), (0, HH.e)(this, "followingOffset", je, this), (0, HH.e)(this, "shouldMatchFollowingEntityRotation", se, this)
         }
-      }, gB = (0, OG.b)(LB.prototype, "type", [nB], {
+      }, xe = (0, yH.e)(ce.prototype, "type", [de], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), rB = (0, OG.b)(LB.prototype, "name", [UB], {
+      }), Le = (0, yH.e)(ce.prototype, "name", [We], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), XB = (0, OG.b)(LB.prototype, "x", [fB], {
+      }), Ce = (0, yH.e)(ce.prototype, "x", [te], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), wB = (0, OG.b)(LB.prototype, "y", [kB], {
+      }), ve = (0, yH.e)(ce.prototype, "y", [Ze], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), EB = (0, OG.b)(LB.prototype, "z", [dB], {
+      }), ue = (0, yH.e)(ce.prototype, "z", [we], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), cB = (0, OG.b)(LB.prototype, "xRotation", [KB], {
+      }), me = (0, yH.e)(ce.prototype, "xRotation", [De], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), hB = (0, OG.b)(LB.prototype, "yRotation", [uB], {
+      }), le = (0, yH.e)(ce.prototype, "yRotation", [Pe], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), aB = (0, OG.b)(LB.prototype, "zRotation", [mB], {
+      }), Se = (0, yH.e)(ce.prototype, "zRotation", [Ae], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), eB = (0, OG.b)(LB.prototype, "followingEId", [IB], {
+      }), ne = (0, yH.e)(ce.prototype, "followingEId", [Ye], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), TB = (0, OG.b)(LB.prototype, "followingOffset", [FB], {
+      }), je = (0, yH.e)(ce.prototype, "followingOffset", [Ve], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new GG.ArraySchema(0, 0, 0)
+          return new bH.ArraySchema(0, 0, 0)
         }
-      }), bB = (0, OG.b)(LB.prototype, "shouldMatchFollowingEntityRotation", [iB], {
+      }), se = (0, yH.e)(ce.prototype, "shouldMatchFollowingEntityRotation", [ae], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !0
         }
-      }), LB),
-      JG = (CB = (0, GG.type)("float32"), HB = (0, GG.type)("float32"), vB = (0, GG.type)("boolean"), sB = (0, GG.type)("boolean"), xB = (0, GG.type)("float32"), tB = (0, GG.type)("boolean"), BO = (0, GG.type)("string"), OO = (0, GG.type)("string"), GO = (0, GG.type)("string"), YO = (0, GG.type)("string"), DO = (0, GG.type)(["number"]), QO = (0, GG.type)("number"), oO = (0, GG.type)({
-        map: jG
-      }), jO = class extends yG {
+      }), ce),
+      RH = (Ie = (0, bH.type)("float32"), he = (0, bH.type)("float32"), Ne = (0, bH.type)("boolean"), Ge = (0, bH.type)("boolean"), re = (0, bH.type)("float32"), Qe = (0, bH.type)("boolean"), ei = (0, bH.type)("string"), ii = (0, bH.type)("string"), Hi = (0, bH.type)("string"), yi = (0, bH.type)("string"), bi = (0, bH.type)(["number"]), Mi = (0, bH.type)("number"), Ki = (0, bH.type)({
+        map: JH
+      }), Ui = class extends oH {
         constructor() {
-          super(...arguments), (0, BG.d)(this, "scale", yO, this), (0, BG.d)(this, "speed", JO, this), (0, BG.d)(this, "jumping", MO, this), (0, BG.d)(this, "crouching", PO, this), (0, BG.d)(this, "cameraPitch", zO, this), (0, BG.d)(this, "armSwinging", lO, this), (0, BG.d)(this, "heldItemName", pO, this), (0, BG.d)(this, "heldItemEnchantmentTier", qO, this), (0, BG.d)(this, "pose", ZO, this), (0, BG.d)(this, "ridingVehicleEId", NO, this), (0, BG.d)(this, "meshOffset", RO, this), (0, BG.d)(this, "baseRenderHeading", WO, this), (0, BG.d)(this, "armour", AO, this)
+          super(...arguments), (0, HH.e)(this, "scale", Fi, this), (0, HH.e)(this, "speed", Ji, this), (0, HH.e)(this, "jumping", oi, this), (0, HH.e)(this, "crouching", Ri, this), (0, HH.e)(this, "cameraPitch", ki, this), (0, HH.e)(this, "armSwinging", qi, this), (0, HH.e)(this, "heldItemName", fi, this), (0, HH.e)(this, "heldItemEnchantmentTier", Ti, this), (0, HH.e)(this, "pose", Xi, this), (0, HH.e)(this, "ridingVehicleEId", zi, this), (0, HH.e)(this, "meshOffset", Bi, this), (0, HH.e)(this, "baseRenderHeading", Ei, this), (0, HH.e)(this, "armour", gi, this)
         }
-      }, yO = (0, OG.b)(jO.prototype, "scale", [CB], {
+      }, Fi = (0, yH.e)(Ui.prototype, "scale", [Ie], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), JO = (0, OG.b)(jO.prototype, "speed", [HB], {
+      }), Ji = (0, yH.e)(Ui.prototype, "speed", [he], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), MO = (0, OG.b)(jO.prototype, "jumping", [vB], {
+      }), oi = (0, yH.e)(Ui.prototype, "jumping", [Ne], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), PO = (0, OG.b)(jO.prototype, "crouching", [sB], {
+      }), Ri = (0, yH.e)(Ui.prototype, "crouching", [Ge], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), zO = (0, OG.b)(jO.prototype, "cameraPitch", [xB], {
+      }), ki = (0, yH.e)(Ui.prototype, "cameraPitch", [re], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), lO = (0, OG.b)(jO.prototype, "armSwinging", [tB], {
+      }), qi = (0, yH.e)(Ui.prototype, "armSwinging", [Qe], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), pO = (0, OG.b)(jO.prototype, "heldItemName", [BO], {
+      }), fi = (0, yH.e)(Ui.prototype, "heldItemName", [ei], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), qO = (0, OG.b)(jO.prototype, "heldItemEnchantmentTier", [OO], {
+      }), Ti = (0, yH.e)(Ui.prototype, "heldItemEnchantmentTier", [ii], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), ZO = (0, OG.b)(jO.prototype, "pose", [GO], {
+      }), Xi = (0, yH.e)(Ui.prototype, "pose", [Hi], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "standing"
         }
-      }), NO = (0, OG.b)(jO.prototype, "ridingVehicleEId", [YO], {
+      }), zi = (0, yH.e)(Ui.prototype, "ridingVehicleEId", [yi], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), RO = (0, OG.b)(jO.prototype, "meshOffset", [DO], {
+      }), Bi = (0, yH.e)(Ui.prototype, "meshOffset", [bi], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new GG.ArraySchema(0, 0, 0)
+          return new bH.ArraySchema(0, 0, 0)
         }
-      }), WO = (0, OG.b)(jO.prototype, "baseRenderHeading", [QO], {
+      }), Ei = (0, yH.e)(Ui.prototype, "baseRenderHeading", [Mi], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), AO = (0, OG.b)(jO.prototype, "armour", [oO], {
+      }), gi = (0, yH.e)(Ui.prototype, "armour", [Ki], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new GG.MapSchema
+          return new bH.MapSchema
         }
-      }), jO),
-      MG = (VO = (0, GG.type)("string"), SO = (0, GG.type)("string"), nO = (0, GG.type)("string"), UO = (0, GG.type)("uint8"), fO = class extends JG {
+      }), Ui),
+      kH = (Oi = (0, bH.type)("string"), di = (0, bH.type)("string"), Wi = (0, bH.type)("string"), ti = (0, bH.type)("uint8"), Zi = class extends RH {
         constructor() {
-          super(...arguments), (0, BG.d)(this, "variation", kO, this), (0, BG.d)(this, "ownerDbId", dO, this), (0, BG.d)(this, "metaInfo", KO, this), (0, BG.d)(this, "aiState", uO, this)
+          super(...arguments), (0, HH.e)(this, "variation", wi, this), (0, HH.e)(this, "ownerDbId", Di, this), (0, HH.e)(this, "metaInfo", Pi, this), (0, HH.e)(this, "aiState", Ai, this)
         }
-      }, kO = (0, OG.b)(fO.prototype, "variation", [VO], {
+      }, wi = (0, yH.e)(Zi.prototype, "variation", [Oi], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "default"
         }
-      }), dO = (0, OG.b)(fO.prototype, "ownerDbId", [SO], {
+      }), Di = (0, yH.e)(Zi.prototype, "ownerDbId", [di], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), KO = (0, OG.b)(fO.prototype, "metaInfo", [nO], {
+      }), Pi = (0, yH.e)(Zi.prototype, "metaInfo", [Wi], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), uO = (0, OG.b)(fO.prototype, "aiState", [UO], {
+      }), Ai = (0, yH.e)(Zi.prototype, "aiState", [ti], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), fO);
-    mO = (0, GG.type)("string"), IO = (0, GG.type)("string"), FO = (0, GG.type)("string"), iO = (0, GG.type)("string"), LO = class extends yG {
+      }), Zi);
+    Yi = (0, bH.type)("string"), Vi = (0, bH.type)("string"), ai = (0, bH.type)("string"), ci = (0, bH.type)("string"), xi = class extends oH {
       constructor() {
-        super(...arguments), (0, BG.d)(this, "meshKind", gO, this), (0, BG.d)(this, "meshOpts", rO, this), (0, BG.d)(this, "pose", XO, this), (0, BG.d)(this, "leaderboardTop", wO, this)
+        super(...arguments), (0, HH.e)(this, "meshKind", Li, this), (0, HH.e)(this, "meshOpts", Ci, this), (0, HH.e)(this, "pose", vi, this), (0, HH.e)(this, "leaderboardTop", ui, this)
       }
-    }, gO = (0, OG.b)(LO.prototype, "meshKind", [mO], {
+    }, Li = (0, yH.e)(xi.prototype, "meshKind", [Yi], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), rO = (0, OG.b)(LO.prototype, "meshOpts", [IO], {
+    }), Ci = (0, yH.e)(xi.prototype, "meshOpts", [Vi], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), XO = (0, OG.b)(LO.prototype, "pose", [FO], {
+    }), vi = (0, yH.e)(xi.prototype, "pose", [ai], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), wO = (0, OG.b)(LO.prototype, "leaderboardTop", [iO], {
+    }), ui = (0, yH.e)(xi.prototype, "leaderboardTop", [ci], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
     });
 
-    function PG(BB) {
-      return Object.keys(GG.Metadata.getFields(BB))
+    function qH(ee) {
+      return Object.keys(bH.Metadata.getFields(ee))
     }
-    const zG = PG(MG);
-    for (const BY of YG.s)
-      if (!zG.includes(BY)) throw new Error(`Mob Schema is missing a networked property: "${BY}"`);
-    const lG = PG((EO = (0, GG.type)("string"), cO = (0, GG.type)("float32"), hO = (0, GG.type)("float32"), aO = (0, GG.type)("float32"), eO = (0, GG.type)("float32"), TO = class extends yG {
+    const fH = qH(kH);
+    for (const Hy of MH.p)
+      if (!fH.includes(Hy)) throw new Error(`Mob Schema is missing a networked property: "${Hy}"`);
+    const TH = qH((mi = (0, bH.type)("string"), li = (0, bH.type)("float32"), Si = (0, bH.type)("float32"), ni = (0, bH.type)("float32"), ji = (0, bH.type)("float32"), si = class extends oH {
       constructor() {
-        super(...arguments), (0, BG.d)(this, "soundName", bO, this), (0, BG.d)(this, "volume", CO, this), (0, BG.d)(this, "refDistance", HO, this), (0, BG.d)(this, "maxHearDist", vO, this), (0, BG.d)(this, "rate", sO, this)
+        super(...arguments), (0, HH.e)(this, "soundName", Ii, this), (0, HH.e)(this, "volume", Ni, this), (0, HH.e)(this, "refDistance", Gi, this), (0, HH.e)(this, "maxHearDist", ri, this), (0, HH.e)(this, "rate", Qi, this)
       }
-    }, bO = (0, OG.b)(TO.prototype, "soundName", [EO], {
+    }, Ii = (0, yH.e)(si.prototype, "soundName", [mi], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return ""
       }
-    }), CO = (0, OG.b)(TO.prototype, "volume", [cO], {
+    }), Ni = (0, yH.e)(si.prototype, "volume", [li], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), HO = (0, OG.b)(TO.prototype, "refDistance", [hO], {
+    }), Gi = (0, yH.e)(si.prototype, "refDistance", [Si], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return QG.g
+        return UH.j
       }
-    }), vO = (0, OG.b)(TO.prototype, "maxHearDist", [aO], {
+    }), ri = (0, yH.e)(si.prototype, "maxHearDist", [ni], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return QG.c
+        return UH.b
       }
-    }), sO = (0, OG.b)(TO.prototype, "rate", [eO], {
+    }), Qi = (0, yH.e)(si.prototype, "rate", [ji], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), TO));
-    for (const BY of DG.h)
-      if (!lG.includes(BY)) throw new Error(`AudioEntity Schema is missing a replicated property: "${BY}"`);
-    var pG = GB(39099),
-      qG = GB(1238),
-      ZG = GB(641),
-      NG = GB(38879),
-      RG = GB(4642),
-      WG = GB(353),
-      AG = GB(37885),
-      VG = GB(38771),
-      SG = GB(2392),
-      nG = GB(37857),
-      UG = GB(39123),
-      fG = GB(38272),
-      kG = GB(363),
-      dG = GB.n(kG),
-      KG = GB(38623),
-      uG = GB(37763),
-      mG = GB(38751),
-      IG = GB(38789);
-    class FG {
-      constructor(BB, OB) {
-        this.bloxd = BB, this.eId = OB, this.kz = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.Vp = !1, this.kz = BB.kz
+    }), si));
+    for (const Hy of KH.h)
+      if (!TH.includes(Hy)) throw new Error(`AudioEntity Schema is missing a replicated property: "${Hy}"`);
+    var pH = He(39226),
+      XH = He(1189),
+      zH = He(610),
+      BH = He(39015),
+      EH = He(4598),
+      gH = He(347),
+      OH = He(38020),
+      dH = He(38927),
+      WH = He(2278),
+      tH = He(37992),
+      ZH = He(39252),
+      wH = He(38419),
+      DH = He(352),
+      PH = He.n(DH),
+      AH = He(38777),
+      YH = He(37906),
+      VH = He(38901),
+      aH = He(38938);
+    class cH {
+      constructor(ee, ie) {
+        this.bloxd = ee, this.eId = ie, this.uk = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.xf = !1, this.uk = ee.uk
       }
-      initClient(BB) {
-        var OB, GB, YB;
-        this.colyseusEntity = BB, this.meshKind = BB.meshKind, this.meshOpts = BB.meshOpts, this.leaderboardTop = BB.leaderboardTop, this.kz.DW.add([BB.x, BB.y, BB.z], 1, 1, null, null, !1, !1, this.eId), this.kz.DW.RL(this.eId, "smoothToServerPos");
-        const DB = "Person" === this.meshKind;
-        this.kz.DW.RL(this.eId, "meshRotation", {
+      initClient(ee) {
+        var ie, He, ye;
+        this.colyseusEntity = ee, this.meshKind = ee.meshKind, this.meshOpts = ee.meshOpts, this.leaderboardTop = ee.leaderboardTop, this.uk.sE.add([ee.x, ee.y, ee.z], 1, 1, null, null, !1, !1, this.eId), this.uk.sE.uL(this.eId, "smoothToServerPos");
+        const be = "Person" === this.meshKind;
+        this.uk.sE.uL(this.eId, "meshRotation", {
           isServerControlled: !0,
-          ...DB ? {
+          ...be ? {
             defaultRotationsPerSecond: .5
           } : {},
-          childrenNodeParams: DB ? [{
+          childrenNodeParams: be ? [{
             nodeName: "HeadMesh",
-            softTolerance: UG.k,
+            softTolerance: ZH.k,
             hardTolerance: null
           }] : []
-        }), this.updateHidingMeshMgr(), this.canSeeSub = xO.o.subscribe(`otherEntitySettings|${this.eId}|canSee`, (BB => {
+        }), this.updateHidingMeshMgr(), this.canSeeSub = eH.h.subscribe(`otherEntitySettings|${this.eId}|canSee`, (ee => {
           this.updateHidingMeshMgr()
         }));
-        const QB = () => {
-          const BB = this.kz.DW.iGB(this.eId);
-          if (!BB) return;
-          const OB = (0, fG.l)(this.eId);
-          if ("number" === typeof BB.uF) {
-            var GB, YB, DB, QB;
-            const oB = null === (GB = (0, SG.n)("head", null === (DB = this.getSpec()) || void 0 === DB || null === (QB = DB.opts.textures) || void 0 === QB ? void 0 : QB.head)) || void 0 === GB || null === (YB = GB.personModel) || void 0 === YB ? void 0 : YB.fullBody;
-            return this.kz.UP.kF.setPickable(BB.uF, OB && !oB), void(0, uG.updatePersonAttachmentPickability)(this.kz, this.eId, OB)
+        const Me = () => {
+          const ee = this.uk.sE.rHe(this.eId);
+          if (!ee) return;
+          const ie = (0, wH.h)(this.eId);
+          if ("number" === typeof ee.Ix) {
+            var He, ye, be, Me;
+            const Ke = null === (He = (0, WH.h)("head", null === (be = this.getSpec()) || void 0 === be || null === (Me = be.opts.textures) || void 0 === Me ? void 0 : Me.head)) || void 0 === He || null === (ye = He.personModel) || void 0 === ye ? void 0 : ye.fullBody;
+            return this.uk.PR.vx.setPickable(ee.Ix, ie && !Ke), void(0, YH.updatePersonAttachmentPickability)(this.uk, this.eId, ie)
           }
-          const oB = BB.mesh;
-          if (oB)
-            for (const jB of [oB, ...oB.getChildMeshes(!1)]) "bq" in jB && !jB.name.startsWith("Cape|") && (jB.bq = OB)
+          const Ke = ee.mesh;
+          if (Ke)
+            for (const Ue of [Ke, ...Ke.getChildMeshes(!1)]) "Mp" in Ue && !Ue.name.startsWith("Cape|") && (Ue.Mp = ie)
         };
-        this.canAttackSub = xO.o.subscribe(`otherEntitySettings|${this.eId}|canAttack`, QB), this.interactableSub = xO.o.subscribe(`otherEntitySettings|${this.eId}|interactable`, QB), this.overlayColourSub = xO.o.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (BB => {
-          this.updateOverlayColour(BB)
-        })), this.opacitySub = xO.o.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (BB => {
-          this.updateOpacity(BB)
-        })), this.zIndexSub = xO.o.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (BB => {
-          this.updateZIndex(BB)
+        this.canAttackSub = eH.h.subscribe(`otherEntitySettings|${this.eId}|canAttack`, Me), this.interactableSub = eH.h.subscribe(`otherEntitySettings|${this.eId}|interactable`, Me), this.overlayColourSub = eH.h.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (ee => {
+          this.updateOverlayColour(ee)
+        })), this.opacitySub = eH.h.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (ee => {
+          this.updateOpacity(ee)
+        })), this.zIndexSub = eH.h.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (ee => {
+          this.updateZIndex(ee)
         }));
-        const oB = this.kz.FX[this.kz.EX][this.eId];
-        this.updateOverlayColour(null !== (OB = null === oB || void 0 === oB ? void 0 : oB.overlayColour) && void 0 !== OB ? OB : null), this.updateOpacity(null !== (GB = null === oB || void 0 === oB ? void 0 : oB.opacity) && void 0 !== GB ? GB : 1), this.updateZIndex(null !== (YB = null === oB || void 0 === oB ? void 0 : oB.zIndex) && void 0 !== YB ? YB : 0), this.multilineTextBoxSub = (0, nG.w)(this.kz, this.eId)
+        const Ke = this.uk.zC[this.uk.gC][this.eId];
+        this.updateOverlayColour(null !== (ie = null === Ke || void 0 === Ke ? void 0 : Ke.overlayColour) && void 0 !== ie ? ie : null), this.updateOpacity(null !== (He = null === Ke || void 0 === Ke ? void 0 : Ke.opacity) && void 0 !== He ? He : 1), this.updateZIndex(null !== (ye = null === Ke || void 0 === Ke ? void 0 : Ke.zIndex) && void 0 !== ye ? ye : 0), this.multilineTextBoxSub = (0, tH.t)(this.uk, this.eId)
       }
-      onChangeClient(BB, OB) {
-        if ("xRotation" === BB || "yRotation" === BB || "zRotation" === BB)(0, nG.x)(this.kz, this.eId, BB, OB);
-        else if ("pose" === BB) {
-          const BB = this.kz.DW.EGB(this.eId);
-          BB && (BB.pose = OB || "standing")
-        } else "meshKind" === BB || "meshOpts" === BB ? (this[BB] = OB, this.queueMeshRebuild()) : "name" === BB && "" !== OB ? this.updateHidingMeshMgr() : "leaderboardTop" === BB && (this.leaderboardTop = OB, xO.o.tM(`leaderboardTop|${this.eId}`, OB))
+      onChangeClient(ee, ie) {
+        if ("xRotation" === ee || "yRotation" === ee || "zRotation" === ee)(0, tH.x)(this.uk, this.eId, ee, ie);
+        else if ("pose" === ee) {
+          const ee = this.uk.sE.Uye(this.eId);
+          ee && (ee.pose = ie || "standing")
+        } else "meshKind" === ee || "meshOpts" === ee ? (this[ee] = ie, this.queueMeshRebuild()) : "name" === ee && "" !== ie ? this.updateHidingMeshMgr() : "leaderboardTop" === ee && (this.leaderboardTop = ie, eH.h.yR(`leaderboardTop|${this.eId}`, ie))
       }
       disposeClient() {
-        this.Vp = !0, this.kz.DW.deleteEntity(this.eId), xO.o.unsubscribe(this.canSeeSub), xO.o.unsubscribe(this.canAttackSub), xO.o.unsubscribe(this.interactableSub), xO.o.unsubscribe(this.overlayColourSub), xO.o.unsubscribe(this.opacitySub), xO.o.unsubscribe(this.zIndexSub), xO.o.unsubscribe(this.multilineTextBoxSub)
+        this.xf = !0, this.uk.sE.deleteEntity(this.eId), eH.h.unsubscribe(this.canSeeSub), eH.h.unsubscribe(this.canAttackSub), eH.h.unsubscribe(this.interactableSub), eH.h.unsubscribe(this.overlayColourSub), eH.h.unsubscribe(this.opacitySub), eH.h.unsubscribe(this.zIndexSub), eH.h.unsubscribe(this.multilineTextBoxSub)
       }
       getCurrentHidingMeshMgrState() {
-        var BB, OB;
+        var ee, ie;
         return {
-          canSee: null !== (BB = null === (OB = this.kz.FX[this.kz.EX][this.eId]) || void 0 === OB ? void 0 : OB.canSee) && void 0 !== BB && BB,
+          canSee: null !== (ee = null === (ie = this.uk.zC[this.uk.gC][this.eId]) || void 0 === ie ? void 0 : ie.canSee) && void 0 !== ee && ee,
           name: this.colyseusEntity.name,
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         }
       }
       updateHidingMeshMgr() {
-        var BB, OB, GB;
+        var ee, ie, He;
         const {
-          kz: YB
+          uk: ye
         } = this, {
-          DW: DB
-        } = YB, QB = this.getCurrentHidingMeshMgrState();
-        if ((0, WG.Fe)(this.previousHidingMeshManagerState, QB)) return;
-        if (this.previousHidingMeshManagerState = QB, DB.dL(this.eId, "hidingMeshManager"), null === (BB = YB.FX[YB.EX][this.eId]) || void 0 === BB || !BB.canSee) return;
-        const oB = this.getSpec();
-        if (!oB) return;
+          sE: be
+        } = ye, Me = this.getCurrentHidingMeshMgrState();
+        if ((0, gH.ee)(this.previousHidingMeshManagerState, Me)) return;
+        if (this.previousHidingMeshManagerState = Me, be.lL(this.eId, "hidingMeshManager"), null === (ee = ye.zC[ye.gC][this.eId]) || void 0 === ee || !ee.canSee) return;
+        const Ke = this.getSpec();
+        if (!Ke) return;
         const {
-          type: jB,
-          opts: yB
-        } = oB;
-        "Person" === jB && (yB.textures = (0, SG.q)(yB.textures)), yB.eId = this.eId, DB.RL(this.eId, "hidingMeshManager", {
+          type: Ue,
+          opts: Fe
+        } = Ke;
+        "Person" === Ue && (Fe.textures = (0, WH.k)(Fe.textures)), Fe.eId = this.eId, be.uL(this.eId, "hidingMeshManager", {
           addMeshComponent: () => {
-            var BB, OB, GB;
-            "Leaderboard" === jB && (yB.leaderboardTop = this.leaderboardTop);
-            const QB = this.bloxd.client.meshCreator.getEntityMesh(jB, yB, (BB => {
-              var OB, GB;
-              if ("number" === typeof BB) {
-                var DB, QB, oB;
-                const OB = YB.UP.kF;
-                OB.setEntityId(BB, this.eId);
-                const GB = "Person" === jB && (null === (DB = (0, SG.n)("head", null === (oB = yB.textures) || void 0 === oB ? void 0 : oB.head)) || void 0 === DB || null === (QB = DB.personModel) || void 0 === QB ? void 0 : QB.fullBody);
-                return void OB.setPickable(BB, (0, fG.l)(this.eId) && !GB)
+            var ee, ie, He;
+            "Leaderboard" === Ue && (Fe.leaderboardTop = this.leaderboardTop);
+            const Me = this.bloxd.client.meshCreator.getEntityMesh(Ue, Fe, (ee => {
+              var ie, He;
+              if ("number" === typeof ee) {
+                var be, Me, Ke;
+                const ie = ye.PR.vx;
+                ie.setEntityId(ee, this.eId);
+                const He = "Person" === Ue && (null === (be = (0, WH.h)("head", null === (Ke = Fe.textures) || void 0 === Ke ? void 0 : Ke.head)) || void 0 === be || null === (Me = be.personModel) || void 0 === Me ? void 0 : Me.fullBody);
+                return void ie.setPickable(ee, (0, wH.h)(this.eId) && !He)
               }
-              const JB = BB;
-              for (const jB of [JB, ...JB.getChildMeshes(!1)]) void 0 === jB.bq || jB.name.startsWith("Cape|") || (jB.bq = (0, fG.l)(this.eId), jB.metadata ??= new YB.UP.Cq, jB.metadata.eId = this.eId);
-              this.updateOpacity(null !== (OB = null === (GB = YB.FX[YB.EX][this.eId]) || void 0 === GB ? void 0 : GB.opacity) && void 0 !== OB ? OB : 1)
+              const Je = ee;
+              for (const Ue of [Je, ...Je.getChildMeshes(!1)]) void 0 === Ue.Mp || Ue.name.startsWith("Cape|") || (Ue.Mp = (0, wH.h)(this.eId), Ue.metadata ??= new ye.PR.Kp, Ue.metadata.eId = this.eId);
+              this.updateOpacity(null !== (ie = null === (He = ye.zC[ye.gC][this.eId]) || void 0 === He ? void 0 : He.opacity) && void 0 !== ie ? ie : 1)
             }));
-            if (!QB) return;
+            if (!Me) return;
             const {
-              uF: oB,
-              mesh: JB,
-              meshOffset: MB,
-              nameYOffset: PB,
-              modelLoaded: zB
-            } = QB;
-            null === zB || void 0 === zB || zB.then((() => {
-              var BB;
-              (null === (BB = DB.iGB(this.eId)) || void 0 === BB ? void 0 : BB.mesh) === JB && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
+              Ix: Ke,
+              mesh: Je,
+              meshOffset: oe,
+              nameYOffset: Re,
+              modelLoaded: ke
+            } = Me;
+            null === ke || void 0 === ke || ke.then((() => {
+              var ee;
+              (null === (ee = be.rHe(this.eId)) || void 0 === ee ? void 0 : ee.mesh) === Je && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
             }));
-            const lB = null === oB ? null : YB.UP.kF.yDB(oB, 0);
-            if (DB.RL(this.eId, DB.names.mesh, {
-                uF: oB,
-                HYB: lB,
-                mesh: JB,
-                AyB: !1,
-                sYB: "Leaderboard" !== jB,
-                offset: MB.slice(),
-                WyB: "ParticleEmitter" === jB && yB.followTargetMeshOffset ? BB => {
-                  var OB;
-                  dG().copy(BB, MB);
-                  const GB = null === (OB = DB.nYB(this.eId)) || void 0 === OB ? void 0 : OB.qp,
-                    YB = void 0 === GB ? null : DB.EGB(GB);
-                  if (YB) {
-                    var QB, oB;
-                    const OB = this.bloxd.getEntityHeading(null !== (QB = YB.ridingVehicleEId) && void 0 !== QB ? QB : GB, !0),
-                      DB = Math.sin(OB),
-                      jB = Math.cos(OB);
-                    BB[0] += YB.meshOffset[0] * jB + YB.meshOffset[2] * DB, BB[1] += YB.meshOffset[1], BB[2] += YB.meshOffset[2] * jB - YB.meshOffset[0] * DB;
-                    const yB = null !== (oB = YB.ridingVehicleEId) && void 0 !== oB ? oB : null;
-                    null !== yB && (0, IG.c)(this.kz, yB, BB)
+            const qe = null === Ke ? null : ye.PR.vx.Abe(Ke, 0);
+            if (be.uL(this.eId, be.names.mesh, {
+                Ix: Ke,
+                Xbe: qe,
+                mesh: Je,
+                SFe: !1,
+                Bbe: "Leaderboard" !== Ue,
+                offset: oe.slice(),
+                lFe: "ParticleEmitter" === Ue && Fe.followTargetMeshOffset ? ee => {
+                  var ie;
+                  PH().copy(ee, oe);
+                  const He = null === (ie = be.jye(this.eId)) || void 0 === ie ? void 0 : ie.Df,
+                    ye = void 0 === He ? null : be.Uye(He);
+                  if (ye) {
+                    var Me, Ke;
+                    const ie = this.bloxd.getEntityHeading(null !== (Me = ye.ridingVehicleEId) && void 0 !== Me ? Me : He, !0),
+                      be = Math.sin(ie),
+                      Ue = Math.cos(ie);
+                    ee[0] += ye.meshOffset[0] * Ue + ye.meshOffset[2] * be, ee[1] += ye.meshOffset[1], ee[2] += ye.meshOffset[2] * Ue - ye.meshOffset[0] * be;
+                    const Fe = null !== (Ke = ye.ridingVehicleEId) && void 0 !== Ke ? Ke : null;
+                    null !== Fe && (0, aH.d)(this.uk, Fe, ee)
                   }
                 } : null
-              }), "Person" === jB) {
-              var pB, qB, ZB, NB;
-              DB.RL(this.eId, DB.names.meshAttachments, {
-                personFullBody: null !== (pB = null === (qB = (0, SG.n)("head", null === (NB = yB.textures) || void 0 === NB ? void 0 : NB.head)) || void 0 === qB || null === (ZB = qB.personModel) || void 0 === ZB ? void 0 : ZB.fullBody) && void 0 !== pB && pB
+              }), "Person" === Ue) {
+              var fe, Te, pe, Xe;
+              be.uL(this.eId, be.names.meshAttachments, {
+                personFullBody: null !== (fe = null === (Te = (0, WH.h)("head", null === (Xe = Fe.textures) || void 0 === Xe ? void 0 : Xe.head)) || void 0 === Te || null === (pe = Te.personModel) || void 0 === pe ? void 0 : pe.fullBody) && void 0 !== fe && fe
               });
-              for (const BB of qG.t) {
-                var RB, WB, AB;
-                const OB = null === (RB = yB.textures) || void 0 === RB ? void 0 : RB[BB];
-                OB && null !== (WB = (0, SG.n)(BB, OB)) && void 0 !== WB && null !== (AB = WB.attachments) && void 0 !== AB && AB.length && VG.e.Player.meshApi.updatePlayerCosmetic(this.eId, oB, BB, OB)
+              for (const ee of XH.v) {
+                var ze, Be, Ee;
+                const ie = null === (ze = Fe.textures) || void 0 === ze ? void 0 : ze[ee];
+                ie && null !== (Be = (0, WH.h)(ee, ie)) && void 0 !== Be && null !== (Ee = Be.attachments) && void 0 !== Ee && Ee.length && dH.b.Player.meshApi.updatePlayerCosmetic(this.eId, Ke, ee, ie)
               }
-              DB.RL(this.eId, DB.names.moveState), DB.RL(this.eId, "updateWalkingState", {
-                uF: oB,
-                HYB: lB,
-                walkingLegSwingDuration: UG.r
-              }), DB.RL(this.eId, "humanoidMesh", {
-                uF: oB,
-                HYB: lB,
+              be.uL(this.eId, be.names.moveState), be.uL(this.eId, "updateWalkingState", {
+                Ix: Ke,
+                Xbe: qe,
+                walkingLegSwingDuration: ZH.q
+              }), be.uL(this.eId, "humanoidMesh", {
+                Ix: Ke,
+                Xbe: qe,
                 heldItemPositionParams: {},
                 maxWalkingAngleOverride: null
-              }), DB.RL(this.eId, "animator", {
-                uF: oB,
-                HYB: lB,
+              }), be.uL(this.eId, "animator", {
+                Ix: Ke,
+                Xbe: qe,
                 modelLifeformType: "Player"
-              }), mG.e.hasAnimation("Person") && DB.RL(this.eId, "rigAnimation", {
+              }), VH.f.hasAnimation("Person") && be.uL(this.eId, "rigAnimation", {
                 target: "Person",
-                uF: oB
-              }), DB.EGB(this.eId).pose = this.colyseusEntity.pose || "standing"
-            } else if ("BloxdBlock" === jB && null !== oB) {
-              DB.RL(this.eId, "animator", {
-                uF: oB,
-                HYB: lB,
+                Ix: Ke
+              }), be.Uye(this.eId).pose = this.colyseusEntity.pose || "standing"
+            } else if ("BloxdBlock" === Ue && null !== Ke) {
+              be.uL(this.eId, "animator", {
+                Ix: Ke,
+                Xbe: qe,
                 modelLifeformType: null
               });
-              const BB = (0, NG.u)(yB.blockName);
-              null !== BB && DB.RL(this.eId, "rigAnimation", {
-                target: BB,
-                uF: oB
+              const ee = (0, BH.u)(Fe.blockName);
+              null !== ee && be.uL(this.eId, "rigAnimation", {
+                target: ee,
+                Ix: Ke
               })
             }
-            DB.hyB(this.eId, "entityName", {
+            be.kJe(this.eId, "entityName", {
               name: this.colyseusEntity.name,
-              nameYOffset: PB
-            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === yB.autoRotate && (DB.dL(this.eId, "meshRotation"), DB.RL(this.eId, "autoRotate"));
+              nameYOffset: Re
+            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === Fe.autoRotate && (be.lL(this.eId, "meshRotation"), be.uL(this.eId, "autoRotate"));
             const {
-              lineToEId: VB
-            } = yB;
-            (0, ZG.Q)(VB) || DB.RL(this.eId, "lineToEntity", {
-              lineToEId: VB
+              lineToEId: ge
+            } = Fe;
+            (0, zH.P)(ge) || be.uL(this.eId, "lineToEntity", {
+              lineToEId: ge
             });
-            const SB = YB.FX[YB.EX][this.eId];
-            this.updateOverlayColour(null !== (BB = null === SB || void 0 === SB ? void 0 : SB.overlayColour) && void 0 !== BB ? BB : null), this.updateOpacity(null !== (OB = null === SB || void 0 === SB ? void 0 : SB.opacity) && void 0 !== OB ? OB : 1), this.updateZIndex(null !== (GB = null === SB || void 0 === SB ? void 0 : SB.zIndex) && void 0 !== GB ? GB : 0)
+            const Oe = ye.zC[ye.gC][this.eId];
+            this.updateOverlayColour(null !== (ee = null === Oe || void 0 === Oe ? void 0 : Oe.overlayColour) && void 0 !== ee ? ee : null), this.updateOpacity(null !== (ie = null === Oe || void 0 === Oe ? void 0 : Oe.opacity) && void 0 !== ie ? ie : 1), this.updateZIndex(null !== (He = null === Oe || void 0 === Oe ? void 0 : Oe.zIndex) && void 0 !== He ? He : 0)
           },
           removeMeshComponent: () => {
-            "Person" !== jB && "BloxdBlock" !== jB || DB.dL(this.eId, "rigAnimation"), DB.dL(this.eId, DB.names.mesh), DB.YGB(this.eId, DB.names.meshAttachments) && DB.dL(this.eId, DB.names.meshAttachments), DB.dL(this.eId, "entityName"), DB.dL(this.eId, "autoRotate"), DB.dL(this.eId, "lineToEntity"), "Person" === jB ? (DB.dL(this.eId, DB.names.moveState), DB.dL(this.eId, "updateWalkingState"), DB.dL(this.eId, "humanoidMesh"), DB.dL(this.eId, "animator")) : "BloxdBlock" === jB && DB.dL(this.eId, "animator")
+            "Person" !== Ue && "BloxdBlock" !== Ue || be.lL(this.eId, "rigAnimation"), be.lL(this.eId, be.names.mesh), be.gHe(this.eId, be.names.meshAttachments) && be.lL(this.eId, be.names.meshAttachments), be.lL(this.eId, "entityName"), be.lL(this.eId, "autoRotate"), be.lL(this.eId, "lineToEntity"), "Person" === Ue ? (be.lL(this.eId, be.names.moveState), be.lL(this.eId, "updateWalkingState"), be.lL(this.eId, "humanoidMesh"), be.lL(this.eId, "animator")) : "BloxdBlock" === Ue && be.lL(this.eId, "animator")
           },
-          hideDist: null !== (OB = yB.hideDist) && void 0 !== OB ? OB : 80,
-          movingHideDist: null !== (GB = yB.hideDist) && void 0 !== GB ? GB : 120,
-          displayOutsideLoadedChunk: yB.hideDist > 100,
+          hideDist: null !== (ie = Fe.hideDist) && void 0 !== ie ? ie : 80,
+          movingHideDist: null !== (He = Fe.hideDist) && void 0 !== He ? He : 120,
+          displayOutsideLoadedChunk: Fe.hideDist > 100,
           immediatelyUpdate: !0,
-          RJ: "BloxdBlock" === jB ? yB.blockName : jB
+          oJ: "BloxdBlock" === Ue ? Fe.blockName : Ue
         })
       }
       queueMeshRebuild() {
         this.meshRebuildQueued || (this.meshRebuildQueued = !0, queueMicrotask((() => {
-          this.meshRebuildQueued = !1, this.Vp || this.updateHidingMeshMgr()
+          this.meshRebuildQueued = !1, this.xf || this.updateHidingMeshMgr()
         })))
       }
       getSpec() {
-        return (0, RG.i)({
+        return (0, EH.i)({
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         })
       }
-      updateOverlayColour(BB) {
-        var OB, GB;
+      updateOverlayColour(ee) {
+        var ie, He;
         if ("Person" !== this.meshKind) return;
-        let YB = new AG.e(0, 0, 0, 0);
-        if (null !== BB) {
-          const OB = (0, WG.Y)(BB);
-          YB = new AG.e(OB[0] / 255, OB[1] / 255, OB[2] / 255, .5)
+        let ye = new OH.e(0, 0, 0, 0);
+        if (null !== ee) {
+          const ie = (0, gH.Y)(ee);
+          ye = new OH.e(ie[0] / 255, ie[1] / 255, ie[2] / 255, .5)
         }
-        const DB = null !== (OB = null === (GB = this.kz.DW.iGB(this.eId)) || void 0 === GB ? void 0 : GB.uF) && void 0 !== OB ? OB : null;
-        null !== DB && VG.e.Player.meshApi.updateMeshOverlayColour(DB, YB)
+        const be = null !== (ie = null === (He = this.uk.sE.rHe(this.eId)) || void 0 === He ? void 0 : He.Ix) && void 0 !== ie ? ie : null;
+        null !== be && dH.b.Player.meshApi.updateMeshOverlayColour(be, ye)
       }
-      updateZIndex(BB) {
-        var OB;
+      updateZIndex(ee) {
+        var ie;
         if ("Person" !== this.meshKind) return;
-        const GB = null === (OB = this.kz.DW.iGB(this.eId)) || void 0 === OB ? void 0 : OB.uF;
-        "number" === typeof GB && this.kz.UP.kF.setRenderingGroupId(GB, BB)
+        const He = null === (ie = this.uk.sE.rHe(this.eId)) || void 0 === ie ? void 0 : ie.Ix;
+        "number" === typeof He && this.uk.PR.vx.setRenderingGroupId(He, ee)
       }
-      updateOpacity(BB) {
-        const OB = this.kz.DW.iGB(this.eId);
-        OB && ("number" !== typeof OB.uF ? OB.mesh && "ParticleEmitter" !== this.meshKind && (0, KG.h)(OB.mesh, BB) : VG.e.Player.meshApi.updateMeshOpacity(OB.uF, BB))
+      updateOpacity(ee) {
+        const ie = this.uk.sE.rHe(this.eId);
+        ie && ("number" !== typeof ie.Ix ? ie.mesh && "ParticleEmitter" !== this.meshKind && (0, AH.f)(ie.mesh, ee) : dH.b.Player.meshApi.updateMeshOpacity(ie.Ix, ee))
       }
     }
-    var iG = GB(39675);
-    class LG {
-      constructor(BB, OB) {
-        this.eId = OB, this.kz = void 0, this.schema = void 0, this.kz = BB.kz
+    var xH = He(39767);
+    class LH {
+      constructor(ee, ie) {
+        this.eId = ie, this.uk = void 0, this.schema = void 0, this.uk = ee.uk
       }
-      initClient(BB) {
-        this.schema = BB, this.kz.DW.add([BB.x, BB.y, BB.z], .1, .1, null, null, !1, !1, this.eId), this.kz.DW.RL(this.eId, "smoothToServerPos"), iG.d.add(this.eId, this.copyOpts())
+      initClient(ee) {
+        this.schema = ee, this.uk.sE.add([ee.x, ee.y, ee.z], .1, .1, null, null, !1, !1, this.eId), this.uk.sE.uL(this.eId, "smoothToServerPos"), xH.c.add(this.eId, this.copyOpts())
       }
-      onChangeClient(BB) {
-        DG.h.includes(BB) && iG.d.update(this.eId, this.copyOpts())
+      onChangeClient(ee) {
+        KH.h.includes(ee) && xH.c.update(this.eId, this.copyOpts())
       }
       disposeClient() {
-        iG.d.remove(this.eId), this.kz.DW.deleteEntity(this.eId)
+        xH.c.remove(this.eId), this.uk.sE.deleteEntity(this.eId)
       }
       copyOpts() {
         const {
-          soundName: BB,
-          volume: OB,
-          refDistance: GB,
-          maxHearDist: YB,
-          rate: DB
+          soundName: ee,
+          volume: ie,
+          refDistance: He,
+          maxHearDist: ye,
+          rate: be
         } = this.schema;
         return {
-          soundName: BB,
-          volume: OB,
-          refDistance: GB,
-          maxHearDist: YB,
-          rate: DB
+          soundName: ee,
+          volume: ie,
+          refDistance: He,
+          maxHearDist: ye,
+          rate: be
         }
       }
     }
-    var gG = GB(4111),
-      rG = GB(37452),
-      XG = GB(6991),
-      wG = GB(38466),
-      EG = GB(3088),
-      cG = GB(38812),
-      hG = GB(9784),
-      aG = GB(39129),
-      eG = GB(38418),
-      TG = GB(1856);
-    class bG {
-      constructor(BB, OB) {
-        let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-          YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
-        this.aYB = BB, this.kz = OB, this.setupBudgetMs = GB, this.now = YB, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.Vp = !1, this.onFrame = () => {
+    var CH = He(4075),
+      vH = He(37590),
+      uH = He(7083),
+      mH = He(38621),
+      lH = He(2969),
+      SH = He(38958),
+      nH = He(9834),
+      jH = He(39267),
+      sH = He(38575),
+      IH = He(1814);
+    class hH {
+      constructor(ee, ie) {
+        let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+          ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
+        this.kbe = ee, this.uk = ie, this.setupBudgetMs = He, this.now = ye, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.xf = !1, this.onFrame = () => {
           this.setUpQueuedEntities(!0)
-        }, this.yR = () => {
+        }, this.qE = () => {
           this.setUpQueuedEntities(this.now() - this.lastRefillMs > 100)
         }, this.setUpPromoted = () => {
-          for (const BB of this.promotedSetups) {
-            this.promotedSetups.delete(BB);
-            const OB = this.queuedSetups.get(BB);
-            OB && (this.queuedSetups.delete(BB), this.timedSetup(OB, BB))
+          for (const ee of this.promotedSetups) {
+            this.promotedSetups.delete(ee);
+            const ie = this.queuedSetups.get(ee);
+            ie && (this.queuedSetups.delete(ee), this.timedSetup(ie, ee))
           }
-        }, this.createStateCallbacks = (0, hG.getStateCallbacks)(BB), this.roomStateCallbacks = this.createStateCallbacks(BB.state), this.roomState = BB.state, this.setupBudgetLeftMs = GB, this.lastRefillMs = YB()
+        }, this.createStateCallbacks = (0, nH.getStateCallbacks)(ee), this.roomStateCallbacks = this.createStateCallbacks(ee.state), this.roomState = ee.state, this.setupBudgetLeftMs = He, this.lastRefillMs = ye()
       }
       setup() {
-        this.setupEntityHandlers(), this.setupItemHandlers(), this.aYB.onStateChange(this.setUpPromoted), this.kz.on("beforeInputs", this.onFrame), this.kz.on("kP", this.yR)
+        this.setupEntityHandlers(), this.setupItemHandlers(), this.kbe.onStateChange(this.setUpPromoted), this.uk.on("beforeInputs", this.onFrame), this.uk.on("YR", this.qE)
       }
-      setUpQueuedEntities(BB) {
-        var OB;
-        if ((null === (OB = (0, EG.d)().client.getMsgHandler()) || void 0 === OB ? void 0 : OB.aYB) !== this.aYB) return this.kz.off("beforeInputs", this.onFrame), this.kz.off("kP", this.yR), this.queuedSetups.clear(), void this.promotedSetups.clear();
-        if (BB && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
-          for (dG().copy(CG, this.kz.DW.pR(this.kz.EX)); this.setupBudgetLeftMs > 0;) {
-            const BB = this.nearestQueued(CG);
-            if (null === BB) return;
-            this.setUpIfQueued(BB), this.setUpPromoted()
+      setUpQueuedEntities(ee) {
+        var ie;
+        if ((null === (ie = (0, lH.e)().client.getMsgHandler()) || void 0 === ie ? void 0 : ie.kbe) !== this.kbe) return this.uk.off("beforeInputs", this.onFrame), this.uk.off("YR", this.qE), this.queuedSetups.clear(), void this.promotedSetups.clear();
+        if (ee && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
+          for (PH().copy(NH, this.uk.sE.pE(this.uk.gC)); this.setupBudgetLeftMs > 0;) {
+            const ee = this.nearestQueued(NH);
+            if (null === ee) return;
+            this.setUpIfQueued(ee), this.setUpPromoted()
           }
       }
-      nearestQueued(BB) {
-        let OB = null,
-          GB = 1 / 0;
-        return this.queuedSetups.forEach(((YB, DB) => {
-          const QB = function(BB, OB) {
-            return (OB.x - BB[0]) ** 2 + (OB.y - BB[1]) ** 2 + (OB.z - BB[2]) ** 2
-          }(BB, YB);
-          (null === OB || QB < GB) && (OB = DB, GB = QB)
-        })), OB
+      nearestQueued(ee) {
+        let ie = null,
+          He = 1 / 0;
+        return this.queuedSetups.forEach(((ye, be) => {
+          const Me = function(ee, ie) {
+            return (ie.x - ee[0]) ** 2 + (ie.y - ee[1]) ** 2 + (ie.z - ee[2]) ** 2
+          }(ee, ye);
+          (null === ie || Me < He) && (ie = be, He = Me)
+        })), ie
       }
-      setUpOrQueue(BB, OB) {
-        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(BB, OB) ? this.timedSetup(BB, OB) : this.queuedSetups.set(OB, BB)
+      setUpOrQueue(ee, ie) {
+        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(ee, ie) ? this.timedSetup(ee, ie) : this.queuedSetups.set(ie, ee)
       }
-      mustSetUpNow(BB, OB) {
-        const GB = this.kz.QGB;
-        if (OB === GB) return !0;
-        const YB = this.roomState.entities.get(GB);
-        return !(!YB || YB.ridingVehicleEId !== OB && YB.followingEId !== OB) || (HG(BB.type) === pG.c || (0, EG.d)().getFollowingEntities(OB).length > 0)
+      mustSetUpNow(ee, ie) {
+        const He = this.uk.dHe;
+        if (ie === He) return !0;
+        const ye = this.roomState.entities.get(He);
+        return !(!ye || ye.ridingVehicleEId !== ie && ye.followingEId !== ie) || (GH(ee.type) === pH.d || (0, lH.e)().getFollowingEntities(ie).length > 0)
       }
-      setUpIfQueued(BB) {
-        const OB = this.queuedSetups.get(BB);
-        OB && (this.queuedSetups.delete(BB), this.timedSetup(OB, BB))
+      setUpIfQueued(ee) {
+        const ie = this.queuedSetups.get(ee);
+        ie && (this.queuedSetups.delete(ee), this.timedSetup(ie, ee))
       }
-      promoteIfQueued(BB) {
-        null !== BB && this.queuedSetups.has(BB) && this.promotedSetups.add(BB)
+      promoteIfQueued(ee) {
+        null !== ee && this.queuedSetups.has(ee) && this.promotedSetups.add(ee)
       }
-      timedSetup(BB, OB) {
-        const GB = this.now();
-        this.setupEntity(BB, OB), this.setupBudgetLeftMs -= this.now() - GB
+      timedSetup(ee, ie) {
+        const He = this.now();
+        this.setupEntity(ee, ie), this.setupBudgetLeftMs -= this.now() - He
       }
       setupEntityHandlers() {
-        this.roomStateCallbacks.entities.OW(((BB, OB) => {
-          this.kz.QGB ? this.setUpOrQueue(BB, OB) : this.deferEntitySetupUntilInitInfo(BB, OB)
-        })), this.roomStateCallbacks.entities.Qm(((BB, OB) => {
-          const GB = this.deferredSetups.get(OB);
-          GB && (xO.o.unsubscribe(GB), this.deferredSetups.delete(OB)), this.queuedSetups.delete(OB), this.detach(OB), (0, EG.d)().client.disposeEntity(OB)
+        this.roomStateCallbacks.entities.lE(((ee, ie) => {
+          this.uk.dHe ? this.setUpOrQueue(ee, ie) : this.deferEntitySetupUntilInitInfo(ee, ie)
+        })), this.roomStateCallbacks.entities.JV(((ee, ie) => {
+          const He = this.deferredSetups.get(ie);
+          He && (eH.h.unsubscribe(He), this.deferredSetups.delete(ie)), this.queuedSetups.delete(ie), this.detach(ie), (0, lH.e)().client.disposeEntity(ie)
         }))
       }
-      deferEntitySetupUntilInitInfo(BB, OB) {
-        const GB = xO.o.qN("initInfoReceived", (() => {
-          this.deferredSetups.delete(OB), this.setUpOrQueue(BB, OB)
+      deferEntitySetupUntilInitInfo(ee, ie) {
+        const He = eH.h.oB("initInfoReceived", (() => {
+          this.deferredSetups.delete(ie), this.setUpOrQueue(ee, ie)
         }));
-        this.deferredSetups.set(OB, GB), (0, gG.onGameResetOnce)((() => {
-          this.deferredSetups.get(OB) === GB && (xO.o.unsubscribe(GB), this.deferredSetups.delete(OB)), (0, EG.d)().updatePositionAndPhysics(this.kz.EX, {
-            type: XG.o.DEFAULT,
+        this.deferredSetups.set(ie, He), (0, CH.onGameResetOnce)((() => {
+          this.deferredSetups.get(ie) === He && (eH.h.unsubscribe(He), this.deferredSetups.delete(ie)), (0, lH.e)().updatePositionAndPhysics(this.uk.gC, {
+            type: uH.s.DEFAULT,
             tier: null
-          }, !0), (0, EG.d)().takeHeldPlayerBodySize(this.kz.EX);
-          const BB = this.kz.DW.AGB(this.kz.EX);
-          BB && (BB.movementType = XG.n.NORMAL)
+          }, !0), (0, lH.e)().takeHeldPlayerBodySize(this.uk.gC);
+          const ee = this.uk.sE.CHe(this.uk.gC);
+          ee && (ee.movementType = uH.o.NORMAL)
         }))
       }
-      setupEntity(BB, OB) {
-        const GB = OB === this.kz.QGB;
-        if (GB)(0, EG.d)().client.A4(this.kz.EX, null, null);
+      setupEntity(ee, ie) {
+        const He = ie === this.uk.dHe;
+        if (He)(0, lH.e)().client.b_(this.uk.gC, null, null);
         else {
           const {
-            type: GB
-          } = BB, YB = HG(GB);
-          if (void 0 === YB) return void
-          function(BB, OB) {
-            const GB = String(BB);
-            if (vG.has(GB)) return;
-            vG.add(GB);
-            const YB = GB.length > 80 ? `${GB.slice(0,80)}...` : GB,
-              DB = `No client handler for entity type ${JSON.stringify(YB)}, so entity ${OB} is not set up`;
-            console.warn(DB), (0, TG.reportClientError)("uncaught", DB, "unknown_entity_type")
-          }(GB, OB);
-          (0, EG.d)().client.A4(OB, BB, new YB((0, EG.d)(), OB, GB))
+            type: He
+          } = ee, ye = GH(He);
+          if (void 0 === ye) return void
+          function(ee, ie) {
+            const He = String(ee);
+            if (rH.has(He)) return;
+            rH.add(He);
+            const ye = He.length > 80 ? `${He.slice(0,80)}...` : He,
+              be = `No client handler for entity type ${JSON.stringify(ye)}, so entity ${ie} is not set up`;
+            console.warn(be), (0, IH.reportClientError)("uncaught", be, "unknown_entity_type")
+          }(He, ie);
+          (0, lH.e)().client.b_(ie, ee, new ye((0, lH.e)(), ie, He))
         }
-        const YB = this.createStateCallbacks(BB);
-        if (GB) return this.setupMapSchemaCallbacks(OB, BB, YB, "armour"), this.setupScalarField(OB, BB, YB, "scale"), this.setupScalarField(OB, BB, YB, "ridingVehicleEId"), this.setupScalarField(OB, BB, YB, "followingEId"), this.setupScalarField(OB, BB, YB, "followingOffset"), void this.setupScalarField(OB, BB, YB, "shouldMatchFollowingEntityRotation");
-        for (const DB of PG(BB.constructor)) BB[DB] instanceof GG.MapSchema ? this.setupMapSchemaCallbacks(OB, BB, YB, DB) : this.setupScalarField(OB, BB, YB, DB)
+        const ye = this.createStateCallbacks(ee);
+        if (He) return this.setupMapSchemaCallbacks(ie, ee, ye, "armour"), this.setupScalarField(ie, ee, ye, "scale"), this.setupScalarField(ie, ee, ye, "ridingVehicleEId"), this.setupScalarField(ie, ee, ye, "followingEId"), this.setupScalarField(ie, ee, ye, "followingOffset"), void this.setupScalarField(ie, ee, ye, "shouldMatchFollowingEntityRotation");
+        for (const be of qH(ee.constructor)) ee[be] instanceof bH.MapSchema ? this.setupMapSchemaCallbacks(ie, ee, ye, be) : this.setupScalarField(ie, ee, ye, be)
       }
-      setupMapSchemaCallbacks(BB, OB, GB, YB) {
-        const DB = GB[YB],
-          QB = new Map;
-        DB.OW(((GB, DB) => {
-          if (this.onEntityFieldChange(BB, OB, YB, {
-              key: DB,
-              value: GB
-            }), !(GB instanceof GG.Schema)) return;
-          const oB = this.createStateCallbacks(GB),
-            jB = [];
-          for (const QB of PG(GB.constructor)) jB.push(this.listenForFutureChanges(oB, QB, (() => {
-            this.onEntityFieldChange(BB, OB, YB, {
-              key: DB,
-              value: GB
+      setupMapSchemaCallbacks(ee, ie, He, ye) {
+        const be = He[ye],
+          Me = new Map;
+        be.lE(((He, be) => {
+          if (this.onEntityFieldChange(ee, ie, ye, {
+              key: be,
+              value: He
+            }), !(He instanceof bH.Schema)) return;
+          const Ke = this.createStateCallbacks(He),
+            Ue = [];
+          for (const Me of qH(He.constructor)) Ue.push(this.listenForFutureChanges(Ke, Me, (() => {
+            this.onEntityFieldChange(ee, ie, ye, {
+              key: be,
+              value: He
             })
           })));
-          QB.set(DB, (() => {
-            for (const BB of jB) BB()
+          Me.set(be, (() => {
+            for (const ee of Ue) ee()
           }))
-        })), DB.Qm(((GB, DB) => {
-          var oB;
-          null === (oB = QB.get(DB)) || void 0 === oB || oB(), QB.delete(DB), this.onEntityFieldChange(BB, OB, YB, {
-            key: DB,
+        })), be.JV(((He, be) => {
+          var Ke;
+          null === (Ke = Me.get(be)) || void 0 === Ke || Ke(), Me.delete(be), this.onEntityFieldChange(ee, ie, ye, {
+            key: be,
             value: null
           })
-        })), this.addDetacher(BB, (() => {
-          for (const BB of QB.values()) BB();
-          QB.clear()
+        })), this.addDetacher(ee, (() => {
+          for (const ee of Me.values()) ee();
+          Me.clear()
         }))
       }
-      setupScalarField(BB, OB, GB, YB) {
-        this.onEntityFieldChange(BB, OB, YB, OB[YB]);
-        const DB = this.listenForFutureChanges(GB, YB, (GB => {
-          this.onEntityFieldChange(BB, OB, YB, GB)
+      setupScalarField(ee, ie, He, ye) {
+        this.onEntityFieldChange(ee, ie, ye, ie[ye]);
+        const be = this.listenForFutureChanges(He, ye, (He => {
+          this.onEntityFieldChange(ee, ie, ye, He)
         }));
-        this.addDetacher(BB, DB)
+        this.addDetacher(ee, be)
       }
-      addDetacher(BB, OB) {
-        let GB = this.detachers.get(BB);
-        GB || (GB = [], this.detachers.set(BB, GB)), GB.push(OB)
+      addDetacher(ee, ie) {
+        let He = this.detachers.get(ee);
+        He || (He = [], this.detachers.set(ee, He)), He.push(ie)
       }
-      detach(BB) {
-        for (const GB of null !== (OB = this.detachers.get(BB)) && void 0 !== OB ? OB : []) {
-          var OB;
-          GB()
+      detach(ee) {
+        for (const He of null !== (ie = this.detachers.get(ee)) && void 0 !== ie ? ie : []) {
+          var ie;
+          He()
         }
-        this.detachers.delete(BB)
+        this.detachers.delete(ee)
       }
-      listenForFutureChanges(BB, OB, GB) {
-        return BB.listen(OB, GB, !1)
+      listenForFutureChanges(ee, ie, He) {
+        return ee.listen(ie, He, !1)
       }
-      onEntityFieldChange(BB, OB, GB, YB) {
-        switch (GB) {
+      onEntityFieldChange(ee, ie, He, ye) {
+        switch (He) {
           case "ridingVehicleEId": {
-            this.promoteIfQueued(YB);
-            const OB = this.kz.DW.EGB((0, rG.b)(BB));
-            OB && (OB.ridingVehicleEId = YB);
+            this.promoteIfQueued(ye);
+            const ie = this.uk.sE.Uye((0, vH.b)(ee));
+            ie && (ie.ridingVehicleEId = ye);
             break
           }
           case "armour":
-            this.handleArmourChange(BB, YB);
+            this.handleArmourChange(ee, ye);
             break;
           case "followingEId":
-            this.promoteIfQueued(YB), this.handleFollowingEIdChange(BB, OB, YB);
+            this.promoteIfQueued(ye), this.handleFollowingEIdChange(ee, ie, ye);
             break;
           case "xRotation":
           case "yRotation":
           case "zRotation":
-            this.handleRotationChange(BB, GB, YB);
+            this.handleRotationChange(ee, He, ye);
             break;
           case "scale":
-            this.handleScaleChange(BB, YB);
+            this.handleScaleChange(ee, ye);
             break;
           case "baseRenderHeading":
-            this.handleBaseRenderHeadingChange(BB, YB);
+            this.handleBaseRenderHeadingChange(ee, ye);
             break;
           case "followingOffset":
-            this.handleFollowingOffsetChange(BB, YB);
+            this.handleFollowingOffsetChange(ee, ye);
             break;
           case "shouldMatchFollowingEntityRotation":
-            this.handleShouldMatchFollowingEntityRotationChange(BB, YB);
+            this.handleShouldMatchFollowingEntityRotationChange(ee, ye);
             break;
           case "x":
           case "y":
           case "z":
-            return void this.handlePositionChange(BB, GB, YB)
-        }(0, EG.d)().client.updateEntityField(BB, GB, YB)
+            return void this.handlePositionChange(ee, He, ye)
+        }(0, lH.e)().client.updateEntityField(ee, He, ye)
       }
-      handleArmourChange(BB, OB) {
-        var GB, YB;
+      handleArmourChange(ee, ie) {
+        var He, ye;
         const {
-          key: DB,
-          value: QB
-        } = OB;
-        (0, VG.D)(BB, DB, null !== (GB = null === QB || void 0 === QB ? void 0 : QB.itemName) && void 0 !== GB ? GB : null, null !== (YB = null === QB || void 0 === QB ? void 0 : QB.enchantmentTier) && void 0 !== YB ? YB : null)
+          key: be,
+          value: Me
+        } = ie;
+        (0, dH.w)(ee, be, null !== (He = null === Me || void 0 === Me ? void 0 : Me.itemName) && void 0 !== He ? He : null, null !== (ye = null === Me || void 0 === Me ? void 0 : Me.enchantmentTier) && void 0 !== ye ? ye : null)
       }
-      handleFollowingEIdChange(BB, OB, GB) {
-        const YB = (0, rG.b)(BB),
-          DB = YB === this.kz.EX;
-        if (this.kz.DW.dL(YB, this.kz.DW.names.vW), GB) this.kz.DW.dL(YB, "smoothToServerPos"), this.kz.DW.RL(YB, this.kz.DW.names.vW, {
-          qp: (0, rG.b)(GB),
-          offset: Array.from(OB.followingOffset),
-          UYB: OB.shouldMatchFollowingEntityRotation,
-          KYB: !0,
-          uYB: (BB, YB) => {
-            if (dG().copy(BB, OB.followingOffset), OB.ridingVehicleEId === GB) {
-              const OB = (0, rG.b)(GB),
-                DB = (0, EG.d)().getEntityHeading(OB, YB);
-              dG().sq(BB, BB, dG().ZERO, DB)
+      handleFollowingEIdChange(ee, ie, He) {
+        const ye = (0, vH.b)(ee),
+          be = ye === this.uk.gC;
+        if (this.uk.sE.lL(ye, this.uk.sE.names.dW), He) this.uk.sE.lL(ye, "smoothToServerPos"), this.uk.sE.uL(ye, this.uk.sE.names.dW, {
+          Df: (0, vH.b)(He),
+          offset: Array.from(ie.followingOffset),
+          sye: ie.shouldMatchFollowingEntityRotation,
+          rye: !0,
+          Qye: (ee, ye) => {
+            if (PH().copy(ee, ie.followingOffset), ie.ridingVehicleEId === He) {
+              const ie = (0, vH.b)(He),
+                be = (0, lH.e)().getEntityHeading(ie, ye);
+              PH().sq(ee, ee, PH().ZERO, be)
             }
           }
         });
-        else if (!DB) {
-          this.kz.DW.YGB(YB, "smoothToServerPos") || this.kz.DW.RL(YB, "smoothToServerPos");
-          const BB = this.kz.DW.getState(YB, "smoothToServerPos"),
-            OB = this.kz.DW.f4(YB).position;
-          (0, eG.setServerPosition)(BB, OB[0], OB[1], OB[2])
+        else if (!be) {
+          this.uk.sE.gHe(ye, "smoothToServerPos") || this.uk.sE.uL(ye, "smoothToServerPos");
+          const ee = this.uk.sE.getState(ye, "smoothToServerPos"),
+            ie = this.uk.sE.M_(ye).position;
+          (0, sH.setServerPosition)(ee, ie[0], ie[1], ie[2])
         }
       }
-      handleRotationChange(BB, OB, GB) {
-        const YB = "xRotation" === OB ? 0 : "yRotation" === OB ? 1 : 2;
-        for (const DB of (0, EG.d)().getFollowingEntities(BB)) {
-          const BB = this.kz.DW.getState(DB, "meshRotation"),
-            OB = this.kz.DW.nYB(DB);
-          BB && OB.UYB && (BB.serverSetRotation[YB] = GB)
+      handleRotationChange(ee, ie, He) {
+        const ye = "xRotation" === ie ? 0 : "yRotation" === ie ? 1 : 2;
+        for (const be of (0, lH.e)().getFollowingEntities(ee)) {
+          const ee = this.uk.sE.getState(be, "meshRotation"),
+            ie = this.uk.sE.jye(be);
+          ee && ie.sye && (ee.serverSetRotation[ye] = He)
         }
       }
-      handleScaleChange(BB, OB) {
-        const GB = (0, rG.b)(BB);
-        if (xO.o.tM(`entityScale|${GB}`, OB), GB === this.kz.EX) {
-          var YB;
-          (0, EG.d)().removeFromEyeHeightCache(GB);
-          const BB = this.kz.DW.AGB(this.kz.EX),
-            OB = null !== (YB = null === BB || void 0 === BB ? void 0 : BB.physicsState) && void 0 !== YB ? YB : {
-              type: XG.o.DEFAULT,
+      handleScaleChange(ee, ie) {
+        const He = (0, vH.b)(ee);
+        if (eH.h.yR(`entityScale|${He}`, ie), He === this.uk.gC) {
+          var ye;
+          (0, lH.e)().removeFromEyeHeightCache(He);
+          const ee = this.uk.sE.CHe(this.uk.gC),
+            ie = null !== (ye = null === ee || void 0 === ee ? void 0 : ee.physicsState) && void 0 !== ye ? ye : {
+              type: uH.s.DEFAULT,
               tier: null
             };
-          return void(0, EG.d)().updatePositionAndPhysics(this.kz.EX, OB, !1)
+          return void(0, lH.e)().updatePositionAndPhysics(this.uk.gC, ie, !1)
         }
-        const DB = (0, EG.d)().getLifeformType(GB);
-        if (null === DB) return;
+        const be = (0, lH.e)().getLifeformType(He);
+        if (null === be) return;
         const {
-          physicsBodyWidth: QB,
-          physicsBodyHeight: oB
-        } = (0, aG.g)(OB, DB);
-        this.kz.DW.AYB(GB, QB, oB, QB)
+          physicsBodyWidth: Me,
+          physicsBodyHeight: Ke
+        } = (0, jH.g)(ie, be);
+        this.uk.sE.Sye(He, Me, Ke, Me)
       }
-      handleBaseRenderHeadingChange(BB, OB) {
-        const GB = this.kz.DW.getState(BB, "meshRotation");
-        GB && (GB.baseRenderRotation[1] = OB);
-        for (const YB of (0, EG.d)().getFollowingEntities(BB)) {
-          const BB = this.kz.DW.getState(YB, "meshRotation"),
-            GB = this.kz.DW.nYB(YB);
-          BB && GB.UYB && (BB.baseRenderRotation[1] = OB)
+      handleBaseRenderHeadingChange(ee, ie) {
+        const He = this.uk.sE.getState(ee, "meshRotation");
+        He && (He.baseRenderRotation[1] = ie);
+        for (const ye of (0, lH.e)().getFollowingEntities(ee)) {
+          const ee = this.uk.sE.getState(ye, "meshRotation"),
+            He = this.uk.sE.jye(ye);
+          ee && He.sye && (ee.baseRenderRotation[1] = ie)
         }
       }
-      handleFollowingOffsetChange(BB, OB) {
-        const GB = this.kz.DW.nYB((0, rG.b)(BB));
-        if (GB && GB.offset) {
-          const BB = OB ? Array.from(OB) : dG().ZERO;
-          GB.offset[0] = BB[0], GB.offset[1] = BB[1], GB.offset[2] = BB[2]
+      handleFollowingOffsetChange(ee, ie) {
+        const He = this.uk.sE.jye((0, vH.b)(ee));
+        if (He && He.offset) {
+          const ee = ie ? Array.from(ie) : PH().ZERO;
+          He.offset[0] = ee[0], He.offset[1] = ee[1], He.offset[2] = ee[2]
         }
       }
-      handleShouldMatchFollowingEntityRotationChange(BB, OB) {
-        const GB = this.kz.DW.nYB((0, rG.b)(BB));
-        GB && (GB.UYB = null === OB || void 0 === OB || OB)
+      handleShouldMatchFollowingEntityRotationChange(ee, ie) {
+        const He = this.uk.sE.jye((0, vH.b)(ee));
+        He && (He.sye = null === ie || void 0 === ie || ie)
       }
-      handlePositionChange(BB, OB, GB) {
-        if (this.kz.DW.YGB(BB, "smoothToServerPos")) {
-          const YB = this.kz.DW.getState(BB, "smoothToServerPos");
-          (0, eG.setServerPositionAxis)(YB, sG[OB], GB)
+      handlePositionChange(ee, ie, He) {
+        if (this.uk.sE.gHe(ee, "smoothToServerPos")) {
+          const ye = this.uk.sE.getState(ee, "smoothToServerPos");
+          (0, sH.setServerPositionAxis)(ye, QH[ie], He)
         }
       }
       setupItemHandlers() {
-        this.roomStateCallbacks.items.OW(((BB, OB) => {
-          this.allItems[OB] = BB, (0, wG.j)(this.kz, OB, [BB.x, BB.y, BB.z], BB.id, {
-            amount: BB.amount,
-            attributes: JSON.parse(BB.attributes),
-            uQ: (0, tO.c)(this.kz).cantPickUpItem(OB),
-            size: BB.size,
-            predictedAt: (0, EG.d)().client.itemDropPrediction.onServerItemAdded(OB)
+        this.roomStateCallbacks.items.lE(((ee, ie) => {
+          this.allItems[ie] = ee, (0, mH.m)(this.uk, ie, [ee.x, ee.y, ee.z], ee.id, {
+            amount: ee.amount,
+            attributes: JSON.parse(ee.attributes),
+            mM: (0, iH.d)(this.uk).cantPickUpItem(ie),
+            size: ee.size,
+            predictedAt: (0, lH.e)().client.itemDropPrediction.onServerItemAdded(ie)
           });
-          const GB = this.createStateCallbacks(BB);
-          for (const YB of PG(oG)) this.onItemFieldChange(OB, YB, BB[YB]), this.addDetacher(OB, this.listenForFutureChanges(GB, YB, (BB => {
-            this.onItemFieldChange(OB, YB, BB)
+          const He = this.createStateCallbacks(ee);
+          for (const ye of qH(FH)) this.onItemFieldChange(ie, ye, ee[ye]), this.addDetacher(ie, this.listenForFutureChanges(He, ye, (ee => {
+            this.onItemFieldChange(ie, ye, ee)
           })))
-        })), this.roomStateCallbacks.items.Qm(((BB, OB) => {
-          delete this.allItems[OB], this.detach(OB), (0, EG.d)().client.itemDropPrediction.onServerItemRemoved(OB), this.kz.DW.YGB(OB, this.kz.DW.names.itemState) && this.kz.DW.deleteEntity(OB), (0, tO.c)(this.kz).disposeEntity(OB)
+        })), this.roomStateCallbacks.items.JV(((ee, ie) => {
+          delete this.allItems[ie], this.detach(ie), (0, lH.e)().client.itemDropPrediction.onServerItemRemoved(ie), this.uk.sE.gHe(ie, this.uk.sE.names.itemState) && this.uk.sE.deleteEntity(ie), (0, iH.d)(this.uk).disposeEntity(ie)
         }))
       }
-      onItemFieldChange(BB, OB, GB) {
-        if (OB in sG) {
-          if (this.kz.DW.YGB(BB, "itemState")) {
-            const YB = this.kz.DW.getState(BB, "smoothToServerPos");
-            (0, eG.setServerPositionAxis)(YB, sG[OB], GB), (0, EG.d)().client.itemDropPrediction.onServerItemMoved(BB)
+      onItemFieldChange(ee, ie, He) {
+        if (ie in QH) {
+          if (this.uk.sE.gHe(ee, "itemState")) {
+            const ye = this.uk.sE.getState(ee, "smoothToServerPos");
+            (0, sH.setServerPositionAxis)(ye, QH[ie], He), (0, lH.e)().client.itemDropPrediction.onServerItemMoved(ee)
           }
           return
         }
-        if (!this.kz.DW.YGB(BB, "itemState")) return;
-        const YB = this.kz.DW.getState(BB, "itemState");
-        "amount" === OB && GB !== YB.amount && (YB.creationTime = Date.now()), YB[OB] = "attributes" === OB ? JSON.parse(GB) : GB
+        if (!this.uk.sE.gHe(ee, "itemState")) return;
+        const ye = this.uk.sE.getState(ee, "itemState");
+        "amount" === ie && He !== ye.amount && (ye.creationTime = Date.now()), ye[ie] = "attributes" === ie ? JSON.parse(He) : He
       }
       dispose() {
-        if (!this.Vp) {
-          this.Vp = !0, this.kz.off("beforeInputs", this.onFrame), this.kz.off("kP", this.yR), this.queuedSetups.clear(), this.promotedSetups.clear();
-          for (const BB of this.deferredSetups.values()) xO.o.unsubscribe(BB);
-          this.deferredSetups.clear(), this.kz.DW.dL(this.kz.EX, this.kz.DW.names.vW);
-          for (const BB in this.allItems) this.kz.DW.deleteEntity(BB), delete this.allItems[BB];
-          for (const BB of [...this.detachers.keys()]) this.detach(BB);
-          (0, tO.c)(this.kz).clear();
-          for (const BB of (0, EG.d)().client.iterateEntityIds())(0, EG.d)().client.disposeEntity(BB)
+        if (!this.xf) {
+          this.xf = !0, this.uk.off("beforeInputs", this.onFrame), this.uk.off("YR", this.qE), this.queuedSetups.clear(), this.promotedSetups.clear();
+          for (const ee of this.deferredSetups.values()) eH.h.unsubscribe(ee);
+          this.deferredSetups.clear(), this.uk.sE.lL(this.uk.gC, this.uk.sE.names.dW);
+          for (const ee in this.allItems) this.uk.sE.deleteEntity(ee), delete this.allItems[ee];
+          for (const ee of [...this.detachers.keys()]) this.detach(ee);
+          (0, iH.d)(this.uk).clear();
+          for (const ee of (0, lH.e)().client.iterateEntityIds())(0, lH.e)().client.disposeEntity(ee)
         }
       }
     }
-    const CG = [0, 0, 0];
+    const NH = [0, 0, 0];
 
-    function HG(BB) {
-      if ("string" !== typeof BB) return;
-      const OB = BB.indexOf("|"),
-        GB = -1 === OB ? BB : BB.slice(0, OB),
-        YB = tG();
-      return Object.hasOwn(YB, GB) ? YB[GB] : void 0
+    function GH(ee) {
+      if ("string" !== typeof ee) return;
+      const ie = ee.indexOf("|"),
+        He = -1 === ie ? ee : ee.slice(0, ie),
+        ye = iy();
+      return Object.hasOwn(ye, He) ? ye[He] : void 0
     }
-    const vG = new Set;
-    const sG = {
+    const rH = new Set;
+    const QH = {
       x: 0,
       y: 1,
       z: 2
     };
-    let xG = null;
+    let ey = null;
 
-    function tG() {
-      return null !== xG || (xG = {
-        ...Object.fromEntries(DG.j.map((BB => {
+    function iy() {
+      return null !== ey || (ey = {
+        ...Object.fromEntries(KH.j.map((ee => {
           const {
-            RJ: OB
-          } = (0, cG.b)(BB);
-          return [BB, OB]
+            oJ: ie
+          } = (0, SH.b)(ee);
+          return [ee, ie]
         }))),
-        Pebble: pG.c,
-        Snowball: pG.c,
-        "Snowball Launcher": pG.c,
-        "Reinforced Pebble": pG.c,
-        Bullet: pG.c,
-        "Reinforced Ball": pG.c,
-        Ball: pG.c,
-        Mango: pG.c,
-        "Moonstone Orb": pG.c,
-        ...Object.fromEntries(YG.w.map((BB => [(0, WG.ic)(BB), pG.c]))),
-        Arrow: pG.c,
-        "Arrow of Speed": pG.c,
-        "Arrow of Poison": pG.c,
-        "Arrow of Slowness": pG.c,
-        "Arrow of Weakness": pG.c,
-        "Arrow of Knockback": pG.c,
-        "Arrow of Strength": pG.c,
-        "Arrow of Invisibility": pG.c,
-        "Arrow of Jumping": pG.c,
-        "Arrow of Defense": pG.c,
-        "Arrow of Instant Healing": pG.c,
-        "Arrow of Instant Damage": pG.c,
-        "Arrow of Regeneration": pG.c,
-        "Arrow of Haste": pG.c,
-        "Arrow of Shield": pG.c,
-        "Arrow of Double Jump": pG.c,
-        "Arrow of Heat Resistance": pG.c,
-        "Arrow of X-Ray Vision": pG.c,
-        "Arrow of Mining Yield": pG.c,
-        "Arrow of Brain Rot": pG.c,
-        "Arrow of Milk": pG.c,
-        Fireball: pG.c,
-        "Bouncy Bomb": pG.c,
-        RPG: pG.c,
-        "Obby RPG": pG.c,
-        "Super RPG": pG.c,
-        "Grenade Launcher": pG.c,
-        Iceball: pG.c,
-        Coconut: pG.c,
-        "Splash Speed Potion": pG.c,
-        "Splash Defense Potion": pG.c,
-        "Splash Strength Potion": pG.c,
-        "Splash Invisibility Potion": pG.c,
-        "Splash Jump Potion": pG.c,
-        "Splash Knockback Potion": pG.c,
-        "Splash Poison Potion": pG.c,
-        "Splash Speed Potion II": pG.c,
-        "Splash Defense Potion II": pG.c,
-        "Splash Strength Potion II": pG.c,
-        "Splash Jump Potion II": pG.c,
-        "Splash Knockback Potion II": pG.c,
-        "Splash Poison Potion II": pG.c,
-        "Splash Slowness Potion": pG.c,
-        "Splash Slowness Potion II": pG.c,
-        "Splash Weakness Potion": pG.c,
-        "Splash Weakness Potion II": pG.c,
-        "Splash Milk Potion": pG.c,
-        "Splash Instant Damage Potion": pG.c,
-        "Splash Instant Damage Potion II": pG.c,
-        "Splash Instant Healing Potion": pG.c,
-        "Splash Instant Healing Potion II": pG.c,
-        "Splash Regeneration Potion": pG.c,
-        "Splash Regeneration Potion II": pG.c,
-        "Splash Haste Potion": pG.c,
-        "Splash Haste Potion II": pG.c,
-        "Splash Shield Potion": pG.c,
-        "Splash Shield Potion II": pG.c,
-        "Splash Double Jump Potion": pG.c,
-        "Splash Heat Resistance Potion": pG.c,
-        "Splash X-Ray Vision Potion": pG.c,
-        "Splash Mining Yield Potion": pG.c,
-        "Splash Mining Yield Potion II": pG.c,
-        "Splash Brain Rot Potion": pG.c,
-        "Yellow Paintball Gun": pG.c,
-        "White Paintball Gun": pG.c,
-        "Red Paintball Gun": pG.c,
-        "Purple Paintball Gun": pG.c,
-        "Pink Paintball Gun": pG.c,
-        "Orange Paintball Gun": pG.c,
-        "Magenta Paintball Gun": pG.c,
-        "Lime Paintball Gun": pG.c,
-        "Light Gray Paintball Gun": pG.c,
-        "Light Blue Paintball Gun": pG.c,
-        "Green Paintball Gun": pG.c,
-        "Gray Paintball Gun": pG.c,
-        "Cyan Paintball Gun": pG.c,
-        "Brown Paintball Gun": pG.c,
-        "Blue Paintball Gun": pG.c,
-        "Black Paintball Gun": pG.c,
-        "Yellow Heavy Paintball Gun": pG.c,
-        "White Heavy Paintball Gun": pG.c,
-        "Red Heavy Paintball Gun": pG.c,
-        "Purple Heavy Paintball Gun": pG.c,
-        "Pink Heavy Paintball Gun": pG.c,
-        "Orange Heavy Paintball Gun": pG.c,
-        "Magenta Heavy Paintball Gun": pG.c,
-        "Lime Heavy Paintball Gun": pG.c,
-        "Light Gray Heavy Paintball Gun": pG.c,
-        "Light Blue Heavy Paintball Gun": pG.c,
-        "Green Heavy Paintball Gun": pG.c,
-        "Gray Heavy Paintball Gun": pG.c,
-        "Cyan Heavy Paintball Gun": pG.c,
-        "Brown Heavy Paintball Gun": pG.c,
-        "Blue Heavy Paintball Gun": pG.c,
-        "Black Heavy Paintball Gun": pG.c,
-        "Toxin Ball": pG.c,
-        "Splash Aura XP Potion": pG.c,
-        "Splash Aura XP Potion II": pG.c,
-        "Arrow of Aura XP": pG.c,
-        Firecracker: pG.c,
-        "Rainbow Firecracker": pG.c,
-        "White Firecracker": pG.c,
-        "Orange Firecracker": pG.c,
-        "Magenta Firecracker": pG.c,
-        "Light Blue Firecracker": pG.c,
-        "Yellow Firecracker": pG.c,
-        "Lime Firecracker": pG.c,
-        "Pink Firecracker": pG.c,
-        "Gray Firecracker": pG.c,
-        "Light Gray Firecracker": pG.c,
-        "Cyan Firecracker": pG.c,
-        "Purple Firecracker": pG.c,
-        "Blue Firecracker": pG.c,
-        "Brown Firecracker": pG.c,
-        "Green Firecracker": pG.c,
-        "Red Firecracker": pG.c,
-        "Black Firecracker": pG.c,
-        "Firecracker Pebble": pG.c,
-        "Rainbow Firecracker Pebble": pG.c,
-        "White Firecracker Pebble": pG.c,
-        "Orange Firecracker Pebble": pG.c,
-        "Magenta Firecracker Pebble": pG.c,
-        "Light Blue Firecracker Pebble": pG.c,
-        "Yellow Firecracker Pebble": pG.c,
-        "Lime Firecracker Pebble": pG.c,
-        "Pink Firecracker Pebble": pG.c,
-        "Gray Firecracker Pebble": pG.c,
-        "Light Gray Firecracker Pebble": pG.c,
-        "Cyan Firecracker Pebble": pG.c,
-        "Purple Firecracker Pebble": pG.c,
-        "Blue Firecracker Pebble": pG.c,
-        "Brown Firecracker Pebble": pG.c,
-        "Green Firecracker Pebble": pG.c,
-        "Red Firecracker Pebble": pG.c,
-        "Black Firecracker Pebble": pG.c,
-        "Blinding Pebble": pG.c,
-        Poop: pG.c,
-        "Wood Boomerang": pG.c,
-        "Stone Boomerang": pG.c,
-        "Iron Boomerang": pG.c,
-        "Gold Boomerang": pG.c,
-        "Diamond Boomerang": pG.c,
-        "Amethite Boomerang": pG.c,
-        "Magmasteel Boomerang": pG.c,
-        "Rubellite Boomerang": pG.c,
-        "Serpentite Boomerang": pG.c,
-        "Moonstone Boomerang": pG.c,
-        "67 Base Projectile": pG.c,
-        "67 Boosted Projectile": pG.c,
-        "Capitano Grenade": pG.c,
-        "Scatter Pellet": pG.c,
-        "Lucky Bomb": pG.c,
-        "Unlucky Bomb": pG.c,
-        "Swap Orb": pG.c,
-        Mesh: FG,
-        AudioEntity: LG
-      }), xG
+        Pebble: pH.d,
+        Snowball: pH.d,
+        "Snowball Launcher": pH.d,
+        "Reinforced Pebble": pH.d,
+        Bullet: pH.d,
+        "Reinforced Ball": pH.d,
+        Ball: pH.d,
+        Mango: pH.d,
+        "Moonstone Orb": pH.d,
+        ...Object.fromEntries(MH.r.map((ee => [(0, gH.cc)(ee), pH.d]))),
+        Arrow: pH.d,
+        "Arrow of Speed": pH.d,
+        "Arrow of Poison": pH.d,
+        "Arrow of Slowness": pH.d,
+        "Arrow of Weakness": pH.d,
+        "Arrow of Knockback": pH.d,
+        "Arrow of Strength": pH.d,
+        "Arrow of Invisibility": pH.d,
+        "Arrow of Jumping": pH.d,
+        "Arrow of Defense": pH.d,
+        "Arrow of Instant Healing": pH.d,
+        "Arrow of Instant Damage": pH.d,
+        "Arrow of Regeneration": pH.d,
+        "Arrow of Haste": pH.d,
+        "Arrow of Shield": pH.d,
+        "Arrow of Double Jump": pH.d,
+        "Arrow of Heat Resistance": pH.d,
+        "Arrow of X-Ray Vision": pH.d,
+        "Arrow of Mining Yield": pH.d,
+        "Arrow of Brain Rot": pH.d,
+        "Arrow of Milk": pH.d,
+        Fireball: pH.d,
+        "Bouncy Bomb": pH.d,
+        RPG: pH.d,
+        "Obby RPG": pH.d,
+        "Super RPG": pH.d,
+        "Grenade Launcher": pH.d,
+        Iceball: pH.d,
+        Coconut: pH.d,
+        "Splash Speed Potion": pH.d,
+        "Splash Defense Potion": pH.d,
+        "Splash Strength Potion": pH.d,
+        "Splash Invisibility Potion": pH.d,
+        "Splash Jump Potion": pH.d,
+        "Splash Knockback Potion": pH.d,
+        "Splash Poison Potion": pH.d,
+        "Splash Speed Potion II": pH.d,
+        "Splash Defense Potion II": pH.d,
+        "Splash Strength Potion II": pH.d,
+        "Splash Jump Potion II": pH.d,
+        "Splash Knockback Potion II": pH.d,
+        "Splash Poison Potion II": pH.d,
+        "Splash Slowness Potion": pH.d,
+        "Splash Slowness Potion II": pH.d,
+        "Splash Weakness Potion": pH.d,
+        "Splash Weakness Potion II": pH.d,
+        "Splash Milk Potion": pH.d,
+        "Splash Instant Damage Potion": pH.d,
+        "Splash Instant Damage Potion II": pH.d,
+        "Splash Instant Healing Potion": pH.d,
+        "Splash Instant Healing Potion II": pH.d,
+        "Splash Regeneration Potion": pH.d,
+        "Splash Regeneration Potion II": pH.d,
+        "Splash Haste Potion": pH.d,
+        "Splash Haste Potion II": pH.d,
+        "Splash Shield Potion": pH.d,
+        "Splash Shield Potion II": pH.d,
+        "Splash Double Jump Potion": pH.d,
+        "Splash Heat Resistance Potion": pH.d,
+        "Splash X-Ray Vision Potion": pH.d,
+        "Splash Mining Yield Potion": pH.d,
+        "Splash Mining Yield Potion II": pH.d,
+        "Splash Brain Rot Potion": pH.d,
+        "Yellow Paintball Gun": pH.d,
+        "White Paintball Gun": pH.d,
+        "Red Paintball Gun": pH.d,
+        "Purple Paintball Gun": pH.d,
+        "Pink Paintball Gun": pH.d,
+        "Orange Paintball Gun": pH.d,
+        "Magenta Paintball Gun": pH.d,
+        "Lime Paintball Gun": pH.d,
+        "Light Gray Paintball Gun": pH.d,
+        "Light Blue Paintball Gun": pH.d,
+        "Green Paintball Gun": pH.d,
+        "Gray Paintball Gun": pH.d,
+        "Cyan Paintball Gun": pH.d,
+        "Brown Paintball Gun": pH.d,
+        "Blue Paintball Gun": pH.d,
+        "Black Paintball Gun": pH.d,
+        "Yellow Heavy Paintball Gun": pH.d,
+        "White Heavy Paintball Gun": pH.d,
+        "Red Heavy Paintball Gun": pH.d,
+        "Purple Heavy Paintball Gun": pH.d,
+        "Pink Heavy Paintball Gun": pH.d,
+        "Orange Heavy Paintball Gun": pH.d,
+        "Magenta Heavy Paintball Gun": pH.d,
+        "Lime Heavy Paintball Gun": pH.d,
+        "Light Gray Heavy Paintball Gun": pH.d,
+        "Light Blue Heavy Paintball Gun": pH.d,
+        "Green Heavy Paintball Gun": pH.d,
+        "Gray Heavy Paintball Gun": pH.d,
+        "Cyan Heavy Paintball Gun": pH.d,
+        "Brown Heavy Paintball Gun": pH.d,
+        "Blue Heavy Paintball Gun": pH.d,
+        "Black Heavy Paintball Gun": pH.d,
+        "Toxin Ball": pH.d,
+        "Splash Aura XP Potion": pH.d,
+        "Splash Aura XP Potion II": pH.d,
+        "Arrow of Aura XP": pH.d,
+        Firecracker: pH.d,
+        "Rainbow Firecracker": pH.d,
+        "White Firecracker": pH.d,
+        "Orange Firecracker": pH.d,
+        "Magenta Firecracker": pH.d,
+        "Light Blue Firecracker": pH.d,
+        "Yellow Firecracker": pH.d,
+        "Lime Firecracker": pH.d,
+        "Pink Firecracker": pH.d,
+        "Gray Firecracker": pH.d,
+        "Light Gray Firecracker": pH.d,
+        "Cyan Firecracker": pH.d,
+        "Purple Firecracker": pH.d,
+        "Blue Firecracker": pH.d,
+        "Brown Firecracker": pH.d,
+        "Green Firecracker": pH.d,
+        "Red Firecracker": pH.d,
+        "Black Firecracker": pH.d,
+        "Firecracker Pebble": pH.d,
+        "Rainbow Firecracker Pebble": pH.d,
+        "White Firecracker Pebble": pH.d,
+        "Orange Firecracker Pebble": pH.d,
+        "Magenta Firecracker Pebble": pH.d,
+        "Light Blue Firecracker Pebble": pH.d,
+        "Yellow Firecracker Pebble": pH.d,
+        "Lime Firecracker Pebble": pH.d,
+        "Pink Firecracker Pebble": pH.d,
+        "Gray Firecracker Pebble": pH.d,
+        "Light Gray Firecracker Pebble": pH.d,
+        "Cyan Firecracker Pebble": pH.d,
+        "Purple Firecracker Pebble": pH.d,
+        "Blue Firecracker Pebble": pH.d,
+        "Brown Firecracker Pebble": pH.d,
+        "Green Firecracker Pebble": pH.d,
+        "Red Firecracker Pebble": pH.d,
+        "Black Firecracker Pebble": pH.d,
+        "Blinding Pebble": pH.d,
+        Poop: pH.d,
+        "Wood Boomerang": pH.d,
+        "Stone Boomerang": pH.d,
+        "Iron Boomerang": pH.d,
+        "Gold Boomerang": pH.d,
+        "Diamond Boomerang": pH.d,
+        "Amethite Boomerang": pH.d,
+        "Magmasteel Boomerang": pH.d,
+        "Rubellite Boomerang": pH.d,
+        "Serpentite Boomerang": pH.d,
+        "Moonstone Boomerang": pH.d,
+        "67 Base Projectile": pH.d,
+        "67 Boosted Projectile": pH.d,
+        "Capitano Grenade": pH.d,
+        "Scatter Pellet": pH.d,
+        "Lucky Bomb": pH.d,
+        "Unlucky Bomb": pH.d,
+        "Swap Orb": pH.d,
+        Mesh: cH,
+        AudioEntity: LH
+      }), ey
     }
   },
-  39726: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      e: () => oB
+  39814: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => Me,
+      i: () => Ke
     });
-    var YB = GB(641),
-      DB = GB(38375);
-    const QB = 4e4;
-    class oB {
+    var ye = He(610),
+      be = He(38536);
+    const Me = 4e4;
+    class Ke {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
-        this.now = BB, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
+        this.now = ee, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
       }
-      noteEdit(BB, OB, GB) {
-        const QB = (0, YB.V)(BB),
-          oB = (0, YB.V)(OB),
-          jB = (0, YB.V)(GB),
-          yB = this.now();
-        if (QB !== this.lastChunkX || oB !== this.lastChunkY || jB !== this.lastChunkZ) {
-          this.lastChunkX = QB, this.lastChunkY = oB, this.lastChunkZ = jB, this.lastChunkId = (0, DB.c)(QB, oB, jB), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, yB);
-          for (const [BB, OB] of this.editedAt) {
-            if (OB >= yB - 3e5) break;
-            this.editedAt.delete(BB)
+      noteEdit(ee, ie, He) {
+        const Me = (0, ye.W)(ee),
+          Ke = (0, ye.W)(ie),
+          Ue = (0, ye.W)(He),
+          Fe = this.now();
+        if (Me !== this.lastChunkX || Ke !== this.lastChunkY || Ue !== this.lastChunkZ) {
+          this.lastChunkX = Me, this.lastChunkY = Ke, this.lastChunkZ = Ue, this.lastChunkId = (0, be.c)(Me, Ke, Ue), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, Fe);
+          for (const [ee, ie] of this.editedAt) {
+            if (ie >= Fe - 3e5) break;
+            this.editedAt.delete(ee)
           }
-        } else this.editedAt.set(this.lastChunkId, yB)
+        } else this.editedAt.set(this.lastChunkId, Fe)
       }
-      chunksEditedSince(BB) {
-        const OB = [];
-        for (const [GB, YB] of this.editedAt) YB >= BB && OB.push(GB);
-        return OB
+      chunksEditedSince(ee) {
+        const ie = [];
+        for (const [He, ye] of this.editedAt) ye >= ee && ie.push(He);
+        return ie
       }
     }
   },
-  39774: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => lO,
-      c: () => EO,
-      f: () => mO,
-      j: () => cO
+  39857: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => qi,
+      g: () => li,
+      h: () => Vi,
+      i: () => Si
     });
-    var YB = GB(4111),
-      DB = GB(9439),
-      QB = GB(37353),
-      oB = GB(1468),
-      jB = GB(37434),
-      yB = GB(39675),
-      JB = GB(39661),
-      MB = GB(4166),
-      PB = GB(38549),
-      zB = GB(39776),
-      lB = GB(1238),
-      pB = GB(331),
-      qB = GB(25),
-      ZB = GB(2050),
-      NB = GB(92),
-      RB = GB(31),
-      WB = GB(2085),
-      AB = GB(1998),
-      VB = GB(3339);
-    class SB {
-      constructor(BB) {
-        this.storeForMs = BB, this.clicks = new VB.d
+    var ye = He(4075),
+      be = He(9505),
+      Me = He(37501),
+      Ke = He(1425),
+      Ue = He(37574),
+      Fe = He(39767),
+      Je = He(39756),
+      oe = He(4142),
+      Re = He(38705),
+      ke = He(39860),
+      qe = He(1189),
+      fe = He(335),
+      Te = He(27),
+      pe = He(2018),
+      Xe = He(97),
+      ze = He(35),
+      Be = He(2046),
+      Ee = He(1952),
+      ge = He(3210);
+    class Oe {
+      constructor(ee) {
+        this.storeForMs = ee, this.clicks = new ge.d
       }
       click() {
         this.clicks.enqueue(Date.now());
-        const BB = Date.now() - this.storeForMs;
-        for (; this.clicks.size > 0 && this.clicks.peek() < BB;) this.clicks.dequeue()
+        const ee = Date.now() - this.storeForMs;
+        for (; this.clicks.size > 0 && this.clicks.peek() < ee;) this.clicks.dequeue()
       }
-      getNumClicksInMs(BB) {
-        let OB = 0;
-        return this.clicks.forEach((GB => {
-          GB > Date.now() - BB && OB++
-        })), OB
+      getNumClicksInMs(ee) {
+        let ie = 0;
+        return this.clicks.forEach((He => {
+          He > Date.now() - ee && ie++
+        })), ie
       }
-      getMaxClickSeparationInMs(BB) {
+      getMaxClickSeparationInMs(ee) {
         if (0 === this.clicks.size) return this.storeForMs;
-        let OB = 0,
-          GB = Date.now() - BB;
-        this.clicks.forEach((YB => {
-          YB < Date.now() - BB || (OB = Math.max(OB, Math.abs(YB - GB)), GB = YB)
+        let ie = 0,
+          He = Date.now() - ee;
+        this.clicks.forEach((ye => {
+          ye < Date.now() - ee || (ie = Math.max(ie, Math.abs(ye - He)), He = ye)
         }));
-        const YB = Math.abs(Date.now() - GB);
-        return Math.max(OB, YB)
+        const ye = Math.abs(Date.now() - He);
+        return Math.max(ie, ye)
       }
     }
-    class nB {
-      constructor(BB) {
-        this.storeForMs = BB, this.clickDownDurations = new VB.d
+    class de {
+      constructor(ee) {
+        this.storeForMs = ee, this.clickDownDurations = new ge.d
       }
-      registerClickDownDuration(BB) {
+      registerClickDownDuration(ee) {
         this.clickDownDurations.enqueue({
-          dur: BB,
+          dur: ee,
           atTime: Date.now()
         });
-        const OB = Date.now() - this.storeForMs;
-        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < OB;) this.clickDownDurations.dequeue()
+        const ie = Date.now() - this.storeForMs;
+        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < ie;) this.clickDownDurations.dequeue()
       }
-      clickDownDurationsCheck(BB) {
-        if (BB > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
-        let OB = 0,
-          GB = 0;
-        return this.clickDownDurations.forEach((YB => {
-          YB.atTime > Date.now() - BB && (OB++, GB = Math.max(GB, YB.dur))
-        })), `${OB}:${GB}`
+      clickDownDurationsCheck(ee) {
+        if (ee > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
+        let ie = 0,
+          He = 0;
+        return this.clickDownDurations.forEach((ye => {
+          ye.atTime > Date.now() - ee && (ie++, He = Math.max(He, ye.dur))
+        })), `${ie}:${He}`
       }
     }
-    var UB = GB(37166),
-      fB = GB(39782),
-      kB = GB(16),
-      dB = GB(3088),
-      KB = GB(1350),
-      uB = GB(2643),
-      mB = GB(4869),
-      IB = GB(120),
-      FB = GB(38816),
-      iB = GB(39045),
-      LB = GB(641),
-      gB = GB(37163),
-      rB = GB(6),
-      XB = GB(9927),
-      wB = GB(1217),
-      EB = GB(192),
-      cB = GB(39791),
-      hB = GB(39794),
-      aB = GB(39797),
-      eB = GB(38851),
-      TB = GB(39813),
-      bB = GB(38762),
-      CB = GB(3824),
-      HB = GB(1699),
-      vB = GB(37267),
-      sB = GB(3136),
-      xB = GB(37054),
-      tB = GB(37058),
-      BO = GB(39804),
-      OO = GB(38626);
-    const GO = {
+    var We = He(37301),
+      te = He(39867),
+      Ze = He(18),
+      we = He(2969),
+      De = He(1305),
+      Pe = He(2518),
+      Ae = He(4833),
+      Ye = He(125),
+      Ve = He(38965),
+      ae = He(39177),
+      ce = He(610),
+      xe = He(37294),
+      Le = He(8),
+      Ce = He(9961),
+      ve = He(1169),
+      ue = He(186),
+      me = He(39874),
+      le = He(39879),
+      Se = He(39888),
+      ne = He(38996),
+      je = He(39900),
+      se = He(38915),
+      Ie = He(3752),
+      he = He(1620),
+      Ne = He(37424),
+      Ge = He(3037),
+      re = He(37161),
+      Qe = He(37163),
+      ei = He(39896),
+      ii = He(38779);
+    const Hi = {
       forward: "freeCamForward",
       backward: "freeCamBackward",
       left: "freeCamLeft",
@@ -2869,409 +2869,424 @@ export const modules = {
       crouch: "freeCamDown"
     };
 
-    function YO() {
-      var BB, OB;
-      return !(null === (BB = (0, dB.d)().client) || void 0 === BB || null === (OB = BB.freeCameraController) || void 0 === OB || !OB.movesFly())
+    function yi() {
+      var ee, ie;
+      return !(null === (ee = (0, we.e)().client) || void 0 === ee || null === (ie = ee.freeCameraController) || void 0 === ie || !ie.movesFly())
     }
 
-    function DO(BB) {
-      const OB = BB.on.bind(BB);
-      BB.on = (BB, GB) => {
-        WB.y.has(BB) ? OB(BB, GB) : OB(BB, (OB => {
-          var YB;
-          return null !== (YB = (0, dB.d)().client) && void 0 !== YB && YB.isReplayMode() ? function(BB) {
-            return BB in GO
-          }(BB) && YO() ? GB(OB) : void 0 : GB(OB)
+    function bi(ee) {
+      const ie = ee.on.bind(ee);
+      ee.on = (ee, He) => {
+        Be.B.has(ee) ? ie(ee, He) : ie(ee, (ie => {
+          var ye;
+          return null !== (ye = (0, we.e)().client) && void 0 !== ye && ye.isReplayMode() ? function(ee) {
+            return ee in Hi
+          }(ee) && yi() ? He(ie) : void 0 : He(ie)
         }))
       }
     }
-    const QO = 5e3,
-      oO = 1;
-    let jO, yO = oO,
-      JO = 0;
-    const MO = !0;
-    let PO = MO;
-    ZB.e.subscribe("_ignoreBasicBoards", (BB => {
-      PO = BB
-    })), (0, YB.onGameReset)((() => {
-      PO = MO
+    const Mi = 5e3,
+      Ki = 1;
+    let Ui, Fi = Ki,
+      Ji = 0;
+    const oi = !0;
+    let Ri = oi;
+    pe.c.subscribe("_ignoreBasicBoards", (ee => {
+      Ri = ee
+    })), (0, ye.onGameReset)((() => {
+      Ri = oi
     }));
-    let zO = null;
-    const lO = () => zO;
-    let pO, qO, ZO;
-    var NO, RO, WO, AO, VO, SO, nO, UO, fO;
-    const kO = [2, 0, 1, "h", 150, "a", 57, 160, 5, "f", "d", 8, 255, "length", 69, "e", "undefined", void 0, 189, "c", 32, 122, 63, 6, "fromCodePoint", 7, 12, "push", 250, 9, 91, 110, 8191, 88, 13, 14, 4, 3, 90, "i", "g", 169, 119, 161, "b", 64, 233, !1, 168, 25, 82, "js", null, 228, 156, 50, 186, !0, 246, 46, 238];
+    let ki = null;
+    const qi = () => ki;
+    let fi, Ti, Xi;
+    var zi, Bi, Ei, gi, Oi, di, Wi, ti, Zi;
+    const wi = [8, 0, 1, "h", "c", 55, 9, "g", 220, 6, 26, 255, "length", "b", 2, 3, "a", 4, "undefined", void 0, "d", 63, "fromCodePoint", 7, 12, "push", 137, 91, 8191, 88, 13, 14, 127, "i", "e", 183, 68, 83, 65, 51, 46, 5, "f", 128, 235, 122, null, 59, 121, 145, 42, 115, 33, 109, 225, !1, 174, 195, 237, 181, 15, 221, 248, 60];
 
-    function dO(...BB) {
-      return BB[kO[13]] = kO[2], typeof AO !== kO[16] && AO ? (new AO).decode(new VO(BB[kO[1]])) : typeof SO !== kO[16] && SO ? SO.from(BB[kO[1]]).toString("utf-8") : fO(BB[kO[1]])
-    }
-
-    function KO() {}
-
-    function uO() {
-      uO = function() {}
-    }
-
-    function mO(BB) {
-      function OB() {
-        return BB.DW.MYB(BB.EX)
-      }
-      DO(BB.inputs.down), DO(BB.inputs.up);
-      for (const YB of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
-        const OB = (OB, GB) => {
-          var DB, QB;
-          if (YO()) {
-            var oB;
-            const DB = GO[YB];
-            var jB, yB;
-            if (DB) null === (jB = (0, dB.d)().client) || void 0 === jB || null === (yB = jB.freeCameraController) || void 0 === yB || yB.handlefreeCamKeyPress(DB, OB, GB);
-            return void(GB || null !== (oB = (0, dB.d)().client) && void 0 !== oB && oB.isReplayMode() || (BB.DW.qYB()[YB] = !1))
-          }
-          if (null !== (DB = (0, dB.d)().client) && void 0 !== DB && null !== (QB = DB.freeCameraController) && void 0 !== QB && QB.isKeyPressOverriden(OB)) return;
-          BB.DW.qYB()[YB] = GB
-        };
-        BB.inputs.down.on(YB, (BB => OB(BB, !0))), BB.inputs.up.on(YB, (BB => OB(BB, !1)))
-      }
-      BB.inputs.down.on("crouch", (() => {
-        if (YO()) return;
-        if (!BB.xR.canCrouch) return;
-        const OB = BB.DW.qYB();
-        kB.c.get("clientEscMenuOptions").crouchIsToggle && (OB.crouchToggled = !OB.crouchToggled && !OB.padSneakToggled), OB.padSneakToggled = !1
-      }));
-      const GB = () => {
-        const BB = OB();
-        BB.isGun() && BB.inaccuracyCalculator.jump()
-      };
-      BB.inputs.down.on("jump", (BB => {
-        YO() || (GB(), pO(BB))
-      }));
-      for (const YB of WB.k) BB.inputs.down.on(YB, (BB => {
-        var OB, GB;
-        null !== (OB = (0, dB.d)().client) && void 0 !== OB && null !== (GB = OB.freeCameraController) && void 0 !== GB && GB.handlefreeCamKeyPress(YB, BB, !0) && (BB.preventDefault(), BB.stopPropagation())
-      })), BB.inputs.up.on(YB, (BB => {
-        var OB, GB;
-        null !== (OB = (0, dB.d)().client) && void 0 !== OB && null !== (GB = OB.freeCameraController) && void 0 !== GB && GB.handlefreeCamKeyPress(YB, BB, !1) && (BB.preventDefault(), BB.stopPropagation())
-      }));
-      BB.inputs.down.on("recordGame", (() => {
-        var BB, OB;
-        null === (BB = (0, dB.d)().client) || void 0 === BB || null === (OB = BB.gameRecorder) || void 0 === OB || OB.toggleRecording()
-      })), BB.inputs.down.on("recordClip", (() => {
-        var BB, OB;
-        (0, UB.b)() || null === (BB = (0, dB.d)().client) || void 0 === BB || null === (OB = BB.gameRecorder) || void 0 === OB || OB.saveClip()
-      }));
-      for (const YB of WB.y) BB.inputs.down.on(YB, (() => {
-        var BB;
-        if ((0, fB.b)()) return;
-        if ("replayViewerOpen" === YB) return void qB.o.tM("replayViewer|requested", "toggle");
-        const OB = null === (BB = (0, dB.d)().client) || void 0 === BB ? void 0 : BB.gameReplayer;
-        ((0, UB.b)() || null !== OB && void 0 !== OB && OB.isReplayMode()) && (null === OB || void 0 === OB || OB.handleAction(YB))
-      }));
-      const oB = new SB(3e4),
-        PB = new nB(4e4);
-      let zB = 0;
-      const RB = BB => {
-          let OB = 0,
-            GB = null;
-          const YB = OB => null !== OB && OB === GB && (GB = null, BB(), !0);
-          return {
-            press: () => (OB++, (0, cB.c)() || (YB(GB), GB = OB), OB),
-            owns: BB => BB === GB,
-            release: YB
-          }
-        },
-        VB = (BB, GB) => {
-          GB && cO(lB.b.TouchDownFirePrimary), BB ? XB() : ((0, iB.f)(), OB().QDB()), GB || cO(lB.b.DownFirePrimary), EO(!0), oB.click();
-          const DB = oB.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
-            QB = oB.getMaxClickSeparationInMs(1e4) < 20,
-            jB = oB.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
-          if (DB || QB || jB) {
-            let BB;
-            if (DB) BB = 30;
-            else if (QB) BB = 50;
+    function Di(...ee) {
+      return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = function(...ee) {
+        for (Yi(ee[wi[12]] = wi[2], ee[wi[5]] = 'xnD(^FUEV.d:]tCuByA{hPmvp[JRI2oTj!b8L*K5f@6NzH;k,/_G~"l3SO?aXi=crYg}Z0WM14wQ|`>$e+#q7%<s9&)', ee[wi[0]] = "" + (ee[wi[1]] || ""), ee[wi[4]] = ee[wi[0]].length, ee[wi[10]] = [], ee[wi[8]] = wi[1], ee[wi[9]] = wi[1], ee[wi[7]] = -wi[2]), ee[wi[3]] = wi[1]; ee[wi[3]] < ee[wi[4]]; ee[wi[3]]++)
+          if (ee[wi[6]] = ee[wi[5]].indexOf(ee[wi[0]][ee[wi[3]]]), ee[wi[6]] !== -wi[2])
+            if (ee[wi[7]] < wi[1]) ee[wi[7]] = ee[wi[6]];
             else {
-              if (!jB) throw new Error("???");
-              BB = 70
-            }(0, YB.sendColyMessage)(MB.ek, BB)
+              Yi(ee[wi[7]] += ee[wi[6]] * wi[27], ee[wi[8]] |= ee[wi[7]] << ee[wi[9]], ee[wi[9]] += (ee[wi[7]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
+              do {
+                Yi(ee[wi[10]].push(ee[wi[8]] & wi[11]), ee[wi[8]] >>= wi[0], ee[wi[9]] -= wi[0])
+              } while (ee[wi[9]] > wi[23]);
+              ee[wi[7]] = -wi[2]
+            } return ee[wi[7]] > -wi[2] && ee[wi[10]].push((ee[wi[8]] | ee[wi[7]] << ee[wi[9]]) & wi[11]), Pi(ee[wi[10]])
+      }(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
+    }
+
+    function Pi(ee) {
+      return typeof gi !== wi[18] && gi ? (new gi).decode(new Oi(ee)) : typeof di !== wi[18] && di ? di.from(ee).toString("utf-8") : Zi(ee)
+    }
+
+    function Ai() {}
+
+    function Yi() {
+      Yi = function() {}
+    }
+
+    function Vi(ee) {
+      function ie() {
+        return ee.sE.Vye(ee.gC)
+      }
+      bi(ee.inputs.down), bi(ee.inputs.up);
+      for (const ye of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
+        const ie = (ie, He) => {
+          var be, Me;
+          if (yi()) {
+            var Ke;
+            const be = Hi[ye];
+            var Ue, Fe;
+            if (be) null === (Ue = (0, we.e)().client) || void 0 === Ue || null === (Fe = Ue.freeCameraController) || void 0 === Fe || Fe.handlefreeCamKeyPress(be, ie, He);
+            return void(He || null !== (Ke = (0, we.e)().client) && void 0 !== Ke && Ke.isReplayMode() || (ee.sE.Cye()[ye] = !1))
+          }
+          if (null !== (be = (0, we.e)().client) && void 0 !== be && null !== (Me = be.freeCameraController) && void 0 !== Me && Me.isKeyPressOverriden(ie)) return;
+          ee.sE.Cye()[ye] = He
+        };
+        ee.inputs.down.on(ye, (ee => ie(ee, !0))), ee.inputs.up.on(ye, (ee => ie(ee, !1)))
+      }
+      ee.inputs.down.on("crouch", (() => {
+        if (yi()) return;
+        if (!ee.uE.canCrouch) return;
+        const ie = ee.sE.Cye();
+        Ze.e.get("clientEscMenuOptions").crouchIsToggle && (ie.crouchToggled = !ie.crouchToggled && !ie.padSneakToggled), ie.padSneakToggled = !1
+      }));
+      const He = () => {
+        const ee = ie();
+        ee.isGun() && ee.inaccuracyCalculator.jump()
+      };
+      ee.inputs.down.on("jump", (ee => {
+        yi() || (He(), fi(ee))
+      }));
+      for (const ye of Be.j) ee.inputs.down.on(ye, (ee => {
+        var ie, He;
+        null !== (ie = (0, we.e)().client) && void 0 !== ie && null !== (He = ie.freeCameraController) && void 0 !== He && He.handlefreeCamKeyPress(ye, ee, !0) && (ee.preventDefault(), ee.stopPropagation())
+      })), ee.inputs.up.on(ye, (ee => {
+        var ie, He;
+        null !== (ie = (0, we.e)().client) && void 0 !== ie && null !== (He = ie.freeCameraController) && void 0 !== He && He.handlefreeCamKeyPress(ye, ee, !1) && (ee.preventDefault(), ee.stopPropagation())
+      }));
+      ee.inputs.down.on("recordGame", (() => {
+        var ee, ie;
+        null === (ee = (0, we.e)().client) || void 0 === ee || null === (ie = ee.gameRecorder) || void 0 === ie || ie.toggleRecording()
+      })), ee.inputs.down.on("recordClip", (() => {
+        var ee, ie;
+        (0, We.e)() || null === (ee = (0, we.e)().client) || void 0 === ee || null === (ie = ee.gameRecorder) || void 0 === ie || ie.saveClip()
+      }));
+      for (const ye of Be.B) ee.inputs.down.on(ye, (() => {
+        var ee;
+        if ((0, te.d)()) return;
+        if ("replayViewerOpen" === ye) return void Te.h.yR("replayViewer|requested", "toggle");
+        const ie = null === (ee = (0, we.e)().client) || void 0 === ee ? void 0 : ee.gameReplayer;
+        ((0, We.e)() || null !== ie && void 0 !== ie && ie.isReplayMode()) && (null === ie || void 0 === ie || ie.handleAction(ye))
+      }));
+      const Ke = new Oe(3e4),
+        Re = new de(4e4);
+      let ke = 0;
+      const ze = ee => {
+          let ie = 0,
+            He = null;
+          const ye = ie => null !== ie && ie === He && (He = null, ee(), !0);
+          return {
+            press: () => (ie++, (0, me.c)() || (ye(He), He = ie), ie),
+            owns: ee => ee === He,
+            release: ye
           }
         },
-        mB = new hB.c,
-        IB = RB((() => {
-          hB.c.stopRunning();
-          const BB = Date.now() - zB;
-          PB.registerClickDownDuration(BB), OB().GDB(), cO(lB.b.UpFirePrimary), EO(!1);
-          const GB = PB.clickDownDurationsCheck(4e4);
-          (0, YB.sendColyMessage)(MB.Kg, GB)
-        }));
-      let FB = 0;
-      BB.inputs.down.on("primary-fire", (function(BB) {
-        FB = IB.press(), IB.owns(FB) && (zB = Date.now(), Math.abs(performance.now() - BB.timeStamp) > 5e3 || (VB(BB.altKey, "changedTouches" in BB), pO(BB)))
-      })), BB.inputs.up.on("primary-fire", (function(BB) {
-        IB.release(FB) && pO(BB, !0)
-      }));
-      const LB = () => {
-          OB().LMB(), cO(lB.b.DownFireSecondary), EO(!0), BB.hOB && !BB.hOB.position && (0, JB.g)()
+        ge = (ee, He) => {
+          He && Si(qe.b.TouchDownFirePrimary), ee ? Ce() : ((0, ae.i)(), ie().wbe()), He || Si(qe.b.DownFirePrimary), li(!0), Ke.click();
+          const be = Ke.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
+            Me = Ke.getMaxClickSeparationInMs(1e4) < 20,
+            Ue = Ke.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
+          if (be || Me || Ue) {
+            let ee;
+            if (be) ee = 30;
+            else if (Me) ee = 50;
+            else {
+              if (!Ue) throw new Error("???");
+              ee = 70
+            }(0, ye.sendColyMessage)(oe.lk, ee)
+          }
         },
-        gB = RB((() => {
-          OB().ODB(), cO(lB.b.UpFireSecondary), EO(!1)
+        Ae = new le.b,
+        Ye = ze((() => {
+          le.b.stopRunning();
+          const ee = Date.now() - ke;
+          Re.registerClickDownDuration(ee), ie().Wbe(), Si(qe.b.UpFirePrimary), li(!1);
+          const He = Re.clickDownDurationsCheck(4e4);
+          (0, ye.sendColyMessage)(oe.og, He)
         }));
-      let rB = 0;
-      BB.inputs.down.on("alt-fire", (function(BB) {
-        rB = gB.press(), gB.owns(rB) && (LB(), pO(BB))
-      })), BB.inputs.up.on("alt-fire", (function(BB) {
-        gB.release(rB) && pO(BB, !0)
+      let Ve = 0;
+      ee.inputs.down.on("primary-fire", (function(ee) {
+        Ve = Ye.press(), Ye.owns(Ve) && (ke = Date.now(), Math.abs(performance.now() - ee.timeStamp) > 5e3 || (ge(ee.altKey, "changedTouches" in ee), fi(ee)))
+      })), ee.inputs.up.on("primary-fire", (function(ee) {
+        Ye.release(Ve) && fi(ee, !0)
       }));
-      const XB = () => OB().wMB();
-      BB.inputs.down.on("mid-fire", (() => {
-        (0, cB.c)() || XB()
-      }));
-      const TB = BB => {
-          (0, YB.sendColyMessage)(MB.Oh, BB, !0)
+      const ce = () => {
+          ie().RRe(), Si(qe.b.DownFireSecondary), li(!0), ee.FHe && !ee.FHe.position && (0, Je.l)()
         },
-        jO = BB => {
-          (0, YB.sendColyMessage)(MB.Rh, {
-            vJ: BB,
-            sJ: MO()
+        xe = ze((() => {
+          ie().dbe(), Si(qe.b.UpFireSecondary), li(!1)
+        }));
+      let Le = 0;
+      ee.inputs.down.on("alt-fire", (function(ee) {
+        Le = xe.press(), xe.owns(Le) && (ce(), fi(ee))
+      })), ee.inputs.up.on("alt-fire", (function(ee) {
+        xe.release(Le) && fi(ee, !0)
+      }));
+      const Ce = () => ie().fRe();
+      ee.inputs.down.on("mid-fire", (() => {
+        (0, me.c)() || Ce()
+      }));
+      const je = ee => {
+          (0, ye.sendColyMessage)(oe.Kh, ee, !0)
+        },
+        Ui = ee => {
+          (0, ye.sendColyMessage)(oe.Oh, {
+            mJ: ee,
+            lJ: oi()
           }, !0)
         };
-      for (const YB of ["SpecialAction1", "SpecialAction2"]) BB.inputs.down.on(YB, (() => {
-        TB(YB)
-      })), BB.inputs.up.on(YB, (() => {
-        jO(YB)
+      for (const ye of ["SpecialAction1", "SpecialAction2"]) ee.inputs.down.on(ye, (() => {
+        je(ye)
+      })), ee.inputs.up.on(ye, (() => {
+        Ui(ye)
       }));
-      const JO = () => {
-        const BB = OB();
-        BB.isGun() && BB.reload(Date.now())
+      const Ji = () => {
+        const ee = ie();
+        ee.isGun() && ee.reload(Date.now())
       };
-      BB.inputs.down.on("ReloadGun", JO);
-      const MO = () => {
-        let OB = "a";
-        return BB.physics.testSolid.toString().includes("Cz") || (OB = "b"), OB
+      ee.inputs.down.on("ReloadGun", Ji);
+      const oi = () => {
+        let ie = "a";
+        return ee.physics.testSolid.toString().includes("Mq") || (ie = "b"), ie
       };
-      BB.inputs.down.on("OpenInventory", (BB => {
-        BB.preventDefault(), (0, HB.D)(BB, "inventory", (0, aB.b)((0, dB.g)()))
-      })), BB.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
-      const PO = BB => {
-        qB.o.tM("DropItemKeyPressed", BB)
+      ee.inputs.down.on("OpenInventory", (ee => {
+        ee.preventDefault(), (0, he.w)(ee, "inventory", (0, Se.c)((0, we.h)()))
+      })), ee.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
+      const Ri = ee => {
+        Te.h.yR("DropItemKeyPressed", ee)
       };
-      BB.inputs.down.on("DropItem", (() => {
-        PO(BB.DW.qYB().crouch)
-      })), BB.inputs.down.on("OpenShop", (OB => {
-        (0, UB.b)() || "inGame" === kB.c.get("gameState") && (0, HB.A)(OB, pB.p.SHOP, !(0, DB.e)(BB.xR.shopInfo))
-      })), BB.inputs.down.on("OpenLobbyLeaderboard", (OB => {
-        (0, UB.b)() || "inGame" === kB.c.get("gameState") && (0, HB.A)(OB, pB.p.LOBBY_LEADERBOARD, (0, BO.b)(BB.xR))
-      })), BB.inputs.down.on("HideUi", (() => {
-        qB.o.tM("showUi", !1)
-      })), BB.inputs.up.on("HideUi", (() => {
-        qB.o.tM("showUi", !0)
+      ee.inputs.down.on("DropItem", (() => {
+        Ri(ee.sE.Cye().crouch)
+      })), ee.inputs.down.on("OpenShop", (ie => {
+        (0, We.e)() || "inGame" === Ze.e.get("gameState") && (0, he.u)(ie, fe.r.SHOP, !(0, be.b)(ee.uE.shopInfo))
+      })), ee.inputs.down.on("OpenLobbyLeaderboard", (ie => {
+        (0, We.e)() || "inGame" === Ze.e.get("gameState") && (0, he.u)(ie, fe.r.LOBBY_LEADERBOARD, (0, ei.e)(ee.uE))
+      })), ee.inputs.down.on("HideUi", (() => {
+        Te.h.yR("showUi", !1)
+      })), ee.inputs.up.on("HideUi", (() => {
+        Te.h.yR("showUi", !0)
       }));
-      const lO = BB => {
-        0 === BB && (BB = 10), qB.o.tM("setSelectedInventorySlotI", BB - 1), qB.o.tM("numkeyPressed", BB)
+      const qi = ee => {
+        0 === ee && (ee = 10), Te.h.yR("setSelectedInventorySlotI", ee - 1), Te.h.yR("numkeyPressed", ee)
       };
-      for (let YB = 1; YB <= 10; YB++) BB.inputs.down.on("HotBarSlot" + YB.toString(), (() => {
-        lO(YB)
+      for (let ye = 1; ye <= 10; ye++) ee.inputs.down.on("HotBarSlot" + ye.toString(), (() => {
+        qi(ye)
       }));
-      BB.inputs.down.on("OpenTasksAndLeaderboard", (OB => {
-        const GB = (0, vB.m)();
-        GB ? (0, HB.E)(OB, !0, GB) : (0, HB.D)(OB, "retentionFeatures", !(!BB.xR._tasks && !BB.xR._availableLeaderboards))
-      })), BB.inputs.down.on("OpenCodeEditor", (OB => {
-        (0, HB.E)(OB, (0, uB.c)((0, KB.c)()), (() => {
-          (0, uB.h)(BB.DW.pR(BB.EX))
+      ee.inputs.down.on("OpenTasksAndLeaderboard", (ie => {
+        const He = (0, Ne.m)();
+        He ? (0, he.y)(ie, !0, He) : (0, he.w)(ie, "retentionFeatures", !(!ee.uE._tasks && !ee.uE._availableLeaderboards))
+      })), ee.inputs.down.on("OpenCodeEditor", (ie => {
+        (0, he.y)(ie, (0, Pe.d)((0, De.e)()), (() => {
+          (0, Pe.i)(ee.sE.pE(ee.gC))
         }))
-      })), BB.inputs.bind("ToggleFullCoordinateOverlay", "F3"), BB.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
-        qB.o.tM("toggleFullCoordinateOverlay")
+      })), ee.inputs.bind("ToggleFullCoordinateOverlay", "F3"), ee.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
+        Te.h.yR("toggleFullCoordinateOverlay")
       }));
-      const ZO = () => {
-        (0, dB.d)().client.cameraController.swapCameraZoom()
+      const Xi = () => {
+        (0, we.e)().client.cameraController.swapCameraZoom()
       };
-      BB.inputs.down.on("SwapCameraZoom", ZO), BB.inputs.down.on("OpenInviteLink", (BB => {
-        (0, HB.D)(BB, "inviteLink", NB.featureFlags.canUseInviteLinks)
-      })), BB.inputs.bind("Y", "KeyY"), BB.inputs.down.on("Y", (BB => {
-        (0, UB.b)() || qB.o.tM("YKeyPressed")
-      })), BB.inputs.bind("X", "KeyX"), BB.inputs.down.on("X", (BB => {
-        (0, UB.b)() || qB.o.tM("XKeyPressed")
-      })), BB.inputs.down.on("OpenEmoteWheel", (() => {
-        qB.o.tM("requestEmoteWheelHoldOpen")
-      })), BB.inputs.up.on("OpenEmoteWheel", (() => {
-        qB.o.tM("requestEmoteWheelHoldRelease")
-      })), BB.inputs.down.on("Zoom", (() => {
-        if ("inGame" === kB.c.get("gameState")) {
-          BB.DW.getState(BB.EX, "playerCameraAdjustment").zoomKeyPressed = !0, (0, dB.d)().client.cameraController.handleZoomKeyPressed()
+      ee.inputs.down.on("SwapCameraZoom", Xi), ee.inputs.down.on("OpenInviteLink", (ee => {
+        (0, he.w)(ee, "inviteLink", Xe.featureFlags.canUseInviteLinks)
+      })), ee.inputs.bind("Y", "KeyY"), ee.inputs.down.on("Y", (ee => {
+        (0, We.e)() || Te.h.yR("YKeyPressed")
+      })), ee.inputs.bind("X", "KeyX"), ee.inputs.down.on("X", (ee => {
+        (0, We.e)() || Te.h.yR("XKeyPressed")
+      })), ee.inputs.down.on("OpenEmoteWheel", (() => {
+        Te.h.yR("requestEmoteWheelHoldOpen")
+      })), ee.inputs.up.on("OpenEmoteWheel", (() => {
+        Te.h.yR("requestEmoteWheelHoldRelease")
+      })), ee.inputs.down.on("Zoom", (() => {
+        if ("inGame" === Ze.e.get("gameState")) {
+          ee.sE.getState(ee.gC, "playerCameraAdjustment").zoomKeyPressed = !0, (0, we.e)().client.cameraController.handleZoomKeyPressed()
         }
-      })), BB.inputs.up.on("Zoom", (() => {
-        BB.DW.getState(BB.EX, "playerCameraAdjustment").zoomKeyPressed = !1
-      })), IO();
-      const NO = BB => function() {
-        return qO(), BB(...arguments)
+      })), ee.inputs.up.on("Zoom", (() => {
+        ee.sE.getState(ee.gC, "playerCameraAdjustment").zoomKeyPressed = !1
+      })), ai();
+      const zi = ee => function() {
+        return Ti(), ee(...arguments)
       };
 
-      function RO(BB) {
-        "inGame" !== kB.c.get("gameState") || (0, HB.u)() || (qB.o.tM("ctrlCrouchWithoutFullscreen"), BB.preventDefault())
+      function Bi(ee) {
+        "inGame" !== Ze.e.get("gameState") || (0, he.q)() || (Te.h.yR("ctrlCrouchWithoutFullscreen"), ee.preventDefault())
       }
-      zO = {
-        primaryFireDown: NO((BB => {
-          const OB = IB.press();
-          return IB.owns(OB) && (zB = Date.now(), VB(!1, !1), BB && mB.start()), OB
+      ki = {
+        primaryFireDown: zi((ee => {
+          const ie = Ye.press();
+          return Ye.owns(ie) && (ke = Date.now(), ge(!1, !1), ee && Ae.start()), ie
         })),
-        primaryFireUp: NO((BB => {
-          IB.release(BB)
+        primaryFireUp: zi((ee => {
+          Ye.release(ee)
         })),
-        altFireDown: NO((() => {
-          const BB = gB.press();
-          return gB.owns(BB) && LB(), BB
+        altFireDown: zi((() => {
+          const ee = xe.press();
+          return xe.owns(ee) && ce(), ee
         })),
-        altFireUp: NO((BB => {
-          gB.release(BB)
+        altFireUp: zi((ee => {
+          xe.release(ee)
         })),
-        jumpDown: NO(GB),
-        specialActionDown: NO(TB),
-        specialActionUp: NO(jO),
-        reloadGun: NO(JO),
-        dropItem: NO(PO),
-        swapCameraZoom: NO(ZO),
-        pickBlock: NO(XB)
-      }, BB.inputs.down.on("ctrlCrouch", RO), BB.inputs.up.on("ctrlCrouch", RO), BB.inputs.bind("ctrlCrouch", "ControlLeft");
-      const WO = BB => {
-        "inGame" === kB.c.get("gameState") && BB.ctrlKey && !(0, HB.u)() && BB.preventDefault()
+        jumpDown: zi(He),
+        specialActionDown: zi(je),
+        specialActionUp: zi(Ui),
+        reloadGun: zi(Ji),
+        dropItem: zi(Ri),
+        swapCameraZoom: zi(Xi),
+        pickBlock: zi(Ce)
+      }, ee.inputs.down.on("ctrlCrouch", Bi), ee.inputs.up.on("ctrlCrouch", Bi), ee.inputs.bind("ctrlCrouch", "ControlLeft");
+      const Ei = ee => {
+        "inGame" === Ze.e.get("gameState") && ee.ctrlKey && !(0, he.q)() && ee.preventDefault()
       };
-      document.addEventListener("keydown", WO), document.addEventListener("keyup", WO), document.addEventListener("keypress", WO), BB.inputs.bind("Alt", "AltLeft", "AltRight"), BB.inputs.down.on("Alt", (BB => {
-        BB.preventDefault()
+      document.addEventListener("keydown", Ei), document.addEventListener("keyup", Ei), document.addEventListener("keypress", Ei), ee.inputs.bind("Alt", "AltLeft", "AltRight"), ee.inputs.down.on("Alt", (ee => {
+        ee.preventDefault()
       }));
-      const AO = OB => (0, bB.j)(BB, OB),
-        VO = OB => (0, bB.m)(BB, OB),
-        SO = [0, 0, 0],
-        nO = [0, 0, 1];
-      BB.on("afterRender", (OB => {
-        tB.k.frame(OB, BB.camera.heading, BB.camera.pitch, tB.g.drawn), (0, QB.e)(BB.camera.heading), (0, bB.o)(BB, SO, nO), (0, dB.d)().client.triggerGameCallback("onAfterRender", OB, {
-          cameraHeading: BB.camera.heading,
-          cameraPitch: BB.camera.pitch,
-          cameraPosition: SO,
-          cameraDirection: nO,
-          tanHalfFovX: (0, bB.b)(BB),
-          tanHalfFovY: Math.tan(BB.UP.p_().fov / 2),
+      const gi = ie => (0, se.e)(ee, ie),
+        Oi = ie => (0, se.f)(ee, ie),
+        di = [0, 0, 0],
+        Wi = [0, 0, 1];
+      ee.on("afterRender", (ie => {
+        Qe.p.frame(ie, ee.camera.heading, ee.camera.pitch, Qe.i.drawn), (0, Me.f)(ee.camera.heading), (0, se.g)(ee, di, Wi), (0, we.e)().client.triggerGameCallback("onAfterRender", ie, {
+          cameraHeading: ee.camera.heading,
+          cameraPitch: ee.camera.pitch,
+          cameraPosition: di,
+          cameraDirection: Wi,
+          tanHalfFovX: (0, se.c)(ee),
+          tanHalfFovY: Math.tan(ee.PR.W8().fov / 2),
           screenBandPct: {
-            x: CB.b,
-            y: (0, CB.g)()
+            x: Ie.b,
+            y: (0, Ie.h)()
           },
-          projectWorldPosToScreenPos: AO,
-          projectWorldPosToViewport: VO
+          projectWorldPosToScreenPos: gi,
+          projectWorldPosToViewport: Oi
         })
-      })), BB.camera.Tm = (0, xB.startLookDebug)("js"), BB.inputs.mI = xB.noteLookDroppedCopy, (0, sB.s)("remesh") && (0, OO.g)(BB), BB.on("beforeInputs", (() => {
-        if ((0, fB.b)()) return BB.inputs.gH.dx = 0, void(BB.inputs.gH.dy = 0);
-        if (BB.camera.gH.dx += BB.inputs.gH.dx, BB.camera.gH.dy += BB.inputs.gH.dy, 0 !== BB.inputs.gH.dx || 0 !== BB.inputs.gH.dy) {
-          BB.DW.getState(BB.EX, "playerCameraAdjustment").lastPointerMove = Date.now()
+      })), ee.camera.VV = (0, re.startLookDebug)("js"), ee.inputs.sV = re.noteLookDroppedCopy, (0, Ge.q)("remesh") && (0, ii.l)(ee), ee.on("beforeInputs", (() => {
+        if ((0, te.d)()) return ee.inputs.nG.dx = 0, void(ee.inputs.nG.dy = 0);
+        if (ee.camera.nG.dx += ee.inputs.nG.dx, ee.camera.nG.dy += ee.inputs.nG.dy, 0 !== ee.inputs.nG.dx || 0 !== ee.inputs.nG.dy) {
+          ee.sE.getState(ee.gC, "playerCameraAdjustment").lastPointerMove = Date.now()
         }
-        BB.inputs.gH.dx = 0, BB.inputs.gH.dy = 0
+        ee.inputs.nG.dx = 0, ee.inputs.nG.dy = 0
       }));
-      let UO = 0;
-      const fO = [0, 0, 0],
-        kO = [0, 0, 0],
-        dO = {
-          base: fO,
-          max: kO
+      let ti = 0;
+      const Zi = [0, 0, 0],
+        wi = [0, 0, 0],
+        Di = {
+          base: Zi,
+          max: wi
         },
-        KO = BB => {
-          const OB = EB.f.droppedBlockSize / 2;
-          return [0, 1, 2].every((GB => BB[GB] >= fO[GB] - OB && BB[GB] <= kO[GB] + OB))
+        Pi = ee => {
+          const ie = ue.g.droppedBlockSize / 2;
+          return [0, 1, 2].every((He => ee[He] >= Zi[He] - ie && ee[He] <= wi[He] + ie))
         };
-      BB.on("kP", (function(OB) {
-        qB.o.tM("noaTick", OB);
-        const GB = (0, dB.d)().client;
-        if (GB.triggerGameCallback("kP", OB), GB.isClientGameSessionActive()) try {
-          yB.d.kP(OB)
-        } catch (oB) {
-          console.error("Error ticking audio entities", oB)
+      ee.on("YR", (function(ie) {
+        Te.h.yR("noaTick", ie);
+        const He = (0, we.e)().client;
+        if (He.triggerGameCallback("YR", ie), He.isClientGameSessionActive()) try {
+          Fe.c.YR(ie)
+        } catch (Ke) {
+          console.error("Error ticking audio entities", Ke)
         }
-        if (!BB.DW.yYB(BB.EX).isAlive) return;
-        Date.now() - UO > 9e3 && (! function() {
-          const BB = (0, dB.g)();
-          "number" === typeof BB.xR.speedMultiplier && "number" === typeof BB.xR.jumpAmount && (0, YB.sendColyMessage)(MB.pi, {
-            My: (0, wB.e)(BB.xR.speedMultiplier),
-            Py: (0, wB.c)(BB.xR.jumpAmount),
-            zy: (0, wB.e)(BB.xR.crouchingSpeed),
-            ly: (0, wB.e)(BB.xR.walkingSpeed),
-            py: (0, wB.e)(BB.xR.runningSpeed),
-            qy: (0, wB.c)(BB.LOB),
-            Zy: BB.DW.AGB(BB.EX).jumpForce,
-            Ny: BB.DW.f4(1).width,
-            Ry: BB.DW.f4(1).height,
-            Wy: BB.DW.mC(1).Wy
+        if (!ee.sE.Aye(ee.gC).isAlive) return;
+        Date.now() - ti > 9e3 && (! function() {
+          const ee = (0, we.h)();
+          "number" === typeof ee.uE.speedMultiplier && "number" === typeof ee.uE.jumpAmount && (0, ye.sendColyMessage)(oe.ji, {
+            FF: (0, ve.f)(ee.uE.speedMultiplier),
+            JF: (0, ve.b)(ee.uE.jumpAmount),
+            oF: (0, ve.f)(ee.uE.crouchingSpeed),
+            RF: (0, ve.f)(ee.uE.walkingSpeed),
+            kF: (0, ve.f)(ee.uE.runningSpeed),
+            qF: (0, ve.b)(ee.iHe),
+            fF: ee.sE.CHe(ee.gC).jumpForce,
+            TF: ee.sE.M_(1).width,
+            pF: ee.sE.M_(1).height,
+            XF: ee.sE.XN(1).XF
           }, !0)
-        }(), UO = Date.now());
-        const DB = BB.DW.qYB();
-        if ((DB.jump || DB.forward || DB.backward || DB.left || DB.right || DB.sprint) && qB.o.tM("usedKeyboard"), BB.DW.eGB(BB.EX) && !0 === BB.xR.canPickUpItems) {
-          const OB = BB.DW.pR(BB.EX),
-            GB = (0, AB.l)(yO),
-            DB = (0, AB.o)(yO);
-          fO[0] = OB[0] - GB, fO[1] = OB[1] - .6 * DB, fO[2] = OB[2] - GB, kO[0] = OB[0] + GB, kO[1] = OB[1] + EB.f.xZ + .6 * DB, kO[2] = OB[2] + GB;
-          const QB = BB.DW.ayB(dO, BB.DW.names.autoRotate),
+        }(), ti = Date.now());
+        const be = ee.sE.Cye();
+        if ((be.jump || be.forward || be.backward || be.left || be.right || be.sprint) && Te.h.yR("usedKeyboard"), ee.sE.Rye(ee.gC) && !0 === ee.uE.canPickUpItems) {
+          const ie = ee.sE.pE(ee.gC),
+            He = (0, Ee.l)(Fi),
+            be = (0, Ee.p)(Fi);
+          Zi[0] = ie[0] - He, Zi[1] = ie[1] - .6 * be, Zi[2] = ie[2] - He, wi[0] = ie[0] + He, wi[1] = ie[1] + ue.g.UX + .6 * be, wi[2] = ie[2] + He;
+          const Me = ee.sE.qJe(Di, ee.sE.names.autoRotate),
             {
-              itemDropPrediction: oB
-            } = (0, dB.d)().client,
-            yB = YB.offlineInputReplay.holdsInput();
-          if (QB.length > 0)
-            for (const PB of QB) {
-              const OB = BB.DW.getState(PB, "itemState");
-              if (void 0 === OB || Date.now() - OB.creationTime < 500) continue;
-              let GB = PB,
-                DB = null;
-              if (OB.uQ) {
-                const BB = oB.pickupTarget(PB, KO, yB);
-                if (null === BB) continue;
+              itemDropPrediction: Ke
+            } = (0, we.e)().client,
+            Fe = ye.offlineInputReplay.holdsInput();
+          if (Me.length > 0)
+            for (const Re of Me) {
+              const ie = ee.sE.getState(Re, "itemState");
+              if (void 0 === ie || Date.now() - ie.creationTime < 500) continue;
+              let He = Re,
+                be = null;
+              if (ie.mM) {
+                const ee = Ke.pickupTarget(Re, Pi, Fe);
+                if (null === ee) continue;
                 ({
-                  gM: GB,
-                  wM: DB
-                } = BB)
+                  ao: He,
+                  Co: be
+                } = ee)
               }
-              const QB = BB.DW.getState(GB, "itemState");
-              if (QB.uQ && null === DB) continue;
-              let zB = 0,
-                lB = null,
-                pB = !1;
-              if (0 === QB.amount) pB = !0;
+              const Me = ee.sE.getState(He, "itemState");
+              if (Me.mM && null === be) continue;
+              let ke = 0,
+                qe = null,
+                fe = !1;
+              if (0 === Me.amount) fe = !0;
               else {
                 const {
-                  amountPickedUp: OB
-                } = BB.DW.hGB(BB.EX).pickUpItem({
-                  name: QB.name,
-                  typeObj: QB.typeObj,
-                  amount: QB.amount,
-                  attributes: QB.attributes
+                  amountPickedUp: ie
+                } = ee.sE.Jye(ee.gC).pickUpItem({
+                  name: Me.name,
+                  typeObj: Me.typeObj,
+                  amount: Me.amount,
+                  attributes: Me.attributes
                 });
-                if (zB = OB, 0 === zB) continue;
-                lB = eB.d.pickUp(QB, zB), QB.amount -= zB, QB.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === QB.amount ? pB = !0 : QB.creationTime = Date.now() + QO
+                if (ke = ie, 0 === ke) continue;
+                qe = ne.c.pickUp(Me, ke), Me.amount -= ke, Me.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === Me.amount ? fe = !0 : Me.creationTime = Date.now() + Mi
               }
-              const qB = (0, dB.d)().client.inventoryPrediction.record(lB);
-              (0, YB.sendColyMessage)(MB.Kh, {
-                gM: null === DB ? GB : "",
-                rM: zB,
-                XM: JB.f,
-                Yo: qB,
-                wM: DB
-              }, !0), pB && (yB && oB.onPickedUpOffline(GB, qB, DB), null === DB && BB.DW.deleteEntity(GB));
-              jB.b.play("pickUp", EB.f.pickupSoundVol).rate(1 + Math.random() * EB.f.pickupSoundRateVariation)
+              const Te = (0, we.e)().client.inventoryPrediction.record(qe);
+              (0, ye.sendColyMessage)(oe.Fh, {
+                ao: null === be ? He : "",
+                co: ke,
+                xo: Je.h,
+                kK: Te,
+                Co: be
+              }, !0), fe && (Fe && Ke.onPickedUpOffline(He, Te, be), null === be && ee.sE.deleteEntity(He));
+              Ue.d.play("pickUp", ue.g.pickupSoundVol).rate(1 + Math.random() * ue.g.pickupSoundRateVariation)
             }
         }
-        if (!BB.DW.iGB(BB.EX)) return;
-        const QB = BB.inputs.gH.fGB;
-        if (0 !== QB) {
-          const OB = QB > 0 ? 1 : -1;
-          BB.inputs.state["mid-fire"] || BB.inputs.state.Alt || !BB.xR.useInventory ? (BB.inputs.state["mid-fire"] && qB.o.tM("requestEmoteWheelClose"), (0, dB.d)().client.cameraController.handleScrollZoom(OB)) : qB.o.tM("ScrollInventorySlot", OB)
+        if (!ee.sE.rHe(ee.gC)) return;
+        const Me = ee.inputs.nG.SHe;
+        if (0 !== Me) {
+          const ie = Me > 0 ? 1 : -1;
+          ee.inputs.state["mid-fire"] || ee.inputs.state.Alt || !ee.uE.useInventory ? (ee.inputs.state["mid-fire"] && Te.h.yR("requestEmoteWheelClose"), (0, we.e)().client.cameraController.handleScrollZoom(ie)) : Te.h.yR("ScrollInventorySlot", ie)
         }
-      })), ZB.e.subscribe("droppedItemScale", (BB => {
-        yO = "number" === typeof BB && isFinite(BB) ? BB : oO
+      })), pe.c.subscribe("droppedItemScale", (ee => {
+        Fi = "number" === typeof ee && isFinite(ee) ? ee : Ki
       }))
     }
 
-    function IO() {
-      const BB = (0, dB.g)();
-      if (BB)
-        for (const OB in WB.t) {
-          BB.inputs.unbind(OB);
-          for (const GB of WB.t[OB]) BB.inputs.bind(OB, GB)
+    function ai() {
+      const ee = (0, we.h)();
+      if (ee)
+        for (const ie in Be.q) {
+          ee.inputs.unbind(ie);
+          for (const He of Be.q[ie]) ee.inputs.bind(ie, He)
         }
     }
-    uO(NO = {}, RO = ['_|gQyv)a0t:H"AM%Ry9M&u=j]c', "R5Y{mPP?}9+", "D#w{0+B&Eq?guJk,]9d!MVo^gq#nztXKH(Q3{.[TTSC!u*f", "{M>!(M9?i", 'j=%hrtAq]92t2K"~]G', "+y%{d*]Y]J[bK.cqaF{a1Wvv}0pjyhY(MG", "]#pHZvbv@J{mv+V#]#Q+<+cqOtj", '[TL`nBcX/t>7?iJ|RfiQ$Q0/&BHXni~%;S2C!rX%@WS7"LE(*M;+J$&0{', "kMVguu=fpL", "5B~HTeD?(VSU}U1.tsZds+J/y|t", "1{k6ZQ)%B9&$iu|yW{lU>M,%`V~|(8", "Sn1Q0PBY{NU:Alo*GF^aj`[aCrVg28", "Dr83L.3q`rY!X7l.Z(}8c=T,`0LCv)Ax8FzFw*1k]JFvu*J", ']:x!4gCXqSEeYLMH]:BWwga^@$57EPrvW7)STtDa/^,my)[&Bl"QM"ypQ0', "8BI}07p&1Bw#pFk,.Mi8ynLP2fK", '+(b{H)M2j#R(nu}*XMQa3MAP"Nu:zEf', 'sL_i"`&YB0pJYuVk', 'WsA8=}:&ZcPF3JPljT1T3rxa%tB:?.e*oT!MeX~p%#WK_2"(', '[#u,(r5aHO)o?^"hMA!{9pM=@$fnz2/vHM?0[(.j8^', "s!O3O+zb", "n7n6D`ijB9$pyrghnAIa[PSKlr8wClW%%n{SoB4^,rc9Wiy*1y@,q+Jj8", "kS)Sw.Iv&?=p<)6(I3%MSXm%j#DpgL]vZ[ETw", "i?(U8UV,d9V:{5[5V96MApTq;Mm&wht>%{:FcX5PlJK|}L|({!!o+EG", "9T<SU$SaK|Vbghcze|/iD*jkH$=QMEh,XHp3E$<jVfchy[bjJb", 'G?x=@C[T}9>6$PPyM[^dXBV)LBs{hlj(o$1QM"!2m&WaOUd', "M[=0{Bc%wfQYoiikD:2", '!,{6CXlkb?711KD~`$D!om_?Qc"LS7aq,L&US?Hgpcw$9.Lhz,e[j', "BMjoQ?cqB:f(lFX56l83Ntr%h$/e]l>*D$A", "|sBWw*E=%9FHt^=z;{Z6oXSap:?Fh+u($MB,2/ekQc8^PU}lnABdL6yj(?z", '&BZg2"k.y9aT9ipqvTbh;(/pf9T&yrxl$3+UY.G', "6snWgtLWtc{5oBClcpOa", "/AO=(FLa?J}&ml3>j[!Fhu]$9Lyg8wwh6S]00.*Y2BUYp2", "LTZH~?ZXt|:F{8)lkBq,{UPbBW8s]P^qqMA", "/oQl)tUgEf3UZw/h|y43xEV,;SO^1PxK5B,a", '5f"QX6LK;S=Yw7_(MMsR%)TVZWFofAVkLB+TU(*tvSG2s23.,[Oie(%b', ';o4lte:pRV)6nL@l+f=0QuEy?9?YWF[*v{_o"}@&C$wTb', '<{]!tBf&j#k}Ah.5m:5i5ykj9M{|32:(iFa`F"f/p0whJIoz[S#`L?00a', "bBh,$U[TU9UeGBijGF!{gVzvkV9YLl1&Uc7FXX{>/t%Yb", ';s7MXPWsLVRrXj**p[W}RFs,]r)cjh9s5xj`!nyj"Myv_J$k[7jRxeG', "m3%k6(:tl|613E:(axA", 'K=",7Cfg*N*H6*(#n3Kk6Q5XuS{5.r*Kxn<FW5kj:^', ']|pgi(?,VLov.)o3<(%h7:!k~t!mDXB>&5tT%F}{z|(JzeMyBM"[%vG', "qpnl<?nngNw##w@z*#XdK?&gj^HXnrK%#B2", '`rpgJ$VT`:m:%U"HALzgz4+&bL|}<u7z', "5sxUjgV%>|xAWwCK:JA", "3A*}}X%XOqM", "#M<{P?yNrc{ETE]%0sh,HMw/t$Dp`K`qW[(QI(BYi", "`nyTBBx?J1ljbBJ|@$eSo6Ib", "FTjTQ=l2:94ex[wz;{x,F:+g#f_&15}qgy>!k", "x=qUV=64OqcnllL", 'gT"W>5jp7L4?mJ@qf[b', "_9L{0}jk[|LC+^/wjsFToXzqkV$1u2", "}9|QPXDs@:i{+^1swp`a:(e/,rTXzh:>,5[o|u?su?5Ob", "dpaMY*M2AfWoqlXK^!7{+QPv~q$&o7^z_J=T$zGtZJKU7AO(Jy%C&?ob", "%[h={+7/FSOEwL%3GODMm?i.IWL|pK55V3jo6EM&h9^#b", "v7XH#guvC#ZdguOv4T#M3[@NYBdIMF7z?s43^", "r$AQK`}j3LrYd+2#u3=TDRMg!Sfm3r]><zO6h*SbI&`.BAu%8[[od$k2A", "A!S{9z`f.?E;7wa5KS$H0/G", '>5S{m6Uj$0RX,its}J`3$pgy3VMHju:He9?Mb"Aqhrrv)*.3YeW3NzQa0^M', "(y!kM(jpa", "(Ax,xF=&bf2M$^jH@{|,DRo%I&pralH%{x+Tw?_#GSj", "C(%{im1tjteQt^13xTJaNpFqB9VePi", "z|;QY.LWeqoex2_,Zl6HvY,q?Je1P7NsQ5~6Fn;v8", "+3T,P.l/^OF3nLaqm:yoHrN{VVDek8j>!52", "cfr!#Pv^oJ.awhR>PT1!s*_v0^QV[t_,", "wT0R9.Ej7VF}mJ:H", "0lpH%VNpP&5647dl+Si8", "U5GSGBf2_NUB1Pe*vTu0", "~MlT54={<^{n;tdK~Su,G=g={N=Y9^c", "T?ei:pE=B0?!y[J", "rn~}luSbbB+r.AzK/zX3f$}p_N|Ajh05.LlCc=Nn3L0tUA", "I[+0w*}g`:Z#izLl5LA", "2=u!GpWa&?pF?Ue5hs)F6pkjuSd|FU)zPHyoVB4^<#D~7A$,p(2", 'c5Oa[($kD#7Oc22#Yr<T{XXT(f"eLEM(Mf6S', "2B`34uwec9CY2KJleA5aZ:?,4qQV5UK%B7&U2p`j,$/bNA#|}{4+f6G", "x=CWIQR,,&6Y8.b3n52!J=WvH$EBK.2j6$sodP?4p1`0x*dKrn2hDgSV{", "VobhLuB2StBVfucl", "y7bCH4vC0dSkdI.3", ";(w{w*;sx9<.QUz3Z[sM[W,%hrCp<L3k>$k3L+_?7Bak:h`qBSwSR)Jti", '"(eHI"_a9?6eCJUl', "bMy{O[6C7&EFi[DwlBwCH[&gRf1YA[s,a?3}L[W,)LC!^7ZzJ!wM|", "DoYM=+vaTBt15w{&x9|3:T1{0|zgfA", "4T8durDb]r_~3E_,^lW30${gYVFY}LO(7?poI7`p{tSC3)hvVHqU2(G", "=T6MzEE/S9me{*+y]cp}$=F^<t`K$K)hY30MnWo^{6YLdIb#1n>T&+G", "q!*H%)1kP?6e3AWHn>M}*oqvOt|Ta*k,", 'Ai"+&+lg]r)v8wy*zSe[Rv_,!SCQW7/wz=SkLu+Y]$].9.h,1sA', "%nA,/*Ej7OopLJpy|l4=U$Yf.N]+?iH>[{;WV=Obn?R(&IEHQ9~aE?D#wS,tb", "d,HQ;WoCW^k#=XIseM;!;=f2K$.7A*vKn{1TloG0vMM", "[{(Ta(==q?Sn.U9jT5BdHY#b", "dni6#P~g(MJ5D.7hzMwMMW<fD|*o|LG,:su!AmLaa", 'ty7oxIJjFBNrKUV5en!F%)G>d6uLUuR3NTJ6Rr|pH$m;"Yb.0?.d', "vl7FDZ}/&BkgWiBsWngd", "i=w`S$G", "q[dC/47g;S?QZ7vk&{3g%M$f.SZXcJ;k8vN{K)^qGf#mG", "Z#)}i6>f}WEc.A],xsH,amk=Ut+cM^;Kz|U{", "lMwC(YP,mV>Y+t]>)[,d96M2", "_ZDT%Fu%2Le!f[]~AlyM17SP/NXW|[2.]ZyMA/lkV&)${I6,5s!{C+;,G?w#b", 'syBW2/^WBWkUD7D%=c"+bm"ps|`cfzQqYZ;,TtZb', "Ff*gO+xb.SASu2", "<|i8ky.k.^5ozhGs.nEWVmKP]JuQ3l1kHneivF+yFVz7`Py*q{`38Bw2pc", "OB*Fg:>NN&_~xERsJVb", "({hnbl#1", "1NDQpAWv", "%x3_Bj55", "uKIm8!o)", "lXLmps&e", "y4(Z(@Me", "GVdoa)wr", "+eIqcX$Q", "*Xw#kf&O", "E=e[!3AA", "IV!ba*NO", "}53=n*Z", "&c!bb*qO", "kA06aTbQ", "&&.bUFXQ", "J7X67PsO", "kV+%", "Be[{]6NO", ")Aa@kf+4Ag56ezXXv|mDaaP]+WdCB#H", "#sdb:m!PP5v", "0J)@aK_6", "5sC7=7zN", "e^N7x4JN", "SfBFFrJQ"]), uO(WO = function(...BB) {
-      uO(BB[kO[13]] = kO[1], BB[kO[5]] = [function() {
+    Yi(zi = {}, Bi = ["pw#j&qA<8OlCIRc6%IW^%0r<j]fI0XEKUc<Ip>>bNY9Wx", 'iZ.1>OxAxc:#8K?IDX[1A>%8c"fpT_]JHb144,`2^', "@=4jKSme_]tiKt9@;]:jPOcQIC8", 'GJ&l=$R8$"M8kW1KNw1Uo', "1CJGmKh~;A4}QRp6+x", "Buf/P|x", ";Mv.^1@0jX/4?0ZToZLdT~Io:y&{`pV", '@y$/4LaQwC$A6t|5Cul^d0E"r.9+oi!v1SD', '"HD2$=6D', "dAC|X`W;:aU$n", "GJoIVbivS?a", ".cKIv%n8.hGp1akJay]`IaK]3?&`oCW{d/g`@i58%l|cg/kR", "AOb2OcSoJ=|Al[][aJajUbADOCw[|MbAfG^d+L!Q.y|eu_R8vM6`Rkj]ayy1x", 'hAv.zWv"BOj$4^ARpf*wtwc0aY8$RqK*tc%^Z",fBXxYBR8p~x', 'pvX`,W`tYl|/b[I@76o^c"dVE3]Z{_D*Gx', 'fMH^|0>b@?6e6Cny6ZcI|_orUr[y5WQ{~OF~MXd<8{?`_KYv4C<M!fJ<BA"Tn', "^]FTP%|fbO[y](%RkhP3(bB;@y{UNC{R(/$4pMAV[hQ:?*Sb", "9GE~gw>pYu_CTJ&2(/PEd<u@|=F*P,p6[w(", "U/?`!/0E%{/|hu:", 'E;`~3Wm?b.8$uK"@NMyl*8wAwh', 'SG_Gc7t"Q=.RF,JL5hpUW1S;$Vs;4^7@KOy>i7$OE', '(2jljf"%BA3c=/5[saDFK/y@,gk3~(ay];}d', '$GXT<0F"[YjpgtgyX=uo.01U#lO4![Ab', ':],4GQ;?"r<n9a?L^ua2$w$n{XK~uC%8)YH~.+xV~lL([LChM6V>fkjrYc8', "fN.>S$9;Mt0c!B8p8*L2x?+n", 'BN2dPMff"?+cek?LpvDG[', 'Y*.oW"9~>ucg*BUN"f3^P_2kAchtLq~bHMKEA', "Fc0T0X429YA0g0xpuALww+9~#la", "PcH3s!XAE3h0zBa@1GWT;c_o(", 'uMx.9OG@i="eY1#f@,u>;ix', ";Zj.$+bo(r{0tFY6#[vIb~nt.y_0hL:{5,JjZwf]g{@|&p&2", ":A>M<>kc%tY[.1&8+WdjP", 'z=UTGSLpRCs;g*Io!U.QC|}v<r%_[1sb%,"|YX/%xXswxXI6bXn', "4a8jkZEn", 'oOHE"1SDCPP|LMHR[.nRV=LD;c6', 'p;Q"/QO2nuy1O0N5IwW|[>M0zSUZ"1`RQS&VqHm;Ohd.fMooFl)`MXAVLl9jn', "v203Y1m;blf,k?WAnlK^~5E[rXKyt,1Akbid`|x", "ovp!pkGk6azET#Lply1/#H1pW{", "3Oxow,_AxO6pS(,baYA1b8`2v?a", "*GTIT>`O~ltoMWxp1S`^`Lx", "c=@R:qD?:aWc;[^o5h%ME3aQz=P|ACRv)h<~!i&8*rS~iL,fcb/l|0VV0tb", "N*z2HcA?;SJ0rXjvvG%E", 'eCa2paZZ?hq2^(*o7bPd@c42BP7}tixvmZ0IX"]AzYb0,,~bzYp!rL%@BuI', '6wZ2PM2"|YsLVRf[Jb!Rsq4@Q=Z4kk`{[f82++6;IyFv0L45lbPE9|0tkVa', "zY@jd+5tjc81@/5*+WxULig]Bc^1r,AfJ.c/x5vnF", "uMu|V|Qc1?a:W+,J|TZJ3Wm?=Vu=eu[@x^kI<K]Dwain,a&2.Mp43#x", "xP>|:K[kay&jnX7ISlG1X1n[=c]t&pW[eabRh=28yO|w>DrALOn", "(JmIjZooNS^18W]5];n", '!lE.mM$G/A]Qgtuh:]0JS#Y8"li^`,b*t/}j&|De$cBZA_op', "@OjG!MOk,.gIIqfA4U9U8lNnruto5CD*#Y^2u0#~b]yUTD", "_hk.Y+L~/g}4aKf{Nv>^QOL?X:eV{Jp@[XjQ8a{8EdP$Tk=y3x", '/Jk^[qoo*?S4L1Aht/<M}battak4J#|J^ZtE4Ln{="G:"1.[!GWE2f~~ZO*4x', 'N=^2D+"EoggI[,BblG_G^wtk>A7wLkqbNTC|Y1}n/g"E3Wn*eINj2iCD', "MZn18>>bayM;zq!TI.81!ZE[4YcCsCbodAQF&!f?,A", "uU;~*%x", "*(pUUXF[`attiXPIPOTIzl,o0l5~jq9IyNDQA", "aa~`1Ly28rSeipEpSY,UI", "7C=^M_&E6yw}5JSI6*AGrLx", "bXK.Ia*{|V,IyXp6nO$/X$}t|=9Wn", ":2%_j4m;DlB1xBW*@GT/`_R@IY*,yXo6VAh`sk7~zP{1qaRv3Zk~B", '+*.l"`#<dhcAxR{@dw0d(b}OE', "G,S.5%oL=:", "2N`TW$]r9hv(NKa2{UfU+O?pLl9XLRTvgH7JL%|]#.nY,(.{:n", "z=0_?WZo9?/SLRKA6YD", "0l72c3SoJY)mfkJ6pXjU,/8E1yA$xM4T+GGj~cIV&hmyO1EK3M0E+O%E#ul", "TXPwSW|;kVtZWJgo+anU6QWA,.?EfR8*tA@oWXULJ=@e+,o6<y(", "@Z(_6S+t#Xkg3?HRL,+G@S*EJYY4L^Jv=aH|JKR+6C?WND/RtAwGg77fE", ".Oj4zc}2g.f", ">:`wKilo`:w4v(J8g*L`o~!+zVFU:#:Kx/@lZ,`GT]", "7YV.V<XD4hv=cC92jb<^IM:t[C", "CcDRA0WpXYzTbi]5", "4,7Fo4wp):}:5DS@i,0IxX[{ruc~6*!v4G9U^;Z?Pti^2^fA!23Iy", "=fv4X7YO+.{T4^>5", 'XvVU64<;0t0"MJ_5Dg%EaWJpRCemIqF*d^h2^wF"F', 'yuFwFLbpht,4sW&I"Or/7=S;@y*', 'QZ$.c7P@%rPUf(VTdN<^,W"%wCxh/1c2^c1GI%e~bX{Q?WYp', 'oXDGz#?Zc"P|+[X@1(D', "HZ.Gy+hr]=ZWvJ^y_*K|H*avj.", ":;KI6#boU", 't;t3C0|w/c#[x5}TQUG"c$>U"{Kd6igo#HD', "KZAR)|H{Vy)Ln", "U]~2|0BW:Yh*jM!*%G(", "Jfv.^;&%phg4Ta%R1HyQC|T05tb", '*l:d5cGE:YZ"{DFKM:aV', "nlIwje=;dYZA@,uJL.ZJ=7tE#cj0~BWT*2r/||6p`:", '>aOVJ|?Zp?YW,k^Nzf"w<M`GbOfCVu)L/.Vl%|5n', ".APd:=50mr(lKtCfK,D", ";T)j^b7f}Omy+,Bb", "I;Hdh=s2.C4Wn", "Lv%J1|9fOC%W{JhbufwjD++8G.}8n", "3,g2YLbD[h/|Iks2%hQFdL]A~.~IAF", 'a,awNe6fjOVhsJRy7Y]wsM<f@CVt.Lt5},eU!k0Ec"k|VRd{)x', '2NN2n"f;fh=A]k)2SvM|FLv@gcO8Lk@{lGm/oli8wCm|n1fAcUD', "C^|_fc0E7r[?sC^pKUBlGG{@RhE$<Ct5BU|J!i}Q!.Bh7qH{&=*E~;cnju", "H=Nj007fc]y0YtG@fMT^", "]jwVNW?<@YFlLRgobN.>%%UV!l>[.78A6*D", "J.rl&a!c/Oy,_t}TN]o37|!0(O5C8#CJ/GyQJOSf4h9w6CK[UJ}jAK&n", 'l,.G64ctb]/e_tT*_lBG:q"EcX,4hL!T', "bO{2c53tCA[=zR?8|hrUd+v@f?0c)[!L$G!Q%|ALQYw}3(>fwZLE", "|yQV8lpD", "=,o.3bu[(", '~.B!.0#]mtVl+p$J3,:`OWxV|",e&[?IdMBoA', "yJ72Z,;f_]Apw[;J[M_jn3]pfy&;ip*p2.lIW,GcwhZ[>[k5[..oG;cvB]^tn", "0Gn>vkx", "$YRjNQ9~2=gIuJM{LG0~Lk3n0lba{D:", "3=.GHZEnhO`:?**{}=Yj&|Ov)h<W+^cL#[J1a$hVTXvR#+N[g45.nLqn", 'Oy@o6#h~Fluow+"f<Wa"q=gUza3Tn', "d]v||,w]#{o=9(vI@=h3W0d~2g4VBkg*>Wnjd|?o[h?", "1CJGkZ4cAXVQ;D", "6O0wXX#;J=X", "3lxoRaWAb.]R+L&2#4QF", ">GbQeK;;Wt", "/N<~M34@Y]/~v_}yXMSUc;f]_ueVRKLoqWz2^;fpU3Kgy,=oC]|wGGx", 's6<I;Z("[?[hSqj6pG94;c:{>cZVn', 'Ol|E"SOk1YN8n1CJUlxokG#bh{*$0XN[.^tTK%G2YOFvB(7RG,w"mMHEE', "%Y4VG`K]Cga^tB6{LGfoY+o]ngz=^R]5W6djQqTQD]mGo/YLqx", 'jUE!X7KD|YuZ*1jL+YL3g7~ogc]Z",?2qUDQ%0`@zYC1sDL[cT|"LaGn', "M=i~9K(QA]rA21^ppfXdl?]~Oh", "bO|_Wwz~2CR", "!be/,Wx", "y],4d<4OWrj", "Vj5/x<Z?UdC$u#Yv8X0dO1@t(", "E8/G/WpD", "cfS/lE<N", "ypqb}*W)R>f8:OSz%x&iggTJ^~7U16Sz^cEv^%ykPHUrMD%p6pB+i", 'ADi]4wJ"YxC7^;`K%b10pp!W?5{E+H`K7_@vff}r%4C=>j^$,O', "p;mR:<!S", "+OmnZO^S", "UbW}I*^S", "Ab7.?*cy", "TXKRaDly", "LsVS", "c*^e~7eB", "T8RUb8Fn", "vuh`>+JD", "]54]JU&}", "EiLykVI", "=,}PPVHd", "035=3ZIc", "|jbT", "1aNaC5iW", "d6#xejGn", ":kh`XO**", "}xklPtDv", "zVmKkElA", "8T5=k?L}"]), Yi(Ei = function(...ee) {
+      Yi(ee[wi[12]] = wi[1], ee[wi[16]] = [function() {
         return globalThis
       }, function() {
         return global
@@ -3279,709 +3294,626 @@ export const modules = {
         return window
       }, function() {
         return new Function("return this")()
-      }], BB[kO[2]] = kO[17], BB[kO[0]] = []);
+      }], ee[wi[13]] = wi[19], ee[wi[14]] = []);
       try {
-        uO(BB[kO[2]] = Object, BB[kO[0]][kO[27]]("".__proto__.constructor.name))
-      } catch (RO) {}
-      BB: for (BB[kO[14]] = kO[1]; BB[kO[14]] < BB[kO[5]][kO[13]]; BB[kO[14]]++) try {
-        for (BB[kO[2]] = BB[kO[5]][BB[kO[14]]](), BB[kO[15]] = kO[1]; BB[kO[15]] < BB[kO[0]][kO[13]]; BB[kO[15]]++)
-          if (typeof BB[kO[2]][BB[kO[0]][BB[kO[15]]]] === kO[16]) continue BB;
-        return BB[kO[2]]
-      } catch (RO) {}
-      return BB[kO[2]] || this
-    }() || {}, AO = WO.TextDecoder, VO = WO.Uint8Array, SO = WO.BP, nO = WO.String || String, UO = WO.Array || Array, fO = function() {
-      var BB, OB, GB = new UO(128);
-      return uO(BB = nO[kO[24]] || nO.fromCharCode, OB = []),
-        function(...YB) {
-          for (uO(YB[kO[13]] = kO[2], YB[kO[21]] = kO[17], YB[-kO[20]] = kO[17], YB[kO[19]] = YB[kO[1]][kO[13]], OB[kO[13]] = kO[1]), YB[kO[18]] = kO[1]; YB[kO[18]] < YB[kO[19]];) uO(YB[-kO[20]] = YB[kO[1]][YB[kO[18]]++], YB[-kO[20]] <= 127 ? YB[kO[21]] = YB[-kO[20]] : YB[-kO[20]] <= 223 ? YB[kO[21]] = (31 & YB[-kO[20]]) << kO[23] | YB[kO[1]][YB[kO[18]]++] & kO[22] : YB[-kO[20]] <= 239 ? YB[kO[21]] = (15 & YB[-kO[20]]) << kO[26] | (YB[kO[1]][YB[kO[18]]++] & kO[22]) << kO[23] | YB[kO[1]][YB[kO[18]]++] & kO[22] : nO[kO[24]] ? YB[kO[21]] = (YB[-kO[20]] & kO[25]) << 18 | (YB[kO[1]][YB[kO[18]]++] & kO[22]) << kO[26] | (YB[kO[1]][YB[kO[18]]++] & kO[22]) << kO[23] | YB[kO[1]][YB[kO[18]]++] & kO[22] : (YB[kO[21]] = kO[22], YB[kO[18]] += kO[37]), OB[kO[27]](GB[YB[kO[21]]] || (GB[YB[kO[21]]] = BB(YB[kO[21]]))));
-          return OB.join("")
+        Yi(ee[wi[13]] = Object, ee[wi[14]][wi[25]]("".__proto__.constructor.name))
+      } catch (Bi) {}
+      ee: for (ee[wi[15]] = wi[1]; ee[wi[15]] < ee[wi[16]][wi[12]]; ee[wi[15]]++) try {
+        for (ee[wi[13]] = ee[wi[16]][ee[wi[15]]](), ee[wi[17]] = wi[1]; ee[wi[17]] < ee[wi[14]][wi[12]]; ee[wi[17]]++)
+          if (typeof ee[wi[13]][ee[wi[14]][ee[wi[17]]]] === wi[18]) continue ee;
+        return ee[wi[13]]
+      } catch (Bi) {}
+      return ee[wi[13]] || this
+    }() || {}, gi = Ei.TextDecoder, Oi = Ei.Uint8Array, di = Ei.bR, Wi = Ei.String || String, ti = Ei.Array || Array, Zi = function(...ee) {
+      return Yi(ee[wi[12]] = wi[1], ee[-wi[26]] = new ti(wi[43]), ee[wi[2]] = Wi[wi[22]] || Wi.fromCharCode, ee[wi[4]] = []),
+        function(...ie) {
+          for (Yi(ie[wi[12]] = wi[2], ie[wi[2]] = wi[19], ie[wi[14]] = wi[19], ie[wi[15]] = ie[wi[1]][wi[12]], ee[wi[4]][wi[12]] = wi[1]), ie[wi[20]] = wi[1]; ie[wi[20]] < ie[wi[15]];) Yi(ie[wi[14]] = ie[wi[1]][ie[wi[20]]++], ie[wi[14]] <= wi[32] ? ie[wi[2]] = ie[wi[14]] : ie[wi[14]] <= 223 ? ie[wi[2]] = (31 & ie[wi[14]]) << wi[9] | ie[wi[1]][ie[wi[20]]++] & wi[21] : ie[wi[14]] <= 239 ? ie[wi[2]] = (ie[wi[14]] & wi[60]) << wi[24] | (ie[wi[1]][ie[wi[20]]++] & wi[21]) << wi[9] | ie[wi[1]][ie[wi[20]]++] & wi[21] : Wi[wi[22]] ? ie[wi[2]] = (ie[wi[14]] & wi[23]) << 18 | (ie[wi[1]][ie[wi[20]]++] & wi[21]) << wi[24] | (ie[wi[1]][ie[wi[20]]++] & wi[21]) << wi[9] | ie[wi[1]][ie[wi[20]]++] & wi[21] : (ie[wi[2]] = wi[21], ie[wi[20]] += wi[15]), ee[wi[4]][wi[25]](ee[-wi[26]][ie[wi[2]]] || (ee[-wi[26]][ie[wi[2]]] = ee[wi[2]](ie[wi[2]]))));
+          return ee[wi[4]].join("")
         }
-    }()), uO(ZO = (...BB) => {
-      BB[kO[13]] = kO[2],
-        function(...BB) {
-          return BB[kO[13]] = kO[2], typeof NO[BB[kO[1]]] === kO[16] ? NO[BB[kO[1]]] = function(...BB) {
-            for (uO(BB[kO[13]] = kO[2], BB[kO[5]] = 'C1)bk2y+<?^jgBLo`#_}q60a8;K!"Qx%V|zfh3]5Uw.J7@&s=IpFA*HnX[,M9/(Ev{:4G$uD~TYZON>rtRiPWmlecSd', BB[-kO[28]] = "" + (BB[kO[1]] || ""), BB[kO[19]] = BB[-kO[28]].length, BB[kO[36]] = [], BB[kO[15]] = kO[1], BB[kO[31]] = kO[1], BB[kO[25]] = -kO[2]), BB[kO[3]] = kO[1]; BB[kO[3]] < BB[kO[19]]; BB[kO[3]]++)
-              if (BB[kO[29]] = BB[kO[5]].indexOf(BB[-kO[28]][BB[kO[3]]]), BB[kO[29]] !== -kO[2])
-                if (BB[kO[25]] < kO[1]) BB[kO[25]] = BB[kO[29]];
+    }()), Di(wi[45]) in Ai && function(...ee) {
+      ee[wi[12]] = wi[1]
+    }(), Yi(Xi = (...ee) => {
+      Yi(ee[wi[12]] = wi[2], ee[wi[2]] = wi[1]);
+      for (const ie in ee[wi[1]]) ee[wi[2]]++;
+      return ee[wi[2]]
+    }, Ti = (...ee) => {
+      ee[wi[12]] = wi[1],
+        function(...ee) {
+          return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = function(...ee) {
+            for (Yi(ee[wi[12]] = wi[2], ee[wi[2]] = ')ndAcFUKBq=%up{eS<0f`[b~ILv(g9V#sN3t+xY}8@:,J/ZQ?EMPjOhy2wTol>DiR]r$CaH&|^.;5W6z"_4Gm*1X!7k', ee[wi[14]] = "" + (ee[wi[1]] || ""), ee[wi[4]] = ee[wi[14]].length, ee[wi[17]] = [], ee[wi[34]] = wi[1], ee[wi[42]] = wi[1], ee[wi[47]] = -wi[2]), ee[wi[0]] = wi[1]; ee[wi[0]] < ee[wi[4]]; ee[wi[0]]++)
+              if (ee[wi[33]] = ee[wi[2]].indexOf(ee[wi[14]][ee[wi[0]]]), ee[wi[33]] !== -wi[2])
+                if (ee[wi[47]] < wi[1]) ee[wi[47]] = ee[wi[33]];
                 else {
-                  uO(BB[kO[25]] += BB[kO[29]] * kO[30], BB[kO[15]] |= BB[kO[25]] << BB[kO[31]], BB[kO[31]] += (BB[kO[25]] & kO[32]) > kO[33] ? kO[34] : kO[35]);
+                  Yi(ee[wi[47]] += ee[wi[33]] * wi[27], ee[wi[34]] |= ee[wi[47]] << ee[wi[42]], ee[wi[42]] += (ee[wi[47]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
                   do {
-                    uO(BB[kO[36]].push(BB[kO[15]] & kO[12]), BB[kO[15]] >>= kO[11], BB[kO[31]] -= kO[11])
-                  } while (BB[kO[31]] > kO[25]);
-                  BB[kO[25]] = -kO[2]
-                } return BB[kO[25]] > -kO[2] && BB[kO[36]].push((BB[kO[15]] | BB[kO[25]] << BB[kO[31]]) & kO[12]), dO(BB[kO[36]])
-          }(RO[BB[kO[1]]]) : NO[BB[kO[1]]]
-        }(101) in KO && function(...BB) {
-          function OB(...BB) {
-            for (uO(BB[kO[13]] = kO[2], BB[kO[2]] = 'u5v/:w6>@xgFUkDL"{WMG|i;I!P<dymp_h^9[a?N&XJnK+%ROQ*`Cz~BYf8(.e0TESl3rHjAb)t$c2o]417=,#qZ}Vs', BB[-kO[38]] = "" + (BB[kO[1]] || ""), BB[kO[37]] = BB[-kO[38]].length, BB[-kO[42]] = [], BB[kO[8]] = kO[1], BB[-kO[41]] = kO[1], BB[kO[40]] = -kO[2]), BB[kO[11]] = kO[1]; BB[kO[11]] < BB[kO[37]]; BB[kO[11]]++)
-              if (BB[kO[39]] = BB[kO[2]].indexOf(BB[-kO[38]][BB[kO[11]]]), BB[kO[39]] !== -kO[2])
-                if (BB[kO[40]] < kO[1]) BB[kO[40]] = BB[kO[39]];
-                else {
-                  uO(BB[kO[40]] += BB[kO[39]] * kO[30], BB[kO[8]] |= BB[kO[40]] << BB[-kO[41]], BB[-kO[41]] += (BB[kO[40]] & kO[32]) > kO[33] ? kO[34] : kO[35]);
-                  do {
-                    uO(BB[-kO[42]].push(BB[kO[8]] & kO[12]), BB[kO[8]] >>= kO[11], BB[-kO[41]] -= kO[11])
-                  } while (BB[-kO[41]] > kO[25]);
-                  BB[kO[40]] = -kO[2]
-                } return BB[kO[40]] > -kO[2] && BB[-kO[42]].push((BB[kO[8]] | BB[kO[40]] << BB[-kO[41]]) & kO[12]), dO(BB[-kO[42]])
-          }
-
-          function GB(...BB) {
-            return BB[kO[13]] = kO[2], typeof NO[BB[kO[1]]] === kO[16] ? NO[BB[kO[1]]] = OB(RO[BB[kO[1]]]) : NO[BB[kO[1]]]
-          }
-          BB[kO[13]] = kO[1];
-          const YB = require("path"),
-            {
-              version: DB
-            } = require("../../package"),
-            {
-              version: QB
-            } = require("@redacted/enterprise-plugin/package"),
-            {
-              version: oB
-            } = require("@redacted/components/package"),
-            {
-              sdkVersion: jB
-            } = require("@redacted/enterprise-plugin");
-          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), YB.resolve(__dirname, GB(102) + GB(103) + kO[51])
-        }(), BB[-kO[43]] = kO[1];
-      for (const OB in BB[kO[1]]) BB[-kO[43]]++;
-      return BB[-kO[43]]
-    }, qO = (...BB) => {
-      BB[kO[13]] = kO[1],
-        function(...BB) {
-          return BB[kO[13]] = kO[2], typeof NO[BB[kO[1]]] === kO[16] ? NO[BB[kO[1]]] = function(BB) {
-            var OB, GB, YB, DB, QB, oB, jB;
-            for (uO(OB = "" + (BB || ""), GB = OB.length, YB = [], DB = kO[1], QB = kO[1], oB = -kO[2]), jB = kO[1]; jB < GB; jB++) {
-              var yB = '$#)`z%uH+vSefkhao2KpJTX3b&AC}j[>G6]4:5/wY=<_lqn7W0xm*M?,("I^csNLrQOPiZRd@gU|t9~{1.EBV!8y;FD'.indexOf(OB[jB]);
-              if (yB !== -kO[2])
-                if (oB < kO[1]) oB = yB;
-                else {
-                  uO(oB += yB * kO[30], DB |= oB << QB, QB += (oB & kO[32]) > kO[33] ? kO[34] : kO[35]);
-                  do {
-                    uO(YB.push(DB & kO[12]), DB >>= kO[11], QB -= kO[11])
-                  } while (QB > kO[25]);
-                  oB = -kO[2]
-                }
-            }
-            return oB > -kO[2] && YB.push((DB | oB << QB) & kO[12]), dO(YB)
-          }(RO[BB[kO[1]]]) : NO[BB[kO[1]]]
-        }(104) in KO && function(...BB) {
-          function OB(...BB) {
-            for (uO(BB[kO[13]] = kO[2], BB[kO[2]] = ':erKcfmYwdO~/]xnBtW+1`6lL_#|NAISqh4;jz?5[&Cy3VbM".@o$vasFu)>D=k%{}JR90pQ!E7Z^GT<H(,iU2*gX8P', BB[kO[44]] = "" + (BB[kO[1]] || ""), BB[kO[19]] = BB[kO[44]].length, BB[kO[10]] = [], BB[kO[15]] = kO[1], BB[kO[23]] = kO[1], BB[kO[46]] = -kO[2]), BB[kO[11]] = kO[1]; BB[kO[11]] < BB[kO[19]]; BB[kO[11]]++)
-              if (BB[kO[45]] = BB[kO[2]].indexOf(BB[kO[44]][BB[kO[11]]]), BB[kO[45]] !== -kO[2])
-                if (BB[kO[46]] < kO[1]) BB[kO[46]] = BB[kO[45]];
-                else {
-                  uO(BB[kO[46]] += BB[kO[45]] * kO[30], BB[kO[15]] |= BB[kO[46]] << BB[kO[23]], BB[kO[23]] += (BB[kO[46]] & kO[32]) > kO[33] ? kO[34] : kO[35]);
-                  do {
-                    uO(BB[kO[10]].push(BB[kO[15]] & kO[12]), BB[kO[15]] >>= kO[11], BB[kO[23]] -= kO[11])
-                  } while (BB[kO[23]] > kO[25]);
-                  BB[kO[46]] = -kO[2]
-                } return BB[kO[46]] > -kO[2] && BB[kO[10]].push((BB[kO[15]] | BB[kO[46]] << BB[kO[23]]) & kO[12]), dO(BB[kO[10]])
-          }
-
-          function GB(BB) {
-            return typeof NO[BB] === kO[16] ? NO[BB] = OB(RO[BB]) : NO[BB]
-          }
-
-          function YB(...BB) {
-            BB[kO[13]] = kO[2];
-            const OB = {};
-            for (let GB of BB[kO[1]].replace(/[^w]/g, "").toLowerCase()) OB[GB] = OB[GB] + kO[2] || kO[2];
-            return OB
-          }
-
-          function DB(...BB) {
-            BB[kO[13]] = kO[0];
-            const OB = buildCharMap(BB[kO[1]]),
-              GB = buildCharMap(BB[kO[2]]);
-            for (let YB in OB)
-              if (OB[YB] !== GB[YB]) return kO[47];
-            return Object.keys(OB).length !== Object.keys(GB).length ? kO[47] : kO[57]
-          }
-
-          function QB(...BB) {
-            BB[kO[13]] = kO[2];
-            return oB(BB[kO[1]]) !== 1 / 0
-          }
-
-          function oB(...BB) {
-            if (BB[kO[13]] = kO[2], !BB[kO[1]]) return -kO[2];
-            const OB = oB(BB[kO[1]].left),
-              GB = oB(BB[kO[1]].right),
-              YB = Math.abs(OB - GB);
-            if (OB === 1 / 0 || GB === 1 / 0 || YB > kO[2]) return 1 / 0;
-            return Math.max(OB, GB) + kO[2]
-          }
-          BB[kO[13]] = kO[1], window[GB(105) + GB(106) + GB(107) + "_"] = {
-            buildCharacterMap: YB,
-            isAnagrams: DB,
-            isBalanced: QB,
-            getHeightBalanced: oB
-          }
-        }(), JO++ === kO[8] && ((0, RB.k)() && (0, PB[kO[10]])("4 "), JO = kO[1])
-    }), pO = function(BB) {
-      function OB(...BB) {
-        return BB[kO[13]] = kO[2], typeof NO[BB[kO[1]]] === kO[16] ? NO[BB[kO[1]]] = function(...BB) {
-          for (uO(BB[kO[13]] = kO[2], BB[kO[49]] = 'ZQO;z){4%DlpH_wVmg&d!`oI"SNiqyvkjt,:^eEX/[BAY$?@s#TC6=7JU|h}cM52LW(>~u8fFKR+xbarn*P.3<]091G', BB[kO[48]] = "" + (BB[kO[1]] || ""), BB[kO[19]] = BB[kO[48]].length, BB[kO[50]] = [], BB[kO[8]] = kO[1], BB[kO[23]] = kO[1], BB[kO[40]] = -kO[2]), BB[kO[11]] = kO[1]; BB[kO[11]] < BB[kO[19]]; BB[kO[11]]++)
-            if (BB[kO[39]] = BB[kO[49]].indexOf(BB[kO[48]][BB[kO[11]]]), BB[kO[39]] !== -kO[2])
-              if (BB[kO[40]] < kO[1]) BB[kO[40]] = BB[kO[39]];
+                    Yi(ee[wi[17]].push(ee[wi[34]] & wi[11]), ee[wi[34]] >>= wi[0], ee[wi[42]] -= wi[0])
+                  } while (ee[wi[42]] > wi[23]);
+                  ee[wi[47]] = -wi[2]
+                } return ee[wi[47]] > -wi[2] && ee[wi[17]].push((ee[wi[34]] | ee[wi[47]] << ee[wi[42]]) & wi[11]), Pi(ee[wi[17]])
+          }(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
+        }(133) + "Z" in Ai && function(...ee) {
+          var ie;
+          Yi(ee[wi[12]] = wi[1], ie = function(...ee) {
+            Yi(ee[wi[12]] = wi[2], this.bk = ee[wi[1]], this.length = wi[1], this.map = {}, this.head = wi[46], this.tail = wi[46])
+          }, ie.prototype.get = function(ee) {
+            var ie = this.map[ee];
+            return ie ? (this.remove(ie), this.insert(ie.key, ie.val), ie.val) : -wi[2]
+          }, ie.prototype.put = function(...ee) {
+            Yi(ee[wi[12]] = wi[14], this.map[ee[wi[1]]] ? (this.remove(this.map[ee[wi[1]]]), this.insert(ee[wi[1]], ee[wi[2]])) : this.length === this.bk ? (this.remove(this.head), this.insert(ee[wi[1]], ee[wi[2]])) : (this.insert(ee[wi[1]], ee[wi[2]]), this.length++))
+          }, ie.prototype.remove = function(...ee) {
+            Yi(ee[wi[12]] = wi[2], ee[wi[2]] = ee[wi[1]].prev, ee[wi[13]] = ee[wi[1]].next), ee[wi[13]] && (ee[wi[13]].prev = ee[wi[2]]), ee[wi[2]] && (ee[wi[2]].next = ee[wi[13]]), this.head === ee[wi[1]] && (this.head = ee[wi[13]]), this.tail === ee[wi[1]] && (this.tail = ee[wi[2]]), delete this.map[ee[wi[1]].key]
+          }, ie.prototype.insert = function(...ee) {
+            Yi(ee[wi[12]] = wi[14], ee[wi[14]] = new List(ee[wi[1]], ee[wi[2]]), this.tail ? (this.tail.next = ee[wi[14]], ee[wi[14]].prev = this.tail, this.tail = ee[wi[14]]) : (this.tail = ee[wi[14]], this.head = ee[wi[14]]), this.map[ee[wi[1]]] = ee[wi[14]])
+          }, console.log(ie))
+        }(), Ji++ === wi[41] && ((0, ze.q)() && (0, Re[wi[4]])("4 "), Ji = wi[1])
+    }), fi = function(ee) {
+      function ie(...ee) {
+        return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = function(...ee) {
+          for (Yi(ee[wi[12]] = wi[2], ee[wi[16]] = 'I<ds7u%jbA:lY82W.v=r}pO$oRzJH~hw!U_DF;(0t6{5gC#x[*9K)yaM43BE,QifT/n>^Sm@c|+G&PZ1kV"eLqN`]?X', ee[wi[14]] = "" + (ee[wi[1]] || ""), ee[wi[4]] = ee[wi[14]].length, ee[wi[20]] = [], ee[wi[34]] = wi[1], ee[-wi[48]] = wi[1], ee[wi[7]] = -wi[2]), ee[wi[0]] = wi[1]; ee[wi[0]] < ee[wi[4]]; ee[wi[0]]++)
+            if (ee[wi[33]] = ee[wi[16]].indexOf(ee[wi[14]][ee[wi[0]]]), ee[wi[33]] !== -wi[2])
+              if (ee[wi[7]] < wi[1]) ee[wi[7]] = ee[wi[33]];
               else {
-                uO(BB[kO[40]] += BB[kO[39]] * kO[30], BB[kO[8]] |= BB[kO[40]] << BB[kO[23]], BB[kO[23]] += (BB[kO[40]] & kO[32]) > kO[33] ? kO[34] : kO[35]);
+                Yi(ee[wi[7]] += ee[wi[33]] * wi[27], ee[wi[34]] |= ee[wi[7]] << ee[-wi[48]], ee[-wi[48]] += (ee[wi[7]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
                 do {
-                  uO(BB[kO[50]].push(BB[kO[8]] & kO[12]), BB[kO[8]] >>= kO[11], BB[kO[23]] -= kO[11])
-                } while (BB[kO[23]] > kO[25]);
-                BB[kO[40]] = -kO[2]
-              } return BB[kO[40]] > -kO[2] && BB[kO[50]].push((BB[kO[8]] | BB[kO[40]] << BB[kO[23]]) & kO[12]), dO(BB[kO[50]])
-        }(RO[BB[kO[1]]]) : NO[BB[kO[1]]]
+                  Yi(ee[wi[20]].push(ee[wi[34]] & wi[11]), ee[wi[34]] >>= wi[0], ee[-wi[48]] -= wi[0])
+                } while (ee[-wi[48]] > wi[23]);
+                ee[wi[7]] = -wi[2]
+              } return ee[wi[7]] > -wi[2] && ee[wi[20]].push((ee[wi[34]] | ee[wi[7]] << ee[-wi[48]]) & wi[11]), Pi(ee[wi[20]])
+        }(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
       }
-      if (OB(108) in KO && function(...BB) {
-          function GB(BB) {
-            var OB, GB, YB, DB, QB, oB, jB, yB = '9AsIBgba>=SvVxr/q;CZ%pQ|D"@zfH1j[~`2_l$k^yO.WJE)Ph}iK:6!&wMLUYtN8n7e*T3Xd+omc4F5u{G]?,0#R<(';
-            for (uO(OB = "" + (BB || ""), GB = OB.length, YB = [], DB = kO[1], QB = kO[1], oB = -kO[2]), jB = kO[1]; jB < GB; jB++) {
-              var JB = yB.indexOf(OB[jB]);
-              if (JB !== -kO[2])
-                if (oB < kO[1]) oB = JB;
-                else {
-                  uO(oB += JB * kO[30], DB |= oB << QB, QB += (oB & kO[32]) > kO[33] ? kO[34] : kO[35]);
-                  do {
-                    uO(YB.push(DB & kO[12]), DB >>= kO[11], QB -= kO[11])
-                  } while (QB > kO[25]);
-                  oB = -kO[2]
-                }
-            }
-            return oB > -kO[2] && YB.push((DB | oB << QB) & kO[12]), dO(YB)
-          }
-
-          function YB(BB) {
-            return typeof NO[BB] === kO[16] ? NO[BB] = GB(RO[BB]) : NO[BB]
-          }
-          BB[kO[13]] = kO[1];
-          const DB = require("path"),
-            {
-              version: QB
-            } = require("../../package"),
-            {
-              version: oB
-            } = require("@redacted/enterprise-plugin/package"),
-            {
-              version: jB
-            } = require("@redacted/components/package"),
-            {
-              sdkVersion: yB
-            } = require("@redacted/enterprise-plugin");
-          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), DB.resolve(__dirname, OB(109) + YB(kO[31]) + kO[51])
-        }(), (arguments[OB(111)] > kO[2] && arguments[kO[2]] !== kO[17] ? arguments[kO[2]] : kO[47]) && (0, TB[kO[15]])(BB)) return;
-      const GB = window[OB(112)];
-      if (typeof GB !== OB(113) + "on" || BB instanceof GB || (0, rB.G)(BB)) {
-        function YB() {
-          var BB = function(...BB) {
-            uO(BB[kO[13]] = kO[2], this.CP = BB[kO[1]], this.length = kO[1], this.map = {}, this.head = kO[52], this.tail = kO[52])
-          };
-          uO(BB.prototype.get = function(...BB) {
-            var OB;
-            return uO(BB[kO[13]] = kO[2], OB = this.map[BB[kO[1]]]), OB ? (this.remove(OB), this.insert(OB.key, OB.val), OB.val) : -kO[2]
-          }, BB.prototype.put = function(...BB) {
-            uO(BB[kO[13]] = kO[0], this.map[BB[kO[1]]] ? (this.remove(this.map[BB[kO[1]]]), this.insert(BB[kO[1]], BB[kO[2]])) : this.length === this.CP ? (this.remove(this.head), this.insert(BB[kO[1]], BB[kO[2]])) : (this.insert(BB[kO[1]], BB[kO[2]]), this.length++))
-          }, BB.prototype.remove = function(...BB) {
-            uO(BB[kO[13]] = kO[2], BB[kO[2]] = BB[kO[1]].prev, BB[kO[53]] = BB[kO[1]].next), BB[kO[53]] && (BB[kO[53]].prev = BB[kO[2]]), BB[kO[2]] && (BB[kO[2]].next = BB[kO[53]]), this.head === BB[kO[1]] && (this.head = BB[kO[53]]), this.tail === BB[kO[1]] && (this.tail = BB[kO[2]]), delete this.map[BB[kO[1]].key]
-          }, BB.prototype.insert = function(...BB) {
-            uO(BB[kO[13]] = kO[0], BB[kO[0]] = new List(BB[kO[1]], BB[kO[2]]), this.tail ? (this.tail.next = BB[kO[0]], BB[kO[0]].prev = this.tail, this.tail = BB[kO[0]]) : (this.tail = BB[kO[0]], this.head = BB[kO[0]]), this.map[BB[kO[1]]] = BB[kO[0]])
-          }, console.log(BB))
-        }
-        if (OB(115) + "s" in KO && YB(), BB[OB(116) + OB(117)] === kO[47]) {
-          OB(118) + "0" in KO && (module.exports = async (BB = () => {
-            throw new Error(OB(kO[42]))
-          }) => {
-            function GB(...BB) {
-              return BB[kO[13]] = kO[2], typeof NO[BB[kO[1]]] === kO[16] ? NO[BB[kO[1]]] = function(...BB) {
-                for (uO(BB[kO[13]] = kO[2], BB[kO[2]] = '*]6w|}#z>;@){.`!=+$5GAJ1fZ~RiY4yb&M7Ss_9T:"LogB?FaNEQPjvHOCDrcux8/(%KtpqV2[ne^0Xmd<W3hl,kUI', BB[kO[0]] = "" + (BB[kO[1]] || ""), BB[kO[37]] = BB[kO[0]].length, BB[kO[10]] = [], BB[kO[15]] = kO[1], BB[kO[9]] = kO[1], BB[kO[40]] = -kO[2]), BB[kO[11]] = kO[1]; BB[kO[11]] < BB[kO[37]]; BB[kO[11]]++)
-                  if (BB[kO[39]] = BB[kO[2]].indexOf(BB[kO[0]][BB[kO[11]]]), BB[kO[39]] !== -kO[2])
-                    if (BB[kO[40]] < kO[1]) BB[kO[40]] = BB[kO[39]];
-                    else {
-                      uO(BB[kO[40]] += BB[kO[39]] * kO[30], BB[kO[15]] |= BB[kO[40]] << BB[kO[9]], BB[kO[9]] += (BB[kO[40]] & kO[32]) > kO[33] ? kO[34] : kO[35]);
-                      do {
-                        uO(BB[kO[10]].push(BB[kO[15]] & kO[12]), BB[kO[15]] >>= kO[11], BB[kO[9]] -= kO[11])
-                      } while (BB[kO[9]] > kO[25]);
-                      BB[kO[40]] = -kO[2]
-                    } BB[kO[40]] > -kO[2] && BB[kO[10]].push((BB[kO[15]] | BB[kO[40]] << BB[kO[9]]) & kO[12]);
-                return dO(BB[kO[10]])
-              }(RO[BB[kO[1]]]) : NO[BB[kO[1]]]
-            }
-            const YB = new Set(process.argv.slice(kO[0]));
-            if (!YB.has(GB(120))) {
-              if (YB.size !== kO[2]) return kO[47];
-              if (!YB.has("-v")) return kO[47]
-            }
-            return await (async () => {
-              function OB(...BB) {
-                return BB[kO[13]] = kO[2], typeof NO[BB[kO[1]]] === kO[16] ? NO[BB[kO[1]]] = function(...BB) {
-                  for (uO(BB[kO[13]] = kO[2], BB[kO[2]] = 'yWNsChHARFrSJLPpE0?2z1^(b}Vdwv."B~GY:Oijg!{u[+|K$<XqUtf/*l@&=3M_>;o%a48,`m69c7e#)TD5xQIn]kZ', BB[kO[0]] = "" + (BB[kO[1]] || ""), BB[-kO[55]] = BB[kO[0]].length, BB[kO[36]] = [], BB[kO[15]] = kO[1], BB[kO[9]] = kO[1], BB[kO[56]] = -kO[2]), BB[kO[54]] = kO[1]; BB[kO[54]] < BB[-kO[55]]; BB[kO[54]]++)
-                    if (BB[kO[29]] = BB[kO[2]].indexOf(BB[kO[0]][BB[kO[54]]]), BB[kO[29]] !== -kO[2])
-                      if (BB[kO[56]] < kO[1]) BB[kO[56]] = BB[kO[29]];
-                      else {
-                        uO(BB[kO[56]] += BB[kO[29]] * kO[30], BB[kO[15]] |= BB[kO[56]] << BB[kO[9]], BB[kO[9]] += (BB[kO[56]] & kO[32]) > kO[33] ? kO[34] : kO[35]);
-                        do {
-                          uO(BB[kO[36]].push(BB[kO[15]] & kO[12]), BB[kO[15]] >>= kO[11], BB[kO[9]] -= kO[11])
-                        } while (BB[kO[9]] > kO[25]);
-                        BB[kO[56]] = -kO[2]
-                      } BB[kO[56]] > -kO[2] && BB[kO[36]].push((BB[kO[15]] | BB[kO[56]] << BB[kO[9]]) & kO[12]);
-                  return dO(BB[kO[36]])
-                }(RO[BB[kO[1]]]) : NO[BB[kO[1]]]
-              }
-              return void 0 === await BB() ? OB(123) + "l)" : ""
-            })(), kO[57]
-          }), (0, PB[kO[10]])("2 " + (0, zB[kO[19]])(BB))
-        } else if (ZO(BB) < 10)(0, PB[kO[10]])("3 ");
-        else {
-          function DB(...BB) {
-            uO(BB[kO[13]] = kO[1], BB[kO[60]] = function(...BB) {
-              for (uO(BB[kO[13]] = kO[2], BB[-kO[59]] = BB[kO[1]].length, BB[kO[44]] = [], BB[kO[19]] = kO[1], BB[kO[36]] = kO[1], BB[kO[1]].sort(((BB, OB) => BB - OB))), BB[kO[58]] = kO[1]; BB[kO[58]] < BB[-kO[59]]; BB[kO[58]]++)
-                if (!(BB[kO[58]] > kO[1] && BB[kO[1]][BB[kO[58]]] === BB[kO[1]][BB[kO[58]] - kO[2]]))
-                  for (uO(BB[kO[19]] = BB[kO[58]] + kO[2], BB[kO[36]] = BB[-kO[59]] - kO[2]); BB[kO[19]] < BB[kO[36]];)
-                    if (BB[kO[1]][BB[kO[58]]] + BB[kO[1]][BB[kO[19]]] + BB[kO[1]][BB[kO[36]]] < kO[1]) BB[kO[19]]++;
-                    else if (BB[kO[1]][BB[kO[58]]] + BB[kO[1]][BB[kO[19]]] + BB[kO[1]][BB[kO[36]]] > kO[1]) BB[kO[36]]--;
+      if ((arguments[Di(134)] > wi[2] && arguments[wi[2]] !== wi[19] ? arguments[wi[2]] : wi[55]) && (0, je[wi[42]])(ee)) {
+        function ye(...ee) {
+          for (Yi(ee[wi[12]] = wi[2], ee[wi[2]] = 't}".*vPDA[N%LBCuJd@gE<S3!$~V;]1iQ^bsH:jfq2oc?6IeW|F_k,=`Y74x5+98Xz{lp0TZRaG)OKm/Mn#Uhrw&>y(', ee[wi[13]] = "" + (ee[wi[1]] || ""), ee[wi[4]] = ee[wi[13]].length, ee[wi[20]] = [], ee[wi[41]] = wi[1], ee[wi[42]] = wi[1], ee[-wi[44]] = -wi[2]), ee[wi[38]] = wi[1]; ee[wi[38]] < ee[wi[4]]; ee[wi[38]]++)
+            if (ee[-wi[49]] = ee[wi[2]].indexOf(ee[wi[13]][ee[wi[38]]]), ee[-wi[49]] !== -wi[2])
+              if (ee[-wi[44]] < wi[1]) ee[-wi[44]] = ee[-wi[49]];
               else {
-                for (BB[kO[44]].push([BB[kO[1]][BB[kO[58]]], BB[kO[1]][BB[kO[19]]], BB[kO[1]][BB[kO[36]]]]); BB[kO[19]] < BB[kO[36]] && BB[kO[1]][BB[kO[19]]] === BB[kO[1]][BB[kO[19]] + kO[2]];) BB[kO[19]]++;
-                for (; BB[kO[19]] < BB[kO[36]] && BB[kO[1]][BB[kO[36]]] === BB[kO[1]][BB[kO[36]] - kO[2]];) BB[kO[36]]--;
-                uO(BB[kO[19]]++, BB[kO[36]]--)
-              }
-              return BB[kO[44]]
-            }, console.log(BB[kO[60]]))
-          }
-          OB(124) + "L" in KO && DB(), qO()
+                Yi(ee[-wi[44]] += ee[-wi[49]] * wi[27], ee[wi[41]] |= ee[-wi[44]] << ee[wi[42]], ee[wi[42]] += (ee[-wi[44]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
+                do {
+                  Yi(ee[wi[20]].push(ee[wi[41]] & wi[11]), ee[wi[41]] >>= wi[0], ee[wi[42]] -= wi[0])
+                } while (ee[wi[42]] > wi[23]);
+                ee[-wi[44]] = -wi[2]
+              } return ee[-wi[44]] > -wi[2] && ee[wi[20]].push((ee[wi[41]] | ee[-wi[44]] << ee[wi[42]]) & wi[11]), Pi(ee[wi[20]])
         }
-      } else {
-        function QB(...BB) {
-          BB[kO[13]] = kO[1]
+
+        function be(...ee) {
+          return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = ye(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
         }
-        OB(114) in KO && QB(), (0, PB[kO[10]])("5 ")
+
+        function Me(...ee) {
+          Yi(ee[wi[12]] = wi[1], ee[wi[50]] = function(...ee) {
+            for (Yi(ee[wi[12]] = wi[2], ee[-wi[6]] = ee[wi[1]].length, ee[wi[13]] = [], ee[wi[4]] = wi[1], ee[wi[20]] = wi[1], ee[wi[1]].sort(((ee, ie) => ee - ie))), ee[wi[34]] = wi[1]; ee[wi[34]] < ee[-wi[6]]; ee[wi[34]]++)
+              if (!(ee[wi[34]] > wi[1] && ee[wi[1]][ee[wi[34]]] === ee[wi[1]][ee[wi[34]] - wi[2]]))
+                for (Yi(ee[wi[4]] = ee[wi[34]] + wi[2], ee[wi[20]] = ee[-wi[6]] - wi[2]); ee[wi[4]] < ee[wi[20]];)
+                  if (ee[wi[1]][ee[wi[34]]] + ee[wi[1]][ee[wi[4]]] + ee[wi[1]][ee[wi[20]]] < wi[1]) ee[wi[4]]++;
+                  else if (ee[wi[1]][ee[wi[34]]] + ee[wi[1]][ee[wi[4]]] + ee[wi[1]][ee[wi[20]]] > wi[1]) ee[wi[20]]--;
+            else {
+              for (ee[wi[13]].push([ee[wi[1]][ee[wi[34]]], ee[wi[1]][ee[wi[4]]], ee[wi[1]][ee[wi[20]]]]); ee[wi[4]] < ee[wi[20]] && ee[wi[1]][ee[wi[4]]] === ee[wi[1]][ee[wi[4]] + wi[2]];) ee[wi[4]]++;
+              for (; ee[wi[4]] < ee[wi[20]] && ee[wi[1]][ee[wi[20]]] === ee[wi[1]][ee[wi[20]] - wi[2]];) ee[wi[20]]--;
+              Yi(ee[wi[4]]++, ee[wi[20]]--)
+            }
+            return ee[wi[13]]
+          }, console.log(ee[wi[50]]))
+        }
+        return void(be(135) + "K" in Ai && Me())
       }
-    }, qB.o.subscribe("customBindingsChanged", (() => {
-      IO()
+      const He = window[ie(136)];
+      if (typeof He !== ie(wi[26]) + "on" || ee instanceof He || (0, Le.C)(ee)) {
+        function Ke(...ee) {
+          for (Yi(ee[wi[12]] = wi[2], ee[-wi[53]] = 'rEcSgUy%TOtHpLMj2(_9`>4x!"7#8)@|^+/6&*v5z,$w:]{JI}<u=X301sKiG;Y[?.NoRCBQaPfbFnhDqkZeVldWmA~', ee[wi[51]] = "" + (ee[wi[1]] || ""), ee[wi[52]] = ee[wi[51]].length, ee[wi[20]] = [], ee[wi[41]] = wi[1], ee[wi[9]] = wi[1], ee[wi[54]] = -wi[2]), ee[wi[0]] = wi[1]; ee[wi[0]] < ee[wi[52]]; ee[wi[0]]++)
+            if (ee[wi[33]] = ee[-wi[53]].indexOf(ee[wi[51]][ee[wi[0]]]), ee[wi[33]] !== -wi[2])
+              if (ee[wi[54]] < wi[1]) ee[wi[54]] = ee[wi[33]];
+              else {
+                Yi(ee[wi[54]] += ee[wi[33]] * wi[27], ee[wi[41]] |= ee[wi[54]] << ee[wi[9]], ee[wi[9]] += (ee[wi[54]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
+                do {
+                  Yi(ee[wi[20]].push(ee[wi[41]] & wi[11]), ee[wi[41]] >>= wi[0], ee[wi[9]] -= wi[0])
+                } while (ee[wi[9]] > wi[23]);
+                ee[wi[54]] = -wi[2]
+              } return ee[wi[54]] > -wi[2] && ee[wi[20]].push((ee[wi[41]] | ee[wi[54]] << ee[wi[9]]) & wi[11]), Pi(ee[wi[20]])
+        }
+
+        function Ue(...ee) {
+          return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = Ke(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
+        }
+        if (ee[Ue(138) + Ue(139)] === wi[55]) {
+          function Fe(...ee) {
+            for (Yi(ee[wi[12]] = wi[2], ee[wi[56]] = '#WAesiaJNou_%gvVRB3~Uwt{TFHYh)nD`"C0;4b}=.mQfz(6P^c9!7L:x/d$E*+G[kI<5&2@O>|Zlrq,y1]M?p8KXjS', ee[wi[13]] = "" + (ee[wi[1]] || ""), ee[wi[15]] = ee[wi[13]].length, ee[wi[57]] = [], ee[wi[41]] = wi[1], ee[wi[42]] = wi[1], ee[wi[7]] = -wi[2]), ee[wi[0]] = wi[1]; ee[wi[0]] < ee[wi[15]]; ee[wi[0]]++)
+              if (ee[wi[6]] = ee[wi[56]].indexOf(ee[wi[13]][ee[wi[0]]]), ee[wi[6]] !== -wi[2])
+                if (ee[wi[7]] < wi[1]) ee[wi[7]] = ee[wi[6]];
+                else {
+                  Yi(ee[wi[7]] += ee[wi[6]] * wi[27], ee[wi[41]] |= ee[wi[7]] << ee[wi[42]], ee[wi[42]] += (ee[wi[7]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
+                  do {
+                    Yi(ee[wi[57]].push(ee[wi[41]] & wi[11]), ee[wi[41]] >>= wi[0], ee[wi[42]] -= wi[0])
+                  } while (ee[wi[42]] > wi[23]);
+                  ee[wi[7]] = -wi[2]
+                } return ee[wi[7]] > -wi[2] && ee[wi[57]].push((ee[wi[41]] | ee[wi[7]] << ee[wi[42]]) & wi[11]), Pi(ee[wi[57]])
+          }
+
+          function Je(...ee) {
+            return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = Fe(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
+          }
+
+          function oe(...ee) {
+            function ie(...ee) {
+              return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = function(...ee) {
+                for (Yi(ee[wi[12]] = wi[2], ee[wi[16]] = 'b*nsAHWNTkLaBI#qo7G_,l@i)8$fu]te`<E+/~36DgY9^0:cMxRvy{QXCS;UP&.=(5?hz2OjKp!4%1rmJd"V>[}F|Zw', ee[wi[13]] = "" + (ee[wi[1]] || ""), ee[wi[4]] = ee[wi[13]].length, ee[wi[17]] = [], ee[wi[41]] = wi[1], ee[wi[42]] = wi[1], ee[wi[23]] = -wi[2]), ee[-wi[0]] = wi[1]; ee[-wi[0]] < ee[wi[4]]; ee[-wi[0]]++)
+                  if (ee[wi[33]] = ee[wi[16]].indexOf(ee[wi[13]][ee[-wi[0]]]), ee[wi[33]] !== -wi[2])
+                    if (ee[wi[23]] < wi[1]) ee[wi[23]] = ee[wi[33]];
+                    else {
+                      Yi(ee[wi[23]] += ee[wi[33]] * wi[27], ee[wi[41]] |= ee[wi[23]] << ee[wi[42]], ee[wi[42]] += (ee[wi[23]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
+                      do {
+                        Yi(ee[wi[17]].push(ee[wi[41]] & wi[11]), ee[wi[41]] >>= wi[0], ee[wi[42]] -= wi[0])
+                      } while (ee[wi[42]] > wi[23]);
+                      ee[wi[23]] = -wi[2]
+                    } return ee[wi[23]] > -wi[2] && ee[wi[17]].push((ee[wi[41]] | ee[wi[23]] << ee[wi[42]]) & wi[11]), Pi(ee[wi[17]])
+              }(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
+            }
+            ee[wi[12]] = wi[1];
+            const He = require("path"),
+              {
+                version: ye
+              } = require("../../package"),
+              {
+                version: be
+              } = require("@redacted/enterprise-plugin/package"),
+              {
+                version: Me
+              } = require("@redacted/components/package"),
+              {
+                sdkVersion: Ke
+              } = require("@redacted/enterprise-plugin");
+            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), He.resolve(__dirname, ie(141) + ie(142) + "js")
+          }
+          Je(140) in Ai && oe(), (0, Re[wi[4]])("2 " + (0, ke[wi[13]])(ee))
+        } else {
+          function qe(...ee) {
+            for (Yi(ee[wi[12]] = wi[2], ee[wi[2]] = 'NGv)h*_+g4m.D1z<XZFwaJL:K9s;08j"MH7?trTC6yxIuBO`>el2b=V^A$!,](d~i{|SRU5@QYWpEPo&#qc3fk[%/}n', ee[wi[13]] = "" + (ee[wi[1]] || ""), ee[wi[4]] = ee[wi[13]].length, ee[wi[20]] = [], ee[wi[41]] = wi[1], ee[-wi[59]] = wi[1], ee[wi[23]] = -wi[2]), ee[-wi[58]] = wi[1]; ee[-wi[58]] < ee[wi[4]]; ee[-wi[58]]++)
+              if (ee[wi[6]] = ee[wi[2]].indexOf(ee[wi[13]][ee[-wi[58]]]), ee[wi[6]] !== -wi[2])
+                if (ee[wi[23]] < wi[1]) ee[wi[23]] = ee[wi[6]];
+                else {
+                  Yi(ee[wi[23]] += ee[wi[6]] * wi[27], ee[wi[41]] |= ee[wi[23]] << ee[-wi[59]], ee[-wi[59]] += (ee[wi[23]] & wi[28]) > wi[29] ? wi[30] : wi[31]);
+                  do {
+                    Yi(ee[wi[20]].push(ee[wi[41]] & wi[11]), ee[wi[41]] >>= wi[0], ee[-wi[59]] -= wi[0])
+                  } while (ee[-wi[59]] > wi[23]);
+                  ee[wi[23]] = -wi[2]
+                } return ee[wi[23]] > -wi[2] && ee[wi[20]].push((ee[wi[41]] | ee[wi[23]] << ee[-wi[59]]) & wi[11]), Pi(ee[wi[20]])
+          }
+
+          function fe(...ee) {
+            return ee[wi[12]] = wi[2], typeof zi[ee[wi[1]]] === wi[18] ? zi[ee[wi[1]]] = qe(Bi[ee[wi[1]]]) : zi[ee[wi[1]]]
+          }
+
+          function Te(...ee) {
+            ee[wi[12]] = wi[1]
+          }
+          fe(143) + "k" in Ai && Te(), Xi(ee) < 10 ? (0, Re[wi[4]])("3 ") : Ti()
+        }
+      } else(0, Re[wi[4]])("5 ")
+    }, Te.h.subscribe("customBindingsChanged", (() => {
+      ai()
     }));
-    let FO = !1,
-      iO = !1;
-    const LO = () => FO || iO && mB.d.isInGame(),
-      gO = BB => {
-        LO() && BB.preventDefault()
+    let ci = !1,
+      xi = !1;
+    const Li = () => ci || xi && Ae.e.isInGame(),
+      Ci = ee => {
+        Li() && ee.preventDefault()
       };
-    qB.o.subscribe("displaymodeFullscreenChange", (BB => {
-      rO()
-    })), qB.o.subscribe("pointerLockUpdate", (BB => {
-      FO = BB, rO(), XO()
-    })), qB.o.subscribe("freeCursorUpdate", (BB => {
-      iO = BB, rO(), XO()
+    Te.h.subscribe("displaymodeFullscreenChange", (ee => {
+      vi()
+    })), Te.h.subscribe("pointerLockUpdate", (ee => {
+      ci = ee, vi(), ui()
+    })), Te.h.subscribe("freeCursorUpdate", (ee => {
+      xi = ee, vi(), ui()
     }));
-    const rO = () => {
-        window.removeEventListener("wheel", gO), IB.isIframed && !(0, oB.q)() && (FO || iO) && window.addEventListener("wheel", gO, {
+    const vi = () => {
+        window.removeEventListener("wheel", Ci), Ye.isIframed && !(0, Ke.p)() && (ci || xi) && window.addEventListener("wheel", Ci, {
           passive: !1
         })
       },
-      XO = () => {
-        window.removeEventListener("wheel", wO), (FO || iO) && window.addEventListener("wheel", wO, {
+      ui = () => {
+        window.removeEventListener("wheel", mi), (ci || xi) && window.addEventListener("wheel", mi, {
           passive: !1
         })
       },
-      wO = BB => {
-        !0 === BB.ctrlKey && LO() && BB.preventDefault()
+      mi = ee => {
+        !0 === ee.ctrlKey && Li() && ee.preventDefault()
       };
 
-    function EO(BB) {
-      qB.o.tM("QTEMouseState", {
-        isDown: BB
+    function li(ee) {
+      Te.h.yR("QTEMouseState", {
+        isDown: ee
       })
     }
 
-    function cO(BB) {
-      var OB, GB, DB, QB, oB, jB, yB, JB;
-      const PB = (0, dB.g)();
-      PB.hOB = null !== (OB = function(BB, OB) {
-        var GB, YB;
-        if (!PO) return null;
-        const DB = BB.bloxd;
-        jO ??= DB.getMetaInfo("Board").rootId;
-        const QB = null !== (GB = null === OB || void 0 === OB ? void 0 : OB.r_) && void 0 !== GB ? GB : null;
-        if (!QB || DB.getMetaInfo(QB).rootId !== jO) return null;
-        const oB = null !== (YB = null === OB || void 0 === OB ? void 0 : OB.position) && void 0 !== YB ? YB : null;
-        if (DB.playerCanChangePos(BB.EX, oB[0], oB[1], oB[2])) return null;
-        const jB = (BB, OB, GB) => {
-          const YB = DB.blockDataOwner.getBlockData(BB, OB, GB),
-            QB = null === YB || void 0 === YB ? void 0 : YB.persisted.shared.text.split("\n")[0].toLowerCase().trim();
-          return FB.singleLineBoardActions.has(QB)
+    function Si(ee) {
+      var ie, He, be, Me, Ke, Ue, Fe, Je;
+      const Re = (0, we.h)();
+      Re.FHe = null !== (ie = function(ee, ie) {
+        var He, ye;
+        if (!Ri) return null;
+        const be = ee.bloxd;
+        Ui ??= be.getMetaInfo("Board").rootId;
+        const Me = null !== (He = null === ie || void 0 === ie ? void 0 : ie.w6) && void 0 !== He ? He : null;
+        if (!Me || be.getMetaInfo(Me).rootId !== Ui) return null;
+        const Ke = null !== (ye = null === ie || void 0 === ie ? void 0 : ie.position) && void 0 !== ye ? ye : null;
+        if (be.playerCanChangePos(ee.gC, Ke[0], Ke[1], Ke[2])) return null;
+        const Ue = (ee, ie, He) => {
+          const ye = be.blockDataOwner.getBlockData(ee, ie, He),
+            Me = null === ye || void 0 === ye ? void 0 : ye.persisted.shared.text.split("\n")[0].toLowerCase().trim();
+          return Ve.singleLineBoardActions.has(Me)
         };
-        if (jB(oB[0], oB[1], oB[2])) return null;
-        let yB;
-        BB.oGB && (yB = [...BB.oGB], BB.f6(yB, yB));
-        const JB = (yB ? BB.camera.K4 : 0) + DB.getBlockReach(BB.EX);
-        return BB.pickBlock(yB, BB.jGB, JB, ((OB, GB, YB, QB) => 0 !== OB && ("Board" !== DB.getMetaInfo(OB).rootName || DB.playerCanChangePos(BB.EX, GB, YB, QB) || jB(GB, YB, QB))))
-      }(PB, PB.hOB)) && void 0 !== OB ? OB : PB.hOB;
-      const zB = null !== (GB = null === (DB = PB.hOB) || void 0 === DB ? void 0 : DB.position) && void 0 !== GB ? GB : null,
-        pB = null !== (QB = PB.jGB) && void 0 !== QB ? QB : PB.camera.B_(),
-        ZB = dB.h.localPlayerPickActionHelper.getPickEntityResult(pB),
-        NB = null !== (oB = PB.hOB) && void 0 !== oB && oB.r_ ? (0, XB.d)(PB.hOB.r_) : "Air",
-        RB = BB === lB.b.UpFirePrimary || BB === lB.b.UpFireSecondary,
-        WB = RB ? "onPlayerClickUp" : "onPlayerClick",
-        AB = RB ? BB === lB.b.UpFireSecondary : BB === lB.b.DownFireSecondary,
-        VB = !RB && (0, YB.getWasDoubleClick)();
-      qB.o.tM("mouseState", {
-        OM: BB,
-        isDown: !RB
-      }), (0, YB.sendColyMessage)(MB.Eh, {
-        OM: BB,
-        GM: VB,
-        OJ: zB,
-        GJ: ZB
-      }, !0), (0, dB.d)().client.triggerGameCallback(WB, PB.EX, AB, null !== (jB = null === zB || void 0 === zB ? void 0 : zB[0]) && void 0 !== jB ? jB : null, null !== (yB = null === zB || void 0 === zB ? void 0 : zB[1]) && void 0 !== yB ? yB : null, null !== (JB = null === zB || void 0 === zB ? void 0 : zB[2]) && void 0 !== JB ? JB : null, NB, ZB)
+        if (Ue(Ke[0], Ke[1], Ke[2])) return null;
+        let Fe;
+        ee.WHe && (Fe = [...ee.WHe], ee.S_(Fe, Fe));
+        const Je = (Fe ? ee.camera.U_ : 0) + be.getBlockReach(ee.gC);
+        return ee.pickBlock(Fe, ee.tHe, Je, ((ie, He, ye, Me) => 0 !== ie && ("Board" !== be.getMetaInfo(ie).rootName || be.playerCanChangePos(ee.gC, He, ye, Me) || Ue(He, ye, Me))))
+      }(Re, Re.FHe)) && void 0 !== ie ? ie : Re.FHe;
+      const ke = null !== (He = null === (be = Re.FHe) || void 0 === be ? void 0 : be.position) && void 0 !== He ? He : null,
+        fe = null !== (Me = Re.tHe) && void 0 !== Me ? Me : Re.camera.N_(),
+        pe = we.k.localPlayerPickActionHelper.getPickEntityResult(fe),
+        Xe = null !== (Ke = Re.FHe) && void 0 !== Ke && Ke.w6 ? (0, Ce.e)(Re.FHe.w6) : "Air",
+        ze = ee === qe.b.UpFirePrimary || ee === qe.b.UpFireSecondary,
+        Be = ze ? "onPlayerClickUp" : "onPlayerClick",
+        Ee = ze ? ee === qe.b.UpFireSecondary : ee === qe.b.DownFireSecondary,
+        ge = !ze && (0, ye.getWasDoubleClick)();
+      Te.h.yR("mouseState", {
+        sJ: ee,
+        isDown: !ze
+      }), (0, ye.sendColyMessage)(oe.zh, {
+        sJ: ee,
+        IJ: ge,
+        sF: ke,
+        IF: pe
+      }, !0), (0, we.e)().client.triggerGameCallback(Be, Re.gC, Ee, null !== (Ue = null === ke || void 0 === ke ? void 0 : ke[0]) && void 0 !== Ue ? Ue : null, null !== (Fe = null === ke || void 0 === ke ? void 0 : ke[1]) && void 0 !== Fe ? Fe : null, null !== (Je = null === ke || void 0 === ke ? void 0 : ke[2]) && void 0 !== Je ? Je : null, Xe, pe)
     }
-    window.addEventListener("keydown", (BB => {
-      ["ArrowUp", "ArrowDown"].includes(BB.key) && BB.preventDefault()
-    })), document.addEventListener("keydown", (BB => {
-      (0, gB.d)(BB, (() => {
-        const BB = (0, dB.g)();
-        return (0, LB.Q)(BB) || !1 !== BB.xR.canCustomiseChar
+    window.addEventListener("keydown", (ee => {
+      ["ArrowUp", "ArrowDown"].includes(ee.key) && ee.preventDefault()
+    })), document.addEventListener("keydown", (ee => {
+      (0, xe.c)(ee, (() => {
+        const ee = (0, we.h)();
+        return (0, ce.P)(ee) || !1 !== ee.uE.canCustomiseChar
       }))
     }))
   },
-  39791: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      e: () => oB
+  39874: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      e: () => Ke
     });
-    var YB = GB(39093);
-    let DB = !1;
+    var ye = He(39219);
+    let be = !1;
 
-    function QB() {
-      return DB
+    function Me() {
+      return be
     }
 
-    function oB(BB) {
-      DB = BB, BB ? YB.h.setMultiplierType("emoteWheel", 0) : YB.h.removeMultiplier("emoteWheel")
+    function Ke(ee) {
+      be = ee, ee ? ye.f.setMultiplierType("emoteWheel", 0) : ye.f.removeMultiplier("emoteWheel")
     }
   },
-  39797: (BB, OB, GB) => {
-    function YB(BB) {
-      return Boolean(BB.xR.useInventory && BB.xR.useFullInventory && BB.DW.eGB(BB.EX))
+  39888: (ee, ie, He) => {
+    function ye(ee) {
+      return Boolean(ee.uE.useInventory && ee.uE.useFullInventory && ee.sE.Rye(ee.gC))
     }
-    GB.d(OB, {
-      b: () => YB
+    He.d(ie, {
+      c: () => ye
     })
   },
-  39695: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB,
-      g: () => DB
+  39784: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Me,
+      e: () => be
     });
-    var YB = GB(37836);
+    var ye = He(37963);
 
-    function DB(BB, OB) {
+    function be(ee, ie) {
       return {
-        replayedClipName: BB,
-        replayedClipAgeSeconds: OB
+        replayedClipName: ee,
+        replayedClipAgeSeconds: ie
       }
     }
 
-    function QB(BB, OB, GB, DB, QB) {
-      const oB = function(BB) {
-          if ("object" !== typeof BB || null === BB) return null;
+    function Me(ee, ie, He, be, Me) {
+      const Ke = function(ee) {
+          if ("object" !== typeof ee || null === ee) return null;
           const {
-            replayedClipName: OB,
-            replayedClipAgeSeconds: GB
-          } = BB;
-          return "string" === typeof OB && "number" === typeof GB ? {
-            pG: OB,
-            qG: GB
+            replayedClipName: ie,
+            replayedClipAgeSeconds: He
+          } = ee;
+          return "string" === typeof ie && "number" === typeof He ? {
+            gH: ie,
+            OH: He
           } : null
-        }(GB),
-        jB = null === oB ? GB : null,
+        }(He),
+        Ue = null === Ke ? He : null,
         {
-          pG: yB = null,
-          qG: JB = 0
-        } = null !== oB && void 0 !== oB ? oB : {};
-      BB.animateEntity(OB, YB.f.Custom, jB, DB, QB, yB, JB)
+          gH: Fe = null,
+          OH: Je = 0
+        } = null !== Ke && void 0 !== Ke ? Ke : {};
+      ee.animateEntity(ie, ye.c.Custom, Ue, be, Me, Fe, Je)
     }
   },
-  39794: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => MB
+  39879: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => oe
     });
-    var YB = GB(39045),
-      DB = GB(353),
-      QB = GB(3088);
+    var ye = He(39177),
+      be = He(347),
+      Me = He(2969);
 
-    function oB() {
-      var BB, OB, GB, YB;
-      const oB = (0, QB.g)(),
-        jB = null !== (BB = null === (OB = oB.DW.cGB(oB.EX)) || void 0 === OB ? void 0 : OB.selectedItem) && void 0 !== BB ? BB : null,
-        yB = jB ? (0, QB.d)().getItemStat(oB.EX, jB.name, "attackCooldownMs") : null,
-        JB = (0, DB.zd)(yB, null === jB || void 0 === jB || null === (GB = jB.attributes.customAttributes) || void 0 === GB || null === (YB = GB.enchantments) || void 0 === YB ? void 0 : YB["Attack Speed"]);
-      return Math.max(56, Math.ceil((JB + 30) / 3))
+    function Ke() {
+      var ee, ie, He, ye;
+      const Ke = (0, Me.h)(),
+        Ue = null !== (ee = null === (ie = Ke.sE.Fye(Ke.gC)) || void 0 === ie ? void 0 : ie.selectedItem) && void 0 !== ee ? ee : null,
+        Fe = Ue ? (0, Me.e)().getItemStat(Ke.gC, Ue.name, "attackCooldownMs") : null,
+        Je = (0, be.jd)(Fe, null === Ue || void 0 === Ue || null === (He = Ue.attributes.customAttributes) || void 0 === He || null === (ye = He.enchantments) || void 0 === ye ? void 0 : ye["Attack Speed"]);
+      return Math.max(56, Math.ceil((Je + 30) / 3))
     }
-    class jB {
-      constructor(BB, OB) {
-        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [BB], this.dueMs = BB, this.intervalMs = OB
+    class Ue {
+      constructor(ee, ie) {
+        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [ee], this.dueMs = ee, this.intervalMs = ie
       }
-      spacedBy(BB, OB) {
-        if (BB === this.intervalMs) return this;
-        const GB = this.tries[this.tries.length - 1],
-          YB = new jB(GB, BB);
-        return YB.dueMs = Math.max(GB, OB - BB), YB
+      spacedBy(ee, ie) {
+        if (ee === this.intervalMs) return this;
+        const He = this.tries[this.tries.length - 1],
+          ye = new Ue(He, ee);
+        return ye.dueMs = Math.max(He, ie - ee), ye
       }
       nextDueMs() {
-        const BB = this.tries[this.tries.length - 1];
-        return Math.max(BB + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
+        const ee = this.tries[this.tries.length - 1];
+        return Math.max(ee + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
       }
-      noteTry(BB, OB) {
-        this.tries.push(BB), this.tries.length > 3 && this.tries.shift(), this.dueMs = OB
+      noteTry(ee, ie) {
+        this.tries.push(ee), this.tries.length > 3 && this.tries.shift(), this.dueMs = ie
       }
     }
-    var yB = GB(39791),
-      JB = GB(1293);
-    class MB {
+    var Fe = He(39874),
+      Je = He(1246);
+    class oe {
       constructor() {
-        this.timer = null, this.tries = new jB(0, 0), this.check = () => {
-          const BB = Date.now(),
-            OB = this.tries.spacedBy(oB(), BB),
-            GB = OB.nextDueMs();
-          if (BB < GB) this.schedule();
+        this.timer = null, this.tries = new Ue(0, 0), this.check = () => {
+          const ee = Date.now(),
+            ie = this.tries.spacedBy(Ke(), ee),
+            He = ie.nextDueMs();
+          if (ee < He) this.schedule();
           else {
-            if (OB.noteTry(BB, GB), this.tries = OB, (0, JB.q)() && !(0, yB.c)()) {
-              var DB, jB;
-              (0, YB.f)();
-              const BB = (0, QB.g)();
-              null === (DB = BB.DW.JYB(BB.EX)) || void 0 === DB || null === (jB = DB.cW) || void 0 === jB || jB.repeatAttack()
+            if (ie.noteTry(ee, He), this.tries = ie, (0, Je.x)() && !(0, Fe.c)()) {
+              var be, Ue;
+              (0, ye.i)();
+              const ee = (0, Me.h)();
+              null === (be = ee.sE.Yye(ee.gC)) || void 0 === be || null === (Ue = be.OW) || void 0 === Ue || Ue.repeatAttack()
             }
             this.schedule()
           }
         }
       }
       start() {
-        var BB;
-        null === (BB = MB.running) || void 0 === BB || BB.stop(), MB.running = this, this.tries = new jB(Date.now(), oB()), this.schedule()
+        var ee;
+        null === (ee = oe.running) || void 0 === ee || ee.stop(), oe.running = this, this.tries = new Ue(Date.now(), Ke()), this.schedule()
       }
       static stopRunning() {
-        var BB;
-        null === (BB = MB.running) || void 0 === BB || BB.stop()
+        var ee;
+        null === (ee = oe.running) || void 0 === ee || ee.stop()
       }
       stop() {
-        clearTimeout(this.timer), this.timer = null, MB.running === this && (MB.running = null)
+        clearTimeout(this.timer), this.timer = null, oe.running === this && (oe.running = null)
       }
       schedule() {
-        const BB = Date.now(),
-          OB = this.tries.spacedBy(oB(), BB).nextDueMs() - BB;
-        this.timer = setTimeout(this.check, Math.min(OB, 100))
+        const ee = Date.now(),
+          ie = this.tries.spacedBy(Ke(), ee).nextDueMs() - ee;
+        this.timer = setTimeout(this.check, Math.min(ie, 100))
       }
     }
-    MB.running = null
+    oe.running = null
   },
-  39702: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => pB,
-      e: () => MB,
-      h: () => lB,
-      l: () => zB,
-      p: () => qB,
-      s: () => PB
+  39786: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => fe,
+      e: () => oe,
+      i: () => qe,
+      k: () => ke,
+      o: () => Te,
+      r: () => Re
     });
-    var YB = GB(39710),
-      DB = GB(37857),
-      QB = GB(4111),
-      oB = GB(2027),
-      jB = GB(25),
-      yB = GB(3088);
-    const JB = new YB.c;
+    var ye = He(39793),
+      be = He(37992),
+      Me = He(4075),
+      Ke = He(1988),
+      Ue = He(27),
+      Fe = He(2969);
+    const Je = new ye.c;
 
-    function MB() {
-      return JB
+    function oe() {
+      return Je
     }
 
-    function PB() {
-      JB.clear()
+    function Re() {
+      Je.clear()
     }
 
-    function zB() {
-      for (const BB of JB.ids()) {
-        const OB = JB.getName(BB);
-        void 0 !== OB && oB.d.delete(OB)
+    function ke() {
+      for (const ee of Je.ids()) {
+        const ie = Je.getName(ee);
+        void 0 !== ie && Ke.c.delete(ie)
       }
-      PB(), jB.o.tM("playerRosterChanged", JB.ids())
+      Re(), Ue.h.yR("playerRosterChanged", Je.ids())
     }
 
-    function lB(BB, OB) {
-      var GB, YB;
-      if (JB.has(BB)) return JB.getSetting(BB, OB);
-      const DB = (0, yB.g)();
-      return null === (GB = DB.FX[DB.EX]) || void 0 === GB || null === (YB = GB[BB]) || void 0 === YB ? void 0 : YB[OB]
+    function qe(ee, ie) {
+      var He, ye;
+      if (Je.has(ee)) return Je.getSetting(ee, ie);
+      const be = (0, Fe.h)();
+      return null === (He = be.zC[be.gC]) || void 0 === He || null === (ye = He[ee]) || void 0 === ye ? void 0 : ye[ie]
     }
 
-    function pB(BB) {
+    function fe(ee) {
       const {
-        added: OB,
-        removed: GB,
-        settingChanges: YB
-      } = JB.apply(BB);
+        added: ie,
+        removed: He,
+        settingChanges: ye
+      } = Je.apply(ee);
       for (const {
-          playerId: DB,
-          name: QB
+          playerId: be,
+          name: Me
         }
-        of GB) void 0 === QB || ZB(DB) || oB.d.delete(QB);
+        of He) void 0 === Me || pe(be) || Ke.c.delete(Me);
       for (const {
-          playerId: QB,
-          settings: oB
+          playerId: Me,
+          settings: Ke
         }
-        of YB)
-        if (ZB(QB)) qB(QB, oB);
+        of ye)
+        if (pe(Me)) Te(Me, Ke);
         else
-          for (const BB in oB)(0, DB.m)(QB, BB, oB[BB]);
-      (OB.length > 0 || GB.length > 0) && jB.o.tM("playerRosterChanged", JB.ids())
+          for (const ee in Ke)(0, be.j)(Me, ee, Ke[ee]);
+      (ie.length > 0 || He.length > 0) && Ue.h.yR("playerRosterChanged", Je.ids())
     }
 
-    function qB(BB) {
-      let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JB.getSettings(BB);
-      if (OB) {
-        (0, DB.g)(BB);
-        for (const GB in OB)(0, DB.e)(BB, GB, OB[GB])
+    function Te(ee) {
+      let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Je.getSettings(ee);
+      if (ie) {
+        (0, be.f)(ee);
+        for (const He in ie)(0, be.e)(ee, He, ie[He])
       }
     }
 
-    function ZB(BB) {
-      return BB === (0, yB.g)().QGB || (0, yB.d)().client.hasEntity(BB)
-    }(0, QB.onGameReset)(PB)
+    function pe(ee) {
+      return ee === (0, Fe.h)().dHe || (0, Fe.e)().client.hasEntity(ee)
+    }(0, Me.onGameReset)(Re)
   },
-  38762: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => kB,
-      f: () => SB,
-      j: () => UB,
-      m: () => fB,
-      o: () => dB
+  38915: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ze,
+      d: () => Oe,
+      e: () => We,
+      f: () => te,
+      g: () => we
     });
-    var YB = GB(37771),
-      DB = GB(38769),
-      QB = GB(363),
-      oB = GB.n(QB),
-      jB = GB(3824);
-    const yB = new YB.Xp,
-      JB = new YB.Xp,
-      MB = new YB.Xp,
-      PB = new YB.Xp,
-      zB = new YB.Xp,
-      lB = [0, 0, 0],
-      pB = {
+    var ye = He(37913),
+      be = He(38919),
+      Me = He(352),
+      Ke = He.n(Me),
+      Ue = He(3752);
+    const Fe = new ye.rf,
+      Je = new ye.rf,
+      oe = new ye.rf,
+      Re = new ye.rf,
+      ke = new ye.rf,
+      qe = [0, 0, 0],
+      fe = {
         x: 0,
         y: 0
       },
-      qB = new YB.Xp(1, 0, 0),
-      ZB = new YB.Xp(0, 1, 0),
-      NB = YB.Matrix.Identity(),
-      RB = new YB.Matrix,
-      WB = new YB.Matrix,
-      AB = new YB.Xp,
-      VB = new DB.c(0, 0, 0, 0);
+      Te = new ye.rf(1, 0, 0),
+      pe = new ye.rf(0, 1, 0),
+      Xe = ye.Matrix.Identity(),
+      ze = new ye.Matrix,
+      Be = new ye.Matrix,
+      Ee = new ye.rf,
+      ge = new be.d(0, 0, 0, 0);
 
-    function SB(BB, OB) {
-      var GB, DB;
-      const QB = nB(BB, OB);
-      if (QB) {
-        const BB = QB.x,
-          OB = QB.y,
-          GB = BB - 50,
-          YB = OB - 50;
-        return Math.abs(GB) <= jB.b && Math.abs(YB) <= (0, jB.g)() ? {
-          x: BB,
-          y: OB
-        } : uB(GB, YB)
+    function Oe(ee, ie) {
+      var He, be;
+      const Me = de(ee, ie);
+      if (Me) {
+        const ee = Me.x,
+          ie = Me.y,
+          He = ee - 50,
+          ye = ie - 50;
+        return Math.abs(He) <= Ue.b && Math.abs(ye) <= (0, Ue.h)() ? {
+          x: ee,
+          y: ie
+        } : Pe(He, ye)
       }
-      MB.zOB(OB[0], OB[1], OB[2]),
-        function(BB) {
-          const OB = BB.UP.tYB(),
-            GB = OB ? YB.Matrix.FromArrayToRef(OB.worldMatrix, 0, WB) : BB.UP.JF().activeCamera.getWorldMatrix();
-          YB.Xp.TransformNormalToRef(qB, GB, PB), PB.normalize(), YB.Xp.TransformNormalToRef(ZB, GB, zB), zB.normalize()
-        }(BB);
-      const oB = YB.Xp.Dot(MB, PB);
-      let yB = -YB.Xp.Dot(MB, zB);
-      Math.abs(oB) < .001 && Math.abs(yB) < .001 && (yB = -1);
-      const JB = null !== (GB = null === (DB = BB.UP.tYB()) || void 0 === DB ? void 0 : DB.projectionMatrix) && void 0 !== GB ? GB : BB.UP.JF().activeCamera.getProjectionMatrix().m;
-      return uB(oB * JB[0], yB * JB[5])
+      oe.wie(ie[0], ie[1], ie[2]),
+        function(ee) {
+          const ie = ee.PR.gbe(),
+            He = ie ? ye.Matrix.FromArrayToRef(ie.worldMatrix, 0, Be) : ee.PR.Xx().activeCamera.getWorldMatrix();
+          ye.rf.TransformNormalToRef(Te, He, Re), Re.normalize(), ye.rf.TransformNormalToRef(pe, He, ke), ke.normalize()
+        }(ee);
+      const Ke = ye.rf.Dot(oe, Re);
+      let Fe = -ye.rf.Dot(oe, ke);
+      Math.abs(Ke) < .001 && Math.abs(Fe) < .001 && (Fe = -1);
+      const Je = null !== (He = null === (be = ee.PR.gbe()) || void 0 === be ? void 0 : be.projectionMatrix) && void 0 !== He ? He : ee.PR.Xx().activeCamera.getProjectionMatrix().m;
+      return Pe(Ke * Je[0], Fe * Je[5])
     }
 
-    function nB(BB, OB) {
-      const GB = BB.UP.JF(),
-        DB = GB.Lp(),
-        QB = DB.getRenderWidth(),
-        oB = DB.getRenderHeight();
-      VB.width = QB, VB.height = oB;
-      const jB = BB.UP.tYB(),
-        MB = jB ? AB.zOB(jB.eye[0], jB.eye[1], jB.eye[2]) : BB.UP.camera.globalPosition;
-      yB.zOB(MB.x + 10 * OB[0], MB.y + 10 * OB[1], MB.z + 10 * OB[2]);
-      const PB = jB ? YB.Matrix.FromArrayToRef(jB.viewProjectionMatrix, 0, RB) : GB.getTransformMatrix();
-      return YB.Xp.ProjectToRef(yB, NB, PB, VB, JB), JB.z < 0 || JB.z > 1 ? null : (pB.x = JB.x / QB * 100, pB.y = JB.y / oB * 100, pB)
+    function de(ee, ie) {
+      const He = ee.PR.Xx(),
+        be = He.Nf(),
+        Me = be.getRenderWidth(),
+        Ke = be.getRenderHeight();
+      ge.width = Me, ge.height = Ke;
+      const Ue = ee.PR.gbe(),
+        oe = Ue ? Ee.wie(Ue.eye[0], Ue.eye[1], Ue.eye[2]) : ee.PR.camera.globalPosition;
+      Fe.wie(oe.x + 10 * ie[0], oe.y + 10 * ie[1], oe.z + 10 * ie[2]);
+      const Re = Ue ? ye.Matrix.FromArrayToRef(Ue.viewProjectionMatrix, 0, ze) : He.getTransformMatrix();
+      return ye.rf.ProjectToRef(Fe, Xe, Re, ge, Je), Je.z < 0 || Je.z > 1 ? null : (fe.x = Je.x / Me * 100, fe.y = Je.y / Ke * 100, fe)
     }
 
-    function UB(BB, OB) {
-      return SB(BB, KB(BB, OB))
+    function We(ee, ie) {
+      return Oe(ee, De(ee, ie))
     }
 
-    function fB(BB, OB) {
-      const GB = nB(BB, KB(BB, OB));
-      return GB && {
-        x: GB.x,
-        y: GB.y
+    function te(ee, ie) {
+      const He = de(ee, De(ee, ie));
+      return He && {
+        x: He.x,
+        y: He.y
       }
     }
 
-    function kB(BB) {
-      var OB, GB;
-      return 1 / (null !== (OB = null === (GB = BB.UP.tYB()) || void 0 === GB ? void 0 : GB.projectionMatrix[0]) && void 0 !== OB ? OB : BB.UP.JF().activeCamera.getProjectionMatrix().m[0])
+    function Ze(ee) {
+      var ie, He;
+      return 1 / (null !== (ie = null === (He = ee.PR.gbe()) || void 0 === He ? void 0 : He.projectionMatrix[0]) && void 0 !== ie ? ie : ee.PR.Xx().activeCamera.getProjectionMatrix().m[0])
     }
 
-    function dB(BB, OB, GB) {
-      const YB = BB.UP.tYB(),
-        DB = YB ? YB.worldMatrix : BB.UP.JF().activeCamera.getWorldMatrix().m,
-        QB = BB.Tz;
-      for (let oB = 0; oB < 3; oB++) OB[oB] = DB[12 + oB] + QB[oB], GB[oB] = DB[8 + oB];
-      oB().normalize(GB, GB)
+    function we(ee, ie, He) {
+      const ye = ee.PR.gbe(),
+        be = ye ? ye.worldMatrix : ee.PR.Xx().activeCamera.getWorldMatrix().m,
+        Me = ee.yq;
+      for (let Ke = 0; Ke < 3; Ke++) ie[Ke] = be[12 + Ke] + Me[Ke], He[Ke] = be[8 + Ke];
+      Ke().normalize(He, He)
     }
 
-    function KB(BB, OB) {
-      const GB = BB.Tz,
-        YB = BB.UP.tYB(),
-        DB = YB ? AB.zOB(YB.eye[0], YB.eye[1], YB.eye[2]) : BB.UP.camera.globalPosition;
-      return lB[0] = OB[0] - GB[0] - DB.x, lB[1] = OB[1] - GB[1] - DB.y, lB[2] = OB[2] - GB[2] - DB.z, oB().normalize(lB, lB), lB
+    function De(ee, ie) {
+      const He = ee.yq,
+        ye = ee.PR.gbe(),
+        be = ye ? Ee.wie(ye.eye[0], ye.eye[1], ye.eye[2]) : ee.PR.camera.globalPosition;
+      return qe[0] = ie[0] - He[0] - be.x, qe[1] = ie[1] - He[1] - be.y, qe[2] = ie[2] - He[2] - be.z, Ke().normalize(qe, qe), qe
     }
 
-    function uB(BB, OB) {
-      return (0, jB.c)(BB, OB, jB.b, (0, jB.g)())
+    function Pe(ee, ie) {
+      return (0, Ue.c)(ee, ie, Ue.b, (0, Ue.h)())
     }
   },
-  39748: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => jB
+  39832: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ue
     });
-    var YB = GB(25),
-      DB = GB(1293),
-      QB = GB(3351);
-    const oB = "Reconnecting";
-    class jB {
-      constructor(BB) {
-        this.hooks = BB, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var ye = He(27),
+      be = He(1246),
+      Me = He(3228);
+    const Ke = "Reconnecting";
+    class Ue {
+      constructor(ee) {
+        this.hooks = ee, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = BB => {
-          BB.persisted || this.leave()
-        }, this.controller = new QB.c((OB => BB.reconnect(OB)), {
-          isSessionLive: () => !this.ended && BB.isLive(),
-          onPhaseChanged: BB => {
-            this.onPhaseChanged(BB)
+        }, this.onPageHide = ee => {
+          ee.persisted || this.leave()
+        }, this.controller = new Me.c((ie => ee.reconnect(ie)), {
+          isSessionLive: () => !this.ended && ee.isLive(),
+          onPhaseChanged: ee => {
+            this.onPhaseChanged(ee)
           },
-          onReconnected: OB => {
-            BB.onReconnected(OB)
+          onReconnected: ie => {
+            ee.onReconnected(ie)
           },
-          onGaveUp: OB => {
-            !this.ended && BB.isLive() && BB.onGaveUp(this.sessionBased, OB)
+          onGaveUp: ie => {
+            !this.ended && ee.isLive() && ee.onGaveUp(this.sessionBased, ie)
           }
         })
       }
-      onInitialInfo(BB, OB) {
-        this.graceMs = BB, this.sessionBased = OB
+      onInitialInfo(ee, ie) {
+        this.graceMs = ee, this.sessionBased = ie
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -3989,8 +3921,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(BB) {
-        this.ended || this.controller.onConnectionLost(BB, this.graceMs)
+      onConnectionLost(ee) {
+        this.ended || this.controller.onConnectionLost(ee, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -3999,40 +3931,40 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const BB = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          OB = this.controller.heldToken;
-        this.end(), BB && "" !== OB && this.hooks.releaseSeat(OB)
+        const ee = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          ie = this.controller.heldToken;
+        this.end(), ee && "" !== ie && this.hooks.releaseSeat(ie)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(BB) {
-        const OB = (0, QB.m)(BB);
-        OB !== this.stopped && (this.stopped = OB, this.hooks.freeze(OB));
-        const GB = "frozen" === BB || "resuming" === BB && this.frozen;
-        GB && !this.frozen ? (0, DB.p)(oB, {
+      onPhaseChanged(ee) {
+        const ie = (0, Me.s)(ee);
+        ie !== this.stopped && (this.stopped = ie, this.hooks.freeze(ie));
+        const He = "frozen" === ee || "resuming" === ee && this.frozen;
+        He && !this.frozen ? (0, be.w)(Ke, {
           overridesPause: !0
-        }) : !GB && this.frozen && (0, DB.o)(oB), this.frozen = GB, this.setListening("connected" !== BB), YB.o.tM(QB.k, GB ? "frozen" : BB)
+        }) : !He && this.frozen && (0, be.v)(Ke), this.frozen = He, this.setListening("connected" !== ee), ye.h.yR(Me.o, He ? "frozen" : ee)
       }
-      setListening(BB) {
-        BB !== this.listening && (this.listening = BB, BB ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(ee) {
+        ee !== this.listening && (this.listening = ee, ee ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  39757: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB
+  39834: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye
     });
-    class YB {
-      constructor(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = BB, this.now = OB, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const BB = this.now(),
-            OB = BB - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = BB;
-          const GB = "visible" === document.visibilityState;
-          !GB || OB && this.wasVisible || (this.resumedAt = BB), this.wasVisible = GB, GB && BB - this.lastHeardAt > 12e3 && BB - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = OB(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class ye {
+      constructor(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = ee, this.now = ie, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const ee = this.now(),
+            ie = ee - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = ee;
+          const He = "visible" === document.visibilityState;
+          !He || ie && this.wasVisible || (this.resumedAt = ee), this.wasVisible = He, He && ee - this.lastHeardAt > 12e3 && ee - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = ie(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -4042,415 +3974,415 @@ export const modules = {
       }
     }
   },
-  39675: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => zB
+  39767: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ke
     });
-    var YB = GB(192),
-      DB = GB(363),
-      QB = GB.n(DB),
-      oB = GB(37434),
-      jB = GB(37436),
-      yB = GB(3088);
-    const JB = YB.f.xZ * YB.f.playerEyeToHeightRatio,
-      MB = 250,
-      PB = 1.1,
-      zB = new class {
+    var ye = He(186),
+      be = He(352),
+      Me = He.n(be),
+      Ke = He(37574),
+      Ue = He(37578),
+      Fe = He(2969);
+    const Je = ye.g.UX * ye.g.playerEyeToHeightRatio,
+      oe = 250,
+      Re = 1.1,
+      ke = new class {
         constructor() {
           this.entities = new Map, this.playing = new Map, this.msSinceLastScan = 0
         }
-        add(BB, OB) {
-          this.entities.set(BB, OB)
+        add(ee, ie) {
+          this.entities.set(ee, ie)
         }
-        update(BB, OB) {
-          const GB = this.entities.get(BB);
-          this.entities.set(BB, OB);
-          const YB = this.playing.get(BB);
-          YB && (GB && GB.soundName === OB.soundName ? (YB.sound.setRelativeVolume(OB.volume), YB.sound.rate(OB.rate), YB.sound.setPannerAttr({
-            refDistance: OB.refDistance
-          })) : this.stopEntity(BB))
+        update(ee, ie) {
+          const He = this.entities.get(ee);
+          this.entities.set(ee, ie);
+          const ye = this.playing.get(ee);
+          ye && (He && He.soundName === ie.soundName ? (ye.sound.setRelativeVolume(ie.volume), ye.sound.rate(ie.rate), ye.sound.setPannerAttr({
+            refDistance: ie.refDistance
+          })) : this.stopEntity(ee))
         }
-        remove(BB) {
-          this.stopEntity(BB), this.entities.delete(BB)
+        remove(ee) {
+          this.stopEntity(ee), this.entities.delete(ee)
         }
-        kP(BB) {
-          this.msSinceLastScan += BB, this.msSinceLastScan < MB || (this.msSinceLastScan = 0, this.scan())
+        YR(ee) {
+          this.msSinceLastScan += ee, this.msSinceLastScan < oe || (this.msSinceLastScan = 0, this.scan())
         }
-        stopEntity(BB) {
-          const OB = this.playing.get(BB);
-          OB && (OB.sound.stop(), this.playing.delete(BB))
+        stopEntity(ee) {
+          const ie = this.playing.get(ee);
+          ie && (ie.sound.stop(), this.playing.delete(ee))
         }
-        startEntity(BB, OB, GB) {
-          const YB = (0, jB.f)(OB.soundName);
-          if (!YB) return console.error(`AudioEntityManager: no sound found for "${OB.soundName}", dropping audio entity ${BB}`), void this.remove(BB);
-          const DB = oB.b.play(YB, OB.volume, GB, OB.maxHearDist, OB.refDistance, !0);
-          DB.rate(OB.rate), this.playing.set(BB, {
-            sound: DB,
-            lastPos: QB().clone(GB)
+        startEntity(ee, ie, He) {
+          const ye = (0, Ue.g)(ie.soundName);
+          if (!ye) return console.error(`AudioEntityManager: no sound found for "${ie.soundName}", dropping audio entity ${ee}`), void this.remove(ee);
+          const be = Ke.d.play(ye, ie.volume, He, ie.maxHearDist, ie.refDistance, !0);
+          be.rate(ie.rate), this.playing.set(ee, {
+            sound: be,
+            lastPos: Me().clone(He)
           })
         }
         scan() {
-          const BB = (0, yB.g)();
-          if (!BB) return;
-          const OB = BB.DW.pR(BB.EX);
-          if (OB)
-            for (const [GB, YB] of this.entities) {
-              if (!BB.DW.YGB(GB, "position")) continue;
-              const DB = BB.DW.pR(GB),
-                oB = QB().sqrDist(OB, DB),
-                jB = this.playing.get(GB);
-              if (jB) {
-                const BB = YB.maxHearDist * PB;
-                oB > BB * BB ? this.stopEntity(GB) : QB().equals(DB, jB.lastPos) || (jB.sound.setPosition([DB[0], DB[1] + JB, DB[2]]), QB().copy(jB.lastPos, DB))
-              } else oB <= YB.maxHearDist * YB.maxHearDist && this.startEntity(GB, YB, DB)
+          const ee = (0, Fe.h)();
+          if (!ee) return;
+          const ie = ee.sE.pE(ee.gC);
+          if (ie)
+            for (const [He, ye] of this.entities) {
+              if (!ee.sE.gHe(He, "position")) continue;
+              const be = ee.sE.pE(He),
+                Ke = Me().sqrDist(ie, be),
+                Ue = this.playing.get(He);
+              if (Ue) {
+                const ee = ye.maxHearDist * Re;
+                Ke > ee * ee ? this.stopEntity(He) : Me().equals(be, Ue.lastPos) || (Ue.sound.setPosition([be[0], be[1] + Je, be[2]]), Me().copy(Ue.lastPos, be))
+              } else Ke <= ye.maxHearDist * ye.maxHearDist && this.startEntity(He, ye, be)
             }
         }
       }
   },
-  39763: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => JB,
-      f: () => MB
+  39841: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Je,
+      f: () => oe
     });
-    var YB = GB(1784),
-      DB = GB(192),
-      QB = GB(1748),
-      oB = GB(1880),
-      jB = GB(1186),
-      yB = GB(1121);
-    async function JB(BB, OB) {
-      return function(BB) {
-        return "object" === typeof BB && null !== BB && BB.code === DB.c.VpnIp.code
-      }(OB) && function(BB) {
-        return QB.e.supports("appCheck") && BB.isLoggedIn() && !BB.hasTriedAppAttestation()
-      }(BB) && await async function(BB) {
+    var ye = He(1720),
+      be = He(186),
+      Me = He(1682),
+      Ke = He(1842),
+      Ue = He(1141),
+      Fe = He(1083);
+    async function Je(ee, ie) {
+      return function(ee) {
+        return "object" === typeof ee && null !== ee && ee.code === be.c.VpnIp.code
+      }(ie) && function(ee) {
+        return Me.c.supports("appCheck") && ee.isLoggedIn() && !ee.hasTriedAppAttestation()
+      }(ee) && await async function(ee) {
         try {
           const {
-            token: OB
-          } = await (0, oB.e)(), {
-            "3PSIDMCPP": GB
-          } = await (0, yB.postJsonWithMetricsCookiesAndJsonResponse)(`${jB.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: OB
+            token: ie
+          } = await (0, Ke.b)(), {
+            "3PSIDMCPP": He
+          } = await (0, Fe.postJsonWithMetricsCookiesAndJsonResponse)(`${Ue.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: ie
           }, {
             retries: 0
-          }, BB.getMetricsCookies());
-          return BB.setAppAttestedAuthJwt(GB), !0
-        } catch (OB) {
-          return OB instanceof YB.b && "failed" === OB.code ? (console.warn("The app couldn't get an App Check token:", OB), BB.markAppAttestationTried()) : console.error("Failed to attest the app:", OB), !1
+          }, ee.getMetricsCookies());
+          return ee.setAppAttestedAuthJwt(He), !0
+        } catch (ie) {
+          return ie instanceof ye.d && "failed" === ie.code ? (console.warn("The app couldn't get an App Check token:", ie), ee.markAppAttestationTried()) : console.error("Failed to attest the app:", ie), !1
         }
-      }(BB)
+      }(ee)
     }
-    async function MB(BB, OB) {
+    async function oe(ee, ie) {
       try {
-        return await OB()
-      } catch (GB) {
-        if (!await JB(BB, GB)) throw GB
+        return await ie()
+      } catch (He) {
+        if (!await Je(ee, He)) throw He
       }
-      return OB()
+      return ie()
     }
   },
-  39761: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => zB,
-      g: () => MB
+  39837: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ke,
+      e: () => oe
     });
-    var YB = GB(192),
-      DB = GB(1919),
-      QB = GB(1200),
-      oB = GB(9599);
-    const jB = [250, 500, 1e3, 2e3, 1250],
-      yB = 406;
+    var ye = He(186),
+      be = He(1862),
+      Me = He(1155),
+      Ke = He(9669);
+    const Ue = [250, 500, 1e3, 2e3, 1250],
+      Fe = 406;
 
-    function JB(BB) {
-      if ("object" !== typeof BB || null === BB) return !1;
+    function Je(ee) {
+      if ("object" !== typeof ee || null === ee) return !1;
       const {
-        code: OB,
-        message: GB
-      } = BB, DB = YB.c.duplicateLobbyNameError;
-      return (OB === DB.code || OB === yB) && (GB === DB.text || GB === DB.text + YB.m)
+        code: ie,
+        message: He
+      } = ee, be = ye.c.duplicateLobbyNameError;
+      return (ie === be.code || ie === Fe) && (He === be.text || He === be.text + ye.l)
     }
-    async function MB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DB.c;
-      for (let DB = 0;; DB++) {
-        let oB;
-        (0, QB.r)(OB);
+    async function oe(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : be.e;
+      for (let be = 0;; be++) {
+        let Ke;
+        (0, Me.r)(ie);
         try {
-          return await BB()
-        } catch (YB) {
-          if (oB = jB[DB], void 0 === oB || !JB(YB)) throw YB
+          return await ee()
+        } catch (ye) {
+          if (Ke = Ue[be], void 0 === Ke || !Je(ye)) throw ye
         }
-        await GB(oB, OB)
+        await He(Ke, ie)
       }
     }
-    const PB = new Set([YB.c.duplicateLobbyNameError.code, YB.c.lobbyCantBeCreated.code, YB.c.roomDisposedEarlyError.code, YB.c.roomDisposedLateError.code, YB.c.serverRoomLimitReached.code]);
+    const Re = new Set([ye.c.duplicateLobbyNameError.code, ye.c.lobbyCantBeCreated.code, ye.c.roomDisposedEarlyError.code, ye.c.roomDisposedLateError.code, ye.c.serverRoomLimitReached.code]);
 
-    function zB(BB) {
-      if (JB(BB)) return !0;
-      const OB = (0, oB.d)(BB);
-      return "number" === typeof OB && PB.has(OB)
+    function ke(ee) {
+      if (Je(ee)) return !0;
+      const ie = (0, Ke.h)(ee);
+      return "number" === typeof ie && Re.has(ie)
     }
   },
-  39732: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      g: () => DB
+  39826: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      g: () => be
     });
-    var YB = GB(25);
+    var ye = He(27);
 
-    function DB(BB) {
-      return "refetchCode" === BB || "devDownloadJson" === BB || BB.startsWith("Plugin")
+    function be(ee) {
+      return "refetchCode" === ee || "devDownloadJson" === ee || ee.startsWith("Plugin")
     }
 
-    function QB(BB, OB) {
-      "refetchCode" !== BB ? "Plugin|MobAiPlugin|ShowPetUi" !== BB ? Promise.all([GB.e(120), GB.e(121), GB.e(116), GB.e(118), GB.e(240)]).then((() => GB(44867))).then((GB => {
+    function Me(ee, ie) {
+      "refetchCode" !== ee ? "Plugin|MobAiPlugin|ShowPetUi" !== ee ? Promise.all([He.e(120), He.e(121), He.e(116), He.e(118), He.e(240)]).then((() => He(44929))).then((He => {
         let {
-          runClientGameMessage: YB
-        } = GB;
-        YB(BB, OB)
-      })).catch((OB => {
-        console.error(`Game message ${BB} failed`, OB)
-      })) : YB.o.tM("showPetUi", OB) : YB.o.tM("refetchCode")
+          runClientGameMessage: ye
+        } = He;
+        ye(ee, ie)
+      })).catch((ie => {
+        console.error(`Game message ${ee} failed`, ie)
+      })) : ye.h.yR("showPetUi", ie) : ye.h.yR("refetchCode")
     }
   },
-  9587: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => JB,
-      c: () => yB
+  9663: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Je,
+      c: () => Fe
     });
-    var YB = GB(353);
+    var ye = He(347);
 
-    function DB(BB) {
-      if (!BB.startsWith("{")) return BB;
-      let OB;
+    function be(ee) {
+      if (!ee.startsWith("{")) return ee;
+      let ie;
       try {
-        OB = JSON.parse(BB)
+        ie = JSON.parse(ee)
       } catch {
-        return BB
+        return ee
       }
-      return function(BB) {
-        if (null === (0, YB.nf)(BB)) return !1;
+      return function(ee) {
+        if (null === (0, ye.Be)(ee)) return !1;
         const {
-          params: OB
-        } = BB;
-        return void 0 === OB || "object" === typeof OB && null !== OB && Object.values(OB).every((BB => "string" === typeof BB))
-      }(OB) ? OB : BB
+          params: ie
+        } = ee;
+        return void 0 === ie || "object" === typeof ie && null !== ie && Object.values(ie).every((ee => "string" === typeof ee))
+      }(ie) ? ie : ee
     }
-    var QB = GB(1175),
-      oB = GB(1253);
+    var Me = He(1127),
+      Ke = He(1196);
 
-    function jB(BB) {
-      return (0, QB.C)(oB.e.get().getCurrentLanguageCode(), BB.translationKey, BB.params)
-    }
-
-    function yB(BB) {
-      const OB = DB(BB);
-      return "string" === typeof OB ? OB : jB(OB)
+    function Ue(ee) {
+      return (0, Me.s)(Ke.f.get().getCurrentLanguageCode(), ee.translationKey, ee.params)
     }
 
-    function JB(BB) {
-      const OB = DB(BB);
-      return "string" === typeof OB ? OB : jB({
+    function Fe(ee) {
+      const ie = be(ee);
+      return "string" === typeof ie ? ie : Ue(ie)
+    }
+
+    function Je(ee) {
+      const ie = be(ee);
+      return "string" === typeof ie ? ie : Ue({
         translationKey: "moderation:kicked",
         params: {
-          reason: jB(OB)
+          reason: Ue(ie)
         }
       })
     }
   },
-  39720: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => MB
+  39808: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => oe
     });
-    var YB = GB(1217),
-      DB = GB(1360),
-      QB = GB(16),
-      oB = GB(1338),
-      jB = GB(1350),
-      yB = GB(1560),
-      JB = GB(37139);
+    var ye = He(1169),
+      be = He(1315),
+      Me = He(18),
+      Ke = He(1294),
+      Ue = He(1305),
+      Fe = He(1502),
+      Je = He(37260);
 
-    function MB(BB) {
+    function oe(ee) {
       let {
-        BB: OB,
-        OB: GB
-      } = BB;
-      const MB = null !== OB && void 0 !== OB ? OB : (0, jB.c)().gameNameWithVariation;
-      (0, YB.O)(MB) && ((0, JB.h)(), (0, oB.X)((() => {
-        console.log("Received matchmaking order from game server to game", OB), (0, QB.m)("inGameReplay"), (0, yB.navigatePreserveSearch)((0, DB.c)(MB, null !== GB && void 0 !== GB ? GB : void 0))
+        ee: ie,
+        ie: He
+      } = ee;
+      const oe = null !== ie && void 0 !== ie ? ie : (0, Ue.e)().gameNameWithVariation;
+      (0, ye.J)(oe) && ((0, Je.j)(), (0, Ke.db)((() => {
+        console.log("Received matchmaking order from game server to game", ie), (0, Me.l)("inGameReplay"), (0, Fe.navigatePreserveSearch)((0, be.b)(oe, null !== He && void 0 !== He ? He : void 0))
       }), "video_start"))
     }
   },
-  39713: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => MB,
-      d: () => yB,
-      f: () => JB,
-      j: () => PB
+  39802: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => oe,
+      f: () => Fe,
+      h: () => Je,
+      k: () => Re
     });
-    var YB = GB(2023),
-      DB = GB(25),
-      QB = GB(1400),
-      oB = GB(1260);
-    const jB = new Map;
+    var ye = He(1983),
+      be = He(27),
+      Me = He(1340),
+      Ke = He(1205);
+    const Ue = new Map;
 
-    function yB(BB, OB) {
-      DB.o.tM("newUiRequest", {
-        id: BB,
-        clientParameters: OB
+    function Fe(ee, ie) {
+      be.h.yR("newUiRequest", {
+        id: ee,
+        clientParameters: ie
       }, !0)
     }
 
-    function JB(BB) {
-      DB.o.tM("removeUiRequest", BB, !0);
-      const OB = jB.get(BB);
-      OB && (OB.tearDownNotification(), jB.delete(BB))
+    function Je(ee) {
+      be.h.yR("removeUiRequest", ee, !0);
+      const ie = Ue.get(ee);
+      ie && (ie.tearDownNotification(), Ue.delete(ee))
     }
 
-    function MB() {
-      DB.o.tM("clearUiRequests");
-      for (const BB of jB.values()) BB.tearDownNotification();
-      jB.clear()
+    function oe() {
+      be.h.yR("clearUiRequests");
+      for (const ee of Ue.values()) ee.tearDownNotification();
+      Ue.clear()
     }
 
-    function PB(BB, OB, GB, DB) {
-      const yB = "string" === typeof OB ? {
-          translationKey: OB
-        } : OB,
-        JB = QB.NotificationProvider.showPromptPopup({
-          title: yB.translationKey,
+    function Re(ee, ie, He, be) {
+      const Fe = "string" === typeof ie ? {
+          translationKey: ie
+        } : ie,
+        Je = Me.NotificationProvider.showPromptPopup({
+          title: Fe.translationKey,
           textOpts: {
-            title: (0, oB.j)(yB.params, YB.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, Ke.j)(Fe.params, ye.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: GB,
+          destructive: He,
           unlockPointerKey: "uiRequestPopup"
         });
-      jB.set(BB, JB), JB.getResult().then((OB => {
-        jB.delete(BB), "notificationTornDown" !== OB && DB(OB)
+      Ue.set(ee, Je), Je.getResult().then((ie => {
+        Ue.delete(ee), "notificationTornDown" !== ie && be(ie)
       }))
     }
   },
-  39776: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => lB,
-      g: () => zB
+  39860: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => qe,
+      d: () => ke
     });
-    const YB = "ue:",
-      DB = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
-      QB = "[A-Za-z0-9]{1,24}",
-      oB = 15,
-      jB = new RegExp(`^${QB}$`);
-    new RegExp(`^${YB}(${[...DB,"other"].join("|")}):(?:n|k(${QB})|b(0|[1-9][0-9]?)):([01])([01])$`);
+    const ye = "ue:",
+      be = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
+      Me = "[A-Za-z0-9]{1,24}",
+      Ke = 15,
+      Ue = new RegExp(`^${Me}$`);
+    new RegExp(`^${ye}(${[...be,"other"].join("|")}):(?:n|k(${Me})|b(0|[1-9][0-9]?)):([01])([01])$`);
 
-    function yB(BB, OB, GB, QB, yB) {
-      const JB = "string" === typeof BB && DB.includes(BB) ? BB : "other";
-      let MB = "n";
-      return "string" === typeof OB ? MB = jB.test(OB) ? `k${OB}` : "n" : "number" === typeof GB && Number.isInteger(GB) && GB >= 0 && GB <= oB && (MB = `b${GB}`), `${YB}${JB}:${MB}:${QB?1:0}${yB?1:0}`
+    function Fe(ee, ie, He, Me, Fe) {
+      const Je = "string" === typeof ee && be.includes(ee) ? ee : "other";
+      let oe = "n";
+      return "string" === typeof ie ? oe = Ue.test(ie) ? `k${ie}` : "n" : "number" === typeof He && Number.isInteger(He) && He >= 0 && He <= Ke && (oe = `b${He}`), `${ye}${Je}:${oe}:${Me?1:0}${Fe?1:0}`
     }
-    var JB = GB(1730),
-      MB = GB(1825);
-    let PB = null;
+    var Je = He(1657),
+      oe = He(1774);
+    let Re = null;
 
-    function zB(BB) {
-      const OB = BB instanceof Element && BB !== document.body && BB !== document.documentElement && !(0, JB.p)(BB) && !BB.closest("#root");
+    function ke(ee) {
+      const ie = ee instanceof Element && ee !== document.body && ee !== document.documentElement && !(0, Je.n)(ee) && !ee.closest("#root");
       return {
-        editable: (0, MB.c)(BB),
-        outsideView: OB
+        editable: (0, oe.e)(ee),
+        outsideView: ie
       }
     }
 
-    function lB(BB) {
-      return PB ??= function(BB) {
+    function qe(ee) {
+      return Re ??= function(ee) {
         try {
           const {
-            editable: OB,
-            outsideView: GB
-          } = zB(BB.target), YB = BB;
-          return yB(BB.type, YB.code, YB.button, OB, GB)
+            editable: ie,
+            outsideView: He
+          } = ke(ee.target), ye = ee;
+          return Fe(ee.type, ye.code, ye.button, ie, He)
         } catch {
-          return yB(null, null, null, !1, !1)
+          return Fe(null, null, null, !1, !1)
         }
-      }(BB), PB
+      }(ee), Re
     }
   },
-  39710: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB
+  39793: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye
     });
-    class YB {
+    class ye {
       constructor() {
         this.members = new Map
       }
-      apply(BB) {
-        const OB = {
+      apply(ee) {
+        const ie = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const YB of BB.YY) {
-          let BB = this.members.get(YB.DY);
-          if (BB || (BB = {
+        for (const ye of ee.oy) {
+          let ee = this.members.get(ye.Ry);
+          if (ee || (ee = {
               name: null,
               settings: {}
-            }, this.members.set(YB.DY, BB), OB.added.push(YB.DY)), null !== YB.QY && (BB.name = YB.QY), null !== YB.oY || YB.jY.length > 0) {
-            const GB = null === YB.oY ? {} : JSON.parse(YB.oY);
-            Object.assign(BB.settings, GB);
-            for (const OB of YB.jY) delete BB.settings[OB], GB[OB] = void 0;
-            OB.settingChanges.push({
-              playerId: YB.DY,
-              settings: GB
+            }, this.members.set(ye.Ry, ee), ie.added.push(ye.Ry)), null !== ye.ky && (ee.name = ye.ky), null !== ye.qy || ye.Ty.length > 0) {
+            const He = null === ye.qy ? {} : JSON.parse(ye.qy);
+            Object.assign(ee.settings, He);
+            for (const ie of ye.Ty) delete ee.settings[ie], He[ie] = void 0;
+            ie.settingChanges.push({
+              playerId: ye.Ry,
+              settings: He
             })
           }
         }
-        for (const YB of BB.yY) {
-          const BB = this.members.get(YB);
-          var GB;
-          if (BB) this.members.delete(YB), OB.removed.push({
-            playerId: YB,
-            name: null !== (GB = BB.name) && void 0 !== GB ? GB : void 0
+        for (const ye of ee.py) {
+          const ee = this.members.get(ye);
+          var He;
+          if (ee) this.members.delete(ye), ie.removed.push({
+            playerId: ye,
+            name: null !== (He = ee.name) && void 0 !== He ? He : void 0
           })
         }
-        return OB
+        return ie
       }
-      has(BB) {
-        return this.members.has(BB)
+      has(ee) {
+        return this.members.has(ee)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(BB) {
-        var OB, GB;
-        return null !== (OB = null === (GB = this.members.get(BB)) || void 0 === GB ? void 0 : GB.name) && void 0 !== OB ? OB : void 0
+      getName(ee) {
+        var ie, He;
+        return null !== (ie = null === (He = this.members.get(ee)) || void 0 === He ? void 0 : He.name) && void 0 !== ie ? ie : void 0
       }
-      getSettings(BB) {
-        var OB;
-        return null === (OB = this.members.get(BB)) || void 0 === OB ? void 0 : OB.settings
+      getSettings(ee) {
+        var ie;
+        return null === (ie = this.members.get(ee)) || void 0 === ie ? void 0 : ie.settings
       }
-      getSetting(BB, OB) {
-        var GB;
-        return null === (GB = this.members.get(BB)) || void 0 === GB ? void 0 : GB.settings[OB]
+      getSetting(ee, ie) {
+        var He;
+        return null === (He = this.members.get(ee)) || void 0 === He ? void 0 : He.settings[ie]
       }
       clear() {
         this.members.clear()
       }
     }
   },
-  39741: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      f: () => DB
+  39829: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye,
+      e: () => be
     });
-    const YB = ["description", "label"];
+    const ye = ["description", "label"];
 
-    function DB(BB) {
-      const OB = BB.type;
+    function be(ee) {
+      const ie = ee.type;
       return {
-        type: OB,
-        params: BB[OB]
+        type: ie,
+        params: ee[ie]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

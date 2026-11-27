@@ -1,126 +1,126 @@
 export const id = 108;
 export const ids = [108];
 export const modules = {
-  5353: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      Howl: () => DB.Howl,
-      Howler: () => DB.Howler,
-      musicOutput: () => ZB,
-      readyAudioContext: () => NB
+  5338: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      Howl: () => be.Howl,
+      Howler: () => be.Howler,
+      musicOutput: () => pe,
+      readyAudioContext: () => Xe
     });
-    var YB, DB = GB(5362),
-      QB = GB(3873),
-      oB = GB(5073);
-    const jB = DB.Howler;
+    var ye, be = He(5340),
+      Me = He(3791),
+      Ke = He(5055);
+    const Ue = be.Howler;
 
-    function yB() {
-      var BB, OB;
-      if (jB.ctx || !jB.usingWebAudio || "undefined" === typeof AudioContext || !(0, oB.h)()) return;
-      const GB = navigator.audioSession;
-      let YB;
-      "auto" === (null === GB || void 0 === GB ? void 0 : GB.type) && (GB.type = "ambient");
+    function Fe() {
+      var ee, ie;
+      if (Ue.ctx || !Ue.usingWebAudio || "undefined" === typeof AudioContext || !(0, Ke.f)()) return;
+      const He = navigator.audioSession;
+      let ye;
+      "auto" === (null === He || void 0 === He ? void 0 : He.type) && (He.type = "ambient");
       try {
-        YB = new AudioContext({
+        ye = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const DB = YB.createGain();
-      DB.gain.setValueAtTime(jB._muted ? 0 : null !== (BB = jB._volume) && void 0 !== BB ? BB : 1, YB.currentTime), DB.connect(YB.destination), jB.ctx = YB, jB.masterGain = DB, null === (OB = jB._setup) || void 0 === OB || OB.call(jB)
+      const be = ye.createGain();
+      be.gain.setValueAtTime(Ue._muted ? 0 : null !== (ee = Ue._volume) && void 0 !== ee ? ee : 1, ye.currentTime), be.connect(ye.destination), Ue.ctx = ye, Ue.masterGain = be, null === (ie = Ue._setup) || void 0 === ie || ie.call(Ue)
     }
-    jB._mobileUnloaded = !0;
-    const JB = jB.volume.bind(DB.Howler);
-    jB.volume = function() {
-      return yB(), JB(...arguments)
+    Ue._mobileUnloaded = !0;
+    const Je = Ue.volume.bind(be.Howler);
+    Ue.volume = function() {
+      return Fe(), Je(...arguments)
     };
-    const MB = jB.mute.bind(DB.Howler);
-    jB.mute = BB => (yB(), MB(BB));
-    const PB = DB.Howl.prototype,
-      zB = PB.init;
+    const oe = Ue.mute.bind(be.Howler);
+    Ue.mute = ee => (Fe(), oe(ee));
+    const Re = be.Howl.prototype,
+      ke = Re.init;
 
-    function lB() {
-      for (; jB._html5AudioPool.length < jB.html5PoolSize;) {
-        const BB = new Audio;
-        BB._unlocked = !0, jB._releaseHtml5Audio(BB)
+    function qe() {
+      for (; Ue._html5AudioPool.length < Ue.html5PoolSize;) {
+        const ee = new Audio;
+        ee._unlocked = !0, Ue._releaseHtml5Audio(ee)
       }
-      for (const OB of jB._howls)
-        if (!OB._webAudio)
-          for (const GB of OB._getSoundIds()) {
-            var BB;
-            const YB = null === (BB = OB._soundById(GB)) || void 0 === BB ? void 0 : BB._node;
-            YB && !YB._unlocked && (YB._unlocked = !0, YB.load())
+      for (const ie of Ue._howls)
+        if (!ie._webAudio)
+          for (const He of ie._getSoundIds()) {
+            var ee;
+            const ye = null === (ee = ie._soundById(He)) || void 0 === ee ? void 0 : ee._node;
+            ye && !ye._unlocked && (ye._unlocked = !0, ye.load())
           }
     }
-    PB.init = function(BB) {
-      return yB(), zB.call(this, BB)
-    }, (0, oB.h)() && (jB._unlockAudio = () => {
-      const BB = jB.ctx;
-      if (jB._audioUnlocked || !BB) return;
-      jB.autoUnlock = !1;
-      const OB = BB.createBuffer(1, 1, 22050);
-      jB._scratchBuffer = OB;
-      const GB = new AbortController;
-      let YB = "afterPaint";
-      const DB = () => {
-          var YB;
-          if (jB._audioUnlocked) return;
-          null === (YB = jB._autoResume) || void 0 === YB || YB.call(jB);
-          const DB = BB.createBufferSource();
-          DB.buffer = OB, DB.connect(BB.destination), DB.start(0), BB.resume().catch((() => {})), DB.onended = () => {
-            DB.disconnect(0), jB._audioUnlocked = !0, GB.abort();
-            for (const BB of jB._howls) BB._emit("unlock")
+    Re.init = function(ee) {
+      return Fe(), ke.call(this, ee)
+    }, (0, Ke.f)() && (Ue._unlockAudio = () => {
+      const ee = Ue.ctx;
+      if (Ue._audioUnlocked || !ee) return;
+      Ue.autoUnlock = !1;
+      const ie = ee.createBuffer(1, 1, 22050);
+      Ue._scratchBuffer = ie;
+      const He = new AbortController;
+      let ye = "afterPaint";
+      const be = () => {
+          var ye;
+          if (Ue._audioUnlocked) return;
+          null === (ye = Ue._autoResume) || void 0 === ye || ye.call(Ue);
+          const be = ee.createBufferSource();
+          be.buffer = ie, be.connect(ee.destination), be.start(0), ee.resume().catch((() => {})), be.onended = () => {
+            be.disconnect(0), Ue._audioUnlocked = !0, He.abort();
+            for (const ee of Ue._howls) ee._emit("unlock")
           }
         },
-        yB = () => {
-          lB(), DB()
+        Fe = () => {
+          qe(), be()
         },
-        JB = OB => {
-          if (lB(), "inTap" === YB) {
-            if ("running" === BB.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), DB()
-          } else "afterPaint" === YB && (YB = "queued", (0, QB.c)(OB.timeStamp, (() => {
-            YB = "inTap", DB()
+        Je = ie => {
+          if (qe(), "inTap" === ye) {
+            if ("running" === ee.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), be()
+          } else "afterPaint" === ye && (ye = "queued", (0, Me.c)(ie.timeStamp, (() => {
+            ye = "inTap", be()
           })))
         };
-      for (const QB of ["touchstart", "touchend"]) document.addEventListener(QB, yB, {
+      for (const Me of ["touchstart", "touchend"]) document.addEventListener(Me, Fe, {
         capture: !0,
-        signal: GB.signal
+        signal: He.signal
       });
-      for (const QB of oB.c) document.addEventListener(QB, JB, {
+      for (const Me of Ke.b) document.addEventListener(Me, Je, {
         capture: !0,
-        signal: GB.signal
+        signal: He.signal
       })
     });
-    let pB = 0;
-    const qB = null === (YB = jB._autoSuspend) || void 0 === YB ? void 0 : YB.bind(DB.Howler);
+    let fe = 0;
+    const Te = null === (ye = Ue._autoSuspend) || void 0 === ye ? void 0 : ye.bind(be.Howler);
 
-    function ZB() {
-      NB();
+    function pe() {
+      Xe();
       const {
-        ctx: BB,
-        masterGain: OB
-      } = jB;
-      return BB && OB ? {
-        ctx: BB,
-        destination: OB,
-        holdAwake: BB => {
-          var OB, GB;
-          (pB += BB ? 1 : -1, BB) ? null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB): null === (GB = jB._autoSuspend) || void 0 === GB || GB.call(jB)
+        ctx: ee,
+        masterGain: ie
+      } = Ue;
+      return ee && ie ? {
+        ctx: ee,
+        destination: ie,
+        holdAwake: ee => {
+          var ie, He;
+          (fe += ee ? 1 : -1, ee) ? null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue): null === (He = Ue._autoSuspend) || void 0 === He || He.call(Ue)
         },
         wake: () => {
-          var OB;
-          "running" !== BB.state && (null === (OB = jB._autoResume) || void 0 === OB || OB.call(jB), BB.resume().catch((() => {})))
+          var ie;
+          "running" !== ee.state && (null === (ie = Ue._autoResume) || void 0 === ie || ie.call(Ue), ee.resume().catch((() => {})))
         }
       } : null
     }
 
-    function NB() {
-      var BB;
-      (jB.volume(), jB.ctx && jB.autoUnlock) && (null === (BB = jB._unlockAudio) || void 0 === BB || BB.call(jB))
+    function Xe() {
+      var ee;
+      (Ue.volume(), Ue.ctx && Ue.autoUnlock) && (null === (ee = Ue._unlockAudio) || void 0 === ee || ee.call(Ue))
     }
-    qB && (jB._autoSuspend = () => pB > 0 ? DB.Howler : qB())
+    Te && (Ue._autoSuspend = () => fe > 0 ? be.Howler : Te())
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

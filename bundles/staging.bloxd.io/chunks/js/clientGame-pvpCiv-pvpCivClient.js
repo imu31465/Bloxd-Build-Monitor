@@ -1,22 +1,22 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  40308: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      default: () => YB
+  40420: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      default: () => ye
     });
-    const YB = function(BB, OB, GB) {
-      let YB;
+    const ye = function(ee, ie, He) {
+      let ye;
       return {
-        onCreate: BB => {
-          YB = BB
+        onCreate: ee => {
+          ye = ee
         },
-        onPlayerAltAction: (BB, OB, GB, DB, QB, oB) => {
-          null !== oB && "Mesh" === YB.getEntityType(oB) && "Weaponmaster" === YB.getEntityName(oB) && YB.openShop(BB, !1, "PvpCivWeapon")
+        onPlayerAltAction: (ee, ie, He, be, Me, Ke) => {
+          null !== Ke && "Mesh" === ye.getEntityType(Ke) && "Weaponmaster" === ye.getEntityName(Ke) && ye.openShop(ee, !1, "PvpCivWeapon")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

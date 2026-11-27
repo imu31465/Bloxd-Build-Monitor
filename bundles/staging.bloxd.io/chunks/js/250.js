@@ -1,341 +1,341 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  40416: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => YB,
-      e: () => DB
+  40527: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye,
+      d: () => be
     });
-    const YB = "The world isn't loaded, so no blocks can be seen.",
-      DB = "The world isn't loaded, so nothing in it can be seen."
+    const ye = "The world isn't loaded, so no blocks can be seen.",
+      be = "The world isn't loaded, so nothing in it can be seen."
   },
-  39804: (BB, OB, GB) => {
-    function YB(BB) {
-      return !(!BB.lobbyLeaderboardInfo && !BB.lobbyManage)
+  39896: (ee, ie, He) => {
+    function ye(ee) {
+      return !(!ee.lobbyLeaderboardInfo && !ee.lobbyManage)
     }
-    GB.d(OB, {
-      b: () => YB
+    He.d(ie, {
+      e: () => ye
     })
   },
-  37495: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => DB,
-      f: () => YB
+  37629: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => be,
+      d: () => ye
     });
-    const YB = 3,
-      DB = {
+    const ye = 3,
+      be = {
         recording: !1,
         clipping: !1,
         hasClipBuffer: !1,
         seconds: 0
       }
   },
-  37500: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => QB,
-      h: () => DB
+  37637: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me,
+      e: () => be
     });
-    let YB = () => null;
+    let ye = () => null;
 
-    function DB(BB) {
-      YB = BB
+    function be(ee) {
+      ye = ee
     }
 
-    function QB(BB, OB) {
-      return YB(BB, OB)
+    function Me(ee, ie) {
+      return ye(ee, ie)
     }
   },
-  41602: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => qB,
-      d: () => WB,
-      h: () => RB,
-      k: () => ZB
+  41717: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Te,
+      e: () => Be,
+      g: () => ze,
+      k: () => pe
     });
-    var YB = GB(25),
-      DB = GB(41611),
-      QB = GB(41593),
-      oB = GB(41616),
-      jB = GB(41600),
-      yB = GB(41624),
-      JB = GB(41637);
+    var ye = He(27),
+      be = He(41721),
+      Me = He(41704),
+      Ke = He(41725),
+      Ue = He(41712),
+      Fe = He(41728),
+      Je = He(41739);
 
-    function MB(BB) {
-      var OB, GB;
-      const YB = (0, QB.j)();
-      return YB ? null === (OB = (0, DB.c)(YB.api, BB[0], BB[1], BB[2])) || void 0 === OB || null === (GB = OB.persisted) || void 0 === GB ? void 0 : GB.shared : void 0
+    function oe(ee) {
+      var ie, He;
+      const ye = (0, Me.h)();
+      return ye ? null === (ie = (0, be.c)(ye.api, ee[0], ee[1], ee[2])) || void 0 === ie || null === (He = ie.persisted) || void 0 === He ? void 0 : He.shared : void 0
     }
 
-    function PB(BB) {
-      return `${BB[0]},${BB[1]},${BB[2]}`
+    function Re(ee) {
+      return `${ee[0]},${ee[1]},${ee[2]}`
     }
-    const zB = new Map;
-    let lB = null,
-      pB = 0;
+    const ke = new Map;
+    let qe = null,
+      fe = 0;
 
-    function qB() {
-      return pB
+    function Te() {
+      return fe
     }
 
-    function ZB(BB) {
-      const OB = null !== lB && lB.key === PB(BB.pos) ? lB.type : null;
-      if (null === OB) return BB;
-      let GB = null;
-      if ("Iron" === OB) {
+    function pe(ee) {
+      const ie = null !== qe && qe.key === Re(ee.pos) ? qe.type : null;
+      if (null === ie) return ee;
+      let He = null;
+      if ("Iron" === ie) {
         const {
-          cachedPasskey: OB,
-          ...YB
-        } = NB(BB.pos);
-        GB = {
-          xy: null !== OB && void 0 !== OB ? OB : [0, 0, 0, 0],
-          ...YB
+          cachedPasskey: ie,
+          ...ye
+        } = Xe(ee.pos);
+        He = {
+          SF: null !== ie && void 0 !== ie ? ie : [0, 0, 0, 0],
+          ...ye
         }
       }
       return {
-        ...BB,
-        type: OB,
-        ironChest: GB
+        ...ee,
+        type: ie,
+        ironChest: He
       }
     }
 
-    function NB(BB) {
-      const OB = MB(BB),
-        GB = null === OB || void 0 === OB ? void 0 : OB.ownerDbId,
-        YB = function(BB) {
-          var OB;
-          let GB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MB(BB);
-          const YB = PB(BB),
-            DB = zB.get(YB);
-          return DB ? DB.lastOpened < (null !== (OB = null === GB || void 0 === GB ? void 0 : GB.passkeyLastUpdated) && void 0 !== OB ? OB : 0) ? (zB.delete(YB), null) : [...DB.xy] : null
-        }(BB, OB);
-      return void 0 === GB ? {
-        cachedPasskey: YB
+    function Xe(ee) {
+      const ie = oe(ee),
+        He = null === ie || void 0 === ie ? void 0 : ie.ownerDbId,
+        ye = function(ee) {
+          var ie;
+          let He = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oe(ee);
+          const ye = Re(ee),
+            be = ke.get(ye);
+          return be ? be.lastOpened < (null !== (ie = null === He || void 0 === He ? void 0 : He.passkeyLastUpdated) && void 0 !== ie ? ie : 0) ? (ke.delete(ye), null) : [...be.SF] : null
+        }(ee, ie);
+      return void 0 === He ? {
+        cachedPasskey: ye
       } : {
-        ownerDbId: GB,
-        cachedPasskey: YB
+        ownerDbId: He,
+        cachedPasskey: ye
       }
-    }(0, JB.g)(oB.d, (BB => {
-      const OB = (0, yB.h)(oB.d, BB);
-      if (!(0, yB.e)(OB) || OB.WO) return;
-      if (pB++, !OB.lO || null === OB.ZO) return void(lB = null);
-      const GB = PB(OB.ZO);
-      lB = {
-        key: GB,
-        type: OB.qO
-      }, null !== OB.RO && zB.set(GB, {
-        xy: [...OB.RO],
+    }(0, Je.j)(Ke.e, (ee => {
+      const ie = (0, Fe.g)(Ke.e, ee);
+      if (!(0, Fe.c)(ie) || ie.ti) return;
+      if (fe++, !ie.Ei || null === ie.di) return void(qe = null);
+      const He = Re(ie.di);
+      qe = {
+        key: He,
+        type: ie.Oi
+      }, null !== ie.Wi && ke.set(He, {
+        SF: [...ie.Wi],
         lastOpened: Date.now()
       })
-    })), (0, JB.d)((() => {
-      zB.clear(), lB = null, pB++
-    })), (0, JB.e)((() => {
-      null !== lB && (lB = null, pB++, YB.o.tM("chestToggleFromServer", !1, !0))
+    })), (0, Je.g)((() => {
+      ke.clear(), qe = null, fe++
+    })), (0, Je.i)((() => {
+      null !== qe && (qe = null, fe++, ye.h.yR("chestToggleFromServer", !1, !0))
     }));
-    const RB = {
+    const ze = {
         boardEditRequested: {
-          watch: BB => (0, YB.p)("EditBoard", (OB => {
+          watch: ee => (0, ye.j)("EditBoard", (ie => {
             let {
-              pos: GB
-            } = OB;
-            if (null === GB) return void BB(null);
-            const YB = (0, QB.j)(),
-              DB = (0, QB.s)();
-            YB && DB && BB(DB.readBoardToEdit(YB.api, YB.chunks, GB))
+              pos: He
+            } = ie;
+            if (null === He) return void ee(null);
+            const ye = (0, Me.h)(),
+              be = (0, Me.q)();
+            ye && be && ee(be.readBoardToEdit(ye.api, ye.chunks, He))
           }))
         },
         ironChestOpenRequested: {
-          watch: BB => (0, YB.p)("OpenIronChest", (OB => {
+          watch: ee => (0, ye.j)("OpenIronChest", (ie => {
             let {
-              pos: GB
-            } = OB;
-            BB(function(BB) {
+              pos: He
+            } = ie;
+            ee(function(ee) {
               return {
-                pos: BB,
-                ...NB(BB)
+                pos: ee,
+                ...Xe(ee)
               }
-            }(GB))
+            }(He))
           }))
         }
       },
-      WB = {
-        writeOnBoard(BB) {
-          var OB;
+      Be = {
+        writeOnBoard(ee) {
+          var ie;
           let {
-            pos: GB,
-            text: YB,
-            textSize: DB
-          } = BB;
-          null === (OB = (0, QB.j)()) || void 0 === OB || OB.send(jB.c.UpdateBoard, (0, jB.S)({
-            JJ: GB,
-            MJ: YB,
-            PJ: DB
+            pos: He,
+            text: ye,
+            textSize: be
+          } = ee;
+          null === (ie = (0, Me.h)()) || void 0 === ie || ie.send(Ue.e.UpdateBoard, (0, Ue.X)({
+            iJ: He,
+            HJ: ye,
+            yJ: be
           }))
         },
-        writeBook(BB) {
-          var OB;
+        writeBook(ee) {
+          var ie;
           let {
-            pages: GB,
-            title: YB,
-            published: DB
-          } = BB;
-          null === (OB = (0, QB.j)()) || void 0 === OB || OB.send(jB.c.UpdateBook, (0, jB.V)({
-            dJ: GB,
-            KJ: YB,
-            uJ: DB
+            pages: He,
+            title: ye,
+            published: be
+          } = ee;
+          null === (ie = (0, Me.h)()) || void 0 === ie || ie.send(Ue.e.UpdateBook, (0, Ue.$)({
+            BJ: He,
+            EJ: ye,
+            gJ: be
           }))
         },
-        writeNameTag(BB) {
-          var OB;
-          null === (OB = (0, QB.j)()) || void 0 === OB || OB.send(jB.c.UpdateNameTag, BB)
+        writeNameTag(ee) {
+          var ie;
+          null === (ie = (0, Me.h)()) || void 0 === ie || ie.send(Ue.e.UpdateNameTag, ee)
         },
-        setCustomLobbyBlock(BB) {
+        setCustomLobbyBlock(ee) {
           let {
-            pos: OB,
-            blockName: GB
-          } = BB;
-          const YB = (0, QB.s)(),
-            DB = (0, QB.j)();
-          YB && DB && DB.send(jB.c.SetCustomLobbyBlock, (0, jB.E)({
-            SM: YB.blockIdOf(GB),
-            VM: OB
+            pos: ie,
+            blockName: He
+          } = ee;
+          const ye = (0, Me.q)(),
+            be = (0, Me.h)();
+          ye && be && be.send(Ue.e.SetCustomLobbyBlock, (0, Ue.I)({
+            po: ye.blockIdOf(He),
+            fo: ie
           }))
         }
       }
   },
-  41661: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => yB,
-      h: () => oB,
-      l: () => jB
+  41751: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Fe,
+      g: () => Ke,
+      i: () => Ue
     });
-    var YB = GB(41579),
-      DB = GB(5274),
-      QB = GB(41593);
+    var ye = He(41694),
+      be = He(5262),
+      Me = He(41704);
 
-    function oB() {
-      var BB;
-      const OB = null === (BB = (0, QB.j)()) || void 0 === BB ? void 0 : BB.api.localId;
-      return void 0 === OB || OB === YB.cd ? null : String(OB)
+    function Ke() {
+      var ee;
+      const ie = null === (ee = (0, Me.h)()) || void 0 === ee ? void 0 : ee.api.localId;
+      return void 0 === ie || ie === ye.$c ? null : String(ie)
     }
 
-    function jB(BB) {
-      const OB = (0, QB.j)();
-      if (null !== OB) return BB(OB);
-      let GB = null;
-      const YB = (0, DB.w)((() => {
-        const OB = (0, QB.j)();
-        null !== OB && null === GB && (YB(), GB = BB(OB))
+    function Ue(ee) {
+      const ie = (0, Me.h)();
+      if (null !== ie) return ee(ie);
+      let He = null;
+      const ye = (0, be.u)((() => {
+        const ie = (0, Me.h)();
+        null !== ie && null === He && (ye(), He = ee(ie))
       }));
       return () => {
-        var BB;
-        YB(), null === (BB = GB) || void 0 === BB || BB()
+        var ee;
+        ye(), null === (ee = He) || void 0 === ee || ee()
       }
     }
 
-    function yB(BB, OB, GB) {
+    function Fe(ee, ie, He) {
       return {
         current: () => {
-          const GB = (0, QB.j)();
-          return null === GB ? OB : BB(GB)()
+          const He = (0, Me.h)();
+          return null === He ? ie : ee(He)()
         },
-        watch: OB => jB((YB => {
-          const DB = BB(YB);
-          let QB = DB();
-          return OB(QB), GB((() => {
-            const BB = DB();
-            BB !== QB && (QB = BB, OB(BB))
+        watch: ie => Ue((ye => {
+          const be = ee(ye);
+          let Me = be();
+          return ie(Me), He((() => {
+            const ee = be();
+            ee !== Me && (Me = ee, ie(ee))
           }))
         }))
       }
     }
   },
-  41652: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => JB
+  41747: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Je
     });
-    var YB = GB(41593),
-      DB = GB(41661),
-      QB = GB(41667);
+    var ye = He(41704),
+      be = He(41751),
+      Me = He(41759);
 
-    function oB() {
-      var BB, OB;
-      return null !== (BB = null === (OB = (0, YB.j)()) || void 0 === OB ? void 0 : OB.itemBridgeSources) && void 0 !== BB ? BB : QB.c
+    function Ke() {
+      var ee, ie;
+      return null !== (ee = null === (ie = (0, ye.h)()) || void 0 === ie ? void 0 : ie.itemBridgeSources) && void 0 !== ee ? ee : Me.b
     }
 
-    function jB(BB) {
+    function Ue(ee) {
       return {
-        current: () => oB().states[BB].current(),
-        watch: OB => (0, DB.l)((GB => {
-          const YB = GB.itemBridgeSources.states[BB];
-          return OB(YB.current()), YB.watch(OB)
+        current: () => Ke().states[ee].current(),
+        watch: ie => (0, be.i)((He => {
+          const ye = He.itemBridgeSources.states[ee];
+          return ie(ye.current()), ye.watch(ie)
         }))
       }
     }
 
-    function yB(BB) {
+    function Fe(ee) {
       return {
-        watch: OB => (0, DB.l)((GB => GB.itemBridgeSources.events[BB].watch(OB)))
+        watch: ie => (0, be.i)((He => He.itemBridgeSources.events[ee].watch(ie)))
       }
     }
-    const JB = {
+    const Je = {
       states: {
-        inventory: jB("inventory"),
-        hotbar: jB("hotbar"),
-        crafting: jB("crafting"),
-        heldItemAim: jB("heldItemAim")
+        inventory: Ue("inventory"),
+        hotbar: Ue("hotbar"),
+        crafting: Ue("crafting"),
+        heldItemAim: Ue("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: yB("hotbarSlotRequested"),
-        hotbarScrolled: yB("hotbarScrolled"),
-        numberKeyPressed: yB("numberKeyPressed"),
-        inventoryDropRequested: yB("inventoryDropRequested"),
-        chestToggled: yB("chestToggled"),
-        chestRefreshed: yB("chestRefreshed"),
-        inventorySynced: yB("inventorySynced"),
-        enchantingTableOpened: yB("enchantingTableOpened")
+        hotbarSlotRequested: Fe("hotbarSlotRequested"),
+        hotbarScrolled: Fe("hotbarScrolled"),
+        numberKeyPressed: Fe("numberKeyPressed"),
+        inventoryDropRequested: Fe("inventoryDropRequested"),
+        chestToggled: Fe("chestToggled"),
+        chestRefreshed: Fe("chestRefreshed"),
+        inventorySynced: Fe("inventorySynced"),
+        enchantingTableOpened: Fe("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: BB => oB().commands.selectHotbarSlot(BB),
-        removeInventoryItem: BB => oB().commands.removeInventoryItem(BB),
-        swapInventorySlots: BB => oB().commands.swapInventorySlots(BB),
-        moveInventoryItem: BB => oB().commands.moveInventoryItem(BB),
-        quickMoveInventoryItem: BB => oB().commands.quickMoveInventoryItem(BB),
-        closeChest: BB => oB().commands.closeChest(BB),
-        focusCrafting: BB => oB().commands.focusCrafting(BB),
-        craftRecipe: BB => oB().commands.craftRecipe(BB),
-        salvageItem: BB => oB().commands.salvageItem(BB),
-        enchantItem: BB => oB().commands.enchantItem(BB)
+        selectHotbarSlot: ee => Ke().commands.selectHotbarSlot(ee),
+        removeInventoryItem: ee => Ke().commands.removeInventoryItem(ee),
+        swapInventorySlots: ee => Ke().commands.swapInventorySlots(ee),
+        moveInventoryItem: ee => Ke().commands.moveInventoryItem(ee),
+        quickMoveInventoryItem: ee => Ke().commands.quickMoveInventoryItem(ee),
+        closeChest: ee => Ke().commands.closeChest(ee),
+        focusCrafting: ee => Ke().commands.focusCrafting(ee),
+        craftRecipe: ee => Ke().commands.craftRecipe(ee),
+        salvageItem: ee => Ke().commands.salvageItem(ee),
+        enchantItem: ee => Ke().commands.enchantItem(ee)
       },
       queries: {
-        enchantingOffer: BB => oB().queries.enchantingOffer(BB)
+        enchantingOffer: ee => Ke().queries.enchantingOffer(ee)
       }
     }
   },
-  41667: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => yB
+  41759: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Fe
     });
-    var YB = GB(40416),
-      DB = GB(37495);
+    var ye = He(40527),
+      be = He(37629);
 
-    function QB(BB) {
+    function Me(ee) {
       return {
-        current: () => BB,
+        current: () => ee,
         watch: () => () => {}
       }
     }
 
-    function oB() {}
-    const jB = Object.freeze([0, 0, 0]),
-      yB = {
+    function Ke() {}
+    const Ue = Object.freeze([0, 0, 0]),
+      Fe = {
         states: {
-          health: QB({
+          health: Me({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: QB({
+          inventory: Me({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -343,58 +343,58 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: QB({
+          hotbar: Me({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: QB({
+          stationItems: Me({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: QB({}),
-          creativeVisibility: QB({
+          itemInfo: Me({}),
+          creativeVisibility: Me({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: QB(null),
-          heldItemAim: QB({
+          aura: Me(null),
+          heldItemAim: Me({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: QB(!1),
-          gliderBoostFuel: QB(0),
-          flight: QB({
+          crouching: Me(!1),
+          gliderBoostFuel: Me(0),
+          flight: Me({
             canFly: !1,
             flying: !1
           }),
-          crafting: QB({
+          crafting: Me({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: QB({
+          players: Me({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: QB({}),
-          fullInventory: QB(!1),
-          crosshairTarget: QB({
+          lobbyLeaderboardRows: Me({}),
+          fullInventory: Me(!1),
+          crosshairTarget: Me({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: QB(!0),
-          freeCamera: QB({
+          localPlayerAlive: Me(!0),
+          freeCamera: Me({
             allowed: !1,
             movesFly: !1
           }),
-          replay: QB(null),
-          replayEdits: QB(null),
-          replayRecorder: QB(DB.e),
-          replayVideoExporting: QB(!1)
+          replay: Me(null),
+          replayEdits: Me(null),
+          replayRecorder: Me(be.b),
+          replayVideoExporting: Me(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -459,87 +459,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: oB,
+          selectHotbarSlot: Ke,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: oB,
-          setInventoryOpen: oB,
-          changeIronChestPasskey: oB,
-          dragReplayCamera: oB,
-          applyTemporaryThirdPerson: oB,
-          holdEmoteWheel: oB,
-          recordFlyingMiddleText: oB,
-          focusCrafting: oB,
+          closeChest: Ke,
+          setInventoryOpen: Ke,
+          changeIronChestPasskey: Ke,
+          dragReplayCamera: Ke,
+          applyTemporaryThirdPerson: Ke,
+          holdEmoteWheel: Ke,
+          recordFlyingMiddleText: Ke,
+          focusCrafting: Ke,
           craftRecipe: () => ({
-            vM: 0,
-            WJ: null,
+            eR: 0,
+            RJ: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: oB,
-          setShopOpen: oB,
-          buyShopItem: oB,
-          lobbyManage: oB,
+          enchantItem: Ke,
+          setShopOpen: Ke,
+          buyShopItem: Ke,
+          lobbyManage: Ke,
           sendChatMessage: () => !1,
-          ignorePlayer: oB,
-          reportPlayer: oB,
-          reportWorldCodeChat: oB,
-          requestDiscordReportKey: oB,
-          reportLobbyOrGame: oB,
-          playEmote: oB,
-          updateMyCosmetic: oB,
-          writeOnBoard: oB,
-          writeBook: oB,
-          writeNameTag: oB,
-          setCustomLobbyBlock: oB,
-          openIronChest: oB,
-          sendCodeCollab: oB,
-          clickCodeBlock: oB,
-          bindCustomButtonKeys: oB,
-          pressCustomButton: oB,
-          moveReplayFreecam: oB,
-          holdReplayFreecamVertical: oB,
-          respawn: oB,
-          wakeUp: oB,
-          requestLeaderboard: oB,
-          completeTask: oB,
-          setServerCookie: oB,
-          answerUiRequest: oB,
-          chooseRewardedAd: oB,
-          setCameraZoom: oB,
-          setFreeCameraMovesFly: oB,
-          setBlockHighlight: oB,
-          setCrosshairInteractPrompt: oB,
-          setLookSensitivity: oB,
-          replayAction: oB,
-          setReplayPlaying: oB,
-          seekReplay: oB,
-          setReplayCameraMode: oB,
-          syncReplayCameraMode: oB,
-          setReplayCameraKeyframe: oB,
-          moveReplayCameraKeyframe: oB,
-          deleteReplayCameraKeyframes: oB,
-          setReplayPlaybackMark: oB,
+          ignorePlayer: Ke,
+          reportPlayer: Ke,
+          reportWorldCodeChat: Ke,
+          requestDiscordReportKey: Ke,
+          reportLobbyOrGame: Ke,
+          playEmote: Ke,
+          updateMyCosmetic: Ke,
+          writeOnBoard: Ke,
+          writeBook: Ke,
+          writeNameTag: Ke,
+          setCustomLobbyBlock: Ke,
+          openIronChest: Ke,
+          sendCodeCollab: Ke,
+          clickCodeBlock: Ke,
+          bindCustomButtonKeys: Ke,
+          pressCustomButton: Ke,
+          moveReplayFreecam: Ke,
+          holdReplayFreecamVertical: Ke,
+          respawn: Ke,
+          wakeUp: Ke,
+          requestLeaderboard: Ke,
+          completeTask: Ke,
+          setServerCookie: Ke,
+          answerUiRequest: Ke,
+          chooseRewardedAd: Ke,
+          setCameraZoom: Ke,
+          setFreeCameraMovesFly: Ke,
+          setBlockHighlight: Ke,
+          setCrosshairInteractPrompt: Ke,
+          setLookSensitivity: Ke,
+          replayAction: Ke,
+          setReplayPlaying: Ke,
+          seekReplay: Ke,
+          setReplayCameraMode: Ke,
+          syncReplayCameraMode: Ke,
+          setReplayCameraKeyframe: Ke,
+          moveReplayCameraKeyframe: Ke,
+          deleteReplayCameraKeyframes: Ke,
+          setReplayPlaybackMark: Ke,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: oB,
-          exportReplayVideo: oB,
-          toggleRecording: oB,
-          saveClip: oB,
-          setRecorderPrefs: oB,
-          setReplayViewerOpen: oB
+          holdReplayForShaderPackFailure: Ke,
+          exportReplayVideo: Ke,
+          toggleRecording: Ke,
+          saveClip: Ke,
+          setRecorderPrefs: Ke,
+          setReplayViewerOpen: Ke
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => YB.d,
-          worldCodeAiGameState: () => YB.e
+          worldCodeAiChunk: () => ye.c,
+          worldCodeAiGameState: () => ye.d
         },
         lookups: {
-          localPos: () => jB,
+          localPos: () => Ue,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -557,316 +557,316 @@ export const modules = {
         }
       }
   },
-  41587: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => fB,
-      g: () => UB,
-      h: () => kB,
-      j: () => nB,
-      k: () => VB
+  41702: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => te,
+      e: () => We,
+      f: () => Ze,
+      i: () => de,
+      l: () => ge
     });
-    var YB = GB(39954),
-      DB = GB(1217),
-      QB = GB(2050),
-      oB = GB(2059),
-      jB = GB(3708),
-      yB = GB(37500),
-      JB = GB(1350),
-      MB = GB(41593),
-      PB = GB(5313),
-      zB = GB(2617),
-      lB = GB(41600),
-      pB = GB(41602),
-      qB = GB(41652);
-    let ZB = null;
+    var ye = He(40091),
+      be = He(1169),
+      Me = He(2018),
+      Ke = He(2022),
+      Ue = He(3608),
+      Fe = He(37637),
+      Je = He(1305),
+      oe = He(41704),
+      Re = He(5291),
+      ke = He(2492),
+      qe = He(41712),
+      fe = He(41717),
+      Te = He(41747);
+    let pe = null;
 
-    function NB(BB) {
-      const OB = new Map,
-        GB = GB => {
-          if ("string" !== typeof GB) return;
-          let YB = OB.get(GB);
-          return void 0 === YB && (YB = BB(GB), void 0 !== YB && OB.set(GB, YB)), YB
+    function Xe(ee) {
+      const ie = new Map,
+        He = He => {
+          if ("string" !== typeof He) return;
+          let ye = ie.get(He);
+          return void 0 === ye && (ye = ee(He), void 0 !== ye && ie.set(He, ye)), ye
         };
       return new Proxy({}, {
-        get: (BB, OB) => GB(OB),
-        has: (BB, OB) => void 0 !== GB(OB)
+        get: (ee, ie) => He(ie),
+        has: (ee, ie) => void 0 !== He(ie)
       })
     }
 
-    function RB(BB) {
-      const OB = (0, jB.c)(BB);
-      return void 0 !== OB && (0, jB.g)(OB) === BB
+    function ze(ee) {
+      const ie = (0, Ue.c)(ee);
+      return void 0 !== ie && (0, Ue.g)(ie) === ee
     }
 
-    function WB(BB) {
-      var OB;
-      const GB = null === (OB = (0, MB.j)()) || void 0 === OB ? void 0 : OB.tables;
-      if (void 0 === GB || !RB(BB)) return;
-      const YB = {
-          displayName: GB.getDisplayName(BB)
+    function Be(ee) {
+      var ie;
+      const He = null === (ie = (0, oe.h)()) || void 0 === ie ? void 0 : ie.tables;
+      if (void 0 === He || !ze(ee)) return;
+      const ye = {
+          displayName: He.getDisplayName(ee)
         },
-        DB = GB.getItemStat(BB, "description");
-      void 0 !== DB && null !== DB && (YB.description = DB);
+        be = He.getItemStat(ee, "description");
+      void 0 !== be && null !== be && (ye.description = be);
       const {
-        rootName: QB
-      } = GB.getMetaInfo(BB);
-      QB !== BB && (YB.rootName = QB);
-      const oB = GB.getItemStat(BB, "armourReduction");
-      return void 0 !== oB && null !== oB && (YB.armourReduction = oB), YB
-    }(0, MB.u)((BB => {
-      ZB = BB
+        rootName: Me
+      } = He.getMetaInfo(ee);
+      Me !== ee && (ye.rootName = Me);
+      const Ke = He.getItemStat(ee, "armourReduction");
+      return void 0 !== Ke && null !== Ke && (ye.armourReduction = Ke), ye
+    }(0, oe.r)((ee => {
+      pe = ee
     }));
-    const AB = (0, oB.g)("DisplayName", "Description");
+    const Ee = (0, Ke.d)("DisplayName", "Description");
 
-    function VB() {
-      return Boolean(QB.e.get("useInventory") && QB.e.get("useFullInventory"))
+    function ge() {
+      return Boolean(Me.c.get("useInventory") && Me.c.get("useFullInventory"))
     }
-    let SB = null;
-    const nB = {
+    let Oe = null;
+    const de = {
         inventory: function() {
-          const BB = qB.c.states.inventory;
-          let OB = null;
-          const GB = BB => {
-            var GB;
-            return null === BB.chest ? BB : ((null === (GB = OB) || void 0 === GB ? void 0 : GB.from) === BB && OB.chestVersion === (0, pB.b)() || (OB = {
-              from: BB,
-              chestVersion: (0, pB.b)(),
+          const ee = Te.b.states.inventory;
+          let ie = null;
+          const He = ee => {
+            var He;
+            return null === ee.chest ? ee : ((null === (He = ie) || void 0 === He ? void 0 : He.from) === ee && ie.chestVersion === (0, fe.c)() || (ie = {
+              from: ee,
+              chestVersion: (0, fe.c)(),
               view: {
-                ...BB,
-                chest: (0, pB.k)(BB.chest)
+                ...ee,
+                chest: (0, fe.k)(ee.chest)
               }
-            }), OB.view)
+            }), ie.view)
           };
           return {
-            current: () => GB(BB.current()),
-            watch: OB => BB.watch((BB => {
-              OB(GB(BB))
+            current: () => He(ee.current()),
+            watch: ie => ee.watch((ee => {
+              ie(He(ee))
             }))
           }
         }(),
-        crafting: qB.c.states.crafting,
+        crafting: Te.b.states.crafting,
         stationItems: {
           current() {
-            var BB;
-            return (null === (BB = SB) || void 0 === BB ? void 0 : BB.namesVersion) !== (0, jB.k)() && (SB = {
-              namesVersion: (0, jB.k)(),
+            var ee;
+            return (null === (ee = Oe) || void 0 === ee ? void 0 : ee.namesVersion) !== (0, Ue.j)() && (Oe = {
+              namesVersion: (0, Ue.j)(),
               items: {
-                enchantable: NB((BB => {
-                  const OB = (0, jB.c)(BB);
-                  return void 0 !== OB && null !== ZB && ZB.enchantmentPerksOf(OB).length > 0 || void 0
+                enchantable: Xe((ee => {
+                  const ie = (0, Ue.c)(ee);
+                  return void 0 !== ie && null !== pe && pe.enchantmentPerksOf(ie).length > 0 || void 0
                 })),
-                salvageable: NB((BB => !(!RB(BB) || null === (0, yB.e)(BB)) || void 0))
+                salvageable: Xe((ee => !(!ze(ee) || null === (0, Fe.d)(ee)) || void 0))
               }
-            }), SB.items
+            }), Oe.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let BB = null;
-          const OB = () => {
-            var OB;
-            return (null === (OB = BB) || void 0 === OB ? void 0 : OB.namesVersion) !== (0, jB.k)() && (BB = {
-              namesVersion: (0, jB.k)(),
-              infos: NB(WB)
-            }), BB.infos
+          let ee = null;
+          const ie = () => {
+            var ie;
+            return (null === (ie = ee) || void 0 === ie ? void 0 : ie.namesVersion) !== (0, Ue.j)() && (ee = {
+              namesVersion: (0, Ue.j)(),
+              infos: Xe(Be)
+            }), ee.infos
           };
           return {
-            current: OB,
-            watch: GB => (0, oB.n)((YB => {
-              YB.some(AB) && (BB = null, GB(OB()))
+            current: ie,
+            watch: He => (0, Ke.l)((ye => {
+              ye.some(Ee) && (ee = null, He(ie()))
             }))
           }
         }(),
-        creativeVisibility: (0, oB.i)((function() {
-          const BB = {};
-          for (const DB of null !== (OB = null === (GB = ZB) || void 0 === GB ? void 0 : GB.creativeItemIds()) && void 0 !== OB ? OB : []) {
-            var OB, GB, oB, yB;
-            const JB = (0, jB.g)(DB);
-            if (void 0 === JB) continue;
-            const MB = null !== (oB = QB.e.get((0, YB.f)(JB, "showInCreativeInven"))) && void 0 !== oB ? oB : null === (yB = ZB) || void 0 === yB ? void 0 : yB.showInCreativeInvenOf(DB);
-            "boolean" === typeof MB && (BB[JB] = MB)
+        creativeVisibility: (0, Ke.i)((function() {
+          const ee = {};
+          for (const be of null !== (ie = null === (He = pe) || void 0 === He ? void 0 : He.creativeItemIds()) && void 0 !== ie ? ie : []) {
+            var ie, He, Ke, Fe;
+            const Je = (0, Ue.g)(be);
+            if (void 0 === Je) continue;
+            const oe = null !== (Ke = Me.c.get((0, ye.h)(Je, "showInCreativeInven"))) && void 0 !== Ke ? Ke : null === (Fe = pe) || void 0 === Fe ? void 0 : Fe.showInCreativeInvenOf(be);
+            "boolean" === typeof oe && (ee[Je] = oe)
           }
           return {
-            publicLobby: (0, DB.Q)((0, JB.c)().lobbyName),
-            shownInGame: BB
+            publicLobby: (0, be.K)((0, Je.e)().lobbyName),
+            shownInGame: ee
           }
-        }), ["connectedGameChanged"], (0, oB.g)("ShowInCreativeInven")),
-        fullInventory: (0, oB.i)(VB, [], (0, oB.h)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, Ke.d)("ShowInCreativeInven")),
+        fullInventory: (0, Ke.i)(ge, [], (0, Ke.h)("useInventory", "useFullInventory"))
       },
-      UB = {
-        inventoryDropRequested: qB.c.events.inventoryDropRequested,
-        chestToggled: qB.c.events.chestToggled,
-        chestRefreshed: qB.c.events.chestRefreshed,
-        inventorySynced: qB.c.events.inventorySynced,
-        enchantingTableOpened: qB.c.events.enchantingTableOpened
+      We = {
+        inventoryDropRequested: Te.b.events.inventoryDropRequested,
+        chestToggled: Te.b.events.chestToggled,
+        chestRefreshed: Te.b.events.chestRefreshed,
+        inventorySynced: Te.b.events.inventorySynced,
+        enchantingTableOpened: Te.b.events.enchantingTableOpened
       },
-      fB = {
-        removeInventoryItem: qB.c.commands.removeInventoryItem,
-        swapInventorySlots: qB.c.commands.swapInventorySlots,
-        moveInventoryItem: qB.c.commands.moveInventoryItem,
-        quickMoveInventoryItem: qB.c.commands.quickMoveInventoryItem,
-        closeChest: qB.c.commands.closeChest,
-        setInventoryOpen(BB) {
-          (0, PB.m)(zB.y.InventoryOpen, BB ? zB.y.InventoryOpen : 0)
+      te = {
+        removeInventoryItem: Te.b.commands.removeInventoryItem,
+        swapInventorySlots: Te.b.commands.swapInventorySlots,
+        moveInventoryItem: Te.b.commands.moveInventoryItem,
+        quickMoveInventoryItem: Te.b.commands.quickMoveInventoryItem,
+        closeChest: Te.b.commands.closeChest,
+        setInventoryOpen(ee) {
+          (0, Re.h)(ke.p.InventoryOpen, ee ? ke.p.InventoryOpen : 0)
         },
-        focusCrafting: qB.c.commands.focusCrafting,
-        craftRecipe: qB.c.commands.craftRecipe,
-        salvageItem: qB.c.commands.salvageItem,
-        enchantItem: qB.c.commands.enchantItem,
-        changeIronChestPasskey(BB) {
-          var OB;
+        focusCrafting: Te.b.commands.focusCrafting,
+        craftRecipe: Te.b.commands.craftRecipe,
+        salvageItem: Te.b.commands.salvageItem,
+        enchantItem: Te.b.commands.enchantItem,
+        changeIronChestPasskey(ee) {
+          var ie;
           let {
-            pos: GB,
-            xy: YB
-          } = BB;
-          null === (OB = (0, MB.j)()) || void 0 === OB || OB.send(lB.c.ChangeIronChestPasskey, (0, lB.h)({
-            ZO: GB,
-            xy: YB
+            pos: He,
+            SF: ye
+          } = ee;
+          null === (ie = (0, oe.h)()) || void 0 === ie || ie.send(qe.e.ChangeIronChestPasskey, (0, qe.i)({
+            di: He,
+            SF: ye
           }))
         },
-        openIronChest(BB) {
-          var OB;
+        openIronChest(ee) {
+          var ie;
           let {
-            pos: GB,
-            xy: YB
-          } = BB;
-          null === (OB = (0, MB.j)()) || void 0 === OB || OB.send(lB.c.OpenIronChest, (0, lB.x)({
-            ZO: GB,
-            xy: YB
+            pos: He,
+            SF: ye
+          } = ee;
+          null === (ie = (0, oe.h)()) || void 0 === ie || ie.send(qe.e.OpenIronChest, (0, qe.D)({
+            di: He,
+            SF: ye
           }))
         }
       },
-      kB = {
-        enchantingOffer: qB.c.queries.enchantingOffer
+      Ze = {
+        enchantingOffer: Te.b.queries.enchantingOffer
       }
   },
-  41646: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB,
-      c: () => MB,
-      d: () => oB,
-      h: () => DB,
-      j: () => jB,
-      k: () => JB
+  41743: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye,
+      d: () => oe,
+      g: () => Ke,
+      i: () => be,
+      j: () => Ue,
+      k: () => Je
     });
-    class YB extends Error {
+    class ye extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function DB(BB) {
-      return BB instanceof RangeError && /call stack/i.test(BB.message) || BB instanceof Error && "InternalError" === BB.name && /recursion/i.test(BB.message)
+    function be(ee) {
+      return ee instanceof RangeError && /call stack/i.test(ee.message) || ee instanceof Error && "InternalError" === ee.name && /recursion/i.test(ee.message)
     }
-    const QB = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Me = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function oB(BB) {
-      var OB;
-      return BB instanceof WebAssembly.RuntimeError || BB instanceof YB || DB(BB) && QB.test(null !== (OB = BB.stack) && void 0 !== OB ? OB : "")
-    }
-
-    function jB(BB, OB) {
-      if (oB(BB)) throw BB;
-      console.error(OB, BB)
+    function Ke(ee) {
+      var ie;
+      return ee instanceof WebAssembly.RuntimeError || ee instanceof ye || be(ee) && Me.test(null !== (ie = ee.stack) && void 0 !== ie ? ie : "")
     }
 
-    function yB(BB, OB, GB, DB, QB) {
-      if (OB % DB !== 0 || OB + GB > BB.byteLength) throw new YB(`${QB}: ${GB} bytes at ${OB}, ${DB}-aligned, outside ${BB.byteLength} bytes of memory`)
+    function Ue(ee, ie) {
+      if (Ke(ee)) throw ee;
+      console.error(ie, ee)
     }
 
-    function JB(BB, OB, GB, YB, DB) {
-      return 0 === GB ? null : (yB(OB, GB, YB * BB.BYTES_PER_ELEMENT, BB.BYTES_PER_ELEMENT, DB), new BB(OB, GB, YB))
+    function Fe(ee, ie, He, be, Me) {
+      if (ie % be !== 0 || ie + He > ee.byteLength) throw new ye(`${Me}: ${He} bytes at ${ie}, ${be}-aligned, outside ${ee.byteLength} bytes of memory`)
     }
 
-    function MB(BB, OB, GB, YB, DB) {
-      return 0 === OB ? null : (yB(BB, OB, GB, YB, DB), new DataView(BB, OB, GB))
+    function Je(ee, ie, He, ye, be) {
+      return 0 === He ? null : (Fe(ie, He, ye * ee.BYTES_PER_ELEMENT, ee.BYTES_PER_ELEMENT, be), new ee(ie, He, ye))
+    }
+
+    function oe(ee, ie, He, ye, be) {
+      return 0 === ie ? null : (Fe(ee, ie, He, ye, be), new DataView(ee, ie, He))
     }
   },
-  41593: (BB, OB, GB) => {
-    GB.d(OB, {
-      e: () => YB,
-      h: () => NB,
-      j: () => qB,
-      m: () => ZB,
-      p: () => zB,
-      r: () => lB,
-      s: () => MB,
-      u: () => PB,
-      v: () => pB
+  41704: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => ye,
+      g: () => Xe,
+      h: () => Te,
+      l: () => pe,
+      n: () => ke,
+      o: () => qe,
+      q: () => oe,
+      r: () => Re,
+      u: () => fe
     });
-    class YB extends Error {
-      constructor(BB) {
-        super(`the join's code did not load: ${BB instanceof Error?BB.message:String(BB)}`, {
-          cause: BB
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === BB || void 0 === BB ? void 0 : BB.request
+    class ye extends Error {
+      constructor(ee) {
+        super(`the join's code did not load: ${ee instanceof Error?ee.message:String(ee)}`, {
+          cause: ee
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === ee || void 0 === ee ? void 0 : ee.request
       }
     }
-    let DB = null,
-      QB = null,
-      oB = null;
-    const jB = [];
-    let yB = null;
+    let be = null,
+      Me = null,
+      Ke = null;
+    const Ue = [];
+    let Fe = null;
 
-    function JB(BB, OB) {
+    function Je(ee, ie) {
       try {
-        BB(OB)
-      } catch (GB) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", GB)
+        ee(ie)
+      } catch (He) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", He)
       }
     }
 
-    function MB() {
-      return yB
+    function oe() {
+      return Fe
     }
 
-    function PB(BB) {
-      jB.push(BB), null !== yB && JB(BB, yB)
+    function Re(ee) {
+      Ue.push(ee), null !== Fe && Je(ee, Fe)
     }
 
-    function zB(BB) {
-      return DB ??= Promise.all([GB.e(84), GB.e(111), GB.e(86), GB.e(248), GB.e(89), GB.e(220), GB.e(170), GB.e(249), GB.e(109), GB.e(268), GB.e(238), GB.e(300), GB.e(49), GB.e(217), GB.e(233), GB.e(216), GB.e(207), GB.e(208), GB.e(101), GB.e(134), GB.e(274), GB.e(68)]).then((() => GB(45727))).then((OB => {
-        OB.loadAudio(BB), yB = OB;
-        for (const BB of jB) JB(BB, OB);
-        return OB
-      })).catch((BB => {
-        throw DB = null, BB
-      })), DB
+    function ke(ee) {
+      return be ??= Promise.all([He.e(84), He.e(111), He.e(86), He.e(248), He.e(89), He.e(220), He.e(170), He.e(249), He.e(109), He.e(268), He.e(238), He.e(300), He.e(49), He.e(217), He.e(233), He.e(216), He.e(207), He.e(208), He.e(101), He.e(134), He.e(274), He.e(68)]).then((() => He(45791))).then((ie => {
+        ie.loadAudio(ee), Fe = ie;
+        for (const ee of Ue) Je(ee, ie);
+        return ie
+      })).catch((ee => {
+        throw be = null, ee
+      })), be
     }
-    async function lB(BB, OB) {
+    async function qe(ee, ie) {
       try {
-        const GB = await zB(BB);
-        await GB.loadClientGame(OB)
-      } catch (GB) {
-        throw new YB(GB)
+        const He = await ke(ee);
+        await He.loadClientGame(ie)
+      } catch (He) {
+        throw new ye(He)
       }
     }
 
-    function pB(BB, OB) {
-      QB = {
-        running: BB,
-        shell: OB
+    function fe(ee, ie) {
+      Me = {
+        running: ee,
+        shell: ie
       }
     }
 
-    function qB() {
-      return oB
+    function Te() {
+      return Ke
     }
-    async function ZB(BB) {
-      const OB = QB;
-      if ((null === OB || void 0 === OB ? void 0 : OB.running) !== BB) throw new Error("the core's session has ended");
-      const GB = await zB(OB.shell.audio).catch((BB => {
-        throw new YB(BB)
+    async function pe(ee) {
+      const ie = Me;
+      if ((null === ie || void 0 === ie ? void 0 : ie.running) !== ee) throw new Error("the core's session has ended");
+      const He = await ke(ie.shell.audio).catch((ee => {
+        throw new ye(ee)
       }));
-      if (null !== oB) return oB;
-      if (QB !== OB || BB.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (oB = GB.startGameHost(BB, OB.shell), null === oB) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return oB
+      if (null !== Ke) return Ke;
+      if (Me !== ie || ee.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Ke = He.startGameHost(ee, ie.shell), null === Ke) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Ke
     }
 
-    function NB() {
-      null !== oB && (null !== yB ? yB.endGameHost(oB) : oB.closeGame()), oB = null, QB = null
+    function Xe() {
+      null !== Ke && (null !== Fe ? Fe.endGameHost(Ke) : Ke.closeGame()), Ke = null, Me = null
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

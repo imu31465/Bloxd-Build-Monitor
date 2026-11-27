@@ -1,66 +1,66 @@
 export const id = 176;
 export const ids = [176];
 export const modules = {
-  9614: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => QB,
-      d: () => DB
+  9683: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Me,
+      g: () => be
     });
-    let YB = !1;
+    let ye = !1;
 
-    function DB() {
-      YB = !0
+    function be() {
+      ye = !0
     }
 
-    function QB() {
-      return YB
+    function Me() {
+      return ye
     }
   },
-  9608: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      loadWasmPlay: () => zB,
-      loadWasmPlayAhead: () => lB,
-      loadWasmPreviews: () => pB
+  9674: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      loadWasmPlay: () => ke,
+      loadWasmPlayAhead: () => qe,
+      loadWasmPreviews: () => fe
     });
-    var YB = GB(3573),
-      DB = GB(2457),
-      QB = GB(2250),
-      oB = GB(5065),
-      jB = GB(3944),
-      yB = GB(9614);
-    let JB = null;
+    var ye = He(3465),
+      be = He(2342),
+      Me = He(2170),
+      Ke = He(5046),
+      Ue = He(3892),
+      Fe = He(9683);
+    let Je = null;
 
-    function MB() {
-      return Promise.all([GB.e(86), GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(216), GB.e(243), GB.e(155), GB.e(101), GB.e(244), GB.e(75)]).then((() => GB(41683)))
+    function oe() {
+      return Promise.all([He.e(86), He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(216), He.e(243), He.e(155), He.e(101), He.e(244), He.e(75)]).then((() => He(41771)))
     }
 
-    function PB() {
-      Promise.all([GB.e(84), GB.e(87), GB.e(85), GB.e(86), GB.e(103), GB.e(100), GB.e(300), GB.e(207), GB.e(250), GB.e(274), GB.e(244), GB.e(54)]).then((() => GB(42017))).catch((() => {}))
+    function Re() {
+      Promise.all([He.e(84), He.e(87), He.e(85), He.e(86), He.e(103), He.e(100), He.e(300), He.e(207), He.e(250), He.e(274), He.e(244), He.e(54)]).then((() => He(42095))).catch((() => {}))
     }
 
-    function zB() {
-      return oB.b.cancelDownloadForJoin(), (0, jB.d)(), (0, DB.h)(), (0, yB.d)(), (0, QB.j)(), PB(), Promise.all([GB.e(89), GB.e(103), GB.e(234), GB.e(233), GB.e(150), GB.e(155), GB.e(70)]).then((() => GB(42053))).then((BB => {
+    function ke() {
+      return Ke.d.cancelDownloadForJoin(), (0, Ue.b)(), (0, be.g)(), (0, Fe.g)(), (0, Me.i)(), Re(), Promise.all([He.e(89), He.e(103), He.e(234), He.e(233), He.e(150), He.e(155), He.e(70)]).then((() => He(42125))).then((ee => {
         let {
-          startJoinLoad: OB
-        } = BB;
-        OB()
-      }), (() => {})), JB ??= MB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        YB.c.showGamePack(BB)
-      })), BB)), (BB => {
-        throw JB = null, BB
-      })), JB
+          startJoinLoad: ie
+        } = ee;
+        ie()
+      }), (() => {})), Je ??= oe().then((ee => (ee.startWasmPlay(), ee.followPageUiPack((ee => {
+        ye.c.showGamePack(ee)
+      })), ee)), (ee => {
+        throw Je = null, ee
+      })), Je
     }
 
-    function lB() {
-      return PB(), GB.e(124).then((() => GB(42056))).catch((() => {})), MB().then((() => {}))
+    function qe() {
+      return Re(), He.e(124).then((() => He(42130))).catch((() => {})), oe().then((() => {}))
     }
 
-    function pB() {
-      return MB().then((BB => {
-        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
+    function fe() {
+      return oe().then((ee => {
+        ee.startWasmPreviews(), ee.prefetchWasmPreviews()
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

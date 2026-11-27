@@ -1,34 +1,34 @@
 export const id = 272;
 export const ids = [272];
 export const modules = {
-  42093: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      h: () => MB,
-      l: () => JB
+  42166: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      f: () => oe,
+      j: () => Je
     });
-    var YB, DB = GB(37807),
-      QB = GB(37778);
-    ! function(BB) {
-      BB[BB.CW = 0] = "CW", BB[BB.CCW = 1] = "CCW"
-    }(YB || (YB = {}));
-    class oB {
-      static Interpolate(BB, OB, GB, YB, DB) {
-        if (0 === BB) return 0;
-        const QB = 1 - 3 * YB + 3 * OB,
-          oB = 3 * YB - 6 * OB,
-          jB = 3 * OB;
-        let yB = BB;
-        for (let JB = 0; JB < 5; JB++) {
-          const OB = yB * yB;
-          yB -= (QB * (OB * yB) + oB * OB + jB * yB - BB) * (1 / (3 * QB * OB + 2 * oB * yB + jB)), yB = Math.min(1, Math.max(0, yB))
+    var ye, be = He(37938),
+      Me = He(37917);
+    ! function(ee) {
+      ee[ee.CW = 0] = "CW", ee[ee.CCW = 1] = "CCW"
+    }(ye || (ye = {}));
+    class Ke {
+      static Interpolate(ee, ie, He, ye, be) {
+        if (0 === ee) return 0;
+        const Me = 1 - 3 * ye + 3 * ie,
+          Ke = 3 * ye - 6 * ie,
+          Ue = 3 * ie;
+        let Fe = ee;
+        for (let Je = 0; Je < 5; Je++) {
+          const ie = Fe * Fe;
+          Fe -= (Me * (ie * Fe) + Ke * ie + Ue * Fe - ee) * (1 / (3 * Me * ie + 2 * Ke * Fe + Ue)), Fe = Math.min(1, Math.max(0, Fe))
         }
-        return 3 * Math.pow(1 - yB, 2) * yB * GB + 3 * (1 - yB) * Math.pow(yB, 2) * DB + Math.pow(yB, 3)
+        return 3 * Math.pow(1 - Fe, 2) * Fe * He + 3 * (1 - Fe) * Math.pow(Fe, 2) * be + Math.pow(Fe, 3)
       }
     }
-    class jB {
-      constructor(BB) {
-        this._radians = BB, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class Ue {
+      constructor(ee) {
+        this._radians = ee, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(BB, OB) {
-        const GB = OB.subtract(BB),
-          YB = Math.atan2(GB.y, GB.x);
-        return new jB(YB)
+      static BetweenTwoPoints(ee, ie) {
+        const He = ie.subtract(ee),
+          ye = Math.atan2(He.y, He.x);
+        return new Ue(ye)
       }
-      static BetweenTwoVectors(BB, OB) {
-        let GB = BB.lengthSquared() * OB.lengthSquared();
-        if (0 === GB) return new jB(Math.PI / 2);
-        GB = Math.sqrt(GB);
-        let YB = BB.dot(OB) / GB;
-        YB = (0, DB.Clamp)(YB, -1, 1);
-        const QB = Math.acos(YB);
-        return new jB(QB)
+      static BetweenTwoVectors(ee, ie) {
+        let He = ee.lengthSquared() * ie.lengthSquared();
+        if (0 === He) return new Ue(Math.PI / 2);
+        He = Math.sqrt(He);
+        let ye = ee.dot(ie) / He;
+        ye = (0, be.Clamp)(ye, -1, 1);
+        const Me = Math.acos(ye);
+        return new Ue(Me)
       }
-      static FromRadians(BB) {
-        return new jB(BB)
+      static FromRadians(ee) {
+        return new Ue(ee)
       }
-      static FromDegrees(BB) {
-        return new jB(BB * Math.PI / 180)
-      }
-    }
-    class yB {
-      constructor(BB, OB, GB) {
-        this.startPoint = BB, this.midPoint = OB, this.endPoint = GB;
-        const YB = Math.pow(OB.x, 2) + Math.pow(OB.y, 2),
-          DB = (Math.pow(BB.x, 2) + Math.pow(BB.y, 2) - YB) / 2,
-          oB = (YB - Math.pow(GB.x, 2) - Math.pow(GB.y, 2)) / 2,
-          yB = (BB.x - OB.x) * (OB.y - GB.y) - (OB.x - GB.x) * (BB.y - OB.y);
-        this.centerPoint = new QB.o((DB * (OB.y - GB.y) - oB * (BB.y - OB.y)) / yB, ((BB.x - OB.x) * oB - (OB.x - GB.x) * DB) / yB), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = jB.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const JB = this.startAngle.degrees();
-        let MB = jB.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          PB = jB.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        MB - JB > 180 && (MB -= 360), MB - JB < -180 && (MB += 360), PB - MB > 180 && (PB -= 360), PB - MB < -180 && (PB += 360), this.orientation = MB - JB < 0 ? 0 : 1, this.angle = jB.FromDegrees(0 === this.orientation ? JB - PB : PB - JB)
+      static FromDegrees(ee) {
+        return new Ue(ee * Math.PI / 180)
       }
     }
-    class JB {
-      constructor(BB, OB) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new QB.o(BB, OB))
+    class Fe {
+      constructor(ee, ie, He) {
+        this.startPoint = ee, this.midPoint = ie, this.endPoint = He;
+        const ye = Math.pow(ie.x, 2) + Math.pow(ie.y, 2),
+          be = (Math.pow(ee.x, 2) + Math.pow(ee.y, 2) - ye) / 2,
+          Ke = (ye - Math.pow(He.x, 2) - Math.pow(He.y, 2)) / 2,
+          Fe = (ee.x - ie.x) * (ie.y - He.y) - (ie.x - He.x) * (ee.y - ie.y);
+        this.centerPoint = new Me.n((be * (ie.y - He.y) - Ke * (ee.y - ie.y)) / Fe, ((ee.x - ie.x) * Ke - (ie.x - He.x) * be) / Fe), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = Ue.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const Je = this.startAngle.degrees();
+        let oe = Ue.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          Re = Ue.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        oe - Je > 180 && (oe -= 360), oe - Je < -180 && (oe += 360), Re - oe > 180 && (Re -= 360), Re - oe < -180 && (Re += 360), this.orientation = oe - Je < 0 ? 0 : 1, this.angle = Ue.FromDegrees(0 === this.orientation ? Je - Re : Re - Je)
       }
-      addLineTo(BB, OB) {
-        if (this.closed) return this;
-        const GB = new QB.o(BB, OB),
-          YB = this._points[this._points.length - 1];
-        return this._points.push(GB), this._length += GB.subtract(YB).length(), this
+    }
+    class Je {
+      constructor(ee, ie) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Me.n(ee, ie))
       }
-      addArcTo(BB, OB, GB, YB) {
-        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(ee, ie) {
         if (this.closed) return this;
-        const oB = this._points[this._points.length - 1],
-          jB = new QB.o(BB, OB),
-          JB = new QB.o(GB, YB),
-          MB = new yB(oB, jB, JB);
-        let PB = MB.angle.radians() / DB;
-        0 === MB.orientation && (PB *= -1);
-        let zB = MB.startAngle.radians() + PB;
-        for (let QB = 0; QB < DB; QB++) {
-          const BB = Math.cos(zB) * MB.radius + MB.centerPoint.x,
-            OB = Math.sin(zB) * MB.radius + MB.centerPoint.y;
-          this.addLineTo(BB, OB), zB += PB
+        const He = new Me.n(ee, ie),
+          ye = this._points[this._points.length - 1];
+        return this._points.push(He), this._length += He.subtract(ye).length(), this
+      }
+      addArcTo(ee, ie, He, ye) {
+        let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const Ke = this._points[this._points.length - 1],
+          Ue = new Me.n(ee, ie),
+          Je = new Me.n(He, ye),
+          oe = new Fe(Ke, Ue, Je);
+        let Re = oe.angle.radians() / be;
+        0 === oe.orientation && (Re *= -1);
+        let ke = oe.startAngle.radians() + Re;
+        for (let Me = 0; Me < be; Me++) {
+          const ee = Math.cos(ke) * oe.radius + oe.centerPoint.x,
+            ie = Math.sin(ke) * oe.radius + oe.centerPoint.y;
+          this.addLineTo(ee, ie), ke += Re
         }
         return this
       }
-      addQuadraticCurveTo(BB, OB, GB, YB) {
-        let DB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(ee, ie, He, ye) {
+        let be = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const QB = (BB, OB, GB, YB) => (1 - BB) * (1 - BB) * OB + 2 * BB * (1 - BB) * GB + BB * BB * YB,
-          oB = this._points[this._points.length - 1];
-        for (let jB = 0; jB <= DB; jB++) {
-          const yB = jB / DB,
-            JB = QB(yB, oB.x, BB, GB),
-            MB = QB(yB, oB.y, OB, YB);
-          this.addLineTo(JB, MB)
+        const Me = (ee, ie, He, ye) => (1 - ee) * (1 - ee) * ie + 2 * ee * (1 - ee) * He + ee * ee * ye,
+          Ke = this._points[this._points.length - 1];
+        for (let Ue = 0; Ue <= be; Ue++) {
+          const Fe = Ue / be,
+            Je = Me(Fe, Ke.x, ee, He),
+            oe = Me(Fe, Ke.y, ie, ye);
+          this.addLineTo(Je, oe)
         }
         return this
       }
-      addBezierCurveTo(BB, OB, GB, YB, DB, QB) {
-        let oB = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(ee, ie, He, ye, be, Me) {
+        let Ke = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const jB = (BB, OB, GB, YB, DB) => (1 - BB) * (1 - BB) * (1 - BB) * OB + 3 * BB * (1 - BB) * (1 - BB) * GB + 3 * BB * BB * (1 - BB) * YB + BB * BB * BB * DB,
-          yB = this._points[this._points.length - 1];
-        for (let JB = 0; JB <= oB; JB++) {
-          const MB = JB / oB,
-            PB = jB(MB, yB.x, BB, GB, DB),
-            zB = jB(MB, yB.y, OB, YB, QB);
-          this.addLineTo(PB, zB)
+        const Ue = (ee, ie, He, ye, be) => (1 - ee) * (1 - ee) * (1 - ee) * ie + 3 * ee * (1 - ee) * (1 - ee) * He + 3 * ee * ee * (1 - ee) * ye + ee * ee * ee * be,
+          Fe = this._points[this._points.length - 1];
+        for (let Je = 0; Je <= Ke; Je++) {
+          const oe = Je / Ke,
+            Re = Ue(oe, Fe.x, ee, He, be),
+            ke = Ue(oe, Fe.y, ie, ye, Me);
+          this.addLineTo(Re, ke)
         }
         return this
       }
-      isPointInside(BB) {
-        let OB = !1;
-        const GB = this._points.length;
-        for (let YB = GB - 1, DB = 0; DB < GB; YB = DB++) {
-          let GB = this._points[YB],
-            QB = this._points[DB],
-            oB = QB.x - GB.x,
-            jB = QB.y - GB.y;
-          if (Math.abs(jB) > Number.EPSILON) {
-            if (jB < 0 && (GB = this._points[DB], oB = -oB, QB = this._points[YB], jB = -jB), BB.y < GB.y || BB.y > QB.y) continue;
-            if (BB.y === GB.y && BB.x === GB.x) return !0;
+      isPointInside(ee) {
+        let ie = !1;
+        const He = this._points.length;
+        for (let ye = He - 1, be = 0; be < He; ye = be++) {
+          let He = this._points[ye],
+            Me = this._points[be],
+            Ke = Me.x - He.x,
+            Ue = Me.y - He.y;
+          if (Math.abs(Ue) > Number.EPSILON) {
+            if (Ue < 0 && (He = this._points[be], Ke = -Ke, Me = this._points[ye], Ue = -Ue), ee.y < He.y || ee.y > Me.y) continue;
+            if (ee.y === He.y && ee.x === He.x) return !0;
             {
-              const YB = jB * (BB.x - GB.x) - oB * (BB.y - GB.y);
-              if (0 === YB) return !0;
-              if (YB < 0) continue;
-              OB = !OB
+              const ye = Ue * (ee.x - He.x) - Ke * (ee.y - He.y);
+              if (0 === ye) return !0;
+              if (ye < 0) continue;
+              ie = !ie
             }
           } else {
-            if (BB.y !== GB.y) continue;
-            if (QB.x <= BB.x && BB.x <= GB.x || GB.x <= BB.x && BB.x <= QB.x) return !0
+            if (ee.y !== He.y) continue;
+            if (Me.x <= ee.x && ee.x <= He.x || He.x <= ee.x && ee.x <= Me.x) return !0
           }
         }
-        return OB
+        return ie
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let BB = this._length;
+        let ee = this._length;
         if (this.closed) {
-          const OB = this._points[this._points.length - 1];
-          BB += this._points[0].subtract(OB).length()
+          const ie = this._points[this._points.length - 1];
+          ee += this._points[0].subtract(ie).length()
         }
-        return BB
+        return ee
       }
       area() {
-        const BB = this._points.length;
-        let OB = 0;
-        for (let GB = BB - 1, YB = 0; YB < BB; GB = YB++) OB += this._points[GB].x * this._points[YB].y - this._points[YB].x * this._points[GB].y;
-        return .5 * OB
+        const ee = this._points.length;
+        let ie = 0;
+        for (let He = ee - 1, ye = 0; ye < ee; He = ye++) ie += this._points[He].x * this._points[ye].y - this._points[ye].x * this._points[He].y;
+        return .5 * ie
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(BB) {
-        if (BB < 0 || BB > 1) return QB.o.Zero();
-        const OB = BB * this.length();
-        let GB = 0;
-        for (let YB = 0; YB < this._points.length; YB++) {
-          const BB = (YB + 1) % this._points.length,
-            DB = this._points[YB],
-            oB = this._points[BB].subtract(DB),
-            jB = oB.length() + GB;
-          if (OB >= GB && OB <= jB) {
-            const BB = oB.normalize(),
-              YB = OB - GB;
-            return new QB.o(DB.x + BB.x * YB, DB.y + BB.y * YB)
+      getPointAtLengthPosition(ee) {
+        if (ee < 0 || ee > 1) return Me.n.Zero();
+        const ie = ee * this.length();
+        let He = 0;
+        for (let ye = 0; ye < this._points.length; ye++) {
+          const ee = (ye + 1) % this._points.length,
+            be = this._points[ye],
+            Ke = this._points[ee].subtract(be),
+            Ue = Ke.length() + He;
+          if (ie >= He && ie <= Ue) {
+            const ee = Ke.normalize(),
+              ye = ie - He;
+            return new Me.n(be.x + ee.x * ye, be.y + ee.y * ye)
           }
-          GB = jB
+          He = Ue
         }
-        return QB.o.Zero()
+        return Me.n.Zero()
       }
-      static StartingAt(BB, OB) {
-        return new JB(BB, OB)
+      static StartingAt(ee, ie) {
+        return new Je(ee, ie)
       }
     }
-    class MB {
-      static CreateQuadraticBezier(BB, OB, GB, YB) {
-        YB = YB > 2 ? YB : 3;
-        const DB = [],
-          oB = (BB, OB, GB, YB) => (1 - BB) * (1 - BB) * OB + 2 * BB * (1 - BB) * GB + BB * BB * YB;
-        for (let jB = 0; jB <= YB; jB++) DB.push(new QB.r(oB(jB / YB, BB.x, OB.x, GB.x), oB(jB / YB, BB.y, OB.y, GB.y), oB(jB / YB, BB.z, OB.z, GB.z)));
-        return new MB(DB)
+    class oe {
+      static CreateQuadraticBezier(ee, ie, He, ye) {
+        ye = ye > 2 ? ye : 3;
+        const be = [],
+          Ke = (ee, ie, He, ye) => (1 - ee) * (1 - ee) * ie + 2 * ee * (1 - ee) * He + ee * ee * ye;
+        for (let Ue = 0; Ue <= ye; Ue++) be.push(new Me.p(Ke(Ue / ye, ee.x, ie.x, He.x), Ke(Ue / ye, ee.y, ie.y, He.y), Ke(Ue / ye, ee.z, ie.z, He.z)));
+        return new oe(be)
       }
-      static CreateCubicBezier(BB, OB, GB, YB, DB) {
-        DB = DB > 3 ? DB : 4;
-        const oB = [],
-          jB = (BB, OB, GB, YB, DB) => (1 - BB) * (1 - BB) * (1 - BB) * OB + 3 * BB * (1 - BB) * (1 - BB) * GB + 3 * BB * BB * (1 - BB) * YB + BB * BB * BB * DB;
-        for (let yB = 0; yB <= DB; yB++) oB.push(new QB.r(jB(yB / DB, BB.x, OB.x, GB.x, YB.x), jB(yB / DB, BB.y, OB.y, GB.y, YB.y), jB(yB / DB, BB.z, OB.z, GB.z, YB.z)));
-        return new MB(oB)
+      static CreateCubicBezier(ee, ie, He, ye, be) {
+        be = be > 3 ? be : 4;
+        const Ke = [],
+          Ue = (ee, ie, He, ye, be) => (1 - ee) * (1 - ee) * (1 - ee) * ie + 3 * ee * (1 - ee) * (1 - ee) * He + 3 * ee * ee * (1 - ee) * ye + ee * ee * ee * be;
+        for (let Fe = 0; Fe <= be; Fe++) Ke.push(new Me.p(Ue(Fe / be, ee.x, ie.x, He.x, ye.x), Ue(Fe / be, ee.y, ie.y, He.y, ye.y), Ue(Fe / be, ee.z, ie.z, He.z, ye.z)));
+        return new oe(Ke)
       }
-      static CreateHermiteSpline(BB, OB, GB, YB, DB) {
-        const oB = [],
-          jB = 1 / DB;
-        for (let yB = 0; yB <= DB; yB++) oB.push(QB.r.Hermite(BB, OB, GB, YB, yB * jB));
-        return new MB(oB)
+      static CreateHermiteSpline(ee, ie, He, ye, be) {
+        const Ke = [],
+          Ue = 1 / be;
+        for (let Fe = 0; Fe <= be; Fe++) Ke.push(Me.p.Hermite(ee, ie, He, ye, Fe * Ue));
+        return new oe(Ke)
       }
-      static CreateCatmullRomSpline(BB, OB, GB) {
-        const YB = [],
-          DB = 1 / OB;
-        let oB = 0;
-        if (GB) {
-          const GB = BB.length;
-          for (let jB = 0; jB < GB; jB++) {
-            oB = 0;
-            for (let yB = 0; yB < OB; yB++) YB.push(QB.r.CatmullRom(BB[jB % GB], BB[(jB + 1) % GB], BB[(jB + 2) % GB], BB[(jB + 3) % GB], oB)), oB += DB
+      static CreateCatmullRomSpline(ee, ie, He) {
+        const ye = [],
+          be = 1 / ie;
+        let Ke = 0;
+        if (He) {
+          const He = ee.length;
+          for (let Ue = 0; Ue < He; Ue++) {
+            Ke = 0;
+            for (let Fe = 0; Fe < ie; Fe++) ye.push(Me.p.CatmullRom(ee[Ue % He], ee[(Ue + 1) % He], ee[(Ue + 2) % He], ee[(Ue + 3) % He], Ke)), Ke += be
           }
-          YB.push(YB[0])
+          ye.push(ye[0])
         } else {
-          const GB = [];
-          GB.push(BB[0].clone()), GB.push(...BB), GB.push(BB[BB.length - 1].clone());
-          let jB = 0;
-          for (; jB < GB.length - 3; jB++) {
-            oB = 0;
-            for (let BB = 0; BB < OB; BB++) YB.push(QB.r.CatmullRom(GB[jB], GB[jB + 1], GB[jB + 2], GB[jB + 3], oB)), oB += DB
+          const He = [];
+          He.push(ee[0].clone()), He.push(...ee), He.push(ee[ee.length - 1].clone());
+          let Ue = 0;
+          for (; Ue < He.length - 3; Ue++) {
+            Ke = 0;
+            for (let ee = 0; ee < ie; ee++) ye.push(Me.p.CatmullRom(He[Ue], He[Ue + 1], He[Ue + 2], He[Ue + 3], Ke)), Ke += be
           }
-          jB--, YB.push(QB.r.CatmullRom(GB[jB], GB[jB + 1], GB[jB + 2], GB[jB + 3], oB))
+          Ue--, ye.push(Me.p.CatmullRom(He[Ue], He[Ue + 1], He[Ue + 2], He[Ue + 3], Ke))
         }
-        return new MB(YB)
+        return new oe(ye)
       }
-      static ArcThru3Points(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          DB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          oB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const jB = [],
-          yB = OB.subtract(BB),
-          JB = GB.subtract(OB),
-          PB = BB.subtract(GB),
-          zB = QB.r.Cross(yB, JB),
-          lB = zB.length();
-        if (lB < Math.pow(10, -8)) return new MB(jB);
-        const pB = yB.lengthSquared(),
-          qB = JB.lengthSquared(),
-          ZB = PB.lengthSquared(),
-          NB = zB.lengthSquared(),
-          RB = .5 * yB.length() * JB.length() * PB.length() / lB,
-          WB = -.5 * qB * QB.r.Dot(yB, PB) / NB,
-          AB = -.5 * ZB * QB.r.Dot(yB, JB) / NB,
-          VB = -.5 * pB * QB.r.Dot(JB, PB) / NB,
-          SB = BB.scale(WB).add(OB.scale(AB)).add(GB.scale(VB)),
-          nB = BB.subtract(SB).normalize(),
-          UB = QB.r.Cross(zB, nB).normalize();
-        if (oB) {
-          const OB = 2 * Math.PI / YB;
-          for (let BB = 0; BB <= 2 * Math.PI; BB += OB) jB.push(SB.add(nB.scale(RB * Math.cos(BB)).add(UB.scale(RB * Math.sin(BB)))));
-          jB.push(BB)
+      static ArcThru3Points(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          be = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          Ke = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const Ue = [],
+          Fe = ie.subtract(ee),
+          Je = He.subtract(ie),
+          Re = ee.subtract(He),
+          ke = Me.p.Cross(Fe, Je),
+          qe = ke.length();
+        if (qe < Math.pow(10, -8)) return new oe(Ue);
+        const fe = Fe.lengthSquared(),
+          Te = Je.lengthSquared(),
+          pe = Re.lengthSquared(),
+          Xe = ke.lengthSquared(),
+          ze = .5 * Fe.length() * Je.length() * Re.length() / qe,
+          Be = -.5 * Te * Me.p.Dot(Fe, Re) / Xe,
+          Ee = -.5 * pe * Me.p.Dot(Fe, Je) / Xe,
+          ge = -.5 * fe * Me.p.Dot(Je, Re) / Xe,
+          Oe = ee.scale(Be).add(ie.scale(Ee)).add(He.scale(ge)),
+          de = ee.subtract(Oe).normalize(),
+          We = Me.p.Cross(ke, de).normalize();
+        if (Ke) {
+          const ie = 2 * Math.PI / ye;
+          for (let ee = 0; ee <= 2 * Math.PI; ee += ie) Ue.push(Oe.add(de.scale(ze * Math.cos(ee)).add(We.scale(ze * Math.sin(ee)))));
+          Ue.push(ee)
         } else {
-          const OB = 1 / YB;
-          let QB, oB = 0;
+          const ie = 1 / ye;
+          let Me, Ke = 0;
           do {
-            QB = SB.add(nB.scale(RB * Math.cos(oB)).add(UB.scale(RB * Math.sin(oB)))), jB.push(QB), oB += OB
-          } while (!QB.equalsWithEpsilon(GB, RB * OB * 1.1));
-          jB.push(GB), DB && jB.push(BB)
+            Me = Oe.add(de.scale(ze * Math.cos(Ke)).add(We.scale(ze * Math.sin(Ke)))), Ue.push(Me), Ke += ie
+          } while (!Me.equalsWithEpsilon(He, ze * ie * 1.1));
+          Ue.push(He), be && Ue.push(ee)
         }
-        return new MB(jB)
+        return new oe(Ue)
       }
-      constructor(BB) {
-        this._length = 0, this._points = BB, this._length = this._computeLength(BB)
+      constructor(ee) {
+        this._length = 0, this._points = ee, this._length = this._computeLength(ee)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (BB) {
-        const OB = this._points[this._points.length - 1],
-          GB = this._points.slice(),
-          YB = BB.getPoints();
-        for (let DB = 1; DB < YB.length; DB++) GB.push(YB[DB].subtract(YB[0]).add(OB));
-        return new MB(GB)
+      continue (ee) {
+        const ie = this._points[this._points.length - 1],
+          He = this._points.slice(),
+          ye = ee.getPoints();
+        for (let be = 1; be < ye.length; be++) He.push(ye[be].subtract(ye[0]).add(ie));
+        return new oe(He)
       }
-      _computeLength(BB) {
-        let OB = 0;
-        for (let GB = 1; GB < BB.length; GB++) OB += BB[GB].subtract(BB[GB - 1]).length();
-        return OB
+      _computeLength(ee) {
+        let ie = 0;
+        for (let He = 1; He < ee.length; He++) ie += ee[He].subtract(ee[He - 1]).length();
+        return ie
       }
     }
   },
-  39358: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB
+  39463: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Me
     });
-    var YB = GB(39366);
-    const DB = (BB, OB, GB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : GB && "object" === typeof BB ? {
-      ...BB
-    } : null : BB.clone(OB) : null;
-    class QB {
-      static DeepCopy(BB, OB, GB, QB) {
-        let oB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const jB = function(BB) {
-          const OB = [];
+    var ye = He(39467);
+    const be = (ee, ie, He) => ee ? ee.getClassName && "Mesh" === ee.getClassName() ? null : !ee.getClassName || "SubMesh" !== ee.getClassName() && "PhysicsBody" !== ee.getClassName() ? ee.clone ? ee.clone() : Array.isArray(ee) ? ee.slice() : He && "object" === typeof ee ? {
+      ...ee
+    } : null : ee.clone(ie) : null;
+    class Me {
+      static DeepCopy(ee, ie, He, Me) {
+        let Ke = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ue = function(ee) {
+          const ie = [];
           do {
-            const GB = Object.getOwnPropertyNames(BB);
-            for (const BB of GB) - 1 === OB.indexOf(BB) && OB.push(BB)
-          } while (BB = Object.getPrototypeOf(BB));
-          return OB
-        }(BB);
-        for (const JB of jB) {
-          if ("_" === JB[0] && (!QB || -1 === QB.indexOf(JB))) continue;
-          if (JB.endsWith("Observable")) continue;
-          if (GB && -1 !== GB.indexOf(JB)) continue;
-          const jB = BB[JB],
-            MB = typeof jB;
-          if ("function" !== MB) try {
-            if ("object" === MB)
-              if (jB instanceof Uint8Array) OB[JB] = Uint8Array.from(jB);
-              else if (jB instanceof Array) {
-              if (OB[JB] = [], jB.length > 0)
-                if ("object" == typeof jB[0])
-                  for (let BB = 0; BB < jB.length; BB++) {
-                    const GB = DB(jB[BB], OB, oB); - 1 === OB[JB].indexOf(GB) && OB[JB].push(GB)
-                  } else OB[JB] = jB.slice(0)
-            } else OB[JB] = DB(jB, OB, oB);
-            else OB[JB] = jB
-          } catch (yB) {
-            YB.b.Warn(yB.message)
+            const He = Object.getOwnPropertyNames(ee);
+            for (const ee of He) - 1 === ie.indexOf(ee) && ie.push(ee)
+          } while (ee = Object.getPrototypeOf(ee));
+          return ie
+        }(ee);
+        for (const Je of Ue) {
+          if ("_" === Je[0] && (!Me || -1 === Me.indexOf(Je))) continue;
+          if (Je.endsWith("Observable")) continue;
+          if (He && -1 !== He.indexOf(Je)) continue;
+          const Ue = ee[Je],
+            oe = typeof Ue;
+          if ("function" !== oe) try {
+            if ("object" === oe)
+              if (Ue instanceof Uint8Array) ie[Je] = Uint8Array.from(Ue);
+              else if (Ue instanceof Array) {
+              if (ie[Je] = [], Ue.length > 0)
+                if ("object" == typeof Ue[0])
+                  for (let ee = 0; ee < Ue.length; ee++) {
+                    const He = be(Ue[ee], ie, Ke); - 1 === ie[Je].indexOf(He) && ie[Je].push(He)
+                  } else ie[Je] = Ue.slice(0)
+            } else ie[Je] = be(Ue, ie, Ke);
+            else ie[Je] = Ue
+          } catch (Fe) {
+            ye.e.Warn(Fe.message)
           }
         }
       }
     }
   },
-  39366: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => YB
+  39467: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => ye
     });
-    class YB {
-      static _CheckLimit(BB, OB) {
-        let GB = YB._LogLimitOutputs[BB];
-        return GB ? GB.current++ : (GB = {
-          limit: OB,
+    class ye {
+      static _CheckLimit(ee, ie) {
+        let He = ye._LogLimitOutputs[ee];
+        return He ? He.current++ : (He = {
+          limit: ie,
           current: 1
-        }, YB._LogLimitOutputs[BB] = GB), GB.current <= GB.limit
+        }, ye._LogLimitOutputs[ee] = He), He.current <= He.limit
       }
-      static _GenerateLimitMessage(BB) {
-        let OB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const GB = YB._LogLimitOutputs[BB];
-        if (!GB || !YB.MessageLimitReached) return;
-        const DB = this._Levels[OB];
-        GB.current === GB.limit && YB[DB.name](YB.MessageLimitReached.replace(/%LIMIT%/g, "" + GB.limit).replace(/%TYPE%/g, DB.name ?? ""))
+      static _GenerateLimitMessage(ee) {
+        let ie = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const He = ye._LogLimitOutputs[ee];
+        if (!He || !ye.MessageLimitReached) return;
+        const be = this._Levels[ie];
+        He.current === He.limit && ye[be.name](ye.MessageLimitReached.replace(/%LIMIT%/g, "" + He.limit).replace(/%TYPE%/g, be.name ?? ""))
       }
-      static _AddLogEntry(BB) {
-        YB._LogCache = BB + YB._LogCache, YB.OnNewCacheEntry && YB.OnNewCacheEntry(BB)
+      static _AddLogEntry(ee) {
+        ye._LogCache = ee + ye._LogCache, ye.OnNewCacheEntry && ye.OnNewCacheEntry(ee)
       }
-      static _FormatMessage(BB) {
-        const OB = BB => BB < 10 ? "0" + BB : "" + BB,
-          GB = new Date;
-        return "[" + OB(GB.getHours()) + ":" + OB(GB.getMinutes()) + ":" + OB(GB.getSeconds()) + "]: " + BB
+      static _FormatMessage(ee) {
+        const ie = ee => ee < 10 ? "0" + ee : "" + ee,
+          He = new Date;
+        return "[" + ie(He.getHours()) + ":" + ie(He.getMinutes()) + ":" + ie(He.getSeconds()) + "]: " + ee
       }
-      static _LogDisabled(BB, OB) {}
+      static _LogDisabled(ee, ie) {}
       static _LogEnabled() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          OB = arguments.length > 1 ? arguments[1] : void 0,
-          GB = arguments.length > 2 ? arguments[2] : void 0;
-        const DB = Array.isArray(OB) ? OB[0] : OB;
-        if (void 0 !== GB && !YB._CheckLimit(DB, GB)) return;
-        const QB = YB._FormatMessage(DB),
-          oB = this._Levels[BB],
-          jB = Array.isArray(OB) ? OB.slice(1) : [];
-        oB.logFunc && oB.logFunc("BJS - " + QB, ...jB);
-        const yB = `<div style='color:${oB.color}'>${QB}</div><br>`;
-        YB._AddLogEntry(yB), YB._GenerateLimitMessage(DB, BB)
+        let ee = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ie = arguments.length > 1 ? arguments[1] : void 0,
+          He = arguments.length > 2 ? arguments[2] : void 0;
+        const be = Array.isArray(ie) ? ie[0] : ie;
+        if (void 0 !== He && !ye._CheckLimit(be, He)) return;
+        const Me = ye._FormatMessage(be),
+          Ke = this._Levels[ee],
+          Ue = Array.isArray(ie) ? ie.slice(1) : [];
+        Ke.logFunc && Ke.logFunc("BJS - " + Me, ...Ue);
+        const Fe = `<div style='color:${Ke.color}'>${Me}</div><br>`;
+        ye._AddLogEntry(Fe), ye._GenerateLimitMessage(be, ee)
       }
       static get LogCache() {
-        return YB._LogCache
+        return ye._LogCache
       }
       static ClearLogCache() {
-        YB._LogCache = "", YB._LogLimitOutputs = {}, YB.errorsCount = 0
+        ye._LogCache = "", ye._LogLimitOutputs = {}, ye.errorsCount = 0
       }
-      static set LogLevels(BB) {
-        YB.Log = YB._LogDisabled, YB.Warn = YB._LogDisabled, YB.Error = YB._LogDisabled;
-        const OB = [YB.MessageLogLevel, YB.WarningLogLevel, YB.ErrorLogLevel];
-        for (const GB of OB)
-          if ((BB & GB) === GB) {
-            const BB = this._Levels[GB];
-            YB[BB.name] = YB._LogEnabled.bind(YB, GB)
+      static set LogLevels(ee) {
+        ye.Log = ye._LogDisabled, ye.Warn = ye._LogDisabled, ye.Error = ye._LogDisabled;
+        const ie = [ye.MessageLogLevel, ye.WarningLogLevel, ye.ErrorLogLevel];
+        for (const He of ie)
+          if ((ee & He) === He) {
+            const ee = this._Levels[He];
+            ye[ee.name] = ye._LogEnabled.bind(ye, He)
           }
       }
     }
-    YB.NoneLogLevel = 0, YB.MessageLogLevel = 1, YB.WarningLogLevel = 2, YB.ErrorLogLevel = 4, YB.AllLogLevel = 7, YB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", YB._LogCache = "", YB._LogLimitOutputs = {}, YB._Levels = [{}, {
+    ye.NoneLogLevel = 0, ye.MessageLogLevel = 1, ye.WarningLogLevel = 2, ye.ErrorLogLevel = 4, ye.AllLogLevel = 7, ye.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", ye._LogCache = "", ye._LogLimitOutputs = {}, ye._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], YB.errorsCount = 0, YB.Log = YB._LogEnabled.bind(YB, YB.MessageLogLevel), YB.Warn = YB._LogEnabled.bind(YB, YB.WarningLogLevel), YB.Error = YB._LogEnabled.bind(YB, YB.ErrorLogLevel)
+    }], ye.errorsCount = 0, ye.Log = ye._LogEnabled.bind(ye, ye.MessageLogLevel), ye.Warn = ye._LogEnabled.bind(ye, ye.WarningLogLevel), ye.Error = ye._LogEnabled.bind(ye, ye.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

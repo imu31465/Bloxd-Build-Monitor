@@ -1,502 +1,502 @@
 export const id = 274;
 export const ids = [274];
 export const modules = {
-  42048: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => QB,
-      e: () => oB
+  42120: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Me,
+      f: () => Ke
     });
-    var YB = GB(2034);
-    let DB = !1;
+    var ye = He(1992);
+    let be = !1;
 
-    function QB() {
-      DB = !0
+    function Me() {
+      be = !0
     }
 
-    function oB() {
-      DB && (DB = !1, (0, YB.b)())
+    function Ke() {
+      be && (be = !1, (0, ye.d)())
     }
   },
-  42045: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB,
-      e: () => QB,
-      i: () => jB
+  42116: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => Ke,
+      d: () => Me,
+      g: () => Ue
     });
-    var YB = GB(41579),
-      DB = GB(41593);
+    var ye = He(41694),
+      be = He(41704);
 
-    function QB(BB) {
-      if (BB.queries.drawCensus() < YB.Cb.BYTES) return null;
-      const OB = BB.memoryData(BB.scratch(), YB.Cb.BYTES, 4, "the draw census");
-      return null === OB ? null : {
-        terrainOpaque: YB.Cb.terrainOpaque(OB, 0),
-        terrainTransparent: YB.Cb.terrainTransparent(OB, 0),
-        terrainPack: YB.Cb.terrainPack(OB, 0),
-        earthSky: YB.Cb.earthSky(OB, 0),
-        skyMeshes: YB.Cb.skyMeshes(OB, 0),
-        regular: YB.Cb.regular(OB, 0),
-        thin: YB.Cb.thin(OB, 0),
-        line: YB.Cb.line(OB, 0),
-        text: YB.Cb.text(OB, 0),
-        particles: YB.Cb.particles(OB, 0),
-        terrainParts: YB.Cb.terrainParts(OB, 0),
-        terrainCompiling: YB.Cb.terrainCompiling(OB, 0),
-        ringCopiesMax: YB.Cb.ringCopiesMax(OB, 0),
-        ringBusyWrites: YB.Cb.ringBusyWrites(OB, 0)
+    function Me(ee) {
+      if (ee.queries.drawCensus() < ye.vb.BYTES) return null;
+      const ie = ee.memoryData(ee.scratch(), ye.vb.BYTES, 4, "the draw census");
+      return null === ie ? null : {
+        terrainOpaque: ye.vb.terrainOpaque(ie, 0),
+        terrainTransparent: ye.vb.terrainTransparent(ie, 0),
+        terrainPack: ye.vb.terrainPack(ie, 0),
+        earthSky: ye.vb.earthSky(ie, 0),
+        skyMeshes: ye.vb.skyMeshes(ie, 0),
+        regular: ye.vb.regular(ie, 0),
+        thin: ye.vb.thin(ie, 0),
+        line: ye.vb.line(ie, 0),
+        text: ye.vb.text(ie, 0),
+        particles: ye.vb.particles(ie, 0),
+        terrainParts: ye.vb.terrainParts(ie, 0),
+        terrainCompiling: ye.vb.terrainCompiling(ie, 0),
+        ringCopiesMax: ye.vb.ringCopiesMax(ie, 0),
+        ringBusyWrites: ye.vb.ringBusyWrites(ie, 0)
       }
     }
 
-    function oB(BB) {
+    function Ke(ee) {
       const {
-        terrainOpaque: OB,
-        terrainTransparent: GB,
-        earthSky: YB,
-        skyMeshes: DB,
-        regular: QB,
-        thin: oB,
-        line: jB,
-        text: yB,
-        particles: JB
-      } = BB;
-      return OB + GB + YB + DB + QB + oB + jB + yB + JB
+        terrainOpaque: ie,
+        terrainTransparent: He,
+        earthSky: ye,
+        skyMeshes: be,
+        regular: Me,
+        thin: Ke,
+        line: Ue,
+        text: Fe,
+        particles: Je
+      } = ee;
+      return ie + He + ye + be + Me + Ke + Ue + Fe + Je
     }
 
-    function jB() {
-      const BB = (0, DB.j)();
-      return !0 === (null === BB || void 0 === BB ? void 0 : BB.isCoreRunning) ? function(BB) {
-        const OB = QB(BB);
-        if (null === OB) return [];
+    function Ue() {
+      const ee = (0, be.h)();
+      return !0 === (null === ee || void 0 === ee ? void 0 : ee.isCoreRunning) ? function(ee) {
+        const ie = Me(ee);
+        if (null === ie) return [];
         const {
-          terrainOpaque: GB,
-          terrainTransparent: YB,
-          terrainPack: DB,
-          earthSky: jB,
-          skyMeshes: yB,
-          regular: JB,
-          thin: MB,
-          line: PB,
-          text: zB,
-          particles: lB
-        } = OB;
+          terrainOpaque: He,
+          terrainTransparent: ye,
+          terrainPack: be,
+          earthSky: Ue,
+          skyMeshes: Fe,
+          regular: Je,
+          thin: oe,
+          line: Re,
+          text: ke,
+          particles: qe
+        } = ie;
         return [{
           label: "Drawn",
-          value: `${oB(OB)}`
+          value: `${Ke(ie)}`
         }, {
           label: "Terrain",
-          value: `${GB} opaque / ${YB} transparent (${DB} shader pack)`
+          value: `${He} opaque / ${ye} transparent (${be} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${JB} / ${MB}`
+          value: `${Je} / ${oe}`
         }, {
           label: "Text / Lines",
-          value: `${zB} / ${PB}`
+          value: `${ke} / ${Re}`
         }, {
           label: "Sky / Particles",
-          value: `${jB+yB} / ${lB}`
+          value: `${Ue+Fe} / ${qe}`
         }]
-      }(BB.api) : []
+      }(ee.api) : []
     }
   },
-  42031: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => pB,
-      h: () => zB,
-      k: () => lB
+  42105: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => fe,
+      i: () => ke,
+      l: () => qe
     });
-    var YB = GB(2038),
-      DB = GB(1296),
-      QB = GB(41593),
-      oB = GB(41616),
-      jB = GB(41624),
-      yB = GB(41637);
-    const JB = new DB.d;
-    let MB = !1;
+    var ye = He(2e3),
+      be = He(1253),
+      Me = He(41704),
+      Ke = He(41725),
+      Ue = He(41728),
+      Fe = He(41739);
+    const Je = new be.b;
+    let oe = !1;
 
-    function PB(BB) {
-      const OB = (0, QB.j)();
-      return null !== OB && +BB === OB.api.localId
+    function Re(ee) {
+      const ie = (0, Me.h)();
+      return null !== ie && +ee === ie.api.localId
     }
 
-    function zB() {
-      MB || (MB = !0, (0, yB.g)(oB.n, (BB => {
-        var OB, GB;
-        const YB = (0, jB.h)(oB.n, BB);
-        if (!(0, jB.e)(YB)) return;
-        const DB = YB;
-        PB(DB.pY) && lB(DB.qY, {
-          icon: DB.NY,
-          level: DB.WY,
-          displayName: null !== (OB = DB.ZY) && void 0 !== OB ? OB : null,
-          durationMs: null !== (GB = DB.RY) && void 0 !== GB ? GB : null
+    function ke() {
+      oe || (oe = !0, (0, Fe.j)(Ke.l, (ee => {
+        var ie, He;
+        const ye = (0, Ue.g)(Ke.l, ee);
+        if (!(0, Ue.c)(ye)) return;
+        const be = ye;
+        Re(be.Oy) && qe(be.Wy, {
+          icon: be.Zy,
+          level: be.Dy,
+          displayName: null !== (ie = be.ty) && void 0 !== ie ? ie : null,
+          durationMs: null !== (He = be.wy) && void 0 !== He ? He : null
         })
-      })), (0, yB.g)(oB.P, (BB => {
-        const OB = (0, jB.h)(oB.P, BB);
-        if (!(0, jB.e)(OB)) return;
-        const GB = OB;
-        PB(GB.pY) && YB.c.remove(GB.qY)
-      })), (0, yB.d)((() => {
-        YB.c.clear()
+      })), (0, Fe.j)(Ke.N, (ee => {
+        const ie = (0, Ue.g)(Ke.N, ee);
+        if (!(0, Ue.c)(ie)) return;
+        const He = ie;
+        Re(He.Oy) && ye.b.remove(He.Wy)
+      })), (0, Fe.g)((() => {
+        ye.b.clear()
       })))
     }
 
-    function lB(BB, OB) {
-      YB.c.update(BB, OB), JB.forEach((OB => {
-        OB(BB)
+    function qe(ee, ie) {
+      ye.b.update(ee, ie), Je.forEach((ie => {
+        ie(ee)
       }))
     }
-    const pB = {
+    const fe = {
       localEffectUpdated: {
-        watch: BB => JB.add(BB)
+        watch: ee => Je.add(ee)
       }
     }
   },
-  42039: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => MB
+  42109: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => oe
     });
-    var YB = GB(5287),
-      DB = GB(5281),
-      QB = GB(41630),
-      oB = GB(41637);
-    const jB = new Set(YB.R),
-      yB = YB.R.map((BB => (new TextEncoder).encode(BB))),
-      JB = new Map;
+    var ye = He(5279),
+      be = He(5271),
+      Me = He(41734),
+      Ke = He(41739);
+    const Ue = new Set(ye.N),
+      Fe = ye.N.map((ee => (new TextEncoder).encode(ee))),
+      Je = new Map;
 
-    function MB(BB, OB) {
-      var GB;
-      return null === (GB = JB.get(BB)) || void 0 === GB ? void 0 : GB[OB]
-    }(0, oB.g)(YB.oc.NewOtherEntitySettings, (BB => {
-      BB.payloadKind === DB.sc.Msgpack && yB.some((OB => function(BB, OB) {
-        const GB = OB[0];
-        for (let YB = BB.indexOf(GB); - 1 !== YB && YB + OB.length <= BB.length; YB = BB.indexOf(GB, YB + 1)) {
-          let GB = 1;
-          for (; GB < OB.length && BB[YB + GB] === OB[GB];) GB++;
-          if (GB === OB.length) return !0
+    function oe(ee, ie) {
+      var He;
+      return null === (He = Je.get(ee)) || void 0 === He ? void 0 : He[ie]
+    }(0, Ke.j)(ye.ic.NewOtherEntitySettings, (ee => {
+      ee.payloadKind === be.dc.Msgpack && Fe.some((ie => function(ee, ie) {
+        const He = ie[0];
+        for (let ye = ee.indexOf(He); - 1 !== ye && ye + ie.length <= ee.length; ye = ee.indexOf(He, ye + 1)) {
+          let He = 1;
+          for (; He < ie.length && ee[ye + He] === ie[He];) He++;
+          if (He === ie.length) return !0
         }
         return !1
-      }(BB.payload, OB))) && function(BB) {
-        if (null === BB || "object" !== typeof BB || null === BB.settings || "object" !== typeof BB.settings) return;
-        const OB = String(BB.eId),
-          GB = BB.settings;
-        let YB = JB.get(OB);
-        for (const DB in GB) {
-          if (!jB.has(DB)) continue;
-          const BB = GB[DB];
-          null === BB || void 0 === BB ? YB && delete YB[DB] : (YB ??= {}, YB[DB] = BB)
+      }(ee.payload, ie))) && function(ee) {
+        if (null === ee || "object" !== typeof ee || null === ee.settings || "object" !== typeof ee.settings) return;
+        const ie = String(ee.eId),
+          He = ee.settings;
+        let ye = Je.get(ie);
+        for (const be in He) {
+          if (!Ue.has(be)) continue;
+          const ee = He[be];
+          null === ee || void 0 === ee ? ye && delete ye[be] : (ye ??= {}, ye[be] = ee)
         }
-        YB && JB.set(OB, YB)
-      }((0, QB.b)(BB.payload))
-    })), (0, oB.d)((() => {
-      JB.clear()
+        ye && Je.set(ie, ye)
+      }((0, Me.b)(ee.payload))
+    })), (0, Ke.g)((() => {
+      Je.clear()
     }))
   },
-  42023: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => lB,
-      d: () => JB,
-      f: () => PB
+  42103: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => qe,
+      f: () => Je,
+      h: () => Re
     });
-    var YB = GB(39710),
-      DB = GB(2027),
-      QB = GB(1296),
-      oB = GB(41616),
-      jB = GB(41624),
-      yB = GB(41637);
-    const JB = new YB.c;
-    let MB = {};
+    var ye = He(39793),
+      be = He(1988),
+      Me = He(1253),
+      Ke = He(41725),
+      Ue = He(41728),
+      Fe = He(41739);
+    const Je = new ye.c;
+    let oe = {};
 
-    function PB(BB) {
-      return MB[BB]
+    function Re(ee) {
+      return oe[ee]
     }
-    const zB = new QB.d;
+    const ke = new Me.b;
 
-    function lB(BB) {
-      return zB.add(BB)
+    function qe(ee) {
+      return ke.add(ee)
     }
 
-    function pB(BB) {
-      zB.callEach(BB, "a roster listener")
-    }(0, yB.g)(oB.X, (BB => {
-      const OB = (0, jB.h)(oB.X, BB);
-      if (void 0 === OB) return;
-      const GB = OB.YY.some((BB => {
+    function fe(ee) {
+      ke.callEach(ee, "a roster listener")
+    }(0, Fe.j)(Ke.X, (ee => {
+      const ie = (0, Ue.g)(Ke.X, ee);
+      if (void 0 === ie) return;
+      const He = ie.oy.some((ee => {
           let {
-            DY: OB,
-            QY: GB
-          } = BB;
-          return null !== GB && JB.has(OB) && JB.getName(OB) !== GB
+            Ry: ie,
+            ky: He
+          } = ee;
+          return null !== He && Je.has(ie) && Je.getName(ie) !== He
         })),
         {
-          added: YB,
-          removed: QB,
-          settingChanges: yB
-        } = JB.apply(OB),
-        MB = new Set;
-      for (const DB of yB)
-        for (const BB in DB.settings) MB.add(BB);
-      const PB = GB || YB.length > 0 || QB.length > 0;
-      (PB || MB.has("hideNameSeed")) && function() {
-        const BB = new Map;
-        for (const OB of JB.ids()) {
-          const GB = JB.getName(OB),
-            YB = JB.getSetting(OB, "hideNameSeed");
-          void 0 !== GB && void 0 !== YB && null !== YB && BB.set(GB, YB)
+          added: ye,
+          removed: Me,
+          settingChanges: Fe
+        } = Je.apply(ie),
+        oe = new Set;
+      for (const be of Fe)
+        for (const ee in be.settings) oe.add(ee);
+      const Re = He || ye.length > 0 || Me.length > 0;
+      (Re || oe.has("hideNameSeed")) && function() {
+        const ee = new Map;
+        for (const ie of Je.ids()) {
+          const He = Je.getName(ie),
+            ye = Je.getSetting(ie, "hideNameSeed");
+          void 0 !== He && void 0 !== ye && null !== ye && ee.set(He, ye)
         }
-        DB.d.replaceAll(BB)
-      }(), pB({
+        be.c.replaceAll(ee)
+      }(), fe({
         kind: "roster",
-        members: PB,
-        settings: MB
+        members: Re,
+        settings: oe
       })
-    })), (0, yB.g)(oB.M, (BB => {
-      const OB = (0, jB.h)(oB.M, BB);
-      if (void 0 !== OB) {
+    })), (0, Fe.j)(Ke.K, (ee => {
+      const ie = (0, Ue.g)(Ke.K, ee);
+      if (void 0 !== ie) {
         for (const {
-            nB: BB,
-            UB: GB,
-            fB: YB
+            de: ee,
+            te: He,
+            Ze: ye
           }
-          of OB) MB[BB] = {
-          ...MB[BB],
-          [GB]: YB
+          of ie) oe[ee] = {
+          ...oe[ee],
+          [He]: ye
         };
-        pB({
+        fe({
           kind: "cosmetics",
-          updates: OB
+          updates: ie
         })
       }
-    })), (0, yB.d)((() => {
-      JB.clear(), MB = {}, DB.d.clear(), pB({
+    })), (0, Fe.g)((() => {
+      Je.clear(), oe = {}, be.c.clear(), fe({
         kind: "reset"
       })
-    })), (0, yB.e)((() => {
-      JB.clear(), pB({
+    })), (0, Fe.i)((() => {
+      Je.clear(), fe({
         kind: "reset"
       })
     }))
   },
-  42042: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => dB,
-      f: () => ZB,
-      j: () => IB,
-      n: () => FB
+  42113: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => we,
+      f: () => pe,
+      i: () => Ye,
+      m: () => Ve
     });
-    var YB = GB(1262),
-      DB = GB(633),
-      QB = GB(92),
-      oB = GB(5287),
-      jB = GB(41579),
-      yB = GB(41611),
-      JB = GB(41593),
-      MB = GB(42039),
-      PB = GB(42023),
-      zB = GB(41624),
-      lB = GB(41637);
+    var ye = He(1207),
+      be = He(604),
+      Me = He(97),
+      Ke = He(5279),
+      Ue = He(41694),
+      Fe = He(41721),
+      Je = He(41704),
+      oe = He(42109),
+      Re = He(42103),
+      ke = He(41728),
+      qe = He(41739);
 
-    function pB(BB) {
+    function fe(ee) {
       let {
-        deadEId: OB,
-        killerEId: GB,
-        killerLifeformType: YB,
-        withItem: DB,
-        killstreak: QB
-      } = BB;
+        deadEId: ie,
+        killerEId: He,
+        killerLifeformType: ye,
+        withItem: be,
+        killstreak: Me
+      } = ee;
       return {
-        killer: AB({
-          eId: GB,
-          lifeformType: YB
+        killer: Ee({
+          eId: He,
+          lifeformType: ye
         }),
-        victim: AB({
-          eId: OB
+        victim: Ee({
+          eId: ie
         }),
-        withItem: DB,
-        killstreak: QB
+        withItem: be,
+        killstreak: Me
       }
     }
 
-    function qB(BB) {
+    function Te(ee) {
       let {
-        killer: OB,
-        victim: GB,
-        withItem: YB
-      } = BB;
+        killer: ie,
+        victim: He,
+        withItem: ye
+      } = ee;
       return {
-        killer: AB(OB),
-        victim: AB(GB),
-        withItem: YB,
+        killer: Ee(ie),
+        victim: Ee(He),
+        withItem: ye,
         killstreak: 0
       }
     }
 
-    function ZB(BB) {
-      UB && kB((() => "killed" === BB.kind ? pB(BB.body) : qB(BB.body)))
+    function pe(ee) {
+      We && Ze((() => "killed" === ee.kind ? fe(ee.body) : Te(ee.body)))
     }
-    const NB = "#2727f1",
-      RB = "#912c2c";
+    const Xe = "#2727f1",
+      ze = "#912c2c";
 
-    function WB(BB, OB) {
-      var GB;
-      return PB.d.has(BB) ? null === (GB = PB.d.getSettings(BB)) || void 0 === GB ? void 0 : GB[OB] : (0, MB.c)(BB, OB)
+    function Be(ee, ie) {
+      var He;
+      return Re.f.has(ee) ? null === (He = Re.f.getSettings(ee)) || void 0 === He ? void 0 : He[ie] : (0, oe.c)(ee, ie)
     }
 
-    function AB(BB) {
-      var OB, GB, oB, jB, MB;
+    function Ee(ee) {
+      var ie, He, Ke, Ue, oe;
       let {
-        eId: zB,
-        name: lB,
-        colour: pB,
-        lifeformType: qB
-      } = BB;
-      if (void 0 === zB || null === zB || "" === zB) {
-        const BB = lB || null;
+        eId: ke,
+        name: qe,
+        colour: fe,
+        lifeformType: Te
+      } = ee;
+      if (void 0 === ke || null === ke || "" === ke) {
+        const ee = qe || null;
         return {
           id: null,
-          shownName: BB,
-          lifeformType: null === BB && null !== qB && void 0 !== qB ? qB : null,
-          colour: pB || null,
+          shownName: ee,
+          lifeformType: null === ee && null !== Te && void 0 !== Te ? Te : null,
+          colour: fe || null,
           local: !1,
           realName: null
         }
       }
-      const ZB = String(zB),
-        AB = null === (OB = (0, JB.j)()) || void 0 === OB ? void 0 : OB.api,
-        VB = void 0 !== AB && String(AB.localId) === ZB,
-        SB = null !== (GB = PB.d.getName(ZB)) && void 0 !== GB ? GB : null,
-        nB = null !== (oB = WB(ZB, "hideNameSeed")) && void 0 !== oB ? oB : null;
-      let UB = null === SB ? null : (0, YB.e)(SB, !QB.featureFlags.canSeeRealPlayerNames, nB) || null,
-        fB = null;
-      if (null === UB && void 0 !== AB) {
-        const BB = AB.getEntityType(ZB);
-        "Player" !== BB && (UB = (0, yB.j)(AB, +ZB) || null), fB = DB.j.includes(BB) ? BB : null
+      const pe = String(ke),
+        Ee = null === (ie = (0, Je.h)()) || void 0 === ie ? void 0 : ie.api,
+        ge = void 0 !== Ee && String(Ee.localId) === pe,
+        Oe = null !== (He = Re.f.getName(pe)) && void 0 !== He ? He : null,
+        de = null !== (Ke = Be(pe, "hideNameSeed")) && void 0 !== Ke ? Ke : null;
+      let We = null === Oe ? null : (0, ye.e)(Oe, !Me.featureFlags.canSeeRealPlayerNames, de) || null,
+        te = null;
+      if (null === We && void 0 !== Ee) {
+        const ee = Ee.getEntityType(pe);
+        "Player" !== ee && (We = (0, Fe.i)(Ee, +pe) || null), te = be.j.includes(ee) ? ee : null
       }
       return {
-        id: ZB,
-        shownName: UB,
-        lifeformType: null === UB && null !== (jB = null !== (MB = fB) && void 0 !== MB ? MB : qB) && void 0 !== jB ? jB : null,
-        colour: pB || WB(ZB, "killfeedColour") || (VB ? NB : RB),
-        local: VB,
-        realName: SB
+        id: pe,
+        shownName: We,
+        lifeformType: null === We && null !== (Ue = null !== (oe = te) && void 0 !== oe ? oe : Te) && void 0 !== Ue ? Ue : null,
+        colour: fe || Be(pe, "killfeedColour") || (ge ? Xe : ze),
+        local: ge,
+        realName: Oe
       }
     }
-    const VB = 32;
-    let SB = [],
-      nB = null,
-      UB = !1,
-      fB = !1;
+    const ge = 32;
+    let Oe = [],
+      de = null,
+      We = !1,
+      te = !1;
 
-    function kB(BB) {
-      null === nB ? (SB.length === VB && SB.shift(), SB.push(BB)) : nB(BB())
+    function Ze(ee) {
+      null === de ? (Oe.length === ge && Oe.shift(), Oe.push(ee)) : de(ee())
     }
 
-    function dB() {
-      fB || (fB = !0, (0, lB.g)(oB.oc.PlayerKilled, (BB => {
-        const OB = (0, zB.l)(BB);
-        (0, zB.e)(OB) && kB((() => pB(OB)))
-      })), (0, lB.g)(oB.oc.CustomKillfeed, (BB => {
-        const OB = (0, zB.l)(BB);
-        (0, zB.e)(OB) && (0, zB.e)(OB.killer) && (0, zB.e)(OB.victim) && kB((() => qB(OB)))
-      })), (0, lB.d)((() => {
-        SB = []
+    function we() {
+      te || (te = !0, (0, qe.j)(Ke.ic.PlayerKilled, (ee => {
+        const ie = (0, ke.h)(ee);
+        (0, ke.c)(ie) && Ze((() => fe(ie)))
+      })), (0, qe.j)(Ke.ic.CustomKillfeed, (ee => {
+        const ie = (0, ke.h)(ee);
+        (0, ke.c)(ie) && (0, ke.c)(ie.killer) && (0, ke.c)(ie.victim) && Ze((() => Te(ie)))
+      })), (0, qe.g)((() => {
+        Oe = []
       })))
     }
-    const KB = Object.freeze([0, 0, 0]),
-      uB = [0, 0, 0],
-      mB = [0, 0, 0],
-      IB = {
+    const De = Object.freeze([0, 0, 0]),
+      Pe = [0, 0, 0],
+      Ae = [0, 0, 0],
+      Ye = {
         kill: {
-          watch(BB) {
-            if (UB = !0, 0 === SB.length) return nB = BB, () => {
-              UB = !1, nB = null
+          watch(ee) {
+            if (We = !0, 0 === Oe.length) return de = ee, () => {
+              We = !1, de = null
             };
-            const OB = setTimeout((() => {
-              const OB = SB;
-              SB = [], nB = BB;
-              for (const YB of OB) try {
-                BB(YB())
-              } catch (GB) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", GB)
+            const ie = setTimeout((() => {
+              const ie = Oe;
+              Oe = [], de = ee;
+              for (const ye of ie) try {
+                ee(ye())
+              } catch (He) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", He)
               }
             }), 0);
             return () => {
-              clearTimeout(OB), UB = !1, nB = null
+              clearTimeout(ie), We = !1, de = null
             }
           }
         }
       },
-      FB = {
+      Ve = {
         localPos() {
-          const BB = (0, JB.j)();
-          if (null === BB) return KB;
-          const OB = BB.api.apiView;
-          for (let GB = 0; GB < 3; GB++) uB[GB] = jB.u.localPos(OB, 0, GB);
-          return uB
+          const ee = (0, Je.h)();
+          if (null === ee) return De;
+          const ie = ee.api.apiView;
+          for (let He = 0; He < 3; He++) Pe[He] = Ue.v.localPos(ie, 0, He);
+          return Pe
         },
         targetedBlockPos() {
-          const BB = (0, JB.j)();
-          if (null === BB || jB.u.targetBlockId(BB.api.apiView, 0) === jB.fd) return null;
-          for (let OB = 0; OB < 3; OB++) mB[OB] = jB.u.targetBlock(BB.api.apiView, 0, OB);
-          return mB
+          const ee = (0, Je.h)();
+          if (null === ee || Ue.v.targetBlockId(ee.api.apiView, 0) === Ue.ad) return null;
+          for (let ie = 0; ie < 3; ie++) Ae[ie] = Ue.v.targetBlock(ee.api.apiView, 0, ie);
+          return Ae
         }
       }
   },
-  39710: (BB, OB, GB) => {
-    GB.d(OB, {
-      c: () => YB
+  39793: (ee, ie, He) => {
+    He.d(ie, {
+      c: () => ye
     });
-    class YB {
+    class ye {
       constructor() {
         this.members = new Map
       }
-      apply(BB) {
-        const OB = {
+      apply(ee) {
+        const ie = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const YB of BB.YY) {
-          let BB = this.members.get(YB.DY);
-          if (BB || (BB = {
+        for (const ye of ee.oy) {
+          let ee = this.members.get(ye.Ry);
+          if (ee || (ee = {
               name: null,
               settings: {}
-            }, this.members.set(YB.DY, BB), OB.added.push(YB.DY)), null !== YB.QY && (BB.name = YB.QY), null !== YB.oY || YB.jY.length > 0) {
-            const GB = null === YB.oY ? {} : JSON.parse(YB.oY);
-            Object.assign(BB.settings, GB);
-            for (const OB of YB.jY) delete BB.settings[OB], GB[OB] = void 0;
-            OB.settingChanges.push({
-              playerId: YB.DY,
-              settings: GB
+            }, this.members.set(ye.Ry, ee), ie.added.push(ye.Ry)), null !== ye.ky && (ee.name = ye.ky), null !== ye.qy || ye.Ty.length > 0) {
+            const He = null === ye.qy ? {} : JSON.parse(ye.qy);
+            Object.assign(ee.settings, He);
+            for (const ie of ye.Ty) delete ee.settings[ie], He[ie] = void 0;
+            ie.settingChanges.push({
+              playerId: ye.Ry,
+              settings: He
             })
           }
         }
-        for (const YB of BB.yY) {
-          const BB = this.members.get(YB);
-          var GB;
-          if (BB) this.members.delete(YB), OB.removed.push({
-            playerId: YB,
-            name: null !== (GB = BB.name) && void 0 !== GB ? GB : void 0
+        for (const ye of ee.py) {
+          const ee = this.members.get(ye);
+          var He;
+          if (ee) this.members.delete(ye), ie.removed.push({
+            playerId: ye,
+            name: null !== (He = ee.name) && void 0 !== He ? He : void 0
           })
         }
-        return OB
+        return ie
       }
-      has(BB) {
-        return this.members.has(BB)
+      has(ee) {
+        return this.members.has(ee)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(BB) {
-        var OB, GB;
-        return null !== (OB = null === (GB = this.members.get(BB)) || void 0 === GB ? void 0 : GB.name) && void 0 !== OB ? OB : void 0
+      getName(ee) {
+        var ie, He;
+        return null !== (ie = null === (He = this.members.get(ee)) || void 0 === He ? void 0 : He.name) && void 0 !== ie ? ie : void 0
       }
-      getSettings(BB) {
-        var OB;
-        return null === (OB = this.members.get(BB)) || void 0 === OB ? void 0 : OB.settings
+      getSettings(ee) {
+        var ie;
+        return null === (ie = this.members.get(ee)) || void 0 === ie ? void 0 : ie.settings
       }
-      getSetting(BB, OB) {
-        var GB;
-        return null === (GB = this.members.get(BB)) || void 0 === GB ? void 0 : GB.settings[OB]
+      getSetting(ee, ie) {
+        var He;
+        return null === (He = this.members.get(ee)) || void 0 === He ? void 0 : He.settings[ie]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

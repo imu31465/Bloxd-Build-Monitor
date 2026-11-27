@@ -1,394 +1,394 @@
 export const id = 261;
 export const ids = [261];
 export const modules = {
-  37843: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => jB,
-      f: () => oB,
-      g: () => DB
+  37977: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ue,
+      h: () => Ke,
+      j: () => be
     });
-    const YB = 1024,
-      DB = 16,
-      QB = 36e4;
-    class oB {
-      constructor(BB) {
-        this.boneCount = BB, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * BB), this.position = new Float64Array(3 * BB), this.scale = new Float64Array(3 * BB).fill(1), this.touched = new Uint8Array(BB)
+    const ye = 1024,
+      be = 16,
+      Me = 36e4;
+    class Ke {
+      constructor(ee) {
+        this.boneCount = ee, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * ee), this.position = new Float64Array(3 * ee), this.scale = new Float64Array(3 * ee).fill(1), this.touched = new Uint8Array(ee)
       }
       clampToLimits() {
-        for (let BB = 0; BB < this.boneCount; BB++)
-          if (0 !== this.touched[BB])
-            for (let OB = 3 * BB; OB < 3 * BB + 3; OB++) {
-              const BB = this.rotation[OB],
-                GB = this.position[OB],
-                oB = this.scale[OB];
-              BB >= -36e4 && BB <= QB || (this.rotation[OB] = yB(BB, QB)), GB >= -1024 && GB <= YB || (this.position[OB] = yB(GB, YB)), oB >= -DB && oB <= DB || (this.scale[OB] = yB(oB, DB, 1))
+        for (let ee = 0; ee < this.boneCount; ee++)
+          if (0 !== this.touched[ee])
+            for (let ie = 3 * ee; ie < 3 * ee + 3; ie++) {
+              const ee = this.rotation[ie],
+                He = this.position[ie],
+                Ke = this.scale[ie];
+              ee >= -36e4 && ee <= Me || (this.rotation[ie] = Fe(ee, Me)), He >= -1024 && He <= ye || (this.position[ie] = Fe(He, ye)), Ke >= -be && Ke <= be || (this.scale[ie] = Fe(Ke, be, 1))
             }
       }
       reset() {
-        for (let BB = 0; BB < this.boneCount; BB++)
-          if (0 !== this.touched[BB]) {
-            this.touched[BB] = 0;
-            for (let OB = 3 * BB; OB < 3 * BB + 3; OB++) this.rotation[OB] = 0, this.position[OB] = 0, this.scale[OB] = 1
+        for (let ee = 0; ee < this.boneCount; ee++)
+          if (0 !== this.touched[ee]) {
+            this.touched[ee] = 0;
+            for (let ie = 3 * ee; ie < 3 * ee + 3; ie++) this.rotation[ie] = 0, this.position[ie] = 0, this.scale[ie] = 1
           }
       }
     }
-    class jB {
-      constructor(BB) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * BB), this.position = new Float64Array(3 * BB), this.scaleDelta = new Float64Array(3 * BB), this.boneWeight = new Float64Array(BB), this.touched = new Uint8Array(BB), this.overrides = new Uint8Array(BB), this.touchedBones = new Int32Array(BB)
+    class Ue {
+      constructor(ee) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * ee), this.position = new Float64Array(3 * ee), this.scaleDelta = new Float64Array(3 * ee), this.boneWeight = new Float64Array(ee), this.touched = new Uint8Array(ee), this.overrides = new Uint8Array(ee), this.touchedBones = new Int32Array(ee)
       }
-      touch(BB, OB, GB) {
-        0 === this.touched[BB] && (this.touched[BB] = 1, this.touchedBones[this.touchedCount++] = BB), this.boneWeight[BB] += OB, GB && (this.overrides[BB] = 1)
+      touch(ee, ie, He) {
+        0 === this.touched[ee] && (this.touched[ee] = 1, this.touchedBones[this.touchedCount++] = ee), this.boneWeight[ee] += ie, He && (this.overrides[ee] = 1)
       }
-      applyTo(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let DB = 0; DB < this.touchedCount; DB++) {
-          const QB = this.touchedBones[DB],
-            oB = this.boneWeight[QB];
-          if (GB || 1 === this.overrides[QB]) {
-            const GB = OB * Math.min(1, oB);
-            for (let OB = 3 * QB; OB < 3 * QB + 3; OB++) BB.rotation[OB] += (this.rotation[OB] / oB - BB.rotation[OB]) * GB, BB.position[OB] += (this.position[OB] / oB - BB.position[OB]) * GB, BB.scale[OB] += (1 + this.scaleDelta[OB] / oB - BB.scale[OB]) * GB
+      applyTo(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let be = 0; be < this.touchedCount; be++) {
+          const Me = this.touchedBones[be],
+            Ke = this.boneWeight[Me];
+          if (He || 1 === this.overrides[Me]) {
+            const He = ie * Math.min(1, Ke);
+            for (let ie = 3 * Me; ie < 3 * Me + 3; ie++) ee.rotation[ie] += (this.rotation[ie] / Ke - ee.rotation[ie]) * He, ee.position[ie] += (this.position[ie] / Ke - ee.position[ie]) * He, ee.scale[ie] += (1 + this.scaleDelta[ie] / Ke - ee.scale[ie]) * He
           } else {
-            const GB = YB && oB > 1 ? OB / oB : OB;
-            for (let OB = 3 * QB; OB < 3 * QB + 3; OB++) BB.rotation[OB] += this.rotation[OB] * GB, BB.position[OB] += this.position[OB] * GB, BB.scale[OB] *= 1 + this.scaleDelta[OB] * GB
+            const He = ye && Ke > 1 ? ie / Ke : ie;
+            for (let ie = 3 * Me; ie < 3 * Me + 3; ie++) ee.rotation[ie] += this.rotation[ie] * He, ee.position[ie] += this.position[ie] * He, ee.scale[ie] *= 1 + this.scaleDelta[ie] * He
           }
-          BB.touched[QB] = 1
+          ee.touched[Me] = 1
         }
       }
       clear() {
-        for (let BB = 0; BB < this.touchedCount; BB++) {
-          const OB = this.touchedBones[BB];
-          this.touched[OB] = 0, this.overrides[OB] = 0, this.boneWeight[OB] = 0;
-          for (let BB = 3 * OB; BB < 3 * OB + 3; BB++) this.rotation[BB] = 0, this.position[BB] = 0, this.scaleDelta[BB] = 0
+        for (let ee = 0; ee < this.touchedCount; ee++) {
+          const ie = this.touchedBones[ee];
+          this.touched[ie] = 0, this.overrides[ie] = 0, this.boneWeight[ie] = 0;
+          for (let ee = 3 * ie; ee < 3 * ie + 3; ee++) this.rotation[ee] = 0, this.position[ee] = 0, this.scaleDelta[ee] = 0
         }
         this.touchedCount = 0
       }
     }
 
-    function yB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(BB) ? GB : Math.min(OB, Math.max(-OB, BB))
+    function Fe(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(ee) ? He : Math.min(ie, Math.max(-ie, ee))
     }
   },
-  37841: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => yB,
-      e: () => jB
+  37971: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Fe,
+      e: () => Ue
     });
-    var YB = GB(37836),
-      DB = GB(353),
-      QB = GB(1998),
-      oB = GB(37843);
+    var ye = He(37963),
+      be = He(347),
+      Me = He(1952),
+      Ke = He(37977);
 
-    function jB(BB) {
-      if ("NG" in BB) return fB.createAnimationScript(BB);
-      return new MB(BB).createAnimationScript()
+    function Ue(ee) {
+      if ("WH" in ee) return te.createAnimationScript(ee);
+      return new oe(ee).createAnimationScript()
     }
 
-    function yB(BB, OB, GB, DB) {
-      const QB = BB.NG <= 0 ? 1 : OB + GB * Math.max(0, DB) / BB.NG;
-      return BB.WG === YB.m.LoopOnLastFrame ? QB % 1 : BB.WG === YB.m.NoLoop && QB >= 1 ? null : Math.min(1, QB)
+    function Fe(ee, ie, He, be) {
+      const Me = ee.WH <= 0 ? 1 : ie + He * Math.max(0, be) / ee.WH;
+      return ee.tH === ye.i.LoopOnLastFrame ? Me % 1 : ee.tH === ye.i.NoLoop && Me >= 1 ? null : Math.min(1, Me)
     }
-    class JB {
-      createAnimationScript(BB) {
+    class Je {
+      createAnimationScript(ee) {
         const {
-          NG: OB,
-          loop: GB,
-          AG: YB
-        } = BB;
+          WH: ie,
+          loop: He,
+          ZH: ye
+        } = ee;
         return {
-          NG: Math.round(OB),
-          WG: this.createLoopMode(null !== GB && void 0 !== GB && GB),
-          AG: this.createNodeSkeletonAnimationScript(null !== YB && void 0 !== YB ? YB : null)
+          WH: Math.round(ie),
+          tH: this.createLoopMode(null !== He && void 0 !== He && He),
+          ZH: this.createNodeSkeletonAnimationScript(null !== ye && void 0 !== ye ? ye : null)
         }
       }
-      createLoopMode(BB) {
-        switch (BB) {
+      createLoopMode(ee) {
+        switch (ee) {
           case !1:
-            return YB.m.NoLoop;
+            return ye.i.NoLoop;
           case !0:
-            return YB.m.LoopOnLastFrame;
+            return ye.i.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return YB.m.HoldOnLastFrame
+            return ye.i.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${BB}`)
+        throw new Error(`Invalid loop mode schema: ${ee}`)
       }
-      createNodeSkeletonAnimationScript(BB) {
-        if (null === BB) return null;
-        const OB = {};
-        for (const GB in BB) {
-          const YB = BB[GB];
-          OB[GB] = this.createNodeAnimationScript(YB)
+      createNodeSkeletonAnimationScript(ee) {
+        if (null === ee) return null;
+        const ie = {};
+        for (const He in ee) {
+          const ye = ee[He];
+          ie[He] = this.createNodeAnimationScript(ye)
         }
-        return OB
+        return ie
       }
-      createNodeAnimationScript(BB) {
+      createNodeAnimationScript(ee) {
         const {
-          timeline: OB
-        } = BB, GB = OB.filter((BB => Number.isFinite(BB.timeFraction)));
-        return GB.sort(((BB, OB) => BB.timeFraction - OB.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(GB, "rotation", lB),
-          position: this.createTimelineFromKeyframes(GB, "position", qB),
-          scale: this.createTimelineFromKeyframes(GB, "scale", qB, NB)
+          timeline: ie
+        } = ee, He = ie.filter((ee => Number.isFinite(ee.timeFraction)));
+        return He.sort(((ee, ie) => ee.timeFraction - ie.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(He, "rotation", qe),
+          position: this.createTimelineFromKeyframes(He, "position", Te),
+          scale: this.createTimelineFromKeyframes(He, "scale", Te, Xe)
         }
       }
-      createTimelineFromKeyframes(BB, OB, GB) {
-        let YB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : BB => BB;
-        const DB = [];
-        for (const JB of BB) {
-          const BB = JB[OB];
-          if (BB) {
-            const OB = this.createAnimationFrameWithoutPrecomputes(JB.timeFraction, BB, YB);
-            PB(OB) && DB.push(OB)
+      createTimelineFromKeyframes(ee, ie, He) {
+        let ye = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ee => ee;
+        const be = [];
+        for (const Je of ee) {
+          const ee = Je[ie];
+          if (ee) {
+            const ie = this.createAnimationFrameWithoutPrecomputes(Je.timeFraction, ee, ye);
+            Re(ie) && be.push(ie)
           }
         }
-        const QB = [];
-        for (let JB = 0; JB < DB.length; JB++) {
-          var oB, jB, yB;
-          const BB = DB[JB],
-            OB = null !== (oB = DB[JB - 1]) && void 0 !== oB ? oB : BB,
-            YB = null !== (jB = DB[JB + 1]) && void 0 !== jB ? jB : BB,
-            MB = null !== (yB = DB[JB + 2]) && void 0 !== yB ? yB : YB;
-          QB.push({
-            ...BB,
-            ...GB(OB.post, OB.timeFraction, BB.post, BB.timeFraction, YB.pre, YB.timeFraction, MB.pre, MB.timeFraction)
+        const Me = [];
+        for (let Je = 0; Je < be.length; Je++) {
+          var Ke, Ue, Fe;
+          const ee = be[Je],
+            ie = null !== (Ke = be[Je - 1]) && void 0 !== Ke ? Ke : ee,
+            ye = null !== (Ue = be[Je + 1]) && void 0 !== Ue ? Ue : ee,
+            oe = null !== (Fe = be[Je + 2]) && void 0 !== Fe ? Fe : ye;
+          Me.push({
+            ...ee,
+            ...He(ie.post, ie.timeFraction, ee.post, ee.timeFraction, ye.pre, ye.timeFraction, oe.pre, oe.timeFraction)
           })
         }
-        return QB
+        return Me
       }
-      createAnimationFrameWithoutPrecomputes(BB, OB, GB) {
-        let YB, DB, QB = null;
-        var oB;
-        if ("object" === typeof OB && "point" in OB) QB = null !== (oB = OB.nG) && void 0 !== oB ? oB : null, YB = OB.point, DB = OB.point;
-        else if ("object" === typeof OB && "pre" in OB) {
-          var jB;
-          QB = null !== (jB = OB.nG) && void 0 !== jB ? jB : null, YB = OB.pre, DB = OB.post
-        } else YB = OB, DB = OB;
+      createAnimationFrameWithoutPrecomputes(ee, ie, He) {
+        let ye, be, Me = null;
+        var Ke;
+        if ("object" === typeof ie && "point" in ie) Me = null !== (Ke = ie.PH) && void 0 !== Ke ? Ke : null, ye = ie.point, be = ie.point;
+        else if ("object" === typeof ie && "pre" in ie) {
+          var Ue;
+          Me = null !== (Ue = ie.PH) && void 0 !== Ue ? Ue : null, ye = ie.pre, be = ie.post
+        } else ye = ie, be = ie;
         return {
-          timeFraction: BB,
-          nG: this.createLerpMode(QB),
-          pre: GB(YB),
-          post: GB(DB)
+          timeFraction: ee,
+          PH: this.createLerpMode(Me),
+          pre: He(ye),
+          post: He(be)
         }
       }
-      createLerpMode(BB) {
-        return null === BB ? YB.j.Linear : JB.LERP_MODE_SCHEMA_MAPPING[BB]
+      createLerpMode(ee) {
+        return null === ee ? ye.f.Linear : Je.LERP_MODE_SCHEMA_MAPPING[ee]
       }
     }
-    JB.LERP_MODE_SCHEMA_MAPPING = {
-      linear: YB.j.Linear,
-      "catmull-rom-spline": YB.j.CatmullRomSpline
+    Je.LERP_MODE_SCHEMA_MAPPING = {
+      linear: ye.f.Linear,
+      "catmull-rom-spline": ye.f.CatmullRomSpline
     };
-    class MB {
-      constructor(BB) {
-        this.animationSchema = BB
+    class oe {
+      constructor(ee) {
+        this.animationSchema = ee
       }
       createAnimationScript() {
         const {
-          animation_length: BB,
-          loop: OB,
-          bones: GB
+          animation_length: ee,
+          loop: ie,
+          bones: He
         } = this.animationSchema;
         return {
-          NG: Math.round(1e3 * BB),
-          WG: this.createLoopMode(null !== OB && void 0 !== OB && OB),
-          AG: this.createNodeSkeletonAnimationScript(null !== GB && void 0 !== GB ? GB : null)
+          WH: Math.round(1e3 * ee),
+          tH: this.createLoopMode(null !== ie && void 0 !== ie && ie),
+          ZH: this.createNodeSkeletonAnimationScript(null !== He && void 0 !== He ? He : null)
         }
       }
-      createLoopMode(BB) {
-        switch (BB) {
+      createLoopMode(ee) {
+        switch (ee) {
           case !1:
-            return YB.m.NoLoop;
+            return ye.i.NoLoop;
           case !0:
-            return YB.m.LoopOnLastFrame;
+            return ye.i.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return YB.m.HoldOnLastFrame
+            return ye.i.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${BB}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${ee}`)
       }
-      createNodeSkeletonAnimationScript(BB) {
-        if (null === BB) return null;
-        const OB = {};
-        for (const GB in BB) {
-          const YB = BB[GB];
-          OB[GB] = this.createNodeAnimationScript(YB)
+      createNodeSkeletonAnimationScript(ee) {
+        if (null === ee) return null;
+        const ie = {};
+        for (const He in ee) {
+          const ye = ee[He];
+          ie[He] = this.createNodeAnimationScript(ye)
         }
-        return OB
+        return ie
       }
-      createNodeAnimationScript(BB) {
+      createNodeAnimationScript(ee) {
         const {
-          rotation: OB,
-          position: GB,
-          scale: YB
-        } = BB;
+          rotation: ie,
+          position: He,
+          scale: ye
+        } = ee;
         return {
-          rotation: this.createAnimationTimeline(null !== OB && void 0 !== OB ? OB : null, WB, lB, !0),
-          position: this.createAnimationTimeline(null !== GB && void 0 !== GB ? GB : null, VB, qB, !1),
-          scale: this.createAnimationTimeline(null !== YB && void 0 !== YB ? YB : null, ZB, qB, !1)
+          rotation: this.createAnimationTimeline(null !== ie && void 0 !== ie ? ie : null, Be, qe, !0),
+          position: this.createAnimationTimeline(null !== He && void 0 !== He ? He : null, ge, Te, !1),
+          scale: this.createAnimationTimeline(null !== ye && void 0 !== ye ? ye : null, pe, Te, !1)
         }
       }
-      createAnimationTimeline(BB, OB, GB, YB) {
-        if (null === BB) return [];
-        (Array.isArray(BB) || "number" === typeof BB) && (BB = {
-          "0.0": BB
+      createAnimationTimeline(ee, ie, He, ye) {
+        if (null === ee) return [];
+        (Array.isArray(ee) || "number" === typeof ee) && (ee = {
+          "0.0": ee
         });
-        const DB = Object.entries(BB).map((BB => {
-          let [GB, YB] = BB;
-          const DB = Number(GB) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(DB, YB, OB)
-        })).filter(PB);
-        DB.sort(((BB, OB) => BB.timeFraction - OB.timeFraction)), YB && function(BB) {
-          for (let OB = 1; OB < BB.length; OB++) {
-            const GB = BB[OB - 1].post,
-              YB = BB[OB],
-              DB = SB(YB.pre),
-              QB = SB(YB.post),
-              oB = UB(GB, YB.pre);
-            UB(GB, DB) < oB && (BB[OB] = {
-              ...YB,
-              pre: DB,
-              post: QB
+        const be = Object.entries(ee).map((ee => {
+          let [He, ye] = ee;
+          const be = Number(He) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(be, ye, ie)
+        })).filter(Re);
+        be.sort(((ee, ie) => ee.timeFraction - ie.timeFraction)), ye && function(ee) {
+          for (let ie = 1; ie < ee.length; ie++) {
+            const He = ee[ie - 1].post,
+              ye = ee[ie],
+              be = Oe(ye.pre),
+              Me = Oe(ye.post),
+              Ke = We(He, ye.pre);
+            We(He, be) < Ke && (ee[ie] = {
+              ...ye,
+              pre: be,
+              post: Me
             })
           }
-        }(DB);
-        const QB = [];
-        for (let JB = 0; JB < DB.length; JB++) {
-          var oB, jB, yB;
-          const BB = DB[JB],
-            OB = null !== (oB = DB[JB - 1]) && void 0 !== oB ? oB : BB,
-            YB = null !== (jB = DB[JB + 1]) && void 0 !== jB ? jB : BB,
-            MB = null !== (yB = DB[JB + 2]) && void 0 !== yB ? yB : YB;
-          QB.push({
-            ...BB,
-            ...GB(OB.post, OB.timeFraction, BB.post, BB.timeFraction, YB.pre, YB.timeFraction, MB.pre, MB.timeFraction)
+        }(be);
+        const Me = [];
+        for (let Je = 0; Je < be.length; Je++) {
+          var Ke, Ue, Fe;
+          const ee = be[Je],
+            ie = null !== (Ke = be[Je - 1]) && void 0 !== Ke ? Ke : ee,
+            ye = null !== (Ue = be[Je + 1]) && void 0 !== Ue ? Ue : ee,
+            oe = null !== (Fe = be[Je + 2]) && void 0 !== Fe ? Fe : ye;
+          Me.push({
+            ...ee,
+            ...He(ie.post, ie.timeFraction, ee.post, ee.timeFraction, ye.pre, ye.timeFraction, oe.pre, oe.timeFraction)
           })
         }
-        return QB
+        return Me
       }
-      createAnimationFrameWithoutPrecomputes(BB, OB, GB) {
-        let YB, DB, QB = null;
-        if ("object" === typeof OB && "post" in OB) {
-          var oB;
-          QB = null !== (oB = OB.lerp_mode) && void 0 !== oB ? oB : null, DB = GB(OB.post), YB = void 0 !== OB.pre ? GB(OB.pre) : DB
+      createAnimationFrameWithoutPrecomputes(ee, ie, He) {
+        let ye, be, Me = null;
+        if ("object" === typeof ie && "post" in ie) {
+          var Ke;
+          Me = null !== (Ke = ie.lerp_mode) && void 0 !== Ke ? Ke : null, be = He(ie.post), ye = void 0 !== ie.pre ? He(ie.pre) : be
         } else {
-          const BB = GB(OB);
-          DB = BB, YB = BB
+          const ee = He(ie);
+          be = ee, ye = ee
         }
         return {
-          timeFraction: BB,
-          nG: this.createLerpMode(QB),
-          pre: YB,
-          post: DB
+          timeFraction: ee,
+          PH: this.createLerpMode(Me),
+          pre: ye,
+          post: be
         }
       }
-      createLerpMode(BB) {
-        return null === BB ? YB.j.Linear : MB.LERP_MODE_SCHEMA_MAPPING[BB]
+      createLerpMode(ee) {
+        return null === ee ? ye.f.Linear : oe.LERP_MODE_SCHEMA_MAPPING[ee]
       }
     }
 
-    function PB(BB) {
-      return Number.isFinite(BB.timeFraction) && zB(BB.pre) && zB(BB.post)
+    function Re(ee) {
+      return Number.isFinite(ee.timeFraction) && ke(ee.pre) && ke(ee.post)
     }
 
-    function zB(BB) {
-      return Number.isFinite(BB[0]) && Number.isFinite(BB[1]) && Number.isFinite(BB[2])
+    function ke(ee) {
+      return Number.isFinite(ee[0]) && Number.isFinite(ee[1]) && Number.isFinite(ee[2])
     }
 
-    function lB(BB, OB, GB, YB, DB, QB, oB, jB) {
-      const yB = QB - OB,
-        JB = QB - YB,
-        MB = jB - YB,
-        PB = [null, null, null];
-      for (let zB = 0; zB < PB.length; zB++) PB[zB] = pB(BB[zB], GB[zB], DB[zB], oB[zB], yB, MB);
+    function qe(ee, ie, He, ye, be, Me, Ke, Ue) {
+      const Fe = Me - ie,
+        Je = Me - ye,
+        oe = Ue - ye,
+        Re = [null, null, null];
+      for (let ke = 0; ke < Re.length; ke++) Re[ke] = fe(ee[ke], He[ke], be[ke], Ke[ke], Fe, oe);
       return {
-        UG: JB,
-        fG: PB
+        AH: Je,
+        YH: Re
       }
     }
 
-    function pB(BB, OB, GB, YB, QB, oB) {
+    function fe(ee, ie, He, ye, Me, Ke) {
       return {
-        dG: DB.b.computeShortestRotation(BB, GB) / QB,
-        KG: DB.b.computeShortestRotation(OB, YB) / oB,
-        delta: DB.b.computeShortestRotation(OB, GB)
+        aH: be.c.computeShortestRotation(ee, He) / Me,
+        cH: be.c.computeShortestRotation(ie, ye) / Ke,
+        delta: be.c.computeShortestRotation(ie, He)
       }
     }
 
-    function qB(BB, OB, GB, YB, DB, QB, oB, jB) {
-      const yB = QB - OB,
-        JB = QB - YB,
-        MB = jB - YB,
-        PB = [null, null, null];
-      for (let zB = 0; zB < PB.length; zB++) PB[zB] = {
-        dG: (DB[zB] - BB[zB]) / yB,
-        KG: (oB[zB] - GB[zB]) / MB,
-        delta: DB[zB] - GB[zB]
+    function Te(ee, ie, He, ye, be, Me, Ke, Ue) {
+      const Fe = Me - ie,
+        Je = Me - ye,
+        oe = Ue - ye,
+        Re = [null, null, null];
+      for (let ke = 0; ke < Re.length; ke++) Re[ke] = {
+        aH: (be[ke] - ee[ke]) / Fe,
+        cH: (Ke[ke] - He[ke]) / oe,
+        delta: be[ke] - He[ke]
       };
       return {
-        UG: JB,
-        fG: PB
+        AH: Je,
+        YH: Re
       }
     }
 
-    function ZB(BB) {
-      return NB("number" === typeof BB ? [BB, BB, BB] : BB)
+    function pe(ee) {
+      return Xe("number" === typeof ee ? [ee, ee, ee] : ee)
     }
 
-    function NB(BB) {
-      return [RB(BB[0]), RB(BB[1]), RB(BB[2])]
+    function Xe(ee) {
+      return [ze(ee[0]), ze(ee[1]), ze(ee[2])]
     }
 
-    function RB(BB) {
-      return Number.isFinite(BB) ? Math.min(oB.g, Math.max(-oB.g, BB)) : BB
+    function ze(ee) {
+      return Number.isFinite(ee) ? Math.min(Ke.j, Math.max(-Ke.j, ee)) : ee
     }
 
-    function WB(BB) {
-      const [OB, GB, YB] = BB, oB = -(0, QB.h)(OB), jB = -(0, QB.h)(GB), yB = (0, QB.h)(YB), JB = DB.b.quaternionFromEulerZYX(oB, jB, yB);
-      return DB.b.eulerYXZFromQuaternion(JB)
+    function Be(ee) {
+      const [ie, He, ye] = ee, Ke = -(0, Me.f)(ie), Ue = -(0, Me.f)(He), Fe = (0, Me.f)(ye), Je = be.c.quaternionFromEulerZYX(Ke, Ue, Fe);
+      return be.c.eulerYXZFromQuaternion(Je)
     }
-    MB.LERP_MODE_SCHEMA_MAPPING = {
-      linear: YB.j.Linear,
-      catmullrom: YB.j.CatmullRomSpline
+    oe.LERP_MODE_SCHEMA_MAPPING = {
+      linear: ye.f.Linear,
+      catmullrom: ye.f.CatmullRomSpline
     };
-    const AB = 1 / 16;
+    const Ee = 1 / 16;
 
-    function VB(BB) {
-      return [-BB[0] * AB, BB[1] * AB, BB[2] * AB]
+    function ge(ee) {
+      return [-ee[0] * Ee, ee[1] * Ee, ee[2] * Ee]
     }
 
-    function SB(BB) {
-      const [OB, GB, YB] = BB;
-      return [OB >= 0 ? Math.PI - OB : -Math.PI - OB, nB(GB + Math.PI), nB(YB + Math.PI)]
+    function Oe(ee) {
+      const [ie, He, ye] = ee;
+      return [ie >= 0 ? Math.PI - ie : -Math.PI - ie, de(He + Math.PI), de(ye + Math.PI)]
     }
 
-    function nB(BB) {
-      return DB.b.mod(BB + Math.PI, 2 * Math.PI) - Math.PI
+    function de(ee) {
+      return be.c.mod(ee + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function UB(BB, OB) {
-      return Math.abs(DB.b.computeShortestRotation(BB[0], OB[0])) + Math.abs(DB.b.computeShortestRotation(BB[1], OB[1])) + Math.abs(DB.b.computeShortestRotation(BB[2], OB[2]))
+    function We(ee, ie) {
+      return Math.abs(be.c.computeShortestRotation(ee[0], ie[0])) + Math.abs(be.c.computeShortestRotation(ee[1], ie[1])) + Math.abs(be.c.computeShortestRotation(ee[2], ie[2]))
     }
-    const fB = new JB
+    const te = new Je
   },
-  37836: (BB, OB, GB) => {
-    GB.d(OB, {
-      b: () => oB,
-      f: () => QB,
-      j: () => YB,
-      m: () => DB
+  37963: (ee, ie, He) => {
+    He.d(ie, {
+      b: () => Ke,
+      c: () => Me,
+      f: () => ye,
+      i: () => be
     });
-    let YB = function(BB) {
-        return BB[BB.Linear = 0] = "Linear", BB[BB.CatmullRomSpline = 1] = "CatmullRomSpline", BB
+    let ye = function(ee) {
+        return ee[ee.Linear = 0] = "Linear", ee[ee.CatmullRomSpline = 1] = "CatmullRomSpline", ee
       }({}),
-      DB = function(BB) {
-        return BB[BB.NoLoop = 0] = "NoLoop", BB[BB.LoopOnLastFrame = 1] = "LoopOnLastFrame", BB[BB.HoldOnLastFrame = 2] = "HoldOnLastFrame", BB
+      be = function(ee) {
+        return ee[ee.NoLoop = 0] = "NoLoop", ee[ee.LoopOnLastFrame = 1] = "LoopOnLastFrame", ee[ee.HoldOnLastFrame = 2] = "HoldOnLastFrame", ee
       }({}),
-      QB = function(BB) {
-        return BB[BB.Movement = 0] = "Movement", BB[BB.Action = 1] = "Action", BB[BB.Emote = 2] = "Emote", BB[BB.Custom = 3] = "Custom", BB
+      Me = function(ee) {
+        return ee[ee.Movement = 0] = "Movement", ee[ee.Action = 1] = "Action", ee[ee.Emote = 2] = "Emote", ee[ee.Custom = 3] = "Custom", ee
       }({}),
-      oB = function(BB) {
-        return BB[BB.Start = 0] = "Start", BB[BB.Stop = 1] = "Stop", BB
+      Ke = function(ee) {
+        return ee[ee.Start = 0] = "Start", ee[ee.Stop = 1] = "Stop", ee
       }({})
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

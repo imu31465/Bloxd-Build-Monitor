@@ -1,30 +1,30 @@
 export const id = 66;
 export const ids = [66];
 export const modules = {
-  54098: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      startPageTexturePackFeed: () => oB
+  54297: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      startPageTexturePackFeed: () => Ke
     });
-    var YB = GB(1186),
-      DB = GB(31),
-      QB = GB(54089);
+    var ye = He(1141),
+      be = He(35),
+      Me = He(54292);
 
-    function oB(BB, OB) {
-      const GB = new QB.d({
-        store: DB.d,
-        warn: BB,
-        oneShot: OB,
-        fetchLatest: async BB => {
-          const OB = await fetch(`${YB.clientSideServerUrls.texturePackUrl}/${BB}.json`, {
+    function Ke(ee, ie) {
+      const He = new Me.e({
+        store: be.e,
+        warn: ee,
+        oneShot: ie,
+        fetchLatest: async ee => {
+          const ie = await fetch(`${ye.clientSideServerUrls.texturePackUrl}/${ee}.json`, {
             cache: "reload"
           });
-          if (!OB.ok) throw new Error(`fetching texture pack ${BB} answered HTTP ${OB.status}`);
-          return await OB.json()
+          if (!ie.ok) throw new Error(`fetching texture pack ${ee} answered HTTP ${ie.status}`);
+          return await ie.json()
         }
       });
-      return (0, QB.h)(GB), GB
+      return (0, Me.g)(He), He
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

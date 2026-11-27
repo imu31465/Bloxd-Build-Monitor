@@ -1,39 +1,39 @@
 export const id = 212;
 export const ids = [212];
 export const modules = {
-  34626: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      CAPPED_COUNTS_VISIT_CAP: () => QB,
-      reportCappedWasmFailure: () => yB,
-      reportUncappedWasmFailure: () => jB,
-      reportWasmCrash: () => DB,
-      reportWasmFailure: () => oB
+  34708: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      CAPPED_COUNTS_VISIT_CAP: () => Me,
+      reportCappedWasmFailure: () => Fe,
+      reportUncappedWasmFailure: () => Ue,
+      reportWasmCrash: () => be,
+      reportWasmFailure: () => Ke
     });
-    var YB = GB(1856);
+    var ye = He(1814);
 
-    function DB(BB) {
-      (0, YB.reportClientError)("wasm_load", BB.message, BB.code)
+    function be(ee) {
+      (0, ye.reportClientError)("wasm_load", ee.message, ee.code)
     }
-    const QB = YB.MAX_ERRORS_PER_VISIT - 4;
+    const Me = ye.MAX_ERRORS_PER_VISIT - 4;
 
-    function oB(BB, OB, GB, DB) {
-      (0, YB.reportClientError)(BB, OB, GB, !1, YB.MAX_ERRORS_PER_VISIT, {
-        context: DB
+    function Ke(ee, ie, He, be) {
+      (0, ye.reportClientError)(ee, ie, He, !1, ye.MAX_ERRORS_PER_VISIT, {
+        context: be
       })
     }
 
-    function jB(BB, OB, GB, DB) {
-      (0, YB.reportClientError)(BB, OB, GB, !1, 1 / 0, {
-        context: DB
+    function Ue(ee, ie, He, be) {
+      (0, ye.reportClientError)(ee, ie, He, !1, 1 / 0, {
+        context: be
       })
     }
 
-    function yB(BB, OB, GB, DB) {
-      (0, YB.reportClientError)(BB, OB, GB, !1, QB, {
-        context: DB
+    function Fe(ee, ie, He, be) {
+      (0, ye.reportClientError)(ee, ie, He, !1, Me, {
+        context: be
       })
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);

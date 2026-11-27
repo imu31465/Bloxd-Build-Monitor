@@ -1,266 +1,266 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  37060: (BB, OB, GB) => {
-    GB.r(OB), GB.d(OB, {
-      isMoreOptionsInFooter: () => wB,
-      showOnboardingPopup: () => EB
+  37169: (ee, ie, He) => {
+    He.r(ie), He.d(ie, {
+      isMoreOptionsInFooter: () => ve,
+      showOnboardingPopup: () => ue
     });
-    var YB = GB(56),
-      DB = GB(1175),
-      QB = GB(1400),
-      oB = GB(1485),
-      jB = GB(1108),
-      yB = GB(4732),
-      JB = GB(1611),
-      MB = GB(353),
-      PB = GB(1606),
-      zB = GB(2392),
-      lB = GB(1090),
-      pB = GB.n(lB),
-      qB = GB(1121),
-      ZB = GB(37063),
-      NB = GB(2554),
-      RB = GB(3928),
-      WB = GB(1112),
-      AB = GB(1383),
-      VB = GB(1282);
-    const SB = "OnboardingMorePanel";
+    var ye = He(59),
+      be = He(1127),
+      Me = He(1340),
+      Ke = He(1438),
+      Ue = He(1070),
+      Fe = He(4690),
+      Je = He(1557),
+      oe = He(347),
+      Re = He(1553),
+      ke = He(2278),
+      qe = He(1053),
+      fe = He.n(qe),
+      Te = He(1083),
+      pe = He(37175),
+      Xe = He(2425),
+      ze = He(3871),
+      Be = He(1075),
+      Ee = He(1323),
+      ge = He(1228);
+    const Oe = "OnboardingMorePanel";
 
-    function nB(BB) {
+    function de(ee) {
       let {
-        open: OB,
-        onToggle: GB
-      } = BB;
+        open: ie,
+        onToggle: He
+      } = ee;
       const {
-        t: YB
-      } = (0, DB.H)();
-      return (0, VB.jsxs)("button", {
+        t: ye
+      } = (0, be.v)();
+      return (0, ge.jsxs)("button", {
         type: "button",
         className: "OnboardingMoreOptions",
-        "aria-expanded": OB,
-        "aria-controls": OB ? SB : void 0,
+        "aria-expanded": ie,
+        "aria-controls": ie ? Oe : void 0,
         onClick: () => {
-          OB || (0, yB.j)("more"), GB()
+          ie || (0, Fe.i)("more"), He()
         },
-        children: [YB("homePage:onboardingMoreOptions"), (0, VB.jsx)(AB.b, {
-          name: OB ? "caret-up" : "caret-down"
+        children: [ye("homePage:onboardingMoreOptions"), (0, ge.jsx)(Ee.e, {
+          name: ie ? "caret-up" : "caret-down"
         })]
       })
     }
-    const UB = Object.entries(JB.d).filter((BB => {
-      let [, OB] = BB;
-      return "default" === OB.cosmeticPack
+    const We = Object.entries(Je.b).filter((ee => {
+      let [, ie] = ee;
+      return "default" === ie.cosmeticPack
     }));
 
-    function fB(BB) {
-      return PB.d.default.colourGroups[BB].colours.map(((BB, OB) => {
+    function te(ee) {
+      return Re.b.default.colourGroups[ee].colours.map(((ee, ie) => {
         let {
-          rbg: GB,
-          order: YB
-        } = BB;
+          rbg: He,
+          order: ye
+        } = ee;
         return {
-          rbg: GB,
-          order: YB,
-          index: OB
+          rbg: He,
+          order: ye,
+          index: ie
         }
-      })).sort(((BB, OB) => BB.order - OB.order))
+      })).sort(((ee, ie) => ee.order - ie.order))
     }
-    const kB = fB("eyes"),
-      dB = fB("skin");
+    const Ze = te("eyes"),
+      we = te("skin");
 
-    function KB(BB, OB) {
-      var GB;
-      if (void 0 === OB || "default" !== (null === (GB = (0, zB.n)(BB, OB)) || void 0 === GB ? void 0 : GB.cosmeticPack)) return null;
-      const YB = (0, zB.l)(OB);
-      return YB && [YB[0], Number(YB[1])]
-    }
-
-    function uB(BB, OB, GB) {
-      return `${BB}_${OB}_${GB}`
+    function De(ee, ie) {
+      var He;
+      if (void 0 === ie || "default" !== (null === (He = (0, ke.h)(ee, ie)) || void 0 === He ? void 0 : He.cosmeticPack)) return null;
+      const ye = (0, ke.g)(ie);
+      return ye && [ye[0], Number(ye[1])]
     }
 
-    function mB(BB) {
+    function Pe(ee, ie, He) {
+      return `${ee}_${ie}_${He}`
+    }
+
+    function Ae(ee) {
       let {
-        label: OB,
-        colours: GB,
-        picked: YB,
-        onPick: QB
-      } = BB;
+        label: ie,
+        colours: He,
+        picked: ye,
+        onPick: Me
+      } = ee;
       const {
-        t: oB
-      } = (0, DB.H)();
-      return (0, VB.jsxs)("div", {
+        t: Ke
+      } = (0, be.v)();
+      return (0, ge.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, VB.jsx)("div", {
+        children: [(0, ge.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: OB
-        }), (0, VB.jsx)("div", {
+          children: ie
+        }), (0, ge.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": OB,
-          children: GB.map(((BB, OB) => {
+          "aria-label": ie,
+          children: He.map(((ee, ie) => {
             let {
-              rbg: GB,
-              index: DB
-            } = BB;
-            return (0, VB.jsx)("button", {
+              rbg: He,
+              index: be
+            } = ee;
+            return (0, ge.jsx)("button", {
               type: "button",
-              className: pB()("OnboardingSwatch", {
-                OnboardingSwatchSelected: DB === YB
+              className: fe()("OnboardingSwatch", {
+                OnboardingSwatchSelected: be === ye
               }),
               style: {
-                backgroundColor: `rgb(${GB.join(",")})`
+                backgroundColor: `rgb(${He.join(",")})`
               },
               role: "radio",
-              "aria-checked": DB === YB,
-              "aria-label": oB("homePage:onboardingColour", {
-                number: OB + 1
+              "aria-checked": be === ye,
+              "aria-label": Ke("homePage:onboardingColour", {
+                number: ie + 1
               }),
               onClick: () => {
-                QB(DB)
+                Me(be)
               }
-            }, DB)
+            }, be)
           }))
         })]
       })
     }
 
-    function IB(BB) {
+    function Ye(ee) {
       let {
-        moreOptions: OB,
-        onToggleMoreOptions: GB,
-        moreOptionsBelowPresets: QB
-      } = BB;
+        moreOptions: ie,
+        onToggleMoreOptions: He,
+        moreOptionsBelowPresets: Me
+      } = ee;
       const {
-        t: oB
-      } = (0, DB.H)(), {
-        userContext: jB,
-        isUserContextUpdating: JB
-      } = (0, WB.d)(), [, PB] = (0, YB.useReducer)((BB => BB + 1), 0), zB = (0, YB.useRef)({}), lB = (0, YB.useRef)(null), AB = (0, YB.useRef)({}), fB = (0, RB.c)(), IB = {
-        ...jB.getPlayerCosmetics(),
-        ...lB.current
-      }, FB = (0, YB.useRef)(null);
-      (0, YB.useEffect)((() => {
-        var BB;
-        OB && (null === (BB = FB.current) || void 0 === BB || BB.scrollIntoView({
+        t: Ke
+      } = (0, be.v)(), {
+        userContext: Ue,
+        isUserContextUpdating: Je
+      } = (0, Be.b)(), [, Re] = (0, ye.useReducer)((ee => ee + 1), 0), ke = (0, ye.useRef)({}), qe = (0, ye.useRef)(null), Ee = (0, ye.useRef)({}), te = (0, ze.c)(), Ye = {
+        ...Ue.getPlayerCosmetics(),
+        ...qe.current
+      }, Ve = (0, ye.useRef)(null);
+      (0, ye.useEffect)((() => {
+        var ee;
+        ie && (null === (ee = Ve.current) || void 0 === ee || ee.scrollIntoView({
           block: "nearest"
         }))
-      }), [OB]);
-      const iB = (BB, OB) => {
-          (0, ZB.d)(BB, Object.entries(OB)), fB.current ? PB() : BB.publishUpdateIfCurrent()
+      }), [ie]);
+      const ae = (ee, ie) => {
+          (0, pe.d)(ee, Object.entries(ie)), te.current ? Re() : ee.publishUpdateIfCurrent()
         },
-        LB = function(BB) {
+        ce = function(ee) {
           let {
-            isDefault: OB = !1
+            isDefault: ie = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const GB = {
-            ...!JB && jB.isLoggedIn() ? AB.current : lB.current,
-            ...BB
+          const He = {
+            ...!Je && Ue.isLoggedIn() ? Ee.current : qe.current,
+            ...ee
           };
-          if (!JB) return lB.current = null, AB.current = {}, void iB(jB, GB);
-          lB.current = GB, OB || (AB.current = {
-            ...AB.current,
-            ...BB
-          }), PB(), qB.userContextManager.getCurrentUserContext().then((BB => {
-            if (lB.current !== GB) return;
-            lB.current = null;
-            const OB = AB.current;
-            AB.current = {};
-            const YB = BB.isLoggedIn() ? OB : GB;
-            0 !== Object.keys(YB).length ? iB(BB, YB) : fB.current && PB()
-          })).catch((BB => {
-            console.warn("Couldn't put on the onboarding look held for the account", BB), lB.current === GB && (lB.current = null, AB.current = {}, fB.current && PB())
+          if (!Je) return qe.current = null, Ee.current = {}, void ae(Ue, He);
+          qe.current = He, ie || (Ee.current = {
+            ...Ee.current,
+            ...ee
+          }), Re(), Te.userContextManager.getCurrentUserContext().then((ee => {
+            if (qe.current !== He) return;
+            qe.current = null;
+            const ie = Ee.current;
+            Ee.current = {};
+            const ye = ee.isLoggedIn() ? ie : He;
+            0 !== Object.keys(ye).length ? ae(ee, ye) : te.current && Re()
+          })).catch((ee => {
+            console.warn("Couldn't put on the onboarding look held for the account", ee), qe.current === He && (qe.current = null, Ee.current = {}, te.current && Re())
           }))
         },
-        gB = (0, YB.useRef)(!1);
-      (0, YB.useEffect)((() => {
-        gB.current || (gB.current = !0, !JB && jB.isLoggedIn() || LB((0, MB.mc)(UB)[1].cosmetics, {
+        xe = (0, ye.useRef)(!1);
+      (0, ye.useEffect)((() => {
+        xe.current || (xe.current = !0, !Je && Ue.isLoggedIn() || ce((0, oe.gc)(We)[1].cosmetics, {
           isDefault: !0
         }))
-      }), []), (0, YB.useEffect)((() => () => {
-        jB.publishUpdateIfCurrent()
-      }), [jB]);
-      const rB = KB("eyes", IB.eyes),
-        XB = KB("skin", IB.skin);
-      return (0, VB.jsxs)(VB.Fragment, {
-        children: [(0, VB.jsx)("div", {
+      }), []), (0, ye.useEffect)((() => () => {
+        Ue.publishUpdateIfCurrent()
+      }), [Ue]);
+      const Le = De("eyes", Ye.eyes),
+        Ce = De("skin", Ye.skin);
+      return (0, ge.jsxs)(ge.Fragment, {
+        children: [(0, ge.jsx)("div", {
           className: "OnboardingPresets",
-          children: UB.map(((BB, OB) => {
-            let [GB, {
-              cosmetics: YB
-            }] = BB;
-            const DB = function(BB, OB) {
-              return Object.entries(OB).every((OB => {
-                let [GB, YB] = OB;
-                return "skin" === GB || ("eyes" === GB ? (null === (DB = KB("eyes", BB.eyes)) || void 0 === DB ? void 0 : DB[0]) === (null === (QB = KB("eyes", YB)) || void 0 === QB ? void 0 : QB[0]) : BB[GB] === YB);
-                var DB, QB
+          children: We.map(((ee, ie) => {
+            let [He, {
+              cosmetics: ye
+            }] = ee;
+            const be = function(ee, ie) {
+              return Object.entries(ie).every((ie => {
+                let [He, ye] = ie;
+                return "skin" === He || ("eyes" === He ? (null === (be = De("eyes", ee.eyes)) || void 0 === be ? void 0 : be[0]) === (null === (Me = De("eyes", ye)) || void 0 === Me ? void 0 : Me[0]) : ee[He] === ye);
+                var be, Me
               }))
-            }(IB, YB);
-            return (0, VB.jsx)("button", {
+            }(Ye, ye);
+            return (0, ge.jsx)("button", {
               type: "button",
-              className: pB()("OnboardingPreset", {
-                OnboardingPresetSelected: DB
+              className: fe()("OnboardingPreset", {
+                OnboardingPresetSelected: be
               }),
-              "aria-label": oB("homePage:onboardingPreset", {
-                number: OB + 1
+              "aria-label": Ke("homePage:onboardingPreset", {
+                number: ie + 1
               }),
-              "aria-pressed": DB,
+              "aria-pressed": be,
               onClick: () => {
-                (0, yB.j)(`preset.${GB}`);
+                (0, Fe.i)(`preset.${He}`);
                 const {
-                  eyes: BB,
-                  skin: OB
-                } = zB.current;
-                LB({
-                  ...YB,
-                  ...void 0 !== BB && {
-                    eyes: uB("eyes", KB("eyes", YB.eyes)[0], BB)
+                  eyes: ee,
+                  skin: ie
+                } = ke.current;
+                ce({
+                  ...ye,
+                  ...void 0 !== ee && {
+                    eyes: Pe("eyes", De("eyes", ye.eyes)[0], ee)
                   },
-                  ...void 0 !== OB && {
-                    skin: uB("skin", "0", OB)
+                  ...void 0 !== ie && {
+                    skin: Pe("skin", "0", ie)
                   }
                 })
               },
-              children: (0, VB.jsx)("div", {
+              children: (0, ge.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${GB}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${He}_preview.png)`
                 }
               })
-            }, GB)
+            }, He)
           }))
-        }), QB && (0, VB.jsx)(nB, {
-          open: OB,
-          onToggle: GB
-        }), OB && (0, VB.jsxs)("div", {
-          ref: FB,
-          id: SB,
+        }), Me && (0, ge.jsx)(de, {
+          open: ie,
+          onToggle: He
+        }), ie && (0, ge.jsxs)("div", {
+          ref: Ve,
+          id: Oe,
           className: "OnboardingMore",
-          children: [(0, VB.jsx)("div", {
+          children: [(0, ge.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, VB.jsx)(NB.b, {
-              cosmetics: IB
+            children: (0, ge.jsx)(Xe.c, {
+              cosmetics: Ye
             })
-          }), (0, VB.jsxs)("div", {
+          }), (0, ge.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, VB.jsx)(mB, {
-              label: oB("homePage:onboardingEyeColour"),
-              colours: kB,
-              picked: null === rB || void 0 === rB ? void 0 : rB[1],
-              onPick: BB => {
-                var OB;
-                (0, yB.j)("eyes"), zB.current.eyes = BB, LB({
-                  eyes: uB("eyes", null !== (OB = null === rB || void 0 === rB ? void 0 : rB[0]) && void 0 !== OB ? OB : "0", BB)
+            children: [(0, ge.jsx)(Ae, {
+              label: Ke("homePage:onboardingEyeColour"),
+              colours: Ze,
+              picked: null === Le || void 0 === Le ? void 0 : Le[1],
+              onPick: ee => {
+                var ie;
+                (0, Fe.i)("eyes"), ke.current.eyes = ee, ce({
+                  eyes: Pe("eyes", null !== (ie = null === Le || void 0 === Le ? void 0 : Le[0]) && void 0 !== ie ? ie : "0", ee)
                 })
               }
-            }), (0, VB.jsx)(mB, {
-              label: oB("homePage:onboardingSkinColour"),
-              colours: dB,
-              picked: null === XB || void 0 === XB ? void 0 : XB[1],
-              onPick: BB => {
-                (0, yB.j)("skin"), zB.current.skin = BB, LB({
-                  skin: uB("skin", "0", BB)
+            }), (0, ge.jsx)(Ae, {
+              label: Ke("homePage:onboardingSkinColour"),
+              colours: we,
+              picked: null === Ce || void 0 === Ce ? void 0 : Ce[1],
+              onPick: ee => {
+                (0, Fe.i)("skin"), ke.current.skin = ee, ce({
+                  skin: Pe("skin", "0", ee)
                 })
               }
             })]
@@ -268,371 +268,371 @@ export const modules = {
         })]
       })
     }
-    var FB = GB(1262),
-      iB = GB(16),
-      LB = GB(34683),
-      gB = GB(1375),
-      rB = GB(1735);
+    var Ve = He(1207),
+      ae = He(18),
+      ce = He(34758),
+      xe = He(1320),
+      Le = He(1674);
 
-    function XB(BB) {
+    function Ce(ee) {
       const {
-        t: OB
-      } = (0, DB.H)(), {
-        userContext: GB,
-        isUserContextUpdating: QB
-      } = (0, WB.d)(), jB = QB ? null : GB.getPlayerName(), JB = (0, YB.useRef)(null), [MB, PB] = (0, YB.useState)((() => null === jB ? (0, FB.h)() : null)), [zB, lB] = (0, YB.useState)(null), [pB, qB] = (0, YB.useState)(!1), ZB = (0, YB.useRef)("GP"), NB = (0, RB.c)(), SB = (0, YB.useRef)(null !== MB), nB = (0, YB.useRef)(!1), UB = (0, YB.useRef)(null), fB = null !== MB && void 0 !== MB ? MB : jB, kB = (0, YB.useRef)(null), dB = BB => {
-        JB.current && (JB.current.value = BB), PB(BB)
-      }, KB = (0, YB.useRef)(!1);
-      (0, YB.useEffect)((() => {
-        var BB, OB;
-        !pB && KB.current && (KB.current = !1, null === (BB = JB.current) || void 0 === BB || BB.focus(), null === (OB = JB.current) || void 0 === OB || OB.select())
-      }), [pB]);
-      const uB = (0, YB.useRef)(null);
-      (0, YB.useEffect)((() => {
-        var BB;
-        null !== zB && (null === (BB = uB.current) || void 0 === BB || BB.scrollIntoView({
+        t: ie
+      } = (0, be.v)(), {
+        userContext: He,
+        isUserContextUpdating: Me
+      } = (0, Be.b)(), Ue = Me ? null : He.getPlayerName(), Je = (0, ye.useRef)(null), [oe, Re] = (0, ye.useState)((() => null === Ue ? (0, Ve.f)() : null)), [ke, qe] = (0, ye.useState)(null), [fe, Te] = (0, ye.useState)(!1), pe = (0, ye.useRef)("KR"), Xe = (0, ze.c)(), Oe = (0, ye.useRef)(null !== oe), de = (0, ye.useRef)(!1), We = (0, ye.useRef)(null), te = null !== oe && void 0 !== oe ? oe : Ue, Ze = (0, ye.useRef)(null), we = ee => {
+        Je.current && (Je.current.value = ee), Re(ee)
+      }, De = (0, ye.useRef)(!1);
+      (0, ye.useEffect)((() => {
+        var ee, ie;
+        !fe && De.current && (De.current = !1, null === (ee = Je.current) || void 0 === ee || ee.focus(), null === (ie = Je.current) || void 0 === ie || ie.select())
+      }), [fe]);
+      const Pe = (0, ye.useRef)(null);
+      (0, ye.useEffect)((() => {
+        var ee;
+        null !== ke && (null === (ee = Pe.current) || void 0 === ee || ee.scrollIntoView({
           block: "nearest"
         }))
-      }), [zB]);
-      const mB = (BB, OB) => {
-        const GB = document.activeElement === JB.current || KB.current;
-        qB(!0), lB(null), BB.then((BB => {
-          NB.current && (qB(!1), KB.current = GB, OB(BB))
+      }), [ke]);
+      const Ae = (ee, ie) => {
+        const He = document.activeElement === Je.current || De.current;
+        Te(!0), qe(null), ee.then((ee => {
+          Xe.current && (Te(!1), De.current = He, ie(ee))
         }))
       };
-      (0, YB.useEffect)((() => {
-        var BB, OB;
-        iB.c.get("isTouchScreen") || (null === (BB = JB.current) || void 0 === BB || BB.focus(), null === (OB = JB.current) || void 0 === OB || OB.select())
+      (0, ye.useEffect)((() => {
+        var ee, ie;
+        ae.e.get("isTouchScreen") || (null === (ee = Je.current) || void 0 === ee || ee.focus(), null === (ie = Je.current) || void 0 === ie || ie.select())
       }), []);
-      const IB = () => {
-          (0, yB.l)(ZB.current), BB()
+      const Ye = () => {
+          (0, Fe.m)(pe.current), ee()
         },
-        XB = (BB, OB) => {
-          var GB, YB;
-          if (UB.current === BB) return ZB.current = null !== (GB = null === (YB = kB.current) || void 0 === YB ? void 0 : YB.outcome) && void 0 !== GB ? GB : "GP", void IB();
-          UB.current = BB, lB(OB)
+        Ce = (ee, ie) => {
+          var He, ye;
+          if (We.current === ee) return pe.current = null !== (He = null === (ye = Ze.current) || void 0 === ye ? void 0 : ye.outcome) && void 0 !== He ? He : "KR", void Ye();
+          We.current = ee, qe(ie)
         },
-        wB = BB => "refused" === BB.outcome ? BB.message : OB((0, LB.e)(BB.failure)),
-        EB = BB => !(BB.length >= FB.o) && (lB({
+        ve = ee => "refused" === ee.outcome ? ee.message : ie((0, ce.i)(ee.failure)),
+        ue = ee => !(ee.length >= Ve.i) && (qe({
           kind: "error",
-          message: OB("homePage:changeNameMinLengthError", {
-            length: FB.o
+          message: ie("homePage:changeNameMinLengthError", {
+            length: Ve.i
           })
         }), !0),
-        cB = BB => {
-          var YB, DB, QB;
-          BB.toLowerCase() !== (null === (YB = null !== (DB = null === (QB = kB.current) || void 0 === QB ? void 0 : QB.name) && void 0 !== DB ? DB : jB) || void 0 === YB ? void 0 : YB.toLowerCase()) ? EB(BB) || mB((0, LB.d)(GB, BB), (GB => {
-            "taken" !== GB.outcome ? "refused" !== GB.outcome && "failed" !== GB.outcome ? GB.name !== BB ? (ZB.current = "suffixed", kB.current = {
-              name: GB.name,
-              outcome: ZB.current
-            }, dB(GB.name), lB({
+        me = ee => {
+          var ye, be, Me;
+          ee.toLowerCase() !== (null === (ye = null !== (be = null === (Me = Ze.current) || void 0 === Me ? void 0 : Me.name) && void 0 !== be ? be : Ue) || void 0 === ye ? void 0 : ye.toLowerCase()) ? ue(ee) || Ae((0, ce.e)(He, ee), (He => {
+            "taken" !== He.outcome ? "refused" !== He.outcome && "failed" !== He.outcome ? He.name !== ee ? (pe.current = "suffixed", Ze.current = {
+              name: He.name,
+              outcome: pe.current
+            }, we(He.name), qe({
               kind: "suffixed",
-              taken: BB,
-              name: GB.name
-            })) : IB() : XB(BB, {
+              taken: ee,
+              name: He.name
+            })) : Ye() : Ce(ee, {
               kind: "error",
-              message: wB(GB)
-            }) : XB(BB, {
+              message: ve(He)
+            }) : Ce(ee, {
               kind: "error",
-              message: OB("homePage:onboardingNameAllTaken")
+              message: ie("homePage:onboardingNameAllTaken")
             })
-          })) : IB()
+          })) : Ye()
         };
-      (0, YB.useEffect)((() => {
-        if (!pB || null !== jB || !nB.current) return;
-        const BB = setTimeout((() => {
-          nB.current = !1, qB(!1), XB(fB, {
+      (0, ye.useEffect)((() => {
+        if (!fe || null !== Ue || !de.current) return;
+        const ee = setTimeout((() => {
+          de.current = !1, Te(!1), Ce(te, {
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(BB)
+          clearTimeout(ee)
         }
-      }), [pB, jB]), (0, YB.useEffect)((() => {
-        if (null === jB) return;
-        const BB = SB.current && "GP" === ZB.current && GB.isLoggedIn();
-        SB.current = !1, UB.current = null, "noAccount" === (null === zB || void 0 === zB ? void 0 : zB.kind) && lB(null), BB && dB(jB), nB.current && (nB.current = !1, qB(!1), cB(BB ? jB : fB))
-      }), [jB]);
-      const hB = "error" === (null === zB || void 0 === zB ? void 0 : zB.kind) ? zB.message : "noAccount" === (null === zB || void 0 === zB ? void 0 : zB.kind) ? OB("homePage:onboardingNameNoAccount") : null;
+      }), [fe, Ue]), (0, ye.useEffect)((() => {
+        if (null === Ue) return;
+        const ee = Oe.current && "KR" === pe.current && He.isLoggedIn();
+        Oe.current = !1, We.current = null, "noAccount" === (null === ke || void 0 === ke ? void 0 : ke.kind) && qe(null), ee && we(Ue), de.current && (de.current = !1, Te(!1), me(ee ? Ue : te))
+      }), [Ue]);
+      const le = "error" === (null === ke || void 0 === ke ? void 0 : ke.kind) ? ke.message : "noAccount" === (null === ke || void 0 === ke ? void 0 : ke.kind) ? ie("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, VB.jsxs)("div", {
+        field: (0, ge.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: uB,
-          children: [(0, VB.jsx)("div", {
+          ref: Pe,
+          children: [(0, ge.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: OB("general:name")
-          }), null === fB && (0, VB.jsx)(gB.b, {}), null !== fB && (0, VB.jsxs)("div", {
+            children: ie("general:name")
+          }), null === te && (0, ge.jsx)(xe.b, {}), null !== te && (0, ge.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, VB.jsx)(rB.b, {
+            children: [(0, ge.jsx)(Le.d, {
               className: "OnboardingNameInput",
-              ariaLabel: OB("general:name"),
-              maxLength: FB.l,
-              defaultValue: fB,
-              domRef: JB,
-              forcedText: pB ? fB : null,
+              ariaLabel: ie("general:name"),
+              maxLength: Ve.g,
+              defaultValue: te,
+              domRef: Je,
+              forcedText: fe ? te : null,
               onEnter: () => {
-                var BB;
-                null === (BB = JB.current) || void 0 === BB || BB.blur()
+                var ee;
+                null === (ee = Je.current) || void 0 === ee || ee.blur()
               },
-              onValueChange: BB => {
-                const GB = (0, FB.u)(BB);
-                GB !== BB && JB.current && (JB.current.value = GB), lB(GB !== BB ? {
+              onValueChange: ee => {
+                const He = (0, Ve.l)(ee);
+                He !== ee && Je.current && (Je.current.value = He), qe(He !== ee ? {
                   kind: "error",
-                  message: OB("homePage:nameCharacters")
-                } : null), GB !== fB && (ZB.current = "changed"), PB(GB)
+                  message: ie("homePage:nameCharacters")
+                } : null), He !== te && (pe.current = "changed"), Re(He)
               }
-            }), (0, VB.jsx)(oB.f, {
+            }), (0, ge.jsx)(Ke.c, {
               className: "OnboardingRandomName",
-              ariaLabel: OB("homePage:onboardingRandomName"),
-              disabled: pB,
+              ariaLabel: ie("homePage:onboardingRandomName"),
+              disabled: fe,
               onClick: () => {
                 (() => {
-                  if (lB(null), null === jB || GB.isLoggedIn()) return dB((0, FB.h)()), void(ZB.current = "rolled");
-                  mB((0, LB.g)(GB), (BB => {
-                    var OB, YB;
-                    if ("refused" === BB.outcome || "failed" === BB.outcome) return dB(GB.getPlayerName()), ZB.current = null !== (OB = null === (YB = kB.current) || void 0 === YB ? void 0 : YB.outcome) && void 0 !== OB ? OB : "GP", void lB({
+                  if (qe(null), null === Ue || He.isLoggedIn()) return we((0, Ve.f)()), void(pe.current = "rolled");
+                  Ae((0, ce.l)(He), (ee => {
+                    var ie, ye;
+                    if ("refused" === ee.outcome || "failed" === ee.outcome) return we(He.getPlayerName()), pe.current = null !== (ie = null === (ye = Ze.current) || void 0 === ye ? void 0 : ye.outcome) && void 0 !== ie ? ie : "KR", void qe({
                       kind: "error",
-                      message: wB(BB)
+                      message: ve(ee)
                     });
-                    ZB.current = "rolled", kB.current = {
-                      name: BB.name,
+                    pe.current = "rolled", Ze.current = {
+                      name: ee.name,
                       outcome: "rolled"
-                    }, dB(BB.name)
+                    }, we(ee.name)
                   }))
                 })()
               },
-              children: (0, VB.jsx)(AB.b, {
+              children: (0, ge.jsx)(Ee.e, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === zB || void 0 === zB ? void 0 : zB.kind) && (0, VB.jsx)("div", {
+          }), "suffixed" === (null === ke || void 0 === ke ? void 0 : ke.kind) && (0, ge.jsx)("div", {
             className: "OnboardingNameNote",
-            children: OB("homePage:onboardingNameSuffixed", {
-              taken: zB.taken,
-              name: zB.name
+            children: ie("homePage:onboardingNameSuffixed", {
+              taken: ke.taken,
+              name: ke.name
             })
-          }), null !== hB && (0, VB.jsx)("div", {
+          }), null !== le && (0, ge.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: hB
+            children: le
           })]
         }),
         submit: () => {
-          if (!pB && null !== fB) {
-            if (null === jB) {
-              if (EB(fB)) return;
-              return KB.current = document.activeElement === JB.current, nB.current = !0, qB(!0), void lB(null)
+          if (!fe && null !== te) {
+            if (null === Ue) {
+              if (ue(te)) return;
+              return De.current = document.activeElement === Je.current, de.current = !0, Te(!0), void qe(null)
             }
-            cB(fB)
+            me(te)
           }
         },
-        busy: pB,
-        ready: null !== fB
+        busy: fe,
+        ready: null !== te
       }
     }
 
-    function wB(BB) {
-      return BB < 500
+    function ve(ee) {
+      return ee < 500
     }
 
-    function EB() {
-      const BB = {
+    function ue() {
+      const ee = {
           finished: !1
         },
-        OB = {
+        ie = {
           press: null
         };
-      return QB.NotificationProvider.showCustomPopup({
-        body: GB => (0, VB.jsx)(cB, {
+      return Me.NotificationProvider.showCustomPopup({
+        body: He => (0, ge.jsx)(me, {
           onFinish: () => {
-            (0, yB.f)(), BB.finished = !0, GB()
+            (0, Fe.g)(), ee.finished = !0, He()
           },
-          doneRef: OB
+          doneRef: ie
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         disableExitButton: !0,
         ignoreBackgroundPress: !0,
         dismiss: () => {
-          var BB;
-          null === (BB = OB.press) || void 0 === BB || BB.call(OB)
+          var ee;
+          null === (ee = ie.press) || void 0 === ee || ee.call(ie)
         },
         onClose: () => {
-          BB.finished || (0, yB.d)()
+          ee.finished || (0, Fe.d)()
         }
       })
     }
 
-    function cB(BB) {
+    function me(ee) {
       let {
-        onFinish: OB,
-        doneRef: GB
-      } = BB;
+        onFinish: ie,
+        doneRef: He
+      } = ee;
       const {
-        t: QB
-      } = (0, DB.H)(), JB = XB(OB), MB = JB.ready && !JB.busy ? JB.submit : null;
-      (0, YB.useEffect)((() => (GB.press = MB, () => {
-        GB.press = null
+        t: Me
+      } = (0, be.v)(), Je = Ce(ie), oe = Je.ready && !Je.busy ? Je.submit : null;
+      (0, ye.useEffect)((() => (He.press = oe, () => {
+        He.press = null
       })));
-      const [PB, zB] = (0, YB.useState)(!1), lB = (0, jB.h)(((BB, OB) => wB(OB))), pB = () => {
-        zB(!PB)
+      const [Re, ke] = (0, ye.useState)(!1), qe = (0, Ue.k)(((ee, ie) => ve(ie))), fe = () => {
+        ke(!Re)
       };
-      return (0, YB.useEffect)((() => {
-        (0, yB.n)()
-      }), []), (0, VB.jsxs)("div", {
+      return (0, ye.useEffect)((() => {
+        (0, Fe.n)()
+      }), []), (0, ge.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, VB.jsx)("div", {
+        children: [(0, ge.jsx)("div", {
           className: "OnboardingTitle",
-          children: QB("homePage:onboardingTitle")
-        }), (0, VB.jsxs)("div", {
+          children: Me("homePage:onboardingTitle")
+        }), (0, ge.jsxs)("div", {
           className: "OnboardingBody",
-          children: [JB.field, (0, VB.jsx)(IB, {
-            moreOptions: PB,
-            onToggleMoreOptions: pB,
-            moreOptionsBelowPresets: !lB
+          children: [Je.field, (0, ge.jsx)(Ye, {
+            moreOptions: Re,
+            onToggleMoreOptions: fe,
+            moreOptionsBelowPresets: !qe
           })]
-        }), (0, VB.jsxs)("div", {
+        }), (0, ge.jsxs)("div", {
           className: "OnboardingFooter",
-          children: [lB && (0, VB.jsx)(nB, {
-            open: PB,
-            onToggle: pB
-          }), (0, VB.jsx)(oB.q, {
+          children: [qe && (0, ge.jsx)(de, {
+            open: Re,
+            onToggle: fe
+          }), (0, ge.jsx)(Ke.m, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: JB.busy,
-            disabled: !JB.ready,
-            onClick: JB.submit,
-            children: QB("homePage:onboardingDone")
+            loading: Je.busy,
+            disabled: !Je.ready,
+            onClick: Je.submit,
+            children: Me("homePage:onboardingDone")
           })]
         })]
       })
     }
   },
-  37063: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => oB
+  37175: (ee, ie, He) => {
+    He.d(ie, {
+      d: () => Ke
     });
-    var YB = GB(2023),
-      DB = GB(1540);
-    const QB = new class {
+    var ye = He(1983),
+      be = He(1490);
+    const Me = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(BB, OB) {
-        BB !== this.userContext && this.sendHeld(), this.userContext = BB;
-        for (const [YB, DB] of OB) this.pending.set(YB, DB);
+      save(ee, ie) {
+        ee !== this.userContext && this.sendHeld(), this.userContext = ee;
+        for (const [ye, be] of ie) this.pending.set(ye, be);
         if (null !== this.timer) return;
-        const GB = this.lastSentAt + 1100 - Date.now();
-        GB <= 0 ? this.send(BB) : (this.timer = setTimeout((() => {
+        const He = this.lastSentAt + 1100 - Date.now();
+        He <= 0 ? this.send(ee) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), GB), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), He), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(BB) {
-        const OB = Array.from(this.pending, (BB => {
-          let [OB, GB] = BB;
+      send(ee) {
+        const ie = Array.from(this.pending, (ee => {
+          let [ie, He] = ee;
           return {
-            UB: OB,
-            fB: GB
+            te: ie,
+            Ze: He
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), DB.b.updateCosmetics(BB, OB).catch((BB => {
-          console.error("Failed to update cosmetics", BB)
+        this.pending.clear(), this.lastSentAt = Date.now(), be.b.updateCosmetics(ee, ie).catch((ee => {
+          console.error("Failed to update cosmetics", ee)
         }))
       }
     };
 
-    function oB(BB, OB) {
-      for (const [GB, YB] of OB) BB.setPlayerCosmetics(GB, YB);
-      if (null === YB.gameBridge.latest("connectedGame").websocketUrl) QB.save(BB, OB);
+    function Ke(ee, ie) {
+      for (const [He, ye] of ie) ee.setPlayerCosmetics(He, ye);
+      if (null === ye.gameBridge.latest("connectedGame").websocketUrl) Me.save(ee, ie);
       else
-        for (const [GB, DB] of OB) YB.gameBridge.send("updateMyCosmetic", {
-          UB: GB,
-          fB: DB
+        for (const [He, be] of ie) ye.gameBridge.send("updateMyCosmetic", {
+          te: He,
+          Ze: be
         })
     }
   },
-  34683: (BB, OB, GB) => {
-    GB.d(OB, {
-      d: () => RB,
-      e: () => JB,
-      f: () => qB,
-      g: () => pB
+  34758: (ee, ie, He) => {
+    He.d(ie, {
+      e: () => ze,
+      i: () => Je,
+      j: () => Te,
+      l: () => fe
     });
-    var YB = GB(162),
-      DB = GB(1262),
-      QB = GB(1186),
-      oB = GB(1121),
-      jB = GB(1813);
-    const yB = {
+    var ye = He(153),
+      be = He(1207),
+      Me = He(1141),
+      Ke = He(1083),
+      Ue = He(1763);
+    const Fe = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function JB(BB) {
-      return yB[BB]
+    function Je(ee) {
+      return Fe[ee]
     }
 
-    function MB(BB) {
-      return (0, jB.b)(BB) ? "outdated" : BB instanceof YB.d ? 429 === BB.httpCode ? "busy" : "server" : "offline"
+    function oe(ee) {
+      return (0, Ue.b)(ee) ? "outdated" : ee instanceof ye.b ? 429 === ee.httpCode ? "busy" : "server" : "offline"
     }
 
-    function PB(BB, OB, GB) {
-      return (0, oB.postJsonWithMetricsCookiesAndJsonResponse)(`${QB.clientSideServerUrls.indexUrl}${OB}`, GB, {
+    function Re(ee, ie, He) {
+      return (0, Ke.postJsonWithMetricsCookiesAndJsonResponse)(`${Me.clientSideServerUrls.indexUrl}${ie}`, He, {
         retries: 3
-      }, BB.getMetricsCookies()).catch((BB => (console.error("Bad response from the server when trying to change name:", OB, BB), {
+      }, ee.getMetricsCookies()).catch((ee => (console.error("Bad response from the server when trying to change name:", ie, ee), {
         outcome: "failed",
-        failure: MB(BB)
+        failure: oe(ee)
       })))
     }
 
-    function zB(BB) {
-      return "outcome" in BB && "failed" === BB.outcome
+    function ke(ee) {
+      return "outcome" in ee && "failed" === ee.outcome
     }
 
-    function lB(BB) {
-      return console.error("Error when trying to get with new name from DB", BB), {
+    function qe(ee) {
+      return console.error("Error when trying to get with new name from DB", ee), {
         outcome: "refused",
-        message: BB
+        message: ee
       }
     }
-    async function pB(BB) {
-      const OB = await PB(BB, "/index/name/random", {});
-      return zB(OB) ? OB : "err" in OB ? lB(OB.err) : (BB.setPlayerName(OB.name), {
+    async function fe(ee) {
+      const ie = await Re(ee, "/index/name/random", {});
+      return ke(ie) ? ie : "err" in ie ? qe(ie.err) : (ee.setPlayerName(ie.name), {
         outcome: "changed",
-        name: OB.name
+        name: ie.name
       })
     }
-    async function qB(BB, OB) {
-      const GB = await PB(BB, "/index/name/update", {
-        name: OB
+    async function Te(ee, ie) {
+      const He = await Re(ee, "/index/name/update", {
+        name: ie
       });
-      return zB(GB) ? GB : "err" in GB ? lB(GB.err) : GB.nameExists ? {
+      return ke(He) ? He : "err" in He ? qe(He.err) : He.nameExists ? {
         outcome: "taken"
-      } : (BB.setPlayerName(OB), {
+      } : (ee.setPlayerName(ie), {
         outcome: "changed",
-        name: OB
+        name: ie
       })
     }
 
-    function ZB(BB, OB) {
-      let GB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const YB = 1 === OB ? 1 : 10 ** (OB - 1),
-        QB = String(YB + Math.floor(GB() * (10 ** OB - YB)));
-      return `${BB.slice(0,DB.l-OB)}${QB}`
+    function pe(ee, ie) {
+      let He = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const ye = 1 === ie ? 1 : 10 ** (ie - 1),
+        Me = String(ye + Math.floor(He() * (10 ** ie - ye)));
+      return `${ee.slice(0,be.g-ie)}${Me}`
     }
-    const NB = [1, 2, 3, 4];
-    async function RB(BB, OB) {
-      const GB = await qB(BB, OB);
-      if ("taken" !== GB.outcome) return GB;
-      for (const YB of NB) {
-        const GB = ZB(OB, YB),
-          DB = await qB(BB, GB);
-        if ("taken" !== DB.outcome) return DB
+    const Xe = [1, 2, 3, 4];
+    async function ze(ee, ie) {
+      const He = await Te(ee, ie);
+      if ("taken" !== He.outcome) return He;
+      for (const ye of Xe) {
+        const He = pe(ie, ye),
+          be = await Te(ee, He);
+        if ("taken" !== be.outcome) return be
       }
       return {
         outcome: "taken"
@@ -641,4 +641,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const ee in modules) Object.freeze(modules[ee]);
