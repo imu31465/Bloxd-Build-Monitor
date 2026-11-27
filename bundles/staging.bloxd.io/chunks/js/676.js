@@ -1,27 +1,62 @@
 export const id = 676;
 export const ids = [676];
 export const modules = {
-  64219: (RR, JR, GR) => {
-    function yR(RR, JR, GR, yR, tR, uR, ZR) {
-      const qR = JR,
-        iR = yR,
-        fR = GR;
-      RR[fR + 0] = qR[iR + 0], RR[fR + 1] = qR[iR + 1], RR[fR + 2] = qR[iR + 2], RR[fR + 3] = qR[iR + 3], RR[fR + 4] = qR[iR + 4], RR[fR + 5] = qR[iR + 5], RR[fR + 6] = qR[iR + 6], RR[fR + 7] = qR[iR + 7], RR[fR + 8] = qR[iR + 8], RR[fR + 9] = qR[iR + 9], RR[fR + 10] = qR[iR + 10], RR[fR + 11] = qR[iR + 11], RR[fR + 12] = qR[iR + 12] - tR, RR[fR + 13] = qR[iR + 13] - uR, RR[fR + 14] = qR[iR + 14] - ZR, RR[fR + 15] = qR[iR + 15]
-    }
+  64696: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      applyLightFoOffset: () => jr,
+      getFloatingOriginOffset: () => Wr,
+      lightFoVersion: () => ar,
+      wrapRenderableForFO: () => Ir
+    });
+    var Zr = Qr(54263);
 
-    function tR(RR) {
-      return (JR, GR, tR, uR) => {
-        const ZR = RR.camera;
-        if (!ZR) return void yR(JR, GR, tR, uR, 0, 0, 0);
-        const qR = ZR.worldMatrix;
-        yR(JR, GR, tR, uR, qR[12], qR[13], qR[14])
+    function Wr(rr) {
+      const Sr = rr.camera;
+      if (!Sr) return {
+        x: 0,
+        y: 0,
+        z: 0
+      };
+      const Qr = Sr.worldMatrix;
+      return {
+        x: Qr[12],
+        y: Qr[13],
+        z: Qr[14]
       }
     }
-    GR.r(JR), GR.d(JR, {
-      makePackMeshWorld: () => tR,
-      packMat4IntoF32WithOffset: () => yR
-    })
+
+    function ar(rr) {
+      return rr.camera ? rr.camera.worldMatrixVersion : 0
+    }
+
+    function jr(rr, Sr) {
+      const Qr = Sr.camera?.worldMatrix;
+      if (!Qr) return;
+      const Wr = Qr[12],
+        ar = Qr[13],
+        jr = Qr[14];
+      let Ir = 0;
+      for (const fr of Sr.lights) {
+        if (Ir >= Zr.d) break;
+        if (!fr._writeLightUbo) continue;
+        const Sr = 4 + 16 * Ir,
+          Qr = rr[Sr + 3];
+        if (0 === Qr || 2 === Qr) {
+          const Qr = fr.worldMatrix;
+          rr[Sr] = Qr[12] - Wr, rr[Sr + 1] = Qr[13] - ar, rr[Sr + 2] = Qr[14] - jr
+        }
+        Ir++
+      }
+    }
+
+    function Ir(rr, Sr, Qr) {
+      let Zr = -1;
+      return () => {
+        const Wr = Sr.camera ? Sr.camera.worldMatrixVersion : -1;
+        Wr !== Zr && (Qr(), Zr = Wr), rr()
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

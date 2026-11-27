@@ -1,136 +1,136 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  37796: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => LR,
-      d: () => nR,
-      g: () => wR,
-      j: () => KR
+  38154: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => hr,
+      d: () => zr,
+      h: () => mr,
+      l: () => xr
     });
-    var yR = GR(35140),
-      tR = GR(3494),
-      uR = GR(3498),
-      ZR = GR(10048),
-      qR = GR(1581),
-      iR = GR(66),
-      fR = GR(83),
-      VR = GR(1378);
+    var Zr = Qr(35448),
+      Wr = Qr(3425),
+      ar = Qr(3429),
+      jr = Qr(9818),
+      Ir = Qr(1573),
+      fr = Qr(72),
+      Er = Qr(92),
+      pr = Qr(1338);
 
-    function KR() {
-      var RR;
-      return (0, qR.h)(tR.e, (0, tR.r)()), (0, VR.jsx)(VR.Fragment, {
-        children: null === (RR = (0, tR.r)()) || void 0 === RR ? void 0 : RR.content
+    function xr() {
+      var rr;
+      return (0, Ir.g)(Wr.e, (0, Wr.w)()), (0, pr.jsx)(pr.Fragment, {
+        children: null === (rr = (0, Wr.w)()) || void 0 === rr ? void 0 : rr.content
       })
     }
 
-    function wR(RR) {
-      var JR;
+    function mr(rr) {
+      var Sr;
       let {
-        show: GR
-      } = RR;
-      (0, qR.h)(tR.e, (0, tR.r)());
-      const fR = null === (JR = (0, tR.r)()) || void 0 === JR ? void 0 : JR.menu;
-      return (0, iR.useEffect)((() => {
-        var RR;
-        GR || (null === fR || void 0 === fR || null === (RR = fR.onClose) || void 0 === RR || RR.call(fR), (0, uR.m)())
-      }), [GR, fR]), (0, iR.useEffect)((() => GR ? (0, ZR.e)(uR.q, uR.e) : void 0), [GR]), (0, VR.jsx)(yR.b, {
-        showing: GR,
+        show: Qr
+      } = rr;
+      (0, Ir.g)(Wr.e, (0, Wr.w)());
+      const Er = null === (Sr = (0, Wr.w)()) || void 0 === Sr ? void 0 : Sr.menu;
+      return (0, fr.useEffect)((() => {
+        var rr;
+        Qr || (null === Er || void 0 === Er || null === (rr = Er.onClose) || void 0 === rr || rr.call(Er), (0, ar.o)())
+      }), [Qr, Er]), (0, fr.useEffect)((() => Qr ? (0, jr.f)(ar.v, ar.e) : void 0), [Qr]), (0, pr.jsx)(Zr.c, {
+        showing: Qr,
         globallyUniqueKey: "clientGameMenu",
-        children: null === fR || void 0 === fR ? void 0 : fR.content
+        children: null === Er || void 0 === Er ? void 0 : Er.content
       })
     }
-    const rR = new Map,
-      eR = new Set;
+    const Nr = new Map,
+      Ur = new Set;
 
-    function aR(RR, JR) {
-      JR ? rR.set(RR, JR) : rR.delete(RR);
-      for (const GR of eR) GR()
+    function tr(rr, Sr) {
+      Sr ? Nr.set(rr, Sr) : Nr.delete(rr);
+      for (const Qr of Ur) Qr()
     }
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        placement: JR = "bottom"
-      } = RR;
-      const GR = (0, iR.useRef)(null);
-      return (0, iR.useLayoutEffect)((() => {
-        const RR = GR.current;
-        return aR(JR, RR), () => {
-          rR.get(JR) === RR && aR(JR, null)
+        placement: Sr = "bottom"
+      } = rr;
+      const Qr = (0, fr.useRef)(null);
+      return (0, fr.useLayoutEffect)((() => {
+        const rr = Qr.current;
+        return tr(Sr, rr), () => {
+          Nr.get(Sr) === rr && tr(Sr, null)
         }
-      }), [JR]), (0, VR.jsx)("div", {
-        ref: GR,
-        id: `clientGameHud-${JR}`,
+      }), [Sr]), (0, pr.jsx)("div", {
+        ref: Qr,
+        id: `clientGameHud-${Sr}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function nR(RR) {
+    function zr(rr) {
       let {
-        children: JR,
-        placement: GR = "bottom"
-      } = RR;
-      const [yR, tR] = (0, iR.useState)((() => {
-        var RR;
-        return null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null
+        children: Sr,
+        placement: Qr = "bottom"
+      } = rr;
+      const [Zr, Wr] = (0, fr.useState)((() => {
+        var rr;
+        return null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null
       }));
-      return (0, iR.useEffect)((() => {
-        const RR = () => {
-          var RR;
-          tR(null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null)
+      return (0, fr.useEffect)((() => {
+        const rr = () => {
+          var rr;
+          Wr(null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null)
         };
-        return eR.add(RR), RR(), () => {
-          eR.delete(RR)
+        return Ur.add(rr), rr(), () => {
+          Ur.delete(rr)
         }
-      }), [GR]), yR ? (0, fR.createPortal)(JR, yR) : null
+      }), [Qr]), Zr ? (0, Er.createPortal)(Sr, Zr) : null
     }
   },
-  35140: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR
+  35448: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar
     });
-    var yR = GR(5343),
-      tR = GR(5347);
+    var Zr = Qr(5301),
+      Wr = Qr(5308);
 
-    function uR(RR) {
+    function ar(rr) {
       let {
-        children: JR,
-        showing: GR,
-        globallyUniqueKey: uR,
-        alwaysMountChildren: ZR = !1,
-        doGameplayStartStopOnShow: qR = !0,
-        keepsMovement: iR = !1
-      } = RR;
-      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
+        children: Sr,
+        showing: Qr,
+        globallyUniqueKey: ar,
+        alwaysMountChildren: jr = !1,
+        doGameplayStartStopOnShow: Ir = !0,
+        keepsMovement: fr = !1
+      } = rr;
+      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
     }
   },
-  10048: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      e: () => tR
+  9818: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      f: () => Wr
     });
-    let yR = null;
-    const tR = function(RR) {
-        const JR = {
-          cycle: RR,
+    let Zr = null;
+    const Wr = function(rr) {
+        const Sr = {
+          cycle: rr,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return yR = JR, () => {
-          yR === JR && (yR = null)
+        return Zr = Sr, () => {
+          Zr === Sr && (Zr = null)
         }
       },
-      uR = () => {
-        var RR;
-        return null !== (RR = yR) && void 0 !== RR && RR.canCycle() ? yR.cycle : null
+      ar = () => {
+        var rr;
+        return null !== (rr = Zr) && void 0 !== rr && rr.canCycle() ? Zr.cycle : null
       }
   },
-  40772: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => hR
+  41123: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => ur
     });
-    const yR = {
+    const Zr = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -140,270 +140,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var tR = GR(66),
-      uR = GR(39198),
-      ZR = GR(377);
-    const qR = ["Basic", "Rare", "Super"];
+    var Wr = Qr(72),
+      ar = Qr(39525),
+      jr = Qr(379);
+    const Ir = ["Basic", "Rare", "Super"];
 
-    function iR(RR, JR) {
-      return `${"Basic"===JR?"":`${JR} `}${"Simple"===RR?"":`${RR} `}Lucky Block`
+    function fr(rr, Sr) {
+      return `${"Basic"===Sr?"":`${Sr} `}${"Simple"===rr?"":`${rr} `}Lucky Block`
     }
-    const fR = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((RR => qR.map((JR => [iR(RR, JR), {
-      category: RR,
-      rarity: JR
+    const Er = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((rr => Ir.map((Sr => [fr(rr, Sr), {
+      category: rr,
+      rarity: Sr
     }])))));
-    fR.keys();
+    Er.keys();
 
-    function VR(RR) {
-      return fR.get(RR)
+    function pr(rr) {
+      return Er.get(rr)
     }
-    const KR = "Obsidian",
-      wR = ["Cobweb"],
-      rR = [...["Red", "Blue", "Green", "Yellow"].map((RR => `${(0,ZR.T)(RR)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", KR, ...wR];
+    const xr = "Obsidian",
+      mr = ["Cobweb"],
+      Nr = [...["Red", "Blue", "Green", "Yellow"].map((rr => `${(0,jr.U)(rr)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", xr, ...mr];
 
-    function eR(RR) {
-      return rR.includes(RR)
+    function Ur(rr) {
+      return Nr.includes(rr)
     }
-    var aR = GR(679);
+    var tr = Qr(688);
 
-    function LR(RR, JR) {
-      const GR = VR(RR);
-      if (GR) {
-        const RR = VR(JR);
-        if (!RR) return;
-        const yR = qR.length - 1 - qR.indexOf(RR.rarity);
-        return (RR.category === GR.category ? 0 : 1) * qR.length + yR
+    function hr(rr, Sr) {
+      const Qr = pr(rr);
+      if (Qr) {
+        const rr = pr(Sr);
+        if (!rr) return;
+        const Zr = Ir.length - 1 - Ir.indexOf(rr.rarity);
+        return (rr.category === Qr.category ? 0 : 1) * Ir.length + Zr
       }
-      if (!eR(RR)) return;
-      if (JR === RR) return 0;
-      const yR = RR => eR(RR) && !wR.includes(RR) && RR !== KR;
-      return yR(RR) && yR(JR) ? 1 : void 0
+      if (!Ur(rr)) return;
+      if (Sr === rr) return 0;
+      const Zr = rr => Ur(rr) && !mr.includes(rr) && rr !== xr;
+      return Zr(rr) && Zr(Sr) ? 1 : void 0
     }
-    const nR = [...Array.from({
-      length: aR.q - aR.m
-    }, ((RR, JR) => aR.m + JR)), ...Array.from({
-      length: aR.m
-    }, ((RR, JR) => JR))];
-    class UR {
-      constructor(RR) {
-        this.inventory = RR, this.pending = new Map
+    const zr = [...Array.from({
+      length: tr.t - tr.p
+    }, ((rr, Sr) => tr.p + Sr)), ...Array.from({
+      length: tr.p
+    }, ((rr, Sr) => Sr))];
+    class Yr {
+      constructor(rr) {
+        this.inventory = rr, this.pending = new Map
       }
-      onPlace(RR) {
-        var JR;
-        const GR = this.inventory.selectedSlot(),
-          yR = this.inventory.itemAt(GR);
-        (null === yR || void 0 === yR ? void 0 : yR.name) === RR && (null !== (JR = yR.amount) && void 0 !== JR ? JR : 1) <= 1 && WR(RR) && this.pending.set(GR, RR)
+      onPlace(rr) {
+        var Sr;
+        const Qr = this.inventory.selectedSlot(),
+          Zr = this.inventory.itemAt(Qr);
+        (null === Zr || void 0 === Zr ? void 0 : Zr.name) === rr && (null !== (Sr = Zr.amount) && void 0 !== Sr ? Sr : 1) <= 1 && nr(rr) && this.pending.set(Qr, rr)
       }
-      onDrop(RR, JR) {
-        JR < aR.m && null === this.inventory.itemAt(JR) && WR(RR) && this.refill(JR, RR)
+      onDrop(rr, Sr) {
+        Sr < tr.p && null === this.inventory.itemAt(Sr) && nr(rr) && this.refill(Sr, rr)
       }
-      gK() {
-        const RR = [...this.pending];
+      lx() {
+        const rr = [...this.pending];
         this.pending.clear();
-        for (const [JR, GR] of RR) null === this.inventory.itemAt(JR) && this.refill(JR, GR)
+        for (const [Sr, Qr] of rr) null === this.inventory.itemAt(Sr) && this.refill(Sr, Qr)
       }
-      refill(RR, JR) {
-        const GR = function(RR, JR, GR, yR) {
-          let tR, uR = 1 / 0;
-          for (const ZR of nR) {
-            if (ZR === JR) continue;
-            const qR = yR(ZR);
-            if (!qR || ZR < aR.m && JR !== GR) continue;
-            const iR = LR(RR, qR.name);
-            void 0 !== iR && iR < uR && (tR = ZR, uR = iR)
+      refill(rr, Sr) {
+        const Qr = function(rr, Sr, Qr, Zr) {
+          let Wr, ar = 1 / 0;
+          for (const jr of zr) {
+            if (jr === Sr) continue;
+            const Ir = Zr(jr);
+            if (!Ir || jr < tr.p && Sr !== Qr) continue;
+            const fr = hr(rr, Ir.name);
+            void 0 !== fr && fr < ar && (Wr = jr, ar = fr)
           }
-          return tR
-        }(JR, RR, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== GR && this.inventory.swap(RR, GR)
+          return Wr
+        }(Sr, rr, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== Qr && this.inventory.swap(rr, Qr)
       }
     }
 
-    function WR(RR) {
-      return !!VR(RR) || eR(RR)
+    function nr(rr) {
+      return !!pr(rr) || Ur(rr)
     }
-    var AR = GR(3494),
-      CR = GR(83),
-      XR = GR(1163),
-      MR = GR.n(XR);
-    const BR = "Lucky Clover",
-      lR = {
+    var er = Qr(3425),
+      Kr = Qr(92),
+      yr = Qr(1155),
+      Br = Qr.n(yr);
+    const Tr = "Lucky Clover",
+      vr = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function pR(RR) {
-      return lR[RR][0]
+    function Or(rr) {
+      return vr[rr][0]
     }
 
-    function gR(RR) {
-      return qR.filter((JR => RR >= pR(JR)))
+    function Lr(rr) {
+      return Ir.filter((Sr => rr >= Or(Sr)))
     }
-    var bR = GR(359),
-      vR = GR(3465),
-      OR = GR(25),
-      xR = GR(3701),
-      NR = GR(2123),
-      DR = GR(37796),
-      HR = GR(1468);
-    var oR = GR(1378);
-    const cR = {
-      Basic: ZR.C.whiteUiText,
-      Rare: ZR.C.goldUiText,
-      Super: ZR.C.cyanUiText
+    var lr = Qr(360),
+      Xr = Qr(3404),
+      Pr = Qr(26),
+      Hr = Qr(3640),
+      qr = Qr(2075),
+      Rr = Qr(38154),
+      gr = Qr(1448);
+    var Cr = Qr(1338);
+    const Mr = {
+      Basic: jr.K.whiteUiText,
+      Rare: jr.K.goldUiText,
+      Super: jr.K.cyanUiText
     };
-    let PR = 1;
+    let Gr = 1;
 
-    function IR() {
-      const RR = (0, vR.f)("currencyAmounts"),
-        JR = null === RR || void 0 === RR ? void 0 : RR.Clovers;
-      return !JR || JR.hidden ? null : (0, oR.jsx)(DR.d, {
-        children: (0, oR.jsx)(mR, {
-          amount: JR.amount
+    function kr() {
+      const rr = (0, Xr.l)("currencyAmounts"),
+        Sr = null === rr || void 0 === rr ? void 0 : rr.Clovers;
+      return !Sr || Sr.hidden ? null : (0, Cr.jsx)(Rr.d, {
+        children: (0, Cr.jsx)(Ar, {
+          amount: Sr.amount
         })
       })
     }
 
-    function mR(RR) {
-      var JR, GR, yR;
+    function Ar(rr) {
+      var Sr, Qr, Zr;
       let {
-        amount: uR
-      } = RR;
+        amount: ar
+      } = rr;
       const {
-        openEverythingMenuName: iR
-      } = (0, OR.o)(["openEverythingMenuName"]), fR = (0, xR.c)(), [VR, KR] = (0, tR.useState)(uR), [wR, rR] = (0, tR.useState)(null), [eR, aR] = (0, tR.useState)(0), [LR, nR] = (0, tR.useState)([]), UR = (0, tR.useRef)(uR), WR = (0, tR.useRef)(!1), AR = (0, tR.useRef)(null), XR = iR === bR.o.SHOP;
-      (0, tR.useEffect)((() => {
-        const RR = UR.current;
-        if (UR.current = uR, uR <= RR || XR) return void KR(uR);
-        const JR = fR || LR.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (GR = uR - RR, yR = !WR.current, GR <= 0 || !yR && GR < 40 ? 0 : Math.min(4, Math.ceil(GR / 30)));
-        var GR, yR;
-        if (WR.current = !0, gR(uR).length > gR(RR).length && aR(PR++), JR > 0) {
-          const RR = [];
-          for (let GR = 0; GR < JR; GR++) RR.push({
-            id: PR++,
+        openEverythingMenuName: fr
+      } = (0, Pr.n)(["openEverythingMenuName"]), Er = (0, Hr.b)(), [pr, xr] = (0, Wr.useState)(ar), [mr, Nr] = (0, Wr.useState)(null), [Ur, tr] = (0, Wr.useState)(0), [hr, zr] = (0, Wr.useState)([]), Yr = (0, Wr.useRef)(ar), nr = (0, Wr.useRef)(!1), er = (0, Wr.useRef)(null), yr = fr === lr.q.SHOP;
+      (0, Wr.useEffect)((() => {
+        const rr = Yr.current;
+        if (Yr.current = ar, ar <= rr || yr) return void xr(ar);
+        const Sr = Er || hr.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (Qr = ar - rr, Zr = !nr.current, Qr <= 0 || !Zr && Qr < 40 ? 0 : Math.min(4, Math.ceil(Qr / 30)));
+        var Qr, Zr;
+        if (nr.current = !0, Lr(ar).length > Lr(rr).length && tr(Gr++), Sr > 0) {
+          const rr = [];
+          for (let Qr = 0; Qr < Sr; Qr++) rr.push({
+            id: Gr++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * GR
+            delayMs: 70 * Qr
           });
-          nR((JR => [...JR, ...RR]))
+          zr((Sr => [...Sr, ...rr]))
         }
-        const tR = JR > 0 ? 600 : 0;
-        rR({
-          id: PR++,
-          delayMs: tR
+        const Wr = Sr > 0 ? 600 : 0;
+        Nr({
+          id: Gr++,
+          delayMs: Wr
         });
-        const qR = performance.now() + tR;
-        let iR = 0;
-        const VR = JR => {
-          const GR = ZR.e.clamp((JR - qR) / 600, 0, 1);
-          KR(Math.round(RR + (uR - RR) * GR)), GR < 1 && (iR = requestAnimationFrame(VR))
+        const Ir = performance.now() + Wr;
+        let fr = 0;
+        const pr = Sr => {
+          const Qr = jr.b.clamp((Sr - Ir) / 600, 0, 1);
+          xr(Math.round(rr + (ar - rr) * Qr)), Qr < 1 && (fr = requestAnimationFrame(pr))
         };
-        return iR = requestAnimationFrame(VR), () => {
-          cancelAnimationFrame(iR)
+        return fr = requestAnimationFrame(pr), () => {
+          cancelAnimationFrame(fr)
         }
-      }), [uR, XR]);
-      const lR = function(RR) {
-          var JR;
-          const GR = null !== (JR = qR.find((JR => RR < pR(JR)))) && void 0 !== JR ? JR : "Super";
+      }), [ar, yr]);
+      const vr = function(rr) {
+          var Sr;
+          const Qr = null !== (Sr = Ir.find((Sr => rr < Or(Sr)))) && void 0 !== Sr ? Sr : "Super";
           return {
-            rarity: GR,
-            progress: ZR.e.clamp(RR / pR(GR), 0, 1)
+            rarity: Qr,
+            progress: jr.b.clamp(rr / Or(Qr), 0, 1)
           }
-        }(VR),
-        vR = gR(VR).at(-1);
-      return (0, oR.jsxs)(oR.Fragment, {
-        children: [(0, oR.jsx)("div", {
+        }(pr),
+        Xr = Lr(pr).at(-1);
+      return (0, Cr.jsxs)(Cr.Fragment, {
+        children: [(0, Cr.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, oR.jsxs)("div", {
-            className: MR()("LuckyCloverWallet", {
-              Capped: vR && "Basic" !== vR
+          children: (0, Cr.jsxs)("div", {
+            className: Br()("LuckyCloverWallet", {
+              Capped: Xr && "Basic" !== Xr
             }),
-            style: vR && {
-              "--luckyTierColour": cR[vR]
+            style: Xr && {
+              "--luckyTierColour": Mr[Xr]
             },
-            children: [(0, oR.jsx)("div", {
+            children: [(0, Cr.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${lR.progress})`
+                transform: `scaleX(${vr.progress})`
               }
-            }), eR > 0 && (0, oR.jsx)("div", {
+            }), Ur > 0 && (0, Cr.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(JR=null===wR||void 0===wR?void 0:wR.delayMs)&&void 0!==JR?JR:0}ms`
+                animationDelay: `${null!==(Sr=null===mr||void 0===mr?void 0:mr.delayMs)&&void 0!==Sr?Sr:0}ms`
               }
-            }, eR), (0, oR.jsx)("div", {
-              ref: AR,
-              className: MR()("LuckyCloverWalletIcon", wR && "Bounce"),
+            }, Ur), (0, Cr.jsx)("div", {
+              ref: er,
+              className: Br()("LuckyCloverWalletIcon", mr && "Bounce"),
               style: {
-                animationDelay: `${null!==(yR=null===wR||void 0===wR?void 0:wR.delayMs)&&void 0!==yR?yR:0}ms`
+                animationDelay: `${null!==(Zr=null===mr||void 0===mr?void 0:mr.delayMs)&&void 0!==Zr?Zr:0}ms`
               },
-              children: (0, oR.jsx)(NR.b, {
-                itemName: BR,
+              children: (0, Cr.jsx)(qr.d, {
+                itemName: Tr,
                 amount: 0
               })
-            }, null !== (GR = null === wR || void 0 === wR ? void 0 : wR.id) && void 0 !== GR ? GR : 0), (0, oR.jsx)("span", {
+            }, null !== (Qr = null === mr || void 0 === mr ? void 0 : mr.id) && void 0 !== Qr ? Qr : 0), (0, Cr.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: VR
-            }), vR && (0, oR.jsx)(HR.d, {
+              children: pr
+            }), Xr && (0, Cr.jsx)(gr.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, CR.createPortal)(LR.map((RR => (0, oR.jsx)(zR, {
-          flyer: RR,
-          target: AR,
+        }), (0, Kr.createPortal)(hr.map((rr => (0, Cr.jsx)(Vr, {
+          flyer: rr,
+          target: er,
           onDone: () => {
-            nR((JR => JR.filter((JR => JR.id !== RR.id))))
+            zr((Sr => Sr.filter((Sr => Sr.id !== rr.id))))
           }
-        }, RR.id))), document.body)]
+        }, rr.id))), document.body)]
       })
     }
 
-    function zR(RR) {
+    function Vr(rr) {
       let {
-        flyer: JR,
-        target: GR,
-        onDone: yR
-      } = RR;
-      const uR = (0, tR.useRef)(null);
-      return (0, tR.useEffect)((() => {
-        var RR;
-        const tR = null === (RR = GR.current) || void 0 === RR ? void 0 : RR.getBoundingClientRect();
-        if (!uR.current || !tR) return void yR();
+        flyer: Sr,
+        target: Qr,
+        onDone: Zr
+      } = rr;
+      const ar = (0, Wr.useRef)(null);
+      return (0, Wr.useEffect)((() => {
+        var rr;
+        const Wr = null === (rr = Qr.current) || void 0 === rr ? void 0 : rr.getBoundingClientRect();
+        if (!ar.current || !Wr) return void Zr();
         const {
-          x: ZR,
-          y: qR
-        } = JR, iR = ZR + 140 * (Math.random() - .5), fR = qR - 30 - 40 * Math.random(), VR = uR.current.animate([{
-          transform: `translate(${ZR}px, ${qR}px) scale(0.3)`,
+          x: jr,
+          y: Ir
+        } = Sr, fr = jr + 140 * (Math.random() - .5), Er = Ir - 30 - 40 * Math.random(), pr = ar.current.animate([{
+          transform: `translate(${jr}px, ${Ir}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${iR}px, ${fR}px) scale(1.3)`,
+          transform: `translate(${fr}px, ${Er}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${tR.left}px, ${tR.top}px) scale(0.8)`,
+          transform: `translate(${Wr.left}px, ${Wr.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: JR.delayMs,
+          delay: Sr.delayMs,
           fill: "backwards"
         });
-        return VR.onfinish = yR, () => {
-          VR.cancel()
+        return pr.onfinish = Zr, () => {
+          pr.cancel()
         }
-      }), []), (0, oR.jsx)("div", {
-        ref: uR,
+      }), []), (0, Cr.jsx)("div", {
+        ref: ar,
         className: "LuckyCloverFlying",
-        children: (0, oR.jsx)(NR.b, {
-          itemName: BR,
+        children: (0, Cr.jsx)(qr.d, {
+          itemName: Tr,
           amount: 0
         })
       })
     }
-    var SR = GR(32);
-    const jR = "luckyGearUpgradeView",
-      dR = {
+    var ir = Qr(34);
+    const wr = "luckyGearUpgradeView",
+      cr = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -411,13 +411,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function ER(RR) {
-      var JR;
-      return null !== (JR = dR[RR.split(" ")[0]]) && void 0 !== JR ? JR : "#e07bff"
+    function Fr(rr) {
+      var Sr;
+      return null !== (Sr = cr[rr.split(" ")[0]]) && void 0 !== Sr ? Sr : "#e07bff"
     }
-    class YR {
-      constructor(RR, JR) {
-        this.selectedSlot = RR, this.itemAt = JR, this.rings = [], this.unseen = new Map, this.view = {
+    class or {
+      constructor(rr, Sr) {
+        this.selectedSlot = rr, this.itemAt = Sr, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -425,200 +425,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      BK(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [GR, yR, tR] of RR) this.rings.push({
+      vx(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [Qr, Zr, Wr] of rr) this.rings.push({
           id: this.nextId++,
-          slot: GR,
-          colour: ER(tR),
-          until: JR + 1200
-        }), GR !== this.selectedSlot() && this.unseen.set(GR, {
-          from: yR,
-          to: tR
+          slot: Qr,
+          colour: Fr(Wr),
+          until: Sr + 1200
+        }), Qr !== this.selectedSlot() && this.unseen.set(Qr, {
+          from: Zr,
+          to: Wr
         });
-        this.JK()
+        this.Jp()
       }
-      gK() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      lx() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const JR = this.rings.filter((JR => JR.until > RR));
-        let GR = JR.length !== this.rings.length;
-        this.rings = JR;
-        for (const [yR, {
-            from: tR,
-            to: uR
+        const Sr = this.rings.filter((Sr => Sr.until > rr));
+        let Qr = Sr.length !== this.rings.length;
+        this.rings = Sr;
+        for (const [Zr, {
+            from: Wr,
+            to: ar
           }] of this.unseen) {
-          const RR = this.itemAt(yR);
-          (yR === this.selectedSlot() || RR !== uR && RR !== tR) && (this.unseen.delete(yR), GR = !0)
+          const rr = this.itemAt(Zr);
+          (Zr === this.selectedSlot() || rr !== ar && rr !== Wr) && (this.unseen.delete(Zr), Qr = !0)
         }
-        GR && this.JK()
+        Qr && this.Jp()
       }
-      JK() {
+      Jp() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, SR.n.JK(jR, this.view)
+        }, ir.i.Jp(wr, this.view)
       }
     }
-    var kR = GR(1581);
+    var br = Qr(1573);
 
-    function QR(RR) {
-      return document.querySelector(`.HotBar [data-inven-idx="${RR}"]`)
+    function Jr(rr) {
+      return document.querySelector(`.HotBar [data-inven-idx="${rr}"]`)
     }
 
-    function FR(RR) {
+    function Dr(rr) {
       let {
-        ring: JR
-      } = RR;
-      const [GR, yR] = (0, tR.useState)(null);
-      return (0, tR.useLayoutEffect)((() => {
-        var RR, GR;
-        yR(null !== (RR = null === (GR = QR(JR.slot)) || void 0 === GR ? void 0 : GR.getBoundingClientRect()) && void 0 !== RR ? RR : null)
-      }), [JR]), GR ? (0, oR.jsx)("div", {
+        ring: Sr
+      } = rr;
+      const [Qr, Zr] = (0, Wr.useState)(null);
+      return (0, Wr.useLayoutEffect)((() => {
+        var rr, Qr;
+        Zr(null !== (rr = null === (Qr = Jr(Sr.slot)) || void 0 === Qr ? void 0 : Qr.getBoundingClientRect()) && void 0 !== rr ? rr : null)
+      }), [Sr]), Qr ? (0, Cr.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: GR.left,
-          top: GR.top,
-          width: GR.width,
-          height: GR.height,
-          "--ringColour": JR.colour,
+          left: Qr.left,
+          top: Qr.top,
+          width: Qr.width,
+          height: Qr.height,
+          "--ringColour": Sr.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function TR(RR) {
+    function dr(rr) {
       let {
-        slot: JR
-      } = RR;
-      const [GR, yR] = (0, tR.useState)(null);
-      return (0, tR.useLayoutEffect)((() => {
-        const RR = () => {
-          yR(QR(JR))
+        slot: Sr
+      } = rr;
+      const [Qr, Zr] = (0, Wr.useState)(null);
+      return (0, Wr.useLayoutEffect)((() => {
+        const rr = () => {
+          Zr(Jr(Sr))
         };
-        RR();
-        const GR = new MutationObserver(RR),
-          tR = document.querySelector(".BottomMiddleElements");
-        return tR && GR.observe(tR, {
+        rr();
+        const Qr = new MutationObserver(rr),
+          Wr = document.querySelector(".BottomMiddleElements");
+        return Wr && Qr.observe(Wr, {
           childList: !0,
           subtree: !0
         }), () => {
-          GR.disconnect()
+          Qr.disconnect()
         }
-      }), [JR]), GR ? (0, CR.createPortal)((0, oR.jsx)("div", {
+      }), [Sr]), Qr ? (0, Kr.createPortal)((0, Cr.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), GR) : null
+      }), Qr) : null
     }
 
-    function sR(RR) {
+    function sr(rr) {
       let {
-        controller: JR
-      } = RR;
-      const GR = (0, kR.h)(jR, JR.getView());
-      return (0, oR.jsxs)(oR.Fragment, {
-        children: [GR.rings.map((RR => (0, oR.jsx)(FR, {
-          ring: RR
-        }, RR.id))), GR.unseenSlots.map((RR => (0, oR.jsx)(TR, {
-          slot: RR
-        }, RR)))]
+        controller: Sr
+      } = rr;
+      const Qr = (0, br.g)(wr, Sr.getView());
+      return (0, Cr.jsxs)(Cr.Fragment, {
+        children: [Qr.rings.map((rr => (0, Cr.jsx)(Dr, {
+          ring: rr
+        }, rr.id))), Qr.unseenSlots.map((rr => (0, Cr.jsx)(dr, {
+          slot: rr
+        }, rr)))]
       })
     }
-    const hR = function(RR, JR, GR, ZR) {
-      let qR, {
-          localPlayerId: iR
-        } = ZR,
-        fR = null;
-      const VR = new UR({
-          itemAt: RR => qR.getItemSlot(iR, RR),
-          selectedSlot: () => qR.getSelectedInventorySlotI(iR),
-          swap: (RR, JR) => {
-            qR.swapInventorySlots(RR, JR)
+    const ur = function(rr, Sr, Qr, jr) {
+      let Ir, {
+          localPlayerId: fr
+        } = jr,
+        Er = null;
+      const pr = new Yr({
+          itemAt: rr => Ir.getItemSlot(fr, rr),
+          selectedSlot: () => Ir.getSelectedInventorySlotI(fr),
+          swap: (rr, Sr) => {
+            Ir.swapInventorySlots(rr, Sr)
           }
         }),
-        KR = new YR((() => qR.getSelectedInventorySlotI(iR)), (RR => {
-          var JR;
-          return null === (JR = qR.getItemSlot(iR, RR)) || void 0 === JR ? void 0 : JR.name
+        xr = new or((() => Ir.getSelectedInventorySlotI(fr)), (rr => {
+          var Sr;
+          return null === (Sr = Ir.getItemSlot(fr, rr)) || void 0 === Sr ? void 0 : Sr.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, uR.e)()
+          placeAgainstBeds: (0, ar.b)()
         },
-        onCreate: RR => {
-          qR = RR, fR = (0, AR.G)((0, tR.createElement)(tR.Fragment, null, (0, tR.createElement)(IR), (0, tR.createElement)(sR, {
-            controller: KR
+        onCreate: rr => {
+          Ir = rr, Er = (0, er.H)((0, Wr.createElement)(Wr.Fragment, null, (0, Wr.createElement)(kr), (0, Wr.createElement)(sr, {
+            controller: xr
           })))
         },
         onClose: () => {
-          var RR;
-          null === (RR = fR) || void 0 === RR || RR()
+          var rr;
+          null === (rr = Er) || void 0 === rr || rr()
         },
-        gK: () => {
-          VR.gK(), KR.gK()
+        lx: () => {
+          pr.lx(), xr.lx()
         },
-        onReceivedMessageFromServer: (RR, JR) => {
-          "luckyGearUpgrade" === RR && KR.BK(JR)
+        onReceivedMessageFromServer: (rr, Sr) => {
+          "luckyGearUpgrade" === rr && xr.vx(Sr)
         },
-        onPlayerChangeBlock: (RR, JR, GR, yR, tR, uR) => {
-          "Air" !== uR && VR.onPlace(uR)
+        onPlayerChangeBlock: (rr, Sr, Qr, Zr, Wr, ar) => {
+          "Air" !== ar && pr.onPlace(ar)
         },
-        onPlayerDropItem: (RR, JR, GR, yR) => {
-          VR.onDrop(JR, yR)
+        onPlayerDropItem: (rr, Sr, Qr, Zr) => {
+          pr.onDrop(Sr, Zr)
         },
-        onPlayerAltAction: (RR, JR, GR, tR, uR, ZR) => {
-          if (!ZR || "Mesh" !== qR.getEntityType(ZR)) return;
-          const iR = qR.getEntityName(ZR),
-            fR = Object.values(yR).find((RR => RR.name === iR));
-          fR && qR.openShop(RR, !1, fR.shopTab)
+        onPlayerAltAction: (rr, Sr, Qr, Wr, ar, jr) => {
+          if (!jr || "Mesh" !== Ir.getEntityType(jr)) return;
+          const fr = Ir.getEntityName(jr),
+            Er = Object.values(Zr).find((rr => rr.name === fr));
+          Er && Ir.openShop(rr, !1, Er.shopTab)
         }
       }
     }
   },
-  39198: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR
+  39525: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir
     });
-    var yR = GR(377),
-      tR = GR(38040),
-      uR = GR(5290);
-    const ZR = ["Leaf Bed", "_Leaf Bed Head", ...yR.Cc.flatMap((RR => [`${RR} Bed`, `_${RR} Bed Head`, `${RR} Strongbed`, `_${RR} Strongbed Head`]))];
+    var Zr = Qr(379),
+      Wr = Qr(38397),
+      ar = Qr(5229);
+    const jr = ["Leaf Bed", "_Leaf Bed Head", ...Zr.Cc.flatMap((rr => [`${rr} Bed`, `_${rr} Bed Head`, `${rr} Strongbed`, `_${rr} Strongbed Head`]))];
 
-    function qR() {
-      let RR;
+    function Ir() {
+      let rr;
       return {
-        onCreate(JR) {
-          RR = JR
+        onCreate(Sr) {
+          rr = Sr
         },
-        altVetoBlocks: ZR,
-        onPlayerAttemptAltAction(JR, GR, yR, ZR, qR, iR) {
-          var fR;
-          if ((0, tR.d)(RR.getMetaInfo(qR).rootName) && !RR.isEntityInteractable(iR) && (0, uR.c)(null === (fR = RR.uyR(JR)) || void 0 === fR ? void 0 : fR.typeObj.type)) return "preventAction"
+        altVetoBlocks: jr,
+        onPlayerAttemptAltAction(Sr, Qr, Zr, jr, Ir, fr) {
+          var Er;
+          if ((0, Wr.c)(rr.getMetaInfo(Ir).rootName) && !rr.isEntityInteractable(fr) && (0, ar.h)(null === (Er = rr.XQr(Sr)) || void 0 === Er ? void 0 : Er.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  38040: (RR, JR, GR) => {
-    function yR(RR) {
-      return RR.includes("Leaf Bed")
+  38397: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return rr.includes("Leaf Bed")
     }
 
-    function tR(RR) {
-      return / Bed(?: Head)?(?:\||$)/.test(RR) && !yR(RR)
+    function Wr(rr) {
+      return / Bed(?: Head)?(?:\||$)/.test(rr) && !Zr(rr)
     }
 
-    function uR(RR) {
-      return RR.includes(" Strongbed")
+    function ar(rr) {
+      return rr.includes(" Strongbed")
     }
 
-    function ZR(RR) {
-      return yR(RR) || tR(RR) || uR(RR)
+    function jr(rr) {
+      return Zr(rr) || Wr(rr) || ar(rr)
     }
-    GR.d(JR, {
-      d: () => ZR,
-      f: () => yR,
-      h: () => uR,
-      k: () => tR
+    Qr.d(Sr, {
+      c: () => jr,
+      f: () => Zr,
+      h: () => ar,
+      i: () => Wr
     })
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

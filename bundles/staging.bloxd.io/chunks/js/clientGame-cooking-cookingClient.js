@@ -1,26 +1,26 @@
 export const id = 16;
 export const ids = [16];
 export const modules = {
-  40701: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => tR
+  41034: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => Wr
     });
-    const yR = [
+    const Zr = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      tR = function(RR, JR, GR) {
-        let tR;
+      Wr = function(rr, Sr, Qr) {
+        let Wr;
         return {
-          onCreate: RR => {
-            tR = RR
+          onCreate: rr => {
+            Wr = rr
           },
-          onPlayerAltAction: (RR, JR, GR, uR, ZR, qR) => {
-            yR.some((RR => RR[0] === JR && RR[2] === uR)) && tR.openShop(RR, !1)
+          onPlayerAltAction: (rr, Sr, Qr, ar, jr, Ir) => {
+            Zr.some((rr => rr[0] === Sr && rr[2] === ar)) && Wr.openShop(rr, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

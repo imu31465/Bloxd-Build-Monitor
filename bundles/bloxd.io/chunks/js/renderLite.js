@@ -1,75 +1,75 @@
 export const id = 58;
 export const ids = [58];
 export const modules = {
-  54647: (RR, JR, GR) => {
-    GR.d(JR, {
-      startRenderLite: () => lR
+  55152: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      startRenderLite: () => vr
     });
-    var yR = GR(2448),
-      tR = GR(709),
-      uR = GR(132),
-      ZR = GR(5685),
-      qR = GR(42568),
-      iR = GR(5676),
-      fR = GR(42230),
-      VR = GR(42118),
-      KR = GR(42300),
-      wR = GR(3960),
-      rR = GR(5316),
-      eR = GR(35012);
-    const aR = new Map([
+    var Zr = Qr(2396),
+      Wr = Qr(712),
+      ar = Qr(135),
+      jr = Qr(5617),
+      Ir = Qr(42895),
+      fr = Qr(5610),
+      Er = Qr(42559),
+      pr = Qr(42451),
+      xr = Qr(42617),
+      mr = Qr(3909),
+      Nr = Qr(5270),
+      Ur = Qr(35315);
+    const tr = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class LR {
-      constructor(RR) {
-        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = RR
+    class hr {
+      constructor(rr) {
+        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = rr
       }
-      line(RR, JR) {
-        const GR = this.lines < 10 ? 6e4 : 6e5;
-        return void 0 === RR || RR === this.noted || JR - this.atMs < GR ? null : (this.noted = RR, this.lines++, this.atMs = JR, `${this.label}: ${RR}`)
+      line(rr, Sr) {
+        const Qr = this.lines < 10 ? 6e4 : 6e5;
+        return void 0 === rr || rr === this.noted || Sr - this.atMs < Qr ? null : (this.noted = rr, this.lines++, this.atMs = Sr, `${this.label}: ${rr}`)
       }
     }
-    class nR {
+    class zr {
       constructor() {
-        this.failuresLogged = 0, this.heldLogged = !1, this.links = new LR("gl links"), this.programUse = new LR("gl programs")
+        this.failuresLogged = 0, this.heldLogged = !1, this.links = new hr("gl links"), this.programUse = new hr("gl programs")
       }
-      failures(RR) {
-        const JR = RR ? RR.split(" ") : [],
-          GR = JR.slice(this.failuresLogged).map((RR => {
-            var JR;
-            const [GR, yR] = RR.split(":"), tR = null !== (JR = aR.get(GR.slice(-1))) && void 0 !== JR ? JR : "";
-            return `gl link failed: program row ${parseInt(GR)}${tR}, read ${yR} ms after issue`
+      failures(rr) {
+        const Sr = rr ? rr.split(" ") : [],
+          Qr = Sr.slice(this.failuresLogged).map((rr => {
+            var Sr;
+            const [Qr, Zr] = rr.split(":"), Wr = null !== (Sr = tr.get(Qr.slice(-1))) && void 0 !== Sr ? Sr : "";
+            return `gl link failed: program row ${parseInt(Qr)}${Wr}, read ${Zr} ms after issue`
           }));
-        return this.failuresLogged = JR.length, GR
+        return this.failuresLogged = Sr.length, Qr
       }
-      heldAtBackstop(RR) {
-        return this.heldLogged || void 0 === RR ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${RR}`)
+      heldAtBackstop(rr) {
+        return this.heldLogged || void 0 === rr ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${rr}`)
       }
-      summaryLines(RR, JR, GR, yR) {
-        const tR = this.links.line(RR, GR);
-        return [tR && `${tR}; tab ${(0,eR.c)(yR)}`, this.programUse.line(JR, GR)].filter((RR => null !== RR))
+      summaryLines(rr, Sr, Qr, Zr) {
+        const Wr = this.links.line(rr, Qr);
+        return [Wr && `${Wr}; tab ${(0,Ur.g)(Zr)}`, this.programUse.line(Sr, Qr)].filter((rr => null !== rr))
       }
     }
-    var UR = GR(5563);
-    class WR {
+    var Yr = Qr(5501);
+    class nr {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(RR, JR, GR) {
-        if ("none" !== JR && (this.frames++, "paced" === JR && this.paced++, "drawn" === JR)) {
-          if (this.drawn++, this.renderUs += GR, this.renderUsMax = Math.max(this.renderUsMax, GR), null !== this.lastDrawnMs) {
-            const JR = RR - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, JR), JR >= 50 && this.longGaps++
+      frame(rr, Sr, Qr) {
+        if ("none" !== Sr && (this.frames++, "paced" === Sr && this.paced++, "drawn" === Sr)) {
+          if (this.drawn++, this.renderUs += Qr, this.renderUsMax = Math.max(this.renderUsMax, Qr), null !== this.lastDrawnMs) {
+            const Sr = rr - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, Sr), Sr >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = RR
+          this.lastDrawnMs = rr
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const RR = {
+        const rr = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -78,263 +78,263 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, RR
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, rr
       }
     }
 
-    function AR(RR) {
-      return (RR / 1048576).toFixed(1)
+    function er(rr) {
+      return (rr / 1048576).toFixed(1)
     }
-    class CR {
+    class Kr {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(RR) {
-        return this.logged >= 20 || this.seen.has(RR) ? (this.unlogged++, null) : (this.seen.add(RR), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${RR}` : RR)
+      admit(rr) {
+        return this.logged >= 20 || this.seen.has(rr) ? (this.unlogged++, null) : (this.seen.add(rr), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${rr}` : rr)
       }
       takeUnlogged() {
-        const RR = this.unlogged;
-        return this.unlogged = 0, RR
+        const rr = this.unlogged;
+        return this.unlogged = 0, rr
       }
     }
 
-    function XR(RR) {
-      (0, wR.k)("renderlite", RR)
+    function yr(rr) {
+      (0, mr.l)("renderlite", rr)
     }
-    class MR {
-      constructor(RR) {
-        this.frames = new WR, this.events = new CR, this.programLines = new nR, this.compileSummary = new LR("webgpu compiles"), this.hidden = new eR.b, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.prejoinLogged = null, this.visibilityChanged = () => {
-          const RR = performance.now();
-          this.hidden.changed(RR), this.restartWindow(RR)
-        }, this.gK = () => {
-          var RR, JR;
-          const GR = this.session,
-            tR = (0, VR.l)(),
-            uR = performance.now();
-          var iR;
-          if (this.logLinks(uR), this.logGrid(), null === GR || GR.isStopped || !0 !== (null === tR || void 0 === tR ? void 0 : tR.isCoreRunning)) return null === (iR = window.bloxdRenderDebug) || void 0 === iR || delete iR.meshMaterials, void this.restartWindow(uR);
+    class Br {
+      constructor(rr) {
+        this.frames = new nr, this.events = new Kr, this.programLines = new zr, this.compileSummary = new hr("webgpu compiles"), this.hidden = new Ur.c, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.prejoinLogged = null, this.visibilityChanged = () => {
+          const rr = performance.now();
+          this.hidden.changed(rr), this.restartWindow(rr)
+        }, this.lx = () => {
+          var rr, Sr;
+          const Qr = this.session,
+            Wr = (0, pr.f)(),
+            ar = performance.now();
+          var fr;
+          if (this.logLinks(ar), this.logGrid(), null === Qr || Qr.isStopped || !0 !== (null === Wr || void 0 === Wr ? void 0 : Wr.isCoreRunning)) return null === (fr = window.bloxdRenderDebug) || void 0 === fr || delete fr.meshMaterials, void this.restartWindow(ar);
           if (document.hidden) return;
-          if (uR - this.windowStart < 2500) return;
-          if (! function(RR) {
-              return RR < 12 || (RR - 12) % 3 === 2
+          if (ar - this.windowStart < 2500) return;
+          if (! function(rr) {
+              return rr < 12 || (rr - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const KR = GR.headerWord(ZR.L.GpuTimed),
-            wR = GR.headerWord(ZR.L.GpuFrameUs),
-            rR = this.sampled === GR ? {
-              timed: KR - this.gpuTimed >>> 0,
-              us: wR - this.gpuUs >>> 0
+          const xr = Qr.headerWord(jr.L.GpuTimed),
+            mr = Qr.headerWord(jr.L.GpuFrameUs),
+            Nr = this.sampled === Qr ? {
+              timed: xr - this.gpuTimed >>> 0,
+              us: mr - this.gpuUs >>> 0
             } : null;
-          this.sampled = GR, this.gpuTimed = KR, this.gpuUs = wR;
-          const eR = null !== (RR = null === (JR = (0, fR.M)((0, yR.w)())) || void 0 === JR ? void 0 : JR.atR()) && void 0 !== RR ? RR : 0;
-          XR(function(RR, JR) {
-            const GR = JR.windowMs / 1e3,
-              yR = [`${Math.round(GR)}s: ${RR.drawn} drawn (${(RR.drawn/GR).toFixed(1)}/s), ${RR.paced} paced, ${RR.frames-RR.drawn-RR.paced} skipped`, `gap max ${Math.round(RR.gapMaxMs)} ms, ${RR.longGaps} over 50 ms`, `render cpu ${RR.drawn?(RR.renderUs/RR.drawn/1e3).toFixed(2):"-"} ms mean, ${(RR.renderUsMax/1e3).toFixed(1)} max`];
-            null !== JR.gpu && yR.push(`gpu ${JR.gpu.timed?(JR.gpu.us/JR.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${JR.gpu.timed} timed`);
-            const tR = JR.census;
-            yR.push(null === tR ? "draws none yet" : `draws ${(0,qR.c)(tR)} (terrain ${tR.terrainOpaque}+${tR.terrainTransparent}, pack ${tR.terrainPack}, meshes ${tR.regular+tR.thin+tR.line+tR.text} (${tR.text} text, ${tR.thin} thin, ${tR.line} line), sky ${tR.earthSky+tR.skyMeshes}, particles ${tR.particles})`), null !== tR && tR.ringCopiesMax > 0 && yR.push(`frame rings ${tR.ringCopiesMax} copies max, ${tR.ringBusyWrites} busy writes so far`);
-            const uR = null === JR.gpuBytesBefore ? "" : ` (${JR.gpuBytes>=JR.gpuBytesBefore?"+":"-"}${AR(Math.abs(JR.gpuBytes-JR.gpuBytesBefore))})`;
-            return yR.push(`gpu mem ${AR(JR.gpuBytes)} MiB${uR}`), yR.push(`pending ${JR.pending}`, "terrain " + (JR.terrainDrawn ? "drawn" : "not drawn yet")), JR.eventsUnlogged > 0 && yR.push(`${JR.eventsUnlogged} events unlogged`), yR.join("; ")
+          this.sampled = Qr, this.gpuTimed = xr, this.gpuUs = mr;
+          const Ur = null !== (rr = null === (Sr = (0, Er.T)((0, Zr.z)())) || void 0 === Sr ? void 0 : Sr.bZr()) && void 0 !== rr ? rr : 0;
+          yr(function(rr, Sr) {
+            const Qr = Sr.windowMs / 1e3,
+              Zr = [`${Math.round(Qr)}s: ${rr.drawn} drawn (${(rr.drawn/Qr).toFixed(1)}/s), ${rr.paced} paced, ${rr.frames-rr.drawn-rr.paced} skipped`, `gap max ${Math.round(rr.gapMaxMs)} ms, ${rr.longGaps} over 50 ms`, `render cpu ${rr.drawn?(rr.renderUs/rr.drawn/1e3).toFixed(2):"-"} ms mean, ${(rr.renderUsMax/1e3).toFixed(1)} max`];
+            null !== Sr.gpu && Zr.push(`gpu ${Sr.gpu.timed?(Sr.gpu.us/Sr.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${Sr.gpu.timed} timed`);
+            const Wr = Sr.census;
+            Zr.push(null === Wr ? "draws none yet" : `draws ${(0,Ir.e)(Wr)} (terrain ${Wr.terrainOpaque}+${Wr.terrainTransparent}, pack ${Wr.terrainPack}, meshes ${Wr.regular+Wr.thin+Wr.line+Wr.text} (${Wr.text} text, ${Wr.thin} thin, ${Wr.line} line), sky ${Wr.earthSky+Wr.skyMeshes}, particles ${Wr.particles})`), null !== Wr && Wr.ringCopiesMax > 0 && Zr.push(`frame rings ${Wr.ringCopiesMax} copies max, ${Wr.ringBusyWrites} busy writes so far`);
+            const ar = null === Sr.gpuBytesBefore ? "" : ` (${Sr.gpuBytes>=Sr.gpuBytesBefore?"+":"-"}${er(Math.abs(Sr.gpuBytes-Sr.gpuBytesBefore))})`;
+            return Zr.push(`gpu mem ${er(Sr.gpuBytes)} MiB${ar}`), Zr.push(`pending ${Sr.pending}`, "terrain " + (Sr.terrainDrawn ? "drawn" : "not drawn yet")), Sr.eventsUnlogged > 0 && Zr.push(`${Sr.eventsUnlogged} events unlogged`), Zr.join("; ")
           }(this.frames.take(), {
-            windowMs: uR - this.windowStart,
-            gpu: rR,
-            census: (0, qR.d)(tR.api),
-            gpuBytes: eR,
+            windowMs: ar - this.windowStart,
+            gpu: Nr,
+            census: (0, Ir.f)(Wr.api),
+            gpuBytes: Ur,
             gpuBytesBefore: this.gpuBytes,
-            pending: GR.headerWord(ZR.L.RenderPending),
-            terrainDrawn: 0 !== (GR.headerWord(ZR.L.LoadSteps) & ZR.ab.TerrainDrawn),
+            pending: Qr.headerWord(jr.L.RenderPending),
+            terrainDrawn: 0 !== (Qr.headerWord(jr.L.LoadSteps) & jr.V.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
           }));
-          const aR = window.bloxdRenderDebug;
-          void 0 !== (null === aR || void 0 === aR ? void 0 : aR.meshMaterials) && (XR(`mesh materials ${aR.meshMaterials}`), delete aR.meshMaterials), this.gpuBytes = eR, this.windowStart = uR
-        }, XR(`${(0,UR.b)(RR)}; client ${tR.z.client} (${tR.z.reason})`), setInterval(this.gK, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          const tr = window.bloxdRenderDebug;
+          void 0 !== (null === tr || void 0 === tr ? void 0 : tr.meshMaterials) && (yr(`mesh materials ${tr.meshMaterials}`), delete tr.meshMaterials), this.gpuBytes = Ur, this.windowStart = ar
+        }, yr(`${(0,Yr.e)(rr)}; client ${Wr.B.client} (${Wr.B.reason})`), setInterval(this.lx, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(RR, JR, GR) {
-        var yR;
-        this.session !== RR && (null === (yR = window.bloxdRenderDebug) || void 0 === yR || delete yR.meshMaterials);
-        this.session = RR, this.frames.frame(JR, GR, "drawn" === GR ? RR.headerWord(ZR.L.RenderUs) : 0)
+      frame(rr, Sr, Qr) {
+        var Zr;
+        this.session !== rr && (null === (Zr = window.bloxdRenderDebug) || void 0 === Zr || delete Zr.meshMaterials);
+        this.session = rr, this.frames.frame(Sr, Qr, "drawn" === Qr ? rr.headerWord(jr.L.RenderUs) : 0)
       }
-      coreErrors(RR) {
+      coreErrors(rr) {
         for (const {
-            code: yR,
-            detail: tR
+            code: Zr,
+            detail: Wr
           }
-          of RR) {
-          var JR, GR;
-          if (yR >= ZR.p.RenderDeviceLost && yR <= ZR.p.RenderSerialLinks) this.event(`render error ${(0,iR.ge)(yR)}${null!==(JR=null===(GR=(0,KR.b)(yR,tR))||void 0===GR?void 0:GR.words)&&void 0!==JR?JR:""} (detail ${tR})`)
+          of rr) {
+          var Sr, Qr;
+          if (Zr >= jr.o.RenderDeviceLost && Zr <= jr.o.RenderSerialLinks) this.event(`render error ${(0,fr.te)(Zr)}${null!==(Sr=null===(Qr=(0,xr.b)(Zr,Wr))||void 0===Qr?void 0:Qr.words)&&void 0!==Sr?Sr:""} (detail ${Wr})`)
         }
       }
-      reload(RR, JR, GR, yR) {
-        this.event(`render reload: ${RR?"webgpu":"gl"} ${GR}, losses ${JR}${void 0===yR?"":`: ${yR}`}`)
+      reload(rr, Sr, Qr, Zr) {
+        this.event(`render reload: ${rr?"webgpu":"gl"} ${Qr}, losses ${Sr}${void 0===Zr?"":`: ${Zr}`}`)
       }
-      glContextLost(RR, JR, GR) {
-        const yR = null === JR || void 0 === JR ? void 0 : JR.split(" "),
-          tR = 3 === (null === yR || void 0 === yR ? void 0 : yR.length) ? `vertex arrays ${yR[0]}, keyed draws peak ${yR[1]} (sweep floor ${yR[2]})` : "vertex arrays unnoted";
-        this.event(`gl context lost ${RR?"in game":"at home"}: ${tR}, render distance ${null!==GR&&void 0!==GR?GR:"none"}`)
+      glContextLost(rr, Sr, Qr) {
+        const Zr = null === Sr || void 0 === Sr ? void 0 : Sr.split(" "),
+          Wr = 3 === (null === Zr || void 0 === Zr ? void 0 : Zr.length) ? `vertex arrays ${Zr[0]}, keyed draws peak ${Zr[1]} (sweep floor ${Zr[2]})` : "vertex arrays unnoted";
+        this.event(`gl context lost ${rr?"in game":"at home"}: ${Wr}, render distance ${null!==Qr&&void 0!==Qr?Qr:"none"}`)
       }
-      crashed(RR) {
+      crashed(rr) {
         let {
-          site: JR,
-          error: GR,
-          header: yR
-        } = RR;
-        const tR = null !== yR && 0 !== yR.lastError ? `, last error ${(0,iR.ge)(yR.lastError)} (detail ${yR.lastErrorDetail})` : "",
-          uR = GR instanceof Error ? `${GR.name}: ${GR.message}` : null === GR || void 0 === GR ? "" : String(GR);
-        this.event(`core stopped at ${JR}${tR}${uR&&`: ${uR}`}`)
+          site: Sr,
+          error: Qr,
+          header: Zr
+        } = rr;
+        const Wr = null !== Zr && 0 !== Zr.lastError ? `, last error ${(0,fr.te)(Zr.lastError)} (detail ${Zr.lastErrorDetail})` : "",
+          ar = Qr instanceof Error ? `${Qr.name}: ${Qr.message}` : null === Qr || void 0 === Qr ? "" : String(Qr);
+        this.event(`core stopped at ${Sr}${Wr}${ar&&`: ${ar}`}`)
       }
-      event(RR) {
-        const JR = this.events.admit(RR);
-        null !== JR && XR(JR)
+      event(rr) {
+        const Sr = this.events.admit(rr);
+        null !== Sr && yr(Sr)
       }
-      restartWindow(RR) {
-        this.frames.restart(), this.windowStart = RR;
-        const JR = this.session;
-        null === JR || JR.isStopped ? this.sampled = null : (this.sampled = JR, this.gpuTimed = JR.headerWord(ZR.L.GpuTimed), this.gpuUs = JR.headerWord(ZR.L.GpuFrameUs))
+      restartWindow(rr) {
+        this.frames.restart(), this.windowStart = rr;
+        const Sr = this.session;
+        null === Sr || Sr.isStopped ? this.sampled = null : (this.sampled = Sr, this.gpuTimed = Sr.headerWord(jr.L.GpuTimed), this.gpuUs = Sr.headerWord(jr.L.GpuFrameUs))
       }
-      logLinks(RR) {
-        const JR = window.bloxdRenderDebug;
-        for (const tR of this.programLines.failures(null === JR || void 0 === JR ? void 0 : JR.linkFailures)) this.event(tR);
-        const GR = this.programLines.heldAtBackstop(null === JR || void 0 === JR ? void 0 : JR.heldAtBackstop);
-        null !== GR && XR(GR);
-        for (const tR of this.programLines.summaryLines(null === JR || void 0 === JR ? void 0 : JR.links, null === JR || void 0 === JR ? void 0 : JR.programUse, RR, this.hidden.totals(RR))) XR(tR);
-        const yR = this.compileSummary.line(null === JR || void 0 === JR ? void 0 : JR.compiles, RR);
-        null !== yR && XR(yR), void 0 !== (null === JR || void 0 === JR ? void 0 : JR.prejoin) && JR.prejoin !== this.prejoinLogged && (this.prejoinLogged = JR.prejoin, XR(`prejoin ${JR.prejoin}`))
+      logLinks(rr) {
+        const Sr = window.bloxdRenderDebug;
+        for (const Wr of this.programLines.failures(null === Sr || void 0 === Sr ? void 0 : Sr.linkFailures)) this.event(Wr);
+        const Qr = this.programLines.heldAtBackstop(null === Sr || void 0 === Sr ? void 0 : Sr.heldAtBackstop);
+        null !== Qr && yr(Qr);
+        for (const Wr of this.programLines.summaryLines(null === Sr || void 0 === Sr ? void 0 : Sr.links, null === Sr || void 0 === Sr ? void 0 : Sr.programUse, rr, this.hidden.totals(rr))) yr(Wr);
+        const Zr = this.compileSummary.line(null === Sr || void 0 === Sr ? void 0 : Sr.compiles, rr);
+        null !== Zr && yr(Zr), void 0 !== (null === Sr || void 0 === Sr ? void 0 : Sr.prejoin) && Sr.prejoin !== this.prejoinLogged && (this.prejoinLogged = Sr.prejoin, yr(`prejoin ${Sr.prejoin}`))
       }
       logGrid() {
-        var RR;
-        const JR = null === (RR = window.bloxdRenderDebug) || void 0 === RR ? void 0 : RR.gridFaces;
-        this.gridLogged || void 0 === JR || (this.gridLogged = !0, XR(`gl1 grid ${JR}`))
+        var rr;
+        const Sr = null === (rr = window.bloxdRenderDebug) || void 0 === rr ? void 0 : rr.gridFaces;
+        this.gridLogged || void 0 === Sr || (this.gridLogged = !0, yr(`gl1 grid ${Sr}`))
       }
       logRenderer() {
-        var RR, JR;
+        var rr, Sr;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const GR = window.bloxdRenderDebug,
-          yR = (0, uR.y)(),
-          tR = void 0 === (null === GR || void 0 === GR ? void 0 : GR.parallelCompile) ? "" : `; parallel compile ${GR.parallelCompile}`;
-        XR(`renderer gl ${yR?`${yR.vendor} / ${yR.renderer}`:"(not read)"}; terrain fetch ${null!==(RR=null===GR||void 0===GR?void 0:GR.fetch)&&void 0!==RR?RR:"(not noted)"}${tR}`), XR(`renderer caps ${null!==(JR=null===GR||void 0===GR?void 0:GR.caps)&&void 0!==JR?JR:"(not noted)"}`)
+        const Qr = window.bloxdRenderDebug,
+          Zr = (0, ar.C)(),
+          Wr = void 0 === (null === Qr || void 0 === Qr ? void 0 : Qr.parallelCompile) ? "" : `; parallel compile ${Qr.parallelCompile}`;
+        yr(`renderer gl ${Zr?`${Zr.vendor} / ${Zr.renderer}`:"(not read)"}; terrain fetch ${null!==(rr=null===Qr||void 0===Qr?void 0:Qr.fetch)&&void 0!==rr?rr:"(not noted)"}${Wr}`), yr(`renderer caps ${null!==(Sr=null===Qr||void 0===Qr?void 0:Qr.caps)&&void 0!==Sr?Sr:"(not noted)"}`)
       }
     }
-    let BR = null;
+    let Tr = null;
 
-    function lR(RR) {
-      return (0, rR.c)(), BR ??= new MR(RR), BR
+    function vr(rr) {
+      return (0, Nr.e)(), Tr ??= new Br(rr), Tr
     }
   },
-  5563: (RR, JR, GR) => {
-    function yR(RR) {
-      if (null === RR) return "backend: none picked (no renderer build)";
-      const JR = RR.adapter ? `${RR.adapter.vendor}/${RR.adapter.architecture}` : "none";
-      return `backend ${RR.backend}: reason ${RR.reason}, source ${RR.source}, adapter ${JR}`
+  5501: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      if (null === rr) return "backend: none picked (no renderer build)";
+      const Sr = rr.adapter ? `${rr.adapter.vendor}/${rr.adapter.architecture}` : "none";
+      return `backend ${rr.backend}: reason ${rr.reason}, source ${rr.source}, adapter ${Sr}`
     }
-    GR.d(JR, {
-      b: () => yR
+    Qr.d(Sr, {
+      e: () => Zr
     })
   },
-  35012: (RR, JR, GR) => {
-    function yR(RR) {
-      return `hidden ${RR.changes} changes, ${Math.round(RR.hiddenMs)} ms`
+  35315: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return `hidden ${rr.changes} changes, ${Math.round(rr.hiddenMs)} ms`
     }
-    GR.d(JR, {
-      b: () => tR,
-      c: () => yR
+    Qr.d(Sr, {
+      c: () => Wr,
+      g: () => Zr
     });
-    class tR {
+    class Wr {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(RR) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = RR : this.hiddenSinceMs >= 0 && (this.hiddenMs += RR - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(rr) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = rr : this.hiddenSinceMs >= 0 && (this.hiddenMs += rr - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(RR) {
+      totals(rr) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? RR - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? rr - this.hiddenSinceMs : 0)
         }
       }
     }
   },
-  42568: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR,
-      d: () => uR,
-      g: () => qR
+  42895: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => jr,
+      f: () => ar,
+      i: () => Ir
     });
-    var yR = GR(42106),
-      tR = GR(42118);
+    var Zr = Qr(42438),
+      Wr = Qr(42451);
 
-    function uR(RR) {
-      if (RR.queries.drawCensus() < yR.wb.BYTES) return null;
-      const JR = RR.memoryData(RR.scratch(), yR.wb.BYTES, 4, "the draw census");
-      return null === JR ? null : {
-        terrainOpaque: yR.wb.terrainOpaque(JR, 0),
-        terrainTransparent: yR.wb.terrainTransparent(JR, 0),
-        terrainPack: yR.wb.terrainPack(JR, 0),
-        earthSky: yR.wb.earthSky(JR, 0),
-        skyMeshes: yR.wb.skyMeshes(JR, 0),
-        regular: yR.wb.regular(JR, 0),
-        thin: yR.wb.thin(JR, 0),
-        line: yR.wb.line(JR, 0),
-        text: yR.wb.text(JR, 0),
-        particles: yR.wb.particles(JR, 0),
-        terrainParts: yR.wb.terrainParts(JR, 0),
-        terrainCompiling: yR.wb.terrainCompiling(JR, 0),
-        ringCopiesMax: yR.wb.ringCopiesMax(JR, 0),
-        ringBusyWrites: yR.wb.ringBusyWrites(JR, 0)
+    function ar(rr) {
+      if (rr.queries.drawCensus() < Zr.lb.BYTES) return null;
+      const Sr = rr.memoryData(rr.scratch(), Zr.lb.BYTES, 4, "the draw census");
+      return null === Sr ? null : {
+        terrainOpaque: Zr.lb.terrainOpaque(Sr, 0),
+        terrainTransparent: Zr.lb.terrainTransparent(Sr, 0),
+        terrainPack: Zr.lb.terrainPack(Sr, 0),
+        earthSky: Zr.lb.earthSky(Sr, 0),
+        skyMeshes: Zr.lb.skyMeshes(Sr, 0),
+        regular: Zr.lb.regular(Sr, 0),
+        thin: Zr.lb.thin(Sr, 0),
+        line: Zr.lb.line(Sr, 0),
+        text: Zr.lb.text(Sr, 0),
+        particles: Zr.lb.particles(Sr, 0),
+        terrainParts: Zr.lb.terrainParts(Sr, 0),
+        terrainCompiling: Zr.lb.terrainCompiling(Sr, 0),
+        ringCopiesMax: Zr.lb.ringCopiesMax(Sr, 0),
+        ringBusyWrites: Zr.lb.ringBusyWrites(Sr, 0)
       }
     }
 
-    function ZR(RR) {
+    function jr(rr) {
       const {
-        terrainOpaque: JR,
-        terrainTransparent: GR,
-        earthSky: yR,
-        skyMeshes: tR,
-        regular: uR,
-        thin: ZR,
-        line: qR,
-        text: iR,
-        particles: fR
-      } = RR;
-      return JR + GR + yR + tR + uR + ZR + qR + iR + fR
+        terrainOpaque: Sr,
+        terrainTransparent: Qr,
+        earthSky: Zr,
+        skyMeshes: Wr,
+        regular: ar,
+        thin: jr,
+        line: Ir,
+        text: fr,
+        particles: Er
+      } = rr;
+      return Sr + Qr + Zr + Wr + ar + jr + Ir + fr + Er
     }
 
-    function qR() {
-      const RR = (0, tR.l)();
-      return !0 === (null === RR || void 0 === RR ? void 0 : RR.isCoreRunning) ? function(RR) {
-        const JR = uR(RR);
-        if (null === JR) return [];
+    function Ir() {
+      const rr = (0, Wr.f)();
+      return !0 === (null === rr || void 0 === rr ? void 0 : rr.isCoreRunning) ? function(rr) {
+        const Sr = ar(rr);
+        if (null === Sr) return [];
         const {
-          terrainOpaque: GR,
-          terrainTransparent: yR,
-          terrainPack: tR,
-          earthSky: qR,
-          skyMeshes: iR,
-          regular: fR,
-          thin: VR,
-          line: KR,
-          text: wR,
-          particles: rR
-        } = JR;
+          terrainOpaque: Qr,
+          terrainTransparent: Zr,
+          terrainPack: Wr,
+          earthSky: Ir,
+          skyMeshes: fr,
+          regular: Er,
+          thin: pr,
+          line: xr,
+          text: mr,
+          particles: Nr
+        } = Sr;
         return [{
           label: "Drawn",
-          value: `${ZR(JR)}`
+          value: `${jr(Sr)}`
         }, {
           label: "Terrain",
-          value: `${GR} opaque / ${yR} transparent (${tR} shader pack)`
+          value: `${Qr} opaque / ${Zr} transparent (${Wr} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${fR} / ${VR}`
+          value: `${Er} / ${pr}`
         }, {
           label: "Text / Lines",
-          value: `${wR} / ${KR}`
+          value: `${mr} / ${xr}`
         }, {
           label: "Sky / Particles",
-          value: `${qR+iR} / ${rR}`
+          value: `${Ir+fr} / ${Nr}`
         }]
-      }(RR.api) : []
+      }(rr.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

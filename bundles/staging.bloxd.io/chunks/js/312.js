@@ -1,9 +1,632 @@
 export const id = 312;
 export const ids = [312];
 export const modules = {
-  43351: RR => {
-    RR.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAABbCAYAAACI0FBrAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAANGSURBVHic7ZwxixNBFMdnJQRCmkCCjYVXHFoIciJoYWWX0m8hYpfCD2FhJ+K3ECu/gIWCRIQUkS1OxEbuYJvj4JqzMCEhmZ15M29297/Z/6+ay+7O7O1/33v7HjOTGQ8P3ny69p2DzHw2zbR9aJ+B5B5uaAYg6aAQIFAIECgECBQCBAoBAoUAIWt7nqBlPptmTz/+dj6DIl84+xgd33Me910/n02znvMM4UCx+G7wUMaXXE/XBAKFAIFCgCCKEWVIfawW7ThaH191sCZAeMuzdZSAJffgeuskn4exYz96+Tro///69lXUWIwRIFAIECgECBQCBAoBgiqPOCRCv45C+/F9TdEiQOhVXQb39T+fTdWleF9m6ypzF/kiSa6jxeuaNImUpA/yn9bHiEN5GRgjQKAQIHiFqLKEy/LwBloECBQCBAoBAoUAgUKAQCFAoBAgUAgQVEU/LUj1n9jZF6lofdGvCn79+Ssqy3/+8t08eXyy175962awqHRNINAiLJydF1Hnhly3i1eIIl80vj6hDtbuSPowJ+ORmYxPtv7etLddm9RN0TWBQCEScnZeRLsnxogVGv+eoi8KYWEyHhmzeqBlbdd1a0IEoWsCgRZhYf0mL/NTY8zRXttY3vZlfmruHh/ttaXQIkCgRazw+f+y89cs881v220pXovoStGvaWgRK2IKdSlpjRDacghSOcUGhBAIs7GbRlT006Lto+kddOp4UXp8GzHwWgTCgvcuwIQOBAoBAoUAgUKAQCFAgEjoqs4TtBtbSZYox93ZBgghJKAWH1OVTiAWvFc5fltQ7/uq2e8OvRBXJwzWILQmRmispw27UEIIwThRw76vmrmzZXsfvXv+zHr+w/t3vIJeXF4FfZwMB31rn7tzZSVju2CMAAHCNdVBqCXsXrdrGSmnaJouCZGCsqn7k/Eoair+Np11TcNB3wwH/ejjqemsEGhAuKbQHSZfvP8Q1I9txejF5ZVzDNvxsriQIl7QIkCAsIg6KMsHUFBZhCRR4/xWGZ2xiBRos2cXjBEgUAgQRK5JUyZGKDG3Ac59BYGuCQQKAQKEW/r242elM0mq/OxMRWfyCOlmWKkILYXTNYHQGYtoetUoaQn/ADMbNHPBp+bgAAAAAElFTkSuQmCC","alphaCutoff":0.05,"vertices":[0.02939,0.6944,-0.0642,0.02939,0.6944,-0.0642,0.02939,0.6944,-0.0642,0,0.67524,-0.0089,0,0.67524,-0.0089,0,0.67524,-0.0089,0.12739,0.54246,-0.0829,0.12739,0.54246,-0.0829,0.12739,0.54246,-0.0829,0.09799,0.52331,-0.0276,0.09799,0.52331,-0.0276,0.09799,0.52331,-0.0276,0.11087,0.72507,0.1059,0.11087,0.72507,0.1059,0.11087,0.72507,0.1059,0.14027,0.74423,0.0506,0.14027,0.74423,0.0506,0.14027,0.74423,0.0506,0.23826,0.59229,0.032,0.23826,0.59229,0.032,0.23826,0.59229,0.032,0.20887,0.57314,0.0873,0.20887,0.57314,0.0873,0.20887,0.57314,0.0873,0.03108,0.63635,-0.0985,0.03108,0.63635,-0.0985,0.03108,0.63635,-0.0985,0.00168,0.61721,-0.0432,0.00168,0.61721,-0.0432,0.00168,0.61721,-0.0432,0.09967,0.53,-0.1116,0.09967,0.53,-0.1116,0.09967,0.53,-0.1116,0.07028,0.51085,-0.0563,0.07028,0.51085,-0.0563,0.07028,0.51085,-0.0563,0.02939,0.62966,-0.0145,0.02939,0.62966,-0.0145,0.02939,0.62966,-0.0145,0.0588,0.64881,-0.0698,0.0588,0.64881,-0.0698,0.0588,0.64881,-0.0698,0.12739,0.54246,-0.0829,0.12739,0.54246,-0.0829,0.12739,0.54246,-0.0829,0.09799,0.52331,-0.0276,0.09799,0.52331,-0.0276,0.09799,0.52331,-0.0276,0.70147,0.83917,0.0639,0.70147,0.83917,0.0639,0.70147,0.83917,0.0639,0.60447,0.88277,0.1643,0.60447,0.88277,0.1643,0.60447,0.88277,0.1643,0.70147,0.80865,0.0873,0.70147,0.80865,0.0873,0.70147,0.80865,0.0873,0.60447,0.85225,0.1878,0.60447,0.85225,0.1878,0.60447,0.85225,0.1878,0.70147,0.92637,0.2648,0.70147,0.92637,0.2648,0.70147,0.92637,0.2648,0.79847,0.88277,0.1643,0.79847,0.88277,0.1643,0.79847,0.88277,0.1643,0.79847,0.85225,0.1878,0.79847,0.85225,0.1878,0.79847,0.85225,0.1878,0.70147,0.89586,0.2882,0.70147,0.89586,0.2882,0.70147,0.89586,0.2882,0.45202,0.72704,-0.1945,0.45202,0.72704,-0.1945,0.45202,0.72704,-0.1945,0.35502,0.77064,-0.094,0.35502,0.77064,-0.094,0.35502,0.77064,-0.094,0.45202,0.69653,-0.171,0.45202,0.69653,-0.171,0.45202,0.69653,-0.171,0.35502,0.74013,-0.0706,0.35502,0.74013,-0.0706,0.35502,0.74013,-0.0706,0.45202,0.81424,0.0064,0.45202,0.81424,0.0064,0.45202,0.81424,0.0064,0.54902,0.77064,-0.094,0.54902,0.77064,-0.094,0.54902,0.77064,-0.094,0.54902,0.74013,-0.0706,0.54902,0.74013,-0.0706,0.54902,0.74013,-0.0706,0.45202,0.78373,0.0299,0.45202,0.78373,0.0299,0.45202,0.78373,0.0299,0.65989,0.80326,0.8952,0.65989,0.80326,0.8952,0.65989,0.80326,0.8952,0.65989,0.75748,0.9303,0.65989,0.75748,0.9303,0.65989,0.75748,0.9303,0.75691,0.75965,0.7947,0.75691,0.75965,0.7947,0.75691,0.75965,0.7947,0.75691,0.71387,0.8299,0.75691,0.71387,0.8299,0.75691,0.71387,0.8299,0.68761,0.76994,0.959,0.68761,0.76994,0.959,0.68761,0.76994,0.959,0.68761,0.81571,0.9239,0.68761,0.81571,0.9239,0.68761,0.81571,0.9239,0.78462,0.77211,0.8234,0.78462,0.77211,0.8234,0.78462,0.77211,0.8234,0.78462,0.72633,0.8586,0.78462,0.72633,0.8586,0.78462,0.72633,0.8586,0.50746,0.77211,0.8234,0.50746,0.77211,0.8234,0.50746,0.77211,0.8234,0.50746,0.72634,0.8586,0.50746,0.72634,0.8586,0.50746,0.72634,0.8586,0.64604,0.70982,0.6799,0.64604,0.70982,0.6799,0.64604,0.70982,0.6799,0.64604,0.66404,0.7151,0.64604,0.66404,0.7151,0.64604,0.66404,0.7151,0.61832,0.77617,0.9734,0.61832,0.77617,0.9734,0.61832,0.77617,0.9734,0.61832,0.82194,0.9382,0.61832,0.82194,0.9382,0.61832,0.82194,0.9382,0.75691,0.75965,0.7947,0.75691,0.75965,0.7947,0.75691,0.75965,0.7947,0.75691,0.71387,0.8299,0.75691,0.71387,0.8299,0.75691,0.71387,0.8299,0.64603,0.74516,0.691,0.64603,0.74516,0.691,0.64603,0.74516,0.691,0.64603,0.65361,0.7613,0.64603,0.65361,0.7613,0.64603,0.65361,0.7613,0.86777,0.64549,0.4614,0.86777,0.64549,0.4614,0.86777,0.64549,0.4614,0.86777,0.55394,0.5317,0.86777,0.55394,0.5317,0.86777,0.55394,0.5317,0.72918,0.69099,0.8474,0.72918,0.69099,0.8474,0.72918,0.69099,0.8474,0.72918,0.78254,0.7771,0.72918,0.78254,0.7771,0.72918,0.78254,0.7771,0.95092,0.68287,0.5475,0.95092,0.68287,0.5475,0.95092,0.68287,0.5475,0.95092,0.59132,0.6178,0.95092,0.59132,0.6178,0.95092,0.59132,0.6178,0.72662,0.54125,0.6336,0.72662,0.54125,0.6336,0.72662,0.54125,0.6336,0.69891,0.5537,0.6623,0.69891,0.5537,0.6623,0.69891,0.5537,0.6623,0.75163,0.46518,0.7265,0.75163,0.46518,0.7265,0.75163,0.46518,0.7265,0.72391,0.47763,0.7552,0.72391,0.47763,0.7552,0.72391,0.47763,0.7552,0.77821,0.61688,0.7233,0.77821,0.61688,0.7233,0.77821,0.61688,0.7233,0.80592,0.60442,0.6946,0.80592,0.60442,0.6946,0.80592,0.60442,0.6946,0.83092,0.52834,0.7875,0.83092,0.52834,0.7875,0.83092,0.52834,0.7875,0.80321,0.54079,0.8162,0.80321,0.54079,0.8162,0.80321,0.54079,0.8162,0.276,0.37876,0.0978,0.276,0.37876,0.0978,0.276,0.37876,0.0978,0.24827,0.39123,0.1265,0.24827,0.39123,0.1265,0.24827,0.39123,0.1265,0.258,0.28129,0.1478,0.258,0.28129,0.1478,0.258,0.28129,0.1478,0.23027,0.29375,0.1766,0.23027,0.29375,0.1766,0.23027,0.29375,0.1766,0.32944,0.40789,0.2258,0.32944,0.40789,0.2258,0.32944,0.40789,0.2258,0.35717,0.39543,0.1971,0.35717,0.39543,0.1971,0.35717,0.39543,0.1971,0.33918,0.29796,0.2471,0.33918,0.29796,0.2471,0.33918,0.29796,0.2471,0.31146,0.31042,0.2759,0.31146,0.31042,0.2759,0.31146,0.31042,0.2759,0.14615,0.57346,-0.0943,0.14615,0.57346,-0.0943,0.14615,0.57346,-0.0943,0.08735,0.53515,0.0163,0.08735,0.53515,0.0163,0.08735,0.53515,0.0163,0.30294,0.33035,-0.1241,0.30294,0.33035,-0.1241,0.30294,0.33035,-0.1241,0.24415,0.29205,-0.0135,0.24415,0.29205,-0.0135,0.24415,0.29205,-0.0135,0.1705,0.57253,0.1024,0.1705,0.57253,0.1024,0.1705,0.57253,0.1024,0.2293,0.61084,-0.0082,0.2293,0.61084,-0.0082,0.2293,0.61084,-0.0082,0.38609,0.36773,-0.038,0.38609,0.36773,-0.038,0.38609,0.36773,-0.038,0.3273,0.32942,0.0726,0.3273,0.32942,0.0726,0.3273,0.32942,0.0726,0.70147,0.89117,0.0431,0.70147,0.89117,0.0431,0.70147,0.89117,0.0431,0.61832,0.92854,0.1292,0.61832,0.92854,0.1292,0.61832,0.92854,0.1292,0.70147,0.66229,0.2188,0.70147,0.66229,0.2188,0.70147,0.66229,0.2188,0.61832,0.69967,0.305,0.61832,0.69967,0.305,0.61832,0.69967,0.305,0.70147,0.96592,0.2153,0.70147,0.96592,0.2153,0.70147,0.96592,0.2153,0.78462,0.92854,0.1292,0.78462,0.92854,0.1292,0.78462,0.92854,0.1292,0.78462,0.69967,0.305,0.78462,0.69967,0.305,0.78462,0.69967,0.305,0.70147,0.73704,0.3911,0.70147,0.73704,0.3911,0.70147,0.73704,0.3911,0.45202,0.77904,-0.2153,0.45202,0.77904,-0.2153,0.45202,0.77904,-0.2153,0.36887,0.81642,-0.1292,0.36887,0.81642,-0.1292,0.36887,0.81642,-0.1292,0.45202,0.55017,-0.0395,0.45202,0.55017,-0.0395,0.45202,0.55017,-0.0395,0.36887,0.58754,0.0466,0.36887,0.58754,0.0466,0.36887,0.58754,0.0466,0.45202,0.85379,-0.0431,0.45202,0.85379,-0.0431,0.45202,0.85379,-0.0431,0.53517,0.81642,-0.1292,0.53517,0.81642,-0.1292,0.53517,0.81642,-0.1292,0.53517,0.58754,0.0466,0.53517,0.58754,0.0466,0.53517,0.58754,0.0466,0.45202,0.62492,0.1327,0.45202,0.62492,0.1327,0.45202,0.62492,0.1327,0.65802,0.26779,0.4427,0.65802,0.26779,0.4427,0.65802,0.26779,0.4427,0.54716,0.31762,0.5575,0.54716,0.31762,0.5575,0.54716,0.31762,0.5575,0.67245,0.18411,0.5269,0.67245,0.18411,0.5269,0.67245,0.18411,0.5269,0.56159,0.23394,0.6417,0.56159,0.23394,0.6417,0.56159,0.23394,0.6417,0.8747,0.52844,0.8479,0.8747,0.52844,0.8479,0.8747,0.52844,0.8479,0.98557,0.47861,0.7331,0.98557,0.47861,0.7331,0.98557,0.47861,0.7331,1,0.39493,0.8173,1,0.39493,0.8173,1,0.39493,0.8173,0.88914,0.44476,0.9321,0.88914,0.44476,0.9321,0.88914,0.44476,0.9321,0.66902,0.65648,0.1584,0.66902,0.65648,0.1584,0.66902,0.65648,0.1584,0.55747,0.70662,0.2739,0.55747,0.70662,0.2739,0.55747,0.70662,0.2739,0.89241,0.37082,0.6863,0.89241,0.37082,0.6863,0.89241,0.37082,0.6863,0.78085,0.42097,0.8018,0.78085,0.42097,0.8018,0.78085,0.42097,0.8018,0.65098,0.81424,0.3204,0.65098,0.81424,0.3204,0.65098,0.81424,0.3204,0.76254,0.76409,0.2049,0.76254,0.76409,0.2049,0.76254,0.76409,0.2049,0.98592,0.47845,0.7327,0.98592,0.47845,0.7327,0.98592,0.47845,0.7327,0.87436,0.52859,0.8483,0.87436,0.52859,0.8483,0.87436,0.52859,0.8483,0.61009,0.61114,0.0745,0.61009,0.61114,0.0745,0.61009,0.61114,0.0745,0.49923,0.66097,0.1893,0.49923,0.66097,0.1893,0.49923,0.66097,0.1893,0.57572,0.30827,0.2597,0.57572,0.30827,0.2597,0.57572,0.30827,0.2597,0.46485,0.3581,0.3745,0.46485,0.3581,0.3745,0.46485,0.3581,0.3745,0.60914,0.69445,0.3154,0.60914,0.69445,0.3154,0.60914,0.69445,0.3154,0.72,0.64462,0.2006,0.72,0.64462,0.2006,0.72,0.64462,0.2006,0.68564,0.34174,0.3858,0.68564,0.34174,0.3858,0.68564,0.34174,0.3858,0.57478,0.39157,0.5006,0.57478,0.39157,0.5006,0.57478,0.39157,0.5006,0.47666,0.37044,0.0751,0.47666,0.37044,0.0751,0.47666,0.37044,0.0751,0.3658,0.42027,0.19,0.3658,0.42027,0.19,0.3658,0.42027,0.19,0.4658,0.27479,0.1336,0.4658,0.27479,0.1336,0.4658,0.27479,0.1336,0.35494,0.32462,0.2484,0.35494,0.32462,0.2484,0.35494,0.32462,0.2484,0.47571,0.45374,0.316,0.47571,0.45374,0.316,0.47571,0.45374,0.316,0.58657,0.40391,0.2012,0.58657,0.40391,0.2012,0.58657,0.40391,0.2012,0.57572,0.30827,0.2597,0.57572,0.30827,0.2597,0.57572,0.30827,0.2597,0.46485,0.3581,0.3745,0.46485,0.3581,0.3745,0.46485,0.3581,0.3745,0.50017,0.57766,-0.0515,0.50017,0.57766,-0.0515,0.50017,0.57766,-0.0515,0.3893,0.62749,0.0633,0.3893,0.62749,0.0633,0.3893,0.62749,0.0633,0.48932,0.48203,0.0069,0.48932,0.48203,0.0069,0.48932,0.48203,0.0069,0.37846,0.53186,0.1217,0.37846,0.53186,0.1217,0.37846,0.53186,0.1217,0.49923,0.66097,0.1893,0.49923,0.66097,0.1893,0.49923,0.66097,0.1893,0.61009,0.61114,0.0745,0.61009,0.61114,0.0745,0.61009,0.61114,0.0745,0.59923,0.51549,0.133,0.59923,0.51549,0.133,0.59923,0.51549,0.133,0.48837,0.56532,0.2478,0.48837,0.56532,0.2478,0.48837,0.56532,0.2478,0.45314,0.16321,0.2018,0.45314,0.16321,0.2018,0.45314,0.16321,0.2018,0.34228,0.21304,0.3166,0.34228,0.21304,0.3166,0.34228,0.21304,0.3166,0.44228,0.06756,0.2603,0.44228,0.06756,0.2603,0.44228,0.06756,0.2603,0.33142,0.11739,0.3751,0.33142,0.11739,0.3751,0.33142,0.11739,0.3751,0.56212,0.27998,0.5688,0.56212,0.27998,0.5688,0.56212,0.27998,0.5688,0.67298,0.23015,0.454,0.67298,0.23015,0.454,0.67298,0.23015,0.454,0.66212,0.1345,0.5125,0.66212,0.1345,0.5125,0.66212,0.1345,0.5125,0.55126,0.18433,0.6273,0.55126,0.18433,0.6273,0.55126,0.18433,0.6273,0.39025,0.5442,-0.1776,0.39025,0.5442,-0.1776,0.39025,0.5442,-0.1776,0.27939,0.59403,-0.0628,0.27939,0.59403,-0.0628,0.27939,0.59403,-0.0628,0.33237,0.03408,0.1342,0.33237,0.03408,0.1342,0.33237,0.03408,0.1342,0.22151,0.08391,0.249,0.22151,0.08391,0.249,0.22151,0.08391,0.249,0.3893,0.62749,0.0633,0.3893,0.62749,0.0633,0.3893,0.62749,0.0633,0.50017,0.57766,-0.0515,0.50017,0.57766,-0.0515,0.50017,0.57766,-0.0515,0.44228,0.06756,0.2603,0.44228,0.06756,0.2603,0.44228,0.06756,0.2603,0.33142,0.11739,0.3751,0.33142,0.11739,0.3751,0.33142,0.11739,0.3751],"uvs":[0.788239,0.447817,0.706616,0.557661,0.701508,0.557661,0.895405,0.557661,0.788239,0.420308,0.676023,0.557661,0.706616,0.453319,0.706616,0.447817,0.701508,0.453319,0.676023,0.453319,0.706616,0.420308,0.895405,0.453319,0.818892,0.557661,0.813783,0.557661,0.864812,0.420308,0.864812,0.447817,0.788239,0.557661,0.78319,0.557661,0.78319,0.453319,0.788239,0.453319,0.78319,0.447817,0.818892,0.453319,0.78319,0.420308,0.813783,0.453319,0.818892,0.788481,0.798456,0.865378,0.793347,0.865378,0.864812,0.865378,0.818892,0.760972,0.767863,0.865378,0.798456,0.793983,0.798456,0.788481,0.793347,0.793983,0.767863,0.793983,0.798456,0.760972,0.864812,0.793983,0.849485,0.865378,0.844376,0.865378,0.834158,0.760972,0.834158,0.788481,0.818892,0.865378,0.813783,0.865378,0.813783,0.793983,0.818892,0.793983,0.813783,0.788481,0.849485,0.793983,0.813783,0.760972,0.844376,0.793983,0.803565,0.953279,0.732161,0.975286,0.73727,0.975286,0.808674,0.975286,0.803565,0.881884,0.803565,0.975286,0.732161,0.95878,0.732161,0.953279,0.73727,0.95878,0.803565,0.95878,0.732161,0.881884,0.808674,0.95878,0.87503,0.975286,0.594401,0.975286,0.73727,0.881884,0.73727,0.953279,0.660697,0.975286,0.665805,0.975286,0.665805,0.95878,0.660697,0.95878,0.665805,0.953279,0.87503,0.95878,0.665805,0.881884,0.594401,0.95878,0.803565,0.953279,0.732161,0.975286,0.73727,0.975286,0.808674,0.975286,0.803565,0.881884,0.803565,0.975286,0.732161,0.95878,0.732161,0.953279,0.73727,0.95878,0.803565,0.95878,0.732161,0.881884,0.808674,0.95878,0.87503,0.975286,0.594401,0.975286,0.73727,0.881884,0.73727,0.953279,0.660697,0.975286,0.665805,0.975286,0.665805,0.95878,0.660697,0.95878,0.665805,0.953279,0.87503,0.95878,0.665805,0.881884,0.594401,0.95878,0.834158,0.788481,0.813783,0.865378,0.818892,0.865378,0.849485,0.865378,0.834158,0.760972,0.844376,0.865378,0.813783,0.793983,0.813783,0.788481,0.818892,0.793983,0.844376,0.793983,0.813783,0.760972,0.849485,0.793983,0.864812,0.865378,0.767863,0.865378,0.818892,0.760972,0.818892,0.788481,0.793347,0.865378,0.798456,0.865378,0.798456,0.793983,0.793347,0.793983,0.798456,0.788481,0.864812,0.793983,0.798456,0.760972,0.767863,0.793983,0.864812,0.447817,0.78319,0.557661,0.788239,0.557661,0.818892,0.557661,0.864812,0.420308,0.813783,0.557661,0.78319,0.453319,0.78319,0.447817,0.788239,0.453319,0.813783,0.453319,0.78319,0.420308,0.818892,0.453319,0.895405,0.557661,0.676023,0.557661,0.788239,0.420308,0.788239,0.447817,0.701508,0.557661,0.706616,0.557661,0.706616,0.453319,0.701508,0.453319,0.706616,0.447817,0.895405,0.453319,0.706616,0.420308,0.676023,0.453319,0.854594,0.228001,0.793347,0.403867,0.798456,0.403867,0.859703,0.403867,0.854594,0.16761,0.854594,0.403867,0.793347,0.233503,0.793347,0.228001,0.798456,0.233503,0.854594,0.233503,0.793347,0.16761,0.859703,0.233503,0.915841,0.403867,0.676023,0.403867,0.798456,0.16761,0.798456,0.228001,0.732161,0.403867,0.73727,0.403867,0.73727,0.233503,0.732161,0.233503,0.73727,0.228001,0.915841,0.233503,0.73727,0.16761,0.676023,0.233503,0.732161,0.777477,0.670914,0.843435,0.676023,0.843435,0.696399,0.843435,0.732161,0.760972,0.69135,0.843435,0.670914,0.782979,0.670914,0.777477,0.676023,0.782979,0.69135,0.782979,0.670914,0.760972,0.696399,0.782979,0.752536,0.843435,0.594401,0.843435,0.676023,0.760972,0.676023,0.777477,0.609668,0.843435,0.614777,0.843435,0.614777,0.782979,0.609668,0.782979,0.614777,0.777477,0.752536,0.782979,0.614777,0.760972,0.594401,0.782979,0.732161,0.777477,0.670914,0.843435,0.676023,0.843435,0.696399,0.843435,0.732161,0.760972,0.69135,0.843435,0.670914,0.782979,0.670914,0.777477,0.676023,0.782979,0.69135,0.782979,0.670914,0.760972,0.696399,0.782979,0.752536,0.843435,0.594401,0.843435,0.676023,0.760972,0.676023,0.777477,0.609668,0.843435,0.614777,0.843435,0.614777,0.782979,0.609668,0.782979,0.614777,0.777477,0.752536,0.782979,0.614777,0.760972,0.594401,0.782979,0.854594,0.228001,0.793347,0.403867,0.798456,0.403867,0.859703,0.403867,0.854594,0.16761,0.854594,0.403867,0.793347,0.233503,0.793347,0.228001,0.798456,0.233503,0.854594,0.233503,0.793347,0.16761,0.859703,0.233503,0.915841,0.403867,0.676023,0.403867,0.798456,0.16761,0.798456,0.228001,0.732161,0.403867,0.73727,0.403867,0.73727,0.233503,0.732161,0.233503,0.73727,0.228001,0.915841,0.233503,0.73727,0.16761,0.676023,0.233503,0.517828,0.821428,0.456641,0.98629,0.46175,0.98629,0.522937,0.98629,0.517828,0.760972,0.517828,0.98629,0.456641,0.826929,0.456641,0.821428,0.46175,0.826929,0.517828,0.826929,0.456641,0.760972,0.522937,0.826929,0.579074,0.98629,0.339257,0.98629,0.46175,0.760972,0.46175,0.821428,0.395395,0.98629,0.400504,0.98629,0.400504,0.826929,0.395395,0.826929,0.400504,0.821428,0.579074,0.826929,0.400504,0.760972,0.339257,0.826929,0.517828,0.821428,0.456641,0.98629,0.46175,0.98629,0.522937,0.98629,0.517828,0.760972,0.517828,0.98629,0.456641,0.826929,0.456641,0.821428,0.46175,0.826929,0.517828,0.826929,0.456641,0.760972,0.522937,0.826929,0.579074,0.98629,0.339257,0.98629,0.46175,0.760972,0.46175,0.821428,0.395395,0.98629,0.400504,0.98629,0.400504,0.826929,0.395395,0.826929,0.400504,0.821428,0.579074,0.826929,0.400504,0.760972,0.339257,0.826929,0.568857,0.085146,0.32399,0.151104,0.329099,0.151104,0.410721,0.151104,0.568857,0.002747,0.405613,0.151104,0.32399,0.090648,0.32399,0.085146,0.329099,0.090648,0.405613,0.090648,0.32399,0.002747,0.410721,0.090648,0.650539,0.151104,0.002551,0.151104,0.329099,0.002747,0.329099,0.085146,0.079064,0.151104,0.084173,0.151104,0.084173,0.090648,0.079064,0.090648,0.084173,0.085146,0.650539,0.090648,0.084173,0.002747,0.002551,0.090648,0.579074,0.250008,0.497452,0.579668,0.502561,0.579668,0.584183,0.579668,0.579074,0.16761,0.579074,0.579668,0.497452,0.25551,0.497452,0.250008,0.502561,0.25551,0.579074,0.25551,0.497452,0.16761,0.584183,0.25551,0.660697,0.579668,0.339257,0.579668,0.502561,0.16761,0.502561,0.250008,0.41583,0.579668,0.420939,0.579668,0.420939,0.25551,0.41583,0.25551,0.420939,0.250008,0.660697,0.25551,0.420939,0.16761,0.339257,0.25551,0.242368,0.70058,0.160686,0.909328,0.165795,0.909328,0.247477,0.909328,0.242368,0.618117,0.242368,0.909328,0.160686,0.706017,0.160686,0.70058,0.165795,0.706017,0.242368,0.706017,0.160686,0.618117,0.247477,0.706017,0.32399,0.909328,0.002551,0.909328,0.165795,0.618117,0.165795,0.70058,0.079064,0.909328,0.084173,0.909328,0.084173,0.706017,0.079064,0.706017,0.084173,0.70058,0.32399,0.706017,0.084173,0.618117,0.002551,0.706017,0.905623,0.085146,0.824001,0.151104,0.82911,0.151104,0.910732,0.151104,0.905623,0.002747,0.905623,0.151104,0.824001,0.090648,0.824001,0.085146,0.82911,0.090648,0.905623,0.090648,0.824001,0.002747,0.910732,0.090648,0.987245,0.151104,0.665805,0.151104,0.82911,0.002747,0.82911,0.085146,0.742319,0.151104,0.747427,0.151104,0.747427,0.090648,0.742319,0.090648,0.747427,0.085146,0.987245,0.090648,0.747427,0.002747,0.665805,0.090648,0.905623,0.085146,0.824001,0.151104,0.82911,0.151104,0.910732,0.151104,0.905623,0.002747,0.905623,0.151104,0.824001,0.090648,0.824001,0.085146,0.82911,0.090648,0.905623,0.090648,0.824001,0.002747,0.910732,0.090648,0.987245,0.151104,0.665805,0.151104,0.82911,0.002747,0.82911,0.085146,0.742319,0.151104,0.747427,0.151104,0.747427,0.090648,0.742319,0.090648,0.747427,0.085146,0.987245,0.090648,0.747427,0.002747,0.665805,0.090648,0.742319,0.678573,0.579074,0.744531,0.584183,0.744531,0.665805,0.744531,0.742319,0.596174,0.660697,0.744531,0.579074,0.684075,0.579074,0.678573,0.584183,0.684075,0.660697,0.684075,0.579074,0.596174,0.665805,0.684075,0.824001,0.744531,0.339257,0.744531,0.584183,0.596174,0.584183,0.678573,0.41583,0.744531,0.420939,0.744531,0.420939,0.684075,0.41583,0.684075,0.420939,0.678573,0.824001,0.684075,0.420939,0.596174,0.339257,0.684075,0.242368,0.250008,0.160686,0.601676,0.165795,0.601676,0.247477,0.601676,0.242368,0.16761,0.242368,0.601676,0.160686,0.25551,0.160686,0.250008,0.165795,0.25551,0.242368,0.25551,0.160686,0.16761,0.247477,0.25551,0.32399,0.601676,0.002551,0.601676,0.165795,0.16761,0.165795,0.250008,0.079064,0.601676,0.084173,0.601676,0.084173,0.25551,0.079064,0.25551,0.084173,0.250008,0.32399,0.25551,0.084173,0.16761,0.002551,0.25551],"indices":[11,3,12,14,4,15,4,0,15,11,12,21,13,16,23,35,27,36,38,28,39,28,24,39,35,36,45,37,40,47,59,51,60,68,55,70,55,58,70,59,60,69,61,64,71,83,75,84,92,79,94,79,82,94,83,84,93,85,88,95,107,99,108,110,100,111,100,96,111,107,108,117,109,112,119,131,123,132,134,124,135,124,120,135,131,132,141,133,136,143,155,147,156,158,148,159,148,144,159,155,156,165,157,160,167,179,171,180,188,175,190,175,178,190,179,180,189,181,184,191,203,195,204,212,199,214,199,202,214,203,204,213,205,208,215,227,219,228,230,220,231,220,216,231,227,228,237,229,232,239,251,243,252,260,247,262,247,250,262,251,252,261,253,256,263,275,267,276,284,271,286,271,274,286,275,276,285,277,280,287,299,291,300,308,295,310,295,298,310,299,300,309,301,304,311,323,315,324,332,319,334,319,322,334,323,324,333,325,328,335,347,339,348,356,343,358,343,346,358,347,348,357,349,352,359,371,363,372,380,367,382,367,370,382,371,372,381,373,376,383,395,387,396,404,391,406,391,394,406,395,396,405,397,400,407,419,411,420,428,415,430,415,418,430,419,420,429,421,424,431,443,435,444,452,439,454,439,442,454,443,444,453,445,448,455,451,455,448,427,431,424,403,407,400,379,383,376,355,359,352,331,335,328,307,311,304,283,287,280,259,263,256,235,239,232,211,215,208,187,191,184,163,167,160,139,143,136,115,119,112,91,95,88,67,71,64,43,47,40,19,23,16],"shades":[1,0.85,0.85,1,0.7,1,0.85,0.85,1,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,1,0.85,0.85,1,0.7,1,0.85,0.85,1,0.7,1,0.85,0.85,1,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,1,0.85,0.85,1,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7,0.7]}')
+  42955: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => nr,
+      h: () => qr,
+      i: () => hr,
+      l: () => zr,
+      n: () => mr,
+      p: () => tr,
+      q: () => Ur,
+      s: () => Nr
+    });
+    var Zr = Qr(38560),
+      Wr = Qr(38684),
+      ar = Qr(38599),
+      jr = Qr(42961),
+      Ir = Qr(42060),
+      fr = Qr(41882),
+      Er = Qr(41906),
+      pr = Qr(41889),
+      xr = Qr(38609);
+    const mr = Object.freeze(new Zr.h(0, 0, 0, 0)),
+      Nr = Object.freeze(Zr.u.Zero()),
+      Ur = Object.freeze(Zr.q.Zero()),
+      tr = Object.freeze(fr.b.Zero()),
+      hr = Object.freeze(Wr.e.Black()),
+      zr = Object.freeze(new Wr.f(0, 0, 0, 0)),
+      Yr = {
+        key: 0,
+        repeatCount: 0,
+        TQ: 2
+      };
+    class nr {
+      static _PrepareAnimation(rr, Sr, Qr, ar, jr, Ir, Er, pr) {
+        let xr;
+        if (!isNaN(parseFloat(jr)) && isFinite(jr) ? xr = nr.ANIMATIONTYPE_FLOAT : jr instanceof Zr.h ? xr = nr.ANIMATIONTYPE_QUATERNION : jr instanceof Zr.u ? xr = nr.ANIMATIONTYPE_VECTOR3 : jr instanceof Zr.q ? xr = nr.ANIMATIONTYPE_VECTOR2 : jr instanceof Wr.e ? xr = nr.ANIMATIONTYPE_COLOR3 : jr instanceof Wr.f ? xr = nr.ANIMATIONTYPE_COLOR4 : jr instanceof fr.b && (xr = nr.ANIMATIONTYPE_SIZE), void 0 == xr) return null;
+        const mr = new nr(rr, Sr, Qr, xr, Er),
+          Nr = [{
+            frame: 0,
+            value: jr
+          }, {
+            frame: ar,
+            value: Ir
+          }];
+        return mr.setKeys(Nr), void 0 !== pr && mr.setEasingFunction(pr), mr
+      }
+      get runtimeAnimations() {
+        return this._runtimeAnimations
+      }
+      get hasRunningRuntimeAnimations() {
+        for (const rr of this._runtimeAnimations)
+          if (!rr.isStopped()) return !0;
+        return !1
+      }
+      constructor(rr, Sr, Qr, Zr, Wr, ar) {
+        this.name = rr, this.targetProperty = Sr, this.framePerSecond = Qr, this.dataType = Zr, this.TQ = Wr, this.enableBlending = ar, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = Sr.split("."), this.dataType = Zr, this.TQ = void 0 === Wr ? nr.ANIMATIONLOOPMODE_CYCLE : Wr, this.uniqueId = nr._UniqueIdGenerator++
+      }
+      toString(rr) {
+        let Sr = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (Sr += ", datatype: " + ["Float", "kU", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], Sr += ", nKeys: " + (this._keys ? this._keys.length : "none"), Sr += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), rr) {
+          Sr += ", Ranges: {";
+          let rr = !0;
+          for (const Qr in this._ranges) rr || (Sr += ", "), rr = !1, Sr += Qr;
+          Sr += "}"
+        }
+        return Sr
+      }
+      addEvent(rr) {
+        this._events.push(rr), this._events.sort(((rr, Sr) => rr.frame - Sr.frame))
+      }
+      removeEvents(rr) {
+        for (let Sr = 0; Sr < this._events.length; Sr++) this._events[Sr].frame === rr && (this._events.splice(Sr, 1), Sr--)
+      }
+      getEvents() {
+        return this._events
+      }
+      createRange(rr, Sr, Qr) {
+        this._ranges[rr] || (this._ranges[rr] = new jr.b(rr, Sr, Qr))
+      }
+      deleteRange(rr) {
+        let Sr = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Qr = this._ranges[rr];
+        if (Qr) {
+          if (Sr) {
+            const rr = Qr.from,
+              Sr = Qr.to;
+            for (let Qr = this._keys.length - 1; Qr >= 0; Qr--) this._keys[Qr].frame >= rr && this._keys[Qr].frame <= Sr && this._keys.splice(Qr, 1)
+          }
+          this._ranges[rr] = null
+        }
+      }
+      getRange(rr) {
+        return this._ranges[rr]
+      }
+      getKeys() {
+        return this._keys
+      }
+      getHighestFrame() {
+        let rr = 0;
+        for (let Sr = 0, Qr = this._keys.length; Sr < Qr; Sr++) rr < this._keys[Sr].frame && (rr = this._keys[Sr].frame);
+        return rr
+      }
+      getEasingFunction() {
+        return this._easingFunction
+      }
+      setEasingFunction(rr) {
+        this._easingFunction = rr
+      }
+      floatInterpolateFunction(rr, Sr, Qr) {
+        return (0, ar.Lerp)(rr, Sr, Qr)
+      }
+      floatInterpolateFunctionWithTangents(rr, Sr, Qr, Zr, Wr) {
+        return (0, ar.Hermite)(rr, Sr, Qr, Zr, Wr)
+      }
+      quaternionInterpolateFunction(rr, Sr, Qr) {
+        return Zr.h.Slerp(rr, Sr, Qr)
+      }
+      quaternionInterpolateFunctionWithTangents(rr, Sr, Qr, Wr, ar) {
+        return Zr.h.Hermite(rr, Sr, Qr, Wr, ar).normalize()
+      }
+      vector3InterpolateFunction(rr, Sr, Qr) {
+        return Zr.u.Lerp(rr, Sr, Qr)
+      }
+      vector3InterpolateFunctionWithTangents(rr, Sr, Qr, Wr, ar) {
+        return Zr.u.Hermite(rr, Sr, Qr, Wr, ar)
+      }
+      vector2InterpolateFunction(rr, Sr, Qr) {
+        return Zr.q.Lerp(rr, Sr, Qr)
+      }
+      vector2InterpolateFunctionWithTangents(rr, Sr, Qr, Wr, ar) {
+        return Zr.q.Hermite(rr, Sr, Qr, Wr, ar)
+      }
+      sizeInterpolateFunction(rr, Sr, Qr) {
+        return fr.b.Lerp(rr, Sr, Qr)
+      }
+      color3InterpolateFunction(rr, Sr, Qr) {
+        return Wr.e.Lerp(rr, Sr, Qr)
+      }
+      color3InterpolateFunctionWithTangents(rr, Sr, Qr, Zr, ar) {
+        return Wr.e.Hermite(rr, Sr, Qr, Zr, ar)
+      }
+      color4InterpolateFunction(rr, Sr, Qr) {
+        return Wr.f.Lerp(rr, Sr, Qr)
+      }
+      color4InterpolateFunctionWithTangents(rr, Sr, Qr, Zr, ar) {
+        return Wr.f.Hermite(rr, Sr, Qr, Zr, ar)
+      }
+      _getKeyValue(rr) {
+        return "function" === typeof rr ? rr() : rr
+      }
+      evaluate(rr) {
+        return Yr.key = 0, this._interpolate(rr, Yr)
+      }
+      _interpolate(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (Sr.TQ === nr.ANIMATIONLOOPMODE_CONSTANT && Sr.repeatCount > 0) return Sr.highLimitValue.clone ? Sr.highLimitValue.clone() : Sr.highLimitValue;
+        const Zr = this._keys;
+        let Wr;
+        if (this._coreAnimation) Wr = this._coreAnimation._key;
+        else {
+          const ar = Zr.length;
+          for (Wr = Sr.key; Wr >= 0 && rr < Zr[Wr].frame;) --Wr;
+          for (; Wr + 1 <= ar - 1 && rr >= Zr[Wr + 1].frame;) ++Wr;
+          if (Sr.key = Wr, Wr < 0) return Qr ? void 0 : this._getKeyValue(Zr[0].value);
+          if (Wr + 1 > ar - 1) return Qr ? void 0 : this._getKeyValue(Zr[ar - 1].value);
+          this._key = Wr
+        }
+        const ar = Zr[Wr],
+          jr = Zr[Wr + 1];
+        if (Qr && (rr === ar.frame || rr === jr.frame)) return;
+        const Ir = this._getKeyValue(ar.value),
+          fr = this._getKeyValue(jr.value);
+        if (1 === ar.interpolation) return jr.frame > rr ? Ir : fr;
+        const Er = void 0 !== ar.outTangent && void 0 !== jr.inTangent,
+          pr = jr.frame - ar.frame;
+        let xr = (rr - ar.frame) / pr;
+        const Yr = ar.easingFunction || this.getEasingFunction();
+        switch (Yr && (xr = Yr.ease(xr)), this.dataType) {
+          case nr.ANIMATIONTYPE_FLOAT: {
+            const rr = Er ? this.floatInterpolateFunctionWithTangents(Ir, ar.outTangent * pr, fr, jr.inTangent * pr, xr) : this.floatInterpolateFunction(Ir, fr, xr);
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return rr;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (Sr.offsetValue ?? 0) * Sr.repeatCount + rr
+            }
+            break
+          }
+          case nr.ANIMATIONTYPE_QUATERNION: {
+            const rr = Er ? this.quaternionInterpolateFunctionWithTangents(Ir, ar.outTangent.scale(pr), fr, jr.inTangent.scale(pr), xr) : this.quaternionInterpolateFunction(Ir, fr, xr);
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return rr;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return rr.addInPlace((Sr.offsetValue || mr).scale(Sr.repeatCount))
+            }
+            return rr
+          }
+          case nr.ANIMATIONTYPE_VECTOR3: {
+            const rr = Er ? this.vector3InterpolateFunctionWithTangents(Ir, ar.outTangent.scale(pr), fr, jr.inTangent.scale(pr), xr) : this.vector3InterpolateFunction(Ir, fr, xr);
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return rr;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return rr.add((Sr.offsetValue || Nr).scale(Sr.repeatCount))
+            }
+            break
+          }
+          case nr.ANIMATIONTYPE_VECTOR2: {
+            const rr = Er ? this.vector2InterpolateFunctionWithTangents(Ir, ar.outTangent.scale(pr), fr, jr.inTangent.scale(pr), xr) : this.vector2InterpolateFunction(Ir, fr, xr);
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return rr;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return rr.add((Sr.offsetValue || Ur).scale(Sr.repeatCount))
+            }
+            break
+          }
+          case nr.ANIMATIONTYPE_SIZE:
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(Ir, fr, xr);
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(Ir, fr, xr).add((Sr.offsetValue || tr).scale(Sr.repeatCount))
+            }
+            break;
+          case nr.ANIMATIONTYPE_COLOR3: {
+            const rr = Er ? this.color3InterpolateFunctionWithTangents(Ir, ar.outTangent.scale(pr), fr, jr.inTangent.scale(pr), xr) : this.color3InterpolateFunction(Ir, fr, xr);
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return rr;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return rr.add((Sr.offsetValue || hr).scale(Sr.repeatCount))
+            }
+            break
+          }
+          case nr.ANIMATIONTYPE_COLOR4: {
+            const rr = Er ? this.color4InterpolateFunctionWithTangents(Ir, ar.outTangent.scale(pr), fr, jr.inTangent.scale(pr), xr) : this.color4InterpolateFunction(Ir, fr, xr);
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return rr;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return rr.add((Sr.offsetValue || zr).scale(Sr.repeatCount))
+            }
+            break
+          }
+          case nr.ANIMATIONTYPE_MATRIX:
+            switch (Sr.TQ) {
+              case nr.ANIMATIONLOOPMODE_CYCLE:
+              case nr.ANIMATIONLOOPMODE_CONSTANT:
+              case nr.ANIMATIONLOOPMODE_YOYO:
+                return nr.AllowMatricesInterpolation ? this.matrixInterpolateFunction(Ir, fr, xr, Sr.workValue) : Ir;
+              case nr.ANIMATIONLOOPMODE_RELATIVE:
+              case nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return Ir
+            }
+        }
+        return 0
+      }
+      matrixInterpolateFunction(rr, Sr, Qr, Wr) {
+        return nr.AllowMatrixDecomposeForInterpolation ? Wr ? (Zr.d.DecomposeLerpToRef(rr, Sr, Qr, Wr), Wr) : Zr.d.DecomposeLerp(rr, Sr, Qr) : Wr ? (Zr.d.LerpToRef(rr, Sr, Qr, Wr), Wr) : Zr.d.Lerp(rr, Sr, Qr)
+      }
+      clone() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Sr = new nr(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.TQ);
+        if (Sr.enableBlending = this.enableBlending, Sr.blendingSpeed = this.blendingSpeed, this._keys && Sr.setKeys(this._keys, !1, rr), this._ranges) {
+          Sr._ranges = {};
+          for (const rr in this._ranges) {
+            const Qr = this._ranges[rr];
+            Qr && (Sr._ranges[rr] = Qr.clone())
+          }
+        }
+        return Sr
+      }
+      setKeys(rr) {
+        let Sr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = rr;
+        else if (this._keys = rr.slice(0), Sr)
+          for (let Qr = 0; Qr < this._keys.length; Qr++) {
+            const rr = this._keys[Qr];
+            this._keys[Qr] = {
+              frame: rr.frame,
+              value: rr.value.clone ? rr.value.clone() : rr.value,
+              inTangent: rr.inTangent && rr.inTangent.clone ? rr.inTangent.clone() : rr.inTangent,
+              outTangent: rr.outTangent && rr.outTangent.clone ? rr.outTangent.clone() : rr.outTangent,
+              interpolation: rr.interpolation,
+              lockedTangent: rr.lockedTangent,
+              easingFunction: rr.easingFunction
+            }
+          }
+      }
+      createKeyForFrame(rr) {
+        Yr.key = 0;
+        const Sr = this._interpolate(rr, Yr, !0);
+        if (!Sr) return this._keys[Yr.key].frame === rr ? Yr.key : Yr.key + 1;
+        const Qr = {
+          frame: rr,
+          value: Sr.clone ? Sr.clone() : Sr
+        };
+        return this._keys.splice(Yr.key + 1, 0, Qr), Yr.key + 1
+      }
+      serialize() {
+        const rr = {};
+        rr.name = this.name, rr.property = this.targetProperty, rr.framePerSecond = this.framePerSecond, rr.dataType = this.dataType, rr.loopBehavior = this.TQ, rr.enableBlending = this.enableBlending, rr.blendingSpeed = this.blendingSpeed;
+        const Sr = this.dataType;
+        rr.keys = [];
+        const Qr = this.getKeys();
+        for (let Zr = 0; Zr < Qr.length; Zr++) {
+          const Wr = Qr[Zr],
+            ar = {};
+          switch (ar.frame = Wr.frame, Sr) {
+            case nr.ANIMATIONTYPE_FLOAT:
+              ar.values = [Wr.value], void 0 !== Wr.inTangent && ar.values.push(Wr.inTangent), void 0 !== Wr.outTangent && (void 0 === Wr.inTangent && ar.values.push(void 0), ar.values.push(Wr.outTangent)), void 0 !== Wr.interpolation && (void 0 === Wr.inTangent && ar.values.push(void 0), void 0 === Wr.outTangent && ar.values.push(void 0), ar.values.push(Wr.interpolation));
+              break;
+            case nr.ANIMATIONTYPE_QUATERNION:
+            case nr.ANIMATIONTYPE_MATRIX:
+            case nr.ANIMATIONTYPE_VECTOR3:
+            case nr.ANIMATIONTYPE_COLOR3:
+            case nr.ANIMATIONTYPE_COLOR4:
+              ar.values = Wr.value.OWr(), void 0 != Wr.inTangent && ar.values.push(Wr.inTangent.OWr()), void 0 != Wr.outTangent && (void 0 === Wr.inTangent && ar.values.push(void 0), ar.values.push(Wr.outTangent.OWr())), void 0 !== Wr.interpolation && (void 0 === Wr.inTangent && ar.values.push(void 0), void 0 === Wr.outTangent && ar.values.push(void 0), ar.values.push(Wr.interpolation))
+          }
+          rr.keys.push(ar)
+        }
+        rr.yh = [];
+        for (const Zr in this._ranges) {
+          const Sr = this._ranges[Zr];
+          if (!Sr) continue;
+          const Qr = {};
+          Qr.name = Zr, Qr.from = Sr.from, Qr.to = Sr.to, rr.yh.push(Qr)
+        }
+        return rr
+      }
+      static _UniversalLerp(rr, Sr, Qr) {
+        const Zr = rr.constructor;
+        return Zr.Lerp ? Zr.Lerp(rr, Sr, Qr) : Zr.Slerp ? Zr.Slerp(rr, Sr, Qr) : rr.toFixed ? rr * (1 - Qr) + Qr * Sr : Sr
+      }
+    }
+
+    function er(rr, Sr, Qr) {
+      let Wr;
+      Wr = "object" === typeof Sr ? Sr : {
+        referenceFrame: Sr ?? 0,
+        range: Qr,
+        cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
+      };
+      let ar = rr;
+      Wr.cloneOriginalAnimation && (ar = rr.clone(), ar.name = Wr.clonedAnimationName || ar.name);
+      const jr = ar.getKeys();
+      if (!jr.length) return ar;
+      const Ir = Wr.referenceFrame && Wr.referenceFrame >= 0 ? Wr.referenceFrame : 0;
+      let fr = 0;
+      const Er = jr[0];
+      let pr = jr.length - 1;
+      const xr = jr[pr],
+        mr = {
+          referenceValue: Er.value,
+          referencePosition: Zr.n.kU[0],
+          referenceQuaternion: Zr.n.Quaternion[0],
+          referenceScaling: Zr.n.kU[1],
+          keyPosition: Zr.n.kU[2],
+          keyQuaternion: Zr.n.Quaternion[1],
+          keyScaling: Zr.n.kU[3]
+        };
+      let Nr = Er.frame,
+        Ur = xr.frame;
+      if (Wr.range) {
+        const rr = ar.getRange(Wr.range);
+        rr && (Nr = rr.from, Ur = rr.to)
+      } else Nr = Wr.fromFrame ?? Nr, Ur = Wr.toFrame ?? Ur;
+      Nr !== Er.frame && (fr = ar.createKeyForFrame(Nr)), Ur !== xr.frame && (pr = ar.createKeyForFrame(Ur));
+      const tr = ar.getKeys();
+      if (1 === tr.length) {
+        const rr = ar._getKeyValue(tr[0].value);
+        mr.referenceValue = rr.clone ? rr.clone() : rr
+      } else if (Ir <= Er.frame) {
+        const rr = ar._getKeyValue(Er.value);
+        mr.referenceValue = rr.clone ? rr.clone() : rr
+      } else if (Ir >= xr.frame) {
+        const rr = ar._getKeyValue(xr.value);
+        mr.referenceValue = rr.clone ? rr.clone() : rr
+      } else {
+        Yr.key = 0;
+        const rr = ar._interpolate(Ir, Yr);
+        mr.referenceValue = rr.clone ? rr.clone() : rr
+      }
+      ar.dataType === nr.ANIMATIONTYPE_QUATERNION ? mr.referenceValue.normalize().conjugateInPlace() : ar.dataType === nr.ANIMATIONTYPE_MATRIX && (mr.referenceValue.decompose(mr.referenceScaling, mr.referenceQuaternion, mr.referencePosition), mr.referenceQuaternion.normalize().conjugateInPlace());
+      let hr = Number.MAX_VALUE;
+      const zr = Wr.clipKeys ? [] : null;
+      for (let Yr = fr; Yr <= pr; Yr++) {
+        let rr = tr[Yr];
+        if ((zr || Wr.cloneOriginalAnimation) && (rr = {
+            frame: rr.frame,
+            value: rr.value.clone ? rr.value.clone() : rr.value,
+            inTangent: rr.inTangent,
+            outTangent: rr.outTangent,
+            interpolation: rr.interpolation,
+            lockedTangent: rr.lockedTangent,
+            easingFunction: rr.easingFunction
+          }, zr && (hr === Number.MAX_VALUE && (hr = rr.frame), rr.frame -= hr, zr.push(rr))), !Yr || ar.dataType === nr.ANIMATIONTYPE_FLOAT || rr.value !== Er.value) switch (ar.dataType) {
+          case nr.ANIMATIONTYPE_MATRIX:
+            rr.value.decompose(mr.keyScaling, mr.keyQuaternion, mr.keyPosition), mr.keyPosition.iWr(mr.referencePosition), mr.keyScaling.divideInPlace(mr.referenceScaling), mr.referenceQuaternion.multiplyToRef(mr.keyQuaternion, mr.keyQuaternion), Zr.d.ComposeToRef(mr.keyScaling, mr.keyQuaternion, mr.keyPosition, rr.value);
+            break;
+          case nr.ANIMATIONTYPE_QUATERNION:
+            mr.referenceValue.multiplyToRef(rr.value, rr.value);
+            break;
+          case nr.ANIMATIONTYPE_VECTOR2:
+          case nr.ANIMATIONTYPE_VECTOR3:
+          case nr.ANIMATIONTYPE_COLOR3:
+          case nr.ANIMATIONTYPE_COLOR4:
+            rr.value.subtractToRef(mr.referenceValue, rr.value);
+            break;
+          case nr.ANIMATIONTYPE_SIZE:
+            rr.value.width -= mr.referenceValue.width, rr.value.height -= mr.referenceValue.height;
+            break;
+          default:
+            rr.value -= mr.referenceValue
+        }
+      }
+      return zr && ar.setKeys(zr, !0), ar
+    }
+
+    function Kr(rr, Sr, Qr, Zr) {
+      const Wr = new nr(rr + "Animation", rr, Qr, Sr, nr.ANIMATIONLOOPMODE_CONSTANT);
+      return Wr.setEasingFunction(Zr), Wr
+    }
+
+    function yr(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er, pr) {
+      const xr = nr._PrepareAnimation(rr, Qr, Zr, Wr, ar, jr, Ir, fr);
+      return xr ? (Sr.eC && (pr = Sr.eC()), pr ? pr.beginDirectAnimation(Sr, [xr], 0, Wr, xr.TQ !== nr.ANIMATIONLOOPMODE_CONSTANT, 1, Er) : null) : null
+    }
+
+    function Br(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er, pr) {
+      const xr = nr._PrepareAnimation(rr, Zr, Wr, ar, jr, Ir, fr, Er);
+      if (!xr) return null;
+      return Sr.eC().beginDirectHierarchyAnimation(Sr, Qr, [xr], 0, ar, 1 === xr.TQ, 1, pr)
+    }
+
+    function Tr(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er) {
+      const pr = nr._PrepareAnimation(rr, Qr, Zr, Wr, ar, jr, Ir, fr);
+      return pr ? (Sr.animations.push(pr), Sr.eC().beginAnimation(Sr, 0, Wr, 1 === pr.TQ, 1, Er)) : null
+    }
+
+    function vr(rr, Sr, Qr, Zr, Wr, ar, jr) {
+      let Ir = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        fr = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        Er = arguments.length > 9 ? arguments[9] : void 0;
+      if (jr <= 0) return Qr[rr] = Sr, Ir && Ir(), null;
+      const pr = Wr * (jr / 1e3);
+      ar.setKeys(Er ?? [{
+        frame: 0,
+        value: Qr[rr].clone ? Qr[rr].clone() : Qr[rr]
+      }, {
+        frame: pr,
+        value: Sr
+      }]), Qr.animations || (Qr.animations = []), Qr.animations.push(ar);
+      return Zr.beginAnimation(Qr, 0, pr, !1, 1, Ir ?? void 0, void 0, fr)
+    }
+
+    function Or(rr, Sr) {
+      pr.e.AppendSerializedAnimations(rr, Sr)
+    }
+
+    function Lr(rr) {
+      const Sr = new nr(rr.name, rr.property, rr.framePerSecond, rr.dataType, rr.loopBehavior),
+        Qr = rr.dataType,
+        ar = [];
+      let jr, Ir;
+      for (rr.enableBlending && (Sr.enableBlending = rr.enableBlending), rr.blendingSpeed && (Sr.blendingSpeed = rr.blendingSpeed), Ir = 0; Ir < rr.keys.length; Ir++) {
+        const Sr = rr.keys[Ir];
+        let fr, Er, pr;
+        switch (Qr) {
+          case nr.ANIMATIONTYPE_FLOAT:
+            jr = Sr.values[0], Sr.values.length >= 2 && (fr = Sr.values[1]), Sr.values.length >= 3 && (Er = Sr.values[2]), Sr.values.length >= 4 && (pr = Sr.values[3]);
+            break;
+          case nr.ANIMATIONTYPE_QUATERNION:
+            if (jr = Zr.h.FromArray(Sr.values), Sr.values.length >= 8) {
+              const rr = Zr.h.FromArray(Sr.values.slice(4, 8));
+              rr.equals(Zr.h.Zero()) || (fr = rr)
+            }
+            if (Sr.values.length >= 12) {
+              const rr = Zr.h.FromArray(Sr.values.slice(8, 12));
+              rr.equals(Zr.h.Zero()) || (Er = rr)
+            }
+            Sr.values.length >= 13 && (pr = Sr.values[12]);
+            break;
+          case nr.ANIMATIONTYPE_MATRIX:
+            jr = Zr.d.FromArray(Sr.values), Sr.values.length >= 17 && (pr = Sr.values[16]);
+            break;
+          case nr.ANIMATIONTYPE_COLOR3:
+            jr = Wr.e.FromArray(Sr.values), Sr.values[3] && (fr = Wr.e.FromArray(Sr.values[3])), Sr.values[4] && (Er = Wr.e.FromArray(Sr.values[4])), Sr.values[5] && (pr = Sr.values[5]);
+            break;
+          case nr.ANIMATIONTYPE_COLOR4:
+            jr = Wr.f.FromArray(Sr.values), Sr.values[4] && (fr = Wr.f.FromArray(Sr.values[4])), Sr.values[5] && (Er = Wr.f.FromArray(Sr.values[5])), Sr.values[6] && (pr = Sr.values[6]);
+            break;
+          case nr.ANIMATIONTYPE_VECTOR3:
+          default:
+            jr = Zr.u.FromArray(Sr.values), Sr.values[3] && (fr = Zr.u.FromArray(Sr.values[3])), Sr.values[4] && (Er = Zr.u.FromArray(Sr.values[4])), Sr.values[5] && (pr = Sr.values[5])
+        }
+        const xr = {};
+        xr.frame = Sr.frame, xr.value = jr, void 0 != fr && (xr.inTangent = fr), void 0 != Er && (xr.outTangent = Er), void 0 != pr && (xr.interpolation = pr), ar.push(xr)
+      }
+      if (Sr.setKeys(ar), rr.yh)
+        for (Ir = 0; Ir < rr.yh.length; Ir++) jr = rr.yh[Ir], Sr.createRange(jr.name, jr.from, jr.to);
+      return Sr
+    }
+    async function lr(rr, Sr) {
+      return await new Promise(((Qr, Zr) => {
+        const Wr = new Er.b;
+        Wr.addEventListener("readystatechange", (() => {
+          if (4 == Wr.readyState)
+            if (200 == Wr.status) {
+              let Sr = JSON.parse(Wr.responseText);
+              if (Sr.animations && (Sr = Sr.animations), Sr.length) {
+                const rr = [];
+                for (const Qr of Sr) rr.push(Lr(Qr));
+                Qr(rr)
+              } else {
+                const Zr = Lr(Sr);
+                rr && (Zr.name = rr), Qr(Zr)
+              }
+            } else Zr("Unable to load the animation")
+        })), Wr.open("GET", Sr), Wr.send()
+      }))
+    }
+    async function Xr(rr) {
+      const Sr = this?.SnippetUrl ?? nr.SnippetUrl;
+      return await new Promise(((Qr, Zr) => {
+        const Wr = new Er.b;
+        Wr.addEventListener("readystatechange", (() => {
+          if (4 == Wr.readyState)
+            if (200 == Wr.status) {
+              const Sr = JSON.parse(JSON.parse(Wr.responseText).jsonPayload);
+              if (Sr.animations) {
+                const Zr = JSON.parse(Sr.animations),
+                  Wr = [];
+                for (const Sr of Zr.animations) {
+                  const Qr = Lr(Sr);
+                  Qr.snippetId = rr, Wr.push(Qr)
+                }
+                Qr(Wr)
+              } else {
+                const Zr = Lr(JSON.parse(Sr.animation));
+                Zr.snippetId = rr, Qr(Zr)
+              }
+            } else Zr("Unable to load the snippet " + rr)
+        })), Wr.open("GET", Sr + "/" + rr.replace(/#/g, "/")), Wr.send()
+      }))
+    }
+    nr._UniqueIdGenerator = 0, nr.AllowMatricesInterpolation = !1, nr.AllowMatrixDecomposeForInterpolation = !0, nr.InheritOriginalValueFromActiveAnimations = !1, nr.SnippetUrl = "https://snippet.babylonjs.com", nr.ANIMATIONTYPE_FLOAT = 0, nr.ANIMATIONTYPE_VECTOR3 = 1, nr.ANIMATIONTYPE_QUATERNION = 2, nr.ANIMATIONTYPE_MATRIX = 3, nr.ANIMATIONTYPE_COLOR3 = 4, nr.ANIMATIONTYPE_COLOR4 = 7, nr.ANIMATIONTYPE_VECTOR2 = 5, nr.ANIMATIONTYPE_SIZE = 6, nr.ANIMATIONLOOPMODE_RELATIVE = 0, nr.ANIMATIONLOOPMODE_CYCLE = 1, nr.ANIMATIONLOOPMODE_CONSTANT = 2, nr.ANIMATIONLOOPMODE_YOYO = 4, nr.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const Pr = Xr;
+    let Hr = !1;
+
+    function qr() {
+      Hr || (Hr = !0, nr.Parse = Lr, nr.ParseFromFileAsync = lr, nr.ParseFromSnippetAsync = Xr, nr.CreateFromSnippetAsync = Pr, nr.CreateAnimation = Kr, nr.CreateAndStartAnimation = yr, nr.CreateAndStartHierarchyAnimation = Br, nr.CreateMergeAndStartAnimation = Tr, nr.MakeAnimationAdditive = er, nr.TransitionTo = vr, nr.AppendSerializedAnimations = Or, (0, xr.e)("BABYLON.Animation", nr), Ir.c._AnimationRangeFactory = (rr, Sr, Qr) => new jr.b(rr, Sr, Qr))
+    }
+  },
+  42961: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr
+    });
+    class Zr {
+      constructor(rr, Sr, Qr) {
+        this.name = rr, this.from = Sr, this.to = Qr
+      }
+      clone() {
+        return new Zr(this.name, this.from, this.to)
+      }
+    }
+  },
+  43031: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr.c,
+      g: () => Zr.j
+    });
+    var Zr = Qr(41995);
+    (0, Zr.g)()
+  },
+  43008: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr.f
+    });
+    var Zr = Qr(42310);
+    (0, Zr.d)()
+  },
+  42980: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr.e
+    });
+    var Zr = Qr(42299);
+    (0, Zr.f)()
+  },
+  43037: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr.c
+    });
+    var Zr = Qr(42243);
+    (0, Zr.f)()
+  },
+  42966: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr.e
+    });
+    var Zr = Qr(42287);
+    (0, Zr.d)()
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

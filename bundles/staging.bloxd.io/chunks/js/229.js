@@ -1,244 +1,226 @@
 export const id = 229;
 export const ids = [229];
 export const modules = {
-  53531: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      MobPreview: () => KR
+  53849: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(53305),
-      qR = GR(35193),
-      iR = GR(53299),
-      fR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(3855);
 
-    function VR(RR) {
-      return qR.g.openMob(RR)
-    }
-    const KR = (0, yR.memo)((function(RR) {
-      let {
-        mobType: JR,
-        variation: GR = null,
-        animation: tR = iR.g,
-        className: qR
-      } = RR;
-      const KR = (0, yR.useRef)(null),
-        wR = (0, yR.useMemo)((() => ({
-          mobType: JR,
-          variation: GR,
-          animation: tR
-        })), [JR, GR, tR]);
-      return (0, ZR.d)(KR, VR, wR), (0, fR.jsx)("div", {
-        className: uR()("MobPreview", qR),
-        ref: KR
-      })
-    }))
-  },
-  53305: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => uR
-    });
-    var yR = GR(66),
-      tR = GR(3909);
-
-    function uR(RR, JR, GR) {
-      const uR = (0, yR.useRef)(null),
+    function ar(rr, Sr, Qr) {
+      const ar = (0, Zr.useRef)(null),
         {
-          width: ZR,
-          height: qR
-        } = (0, tR.b)(RR);
-      (0, yR.useEffect)((() => {
-        const GR = JR(RR.current);
-        return uR.current = GR, () => {
-          GR.close(), uR.current = null
+          width: jr,
+          height: Ir
+        } = (0, Wr.b)(rr);
+      (0, Zr.useEffect)((() => {
+        const Qr = Sr(rr.current);
+        return ar.current = Qr, () => {
+          Qr.close(), ar.current = null
         }
-      }), [RR, JR]), (0, yR.useEffect)((() => {
-        ZR <= 0 || qR <= 0 || uR.current.resize(ZR, qR)
-      }), [ZR, qR]), (0, yR.useEffect)((() => {
-        uR.current.show(GR)
-      }), [GR])
+      }), [rr, Sr]), (0, Zr.useEffect)((() => {
+        jr <= 0 || Ir <= 0 || ar.current.resize(jr, Ir)
+      }), [jr, Ir]), (0, Zr.useEffect)((() => {
+        ar.current.show(Qr)
+      }), [Qr])
     }
   },
-  53299: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => wR,
-      e: () => KR,
-      g: () => iR
+  53844: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => mr,
+      f: () => xr,
+      g: () => fr
     });
-    var yR = GR(38275),
-      tR = GR(39862);
+    var Zr = Qr(38638),
+      Wr = Qr(40197);
 
-    function uR(RR, JR) {
-      let [GR, yR, tR] = RR;
-      return [0, .5, 1].map((RR => ({
-        timeFraction: RR,
+    function ar(rr, Sr) {
+      let [Qr, Zr, Wr] = rr;
+      return [0, .5, 1].map((rr => ({
+        timeFraction: rr,
         rotation: {
-          CG: "catmull-rom-spline",
-          point: [GR, yR, tR + (.5 === RR ? JR : 0)]
+          lQ: "catmull-rom-spline",
+          point: [Qr, Zr, Wr + (.5 === rr ? Sr : 0)]
         }
       })))
     }
 
-    function ZR(RR, JR, GR) {
+    function jr(rr, Sr, Qr) {
       return {
-        LG: 3200,
+        BQ: 3200,
         loop: !0,
-        UG: {
+        vQ: {
           Root: {
-            timeline: [0, .5, 1].map((RR => ({
-              timeFraction: RR,
+            timeline: [0, .5, 1].map((rr => ({
+              timeFraction: rr,
               position: {
-                CG: "catmull-rom-spline",
-                point: [0, .5 === RR ? .18 : 0, 0]
+                lQ: "catmull-rom-spline",
+                point: [0, .5 === rr ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((RR => ({
-              timeFraction: RR,
+            timeline: [0, .25, .75, 1].map((rr => ({
+              timeFraction: rr,
               rotation: {
-                CG: "catmull-rom-spline",
-                point: [0, .25 === RR ? .12 : .75 === RR ? -.12 : 0, 0]
+                lQ: "catmull-rom-spline",
+                point: [0, .25 === rr ? .12 : .75 === rr ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: uR(RR, GR)
+            timeline: ar(rr, Qr)
           },
           ArmRightMesh: {
-            timeline: uR(JR, -GR)
+            timeline: ar(Sr, -Qr)
           }
         }
       }
     }
-    const qR = ZR([0, 0, 0], [0, 0, 0], .07),
-      iR = (0, tR.c)((0, yR.h)(qR), "mobIdle"),
-      fR = ZR([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      VR = ZR([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      KR = (0, tR.c)((0, yR.h)(fR), "gunReady"),
-      wR = (0, tR.c)((0, yR.h)(VR), "gunAimed")
+    const Ir = jr([0, 0, 0], [0, 0, 0], .07),
+      fr = (0, Wr.c)((0, Zr.d)(Ir), "mobIdle"),
+      Er = jr([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      pr = jr([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      xr = (0, Wr.c)((0, Zr.d)(Er), "gunReady"),
+      mr = (0, Wr.c)((0, Zr.d)(pr), "gunAimed")
   },
-  35195: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      i: () => tR,
-      l: () => KR
+  40197: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Wr,
+      g: () => ar
     });
-    var yR = GR(1718);
+    const Zr = new WeakMap;
 
-    function tR(RR) {
-      var JR;
+    function Wr(rr, Sr) {
+      return Zr.set(rr, Sr), rr
+    }
+
+    function ar(rr) {
+      var Sr;
+      return null !== (Sr = Zr.get(rr)) && void 0 !== Sr ? Sr : null
+    }
+  },
+  35509: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ir,
+      e: () => Wr,
+      i: () => xr
+    });
+    var Zr = Qr(1686);
+
+    function Wr(rr) {
+      var Sr;
       return {
-        ...qR.store,
-        yaw: qR.store.yaw + (null !== (JR = yR.b[RR].previewYaw) && void 0 !== JR ? JR : 0)
+        ...Ir.store,
+        yaw: Ir.store.yaw + (null !== (Sr = Zr.e[rr].previewYaw) && void 0 !== Sr ? Sr : 0)
       }
     }
-    const uR = {
+    const ar = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      ZR = {
-        ...uR,
+      jr = {
+        ...ar,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      qR = {
-        player: uR,
-        store: ZR,
+      Ir = {
+        player: ar,
+        store: jr,
         showcase: {
-          ...ZR,
+          ...jr,
           target: [0, 1.9, 0]
         }
       };
 
-    function iR(RR, JR) {
-      RR instanceof Promise ? RR.then(JR).catch((RR => {
-        console.error("Couldn't open the preview", RR)
-      })) : JR(RR)
+    function fr(rr, Sr) {
+      rr instanceof Promise ? rr.then(Sr).catch((rr => {
+        console.error("Couldn't open the preview", rr)
+      })) : Sr(rr)
     }
-    class fR {
-      constructor(RR) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, iR(RR, (RR => {
-          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height), null !== this.view && RR.show(this.view))
+    class Er {
+      constructor(rr) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, fr(rr, (rr => {
+          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height), null !== this.view && rr.show(this.view))
         }))
       }
-      show(RR) {
-        var JR;
-        this.view = RR, null === (JR = this.opened) || void 0 === JR || JR.show(RR)
+      show(rr) {
+        var Sr;
+        this.view = rr, null === (Sr = this.opened) || void 0 === Sr || Sr.show(rr)
       }
-      resize(RR, JR) {
-        var GR;
+      resize(rr, Sr) {
+        var Qr;
         this.size = {
-          width: RR,
-          height: JR
-        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
+          width: rr,
+          height: Sr
+        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
       }
       close() {
-        var RR;
-        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
+        var rr;
+        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
       }
     }
-    class VR {
-      constructor(RR) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(RR).then((RR => RR.ready)), iR(RR, (RR => {
-          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height))
+    class pr {
+      constructor(rr) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(rr).then((rr => rr.ready)), fr(rr, (rr => {
+          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var RR, JR;
-        return null !== (RR = null === (JR = this.opened) || void 0 === JR ? void 0 : JR.isReady()) && void 0 !== RR && RR
+        var rr, Sr;
+        return null !== (rr = null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.isReady()) && void 0 !== rr && rr
       }
-      setCosmetic(RR, JR) {
-        var GR;
-        null === (GR = this.opened) || void 0 === GR || GR.setCosmetic(RR, JR)
+      setCosmetic(rr, Sr) {
+        var Qr;
+        null === (Qr = this.opened) || void 0 === Qr || Qr.setCosmetic(rr, Sr)
       }
-      setNametag(RR) {
-        var JR;
-        null === (JR = this.opened) || void 0 === JR || JR.setNametag(RR)
+      setNametag(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.setNametag(rr)
       }
-      playEmote(RR) {
-        var JR;
-        null === (JR = this.opened) || void 0 === JR || JR.playEmote(RR)
+      playEmote(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.playEmote(rr)
       }
-      setOrbit(RR) {
-        var JR;
-        null === (JR = this.opened) || void 0 === JR || JR.setOrbit(RR)
+      setOrbit(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.setOrbit(rr)
       }
       resetCamera() {
-        var RR;
-        null === (RR = this.opened) || void 0 === RR || RR.resetCamera()
+        var rr;
+        null === (rr = this.opened) || void 0 === rr || rr.resetCamera()
       }
-      async untilDrawn(RR) {
-        var JR;
-        await this.ready, await (null === (JR = this.opened) || void 0 === JR ? void 0 : JR.untilDrawn(RR))
+      async untilDrawn(rr) {
+        var Sr;
+        await this.ready, await (null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.untilDrawn(rr))
       }
-      resize(RR, JR) {
-        var GR;
+      resize(rr, Sr) {
+        var Qr;
         this.size = {
-          width: RR,
-          height: JR
-        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
+          width: rr,
+          height: Sr
+        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
       }
       close() {
-        var RR;
-        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
+        var rr;
+        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
       }
     }
-    const KR = new class {
+    const xr = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(RR) {
-        this.host = RR
+      setHost(rr) {
+        this.host = rr
       }
-      setDefaultHost(RR) {
-        this.makeDefault = RR
+      setDefaultHost(rr) {
+        this.makeDefault = rr
       }
       current() {
         if (null === this.host) {
@@ -247,59 +229,120 @@ export const modules = {
         }
         return this.host
       }
-      openMob(RR) {
-        return new fR(this.current().openMob(RR))
+      openMob(rr) {
+        return new Er(this.current().openMob(rr))
       }
-      openPet(RR) {
-        return new fR(this.current().openPet(RR))
+      openPet(rr) {
+        return new Er(this.current().openPet(rr))
       }
-      openMobLineup(RR) {
-        return new fR(this.current().openMobLineup(RR))
+      openMobLineup(rr) {
+        return new Er(this.current().openMobLineup(rr))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(RR, JR) {
-        return new VR(this.current().openCharacter(RR, JR))
+      openCharacter(rr, Sr) {
+        return new pr(this.current().openCharacter(rr, Sr))
       }
     }
   },
-  35193: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR.e,
-      e: () => yR.i,
-      g: () => yR.l
+  35505: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr.d,
+      f: () => Zr.e,
+      j: () => Zr.i
     });
-    var yR = GR(35195);
-    class tR {
-      constructor(RR) {
-        this.load = RR, this.loaded = null, this.loading = null
+    var Zr = Qr(35509);
+    class Wr {
+      constructor(rr) {
+        this.load = rr, this.loaded = null, this.loading = null
       }
-      run(RR) {
-        return null !== this.loaded ? RR(this.loaded) : (this.loading ??= this.load().then((RR => (this.loaded = RR, RR)), (RR => {
-          throw this.loading = null, RR
-        })), this.loading.then(RR))
+      run(rr) {
+        return null !== this.loaded ? rr(this.loaded) : (this.loading ??= this.load().then((rr => (this.loaded = rr, rr)), (rr => {
+          throw this.loading = null, rr
+        })), this.loading.then(rr))
       }
     }
-    class uR {
+    class ar {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(310)]).then((() => GR(42616))))), this.characterScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(177), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(224), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(279), GR.e(184)]).then((() => GR(42729)))))
+        this.sharesCharacter = !0, this.mobScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(311)]).then((() => Qr(42945))))), this.characterScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(177), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(225), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(280), Qr.e(184)]).then((() => Qr(43048)))))
       }
-      openMob(RR) {
-        return this.mobScene.run((JR => JR.openMobPreview(RR)))
+      openMob(rr) {
+        return this.mobScene.run((Sr => Sr.openMobPreview(rr)))
       }
-      openPet(RR) {
-        return this.mobScene.run((JR => JR.openPetPreview(RR)))
+      openPet(rr) {
+        return this.mobScene.run((Sr => Sr.openPetPreview(rr)))
       }
-      openMobLineup(RR) {
-        return this.mobScene.run((JR => JR.openMobLineupPreview(RR)))
+      openMobLineup(rr) {
+        return this.mobScene.run((Sr => Sr.openMobLineupPreview(rr)))
       }
-      openCharacter(RR, JR) {
-        return this.characterScene.run((GR => GR.openCharacterPreview(RR, JR)))
+      openCharacter(rr, Sr) {
+        return this.characterScene.run((Qr => Qr.openCharacterPreview(rr, Sr)))
       }
     }
-    yR.l.setDefaultHost((() => new uR))
+    Zr.i.setDefaultHost((() => new ar))
+  },
+  54295: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      FrontlineMvpLineup: () => xr
+    });
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(35505),
+      Ir = Qr(53844),
+      fr = Qr(53849),
+      Er = Qr(1338);
+
+    function pr(rr) {
+      return jr.j.openMobLineup(rr)
+    }
+    const xr = (0, Zr.memo)((function(rr) {
+      let {
+        players: Sr,
+        className: Qr
+      } = rr;
+      const Wr = (0, Zr.useRef)(null),
+        jr = (0, Zr.useMemo)((() => Sr.map((rr => {
+          let {
+            cosmetics: Sr,
+            size: Qr,
+            heldGun: Zr
+          } = rr;
+          return {
+            cosmetics: Sr,
+            size: Qr,
+            jB: Zr.name,
+            animation: Zr.aimed ? Ir.b : Ir.f
+          }
+        }))), [Sr]),
+        xr = function(rr) {
+          const [Sr, Qr] = (0, Zr.useState)([]);
+          return (0, Zr.useEffect)((() => {
+            Qr(rr.map((() => !1)));
+            const Sr = rr.map(((rr, Sr) => {
+              let {
+                showAfterMs: Zr
+              } = rr;
+              return window.setTimeout((() => {
+                Qr((rr => rr.map(((rr, Qr) => rr || Qr === Sr))))
+              }), Zr)
+            }));
+            return () => {
+              for (const rr of Sr) window.clearTimeout(rr)
+            }
+          }), [rr]), Sr
+        }(Sr),
+        mr = (0, Zr.useMemo)((() => ({
+          figures: jr,
+          shown: xr
+        })), [jr, xr]);
+      return (0, fr.e)(Wr, pr, mr), (0, Er.jsx)("div", {
+        className: ar()("MobPreview", Qr),
+        ref: Wr
+      })
+    }))
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

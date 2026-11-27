@@ -1,17 +1,17 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  40562: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR,
-      i: () => ZR,
-      l: () => qR
+  40873: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar,
+      e: () => jr,
+      h: () => Ir
     });
-    var yR = GR(40564),
-      tR = GR(32);
-    const uR = "smp2OnboardingView",
-      ZR = 5e3;
-    class qR {
+    var Zr = Qr(40876),
+      Wr = Qr(34);
+    const ar = "smp2OnboardingView",
+      jr = 5e3;
+    class Ir {
       constructor() {
         this.view = {
           path: null,
@@ -21,121 +21,121 @@ export const modules = {
       get() {
         return this.view
       }
-      receivePath(RR) {
-        let [JR, GR, tR] = RR;
-        const uR = yR.e[JR];
-        if (void 0 === uR) return;
+      receivePath(rr) {
+        let [Sr, Qr, Wr] = rr;
+        const ar = Zr.h[Sr];
+        if (void 0 === ar) return;
         const {
-          title: ZR,
-          steps: qR
-        } = yR.c[uR];
-        this.JK({
+          title: jr,
+          steps: Ir
+        } = Zr.e[ar];
+        this.Jp({
           ...this.view,
-          path: GR < qR.length ? {
-            title: ZR,
-            steps: qR,
-            step: GR,
-            progress: tR
+          path: Qr < Ir.length ? {
+            title: jr,
+            steps: Ir,
+            step: Qr,
+            progress: Wr
           } : null
         })
       }
-      receiveReward(RR) {
-        let [JR, GR] = RR;
-        const tR = yR.h[JR];
-        if (void 0 !== tR && !this.seenRewardIds.has(GR)) {
-          var uR;
-          if (this.seenRewardIds.add(GR), this.queued.push({
-              ...tR,
-              id: GR
-            }), null === this.view.reward) this.JK({
+      receiveReward(rr) {
+        let [Sr, Qr] = rr;
+        const Wr = Zr.j[Sr];
+        if (void 0 !== Wr && !this.seenRewardIds.has(Qr)) {
+          var ar;
+          if (this.seenRewardIds.add(Qr), this.queued.push({
+              ...Wr,
+              id: Qr
+            }), null === this.view.reward) this.Jp({
             ...this.view,
-            reward: null !== (uR = this.queued.shift()) && void 0 !== uR ? uR : null
+            reward: null !== (ar = this.queued.shift()) && void 0 !== ar ? ar : null
           });
           this.runTimers()
         }
       }
-      setShowing(RR) {
-        this.showing = RR, this.runTimers()
+      setShowing(rr) {
+        this.showing = rr, this.runTimers()
       }
       dispose() {
         this.clearTimers()
       }
       runTimers() {
         this.showing ? this.view.reward && null === this.rewardTimer && (this.rewardTimer = setTimeout((() => {
-          var RR;
-          this.rewardTimer = null, this.JK({
+          var rr;
+          this.rewardTimer = null, this.Jp({
             ...this.view,
-            reward: null !== (RR = this.queued.shift()) && void 0 !== RR ? RR : null
+            reward: null !== (rr = this.queued.shift()) && void 0 !== rr ? rr : null
           }), this.runTimers()
-        }), ZR)) : this.clearTimers()
+        }), jr)) : this.clearTimers()
       }
       clearTimers() {
         null !== this.rewardTimer && (clearTimeout(this.rewardTimer), this.rewardTimer = null)
       }
-      JK(RR) {
-        this.view = RR, tR.n.JK(uR, RR)
+      Jp(rr) {
+        this.view = rr, Wr.i.Jp(ar, rr)
       }
     }
   },
-  40555: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      makeSmp2ClientGame: () => KR
+  40866: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      makeSmp2ClientGame: () => xr
     });
-    var yR = GR(66);
-    const tR = "smp2FirstSpawn",
-      uR = "smp2Path",
-      ZR = "smp2Reward";
-    var qR = GR(1841),
-      iR = GR(3731),
-      fR = GR(3494),
-      VR = GR(40562);
+    var Zr = Qr(72);
+    const Wr = "smp2FirstSpawn",
+      ar = "smp2Path",
+      jr = "smp2Reward";
+    var Ir = Qr(1788),
+      fr = Qr(3677),
+      Er = Qr(3425),
+      pr = Qr(40873);
 
-    function KR() {
-      let RR = !1,
-        JR = !1,
-        KR = "loading",
-        wR = !1;
-      const rR = () => {
-          !RR || JR || wR || "loading" === KR || (JR = !0, (0, qR.c)({
+    function xr() {
+      let rr = !1,
+        Sr = !1,
+        xr = "loading",
+        mr = !1;
+      const Nr = () => {
+          !rr || Sr || mr || "loading" === xr || (Sr = !0, (0, Ir.e)({
             id: "smp2.first_spawn",
-            value: KR
+            value: xr
           }))
         },
-        eR = new VR.l;
-      let aR = null;
+        Ur = new pr.h;
+      let tr = null;
       return {
         onCreate: () => {
-          GR.e(182).then((() => GR(53781))).then((RR => {
+          Qr.e(182).then((() => Qr(54288))).then((rr => {
             let {
-              Smp2OnboardingUi: JR
-            } = RR;
-            wR || (aR = (0, fR.G)((0, yR.createElement)(JR, {
-              store: eR
-            })), KR = "cards")
-          })).catch((RR => {
-            wR || (KR = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, iR.e)(RR) ? " (chunk load failed)" : ""), RR))
-          })).finally(rR)
+              Smp2OnboardingUi: Sr
+            } = rr;
+            mr || (tr = (0, Er.H)((0, Zr.createElement)(Sr, {
+              store: Ur
+            })), xr = "cards")
+          })).catch((rr => {
+            mr || (xr = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, fr.d)(rr) ? " (chunk load failed)" : ""), rr))
+          })).finally(Nr)
         },
         onClose: () => {
-          var RR;
-          "loading" === KR && (KR = "no_cards"), rR(), wR = !0, null === (RR = aR) || void 0 === RR || RR(), eR.dispose()
+          var rr;
+          "loading" === xr && (xr = "no_cards"), Nr(), mr = !0, null === (rr = tr) || void 0 === rr || rr(), Ur.dispose()
         },
-        onReceivedMessageFromServer: (JR, GR) => {
-          JR === tR ? (RR = !0, rR()) : JR === uR ? eR.receivePath(GR) : JR === ZR && eR.receiveReward(GR)
+        onReceivedMessageFromServer: (Sr, Qr) => {
+          Sr === Wr ? (rr = !0, Nr()) : Sr === ar ? Ur.receivePath(Qr) : Sr === jr && Ur.receiveReward(Qr)
         }
       }
     }
   },
-  40564: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      e: () => yR,
-      h: () => qR,
-      k: () => ZR
+  40876: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      h: () => Zr,
+      j: () => Ir,
+      n: () => jr
     });
-    const yR = ["starter_path", "portal_first"],
-      tR = "Iron Pickaxe",
-      uR = {
+    const Zr = ["starter_path", "portal_first"],
+      Wr = "Iron Pickaxe",
+      ar = {
         starter_path: {
           title: "Starter Path",
           steps: [{
@@ -185,10 +185,10 @@ export const modules = {
         }
       };
 
-    function ZR(RR) {
-      return "logs" === RR.goal ? RR.amount : 1
+    function jr(rr) {
+      return "logs" === rr.goal ? rr.amount : 1
     }
-    const qR = [{
+    const Ir = [{
       title: "Starter Path done!",
       text: "+100 gold. The world is yours.",
       icon: "Gold Coin"
@@ -198,19 +198,19 @@ export const modules = {
       icon: "Wood Pickaxe"
     }, {
       title: "Come back tomorrow",
-      text: `A free ${tR} is waiting for you`,
-      icon: tR
+      text: `A free ${Wr} is waiting for you`,
+      icon: Wr
     }, {
       title: "Welcome back!",
-      text: `Here's your ${tR}`,
-      icon: tR
+      text: `Here's your ${Wr}`,
+      icon: Wr
     }, {
       title: "Nice!",
       text: "Keep exploring: the hub's traders buy what you find",
       icon: "Maple Log"
     }];
-    yR.flatMap((RR => [...uR[RR].steps.map((JR => `${RR}:${JR.key}`)), `${RR}:done`]))
+    Zr.flatMap((rr => [...ar[rr].steps.map((Sr => `${rr}:${Sr.key}`)), `${rr}:done`]))
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

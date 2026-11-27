@@ -1,307 +1,805 @@
 export const id = 265;
 export const ids = [265];
 export const modules = {
-  38224: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR
+  38684: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => xr,
+      f: () => mr,
+      h: () => tr,
+      l: () => Nr
     });
-    var yR = GR(38233);
-    class tR {
-      static get LastCreatedEngine() {
-        return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
-      }
-      static get LastCreatedScene() {
-        return this._LastCreatedScene
-      }
+    var Zr = Qr(38576),
+      Wr = Qr(38569),
+      ar = Qr(38599),
+      jr = Qr(38609);
+
+    function Ir(rr) {
+      return Math.pow(rr, Wr.h)
     }
-    tR.Instances = [], tR.OnEnginesDisposedObservable = new yR.b, tR._LastCreatedScene = null, tR.UseFallbackTexture = !0, tR.FallbackTexture = ""
-  },
-  39912: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR
-    });
-    var yR = GR(39914);
-    const tR = (RR, JR, GR) => RR ? RR.getClassName && "Mesh" === RR.getClassName() ? null : !RR.getClassName || "SubMesh" !== RR.getClassName() && "PhysicsBody" !== RR.getClassName() ? RR.clone ? RR.clone() : Array.isArray(RR) ? RR.slice() : GR && "object" === typeof RR ? {
-      ...RR
-    } : null : RR.clone(JR) : null;
-    class uR {
-      static DeepCopy(RR, JR, GR, uR) {
-        let ZR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const qR = function(RR) {
-          const JR = [];
-          do {
-            const GR = Object.getOwnPropertyNames(RR);
-            for (const RR of GR) - 1 === JR.indexOf(RR) && JR.push(RR)
-          } while (RR = Object.getPrototypeOf(RR));
-          return JR
-        }(RR);
-        for (const fR of qR) {
-          if ("_" === fR[0] && (!uR || -1 === uR.indexOf(fR))) continue;
-          if (fR.endsWith("Observable")) continue;
-          if (GR && -1 !== GR.indexOf(fR)) continue;
-          const qR = RR[fR],
-            VR = typeof qR;
-          if ("function" !== VR) try {
-            if ("object" === VR)
-              if (qR instanceof Uint8Array) JR[fR] = Uint8Array.from(qR);
-              else if (qR instanceof Array) {
-              if (JR[fR] = [], qR.length > 0)
-                if ("object" == typeof qR[0])
-                  for (let RR = 0; RR < qR.length; RR++) {
-                    const GR = tR(qR[RR], JR, ZR); - 1 === JR[fR].indexOf(GR) && JR[fR].push(GR)
-                  } else JR[fR] = qR.slice(0)
-            } else JR[fR] = tR(qR, JR, ZR);
-            else JR[fR] = qR
-          } catch (iR) {
-            yR.c.Warn(iR.message)
-          }
-        }
-      }
+
+    function fr(rr) {
+      return rr <= .04045 ? .0773993808 * rr : Math.pow(.947867299 * (rr + .055), 2.4)
     }
-  },
-  39062: (RR, JR, GR) => {
-    function yR() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (RR => {
-        const JR = 16 * Math.random() | 0;
-        return ("x" === RR ? JR : 3 & JR | 8).toString(16)
-      }))
+
+    function Er(rr) {
+      return Math.pow(rr, Wr.f)
     }
-    GR.d(JR, {
-      c: () => yR
-    })
-  },
-  39914: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR
-    });
-    class yR {
-      static _CheckLimit(RR, JR) {
-        let GR = yR._LogLimitOutputs[RR];
-        return GR ? GR.current++ : (GR = {
-          limit: JR,
-          current: 1
-        }, yR._LogLimitOutputs[RR] = GR), GR.current <= GR.limit
-      }
-      static _GenerateLimitMessage(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const GR = yR._LogLimitOutputs[RR];
-        if (!GR || !yR.MessageLimitReached) return;
-        const tR = this._Levels[JR];
-        GR.current === GR.limit && yR[tR.name](yR.MessageLimitReached.replace(/%LIMIT%/g, "" + GR.limit).replace(/%TYPE%/g, tR.name ?? ""))
-      }
-      static _AddLogEntry(RR) {
-        yR._LogCache = RR + yR._LogCache, yR.OnNewCacheEntry && yR.OnNewCacheEntry(RR)
-      }
-      static _FormatMessage(RR) {
-        const JR = RR => RR < 10 ? "0" + RR : "" + RR,
-          GR = new Date;
-        return "[" + JR(GR.getHours()) + ":" + JR(GR.getMinutes()) + ":" + JR(GR.getSeconds()) + "]: " + RR
-      }
-      static _LogDisabled(RR, JR) {}
-      static _LogEnabled() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          JR = arguments.length > 1 ? arguments[1] : void 0,
-          GR = arguments.length > 2 ? arguments[2] : void 0;
-        const tR = Array.isArray(JR) ? JR[0] : JR;
-        if (void 0 !== GR && !yR._CheckLimit(tR, GR)) return;
-        const uR = yR._FormatMessage(tR),
-          ZR = this._Levels[RR],
-          qR = Array.isArray(JR) ? JR.slice(1) : [];
-        ZR.logFunc && ZR.logFunc("BJS - " + uR, ...qR);
-        const iR = `<div style='color:${ZR.color}'>${uR}</div><br>`;
-        yR._AddLogEntry(iR), yR._GenerateLimitMessage(tR, RR)
-      }
-      static get LogCache() {
-        return yR._LogCache
-      }
-      static ClearLogCache() {
-        yR._LogCache = "", yR._LogLimitOutputs = {}, yR.errorsCount = 0
-      }
-      static set LogLevels(RR) {
-        yR.Log = yR._LogDisabled, yR.Warn = yR._LogDisabled, yR.Error = yR._LogDisabled;
-        const JR = [yR.MessageLogLevel, yR.WarningLogLevel, yR.ErrorLogLevel];
-        for (const GR of JR)
-          if ((RR & GR) === GR) {
-            const RR = this._Levels[GR];
-            yR[RR.name] = yR._LogEnabled.bind(yR, GR)
-          }
-      }
+
+    function pr(rr) {
+      return rr <= .0031308 ? 12.92 * rr : 1.055 * Math.pow(rr, .41666) - .055
     }
-    yR.NoneLogLevel = 0, yR.MessageLogLevel = 1, yR.WarningLogLevel = 2, yR.ErrorLogLevel = 4, yR.AllLogLevel = 7, yR.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", yR._LogCache = "", yR._LogLimitOutputs = {}, yR._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], yR.errorsCount = 0, yR.Log = yR._LogEnabled.bind(yR, yR.MessageLogLevel), yR.Warn = yR._LogEnabled.bind(yR, yR.WarningLogLevel), yR.Error = yR._LogEnabled.bind(yR, yR.ErrorLogLevel)
-  },
-  38233: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR
-    });
-    const yR = "undefined" !== typeof WeakRef;
-    class tR {
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GR = arguments.length > 2 ? arguments[2] : void 0,
-          yR = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(RR, JR, GR, yR)
+    class xr {
+      constructor() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = rr, this.g = Sr, this.b = Qr
       }
-      initialize(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GR = arguments.length > 2 ? arguments[2] : void 0,
-          yR = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = RR, this.skipNextObservers = JR, this.target = GR, this.currentTarget = yR, this
+      toString() {
+        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
       }
-    }
-    class uR {
-      constructor(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = RR, this.mask = JR, this.scope = GR, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+      getClassName() {
+        return "Color3"
       }
-      remove() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(RR)
+      getHashCode() {
+        let rr = 255 * this.r | 0;
+        return rr = 397 * rr ^ 255 * this.g, rr = 397 * rr ^ 255 * this.b, rr
       }
-    }
-    class ZR {
-      static FromPromise(RR, JR) {
-        const GR = new ZR;
-        return RR.then((RR => {
-          GR.notifyObservers(RR)
-        })).catch((RR => {
-          if (!JR) throw RR;
-          JR.notifyObservers(RR)
-        })), GR
+      toArray(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return rr[Sr] = this.r, rr[Sr + 1] = this.g, rr[Sr + 2] = this.b, this
       }
-      get observers() {
-        return this._observers
+      dp(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return xr.FromArrayToRef(rr, Sr, this), this
       }
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = JR, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new tR(0), RR && (this._onObserverAdded = RR)
+      toColor4() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new mr(this.r, this.g, this.b, rr)
       }
-      add(RR) {
-        let JR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          GR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!RR) return null;
-        const tR = new uR(RR, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        tR.unregisterOnNextCall = GR, JR ? this._observers.unshift(tR) : this._observers.push(tR), this._onObserverAdded && this._onObserverAdded(tR), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(tR, this._lastNotifiedValue);
-        const ZR = yR ? new WeakRef(this) : {
-          deref: () => this
-        };
-        return tR._remove = function() {
-          let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const JR = ZR.deref();
-          JR && (RR ? JR.remove(tR) : JR._remove(tR))
-        }, tR
+      OWr() {
+        return [this.r, this.g, this.b]
       }
-      addOnce(RR) {
-        return this.add(RR, void 0, void 0, void 0, !0)
+      toLuminance() {
+        return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      remove(RR) {
-        if (!RR) return !1;
-        RR._remove = null;
-        return -1 !== this._observers.indexOf(RR) && (this._deferUnregister(RR), !0)
+      multiply(rr) {
+        return new xr(this.r * rr.r, this.g * rr.g, this.b * rr.b)
       }
-      removeCallback(RR, JR) {
-        for (let GR = 0; GR < this._observers.length; GR++) {
-          const yR = this._observers[GR];
-          if (!yR._willBeUnregistered && (yR.callback === RR && (!JR || JR === yR.scope))) return this._deferUnregister(yR), !0
-        }
-        return !1
+      multiplyToRef(rr, Sr) {
+        return Sr.r = this.r * rr.r, Sr.g = this.g * rr.g, Sr.b = this.b * rr.b, Sr
       }
-      _deferUnregister(RR) {
-        RR._willBeUnregistered || (this._numObserversMarkedAsDeleted++, RR.unregisterOnNextCall = !1, RR._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(RR)
-        }), 0))
+      multiplyInPlace(rr) {
+        return this.r *= rr.r, this.g *= rr.g, this.b *= rr.b, this
       }
-      _remove(RR) {
-        let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!RR) return !1;
-        const GR = this._observers.indexOf(RR);
-        return -1 !== GR && (JR && this._numObserversMarkedAsDeleted--, this._observers.splice(GR, 1), !0)
+      multiplyByFloats(rr, Sr, Qr) {
+        return new xr(this.r * rr, this.g * Sr, this.b * Qr)
       }
-      makeObserverTopPriority(RR) {
-        this._remove(RR, !1), this._observers.unshift(RR)
+      divide(rr) {
+        throw new ReferenceError("Can not divide a color")
       }
-      makeObserverBottomPriority(RR) {
-        this._remove(RR, !1), this._observers.push(RR)
+      divideToRef(rr, Sr) {
+        throw new ReferenceError("Can not divide a color")
       }
-      notifyObservers(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          GR = arguments.length > 2 ? arguments[2] : void 0,
-          yR = arguments.length > 3 ? arguments[3] : void 0,
-          tR = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = RR), !this._observers.length) return !0;
-        const uR = this._eventState;
-        uR.mask = JR, uR.target = GR, uR.currentTarget = yR, uR.skipNextObservers = !1, uR.lastReturnValue = RR, uR.userInfo = tR;
-        for (const ZR of this._observers)
-          if (!ZR._willBeUnregistered && (ZR.mask & JR && (ZR.unregisterOnNextCall && this._deferUnregister(ZR), ZR.scope ? uR.lastReturnValue = ZR.callback.apply(ZR.scope, [RR, uR]) : uR.lastReturnValue = ZR.callback(RR, uR)), uR.skipNextObservers)) return !1;
-        return !0
+      divideInPlace(rr) {
+        throw new ReferenceError("Can not divide a color")
       }
-      notifyObserver(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = JR), RR._willBeUnregistered) return;
-        const yR = this._eventState;
-        yR.mask = GR, yR.skipNextObservers = !1, RR.unregisterOnNextCall && this._deferUnregister(RR), RR.callback(JR, yR)
+      minimizeInPlace(rr) {
+        return this.minimizeInPlaceFromFloats(rr.r, rr.g, rr.b)
       }
-      hasObservers() {
-        return this._observers.length - this._numObserversMarkedAsDeleted > 0
+      maximizeInPlace(rr) {
+        return this.maximizeInPlaceFromFloats(rr.r, rr.g, rr.b)
       }
-      clear() {
-        for (; this._observers.length;) {
-          const RR = this._observers.pop();
-          RR && (RR._remove = null)
-        }
-        this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
+      minimizeInPlaceFromFloats(rr, Sr, Qr) {
+        return this.r = Math.min(rr, this.r), this.g = Math.min(Sr, this.g), this.b = Math.min(Qr, this.b), this
       }
-      cleanLastNotifiedState() {
-        this._hasNotified = !1, this._lastNotifiedValue = void 0
+      maximizeInPlaceFromFloats(rr, Sr, Qr) {
+        return this.r = Math.max(rr, this.r), this.g = Math.max(Sr, this.g), this.b = Math.max(Qr, this.b), this
+      }
+      floorToRef(rr) {
+        throw new ReferenceError("Can not floor a color")
+      }
+      floor() {
+        throw new ReferenceError("Can not floor a color")
+      }
+      fractToRef(rr) {
+        throw new ReferenceError("Can not fract a color")
+      }
+      fract() {
+        throw new ReferenceError("Can not fract a color")
+      }
+      equals(rr) {
+        return rr && this.r === rr.r && this.g === rr.g && this.b === rr.b
+      }
+      equalsFloats(rr, Sr, Qr) {
+        return this.ffr(rr, Sr, Qr)
+      }
+      ffr(rr, Sr, Qr) {
+        return this.r === rr && this.g === Sr && this.b === Qr
+      }
+      equalsWithEpsilon(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.e;
+        return (0, ar.WithinEpsilon)(this.r, rr.r, Sr) && (0, ar.WithinEpsilon)(this.g, rr.g, Sr) && (0, ar.WithinEpsilon)(this.b, rr.b, Sr)
+      }
+      ph() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateInPlace() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateToRef(rr) {
+        throw new ReferenceError("Can not negate a color")
+      }
+      scale(rr) {
+        return new xr(this.r * rr, this.g * rr, this.b * rr)
+      }
+      scaleInPlace(rr) {
+        return this.r *= rr, this.g *= rr, this.b *= rr, this
+      }
+      scaleToRef(rr, Sr) {
+        return Sr.r = this.r * rr, Sr.g = this.g * rr, Sr.b = this.b * rr, Sr
+      }
+      scaleAndAddToRef(rr, Sr) {
+        return Sr.r += this.r * rr, Sr.g += this.g * rr, Sr.b += this.b * rr, Sr
+      }
+      clampToRef() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        return Qr.r = (0, ar.Clamp)(this.r, rr, Sr), Qr.g = (0, ar.Clamp)(this.g, rr, Sr), Qr.b = (0, ar.Clamp)(this.b, rr, Sr), Qr
+      }
+      add(rr) {
+        return new xr(this.r + rr.r, this.g + rr.g, this.b + rr.b)
+      }
+      addInPlace(rr) {
+        return this.r += rr.r, this.g += rr.g, this.b += rr.b, this
+      }
+      addInPlaceFromFloats(rr, Sr, Qr) {
+        return this.r += rr, this.g += Sr, this.b += Qr, this
+      }
+      addToRef(rr, Sr) {
+        return Sr.r = this.r + rr.r, Sr.g = this.g + rr.g, Sr.b = this.b + rr.b, Sr
+      }
+      subtract(rr) {
+        return new xr(this.r - rr.r, this.g - rr.g, this.b - rr.b)
+      }
+      subtractToRef(rr, Sr) {
+        return Sr.r = this.r - rr.r, Sr.g = this.g - rr.g, Sr.b = this.b - rr.b, Sr
+      }
+      iWr(rr) {
+        return this.r -= rr.r, this.g -= rr.g, this.b -= rr.b, this
+      }
+      subtractFromFloats(rr, Sr, Qr) {
+        return new xr(this.r - rr, this.g - Sr, this.b - Qr)
+      }
+      subtractFromFloatsToRef(rr, Sr, Qr, Zr) {
+        return Zr.r = this.r - rr, Zr.g = this.g - Sr, Zr.b = this.b - Qr, Zr
       }
       clone() {
-        const RR = new ZR;
-        return RR._observers = this._observers.slice(0), RR
+        return new xr(this.r, this.g, this.b)
       }
-      hasSpecificMask() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const JR of this._observers)
-          if (JR.mask & RR || JR.mask === RR) return !0;
-        return !1
+      iH(rr) {
+        return this.r = rr.r, this.g = rr.g, this.b = rr.b, this
+      }
+      Hrr(rr, Sr, Qr) {
+        return this.r = rr, this.g = Sr, this.b = Qr, this
+      }
+      set(rr, Sr, Qr) {
+        return this.Hrr(rr, Sr, Qr)
+      }
+      Srr(rr) {
+        return this.r = this.g = this.b = rr, this
+      }
+      toHexString() {
+        const rr = Math.round(255 * this.r),
+          Sr = Math.round(255 * this.g),
+          Qr = Math.round(255 * this.b);
+        return "#" + (0, ar.ToHex)(rr) + (0, ar.ToHex)(Sr) + (0, ar.ToHex)(Qr)
+      }
+      fromHexString(rr) {
+        return "#" !== rr.substring(0, 1) || 7 !== rr.length || (this.r = parseInt(rr.substring(1, 3), 16) / 255, this.g = parseInt(rr.substring(3, 5), 16) / 255, this.b = parseInt(rr.substring(5, 7), 16) / 255), this
+      }
+      toHSV() {
+        return this.toHSVToRef(new xr)
+      }
+      toHSVToRef(rr) {
+        const Sr = this.r,
+          Qr = this.g,
+          Zr = this.b,
+          Wr = Math.max(Sr, Qr, Zr),
+          ar = Math.min(Sr, Qr, Zr);
+        let jr = 0,
+          Ir = 0;
+        const fr = Wr,
+          Er = Wr - ar;
+        return 0 !== Wr && (Ir = Er / Wr), Wr != ar && (Wr == Sr ? (jr = (Qr - Zr) / Er, Qr < Zr && (jr += 6)) : Wr == Qr ? jr = (Zr - Sr) / Er + 2 : Wr == Zr && (jr = (Sr - Qr) / Er + 4), jr *= 60), rr.r = jr, rr.g = Ir, rr.b = fr, rr
+      }
+      toLinearSpace() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Sr = new xr;
+        return this.toLinearSpaceToRef(Sr, rr), Sr
+      }
+      toLinearSpaceToRef(rr) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = fr(this.r), rr.g = fr(this.g), rr.b = fr(this.b)) : (rr.r = Ir(this.r), rr.g = Ir(this.g), rr.b = Ir(this.b)), this
+      }
+      toGammaSpace() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Sr = new xr;
+        return this.toGammaSpaceToRef(Sr, rr), Sr
+      }
+      toGammaSpaceToRef(rr) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = pr(this.r), rr.g = pr(this.g), rr.b = pr(this.b)) : (rr.r = Er(this.r), rr.g = Er(this.g), rr.b = Er(this.b)), this
+      }
+      static HSVtoRGBToRef(rr, Sr, Qr, Zr) {
+        const Wr = Qr * Sr,
+          ar = rr / 60,
+          jr = Wr * (1 - Math.abs(ar % 2 - 1));
+        let Ir = 0,
+          fr = 0,
+          Er = 0;
+        ar >= 0 && ar <= 1 ? (Ir = Wr, fr = jr) : ar >= 1 && ar <= 2 ? (Ir = jr, fr = Wr) : ar >= 2 && ar <= 3 ? (fr = Wr, Er = jr) : ar >= 3 && ar <= 4 ? (fr = jr, Er = Wr) : ar >= 4 && ar <= 5 ? (Ir = jr, Er = Wr) : ar >= 5 && ar <= 6 && (Ir = Wr, Er = jr);
+        const pr = Qr - Wr;
+        return Zr.r = Ir + pr, Zr.g = fr + pr, Zr.b = Er + pr, Zr
+      }
+      static FromHSV(rr, Sr, Qr) {
+        const Zr = new xr(0, 0, 0);
+        return xr.HSVtoRGBToRef(rr, Sr, Qr, Zr), Zr
+      }
+      static FromHexString(rr) {
+        return new xr(0, 0, 0).fromHexString(rr)
+      }
+      static FromArray(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new xr(rr[Sr], rr[Sr + 1], rr[Sr + 2])
+      }
+      static FromArrayToRef(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        Qr.r = rr[Sr], Qr.g = rr[Sr + 1], Qr.b = rr[Sr + 2]
+      }
+      static FromInts(rr, Sr, Qr) {
+        return new xr(rr / 255, Sr / 255, Qr / 255)
+      }
+      static Lerp(rr, Sr, Qr) {
+        const Zr = new xr(0, 0, 0);
+        return xr.LerpToRef(rr, Sr, Qr, Zr), Zr
+      }
+      static LerpToRef(rr, Sr, Qr, Zr) {
+        Zr.r = rr.r + (Sr.r - rr.r) * Qr, Zr.g = rr.g + (Sr.g - rr.g) * Qr, Zr.b = rr.b + (Sr.b - rr.b) * Qr
+      }
+      static Hermite(rr, Sr, Qr, Zr, Wr) {
+        const ar = Wr * Wr,
+          jr = Wr * ar,
+          Ir = 2 * jr - 3 * ar + 1,
+          fr = -2 * jr + 3 * ar,
+          Er = jr - 2 * ar + Wr,
+          pr = jr - ar,
+          mr = rr.r * Ir + Qr.r * fr + Sr.r * Er + Zr.r * pr,
+          Nr = rr.g * Ir + Qr.g * fr + Sr.g * Er + Zr.g * pr,
+          Ur = rr.b * Ir + Qr.b * fr + Sr.b * Er + Zr.b * pr;
+        return new xr(mr, Nr, Ur)
+      }
+      static Hermite1stDerivative(rr, Sr, Qr, Zr, Wr) {
+        const ar = xr.Black();
+        return this.Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar), ar
+      }
+      static Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar) {
+        const jr = Wr * Wr;
+        ar.r = 6 * (jr - Wr) * rr.r + (3 * jr - 4 * Wr + 1) * Sr.r + 6 * (-jr + Wr) * Qr.r + (3 * jr - 2 * Wr) * Zr.r, ar.g = 6 * (jr - Wr) * rr.g + (3 * jr - 4 * Wr + 1) * Sr.g + 6 * (-jr + Wr) * Qr.g + (3 * jr - 2 * Wr) * Zr.g, ar.b = 6 * (jr - Wr) * rr.b + (3 * jr - 4 * Wr + 1) * Sr.b + 6 * (-jr + Wr) * Qr.b + (3 * jr - 2 * Wr) * Zr.b
+      }
+      static Red() {
+        return new xr(1, 0, 0)
+      }
+      static Green() {
+        return new xr(0, 1, 0)
+      }
+      static Blue() {
+        return new xr(0, 0, 1)
+      }
+      static Black() {
+        return new xr(0, 0, 0)
+      }
+      static get BlackReadOnly() {
+        return xr._BlackReadOnly
+      }
+      static White() {
+        return new xr(1, 1, 1)
+      }
+      static Purple() {
+        return new xr(.5, 0, .5)
+      }
+      static Magenta() {
+        return new xr(1, 0, 1)
+      }
+      static Yellow() {
+        return new xr(1, 1, 0)
+      }
+      static Gray() {
+        return new xr(.5, .5, .5)
+      }
+      static Teal() {
+        return new xr(0, 1, 1)
+      }
+      static Random() {
+        return new xr(Math.random(), Math.random(), Math.random())
+      }
+    }
+    xr._V8PerformanceHack = new xr(.5, .5, .5), xr._BlackReadOnly = xr.Black();
+    class mr {
+      constructor() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = rr, this.g = Sr, this.b = Qr, this.a = Zr
+      }
+      OWr() {
+        return [this.r, this.g, this.b, this.a]
+      }
+      toArray(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return rr[Sr] = this.r, rr[Sr + 1] = this.g, rr[Sr + 2] = this.b, rr[Sr + 3] = this.a, this
+      }
+      dp(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = rr[Sr], this.g = rr[Sr + 1], this.b = rr[Sr + 2], this.a = rr[Sr + 3], this
+      }
+      equals(rr) {
+        return rr && this.r === rr.r && this.g === rr.g && this.b === rr.b && this.a === rr.a
+      }
+      add(rr) {
+        return new mr(this.r + rr.r, this.g + rr.g, this.b + rr.b, this.a + rr.a)
+      }
+      addToRef(rr, Sr) {
+        return Sr.r = this.r + rr.r, Sr.g = this.g + rr.g, Sr.b = this.b + rr.b, Sr.a = this.a + rr.a, Sr
+      }
+      addInPlace(rr) {
+        return this.r += rr.r, this.g += rr.g, this.b += rr.b, this.a += rr.a, this
+      }
+      addInPlaceFromFloats(rr, Sr, Qr, Zr) {
+        return this.r += rr, this.g += Sr, this.b += Qr, this.a += Zr, this
+      }
+      subtract(rr) {
+        return new mr(this.r - rr.r, this.g - rr.g, this.b - rr.b, this.a - rr.a)
+      }
+      subtractToRef(rr, Sr) {
+        return Sr.r = this.r - rr.r, Sr.g = this.g - rr.g, Sr.b = this.b - rr.b, Sr.a = this.a - rr.a, Sr
+      }
+      iWr(rr) {
+        return this.r -= rr.r, this.g -= rr.g, this.b -= rr.b, this.a -= rr.a, this
+      }
+      subtractFromFloats(rr, Sr, Qr, Zr) {
+        return new mr(this.r - rr, this.g - Sr, this.b - Qr, this.a - Zr)
+      }
+      subtractFromFloatsToRef(rr, Sr, Qr, Zr, Wr) {
+        return Wr.r = this.r - rr, Wr.g = this.g - Sr, Wr.b = this.b - Qr, Wr.a = this.a - Zr, Wr
+      }
+      scale(rr) {
+        return new mr(this.r * rr, this.g * rr, this.b * rr, this.a * rr)
+      }
+      scaleInPlace(rr) {
+        return this.r *= rr, this.g *= rr, this.b *= rr, this.a *= rr, this
+      }
+      scaleToRef(rr, Sr) {
+        return Sr.r = this.r * rr, Sr.g = this.g * rr, Sr.b = this.b * rr, Sr.a = this.a * rr, Sr
+      }
+      scaleAndAddToRef(rr, Sr) {
+        return Sr.r += this.r * rr, Sr.g += this.g * rr, Sr.b += this.b * rr, Sr.a += this.a * rr, Sr
+      }
+      clampToRef() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        return Qr.r = (0, ar.Clamp)(this.r, rr, Sr), Qr.g = (0, ar.Clamp)(this.g, rr, Sr), Qr.b = (0, ar.Clamp)(this.b, rr, Sr), Qr.a = (0, ar.Clamp)(this.a, rr, Sr), Qr
+      }
+      multiply(rr) {
+        return new mr(this.r * rr.r, this.g * rr.g, this.b * rr.b, this.a * rr.a)
+      }
+      multiplyToRef(rr, Sr) {
+        return Sr.r = this.r * rr.r, Sr.g = this.g * rr.g, Sr.b = this.b * rr.b, Sr.a = this.a * rr.a, Sr
+      }
+      multiplyInPlace(rr) {
+        return this.r *= rr.r, this.g *= rr.g, this.b *= rr.b, this.a *= rr.a, this
+      }
+      multiplyByFloats(rr, Sr, Qr, Zr) {
+        return new mr(this.r * rr, this.g * Sr, this.b * Qr, this.a * Zr)
+      }
+      divide(rr) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideToRef(rr, Sr) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideInPlace(rr) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      minimizeInPlace(rr) {
+        return this.r = Math.min(this.r, rr.r), this.g = Math.min(this.g, rr.g), this.b = Math.min(this.b, rr.b), this.a = Math.min(this.a, rr.a), this
+      }
+      maximizeInPlace(rr) {
+        return this.r = Math.max(this.r, rr.r), this.g = Math.max(this.g, rr.g), this.b = Math.max(this.b, rr.b), this.a = Math.max(this.a, rr.a), this
+      }
+      minimizeInPlaceFromFloats(rr, Sr, Qr, Zr) {
+        return this.r = Math.min(rr, this.r), this.g = Math.min(Sr, this.g), this.b = Math.min(Qr, this.b), this.a = Math.min(Zr, this.a), this
+      }
+      maximizeInPlaceFromFloats(rr, Sr, Qr, Zr) {
+        return this.r = Math.max(rr, this.r), this.g = Math.max(Sr, this.g), this.b = Math.max(Qr, this.b), this.a = Math.max(Zr, this.a), this
+      }
+      floorToRef(rr) {
+        throw new ReferenceError("Can not floor a color")
+      }
+      floor() {
+        throw new ReferenceError("Can not floor a color")
+      }
+      fractToRef(rr) {
+        throw new ReferenceError("Can not fract a color")
+      }
+      fract() {
+        throw new ReferenceError("Can not fract a color")
+      }
+      ph() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateInPlace() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateToRef(rr) {
+        throw new ReferenceError("Can not negate a color")
+      }
+      equalsWithEpsilon(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.e;
+        return (0, ar.WithinEpsilon)(this.r, rr.r, Sr) && (0, ar.WithinEpsilon)(this.g, rr.g, Sr) && (0, ar.WithinEpsilon)(this.b, rr.b, Sr) && (0, ar.WithinEpsilon)(this.a, rr.a, Sr)
+      }
+      ffr(rr, Sr, Qr, Zr) {
+        return this.r === rr && this.g === Sr && this.b === Qr && this.a === Zr
+      }
+      toString() {
+        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
+      }
+      getClassName() {
+        return "Color4"
+      }
+      getHashCode() {
+        let rr = 255 * this.r | 0;
+        return rr = 397 * rr ^ 255 * this.g, rr = 397 * rr ^ 255 * this.b, rr = 397 * rr ^ 255 * this.a, rr
+      }
+      clone() {
+        return (new mr).iH(this)
+      }
+      iH(rr) {
+        return this.r = rr.r, this.g = rr.g, this.b = rr.b, this.a = rr.a, this
+      }
+      Hrr(rr, Sr, Qr, Zr) {
+        return this.r = rr, this.g = Sr, this.b = Qr, this.a = Zr, this
+      }
+      set(rr, Sr, Qr, Zr) {
+        return this.Hrr(rr, Sr, Qr, Zr)
+      }
+      Srr(rr) {
+        return this.r = this.g = this.b = this.a = rr, this
+      }
+      toHexString() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Sr = Math.round(255 * this.r),
+          Qr = Math.round(255 * this.g),
+          Zr = Math.round(255 * this.b);
+        if (rr) return "#" + (0, ar.ToHex)(Sr) + (0, ar.ToHex)(Qr) + (0, ar.ToHex)(Zr);
+        const Wr = Math.round(255 * this.a);
+        return "#" + (0, ar.ToHex)(Sr) + (0, ar.ToHex)(Qr) + (0, ar.ToHex)(Zr) + (0, ar.ToHex)(Wr)
+      }
+      fromHexString(rr) {
+        return "#" !== rr.substring(0, 1) || 9 !== rr.length && 7 !== rr.length || (this.r = parseInt(rr.substring(1, 3), 16) / 255, this.g = parseInt(rr.substring(3, 5), 16) / 255, this.b = parseInt(rr.substring(5, 7), 16) / 255, 9 === rr.length && (this.a = parseInt(rr.substring(7, 9), 16) / 255)), this
+      }
+      toLinearSpace() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Sr = new mr;
+        return this.toLinearSpaceToRef(Sr, rr), Sr
+      }
+      toLinearSpaceToRef(rr) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = fr(this.r), rr.g = fr(this.g), rr.b = fr(this.b)) : (rr.r = Ir(this.r), rr.g = Ir(this.g), rr.b = Ir(this.b)), rr.a = this.a, this
+      }
+      toGammaSpace() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Sr = new mr;
+        return this.toGammaSpaceToRef(Sr, rr), Sr
+      }
+      toGammaSpaceToRef(rr) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = pr(this.r), rr.g = pr(this.g), rr.b = pr(this.b)) : (rr.r = Er(this.r), rr.g = Er(this.g), rr.b = Er(this.b)), rr.a = this.a, this
+      }
+      static FromHexString(rr) {
+        return "#" !== rr.substring(0, 1) || 9 !== rr.length && 7 !== rr.length ? new mr(0, 0, 0, 0) : new mr(0, 0, 0, 1).fromHexString(rr)
+      }
+      static Lerp(rr, Sr, Qr) {
+        return mr.LerpToRef(rr, Sr, Qr, new mr)
+      }
+      static LerpToRef(rr, Sr, Qr, Zr) {
+        return Zr.r = rr.r + (Sr.r - rr.r) * Qr, Zr.g = rr.g + (Sr.g - rr.g) * Qr, Zr.b = rr.b + (Sr.b - rr.b) * Qr, Zr.a = rr.a + (Sr.a - rr.a) * Qr, Zr
+      }
+      static Hermite(rr, Sr, Qr, Zr, Wr) {
+        const ar = Wr * Wr,
+          jr = Wr * ar,
+          Ir = 2 * jr - 3 * ar + 1,
+          fr = -2 * jr + 3 * ar,
+          Er = jr - 2 * ar + Wr,
+          pr = jr - ar,
+          xr = rr.r * Ir + Qr.r * fr + Sr.r * Er + Zr.r * pr,
+          Nr = rr.g * Ir + Qr.g * fr + Sr.g * Er + Zr.g * pr,
+          Ur = rr.b * Ir + Qr.b * fr + Sr.b * Er + Zr.b * pr,
+          tr = rr.a * Ir + Qr.a * fr + Sr.a * Er + Zr.a * pr;
+        return new mr(xr, Nr, Ur, tr)
+      }
+      static Hermite1stDerivative(rr, Sr, Qr, Zr, Wr) {
+        const ar = new mr;
+        return this.Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar), ar
+      }
+      static Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar) {
+        const jr = Wr * Wr;
+        ar.r = 6 * (jr - Wr) * rr.r + (3 * jr - 4 * Wr + 1) * Sr.r + 6 * (-jr + Wr) * Qr.r + (3 * jr - 2 * Wr) * Zr.r, ar.g = 6 * (jr - Wr) * rr.g + (3 * jr - 4 * Wr + 1) * Sr.g + 6 * (-jr + Wr) * Qr.g + (3 * jr - 2 * Wr) * Zr.g, ar.b = 6 * (jr - Wr) * rr.b + (3 * jr - 4 * Wr + 1) * Sr.b + 6 * (-jr + Wr) * Qr.b + (3 * jr - 2 * Wr) * Zr.b, ar.a = 6 * (jr - Wr) * rr.a + (3 * jr - 4 * Wr + 1) * Sr.a + 6 * (-jr + Wr) * Qr.a + (3 * jr - 2 * Wr) * Zr.a
+      }
+      static FromColor3(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new mr(rr.r, rr.g, rr.b, Sr)
+      }
+      static FromArray(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new mr(rr[Sr], rr[Sr + 1], rr[Sr + 2], rr[Sr + 3])
+      }
+      static FromArrayToRef(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        Qr.r = rr[Sr], Qr.g = rr[Sr + 1], Qr.b = rr[Sr + 2], Qr.a = rr[Sr + 3]
+      }
+      static FromInts(rr, Sr, Qr, Zr) {
+        return new mr(rr / 255, Sr / 255, Qr / 255, Zr / 255)
+      }
+      static CheckColors4(rr, Sr) {
+        if (rr.length === 3 * Sr) {
+          const Sr = [];
+          for (let Qr = 0; Qr < rr.length; Qr += 3) {
+            const Zr = Qr / 3 * 4;
+            Sr[Zr] = rr[Qr], Sr[Zr + 1] = rr[Qr + 1], Sr[Zr + 2] = rr[Qr + 2], Sr[Zr + 3] = 1
+          }
+          return Sr
+        }
+        return rr
+      }
+    }
+    mr._V8PerformanceHack = new mr(.5, .5, .5, .5);
+    class Nr {}
+    Nr.Color3 = (0, Zr.e)(3, xr.Black), Nr.Color4 = (0, Zr.e)(3, (() => new mr(0, 0, 0, 0)));
+    let Ur = !1;
+
+    function tr() {
+      Ur || (Ur = !0, Object.defineProperties(xr.prototype, {
+        dimension: {
+          value: [3]
+        },
+        rank: {
+          value: 1
+        }
+      }), Object.defineProperties(mr.prototype, {
+        dimension: {
+          value: [4]
+        },
+        rank: {
+          value: 1
+        }
+      }), (0, jr.e)("BABYLON.Color3", xr), (0, jr.e)("BABYLON.Color4", mr))
+    }
+  },
+  38569: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      f: () => Zr,
+      h: () => Wr
+    });
+    const Zr = 1 / 2.2,
+      Wr = 2.2;
+    Math.sqrt(5);
+    let ar = .001
+  },
+  38599: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return parseInt(rr.toString().replace(/\W/g, ""))
+    }
+
+    function Wr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(rr - Sr) <= Qr
+    }
+
+    function ar(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return rr < Sr - Zr || rr > Qr + Zr
+    }
+
+    function jr(rr, Sr) {
+      return rr === Sr ? rr : Math.random() * (Sr - rr) + rr
+    }
+
+    function Ir(rr, Sr, Qr) {
+      return rr + (Sr - rr) * Qr
+    }
+
+    function fr(rr, Sr, Qr) {
+      let Zr = hr(Sr - rr, 360);
+      return Zr > 180 && (Zr -= 360), rr + Zr * mr(Qr)
+    }
+
+    function Er(rr, Sr, Qr) {
+      let Zr;
+      return Zr = rr != Sr ? mr((Qr - rr) / (Sr - rr)) : 0, Zr
+    }
+
+    function pr(rr, Sr, Qr, Zr, Wr) {
+      const ar = Wr * Wr,
+        jr = Wr * ar;
+      return rr * (2 * jr - 3 * ar + 1) + Qr * (-2 * jr + 3 * ar) + Sr * (jr - 2 * ar + Wr) + Zr * (jr - ar)
+    }
+
+    function xr(rr, Sr, Qr, Zr, Wr) {
+      const ar = Wr * Wr;
+      return 6 * (ar - Wr) * rr + (3 * ar - 4 * Wr + 1) * Sr + 6 * (-ar + Wr) * Qr + (3 * ar - 2 * Wr) * Zr
+    }
+
+    function mr(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(Qr, Math.max(Sr, rr))
+    }
+
+    function Nr(rr) {
+      return rr -= 2 * Math.PI * Math.floor((rr + Math.PI) / (2 * Math.PI))
+    }
+
+    function Ur(rr) {
+      const Sr = rr.toString(16);
+      return rr <= 15 ? ("0" + Sr).toUpperCase() : Sr.toUpperCase()
+    }
+
+    function tr(rr) {
+      if (Math.log2) return Math.floor(Math.log2(rr));
+      if (rr < 0) return NaN;
+      if (0 === rr) return -1 / 0;
+      let Sr = 0;
+      if (rr < 1) {
+        for (; rr < 1;) Sr++, rr *= 2;
+        Sr = -Sr
+      } else if (rr > 1)
+        for (; rr > 1;) Sr++, rr = Math.floor(rr / 2);
+      return Sr
+    }
+
+    function hr(rr, Sr) {
+      return rr - Math.floor(rr / Sr) * Sr
+    }
+
+    function zr(rr, Sr, Qr) {
+      return (rr - Sr) / (Qr - Sr)
+    }
+
+    function Yr(rr, Sr, Qr) {
+      return rr * (Qr - Sr) + Sr
+    }
+
+    function nr(rr, Sr) {
+      let Qr = hr(Sr - rr, 360);
+      return Qr > 180 && (Qr -= 360), Qr
+    }
+
+    function er(rr, Sr) {
+      const Qr = hr(rr, 2 * Sr);
+      return Sr - Math.abs(Qr - Sr)
+    }
+
+    function Kr(rr, Sr, Qr) {
+      let Zr = mr(Qr);
+      return Zr = -2 * Zr * Zr * Zr + 3 * Zr * Zr, Sr * Zr + rr * (1 - Zr)
+    }
+
+    function yr(rr, Sr, Qr) {
+      let Zr;
+      return Zr = Math.abs(Sr - rr) <= Qr ? Sr : rr + Math.sign(Sr - rr) * Qr, Zr
+    }
+
+    function Br(rr, Sr, Qr) {
+      const Zr = nr(rr, Sr);
+      let Wr;
+      return Wr = -Qr < Zr && Zr < Qr ? Sr : yr(rr, Sr = rr + Zr, Qr), Wr
+    }
+
+    function Tr(rr, Sr, Qr) {
+      return (rr - Sr) / (Qr - Sr)
+    }
+
+    function vr(rr, Sr, Qr) {
+      return (Qr - Sr) * rr + Sr
+    }
+
+    function Or(rr, Sr) {
+      const Qr = rr % Sr;
+      return 0 === Qr ? Sr : Or(Sr, Qr)
+    }
+    Qr.r(Sr), Qr.d(Sr, {
+      Clamp: () => mr,
+      DeltaAngle: () => nr,
+      Denormalize: () => Yr,
+      ExtractAsInt: () => Zr,
+      Hermite: () => pr,
+      Hermite1stDerivative: () => xr,
+      HighestCommonFactor: () => Or,
+      ILog2: () => tr,
+      InverseLerp: () => Er,
+      Lerp: () => Ir,
+      LerpAngle: () => fr,
+      MoveTowards: () => yr,
+      MoveTowardsAngle: () => Br,
+      Normalize: () => zr,
+      NormalizeRadians: () => Nr,
+      OutsideRange: () => ar,
+      PercentToRange: () => vr,
+      PingPong: () => er,
+      RandomRange: () => jr,
+      RangeToPercent: () => Tr,
+      Repeat: () => hr,
+      SmoothStep: () => Kr,
+      ToHex: () => Ur,
+      WithinEpsilon: () => Wr
+    })
+  },
+  38576: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
+      const Qr = [];
+      for (let Zr = 0; Zr < rr; ++Zr) Qr.push(Sr());
+      return Qr
+    }
+
+    function Wr(rr, Sr) {
+      return Zr(rr, Sr)
+    }
+    Qr.d(Sr, {
+      e: () => Zr,
+      f: () => Wr,
+      h: () => jr
+    });
+    const ar = ["push", "splice", "pop", "shift", "unshift"];
+
+    function jr(rr, Sr) {
+      const Qr = ar.map((Qr => function(rr, Sr, Qr) {
+        const Zr = rr[Sr];
+        if ("function" !== typeof Zr) return null;
+        const Wr = function() {
+          const Zr = rr.length,
+            ar = Wr.previous.apply(rr, arguments);
+          return Qr(Sr, Zr), ar
+        };
+        return Zr.next = Wr, Wr.previous = Zr, rr[Sr] = Wr, () => {
+          const Qr = Wr.previous;
+          if (!Qr) return;
+          const Zr = Wr.next;
+          Zr ? (Qr.next = Zr, Zr.previous = Qr) : (Qr.next = void 0, rr[Sr] = Qr), Wr.next = void 0, Wr.previous = void 0
+        }
+      }(rr, Qr, Sr)));
+      return () => {
+        for (const rr of Qr) rr?.()
       }
     }
   },
-  64132: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      AsyncLoop: () => yR.c,
-      RegisterTools: () => yR.e,
-      Tools: () => yR.h,
-      className: () => yR.k
+  38609: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      e: () => Wr
     });
-    var yR = GR(41616);
-    (0, yR.e)()
-  },
-  38253: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR,
-      f: () => tR
-    });
-    const yR = {};
+    const Zr = {};
 
-    function tR(RR, JR) {
-      yR[RR] = JR
+    function Wr(rr, Sr) {
+      Zr[rr] = Sr
     }
 
-    function uR(RR) {
-      return yR[RR]
+    function ar(rr) {
+      return Zr[rr]
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

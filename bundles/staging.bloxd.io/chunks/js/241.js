@@ -1,20 +1,620 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  37221: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      ITEM_FILES_WITHOUT_SPRITE: () => qR,
-      ITEM_SPRITES: () => uR,
-      ITEM_SPRITES_WITHOUT_FILE: () => ZR,
-      ITEM_SPRITE_RUNS: () => tR,
-      MAX_SPRITE_ITEM_ID: () => yR
+  38018: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => jr,
+      c: () => Wr,
+      d: () => ar
     });
-    const yR = 10113,
-      tR = "$######$################################################%=####################################################################################################################################################$########################################$##################################$##$###?##############################)#)#####$)c'$)#$)############+$&D&#E&#F&#G&######)#)##%)###################################$c$#################$&##R'#S'#T'#U'#V'#W'#X'#Y'#Z'#['#]'#^'#_'1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#$##$&###################################'########O*#P*#Q*#,#-#.#/#0%#######$)U*$)#$)V*$)#$)W*$)#$)X*$)#$)Y*$)#$)Z*$)#$)#$)#$)#$)#$)#$)#####%#.V(G'.:b)*@N(#P'#K($$#######$)H+$)#$)##E+#G+$)###########)###################$&##Z+$/##Z+$(###############################)#)#)#)#)#)#)#)#################################$F$############################################7#9#<#8#:#;#Y-#Z-######-C&-b%-a%-`%-_%-^%-]%-[%-U%-Z%-c%-T%-Y%-X%-W%-V%####%#####$(#$)C.$)#$)##`-#c-*(#$###]-############$####%####O.#P.####%#$&I'##$2###############################################################################################1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#%#$####$##$(Y0$)###$`%#$######$######################$(#########%#######$)S1$)#$)##O1#R1*(#)#)#)#)#)#$)#####$########)#)###)###################################################################-H2-I2-J2-K2-L2-M2-N2-O2-P2-Q2-R2-S2-T2-U2-V2-W22c%#$)#######%#######$)P3$)#$)##L3#O3*(#$$###$&#########################$4#########'#'###################################################'#%###$&#$#H4###I4$#C5Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#Q$#############A#A#A#A#A#A#A##F5##)#**#**G6$*###)#'#'#'#$####'#'#'#'#'#'#'#'#'#'#'#'#'#Q$#Q$#########################$##############)#*##*##*##*##*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)###)#$&#######.##-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-###########################################C$^&%%$$#####.##-#)#######N$##)#$3#*5`9N$####)#N$.#-#-#$######)#$4#####)Y9########$#####%,(#)###A#####24115131612141S*1F+1b-1Q11N31=1>1?1D'1`&1J)1E'1B1C$1J*1K*1@1A1H*1I*1D$1E$1L*1M*1F$1G'1H'1`)1G*1a)1b)1c)1C*1c*1_&1N*1C&1b%1a%1`%1_%1^%1]%1[%1U%1Z%1c%1T%1Y%1X%1W%1V%1H21I21J21K21L21M21N21O21P21Q21R21S21T21U21V21W21X21Y21Z21[21]21^21_21`21a21b21c21C31D31E31F31G3$$#c$#1b$5b$3b$6b$2b$4b$S*b$F+b$b-b$Q1b$N3b$=b$>b$?b$D'b$`&b$J)b$E'b$Bb$C$b$J*b$K*b$@b$Ab$H*b$I*b$D$b$E$b$L*b$M*b$F$b$G'b$H'b$`)b$G*b$a)b$b)b$c)b$C*b$c*b$_&b$N*b$C&b$b%b$a%b$`%b$_%b$^%b$]%b$[%b$U%b$Z%b$c%b$T%b$Y%b$X%b$W%b$V%b$H2b$I2b$J2b$K2b$L2b$M2b$N2b$O2b$P2b$Q2b$R2b$S2b$T2b$U2b$V2b$W2b$X2b$Y2b$Z2b$[2b$]2b$^2b$_2b$`2b$a2b$b2b$c2b$C3b$D3b$E3b$F3b$G3*&#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)###b%#b%#b%#b%#b%#b%#b%#b%#b%#b%#b%#b*###########A#A#A#A#A#A#A#A#A#A#A#########$:#################$##$B#$I%#$O$#$#####Z<$L$###############$+#$0#########################$L$#$6#############$####$##$+#$U$###########c&*#c&*E>c*&E>$$W=#X=#Y=$&#)#########$=######################################################################################################################L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?#L?#P?#U?#Y?#_?########################################################%#%#%#%#%#%#%#%##################################KA#LA#MA#NA#OA#PA#QA#RA#SA#TA#UA#VA#WA#XA#YA#ZA-###)[A#]A%#%#######################%##############`A###########################################################################################bA######################################################################################################################################%#%###%#%###%#%###%#%#########%#%###%#%###%#%#########%#%#####%###%#%###%#%###%#%###%#%#####################%#%###############%#%#%#%#)#%#%#%#%#%#%#%#%#%#%#%#%####################################################ZH$#[H$#]H$#^H$#_H$#`H$#aH$#bH$#cH$#CI$#DI$#EI$#FI$#GI$#HI$#II$#################################################################################################################################################################V/#W/#X/#Y/#Z/#[/#]/#^/#_/#`/#a/#b/#c/#C0#D0#E0#F/#G/#H/#I/#J/#K/#L/#M/#N/#O/#P/#Q/#R/#S/#T/#U/#V.#W.#X.#Y.#Z.#[.#].#^.#_.#`.#a.#b.#c.#C/#D/#E/##########################################################################################################################################################################################################################A################################################################################################################^P$########/`P$##############%#####)####################################################################################V0############%#%###############################################################################################################################################################################################################################################################################################################################################################################################################################################################################################+_E$##################################################+JB#####################################################################################################################################################################################################################################################################################################################################################################################################################################################b]$##############################################################################################-#########################################################################################################+PC%##################+#########",
-      uR = "unloaded|dirt|coarse_dirt|sand|clay|gravel|snow|log_maple|log_pine|log_plum|log_cedar|log_aspen|log_jungle|planks_maple|planks_aspen|planks_plum|planks_jungle|planks_pine|planks_cedar|stripped_maple_log|stripped_aspen_log|stripped_plum_log|stripped_jungle_log|stripped_pine_log|stripped_cedar_log|messy_stone|stone|smooth_stone|stone_diorite|stone_diorite_smooth|stone_andesite|stone_andesite_smooth|stone_granite|stone_granite_smooth|sandstone_normal|end_stone|coal_ore|iron_ore|gold_ore|lapis_ore|emerald_ore|diamond_ore|coal_block|iron_block|gold_block|lapis_block|emerald_block|wool_colored_white|wool_colored_orange|wool_colored_magenta|wool_colored_light_blue|wool_colored_yellow|wool_colored_lime|wool_colored_pink|wool_colored_gray|wool_colored_light_grey|wool_colored_cyan|wool_colored_purple|wool_colored_blue|wool_colored_brown|wool_colored_green|wool_colored_red|wool_colored_black|hardened_clay|hardened_clay_stained_white|hardened_clay_stained_orange|hardened_clay_stained_magenta|hardened_clay_stained_light_blue|hardened_clay_stained_yellow|hardened_clay_stained_lime|hardened_clay_stained_pink|hardened_clay_stained_gray|hardened_clay_stained_silver|hardened_clay_stained_cyan|hardened_clay_stained_purple|hardened_clay_stained_blue|hardened_clay_stained_brown|hardened_clay_stained_green|hardened_clay_stained_red|hardened_clay_stained_black|gray_concrete|light_gray_concrete|black_concrete|blue_concrete|brown_concrete|cyan_concrete|light_blue_concrete|lime_concrete|magenta_concrete|orange_concrete|pink_concrete|purple_concrete|red_concrete|white_concrete|green_concrete|yellow_concrete|leaves_pine|leaves_aspen|leaves_maple|leaves_jungle|pumpkin_face_on|glass|glass_black|glass_blue|glass_brown|glass_cyan|glass_gray|glass_light_gray|glass_green|glass_light_blue|glass_lime|glass_magenta|glass_orange|glass_pink|glass_purple|glass_red|glass_white|glass_yellow|glass_silver|redstone_lamp_on|redstone_lamp_off|invisible_solid|brick|stonebrick|nether_brick|netherrack|quartz_block_side|quartz_block_chiseled|stonebrick_carved|stonebrick_mossy|stonebrick_cracked|sandstone_top|chiseled_sandstone|ice|obsidian|hay_block_side|sponge|beacon|glowstone|bedrock|small_cactus|tallgrass|dandelion|poppy|red_tulip|pink_tulip|white_tulip|orange_tulip|oxeye_daisy|blue_orchid|cornflower|allium|azure_bluet|lily_of_the_valley|shadow_rose|furnace|workbench|diamond_block|maple_door|maple_trapdoor|aspen_sapling|maple_sapling|jungle_sapling|plum_sapling|pine_sapling|cedar_sapling|protector|cactus_top|cactus_dry|ladder_maple|vine_coloured|iron_ladder|white_planks|orange_planks|magenta_planks|light_blue_planks|yellow_planks|lime_planks|pink_planks|gray_planks|light_gray_planks|cyan_planks|purple_planks|blue_planks|brown_planks|green_planks|red_planks|black_planks|artisan_bench|wheat_seeds|wheat_stage2|wheat_stage3|wheat_stage4|wheat_stage5|wheat_stage6|wheat|wheat_stage7|farmland|mossy_cobblestone|white_bed|orange_bed|magenta_bed|light_blue_bed|yellow_bed|lime_bed|pink_bed|gray_bed|light_gray_bed|cyan_bed|purple_bed|blue_bed|brown_bed|green_bed|red_bed|black_bed|moonstone_ore|moonstone_block|magma|podzol_top|cut_sandstone|red_sandstone|red_sandstone_top|chiseled_red_sandstone|cut_red_sandstone|green_stone|green_bricks|dark_green_bricks|sandstone_brick|engraved_diorite|diorite_brick|engraved_andesite|andesite_brick|engraved_granite|granite_brick|ice_brick|leaves_plum|leaves_cedar|leaves_palm|log_palm|planks_palm|palm_sapling|pine_door|plum_door|cedar_door|aspen_door|jungle_door|palm_door|pine_trapdoor|plum_trapdoor|cedar_trapdoor|aspen_trapdoor|jungle_trapdoor|palm_trapdoor|red_sand|red_sandstone_brick|rocky_dirt|leaves_maple_autumn|log_pear|planks_pear|leaves_pear|pear_door|pear_trapdoor|pear_sapling|compressed_messy_stone|extra_compressed_messy_stone|super_compressed_messy_stone|hyper_compressed_messy_stone|ultra_compressed_messy_stone|mega_compressed_messy_stone|board|net|cobweb|brown_mushroom_block|red_mushroom_block|mushroom_stem|fireball_block|iceball_block|watermelon_seeds|melon_stem|pumpkin_seeds|melon_seeds|patterned_glass_black|patterned_glass_blue|patterned_glass_brown|patterned_glass_cyan|patterned_glass_gray|patterned_glass_light_gray|patterned_glass_green|patterned_glass_light_blue|patterned_glass_lime|patterned_glass_magenta|patterned_glass_orange|patterned_glass_pink|patterned_glass_purple|patterned_glass_red|patterned_glass_white|patterned_glass_yellow|potion_table|ladder_pine|ladder_plum|ladder_cedar|ladder_aspen|ladder_jungle|ladder_palm|ladder_pear|carpet_black_icon|carpet_blue_icon|carpet_brown_icon|carpet_cyan_icon|carpet_gray_icon|carpet_light_gray_icon|carpet_green_icon|carpet_light_blue_icon|carpet_lime_icon|carpet_magenta_icon|carpet_orange_icon|carpet_pink_icon|carpet_purple_icon|carpet_red_icon|carpet_white_icon|carpet_yellow_icon|rice|rice_stage2|rice_stage3|rice_stage4|rice_stage5|rice_stage6|rice_stage7|cranberries|berry_bush_stage1|berry_bush_stage2|red_mushroom|brown_mushroom|cotton_seeds|cotton_plant_stage1|cotton_plant_stage2|cotton_plant_stage3|protector_tribe|tall_grass_bottom|tall_grass_top|protector_faction|stripped_palm_log|stripped_pear_log|mystery_block|rocket_block|super_rocket_block|grenade_block|log_cherry|stripped_cherry_log|planks_cherry|leaves_cherry|cherry_door|cherry_trapdoor|cherry_sapling|ladder_cherry|bouncy_bomb_block|spikes_wood|spikes_stone|spikes_iron|spikes_gold|spikes_diamond|spikes_kill|corn_seeds|corn_stage1|corn_stage2|corn_stage0|corn_stage3|corn_stage4|corn_stage5|melting_ice|explosive_paint_quick_yellow|explosive_paint_quick_white|explosive_paint_quick_red|explosive_paint_quick_purple|explosive_paint_quick_pink|explosive_paint_quick_orange|explosive_paint_quick_magenta|explosive_paint_quick_lime|explosive_paint_quick_light_gray|explosive_paint_quick_light_blue|explosive_paint_quick_green|explosive_paint_quick_gray|explosive_paint_quick_cyan|explosive_paint_quick_brown|explosive_paint_quick_blue|explosive_paint_quick_black|explosive_paint_seeking_yellow|explosive_paint_seeking_white|explosive_paint_seeking_red|explosive_paint_seeking_purple|explosive_paint_seeking_pink|explosive_paint_seeking_orange|explosive_paint_seeking_magenta|explosive_paint_seeking_lime|explosive_paint_seeking_light_gray|explosive_paint_seeking_light_blue|explosive_paint_seeking_green|explosive_paint_seeking_gray|explosive_paint_seeking_cyan|explosive_paint_seeking_brown|explosive_paint_seeking_blue|explosive_paint_seeking_black|explosive_paint_sticky_yellow|explosive_paint_sticky_white|explosive_paint_sticky_red|explosive_paint_sticky_purple|explosive_paint_sticky_pink|explosive_paint_sticky_orange|explosive_paint_sticky_magenta|explosive_paint_sticky_lime|explosive_paint_sticky_light_gray|explosive_paint_sticky_light_blue|explosive_paint_sticky_green|explosive_paint_sticky_gray|explosive_paint_sticky_cyan|explosive_paint_sticky_brown|explosive_paint_sticky_blue|explosive_paint_sticky_black|white_strongbed|orange_strongbed|magenta_strongbed|light_blue_strongbed|yellow_strongbed|lime_strongbed|pink_strongbed|gray_strongbed|light_gray_strongbed|cyan_strongbed|purple_strongbed|blue_strongbed|brown_strongbed|green_strongbed|red_strongbed|black_strongbed|timed_spike_bomb|fatBrownMushroom|fatRedMushroom|chili_pepper_seeds|code_block|toxin_ball_block|finish_block|obby_death_block|obby_absorb_block|obby_absorb_death_block|pig_spawner_block_icon|cow_spawner_block_icon|sheep_spawner_block_icon|cave_golem_spawner_block_icon|draugr_zombie_spawner_block_icon|draugr_skeleton_spawner_block_icon|empty_spawner_block_icon|frost_golem_spawner_block_icon|frost_zombie_spawner_block_icon|frost_skeleton_spawner_block_icon|snowy_messy_stone|draugr_knight_spawner_block_icon|packed_snow|carved_messy_stone|spectral_grass|log_spectral|stripped_spectral_log|planks_spectral|leaves_spectral|spectral_door|spectral_trapdoor|spectral_sapling|ladder_spectral|wood_enchanting_table|stone_enchanting_table|iron_enchanting_table|gold_enchanting_table|diamond_enchanting_table|pine_grass|pine_fern|fallen_pine_cone|wolf_spawner_block_icon|bear_spawner_block_icon|deer_spawner_block_icon|stag_spawner_block_icon|bone_antlers_icon|gold_antlers_icon|gold_watermelon_stag_spawner_block_icon|salvaging_table|chalk|chalk_yellow|chalk_white|chalk_red|chalk_purple|chalk_pink|chalk_orange|chalk_magenta|chalk_lime|chalk_light_gray|chalk_light_blue|chalk_green|chalk_gray|chalk_cyan|chalk_brown|chalk_blue|chalk_black|chalk_bricks_yellow|chalk_bricks_white|chalk_bricks_red|chalk_bricks_purple|chalk_bricks_pink|chalk_bricks_orange|chalk_bricks_magenta|chalk_bricks_lime|chalk_bricks_light_gray|chalk_bricks_light_blue|chalk_bricks_green|chalk_bricks_gray|chalk_bricks_cyan|chalk_bricks_brown|chalk_bricks_blue|chalk_bricks_black|leaf_bed|jungle_tall_grass_bottom|jungle_tall_grass_top|catnip|log_mango|stripped_mango_log|planks_mango|leaves_mango|mango_door|mango_trapdoor|mango_sapling|ladder_mango|banana_seeds|banana_stem|dangling_rope|dangling_vine|gorilla_spawner_block_icon|wildcat_spawner_block_icon|leaves_maple_fruity|leaves_pine_cone|leaves_plum_fruity|leaves_palm_fruity|leaves_pear_fruity|leaves_cherry_fruity|leaves_mango_fruity|draugr_huntress_spawner_block_icon|magma_golem_spawner_block_icon|horse_spawner_block_icon|tomato_plant_stage0|tomato_plant_stage1|tomato_plant_stage2|tomato_plant_stage2_top|carrot_seeds|potato_seeds|strawberry_bush_stage0|strawberry_bush_stage1|strawberry_bush_stage2|sugar_cane_plant_stage0|sugar_cane_plant_stage1|sugar_cane_plant_stage2|sugar_cane_plant_stage2_top|lettuce_plant_stage0|lettuce_plant_stage1|lettuce_plant_stage2|coffee_plant_stage0|coffee_plant_stage1|coffee_plant_stage2|cauliflower_plant_stage0|cauliflower_plant_stage1|cauliflower_plant_stage2|parsnip_plant_stage0|parsnip_plant_stage1|parsnip_plant_stage2|blueberry_bush_stage0|blueberry_bush_stage1|blueberry_bush_stage2|red_cabbage_stage0|red_cabbage_stage1|red_cabbage_stage2|beetroot_seeds|leaves_aspen_autumn|autumn_fern|crate|potato_block|banner_white|banner_orange|banner_magenta|banner_light_blue|banner_yellow|banner_lime|banner_pink|banner_gray|banner_light_gray|banner_cyan|banner_purple|banner_blue|banner_brown|banner_green|banner_red|banner_black|banner_draugr|spirit_golem_spawner_block_icon|spirit_wolf_spawner_block_icon|spirit_bear_spawner_block_icon|spirit_stag_spawner_block_icon|spirit_gorilla_spawner_block_icon|fertilised_soil|sheep_painting|cow_painting|pig_painting|horse_painting|wolf_painting|deer_painting|wildcat_painting|draugr_warper_spawner_block_icon|active_radar|inactive_radar|yellow_lucky_block|light_blue_lucky_block|gold_trophy|small_pod_magenta_icon|small_pod_light_gray_icon|small_pod_red_icon|frost_wraith_spawner_block_icon|draugr_reaver_spawner_block_icon|small_pod_white_icon|small_pod_orange_icon|small_pod_light_blue_icon|small_pod_yellow_icon|small_pod_lime_icon|small_pod_pink_icon|small_pod_gray_icon|small_pod_cyan_icon|small_pod_purple_icon|small_pod_blue_icon|small_pod_brown_icon|small_pod_green_icon|small_pod_black_icon|banner_skull|banner_rainbow|2_block|bebek_bebek_bebek|bobino_musculino|bobzilla|brra_brra_pachim|capitano_explovissimo|cappuccino_ninjino|chimpanzano_bananano|il_wizardini_del_porko|lucchia_blocchi|monsieur_bedwar|twirlina_cappucina|boiling_pot|chopping_board|frying_pan|hob_boiling|hob_frying|kitchen_worktop|slicing_board|wood_trophy|stone_trophy|iron_trophy|diamond_trophy|moonstone_trophy|white_directional_arrow|orange_directional_arrow|magenta_directional_arrow|light_blue_directional_arrow|yellow_directional_arrow|lime_directional_arrow|pink_directional_arrow|grey_directional_arrow|light_grey_directional_arrow|cyan_directional_arrow|purple_directional_arrow|blue_directional_arrow|brown_directional_arrow|green_directional_arrow|red_directional_arrow|black_directional_arrow|bin|vending_machine|job_application|john_beef|67|wheel|torch|torch_yellow|torch_white|torch_red|torch_purple|torch_pink|torch_orange|torch_magenta|torch_lime|torch_light_gray|torch_light_blue|torch_green|torch_gray|torch_cyan|torch_brown|torch_blue|torch_black|neon_yellow|neon_white|neon_red|neon_purple|neon_pink|neon_orange|neon_magenta|neon_lime|neon_light_gray|neon_light_blue|neon_green|neon_gray|neon_cyan|neon_brown|neon_blue|neon_black|landing_pad|jump_pad_weak|jump_pad|jump_pad_strong|jump_pad_super|ghost_lucky_block|ghost_mystery_block|football|glowing_mushroom|crystal|slime_trail|grass_top|pine_grass_block|jungle_grass_block|pipe|auto_miner|rocket|extractor_pipe|splitter_pipe|solar_panel|wire|filter_pipe|merger_pipe|stalker_spawner_block_icon|lunite_ore|lunite_block|autominer_lunite|bowling_alley_floor|crone_spawner_block_icon|slime_spawner_block_icon|iron_guardian_spawner_block_icon|gold_guardian_spawner_block_icon|diamond_guardian_spawner_block_icon|moonstone_guardian_spawner_block_icon|dry_grass_block|dead_bush|lantern|lily_pad|camel_spawner_block_icon|camel_painting|yellow_lucky_block_rare|yellow_lucky_block_super|log_ancient_maple|noticeboard_standing|noticeboard_standing_top|noticeboard_standing_bottom|noticeboard_standing_left|noticeboard_standing_right|noticeboard_standing_top_left|noticeboard_standing_top_right|noticeboard_standing_bottom_left|noticeboard_standing_bottom_right|noticeboard_standing_leg|noticeboard_wall|noticeboard_wall_top|noticeboard_wall_bottom|noticeboard_wall_left|noticeboard_wall_right|noticeboard_wall_top_left|noticeboard_wall_top_right|noticeboard_wall_bottom_left|noticeboard_wall_bottom_right|tiki_terror_spawner_block_icon|maple_fence|pine_fence|plum_fence|cedar_fence|aspen_fence|jungle_fence|palm_fence|pear_fence|cherry_fence|spectral_fence|mango_fence|noticeboard|pure_coal_ore|pure_iron_ore|pure_gold_ore|pure_diamond_ore|pure_moonstone_ore|maple_fence_gate|pine_fence_gate|plum_fence_gate|cedar_fence_gate|aspen_fence_gate|jungle_fence_gate|palm_fence_gate|pear_fence_gate|cherry_fence_gate|spectral_fence_gate|mango_fence_gate|iron_goofy_golem_spawner_block_icon|gold_goofy_golem_spawner_block_icon|diamond_goofy_golem_spawner_block_icon|moonstone_goofy_golem_spawner_block_icon|crystal_block|rope_block|ash|coal_deposit|iron_deposit|stone_deposit|copper_deposit|gold_deposit|homestead_core|copper_ore|voltite_ore|voltite_deposit|starframe|comet_ore|comet_heart|pure_copper_ore|pure_voltite_ore|darkstone|darkstone_bricks|darkstone_bricks_cracked|darkstone_bricks_lava|darkstone_engraved|darkstone_smooth|scorpion_eggs|showcase|pine_item_pedestal|plum_item_pedestal|cedar_item_pedestal|aspen_item_pedestal|jungle_item_pedestal|palm_item_pedestal|pear_item_pedestal|cherry_item_pedestal|spectral_item_pedestal|mango_item_pedestal|uranium_ore|uranium_deposit|fluid_tank|reactor_frame|reactor_casing|reactor_glass|fuel_port|water_port|output|fuel_rod0|graphite_block|coolant_channel0|reactor_slag|battery_casing|uranium_glass|glow_lamp|jetpack_back|atomic_spire|isotope_comet_ore|isotope_comet_heart|fluid_pipe|scaffolding|nova_trophy|uranium_block|pure_uranium_ore|copper_block|voltite_block|wooden_pickaxe|stone_pickaxe|iron_pickaxe|golden_pickaxe|diamond_pickaxe|moonstone_pickaxe|golem_pickaxe|wooden_axe|stone_axe|iron_axe|golden_axe|diamond_axe|moonstone_axe|artisan_axe|wooden_shovel|stone_shovel|iron_shovel|golden_shovel|diamond_shovel|wooden_sword|stone_sword|iron_sword|golden_sword|diamond_sword|knight_sword|wooden_hoe|stone_hoe|iron_hoe|golden_hoe|diamond_hoe|flashlight|mining_helmet|wood_helmet|iron_helmet|golden_helmet|diamond_helmet|wood_chestplate|iron_chestplate|golden_chestplate|diamond_chestplate|fur_chestplate|wood_leggings|iron_leggings|golden_leggings|diamond_leggings|wood_boots|iron_boots|golden_boots|diamond_boots|spiked_boots|wood_gauntlets|iron_gauntlets|golden_gauntlets|diamond_gauntlets|military_helmet|military_chestplate|military_gauntlets|military_leggings|military_boots|shears|artisan_shears|stick|coal|raw_iron|iron_ingot|iron_fragment|raw_gold|gold_ingot|gold_fragment|diamond|diamond_fragment|moonstone|lunite|moonstone_fragment|bowl|bowl_of_cranberries_1|bowl_of_cranberries_2|bowl_of_cranberries_3|bowl_of_cranberries_4|mushroom_soup|glowing_soup|night_vision_soup|cotton|gold_crop|bucket|water_bucket|lava_bucket|oak_boat|obsidian_boat|speedboat|hang_glider|hang_glider_iron|hang_glider_gold|hang_glider_diamond|hovercraft|yellow_kart|white_kart|red_kart|purple_kart|pink_kart|orange_kart|magenta_kart|lime_kart|light_gray_kart|light_blue_kart|green_kart|gray_kart|cyan_kart|brown_kart|blue_kart|black_kart|off_roader|armored_car|light_blue_car|snowball|pebble|reinforced_pebble|arrow|ball|reinforced_ball|frag_grenade|mining_grenade|smoke_grenade|moonstone_orb|fireball|bouncy_bomb|rpg|super_rpg|grenade_launcher|iceball|67_projectile_base|67_projectile_boosted|moonstone_explosive_side|wood_bow|wood_bow_charging_2|wood_bow_charging_3|wood_bow_charging_4|stone_bow|stone_bow_charging_2|stone_bow_charging_3|stone_bow_charging_4|iron_bow|iron_bow_charging_2|iron_bow_charging_3|iron_bow_charging_4|gold_bow|gold_bow_charging_2|gold_bow_charging_3|gold_bow_charging_4|diamond_bow|diamond_bow_charging_2|diamond_bow_charging_3|diamond_bow_charging_4|wood_crossbow|wood_crossbow_charging_2|wood_crossbow_charging_3|wood_crossbow_charging_4|stone_crossbow|stone_crossbow_charging_2|stone_crossbow_charging_3|stone_crossbow_charging_4|iron_crossbow|iron_crossbow_charging_2|iron_crossbow_charging_3|iron_crossbow_charging_4|gold_crossbow|gold_crossbow_charging_2|gold_crossbow_charging_3|gold_crossbow_charging_4|diamond_crossbow|diamond_crossbow_charging_2|diamond_crossbow_charging_3|diamond_crossbow_charging_4|wood_crossbow_charged|stone_crossbow_charged|iron_crossbow_charged|gold_crossbow_charged|diamond_crossbow_charged|compass|compass_dir_2|compass_dir_3|compass_dir_4|compass_dir_5|compass_dir_6|compass_dir_7|compass_dir_8|compass_dir_9|compass_dir_10|compass_dir_11|compass_dir_12|chunk_map|bread|bowl_of_rice|apple|plum|coconut|cracked_coconut|pear|cherry|banana|watermelon_slice|glistering_watermelon_slice|melon_slice|glistering_melon_slice|pumpkin_pie|corn|cornbread|chili_pepper|mango|carrot|gold_carrot|raw_potato|baked_potato|beetroot|raw_porkchop|cooked_porkchop|raw_beef|steak|raw_mutton|cooked_mutton|raw_venison|cooked_venison|rotten_flesh|rotten_brain|bone|bone_meal|leather|saddle|spirit_saddle|fur|golem_eye|knight_heart|teleport_heart|frost_shard|molten_cog|choir_bell|siege_core|flywheel|radiant_spark|brood_sac|bandolier|name_tag|book|empty_bottle|water_bottle|slowness_potion|splash_slowness_potion|slowness_arrow|poison|splash_poison|poison_arrow|weakness_potion|splash_weakness_potion|weakness_arrow|instant_damage_potion|splash_instant_damage_potion|instant_damage_arrow|milk_potion|splash_milk_potion|milk_arrow|speed_potion|splash_speed_potion|speed_arrow|defense_potion|splash_defense_potion|defense_arrow|strength_potion|splash_strength_potion|strength_arrow|invisibility_potion|splash_invisibility_potion|invisibility_arrow|jump_potion|splash_jump_potion|jump_arrow|knockback_potion|splash_knockback_potion|knockback_arrow|regen_potion|splash_regen_potion|regen_arrow|heal_potion|splash_heal_potion|heal_arrow|haste_potion|splash_haste_potion|haste_arrow|shield_potion|splash_shield_potion|shield_arrow|double_jump_potion|splash_double_jump_potion|double_jump_arrow|heat_resistance_potion|splash_heat_resistance_potion|heat_resistance_arrow|x_ray_vision_potion|splash_x_ray_vision_potion|x_ray_vision_arrow|mining_yield_potion|splash_mining_yield_potion|mining_yield_arrow|brain_rot_potion|splash_brain_rot_potion|brain_rot_arrow|chaos_potion|teleportation_potion|ammo|AK-47|M16|MP40|TAR-21|M1911|Double-barreled|AWP|Deagle|Striker-12|VSR|DMR|Minigun|FMR|SKAR|Block-19|Mini Izu|GPMG|gold_coin|updraft|snowdash|floor_creator|moonstone_remote_explosive|moonstone_remote|ice_bridge|maple_planks_bridge|messy_stone_bridge|yellow_balloon|white_balloon|red_balloon|purple_balloon|pink_balloon|orange_balloon|magenta_balloon|lime_balloon|light_gray_balloon|light_blue_balloon|green_balloon|gray_balloon|cyan_balloon|brown_balloon|blue_balloon|black_balloon|yellow_popup_tower|white_popup_tower|red_popup_tower|purple_popup_tower|pink_popup_tower|orange_popup_tower|magenta_popup_tower|lime_popup_tower|light_gray_popup_tower|light_blue_popup_tower|green_popup_tower|gray_popup_tower|cyan_popup_tower|brown_popup_tower|blue_popup_tower|black_popup_tower|yellow_paintball_gun|white_paintball_gun|red_paintball_gun|purple_paintball_gun|pink_paintball_gun|orange_paintball_gun|magenta_paintball_gun|lime_paintball_gun|light_gray_paintball_gun|light_blue_paintball_gun|green_paintball_gun|gray_paintball_gun|cyan_paintball_gun|brown_paintball_gun|blue_paintball_gun|black_paintball_gun|yellow_paintball|white_paintball|red_paintball|purple_paintball|pink_paintball|orange_paintball|magenta_paintball|lime_paintball|light_gray_paintball|light_blue_paintball|green_paintball|gray_paintball|cyan_paintball|brown_paintball|blue_paintball|black_paintball|yellow_heavy_paintball_gun|white_heavy_paintball_gun|red_heavy_paintball_gun|purple_heavy_paintball_gun|pink_heavy_paintball_gun|orange_heavy_paintball_gun|magenta_heavy_paintball_gun|lime_heavy_paintball_gun|light_gray_heavy_paintball_gun|light_blue_heavy_paintball_gun|green_heavy_paintball_gun|gray_heavy_paintball_gun|cyan_heavy_paintball_gun|brown_heavy_paintball_gun|blue_heavy_paintball_gun|black_heavy_paintball_gun|explosive_paint_yellow|explosive_paint_white|explosive_paint_red|explosive_paint_purple|explosive_paint_pink|explosive_paint_orange|explosive_paint_magenta|explosive_paint_lime|explosive_paint_light_gray|explosive_paint_light_blue|explosive_paint_green|explosive_paint_gray|explosive_paint_cyan|explosive_paint_brown|explosive_paint_blue|explosive_paint_black|yellow_paint_bow|yellow_paint_bow_charging_2|yellow_paint_bow_charging_3|yellow_paint_bow_charging_4|white_paint_bow|white_paint_bow_charging_2|white_paint_bow_charging_3|white_paint_bow_charging_4|red_paint_bow|red_paint_bow_charging_2|red_paint_bow_charging_3|red_paint_bow_charging_4|purple_paint_bow|purple_paint_bow_charging_2|purple_paint_bow_charging_3|purple_paint_bow_charging_4|pink_paint_bow|pink_paint_bow_charging_2|pink_paint_bow_charging_3|pink_paint_bow_charging_4|orange_paint_bow|orange_paint_bow_charging_2|orange_paint_bow_charging_3|orange_paint_bow_charging_4|magenta_paint_bow|magenta_paint_bow_charging_2|magenta_paint_bow_charging_3|magenta_paint_bow_charging_4|lime_paint_bow|lime_paint_bow_charging_2|lime_paint_bow_charging_3|lime_paint_bow_charging_4|light_gray_paint_bow|light_gray_paint_bow_charging_2|light_gray_paint_bow_charging_3|light_gray_paint_bow_charging_4|light_blue_paint_bow|light_blue_paint_bow_charging_2|light_blue_paint_bow_charging_3|light_blue_paint_bow_charging_4|green_paint_bow|green_paint_bow_charging_2|green_paint_bow_charging_3|green_paint_bow_charging_4|gray_paint_bow|gray_paint_bow_charging_2|gray_paint_bow_charging_3|gray_paint_bow_charging_4|cyan_paint_bow|cyan_paint_bow_charging_2|cyan_paint_bow_charging_3|cyan_paint_bow_charging_4|brown_paint_bow|brown_paint_bow_charging_2|brown_paint_bow_charging_3|brown_paint_bow_charging_4|blue_paint_bow|blue_paint_bow_charging_2|blue_paint_bow_charging_3|blue_paint_bow_charging_4|black_paint_bow|black_paint_bow_charging_2|black_paint_bow_charging_3|black_paint_bow_charging_4|pig_spawn_orb|cow_spawn_orb|sheep_spawn_orb|horse_spawn_orb|camel_spawn_orb|iron_goofy_golem_spawn_orb|gold_goofy_golem_spawn_orb|diamond_goofy_golem_spawn_orb|moonstone_goofy_golem_spawn_orb|deer_spawn_orb|slime_spawn_orb|wolf_spawn_orb|wildcat_spawn_orb|spirit_golem_spawn_orb|spirit_wolf_spawn_orb|spirit_bear_spawn_orb|spirit_stag_spawn_orb|spirit_gorilla_spawn_orb|bear_spawn_orb|stag_spawn_orb|gold_watermelon_stag_spawn_orb|gorilla_spawn_orb|cave_golem_spawn_orb|draugr_zombie_spawn_orb|draugr_skeleton_spawn_orb|frost_golem_spawn_orb|frost_zombie_spawn_orb|frost_skeleton_spawn_orb|draugr_knight_spawn_orb|draugr_huntress_spawn_orb|magma_golem_spawn_orb|draugr_warper_spawn_orb|frost_wraith_spawn_orb|draugr_reaver_spawn_orb|stalker_spawn_orb|crone_spawn_orb|iron_guardian_spawn_orb|gold_guardian_spawn_orb|diamond_guardian_spawn_orb|moonstone_guardian_spawn_orb|tiki_terror_spawn_orb|mob_catcher|caught_pig_default|caught_cow_default|caught_cow_cream|caught_sheep_default|caught_horse_default|caught_horse_black|caught_horse_brown|caught_horse_cream|caught_camel_default|caught_camel_brown|caught_iron_goofy_golem_default|caught_iron_goofy_golem_flaking|caught_iron_goofy_golem_patchy|caught_iron_goofy_golem_shedding|caught_iron_goofy_golem_bare|caught_iron_goofy_golem_stone|caught_gold_goofy_golem_default|caught_gold_goofy_golem_flaking|caught_gold_goofy_golem_patchy|caught_gold_goofy_golem_shedding|caught_gold_goofy_golem_bare|caught_gold_goofy_golem_stone|caught_diamond_goofy_golem_default|caught_diamond_goofy_golem_flaking|caught_diamond_goofy_golem_patchy|caught_diamond_goofy_golem_shedding|caught_diamond_goofy_golem_bare|caught_diamond_goofy_golem_stone|caught_moonstone_goofy_golem_default|caught_moonstone_goofy_golem_flaking|caught_moonstone_goofy_golem_patchy|caught_moonstone_goofy_golem_shedding|caught_moonstone_goofy_golem_bare|caught_moonstone_goofy_golem_stone|caught_deer_default|caught_slime_default|caught_wolf_default|caught_wolf_white|caught_wolf_brown|caught_wolf_grey|caught_wolf_spectral|caught_wildcat_default|caught_wildcat_tabby|caught_wildcat_grey|caught_wildcat_black|caught_wildcat_calico|caught_wildcat_siamese|caught_wildcat_leopard|caught_spirit_golem_default|caught_spirit_wolf_default|caught_spirit_bear_default|caught_spirit_stag_default|caught_spirit_gorilla_default|caught_bear_default|caught_stag_default|caught_gold_watermelon_stag_default|caught_gorilla_default|caught_cave_golem_default|caught_cave_golem_iron|caught_draugr_zombie_default|caught_draugr_zombie_longHairChestplate|caught_draugr_zombie_longHairClothed|caught_draugr_zombie_shortHairClothed|caught_draugr_skeleton_default|caught_frost_golem_default|caught_frost_zombie_default|caught_frost_zombie_longHairChestplate|caught_frost_zombie_shortHairClothed|caught_frost_skeleton_default|caught_draugr_knight_default|caught_draugr_huntress_default|caught_magma_golem_default|caught_draugr_warper_default|caught_frost_wraith_default|caught_draugr_reaver_default|caught_stalker_default|caught_stalker_crimson|caught_stalker_frost|caught_stalker_void|caught_crone_default|caught_iron_guardian_default|caught_gold_guardian_default|caught_diamond_guardian_default|caught_moonstone_guardian_default|caught_tiki_terror_default|caught_tiki_terror_titan|caught_tiki_terror_tormentor|caught_tiki_terror_tyrant|caught_npc_default|caught_npc_emma|caught_npc_leo|caught_npc_isabel|caught_npc_sanjay|caught_npc_imara|caught_npc_enoch|caught_npc_sara|caught_npc_carmen|caught_npc_chef|caught_67_default|caught_bobino_musculino_default|caught_capitano_explovissimo_default|caught_desert_fennec_default|caught_armour_collector_default|caught_furnace_knight_default|caught_lil_knight_default|caught_glass_gremlin_default|caught_glass_bro_default|caught_lord_vulcan_default|caught_zombie_default|caught_skeleton_default|caught_mummy_default|caught_scorpion_default|caught_vulcanite_default|caught_evil_tome_default|caught_magma_toad_default|timed_spike_bomb_charging_2|timed_spike_bomb_charging_3|timed_spike_bomb_charging_4|toxin_ball|aura_xp_fragment|aura_xp_orb|aura_xp_potion|splash_aura_xp_potion|aura_xp_arrow|firecracker|firecracker_rainbow|firecracker_yellow|firecracker_white|firecracker_red|firecracker_purple|firecracker_pink|firecracker_orange|firecracker_magenta|firecracker_lime|firecracker_light_gray|firecracker_light_blue|firecracker_green|firecracker_gray|firecracker_cyan|firecracker_brown|firecracker_blue|firecracker_black|firecracker_pebble|firecracker_pebble_rainbow|firecracker_pebble_yellow|firecracker_pebble_white|firecracker_pebble_red|firecracker_pebble_purple|firecracker_pebble_pink|firecracker_pebble_orange|firecracker_pebble_magenta|firecracker_pebble_lime|firecracker_pebble_light_gray|firecracker_pebble_light_blue|firecracker_pebble_green|firecracker_pebble_gray|firecracker_pebble_cyan|firecracker_pebble_brown|firecracker_pebble_blue|firecracker_pebble_black|worldbuilder_wand|strongfish_red|strongfish_green|strongfish_moon|wheatfish|moonfish|bombfish|boomerang_fish|root_flounder|abyss_carp|boulder_bass|barnaclejaw|crystalized_wheatfish|darter|darter_shadow|electric_eel|grass_snapper|jungle_spinefish|mangler_catfish|mossback_arapaima|sandbelly_piranha|shadeback_ray|mudbelly_tilapia|mireback_carp|rotslab_eel|aether_minnow|murkborne_ray|eldertide_leviathan|oarfish|alpha_moon_strongfish|bamboo_catfish|blackwater_bream|blackwater_leviathan|boned_sturgeon|bull_shark|channel_sawfish|coastal_mullet|coelacanth|driftwood_catfish|eagle_ray|giant_grouper|giant_moray|giant_stingray|golden_mahseer|greenfin_loach|mangrove_herring|moonlit_boomerang_fish|moonstone_pupfish|mudline_perch|murk_stingray|needlefish|nomai_moray|pearlescent_moonfish|rainbow_guppy|red_snapper|reedglass_minnow|reef_sardine|root_perch|rust_scad|seahorse|snakehead|spined_stickleback|stone_grouper|sumpback_carp|sunset_minnow|tarpon|threadfin_bream|tri_pointed_needlefish|ellie_fish|armoured_searobin|ash_lionfish|barefrost_toothfish|blackfin_icefish|basalt_pipefish|brimstone_spikefish|cinder_leviathan|crowned_flame_angelfish|deepwater_lanternfish|driftice_capelin|ember_chub|embermark_wrasse|eviota_vader|frost_herring|frost_wolf_eel|frostpaint_notie|frozen_grenadier|giant_trevally|glacial_lanternfish|glacial_silverfish|heatwarp_flounder|hatchetfish|ice_spined_notothenia|iceshelf_skate|icy_sculpin|lavaflow_trout|lavawake_slopefish|magma_sardinella|magma_trout|marbled_moray_cod|molten_lotella_cod|northern_wolffish|paleice_rockcod|permafrost_halibut|pithead|polarflash_electron|pyroclast_eel|pyroscale_grouper|red_pyreside|rimesnouted_lancetfish|scorched_sunfish|scored_dace|silver_dragonfish|snow_haddock|volcanic_catfish|volcanic_semperi|rusty_rod|lucky_rod|sturdy_rod|jungle_rod|draugr_rod|cursed_rod|tangle_resistant_rod|speed_rod|carbon_rod|deep_sea_rod|master_rod|obsidian_rod|molten_magma_rod|frost_rod|black_ice_rod|mythic_rod|acorn|acorn_jelly|cows_milk|cheese|caught_fish|fish_fillet|meaty_bone|blinding_pebble|sheeps_milk|yoghurt_pot|truffle|truffle_oil|oats|porridge|dates|date_pudding|poop|fertiliser|medkit|wood_spear|stone_spear|iron_spear|gold_spear|diamond_spear|moonstone_spear|wood_dagger|stone_dagger|iron_dagger|gold_dagger|diamond_dagger|moonstone_dagger|wood_boomerang|stone_boomerang|iron_boomerang|gold_boomerang|diamond_boomerang|moonstone_boomerang|wood_club|stone_club|iron_club|gold_club|diamond_club|moonstone_club|wood_mace|stone_mace|iron_mace|gold_mace|diamond_mace|moonstone_mace|wood_whip|stone_whip|iron_whip|gold_whip|diamond_whip|moonstone_whip|beef_stew|chicken|coleslaw|egg|fish_n_chips|fried_rice|lettuce|omelette|onion|red_cabbage|roast_dinner|salad|stuffed_pepper|sushi|tomato|veg_soup|clock_wood_midday|clock_wood_midnight|clock_wood_late_night|clock_wood_sunrise|clock_wood_early_day|clock_wood_late_day|clock_wood_sunset|clock_wood_early_night|clock_gold_midday|clock_gold_midnight|clock_gold_late_night|clock_gold_sunrise|clock_gold_early_day|clock_gold_late_day|clock_gold_sunset|clock_gold_early_night|lucky_sword_upgrade|lucky_armour_upgrade|lucky_tools_upgrade|lucky_clover|void_net|lucky_bomb|unlucky_bomb|swap_orb|golden_lucky_clover|still_water_bucket|still_lava_bucket|amethite|amethite_fragment|amethite_pickaxe|amethite_axe|amethite_shovel|amethite_sword|amethite_hoe|amethite_helmet|amethite_chestplate|amethite_leggings|amethite_boots|amethite_gauntlets|amethite_bow|amethite_bow_charging_2|amethite_bow_charging_3|amethite_bow_charging_4|amethite_crossbow|amethite_crossbow_charging_2|amethite_crossbow_charging_3|amethite_crossbow_charging_4|amethite_crossbow_charged|amethite_spear|amethite_dagger|amethite_boomerang|amethite_club|amethite_mace|amethite_whip|magmasteel|magmasteel_fragment|magmasteel_pickaxe|magmasteel_axe|magmasteel_shovel|magmasteel_sword|magmasteel_hoe|magmasteel_helmet|magmasteel_chestplate|magmasteel_leggings|magmasteel_boots|magmasteel_gauntlets|magmasteel_bow|magmasteel_bow_charging_2|magmasteel_bow_charging_3|magmasteel_bow_charging_4|magmasteel_crossbow|magmasteel_crossbow_charging_2|magmasteel_crossbow_charging_3|magmasteel_crossbow_charging_4|magmasteel_crossbow_charged|magmasteel_spear|magmasteel_dagger|magmasteel_boomerang|magmasteel_club|magmasteel_mace|magmasteel_whip|rubellite|rubellite_fragment|rubellite_pickaxe|rubellite_axe|rubellite_shovel|rubellite_sword|rubellite_hoe|rubellite_helmet|rubellite_chestplate|rubellite_leggings|rubellite_boots|rubellite_gauntlets|rubellite_bow|rubellite_bow_charging_2|rubellite_bow_charging_3|rubellite_bow_charging_4|rubellite_crossbow|rubellite_crossbow_charging_2|rubellite_crossbow_charging_3|rubellite_crossbow_charging_4|rubellite_crossbow_charged|rubellite_spear|rubellite_dagger|rubellite_boomerang|rubellite_club|rubellite_mace|rubellite_whip|serpentite|serpentite_fragment|serpentite_pickaxe|serpentite_axe|serpentite_shovel|serpentite_sword|serpentite_hoe|serpentite_helmet|serpentite_chestplate|serpentite_leggings|serpentite_boots|serpentite_gauntlets|serpentite_bow|serpentite_bow_charging_2|serpentite_bow_charging_3|serpentite_bow_charging_4|serpentite_crossbow|serpentite_crossbow_charging_2|serpentite_crossbow_charging_3|serpentite_crossbow_charging_4|serpentite_crossbow_charged|serpentite_spear|serpentite_dagger|serpentite_boomerang|serpentite_club|serpentite_mace|serpentite_whip|cursemetal_helmet|cursemetal_chestplate|cursemetal_gauntlets|cursemetal_leggings|cursemetal_boots|kingly_amethite_helmet|kingly_amethite_chestplate|kingly_amethite_gauntlets|kingly_amethite_leggings|kingly_amethite_boots|kingly_diamond_helmet|kingly_diamond_chestplate|kingly_diamond_gauntlets|kingly_diamond_leggings|kingly_diamond_boots|sanguine_shard|sanguine_sword|sanguine_bow|sanguine_bow_charging_2|sanguine_bow_charging_3|sanguine_bow_charging_4|sanguine_crossbow|sanguine_crossbow_charging_2|sanguine_crossbow_charging_3|sanguine_crossbow_charging_4|sanguine_crossbow_charged|sanguine_spear|sanguine_dagger|sanguine_club|sanguine_mace|sanguine_whip|sanguine_staff|sanguine_helmet|sanguine_chestplate|sanguine_gauntlets|sanguine_leggings|sanguine_boots|spectral_shard|spectral_sword|spectral_bow|spectral_bow_charging_2|spectral_bow_charging_3|spectral_bow_charging_4|spectral_crossbow|spectral_crossbow_charging_2|spectral_crossbow_charging_3|spectral_crossbow_charging_4|spectral_crossbow_charged|spectral_spear|spectral_dagger|spectral_club|spectral_mace|spectral_whip|spectral_staff|spectral_helmet|spectral_chestplate|spectral_gauntlets|spectral_leggings|spectral_boots|geo_shard|geo_sword|geo_bow|geo_bow_charging_2|geo_bow_charging_3|geo_bow_charging_4|geo_crossbow|geo_crossbow_charging_2|geo_crossbow_charging_3|geo_crossbow_charging_4|geo_crossbow_charged|geo_spear|geo_dagger|geo_club|geo_mace|geo_whip|geo_staff|geo_helmet|geo_chestplate|geo_gauntlets|geo_leggings|geo_boots|astral_shard|astral_sword|astral_bow|astral_bow_charging_2|astral_bow_charging_3|astral_bow_charging_4|astral_crossbow|astral_crossbow_charging_2|astral_crossbow_charging_3|astral_crossbow_charging_4|astral_crossbow_charged|astral_spear|astral_dagger|astral_club|astral_mace|astral_whip|astral_staff|astral_helmet|astral_chestplate|astral_gauntlets|astral_leggings|astral_boots|wooden_key|stone_key|iron_key|gold_key|diamond_key|goldheart_engine|deepbite_drill_tip|empty_fuel_cell|blackfire_fuel_cell|doom_rivet|doom_crest|raw_copper|copper_bar|iron_grit|gold_grit|copper_grit|charcoal|recall_beacon|iron_hammer|iron_plate|copper_wire|motor|machine_parts|relay_coil|deposit_seed_copper|deposit_seed_gold|deposit_seed_voltite|deposit_seed_coal|deposit_seed_iron|deposit_seed_stone|steel_bar|gold_plate|logic_board|machine_hull|raw_voltite|power_coupler|ore_lens|homing_beacon|pull_charm|vein_breaker|voltite_dust|voltite_cell|sky_pack|dusk_moss|star_alloy|moonstone_dust|comet_shard|comet_core|starbore_drill|core_tier_2|core_tier_3|core_tier_4|core_tier_5|arc_caster|voltplate_helmet|voltplate_chestplate|voltplate_gauntlets|voltplate_leggings|voltplate_boots|wood_blade|wood_guard|wood_handle|stone_blade|stone_guard|stone_handle|iron_blade|iron_guard|iron_handle|gold_blade|gold_guard|gold_handle|diamond_blade|diamond_guard|diamond_handle|moonstone_blade|moonstone_guard|moonstone_handle|magmasteel_blade|magmasteel_guard|magmasteel_handle|sanguine_blade|sanguine_guard|sanguine_handle|astral_blade|astral_guard|astral_handle|moonstone_sword|magmaward_fuel|raw_uranium|uranium_grit|uranium_pellet|plutonium_pellet|spent_pellet|glow_dust|biomass|graphite|containment_plate|heat_exchanger|focus_lens|nova_matter|deposit_seed_uranium|reactor_blueprint|wrench|advanced_coupler|nova_upgrade|jetpack|nova_jetpack|nova_helmet|nova_chestplate|nova_gauntlets|nova_leggings|nova_boots|nova_blade|mob_cage|mob_cage_filled|nova_multitool|pocket_terminal|comet_beacon|nova_wrench",
-      ZR = "############################################################################################################################################4+##&###############%####$##3########################0######&#####&####$%###############<#####$#&###%##########'*######G%#####-$#$###7################################'###('######F$$#9-#8##################O$###############(#'##-#$)(##C$####2#######################.###################$$###G'N2##########################",
-      qR = "amethite_armour_2|astral_armour_2|beetroot_plant_stage0|beetroot_plant_stage1|beetroot_plant_stage2|berry_bush_stage0|book_page|camel_painting_option2|carrot_plant_stage0|carrot_plant_stage1|carrot_plant_stage2|crimson_trapdoor|cursemetal_armour_2|date_pudding_option2|dates_option2|diamond_armour_2|empty_armor_slot_boots|empty_armor_slot_chestplate|empty_armor_slot_gauntlets|empty_armor_slot_helmet|empty_armor_slot_leggings|fur_armour_2|geo_armour_2|gold_armour_2|iron_armour_2|iron_trapdoor|jet_armour_2|kingly_amethite_armour_2|kingly_diamond_armour_2|magmasteel_armour_2|military_armour_2|mob_capsule|mob_capsule_filled|netherite_hoe|nova_armour_2|nova_jet_armour_2|placeholder|potato_plant_stage0|potato_plant_stage1|potato_plant_stage2|potion|rice_seeds|rubellite_armour_2|sanguine_armour_2|serpentite_armour_2|spectral_armour_2|string|vine|voltplate_armour_2|warped_trapdoor|wireless_terminal|wood_armour_2"
+    var Zr = Qr(1783);
+    class Wr extends Error {
+      constructor(rr) {
+        super("The game server didn't answer in time"), this.leg = rr, this.name = "SeatRequestTimedOut"
+      }
+    }
+    const ar = new class {
+      constructor() {
+        this.count = 0, this.answers = 0, this.waiting = new Set
+      }
+      get answered() {
+        return this.answers
+      }
+      answer() {
+        this.answers++
+      }
+      add() {
+        this.count++;
+        for (const rr of this.waiting) rr()
+      }
+      remove() {
+        this.count--
+      }
+      whenSlow(rr) {
+        return this.count > 0 || rr.aborted ? Promise.resolve(!rr.aborted) : new Promise((Sr => {
+          const Qr = () => {
+            this.waiting.delete(Qr), Sr(!rr.aborted)
+          };
+          this.waiting.add(Qr), rr.addEventListener("abort", Qr, {
+            once: !0
+          })
+        }))
+      }
+    };
+    class jr {
+      constructor(rr) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new Zr.b(45e3, rr), this.slow = new Zr.b(8e3, (() => {
+          this.countedSlow = !0, ar.add()
+        }))
+      }
+      restart() {
+        ar.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+      }
+      stop() {
+        this.timeout.stop(), this.slow.stop(), this.uncountSlow()
+      }
+      answered() {
+        this.stop(), ar.answer()
+      }
+      socketOpened() {
+        this.slow.stop(), this.uncountSlow(), ar.answer()
+      }
+      uncountSlow() {
+        this.countedSlow && (this.countedSlow = !1, ar.remove())
+      }
+    }
+  },
+  37522: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr,
+      f: () => Wr,
+      i: () => ar,
+      m: () => jr
+    });
+    const Zr = 1024,
+      Wr = 1024 * Zr;
+
+    function ar(rr) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, rr / Wr)))
+    }
+
+    function jr(rr) {
+      return (rr / Wr).toFixed(1)
+    }
+  },
+  38008: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      f: () => fr,
+      i: () => Ir,
+      k: () => jr,
+      m: () => Er,
+      p: () => pr,
+      t: () => mr
+    });
+    var Zr = Qr(208);
+    const Wr = 32 * Qr(37522).f,
+      ar = 6144,
+      jr = 4608,
+      Ir = 512,
+      fr = function() {
+        const rr = mr(Zr.i.maxChunkHorizAddDistance + 1, Zr.i.maxChunkVertAddDistance + 1);
+        let Sr = rr;
+        for (; xr(Sr) < rr;) Sr++;
+        return Sr
+      }();
+
+    function Er(rr) {
+      return Math.floor(Wr * rr / ar)
+    }
+
+    function pr(rr) {
+      const Sr = xr(rr);
+      let Qr = Zr.i.maxChunkHorizAddDistance,
+        Wr = Zr.i.maxChunkVertAddDistance;
+      if (mr(Qr + 1, Wr + 1) <= Sr) return null;
+      for (; mr(Qr + 1, Wr + 1) > Sr && (Qr > 0 || Wr > 0);) Qr > Wr ? Qr-- : Wr--;
+      return {
+        horizontal: Qr,
+        vertical: Wr
+      }
+    }
+
+    function xr(rr) {
+      return rr - Math.floor(rr / 6)
+    }
+
+    function mr(rr, Sr) {
+      const Qr = Math.max(rr, Sr);
+      let Zr = 0;
+      for (let Wr = -Qr; Wr <= Qr; Wr++)
+        for (let ar = -Qr; ar <= Qr; ar++)
+          for (let jr = -Qr; jr <= Qr; jr++) Nr(rr, Sr, Wr, ar, jr) && Zr++;
+      return Zr
+    }
+
+    function Nr(rr, Sr, Qr, Zr, Wr) {
+      const ar = Qr * Qr + Wr * Wr;
+      return rr === Sr ? ar + Zr * Zr <= rr * rr : rr > Sr ? Math.abs(Zr) <= Sr && ar + Zr * Zr <= rr * rr : ar <= rr * rr && ar + Zr * Zr <= Sr * Sr
+    }
+  },
+  38006: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Tr,
+      f: () => ir,
+      j: () => Vr,
+      l: () => Ar,
+      o: () => qr,
+      r: () => kr,
+      v: () => Mr
+    });
+    var Zr = Qr(208),
+      Wr = Qr(109),
+      ar = Qr(139),
+      jr = Qr(317),
+      Ir = Qr(5095),
+      fr = Qr(719),
+      Er = Qr(741),
+      pr = Qr(5104),
+      xr = Qr(5116),
+      mr = Qr(38008),
+      Nr = Qr(38011);
+    const Ur = 1048576,
+      tr = 1024 * Ur,
+      hr = 400 * Ur,
+      zr = 147456,
+      Yr = .5,
+      nr = 2048,
+      er = 1.5 * tr,
+      Kr = 768 * Ur;
+
+    function yr(rr) {
+      const {
+        os: Sr,
+        deviceMemory: Qr
+      } = rr;
+      if ("ios" === Sr) switch ((0, jr.f)(rr)) {
+        case "ipad_m":
+          return {
+            footprintBytes: Br(mr.d), basis: "ipad-m", namesLimit: !1
+          };
+        case "ipad":
+          return {
+            footprintBytes: Kr, basis: "ipad", namesLimit: !0
+          };
+        case "iphone_6gb":
+          return {
+            footprintBytes: er, basis: "iphone-6gb", namesLimit: !0
+          };
+        case "iphone":
+          return {
+            footprintBytes: Kr, basis: "iphone", namesLimit: !0
+          }
+      }
+      return "number" === typeof Qr && Number.isFinite(Qr) && Qr > 0 ? {
+        footprintBytes: Qr * tr * Yr,
+        basis: `memory-${Qr}`,
+        namesLimit: !0
+      } : "android" === Sr ? {
+        footprintBytes: Kr,
+        basis: "android",
+        namesLimit: !0
+      } : {
+        footprintBytes: Br(mr.k),
+        basis: "unreported",
+        namesLimit: !1
+      }
+    }
+
+    function Br(rr) {
+      return hr + rr * zr
+    }
+
+    function Tr() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Pr(),
+        Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ar.siteUsed;
+      if ("android" !== rr.os || "mobileAndroid" === Sr) return !0;
+      const {
+        footprintBytes: Qr,
+        basis: Zr
+      } = yr(rr);
+      return "android" === Zr || Qr > 2 * tr
+    }
+
+    function vr(rr) {
+      const Sr = Math.min(rr, Br(mr.d));
+      return hr + Math.max(0, Sr - hr) / 2
+    }
+
+    function Or(rr, Sr, Qr) {
+      var Wr, ar, jr, Ir;
+      let fr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        {
+          footprintBytes: Er,
+          basis: Nr,
+          namesLimit: Ur
+        } = yr(rr);
+      Qr && (Er = vr(Er), Nr += "+killed", Ur = !0), null !== Sr && Br(Sr) < Er && (Er = Br(Sr), Nr += "+learned", Ur = !0), Nr += (0, xr.G)(null !== (Wr = rr.x32) && void 0 !== Wr ? Wr : null) + (0, pr.j)(null !== (ar = rr.lowRam) && void 0 !== ar ? ar : null), "fix" === rr.x32 && Br(nr) < Er && (Er = Br(nr), Ur = !0), fr && (Er = vr(Er), Nr += "+refused", Ur = !0);
+      const tr = function(rr) {
+          const Sr = Math.floor((rr - hr) / zr);
+          return Math.min(mr.d, Math.max(mr.i, Sr))
+        }(Er),
+        Yr = Ur && tr < mr.d ? Math.min(tr, mr.f) : tr,
+        er = (0, mr.p)(Yr);
+      return {
+        footprintBytes: Er,
+        shedFootprintBytes: Ur ? Math.max(Er, Br(Yr)) : null,
+        chunkCap: Yr,
+        maxHorizDistance: null !== (jr = null === er || void 0 === er ? void 0 : er.horizontal) && void 0 !== jr ? jr : Zr.i.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (Ir = null === er || void 0 === er ? void 0 : er.vertical) && void 0 !== Ir ? Ir : Zr.i.maxChunkVertAddDistance,
+        basis: Nr
+      }
+    }
+    let Lr = null,
+      lr = null,
+      Xr = null;
+
+    function Pr() {
+      var rr, Sr;
+      return Lr ??= {
+        os: (0, Wr.getOperatingSystem)(),
+        deviceMemory: navigator.deviceMemory,
+        ...(0, jr.g)()
+      }, {
+        ...Lr,
+        x32: null !== (rr = (0, xr.C)()) && void 0 !== rr ? rr : void 0,
+        lowRam: null !== (Sr = (0, pr.f)()) && void 0 !== Sr ? Sr : void 0
+      }
+    }
+
+    function Hr() {
+      return Or(Pr(), (0, Ir.f)(), (0, fr.S)("wasm").length > 0, Mr())
+    }
+
+    function qr() {
+      return Xr ??= (0, Nr.q)(Or(Pr(), null, !1, Mr()).chunkCap), Xr
+    }
+    const Rr = "wasmMemoryRecord",
+      gr = {
+        halvedAt: null,
+        reloadSpent: !1
+      };
+
+    function Cr() {
+      let rr = null;
+      try {
+        var Sr;
+        rr = JSON.parse(null !== (Sr = (0, Er.p)((0, Er.x)(), Rr)) && void 0 !== Sr ? Sr : "null")
+      } catch {
+        return gr
+      }
+      if ("object" !== typeof rr || null === rr) return gr;
+      const {
+        halvedAt: Qr,
+        reloadSpent: Zr
+      } = rr;
+      return {
+        halvedAt: "number" === typeof Qr && Number.isFinite(Qr) ? Qr : null,
+        reloadSpent: !0 === Zr
+      }
+    }
+
+    function Mr() {
+      return null !== Cr().halvedAt
+    }
+
+    function Gr(rr) {
+      const Sr = (0, Er.x)(),
+        Qr = JSON.stringify(rr);
+      try {
+        null === Sr || void 0 === Sr || Sr.setItem(Rr, Qr)
+      } catch {
+        return !1
+      }
+      return (0, Er.p)(Sr, Rr) === Qr
+    }
+
+    function kr() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now(),
+        Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const Qr = Cr();
+      return null === Qr.halvedAt ? Gr({
+        halvedAt: rr,
+        reloadSpent: Sr
+      }) ? (Xr = null, lr = null, "halve") : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent") : Qr.reloadSpent ? "spent" : Gr({
+        ...Qr,
+        reloadSpent: !0
+      }) ? "reload" : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent")
+    }
+
+    function Ar() {
+      return lr ??= Hr(), lr
+    }
+
+    function Vr() {
+      var rr;
+      return (null !== (rr = lr) && void 0 !== rr ? rr : Hr()).basis
+    }
+
+    function ir(rr, Sr) {
+      return rr.setChunkCap(Sr.chunkCap)
+    }
+  },
+  38011: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Or,
+      i: () => Kr,
+      m: () => xr,
+      n: () => yr,
+      q: () => Yr,
+      r: () => Tr,
+      x: () => vr,
+      y: () => mr
+    });
+    var Zr = Qr(37522),
+      Wr = Qr(38008);
+    const ar = 64 * Zr.e,
+      jr = 40 * Zr.f,
+      Ir = 36 * Zr.f,
+      fr = 20 * Zr.f,
+      Er = 2 * Zr.f,
+      pr = 5 * Zr.f;
+
+    function xr(rr) {
+      return "footprint" !== rr && "gcPressure" !== rr
+    }
+
+    function mr(rr) {
+      return xr(rr) ? "wasm memory was refused" : "gcPressure" === rr ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
+    }
+    const Nr = 2 * Zr.f,
+      Ur = 4 * Zr.f,
+      tr = 35 * Zr.f + Nr + Ur,
+      hr = 6.5 * Zr.f,
+      zr = 132.5 * Zr.e;
+
+    function Yr(rr) {
+      const Sr = hr + (0, Wr.m)(rr) + rr * zr;
+      return Math.ceil((2 * tr + Sr) / ar) * ar
+    }
+    Yr(Wr.d), Zr.f, Zr.f, Zr.f;
+    const nr = {
+        targetBytes: jr,
+        leastBytes: fr
+      },
+      er = {
+        targetBytes: Ir,
+        leastBytes: fr
+      };
+
+    function Kr(rr) {
+      return {
+        targetBytes: rr,
+        leastBytes: 0
+      }
+    }
+
+    function yr(rr) {
+      return rr >= Wr.d ? nr : er
+    }
+    const Br = 2 * ar;
+
+    function Tr(rr, Sr, Qr) {
+      return rr + Sr + Br > Qr
+    }
+    const vr = {
+      now: () => performance.now(),
+      requestIdle: "function" === typeof requestIdleCallback ? rr => {
+        requestIdleCallback(rr)
+      } : null
+    };
+    class Or {
+      constructor(rr, Sr, Qr) {
+        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vr;
+        this.memory = rr, this.readPeakStoredChunks = Sr, this.onError = Qr, this.clock = Zr, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+          reserves: 0,
+          allocations: 0
+        }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
+      }
+      setShed(rr, Sr, Qr) {
+        this.shedding = {
+          shed: rr,
+          jx: Sr,
+          readDistanceInUse: Qr
+        }
+      }
+      shedDistanceInUse() {
+        return this.distanceInUse
+      }
+      setFootprint(rr) {
+        this.footprint = rr
+      }
+      setGcPressure(rr) {
+        this.gcPressure = {
+          highEpisode: rr,
+          shedEpisode: null,
+          nextAt: null
+        }
+      }
+      setCeiling(rr) {
+        this.ceilingBytes = rr, this.call((() => {
+          this.memory.setCeiling(rr)
+        }), void 0)
+      }
+      ceilingMayRefuse(rr, Sr) {
+        var Qr;
+        return Tr(this.memory.memoryBytes(), rr, null !== (Qr = this.ceilingBytes) && void 0 !== Qr ? Qr : Sr)
+      }
+      reserveAtJoin(rr) {
+        let {
+          targetBytes: Sr,
+          leastBytes: Qr
+        } = rr;
+        const Zr = this.memory.memoryBytes(),
+          Wr = Zr + Qr,
+          ar = Math.max(Sr + (this.ballastOn() ? pr : 0), Wr),
+          jr = this.call((() => this.memory.reserveUpFront(ar) ? "target" : ar > Wr && this.memory.reserveUpFront(Wr) ? "least" : "none"), "none");
+        if (this.stopped) return !1;
+        if ("target" !== jr) {
+          const rr = "least" === jr ? `took ${Wr} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${ar} bytes was refused at ${Zr} bytes; ${rr}`)
+        }
+        return this.joinReserveTaken = jr, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== jr && this.shedFor("joinReserve"), "none" !== jr
+      }
+      afterFrame() {
+        if (this.stopped) return;
+        const rr = this.clock.now(),
+          Sr = null !== this.stepsHeldUntil && rr >= this.stepsHeldUntil;
+        if (Sr && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && rr >= this.ballastCheckAt && (this.takeBallast(rr), this.stopped)) return;
+        const Qr = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          Zr = Sr && "now" === Qr ? "none" : Qr,
+          {
+            requestIdle: Wr
+          } = this.clock;
+        "now" === Zr || null !== this.pendingSince && rr - this.pendingSince >= 500 ? this.step() : "idle" === Zr && null === this.pendingSince && (null === Wr ? this.step() : (this.pendingSince = rr, Wr((() => {
+          null !== this.pendingSince && this.step()
+        })))), rr - this.statsAt >= 1e3 && (this.statsAt = rr, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(rr))
+      }
+      refreshStats() {
+        this.call((() => {
+          var rr, Sr;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Sr = this.shedding.readDistanceInUse()) && void 0 !== Sr ? Sr : this.distanceInUse);
+          null === (rr = this.footprint) || void 0 === rr || rr.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+        }), void 0)
+      }
+      stop() {
+        this.stopped = !0, this.pendingSince = null
+      }
+      noteMeshWorker(rr, Sr) {
+        this.noteWorker(`Mesh${rr}`, Sr)
+      }
+      meshWorkerGone(rr) {
+        this.workerGone(`Mesh${rr}`)
+      }
+      noteWorldgen(rr) {
+        this.noteWorker("Worldgen", rr)
+      }
+      worldgenGone() {
+        this.workerGone("Worldgen")
+      }
+      noteWorker(rr, Sr) {
+        const Qr = this.workers.get(rr);
+        null !== Qr && void 0 !== Qr && Qr.gone && (this.replacedRefusals.reserves += Qr.stats.reservesRefused, this.replacedRefusals.allocations += Qr.stats.allocationsRefused), this.workers.set(rr, {
+          stats: Sr,
+          gone: !1
+        })
+      }
+      workerGone(rr) {
+        const Sr = this.workers.get(rr);
+        Sr && (Sr.gone = !0)
+      }
+      details() {
+        var rr, Sr;
+        const Qr = this.memory.memoryBytes(),
+          Wr = {
+            wasmMemoryNow: `${(0,Zr.m)(Qr)} MiB`,
+            wasmMemoryMiB: String(Math.floor(Qr / Zr.f))
+          };
+        null !== this.joinReserveTaken && (Wr.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (Wr.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const ar = this.main;
+        if (ar) {
+          Wr.wasmMemoryMain = Lr(ar);
+          const rr = Math.max(0, ar.peakLiveBytes - this.ballastPeakBytes),
+            Sr = 0 === this.peakStoredChunks ? "-" : (rr / this.peakStoredChunks / Zr.e).toFixed(1);
+          Wr.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Sr} KiB`
+        }
+        for (const [Zr, {
+            stats: Ir,
+            gone: fr
+          }] of this.workers) Wr[`wasmMemory${Zr}`] = Lr(Ir) + (fr ? " (gone)" : "");
+        const jr = null !== (rr = null === (Sr = this.footprint) || void 0 === Sr ? void 0 : Sr.describe()) && void 0 !== rr ? rr : null;
+        return null !== jr && (Wr.wasmMemoryFootprint = jr), Wr
+      }
+      pageKillSnapshot() {
+        var rr, Sr, Qr, Wr, ar;
+        let jr = (null !== (rr = null === (Sr = this.main) || void 0 === Sr ? void 0 : Sr.reservesRefused) && void 0 !== rr ? rr : 0) + this.replacedRefusals.reserves,
+          Ir = (null !== (Qr = null === (Wr = this.main) || void 0 === Wr ? void 0 : Wr.allocationsRefused) && void 0 !== Qr ? Qr : 0) + this.replacedRefusals.allocations;
+        for (const {
+            stats: Zr
+          }
+          of this.workers.values()) jr += Zr.reservesRefused, Ir += Zr.allocationsRefused;
+        return {
+          wasmMainMiB: Number((0, Zr.m)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, Zr.m)(this.workersMemoryBytes())),
+          peakStoredChunks: this.peakStoredChunks,
+          refusedReserves: jr,
+          refusedAllocations: Ir,
+          sheds: this.sheds,
+          ...null === (ar = this.footprint) || void 0 === ar ? void 0 : ar.snapshot()
+        }
+      }
+      workersMemoryBytes() {
+        let rr = 0;
+        for (const {
+            stats: Sr,
+            gone: Qr
+          }
+          of this.workers.values()) rr += Qr ? 0 : Sr.memoryBytes;
+        return rr
+      }
+      checkFootprint() {
+        null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
+      }
+      checkGcPressure(rr) {
+        const Sr = this.gcPressure;
+        if (null === Sr) return;
+        if (null !== Sr.nextAt || "undefined" !== typeof document && document.hidden || (Sr.nextAt = rr + 6e4), null === Sr.nextAt || rr < Sr.nextAt) return;
+        if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
+        const Qr = Sr.highEpisode();
+        null !== Qr && Qr !== Sr.shedEpisode && (Sr.shedEpisode = Qr, Sr.nextAt = rr + 3e4, this.shedFor("gcPressure"))
+      }
+      step() {
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(Er)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+      }
+      ballastOn() {
+        return null !== this.shedding
+      }
+      takeBallast(rr) {
+        if (!this.ballastOn() || null === this.joinReserveTaken) return;
+        this.ballastCheckAt = rr + 1e3;
+        const Sr = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Sr)
+      }
+      takePressure() {
+        return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
+      }
+      stopSteps(rr) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${rr}: frames grow on demand from here`)
+      }
+      shedFor(rr) {
+        const {
+          shedding: Sr
+        } = this;
+        if (null === Sr) return;
+        this.pendingSince = null;
+        const Qr = this.call((() => Sr.shed(rr)), null);
+        if (this.stopped) return;
+        if (null === Qr) return void(xr(rr) && this.stopSteps("nothing is left to shed"));
+        this.sheds++, this.shedCap = Qr, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
+        const Zr = "gcPressure" === rr ? ++this.gcSheds : this.sheds - this.gcSheds;
+        Sr.jx(rr, Zr, this.details())
+      }
+      call(rr, Sr) {
+        if (this.stopped) return Sr;
+        try {
+          return rr()
+        } catch (Qr) {
+          return this.stop(), this.onError(Qr), Sr
+        }
+      }
+    }
+
+    function Lr(rr) {
+      const Sr = (rr, Sr) => `${rr}/${(0,Zr.m)(Sr)}`;
+      return `memory ${(0,Zr.m)(rr.memoryBytes)} live ${(0,Zr.m)(rr.liveBytes)} peak ${(0,Zr.m)(rr.peakLiveBytes)} unused ${(0,Zr.m)(rr.unusedBytes)} ceiling ${(0,Zr.m)(rr.ceilingBytes)} MiB; grows upFront ${Sr(rr.grows.upFront,rr.grownBytes.upFront)} ahead ${Sr(rr.grows.ahead,rr.grownBytes.ahead)} inFrame ${Sr(rr.grows.onDemandInFrame,rr.grownBytes.onDemandInFrame)} other ${Sr(rr.grows.onDemand,rr.grownBytes.onDemand)}; refused reserves ${rr.reservesRefused} allocations ${rr.allocationsRefused}`
+    }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

@@ -1,19 +1,19 @@
 export const id = 705;
 export const ids = [705];
 export const modules = {
-  64741: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      textureMergerPixelShader: () => ZR
+  65161: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      textureMergerPixelShaderWGSL: () => jr
     });
-    var yR = GR(41387);
-    const tR = "textureMergerPixelShader",
-      uR = "#ifdef USE_TEXTURE0\nuniform sampler2D inputTexture0;\n#endif\n#ifdef USE_TEXTURE1\nuniform sampler2D inputTexture1;\n#endif\n#ifdef USE_TEXTURE2\nuniform sampler2D inputTexture2;\n#endif\n#ifdef USE_TEXTURE3\nuniform sampler2D inputTexture3;\n#endif\n#ifdef RED_FROM_TEXTURE\nuniform int redTextureIndex;uniform int redSourceChannel;\n#else\nuniform float redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nuniform int greenTextureIndex;uniform int greenSourceChannel;\n#else\nuniform float greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nuniform int blueTextureIndex;uniform int blueSourceChannel;\n#else\nuniform float blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nuniform int alphaTextureIndex;uniform int alphaSourceChannel;\n#else\nuniform float alphaConstantValue;\n#endif\nvarying vec2 vUV;\n#if defined(RED_FROM_TEXTURE) || defined(GREEN_FROM_TEXTURE) || defined(BLUE_FROM_TEXTURE) || defined(ALPHA_FROM_TEXTURE)\nvec4 sampleTexture(int textureIndex,vec2 uv) {switch (textureIndex) {\n#ifdef USE_TEXTURE0\ncase 0:\nreturn texture2D(inputTexture0,uv);\n#endif\n#ifdef USE_TEXTURE1\ncase 1:\nreturn texture2D(inputTexture1,uv);\n#endif\n#ifdef USE_TEXTURE2\ncase 2:\nreturn texture2D(inputTexture2,uv);\n#endif\n#ifdef USE_TEXTURE3\ncase 3:\nreturn texture2D(inputTexture3,uv);\n#endif\ndefault:\nreturn vec4(0.0,0.0,0.0,1.0); }}\nfloat extractChannel(vec4 color,int channelIndex) {switch (channelIndex) {case 0:\nreturn color.r; \ncase 1:\nreturn color.g; \ncase 2:\nreturn color.b; \ndefault:\nreturn color.a; }}\n#endif\nvoid main() {vec2 uv=vUV;\n#ifdef RED_FROM_TEXTURE\nvec4 redSample=sampleTexture(redTextureIndex,uv);float r=extractChannel(redSample,redSourceChannel);\n#else\nfloat r=redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nvec4 greenSample=sampleTexture(greenTextureIndex,uv);float g=extractChannel(greenSample,greenSourceChannel);\n#else\nfloat g=greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nvec4 blueSample=sampleTexture(blueTextureIndex,uv);float b=extractChannel(blueSample,blueSourceChannel);\n#else\nfloat b=blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nvec4 alphaSample=sampleTexture(alphaTextureIndex,uv);float a=extractChannel(alphaSample,alphaSourceChannel);\n#else\nfloat a=alphaConstantValue;\n#endif\ngl_FragColor=vec4(r,g,b,a);}";
-    yR.b.ShadersStore[tR] || (yR.b.ShadersStore[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "textureMergerPixelShader",
+      ar = "#ifdef USE_TEXTURE0\nvar inputTexture0Sampler: sampler;var inputTexture0: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE1\nvar inputTexture1Sampler: sampler;var inputTexture1: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE2\nvar inputTexture2Sampler: sampler;var inputTexture2: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE3\nvar inputTexture3Sampler: sampler;var inputTexture3: texture_2d<f32>;\n#endif\n#ifdef RED_FROM_TEXTURE\nuniform redTextureIndex: i32;uniform redSourceChannel: i32;\n#else\nuniform redConstantValue: f32;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nuniform greenTextureIndex: i32;uniform greenSourceChannel: i32;\n#else\nuniform greenConstantValue: f32;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nuniform blueTextureIndex: i32;uniform blueSourceChannel: i32;\n#else\nuniform blueConstantValue: f32;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nuniform alphaTextureIndex: i32;uniform alphaSourceChannel: i32;\n#else\nuniform alphaConstantValue: f32;\n#endif\nvarying vUV: vec2f;\n#if defined(RED_FROM_TEXTURE) || defined(GREEN_FROM_TEXTURE) || defined(BLUE_FROM_TEXTURE) || defined(ALPHA_FROM_TEXTURE)\nfn sampleTexture(textureIndex: i32,uv: vec2f)->vec4f {switch (textureIndex) {\n#ifdef USE_TEXTURE0\ncase 0: {return textureSample(inputTexture0,inputTexture0Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE1\ncase 1: {return textureSample(inputTexture1,inputTexture1Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE2\ncase 2: {return textureSample(inputTexture2,inputTexture2Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE3\ncase 3: {return textureSample(inputTexture3,inputTexture3Sampler,uv);}\n#endif\ndefault: {return vec4f(0.0,0.0,0.0,1.0); }}}\nfn extractChannel(color: vec4f,channelIndex: i32)->f32 {switch (channelIndex) {case 0: {return color.r; }\ncase 1: {return color.g; }\ncase 2: {return color.b; }\ndefault: {return color.a; }}}\n#endif\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let uv: vec2f=input.vUV;\n#ifdef RED_FROM_TEXTURE\nlet redSample: vec4f=sampleTexture(uniforms.redTextureIndex,uv);let r: f32=extractChannel(redSample,uniforms.redSourceChannel);\n#else\nlet r: f32=uniforms.redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nlet greenSample: vec4f=sampleTexture(uniforms.greenTextureIndex,uv);let g: f32=extractChannel(greenSample,uniforms.greenSourceChannel);\n#else\nlet g: f32=uniforms.greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nlet blueSample: vec4f=sampleTexture(uniforms.blueTextureIndex,uv);let b: f32=extractChannel(blueSample,uniforms.blueSourceChannel);\n#else\nlet b: f32=uniforms.blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nlet alphaSample: vec4f=sampleTexture(uniforms.alphaTextureIndex,uv);let a: f32=extractChannel(alphaSample,uniforms.alphaSourceChannel);\n#else\nlet a: f32=uniforms.alphaConstantValue;\n#endif\nfragmentOutputs.color=vec4f(r,g,b,a);}";
+    Zr.e.ShadersStoreWGSL[Wr] || (Zr.e.ShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

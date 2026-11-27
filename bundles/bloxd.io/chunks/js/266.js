@@ -1,394 +1,307 @@
 export const id = 266;
 export const ids = [266];
 export const modules = {
-  38279: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => qR,
-      d: () => ZR,
-      g: () => tR
+  38587: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Wr
     });
-    const yR = 1024,
-      tR = 16,
-      uR = 36e4;
-    class ZR {
-      constructor(RR) {
-        this.boneCount = RR, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * RR), this.position = new Float64Array(3 * RR), this.scale = new Float64Array(3 * RR).fill(1), this.touched = new Uint8Array(RR)
+    var Zr = Qr(38595);
+    class Wr {
+      static get LastCreatedEngine() {
+        return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
-      clampToLimits() {
-        for (let RR = 0; RR < this.boneCount; RR++)
-          if (0 !== this.touched[RR])
-            for (let JR = 3 * RR; JR < 3 * RR + 3; JR++) {
-              const RR = this.rotation[JR],
-                GR = this.position[JR],
-                ZR = this.scale[JR];
-              RR >= -36e4 && RR <= uR || (this.rotation[JR] = iR(RR, uR)), GR >= -1024 && GR <= yR || (this.position[JR] = iR(GR, yR)), ZR >= -tR && ZR <= tR || (this.scale[JR] = iR(ZR, tR, 1))
-            }
+      static get LastCreatedScene() {
+        return this._LastCreatedScene
       }
-      reset() {
-        for (let RR = 0; RR < this.boneCount; RR++)
-          if (0 !== this.touched[RR]) {
-            this.touched[RR] = 0;
-            for (let JR = 3 * RR; JR < 3 * RR + 3; JR++) this.rotation[JR] = 0, this.position[JR] = 0, this.scale[JR] = 1
+    }
+    Wr.Instances = [], Wr.OnEnginesDisposedObservable = new Zr.d, Wr._LastCreatedScene = null, Wr.UseFallbackTexture = !0, Wr.FallbackTexture = ""
+  },
+  40237: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar
+    });
+    var Zr = Qr(40246);
+    const Wr = (rr, Sr, Qr) => rr ? rr.getClassName && "Mesh" === rr.getClassName() ? null : !rr.getClassName || "SubMesh" !== rr.getClassName() && "PhysicsBody" !== rr.getClassName() ? rr.clone ? rr.clone() : Array.isArray(rr) ? rr.slice() : Qr && "object" === typeof rr ? {
+      ...rr
+    } : null : rr.clone(Sr) : null;
+    class ar {
+      static DeepCopy(rr, Sr, Qr, ar) {
+        let jr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ir = function(rr) {
+          const Sr = [];
+          do {
+            const Qr = Object.getOwnPropertyNames(rr);
+            for (const rr of Qr) - 1 === Sr.indexOf(rr) && Sr.push(rr)
+          } while (rr = Object.getPrototypeOf(rr));
+          return Sr
+        }(rr);
+        for (const Er of Ir) {
+          if ("_" === Er[0] && (!ar || -1 === ar.indexOf(Er))) continue;
+          if (Er.endsWith("Observable")) continue;
+          if (Qr && -1 !== Qr.indexOf(Er)) continue;
+          const Ir = rr[Er],
+            pr = typeof Ir;
+          if ("function" !== pr) try {
+            if ("object" === pr)
+              if (Ir instanceof Uint8Array) Sr[Er] = Uint8Array.from(Ir);
+              else if (Ir instanceof Array) {
+              if (Sr[Er] = [], Ir.length > 0)
+                if ("object" == typeof Ir[0])
+                  for (let rr = 0; rr < Ir.length; rr++) {
+                    const Qr = Wr(Ir[rr], Sr, jr); - 1 === Sr[Er].indexOf(Qr) && Sr[Er].push(Qr)
+                  } else Sr[Er] = Ir.slice(0)
+            } else Sr[Er] = Wr(Ir, Sr, jr);
+            else Sr[Er] = Ir
+          } catch (fr) {
+            Zr.c.Warn(fr.message)
+          }
+        }
+      }
+    }
+  },
+  39405: (rr, Sr, Qr) => {
+    function Zr() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (rr => {
+        const Sr = 16 * Math.random() | 0;
+        return ("x" === rr ? Sr : 3 & Sr | 8).toString(16)
+      }))
+    }
+    Qr.d(Sr, {
+      b: () => Zr
+    })
+  },
+  40246: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr
+    });
+    class Zr {
+      static _CheckLimit(rr, Sr) {
+        let Qr = Zr._LogLimitOutputs[rr];
+        return Qr ? Qr.current++ : (Qr = {
+          limit: Sr,
+          current: 1
+        }, Zr._LogLimitOutputs[rr] = Qr), Qr.current <= Qr.limit
+      }
+      static _GenerateLimitMessage(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Qr = Zr._LogLimitOutputs[rr];
+        if (!Qr || !Zr.MessageLimitReached) return;
+        const Wr = this._Levels[Sr];
+        Qr.current === Qr.limit && Zr[Wr.name](Zr.MessageLimitReached.replace(/%LIMIT%/g, "" + Qr.limit).replace(/%TYPE%/g, Wr.name ?? ""))
+      }
+      static _AddLogEntry(rr) {
+        Zr._LogCache = rr + Zr._LogCache, Zr.OnNewCacheEntry && Zr.OnNewCacheEntry(rr)
+      }
+      static _FormatMessage(rr) {
+        const Sr = rr => rr < 10 ? "0" + rr : "" + rr,
+          Qr = new Date;
+        return "[" + Sr(Qr.getHours()) + ":" + Sr(Qr.getMinutes()) + ":" + Sr(Qr.getSeconds()) + "]: " + rr
+      }
+      static _LogDisabled(rr, Sr) {}
+      static _LogEnabled() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Sr = arguments.length > 1 ? arguments[1] : void 0,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        const Wr = Array.isArray(Sr) ? Sr[0] : Sr;
+        if (void 0 !== Qr && !Zr._CheckLimit(Wr, Qr)) return;
+        const ar = Zr._FormatMessage(Wr),
+          jr = this._Levels[rr],
+          Ir = Array.isArray(Sr) ? Sr.slice(1) : [];
+        jr.logFunc && jr.logFunc("BJS - " + ar, ...Ir);
+        const fr = `<div style='color:${jr.color}'>${ar}</div><br>`;
+        Zr._AddLogEntry(fr), Zr._GenerateLimitMessage(Wr, rr)
+      }
+      static get LogCache() {
+        return Zr._LogCache
+      }
+      static ClearLogCache() {
+        Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr.errorsCount = 0
+      }
+      static set LogLevels(rr) {
+        Zr.Log = Zr._LogDisabled, Zr.Warn = Zr._LogDisabled, Zr.Error = Zr._LogDisabled;
+        const Sr = [Zr.MessageLogLevel, Zr.WarningLogLevel, Zr.ErrorLogLevel];
+        for (const Qr of Sr)
+          if ((rr & Qr) === Qr) {
+            const rr = this._Levels[Qr];
+            Zr[rr.name] = Zr._LogEnabled.bind(Zr, Qr)
           }
       }
     }
-    class qR {
-      constructor(RR) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * RR), this.position = new Float64Array(3 * RR), this.scaleDelta = new Float64Array(3 * RR), this.boneWeight = new Float64Array(RR), this.touched = new Uint8Array(RR), this.overrides = new Uint8Array(RR), this.touchedBones = new Int32Array(RR)
+    Zr.NoneLogLevel = 0, Zr.MessageLogLevel = 1, Zr.WarningLogLevel = 2, Zr.ErrorLogLevel = 4, Zr.AllLogLevel = 7, Zr.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Zr.errorsCount = 0, Zr.Log = Zr._LogEnabled.bind(Zr, Zr.MessageLogLevel), Zr.Warn = Zr._LogEnabled.bind(Zr, Zr.WarningLogLevel), Zr.Error = Zr._LogEnabled.bind(Zr, Zr.ErrorLogLevel)
+  },
+  38595: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr
+    });
+    const Zr = "undefined" !== typeof WeakRef;
+    class Wr {
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Qr = arguments.length > 2 ? arguments[2] : void 0,
+          Zr = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(rr, Sr, Qr, Zr)
       }
-      touch(RR, JR, GR) {
-        0 === this.touched[RR] && (this.touched[RR] = 1, this.touchedBones[this.touchedCount++] = RR), this.boneWeight[RR] += JR, GR && (this.overrides[RR] = 1)
+      initialize(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Qr = arguments.length > 2 ? arguments[2] : void 0,
+          Zr = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = rr, this.skipNextObservers = Sr, this.target = Qr, this.currentTarget = Zr, this
       }
-      applyTo(RR, JR, GR) {
-        let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let tR = 0; tR < this.touchedCount; tR++) {
-          const uR = this.touchedBones[tR],
-            ZR = this.boneWeight[uR];
-          if (GR || 1 === this.overrides[uR]) {
-            const GR = JR * Math.min(1, ZR);
-            for (let JR = 3 * uR; JR < 3 * uR + 3; JR++) RR.rotation[JR] += (this.rotation[JR] / ZR - RR.rotation[JR]) * GR, RR.position[JR] += (this.position[JR] / ZR - RR.position[JR]) * GR, RR.scale[JR] += (1 + this.scaleDelta[JR] / ZR - RR.scale[JR]) * GR
-          } else {
-            const GR = yR && ZR > 1 ? JR / ZR : JR;
-            for (let JR = 3 * uR; JR < 3 * uR + 3; JR++) RR.rotation[JR] += this.rotation[JR] * GR, RR.position[JR] += this.position[JR] * GR, RR.scale[JR] *= 1 + this.scaleDelta[JR] * GR
-          }
-          RR.touched[uR] = 1
+    }
+    class ar {
+      constructor(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = rr, this.mask = Sr, this.scope = Qr, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+      }
+      remove() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(rr)
+      }
+    }
+    class jr {
+      static FromPromise(rr, Sr) {
+        const Qr = new jr;
+        return rr.then((rr => {
+          Qr.notifyObservers(rr)
+        })).catch((rr => {
+          if (!Sr) throw rr;
+          Sr.notifyObservers(rr)
+        })), Qr
+      }
+      get observers() {
+        return this._observers
+      }
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = Sr, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Wr(0), rr && (this._onObserverAdded = rr)
+      }
+      add(rr) {
+        let Sr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Qr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!rr) return null;
+        const Wr = new ar(rr, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        Wr.unregisterOnNextCall = Qr, Sr ? this._observers.unshift(Wr) : this._observers.push(Wr), this._onObserverAdded && this._onObserverAdded(Wr), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Wr, this._lastNotifiedValue);
+        const jr = Zr ? new WeakRef(this) : {
+          deref: () => this
+        };
+        return Wr._remove = function() {
+          let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const Sr = jr.deref();
+          Sr && (rr ? Sr.remove(Wr) : Sr._remove(Wr))
+        }, Wr
+      }
+      addOnce(rr) {
+        return this.add(rr, void 0, void 0, void 0, !0)
+      }
+      remove(rr) {
+        if (!rr) return !1;
+        rr._remove = null;
+        return -1 !== this._observers.indexOf(rr) && (this._deferUnregister(rr), !0)
+      }
+      removeCallback(rr, Sr) {
+        for (let Qr = 0; Qr < this._observers.length; Qr++) {
+          const Zr = this._observers[Qr];
+          if (!Zr._willBeUnregistered && (Zr.callback === rr && (!Sr || Sr === Zr.scope))) return this._deferUnregister(Zr), !0
         }
+        return !1
+      }
+      _deferUnregister(rr) {
+        rr._willBeUnregistered || (this._numObserversMarkedAsDeleted++, rr.unregisterOnNextCall = !1, rr._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(rr)
+        }), 0))
+      }
+      _remove(rr) {
+        let Sr = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!rr) return !1;
+        const Qr = this._observers.indexOf(rr);
+        return -1 !== Qr && (Sr && this._numObserversMarkedAsDeleted--, this._observers.splice(Qr, 1), !0)
+      }
+      makeObserverTopPriority(rr) {
+        this._remove(rr, !1), this._observers.unshift(rr)
+      }
+      makeObserverBottomPriority(rr) {
+        this._remove(rr, !1), this._observers.push(rr)
+      }
+      notifyObservers(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          Qr = arguments.length > 2 ? arguments[2] : void 0,
+          Zr = arguments.length > 3 ? arguments[3] : void 0,
+          Wr = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = rr), !this._observers.length) return !0;
+        const ar = this._eventState;
+        ar.mask = Sr, ar.target = Qr, ar.currentTarget = Zr, ar.skipNextObservers = !1, ar.lastReturnValue = rr, ar.userInfo = Wr;
+        for (const jr of this._observers)
+          if (!jr._willBeUnregistered && (jr.mask & Sr && (jr.unregisterOnNextCall && this._deferUnregister(jr), jr.scope ? ar.lastReturnValue = jr.callback.apply(jr.scope, [rr, ar]) : ar.lastReturnValue = jr.callback(rr, ar)), ar.skipNextObservers)) return !1;
+        return !0
+      }
+      notifyObserver(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Sr), rr._willBeUnregistered) return;
+        const Zr = this._eventState;
+        Zr.mask = Qr, Zr.skipNextObservers = !1, rr.unregisterOnNextCall && this._deferUnregister(rr), rr.callback(Sr, Zr)
+      }
+      hasObservers() {
+        return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
-        for (let RR = 0; RR < this.touchedCount; RR++) {
-          const JR = this.touchedBones[RR];
-          this.touched[JR] = 0, this.overrides[JR] = 0, this.boneWeight[JR] = 0;
-          for (let RR = 3 * JR; RR < 3 * JR + 3; RR++) this.rotation[RR] = 0, this.position[RR] = 0, this.scaleDelta[RR] = 0
+        for (; this._observers.length;) {
+          const rr = this._observers.pop();
+          rr && (rr._remove = null)
         }
-        this.touchedCount = 0
+        this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
-    }
-
-    function iR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(RR) ? GR : Math.min(JR, Math.max(-JR, RR))
+      cleanLastNotifiedState() {
+        this._hasNotified = !1, this._lastNotifiedValue = void 0
+      }
+      clone() {
+        const rr = new jr;
+        return rr._observers = this._observers.slice(0), rr
+      }
+      hasSpecificMask() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const Sr of this._observers)
+          if (Sr.mask & rr || Sr.mask === rr) return !0;
+        return !1
+      }
     }
   },
-  38275: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => iR,
-      h: () => qR
+  64590: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      AsyncLoop: () => Zr.b,
+      RegisterTools: () => Zr.d,
+      Tools: () => Zr.h,
+      className: () => Zr.j
     });
-    var yR = GR(38265),
-      tR = GR(377),
-      uR = GR(2102),
-      ZR = GR(38279);
-
-    function qR(RR) {
-      if ("LG" in RR) return lR.createAnimationScript(RR);
-      return new VR(RR).createAnimationScript()
-    }
-
-    function iR(RR, JR, GR, tR) {
-      const uR = RR.LG <= 0 ? 1 : JR + GR * Math.max(0, tR) / RR.LG;
-      return RR.nG === yR.o.LoopOnLastFrame ? uR % 1 : RR.nG === yR.o.NoLoop && uR >= 1 ? null : Math.min(1, uR)
-    }
-    class fR {
-      createAnimationScript(RR) {
-        const {
-          LG: JR,
-          loop: GR,
-          UG: yR
-        } = RR;
-        return {
-          LG: Math.round(JR),
-          nG: this.createLoopMode(null !== GR && void 0 !== GR && GR),
-          UG: this.createNodeSkeletonAnimationScript(null !== yR && void 0 !== yR ? yR : null)
-        }
-      }
-      createLoopMode(RR) {
-        switch (RR) {
-          case !1:
-            return yR.o.NoLoop;
-          case !0:
-            return yR.o.LoopOnLastFrame;
-          case "hold-on-last-frame":
-            return yR.o.HoldOnLastFrame
-        }
-        throw new Error(`Invalid loop mode schema: ${RR}`)
-      }
-      createNodeSkeletonAnimationScript(RR) {
-        if (null === RR) return null;
-        const JR = {};
-        for (const GR in RR) {
-          const yR = RR[GR];
-          JR[GR] = this.createNodeAnimationScript(yR)
-        }
-        return JR
-      }
-      createNodeAnimationScript(RR) {
-        const {
-          timeline: JR
-        } = RR, GR = JR.filter((RR => Number.isFinite(RR.timeFraction)));
-        return GR.sort(((RR, JR) => RR.timeFraction - JR.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(GR, "rotation", rR),
-          position: this.createTimelineFromKeyframes(GR, "position", aR),
-          scale: this.createTimelineFromKeyframes(GR, "scale", aR, nR)
-        }
-      }
-      createTimelineFromKeyframes(RR, JR, GR) {
-        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RR => RR;
-        const tR = [];
-        for (const fR of RR) {
-          const RR = fR[JR];
-          if (RR) {
-            const JR = this.createAnimationFrameWithoutPrecomputes(fR.timeFraction, RR, yR);
-            KR(JR) && tR.push(JR)
-          }
-        }
-        const uR = [];
-        for (let fR = 0; fR < tR.length; fR++) {
-          var ZR, qR, iR;
-          const RR = tR[fR],
-            JR = null !== (ZR = tR[fR - 1]) && void 0 !== ZR ? ZR : RR,
-            yR = null !== (qR = tR[fR + 1]) && void 0 !== qR ? qR : RR,
-            VR = null !== (iR = tR[fR + 2]) && void 0 !== iR ? iR : yR;
-          uR.push({
-            ...RR,
-            ...GR(JR.post, JR.timeFraction, RR.post, RR.timeFraction, yR.pre, yR.timeFraction, VR.pre, VR.timeFraction)
-          })
-        }
-        return uR
-      }
-      createAnimationFrameWithoutPrecomputes(RR, JR, GR) {
-        let yR, tR, uR = null;
-        var ZR;
-        if ("object" === typeof JR && "point" in JR) uR = null !== (ZR = JR.CG) && void 0 !== ZR ? ZR : null, yR = JR.point, tR = JR.point;
-        else if ("object" === typeof JR && "pre" in JR) {
-          var qR;
-          uR = null !== (qR = JR.CG) && void 0 !== qR ? qR : null, yR = JR.pre, tR = JR.post
-        } else yR = JR, tR = JR;
-        return {
-          timeFraction: RR,
-          CG: this.createLerpMode(uR),
-          pre: GR(yR),
-          post: GR(tR)
-        }
-      }
-      createLerpMode(RR) {
-        return null === RR ? yR.l.Linear : fR.LERP_MODE_SCHEMA_MAPPING[RR]
-      }
-    }
-    fR.LERP_MODE_SCHEMA_MAPPING = {
-      linear: yR.l.Linear,
-      "catmull-rom-spline": yR.l.CatmullRomSpline
-    };
-    class VR {
-      constructor(RR) {
-        this.animationSchema = RR
-      }
-      createAnimationScript() {
-        const {
-          animation_length: RR,
-          loop: JR,
-          bones: GR
-        } = this.animationSchema;
-        return {
-          LG: Math.round(1e3 * RR),
-          nG: this.createLoopMode(null !== JR && void 0 !== JR && JR),
-          UG: this.createNodeSkeletonAnimationScript(null !== GR && void 0 !== GR ? GR : null)
-        }
-      }
-      createLoopMode(RR) {
-        switch (RR) {
-          case !1:
-            return yR.o.NoLoop;
-          case !0:
-            return yR.o.LoopOnLastFrame;
-          case "hold_on_last_frame":
-            return yR.o.HoldOnLastFrame
-        }
-        throw new Error(`Invalid Blockbench loop mode schema: ${RR}`)
-      }
-      createNodeSkeletonAnimationScript(RR) {
-        if (null === RR) return null;
-        const JR = {};
-        for (const GR in RR) {
-          const yR = RR[GR];
-          JR[GR] = this.createNodeAnimationScript(yR)
-        }
-        return JR
-      }
-      createNodeAnimationScript(RR) {
-        const {
-          rotation: JR,
-          position: GR,
-          scale: yR
-        } = RR;
-        return {
-          rotation: this.createAnimationTimeline(null !== JR && void 0 !== JR ? JR : null, WR, rR, !0),
-          position: this.createAnimationTimeline(null !== GR && void 0 !== GR ? GR : null, CR, aR, !1),
-          scale: this.createAnimationTimeline(null !== yR && void 0 !== yR ? yR : null, LR, aR, !1)
-        }
-      }
-      createAnimationTimeline(RR, JR, GR, yR) {
-        if (null === RR) return [];
-        (Array.isArray(RR) || "number" === typeof RR) && (RR = {
-          "0.0": RR
-        });
-        const tR = Object.entries(RR).map((RR => {
-          let [GR, yR] = RR;
-          const tR = Number(GR) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(tR, yR, JR)
-        })).filter(KR);
-        tR.sort(((RR, JR) => RR.timeFraction - JR.timeFraction)), yR && function(RR) {
-          for (let JR = 1; JR < RR.length; JR++) {
-            const GR = RR[JR - 1].post,
-              yR = RR[JR],
-              tR = XR(yR.pre),
-              uR = XR(yR.post),
-              ZR = BR(GR, yR.pre);
-            BR(GR, tR) < ZR && (RR[JR] = {
-              ...yR,
-              pre: tR,
-              post: uR
-            })
-          }
-        }(tR);
-        const uR = [];
-        for (let fR = 0; fR < tR.length; fR++) {
-          var ZR, qR, iR;
-          const RR = tR[fR],
-            JR = null !== (ZR = tR[fR - 1]) && void 0 !== ZR ? ZR : RR,
-            yR = null !== (qR = tR[fR + 1]) && void 0 !== qR ? qR : RR,
-            VR = null !== (iR = tR[fR + 2]) && void 0 !== iR ? iR : yR;
-          uR.push({
-            ...RR,
-            ...GR(JR.post, JR.timeFraction, RR.post, RR.timeFraction, yR.pre, yR.timeFraction, VR.pre, VR.timeFraction)
-          })
-        }
-        return uR
-      }
-      createAnimationFrameWithoutPrecomputes(RR, JR, GR) {
-        let yR, tR, uR = null;
-        if ("object" === typeof JR && "post" in JR) {
-          var ZR;
-          uR = null !== (ZR = JR.lerp_mode) && void 0 !== ZR ? ZR : null, tR = GR(JR.post), yR = void 0 !== JR.pre ? GR(JR.pre) : tR
-        } else {
-          const RR = GR(JR);
-          tR = RR, yR = RR
-        }
-        return {
-          timeFraction: RR,
-          CG: this.createLerpMode(uR),
-          pre: yR,
-          post: tR
-        }
-      }
-      createLerpMode(RR) {
-        return null === RR ? yR.l.Linear : VR.LERP_MODE_SCHEMA_MAPPING[RR]
-      }
-    }
-
-    function KR(RR) {
-      return Number.isFinite(RR.timeFraction) && wR(RR.pre) && wR(RR.post)
-    }
-
-    function wR(RR) {
-      return Number.isFinite(RR[0]) && Number.isFinite(RR[1]) && Number.isFinite(RR[2])
-    }
-
-    function rR(RR, JR, GR, yR, tR, uR, ZR, qR) {
-      const iR = uR - JR,
-        fR = uR - yR,
-        VR = qR - yR,
-        KR = [null, null, null];
-      for (let wR = 0; wR < KR.length; wR++) KR[wR] = eR(RR[wR], GR[wR], tR[wR], ZR[wR], iR, VR);
-      return {
-        XG: fR,
-        MG: KR
-      }
-    }
-
-    function eR(RR, JR, GR, yR, uR, ZR) {
-      return {
-        pG: tR.e.computeShortestRotation(RR, GR) / uR,
-        gG: tR.e.computeShortestRotation(JR, yR) / ZR,
-        delta: tR.e.computeShortestRotation(JR, GR)
-      }
-    }
-
-    function aR(RR, JR, GR, yR, tR, uR, ZR, qR) {
-      const iR = uR - JR,
-        fR = uR - yR,
-        VR = qR - yR,
-        KR = [null, null, null];
-      for (let wR = 0; wR < KR.length; wR++) KR[wR] = {
-        pG: (tR[wR] - RR[wR]) / iR,
-        gG: (ZR[wR] - GR[wR]) / VR,
-        delta: tR[wR] - GR[wR]
-      };
-      return {
-        XG: fR,
-        MG: KR
-      }
-    }
-
-    function LR(RR) {
-      return nR("number" === typeof RR ? [RR, RR, RR] : RR)
-    }
-
-    function nR(RR) {
-      return [UR(RR[0]), UR(RR[1]), UR(RR[2])]
-    }
-
-    function UR(RR) {
-      return Number.isFinite(RR) ? Math.min(ZR.g, Math.max(-ZR.g, RR)) : RR
-    }
-
-    function WR(RR) {
-      const [JR, GR, yR] = RR, ZR = -(0, uR.g)(JR), qR = -(0, uR.g)(GR), iR = (0, uR.g)(yR), fR = tR.e.quaternionFromEulerZYX(ZR, qR, iR);
-      return tR.e.eulerYXZFromQuaternion(fR)
-    }
-    VR.LERP_MODE_SCHEMA_MAPPING = {
-      linear: yR.l.Linear,
-      catmullrom: yR.l.CatmullRomSpline
-    };
-    const AR = 1 / 16;
-
-    function CR(RR) {
-      return [-RR[0] * AR, RR[1] * AR, RR[2] * AR]
-    }
-
-    function XR(RR) {
-      const [JR, GR, yR] = RR;
-      return [JR >= 0 ? Math.PI - JR : -Math.PI - JR, MR(GR + Math.PI), MR(yR + Math.PI)]
-    }
-
-    function MR(RR) {
-      return tR.e.mod(RR + Math.PI, 2 * Math.PI) - Math.PI
-    }
-
-    function BR(RR, JR) {
-      return Math.abs(tR.e.computeShortestRotation(RR[0], JR[0])) + Math.abs(tR.e.computeShortestRotation(RR[1], JR[1])) + Math.abs(tR.e.computeShortestRotation(RR[2], JR[2]))
-    }
-    const lR = new fR
+    var Zr = Qr(41950);
+    (0, Zr.d)()
   },
-  38265: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => ZR,
-      h: () => uR,
-      l: () => yR,
-      o: () => tR
+  38609: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      e: () => Wr
     });
-    let yR = function(RR) {
-        return RR[RR.Linear = 0] = "Linear", RR[RR.CatmullRomSpline = 1] = "CatmullRomSpline", RR
-      }({}),
-      tR = function(RR) {
-        return RR[RR.NoLoop = 0] = "NoLoop", RR[RR.LoopOnLastFrame = 1] = "LoopOnLastFrame", RR[RR.HoldOnLastFrame = 2] = "HoldOnLastFrame", RR
-      }({}),
-      uR = function(RR) {
-        return RR[RR.Movement = 0] = "Movement", RR[RR.Action = 1] = "Action", RR[RR.Emote = 2] = "Emote", RR[RR.Custom = 3] = "Custom", RR
-      }({}),
-      ZR = function(RR) {
-        return RR[RR.Start = 0] = "Start", RR[RR.Stop = 1] = "Stop", RR
-      }({})
+    const Zr = {};
+
+    function Wr(rr, Sr) {
+      Zr[rr] = Sr
+    }
+
+    function ar(rr) {
+      return Zr[rr]
+    }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

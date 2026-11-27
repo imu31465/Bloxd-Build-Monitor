@@ -1,2445 +1,2445 @@
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  10571: (RR, JR) => {
-    JR.discordURLBuilder = function(RR) {
-      var JR;
-      const GR = (null === (JR = null === window || void 0 === window ? void 0 : window.location) || void 0 === JR ? void 0 : JR.hostname) || "localhost",
-        yR = RR.hostname.split("."),
-        tR = !RR.hostname.includes("trycloudflare.com") && !RR.hostname.includes("discordsays.com") && yR.length > 2 ? `/${yR[0]}` : "";
-      return RR.pathname.startsWith("/.proxy") ? `${RR.protocol}//${GR}${tR}${RR.pathname}${RR.search}` : `${RR.protocol}//${GR}/.proxy/colyseus${tR}${RR.pathname}${RR.search}`
+  10357: (rr, Sr) => {
+    Sr.discordURLBuilder = function(rr) {
+      var Sr;
+      const Qr = (null === (Sr = null === window || void 0 === window ? void 0 : window.location) || void 0 === Sr ? void 0 : Sr.hostname) || "localhost",
+        Zr = rr.hostname.split("."),
+        Wr = !rr.hostname.includes("trycloudflare.com") && !rr.hostname.includes("discordsays.com") && Zr.length > 2 ? `/${Zr[0]}` : "";
+      return rr.pathname.startsWith("/.proxy") ? `${rr.protocol}//${Qr}${Wr}${rr.pathname}${rr.search}` : `${rr.protocol}//${Qr}/.proxy/colyseus${Wr}${rr.pathname}${rr.search}`
     }
   },
-  10562: (RR, JR, GR) => {
-    var yR, tR, uR, ZR, qR = GR(10474),
-      iR = GR(10564),
-      fR = GR(10530);
-    yR = new WeakMap, tR = new WeakMap, uR = new WeakMap, ZR = new WeakMap, JR.Auth = class {
-      constructor(RR) {
-        this.http = RR, this.settings = {
+  10352: (rr, Sr, Qr) => {
+    var Zr, Wr, ar, jr, Ir = Qr(10256),
+      fr = Qr(10355),
+      Er = Qr(10319);
+    Zr = new WeakMap, Wr = new WeakMap, ar = new WeakMap, jr = new WeakMap, Sr.Auth = class {
+      constructor(rr) {
+        this.http = rr, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, yR.set(this, !1), tR.set(this, void 0), uR.set(this, void 0), ZR.set(this, fR.createNanoEvents()), iR.getItem(this.settings.key, (RR => this.token = RR))
+        }, Zr.set(this, !1), Wr.set(this, void 0), ar.set(this, void 0), jr.set(this, Er.createNanoEvents()), fr.getItem(this.settings.key, (rr => this.token = rr))
       }
-      set token(RR) {
-        this.http.authToken = RR
+      set token(rr) {
+        this.http.authToken = rr
       }
       get token() {
         return this.http.authToken
       }
-      onChange(RR) {
-        const JR = qR.__classPrivateFieldGet(this, ZR, "f").on("change", RR);
-        return qR.__classPrivateFieldGet(this, yR, "f") || qR.__classPrivateFieldSet(this, tR, new Promise(((RR, JR) => {
-          this.getUserData().then((RR => {
-            this.emitChange(Object.assign(Object.assign({}, RR), {
+      onChange(rr) {
+        const Sr = Ir.__classPrivateFieldGet(this, jr, "f").on("change", rr);
+        return Ir.__classPrivateFieldGet(this, Zr, "f") || Ir.__classPrivateFieldSet(this, Wr, new Promise(((rr, Sr) => {
+          this.getUserData().then((rr => {
+            this.emitChange(Object.assign(Object.assign({}, rr), {
               token: this.token
             }))
-          })).catch((RR => {
+          })).catch((rr => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            RR()
+            rr()
           }))
-        })), "f"), qR.__classPrivateFieldSet(this, yR, !0, "f"), JR
+        })), "f"), Ir.__classPrivateFieldSet(this, Zr, !0, "f"), Sr
       }
       getUserData() {
-        return qR.__awaiter(this, void 0, void 0, (function*() {
+        return Ir.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(RR, JR, GR) {
-        return qR.__awaiter(this, void 0, void 0, (function*() {
-          const yR = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(rr, Sr, Qr) {
+        return Ir.__awaiter(this, void 0, void 0, (function*() {
+          const Zr = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: RR,
-              password: JR,
-              options: GR
+              email: rr,
+              password: Sr,
+              options: Qr
             }
           })).data;
-          return this.emitChange(yR), yR
+          return this.emitChange(Zr), Zr
         }))
       }
-      signInWithEmailAndPassword(RR, JR) {
-        return qR.__awaiter(this, void 0, void 0, (function*() {
-          const GR = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(rr, Sr) {
+        return Ir.__awaiter(this, void 0, void 0, (function*() {
+          const Qr = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: RR,
-              password: JR
+              email: rr,
+              password: Sr
             }
           })).data;
-          return this.emitChange(GR), GR
+          return this.emitChange(Qr), Qr
         }))
       }
-      signInAnonymously(RR) {
-        return qR.__awaiter(this, void 0, void 0, (function*() {
-          const JR = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(rr) {
+        return Ir.__awaiter(this, void 0, void 0, (function*() {
+          const Sr = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: RR
+              options: rr
             }
           })).data;
-          return this.emitChange(JR), JR
+          return this.emitChange(Sr), Sr
         }))
       }
-      sendPasswordResetEmail(RR) {
-        return qR.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(rr) {
+        return Ir.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: RR
+              email: rr
             }
           })).data
         }))
       }
-      signInWithProvider(RR) {
-        return qR.__awaiter(this, arguments, void 0, (function*(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((GR, yR) => {
-            const tR = JR.width || 480,
-              ZR = JR.height || 768,
-              iR = this.token ? `?token=${this.token}` : "",
-              fR = `Login with ${RR[0].toUpperCase()+RR.substring(1)}`,
-              VR = this.http.client.getHttpEndpoint(`${JR.prefix||`${this.settings.path}/provider`}/${RR}${iR}`),
-              KR = screen.width / 2 - tR / 2,
-              wR = screen.height / 2 - ZR / 2;
-            qR.__classPrivateFieldSet(this, uR, window.open(VR, fR, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + tR + ", height=" + ZR + ", top=" + wR + ", left=" + KR), "f");
-            const rR = RR => {
-                void 0 === RR.data.user && void 0 === RR.data.token || (clearInterval(eR), qR.__classPrivateFieldGet(this, uR, "f").close(), qR.__classPrivateFieldSet(this, uR, void 0, "f"), window.removeEventListener("message", rR), void 0 !== RR.data.error ? yR(RR.data.error) : (GR(RR.data), this.emitChange(RR.data)))
+      signInWithProvider(rr) {
+        return Ir.__awaiter(this, arguments, void 0, (function*(rr) {
+          let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Qr, Zr) => {
+            const Wr = Sr.width || 480,
+              jr = Sr.height || 768,
+              fr = this.token ? `?token=${this.token}` : "",
+              Er = `Login with ${rr[0].toUpperCase()+rr.substring(1)}`,
+              pr = this.http.client.getHttpEndpoint(`${Sr.prefix||`${this.settings.path}/provider`}/${rr}${fr}`),
+              xr = screen.width / 2 - Wr / 2,
+              mr = screen.height / 2 - jr / 2;
+            Ir.__classPrivateFieldSet(this, ar, window.open(pr, Er, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Wr + ", height=" + jr + ", top=" + mr + ", left=" + xr), "f");
+            const Nr = rr => {
+                void 0 === rr.data.user && void 0 === rr.data.token || (clearInterval(Ur), Ir.__classPrivateFieldGet(this, ar, "f").close(), Ir.__classPrivateFieldSet(this, ar, void 0, "f"), window.removeEventListener("message", Nr), void 0 !== rr.data.error ? Zr(rr.data.error) : (Qr(rr.data), this.emitChange(rr.data)))
               },
-              eR = setInterval((() => {
-                qR.__classPrivateFieldGet(this, uR, "f") && !qR.__classPrivateFieldGet(this, uR, "f").closed || (qR.__classPrivateFieldSet(this, uR, void 0, "f"), yR("xR"), window.removeEventListener("message", rR))
+              Ur = setInterval((() => {
+                Ir.__classPrivateFieldGet(this, ar, "f") && !Ir.__classPrivateFieldGet(this, ar, "f").closed || (Ir.__classPrivateFieldSet(this, ar, void 0, "f"), Zr("Rr"), window.removeEventListener("message", Nr))
               }), 200);
-            window.addEventListener("message", rR)
+            window.addEventListener("message", Nr)
           }))
         }))
       }
       signOut() {
-        return qR.__awaiter(this, void 0, void 0, (function*() {
+        return Ir.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(RR) {
-        void 0 !== RR.token && (this.token = RR.token, null === RR.token ? iR.removeItem(this.settings.key) : iR.setItem(this.settings.key, RR.token)), qR.__classPrivateFieldGet(this, ZR, "f").emit("change", RR)
+      emitChange(rr) {
+        void 0 !== rr.token && (this.token = rr.token, null === rr.token ? fr.removeItem(this.settings.key) : fr.setItem(this.settings.key, rr.token)), Ir.__classPrivateFieldGet(this, jr, "f").emit("change", rr)
       }
     }
   },
-  10465: (RR, JR, GR) => {
-    var yR, tR = GR(10474),
-      uR = GR(10480),
-      ZR = GR(10482),
-      qR = GR(10545),
-      iR = GR(10562),
-      fR = GR(10571);
-    class VR extends Error {
-      constructor(RR, JR) {
-        super(RR), this.code = JR, this.name = "MatchMakeError", Object.setPrototypeOf(this, VR.prototype)
+  10252: (rr, Sr, Qr) => {
+    var Zr, Wr = Qr(10256),
+      ar = Qr(10265),
+      jr = Qr(10271),
+      Ir = Qr(10345),
+      fr = Qr(10352),
+      Er = Qr(10357);
+    class pr extends Error {
+      constructor(rr, Sr) {
+        super(rr), this.code = Sr, this.name = "MatchMakeError", Object.setPrototypeOf(this, pr.prototype)
       }
     }
-    const KR = "undefined" !== typeof window && "undefined" !== typeof(null === (yR = null === window || void 0 === window ? void 0 : window.location) || void 0 === yR ? void 0 : yR.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class wR {
+    const xr = "undefined" !== typeof window && "undefined" !== typeof(null === (Zr = null === window || void 0 === window ? void 0 : window.location) || void 0 === Zr ? void 0 : Zr.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class mr {
       constructor() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : KR,
-          JR = arguments.length > 1 ? arguments[1] : void 0;
-        var GR, yR;
-        if ("string" === typeof RR) {
-          const JR = RR.startsWith("/") ? new URL(RR, KR) : new URL(RR),
-            GR = "https:" === JR.protocol || "wss:" === JR.protocol,
-            yR = Number(JR.port || (GR ? 443 : 80));
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xr,
+          Sr = arguments.length > 1 ? arguments[1] : void 0;
+        var Qr, Zr;
+        if ("string" === typeof rr) {
+          const Sr = rr.startsWith("/") ? new URL(rr, xr) : new URL(rr),
+            Qr = "https:" === Sr.protocol || "wss:" === Sr.protocol,
+            Zr = Number(Sr.port || (Qr ? 443 : 80));
           this.settings = {
-            hostname: JR.hostname,
-            pathname: JR.pathname,
-            port: yR,
-            secure: GR,
-            searchParams: JR.searchParams.toString() || void 0
+            hostname: Sr.hostname,
+            pathname: Sr.pathname,
+            port: Zr,
+            secure: Qr,
+            searchParams: Sr.searchParams.toString() || void 0
           }
-        } else void 0 === RR.port && (RR.port = RR.secure ? 443 : 80), void 0 === RR.pathname && (RR.pathname = ""), this.settings = RR;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new qR.HTTP(this, (null === JR || void 0 === JR ? void 0 : JR.headers) || {}), this.auth = new iR.Auth(this.http), this.urlBuilder = null === JR || void 0 === JR ? void 0 : JR.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (yR = null === (GR = null === window || void 0 === window ? void 0 : window.location) || void 0 === GR ? void 0 : GR.hostname) || void 0 === yR ? void 0 : yR.includes("discordsays.com")) && (this.urlBuilder = fR.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === rr.port && (rr.port = rr.secure ? 443 : 80), void 0 === rr.pathname && (rr.pathname = ""), this.settings = rr;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Ir.HTTP(this, (null === Sr || void 0 === Sr ? void 0 : Sr.headers) || {}), this.auth = new fr.Auth(this.http), this.urlBuilder = null === Sr || void 0 === Sr ? void 0 : Sr.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Zr = null === (Qr = null === window || void 0 === window ? void 0 : window.location) || void 0 === Qr ? void 0 : Qr.hostname) || void 0 === Zr ? void 0 : Zr.includes("discordsays.com")) && (this.urlBuilder = Er.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(RR) {
-        return tR.__awaiter(this, arguments, void 0, (function*(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GR = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", RR, JR, GR)
+      joinOrCreate(rr) {
+        return Wr.__awaiter(this, arguments, void 0, (function*(rr) {
+          let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Qr = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", rr, Sr, Qr)
         }))
       }
-      create(RR) {
-        return tR.__awaiter(this, arguments, void 0, (function*(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GR = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", RR, JR, GR)
+      create(rr) {
+        return Wr.__awaiter(this, arguments, void 0, (function*(rr) {
+          let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Qr = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", rr, Sr, Qr)
         }))
       }
-      join(RR) {
-        return tR.__awaiter(this, arguments, void 0, (function*(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GR = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", RR, JR, GR)
+      join(rr) {
+        return Wr.__awaiter(this, arguments, void 0, (function*(rr) {
+          let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Qr = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", rr, Sr, Qr)
         }))
       }
-      joinById(RR) {
-        return tR.__awaiter(this, arguments, void 0, (function*(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            GR = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", RR, JR, GR)
+      joinById(rr) {
+        return Wr.__awaiter(this, arguments, void 0, (function*(rr) {
+          let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Qr = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", rr, Sr, Qr)
         }))
       }
-      reconnect(RR, JR) {
-        return tR.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof RR && "string" === typeof JR) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [GR, yR] = RR.split(":");
-          if (!GR || !yR) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", GR, {
-            reconnectionToken: yR
-          }, JR)
+      reconnect(rr, Sr) {
+        return Wr.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof rr && "string" === typeof Sr) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Qr, Zr] = rr.split(":");
+          if (!Qr || !Zr) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Qr, {
+            reconnectionToken: Zr
+          }, Sr)
         }))
       }
-      consumeSeatReservation(RR, JR, GR) {
-        return tR.__awaiter(this, void 0, void 0, (function*() {
-          const yR = this.createRoom(RR.room.name, JR);
-          yR.roomId = RR.room.roomId, yR.sessionId = RR.sessionId;
-          const ZR = {
-            sessionId: yR.sessionId
+      consumeSeatReservation(rr, Sr, Qr) {
+        return Wr.__awaiter(this, void 0, void 0, (function*() {
+          const Zr = this.createRoom(rr.room.name, Sr);
+          Zr.roomId = rr.room.roomId, Zr.sessionId = rr.sessionId;
+          const jr = {
+            sessionId: Zr.sessionId
           };
-          RR.reconnectionToken && (ZR.reconnectionToken = RR.reconnectionToken);
-          const qR = GR || yR;
-          return yR.connect(this.buildEndpoint(RR.room, ZR, RR.protocol), RR.devMode && (() => tR.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${yR.roomId}'...`);
-            let GR = 0;
-            const uR = () => tR.__awaiter(this, void 0, void 0, (function*() {
-              GR++;
+          rr.reconnectionToken && (jr.reconnectionToken = rr.reconnectionToken);
+          const Ir = Qr || Zr;
+          return Zr.connect(this.buildEndpoint(rr.room, jr, rr.protocol), rr.devMode && (() => Wr.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Zr.roomId}'...`);
+            let Qr = 0;
+            const ar = () => Wr.__awaiter(this, void 0, void 0, (function*() {
+              Qr++;
               try {
-                yield this.consumeSeatReservation(RR, JR, qR), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${yR.roomId}'`)
-              } catch (tR) {
-                GR < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${GR} out of 8)`), setTimeout(uR, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(rr, Sr, Ir), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Zr.roomId}'`)
+              } catch (Wr) {
+                Qr < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Qr} out of 8)`), setTimeout(ar, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(uR, 2e3)
-          }))), qR, RR, this.http.headers), new Promise(((RR, JR) => {
-            const GR = (RR, GR) => JR(new uR.ServerError(RR, GR));
-            qR.onError.once(GR), qR.onJoin.once((() => {
-              qR.onError.remove(GR), setTimeout((() => {
+            setTimeout(ar, 2e3)
+          }))), Ir, rr, this.http.headers), new Promise(((rr, Sr) => {
+            const Qr = (rr, Qr) => Sr(new ar.ServerError(rr, Qr));
+            Ir.onError.once(Qr), Ir.onJoin.once((() => {
+              Ir.onError.remove(Qr), setTimeout((() => {
                 try {
-                  const RR = [85, 117, 234, 34, 168, 75, 206, 104, 132, 71, 112, 106, 82, 168, 228, 182, 49, 12, 225, 52];
-                  RR && qR.rC(128, new Uint8Array(RR))
+                  const rr = [85, 117, 234, 34, 168, 75, 206, 104, 132, 71, 112, 106, 82, 168, 228, 182, 49, 12, 225, 52];
+                  rr && Ir.Uy(128, new Uint8Array(rr))
                 } catch {}
-              }), 3e3), RR(qR)
+              }), 3e3), rr(Ir)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(RR, JR) {
-        return tR.__awaiter(this, arguments, void 0, (function*(RR, JR) {
-          let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            yR = arguments.length > 3 ? arguments[3] : void 0,
-            tR = arguments.length > 4 ? arguments[4] : void 0;
-          const uR = (yield this.http.post(`matchmake/${RR}/${JR}`, {
+      createMatchMakeRequest(rr, Sr) {
+        return Wr.__awaiter(this, arguments, void 0, (function*(rr, Sr) {
+          let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            Zr = arguments.length > 3 ? arguments[3] : void 0,
+            Wr = arguments.length > 4 ? arguments[4] : void 0;
+          const ar = (yield this.http.post(`matchmake/${rr}/${Sr}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(GR)
+            body: JSON.stringify(Qr)
           })).data;
-          if (uR.error) throw new VR(uR.error, uR.code);
-          return "reconnect" === RR && (uR.reconnectionToken = GR.reconnectionToken), yield this.consumeSeatReservation(uR, yR, tR)
+          if (ar.error) throw new pr(ar.error, ar.code);
+          return "reconnect" === rr && (ar.reconnectionToken = Qr.reconnectionToken), yield this.consumeSeatReservation(ar, Zr, Wr)
         }))
       }
-      createRoom(RR, JR) {
-        return new ZR.Lw(RR, JR)
+      createRoom(rr, Sr) {
+        return new jr.Ym(rr, Sr)
       }
-      buildEndpoint(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          yR = this.settings.searchParams || "";
-        this.http.authToken && (JR._authToken = this.http.authToken);
-        for (const ZR in JR) JR.hasOwnProperty(ZR) && (yR += (yR ? "&" : "") + `${ZR}=${JR[ZR]}`);
-        "h3" === GR && (GR = "http");
-        let tR = this.settings.secure ? `${GR}s://` : `${GR}://`;
-        RR.publicAddress ? tR += `${RR.publicAddress}` : tR += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const uR = `${tR}/${RR.processId}/${RR.roomId}?${yR}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(uR)) : uR
+      buildEndpoint(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          Zr = this.settings.searchParams || "";
+        this.http.authToken && (Sr._authToken = this.http.authToken);
+        for (const jr in Sr) Sr.hasOwnProperty(jr) && (Zr += (Zr ? "&" : "") + `${jr}=${Sr[jr]}`);
+        "h3" === Qr && (Qr = "http");
+        let Wr = this.settings.secure ? `${Qr}s://` : `${Qr}://`;
+        rr.publicAddress ? Wr += `${rr.publicAddress}` : Wr += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const ar = `${Wr}/${rr.processId}/${rr.roomId}?${Zr}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(ar)) : ar
       }
       getHttpEndpoint() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const JR = RR.startsWith("/") ? RR : `/${RR}`;
-        let GR = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${JR}`;
-        return this.settings.searchParams && (GR += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(GR)) : GR
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Sr = rr.startsWith("/") ? rr : `/${rr}`;
+        let Qr = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Sr}`;
+        return this.settings.searchParams && (Qr += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Qr)) : Qr
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    wR.VERSION = "0.16.22", JR.Client = wR, JR.MatchMakeError = VR
+    mr.VERSION = "0.16.22", Sr.Client = mr, Sr.MatchMakeError = pr
   },
-  10486: (RR, JR, GR) => {
-    var yR = GR(10489),
-      tR = GR(10504);
-    JR.Connection = class {
-      constructor(RR) {
-        if (this.events = {}, "h3" === RR) this.transport = new yR.H3TransportTransport(this.events);
-        else this.transport = new tR.WebSocketTransport(this.events)
+  10277: (rr, Sr, Qr) => {
+    var Zr = Qr(10281),
+      Wr = Qr(10296);
+    Sr.Connection = class {
+      constructor(rr) {
+        if (this.events = {}, "h3" === rr) this.transport = new Zr.H3TransportTransport(this.events);
+        else this.transport = new Wr.WebSocketTransport(this.events)
       }
-      connect(RR, JR) {
-        this.transport.connect.call(this.transport, RR, JR)
+      connect(rr, Sr) {
+        this.transport.connect.call(this.transport, rr, Sr)
       }
-      send(RR) {
-        this.transport.send(RR)
+      send(rr) {
+        this.transport.send(rr)
       }
-      sendUnreliable(RR) {
-        this.transport.sendUnreliable(RR)
+      sendUnreliable(rr) {
+        this.transport.sendUnreliable(rr)
       }
-      close(RR, JR) {
-        this.transport.close(RR, JR)
+      close(rr, Sr) {
+        this.transport.close(rr, Sr)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  10545: (RR, JR, GR) => {
-    var yR = GR(10480);
+  10345: (rr, Sr, Qr) => {
+    var Zr = Qr(10265);
 
-    function tR(RR) {
-      var JR = Object.create(null);
-      return RR && Object.keys(RR).forEach((function(GR) {
-        if ("default" !== GR) {
-          var yR = Object.getOwnPropertyDescriptor(RR, GR);
-          Object.defineProperty(JR, GR, yR.get ? yR : {
+    function Wr(rr) {
+      var Sr = Object.create(null);
+      return rr && Object.keys(rr).forEach((function(Qr) {
+        if ("default" !== Qr) {
+          var Zr = Object.getOwnPropertyDescriptor(rr, Qr);
+          Object.defineProperty(Sr, Qr, Zr.get ? Zr : {
             enumerable: !0,
             get: function() {
-              return RR[GR]
+              return rr[Qr]
             }
           })
         }
-      })), JR.default = RR, Object.freeze(JR)
+      })), Sr.default = rr, Object.freeze(Sr)
     }
-    var uR = tR(GR(10554));
-    JR.HTTP = class {
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = RR, this.headers = JR
+    var ar = Wr(Qr(10347));
+    Sr.HTTP = class {
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = rr, this.headers = Sr
       }
-      get(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", RR, JR)
+      get(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", rr, Sr)
       }
-      post(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", RR, JR)
+      post(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", rr, Sr)
       }
-      del(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", RR, JR)
+      del(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", rr, Sr)
       }
-      put(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", RR, JR)
+      put(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", rr, Sr)
       }
-      request(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return uR[RR](this.client.getHttpEndpoint(JR), this.getOptions(GR)).catch((RR => {
-          var JR;
-          if (RR.aborted) throw new yR.AbortError("Request aborted");
-          const GR = RR.statusCode,
-            tR = (null === (JR = RR.data) || void 0 === JR ? void 0 : JR.error) || RR.statusMessage || RR.message;
-          if (!GR && !tR) throw RR;
-          throw new yR.ServerError(GR, tR)
+      request(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return ar[rr](this.client.getHttpEndpoint(Sr), this.getOptions(Qr)).catch((rr => {
+          var Sr;
+          if (rr.aborted) throw new Zr.AbortError("Request aborted");
+          const Qr = rr.statusCode,
+            Wr = (null === (Sr = rr.data) || void 0 === Sr ? void 0 : Sr.error) || rr.statusMessage || rr.message;
+          if (!Qr && !Wr) throw rr;
+          throw new Zr.ServerError(Qr, Wr)
         }))
       }
-      getOptions(RR) {
-        return RR.headers = Object.assign({}, this.headers, RR.headers), this.authToken && (RR.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (RR.withCredentials = !0), RR
+      getOptions(rr) {
+        return rr.headers = Object.assign({}, this.headers, rr.headers), this.authToken && (rr.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (rr.withCredentials = !0), rr
       }
     }
   },
-  10516: (RR, JR) => {
-    var GR, yR;
-    JR.Protocol = void 0, (GR = JR.Protocol || (JR.Protocol = {}))[GR.HANDSHAKE = 9] = "HANDSHAKE", GR[GR.JOIN_ROOM = 10] = "JOIN_ROOM", GR[GR.ERROR = 11] = "ERROR", GR[GR.LEAVE_ROOM = 12] = "LEAVE_ROOM", GR[GR.ROOM_DATA = 13] = "ROOM_DATA", GR[GR.ROOM_STATE = 14] = "ROOM_STATE", GR[GR.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", GR[GR.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", GR[GR.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", JR.ErrorCode = void 0, (yR = JR.ErrorCode || (JR.ErrorCode = {}))[yR.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", yR[yR.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", yR[yR.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", yR[yR.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", yR[yR.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", yR[yR.AUTH_FAILED = 4215] = "AUTH_FAILED", yR[yR.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  10303: (rr, Sr) => {
+    var Qr, Zr;
+    Sr.Protocol = void 0, (Qr = Sr.Protocol || (Sr.Protocol = {}))[Qr.HANDSHAKE = 9] = "HANDSHAKE", Qr[Qr.JOIN_ROOM = 10] = "JOIN_ROOM", Qr[Qr.ERROR = 11] = "ERROR", Qr[Qr.LEAVE_ROOM = 12] = "LEAVE_ROOM", Qr[Qr.ROOM_DATA = 13] = "ROOM_DATA", Qr[Qr.ROOM_STATE = 14] = "ROOM_STATE", Qr[Qr.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Qr[Qr.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Qr[Qr.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Sr.ErrorCode = void 0, (Zr = Sr.ErrorCode || (Sr.ErrorCode = {}))[Zr.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Zr[Zr.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Zr[Zr.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Zr[Zr.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Zr[Zr.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Zr[Zr.AUTH_FAILED = 4215] = "AUTH_FAILED", Zr[Zr.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  10482: (RR, JR, GR) => {
-    var yR = GR(10486),
-      tR = GR(10516),
-      uR = GR(10524),
-      ZR = GR(10530),
-      qR = GR(10537),
-      iR = GR(10496),
-      fR = GR(10541),
-      VR = GR(10480),
-      KR = GR(10543);
-    class wR {
-      constructor(RR, JR) {
-        this.onStateChange = qR.createSignal(), this.onError = qR.createSignal(), this.oW = qR.createSignal(), this.onJoin = qR.createSignal(), this.hasJoined = !1, this.onMessageHandlers = ZR.createNanoEvents(), this.roomId = null, this.name = RR, this.packr = new KR.Packr, this.packr.encode(void 0), JR && (this.jU = new(uR.getSerializer("schema")), this.rootSchema = JR, this.jU.state = new JR), this.onError(((RR, JR) => {
-          var GR;
-          return null === (GR = console.warn) || void 0 === GR ? void 0 : GR.call(console, `colyseus.js - onError => (${RR}) ${JR}`)
-        })), this.oW((() => this.IU()))
+  10271: (rr, Sr, Qr) => {
+    var Zr = Qr(10277),
+      Wr = Qr(10303),
+      ar = Qr(10312),
+      jr = Qr(10319),
+      Ir = Qr(10324),
+      fr = Qr(10287),
+      Er = Qr(10327),
+      pr = Qr(10265),
+      xr = Qr(10336);
+    class mr {
+      constructor(rr, Sr) {
+        this.onStateChange = Ir.createSignal(), this.onError = Ir.createSignal(), this.WK = Ir.createSignal(), this.onJoin = Ir.createSignal(), this.hasJoined = !1, this.onMessageHandlers = jr.createNanoEvents(), this.roomId = null, this.name = rr, this.packr = new xr.Packr, this.packr.encode(void 0), Sr && (this.TY = new(ar.getSerializer("schema")), this.rootSchema = Sr, this.TY.state = new Sr), this.onError(((rr, Sr) => {
+          var Qr;
+          return null === (Qr = console.warn) || void 0 === Qr ? void 0 : Qr.call(console, `colyseus.js - onError => (${rr}) ${Sr}`)
+        })), this.WK((() => this.hY()))
       }
-      connect(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          tR = arguments.length > 3 ? arguments[3] : void 0,
-          uR = arguments.length > 4 ? arguments[4] : void 0;
-        const ZR = new yR.Connection(tR.protocol);
-        if (GR.connection = ZR, ZR.events.onmessage = wR.prototype.onMessageCallback.bind(GR), ZR.events.onclose = function(RR) {
-            var yR;
-            if (!GR.hasJoined) return null === (yR = console.warn) || void 0 === yR || yR.call(console, `Room connection was closed unexpectedly (${RR.code}): ${RR.reason}`), void GR.onError.invoke(RR.code, RR.reason);
-            RR.code === VR.CloseCode.DEVMODE_RESTART && JR ? JR() : (GR.oW.invoke(RR.code, RR.reason), GR.destroy())
-          }, ZR.events.onerror = function(RR) {
-            var JR;
-            null === (JR = console.warn) || void 0 === JR || JR.call(console, `Room, onError (${RR.code}): ${RR.reason}`), GR.onError.invoke(RR.code, RR.reason)
-          }, "h3" === tR.protocol) {
-          const JR = new URL(RR);
-          ZR.connect(JR.origin, tR)
-        } else ZR.connect(RR, uR)
+      connect(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Wr = arguments.length > 3 ? arguments[3] : void 0,
+          ar = arguments.length > 4 ? arguments[4] : void 0;
+        const jr = new Zr.Connection(Wr.protocol);
+        if (Qr.connection = jr, jr.events.onmessage = mr.prototype.onMessageCallback.bind(Qr), jr.events.onclose = function(rr) {
+            var Zr;
+            if (!Qr.hasJoined) return null === (Zr = console.warn) || void 0 === Zr || Zr.call(console, `Room connection was closed unexpectedly (${rr.code}): ${rr.reason}`), void Qr.onError.invoke(rr.code, rr.reason);
+            rr.code === pr.CloseCode.DEVMODE_RESTART && Sr ? Sr() : (Qr.WK.invoke(rr.code, rr.reason), Qr.destroy())
+          }, jr.events.onerror = function(rr) {
+            var Sr;
+            null === (Sr = console.warn) || void 0 === Sr || Sr.call(console, `Room, onError (${rr.code}): ${rr.reason}`), Qr.onError.invoke(rr.code, rr.reason)
+          }, "h3" === Wr.protocol) {
+          const Sr = new URL(rr);
+          jr.connect(Sr.origin, Wr)
+        } else jr.connect(rr, ar)
       }
       leave() {
-        let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((JR => {
-          this.oW((RR => JR(RR))), this.connection ? RR ? (this.packr.buffer[0] = tR.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.oW.invoke(VR.CloseCode.CONSENTED)
+        let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Sr => {
+          this.WK((rr => Sr(rr))), this.connection ? rr ? (this.packr.buffer[0] = Wr.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.WK.invoke(pr.CloseCode.CONSENTED)
         }))
       }
-      DW(RR, JR) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(RR), JR)
+      rK(rr, Sr) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(rr), Sr)
       }
-      send(RR, JR) {
-        const GR = {
+      send(rr, Sr) {
+        const Qr = {
           offset: 1
         };
-        this.packr.buffer[0] = tR.Protocol.ROOM_DATA, "string" === typeof RR ? iR.encode.string(this.packr.buffer, RR, GR) : iR.encode.number(this.packr.buffer, RR, GR), this.packr.position = 0;
-        const yR = void 0 !== JR ? this.packr.pack(JR, 2048 + GR.offset) : this.packr.buffer.subarray(0, GR.offset);
-        this.connection.send(yR)
+        this.packr.buffer[0] = Wr.Protocol.ROOM_DATA, "string" === typeof rr ? fr.encode.string(this.packr.buffer, rr, Qr) : fr.encode.number(this.packr.buffer, rr, Qr), this.packr.position = 0;
+        const Zr = void 0 !== Sr ? this.packr.pack(Sr, 2048 + Qr.offset) : this.packr.buffer.subarray(0, Qr.offset);
+        this.connection.send(Zr)
       }
-      sendUnreliable(RR, JR) {
-        const GR = {
+      sendUnreliable(rr, Sr) {
+        const Qr = {
           offset: 1
         };
-        this.packr.buffer[0] = tR.Protocol.ROOM_DATA, "string" === typeof RR ? iR.encode.string(this.packr.buffer, RR, GR) : iR.encode.number(this.packr.buffer, RR, GR), this.packr.position = 0;
-        const yR = void 0 !== JR ? this.packr.pack(JR, 2048 + GR.offset) : this.packr.buffer.subarray(0, GR.offset);
-        this.connection.sendUnreliable(yR)
+        this.packr.buffer[0] = Wr.Protocol.ROOM_DATA, "string" === typeof rr ? fr.encode.string(this.packr.buffer, rr, Qr) : fr.encode.number(this.packr.buffer, rr, Qr), this.packr.position = 0;
+        const Zr = void 0 !== Sr ? this.packr.pack(Sr, 2048 + Qr.offset) : this.packr.buffer.subarray(0, Qr.offset);
+        this.connection.sendUnreliable(Zr)
       }
-      rC(RR, JR) {
-        const GR = {
+      Uy(rr, Sr) {
+        const Qr = {
           offset: 1
         };
-        if (this.packr.buffer[0] = tR.Protocol.ROOM_DATA_BYTES, "string" === typeof RR ? iR.encode.string(this.packr.buffer, RR, GR) : iR.encode.number(this.packr.buffer, RR, GR), JR.byteLength + GR.offset > this.packr.buffer.byteLength) {
-          const RR = new Uint8Array(GR.offset + JR.byteLength);
-          RR.set(this.packr.buffer), this.packr.useBuffer(RR)
+        if (this.packr.buffer[0] = Wr.Protocol.ROOM_DATA_BYTES, "string" === typeof rr ? fr.encode.string(this.packr.buffer, rr, Qr) : fr.encode.number(this.packr.buffer, rr, Qr), Sr.byteLength + Qr.offset > this.packr.buffer.byteLength) {
+          const rr = new Uint8Array(Qr.offset + Sr.byteLength);
+          rr.set(this.packr.buffer), this.packr.useBuffer(rr)
         }
-        this.packr.buffer.set(JR, GR.offset), this.connection.send(this.packr.buffer.subarray(0, GR.offset + JR.byteLength))
+        this.packr.buffer.set(Sr, Qr.offset), this.connection.send(this.packr.buffer.subarray(0, Qr.offset + Sr.byteLength))
       }
       get state() {
-        return this.jU.getState()
+        return this.TY.getState()
       }
-      IU() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.oW.clear(), this.onMessageHandlers.events = {}, this.jU instanceof fR.zD && (this.jU.VK.root.callbacks = {})
+      hY() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.WK.clear(), this.onMessageHandlers.events = {}, this.TY instanceof Er.kR && (this.TY.Ix.root.callbacks = {})
       }
-      onMessageCallback(RR) {
-        const JR = new Uint8Array(RR.data),
-          GR = {
+      onMessageCallback(rr) {
+        const Sr = new Uint8Array(rr.data),
+          Qr = {
             offset: 1
           },
-          yR = JR[0];
-        if (yR === tR.Protocol.JOIN_ROOM) {
-          const RR = iR.decode.utf8Read(JR, GR, JR[GR.offset++]);
-          if (this.serializerId = iR.decode.utf8Read(JR, GR, JR[GR.offset++]), !this.jU) {
-            const RR = uR.getSerializer(this.serializerId);
-            this.jU = new RR
+          Zr = Sr[0];
+        if (Zr === Wr.Protocol.JOIN_ROOM) {
+          const rr = fr.decode.utf8Read(Sr, Qr, Sr[Qr.offset++]);
+          if (this.serializerId = fr.decode.utf8Read(Sr, Qr, Sr[Qr.offset++]), !this.TY) {
+            const rr = ar.getSerializer(this.serializerId);
+            this.TY = new rr
           }
-          JR.byteLength > GR.offset && this.jU.handshake && this.jU.handshake(JR, GR), this.reconnectionToken = `${this.roomId}:${RR}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = tR.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (yR === tR.Protocol.ERROR) {
-          const RR = iR.decode.number(JR, GR),
-            yR = iR.decode.string(JR, GR);
-          this.onError.invoke(RR, yR)
-        } else if (yR === tR.Protocol.LEAVE_ROOM) this.leave();
-        else if (yR === tR.Protocol.ROOM_STATE) this.jU.setState(JR, GR), this.onStateChange.invoke(this.jU.getState());
-        else if (yR === tR.Protocol.ROOM_STATE_PATCH) this.jU.patch(JR, GR), this.onStateChange.invoke(this.jU.getState());
-        else if (yR === tR.Protocol.ROOM_DATA) {
-          const RR = iR.decode.stringCheck(JR, GR) ? iR.decode.string(JR, GR) : iR.decode.number(JR, GR),
-            yR = JR.byteLength > GR.offset ? KR.unpack(JR, {
-              start: GR.offset
+          Sr.byteLength > Qr.offset && this.TY.handshake && this.TY.handshake(Sr, Qr), this.reconnectionToken = `${this.roomId}:${rr}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Wr.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (Zr === Wr.Protocol.ERROR) {
+          const rr = fr.decode.number(Sr, Qr),
+            Zr = fr.decode.string(Sr, Qr);
+          this.onError.invoke(rr, Zr)
+        } else if (Zr === Wr.Protocol.LEAVE_ROOM) this.leave();
+        else if (Zr === Wr.Protocol.ROOM_STATE) this.TY.setState(Sr, Qr), this.onStateChange.invoke(this.TY.getState());
+        else if (Zr === Wr.Protocol.ROOM_STATE_PATCH) this.TY.patch(Sr, Qr), this.onStateChange.invoke(this.TY.getState());
+        else if (Zr === Wr.Protocol.ROOM_DATA) {
+          const rr = fr.decode.stringCheck(Sr, Qr) ? fr.decode.string(Sr, Qr) : fr.decode.number(Sr, Qr),
+            Zr = Sr.byteLength > Qr.offset ? xr.unpack(Sr, {
+              start: Qr.offset
             }) : void 0;
-          this.dispatchMessage(RR, yR)
-        } else if (yR === tR.Protocol.ROOM_DATA_BYTES) {
-          const RR = iR.decode.stringCheck(JR, GR) ? iR.decode.string(JR, GR) : iR.decode.number(JR, GR);
-          this.dispatchMessage(RR, JR.subarray(GR.offset))
+          this.dispatchMessage(rr, Zr)
+        } else if (Zr === Wr.Protocol.ROOM_DATA_BYTES) {
+          const rr = fr.decode.stringCheck(Sr, Qr) ? fr.decode.string(Sr, Qr) : fr.decode.number(Sr, Qr);
+          this.dispatchMessage(rr, Sr.subarray(Qr.offset))
         }
       }
-      dispatchMessage(RR, JR) {
-        var GR;
-        const yR = this.getMessageHandlerKey(RR);
-        this.onMessageHandlers.events[yR] ? this.onMessageHandlers.emit(yR, JR) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", RR, JR) : null === (GR = console.warn) || void 0 === GR || GR.call(console, `colyseus.js: onMessage() not registered for type '${RR}'.`)
+      dispatchMessage(rr, Sr) {
+        var Qr;
+        const Zr = this.getMessageHandlerKey(rr);
+        this.onMessageHandlers.events[Zr] ? this.onMessageHandlers.emit(Zr, Sr) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", rr, Sr) : null === (Qr = console.warn) || void 0 === Qr || Qr.call(console, `colyseus.js: onMessage() not registered for type '${rr}'.`)
       }
       destroy() {
-        this.jU && this.jU.teardown()
+        this.TY && this.TY.teardown()
       }
-      getMessageHandlerKey(RR) {
-        switch (typeof RR) {
+      getMessageHandlerKey(rr) {
+        switch (typeof rr) {
           case "string":
-            return RR;
+            return rr;
           case "number":
-            return `i${RR}`;
+            return `i${rr}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    JR.Lw = wR
+    Sr.Ym = mr
   },
-  10564: (RR, JR, GR) => {
-    var yR = GR(10474);
-    let tR;
+  10355: (rr, Sr, Qr) => {
+    var Zr = Qr(10256);
+    let Wr;
 
-    function uR() {
-      if (!tR) try {
-        tR = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (RR) {}
-      return tR || "undefined" === typeof globalThis.indexedDB || (tR = new ZR), tR || (tR = {
+    function ar() {
+      if (!Wr) try {
+        Wr = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (rr) {}
+      return Wr || "undefined" === typeof globalThis.indexedDB || (Wr = new jr), Wr || (Wr = {
         cache: {},
-        setItem: function(RR, JR) {
-          this.cache[RR] = JR
+        setItem: function(rr, Sr) {
+          this.cache[rr] = Sr
         },
-        getItem: function(RR) {
-          this.cache[RR]
+        getItem: function(rr) {
+          this.cache[rr]
         },
-        removeItem: function(RR) {
-          delete this.cache[RR]
+        removeItem: function(rr) {
+          delete this.cache[rr]
         }
-      }), tR
+      }), Wr
     }
-    class ZR {
+    class jr {
       constructor() {
-        this.dbPromise = new Promise((RR => {
-          const JR = indexedDB.open("_colyseus_storage", 1);
-          JR.onupgradeneeded = () => JR.result.createObjectStore("store"), JR.onsuccess = () => RR(JR.result)
+        this.dbPromise = new Promise((rr => {
+          const Sr = indexedDB.open("_colyseus_storage", 1);
+          Sr.onupgradeneeded = () => Sr.result.createObjectStore("store"), Sr.onsuccess = () => rr(Sr.result)
         }))
       }
-      tx(RR, JR) {
-        return yR.__awaiter(this, void 0, void 0, (function*() {
-          const GR = (yield this.dbPromise).transaction("store", RR).objectStore("store");
-          return JR(GR)
+      tx(rr, Sr) {
+        return Zr.__awaiter(this, void 0, void 0, (function*() {
+          const Qr = (yield this.dbPromise).transaction("store", rr).objectStore("store");
+          return Sr(Qr)
         }))
       }
-      setItem(RR, JR) {
-        return this.tx("readwrite", (GR => GR.put(JR, RR))).then()
+      setItem(rr, Sr) {
+        return this.tx("readwrite", (Qr => Qr.put(Sr, rr))).then()
       }
-      getItem(RR) {
-        return yR.__awaiter(this, void 0, void 0, (function*() {
-          const JR = yield this.tx("readonly", (JR => JR.get(RR)));
-          return new Promise((RR => {
-            JR.onsuccess = () => RR(JR.result)
+      getItem(rr) {
+        return Zr.__awaiter(this, void 0, void 0, (function*() {
+          const Sr = yield this.tx("readonly", (Sr => Sr.get(rr)));
+          return new Promise((rr => {
+            Sr.onsuccess = () => rr(Sr.result)
           }))
         }))
       }
-      removeItem(RR) {
-        return this.tx("readwrite", (JR => JR.delete(RR))).then()
+      removeItem(rr) {
+        return this.tx("readwrite", (Sr => Sr.delete(rr))).then()
       }
     }
-    JR.getItem = function(RR, JR) {
-      const GR = uR().getItem(RR);
-      "undefined" !== typeof Promise && GR instanceof Promise ? GR.then((RR => JR(RR))) : JR(GR)
-    }, JR.removeItem = function(RR) {
-      uR().removeItem(RR)
-    }, JR.setItem = function(RR, JR) {
-      uR().setItem(RR, JR)
+    Sr.getItem = function(rr, Sr) {
+      const Qr = ar().getItem(rr);
+      "undefined" !== typeof Promise && Qr instanceof Promise ? Qr.then((rr => Sr(rr))) : Sr(Qr)
+    }, Sr.removeItem = function(rr) {
+      ar().removeItem(rr)
+    }, Sr.setItem = function(rr, Sr) {
+      ar().setItem(rr, Sr)
     }
   },
-  10530: (RR, JR) => {
-    JR.createNanoEvents = () => ({
-      emit(RR) {
-        let JR = this.events[RR] || [];
-        for (var GR = arguments.length, yR = new Array(GR > 1 ? GR - 1 : 0), tR = 1; tR < GR; tR++) yR[tR - 1] = arguments[tR];
-        for (let uR = 0, ZR = JR.length; uR < ZR; uR++) JR[uR](...yR)
+  10319: (rr, Sr) => {
+    Sr.createNanoEvents = () => ({
+      emit(rr) {
+        let Sr = this.events[rr] || [];
+        for (var Qr = arguments.length, Zr = new Array(Qr > 1 ? Qr - 1 : 0), Wr = 1; Wr < Qr; Wr++) Zr[Wr - 1] = arguments[Wr];
+        for (let ar = 0, jr = Sr.length; ar < jr; ar++) Sr[ar](...Zr)
       },
       events: {},
-      on(RR, JR) {
-        var GR;
-        return (null === (GR = this.events[RR]) || void 0 === GR ? void 0 : GR.push(JR)) || (this.events[RR] = [JR]), () => {
-          var GR;
-          this.events[RR] = null === (GR = this.events[RR]) || void 0 === GR ? void 0 : GR.filter((RR => JR !== RR))
+      on(rr, Sr) {
+        var Qr;
+        return (null === (Qr = this.events[rr]) || void 0 === Qr ? void 0 : Qr.push(Sr)) || (this.events[rr] = [Sr]), () => {
+          var Qr;
+          this.events[rr] = null === (Qr = this.events[rr]) || void 0 === Qr ? void 0 : Qr.filter((rr => Sr !== rr))
         }
       }
     })
   },
-  10537: (RR, JR) => {
-    class GR {
+  10324: (rr, Sr) => {
+    class Qr {
       constructor() {
         this.handlers = []
       }
-      register(RR) {
-        return this.handlers.push(RR), this
+      register(rr) {
+        return this.handlers.push(rr), this
       }
       invoke() {
-        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
-        this.handlers.forEach((RR => RR.apply(this, JR)))
+        for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
+        this.handlers.forEach((rr => rr.apply(this, Sr)))
       }
       invokeAsync() {
-        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
-        return Promise.all(this.handlers.map((RR => RR.apply(this, JR))))
+        for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
+        return Promise.all(this.handlers.map((rr => rr.apply(this, Sr))))
       }
-      remove(RR) {
-        const JR = this.handlers.indexOf(RR);
-        this.handlers[JR] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(rr) {
+        const Sr = this.handlers.indexOf(rr);
+        this.handlers[Sr] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    JR.EventEmitter = GR, JR.createSignal = function() {
-      const RR = new GR;
+    Sr.EventEmitter = Qr, Sr.createSignal = function() {
+      const rr = new Qr;
 
-      function JR(JR) {
-        return RR.register(JR, null === this)
+      function Sr(Sr) {
+        return rr.register(Sr, null === this)
       }
-      return JR.once = JR => {
-        const GR = function() {
-          for (var yR = arguments.length, tR = new Array(yR), uR = 0; uR < yR; uR++) tR[uR] = arguments[uR];
-          JR.apply(this, tR), RR.remove(GR)
+      return Sr.once = Sr => {
+        const Qr = function() {
+          for (var Zr = arguments.length, Wr = new Array(Zr), ar = 0; ar < Zr; ar++) Wr[ar] = arguments[ar];
+          Sr.apply(this, Wr), rr.remove(Qr)
         };
-        RR.register(GR)
-      }, JR.remove = JR => RR.remove(JR), JR.invoke = function() {
-        return RR.invoke(...arguments)
-      }, JR.invokeAsync = function() {
-        return RR.invokeAsync(...arguments)
-      }, JR.clear = () => RR.clear(), JR
+        rr.register(Qr)
+      }, Sr.remove = Sr => rr.remove(Sr), Sr.invoke = function() {
+        return rr.invoke(...arguments)
+      }, Sr.invokeAsync = function() {
+        return rr.invokeAsync(...arguments)
+      }, Sr.clear = () => rr.clear(), Sr
     }
   },
-  10480: (RR, JR) => {
-    var GR;
-    JR.CloseCode = void 0, (GR = JR.CloseCode || (JR.CloseCode = {}))[GR.CONSENTED = 4e3] = "CONSENTED", GR[GR.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class yR extends Error {
-      constructor(RR, JR) {
-        super(JR), this.name = "ServerError", this.code = RR
+  10265: (rr, Sr) => {
+    var Qr;
+    Sr.CloseCode = void 0, (Qr = Sr.CloseCode || (Sr.CloseCode = {}))[Qr.CONSENTED = 4e3] = "CONSENTED", Qr[Qr.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class Zr extends Error {
+      constructor(rr, Sr) {
+        super(Sr), this.name = "ServerError", this.code = rr
       }
     }
-    class tR extends Error {
-      constructor(RR) {
-        super(RR), this.name = "AbortError"
+    class Wr extends Error {
+      constructor(rr) {
+        super(rr), this.name = "AbortError"
       }
     }
-    JR.AbortError = tR, JR.ServerError = yR
+    Sr.AbortError = Wr, Sr.ServerError = Zr
   },
-  10456: (RR, JR, GR) => {
-    GR(10462);
-    var yR = GR(10465),
-      tR = GR(10516),
-      uR = GR(10482),
-      ZR = GR(10562),
-      qR = GR(10480),
-      iR = GR(10541),
-      fR = GR(10574),
-      VR = GR(10524);
-    VR.registerSerializer("schema", iR.zD), VR.registerSerializer("none", fR.NoneSerializer), JR.Client = yR.Client, JR.MatchMakeError = yR.MatchMakeError, Object.defineProperty(JR, "ErrorCode", {
+  10242: (rr, Sr, Qr) => {
+    Qr(10245);
+    var Zr = Qr(10252),
+      Wr = Qr(10303),
+      ar = Qr(10271),
+      jr = Qr(10352),
+      Ir = Qr(10265),
+      fr = Qr(10327),
+      Er = Qr(10363),
+      pr = Qr(10312);
+    pr.registerSerializer("schema", fr.kR), pr.registerSerializer("none", Er.NoneSerializer), Sr.Client = Zr.Client, Sr.MatchMakeError = Zr.MatchMakeError, Object.defineProperty(Sr, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return tR.ErrorCode
+        return Wr.ErrorCode
       }
-    }), Object.defineProperty(JR, "Protocol", {
+    }), Object.defineProperty(Sr, "Protocol", {
       enumerable: !0,
       get: function() {
-        return tR.Protocol
+        return Wr.Protocol
       }
-    }), JR.Lw = uR.Lw, JR.Auth = ZR.Auth, JR.ServerError = qR.ServerError, JR.zD = iR.zD, JR.getStateCallbacks = iR.getStateCallbacks, JR.registerSerializer = VR.registerSerializer
+    }), Sr.Ym = ar.Ym, Sr.Auth = jr.Auth, Sr.ServerError = Ir.ServerError, Sr.kR = fr.kR, Sr.getStateCallbacks = fr.getStateCallbacks, Sr.registerSerializer = pr.registerSerializer
   },
-  10462: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = RR => null !== RR && "object" === typeof RR && RR.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  10245: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = rr => null !== rr && "object" === typeof rr && rr.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  10574: (RR, JR) => {
-    JR.NoneSerializer = class {
-      setState(RR) {}
+  10363: (rr, Sr) => {
+    Sr.NoneSerializer = class {
+      setState(rr) {}
       getState() {
         return null
       }
-      patch(RR) {}
+      patch(rr) {}
       teardown() {}
-      handshake(RR) {}
+      handshake(rr) {}
     }
   },
-  10541: (RR, JR, GR) => {
-    var yR = GR(10496);
-    JR.zD = class {
-      setState(RR, JR) {
-        this.VK.decode(RR, JR)
+  10327: (rr, Sr, Qr) => {
+    var Zr = Qr(10287);
+    Sr.kR = class {
+      setState(rr, Sr) {
+        this.Ix.decode(rr, Sr)
       }
       getState() {
         return this.state
       }
-      patch(RR, JR) {
-        return this.VK.decode(RR, JR)
+      patch(rr, Sr) {
+        return this.Ix.decode(rr, Sr)
       }
       teardown() {
-        this.VK.root.clearRefs()
+        this.Ix.root.clearRefs()
       }
-      handshake(RR, JR) {
-        this.state ? (yR.Reflection.decode(RR, JR), this.VK = new yR.Decoder(this.state)) : (this.VK = yR.Reflection.decode(RR, JR), this.state = this.VK.state)
+      handshake(rr, Sr) {
+        this.state ? (Zr.Reflection.decode(rr, Sr), this.Ix = new Zr.Decoder(this.state)) : (this.Ix = Zr.Reflection.decode(rr, Sr), this.state = this.Ix.state)
       }
-    }, JR.getStateCallbacks = function(RR) {
+    }, Sr.getStateCallbacks = function(rr) {
       try {
-        return yR.getDecoderStateCallbacks(RR.jU.VK)
-      } catch (JR) {
+        return Zr.getDecoderStateCallbacks(rr.TY.Ix)
+      } catch (Sr) {
         return
       }
     }
   },
-  10524: (RR, JR) => {
-    const GR = {};
-    JR.getSerializer = function(RR) {
-      const JR = GR[RR];
-      if (!JR) throw new Error("missing serializer: " + RR);
-      return JR
-    }, JR.registerSerializer = function(RR, JR) {
-      GR[RR] = JR
+  10312: (rr, Sr) => {
+    const Qr = {};
+    Sr.getSerializer = function(rr) {
+      const Sr = Qr[rr];
+      if (!Sr) throw new Error("missing serializer: " + rr);
+      return Sr
+    }, Sr.registerSerializer = function(rr, Sr) {
+      Qr[rr] = Sr
     }
   },
-  10489: (RR, JR, GR) => {
-    var yR = GR(10474),
-      tR = GR(10496);
-    JR.H3TransportTransport = class {
-      constructor(RR) {
-        this.events = RR, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  10281: (rr, Sr, Qr) => {
+    var Zr = Qr(10256),
+      Wr = Qr(10287);
+    Sr.H3TransportTransport = class {
+      constructor(rr) {
+        this.events = rr, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const GR = JR.fingerprint && {
+      connect(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Qr = Sr.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(JR.fingerprint).buffer
+            value: new Uint8Array(Sr.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(RR, GR), this.wt.ready.then((RR => {
-          console.log("WebTransport ready!", RR), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((RR => {
-            this.reader = RR.value.readable.getReader(), this.writer = RR.value.writable.getWriter(), this.sendSeatReservation(JR.room.roomId, JR.sessionId, JR.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((RR => {
-            console.error("failed to read incoming stream", RR), console.error("TODO: close the connection")
+        this.wt = new WebTransport(rr, Qr), this.wt.ready.then((rr => {
+          console.log("WebTransport ready!", rr), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((rr => {
+            this.reader = rr.value.readable.getReader(), this.writer = rr.value.writable.getWriter(), this.sendSeatReservation(Sr.room.roomId, Sr.sessionId, Sr.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((rr => {
+            console.error("failed to read incoming stream", rr), console.error("TODO: close the connection")
           }))
-        })).catch((RR => {
-          console.log("WebTransport not ready!", RR), this._close()
-        })), this.wt.closed.then((RR => {
-          console.log("WebTransport closed w/ success", RR), this.events.onclose({
-            code: RR.closeCode,
-            reason: RR.reason
+        })).catch((rr => {
+          console.log("WebTransport not ready!", rr), this._close()
+        })), this.wt.closed.then((rr => {
+          console.log("WebTransport closed w/ success", rr), this.events.onclose({
+            code: rr.closeCode,
+            reason: rr.reason
           })
-        })).catch((RR => {
-          console.log("WebTransport closed w/ error", RR), this.events.onerror(RR), this.events.onclose({
-            code: RR.closeCode,
-            reason: RR.reason
+        })).catch((rr => {
+          console.log("WebTransport closed w/ error", rr), this.events.onerror(rr), this.events.onclose({
+            code: rr.closeCode,
+            reason: rr.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(RR) {
-        const JR = tR.encode.number(this.lengthPrefixBuffer, RR.length, {
+      send(rr) {
+        const Sr = Wr.encode.number(this.lengthPrefixBuffer, rr.length, {
             offset: 0
           }),
-          GR = new Uint8Array(JR + RR.length);
-        GR.set(this.lengthPrefixBuffer.subarray(0, JR), 0), GR.set(RR, JR), this.writer.write(GR)
+          Qr = new Uint8Array(Sr + rr.length);
+        Qr.set(this.lengthPrefixBuffer.subarray(0, Sr), 0), Qr.set(rr, Sr), this.writer.write(Qr)
       }
-      sendUnreliable(RR) {
-        const JR = tR.encode.number(this.lengthPrefixBuffer, RR.length, {
+      sendUnreliable(rr) {
+        const Sr = Wr.encode.number(this.lengthPrefixBuffer, rr.length, {
             offset: 0
           }),
-          GR = new Uint8Array(JR + RR.length);
-        GR.set(this.lengthPrefixBuffer.subarray(0, JR), 0), GR.set(RR, JR), this.unreliableWriter.write(GR)
+          Qr = new Uint8Array(Sr + rr.length);
+        Qr.set(this.lengthPrefixBuffer.subarray(0, Sr), 0), Qr.set(rr, Sr), this.unreliableWriter.write(Qr)
       }
-      close(RR, JR) {
+      close(rr, Sr) {
         try {
           this.wt.close({
-            closeCode: RR,
-            reason: JR
+            closeCode: rr,
+            reason: Sr
           })
-        } catch (GR) {
-          console.error(GR)
+        } catch (Qr) {
+          console.error(Qr)
         }
       }
       readIncomingData() {
-        return yR.__awaiter(this, void 0, void 0, (function*() {
-          let RR;
+        return Zr.__awaiter(this, void 0, void 0, (function*() {
+          let rr;
           for (; this.isOpen;) {
             try {
-              RR = yield this.reader.read();
-              const JR = RR.value,
-                GR = {
+              rr = yield this.reader.read();
+              const Sr = rr.value,
+                Qr = {
                   offset: 0
                 };
               do {
-                const RR = tR.decode.number(JR, GR);
+                const rr = Wr.decode.number(Sr, Qr);
                 this.events.onmessage({
-                  data: JR.subarray(GR.offset, GR.offset + RR)
-                }), GR.offset += RR
-              } while (GR.offset < JR.length)
-            } catch (JR) {
-              -1 === JR.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", JR);
+                  data: Sr.subarray(Qr.offset, Qr.offset + rr)
+                }), Qr.offset += rr
+              } while (Qr.offset < Sr.length)
+            } catch (Sr) {
+              -1 === Sr.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Sr);
               break
             }
-            if (RR.done) break
+            if (rr.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return yR.__awaiter(this, void 0, void 0, (function*() {
-          let RR;
+        return Zr.__awaiter(this, void 0, void 0, (function*() {
+          let rr;
           for (; this.isOpen;) {
             try {
-              RR = yield this.unreliableReader.read();
-              const JR = RR.value,
-                GR = {
+              rr = yield this.unreliableReader.read();
+              const Sr = rr.value,
+                Qr = {
                   offset: 0
                 };
               do {
-                const RR = tR.decode.number(JR, GR);
+                const rr = Wr.decode.number(Sr, Qr);
                 this.events.onmessage({
-                  data: JR.subarray(GR.offset, GR.offset + RR)
-                }), GR.offset += RR
-              } while (GR.offset < JR.length)
-            } catch (JR) {
-              -1 === JR.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", JR);
+                  data: Sr.subarray(Qr.offset, Qr.offset + rr)
+                }), Qr.offset += rr
+              } while (Qr.offset < Sr.length)
+            } catch (Sr) {
+              -1 === Sr.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Sr);
               break
             }
-            if (RR.done) break
+            if (rr.done) break
           }
         }))
       }
-      sendSeatReservation(RR, JR, GR) {
-        const yR = {
+      sendSeatReservation(rr, Sr, Qr) {
+        const Zr = {
             offset: 0
           },
-          uR = [];
-        tR.encode.string(uR, RR, yR), tR.encode.string(uR, JR, yR), GR && tR.encode.string(uR, GR, yR), this.writer.write(new Uint8Array(uR).buffer)
+          ar = [];
+        Wr.encode.string(ar, rr, Zr), Wr.encode.string(ar, Sr, Zr), Qr && Wr.encode.string(ar, Qr, Zr), this.writer.write(new Uint8Array(ar).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  10504: (RR, JR, GR) => {
-    var yR = GR(10512);
-    const tR = globalThis.WebSocket || yR;
-    JR.WebSocketTransport = class {
-      constructor(RR) {
-        this.events = RR
+  10296: (rr, Sr, Qr) => {
+    var Zr = Qr(10298);
+    const Wr = globalThis.WebSocket || Zr;
+    Sr.WebSocketTransport = class {
+      constructor(rr) {
+        this.events = rr
       }
-      send(RR) {
-        this.ws.send(RR)
+      send(rr) {
+        this.ws.send(rr)
       }
-      sendUnreliable(RR) {
+      sendUnreliable(rr) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(RR, JR) {
+      connect(rr, Sr) {
         try {
-          this.ws = new tR(RR, {
-            headers: JR,
+          this.ws = new Wr(rr, {
+            headers: Sr,
             protocols: this.protocols
           })
-        } catch (GR) {
-          this.ws = new tR(RR, this.protocols)
+        } catch (Qr) {
+          this.ws = new Wr(rr, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(RR, JR) {
-        this.ws.close(RR, JR)
+      close(rr, Sr) {
+        this.ws.close(rr, Sr)
       }
       get isOpen() {
-        return this.ws.readyState === tR.OPEN
+        return this.ws.readyState === Wr.OPEN
       }
     }
   },
-  10512: RR => {
-    RR.exports = function() {
+  10298: rr => {
+    rr.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  10554: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      JR.headers = RR.headers || {}, JR.statusMessage = RR.statusText, JR.statusCode = RR.status, JR.data = RR.response
+  10347: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
+      Sr.headers = rr.headers || {}, Sr.statusMessage = rr.statusText, Sr.statusCode = rr.status, Sr.data = rr.response
     }
 
-    function tR(RR, JR, GR) {
-      return new Promise((function(tR, uR) {
-        GR = GR || {};
-        var ZR, qR, iR, fR = new XMLHttpRequest,
-          VR = GR.body,
-          KR = GR.headers || {};
-        for (ZR in GR.timeout && (fR.timeout = GR.timeout), fR.ontimeout = fR.onerror = function(RR) {
-            RR.timeout = "timeout" == RR.type, uR(RR)
-          }, fR.onabort = function(RR) {
-            RR.aborted = !0, uR(RR)
-          }, fR.open(RR, JR.href || JR), fR.onload = function() {
-            for (iR = fR.getAllResponseHeaders().trim().split(/[\r\n]+/), yR(fR, fR); qR = iR.shift();) qR = qR.split(": "), fR.headers[qR.shift().toLowerCase()] = qR.join(": ");
-            if ((qR = fR.headers["content-type"]) && ~qR.indexOf("application/json")) try {
-              fR.data = JSON.parse(fR.data, GR.reviver)
-            } catch (RR) {
-              return yR(fR, RR), uR(RR)
-            }(fR.status >= 400 ? uR : tR)(fR)
-          }, typeof FormData < "u" && VR instanceof FormData || VR && "object" == typeof VR && (KR["content-type"] = "application/json", VR = JSON.stringify(VR)), fR.withCredentials = !!GR.withCredentials, KR) fR.setRequestHeader(ZR, KR[ZR]);
-        fR.send(VR), GR.signal && GR.signal.addEventListener("abort", (function() {
-          fR.abort()
+    function Wr(rr, Sr, Qr) {
+      return new Promise((function(Wr, ar) {
+        Qr = Qr || {};
+        var jr, Ir, fr, Er = new XMLHttpRequest,
+          pr = Qr.body,
+          xr = Qr.headers || {};
+        for (jr in Qr.timeout && (Er.timeout = Qr.timeout), Er.ontimeout = Er.onerror = function(rr) {
+            rr.timeout = "timeout" == rr.type, ar(rr)
+          }, Er.onabort = function(rr) {
+            rr.aborted = !0, ar(rr)
+          }, Er.open(rr, Sr.href || Sr), Er.onload = function() {
+            for (fr = Er.getAllResponseHeaders().trim().split(/[\r\n]+/), Zr(Er, Er); Ir = fr.shift();) Ir = Ir.split(": "), Er.headers[Ir.shift().toLowerCase()] = Ir.join(": ");
+            if ((Ir = Er.headers["content-type"]) && ~Ir.indexOf("application/json")) try {
+              Er.data = JSON.parse(Er.data, Qr.reviver)
+            } catch (rr) {
+              return Zr(Er, rr), ar(rr)
+            }(Er.status >= 400 ? ar : Wr)(Er)
+          }, typeof FormData < "u" && pr instanceof FormData || pr && "object" == typeof pr && (xr["content-type"] = "application/json", pr = JSON.stringify(pr)), Er.withCredentials = !!Qr.withCredentials, xr) Er.setRequestHeader(jr, xr[jr]);
+        Er.send(pr), Qr.signal && Qr.signal.addEventListener("abort", (function() {
+          Er.abort()
         }))
       }))
     }
-    GR.r(JR), GR.d(JR, {
-      del: () => iR,
-      get: () => uR,
-      patch: () => qR,
-      post: () => ZR,
-      put: () => fR,
-      send: () => tR
+    Qr.r(Sr), Qr.d(Sr, {
+      del: () => fr,
+      get: () => ar,
+      patch: () => Ir,
+      post: () => jr,
+      put: () => Er,
+      send: () => Wr
     });
-    var uR = tR.bind(tR, "GET"),
-      ZR = tR.bind(tR, "POST"),
-      qR = tR.bind(tR, "PATCH"),
-      iR = tR.bind(tR, "DELETE"),
-      fR = tR.bind(tR, "PUT")
+    var ar = Wr.bind(Wr, "GET"),
+      jr = Wr.bind(Wr, "POST"),
+      Ir = Wr.bind(Wr, "PATCH"),
+      fr = Wr.bind(Wr, "DELETE"),
+      Er = Wr.bind(Wr, "PUT")
   },
-  10543: (RR, JR, GR) => {
-    var yR, tR, uR;
-    GR.r(JR), GR.d(JR, {
-      ALWAYS: () => YJ,
-      C1: () => CR,
-      DECIMAL_FIT: () => QJ,
-      DECIMAL_ROUND: () => kJ,
-      Decoder: () => iJ,
-      Encoder: () => dJ,
-      FLOAT32_OPTIONS: () => rJ,
-      NEVER: () => EJ,
-      Packr: () => DJ,
-      RESERVE_START_SPACE: () => sJ,
-      RESET_BUFFER_MODE: () => TJ,
-      REUSE_BUFFER_MODE: () => FJ,
-      Unpackr: () => gR,
-      addExtension: () => IJ,
-      clearSource: () => ZJ,
-      decode: () => wJ,
-      decodeIter: () => hJ,
-      encode: () => jJ,
-      encodeIter: () => RG,
-      isNativeAccelerationEnabled: () => mR,
-      mapsAsObjects: () => GG,
-      pack: () => SJ,
-      roundFloat32: () => WJ,
-      unpack: () => VJ,
-      unpackMultiple: () => KJ,
-      useRecords: () => JG
+  10336: (rr, Sr, Qr) => {
+    var Zr, Wr, ar;
+    Qr.r(Sr), Qr.d(Sr, {
+      ALWAYS: () => oS,
+      C1: () => Kr,
+      DECIMAL_FIT: () => JS,
+      DECIMAL_ROUND: () => bS,
+      Decoder: () => fS,
+      Encoder: () => cS,
+      FLOAT32_OPTIONS: () => NS,
+      NEVER: () => FS,
+      Packr: () => RS,
+      RESERVE_START_SPACE: () => sS,
+      RESET_BUFFER_MODE: () => dS,
+      REUSE_BUFFER_MODE: () => DS,
+      Unpackr: () => Lr,
+      addExtension: () => kS,
+      clearSource: () => jS,
+      decode: () => mS,
+      decodeIter: () => uS,
+      encode: () => wS,
+      encodeIter: () => rQ,
+      isNativeAccelerationEnabled: () => Ar,
+      mapsAsObjects: () => QQ,
+      pack: () => iS,
+      roundFloat32: () => nS,
+      unpack: () => pS,
+      unpackMultiple: () => xS,
+      useRecords: () => SQ
     });
     try {
-      yR = new TextDecoder
-    } catch (yG) {}
-    var ZR = 0;
-    const qR = [];
-    var iR, fR, VR, KR, wR, rR = qR,
-      eR = 0,
-      aR = {},
-      LR = 0,
-      nR = 0,
-      UR = [],
-      WR = {
+      Zr = new TextDecoder
+    } catch (ZQ) {}
+    var jr = 0;
+    const Ir = [];
+    var fr, Er, pr, xr, mr, Nr = Ir,
+      Ur = 0,
+      tr = {},
+      hr = 0,
+      zr = 0,
+      Yr = [],
+      nr = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class AR {}
-    const CR = new AR;
-    CR.name = "MessagePack 0xC1";
-    var XR, MR, BR, lR = !1,
-      pR = 2;
+    class er {}
+    const Kr = new er;
+    Kr.name = "MessagePack 0xC1";
+    var yr, Br, Tr, vr = !1,
+      Or = 2;
     try {
       new Function("")
-    } catch (yG) {
-      pR = 1 / 0
+    } catch (ZQ) {
+      Or = 1 / 0
     }
-    class gR {
-      constructor(RR) {
-        RR && (!1 === RR.useRecords && void 0 === RR.mapsAsObjects && (RR.mapsAsObjects = !0), RR.sequential && !1 !== RR.trusted && (RR.trusted = !0, RR.structures || 0 == RR.useRecords || (RR.structures = [], RR.maxSharedStructures || (RR.maxSharedStructures = 0))), RR.structures ? RR.structures.sharedLength = RR.structures.length : RR.getStructures && ((RR.structures = []).uninitialized = !0, RR.structures.sharedLength = 0), RR.int64AsNumber && (RR.int64AsType = "number")), Object.assign(this, RR)
+    class Lr {
+      constructor(rr) {
+        rr && (!1 === rr.useRecords && void 0 === rr.mapsAsObjects && (rr.mapsAsObjects = !0), rr.sequential && !1 !== rr.trusted && (rr.trusted = !0, rr.structures || 0 == rr.useRecords || (rr.structures = [], rr.maxSharedStructures || (rr.maxSharedStructures = 0))), rr.structures ? rr.structures.sharedLength = rr.structures.length : rr.getStructures && ((rr.structures = []).uninitialized = !0, rr.structures.sharedLength = 0), rr.int64AsNumber && (rr.int64AsType = "number")), Object.assign(this, rr)
       }
-      unpack(RR, JR) {
-        if (tR) return uJ((() => (ZJ(), this ? this.unpack(RR, JR) : gR.prototype.unpack.call(WR, RR, JR))));
-        RR.buffer || RR.constructor !== ArrayBuffer || (RR = "undefined" !== typeof Buffer ? Buffer.from(RR) : new Uint8Array(RR)), "object" === typeof JR ? (uR = JR.end || RR.length, ZR = JR.start || 0) : (ZR = 0, uR = JR > -1 ? JR : RR.length), eR = 0, nR = 0, fR = null, rR = qR, VR = null, tR = RR;
+      unpack(rr, Sr) {
+        if (Wr) return aS((() => (jS(), this ? this.unpack(rr, Sr) : Lr.prototype.unpack.call(nr, rr, Sr))));
+        rr.buffer || rr.constructor !== ArrayBuffer || (rr = "undefined" !== typeof Buffer ? Buffer.from(rr) : new Uint8Array(rr)), "object" === typeof Sr ? (ar = Sr.end || rr.length, jr = Sr.start || 0) : (jr = 0, ar = Sr > -1 ? Sr : rr.length), Ur = 0, zr = 0, Er = null, Nr = Ir, pr = null, Wr = rr;
         try {
-          wR = RR.dataView || (RR.dataView = new DataView(RR.buffer, RR.byteOffset, RR.byteLength))
-        } catch (yG) {
-          if (tR = null, RR instanceof Uint8Array) throw yG;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (RR && "object" == typeof RR ? RR.constructor.name : typeof RR))
+          mr = rr.dataView || (rr.dataView = new DataView(rr.buffer, rr.byteOffset, rr.byteLength))
+        } catch (ZQ) {
+          if (Wr = null, rr instanceof Uint8Array) throw ZQ;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (rr && "object" == typeof rr ? rr.constructor.name : typeof rr))
         }
-        if (this instanceof gR) {
-          if (aR = this, this.structures) return iR = this.structures, bR(JR);
-          (!iR || iR.length > 0) && (iR = [])
-        } else aR = WR, (!iR || iR.length > 0) && (iR = []);
-        return bR(JR)
+        if (this instanceof Lr) {
+          if (tr = this, this.structures) return fr = this.structures, lr(Sr);
+          (!fr || fr.length > 0) && (fr = [])
+        } else tr = nr, (!fr || fr.length > 0) && (fr = []);
+        return lr(Sr)
       }
-      unpackMultiple(RR, JR) {
-        let GR, yR = 0;
+      unpackMultiple(rr, Sr) {
+        let Qr, Zr = 0;
         try {
-          lR = !0;
-          let tR = RR.length,
-            uR = this ? this.unpack(RR, tR) : fJ.unpack(RR, tR);
-          if (!JR) {
-            for (GR = [uR]; ZR < tR;) yR = ZR, GR.push(bR());
-            return GR
+          vr = !0;
+          let Wr = rr.length,
+            ar = this ? this.unpack(rr, Wr) : ES.unpack(rr, Wr);
+          if (!Sr) {
+            for (Qr = [ar]; jr < Wr;) Zr = jr, Qr.push(lr());
+            return Qr
           }
-          if (!1 === JR(uR, yR, ZR)) return;
-          for (; ZR < tR;)
-            if (yR = ZR, !1 === JR(bR(), yR, ZR)) return
-        } catch (yG) {
-          throw yG.lastPosition = yR, yG.values = GR, yG
+          if (!1 === Sr(ar, Zr, jr)) return;
+          for (; jr < Wr;)
+            if (Zr = jr, !1 === Sr(lr(), Zr, jr)) return
+        } catch (ZQ) {
+          throw ZQ.lastPosition = Zr, ZQ.values = Qr, ZQ
         } finally {
-          lR = !1, ZJ()
+          vr = !1, jS()
         }
       }
-      _mergeStructures(RR, JR) {
-        MR && (RR = MR.call(this, RR)), RR = RR || [], Object.isFrozen(RR) && (RR = RR.map((RR => RR.slice(0))));
-        for (let GR = 0, yR = RR.length; GR < yR; GR++) {
-          let JR = RR[GR];
-          JR && (JR.isShared = !0, GR >= 32 && (JR.highByte = GR - 32 >> 5))
+      _mergeStructures(rr, Sr) {
+        Br && (rr = Br.call(this, rr)), rr = rr || [], Object.isFrozen(rr) && (rr = rr.map((rr => rr.slice(0))));
+        for (let Qr = 0, Zr = rr.length; Qr < Zr; Qr++) {
+          let Sr = rr[Qr];
+          Sr && (Sr.isShared = !0, Qr >= 32 && (Sr.highByte = Qr - 32 >> 5))
         }
-        RR.sharedLength = RR.length;
-        for (let GR in JR || [])
-          if (GR >= 0) {
-            let yR = RR[GR],
-              tR = JR[GR];
-            tR && (yR && ((RR.restoreStructures || (RR.restoreStructures = []))[GR] = yR), RR[GR] = tR)
-          } return this.structures = RR
+        rr.sharedLength = rr.length;
+        for (let Qr in Sr || [])
+          if (Qr >= 0) {
+            let Zr = rr[Qr],
+              Wr = Sr[Qr];
+            Wr && (Zr && ((rr.restoreStructures || (rr.restoreStructures = []))[Qr] = Zr), rr[Qr] = Wr)
+          } return this.structures = rr
       }
-      decode(RR, JR) {
-        return this.unpack(RR, JR)
+      decode(rr, Sr) {
+        return this.unpack(rr, Sr)
       }
     }
 
-    function bR(RR) {
+    function lr(rr) {
       try {
-        if (!aR.trusted && !lR) {
-          let RR = iR.sharedLength || 0;
-          RR < iR.length && (iR.length = RR)
+        if (!tr.trusted && !vr) {
+          let rr = fr.sharedLength || 0;
+          rr < fr.length && (fr.length = rr)
         }
-        let JR;
-        if (aR.randomAccessStructure && tR[ZR] < 64 && tR[ZR] >= 32 && XR ? (JR = XR(tR, ZR, uR, aR), tR = null, RR && RR.lazy || !JR || (JR = JR.toJSON()), ZR = uR) : JR = OR(), VR && (ZR = VR.postBundlePosition, VR = null), lR && (iR.restoreStructures = null), ZR == uR) iR && iR.restoreStructures && vR(), iR = null, tR = null, KR && (KR = null);
+        let Sr;
+        if (tr.randomAccessStructure && Wr[jr] < 64 && Wr[jr] >= 32 && yr ? (Sr = yr(Wr, jr, ar, tr), Wr = null, rr && rr.lazy || !Sr || (Sr = Sr.toJSON()), jr = ar) : Sr = Pr(), pr && (jr = pr.postBundlePosition, pr = null), vr && (fr.restoreStructures = null), jr == ar) fr && fr.restoreStructures && Xr(), fr = null, Wr = null, xr && (xr = null);
         else {
-          if (ZR > uR) throw new Error("Unexpected end of MessagePack data");
-          if (!lR) {
-            let RR;
+          if (jr > ar) throw new Error("Unexpected end of MessagePack data");
+          if (!vr) {
+            let rr;
             try {
-              RR = JSON.stringify(JR, ((RR, JR) => "bigint" === typeof JR ? `${JR}n` : JR)).slice(0, 100)
-            } catch (yG) {
-              RR = "(JSON view not available " + yG + ")"
+              rr = JSON.stringify(Sr, ((rr, Sr) => "bigint" === typeof Sr ? `${Sr}n` : Sr)).slice(0, 100)
+            } catch (ZQ) {
+              rr = "(JSON view not available " + ZQ + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + RR)
+            throw new Error("Data read, but end of buffer not reached " + rr)
           }
         }
-        return JR
-      } catch (yG) {
-        throw iR && iR.restoreStructures && vR(), ZJ(), (yG instanceof RangeError || yG.message.startsWith("Unexpected end of buffer") || ZR > uR) && (yG.incomplete = !0), yG
+        return Sr
+      } catch (ZQ) {
+        throw fr && fr.restoreStructures && Xr(), jS(), (ZQ instanceof RangeError || ZQ.message.startsWith("Unexpected end of buffer") || jr > ar) && (ZQ.incomplete = !0), ZQ
       }
     }
 
-    function vR() {
-      for (let RR in iR.restoreStructures) iR[RR] = iR.restoreStructures[RR];
-      iR.restoreStructures = null
+    function Xr() {
+      for (let rr in fr.restoreStructures) fr[rr] = fr.restoreStructures[rr];
+      fr.restoreStructures = null
     }
 
-    function OR() {
-      let RR = tR[ZR++];
-      if (RR < 160) {
-        if (RR < 128) {
-          if (RR < 64) return RR;
+    function Pr() {
+      let rr = Wr[jr++];
+      if (rr < 160) {
+        if (rr < 128) {
+          if (rr < 64) return rr;
           {
-            let JR = iR[63 & RR] || aR.getStructures && HR()[63 & RR];
-            return JR ? (JR.read || (JR.read = NR(JR, 63 & RR)), JR.read()) : RR
+            let Sr = fr[63 & rr] || tr.getStructures && gr()[63 & rr];
+            return Sr ? (Sr.read || (Sr.read = qr(Sr, 63 & rr)), Sr.read()) : rr
           }
         }
-        if (RR < 144) {
-          if (RR -= 128, aR.mapsAsObjects) {
-            let JR = {};
-            for (let GR = 0; GR < RR; GR++) {
-              let RR = sR();
-              "__proto__" === RR && (RR = "__proto_"), JR[RR] = OR()
+        if (rr < 144) {
+          if (rr -= 128, tr.mapsAsObjects) {
+            let Sr = {};
+            for (let Qr = 0; Qr < rr; Qr++) {
+              let rr = sr();
+              "__proto__" === rr && (rr = "__proto_"), Sr[rr] = Pr()
             }
-            return JR
+            return Sr
           } {
-            let JR = new Map;
-            for (let GR = 0; GR < RR; GR++) JR.set(OR(), OR());
-            return JR
+            let Sr = new Map;
+            for (let Qr = 0; Qr < rr; Qr++) Sr.set(Pr(), Pr());
+            return Sr
           }
         } {
-          RR -= 144;
-          let JR = new Array(RR);
-          for (let GR = 0; GR < RR; GR++) JR[GR] = OR();
-          return aR.freezeData ? Object.freeze(JR) : JR
+          rr -= 144;
+          let Sr = new Array(rr);
+          for (let Qr = 0; Qr < rr; Qr++) Sr[Qr] = Pr();
+          return tr.freezeData ? Object.freeze(Sr) : Sr
         }
       }
-      if (RR < 192) {
-        let JR = RR - 160;
-        if (nR >= ZR) return fR.slice(ZR - LR, (ZR += JR) - LR);
-        if (0 == nR && uR < 140) {
-          let RR = JR < 16 ? YR(JR) : ER(JR);
-          if (null != RR) return RR
+      if (rr < 192) {
+        let Sr = rr - 160;
+        if (zr >= jr) return Er.slice(jr - hr, (jr += Sr) - hr);
+        if (0 == zr && ar < 140) {
+          let rr = Sr < 16 ? or(Sr) : Fr(Sr);
+          if (null != rr) return rr
         }
-        return oR(JR)
+        return Cr(Sr)
       } {
-        let JR;
-        switch (RR) {
+        let Sr;
+        switch (rr) {
           case 192:
             return null;
           case 193:
-            return VR ? (JR = OR(), JR > 0 ? VR[1].slice(VR.position1, VR.position1 += JR) : VR[0].slice(VR.position0, VR.position0 -= JR)) : CR;
+            return pr ? (Sr = Pr(), Sr > 0 ? pr[1].slice(pr.position1, pr.position1 += Sr) : pr[0].slice(pr.position0, pr.position0 -= Sr)) : Kr;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (JR = tR[ZR++], void 0 === JR) throw new Error("Unexpected end of buffer");
-            return QR(JR);
+            if (Sr = Wr[jr++], void 0 === Sr) throw new Error("Unexpected end of buffer");
+            return Jr(Sr);
           case 197:
-            return JR = wR.getUint16(ZR), ZR += 2, QR(JR);
+            return Sr = mr.getUint16(jr), jr += 2, Jr(Sr);
           case 198:
-            return JR = wR.getUint32(ZR), ZR += 4, QR(JR);
+            return Sr = mr.getUint32(jr), jr += 4, Jr(Sr);
           case 199:
-            return FR(tR[ZR++]);
+            return Dr(Wr[jr++]);
           case 200:
-            return JR = wR.getUint16(ZR), ZR += 2, FR(JR);
+            return Sr = mr.getUint16(jr), jr += 2, Dr(Sr);
           case 201:
-            return JR = wR.getUint32(ZR), ZR += 4, FR(JR);
+            return Sr = mr.getUint32(jr), jr += 4, Dr(Sr);
           case 202:
-            if (JR = wR.getFloat32(ZR), aR.useFloat32 > 2) {
-              let RR = qJ[(127 & tR[ZR]) << 1 | tR[ZR + 1] >> 7];
-              return ZR += 4, (RR * JR + (JR > 0 ? .5 : -.5) | 0) / RR
+            if (Sr = mr.getFloat32(jr), tr.useFloat32 > 2) {
+              let rr = IS[(127 & Wr[jr]) << 1 | Wr[jr + 1] >> 7];
+              return jr += 4, (rr * Sr + (Sr > 0 ? .5 : -.5) | 0) / rr
             }
-            return ZR += 4, JR;
+            return jr += 4, Sr;
           case 203:
-            return JR = wR.getFloat64(ZR), ZR += 8, JR;
+            return Sr = mr.getFloat64(jr), jr += 8, Sr;
           case 204:
-            return tR[ZR++];
+            return Wr[jr++];
           case 205:
-            return JR = wR.getUint16(ZR), ZR += 2, JR;
+            return Sr = mr.getUint16(jr), jr += 2, Sr;
           case 206:
-            return JR = wR.getUint32(ZR), ZR += 4, JR;
+            return Sr = mr.getUint32(jr), jr += 4, Sr;
           case 207:
-            return "number" === aR.int64AsType ? (JR = 4294967296 * wR.getUint32(ZR), JR += wR.getUint32(ZR + 4)) : "string" === aR.int64AsType ? JR = wR.getBigUint64(ZR).toString() : "auto" === aR.int64AsType ? (JR = wR.getBigUint64(ZR), JR <= BigInt(2) << BigInt(52) && (JR = Number(JR))) : JR = wR.getBigUint64(ZR), ZR += 8, JR;
+            return "number" === tr.int64AsType ? (Sr = 4294967296 * mr.getUint32(jr), Sr += mr.getUint32(jr + 4)) : "string" === tr.int64AsType ? Sr = mr.getBigUint64(jr).toString() : "auto" === tr.int64AsType ? (Sr = mr.getBigUint64(jr), Sr <= BigInt(2) << BigInt(52) && (Sr = Number(Sr))) : Sr = mr.getBigUint64(jr), jr += 8, Sr;
           case 208:
-            return wR.getInt8(ZR++);
+            return mr.getInt8(jr++);
           case 209:
-            return JR = wR.getInt16(ZR), ZR += 2, JR;
+            return Sr = mr.getInt16(jr), jr += 2, Sr;
           case 210:
-            return JR = wR.getInt32(ZR), ZR += 4, JR;
+            return Sr = mr.getInt32(jr), jr += 4, Sr;
           case 211:
-            return "number" === aR.int64AsType ? (JR = 4294967296 * wR.getInt32(ZR), JR += wR.getUint32(ZR + 4)) : "string" === aR.int64AsType ? JR = wR.getBigInt64(ZR).toString() : "auto" === aR.int64AsType ? (JR = wR.getBigInt64(ZR), JR >= BigInt(-2) << BigInt(52) && JR <= BigInt(2) << BigInt(52) && (JR = Number(JR))) : JR = wR.getBigInt64(ZR), ZR += 8, JR;
+            return "number" === tr.int64AsType ? (Sr = 4294967296 * mr.getInt32(jr), Sr += mr.getUint32(jr + 4)) : "string" === tr.int64AsType ? Sr = mr.getBigInt64(jr).toString() : "auto" === tr.int64AsType ? (Sr = mr.getBigInt64(jr), Sr >= BigInt(-2) << BigInt(52) && Sr <= BigInt(2) << BigInt(52) && (Sr = Number(Sr))) : Sr = mr.getBigInt64(jr), jr += 8, Sr;
           case 212:
-            if (JR = tR[ZR++], 114 == JR) return RJ(63 & tR[ZR++]);
+            if (Sr = Wr[jr++], 114 == Sr) return rS(63 & Wr[jr++]);
             {
-              let RR = UR[JR];
-              if (RR) return RR.read ? (ZR++, RR.read(OR())) : RR.noBuffer ? (ZR++, RR()) : RR(tR.subarray(ZR, ++ZR));
-              throw new Error("Unknown extension " + JR)
+              let rr = Yr[Sr];
+              if (rr) return rr.read ? (jr++, rr.read(Pr())) : rr.noBuffer ? (jr++, rr()) : rr(Wr.subarray(jr, ++jr));
+              throw new Error("Unknown extension " + Sr)
             }
           case 213:
-            return JR = tR[ZR], 114 == JR ? (ZR++, RJ(63 & tR[ZR++], tR[ZR++])) : FR(2);
+            return Sr = Wr[jr], 114 == Sr ? (jr++, rS(63 & Wr[jr++], Wr[jr++])) : Dr(2);
           case 214:
-            return FR(4);
+            return Dr(4);
           case 215:
-            return FR(8);
+            return Dr(8);
           case 216:
-            return FR(16);
+            return Dr(16);
           case 217:
-            return JR = tR[ZR++], nR >= ZR ? fR.slice(ZR - LR, (ZR += JR) - LR) : cR(JR);
+            return Sr = Wr[jr++], zr >= jr ? Er.slice(jr - hr, (jr += Sr) - hr) : Mr(Sr);
           case 218:
-            return JR = wR.getUint16(ZR), nR >= (ZR += 2) ? fR.slice(ZR - LR, (ZR += JR) - LR) : PR(JR);
+            return Sr = mr.getUint16(jr), zr >= (jr += 2) ? Er.slice(jr - hr, (jr += Sr) - hr) : Gr(Sr);
           case 219:
-            return JR = wR.getUint32(ZR), nR >= (ZR += 4) ? fR.slice(ZR - LR, (ZR += JR) - LR) : IR(JR);
+            return Sr = mr.getUint32(jr), zr >= (jr += 4) ? Er.slice(jr - hr, (jr += Sr) - hr) : kr(Sr);
           case 220:
-            return JR = wR.getUint16(ZR), ZR += 2, SR(JR);
+            return Sr = mr.getUint16(jr), jr += 2, ir(Sr);
           case 221:
-            return JR = wR.getUint32(ZR), ZR += 4, SR(JR);
+            return Sr = mr.getUint32(jr), jr += 4, ir(Sr);
           case 222:
-            return JR = wR.getUint16(ZR), ZR += 2, jR(JR);
+            return Sr = mr.getUint16(jr), jr += 2, wr(Sr);
           case 223:
-            return JR = wR.getUint32(ZR), ZR += 4, jR(JR);
+            return Sr = mr.getUint32(jr), jr += 4, wr(Sr);
           default:
-            if (RR >= 224) return RR - 256;
-            if (void 0 === RR) {
-              let RR = new Error("Unexpected end of MessagePack data");
-              throw RR.incomplete = !0, RR
+            if (rr >= 224) return rr - 256;
+            if (void 0 === rr) {
+              let rr = new Error("Unexpected end of MessagePack data");
+              throw rr.incomplete = !0, rr
             }
-            throw new Error("Unknown MessagePack token " + RR)
+            throw new Error("Unknown MessagePack token " + rr)
         }
       }
     }
-    const xR = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Hr = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function NR(RR, JR) {
-      function GR() {
-        if (GR.count++ > pR) {
-          let GR = RR.read = new Function("r", "return function(){return " + (aR.freezeData ? "Object.freeze" : "") + "({" + RR.map((RR => "__proto__" === RR ? "__proto_:r()" : xR.test(RR) ? RR + ":r()" : "[" + JSON.stringify(RR) + "]:r()")).join(",") + "})}")(OR);
-          return 0 === RR.highByte && (RR.read = DR(JR, RR.read)), GR()
+    function qr(rr, Sr) {
+      function Qr() {
+        if (Qr.count++ > Or) {
+          let Qr = rr.read = new Function("r", "return function(){return " + (tr.freezeData ? "Object.freeze" : "") + "({" + rr.map((rr => "__proto__" === rr ? "__proto_:r()" : Hr.test(rr) ? rr + ":r()" : "[" + JSON.stringify(rr) + "]:r()")).join(",") + "})}")(Pr);
+          return 0 === rr.highByte && (rr.read = Rr(Sr, rr.read)), Qr()
         }
-        let yR = {};
-        for (let JR = 0, GR = RR.length; JR < GR; JR++) {
-          let GR = RR[JR];
-          "__proto__" === GR && (GR = "__proto_"), yR[GR] = OR()
+        let Zr = {};
+        for (let Sr = 0, Qr = rr.length; Sr < Qr; Sr++) {
+          let Qr = rr[Sr];
+          "__proto__" === Qr && (Qr = "__proto_"), Zr[Qr] = Pr()
         }
-        return aR.freezeData ? Object.freeze(yR) : yR
+        return tr.freezeData ? Object.freeze(Zr) : Zr
       }
-      return GR.count = 0, 0 === RR.highByte ? DR(JR, GR) : GR
+      return Qr.count = 0, 0 === rr.highByte ? Rr(Sr, Qr) : Qr
     }
-    const DR = (RR, JR) => function() {
-      let GR = tR[ZR++];
-      if (0 === GR) return JR();
-      let yR = RR < 32 ? -(RR + (GR << 5)) : RR + (GR << 5),
-        uR = iR[yR] || HR()[yR];
-      if (!uR) throw new Error("Record id is not defined for " + yR);
-      return uR.read || (uR.read = NR(uR, RR)), uR.read()
+    const Rr = (rr, Sr) => function() {
+      let Qr = Wr[jr++];
+      if (0 === Qr) return Sr();
+      let Zr = rr < 32 ? -(rr + (Qr << 5)) : rr + (Qr << 5),
+        ar = fr[Zr] || gr()[Zr];
+      if (!ar) throw new Error("Record id is not defined for " + Zr);
+      return ar.read || (ar.read = qr(ar, rr)), ar.read()
     };
 
-    function HR() {
-      let RR = uJ((() => (tR = null, aR.getStructures())));
-      return iR = aR._mergeStructures(RR, iR)
+    function gr() {
+      let rr = aS((() => (Wr = null, tr.getStructures())));
+      return fr = tr._mergeStructures(rr, fr)
     }
-    var oR = zR,
-      cR = zR,
-      PR = zR,
-      IR = zR;
-    let mR = !1;
+    var Cr = Vr,
+      Mr = Vr,
+      Gr = Vr,
+      kr = Vr;
+    let Ar = !1;
 
-    function zR(RR) {
-      let JR;
-      if (RR < 16 && (JR = YR(RR))) return JR;
-      if (RR > 64 && yR) return yR.decode(tR.subarray(ZR, ZR += RR));
-      const GR = ZR + RR,
-        uR = [];
-      for (JR = ""; ZR < GR;) {
-        const RR = tR[ZR++];
-        if (0 === (128 & RR)) uR.push(RR);
-        else if (192 === (224 & RR)) {
-          const JR = 63 & tR[ZR++];
-          uR.push((31 & RR) << 6 | JR)
-        } else if (224 === (240 & RR)) {
-          const JR = 63 & tR[ZR++],
-            GR = 63 & tR[ZR++];
-          uR.push((31 & RR) << 12 | JR << 6 | GR)
-        } else if (240 === (248 & RR)) {
-          let JR = (7 & RR) << 18 | (63 & tR[ZR++]) << 12 | (63 & tR[ZR++]) << 6 | 63 & tR[ZR++];
-          JR > 65535 && (JR -= 65536, uR.push(JR >>> 10 & 1023 | 55296), JR = 56320 | 1023 & JR), uR.push(JR)
-        } else uR.push(RR);
-        uR.length >= 4096 && (JR += dR.apply(String, uR), uR.length = 0)
+    function Vr(rr) {
+      let Sr;
+      if (rr < 16 && (Sr = or(rr))) return Sr;
+      if (rr > 64 && Zr) return Zr.decode(Wr.subarray(jr, jr += rr));
+      const Qr = jr + rr,
+        ar = [];
+      for (Sr = ""; jr < Qr;) {
+        const rr = Wr[jr++];
+        if (0 === (128 & rr)) ar.push(rr);
+        else if (192 === (224 & rr)) {
+          const Sr = 63 & Wr[jr++];
+          ar.push((31 & rr) << 6 | Sr)
+        } else if (224 === (240 & rr)) {
+          const Sr = 63 & Wr[jr++],
+            Qr = 63 & Wr[jr++];
+          ar.push((31 & rr) << 12 | Sr << 6 | Qr)
+        } else if (240 === (248 & rr)) {
+          let Sr = (7 & rr) << 18 | (63 & Wr[jr++]) << 12 | (63 & Wr[jr++]) << 6 | 63 & Wr[jr++];
+          Sr > 65535 && (Sr -= 65536, ar.push(Sr >>> 10 & 1023 | 55296), Sr = 56320 | 1023 & Sr), ar.push(Sr)
+        } else ar.push(rr);
+        ar.length >= 4096 && (Sr += cr.apply(String, ar), ar.length = 0)
       }
-      return uR.length > 0 && (JR += dR.apply(String, uR)), JR
+      return ar.length > 0 && (Sr += cr.apply(String, ar)), Sr
     }
 
-    function SR(RR) {
-      let JR = new Array(RR);
-      for (let GR = 0; GR < RR; GR++) JR[GR] = OR();
-      return aR.freezeData ? Object.freeze(JR) : JR
+    function ir(rr) {
+      let Sr = new Array(rr);
+      for (let Qr = 0; Qr < rr; Qr++) Sr[Qr] = Pr();
+      return tr.freezeData ? Object.freeze(Sr) : Sr
     }
 
-    function jR(RR) {
-      if (aR.mapsAsObjects) {
-        let JR = {};
-        for (let GR = 0; GR < RR; GR++) {
-          let RR = sR();
-          "__proto__" === RR && (RR = "__proto_"), JR[RR] = OR()
+    function wr(rr) {
+      if (tr.mapsAsObjects) {
+        let Sr = {};
+        for (let Qr = 0; Qr < rr; Qr++) {
+          let rr = sr();
+          "__proto__" === rr && (rr = "__proto_"), Sr[rr] = Pr()
         }
-        return JR
+        return Sr
       } {
-        let JR = new Map;
-        for (let GR = 0; GR < RR; GR++) JR.set(OR(), OR());
-        return JR
+        let Sr = new Map;
+        for (let Qr = 0; Qr < rr; Qr++) Sr.set(Pr(), Pr());
+        return Sr
       }
     }
-    var dR = String.fromCharCode;
+    var cr = String.fromCharCode;
 
-    function ER(RR) {
-      let JR = ZR,
-        GR = new Array(RR);
-      for (let yR = 0; yR < RR; yR++) {
-        const RR = tR[ZR++];
-        if ((128 & RR) > 0) return void(ZR = JR);
-        GR[yR] = RR
+    function Fr(rr) {
+      let Sr = jr,
+        Qr = new Array(rr);
+      for (let Zr = 0; Zr < rr; Zr++) {
+        const rr = Wr[jr++];
+        if ((128 & rr) > 0) return void(jr = Sr);
+        Qr[Zr] = rr
       }
-      return dR.apply(String, GR)
+      return cr.apply(String, Qr)
     }
 
-    function YR(RR) {
-      if (RR < 4) {
-        if (RR < 2) {
-          if (0 === RR) return "";
+    function or(rr) {
+      if (rr < 4) {
+        if (rr < 2) {
+          if (0 === rr) return "";
           {
-            let RR = tR[ZR++];
-            return (128 & RR) > 1 ? void(ZR -= 1) : dR(RR)
+            let rr = Wr[jr++];
+            return (128 & rr) > 1 ? void(jr -= 1) : cr(rr)
           }
         } {
-          let JR = tR[ZR++],
-            GR = tR[ZR++];
-          if ((128 & JR) > 0 || (128 & GR) > 0) return void(ZR -= 2);
-          if (RR < 3) return dR(JR, GR);
-          let yR = tR[ZR++];
-          return (128 & yR) > 0 ? void(ZR -= 3) : dR(JR, GR, yR)
+          let Sr = Wr[jr++],
+            Qr = Wr[jr++];
+          if ((128 & Sr) > 0 || (128 & Qr) > 0) return void(jr -= 2);
+          if (rr < 3) return cr(Sr, Qr);
+          let Zr = Wr[jr++];
+          return (128 & Zr) > 0 ? void(jr -= 3) : cr(Sr, Qr, Zr)
         }
       } {
-        let JR = tR[ZR++],
-          GR = tR[ZR++],
-          yR = tR[ZR++],
-          uR = tR[ZR++];
-        if ((128 & JR) > 0 || (128 & GR) > 0 || (128 & yR) > 0 || (128 & uR) > 0) return void(ZR -= 4);
-        if (RR < 6) {
-          if (4 === RR) return dR(JR, GR, yR, uR);
+        let Sr = Wr[jr++],
+          Qr = Wr[jr++],
+          Zr = Wr[jr++],
+          ar = Wr[jr++];
+        if ((128 & Sr) > 0 || (128 & Qr) > 0 || (128 & Zr) > 0 || (128 & ar) > 0) return void(jr -= 4);
+        if (rr < 6) {
+          if (4 === rr) return cr(Sr, Qr, Zr, ar);
           {
-            let RR = tR[ZR++];
-            return (128 & RR) > 0 ? void(ZR -= 5) : dR(JR, GR, yR, uR, RR)
+            let rr = Wr[jr++];
+            return (128 & rr) > 0 ? void(jr -= 5) : cr(Sr, Qr, Zr, ar, rr)
           }
         }
-        if (RR < 8) {
-          let qR = tR[ZR++],
-            iR = tR[ZR++];
-          if ((128 & qR) > 0 || (128 & iR) > 0) return void(ZR -= 6);
-          if (RR < 7) return dR(JR, GR, yR, uR, qR, iR);
-          let fR = tR[ZR++];
-          return (128 & fR) > 0 ? void(ZR -= 7) : dR(JR, GR, yR, uR, qR, iR, fR)
+        if (rr < 8) {
+          let Ir = Wr[jr++],
+            fr = Wr[jr++];
+          if ((128 & Ir) > 0 || (128 & fr) > 0) return void(jr -= 6);
+          if (rr < 7) return cr(Sr, Qr, Zr, ar, Ir, fr);
+          let Er = Wr[jr++];
+          return (128 & Er) > 0 ? void(jr -= 7) : cr(Sr, Qr, Zr, ar, Ir, fr, Er)
         } {
-          let qR = tR[ZR++],
-            iR = tR[ZR++],
-            fR = tR[ZR++],
-            VR = tR[ZR++];
-          if ((128 & qR) > 0 || (128 & iR) > 0 || (128 & fR) > 0 || (128 & VR) > 0) return void(ZR -= 8);
-          if (RR < 10) {
-            if (8 === RR) return dR(JR, GR, yR, uR, qR, iR, fR, VR);
+          let Ir = Wr[jr++],
+            fr = Wr[jr++],
+            Er = Wr[jr++],
+            pr = Wr[jr++];
+          if ((128 & Ir) > 0 || (128 & fr) > 0 || (128 & Er) > 0 || (128 & pr) > 0) return void(jr -= 8);
+          if (rr < 10) {
+            if (8 === rr) return cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr);
             {
-              let RR = tR[ZR++];
-              return (128 & RR) > 0 ? void(ZR -= 9) : dR(JR, GR, yR, uR, qR, iR, fR, VR, RR)
+              let rr = Wr[jr++];
+              return (128 & rr) > 0 ? void(jr -= 9) : cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, rr)
             }
           }
-          if (RR < 12) {
-            let KR = tR[ZR++],
-              wR = tR[ZR++];
-            if ((128 & KR) > 0 || (128 & wR) > 0) return void(ZR -= 10);
-            if (RR < 11) return dR(JR, GR, yR, uR, qR, iR, fR, VR, KR, wR);
-            let rR = tR[ZR++];
-            return (128 & rR) > 0 ? void(ZR -= 11) : dR(JR, GR, yR, uR, qR, iR, fR, VR, KR, wR, rR)
+          if (rr < 12) {
+            let xr = Wr[jr++],
+              mr = Wr[jr++];
+            if ((128 & xr) > 0 || (128 & mr) > 0) return void(jr -= 10);
+            if (rr < 11) return cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, xr, mr);
+            let Nr = Wr[jr++];
+            return (128 & Nr) > 0 ? void(jr -= 11) : cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, xr, mr, Nr)
           } {
-            let KR = tR[ZR++],
-              wR = tR[ZR++],
-              rR = tR[ZR++],
-              eR = tR[ZR++];
-            if ((128 & KR) > 0 || (128 & wR) > 0 || (128 & rR) > 0 || (128 & eR) > 0) return void(ZR -= 12);
-            if (RR < 14) {
-              if (12 === RR) return dR(JR, GR, yR, uR, qR, iR, fR, VR, KR, wR, rR, eR);
+            let xr = Wr[jr++],
+              mr = Wr[jr++],
+              Nr = Wr[jr++],
+              Ur = Wr[jr++];
+            if ((128 & xr) > 0 || (128 & mr) > 0 || (128 & Nr) > 0 || (128 & Ur) > 0) return void(jr -= 12);
+            if (rr < 14) {
+              if (12 === rr) return cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, xr, mr, Nr, Ur);
               {
-                let RR = tR[ZR++];
-                return (128 & RR) > 0 ? void(ZR -= 13) : dR(JR, GR, yR, uR, qR, iR, fR, VR, KR, wR, rR, eR, RR)
+                let rr = Wr[jr++];
+                return (128 & rr) > 0 ? void(jr -= 13) : cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, xr, mr, Nr, Ur, rr)
               }
             } {
-              let aR = tR[ZR++],
-                LR = tR[ZR++];
-              if ((128 & aR) > 0 || (128 & LR) > 0) return void(ZR -= 14);
-              if (RR < 15) return dR(JR, GR, yR, uR, qR, iR, fR, VR, KR, wR, rR, eR, aR, LR);
-              let nR = tR[ZR++];
-              return (128 & nR) > 0 ? void(ZR -= 15) : dR(JR, GR, yR, uR, qR, iR, fR, VR, KR, wR, rR, eR, aR, LR, nR)
+              let tr = Wr[jr++],
+                hr = Wr[jr++];
+              if ((128 & tr) > 0 || (128 & hr) > 0) return void(jr -= 14);
+              if (rr < 15) return cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, xr, mr, Nr, Ur, tr, hr);
+              let zr = Wr[jr++];
+              return (128 & zr) > 0 ? void(jr -= 15) : cr(Sr, Qr, Zr, ar, Ir, fr, Er, pr, xr, mr, Nr, Ur, tr, hr, zr)
             }
           }
         }
       }
     }
 
-    function kR() {
-      let RR, JR = tR[ZR++];
-      if (JR < 192) RR = JR - 160;
-      else switch (JR) {
+    function br() {
+      let rr, Sr = Wr[jr++];
+      if (Sr < 192) rr = Sr - 160;
+      else switch (Sr) {
         case 217:
-          RR = tR[ZR++];
+          rr = Wr[jr++];
           break;
         case 218:
-          RR = wR.getUint16(ZR), ZR += 2;
+          rr = mr.getUint16(jr), jr += 2;
           break;
         case 219:
-          RR = wR.getUint32(ZR), ZR += 4;
+          rr = mr.getUint32(jr), jr += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return zR(RR)
+      return Vr(rr)
     }
 
-    function QR(RR) {
-      return aR.copyBuffers ? Uint8Array.prototype.slice.call(tR, ZR, ZR += RR) : tR.subarray(ZR, ZR += RR)
+    function Jr(rr) {
+      return tr.copyBuffers ? Uint8Array.prototype.slice.call(Wr, jr, jr += rr) : Wr.subarray(jr, jr += rr)
     }
 
-    function FR(RR) {
-      let JR = tR[ZR++];
-      if (UR[JR]) {
-        let GR;
-        return UR[JR](tR.subarray(ZR, GR = ZR += RR), (RR => {
-          ZR = RR;
+    function Dr(rr) {
+      let Sr = Wr[jr++];
+      if (Yr[Sr]) {
+        let Qr;
+        return Yr[Sr](Wr.subarray(jr, Qr = jr += rr), (rr => {
+          jr = rr;
           try {
-            return OR()
+            return Pr()
           } finally {
-            ZR = GR
+            jr = Qr
           }
         }))
       }
-      throw new Error("Unknown extension type " + JR)
+      throw new Error("Unknown extension type " + Sr)
     }
-    var TR = new Array(4096);
+    var dr = new Array(4096);
 
-    function sR() {
-      let RR = tR[ZR++];
-      if (!(RR >= 160 && RR < 192)) return ZR--, hR(OR());
-      if (RR -= 160, nR >= ZR) return fR.slice(ZR - LR, (ZR += RR) - LR);
-      if (!(0 == nR && uR < 180)) return oR(RR);
-      let JR, GR = 4095 & (RR << 5 ^ (RR > 1 ? wR.getUint16(ZR) : RR > 0 ? tR[ZR] : 0)),
-        yR = TR[GR],
-        qR = ZR,
-        iR = ZR + RR - 3,
-        VR = 0;
-      if (yR && yR.bytes == RR) {
-        for (; qR < iR;) {
-          if (JR = wR.getUint32(qR), JR != yR[VR++]) {
-            qR = 1879048192;
+    function sr() {
+      let rr = Wr[jr++];
+      if (!(rr >= 160 && rr < 192)) return jr--, ur(Pr());
+      if (rr -= 160, zr >= jr) return Er.slice(jr - hr, (jr += rr) - hr);
+      if (!(0 == zr && ar < 180)) return Cr(rr);
+      let Sr, Qr = 4095 & (rr << 5 ^ (rr > 1 ? mr.getUint16(jr) : rr > 0 ? Wr[jr] : 0)),
+        Zr = dr[Qr],
+        Ir = jr,
+        fr = jr + rr - 3,
+        pr = 0;
+      if (Zr && Zr.bytes == rr) {
+        for (; Ir < fr;) {
+          if (Sr = mr.getUint32(Ir), Sr != Zr[pr++]) {
+            Ir = 1879048192;
             break
           }
-          qR += 4
+          Ir += 4
         }
-        for (iR += 3; qR < iR;)
-          if (JR = tR[qR++], JR != yR[VR++]) {
-            qR = 1879048192;
+        for (fr += 3; Ir < fr;)
+          if (Sr = Wr[Ir++], Sr != Zr[pr++]) {
+            Ir = 1879048192;
             break
-          } if (qR === iR) return ZR = qR, yR.string;
-        iR -= 3, qR = ZR
+          } if (Ir === fr) return jr = Ir, Zr.string;
+        fr -= 3, Ir = jr
       }
-      for (yR = [], TR[GR] = yR, yR.bytes = RR; qR < iR;) JR = wR.getUint32(qR), yR.push(JR), qR += 4;
-      for (iR += 3; qR < iR;) JR = tR[qR++], yR.push(JR);
-      let KR = RR < 16 ? YR(RR) : ER(RR);
-      return yR.string = null != KR ? KR : oR(RR)
+      for (Zr = [], dr[Qr] = Zr, Zr.bytes = rr; Ir < fr;) Sr = mr.getUint32(Ir), Zr.push(Sr), Ir += 4;
+      for (fr += 3; Ir < fr;) Sr = Wr[Ir++], Zr.push(Sr);
+      let xr = rr < 16 ? or(rr) : Fr(rr);
+      return Zr.string = null != xr ? xr : Cr(rr)
     }
 
-    function hR(RR) {
-      if ("string" === typeof RR) return RR;
-      if ("number" === typeof RR || "boolean" === typeof RR || "bigint" === typeof RR) return RR.toString();
-      if (null == RR) return RR + "";
-      if (aR.allowArraysInMapKeys && Array.isArray(RR) && RR.flat().every((RR => ["string", "number", "boolean", "bigint"].includes(typeof RR)))) return RR.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof RR)
+    function ur(rr) {
+      if ("string" === typeof rr) return rr;
+      if ("number" === typeof rr || "boolean" === typeof rr || "bigint" === typeof rr) return rr.toString();
+      if (null == rr) return rr + "";
+      if (tr.allowArraysInMapKeys && Array.isArray(rr) && rr.flat().every((rr => ["string", "number", "boolean", "bigint"].includes(typeof rr)))) return rr.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof rr)
     }
-    const RJ = (RR, JR) => {
-      let GR = OR().map(hR),
-        yR = RR;
-      void 0 !== JR && (RR = RR < 32 ? -((JR << 5) + RR) : (JR << 5) + RR, GR.highByte = JR);
-      let tR = iR[RR];
-      return tR && (tR.isShared || lR) && ((iR.restoreStructures || (iR.restoreStructures = []))[RR] = tR), iR[RR] = GR, GR.read = NR(GR, yR), GR.read()
+    const rS = (rr, Sr) => {
+      let Qr = Pr().map(ur),
+        Zr = rr;
+      void 0 !== Sr && (rr = rr < 32 ? -((Sr << 5) + rr) : (Sr << 5) + rr, Qr.highByte = Sr);
+      let Wr = fr[rr];
+      return Wr && (Wr.isShared || vr) && ((fr.restoreStructures || (fr.restoreStructures = []))[rr] = Wr), fr[rr] = Qr, Qr.read = qr(Qr, Zr), Qr.read()
     };
-    UR[0] = () => {}, UR[0].noBuffer = !0, UR[66] = RR => {
-      let JR = RR.length,
-        GR = BigInt(128 & RR[0] ? RR[0] - 256 : RR[0]);
-      for (let yR = 1; yR < JR; yR++) GR <<= BigInt(8), GR += BigInt(RR[yR]);
-      return GR
+    Yr[0] = () => {}, Yr[0].noBuffer = !0, Yr[66] = rr => {
+      let Sr = rr.length,
+        Qr = BigInt(128 & rr[0] ? rr[0] - 256 : rr[0]);
+      for (let Zr = 1; Zr < Sr; Zr++) Qr <<= BigInt(8), Qr += BigInt(rr[Zr]);
+      return Qr
     };
-    let JJ = {
+    let SS = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    UR[101] = () => {
-      let RR = OR();
-      return (JJ[RR[0]] || Error)(RR[1], {
-        cause: RR[2]
+    Yr[101] = () => {
+      let rr = Pr();
+      return (SS[rr[0]] || Error)(rr[1], {
+        cause: rr[2]
       })
-    }, UR[105] = RR => {
-      if (!1 === aR.structuredClone) throw new Error("Structured clone extension is disabled");
-      let JR = wR.getUint32(ZR - 4);
-      KR || (KR = new Map);
-      let GR, yR = tR[ZR];
-      GR = yR >= 144 && yR < 160 || 220 == yR || 221 == yR ? [] : {};
-      let uR = {
-        target: GR
+    }, Yr[105] = rr => {
+      if (!1 === tr.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Sr = mr.getUint32(jr - 4);
+      xr || (xr = new Map);
+      let Qr, Zr = Wr[jr];
+      Qr = Zr >= 144 && Zr < 160 || 220 == Zr || 221 == Zr ? [] : {};
+      let ar = {
+        target: Qr
       };
-      KR.set(JR, uR);
-      let qR = OR();
-      return uR.used ? Object.assign(GR, qR) : (uR.target = qR, qR)
-    }, UR[112] = RR => {
-      if (!1 === aR.structuredClone) throw new Error("Structured clone extension is disabled");
-      let JR = wR.getUint32(ZR - 4),
-        GR = KR.get(JR);
-      return GR.used = !0, GR.target
-    }, UR[115] = () => new Set(OR());
-    const GJ = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((RR => RR + "Array"));
-    let yJ = "object" === typeof globalThis ? globalThis : window;
-    UR[116] = RR => {
-      let JR = RR[0],
-        GR = GJ[JR];
-      if (!GR) {
-        if (16 === JR) {
-          let JR = new ArrayBuffer(RR.length - 1);
-          return new Uint8Array(JR).set(RR.subarray(1)), JR
+      xr.set(Sr, ar);
+      let Ir = Pr();
+      return ar.used ? Object.assign(Qr, Ir) : (ar.target = Ir, Ir)
+    }, Yr[112] = rr => {
+      if (!1 === tr.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Sr = mr.getUint32(jr - 4),
+        Qr = xr.get(Sr);
+      return Qr.used = !0, Qr.target
+    }, Yr[115] = () => new Set(Pr());
+    const QS = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((rr => rr + "Array"));
+    let ZS = "object" === typeof globalThis ? globalThis : window;
+    Yr[116] = rr => {
+      let Sr = rr[0],
+        Qr = QS[Sr];
+      if (!Qr) {
+        if (16 === Sr) {
+          let Sr = new ArrayBuffer(rr.length - 1);
+          return new Uint8Array(Sr).set(rr.subarray(1)), Sr
         }
-        throw new Error("Could not find typed array for code " + JR)
+        throw new Error("Could not find typed array for code " + Sr)
       }
-      return new yJ[GR](Uint8Array.prototype.slice.call(RR, 1).buffer)
-    }, UR[120] = () => {
-      let RR = OR();
-      return new RegExp(RR[0], RR[1])
+      return new ZS[Qr](Uint8Array.prototype.slice.call(rr, 1).buffer)
+    }, Yr[120] = () => {
+      let rr = Pr();
+      return new RegExp(rr[0], rr[1])
     };
-    const tJ = [];
+    const WS = [];
 
-    function uJ(RR) {
-      BR && BR();
-      let JR = uR,
-        GR = ZR,
-        yR = eR,
-        qR = LR,
-        UR = nR,
-        WR = fR,
-        AR = rR,
-        CR = KR,
-        XR = VR,
-        MR = new Uint8Array(tR.slice(0, uR)),
-        pR = iR,
-        gR = iR.slice(0, iR.length),
-        bR = aR,
-        vR = lR,
-        OR = RR();
-      return uR = JR, ZR = GR, eR = yR, LR = qR, nR = UR, fR = WR, rR = AR, KR = CR, VR = XR, tR = MR, lR = vR, (iR = pR).splice(0, iR.length, ...gR), aR = bR, wR = new DataView(tR.buffer, tR.byteOffset, tR.byteLength), OR
+    function aS(rr) {
+      Tr && Tr();
+      let Sr = ar,
+        Qr = jr,
+        Zr = Ur,
+        Ir = hr,
+        Yr = zr,
+        nr = Er,
+        er = Nr,
+        Kr = xr,
+        yr = pr,
+        Br = new Uint8Array(Wr.slice(0, ar)),
+        Or = fr,
+        Lr = fr.slice(0, fr.length),
+        lr = tr,
+        Xr = vr,
+        Pr = rr();
+      return ar = Sr, jr = Qr, Ur = Zr, hr = Ir, zr = Yr, Er = nr, Nr = er, xr = Kr, pr = yr, Wr = Br, vr = Xr, (fr = Or).splice(0, fr.length, ...Lr), tr = lr, mr = new DataView(Wr.buffer, Wr.byteOffset, Wr.byteLength), Pr
     }
 
-    function ZJ() {
-      tR = null, KR = null, iR = null
+    function jS() {
+      Wr = null, xr = null, fr = null
     }
-    UR[98] = RR => {
-      let JR = (RR[0] << 24) + (RR[1] << 16) + (RR[2] << 8) + RR[3],
-        GR = ZR;
-      return ZR += JR - RR.length, VR = tJ, (VR = [kR(), kR()]).position0 = 0, VR.position1 = 0, VR.postBundlePosition = ZR, ZR = GR, OR()
-    }, UR[255] = RR => 4 == RR.length ? new Date(1e3 * (16777216 * RR[0] + (RR[1] << 16) + (RR[2] << 8) + RR[3])) : 8 == RR.length ? new Date(((RR[0] << 22) + (RR[1] << 14) + (RR[2] << 6) + (RR[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & RR[3]) + 16777216 * RR[4] + (RR[5] << 16) + (RR[6] << 8) + RR[7])) : 12 == RR.length ? new Date(((RR[0] << 24) + (RR[1] << 16) + (RR[2] << 8) + RR[3]) / 1e6 + 1e3 * ((128 & RR[4] ? -281474976710656 : 0) + 1099511627776 * RR[6] + 4294967296 * RR[7] + 16777216 * RR[8] + (RR[9] << 16) + (RR[10] << 8) + RR[11])) : new Date("invalid");
-    const qJ = new Array(147);
-    for (let tG = 0; tG < 256; tG++) qJ[tG] = +("1e" + Math.floor(45.15 - .30103 * tG));
-    const iJ = gR;
-    var fJ = new gR({
+    Yr[98] = rr => {
+      let Sr = (rr[0] << 24) + (rr[1] << 16) + (rr[2] << 8) + rr[3],
+        Qr = jr;
+      return jr += Sr - rr.length, pr = WS, (pr = [br(), br()]).position0 = 0, pr.position1 = 0, pr.postBundlePosition = jr, jr = Qr, Pr()
+    }, Yr[255] = rr => 4 == rr.length ? new Date(1e3 * (16777216 * rr[0] + (rr[1] << 16) + (rr[2] << 8) + rr[3])) : 8 == rr.length ? new Date(((rr[0] << 22) + (rr[1] << 14) + (rr[2] << 6) + (rr[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & rr[3]) + 16777216 * rr[4] + (rr[5] << 16) + (rr[6] << 8) + rr[7])) : 12 == rr.length ? new Date(((rr[0] << 24) + (rr[1] << 16) + (rr[2] << 8) + rr[3]) / 1e6 + 1e3 * ((128 & rr[4] ? -281474976710656 : 0) + 1099511627776 * rr[6] + 4294967296 * rr[7] + 16777216 * rr[8] + (rr[9] << 16) + (rr[10] << 8) + rr[11])) : new Date("invalid");
+    const IS = new Array(147);
+    for (let WQ = 0; WQ < 256; WQ++) IS[WQ] = +("1e" + Math.floor(45.15 - .30103 * WQ));
+    const fS = Lr;
+    var ES = new Lr({
       useRecords: !1
     });
-    const VJ = fJ.unpack,
-      KJ = fJ.unpackMultiple,
-      wJ = fJ.unpack,
-      rJ = {
+    const pS = ES.unpack,
+      xS = ES.unpackMultiple,
+      mS = ES.unpack,
+      NS = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let eJ, aJ, LJ, nJ = new Float32Array(1),
-      UJ = new Uint8Array(nJ.buffer, 0, 4);
+    let US, tS, hS, zS = new Float32Array(1),
+      YS = new Uint8Array(zS.buffer, 0, 4);
 
-    function WJ(RR) {
-      nJ[0] = RR;
-      let JR = qJ[(127 & UJ[3]) << 1 | UJ[2] >> 7];
-      return (JR * RR + (RR > 0 ? .5 : -.5) | 0) / JR
+    function nS(rr) {
+      zS[0] = rr;
+      let Sr = IS[(127 & YS[3]) << 1 | YS[2] >> 7];
+      return (Sr * rr + (rr > 0 ? .5 : -.5) | 0) / Sr
     }
     try {
-      eJ = new TextEncoder
-    } catch (yG) {}
-    const AJ = "undefined" !== typeof Buffer,
-      CJ = AJ ? function(RR) {
-        return Buffer.allocUnsafeSlow(RR)
+      US = new TextEncoder
+    } catch (ZQ) {}
+    const eS = "undefined" !== typeof Buffer,
+      KS = eS ? function(rr) {
+        return Buffer.allocUnsafeSlow(rr)
       } : Uint8Array,
-      XJ = AJ ? Buffer : Uint8Array,
-      MJ = AJ ? 4294967296 : 2144337920;
-    let BJ, lJ, pJ, gJ, bJ, vJ = 0,
-      OJ = null;
-    const xJ = /[\u0080-\uFFFF]/,
-      NJ = Symbol("record-id");
-    class DJ extends gR {
-      constructor(RR) {
-        let JR, GR, yR, tR;
-        super(RR), this.offset = 0;
-        let uR = XJ.prototype.utf8Write ? function(RR, JR) {
-            return BJ.utf8Write(RR, JR, BJ.byteLength - JR)
-          } : !(!eJ || !eJ.encodeInto) && function(RR, JR) {
-            return eJ.encodeInto(RR, BJ.subarray(JR)).written
+      yS = eS ? Buffer : Uint8Array,
+      BS = eS ? 4294967296 : 2144337920;
+    let TS, vS, OS, LS, lS, XS = 0,
+      PS = null;
+    const HS = /[\u0080-\uFFFF]/,
+      qS = Symbol("record-id");
+    class RS extends Lr {
+      constructor(rr) {
+        let Sr, Qr, Zr, Wr;
+        super(rr), this.offset = 0;
+        let ar = yS.prototype.utf8Write ? function(rr, Sr) {
+            return TS.utf8Write(rr, Sr, TS.byteLength - Sr)
+          } : !(!US || !US.encodeInto) && function(rr, Sr) {
+            return US.encodeInto(rr, TS.subarray(Sr)).written
           },
-          ZR = this;
-        RR || (RR = {});
-        let qR = RR && RR.sequential,
-          iR = RR.structures || RR.saveStructures,
-          fR = RR.maxSharedStructures;
-        if (null == fR && (fR = iR ? 32 : 0), fR > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        RR.structuredClone && void 0 == RR.moreTypes && (this.moreTypes = !0);
-        let VR = RR.maxOwnStructures;
-        null == VR && (VR = iR ? 32 : 64), this.structures || 0 == RR.useRecords || (this.structures = []);
-        let KR = fR > 32 || VR + fR > 64,
-          wR = fR + 64,
-          rR = fR + VR + 64;
-        if (rR > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let eR = [],
-          aR = 0,
-          LR = 0;
-        this.pack = this.encode = function(RR, uR) {
-          if (BJ || (BJ = new CJ(8192), pJ = BJ.dataView || (BJ.dataView = new DataView(BJ.buffer, 0, 8192)), vJ = 0), gJ = BJ.length - 10, gJ - vJ < 2048 ? (BJ = new CJ(BJ.length), pJ = BJ.dataView || (BJ.dataView = new DataView(BJ.buffer, 0, BJ.length)), gJ = BJ.length - 10, vJ = 0) : vJ = vJ + 7 & 2147483640, JR = vJ, uR & sJ && (vJ += 255 & uR), tR = ZR.structuredClone ? new Map : null, ZR.bundleStrings && "string" !== typeof RR ? (OJ = [], OJ.size = 1 / 0) : OJ = null, yR = ZR.structures, yR) {
-            yR.uninitialized && (yR = ZR._mergeStructures(ZR.getStructures()));
-            let RR = yR.sharedLength || 0;
-            if (RR > fR) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + yR.sharedLength);
-            if (!yR.transitions) {
-              yR.transitions = Object.create(null);
-              for (let JR = 0; JR < RR; JR++) {
-                let RR = yR[JR];
-                if (!RR) continue;
-                let GR, tR = yR.transitions;
-                for (let JR = 0, yR = RR.length; JR < yR; JR++) {
-                  let yR = RR[JR];
-                  GR = tR[yR], GR || (GR = tR[yR] = Object.create(null)), tR = GR
+          jr = this;
+        rr || (rr = {});
+        let Ir = rr && rr.sequential,
+          fr = rr.structures || rr.saveStructures,
+          Er = rr.maxSharedStructures;
+        if (null == Er && (Er = fr ? 32 : 0), Er > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        rr.structuredClone && void 0 == rr.moreTypes && (this.moreTypes = !0);
+        let pr = rr.maxOwnStructures;
+        null == pr && (pr = fr ? 32 : 64), this.structures || 0 == rr.useRecords || (this.structures = []);
+        let xr = Er > 32 || pr + Er > 64,
+          mr = Er + 64,
+          Nr = Er + pr + 64;
+        if (Nr > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let Ur = [],
+          tr = 0,
+          hr = 0;
+        this.pack = this.encode = function(rr, ar) {
+          if (TS || (TS = new KS(8192), OS = TS.dataView || (TS.dataView = new DataView(TS.buffer, 0, 8192)), XS = 0), LS = TS.length - 10, LS - XS < 2048 ? (TS = new KS(TS.length), OS = TS.dataView || (TS.dataView = new DataView(TS.buffer, 0, TS.length)), LS = TS.length - 10, XS = 0) : XS = XS + 7 & 2147483640, Sr = XS, ar & sS && (XS += 255 & ar), Wr = jr.structuredClone ? new Map : null, jr.bundleStrings && "string" !== typeof rr ? (PS = [], PS.size = 1 / 0) : PS = null, Zr = jr.structures, Zr) {
+            Zr.uninitialized && (Zr = jr._mergeStructures(jr.getStructures()));
+            let rr = Zr.sharedLength || 0;
+            if (rr > Er) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Zr.sharedLength);
+            if (!Zr.transitions) {
+              Zr.transitions = Object.create(null);
+              for (let Sr = 0; Sr < rr; Sr++) {
+                let rr = Zr[Sr];
+                if (!rr) continue;
+                let Qr, Wr = Zr.transitions;
+                for (let Sr = 0, Zr = rr.length; Sr < Zr; Sr++) {
+                  let Zr = rr[Sr];
+                  Qr = Wr[Zr], Qr || (Qr = Wr[Zr] = Object.create(null)), Wr = Qr
                 }
-                tR[NJ] = JR + 64
+                Wr[qS] = Sr + 64
               }
-              this.lastNamedStructuresLength = RR
+              this.lastNamedStructuresLength = rr
             }
-            qR || (yR.nextId = RR + 64)
+            Ir || (Zr.nextId = rr + 64)
           }
-          let iR;
-          GR && (GR = !1);
+          let fr;
+          Qr && (Qr = !1);
           try {
-            ZR.randomAccessStructure && RR && RR.constructor && RR.constructor === Object ? gR(RR) : WR(RR);
-            let GR = OJ;
-            if (OJ && PJ(JR, WR, 0), tR && tR.idsToInsert) {
-              let RR = tR.idsToInsert.sort(((RR, JR) => RR.offset > JR.offset ? 1 : -1)),
-                yR = RR.length,
-                uR = -1;
-              for (; GR && yR > 0;) {
-                let tR = RR[--yR].offset + JR;
-                tR < GR.stringsPosition + JR && -1 === uR && (uR = 0), tR > GR.position + JR ? uR >= 0 && (uR += 6) : (uR >= 0 && (pJ.setUint32(GR.position + JR, pJ.getUint32(GR.position + JR) + uR), uR = -1), GR = GR.previous, yR++)
+            jr.randomAccessStructure && rr && rr.constructor && rr.constructor === Object ? Lr(rr) : nr(rr);
+            let Qr = PS;
+            if (PS && GS(Sr, nr, 0), Wr && Wr.idsToInsert) {
+              let rr = Wr.idsToInsert.sort(((rr, Sr) => rr.offset > Sr.offset ? 1 : -1)),
+                Zr = rr.length,
+                ar = -1;
+              for (; Qr && Zr > 0;) {
+                let Wr = rr[--Zr].offset + Sr;
+                Wr < Qr.stringsPosition + Sr && -1 === ar && (ar = 0), Wr > Qr.position + Sr ? ar >= 0 && (ar += 6) : (ar >= 0 && (OS.setUint32(Qr.position + Sr, OS.getUint32(Qr.position + Sr) + ar), ar = -1), Qr = Qr.previous, Zr++)
               }
-              uR >= 0 && GR && pJ.setUint32(GR.position + JR, pJ.getUint32(GR.position + JR) + uR), vJ += 6 * RR.length, vJ > gJ && BR(vJ), ZR.offset = vJ;
-              let qR = function(RR, JR) {
-                let GR, yR = 6 * JR.length,
-                  tR = RR.length - yR;
-                for (; GR = JR.pop();) {
-                  let JR = GR.offset,
-                    uR = GR.id;
-                  RR.copyWithin(JR + yR, JR, tR), yR -= 6;
-                  let ZR = JR + yR;
-                  RR[ZR++] = 214, RR[ZR++] = 105, RR[ZR++] = uR >> 24, RR[ZR++] = uR >> 16 & 255, RR[ZR++] = uR >> 8 & 255, RR[ZR++] = 255 & uR, tR = JR
+              ar >= 0 && Qr && OS.setUint32(Qr.position + Sr, OS.getUint32(Qr.position + Sr) + ar), XS += 6 * rr.length, XS > LS && Tr(XS), jr.offset = XS;
+              let Ir = function(rr, Sr) {
+                let Qr, Zr = 6 * Sr.length,
+                  Wr = rr.length - Zr;
+                for (; Qr = Sr.pop();) {
+                  let Sr = Qr.offset,
+                    ar = Qr.id;
+                  rr.copyWithin(Sr + Zr, Sr, Wr), Zr -= 6;
+                  let jr = Sr + Zr;
+                  rr[jr++] = 214, rr[jr++] = 105, rr[jr++] = ar >> 24, rr[jr++] = ar >> 16 & 255, rr[jr++] = ar >> 8 & 255, rr[jr++] = 255 & ar, Wr = Sr
                 }
-                return RR
-              }(BJ.subarray(JR, vJ), RR);
-              return tR = null, qR
+                return rr
+              }(TS.subarray(Sr, XS), rr);
+              return Wr = null, Ir
             }
-            return ZR.offset = vJ, uR & FJ ? (BJ.start = JR, BJ.end = vJ, BJ) : BJ.subarray(JR, vJ)
-          } catch (yG) {
-            throw iR = yG, yG
+            return jr.offset = XS, ar & DS ? (TS.start = Sr, TS.end = XS, TS) : TS.subarray(Sr, XS)
+          } catch (ZQ) {
+            throw fr = ZQ, ZQ
           } finally {
-            if (yR && (nR(), GR && ZR.saveStructures)) {
-              let GR = yR.sharedLength || 0,
-                tR = BJ.subarray(JR, vJ),
-                qR = mJ(yR, ZR);
-              if (!iR) return !1 === ZR.saveStructures(qR, qR.isCompatible) ? ZR.pack(RR, uR) : (ZR.lastNamedStructuresLength = GR, BJ.length > 1073741824 && (BJ = null), tR)
+            if (Zr && (zr(), Qr && jr.saveStructures)) {
+              let Qr = Zr.sharedLength || 0,
+                Wr = TS.subarray(Sr, XS),
+                Ir = AS(Zr, jr);
+              if (!fr) return !1 === jr.saveStructures(Ir, Ir.isCompatible) ? jr.pack(rr, ar) : (jr.lastNamedStructuresLength = Qr, TS.length > 1073741824 && (TS = null), Wr)
             }
-            BJ.length > 1073741824 && (BJ = null), uR & TJ && (vJ = JR)
+            TS.length > 1073741824 && (TS = null), ar & dS && (XS = Sr)
           }
         };
-        const nR = () => {
-            LR < 10 && LR++;
-            let RR = yR.sharedLength || 0;
-            if (yR.length > RR && !qR && (yR.length = RR), aR > 1e4) yR.transitions = null, LR = 0, aR = 0, eR.length > 0 && (eR = []);
-            else if (eR.length > 0 && !qR) {
-              for (let RR = 0, JR = eR.length; RR < JR; RR++) eR[RR][NJ] = 0;
-              eR = []
+        const zr = () => {
+            hr < 10 && hr++;
+            let rr = Zr.sharedLength || 0;
+            if (Zr.length > rr && !Ir && (Zr.length = rr), tr > 1e4) Zr.transitions = null, hr = 0, tr = 0, Ur.length > 0 && (Ur = []);
+            else if (Ur.length > 0 && !Ir) {
+              for (let rr = 0, Sr = Ur.length; rr < Sr; rr++) Ur[rr][qS] = 0;
+              Ur = []
             }
           },
-          UR = RR => {
-            var JR = RR.length;
-            JR < 16 ? BJ[vJ++] = 144 | JR : JR < 65536 ? (BJ[vJ++] = 220, BJ[vJ++] = JR >> 8, BJ[vJ++] = 255 & JR) : (BJ[vJ++] = 221, pJ.setUint32(vJ, JR), vJ += 4);
-            for (let GR = 0; GR < JR; GR++) WR(RR[GR])
+          Yr = rr => {
+            var Sr = rr.length;
+            Sr < 16 ? TS[XS++] = 144 | Sr : Sr < 65536 ? (TS[XS++] = 220, TS[XS++] = Sr >> 8, TS[XS++] = 255 & Sr) : (TS[XS++] = 221, OS.setUint32(XS, Sr), XS += 4);
+            for (let Qr = 0; Qr < Sr; Qr++) nr(rr[Qr])
           },
-          WR = RR => {
-            vJ > gJ && (BJ = BR(vJ));
-            var GR, yR = typeof RR;
-            if ("string" === yR) {
-              let yR, tR = RR.length;
-              if (OJ && tR >= 4 && tR < 4096) {
-                if ((OJ.size += tR) > 21760) {
-                  let RR, GR, yR = (OJ[0] ? 3 * OJ[0].length + OJ[1].length : 0) + 10;
-                  vJ + yR > gJ && (BJ = BR(vJ + yR)), OJ.position ? (GR = OJ, BJ[vJ] = 200, vJ += 3, BJ[vJ++] = 98, RR = vJ - JR, vJ += 4, PJ(JR, WR, 0), pJ.setUint16(RR + JR - 3, vJ - JR - RR)) : (BJ[vJ++] = 214, BJ[vJ++] = 98, RR = vJ - JR, vJ += 4), OJ = ["", ""], OJ.previous = GR, OJ.size = 0, OJ.position = RR
+          nr = rr => {
+            XS > LS && (TS = Tr(XS));
+            var Qr, Zr = typeof rr;
+            if ("string" === Zr) {
+              let Zr, Wr = rr.length;
+              if (PS && Wr >= 4 && Wr < 4096) {
+                if ((PS.size += Wr) > 21760) {
+                  let rr, Qr, Zr = (PS[0] ? 3 * PS[0].length + PS[1].length : 0) + 10;
+                  XS + Zr > LS && (TS = Tr(XS + Zr)), PS.position ? (Qr = PS, TS[XS] = 200, XS += 3, TS[XS++] = 98, rr = XS - Sr, XS += 4, GS(Sr, nr, 0), OS.setUint16(rr + Sr - 3, XS - Sr - rr)) : (TS[XS++] = 214, TS[XS++] = 98, rr = XS - Sr, XS += 4), PS = ["", ""], PS.previous = Qr, PS.size = 0, PS.position = rr
                 }
-                let GR = xJ.test(RR);
-                return OJ[GR ? 0 : 1] += RR, BJ[vJ++] = 193, void WR(GR ? -tR : tR)
+                let Qr = HS.test(rr);
+                return PS[Qr ? 0 : 1] += rr, TS[XS++] = 193, void nr(Qr ? -Wr : Wr)
               }
-              yR = tR < 32 ? 1 : tR < 256 ? 2 : tR < 65536 ? 3 : 5;
-              let ZR = 3 * tR;
-              if (vJ + ZR > gJ && (BJ = BR(vJ + ZR)), tR < 64 || !uR) {
-                let JR, uR, ZR, qR = vJ + yR;
-                for (JR = 0; JR < tR; JR++) uR = RR.charCodeAt(JR), uR < 128 ? BJ[qR++] = uR : uR < 2048 ? (BJ[qR++] = uR >> 6 | 192, BJ[qR++] = 63 & uR | 128) : 55296 === (64512 & uR) && 56320 === (64512 & (ZR = RR.charCodeAt(JR + 1))) ? (uR = 65536 + ((1023 & uR) << 10) + (1023 & ZR), JR++, BJ[qR++] = uR >> 18 | 240, BJ[qR++] = uR >> 12 & 63 | 128, BJ[qR++] = uR >> 6 & 63 | 128, BJ[qR++] = 63 & uR | 128) : (BJ[qR++] = uR >> 12 | 224, BJ[qR++] = uR >> 6 & 63 | 128, BJ[qR++] = 63 & uR | 128);
-                GR = qR - vJ - yR
-              } else GR = uR(RR, vJ + yR);
-              GR < 32 ? BJ[vJ++] = 160 | GR : GR < 256 ? (yR < 2 && BJ.copyWithin(vJ + 2, vJ + 1, vJ + 1 + GR), BJ[vJ++] = 217, BJ[vJ++] = GR) : GR < 65536 ? (yR < 3 && BJ.copyWithin(vJ + 3, vJ + 2, vJ + 2 + GR), BJ[vJ++] = 218, BJ[vJ++] = GR >> 8, BJ[vJ++] = 255 & GR) : (yR < 5 && BJ.copyWithin(vJ + 5, vJ + 3, vJ + 3 + GR), BJ[vJ++] = 219, pJ.setUint32(vJ, GR), vJ += 4), vJ += GR
-            } else if ("number" === yR)
-              if (RR >>> 0 === RR) RR < 32 || RR < 128 && !1 === this.useRecords || RR < 64 && !this.randomAccessStructure ? BJ[vJ++] = RR : RR < 256 ? (BJ[vJ++] = 204, BJ[vJ++] = RR) : RR < 65536 ? (BJ[vJ++] = 205, BJ[vJ++] = RR >> 8, BJ[vJ++] = 255 & RR) : (BJ[vJ++] = 206, pJ.setUint32(vJ, RR), vJ += 4);
-              else if ((RR | 0) === RR) RR >= -32 ? BJ[vJ++] = 256 + RR : RR >= -128 ? (BJ[vJ++] = 208, BJ[vJ++] = RR + 256) : RR >= -32768 ? (BJ[vJ++] = 209, pJ.setInt16(vJ, RR), vJ += 2) : (BJ[vJ++] = 210, pJ.setInt32(vJ, RR), vJ += 4);
+              Zr = Wr < 32 ? 1 : Wr < 256 ? 2 : Wr < 65536 ? 3 : 5;
+              let jr = 3 * Wr;
+              if (XS + jr > LS && (TS = Tr(XS + jr)), Wr < 64 || !ar) {
+                let Sr, ar, jr, Ir = XS + Zr;
+                for (Sr = 0; Sr < Wr; Sr++) ar = rr.charCodeAt(Sr), ar < 128 ? TS[Ir++] = ar : ar < 2048 ? (TS[Ir++] = ar >> 6 | 192, TS[Ir++] = 63 & ar | 128) : 55296 === (64512 & ar) && 56320 === (64512 & (jr = rr.charCodeAt(Sr + 1))) ? (ar = 65536 + ((1023 & ar) << 10) + (1023 & jr), Sr++, TS[Ir++] = ar >> 18 | 240, TS[Ir++] = ar >> 12 & 63 | 128, TS[Ir++] = ar >> 6 & 63 | 128, TS[Ir++] = 63 & ar | 128) : (TS[Ir++] = ar >> 12 | 224, TS[Ir++] = ar >> 6 & 63 | 128, TS[Ir++] = 63 & ar | 128);
+                Qr = Ir - XS - Zr
+              } else Qr = ar(rr, XS + Zr);
+              Qr < 32 ? TS[XS++] = 160 | Qr : Qr < 256 ? (Zr < 2 && TS.copyWithin(XS + 2, XS + 1, XS + 1 + Qr), TS[XS++] = 217, TS[XS++] = Qr) : Qr < 65536 ? (Zr < 3 && TS.copyWithin(XS + 3, XS + 2, XS + 2 + Qr), TS[XS++] = 218, TS[XS++] = Qr >> 8, TS[XS++] = 255 & Qr) : (Zr < 5 && TS.copyWithin(XS + 5, XS + 3, XS + 3 + Qr), TS[XS++] = 219, OS.setUint32(XS, Qr), XS += 4), XS += Qr
+            } else if ("number" === Zr)
+              if (rr >>> 0 === rr) rr < 32 || rr < 128 && !1 === this.useRecords || rr < 64 && !this.randomAccessStructure ? TS[XS++] = rr : rr < 256 ? (TS[XS++] = 204, TS[XS++] = rr) : rr < 65536 ? (TS[XS++] = 205, TS[XS++] = rr >> 8, TS[XS++] = 255 & rr) : (TS[XS++] = 206, OS.setUint32(XS, rr), XS += 4);
+              else if ((rr | 0) === rr) rr >= -32 ? TS[XS++] = 256 + rr : rr >= -128 ? (TS[XS++] = 208, TS[XS++] = rr + 256) : rr >= -32768 ? (TS[XS++] = 209, OS.setInt16(XS, rr), XS += 2) : (TS[XS++] = 210, OS.setInt32(XS, rr), XS += 4);
             else {
-              let JR;
-              if ((JR = this.useFloat32) > 0 && RR < 4294967296 && RR >= -2147483648) {
-                let GR;
-                if (BJ[vJ++] = 202, pJ.setFloat32(vJ, RR), JR < 4 || ((GR = RR * qJ[(127 & BJ[vJ]) << 1 | BJ[vJ + 1] >> 7]) | 0) === GR) return void(vJ += 4);
-                vJ--
+              let Sr;
+              if ((Sr = this.useFloat32) > 0 && rr < 4294967296 && rr >= -2147483648) {
+                let Qr;
+                if (TS[XS++] = 202, OS.setFloat32(XS, rr), Sr < 4 || ((Qr = rr * IS[(127 & TS[XS]) << 1 | TS[XS + 1] >> 7]) | 0) === Qr) return void(XS += 4);
+                XS--
               }
-              BJ[vJ++] = 203, pJ.setFloat64(vJ, RR), vJ += 8
-            } else if ("object" === yR || "function" === yR)
-              if (RR) {
-                if (tR) {
-                  let GR = tR.get(RR);
-                  if (GR) {
-                    if (!GR.id) {
-                      let RR = tR.idsToInsert || (tR.idsToInsert = []);
-                      GR.id = RR.push(GR)
+              TS[XS++] = 203, OS.setFloat64(XS, rr), XS += 8
+            } else if ("object" === Zr || "function" === Zr)
+              if (rr) {
+                if (Wr) {
+                  let Qr = Wr.get(rr);
+                  if (Qr) {
+                    if (!Qr.id) {
+                      let rr = Wr.idsToInsert || (Wr.idsToInsert = []);
+                      Qr.id = rr.push(Qr)
                     }
-                    return BJ[vJ++] = 214, BJ[vJ++] = 112, pJ.setUint32(vJ, GR.id), void(vJ += 4)
+                    return TS[XS++] = 214, TS[XS++] = 112, OS.setUint32(XS, Qr.id), void(XS += 4)
                   }
-                  tR.set(RR, {
-                    offset: vJ - JR
+                  Wr.set(rr, {
+                    offset: XS - Sr
                   })
                 }
-                let uR = RR.constructor;
-                if (uR === Object) MR(RR);
-                else if (uR === Array) UR(RR);
-                else if (uR === Map)
-                  if (this.mapAsEmptyObject) BJ[vJ++] = 128;
+                let ar = rr.constructor;
+                if (ar === Object) Br(rr);
+                else if (ar === Array) Yr(rr);
+                else if (ar === Map)
+                  if (this.mapAsEmptyObject) TS[XS++] = 128;
                   else {
-                    (GR = RR.size) < 16 ? BJ[vJ++] = 128 | GR : GR < 65536 ? (BJ[vJ++] = 222, BJ[vJ++] = GR >> 8, BJ[vJ++] = 255 & GR) : (BJ[vJ++] = 223, pJ.setUint32(vJ, GR), vJ += 4);
-                    for (let [JR, GR] of RR) WR(JR), WR(GR)
+                    (Qr = rr.size) < 16 ? TS[XS++] = 128 | Qr : Qr < 65536 ? (TS[XS++] = 222, TS[XS++] = Qr >> 8, TS[XS++] = 255 & Qr) : (TS[XS++] = 223, OS.setUint32(XS, Qr), XS += 4);
+                    for (let [Sr, Qr] of rr) nr(Sr), nr(Qr)
                   }
                 else {
-                  for (let JR = 0, GR = aJ.length; JR < GR; JR++) {
-                    if (RR instanceof LJ[JR]) {
-                      let GR = aJ[JR];
-                      if (GR.write) {
-                        GR.type && (BJ[vJ++] = 212, BJ[vJ++] = GR.type, BJ[vJ++] = 0);
-                        let JR = GR.write.call(this, RR);
-                        return void(JR === RR ? Array.isArray(RR) ? UR(RR) : MR(RR) : WR(JR))
+                  for (let Sr = 0, Qr = tS.length; Sr < Qr; Sr++) {
+                    if (rr instanceof hS[Sr]) {
+                      let Qr = tS[Sr];
+                      if (Qr.write) {
+                        Qr.type && (TS[XS++] = 212, TS[XS++] = Qr.type, TS[XS++] = 0);
+                        let Sr = Qr.write.call(this, rr);
+                        return void(Sr === rr ? Array.isArray(rr) ? Yr(rr) : Br(rr) : nr(Sr))
                       }
-                      let yR, tR = BJ,
-                        uR = pJ,
-                        ZR = vJ;
-                      BJ = null;
+                      let Zr, Wr = TS,
+                        ar = OS,
+                        jr = XS;
+                      TS = null;
                       try {
-                        yR = GR.pack.call(this, RR, (RR => (BJ = tR, tR = null, vJ += RR, vJ > gJ && BR(vJ), {
-                          target: BJ,
-                          targetView: pJ,
-                          position: vJ - RR
-                        })), WR)
+                        Zr = Qr.pack.call(this, rr, (rr => (TS = Wr, Wr = null, XS += rr, XS > LS && Tr(XS), {
+                          target: TS,
+                          targetView: OS,
+                          position: XS - rr
+                        })), nr)
                       } finally {
-                        tR && (BJ = tR, pJ = uR, vJ = ZR, gJ = BJ.length - 10)
+                        Wr && (TS = Wr, OS = ar, XS = jr, LS = TS.length - 10)
                       }
-                      return void(yR && (yR.length + vJ > gJ && BR(yR.length + vJ), vJ = cJ(yR, BJ, vJ, GR.type)))
+                      return void(Zr && (Zr.length + XS > LS && Tr(Zr.length + XS), XS = MS(Zr, TS, XS, Qr.type)))
                     }
                   }
-                  if (Array.isArray(RR)) UR(RR);
+                  if (Array.isArray(rr)) Yr(rr);
                   else {
-                    if (RR.toJSON) {
-                      const JR = RR.toJSON();
-                      if (JR !== RR) return WR(JR)
+                    if (rr.toJSON) {
+                      const Sr = rr.toJSON();
+                      if (Sr !== rr) return nr(Sr)
                     }
-                    if ("function" === yR) return WR(this.writeFunction && this.writeFunction(RR));
-                    MR(RR)
+                    if ("function" === Zr) return nr(this.writeFunction && this.writeFunction(rr));
+                    Br(rr)
                   }
                 }
-              } else BJ[vJ++] = 192;
-            else if ("boolean" === yR) BJ[vJ++] = RR ? 195 : 194;
-            else if ("bigint" === yR) {
-              if (RR < BigInt(1) << BigInt(63) && RR >= -(BigInt(1) << BigInt(63))) BJ[vJ++] = 211, pJ.setBigInt64(vJ, RR);
-              else if (RR < BigInt(1) << BigInt(64) && RR > 0) BJ[vJ++] = 207, pJ.setBigUint64(vJ, RR);
+              } else TS[XS++] = 192;
+            else if ("boolean" === Zr) TS[XS++] = rr ? 195 : 194;
+            else if ("bigint" === Zr) {
+              if (rr < BigInt(1) << BigInt(63) && rr >= -(BigInt(1) << BigInt(63))) TS[XS++] = 211, OS.setBigInt64(XS, rr);
+              else if (rr < BigInt(1) << BigInt(64) && rr > 0) TS[XS++] = 207, OS.setBigUint64(XS, rr);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return WR(RR.toString());
-                  if (this.useBigIntExtension && RR < BigInt(2) ** BigInt(1023) && RR > -(BigInt(2) ** BigInt(1023))) {
-                    BJ[vJ++] = 199, vJ++, BJ[vJ++] = 66;
-                    let JR, GR = [];
+                  if (this.largeBigIntToString) return nr(rr.toString());
+                  if (this.useBigIntExtension && rr < BigInt(2) ** BigInt(1023) && rr > -(BigInt(2) ** BigInt(1023))) {
+                    TS[XS++] = 199, XS++, TS[XS++] = 66;
+                    let Sr, Qr = [];
                     do {
-                      let yR = RR & BigInt(255);
-                      JR = (yR & BigInt(128)) === (RR < BigInt(0) ? BigInt(128) : BigInt(0)), GR.push(yR), RR >>= BigInt(8)
-                    } while (RR !== BigInt(0) && RR !== BigInt(-1) || !JR);
-                    BJ[vJ - 2] = GR.length;
-                    for (let RR = GR.length; RR > 0;) BJ[vJ++] = Number(GR[--RR]);
+                      let Zr = rr & BigInt(255);
+                      Sr = (Zr & BigInt(128)) === (rr < BigInt(0) ? BigInt(128) : BigInt(0)), Qr.push(Zr), rr >>= BigInt(8)
+                    } while (rr !== BigInt(0) && rr !== BigInt(-1) || !Sr);
+                    TS[XS - 2] = Qr.length;
+                    for (let rr = Qr.length; rr > 0;) TS[XS++] = Number(Qr[--rr]);
                     return
                   }
-                  throw new RangeError(RR + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(rr + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                BJ[vJ++] = 203, pJ.setFloat64(vJ, Number(RR))
+                TS[XS++] = 203, OS.setFloat64(XS, Number(rr))
               }
-              vJ += 8
+              XS += 8
             } else {
-              if ("undefined" !== yR) throw new Error("Unknown type: " + yR);
-              this.encodeUndefinedAsNil ? BJ[vJ++] = 192 : (BJ[vJ++] = 212, BJ[vJ++] = 0, BJ[vJ++] = 0)
+              if ("undefined" !== Zr) throw new Error("Unknown type: " + Zr);
+              this.encodeUndefinedAsNil ? TS[XS++] = 192 : (TS[XS++] = 212, TS[XS++] = 0, TS[XS++] = 0)
             }
           },
-          AR = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? RR => {
-            let JR;
+          er = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? rr => {
+            let Sr;
             if (this.skipValues) {
-              JR = [];
-              for (let GR in RR) "function" === typeof RR.hasOwnProperty && !RR.hasOwnProperty(GR) || this.skipValues.includes(RR[GR]) || JR.push(GR)
-            } else JR = Object.keys(RR);
-            let GR, yR = JR.length;
-            if (yR < 16 ? BJ[vJ++] = 128 | yR : yR < 65536 ? (BJ[vJ++] = 222, BJ[vJ++] = yR >> 8, BJ[vJ++] = 255 & yR) : (BJ[vJ++] = 223, pJ.setUint32(vJ, yR), vJ += 4), this.coercibleKeyAsNumber)
-              for (let tR = 0; tR < yR; tR++) {
-                GR = JR[tR];
-                let yR = Number(GR);
-                WR(isNaN(yR) ? GR : yR), WR(RR[GR])
+              Sr = [];
+              for (let Qr in rr) "function" === typeof rr.hasOwnProperty && !rr.hasOwnProperty(Qr) || this.skipValues.includes(rr[Qr]) || Sr.push(Qr)
+            } else Sr = Object.keys(rr);
+            let Qr, Zr = Sr.length;
+            if (Zr < 16 ? TS[XS++] = 128 | Zr : Zr < 65536 ? (TS[XS++] = 222, TS[XS++] = Zr >> 8, TS[XS++] = 255 & Zr) : (TS[XS++] = 223, OS.setUint32(XS, Zr), XS += 4), this.coercibleKeyAsNumber)
+              for (let Wr = 0; Wr < Zr; Wr++) {
+                Qr = Sr[Wr];
+                let Zr = Number(Qr);
+                nr(isNaN(Zr) ? Qr : Zr), nr(rr[Qr])
               } else
-                for (let tR = 0; tR < yR; tR++) WR(GR = JR[tR]), WR(RR[GR])
-          } : RR => {
-            BJ[vJ++] = 222;
-            let GR = vJ - JR;
-            vJ += 2;
-            let yR = 0;
-            for (let JR in RR)("function" !== typeof RR.hasOwnProperty || RR.hasOwnProperty(JR)) && (WR(JR), WR(RR[JR]), yR++);
-            if (yR > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            BJ[GR++ + JR] = yR >> 8, BJ[GR + JR] = 255 & yR
+                for (let Wr = 0; Wr < Zr; Wr++) nr(Qr = Sr[Wr]), nr(rr[Qr])
+          } : rr => {
+            TS[XS++] = 222;
+            let Qr = XS - Sr;
+            XS += 2;
+            let Zr = 0;
+            for (let Sr in rr)("function" !== typeof rr.hasOwnProperty || rr.hasOwnProperty(Sr)) && (nr(Sr), nr(rr[Sr]), Zr++);
+            if (Zr > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            TS[Qr++ + Sr] = Zr >> 8, TS[Qr + Sr] = 255 & Zr
           },
-          CR = !1 === this.useRecords ? AR : RR.progressiveRecords && !KR ? RR => {
-            let GR, tR, uR = yR.transitions || (yR.transitions = Object.create(null)),
-              ZR = vJ++ - JR;
-            for (let qR in RR)
-              if ("function" !== typeof RR.hasOwnProperty || RR.hasOwnProperty(qR)) {
-                if (GR = uR[qR], GR) uR = GR;
+          Kr = !1 === this.useRecords ? er : rr.progressiveRecords && !xr ? rr => {
+            let Qr, Wr, ar = Zr.transitions || (Zr.transitions = Object.create(null)),
+              jr = XS++ - Sr;
+            for (let Ir in rr)
+              if ("function" !== typeof rr.hasOwnProperty || rr.hasOwnProperty(Ir)) {
+                if (Qr = ar[Ir], Qr) ar = Qr;
                 else {
-                  let iR = Object.keys(RR),
-                    fR = uR;
-                  uR = yR.transitions;
-                  let VR = 0;
-                  for (let RR = 0, JR = iR.length; RR < JR; RR++) {
-                    let JR = iR[RR];
-                    GR = uR[JR], GR || (GR = uR[JR] = Object.create(null), VR++), uR = GR
+                  let fr = Object.keys(rr),
+                    Er = ar;
+                  ar = Zr.transitions;
+                  let pr = 0;
+                  for (let rr = 0, Sr = fr.length; rr < Sr; rr++) {
+                    let Sr = fr[rr];
+                    Qr = ar[Sr], Qr || (Qr = ar[Sr] = Object.create(null), pr++), ar = Qr
                   }
-                  ZR + JR + 1 == vJ ? (vJ--, lR(uR, iR, VR)) : pR(uR, iR, ZR, VR), tR = !0, uR = fR[qR]
+                  jr + Sr + 1 == XS ? (XS--, vr(ar, fr, pr)) : Or(ar, fr, jr, pr), Wr = !0, ar = Er[Ir]
                 }
-                WR(RR[qR])
-              } if (!tR) {
-              let GR = uR[NJ];
-              GR ? BJ[ZR + JR] = GR : pR(uR, Object.keys(RR), ZR, 0)
+                nr(rr[Ir])
+              } if (!Wr) {
+              let Qr = ar[qS];
+              Qr ? TS[jr + Sr] = Qr : Or(ar, Object.keys(rr), jr, 0)
             }
-          } : RR => {
-            let JR, GR = yR.transitions || (yR.transitions = Object.create(null)),
-              tR = 0;
-            for (let yR in RR)("function" !== typeof RR.hasOwnProperty || RR.hasOwnProperty(yR)) && (JR = GR[yR], JR || (JR = GR[yR] = Object.create(null), tR++), GR = JR);
-            let uR = GR[NJ];
-            uR ? uR >= 96 && KR ? (BJ[vJ++] = 96 + (31 & (uR -= 96)), BJ[vJ++] = uR >> 5) : BJ[vJ++] = uR : lR(GR, GR.__keys__ || Object.keys(RR), tR);
-            for (let yR in RR)("function" !== typeof RR.hasOwnProperty || RR.hasOwnProperty(yR)) && WR(RR[yR])
+          } : rr => {
+            let Sr, Qr = Zr.transitions || (Zr.transitions = Object.create(null)),
+              Wr = 0;
+            for (let Zr in rr)("function" !== typeof rr.hasOwnProperty || rr.hasOwnProperty(Zr)) && (Sr = Qr[Zr], Sr || (Sr = Qr[Zr] = Object.create(null), Wr++), Qr = Sr);
+            let ar = Qr[qS];
+            ar ? ar >= 96 && xr ? (TS[XS++] = 96 + (31 & (ar -= 96)), TS[XS++] = ar >> 5) : TS[XS++] = ar : vr(Qr, Qr.__keys__ || Object.keys(rr), Wr);
+            for (let Zr in rr)("function" !== typeof rr.hasOwnProperty || rr.hasOwnProperty(Zr)) && nr(rr[Zr])
           },
-          XR = "function" == typeof this.useRecords && this.useRecords,
-          MR = XR ? RR => {
-            XR(RR) ? CR(RR) : AR(RR)
-          } : CR,
-          BR = RR => {
-            let GR;
-            if (RR > 16777216) {
-              if (RR - JR > MJ) throw new Error("Packed buffer would be larger than maximum buffer size");
-              GR = Math.min(MJ, 4096 * Math.round(Math.max((RR - JR) * (RR > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else GR = 1 + (Math.max(RR - JR << 2, BJ.length - 1) >> 12) << 12;
-            let yR = new CJ(GR);
-            return pJ = yR.dataView || (yR.dataView = new DataView(yR.buffer, 0, GR)), RR = Math.min(RR, BJ.length), BJ.copy ? BJ.copy(yR, 0, JR, RR) : yR.set(BJ.slice(JR, RR)), vJ -= JR, JR = 0, gJ = yR.length - 10, BJ = yR
+          yr = "function" == typeof this.useRecords && this.useRecords,
+          Br = yr ? rr => {
+            yr(rr) ? Kr(rr) : er(rr)
+          } : Kr,
+          Tr = rr => {
+            let Qr;
+            if (rr > 16777216) {
+              if (rr - Sr > BS) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Qr = Math.min(BS, 4096 * Math.round(Math.max((rr - Sr) * (rr > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Qr = 1 + (Math.max(rr - Sr << 2, TS.length - 1) >> 12) << 12;
+            let Zr = new KS(Qr);
+            return OS = Zr.dataView || (Zr.dataView = new DataView(Zr.buffer, 0, Qr)), rr = Math.min(rr, TS.length), TS.copy ? TS.copy(Zr, 0, Sr, rr) : Zr.set(TS.slice(Sr, rr)), XS -= Sr, Sr = 0, LS = Zr.length - 10, TS = Zr
           },
-          lR = (RR, JR, tR) => {
-            let uR = yR.nextId;
-            uR || (uR = 64), uR < wR && this.shouldShareStructure && !this.shouldShareStructure(JR) ? (uR = yR.nextOwnId, uR < rR || (uR = wR), yR.nextOwnId = uR + 1) : (uR >= rR && (uR = wR), yR.nextId = uR + 1);
-            let ZR = JR.highByte = uR >= 96 && KR ? uR - 96 >> 5 : -1;
-            RR[NJ] = uR, RR.__keys__ = JR, yR[uR - 64] = JR, uR < wR ? (JR.isShared = !0, yR.sharedLength = uR - 63, GR = !0, ZR >= 0 ? (BJ[vJ++] = 96 + (31 & uR), BJ[vJ++] = ZR) : BJ[vJ++] = uR) : (ZR >= 0 ? (BJ[vJ++] = 213, BJ[vJ++] = 114, BJ[vJ++] = 96 + (31 & uR), BJ[vJ++] = ZR) : (BJ[vJ++] = 212, BJ[vJ++] = 114, BJ[vJ++] = uR), tR && (aR += LR * tR), eR.length >= VR && (eR.shift()[NJ] = 0), eR.push(RR), WR(JR))
+          vr = (rr, Sr, Wr) => {
+            let ar = Zr.nextId;
+            ar || (ar = 64), ar < mr && this.shouldShareStructure && !this.shouldShareStructure(Sr) ? (ar = Zr.nextOwnId, ar < Nr || (ar = mr), Zr.nextOwnId = ar + 1) : (ar >= Nr && (ar = mr), Zr.nextId = ar + 1);
+            let jr = Sr.highByte = ar >= 96 && xr ? ar - 96 >> 5 : -1;
+            rr[qS] = ar, rr.__keys__ = Sr, Zr[ar - 64] = Sr, ar < mr ? (Sr.isShared = !0, Zr.sharedLength = ar - 63, Qr = !0, jr >= 0 ? (TS[XS++] = 96 + (31 & ar), TS[XS++] = jr) : TS[XS++] = ar) : (jr >= 0 ? (TS[XS++] = 213, TS[XS++] = 114, TS[XS++] = 96 + (31 & ar), TS[XS++] = jr) : (TS[XS++] = 212, TS[XS++] = 114, TS[XS++] = ar), Wr && (tr += hr * Wr), Ur.length >= pr && (Ur.shift()[qS] = 0), Ur.push(rr), nr(Sr))
           },
-          pR = (RR, GR, yR, tR) => {
-            let uR = BJ,
-              ZR = vJ,
-              qR = gJ,
-              iR = JR;
-            BJ = lJ, vJ = 0, JR = 0, BJ || (lJ = BJ = new CJ(8192)), gJ = BJ.length - 10, lR(RR, GR, tR), lJ = BJ;
-            let fR = vJ;
-            if (BJ = uR, vJ = ZR, gJ = qR, JR = iR, fR > 1) {
-              let RR = vJ + fR - 1;
-              RR > gJ && BR(RR);
-              let GR = yR + JR;
-              BJ.copyWithin(GR + fR, GR + 1, vJ), BJ.set(lJ.slice(0, fR), GR), vJ = RR
-            } else BJ[yR + JR] = lJ[0]
+          Or = (rr, Qr, Zr, Wr) => {
+            let ar = TS,
+              jr = XS,
+              Ir = LS,
+              fr = Sr;
+            TS = vS, XS = 0, Sr = 0, TS || (vS = TS = new KS(8192)), LS = TS.length - 10, vr(rr, Qr, Wr), vS = TS;
+            let Er = XS;
+            if (TS = ar, XS = jr, LS = Ir, Sr = fr, Er > 1) {
+              let rr = XS + Er - 1;
+              rr > LS && Tr(rr);
+              let Qr = Zr + Sr;
+              TS.copyWithin(Qr + Er, Qr + 1, XS), TS.set(vS.slice(0, Er), Qr), XS = rr
+            } else TS[Zr + Sr] = vS[0]
           },
-          gR = RR => {
-            let tR = bJ(RR, BJ, JR, vJ, yR, BR, ((RR, JR, yR) => {
-              if (yR) return GR = !0;
-              vJ = JR;
-              let tR = BJ;
-              return WR(RR), nR(), tR !== BJ ? {
-                position: vJ,
-                targetView: pJ,
-                target: BJ
-              } : vJ
+          Lr = rr => {
+            let Wr = lS(rr, TS, Sr, XS, Zr, Tr, ((rr, Sr, Zr) => {
+              if (Zr) return Qr = !0;
+              XS = Sr;
+              let Wr = TS;
+              return nr(rr), zr(), Wr !== TS ? {
+                position: XS,
+                targetView: OS,
+                target: TS
+              } : XS
             }), this);
-            if (0 === tR) return MR(RR);
-            vJ = tR
+            if (0 === Wr) return Br(rr);
+            XS = Wr
           }
       }
-      useBuffer(RR) {
-        BJ = RR, pJ = BJ.dataView || (BJ.dataView = new DataView(BJ.buffer, BJ.byteOffset, BJ.byteLength)), vJ = 0
+      useBuffer(rr) {
+        TS = rr, OS = TS.dataView || (TS.dataView = new DataView(TS.buffer, TS.byteOffset, TS.byteLength)), XS = 0
       }
-      set position(RR) {
-        vJ = RR
+      set position(rr) {
+        XS = rr
       }
       get position() {
-        return vJ
+        return XS
       }
-      set buffer(RR) {
-        BJ = RR
+      set buffer(rr) {
+        TS = rr
       }
       get buffer() {
-        return BJ
+        return TS
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function HJ(RR, JR, GR, yR) {
-      let tR = RR.byteLength;
-      if (tR + 1 < 256) {
+    function gS(rr, Sr, Qr, Zr) {
+      let Wr = rr.byteLength;
+      if (Wr + 1 < 256) {
         var {
-          target: uR,
-          position: ZR
-        } = GR(4 + tR);
-        uR[ZR++] = 199, uR[ZR++] = tR + 1
-      } else if (tR + 1 < 65536) {
+          target: ar,
+          position: jr
+        } = Qr(4 + Wr);
+        ar[jr++] = 199, ar[jr++] = Wr + 1
+      } else if (Wr + 1 < 65536) {
         var {
-          target: uR,
-          position: ZR
-        } = GR(5 + tR);
-        uR[ZR++] = 200, uR[ZR++] = tR + 1 >> 8, uR[ZR++] = tR + 1 & 255
+          target: ar,
+          position: jr
+        } = Qr(5 + Wr);
+        ar[jr++] = 200, ar[jr++] = Wr + 1 >> 8, ar[jr++] = Wr + 1 & 255
       } else {
         var {
-          target: uR,
-          position: ZR,
-          targetView: qR
-        } = GR(7 + tR);
-        uR[ZR++] = 201, qR.setUint32(ZR, tR + 1), ZR += 4
+          target: ar,
+          position: jr,
+          targetView: Ir
+        } = Qr(7 + Wr);
+        ar[jr++] = 201, Ir.setUint32(jr, Wr + 1), jr += 4
       }
-      uR[ZR++] = 116, uR[ZR++] = JR, RR.buffer || (RR = new Uint8Array(RR)), uR.set(new Uint8Array(RR.buffer, RR.byteOffset, RR.byteLength), ZR)
+      ar[jr++] = 116, ar[jr++] = Sr, rr.buffer || (rr = new Uint8Array(rr)), ar.set(new Uint8Array(rr.buffer, rr.byteOffset, rr.byteLength), jr)
     }
 
-    function oJ(RR, JR) {
-      let GR = RR.byteLength;
-      var yR, tR;
-      if (GR < 256) {
+    function CS(rr, Sr) {
+      let Qr = rr.byteLength;
+      var Zr, Wr;
+      if (Qr < 256) {
         var {
-          target: yR,
-          position: tR
-        } = JR(GR + 2);
-        yR[tR++] = 196, yR[tR++] = GR
-      } else if (GR < 65536) {
+          target: Zr,
+          position: Wr
+        } = Sr(Qr + 2);
+        Zr[Wr++] = 196, Zr[Wr++] = Qr
+      } else if (Qr < 65536) {
         var {
-          target: yR,
-          position: tR
-        } = JR(GR + 3);
-        yR[tR++] = 197, yR[tR++] = GR >> 8, yR[tR++] = 255 & GR
+          target: Zr,
+          position: Wr
+        } = Sr(Qr + 3);
+        Zr[Wr++] = 197, Zr[Wr++] = Qr >> 8, Zr[Wr++] = 255 & Qr
       } else {
         var {
-          target: yR,
-          position: tR,
-          targetView: uR
-        } = JR(GR + 5);
-        yR[tR++] = 198, uR.setUint32(tR, GR), tR += 4
+          target: Zr,
+          position: Wr,
+          targetView: ar
+        } = Sr(Qr + 5);
+        Zr[Wr++] = 198, ar.setUint32(Wr, Qr), Wr += 4
       }
-      yR.set(RR, tR)
+      Zr.set(rr, Wr)
     }
 
-    function cJ(RR, JR, GR, yR) {
-      let tR = RR.length;
-      switch (tR) {
+    function MS(rr, Sr, Qr, Zr) {
+      let Wr = rr.length;
+      switch (Wr) {
         case 1:
-          JR[GR++] = 212;
+          Sr[Qr++] = 212;
           break;
         case 2:
-          JR[GR++] = 213;
+          Sr[Qr++] = 213;
           break;
         case 4:
-          JR[GR++] = 214;
+          Sr[Qr++] = 214;
           break;
         case 8:
-          JR[GR++] = 215;
+          Sr[Qr++] = 215;
           break;
         case 16:
-          JR[GR++] = 216;
+          Sr[Qr++] = 216;
           break;
         default:
-          tR < 256 ? (JR[GR++] = 199, JR[GR++] = tR) : tR < 65536 ? (JR[GR++] = 200, JR[GR++] = tR >> 8, JR[GR++] = 255 & tR) : (JR[GR++] = 201, JR[GR++] = tR >> 24, JR[GR++] = tR >> 16 & 255, JR[GR++] = tR >> 8 & 255, JR[GR++] = 255 & tR)
+          Wr < 256 ? (Sr[Qr++] = 199, Sr[Qr++] = Wr) : Wr < 65536 ? (Sr[Qr++] = 200, Sr[Qr++] = Wr >> 8, Sr[Qr++] = 255 & Wr) : (Sr[Qr++] = 201, Sr[Qr++] = Wr >> 24, Sr[Qr++] = Wr >> 16 & 255, Sr[Qr++] = Wr >> 8 & 255, Sr[Qr++] = 255 & Wr)
       }
-      return JR[GR++] = yR, JR.set(RR, GR), GR += tR
+      return Sr[Qr++] = Zr, Sr.set(rr, Qr), Qr += Wr
     }
 
-    function PJ(RR, JR, GR) {
-      if (OJ.length > 0) {
-        pJ.setUint32(OJ.position + RR, vJ + GR - OJ.position - RR), OJ.stringsPosition = vJ - RR;
-        let yR = OJ;
-        OJ = null, JR(yR[0]), JR(yR[1])
+    function GS(rr, Sr, Qr) {
+      if (PS.length > 0) {
+        OS.setUint32(PS.position + rr, XS + Qr - PS.position - rr), PS.stringsPosition = XS - rr;
+        let Zr = PS;
+        PS = null, Sr(Zr[0]), Sr(Zr[1])
       }
     }
 
-    function IJ(RR) {
-      if (RR.Class) {
-        if (!RR.pack && !RR.write) throw new Error("Extension has no pack or write function");
-        if (RR.pack && !RR.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        LJ.unshift(RR.Class), aJ.unshift(RR)
-      }! function(RR) {
-        RR.unpack ? UR[RR.type] = RR.unpack : UR[RR.type] = RR
-      }(RR)
+    function kS(rr) {
+      if (rr.Class) {
+        if (!rr.pack && !rr.write) throw new Error("Extension has no pack or write function");
+        if (rr.pack && !rr.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        hS.unshift(rr.Class), tS.unshift(rr)
+      }! function(rr) {
+        rr.unpack ? Yr[rr.type] = rr.unpack : Yr[rr.type] = rr
+      }(rr)
     }
 
-    function mJ(RR, JR) {
-      return RR.isCompatible = RR => {
-        let GR = !RR || (JR.lastNamedStructuresLength || 0) === RR.length;
-        return GR || JR._mergeStructures(RR), GR
-      }, RR
+    function AS(rr, Sr) {
+      return rr.isCompatible = rr => {
+        let Qr = !rr || (Sr.lastNamedStructuresLength || 0) === rr.length;
+        return Qr || Sr._mergeStructures(rr), Qr
+      }, rr
     }
-    LJ = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, AR], aJ = [{
-      pack(RR, JR, GR) {
-        let yR = RR.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === RR.getMilliseconds()) && yR >= 0 && yR < 4294967296) {
+    hS = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, er], tS = [{
+      pack(rr, Sr, Qr) {
+        let Zr = rr.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === rr.getMilliseconds()) && Zr >= 0 && Zr < 4294967296) {
           let {
-            target: RR,
-            targetView: GR,
-            position: tR
-          } = JR(6);
-          RR[tR++] = 214, RR[tR++] = 255, GR.setUint32(tR, yR)
-        } else if (yR > 0 && yR < 4294967296) {
+            target: rr,
+            targetView: Qr,
+            position: Wr
+          } = Sr(6);
+          rr[Wr++] = 214, rr[Wr++] = 255, Qr.setUint32(Wr, Zr)
+        } else if (Zr > 0 && Zr < 4294967296) {
           let {
-            target: GR,
-            targetView: tR,
-            position: uR
-          } = JR(10);
-          GR[uR++] = 215, GR[uR++] = 255, tR.setUint32(uR, 4e6 * RR.getMilliseconds() + (yR / 1e3 / 4294967296 | 0)), tR.setUint32(uR + 4, yR)
-        } else if (isNaN(yR)) {
-          if (this.onInvalidDate) return JR(0), GR(this.onInvalidDate());
+            target: Qr,
+            targetView: Wr,
+            position: ar
+          } = Sr(10);
+          Qr[ar++] = 215, Qr[ar++] = 255, Wr.setUint32(ar, 4e6 * rr.getMilliseconds() + (Zr / 1e3 / 4294967296 | 0)), Wr.setUint32(ar + 4, Zr)
+        } else if (isNaN(Zr)) {
+          if (this.onInvalidDate) return Sr(0), Qr(this.onInvalidDate());
           let {
-            target: RR,
-            targetView: yR,
-            position: tR
-          } = JR(3);
-          RR[tR++] = 212, RR[tR++] = 255, RR[tR++] = 255
+            target: rr,
+            targetView: Zr,
+            position: Wr
+          } = Sr(3);
+          rr[Wr++] = 212, rr[Wr++] = 255, rr[Wr++] = 255
         } else {
           let {
-            target: GR,
-            targetView: tR,
-            position: uR
-          } = JR(15);
-          GR[uR++] = 199, GR[uR++] = 12, GR[uR++] = 255, tR.setUint32(uR, 1e6 * RR.getMilliseconds()), tR.setBigInt64(uR + 4, BigInt(Math.floor(yR)))
+            target: Qr,
+            targetView: Wr,
+            position: ar
+          } = Sr(15);
+          Qr[ar++] = 199, Qr[ar++] = 12, Qr[ar++] = 255, Wr.setUint32(ar, 1e6 * rr.getMilliseconds()), Wr.setBigInt64(ar + 4, BigInt(Math.floor(Zr)))
         }
       }
     }, {
-      pack(RR, JR, GR) {
-        if (this.setAsEmptyObject) return JR(0), GR({});
-        let yR = Array.from(RR),
+      pack(rr, Sr, Qr) {
+        if (this.setAsEmptyObject) return Sr(0), Qr({});
+        let Zr = Array.from(rr),
           {
-            target: tR,
-            position: uR
-          } = JR(this.moreTypes ? 3 : 0);
-        this.moreTypes && (tR[uR++] = 212, tR[uR++] = 115, tR[uR++] = 0), GR(yR)
+            target: Wr,
+            position: ar
+          } = Sr(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Wr[ar++] = 212, Wr[ar++] = 115, Wr[ar++] = 0), Qr(Zr)
       }
     }, {
-      pack(RR, JR, GR) {
+      pack(rr, Sr, Qr) {
         let {
-          target: yR,
-          position: tR
-        } = JR(this.moreTypes ? 3 : 0);
-        this.moreTypes && (yR[tR++] = 212, yR[tR++] = 101, yR[tR++] = 0), GR([RR.name, RR.message, RR.cause])
+          target: Zr,
+          position: Wr
+        } = Sr(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Zr[Wr++] = 212, Zr[Wr++] = 101, Zr[Wr++] = 0), Qr([rr.name, rr.message, rr.cause])
       }
     }, {
-      pack(RR, JR, GR) {
+      pack(rr, Sr, Qr) {
         let {
-          target: yR,
-          position: tR
-        } = JR(this.moreTypes ? 3 : 0);
-        this.moreTypes && (yR[tR++] = 212, yR[tR++] = 120, yR[tR++] = 0), GR([RR.source, RR.flags])
+          target: Zr,
+          position: Wr
+        } = Sr(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Zr[Wr++] = 212, Zr[Wr++] = 120, Zr[Wr++] = 0), Qr([rr.source, rr.flags])
       }
     }, {
-      pack(RR, JR) {
-        this.moreTypes ? HJ(RR, 16, JR) : oJ(AJ ? Buffer.from(RR) : new Uint8Array(RR), JR)
+      pack(rr, Sr) {
+        this.moreTypes ? gS(rr, 16, Sr) : CS(eS ? Buffer.from(rr) : new Uint8Array(rr), Sr)
       }
     }, {
-      pack(RR, JR) {
-        let GR = RR.constructor;
-        GR !== XJ && this.moreTypes ? HJ(RR, GJ.indexOf(GR.name), JR) : oJ(RR, JR)
+      pack(rr, Sr) {
+        let Qr = rr.constructor;
+        Qr !== yS && this.moreTypes ? gS(rr, QS.indexOf(Qr.name), Sr) : CS(rr, Sr)
       }
     }, {
-      pack(RR, JR) {
+      pack(rr, Sr) {
         let {
-          target: GR,
-          position: yR
-        } = JR(1);
-        GR[yR] = 193
+          target: Qr,
+          position: Zr
+        } = Sr(1);
+        Qr[Zr] = 193
       }
     }];
-    let zJ = new DJ({
+    let VS = new RS({
       useRecords: !1
     });
-    const SJ = zJ.pack,
-      jJ = zJ.pack,
-      dJ = DJ,
+    const iS = VS.pack,
+      wS = VS.pack,
+      cS = RS,
       {
-        NEVER: EJ,
-        ALWAYS: YJ,
-        DECIMAL_ROUND: kJ,
-        DECIMAL_FIT: QJ
-      } = rJ,
-      FJ = 512,
-      TJ = 1024,
-      sJ = 2048;
-    const hJ = function(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!RR || "object" !== typeof RR) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const GR = new gR(JR);
-        let yR;
-        const tR = RR => {
-          let JR;
-          yR && (RR = Buffer.concat([yR, RR]), yR = void 0);
+        NEVER: FS,
+        ALWAYS: oS,
+        DECIMAL_ROUND: bS,
+        DECIMAL_FIT: JS
+      } = NS,
+      DS = 512,
+      dS = 1024,
+      sS = 2048;
+    const uS = function(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!rr || "object" !== typeof rr) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const Qr = new Lr(Sr);
+        let Zr;
+        const Wr = rr => {
+          let Sr;
+          Zr && (rr = Buffer.concat([Zr, rr]), Zr = void 0);
           try {
-            JR = GR.unpackMultiple(RR)
-          } catch (tR) {
-            if (!tR.incomplete) throw tR;
-            yR = RR.slice(tR.lastPosition), JR = tR.values
+            Sr = Qr.unpackMultiple(rr)
+          } catch (Wr) {
+            if (!Wr.incomplete) throw Wr;
+            Zr = rr.slice(Wr.lastPosition), Sr = Wr.values
           }
-          return JR
+          return Sr
         };
-        return "function" === typeof RR[Symbol.iterator] ? function*() {
-          for (const JR of RR) yield* tR(JR)
-        }() : "function" === typeof RR[Symbol.asyncIterator] ? async function*() {
-          for await (const JR of RR) yield* tR(JR)
+        return "function" === typeof rr[Symbol.iterator] ? function*() {
+          for (const Sr of rr) yield* Wr(Sr)
+        }() : "function" === typeof rr[Symbol.asyncIterator] ? async function*() {
+          for await (const Sr of rr) yield* Wr(Sr)
         }(): void 0
       },
-      RG = function(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (RR && "object" === typeof RR) {
-          if ("function" === typeof RR[Symbol.iterator]) return function*(RR, JR) {
-            const GR = new DJ(JR);
-            for (const yR of RR) yield GR.pack(yR)
-          }(RR, JR);
-          if ("function" === typeof RR.then || "function" === typeof RR[Symbol.asyncIterator]) return async function*(RR, JR) {
-            const GR = new DJ(JR);
-            for await (const yR of RR) yield GR.pack(yR)
-          }(RR, JR);
+      rQ = function(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (rr && "object" === typeof rr) {
+          if ("function" === typeof rr[Symbol.iterator]) return function*(rr, Sr) {
+            const Qr = new RS(Sr);
+            for (const Zr of rr) yield Qr.pack(Zr)
+          }(rr, Sr);
+          if ("function" === typeof rr.then || "function" === typeof rr[Symbol.asyncIterator]) return async function*(rr, Sr) {
+            const Qr = new RS(Sr);
+            for await (const Zr of rr) yield Qr.pack(Zr)
+          }(rr, Sr);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      JG = !1,
-      GG = !0
+      SQ = !1,
+      QQ = !0
   },
-  10496: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      $changes: () => aR,
-      $childType: () => LR,
-      $decoder: () => VR,
-      $deleteByIndex: () => rR,
-      $encoder: () => fR,
-      $filter: () => KR,
-      $getByIndex: () => wR,
-      $numFields: () => pR,
-      $refId: () => qR,
-      $track: () => iR,
-      $values: () => CR,
-      ArraySchema: () => Gy,
-      Callbacks: () => Gt,
-      ChangeTree: () => vG,
-      CollectionSchema: () => uy,
-      Decoder: () => ky,
-      Encoder: () => jy,
-      FieldBuilder: () => iy,
-      MapSchema: () => ty,
-      Metadata: () => kJ,
-      OPERATION: () => tR,
-      Reflection: () => sy,
-      ReflectionField: () => Fy,
-      ReflectionType: () => Ty,
-      Root: () => Oy,
-      Schema: () => by,
-      SetSchema: () => Zy,
-      StateCallbackStrategy: () => Jt,
-      StateView: () => oy,
-      StreamSchema: () => qy,
-      TypeContext: () => mJ,
-      createPool: () => tt,
-      decode: () => WJ,
-      decodeKeyValueOperation: () => FG,
-      decodeSchemaOperation: () => QG,
-      defineCustomTypes: () => MJ,
-      defineTypes: () => ly,
-      deprecated: () => My,
-      dumpChanges: () => gy,
-      encode: () => JJ,
-      encodeArray: () => PG,
-      encodeIndexedEntry: () => oG,
-      encodeKeyValueOperation: () => cG,
-      encodeMapEntry: () => HG,
-      encodeSchemaOperation: () => DG,
-      pe: () => ay,
-      fullStateOnly: () => Wy,
-      getDecoderStateCallbacks: () => hy,
-      getEncodeDescriptor: () => RG,
-      getRawChangesCallback: () => Rt,
-      isBuilder: () => fy,
-      patchOnly: () => Uy,
-      registerType: () => XJ,
-      schema: () => py,
-      t: () => ry,
-      type: () => Ay,
-      unreliable: () => ny,
-      view: () => Ly
+  10287: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      $changes: () => tr,
+      $childType: () => hr,
+      $decoder: () => pr,
+      $deleteByIndex: () => Nr,
+      $encoder: () => Er,
+      $filter: () => xr,
+      $getByIndex: () => mr,
+      $numFields: () => Or,
+      $refId: () => Ir,
+      $track: () => fr,
+      $values: () => Kr,
+      ArraySchema: () => QZ,
+      Callbacks: () => QW,
+      ChangeTree: () => XQ,
+      CollectionSchema: () => aZ,
+      Decoder: () => bZ,
+      Encoder: () => wZ,
+      FieldBuilder: () => fZ,
+      MapSchema: () => WZ,
+      Metadata: () => bS,
+      OPERATION: () => Wr,
+      Reflection: () => sZ,
+      ReflectionField: () => DZ,
+      ReflectionType: () => dZ,
+      Root: () => PZ,
+      Schema: () => lZ,
+      SetSchema: () => jZ,
+      StateCallbackStrategy: () => SW,
+      StateView: () => CZ,
+      StreamSchema: () => IZ,
+      TypeContext: () => AS,
+      createPool: () => WW,
+      decode: () => nS,
+      decodeKeyValueOperation: () => DQ,
+      decodeSchemaOperation: () => JQ,
+      defineCustomTypes: () => BS,
+      defineTypes: () => vZ,
+      deprecated: () => BZ,
+      dumpChanges: () => LZ,
+      encode: () => SS,
+      encodeArray: () => GQ,
+      encodeIndexedEntry: () => CQ,
+      encodeKeyValueOperation: () => MQ,
+      encodeMapEntry: () => gQ,
+      encodeSchemaOperation: () => RQ,
+      nU: () => tZ,
+      fullStateOnly: () => nZ,
+      getDecoderStateCallbacks: () => uZ,
+      getEncodeDescriptor: () => rQ,
+      getRawChangesCallback: () => rW,
+      isBuilder: () => EZ,
+      patchOnly: () => YZ,
+      registerType: () => yS,
+      schema: () => OZ,
+      t: () => NZ,
+      type: () => eZ,
+      unreliable: () => zZ,
+      view: () => hZ
     });
-    const yR = 255;
-    var tR;
+    const Zr = 255;
+    var Wr;
 
-    function uR(RR) {
-      Object.defineProperty(RR, Symbol.metadata, {
+    function ar(rr) {
+      Object.defineProperty(rr, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(RR) {
-      RR[RR.ADD = 128] = "ADD", RR[RR.REPLACE = 0] = "REPLACE", RR[RR.DELETE = 64] = "DELETE", RR[RR.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", RR[RR.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", RR[RR.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", RR[RR.CLEAR = 10] = "CLEAR", RR[RR.REVERSE = 15] = "REVERSE", RR[RR.MOVE = 32] = "MOVE", RR[RR.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", RR[RR.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(tR || (tR = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const ZR = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(rr) {
+      rr[rr.ADD = 128] = "ADD", rr[rr.REPLACE = 0] = "REPLACE", rr[rr.DELETE = 64] = "DELETE", rr[rr.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", rr[rr.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", rr[rr.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", rr[rr.CLEAR = 10] = "CLEAR", rr[rr.REVERSE = 15] = "REVERSE", rr[rr.MOVE = 32] = "MOVE", rr[rr.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", rr[rr.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Wr || (Wr = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const jr = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const RR = "colyseus.symbolRegistry",
-        JR = ZR[RR] || (ZR[RR] = Object.create(null));
-      Symbol.for = function(RR) {
-        return JR[RR] || (JR[RR] = Symbol(RR))
-      }, Symbol.keyFor = function(RR) {
-        for (const GR in JR)
-          if (JR[GR] === RR) return GR
+      const rr = "colyseus.symbolRegistry",
+        Sr = jr[rr] || (jr[rr] = Object.create(null));
+      Symbol.for = function(rr) {
+        return Sr[rr] || (Sr[rr] = Symbol(rr))
+      }, Symbol.keyFor = function(rr) {
+        for (const Qr in Sr)
+          if (Sr[Qr] === rr) return Qr
       }
     }
-    const qR = Symbol.for("$refId"),
-      iR = "~track",
-      fR = "~encoder",
-      VR = "~decoder",
-      KR = "~filter",
-      wR = "~getByIndex",
-      rR = "~deleteByIndex",
-      eR = "~resyncPrune",
-      aR = Symbol.for("$changes"),
-      LR = Symbol.for("$childType"),
-      nR = Symbol.for("$proxyTarget"),
-      UR = "~onEncodeEnd",
-      WR = "~reset",
-      AR = "~onDecodeEnd",
-      CR = Symbol.for("$values"),
-      XR = "~builder",
-      MR = "~descriptors",
-      BR = "~__encodeDescriptor",
-      lR = "~encoders",
-      pR = "~__numFields",
-      gR = "~__refTypeFieldIndexes",
-      bR = "~__viewFieldIndexes",
-      vR = "$__fieldIndexesByViewTag",
-      OR = "~__unreliableFieldIndexes",
-      xR = "~__patchOnlyFieldIndexes",
-      NR = "~__fullSyncSkipIndexes",
-      DR = "~__fullStateOnlyFieldIndexes",
-      HR = "~__streamFieldIndexes",
-      oR = "~__streamPriorities";
-    let cR;
+    const Ir = Symbol.for("$refId"),
+      fr = "~track",
+      Er = "~encoder",
+      pr = "~decoder",
+      xr = "~filter",
+      mr = "~getByIndex",
+      Nr = "~deleteByIndex",
+      Ur = "~resyncPrune",
+      tr = Symbol.for("$changes"),
+      hr = Symbol.for("$childType"),
+      zr = Symbol.for("$proxyTarget"),
+      Yr = "~onEncodeEnd",
+      nr = "~reset",
+      er = "~onDecodeEnd",
+      Kr = Symbol.for("$values"),
+      yr = "~builder",
+      Br = "~descriptors",
+      Tr = "~__encodeDescriptor",
+      vr = "~encoders",
+      Or = "~__numFields",
+      Lr = "~__refTypeFieldIndexes",
+      lr = "~__viewFieldIndexes",
+      Xr = "$__fieldIndexesByViewTag",
+      Pr = "~__unreliableFieldIndexes",
+      Hr = "~__patchOnlyFieldIndexes",
+      qr = "~__fullSyncSkipIndexes",
+      Rr = "~__fullStateOnlyFieldIndexes",
+      gr = "~__streamFieldIndexes",
+      Cr = "~__streamPriorities";
+    let Mr;
     try {
-      cR = new TextEncoder
-    } catch (ut) {}
-    const PR = new ArrayBuffer(8),
-      IR = new Int32Array(PR),
-      mR = new Float32Array(PR),
-      zR = new Float64Array(PR),
-      SR = new BigInt64Array(PR),
-      jR = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(RR, JR) {
-        for (var GR = 0, yR = 0, tR = 0, uR = RR.length; tR < uR; tR++)(GR = RR.charCodeAt(tR)) < 128 ? yR += 1 : GR < 2048 ? yR += 2 : GR < 55296 || GR >= 57344 ? yR += 3 : (tR++, yR += 4);
-        return yR
+      Mr = new TextEncoder
+    } catch (aW) {}
+    const Gr = new ArrayBuffer(8),
+      kr = new Int32Array(Gr),
+      Ar = new Float32Array(Gr),
+      Vr = new Float64Array(Gr),
+      ir = new BigInt64Array(Gr),
+      wr = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(rr, Sr) {
+        for (var Qr = 0, Zr = 0, Wr = 0, ar = rr.length; Wr < ar; Wr++)(Qr = rr.charCodeAt(Wr)) < 128 ? Zr += 1 : Qr < 2048 ? Zr += 2 : Qr < 55296 || Qr >= 57344 ? Zr += 3 : (Wr++, Zr += 4);
+        return Zr
       };
 
-    function dR(RR, JR, GR) {
-      for (var yR = 0, tR = 0, uR = JR.length; tR < uR; tR++)(yR = JR.charCodeAt(tR)) < 128 ? RR[GR.offset++] = yR : yR < 2048 ? (RR[GR.offset] = 192 | yR >> 6, RR[GR.offset + 1] = 128 | 63 & yR, GR.offset += 2) : yR < 55296 || yR >= 57344 ? (RR[GR.offset] = 224 | yR >> 12, RR[GR.offset + 1] = 128 | yR >> 6 & 63, RR[GR.offset + 2] = 128 | 63 & yR, GR.offset += 3) : (tR++, yR = 65536 + ((1023 & yR) << 10 | 1023 & JR.charCodeAt(tR)), RR[GR.offset] = 240 | yR >> 18, RR[GR.offset + 1] = 128 | yR >> 12 & 63, RR[GR.offset + 2] = 128 | yR >> 6 & 63, RR[GR.offset + 3] = 128 | 63 & yR, GR.offset += 4)
+    function cr(rr, Sr, Qr) {
+      for (var Zr = 0, Wr = 0, ar = Sr.length; Wr < ar; Wr++)(Zr = Sr.charCodeAt(Wr)) < 128 ? rr[Qr.offset++] = Zr : Zr < 2048 ? (rr[Qr.offset] = 192 | Zr >> 6, rr[Qr.offset + 1] = 128 | 63 & Zr, Qr.offset += 2) : Zr < 55296 || Zr >= 57344 ? (rr[Qr.offset] = 224 | Zr >> 12, rr[Qr.offset + 1] = 128 | Zr >> 6 & 63, rr[Qr.offset + 2] = 128 | 63 & Zr, Qr.offset += 3) : (Wr++, Zr = 65536 + ((1023 & Zr) << 10 | 1023 & Sr.charCodeAt(Wr)), rr[Qr.offset] = 240 | Zr >> 18, rr[Qr.offset + 1] = 128 | Zr >> 12 & 63, rr[Qr.offset + 2] = 128 | Zr >> 6 & 63, rr[Qr.offset + 3] = 128 | 63 & Zr, Qr.offset += 4)
     }
 
-    function ER(RR, JR, GR) {
-      RR[GR.offset++] = 255 & JR
+    function Fr(rr, Sr, Qr) {
+      rr[Qr.offset++] = 255 & Sr
     }
 
-    function YR(RR, JR, GR) {
-      RR[GR.offset++] = 255 & JR, RR[GR.offset++] = JR >> 8 & 255
+    function or(rr, Sr, Qr) {
+      rr[Qr.offset++] = 255 & Sr, rr[Qr.offset++] = Sr >> 8 & 255
     }
 
-    function kR(RR, JR, GR) {
-      RR[GR.offset++] = 255 & JR, RR[GR.offset++] = JR >> 8 & 255
+    function br(rr, Sr, Qr) {
+      rr[Qr.offset++] = 255 & Sr, rr[Qr.offset++] = Sr >> 8 & 255
     }
 
-    function QR(RR, JR, GR) {
-      RR[GR.offset++] = 255 & JR, RR[GR.offset++] = JR >> 8 & 255, RR[GR.offset++] = JR >> 16 & 255, RR[GR.offset++] = JR >> 24 & 255
+    function Jr(rr, Sr, Qr) {
+      rr[Qr.offset++] = 255 & Sr, rr[Qr.offset++] = Sr >> 8 & 255, rr[Qr.offset++] = Sr >> 16 & 255, rr[Qr.offset++] = Sr >> 24 & 255
     }
 
-    function FR(RR, JR, GR) {
-      const yR = JR >> 24,
-        tR = JR >> 16,
-        uR = JR >> 8,
-        ZR = JR;
-      RR[GR.offset++] = 255 & ZR, RR[GR.offset++] = 255 & uR, RR[GR.offset++] = 255 & tR, RR[GR.offset++] = 255 & yR
+    function Dr(rr, Sr, Qr) {
+      const Zr = Sr >> 24,
+        Wr = Sr >> 16,
+        ar = Sr >> 8,
+        jr = Sr;
+      rr[Qr.offset++] = 255 & jr, rr[Qr.offset++] = 255 & ar, rr[Qr.offset++] = 255 & Wr, rr[Qr.offset++] = 255 & Zr
     }
 
-    function TR(RR, JR, GR) {
-      const yR = Math.floor(JR / Math.pow(2, 32));
-      FR(RR, JR >>> 0, GR), FR(RR, yR, GR)
+    function dr(rr, Sr, Qr) {
+      const Zr = Math.floor(Sr / Math.pow(2, 32));
+      Dr(rr, Sr >>> 0, Qr), Dr(rr, Zr, Qr)
     }
 
-    function sR(RR, JR, GR) {
-      const yR = JR / Math.pow(2, 32) | 0;
-      FR(RR, JR >>> 0, GR), FR(RR, yR, GR)
+    function sr(rr, Sr, Qr) {
+      const Zr = Sr / Math.pow(2, 32) | 0;
+      Dr(rr, Sr >>> 0, Qr), Dr(rr, Zr, Qr)
     }
 
-    function hR(RR, JR, GR) {
-      mR[0] = JR, QR(RR, IR[0], GR)
+    function ur(rr, Sr, Qr) {
+      Ar[0] = Sr, Jr(rr, kr[0], Qr)
     }
 
-    function RJ(RR, JR, GR) {
-      zR[0] = JR, QR(RR, IR[0], GR), QR(RR, IR[1], GR)
+    function rS(rr, Sr, Qr) {
+      Vr[0] = Sr, Jr(rr, kr[0], Qr), Jr(rr, kr[1], Qr)
     }
-    const JJ = {
-        int8: ER,
-        uint8: function(RR, JR, GR) {
-          RR[GR.offset++] = 255 & JR
+    const SS = {
+        int8: Fr,
+        uint8: function(rr, Sr, Qr) {
+          rr[Qr.offset++] = 255 & Sr
         },
-        int16: YR,
-        uint16: kR,
-        int32: QR,
-        uint32: FR,
-        int64: TR,
-        uint64: sR,
-        bigint64: function(RR, JR, GR) {
-          SR[0] = BigInt.asIntN(64, JR), QR(RR, IR[0], GR), QR(RR, IR[1], GR)
+        int16: or,
+        uint16: br,
+        int32: Jr,
+        uint32: Dr,
+        int64: dr,
+        uint64: sr,
+        bigint64: function(rr, Sr, Qr) {
+          ir[0] = BigInt.asIntN(64, Sr), Jr(rr, kr[0], Qr), Jr(rr, kr[1], Qr)
         },
-        biguint64: function(RR, JR, GR) {
-          SR[0] = BigInt.asIntN(64, JR), QR(RR, IR[0], GR), QR(RR, IR[1], GR)
+        biguint64: function(rr, Sr, Qr) {
+          ir[0] = BigInt.asIntN(64, Sr), Jr(rr, kr[0], Qr), Jr(rr, kr[1], Qr)
         },
-        float32: hR,
-        float64: RJ,
-        boolean: function(RR, JR, GR) {
-          RR[GR.offset++] = JR ? 1 : 0
+        float32: ur,
+        float64: rS,
+        boolean: function(rr, Sr, Qr) {
+          rr[Qr.offset++] = Sr ? 1 : 0
         },
-        string: function(RR, JR, GR) {
-          JR || (JR = "");
-          let yR = jR(JR, "utf8"),
-            tR = 0;
-          if (yR < 32) RR[GR.offset++] = 160 | yR, tR = 1;
-          else if (yR < 256) RR[GR.offset++] = 217, RR[GR.offset++] = yR, tR = 2;
-          else if (yR < 65536) RR[GR.offset++] = 218, kR(RR, yR, GR), tR = 3;
+        string: function(rr, Sr, Qr) {
+          Sr || (Sr = "");
+          let Zr = wr(Sr, "utf8"),
+            Wr = 0;
+          if (Zr < 32) rr[Qr.offset++] = 160 | Zr, Wr = 1;
+          else if (Zr < 256) rr[Qr.offset++] = 217, rr[Qr.offset++] = Zr, Wr = 2;
+          else if (Zr < 65536) rr[Qr.offset++] = 218, br(rr, Zr, Qr), Wr = 3;
           else {
-            if (!(yR < 4294967296)) throw new Error("String too long");
-            RR[GR.offset++] = 219, FR(RR, yR, GR), tR = 5
+            if (!(Zr < 4294967296)) throw new Error("String too long");
+            rr[Qr.offset++] = 219, Dr(rr, Zr, Qr), Wr = 5
           }
-          return dR(RR, JR, GR), tR + yR
+          return cr(rr, Sr, Qr), Wr + Zr
         },
-        number: function RR(JR, GR, yR) {
-          return isNaN(GR) ? RR(JR, 0, yR) : isFinite(GR) ? GR !== (0 | GR) ? Math.abs(GR) <= 34028235e31 && (mR[0] = GR, Math.abs(Math.abs(mR[0]) - Math.abs(GR)) < 1e-4) ? (JR[yR.offset++] = 202, hR(JR, GR, yR), 5) : (JR[yR.offset++] = 203, RJ(JR, GR, yR), 9) : GR >= 0 ? GR < 128 ? (JR[yR.offset++] = 255 & GR, 1) : GR < 256 ? (JR[yR.offset++] = 204, JR[yR.offset++] = 255 & GR, 2) : GR < 65536 ? (JR[yR.offset++] = 205, kR(JR, GR, yR), 3) : GR < 4294967296 ? (JR[yR.offset++] = 206, FR(JR, GR, yR), 5) : (JR[yR.offset++] = 207, sR(JR, GR, yR), 9) : GR >= -32 ? (JR[yR.offset++] = 224 | GR + 32, 1) : GR >= -128 ? (JR[yR.offset++] = 208, ER(JR, GR, yR), 2) : GR >= -32768 ? (JR[yR.offset++] = 209, YR(JR, GR, yR), 3) : GR >= -2147483648 ? (JR[yR.offset++] = 210, QR(JR, GR, yR), 5) : (JR[yR.offset++] = 211, TR(JR, GR, yR), 9) : RR(JR, GR > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, yR)
+        number: function rr(Sr, Qr, Zr) {
+          return isNaN(Qr) ? rr(Sr, 0, Zr) : isFinite(Qr) ? Qr !== (0 | Qr) ? Math.abs(Qr) <= 34028235e31 && (Ar[0] = Qr, Math.abs(Math.abs(Ar[0]) - Math.abs(Qr)) < 1e-4) ? (Sr[Zr.offset++] = 202, ur(Sr, Qr, Zr), 5) : (Sr[Zr.offset++] = 203, rS(Sr, Qr, Zr), 9) : Qr >= 0 ? Qr < 128 ? (Sr[Zr.offset++] = 255 & Qr, 1) : Qr < 256 ? (Sr[Zr.offset++] = 204, Sr[Zr.offset++] = 255 & Qr, 2) : Qr < 65536 ? (Sr[Zr.offset++] = 205, br(Sr, Qr, Zr), 3) : Qr < 4294967296 ? (Sr[Zr.offset++] = 206, Dr(Sr, Qr, Zr), 5) : (Sr[Zr.offset++] = 207, sr(Sr, Qr, Zr), 9) : Qr >= -32 ? (Sr[Zr.offset++] = 224 | Qr + 32, 1) : Qr >= -128 ? (Sr[Zr.offset++] = 208, Fr(Sr, Qr, Zr), 2) : Qr >= -32768 ? (Sr[Zr.offset++] = 209, or(Sr, Qr, Zr), 3) : Qr >= -2147483648 ? (Sr[Zr.offset++] = 210, Jr(Sr, Qr, Zr), 5) : (Sr[Zr.offset++] = 211, dr(Sr, Qr, Zr), 9) : rr(Sr, Qr > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Zr)
         },
-        utf8Write: dR,
-        utf8Length: jR
+        utf8Write: cr,
+        utf8Length: wr
       },
-      GJ = new ArrayBuffer(8),
-      yJ = new Int32Array(GJ),
-      tJ = new Float32Array(GJ),
-      uJ = new Float64Array(GJ),
-      ZJ = new BigUint64Array(GJ),
-      qJ = new BigInt64Array(GJ);
+      QS = new ArrayBuffer(8),
+      ZS = new Int32Array(QS),
+      WS = new Float32Array(QS),
+      aS = new Float64Array(QS),
+      jS = new BigUint64Array(QS),
+      IS = new BigInt64Array(QS);
 
-    function iJ(RR, JR, GR) {
-      GR > RR.length - JR.offset && (GR = RR.length - JR.offset);
-      for (var yR = "", tR = 0, uR = JR.offset, ZR = JR.offset + GR; uR < ZR; uR++) {
-        var qR = RR[uR];
-        if (0 !== (128 & qR))
-          if (192 !== (224 & qR))
-            if (224 !== (240 & qR)) {
-              if (240 !== (248 & qR)) {
-                console.error("decode.utf8Read(): Invalid byte " + qR + " at offset " + uR + ". Skip to end of string: " + (JR.offset + GR));
+    function fS(rr, Sr, Qr) {
+      Qr > rr.length - Sr.offset && (Qr = rr.length - Sr.offset);
+      for (var Zr = "", Wr = 0, ar = Sr.offset, jr = Sr.offset + Qr; ar < jr; ar++) {
+        var Ir = rr[ar];
+        if (0 !== (128 & Ir))
+          if (192 !== (224 & Ir))
+            if (224 !== (240 & Ir)) {
+              if (240 !== (248 & Ir)) {
+                console.error("decode.utf8Read(): Invalid byte " + Ir + " at offset " + ar + ". Skip to end of string: " + (Sr.offset + Qr));
                 break
-              }(tR = (7 & qR) << 18 | (63 & RR[++uR]) << 12 | (63 & RR[++uR]) << 6 | 63 & RR[++uR]) >= 65536 ? (tR -= 65536, yR += String.fromCharCode(55296 + (tR >>> 10), 56320 + (1023 & tR))) : yR += String.fromCharCode(tR)
-            } else yR += String.fromCharCode((15 & qR) << 12 | (63 & RR[++uR]) << 6 | 63 & RR[++uR]);
-        else yR += String.fromCharCode((31 & qR) << 6 | 63 & RR[++uR]);
-        else yR += String.fromCharCode(qR)
+              }(Wr = (7 & Ir) << 18 | (63 & rr[++ar]) << 12 | (63 & rr[++ar]) << 6 | 63 & rr[++ar]) >= 65536 ? (Wr -= 65536, Zr += String.fromCharCode(55296 + (Wr >>> 10), 56320 + (1023 & Wr))) : Zr += String.fromCharCode(Wr)
+            } else Zr += String.fromCharCode((15 & Ir) << 12 | (63 & rr[++ar]) << 6 | 63 & rr[++ar]);
+        else Zr += String.fromCharCode((31 & Ir) << 6 | 63 & rr[++ar]);
+        else Zr += String.fromCharCode(Ir)
       }
-      return JR.offset += GR, yR
+      return Sr.offset += Qr, Zr
     }
 
-    function fJ(RR, JR) {
-      return VJ(RR, JR) << 24 >> 24
+    function ES(rr, Sr) {
+      return pS(rr, Sr) << 24 >> 24
     }
 
-    function VJ(RR, JR) {
-      return RR[JR.offset++]
+    function pS(rr, Sr) {
+      return rr[Sr.offset++]
     }
 
-    function KJ(RR, JR) {
-      return wJ(RR, JR) << 16 >> 16
+    function xS(rr, Sr) {
+      return mS(rr, Sr) << 16 >> 16
     }
 
-    function wJ(RR, JR) {
-      return RR[JR.offset++] | RR[JR.offset++] << 8
+    function mS(rr, Sr) {
+      return rr[Sr.offset++] | rr[Sr.offset++] << 8
     }
 
-    function rJ(RR, JR) {
-      return RR[JR.offset++] | RR[JR.offset++] << 8 | RR[JR.offset++] << 16 | RR[JR.offset++] << 24
+    function NS(rr, Sr) {
+      return rr[Sr.offset++] | rr[Sr.offset++] << 8 | rr[Sr.offset++] << 16 | rr[Sr.offset++] << 24
     }
 
-    function eJ(RR, JR) {
-      return rJ(RR, JR) >>> 0
+    function US(rr, Sr) {
+      return NS(rr, Sr) >>> 0
     }
 
-    function aJ(RR, JR) {
-      return yJ[0] = rJ(RR, JR), tJ[0]
+    function tS(rr, Sr) {
+      return ZS[0] = NS(rr, Sr), WS[0]
     }
 
-    function LJ(RR, JR) {
-      return yJ[0] = rJ(RR, JR), yJ[1] = rJ(RR, JR), uJ[0]
+    function hS(rr, Sr) {
+      return ZS[0] = NS(rr, Sr), ZS[1] = NS(rr, Sr), aS[0]
     }
 
-    function nJ(RR, JR) {
-      const GR = eJ(RR, JR);
-      return rJ(RR, JR) * Math.pow(2, 32) + GR
+    function zS(rr, Sr) {
+      const Qr = US(rr, Sr);
+      return NS(rr, Sr) * Math.pow(2, 32) + Qr
     }
 
-    function UJ(RR, JR) {
-      const GR = eJ(RR, JR);
-      return eJ(RR, JR) * Math.pow(2, 32) + GR
+    function YS(rr, Sr) {
+      const Qr = US(rr, Sr);
+      return US(rr, Sr) * Math.pow(2, 32) + Qr
     }
-    const WJ = {
-        utf8Read: iJ,
-        int8: fJ,
-        uint8: VJ,
-        int16: KJ,
-        uint16: wJ,
-        int32: rJ,
-        uint32: eJ,
-        float32: aJ,
-        float64: LJ,
-        int64: nJ,
-        uint64: UJ,
-        bigint64: function(RR, JR) {
-          return yJ[0] = rJ(RR, JR), yJ[1] = rJ(RR, JR), qJ[0]
+    const nS = {
+        utf8Read: fS,
+        int8: ES,
+        uint8: pS,
+        int16: xS,
+        uint16: mS,
+        int32: NS,
+        uint32: US,
+        float32: tS,
+        float64: hS,
+        int64: zS,
+        uint64: YS,
+        bigint64: function(rr, Sr) {
+          return ZS[0] = NS(rr, Sr), ZS[1] = NS(rr, Sr), IS[0]
         },
-        biguint64: function(RR, JR) {
-          return yJ[0] = rJ(RR, JR), yJ[1] = rJ(RR, JR), ZJ[0]
+        biguint64: function(rr, Sr) {
+          return ZS[0] = NS(rr, Sr), ZS[1] = NS(rr, Sr), jS[0]
         },
-        boolean: function(RR, JR) {
-          return VJ(RR, JR) > 0
+        boolean: function(rr, Sr) {
+          return pS(rr, Sr) > 0
         },
-        string: function(RR, JR) {
-          const GR = RR[JR.offset++];
-          let yR;
-          return GR < 192 ? yR = 31 & GR : 217 === GR ? yR = VJ(RR, JR) : 218 === GR ? yR = wJ(RR, JR) : 219 === GR && (yR = eJ(RR, JR)), iJ(RR, JR, yR)
+        string: function(rr, Sr) {
+          const Qr = rr[Sr.offset++];
+          let Zr;
+          return Qr < 192 ? Zr = 31 & Qr : 217 === Qr ? Zr = pS(rr, Sr) : 218 === Qr ? Zr = mS(rr, Sr) : 219 === Qr && (Zr = US(rr, Sr)), fS(rr, Sr, Zr)
         },
-        number: function(RR, JR) {
-          const GR = RR[JR.offset++];
-          return GR < 128 ? GR : 202 === GR ? aJ(RR, JR) : 203 === GR ? LJ(RR, JR) : 204 === GR ? VJ(RR, JR) : 205 === GR ? wJ(RR, JR) : 206 === GR ? eJ(RR, JR) : 207 === GR ? UJ(RR, JR) : 208 === GR ? fJ(RR, JR) : 209 === GR ? KJ(RR, JR) : 210 === GR ? rJ(RR, JR) : 211 === GR ? nJ(RR, JR) : GR > 223 ? -1 * (255 - GR + 1) : void 0
+        number: function(rr, Sr) {
+          const Qr = rr[Sr.offset++];
+          return Qr < 128 ? Qr : 202 === Qr ? tS(rr, Sr) : 203 === Qr ? hS(rr, Sr) : 204 === Qr ? pS(rr, Sr) : 205 === Qr ? mS(rr, Sr) : 206 === Qr ? US(rr, Sr) : 207 === Qr ? YS(rr, Sr) : 208 === Qr ? ES(rr, Sr) : 209 === Qr ? xS(rr, Sr) : 210 === Qr ? NS(rr, Sr) : 211 === Qr ? zS(rr, Sr) : Qr > 223 ? -1 * (255 - Qr + 1) : void 0
         },
-        stringCheck: function(RR, JR) {
-          const GR = RR[JR.offset];
-          return GR < 192 && GR > 160 || 217 === GR || 218 === GR || 219 === GR
+        stringCheck: function(rr, Sr) {
+          const Qr = rr[Sr.offset];
+          return Qr < 192 && Qr > 160 || 217 === Qr || 218 === Qr || 219 === Qr
         }
       },
-      AJ = {},
-      CJ = new Map;
+      eS = {},
+      KS = new Map;
 
-    function XJ(RR, JR) {
-      JR.constructor && (Object.prototype.hasOwnProperty.call(JR, "constructor") && null == JR.constructor[Symbol.metadata] && uR(JR.constructor), CJ.set(JR.constructor, RR), AJ[RR] = JR), JR.encode && (JJ[RR] = JR.encode), JR.decode && (WJ[RR] = JR.decode)
+    function yS(rr, Sr) {
+      Sr.constructor && (Object.prototype.hasOwnProperty.call(Sr, "constructor") && null == Sr.constructor[Symbol.metadata] && ar(Sr.constructor), KS.set(Sr.constructor, rr), eS[rr] = Sr), Sr.encode && (SS[rr] = Sr.encode), Sr.decode && (nS[rr] = Sr.decode)
     }
 
-    function MJ(RR) {
-      for (const JR in RR) XJ(JR, RR[JR]);
-      return RR => Ay(RR)
+    function BS(rr) {
+      for (const Sr in rr) yS(Sr, rr[Sr]);
+      return rr => eZ(rr)
     }
-    const BJ = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const TS = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function lJ() {
+    function vS() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function pJ(RR) {
-      return RR._stream ??= lJ()
+    function OS(rr) {
+      return rr._stream ??= vS()
     }
 
-    function gJ(RR, JR, GR) {
-      0 === JR.activeViews.size && pJ(RR).broadcastPending.add(GR)
+    function LS(rr, Sr, Qr) {
+      0 === Sr.activeViews.size && OS(rr).broadcastPending.add(Qr)
     }
 
-    function bJ(RR, JR, GR, yR) {
-      const uR = RR._stream;
-      if (void 0 === uR) return !0;
-      let ZR = !1;
-      return uR.broadcastPending.delete(yR) ? ZR = !0 : uR.sentBroadcast.delete(yR) && uR.broadcastDeletes.add(yR), JR.forEachActiveView((RR => {
-        const JR = uR.pendingByView.get(RR.id);
-        if (JR?.has(yR)) return JR.delete(yR), void(ZR = !0);
-        const qR = uR.sentByView.get(RR.id);
-        if (qR?.has(yR)) {
-          qR.delete(yR);
-          let JR = RR.changes.get(GR);
-          void 0 === JR && (JR = new Map, RR.changes.set(GR, JR)), JR.set(yR, tR.DELETE)
+    function lS(rr, Sr, Qr, Zr) {
+      const ar = rr._stream;
+      if (void 0 === ar) return !0;
+      let jr = !1;
+      return ar.broadcastPending.delete(Zr) ? jr = !0 : ar.sentBroadcast.delete(Zr) && ar.broadcastDeletes.add(Zr), Sr.forEachActiveView((rr => {
+        const Sr = ar.pendingByView.get(rr.id);
+        if (Sr?.has(Zr)) return Sr.delete(Zr), void(jr = !0);
+        const Ir = ar.sentByView.get(rr.id);
+        if (Ir?.has(Zr)) {
+          Ir.delete(Zr);
+          let Sr = rr.changes.get(Qr);
+          void 0 === Sr && (Sr = new Map, rr.changes.set(Qr, Sr)), Sr.set(Zr, Wr.DELETE)
         }
-      })), ZR
+      })), jr
     }
 
-    function vJ(RR, JR) {
-      const GR = RR._stream?.pendingByView;
-      if (void 0 === GR) return !1;
-      for (const [yR, tR] of GR)
-        if (tR.size > 0 && void 0 !== JR.activeViews.get(yR)?.deref()) return !0;
+    function XS(rr, Sr) {
+      const Qr = rr._stream?.pendingByView;
+      if (void 0 === Qr) return !1;
+      for (const [Zr, Wr] of Qr)
+        if (Wr.size > 0 && void 0 !== Sr.activeViews.get(Zr)?.deref()) return !0;
       return !1
     }
 
-    function OJ(RR) {
-      const JR = RR._stream;
-      return void 0 !== JR && (JR.broadcastPending.size > 0 || JR.broadcastDeletes.size > 0)
+    function PS(rr) {
+      const Sr = rr._stream;
+      return void 0 !== Sr && (Sr.broadcastPending.size > 0 || Sr.broadcastDeletes.size > 0)
     }
 
-    function xJ(RR, JR, GR) {
-      const yR = pJ(RR);
-      let tR = yR.pendingByView.get(JR);
-      void 0 === tR && (tR = new Set, yR.pendingByView.set(JR, tR)), tR.add(GR)
+    function HS(rr, Sr, Qr) {
+      const Zr = OS(rr);
+      let Wr = Zr.pendingByView.get(Sr);
+      void 0 === Wr && (Wr = new Set, Zr.pendingByView.set(Sr, Wr)), Wr.add(Qr)
     }
 
-    function NJ(RR, JR) {
-      const GR = RR._stream;
-      void 0 !== GR && (GR.pendingByView.delete(JR), GR.sentByView.delete(JR), GR.priorityByView?.delete(JR))
+    function qS(rr, Sr) {
+      const Qr = rr._stream;
+      void 0 !== Qr && (Qr.pendingByView.delete(Sr), Qr.sentByView.delete(Sr), Qr.priorityByView?.delete(Sr))
     }
-    const DJ = {
+    const RS = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function HJ(RR) {
-      if (null == RR || "object" !== typeof RR) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function gS(rr) {
+      if (null == rr || "object" !== typeof rr) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: JR,
-        max: GR
-      } = RR;
-      if ("number" !== typeof JR || "number" !== typeof GR || !(GR > JR) || !Number.isFinite(JR) || !Number.isFinite(GR)) throw new Error(`t.quantized(): require finite min < max (got min=${JR}, max=${GR}).`);
-      const yR = RR.bits ?? 16;
-      if (8 !== yR && 16 !== yR && 32 !== yR) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${yR}).`);
-      const tR = RR.mode ?? "clamp";
-      if ("clamp" !== tR && "wrap" !== tR) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(tR)}).`);
-      const uR = "wrap" === tR,
-        ZR = Math.pow(2, yR);
+        min: Sr,
+        max: Qr
+      } = rr;
+      if ("number" !== typeof Sr || "number" !== typeof Qr || !(Qr > Sr) || !Number.isFinite(Sr) || !Number.isFinite(Qr)) throw new Error(`t.quantized(): require finite min < max (got min=${Sr}, max=${Qr}).`);
+      const Zr = rr.bits ?? 16;
+      if (8 !== Zr && 16 !== Zr && 32 !== Zr) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Zr}).`);
+      const Wr = rr.mode ?? "clamp";
+      if ("clamp" !== Wr && "wrap" !== Wr) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Wr)}).`);
+      const ar = "wrap" === Wr,
+        jr = Math.pow(2, Zr);
       return {
-        min: JR,
-        max: GR,
-        bits: yR,
-        wrap: uR,
-        wire: DJ[yR],
-        range: GR - JR,
-        span: uR ? ZR : JR === -GR ? ZR - 2 : ZR - 1
+        min: Sr,
+        max: Qr,
+        bits: Zr,
+        wrap: ar,
+        wire: RS[Zr],
+        range: Qr - Sr,
+        span: ar ? jr : Sr === -Qr ? jr - 2 : jr - 1
       }
     }
 
-    function oJ(RR) {
-      return null !== RR && "object" === typeof RR && void 0 !== RR.quantized
+    function CS(rr) {
+      return null !== rr && "object" === typeof rr && void 0 !== rr.quantized
     }
 
-    function cJ(RR, JR) {
-      if (RR.wrap) {
-        if (!Number.isFinite(JR)) return 0;
-        const GR = RR.range;
-        let yR = (JR - RR.min) % GR;
-        yR < 0 && (yR += GR);
-        const tR = RR.span;
-        return Math.floor(yR / GR * tR + .5) % tR
+    function MS(rr, Sr) {
+      if (rr.wrap) {
+        if (!Number.isFinite(Sr)) return 0;
+        const Qr = rr.range;
+        let Zr = (Sr - rr.min) % Qr;
+        Zr < 0 && (Zr += Qr);
+        const Wr = rr.span;
+        return Math.floor(Zr / Qr * Wr + .5) % Wr
       }
-      if (JR !== JR) return 0;
-      const GR = JR < RR.min ? RR.min : JR > RR.max ? RR.max : JR;
-      return Math.floor((GR - RR.min) / RR.range * RR.span + .5)
+      if (Sr !== Sr) return 0;
+      const Qr = Sr < rr.min ? rr.min : Sr > rr.max ? rr.max : Sr;
+      return Math.floor((Qr - rr.min) / rr.range * rr.span + .5)
     }
 
-    function PJ(RR, JR) {
-      return RR.min + JR / RR.span * RR.range
+    function GS(rr, Sr) {
+      return rr.min + Sr / rr.span * rr.range
     }
 
-    function IJ(RR) {
-      const JR = JJ[RR.wire];
-      return (GR, yR, tR) => JR(GR, cJ(RR, yR), tR)
+    function kS(rr) {
+      const Sr = SS[rr.wire];
+      return (Qr, Zr, Wr) => Sr(Qr, MS(rr, Zr), Wr)
     }
-    class mJ {
+    class AS {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(RR) {
-        const JR = Object.getPrototypeOf(RR);
-        if (JR !== by) {
-          let GR = mJ.inheritedTypes.get(JR);
-          GR || (GR = new Set, mJ.inheritedTypes.set(JR, GR)), GR.add(RR)
+      static register(rr) {
+        const Sr = Object.getPrototypeOf(rr);
+        if (Sr !== lZ) {
+          let Qr = AS.inheritedTypes.get(Sr);
+          Qr || (Qr = new Set, AS.inheritedTypes.set(Sr, Qr)), Qr.add(rr)
         }
       }
-      static cache(RR) {
-        let JR = mJ.cachedContexts.get(RR);
-        return JR || (JR = new mJ(RR), mJ.cachedContexts.set(RR, JR)), JR
+      static cache(rr) {
+        let Sr = AS.cachedContexts.get(rr);
+        return Sr || (Sr = new AS(rr), AS.cachedContexts.set(rr, Sr)), Sr
       }
-      constructor(RR) {
-        RR && this.discoverTypes(RR)
+      constructor(rr) {
+        rr && this.discoverTypes(rr)
       }
-      has(RR) {
-        return this.schemas.has(RR)
+      has(rr) {
+        return this.schemas.has(rr)
       }
-      get(RR) {
-        return this.types[RR]
+      get(rr) {
+        return this.types[rr]
       }
-      add(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(RR) && (this.types[JR] = RR, null == RR[Symbol.metadata] && kJ.initialize(RR), this.schemas.set(RR, JR), !0)
+      add(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(rr) && (this.types[Sr] = rr, null == rr[Symbol.metadata] && bS.initialize(rr), this.schemas.set(rr, Sr), !0)
       }
-      getTypeId(RR) {
-        return this.schemas.get(RR)
+      getTypeId(rr) {
+        return this.schemas.get(rr)
       }
-      discoverTypes(RR) {
-        if (!this.add(RR)) return;
-        mJ.inheritedTypes.get(RR)?.forEach((RR => {
-          this.discoverTypes(RR)
+      discoverTypes(rr) {
+        if (!this.add(rr)) return;
+        AS.inheritedTypes.get(rr)?.forEach((rr => {
+          this.discoverTypes(rr)
         }));
-        let JR = RR;
+        let Sr = rr;
         for (;
-          (JR = Object.getPrototypeOf(JR)) && JR !== by && JR !== Function.prototype;) this.discoverTypes(JR);
-        const GR = RR[Symbol.metadata];
-        (GR[bR] || GR[HR]) && (this.hasFilters = !0);
-        for (const yR in GR) {
-          const RR = GR[yR].type;
-          if ("string" !== typeof RR && !oJ(RR))
-            if ("function" === typeof RR) this.discoverTypes(RR);
+          (Sr = Object.getPrototypeOf(Sr)) && Sr !== lZ && Sr !== Function.prototype;) this.discoverTypes(Sr);
+        const Qr = rr[Symbol.metadata];
+        (Qr[lr] || Qr[gr]) && (this.hasFilters = !0);
+        for (const Zr in Qr) {
+          const rr = Qr[Zr].type;
+          if ("string" !== typeof rr && !CS(rr))
+            if ("function" === typeof rr) this.discoverTypes(rr);
             else {
-              const JR = Object.values(RR)[0];
-              if ("string" === typeof JR) continue;
-              this.discoverTypes(JR)
+              const Sr = Object.values(rr)[0];
+              if ("string" === typeof Sr) continue;
+              this.discoverTypes(Sr)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function zJ(RR) {
-      const JR = jJ(RR);
-      return JR ? {
-        complexTypeKlass: AJ[JR],
-        childType: RR[JR]
+    function VS(rr) {
+      const Sr = wS(rr);
+      return Sr ? {
+        complexTypeKlass: eS[Sr],
+        childType: rr[Sr]
       } : {
         complexTypeKlass: !1,
-        childType: RR
+        childType: rr
       }
     }
 
-    function SJ(RR, JR) {
-      const GR = dJ(RR),
-        yR = jJ(GR),
-        tR = yR && jJ(GR[yR]);
-      if (tR) throw new Error(`${JR?`${JR}: `:""}@colyseus/schema: nested collections are not supported ("${yR}" of "${tR}"). Collections can only hold primitive types or Schema classes, wrap the inner ${tR} in a Schema class.`);
-      return GR
+    function iS(rr, Sr) {
+      const Qr = cS(rr),
+        Zr = wS(Qr),
+        Wr = Zr && wS(Qr[Zr]);
+      if (Wr) throw new Error(`${Sr?`${Sr}: `:""}@colyseus/schema: nested collections are not supported ("${Zr}" of "${Wr}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Wr} in a Schema class.`);
+      return Qr
     }
 
-    function jJ(RR) {
-      return "object" === typeof RR && null !== RR ? Object.keys(RR).find((RR => void 0 !== AJ[RR])) : void 0
+    function wS(rr) {
+      return "object" === typeof rr && null !== rr ? Object.keys(rr).find((rr => void 0 !== eS[rr])) : void 0
     }
 
-    function dJ(RR) {
-      if ("object" !== typeof RR || null === RR) return RR;
-      if (Array.isArray(RR)) return {
-        array: dJ(RR[0])
+    function cS(rr) {
+      if ("object" !== typeof rr || null === rr) return rr;
+      if (Array.isArray(rr)) return {
+        array: cS(rr[0])
       };
-      const JR = function(RR) {
-        const JR = Object.keys(RR),
-          GR = JR.filter((RR => /\d+/.test(RR)));
-        if (GR.length > 0 && GR.length === JR.length / 2 && RR[RR[GR[0]]] == GR[0]) return "number";
-        if (JR.length > 0 && JR.every((JR => RR[JR] === JR))) return "string"
-      }(RR);
-      if (JR) return JR;
-      if (oJ(RR)) return "string" === typeof RR.quantized.wire ? RR : {
-        quantized: HJ(RR.quantized)
+      const Sr = function(rr) {
+        const Sr = Object.keys(rr),
+          Qr = Sr.filter((rr => /\d+/.test(rr)));
+        if (Qr.length > 0 && Qr.length === Sr.length / 2 && rr[rr[Qr[0]]] == Qr[0]) return "number";
+        if (Sr.length > 0 && Sr.every((Sr => rr[Sr] === Sr))) return "string"
+      }(rr);
+      if (Sr) return Sr;
+      if (CS(rr)) return "string" === typeof rr.quantized.wire ? rr : {
+        quantized: gS(rr.quantized)
       };
-      if (void 0 !== RR.type) return dJ(RR.type);
-      const GR = jJ(RR);
-      return GR && (RR[GR] = dJ(RR[GR])), RR
+      if (void 0 !== rr.type) return cS(rr.type);
+      const Qr = wS(rr);
+      return Qr && (rr[Qr] = cS(rr[Qr])), rr
     }
-    const EJ = [gR, OR, xR, NR, DR, HR, lR];
+    const FS = [Lr, Pr, Hr, qr, Rr, gr, vr];
 
-    function YJ(RR, JR, GR) {
-      RR[JR] || Object.defineProperty(RR, JR, {
+    function oS(rr, Sr, Qr) {
+      rr[Sr] || Object.defineProperty(rr, Sr, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), RR[JR].push(GR)
+      }), rr[Sr].push(Qr)
     }
-    const kJ = {
-        addField(RR, JR, GR, yR, tR) {
-          if (JR >= 63) throw new Error(`Can't define field '${GR}'.\nSchema instances may only have up to 63 fields.`);
-          RR[JR] = Object.assign(RR[JR] || {}, {
-            type: yR,
-            index: JR,
-            name: GR
-          }), Object.defineProperty(RR, MR, {
-            value: RR[MR] || {},
+    const bS = {
+        addField(rr, Sr, Qr, Zr, Wr) {
+          if (Sr >= 63) throw new Error(`Can't define field '${Qr}'.\nSchema instances may only have up to 63 fields.`);
+          rr[Sr] = Object.assign(rr[Sr] || {}, {
+            type: Zr,
+            index: Sr,
+            name: Qr
+          }), Object.defineProperty(rr, Br, {
+            value: rr[Br] || {},
             enumerable: !1,
             configurable: !0
-          }), RR[MR][GR] = tR || {
+          }), rr[Br][Qr] = Wr || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(RR, pR, {
-            value: JR,
+          }, Object.defineProperty(rr, Or, {
+            value: Sr,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(RR, GR, {
-            value: JR,
+          }), Object.defineProperty(rr, Qr, {
+            value: Sr,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof RR[JR].type || oJ(RR[JR].type) || (void 0 === RR[gR] && Object.defineProperty(RR, gR, {
+          }), "string" === typeof rr[Sr].type || CS(rr[Sr].type) || (void 0 === rr[Lr] && Object.defineProperty(rr, Lr, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), RR[gR].push(JR));
-          const uR = RR[JR].type;
-          if (uR && "object" === typeof uR && void 0 !== uR.stream) {
-            if (void 0 !== uR.array) throw new Error(BJ);
-            RR[JR].stream = !0, RR[HR] || Object.defineProperty(RR, HR, {
+          }), rr[Lr].push(Sr));
+          const ar = rr[Sr].type;
+          if (ar && "object" === typeof ar && void 0 !== ar.stream) {
+            if (void 0 !== ar.array) throw new Error(TS);
+            rr[Sr].stream = !0, rr[gr] || Object.defineProperty(rr, gr, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), RR[HR].includes(JR) || RR[HR].push(JR);
-            const tR = yR?.priority;
-            "function" === typeof tR && kJ.setStreamPriority(RR, GR, tR)
+            }), rr[gr].includes(Sr) || rr[gr].push(Sr);
+            const Wr = Zr?.priority;
+            "function" === typeof Wr && bS.setStreamPriority(rr, Qr, Wr)
           }
         },
-        setTag(RR, JR, GR) {
-          const yR = RR[JR];
-          if (RR[yR].tag = GR, RR[bR] || (Object.defineProperty(RR, bR, {
+        setTag(rr, Sr, Qr) {
+          const Zr = rr[Sr];
+          if (rr[Zr].tag = Qr, rr[lr] || (Object.defineProperty(rr, lr, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(RR, vR, {
+            }), Object.defineProperty(rr, Xr, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), RR[bR].push(yR), GR < 0) RR[vR][GR] || (RR[vR][GR] = []), RR[vR][GR].push(yR);
+            })), rr[lr].push(Zr), Qr < 0) rr[Xr][Qr] || (rr[Xr][Qr] = []), rr[Xr][Qr].push(Zr);
           else
-            for (let tR = GR; tR > 0; tR &= tR - 1) {
-              const JR = tR & -tR;
-              RR[vR][JR] || (RR[vR][JR] = []), RR[vR][JR].push(yR)
+            for (let Wr = Qr; Wr > 0; Wr &= Wr - 1) {
+              const Sr = Wr & -Wr;
+              rr[Xr][Sr] || (rr[Xr][Sr] = []), rr[Xr][Sr].push(Zr)
             }
         },
-        setUnreliable(RR, JR) {
-          const GR = RR[JR];
-          if ("string" !== typeof RR[GR].type) throw new Error(`@unreliable cannot be applied to ref-type field "${JR}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          RR[GR].unreliable = !0, RR[OR] || Object.defineProperty(RR, OR, {
+        setUnreliable(rr, Sr) {
+          const Qr = rr[Sr];
+          if ("string" !== typeof rr[Qr].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Sr}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          rr[Qr].unreliable = !0, rr[Pr] || Object.defineProperty(rr, Pr, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), RR[OR].push(GR)
+          }), rr[Pr].push(Qr)
         },
-        setPatchOnly(RR, JR) {
-          const GR = RR[JR];
-          if (RR[GR].fullStateOnly) throw new Error(`field "${JR}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          RR[GR].patchOnly = !0, YJ(RR, xR, GR), YJ(RR, NR, GR)
+        setPatchOnly(rr, Sr) {
+          const Qr = rr[Sr];
+          if (rr[Qr].fullStateOnly) throw new Error(`field "${Sr}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          rr[Qr].patchOnly = !0, oS(rr, Hr, Qr), oS(rr, qr, Qr)
         },
-        setDeprecated(RR, JR) {
-          const GR = RR[JR];
-          RR[GR].deprecated = !0, YJ(RR, NR, GR), Object.defineProperty(RR, GR, {
-            value: RR[GR],
+        setDeprecated(rr, Sr) {
+          const Qr = rr[Sr];
+          rr[Qr].deprecated = !0, oS(rr, qr, Qr), Object.defineProperty(rr, Qr, {
+            value: rr[Qr],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(RR, JR) {
-          const GR = RR[JR];
-          if (RR[GR].patchOnly) throw new Error(`field "${JR}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          RR[GR].fullStateOnly = !0, YJ(RR, DR, GR)
+        setFullStateOnly(rr, Sr) {
+          const Qr = rr[Sr];
+          if (rr[Qr].patchOnly) throw new Error(`field "${Sr}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          rr[Qr].fullStateOnly = !0, oS(rr, Rr, Qr)
         },
-        setStream(RR, JR) {
-          const GR = RR[JR];
-          RR[GR].stream = !0, RR[HR] || Object.defineProperty(RR, HR, {
+        setStream(rr, Sr) {
+          const Qr = rr[Sr];
+          rr[Qr].stream = !0, rr[gr] || Object.defineProperty(rr, gr, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), RR[HR].push(GR)
+          }), rr[gr].push(Qr)
         },
-        setStreamPriority(RR, JR, GR) {
-          const yR = RR[JR];
-          RR[oR] || Object.defineProperty(RR, oR, {
+        setStreamPriority(rr, Sr, Qr) {
+          const Zr = rr[Sr];
+          rr[Cr] || Object.defineProperty(rr, Cr, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), RR[oR][yR] = GR
+          }), rr[Cr][Zr] = Qr
         },
-        getStreamPriority: (RR, JR) => RR?.[oR]?.[JR],
-        defineField(RR, JR, GR, yR, tR) {
-          const uR = SJ(tR, `${RR.name}.${yR}`),
+        getStreamPriority: (rr, Sr) => rr?.[Cr]?.[Sr],
+        defineField(rr, Sr, Qr, Zr, Wr) {
+          const ar = iS(Wr, `${rr.name}.${Zr}`),
             {
-              complexTypeKlass: ZR,
-              childType: qR
-            } = zJ(uR);
-          kJ.addField(JR, GR, yR, uR, Xy(yR, GR, qR, ZR)), JR[MR][yR] && Object.defineProperty(RR.prototype, yR, JR[MR][yR]), ("string" === typeof uR || oJ(uR)) && (JR[lR] || Object.defineProperty(JR, lR, {
+              complexTypeKlass: jr,
+              childType: Ir
+            } = VS(ar);
+          bS.addField(Sr, Qr, Zr, ar, yZ(Zr, Qr, Ir, jr)), Sr[Br][Zr] && Object.defineProperty(rr.prototype, Zr, Sr[Br][Zr]), ("string" === typeof ar || CS(ar)) && (Sr[vr] || Object.defineProperty(Sr, vr, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), JR[lR][GR] = "string" === typeof uR ? JJ[uR] : IJ(uR.quantized))
+          }), Sr[vr][Qr] = "string" === typeof ar ? SS[ar] : kS(ar.quantized))
         },
-        setFields(RR, JR) {
-          const GR = RR.prototype.constructor;
-          mJ.register(GR);
-          const yR = Object.getPrototypeOf(GR),
-            tR = yR && yR[Symbol.metadata],
-            uR = kJ.initialize(GR);
-          GR[iR] || (GR[iR] = by[iR]), GR[fR] || (GR[fR] = by[fR]), GR[VR] || (GR[VR] = by[VR]), GR.prototype.toJSON || (GR.prototype.toJSON = by.prototype.toJSON);
-          let ZR = uR[pR] ?? (tR && tR[pR]) ?? -1;
-          ZR++, uR[lR] || Object.defineProperty(uR, lR, {
-            value: tR?.[lR] ? [...tR[lR]] : [],
+        setFields(rr, Sr) {
+          const Qr = rr.prototype.constructor;
+          AS.register(Qr);
+          const Zr = Object.getPrototypeOf(Qr),
+            Wr = Zr && Zr[Symbol.metadata],
+            ar = bS.initialize(Qr);
+          Qr[fr] || (Qr[fr] = lZ[fr]), Qr[Er] || (Qr[Er] = lZ[Er]), Qr[pr] || (Qr[pr] = lZ[pr]), Qr.prototype.toJSON || (Qr.prototype.toJSON = lZ.prototype.toJSON);
+          let jr = ar[Or] ?? (Wr && Wr[Or]) ?? -1;
+          jr++, ar[vr] || Object.defineProperty(ar, vr, {
+            value: Wr?.[vr] ? [...Wr[vr]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const qR in JR) {
-            if (void 0 !== uR[qR]) throw new Error(`@colyseus/schema: Duplicate '${qR}' definition on '${GR.name||"(anonymous)"}'.`);
-            kJ.defineField(GR, uR, ZR, qR, JR[qR]), ZR++
+          for (const Ir in Sr) {
+            if (void 0 !== ar[Ir]) throw new Error(`@colyseus/schema: Duplicate '${Ir}' definition on '${Qr.name||"(anonymous)"}'.`);
+            bS.defineField(Qr, ar, jr, Ir, Sr[Ir]), jr++
           }
-          return RR
+          return rr
         },
-        isDeprecated: (RR, JR) => !0 === RR[JR].deprecated,
-        initialize(RR) {
-          const JR = Object.getPrototypeOf(RR),
-            GR = JR[Symbol.metadata];
-          let yR = RR[Symbol.metadata] ?? Object.create(null);
-          if (JR !== by && yR === GR && (yR = Object.create(null), GR)) {
-            Object.setPrototypeOf(yR, GR), Object.defineProperty(yR, pR, {
-              value: GR[pR],
+        isDeprecated: (rr, Sr) => !0 === rr[Sr].deprecated,
+        initialize(rr) {
+          const Sr = Object.getPrototypeOf(rr),
+            Qr = Sr[Symbol.metadata];
+          let Zr = rr[Symbol.metadata] ?? Object.create(null);
+          if (Sr !== lZ && Zr === Qr && (Zr = Object.create(null), Qr)) {
+            Object.setPrototypeOf(Zr, Qr), Object.defineProperty(Zr, Or, {
+              value: Qr[Or],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== GR[bR] && (Object.defineProperty(yR, bR, {
-              value: [...GR[bR]],
+            }), void 0 !== Qr[lr] && (Object.defineProperty(Zr, lr, {
+              value: [...Qr[lr]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(yR, vR, {
+            }), Object.defineProperty(Zr, Xr, {
               value: {
-                ...GR[vR]
+                ...Qr[Xr]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const RR of EJ) {
-              const JR = GR[RR];
-              void 0 !== JR && Object.defineProperty(yR, RR, {
-                value: [...JR],
+            for (const rr of FS) {
+              const Sr = Qr[rr];
+              void 0 !== Sr && Object.defineProperty(Zr, rr, {
+                value: [...Sr],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(yR, MR, {
+            Object.defineProperty(Zr, Br, {
               value: {
-                ...GR[MR]
+                ...Qr[Br]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(RR, Symbol.metadata, {
-            value: yR,
+          return Object.defineProperty(rr, Symbol.metadata, {
+            value: Zr,
             writable: !1,
             configurable: !0
-          }), yR
+          }), Zr
         },
-        isValidInstance: RR => RR.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(RR.constructor[Symbol.metadata], pR),
-        getFields(RR) {
-          const JR = RR[Symbol.metadata],
-            GR = {};
-          for (let yR = 0; yR <= JR[pR]; yR++) GR[JR[yR].name] = JR[yR].type;
-          return GR
+        isValidInstance: rr => rr.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(rr.constructor[Symbol.metadata], Or),
+        getFields(rr) {
+          const Sr = rr[Symbol.metadata],
+            Qr = {};
+          for (let Zr = 0; Zr <= Sr[Or]; Zr++) Qr[Sr[Zr].name] = Sr[Zr].type;
+          return Qr
         },
-        hasViewTagAtIndex: (RR, JR) => RR?.[bR]?.includes(JR),
-        hasUnreliableAtIndex: (RR, JR) => RR?.[OR]?.includes(JR),
-        hasPatchOnlyAtIndex: (RR, JR) => RR?.[xR]?.includes(JR),
-        hasFullStateOnlyAtIndex: (RR, JR) => RR?.[DR]?.includes(JR),
-        hasStreamAtIndex: (RR, JR) => RR?.[HR]?.includes(JR)
+        hasViewTagAtIndex: (rr, Sr) => rr?.[lr]?.includes(Sr),
+        hasUnreliableAtIndex: (rr, Sr) => rr?.[Pr]?.includes(Sr),
+        hasPatchOnlyAtIndex: (rr, Sr) => rr?.[Hr]?.includes(Sr),
+        hasFullStateOnlyAtIndex: (rr, Sr) => rr?.[Rr]?.includes(Sr),
+        hasStreamAtIndex: (rr, Sr) => rr?.[gr]?.includes(Sr)
       },
-      QJ = (RR, JR, GR) => RR(JR, GR);
-    class FJ {
+      JS = (rr, Sr, Qr) => rr(Sr, Qr);
+    class DS {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(RR) {
-        this.ops = new Uint8Array(Math.max(RR + 1, 1))
+      constructor(rr) {
+        this.ops = new Uint8Array(Math.max(rr + 1, 1))
       }
-      record(RR, JR) {
-        const GR = this.ops[RR];
-        0 === GR ? this.ops[RR] = JR : (GR === tR.DELETE || GR === tR.ADD && JR === tR.DELETE_AND_ADD) && (this.ops[RR] = tR.DELETE_AND_ADD), RR < 32 ? this.dirtyLow |= 1 << RR : this.dirtyHigh |= 1 << RR - 32
+      record(rr, Sr) {
+        const Qr = this.ops[rr];
+        0 === Qr ? this.ops[rr] = Sr : (Qr === Wr.DELETE || Qr === Wr.ADD && Sr === Wr.DELETE_AND_ADD) && (this.ops[rr] = Wr.DELETE_AND_ADD), rr < 32 ? this.dirtyLow |= 1 << rr : this.dirtyHigh |= 1 << rr - 32
       }
-      recordDelete(RR, JR) {
-        this.ops[RR] = JR, RR < 32 ? this.dirtyLow |= 1 << RR : this.dirtyHigh |= 1 << RR - 32
+      recordDelete(rr, Sr) {
+        this.ops[rr] = Sr, rr < 32 ? this.dirtyLow |= 1 << rr : this.dirtyHigh |= 1 << rr - 32
       }
-      recordRaw(RR, JR) {
-        this.record(RR, JR)
+      recordRaw(rr, Sr) {
+        this.record(rr, Sr)
       }
-      operationAt(RR) {
-        const JR = this.ops[RR];
-        return 0 === JR ? void 0 : JR
+      operationAt(rr) {
+        const Sr = this.ops[rr];
+        return 0 === Sr ? void 0 : Sr
       }
-      setOperationAt(RR, JR) {
-        this.ops[RR] = JR
+      setOperationAt(rr, Sr) {
+        this.ops[rr] = Sr
       }
-      forEach(RR) {
-        this.forEachWithCtx(RR, QJ)
+      forEach(rr) {
+        this.forEachWithCtx(rr, JS)
       }
-      forEachWithCtx(RR, JR) {
-        let GR = this.dirtyLow,
-          yR = this.dirtyHigh;
-        const tR = this.ops;
-        for (; 0 !== GR;) {
-          const yR = GR & -GR,
-            uR = 31 - Math.clz32(yR);
-          GR ^= yR, JR(RR, uR, tR[uR])
+      forEachWithCtx(rr, Sr) {
+        let Qr = this.dirtyLow,
+          Zr = this.dirtyHigh;
+        const Wr = this.ops;
+        for (; 0 !== Qr;) {
+          const Zr = Qr & -Qr,
+            ar = 31 - Math.clz32(Zr);
+          Qr ^= Zr, Sr(rr, ar, Wr[ar])
         }
-        for (; 0 !== yR;) {
-          const GR = yR & -yR,
-            uR = 31 - Math.clz32(GR) + 32;
-          yR ^= GR, JR(RR, uR, tR[uR])
+        for (; 0 !== Zr;) {
+          const Qr = Zr & -Zr,
+            ar = 31 - Math.clz32(Qr) + 32;
+          Zr ^= Qr, Sr(rr, ar, Wr[ar])
         }
       }
       size() {
-        return sJ(this.dirtyLow) + sJ(this.dirtyHigh)
+        return sS(this.dirtyLow) + sS(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class TJ {
-      Ja = new Map;
+    class dS {
+      cU = new Map;
       pureOps = [];
-      record(RR, JR) {
-        const GR = this.Ja.get(RR);
-        void 0 === GR ? this.Ja.set(RR, JR) : (GR === tR.DELETE || GR === tR.ADD && JR === tR.DELETE_AND_ADD) && this.Ja.set(RR, tR.DELETE_AND_ADD)
+      record(rr, Sr) {
+        const Qr = this.cU.get(rr);
+        void 0 === Qr ? this.cU.set(rr, Sr) : (Qr === Wr.DELETE || Qr === Wr.ADD && Sr === Wr.DELETE_AND_ADD) && this.cU.set(rr, Wr.DELETE_AND_ADD)
       }
-      recordDelete(RR, JR) {
-        this.Ja.set(RR, JR)
+      recordDelete(rr, Sr) {
+        this.cU.set(rr, Sr)
       }
-      recordRaw(RR, JR) {
-        this.Ja.set(RR, JR)
+      recordRaw(rr, Sr) {
+        this.cU.set(rr, Sr)
       }
-      recordPure(RR) {
-        this.pureOps.push([this.Ja.size, RR])
+      recordPure(rr) {
+        this.pureOps.push([this.cU.size, rr])
       }
-      operationAt(RR) {
-        return this.Ja.get(RR)
+      operationAt(rr) {
+        return this.cU.get(rr)
       }
-      setOperationAt(RR, JR) {
-        this.Ja.has(RR) && this.Ja.set(RR, JR)
+      setOperationAt(rr, Sr) {
+        this.cU.has(rr) && this.cU.set(rr, Sr)
       }
-      forEach(RR) {
-        this.forEachWithCtx(RR, QJ)
+      forEach(rr) {
+        this.forEachWithCtx(rr, JS)
       }
-      forEachWithCtx(RR, JR) {
-        const GR = this.pureOps;
-        if (GR.length > 0) {
-          let yR = 0,
-            tR = 0;
-          for (const [uR, ZR] of this.Ja) {
-            for (; yR < GR.length && GR[yR][0] <= tR;) {
-              const tR = GR[yR++][1];
-              JR(RR, -tR, tR)
+      forEachWithCtx(rr, Sr) {
+        const Qr = this.pureOps;
+        if (Qr.length > 0) {
+          let Zr = 0,
+            Wr = 0;
+          for (const [ar, jr] of this.cU) {
+            for (; Zr < Qr.length && Qr[Zr][0] <= Wr;) {
+              const Wr = Qr[Zr++][1];
+              Sr(rr, -Wr, Wr)
             }
-            JR(RR, uR, ZR), tR++
+            Sr(rr, ar, jr), Wr++
           }
-          for (; yR < GR.length;) {
-            const tR = GR[yR++][1];
-            JR(RR, -tR, tR)
+          for (; Zr < Qr.length;) {
+            const Wr = Qr[Zr++][1];
+            Sr(rr, -Wr, Wr)
           }
         } else
-          for (const [yR, tR] of this.Ja) JR(RR, yR, tR)
+          for (const [Zr, Wr] of this.cU) Sr(rr, Zr, Wr)
       }
       size() {
-        return this.Ja.size + this.pureOps.length
+        return this.cU.size + this.pureOps.length
       }
       has() {
-        return this.Ja.size > 0 || this.pureOps.length > 0
+        return this.cU.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.Ja.clear(), this.pureOps.length = 0
+        this.cU.clear(), this.pureOps.length = 0
       }
-      shift(RR) {
-        const JR = new Map;
-        for (const [GR, yR] of this.Ja) JR.set(GR + RR, yR);
-        this.Ja = JR
+      shift(rr) {
+        const Sr = new Map;
+        for (const [Qr, Zr] of this.cU) Sr.set(Qr + rr, Zr);
+        this.cU = Sr
       }
     }
 
-    function sJ(RR) {
-      return 16843009 * ((RR = (858993459 & (RR -= RR >>> 1 & 1431655765)) + (RR >>> 2 & 858993459)) + (RR >>> 4) & 252645135) >>> 24
+    function sS(rr) {
+      return 16843009 * ((rr = (858993459 & (rr -= rr >>> 1 & 1431655765)) + (rr >>> 2 & 858993459)) + (rr >>> 4) & 252645135) >>> 24
     }
 
-    function hJ(RR) {
-      if (void 0 === RR) return 0;
-      let JR = 0;
-      for (let GR = 0, yR = RR.length; GR < yR; GR++) {
-        const yR = RR[GR];
-        yR < 32 && (JR |= 1 << yR)
+    function uS(rr) {
+      if (void 0 === rr) return 0;
+      let Sr = 0;
+      for (let Qr = 0, Zr = rr.length; Qr < Zr; Qr++) {
+        const Zr = rr[Qr];
+        Zr < 32 && (Sr |= 1 << Zr)
       }
-      return JR
+      return Sr
     }
 
-    function RG(RR) {
-      const JR = RR.constructor;
-      if (Object.prototype.hasOwnProperty.call(JR, BR)) return JR[BR];
-      const GR = JR[Symbol.metadata],
-        yR = kJ.isValidInstance(RR),
-        tR = (GR?.[bR]?.length ?? 0) > 0,
-        uR = function(RR) {
-          const JR = [],
-            GR = [],
-            yR = [],
-            tR = [],
-            uR = RR?.[pR];
-          if (void 0 === uR) return {
-            names: JR,
-            types: GR,
-            tags: yR,
-            encoders: tR
+    function rQ(rr) {
+      const Sr = rr.constructor;
+      if (Object.prototype.hasOwnProperty.call(Sr, Tr)) return Sr[Tr];
+      const Qr = Sr[Symbol.metadata],
+        Zr = bS.isValidInstance(rr),
+        Wr = (Qr?.[lr]?.length ?? 0) > 0,
+        ar = function(rr) {
+          const Sr = [],
+            Qr = [],
+            Zr = [],
+            Wr = [],
+            ar = rr?.[Or];
+          if (void 0 === ar) return {
+            names: Sr,
+            types: Qr,
+            tags: Zr,
+            encoders: Wr
           };
-          const ZR = RR[lR];
-          for (let qR = 0; qR <= uR; qR++) {
-            const uR = RR[qR];
-            void 0 !== uR ? (JR[qR] = uR.name, GR[qR] = uR.type, yR[qR] = uR.tag, tR[qR] = ZR?.[qR]) : (JR[qR] = void 0, GR[qR] = void 0, yR[qR] = void 0, tR[qR] = void 0)
+          const jr = rr[vr];
+          for (let Ir = 0; Ir <= ar; Ir++) {
+            const ar = rr[Ir];
+            void 0 !== ar ? (Sr[Ir] = ar.name, Qr[Ir] = ar.type, Zr[Ir] = ar.tag, Wr[Ir] = jr?.[Ir]) : (Sr[Ir] = void 0, Qr[Ir] = void 0, Zr[Ir] = void 0, Wr[Ir] = void 0)
           }
           return {
-            names: JR,
-            types: GR,
-            tags: yR,
-            encoders: tR
+            names: Sr,
+            types: Qr,
+            tags: Zr,
+            encoders: Wr
           }
-        }(GR),
-        ZR = yR && !tR ? void 0 : JR[KR],
-        qR = {
-          encoder: JR[fR],
-          filter: ZR,
-          metadata: GR,
-          isSchema: yR,
-          filterBitmask: yR ? hJ(GR?.[bR]) : 0,
-          hasAnyFullStateOnly: (GR?.[DR]?.length ?? 0) > 0,
-          hasAnyUnreliable: (GR?.[OR]?.length ?? 0) > 0,
-          hasAnyStream: (GR?.[HR]?.length ?? 0) > 0,
-          hasAnyView: tR,
-          fullStateOnlyBitmask: hJ(GR?.[DR]),
-          unreliableBitmask: hJ(GR?.[OR]),
-          streamBitmask: hJ(GR?.[HR]),
-          names: uR.names,
-          types: uR.types,
-          tags: uR.tags,
-          encoders: uR.encoders
+        }(Qr),
+        jr = Zr && !Wr ? void 0 : Sr[xr],
+        Ir = {
+          encoder: Sr[Er],
+          filter: jr,
+          metadata: Qr,
+          isSchema: Zr,
+          filterBitmask: Zr ? uS(Qr?.[lr]) : 0,
+          hasAnyFullStateOnly: (Qr?.[Rr]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Qr?.[Pr]?.length ?? 0) > 0,
+          hasAnyStream: (Qr?.[gr]?.length ?? 0) > 0,
+          hasAnyView: Wr,
+          fullStateOnlyBitmask: uS(Qr?.[Rr]),
+          unreliableBitmask: uS(Qr?.[Pr]),
+          streamBitmask: uS(Qr?.[gr]),
+          names: ar.names,
+          types: ar.types,
+          tags: ar.tags,
+          encoders: ar.encoders
         };
-      return Object.defineProperty(JR, BR, {
-        value: qR,
+      return Object.defineProperty(Sr, Tr, {
+        value: Ir,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), qR
+      }), Ir
     }
 
-    function JG(RR, JR) {
-      if (void 0 !== RR.parentRef && JR(RR.parentRef, RR._parentIndex)) return !0;
-      for (let GR = RR.extraParents; void 0 !== GR; GR = GR.next)
-        if (JR(GR.ref, GR.index)) return !0;
+    function SQ(rr, Sr) {
+      if (void 0 !== rr.parentRef && Sr(rr.parentRef, rr._parentIndex)) return !0;
+      for (let Qr = rr.extraParents; void 0 !== Qr; Qr = Qr.next)
+        if (Sr(Qr.ref, Qr.index)) return !0;
       return !1
     }
-    const GG = (RR, JR) => {
-        RR.isFieldUnreliable(JR) ? RR.ensureUnreliableRecorder().record(JR, tR.ADD) : RR.record(JR, tR.ADD)
+    const QQ = (rr, Sr) => {
+        rr.isFieldUnreliable(Sr) ? rr.ensureUnreliableRecorder().record(Sr, Wr.ADD) : rr.record(Sr, Wr.ADD)
       },
-      yG = (RR, JR) => RR(JR);
+      ZQ = (rr, Sr) => rr(Sr);
 
-    function tG(RR, JR, GR) {
-      const yR = RR.refTarget;
-      if (void 0 !== yR[LR]) {
-        if (RR.isPatchOnly) return;
-        if (Array.isArray(yR.items)) {
-          const RR = yR.items;
-          for (let yR = 0, tR = RR.length; yR < tR; yR++) void 0 !== RR[yR] && GR(JR, yR)
-        } else if (void 0 !== yR.journal)
-          for (const [RR, tR] of yR.journal.keyByIndex) yR.$items.has(tR) && GR(JR, RR);
-        else if (void 0 !== yR.$items)
-          for (const RR of yR.$items.keys()) GR(JR, RR)
+    function WQ(rr, Sr, Qr) {
+      const Zr = rr.refTarget;
+      if (void 0 !== Zr[hr]) {
+        if (rr.isPatchOnly) return;
+        if (Array.isArray(Zr.items)) {
+          const rr = Zr.items;
+          for (let Zr = 0, Wr = rr.length; Zr < Wr; Zr++) void 0 !== rr[Zr] && Qr(Sr, Zr)
+        } else if (void 0 !== Zr.journal)
+          for (const [rr, Wr] of Zr.journal.keyByIndex) Zr.$items.has(Wr) && Qr(Sr, rr);
+        else if (void 0 !== Zr.$items)
+          for (const rr of Zr.$items.keys()) Qr(Sr, rr)
       } else {
-        const tR = RR.metadata;
-        if (!tR) return;
-        const uR = tR[pR] ?? -1,
-          ZR = tR[NR],
-          qR = RR.encDescriptor.names;
-        for (let RR = 0; RR <= uR; RR++) {
-          const tR = qR[RR];
-          if (void 0 === tR) continue;
-          if (ZR && ZR.includes(RR)) continue;
-          const uR = yR[tR];
-          void 0 !== uR && null !== uR && GR(JR, RR)
+        const Wr = rr.metadata;
+        if (!Wr) return;
+        const ar = Wr[Or] ?? -1,
+          jr = Wr[qr],
+          Ir = rr.encDescriptor.names;
+        for (let rr = 0; rr <= ar; rr++) {
+          const Wr = Ir[rr];
+          if (void 0 === Wr) continue;
+          if (jr && jr.includes(rr)) continue;
+          const ar = Zr[Wr];
+          void 0 !== ar && null !== ar && Qr(Sr, rr)
         }
       }
     }
 
-    function uG(RR, JR, GR, yR) {
-      ! function(RR, JR, GR) {
-        if (!JR) return;
-        const yR = JR[aR],
-          tR = !yR._isSchema;
-        let uR;
-        tR ? (JR = yR.parent, GR = yR.parentIndex, uR = JR?.[aR].metadata) : uR = yR.metadata;
-        const ZR = (uR?.[xR]?.includes(GR) ? BG : 0) | (uR?.[DR]?.includes(GR) ? lG : 0),
-          qR = yR.flags & bG | ZR,
-          iR = RR.flags;
-        RR.flags = iR | qR;
-        qR & ~iR & lG && (RR.reset(), RR.unreliableRecorder?.reset());
-        const fR = RR.root?.types;
-        if (!fR?.hasFilters) return;
-        const VR = uR?.[bR]?.includes(GR) ?? !1,
-          KR = uR?.[HR]?.includes(GR) ?? !1,
-          wR = yR.isFiltered || VR || KR;
-        if (RR.isFiltered = wR, KR && !tR) {
-          RR.isStreamCollection = !0;
-          const JR = pJ(RR.ref);
-          if (void 0 === JR.priority) {
-            const RR = kJ.getStreamPriority(uR, GR);
-            void 0 !== RR && (JR.priority = RR)
+    function aQ(rr, Sr, Qr, Zr) {
+      ! function(rr, Sr, Qr) {
+        if (!Sr) return;
+        const Zr = Sr[tr],
+          Wr = !Zr._isSchema;
+        let ar;
+        Wr ? (Sr = Zr.parent, Qr = Zr.parentIndex, ar = Sr?.[tr].metadata) : ar = Zr.metadata;
+        const jr = (ar?.[Hr]?.includes(Qr) ? TQ : 0) | (ar?.[Rr]?.includes(Qr) ? vQ : 0),
+          Ir = Zr.flags & lQ | jr,
+          fr = rr.flags;
+        rr.flags = fr | Ir;
+        Ir & ~fr & vQ && (rr.reset(), rr.unreliableRecorder?.reset());
+        const Er = rr.root?.types;
+        if (!Er?.hasFilters) return;
+        const pr = ar?.[lr]?.includes(Qr) ?? !1,
+          xr = ar?.[gr]?.includes(Qr) ?? !1,
+          mr = Zr.isFiltered || pr || xr;
+        if (rr.isFiltered = mr, xr && !Wr) {
+          rr.isStreamCollection = !0;
+          const Sr = OS(rr.ref);
+          if (void 0 === Sr.priority) {
+            const rr = bS.getStreamPriority(ar, Qr);
+            void 0 !== rr && (Sr.priority = rr)
           }
-          RR.root?.registerStream(RR.ref)
+          rr.root?.registerStream(rr.ref)
         }
-        if (wR) {
-          const JR = qG(RR);
-          RR.isVisibilitySharedWithParent = yR.isFiltered && JR && !KR && (!VR || tR && uR[GR].tag !== ey)
+        if (mr) {
+          const Sr = IQ(rr);
+          rr.isVisibilitySharedWithParent = Zr.isFiltered && Sr && !xr && (!pr || Wr && ar[Qr].tag !== UZ)
         }
-      }(RR, JR, GR), RR.isFullStateOnly || (RR.has() && RR.root?.enqueueChangeTree(RR), RR.unreliableRecorder?.has() && RR.root?.enqueueUnreliable(RR), RR.has() || RR.unreliableRecorder?.has() || RR.root?.enqueueChangeTree(RR))
+      }(rr, Sr, Qr), rr.isFullStateOnly || (rr.has() && rr.root?.enqueueChangeTree(rr), rr.unreliableRecorder?.has() && rr.root?.enqueueUnreliable(rr), rr.has() || rr.unreliableRecorder?.has() || rr.root?.enqueueChangeTree(rr))
     }
 
-    function ZG(RR) {
-      const JR = RR.pendingFilterRefresh;
-      for (let GR = 0; GR < JR.length; GR++) {
-        const RR = JR[GR];
-        0 !== (RR.flags & gG) && iG(RR)
+    function jQ(rr) {
+      const Sr = rr.pendingFilterRefresh;
+      for (let Qr = 0; Qr < Sr.length; Qr++) {
+        const rr = Sr[Qr];
+        0 !== (rr.flags & LQ) && fQ(rr)
       }
-      JR.length = 0
+      Sr.length = 0
     }
 
-    function qG(RR) {
-      return RR._isSchema || "string" !== typeof RR.refTarget[LR]
+    function IQ(rr) {
+      return rr._isSchema || "string" !== typeof rr.refTarget[hr]
     }
 
-    function iG(RR) {
-      RR.flags &= ~gG;
-      const JR = RR.root;
-      if (void 0 === JR || void 0 === RR.parentRef) return;
-      const GR = qG(RR);
-      let yR = rG(RR, RR.parentRef, RR._parentIndex, GR);
-      for (let uR = RR.extraParents; void 0 !== uR && yR !== wG; uR = uR.next) yR |= rG(RR, uR.ref, uR.index, GR);
-      if (0 === yR) return;
-      RR.isVisibilitySharedWithParent = 0 !== (yR & KG);
-      const tR = 0 === (yR & VG);
-      tR !== RR.isFiltered && (RR.isFiltered = tR, tR || RR.isFullStateOnly || (RR.forEachLiveWithCtx(RR, GG), RR.has() && JR.enqueueChangeTree(RR), RR.unreliableRecorder?.has() && JR.enqueueUnreliable(RR)), RR.forEachChildWithCtx(RR, eG))
+    function fQ(rr) {
+      rr.flags &= ~LQ;
+      const Sr = rr.root;
+      if (void 0 === Sr || void 0 === rr.parentRef) return;
+      const Qr = IQ(rr);
+      let Zr = NQ(rr, rr.parentRef, rr._parentIndex, Qr);
+      for (let ar = rr.extraParents; void 0 !== ar && Zr !== mQ; ar = ar.next) Zr |= NQ(rr, ar.ref, ar.index, Qr);
+      if (0 === Zr) return;
+      rr.isVisibilitySharedWithParent = 0 !== (Zr & xQ);
+      const Wr = 0 === (Zr & pQ);
+      Wr !== rr.isFiltered && (rr.isFiltered = Wr, Wr || rr.isFullStateOnly || (rr.forEachLiveWithCtx(rr, QQ), rr.has() && Sr.enqueueChangeTree(rr), rr.unreliableRecorder?.has() && Sr.enqueueUnreliable(rr)), rr.forEachChildWithCtx(rr, UQ))
     }
-    const fG = 1,
-      VG = 2,
-      KG = 4,
-      wG = fG | VG | KG;
+    const EQ = 1,
+      pQ = 2,
+      xQ = 4,
+      mQ = EQ | pQ | xQ;
 
-    function rG(RR, JR, GR, yR) {
-      const tR = JR[aR];
-      if (tR.root !== RR.root || ! function(RR, JR, GR) {
-          const yR = JR.refTarget;
-          if (JR.isArray) {
-            const JR = yR.items,
-              tR = JR[GR];
-            if (void 0 !== tR && tR[aR] === RR) return !0;
-            for (let GR = 0, yR = JR.length; GR < yR; GR++) {
-              const yR = JR[GR];
-              if (void 0 !== yR && yR[aR] === RR) return !0
+    function NQ(rr, Sr, Qr, Zr) {
+      const Wr = Sr[tr];
+      if (Wr.root !== rr.root || ! function(rr, Sr, Qr) {
+          const Zr = Sr.refTarget;
+          if (Sr.isArray) {
+            const Sr = Zr.items,
+              Wr = Sr[Qr];
+            if (void 0 !== Wr && Wr[tr] === rr) return !0;
+            for (let Qr = 0, Zr = Sr.length; Qr < Zr; Qr++) {
+              const Zr = Sr[Qr];
+              if (void 0 !== Zr && Zr[tr] === rr) return !0
             }
             return !1
           }
-          const tR = JR.getValue(GR);
-          return void 0 !== tR && tR[aR] === RR
-        }(RR, tR, GR)) return 0;
-      tR.flags & gG && iG(tR);
-      let uR = fG;
-      if (tR._isSchema) {
-        void 0 !== tR.encDescriptor.tags[GR] || tR.isFieldStream(GR) || (tR.isFiltered ? yR && (uR |= KG) : uR |= VG)
-      } else if (tR.isFiltered) {
-        if (yR && !tR.isStreamCollection) {
-          const RR = tR.parent?.[aR];
-          (RR?._isSchema ? RR.encDescriptor.tags[tR.parentIndex] : void 0) !== ey && (uR |= KG)
+          const Wr = Sr.getValue(Qr);
+          return void 0 !== Wr && Wr[tr] === rr
+        }(rr, Wr, Qr)) return 0;
+      Wr.flags & LQ && fQ(Wr);
+      let ar = EQ;
+      if (Wr._isSchema) {
+        void 0 !== Wr.encDescriptor.tags[Qr] || Wr.isFieldStream(Qr) || (Wr.isFiltered ? Zr && (ar |= xQ) : ar |= pQ)
+      } else if (Wr.isFiltered) {
+        if (Zr && !Wr.isStreamCollection) {
+          const rr = Wr.parent?.[tr];
+          (rr?._isSchema ? rr.encDescriptor.tags[Wr.parentIndex] : void 0) !== UZ && (ar |= xQ)
         }
-      } else uR |= VG;
-      return uR
+      } else ar |= pQ;
+      return ar
     }
-    const eG = (RR, JR, GR) => {
-      iG(JR)
+    const UQ = (rr, Sr, Qr) => {
+      fQ(Sr)
     };
 
-    function aG(RR, JR, GR, yR) {
-      if (RR.addParent(JR, yR), !GR) return;
-      const tR = GR.add(RR);
-      GR !== RR.root && (RR.root = GR, uG(RR, JR, yR));
-      const uR = JR?.[aR];
-      if (void 0 !== uR && void 0 !== uR.subscribedViews && void 0 !== JR[LR] && function(RR, JR, GR, yR) {
-          const tR = RR.subscribedViews;
-          if (void 0 === tR) return;
-          const uR = RR.isStreamCollection,
-            ZR = uR ? RR.ref : void 0,
-            qR = uR ? void 0 : GR[aR];
-          for (let iR = 0, fR = tR.length; iR < fR; iR++) {
-            let RR = tR[iR];
-            for (; 0 !== RR;) {
-              const GR = RR & -RR;
-              RR ^= GR;
-              const fR = 32 * iR + (31 - Math.clz32(GR)),
-                VR = yR.activeViews.get(fR),
-                KR = VR?.deref();
-              void 0 !== KR ? uR ? xJ(ZR, fR, JR) : void 0 !== qR && KR.markVisible(qR) : tR[iR] &= ~GR
+    function tQ(rr, Sr, Qr, Zr) {
+      if (rr.addParent(Sr, Zr), !Qr) return;
+      const Wr = Qr.add(rr);
+      Qr !== rr.root && (rr.root = Qr, aQ(rr, Sr, Zr));
+      const ar = Sr?.[tr];
+      if (void 0 !== ar && void 0 !== ar.subscribedViews && void 0 !== Sr[hr] && function(rr, Sr, Qr, Zr) {
+          const Wr = rr.subscribedViews;
+          if (void 0 === Wr) return;
+          const ar = rr.isStreamCollection,
+            jr = ar ? rr.ref : void 0,
+            Ir = ar ? void 0 : Qr[tr];
+          for (let fr = 0, Er = Wr.length; fr < Er; fr++) {
+            let rr = Wr[fr];
+            for (; 0 !== rr;) {
+              const Qr = rr & -rr;
+              rr ^= Qr;
+              const Er = 32 * fr + (31 - Math.clz32(Qr)),
+                pr = Zr.activeViews.get(Er),
+                xr = pr?.deref();
+              void 0 !== xr ? ar ? HS(jr, Er, Sr) : void 0 !== Ir && xr.markVisible(Ir) : Wr[fr] &= ~Qr
             }
           }
-        }(uR, yR, RR.ref, GR), tR) {
-        let JR = WG[AG];
-        void 0 === JR && (JR = {
+        }(ar, Zr, rr.ref, Qr), Wr) {
+        let Sr = nQ[eQ];
+        void 0 === Sr && (Sr = {
           parentRef: void 0,
           root: void 0
-        }, WG[AG] = JR), JR.parentRef = RR.ref, JR.root = GR, AG++, nG(RR, JR, CG), AG--
+        }, nQ[eQ] = Sr), Sr.parentRef = rr.ref, Sr.root = Qr, eQ++, zQ(rr, Sr, KQ), eQ--
       }
     }
 
-    function LG(RR, JR, GR) {
-      RR(JR, GR)
+    function hQ(rr, Sr, Qr) {
+      rr(Sr, Qr)
     }
 
-    function nG(RR, JR, GR) {
-      const yR = RR.refTarget;
-      if (yR[LR]) {
-        if ("string" !== typeof yR[LR]) {
-          const RR = yR.items;
-          if (void 0 !== RR)
-            for (let yR = 0, tR = RR.length; yR < tR; yR++) {
-              const tR = RR[yR];
-              tR && GR(JR, tR[aR], yR)
+    function zQ(rr, Sr, Qr) {
+      const Zr = rr.refTarget;
+      if (Zr[hr]) {
+        if ("string" !== typeof Zr[hr]) {
+          const rr = Zr.items;
+          if (void 0 !== rr)
+            for (let Zr = 0, Wr = rr.length; Zr < Wr; Zr++) {
+              const Wr = rr[Zr];
+              Wr && Qr(Sr, Wr[tr], Zr)
             } else {
-              const RR = yR.$items,
-                tR = yR._collectionIndexes;
-              for (const yR of RR.keys()) {
-                const uR = RR.get(yR);
-                uR && GR(JR, uR[aR], tR?.[yR] ?? yR)
+              const rr = Zr.$items,
+                Wr = Zr._collectionIndexes;
+              for (const Zr of rr.keys()) {
+                const ar = rr.get(Zr);
+                ar && Qr(Sr, ar[tr], Wr?.[Zr] ?? Zr)
               }
             }
         }
       } else {
-        const tR = RR.metadata,
-          uR = tR?.[gR];
-        if (!uR) return;
-        const ZR = RR.encDescriptor.names;
-        for (let RR = 0, qR = uR.length; RR < qR; RR++) {
-          const tR = uR[RR],
-            qR = yR[ZR[tR]];
-          qR && GR(JR, qR[aR], tR)
+        const Wr = rr.metadata,
+          ar = Wr?.[Lr];
+        if (!ar) return;
+        const jr = rr.encDescriptor.names;
+        for (let rr = 0, Ir = ar.length; rr < Ir; rr++) {
+          const Wr = ar[rr],
+            Ir = Zr[jr[Wr]];
+          Ir && Qr(Sr, Ir[tr], Wr)
         }
       }
     }
 
-    function UG(RR, JR, GR) {
-      JR.root !== RR ? JR.setRoot(RR) : RR.add(JR)
+    function YQ(rr, Sr, Qr) {
+      Sr.root !== rr ? Sr.setRoot(rr) : rr.add(Sr)
     }
-    const WG = [];
-    let AG = 0;
+    const nQ = [];
+    let eQ = 0;
 
-    function CG(RR, JR, GR) {
-      if (JR.root === RR.root) return RR.root.add(JR), void RR.root.moveNextToParent(JR);
-      JR.setParent(RR.parentRef, RR.root, GR)
+    function KQ(rr, Sr, Qr) {
+      if (Sr.root === rr.root) return rr.root.add(Sr), void rr.root.moveNextToParent(Sr);
+      Sr.setParent(rr.parentRef, rr.root, Qr)
     }
 
-    function XG(RR, JR, GR) {
-      const yR = (3 & GR) << 3;
-      return GR < 4 ? RR >>> yR & 255 : JR >>> yR & 255
+    function yQ(rr, Sr, Qr) {
+      const Zr = (3 & Qr) << 3;
+      return Qr < 4 ? rr >>> Zr & 255 : Sr >>> Zr & 255
     }
-    const MG = (RR, JR, GR) => RR(JR, GR);
-    const BG = 16,
-      lG = 32,
-      pG = 128,
-      gG = 256,
-      bG = BG | lG;
-    class vG {
+    const BQ = (rr, Sr, Qr) => rr(Sr, Qr);
+    const TQ = 16,
+      vQ = 32,
+      OQ = 128,
+      LQ = 256,
+      lQ = TQ | vQ;
+    class XQ {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(RR) {
-        this.flags = RR ? 1 | this.flags : -2 & this.flags
+      set isFiltered(rr) {
+        this.flags = rr ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(RR) {
-        this.flags = RR ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(rr) {
+        this.flags = rr ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(RR) {
-        this.flags = RR ? 4 | this.flags : -5 & this.flags
+      set isNew(rr) {
+        this.flags = rr ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(RR) {
-        this.flags = RR ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(rr) {
+        this.flags = rr ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & BG)
+        return 0 !== (this.flags & TQ)
       }
-      set isPatchOnly(RR) {
-        this.flags = RR ? this.flags | BG : this.flags & ~BG
+      set isPatchOnly(rr) {
+        this.flags = rr ? this.flags | TQ : this.flags & ~TQ
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & lG)
+        return 0 !== (this.flags & vQ)
       }
-      set isFullStateOnly(RR) {
-        this.flags = RR ? this.flags | lG : this.flags & ~lG
+      set isFullStateOnly(rr) {
+        this.flags = rr ? this.flags | vQ : this.flags & ~vQ
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(RR) {
-        this.flags = RR ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(rr) {
+        this.flags = rr ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & pG)
+        return 0 !== (this.flags & OQ)
       }
-      set needsRestage(RR) {
-        this.flags = RR ? this.flags | pG : -129 & this.flags
+      set needsRestage(rr) {
+        this.flags = rr ? this.flags | OQ : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new FJ(this.metadata?.[pR] ?? 0) : new TJ), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new DS(this.metadata?.[Or] ?? 0) : new dS), this.unreliableRecorder
       }
-      isFieldUnreliable(RR) {
-        const JR = this.encDescriptor;
-        return !!JR.hasAnyUnreliable && (RR < 32 ? 0 !== (JR.unreliableBitmask & 1 << RR) : kJ.hasUnreliableAtIndex(this.metadata, RR))
+      isFieldUnreliable(rr) {
+        const Sr = this.encDescriptor;
+        return !!Sr.hasAnyUnreliable && (rr < 32 ? 0 !== (Sr.unreliableBitmask & 1 << rr) : bS.hasUnreliableAtIndex(this.metadata, rr))
       }
-      isFieldFullStateOnly(RR) {
+      isFieldFullStateOnly(rr) {
         if (this.isFullStateOnly) return !0;
-        const JR = this.encDescriptor;
-        return !!JR.hasAnyFullStateOnly && (RR < 32 ? 0 !== (JR.fullStateOnlyBitmask & 1 << RR) : kJ.hasFullStateOnlyAtIndex(this.metadata, RR))
+        const Sr = this.encDescriptor;
+        return !!Sr.hasAnyFullStateOnly && (rr < 32 ? 0 !== (Sr.fullStateOnlyBitmask & 1 << rr) : bS.hasFullStateOnlyAtIndex(this.metadata, rr))
       }
-      isFieldStream(RR) {
-        const JR = this.encDescriptor;
-        return !!JR.hasAnyStream && (RR < 32 ? 0 !== (JR.streamBitmask & 1 << RR) : kJ.hasStreamAtIndex(this.metadata, RR))
+      isFieldStream(rr) {
+        const Sr = this.encDescriptor;
+        return !!Sr.hasAnyStream && (rr < 32 ? 0 !== (Sr.streamBitmask & 1 << rr) : bS.hasStreamAtIndex(this.metadata, rr))
       }
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR;
-        this.ref = RR, this.refTarget = JR;
-        const GR = RG(RR);
-        this.encDescriptor = GR, this.metadata = GR.metadata;
-        const yR = GR.isSchema;
-        if (this._isSchema = yR, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, yR) {
-          const RR = this.metadata?.[pR] ?? 0;
-          RR > 7 && (this.ops = new Uint8Array(RR + 1))
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr;
+        this.ref = rr, this.refTarget = Sr;
+        const Qr = rQ(rr);
+        this.encDescriptor = Qr, this.metadata = Qr.metadata;
+        const Zr = Qr.isSchema;
+        if (this._isSchema = Zr, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Zr) {
+          const rr = this.metadata?.[Or] ?? 0;
+          rr > 7 && (this.ops = new Uint8Array(rr + 1))
         } else this.collDirty = new Map
       }
-      _opAt(RR) {
-        const JR = this.ops;
-        if (void 0 !== JR) return JR[RR];
-        const GR = (3 & RR) << 3;
-        return RR < 4 ? this.opsLow >>> GR & 255 : this.opsHigh >>> GR & 255
+      _opAt(rr) {
+        const Sr = this.ops;
+        if (void 0 !== Sr) return Sr[rr];
+        const Qr = (3 & rr) << 3;
+        return rr < 4 ? this.opsLow >>> Qr & 255 : this.opsHigh >>> Qr & 255
       }
-      _opPut(RR, JR) {
-        const GR = this.ops;
-        if (void 0 !== GR) return void(GR[RR] = JR);
-        const yR = (3 & RR) << 3,
-          tR = ~(255 << yR);
-        RR < 4 ? this.opsLow = this.opsLow & tR | JR << yR : this.opsHigh = this.opsHigh & tR | JR << yR
+      _opPut(rr, Sr) {
+        const Qr = this.ops;
+        if (void 0 !== Qr) return void(Qr[rr] = Sr);
+        const Zr = (3 & rr) << 3,
+          Wr = ~(255 << Zr);
+        rr < 4 ? this.opsLow = this.opsLow & Wr | Sr << Zr : this.opsHigh = this.opsHigh & Wr | Sr << Zr
       }
-      _markDirty(RR) {
-        RR < 32 ? this.dirtyLow |= 1 << RR : this.dirtyHigh |= 1 << RR - 32
+      _markDirty(rr) {
+        rr < 32 ? this.dirtyLow |= 1 << rr : this.dirtyHigh |= 1 << rr - 32
       }
-      record(RR, JR) {
+      record(rr, Sr) {
         if (this._isSchema) {
-          const GR = this._opAt(RR);
-          0 === GR ? this._opPut(RR, JR) : (GR === tR.DELETE || GR === tR.ADD && JR === tR.DELETE_AND_ADD) && this._opPut(RR, tR.DELETE_AND_ADD), this._markDirty(RR)
+          const Qr = this._opAt(rr);
+          0 === Qr ? this._opPut(rr, Sr) : (Qr === Wr.DELETE || Qr === Wr.ADD && Sr === Wr.DELETE_AND_ADD) && this._opPut(rr, Wr.DELETE_AND_ADD), this._markDirty(rr)
         } else {
-          const GR = this.collDirty,
-            yR = GR.get(RR);
-          let uR;
-          uR = void 0 === yR ? JR : yR === tR.DELETE || yR === tR.ADD && JR === tR.DELETE_AND_ADD ? tR.DELETE_AND_ADD : yR, GR.set(RR, uR)
+          const Qr = this.collDirty,
+            Zr = Qr.get(rr);
+          let ar;
+          ar = void 0 === Zr ? Sr : Zr === Wr.DELETE || Zr === Wr.ADD && Sr === Wr.DELETE_AND_ADD ? Wr.DELETE_AND_ADD : Zr, Qr.set(rr, ar)
         }
       }
-      recordDelete(RR, JR) {
-        this._isSchema ? (this._opPut(RR, JR), this._markDirty(RR)) : this.collDirty.set(RR, JR)
+      recordDelete(rr, Sr) {
+        this._isSchema ? (this._opPut(rr, Sr), this._markDirty(rr)) : this.collDirty.set(rr, Sr)
       }
-      recordRaw(RR, JR) {
-        this._isSchema ? (this._opPut(RR, JR), this._markDirty(RR)) : this.collDirty.set(RR, JR)
+      recordRaw(rr, Sr) {
+        this._isSchema ? (this._opPut(rr, Sr), this._markDirty(rr)) : this.collDirty.set(rr, Sr)
       }
-      recordPure(RR) {
+      recordPure(rr) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, RR])
+        (this.collPureOps ??= []).push([this.collDirty.size, rr])
       }
-      operationAt(RR) {
+      operationAt(rr) {
         if (this._isSchema) {
-          const JR = this._opAt(RR);
-          return 0 === JR ? void 0 : JR
+          const Sr = this._opAt(rr);
+          return 0 === Sr ? void 0 : Sr
         }
-        return this.collDirty.get(RR)
+        return this.collDirty.get(rr)
       }
-      setOperationAt(RR, JR) {
-        if (this._isSchema) this._opPut(RR, JR);
+      setOperationAt(rr, Sr) {
+        if (this._isSchema) this._opPut(rr, Sr);
         else {
-          const GR = this.collDirty;
-          GR.has(RR) && GR.set(RR, JR)
+          const Qr = this.collDirty;
+          Qr.has(rr) && Qr.set(rr, Sr)
         }
       }
-      forEach(RR) {
-        this.forEachWithCtx(RR, MG)
+      forEach(rr) {
+        this.forEachWithCtx(rr, BQ)
       }
-      forEachWithCtx(RR, JR) {
+      forEachWithCtx(rr, Sr) {
         if (this._isSchema) {
-          let GR = this.dirtyLow,
-            yR = this.dirtyHigh;
-          const tR = this.ops;
-          if (void 0 !== tR) {
-            for (; 0 !== GR;) {
-              const yR = GR & -GR,
-                uR = 31 - Math.clz32(yR);
-              GR ^= yR, JR(RR, uR, tR[uR])
+          let Qr = this.dirtyLow,
+            Zr = this.dirtyHigh;
+          const Wr = this.ops;
+          if (void 0 !== Wr) {
+            for (; 0 !== Qr;) {
+              const Zr = Qr & -Qr,
+                ar = 31 - Math.clz32(Zr);
+              Qr ^= Zr, Sr(rr, ar, Wr[ar])
             }
-            for (; 0 !== yR;) {
-              const GR = yR & -yR,
-                uR = 31 - Math.clz32(GR) + 32;
-              yR ^= GR, JR(RR, uR, tR[uR])
+            for (; 0 !== Zr;) {
+              const Qr = Zr & -Zr,
+                ar = 31 - Math.clz32(Qr) + 32;
+              Zr ^= Qr, Sr(rr, ar, Wr[ar])
             }
           } else {
-            const yR = this.opsLow,
-              tR = this.opsHigh;
-            for (; 0 !== GR;) {
-              const uR = GR & -GR,
-                ZR = 31 - Math.clz32(uR);
-              GR ^= uR, JR(RR, ZR, XG(yR, tR, ZR))
+            const Zr = this.opsLow,
+              Wr = this.opsHigh;
+            for (; 0 !== Qr;) {
+              const ar = Qr & -Qr,
+                jr = 31 - Math.clz32(ar);
+              Qr ^= ar, Sr(rr, jr, yQ(Zr, Wr, jr))
             }
           }
           return
         }
-        const GR = this.collDirty,
-          yR = this.collPureOps;
-        if (void 0 !== yR && yR.length > 0) {
-          let tR = 0,
-            uR = 0;
-          for (const [ZR, qR] of GR) {
-            for (; tR < yR.length && yR[tR][0] <= uR;) {
-              const GR = yR[tR++][1];
-              JR(RR, -GR, GR)
+        const Qr = this.collDirty,
+          Zr = this.collPureOps;
+        if (void 0 !== Zr && Zr.length > 0) {
+          let Wr = 0,
+            ar = 0;
+          for (const [jr, Ir] of Qr) {
+            for (; Wr < Zr.length && Zr[Wr][0] <= ar;) {
+              const Qr = Zr[Wr++][1];
+              Sr(rr, -Qr, Qr)
             }
-            JR(RR, ZR, qR), uR++
+            Sr(rr, jr, Ir), ar++
           }
-          for (; tR < yR.length;) {
-            const GR = yR[tR++][1];
-            JR(RR, -GR, GR)
+          for (; Wr < Zr.length;) {
+            const Qr = Zr[Wr++][1];
+            Sr(rr, -Qr, Qr)
           }
         } else
-          for (const [tR, uR] of GR) JR(RR, tR, uR)
+          for (const [Wr, ar] of Qr) Sr(rr, Wr, ar)
       }
       size() {
-        return this._isSchema ? sJ(this.dirtyLow) + sJ(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? sS(this.dirtyLow) + sS(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(RR, JR) {
+      insertAt(rr, Sr) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const GR = this.collDirty,
-          yR = new Map,
-          uR = !this.paused && !this.isFullStateOnly;
-        if (RR > 0)
-          for (const [tR, ZR] of GR) tR < RR && yR.set(tR, ZR);
-        if (uR)
-          for (let ZR = 0; ZR < JR; ZR++) yR.set(RR + ZR, tR.ADD);
-        for (const [tR, ZR] of GR) tR >= RR && yR.set(tR + JR, ZR);
-        this.collDirty = yR, uR && this.root?.enqueueChangeTree(this)
+        const Qr = this.collDirty,
+          Zr = new Map,
+          ar = !this.paused && !this.isFullStateOnly;
+        if (rr > 0)
+          for (const [Wr, jr] of Qr) Wr < rr && Zr.set(Wr, jr);
+        if (ar)
+          for (let jr = 0; jr < Sr; jr++) Zr.set(rr + jr, Wr.ADD);
+        for (const [Wr, jr] of Qr) Wr >= rr && Zr.set(Wr + Sr, jr);
+        this.collDirty = Zr, ar && this.root?.enqueueChangeTree(this)
       }
-      removeAt(RR, JR) {
+      removeAt(rr, Sr) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const GR = this.collDirty,
-          yR = RR + JR;
-        let tR = !1;
-        for (const ZR of GR.keys())
-          if (ZR >= yR) {
-            tR = !0;
+        const Qr = this.collDirty,
+          Zr = rr + Sr;
+        let Wr = !1;
+        for (const jr of Qr.keys())
+          if (jr >= Zr) {
+            Wr = !0;
             break
-          } if (!tR) {
-          for (let JR = RR; JR < yR; JR++) GR.delete(JR);
+          } if (!Wr) {
+          for (let Sr = rr; Sr < Zr; Sr++) Qr.delete(Sr);
           return
         }
-        const uR = new Map;
-        for (const [ZR, qR] of GR) ZR < RR ? uR.set(ZR, qR) : ZR >= yR && uR.set(ZR - JR, qR);
-        this.collDirty = uR
+        const ar = new Map;
+        for (const [jr, Ir] of Qr) jr < rr ? ar.set(jr, Ir) : jr >= Zr && ar.set(jr - Sr, Ir);
+        this.collDirty = ar
       }
-      unshift(RR) {
-        this.insertAt(0, RR)
+      unshift(rr) {
+        this.insertAt(0, rr)
       }
-      setRoot(RR) {
-        ! function(RR, JR) {
-          RR.root = JR;
-          const GR = JR.add(RR);
-          uG(RR, RR.parent, RR.parentIndex), GR && nG(RR, JR, UG)
-        }(this, RR)
+      setRoot(rr) {
+        ! function(rr, Sr) {
+          rr.root = Sr;
+          const Qr = Sr.add(rr);
+          aQ(rr, rr.parent, rr.parentIndex), Qr && zQ(rr, Sr, YQ)
+        }(this, rr)
       }
-      setParent(RR, JR, GR) {
-        aG(this, RR, JR, GR)
+      setParent(rr, Sr, Qr) {
+        tQ(this, rr, Sr, Qr)
       }
-      forEachChild(RR) {
-        nG(this, RR, LG)
+      forEachChild(rr) {
+        zQ(this, rr, hQ)
       }
-      forEachChildWithCtx(RR, JR) {
-        nG(this, RR, JR)
+      forEachChildWithCtx(rr, Sr) {
+        zQ(this, rr, Sr)
       }
-      forEachLive(RR) {
-        tG(this, RR, yG)
+      forEachLive(rr) {
+        WQ(this, rr, ZQ)
       }
-      forEachLiveWithCtx(RR, JR) {
-        tG(this, RR, JR)
+      forEachLiveWithCtx(rr, Sr) {
+        WQ(this, rr, Sr)
       }
-      operation(RR) {
-        this.paused || this.isFullStateOnly || (this.recordPure(RR), this.root?.enqueueChangeTree(this))
+      operation(rr) {
+        this.paused || this.isFullStateOnly || (this.recordPure(rr), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(RR, JR, GR) {
-        if (!this.paused && !this.isFieldFullStateOnly(RR)) {
-          if (this.isFieldUnreliable(RR) && !this.isNew) {
-            const yR = this.ensureUnreliableRecorder();
-            return GR ? yR.recordRaw(RR, JR) : yR.record(RR, JR), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(rr, Sr, Qr) {
+        if (!this.paused && !this.isFieldFullStateOnly(rr)) {
+          if (this.isFieldUnreliable(rr) && !this.isNew) {
+            const Zr = this.ensureUnreliableRecorder();
+            return Qr ? Zr.recordRaw(rr, Sr) : Zr.record(rr, Sr), void this.root?.enqueueUnreliable(this)
           }
-          GR ? this.recordRaw(RR, JR) : this.record(RR, JR), this.root?.enqueueChangeTree(this)
+          Qr ? this.recordRaw(rr, Sr) : this.record(rr, Sr), this.root?.enqueueChangeTree(this)
         }
       }
-      change(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tR.ADD;
-        this._routeAndRecord(RR, JR, !1)
+      change(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.ADD;
+        this._routeAndRecord(rr, Sr, !1)
       }
-      indexedOperation(RR, JR) {
-        this._routeAndRecord(RR, JR, !0)
+      indexedOperation(rr, Sr) {
+        this._routeAndRecord(rr, Sr, !0)
       }
-      getChange(RR) {
-        return this.operationAt(RR)
+      getChange(rr) {
+        return this.operationAt(rr)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(RR) {
-        const JR = this.paused;
+      untracked(rr) {
+        const Sr = this.paused;
         this.paused = !0;
         try {
-          return RR()
+          return rr()
         } finally {
-          this.paused = JR
+          this.paused = Sr
         }
       }
-      markDirty(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tR.ADD;
-        const GR = this.paused;
+      markDirty(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.ADD;
+        const Qr = this.paused;
         this.paused = !1;
         try {
-          this.change(RR, JR)
+          this.change(rr, Sr)
         } finally {
-          this.paused = GR
+          this.paused = Qr
         }
       }
-      getValue(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[wR](RR, JR)
+      getValue(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[mr](rr, Sr)
       }
-      delete(RR, JR) {
-        if (void 0 === RR) {
+      delete(rr, Sr) {
+        if (void 0 === rr) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${RR}'`)
-          } catch (ut) {
-            console.warn(ut)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${rr}'`)
+          } catch (aW) {
+            console.warn(aW)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(RR)) return this.getValue(RR);
-        const GR = this.isFieldUnreliable(RR) && !this.isNew;
-        GR ? this.ensureUnreliableRecorder().recordDelete(RR, JR ?? tR.DELETE) : this.recordDelete(RR, JR ?? tR.DELETE);
-        const yR = this.getValue(RR);
-        return yR && yR[aR] && this.root?.remove(yR[aR]), GR ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), yR
+        if (this.paused || this.isFieldFullStateOnly(rr)) return this.getValue(rr);
+        const Qr = this.isFieldUnreliable(rr) && !this.isNew;
+        Qr ? this.ensureUnreliableRecorder().recordDelete(rr, Sr ?? Wr.DELETE) : this.recordDelete(rr, Sr ?? Wr.DELETE);
+        const Zr = this.getValue(rr);
+        return Zr && Zr[tr] && this.root?.remove(Zr[tr]), Qr ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Zr
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[UR]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Yr]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[UR]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Yr]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[UR]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[Yr]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const RR = RR => {
-          if (RR < 0) return;
-          const JR = this.getValue(RR);
-          JR && JR[aR] && JR[aR].discardAll()
+        const rr = rr => {
+          if (rr < 0) return;
+          const Sr = this.getValue(rr);
+          Sr && Sr[tr] && Sr[tr].discardAll()
         };
-        this.forEach(RR), this.unreliableRecorder?.forEach(RR), this.discard()
+        this.forEach(rr), this.unreliableRecorder?.forEach(rr), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(RR, JR) {
-        ! function(RR, JR, GR) {
-          if (RR.parentRef) {
-            if (RR.parentRef[aR] === JR[aR]) return void(RR._parentIndex = GR);
-            if (JG(RR, ((RR, GR) => RR[aR] === JR[aR]))) return void(RR._parentIndex = GR)
+      addParent(rr, Sr) {
+        ! function(rr, Sr, Qr) {
+          if (rr.parentRef) {
+            if (rr.parentRef[tr] === Sr[tr]) return void(rr._parentIndex = Qr);
+            if (SQ(rr, ((rr, Qr) => rr[tr] === Sr[tr]))) return void(rr._parentIndex = Qr)
           }
-          void 0 === RR.parentRef ? (RR.parentRef = JR, RR._parentIndex = GR) : (RR.extraParents = {
-            ref: RR.parentRef,
-            index: RR._parentIndex,
-            next: RR.extraParents
-          }, RR.parentRef = JR, RR._parentIndex = GR)
-        }(this, RR, JR)
+          void 0 === rr.parentRef ? (rr.parentRef = Sr, rr._parentIndex = Qr) : (rr.extraParents = {
+            ref: rr.parentRef,
+            index: rr._parentIndex,
+            next: rr.extraParents
+          }, rr.parentRef = Sr, rr._parentIndex = Qr)
+        }(this, rr, Sr)
       }
-      setParentIndex(RR, JR) {
-        ! function(RR, JR, GR) {
-          if (void 0 !== RR.extraParents)
-            if (RR.parentRef[aR] !== JR[aR]) {
-              for (let yR = RR.extraParents; void 0 !== yR; yR = yR.next)
-                if (yR.ref[aR] === JR[aR]) return void(yR.index = GR)
-            } else RR._parentIndex = GR;
-          else RR._parentIndex = GR
-        }(this, RR, JR)
+      setParentIndex(rr, Sr) {
+        ! function(rr, Sr, Qr) {
+          if (void 0 !== rr.extraParents)
+            if (rr.parentRef[tr] !== Sr[tr]) {
+              for (let Zr = rr.extraParents; void 0 !== Zr; Zr = Zr.next)
+                if (Zr.ref[tr] === Sr[tr]) return void(Zr.index = Qr)
+            } else rr._parentIndex = Qr;
+          else rr._parentIndex = Qr
+        }(this, rr, Sr)
       }
       removeParent() {
-        return function(RR, JR) {
-          if (RR.parentRef && RR.parentRef[aR] === JR[aR]) return RR.extraParents ? (RR.parentRef = RR.extraParents.ref, RR._parentIndex = RR.extraParents.index, RR.extraParents = RR.extraParents.next) : (RR.parentRef = void 0, RR._parentIndex = void 0), !0;
-          let GR = RR.extraParents,
-            yR = null;
-          for (; GR;) {
-            if (GR.ref[aR] === JR[aR]) return yR ? yR.next = GR.next : RR.extraParents = GR.next, !0;
-            yR = GR, GR = GR.next
+        return function(rr, Sr) {
+          if (rr.parentRef && rr.parentRef[tr] === Sr[tr]) return rr.extraParents ? (rr.parentRef = rr.extraParents.ref, rr._parentIndex = rr.extraParents.index, rr.extraParents = rr.extraParents.next) : (rr.parentRef = void 0, rr._parentIndex = void 0), !0;
+          let Qr = rr.extraParents,
+            Zr = null;
+          for (; Qr;) {
+            if (Qr.ref[tr] === Sr[tr]) return Zr ? Zr.next = Qr.next : rr.extraParents = Qr.next, !0;
+            Zr = Qr, Qr = Qr.next
           }
-          return void 0 === RR.parentRef
+          return void 0 === rr.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(RR) {
-        return function(RR, JR) {
-          if (void 0 !== RR.parentRef && JR(RR.parentRef, RR._parentIndex)) return {
-            ref: RR.parentRef,
-            index: RR._parentIndex
+      findParent(rr) {
+        return function(rr, Sr) {
+          if (void 0 !== rr.parentRef && Sr(rr.parentRef, rr._parentIndex)) return {
+            ref: rr.parentRef,
+            index: rr._parentIndex
           };
-          for (let GR = RR.extraParents; void 0 !== GR; GR = GR.next)
-            if (JR(GR.ref, GR.index)) return {
-              ref: GR.ref,
-              index: GR.index
+          for (let Qr = rr.extraParents; void 0 !== Qr; Qr = Qr.next)
+            if (Sr(Qr.ref, Qr.index)) return {
+              ref: Qr.ref,
+              index: Qr.index
             }
-        }(this, RR)
+        }(this, rr)
       }
-      hasParent(RR) {
-        return JG(this, RR)
+      hasParent(rr) {
+        return SQ(this, rr)
       }
-      indexInParent(RR) {
-        return function(RR, JR) {
-          if (RR.parentRef && RR.parentRef[aR] === JR[aR]) return RR._parentIndex;
-          for (let GR = RR.extraParents; void 0 !== GR; GR = GR.next)
-            if (GR.ref[aR] === JR[aR]) return GR.index
-        }(this, RR)
+      indexInParent(rr) {
+        return function(rr, Sr) {
+          if (rr.parentRef && rr.parentRef[tr] === Sr[tr]) return rr._parentIndex;
+          for (let Qr = rr.extraParents; void 0 !== Qr; Qr = Qr.next)
+            if (Qr.ref[tr] === Sr[tr]) return Qr.index
+        }(this, rr)
       }
       getAllParents() {
-        return function(RR) {
-          const JR = [];
-          RR.parentRef && JR.push({
-            ref: RR.parentRef,
-            index: RR._parentIndex
+        return function(rr) {
+          const Sr = [];
+          rr.parentRef && Sr.push({
+            ref: rr.parentRef,
+            index: rr._parentIndex
           });
-          let GR = RR.extraParents;
-          for (; GR;) JR.push({
-            ref: GR.ref,
-            index: GR.index
-          }), GR = GR.next;
-          return JR
+          let Qr = rr.extraParents;
+          for (; Qr;) Sr.push({
+            ref: Qr.ref,
+            index: Qr.index
+          }), Qr = Qr.next;
+          return Sr
         }(this)
       }
     }
-    class OG {
+    class PQ {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(RR) {
-        this.ref = RR
+      constructor(rr) {
+        this.ref = rr
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(RR) {
-        return RR()
+      untracked(rr) {
+        return rr()
       }
       markDirty() {}
-      forEachChild(RR) {
-        const JR = this.ref;
-        if (JR[LR]) {
-          if ("string" !== typeof JR[LR])
-            for (const [GR, yR] of JR.entries()) yR && RR(yR[aR], JR._collectionIndexes?.[GR] ?? GR);
+      forEachChild(rr) {
+        const Sr = this.ref;
+        if (Sr[hr]) {
+          if ("string" !== typeof Sr[hr])
+            for (const [Qr, Zr] of Sr.entries()) Zr && rr(Zr[tr], Sr._collectionIndexes?.[Qr] ?? Qr);
           return
         }
-        const GR = JR.constructor,
-          yR = GR?.[Symbol.metadata];
-        if (!yR) return;
-        const tR = yR[gR] ?? [];
-        for (let uR = 0; uR < tR.length; uR++) {
-          const GR = tR[uR],
-            ZR = JR[yR[GR].name];
-          ZR && RR(ZR[aR], GR)
+        const Qr = Sr.constructor,
+          Zr = Qr?.[Symbol.metadata];
+        if (!Zr) return;
+        const Wr = Zr[Lr] ?? [];
+        for (let ar = 0; ar < Wr.length; ar++) {
+          const Qr = Wr[ar],
+            jr = Sr[Zr[Qr].name];
+          jr && rr(jr[tr], Qr)
         }
       }
-      forEachChildWithCtx(RR, JR) {
-        this.forEachChild(((GR, yR) => JR(RR, GR, yR)))
+      forEachChildWithCtx(rr, Sr) {
+        this.forEachChild(((Qr, Zr) => Sr(rr, Qr, Zr)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function xG(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR;
-      var GR;
-      Object.defineProperty(RR, aR, {
-        value: (GR = JR, new OG(GR)),
+    function HQ(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr;
+      var Qr;
+      Object.defineProperty(rr, tr, {
+        value: (Qr = Sr, new PQ(Qr)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function NG(RR, JR, GR, yR, uR, ZR, iR) {
-      void 0 !== iR ? iR(JR, yR, ZR) : "string" === typeof GR ? JJ[GR]?.(JR, yR, ZR) : null != GR[Symbol.metadata] ? (JJ.number(JR, yR[qR], ZR), (uR & tR.ADD) === tR.ADD && RR.tryEncodeTypeId(JR, GR, yR.constructor, ZR)) : JJ.number(JR, yR[qR], ZR)
+    function qQ(rr, Sr, Qr, Zr, ar, jr, fr) {
+      void 0 !== fr ? fr(Sr, Zr, jr) : "string" === typeof Qr ? SS[Qr]?.(Sr, Zr, jr) : null != Qr[Symbol.metadata] ? (SS.number(Sr, Zr[Ir], jr), (ar & Wr.ADD) === Wr.ADD && rr.tryEncodeTypeId(Sr, Qr, Zr.constructor, jr)) : SS.number(Sr, Zr[Ir], jr)
     }
-    const DG = function(RR, JR, GR, yR, uR, ZR, qR, iR) {
-        if (JR[ZR.offset++] = 255 & (yR | uR), uR === tR.DELETE) return;
-        const fR = GR.encDescriptor,
-          VR = GR.ref,
-          KR = VR[CR][yR] ?? VR[fR.names[yR]];
-        NG(RR, JR, fR.types[yR], KR, uR, ZR, fR.encoders[yR])
+    const RQ = function(rr, Sr, Qr, Zr, ar, jr, Ir, fr) {
+        if (Sr[jr.offset++] = 255 & (Zr | ar), ar === Wr.DELETE) return;
+        const Er = Qr.encDescriptor,
+          pr = Qr.ref,
+          xr = pr[Kr][Zr] ?? pr[Er.names[Zr]];
+        qQ(rr, Sr, Er.types[Zr], xr, ar, jr, Er.encoders[Zr])
       },
-      HG = function(RR, JR, GR, yR, uR, ZR) {
-        if (JR[ZR.offset++] = 255 & uR, JJ.number(JR, yR, ZR), uR === tR.DELETE) return;
-        const qR = GR.ref;
-        if ((uR & tR.ADD) === tR.ADD) {
-          const RR = qR.$indexes.get(yR);
-          JJ.string(JR, RR, ZR)
+      gQ = function(rr, Sr, Qr, Zr, ar, jr) {
+        if (Sr[jr.offset++] = 255 & ar, SS.number(Sr, Zr, jr), ar === Wr.DELETE) return;
+        const Ir = Qr.ref;
+        if ((ar & Wr.ADD) === Wr.ADD) {
+          const rr = Ir.$indexes.get(Zr);
+          SS.string(Sr, rr, jr)
         }
-        NG(RR, JR, qR[LR], qR[wR](yR), uR, ZR)
+        qQ(rr, Sr, Ir[hr], Ir[mr](Zr), ar, jr)
       },
-      oG = function(RR, JR, GR, yR, uR, ZR) {
-        if (JR[ZR.offset++] = 255 & uR, JJ.number(JR, yR, ZR), uR === tR.DELETE) return;
-        const qR = GR.ref;
-        NG(RR, JR, qR[LR], qR[wR](yR), uR, ZR)
+      CQ = function(rr, Sr, Qr, Zr, ar, jr) {
+        if (Sr[jr.offset++] = 255 & ar, SS.number(Sr, Zr, jr), ar === Wr.DELETE) return;
+        const Ir = Qr.ref;
+        qQ(rr, Sr, Ir[hr], Ir[mr](Zr), ar, jr)
       },
-      cG = function(RR, JR, GR, yR, uR, ZR) {
-        const qR = GR.ref;
-        (uR & tR.ADD) === tR.ADD && "function" === typeof qR.set ? HG(RR, JR, GR, yR, uR, ZR) : oG(RR, JR, GR, yR, uR, ZR)
+      MQ = function(rr, Sr, Qr, Zr, ar, jr) {
+        const Ir = Qr.ref;
+        (ar & Wr.ADD) === Wr.ADD && "function" === typeof Ir.set ? gQ(rr, Sr, Qr, Zr, ar, jr) : CQ(rr, Sr, Qr, Zr, ar, jr)
       },
-      PG = function(RR, JR, GR, yR, uR, ZR, iR, fR) {
-        const VR = GR.refTarget,
-          KR = VR[LR],
-          rR = "string" !== typeof KR;
-        let eR;
-        if (fR && GR.isFiltered && rR) {
-          const RR = VR.tmpItems[yR];
-          if (!RR) return;
-          if (eR = RR[qR], uR === tR.DELETE) uR = tR.DELETE_BY_REFID;
-          else if ((uR & tR.ADD) === tR.ADD) uR = tR.ADD_BY_REFID;
-          else if ((uR & tR.MOVE) === tR.MOVE) return
-        } else if (uR === tR.DELETE && rR) {
-          const RR = VR.tmpItems[yR];
-          if (!RR) return;
-          eR = RR[qR], uR = tR.DELETE_BY_REFID
-        } else eR = yR;
-        if (JR[ZR.offset++] = 255 & uR, JJ.number(JR, eR, ZR), uR === tR.DELETE || uR === tR.DELETE_BY_REFID) return;
-        NG(RR, JR, KR, VR[wR](yR, iR), uR, ZR)
+      GQ = function(rr, Sr, Qr, Zr, ar, jr, fr, Er) {
+        const pr = Qr.refTarget,
+          xr = pr[hr],
+          Nr = "string" !== typeof xr;
+        let Ur;
+        if (Er && Qr.isFiltered && Nr) {
+          const rr = pr.tmpItems[Zr];
+          if (!rr) return;
+          if (Ur = rr[Ir], ar === Wr.DELETE) ar = Wr.DELETE_BY_REFID;
+          else if ((ar & Wr.ADD) === Wr.ADD) ar = Wr.ADD_BY_REFID;
+          else if ((ar & Wr.MOVE) === Wr.MOVE) return
+        } else if (ar === Wr.DELETE && Nr) {
+          const rr = pr.tmpItems[Zr];
+          if (!rr) return;
+          Ur = rr[Ir], ar = Wr.DELETE_BY_REFID
+        } else Ur = Zr;
+        if (Sr[jr.offset++] = 255 & ar, SS.number(Sr, Ur, jr), ar === Wr.DELETE || ar === Wr.DELETE_BY_REFID) return;
+        qQ(rr, Sr, xr, pr[mr](Zr, fr), ar, jr)
       };
 
-    function IG(RR, JR, GR, yR, uR, ZR, iR) {
-      const fR = RR.resyncVisited;
-      let VR = fR.get(RR.currentRefId);
-      if (void 0 === VR && fR.set(RR.currentRefId, VR = new Set), VR.add(yR), void 0 !== uR && GR === tR.ADD && uR !== ZR) {
-        const GR = uR[qR];
-        void 0 !== GR && (RR.root.removeRef(GR), iR?.push({
-          ref: JR,
-          refId: RR.currentRefId,
-          op: tR.DELETE,
-          dynamicIndex: yR,
+    function kQ(rr, Sr, Qr, Zr, ar, jr, fr) {
+      const Er = rr.resyncVisited;
+      let pr = Er.get(rr.currentRefId);
+      if (void 0 === pr && Er.set(rr.currentRefId, pr = new Set), pr.add(Zr), void 0 !== ar && Qr === Wr.ADD && ar !== jr) {
+        const Qr = ar[Ir];
+        void 0 !== Qr && (rr.root.removeRef(Qr), fr?.push({
+          ref: Sr,
+          refId: rr.currentRefId,
+          op: Wr.DELETE,
+          dynamicIndex: Zr,
           value: void 0,
-          previousValue: uR
+          previousValue: ar
         }))
       }
     }
 
-    function mG(RR, JR, GR, yR) {
-      const tR = JR[qR];
-      if (void 0 === tR || GR.has(tR)) return;
-      GR.add(tR);
-      const uR = JR.constructor[Symbol.metadata],
-        ZR = uR?.[gR];
-      if (void 0 === ZR) return;
-      const iR = uR[xR];
-      for (let qR = 0; qR < ZR.length; qR++) {
-        const tR = ZR[qR];
-        if (void 0 !== iR && iR.includes(tR)) continue;
-        const fR = uR[tR],
-          VR = JR[fR.name];
-        VR && (by.is(fR.type) ? mG(RR, VR, GR, yR) : zG(RR, VR, GR, yR))
+    function AQ(rr, Sr, Qr, Zr) {
+      const Wr = Sr[Ir];
+      if (void 0 === Wr || Qr.has(Wr)) return;
+      Qr.add(Wr);
+      const ar = Sr.constructor[Symbol.metadata],
+        jr = ar?.[Lr];
+      if (void 0 === jr) return;
+      const fr = ar[Hr];
+      for (let Ir = 0; Ir < jr.length; Ir++) {
+        const Wr = jr[Ir];
+        if (void 0 !== fr && fr.includes(Wr)) continue;
+        const Er = ar[Wr],
+          pr = Sr[Er.name];
+        pr && (lZ.is(Er.type) ? AQ(rr, pr, Qr, Zr) : VQ(rr, pr, Qr, Zr))
       }
     }
 
-    function zG(RR, JR, GR, yR) {
-      const uR = JR[nR] ?? JR,
-        ZR = uR[qR];
-      if (void 0 === ZR || GR.has(ZR)) return;
-      GR.add(ZR);
-      const iR = RR.resyncVisited.get(ZR);
-      if (void 0 === iR) return;
-      const fR = RR.root;
-      uR[eR](iR, ((RR, GR) => {
-        yR?.push({
-          ref: JR,
-          refId: ZR,
-          op: tR.DELETE,
-          dynamicIndex: GR,
+    function VQ(rr, Sr, Qr, Zr) {
+      const ar = Sr[zr] ?? Sr,
+        jr = ar[Ir];
+      if (void 0 === jr || Qr.has(jr)) return;
+      Qr.add(jr);
+      const fr = rr.resyncVisited.get(jr);
+      if (void 0 === fr) return;
+      const Er = rr.root;
+      ar[Ur](fr, ((rr, Qr) => {
+        Zr?.push({
+          ref: Sr,
+          refId: jr,
+          op: Wr.DELETE,
+          dynamicIndex: Qr,
           value: void 0,
-          previousValue: RR
+          previousValue: rr
         });
-        const uR = RR?.[qR];
-        void 0 !== uR && fR.removeRef(uR)
-      }), (JR => {
-        by.isSchema(JR) && mG(RR, JR, GR, yR)
+        const ar = rr?.[Ir];
+        void 0 !== ar && Er.removeRef(ar)
+      }), (Sr => {
+        lZ.isSchema(Sr) && AQ(rr, Sr, Qr, Zr)
       }))
     }
-    const SG = 1,
-      jG = 2,
-      dG = 3,
-      EG = 4,
-      YG = 5;
+    const iQ = 1,
+      wQ = 2,
+      cQ = 3,
+      FQ = 4,
+      oQ = 5;
 
-    function kG(RR, JR, GR, yR, uR, ZR, iR, fR, VR) {
-      const KR = RR.root;
-      let wR;
-      if ((JR & tR.DELETE) === tR.DELETE) {
-        const RR = uR?.[qR];
-        void 0 !== RR && KR.removeRef(RR), JR !== tR.DELETE_AND_ADD && GR[rR](yR), wR = void 0
+    function bQ(rr, Sr, Qr, Zr, ar, jr, fr, Er, pr) {
+      const xr = rr.root;
+      let mr;
+      if ((Sr & Wr.DELETE) === Wr.DELETE) {
+        const rr = ar?.[Ir];
+        void 0 !== rr && xr.removeRef(rr), Sr !== Wr.DELETE_AND_ADD && Qr[Nr](Zr), mr = void 0
       }
-      if (JR === tR.DELETE);
-      else if ("string" === typeof ZR) wR = WJ[ZR](iR, fR);
-      else if (oJ(ZR)) wR = function(RR, JR, GR) {
-        return PJ(RR, (0, WJ[RR.wire])(JR, GR))
-      }(ZR.quantized, iR, fR);
-      else if (by.is(ZR)) {
-        const GR = WJ.number(iR, fR);
-        if (wR = KR.refs.get(GR), (JR & tR.ADD) === tR.ADD) {
-          const yR = RR.getInstanceType(iR, fR, ZR);
-          wR || (wR = RR.createInstanceOfType(yR)), KR.addRef(GR, wR, wR !== uR || JR === tR.DELETE_AND_ADD && wR === uR)
+      if (Sr === Wr.DELETE);
+      else if ("string" === typeof jr) mr = nS[jr](fr, Er);
+      else if (CS(jr)) mr = function(rr, Sr, Qr) {
+        return GS(rr, (0, nS[rr.wire])(Sr, Qr))
+      }(jr.quantized, fr, Er);
+      else if (lZ.is(jr)) {
+        const Qr = nS.number(fr, Er);
+        if (mr = xr.refs.get(Qr), (Sr & Wr.ADD) === Wr.ADD) {
+          const Zr = rr.getInstanceType(fr, Er, jr);
+          mr || (mr = rr.createInstanceOfType(Zr)), xr.addRef(Qr, mr, mr !== ar || Sr === Wr.DELETE_AND_ADD && mr === ar)
         }
       } else {
-        const GR = (eR = Object.keys(ZR)[0], AJ[eR]),
-          yR = WJ.number(iR, fR);
-        null !== RR.resyncVisited && function(RR, JR) {
-          const GR = RR.resyncVisited;
-          GR.has(JR) || GR.set(JR, new Set)
-        }(RR, yR);
-        const rR = KR.refs.has(yR) ? uR || KR.refs.get(yR) : GR.constructor.initializeForDecoder();
-        if (wR = rR.clone(!0), wR[LR] = Object.values(ZR)[0], uR) {
-          let RR = uR[qR];
-          if (void 0 !== RR && yR !== RR) {
-            (JR & tR.DELETE) !== tR.DELETE && KR.removeRef(RR);
-            const GR = uR.entries();
-            let yR;
+        const Qr = (Ur = Object.keys(jr)[0], eS[Ur]),
+          Zr = nS.number(fr, Er);
+        null !== rr.resyncVisited && function(rr, Sr) {
+          const Qr = rr.resyncVisited;
+          Qr.has(Sr) || Qr.set(Sr, new Set)
+        }(rr, Zr);
+        const Nr = xr.refs.has(Zr) ? ar || xr.refs.get(Zr) : Qr.constructor.initializeForDecoder();
+        if (mr = Nr.clone(!0), mr[hr] = Object.values(jr)[0], ar) {
+          let rr = ar[Ir];
+          if (void 0 !== rr && Zr !== rr) {
+            (Sr & Wr.DELETE) !== Wr.DELETE && xr.removeRef(rr);
+            const Qr = ar.entries();
+            let Zr;
             for (;
-              (yR = GR.next()) && !yR.done;) {
-              const [JR, GR] = yR.value;
-              "object" === typeof GR && (RR = GR[qR]), VR?.push({
-                ref: uR,
-                refId: RR,
-                op: tR.DELETE,
-                field: JR,
+              (Zr = Qr.next()) && !Zr.done;) {
+              const [Sr, Qr] = Zr.value;
+              "object" === typeof Qr && (rr = Qr[Ir]), pr?.push({
+                ref: ar,
+                refId: rr,
+                op: Wr.DELETE,
+                field: Sr,
                 value: void 0,
-                previousValue: GR
+                previousValue: Qr
               })
             }
           }
         }
-        KR.addRef(yR, wR, rR !== uR || JR === tR.DELETE_AND_ADD && rR === uR)
+        xr.addRef(Zr, mr, Nr !== ar || Sr === Wr.DELETE_AND_ADD && Nr === ar)
       }
-      var eR;
-      return wR
+      var Ur;
+      return mr
     }
-    const QG = function(RR, JR, GR, yR, tR) {
-        const uR = JR[GR.offset++],
-          ZR = yR.constructor[Symbol.metadata],
-          qR = uR >> 6 << 6,
-          iR = uR % (qR || 255),
-          fR = ZR[iR];
-        if (void 0 === fR) return console.warn("@colyseus/schema: field not defined at", {
-          index: iR,
-          ref: yR.constructor.name,
-          metadata: ZR
+    const JQ = function(rr, Sr, Qr, Zr, Wr) {
+        const ar = Sr[Qr.offset++],
+          jr = Zr.constructor[Symbol.metadata],
+          Ir = ar >> 6 << 6,
+          fr = ar % (Ir || 255),
+          Er = jr[fr];
+        if (void 0 === Er) return console.warn("@colyseus/schema: field not defined at", {
+          index: fr,
+          ref: Zr.constructor.name,
+          metadata: jr
         }), -1;
-        const VR = !0 === fR.deprecated,
-          KR = VR ? void 0 : yR[wR](iR),
-          rR = kG(RR, qR, yR, iR, KR, fR.type, JR, GR, tR);
-        VR || (null !== rR && void 0 !== rR && (yR[fR.name] = rR), KR !== rR && tR?.push({
-          ref: yR,
-          refId: RR.currentRefId,
-          op: qR,
-          field: fR.name,
-          value: rR,
-          previousValue: KR
+        const pr = !0 === Er.deprecated,
+          xr = pr ? void 0 : Zr[mr](fr),
+          Nr = bQ(rr, Ir, Zr, fr, xr, Er.type, Sr, Qr, Wr);
+        pr || (null !== Nr && void 0 !== Nr && (Zr[Er.name] = Nr), xr !== Nr && Wr?.push({
+          ref: Zr,
+          refId: rr.currentRefId,
+          op: Ir,
+          field: Er.name,
+          value: Nr,
+          previousValue: xr
         }))
       },
-      FG = function(RR, JR, GR, yR, uR) {
-        const ZR = yR[nR] ?? yR,
-          qR = JR[GR.offset++];
-        if (qR === tR.CLEAR) return RR.removeChildRefs(ZR, uR), void ZR.clear();
-        const iR = WJ.number(JR, GR),
-          fR = ZR[LR],
-          VR = ZR.constructor.COLLECTION_KIND;
-        let KR;
-        (qR & tR.ADD) === tR.ADD ? VR === SG ? (KR = WJ.string(JR, GR), ZR.setIndex(iR, KR)) : KR = iR : KR = ZR.getIndex(iR);
-        const rR = ZR[wR](iR),
-          eR = kG(RR, qR, yR, iR, rR, fR, JR, GR, uR);
-        if (null !== RR.resyncVisited && IG(RR, yR, qR, KR, rR, eR, uR), null !== eR && void 0 !== eR) switch (VR) {
-          case SG:
-            ZR.$items.set(KR, eR);
+      DQ = function(rr, Sr, Qr, Zr, ar) {
+        const jr = Zr[zr] ?? Zr,
+          Ir = Sr[Qr.offset++];
+        if (Ir === Wr.CLEAR) return rr.removeChildRefs(jr, ar), void jr.clear();
+        const fr = nS.number(Sr, Qr),
+          Er = jr[hr],
+          pr = jr.constructor.COLLECTION_KIND;
+        let xr;
+        (Ir & Wr.ADD) === Wr.ADD ? pr === iQ ? (xr = nS.string(Sr, Qr), jr.setIndex(fr, xr)) : xr = fr : xr = jr.getIndex(fr);
+        const Nr = jr[mr](fr),
+          Ur = bQ(rr, Ir, Zr, fr, Nr, Er, Sr, Qr, ar);
+        if (null !== rr.resyncVisited && kQ(rr, Zr, Ir, xr, Nr, Ur, ar), null !== Ur && void 0 !== Ur) switch (pr) {
+          case iQ:
+            jr.$items.set(xr, Ur);
             break;
-          case jG:
-            ZR.$setAt(iR, eR, null !== RR.resyncVisited && qR === tR.ADD ? tR.REPLACE : qR);
+          case wQ:
+            jr.$setAt(fr, Ur, null !== rr.resyncVisited && Ir === Wr.ADD ? Wr.REPLACE : Ir);
             break;
-          case dG:
-          case EG:
-          case YG:
-            ZR.$items.has(iR) || (ZR.$items.set(iR, eR), "number" === typeof ZR.$refId && iR >= ZR.$refId && (ZR.$refId = iR + 1));
+          case cQ:
+          case FQ:
+          case oQ:
+            jr.$items.has(fr) || (jr.$items.set(fr, Ur), "number" === typeof jr.$refId && fr >= jr.$refId && (jr.$refId = fr + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${ZR.constructor?.name} \u2014 item at index ${iR} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${jr.constructor?.name} \u2014 item at index ${fr} was not stored.`)
         }
-        rR !== eR && uR?.push({
-          ref: yR,
-          refId: RR.currentRefId,
-          op: qR,
-          dynamicIndex: KR,
-          value: eR,
-          previousValue: rR
+        Nr !== Ur && ar?.push({
+          ref: Zr,
+          refId: rr.currentRefId,
+          op: Ir,
+          dynamicIndex: xr,
+          value: Ur,
+          previousValue: Nr
         })
       },
-      TG = function(RR, JR, GR, yR, uR) {
-        const ZR = yR[nR] ?? yR;
-        let qR, iR = JR[GR.offset++];
-        if (iR === tR.CLEAR) return RR.removeChildRefs(ZR, uR), void ZR.clear();
-        if (iR === tR.REVERSE) return void ZR.items.reverse();
-        if (iR === tR.DELETE_BY_REFID) {
-          const iR = WJ.number(JR, GR),
-            fR = RR.root.refs.get(iR);
-          if (void 0 === fR) return;
-          if (RR.root.removeRef(iR), qR = ZR.findIndex((RR => RR === fR)), -1 === qR) return;
-          return ZR[rR](qR), void uR?.push({
-            ref: yR,
-            refId: RR.currentRefId,
-            op: tR.DELETE,
-            dynamicIndex: qR,
+      dQ = function(rr, Sr, Qr, Zr, ar) {
+        const jr = Zr[zr] ?? Zr;
+        let Ir, fr = Sr[Qr.offset++];
+        if (fr === Wr.CLEAR) return rr.removeChildRefs(jr, ar), void jr.clear();
+        if (fr === Wr.REVERSE) return void jr.items.reverse();
+        if (fr === Wr.DELETE_BY_REFID) {
+          const fr = nS.number(Sr, Qr),
+            Er = rr.root.refs.get(fr);
+          if (void 0 === Er) return;
+          if (rr.root.removeRef(fr), Ir = jr.findIndex((rr => rr === Er)), -1 === Ir) return;
+          return jr[Nr](Ir), void ar?.push({
+            ref: Zr,
+            refId: rr.currentRefId,
+            op: Wr.DELETE,
+            dynamicIndex: Ir,
             value: void 0,
-            previousValue: fR
+            previousValue: Er
           })
         }
-        if (iR === tR.ADD_BY_REFID) {
-          const yR = WJ.number(JR, GR),
-            tR = RR.root.refs.get(yR);
-          tR && (qR = ZR.findIndex((RR => RR === tR))), -1 !== qR && void 0 !== qR || (qR = ZR.length)
-        } else qR = WJ.number(JR, GR);
-        const fR = ZR[LR];
-        let VR = qR;
-        const KR = ZR.items[qR],
-          wR = kG(RR, iR, yR, qR, KR, fR, JR, GR, uR);
-        null !== RR.resyncVisited && IG(RR, yR, iR, qR, KR, wR, uR), null !== wR && void 0 !== wR && wR !== KR && ZR.$setAt(qR, wR, null !== RR.resyncVisited && iR === tR.ADD ? tR.REPLACE : iR), KR !== wR && uR?.push({
-          ref: yR,
-          refId: RR.currentRefId,
-          op: iR,
-          dynamicIndex: VR,
-          value: wR,
-          previousValue: KR
+        if (fr === Wr.ADD_BY_REFID) {
+          const Zr = nS.number(Sr, Qr),
+            Wr = rr.root.refs.get(Zr);
+          Wr && (Ir = jr.findIndex((rr => rr === Wr))), -1 !== Ir && void 0 !== Ir || (Ir = jr.length)
+        } else Ir = nS.number(Sr, Qr);
+        const Er = jr[hr];
+        let pr = Ir;
+        const xr = jr.items[Ir],
+          mr = bQ(rr, fr, Zr, Ir, xr, Er, Sr, Qr, ar);
+        null !== rr.resyncVisited && kQ(rr, Zr, fr, Ir, xr, mr, ar), null !== mr && void 0 !== mr && mr !== xr && jr.$setAt(Ir, mr, null !== rr.resyncVisited && fr === Wr.ADD ? Wr.REPLACE : fr), xr !== mr && ar?.push({
+          ref: Zr,
+          refId: rr.currentRefId,
+          op: fr,
+          dynamicIndex: pr,
+          value: mr,
+          previousValue: xr
         })
       };
-    class sG extends Error {}
+    class sQ extends Error {}
 
-    function hG(RR, JR, GR, yR) {
-      if (!(RR instanceof JR)) throw new sG(`a '${JR.name}' was expected, but '${RR&&RR.constructor.name}' was provided in ${GR.constructor.name}#${yR}`)
+    function uQ(rr, Sr, Qr, Zr) {
+      if (!(rr instanceof Sr)) throw new sQ(`a '${Sr.name}' was expected, but '${rr&&rr.constructor.name}' was provided in ${Qr.constructor.name}#${Zr}`)
     }
-    const Ry = (RR, JR) => {
-        const GR = RR.toString(),
-          yR = JR.toString();
-        return GR < yR ? -1 : GR > yR ? 1 : 0
+    const rZ = (rr, Sr) => {
+        const Qr = rr.toString(),
+          Zr = Sr.toString();
+        return Qr < Zr ? -1 : Qr > Zr ? 1 : 0
       },
-      Jy = {
-        get: (RR, JR) => "symbol" === typeof JR || isNaN(JR) ? Reflect.get(RR, JR) : RR.items[JR],
-        set: (RR, JR, GR) => {
-          if ("symbol" !== typeof JR && !isNaN(JR)) {
-            if (void 0 === GR || null === GR) RR.$deleteAt(JR);
+      SZ = {
+        get: (rr, Sr) => "symbol" === typeof Sr || isNaN(Sr) ? Reflect.get(rr, Sr) : rr.items[Sr],
+        set: (rr, Sr, Qr) => {
+          if ("symbol" !== typeof Sr && !isNaN(Sr)) {
+            if (void 0 === Qr || null === Qr) rr.$deleteAt(Sr);
             else {
-              let yR;
-              if (GR[aR]) {
-                hG(GR, RR[LR], RR, JR);
-                const uR = RR.items[JR];
-                RR.isMovingItems ? (yR = RR.$wireIndex(Number(JR)), void 0 !== uR ? GR[aR].isNew ? RR[aR].indexedOperation(yR, tR.MOVE_AND_ADD) : (RR[aR].getChange(yR) & tR.DELETE) === tR.DELETE ? RR[aR].indexedOperation(yR, tR.DELETE_AND_MOVE) : RR[aR].indexedOperation(yR, tR.MOVE) : GR[aR].isNew && RR[aR].indexedOperation(yR, tR.ADD), GR[aR].setParent(RR, RR[aR].root, yR)) : yR = RR.$changeAt(Number(JR), GR), void 0 !== uR && uR[aR].root?.remove(uR[aR])
-              } else yR = RR.$changeAt(Number(JR), GR);
-              RR.items[JR] = GR, void 0 !== yR && (RR.tmpItems[yR] = GR)
+              let Zr;
+              if (Qr[tr]) {
+                uQ(Qr, rr[hr], rr, Sr);
+                const ar = rr.items[Sr];
+                rr.isMovingItems ? (Zr = rr.$wireIndex(Number(Sr)), void 0 !== ar ? Qr[tr].isNew ? rr[tr].indexedOperation(Zr, Wr.MOVE_AND_ADD) : (rr[tr].getChange(Zr) & Wr.DELETE) === Wr.DELETE ? rr[tr].indexedOperation(Zr, Wr.DELETE_AND_MOVE) : rr[tr].indexedOperation(Zr, Wr.MOVE) : Qr[tr].isNew && rr[tr].indexedOperation(Zr, Wr.ADD), Qr[tr].setParent(rr, rr[tr].root, Zr)) : Zr = rr.$changeAt(Number(Sr), Qr), void 0 !== ar && ar[tr].root?.remove(ar[tr])
+              } else Zr = rr.$changeAt(Number(Sr), Qr);
+              rr.items[Sr] = Qr, void 0 !== Zr && (rr.tmpItems[Zr] = Qr)
             }
             return !0
           }
-          return Reflect.set(RR, JR, GR)
+          return Reflect.set(rr, Sr, Qr)
         },
-        deleteProperty: (RR, JR) => ("number" === typeof JR ? RR.$deleteAt(JR) : delete RR[JR], !0),
-        has: (RR, JR) => "symbol" === typeof JR || isNaN(Number(JR)) ? Reflect.has(RR, JR) : Reflect.has(RR.items, JR)
+        deleteProperty: (rr, Sr) => ("number" === typeof Sr ? rr.$deleteAt(Sr) : delete rr[Sr], !0),
+        has: (rr, Sr) => "symbol" === typeof Sr || isNaN(Number(Sr)) ? Reflect.has(rr, Sr) : Reflect.has(rr.items, Sr)
       };
-    class Gy {
-      [aR];
-      [qR];
-      [nR];
-      [LR];
+    class QZ {
+      [tr];
+      [Ir];
+      [zr];
+      [hr];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[fR] = PG;
-      static[VR] = TG;
-      static COLLECTION_KIND = jG;
-      static[KR](RR, JR, GR) {
-        if (!GR) return !0;
-        const yR = RR[nR] ?? RR;
-        return "string" === typeof yR[LR] || GR.isChangeTreeVisible(yR.tmpItems[JR]?.[aR])
+      static[Er] = GQ;
+      static[pr] = dQ;
+      static COLLECTION_KIND = wQ;
+      static[xr](rr, Sr, Qr) {
+        if (!Qr) return !0;
+        const Zr = rr[zr] ?? rr;
+        return "string" === typeof Zr[hr] || Qr.isChangeTreeVisible(Zr.tmpItems[Sr]?.[tr])
       }
-      static is(RR) {
-        return Array.isArray(RR) || void 0 !== RR.array
+      static is(rr) {
+        return Array.isArray(rr) || void 0 !== rr.array
       }
-      static from(RR) {
-        return new Gy(...Array.from(RR))
+      static from(rr) {
+        return new QZ(...Array.from(rr))
       }
       constructor() {
-        this[LR] = void 0, this[nR] = this;
-        const RR = new Proxy(this, Jy);
-        return Object.defineProperty(this, aR, {
-          value: new vG(RR, this),
+        this[hr] = void 0, this[zr] = this;
+        const rr = new Proxy(this, SZ);
+        return Object.defineProperty(this, tr, {
+          value: new XQ(rr, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), RR
+        }), arguments.length > 0 && this.push(...arguments), rr
       }
       static initializeForDecoder() {
-        const RR = Object.create(Gy.prototype);
-        RR.items = [], RR.isMovingItems = !1, RR._needsCompaction = !1, RR[LR] = void 0, RR[nR] = RR;
-        const JR = new Proxy(RR, Jy);
-        return xG(RR, JR), JR
+        const rr = Object.create(QZ.prototype);
+        rr.items = [], rr.isMovingItems = !1, rr._needsCompaction = !1, rr[hr] = void 0, rr[zr] = rr;
+        const Sr = new Proxy(rr, SZ);
+        return HQ(rr, Sr), Sr
       }
-      set length(RR) {
-        0 === RR ? this.clear() : RR < this.items.length ? this.splice(RR, this.length - RR) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(rr) {
+        0 === rr ? this.clear() : rr < this.items.length ? this.splice(rr, this.length - rr) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[aR].pause()
+        this[tr].pause()
       }
       resumeTracking() {
-        this[aR].resume()
+        this[tr].resume()
       }
-      untracked(RR) {
-        return this[aR].untracked(RR)
+      untracked(rr) {
+        return this[tr].untracked(rr)
       }
       get isTrackingPaused() {
-        return this[aR].paused
+        return this[tr].paused
       }
       push() {
-        const RR = this[nR],
-          JR = RR.items,
-          GR = RR.tmpItems,
-          yR = RR[aR],
-          uR = RR[LR];
-        let ZR = GR.length;
-        for (let qR = 0, iR = arguments.length; qR < iR; qR++, ZR++) {
-          const iR = qR < 0 || arguments.length <= qR ? void 0 : arguments[qR];
-          if (void 0 === iR || null === iR) return;
-          "object" === typeof iR && uR && hG(iR, uR, RR, qR), yR.indexedOperation(ZR, tR.ADD), JR.push(iR), GR.push(iR), iR[aR]?.setParent(this, yR.root, ZR)
+        const rr = this[zr],
+          Sr = rr.items,
+          Qr = rr.tmpItems,
+          Zr = rr[tr],
+          ar = rr[hr];
+        let jr = Qr.length;
+        for (let Ir = 0, fr = arguments.length; Ir < fr; Ir++, jr++) {
+          const fr = Ir < 0 || arguments.length <= Ir ? void 0 : arguments[Ir];
+          if (void 0 === fr || null === fr) return;
+          "object" === typeof fr && ar && uQ(fr, ar, rr, Ir), Zr.indexedOperation(jr, Wr.ADD), Sr.push(fr), Qr.push(fr), fr[tr]?.setParent(this, Zr.root, jr)
         }
-        return ZR
+        return jr
       }
       pop() {
-        const RR = this[nR],
-          JR = RR.tmpItems,
-          GR = RR.deletedIndexes;
-        let yR = -1;
-        for (let uR = JR.length - 1; uR >= 0; uR--)
-          if (!0 !== GR[uR]) {
-            yR = uR;
+        const rr = this[zr],
+          Sr = rr.tmpItems,
+          Qr = rr.deletedIndexes;
+        let Zr = -1;
+        for (let ar = Sr.length - 1; ar >= 0; ar--)
+          if (!0 !== Qr[ar]) {
+            Zr = ar;
             break
-          } if (yR < 0) return;
-        const tR = RR.$isUnsentAdd(yR);
-        return RR[aR].delete(yR), tR ? RR.$cancelAdd(yR) : GR[yR] = !0, RR.items.pop()
+          } if (Zr < 0) return;
+        const Wr = rr.$isUnsentAdd(Zr);
+        return rr[tr].delete(Zr), Wr ? rr.$cancelAdd(Zr) : Qr[Zr] = !0, rr.items.pop()
       }
-      at(RR) {
-        return RR < 0 && (RR += this.length), this.items[RR]
+      at(rr) {
+        return rr < 0 && (rr += this.length), this.items[rr]
       }
-      $wireIndex(RR) {
-        const JR = this.deletedIndexes;
-        if (0 === JR.length) return RR;
-        const GR = this.tmpItems;
-        let yR = 0;
-        for (let tR = 0; tR < GR.length; tR++)
-          if (!0 !== JR[tR]) {
-            if (yR === RR) return tR;
-            yR++
-          } return GR.length + (RR - yR)
+      $wireIndex(rr) {
+        const Sr = this.deletedIndexes;
+        if (0 === Sr.length) return rr;
+        const Qr = this.tmpItems;
+        let Zr = 0;
+        for (let Wr = 0; Wr < Qr.length; Wr++)
+          if (!0 !== Sr[Wr]) {
+            if (Zr === rr) return Wr;
+            Zr++
+          } return Qr.length + (rr - Zr)
       }
-      $isUnsentAdd(RR) {
-        const JR = this[aR];
-        return 0 === (576 & JR.flags) && !JR.paused && "string" !== typeof this[LR] && JR.operationAt(RR) === tR.ADD
+      $isUnsentAdd(rr) {
+        const Sr = this[tr];
+        return 0 === (576 & Sr.flags) && !Sr.paused && "string" !== typeof this[hr] && Sr.operationAt(rr) === Wr.ADD
       }
-      $cancelAdd(RR) {
-        let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const GR = this[aR],
-          yR = this.tmpItems[RR];
-        this.tmpItems.splice(RR, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(RR, 1), GR.removeAt(RR, 1);
-        const tR = yR?.[aR];
-        void 0 !== tR && void 0 === tR.root && tR.removeParent(this), JR && this.$reindexChildren(RR)
+      $cancelAdd(rr) {
+        let Sr = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Qr = this[tr],
+          Zr = this.tmpItems[rr];
+        this.tmpItems.splice(rr, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(rr, 1), Qr.removeAt(rr, 1);
+        const Wr = Zr?.[tr];
+        void 0 !== Wr && void 0 === Wr.root && Wr.removeParent(this), Sr && this.$reindexChildren(rr)
       }
-      $reindexChildren(RR, JR) {
-        if (!this[aR].hasFilteredFields) return;
-        if ("string" === typeof this[LR]) return;
-        const GR = this.tmpItems,
-          yR = GR.length;
-        if (void 0 !== JR)
-          for (; RR < yR && GR[RR] === JR[RR];) RR++;
-        for (let tR = RR; tR < yR; tR++) GR[tR]?.[aR]?.setParentIndex(this, tR)
+      $reindexChildren(rr, Sr) {
+        if (!this[tr].hasFilteredFields) return;
+        if ("string" === typeof this[hr]) return;
+        const Qr = this.tmpItems,
+          Zr = Qr.length;
+        if (void 0 !== Sr)
+          for (; rr < Zr && Qr[rr] === Sr[rr];) rr++;
+        for (let Wr = rr; Wr < Zr; Wr++) Qr[Wr]?.[tr]?.setParentIndex(this, Wr)
       }
-      $changeAt(RR, JR) {
-        if (void 0 === JR || null === JR) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[RR] === JR) return;
-        const GR = void 0 !== this.items[RR] ? "object" === typeof JR ? tR.DELETE_AND_ADD : tR.REPLACE : tR.ADD,
-          yR = this.$wireIndex(RR),
-          uR = this[aR];
-        return uR.change(yR, GR), JR[aR]?.setParent(this, uR.root, yR), yR
+      $changeAt(rr, Sr) {
+        if (void 0 === Sr || null === Sr) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[rr] === Sr) return;
+        const Qr = void 0 !== this.items[rr] ? "object" === typeof Sr ? Wr.DELETE_AND_ADD : Wr.REPLACE : Wr.ADD,
+          Zr = this.$wireIndex(rr),
+          ar = this[tr];
+        return ar.change(Zr, Qr), Sr[tr]?.setParent(this, ar.root, Zr), Zr
       }
-      $deleteAt(RR, JR) {
-        this[aR].delete(this.$wireIndex(RR), JR)
+      $deleteAt(rr, Sr) {
+        this[tr].delete(this.$wireIndex(rr), Sr)
       }
-      $setAt(RR, JR, GR) {
-        GR === tR.ADD && void 0 !== this.items[RR] ? this.items.splice(RR, 0, JR) : GR === tR.DELETE_AND_MOVE ? (this.items.splice(RR, 1), this.items[RR] = JR) : (RR > this.items.length && (this._needsCompaction = !0), this.items[RR] = JR)
+      $setAt(rr, Sr, Qr) {
+        Qr === Wr.ADD && void 0 !== this.items[rr] ? this.items.splice(rr, 0, Sr) : Qr === Wr.DELETE_AND_MOVE ? (this.items.splice(rr, 1), this.items[rr] = Sr) : (rr > this.items.length && (this._needsCompaction = !0), this.items[rr] = Sr)
       }
       clear() {
-        const RR = this[nR];
-        if (0 === RR.items.length) return;
-        const JR = RR[aR];
-        JR.forEachChild(((RR, GR) => {
-          JR.root?.remove(RR)
-        })), JR.discard(), JR.operation(tR.CLEAR), RR.items.length = 0, RR.tmpItems.length = 0
-      } [WR]() {
-        const RR = this[nR] ?? this,
-          JR = RR[aR];
-        if (JR.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const GR = RR.items;
-        for (let yR = 0; yR < GR.length; yR++) GR[yR]?.[WR]?.();
-        RR.items.length = 0, RR.tmpItems.length = 0, RR.deletedIndexes.length = 0, JR.recycle(), RR[qR] = void 0
+        const rr = this[zr];
+        if (0 === rr.items.length) return;
+        const Sr = rr[tr];
+        Sr.forEachChild(((rr, Qr) => {
+          Sr.root?.remove(rr)
+        })), Sr.discard(), Sr.operation(Wr.CLEAR), rr.items.length = 0, rr.tmpItems.length = 0
+      } [nr]() {
+        const rr = this[zr] ?? this,
+          Sr = rr[tr];
+        if (Sr.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Qr = rr.items;
+        for (let Zr = 0; Zr < Qr.length; Zr++) Qr[Zr]?.[nr]?.();
+        rr.items.length = 0, rr.tmpItems.length = 0, rr.deletedIndexes.length = 0, Sr.recycle(), rr[Ir] = void 0
       }
       concat() {
-        return new Gy(...this.items.concat(...arguments))
+        return new QZ(...this.items.concat(...arguments))
       }
-      join(RR) {
-        return this.items.join(RR)
+      join(rr) {
+        return this.items.join(rr)
       }
       reverse() {
-        const RR = this[nR],
-          JR = RR[aR];
-        if (JR.has() || RR.deletedIndexes.length > 0) {
-          const JR = RR.items.slice().reverse();
-          return this.clear(), this.push(...JR), this
+        const rr = this[zr],
+          Sr = rr[tr];
+        if (Sr.has() || rr.deletedIndexes.length > 0) {
+          const Sr = rr.items.slice().reverse();
+          return this.clear(), this.push(...Sr), this
         }
-        return JR.operation(tR.REVERSE), RR.items.reverse(), RR.tmpItems.reverse(), RR.$reindexChildren(0), this
+        return Sr.operation(Wr.REVERSE), rr.items.reverse(), rr.tmpItems.reverse(), rr.$reindexChildren(0), this
       }
       shift() {
-        const RR = this[nR],
-          JR = RR.items;
-        if (0 === JR.length) return;
-        const GR = RR[aR],
-          yR = RR.deletedIndexes;
-        let uR = 0;
-        for (; !0 === yR[uR];) uR++;
-        const ZR = RR.$isUnsentAdd(uR);
-        return GR.delete(uR, tR.DELETE), ZR ? RR.$cancelAdd(uR) : yR[uR] = !0, JR.shift()
+        const rr = this[zr],
+          Sr = rr.items;
+        if (0 === Sr.length) return;
+        const Qr = rr[tr],
+          Zr = rr.deletedIndexes;
+        let ar = 0;
+        for (; !0 === Zr[ar];) ar++;
+        const jr = rr.$isUnsentAdd(ar);
+        return Qr.delete(ar, Wr.DELETE), jr ? rr.$cancelAdd(ar) : Zr[ar] = !0, Sr.shift()
       }
-      slice(RR, JR) {
-        const GR = new Gy;
-        return GR.push(...this.items.slice(RR, JR)), GR
+      slice(rr, Sr) {
+        const Qr = new QZ;
+        return Qr.push(...this.items.slice(rr, Sr)), Qr
       }
       sort() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ry;
-        const JR = this[nR];
-        JR.isMovingItems = !0;
-        const GR = JR[aR];
-        return JR.items.sort(RR).forEach(((RR, JR) => GR.change(JR, tR.REPLACE))), JR.tmpItems.sort(RR), JR.$reindexChildren(0), JR.isMovingItems = !1, this
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rZ;
+        const Sr = this[zr];
+        Sr.isMovingItems = !0;
+        const Qr = Sr[tr];
+        return Sr.items.sort(rr).forEach(((rr, Sr) => Qr.change(Sr, Wr.REPLACE))), Sr.tmpItems.sort(rr), Sr.$reindexChildren(0), Sr.isMovingItems = !1, this
       }
-      splice(RR, JR) {
-        const GR = this[nR],
-          yR = GR[aR],
-          uR = GR.items,
-          ZR = GR.tmpItems,
-          qR = GR.deletedIndexes,
-          iR = uR.length,
-          fR = ZR.length;
-        for (var VR = arguments.length, KR = new Array(VR > 2 ? VR - 2 : 0), wR = 2; wR < VR; wR++) KR[wR - 2] = arguments[wR];
-        const rR = KR.length,
-          eR = [];
-        for (let tR = 0; tR < fR; tR++) !0 !== qR[tR] && eR.push(tR);
-        let LR;
-        if (iR > RR) {
-          void 0 === JR && (JR = iR - RR);
-          for (let uR = RR; uR < RR + JR; uR++) {
-            const RR = eR[uR],
-              JR = GR.$isUnsentAdd(RR);
-            yR.delete(RR, tR.DELETE), JR ? (LR ??= []).push(RR) : qR[RR] = !0
+      splice(rr, Sr) {
+        const Qr = this[zr],
+          Zr = Qr[tr],
+          ar = Qr.items,
+          jr = Qr.tmpItems,
+          Ir = Qr.deletedIndexes,
+          fr = ar.length,
+          Er = jr.length;
+        for (var pr = arguments.length, xr = new Array(pr > 2 ? pr - 2 : 0), mr = 2; mr < pr; mr++) xr[mr - 2] = arguments[mr];
+        const Nr = xr.length,
+          Ur = [];
+        for (let Wr = 0; Wr < Er; Wr++) !0 !== Ir[Wr] && Ur.push(Wr);
+        let hr;
+        if (fr > rr) {
+          void 0 === Sr && (Sr = fr - rr);
+          for (let ar = rr; ar < rr + Sr; ar++) {
+            const rr = Ur[ar],
+              Sr = Qr.$isUnsentAdd(rr);
+            Zr.delete(rr, Wr.DELETE), Sr ? (hr ??= []).push(rr) : Ir[rr] = !0
           }
-        } else JR = 0;
-        if (rR > 0) {
-          const uR = eR[RR] ?? iR,
-            fR = Math.min(rR, JR);
-          for (let RR = 0; RR < fR; RR++) {
-            const JR = uR + RR;
-            let GR;
-            const iR = void 0 !== LR ? LR.indexOf(JR) : -1; - 1 !== iR ? (LR.splice(iR, 1), GR = tR.ADD) : GR = qR[JR] ? tR.DELETE_AND_ADD : tR.ADD, yR.indexedOperation(JR, GR), ZR[JR] = KR[RR], qR[JR] = !1, KR[RR][aR]?.setParent(this, yR.root, JR)
+        } else Sr = 0;
+        if (Nr > 0) {
+          const ar = Ur[rr] ?? fr,
+            Er = Math.min(Nr, Sr);
+          for (let rr = 0; rr < Er; rr++) {
+            const Sr = ar + rr;
+            let Qr;
+            const fr = void 0 !== hr ? hr.indexOf(Sr) : -1; - 1 !== fr ? (hr.splice(fr, 1), Qr = Wr.ADD) : Qr = Ir[Sr] ? Wr.DELETE_AND_ADD : Wr.ADD, Zr.indexedOperation(Sr, Qr), jr[Sr] = xr[rr], Ir[Sr] = !1, xr[rr][tr]?.setParent(this, Zr.root, Sr)
           }
-          const VR = rR - fR;
-          if (VR > 0) {
-            const RR = uR + fR;
-            yR.insertAt(RR, VR);
-            for (let JR = 0; JR < VR; JR++) KR[fR + JR][aR]?.setParent(this, yR.root, RR + JR);
-            qR.length > 0 && qR.splice(RR, 0, ...new Array(VR).fill(!1)), ZR.splice(RR, 0, ...KR.slice(fR)), GR.$reindexChildren(RR + VR)
+          const pr = Nr - Er;
+          if (pr > 0) {
+            const rr = ar + Er;
+            Zr.insertAt(rr, pr);
+            for (let Sr = 0; Sr < pr; Sr++) xr[Er + Sr][tr]?.setParent(this, Zr.root, rr + Sr);
+            Ir.length > 0 && Ir.splice(rr, 0, ...new Array(pr).fill(!1)), jr.splice(rr, 0, ...xr.slice(Er)), Qr.$reindexChildren(rr + pr)
           }
         }
-        if (void 0 !== LR && LR.length > 0) {
-          for (let RR = LR.length - 1; RR >= 0; RR--) GR.$cancelAdd(LR[RR], !1);
-          GR.$reindexChildren(LR[0])
+        if (void 0 !== hr && hr.length > 0) {
+          for (let rr = hr.length - 1; rr >= 0; rr--) Qr.$cancelAdd(hr[rr], !1);
+          Qr.$reindexChildren(hr[0])
         }
-        return yR.root?.enqueueChangeTree(yR), uR.splice(RR, JR, ...KR)
+        return Zr.root?.enqueueChangeTree(Zr), ar.splice(rr, Sr, ...xr)
       }
       unshift() {
-        const RR = this[nR],
-          JR = RR[aR];
-        JR.unshift(arguments.length);
-        for (let yR = 0; yR < arguments.length; yR++)(yR < 0 || arguments.length <= yR ? void 0 : arguments[yR])?.[aR]?.setParent(this, JR.root, yR);
-        const GR = RR.deletedIndexes;
-        return GR.length > 0 && GR.unshift(...new Array(arguments.length).fill(!1)), RR.tmpItems.unshift(...arguments), RR.$reindexChildren(arguments.length), RR.items.unshift(...arguments)
+        const rr = this[zr],
+          Sr = rr[tr];
+        Sr.unshift(arguments.length);
+        for (let Zr = 0; Zr < arguments.length; Zr++)(Zr < 0 || arguments.length <= Zr ? void 0 : arguments[Zr])?.[tr]?.setParent(this, Sr.root, Zr);
+        const Qr = rr.deletedIndexes;
+        return Qr.length > 0 && Qr.unshift(...new Array(arguments.length).fill(!1)), rr.tmpItems.unshift(...arguments), rr.$reindexChildren(arguments.length), rr.items.unshift(...arguments)
       }
-      indexOf(RR, JR) {
-        return this.items.indexOf(RR, JR)
+      indexOf(rr, Sr) {
+        return this.items.indexOf(rr, Sr)
       }
-      lastIndexOf(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(RR, JR)
+      lastIndexOf(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(rr, Sr)
       }
-      every(RR, JR) {
-        return this.items.every(RR, JR)
+      every(rr, Sr) {
+        return this.items.every(rr, Sr)
       }
-      some(RR, JR) {
-        return this.items.some(RR, JR)
+      some(rr, Sr) {
+        return this.items.some(rr, Sr)
       }
-      forEach(RR, JR) {
-        return this.items.forEach(RR, JR)
+      forEach(rr, Sr) {
+        return this.items.forEach(rr, Sr)
       }
-      map(RR, JR) {
-        return this.items.map(RR, JR)
+      map(rr, Sr) {
+        return this.items.map(rr, Sr)
       }
-      filter(RR, JR) {
-        return this.items.filter(RR, JR)
+      filter(rr, Sr) {
+        return this.items.filter(rr, Sr)
       }
-      reduce(RR, JR) {
+      reduce(rr, Sr) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(RR, JR) {
+      reduceRight(rr, Sr) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(RR, JR) {
-        return this.items.find(RR, JR)
+      find(rr, Sr) {
+        return this.items.find(rr, Sr)
       }
-      findIndex(RR, JR) {
-        return this.items.findIndex(RR, JR)
+      findIndex(rr, Sr) {
+        return this.items.findIndex(rr, Sr)
       }
-      fill(RR, JR, GR) {
+      fill(rr, Sr, Qr) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(RR, JR, GR) {
+      copyWithin(rr, Sr, Qr) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return Gy
+        return QZ
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(RR, JR) {
-        return this.items.includes(RR, JR)
+      includes(rr, Sr) {
+        return this.items.includes(rr, Sr)
       }
-      flatMap(RR, JR) {
+      flatMap(rr, Sr) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(RR) {
+      flat(rr) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
+        for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(RR, JR) {
-        const GR = this.items.slice();
-        return RR < 0 && (RR += this.length), GR[RR] = JR, new Gy(...GR)
+      with(rr, Sr) {
+        const Qr = this.items.slice();
+        return rr < 0 && (rr += this.length), Qr[rr] = Sr, new QZ(...Qr)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(RR) {
-        return this.items.slice().sort(RR)
+      toSorted(rr) {
+        return this.items.slice().sort(rr)
       }
-      toSpliced(RR, JR) {
-        for (var GR = arguments.length, yR = new Array(GR > 2 ? GR - 2 : 0), tR = 2; tR < GR; tR++) yR[tR - 2] = arguments[tR];
-        const uR = this.items.slice();
-        return uR.splice.apply(uR, arguments), uR
+      toSpliced(rr, Sr) {
+        for (var Qr = arguments.length, Zr = new Array(Qr > 2 ? Qr - 2 : 0), Wr = 2; Wr < Qr; Wr++) Zr[Wr - 2] = arguments[Wr];
+        const ar = this.items.slice();
+        return ar.splice.apply(ar, arguments), ar
       }
       shuffle() {
-        return this.move((RR => {
-          let JR = this.items.length;
-          for (; 0 != JR;) {
-            let RR = Math.floor(Math.random() * JR);
-            JR--, [this[JR], this[RR]] = [this[RR], this[JR]]
+        return this.move((rr => {
+          let Sr = this.items.length;
+          for (; 0 != Sr;) {
+            let rr = Math.floor(Math.random() * Sr);
+            Sr--, [this[Sr], this[rr]] = [this[rr], this[Sr]]
           }
         }))
       }
-      move(RR) {
-        return this.isMovingItems = !0, RR(this), this.isMovingItems = !1, this
-      } [wR](RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const GR = this[nR] ?? this;
-        return JR || GR.deletedIndexes[RR] ? GR.items[RR] : GR.tmpItems[RR] || GR.items[RR]
-      } [rR](RR) {
-        const JR = this[nR] ?? this;
-        JR.items[RR] = void 0, JR._needsCompaction = !0
-      } [UR]() {
-        const RR = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, RR), this.deletedIndexes.length = 0)
-      } [AR]() {
-        const RR = this[nR] ?? this;
-        RR._needsCompaction && (RR._needsCompaction = !1, RR.items = RR.items.filter((RR => void 0 !== RR)))
-      } [eR](RR, JR, GR) {
-        const yR = this[nR] ?? this,
-          tR = yR.items;
-        let uR = !1;
-        for (let ZR = 0; ZR < tR.length; ZR++) {
-          const qR = tR[ZR];
-          RR.has(ZR) ? GR(qR) : (uR = !0, JR(qR, ZR), yR[rR](ZR))
+      move(rr) {
+        return this.isMovingItems = !0, rr(this), this.isMovingItems = !1, this
+      } [mr](rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Qr = this[zr] ?? this;
+        return Sr || Qr.deletedIndexes[rr] ? Qr.items[rr] : Qr.tmpItems[rr] || Qr.items[rr]
+      } [Nr](rr) {
+        const Sr = this[zr] ?? this;
+        Sr.items[rr] = void 0, Sr._needsCompaction = !0
+      } [Yr]() {
+        const rr = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, rr), this.deletedIndexes.length = 0)
+      } [er]() {
+        const rr = this[zr] ?? this;
+        rr._needsCompaction && (rr._needsCompaction = !1, rr.items = rr.items.filter((rr => void 0 !== rr)))
+      } [Ur](rr, Sr, Qr) {
+        const Zr = this[zr] ?? this,
+          Wr = Zr.items;
+        let ar = !1;
+        for (let jr = 0; jr < Wr.length; jr++) {
+          const Ir = Wr[jr];
+          rr.has(jr) ? Qr(Ir) : (ar = !0, Sr(Ir, jr), Zr[Nr](jr))
         }
-        uR && yR[AR]()
+        ar && Zr[er]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((RR => "function" === typeof RR.toJSON ? RR.toJSON() : RR))
+        return this.toArray().map((rr => "function" === typeof rr.toJSON ? rr.toJSON() : rr))
       }
-      clone(RR) {
-        let JR;
-        return RR ? (JR = new Gy, JR.push(...this.items)) : JR = new Gy(...this.map((RR => RR[aR] ? RR.clone() : RR))), JR
+      clone(rr) {
+        let Sr;
+        return rr ? (Sr = new QZ, Sr.push(...this.items)) : Sr = new QZ(...this.map((rr => rr[tr] ? rr.clone() : rr))), Sr
       }
     }
-    XJ("array", {
-      constructor: Gy
+    yS("array", {
+      constructor: QZ
     });
-    class yy {
+    class ZZ {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(RR) {
-        const JR = this.indexByKey[RR];
-        return void 0 === JR ? void 0 : JR
+      indexOf(rr) {
+        const Sr = this.indexByKey[rr];
+        return void 0 === Sr ? void 0 : Sr
       }
-      assign(RR) {
-        const JR = this.nextIndex++;
-        return this.indexByKey[RR] = JR, this.keyByIndex.set(JR, RR), JR
+      assign(rr) {
+        const Sr = this.nextIndex++;
+        return this.indexByKey[rr] = Sr, this.keyByIndex.set(Sr, rr), Sr
       }
-      snapshot(RR, JR) {
-        (this.snapshots ??= new Map).set(RR, JR)
+      snapshot(rr, Sr) {
+        (this.snapshots ??= new Map).set(rr, Sr)
       }
-      forgetSnapshot(RR) {
-        this.snapshots?.delete(RR)
+      forgetSnapshot(rr) {
+        this.snapshots?.delete(rr)
       }
-      snapshotAt(RR) {
-        return this.snapshots?.get(RR)
+      snapshotAt(rr) {
+        return this.snapshots?.get(rr)
       }
-      setIndex(RR, JR) {
-        this.keyByIndex.set(RR, JR), this.indexByKey[JR] = RR
+      setIndex(rr, Sr) {
+        this.keyByIndex.set(rr, Sr), this.indexByKey[Sr] = rr
       }
-      keyOf(RR) {
-        return this.keyByIndex.get(RR)
+      keyOf(rr) {
+        return this.keyByIndex.get(rr)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [RR] of this.snapshots) {
-            const JR = this.keyByIndex.get(RR);
-            void 0 !== JR && (delete this.indexByKey[JR], this.keyByIndex.delete(RR))
+          for (const [rr] of this.snapshots) {
+            const Sr = this.keyByIndex.get(rr);
+            void 0 !== Sr && (delete this.indexByKey[Sr], this.keyByIndex.delete(rr))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class ty {
-      [aR];
-      [qR];
+    class WZ {
+      [tr];
+      [Ir];
       childType;
-      [LR];
+      [hr];
       $items = new Map;
-      journal = new yy;
+      journal = new ZZ;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(RR) {
-        (this._stream ??= lJ()).maxPerTick = RR
+      set maxPerTick(rr) {
+        (this._stream ??= vS()).maxPerTick = rr
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(RR) {
-        (this._stream ??= lJ()).priority = RR
+      set priority(rr) {
+        (this._stream ??= vS()).priority = rr
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[fR] = HG;
-      static[VR] = FG;
-      static COLLECTION_KIND = SG;
-      static[KR](RR, JR, GR) {
-        if (!GR || "string" === typeof RR[LR]) return !0;
-        const yR = RR[wR](JR) ?? RR.journal.snapshotAt(JR);
-        return GR.isChangeTreeVisible(yR[aR])
+      static[Er] = gQ;
+      static[pr] = DQ;
+      static COLLECTION_KIND = iQ;
+      static[xr](rr, Sr, Qr) {
+        if (!Qr || "string" === typeof rr[hr]) return !0;
+        const Zr = rr[mr](Sr) ?? rr.journal.snapshotAt(Sr);
+        return Qr.isChangeTreeVisible(Zr[tr])
       }
-      static is(RR) {
-        return void 0 !== RR.map
+      static is(rr) {
+        return void 0 !== rr.map
       }
-      constructor(RR) {
-        if (Object.defineProperty(this, aR, {
-            value: new vG(this),
+      constructor(rr) {
+        if (Object.defineProperty(this, tr, {
+            value: new XQ(this),
             enumerable: !1,
             writable: !0
-          }), this[LR] = void 0, RR)
-          if (RR instanceof Map || RR instanceof ty) RR.forEach(((RR, JR) => this.set(JR, RR)));
+          }), this[hr] = void 0, rr)
+          if (rr instanceof Map || rr instanceof WZ) rr.forEach(((rr, Sr) => this.set(Sr, rr)));
           else
-            for (const JR in RR) this.set(JR, RR[JR])
+            for (const Sr in rr) this.set(Sr, rr[Sr])
       }
       static initializeForDecoder() {
-        const RR = Object.create(ty.prototype);
-        return RR.$items = new Map, RR.journal = new yy, RR[LR] = void 0, xG(RR), RR
+        const rr = Object.create(WZ.prototype);
+        return rr.$items = new Map, rr.journal = new ZZ, rr[hr] = void 0, HQ(rr), rr
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return ty
+        return WZ
       }
-      set(RR, JR) {
-        if (void 0 === JR || null === JR) throw new Error(`MapSchema#set('${RR}', ${JR}): trying to set ${JR} value on '${RR}'.`);
-        "object" === typeof JR && this[LR] && hG(JR, this[LR], this, RR), RR = RR.toString();
-        const GR = this[aR],
-          yR = void 0 !== JR[aR],
-          uR = this.journal;
-        let ZR, qR = uR.indexOf(RR);
-        if (void 0 !== qR) {
-          ZR = tR.REPLACE;
-          const GR = this.$items.get(RR);
-          if (GR === JR) return;
-          yR && (ZR = tR.DELETE_AND_ADD, void 0 !== GR && GR[aR].root?.remove(GR[aR])), void 0 !== uR.snapshotAt(qR) && uR.forgetSnapshot(qR)
-        } else qR = uR.assign(RR), ZR = tR.ADD;
-        return this.$items.set(RR, JR), ZR === tR.ADD && GR.isStreamCollection ? void 0 !== GR.root && gJ(this, GR.root, qR) : GR.change(qR, ZR), yR && JR[aR].setParent(this, GR.root, qR), this
+      set(rr, Sr) {
+        if (void 0 === Sr || null === Sr) throw new Error(`MapSchema#set('${rr}', ${Sr}): trying to set ${Sr} value on '${rr}'.`);
+        "object" === typeof Sr && this[hr] && uQ(Sr, this[hr], this, rr), rr = rr.toString();
+        const Qr = this[tr],
+          Zr = void 0 !== Sr[tr],
+          ar = this.journal;
+        let jr, Ir = ar.indexOf(rr);
+        if (void 0 !== Ir) {
+          jr = Wr.REPLACE;
+          const Qr = this.$items.get(rr);
+          if (Qr === Sr) return;
+          Zr && (jr = Wr.DELETE_AND_ADD, void 0 !== Qr && Qr[tr].root?.remove(Qr[tr])), void 0 !== ar.snapshotAt(Ir) && ar.forgetSnapshot(Ir)
+        } else Ir = ar.assign(rr), jr = Wr.ADD;
+        return this.$items.set(rr, Sr), jr === Wr.ADD && Qr.isStreamCollection ? void 0 !== Qr.root && LS(this, Qr.root, Ir) : Qr.change(Ir, jr), Zr && Sr[tr].setParent(this, Qr.root, Ir), this
       }
-      get(RR) {
-        return this.$items.get(RR)
+      get(rr) {
+        return this.$items.get(rr)
       }
-      getOrInsert(RR, JR) {
-        return this.$items.has(RR) ? this.$items.get(RR) : (this.set(RR, JR), JR)
+      getOrInsert(rr, Sr) {
+        return this.$items.has(rr) ? this.$items.get(rr) : (this.set(rr, Sr), Sr)
       }
-      getOrInsertComputed(RR, JR) {
-        if (this.$items.has(RR)) return this.$items.get(RR);
-        const GR = JR(RR);
-        return this.set(RR, GR), GR
+      getOrInsertComputed(rr, Sr) {
+        if (this.$items.has(rr)) return this.$items.get(rr);
+        const Qr = Sr(rr);
+        return this.set(rr, Qr), Qr
       }
-      delete(RR) {
-        if (!this.$items.has(RR)) return !1;
-        const JR = this.journal.indexOf(RR),
-          GR = this.$items.get(RR),
-          yR = this[aR];
-        if (yR.isStreamCollection) {
-          const tR = yR.root;
-          let uR = !1;
-          return void 0 !== tR && (uR = bJ(this, tR, this[qR], JR)), void 0 !== GR?.[aR] && tR?.remove(GR[aR]), this.$items.delete(RR), uR || this.journal.snapshot(JR, GR), !0
+      delete(rr) {
+        if (!this.$items.has(rr)) return !1;
+        const Sr = this.journal.indexOf(rr),
+          Qr = this.$items.get(rr),
+          Zr = this[tr];
+        if (Zr.isStreamCollection) {
+          const Wr = Zr.root;
+          let ar = !1;
+          return void 0 !== Wr && (ar = lS(this, Wr, this[Ir], Sr)), void 0 !== Qr?.[tr] && Wr?.remove(Qr[tr]), this.$items.delete(rr), ar || this.journal.snapshot(Sr, Qr), !0
         }
-        return this.journal.snapshot(JR, GR), yR.delete(JR), this.$items.delete(RR)
+        return this.journal.snapshot(Sr, Qr), Zr.delete(Sr), this.$items.delete(rr)
       }
       clear() {
-        const RR = this[aR];
-        RR.discard(), RR.forEachChild(((JR, GR) => {
-          RR.root?.remove(JR)
-        })), this.journal.reset(), this.$items.clear(), RR.operation(tR.CLEAR)
-      } [WR]() {
-        const RR = this[aR];
-        if (RR.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((RR => RR?.[WR]?.())), this.$items.clear(), this.journal.reset(), RR.recycle(), this[qR] = void 0
+        const rr = this[tr];
+        rr.discard(), rr.forEachChild(((Sr, Qr) => {
+          rr.root?.remove(Sr)
+        })), this.journal.reset(), this.$items.clear(), rr.operation(Wr.CLEAR)
+      } [nr]() {
+        const rr = this[tr];
+        if (rr.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((rr => rr?.[nr]?.())), this.$items.clear(), this.journal.reset(), rr.recycle(), this[Ir] = void 0
       }
-      has(RR) {
-        return this.$items.has(RR)
+      has(rr) {
+        return this.$items.has(rr)
       }
-      forEach(RR) {
-        this.$items.forEach(RR)
+      forEach(rr) {
+        this.$items.forEach(rr)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[aR].pause()
+        this[tr].pause()
       }
       resumeTracking() {
-        this[aR].resume()
+        this[tr].resume()
       }
-      untracked(RR) {
-        return this[aR].untracked(RR)
+      untracked(rr) {
+        return this[tr].untracked(rr)
       }
       get isTrackingPaused() {
-        return this[aR].paused
+        return this[tr].paused
       }
-      setIndex(RR, JR) {
-        this.journal.setIndex(RR, JR)
+      setIndex(rr, Sr) {
+        this.journal.setIndex(rr, Sr)
       }
-      getIndex(RR) {
-        return this.journal.keyOf(RR)
-      } [wR](RR) {
-        const JR = this.journal.keyOf(RR);
-        return void 0 !== JR ? this.$items.get(JR) : void 0
-      } [rR](RR) {
-        const JR = this.journal.keyOf(RR);
-        void 0 !== JR && (this.$items.delete(JR), this.journal.keyByIndex.delete(RR))
-      } [eR](RR, JR, GR) {
-        let yR = null;
-        if (this.$items.forEach(((tR, uR) => {
-            RR.has(uR) ? GR(tR) : ((yR ??= new Set).add(uR), JR(tR, uR))
-          })), null !== yR) {
-          yR.forEach((RR => {
-            this.$items.delete(RR), delete this.journal.indexByKey[RR]
+      getIndex(rr) {
+        return this.journal.keyOf(rr)
+      } [mr](rr) {
+        const Sr = this.journal.keyOf(rr);
+        return void 0 !== Sr ? this.$items.get(Sr) : void 0
+      } [Nr](rr) {
+        const Sr = this.journal.keyOf(rr);
+        void 0 !== Sr && (this.$items.delete(Sr), this.journal.keyByIndex.delete(rr))
+      } [Ur](rr, Sr, Qr) {
+        let Zr = null;
+        if (this.$items.forEach(((Wr, ar) => {
+            rr.has(ar) ? Qr(Wr) : ((Zr ??= new Set).add(ar), Sr(Wr, ar))
+          })), null !== Zr) {
+          Zr.forEach((rr => {
+            this.$items.delete(rr), delete this.journal.indexByKey[rr]
           }));
-          const RR = [];
-          this.journal.keyByIndex.forEach(((JR, GR) => {
-            yR.has(JR) && RR.push(GR)
+          const rr = [];
+          this.journal.keyByIndex.forEach(((Sr, Qr) => {
+            Zr.has(Sr) && rr.push(Qr)
           }));
-          for (let JR = 0; JR < RR.length; JR++) this.journal.keyByIndex.delete(RR[JR])
+          for (let Sr = 0; Sr < rr.length; Sr++) this.journal.keyByIndex.delete(rr[Sr])
         }
-      } [UR]() {
+      } [Yr]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(RR) {
-        NJ(this, RR)
+      _dropView(rr) {
+        qS(this, rr)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (RR => {
-          let [JR, GR] = RR;
-          return [JR, "function" === typeof GR.toJSON ? GR.toJSON() : GR]
+        return Object.fromEntries(Array.from(this, (rr => {
+          let [Sr, Qr] = rr;
+          return [Sr, "function" === typeof Qr.toJSON ? Qr.toJSON() : Qr]
         })))
       }
-      clone(RR) {
-        let JR;
-        return RR ? JR = Object.assign(new ty, this) : (JR = new ty, this.forEach(((RR, GR) => {
-          RR[aR] ? JR.set(GR, RR.clone()) : JR.set(GR, RR)
-        }))), JR
+      clone(rr) {
+        let Sr;
+        return rr ? Sr = Object.assign(new WZ, this) : (Sr = new WZ, this.forEach(((rr, Qr) => {
+          rr[tr] ? Sr.set(Qr, rr.clone()) : Sr.set(Qr, rr)
+        }))), Sr
       }
     }
-    XJ("map", {
-      constructor: ty
+    yS("map", {
+      constructor: WZ
     });
-    class uy {
-      [aR];
-      [qR];
-      [LR];
+    class aZ {
+      [tr];
+      [Ir];
+      [hr];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(RR) {
-        (this._stream ??= lJ()).maxPerTick = RR
+      set maxPerTick(rr) {
+        (this._stream ??= vS()).maxPerTick = rr
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(RR) {
-        (this._stream ??= lJ()).priority = RR
+      set priority(rr) {
+        (this._stream ??= vS()).priority = rr
       }
-      static[fR] = oG;
-      static[VR] = FG;
-      static COLLECTION_KIND = EG;
-      static[KR](RR, JR, GR) {
-        return !GR || "string" === typeof RR[LR] || GR.isChangeTreeVisible((RR[wR](JR) ?? RR.deletedItems[JR])[aR])
+      static[Er] = CQ;
+      static[pr] = DQ;
+      static COLLECTION_KIND = FQ;
+      static[xr](rr, Sr, Qr) {
+        return !Qr || "string" === typeof rr[hr] || Qr.isChangeTreeVisible((rr[mr](Sr) ?? rr.deletedItems[Sr])[tr])
       }
-      static is(RR) {
-        return void 0 !== RR.collection
+      static is(rr) {
+        return void 0 !== rr.collection
       }
-      constructor(RR) {
-        Object.defineProperty(this, aR, {
-          value: new vG(this),
+      constructor(rr) {
+        Object.defineProperty(this, tr, {
+          value: new XQ(this),
           enumerable: !1,
           writable: !0
-        }), this[LR] = void 0, RR && RR.forEach((RR => this.add(RR)))
+        }), this[hr] = void 0, rr && rr.forEach((rr => this.add(rr)))
       }
       static initializeForDecoder() {
-        const RR = Object.create(uy.prototype);
-        return RR.$items = new Map, RR.deletedItems = {}, RR.$refId = 0, RR[LR] = void 0, xG(RR), RR
+        const rr = Object.create(aZ.prototype);
+        return rr.$items = new Map, rr.deletedItems = {}, rr.$refId = 0, rr[hr] = void 0, HQ(rr), rr
       }
-      add(RR) {
-        const JR = this.$refId++,
-          GR = this[aR];
-        return this.$items.set(JR, RR), GR.isStreamCollection ? void 0 !== GR.root && gJ(this, GR.root, JR) : GR.change(JR), void 0 !== RR[aR] && RR[aR].setParent(this, GR.root, JR), JR
+      add(rr) {
+        const Sr = this.$refId++,
+          Qr = this[tr];
+        return this.$items.set(Sr, rr), Qr.isStreamCollection ? void 0 !== Qr.root && LS(this, Qr.root, Sr) : Qr.change(Sr), void 0 !== rr[tr] && rr[tr].setParent(this, Qr.root, Sr), Sr
       }
-      at(RR) {
-        const JR = Array.from(this.$items.keys())[RR];
-        return this.$items.get(JR)
+      at(rr) {
+        const Sr = Array.from(this.$items.keys())[rr];
+        return this.$items.get(Sr)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(RR) {
-        const JR = this.$items.entries();
-        let GR, yR;
+      delete(rr) {
+        const Sr = this.$items.entries();
+        let Qr, Zr;
         for (;
-          (yR = JR.next()) && !yR.done;)
-          if (RR === yR.value[1]) {
-            GR = yR.value[0];
+          (Zr = Sr.next()) && !Zr.done;)
+          if (rr === Zr.value[1]) {
+            Qr = Zr.value[0];
             break
-          } if (void 0 === GR) return !1;
-        const tR = this[aR];
-        if (tR.isStreamCollection) {
-          const RR = tR.root,
-            JR = this.$items.get(GR);
-          return void 0 !== RR && bJ(this, RR, this[qR], GR), void 0 !== JR?.[aR] && RR?.remove(JR[aR]), this.deletedItems[GR] = JR, this.$items.delete(GR)
+          } if (void 0 === Qr) return !1;
+        const Wr = this[tr];
+        if (Wr.isStreamCollection) {
+          const rr = Wr.root,
+            Sr = this.$items.get(Qr);
+          return void 0 !== rr && lS(this, rr, this[Ir], Qr), void 0 !== Sr?.[tr] && rr?.remove(Sr[tr]), this.deletedItems[Qr] = Sr, this.$items.delete(Qr)
         }
-        return this.deletedItems[GR] = tR.delete(GR), this.$items.delete(GR)
+        return this.deletedItems[Qr] = Wr.delete(Qr), this.$items.delete(Qr)
       }
       clear() {
-        const RR = this[aR];
-        RR.discard(), RR.forEachChild(((JR, GR) => {
-          RR.root?.remove(JR)
-        })), this.$items.clear(), RR.operation(tR.CLEAR)
-      } [WR]() {
-        const RR = this[aR];
-        if (RR.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((RR => RR?.[WR]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, RR.recycle(), this[qR] = void 0
+        const rr = this[tr];
+        rr.discard(), rr.forEachChild(((Sr, Qr) => {
+          rr.root?.remove(Sr)
+        })), this.$items.clear(), rr.operation(Wr.CLEAR)
+      } [nr]() {
+        const rr = this[tr];
+        if (rr.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((rr => rr?.[nr]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, rr.recycle(), this[Ir] = void 0
       }
-      has(RR) {
-        return Array.from(this.$items.values()).some((JR => JR === RR))
+      has(rr) {
+        return Array.from(this.$items.values()).some((Sr => Sr === rr))
       }
-      forEach(RR) {
-        this.$items.forEach(((JR, GR, yR) => RR(JR, GR, this)))
+      forEach(rr) {
+        this.$items.forEach(((Sr, Qr, Zr) => rr(Sr, Qr, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[aR].pause()
+        this[tr].pause()
       }
       resumeTracking() {
-        this[aR].resume()
+        this[tr].resume()
       }
-      untracked(RR) {
-        return this[aR].untracked(RR)
+      untracked(rr) {
+        return this[tr].untracked(rr)
       }
       get isTrackingPaused() {
-        return this[aR].paused
+        return this[tr].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(RR, JR) {}
-      getIndex(RR) {
-        return RR
-      } [wR](RR) {
-        return this.$items.get(RR)
-      } [rR](RR) {
-        this.$items.delete(RR)
-      } [eR](RR, JR, GR) {
-        let yR = null;
-        if (this.$items.forEach(((tR, uR) => {
-            RR.has(uR) ? GR(tR) : ((yR ??= []).push(uR), JR(tR, uR))
-          })), null !== yR)
-          for (let tR = 0; tR < yR.length; tR++) this[rR](yR[tR])
-      } [UR]() {
-        for (const RR in this.deletedItems) delete this.deletedItems[RR]
+      setIndex(rr, Sr) {}
+      getIndex(rr) {
+        return rr
+      } [mr](rr) {
+        return this.$items.get(rr)
+      } [Nr](rr) {
+        this.$items.delete(rr)
+      } [Ur](rr, Sr, Qr) {
+        let Zr = null;
+        if (this.$items.forEach(((Wr, ar) => {
+            rr.has(ar) ? Qr(Wr) : ((Zr ??= []).push(ar), Sr(Wr, ar))
+          })), null !== Zr)
+          for (let Wr = 0; Wr < Zr.length; Wr++) this[Nr](Zr[Wr])
+      } [Yr]() {
+        for (const rr in this.deletedItems) delete this.deletedItems[rr]
       }
-      _dropView(RR) {
-        NJ(this, RR)
+      _dropView(rr) {
+        qS(this, rr)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const RR = [];
-        return this.forEach(((JR, GR) => {
-          RR.push("function" === typeof JR.toJSON ? JR.toJSON() : JR)
-        })), RR
+        const rr = [];
+        return this.forEach(((Sr, Qr) => {
+          rr.push("function" === typeof Sr.toJSON ? Sr.toJSON() : Sr)
+        })), rr
       }
-      clone(RR) {
-        let JR;
-        return RR ? JR = Object.assign(new uy, this) : (JR = new uy, this.forEach((RR => {
-          RR[aR] ? JR.add(RR.clone()) : JR.add(RR)
-        }))), JR
+      clone(rr) {
+        let Sr;
+        return rr ? Sr = Object.assign(new aZ, this) : (Sr = new aZ, this.forEach((rr => {
+          rr[tr] ? Sr.add(rr.clone()) : Sr.add(rr)
+        }))), Sr
       }
     }
-    XJ("collection", {
-      constructor: uy
+    yS("collection", {
+      constructor: aZ
     });
-    class Zy {
-      [aR];
-      [qR];
-      [LR];
+    class jZ {
+      [tr];
+      [Ir];
+      [hr];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(RR) {
-        (this._stream ??= lJ()).maxPerTick = RR
+      set maxPerTick(rr) {
+        (this._stream ??= vS()).maxPerTick = rr
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(RR) {
-        (this._stream ??= lJ()).priority = RR
+      set priority(rr) {
+        (this._stream ??= vS()).priority = rr
       }
-      static[fR] = oG;
-      static[VR] = FG;
-      static COLLECTION_KIND = dG;
-      static[KR](RR, JR, GR) {
-        return !GR || "string" === typeof RR[LR] || GR.isVisible((RR[wR](JR) ?? RR.deletedItems[JR])[aR])
+      static[Er] = CQ;
+      static[pr] = DQ;
+      static COLLECTION_KIND = cQ;
+      static[xr](rr, Sr, Qr) {
+        return !Qr || "string" === typeof rr[hr] || Qr.isVisible((rr[mr](Sr) ?? rr.deletedItems[Sr])[tr])
       }
-      static is(RR) {
-        return void 0 !== RR.set
+      static is(rr) {
+        return void 0 !== rr.set
       }
-      constructor(RR) {
-        Object.defineProperty(this, aR, {
-          value: new vG(this),
+      constructor(rr) {
+        Object.defineProperty(this, tr, {
+          value: new XQ(this),
           enumerable: !1,
           writable: !0
-        }), this[LR] = void 0, RR && RR.forEach((RR => this.add(RR)))
+        }), this[hr] = void 0, rr && rr.forEach((rr => this.add(rr)))
       }
       static initializeForDecoder() {
-        const RR = Object.create(Zy.prototype);
-        return RR.$items = new Map, RR.deletedItems = {}, RR.$refId = 0, RR[LR] = void 0, xG(RR), RR
+        const rr = Object.create(jZ.prototype);
+        return rr.$items = new Map, rr.deletedItems = {}, rr.$refId = 0, rr[hr] = void 0, HQ(rr), rr
       }
-      add(RR) {
-        if (this.has(RR)) return !1;
-        const JR = this.$refId++,
-          GR = this[aR];
-        return this.$items.set(JR, RR), GR.isStreamCollection ? void 0 !== GR.root && gJ(this, GR.root, JR) : GR.change(JR, tR.ADD), void 0 !== RR[aR] && RR[aR].setParent(this, GR.root, JR), JR
+      add(rr) {
+        if (this.has(rr)) return !1;
+        const Sr = this.$refId++,
+          Qr = this[tr];
+        return this.$items.set(Sr, rr), Qr.isStreamCollection ? void 0 !== Qr.root && LS(this, Qr.root, Sr) : Qr.change(Sr, Wr.ADD), void 0 !== rr[tr] && rr[tr].setParent(this, Qr.root, Sr), Sr
       }
       entries() {
         return this.$items.entries()
       }
-      delete(RR) {
-        const JR = this.$items.entries();
-        let GR, yR;
+      delete(rr) {
+        const Sr = this.$items.entries();
+        let Qr, Zr;
         for (;
-          (yR = JR.next()) && !yR.done;)
-          if (RR === yR.value[1]) {
-            GR = yR.value[0];
+          (Zr = Sr.next()) && !Zr.done;)
+          if (rr === Zr.value[1]) {
+            Qr = Zr.value[0];
             break
-          } if (void 0 === GR) return !1;
-        const tR = this[aR];
-        if (tR.isStreamCollection) {
-          const RR = tR.root,
-            JR = this.$items.get(GR);
-          return void 0 !== RR && bJ(this, RR, this[qR], GR), void 0 !== JR?.[aR] && RR?.remove(JR[aR]), this.deletedItems[GR] = JR, this.$items.delete(GR)
+          } if (void 0 === Qr) return !1;
+        const Wr = this[tr];
+        if (Wr.isStreamCollection) {
+          const rr = Wr.root,
+            Sr = this.$items.get(Qr);
+          return void 0 !== rr && lS(this, rr, this[Ir], Qr), void 0 !== Sr?.[tr] && rr?.remove(Sr[tr]), this.deletedItems[Qr] = Sr, this.$items.delete(Qr)
         }
-        return this.deletedItems[GR] = tR.delete(GR), this.$items.delete(GR)
+        return this.deletedItems[Qr] = Wr.delete(Qr), this.$items.delete(Qr)
       }
       clear() {
-        const RR = this[aR];
-        RR.discard(), this.$items.clear(), RR.operation(tR.CLEAR)
-      } [WR]() {
-        const RR = this[aR];
-        if (RR.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((RR => RR?.[WR]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, RR.recycle(), this[qR] = void 0
+        const rr = this[tr];
+        rr.discard(), this.$items.clear(), rr.operation(Wr.CLEAR)
+      } [nr]() {
+        const rr = this[tr];
+        if (rr.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((rr => rr?.[nr]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, rr.recycle(), this[Ir] = void 0
       }
-      has(RR) {
-        const JR = this.$items.values();
-        let GR, yR = !1;
+      has(rr) {
+        const Sr = this.$items.values();
+        let Qr, Zr = !1;
         for (;
-          (GR = JR.next()) && !GR.done;)
-          if (RR === GR.value) {
-            yR = !0;
+          (Qr = Sr.next()) && !Qr.done;)
+          if (rr === Qr.value) {
+            Zr = !0;
             break
-          } return yR
+          } return Zr
       }
-      forEach(RR) {
-        this.$items.forEach(((JR, GR, yR) => RR(JR, GR, this)))
+      forEach(rr) {
+        this.$items.forEach(((Sr, Qr, Zr) => rr(Sr, Qr, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[aR].pause()
+        this[tr].pause()
       }
       resumeTracking() {
-        this[aR].resume()
+        this[tr].resume()
       }
-      untracked(RR) {
-        return this[aR].untracked(RR)
+      untracked(rr) {
+        return this[tr].untracked(rr)
       }
       get isTrackingPaused() {
-        return this[aR].paused
+        return this[tr].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(RR, JR) {}
-      getIndex(RR) {
-        return RR
-      } [wR](RR) {
-        return this.$items.get(RR)
-      } [rR](RR) {
-        this.$items.delete(RR)
-      } [eR](RR, JR, GR) {
-        let yR = null;
-        if (this.$items.forEach(((tR, uR) => {
-            RR.has(uR) ? GR(tR) : ((yR ??= []).push(uR), JR(tR, uR))
-          })), null !== yR)
-          for (let tR = 0; tR < yR.length; tR++) this[rR](yR[tR])
-      } [UR]() {
-        for (const RR in this.deletedItems) delete this.deletedItems[RR]
+      setIndex(rr, Sr) {}
+      getIndex(rr) {
+        return rr
+      } [mr](rr) {
+        return this.$items.get(rr)
+      } [Nr](rr) {
+        this.$items.delete(rr)
+      } [Ur](rr, Sr, Qr) {
+        let Zr = null;
+        if (this.$items.forEach(((Wr, ar) => {
+            rr.has(ar) ? Qr(Wr) : ((Zr ??= []).push(ar), Sr(Wr, ar))
+          })), null !== Zr)
+          for (let Wr = 0; Wr < Zr.length; Wr++) this[Nr](Zr[Wr])
+      } [Yr]() {
+        for (const rr in this.deletedItems) delete this.deletedItems[rr]
       }
-      _dropView(RR) {
-        NJ(this, RR)
+      _dropView(rr) {
+        qS(this, rr)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const RR = [];
-        return this.forEach(((JR, GR) => {
-          RR.push("function" === typeof JR.toJSON ? JR.toJSON() : JR)
-        })), RR
+        const rr = [];
+        return this.forEach(((Sr, Qr) => {
+          rr.push("function" === typeof Sr.toJSON ? Sr.toJSON() : Sr)
+        })), rr
       }
-      clone(RR) {
-        let JR;
-        return RR ? JR = Object.assign(new Zy, this) : (JR = new Zy, this.forEach((RR => {
-          RR[aR] ? JR.add(RR.clone()) : JR.add(RR)
-        }))), JR
+      clone(rr) {
+        let Sr;
+        return rr ? Sr = Object.assign(new jZ, this) : (Sr = new jZ, this.forEach((rr => {
+          rr[tr] ? Sr.add(rr.clone()) : Sr.add(rr)
+        }))), Sr
       }
     }
-    XJ("set", {
-      constructor: Zy
+    yS("set", {
+      constructor: jZ
     });
-    class qy {
-      [aR];
-      [qR];
-      [LR];
+    class IZ {
+      [tr];
+      [Ir];
+      [hr];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(RR) {
-        (this._stream ??= lJ()).maxPerTick = RR
+      set maxPerTick(rr) {
+        (this._stream ??= vS()).maxPerTick = rr
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(RR) {
-        (this._stream ??= lJ()).priority = RR
+      set priority(rr) {
+        (this._stream ??= vS()).priority = rr
       }
       static $isStream = !0;
-      static[fR] = oG;
-      static[VR] = FG;
-      static COLLECTION_KIND = YG;
-      static[KR](RR, JR, GR) {
-        if (!GR) return !0;
-        const yR = RR[wR](JR);
-        return void 0 !== yR && GR.isVisible(yR[aR])
+      static[Er] = CQ;
+      static[pr] = DQ;
+      static COLLECTION_KIND = oQ;
+      static[xr](rr, Sr, Qr) {
+        if (!Qr) return !0;
+        const Zr = rr[mr](Sr);
+        return void 0 !== Zr && Qr.isVisible(Zr[tr])
       }
-      static is(RR) {
-        return RR && void 0 !== RR.stream
+      static is(rr) {
+        return rr && void 0 !== rr.stream
       }
       constructor() {
-        Object.defineProperty(this, aR, {
-          value: new vG(this),
+        Object.defineProperty(this, tr, {
+          value: new XQ(this),
           enumerable: !1,
           writable: !0
-        }), this[LR] = void 0
+        }), this[hr] = void 0
       }
       static initializeForDecoder() {
-        const RR = Object.create(qy.prototype);
-        return RR.$items = new Map, RR.$nextPosition = 0, RR._itemIndex = new Map, RR[LR] = void 0, xG(RR), RR
+        const rr = Object.create(IZ.prototype);
+        return rr.$items = new Map, rr.$nextPosition = 0, rr._itemIndex = new Map, rr[hr] = void 0, HQ(rr), rr
       }
-      add(RR) {
-        if (this._itemIndex.has(RR)) return -1;
-        const JR = this.$nextPosition++;
-        this.$items.set(JR, RR), this._itemIndex.set(RR, JR);
-        const GR = this[aR].root;
-        return void 0 !== RR[aR] && RR[aR].setParent(this, GR, JR), void 0 !== GR && gJ(this, GR, JR), JR
+      add(rr) {
+        if (this._itemIndex.has(rr)) return -1;
+        const Sr = this.$nextPosition++;
+        this.$items.set(Sr, rr), this._itemIndex.set(rr, Sr);
+        const Qr = this[tr].root;
+        return void 0 !== rr[tr] && rr[tr].setParent(this, Qr, Sr), void 0 !== Qr && LS(this, Qr, Sr), Sr
       }
-      remove(RR) {
-        const JR = this._itemIndex.get(RR);
-        if (void 0 === JR) return !1;
-        this._itemIndex.delete(RR), this.$items.delete(JR);
-        const GR = this[aR].root;
-        return void 0 !== GR && (bJ(this, GR, this[qR], JR), void 0 !== RR[aR] && GR.remove(RR[aR])), !0
+      remove(rr) {
+        const Sr = this._itemIndex.get(rr);
+        if (void 0 === Sr) return !1;
+        this._itemIndex.delete(rr), this.$items.delete(Sr);
+        const Qr = this[tr].root;
+        return void 0 !== Qr && (lS(this, Qr, this[Ir], Sr), void 0 !== rr[tr] && Qr.remove(rr[tr])), !0
       }
-      has(RR) {
-        return this._itemIndex.has(RR)
+      has(rr) {
+        return this._itemIndex.has(rr)
       }
       clear() {
-        const RR = this[aR].root;
-        if (void 0 !== RR) {
-          ! function(RR, JR, GR) {
-            const yR = RR._stream;
-            if (void 0 !== yR) {
-              yR.broadcastPending.clear();
-              for (const RR of yR.sentBroadcast) yR.broadcastDeletes.add(RR);
-              yR.sentBroadcast.clear(), JR.forEachActiveView((RR => {
-                yR.pendingByView.get(RR.id)?.clear();
-                const JR = yR.sentByView.get(RR.id);
-                if (void 0 !== JR && JR.size > 0) {
-                  let yR = RR.changes.get(GR);
-                  void 0 === yR && (yR = new Map, RR.changes.set(GR, yR));
-                  for (const RR of JR) yR.set(RR, tR.DELETE);
-                  JR.clear()
+        const rr = this[tr].root;
+        if (void 0 !== rr) {
+          ! function(rr, Sr, Qr) {
+            const Zr = rr._stream;
+            if (void 0 !== Zr) {
+              Zr.broadcastPending.clear();
+              for (const rr of Zr.sentBroadcast) Zr.broadcastDeletes.add(rr);
+              Zr.sentBroadcast.clear(), Sr.forEachActiveView((rr => {
+                Zr.pendingByView.get(rr.id)?.clear();
+                const Sr = Zr.sentByView.get(rr.id);
+                if (void 0 !== Sr && Sr.size > 0) {
+                  let Zr = rr.changes.get(Qr);
+                  void 0 === Zr && (Zr = new Map, rr.changes.set(Qr, Zr));
+                  for (const rr of Sr) Zr.set(rr, Wr.DELETE);
+                  Sr.clear()
                 }
               }))
             }
-          }(this, RR, this[qR]);
-          for (const JR of this.$items.values()) void 0 !== JR[aR] && RR.remove(JR[aR])
+          }(this, rr, this[Ir]);
+          for (const Sr of this.$items.values()) void 0 !== Sr[tr] && rr.remove(Sr[tr])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(RR) {
-        for (const [JR, GR] of this.$items) RR(GR, JR, this)
+      forEach(rr) {
+        for (const [Sr, Qr] of this.$items) rr(Qr, Sr, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(RR, JR) {}
-      getIndex(RR) {
-        return RR
-      } [wR](RR) {
-        return this.$items.get(RR)
-      } [rR](RR) {
-        const JR = this.$items.get(RR);
-        void 0 !== JR && (this._itemIndex.delete(JR), this.$items.delete(RR))
-      } [eR]() {} [UR]() {}
+      setIndex(rr, Sr) {}
+      getIndex(rr) {
+        return rr
+      } [mr](rr) {
+        return this.$items.get(rr)
+      } [Nr](rr) {
+        const Sr = this.$items.get(rr);
+        void 0 !== Sr && (this._itemIndex.delete(Sr), this.$items.delete(rr))
+      } [Ur]() {} [Yr]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const RR = [];
-        return this.forEach((JR => {
-          RR.push("function" === typeof JR?.toJSON ? JR.toJSON() : JR)
-        })), RR
+        const rr = [];
+        return this.forEach((Sr => {
+          rr.push("function" === typeof Sr?.toJSON ? Sr.toJSON() : Sr)
+        })), rr
       }
-      clone(RR) {
-        if (RR) {
-          return Object.assign(new qy, this)
+      clone(rr) {
+        if (rr) {
+          return Object.assign(new IZ, this)
         }
-        const JR = new qy;
-        return JR.maxPerTick = this.maxPerTick, this.forEach((RR => {
-          JR.add("function" === typeof RR?.clone ? RR.clone() : RR)
-        })), JR
+        const Sr = new IZ;
+        return Sr.maxPerTick = this.maxPerTick, this.forEach((rr => {
+          Sr.add("function" === typeof rr?.clone ? rr.clone() : rr)
+        })), Sr
       }
-      _dropView(RR) {
-        NJ(this, RR)
+      _dropView(rr) {
+        qS(this, rr)
       }
       _unregister() {}
     }
-    XJ("stream", {
-      constructor: qy
+    yS("stream", {
+      constructor: IZ
     });
-    class iy {
-      [XR] = !0;
+    class fZ {
+      [yr] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(RR) {
-        this._type = RR
+      constructor(rr) {
+        this._type = rr
       }
-      default (RR) {
-        return this._default = RR, this._hasDefault = !0, this
+      default (rr) {
+        return this._default = rr, this._hasDefault = !0, this
       }
-      view(RR) {
-        return this._view = RR ?? -1, this
+      view(rr) {
+        return this._view = rr ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const RR = this._type;
-        if (RR && "object" === typeof RR && void 0 !== RR.array) throw new Error(BJ);
+        const rr = this._type;
+        if (rr && "object" === typeof rr && void 0 !== rr.array) throw new Error(TS);
         return this._stream = !0, this
       }
-      priority(RR) {
-        return this._streamPriority = RR, this
+      priority(rr) {
+        return this._streamPriority = rr, this
       }
       deprecated() {
-        let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = RR, this
+        let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = rr, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function fy(RR) {
-      return null != RR && !0 === RR[XR]
+    function EZ(rr) {
+      return null != rr && !0 === rr[yr]
     }
 
-    function Vy(RR) {
-      return () => new iy(RR)
+    function pZ(rr) {
+      return () => new fZ(rr)
     }
 
-    function Ky(RR) {
-      if (fy(RR)) {
-        const JR = RR._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof JR?`use the type name instead: t.array("${JR}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function xZ(rr) {
+      if (EZ(rr)) {
+        const Sr = rr._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Sr?`use the type name instead: t.array("${Sr}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return RR
+      return rr
     }
 
-    function wy(RR) {
-      return new iy({
-        quantized: HJ(RR)
+    function mZ(rr) {
+      return new fZ({
+        quantized: gS(rr)
       })
     }
-    const ry = Object.freeze({
-        string: Vy("string"),
-        number: Vy("number"),
-        boolean: Vy("boolean"),
-        int8: Vy("int8"),
-        uint8: Vy("uint8"),
-        int16: Vy("int16"),
-        uint16: Vy("uint16"),
-        int32: Vy("int32"),
-        uint32: Vy("uint32"),
-        int64: Vy("int64"),
-        uint64: Vy("uint64"),
-        float32: Vy("float32"),
-        float64: Vy("float64"),
-        bigint64: Vy("bigint64"),
-        biguint64: Vy("biguint64"),
-        ref: RR => new iy(RR),
-        array: RR => new iy({
-          array: Ky(RR)
+    const NZ = Object.freeze({
+        string: pZ("string"),
+        number: pZ("number"),
+        boolean: pZ("boolean"),
+        int8: pZ("int8"),
+        uint8: pZ("uint8"),
+        int16: pZ("int16"),
+        uint16: pZ("uint16"),
+        int32: pZ("int32"),
+        uint32: pZ("uint32"),
+        int64: pZ("int64"),
+        uint64: pZ("uint64"),
+        float32: pZ("float32"),
+        float64: pZ("float64"),
+        bigint64: pZ("bigint64"),
+        biguint64: pZ("biguint64"),
+        ref: rr => new fZ(rr),
+        array: rr => new fZ({
+          array: xZ(rr)
         }),
-        map: RR => new iy({
-          map: Ky(RR)
+        map: rr => new fZ({
+          map: xZ(rr)
         }),
-        set: RR => new iy({
-          set: Ky(RR)
+        set: rr => new fZ({
+          set: xZ(rr)
         }),
-        collection: RR => new iy({
-          collection: Ky(RR)
+        collection: rr => new fZ({
+          collection: xZ(rr)
         }),
-        stream: RR => {
-          const JR = new iy({
-            stream: Ky(RR)
+        stream: rr => {
+          const Sr = new fZ({
+            stream: xZ(rr)
           });
-          return JR._stream = !0, JR
+          return Sr._stream = !0, Sr
         },
-        quantized: wy,
-        angle: RR => wy({
+        quantized: mZ,
+        angle: rr => mZ({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: RR?.bits ?? 16
+          bits: rr?.bits ?? 16
         })
       }),
-      ey = -1;
+      UZ = -1;
 
-    function ay(RR) {
-      return mJ.register(RR), RR
+    function tZ(rr) {
+      return AS.register(rr), rr
     }
 
-    function Ly() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ey;
-      return function(JR, GR) {
-        const yR = kJ.initialize(JR.constructor);
-        kJ.setTag(yR, GR, RR)
+    function hZ() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : UZ;
+      return function(Sr, Qr) {
+        const Zr = bS.initialize(Sr.constructor);
+        bS.setTag(Zr, Qr, rr)
       }
     }
 
-    function ny(RR, JR) {
-      const GR = kJ.initialize(RR.constructor);
-      kJ.setUnreliable(GR, JR)
+    function zZ(rr, Sr) {
+      const Qr = bS.initialize(rr.constructor);
+      bS.setUnreliable(Qr, Sr)
     }
 
-    function Uy(RR, JR) {
-      const GR = kJ.initialize(RR.constructor);
-      kJ.setPatchOnly(GR, JR)
+    function YZ(rr, Sr) {
+      const Qr = bS.initialize(rr.constructor);
+      bS.setPatchOnly(Qr, Sr)
     }
 
-    function Wy(RR, JR) {
-      const GR = kJ.initialize(RR.constructor);
-      kJ.setFullStateOnly(GR, JR)
+    function nZ(rr, Sr) {
+      const Qr = bS.initialize(rr.constructor);
+      bS.setFullStateOnly(Qr, Sr)
     }
 
-    function Ay(RR, JR) {
-      return function(GR, yR) {
-        const tR = GR.constructor;
-        if (!RR) throw new Error(`${tR.name}: @type() reference provided for "${yR}" is undefined. Make sure you don't have any circular dependencies.`);
-        RR = SJ(RR, `${tR.name}.${yR}`), mJ.register(tR);
-        const uR = Object.getPrototypeOf(tR)[Symbol.metadata],
-          ZR = kJ.initialize(tR);
-        let qR = ZR[yR];
-        if (void 0 !== ZR[qR]) {
-          if (ZR[qR].deprecated) return;
-          if (void 0 !== ZR[qR].type) {
-            const RR = new Error(`@colyseus/schema: Duplicate '${yR}' definition on '${tR.name}'.\nCheck @type() annotation`);
-            throw new Error(`${RR.message} ${RR.stack.split("\n")[4].trim()}`)
+    function eZ(rr, Sr) {
+      return function(Qr, Zr) {
+        const Wr = Qr.constructor;
+        if (!rr) throw new Error(`${Wr.name}: @type() reference provided for "${Zr}" is undefined. Make sure you don't have any circular dependencies.`);
+        rr = iS(rr, `${Wr.name}.${Zr}`), AS.register(Wr);
+        const ar = Object.getPrototypeOf(Wr)[Symbol.metadata],
+          jr = bS.initialize(Wr);
+        let Ir = jr[Zr];
+        if (void 0 !== jr[Ir]) {
+          if (jr[Ir].deprecated) return;
+          if (void 0 !== jr[Ir].type) {
+            const rr = new Error(`@colyseus/schema: Duplicate '${Zr}' definition on '${Wr.name}'.\nCheck @type() annotation`);
+            throw new Error(`${rr.message} ${rr.stack.split("\n")[4].trim()}`)
           }
-        } else qR = ZR[pR] ?? (uR && uR[pR]) ?? -1, qR++;
-        if (JR && JR.manual) kJ.addField(ZR, qR, yR, RR, {
+        } else Ir = jr[Or] ?? (ar && ar[Or]) ?? -1, Ir++;
+        if (Sr && Sr.manual) bS.addField(jr, Ir, Zr, rr, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: JR,
-            childType: GR
-          } = zJ(RR);
-          kJ.addField(ZR, qR, yR, RR, Xy(yR, qR, GR, JR))
+            complexTypeKlass: Sr,
+            childType: Qr
+          } = VS(rr);
+          bS.addField(jr, Ir, Zr, rr, yZ(Zr, Ir, Qr, Sr))
         }
-        ZR[MR][yR] && Object.defineProperty(GR, yR, ZR[MR][yR]), ("string" === typeof RR || oJ(RR)) && (ZR[lR] || Object.defineProperty(ZR, lR, {
+        jr[Br][Zr] && Object.defineProperty(Qr, Zr, jr[Br][Zr]), ("string" === typeof rr || CS(rr)) && (jr[vr] || Object.defineProperty(jr, vr, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), ZR[lR][qR] = "string" === typeof RR ? JJ[RR] : IJ(RR.quantized))
+        }), jr[vr][Ir] = "string" === typeof rr ? SS[rr] : kS(rr.quantized))
       }
     }
-    const Cy = {
+    const KZ = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function Xy(RR, JR, GR, yR) {
-      let uR;
-      return uR = yR ? function(RR, JR, GR, yR) {
-        const uR = yR.constructor === Gy,
-          ZR = yR.constructor === ty;
-        return function(RR) {
-          const yR = this[CR],
-            qR = yR[JR];
-          if (RR !== qR) {
-            if (void 0 !== RR && null !== RR) {
-              if (!uR || RR instanceof Gy)
-                if (!ZR || RR instanceof ty) RR[LR] = GR;
+    function yZ(rr, Sr, Qr, Zr) {
+      let ar;
+      return ar = Zr ? function(rr, Sr, Qr, Zr) {
+        const ar = Zr.constructor === QZ,
+          jr = Zr.constructor === WZ;
+        return function(rr) {
+          const Zr = this[Kr],
+            Ir = Zr[Sr];
+          if (rr !== Ir) {
+            if (void 0 !== rr && null !== rr) {
+              if (!ar || rr instanceof QZ)
+                if (!jr || rr instanceof WZ) rr[hr] = Qr;
                 else {
-                  const JR = new ty;
-                  if (JR[LR] = GR, RR instanceof Map) RR.forEach(((RR, GR) => JR.set(GR, RR)));
+                  const Sr = new WZ;
+                  if (Sr[hr] = Qr, rr instanceof Map) rr.forEach(((rr, Qr) => Sr.set(Qr, rr)));
                   else
-                    for (const GR in RR) JR.set(GR, RR[GR]);
-                  RR = JR
+                    for (const Qr in rr) Sr.set(Qr, rr[Qr]);
+                  rr = Sr
                 }
               else {
-                const JR = new Gy;
-                JR[LR] = GR, JR.push(...RR), RR = JR
+                const Sr = new QZ;
+                Sr[hr] = Qr, Sr.push(...rr), rr = Sr
               }
-              const yR = this[aR],
-                fR = this.constructor;
-              void 0 !== qR && null !== qR && qR[aR] ? (yR.root?.remove(qR[aR]), fR[iR](yR, JR, tR.DELETE_AND_ADD)) : fR[iR](yR, JR, tR.ADD), RR[aR]?.setParent(this, yR.root, JR)
-            } else void 0 !== qR && null !== qR && this[aR].delete(JR);
-            yR[JR] = RR
+              const Zr = this[tr],
+                Er = this.constructor;
+              void 0 !== Ir && null !== Ir && Ir[tr] ? (Zr.root?.remove(Ir[tr]), Er[fr](Zr, Sr, Wr.DELETE_AND_ADD)) : Er[fr](Zr, Sr, Wr.ADD), rr[tr]?.setParent(this, Zr.root, Sr)
+            } else void 0 !== Ir && null !== Ir && this[tr].delete(Sr);
+            Zr[Sr] = rr
           }
         }
-      }(0, JR, GR, yR) : "string" === typeof GR ? function(RR, JR, GR) {
-        const yR = Cy[GR],
-          uR = "string" === GR,
-          ZR = "boolean" === GR;
-        return function(GR) {
-          const qR = this[CR],
-            fR = qR[JR];
-          if (GR !== fR) {
-            if (void 0 !== GR && null !== GR) {
-              if (!ZR && void 0 !== yR && typeof GR !== yR && (!uR || null !== GR)) {
-                const JR = GR && GR.constructor ? ` (${GR.constructor.name})` : "";
-                throw new sG(`a '${yR}' was expected, but '${JSON.stringify(GR)}'${JR} was provided in ${this.constructor.name}#${RR}`)
+      }(0, Sr, Qr, Zr) : "string" === typeof Qr ? function(rr, Sr, Qr) {
+        const Zr = KZ[Qr],
+          ar = "string" === Qr,
+          jr = "boolean" === Qr;
+        return function(Qr) {
+          const Ir = this[Kr],
+            Er = Ir[Sr];
+          if (Qr !== Er) {
+            if (void 0 !== Qr && null !== Qr) {
+              if (!jr && void 0 !== Zr && typeof Qr !== Zr && (!ar || null !== Qr)) {
+                const Sr = Qr && Qr.constructor ? ` (${Qr.constructor.name})` : "";
+                throw new sQ(`a '${Zr}' was expected, but '${JSON.stringify(Qr)}'${Sr} was provided in ${this.constructor.name}#${rr}`)
               }
-              this.constructor[iR](this[aR], JR, tR.ADD)
-            } else void 0 !== fR && null !== fR && this[aR].delete(JR);
-            qR[JR] = GR
+              this.constructor[fr](this[tr], Sr, Wr.ADD)
+            } else void 0 !== Er && null !== Er && this[tr].delete(Sr);
+            Ir[Sr] = Qr
           }
         }
-      }(RR, JR, GR) : oJ(GR) ? function(RR, JR, GR) {
-        return function(yR) {
-          const uR = this[CR],
-            ZR = uR[JR];
-          if (void 0 !== yR && null !== yR) {
-            if ("number" !== typeof yR) throw new sG(`a 'number' was expected, but '${JSON.stringify(yR)}' was provided in ${this.constructor.name}#${RR}`);
-            if ((yR = PJ(GR, cJ(GR, yR))) === ZR) return;
-            this.constructor[iR](this[aR], JR, tR.ADD)
+      }(rr, Sr, Qr) : CS(Qr) ? function(rr, Sr, Qr) {
+        return function(Zr) {
+          const ar = this[Kr],
+            jr = ar[Sr];
+          if (void 0 !== Zr && null !== Zr) {
+            if ("number" !== typeof Zr) throw new sQ(`a 'number' was expected, but '${JSON.stringify(Zr)}' was provided in ${this.constructor.name}#${rr}`);
+            if ((Zr = GS(Qr, MS(Qr, Zr))) === jr) return;
+            this.constructor[fr](this[tr], Sr, Wr.ADD)
           } else {
-            if (yR === ZR) return;
-            void 0 !== ZR && null !== ZR && this[aR].delete(JR)
+            if (Zr === jr) return;
+            void 0 !== jr && null !== jr && this[tr].delete(Sr)
           }
-          uR[JR] = yR
+          ar[Sr] = Zr
         }
-      }(RR, JR, GR.quantized) : function(RR, JR, GR) {
-        return function(yR) {
-          const uR = this[CR],
-            ZR = uR[JR];
-          if (yR !== ZR) {
-            if (void 0 !== yR && null !== yR) {
-              hG(yR, GR, this, RR);
-              const uR = this[aR],
-                qR = this.constructor;
-              void 0 !== ZR && null !== ZR && ZR[aR] ? (uR.root?.remove(ZR[aR]), qR[iR](uR, JR, tR.DELETE_AND_ADD)) : qR[iR](uR, JR, tR.ADD), yR[aR]?.setParent(this, uR.root, JR)
-            } else void 0 !== ZR && null !== ZR && this[aR].delete(JR);
-            uR[JR] = yR
+      }(rr, Sr, Qr.quantized) : function(rr, Sr, Qr) {
+        return function(Zr) {
+          const ar = this[Kr],
+            jr = ar[Sr];
+          if (Zr !== jr) {
+            if (void 0 !== Zr && null !== Zr) {
+              uQ(Zr, Qr, this, rr);
+              const ar = this[tr],
+                Ir = this.constructor;
+              void 0 !== jr && null !== jr && jr[tr] ? (ar.root?.remove(jr[tr]), Ir[fr](ar, Sr, Wr.DELETE_AND_ADD)) : Ir[fr](ar, Sr, Wr.ADD), Zr[tr]?.setParent(this, ar.root, Sr)
+            } else void 0 !== jr && null !== jr && this[tr].delete(Sr);
+            ar[Sr] = Zr
           }
         }
-      }(RR, JR, GR), {
+      }(rr, Sr, Qr), {
         get: function() {
-          return this[CR][JR]
+          return this[Kr][Sr]
         },
-        set: uR,
+        set: ar,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function My() {
-      let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(JR, GR) {
-        const yR = kJ.initialize(JR.constructor);
-        kJ.setDeprecated(yR, GR), RR && (yR[MR] ??= {}, yR[MR][GR] = {
+    function BZ() {
+      let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Sr, Qr) {
+        const Zr = bS.initialize(Sr.constructor);
+        bS.setDeprecated(Zr, Qr), rr && (Zr[Br] ??= {}, Zr[Br][Qr] = {
           get: function() {
-            throw new Error(`${GR} is deprecated.`)
+            throw new Error(`${Qr} is deprecated.`)
           },
-          set: function(RR) {},
+          set: function(rr) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(JR, GR, yR[MR][GR]))
+        }, Object.defineProperty(Sr, Qr, Zr[Br][Qr]))
       }
     }
-    let By = !1;
+    let TZ = !1;
 
-    function ly(RR, JR, GR) {
-      By || (By = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let yR in JR) Ay(JR[yR], GR)(RR.prototype, yR);
-      return RR
+    function vZ(rr, Sr, Qr) {
+      TZ || (TZ = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let Zr in Sr) eZ(Sr[Zr], Qr)(rr.prototype, Zr);
+      return rr
     }
 
-    function py(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : by;
-      if (null == RR || "object" !== typeof RR) throw new Error(`schema(): first argument must be a fields object (got ${typeof RR}).`);
-      const yR = {},
-        tR = {},
-        uR = {},
-        ZR = {},
-        qR = (RR, JR) => {
-          if (JR.hasDefault)((RR, JR) => {
-            "function" === typeof JR ? ZR[RR] = JR : JR && "function" === typeof JR.clone ? ZR[RR] = () => JR.clone() : uR[RR] = JR
-          })(RR, JR.default);
-          else if (!JR.optional) {
-            const GR = function(RR) {
-              if (RR && "object" === typeof RR) {
-                if (void 0 !== RR.array) return () => new Gy;
-                if (void 0 !== RR.map) return () => new ty;
-                if (void 0 !== RR.set) return () => new Zy;
-                if (void 0 !== RR.collection) return () => new uy;
-                if (void 0 !== RR.stream) return () => new qy
-              } else if ("function" === typeof RR && by.is(RR) && (!RR.prototype.initialize || 0 === RR.prototype.initialize.length)) return () => new RR
-            }(JR.type);
-            GR && (ZR[RR] = GR)
+    function OZ(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : lZ;
+      if (null == rr || "object" !== typeof rr) throw new Error(`schema(): first argument must be a fields object (got ${typeof rr}).`);
+      const Zr = {},
+        Wr = {},
+        ar = {},
+        jr = {},
+        Ir = (rr, Sr) => {
+          if (Sr.hasDefault)((rr, Sr) => {
+            "function" === typeof Sr ? jr[rr] = Sr : Sr && "function" === typeof Sr.clone ? jr[rr] = () => Sr.clone() : ar[rr] = Sr
+          })(rr, Sr.default);
+          else if (!Sr.optional) {
+            const Qr = function(rr) {
+              if (rr && "object" === typeof rr) {
+                if (void 0 !== rr.array) return () => new QZ;
+                if (void 0 !== rr.map) return () => new WZ;
+                if (void 0 !== rr.set) return () => new jZ;
+                if (void 0 !== rr.collection) return () => new aZ;
+                if (void 0 !== rr.stream) return () => new IZ
+              } else if ("function" === typeof rr && lZ.is(rr) && (!rr.prototype.initialize || 0 === rr.prototype.initialize.length)) return () => new rr
+            }(Sr.type);
+            Qr && (jr[rr] = Qr)
           }
         },
-        iR = {},
-        fR = [],
-        VR = [],
-        KR = {},
-        wR = [],
-        rR = [],
-        eR = {},
-        aR = [];
-      for (const CR in RR) {
-        const GR = RR[CR],
-          uR = `schema(${JR?`'${JR}'`:""}): field '${CR}'`;
-        if (fy(GR)) {
-          const RR = GR.toDefinition();
-          if (RR.noSync) {
-            if (void 0 !== RR.view || RR.unreliable || RR.patchOnly || RR.fullStateOnly || RR.stream) throw new Error(`${uR} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            qR(CR, RR);
+        fr = {},
+        Er = [],
+        pr = [],
+        xr = {},
+        mr = [],
+        Nr = [],
+        Ur = {},
+        tr = [];
+      for (const Kr in rr) {
+        const Qr = rr[Kr],
+          ar = `schema(${Sr?`'${Sr}'`:""}): field '${Kr}'`;
+        if (EZ(Qr)) {
+          const rr = Qr.toDefinition();
+          if (rr.noSync) {
+            if (void 0 !== rr.view || rr.unreliable || rr.patchOnly || rr.fullStateOnly || rr.stream) throw new Error(`${ar} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            Ir(Kr, rr);
             continue
           }
-          if (RR.patchOnly && RR.fullStateOnly) throw new Error(`${uR} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const JR = SJ(RR.type, uR);
-          if ("function" === typeof JR && !by.is(JR)) throw new Error(`${uR} is a synced ref to non-Schema class '${JR.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          yR[CR] = JR, void 0 !== RR.view && (iR[CR] = RR.view), RR.unreliable && fR.push(CR), RR.patchOnly && VR.push(CR), RR.deprecated && (KR[CR] = RR.deprecatedThrows), RR.fullStateOnly && wR.push(CR), RR.stream && rR.push(CR), void 0 !== RR.streamPriority && (eR[CR] = RR.streamPriority), RR.optional && aR.push(CR), qR(CR, RR)
+          if (rr.patchOnly && rr.fullStateOnly) throw new Error(`${ar} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Sr = iS(rr.type, ar);
+          if ("function" === typeof Sr && !lZ.is(Sr)) throw new Error(`${ar} is a synced ref to non-Schema class '${Sr.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          Zr[Kr] = Sr, void 0 !== rr.view && (fr[Kr] = rr.view), rr.unreliable && Er.push(Kr), rr.patchOnly && pr.push(Kr), rr.deprecated && (xr[Kr] = rr.deprecatedThrows), rr.fullStateOnly && mr.push(Kr), rr.stream && Nr.push(Kr), void 0 !== rr.streamPriority && (Ur[Kr] = rr.streamPriority), rr.optional && tr.push(Kr), Ir(Kr, rr)
         } else {
-          if ("function" !== typeof GR) throw new Error(`${uR} must be a t.* builder, Schema subclass, or method (got ${typeof GR}).`);
-          by.is(GR) ? (yR[CR] = GR, GR.prototype.initialize && 0 !== GR.prototype.initialize.length || (ZR[CR] = () => new GR)) : tR[CR] = GR
+          if ("function" !== typeof Qr) throw new Error(`${ar} must be a t.* builder, Schema subclass, or method (got ${typeof Qr}).`);
+          lZ.is(Qr) ? (Zr[Kr] = Qr, Qr.prototype.initialize && 0 !== Qr.prototype.initialize.length || (jr[Kr] = () => new Qr)) : Wr[Kr] = Qr
         }
       }
-      const LR = RR => {
-          for (const JR in uR) RR[JR] = uR[JR];
-          for (const JR in ZR) RR[JR] = ZR[JR]()
+      const hr = rr => {
+          for (const Sr in ar) rr[Sr] = ar[Sr];
+          for (const Sr in jr) rr[Sr] = jr[Sr]()
         },
-        nR = () => {
-          const RR = {};
-          return LR(RR), RR
+        zr = () => {
+          const rr = {};
+          return hr(rr), rr
         },
-        UR = "function" === typeof tR.initialize,
-        WR = tR.initialize ?? GR._initialize,
-        AR = class extends GR {
+        Yr = "function" === typeof Wr.initialize,
+        nr = Wr.initialize ?? Qr._initialize,
+        er = class extends Qr {
           constructor() {
-            for (var RR = arguments.length, JR = new Array(RR), GR = 0; GR < RR; GR++) JR[GR] = arguments[GR];
-            const tR = JR[0];
-            void 0 === tR ? (super(), LR(this)) : super(Object.assign(nR(), UR ? (RR => {
-              const JR = Object.keys(yR),
-                GR = {};
-              for (const yR in RR) JR.includes(yR) || (GR[yR] = RR[yR]);
-              return GR
-            })(tR) : tR)), WR && new.target === AR && WR.apply(this, JR)
+            for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
+            const Wr = Sr[0];
+            void 0 === Wr ? (super(), hr(this)) : super(Object.assign(zr(), Yr ? (rr => {
+              const Sr = Object.keys(Zr),
+                Qr = {};
+              for (const Zr in rr) Sr.includes(Zr) || (Qr[Zr] = rr[Zr]);
+              return Qr
+            })(Wr) : Wr)), nr && new.target === er && nr.apply(this, Sr)
           }
         };
-      JR && Object.defineProperty(AR, "name", {
-        value: JR
-      }), kJ.setFields(AR, yR), AR._getDefaultValues = nR, AR._initialize = WR, Object.assign(AR.prototype, tR);
-      for (const CR in iR) Ly(iR[CR])(AR.prototype, CR);
-      for (const CR of fR) ny(AR.prototype, CR);
-      for (const CR of VR) Uy(AR.prototype, CR);
-      for (const CR in KR) My(KR[CR])(AR.prototype, CR);
-      if (wR.length > 0 || rR.length > 0) {
-        const RR = AR[Symbol.metadata];
-        for (const JR of wR) kJ.setFullStateOnly(RR, JR);
-        for (const JR of rR) kJ.setStream(RR, JR);
-        for (const JR in eR) kJ.setStreamPriority(RR, JR, eR[JR])
+      Sr && Object.defineProperty(er, "name", {
+        value: Sr
+      }), bS.setFields(er, Zr), er._getDefaultValues = zr, er._initialize = nr, Object.assign(er.prototype, Wr);
+      for (const Kr in fr) hZ(fr[Kr])(er.prototype, Kr);
+      for (const Kr of Er) zZ(er.prototype, Kr);
+      for (const Kr of pr) YZ(er.prototype, Kr);
+      for (const Kr in xr) BZ(xr[Kr])(er.prototype, Kr);
+      if (mr.length > 0 || Nr.length > 0) {
+        const rr = er[Symbol.metadata];
+        for (const Sr of mr) bS.setFullStateOnly(rr, Sr);
+        for (const Sr of Nr) bS.setStream(rr, Sr);
+        for (const Sr in Ur) bS.setStreamPriority(rr, Sr, Ur[Sr])
       }
-      if (aR.length > 0) {
-        const RR = AR[Symbol.metadata];
-        for (const JR of aR) RR[RR[JR]].optional = !0
+      if (tr.length > 0) {
+        const rr = er[Symbol.metadata];
+        for (const Sr of tr) rr[rr[Sr]].optional = !0
       }
-      return AR.extend = (RR, JR) => py(RR, JR, AR), AR
+      return er.extend = (rr, Sr) => OZ(rr, Sr, er), er
     }
 
-    function gy(RR) {
-      const JR = RR[aR].root,
-        GR = {
+    function LZ(rr) {
+      const Sr = rr[tr].root,
+        Qr = {
           ops: {},
           refs: []
         };
-      let yR = JR.changes.next;
-      for (; yR;) {
-        const RR = yR.changeTree;
-        void 0 !== RR ? (GR.refs.push(`refId#${RR.ref[qR]}`), RR.forEach(((RR, JR) => {
-          if (RR < 0 || !JR) return;
-          const yR = tR[JR];
-          GR.ops[yR] || (GR.ops[yR] = 0), GR.ops[yR]++
-        })), yR = yR.next) : yR = yR.next
+      let Zr = Sr.changes.next;
+      for (; Zr;) {
+        const rr = Zr.changeTree;
+        void 0 !== rr ? (Qr.refs.push(`refId#${rr.ref[Ir]}`), rr.forEach(((rr, Sr) => {
+          if (rr < 0 || !Sr) return;
+          const Zr = Wr[Sr];
+          Qr.ops[Zr] || (Qr.ops[Zr] = 0), Qr.ops[Zr]++
+        })), Zr = Zr.next) : Zr = Zr.next
       }
-      return GR
+      return Qr
     }
-    class by {
-      static[fR] = DG;
-      static[VR] = QG;
-      [qR];
-      [CR];
-      static initialize(RR) {
-        Object.defineProperty(RR, aR, {
-          value: new vG(RR),
+    class lZ {
+      static[Er] = RQ;
+      static[pr] = JQ;
+      [Ir];
+      [Kr];
+      static initialize(rr) {
+        Object.defineProperty(rr, tr, {
+          value: new XQ(rr),
           enumerable: !1,
           writable: !0
-        }), RR[CR] = []
+        }), rr[Kr] = []
       }
       static initializeForDecoder() {
-        const RR = Object.create(this.prototype);
-        return xG(RR), RR[CR] = [], RR
+        const rr = Object.create(this.prototype);
+        return HQ(rr), rr[Kr] = [], rr
       }
-      static reset(RR) {
-        const JR = RR?.[aR];
-        if (void 0 === JR || "function" !== typeof JR.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== JR.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${RR.constructor.name}) with multiple parents.`);
-        RR[WR]()
-      } [WR]() {
-        const RR = this.constructor[Symbol.metadata],
-          JR = RR?.[gR] ?? [],
-          GR = this[CR];
-        for (let yR = 0; yR < JR.length; yR++) {
-          const RR = GR[JR[yR]];
-          RR?.[WR]?.()
+      static reset(rr) {
+        const Sr = rr?.[tr];
+        if (void 0 === Sr || "function" !== typeof Sr.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Sr.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${rr.constructor.name}) with multiple parents.`);
+        rr[nr]()
+      } [nr]() {
+        const rr = this.constructor[Symbol.metadata],
+          Sr = rr?.[Lr] ?? [],
+          Qr = this[Kr];
+        for (let Zr = 0; Zr < Sr.length; Zr++) {
+          const rr = Qr[Sr[Zr]];
+          rr?.[nr]?.()
         }
-        this[aR].recycle(), this[qR] = void 0
+        this[tr].recycle(), this[Ir] = void 0
       }
-      static is(RR) {
-        const JR = RR[Symbol.metadata];
-        return "object" === typeof JR && null !== JR
+      static is(rr) {
+        const Sr = rr[Symbol.metadata];
+        return "object" === typeof Sr && null !== Sr
       }
-      static isSchema(RR) {
-        return "function" === typeof RR?.assign
+      static isSchema(rr) {
+        return "function" === typeof rr?.assign
       }
-      static[iR](RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tR.ADD;
-        RR.change(JR, GR)
+      static[fr](rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wr.ADD;
+        rr.change(Sr, Qr)
       }
-      static[KR](RR, JR, GR) {
-        const yR = RR.constructor[Symbol.metadata],
-          tR = yR[JR]?.tag;
-        return void 0 === GR ? void 0 === tR : void 0 === tR || (tR === ey ? GR.isChangeTreeVisible(RR[aR]) : GR.hasTagOnTree(RR[aR], tR))
+      static[xr](rr, Sr, Qr) {
+        const Zr = rr.constructor[Symbol.metadata],
+          Wr = Zr[Sr]?.tag;
+        return void 0 === Qr ? void 0 === Wr : void 0 === Wr || (Wr === UZ ? Qr.isChangeTreeVisible(rr[tr]) : Qr.hasTagOnTree(rr[tr], Wr))
       }
-      constructor(RR) {
-        by.initialize(this), RR && by.assignProps(this, RR)
+      constructor(rr) {
+        lZ.initialize(this), rr && lZ.assignProps(this, rr)
       }
-      assign(RR) {
-        return by.assignProps(this, RR), this
+      assign(rr) {
+        return lZ.assignProps(this, rr), this
       }
-      static assignProps(RR, JR) {
-        const GR = RR.constructor[Symbol.metadata];
-        if (GR && void 0 !== GR[pR])
-          for (let tR = 0; tR <= GR[pR]; tR++) {
-            const yR = GR[tR];
-            if (!yR) continue;
-            const uR = JR[yR.name];
-            void 0 !== uR && (RR[yR.name] = uR)
+      static assignProps(rr, Sr) {
+        const Qr = rr.constructor[Symbol.metadata];
+        if (Qr && void 0 !== Qr[Or])
+          for (let Wr = 0; Wr <= Qr[Or]; Wr++) {
+            const Zr = Qr[Wr];
+            if (!Zr) continue;
+            const ar = Sr[Zr.name];
+            void 0 !== ar && (rr[Zr.name] = ar)
           }
-        const yR = Object.keys(JR);
-        for (let tR = 0; tR < yR.length; tR++) {
-          const uR = yR[tR];
-          GR && void 0 !== GR[uR] || (RR[uR] = JR[uR])
+        const Zr = Object.keys(Sr);
+        for (let Wr = 0; Wr < Zr.length; Wr++) {
+          const ar = Zr[Wr];
+          Qr && void 0 !== Qr[ar] || (rr[ar] = Sr[ar])
         }
       }
-      restore(RR) {
-        const JR = this.constructor[Symbol.metadata];
-        for (const GR in JR) {
-          const yR = JR[GR],
-            tR = yR.name,
-            uR = yR.type,
-            ZR = RR[tR];
-          if (void 0 !== ZR && null !== ZR)
-            if ("string" === typeof uR) this[tR] = ZR;
-            else if (by.is(uR)) {
-            const RR = new uR;
-            RR.restore(ZR), this[tR] = RR
-          } else if ("object" === typeof uR) {
-            const RR = Object.keys(uR)[0],
-              JR = uR[RR];
-            if ("map" === RR) {
-              const RR = this[tR];
-              for (const GR in ZR)
-                if (by.is(JR)) {
-                  const yR = new JR;
-                  yR.restore(ZR[GR]), RR.set(GR, yR)
-                } else RR.set(GR, ZR[GR])
-            } else if ("array" === RR) {
-              const RR = this[tR];
-              for (let GR = 0; GR < ZR.length; GR++)
-                if (by.is(JR)) {
-                  const yR = new JR;
-                  yR.restore(ZR[GR]), RR.push(yR)
-                } else RR.push(ZR[GR])
+      restore(rr) {
+        const Sr = this.constructor[Symbol.metadata];
+        for (const Qr in Sr) {
+          const Zr = Sr[Qr],
+            Wr = Zr.name,
+            ar = Zr.type,
+            jr = rr[Wr];
+          if (void 0 !== jr && null !== jr)
+            if ("string" === typeof ar) this[Wr] = jr;
+            else if (lZ.is(ar)) {
+            const rr = new ar;
+            rr.restore(jr), this[Wr] = rr
+          } else if ("object" === typeof ar) {
+            const rr = Object.keys(ar)[0],
+              Sr = ar[rr];
+            if ("map" === rr) {
+              const rr = this[Wr];
+              for (const Qr in jr)
+                if (lZ.is(Sr)) {
+                  const Zr = new Sr;
+                  Zr.restore(jr[Qr]), rr.set(Qr, Zr)
+                } else rr.set(Qr, jr[Qr])
+            } else if ("array" === rr) {
+              const rr = this[Wr];
+              for (let Qr = 0; Qr < jr.length; Qr++)
+                if (lZ.is(Sr)) {
+                  const Zr = new Sr;
+                  Zr.restore(jr[Qr]), rr.push(Zr)
+                } else rr.push(jr[Qr])
             }
           }
         }
         return this
       }
-      setDirty(RR, JR) {
-        const GR = this.constructor[Symbol.metadata];
-        this[aR].change(GR[GR[RR]].index, JR)
+      setDirty(rr, Sr) {
+        const Qr = this.constructor[Symbol.metadata];
+        this[tr].change(Qr[Qr[rr]].index, Sr)
       }
       pauseTracking() {
-        this[aR].pause()
+        this[tr].pause()
       }
       resumeTracking() {
-        this[aR].resume()
+        this[tr].resume()
       }
-      untracked(RR) {
-        return this[aR].untracked(RR)
+      untracked(rr) {
+        return this[tr].untracked(rr)
       }
       get isTrackingPaused() {
-        return this[aR].paused
+        return this[tr].paused
       }
       clone() {
-        const RR = Object.create(this.constructor.prototype);
-        by.initialize(RR);
-        const JR = this.constructor[Symbol.metadata];
-        for (const GR in JR) {
-          const yR = JR[GR].name;
-          "object" === typeof this[yR] && "function" === typeof this[yR]?.clone ? RR[yR] = this[yR].clone() : RR[yR] = this[yR]
+        const rr = Object.create(this.constructor.prototype);
+        lZ.initialize(rr);
+        const Sr = this.constructor[Symbol.metadata];
+        for (const Qr in Sr) {
+          const Zr = Sr[Qr].name;
+          "object" === typeof this[Zr] && "function" === typeof this[Zr]?.clone ? rr[Zr] = this[Zr].clone() : rr[Zr] = this[Zr]
         }
-        return RR
+        return rr
       }
       toJSON() {
-        const RR = {},
-          JR = this.constructor[Symbol.metadata];
-        for (const GR in JR) {
-          const yR = JR[GR],
-            tR = yR.name;
-          yR.deprecated || null === this[tR] || "undefined" === typeof this[tR] || (RR[tR] = "function" === typeof this[tR].toJSON ? this[tR].toJSON() : this[tR])
+        const rr = {},
+          Sr = this.constructor[Symbol.metadata];
+        for (const Qr in Sr) {
+          const Zr = Sr[Qr],
+            Wr = Zr.name;
+          Zr.deprecated || null === this[Wr] || "undefined" === typeof this[Wr] || (rr[Wr] = "function" === typeof this[Wr].toJSON ? this[Wr].toJSON() : this[Wr])
         }
-        return RR
+        return rr
       }
       discardAllChanges() {
-        this[aR].discardAll()
-      } [wR](RR) {
-        return this[this.constructor[Symbol.metadata][RR].name]
-      } [rR](RR) {
-        this[this.constructor[Symbol.metadata][RR].name] = void 0
+        this[tr].discardAll()
+      } [mr](rr) {
+        return this[this.constructor[Symbol.metadata][rr].name]
+      } [Nr](rr) {
+        this[this.constructor[Symbol.metadata][rr].name] = void 0
       }
-      static debugRefIds(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          yR = arguments.length > 3 ? arguments[3] : void 0,
-          tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const uR = JR ? ` - ${JSON.stringify(RR.toJSON())}` : "",
-          ZR = RR[aR],
-          iR = RR[qR],
-          fR = yR ? yR.root.refCount[iR] : ZR.refCount,
-          VR = fR > 1 ? ` [\xd7${fR}]` : "";
-        let KR = `${function(RR){return new Array(RR).fill(0).map(((JR,GR)=>GR===RR-1?"\u2514\u2500 ":"   ")).join("")}(GR)}${tR}${RR.constructor.name} (refId: ${iR})${VR}${uR}\n`;
-        return ZR.forEachChild(((tR, uR) => {
-          let ZR = uR;
-          "number" === typeof uR && RR.$indexes && (ZR = RR.$indexes.get(uR) ?? uR);
-          const qR = void 0 !== RR.forEach && void 0 !== ZR ? `["${ZR}"]: ` : "";
-          KR += this.debugRefIds(tR.ref, JR, GR + 1, yR, qR)
-        })), KR
+      static debugRefIds(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Zr = arguments.length > 3 ? arguments[3] : void 0,
+          Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const ar = Sr ? ` - ${JSON.stringify(rr.toJSON())}` : "",
+          jr = rr[tr],
+          fr = rr[Ir],
+          Er = Zr ? Zr.root.refCount[fr] : jr.refCount,
+          pr = Er > 1 ? ` [\xd7${Er}]` : "";
+        let xr = `${function(rr){return new Array(rr).fill(0).map(((Sr,Qr)=>Qr===rr-1?"\u2514\u2500 ":"   ")).join("")}(Qr)}${Wr}${rr.constructor.name} (refId: ${fr})${pr}${ar}\n`;
+        return jr.forEachChild(((Wr, ar) => {
+          let jr = ar;
+          "number" === typeof ar && rr.$indexes && (jr = rr.$indexes.get(ar) ?? ar);
+          const Ir = void 0 !== rr.forEach && void 0 !== jr ? `["${jr}"]: ` : "";
+          xr += this.debugRefIds(Wr.ref, Sr, Qr + 1, Zr, Ir)
+        })), xr
       }
-      static debugRefIdEncodingOrder(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const GR = [],
-          yR = RR[aR];
-        if ("changes" === JR) {
-          let RR = yR.root.changes?.next;
-          for (; RR;) RR.changeTree && GR.push(RR.changeTree.ref[qR]), RR = RR.next;
-          return GR
+      static debugRefIdEncodingOrder(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Qr = [],
+          Zr = rr[tr];
+        if ("changes" === Sr) {
+          let rr = Zr.root.changes?.next;
+          for (; rr;) rr.changeTree && Qr.push(rr.changeTree.ref[Ir]), rr = rr.next;
+          return Qr
         }
-        const tR = "allFilteredChanges" === JR,
-          uR = new Set,
-          ZR = RR => {
-            uR.has(RR) || (uR.add(RR), RR.isFiltered === tR && GR.push(RR.ref[qR]), RR.forEachChild(((RR, JR) => ZR(RR))))
+        const Wr = "allFilteredChanges" === Sr,
+          ar = new Set,
+          jr = rr => {
+            ar.has(rr) || (ar.add(rr), rr.isFiltered === Wr && Qr.push(rr.ref[Ir]), rr.forEachChild(((rr, Sr) => jr(rr))))
           };
-        return ZR(yR), GR
+        return jr(Zr), Qr
       }
-      static debugRefIdsFromDecoder(RR) {
-        return this.debugRefIds(RR.state, !1, 0, RR)
+      static debugRefIdsFromDecoder(rr) {
+        return this.debugRefIds(rr.state, !1, 0, rr)
       }
-      static debugChanges(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const GR = RR[aR],
-          yR = JR ? "allChanges" : "changes";
-        let uR = `${RR.constructor.name} (${RR[qR]}) -> .${yR}:\n`;
-        return JR ? GR.forEachLive((RR => {
-          uR += `- [${RR}]: ADD (${JSON.stringify(GR.getValue(Number(RR),!0))})\n`
-        })) : GR.forEach(((RR, JR) => {
-          RR < 0 || !JR || (uR += `- [${RR}]: ${tR[JR]} (${JSON.stringify(GR.getValue(Number(RR),!1))})\n`)
-        })), uR
+      static debugChanges(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Qr = rr[tr],
+          Zr = Sr ? "allChanges" : "changes";
+        let ar = `${rr.constructor.name} (${rr[Ir]}) -> .${Zr}:\n`;
+        return Sr ? Qr.forEachLive((rr => {
+          ar += `- [${rr}]: ADD (${JSON.stringify(Qr.getValue(Number(rr),!0))})\n`
+        })) : Qr.forEach(((rr, Sr) => {
+          rr < 0 || !Sr || (ar += `- [${rr}]: ${Wr[Sr]} (${JSON.stringify(Qr.getValue(Number(rr),!1))})\n`)
+        })), ar
       }
     }
-    uR(by);
-    const vy = {
+    ar(lZ);
+    const XZ = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Oy {
+    class PZ {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const RR = {};
-        for (const JR in this.changeTrees) RR[JR] = this.changeTrees[JR].refCount;
-        return RR
+        const rr = {};
+        for (const Sr in this.changeTrees) rr[Sr] = this.changeTrees[Sr].refCount;
+        return rr
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(RR) {
-        this.types.hasFilters && (RR.flags & gG || (RR.flags |= gG, this.pendingFilterRefresh.push(RR)))
+      enqueueFilterRefresh(rr) {
+        this.types.hasFilters && (rr.flags & LQ || (rr.flags |= LQ, this.pendingFilterRefresh.push(rr)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(RR) {
-        this._freeViewIds.push(RR)
+      releaseViewId(rr) {
+        this._freeViewIds.push(rr)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(RR) {
-        this.activeViews.set(RR.id, new WeakRef(RR))
+      registerView(rr) {
+        this.activeViews.set(rr.id, new WeakRef(rr))
       }
-      unregisterView(RR) {
-        this.activeViews.delete(RR.id);
-        const JR = RR.id;
-        for (const GR of this.streamTrees) GR._dropView(JR)
+      unregisterView(rr) {
+        this.activeViews.delete(rr.id);
+        const Sr = rr.id;
+        for (const Qr of this.streamTrees) Qr._dropView(Sr)
       }
-      forEachActiveView(RR) {
-        for (const [JR, GR] of this.activeViews) {
-          const yR = GR.deref();
-          if (void 0 !== yR) RR(yR);
+      forEachActiveView(rr) {
+        for (const [Sr, Qr] of this.activeViews) {
+          const Zr = Qr.deref();
+          if (void 0 !== Zr) rr(Zr);
           else {
-            this.activeViews.delete(JR);
-            for (const RR of this.streamTrees) RR._dropView(JR)
+            this.activeViews.delete(Sr);
+            for (const rr of this.streamTrees) rr._dropView(Sr)
           }
         }
       }
-      registerStream(RR) {
-        this.streamTrees.add(RR)
+      registerStream(rr) {
+        this.streamTrees.add(rr)
       }
-      unregisterStream(RR) {
-        this.streamTrees.delete(RR)
+      unregisterStream(rr) {
+        this.streamTrees.delete(rr)
       }
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = RR, this.nextUniqueId = JR
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = rr, this.nextUniqueId = Sr
       }
-      add(RR) {
-        const JR = RR.ref;
-        void 0 === JR[qR] && (vy.value = this.nextUniqueId++, Object.defineProperty(JR, qR, vy));
-        const GR = JR[qR],
-          yR = void 0 === this.changeTrees[GR];
-        yR && (this.changeTrees[GR] = RR), RR.needsRestage && (RR.needsRestage = !1, RR.forEachLiveWithCtx(RR, GG));
-        const tR = yR ? 0 : RR.refCount;
-        return RR.refCount = tR + 1, tR > 0 && this.enqueueFilterRefresh(RR), yR
+      add(rr) {
+        const Sr = rr.ref;
+        void 0 === Sr[Ir] && (XZ.value = this.nextUniqueId++, Object.defineProperty(Sr, Ir, XZ));
+        const Qr = Sr[Ir],
+          Zr = void 0 === this.changeTrees[Qr];
+        Zr && (this.changeTrees[Qr] = rr), rr.needsRestage && (rr.needsRestage = !1, rr.forEachLiveWithCtx(rr, QQ));
+        const Wr = Zr ? 0 : rr.refCount;
+        return rr.refCount = Wr + 1, Wr > 0 && this.enqueueFilterRefresh(rr), Zr
       }
-      remove(RR) {
-        const JR = RR.refCount - 1;
-        if (JR <= 0) {
-          if (RR.root = void 0, delete this.changeTrees[RR.ref[qR]], RR.isStreamCollection) {
-            const JR = RR.ref;
-            JR._unregister?.(), this.unregisterStream(JR)
+      remove(rr) {
+        const Sr = rr.refCount - 1;
+        if (Sr <= 0) {
+          if (rr.root = void 0, delete this.changeTrees[rr.ref[Ir]], rr.isStreamCollection) {
+            const Sr = rr.ref;
+            Sr._unregister?.(), this.unregisterStream(Sr)
           }
-          this.removeFromQueue(RR), this.removeFromUnreliableQueue(RR), RR.refCount = 0, RR.needsRestage = !0, RR.forEachChild(((JR, GR) => {
-            JR.removeParent(RR.ref) && (void 0 === JR.parentRef || JR.refCount > 0 ? this.remove(JR) : this.moveNextToParent(JR))
+          this.removeFromQueue(rr), this.removeFromUnreliableQueue(rr), rr.refCount = 0, rr.needsRestage = !0, rr.forEachChild(((Sr, Qr) => {
+            Sr.removeParent(rr.ref) && (void 0 === Sr.parentRef || Sr.refCount > 0 ? this.remove(Sr) : this.moveNextToParent(Sr))
           }))
-        } else RR.refCount = JR, this.enqueueFilterRefresh(RR), this.recursivelyMoveNextToParent(RR);
-        return JR
+        } else rr.refCount = Sr, this.enqueueFilterRefresh(rr), this.recursivelyMoveNextToParent(rr);
+        return Sr
       }
-      recursivelyMoveNextToParent(RR) {
-        this.moveNextToParent(RR), RR.forEachChild(((RR, JR) => this.recursivelyMoveNextToParent(RR)))
+      recursivelyMoveNextToParent(rr) {
+        this.moveNextToParent(rr), rr.forEachChild(((rr, Sr) => this.recursivelyMoveNextToParent(rr)))
       }
-      moveNextToParent(RR) {
-        RR.changesNode && this._moveNextToParentInList(this.changes, RR, RR.changesNode, "changesNode"), RR.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, RR, RR.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(rr) {
+        rr.changesNode && this._moveNextToParentInList(this.changes, rr, rr.changesNode, "changesNode"), rr.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, rr, rr.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(RR, JR, GR, yR) {
-        const tR = JR.parent;
-        if (!tR || !tR[aR]) return;
-        const uR = tR[aR][yR];
-        uR && uR !== GR && (GR.position > uR.position || (GR.prev ? GR.prev.next = GR.next : RR.next = GR.next, GR.next ? GR.next.prev = GR.prev : RR.tail = GR.prev, GR.prev = RR.tail, GR.next = void 0, RR.tail.next = GR, RR.tail = GR, GR.position = RR.nextPosition++))
+      _moveNextToParentInList(rr, Sr, Qr, Zr) {
+        const Wr = Sr.parent;
+        if (!Wr || !Wr[tr]) return;
+        const ar = Wr[tr][Zr];
+        ar && ar !== Qr && (Qr.position > ar.position || (Qr.prev ? Qr.prev.next = Qr.next : rr.next = Qr.next, Qr.next ? Qr.next.prev = Qr.prev : rr.tail = Qr.prev, Qr.prev = rr.tail, Qr.next = void 0, rr.tail.next = Qr, rr.tail = Qr, Qr.position = rr.nextPosition++))
       }
-      enqueueChangeTree(RR) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR.changesNode) || (RR.changesNode = this._appendToList(this.changes, RR))
+      enqueueChangeTree(rr) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr.changesNode) || (rr.changesNode = this._appendToList(this.changes, rr))
       }
-      enqueueUnreliable(RR) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : RR.unreliableChangesNode) || (RR.unreliableChangesNode = this._appendToList(this.unreliableChanges, RR))
+      enqueueUnreliable(rr) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr.unreliableChangesNode) || (rr.unreliableChangesNode = this._appendToList(this.unreliableChanges, rr))
       }
-      _appendToList(RR, JR) {
-        const GR = this._nodePool;
-        let yR;
-        return GR.length > 0 ? (yR = GR.pop(), yR.changeTree = JR, yR.next = void 0, yR.prev = void 0) : yR = {
-          changeTree: JR,
+      _appendToList(rr, Sr) {
+        const Qr = this._nodePool;
+        let Zr;
+        return Qr.length > 0 ? (Zr = Qr.pop(), Zr.changeTree = Sr, Zr.next = void 0, Zr.prev = void 0) : Zr = {
+          changeTree: Sr,
           next: void 0,
           prev: void 0,
           position: 0
-        }, RR.next ? (yR.prev = RR.tail, RR.tail.next = yR, RR.tail = yR) : (RR.nextPosition = 0, RR.next = yR, RR.tail = yR), yR.position = RR.nextPosition++, yR
+        }, rr.next ? (Zr.prev = rr.tail, rr.tail.next = Zr, rr.tail = Zr) : (rr.nextPosition = 0, rr.next = Zr, rr.tail = Zr), Zr.position = rr.nextPosition++, Zr
       }
-      releaseNode(RR) {
-        RR.changeTree = void 0, RR.prev = void 0, RR.next = void 0, this._nodePool.push(RR)
+      releaseNode(rr) {
+        rr.changeTree = void 0, rr.prev = void 0, rr.next = void 0, this._nodePool.push(rr)
       }
-      removeFromQueue(RR) {
-        return this._removeNode(this.changes, RR, RR.changesNode, "changesNode")
+      removeFromQueue(rr) {
+        return this._removeNode(this.changes, rr, rr.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(RR) {
-        return this._removeNode(this.unreliableChanges, RR, RR.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(rr) {
+        return this._removeNode(this.unreliableChanges, rr, rr.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(RR, JR, GR, yR) {
-        return !(!GR || GR.changeTree !== JR) && (GR.prev ? GR.prev.next = GR.next : RR.next = GR.next, GR.next ? GR.next.prev = GR.prev : RR.tail = GR.prev, JR[yR] = void 0, this.releaseNode(GR), !0)
+      _removeNode(rr, Sr, Qr, Zr) {
+        return !(!Qr || Qr.changeTree !== Sr) && (Qr.prev ? Qr.prev.next = Qr.next : rr.next = Qr.next, Qr.next ? Qr.next.prev = Qr.prev : rr.tail = Qr.prev, Sr[Zr] = void 0, this.releaseNode(Qr), !0)
       }
     }
 
-    function xy(RR, JR) {
-      if (-1 === JR || JR >= RR.length) return !1;
-      const GR = RR.length - 1;
-      for (let yR = JR; yR < GR; yR++) RR[yR] = RR[yR + 1];
-      return RR.length = GR, !0
+    function HZ(rr, Sr) {
+      if (-1 === Sr || Sr >= rr.length) return !1;
+      const Qr = rr.length - 1;
+      for (let Zr = Sr; Zr < Qr; Zr++) rr[Zr] = rr[Zr + 1];
+      return rr.length = Qr, !0
     }
 
-    function Ny(RR, JR, GR) {
-      const yR = ~GR,
-        tR = RR.changeTrees;
-      for (const uR in tR) {
-        const RR = tR[uR],
-          GR = RR.visibleViews;
-        void 0 !== GR && JR < GR.length && (GR[JR] &= yR);
-        const ZR = RR.subscribedViews;
-        void 0 !== ZR && JR < ZR.length && (ZR[JR] &= yR);
-        const qR = RR.tagViews;
-        void 0 !== qR && qR.forEach((RR => {
-          JR < RR.length && (RR[JR] &= yR)
+    function qZ(rr, Sr, Qr) {
+      const Zr = ~Qr,
+        Wr = rr.changeTrees;
+      for (const ar in Wr) {
+        const rr = Wr[ar],
+          Qr = rr.visibleViews;
+        void 0 !== Qr && Sr < Qr.length && (Qr[Sr] &= Zr);
+        const jr = rr.subscribedViews;
+        void 0 !== jr && Sr < jr.length && (jr[Sr] &= Zr);
+        const Ir = rr.tagViews;
+        void 0 !== Ir && Ir.forEach((rr => {
+          Sr < rr.length && (rr[Sr] &= Zr)
         }))
       }
     }
-    const Dy = new FinalizationRegistry((RR => {
+    const RZ = new FinalizationRegistry((rr => {
       let {
-        root: JR,
-        id: GR,
-        slot: yR,
-        bit: tR
-      } = RR;
-      Ny(JR, yR, tR), JR.activeViews.delete(GR);
-      for (const uR of JR.streamTrees) uR._dropView(GR);
-      JR.releaseViewId(GR)
+        root: Sr,
+        id: Qr,
+        slot: Zr,
+        bit: Wr
+      } = rr;
+      qZ(Sr, Zr, Wr), Sr.activeViews.delete(Qr);
+      for (const ar of Sr.streamTrees) ar._dropView(Qr);
+      Sr.releaseViewId(Qr)
     }));
 
-    function Hy(RR) {
-      if (void 0 === RR) return "undefined";
-      if (null === RR) return "null";
-      const JR = typeof RR;
-      return "string" === JR ? JSON.stringify(RR.length > 30 ? `${RR.slice(0,30)}\u2026` : RR) : "object" !== JR && "function" !== JR ? `${JR} ${String(RR)}` : Array.isArray(RR) ? `Array(${RR.length})` : RR.constructor?.name ?? "Object"
+    function gZ(rr) {
+      if (void 0 === rr) return "undefined";
+      if (null === rr) return "null";
+      const Sr = typeof rr;
+      return "string" === Sr ? JSON.stringify(rr.length > 30 ? `${rr.slice(0,30)}\u2026` : rr) : "object" !== Sr && "function" !== Sr ? `${Sr} ${String(rr)}` : Array.isArray(rr) ? `Array(${rr.length})` : rr.constructor?.name ?? "Object"
     }
-    class oy {
+    class CZ {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = RR, RR && (this.items = [])
+        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = rr, rr && (this.items = [])
       }
-      _bindRoot(RR) {
-        void 0 === this._root && (this._root = RR, this.id = RR.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), RR.registerView(this), Dy.register(this, {
-          root: RR,
+      _bindRoot(rr) {
+        void 0 === this._root && (this._root = rr, this.id = rr.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), rr.registerView(this), RZ.register(this, {
+          root: rr,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), Ny(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Dy.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), qZ(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), RZ.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(RR) {
-        const JR = RR.visibleViews,
-          GR = this._slot;
-        return void 0 !== JR && GR < JR.length && 0 !== (JR[GR] & this._bit)
+      isVisible(rr) {
+        const Sr = rr.visibleViews,
+          Qr = this._slot;
+        return void 0 !== Sr && Qr < Sr.length && 0 !== (Sr[Qr] & this._bit)
       }
-      markVisible(RR) {
-        const JR = this._slot;
-        let GR = RR.visibleViews;
-        for (void 0 === GR && (GR = RR.visibleViews = []); GR.length <= JR;) GR.push(0);
-        GR[JR] |= this._bit
+      markVisible(rr) {
+        const Sr = this._slot;
+        let Qr = rr.visibleViews;
+        for (void 0 === Qr && (Qr = rr.visibleViews = []); Qr.length <= Sr;) Qr.push(0);
+        Qr[Sr] |= this._bit
       }
-      unmarkVisible(RR) {
-        const JR = RR.visibleViews;
-        if (void 0 === JR) return;
-        const GR = this._slot;
-        GR < JR.length && (JR[GR] &= ~this._bit)
+      unmarkVisible(rr) {
+        const Sr = rr.visibleViews;
+        if (void 0 === Sr) return;
+        const Qr = this._slot;
+        Qr < Sr.length && (Sr[Qr] &= ~this._bit)
       }
-      isSubscribed(RR) {
-        const JR = RR.subscribedViews,
-          GR = this._slot;
-        return void 0 !== JR && GR < JR.length && 0 !== (JR[GR] & this._bit)
+      isSubscribed(rr) {
+        const Sr = rr.subscribedViews,
+          Qr = this._slot;
+        return void 0 !== Sr && Qr < Sr.length && 0 !== (Sr[Qr] & this._bit)
       }
-      _setSubscribed(RR) {
-        const JR = this._slot;
-        let GR = RR.subscribedViews;
-        for (void 0 === GR && (GR = RR.subscribedViews = []); GR.length <= JR;) GR.push(0);
-        GR[JR] |= this._bit
+      _setSubscribed(rr) {
+        const Sr = this._slot;
+        let Qr = rr.subscribedViews;
+        for (void 0 === Qr && (Qr = rr.subscribedViews = []); Qr.length <= Sr;) Qr.push(0);
+        Qr[Sr] |= this._bit
       }
-      _clearSubscribed(RR) {
-        const JR = RR.subscribedViews;
-        if (void 0 === JR) return;
-        const GR = this._slot;
-        GR < JR.length && (JR[GR] &= ~this._bit)
+      _clearSubscribed(rr) {
+        const Sr = rr.subscribedViews;
+        if (void 0 === Sr) return;
+        const Qr = this._slot;
+        Qr < Sr.length && (Sr[Qr] &= ~this._bit)
       }
-      hasTagOnTree(RR, JR) {
-        const GR = RR.tagViews;
-        if (void 0 === GR) return !1;
-        const yR = this._slot,
-          tR = this._bit;
-        for (let uR = JR; 0 !== uR; uR &= uR - 1) {
-          const RR = GR.get(uR & -uR);
-          if (void 0 !== RR && yR < RR.length && 0 !== (RR[yR] & tR)) return !0
+      hasTagOnTree(rr, Sr) {
+        const Qr = rr.tagViews;
+        if (void 0 === Qr) return !1;
+        const Zr = this._slot,
+          Wr = this._bit;
+        for (let ar = Sr; 0 !== ar; ar &= ar - 1) {
+          const rr = Qr.get(ar & -ar);
+          if (void 0 !== rr && Zr < rr.length && 0 !== (rr[Zr] & Wr)) return !0
         }
         return !1
       }
-      addTag(RR, JR) {
-        if (JR === ey) return;
-        let GR = RR.tagViews;
-        void 0 === GR && (GR = RR.tagViews = new Map);
-        const yR = this._slot,
-          tR = this._bit;
-        for (let uR = JR; uR > 0; uR &= uR - 1) {
-          const RR = uR & -uR;
-          let JR = GR.get(RR);
-          for (void 0 === JR && (JR = [], GR.set(RR, JR)); JR.length <= yR;) JR.push(0);
-          JR[yR] |= tR
+      addTag(rr, Sr) {
+        if (Sr === UZ) return;
+        let Qr = rr.tagViews;
+        void 0 === Qr && (Qr = rr.tagViews = new Map);
+        const Zr = this._slot,
+          Wr = this._bit;
+        for (let ar = Sr; ar > 0; ar &= ar - 1) {
+          const rr = ar & -ar;
+          let Sr = Qr.get(rr);
+          for (void 0 === Sr && (Sr = [], Qr.set(rr, Sr)); Sr.length <= Zr;) Sr.push(0);
+          Sr[Zr] |= Wr
         }
       }
-      removeTag(RR, JR) {
-        if (JR === ey) return;
-        const GR = RR.tagViews;
-        if (void 0 === GR) return;
-        const yR = this._slot,
-          tR = ~this._bit;
-        for (let uR = JR; uR > 0; uR &= uR - 1) {
-          const RR = GR.get(uR & -uR);
-          void 0 !== RR && yR < RR.length && (RR[yR] &= tR)
+      removeTag(rr, Sr) {
+        if (Sr === UZ) return;
+        const Qr = rr.tagViews;
+        if (void 0 === Qr) return;
+        const Zr = this._slot,
+          Wr = ~this._bit;
+        for (let ar = Sr; ar > 0; ar &= ar - 1) {
+          const rr = Qr.get(ar & -ar);
+          void 0 !== rr && Zr < rr.length && (rr[Zr] &= Wr)
         }
       }
-      removeAllTagsOnTree(RR) {
-        const JR = RR.tagViews;
-        if (void 0 === JR) return;
-        const GR = this._slot,
-          yR = ~this._bit;
-        JR.forEach((RR => {
-          GR < RR.length && (RR[GR] &= yR)
+      removeAllTagsOnTree(rr) {
+        const Sr = rr.tagViews;
+        if (void 0 === Sr) return;
+        const Qr = this._slot,
+          Zr = ~this._bit;
+        Sr.forEach((rr => {
+          Qr < rr.length && (rr[Qr] &= Zr)
         }))
       }
-      add(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ey,
-          GR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(RR, JR, GR, !1)
+      add(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UZ,
+          Qr = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(rr, Sr, Qr, !1)
       }
-      _addImmediate(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ey;
-        this._add(RR, JR, !0, !0)
+      _addImmediate(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UZ;
+        this._add(rr, Sr, !0, !0)
       }
-      _add(RR, JR, GR, yR) {
-        const uR = RR?.[aR];
-        if (!uR) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Hy(RR)}`), !1;
-        const ZR = uR.parent;
-        if (!ZR && 0 !== RR[qR]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${uR.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== uR.root && this._bindRoot(uR.root);
-        const iR = ZR?.[aR];
-        if (!yR && iR?.isStreamCollection) return xJ(ZR, this.id, uR.parentIndex), !0;
-        const fR = RR.constructor[Symbol.metadata],
-          VR = this.isVisible(uR);
-        if (!this.iterable || !GR || VR && -1 !== this.items.indexOf(RR) || this.items.push(RR), this.markVisible(uR), GR && ZR && this.addParentOf(uR, JR), !yR && uR.isStreamCollection) return !0;
-        if (JR === ey && uR.isNew) return this._markSubtreeVisible(uR, JR), !1;
-        let KR = this.changes.get(RR[qR]);
-        void 0 === KR && (KR = new Map, this.changes.set(RR[qR], KR));
-        let wR = !1;
-        const rR = uR.encDescriptor.tags;
-        if (uR.forEachChild(((RR, GR) => {
-            const yR = rR[GR];
-            if (void 0 !== yR) {
-              if (!(yR === ey || JR !== ey && 0 !== (yR & JR))) return
+      _add(rr, Sr, Qr, Zr) {
+        const ar = rr?.[tr];
+        if (!ar) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${gZ(rr)}`), !1;
+        const jr = ar.parent;
+        if (!jr && 0 !== rr[Ir]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ar.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== ar.root && this._bindRoot(ar.root);
+        const fr = jr?.[tr];
+        if (!Zr && fr?.isStreamCollection) return HS(jr, this.id, ar.parentIndex), !0;
+        const Er = rr.constructor[Symbol.metadata],
+          pr = this.isVisible(ar);
+        if (!this.iterable || !Qr || pr && -1 !== this.items.indexOf(rr) || this.items.push(rr), this.markVisible(ar), Qr && jr && this.addParentOf(ar, Sr), !Zr && ar.isStreamCollection) return !0;
+        if (Sr === UZ && ar.isNew) return this._markSubtreeVisible(ar, Sr), !1;
+        let xr = this.changes.get(rr[Ir]);
+        void 0 === xr && (xr = new Map, this.changes.set(rr[Ir], xr));
+        let mr = !1;
+        const Nr = ar.encDescriptor.tags;
+        if (ar.forEachChild(((rr, Qr) => {
+            const Zr = Nr[Qr];
+            if (void 0 !== Zr) {
+              if (!(Zr === UZ || Sr !== UZ && 0 !== (Zr & Sr))) return
             }
-            this.add(RR.ref, JR, !1) && (wR = !0)
-          })), JR !== ey) {
-          this.addTag(uR, JR);
-          const RR = fR?.[vR];
-          if (void 0 !== RR)
-            for (let GR = JR; GR > 0; GR &= GR - 1) RR[GR & -GR]?.forEach((RR => {
-              uR.getChange(RR) !== tR.DELETE && KR.set(RR, tR.ADD)
+            this.add(rr.ref, Sr, !1) && (mr = !0)
+          })), Sr !== UZ) {
+          this.addTag(ar, Sr);
+          const rr = Er?.[Xr];
+          if (void 0 !== rr)
+            for (let Qr = Sr; Qr > 0; Qr &= Qr - 1) rr[Qr & -Qr]?.forEach((rr => {
+              ar.getChange(rr) !== Wr.DELETE && xr.set(rr, Wr.ADD)
             }))
         }
-        if ((JR === ey || !VR) && (!uR.isNew || wR))
-          if (uR.isArray && "string" !== typeof uR.refTarget[LR]) uR.refTarget.items.length > 0 && (KR.set(-1, tR.ADD), wR = !0);
+        if ((Sr === UZ || !pr) && (!ar.isNew || mr))
+          if (ar.isArray && "string" !== typeof ar.refTarget[hr]) ar.refTarget.items.length > 0 && (xr.set(-1, Wr.ADD), mr = !0);
           else {
-            const RR = uR.encDescriptor.tags;
-            uR.forEachLive((GR => {
-              const yR = RR[GR];
-              (void 0 === yR || yR === ey || JR !== ey && 0 !== (yR & JR)) && (KR.set(GR, tR.ADD), wR = !0)
+            const rr = ar.encDescriptor.tags;
+            ar.forEachLive((Qr => {
+              const Zr = rr[Qr];
+              (void 0 === Zr || Zr === UZ || Sr !== UZ && 0 !== (Zr & Sr)) && (xr.set(Qr, Wr.ADD), mr = !0)
             }))
-          } return wR
+          } return mr
       }
-      _markSubtreeVisible(RR, JR) {
-        const GR = RR.encDescriptor.tags;
-        RR.forEachChild(((RR, yR) => {
-          const tR = GR[yR];
-          if (void 0 !== tR) {
-            if (!(tR === ey || JR !== ey && 0 !== (tR & JR))) return
+      _markSubtreeVisible(rr, Sr) {
+        const Qr = rr.encDescriptor.tags;
+        rr.forEachChild(((rr, Zr) => {
+          const Wr = Qr[Zr];
+          if (void 0 !== Wr) {
+            if (!(Wr === UZ || Sr !== UZ && 0 !== (Wr & Sr))) return
           }
-          RR.isNew ? (this.markVisible(RR), this._markSubtreeVisible(RR, JR)) : this._add(RR.ref, JR, !1, !1)
+          rr.isNew ? (this.markVisible(rr), this._markSubtreeVisible(rr, Sr)) : this._add(rr.ref, Sr, !1, !1)
         }))
       }
-      addParentOf(RR, JR) {
-        const GR = RR.parent[aR],
-          yR = RR.parentIndex;
-        this.isVisible(GR) || this.markVisible(GR);
-        const uR = GR.parent?.[aR];
-        if (uR && this.addParentOf(GR, JR), GR.hasFilteredFields && GR.getChange(yR) !== tR.DELETE) {
-          let uR = this.changes.get(GR.ref[qR]);
-          void 0 === uR && (uR = new Map, this.changes.set(GR.ref[qR], uR));
-          const ZR = GR.encDescriptor.tags[yR];
-          void 0 !== ZR && ZR !== ey && 0 !== (ZR & JR) && this.addTag(GR, JR), uR.set(GR.isArray ? RR : yR, tR.ADD)
+      addParentOf(rr, Sr) {
+        const Qr = rr.parent[tr],
+          Zr = rr.parentIndex;
+        this.isVisible(Qr) || this.markVisible(Qr);
+        const ar = Qr.parent?.[tr];
+        if (ar && this.addParentOf(Qr, Sr), Qr.hasFilteredFields && Qr.getChange(Zr) !== Wr.DELETE) {
+          let ar = this.changes.get(Qr.ref[Ir]);
+          void 0 === ar && (ar = new Map, this.changes.set(Qr.ref[Ir], ar));
+          const jr = Qr.encDescriptor.tags[Zr];
+          void 0 !== jr && jr !== UZ && 0 !== (jr & Sr) && this.addTag(Qr, Sr), ar.set(Qr.isArray ? rr : Zr, Wr.ADD)
         }
       }
-      _touchAncestorsOf(RR) {
-        let JR = RR.parent?.[aR];
-        if (void 0 === JR) return;
-        const GR = [];
-        for (; void 0 !== JR;) {
-          if (JR.hasFilteredFields) {
-            const RR = JR.ref[qR];
-            if (this.changes.has(RR)) break;
-            GR.push(JR)
+      _touchAncestorsOf(rr) {
+        let Sr = rr.parent?.[tr];
+        if (void 0 === Sr) return;
+        const Qr = [];
+        for (; void 0 !== Sr;) {
+          if (Sr.hasFilteredFields) {
+            const rr = Sr.ref[Ir];
+            if (this.changes.has(rr)) break;
+            Qr.push(Sr)
           }
-          JR = JR.parent?.[aR]
+          Sr = Sr.parent?.[tr]
         }
-        for (let yR = GR.length - 1; yR >= 0; yR--) this.changes.set(GR[yR].ref[qR], new Map)
+        for (let Zr = Qr.length - 1; Zr >= 0; Zr--) this.changes.set(Qr[Zr].ref[Ir], new Map)
       }
-      remove(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ey,
-          GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const yR = RR?.[aR];
-        if (!yR) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Hy(RR)}`), this;
-        const uR = yR.parent?.[aR];
-        if (uR?.isStreamCollection) return this.unmarkVisible(yR), this.iterable && !GR && xy(this.items, this.items.indexOf(RR)),
-          function(RR, JR, GR, yR, uR) {
-            const ZR = RR._stream;
-            if (void 0 === ZR) return !1;
-            const qR = ZR.pendingByView.get(JR);
-            if (qR?.has(yR)) return qR.delete(yR), !1;
-            const iR = ZR.sentByView.get(JR);
-            if (iR?.has(yR)) {
-              iR.delete(yR);
-              let RR = uR.get(GR);
-              return void 0 === RR && (RR = new Map, uR.set(GR, RR)), RR.set(yR, tR.DELETE), !0
+      remove(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UZ,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Zr = rr?.[tr];
+        if (!Zr) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${gZ(rr)}`), this;
+        const ar = Zr.parent?.[tr];
+        if (ar?.isStreamCollection) return this.unmarkVisible(Zr), this.iterable && !Qr && HZ(this.items, this.items.indexOf(rr)),
+          function(rr, Sr, Qr, Zr, ar) {
+            const jr = rr._stream;
+            if (void 0 === jr) return !1;
+            const Ir = jr.pendingByView.get(Sr);
+            if (Ir?.has(Zr)) return Ir.delete(Zr), !1;
+            const fr = jr.sentByView.get(Sr);
+            if (fr?.has(Zr)) {
+              fr.delete(Zr);
+              let rr = ar.get(Qr);
+              return void 0 === rr && (rr = new Map, ar.set(Qr, rr)), rr.set(Zr, Wr.DELETE), !0
             }
-          }(yR.parent, this.id, yR.parent[qR], yR.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(yR), this;
-        if (yR.isStreamCollection) {
-          this.unmarkVisible(yR), this.iterable && !GR && xy(this.items, this.items.indexOf(RR));
-          const JR = yR.ref,
-            uR = JR._stream;
-          if (void 0 !== uR) {
-            uR.pendingByView.get(this.id)?.clear();
-            const RR = uR.sentByView.get(this.id);
-            if (void 0 !== RR && RR.size > 0) {
-              const GR = JR[qR];
-              let yR = this.changes.get(GR);
-              void 0 === yR && (yR = new Map, this.changes.set(GR, yR));
-              for (const JR of RR) yR.set(JR, tR.DELETE);
-              RR.clear()
+          }(Zr.parent, this.id, Zr.parent[Ir], Zr.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Zr), this;
+        if (Zr.isStreamCollection) {
+          this.unmarkVisible(Zr), this.iterable && !Qr && HZ(this.items, this.items.indexOf(rr));
+          const Sr = Zr.ref,
+            ar = Sr._stream;
+          if (void 0 !== ar) {
+            ar.pendingByView.get(this.id)?.clear();
+            const rr = ar.sentByView.get(this.id);
+            if (void 0 !== rr && rr.size > 0) {
+              const Qr = Sr[Ir];
+              let Zr = this.changes.get(Qr);
+              void 0 === Zr && (Zr = new Map, this.changes.set(Qr, Zr));
+              for (const Sr of rr) Zr.set(Sr, Wr.DELETE);
+              rr.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(yR), this.iterable && !GR && xy(this.items, this.items.indexOf(RR));
-        const ZR = yR.ref,
-          iR = ZR.constructor[Symbol.metadata],
-          fR = ZR[qR];
-        this._touchAncestorsOf(yR);
-        let VR = this.changes.get(fR);
-        if (void 0 === VR && (VR = new Map, this.changes.set(fR, VR)), JR === ey) {
-          const RR = yR.parent;
-          if (RR && !kJ.isValidInstance(RR) && yR.isFiltered) {
-            const JR = uR.isArray ? yR : yR.parentIndex,
-              GR = RR[qR];
-            let ZR = this.changes.get(GR);
-            void 0 === ZR ? (ZR = new Map, this.changes.set(GR, ZR)) : ZR.get(JR) === tR.ADD && this._dropPendingEntries(yR), ZR.set(JR, tR.DELETE), this._recursiveDeleteVisibleChangeTree(yR)
-          } else iR?.[bR]?.forEach((RR => this._removeViewField(yR, VR, RR)))
+        this.unmarkVisible(Zr), this.iterable && !Qr && HZ(this.items, this.items.indexOf(rr));
+        const jr = Zr.ref,
+          fr = jr.constructor[Symbol.metadata],
+          Er = jr[Ir];
+        this._touchAncestorsOf(Zr);
+        let pr = this.changes.get(Er);
+        if (void 0 === pr && (pr = new Map, this.changes.set(Er, pr)), Sr === UZ) {
+          const rr = Zr.parent;
+          if (rr && !bS.isValidInstance(rr) && Zr.isFiltered) {
+            const Sr = ar.isArray ? Zr : Zr.parentIndex,
+              Qr = rr[Ir];
+            let jr = this.changes.get(Qr);
+            void 0 === jr ? (jr = new Map, this.changes.set(Qr, jr)) : jr.get(Sr) === Wr.ADD && this._dropPendingEntries(Zr), jr.set(Sr, Wr.DELETE), this._recursiveDeleteVisibleChangeTree(Zr)
+          } else fr?.[lr]?.forEach((rr => this._removeViewField(Zr, pr, rr)))
         } else {
-          const RR = iR?.[vR];
-          if (void 0 !== RR)
-            for (let GR = JR; GR > 0; GR &= GR - 1) RR[GR & -GR]?.forEach((RR => this._removeViewField(yR, VR, RR)))
+          const rr = fr?.[Xr];
+          if (void 0 !== rr)
+            for (let Qr = Sr; Qr > 0; Qr &= Qr - 1) rr[Qr & -Qr]?.forEach((rr => this._removeViewField(Zr, pr, rr)))
         }
-        return void 0 === JR ? this.removeAllTagsOnTree(yR) : this.removeTag(yR, JR), this
+        return void 0 === Sr ? this.removeAllTagsOnTree(Zr) : this.removeTag(Zr, Sr), this
       }
-      has(RR) {
-        return this.isVisible(RR[aR])
+      has(rr) {
+        return this.isVisible(rr[tr])
       }
-      hasTag(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ey;
-        return this.hasTagOnTree(RR[aR], JR)
+      hasTag(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UZ;
+        return this.hasTagOnTree(rr[tr], Sr)
       }
-      subscribe(RR, JR) {
-        const GR = RR?.[aR];
-        if (!GR) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Hy(RR)}`), this;
-        if (void 0 === this._root && void 0 !== GR.root && this._bindRoot(GR.root), void 0 !== JR)
-          if (GR.isStreamCollection) {
-            const GR = pJ(RR);
-            null === JR ? GR.priorityByView?.delete(this.id) : (GR.priorityByView ??= new Map).set(this.id, JR)
+      subscribe(rr, Sr) {
+        const Qr = rr?.[tr];
+        if (!Qr) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${gZ(rr)}`), this;
+        if (void 0 === this._root && void 0 !== Qr.root && this._bindRoot(Qr.root), void 0 !== Sr)
+          if (Qr.isStreamCollection) {
+            const Qr = OS(rr);
+            null === Sr ? Qr.priorityByView?.delete(this.id) : (Qr.priorityByView ??= new Map).set(this.id, Sr)
           } else {
-            const JR = RR?.constructor?.name ?? "collection",
-              yR = GR.parent;
-            if (void 0 === yR) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${JR} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Sr = rr?.constructor?.name ?? "collection",
+              Zr = Qr.parent;
+            if (void 0 === Zr) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Sr} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const RR = yR?.constructor?.[Symbol.metadata]?.[GR.parentIndex]?.name,
-                tR = RR ? `${yR.constructor.name}#${RR}` : JR;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${tR} is a ${JR}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const rr = Zr?.constructor?.[Symbol.metadata]?.[Qr.parentIndex]?.name,
+                Wr = rr ? `${Zr.constructor.name}#${rr}` : Sr;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Wr} is a ${Sr}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(GR)) return this;
-        const yR = void 0 !== GR.parent && !this.isVisible(GR);
-        if (yR ? (this.addParentOf(GR, ey), this._add(RR, ey, !1, !1)) : this.markVisible(GR), this._setSubscribed(GR), GR.isStreamCollection) {
-          const JR = RR;
-          GR.forEachChild(((RR, GR) => {
-            xJ(JR, this.id, GR)
+          } if (this.isSubscribed(Qr)) return this;
+        const Zr = void 0 !== Qr.parent && !this.isVisible(Qr);
+        if (Zr ? (this.addParentOf(Qr, UZ), this._add(rr, UZ, !1, !1)) : this.markVisible(Qr), this._setSubscribed(Qr), Qr.isStreamCollection) {
+          const Sr = rr;
+          Qr.forEachChild(((rr, Qr) => {
+            HS(Sr, this.id, Qr)
           }))
-        } else yR || GR.forEachChild((RR => {
-          this.markVisible(RR)
+        } else Zr || Qr.forEachChild((rr => {
+          this.markVisible(rr)
         }));
         return this
       }
-      unsubscribe(RR) {
-        const JR = RR?.[aR];
-        if (!JR) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Hy(RR)}`), this;
-        if (!this.isSubscribed(JR)) return this;
-        this._clearSubscribed(JR);
-        const GR = JR.ref[qR];
-        if (JR.isStreamCollection) {
-          const JR = RR._stream;
-          if (void 0 !== JR) {
-            JR.pendingByView.get(this.id)?.clear();
-            const RR = JR.sentByView.get(this.id);
-            if (void 0 !== RR && RR.size > 0) {
-              let JR = this.changes.get(GR);
-              void 0 === JR && (JR = new Map, this.changes.set(GR, JR));
-              for (const GR of RR) JR.set(GR, tR.DELETE);
-              RR.clear()
+      unsubscribe(rr) {
+        const Sr = rr?.[tr];
+        if (!Sr) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${gZ(rr)}`), this;
+        if (!this.isSubscribed(Sr)) return this;
+        this._clearSubscribed(Sr);
+        const Qr = Sr.ref[Ir];
+        if (Sr.isStreamCollection) {
+          const Sr = rr._stream;
+          if (void 0 !== Sr) {
+            Sr.pendingByView.get(this.id)?.clear();
+            const rr = Sr.sentByView.get(this.id);
+            if (void 0 !== rr && rr.size > 0) {
+              let Sr = this.changes.get(Qr);
+              void 0 === Sr && (Sr = new Map, this.changes.set(Qr, Sr));
+              for (const Qr of rr) Sr.set(Qr, Wr.DELETE);
+              rr.clear()
             }
           }
         } else {
-          const RR = JR.isArray;
-          let yR = this.changes.get(GR);
-          JR.forEachChild(((JR, uR) => {
-            void 0 === yR && (yR = new Map, this.changes.set(GR, yR)), yR.set(RR ? JR : uR, tR.DELETE), this.unmarkVisible(JR)
+          const rr = Sr.isArray;
+          let Zr = this.changes.get(Qr);
+          Sr.forEachChild(((Sr, ar) => {
+            void 0 === Zr && (Zr = new Map, this.changes.set(Qr, Zr)), Zr.set(rr ? Sr : ar, Wr.DELETE), this.unmarkVisible(Sr)
           }))
         }
-        return this.unmarkVisible(JR), this
+        return this.unmarkVisible(Sr), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let RR = 0, JR = this.items.length; RR < JR; RR++) this.remove(this.items[RR], ey, !0);
+        for (let rr = 0, Sr = this.items.length; rr < Sr; rr++) this.remove(this.items[rr], UZ, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(RR) {
-        let JR = this.isVisible(RR);
-        if (!JR && RR.isVisibilitySharedWithParent)
-          if (this.isVisible(RR.parent[aR])) this.markVisible(RR), JR = !0;
+      isChangeTreeVisible(rr) {
+        let Sr = this.isVisible(rr);
+        if (!Sr && rr.isVisibilitySharedWithParent)
+          if (this.isVisible(rr.parent[tr])) this.markVisible(rr), Sr = !0;
           else
-            for (let GR = RR.extraParents; void 0 !== GR; GR = GR.next) {
-              const yR = GR.ref[aR];
-              if (yR.isFiltered && this.isVisible(yR)) {
-                this.markVisible(RR), JR = !0;
+            for (let Qr = rr.extraParents; void 0 !== Qr; Qr = Qr.next) {
+              const Zr = Qr.ref[tr];
+              if (Zr.isFiltered && this.isVisible(Zr)) {
+                this.markVisible(rr), Sr = !0;
                 break
               }
             }
-        return JR
+        return Sr
       }
-      _recursiveDeleteVisibleChangeTree(RR) {
-        RR.forEachChild((RR => {
-          this.unmarkVisible(RR), this._recursiveDeleteVisibleChangeTree(RR)
+      _recursiveDeleteVisibleChangeTree(rr) {
+        rr.forEachChild((rr => {
+          this.unmarkVisible(rr), this._recursiveDeleteVisibleChangeTree(rr)
         }))
       }
-      _dropPendingEntries(RR) {
-        this.changes.delete(RR.ref[qR]), RR.forEachChild((RR => this._dropPendingEntries(RR)))
+      _dropPendingEntries(rr) {
+        this.changes.delete(rr.ref[Ir]), rr.forEachChild((rr => this._dropPendingEntries(rr)))
       }
-      _removeViewField(RR, JR, GR) {
-        const yR = JR.get(GR) === tR.ADD;
-        JR.set(GR, tR.DELETE);
-        const uR = RR.ref[RR.encDescriptor.names[GR]],
-          ZR = uR?.[aR];
-        ZR && (this.unmarkVisible(ZR), this._recursiveDeleteVisibleChangeTree(ZR), yR && this._dropPendingEntries(ZR))
+      _removeViewField(rr, Sr, Qr) {
+        const Zr = Sr.get(Qr) === Wr.ADD;
+        Sr.set(Qr, Wr.DELETE);
+        const ar = rr.ref[rr.encDescriptor.names[Qr]],
+          jr = ar?.[tr];
+        jr && (this.unmarkVisible(jr), this._recursiveDeleteVisibleChangeTree(jr), Zr && this._dropPendingEntries(jr))
       }
     }
 
-    function cy(RR) {
-      RR.structSwitchEmitted || (RR.shouldEmitSwitch && (RR.buffer[RR.it.offset++] = 255, JJ.number(RR.buffer, RR.ref[qR], RR.it)), RR.structSwitchEmitted = !0)
+    function MZ(rr) {
+      rr.structSwitchEmitted || (rr.shouldEmitSwitch && (rr.buffer[rr.it.offset++] = 255, SS.number(rr.buffer, rr.ref[Ir], rr.it)), rr.structSwitchEmitted = !0)
     }
 
-    function Py(RR, JR) {
-      zy(RR, JR, tR.ADD)
+    function GZ(rr, Sr) {
+      VZ(rr, Sr, Wr.ADD)
     }
 
-    function Iy(RR, JR) {
-      if (JR._fullSyncGen === RR.gen) return;
-      JR._fullSyncGen = RR.gen;
-      if (!RR.hasView || RR.view.isChangeTreeVisible(JR)) {
-        const GR = JR.encDescriptor;
-        RR.changeTree = JR, RR.ref = JR.ref, RR.encoder = GR.encoder, RR.filter = GR.filter, RR.metadata = GR.metadata, RR.treeIsFiltered = JR.isFiltered, RR.isSchema = GR.isSchema, RR.filterBitmask = GR.filterBitmask, RR.tags = GR.tags, RR.structSwitchEmitted = !1, RR.shouldEmitSwitch = RR.hasView || RR.it.offset > RR.initialOffset || JR !== RR.rootChangeTree, JR.isArray && JR.collDirty.size > 0 && (JR.flags |= 512), tG(JR, RR, Py)
+    function kZ(rr, Sr) {
+      if (Sr._fullSyncGen === rr.gen) return;
+      Sr._fullSyncGen = rr.gen;
+      if (!rr.hasView || rr.view.isChangeTreeVisible(Sr)) {
+        const Qr = Sr.encDescriptor;
+        rr.changeTree = Sr, rr.ref = Sr.ref, rr.encoder = Qr.encoder, rr.filter = Qr.filter, rr.metadata = Qr.metadata, rr.treeIsFiltered = Sr.isFiltered, rr.isSchema = Qr.isSchema, rr.filterBitmask = Qr.filterBitmask, rr.tags = Qr.tags, rr.structSwitchEmitted = !1, rr.shouldEmitSwitch = rr.hasView || rr.it.offset > rr.initialOffset || Sr !== rr.rootChangeTree, Sr.isArray && Sr.collDirty.size > 0 && (Sr.flags |= 512), WQ(Sr, rr, GZ)
       }
-      nG(JR, RR, my)
+      zQ(Sr, rr, AZ)
     }
 
-    function my(RR, JR, GR) {
-      Iy(RR, JR)
+    function AZ(rr, Sr, Qr) {
+      kZ(rr, Sr)
     }
 
-    function zy(RR, JR, GR) {
-      if (JR < 0) {
-        if (RR.treeIsFiltered !== RR.emitFiltered) return;
-        return cy(RR), void(RR.buffer[RR.it.offset++] = 255 & Math.abs(JR))
+    function VZ(rr, Sr, Qr) {
+      if (Sr < 0) {
+        if (rr.treeIsFiltered !== rr.emitFiltered) return;
+        return MZ(rr), void(rr.buffer[rr.it.offset++] = 255 & Math.abs(Sr))
       }
-      if ((RR.isSchema ? RR.treeIsFiltered || (JR < 32 ? 0 !== (RR.filterBitmask & 1 << JR) : void 0 !== RR.tags[JR]) : RR.treeIsFiltered) !== RR.emitFiltered) return;
-      const yR = RR.isEncodeAll ? tR.ADD : GR;
-      void 0 !== yR && (void 0 === RR.filter || RR.filter(RR.ref, JR, RR.view)) && (cy(RR), RR.encoder(RR.self, RR.buffer, RR.changeTree, JR, yR, RR.it, RR.isEncodeAll, RR.hasView, RR.metadata))
+      if ((rr.isSchema ? rr.treeIsFiltered || (Sr < 32 ? 0 !== (rr.filterBitmask & 1 << Sr) : void 0 !== rr.tags[Sr]) : rr.treeIsFiltered) !== rr.emitFiltered) return;
+      const Zr = rr.isEncodeAll ? Wr.ADD : Qr;
+      void 0 !== Zr && (void 0 === rr.filter || rr.filter(rr.ref, Sr, rr.view)) && (MZ(rr), rr.encoder(rr.self, rr.buffer, rr.changeTree, Sr, Zr, rr.it, rr.isEncodeAll, rr.hasView, rr.metadata))
     }
 
-    function Sy(RR, JR) {
-      const GR = new Uint8Array(RR.length + JR.length);
-      return GR.set(RR, 0), GR.set(JR, RR.length), GR
+    function iZ(rr, Sr) {
+      const Qr = new Uint8Array(rr.length + Sr.length);
+      return Qr.set(rr, 0), Qr.set(Sr, rr.length), Qr
     }
-    class jy {
+    class wZ {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(jy.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(wZ.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(RR, JR) {
-        this.context = mJ.cache(RR.constructor), this.root = JR ?? new Oy(this.context), this.setState(RR)
+      constructor(rr, Sr) {
+        this.context = AS.cache(rr.constructor), this.root = Sr ?? new PZ(this.context), this.setState(rr)
       }
-      setState(RR) {
-        this.state = RR, this.state[aR].setRoot(this.root)
+      setState(rr) {
+        this.state = rr, this.state[tr].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          JR = arguments.length > 1 ? arguments[1] : void 0,
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RR.offset;
-        return this._encodeChannel(RR, JR, GR, yR, !1)
+          Sr = arguments.length > 1 ? arguments[1] : void 0,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rr.offset;
+        return this._encodeChannel(rr, Sr, Qr, Zr, !1)
       }
       encodeUnreliable() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          JR = arguments.length > 1 ? arguments[1] : void 0,
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : RR.offset;
-        return this._encodeChannel(RR, JR, GR, yR, !0)
+          Sr = arguments.length > 1 ? arguments[1] : void 0,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rr.offset;
+        return this._encodeChannel(rr, Sr, Qr, Zr, !0)
       }
-      _encodeChannel(RR, JR, GR, yR, tR) {
-        this.root.pendingFilterRefresh.length > 0 && ZG(this.root);
-        const uR = void 0 !== JR,
-          ZR = this.state[aR],
-          qR = this._encodeCtx;
-        qR.self = this, qR.buffer = GR, qR.it = RR, qR.view = JR, qR.isEncodeAll = !1, qR.hasView = uR, qR.emitFiltered = uR;
-        let iR = tR ? this.root.unreliableChanges : this.root.changes;
-        for (; iR = iR.next;) {
-          const GR = iR.changeTree;
-          if (uR && !JR.isChangeTreeVisible(GR)) continue;
-          const fR = tR ? GR.unreliableRecorder : GR;
-          if (!fR || !fR.has()) continue;
-          const VR = GR.encDescriptor;
-          qR.changeTree = GR, qR.ref = GR.ref, qR.encoder = VR.encoder, qR.filter = VR.filter, qR.metadata = VR.metadata, qR.treeIsFiltered = GR.isFiltered, qR.isSchema = VR.isSchema, qR.filterBitmask = VR.filterBitmask, qR.tags = VR.tags, qR.structSwitchEmitted = !1, qR.isRootTree = GR === ZR, qR.shouldEmitSwitch = uR || RR.offset > yR || !qR.isRootTree, fR.forEachWithCtx(qR, zy)
+      _encodeChannel(rr, Sr, Qr, Zr, Wr) {
+        this.root.pendingFilterRefresh.length > 0 && jQ(this.root);
+        const ar = void 0 !== Sr,
+          jr = this.state[tr],
+          Ir = this._encodeCtx;
+        Ir.self = this, Ir.buffer = Qr, Ir.it = rr, Ir.view = Sr, Ir.isEncodeAll = !1, Ir.hasView = ar, Ir.emitFiltered = ar;
+        let fr = Wr ? this.root.unreliableChanges : this.root.changes;
+        for (; fr = fr.next;) {
+          const Qr = fr.changeTree;
+          if (ar && !Sr.isChangeTreeVisible(Qr)) continue;
+          const Er = Wr ? Qr.unreliableRecorder : Qr;
+          if (!Er || !Er.has()) continue;
+          const pr = Qr.encDescriptor;
+          Ir.changeTree = Qr, Ir.ref = Qr.ref, Ir.encoder = pr.encoder, Ir.filter = pr.filter, Ir.metadata = pr.metadata, Ir.treeIsFiltered = Qr.isFiltered, Ir.isSchema = pr.isSchema, Ir.filterBitmask = pr.filterBitmask, Ir.tags = pr.tags, Ir.structSwitchEmitted = !1, Ir.isRootTree = Qr === jr, Ir.shouldEmitSwitch = ar || rr.offset > Zr || !Ir.isRootTree, Er.forEachWithCtx(Ir, VZ)
         }
-        return tR || uR || !this._isStreamBroadcastMode || this._emitStreamBroadcast(GR, RR), RR.offset > GR.byteLength ? (GR = this._resizeBuffer(GR, RR.offset), RR.offset = yR, this._encodeChannel(RR, JR, GR, yR, tR)) : GR.subarray(0, RR.offset)
+        return Wr || ar || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Qr, rr), rr.offset > Qr.byteLength ? (Qr = this._resizeBuffer(Qr, rr.offset), rr.offset = Zr, this._encodeChannel(rr, Sr, Qr, Zr, Wr)) : Qr.subarray(0, rr.offset)
       }
-      encodeFullSync(RR, JR, GR, yR) {
-        let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : RR.offset;
-        this.root.pendingFilterRefresh.length > 0 && ZG(this.root);
-        const uR = void 0 !== yR,
-          ZR = this.state[aR],
-          qR = this._encodeCtx;
-        return qR.self = this, qR.buffer = JR, qR.it = RR, qR.view = yR, qR.isEncodeAll = !0, qR.hasView = uR, qR.emitFiltered = GR, qR.gen = ++this._fullSyncGen, qR.initialOffset = tR, qR.rootChangeTree = ZR, Iy(qR, ZR), RR.offset > JR.byteLength ? (JR = this._resizeBuffer(JR, RR.offset), RR.offset = tR, this.encodeFullSync(RR, JR, GR, yR, tR)) : JR.subarray(0, RR.offset)
+      encodeFullSync(rr, Sr, Qr, Zr) {
+        let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : rr.offset;
+        this.root.pendingFilterRefresh.length > 0 && jQ(this.root);
+        const ar = void 0 !== Zr,
+          jr = this.state[tr],
+          Ir = this._encodeCtx;
+        return Ir.self = this, Ir.buffer = Sr, Ir.it = rr, Ir.view = Zr, Ir.isEncodeAll = !0, Ir.hasView = ar, Ir.emitFiltered = Qr, Ir.gen = ++this._fullSyncGen, Ir.initialOffset = Wr, Ir.rootChangeTree = jr, kZ(Ir, jr), rr.offset > Sr.byteLength ? (Sr = this._resizeBuffer(Sr, rr.offset), rr.offset = Wr, this.encodeFullSync(rr, Sr, Qr, Zr, Wr)) : Sr.subarray(0, rr.offset)
       }
-      _resizeBuffer(RR, JR) {
-        const GR = Math.ceil(JR / jy.BUFFER_SIZE) * jy.BUFFER_SIZE,
-          yR = new Uint8Array(GR);
-        return yR.set(RR), RR === this.sharedBuffer && (this.sharedBuffer = yR), yR
+      _resizeBuffer(rr, Sr) {
+        const Qr = Math.ceil(Sr / wZ.BUFFER_SIZE) * wZ.BUFFER_SIZE,
+          Zr = new Uint8Array(Qr);
+        return Zr.set(rr), rr === this.sharedBuffer && (this.sharedBuffer = Zr), Zr
       }
       encodeAll() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(RR, JR, !1)
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(rr, Sr, !1)
       }
-      encodeAllView(RR, JR, GR) {
-        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const tR = GR.offset;
-        return yR = this.encodeFullSync(GR, yR, !0, RR, tR), Sy(yR.subarray(0, JR), yR.subarray(tR, GR.offset))
+      encodeAllView(rr, Sr, Qr) {
+        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Wr = Qr.offset;
+        return Zr = this.encodeFullSync(Qr, Zr, !0, rr, Wr), iZ(Zr.subarray(0, Sr), Zr.subarray(Wr, Qr.offset))
       }
-      ensureCapacity(RR, JR) {
-        if (JR + jy.BUFFER_SIZE <= RR.byteLength) return RR;
-        const GR = Math.ceil((JR + jy.BUFFER_SIZE) / jy.BUFFER_SIZE) * jy.BUFFER_SIZE,
-          yR = new Uint8Array(GR);
-        return yR.set(RR.subarray(0, JR)), RR === this.sharedBuffer && (this.sharedBuffer = yR), yR
+      ensureCapacity(rr, Sr) {
+        if (Sr + wZ.BUFFER_SIZE <= rr.byteLength) return rr;
+        const Qr = Math.ceil((Sr + wZ.BUFFER_SIZE) / wZ.BUFFER_SIZE) * wZ.BUFFER_SIZE,
+          Zr = new Uint8Array(Qr);
+        return Zr.set(rr.subarray(0, Sr)), rr === this.sharedBuffer && (this.sharedBuffer = Zr), Zr
       }
-      encodeView(RR, JR, GR) {
-        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          uR = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const ZR = GR.offset;
-        this._emitStreamPriority(RR);
-        for (const iR of RR.changes.keys()) {
-          const JR = RR.changes.get(iR),
-            uR = this.root.changeTrees[iR];
-          if (void 0 === uR) {
-            RR.changes.delete(iR);
+      encodeView(rr, Sr, Qr) {
+        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          ar = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const jr = Qr.offset;
+        this._emitStreamPriority(rr);
+        for (const fr of rr.changes.keys()) {
+          const Sr = rr.changes.get(fr),
+            ar = this.root.changeTrees[fr];
+          if (void 0 === ar) {
+            rr.changes.delete(fr);
             continue
           }
-          if (0 === JR.size) continue;
-          const ZR = uR.encDescriptor,
-            fR = ZR.encoder,
-            VR = ZR.metadata,
-            KR = uR.ref,
-            rR = uR.refTarget;
-          yR = this.ensureCapacity(yR, GR.offset), yR[GR.offset++] = 255, JJ.number(yR, KR[qR], GR);
-          for (const [iR, eR] of JR) {
-            let JR;
-            if (-1 === iR) {
-              const RR = rR.tmpItems,
-                JR = rR.deletedIndexes;
-              for (let ZR = 0; ZR < RR.length; ZR++) void 0 !== RR[ZR] && !0 !== JR[ZR] && fR(this, yR, uR, ZR, tR.ADD, GR, !1, !0, VR);
+          if (0 === Sr.size) continue;
+          const jr = ar.encDescriptor,
+            Er = jr.encoder,
+            pr = jr.metadata,
+            xr = ar.ref,
+            Nr = ar.refTarget;
+          Zr = this.ensureCapacity(Zr, Qr.offset), Zr[Qr.offset++] = 255, SS.number(Zr, xr[Ir], Qr);
+          for (const [fr, Ur] of Sr) {
+            let Sr;
+            if (-1 === fr) {
+              const rr = Nr.tmpItems,
+                Sr = Nr.deletedIndexes;
+              for (let jr = 0; jr < rr.length; jr++) void 0 !== rr[jr] && !0 !== Sr[jr] && Er(this, Zr, ar, jr, Wr.ADD, Qr, !1, !0, pr);
               continue
             }
-            if ("number" === typeof iR) JR = iR;
+            if ("number" === typeof fr) Sr = fr;
             else {
-              const GR = iR.indexInParent(KR);
-              if (void 0 === GR) continue;
-              if (JR = GR, eR === tR.ADD && uR.getChange(JR) === tR.DELETE) {
-                RR.changes.delete(iR.ref[qR]);
+              const Qr = fr.indexInParent(xr);
+              if (void 0 === Qr) continue;
+              if (Sr = Qr, Ur === Wr.ADD && ar.getChange(Sr) === Wr.DELETE) {
+                rr.changes.delete(fr.ref[Ir]);
                 continue
               }
             }
-            fR(this, yR, uR, JR, void 0 !== rR[wR](JR) && eR || tR.DELETE, GR, !1, !0, VR)
+            Er(this, Zr, ar, Sr, void 0 !== Nr[mr](Sr) && Ur || Wr.DELETE, Qr, !1, !0, pr)
           }
         }
-        return RR.changes.clear(), yR = this.encode(GR, RR, yR), uR ? Sy(yR.subarray(0, JR), yR.subarray(ZR, GR.offset)) : yR.subarray(ZR, GR.offset)
+        return rr.changes.clear(), Zr = this.encode(Qr, rr, Zr), ar ? iZ(Zr.subarray(0, Sr), Zr.subarray(jr, Qr.offset)) : Zr.subarray(jr, Qr.offset)
       }
-      encodeUnreliableView(RR, JR, GR) {
-        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const tR = GR.offset;
-        return yR = this.encodeUnreliable(GR, RR, yR, tR), Sy(yR.subarray(0, JR), yR.subarray(tR, GR.offset))
+      encodeUnreliableView(rr, Sr, Qr) {
+        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Wr = Qr.offset;
+        return Zr = this.encodeUnreliable(Qr, rr, Zr, Wr), iZ(Zr.subarray(0, Sr), Zr.subarray(Wr, Qr.offset))
       }
-      _emitStreamBroadcast(RR, JR) {
-        const GR = this.root.streamTrees;
-        for (const yR of GR) {
-          const GR = yR,
-            uR = GR[aR],
-            ZR = GR[qR];
-          if (void 0 === ZR) continue;
-          const iR = GR._stream,
-            fR = iR.broadcastDeletes,
-            VR = iR.broadcastPending,
-            KR = iR.sentBroadcast,
-            rR = fR.size > 0,
-            eR = VR.size > 0,
-            LR = uR.encDescriptor,
-            nR = LR.encoder,
-            UR = LR.metadata;
-          if (rR || eR) {
-            if (RR[JR.offset++] = 255, JJ.number(RR, ZR, JR), rR) {
-              for (const GR of fR) nR(this, RR, uR, GR, tR.DELETE, JR, !1, !1, UR);
-              fR.clear()
+      _emitStreamBroadcast(rr, Sr) {
+        const Qr = this.root.streamTrees;
+        for (const Zr of Qr) {
+          const Qr = Zr,
+            ar = Qr[tr],
+            jr = Qr[Ir];
+          if (void 0 === jr) continue;
+          const fr = Qr._stream,
+            Er = fr.broadcastDeletes,
+            pr = fr.broadcastPending,
+            xr = fr.sentBroadcast,
+            Nr = Er.size > 0,
+            Ur = pr.size > 0,
+            hr = ar.encDescriptor,
+            zr = hr.encoder,
+            Yr = hr.metadata;
+          if (Nr || Ur) {
+            if (rr[Sr.offset++] = 255, SS.number(rr, jr, Sr), Nr) {
+              for (const Qr of Er) zr(this, rr, ar, Qr, Wr.DELETE, Sr, !1, !1, Yr);
+              Er.clear()
             }
-            const yR = iR.maxPerTick,
-              eR = [];
-            let LR = 0;
-            const WR = [];
-            for (const ZR of VR) {
-              if (LR >= yR) break;
-              const qR = GR[wR](ZR);
-              void 0 !== qR ? (nR(this, RR, uR, ZR, tR.ADD, JR, !1, !1, UR), KR.add(ZR), eR.push(qR), WR.push(ZR), LR++) : WR.push(ZR)
+            const Zr = fr.maxPerTick,
+              Ur = [];
+            let hr = 0;
+            const nr = [];
+            for (const jr of pr) {
+              if (hr >= Zr) break;
+              const Ir = Qr[mr](jr);
+              void 0 !== Ir ? (zr(this, rr, ar, jr, Wr.ADD, Sr, !1, !1, Yr), xr.add(jr), Ur.push(Ir), nr.push(jr), hr++) : nr.push(jr)
             }
-            for (const RR of WR) VR.delete(RR);
-            for (const GR of eR) {
-              const yR = GR[aR];
-              if (void 0 === yR) continue;
-              const uR = GR[qR];
-              if (void 0 === uR) continue;
-              RR[JR.offset++] = 255, JJ.number(RR, uR, JR);
-              const ZR = yR.encDescriptor,
-                iR = ZR.encoder,
-                fR = ZR.metadata;
-              yR.forEachLive((GR => {
-                kJ.hasUnreliableAtIndex(fR, GR) || iR(this, RR, yR, GR, tR.ADD, JR, !1, !1, fR)
+            for (const rr of nr) pr.delete(rr);
+            for (const Qr of Ur) {
+              const Zr = Qr[tr];
+              if (void 0 === Zr) continue;
+              const ar = Qr[Ir];
+              if (void 0 === ar) continue;
+              rr[Sr.offset++] = 255, SS.number(rr, ar, Sr);
+              const jr = Zr.encDescriptor,
+                fr = jr.encoder,
+                Er = jr.metadata;
+              Zr.forEachLive((Qr => {
+                bS.hasUnreliableAtIndex(Er, Qr) || fr(this, rr, Zr, Qr, Wr.ADD, Sr, !1, !1, Er)
               }))
             }
           }
-          for (const yR of KR) {
-            const tR = GR[wR](yR);
-            if (void 0 === tR) continue;
-            const uR = tR[aR];
-            if (void 0 === uR || !uR.has()) continue;
-            const ZR = tR[qR];
-            if (void 0 === ZR) continue;
-            RR[JR.offset++] = 255, JJ.number(RR, ZR, JR);
-            const iR = uR.encDescriptor,
-              fR = iR.encoder,
-              VR = iR.metadata;
-            uR.forEach(((GR, yR) => {
-              GR < 0 || kJ.hasUnreliableAtIndex(VR, GR) || fR(this, RR, uR, GR, yR, JR, !1, !1, VR)
+          for (const Zr of xr) {
+            const Wr = Qr[mr](Zr);
+            if (void 0 === Wr) continue;
+            const ar = Wr[tr];
+            if (void 0 === ar || !ar.has()) continue;
+            const jr = Wr[Ir];
+            if (void 0 === jr) continue;
+            rr[Sr.offset++] = 255, SS.number(rr, jr, Sr);
+            const fr = ar.encDescriptor,
+              Er = fr.encoder,
+              pr = fr.metadata;
+            ar.forEach(((Qr, Zr) => {
+              Qr < 0 || bS.hasUnreliableAtIndex(pr, Qr) || Er(this, rr, ar, Qr, Zr, Sr, !1, !1, pr)
             }))
           }
         }
       }
-      _emitStreamPriority(RR) {
-        const JR = this.root.streamTrees;
-        if (0 === JR.size) return;
-        const GR = RR.id;
-        for (const yR of JR) {
-          const JR = yR,
-            uR = JR._stream,
-            ZR = uR.pendingByView.get(GR);
-          if (void 0 === ZR || 0 === ZR.size) continue;
-          const iR = uR.priorityByView?.get(GR),
-            fR = void 0 !== iR,
-            VR = uR.priority,
-            KR = uR.maxPerTick,
-            rR = [],
-            eR = [];
-          if (fR || void 0 !== VR) {
-            const GR = [],
-              yR = [];
-            let tR = 0;
-            for (const uR of ZR) {
-              const ZR = JR[wR](uR);
-              if (void 0 === ZR) {
-                eR.push(uR);
+      _emitStreamPriority(rr) {
+        const Sr = this.root.streamTrees;
+        if (0 === Sr.size) return;
+        const Qr = rr.id;
+        for (const Zr of Sr) {
+          const Sr = Zr,
+            ar = Sr._stream,
+            jr = ar.pendingByView.get(Qr);
+          if (void 0 === jr || 0 === jr.size) continue;
+          const fr = ar.priorityByView?.get(Qr),
+            Er = void 0 !== fr,
+            pr = ar.priority,
+            xr = ar.maxPerTick,
+            Nr = [],
+            Ur = [];
+          if (Er || void 0 !== pr) {
+            const Qr = [],
+              Zr = [];
+            let Wr = 0;
+            for (const ar of jr) {
+              const jr = Sr[mr](ar);
+              if (void 0 === jr) {
+                Ur.push(ar);
                 continue
               }
-              const qR = fR ? iR(ZR) : VR(RR, ZR);
-              if (tR < KR) {
-                let RR = tR++;
-                for (; RR > 0 && yR[RR - 1] < qR;) yR[RR] = yR[RR - 1], GR[RR] = GR[RR - 1], RR--;
-                yR[RR] = qR, GR[RR] = uR
-              } else if (qR > yR[KR - 1]) {
-                let RR = KR - 1;
-                for (; RR > 0 && yR[RR - 1] < qR;) yR[RR] = yR[RR - 1], GR[RR] = GR[RR - 1], RR--;
-                yR[RR] = qR, GR[RR] = uR
+              const Ir = Er ? fr(jr) : pr(rr, jr);
+              if (Wr < xr) {
+                let rr = Wr++;
+                for (; rr > 0 && Zr[rr - 1] < Ir;) Zr[rr] = Zr[rr - 1], Qr[rr] = Qr[rr - 1], rr--;
+                Zr[rr] = Ir, Qr[rr] = ar
+              } else if (Ir > Zr[xr - 1]) {
+                let rr = xr - 1;
+                for (; rr > 0 && Zr[rr - 1] < Ir;) Zr[rr] = Zr[rr - 1], Qr[rr] = Qr[rr - 1], rr--;
+                Zr[rr] = Ir, Qr[rr] = ar
               }
             }
-            for (let RR = 0; RR < tR; RR++) rR.push(GR[RR])
+            for (let rr = 0; rr < Wr; rr++) Nr.push(Qr[rr])
           } else
-            for (const RR of ZR) {
-              if (rR.length >= KR) break;
-              rR.push(RR)
+            for (const rr of jr) {
+              if (Nr.length >= xr) break;
+              Nr.push(rr)
             }
-          for (const RR of eR) ZR.delete(RR);
-          const LR = rR.length;
-          let nR = uR.sentByView.get(GR);
-          void 0 === nR && (nR = new Set, uR.sentByView.set(GR, nR));
-          for (let GR = 0; GR < LR; GR++) {
-            const yR = rR[GR],
-              uR = JR[wR](yR);
-            if (void 0 === uR) {
-              ZR.delete(yR);
+          for (const rr of Ur) jr.delete(rr);
+          const hr = Nr.length;
+          let zr = ar.sentByView.get(Qr);
+          void 0 === zr && (zr = new Set, ar.sentByView.set(Qr, zr));
+          for (let Qr = 0; Qr < hr; Qr++) {
+            const Zr = Nr[Qr],
+              ar = Sr[mr](Zr);
+            if (void 0 === ar) {
+              jr.delete(Zr);
               continue
             }
-            RR._addImmediate(uR);
-            const iR = uR[aR];
-            if (void 0 !== iR) {
-              const JR = uR[qR];
-              let GR = RR.changes.get(JR);
-              void 0 === GR && (GR = new Map, RR.changes.set(JR, GR));
-              const yR = iR.metadata;
-              iR.forEachLive((RR => {
-                kJ.hasUnreliableAtIndex(yR, RR) || GR.set(RR, tR.ADD)
+            rr._addImmediate(ar);
+            const fr = ar[tr];
+            if (void 0 !== fr) {
+              const Sr = ar[Ir];
+              let Qr = rr.changes.get(Sr);
+              void 0 === Qr && (Qr = new Map, rr.changes.set(Sr, Qr));
+              const Zr = fr.metadata;
+              fr.forEachLive((rr => {
+                bS.hasUnreliableAtIndex(Zr, rr) || Qr.set(rr, Wr.ADD)
               }))
             }
-            ZR.delete(yR), nR.add(yR)
+            jr.delete(Zr), zr.add(Zr)
           }
         }
       }
       discardChanges() {
-        const RR = this.root.changes;
-        let JR = RR.next;
-        const GR = this.root;
-        for (; JR;) {
-          const RR = JR.next;
-          JR.changeTree.endEncode(), GR.releaseNode(JR), JR = RR
+        const rr = this.root.changes;
+        let Sr = rr.next;
+        const Qr = this.root;
+        for (; Sr;) {
+          const rr = Sr.next;
+          Sr.changeTree.endEncode(), Qr.releaseNode(Sr), Sr = rr
         }
-        RR.next = void 0, RR.tail = void 0
+        rr.next = void 0, rr.tail = void 0
       }
       discardUnreliableChanges() {
-        const RR = this.root.unreliableChanges;
-        let JR = RR.next;
-        const GR = this.root;
-        for (; JR;) {
-          const RR = JR.next;
-          JR.changeTree.endEncodeUnreliable(), GR.releaseNode(JR), JR = RR
+        const rr = this.root.unreliableChanges;
+        let Sr = rr.next;
+        const Qr = this.root;
+        for (; Sr;) {
+          const rr = Sr.next;
+          Sr.changeTree.endEncodeUnreliable(), Qr.releaseNode(Sr), Sr = rr
         }
-        RR.next = void 0, RR.tail = void 0
+        rr.next = void 0, rr.tail = void 0
       }
-      tryEncodeTypeId(RR, JR, GR, yR) {
-        const tR = this.context.getTypeId(JR),
-          uR = this.context.getTypeId(GR);
-        void 0 !== uR ? tR !== uR && (RR[yR.offset++] = 213, JJ.number(RR, uR, yR)) : console.warn(`@colyseus/schema WARNING: Class "${GR.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(rr, Sr, Qr, Zr) {
+        const Wr = this.context.getTypeId(Sr),
+          ar = this.context.getTypeId(Qr);
+        void 0 !== ar ? Wr !== ar && (rr[Zr.offset++] = 213, SS.number(rr, ar, Zr)) : console.warn(`@colyseus/schema WARNING: Class "${Qr.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const RR = this.root;
-        if (0 === RR.streamTrees.size) return !1;
-        const JR = 0 === RR.activeViews.size;
-        for (const GR of RR.streamTrees)
-          if (JR ? OJ(GR) : vJ(GR, RR)) return !0;
+        const rr = this.root;
+        if (0 === rr.streamTrees.size) return !1;
+        const Sr = 0 === rr.activeViews.size;
+        for (const Qr of rr.streamTrees)
+          if (Sr ? PS(Qr) : XS(Qr, rr)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class dy extends Error {
-      constructor(RR) {
-        super(RR), this.name = "DecodingWarning"
+    class cZ extends Error {
+      constructor(rr) {
+        super(rr), this.name = "DecodingWarning"
       }
     }
-    const Ey = {
+    const FZ = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Yy {
+    class oZ {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(RR, JR) {
-        let GR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(RR, JR), void 0 === JR[qR] ? (Ey.value = RR, Object.defineProperty(JR, qR, Ey)) : JR[qR] !== RR && (JR[qR] = RR), GR && (this.refCount[RR] = (this.refCount[RR] || 0) + 1), this.deletedRefs.has(RR) && this.deletedRefs.delete(RR)
+      addRef(rr, Sr) {
+        let Qr = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(rr, Sr), void 0 === Sr[Ir] ? (FZ.value = rr, Object.defineProperty(Sr, Ir, FZ)) : Sr[Ir] !== rr && (Sr[Ir] = rr), Qr && (this.refCount[rr] = (this.refCount[rr] || 0) + 1), this.deletedRefs.has(rr) && this.deletedRefs.delete(rr)
       }
-      removeRef(RR) {
-        const JR = this.refCount[RR];
-        if (void 0 !== JR)
-          if (0 !== JR)(this.refCount[RR] = JR - 1) <= 0 && this.deletedRefs.add(RR);
+      removeRef(rr) {
+        const Sr = this.refCount[rr];
+        if (void 0 !== Sr)
+          if (0 !== Sr)(this.refCount[rr] = Sr - 1) <= 0 && this.deletedRefs.add(rr);
           else try {
-            const JR = this.refs.get(RR);
-            throw new dy(`trying to remove refId '${RR}' with 0 refCount (${JR.constructor.name}: ${JSON.stringify(JR)})`)
-          } catch (ut) {
-            console.warn(ut)
+            const Sr = this.refs.get(rr);
+            throw new cZ(`trying to remove refId '${rr}' with 0 refCount (${Sr.constructor.name}: ${JSON.stringify(Sr)})`)
+          } catch (aW) {
+            console.warn(aW)
           } else try {
-            throw new dy("trying to remove refId that doesn't exist: " + RR)
-          } catch (ut) {
-            console.warn(ut)
+            throw new cZ("trying to remove refId that doesn't exist: " + rr)
+          } catch (aW) {
+            console.warn(aW)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((RR => {
-          if (this.refCount[RR] > 0) return;
-          const JR = this.refs.get(RR),
-            GR = JR.constructor[Symbol.metadata];
-          if (null != GR)
-            for (const yR in GR) {
-              const RR = JR[GR[yR].name];
-              if ("object" === typeof RR && RR) {
-                const JR = RR[qR];
-                void 0 === JR || this.deletedRefs.has(JR) || this.removeRef(JR)
+        this.deletedRefs.forEach((rr => {
+          if (this.refCount[rr] > 0) return;
+          const Sr = this.refs.get(rr),
+            Qr = Sr.constructor[Symbol.metadata];
+          if (null != Qr)
+            for (const Zr in Qr) {
+              const rr = Sr[Qr[Zr].name];
+              if ("object" === typeof rr && rr) {
+                const Sr = rr[Ir];
+                void 0 === Sr || this.deletedRefs.has(Sr) || this.removeRef(Sr)
               }
-            } else "function" === typeof JR[LR] && Array.from(JR.values()).forEach((RR => {
-              const JR = RR[qR];
-              void 0 === JR || this.deletedRefs.has(JR) || this.removeRef(JR)
+            } else "function" === typeof Sr[hr] && Array.from(Sr.values()).forEach((rr => {
+              const Sr = rr[Ir];
+              void 0 === Sr || this.deletedRefs.has(Sr) || this.removeRef(Sr)
             }));
-          this.refs.delete(RR), delete this.refCount[RR], delete this.callbacks[RR]
+          this.refs.delete(rr), delete this.refCount[rr], delete this.callbacks[rr]
         })), this.deletedRefs.clear()
       }
-      addCallback(RR, JR, GR) {
-        if (void 0 === RR) {
-          const RR = "number" === typeof JR ? tR[JR] : JR;
-          throw new Error(`Can't addCallback on '${RR}' (refId is undefined)`)
+      addCallback(rr, Sr, Qr) {
+        if (void 0 === rr) {
+          const rr = "number" === typeof Sr ? Wr[Sr] : Sr;
+          throw new Error(`Can't addCallback on '${rr}' (refId is undefined)`)
         }
-        return this.callbacks[RR] || (this.callbacks[RR] = {}), this.callbacks[RR][JR] || (this.callbacks[RR][JR] = []), this.callbacks[RR][JR].push(GR), () => this.removeCallback(RR, JR, GR)
+        return this.callbacks[rr] || (this.callbacks[rr] = {}), this.callbacks[rr][Sr] || (this.callbacks[rr][Sr] = []), this.callbacks[rr][Sr].push(Qr), () => this.removeCallback(rr, Sr, Qr)
       }
-      removeCallback(RR, JR, GR) {
-        const yR = this.callbacks?.[RR]?.[JR]?.indexOf(GR);
-        void 0 !== yR && -1 !== yR && xy(this.callbacks[RR][JR], yR)
+      removeCallback(rr, Sr, Qr) {
+        const Zr = this.callbacks?.[rr]?.[Sr]?.indexOf(Qr);
+        void 0 !== Zr && -1 !== Zr && HZ(this.callbacks[rr][Sr], Zr)
       }
     }
-    class ky {
+    class bZ {
       context;
       state;
       root;
       currentRefId = 0;
-      jD;
+      oR;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(RR, JR) {
-        this.setState(RR), this.context = JR || new mJ(RR.constructor)
+      constructor(rr, Sr) {
+        this.setState(rr), this.context = Sr || new AS(rr.constructor)
       }
-      setState(RR) {
-        this.state = RR, this.root = new Yy, this.root.addRef(0, RR)
+      setState(rr) {
+        this.state = rr, this.root = new oZ, this.root.addRef(0, rr)
       }
-      decode(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const tR = void 0 !== this.jD ? [] : null,
-          uR = this.root,
-          ZR = RR.byteLength;
-        let qR = GR.constructor[VR];
-        for (this.currentRefId = 0; JR.offset < ZR;) {
-          if (RR[JR.offset] == yR) {
-            JR.offset++, GR[AR]?.();
-            const yR = WJ.number(RR, JR),
-              tR = uR.refs.get(yR);
-            tR ? (GR = tR, qR = GR.constructor[VR], this.currentRefId = yR) : (console.error(`"refId" not found: ${yR}`, {
-              previousRef: GR,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Wr = void 0 !== this.oR ? [] : null,
+          ar = this.root,
+          jr = rr.byteLength;
+        let Ir = Qr.constructor[pr];
+        for (this.currentRefId = 0; Sr.offset < jr;) {
+          if (rr[Sr.offset] == Zr) {
+            Sr.offset++, Qr[er]?.();
+            const Zr = nS.number(rr, Sr),
+              Wr = ar.refs.get(Zr);
+            Wr ? (Qr = Wr, Ir = Qr.constructor[pr], this.currentRefId = Zr) : (console.error(`"refId" not found: ${Zr}`, {
+              previousRef: Qr,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(RR, JR, ZR));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(rr, Sr, jr));
             continue
-          } - 1 !== qR(this, RR, JR, GR, tR) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(RR, JR, ZR))
+          } - 1 !== Ir(this, rr, Sr, Qr, Wr) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(rr, Sr, jr))
         }
-        return GR[AR]?.(), null !== this.resyncVisited && function(RR, JR) {
-          RR.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : mG(RR, RR.state, new Set, JR)
-        }(this, tR), null !== tR && this.jD?.(tR), uR.garbageCollectDeletedRefs(), tR
+        return Qr[er]?.(), null !== this.resyncVisited && function(rr, Sr) {
+          rr.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : AQ(rr, rr.state, new Set, Sr)
+        }(this, Wr), null !== Wr && this.oR?.(Wr), ar.garbageCollectDeletedRefs(), Wr
       }
-      decodeResync(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(RR, JR)
+          return this.decode(rr, Sr)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(RR, JR, GR) {
+      skipCurrentStructure(rr, Sr, Qr) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const tR = {
-          offset: JR.offset
+        const Wr = {
+          offset: Sr.offset
         };
-        for (; JR.offset < GR && (RR[JR.offset] !== yR || (tR.offset = JR.offset + 1, !this.root.refs.has(WJ.number(RR, tR))));) JR.offset++
+        for (; Sr.offset < Qr && (rr[Sr.offset] !== Zr || (Wr.offset = Sr.offset + 1, !this.root.refs.has(nS.number(rr, Wr))));) Sr.offset++
       }
-      getInstanceType(RR, JR, GR) {
-        let yR;
-        if (213 === RR[JR.offset]) {
-          JR.offset++;
-          const GR = WJ.number(RR, JR);
-          yR = this.context.get(GR)
+      getInstanceType(rr, Sr, Qr) {
+        let Zr;
+        if (213 === rr[Sr.offset]) {
+          Sr.offset++;
+          const Qr = nS.number(rr, Sr);
+          Zr = this.context.get(Qr)
         }
-        return yR || GR
+        return Zr || Qr
       }
-      createInstanceOfType(RR) {
-        return RR.initializeForDecoder()
+      createInstanceOfType(rr) {
+        return rr.initializeForDecoder()
       }
-      removeChildRefs(RR, JR) {
-        const GR = "string" !== typeof RR[LR],
-          yR = RR[qR];
-        RR.forEach(((uR, ZR) => {
-          JR?.push({
-            ref: RR,
-            refId: yR,
-            op: tR.DELETE,
-            field: ZR,
+      removeChildRefs(rr, Sr) {
+        const Qr = "string" !== typeof rr[hr],
+          Zr = rr[Ir];
+        rr.forEach(((ar, jr) => {
+          Sr?.push({
+            ref: rr,
+            refId: Zr,
+            op: Wr.DELETE,
+            field: jr,
             value: void 0,
-            previousValue: uR
-          }), GR && this.root.removeRef(uR[qR])
+            previousValue: ar
+          }), Qr && this.root.removeRef(ar[Ir])
         }))
       }
     }
-    const Qy = py({
-        min: ry.float64(),
-        max: ry.float64(),
-        bits: ry.uint8(),
-        mode: ry.uint8()
+    const JZ = OZ({
+        min: NZ.float64(),
+        max: NZ.float64(),
+        bits: NZ.uint8(),
+        mode: NZ.uint8()
       }, "QuantizedDescriptor"),
-      Fy = py({
-        name: ry.string(),
-        type: ry.string(),
-        referencedType: ry.number(),
-        childPrimitive: ry.string(),
-        quantized: ry.ref(Qy).optional()
+      DZ = OZ({
+        name: NZ.string(),
+        type: NZ.string(),
+        referencedType: NZ.number(),
+        childPrimitive: NZ.string(),
+        quantized: NZ.ref(JZ).optional()
       }, "ReflectionField"),
-      Ty = py({
-        id: ry.number(),
-        extendsId: ry.number(),
-        fields: ry.array(Fy)
+      dZ = OZ({
+        id: NZ.number(),
+        extendsId: NZ.number(),
+        fields: NZ.array(DZ)
       }, "ReflectionType"),
-      sy = py({
-        types: ry.array(Ty),
-        rootType: ry.number()
+      sZ = OZ({
+        types: NZ.array(dZ),
+        rootType: NZ.number()
       }, "Reflection");
 
-    function hy(RR) {
-      const JR = RR.root,
-        GR = JR.callbacks,
-        yR = new WeakMap;
-      let uR;
+    function uZ(rr) {
+      const Sr = rr.root,
+        Qr = Sr.callbacks,
+        Zr = new WeakMap;
+      let ar;
 
-      function ZR(RR, GR) {
-        let fR = GR.instance?.constructor[Symbol.metadata] || RR,
-          VR = GR.instance && "function" === typeof GR.instance.forEach || RR && !by.is(RR);
-        if (fR && !VR) {
-          const RR = function(RR, tR, ZR, iR) {
-            return iR && void 0 !== GR.instance[tR] && !yR.has(uR) && ZR(GR.instance[tR], void 0), JR.addCallback(RR[qR], tR, ZR)
+      function jr(rr, Qr) {
+        let Er = Qr.instance?.constructor[Symbol.metadata] || rr,
+          pr = Qr.instance && "function" === typeof Qr.instance.forEach || rr && !lZ.is(rr);
+        if (Er && !pr) {
+          const rr = function(rr, Wr, jr, fr) {
+            return fr && void 0 !== Qr.instance[Wr] && !Zr.has(ar) && jr(Qr.instance[Wr], void 0), Sr.addCallback(rr[Ir], Wr, jr)
           };
           return new Proxy({
-            listen: function(JR, tR) {
-              let ZR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (GR.instance) return RR(GR.instance, JR, tR, ZR);
+            listen: function(Sr, Wr) {
+              let jr = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Qr.instance) return rr(Qr.instance, Sr, Wr, jr);
               {
-                let qR = () => {};
-                return GR.onInstanceAvailable(((GR, iR) => {
-                  qR = RR(GR, JR, tR, ZR && iR && !yR.has(uR))
-                })), () => qR()
+                let Ir = () => {};
+                return Qr.onInstanceAvailable(((Qr, fr) => {
+                  Ir = rr(Qr, Sr, Wr, jr && fr && !Zr.has(ar))
+                })), () => Ir()
               }
             },
-            onChange: function(RR) {
-              return JR.addCallback(GR.instance[qR], tR.REPLACE, RR)
+            onChange: function(rr) {
+              return Sr.addCallback(Qr.instance[Ir], Wr.REPLACE, rr)
             },
-            bindTo: function(RR, yR) {
-              return yR || (yR = Object.keys(fR).map((RR => fR[RR].name))), JR.addCallback(GR.instance[qR], tR.REPLACE, (() => {
-                yR.forEach((JR => RR[JR] = GR.instance[JR]))
+            bindTo: function(rr, Zr) {
+              return Zr || (Zr = Object.keys(Er).map((rr => Er[rr].name))), Sr.addCallback(Qr.instance[Ir], Wr.REPLACE, (() => {
+                Zr.forEach((Sr => rr[Sr] = Qr.instance[Sr]))
               }))
             }
           }, {
-            get(RR, JR) {
-              const yR = fR[fR[JR]];
-              if (yR) {
-                const RR = GR.instance?.[JR],
-                  tR = yR => {
-                    const tR = iR(GR.instance).listen(JR, ((RR, JR) => {
-                      yR(RR, !1), tR?.()
+            get(rr, Sr) {
+              const Zr = Er[Er[Sr]];
+              if (Zr) {
+                const rr = Qr.instance?.[Sr],
+                  Wr = Zr => {
+                    const Wr = fr(Qr.instance).listen(Sr, ((rr, Sr) => {
+                      Zr(rr, !1), Wr?.()
                     }), !1);
-                    void 0 !== RR?.[qR] && yR(RR, !0)
+                    void 0 !== rr?.[Ir] && Zr(rr, !0)
                   };
-                return ZR(yR.type, {
-                  instance: void 0 !== RR?.[qR] && RR,
-                  parentInstance: GR.instance,
-                  onInstanceAvailable: tR
+                return jr(Zr.type, {
+                  instance: void 0 !== rr?.[Ir] && rr,
+                  parentInstance: Qr.instance,
+                  onInstanceAvailable: Wr
                 })
               }
-              return RR[JR]
+              return rr[Sr]
             },
-            has: (RR, JR) => void 0 !== fR[JR],
-            set(RR, JR, GR) {
+            has: (rr, Sr) => void 0 !== Er[Sr],
+            set(rr, Sr, Qr) {
               throw new Error("not allowed")
             },
-            deleteProperty(RR, JR) {
+            deleteProperty(rr, Sr) {
               throw new Error("not allowed")
             }
           })
         } {
-          const RR = function(RR, GR, ZR) {
-              return ZR && RR.forEach(((RR, JR) => GR(RR, JR))), JR.addCallback(RR[qR], tR.ADD, ((RR, JR) => {
-                yR.set(GR, !0), uR = GR, GR(RR, JR), yR.delete(GR), uR = void 0
+          const rr = function(rr, Qr, jr) {
+              return jr && rr.forEach(((rr, Sr) => Qr(rr, Sr))), Sr.addCallback(rr[Ir], Wr.ADD, ((rr, Sr) => {
+                Zr.set(Qr, !0), ar = Qr, Qr(rr, Sr), Zr.delete(Qr), ar = void 0
               }))
             },
-            ZR = function(RR, GR) {
-              return JR.addCallback(RR[qR], tR.DELETE, GR)
+            jr = function(rr, Qr) {
+              return Sr.addCallback(rr[Ir], Wr.DELETE, Qr)
             },
-            iR = function(RR, GR) {
-              return JR.addCallback(RR[qR], tR.REPLACE, GR)
+            fr = function(rr, Qr) {
+              return Sr.addCallback(rr[Ir], Wr.REPLACE, Qr)
             };
           return new Proxy({
-            mC: function(JR) {
-              let tR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (GR.instance) return RR(GR.instance, JR, tR && !yR.has(uR));
-              if (GR.onInstanceAvailable) {
-                let ZR = () => {};
-                return GR.onInstanceAvailable(((GR, qR) => {
-                  ZR = RR(GR, JR, tR && qR && !yR.has(uR))
-                })), () => ZR()
+            zB: function(Sr) {
+              let Wr = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Qr.instance) return rr(Qr.instance, Sr, Wr && !Zr.has(ar));
+              if (Qr.onInstanceAvailable) {
+                let jr = () => {};
+                return Qr.onInstanceAvailable(((Qr, Ir) => {
+                  jr = rr(Qr, Sr, Wr && Ir && !Zr.has(ar))
+                })), () => jr()
               }
             },
-            eD: function(RR) {
-              if (GR.instance) return ZR(GR.instance, RR);
-              if (GR.onInstanceAvailable) {
-                let JR = () => {};
-                return GR.onInstanceAvailable((GR => {
-                  JR = ZR(GR, RR)
-                })), () => JR()
+            bq: function(rr) {
+              if (Qr.instance) return jr(Qr.instance, rr);
+              if (Qr.onInstanceAvailable) {
+                let Sr = () => {};
+                return Qr.onInstanceAvailable((Qr => {
+                  Sr = jr(Qr, rr)
+                })), () => Sr()
               }
             },
-            onChange: function(RR) {
-              if (GR.instance) return iR(GR.instance, RR);
-              if (GR.onInstanceAvailable) {
-                let JR = () => {};
-                return GR.onInstanceAvailable((GR => {
-                  JR = iR(GR, RR)
-                })), () => JR()
+            onChange: function(rr) {
+              if (Qr.instance) return fr(Qr.instance, rr);
+              if (Qr.onInstanceAvailable) {
+                let Sr = () => {};
+                return Qr.onInstanceAvailable((Qr => {
+                  Sr = fr(Qr, rr)
+                })), () => Sr()
               }
             }
           }, {
-            get(RR, JR) {
-              if (!RR[JR]) throw new Error(`Can't access '${JR}' through callback proxy. access the instance directly.`);
-              return RR[JR]
+            get(rr, Sr) {
+              if (!rr[Sr]) throw new Error(`Can't access '${Sr}' through callback proxy. access the instance directly.`);
+              return rr[Sr]
             },
-            has: (RR, JR) => void 0 !== RR[JR],
-            set(RR, JR, GR) {
+            has: (rr, Sr) => void 0 !== rr[Sr],
+            set(rr, Sr, Qr) {
               throw new Error("not allowed")
             },
-            deleteProperty(RR, JR) {
+            deleteProperty(rr, Sr) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function iR(RR) {
-        return ZR(void 0, {
-          instance: RR
+      function fr(rr) {
+        return jr(void 0, {
+          instance: rr
         })
       }
-      return RR.jD = function(RR) {
-        const JR = new Set;
-        for (let yR = 0, uR = RR.length; yR < uR; yR++) {
-          const uR = RR[yR],
-            ZR = uR.refId,
-            iR = uR.ref,
-            fR = GR[ZR];
-          if (fR) {
-            if ((uR.op & tR.DELETE) === tR.DELETE && by.isSchema(uR.previousValue)) {
-              const RR = GR[uR.previousValue[qR]]?.[tR.DELETE];
-              for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR]()
+      return rr.oR = function(rr) {
+        const Sr = new Set;
+        for (let Zr = 0, ar = rr.length; Zr < ar; Zr++) {
+          const ar = rr[Zr],
+            jr = ar.refId,
+            fr = ar.ref,
+            Er = Qr[jr];
+          if (Er) {
+            if ((ar.op & Wr.DELETE) === Wr.DELETE && lZ.isSchema(ar.previousValue)) {
+              const rr = Qr[ar.previousValue[Ir]]?.[Wr.DELETE];
+              for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr]()
             }
-            if (by.isSchema(iR)) {
-              if (!JR.has(ZR)) {
-                const RR = fR?.[tR.REPLACE];
-                for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR]()
+            if (lZ.isSchema(fr)) {
+              if (!Sr.has(jr)) {
+                const rr = Er?.[Wr.REPLACE];
+                for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr]()
               }
-              if (fR.hasOwnProperty(uR.field)) {
-                const RR = fR[uR.field];
-                for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR](uR.value, uR.previousValue)
+              if (Er.hasOwnProperty(ar.field)) {
+                const rr = Er[ar.field];
+                for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr](ar.value, ar.previousValue)
               }
             } else {
-              if ((uR.op & tR.DELETE) === tR.DELETE) {
-                if (void 0 !== uR.previousValue) {
-                  const RR = fR[tR.DELETE];
-                  for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR](uR.previousValue, uR.dynamicIndex ?? uR.field)
+              if ((ar.op & Wr.DELETE) === Wr.DELETE) {
+                if (void 0 !== ar.previousValue) {
+                  const rr = Er[Wr.DELETE];
+                  for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr](ar.previousValue, ar.dynamicIndex ?? ar.field)
                 }
-                if ((uR.op & tR.ADD) === tR.ADD) {
-                  const RR = fR[tR.ADD];
-                  for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR](uR.value, uR.dynamicIndex ?? uR.field)
+                if ((ar.op & Wr.ADD) === Wr.ADD) {
+                  const rr = Er[Wr.ADD];
+                  for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr](ar.value, ar.dynamicIndex ?? ar.field)
                 }
-              } else if ((uR.op & tR.ADD) === tR.ADD && uR.previousValue !== uR.value) {
-                const RR = fR[tR.ADD];
-                for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR](uR.value, uR.dynamicIndex ?? uR.field)
+              } else if ((ar.op & Wr.ADD) === Wr.ADD && ar.previousValue !== ar.value) {
+                const rr = Er[Wr.ADD];
+                for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr](ar.value, ar.dynamicIndex ?? ar.field)
               }
-              if (uR.value !== uR.previousValue && (void 0 !== uR.value || void 0 !== uR.previousValue)) {
-                const RR = fR[tR.REPLACE];
-                for (let JR = RR?.length - 1; JR >= 0; JR--) RR[JR](uR.value, uR.dynamicIndex ?? uR.field)
+              if (ar.value !== ar.previousValue && (void 0 !== ar.value || void 0 !== ar.previousValue)) {
+                const rr = Er[Wr.REPLACE];
+                for (let Sr = rr?.length - 1; Sr >= 0; Sr--) rr[Sr](ar.value, ar.dynamicIndex ?? ar.field)
               }
             }
-            JR.add(ZR)
+            Sr.add(jr)
           }
         }
-      }, iR
+      }, fr
     }
 
-    function Rt(RR, JR) {
-      RR.jD = JR
+    function rW(rr, Sr) {
+      rr.oR = Sr
     }
-    sy.encode = function(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    sZ.encode = function(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const GR = RR.context,
-        yR = new sy,
-        tR = new jy(yR),
-        uR = GR.schemas.get(RR.state.constructor);
-      uR > 0 && (yR.rootType = uR);
-      const ZR = new Set,
-        qR = {},
-        iR = RR => {
-          if (void 0 === RR.extendsId || ZR.has(RR.extendsId)) {
-            ZR.add(RR.id), yR.types.push(RR);
-            const JR = qR[RR.id];
-            void 0 !== JR && (delete qR[RR.id], JR.forEach((RR => iR(RR))))
-          } else void 0 === qR[RR.extendsId] && (qR[RR.extendsId] = []), qR[RR.extendsId].push(RR)
+      const Qr = rr.context,
+        Zr = new sZ,
+        Wr = new wZ(Zr),
+        ar = Qr.schemas.get(rr.state.constructor);
+      ar > 0 && (Zr.rootType = ar);
+      const jr = new Set,
+        Ir = {},
+        fr = rr => {
+          if (void 0 === rr.extendsId || jr.has(rr.extendsId)) {
+            jr.add(rr.id), Zr.types.push(rr);
+            const Sr = Ir[rr.id];
+            void 0 !== Sr && (delete Ir[rr.id], Sr.forEach((rr => fr(rr))))
+          } else void 0 === Ir[rr.extendsId] && (Ir[rr.extendsId] = []), Ir[rr.extendsId].push(rr)
         };
-      GR.schemas.forEach(((RR, JR) => {
-        const yR = new Ty;
-        yR.id = Number(RR);
-        const tR = Object.getPrototypeOf(JR);
-        tR !== by && (yR.extendsId = GR.schemas.get(tR));
-        const uR = JR[Symbol.metadata];
-        if (uR !== tR[Symbol.metadata]) {
-          const RR = uR[pR] ?? -1;
-          for (let JR = 0; JR <= RR; JR++) {
-            const RR = uR[JR];
-            if (void 0 === RR) continue;
-            const tR = RR.name;
-            if (!Object.prototype.hasOwnProperty.call(uR, tR)) continue;
-            const ZR = new Fy;
-            let qR;
-            if (ZR.name = tR, "string" === typeof RR.type) qR = RR.type;
-            else if (oJ(RR.type)) {
-              const JR = RR.type.quantized;
-              qR = "quantized";
-              const GR = new Qy;
-              GR.min = JR.min, GR.max = JR.max, GR.bits = JR.bits, GR.mode = JR.wrap ? 1 : 0, ZR.quantized = GR
+      Qr.schemas.forEach(((rr, Sr) => {
+        const Zr = new dZ;
+        Zr.id = Number(rr);
+        const Wr = Object.getPrototypeOf(Sr);
+        Wr !== lZ && (Zr.extendsId = Qr.schemas.get(Wr));
+        const ar = Sr[Symbol.metadata];
+        if (ar !== Wr[Symbol.metadata]) {
+          const rr = ar[Or] ?? -1;
+          for (let Sr = 0; Sr <= rr; Sr++) {
+            const rr = ar[Sr];
+            if (void 0 === rr) continue;
+            const Wr = rr.name;
+            if (!Object.prototype.hasOwnProperty.call(ar, Wr)) continue;
+            const jr = new DZ;
+            let Ir;
+            if (jr.name = Wr, "string" === typeof rr.type) Ir = rr.type;
+            else if (CS(rr.type)) {
+              const Sr = rr.type.quantized;
+              Ir = "quantized";
+              const Qr = new JZ;
+              Qr.min = Sr.min, Qr.max = Sr.max, Qr.bits = Sr.bits, Qr.mode = Sr.wrap ? 1 : 0, jr.quantized = Qr
             } else {
-              let JR;
-              by.is(RR.type) ? (qR = "ref", JR = RR.type) : (qR = Object.keys(RR.type)[0], "string" === typeof RR.type[qR] ? ZR.childPrimitive = RR.type[qR] : JR = RR.type[qR]), ZR.referencedType = JR ? GR.getTypeId(JR) : -1
+              let Sr;
+              lZ.is(rr.type) ? (Ir = "ref", Sr = rr.type) : (Ir = Object.keys(rr.type)[0], "string" === typeof rr.type[Ir] ? jr.childPrimitive = rr.type[Ir] : Sr = rr.type[Ir]), jr.referencedType = Sr ? Qr.getTypeId(Sr) : -1
             }
-            ZR.type = qR, yR.fields.push(ZR)
+            jr.type = Ir, Zr.fields.push(jr)
           }
         }
-        iR(yR)
+        fr(Zr)
       }));
-      for (const fR in qR) qR[fR].forEach((RR => yR.types.push(RR)));
-      return tR.encodeAll(JR).slice(0, JR.offset)
-    }, sy.decode = function(RR, JR) {
-      const GR = new sy;
-      new ky(GR).decode(RR, JR);
-      const yR = new mJ;
-      GR.types.forEach((RR => {
-        const JR = yR.get(RR.extendsId) ?? by,
-          GR = class extends JR {};
-        mJ.register(GR), yR.add(GR, RR.id)
+      for (const Er in Ir) Ir[Er].forEach((rr => Zr.types.push(rr)));
+      return Wr.encodeAll(Sr).slice(0, Sr.offset)
+    }, sZ.decode = function(rr, Sr) {
+      const Qr = new sZ;
+      new bZ(Qr).decode(rr, Sr);
+      const Zr = new AS;
+      Qr.types.forEach((rr => {
+        const Sr = Zr.get(rr.extendsId) ?? lZ,
+          Qr = class extends Sr {};
+        AS.register(Qr), Zr.add(Qr, rr.id)
       }), {});
-      GR.types.forEach((RR => {
-        const JR = yR.get(RR.id),
-          tR = kJ.initialize(JR),
-          uR = [];
-        let ZR = RR;
+      Qr.types.forEach((rr => {
+        const Sr = Zr.get(rr.id),
+          Wr = bS.initialize(Sr),
+          ar = [];
+        let jr = rr;
         do {
-          uR.push(ZR), ZR = GR.types.find((RR => RR.id === ZR.extendsId))
-        } while (ZR);
-        let qR = 0;
-        uR.reverse().forEach((RR => {
-          ((RR, JR, GR) => {
-            JR.fields.forEach(((JR, tR) => {
-              const uR = GR + tR;
-              if (void 0 !== JR.quantized) {
-                const GR = JR.quantized;
-                kJ.addField(RR, uR, JR.name, {
-                  quantized: HJ({
-                    min: GR.min,
-                    max: GR.max,
-                    bits: GR.bits,
-                    mode: 1 === GR.mode ? "wrap" : "clamp"
+          ar.push(jr), jr = Qr.types.find((rr => rr.id === jr.extendsId))
+        } while (jr);
+        let Ir = 0;
+        ar.reverse().forEach((rr => {
+          ((rr, Sr, Qr) => {
+            Sr.fields.forEach(((Sr, Wr) => {
+              const ar = Qr + Wr;
+              if (void 0 !== Sr.quantized) {
+                const Qr = Sr.quantized;
+                bS.addField(rr, ar, Sr.name, {
+                  quantized: gS({
+                    min: Qr.min,
+                    max: Qr.max,
+                    bits: Qr.bits,
+                    mode: 1 === Qr.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== JR.referencedType) {
-                const GR = JR.type,
-                  tR = yR.get(JR.referencedType) ?? JR.childPrimitive;
-                "ref" === GR ? kJ.addField(RR, uR, JR.name, tR) : kJ.addField(RR, uR, JR.name, {
-                  [GR]: tR
+              } else if (void 0 !== Sr.referencedType) {
+                const Qr = Sr.type,
+                  Wr = Zr.get(Sr.referencedType) ?? Sr.childPrimitive;
+                "ref" === Qr ? bS.addField(rr, ar, Sr.name, Wr) : bS.addField(rr, ar, Sr.name, {
+                  [Qr]: Wr
                 })
-              } else kJ.addField(RR, uR, JR.name, JR.type)
+              } else bS.addField(rr, ar, Sr.name, Sr.type)
             }))
-          })(tR, RR, qR), qR += RR.fields.length
+          })(Wr, rr, Ir), Ir += rr.fields.length
         }))
       }));
-      const tR = new(yR.get(GR.rootType || 0));
-      return new ky(tR, yR)
-    }, sy.makeEncodable = function(RR) {
-      const JR = RR[Symbol.metadata];
-      if (!JR) return RR;
-      const GR = JR[pR];
-      if (void 0 === GR) return RR;
-      for (let yR = 0; yR <= GR; yR++) {
-        const GR = JR[yR];
-        GR && kJ.defineField(RR, JR, yR, GR.name, GR.type)
+      const Wr = new(Zr.get(Qr.rootType || 0));
+      return new bZ(Wr, Zr)
+    }, sZ.makeEncodable = function(rr) {
+      const Sr = rr[Symbol.metadata];
+      if (!Sr) return rr;
+      const Qr = Sr[Or];
+      if (void 0 === Qr) return rr;
+      for (let Zr = 0; Zr <= Qr; Zr++) {
+        const Qr = Sr[Zr];
+        Qr && bS.defineField(rr, Sr, Zr, Qr.name, Qr.type)
       }
-      return Object.prototype.hasOwnProperty.call(RR, BR) && delete RR[BR], RR
+      return Object.prototype.hasOwnProperty.call(rr, Tr) && delete rr[Tr], rr
     };
-    class Jt {
-      VK;
+    class SW {
+      Ix;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(RR) {
-        this.VK = RR, this.VK.jD = this.jD.bind(this)
+      constructor(rr) {
+        this.Ix = rr, this.Ix.oR = this.oR.bind(this)
       }
       get callbacks() {
-        return this.VK.root.callbacks
+        return this.Ix.root.callbacks
       }
       get state() {
-        return this.VK.state
+        return this.Ix.state
       }
-      addCallback(RR, JR, GR) {
-        return this.VK.root.addCallback(RR, JR, GR)
+      addCallback(rr, Sr, Qr) {
+        return this.Ix.root.addCallback(rr, Sr, Qr)
       }
-      addCallbackOrWaitCollectionAvailable(RR, JR, GR, yR) {
-        let uR = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          ZR = () => {};
-        const iR = () => ZR(),
-          fR = RR[JR];
-        if (fR && void 0 !== fR[qR]) return uR = uR && !1 === this.isTriggering, GR === tR.ADD && uR && fR.forEach(((RR, JR) => {
-          yR(RR, JR)
-        })), this.addCallback(fR[qR], GR, yR);
+      addCallbackOrWaitCollectionAvailable(rr, Sr, Qr, Zr) {
+        let ar = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          jr = () => {};
+        const fr = () => jr(),
+          Er = rr[Sr];
+        if (Er && void 0 !== Er[Ir]) return ar = ar && !1 === this.isTriggering, Qr === Wr.ADD && ar && Er.forEach(((rr, Sr) => {
+          Zr(rr, Sr)
+        })), this.addCallback(Er[Ir], Qr, Zr);
         {
-          let tR;
-          return tR = this.addCallback(RR[qR], JR, ((RR, JR) => {
-            null !== RR && void 0 !== RR && (tR(), ZR = this.addCallback(RR[qR], GR, yR))
-          })), ZR = tR, iR
+          let Wr;
+          return Wr = this.addCallback(rr[Ir], Sr, ((rr, Sr) => {
+            null !== rr && void 0 !== rr && (Wr(), jr = this.addCallback(rr[Ir], Qr, Zr))
+          })), jr = Wr, fr
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(RR, JR, GR) {
-        let yR = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        yR = yR && !1 === this.isTriggering;
-        const tR = RR[JR];
-        return yR && null !== tR && void 0 !== tR && GR(tR, void 0), this.addCallback(RR[qR], JR, GR)
+      listenInstance(rr, Sr, Qr) {
+        let Zr = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        Zr = Zr && !1 === this.isTriggering;
+        const Wr = rr[Sr];
+        return Zr && null !== Wr && void 0 !== Wr && Qr(Wr, void 0), this.addCallback(rr[Ir], Sr, Qr)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const RR = arguments.length <= 0 ? void 0 : arguments[0],
-            JR = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(RR[qR], tR.REPLACE, JR)
+          const rr = arguments.length <= 0 ? void 0 : arguments[0],
+            Sr = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(rr[Ir], Wr.REPLACE, Sr)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], tR.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], tR.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wr.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wr.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      mC() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], tR.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], tR.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      zB() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wr.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wr.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      eD() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], tR.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], tR.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      bq() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wr.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wr.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(RR, JR, GR) {
-        let yR = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const uR = RR.constructor[Symbol.metadata];
-        GR || (GR = Object.keys(uR).filter((RR => !isNaN(Number(RR)))).map((RR => uR[RR].name)));
-        const ZR = () => {
-          for (const yR of GR) {
-            const GR = RR[yR];
-            void 0 !== GR && (JR[yR] = GR)
+      bindTo(rr, Sr, Qr) {
+        let Zr = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const ar = rr.constructor[Symbol.metadata];
+        Qr || (Qr = Object.keys(ar).filter((rr => !isNaN(Number(rr)))).map((rr => ar[rr].name)));
+        const jr = () => {
+          for (const Zr of Qr) {
+            const Qr = rr[Zr];
+            void 0 !== Qr && (Sr[Zr] = Qr)
           }
         };
-        return yR && ZR(), this.addCallback(RR[qR], tR.REPLACE, ZR)
+        return Zr && jr(), this.addCallback(rr[Ir], Wr.REPLACE, jr)
       }
-      jD(RR) {
+      oR(rr) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let JR = 0, GR = RR.length; JR < GR; JR++) {
-          const GR = RR[JR],
-            yR = GR.refId,
-            uR = GR.ref,
-            ZR = this.callbacks[yR];
-          if (ZR) {
-            if ((GR.op & tR.DELETE) === tR.DELETE && by.isSchema(GR.previousValue)) {
-              const RR = GR.previousValue[qR],
-                JR = this.callbacks[RR]?.[tR.DELETE];
-              if (JR)
-                for (let GR = JR.length - 1; GR >= 0; GR--) try {
-                  JR[GR]()
-                } catch (ut) {
-                  console.error(ut)
+        for (let Sr = 0, Qr = rr.length; Sr < Qr; Sr++) {
+          const Qr = rr[Sr],
+            Zr = Qr.refId,
+            ar = Qr.ref,
+            jr = this.callbacks[Zr];
+          if (jr) {
+            if ((Qr.op & Wr.DELETE) === Wr.DELETE && lZ.isSchema(Qr.previousValue)) {
+              const rr = Qr.previousValue[Ir],
+                Sr = this.callbacks[rr]?.[Wr.DELETE];
+              if (Sr)
+                for (let Qr = Sr.length - 1; Qr >= 0; Qr--) try {
+                  Sr[Qr]()
+                } catch (aW) {
+                  console.error(aW)
                 }
             }
-            if (by.isSchema(uR)) {
-              if (!this.uniqueRefIds.has(yR)) {
-                const RR = ZR[tR.REPLACE];
-                if (RR)
-                  for (let JR = RR.length - 1; JR >= 0; JR--) try {
-                    RR[JR]()
-                  } catch (ut) {
-                    console.error(ut)
+            if (lZ.isSchema(ar)) {
+              if (!this.uniqueRefIds.has(Zr)) {
+                const rr = jr[Wr.REPLACE];
+                if (rr)
+                  for (let Sr = rr.length - 1; Sr >= 0; Sr--) try {
+                    rr[Sr]()
+                  } catch (aW) {
+                    console.error(aW)
                   }
               }
-              const RR = ZR[GR.field];
-              if (RR)
-                for (let JR = RR.length - 1; JR >= 0; JR--) try {
-                  RR[JR](GR.value, GR.previousValue)
-                } catch (ut) {
-                  console.error(ut)
+              const rr = jr[Qr.field];
+              if (rr)
+                for (let Sr = rr.length - 1; Sr >= 0; Sr--) try {
+                  rr[Sr](Qr.value, Qr.previousValue)
+                } catch (aW) {
+                  console.error(aW)
                 }
             } else {
-              const RR = GR.dynamicIndex ?? GR.field;
-              if ((GR.op & tR.DELETE) === tR.DELETE) {
-                if (void 0 !== GR.previousValue) {
-                  const JR = ZR[tR.DELETE];
-                  if (JR)
-                    for (let yR = JR.length - 1; yR >= 0; yR--) try {
-                      JR[yR](GR.previousValue, RR)
-                    } catch (ut) {
-                      console.error(ut)
+              const rr = Qr.dynamicIndex ?? Qr.field;
+              if ((Qr.op & Wr.DELETE) === Wr.DELETE) {
+                if (void 0 !== Qr.previousValue) {
+                  const Sr = jr[Wr.DELETE];
+                  if (Sr)
+                    for (let Zr = Sr.length - 1; Zr >= 0; Zr--) try {
+                      Sr[Zr](Qr.previousValue, rr)
+                    } catch (aW) {
+                      console.error(aW)
                     }
                 }
-                if ((GR.op & tR.ADD) === tR.ADD) {
-                  const JR = ZR[tR.ADD];
-                  if (JR)
-                    for (let yR = JR.length - 1; yR >= 0; yR--) try {
-                      JR[yR](GR.value, RR)
-                    } catch (ut) {
-                      console.error(ut)
+                if ((Qr.op & Wr.ADD) === Wr.ADD) {
+                  const Sr = jr[Wr.ADD];
+                  if (Sr)
+                    for (let Zr = Sr.length - 1; Zr >= 0; Zr--) try {
+                      Sr[Zr](Qr.value, rr)
+                    } catch (aW) {
+                      console.error(aW)
                     }
                 }
-              } else if ((GR.op & tR.ADD) === tR.ADD && GR.previousValue !== GR.value) {
-                const JR = ZR[tR.ADD];
-                if (JR)
-                  for (let yR = JR.length - 1; yR >= 0; yR--) try {
-                    JR[yR](GR.value, RR)
-                  } catch (ut) {
-                    console.error(ut)
+              } else if ((Qr.op & Wr.ADD) === Wr.ADD && Qr.previousValue !== Qr.value) {
+                const Sr = jr[Wr.ADD];
+                if (Sr)
+                  for (let Zr = Sr.length - 1; Zr >= 0; Zr--) try {
+                    Sr[Zr](Qr.value, rr)
+                  } catch (aW) {
+                    console.error(aW)
                   }
               }
-              if (GR.value !== GR.previousValue) {
-                const JR = ZR[tR.REPLACE];
-                if (JR)
-                  for (let yR = JR.length - 1; yR >= 0; yR--) try {
-                    JR[yR](RR, GR.value)
-                  } catch (ut) {
-                    console.error(ut)
+              if (Qr.value !== Qr.previousValue) {
+                const Sr = jr[Wr.REPLACE];
+                if (Sr)
+                  for (let Zr = Sr.length - 1; Zr >= 0; Zr--) try {
+                    Sr[Zr](rr, Qr.value)
+                  } catch (aW) {
+                    console.error(aW)
                   }
               }
             }
-            this.uniqueRefIds.add(yR)
+            this.uniqueRefIds.add(Zr)
           }
         }
         this.isTriggering = !1
       }
     }
-    const Gt = {
-      get(RR) {
-        if (RR instanceof ky) return new Jt(RR);
-        if ("VK" in RR.jU) return new Jt(RR.jU.VK);
+    const QW = {
+      get(rr) {
+        if (rr instanceof bZ) return new SW(rr);
+        if ("Ix" in rr.TY) return new SW(rr.TY.Ix);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(RR) {
-        if (RR instanceof ky) return hy(RR);
-        if ("VK" in RR.jU) return hy(RR.jU.VK);
+      getLegacy(rr) {
+        if (rr instanceof bZ) return uZ(rr);
+        if ("Ix" in rr.TY) return uZ(rr.TY.Ix);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (RR, JR) => Rt(RR, JR)
+      getRawChanges: (rr, Sr) => rW(rr, Sr)
     };
-    class yt {
+    class ZW {
       _free = [];
       _factory;
       _maxSize;
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = RR, this._maxSize = JR.maxSize ?? 1 / 0;
-        const GR = JR.preallocate ?? 0;
-        for (let yR = 0; yR < GR; yR++) this._free.push(RR())
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = rr, this._maxSize = Sr.maxSize ?? 1 / 0;
+        const Qr = Sr.preallocate ?? 0;
+        for (let Zr = 0; Zr < Qr; Zr++) this._free.push(rr())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(RR) {
-        by.reset(RR), this._free.length < this._maxSize && this._free.push(RR)
+      release(rr) {
+        lZ.reset(rr), this._free.length < this._maxSize && this._free.push(rr)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function tt(RR) {
-      return new yt((() => new RR), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function WW(rr) {
+      return new ZW((() => new rr), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    XJ("map", {
-      constructor: ty
-    }), XJ("array", {
-      constructor: Gy
-    }), XJ("set", {
-      constructor: Zy
-    }), XJ("collection", {
-      constructor: uy
+    yS("map", {
+      constructor: WZ
+    }), yS("array", {
+      constructor: QZ
+    }), yS("set", {
+      constructor: jZ
+    }), yS("collection", {
+      constructor: aZ
     })
   },
-  10474: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      __addDisposableResource: () => oR,
-      __assign: () => uR,
-      __asyncDelegator: () => lR,
-      __asyncGenerator: () => BR,
-      __asyncValues: () => pR,
-      __await: () => MR,
-      __awaiter: () => eR,
-      __classPrivateFieldGet: () => NR,
-      __classPrivateFieldIn: () => HR,
-      __classPrivateFieldSet: () => DR,
-      __createBinding: () => LR,
-      __decorate: () => qR,
-      __disposeResources: () => PR,
-      __esDecorate: () => fR,
-      __exportStar: () => nR,
-      __extends: () => tR,
-      __generator: () => aR,
-      __importDefault: () => xR,
-      __importStar: () => OR,
-      __makeTemplateObject: () => gR,
-      __metadata: () => rR,
-      __param: () => iR,
-      __propKey: () => KR,
-      __read: () => WR,
-      __rest: () => ZR,
-      __rewriteRelativeImportExtension: () => IR,
-      __runInitializers: () => VR,
-      __setFunctionName: () => wR,
-      __spread: () => AR,
-      __spreadArray: () => XR,
-      __spreadArrays: () => CR,
-      __values: () => UR,
-      default: () => mR
+  10256: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      __addDisposableResource: () => Cr,
+      __assign: () => ar,
+      __asyncDelegator: () => vr,
+      __asyncGenerator: () => Tr,
+      __asyncValues: () => Or,
+      __await: () => Br,
+      __awaiter: () => Ur,
+      __classPrivateFieldGet: () => qr,
+      __classPrivateFieldIn: () => gr,
+      __classPrivateFieldSet: () => Rr,
+      __createBinding: () => hr,
+      __decorate: () => Ir,
+      __disposeResources: () => Gr,
+      __esDecorate: () => Er,
+      __exportStar: () => zr,
+      __extends: () => Wr,
+      __generator: () => tr,
+      __importDefault: () => Hr,
+      __importStar: () => Pr,
+      __makeTemplateObject: () => Lr,
+      __metadata: () => Nr,
+      __param: () => fr,
+      __propKey: () => xr,
+      __read: () => nr,
+      __rest: () => jr,
+      __rewriteRelativeImportExtension: () => kr,
+      __runInitializers: () => pr,
+      __setFunctionName: () => mr,
+      __spread: () => er,
+      __spreadArray: () => yr,
+      __spreadArrays: () => Kr,
+      __values: () => Yr,
+      default: () => Ar
     });
-    var yR = function(RR, JR) {
-      return yR = Object.setPrototypeOf || {
+    var Zr = function(rr, Sr) {
+      return Zr = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(RR, JR) {
-        RR.__proto__ = JR
-      } || function(RR, JR) {
-        for (var GR in JR) Object.prototype.hasOwnProperty.call(JR, GR) && (RR[GR] = JR[GR])
-      }, yR(RR, JR)
+      instanceof Array && function(rr, Sr) {
+        rr.__proto__ = Sr
+      } || function(rr, Sr) {
+        for (var Qr in Sr) Object.prototype.hasOwnProperty.call(Sr, Qr) && (rr[Qr] = Sr[Qr])
+      }, Zr(rr, Sr)
     };
 
-    function tR(RR, JR) {
-      if ("function" !== typeof JR && null !== JR) throw new TypeError("Class extends value " + String(JR) + " is not a constructor or null");
+    function Wr(rr, Sr) {
+      if ("function" !== typeof Sr && null !== Sr) throw new TypeError("Class extends value " + String(Sr) + " is not a constructor or null");
 
-      function GR() {
-        this.constructor = RR
+      function Qr() {
+        this.constructor = rr
       }
-      yR(RR, JR), RR.prototype = null === JR ? Object.create(JR) : (GR.prototype = JR.prototype, new GR)
+      Zr(rr, Sr), rr.prototype = null === Sr ? Object.create(Sr) : (Qr.prototype = Sr.prototype, new Qr)
     }
-    var uR = function() {
-      return uR = Object.assign || function(RR) {
-        for (var JR, GR = 1, yR = arguments.length; GR < yR; GR++)
-          for (var tR in JR = arguments[GR]) Object.prototype.hasOwnProperty.call(JR, tR) && (RR[tR] = JR[tR]);
-        return RR
-      }, uR.apply(this, arguments)
+    var ar = function() {
+      return ar = Object.assign || function(rr) {
+        for (var Sr, Qr = 1, Zr = arguments.length; Qr < Zr; Qr++)
+          for (var Wr in Sr = arguments[Qr]) Object.prototype.hasOwnProperty.call(Sr, Wr) && (rr[Wr] = Sr[Wr]);
+        return rr
+      }, ar.apply(this, arguments)
     };
 
-    function ZR(RR, JR) {
-      var GR = {};
-      for (var yR in RR) Object.prototype.hasOwnProperty.call(RR, yR) && JR.indexOf(yR) < 0 && (GR[yR] = RR[yR]);
-      if (null != RR && "function" === typeof Object.getOwnPropertySymbols) {
-        var tR = 0;
-        for (yR = Object.getOwnPropertySymbols(RR); tR < yR.length; tR++) JR.indexOf(yR[tR]) < 0 && Object.prototype.propertyIsEnumerable.call(RR, yR[tR]) && (GR[yR[tR]] = RR[yR[tR]])
+    function jr(rr, Sr) {
+      var Qr = {};
+      for (var Zr in rr) Object.prototype.hasOwnProperty.call(rr, Zr) && Sr.indexOf(Zr) < 0 && (Qr[Zr] = rr[Zr]);
+      if (null != rr && "function" === typeof Object.getOwnPropertySymbols) {
+        var Wr = 0;
+        for (Zr = Object.getOwnPropertySymbols(rr); Wr < Zr.length; Wr++) Sr.indexOf(Zr[Wr]) < 0 && Object.prototype.propertyIsEnumerable.call(rr, Zr[Wr]) && (Qr[Zr[Wr]] = rr[Zr[Wr]])
       }
-      return GR
+      return Qr
     }
 
-    function qR(RR, JR, GR, yR) {
-      var tR, uR = arguments.length,
-        ZR = uR < 3 ? JR : null === yR ? yR = Object.getOwnPropertyDescriptor(JR, GR) : yR;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) ZR = Reflect.decorate(RR, JR, GR, yR);
+    function Ir(rr, Sr, Qr, Zr) {
+      var Wr, ar = arguments.length,
+        jr = ar < 3 ? Sr : null === Zr ? Zr = Object.getOwnPropertyDescriptor(Sr, Qr) : Zr;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) jr = Reflect.decorate(rr, Sr, Qr, Zr);
       else
-        for (var qR = RR.length - 1; qR >= 0; qR--)(tR = RR[qR]) && (ZR = (uR < 3 ? tR(ZR) : uR > 3 ? tR(JR, GR, ZR) : tR(JR, GR)) || ZR);
-      return uR > 3 && ZR && Object.defineProperty(JR, GR, ZR), ZR
+        for (var Ir = rr.length - 1; Ir >= 0; Ir--)(Wr = rr[Ir]) && (jr = (ar < 3 ? Wr(jr) : ar > 3 ? Wr(Sr, Qr, jr) : Wr(Sr, Qr)) || jr);
+      return ar > 3 && jr && Object.defineProperty(Sr, Qr, jr), jr
     }
 
-    function iR(RR, JR) {
-      return function(GR, yR) {
-        JR(GR, yR, RR)
+    function fr(rr, Sr) {
+      return function(Qr, Zr) {
+        Sr(Qr, Zr, rr)
       }
     }
 
-    function fR(RR, JR, GR, yR, tR, uR) {
-      function ZR(RR) {
-        if (void 0 !== RR && "function" !== typeof RR) throw new TypeError("Function expected");
-        return RR
+    function Er(rr, Sr, Qr, Zr, Wr, ar) {
+      function jr(rr) {
+        if (void 0 !== rr && "function" !== typeof rr) throw new TypeError("Function expected");
+        return rr
       }
-      for (var qR, iR = yR.kind, fR = "getter" === iR ? "get" : "setter" === iR ? "set" : "value", VR = !JR && RR ? yR.static ? RR : RR.prototype : null, KR = JR || (VR ? Object.getOwnPropertyDescriptor(VR, yR.name) : {}), wR = !1, rR = GR.length - 1; rR >= 0; rR--) {
-        var eR = {};
-        for (var aR in yR) eR[aR] = "access" === aR ? {} : yR[aR];
-        for (var aR in yR.access) eR.access[aR] = yR.access[aR];
-        eR.addInitializer = function(RR) {
-          if (wR) throw new TypeError("Cannot add initializers after decoration has completed");
-          uR.push(ZR(RR || null))
+      for (var Ir, fr = Zr.kind, Er = "getter" === fr ? "get" : "setter" === fr ? "set" : "value", pr = !Sr && rr ? Zr.static ? rr : rr.prototype : null, xr = Sr || (pr ? Object.getOwnPropertyDescriptor(pr, Zr.name) : {}), mr = !1, Nr = Qr.length - 1; Nr >= 0; Nr--) {
+        var Ur = {};
+        for (var tr in Zr) Ur[tr] = "access" === tr ? {} : Zr[tr];
+        for (var tr in Zr.access) Ur.access[tr] = Zr.access[tr];
+        Ur.addInitializer = function(rr) {
+          if (mr) throw new TypeError("Cannot add initializers after decoration has completed");
+          ar.push(jr(rr || null))
         };
-        var LR = (0, GR[rR])("accessor" === iR ? {
-          get: KR.get,
-          set: KR.set
-        } : KR[fR], eR);
-        if ("accessor" === iR) {
-          if (void 0 === LR) continue;
-          if (null === LR || "object" !== typeof LR) throw new TypeError("Object expected");
-          (qR = ZR(LR.get)) && (KR.get = qR), (qR = ZR(LR.set)) && (KR.set = qR), (qR = ZR(LR.init)) && tR.unshift(qR)
-        } else(qR = ZR(LR)) && ("field" === iR ? tR.unshift(qR) : KR[fR] = qR)
+        var hr = (0, Qr[Nr])("accessor" === fr ? {
+          get: xr.get,
+          set: xr.set
+        } : xr[Er], Ur);
+        if ("accessor" === fr) {
+          if (void 0 === hr) continue;
+          if (null === hr || "object" !== typeof hr) throw new TypeError("Object expected");
+          (Ir = jr(hr.get)) && (xr.get = Ir), (Ir = jr(hr.set)) && (xr.set = Ir), (Ir = jr(hr.init)) && Wr.unshift(Ir)
+        } else(Ir = jr(hr)) && ("field" === fr ? Wr.unshift(Ir) : xr[Er] = Ir)
       }
-      VR && Object.defineProperty(VR, yR.name, KR), wR = !0
+      pr && Object.defineProperty(pr, Zr.name, xr), mr = !0
     }
 
-    function VR(RR, JR, GR) {
-      for (var yR = arguments.length > 2, tR = 0; tR < JR.length; tR++) GR = yR ? JR[tR].call(RR, GR) : JR[tR].call(RR);
-      return yR ? GR : void 0
+    function pr(rr, Sr, Qr) {
+      for (var Zr = arguments.length > 2, Wr = 0; Wr < Sr.length; Wr++) Qr = Zr ? Sr[Wr].call(rr, Qr) : Sr[Wr].call(rr);
+      return Zr ? Qr : void 0
     }
 
-    function KR(RR) {
-      return "symbol" === typeof RR ? RR : "".concat(RR)
+    function xr(rr) {
+      return "symbol" === typeof rr ? rr : "".concat(rr)
     }
 
-    function wR(RR, JR, GR) {
-      return "symbol" === typeof JR && (JR = JR.description ? "[".concat(JR.description, "]") : ""), Object.defineProperty(RR, "name", {
+    function mr(rr, Sr, Qr) {
+      return "symbol" === typeof Sr && (Sr = Sr.description ? "[".concat(Sr.description, "]") : ""), Object.defineProperty(rr, "name", {
         configurable: !0,
-        value: GR ? "".concat(GR, " ", JR) : JR
+        value: Qr ? "".concat(Qr, " ", Sr) : Sr
       })
     }
 
-    function rR(RR, JR) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(RR, JR)
+    function Nr(rr, Sr) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(rr, Sr)
     }
 
-    function eR(RR, JR, GR, yR) {
-      return new(GR || (GR = Promise))((function(tR, uR) {
-        function ZR(RR) {
+    function Ur(rr, Sr, Qr, Zr) {
+      return new(Qr || (Qr = Promise))((function(Wr, ar) {
+        function jr(rr) {
           try {
-            iR(yR.next(RR))
-          } catch (JR) {
-            uR(JR)
+            fr(Zr.next(rr))
+          } catch (Sr) {
+            ar(Sr)
           }
         }
 
-        function qR(RR) {
+        function Ir(rr) {
           try {
-            iR(yR.throw(RR))
-          } catch (JR) {
-            uR(JR)
+            fr(Zr.throw(rr))
+          } catch (Sr) {
+            ar(Sr)
           }
         }
 
-        function iR(RR) {
-          var JR;
-          RR.done ? tR(RR.value) : (JR = RR.value, JR instanceof GR ? JR : new GR((function(RR) {
-            RR(JR)
-          }))).then(ZR, qR)
+        function fr(rr) {
+          var Sr;
+          rr.done ? Wr(rr.value) : (Sr = rr.value, Sr instanceof Qr ? Sr : new Qr((function(rr) {
+            rr(Sr)
+          }))).then(jr, Ir)
         }
-        iR((yR = yR.apply(RR, JR || [])).next())
+        fr((Zr = Zr.apply(rr, Sr || [])).next())
       }))
     }
 
-    function aR(RR, JR) {
-      var GR, yR, tR, uR = {
+    function tr(rr, Sr) {
+      var Qr, Zr, Wr, ar = {
           label: 0,
           sent: function() {
-            if (1 & tR[0]) throw tR[1];
-            return tR[1]
+            if (1 & Wr[0]) throw Wr[1];
+            return Wr[1]
           },
           trys: [],
           ops: []
         },
-        ZR = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return ZR.next = qR(0), ZR.throw = qR(1), ZR.return = qR(2), "function" === typeof Symbol && (ZR[Symbol.iterator] = function() {
+        jr = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return jr.next = Ir(0), jr.throw = Ir(1), jr.return = Ir(2), "function" === typeof Symbol && (jr[Symbol.iterator] = function() {
         return this
-      }), ZR;
+      }), jr;
 
-      function qR(qR) {
-        return function(iR) {
-          return function(qR) {
-            if (GR) throw new TypeError("Generator is already executing.");
-            for (; ZR && (ZR = 0, qR[0] && (uR = 0)), uR;) try {
-              if (GR = 1, yR && (tR = 2 & qR[0] ? yR.return : qR[0] ? yR.throw || ((tR = yR.return) && tR.call(yR), 0) : yR.next) && !(tR = tR.call(yR, qR[1])).done) return tR;
-              switch (yR = 0, tR && (qR = [2 & qR[0], tR.value]), qR[0]) {
+      function Ir(Ir) {
+        return function(fr) {
+          return function(Ir) {
+            if (Qr) throw new TypeError("Generator is already executing.");
+            for (; jr && (jr = 0, Ir[0] && (ar = 0)), ar;) try {
+              if (Qr = 1, Zr && (Wr = 2 & Ir[0] ? Zr.return : Ir[0] ? Zr.throw || ((Wr = Zr.return) && Wr.call(Zr), 0) : Zr.next) && !(Wr = Wr.call(Zr, Ir[1])).done) return Wr;
+              switch (Zr = 0, Wr && (Ir = [2 & Ir[0], Wr.value]), Ir[0]) {
                 case 0:
                 case 1:
-                  tR = qR;
+                  Wr = Ir;
                   break;
                 case 4:
-                  return uR.label++, {
-                    value: qR[1],
+                  return ar.label++, {
+                    value: Ir[1],
                     done: !1
                   };
                 case 5:
-                  uR.label++, yR = qR[1], qR = [0];
+                  ar.label++, Zr = Ir[1], Ir = [0];
                   continue;
                 case 7:
-                  qR = uR.ops.pop(), uR.trys.pop();
+                  Ir = ar.ops.pop(), ar.trys.pop();
                   continue;
                 default:
-                  if (!(tR = (tR = uR.trys).length > 0 && tR[tR.length - 1]) && (6 === qR[0] || 2 === qR[0])) {
-                    uR = 0;
+                  if (!(Wr = (Wr = ar.trys).length > 0 && Wr[Wr.length - 1]) && (6 === Ir[0] || 2 === Ir[0])) {
+                    ar = 0;
                     continue
                   }
-                  if (3 === qR[0] && (!tR || qR[1] > tR[0] && qR[1] < tR[3])) {
-                    uR.label = qR[1];
+                  if (3 === Ir[0] && (!Wr || Ir[1] > Wr[0] && Ir[1] < Wr[3])) {
+                    ar.label = Ir[1];
                     break
                   }
-                  if (6 === qR[0] && uR.label < tR[1]) {
-                    uR.label = tR[1], tR = qR;
+                  if (6 === Ir[0] && ar.label < Wr[1]) {
+                    ar.label = Wr[1], Wr = Ir;
                     break
                   }
-                  if (tR && uR.label < tR[2]) {
-                    uR.label = tR[2], uR.ops.push(qR);
+                  if (Wr && ar.label < Wr[2]) {
+                    ar.label = Wr[2], ar.ops.push(Ir);
                     break
                   }
-                  tR[2] && uR.ops.pop(), uR.trys.pop();
+                  Wr[2] && ar.ops.pop(), ar.trys.pop();
                   continue
               }
-              qR = JR.call(RR, uR)
-            } catch (iR) {
-              qR = [6, iR], yR = 0
+              Ir = Sr.call(rr, ar)
+            } catch (fr) {
+              Ir = [6, fr], Zr = 0
             } finally {
-              GR = tR = 0
+              Qr = Wr = 0
             }
-            if (5 & qR[0]) throw qR[1];
+            if (5 & Ir[0]) throw Ir[1];
             return {
-              value: qR[0] ? qR[1] : void 0,
+              value: Ir[0] ? Ir[1] : void 0,
               done: !0
             }
-          }([qR, iR])
+          }([Ir, fr])
         }
       }
     }
-    var LR = Object.create ? function(RR, JR, GR, yR) {
-      void 0 === yR && (yR = GR);
-      var tR = Object.getOwnPropertyDescriptor(JR, GR);
-      tR && !("get" in tR ? !JR.__esModule : tR.writable || tR.configurable) || (tR = {
+    var hr = Object.create ? function(rr, Sr, Qr, Zr) {
+      void 0 === Zr && (Zr = Qr);
+      var Wr = Object.getOwnPropertyDescriptor(Sr, Qr);
+      Wr && !("get" in Wr ? !Sr.__esModule : Wr.writable || Wr.configurable) || (Wr = {
         enumerable: !0,
         get: function() {
-          return JR[GR]
+          return Sr[Qr]
         }
-      }), Object.defineProperty(RR, yR, tR)
-    } : function(RR, JR, GR, yR) {
-      void 0 === yR && (yR = GR), RR[yR] = JR[GR]
+      }), Object.defineProperty(rr, Zr, Wr)
+    } : function(rr, Sr, Qr, Zr) {
+      void 0 === Zr && (Zr = Qr), rr[Zr] = Sr[Qr]
     };
 
-    function nR(RR, JR) {
-      for (var GR in RR) "default" === GR || Object.prototype.hasOwnProperty.call(JR, GR) || LR(JR, RR, GR)
+    function zr(rr, Sr) {
+      for (var Qr in rr) "default" === Qr || Object.prototype.hasOwnProperty.call(Sr, Qr) || hr(Sr, rr, Qr)
     }
 
-    function UR(RR) {
-      var JR = "function" === typeof Symbol && Symbol.iterator,
-        GR = JR && RR[JR],
-        yR = 0;
-      if (GR) return GR.call(RR);
-      if (RR && "number" === typeof RR.length) return {
+    function Yr(rr) {
+      var Sr = "function" === typeof Symbol && Symbol.iterator,
+        Qr = Sr && rr[Sr],
+        Zr = 0;
+      if (Qr) return Qr.call(rr);
+      if (rr && "number" === typeof rr.length) return {
         next: function() {
-          return RR && yR >= RR.length && (RR = void 0), {
-            value: RR && RR[yR++],
-            done: !RR
+          return rr && Zr >= rr.length && (rr = void 0), {
+            value: rr && rr[Zr++],
+            done: !rr
           }
         }
       };
-      throw new TypeError(JR ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Sr ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function WR(RR, JR) {
-      var GR = "function" === typeof Symbol && RR[Symbol.iterator];
-      if (!GR) return RR;
-      var yR, tR, uR = GR.call(RR),
-        ZR = [];
+    function nr(rr, Sr) {
+      var Qr = "function" === typeof Symbol && rr[Symbol.iterator];
+      if (!Qr) return rr;
+      var Zr, Wr, ar = Qr.call(rr),
+        jr = [];
       try {
         for (;
-          (void 0 === JR || JR-- > 0) && !(yR = uR.next()).done;) ZR.push(yR.value)
-      } catch (qR) {
-        tR = {
-          error: qR
+          (void 0 === Sr || Sr-- > 0) && !(Zr = ar.next()).done;) jr.push(Zr.value)
+      } catch (Ir) {
+        Wr = {
+          error: Ir
         }
       } finally {
         try {
-          yR && !yR.done && (GR = uR.return) && GR.call(uR)
+          Zr && !Zr.done && (Qr = ar.return) && Qr.call(ar)
         } finally {
-          if (tR) throw tR.error
+          if (Wr) throw Wr.error
         }
       }
-      return ZR
+      return jr
     }
 
-    function AR() {
-      for (var RR = [], JR = 0; JR < arguments.length; JR++) RR = RR.concat(WR(arguments[JR]));
-      return RR
+    function er() {
+      for (var rr = [], Sr = 0; Sr < arguments.length; Sr++) rr = rr.concat(nr(arguments[Sr]));
+      return rr
     }
 
-    function CR() {
-      for (var RR = 0, JR = 0, GR = arguments.length; JR < GR; JR++) RR += arguments[JR].length;
-      var yR = Array(RR),
-        tR = 0;
-      for (JR = 0; JR < GR; JR++)
-        for (var uR = arguments[JR], ZR = 0, qR = uR.length; ZR < qR; ZR++, tR++) yR[tR] = uR[ZR];
-      return yR
+    function Kr() {
+      for (var rr = 0, Sr = 0, Qr = arguments.length; Sr < Qr; Sr++) rr += arguments[Sr].length;
+      var Zr = Array(rr),
+        Wr = 0;
+      for (Sr = 0; Sr < Qr; Sr++)
+        for (var ar = arguments[Sr], jr = 0, Ir = ar.length; jr < Ir; jr++, Wr++) Zr[Wr] = ar[jr];
+      return Zr
     }
 
-    function XR(RR, JR, GR) {
-      if (GR || 2 === arguments.length)
-        for (var yR, tR = 0, uR = JR.length; tR < uR; tR++) !yR && tR in JR || (yR || (yR = Array.prototype.slice.call(JR, 0, tR)), yR[tR] = JR[tR]);
-      return RR.concat(yR || Array.prototype.slice.call(JR))
+    function yr(rr, Sr, Qr) {
+      if (Qr || 2 === arguments.length)
+        for (var Zr, Wr = 0, ar = Sr.length; Wr < ar; Wr++) !Zr && Wr in Sr || (Zr || (Zr = Array.prototype.slice.call(Sr, 0, Wr)), Zr[Wr] = Sr[Wr]);
+      return rr.concat(Zr || Array.prototype.slice.call(Sr))
     }
 
-    function MR(RR) {
-      return this instanceof MR ? (this.v = RR, this) : new MR(RR)
+    function Br(rr) {
+      return this instanceof Br ? (this.v = rr, this) : new Br(rr)
     }
 
-    function BR(RR, JR, GR) {
+    function Tr(rr, Sr, Qr) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var yR, tR = GR.apply(RR, JR || []),
-        uR = [];
-      return yR = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), ZR("next"), ZR("throw"), ZR("return", (function(RR) {
-        return function(JR) {
-          return Promise.resolve(JR).then(RR, fR)
+      var Zr, Wr = Qr.apply(rr, Sr || []),
+        ar = [];
+      return Zr = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), jr("next"), jr("throw"), jr("return", (function(rr) {
+        return function(Sr) {
+          return Promise.resolve(Sr).then(rr, Er)
         }
-      })), yR[Symbol.asyncIterator] = function() {
+      })), Zr[Symbol.asyncIterator] = function() {
         return this
-      }, yR;
+      }, Zr;
 
-      function ZR(RR, JR) {
-        tR[RR] && (yR[RR] = function(JR) {
-          return new Promise((function(GR, yR) {
-            uR.push([RR, JR, GR, yR]) > 1 || qR(RR, JR)
+      function jr(rr, Sr) {
+        Wr[rr] && (Zr[rr] = function(Sr) {
+          return new Promise((function(Qr, Zr) {
+            ar.push([rr, Sr, Qr, Zr]) > 1 || Ir(rr, Sr)
           }))
-        }, JR && (yR[RR] = JR(yR[RR])))
+        }, Sr && (Zr[rr] = Sr(Zr[rr])))
       }
 
-      function qR(RR, JR) {
+      function Ir(rr, Sr) {
         try {
-          (GR = tR[RR](JR)).value instanceof MR ? Promise.resolve(GR.value.v).then(iR, fR) : VR(uR[0][2], GR)
-        } catch (yR) {
-          VR(uR[0][3], yR)
+          (Qr = Wr[rr](Sr)).value instanceof Br ? Promise.resolve(Qr.value.v).then(fr, Er) : pr(ar[0][2], Qr)
+        } catch (Zr) {
+          pr(ar[0][3], Zr)
         }
-        var GR
+        var Qr
       }
 
-      function iR(RR) {
-        qR("next", RR)
+      function fr(rr) {
+        Ir("next", rr)
       }
 
-      function fR(RR) {
-        qR("throw", RR)
+      function Er(rr) {
+        Ir("throw", rr)
       }
 
-      function VR(RR, JR) {
-        RR(JR), uR.shift(), uR.length && qR(uR[0][0], uR[0][1])
+      function pr(rr, Sr) {
+        rr(Sr), ar.shift(), ar.length && Ir(ar[0][0], ar[0][1])
       }
     }
 
-    function lR(RR) {
-      var JR, GR;
-      return JR = {}, yR("next"), yR("throw", (function(RR) {
-        throw RR
-      })), yR("return"), JR[Symbol.iterator] = function() {
+    function vr(rr) {
+      var Sr, Qr;
+      return Sr = {}, Zr("next"), Zr("throw", (function(rr) {
+        throw rr
+      })), Zr("return"), Sr[Symbol.iterator] = function() {
         return this
-      }, JR;
+      }, Sr;
 
-      function yR(yR, tR) {
-        JR[yR] = RR[yR] ? function(JR) {
-          return (GR = !GR) ? {
-            value: MR(RR[yR](JR)),
+      function Zr(Zr, Wr) {
+        Sr[Zr] = rr[Zr] ? function(Sr) {
+          return (Qr = !Qr) ? {
+            value: Br(rr[Zr](Sr)),
             done: !1
-          } : tR ? tR(JR) : JR
-        } : tR
+          } : Wr ? Wr(Sr) : Sr
+        } : Wr
       }
     }
 
-    function pR(RR) {
+    function Or(rr) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var JR, GR = RR[Symbol.asyncIterator];
-      return GR ? GR.call(RR) : (RR = UR(RR), JR = {}, yR("next"), yR("throw"), yR("return"), JR[Symbol.asyncIterator] = function() {
+      var Sr, Qr = rr[Symbol.asyncIterator];
+      return Qr ? Qr.call(rr) : (rr = Yr(rr), Sr = {}, Zr("next"), Zr("throw"), Zr("return"), Sr[Symbol.asyncIterator] = function() {
         return this
-      }, JR);
+      }, Sr);
 
-      function yR(GR) {
-        JR[GR] = RR[GR] && function(JR) {
-          return new Promise((function(yR, tR) {
-            (function(RR, JR, GR, yR) {
-              Promise.resolve(yR).then((function(JR) {
-                RR({
-                  value: JR,
-                  done: GR
+      function Zr(Qr) {
+        Sr[Qr] = rr[Qr] && function(Sr) {
+          return new Promise((function(Zr, Wr) {
+            (function(rr, Sr, Qr, Zr) {
+              Promise.resolve(Zr).then((function(Sr) {
+                rr({
+                  value: Sr,
+                  done: Qr
                 })
-              }), JR)
-            })(yR, tR, (JR = RR[GR](JR)).done, JR.value)
+              }), Sr)
+            })(Zr, Wr, (Sr = rr[Qr](Sr)).done, Sr.value)
           }))
         }
       }
     }
 
-    function gR(RR, JR) {
-      return Object.defineProperty ? Object.defineProperty(RR, "raw", {
-        value: JR
-      }) : RR.raw = JR, RR
+    function Lr(rr, Sr) {
+      return Object.defineProperty ? Object.defineProperty(rr, "raw", {
+        value: Sr
+      }) : rr.raw = Sr, rr
     }
-    var bR = Object.create ? function(RR, JR) {
-        Object.defineProperty(RR, "default", {
+    var lr = Object.create ? function(rr, Sr) {
+        Object.defineProperty(rr, "default", {
           enumerable: !0,
-          value: JR
+          value: Sr
         })
-      } : function(RR, JR) {
-        RR.default = JR
+      } : function(rr, Sr) {
+        rr.default = Sr
       },
-      vR = function(RR) {
-        return vR = Object.getOwnPropertyNames || function(RR) {
-          var JR = [];
-          for (var GR in RR) Object.prototype.hasOwnProperty.call(RR, GR) && (JR[JR.length] = GR);
-          return JR
-        }, vR(RR)
+      Xr = function(rr) {
+        return Xr = Object.getOwnPropertyNames || function(rr) {
+          var Sr = [];
+          for (var Qr in rr) Object.prototype.hasOwnProperty.call(rr, Qr) && (Sr[Sr.length] = Qr);
+          return Sr
+        }, Xr(rr)
       };
 
-    function OR(RR) {
-      if (RR && RR.__esModule) return RR;
-      var JR = {};
-      if (null != RR)
-        for (var GR = vR(RR), yR = 0; yR < GR.length; yR++) "default" !== GR[yR] && LR(JR, RR, GR[yR]);
-      return bR(JR, RR), JR
+    function Pr(rr) {
+      if (rr && rr.__esModule) return rr;
+      var Sr = {};
+      if (null != rr)
+        for (var Qr = Xr(rr), Zr = 0; Zr < Qr.length; Zr++) "default" !== Qr[Zr] && hr(Sr, rr, Qr[Zr]);
+      return lr(Sr, rr), Sr
     }
 
-    function xR(RR) {
-      return RR && RR.__esModule ? RR : {
-        default: RR
+    function Hr(rr) {
+      return rr && rr.__esModule ? rr : {
+        default: rr
       }
     }
 
-    function NR(RR, JR, GR, yR) {
-      if ("a" === GR && !yR) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof JR ? RR !== JR || !yR : !JR.has(RR)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === GR ? yR : "a" === GR ? yR.call(RR) : yR ? yR.value : JR.get(RR)
+    function qr(rr, Sr, Qr, Zr) {
+      if ("a" === Qr && !Zr) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Sr ? rr !== Sr || !Zr : !Sr.has(rr)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Qr ? Zr : "a" === Qr ? Zr.call(rr) : Zr ? Zr.value : Sr.get(rr)
     }
 
-    function DR(RR, JR, GR, yR, tR) {
-      if ("m" === yR) throw new TypeError("Private method is not writable");
-      if ("a" === yR && !tR) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof JR ? RR !== JR || !tR : !JR.has(RR)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === yR ? tR.call(RR, GR) : tR ? tR.value = GR : JR.set(RR, GR), GR
+    function Rr(rr, Sr, Qr, Zr, Wr) {
+      if ("m" === Zr) throw new TypeError("Private method is not writable");
+      if ("a" === Zr && !Wr) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Sr ? rr !== Sr || !Wr : !Sr.has(rr)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === Zr ? Wr.call(rr, Qr) : Wr ? Wr.value = Qr : Sr.set(rr, Qr), Qr
     }
 
-    function HR(RR, JR) {
-      if (null === JR || "object" !== typeof JR && "function" !== typeof JR) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof RR ? JR === RR : RR.has(JR)
+    function gr(rr, Sr) {
+      if (null === Sr || "object" !== typeof Sr && "function" !== typeof Sr) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof rr ? Sr === rr : rr.has(Sr)
     }
 
-    function oR(RR, JR, GR) {
-      if (null !== JR && void 0 !== JR) {
-        if ("object" !== typeof JR && "function" !== typeof JR) throw new TypeError("Object expected.");
-        var yR, tR;
-        if (GR) {
+    function Cr(rr, Sr, Qr) {
+      if (null !== Sr && void 0 !== Sr) {
+        if ("object" !== typeof Sr && "function" !== typeof Sr) throw new TypeError("Object expected.");
+        var Zr, Wr;
+        if (Qr) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          yR = JR[Symbol.asyncDispose]
+          Zr = Sr[Symbol.asyncDispose]
         }
-        if (void 0 === yR) {
+        if (void 0 === Zr) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          yR = JR[Symbol.dispose], GR && (tR = yR)
+          Zr = Sr[Symbol.dispose], Qr && (Wr = Zr)
         }
-        if ("function" !== typeof yR) throw new TypeError("Object not disposable.");
-        tR && (yR = function() {
+        if ("function" !== typeof Zr) throw new TypeError("Object not disposable.");
+        Wr && (Zr = function() {
           try {
-            tR.call(this)
-          } catch (RR) {
-            return Promise.reject(RR)
+            Wr.call(this)
+          } catch (rr) {
+            return Promise.reject(rr)
           }
-        }), RR.stack.push({
-          value: JR,
-          dispose: yR,
-          async: GR
+        }), rr.stack.push({
+          value: Sr,
+          dispose: Zr,
+          async: Qr
         })
-      } else GR && RR.stack.push({
+      } else Qr && rr.stack.push({
         async: !0
       });
-      return JR
+      return Sr
     }
-    var cR = "function" === typeof SuppressedError ? SuppressedError : function(RR, JR, GR) {
-      var yR = new Error(GR);
-      return yR.name = "SuppressedError", yR.error = RR, yR.suppressed = JR, yR
+    var Mr = "function" === typeof SuppressedError ? SuppressedError : function(rr, Sr, Qr) {
+      var Zr = new Error(Qr);
+      return Zr.name = "SuppressedError", Zr.error = rr, Zr.suppressed = Sr, Zr
     };
 
-    function PR(RR) {
-      function JR(JR) {
-        RR.error = RR.hasError ? new cR(JR, RR.error, "An error was suppressed during disposal.") : JR, RR.hasError = !0
+    function Gr(rr) {
+      function Sr(Sr) {
+        rr.error = rr.hasError ? new Mr(Sr, rr.error, "An error was suppressed during disposal.") : Sr, rr.hasError = !0
       }
-      var GR, yR = 0;
-      return function tR() {
-        for (; GR = RR.stack.pop();) try {
-          if (!GR.async && 1 === yR) return yR = 0, RR.stack.push(GR), Promise.resolve().then(tR);
-          if (GR.dispose) {
-            var uR = GR.dispose.call(GR.value);
-            if (GR.async) return yR |= 2, Promise.resolve(uR).then(tR, (function(RR) {
-              return JR(RR), tR()
+      var Qr, Zr = 0;
+      return function Wr() {
+        for (; Qr = rr.stack.pop();) try {
+          if (!Qr.async && 1 === Zr) return Zr = 0, rr.stack.push(Qr), Promise.resolve().then(Wr);
+          if (Qr.dispose) {
+            var ar = Qr.dispose.call(Qr.value);
+            if (Qr.async) return Zr |= 2, Promise.resolve(ar).then(Wr, (function(rr) {
+              return Sr(rr), Wr()
             }))
-          } else yR |= 1
-        } catch (ZR) {
-          JR(ZR)
+          } else Zr |= 1
+        } catch (jr) {
+          Sr(jr)
         }
-        if (1 === yR) return RR.hasError ? Promise.reject(RR.error) : Promise.resolve();
-        if (RR.hasError) throw RR.error
+        if (1 === Zr) return rr.hasError ? Promise.reject(rr.error) : Promise.resolve();
+        if (rr.hasError) throw rr.error
       }()
     }
 
-    function IR(RR, JR) {
-      return "string" === typeof RR && /^\.\.?\//.test(RR) ? RR.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(RR, GR, yR, tR, uR) {
-        return GR ? JR ? ".jsx" : ".js" : !yR || tR && uR ? yR + tR + "." + uR.toLowerCase() + "js" : RR
-      })) : RR
+    function kr(rr, Sr) {
+      return "string" === typeof rr && /^\.\.?\//.test(rr) ? rr.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(rr, Qr, Zr, Wr, ar) {
+        return Qr ? Sr ? ".jsx" : ".js" : !Zr || Wr && ar ? Zr + Wr + "." + ar.toLowerCase() + "js" : rr
+      })) : rr
     }
-    const mR = {
-      __extends: tR,
-      __assign: uR,
-      __rest: ZR,
-      __decorate: qR,
-      __param: iR,
-      __esDecorate: fR,
-      __runInitializers: VR,
-      __propKey: KR,
-      __setFunctionName: wR,
-      __metadata: rR,
-      __awaiter: eR,
-      __generator: aR,
-      __createBinding: LR,
-      __exportStar: nR,
-      __values: UR,
-      __read: WR,
-      __spread: AR,
-      __spreadArrays: CR,
-      __spreadArray: XR,
-      __await: MR,
-      __asyncGenerator: BR,
-      __asyncDelegator: lR,
-      __asyncValues: pR,
-      __makeTemplateObject: gR,
-      __importStar: OR,
-      __importDefault: xR,
-      __classPrivateFieldGet: NR,
-      __classPrivateFieldSet: DR,
-      __classPrivateFieldIn: HR,
-      __addDisposableResource: oR,
-      __disposeResources: PR,
-      __rewriteRelativeImportExtension: IR
+    const Ar = {
+      __extends: Wr,
+      __assign: ar,
+      __rest: jr,
+      __decorate: Ir,
+      __param: fr,
+      __esDecorate: Er,
+      __runInitializers: pr,
+      __propKey: xr,
+      __setFunctionName: mr,
+      __metadata: Nr,
+      __awaiter: Ur,
+      __generator: tr,
+      __createBinding: hr,
+      __exportStar: zr,
+      __values: Yr,
+      __read: nr,
+      __spread: er,
+      __spreadArrays: Kr,
+      __spreadArray: yr,
+      __await: Br,
+      __asyncGenerator: Tr,
+      __asyncDelegator: vr,
+      __asyncValues: Or,
+      __makeTemplateObject: Lr,
+      __importStar: Pr,
+      __importDefault: Hr,
+      __classPrivateFieldGet: qr,
+      __classPrivateFieldSet: Rr,
+      __classPrivateFieldIn: gr,
+      __addDisposableResource: Cr,
+      __disposeResources: Gr,
+      __rewriteRelativeImportExtension: kr
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

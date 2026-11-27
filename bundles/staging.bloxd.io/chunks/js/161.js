@@ -1,727 +1,727 @@
 export const id = 161;
 export const ids = [161];
 export const modules = {
-  34989: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      i: () => ZR
+  35293: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir,
+      f: () => jr
     });
-    var yR = GR(279),
-      tR = GR(132),
-      uR = GR(34996);
+    var Zr = Qr(285),
+      Wr = Qr(135),
+      ar = Qr(35296);
 
-    function ZR() {
-      var RR, JR, GR;
-      return null !== (RR = (0, yR.o)(null !== (JR = null === (GR = (0, tR.o)()) || void 0 === GR ? void 0 : GR.renderer) && void 0 !== JR ? JR : null, (0, tR.k)())) && void 0 !== RR ? RR : "unknown"
+    function jr() {
+      var rr, Sr, Qr;
+      return null !== (rr = (0, Zr.j)(null !== (Sr = null === (Qr = (0, Wr.q)()) || void 0 === Qr ? void 0 : Qr.renderer) && void 0 !== Sr ? Sr : null, (0, Wr.m)())) && void 0 !== rr ? rr : "unknown"
     }
 
-    function qR(RR, JR, GR, yR, tR) {
-      const ZR = null === JR ? "untimed" : `${Math.round(JR)} ms`;
-      return `frames stalled, ${GR}, gpu ${(0,uR.e)(tR)}, blocking ${ZR}, drawn ${Math.round(RR)} ms apart, timers ${yR.timers}, timer gap ${Math.round(yR.longestGapMs)} ms`
+    function Ir(rr, Sr, Qr, Zr, Wr) {
+      const jr = null === Sr ? "untimed" : `${Math.round(Sr)} ms`;
+      return `frames stalled, ${Qr}, gpu ${(0,ar.b)(Wr)}, blocking ${jr}, drawn ${Math.round(rr)} ms apart, timers ${Zr.timers}, timer gap ${Math.round(Zr.longestGapMs)} ms`
     }
   },
-  40310: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => iR
+  40627: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => fr
     });
-    var yR = GR(10298),
-      tR = GR(37640),
-      uR = GR(40317);
-    const ZR = {
+    var Zr = Qr(10062),
+      Wr = Qr(38018),
+      ar = Qr(40632);
+    const jr = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      qR = {
+      Ir = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function iR(RR, JR) {
-      if (RR instanceof tR.g) return {
-        at: ZR[JR],
+    function fr(rr, Sr) {
+      if (rr instanceof Wr.c) return {
+        at: jr[Sr],
         code: 0
       };
-      const GR = (0, yR.h)(RR),
-        iR = "number" === typeof GR ? GR : 0;
-      return null !== (0, uR.e)(iR).name ? {
+      const Qr = (0, Zr.d)(rr),
+        fr = "number" === typeof Qr ? Qr : 0;
+      return null !== (0, ar.i)(fr).name ? {
         at: "refused",
-        code: iR
+        code: fr
       } : {
-        at: qR[JR],
-        code: iR
+        at: Ir[Sr],
+        code: fr
       }
     }
   },
-  10298: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => uR,
-      h: () => ZR,
-      k: () => qR,
-      n: () => fR,
-      p: () => iR
+  10062: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar,
+      d: () => jr,
+      e: () => Ir,
+      f: () => Er,
+      g: () => fr
     });
-    var yR = GR(203),
-      tR = GR(5425);
+    var Zr = Qr(208),
+      Wr = Qr(5384);
 
-    function uR(RR) {
-      return ZR(RR) === yR.e.gameOrPluginOnPlayerAuthRejected.code
+    function ar(rr) {
+      return jr(rr) === Zr.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function ZR(RR) {
-      return "object" === typeof RR && null !== RR ? RR.code : void 0
+    function jr(rr) {
+      return "object" === typeof rr && null !== rr ? rr.code : void 0
     }
 
-    function qR(RR) {
-      var JR;
-      return null !== (JR = Object.keys(tR.d).find((JR => tR.d[JR] === RR))) && void 0 !== JR ? JR : null
+    function Ir(rr) {
+      var Sr;
+      return null !== (Sr = Object.keys(Wr.b).find((Sr => Wr.b[Sr] === rr))) && void 0 !== Sr ? Sr : null
     }
 
-    function iR(RR) {
-      return "notWhitelisted" === RR ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function fr(rr) {
+      return "notWhitelisted" === rr ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const fR = {
+    const Er = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  34996: (RR, JR, GR) => {
-    function yR(RR) {
-      return String(RR).replace(/\d/g, (RR => String.fromCharCode(97 + Number(RR))))
+  35296: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return String(rr).replace(/\d/g, (rr => String.fromCharCode(97 + Number(rr))))
     }
-    GR.d(JR, {
-      e: () => yR
+    Qr.d(Sr, {
+      b: () => Zr
     })
   },
-  40317: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      e: () => iR,
-      f: () => ZR,
-      h: () => tR
+  40632: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      i: () => fr,
+      j: () => jr,
+      n: () => Wr
     });
-    var yR = GR(203);
+    var Zr = Qr(208);
 
-    function tR(RR) {
-      const JR = RR.endsWith(yR.k);
+    function Wr(rr) {
+      const Sr = rr.endsWith(Zr.l);
       return {
-        text: (JR ? RR.slice(0, -yR.k.length) : RR) || null,
-        dropsCache: JR
+        text: (Sr ? rr.slice(0, -Zr.l.length) : rr) || null,
+        dropsCache: Sr
       }
     }
-    const uR = "Either your internet isn't working or this is a bug.";
+    const ar = "Either your internet isn't working or this is a bug.";
 
-    function ZR(RR, JR) {
-      const GR = iR(RR);
-      return null !== GR.name && "" === yR.e[GR.name].text && null !== JR ? JR : GR.reason
+    function jr(rr, Sr) {
+      const Qr = fr(rr);
+      return null !== Qr.name && "" === Zr.e[Qr.name].text && null !== Sr ? Sr : Qr.reason
     }
-    const qR = "You were removed from the game.";
+    const Ir = "You were removed from the game.";
 
-    function iR(RR) {
-      var JR;
-      let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const tR = null !== (JR = Object.keys(yR.e).find((JR => yR.e[JR].code === RR))) && void 0 !== JR ? JR : null;
-      if (null === tR) return {
-        code: RR,
-        name: tR,
-        reason: null !== GR && void 0 !== GR ? GR : `${uR}\nCode: ${RR}`,
+    function fr(rr) {
+      var Sr;
+      let Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Wr = null !== (Sr = Object.keys(Zr.e).find((Sr => Zr.e[Sr].code === rr))) && void 0 !== Sr ? Sr : null;
+      if (null === Wr) return {
+        code: rr,
+        name: Wr,
+        reason: null !== Qr && void 0 !== Qr ? Qr : `${ar}\nCode: ${rr}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: ZR,
-        canReconnect: iR = !1
-      } = yR.e[tR], fR = RR === yR.e.outdatedVersion.code || RR === yR.e.loadRecaptchaError.code;
+        text: jr,
+        canReconnect: fr = !1
+      } = Zr.e[Wr], Er = rr === Zr.e.outdatedVersion.code || rr === Zr.e.loadRecaptchaError.code;
       return {
-        code: RR,
-        name: tR,
-        reason: "" !== ZR ? ZR : null !== GR && void 0 !== GR ? GR : RR === yR.e.gameOrPluginKick.code ? qR : `Code: ${RR}`,
-        canReconnect: iR,
-        automaticallyReconnect: RR === yR.e.customGameUpdated.code || RR === yR.e.duplicateLobbyNameError.code,
-        requiresRefresh: fR
+        code: rr,
+        name: Wr,
+        reason: "" !== jr ? jr : null !== Qr && void 0 !== Qr ? Qr : rr === Zr.e.gameOrPluginKick.code ? Ir : `Code: ${rr}`,
+        canReconnect: fr,
+        automaticallyReconnect: rr === Zr.e.customGameUpdated.code || rr === Zr.e.duplicateLobbyNameError.code,
+        requiresRefresh: Er
       }
     }
   },
-  42170: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      f: () => VR,
-      h: () => ZR,
-      i: () => tR,
-      j: () => qR,
-      l: () => fR
+  42500: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr,
+      e: () => pr,
+      g: () => jr,
+      i: () => Wr,
+      k: () => Ir,
+      n: () => Er
     });
-    class yR extends Error {
+    class Zr extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function tR(RR) {
-      return RR instanceof RangeError && /call stack/i.test(RR.message) || RR instanceof Error && "InternalError" === RR.name && /recursion/i.test(RR.message)
+    function Wr(rr) {
+      return rr instanceof RangeError && /call stack/i.test(rr.message) || rr instanceof Error && "InternalError" === rr.name && /recursion/i.test(rr.message)
     }
-    const uR = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const ar = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function ZR(RR) {
-      var JR;
-      return RR instanceof WebAssembly.RuntimeError || RR instanceof yR || tR(RR) && uR.test(null !== (JR = RR.stack) && void 0 !== JR ? JR : "")
-    }
-
-    function qR(RR, JR) {
-      if (ZR(RR)) throw RR;
-      console.error(JR, RR)
+    function jr(rr) {
+      var Sr;
+      return rr instanceof WebAssembly.RuntimeError || rr instanceof Zr || Wr(rr) && ar.test(null !== (Sr = rr.stack) && void 0 !== Sr ? Sr : "")
     }
 
-    function iR(RR, JR, GR, tR, uR) {
-      if (JR % tR !== 0 || JR + GR > RR.byteLength) throw new yR(`${uR}: ${GR} bytes at ${JR}, ${tR}-aligned, outside ${RR.byteLength} bytes of memory`)
+    function Ir(rr, Sr) {
+      if (jr(rr)) throw rr;
+      console.error(Sr, rr)
     }
 
-    function fR(RR, JR, GR, yR, tR) {
-      return 0 === GR ? null : (iR(JR, GR, yR * RR.BYTES_PER_ELEMENT, RR.BYTES_PER_ELEMENT, tR), new RR(JR, GR, yR))
+    function fr(rr, Sr, Qr, Wr, ar) {
+      if (Sr % Wr !== 0 || Sr + Qr > rr.byteLength) throw new Zr(`${ar}: ${Qr} bytes at ${Sr}, ${Wr}-aligned, outside ${rr.byteLength} bytes of memory`)
     }
 
-    function VR(RR, JR, GR, yR, tR) {
-      return 0 === JR ? null : (iR(RR, JR, GR, yR, tR), new DataView(RR, JR, GR))
+    function Er(rr, Sr, Qr, Zr, Wr) {
+      return 0 === Qr ? null : (fr(Sr, Qr, Zr * rr.BYTES_PER_ELEMENT, rr.BYTES_PER_ELEMENT, Wr), new rr(Sr, Qr, Zr))
+    }
+
+    function pr(rr, Sr, Qr, Zr, Wr) {
+      return 0 === Sr ? null : (fr(rr, Sr, Qr, Zr, Wr), new DataView(rr, Sr, Qr))
     }
   },
-  42230: (RR, JR, GR) => {
-    GR.d(JR, {
-      A: () => GJ,
-      B: () => FR,
-      C: () => ZJ,
-      D: () => uJ,
-      G: () => yJ,
-      I: () => iJ,
-      M: () => AJ,
-      N: () => qJ,
-      Q: () => tJ,
-      R: () => fJ,
-      T: () => DR,
-      W: () => rJ,
-      _: () => LJ,
-      ab: () => HR,
-      b: () => xR,
-      cb: () => oR,
-      e: () => CJ,
-      i: () => lJ,
-      j: () => aJ,
-      n: () => WJ,
-      o: () => wJ,
-      s: () => UJ,
-      t: () => nJ,
-      v: () => BJ,
-      y: () => RJ
+  42559: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      $: () => WS,
+      D: () => rS,
+      F: () => QS,
+      H: () => Dr,
+      K: () => jS,
+      L: () => aS,
+      P: () => ZS,
+      S: () => fS,
+      T: () => eS,
+      X: () => IS,
+      bb: () => ES,
+      db: () => Rr,
+      e: () => Hr,
+      g: () => KS,
+      gb: () => NS,
+      h: () => vS,
+      hb: () => hS,
+      kb: () => gr,
+      l: () => tS,
+      n: () => nS,
+      nb: () => Cr,
+      p: () => mS,
+      t: () => YS,
+      x: () => zS,
+      z: () => TS
     });
-    var yR = GR(359),
-      tR = GR(277),
-      uR = GR(279),
-      ZR = GR(25),
-      qR = GR(3960),
-      iR = GR(743),
-      fR = GR(5323),
-      VR = GR(3935),
-      KR = GR(4776),
-      wR = GR(103),
-      rR = GR(134),
-      eR = GR(350),
-      aR = GR(46),
-      LR = GR(342),
-      nR = GR(123),
-      UR = GR(706),
-      WR = GR(327),
-      AR = GR(132),
-      CR = GR(127),
-      XR = GR(5685),
-      MR = GR(42237),
-      BR = GR(1825),
-      lR = GR(42239),
-      pR = GR(42247),
-      gR = GR(35094),
-      bR = GR(42255),
-      vR = GR(42259);
-    const OR = "bloxd-webgpuOffAfterLoss",
-      xR = "context:webgl",
-      NR = "probe:threw";
+    var Zr = Qr(360),
+      Wr = Qr(277),
+      ar = Qr(285),
+      jr = Qr(26),
+      Ir = Qr(3909),
+      fr = Qr(750),
+      Er = Qr(5279),
+      pr = Qr(3886),
+      xr = Qr(4690),
+      mr = Qr(109),
+      Nr = Qr(139),
+      Ur = Qr(351),
+      tr = Qr(43),
+      hr = Qr(345),
+      zr = Qr(127),
+      Yr = Qr(705),
+      nr = Qr(335),
+      er = Qr(135),
+      Kr = Qr(129),
+      yr = Qr(5617),
+      Br = Qr(42565),
+      Tr = Qr(1783),
+      vr = Qr(42574),
+      Or = Qr(42579),
+      Lr = Qr(35408),
+      lr = Qr(42581),
+      Xr = Qr(42585);
+    const Pr = "bloxd-webgpuOffAfterLoss",
+      Hr = "context:webgl",
+      qr = "probe:threw";
 
-    function DR(RR) {
-      return RR.includes("Web page caused context loss and was blocked")
+    function Rr(rr) {
+      return rr.includes("Web page caused context loss and was blocked")
     }
 
-    function HR() {
-      const RR = document.createElement("canvas");
-      let JR = "";
-      RR.addEventListener("webglcontextcreationerror", (RR => {
-        JR = RR.statusMessage
+    function gr() {
+      const rr = document.createElement("canvas");
+      let Sr = "";
+      rr.addEventListener("webglcontextcreationerror", (rr => {
+        Sr = rr.statusMessage
       }));
       try {
-        var GR, yR;
-        null === (GR = RR.getContext("webgl")) || void 0 === GR || null === (yR = GR.getExtension("WEBGL_lose_context")) || void 0 === yR || yR.loseContext()
-      } catch (tR) {
-        return String(tR)
+        var Qr, Zr;
+        null === (Qr = rr.getContext("webgl")) || void 0 === Qr || null === (Zr = Qr.getExtension("WEBGL_lose_context")) || void 0 === Zr || Zr.loseContext()
+      } catch (Wr) {
+        return String(Wr)
       }
-      return JR
+      return Sr
     }
 
-    function oR(RR) {
-      let JR;
+    function Cr(rr) {
+      let Sr;
       try {
-        JR = RR.getContext("webgl", {
-          powerPreference: AR.b
+        Sr = rr.getContext("webgl", {
+          powerPreference: er.d
         })
       } catch {
-        JR = null
+        Sr = null
       }
-      if (null === JR) return null;
-      let GR = null;
+      if (null === Sr) return null;
+      let Qr = null;
       try {
-        const RR = JR.getParameter(JR.MAX_TEXTURE_SIZE);
-        GR = "number" === typeof RR && RR > 0 ? RR : null
+        const rr = Sr.getParameter(Sr.MAX_TEXTURE_SIZE);
+        Qr = "number" === typeof rr && rr > 0 ? rr : null
       } catch {
-        GR = null
+        Qr = null
       }
       try {
-        var yR;
-        null === (yR = JR.getExtension("WEBGL_lose_context")) || void 0 === yR || yR.loseContext()
+        var Zr;
+        null === (Zr = Sr.getExtension("WEBGL_lose_context")) || void 0 === Zr || Zr.loseContext()
       } catch {}
-      return GR
+      return Qr
     }
-    const cR = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
+    const Mr = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
 
-    function PR() {
-      return "ios" === (0, wR.getOperatingSystem)() ? "ios" : "other"
+    function Gr() {
+      return "ios" === (0, mr.getOperatingSystem)() ? "ios" : "other"
     }
-    const IR = "mali_valhall",
-      mR = new Set(["nvidia_pre_turing"]),
-      zR = new Set(["intel_gen7_8"]),
-      SR = new Set(["powervr_rogue"]);
+    const kr = "mali_valhall",
+      Ar = new Set(["nvidia_pre_turing"]),
+      Vr = new Set(["intel_gen7_8"]),
+      ir = new Set(["powervr_rogue"]);
 
-    function jR(RR, JR, GR) {
-      return cR.has(RR) ? "android_arm" === RR && JR === IR && "mobileAndroid" !== GR ? "webgpu_default" : "webgl_default" : null
+    function wr(rr, Sr, Qr) {
+      return Mr.has(rr) ? "android_arm" === rr && Sr === kr && "mobileAndroid" !== Qr ? "webgpu_default" : "webgl_default" : null
     }
 
-    function dR(RR) {
-      return function(RR) {
+    function cr(rr) {
+      return function(rr) {
         try {
-          return RR()
+          return rr()
         } catch {
           return null
         }
       }((() => {
-        var JR, GR, yR, ZR;
-        const qR = null !== (JR = null === (GR = RR.info) || void 0 === GR ? void 0 : GR.vendor) && void 0 !== JR ? JR : "";
-        return "windows" === (0, wR.getOperatingSystem)() && "" !== qR && "intel" !== (0, wR.normaliseGpuVendor)(qR) ? null : ((0, wR.seedGpuVendor)(qR), jR((0, tR.g)(), (0, uR.h)(qR, null !== (yR = null === (ZR = RR.info) || void 0 === ZR ? void 0 : ZR.architecture) && void 0 !== yR ? yR : ""), rR.siteUsed))
+        var Sr, Qr, Zr, jr;
+        const Ir = null !== (Sr = null === (Qr = rr.info) || void 0 === Qr ? void 0 : Qr.vendor) && void 0 !== Sr ? Sr : "";
+        return "windows" === (0, mr.getOperatingSystem)() && "" !== Ir && "intel" !== (0, mr.normaliseGpuVendor)(Ir) ? null : ((0, mr.seedGpuVendor)(Ir), wr((0, Wr.j)(), (0, ar.f)(Ir, null !== (Zr = null === (jr = rr.info) || void 0 === jr ? void 0 : jr.architecture) && void 0 !== Zr ? Zr : ""), Nr.siteUsed))
       }))
     }
 
-    function ER() {
-      var RR;
+    function Fr() {
+      var rr;
       return {
-        gpu: null !== (RR = navigator.gpu) && void 0 !== RR ? RR : null,
-        webgl2: bR.c,
-        webgl1: () => function(RR) {
-          let JR, GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : MR.d;
+        gpu: null !== (rr = navigator.gpu) && void 0 !== rr ? rr : null,
+        webgl2: lr.h,
+        webgl1: () => function(rr) {
+          let Sr, Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Br.d;
           try {
-            JR = RR.getContext("webgl")
+            Sr = rr.getContext("webgl")
           } catch {
-            JR = null
+            Sr = null
           }
-          if (null === JR) return [xR];
-          const yR = [];
+          if (null === Sr) return [Hr];
+          const Zr = [];
           try {
-            for (const tR of GR.extensions) null === JR.getExtension(tR) && yR.push(tR);
-            for (const [tR, uR] of Object.entries(GR.limits)) {
-              const RR = JR[tR],
-                GR = "number" === typeof RR ? JR.getParameter(RR) : null;
-              ("number" !== typeof GR || GR < uR) && yR.push(`limit:${tR}`)
+            for (const Wr of Qr.extensions) null === Sr.getExtension(Wr) && Zr.push(Wr);
+            for (const [Wr, ar] of Object.entries(Qr.limits)) {
+              const rr = Sr[Wr],
+                Qr = "number" === typeof rr ? Sr.getParameter(rr) : null;
+              ("number" !== typeof Qr || Qr < ar) && Zr.push(`limit:${Wr}`)
             }
-            const RR = JR.getShaderPrecisionFormat(JR.VERTEX_SHADER, JR.HIGH_FLOAT);
-            (null === RR || RR.precision < GR.vertexHighFloatBits) && yR.push("precision:vertex_high_float")
+            const rr = Sr.getShaderPrecisionFormat(Sr.VERTEX_SHADER, Sr.HIGH_FLOAT);
+            (null === rr || rr.precision < Qr.vertexHighFloatBits) && Zr.push("precision:vertex_high_float")
           } catch {
-            yR.push(NR)
+            Zr.push(qr)
           }
           try {
-            var tR;
-            null === (tR = JR.getExtension("WEBGL_lose_context")) || void 0 === tR || tR.loseContext()
+            var Wr;
+            null === (Wr = Sr.getExtension("WEBGL_lose_context")) || void 0 === Wr || Wr.loseContext()
           } catch {}
-          return yR
+          return Zr
         }(document.createElement("canvas")),
-        webgl1First: () => kR((() => function(RR, JR) {
-          if ("chrome_os" !== RR) return !1;
-          const GR = JR();
-          return null !== GR && SR.has((0, uR.k)(GR.vendor, GR.renderer))
-        }((0, wR.getOperatingSystem)(), AR.B))),
-        offAfterLoss: RR => kR((() => RR ? (0, LR.F)() : ZR.d.isWebGpuOffAfterLoss())),
-        fewWasmMemories: WR.d,
-        oldIntelDriver: RR => kR((() => (0, nR.g)(RR))),
-        intelGen9: RR => kR((() => (0, nR.r)(RR))),
-        storeIntelGen9Verdict: RR => {
-          aR.i.setItem(nR.F, RR)
+        webgl1First: () => br((() => function(rr, Sr) {
+          if ("chrome_os" !== rr) return !1;
+          const Qr = Sr();
+          return null !== Qr && ir.has((0, ar.g)(Qr.vendor, Qr.renderer))
+        }((0, mr.getOperatingSystem)(), er.D))),
+        offAfterLoss: rr => br((() => rr ? (0, hr.C)() : jr.c.isWebGpuOffAfterLoss())),
+        fewWasmMemories: nr.i,
+        oldIntelDriver: rr => br((() => (0, zr.e)(rr))),
+        intelGen9: rr => br((() => (0, zr.o)(rr))),
+        storeIntelGen9Verdict: rr => {
+          tr.j.setItem(zr.D, rr)
         },
-        gpuClassWebGlArm: dR,
-        storeGpuClassVerdict: RR => {
-          aR.i.setItem(nR.E, RR)
+        gpuClassWebGlArm: cr,
+        storeGpuClassVerdict: rr => {
+          tr.j.setItem(zr.A, rr)
         },
-        gpuClassOnWebGl: RR => (0, UR.c)(RR),
-        webGlDefaultFamily: RR => zR.has((0, uR.h)(RR.vendor, RR.architecture)),
-        storeWebGlDefaultFamilyVerdict: RR => {
-          aR.i.setItem(nR.P, RR)
+        gpuClassOnWebGl: rr => (0, Yr.d)(rr),
+        webGlDefaultFamily: rr => Vr.has((0, ar.f)(rr.vendor, rr.architecture)),
+        storeWebGlDefaultFamilyVerdict: rr => {
+          tr.j.setItem(zr.L, rr)
         },
-        override: () => YR(),
-        claimed: () => QR((0, iR.j)()),
+        override: () => or(),
+        claimed: () => Jr((0, fr.k)()),
         webGpuSetting: () => {
-          const RR = aR.i.getItem(yR.jc);
-          return "boolean" === typeof RR ? RR : null
+          const rr = tr.j.getItem(Zr.mc);
+          return "boolean" === typeof rr ? rr : null
         },
-        heldBack: () => UR.e,
-        storeHoldbackSpared: RR => {
-          aR.i.setItem(nR.A, RR)
+        heldBack: () => Yr.h,
+        storeHoldbackSpared: rr => {
+          tr.j.setItem(zr.z, rr)
         },
-        intelGen9OnWebGl: () => UR.f,
-        Be: () => kR((() => (0, KR.h)(wR.featureFlags.settings.canUseShaderPacks))),
-        windows: () => kR((() => "windows" === (0, wR.getOperatingSystem)())),
-        defaultCompatibility: gR.d
+        intelGen9OnWebGl: () => Yr.k,
+        zU: () => br((() => (0, xr.d)(mr.featureFlags.settings.canUseShaderPacks))),
+        windows: () => br((() => "windows" === (0, mr.getOperatingSystem)())),
+        defaultCompatibility: Lr.e
       }
     }
 
-    function YR() {
-      let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      if ((0, qR.n)("render") && "webgl1" === (0, qR.l)("renderer")) return "webgl1";
-      const JR = [() => new URLSearchParams(window.location.search).get(VR.b), () => aR.i.getItem(VR.e), () => {
-        const JR = localStorage.getItem(OR);
-        return null !== JR && RR && localStorage.removeItem(OR), "1" === JR ? "webgl2" : null
+    function or() {
+      let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      if ((0, Ir.p)("render") && "webgl1" === (0, Ir.o)("renderer")) return "webgl1";
+      const Sr = [() => new URLSearchParams(window.location.search).get(pr.b), () => tr.j.getItem(pr.f), () => {
+        const Sr = localStorage.getItem(Pr);
+        return null !== Sr && rr && localStorage.removeItem(Pr), "1" === Sr ? "webgl2" : null
       }];
-      for (const GR of JR) {
-        let RR = null;
+      for (const Qr of Sr) {
+        let rr = null;
         try {
-          RR = QR(GR())
+          rr = Jr(Qr())
         } catch {}
-        if (null !== RR) return RR
+        if (null !== rr) return rr
       }
       return null
     }
 
-    function kR(RR) {
+    function br(rr) {
       try {
-        return RR()
+        return rr()
       } catch {
         return !1
       }
     }
 
-    function QR(RR) {
-      return "lite" === RR ? "webgpu" : "webgl2" === RR || "babylon" === RR ? "webgl" : null
+    function Jr(rr) {
+      return "lite" === rr ? "webgpu" : "webgl2" === rr || "babylon" === rr ? "webgl" : null
     }
 
-    function FR(RR) {
-      return "none" === RR || "compatibility_mode" === RR
+    function Dr(rr) {
+      return "none" === rr || "compatibility_mode" === rr
     }
-    async function TR() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ER();
-      const JR = await async function(RR) {
-        const JR = hR(RR),
+    async function dr() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Fr();
+      const Sr = await async function(rr) {
+        const Sr = ur(rr),
           {
-            source: GR
-          } = JR,
-          yR = !JR.asked,
-          tR = "gpu" in JR && JR.heldBack,
-          ZR = function(RR) {
-            let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            return tR && !FR(RR) ? {
+            source: Qr
+          } = Sr,
+          Zr = !Sr.asked,
+          Wr = "gpu" in Sr && Sr.heldBack,
+          jr = function(rr) {
+            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            return Wr && !Dr(rr) ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: GR
+              source: Qr
             } : {
-              reason: RR,
-              adapter: JR,
-              source: GR
+              reason: rr,
+              adapter: Sr,
+              source: Qr
             }
           };
-        if (!("gpu" in JR)) return ZR(JR.refused);
-        let qR;
+        if (!("gpu" in Sr)) return jr(Sr.refused);
+        let Ir;
         try {
-          qR = await (0, BR.k)((0, CR.i)(JR.gpu, {
-            compatibility: sR(RR, JR)
-          }), XJ, `requestAdapter didn't settle in ${XJ/1e3} s`)
+          Ir = await (0, Tr.h)((0, Kr.k)(Sr.gpu, {
+            compatibility: sr(rr, Sr)
+          }), yS, `requestAdapter didn't settle in ${yS/1e3} s`)
         } catch {
-          return ZR("adapter_error")
+          return jr("adapter_error")
         }
-        if ("string" === typeof qR) return ZR(qR);
+        if ("string" === typeof Ir) return jr(Ir);
         const {
-          adapter: iR,
-          compatibility: fR
-        } = qR, VR = (0, CR.b)(iR);
-        if ((0, CR.e)(iR)) return ZR("software_adapter", VR);
-        const KR = RR.windows() && function(RR) {
-          return mR.has((0, uR.h)(RR.vendor, RR.architecture))
-        }(VR);
-        if (RR.storeHoldbackSpared(KR), tR && !KR) return ZR("webgl_holdback");
-        const wR = RR.intelGen9(iR);
-        RR.storeIntelGen9Verdict(wR);
-        const rR = wR ? null : RR.gpuClassWebGlArm(iR);
-        RR.storeGpuClassVerdict(null !== rR && void 0 !== rR && rR);
-        const eR = RR.webGlDefaultFamily(VR);
-        if (RR.storeWebGlDefaultFamilyVerdict(eR), yR && RR.oldIntelDriver(iR)) return ZR("old_intel_driver", VR);
-        if ("default" === GR && wR && RR.intelGen9OnWebGl()) return ZR("intel_gen9", VR);
-        if ("default" === GR && null !== rR && RR.gpuClassOnWebGl(rR)) return ZR("gpu_class_webgl", VR);
-        if ("default" === GR && eR) return ZR("gpu_wasm_arm", VR);
-        return ZR(fR ? "compatibility_mode" : "none", VR)
-      }(RR);
-      if (FR(JR.reason)) return {
+          adapter: fr,
+          compatibility: Er
+        } = Ir, pr = (0, Kr.c)(fr);
+        if ((0, Kr.f)(fr)) return jr("software_adapter", pr);
+        const xr = rr.windows() && function(rr) {
+          return Ar.has((0, ar.f)(rr.vendor, rr.architecture))
+        }(pr);
+        if (rr.storeHoldbackSpared(xr), Wr && !xr) return jr("webgl_holdback");
+        const mr = rr.intelGen9(fr);
+        rr.storeIntelGen9Verdict(mr);
+        const Nr = mr ? null : rr.gpuClassWebGlArm(fr);
+        rr.storeGpuClassVerdict(null !== Nr && void 0 !== Nr && Nr);
+        const Ur = rr.webGlDefaultFamily(pr);
+        if (rr.storeWebGlDefaultFamilyVerdict(Ur), Zr && rr.oldIntelDriver(fr)) return jr("old_intel_driver", pr);
+        if ("default" === Qr && mr && rr.intelGen9OnWebGl()) return jr("intel_gen9", pr);
+        if ("default" === Qr && null !== Nr && rr.gpuClassOnWebGl(Nr)) return jr("gpu_class_webgl", pr);
+        if ("default" === Qr && Ur) return jr("gpu_wasm_arm", pr);
+        return jr(Er ? "compatibility_mode" : "none", pr)
+      }(rr);
+      if (Dr(Sr.reason)) return {
         backend: "webgpu",
-        ...JR
+        ...Sr
       };
-      const GR = "webgl1" === RR.override(),
-        yR = "not_requested" === JR.reason && ("override" === JR.source || "claim" === JR.source),
-        tR = !GR && !yR && RR.webgl1First();
-      if (!GR && !tR && RR.webgl2()) return {
+      const Qr = "webgl1" === rr.override(),
+        Zr = "not_requested" === Sr.reason && ("override" === Sr.source || "claim" === Sr.source),
+        Wr = !Qr && !Zr && rr.webgl1First();
+      if (!Qr && !Wr && rr.webgl2()) return {
         backend: "webgl",
-        ...JR
+        ...Sr
       };
-      const ZR = RR.webgl1();
-      return 0 === ZR.length ? {
+      const jr = rr.webgl1();
+      return 0 === jr.length ? {
         backend: "webgl1",
-        ...JR
-      } : tR && RR.webgl2() ? {
+        ...Sr
+      } : Wr && rr.webgl2() ? {
         backend: "webgl",
-        ...JR
+        ...Sr
       } : {
-        missing: ZR
+        missing: jr
       }
     }
 
-    function sR(RR, JR) {
+    function sr(rr, Sr) {
       let {
-        source: GR,
-        asked: yR
-      } = JR;
-      return yR || "default" === GR ? (0, gR.i)(yR, RR.defaultCompatibility) : void 0
+        source: Qr,
+        asked: Zr
+      } = Sr;
+      return Zr || "default" === Qr ? (0, Lr.l)(Zr, rr.defaultCompatibility) : void 0
     }
 
-    function hR(RR) {
-      const JR = RR.override(),
-        GR = RR.webGpuSetting(),
-        yR = null === JR && !0 !== GR && RR.Be(),
-        tR = null !== JR || null !== GR || yR ? null : RR.claimed(),
-        uR = null !== JR ? "override" : !0 === GR ? "setting" : yR ? "pack" : !1 === GR ? "setting" : null !== tR ? "claim" : "default",
-        ZR = function(RR) {
-          return "override" === RR || "setting" === RR
-        }(uR);
-      if ("webgl" === JR || "webgl1" === JR || "webgl" === tR || "setting" === uR && !1 === GR) return {
-        source: uR,
-        asked: ZR,
+    function ur(rr) {
+      const Sr = rr.override(),
+        Qr = rr.webGpuSetting(),
+        Zr = null === Sr && !0 !== Qr && rr.zU(),
+        Wr = null !== Sr || null !== Qr || Zr ? null : rr.claimed(),
+        ar = null !== Sr ? "override" : !0 === Qr ? "setting" : Zr ? "pack" : !1 === Qr ? "setting" : null !== Wr ? "claim" : "default",
+        jr = function(rr) {
+          return "override" === rr || "setting" === rr
+        }(ar);
+      if ("webgl" === Sr || "webgl1" === Sr || "webgl" === Wr || "setting" === ar && !1 === Qr) return {
+        source: ar,
+        asked: jr,
         refused: "not_requested"
       };
-      if (!RR.gpu) return {
-        source: uR,
-        asked: ZR,
+      if (!rr.gpu) return {
+        source: ar,
+        asked: jr,
         refused: "no_webgpu_api"
       };
-      const qR = "default" === uR && RR.heldBack();
-      if (qR && !RR.windows()) return {
-        source: uR,
-        asked: ZR,
+      const Ir = "default" === ar && rr.heldBack();
+      if (Ir && !rr.windows()) return {
+        source: ar,
+        asked: jr,
         refused: "webgl_holdback"
       };
-      const iR = ZR ? null : RR.offAfterLoss("pack" === uR) ? "off_after_loss" : RR.fewWasmMemories() ? "few_wasm_memories" : null;
-      return null !== iR ? {
-        source: uR,
-        asked: ZR,
-        refused: qR ? "webgl_holdback" : iR
+      const fr = jr ? null : rr.offAfterLoss("pack" === ar) ? "off_after_loss" : rr.fewWasmMemories() ? "few_wasm_memories" : null;
+      return null !== fr ? {
+        source: ar,
+        asked: jr,
+        refused: Ir ? "webgl_holdback" : fr
       } : {
-        source: uR,
-        asked: ZR,
-        heldBack: qR,
-        gpu: RR.gpu
+        source: ar,
+        asked: jr,
+        heldBack: Ir,
+        gpu: rr.gpu
       }
     }
 
-    function RJ() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
-          ...ER(),
-          override: () => YR(!1)
+    function rS() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          ...Fr(),
+          override: () => or(!1)
         },
-        JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wR.isWebKit,
-        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : PR;
+        Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mr.isWebKit,
+        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Gr;
       try {
-        if (!JR()) return !1;
-        const yR = hR(RR);
-        if (!("gpu" in yR) || yR.heldBack) return !1;
-        const tR = "default" === yR.source ? jR(GR(), "apple", rR.siteUsed) : null;
-        return null === tR || !RR.gpuClassOnWebGl(tR)
-      } catch (yR) {
-        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", yR), !1
+        if (!Sr()) return !1;
+        const Zr = ur(rr);
+        if (!("gpu" in Zr) || Zr.heldBack) return !1;
+        const Wr = "default" === Zr.source ? wr(Qr(), "apple", Nr.siteUsed) : null;
+        return null === Wr || !rr.gpuClassOnWebGl(Wr)
+      } catch (Zr) {
+        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", Zr), !1
       }
     }
-    let JJ = !1;
-    async function GJ(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ER();
-      if (null === RR) return null;
-      const GR = await TR(JR);
-      return JJ = !("missing" in GR) && "webgpu" === GR.backend && "claim" === GR.source, "missing" in GR ? GR : {
-        ...GR,
-        load: RR[GR.backend]
+    let SS = !1;
+    async function QS(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fr();
+      if (null === rr) return null;
+      const Qr = await dr(Sr);
+      return SS = !("missing" in Qr) && "webgpu" === Qr.backend && "claim" === Qr.source, "missing" in Qr ? Qr : {
+        ...Qr,
+        load: rr[Qr.backend]
       }
     }
-    async function yJ(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ER().gpu,
-        yR = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== RR.backend) return !1;
-      const tR = KJ(RR, JR, "indirectDraws", "off", "on");
-      if (null !== tR) return tR;
-      if (null !== RR.adapter && (0, nR.s)(RR.adapter, yR)) return !0;
-      if (null === GR) return !1;
+    async function ZS(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Fr().gpu,
+        Zr = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== rr.backend) return !1;
+      const Wr = xS(rr, Sr, "indirectDraws", "off", "on");
+      if (null !== Wr) return Wr;
+      if (null !== rr.adapter && (0, zr.q)(rr.adapter, Zr)) return !0;
+      if (null === Qr) return !1;
       try {
-        var uR;
-        const RR = await (0, BR.k)(GR.requestAdapter({
+        var ar;
+        const rr = await (0, Tr.h)(Qr.requestAdapter({
           powerPreference: "low-power"
-        }).then((async RR => (null !== RR && await (0, CR.c)(RR), RR))), XJ, `the low-power requestAdapter didn't settle in ${XJ/1e3} s`);
-        return (0, nR.s)(null !== (uR = null === RR || void 0 === RR ? void 0 : RR.info) && void 0 !== uR ? uR : {}, yR)
-      } catch (ZR) {
-        return ZR instanceof BR.g
+        }).then((async rr => (null !== rr && await (0, Kr.d)(rr), rr))), yS, `the low-power requestAdapter didn't settle in ${yS/1e3} s`);
+        return (0, zr.q)(null !== (ar = null === rr || void 0 === rr ? void 0 : rr.info) && void 0 !== ar ? ar : {}, Zr)
+      } catch (jr) {
+        return jr instanceof Tr.d
       }
     }
 
-    function tJ(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, wR.pageOperatingSystem)();
-      if ("webgpu" !== RR.backend) return !1;
-      const tR = KJ(RR, JR, "terrainFetch", "texture", "storage");
-      return null !== tR ? tR : null !== RR.adapter && ((0, nR.m)(RR.adapter, GR) || (0, nR.i)(RR.adapter, yR))
+    function WS(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, mr.pageOperatingSystem)();
+      if ("webgpu" !== rr.backend) return !1;
+      const Wr = xS(rr, Sr, "terrainFetch", "texture", "storage");
+      return null !== Wr ? Wr : null !== rr.adapter && ((0, zr.h)(rr.adapter, Qr) || (0, zr.g)(rr.adapter, Zr))
     }
 
-    function uJ(RR, JR) {
-      if ("webgpu" !== RR.backend) return !1;
-      const GR = KJ(RR, JR, "skyOrder", "early", "last");
-      return null !== GR ? GR : null !== RR.adapter && (0, uR.h)(RR.adapter.vendor, RR.adapter.architecture) === IR
+    function aS(rr, Sr) {
+      if ("webgpu" !== rr.backend) return !1;
+      const Qr = xS(rr, Sr, "skyOrder", "early", "last");
+      return null !== Qr ? Qr : null !== rr.adapter && (0, ar.f)(rr.adapter.vendor, rr.adapter.architecture) === kr
     }
 
-    function ZJ(RR, JR) {
-      if ("webgpu" !== RR.backend) return !1;
-      const GR = KJ(RR, JR, "uploadCopies", "off", "on");
-      return null !== GR ? GR : null !== RR.adapter && "powervr_rogue" === (0, uR.h)(RR.adapter.vendor, RR.adapter.architecture)
+    function jS(rr, Sr) {
+      if ("webgpu" !== rr.backend) return !1;
+      const Qr = xS(rr, Sr, "uploadCopies", "off", "on");
+      return null !== Qr ? Qr : null !== rr.adapter && "powervr_rogue" === (0, ar.f)(rr.adapter.vendor, rr.adapter.architecture)
     }
 
-    function qJ(RR, JR, GR) {
-      if ("webgpu" !== RR.backend) return !1;
-      const yR = KJ(RR, JR, "sceneDepth", "off", "on");
-      return null !== yR ? yR : null !== RR.adapter && (0, nR.n)(RR.adapter, GR)
+    function IS(rr, Sr, Qr) {
+      if ("webgpu" !== rr.backend) return !1;
+      const Zr = xS(rr, Sr, "sceneDepth", "off", "on");
+      return null !== Zr ? Zr : null !== rr.adapter && (0, zr.k)(rr.adapter, Qr)
     }
 
-    function iJ(RR, JR) {
-      return "webgl" === RR.backend ? KJ(RR, JR, "instancedTerrain", "1", "0") : null
+    function fS(rr, Sr) {
+      return "webgl" === rr.backend ? xS(rr, Sr, "instancedTerrain", "1", "0") : null
     }
 
-    function fJ(RR, JR) {
-      return "webgpu" !== RR.backend || JR && (null === RR.adapter || !(0, LR.J)(RR.adapter))
+    function ES(rr, Sr) {
+      return "webgpu" !== rr.backend || Sr && (null === rr.adapter || !(0, hr.E)(rr.adapter))
     }
 
-    function VJ(RR, JR, GR, yR) {
-      const tR = new URLSearchParams(JR).get(GR),
-        uR = null !== tR && void 0 !== tR ? tR : null === RR ? null : (0, iR.e)(GR);
-      return null !== uR && yR(uR) ? (JJ ||= null === tR && "webgpu" === (null === RR || void 0 === RR ? void 0 : RR.backend), uR) : null
+    function pS(rr, Sr, Qr, Zr) {
+      const Wr = new URLSearchParams(Sr).get(Qr),
+        ar = null !== Wr && void 0 !== Wr ? Wr : null === rr ? null : (0, fr.h)(Qr);
+      return null !== ar && Zr(ar) ? (SS ||= null === Wr && "webgpu" === (null === rr || void 0 === rr ? void 0 : rr.backend), ar) : null
     }
 
-    function KJ(RR, JR, GR, yR, tR) {
-      const uR = VJ(RR, JR, GR, (RR => RR === yR || RR === tR));
-      return null === uR ? null : uR === yR
+    function xS(rr, Sr, Qr, Zr, Wr) {
+      const ar = pS(rr, Sr, Qr, (rr => rr === Zr || rr === Wr));
+      return null === ar ? null : ar === Zr
     }
 
-    function wJ(RR) {
-      return null !== RR && "missing" in RR
+    function mS(rr) {
+      return null !== rr && "missing" in rr
     }
 
-    function rJ(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !LJ(),
-        GR = arguments.length > 2 ? arguments[2] : void 0;
-      return JR ? function(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR.d,
-          GR = arguments.length > 2 ? arguments[2] : void 0;
+    function NS(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !hS(),
+        Qr = arguments.length > 2 ? arguments[2] : void 0;
+      return Sr ? function(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jr.c,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
         try {
-          const yR = "start_failed" === RR || "pipeline_failed" === RR,
-            tR = (0, vR.i)(RR, GR),
-            uR = JR.turnOffWebGpuAfterDeviceLoss(yR ? "visible" : (0, LR.k)((0, eR.f)()), yR, tR);
-          return JJ && (0, iR.t)("webgpuLoss"), JR.isWebGpuOffAfterLoss() && "webgpu" === QR(aR.i.getItem(VR.e)) && aR.i.removeItem(VR.e), (0, qR.n)("webgpuloss") && (0, fR.d)((JR => {
-            var GR;
-            JR.noteWebGpuLoss("wasm", uR ? RR : `${RR}, which storage didn't keep`, null !== (GR = tR.message) && void 0 !== GR ? GR : null)
-          })), uR
+          const Zr = "start_failed" === rr || "pipeline_failed" === rr,
+            Wr = (0, Xr.f)(rr, Qr),
+            ar = Sr.turnOffWebGpuAfterDeviceLoss(Zr ? "visible" : (0, hr.o)((0, Ur.g)()), Zr, Wr);
+          return SS && (0, fr.x)("webgpuLoss"), Sr.isWebGpuOffAfterLoss() && "webgpu" === Jr(tr.j.getItem(pr.f)) && tr.j.removeItem(pr.f), (0, Ir.p)("webgpuloss") && (0, Er.c)((Sr => {
+            var Qr;
+            Sr.noteWebGpuLoss("wasm", ar ? rr : `${rr}, which storage didn't keep`, null !== (Qr = Wr.message) && void 0 !== Qr ? Qr : null)
+          })), ar
         } catch {
           return !1
         }
-      }(RR, ZR.d, GR) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+      }(rr, jr.c, Qr) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const eJ = "framePacing";
+    const US = "framePacing";
 
-    function aJ(RR, JR) {
-      const GR = VJ("webgpu" === (null === JR || void 0 === JR ? void 0 : JR.backend) ? JR : null, RR, eJ, (RR => /^\d{1,9}$/.test(RR)));
-      return null === GR ? void 0 : Number(GR)
+    function tS(rr, Sr) {
+      const Qr = pS("webgpu" === (null === Sr || void 0 === Sr ? void 0 : Sr.backend) ? Sr : null, rr, US, (rr => /^\d{1,9}$/.test(rr)));
+      return null === Qr ? void 0 : Number(Qr)
     }
 
-    function LJ() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function hS() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === QR(new URLSearchParams(RR).get(VR.b))
+        return "webgpu" === Jr(new URLSearchParams(rr).get(pr.b))
       } catch {
         return !1
       }
     }
 
-    function nJ(RR) {
-      return !!UJ(RR) || RR instanceof Error && !(RR instanceof WebAssembly.RuntimeError) && RR.message.startsWith(`${XR.p.RenderSurfaceUnusable}:`)
+    function zS(rr) {
+      return !!YS(rr) || rr instanceof Error && !(rr instanceof WebAssembly.RuntimeError) && rr.message.startsWith(`${yr.o.RenderSurfaceUnusable}:`)
     }
 
-    function UJ(RR) {
+    function YS(rr) {
       const {
-        name: JR,
-        message: GR
-      } = null !== RR && void 0 !== RR ? RR : {};
-      return "InvalidStateError" === JR && "string" === typeof GR && GR.startsWith("GPUDevice.")
+        name: Sr,
+        message: Qr
+      } = null !== rr && void 0 !== rr ? rr : {};
+      return "InvalidStateError" === Sr && "string" === typeof Qr && Qr.startsWith("GPUDevice.")
     }
 
-    function WJ(RR) {
-      const JR = RR;
-      return "function" === typeof JR.StR && "function" === typeof JR.jtR ? JR : null
+    function nS(rr) {
+      const Sr = rr;
+      return "function" === typeof Sr.eWr && "function" === typeof Sr.KWr ? Sr : null
     }
 
-    function AJ(RR) {
-      return "function" === typeof RR.fn ? RR : null
+    function eS(rr) {
+      return "function" === typeof rr.mz ? rr : null
     }
-    const CJ = "openRenderer";
-    const XJ = 5e3,
-      MJ = 15e3;
+    const KS = "openRenderer";
+    const yS = 5e3,
+      BS = 15e3;
 
-    function BJ(RR, JR, GR, yR, tR, uR) {
-      return (0, BR.k)(function(RR, JR, GR, yR, tR, uR) {
-        const ZR = (0, lR.f)(RR, JR, (() => RR.fn(GR, yR, tR, uR.indirectHangs, uR.storagePullBreaks, uR.splitPassBreaks, uR.earlySky, uR.instancedTerrain, uR.cellLight, uR.framesAhead, uR.webGpuRestores, uR.bufferCopiesCrash))),
+    function TS(rr, Sr, Qr, Zr, Wr, ar) {
+      return (0, Tr.h)(function(rr, Sr, Qr, Zr, Wr, ar) {
+        const jr = (0, vr.f)(rr, Sr, (() => rr.mz(Qr, Zr, Wr, ar.indirectHangs, ar.storagePullBreaks, ar.splitPassBreaks, ar.earlySky, ar.instancedTerrain, ar.cellLight, ar.framesAhead, ar.webGpuRestores, ar.bufferCopiesCrash))),
           {
-            firstVertex: qR
-          } = uR;
-        return void 0 === qR ? ZR : ZR.then((RR => ((0, pR.b)(GR, qR), RR)))
-      }(RR, JR, GR, yR, tR, uR), MJ, `${XR.p.RenderSurfaceUnusable}: the renderer didn't open in ${MJ/1e3} s`, pJ)
+            firstVertex: Ir
+          } = ar;
+        return void 0 === Ir ? jr : jr.then((rr => ((0, Or.c)(Qr, Ir), rr)))
+      }(rr, Sr, Qr, Zr, Wr, ar), BS, `${yr.o.RenderSurfaceUnusable}: the renderer didn't open in ${BS/1e3} s`, OS)
     }
-    async function lJ(RR, JR, GR, yR, tR, uR) {
-      if ("function" !== typeof RR.HtR) throw new Error("this core has no set_renderer");
-      const ZR = await BJ(JR, CJ, GR, tR, yR, uR);
+    async function vS(rr, Sr, Qr, Zr, Wr, ar) {
+      if ("function" !== typeof rr.NWr) throw new Error("this core has no set_renderer");
+      const jr = await TS(Sr, KS, Qr, Wr, Zr, ar);
       try {
-        RR.HtR(ZR)
-      } catch (qR) {
-        throw pJ(ZR), qR
+        rr.NWr(jr)
+      } catch (Ir) {
+        throw OS(jr), Ir
       }
     }
 
-    function pJ(RR) {
+    function OS(rr) {
       try {
-        RR.free()
+        rr.free()
       } catch {}
     }
   },
-  42369: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => yR
+  42699: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr
     });
-    const yR = {
+    const Zr = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -734,294 +734,294 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  42294: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => eR,
-      c: () => aR,
-      f: () => wR,
-      h: () => KR
+  42611: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ur,
+      g: () => tr,
+      i: () => mr,
+      k: () => xr
     });
-    const yR = 2e3,
-      tR = "unavailable";
-    let uR = () => Promise.resolve().then((() => GR(1974))),
-      ZR = null,
-      qR = null,
-      iR = fR();
+    const Zr = 2e3,
+      Wr = "unavailable";
+    let ar = () => Promise.resolve().then((() => Qr(1920))),
+      jr = null,
+      Ir = null,
+      fr = Er();
 
-    function fR() {
-      let RR = () => {};
+    function Er() {
+      let rr = () => {};
       return {
-        promise: new Promise((JR => {
-          RR = () => {
-            JR(null)
+        promise: new Promise((Sr => {
+          rr = () => {
+            Sr(null)
           }
         })),
-        resolve: RR
+        resolve: rr
       }
     }
 
-    function VR() {
-      if (null === ZR) {
-        const RR = uR();
-        ZR = RR, RR.then((JR => {
-          ZR === RR && (qR = JR)
+    function pr() {
+      if (null === jr) {
+        const rr = ar();
+        jr = rr, rr.then((Sr => {
+          jr === rr && (Ir = Sr)
         }), (() => {
-          ZR === RR && (ZR = null)
+          jr === rr && (jr = null)
         }))
       }
-      return ZR
+      return jr
     }
 
-    function KR() {
-      VR().catch((() => {}))
+    function xr() {
+      pr().catch((() => {}))
     }
 
-    function wR() {
-      iR.resolve()
+    function mr() {
+      fr.resolve()
     }
 
-    function rR(RR, JR, GR, yR) {
-      if (null === RR) return {
-        errorKind: JR,
-        fingerprint: tR,
-        dedupe: `${JR}|${yR}`
+    function Nr(rr, Sr, Qr, Zr) {
+      if (null === rr) return {
+        errorKind: Sr,
+        fingerprint: Wr,
+        dedupe: `${Sr}|${Zr}`
       };
       const {
-        fingerprint: uR
-      } = RR.clientErrorKey(JR, GR, yR);
+        fingerprint: ar
+      } = rr.clientErrorKey(Sr, Qr, Zr);
       return {
-        errorKind: JR,
-        fingerprint: uR,
-        dedupe: uR
+        errorKind: Sr,
+        fingerprint: ar,
+        dedupe: ar
       }
     }
 
-    function eR(RR, JR, GR, yR) {
-      return null === qR ? yR ? (KR(), rR(null, RR, JR, GR)) : null : rR(qR, RR, JR, GR)
+    function Ur(rr, Sr, Qr, Zr) {
+      return null === Ir ? Zr ? (xr(), Nr(null, rr, Sr, Qr)) : null : Nr(Ir, rr, Sr, Qr)
     }
-    async function aR(RR, JR, GR) {
-      let tR;
-      const uR = new Promise((RR => {
-        tR = setTimeout((() => {
-          RR(null)
-        }), yR)
+    async function tr(rr, Sr, Qr) {
+      let Wr;
+      const ar = new Promise((rr => {
+        Wr = setTimeout((() => {
+          rr(null)
+        }), Zr)
       }));
       try {
-        return rR(await Promise.race([VR(), uR, iR.promise]), RR, JR, GR)
+        return Nr(await Promise.race([pr(), ar, fr.promise]), rr, Sr, Qr)
       } catch {
-        return rR(null, RR, JR, GR)
+        return Nr(null, rr, Sr, Qr)
       } finally {
-        clearTimeout(tR)
+        clearTimeout(Wr)
       }
     }
   },
-  42288: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      BUILT_IN_ANIMATIONS_SITE: () => RJ,
-      CAMERA_DIRECTOR_SITE: () => ZJ,
-      CORE_ERRORS_SITE: () => jR,
-      EVENT_OVERFLOW_SITE: () => hR,
-      FIRST_VIEW_SITE: () => yJ,
-      GraphicsLostError: () => yG,
-      JOIN_SITE: () => ER,
-      LEAVE_SITE: () => YR,
-      MAIN_THREAD_SITE: () => tJ,
-      MODEL_FEED_SITE: () => kR,
-      MODEL_POOL_SITE: () => QR,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => fJ,
-      NON_FATAL_REPORTS_PER_SESSION: () => gJ,
-      PREVIEW_ANIMATIONS_SITE: () => sR,
-      RENDER_RELOAD_SITE: () => TR,
-      REQUEST_DEVICE_SITE: () => uJ,
-      TEXTURE_NAMES_SITE: () => FR,
-      TEXTURE_PACK_FEED_SITE: () => JJ,
-      TEXTURE_PACK_SWAP_SITE: () => GJ,
-      TurnstilePageError: () => eG,
-      WASM_LOAD_SITE: () => dR,
-      countRenderLost: () => TG,
-      crashError: () => DJ,
-      crashReportsSettled: () => dJ,
-      deviceLossFields: () => FJ,
-      deviceLossWords: () => YG,
-      flushCrashReports: () => SJ,
-      joinFailureCode: () => aG,
-      loadRecoveryCode: () => iG,
-      lokiTransport: () => wJ,
-      modelFailureCode: () => XG,
-      readTrap: () => hJ,
-      renderLoss: () => FG,
-      renderReloadMessage: () => kG,
-      reportCameraDirectorFault: () => SG,
-      reportCoreErrors: () => kJ,
-      reportCrash: () => HJ,
-      reportDataLoadFailure: () => yy,
-      reportDisconnect: () => AG,
-      reportDroppedRequiredLimits: () => VG,
-      reportEventOverflow: () => vG,
-      reportFirstViewNoTerrain: () => cG,
-      reportFirstViewUnshown: () => PG,
-      reportLightFault: () => NG,
-      reportLoadRecovery: () => fG,
-      reportLoadReload: () => wG,
-      reportMainStall: () => IG,
-      reportMemoryShed: () => HG,
-      reportModelFailure: () => MG,
-      reportModelPoolFailure: () => BG,
-      reportModelsModuleRetry: () => lG,
-      reportNoBackendRetry: () => ZG,
-      reportPageJoinFailure: () => nG,
-      reportReconnectGaveUp: () => CG,
-      reportRenderRecovery: () => IJ,
-      reportRenderReload: () => Ry,
-      reportReplayFault: () => zG,
-      reportStaleBuildReload: () => uy,
-      reportStoppedCore: () => JG,
-      reportTerrainTextureFailure: () => Jy,
-      reportTexturePackFeedLoadFailure: () => gG,
-      reportTexturePackKeptOut: () => bG,
-      reportUnstreamedCoreLoad: () => rG,
-      reportUnusedSeat: () => WG,
-      reportWorkerLost: () => OG,
-      reportWorkerStartTimeout: () => mG,
-      reportWorldgenGaveUp: () => DG,
-      reportWorldgenLoadFailure: () => pG,
-      reportWorldgenWorkerLost: () => xG,
-      resetCrashReports: () => EJ,
-      setCrashAdPreload: () => CJ,
-      setCrashBackend: () => AJ,
-      setCrashScreen: () => nJ,
-      setCrashTransport: () => aJ,
-      showCrash: () => RG,
-      showJoinFailure: () => LG,
-      showUnsupported: () => tG,
-      unknownSkyWords: () => YJ,
-      unsupportedCrashScreen: () => uG,
-      warmCrashCounts: () => cJ
+  42607: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      BUILT_IN_ANIMATIONS_SITE: () => rS,
+      CAMERA_DIRECTOR_SITE: () => jS,
+      CORE_ERRORS_SITE: () => wr,
+      EVENT_OVERFLOW_SITE: () => ur,
+      FIRST_VIEW_SITE: () => ZS,
+      GraphicsLostError: () => ZQ,
+      JOIN_SITE: () => Fr,
+      LEAVE_SITE: () => or,
+      MAIN_THREAD_SITE: () => WS,
+      MODEL_FEED_SITE: () => br,
+      MODEL_POOL_SITE: () => Jr,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => ES,
+      NON_FATAL_REPORTS_PER_SESSION: () => LS,
+      PREVIEW_ANIMATIONS_SITE: () => sr,
+      RENDER_RELOAD_SITE: () => dr,
+      REQUEST_DEVICE_SITE: () => aS,
+      TEXTURE_NAMES_SITE: () => Dr,
+      TEXTURE_PACK_FEED_SITE: () => SS,
+      TEXTURE_PACK_SWAP_SITE: () => QS,
+      TurnstilePageError: () => UQ,
+      WASM_LOAD_SITE: () => cr,
+      countRenderLost: () => dQ,
+      crashError: () => RS,
+      crashReportsSettled: () => cS,
+      deviceLossFields: () => DS,
+      deviceLossWords: () => oQ,
+      flushCrashReports: () => iS,
+      joinFailureCode: () => tQ,
+      loadRecoveryCode: () => fQ,
+      lokiTransport: () => mS,
+      modelFailureCode: () => yQ,
+      readTrap: () => uS,
+      renderLoss: () => DQ,
+      renderReloadMessage: () => bQ,
+      reportCameraDirectorFault: () => iQ,
+      reportCoreErrors: () => bS,
+      reportCrash: () => gS,
+      reportDataLoadFailure: () => ZZ,
+      reportDisconnect: () => eQ,
+      reportDroppedRequiredLimits: () => pQ,
+      reportEventOverflow: () => XQ,
+      reportFirstViewNoTerrain: () => MQ,
+      reportFirstViewUnshown: () => GQ,
+      reportLightFault: () => qQ,
+      reportLoadRecovery: () => EQ,
+      reportLoadReload: () => mQ,
+      reportMainStall: () => kQ,
+      reportMemoryShed: () => gQ,
+      reportModelFailure: () => BQ,
+      reportModelPoolFailure: () => TQ,
+      reportModelsModuleRetry: () => vQ,
+      reportNoBackendRetry: () => jQ,
+      reportPageJoinFailure: () => zQ,
+      reportReconnectGaveUp: () => KQ,
+      reportRenderRecovery: () => kS,
+      reportRenderReload: () => rZ,
+      reportReplayFault: () => VQ,
+      reportStaleBuildReload: () => aZ,
+      reportStoppedCore: () => SQ,
+      reportTerrainTextureFailure: () => SZ,
+      reportTexturePackFeedLoadFailure: () => LQ,
+      reportTexturePackKeptOut: () => lQ,
+      reportUnstreamedCoreLoad: () => NQ,
+      reportUnusedSeat: () => nQ,
+      reportWorkerLost: () => PQ,
+      reportWorkerStartTimeout: () => AQ,
+      reportWorldgenGaveUp: () => RQ,
+      reportWorldgenLoadFailure: () => OQ,
+      reportWorldgenWorkerLost: () => HQ,
+      resetCrashReports: () => FS,
+      setCrashAdPreload: () => KS,
+      setCrashBackend: () => eS,
+      setCrashScreen: () => zS,
+      setCrashTransport: () => tS,
+      showCrash: () => rQ,
+      showJoinFailure: () => hQ,
+      showUnsupported: () => WQ,
+      unknownSkyWords: () => oS,
+      unsupportedCrashScreen: () => aQ,
+      warmCrashCounts: () => MS
     });
-    var yR = GR(1127),
-      tR = GR(1459),
-      uR = GR(182),
-      ZR = GR(1449),
-      qR = GR(1406),
-      iR = GR(279),
-      fR = GR(1976),
-      VR = GR(5081),
-      KR = GR(42294),
-      wR = GR(5676),
-      rR = GR(42300),
-      eR = GR(34996),
-      aR = GR(2513),
-      LR = GR(34989),
-      nR = GR(5201),
-      UR = GR(134),
-      WR = GR(132),
-      AR = GR(2521),
-      CR = GR(37640),
-      XR = GR(1825),
-      MR = GR(42310),
-      BR = GR(42322),
-      lR = GR(42118),
-      pR = GR(42329),
-      gR = GR(42331),
-      bR = GR(37633),
-      vR = GR(2448),
-      OR = GR(2457),
-      xR = GR(42344),
-      NR = GR(42325),
-      DR = GR(42364),
-      HR = GR(37958),
-      oR = GR(709),
-      cR = GR(4498),
-      PR = GR(37169),
-      IR = GR(42239),
-      mR = GR(37183),
-      zR = GR(42374);
-    const SR = "[bloxd-wasm-client]",
-      jR = "coreErrors",
-      dR = "wasmLoad",
-      ER = "join",
-      YR = "leave",
-      kR = "modelFeed",
-      QR = "modelWorkerPool",
-      FR = "textureNames",
-      TR = "renderReload",
-      sR = "previewAnimations",
-      hR = "eventOverflow",
-      RJ = "builtInAnimations",
-      JJ = "texturePackFeed",
-      GJ = "texturePackSwap",
-      yJ = "firstView",
-      tJ = "mainThread",
-      uJ = "requestDevice",
-      ZJ = "cameraDirector",
-      qJ = 300,
-      iJ = 64,
-      fJ = 8;
-    let VJ = 0;
-    const KJ = new Set,
-      wJ = (RR, JR) => {
-        const GR = XJ[RR.kind],
-          yR = {
-            backend: UJ,
-            adPreload: WJ
+    var Zr = Qr(1127),
+      Wr = Qr(1433),
+      ar = Qr(190),
+      jr = Qr(1422),
+      Ir = Qr(1371),
+      fr = Qr(285),
+      Er = Qr(1922),
+      pr = Qr(4988),
+      xr = Qr(42611),
+      mr = Qr(5610),
+      Nr = Qr(42617),
+      Ur = Qr(35296),
+      tr = Qr(2466),
+      hr = Qr(35293),
+      zr = Qr(5126),
+      Yr = Qr(139),
+      nr = Qr(135),
+      er = Qr(2472),
+      Kr = Qr(38018),
+      yr = Qr(1783),
+      Br = Qr(42627),
+      Tr = Qr(42637),
+      vr = Qr(42451),
+      Or = Qr(42654),
+      Lr = Qr(42663),
+      lr = Qr(38011),
+      Xr = Qr(2396),
+      Pr = Qr(2398),
+      Hr = Qr(42680),
+      qr = Qr(42646),
+      Rr = Qr(42694),
+      gr = Qr(38320),
+      Cr = Qr(712),
+      Mr = Qr(4434),
+      Gr = Qr(37514),
+      kr = Qr(42574),
+      Ar = Qr(37529),
+      Vr = Qr(42707);
+    const ir = "[bloxd-wasm-client]",
+      wr = "coreErrors",
+      cr = "wasmLoad",
+      Fr = "join",
+      or = "leave",
+      br = "modelFeed",
+      Jr = "modelWorkerPool",
+      Dr = "textureNames",
+      dr = "renderReload",
+      sr = "previewAnimations",
+      ur = "eventOverflow",
+      rS = "builtInAnimations",
+      SS = "texturePackFeed",
+      QS = "texturePackSwap",
+      ZS = "firstView",
+      WS = "mainThread",
+      aS = "requestDevice",
+      jS = "cameraDirector",
+      IS = 300,
+      fS = 64,
+      ES = 8;
+    let pS = 0;
+    const xS = new Set,
+      mS = (rr, Sr) => {
+        const Qr = yS[rr.kind],
+          Zr = {
+            backend: YS,
+            adPreload: nS
           };
-        if (null === GR) return void rJ(RR, JR, yR, null);
-        const tR = (0, KR.b)(GR, RR.message, RR.code, RR.fatal);
-        null === tR ? zJ("Loki", (async () => {
-          rJ(RR, JR, yR, await (0, KR.c)(GR, RR.message, RR.code))
-        })) : rJ(RR, JR, yR, tR)
+        if (null === Qr) return void NS(rr, Sr, Zr, null);
+        const Wr = (0, xr.d)(Qr, rr.message, rr.code, rr.fatal);
+        null === Wr ? VS("Loki", (async () => {
+          NS(rr, Sr, Zr, await (0, xr.g)(Qr, rr.message, rr.code))
+        })) : NS(rr, Sr, Zr, Wr)
       };
 
-    function rJ(RR, JR, GR, yR) {
+    function NS(rr, Sr, Qr, Zr) {
       let {
-        backend: tR,
-        adPreload: uR
-      } = GR;
+        backend: Wr,
+        adPreload: ar
+      } = Qr;
       const {
-        kind: ZR,
-        code: iR,
-        site: VR,
-        fatal: KR,
-        details: wR
-      } = RR;
-      if (!KR)
-        if (null === yR || (0, fR.b)(yR.errorKind) || KJ.has(yR.dedupe)) {
-          if (VJ >= fJ) return;
-          VJ++
-        } else KJ.add(yR.dedupe);
-      const rR = {
-        ...wR,
-        kind: ZR,
-        code: iR,
-        site: VR,
-        fatal: String(KR),
-        backend: tR
+        kind: jr,
+        code: fr,
+        site: pr,
+        fatal: xr,
+        details: mr
+      } = rr;
+      if (!xr)
+        if (null === Zr || (0, Er.d)(Zr.errorKind) || xS.has(Zr.dedupe)) {
+          if (pS >= ES) return;
+          pS++
+        } else xS.add(Zr.dedupe);
+      const Nr = {
+        ...mr,
+        kind: jr,
+        code: fr,
+        site: pr,
+        fatal: String(xr),
+        backend: Wr
       };
-      uR && (rR.adPreload = "true"), null !== yR && (rR.errorKind = yR.errorKind, rR.fingerprint = yR.fingerprint), JR instanceof Error && "string" === typeof JR.stack && (rR.causeStack = JR.stack.slice(0, 2e3)), (0, qR.ma)(DJ(RR, JR), rR)
+      ar && (Nr.adPreload = "true"), null !== Zr && (Nr.errorKind = Zr.errorKind, Nr.fingerprint = Zr.fingerprint), Sr instanceof Error && "string" === typeof Sr.stack && (Nr.causeStack = Sr.stack.slice(0, 2e3)), (0, Ir.Pt)(RS(rr, Sr), Nr)
     }
-    let eJ = wJ;
+    let US = mS;
 
-    function aJ(RR) {
-      const JR = eJ;
-      return eJ = RR, JR
+    function tS(rr) {
+      const Sr = US;
+      return US = rr, Sr
     }
-    let LJ = () => {};
+    let hS = () => {};
 
-    function nJ(RR) {
-      const JR = LJ;
-      return LJ = RR, JR
+    function zS(rr) {
+      const Sr = hS;
+      return hS = rr, Sr
     }
-    let UJ = "unpicked",
-      WJ = !1;
+    let YS = "unpicked",
+      nS = !1;
 
-    function AJ(RR) {
-      UJ = RR
+    function eS(rr) {
+      YS = rr
     }
 
-    function CJ(RR) {
-      WJ = RR
+    function KS(rr) {
+      nS = rr
     }
-    const XJ = {
+    const yS = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -1047,7 +1047,7 @@ export const modules = {
         linkCensus: "wasm_load",
         linksReadAfterView: "wasm_load"
       },
-      MJ = {
+      BS = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -1056,481 +1056,481 @@ export const modules = {
         mainStall: "wasm_load",
         texturePackKeptOut: "texture_pack"
       },
-      BJ = new Set(["unstreamedLoad"]),
-      lJ = new Set(["linkCensus", "linksReadAfterView"]);
-    let pJ = !1;
-    const gJ = 20,
-      bJ = new Map;
-    let vJ = 0,
-      OJ = 0;
-    const xJ = new Set,
-      NJ = new Set;
+      TS = new Set(["unstreamedLoad"]),
+      vS = new Set(["linkCensus", "linksReadAfterView"]);
+    let OS = !1;
+    const LS = 20,
+      lS = new Map;
+    let XS = 0,
+      PS = 0;
+    const HS = new Set,
+      qS = new Set;
 
-    function DJ(RR, JR) {
-      const GR = Object.assign(new Error(`${RR.code}: ${RR.message}`), {
+    function RS(rr, Sr) {
+      const Qr = Object.assign(new Error(`${rr.code}: ${rr.message}`), {
         name: "WasmClientCrash",
-        cause: null !== JR && void 0 !== JR ? JR : void 0
+        cause: null !== Sr && void 0 !== Sr ? Sr : void 0
       });
-      return JR instanceof Error && JR.stack && (GR.stack = JR.stack), GR
+      return Sr instanceof Error && Sr.stack && (Qr.stack = Sr.stack), Qr
     }
 
-    function HJ(RR) {
-      var JR, yR;
+    function gS(rr) {
+      var Sr, Zr;
       const {
-        kind: tR,
-        code: uR,
-        site: ZR,
-        fatal: qR,
-        message: iR,
-        error: fR
-      } = RR, VR = !1 !== RR.toTransport && !BJ.has(tR), KR = !qR && VR && !lJ.has(tR), wR = {
-        kind: tR,
-        code: uR,
-        site: ZR,
-        fatal: qR,
-        message: iR,
-        details: null !== (JR = RR.details) && void 0 !== JR ? JR : {}
-      }, rR = `${uR}@${ZR}${void 0===RR.instance?"":`#${RR.instance}`}${qR?"!":""}`, eR = (null !== (yR = bJ.get(rR)) && void 0 !== yR ? yR : 0) + 1;
-      if (bJ.set(rR, eR), void 0 !== RR.countAs && 1 === eR && PJ(RR.countAs), eR > 1 ? 0 === (eR & eR - 1) && mJ((() => {
-          console.warn(`${SR} ${uR} at ${ZR} reported ${eR} times`)
-        })) : KR && vJ >= gJ ? mJ((() => {
-          console.warn(`${SR} ${tR} ${uR} at ${ZR}: ${iR} (not sent: the session's ${gJ} went)`, wR.details, null !== fR && void 0 !== fR ? fR : "")
-        })) : (KR && vJ++, function(RR, JR, yR, tR) {
-          var uR, ZR;
+        kind: Wr,
+        code: ar,
+        site: jr,
+        fatal: Ir,
+        message: fr,
+        error: Er
+      } = rr, pr = !1 !== rr.toTransport && !TS.has(Wr), xr = !Ir && pr && !vS.has(Wr), mr = {
+        kind: Wr,
+        code: ar,
+        site: jr,
+        fatal: Ir,
+        message: fr,
+        details: null !== (Sr = rr.details) && void 0 !== Sr ? Sr : {}
+      }, Nr = `${ar}@${jr}${void 0===rr.instance?"":`#${rr.instance}`}${Ir?"!":""}`, Ur = (null !== (Zr = lS.get(Nr)) && void 0 !== Zr ? Zr : 0) + 1;
+      if (lS.set(Nr, Ur), void 0 !== rr.countAs && 1 === Ur && GS(rr.countAs), Ur > 1 ? 0 === (Ur & Ur - 1) && AS((() => {
+          console.warn(`${ir} ${ar} at ${jr} reported ${Ur} times`)
+        })) : xr && XS >= LS ? AS((() => {
+          console.warn(`${ir} ${Wr} ${ar} at ${jr}: ${fr} (not sent: the session's ${LS} went)`, mr.details, null !== Er && void 0 !== Er ? Er : "")
+        })) : (xr && XS++, function(rr, Sr, Zr, Wr) {
+          var ar, jr;
           const {
-            kind: qR,
-            code: iR,
-            site: fR,
-            fatal: VR,
-            message: KR,
-            details: wR
-          } = RR;
-          mJ((() => {
-            (VR ? console.error : console.warn)(`${SR} ${qR} ${iR} at ${fR}: ${KR}`, wR, null !== JR && void 0 !== JR ? JR : "")
+            kind: Ir,
+            code: fr,
+            site: Er,
+            fatal: pr,
+            message: xr,
+            details: mr
+          } = rr;
+          AS((() => {
+            (pr ? console.error : console.warn)(`${ir} ${Ir} ${fr} at ${Er}: ${xr}`, mr, null !== Sr && void 0 !== Sr ? Sr : "")
           }));
-          const rR = MJ[qR],
-            eR = null !== (uR = null !== (ZR = XJ[qR]) && void 0 !== ZR ? ZR : rR) && void 0 !== uR ? uR : null;
-          tR || null === eR || oJ((async () => {
+          const Nr = BS[Ir],
+            Ur = null !== (ar = null !== (jr = yS[Ir]) && void 0 !== jr ? jr : Nr) && void 0 !== ar ? ar : null;
+          Wr || null === Ur || CS((async () => {
             const {
-              reportCappedWasmFailure: JR,
-              reportUncappedWasmFailure: yR,
-              reportWasmFailure: tR
-            } = await GR.e(218).then((() => GR(34980))), uR = lJ.has(qR) ? yR : void 0 === rR ? tR : JR, ZR = function(RR) {
+              reportCappedWasmFailure: Sr,
+              reportUncappedWasmFailure: Zr,
+              reportWasmFailure: Wr
+            } = await Qr.e(218).then((() => Qr(35287))), ar = vS.has(Ir) ? Zr : void 0 === Nr ? Wr : Sr, jr = function(rr) {
               let {
-                kind: JR,
-                site: GR,
-                fatal: yR,
-                details: tR
-              } = RR;
-              if ("crash" !== JR) return;
+                kind: Sr,
+                site: Qr,
+                fatal: Zr,
+                details: Wr
+              } = rr;
+              if ("crash" !== Sr) return;
               return {
-                ...tR,
-                site: GR,
-                fatal: String(yR)
+                ...Wr,
+                site: Qr,
+                fatal: String(Zr)
               }
-            }(RR);
-            void 0 === ZR ? uR(eR, KR, iR) : uR(eR, KR, iR, ZR)
+            }(rr);
+            void 0 === jr ? ar(Ur, xr, fr) : ar(Ur, xr, fr, jr)
           }));
-          yR && mJ((() => {
-            eJ(RR, JR)
+          Zr && AS((() => {
+            US(rr, Sr)
           }))
-        }(wR, fR, VR, void 0 !== RR.countAs)), qR) {
-        var aR;
-        const JR = null !== (aR = RR.screen) && void 0 !== aR ? aR : {
-          text: (0, HR.e)(wR, !0),
+        }(mr, Er, pr, void 0 !== rr.countAs)), Ir) {
+        var tr;
+        const Sr = null !== (tr = rr.screen) && void 0 !== tr ? tr : {
+          text: (0, gr.e)(mr, !0),
           reload: !0,
           stillBlocked: null
         };
-        mJ((() => {
-          LJ(JR)
+        AS((() => {
+          hS(Sr)
         }))
       }
-      return wR
+      return mr
     }
 
-    function oJ(RR) {
-      zJ("counts", (async () => {
+    function CS(rr) {
+      VS("counts", (async () => {
         const {
-          peekVisitSessionId: JR
-        } = await Promise.resolve().then((() => GR(726)));
-        null !== JR() && (await RR(), pJ = !0)
+          peekVisitSessionId: Sr
+        } = await Promise.resolve().then((() => Qr(727)));
+        null !== Sr() && (await rr(), OS = !0)
       }))
     }
 
-    function cJ() {
-      Promise.all([Promise.resolve().then((() => GR(726))), GR.e(218).then((() => GR(34980)))]).catch((RR => {
-        console.warn(`${SR} the counts' modules didn't load ahead`, RR)
+    function MS() {
+      Promise.all([Promise.resolve().then((() => Qr(727))), Qr.e(218).then((() => Qr(35287)))]).catch((rr => {
+        console.warn(`${ir} the counts' modules didn't load ahead`, rr)
       }))
     }
 
-    function PJ(RR) {
-      xJ.has(RR.errorKind) || (xJ.add(RR.errorKind), oJ((async () => {
+    function GS(rr) {
+      HS.has(rr.errorKind) || (HS.add(rr.errorKind), CS((async () => {
         const {
-          reportClientError: JR
-        } = await Promise.resolve().then((() => GR(1972)));
-        JR(RR.errorKind, RR.error, RR.code, !0, void 0, RR.fields)
+          reportClientError: Sr
+        } = await Promise.resolve().then((() => Qr(1912)));
+        Sr(rr.errorKind, rr.error, rr.code, !0, void 0, rr.fields)
       })))
     }
 
-    function IJ(RR, JR) {
-      zJ("render_lost", (async () => {
+    function kS(rr, Sr) {
+      VS("render_lost", (async () => {
         const [{
-          reportClientError: yR
+          reportClientError: Zr
         }, {
-          CAPPED_COUNTS_VISIT_CAP: tR
-        }] = await Promise.all([Promise.resolve().then((() => GR(1972))), GR.e(218).then((() => GR(34980)))]);
-        yR("render_lost", JR, RR, !0, tR)
+          CAPPED_COUNTS_VISIT_CAP: Wr
+        }] = await Promise.all([Promise.resolve().then((() => Qr(1912))), Qr.e(218).then((() => Qr(35287)))]);
+        Zr("render_lost", Sr, rr, !0, Wr)
       }))
     }
 
-    function mJ(RR) {
+    function AS(rr) {
       try {
-        RR()
-      } catch (JR) {
+        rr()
+      } catch (Sr) {
         try {
-          console.warn(`${SR} could not send a report`, JR)
+          console.warn(`${ir} could not send a report`, Sr)
         } catch {}
       }
     }
 
-    function zJ(RR, JR) {
+    function VS(rr, Sr) {
       try {
-        const GR = JR().catch((JR => {
-          console.warn(`${SR} could not send the report to ${RR}`, JR)
+        const Qr = Sr().catch((Sr => {
+          console.warn(`${ir} could not send the report to ${rr}`, Sr)
         })).finally((() => {
-          NJ.delete(GR)
+          qS.delete(Qr)
         }));
-        NJ.add(GR)
-      } catch (GR) {
-        console.warn(`${SR} could not send the report to ${RR}`, GR)
+        qS.add(Qr)
+      } catch (Qr) {
+        console.warn(`${ir} could not send the report to ${rr}`, Qr)
       }
     }
-    async function SJ(RR) {
-      let JR;
-      (0, KR.f)();
-      const GR = new Promise((GR => {
-        JR = setTimeout(GR, RR)
+    async function iS(rr) {
+      let Sr;
+      (0, xr.i)();
+      const Qr = new Promise((Qr => {
+        Sr = setTimeout(Qr, rr)
       }));
-      await Promise.race([jJ(), GR]), clearTimeout(JR)
+      await Promise.race([wS(), Qr]), clearTimeout(Sr)
     }
-    async function jJ() {
-      if (await Promise.allSettled([...NJ]), pJ) try {
+    async function wS() {
+      if (await Promise.allSettled([...qS]), OS) try {
         const {
-          flushClientAnalyticsEvents: RR
-        } = await Promise.resolve().then((() => GR(1642)));
-        await RR()
-      } catch (RR) {
-        console.warn(`${SR} could not send the counts`, RR)
+          flushClientAnalyticsEvents: rr
+        } = await Promise.resolve().then((() => Qr(1626)));
+        await rr()
+      } catch (rr) {
+        console.warn(`${ir} could not send the counts`, rr)
       }
     }
-    async function dJ() {
-      for (; NJ.size > 0;) await Promise.allSettled([...NJ])
+    async function cS() {
+      for (; qS.size > 0;) await Promise.allSettled([...qS])
     }
 
-    function EJ() {
-      bJ.clear(), vJ = 0, pJ = !1, VJ = 0, KJ.clear(), OJ = 0, xJ.clear(), (0, rR.r)()
+    function FS() {
+      lS.clear(), XS = 0, OS = !1, pS = 0, xS.clear(), PS = 0, HS.clear(), (0, Nr.w)()
     }
 
-    function YJ(RR) {
-      const JR = "object" === typeof RR && null !== RR ? RR.type : RR;
-      return "string" !== typeof JR ? "sky not named" : `sky ${JSON.stringify(Array.from(JR).slice(0,iJ).join(""))}`
+    function oS(rr) {
+      const Sr = "object" === typeof rr && null !== rr ? rr.type : rr;
+      return "string" !== typeof Sr ? "sky not named" : `sky ${JSON.stringify(Array.from(Sr).slice(0,fS).join(""))}`
     }
 
-    function kJ(RR, JR, GR, yR) {
-      OJ += JR;
+    function bS(rr, Sr, Qr, Zr) {
+      PS += Sr;
       for (const {
-          code: qR,
-          detail: iR
+          code: Ir,
+          detail: fr
         }
-        of RR) {
-        var tR, uR, ZR;
-        const RR = (0, wR.ge)(qR),
-          JR = (0, rR.e)(qR, iR),
-          fR = JR ? "CORE-RenderLinkPending" : `CORE-${RR}`,
-          VR = (0, rR.b)(qR, iR),
-          KR = null === yR || void 0 === yR ? void 0 : yR(qR, iR),
-          aR = void 0 !== (null === VR || void 0 === VR ? void 0 : VR.gpuDetails),
-          LR = aR ? null === (tR = (0, WR.y)()) || void 0 === tR ? void 0 : tR.renderer : void 0,
-          nR = aR ? ` ${(0,rR.h)()}` : "",
-          UR = Array.from([LR && `gpu ${(0,eR.e)(LR)}`, KR].filter(Boolean).join("; ")).slice(0, qJ).join(""),
-          AR = `core error ${RR}${null!==(uR=null===VR||void 0===VR?void 0:VR.words)&&void 0!==uR?uR:""}${nR}${UR?`: ${UR}`:""}`,
-          CR = {
-            errorCode: String(qR),
-            detail: String(iR),
-            droppedBefore: String(OJ),
-            wasmBuild: GR.wasm,
-            clientVersion: GR.client,
-            ...null === VR || void 0 === VR ? void 0 : VR.gpuDetails,
-            ...FJ(qR, iR)
+        of rr) {
+        var Wr, ar, jr;
+        const rr = (0, mr.te)(Ir),
+          Sr = (0, Nr.h)(Ir, fr),
+          Er = Sr ? "CORE-RenderLinkPending" : `CORE-${rr}`,
+          pr = (0, Nr.b)(Ir, fr),
+          xr = null === Zr || void 0 === Zr ? void 0 : Zr(Ir, fr),
+          tr = void 0 !== (null === pr || void 0 === pr ? void 0 : pr.gpuDetails),
+          hr = tr ? null === (Wr = (0, nr.C)()) || void 0 === Wr ? void 0 : Wr.renderer : void 0,
+          zr = tr ? ` ${(0,Nr.o)()}` : "",
+          Yr = Array.from([hr && `gpu ${(0,Ur.b)(hr)}`, xr].filter(Boolean).join("; ")).slice(0, IS).join(""),
+          er = `core error ${rr}${null!==(ar=null===pr||void 0===pr?void 0:pr.words)&&void 0!==ar?ar:""}${zr}${Yr?`: ${Yr}`:""}`,
+          Kr = {
+            errorCode: String(Ir),
+            detail: String(fr),
+            droppedBefore: String(PS),
+            wasmBuild: Qr.wasm,
+            clientVersion: Qr.client,
+            ...null === pr || void 0 === pr ? void 0 : pr.gpuDetails,
+            ...DS(Ir, fr)
           };
-        null !== VR && (0, rR.p)(VR) ? mJ((() => {
-          console.warn(`${SR} coreError ${fR}: ${AR} (not sent: the session's render warnings of its kind went)`, CR)
-        })) : QJ(qR) ? mJ((() => {
-          console.warn(`${SR} coreError ${fR}: ${AR} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, CR)
-        })) : HJ({
-          kind: JR ? "recovered" : sJ(qR, iR),
-          code: fR,
-          site: jR,
+        null !== pr && (0, Nr.u)(pr) ? AS((() => {
+          console.warn(`${ir} coreError ${Er}: ${er} (not sent: the session's render warnings of its kind went)`, Kr)
+        })) : JS(Ir) ? AS((() => {
+          console.warn(`${ir} coreError ${Er}: ${er} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, Kr)
+        })) : gS({
+          kind: Sr ? "recovered" : sS(Ir, fr),
+          code: Er,
+          site: wr,
           fatal: !1,
-          message: AR,
-          details: CR,
-          instance: null !== (ZR = null === VR || void 0 === VR ? void 0 : VR.instance) && void 0 !== ZR ? ZR : TJ(qR, iR)
+          message: er,
+          details: Kr,
+          instance: null !== (jr = null === pr || void 0 === pr ? void 0 : pr.instance) && void 0 !== jr ? jr : dS(Ir, fr)
         })
       }
     }
 
-    function QJ(RR) {
-      if (RR !== wR.K.AudioUnknownSound && RR !== wR.K.PresentationClipUnplayable) return !1;
+    function JS(rr) {
+      if (rr !== mr.J.AudioUnknownSound && rr !== mr.J.PresentationClipUnplayable) return !1;
       const {
-        gameNameWithVariation: JR,
-        lobbyName: GR
-      } = (0, ZR.d)();
-      return null !== JR && (!!(0, yR.n)(JR) || RR === wR.K.AudioUnknownSound && (0, tR.i)(JR, GR))
+        gameNameWithVariation: Sr,
+        lobbyName: Qr
+      } = (0, jr.b)();
+      return null !== Sr && (!!(0, Zr.l)(Sr) || rr === mr.J.AudioUnknownSound && (0, Wr.e)(Sr, Qr))
     }
 
-    function FJ(RR, JR) {
-      if (RR !== wR.K.RenderDeviceLost) return;
-      const GR = JR >>> wR.N.LINKS_IN_FLIGHT_SHIFT & wR.N.LINKS_IN_FLIGHT_MAX,
-        yR = JR >>> wR.N.OLDEST_LINK_SHIFT & wR.N.OLDEST_LINK_MAX;
+    function DS(rr, Sr) {
+      if (rr !== mr.J.RenderDeviceLost) return;
+      const Qr = Sr >>> mr.S.LINKS_IN_FLIGHT_SHIFT & mr.S.LINKS_IN_FLIGHT_MAX,
+        Zr = Sr >>> mr.S.OLDEST_LINK_SHIFT & mr.S.OLDEST_LINK_MAX;
       return {
-        linksInFlight: String(GR),
-        oldestLinkMs: String(yR * wR.N.OLDEST_LINK_UNIT_MS)
+        linksInFlight: String(Qr),
+        oldestLinkMs: String(Zr * mr.S.OLDEST_LINK_UNIT_MS)
       }
     }
 
-    function TJ(RR, JR) {
-      return RR === wR.K.RenderDeviceLost && 0 !== (JR & wR.N.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function dS(rr, Sr) {
+      return rr === mr.J.RenderDeviceLost && 0 !== (Sr & mr.S.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function sJ(RR, JR) {
-      return RR === wR.K.JobsHeapGaveUp ? "meshHeap" : (0, rR.f)(RR, JR) ? "linksReadAfterView" : (0, rR.c)(RR, JR) ? "linkCensus" : "coreError"
+    function sS(rr, Sr) {
+      return rr === mr.J.JobsHeapGaveUp ? "meshHeap" : (0, Nr.l)(rr, Sr) ? "linksReadAfterView" : (0, Nr.d)(rr, Sr) ? "linkCensus" : "coreError"
     }
 
-    function hJ(RR) {
-      return (0, PR.h)(RR instanceof IR.e ? RR.trap : RR, vR.x, vR.Z)
+    function uS(rr) {
+      return (0, Gr.j)(rr instanceof kr.d ? rr.trap : rr, Xr.B, Xr.gb)
     }
 
-    function RG(RR, JR, GR) {
-      return GG(RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function rQ(rr, Sr, Qr) {
+      return QQ(rr, Sr, Qr, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function JG(RR, JR, GR) {
-      return GG(RR, JR, GR, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function SQ(rr, Sr, Qr) {
+      return QQ(rr, Sr, Qr, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function GG(RR, JR, GR, yR, tR) {
+    function QQ(rr, Sr, Qr, Zr, Wr) {
       let {
-        memoryDetails: uR = {},
-        memoryStep: ZR
-      } = yR;
+        memoryDetails: ar = {},
+        memoryStep: jr
+      } = Zr;
       const {
-        code: qR,
-        details: iR,
-        message: fR
-      } = (0, MR.G)(RR, JR), VR = [];
-      Object.assign(iR, (0, mR.h)(RR.error)), null !== GR && (iR.trapKind = GR.kind, null !== GR.panic && (iR.panic = (0, PR.e)(GR.panic)), GR.refusedBytes > 0 && (iR.refusedAllocation = String(GR.refusedBytes)), VR.push((0, PR.k)(GR.kind, GR.refusedBytes))), void 0 !== ZR && VR.push(`memory=${ZR}`);
-      const KR = RR.error instanceof yG;
-      return KR && (0, oR.E)(), HJ({
+        code: Ir,
+        details: fr,
+        message: Er
+      } = (0, Br.R)(rr, Sr), pr = [];
+      Object.assign(fr, (0, Ar.g)(rr.error)), null !== Qr && (fr.trapKind = Qr.kind, null !== Qr.panic && (fr.panic = (0, Gr.i)(Qr.panic)), Qr.refusedBytes > 0 && (fr.refusedAllocation = String(Qr.refusedBytes)), pr.push((0, Gr.l)(Qr.kind, Qr.refusedBytes))), void 0 !== jr && pr.push(`memory=${jr}`);
+      const xr = rr.error instanceof ZQ;
+      return xr && (0, Cr.H)(), gS({
         kind: "crash",
-        code: qR,
-        site: RR.site,
-        fatal: tR,
-        message: [...VR, fR].join("; "),
+        code: Ir,
+        site: rr.site,
+        fatal: Wr,
+        message: [...pr, Er].join("; "),
         details: {
-          ...iR,
-          ...uR,
-          ...void 0 === ZR ? {} : {
-            memoryStep: ZR
+          ...fr,
+          ...ar,
+          ...void 0 === jr ? {} : {
+            memoryStep: jr
           }
         },
-        error: RR.error,
-        screen: KR ? uG("graphicsLost") : void 0
+        error: rr.error,
+        screen: xr ? aQ("graphicsLost") : void 0
       })
     }
-    class yG extends Error {}
+    class ZQ extends Error {}
 
-    function tG(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      return "download" !== RR && (0, oR.E)(), HJ({
+    function WQ(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      return "download" !== rr && (0, Cr.H)(), gS({
         kind: "unsupported",
-        code: JR,
-        site: dR,
+        code: Sr,
+        site: cr,
         fatal: !0,
-        message: GR,
+        message: Qr,
         details: {
-          ...yR,
-          cause: RR,
-          status: JR
+          ...Zr,
+          cause: rr,
+          status: Sr
         },
-        screen: uG(RR)
+        screen: aQ(rr)
       })
     }
 
-    function uG(RR) {
-      const JR = (0, uR.r)(UR.siteUsed),
-        GR = (0, HR.t)(RR, JR),
-        yR = "noContext" === RR || "graphicsLost" === RR ? (0, HR.k)(RR, JR) : null;
+    function aQ(rr) {
+      const Sr = (0, ar.s)(Yr.siteUsed),
+        Qr = (0, gr.u)(rr, Sr),
+        Zr = "noContext" === rr || "graphicsLost" === rr ? (0, gr.l)(rr, Sr) : null;
       return {
-        text: GR,
-        reload: "general:tryAgain" === GR.confirm,
-        stillBlocked: yR
+        text: Qr,
+        reload: "general:tryAgain" === Qr.confirm,
+        stillBlocked: Zr
       }
     }
 
-    function ZG(RR, JR, GR) {
-      return HJ({
+    function jQ(rr, Sr, Qr) {
+      return gS({
         kind: "recovered",
-        code: "reprobed" === RR ? "no_backend_reprobed" : "no_backend_wasm_reload",
-        site: dR,
+        code: "reprobed" === rr ? "no_backend_reprobed" : "no_backend_wasm_reload",
+        site: cr,
         fatal: !1,
-        message: GR,
+        message: Qr,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          decline: JR,
-          step: RR
+          decline: Sr,
+          step: rr
         }
       })
     }
-    const qG = 9;
+    const IQ = 9;
 
-    function iG(RR) {
-      const JR = "recovered" === RR.outcome ? "recovered" : "gave_up",
-        GR = "load" === RR.step ? `wasm_load_${JR}${RR.oom?"_oom":""}` : `no_context_${JR}`;
-      return "recovered" === RR.outcome ? `${GR}_t${Math.min(RR.tries,qG)}` : "load" === RR.step ? `${GR}_${RR.stage}` : GR
+    function fQ(rr) {
+      const Sr = "recovered" === rr.outcome ? "recovered" : "gave_up",
+        Qr = "load" === rr.step ? `wasm_load_${Sr}${rr.oom?"_oom":""}` : `no_context_${Sr}`;
+      return "recovered" === rr.outcome ? `${Qr}_t${Math.min(rr.tries,IQ)}` : "load" === rr.step ? `${Qr}_${rr.stage}` : Qr
     }
 
-    function fG(RR) {
+    function EQ(rr) {
       const {
-        step: JR,
-        outcome: GR,
-        tries: yR,
-        detail: tR,
-        details: uR = {}
-      } = RR, ZR = "load" === RR.step ? {
-        stage: RR.stage,
-        ...RR.oom ? {
+        step: Sr,
+        outcome: Qr,
+        tries: Zr,
+        detail: Wr,
+        details: ar = {}
+      } = rr, jr = "load" === rr.step ? {
+        stage: rr.stage,
+        ...rr.oom ? {
           oom: "true"
         } : {}
       } : {};
-      return HJ({
+      return gS({
         kind: "recovered",
-        code: iG(RR),
-        site: dR,
+        code: fQ(rr),
+        site: cr,
         fatal: !1,
-        message: tR,
+        message: Wr,
         details: {
-          ...uR,
-          step: JR,
-          outcome: GR,
-          tries: String(yR),
-          ...ZR
+          ...ar,
+          step: Sr,
+          outcome: Qr,
+          tries: String(Zr),
+          ...jr
         }
       })
     }
 
-    function VG(RR) {
-      return HJ({
+    function pQ(rr) {
+      return gS({
         kind: "recovered",
         code: "WEBGPU-unknownLimits",
-        site: uJ,
+        site: aS,
         fatal: !1,
         message: "WebGPU dropped required limits the browser doesn't name",
         details: {
-          limits: RR.join(",")
+          limits: rr.join(",")
         }
       })
     }
-    const KG = "reload=wasm";
+    const xQ = "reload=wasm";
 
-    function wG(RR, JR, GR) {
-      return HJ({
+    function mQ(rr, Sr, Qr) {
+      return gS({
         kind: "unsupported",
-        code: JR,
-        site: dR,
+        code: Sr,
+        site: cr,
         fatal: !1,
-        message: [KG, GR].join("; "),
+        message: [xQ, Qr].join("; "),
         details: {
-          cause: RR,
-          status: JR,
+          cause: rr,
+          status: Sr,
           fallback: "wasmReload"
         }
       })
     }
 
-    function rG() {
+    function NQ() {
       const {
-        code: RR,
-        message: JR
-      } = cR.d;
-      return HJ({
+        code: rr,
+        message: Sr
+      } = Mr.e;
+      return gS({
         kind: "unstreamedLoad",
-        code: RR,
-        site: dR,
+        code: rr,
+        site: cr,
         fatal: !1,
-        message: JR
+        message: Sr
       })
     }
-    class eG extends Error {
+    class UQ extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function aG(RR) {
-      return RR instanceof pR.m ? 0 === RR.code ? "JOIN-matchmake" : `JOIN-${RR.code}` : RR instanceof pR.b ? 0 === RR.code ? `JOIN-${RR.stage}` : `JOIN-${RR.stage}-${RR.code}` : RR instanceof lR.e ? "JOIN-gameCode" : RR instanceof eG ? "JOIN-turnstilePage" : RR instanceof pR.z ? "JOIN-trafficCheck" : RR instanceof CR.g ? "JOIN-timeout" : "JOIN-network"
+    function tQ(rr) {
+      return rr instanceof Or.q ? 0 === rr.code ? "JOIN-matchmake" : `JOIN-${rr.code}` : rr instanceof Or.e ? 0 === rr.code ? `JOIN-${rr.stage}` : `JOIN-${rr.stage}-${rr.code}` : rr instanceof vr.b ? "JOIN-gameCode" : rr instanceof UQ ? "JOIN-turnstilePage" : rr instanceof Or.C ? "JOIN-trafficCheck" : rr instanceof Kr.c ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function LG(RR, JR) {
-      const GR = (0, mR.k)(RR),
-        yR = {
-          wasmBuild: JR.wasm,
-          clientVersion: JR.client
+    function hQ(rr, Sr) {
+      const Qr = (0, Ar.l)(rr),
+        Zr = {
+          wasmBuild: Sr.wasm,
+          clientVersion: Sr.client
         },
-        tR = RR instanceof eG ? {
-          text: (0, HR.n)(),
+        Wr = rr instanceof UQ ? {
+          text: (0, gr.p)(),
           reload: !1,
           stillBlocked: null
         } : void 0,
-        uR = (0, gR.c)(RR),
-        ZR = "expected" !== uR;
-      return HJ({
+        ar = (0, Lr.f)(rr),
+        jr = "expected" !== ar;
+      return gS({
         kind: "join",
-        code: aG(RR),
-        site: ER,
+        code: tQ(rr),
+        site: Fr,
         fatal: !0,
-        message: GR,
-        details: yR,
-        error: RR,
-        screen: tR,
-        toTransport: ZR,
-        instance: uR
+        message: Qr,
+        details: Zr,
+        error: rr,
+        screen: Wr,
+        toTransport: jr,
+        instance: ar
       })
     }
 
-    function nG(RR, JR, GR) {
-      var yR;
-      const tR = (0, gR.c)(RR),
-        uR = {
-          cause: (RR instanceof pR.b || RR instanceof pR.m) && null !== (yR = RR.serverText) && void 0 !== yR ? yR : "",
-          sinceJoinStart: (0, AR.c)(GR.sinceJoinStartMs),
-          game: GR.game,
-          ...(0, AR.j)(),
-          wasmBuild: JR.wasm,
-          clientVersion: JR.client
+    function zQ(rr, Sr, Qr) {
+      var Zr;
+      const Wr = (0, Lr.f)(rr),
+        ar = {
+          cause: (rr instanceof Or.e || rr instanceof Or.q) && null !== (Zr = rr.serverText) && void 0 !== Zr ? Zr : "",
+          sinceJoinStart: (0, er.b)(Qr.sinceJoinStartMs),
+          game: Qr.game,
+          ...(0, er.f)(),
+          wasmBuild: Sr.wasm,
+          clientVersion: Sr.client
         };
-      return HJ({
+      return gS({
         kind: "pageJoin",
-        code: aG(RR),
-        site: ER,
+        code: tQ(rr),
+        site: Fr,
         fatal: !1,
-        message: (0, mR.k)(RR),
-        details: uR,
-        error: RR,
-        toTransport: "unrecognised" === tR,
-        instance: tR
+        message: (0, Ar.l)(rr),
+        details: ar,
+        error: rr,
+        toTransport: "unrecognised" === Wr,
+        instance: Wr
       })
     }
-    const UG = {
+    const YQ = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1549,673 +1549,673 @@ export const modules = {
       }
     };
 
-    function WG(RR, JR) {
+    function nQ(rr, Sr) {
       let {
-        unused: GR,
-        answered: yR,
-        mD: tR
-      } = RR;
+        unused: Qr,
+        answered: Zr,
+        gR: Wr
+      } = rr;
       const {
-        code: uR,
-        message: ZR
-      } = UG[GR], qR = {
-        unused: GR,
-        answered: String(yR),
-        mD: String(tR),
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+        code: ar,
+        message: jr
+      } = YQ[Qr], Ir = {
+        unused: Qr,
+        answered: String(Zr),
+        gR: String(Wr),
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "seat",
-        code: uR,
-        site: ER,
+        code: ar,
+        site: Fr,
         fatal: !1,
-        message: ZR,
-        details: qR
+        message: jr,
+        details: Ir
       })
     }
 
-    function AG(RR, JR, GR) {
-      var yR;
-      let tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (yR = RR.name) && void 0 !== yR ? yR : String(RR.code);
-      const uR = {
-          closeCode: String(RR.code),
-          recognised: String(null !== RR.name),
-          closeReason: GR.closeReason,
-          sinceJoined: (0, AR.c)(GR.sinceJoinedMs),
-          game: GR.game,
-          ...(0, AR.j)(),
-          wasmBuild: JR.wasm,
-          clientVersion: JR.client
+    function eQ(rr, Sr, Qr) {
+      var Zr;
+      let Wr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Zr = rr.name) && void 0 !== Zr ? Zr : String(rr.code);
+      const ar = {
+          closeCode: String(rr.code),
+          recognised: String(null !== rr.name),
+          closeReason: Qr.closeReason,
+          sinceJoined: (0, er.b)(Qr.sinceJoinedMs),
+          game: Qr.game,
+          ...(0, er.f)(),
+          wasmBuild: Sr.wasm,
+          clientVersion: Sr.client
         },
-        ZR = null === RR.name && !(0, AR.f)(RR.code);
-      return HJ({
+        jr = null === rr.name && !(0, er.c)(rr.code);
+      return gS({
         kind: "disconnect",
-        code: tR,
-        site: YR,
+        code: Wr,
+        site: or,
         fatal: !1,
         message: "Left room",
-        details: uR,
-        toTransport: ZR
+        details: ar,
+        toTransport: jr
       })
     }
 
-    function CG(RR, JR) {
-      const GR = {
-        ...(0, aR.q)(RR),
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+    function KQ(rr, Sr) {
+      const Qr = {
+        ...(0, tr.q)(rr),
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "disconnect",
-        code: `reconnect-${RR.reason}`,
-        site: ER,
+        code: `reconnect-${rr.reason}`,
+        site: Fr,
         fatal: !1,
         message: "Reconnect failed",
-        details: GR
+        details: Qr
       })
     }
 
-    function XG(RR) {
-      return RR.error instanceof OR.f ? `MODEL-${RR.error.status}` : RR.error instanceof xR.h ? "MODEL-ring" : "MODEL-network"
+    function yQ(rr) {
+      return rr.error instanceof Pr.e ? `MODEL-${rr.error.status}` : rr.error instanceof Hr.n ? "MODEL-ring" : "MODEL-network"
     }
 
-    function MG(RR, JR) {
-      const GR = XG(RR),
-        yR = `model file ${RR.file} ${RR.startup?"(startup) ":""}could not load`,
-        tR = {
-          file: String(RR.file),
-          url: RR.url,
-          wasmBuild: JR.wasm,
-          clientVersion: JR.client
+    function BQ(rr, Sr) {
+      const Qr = yQ(rr),
+        Zr = `model file ${rr.file} ${rr.startup?"(startup) ":""}could not load`,
+        Wr = {
+          file: String(rr.file),
+          url: rr.url,
+          wasmBuild: Sr.wasm,
+          clientVersion: Sr.client
         };
-      return HJ({
-        kind: RR.startup ? "model" : "modelLate",
-        code: GR,
-        site: kR,
-        fatal: RR.startup,
-        message: yR,
-        details: tR,
-        error: RR.error
+      return gS({
+        kind: rr.startup ? "model" : "modelLate",
+        code: Qr,
+        site: br,
+        fatal: rr.startup,
+        message: Zr,
+        details: Wr,
+        error: rr.error
       })
     }
 
-    function BG(RR, JR) {
-      const GR = {
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+    function TQ(rr, Sr) {
+      const Qr = {
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: QR,
+        site: Jr,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: GR,
-        error: RR
+        details: Qr,
+        error: rr
       })
     }
 
-    function lG(RR, JR, GR) {
-      const yR = {
-        delayMs: String(JR),
-        wasmBuild: GR.wasm,
-        clientVersion: GR.client
+    function vQ(rr, Sr, Qr) {
+      const Zr = {
+        delayMs: String(Sr),
+        wasmBuild: Qr.wasm,
+        clientVersion: Qr.client
       };
-      RR instanceof OR.f && (yR.status = String(RR.status));
-      return HJ({
+      rr instanceof Pr.e && (Zr.status = String(rr.status));
+      return gS({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: QR,
+        site: Jr,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: yR,
-        error: RR
+        details: Zr,
+        error: rr
       })
     }
 
-    function pG(RR, JR) {
-      const GR = {
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+    function OQ(rr, Sr) {
+      const Qr = {
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: MR.B,
+        site: Br.M,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: GR,
-        error: RR
+        details: Qr,
+        error: rr
       })
     }
 
-    function gG(RR, JR) {
-      const GR = {
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+    function LQ(rr, Sr) {
+      const Qr = {
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: JJ,
+        site: SS,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: GR,
-        error: RR
+        details: Qr,
+        error: rr
       })
     }
 
-    function bG(RR, JR, GR, yR) {
-      const tR = {
-        wasmBuild: yR.wasm,
-        clientVersion: yR.client
+    function lQ(rr, Sr, Qr, Zr) {
+      const Wr = {
+        wasmBuild: Zr.wasm,
+        clientVersion: Zr.client
       };
-      return HJ({
+      return gS({
         kind: "texturePackKeptOut",
-        code: (0, VR.g)("wasm", RR, JR),
-        site: GJ,
+        code: (0, pr.i)("wasm", rr, Sr),
+        site: QS,
         fatal: !1,
-        message: JR.detail,
-        details: tR,
-        error: GR
+        message: Sr.detail,
+        details: Wr,
+        error: Qr
       })
     }
 
-    function vG(RR, JR) {
+    function XQ(rr, Sr) {
       const {
-        frames: GR,
-        acks: yR,
-        mask: tR,
-        outcome: uR
-      } = RR, ZR = {
-        frames: String(GR),
-        acks: String(yR),
-        mask: String(tR),
-        outcome: null !== uR && void 0 !== uR ? uR : "resynced",
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+        frames: Qr,
+        acks: Zr,
+        mask: Wr,
+        outcome: ar
+      } = rr, jr = {
+        frames: String(Qr),
+        acks: String(Zr),
+        mask: String(Wr),
+        outcome: null !== ar && void 0 !== ar ? ar : "resynced",
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "recovered",
-        code: "rejoined" === uR ? "CORE-eventOverflowRejoin" : "failed" === uR ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: hR,
+        code: "rejoined" === ar ? "CORE-eventOverflowRejoin" : "failed" === ar ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: ur,
         fatal: !1,
-        message: `the event buffer refused records in ${GR} frames`,
-        details: ZR
+        message: `the event buffer refused records in ${Qr} frames`,
+        details: jr
       })
     }
 
-    function OG(RR, JR, GR) {
-      return HJ({
+    function PQ(rr, Sr, Qr) {
+      return gS({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: RR,
+        site: rr,
         fatal: !1,
-        message: `a ${RR} worker was lost`,
+        message: `a ${rr} worker was lost`,
         details: {
-          reason: JR,
-          wasmBuild: GR.wasm,
-          clientVersion: GR.client
+          reason: Sr,
+          wasmBuild: Qr.wasm,
+          clientVersion: Qr.client
         }
       })
     }
 
-    function xG(RR, JR, GR, yR) {
-      const tR = {
-          reason: RR,
-          pageBuild: yR.build,
-          pageAgeMin: String(Math.floor(yR.ageMs / 6e4)),
-          wasmBuild: GR.wasm,
-          clientVersion: GR.client
+    function HQ(rr, Sr, Qr, Zr) {
+      const Wr = {
+          reason: rr,
+          pageBuild: Zr.build,
+          pageAgeMin: String(Math.floor(Zr.ageMs / 6e4)),
+          wasmBuild: Qr.wasm,
+          clientVersion: Qr.client
         },
-        uR = JR ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
-      return HJ({
+        ar = Sr ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
+      return gS({
         kind: "recovered",
         code: "CORE-worldgenWorkerLost",
-        site: MR.B,
+        site: Br.M,
         fatal: !1,
-        message: uR,
-        details: tR
+        message: ar,
+        details: Wr
       })
     }
 
-    function NG(RR, JR, GR) {
-      const yR = {
-        wasmBuild: GR.wasm,
-        clientVersion: GR.client
+    function qQ(rr, Sr, Qr) {
+      const Zr = {
+        wasmBuild: Qr.wasm,
+        clientVersion: Qr.client
       };
-      return HJ({
+      return gS({
         kind: "recovered",
-        code: RR,
-        site: MR.p,
+        code: rr,
+        site: Br.u,
         fatal: !1,
-        message: JR,
-        details: yR
+        message: Sr,
+        details: Zr
       })
     }
 
-    function DG(RR, JR) {
-      const GR = {
-        lastReason: RR,
-        wasmBuild: JR.wasm,
-        clientVersion: JR.client
+    function RQ(rr, Sr) {
+      const Qr = {
+        lastReason: rr,
+        wasmBuild: Sr.wasm,
+        clientVersion: Sr.client
       };
-      return HJ({
+      return gS({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: MR.B,
+        site: Br.M,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: GR
+        details: Qr
       })
     }
 
-    function HG(RR, JR, GR) {
-      return HJ({
+    function gQ(rr, Sr, Qr) {
+      return gS({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: MR.n,
+        site: Br.q,
         fatal: !1,
-        message: `${(0,bR.D)(RR)}: the session shed load`,
+        message: `${(0,lr.y)(rr)}: the session shed load`,
         details: {
-          cause: RR,
-          ...JR,
-          wasmBuild: GR.wasm,
-          clientVersion: GR.client
+          cause: rr,
+          ...Sr,
+          wasmBuild: Qr.wasm,
+          clientVersion: Qr.client
         }
       })
     }
 
-    function oG(RR, JR, GR, yR) {
-      var tR, uR;
+    function CQ(rr, Sr, Qr, Zr) {
+      var Wr, ar;
       return {
-        game: RR,
-        cause: JR,
-        census: null === GR ? "none" : JSON.stringify(GR),
-        gpu: null !== (tR = null === (uR = (0, WR.y)()) || void 0 === uR ? void 0 : uR.renderer) && void 0 !== tR ? tR : "",
-        browser: (0, rR.h)(),
-        wasmBuild: yR.wasm,
-        clientVersion: yR.client
+        game: rr,
+        cause: Sr,
+        census: null === Qr ? "none" : JSON.stringify(Qr),
+        gpu: null !== (Wr = null === (ar = (0, nr.C)()) || void 0 === ar ? void 0 : ar.renderer) && void 0 !== Wr ? Wr : "",
+        browser: (0, Nr.o)(),
+        wasmBuild: Zr.wasm,
+        clientVersion: Zr.client
       }
     }
 
-    function cG(RR, JR, GR, yR) {
-      const tR = (0, rR.l)(),
-        uR = {
-          ...oG(RR, JR, GR, yR),
-          renderWarned: String(tR)
+    function MQ(rr, Sr, Qr, Zr) {
+      const Wr = (0, Nr.q)(),
+        ar = {
+          ...CQ(rr, Sr, Qr, Zr),
+          renderWarned: String(Wr)
         },
-        ZR = `first view drew no whole terrain in ${NR.f/1e3} s, ${JR}${tR?", render warned":""}`;
-      return HJ({
+        jr = `first view drew no whole terrain in ${qr.h/1e3} s, ${Sr}${Wr?", render warned":""}`;
+      return gS({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: yJ,
+        site: ZS,
         fatal: !1,
-        message: ZR,
-        details: uR
+        message: jr,
+        details: ar
       })
     }
 
-    function PG(RR, JR, GR, yR, tR) {
-      const uR = {
-          ...oG(RR, GR.cause, yR, tR),
-          waitedMs: String(Math.round(JR.waitedMs)),
-          visibleMs: String(Math.round(JR.visibleMs)),
-          drawnMs: String(Math.round(JR.drawnMs)),
-          frames: String(JR.frames),
-          renderPending: String(GR.renderPending),
-          viewWait: null === GR.wait ? "none" : GR.wait.slice(0, 6).join(",")
+    function GQ(rr, Sr, Qr, Zr, Wr) {
+      const ar = {
+          ...CQ(rr, Qr.cause, Zr, Wr),
+          waitedMs: String(Math.round(Sr.waitedMs)),
+          visibleMs: String(Math.round(Sr.visibleMs)),
+          drawnMs: String(Math.round(Sr.drawnMs)),
+          frames: String(Sr.frames),
+          renderPending: String(Qr.renderPending),
+          viewWait: null === Qr.wait ? "none" : Qr.wait.slice(0, 6).join(",")
         },
-        ZR = (0, BR.g)(JR, GR);
-      return HJ({
+        jr = (0, Tr.h)(Sr, Qr);
+      return gS({
         kind: "viewUnshown",
         code: "CORE-firstViewUnshown",
-        site: yJ,
+        site: ZS,
         fatal: !1,
-        message: ZR,
-        details: uR
+        message: jr,
+        details: ar
       })
     }
 
-    function IG(RR, JR, GR, yR, tR) {
-      const uR = (0, LR.i)(),
-        ZR = (0, LR.e)(RR, JR, GR, yR, uR),
-        qR = {
-          gpuModel: uR,
-          wasmBuild: tR.wasm,
-          clientVersion: tR.client
+    function kQ(rr, Sr, Qr, Zr, Wr) {
+      const ar = (0, hr.f)(),
+        jr = (0, hr.b)(rr, Sr, Qr, Zr, ar),
+        Ir = {
+          gpuModel: ar,
+          wasmBuild: Wr.wasm,
+          clientVersion: Wr.client
         };
-      return HJ({
+      return gS({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: tJ,
+        site: WS,
         fatal: !1,
-        message: ZR,
-        details: qR
+        message: jr,
+        details: Ir
       })
     }
 
-    function mG(RR, JR, GR) {
-      return HJ({
+    function AQ(rr, Sr, Qr) {
+      return gS({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: RR,
+        site: rr,
         fatal: !1,
-        message: `a ${RR} worker did not start`,
+        message: `a ${rr} worker did not start`,
         details: {
-          waitedMs: String(Math.round(JR)),
-          wasmBuild: GR.wasm,
-          clientVersion: GR.client
+          waitedMs: String(Math.round(Sr)),
+          wasmBuild: Qr.wasm,
+          clientVersion: Qr.client
         }
       })
     }
 
-    function zG(RR, JR, GR) {
-      return HJ({
+    function VQ(rr, Sr, Qr) {
+      return gS({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: RR,
+        site: rr,
         fatal: !1,
-        message: `the replay's ${RR} failed`,
+        message: `the replay's ${rr} failed`,
         details: {
-          wasmBuild: GR.wasm,
-          clientVersion: GR.client
+          wasmBuild: Qr.wasm,
+          clientVersion: Qr.client
         },
-        error: JR
+        error: Sr
       })
     }
 
-    function SG(RR, JR) {
-      const GR = {
-          wasmBuild: JR.wasm,
-          clientVersion: JR.client
+    function iQ(rr, Sr) {
+      const Qr = {
+          wasmBuild: Sr.wasm,
+          clientVersion: Sr.client
         },
-        yR = RR instanceof Error ? RR.message : String(RR);
-      return HJ({
+        Zr = rr instanceof Error ? rr.message : String(rr);
+      return gS({
         kind: "recovered",
         code: "CORE-cameraDirector",
-        site: ZJ,
+        site: jS,
         fatal: !1,
         message: "the scripted camera's director threw",
-        details: GR,
-        instance: yR,
-        error: RR
+        details: Qr,
+        instance: Zr,
+        error: rr
       })
     }
-    const jG = {
+    const wQ = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function dG(RR) {
-      if (0 === RR) return "none";
-      const JR = [60, 600, 3600].find((JR => RR < JR));
-      return void 0 === JR ? "ge3600" : `lt${JR}`
+    function cQ(rr) {
+      if (0 === rr) return "none";
+      const Sr = [60, 600, 3600].find((Sr => rr < Sr));
+      return void 0 === Sr ? "ge3600" : `lt${Sr}`
     }
 
-    function EG(RR, JR) {
-      return null === RR ? "unbound" : (0, nR.i)(JR - RR)
+    function FQ(rr, Sr) {
+      return null === rr ? "unbound" : (0, zr.h)(Sr - rr)
     }
 
-    function YG(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
-      return [0 !== (RR & wR.N.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (RR & wR.N.LINKS_RUNNING) ? "links running" : "", `frames ${(0,eR.e)(dG(RR&wR.N.FRAMES))}`, `up ${(0,eR.e)(EG(JR,GR))}`].filter(Boolean).join(", ")
+    function oQ(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
+      return [0 !== (rr & mr.S.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (rr & mr.S.LINKS_RUNNING) ? "links running" : "", `frames ${(0,Ur.b)(cQ(rr&mr.S.FRAMES))}`, `up ${(0,Ur.b)(FQ(Sr,Qr))}`].filter(Boolean).join(", ")
     }
 
-    function kG(RR, JR, GR) {
-      const yR = "lost" === JR && void 0 !== GR ? ` (${GR})` : "";
-      return `the ${RR} ${jG[JR]}${yR}`
+    function bQ(rr, Sr, Qr) {
+      const Zr = "lost" === Sr && void 0 !== Qr ? ` (${Qr})` : "";
+      return `the ${rr} ${wQ[Sr]}${Zr}`
     }
-    const QG = {
+    const JQ = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
 
-    function FG(RR, JR, GR, yR) {
-      var tR;
+    function DQ(rr, Sr, Qr, Zr) {
+      var Wr;
       let {
-        restoreLost: uR = !1,
-        adapterRemembered: ZR = !1
-      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, qR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
-      const iR = null === GR || void 0 === GR ? void 0 : GR.message,
-        fR = "pipeline_failed" === JR ? JR : GR instanceof XR.g ? "timeout" : (0, nR.r)("frames_refused" === JR, "string" === typeof iR ? iR : ""),
-        VR = null === yR.boundAtMs ? "unbound" : `up${(0,nR.f)(qR-yR.boundAtMs)}`,
-        KR = null === yR.adapter ? "no adapter" : (0, nR.n)(yR.adapter),
-        wR = `${!0===yR.indirectHangs?" ih":""}${!0===yR.restoresSkipped?" nr":""}${uR?" rl":""}${ZR?" ar":""}`,
-        rR = `${fR} ${(0,XR.h)()?"hidden":"visible"} ${VR}${wR} ${KR}`;
-      if ("webgpu" !== RR || "lost" !== JR && "frames_refused" !== JR) return {
-        detail: rR,
+        restoreLost: ar = !1,
+        adapterRemembered: jr = !1
+      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, Ir = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
+      const fr = null === Qr || void 0 === Qr ? void 0 : Qr.message,
+        Er = "pipeline_failed" === Sr ? Sr : Qr instanceof yr.d ? "timeout" : (0, zr.q)("frames_refused" === Sr, "string" === typeof fr ? fr : ""),
+        pr = null === Zr.boundAtMs ? "unbound" : `up${(0,zr.f)(Ir-Zr.boundAtMs)}`,
+        xr = null === Zr.adapter ? "no adapter" : (0, zr.m)(Zr.adapter),
+        mr = `${!0===Zr.indirectHangs?" ih":""}${!0===Zr.restoresSkipped?" nr":""}${ar?" rl":""}${jr?" ar":""}`,
+        Nr = `${Er} ${(0,yr.e)()?"hidden":"visible"} ${pr}${mr} ${xr}`;
+      if ("webgpu" !== rr || "lost" !== Sr && "frames_refused" !== Sr) return {
+        detail: Nr,
         count: void 0
       };
       return {
-        detail: rR,
+        detail: Nr,
         count: {
           errorKind: "render_lost",
-          error: new Error(rR),
-          code: (0, nR.z)(fR, null !== (tR = yR.boundAtMs) && void 0 !== tR ? tR : qR, qR).code,
+          error: new Error(Nr),
+          code: (0, zr.v)(Er, null !== (Wr = Zr.boundAtMs) && void 0 !== Wr ? Wr : Ir, Ir).code,
           fields: {
-            renderBackend: zR.d.webgpu
+            renderBackend: Vr.c.webgpu
           }
         }
       }
     }
 
-    function TG(RR, JR, GR) {
+    function dQ(rr, Sr, Qr) {
       const {
-        count: yR
-      } = FG("webgpu", RR, JR, GR);
-      void 0 !== yR && PJ(yR)
+        count: Zr
+      } = DQ("webgpu", rr, Sr, Qr);
+      void 0 !== Zr && GS(Zr)
     }
-    const sG = {
+    const sQ = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function hG(RR) {
-      var JR;
-      return null !== (JR = RR instanceof Error ? RR.reason : void 0) && void 0 !== JR ? JR : ""
+    function uQ(rr) {
+      var Sr;
+      return null !== (Sr = rr instanceof Error ? rr.reason : void 0) && void 0 !== Sr ? Sr : ""
     }
 
-    function Ry(RR, JR, yR) {
-      var tR, uR, ZR, qR, fR;
+    function rZ(rr, Sr, Zr) {
+      var Wr, ar, jr, Ir, Er;
       let {
-        from: VR,
-        cause: KR = "lost",
-        restoreLost: wR = !1,
-        adapterRemembered: aR = !1,
-        error: LR,
-        context: WR = QG,
-        session: AR = sG
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, CR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
+        from: pr,
+        cause: xr = "lost",
+        restoreLost: mr = !1,
+        adapterRemembered: tr = !1,
+        error: hr,
+        context: nr = JQ,
+        session: er = sQ
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, Kr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
       const {
-        detail: XR,
-        count: MR
-      } = FG(RR, KR, LR, WR, {
-        restoreLost: wR,
-        adapterRemembered: aR
-      }, CR), BR = {
-        reloadFrom: null !== VR && void 0 !== VR ? VR : "",
-        losses: String(JR),
-        cause: KR,
-        detail: XR,
-        vendor: null !== (tR = null === (uR = WR.adapter) || void 0 === uR ? void 0 : uR.vendor) && void 0 !== tR ? tR : "",
-        architecture: null !== (ZR = null === (qR = WR.adapter) || void 0 === qR ? void 0 : qR.architecture) && void 0 !== ZR ? ZR : "",
-        indirectHangs: String(WR.indirectHangs),
-        restoresSkipped: String(WR.restoresSkipped),
-        restoreLost: String(wR),
-        adapterRemembered: String(aR),
-        lossReason: hG(LR),
-        samples: String(AR.samples),
-        sunShadows: String(AR.sunShadows),
-        renderDistance: String(AR.renderDistance),
-        gpuFamily: null !== (fR = (0, iR.d)()) && void 0 !== fR ? fR : "",
-        browser: (0, rR.h)(),
-        siteUsed: UR.siteUsed,
-        wasmBuild: yR.wasm,
-        clientVersion: yR.client
-      }, lR = "webgpu" !== RR && void 0 !== VR ? function(RR, JR, GR, yR) {
-        return `: ${RR}, ${JR?"restore lost":"not restored"}, up ${(0,eR.e)(EG(GR,yR))}`
-      }(VR, wR, WR.boundAtMs, CR) : "", pR = `${kG(RR,KR)}${lR}`, gR = HJ({
+        detail: yr,
+        count: Br
+      } = DQ(rr, xr, hr, nr, {
+        restoreLost: mr,
+        adapterRemembered: tr
+      }, Kr), Tr = {
+        reloadFrom: null !== pr && void 0 !== pr ? pr : "",
+        losses: String(Sr),
+        cause: xr,
+        detail: yr,
+        vendor: null !== (Wr = null === (ar = nr.adapter) || void 0 === ar ? void 0 : ar.vendor) && void 0 !== Wr ? Wr : "",
+        architecture: null !== (jr = null === (Ir = nr.adapter) || void 0 === Ir ? void 0 : Ir.architecture) && void 0 !== jr ? jr : "",
+        indirectHangs: String(nr.indirectHangs),
+        restoresSkipped: String(nr.restoresSkipped),
+        restoreLost: String(mr),
+        adapterRemembered: String(tr),
+        lossReason: uQ(hr),
+        samples: String(er.samples),
+        sunShadows: String(er.sunShadows),
+        renderDistance: String(er.renderDistance),
+        gpuFamily: null !== (Er = (0, fr.b)()) && void 0 !== Er ? Er : "",
+        browser: (0, Nr.o)(),
+        siteUsed: Yr.siteUsed,
+        wasmBuild: Zr.wasm,
+        clientVersion: Zr.client
+      }, vr = "webgpu" !== rr && void 0 !== pr ? function(rr, Sr, Qr, Zr) {
+        return `: ${rr}, ${Sr?"restore lost":"not restored"}, up ${(0,Ur.b)(FQ(Qr,Zr))}`
+      }(pr, mr, nr.boundAtMs, Kr) : "", Or = `${bQ(rr,xr)}${vr}`, Lr = gS({
         kind: "recovered",
         code: "CORE-renderLost",
-        site: TR,
+        site: dr,
         fatal: !1,
-        message: pR,
-        details: BR,
-        error: LR,
-        countAs: MR
+        message: Or,
+        details: Tr,
+        error: hr,
+        countAs: Br
       });
-      return zJ("ga", (async () => {
+      return VS("ga", (async () => {
         const {
-          logError: JR
-        } = await Promise.resolve().then((() => GR(4053))), yR = `${nR.b["webgpu"===RR?"WebGPU":"WebGL2"]}\n Error: ${XR}`;
-        JR("warning", yR), JR("error", yR)
-      })), gR
+          logError: Sr
+        } = await Promise.resolve().then((() => Qr(4010))), Zr = `${zr.e["webgpu"===rr?"WebGPU":"WebGL2"]}\n Error: ${yr}`;
+        Sr("warning", Zr), Sr("error", Zr)
+      })), Lr
     }
 
-    function Jy(RR, JR) {
-      var GR, yR;
-      const tR = null === RR.name ? "TEXTURE-sources" : null === RR.url ? "TEXTURE-nourl" : RR.error instanceof DR.e ? `TEXTURE-${RR.error.status}` : "TEXTURE-network",
-        uR = null === RR.name ? "terrain textures could not load" : `terrain texture ${RR.name} could not load`,
-        ZR = {
-          texture: null !== (GR = RR.name) && void 0 !== GR ? GR : "",
-          url: null !== (yR = RR.url) && void 0 !== yR ? yR : "",
-          wasmBuild: JR.wasm,
-          clientVersion: JR.client
+    function SZ(rr, Sr) {
+      var Qr, Zr;
+      const Wr = null === rr.name ? "TEXTURE-sources" : null === rr.url ? "TEXTURE-nourl" : rr.error instanceof Rr.e ? `TEXTURE-${rr.error.status}` : "TEXTURE-network",
+        ar = null === rr.name ? "terrain textures could not load" : `terrain texture ${rr.name} could not load`,
+        jr = {
+          texture: null !== (Qr = rr.name) && void 0 !== Qr ? Qr : "",
+          url: null !== (Zr = rr.url) && void 0 !== Zr ? Zr : "",
+          wasmBuild: Sr.wasm,
+          clientVersion: Sr.client
         };
-      return HJ({
+      return gS({
         kind: "terrainTexture",
-        code: tR,
-        site: MR.x,
+        code: Wr,
+        site: Br.J,
         fatal: !1,
-        message: uR,
-        details: ZR,
-        error: RR.error
+        message: ar,
+        details: jr,
+        error: rr.error
       })
     }
-    const Gy = {
+    const QZ = {
       previewAnimations: {
-        site: sR,
+        site: sr,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: RJ,
+        site: rS,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function yy(RR, JR, GR, yR) {
+    function ZZ(rr, Sr, Qr, Zr) {
       const {
-        site: tR,
-        prefix: uR,
-        name: ZR
-      } = Gy[RR], {
-        stage: qR,
-        error: iR
-      } = GR;
-      return HJ({
-        kind: RR,
-        code: "decode" === qR ? null === iR ? `${uR}-decode` : `${uR}-trap` : iR instanceof OR.f ? `${uR}-${iR.status}` : `${uR}-network`,
-        site: tR,
+        site: Wr,
+        prefix: ar,
+        name: jr
+      } = QZ[rr], {
+        stage: Ir,
+        error: fr
+      } = Qr;
+      return gS({
+        kind: rr,
+        code: "decode" === Ir ? null === fr ? `${ar}-decode` : `${ar}-trap` : fr instanceof Pr.e ? `${ar}-${fr.status}` : `${ar}-network`,
+        site: Wr,
         fatal: !1,
-        message: "decode" === qR ? `${ZR} did not decode` : `${ZR} could not load`,
+        message: "decode" === Ir ? `${jr} did not decode` : `${jr} could not load`,
         details: {
-          url: JR,
-          wasmBuild: yR.wasm,
-          clientVersion: yR.client
+          url: Sr,
+          wasmBuild: Zr.wasm,
+          clientVersion: Zr.client
         },
-        error: iR
+        error: fr
       })
     }
-    const ty = "staleBuild";
+    const WZ = "staleBuild";
 
-    function uy(RR, JR, GR) {
-      const yR = {
-          failedSite: RR.site,
-          url: RR.url,
-          from: RR.from,
-          sameBuild: String(RR.from === JR),
-          reloadMs: String(Math.max(0, Date.now() - RR.at)),
-          wasmBuild: GR.wasm,
-          clientVersion: GR.client
+    function aZ(rr, Sr, Qr) {
+      const Zr = {
+          failedSite: rr.site,
+          url: rr.url,
+          from: rr.from,
+          sameBuild: String(rr.from === Sr),
+          reloadMs: String(Math.max(0, Date.now() - rr.at)),
+          wasmBuild: Qr.wasm,
+          clientVersion: Qr.client
         },
-        tR = `reloaded into a newer build after ${RR.site} failed to load: ${RR.error}`;
-      return HJ({
+        Wr = `reloaded into a newer build after ${rr.site} failed to load: ${rr.error}`;
+      return gS({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: ty,
+        site: WZ,
         fatal: !1,
-        message: tR,
-        details: yR
+        message: Wr,
+        details: Zr
       })
     }
   },
-  42325: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => qR,
-      f: () => tR,
-      h: () => ZR,
-      l: () => iR
+  42646: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ir,
+      h: () => Wr,
+      l: () => jr,
+      n: () => fr
     });
-    var yR = GR(5685);
-    const tR = 3e4,
-      uR = 900;
+    var Zr = Qr(5617);
+    const Wr = 3e4,
+      ar = 900;
 
-    function ZR(RR, JR) {
-      const GR = null === RR ? 0 : JR - RR;
-      return GR <= uR ? GR : 0
+    function jr(rr, Sr) {
+      const Qr = null === rr ? 0 : Sr - rr;
+      return Qr <= ar ? Qr : 0
     }
-    class qR {
-      constructor(RR) {
-        this.fK = RR, this.waitedMs = 0, this.lastMs = null
+    class Ir {
+      constructor(rr) {
+        this.jx = rr, this.waitedMs = 0, this.lastMs = null
       }
-      frame(RR, JR) {
-        return !!JR || (this.waitedMs += ZR(this.lastMs, RR), this.lastMs = RR, !(this.waitedMs < tR) && (this.fK(), !0))
+      frame(rr, Sr) {
+        return !!Sr || (this.waitedMs += jr(this.lastMs, rr), this.lastMs = rr, !(this.waitedMs < Wr) && (this.jx(), !0))
       }
     }
 
-    function iR(RR, JR) {
-      return 0 === (RR & yR.ab.ChunkRequested) ? "no_chunk_request" : 0 === (RR & yR.ab.ChunkStored) ? "chunk_not_stored" : 0 === (RR & yR.ab.MeshLanded) ? "not_meshed" : null === JR ? "no_frame_drawn" : 0 === JR.terrainParts ? "no_terrain_parts" : JR.terrainCompiling > 0 ? "terrain_compiling" : JR.terrainOpaque + JR.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
+    function fr(rr, Sr) {
+      return 0 === (rr & Zr.V.ChunkRequested) ? "no_chunk_request" : 0 === (rr & Zr.V.ChunkStored) ? "chunk_not_stored" : 0 === (rr & Zr.V.MeshLanded) ? "not_meshed" : null === Sr ? "no_frame_drawn" : 0 === Sr.terrainParts ? "no_terrain_parts" : Sr.terrainCompiling > 0 ? "terrain_compiling" : Sr.terrainOpaque + Sr.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  42322: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => iR,
-      e: () => ZR,
-      g: () => VR
+  42637: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => fr,
+      e: () => jr,
+      h: () => pr
     });
-    var yR = GR(188),
-      tR = GR(42325);
-    const uR = ["view", "startup", "skipped"];
+    var Zr = Qr(194),
+      Wr = Qr(42646);
+    const ar = ["view", "startup", "skipped"];
 
-    function ZR(RR) {
-      return 0 === RR.clientWidth || 0 === RR.clientHeight || 0 === RR.width || 0 === RR.height
+    function jr(rr) {
+      return 0 === rr.clientWidth || 0 === rr.clientHeight || 0 === rr.width || 0 === rr.height
     }
 
-    function qR(RR) {
-      if (null === RR) return "none";
-      const [JR, GR, yR, tR] = RR, uR = [
-        ["link", JR],
-        ["terrain", GR],
-        ["Qq", yR],
-        ["other", tR]
+    function Ir(rr) {
+      if (null === rr) return "none";
+      const [Sr, Qr, Zr, Wr] = rr, ar = [
+        ["link", Sr],
+        ["terrain", Qr],
+        ["wI", Zr],
+        ["other", Wr]
       ];
-      let ZR = "none",
-        qR = 0;
-      for (const [iR, fR] of uR) fR > qR && (ZR = iR, qR = fR);
-      return ZR
+      let jr = "none",
+        Ir = 0;
+      for (const [fr, Er] of ar) Er > Ir && (jr = fr, Ir = Er);
+      return jr
     }
-    class iR {
-      constructor(RR) {
-        this.gap = RR, this.chunkAtMs = null, this.lastFrameMs = null, this.drawnMs = 0, this.frames = 0, this.visibleFromMs = null, this.undrawn = {
+    class fr {
+      constructor(rr) {
+        this.gap = rr, this.chunkAtMs = null, this.lastFrameMs = null, this.drawnMs = 0, this.frames = 0, this.visibleFromMs = null, this.undrawn = {
           view: 0,
           startup: 0,
           skipped: 0
@@ -2224,156 +2224,156 @@ export const modules = {
       get open() {
         return null !== this.chunkAtMs && !this.over
       }
-      playerChunk(RR, JR) {
-        null !== this.chunkAtMs || this.over || (this.chunkAtMs = RR, JR || this.pageShown(RR))
+      playerChunk(rr, Sr) {
+        null !== this.chunkAtMs || this.over || (this.chunkAtMs = rr, Sr || this.pageShown(rr))
       }
-      pageShown(RR) {
-        this.open && null === this.visibleFromMs && (this.visibleFromMs = RR, this.gap.restart(RR))
+      pageShown(rr) {
+        this.open && null === this.visibleFromMs && (this.visibleFromMs = rr, this.gap.restart(rr))
       }
-      animationFrame(RR, JR, GR) {
-        !this.open || null === this.visibleFromMs || RR <= this.visibleFromMs || (this.gap.animationFrame(), "paced" === JR ? this.gap.paced() : "skipped" === JR ? this.undrawn.skipped++ : "none" === JR && this.undrawn[GR ? "startup" : "view"]++)
+      animationFrame(rr, Sr, Qr) {
+        !this.open || null === this.visibleFromMs || rr <= this.visibleFromMs || (this.gap.animationFrame(), "paced" === Sr ? this.gap.paced() : "skipped" === Sr ? this.undrawn.skipped++ : "none" === Sr && this.undrawn[Qr ? "startup" : "view"]++)
       }
-      frame(RR) {
-        this.open && (this.drawnMs += (0, tR.h)(this.lastFrameMs, RR), this.lastFrameMs = RR, this.frames++)
+      frame(rr) {
+        this.open && (this.drawnMs += (0, Wr.l)(this.lastFrameMs, rr), this.lastFrameMs = rr, this.frames++)
       }
       shown() {
         this.over = !0, this.gap.stop()
       }
-      end(RR, JR) {
+      end(rr, Sr) {
         if (null === this.chunkAtMs || this.over) return null;
         this.over = !0;
-        const GR = null === this.visibleFromMs ? null : this.gap.words(!1, JR);
+        const Qr = null === this.visibleFromMs ? null : this.gap.words(!1, Sr);
         return this.gap.stop(), {
-          end: RR,
-          waitedMs: Math.max(JR - this.chunkAtMs, 0),
-          visibleMs: null === this.visibleFromMs ? 0 : Math.max(JR - this.visibleFromMs, 0),
+          end: rr,
+          waitedMs: Math.max(Sr - this.chunkAtMs, 0),
+          visibleMs: null === this.visibleFromMs ? 0 : Math.max(Sr - this.visibleFromMs, 0),
           drawnMs: this.drawnMs,
           frames: this.frames,
           undrawn: {
             ...this.undrawn
           },
-          page: GR
+          page: Qr
         }
       }
     }
 
-    function fR(RR) {
-      return RR < 5e3 ? "brief" : RR < 15e3 ? "short" : RR < 6e4 ? "long" : "very_long"
+    function Er(rr) {
+      return rr < 5e3 ? "brief" : rr < 15e3 ? "short" : rr < 6e4 ? "long" : "very_long"
     }
 
-    function VR(RR, JR) {
-      var GR, tR;
-      const ZR = [...null === RR.page ? [] : RR.page.split(" "), ...uR.filter((JR => RR.undrawn[JR] > 0)).map((RR => `undrawn:${RR}`)), ...JR.canvasEmpty ? ["canvas:empty"] : []],
-        iR = [
-          ["", `first view unshown, ${JR.cause}, ended ${RR.end}`],
-          [", ", 0 === RR.visibleMs ? "visible none" : `visible ${fR(RR.visibleMs)}`],
-          [", ", 0 === RR.frames ? "no frames" : `drew ${fR(RR.drawnMs)}`], ...ZR.map(((RR, JR) => [0 === JR ? ", " : " ", RR])), [", ", `waited ${fR(RR.waitedMs)}`],
-          [", ", JR.bound ? "bound" : "unbound"], ...JR.preload ? [
+    function pr(rr, Sr) {
+      var Qr, Wr;
+      const jr = [...null === rr.page ? [] : rr.page.split(" "), ...ar.filter((Sr => rr.undrawn[Sr] > 0)).map((rr => `undrawn:${rr}`)), ...Sr.canvasEmpty ? ["canvas:empty"] : []],
+        fr = [
+          ["", `first view unshown, ${Sr.cause}, ended ${rr.end}`],
+          [", ", 0 === rr.visibleMs ? "visible none" : `visible ${Er(rr.visibleMs)}`],
+          [", ", 0 === rr.frames ? "no frames" : `drew ${Er(rr.drawnMs)}`], ...jr.map(((rr, Sr) => [0 === Sr ? ", " : " ", rr])), [", ", `waited ${Er(rr.waitedMs)}`],
+          [", ", Sr.bound ? "bound" : "unbound"], ...Sr.preload ? [
             [", ", "preload"]
           ] : [],
-          [", ", JR.startupLoaded ? "startup in" : "startup out"],
-          [", ", JR.renderPending > 0 ? "render pending" : "render resolved"],
-          [", ", `lacked ${qR(JR.wait)}${(null!==(GR=null===(tR=JR.wait)||void 0===tR?void 0:tR[4])&&void 0!==GR?GR:0)>0?" gapped":""}`]
+          [", ", Sr.startupLoaded ? "startup in" : "startup out"],
+          [", ", Sr.renderPending > 0 ? "render pending" : "render resolved"],
+          [", ", `lacked ${Ir(Sr.wait)}${(null!==(Qr=null===(Wr=Sr.wait)||void 0===Wr?void 0:Wr[4])&&void 0!==Qr?Qr:0)>0?" gapped":""}`]
         ];
-      let VR = "";
-      for (const [uR, qR] of iR) {
-        const RR = VR + uR + qR;
-        if (RR.length > yR.gb) break;
-        VR = RR
+      let pr = "";
+      for (const [ar, Ir] of fr) {
+        const rr = pr + ar + Ir;
+        if (rr.length > Zr.ob) break;
+        pr = rr
       }
-      return VR
+      return pr
     }
   },
-  42118: (RR, JR, GR) => {
-    GR.d(JR, {
-      C: () => eR,
-      e: () => yR,
-      i: () => nR,
-      l: () => aR,
-      m: () => LR,
-      p: () => wR,
-      s: () => rR,
-      u: () => VR,
-      y: () => KR
+  42451: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr,
+      e: () => zr,
+      f: () => tr,
+      h: () => hr,
+      i: () => mr,
+      k: () => Nr,
+      l: () => pr,
+      n: () => xr,
+      o: () => Ur
     });
-    class yR extends Error {
-      constructor(RR) {
-        super(`the join's code did not load: ${RR instanceof Error?RR.message:String(RR)}`, {
-          cause: RR
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === RR || void 0 === RR ? void 0 : RR.request
+    class Zr extends Error {
+      constructor(rr) {
+        super(`the join's code did not load: ${rr instanceof Error?rr.message:String(rr)}`, {
+          cause: rr
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === rr || void 0 === rr ? void 0 : rr.request
       }
     }
-    let tR = null,
-      uR = null,
-      ZR = null;
-    const qR = [];
-    let iR = null;
+    let Wr = null,
+      ar = null,
+      jr = null;
+    const Ir = [];
+    let fr = null;
 
-    function fR(RR, JR) {
+    function Er(rr, Sr) {
       try {
-        RR(JR)
-      } catch (GR) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", GR)
+        rr(Sr)
+      } catch (Qr) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", Qr)
       }
     }
 
-    function VR() {
-      return iR
+    function pr() {
+      return fr
     }
 
-    function KR(RR) {
-      qR.push(RR), null !== iR && fR(RR, iR)
+    function xr(rr) {
+      Ir.push(rr), null !== fr && Er(rr, fr)
     }
 
-    function wR(RR) {
-      return tR ??= Promise.all([GR.e(85), GR.e(113), GR.e(88), GR.e(177), GR.e(91), GR.e(224), GR.e(252), GR.e(112), GR.e(142), GR.e(245), GR.e(244), GR.e(306), GR.e(243), GR.e(222), GR.e(50), GR.e(223), GR.e(127), GR.e(214), GR.e(280), GR.e(143), GR.e(103), GR.e(69)]).then((() => GR(54578))).then((JR => {
-        JR.loadAudio(RR), iR = JR;
-        for (const RR of qR) fR(RR, JR);
-        return JR
-      })).catch((RR => {
-        throw tR = null, RR
-      })), tR
+    function mr(rr) {
+      return Wr ??= Promise.all([Qr.e(85), Qr.e(113), Qr.e(88), Qr.e(177), Qr.e(91), Qr.e(225), Qr.e(253), Qr.e(112), Qr.e(142), Qr.e(246), Qr.e(245), Qr.e(307), Qr.e(244), Qr.e(223), Qr.e(50), Qr.e(224), Qr.e(127), Qr.e(214), Qr.e(281), Qr.e(143), Qr.e(103), Qr.e(69)]).then((() => Qr(55089))).then((Sr => {
+        Sr.loadAudio(rr), fr = Sr;
+        for (const rr of Ir) Er(rr, Sr);
+        return Sr
+      })).catch((rr => {
+        throw Wr = null, rr
+      })), Wr
     }
-    async function rR(RR, JR) {
+    async function Nr(rr, Sr) {
       try {
-        const GR = await wR(RR);
-        await GR.loadClientGame(JR)
-      } catch (GR) {
-        throw new yR(GR)
+        const Qr = await mr(rr);
+        await Qr.loadClientGame(Sr)
+      } catch (Qr) {
+        throw new Zr(Qr)
       }
     }
 
-    function eR(RR, JR) {
-      uR = {
-        running: RR,
-        shell: JR
+    function Ur(rr, Sr) {
+      ar = {
+        running: rr,
+        shell: Sr
       }
     }
 
-    function aR() {
-      return ZR
+    function tr() {
+      return jr
     }
-    async function LR(RR) {
-      const JR = uR;
-      if ((null === JR || void 0 === JR ? void 0 : JR.running) !== RR) throw new Error("the core's session has ended");
-      const GR = await wR(JR.shell.audio).catch((RR => {
-        throw new yR(RR)
+    async function hr(rr) {
+      const Sr = ar;
+      if ((null === Sr || void 0 === Sr ? void 0 : Sr.running) !== rr) throw new Error("the core's session has ended");
+      const Qr = await mr(Sr.shell.audio).catch((rr => {
+        throw new Zr(rr)
       }));
-      if (null !== ZR) return ZR;
-      if (uR !== JR || RR.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (ZR = GR.startGameHost(RR, JR.shell), null === ZR) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return ZR
+      if (null !== jr) return jr;
+      if (ar !== Sr || rr.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (jr = Qr.startGameHost(rr, Sr.shell), null === jr) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return jr
     }
 
-    function nR() {
-      null !== ZR && (null !== iR ? iR.endGameHost(ZR) : ZR.closeGame()), ZR = null, uR = null
+    function zr() {
+      null !== jr && (null !== fr ? fr.endGameHost(jr) : jr.closeGame()), jr = null, ar = null
     }
   },
-  42237: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR
+  42565: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr
     });
-    const yR = {
+    const Zr = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -2386,136 +2386,136 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  42329: (RR, JR, GR) => {
-    GR.d(JR, {
-      A: () => qR,
-      b: () => fR,
-      e: () => uR,
-      f: () => ZR,
-      j: () => tR,
-      m: () => rR,
-      p: () => VR,
-      s: () => iR,
-      v: () => wR,
-      z: () => KR
+  42654: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      C: () => xr,
+      F: () => Ir,
+      e: () => Er,
+      g: () => ar,
+      k: () => jr,
+      o: () => Wr,
+      q: () => Nr,
+      s: () => pr,
+      v: () => fr,
+      y: () => mr
     });
-    var yR = GR(2007);
-    const tR = new Uint8Array([12]),
-      uR = 2e3,
-      ZR = 257;
+    var Zr = Qr(1956);
+    const Wr = new Uint8Array([12]),
+      ar = 2e3,
+      jr = 257;
 
-    function qR(RR) {
-      const JR = new Uint8Array(4);
-      return new DataView(JR.buffer).setUint32(0, RR, !0), JR
+    function Ir(rr) {
+      const Sr = new Uint8Array(4);
+      return new DataView(Sr.buffer).setUint32(0, rr, !0), Sr
     }
-    class iR extends Error {
+    class fr extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class fR extends Error {
-      constructor(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        super(RR), this.stage = JR, this.code = GR, this.serverText = yR, this.socketOpened = tR, this.name = "JoinError"
+    class Er extends Error {
+      constructor(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          Wr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        super(rr), this.stage = Sr, this.code = Qr, this.serverText = Zr, this.socketOpened = Wr, this.name = "JoinError"
       }
     }
-    class VR extends Error {
-      constructor(RR) {
-        super(RR), this.final = !0, this.name = "ResumeRefusedError"
+    class pr extends Error {
+      constructor(rr) {
+        super(rr), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class KR extends Error {
-      constructor(RR) {
-        super((0, yR.g)(RR), {
-          cause: RR
+    class xr extends Error {
+      constructor(rr) {
+        super((0, Zr.f)(rr), {
+          cause: rr
         }), this.name = "TrafficCheckError"
       }
     }
-    class wR extends Error {
-      constructor(RR, JR, GR) {
-        let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        super(RR, {
-          cause: GR
-        }), this.networkLost = JR, this.httpStatus = yR, this.name = "SeatRequestError"
+    class mr extends Error {
+      constructor(rr, Sr, Qr) {
+        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        super(rr, {
+          cause: Qr
+        }), this.networkLost = Sr, this.httpStatus = Zr, this.name = "SeatRequestError"
       }
     }
-    class rR extends Error {
-      constructor(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(RR), this.code = JR, this.serverText = GR, this.name = "MatchmakeError"
+    class Nr extends Error {
+      constructor(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(rr), this.code = Sr, this.serverText = Qr, this.name = "MatchmakeError"
       }
     }
   },
-  42331: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => rR,
-      c: () => wR,
-      g: () => eR
+  42663: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Nr,
+      f: () => mr,
+      j: () => Ur
     });
-    var yR = GR(3731),
-      tR = GR(2521),
-      uR = GR(40310),
-      ZR = GR(37640),
-      qR = GR(40317),
-      iR = GR(42329),
-      fR = GR(42335);
-    const VR = "seat reservation expired.",
-      KR = "early_leave";
+    var Zr = Qr(3677),
+      Wr = Qr(2472),
+      ar = Qr(40627),
+      jr = Qr(38018),
+      Ir = Qr(40632),
+      fr = Qr(42654),
+      Er = Qr(42670);
+    const pr = "seat reservation expired.",
+      xr = "early_leave";
 
-    function wR(RR) {
-      if (RR instanceof ZR.g) return "expected";
-      if (RR instanceof iR.v) return RR.networkLost ? "expected" : "unrecognised";
-      if (RR instanceof iR.b) {
-        if ("closed" === RR.stage && (0 === RR.code || (0, tR.f)(RR.code))) return "expected";
-        if ("roomError" === RR.stage && (RR.serverText === VR || RR.serverText === KR)) return "expected"
+    function mr(rr) {
+      if (rr instanceof jr.c) return "expected";
+      if (rr instanceof fr.y) return rr.networkLost ? "expected" : "unrecognised";
+      if (rr instanceof fr.e) {
+        if ("closed" === rr.stage && (0 === rr.code || (0, Wr.c)(rr.code))) return "expected";
+        if ("roomError" === rr.stage && (rr.serverText === pr || rr.serverText === xr)) return "expected"
       }
-      return RR instanceof iR.b || RR instanceof iR.m ? null === (0, qR.e)(RR.code).name ? "unrecognised" : "known" : (0, yR.e)(RR) ? "expected" : RR instanceof iR.z || RR instanceof fR.c ? "known" : "unrecognised"
+      return rr instanceof fr.e || rr instanceof fr.q ? null === (0, Ir.i)(rr.code).name ? "unrecognised" : "known" : (0, Zr.d)(rr) ? "expected" : rr instanceof fr.C || rr instanceof Er.c ? "known" : "unrecognised"
     }
 
-    function rR(RR) {
-      return RR instanceof ZR.g ? "timedOut" : "expected" !== wR(RR) || (0, yR.e)(RR) || RR instanceof iR.b && 1001 === RR.code ? void 0 : "failed"
+    function Nr(rr) {
+      return rr instanceof jr.c ? "timedOut" : "expected" !== mr(rr) || (0, Zr.d)(rr) || rr instanceof fr.e && 1001 === rr.code ? void 0 : "failed"
     }
 
-    function eR(RR) {
-      return RR instanceof iR.b && "attach" !== RR.stage ? (0, uR.c)(RR, "closed" !== RR.stage || RR.socketOpened ? "socket" : "socket_unopened") : RR instanceof iR.v ? {
+    function Ur(rr) {
+      return rr instanceof fr.e && "attach" !== rr.stage ? (0, ar.b)(rr, "closed" !== rr.stage || rr.socketOpened ? "socket" : "socket_unopened") : rr instanceof fr.y ? {
         at: "seat_lost",
-        code: RR.httpStatus
-      } : RR instanceof iR.m || RR instanceof ZR.g ? (0, uR.c)(RR, RR instanceof ZR.g ? RR.leg : "seat") : void 0
+        code: rr.httpStatus
+      } : rr instanceof fr.q || rr instanceof jr.c ? (0, ar.b)(rr, rr instanceof jr.c ? rr.leg : "seat") : void 0
     }
   },
-  42344: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => iR,
-      d: () => fR,
-      e: () => rR,
-      h: () => KR
+  42680: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => fr,
+      f: () => Er,
+      j: () => Nr,
+      n: () => xr
     });
-    var yR = GR(2457),
-      tR = GR(5676),
-      uR = GR(42352),
-      ZR = GR(42357),
-      qR = GR(37183);
-    const iR = 395,
-      fR = 2147483648,
-      VR = new Uint8Array(0);
-    class KR extends Error {
+    var Zr = Qr(2398),
+      Wr = Qr(5610),
+      ar = Qr(42684),
+      jr = Qr(42691),
+      Ir = Qr(37529);
+    const fr = 395,
+      Er = 2147483648,
+      pr = new Uint8Array(0);
+    class xr extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class wR extends Error {
+    class mr extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class rR {
-      constructor(RR, JR, GR) {
-        var yR, tR, ZR, qR;
-        let iR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = RR, this.build = JR, this.onFailure = GR, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.tK = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (yR = iR.fetchFile) && void 0 !== yR ? yR : RR => (0, uR.f)(RR), this.onWritten = null !== (tR = iR.onWritten) && void 0 !== tR ? tR : null, this.onTaken = null !== (ZR = iR.onTaken) && void 0 !== ZR ? ZR : null, this.onPackFileFailed = null !== (qR = iR.onPackFileFailed) && void 0 !== qR ? qR : null, this.startupLeft = new Set(RR.startup);
-        for (const uR of RR.startup) this.request(uR)
+    class Nr {
+      constructor(rr, Sr, Qr) {
+        var Zr, Wr, jr, Ir;
+        let fr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = rr, this.build = Sr, this.onFailure = Qr, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.sp = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Zr = fr.fetchFile) && void 0 !== Zr ? Zr : rr => (0, ar.j)(rr), this.onWritten = null !== (Wr = fr.onWritten) && void 0 !== Wr ? Wr : null, this.onTaken = null !== (jr = fr.onTaken) && void 0 !== jr ? jr : null, this.onPackFileFailed = null !== (Ir = fr.onPackFileFailed) && void 0 !== Ir ? Ir : null, this.startupLeft = new Set(rr.startup);
+        for (const ar of rr.startup) this.request(ar)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2535,693 +2535,693 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(RR) {
-        return this.drawn.get(RR)
+      drawnUrl(rr) {
+        return this.drawn.get(rr)
       }
-      request(RR) {
-        const JR = this.pending.get(RR);
-        if (!0 === (null === JR || void 0 === JR ? void 0 : JR.ask)) return;
-        const GR = this.UK(RR, !0);
-        GR.recheck = void 0 !== JR;
-        const yR = this.drawn.get(RR);
-        if (void 0 !== yR) return GR.Qq = !0, GR.recheck = !0, void this.fetch(RR, GR, yR);
-        this.fetchWanted(RR, GR)
+      request(rr) {
+        const Sr = this.pending.get(rr);
+        if (!0 === (null === Sr || void 0 === Sr ? void 0 : Sr.ask)) return;
+        const Qr = this.Yx(rr, !0);
+        Qr.recheck = void 0 !== Sr;
+        const Zr = this.drawn.get(rr);
+        if (void 0 !== Zr) return Qr.wI = !0, Qr.recheck = !0, void this.fetch(rr, Qr, Zr);
+        this.fetchWanted(rr, Qr)
       }
       async refresh() {
-        const RR = ++this.refreshes,
-          JR = new Set;
-        for (const ZR of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const RR of ZR) 0 === (RR & uR.d) && JR.add(RR);
-        const GR = [...JR];
-        let yR;
+        const rr = ++this.refreshes,
+          Sr = new Set;
+        for (const jr of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const rr of jr) 0 === (rr & ar.g) && Sr.add(rr);
+        const Qr = [...Sr];
+        let Zr;
         try {
-          yR = await Promise.all(GR.map((RR => this.wanted(RR))))
+          Zr = await Promise.all(Qr.map((rr => this.wanted(rr))))
         } catch {
           return null
         }
-        if (RR !== this.refreshes) return null;
-        const tR = {
+        if (rr !== this.refreshes) return null;
+        const Wr = {
           resent: 0,
           refetched: 0,
-          delivered: GR.filter((RR => this.drawn.has(RR))).length
+          delivered: Qr.filter((rr => this.drawn.has(rr))).length
         };
-        return GR.forEach(((RR, JR) => {
+        return Qr.forEach(((rr, Sr) => {
           const {
-            url: GR,
-            inPlaceOf: uR
-          } = yR[JR], ZR = this.pending.get(RR);
-          if (void 0 !== ZR) {
-            if (ZR.Qq || void 0 === ZR.url) return void(ZR.recheck = !0);
-            if (ZR.url === GR) return;
-            tR.refetched++;
-            const JR = this.UK(RR, ZR.ask);
-            return JR.recheck = ZR.recheck, void this.fetch(RR, JR, GR, uR)
+            url: Qr,
+            inPlaceOf: ar
+          } = Zr[Sr], jr = this.pending.get(rr);
+          if (void 0 !== jr) {
+            if (jr.wI || void 0 === jr.url) return void(jr.recheck = !0);
+            if (jr.url === Qr) return;
+            Wr.refetched++;
+            const Sr = this.Yx(rr, jr.ask);
+            return Sr.recheck = jr.recheck, void this.fetch(rr, Sr, Qr, ar)
           }
-          const qR = this.written.get(RR);
-          void 0 === qR ? this.drawn.get(RR) !== (null !== GR && void 0 !== GR ? GR : void 0) && (tR.resent++, this.fetch(RR, this.UK(RR, !1), GR, uR)) : qR.url !== (null !== GR && void 0 !== GR ? GR : "") && (qR.attempt.recheck = !0)
-        })), tR
+          const Ir = this.written.get(rr);
+          void 0 === Ir ? this.drawn.get(rr) !== (null !== Qr && void 0 !== Qr ? Qr : void 0) && (Wr.resent++, this.fetch(rr, this.Yx(rr, !1), Qr, ar)) : Ir.url !== (null !== Qr && void 0 !== Qr ? Qr : "") && (Ir.attempt.recheck = !0)
+        })), Wr
       }
-      taken(RR, JR) {
-        const GR = new Set,
-          yR = new Set;
-        for (const tR of Array.from(JR)) 0 === (tR & fR) ? GR.add(tR) : yR.add((tR & ~fR) >>> 0);
-        for (const [tR, uR] of this.written) uR.seq > RR || (this.written.delete(tR), GR.has(uR.seq) ? this.refusedFile(tR, uR) : this.takenFile(tR, uR, !uR.empty && !yR.has(uR.seq)))
+      taken(rr, Sr) {
+        const Qr = new Set,
+          Zr = new Set;
+        for (const Wr of Array.from(Sr)) 0 === (Wr & Er) ? Qr.add(Wr) : Zr.add((Wr & ~Er) >>> 0);
+        for (const [Wr, ar] of this.written) ar.seq > rr || (this.written.delete(Wr), Qr.has(ar.seq) ? this.refusedFile(Wr, ar) : this.takenFile(Wr, ar, !ar.empty && !Zr.has(ar.seq)))
       }
-      takenFile(RR, JR, GR) {
+      takenFile(rr, Sr, Qr) {
         const {
-          attempt: yR
-        } = JR;
-        if (GR) {
-          var tR;
-          this.drawn.set(RR, JR.url), this.undrawn.delete(RR), void 0 !== yR.inPlaceOf ? this.refusedPack.set(RR, yR.inPlaceOf) : yR.Qq || this.refusedPack.delete(RR), null === (tR = this.onTaken) || void 0 === tR || tR.call(this, RR, !0);
-          const GR = this.pending.get(RR);
-          if (!0 === (null === GR || void 0 === GR ? void 0 : GR.Qq) && GR.url !== JR.url) {
-            const GR = this.UK(RR, !0);
-            GR.Qq = !0, GR.recheck = !0, this.fetch(RR, GR, JR.url)
+          attempt: Zr
+        } = Sr;
+        if (Qr) {
+          var Wr;
+          this.drawn.set(rr, Sr.url), this.undrawn.delete(rr), void 0 !== Zr.inPlaceOf ? this.refusedPack.set(rr, Zr.inPlaceOf) : Zr.wI || this.refusedPack.delete(rr), null === (Wr = this.onTaken) || void 0 === Wr || Wr.call(this, rr, !0);
+          const Qr = this.pending.get(rr);
+          if (!0 === (null === Qr || void 0 === Qr ? void 0 : Qr.wI) && Qr.url !== Sr.url) {
+            const Qr = this.Yx(rr, !0);
+            Qr.wI = !0, Qr.recheck = !0, this.fetch(rr, Qr, Sr.url)
           }
         } else {
-          var uR;
-          this.drawn.has(RR) || this.undrawn.add(RR), null === (uR = this.onTaken) || void 0 === uR || uR.call(this, RR, !1)
+          var ar;
+          this.drawn.has(rr) || this.undrawn.add(rr), null === (ar = this.onTaken) || void 0 === ar || ar.call(this, rr, !1)
         }
-        yR.recheck && this.resendIfChanged(RR)
+        Zr.recheck && this.resendIfChanged(rr)
       }
-      refusedFile(RR, JR) {
-        var GR, yR;
-        if (null === (GR = this.onTaken) || void 0 === GR || GR.call(this, RR, !1), this.refusedPack.set(RR, JR.url), this.pending.has(RR)) return void(null === (yR = this.onPackFileFailed) || void 0 === yR || yR.call(this, RR, eR(JR.url)));
-        const tR = this.UK(RR, JR.attempt.ask);
-        tR.recheck = JR.attempt.recheck, this.afterRefusal(RR, tR, JR.url)
+      refusedFile(rr, Sr) {
+        var Qr, Zr;
+        if (null === (Qr = this.onTaken) || void 0 === Qr || Qr.call(this, rr, !1), this.refusedPack.set(rr, Sr.url), this.pending.has(rr)) return void(null === (Zr = this.onPackFileFailed) || void 0 === Zr || Zr.call(this, rr, Ur(Sr.url)));
+        const Wr = this.Yx(rr, Sr.attempt.ask);
+        Wr.recheck = Sr.attempt.recheck, this.afterRefusal(rr, Wr, Sr.url)
       }
-      async afterRefusal(RR, JR, GR) {
-        var yR;
-        let tR;
+      async afterRefusal(rr, Sr, Qr) {
+        var Zr;
+        let Wr;
         try {
-          tR = await this.wanted(RR)
-        } catch (uR) {
-          return void(this.pending.get(RR) === JR && this.giveUp(RR, JR, GR, uR))
+          Wr = await this.wanted(rr)
+        } catch (ar) {
+          return void(this.pending.get(rr) === Sr && this.giveUp(rr, Sr, Qr, ar))
         }
-        this.pending.get(RR) === JR && (tR.inPlaceOf !== GR ? JR.ask || (null !== (yR = tR.url) && void 0 !== yR ? yR : void 0) !== this.drawn.get(RR) ? this.fetch(RR, JR, tR.url, tR.inPlaceOf) : this.pending.delete(RR) : this.fallBack(RR, JR, GR, eR(GR)))
+        this.pending.get(rr) === Sr && (Wr.inPlaceOf !== Qr ? Sr.ask || (null !== (Zr = Wr.url) && void 0 !== Zr ? Zr : void 0) !== this.drawn.get(rr) ? this.fetch(rr, Sr, Wr.url, Wr.inPlaceOf) : this.pending.delete(rr) : this.fallBack(rr, Sr, Qr, Ur(Qr)))
       }
-      UK(RR, JR) {
-        const GR = {
+      Yx(rr, Sr) {
+        const Qr = {
           url: void 0,
-          ask: JR,
-          Qq: !1,
+          ask: Sr,
+          wI: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(RR, GR);
-        for (let yR = this.ready.length - 1; yR >= 0; yR--) this.ready[yR].file === RR && this.ready.splice(yR, 1);
-        return GR
+        this.pending.set(rr, Qr);
+        for (let Zr = this.ready.length - 1; Zr >= 0; Zr--) this.ready[Zr].file === rr && this.ready.splice(Zr, 1);
+        return Qr
       }
-      async wanted(RR) {
-        const JR = await this.files.url(RR);
-        return null !== JR && this.refusedPack.get(RR) === JR ? {
-          url: await this.files.shippedUrl(RR),
-          inPlaceOf: JR
+      async wanted(rr) {
+        const Sr = await this.files.url(rr);
+        return null !== Sr && this.refusedPack.get(rr) === Sr ? {
+          url: await this.files.shippedUrl(rr),
+          inPlaceOf: Sr
         } : {
-          url: JR,
+          url: Sr,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(RR, JR) {
-        const GR = this.files.url(RR);
-        GR instanceof Promise ? GR.then((GR => {
-          this.fetchFound(RR, JR, GR)
-        }), (GR => {
-          this.pending.get(RR) === JR && this.giveUp(RR, JR, "", GR)
-        })) : this.fetchFound(RR, JR, GR)
+      fetchWanted(rr, Sr) {
+        const Qr = this.files.url(rr);
+        Qr instanceof Promise ? Qr.then((Qr => {
+          this.fetchFound(rr, Sr, Qr)
+        }), (Qr => {
+          this.pending.get(rr) === Sr && this.giveUp(rr, Sr, "", Qr)
+        })) : this.fetchFound(rr, Sr, Qr)
       }
-      fetchFound(RR, JR, GR) {
-        null !== GR && this.refusedPack.get(RR) === GR ? Promise.resolve(this.files.shippedUrl(RR)).then((yR => {
-          this.fetch(RR, JR, yR, GR)
-        }), (yR => {
-          this.pending.get(RR) === JR && this.giveUp(RR, JR, GR, yR)
-        })) : this.fetch(RR, JR, GR)
+      fetchFound(rr, Sr, Qr) {
+        null !== Qr && this.refusedPack.get(rr) === Qr ? Promise.resolve(this.files.shippedUrl(rr)).then((Zr => {
+          this.fetch(rr, Sr, Zr, Qr)
+        }), (Zr => {
+          this.pending.get(rr) === Sr && this.giveUp(rr, Sr, Qr, Zr)
+        })) : this.fetch(rr, Sr, Qr)
       }
-      fetch(RR, JR, GR, yR) {
-        this.pending.get(RR) === JR && (JR.url = GR, JR.inPlaceOf = yR, null !== GR ? this.load(RR, JR, GR) : this.buildFile(RR, JR, "", VR))
+      fetch(rr, Sr, Qr, Zr) {
+        this.pending.get(rr) === Sr && (Sr.url = Qr, Sr.inPlaceOf = Zr, null !== Qr ? this.load(rr, Sr, Qr) : this.buildFile(rr, Sr, "", pr))
       }
-      load(RR, JR, GR) {
-        const yR = this.tK.get(RR);
-        (null === yR || void 0 === yR ? void 0 : yR.url) !== GR ? this.fetchFile(GR).then((yR => {
-          var tR, uR;
-          this.pending.get(RR) === JR && (this.keptTotal += yR.byteLength - (null !== (tR = null === (uR = this.tK.get(RR)) || void 0 === uR ? void 0 : uR.glb.byteLength) && void 0 !== tR ? tR : 0), this.tK.set(RR, {
-            url: GR,
-            glb: yR
-          }), this.buildFile(RR, JR, GR, yR))
-        }), (yR => {
-          this.pending.get(RR) === JR && this.fallBack(RR, JR, GR, yR)
-        })) : this.buildFile(RR, JR, GR, yR.glb)
+      load(rr, Sr, Qr) {
+        const Zr = this.sp.get(rr);
+        (null === Zr || void 0 === Zr ? void 0 : Zr.url) !== Qr ? this.fetchFile(Qr).then((Zr => {
+          var Wr, ar;
+          this.pending.get(rr) === Sr && (this.keptTotal += Zr.byteLength - (null !== (Wr = null === (ar = this.sp.get(rr)) || void 0 === ar ? void 0 : ar.glb.byteLength) && void 0 !== Wr ? Wr : 0), this.sp.set(rr, {
+            url: Qr,
+            glb: Zr
+          }), this.buildFile(rr, Sr, Qr, Zr))
+        }), (Zr => {
+          this.pending.get(rr) === Sr && this.fallBack(rr, Sr, Qr, Zr)
+        })) : this.buildFile(rr, Sr, Qr, Zr.glb)
       }
-      buildFile(RR, JR, GR, yR) {
-        let tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const ZR = yR.byteLength > 0 && (0, uR.h)(GR) ? (RR | uR.b) >>> 0 : RR;
-        this.queueRecord(RR, JR, GR, yR, this.build(ZR, yR), tR)
+      buildFile(rr, Sr, Qr, Zr) {
+        let Wr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const jr = Zr.byteLength > 0 && (0, ar.m)(Qr) ? (rr | ar.d) >>> 0 : rr;
+        this.queueRecord(rr, Sr, Qr, Zr, this.build(jr, Zr), Wr)
       }
-      queueRecord(RR, JR, GR, yR, uR, qR) {
-        uR.then((uR => {
-          if (this.pending.get(RR) !== JR) return;
-          if (tR.w + (0, tR.ve)(uR.byteLength) > tR.Nc) return void this.ringRefused(RR, JR, GR, new KR(`${aR(GR)}'s record is ${uR.byteLength-ZR.e} bytes, past the cmd ring's ${tR.Nc}`), qR);
-          const iR = {
-            file: RR,
-            url: GR,
-            payload: uR,
-            glb: yR,
-            attempt: JR
+      queueRecord(rr, Sr, Qr, Zr, ar, Ir) {
+        ar.then((ar => {
+          if (this.pending.get(rr) !== Sr) return;
+          if (Wr.t + (0, Wr.Ke)(ar.byteLength) > Wr.Pc) return void this.ringRefused(rr, Sr, Qr, new xr(`${tr(Qr)}'s record is ${ar.byteLength-jr.c} bytes, past the cmd ring's ${Wr.Pc}`), Ir);
+          const fr = {
+            file: rr,
+            url: Qr,
+            payload: ar,
+            glb: Zr,
+            attempt: Sr
           };
-          qR ? this.ready.unshift(iR) : this.ready.push(iR)
+          Ir ? this.ready.unshift(fr) : this.ready.push(fr)
         }))
       }
-      async fallBack(RR, JR, GR, yR) {
-        var tR;
-        let uR = null,
-          ZR = yR;
+      async fallBack(rr, Sr, Qr, Zr) {
+        var Wr;
+        let ar = null,
+          jr = Zr;
         try {
-          uR = await this.files.shippedUrl(RR)
-        } catch (qR) {
-          ZR = qR
+          ar = await this.files.shippedUrl(rr)
+        } catch (Ir) {
+          jr = Ir
         }
-        this.pending.get(RR) === JR && (null !== uR && uR !== GR ? (null === (tR = this.onPackFileFailed) || void 0 === tR || tR.call(this, RR, yR), JR.ask || this.drawn.get(RR) !== uR ? (JR.url = uR, JR.inPlaceOf = GR, this.load(RR, JR, uR)) : this.pending.delete(RR)) : this.giveUp(RR, JR, GR, ZR))
+        this.pending.get(rr) === Sr && (null !== ar && ar !== Qr ? (null === (Wr = this.onPackFileFailed) || void 0 === Wr || Wr.call(this, rr, Zr), Sr.ask || this.drawn.get(rr) !== ar ? (Sr.url = ar, Sr.inPlaceOf = Qr, this.load(rr, Sr, ar)) : this.pending.delete(rr)) : this.giveUp(rr, Sr, Qr, jr))
       }
-      ringRefused(RR, JR, GR, yR) {
-        let tR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, uR.h)(GR) ? this.fallBack(RR, JR, GR, yR): this.giveUp(RR, JR, GR, yR, tR)
+      ringRefused(rr, Sr, Qr, Zr) {
+        let Wr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, ar.m)(Qr) ? this.fallBack(rr, Sr, Qr, Zr): this.giveUp(rr, Sr, Qr, Zr, Wr)
       }
-      giveUp(RR, JR, GR, tR) {
-        let uR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(rr, Sr, Qr, Wr) {
+        let ar = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: RR,
-          url: aR(GR),
-          error: tR,
-          startup: this.startupLeft.has(RR)
-        }), JR.ask || !this.drawn.has(RR) ? (0, yR.L)(tR) ? this.queueRecord(RR, JR, GR, VR, Promise.resolve((0, ZR.m)(RR, (0, qR.k)(tR))), uR) : this.buildFile(RR, JR, GR, VR, uR) : this.pending.delete(RR)
+          file: rr,
+          url: tr(Qr),
+          error: Wr,
+          startup: this.startupLeft.has(rr)
+        }), Sr.ask || !this.drawn.has(rr) ? (0, Zr.S)(Wr) ? this.queueRecord(rr, Sr, Qr, pr, Promise.resolve((0, jr.l)(rr, (0, Ir.l)(Wr))), ar) : this.buildFile(rr, Sr, Qr, pr, ar) : this.pending.delete(rr)
       }
-      async resendIfChanged(RR) {
-        var JR;
-        if (0 !== (RR & uR.d)) return;
-        let GR;
+      async resendIfChanged(rr) {
+        var Sr;
+        if (0 !== (rr & ar.g)) return;
+        let Qr;
         try {
-          GR = await this.wanted(RR)
+          Qr = await this.wanted(rr)
         } catch {
           return
-        }(null !== (JR = GR.url) && void 0 !== JR ? JR : void 0) === this.drawn.get(RR) || this.pending.has(RR) || this.written.has(RR) || this.fetch(RR, this.UK(RR, !1), GR.url, GR.inPlaceOf)
+        }(null !== (Sr = Qr.url) && void 0 !== Sr ? Sr : void 0) === this.drawn.get(rr) || this.pending.has(rr) || this.written.has(rr) || this.fetch(rr, this.Yx(rr, !1), Qr.url, Qr.inPlaceOf)
       }
-      drain(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === RR) return;
-        let GR = 0,
-          yR = 0;
-        for (; yR < this.ready.length && GR < 262144;) {
-          const qR = this.ready[yR];
-          if (this.written.has(qR.file)) {
-            yR++;
+      drain(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === rr) return;
+        let Qr = 0,
+          Zr = 0;
+        for (; Zr < this.ready.length && Qr < 262144;) {
+          const Ir = this.ready[Zr];
+          if (this.written.has(Ir.file)) {
+            Zr++;
             continue
           }
-          const VR = this.nextSeq;
-          new DataView(qR.payload.buffer, qR.payload.byteOffset, qR.payload.byteLength).setUint32(ZR.h, VR, !0);
-          const wR = qR.attempt.Qq && qR.glb.byteLength > 0 && this.drawn.get(qR.file) === qR.url;
-          if (RR(iR, wR ? 1 : 0, qR.payload)) {
-            if (this.nextSeq = VR >= fR - 1 ? 1 : VR + 1, this.ready.splice(yR, 1), GR += qR.payload.byteLength, this.pending.delete(qR.file), this.startupLeft.delete(qR.file), this.written.set(qR.file, {
-                seq: VR,
-                url: qR.url,
-                empty: 0 === qR.glb.byteLength,
-                attempt: qR.attempt
-              }), qR.glb.byteLength > 0) try {
-              var tR;
-              null === (tR = this.onWritten) || void 0 === tR || tR.call(this, qR.file, qR.glb)
-            } catch (uR) {
-              console.warn("ModelFeed: reading the file's images failed", uR)
+          const pr = this.nextSeq;
+          new DataView(Ir.payload.buffer, Ir.payload.byteOffset, Ir.payload.byteLength).setUint32(jr.f, pr, !0);
+          const mr = Ir.attempt.wI && Ir.glb.byteLength > 0 && this.drawn.get(Ir.file) === Ir.url;
+          if (rr(fr, mr ? 1 : 0, Ir.payload)) {
+            if (this.nextSeq = pr >= Er - 1 ? 1 : pr + 1, this.ready.splice(Zr, 1), Qr += Ir.payload.byteLength, this.pending.delete(Ir.file), this.startupLeft.delete(Ir.file), this.written.set(Ir.file, {
+                seq: pr,
+                url: Ir.url,
+                empty: 0 === Ir.glb.byteLength,
+                attempt: Ir.attempt
+              }), Ir.glb.byteLength > 0) try {
+              var Wr;
+              null === (Wr = this.onWritten) || void 0 === Wr || Wr.call(this, Ir.file, Ir.glb)
+            } catch (ar) {
+              console.warn("ModelFeed: reading the file's images failed", ar)
             }
           } else {
-            if (null === JR || 0 === qR.glb.byteLength || JR(qR.payload.byteLength)) return;
-            this.ready.splice(yR, 1);
-            const RR = new KR(`${aR(qR.url)}'s record is ${qR.payload.byteLength-ZR.e} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(qR.file, qR.attempt, qR.url, RR, !0)
+            if (null === Sr || 0 === Ir.glb.byteLength || Sr(Ir.payload.byteLength)) return;
+            this.ready.splice(Zr, 1);
+            const rr = new xr(`${tr(Ir.url)}'s record is ${Ir.payload.byteLength-jr.c} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(Ir.file, Ir.attempt, Ir.url, rr, !0)
           }
         }
       }
     }
 
-    function eR(RR) {
-      return new wR(`presentation refused ${aR(RR)}`)
+    function Ur(rr) {
+      return new mr(`presentation refused ${tr(rr)}`)
     }
 
-    function aR(RR) {
-      return RR.startsWith("data:") ? `${RR.slice(0,Math.min(Math.max(RR.indexOf(","),5),64))},...` : RR
+    function tr(rr) {
+      return rr.startsWith("data:") ? `${rr.slice(0,Math.min(Math.max(rr.indexOf(","),5),64))},...` : rr
     }
   },
-  42352: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR,
-      d: () => uR,
-      f: () => VR,
-      h: () => qR,
-      j: () => fR,
-      m: () => iR
+  42684: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr,
+      g: () => ar,
+      j: () => pr,
+      m: () => Ir,
+      o: () => Er,
+      r: () => fr
     });
-    var yR = GR(2457),
-      tR = GR(4479);
-    const uR = 2147483648,
-      ZR = 1073741824;
+    var Zr = Qr(2398),
+      Wr = Qr(4413);
+    const ar = 2147483648,
+      jr = 1073741824;
 
-    function qR(RR) {
-      return RR.startsWith("data:")
+    function Ir(rr) {
+      return rr.startsWith("data:")
     }
 
-    function iR(RR) {
+    function fr(rr) {
       let {
-        onTableFailed: JR,
-        packUrl: GR
+        onTableFailed: Sr,
+        packUrl: Qr
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const yR = fR();
-      yR.catch((RR => {
-        null === JR || void 0 === JR || JR(RR)
+      const Zr = Er();
+      Zr.catch((rr => {
+        null === Sr || void 0 === Sr || Sr(rr)
       }));
-      const tR = async JR => (await yR).fileUrl((JR & ~uR) >>> 0, RR);
+      const Wr = async Sr => (await Zr).fileUrl((Sr & ~ar) >>> 0, rr);
       return {
         startup: [],
-        url: async RR => {
-          if (GR && 0 === (RR & uR)) {
-            const JR = await yR,
-              tR = JR.filePackName(RR),
-              uR = null === tR || "lifeform" === JR.fileSource(RR) ? null : GR(tR);
-            if (null !== uR) return uR
+        url: async rr => {
+          if (Qr && 0 === (rr & ar)) {
+            const Sr = await Zr,
+              Wr = Sr.filePackName(rr),
+              ar = null === Wr || "lifeform" === Sr.fileSource(rr) ? null : Qr(Wr);
+            if (null !== ar) return ar
           }
-          return tR(RR)
+          return Wr(rr)
         },
-        shippedUrl: tR
+        shippedUrl: Wr
       }
     }
 
-    function fR() {
-      return GR.e(50).then((() => GR(45021)))
+    function Er() {
+      return Qr.e(50).then((() => Qr(45329)))
     }
-    async function VR(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return RR.startsWith("data:") ? (0, tR.c)(RR.slice(RR.indexOf(",") + 1), JR) : (0, yR.B)(RR, {
-        spare: JR
+    async function pr(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return rr.startsWith("data:") ? (0, Wr.e)(rr.slice(rr.indexOf(",") + 1), Sr) : (0, Zr.K)(rr, {
+        spare: Sr
       })
     }
   },
-  42357: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => iR,
-      h: () => fR,
-      k: () => eR,
-      m: () => wR,
-      q: () => KR,
-      t: () => rR
+  42691: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => fr,
+      f: () => Er,
+      j: () => Ur,
+      l: () => mr,
+      o: () => xr,
+      r: () => Nr
     });
-    const yR = 826427981,
-      tR = 1,
-      uR = 2,
-      ZR = 44,
-      qR = 58,
-      iR = 8,
-      fR = 4;
+    const Zr = 826427981,
+      Wr = 1,
+      ar = 2,
+      jr = 44,
+      Ir = 58,
+      fr = 8,
+      Er = 4;
 
-    function VR(RR, JR, GR) {
-      const tR = (new TextEncoder).encode(GR),
-        uR = iR + 4 * (JR.length + 2),
-        ZR = new Uint8Array(uR + (tR.byteLength + 3 & -4)),
-        qR = new DataView(ZR.buffer);
-      return qR.setUint32(0, RR, !0), qR.setUint32(iR, yR, !0), JR.forEach(((RR, JR) => {
-        qR.setUint32(iR + 4 * (JR + 1), RR, !0)
-      })), qR.setUint32(uR - 4, tR.byteLength, !0), ZR.set(tR, uR), ZR
+    function pr(rr, Sr, Qr) {
+      const Wr = (new TextEncoder).encode(Qr),
+        ar = fr + 4 * (Sr.length + 2),
+        jr = new Uint8Array(ar + (Wr.byteLength + 3 & -4)),
+        Ir = new DataView(jr.buffer);
+      return Ir.setUint32(0, rr, !0), Ir.setUint32(fr, Zr, !0), Sr.forEach(((rr, Sr) => {
+        Ir.setUint32(fr + 4 * (Sr + 1), rr, !0)
+      })), Ir.setUint32(ar - 4, Wr.byteLength, !0), jr.set(Wr, ar), jr
     }
 
-    function KR(RR, JR) {
-      return VR(RR, [uR], JR)
+    function xr(rr, Sr) {
+      return pr(rr, [ar], Sr)
     }
 
-    function wR(RR, JR) {
-      return VR(RR, [tR, qR], JR)
+    function mr(rr, Sr) {
+      return pr(rr, [Wr, Ir], Sr)
     }
 
-    function rR(RR, JR) {
-      return VR(RR, [tR, ZR], JR)
+    function Nr(rr, Sr) {
+      return pr(rr, [Wr, jr], Sr)
     }
 
-    function eR(RR) {
-      const JR = iR;
-      if (RR.byteLength < JR + 12) return !1;
-      const GR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength);
-      return GR.getUint32(JR, !0) === yR && GR.getUint32(JR + 4, !0) === tR && GR.getUint32(JR + 8, !0) === ZR
+    function Ur(rr) {
+      const Sr = fr;
+      if (rr.byteLength < Sr + 12) return !1;
+      const Qr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
+      return Qr.getUint32(Sr, !0) === Zr && Qr.getUint32(Sr + 4, !0) === Wr && Qr.getUint32(Sr + 8, !0) === jr
     }
   },
-  42239: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR,
-      f: () => VR,
-      j: () => ZR,
-      n: () => iR
+  42574: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr,
+      f: () => pr,
+      h: () => jr,
+      l: () => fr
     });
-    var yR = GR(37183);
-    class tR extends Error {
-      constructor(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${RR}: the module trapped${GR?" in an earlier call":""}: ${String(JR)}`, {
-          cause: JR
-        }), this.site = RR, this.trap = JR, this.earlier = GR, this.name = "ModuleTrapError", JR instanceof Error && void 0 !== JR.stack && (this.stack = `${this.name}: ${this.message}\n${JR.stack}`)
+    var Zr = Qr(37529);
+    class Wr extends Error {
+      constructor(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${rr}: the module trapped${Qr?" in an earlier call":""}: ${String(Sr)}`, {
+          cause: Sr
+        }), this.site = rr, this.trap = Sr, this.earlier = Qr, this.name = "ModuleTrapError", Sr instanceof Error && void 0 !== Sr.stack && (this.stack = `${this.name}: ${this.message}\n${Sr.stack}`)
       }
     }
-    const uR = new WeakMap;
+    const ar = new WeakMap;
 
-    function ZR(RR) {
-      return uR.has(RR)
+    function jr(rr) {
+      return ar.has(rr)
     }
 
-    function qR(RR, JR) {
-      uR.has(RR) || uR.set(RR, JR)
+    function Ir(rr, Sr) {
+      ar.has(rr) || ar.set(rr, Sr)
     }
 
-    function iR(RR, JR) {
-      return !!(0, yR.i)(JR) && (qR(RR, JR), !0)
+    function fr(rr, Sr) {
+      return !!(0, Zr.k)(Sr) && (Ir(rr, Sr), !0)
     }
-    const fR = [
-      ["error", RR => RR.error],
-      ["unhandledrejection", RR => RR.reason]
+    const Er = [
+      ["error", rr => rr.error],
+      ["unhandledrejection", rr => rr.reason]
     ];
 
-    function VR(RR, JR, GR) {
-      let ZR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return uR.has(RR) ? Promise.reject(new tR(JR, uR.get(RR), !0)) : new Promise(((uR, iR) => {
-        const VR = GR => {
-            qR(RR, GR), rR(), iR(new tR(JR, GR))
+    function pr(rr, Sr, Qr) {
+      let jr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return ar.has(rr) ? Promise.reject(new Wr(Sr, ar.get(rr), !0)) : new Promise(((ar, fr) => {
+        const pr = Qr => {
+            Ir(rr, Qr), Nr(), fr(new Wr(Sr, Qr))
           },
-          KR = RR => {
-            RR instanceof WebAssembly.RuntimeError ? VR(RR) : (rR(), iR(RR))
+          xr = rr => {
+            rr instanceof WebAssembly.RuntimeError ? pr(rr) : (Nr(), fr(rr))
           },
-          wR = fR.map((RR => {
-            let [JR, GR] = RR;
-            return [JR, RR => {
-              const JR = GR(RR);
-              (0, yR.i)(JR) && VR(JR)
+          mr = Er.map((rr => {
+            let [Sr, Qr] = rr;
+            return [Sr, rr => {
+              const Sr = Qr(rr);
+              (0, Zr.k)(Sr) && pr(Sr)
             }]
           })),
-          rR = () => {
-            for (const [RR, JR] of wR) null === ZR || void 0 === ZR || ZR.removeEventListener(RR, JR)
+          Nr = () => {
+            for (const [rr, Sr] of mr) null === jr || void 0 === jr || jr.removeEventListener(rr, Sr)
           };
-        for (const [RR, JR] of wR) null === ZR || void 0 === ZR || ZR.addEventListener(RR, JR);
-        let eR;
+        for (const [rr, Sr] of mr) null === jr || void 0 === jr || jr.addEventListener(rr, Sr);
+        let Ur;
         try {
-          eR = GR()
-        } catch (aR) {
-          return void KR(aR)
+          Ur = Qr()
+        } catch (tr) {
+          return void xr(tr)
         }
-        eR.then((RR => {
-          rR(), uR(RR)
-        }), KR)
+        Ur.then((rr => {
+          Nr(), ar(rr)
+        }), xr)
       }))
     }
   },
-  42281: (RR, JR, GR) => {
-    GR.d(JR, {
-      A: () => OR,
-      D: () => NR,
-      H: () => kR,
-      J: () => YR,
-      M: () => cR,
-      O: () => bR,
-      Q: () => HR,
-      S: () => QR,
-      W: () => oR,
-      _: () => SR,
-      bb: () => IR,
-      c: () => gR,
-      db: () => DR,
-      fb: () => FR,
-      g: () => BR,
-      j: () => zR,
-      n: () => PR,
-      r: () => MR,
-      t: () => pR,
-      x: () => CR
+  42598: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      B: () => lr,
+      D: () => gr,
+      F: () => Jr,
+      H: () => Cr,
+      I: () => ir,
+      L: () => kr,
+      M: () => Rr,
+      P: () => Dr,
+      d: () => Lr,
+      e: () => Tr,
+      f: () => Vr,
+      g: () => Gr,
+      j: () => Br,
+      l: () => Or,
+      o: () => Kr,
+      p: () => Pr,
+      s: () => qr,
+      t: () => br,
+      w: () => or,
+      z: () => Mr
     });
-    var yR = GR(216),
-      tR = GR(25),
-      uR = GR(4913),
-      ZR = GR(132),
-      qR = GR(350),
-      iR = GR(46),
-      fR = GR(327),
-      VR = GR(42230),
-      KR = GR(42247),
-      wR = GR(37622),
-      rR = GR(42283),
-      eR = (GR(42265), GR(42374)),
-      aR = GR(42306),
-      LR = GR(42255);
-    const nR = "wasmJoinBuild";
-    let UR = null,
-      WR = null,
-      AR = null;
+    var Zr = Qr(215),
+      Wr = Qr(26),
+      ar = Qr(4820),
+      jr = Qr(135),
+      Ir = Qr(351),
+      fr = Qr(43),
+      Er = Qr(335),
+      pr = Qr(42559),
+      xr = Qr(42579),
+      mr = Qr(38006),
+      Nr = Qr(42603),
+      Ur = (Qr(42589), Qr(42707)),
+      tr = Qr(42619),
+      hr = Qr(42581);
+    const zr = "wasmJoinBuild";
+    let Yr = null,
+      nr = null,
+      er = null;
 
-    function CR(RR) {
-      AR = RR
+    function Kr(rr) {
+      er = rr
     }
-    let XR = !1;
+    let yr = !1;
 
-    function MR() {
-      XR = !0
-    }
-
-    function BR() {
-      return XR
-    }
-    let lR = !1;
-
-    function pR() {
-      lR = !0
+    function Br() {
+      yr = !0
     }
 
-    function gR() {
-      return lR
+    function Tr() {
+      return yr
+    }
+    let vr = !1;
+
+    function Or() {
+      vr = !0
     }
 
-    function bR() {
-      return AR
-    }
-    let vR = null;
-
-    function OR(RR) {
-      vR = RR, (0, qR.b)(RR)
-    }
-    const xR = "wasmClientRenderLost";
-
-    function NR() {
-      iR.k.setItem(xR, !0)
+    function Lr() {
+      return vr
     }
 
-    function DR() {
-      return !0 === iR.k.getItem(xR)
+    function lr() {
+      return er
+    }
+    let Xr = null;
+
+    function Pr(rr) {
+      Xr = rr, (0, Ir.e)(rr)
+    }
+    const Hr = "wasmClientRenderLost";
+
+    function qr() {
+      fr.n.setItem(Hr, !0)
     }
 
-    function HR() {
-      return vR
+    function Rr() {
+      return !0 === fr.n.getItem(Hr)
     }
 
-    function oR() {
-      if (null === UR) {
-        iR.i.removeItem("wasmLastPick"), iR.i.removeItem("wasmGuessVerdict");
+    function gr() {
+      return Xr
+    }
+
+    function Cr() {
+      if (null === Yr) {
+        fr.j.removeItem("wasmLastPick"), fr.j.removeItem("wasmGuessVerdict");
         try {
           localStorage.removeItem("wasmClientMisdrawnGpu"), localStorage.removeItem("wasmClientGameGpu")
-        } catch {}(0, qR.g)(), UR = (0, fR.k)().then((() => (0, VR.A)(rR.e))).then((RR => (null === RR || (0, VR.o)(RR) || (WR = eR.d[RR.backend], tR.d.followGameGpu("webgpu" === RR.backend ? RR.adapter : null), "webgpu" === RR.backend && (0, aR.g)()), RR)))
+        } catch {}(0, Ir.k)(), Yr = (0, Er.p)().then((() => (0, pr.F)(Nr.h))).then((rr => (null === rr || (0, pr.p)(rr) || (nr = Ur.c[rr.backend], Wr.c.followGameGpu("webgpu" === rr.backend ? rr.adapter : null), "webgpu" === rr.backend && (0, tr.d)()), rr)))
       }
-      return UR
+      return Yr
     }
 
-    function cR() {
-      return WR
+    function Mr() {
+      return nr
     }
 
-    function PR(RR) {
-      return RR ? RR.load() : Promise.resolve().then((function() {
-        var RR = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw RR.code = "MODULE_NOT_FOUND", RR
-      })).then((RR => RR.bloxdWasmClient))
+    function Gr(rr) {
+      return rr ? rr.load() : Promise.resolve().then((function() {
+        var rr = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw rr.code = "MODULE_NOT_FOUND", rr
+      })).then((rr => rr.bloxdWasmClient))
     }
 
-    function IR(RR) {
-      iR.i.setItem(nR, RR)
+    function kr(rr) {
+      fr.j.setItem(zr, rr)
     }
 
-    function mR(RR, JR) {
-      const GR = iR.i.getItem(nR);
-      return null === GR ? function(RR) {
-        if (void 0 !== (0, yR.b)(RR, "webgpu") && (0, VR.y)()) return "webgpu";
-        return !1 === (0, ZR.t)() ? "webgl1" : "webgl"
-      }(RR) : "none" === GR ? null : "string" === typeof GR && void 0 !== (0, yR.b)(RR, GR) ? GR : (JR && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(GR)}, is none of this client's: guessing WebGL2's`), "webgl")
+    function Ar(rr, Sr) {
+      const Qr = fr.j.getItem(zr);
+      return null === Qr ? function(rr) {
+        if (void 0 !== (0, Zr.b)(rr, "webgpu") && (0, pr.D)()) return "webgpu";
+        return !1 === (0, jr.v)() ? "webgl1" : "webgl"
+      }(rr) : "none" === Qr ? null : "string" === typeof Qr && void 0 !== (0, Zr.b)(rr, Qr) ? Qr : (Sr && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(Qr)}, is none of this client's: guessing WebGL2's`), "webgl")
     }
-    async function zR() {
-      if (null === rR.e) return PR(null);
-      const RR = mR(rR.e, !0);
-      return null === RR ? null : rR.e[RR]()
+    async function Vr() {
+      if (null === Nr.h) return Gr(null);
+      const rr = Ar(Nr.h, !0);
+      return null === rr ? null : Nr.h[rr]()
     }
 
-    function SR() {
-      null === UR && null !== rR.e && "webgl" === mR(rR.e, !1) && (0, LR.b)()
+    function ir() {
+      null === Yr && null !== Nr.h && "webgl" === Ar(Nr.h, !1) && (0, hr.e)()
     }
-    let jR = null,
-      dR = null,
-      ER = null;
+    let wr = null,
+      cr = null,
+      Fr = null;
 
-    function YR() {
-      return jR ??= oR().then((async RR => {
-        const JR = null !== RR && !(0, VR.o)(RR),
-          GR = {
-            indirectHangs: JR && await (0, VR.G)(RR, window.location.search),
-            storagePullBreaks: JR && (0, VR.Q)(RR, window.location.search),
-            splitPassBreaks: JR && (0, VR.N)(RR, window.location.search),
-            earlySky: JR && (0, VR.D)(RR, window.location.search),
-            instancedTerrain: JR ? (0, VR.I)(RR, window.location.search) : null,
-            cellLight: JR && await (0, uR.i)("cellLight"),
-            framesAhead: (0, VR.j)(window.location.search, JR ? RR : null),
-            webGpuRestores: !JR || (0, VR.R)(RR, (0, wR.e)()),
-            bufferCopiesCrash: JR && (0, VR.C)(RR, window.location.search),
-            firstVertex: JR ? (0, KR.d)(RR.backend, window.location.search) : void 0
+    function or() {
+      return wr ??= Cr().then((async rr => {
+        const Sr = null !== rr && !(0, pr.p)(rr),
+          Qr = {
+            indirectHangs: Sr && await (0, pr.P)(rr, window.location.search),
+            storagePullBreaks: Sr && (0, pr.$)(rr, window.location.search),
+            splitPassBreaks: Sr && (0, pr.X)(rr, window.location.search),
+            earlySky: Sr && (0, pr.L)(rr, window.location.search),
+            instancedTerrain: Sr ? (0, pr.S)(rr, window.location.search) : null,
+            cellLight: Sr && await (0, ar.g)("cellLight"),
+            framesAhead: (0, pr.l)(window.location.search, Sr ? rr : null),
+            webGpuRestores: !Sr || (0, pr.bb)(rr, (0, mr.d)()),
+            bufferCopiesCrash: Sr && (0, pr.K)(rr, window.location.search),
+            firstVertex: Sr ? (0, xr.g)(rr.backend, window.location.search) : void 0
           };
-        return dR = GR.indirectHangs, ER = !GR.webGpuRestores, GR
-      })), jR
+        return cr = Qr.indirectHangs, Fr = !Qr.webGpuRestores, Qr
+      })), wr
     }
 
-    function kR() {
-      return dR
+    function br() {
+      return cr
     }
 
-    function QR() {
-      return ER
+    function Jr() {
+      return Fr
     }
-    async function FR() {
-      const RR = null === UR ? null : await UR;
-      return null !== RR && (0, VR.o)(RR) && (UR = null, jR = null, dR = null, ER = null), oR()
+    async function Dr() {
+      const rr = null === Yr ? null : await Yr;
+      return null !== rr && (0, pr.p)(rr) && (Yr = null, wr = null, cr = null, Fr = null), Cr()
     }
   },
-  42379: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => iR,
-      h: () => fR
+  42715: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => fr,
+      h: () => Er
     });
-    var yR = GR(37213),
-      tR = GR(42212),
-      uR = GR(5191),
-      ZR = GR(327),
-      qR = GR(37622);
-    async function iR(RR, JR) {
-      return await Promise.all([(0, uR.h)(void 0, !0), (0, ZR.k)()]), (0, yR.r)(RR, tR.d, {
-        ...JR,
-        memoryMaximumBytes: (0, qR.r)()
+    var Zr = Qr(37566),
+      Wr = Qr(42550),
+      ar = Qr(5116),
+      jr = Qr(335),
+      Ir = Qr(38006);
+    async function fr(rr, Sr) {
+      return await Promise.all([(0, ar.h)(void 0, !0), (0, jr.p)()]), (0, Zr.n)(rr, Wr.i, {
+        ...Sr,
+        memoryMaximumBytes: (0, Ir.o)()
       })
     }
-    async function fR() {
-      return await (0, uR.h)(void 0, !0), (0, yR.s)((0, qR.r)())
+    async function Er() {
+      return await (0, ar.h)(void 0, !0), (0, Zr.q)((0, Ir.o)())
     }
   },
-  42247: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => qR,
-      d: () => uR
+  42579: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Ir,
+      g: () => ar
     });
-    var yR = GR(279);
-    const tR = "provokingVertex";
+    var Zr = Qr(285);
+    const Wr = "provokingVertex";
 
-    function uR(RR, JR) {
-      if ("webgl" !== RR) return;
-      const GR = new URLSearchParams(JR).get(tR);
-      return "first" === GR || "last" !== GR && null
+    function ar(rr, Sr) {
+      if ("webgl" !== rr) return;
+      const Qr = new URLSearchParams(Sr).get(Wr);
+      return "first" === Qr || "last" !== Qr && null
     }
-    const ZR = new WeakSet;
+    const jr = new WeakSet;
 
-    function qR(RR, JR) {
-      var GR, tR;
-      let uR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GR = null === (tR = globalThis.navigator) || void 0 === tR ? void 0 : tR.userAgent) && void 0 !== GR ? GR : "";
+    function Ir(rr, Sr) {
+      var Qr, Wr;
+      let ar = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Qr = null === (Wr = globalThis.navigator) || void 0 === Wr ? void 0 : Wr.userAgent) && void 0 !== Qr ? Qr : "";
       try {
-        !1 === JR || ZR.has(RR) || (ZR.add(RR), RR.addEventListener("webglcontextrestored", (() => {
-          qR(RR, JR, uR)
+        !1 === Sr || jr.has(rr) || (jr.add(rr), rr.addEventListener("webglcontextrestored", (() => {
+          Ir(rr, Sr, ar)
         })));
-        const GR = RR.getContext("webgl2");
-        if (null === GR || GR.isContextLost()) return !1;
-        if (!(null !== JR && void 0 !== JR ? JR : function(RR, JR) {
-            var GR, tR;
-            const uR = RR.getExtension("WEBGL_debug_renderer_info");
-            if (null === uR) return !1;
-            return function(RR, JR, GR) {
-              return GR.includes("Windows") && "adreno_6" === (0, yR.k)(RR, JR)
-            }(String(null !== (GR = RR.getParameter(uR.UNMASKED_VENDOR_WEBGL)) && void 0 !== GR ? GR : ""), String(null !== (tR = RR.getParameter(uR.UNMASKED_RENDERER_WEBGL)) && void 0 !== tR ? tR : ""), JR)
-          }(GR, uR))) return !1;
-        const tR = GR.getExtension("WEBGL_provoking_vertex");
-        return null !== tR && (tR.provokingVertexWEBGL(tR.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
-      } catch (iR) {
-        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", iR), !1
+        const Qr = rr.getContext("webgl2");
+        if (null === Qr || Qr.isContextLost()) return !1;
+        if (!(null !== Sr && void 0 !== Sr ? Sr : function(rr, Sr) {
+            var Qr, Wr;
+            const ar = rr.getExtension("WEBGL_debug_renderer_info");
+            if (null === ar) return !1;
+            return function(rr, Sr, Qr) {
+              return Qr.includes("Windows") && "adreno_6" === (0, Zr.g)(rr, Sr)
+            }(String(null !== (Qr = rr.getParameter(ar.UNMASKED_VENDOR_WEBGL)) && void 0 !== Qr ? Qr : ""), String(null !== (Wr = rr.getParameter(ar.UNMASKED_RENDERER_WEBGL)) && void 0 !== Wr ? Wr : ""), Sr)
+          }(Qr, ar))) return !1;
+        const Wr = Qr.getExtension("WEBGL_provoking_vertex");
+        return null !== Wr && (Wr.provokingVertexWEBGL(Wr.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
+      } catch (fr) {
+        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", fr), !1
       }
     }
   },
-  42259: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => fR,
-      e: () => qR,
-      i: () => VR,
-      l: () => ZR
+  42585: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Er,
+      d: () => Ir,
+      f: () => pr,
+      j: () => jr
     });
-    var yR = GR(371),
-      tR = GR(704);
-    let uR;
+    var Zr = Qr(374),
+      Wr = Qr(703);
+    let ar;
 
-    function ZR(RR) {
-      var JR;
-      const GR = uR;
-      return uR = void 0, null !== (JR = iR(RR)) && void 0 !== JR ? JR : GR
+    function jr(rr) {
+      var Sr;
+      const Qr = ar;
+      return ar = void 0, null !== (Sr = fr(rr)) && void 0 !== Sr ? Sr : Qr
     }
 
-    function qR(RR) {
+    function Ir(rr) {
       try {
-        const JR = iR(RR);
-        void 0 !== JR && (uR = JR, (0, tR.h)((0, yR.q)(JR.reason, JR.message)))
-      } catch (JR) {
-        console.warn("Couldn't keep the WebGPU loss's cause", JR)
+        const Sr = fr(rr);
+        void 0 !== Sr && (ar = Sr, (0, Wr.f)((0, Zr.p)(Sr.reason, Sr.message)))
+      } catch (Sr) {
+        console.warn("Couldn't keep the WebGPU loss's cause", Sr)
       }
     }
 
-    function iR(RR) {
-      var JR;
-      const GR = null === RR || void 0 === RR || null === (JR = RR.TZR) || void 0 === JR ? void 0 : JR.call(RR),
-        yR = null === RR || void 0 === RR ? void 0 : RR.FZR();
-      if (void 0 === yR) return;
-      const tR = new Error(yR);
-      return void 0 !== GR && (tR.reason = GR), tR
+    function fr(rr) {
+      var Sr;
+      const Qr = null === rr || void 0 === rr || null === (Sr = rr.WIr) || void 0 === Sr ? void 0 : Sr.call(rr),
+        Zr = null === rr || void 0 === rr ? void 0 : rr.ZIr();
+      if (void 0 === Zr) return;
+      const Wr = new Error(Zr);
+      return void 0 !== Qr && (Wr.reason = Qr), Wr
     }
 
-    function fR(RR) {
-      return RR instanceof Error ? RR : void 0
+    function Er(rr) {
+      return rr instanceof Error ? rr : void 0
     }
 
-    function VR(RR, JR) {
-      return "lost" !== RR && "frames_refused" !== RR ? {} : (0, yR.q)("frames_refused" === RR ? RR : null === JR || void 0 === JR ? void 0 : JR.reason, null === JR || void 0 === JR ? void 0 : JR.message)
+    function pr(rr, Sr) {
+      return "lost" !== rr && "frames_refused" !== rr ? {} : (0, Zr.p)("frames_refused" === rr ? rr : null === Sr || void 0 === Sr ? void 0 : Sr.reason, null === Sr || void 0 === Sr ? void 0 : Sr.message)
     }
   },
-  42300: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => gR,
-      c: () => MR,
-      e: () => XR,
-      f: () => CR,
-      h: () => pR,
-      l: () => xR,
-      p: () => OR,
-      r: () => NR
+  42617: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Lr,
+      d: () => Br,
+      h: () => yr,
+      l: () => Kr,
+      o: () => Or,
+      q: () => Hr,
+      u: () => Pr,
+      w: () => qr
     });
-    var yR = GR(5685),
-      tR = GR(42306),
-      uR = GR(34996);
-    const ZR = 1,
-      qR = 18,
-      iR = 19,
-      fR = 20,
-      VR = 21,
-      KR = 22,
-      wR = 23,
-      rR = {
-        [ZR]: "link",
+    var Zr = Qr(5617),
+      Wr = Qr(42619),
+      ar = Qr(35296);
+    const jr = 1,
+      Ir = 18,
+      fr = 19,
+      Er = 20,
+      pr = 21,
+      xr = 22,
+      mr = 23,
+      Nr = {
+        [jr]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -3234,28 +3234,28 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [qR]: "retry linked",
-        [iR]: "fallback linked",
-        [fR]: "fallback failed",
-        [VR]: "link stalled",
-        [KR]: "link left pending",
-        [wR]: "moved to general",
+        [Ir]: "retry linked",
+        [fr]: "fallback linked",
+        [Er]: "fallback failed",
+        [pr]: "link stalled",
+        [xr]: "link left pending",
+        [mr]: "moved to general",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function eR(RR, JR, GR) {
-      return RR === qR ? "program retry" : RR === ZR ? "program link" : RR === VR ? "program link stall" : RR === KR ? "program link pending" : RR === iR || RR === fR || RR === wR ? `program ${JR} ${GR}` : "program"
+    function Ur(rr, Sr, Qr) {
+      return rr === Ir ? "program retry" : rr === jr ? "program link" : rr === pr ? "program link stall" : rr === xr ? "program link pending" : rr === fr || rr === Er || rr === mr ? `program ${Sr} ${Qr}` : "program"
     }
-    const aR = {
+    const tr = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain",
         5: "scene warm stuck"
       },
-      LR = {
+      hr = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -3268,18 +3268,18 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      nR = {
+      zr = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      UR = {
+      Yr = {
         11: "none read after view",
         12: "some read after view"
       },
-      WR = {
+      nr = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -3287,26 +3287,26 @@ export const modules = {
         5: "no wait no clock",
         6: "no wait parallel links",
         7: "view shown unheld",
-        ...UR
+        ...Yr
       },
-      AR = {
+      er = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function CR(RR, JR) {
-      return RR === yR.p.RenderSerialLinks && void 0 !== UR[JR]
+    function Kr(rr, Sr) {
+      return rr === Zr.o.RenderSerialLinks && void 0 !== Yr[Sr]
     }
 
-    function XR(RR, JR) {
-      return RR === yR.p.RenderInternal && (JR >>> 8 & 255) === KR
+    function yr(rr, Sr) {
+      return rr === Zr.o.RenderInternal && (Sr >>> 8 & 255) === xr
     }
 
-    function MR(RR, JR) {
-      return RR === yR.p.RenderSerialLinks && void 0 !== AR[15 & JR]
+    function Br(rr, Sr) {
+      return rr === Zr.o.RenderSerialLinks && void 0 !== er[15 & Sr]
     }
-    const BR = {
+    const Tr = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -3315,89 +3315,89 @@ export const modules = {
       37442: "context lost"
     };
 
-    function lR(RR, JR) {
-      var GR;
-      return null !== (GR = RR[JR]) && void 0 !== GR ? GR : (0, uR.e)(JR)
+    function vr(rr, Sr) {
+      var Qr;
+      return null !== (Qr = rr[Sr]) && void 0 !== Qr ? Qr : (0, ar.b)(Sr)
     }
 
-    function pR() {
-      return (0, uR.e)((0, tR.e)())
+    function Or() {
+      return (0, ar.b)((0, Wr.b)())
     }
 
-    function gR(RR, JR) {
-      switch (RR) {
-        case yR.p.RenderSceneRowNotDrawn:
+    function Lr(rr, Sr) {
+      switch (rr) {
+        case Zr.o.RenderSceneRowNotDrawn:
           return {
-            words: ` ${lR(LR,JR)}`, instance: String(JR), group: String(RR)
+            words: ` ${vr(hr,Sr)}`, instance: String(Sr), group: String(rr)
           };
-        case yR.p.RenderChunkMeshNotDrawn: {
-          const GR = 0 === (128 & JR) ? "" : " shortage",
-            yR = JR >>> 8;
+        case Zr.o.RenderChunkMeshNotDrawn: {
+          const Qr = 0 === (128 & Sr) ? "" : " shortage",
+            Zr = Sr >>> 8;
           return {
-            words: ` ${lR(nR,127&JR)}${GR}${0===yR?"":` kind ${(0,uR.e)(yR)}`}`,
-            instance: String(JR),
-            group: String(RR)
+            words: ` ${vr(zr,127&Sr)}${Qr}${0===Zr?"":` kind ${(0,ar.b)(Zr)}`}`,
+            instance: String(Sr),
+            group: String(rr)
           }
         }
-        case yR.p.RenderInternal: {
-          const GR = lR(aR, 255 & JR),
-            yR = JR >>> 8 & 255;
-          if (0 === yR) return {
-            words: ` ${GR}`,
-            instance: String(JR),
-            group: String(RR)
+        case Zr.o.RenderInternal: {
+          const Qr = vr(tr, 255 & Sr),
+            Zr = Sr >>> 8 & 255;
+          if (0 === Zr) return {
+            words: ` ${Qr}`,
+            instance: String(Sr),
+            group: String(rr)
           };
-          const tR = lR(rR, yR),
-            ZR = JR >>> 16;
+          const Wr = vr(Nr, Zr),
+            jr = Sr >>> 16;
           return {
-            words: ` ${GR} ${tR} program ${(0,uR.e)(ZR)}`,
-            instance: `${GR} ${tR} ${ZR}`,
-            group: eR(yR, tR, GR),
+            words: ` ${Qr} ${Wr} program ${(0,ar.b)(jr)}`,
+            instance: `${Qr} ${Wr} ${jr}`,
+            group: Ur(Zr, Wr, Qr),
             gpuDetails: {
-              programFailure: tR,
-              program: String(ZR)
+              programFailure: Wr,
+              program: String(jr)
             }
           }
         }
-        case yR.p.RenderSerialLinks: {
-          if (MR(RR, JR)) {
-            const RR = function(RR) {
-              const JR = (JR, GR) => (0, uR.e)(RR >>> JR & (1 << GR) - 1),
-                GR = RR >>> 30 & 1 ? " restored" : "";
-              return `link census ${AR[15&RR]} linked ${JR(22,8)} failed ${JR(4,6)} retried ${JR(10,6)} fallback ${JR(16,6)}${GR}`
-            }(JR);
+        case Zr.o.RenderSerialLinks: {
+          if (Br(rr, Sr)) {
+            const rr = function(rr) {
+              const Sr = (Sr, Qr) => (0, ar.b)(rr >>> Sr & (1 << Qr) - 1),
+                Qr = rr >>> 30 & 1 ? " restored" : "";
+              return `link census ${er[15&rr]} linked ${Sr(22,8)} failed ${Sr(4,6)} retried ${Sr(10,6)} fallback ${Sr(16,6)}${Qr}`
+            }(Sr);
             return {
-              words: ` ${RR}`,
-              instance: String(15 & JR),
+              words: ` ${rr}`,
+              instance: String(15 & Sr),
               group: "link census",
               gpuDetails: {
-                linkCensus: RR
+                linkCensus: rr
               }
             }
           }
-          const GR = lR(WR, JR);
+          const Qr = vr(nr, Sr);
           return {
-            words: ` ${GR}`,
-            instance: String(JR),
-            group: String(RR),
+            words: ` ${Qr}`,
+            instance: String(Sr),
+            group: String(rr),
             gpuDetails: {
-              serialLinks: GR
+              serialLinks: Qr
             }
           }
         }
-        case yR.p.RenderGlErrorAfterRestore: {
-          const GR = lR(BR, 65535 & JR),
-            yR = JR >>> 16,
-            tR = 65535 !== yR;
+        case Zr.o.RenderGlErrorAfterRestore: {
+          const Qr = vr(Tr, 65535 & Sr),
+            Zr = Sr >>> 16,
+            Wr = 65535 !== Zr;
           return {
-            words: ` ${GR}${tR?` program ${(0,uR.e)(yR)}`:""}`,
-            instance: String(JR),
-            group: String(RR),
-            gpuDetails: tR ? {
-              glError: GR,
-              program: String(yR)
+            words: ` ${Qr}${Wr?` program ${(0,ar.b)(Zr)}`:""}`,
+            instance: String(Sr),
+            group: String(rr),
+            gpuDetails: Wr ? {
+              glError: Qr,
+              program: String(Zr)
             } : {
-              glError: GR
+              glError: Qr
             }
           }
         }
@@ -3405,148 +3405,148 @@ export const modules = {
           return null
       }
     }
-    const bR = 2,
-      vR = new Map;
+    const lr = 2,
+      Xr = new Map;
 
-    function OR(RR) {
+    function Pr(rr) {
       let {
-        group: JR,
-        instance: GR
-      } = RR, yR = vR.get(JR);
-      return void 0 === yR && (yR = [], vR.set(JR, yR)), !yR.includes(GR) && (yR.length >= bR || (yR.push(GR), !1))
+        group: Sr,
+        instance: Qr
+      } = rr, Zr = Xr.get(Sr);
+      return void 0 === Zr && (Zr = [], Xr.set(Sr, Zr)), !Zr.includes(Qr) && (Zr.length >= lr || (Zr.push(Qr), !1))
     }
 
-    function xR() {
-      return vR.size > 0
+    function Hr() {
+      return Xr.size > 0
     }
 
-    function NR() {
-      vR.clear()
+    function qr() {
+      Xr.clear()
     }
   },
-  42283: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR,
-      e: () => uR
+  42603: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr,
+      h: () => ar
     });
-    var yR = GR(42288);
-    const tR = new WeakSet;
-    const uR = {
+    var Zr = Qr(42607);
+    const Wr = new WeakSet;
+    const ar = {
         webgpu: async () => (function() {
-          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
-          if (void 0 === RR || tR.has(RR.prototype)) return;
-          tR.add(RR.prototype);
-          const JR = RR.prototype.requestDevice;
-          RR.prototype.requestDevice = function(RR) {
-            var GR;
-            const tR = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.requiredLimits) && void 0 !== GR ? GR : {},
-              uR = Object.keys(tR).filter((RR => !(RR in this.limits)));
-            if (0 === uR.length) return JR.call(this, RR);
-            const ZR = Object.fromEntries(Object.entries(tR).filter((RR => {
-              let [JR] = RR;
-              return JR in this.limits
+          let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
+          if (void 0 === rr || Wr.has(rr.prototype)) return;
+          Wr.add(rr.prototype);
+          const Sr = rr.prototype.requestDevice;
+          rr.prototype.requestDevice = function(rr) {
+            var Qr;
+            const Wr = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.requiredLimits) && void 0 !== Qr ? Qr : {},
+              ar = Object.keys(Wr).filter((rr => !(rr in this.limits)));
+            if (0 === ar.length) return Sr.call(this, rr);
+            const jr = Object.fromEntries(Object.entries(Wr).filter((rr => {
+              let [Sr] = rr;
+              return Sr in this.limits
             })));
-            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${uR.join(", ")}`), (0, yR.reportDroppedRequiredLimits)(uR), JR.call(this, {
-              ...RR,
-              requiredLimits: ZR
+            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${ar.join(", ")}`), (0, Zr.reportDroppedRequiredLimits)(ar), Sr.call(this, {
+              ...rr,
+              requiredLimits: jr
             })
           }
-        }(), (await GR.e(8).then((() => GR(54594)))).bloxdWasmWebgpu),
-        webgl: async () => (await GR.e(6).then((() => GR(54605)))).bloxdWasmWebgl,
-        webgl1: async () => (await GR.e(7).then((() => GR(54617)))).bloxdWasmWebgl1
+        }(), (await Qr.e(8).then((() => Qr(55103)))).bloxdWasmWebgpu),
+        webgl: async () => (await Qr.e(6).then((() => Qr(55119)))).bloxdWasmWebgl,
+        webgl1: async () => (await Qr.e(7).then((() => Qr(55130)))).bloxdWasmWebgl1
       },
-      ZR = async () => (await GR.e(5).then((() => GR(54630)))).compileAnimationPackInWasm
+      jr = async () => (await Qr.e(5).then((() => Qr(55136)))).compileAnimationPackInWasm
   },
-  42335: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => nR,
-      g: () => LR,
-      i: () => CR
+  42670: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => zr,
+      g: () => hr,
+      h: () => Kr
     });
-    var yR = GR(7786),
-      tR = GR(32),
-      uR = GR(5064),
-      ZR = GR(5685),
-      qR = GR(7777),
-      iR = GR(42342);
+    var Zr = Qr(7604),
+      Wr = Qr(34),
+      ar = Qr(4983),
+      jr = Qr(5617),
+      Ir = Qr(7595),
+      fr = Qr(42673);
 
-    function fR(RR, JR) {
-      const GR = (0, qR.d)(JR.variants);
-      return RR.setShaderPack(GR.variantFlags, GR.hooks, GR.moduleCodes, (0, iR.y)(JR.layers), iR.k[JR.policy], JR.keepCircleShadows)
+    function Er(rr, Sr) {
+      const Qr = (0, Ir.c)(Sr.variants);
+      return rr.setShaderPack(Qr.variantFlags, Qr.hooks, Qr.moduleCodes, (0, fr.u)(Sr.layers), fr.k[Sr.policy], Sr.keepCircleShadows)
     }
-    const VR = 0,
-      KR = 1,
-      wR = 2,
-      rR = "shaderPack:failedToCompile",
-      eR = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
-      aR = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
+    const pr = 0,
+      xr = 1,
+      mr = 2,
+      Nr = "shaderPack:failedToCompile",
+      Ur = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
+      tr = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
 
-    function LR(RR, JR, GR) {
-      var yR;
-      const tR = null !== (yR = null === RR || void 0 === RR ? void 0 : RR.reason) && void 0 !== yR ? yR : "none";
-      return eR.has(tR) ? {
-        messageKey: JR ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function hr(rr, Sr, Qr) {
+      var Zr;
+      const Wr = null !== (Zr = null === rr || void 0 === rr ? void 0 : rr.reason) && void 0 !== Zr ? Zr : "none";
+      return Ur.has(Wr) ? {
+        messageKey: Sr ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === tR && "override" === (null === RR || void 0 === RR ? void 0 : RR.source) ? {
+      } : "not_requested" === Wr && "override" === (null === rr || void 0 === rr ? void 0 : rr.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: aR.has(tR) && !GR ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: tr.has(Wr) && !Qr ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    class nR extends Error {
-      constructor(RR) {
-        super(`the shader pack can't run in this game: ${RR}`), this.messageKey = RR, this.name = "ShaderPackJoinError"
+    class zr extends Error {
+      constructor(rr) {
+        super(`the shader pack can't run in this game: ${rr}`), this.messageKey = rr, this.name = "ShaderPackJoinError"
       }
     }
-    const UR = "strict";
-    class WR {
-      constructor(RR) {
-        this.deps = RR, this.pagePack = void 0, this.loaded = null, this.policy = UR, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = RR.load().catch((JR => (RR.warn("the shader pack could not load: the game draws without it", JR), {
+    const Yr = "strict";
+    class nr {
+      constructor(rr) {
+        this.deps = rr, this.pagePack = void 0, this.loaded = null, this.policy = Yr, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = rr.load().catch((Sr => (rr.warn("the shader pack could not load: the game draws without it", Sr), {
           status: "none"
-        }))).then((RR => (this.loaded = RR, "active" === RR.status && (this.handOverToPreviews(RR), null !== RR.harnessPolicy && (this.policy = RR.harnessPolicy, this.handOver())), RR)))
+        }))).then((rr => (this.loaded = rr, "active" === rr.status && (this.handOverToPreviews(rr), null !== rr.harnessPolicy && (this.policy = rr.harnessPolicy, this.handOver())), rr)))
       }
-      async join(RR) {
+      async join(rr) {
         this.leave();
-        const JR = this.game,
-          [GR, tR] = await Promise.all([this.pagePack, this.policyOf(RR)]);
-        if (JR !== this.game || "none" === GR.status) return null;
-        const uR = "active" === GR.status ? GR.pack.variants : GR.variants,
-          ZR = (0, yR.i)(uR, tR);
-        if (ZR && "active" === GR.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (ZR) {
-          const RR = this.cantRun(GR, tR);
-          if (null !== RR) return RR
-        } else if ("blocked" === GR.status || null === this.deps.core) return null;
-        return this.policy = tR, this.handOver(), ZR && this.refused ? rR : (this.joined = !0, this.offInThisGame = !ZR, null)
+        const Sr = this.game,
+          [Qr, Wr] = await Promise.all([this.pagePack, this.policyOf(rr)]);
+        if (Sr !== this.game || "none" === Qr.status) return null;
+        const ar = "active" === Qr.status ? Qr.pack.variants : Qr.variants,
+          jr = (0, Zr.g)(ar, Wr);
+        if (jr && "active" === Qr.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (jr) {
+          const rr = this.cantRun(Qr, Wr);
+          if (null !== rr) return rr
+        } else if ("blocked" === Qr.status || null === this.deps.core) return null;
+        return this.policy = Wr, this.handOver(), jr && this.refused ? Nr : (this.joined = !0, this.offInThisGame = !jr, null)
       }
-      async replay(RR) {
-        const JR = await this.join(RR);
-        null === JR ? this.playable() : this.deps.failInGame(JR)
+      async replay(rr) {
+        const Sr = await this.join(rr);
+        null === Sr ? this.playable() : this.deps.failInGame(Sr)
       }
-      cantRun(RR, JR) {
+      cantRun(rr, Sr) {
         const {
-          core: GR,
-          noWebGpu: yR
+          core: Qr,
+          noWebGpu: Zr
         } = this.deps;
-        if ("blocked" === RR.status) {
-          return "shaderPack:failedUnchecked" === RR.messageKey && null === GR && yR.noAdapter ? yR.messageKey : RR.messageKey
+        if ("blocked" === rr.status) {
+          return "shaderPack:failedUnchecked" === rr.messageKey && null === Qr && Zr.noAdapter ? Zr.messageKey : rr.messageKey
         }
-        return this.refused || this.failedPolicies.has(JR) ? rR : null
+        return this.refused || this.failedPolicies.has(Sr) ? Nr : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var RR;
-        return this.runsInJoinedGame() && "active" === (null === (RR = this.loaded) || void 0 === RR ? void 0 : RR.status) ? function(RR, JR) {
-          const GR = RR.filter((RR => (0, yR.i)([RR], JR))),
-            tR = RR => GR.some((JR => JR[RR]));
+        var rr;
+        return this.runsInJoinedGame() && "active" === (null === (rr = this.loaded) || void 0 === rr ? void 0 : rr.status) ? function(rr, Sr) {
+          const Qr = rr.filter((rr => (0, Zr.g)([rr], Sr))),
+            Wr = rr => Qr.some((Sr => Sr[rr]));
           return {
-            sceneDepth: tR("sceneDepth"),
-            sunShadow: tR("sunShadow"),
-            airShadow: tR("airShadow")
+            sceneDepth: Wr("sceneDepth"),
+            sunShadow: Wr("sunShadow"),
+            airShadow: Wr("airShadow")
           }
         }(this.loaded.pack.variants, this.policy) : null
       }
@@ -3554,691 +3554,691 @@ export const modules = {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(rR) : (null !== this.couldntRun ? this.notify(uR.c, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Nr) : (null !== this.couldntRun ? this.notify(ar.b, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(RR) {
+      coreErrors(rr) {
         for (const {
-            code: JR,
-            detail: GR
+            code: Sr,
+            detail: Qr
           }
-          of RR)
-          if (JR === ZR.p.RenderShaderPackNotRun) switch (255 & GR) {
-            case VR:
+          of rr)
+          if (Sr === jr.o.RenderShaderPackNotRun) switch (255 & Qr) {
+            case pr:
               this.refused = !0, this.failed();
               break;
-            case KR:
+            case xr:
               this.failedPolicies.add(this.policy), this.failed();
               break;
-            case wR:
+            case mr:
               this.failedModelPolicies.add(this.policy), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(rR) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(Nr) : this.failedWhileJoining = !0)
       }
-      fail(RR) {
-        this.leave(), this.deps.failInGame(RR)
+      fail(rr) {
+        this.leave(), this.deps.failInGame(rr)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(RR, JR) {
-        const GR = this.game;
-        this.deps.notify(RR, (() => GR === this.game && this.joined), JR)
+      notify(rr, Sr) {
+        const Qr = this.game;
+        this.deps.notify(rr, (() => Qr === this.game && this.joined), Sr)
       }
       handOver() {
-        var RR;
+        var rr;
         const {
-          core: JR
+          core: Sr
         } = this.deps;
-        null !== JR && "active" === (null === (RR = this.loaded) || void 0 === RR ? void 0 : RR.status) && (fR(JR, {
+        null !== Sr && "active" === (null === (rr = this.loaded) || void 0 === rr ? void 0 : rr.status) && (Er(Sr, {
           ...this.loaded.pack,
           policy: this.policy
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(RR) {
+      handOverToPreviews(rr) {
         let {
-          pack: JR,
-          harnessPolicy: GR
-        } = RR;
+          pack: Sr,
+          harnessPolicy: Qr
+        } = rr;
         const {
-          previews: yR
+          previews: Zr
         } = this.deps;
-        null !== yR && fR(yR, {
-          ...JR,
-          policy: null !== GR && void 0 !== GR ? GR : UR
+        null !== Zr && Er(Zr, {
+          ...Sr,
+          policy: null !== Qr && void 0 !== Qr ? Qr : Yr
         })
       }
-      policyOf(RR) {
-        return this.deps.policyOf(RR).catch((RR => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", RR), UR)))
+      policyOf(rr) {
+        return this.deps.policyOf(rr).catch((rr => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", rr), Yr)))
       }
     }
-    const AR = "wasmShaderPackNotice";
+    const er = "wasmShaderPackNotice";
 
-    function CR(RR, JR, GR, yR) {
-      return tR.n.subscribe(AR, (RR => {
+    function Kr(rr, Sr, Qr, Zr) {
+      return Wr.i.subscribe(er, (rr => {
         let {
-          translationKey: JR,
-          stillCurrent: GR,
-          reasonKey: yR
-        } = RR;
-        GR() && tR.n.JK("chat", (0, uR.f)(JR, yR))
-      })), new WR({
-        load: XR,
-        policyOf: MR,
-        core: RR,
-        previews: JR,
-        noWebGpu: GR,
-        notify: (RR, JR, GR) => {
-          const yR = {
-            translationKey: RR,
-            stillCurrent: JR,
-            reasonKey: GR
+          translationKey: Sr,
+          stillCurrent: Qr,
+          reasonKey: Zr
+        } = rr;
+        Qr() && Wr.i.Jp("chat", (0, ar.j)(Sr, Zr))
+      })), new nr({
+        load: yr,
+        policyOf: Br,
+        core: rr,
+        previews: Sr,
+        noWebGpu: Qr,
+        notify: (rr, Sr, Qr) => {
+          const Zr = {
+            translationKey: rr,
+            stillCurrent: Sr,
+            reasonKey: Qr
           };
-          tR.n.JK(AR, yR, !0)
+          Wr.i.Jp(er, Zr, !0)
         },
-        failInGame: RR => {
-          tR.n.JK(uR.d, RR)
+        failInGame: rr => {
+          Wr.i.Jp(ar.f, rr)
         },
-        warn: yR
+        warn: Zr
       })
     }
-    async function XR() {
+    async function yr() {
       const [{
-        shaderPackPage: RR,
-        harnessShaderPackMode: JR
+        shaderPackPage: rr,
+        harnessShaderPackMode: Sr
       }, {
-        shaderPackTextures: yR
-      }] = await Promise.all([GR.e(138).then((() => GR(40495))), GR.e(139).then((() => GR(7773)))]), tR = await RR.load();
-      return "active" !== tR.status ? tR : {
+        shaderPackTextures: Zr
+      }] = await Promise.all([Qr.e(138).then((() => Qr(40792))), Qr.e(139).then((() => Qr(7588)))]), Wr = await rr.load();
+      return "active" !== Wr.status ? Wr : {
         status: "active",
         pack: {
-          variants: tR.pack.variants,
-          layers: yR().layers,
-          keepCircleShadows: tR.pack.keepCircleShadows
+          variants: Wr.pack.variants,
+          layers: Zr().layers,
+          keepCircleShadows: Wr.pack.keepCircleShadows
         },
-        harnessPolicy: JR()
+        harnessPolicy: Sr()
       }
     }
-    async function MR(RR) {
-      var JR;
+    async function Br(rr) {
+      var Sr;
       const [{
-        shaderPackPage: yR,
-        harnessShaderPackMode: tR
+        shaderPackPage: Zr,
+        harnessShaderPackMode: Wr
       }, {
-        getShaderPackPolicy: uR
-      }] = await Promise.all([GR.e(138).then((() => GR(40495))), GR.e(108).then((() => GR(44974)))]);
-      return await yR.load(), null !== (JR = tR()) && void 0 !== JR ? JR : uR(RR)
+        getShaderPackPolicy: ar
+      }] = await Promise.all([Qr.e(138).then((() => Qr(40792))), Qr.e(108).then((() => Qr(45277)))]);
+      return await Zr.load(), null !== (Sr = Wr()) && void 0 !== Sr ? Sr : ar(rr)
     }
   },
-  42364: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      g: () => LR,
-      k: () => iR,
-      o: () => fR,
-      s: () => VR,
-      w: () => wR
+  42694: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Ir,
+      h: () => hr,
+      k: () => fr,
+      o: () => Er,
+      r: () => pr,
+      v: () => mr
     });
-    var yR = GR(37256),
-      tR = GR(42369);
-    const uR = "atlas:",
-      ZR = 3e4;
-    class qR extends Error {
-      constructor(RR, JR) {
-        super(`fetching ${RR} answered HTTP ${JR}`), this.url = RR, this.status = JR, this.name = "TerrainTextureFetchError"
+    var Zr = Qr(37613),
+      Wr = Qr(42699);
+    const ar = "atlas:",
+      jr = 3e4;
+    class Ir extends Error {
+      constructor(rr, Sr) {
+        super(`fetching ${rr} answered HTTP ${Sr}`), this.url = rr, this.status = Sr, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function iR(RR) {
-      if (!RR.startsWith(uR)) return null;
-      const JR = Number(RR.slice(uR.length));
-      return Number.isInteger(JR) && JR >= 0 ? JR : null
+    function fr(rr) {
+      if (!rr.startsWith(ar)) return null;
+      const Sr = Number(rr.slice(ar.length));
+      return Number.isInteger(Sr) && Sr >= 0 ? Sr : null
     }
-    async function fR() {
-      const RR = await GR.e(234).then((() => GR(35257)));
+    async function Er() {
+      const rr = await Qr.e(235).then((() => Qr(35587)));
       return {
-        atlasSheets: RR.blockAtlasUrls,
-        texture: JR => {
-          var GR, yR, uR;
-          return null !== (GR = null !== (yR = null !== (uR = RR.animatedBlockTextures[JR]) && void 0 !== uR ? uR : RR.rotatedBlockTextures[JR]) && void 0 !== yR ? yR : tR.b[JR]) && void 0 !== GR ? GR : null
+        atlasSheets: rr.blockAtlasUrls,
+        texture: Sr => {
+          var Qr, Zr, ar;
+          return null !== (Qr = null !== (Zr = null !== (ar = rr.animatedBlockTextures[Sr]) && void 0 !== ar ? ar : rr.rotatedBlockTextures[Sr]) && void 0 !== Zr ? Zr : Wr.b[Sr]) && void 0 !== Qr ? Qr : null
         }
       }
     }
-    async function VR(RR) {
-      const JR = new AbortController,
-        GR = setTimeout((() => {
-          JR.abort(new DOMException(`${RR} took over ${ZR} ms`, "TimeoutError"))
-        }), ZR);
-      let yR;
+    async function pr(rr) {
+      const Sr = new AbortController,
+        Qr = setTimeout((() => {
+          Sr.abort(new DOMException(`${rr} took over ${jr} ms`, "TimeoutError"))
+        }), jr);
+      let Zr;
       try {
-        const GR = await fetch(RR, {
-          signal: JR.signal
+        const Qr = await fetch(rr, {
+          signal: Sr.signal
         });
-        if (!GR.ok) throw new qR(RR, GR.status);
-        yR = await GR.blob()
+        if (!Qr.ok) throw new Ir(rr, Qr.status);
+        Zr = await Qr.blob()
       } finally {
-        clearTimeout(GR)
+        clearTimeout(Qr)
       }
-      const tR = await createImageBitmap(yR, {
+      const Wr = await createImageBitmap(Zr, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return wR(tR)
+        return mr(Wr)
       } finally {
-        tR.close()
+        Wr.close()
       }
     }
-    const KR = 8192;
+    const xr = 8192;
 
-    function wR(RR) {
+    function mr(rr) {
       const {
-        width: JR,
-        height: GR
-      } = RR, tR = Math.max(1, Math.min(GR, KR)), uR = (0, yR.e)(JR, tR, {
+        width: Sr,
+        height: Qr
+      } = rr, Wr = Math.max(1, Math.min(Qr, xr)), ar = (0, Zr.g)(Sr, Wr, {
         willReadFrequently: !0
       });
-      if (!uR) throw new Error("no 2D context to read the texture back");
-      uR.globalCompositeOperation = "copy";
-      const ZR = new Uint8Array(JR * GR * 4);
-      for (let yR = 0; yR < GR; yR += tR) {
-        const qR = Math.min(tR, GR - yR);
-        uR.drawImage(RR, 0, yR, JR, qR, 0, 0, JR, qR), ZR.set(uR.getImageData(0, 0, JR, qR).data, yR * JR * 4)
+      if (!ar) throw new Error("no 2D context to read the texture back");
+      ar.globalCompositeOperation = "copy";
+      const jr = new Uint8Array(Sr * Qr * 4);
+      for (let Zr = 0; Zr < Qr; Zr += Wr) {
+        const Ir = Math.min(Wr, Qr - Zr);
+        ar.drawImage(rr, 0, Zr, Sr, Ir, 0, 0, Sr, Ir), jr.set(ar.getImageData(0, 0, Sr, Ir).data, Zr * Sr * 4)
       }
       return {
-        width: JR,
-        height: GR,
-        pixels: ZR
+        width: Sr,
+        height: Qr,
+        pixels: jr
       }
     }
-    async function rR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VR;
-      const yR = [],
-        tR = await Promise.all(RR.map((async RR => {
-          var tR, ZR;
-          const qR = null !== (tR = null === (ZR = JR.decoded) || void 0 === ZR ? void 0 : ZR.call(JR, RR)) && void 0 !== tR ? tR : null,
-            fR = null === qR ? function(RR, JR) {
-              if (RR.startsWith(uR)) {
-                var GR;
-                const yR = iR(RR);
-                return null === yR ? null : null !== (GR = JR.atlasSheets[yR]) && void 0 !== GR ? GR : null
+    async function Nr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pr;
+      const Zr = [],
+        Wr = await Promise.all(rr.map((async rr => {
+          var Wr, jr;
+          const Ir = null !== (Wr = null === (jr = Sr.decoded) || void 0 === jr ? void 0 : jr.call(Sr, rr)) && void 0 !== Wr ? Wr : null,
+            Er = null === Ir ? function(rr, Sr) {
+              if (rr.startsWith(ar)) {
+                var Qr;
+                const Zr = fr(rr);
+                return null === Zr ? null : null !== (Qr = Sr.atlasSheets[Zr]) && void 0 !== Qr ? Qr : null
               }
-              return JR.texture(RR)
-            }(RR, JR) : null,
-            VR = null !== qR && void 0 !== qR ? qR : null === fR ? null : GR(fR);
-          if (null === VR) return yR.push({
-            name: RR,
-            url: fR,
-            error: new Error(`no URL for terrain texture ${RR}`)
+              return Sr.texture(rr)
+            }(rr, Sr) : null,
+            pr = null !== Ir && void 0 !== Ir ? Ir : null === Er ? null : Qr(Er);
+          if (null === pr) return Zr.push({
+            name: rr,
+            url: Er,
+            error: new Error(`no URL for terrain texture ${rr}`)
           }), null;
           try {
-            const JR = await VR;
-            if (JR.pixels.byteLength !== JR.width * JR.height * 4) throw new Error(`decoded ${JR.pixels.byteLength} bytes for ${JR.width}x${JR.height} texels`);
+            const Sr = await pr;
+            if (Sr.pixels.byteLength !== Sr.width * Sr.height * 4) throw new Error(`decoded ${Sr.pixels.byteLength} bytes for ${Sr.width}x${Sr.height} texels`);
             return {
-              name: RR,
-              texture: JR
+              name: rr,
+              texture: Sr
             }
-          } catch (KR) {
-            return yR.push({
-              name: RR,
-              url: fR,
-              error: KR
+          } catch (xr) {
+            return Zr.push({
+              name: rr,
+              url: Er,
+              error: xr
             }), null
           }
         }))),
-        ZR = tR.filter((RR => null !== RR)),
-        qR = new Uint32Array(2 * ZR.length);
-      ZR.forEach(((RR, JR) => {
+        jr = Wr.filter((rr => null !== rr)),
+        Ir = new Uint32Array(2 * jr.length);
+      jr.forEach(((rr, Sr) => {
         let {
-          texture: GR
-        } = RR;
-        qR[2 * JR] = GR.width, qR[2 * JR + 1] = GR.height
+          texture: Qr
+        } = rr;
+        Ir[2 * Sr] = Qr.width, Ir[2 * Sr + 1] = Qr.height
       }));
       return {
         handOver: {
-          names: ZR.map((RR => {
+          names: jr.map((rr => {
             let {
-              name: JR
-            } = RR;
-            return JR
+              name: Sr
+            } = rr;
+            return Sr
           })),
-          textures: ZR.map((RR => {
+          textures: jr.map((rr => {
             let {
-              texture: JR
-            } = RR;
-            return JR.pixels
+              texture: Sr
+            } = rr;
+            return Sr.pixels
           })),
-          sizes: qR
+          sizes: Ir
         },
-        failures: yR
+        failures: Zr
       }
     }
-    const eR = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const Ur = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function aR() {}
-    class LR {
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eR,
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = RR, this.retryMs = JR, this.keepBelow = GR, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function tr() {}
+    class hr {
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ur,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = rr, this.retryMs = Sr, this.keepBelow = Qr, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fR,
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const yR = ++this.started,
-          tR = {
-            decode: GR.decode,
-            wholeAtlas: GR.wholeAtlas
+      async swap(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Er,
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Zr = ++this.started,
+          Wr = {
+            decode: Qr.decode,
+            wholeAtlas: Qr.wholeAtlas
           };
-        return this.loadAndHandOver(JR, tR, RR, (() => {
-          var RR;
-          return yR < this.landed || !1 === (null === (RR = GR.wanted) || void 0 === RR ? void 0 : RR.call(GR))
+        return this.loadAndHandOver(Sr, Wr, rr, (() => {
+          var rr;
+          return Zr < this.landed || !1 === (null === (rr = Qr.wanted) || void 0 === rr ? void 0 : rr.call(Qr))
         }), {
-          onTaken: (RR, GR) => {
-            this.landed = yR, this.current = {
-              mine: yR,
-              sources: JR,
-              load: tR,
-              tK: RR,
-              failed: GR
+          onTaken: (rr, Qr) => {
+            this.landed = Zr, this.current = {
+              mine: Zr,
+              sources: Sr,
+              load: Wr,
+              sp: rr,
+              failed: Qr
             }
           }
         })
       }
-      restore(RR) {
-        var JR;
-        const GR = this.current;
-        if (null === GR) return Promise.resolve(null);
-        if ((null === (JR = this.restoring) || void 0 === JR ? void 0 : JR.mine) === GR.mine) return this.restoring.done;
-        const yR = {
-          mine: GR.mine,
-          done: this.restoreLanded(GR, RR).finally((() => {
-            this.restoring === yR && (this.restoring = null)
+      restore(rr) {
+        var Sr;
+        const Qr = this.current;
+        if (null === Qr) return Promise.resolve(null);
+        if ((null === (Sr = this.restoring) || void 0 === Sr ? void 0 : Sr.mine) === Qr.mine) return this.restoring.done;
+        const Zr = {
+          mine: Qr.mine,
+          done: this.restoreLanded(Qr, rr).finally((() => {
+            this.restoring === Zr && (this.restoring = null)
           }))
         };
-        return this.restoring = yR, yR.done
+        return this.restoring = Zr, Zr.done
       }
-      async restoreLanded(RR, JR) {
-        const GR = () => this.landed !== RR.mine,
+      async restoreLanded(rr, Sr) {
+        const Qr = () => this.landed !== rr.mine,
           {
-            tK: yR
-          } = RR;
-        if (null !== yR) return this.stopped() ? null : this.core.setTerrainTextures(yR.names, yR.textures, yR.sizes);
-        let tR = JR;
-        for (let uR = 0;; uR++) {
-          const JR = this.retryMs.at(uR),
-            yR = {
-              allOrNothingExcept: void 0 === JR ? void 0 : RR.failed
+            sp: Zr
+          } = rr;
+        if (null !== Zr) return this.stopped() ? null : this.core.setTerrainTextures(Zr.names, Zr.textures, Zr.sizes);
+        let Wr = Sr;
+        for (let ar = 0;; ar++) {
+          const Sr = this.retryMs.at(ar),
+            Zr = {
+              allOrNothingExcept: void 0 === Sr ? void 0 : rr.failed
             },
-            ZR = await this.loadAndHandOver(RR.sources, RR.load, tR, GR, yR);
-          if (!1 !== ZR || void 0 === JR || this.stopped()) return ZR;
-          if (tR = aR, await new Promise((RR => {
-              setTimeout(RR, JR)
-            })), GR()) return null
+            jr = await this.loadAndHandOver(rr.sources, rr.load, Wr, Qr, Zr);
+          if (!1 !== jr || void 0 === Sr || this.stopped()) return jr;
+          if (Wr = tr, await new Promise((rr => {
+              setTimeout(rr, Sr)
+            })), Qr()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(RR, JR, GR, yR) {
-        let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(rr, Sr, Qr, Zr) {
+        let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const uR = this.core.terrainTextureNames();
-        var ZR;
-        if (0 === uR.length) return null === (ZR = tR.onTaken) || void 0 === ZR || ZR.call(tR, null, new Set), !0;
-        let qR, fR;
+        const ar = this.core.terrainTextureNames();
+        var jr;
+        if (0 === ar.length) return null === (jr = Wr.onTaken) || void 0 === jr || jr.call(Wr, null, new Set), !0;
+        let Ir, Er;
         try {
-          qR = await RR(), fR = await rR(uR, qR, JR.decode)
-        } catch (LR) {
-          return yR() ? null : (GR({
+          Ir = await rr(), Er = await Nr(ar, Ir, Sr.decode)
+        } catch (hr) {
+          return Zr() ? null : (Qr({
             name: null,
             url: null,
-            error: LR
+            error: hr
           }), !1)
         }
-        if (yR() || this.stopped()) return null;
-        for (const iR of fR.failures) GR(iR);
-        const VR = tR.allOrNothingExcept;
-        if (void 0 !== VR && fR.failures.some((RR => {
+        if (Zr() || this.stopped()) return null;
+        for (const fr of Er.failures) Qr(fr);
+        const pr = Wr.allOrNothingExcept;
+        if (void 0 !== pr && Er.failures.some((rr => {
             let {
-              name: JR
-            } = RR;
-            return null === JR || !VR.has(JR)
-          })) || !0 === JR.wholeAtlas && fR.failures.some((RR => {
+              name: Sr
+            } = rr;
+            return null === Sr || !pr.has(Sr)
+          })) || !0 === Sr.wholeAtlas && Er.failures.some((rr => {
             let {
-              name: JR
-            } = RR;
-            return null === JR || null !== iR(JR)
+              name: Sr
+            } = rr;
+            return null === Sr || null !== fr(Sr)
           }))) return !1;
         const {
-          handOver: KR
-        } = fR, wR = function(RR) {
-          return RR.textures.reduce(((RR, JR) => RR + JR.byteLength), 0)
-        }(KR) < this.keepBelow, eR = this.core.setTerrainTextures(KR.names, KR.textures, KR.sizes, wR ? void 0 : () => {
-          !async function(RR, JR) {
-            await JR;
+          handOver: xr
+        } = Er, mr = function(rr) {
+          return rr.textures.reduce(((rr, Sr) => rr + Sr.byteLength), 0)
+        }(xr) < this.keepBelow, Ur = this.core.setTerrainTextures(xr.names, xr.textures, xr.sizes, mr ? void 0 : () => {
+          !async function(rr, Sr) {
+            await Sr;
             for (const {
-                buffer: yR
+                buffer: Zr
               }
-              of RR) {
-              const RR = yR;
-              var GR;
-              if (!RR.detached) null === (GR = RR.transfer) || void 0 === GR || GR.call(RR, 0)
+              of rr) {
+              const rr = Zr;
+              var Qr;
+              if (!rr.detached) null === (Qr = rr.transfer) || void 0 === Qr || Qr.call(rr, 0)
             }
-          }(KR.textures, qR.heldUntil)
+          }(xr.textures, Ir.heldUntil)
         });
-        if (eR) {
-          var aR;
-          const RR = new Set(fR.failures.flatMap((RR => {
+        if (Ur) {
+          var tr;
+          const rr = new Set(Er.failures.flatMap((rr => {
             let {
-              name: JR
-            } = RR;
-            return null === JR ? [] : [JR]
+              name: Sr
+            } = rr;
+            return null === Sr ? [] : [Sr]
           })));
-          null === (aR = tR.onTaken) || void 0 === aR || aR.call(tR, wR ? KR : null, RR)
+          null === (tr = Wr.onTaken) || void 0 === tr || tr.call(Wr, mr ? xr : null, rr)
         }
-        return eR
+        return Ur
       }
     }
   },
-  35094: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => fR,
-      f: () => KR,
-      i: () => VR
+  35408: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Er,
+      h: () => xr,
+      l: () => pr
     });
-    var yR = GR(279),
-      tR = GR(103),
-      uR = GR(132),
-      ZR = GR(127),
-      qR = GR(706);
-    const iR = new Set(["mali_bifrost"]);
+    var Zr = Qr(285),
+      Wr = Qr(109),
+      ar = Qr(135),
+      jr = Qr(129),
+      Ir = Qr(705);
+    const fr = new Set(["mali_bifrost"]);
 
-    function fR() {
-      if (qR.e) return;
-      const RR = (0, tR.pageOperatingSystem)();
-      if ("android" !== RR && "windows" !== RR || (0, qR.c)("webgl_default")) return;
-      if ("windows" === RR) return RR => "qualcomm" === (0, tR.normaliseGpuVendor)((0, ZR.b)(RR).vendor);
-      const JR = (0, uR.o)(),
-        GR = null === JR ? (0, yR.u)() : (0, yR.k)(JR.vendor, JR.renderer);
-      return null !== GR && iR.has(GR) ? RR => (0, yR.q)((0, ZR.b)(RR).vendor, GR) : void 0
+    function Er() {
+      if (Ir.h) return;
+      const rr = (0, Wr.pageOperatingSystem)();
+      if ("android" !== rr && "windows" !== rr || (0, Ir.d)("webgl_default")) return;
+      if ("windows" === rr) return rr => "qualcomm" === (0, Wr.normaliseGpuVendor)((0, jr.c)(rr).vendor);
+      const Sr = (0, ar.q)(),
+        Qr = null === Sr ? (0, Zr.p)() : (0, Zr.g)(Sr.vendor, Sr.renderer);
+      return null !== Qr && fr.has(Qr) ? rr => (0, Zr.l)((0, jr.c)(rr).vendor, Qr) : void 0
     }
 
-    function VR(RR, JR) {
-      return RR ? () => !0 : JR()
+    function pr(rr, Sr) {
+      return rr ? () => !0 : Sr()
     }
-    async function KR(RR) {
+    async function xr(rr) {
       try {
-        const JR = VR(RR, fR),
-          GR = navigator.gpu;
-        if (void 0 === JR || void 0 === GR) return !1;
-        const yR = await (0, ZR.i)(GR, {
+        const Sr = pr(rr, Er),
+          Qr = navigator.gpu;
+        if (void 0 === Sr || void 0 === Qr) return !1;
+        const Zr = await (0, jr.k)(Qr, {
           seed: !1,
-          compatibility: JR
+          compatibility: Sr
         });
-        return "string" !== typeof yR && yR.compatibility && !(0, ZR.e)(yR.adapter)
-      } catch (JR) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", JR), !1
+        return "string" !== typeof Zr && Zr.compatibility && !(0, jr.f)(Zr.adapter)
+      } catch (Sr) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", Sr), !1
       }
     }
   },
-  42306: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => iR,
-      g: () => fR
+  42619: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => fr,
+      d: () => Er
     });
-    var yR = GR(103),
-      tR = GR(5201);
-    const uR = "webgpuPipeline";
+    var Zr = Qr(109),
+      Wr = Qr(5126);
+    const ar = "webgpuPipeline";
 
-    function ZR(RR) {
-      return RR.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function jr(rr) {
+      return rr.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let qR = null;
+    let Ir = null;
 
-    function iR() {
-      if (null === qR) try {
-        RR = (0, yR.getBrowserName)(), JR = (0, yR.getBrowserVersion)(), GR = (0, yR.getOperatingSystem)(), tR = (0, yR.getOperatingSystemVersion)(), qR = `${RR.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===JR?"unknown":ZR(JR)}-${GR}${void 0===tR?"":`_${ZR(tR)}`}`
-      } catch (uR) {
-        console.warn("The user agent couldn't be read for its browser code", uR), qR = "unknown"
+    function fr() {
+      if (null === Ir) try {
+        rr = (0, Zr.getBrowserName)(), Sr = (0, Zr.getBrowserVersion)(), Qr = (0, Zr.getOperatingSystem)(), Wr = (0, Zr.getOperatingSystemVersion)(), Ir = `${rr.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===Sr?"unknown":jr(Sr)}-${Qr}${void 0===Wr?"":`_${jr(Wr)}`}`
+      } catch (ar) {
+        console.warn("The user agent couldn't be read for its browser code", ar), Ir = "unknown"
       }
-      var RR, JR, GR, tR;
-      return qR
+      var rr, Sr, Qr, Wr;
+      return Ir
     }
 
-    function fR() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const JR = `WGPU-${iR()}`,
-        yR = (RR, yR) => {
+    function Er() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const Sr = `WGPU-${fr()}`,
+        Zr = (rr, Zr) => {
           const {
-            reason: ZR,
-            message: qR
-          } = yR, iR = String(qR);
-          if ((0, tR.v)(ZR, iR)) return;
-          const fR = {
-            pipeline: null !== RR && void 0 !== RR ? RR : "",
-            reason: String(ZR),
-            browserMessage: iR
+            reason: jr,
+            message: Ir
+          } = Zr, fr = String(Ir);
+          if ((0, Wr.u)(jr, fr)) return;
+          const Er = {
+            pipeline: null !== rr && void 0 !== rr ? rr : "",
+            reason: String(jr),
+            browserMessage: fr
           };
-          Promise.resolve().then((() => GR(42288))).then((RR => {
+          Promise.resolve().then((() => Qr(42607))).then((rr => {
             let {
-              reportCrash: GR
-            } = RR;
-            GR({
+              reportCrash: Qr
+            } = rr;
+            Qr({
               kind: "coreError",
-              code: JR,
-              site: uR,
+              code: Sr,
+              site: ar,
               fatal: !1,
-              message: `${fR.pipeline} ${fR.reason}: ${fR.browserMessage}`,
-              details: fR,
-              error: yR
+              message: `${Er.pipeline} ${Er.reason}: ${Er.browserMessage}`,
+              details: Er,
+              error: Zr
             })
-          })).catch((RR => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", RR)
+          })).catch((rr => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", rr)
           }))
         },
-        ZR = RR.createRenderPipelineAsync;
-      RR.createRenderPipelineAsync = function(RR) {
-        return ZR.call(this, RR).catch((JR => {
-          throw yR(RR.label, JR), JR
+        jr = rr.createRenderPipelineAsync;
+      rr.createRenderPipelineAsync = function(rr) {
+        return jr.call(this, rr).catch((Sr => {
+          throw Zr(rr.label, Sr), Sr
         }))
       };
-      const qR = RR.createComputePipelineAsync;
-      RR.createComputePipelineAsync = function(RR) {
-        return qR.call(this, RR).catch((JR => {
-          throw yR(RR.label, JR), JR
+      const Ir = rr.createComputePipelineAsync;
+      rr.createComputePipelineAsync = function(rr) {
+        return Ir.call(this, rr).catch((Sr => {
+          throw Zr(rr.label, Sr), Sr
         }))
       }
     }
   },
-  42255: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => qR,
-      c: () => iR
+  42581: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Ir,
+      h: () => fr
     });
-    var yR = GR(132);
-    let tR = !1;
+    var Zr = Qr(135);
+    let Wr = !1;
 
-    function uR() {
-      let RR = null;
+    function ar() {
+      let rr = null;
       try {
-        return RR = document.createElement("canvas").getContext("webgl2"), null !== RR
+        return rr = document.createElement("canvas").getContext("webgl2"), null !== rr
       } catch {
         return !1
       } finally {
         try {
-          var JR, GR;
-          null === (JR = RR) || void 0 === JR || null === (GR = JR.getExtension("WEBGL_lose_context")) || void 0 === GR || GR.loseContext()
+          var Sr, Qr;
+          null === (Sr = rr) || void 0 === Sr || null === (Qr = Sr.getExtension("WEBGL_lose_context")) || void 0 === Qr || Qr.loseContext()
         } catch {}
       }
     }
 
-    function ZR() {
-      "hidden" === document.visibilityState && (tR = !1, document.removeEventListener("visibilitychange", ZR))
+    function jr() {
+      "hidden" === document.visibilityState && (Wr = !1, document.removeEventListener("visibilitychange", jr))
     }
 
-    function qR() {
-      tR || "visible" !== document.visibilityState || !(0, yR.r)() && !uR() || (tR = !0, document.addEventListener("visibilitychange", ZR))
+    function Ir() {
+      Wr || "visible" !== document.visibilityState || !(0, Zr.u)() && !ar() || (Wr = !0, document.addEventListener("visibilitychange", jr))
     }
 
-    function iR() {
-      return tR || uR()
+    function fr() {
+      return Wr || ar()
     }
   },
-  42223: (RR, JR, GR) => {
-    RR.exports = GR.p + "static/media/bloxd_wasm_models_bg.c167c820e95fdd32ea75.wasm"
+  42555: (rr, Sr, Qr) => {
+    rr.exports = Qr.p + "static/media/bloxd_wasm_models_bg.65d2d7a0e42a4e1c694f.wasm"
   },
-  42219: (RR, JR, GR) => {
-    RR.exports = GR.p + "static/media/bloxd_wasm_workers_bg.d0ee27575a6e7e3f1fa4.wasm"
+  42553: (rr, Sr, Qr) => {
+    rr.exports = Qr.p + "static/media/bloxd_wasm_workers_bg.5bded7162be9062b4193.wasm"
   },
-  42212: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR,
-      d: () => yR
+  42550: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr,
+      i: () => Zr
     });
-    const yR = {
+    const Zr = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new GR.U(GR(42219))
+        return new Qr.U(Qr(42553))
       }
     };
-    const tR = {
+    const Wr = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new GR.U(GR(42223))
+        return new Qr.U(Qr(42555))
       }
     }
   },
-  7777: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => AR,
-      e: () => CR,
-      h: () => UR,
-      i: () => nR
+  7595: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => er,
+      g: () => Kr,
+      i: () => Yr,
+      k: () => zr
     });
-    var yR = GR(7786);
-    const tR = 6,
-      uR = 3,
-      ZR = 1,
-      qR = 2,
-      iR = 4,
-      fR = 8,
-      VR = 16,
-      KR = 32,
-      wR = 64,
-      rR = 128,
-      eR = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Zr = Qr(7604);
+    const Wr = 6,
+      ar = 3,
+      jr = 1,
+      Ir = 2,
+      fr = 4,
+      Er = 8,
+      pr = 16,
+      xr = 32,
+      mr = 64,
+      Nr = 128,
+      Ur = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function aR(RR) {
-      if (!RR) return 0;
-      const JR = eR.indexOf(RR);
-      if (JR <= 0) throw new Error(`"${RR}" is not a shader pack hook function`);
-      return JR
+    function tr(rr) {
+      if (!rr) return 0;
+      const Sr = Ur.indexOf(rr);
+      if (Sr <= 0) throw new Error(`"${rr}" is not a shader pack hook function`);
+      return Sr
     }
 
-    function LR(RR) {
-      if (0 === RR) return null;
-      const JR = eR[RR];
-      if (void 0 === JR) throw new Error(`${RR} is not a shader pack hook function id`);
-      return JR
+    function hr(rr) {
+      if (0 === rr) return null;
+      const Sr = Ur[rr];
+      if (void 0 === Sr) throw new Error(`${rr} is not a shader pack hook function id`);
+      return Sr
     }
 
-    function nR(RR) {
-      const JR = yR.c.length;
+    function zr(rr) {
+      const Sr = Zr.e.length;
       return {
-        strict: RR >= JR,
-        program: yR.c[RR % JR]
+        strict: rr >= Sr,
+        program: Zr.e[rr % Sr]
       }
     }
 
-    function UR(RR) {
-      return Number(RR.strict) * yR.c.length + yR.c.indexOf(RR.program)
+    function Yr(rr) {
+      return Number(rr.strict) * Zr.e.length + Zr.e.indexOf(rr.program)
     }
 
-    function WR(RR) {
-      return "" === RR ? [] : RR.split(" ")
+    function nr(rr) {
+      return "" === rr ? [] : rr.split(" ")
     }
 
-    function AR(RR) {
-      const JR = {
-        variantFlags: new Uint8Array(tR),
-        hooks: new Uint8Array(tR * uR),
-        moduleCodes: Array(tR).fill(""),
-        reads: Array(2 * tR).fill("")
+    function er(rr) {
+      const Sr = {
+        variantFlags: new Uint8Array(Wr),
+        hooks: new Uint8Array(Wr * ar),
+        moduleCodes: Array(Wr).fill(""),
+        reads: Array(2 * Wr).fill("")
       };
-      for (const GR of RR) {
-        const RR = UR(GR.key),
-          yR = (RR, JR) => null === GR.hooks.surface || GR.reads.fragment.includes(RR) ? 0 : JR;
-        JR.variantFlags[RR] = (GR.sceneDepth ? ZR : 0) | (GR.movesVertices ? qR : 0) | (GR.sunShadow ? iR : 0) | (GR.airShadow ? fR : 0) | (GR.discards ? VR : 0) | yR("localPosition", KR) | yR("enchantSpeed", wR) | yR("enchantTier", rR), JR.hooks[RR * uR] = aR(GR.hooks.vertex), JR.hooks[RR * uR + 1] = aR(GR.hooks.surface), JR.hooks[RR * uR + 2] = aR(GR.hooks.light), JR.moduleCodes[RR] = GR.moduleCode, JR.reads[2 * RR] = GR.reads.vertex.join(" "), JR.reads[2 * RR + 1] = GR.reads.fragment.join(" ")
+      for (const Qr of rr) {
+        const rr = Yr(Qr.key),
+          Zr = (rr, Sr) => null === Qr.hooks.surface || Qr.reads.fragment.includes(rr) ? 0 : Sr;
+        Sr.variantFlags[rr] = (Qr.sceneDepth ? jr : 0) | (Qr.movesVertices ? Ir : 0) | (Qr.sunShadow ? fr : 0) | (Qr.airShadow ? Er : 0) | (Qr.discards ? pr : 0) | Zr("localPosition", xr) | Zr("enchantSpeed", mr) | Zr("enchantTier", Nr), Sr.hooks[rr * ar] = tr(Qr.hooks.vertex), Sr.hooks[rr * ar + 1] = tr(Qr.hooks.surface), Sr.hooks[rr * ar + 2] = tr(Qr.hooks.light), Sr.moduleCodes[rr] = Qr.moduleCode, Sr.reads[2 * rr] = Qr.reads.vertex.join(" "), Sr.reads[2 * rr + 1] = Qr.reads.fragment.join(" ")
       }
-      return JR
+      return Sr
     }
 
-    function CR(RR) {
+    function Kr(rr) {
       const {
-        hooks: JR,
-        moduleCodes: GR,
-        reads: yR
-      } = RR;
-      return Array.from(RR.variantFlags, ((RR, tR) => {
-        const KR = tR * uR;
+        hooks: Sr,
+        moduleCodes: Qr,
+        reads: Zr
+      } = rr;
+      return Array.from(rr.variantFlags, ((rr, Wr) => {
+        const xr = Wr * ar;
         return {
-          key: nR(tR),
+          key: zr(Wr),
           hooks: {
-            vertex: LR(JR[KR]),
-            surface: LR(JR[KR + 1]),
-            light: LR(JR[KR + 2])
+            vertex: hr(Sr[xr]),
+            surface: hr(Sr[xr + 1]),
+            light: hr(Sr[xr + 2])
           },
-          moduleCode: GR[tR],
-          sceneDepth: 0 !== (RR & ZR),
-          sunShadow: 0 !== (RR & iR),
-          airShadow: 0 !== (RR & fR),
-          movesVertices: 0 !== (RR & qR),
-          discards: 0 !== (RR & VR),
+          moduleCode: Qr[Wr],
+          sceneDepth: 0 !== (rr & jr),
+          sunShadow: 0 !== (rr & fr),
+          airShadow: 0 !== (rr & Er),
+          movesVertices: 0 !== (rr & Ir),
+          discards: 0 !== (rr & pr),
           reads: {
-            vertex: WR(yR[2 * tR]),
-            fragment: WR(yR[2 * tR + 1])
+            vertex: nr(Zr[2 * Wr]),
+            fragment: nr(Zr[2 * Wr + 1])
           }
         }
       }))
     }
   },
-  42342: (RR, JR, GR) => {
-    GR.d(JR, {
-      C: () => rR,
-      G: () => eR,
-      b: () => tR,
-      e: () => yR,
-      i: () => wR,
-      j: () => VR,
-      k: () => LR,
-      n: () => uR,
-      o: () => qR,
-      r: () => iR,
-      v: () => ZR,
-      y: () => aR
+  42673: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      B: () => Ur,
+      b: () => Wr,
+      d: () => Zr,
+      h: () => mr,
+      i: () => pr,
+      k: () => hr,
+      m: () => ar,
+      n: () => Ir,
+      p: () => fr,
+      q: () => jr,
+      u: () => tr,
+      x: () => Nr
     });
-    const yR = 3,
-      tR = 0,
-      uR = 1,
-      ZR = 2,
-      qR = {
+    const Zr = 3,
+      Wr = 0,
+      ar = 1,
+      jr = 2,
+      Ir = {
         uniform: 3,
-        Rr: 4,
+        ZN: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      iR = 10,
-      fR = "BloxdPackInputs",
-      VR = "bloxdPackInputs",
-      KR = [{
+      fr = 10,
+      Er = "BloxdPackInputs",
+      pr = "bloxdPackInputs",
+      xr = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -4263,74 +4263,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      wR = 80;
+      mr = 80;
 
-    function rR() {
-      const RR = KR.map((RR => {
+    function Nr() {
+      const rr = xr.map((rr => {
         let {
-          name: JR,
-          type: GR
-        } = RR;
-        return `    ${JR}: ${GR},\n`
+          name: Sr,
+          type: Qr
+        } = rr;
+        return `    ${Sr}: ${Qr},\n`
       })).join("");
-      return `struct ${fR} {\n${RR}}\n@group(${yR}) @binding(${tR}) var<uniform> ${VR}: ${fR};\n`
+      return `struct ${Er} {\n${rr}}\n@group(${Zr}) @binding(${Wr}) var<uniform> ${pr}: ${Er};\n`
     }
 
-    function eR(RR, JR) {
-      const GR = new DataView(RR, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, wR),
-        [yR, tR, uR, ZR, qR, iR] = KR;
-      GR.setFloat32(yR.offset, JR.seconds, !0), GR.setUint32(tR.offset, JR.lit ? 1 : 0, !0);
-      for (let fR = 0; fR < 3; fR++) GR.setInt32(uR.offset + 4 * fR, JR.renderOffset[fR], !0), GR.setFloat32(ZR.offset + 4 * fR, JR.AJR[fR], !0), GR.setFloat32(qR.offset + 4 * fR, JR.eyePosition[fR], !0), GR.setFloat32(iR.offset + 4 * fR, JR.shadowDirection[fR], !0)
+    function Ur(rr, Sr) {
+      const Qr = new DataView(rr, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, mr),
+        [Zr, Wr, ar, jr, Ir, fr] = xr;
+      Qr.setFloat32(Zr.offset, Sr.seconds, !0), Qr.setUint32(Wr.offset, Sr.lit ? 1 : 0, !0);
+      for (let Er = 0; Er < 3; Er++) Qr.setInt32(ar.offset + 4 * Er, Sr.renderOffset[Er], !0), Qr.setFloat32(jr.offset + 4 * Er, Sr.crr[Er], !0), Qr.setFloat32(Ir.offset + 4 * Er, Sr.eyePosition[Er], !0), Qr.setFloat32(fr.offset + 4 * Er, Sr.shadowDirection[Er], !0)
     }
 
-    function aR(RR) {
-      const JR = new Uint32Array(Math.max(1, RR.length));
-      return RR.forEach(((RR, GR) => {
+    function tr(rr) {
+      const Sr = new Uint32Array(Math.max(1, rr.length));
+      return rr.forEach(((rr, Qr) => {
         let {
-          id: yR,
-          rotation: tR
-        } = RR;
-        JR[GR] = 65535 & yR | (3 & tR) << 16
-      })), JR
+          id: Zr,
+          rotation: Wr
+        } = rr;
+        Sr[Qr] = 65535 & Zr | (3 & Wr) << 16
+      })), Sr
     }
-    const LR = {
+    const hr = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7786: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      e: () => ZR,
-      i: () => qR,
-      l: () => tR,
-      n: () => uR
+  7604: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr,
+      f: () => jr,
+      g: () => Ir,
+      k: () => Wr,
+      n: () => ar
     });
-    const yR = ["terrain", "liquid", "model"];
+    const Zr = ["terrain", "liquid", "model"];
 
-    function tR() {
-      const RR = [];
-      for (const JR of [!1, !0])
-        for (const GR of yR) RR.push({
-          strict: JR,
-          program: GR
+    function Wr() {
+      const rr = [];
+      for (const Sr of [!1, !0])
+        for (const Qr of Zr) rr.push({
+          strict: Sr,
+          program: Qr
         });
-      return RR
+      return rr
     }
 
-    function uR(RR) {
-      return `${RR.strict?"strict":"allow"}.${RR.program}`
+    function ar(rr) {
+      return `${rr.strict?"strict":"allow"}.${rr.program}`
     }
 
-    function ZR(RR) {
-      return !RR.hooks.vertex && !RR.hooks.surface && !RR.hooks.light
+    function jr(rr) {
+      return !rr.hooks.vertex && !rr.hooks.surface && !rr.hooks.light
     }
 
-    function qR(RR, JR) {
-      return "off" !== JR && (null === RR || RR.some((RR => RR.key.strict === ("strict" === JR) && !ZR(RR))))
+    function Ir(rr, Sr) {
+      return "off" !== Sr && (null === rr || rr.some((rr => rr.key.strict === ("strict" === Sr) && !jr(rr))))
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

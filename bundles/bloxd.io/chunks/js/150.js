@@ -1,40 +1,40 @@
 export const id = 150;
 export const ids = [150];
 export const modules = {
-  7684: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => wR
+  7514: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => mr
     });
-    var yR = GR(1465),
-      tR = GR(66),
-      uR = GR(112),
-      ZR = GR(1677),
-      qR = GR(1322),
-      iR = GR(359),
-      fR = GR(709);
-    const VR = new URL(qR.p[iR.b.PRODUCTION]).origin;
-    var KR = GR(1378);
+    var Zr = Qr(1444),
+      Wr = Qr(72),
+      ar = Qr(120),
+      jr = Qr(1653),
+      Ir = Qr(1281),
+      fr = Qr(360),
+      Er = Qr(712);
+    const pr = new URL(Ir.q[fr.e.PRODUCTION]).origin;
+    var xr = Qr(1338);
 
-    function wR() {
-      const RR = (0, ZR.x)();
-      return (0, tR.useEffect)((() => {
-        const JR = uR.currentUrl.getSearchParam("code");
-        uR.currentUrl.removeSearchParam("code"), null === JR && (console.error("No authorization code found in the URL"), window.close());
-        const GR = {
-          type: `oauth_authentication_${RR.providerName}`,
-          code: JR
+    function mr() {
+      const rr = (0, jr.w)();
+      return (0, Wr.useEffect)((() => {
+        const Sr = ar.currentUrl.getSearchParam("code");
+        ar.currentUrl.removeSearchParam("code"), null === Sr && (console.error("No authorization code found in the URL"), window.close());
+        const Qr = {
+          type: `oauth_authentication_${rr.providerName}`,
+          code: Sr
         };
-        for (const RR of (tR = window.location.origin) === VR ? [tR, `https://${fR.d}`] : [tR]) {
-          var yR;
-          null === (yR = window.opener) || void 0 === yR || yR.postMessage(GR, RR)
+        for (const rr of (Wr = window.location.origin) === pr ? [Wr, `https://${Er.e}`] : [Wr]) {
+          var Zr;
+          null === (Zr = window.opener) || void 0 === Zr || Zr.postMessage(Qr, rr)
         }
-        var tR;
+        var Wr;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, KR.jsx)("div", {
+      })), (0, xr.jsx)("div", {
         className: "AuthCallback",
-        children: (0, KR.jsx)(yR.d, {
+        children: (0, xr.jsx)(Zr.c, {
           showFace: !0,
           loading: !0
         })
@@ -43,4 +43,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

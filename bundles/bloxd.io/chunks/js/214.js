@@ -1,104 +1,104 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  40409: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR
+  40710: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr
     });
-    class yR {
-      constructor(RR, JR) {
-        this.read = RR, this.apply = JR, this.release = null
+    class Zr {
+      constructor(rr, Sr) {
+        this.read = rr, this.apply = Sr, this.release = null
       }
-      turn(RR, JR) {
-        const GR = null === this.release ? this.read() : this.release.transitionMs;
+      turn(rr, Sr) {
+        const Qr = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: JR,
-          forcedCameraDirection: [RR[0], RR[1], RR[2]]
+          forcedCameraDirectionTransitionMs: Sr,
+          forcedCameraDirection: [rr[0], rr[1], rr[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), JR + 100),
-          transitionMs: GR
+          }), Sr + 100),
+          transitionMs: Qr
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(RR) {
-        null !== this.release && (clearTimeout(this.release.timer), RR && this.apply({
+      stop(rr) {
+        null !== this.release && (clearTimeout(this.release.timer), rr && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  39889: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => uR,
-      e: () => tR
+  40221: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      h: () => Wr
     });
-    const yR = new Map;
+    const Zr = new Map;
 
-    function tR(RR, JR) {
-      yR.set(RR, JR)
+    function Wr(rr, Sr) {
+      Zr.set(rr, Sr)
     }
 
-    function uR(RR) {
-      return RR ? yR.get(RR) : void 0
+    function ar(rr) {
+      return rr ? Zr.get(rr) : void 0
     }
   },
-  37433: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => VR,
-      g: () => qR,
-      i: () => fR,
-      l: () => iR,
-      o: () => WR
+  37815: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => pr,
+      e: () => Ir,
+      f: () => Er,
+      h: () => fr,
+      k: () => nr
     });
-    var yR = GR(688),
-      tR = GR(1963),
-      uR = GR(5685);
-    class ZR {
-      constructor(RR, JR) {
-        this.width = RR, this.hK = JR, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(RR * JR)
+    var Zr = Qr(692),
+      Wr = Qr(1904),
+      ar = Qr(5617);
+    class jr {
+      constructor(rr, Sr) {
+        this.width = rr, this.sx = Sr, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(rr * Sr)
       }
-      push(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const GR = this.data,
-          yR = this.next * this.width;
-        for (let tR = 0; tR < this.width; tR++) GR[yR + tR] = RR[JR + tR];
-        this.next = (this.next + 1) % this.hK, this.size = Math.min(this.size + 1, this.hK)
+      push(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const Qr = this.data,
+          Zr = this.next * this.width;
+        for (let Wr = 0; Wr < this.width; Wr++) Qr[Zr + Wr] = rr[Sr + Wr];
+        this.next = (this.next + 1) % this.sx, this.size = Math.min(this.size + 1, this.sx)
       }
       rows() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const GR = [],
-          yR = (this.next - this.size + this.hK) % this.hK;
-        for (let tR = 0; tR < this.size; tR++) {
-          const uR = (yR + tR) % this.hK * this.width;
-          this.data[uR + RR] >= JR && GR.push(Array.from(this.data.subarray(uR, uR + this.width)))
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const Qr = [],
+          Zr = (this.next - this.size + this.sx) % this.sx;
+        for (let Wr = 0; Wr < this.size; Wr++) {
+          const ar = (Zr + Wr) % this.sx * this.width;
+          this.data[ar + rr] >= Sr && Qr.push(Array.from(this.data.subarray(ar, ar + this.width)))
         }
-        return GR
+        return Qr
       }
       lines() {
-        return this.rows().map((RR => RR.join(",")))
+        return this.rows().map((rr => rr.join(",")))
       }
     }
-    const qR = 10,
-      iR = {
+    const Ir = 10,
+      fr = {
         idle: 0,
-        tK: 1,
-        xH: 2,
-        IH: 3,
-        lL: 4
+        sp: 1,
+        tC: 2,
+        YC: 3,
+        Xh: 4
       },
-      fR = {
+      Er = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      VR = {
+      pr = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -112,91 +112,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      KR = 12e3,
-      wR = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      rR = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      eR = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      aR = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      LR = ["nowMs", "change", "count"];
+      xr = 12e3,
+      mr = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      Nr = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      Ur = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      tr = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      hr = ["nowMs", "change", "count"];
 
-    function nR(RR) {
-      return "js" === RR ? VR.jsClient : VR.wasmClient
+    function zr(rr) {
+      return "js" === rr ? pr.jsClient : pr.wasmClient
     }
-    class UR {
+    class Yr {
       constructor() {
-        this.steps = new ZR(qR, KR), this.events = new ZR(rR.length, KR), this.frames = new ZR(eR.length, KR), this.cameraSets = new ZR(uR.e, 256), this.changes = new ZR(LR.length, 256)
+        this.steps = new jr(Ir, xr), this.events = new jr(Nr.length, xr), this.frames = new jr(Ur.length, xr), this.cameraSets = new jr(ar.i, 256), this.changes = new jr(hr.length, 256)
       }
     }
-    const WR = new class {
+    const nr = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(rR.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(Nr.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(RR, JR) {
-        this.startedClient = RR, this.startedAtMs = performance.now(), null !== this.rings ? this.change(nR(RR)) : JR && this.allocate()
+      start(rr, Sr) {
+        this.startedClient = rr, this.startedAtMs = performance.now(), null !== this.rings ? this.change(zr(rr)) : Sr && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(VR.lockGained)
+        this.allocate(), this.change(pr.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new UR, null !== this.startedClient && this.changeAt(this.startedAtMs, nR(this.startedClient), 1))
+        null === this.rings && (this.rings = new Yr, null !== this.startedClient && this.changeAt(this.startedAtMs, zr(this.startedClient), 1))
       }
-      step(RR, JR) {
-        var GR;
-        RR[JR + 6] !== iR.lL && (null === (GR = this.rings) || void 0 === GR || GR.steps.push(RR, JR))
+      step(rr, Sr) {
+        var Qr;
+        rr[Sr + 6] !== fr.Xh && (null === (Qr = this.rings) || void 0 === Qr || Qr.steps.push(rr, Sr))
       }
-      cameraSet(RR, JR) {
-        var GR;
-        null === (GR = this.rings) || void 0 === GR || GR.cameraSets.push(RR, JR)
+      cameraSet(rr, Sr) {
+        var Qr;
+        null === (Qr = this.rings) || void 0 === Qr || Qr.cameraSets.push(rr, Sr)
       }
-      mouseMove(RR, JR) {
-        const GR = this.rings;
-        if (null === GR) return;
-        const yR = this.sample;
-        yR[0] = RR.timeStamp, yR[1] = performance.now(), yR[2] = RR.movementX, yR[3] = RR.movementY, yR[4] = JR ? 1 : 0, GR.events.push(yR)
+      mouseMove(rr, Sr) {
+        const Qr = this.rings;
+        if (null === Qr) return;
+        const Zr = this.sample;
+        Zr[0] = rr.timeStamp, Zr[1] = performance.now(), Zr[2] = rr.movementX, Zr[3] = rr.movementY, Zr[4] = Sr ? 1 : 0, Qr.events.push(Zr)
       }
-      frame(RR, JR, GR, yR) {
-        const tR = this.rings;
-        if (null === tR || yR === fR.none) return;
-        const uR = this.sample;
-        uR[0] = performance.now(), uR[1] = RR, uR[2] = JR, uR[3] = GR, uR[4] = yR, tR.frames.push(uR)
+      frame(rr, Sr, Qr, Zr) {
+        const Wr = this.rings;
+        if (null === Wr || Zr === Er.none) return;
+        const ar = this.sample;
+        ar[0] = performance.now(), ar[1] = rr, ar[2] = Sr, ar[3] = Qr, ar[4] = Zr, Wr.frames.push(ar)
       }
-      change(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), RR, JR)
+      change(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), rr, Sr)
       }
-      changeAt(RR, JR, GR) {
-        const yR = this.rings;
-        if (null === yR) return;
-        const tR = this.sample;
-        tR[0] = RR, tR[1] = JR, tR[2] = GR, yR.changes.push(tR)
+      changeAt(rr, Sr, Qr) {
+        const Zr = this.rings;
+        if (null === Zr) return;
+        const Wr = this.sample;
+        Wr[0] = rr, Wr[1] = Sr, Wr[2] = Qr, Zr.changes.push(Wr)
       }
       dumpText() {
-        var RR, JR;
-        const GR = this.rings;
-        return [`look records (${this.startedClient}): ${wR.join(",")}`, ...null !== (RR = null === GR || void 0 === GR ? void 0 : GR.steps.lines()) && void 0 !== RR ? RR : [], `mousemove events: ${rR.join(",")}`, ...null !== (JR = null === GR || void 0 === GR ? void 0 : GR.events.lines()) && void 0 !== JR ? JR : []].join("\n")
+        var rr, Sr;
+        const Qr = this.rings;
+        return [`look records (${this.startedClient}): ${mr.join(",")}`, ...null !== (rr = null === Qr || void 0 === Qr ? void 0 : Qr.steps.lines()) && void 0 !== rr ? rr : [], `mousemove events: ${Nr.join(",")}`, ...null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.events.lines()) && void 0 !== Sr ? Sr : []].join("\n")
       }
-      toJson(RR, JR) {
-        var GR;
-        const tR = RR - 6e4,
-          uR = this.rings,
-          ZR = function(RR, JR) {
-            var GR;
-            let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const uR = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.rows(yR, tR)) && void 0 !== GR ? GR : [];
+      toJson(rr, Sr) {
+        var Qr;
+        const Wr = rr - 6e4,
+          ar = this.rings,
+          jr = function(rr, Sr) {
+            var Qr;
+            let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const ar = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.rows(Zr, Wr)) && void 0 !== Qr ? Qr : [];
             return {
-              columns: JR,
-              fromMs: 0 === uR.length ? null : uR[0][yR],
-              rows: uR
+              columns: Sr,
+              fromMs: 0 === ar.length ? null : ar[0][Zr],
+              rows: ar
             }
           };
         return {
-          version: yR.d,
-          client: null !== (GR = this.startedClient) && void 0 !== GR ? GR : "not started",
+          version: Zr.e,
+          client: null !== (Qr = this.startedClient) && void 0 !== Qr ? Qr : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: RR,
+          savedAtMs: rr,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -205,52 +205,52 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          un: null !== document.pointerLockElement,
+          Ez: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...JR,
-          outcomes: iR,
-          frameKinds: fR,
-          changes: VR,
-          lookSteps: ZR(null === uR || void 0 === uR ? void 0 : uR.steps, wR),
-          mouseMoves: ZR(null === uR || void 0 === uR ? void 0 : uR.events, rR, 1),
-          frames: ZR(null === uR || void 0 === uR ? void 0 : uR.frames, eR),
-          cameraSets: ZR(null === uR || void 0 === uR ? void 0 : uR.cameraSets, aR),
-          pageChanges: ZR(null === uR || void 0 === uR ? void 0 : uR.changes, LR)
+          ...Sr,
+          outcomes: fr,
+          frameKinds: Er,
+          changes: pr,
+          lookSteps: jr(null === ar || void 0 === ar ? void 0 : ar.steps, mr),
+          mouseMoves: jr(null === ar || void 0 === ar ? void 0 : ar.events, Nr, 1),
+          frames: jr(null === ar || void 0 === ar ? void 0 : ar.frames, Ur),
+          cameraSets: jr(null === ar || void 0 === ar ? void 0 : ar.cameraSets, tr),
+          pageChanges: jr(null === ar || void 0 === ar ? void 0 : ar.changes, hr)
         }
       }
-      save(RR) {
-        const JR = JSON.stringify(this.toJson(performance.now(), RR));
-        (0, tR.e)(new Blob([JR], {
+      save(rr) {
+        const Sr = JSON.stringify(this.toJson(performance.now(), rr));
+        (0, Wr.c)(new Blob([Sr], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  40957: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR
+  41299: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    var yR = GR(39375);
+    var Zr = Qr(39715);
 
-    function tR(RR, JR, GR) {
-      var tR, uR, ZR, qR, iR, fR, VR;
-      const KR = (0, yR.d)(RR, JR, GR[0], GR[1], GR[2]),
-        wR = KR ? null !== (tR = KR.textCell) && void 0 !== tR ? tR : KR.rect.anchor : GR,
-        rR = JR(wR[0], wR[1], wR[2]);
+    function Wr(rr, Sr, Qr) {
+      var Wr, ar, jr, Ir, fr, Er, pr;
+      const xr = (0, Zr.b)(rr, Sr, Qr[0], Qr[1], Qr[2]),
+        mr = xr ? null !== (Wr = xr.textCell) && void 0 !== Wr ? Wr : xr.rect.anchor : Qr,
+        Nr = Sr(mr[0], mr[1], mr[2]);
       return {
-        pos: [GR[0], GR[1], GR[2]],
-        noticeboardSpan: KR && {
-          width: KR.rect.width,
-          height: KR.rect.height
+        pos: [Qr[0], Qr[1], Qr[2]],
+        noticeboardSpan: xr && {
+          width: xr.rect.width,
+          height: xr.rect.height
         },
-        text: null !== (uR = null === rR || void 0 === rR || null === (ZR = rR.persisted) || void 0 === ZR || null === (qR = ZR.shared) || void 0 === qR ? void 0 : qR.text) && void 0 !== uR ? uR : "",
-        textSize: null !== (iR = null === rR || void 0 === rR || null === (fR = rR.persisted) || void 0 === fR || null === (VR = fR.shared) || void 0 === VR ? void 0 : VR.textSize) && void 0 !== iR ? iR : null
+        text: null !== (ar = null === Nr || void 0 === Nr || null === (jr = Nr.persisted) || void 0 === jr || null === (Ir = jr.shared) || void 0 === Ir ? void 0 : Ir.text) && void 0 !== ar ? ar : "",
+        textSize: null !== (fr = null === Nr || void 0 === Nr || null === (Er = Nr.persisted) || void 0 === Er || null === (pr = Er.shared) || void 0 === pr ? void 0 : pr.textSize) && void 0 !== fr ? fr : null
       }
     }
   },
-  39689: (RR, JR, GR) => {
-    function yR(RR) {
-      switch (RR.kind) {
+  40031: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      switch (rr.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -259,401 +259,401 @@ export const modules = {
           return !0
       }
     }
-    GR.d(JR, {
-      c: () => tR,
-      f: () => uR,
-      h: () => yR
+    Qr.d(Sr, {
+      b: () => Wr,
+      c: () => ar,
+      f: () => Zr
     });
-    const tR = 4,
-      uR = 3
+    const Wr = 4,
+      ar = 3
   },
-  40448: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => tR,
-      e: () => uR
+  40739: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Wr,
+      f: () => ar
     });
-    var yR = GR(377);
-    const tR = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "shooting", "skyIslands", "skyblock", "tsunami"]);
-    class uR {
-      constructor(RR) {
-        this.importGame = RR, this.loads = new Map, this.loaded = new Map
+    var Zr = Qr(379);
+    const Wr = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "shooting", "skyIslands", "skyblock", "tsunami"]);
+    class ar {
+      constructor(rr) {
+        this.importGame = rr, this.loads = new Map, this.loaded = new Map
       }
-      load(RR) {
-        const JR = (0, yR.Sb)(RR);
-        if (!tR.has(JR)) return Promise.resolve(void 0);
-        let GR = this.loads.get(JR);
-        return GR || (GR = this.importGame(JR).then((RR => {
-          const GR = RR.default;
-          if ("function" !== typeof GR) throw new Error(`${JR}'s client code has no default-exported factory`);
-          return this.loaded.set(JR, GR), GR
-        })).catch((RR => {
-          throw this.loads.delete(JR), RR
-        })), this.loads.set(JR, GR)), GR
+      load(rr) {
+        const Sr = (0, Zr.Mb)(rr);
+        if (!Wr.has(Sr)) return Promise.resolve(void 0);
+        let Qr = this.loads.get(Sr);
+        return Qr || (Qr = this.importGame(Sr).then((rr => {
+          const Qr = rr.default;
+          if ("function" !== typeof Qr) throw new Error(`${Sr}'s client code has no default-exported factory`);
+          return this.loaded.set(Sr, Qr), Qr
+        })).catch((rr => {
+          throw this.loads.delete(Sr), rr
+        })), this.loads.set(Sr, Qr)), Qr
       }
-      loadedFactory(RR) {
-        const JR = (0, yR.Sb)(RR);
-        if (!tR.has(JR)) return;
-        const GR = this.loaded.get(JR);
-        if (!GR) throw new Error(`${JR}'s client code started before it loaded`);
-        return GR
+      loadedFactory(rr) {
+        const Sr = (0, Zr.Mb)(rr);
+        if (!Wr.has(Sr)) return;
+        const Qr = this.loaded.get(Sr);
+        if (!Qr) throw new Error(`${Sr}'s client code started before it loaded`);
+        return Qr
       }
     }
   },
-  40441: (RR, JR, GR) => {
-    function yR(RR, JR) {
+  40736: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
       return Object.values({
-        ...RR,
-        ...JR
-      }).filter((RR => null !== RR))
+        ...rr,
+        ...Sr
+      }).filter((rr => null !== rr))
     }
-    GR.d(JR, {
-      b: () => yR
+    Qr.d(Sr, {
+      c: () => Zr
     })
   },
-  40959: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR
+  41303: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr
     });
-    var yR = GR(5953),
-      tR = GR(35162),
-      uR = GR(4555);
+    var Zr = Qr(5878),
+      Wr = Qr(35472),
+      ar = Qr(4489);
 
-    function ZR(RR) {
-      if (RR === yR.b) return 0;
-      const JR = (0, uR.b)(RR);
-      if (void 0 !== JR && JR <= tR.MAX_BLOCK_ID) return JR;
-      const GR = (0, uR.b)(RR.split("|")[0]);
-      if (void 0 !== GR && GR <= tR.MAX_BLOCK_ID && (0, tR.rootMetaDescOf)(GR) === RR) return GR;
-      throw new Error(`Invalid block name. You sent ${RR}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function jr(rr) {
+      if (rr === Zr.e) return 0;
+      const Sr = (0, ar.e)(rr);
+      if (void 0 !== Sr && Sr <= Wr.MAX_BLOCK_ID) return Sr;
+      const Qr = (0, ar.e)(rr.split("|")[0]);
+      if (void 0 !== Qr && Qr <= Wr.MAX_BLOCK_ID && (0, Wr.rootMetaDescOf)(Qr) === rr) return Qr;
+      throw new Error(`Invalid block name. You sent ${rr}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  40491: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => tR
+  40789: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    var yR = GR(25);
-    class tR {
-      constructor(RR) {
-        this.screen = RR, this.hidesHud = !1
+    var Zr = Qr(26);
+    class Wr {
+      constructor(rr) {
+        this.screen = rr, this.hidesHud = !1
       }
-      show(RR, JR) {
-        this.screen.setFade(RR.colour, RR.alpha), this.screen.setLetterbox(!0 === JR.letterbox, RR.alpha < 1), this.setHudHidden(!0 === JR.hideHud)
+      show(rr, Sr) {
+        this.screen.setFade(rr.colour, rr.alpha), this.screen.setLetterbox(!0 === Sr.letterbox, rr.alpha < 1), this.setHudHidden(!0 === Sr.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(RR) {
-        this.hidesHud !== RR && (this.hidesHud = RR, yR.d.set({
-          isUiHiddenByCamera: RR
+      setHudHidden(rr) {
+        this.hidesHud !== rr && (this.hidesHud = rr, Zr.c.set({
+          isUiHiddenByCamera: rr
         }))
       }
     }
   },
-  40482: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      d: () => tR
+  40781: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar,
+      c: () => Wr
     });
-    var yR = GR(37845);
+    var Zr = Qr(38207);
 
-    function tR(RR) {
-      var JR;
-      const GR = "default" === RR.mode ? "movement" : null !== (JR = RR.playerFacing) && void 0 !== JR ? JR : "movement";
-      return "cursor" === GR ? {
-        facing: GR,
+    function Wr(rr) {
+      var Sr;
+      const Qr = "default" === rr.mode ? "movement" : null !== (Sr = rr.playerFacing) && void 0 !== Sr ? Sr : "movement";
+      return "cursor" === Qr ? {
+        facing: Qr,
         mouseTurns: null
       } : {
-        facing: GR,
-        mouseTurns: "default" !== RR.mode && void 0 !== RR.playerLook ? "look" : "view"
+        facing: Qr,
+        mouseTurns: "default" !== rr.mode && void 0 !== rr.playerLook ? "look" : "view"
       }
     }
 
-    function uR(RR, JR, GR, tR, uR, ZR) {
-      return ZR.bD = 0, ZR.PD = 0, ZR.pointedAt = void 0, void 0 !== tR ? uR ? (ZR.pointedAt = tR, RR) : (0, yR.v)(tR.heading) : uR ? (ZR.bD = JR, ZR.PD = GR, RR) : (0, yR.v)(RR + JR)
+    function ar(rr, Sr, Qr, Wr, ar, jr) {
+      return jr.xR = 0, jr.yR = 0, jr.pointedAt = void 0, void 0 !== Wr ? ar ? (jr.pointedAt = Wr, rr) : (0, Zr.q)(Wr.heading) : ar ? (jr.xR = Sr, jr.yR = Qr, rr) : (0, Zr.q)(rr + Sr)
     }
   },
-  40466: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => jR
+  40761: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => wr
     });
-    var yR = GR(40470),
-      tR = GR(37845),
-      uR = GR(38106);
+    var Zr = Qr(40770),
+      Wr = Qr(38207),
+      ar = Qr(38457);
 
-    function ZR(RR, JR, GR, yR) {
-      if (!(yR > 0)) return JR;
-      const tR = JR > RR ? Math.min(JR, RR + GR / yR) : Math.max(JR, RR - GR / yR);
-      return Math.abs(JR - tR) < 1e-9 ? JR : tR
+    function jr(rr, Sr, Qr, Zr) {
+      if (!(Zr > 0)) return Sr;
+      const Wr = Sr > rr ? Math.min(Sr, rr + Qr / Zr) : Math.max(Sr, rr - Qr / Zr);
+      return Math.abs(Sr - Wr) < 1e-9 ? Sr : Wr
     }
-    class qR {
+    class Ir {
       constructor() {
-        this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.mD = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: yR.d,
+        this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.gR = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
+          colour: Zr.d,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(RR) {
-        !this.isGoingOut() && this.sinceTurnMs < yR.k.minFadeTurnMs ? this.waiting = {
+      fadeOut(rr) {
+        !this.isGoingOut() && this.sinceTurnMs < Zr.j.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: RR
-        } : (this.waiting = null, this.startOut(RR))
+          transition: rr
+        } : (this.waiting = null, this.startOut(rr))
       }
-      fadeIn(RR) {
-        this.isGoingOut() ? this.sinceTurnMs < yR.k.minFadeTurnMs ? this.waiting = {
+      fadeIn(rr) {
+        this.isGoingOut() ? this.sinceTurnMs < Zr.j.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: RR
-        } : (this.waiting = null, this.startIn(RR)) : this.waiting = null
+          minMs: rr
+        } : (this.waiting = null, this.startIn(rr)) : this.waiting = null
       }
-      advance(RR) {
-        const JR = this.waiting;
-        if (null === JR) return this.step(RR);
-        const GR = yR.k.minFadeTurnMs - this.sinceTurnMs;
-        if (GR > RR) return this.step(RR);
-        const tR = this.step(GR);
-        return this.waiting = null, "out" === JR.turn ? this.startOut(JR.transition) : this.startIn(JR.minMs), this.step(RR - GR) || tR
+      advance(rr) {
+        const Sr = this.waiting;
+        if (null === Sr) return this.step(rr);
+        const Qr = Zr.j.minFadeTurnMs - this.sinceTurnMs;
+        if (Qr > rr) return this.step(rr);
+        const Wr = this.step(Qr);
+        return this.waiting = null, "out" === Sr.turn ? this.startOut(Sr.transition) : this.startIn(Sr.minMs), this.step(rr - Qr) || Wr
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(RR) {
-        ("in" === this.phase || null === this.phase && this.clearMs < yR.k.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = RR.colour), this.outMs = RR.outMs, this.holdMs = RR.holdMs, this.inMs = RR.inMs
+      startOut(rr) {
+        ("in" === this.phase || null === this.phase && this.clearMs < Zr.j.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = rr.colour), this.outMs = rr.outMs, this.holdMs = rr.holdMs, this.inMs = rr.inMs
       }
-      startIn(RR) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(RR, this.inMs)
+      startIn(rr) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(rr, this.inMs)
       }
-      step(RR) {
-        const JR = this.screen;
-        this.sinceTurnMs += RR, null === this.phase && (this.clearMs += RR);
-        let GR = !1,
-          tR = RR;
+      step(rr) {
+        const Sr = this.screen;
+        this.sinceTurnMs += rr, null === this.phase && (this.clearMs += rr);
+        let Qr = !1,
+          Wr = rr;
         if ("out" === this.phase) {
-          const yR = (1 - JR.alpha) * this.outMs;
-          if (JR.alpha = ZR(JR.alpha, 1, RR, this.outMs), JR.alpha < 1) return !1;
-          this.phase = "hold", this.mD = 0, tR = Math.max(0, RR - yR), GR = !0
+          const Zr = (1 - Sr.alpha) * this.outMs;
+          if (Sr.alpha = jr(Sr.alpha, 1, rr, this.outMs), Sr.alpha < 1) return !1;
+          this.phase = "hold", this.gR = 0, Wr = Math.max(0, rr - Zr), Qr = !0
         }
-        let uR = RR;
+        let ar = rr;
         if ("hold" === this.phase) {
-          this.mD += tR;
-          const RR = Math.min(this.mD - this.holdMs, this.sinceTurnMs - yR.k.minFadeTurnMs);
-          if (RR < 0 || GR) return GR;
-          this.phase = "in", this.sinceTurnMs = RR, uR = RR
+          this.gR += Wr;
+          const rr = Math.min(this.gR - this.holdMs, this.sinceTurnMs - Zr.j.minFadeTurnMs);
+          if (rr < 0 || Qr) return Qr;
+          this.phase = "in", this.sinceTurnMs = rr, ar = rr
         }
-        return "in" === this.phase && (JR.alpha = ZR(JR.alpha, 0, uR, this.inMs), JR.alpha <= 0 && (this.phase = null, this.clearMs = 0)), GR
+        return "in" === this.phase && (Sr.alpha = jr(Sr.alpha, 0, ar, this.inMs), Sr.alpha <= 0 && (this.phase = null, this.clearMs = 0)), Qr
       }
     }
-    var iR = GR(40462),
-      fR = GR(40476),
-      VR = GR(2102),
-      KR = GR(37771);
+    var fr = Qr(40748),
+      Er = Qr(40775),
+      pr = Qr(2049),
+      xr = Qr(38133);
 
-    function wR(RR, JR) {
-      for (let GR = 0; GR < JR.length; GR++) JR[GR] = RR[GR]
+    function mr(rr, Sr) {
+      for (let Qr = 0; Qr < Sr.length; Qr++) Sr[Qr] = rr[Qr]
     }
 
-    function rR(RR, JR) {
-      var GR;
-      return null !== (GR = RR.fov) && void 0 !== GR ? GR : JR.getDefaultFov()
+    function Nr(rr, Sr) {
+      var Qr;
+      return null !== (Qr = rr.fov) && void 0 !== Qr ? Qr : Sr.getDefaultFov()
     }
 
-    function eR(RR, JR, GR, yR, tR) {
-      const uR = 2 / yR,
-        ZR = Math.exp(-uR * tR);
-      for (let qR = 0; qR < RR.length; qR++) {
-        const yR = RR[qR] - GR[qR],
-          iR = (JR[qR] + uR * yR) * tR;
-        RR[qR] = GR[qR] + (yR + iR) * ZR, JR[qR] = (JR[qR] - uR * iR) * ZR
+    function Ur(rr, Sr, Qr, Zr, Wr) {
+      const ar = 2 / Zr,
+        jr = Math.exp(-ar * Wr);
+      for (let Ir = 0; Ir < rr.length; Ir++) {
+        const Zr = rr[Ir] - Qr[Ir],
+          fr = (Sr[Ir] + ar * Zr) * Wr;
+        rr[Ir] = Qr[Ir] + (Zr + fr) * jr, Sr[Ir] = (Sr[Ir] - ar * fr) * jr
       }
     }
-    class aR {
-      constructor(RR, JR, GR, yR) {
-        var uR, ZR, qR, iR, fR;
-        this.settings = RR, this.NK = JR, this.targets = GR, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.BL = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class tr {
+      constructor(rr, Sr, Qr, Zr) {
+        var ar, jr, Ir, fr, Er;
+        this.settings = rr, this.qx = Sr, this.targets = Qr, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Lh = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, tR.v)((0, VR.g)(null !== (uR = RR.viewHeading) && void 0 !== uR ? uR : 0)),
-          pitch: (0, tR.h)((0, VR.g)(null !== (ZR = RR.viewElevation) && void 0 !== ZR ? ZR : 45))
-        }, this.closestDistance = null !== (qR = RR.closestDistance) && void 0 !== qR ? qR : Math.min(6, null !== (iR = RR.furthestDistance) && void 0 !== iR ? iR : 1 / 0), this.furthestDistance = null !== (fR = RR.furthestDistance) && void 0 !== fR ? fR : Math.max(64, this.closestDistance);
-        const KR = (0, tR.e)(this.base.heading, this.base.pitch, this.forward),
-          wR = yR.position,
-          rR = this.closestDistance;
-        this.goal = [wR[0] + KR[0] * rR, wR[1] + KR[1] * rR, wR[2] + KR[2] * rR, rR, this.base.heading, this.base.pitch]
+          heading: (0, Wr.q)((0, pr.k)(null !== (ar = rr.viewHeading) && void 0 !== ar ? ar : 0)),
+          pitch: (0, Wr.i)((0, pr.k)(null !== (jr = rr.viewElevation) && void 0 !== jr ? jr : 45))
+        }, this.closestDistance = null !== (Ir = rr.closestDistance) && void 0 !== Ir ? Ir : Math.min(6, null !== (fr = rr.furthestDistance) && void 0 !== fr ? fr : 1 / 0), this.furthestDistance = null !== (Er = rr.furthestDistance) && void 0 !== Er ? Er : Math.max(64, this.closestDistance);
+        const xr = (0, Wr.f)(this.base.heading, this.base.pitch, this.forward),
+          mr = Zr.position,
+          Nr = this.closestDistance;
+        this.goal = [mr[0] + xr[0] * Nr, mr[1] + xr[1] * Nr, mr[2] + xr[2] * Nr, Nr, this.base.heading, this.base.pitch]
       }
-      update(RR, JR, GR) {
-        var yR, uR;
-        this.placeGoal(null !== (yR = this.settings.fov) && void 0 !== yR ? yR : this.NK.getBaseFov()), this.goal[4] = (0, tR.y)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const ZR = null !== (uR = this.settings.smoothMs) && void 0 !== uR ? uR : 400;
-        !this.started || ZR < 1 ? (wR(this.goal, this.smoothed), this.BL.fill(0), this.started = !0) : eR(this.smoothed, this.BL, this.goal, ZR, RR), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, tR.h)(this.smoothed[5]), JR.apply(this.angles, GR);
-        const qR = (0, tR.e)(GR.heading, GR.pitch, this.forward);
-        for (let tR = 0; tR < 3; tR++) GR.position[tR] = this.smoothed[tR] - qR[tR] * this.smoothed[3];
-        GR.fov = rR(this.settings, this.NK)
+      update(rr, Sr, Qr) {
+        var Zr, ar;
+        this.placeGoal(null !== (Zr = this.settings.fov) && void 0 !== Zr ? Zr : this.qx.getBaseFov()), this.goal[4] = (0, Wr.v)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const jr = null !== (ar = this.settings.smoothMs) && void 0 !== ar ? ar : 400;
+        !this.started || jr < 1 ? (mr(this.goal, this.smoothed), this.Lh.fill(0), this.started = !0) : Ur(this.smoothed, this.Lh, this.goal, jr, rr), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Wr.i)(this.smoothed[5]), Sr.apply(this.angles, Qr);
+        const Ir = (0, Wr.f)(Qr.heading, Qr.pitch, this.forward);
+        for (let Wr = 0; Wr < 3; Wr++) Qr.position[Wr] = this.smoothed[Wr] - Ir[Wr] * this.smoothed[3];
+        Qr.fov = Nr(this.settings, this.qx)
       }
-      continueFrom(RR) {
-        RR instanceof aR && (wR(RR.goal, this.goal), wR(RR.smoothed, this.smoothed), wR(RR.BL, this.BL), this.framedTargets = RR.framedTargets, this.started = RR.started)
+      continueFrom(rr) {
+        rr instanceof tr && (mr(rr.goal, this.goal), mr(rr.smoothed, this.smoothed), mr(rr.Lh, this.Lh), this.framedTargets = rr.framedTargets, this.started = rr.started)
       }
       reset() {
-        this.BL.fill(0), this.started = !1
+        this.Lh.fill(0), this.started = !1
       }
-      placeGoal(RR) {
-        var JR;
-        let GR = 0;
-        for (const VR of this.settings.targets) {
-          const RR = this.targets.currentAimPoint(VR);
-          RR && (0, iR.i)(RR, this.pointAt(GR++))
+      placeGoal(rr) {
+        var Sr;
+        let Qr = 0;
+        for (const pr of this.settings.targets) {
+          const rr = this.targets.currentAimPoint(pr);
+          rr && (0, fr.i)(rr, this.pointAt(Qr++))
         }
-        if (GR > 0) this.framedTargets = !0;
+        if (Qr > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const RR = this.targets.aimPoint(this.NK.localPlayerId);
-          RR && (0, iR.i)(RR, this.pointAt(GR++))
+          const rr = this.targets.aimPoint(this.qx.localPlayerId);
+          rr && (0, fr.i)(rr, this.pointAt(Qr++))
         }
-        const yR = this.goal;
-        if (0 === GR) return void(yR[3] = this.withinDistances(yR[3]));
-        for (let iR = 0; iR < 3; iR++) {
-          let RR = 1 / 0,
-            JR = -1 / 0;
-          for (let yR = 0; yR < GR; yR++) RR = Math.min(RR, this.points[yR][iR]), JR = Math.max(JR, this.points[yR][iR]);
-          yR[iR] = (RR + JR) / 2
+        const Zr = this.goal;
+        if (0 === Qr) return void(Zr[3] = this.withinDistances(Zr[3]));
+        for (let fr = 0; fr < 3; fr++) {
+          let rr = 1 / 0,
+            Sr = -1 / 0;
+          for (let Zr = 0; Zr < Qr; Zr++) rr = Math.min(rr, this.points[Zr][fr]), Sr = Math.max(Sr, this.points[Zr][fr]);
+          Zr[fr] = (rr + Sr) / 2
         }
-        let tR = 0;
-        for (let iR = 0; iR < GR; iR++) {
-          const RR = this.points[iR];
-          tR = Math.max(tR, Math.hypot(RR[0] - yR[0], RR[1] - yR[1], RR[2] - yR[2]))
+        let Wr = 0;
+        for (let fr = 0; fr < Qr; fr++) {
+          const rr = this.points[fr];
+          Wr = Math.max(Wr, Math.hypot(rr[0] - Zr[0], rr[1] - Zr[1], rr[2] - Zr[2]))
         }
-        const uR = Math.tan((0, VR.g)(RR) / 2),
-          ZR = Math.atan(uR * (!0 === this.settings.letterbox ? KR.f : 1)),
-          qR = Math.atan(uR * this.NK.getAspectRatio()),
-          fR = (tR + (null !== (JR = this.settings.padding) && void 0 !== JR ? JR : 2)) / Math.sin(Math.min(ZR, qR));
-        yR[3] = this.withinDistances(fR)
+        const ar = Math.tan((0, pr.k)(rr) / 2),
+          jr = Math.atan(ar * (!0 === this.settings.letterbox ? xr.d : 1)),
+          Ir = Math.atan(ar * this.qx.getAspectRatio()),
+          Er = (Wr + (null !== (Sr = this.settings.padding) && void 0 !== Sr ? Sr : 2)) / Math.sin(Math.min(jr, Ir));
+        Zr[3] = this.withinDistances(Er)
       }
-      withinDistances(RR) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, RR))
+      withinDistances(rr) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, rr))
       }
-      pointAt(RR) {
-        return RR === this.points.length && this.points.push([0, 0, 0]), this.points[RR]
+      pointAt(rr) {
+        return rr === this.points.length && this.points.push([0, 0, 0]), this.points[rr]
       }
     }
-    class LR {
-      constructor(RR) {
-        this.limits = RR, this.yawOffset = 0, this.pitchOffset = 0, this.GL = 0, this.pointedAt = null
+    class hr {
+      constructor(rr) {
+        this.limits = rr, this.yawOffset = 0, this.pitchOffset = 0, this.zh = 0, this.pointedAt = null
       }
-      continueFrom(RR) {
-        this.limits && (this.yawOffset = RR.yawOffset, this.pitchOffset = RR.pitchOffset, this.GL = RR.GL)
+      continueFrom(rr) {
+        this.limits && (this.yawOffset = rr.yawOffset, this.pitchOffset = rr.pitchOffset, this.zh = rr.zh)
       }
-      update(RR, JR) {
-        const GR = this.limits;
-        if (!GR) return;
-        const yR = Number.isFinite(JR.bD) ? JR.bD : 0,
-          tR = Number.isFinite(JR.PD) ? JR.PD : 0;
-        if (JR.pointedAt) this.GL = 0, this.pointedAt = {
-          heading: JR.pointedAt.heading,
-          pitch: JR.pointedAt.pitch
+      update(rr, Sr) {
+        const Qr = this.limits;
+        if (!Qr) return;
+        const Zr = Number.isFinite(Sr.xR) ? Sr.xR : 0,
+          Wr = Number.isFinite(Sr.yR) ? Sr.yR : 0;
+        if (Sr.pointedAt) this.zh = 0, this.pointedAt = {
+          heading: Sr.pointedAt.heading,
+          pitch: Sr.pointedAt.pitch
         };
-        else if (0 !== yR || 0 !== tR) this.GL = 0, this.yawOffset += yR, this.pitchOffset += tR;
+        else if (0 !== Zr || 0 !== Wr) this.zh = 0, this.yawOffset += Zr, this.pitchOffset += Wr;
         else {
-          const JR = Math.max(0, this.GL + RR - 200) - Math.max(0, this.GL - 200);
-          if (this.GL += RR, void 0 !== GR.returnMs && JR > 0) {
-            const RR = GR.returnMs > 0 ? Math.exp(-3 * JR / GR.returnMs) : 0;
-            this.yawOffset *= RR, this.pitchOffset *= RR
+          const Sr = Math.max(0, this.zh + rr - 200) - Math.max(0, this.zh - 200);
+          if (this.zh += rr, void 0 !== Qr.returnMs && Sr > 0) {
+            const rr = Qr.returnMs > 0 ? Math.exp(-3 * Sr / Qr.returnMs) : 0;
+            this.yawOffset *= rr, this.pitchOffset *= rr
           }
         }
-        this.clampOffsets(GR)
+        this.clampOffsets(Qr)
       }
-      clampOffsets(RR) {
-        if (RR.maxYaw >= 180) this.yawOffset = (0, tR.x)(0, this.yawOffset);
+      clampOffsets(rr) {
+        if (rr.maxYaw >= 180) this.yawOffset = (0, Wr.r)(0, this.yawOffset);
         else {
-          const JR = (0, VR.g)(RR.maxYaw);
-          this.yawOffset = Math.max(-JR, Math.min(JR, this.yawOffset))
+          const Sr = (0, pr.k)(rr.maxYaw);
+          this.yawOffset = Math.max(-Sr, Math.min(Sr, this.yawOffset))
         }
-        const JR = (0, VR.g)(RR.maxPitch);
-        this.pitchOffset = Math.max(-JR, Math.min(JR, this.pitchOffset))
+        const Sr = (0, pr.k)(rr.maxPitch);
+        this.pitchOffset = Math.max(-Sr, Math.min(Sr, this.pitchOffset))
       }
-      apply(RR, JR) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, tR.x)(RR.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - RR.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const GR = (0, tR.h)(RR.pitch + this.pitchOffset);
-        this.pitchOffset = GR - RR.pitch, JR.heading = (0, tR.v)(RR.heading + this.yawOffset), JR.pitch = GR
+      apply(rr, Sr) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, Wr.r)(rr.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - rr.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const Qr = (0, Wr.i)(rr.pitch + this.pitchOffset);
+        this.pitchOffset = Qr - rr.pitch, Sr.heading = (0, Wr.q)(rr.heading + this.yawOffset), Sr.pitch = Qr
       }
-      unapply(RR, JR) {
-        JR.heading = (0, tR.v)(RR.heading - this.yawOffset), JR.pitch = (0, tR.h)(RR.pitch - this.pitchOffset)
+      unapply(rr, Sr) {
+        Sr.heading = (0, Wr.q)(rr.heading - this.yawOffset), Sr.pitch = (0, Wr.i)(rr.pitch - this.pitchOffset)
       }
     }
-    const nR = 1e-6;
+    const zr = 1e-6;
 
-    function UR(RR) {
-      return Math.sqrt(RR[0] * RR[0] + RR[1] * RR[1] + RR[2] * RR[2])
+    function Yr(rr) {
+      return Math.sqrt(rr[0] * rr[0] + rr[1] * rr[1] + rr[2] * rr[2])
     }
 
-    function WR(RR, JR, GR, yR, tR) {
-      const uR = tR * tR,
-        ZR = uR * tR;
-      return (2 * ZR - 3 * uR + 1) * RR + (ZR - 2 * uR + tR) * JR + (-2 * ZR + 3 * uR) * GR + (ZR - uR) * yR
+    function nr(rr, Sr, Qr, Zr, Wr) {
+      const ar = Wr * Wr,
+        jr = ar * Wr;
+      return (2 * jr - 3 * ar + 1) * rr + (jr - 2 * ar + Wr) * Sr + (-2 * jr + 3 * ar) * Qr + (jr - ar) * Zr
     }
 
-    function AR(RR, JR, GR, yR, tR) {
-      const uR = tR * tR;
-      return (6 * uR - 6 * tR) * RR + (3 * uR - 4 * tR + 1) * JR + (-6 * uR + 6 * tR) * GR + (3 * uR - 2 * tR) * yR
+    function er(rr, Sr, Qr, Zr, Wr) {
+      const ar = Wr * Wr;
+      return (6 * ar - 6 * Wr) * rr + (3 * ar - 4 * Wr + 1) * Sr + (-6 * ar + 6 * Wr) * Qr + (3 * ar - 2 * Wr) * Zr
     }
 
-    function CR(RR, JR) {
-      const GR = JR[0] - RR[0],
-        yR = JR[1] - RR[1],
-        tR = JR[2] - RR[2];
-      return Math.sqrt(GR * GR + yR * yR + tR * tR)
+    function Kr(rr, Sr) {
+      const Qr = Sr[0] - rr[0],
+        Zr = Sr[1] - rr[1],
+        Wr = Sr[2] - rr[2];
+      return Math.sqrt(Qr * Qr + Zr * Zr + Wr * Wr)
     }
 
-    function XR(RR, JR, GR, yR, tR, uR) {
-      for (let ZR = 0; ZR < 3; ZR++) uR[ZR] = tR ? RR[ZR] * yR : GR[ZR] - JR[ZR];
-      return tR && function(RR, JR) {
-        const GR = UR(RR);
-        if (GR > JR) {
-          const yR = JR / GR;
-          RR[0] *= yR, RR[1] *= yR, RR[2] *= yR
+    function yr(rr, Sr, Qr, Zr, Wr, ar) {
+      for (let jr = 0; jr < 3; jr++) ar[jr] = Wr ? rr[jr] * Zr : Qr[jr] - Sr[jr];
+      return Wr && function(rr, Sr) {
+        const Qr = Yr(rr);
+        if (Qr > Sr) {
+          const Zr = Sr / Qr;
+          rr[0] *= Zr, rr[1] *= Zr, rr[2] *= Zr
         }
-      }(uR, 3 * CR(JR, GR)), uR
+      }(ar, 3 * Kr(Sr, Qr)), ar
     }
 
-    function MR(RR, JR, GR, yR) {
-      for (let tR = 0; tR < 3; tR++) yR[tR] = 6 * (JR[tR] - RR[tR]) - 2 * GR[tR];
-      if (UR(yR) < nR)
-        for (let tR = 0; tR < 3; tR++) yR[tR] = JR[tR] - RR[tR];
-      return yR
+    function Br(rr, Sr, Qr, Zr) {
+      for (let Wr = 0; Wr < 3; Wr++) Zr[Wr] = 6 * (Sr[Wr] - rr[Wr]) - 2 * Qr[Wr];
+      if (Yr(Zr) < zr)
+        for (let Wr = 0; Wr < 3; Wr++) Zr[Wr] = Sr[Wr] - rr[Wr];
+      return Zr
     }
 
-    function BR(RR, JR) {
-      return [2 * JR[0] - RR[0], 2 * JR[1] - RR[1], 2 * JR[2] - RR[2]]
+    function Tr(rr, Sr) {
+      return [2 * Sr[0] - rr[0], 2 * Sr[1] - rr[1], 2 * Sr[2] - rr[2]]
     }
 
-    function lR(RR, JR, GR, yR, tR, uR, ZR) {
-      if (!uR && !ZR) return 0;
-      const qR = uR ? RR : 2 * JR - GR,
-        iR = ZR ? GR : 2 * JR - RR,
-        fR = uR ? yR : tR,
-        VR = ZR ? tR : yR,
-        KR = (JR - qR) / fR,
-        wR = (iR - JR) / VR;
-      if (KR * wR <= 0) return 0;
-      const rR = (iR - qR) / (fR + VR),
-        eR = 3 * Math.min(Math.abs(KR), Math.abs(wR));
-      return Math.max(-eR, Math.min(eR, rR))
+    function vr(rr, Sr, Qr, Zr, Wr, ar, jr) {
+      if (!ar && !jr) return 0;
+      const Ir = ar ? rr : 2 * Sr - Qr,
+        fr = jr ? Qr : 2 * Sr - rr,
+        Er = ar ? Zr : Wr,
+        pr = jr ? Wr : Zr,
+        xr = (Sr - Ir) / Er,
+        mr = (fr - Sr) / pr;
+      if (xr * mr <= 0) return 0;
+      const Nr = (fr - Ir) / (Er + pr),
+        Ur = 3 * Math.min(Math.abs(xr), Math.abs(mr));
+      return Math.max(-Ur, Math.min(Ur, Nr))
     }
 
-    function pR(RR, JR, GR, yR, tR, uR, ZR) {
+    function Or(rr, Sr, Qr, Zr, Wr, ar, jr) {
       const {
-        u: qR,
-        segmentMs: iR
-      } = RR;
-      if (!RR.curved) return GR + (yR - GR) * qR;
-      return WR(GR, lR(JR, GR, yR, RR.beforeMs, iR, uR, !0) * iR, yR, lR(GR, yR, tR, iR, RR.afterMs, !0, ZR) * iR, qR)
+        u: Ir,
+        segmentMs: fr
+      } = rr;
+      if (!rr.curved) return Qr + (Zr - Qr) * Ir;
+      return nr(Qr, vr(Sr, Qr, Zr, rr.beforeMs, fr, ar, !0) * fr, Zr, vr(Qr, Zr, Wr, fr, rr.afterMs, !0, jr) * fr, Ir)
     }
 
-    function gR(RR) {
-      return Math.abs(RR.pitch) >= tR.b
+    function Lr(rr) {
+      return Math.abs(rr.pitch) >= Wr.b
     }
-    class bR {
-      constructor(RR, JR, GR, yR, tR) {
-        this.nodes = RR, this.prevNodes = GR, this.nextNodes = yR, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class lr {
+      constructor(rr, Sr, Qr, Zr, Wr) {
+        this.nodes = rr, this.prevNodes = Qr, this.nextNodes = Zr, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -668,84 +668,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = RR.map(((RR, GR) => this.nodeTangent(JR, tR, GR)))
+        }, this.tangents = rr.map(((rr, Qr) => this.nodeTangent(Sr, Wr, Qr)))
       }
-      sample(RR, JR, GR) {
+      sample(rr, Sr, Qr) {
         const {
-          index: yR,
-          toIndex: uR,
-          segmentMs: ZR,
-          curved: qR
-        } = RR, iR = this.fromAngles, fR = this.toAngles, VR = this.nodeAngles(yR, GR.position, JR, iR), KR = this.nodeAngles(uR, GR.position, JR, fR);
-        if (ZR > 0 && "aim" !== VR && "aim" !== KR && this.liveTangent(RR, iR)) return GR.heading = (0, tR.v)(iR.heading), void(GR.pitch = iR.pitch);
-        if ("none" === VR && "none" === KR) return;
-        !qR && ZR > 0 && ("tangent" === VR && this.liveTangent(RR, iR), "tangent" === KR && this.liveTangent(RR, fR)), "none" === VR ? (0, tR.l)(fR, iR) : "none" === KR && (0, tR.l)(iR, fR);
-        const wR = qR && RR.beforeIndex >= 0 && "none" !== this.nodeAngles(RR.beforeIndex, GR.position, JR, this.beforeAngles),
-          rR = qR && RR.afterIndex >= 0 && "none" !== this.nodeAngles(RR.afterIndex, GR.position, JR, this.afterAngles),
-          eR = (0, tR.y)(iR.heading, fR.heading),
-          aR = pR(RR, wR ? (0, tR.y)(iR.heading, this.beforeAngles.heading) : 0, iR.heading, eR, rR ? (0, tR.y)(eR, this.afterAngles.heading) : 0, wR, rR);
-        GR.heading = (0, tR.v)(aR), GR.pitch = (0, tR.h)(pR(RR, this.beforeAngles.pitch, iR.pitch, fR.pitch, this.afterAngles.pitch, wR, rR))
+          index: Zr,
+          toIndex: ar,
+          segmentMs: jr,
+          curved: Ir
+        } = rr, fr = this.fromAngles, Er = this.toAngles, pr = this.nodeAngles(Zr, Qr.position, Sr, fr), xr = this.nodeAngles(ar, Qr.position, Sr, Er);
+        if (jr > 0 && "aim" !== pr && "aim" !== xr && this.liveTangent(rr, fr)) return Qr.heading = (0, Wr.q)(fr.heading), void(Qr.pitch = fr.pitch);
+        if ("none" === pr && "none" === xr) return;
+        !Ir && jr > 0 && ("tangent" === pr && this.liveTangent(rr, fr), "tangent" === xr && this.liveTangent(rr, Er)), "none" === pr ? (0, Wr.j)(Er, fr) : "none" === xr && (0, Wr.j)(fr, Er);
+        const mr = Ir && rr.beforeIndex >= 0 && "none" !== this.nodeAngles(rr.beforeIndex, Qr.position, Sr, this.beforeAngles),
+          Nr = Ir && rr.afterIndex >= 0 && "none" !== this.nodeAngles(rr.afterIndex, Qr.position, Sr, this.afterAngles),
+          Ur = (0, Wr.v)(fr.heading, Er.heading),
+          tr = Or(rr, mr ? (0, Wr.v)(fr.heading, this.beforeAngles.heading) : 0, fr.heading, Ur, Nr ? (0, Wr.v)(Ur, this.afterAngles.heading) : 0, mr, Nr);
+        Qr.heading = (0, Wr.q)(tr), Qr.pitch = (0, Wr.i)(Or(rr, this.beforeAngles.pitch, fr.pitch, Er.pitch, this.afterAngles.pitch, mr, Nr))
       }
-      nodeAngles(RR, JR, GR, yR) {
-        const tR = this.rawNodeAngles(RR, JR, GR, yR);
-        return "none" !== tR && gR(yR) && !this.borrowHeading(this.prevNodes[RR], JR, GR, yR) && this.borrowHeading(this.nextNodes[RR], JR, GR, yR), tR
+      nodeAngles(rr, Sr, Qr, Zr) {
+        const Wr = this.rawNodeAngles(rr, Sr, Qr, Zr);
+        return "none" !== Wr && Lr(Zr) && !this.borrowHeading(this.prevNodes[rr], Sr, Qr, Zr) && this.borrowHeading(this.nextNodes[rr], Sr, Qr, Zr), Wr
       }
-      borrowHeading(RR, JR, GR, yR) {
-        const tR = this.borrowedAngles;
-        return !(RR < 0 || "none" === this.rawNodeAngles(RR, JR, GR, tR) || gR(tR)) && (yR.heading = tR.heading, !0)
+      borrowHeading(rr, Sr, Qr, Zr) {
+        const Wr = this.borrowedAngles;
+        return !(rr < 0 || "none" === this.rawNodeAngles(rr, Sr, Qr, Wr) || Lr(Wr)) && (Zr.heading = Wr.heading, !0)
       }
-      rawNodeAngles(RR, JR, GR, yR) {
-        const uR = this.nodes[RR].keyframe;
-        if (uR.lookDirection) return (0, tR.o)(uR.lookDirection, yR), "aim";
-        if (void 0 !== uR.lookAt) {
-          const RR = GR(uR.lookAt);
-          if (RR) return (0, tR.t)(JR, RR, yR), "aim"
+      rawNodeAngles(rr, Sr, Qr, Zr) {
+        const ar = this.nodes[rr].keyframe;
+        if (ar.lookDirection) return (0, Wr.l)(ar.lookDirection, Zr), "aim";
+        if (void 0 !== ar.lookAt) {
+          const rr = Qr(ar.lookAt);
+          if (rr) return (0, Wr.p)(Sr, rr, Zr), "aim"
         }
-        const ZR = this.tangents[RR];
-        return ZR ? ((0, tR.l)(ZR, yR), "tangent") : "none"
+        const jr = this.tangents[rr];
+        return jr ? ((0, Wr.j)(jr, Zr), "tangent") : "none"
       }
-      liveTangent(RR, JR) {
-        const GR = this.nodes[RR.index].position,
-          yR = this.nodes[RR.toIndex].position,
-          uR = this.derivative;
-        for (let tR = 0; tR < 3; tR++) uR[tR] = AR(GR[tR], RR.fromTangent[tR], yR[tR], RR.toTangent[tR], RR.u);
-        return UR(uR) > 1e-9 ? ((0, tR.o)(uR, JR), !0) : !(CR(GR, yR) < nR) && ((0, tR.o)(MR(GR, yR, RR.u < .5 ? RR.toTangent : RR.fromTangent, uR), JR), !0)
+      liveTangent(rr, Sr) {
+        const Qr = this.nodes[rr.index].position,
+          Zr = this.nodes[rr.toIndex].position,
+          ar = this.derivative;
+        for (let Wr = 0; Wr < 3; Wr++) ar[Wr] = er(Qr[Wr], rr.fromTangent[Wr], Zr[Wr], rr.toTangent[Wr], rr.u);
+        return Yr(ar) > 1e-9 ? ((0, Wr.l)(ar, Sr), !0) : !(Kr(Qr, Zr) < zr) && ((0, Wr.l)(Br(Qr, Zr, rr.u < .5 ? rr.toTangent : rr.fromTangent, ar), Sr), !0)
       }
-      nodeTangent(RR, JR, GR) {
-        var yR;
-        const uR = RR[GR];
-        if (UR(uR) > 1e-9) return (0, tR.o)(uR, {
+      nodeTangent(rr, Sr, Qr) {
+        var Zr;
+        const ar = rr[Qr];
+        if (Yr(ar) > 1e-9) return (0, Wr.l)(ar, {
           heading: 0,
           pitch: 0
         });
-        const ZR = null !== (yR = this.restDirectionTo(GR, GR + 1, RR, JR)) && void 0 !== yR ? yR : this.restDirectionTo(GR, GR - 1, RR, JR);
-        return ZR ? (0, tR.o)(ZR, {
+        const jr = null !== (Zr = this.restDirectionTo(Qr, Qr + 1, rr, Sr)) && void 0 !== Zr ? Zr : this.restDirectionTo(Qr, Qr - 1, rr, Sr);
+        return jr ? (0, Wr.l)(jr, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(RR, JR, GR, yR) {
-        const tR = this.nodes[RR],
-          uR = this.nodes[JR];
-        if (!uR || CR(tR.position, uR.position) < nR) return null;
-        const [ZR, qR] = JR > RR ? [tR, uR] : [uR, tR], iR = XR(GR[JR], ZR.position, qR.position, qR.timeMs - ZR.timeMs, yR, [0, 0, 0]);
-        return MR(ZR.position, qR.position, iR, [0, 0, 0])
+      restDirectionTo(rr, Sr, Qr, Zr) {
+        const Wr = this.nodes[rr],
+          ar = this.nodes[Sr];
+        if (!ar || Kr(Wr.position, ar.position) < zr) return null;
+        const [jr, Ir] = Sr > rr ? [Wr, ar] : [ar, Wr], fr = yr(Qr[Sr], jr.position, Ir.position, Ir.timeMs - jr.timeMs, Zr, [0, 0, 0]);
+        return Br(jr.position, Ir.position, fr, [0, 0, 0])
       }
     }
 
-    function vR(RR, JR) {
-      const GR = RR.lookDirection || JR.lookDirection ? function(RR, JR) {
-        if (!RR || !JR) return RR === JR;
-        const GR = UR(RR),
-          yR = UR(JR);
-        return Math.hypot(RR[0] / GR - JR[0] / yR, RR[1] / GR - JR[1] / yR, RR[2] / GR - JR[2] / yR) < nR
-      }(RR.lookDirection, JR.lookDirection) : (yR = RR.lookAt, tR = JR.lookAt, "object" !== typeof yR || "object" !== typeof tR ? yR === tR : CR(yR, tR) < nR);
-      var yR, tR;
-      return CR(RR.position, JR.position) < nR && RR.fov === JR.fov && GR
+    function Xr(rr, Sr) {
+      const Qr = rr.lookDirection || Sr.lookDirection ? function(rr, Sr) {
+        if (!rr || !Sr) return rr === Sr;
+        const Qr = Yr(rr),
+          Zr = Yr(Sr);
+        return Math.hypot(rr[0] / Qr - Sr[0] / Zr, rr[1] / Qr - Sr[1] / Zr, rr[2] / Qr - Sr[2] / Zr) < zr
+      }(rr.lookDirection, Sr.lookDirection) : (Zr = rr.lookAt, Wr = Sr.lookAt, "object" !== typeof Zr || "object" !== typeof Wr ? Zr === Wr : Kr(Zr, Wr) < zr);
+      var Zr, Wr;
+      return Kr(rr.position, Sr.position) < zr && rr.fov === Sr.fov && Qr
     }
-    class OR {
-      constructor(RR, JR, GR) {
-        if (this.smooth = JR, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class Pr {
+      constructor(rr, Sr, Qr) {
+        if (this.smooth = Sr, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -757,330 +757,330 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === RR.length) throw new Error("A camera path needs at least one keyframe");
-        for (let uR = 1; uR < RR.length; uR++)
-          if (!(RR[uR].timeMs > RR[uR - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = RR.map((RR => {
-          var JR;
+          }, 0 === rr.length) throw new Error("A camera path needs at least one keyframe");
+        for (let ar = 1; ar < rr.length; ar++)
+          if (!(rr[ar].timeMs > rr[ar - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = rr.map((rr => {
+          var Sr;
           return {
-            timeMs: RR.timeMs,
-            position: [...RR.position],
-            keyframe: RR,
-            easing: (0, uR.m)(null !== (JR = RR.easing) && void 0 !== JR ? JR : "linear")
+            timeMs: rr.timeMs,
+            position: [...rr.position],
+            keyframe: rr,
+            easing: (0, ar.s)(null !== (Sr = rr.easing) && void 0 !== Sr ? Sr : "linear")
           }
         }));
-        const yR = this.nodes[0],
-          tR = this.nodes[this.nodes.length - 1],
-          ZR = GR && this.nodes.length > 1;
-        ZR && !vR(yR.keyframe, tR.keyframe) && this.nodes.push({
-          ...yR,
-          timeMs: tR.timeMs + (tR.timeMs - yR.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = ZR ? this.nodes[this.nodes.length - 1].timeMs - yR.timeMs : 0, this.prevNodes = this.nodes.map(((RR, JR) => this.neighbour(JR, -1))), this.nextNodes = this.nodes.map(((RR, JR) => this.neighbour(JR, 1))), this.prevGaps = this.prevNodes.map(((RR, JR) => RR >= 0 ? this.gapMs(JR, -1) : 0)), this.nextGaps = this.nextNodes.map(((RR, JR) => RR >= 0 ? this.gapMs(JR, 1) : 0)), this.velocities = this.nodes.map(((RR, JR) => {
-          const GR = this.prevNodes[JR],
-            yR = this.nextNodes[JR];
-          return function(RR, JR, GR, yR, tR, uR) {
-            if (uR[0] = 0, uR[1] = 0, uR[2] = 0, !RR && !GR) return uR;
-            const ZR = null !== RR && void 0 !== RR ? RR : BR(null !== GR && void 0 !== GR ? GR : JR, JR),
-              qR = null !== GR && void 0 !== GR ? GR : BR(null !== RR && void 0 !== RR ? RR : JR, JR),
-              iR = RR ? yR : tR,
-              fR = GR ? tR : yR,
-              VR = CR(ZR, JR),
-              KR = CR(JR, qR);
-            if (VR < nR || KR < nR) return uR;
-            const wR = Math.sqrt(VR),
-              rR = Math.sqrt(KR),
-              eR = (wR + rR) / (iR + fR);
-            for (let aR = 0; aR < 3; aR++) {
-              const RR = (JR[aR] - ZR[aR]) / wR - (qR[aR] - ZR[aR]) / (wR + rR) + (qR[aR] - JR[aR]) / rR;
-              uR[aR] = RR * eR
+        const Zr = this.nodes[0],
+          Wr = this.nodes[this.nodes.length - 1],
+          jr = Qr && this.nodes.length > 1;
+        jr && !Xr(Zr.keyframe, Wr.keyframe) && this.nodes.push({
+          ...Zr,
+          timeMs: Wr.timeMs + (Wr.timeMs - Zr.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = jr ? this.nodes[this.nodes.length - 1].timeMs - Zr.timeMs : 0, this.prevNodes = this.nodes.map(((rr, Sr) => this.neighbour(Sr, -1))), this.nextNodes = this.nodes.map(((rr, Sr) => this.neighbour(Sr, 1))), this.prevGaps = this.prevNodes.map(((rr, Sr) => rr >= 0 ? this.gapMs(Sr, -1) : 0)), this.nextGaps = this.nextNodes.map(((rr, Sr) => rr >= 0 ? this.gapMs(Sr, 1) : 0)), this.velocities = this.nodes.map(((rr, Sr) => {
+          const Qr = this.prevNodes[Sr],
+            Zr = this.nextNodes[Sr];
+          return function(rr, Sr, Qr, Zr, Wr, ar) {
+            if (ar[0] = 0, ar[1] = 0, ar[2] = 0, !rr && !Qr) return ar;
+            const jr = null !== rr && void 0 !== rr ? rr : Tr(null !== Qr && void 0 !== Qr ? Qr : Sr, Sr),
+              Ir = null !== Qr && void 0 !== Qr ? Qr : Tr(null !== rr && void 0 !== rr ? rr : Sr, Sr),
+              fr = rr ? Zr : Wr,
+              Er = Qr ? Wr : Zr,
+              pr = Kr(jr, Sr),
+              xr = Kr(Sr, Ir);
+            if (pr < zr || xr < zr) return ar;
+            const mr = Math.sqrt(pr),
+              Nr = Math.sqrt(xr),
+              Ur = (mr + Nr) / (fr + Er);
+            for (let tr = 0; tr < 3; tr++) {
+              const rr = (Sr[tr] - jr[tr]) / mr - (Ir[tr] - jr[tr]) / (mr + Nr) + (Ir[tr] - Sr[tr]) / Nr;
+              ar[tr] = rr * Ur
             }
-            return uR
-          }(GR >= 0 ? this.nodes[GR].position : null, RR.position, yR >= 0 ? this.nodes[yR].position : null, this.prevGaps[JR], this.nextGaps[JR], [0, 0, 0])
-        })), this.aim = new bR(this.nodes, this.velocities, this.prevNodes, this.nextNodes, JR)
+            return ar
+          }(Qr >= 0 ? this.nodes[Qr].position : null, rr.position, Zr >= 0 ? this.nodes[Zr].position : null, this.prevGaps[Sr], this.nextGaps[Sr], [0, 0, 0])
+        })), this.aim = new lr(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Sr)
       }
-      sample(RR, JR, GR, yR) {
-        const tR = this.findSegment(this.pathTime(RR));
-        this.samplePosition(tR, yR.position), this.aim.sample(tR, JR, yR);
+      sample(rr, Sr, Qr, Zr) {
+        const Wr = this.findSegment(this.pathTime(rr));
+        this.samplePosition(Wr, Zr.position), this.aim.sample(Wr, Sr, Zr);
         const {
-          beforeIndex: uR,
-          afterIndex: ZR
-        } = tR;
-        yR.fov = pR(tR, uR >= 0 ? this.fovAt(uR, GR) : 0, this.fovAt(tR.index, GR), this.fovAt(tR.toIndex, GR), ZR >= 0 ? this.fovAt(ZR, GR) : 0, uR >= 0, ZR >= 0)
+          beforeIndex: ar,
+          afterIndex: jr
+        } = Wr;
+        Zr.fov = Or(Wr, ar >= 0 ? this.fovAt(ar, Qr) : 0, this.fovAt(Wr.index, Qr), this.fovAt(Wr.toIndex, Qr), jr >= 0 ? this.fovAt(jr, Qr) : 0, ar >= 0, jr >= 0)
       }
-      pathTime(RR) {
-        const JR = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || RR <= JR) return RR;
-        const GR = RR - JR;
-        return JR + GR - this.loopMs * Math.floor(GR / this.loopMs)
+      pathTime(rr) {
+        const Sr = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || rr <= Sr) return rr;
+        const Qr = rr - Sr;
+        return Sr + Qr - this.loopMs * Math.floor(Qr / this.loopMs)
       }
-      findSegment(RR) {
-        const JR = this.nodes,
-          GR = this.segment;
-        let yR = GR.index;
-        for (RR < JR[yR].timeMs && (yR = 0); yR < JR.length - 2 && JR[yR + 1].timeMs <= RR;) yR++;
-        const tR = Math.min(yR + 1, JR.length - 1),
-          ZR = JR[tR].timeMs - JR[yR].timeMs;
-        return GR.index = yR, GR.toIndex = tR, GR.segmentMs = ZR, GR.u = ZR > 0 ? (0, uR.l)((RR - JR[yR].timeMs) / ZR, JR[yR].easing) : 1, GR.curved = this.smooth && ZR > 0, GR.beforeIndex = this.prevNodes[yR], GR.afterIndex = this.nextNodes[tR], GR.beforeMs = this.prevGaps[yR], GR.afterMs = this.nextGaps[tR], GR
+      findSegment(rr) {
+        const Sr = this.nodes,
+          Qr = this.segment;
+        let Zr = Qr.index;
+        for (rr < Sr[Zr].timeMs && (Zr = 0); Zr < Sr.length - 2 && Sr[Zr + 1].timeMs <= rr;) Zr++;
+        const Wr = Math.min(Zr + 1, Sr.length - 1),
+          jr = Sr[Wr].timeMs - Sr[Zr].timeMs;
+        return Qr.index = Zr, Qr.toIndex = Wr, Qr.segmentMs = jr, Qr.u = jr > 0 ? (0, ar.r)((rr - Sr[Zr].timeMs) / jr, Sr[Zr].easing) : 1, Qr.curved = this.smooth && jr > 0, Qr.beforeIndex = this.prevNodes[Zr], Qr.afterIndex = this.nextNodes[Wr], Qr.beforeMs = this.prevGaps[Zr], Qr.afterMs = this.nextGaps[Wr], Qr
       }
-      samplePosition(RR, JR) {
+      samplePosition(rr, Sr) {
         const {
-          fromTangent: GR,
-          toTangent: yR,
-          curved: tR
-        } = RR, uR = this.nodes[RR.index].position, ZR = this.nodes[RR.toIndex].position;
-        XR(this.velocities[RR.index], uR, ZR, RR.segmentMs, tR, GR), XR(this.velocities[RR.toIndex], uR, ZR, RR.segmentMs, tR, yR);
-        const qR = RR.u;
-        for (let iR = 0; iR < 3; iR++) JR[iR] = tR ? WR(uR[iR], GR[iR], ZR[iR], yR[iR], qR) : uR[iR] + (ZR[iR] - uR[iR]) * qR
+          fromTangent: Qr,
+          toTangent: Zr,
+          curved: Wr
+        } = rr, ar = this.nodes[rr.index].position, jr = this.nodes[rr.toIndex].position;
+        yr(this.velocities[rr.index], ar, jr, rr.segmentMs, Wr, Qr), yr(this.velocities[rr.toIndex], ar, jr, rr.segmentMs, Wr, Zr);
+        const Ir = rr.u;
+        for (let fr = 0; fr < 3; fr++) Sr[fr] = Wr ? nr(ar[fr], Qr[fr], jr[fr], Zr[fr], Ir) : ar[fr] + (jr[fr] - ar[fr]) * Ir
       }
-      fovAt(RR, JR) {
-        var GR;
-        return null !== (GR = this.nodes[RR].keyframe.fov) && void 0 !== GR ? GR : JR
+      fovAt(rr, Sr) {
+        var Qr;
+        return null !== (Qr = this.nodes[rr].keyframe.fov) && void 0 !== Qr ? Qr : Sr
       }
-      neighbour(RR, JR) {
-        const GR = this.nodes.length - 1,
-          yR = RR + JR;
-        return yR >= 0 && yR <= GR ? yR : this.loopMs <= 0 || GR < 2 ? -1 : yR < 0 ? GR - 1 : 1
+      neighbour(rr, Sr) {
+        const Qr = this.nodes.length - 1,
+          Zr = rr + Sr;
+        return Zr >= 0 && Zr <= Qr ? Zr : this.loopMs <= 0 || Qr < 2 ? -1 : Zr < 0 ? Qr - 1 : 1
       }
-      gapMs(RR, JR) {
-        const GR = this.nodes.length - 1;
-        if (1 === JR) {
-          const JR = RR === GR ? 0 : RR;
-          return this.nodes[JR + 1].timeMs - this.nodes[JR].timeMs
+      gapMs(rr, Sr) {
+        const Qr = this.nodes.length - 1;
+        if (1 === Sr) {
+          const Sr = rr === Qr ? 0 : rr;
+          return this.nodes[Sr + 1].timeMs - this.nodes[Sr].timeMs
         }
-        const yR = 0 === RR ? GR : RR;
-        return this.nodes[yR].timeMs - this.nodes[yR - 1].timeMs
+        const Zr = 0 === rr ? Qr : rr;
+        return this.nodes[Zr].timeMs - this.nodes[Zr - 1].timeMs
       }
     }
 
-    function xR(RR, JR, GR) {
-      return null !== GR && Number.isFinite(GR) ? (RR.set(JR, GR), GR) : RR.get(JR)
+    function Hr(rr, Sr, Qr) {
+      return null !== Qr && Number.isFinite(Qr) ? (rr.set(Sr, Qr), Qr) : rr.get(Sr)
     }
-    class NR {
-      constructor(RR) {
-        this.NK = RR, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = JR => RR.getEntityPosition(JR), this.readAimPoint = JR => RR.getEntityAimPoint(JR)
+    class qr {
+      constructor(rr) {
+        this.qx = rr, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Sr => rr.getEntityPosition(Sr), this.readAimPoint = Sr => rr.getEntityAimPoint(Sr)
       }
-      aimPoint(RR) {
-        return "string" !== typeof RR ? (0, iR.p)(RR, 3) ? RR : null : this.resolve(RR, this.readAimPoint, this.lastAimPoints)
+      aimPoint(rr) {
+        return "string" !== typeof rr ? (0, fr.p)(rr, 3) ? rr : null : this.resolve(rr, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(RR) {
-        const JR = "string" === typeof RR ? this.NK.getEntityAimPoint(RR) : RR;
-        return JR && (0, iR.p)(JR, 3) ? JR : null
+      currentAimPoint(rr) {
+        const Sr = "string" === typeof rr ? this.qx.getEntityAimPoint(rr) : rr;
+        return Sr && (0, fr.p)(Sr, 3) ? Sr : null
       }
-      feetPosition(RR) {
-        return this.resolve(RR, this.readFeet, this.lastFeet)
+      feetPosition(rr) {
+        return this.resolve(rr, this.readFeet, this.lastFeet)
       }
-      heading(RR) {
-        const JR = xR(this.lastHeadings, RR, this.NK.getEntityHeading(RR));
-        return void 0 !== JR ? JR : RR === this.NK.localPlayerId ? 0 : this.heading(this.NK.localPlayerId)
+      heading(rr) {
+        const Sr = Hr(this.lastHeadings, rr, this.qx.getEntityHeading(rr));
+        return void 0 !== Sr ? Sr : rr === this.qx.localPlayerId ? 0 : this.heading(this.qx.localPlayerId)
       }
-      pitch(RR) {
-        var JR;
-        return null !== (JR = xR(this.lastPitches, RR, this.NK.getEntityPitch(RR))) && void 0 !== JR ? JR : 0
+      pitch(rr) {
+        var Sr;
+        return null !== (Sr = Hr(this.lastPitches, rr, this.qx.getEntityPitch(rr))) && void 0 !== Sr ? Sr : 0
       }
-      lookHeading(RR) {
-        var JR;
-        return null !== (JR = xR(this.lastLookHeadings, RR, this.NK.getEntityLookHeading(RR))) && void 0 !== JR ? JR : this.heading(RR)
+      lookHeading(rr) {
+        var Sr;
+        return null !== (Sr = Hr(this.lastLookHeadings, rr, this.qx.getEntityLookHeading(rr))) && void 0 !== Sr ? Sr : this.heading(rr)
       }
-      resolve(RR, JR, GR) {
-        const yR = JR(RR);
-        let tR = GR.get(RR);
-        return yR && (0, iR.p)(yR, 3) ? (tR || (tR = [0, 0, 0], GR.set(RR, tR)), tR[0] = yR[0], tR[1] = yR[1], tR[2] = yR[2], tR) : tR || (RR === this.NK.localPlayerId ? null : this.resolve(this.NK.localPlayerId, JR, GR))
+      resolve(rr, Sr, Qr) {
+        const Zr = Sr(rr);
+        let Wr = Qr.get(rr);
+        return Zr && (0, fr.p)(Zr, 3) ? (Wr || (Wr = [0, 0, 0], Qr.set(rr, Wr)), Wr[0] = Zr[0], Wr[1] = Zr[1], Wr[2] = Zr[2], Wr) : Wr || (rr === this.qx.localPlayerId ? null : this.resolve(this.qx.localPlayerId, Sr, Qr))
       }
     }
 
-    function DR(RR) {
+    function Rr(rr) {
       return {
-        heading: RR.heading,
-        pitch: RR.pitch
+        heading: rr.heading,
+        pitch: rr.pitch
       }
     }
 
-    function HR(RR, JR) {
-      Number.isFinite(RR.heading) && Number.isFinite(RR.pitch) || (0, tR.l)(JR, RR)
+    function gr(rr, Sr) {
+      Number.isFinite(rr.heading) && Number.isFinite(rr.pitch) || (0, Wr.j)(Sr, rr)
     }
 
-    function oR(RR, JR, GR, yR, uR) {
-      if (JR) return void(0, tR.o)(JR, uR);
-      const ZR = yR.aimPoint(GR);
-      ZR && (0, tR.t)(RR, ZR, uR)
+    function Cr(rr, Sr, Qr, Zr, ar) {
+      if (Sr) return void(0, Wr.l)(Sr, ar);
+      const jr = Zr.aimPoint(Qr);
+      jr && (0, Wr.p)(rr, jr, ar)
     }
-    class cR {
-      constructor(RR, JR, GR, yR) {
-        this.settings = RR, this.NK = JR, this.targets = GR, this.base = void 0, this.base = DR(yR)
+    class Mr {
+      constructor(rr, Sr, Qr, Zr) {
+        this.settings = rr, this.qx = Sr, this.targets = Qr, this.base = void 0, this.base = Rr(Zr)
       }
-      update(RR, JR, GR) {
-        var yR;
-        const tR = this.settings;
-        (0, iR.i)(tR.position, GR.position), oR(tR.position, tR.lookDirection, null !== (yR = tR.lookAt) && void 0 !== yR ? yR : this.NK.localPlayerId, this.targets, this.base), JR.apply(this.base, GR), GR.fov = rR(tR, this.NK)
+      update(rr, Sr, Qr) {
+        var Zr;
+        const Wr = this.settings;
+        (0, fr.i)(Wr.position, Qr.position), Cr(Wr.position, Wr.lookDirection, null !== (Zr = Wr.lookAt) && void 0 !== Zr ? Zr : this.qx.localPlayerId, this.targets, this.base), Sr.apply(this.base, Qr), Qr.fov = Nr(Wr, this.qx)
       }
-      continueFrom(RR) {
-        RR instanceof cR && (0, tR.l)(RR.base, this.base)
+      continueFrom(rr) {
+        rr instanceof Mr && (0, Wr.j)(rr.base, this.base)
       }
-      reset(RR) {
-        HR(this.base, RR)
+      reset(rr) {
+        gr(this.base, rr)
       }
     }
-    class PR {
-      constructor(RR, JR, GR, yR) {
-        this.settings = RR, this.NK = JR, this.targets = GR, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.BL = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = DR(yR), this.goal = [...yR.position]
+    class Gr {
+      constructor(rr, Sr, Qr, Zr) {
+        this.settings = rr, this.qx = Sr, this.targets = Qr, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Lh = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = Rr(Zr), this.goal = [...Zr.position]
       }
-      update(RR, JR, GR) {
-        var yR, uR;
-        const ZR = this.settings,
-          qR = null !== (yR = ZR.target) && void 0 !== yR ? yR : this.NK.localPlayerId,
-          fR = this.targets.feetPosition(qR),
-          VR = "eye" === ZR.anchor;
-        let KR = !1;
-        var wR;
-        fR && (KR = this.foundFeet && CR(this.lastFeet, fR) > 32 + .1 * RR, (0, iR.i)(fR, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (wR = VR ? this.targets.aimPoint(qR) : null) && void 0 !== wR ? wR : fR, qR));
-        const aR = null !== (uR = ZR.smoothMs) && void 0 !== uR ? uR : 0;
-        !this.started || aR < 1 || KR ? ((0, iR.i)(this.goal, this.smoothed), this.BL.fill(0), this.started = !0) : eR(this.smoothed, this.BL, this.goal, aR, RR), KR && (this.distance = -1), (0, iR.i)(this.smoothed, GR.position);
-        const LR = !0 === ZR.avoidTerrain ? this.pullIn(qR, RR, GR) : 1;
-        let nR = this.goal;
-        if ("target" === ZR.offsetSpace) nR = GR.position;
-        else if (LR < 1) {
-          nR = this.aimOrigin;
-          for (let RR = 0; RR < 3; RR++) nR[RR] = GR.position[RR] + (this.goal[RR] - this.smoothed[RR]) * LR
+      update(rr, Sr, Qr) {
+        var Zr, ar;
+        const jr = this.settings,
+          Ir = null !== (Zr = jr.target) && void 0 !== Zr ? Zr : this.qx.localPlayerId,
+          Er = this.targets.feetPosition(Ir),
+          pr = "eye" === jr.anchor;
+        let xr = !1;
+        var mr;
+        Er && (xr = this.foundFeet && Kr(this.lastFeet, Er) > 32 + .1 * rr, (0, fr.i)(Er, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (mr = pr ? this.targets.aimPoint(Ir) : null) && void 0 !== mr ? mr : Er, Ir));
+        const tr = null !== (ar = jr.smoothMs) && void 0 !== ar ? ar : 0;
+        !this.started || tr < 1 || xr ? ((0, fr.i)(this.goal, this.smoothed), this.Lh.fill(0), this.started = !0) : Ur(this.smoothed, this.Lh, this.goal, tr, rr), xr && (this.distance = -1), (0, fr.i)(this.smoothed, Qr.position);
+        const hr = !0 === jr.avoidTerrain ? this.pullIn(Ir, rr, Qr) : 1;
+        let zr = this.goal;
+        if ("target" === jr.offsetSpace) zr = Qr.position;
+        else if (hr < 1) {
+          zr = this.aimOrigin;
+          for (let rr = 0; rr < 3; rr++) zr[rr] = Qr.position[rr] + (this.goal[rr] - this.smoothed[rr]) * hr
         }
-        if (VR && !ZR.lookDirection && void 0 === ZR.lookAt) {
-          const JR = this.targets.lookHeading(qR),
-            GR = this.targets.pitch(qR),
-            yR = 1 - Math.exp(-RR / 50),
-            uR = (0, tR.v)(this.eyeHeading + (0, tR.x)(this.eyeHeading, JR) * yR),
-            ZR = this.eyePitch + (GR - this.eyePitch) * yR,
-            iR = qR !== this.NK.localPlayerId && Number.isFinite(uR) && Number.isFinite(ZR) && !KR;
-          this.eyeHeading = iR ? uR : (0, tR.v)(JR), this.eyePitch = iR ? ZR : GR, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
+        if (pr && !jr.lookDirection && void 0 === jr.lookAt) {
+          const Sr = this.targets.lookHeading(Ir),
+            Qr = this.targets.pitch(Ir),
+            Zr = 1 - Math.exp(-rr / 50),
+            ar = (0, Wr.q)(this.eyeHeading + (0, Wr.r)(this.eyeHeading, Sr) * Zr),
+            jr = this.eyePitch + (Qr - this.eyePitch) * Zr,
+            fr = Ir !== this.qx.localPlayerId && Number.isFinite(ar) && Number.isFinite(jr) && !xr;
+          this.eyeHeading = fr ? ar : (0, Wr.q)(Sr), this.eyePitch = fr ? jr : Qr, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
         } else {
-          var UR;
-          this.eyeHeading = NaN, this.eyePitch = NaN, oR(nR, ZR.lookDirection, null !== (UR = ZR.lookAt) && void 0 !== UR ? UR : qR, this.targets, this.base)
+          var Yr;
+          this.eyeHeading = NaN, this.eyePitch = NaN, Cr(zr, jr.lookDirection, null !== (Yr = jr.lookAt) && void 0 !== Yr ? Yr : Ir, this.targets, this.base)
         }
-        JR.apply(this.base, GR), GR.fov = rR(ZR, this.NK)
+        Sr.apply(this.base, Qr), Qr.fov = Nr(jr, this.qx)
       }
-      continueFrom(RR) {
-        RR instanceof PR && (0, yR.s)(RR.settings.target, this.settings.target) && ((0, tR.l)(RR.base, this.base), (0, iR.i)(RR.goal, this.goal), (0, iR.i)(RR.lastFeet, this.lastFeet), this.foundFeet = RR.foundFeet, (0, iR.i)(RR.smoothed, this.smoothed), (0, iR.i)(RR.BL, this.BL), this.started = RR.started, this.eyeHeading = RR.eyeHeading, this.eyePitch = RR.eyePitch, !0 === RR.settings.avoidTerrain && (this.distance = RR.distance))
+      continueFrom(rr) {
+        rr instanceof Gr && (0, Zr.s)(rr.settings.target, this.settings.target) && ((0, Wr.j)(rr.base, this.base), (0, fr.i)(rr.goal, this.goal), (0, fr.i)(rr.lastFeet, this.lastFeet), this.foundFeet = rr.foundFeet, (0, fr.i)(rr.smoothed, this.smoothed), (0, fr.i)(rr.Lh, this.Lh), this.started = rr.started, this.eyeHeading = rr.eyeHeading, this.eyePitch = rr.eyePitch, !0 === rr.settings.avoidTerrain && (this.distance = rr.distance))
       }
-      reset(RR) {
-        HR(this.base, RR), this.BL.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
+      reset(rr) {
+        gr(this.base, rr), this.Lh.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
       }
-      pullIn(RR, JR, GR) {
-        const yR = this.targets.aimPoint(RR);
-        if (!yR) return 1;
-        const tR = GR.position,
-          uR = CR(yR, tR);
-        if (!(uR > 0)) return 1;
-        const ZR = this.toCamera;
-        for (let iR = 0; iR < 3; iR++) ZR[iR] = (tR[iR] - yR[iR]) / uR;
-        const qR = function(RR, JR, GR) {
-          return RR < 0 || JR < RR ? JR : JR + (RR - JR) * Math.exp(-GR / 150)
-        }(this.distance, function(RR, JR, GR, yR) {
-          const tR = RR.raycastTerrain(JR, GR, yR);
-          return null !== tR && Number.isFinite(tR) ? Math.min(yR, Math.max(0, tR - .2)) : yR
-        }(this.NK, yR, ZR, uR), JR);
-        if (uR - qR < .001) return this.distance = -1, 1;
-        this.distance = qR;
-        for (let iR = 0; iR < 3; iR++) tR[iR] = yR[iR] + ZR[iR] * qR;
-        return qR / uR
+      pullIn(rr, Sr, Qr) {
+        const Zr = this.targets.aimPoint(rr);
+        if (!Zr) return 1;
+        const Wr = Qr.position,
+          ar = Kr(Zr, Wr);
+        if (!(ar > 0)) return 1;
+        const jr = this.toCamera;
+        for (let fr = 0; fr < 3; fr++) jr[fr] = (Wr[fr] - Zr[fr]) / ar;
+        const Ir = function(rr, Sr, Qr) {
+          return rr < 0 || Sr < rr ? Sr : Sr + (rr - Sr) * Math.exp(-Qr / 150)
+        }(this.distance, function(rr, Sr, Qr, Zr) {
+          const Wr = rr.raycastTerrain(Sr, Qr, Zr);
+          return null !== Wr && Number.isFinite(Wr) ? Math.min(Zr, Math.max(0, Wr - .2)) : Zr
+        }(this.qx, Zr, jr, ar), Sr);
+        if (ar - Ir < .001) return this.distance = -1, 1;
+        this.distance = Ir;
+        for (let fr = 0; fr < 3; fr++) Wr[fr] = Zr[fr] + jr[fr] * Ir;
+        return Ir / ar
       }
-      placeGoal(RR, JR) {
-        const GR = this.settings.offset;
-        let yR = GR[0],
-          tR = GR[2];
+      placeGoal(rr, Sr) {
+        const Qr = this.settings.offset;
+        let Zr = Qr[0],
+          Wr = Qr[2];
         if ("target" === this.settings.offsetSpace) {
-          const RR = this.targets.heading(JR),
-            uR = Math.cos(RR),
-            ZR = Math.sin(RR);
-          yR = GR[0] * uR + GR[2] * ZR, tR = -GR[0] * ZR + GR[2] * uR
+          const rr = this.targets.heading(Sr),
+            ar = Math.cos(rr),
+            jr = Math.sin(rr);
+          Zr = Qr[0] * ar + Qr[2] * jr, Wr = -Qr[0] * jr + Qr[2] * ar
         }
-        this.goal[0] = RR[0] + yR, this.goal[1] = RR[1] + GR[1], this.goal[2] = RR[2] + tR
+        this.goal[0] = rr[0] + Zr, this.goal[1] = rr[1] + Qr[1], this.goal[2] = rr[2] + Wr
       }
     }
-    class IR {
-      constructor(RR, JR, GR, yR) {
-        var tR, uR;
-        this.settings = RR, this.NK = JR, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = RR.keyframes.length > 0 ? new OR(RR.keyframes, null === (tR = RR.smooth) || void 0 === tR || tR, null !== (uR = RR.loop) && void 0 !== uR && uR) : null, this.base = (0, iR.f)(yR, (0, iR.j)()), this.resolveTarget = RR => GR.aimPoint(RR)
+    class kr {
+      constructor(rr, Sr, Qr, Zr) {
+        var Wr, ar;
+        this.settings = rr, this.qx = Sr, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = rr.keyframes.length > 0 ? new Pr(rr.keyframes, null === (Wr = rr.smooth) || void 0 === Wr || Wr, null !== (ar = rr.loop) && void 0 !== ar && ar) : null, this.base = (0, fr.f)(Zr, (0, fr.k)()), this.resolveTarget = rr => Qr.aimPoint(rr)
       }
-      update(RR, JR, GR) {
-        this.elapsedMs += RR;
-        const yR = rR(this.settings, this.NK);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, yR, this.base) : this.base.fov = yR, (0, iR.i)(this.base.position, GR.position), GR.fov = this.base.fov, JR.apply(this.base, GR)
+      update(rr, Sr, Qr) {
+        this.elapsedMs += rr;
+        const Zr = Nr(this.settings, this.qx);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Zr, this.base) : this.base.fov = Zr, (0, fr.i)(this.base.position, Qr.position), Qr.fov = this.base.fov, Sr.apply(this.base, Qr)
       }
-      continueFrom(RR) {
-        RR instanceof IR && (0, yR.s)(RR.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = RR.elapsedMs, (0, iR.f)(RR.base, this.base))
+      continueFrom(rr) {
+        rr instanceof kr && (0, Zr.s)(rr.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = rr.elapsedMs, (0, fr.f)(rr.base, this.base))
       }
-      reset(RR) {
-        HR(this.base, RR), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(rr) {
+        gr(this.base, rr), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function mR(RR, JR) {
-      return (0, yR.t)(RR, JR)
+    function Ar(rr, Sr) {
+      return (0, Zr.v)(rr, Sr)
     }
-    class zR {
-      constructor(RR, JR, GR) {
-        var yR;
-        this.settings = RR, this.NK = JR, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const tR = null !== GR && GR.settings.mode === RR.mode,
-          uR = tR ? GR.pose : JR.getDefaultPose();
-        this.pose = (0, iR.f)(uR, (0, iR.j)()), this.lastGoodPose = (0, iR.f)(tR ? GR.lastGoodPose : uR, (0, iR.j)()), this.look = new LR(RR.playerLook), this.targets = null !== (yR = null === GR || void 0 === GR ? void 0 : GR.targets) && void 0 !== yR ? yR : new NR(JR);
-        const ZR = (0, iR.f)(uR, (0, iR.j)());
-        tR && GR.look.unapply(ZR, ZR), this.mode = function(RR, JR, GR, yR) {
-          switch (RR.mode) {
+    class Vr {
+      constructor(rr, Sr, Qr) {
+        var Zr;
+        this.settings = rr, this.qx = Sr, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const Wr = null !== Qr && Qr.settings.mode === rr.mode,
+          ar = Wr ? Qr.pose : Sr.getDefaultPose();
+        this.pose = (0, fr.f)(ar, (0, fr.k)()), this.lastGoodPose = (0, fr.f)(Wr ? Qr.lastGoodPose : ar, (0, fr.k)()), this.look = new hr(rr.playerLook), this.targets = null !== (Zr = null === Qr || void 0 === Qr ? void 0 : Qr.targets) && void 0 !== Zr ? Zr : new qr(Sr);
+        const jr = (0, fr.f)(ar, (0, fr.k)());
+        Wr && Qr.look.unapply(jr, jr), this.mode = function(rr, Sr, Qr, Zr) {
+          switch (rr.mode) {
             case "fixed":
-              return new cR(RR, JR, GR, yR);
+              return new Mr(rr, Sr, Qr, Zr);
             case "follow":
-              return new PR(RR, JR, GR, yR);
+              return new Gr(rr, Sr, Qr, Zr);
             case "path":
-              return new IR(RR, JR, GR, yR);
+              return new kr(rr, Sr, Qr, Zr);
             case "frame":
-              return new aR(RR, JR, GR, yR)
+              return new tr(rr, Sr, Qr, Zr)
           }
-        }(RR, JR, this.targets, ZR), tR && (this.look.continueFrom(GR.look), this.mode.continueFrom(GR.mode))
+        }(rr, Sr, this.targets, jr), Wr && (this.look.continueFrom(Qr.look), this.mode.continueFrom(Qr.mode))
       }
-      update(RR, JR) {
-        return this.look.update(RR, JR), this.mode.update(RR, this.look, this.pose), (0, iR.n)(this.pose) ? (0, iR.f)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, iR.f)(this.lastGoodPose, this.pose), this.mode.reset((0, iR.n)(this.lastGoodPose) ? this.lastGoodPose : this.NK.getDefaultPose())), this.pose
+      update(rr, Sr) {
+        return this.look.update(rr, Sr), this.mode.update(rr, this.look, this.pose), (0, fr.o)(this.pose) ? (0, fr.f)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, fr.f)(this.lastGoodPose, this.pose), this.mode.reset((0, fr.o)(this.lastGoodPose) ? this.lastGoodPose : this.qx.getDefaultPose())), this.pose
       }
     }
 
-    function SR(RR) {
-      return [0, 0, RR[2], RR[3]]
+    function ir(rr) {
+      return [0, 0, rr[2], rr[3]]
     }
-    class jR {
-      constructor(RR) {
-        this.NK = RR, this.settings = {
+    class wr {
+      constructor(rr) {
+        this.qx = rr, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new qR, this.shot = null, this.blend = null, this.mixed = (0, iR.j)(), this.output = (0, iR.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new Ir, this.shot = null, this.blend = null, this.mixed = (0, fr.k)(), this.output = (0, fr.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(RR) {
-        const JR = (0, fR.c)(RR);
-        if ((0, yR.s)(JR, this.pending ? this.pending.settings : this.settings)) return;
-        const GR = mR(this.settings, JR);
-        if (void 0 !== JR.transition && !GR) return this.pending = {
-          settings: JR,
-          shot: "default" === JR.mode ? null : new zR(JR, this.NK, null)
-        }, void this.fade.fadeOut(JR.transition);
-        const tR = null !== this.pending;
-        this.pending = null, !tR && GR || this.fade.fadeIn(yR.k.minTransitionFadeMs), this.show(JR, !1)
+      setSettings(rr) {
+        const Sr = (0, Er.d)(rr);
+        if ((0, Zr.s)(Sr, this.pending ? this.pending.settings : this.settings)) return;
+        const Qr = Ar(this.settings, Sr);
+        if (void 0 !== Sr.transition && !Qr) return this.pending = {
+          settings: Sr,
+          shot: "default" === Sr.mode ? null : new Vr(Sr, this.qx, null)
+        }, void this.fade.fadeOut(Sr.transition);
+        const Wr = null !== this.pending;
+        this.pending = null, !Wr && Qr || this.fade.fadeIn(Zr.j.minTransitionFadeMs), this.show(Sr, !1)
       }
-      show(RR, JR) {
-        var GR, tR;
-        if ((0, yR.s)(RR, this.settings)) return;
-        const ZR = !JR && mR(this.settings, RR);
-        this.settings = RR;
-        const qR = null !== this.blend && this.blend.elapsedMs > 0,
-          fR = (0, iR.f)(this.hasOutput ? this.output : this.NK.getDefaultPose(), (0, iR.j)());
-        if (this.shot = "default" === RR.mode ? null : new zR(RR, this.NK, JR ? null : this.shot), ZR) return;
-        const VR = JR || !this.shot && !this.hasOutput ? 0 : null !== (GR = RR.blendInMs) && void 0 !== GR ? GR : 0;
-        if (VR <= 0) return void(this.blend = null);
-        const KR = (0, uR.m)(null !== (tR = RR.blendEasing) && void 0 !== tR ? tR : "easeInOut");
+      show(rr, Sr) {
+        var Qr, Wr;
+        if ((0, Zr.s)(rr, this.settings)) return;
+        const jr = !Sr && Ar(this.settings, rr);
+        this.settings = rr;
+        const Ir = null !== this.blend && this.blend.elapsedMs > 0,
+          Er = (0, fr.f)(this.hasOutput ? this.output : this.qx.getDefaultPose(), (0, fr.k)());
+        if (this.shot = "default" === rr.mode ? null : new Vr(rr, this.qx, Sr ? null : this.shot), jr) return;
+        const pr = Sr || !this.shot && !this.hasOutput ? 0 : null !== (Qr = rr.blendInMs) && void 0 !== Qr ? Qr : 0;
+        if (pr <= 0) return void(this.blend = null);
+        const xr = (0, ar.s)(null !== (Wr = rr.blendEasing) && void 0 !== Wr ? Wr : "easeInOut");
         this.blend = {
-          from: fR,
+          from: Er,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: VR,
-          easing: qR ? SR(KR) : KR
+          durationMs: pr,
+          easing: Ir ? ir(xr) : xr
         }
       }
       getSettings() {
@@ -1095,66 +1095,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(RR, JR) {
-        const GR = Number.isFinite(RR) && RR > 0 ? RR : 0;
-        if (this.fade.advance(GR) && null !== this.pending) {
+      update(rr, Sr) {
+        const Qr = Number.isFinite(rr) && rr > 0 ? rr : 0;
+        if (this.fade.advance(Qr) && null !== this.pending) {
           const {
-            settings: RR
+            settings: rr
           } = this.pending;
-          this.pending = null, this.show(RR, !0)
+          this.pending = null, this.show(rr, !0)
         }
         this.loadingPositions.length = 0;
-        const yR = this.pending;
-        if (null !== yR && void 0 !== yR && yR.shot) {
-          const RR = "path" === yR.settings.mode ? 0 : GR;
-          this.noteLoadingPosition(yR.shot.update(RR, iR.c).position)
+        const Zr = this.pending;
+        if (null !== Zr && void 0 !== Zr && Zr.shot) {
+          const rr = "path" === Zr.settings.mode ? 0 : Qr;
+          this.noteLoadingPosition(Zr.shot.update(rr, fr.b).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const ZR = this.shot ? this.shot.update(GR, JR) : this.NK.getDefaultPose();
-        this.shot && this.noteLoadingPosition(ZR.position);
-        const qR = this.blend;
-        if (!qR) return this.writeOutput(ZR);
-        qR.elapsedMs += GR;
-        const fR = Math.min(1, qR.elapsedMs / qR.durationMs);
-        if (qR.headingDelta = Number.isFinite(qR.headingDelta) ? (0, tR.y)(qR.headingDelta, ZR.heading - qR.from.heading) : (0, tR.x)(qR.from.heading, ZR.heading), (0, iR.s)(qR.from, ZR, qR.headingDelta, (0, uR.l)(fR, qR.easing), this.mixed), fR >= 1) {
+        const jr = this.shot ? this.shot.update(Qr, Sr) : this.qx.getDefaultPose();
+        this.shot && this.noteLoadingPosition(jr.position);
+        const Ir = this.blend;
+        if (!Ir) return this.writeOutput(jr);
+        Ir.elapsedMs += Qr;
+        const Er = Math.min(1, Ir.elapsedMs / Ir.durationMs);
+        if (Ir.headingDelta = Number.isFinite(Ir.headingDelta) ? (0, Wr.v)(Ir.headingDelta, jr.heading - Ir.from.heading) : (0, Wr.r)(Ir.from.heading, jr.heading), (0, fr.r)(Ir.from, jr, Ir.headingDelta, (0, ar.r)(Er, Ir.easing), this.mixed), Er >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else qR.fromScripted && this.noteLoadingPosition(qR.from.position);
+        } else Ir.fromScripted && this.noteLoadingPosition(Ir.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(RR) {
-        if (RR.every(Number.isFinite)) {
-          const JR = this.loadingPositions;
-          JR.push((0, iR.i)(RR, this.loadingSlots[JR.length]))
+      noteLoadingPosition(rr) {
+        if (rr.every(Number.isFinite)) {
+          const Sr = this.loadingPositions;
+          Sr.push((0, fr.i)(rr, this.loadingSlots[Sr.length]))
         }
       }
-      writeOutput(RR) {
-        const JR = this.output;
-        (0, iR.n)(RR) ? (0, iR.f)(RR, JR) : this.hasOutput || (0, iR.f)(this.NK.getDefaultPose(), JR), JR.pitch = (0, tR.h)(JR.pitch);
-        const GR = this.NK.getDefaultFov(),
-          uR = Number.isFinite(GR) && GR > 0 && GR < 180,
-          ZR = uR ? Math.min(yR.k.minFov, GR) : yR.k.minFov,
-          qR = uR ? Math.max(yR.k.maxFov, GR) : yR.k.maxFov;
-        return JR.fov = Number.isFinite(JR.fov) ? Math.min(qR, Math.max(ZR, JR.fov)) : qR, this.hasOutput = !0, JR
+      writeOutput(rr) {
+        const Sr = this.output;
+        (0, fr.o)(rr) ? (0, fr.f)(rr, Sr) : this.hasOutput || (0, fr.f)(this.qx.getDefaultPose(), Sr), Sr.pitch = (0, Wr.i)(Sr.pitch);
+        const Qr = this.qx.getDefaultFov(),
+          ar = Number.isFinite(Qr) && Qr > 0 && Qr < 180,
+          jr = ar ? Math.min(Zr.j.minFov, Qr) : Zr.j.minFov,
+          Ir = ar ? Math.max(Zr.j.maxFov, Qr) : Zr.j.maxFov;
+        return Sr.fov = Number.isFinite(Sr.fov) ? Math.min(Ir, Math.max(jr, Sr.fov)) : Ir, this.hasOutput = !0, Sr
       }
     }
   },
-  40462: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR,
-      f: () => qR,
-      i: () => ZR,
-      j: () => uR,
-      n: () => fR,
-      p: () => iR,
-      s: () => VR
+  40748: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Wr,
+      f: () => Ir,
+      i: () => jr,
+      k: () => ar,
+      o: () => Er,
+      p: () => fr,
+      r: () => pr
     });
-    var yR = GR(37845);
-    const tR = {
-      bD: 0,
-      PD: 0
+    var Zr = Qr(38207);
+    const Wr = {
+      xR: 0,
+      yR: 0
     };
 
-    function uR() {
+    function ar() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1163,186 +1163,186 @@ export const modules = {
       }
     }
 
-    function ZR(RR, JR) {
-      return JR[0] = RR[0], JR[1] = RR[1], JR[2] = RR[2], JR
+    function jr(rr, Sr) {
+      return Sr[0] = rr[0], Sr[1] = rr[1], Sr[2] = rr[2], Sr
     }
 
-    function qR(RR, JR) {
-      return ZR(RR.position, JR.position), JR.heading = RR.heading, JR.pitch = RR.pitch, JR.fov = RR.fov, JR
+    function Ir(rr, Sr) {
+      return jr(rr.position, Sr.position), Sr.heading = rr.heading, Sr.pitch = rr.pitch, Sr.fov = rr.fov, Sr
     }
 
-    function iR(RR, JR) {
-      return Array.isArray(RR) && RR.length === JR && RR.every(Number.isFinite)
+    function fr(rr, Sr) {
+      return Array.isArray(rr) && rr.length === Sr && rr.every(Number.isFinite)
     }
 
-    function fR(RR) {
-      return iR(RR.position, 3) && Number.isFinite(RR.heading) && Number.isFinite(RR.pitch) && Number.isFinite(RR.fov)
+    function Er(rr) {
+      return fr(rr.position, 3) && Number.isFinite(rr.heading) && Number.isFinite(rr.pitch) && Number.isFinite(rr.fov)
     }
 
-    function VR(RR, JR, GR, tR, uR) {
-      for (let yR = 0; yR < 3; yR++) uR.position[yR] = RR.position[yR] + (JR.position[yR] - RR.position[yR]) * tR;
-      return uR.heading = (0, yR.v)(RR.heading + GR * tR), uR.pitch = RR.pitch + (JR.pitch - RR.pitch) * tR, uR.fov = RR.fov + (JR.fov - RR.fov) * tR, uR
+    function pr(rr, Sr, Qr, Wr, ar) {
+      for (let Zr = 0; Zr < 3; Zr++) ar.position[Zr] = rr.position[Zr] + (Sr.position[Zr] - rr.position[Zr]) * Wr;
+      return ar.heading = (0, Zr.q)(rr.heading + Qr * Wr), ar.pitch = rr.pitch + (Sr.pitch - rr.pitch) * Wr, ar.fov = rr.fov + (Sr.fov - rr.fov) * Wr, ar
     }
   },
-  40476: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => BR,
-      f: () => rR
+  40775: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Tr,
+      e: () => Nr
     });
-    var yR = GR(40470),
-      tR = GR(40462);
-    const uR = yR.f,
-      ZR = yR.o,
-      qR = yR.i;
+    var Zr = Qr(40770),
+      Wr = Qr(40748);
+    const ar = Zr.f,
+      jr = Zr.n,
+      Ir = Zr.h;
 
-    function iR(RR, JR, GR, yR) {
-      return Number.isFinite(RR) ? Math.min(GR, Math.max(JR, RR)) : yR
+    function fr(rr, Sr, Qr, Zr) {
+      return Number.isFinite(rr) ? Math.min(Qr, Math.max(Sr, rr)) : Zr
     }
 
-    function fR(RR, JR, GR) {
-      return void 0 !== RR && Number.isFinite(RR) ? Math.min(GR, Math.max(JR, RR)) : void 0
+    function Er(rr, Sr, Qr) {
+      return void 0 !== rr && Number.isFinite(rr) ? Math.min(Qr, Math.max(Sr, rr)) : void 0
     }
 
-    function VR(RR) {
-      const JR = yR.k.maxCoordinate;
-      return [Math.min(JR, Math.max(-JR, RR[0])), Math.min(JR, Math.max(-JR, RR[1])), Math.min(JR, Math.max(-JR, RR[2]))]
+    function pr(rr) {
+      const Sr = Zr.j.maxCoordinate;
+      return [Math.min(Sr, Math.max(-Sr, rr[0])), Math.min(Sr, Math.max(-Sr, rr[1])), Math.min(Sr, Math.max(-Sr, rr[2]))]
     }
 
-    function KR(RR) {
-      return "string" === typeof RR ? RR : (0, tR.p)(RR, 3) ? VR(RR) : void 0
+    function xr(rr) {
+      return "string" === typeof rr ? rr : (0, Wr.p)(rr, 3) ? pr(rr) : void 0
     }
-    const wR = new RegExp(yR.r);
+    const mr = new RegExp(Zr.p);
 
-    function rR(RR) {
-      return "string" === typeof RR && wR.test(RR)
+    function Nr(rr) {
+      return "string" === typeof rr && mr.test(rr)
     }
 
-    function eR(RR) {
-      const JR = [];
-      if (!Array.isArray(RR)) return JR;
-      for (const GR of RR.slice(0, yR.k.maxFrameTargets)) {
-        const RR = KR(GR);
-        void 0 === RR || "string" === typeof RR && !rR(RR) || JR.push(RR)
+    function Ur(rr) {
+      const Sr = [];
+      if (!Array.isArray(rr)) return Sr;
+      for (const Qr of rr.slice(0, Zr.j.maxFrameTargets)) {
+        const rr = xr(Qr);
+        void 0 === rr || "string" === typeof rr && !Nr(rr) || Sr.push(rr)
       }
-      return JR
+      return Sr
     }
 
-    function aR(RR) {
-      if (!(0, tR.p)(RR, 3)) return;
-      const JR = Math.max(Math.abs(RR[0]), Math.abs(RR[1]), Math.abs(RR[2])),
-        GR = Math.hypot(RR[0] / JR, RR[1] / JR, RR[2] / JR);
-      return 0 === JR || JR * GR < yR.k.minDirectionLength ? void 0 : [RR[0] / JR / GR, RR[1] / JR / GR, RR[2] / JR / GR]
+    function tr(rr) {
+      if (!(0, Wr.p)(rr, 3)) return;
+      const Sr = Math.max(Math.abs(rr[0]), Math.abs(rr[1]), Math.abs(rr[2])),
+        Qr = Math.hypot(rr[0] / Sr, rr[1] / Sr, rr[2] / Sr);
+      return 0 === Sr || Sr * Qr < Zr.j.minDirectionLength ? void 0 : [rr[0] / Sr / Qr, rr[1] / Sr / Qr, rr[2] / Sr / Qr]
     }
 
-    function LR(RR) {
-      if (void 0 !== RR) return "string" === typeof RR ? uR.includes(RR) ? RR : void 0 : (0, tR.p)(RR, 4) ? [iR(RR[0], 0, 1, 0), iR(RR[1], yR.k.minEasingY, yR.k.maxEasingY, 0), iR(RR[2], 0, 1, 1), iR(RR[3], yR.k.minEasingY, yR.k.maxEasingY, 1)] : "linear"
+    function hr(rr) {
+      if (void 0 !== rr) return "string" === typeof rr ? ar.includes(rr) ? rr : void 0 : (0, Wr.p)(rr, 4) ? [fr(rr[0], 0, 1, 0), fr(rr[1], Zr.j.minEasingY, Zr.j.maxEasingY, 0), fr(rr[2], 0, 1, 1), fr(rr[3], Zr.j.minEasingY, Zr.j.maxEasingY, 1)] : "linear"
     }
 
-    function nR(RR) {
-      if (RR) return {
-        maxYaw: iR(RR.maxYaw, 0, yR.k.maxPlayerLook, 0),
-        maxPitch: iR(RR.maxPitch, 0, yR.k.maxPlayerLook, 0),
-        returnMs: fR(RR.returnMs, 0, yR.k.maxReturnMs)
+    function zr(rr) {
+      if (rr) return {
+        maxYaw: fr(rr.maxYaw, 0, Zr.j.maxPlayerLook, 0),
+        maxPitch: fr(rr.maxPitch, 0, Zr.j.maxPlayerLook, 0),
+        returnMs: Er(rr.returnMs, 0, Zr.j.maxReturnMs)
       }
     }
-    const UR = new RegExp(yR.b);
+    const Yr = new RegExp(Zr.c);
 
-    function WR(RR) {
-      var JR;
-      if ("object" !== typeof RR || null === RR) return;
-      const GR = yR.k.maxTransitionMs,
-        tR = yR.k.minTransitionFadeMs;
+    function nr(rr) {
+      var Sr;
+      if ("object" !== typeof rr || null === rr) return;
+      const Qr = Zr.j.maxTransitionMs,
+        Wr = Zr.j.minTransitionFadeMs;
       return {
-        colour: "string" === typeof RR.colour && UR.test(RR.colour) ? RR.colour : yR.d,
-        outMs: iR(RR.outMs, tR, GR, tR),
-        holdMs: iR(null !== (JR = RR.holdMs) && void 0 !== JR ? JR : 0, 0, GR, 0),
-        inMs: iR(RR.inMs, tR, GR, tR)
+        colour: "string" === typeof rr.colour && Yr.test(rr.colour) ? rr.colour : Zr.d,
+        outMs: fr(rr.outMs, Wr, Qr, Wr),
+        holdMs: fr(null !== (Sr = rr.holdMs) && void 0 !== Sr ? Sr : 0, 0, Qr, 0),
+        inMs: fr(rr.inMs, Wr, Qr, Wr)
       }
     }
 
-    function AR(RR) {
-      return !0 === RR || void 0
+    function er(rr) {
+      return !0 === rr || void 0
     }
 
-    function CR(RR) {
-      if ("object" !== typeof RR || null === RR) return !1;
-      const JR = RR.lookAt;
-      return Number.isFinite(RR.timeMs) && (0, tR.p)(RR.position, 3) && (void 0 === JR || "string" === typeof JR || (0, tR.p)(JR, 3))
+    function Kr(rr) {
+      if ("object" !== typeof rr || null === rr) return !1;
+      const Sr = rr.lookAt;
+      return Number.isFinite(rr.timeMs) && (0, Wr.p)(rr.position, 3) && (void 0 === Sr || "string" === typeof Sr || (0, Wr.p)(Sr, 3))
     }
 
-    function XR(RR) {
+    function yr(rr) {
       return {
-        ...RR,
-        timeMs: iR(RR.timeMs, 0, yR.k.maxPathMs, 0),
-        position: VR(RR.position),
-        lookAt: KR(RR.lookAt),
-        lookDirection: aR(RR.lookDirection),
-        fov: fR(RR.fov, yR.k.minFov, yR.k.maxFov),
-        easing: LR(RR.easing)
+        ...rr,
+        timeMs: fr(rr.timeMs, 0, Zr.j.maxPathMs, 0),
+        position: pr(rr.position),
+        lookAt: xr(rr.lookAt),
+        lookDirection: tr(rr.lookDirection),
+        fov: Er(rr.fov, Zr.j.minFov, Zr.j.maxFov),
+        easing: hr(rr.easing)
       }
     }
 
-    function MR(RR) {
-      const JR = [];
-      if (!Array.isArray(RR)) return JR;
-      for (const GR of RR.slice(0, yR.k.maxKeyframes)) {
-        if (!CR(GR)) continue;
-        const RR = XR(GR);
-        (0 === JR.length || RR.timeMs > JR[JR.length - 1].timeMs) && JR.push(RR)
+    function Br(rr) {
+      const Sr = [];
+      if (!Array.isArray(rr)) return Sr;
+      for (const Qr of rr.slice(0, Zr.j.maxKeyframes)) {
+        if (!Kr(Qr)) continue;
+        const rr = yr(Qr);
+        (0 === Sr.length || rr.timeMs > Sr[Sr.length - 1].timeMs) && Sr.push(rr)
       }
-      return JR
+      return Sr
     }
 
-    function BR(RR) {
-      if ("object" !== typeof RR || null === RR) return {
+    function Tr(rr) {
+      if ("object" !== typeof rr || null === rr) return {
         mode: "default"
       };
-      const JR = {
-          blendInMs: fR(RR.blendInMs, 0, yR.k.maxBlendInMs),
-          blendEasing: LR(RR.blendEasing),
-          transition: WR(RR.transition),
-          letterbox: AR(RR.letterbox),
-          hideHud: AR(RR.hideHud)
+      const Sr = {
+          blendInMs: Er(rr.blendInMs, 0, Zr.j.maxBlendInMs),
+          blendEasing: hr(rr.blendEasing),
+          transition: nr(rr.transition),
+          letterbox: er(rr.letterbox),
+          hideHud: er(rr.hideHud)
         },
-        GR = {
+        Qr = {
           mode: "default",
-          ...JR
+          ...Sr
         };
-      if ("default" === RR.mode || "fixed" === RR.mode && !(0, tR.p)(RR.position, 3)) return GR;
-      const uR = {
-        ...JR,
-        fov: fR(RR.fov, yR.k.minFov, yR.k.maxFov),
-        playerFacing: (wR = RR.playerFacing, ZR.includes(wR) ? wR : void 0),
-        playerLook: nR(RR.playerLook)
+      if ("default" === rr.mode || "fixed" === rr.mode && !(0, Wr.p)(rr.position, 3)) return Qr;
+      const ar = {
+        ...Sr,
+        fov: Er(rr.fov, Zr.j.minFov, Zr.j.maxFov),
+        playerFacing: (mr = rr.playerFacing, jr.includes(mr) ? mr : void 0),
+        playerLook: zr(rr.playerLook)
       };
-      var wR, rR, UR;
-      switch (RR.mode) {
+      var mr, Nr, Yr;
+      switch (rr.mode) {
         case "fixed":
           return {
-            ...RR, ...uR, position: VR(RR.position), lookAt: KR(RR.lookAt), lookDirection: aR(RR.lookDirection)
+            ...rr, ...ar, position: pr(rr.position), lookAt: xr(rr.lookAt), lookDirection: tr(rr.lookDirection)
           };
         case "follow":
           return {
-            ...RR, ...uR, target: "string" === typeof RR.target ? RR.target : void 0, anchor: (UR = RR.anchor, qR.includes(UR) ? UR : void 0), lookAt: KR(RR.lookAt), offset: (rR = RR.offset, Array.isArray(rR) ? [iR(rR[0], -yR.k.maxOffset, yR.k.maxOffset, 0), iR(rR[1], -yR.k.maxOffset, yR.k.maxOffset, 0), iR(rR[2], -yR.k.maxOffset, yR.k.maxOffset, 0)] : [0, 0, 0]), lookDirection: aR(RR.lookDirection), smoothMs: fR(RR.smoothMs, 0, yR.k.maxSmoothMs)
+            ...rr, ...ar, target: "string" === typeof rr.target ? rr.target : void 0, anchor: (Yr = rr.anchor, Ir.includes(Yr) ? Yr : void 0), lookAt: xr(rr.lookAt), offset: (Nr = rr.offset, Array.isArray(Nr) ? [fr(Nr[0], -Zr.j.maxOffset, Zr.j.maxOffset, 0), fr(Nr[1], -Zr.j.maxOffset, Zr.j.maxOffset, 0), fr(Nr[2], -Zr.j.maxOffset, Zr.j.maxOffset, 0)] : [0, 0, 0]), lookDirection: tr(rr.lookDirection), smoothMs: Er(rr.smoothMs, 0, Zr.j.maxSmoothMs)
           };
         case "path":
           return {
-            ...RR, ...uR, keyframes: MR(RR.keyframes)
+            ...rr, ...ar, keyframes: Br(rr.keyframes)
           };
         case "frame":
           return {
-            ...RR, ...uR, targets: eR(RR.targets), viewHeading: fR(RR.viewHeading, -yR.k.maxFrameHeading, yR.k.maxFrameHeading), viewElevation: fR(RR.viewElevation, 0, yR.k.maxFrameElevation), padding: fR(RR.padding, 0, yR.k.maxFrameDistance), closestDistance: fR(RR.closestDistance, 0, yR.k.maxFrameDistance), furthestDistance: fR(RR.furthestDistance, 0, yR.k.maxFrameDistance), smoothMs: fR(RR.smoothMs, 0, yR.k.maxSmoothMs)
+            ...rr, ...ar, targets: Ur(rr.targets), viewHeading: Er(rr.viewHeading, -Zr.j.maxFrameHeading, Zr.j.maxFrameHeading), viewElevation: Er(rr.viewElevation, 0, Zr.j.maxFrameElevation), padding: Er(rr.padding, 0, Zr.j.maxFrameDistance), closestDistance: Er(rr.closestDistance, 0, Zr.j.maxFrameDistance), furthestDistance: Er(rr.furthestDistance, 0, Zr.j.maxFrameDistance), smoothMs: Er(rr.smoothMs, 0, Zr.j.maxSmoothMs)
           };
         default:
-          return GR
+          return Qr
       }
     }
   },
-  40506: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR
+  40808: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr
     });
-    const yR = {
+    const Zr = {
       message: [{
         translationKey: "general:bunnyHoppingDisabled"
       }],
@@ -1350,96 +1350,96 @@ export const modules = {
       type: "Error"
     }
   },
-  40388: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      return JR.set(RR), JR
+  40696: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
+      return Sr.set(rr), Sr
     }
-    GR.d(JR, {
-      e: () => yR
+    Qr.d(Sr, {
+      c: () => Zr
     })
   },
-  40382: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR
+  40694: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr
     });
-    var yR = GR(3514),
-      tR = GR.n(yR);
-    const uR = [1, 1, 1];
+    var Zr = Qr(3452),
+      Wr = Qr.n(Zr);
+    const ar = [1, 1, 1];
 
-    function ZR(RR) {
-      if (!RR) return [...uR];
+    function jr(rr) {
+      if (!rr) return [...ar];
       try {
-        const [JR, GR, yR] = tR()(RR).rgb().array();
-        return [JR / 255, GR / 255, yR / 255]
-      } catch (JR) {
-        return console.warn(`Invalid groundArrowPath colour "${RR}":`, JR), [...uR]
+        const [Sr, Qr, Zr] = Wr()(rr).rgb().array();
+        return [Sr / 255, Qr / 255, Zr / 255]
+      } catch (Sr) {
+        return console.warn(`Invalid groundArrowPath colour "${rr}":`, Sr), [...ar]
       }
     }
   },
-  40498: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      g: () => fR,
-      i: () => iR
+  40801: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Ir,
+      f: () => Er,
+      i: () => fr
     });
-    var yR = GR(310),
-      tR = GR(4044);
-    const uR = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      ZR = 512;
+    var Zr = Qr(319),
+      Wr = Qr(3995);
+    const ar = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
+      jr = 512;
 
-    function qR(RR) {
-      var JR;
-      const GR = Math.min(screen.width, screen.height) * (null !== (JR = (0, yR.d)()) && void 0 !== JR ? JR : (0, tR.l)());
-      return Math.max(window.innerHeight * (0, tR.l)(), GR) / (0, tR.m)(RR)
+    function Ir(rr) {
+      var Sr;
+      const Qr = Math.min(screen.width, screen.height) * (null !== (Sr = (0, Zr.d)()) && void 0 !== Sr ? Sr : (0, Wr.m)());
+      return Math.max(window.innerHeight * (0, Wr.m)(), Qr) / (0, Wr.n)(rr)
     }
 
-    function iR(RR, JR, GR) {
-      return JR / (2 * Math.tan(GR / 2)) > ZR ? RR : fR(RR)
+    function fr(rr, Sr, Qr) {
+      return Sr / (2 * Math.tan(Qr / 2)) > jr ? rr : Er(rr)
     }
 
-    function fR(RR) {
-      return RR.map((RR => RR.replace(uR, "/textures/skyBoxes/$1/1024/$2")))
+    function Er(rr) {
+      return rr.map((rr => rr.replace(ar, "/textures/skyBoxes/$1/1024/$2")))
     }
   },
-  40377: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR
+  40686: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    var yR = GR(203);
+    var Zr = Qr(208);
 
-    function tR(RR, JR, GR, tR, uR, ZR, qR, iR, fR, VR, KR) {
-      const wR = yR.g.LK,
-        rR = uR - GR;
-      let eR = rR * (ZR - tR);
-      VR.fill(0, 0, eR);
-      for (let yR = Math.floor((iR - 1) / wR);
-        (yR + 1) * wR > qR; yR--) {
-        const aR = yR * wR;
-        for (let LR = Math.floor(GR / wR); LR * wR < uR; LR++) {
-          const nR = LR * wR,
-            UR = Math.max(GR - nR, 0),
-            WR = Math.min(uR - nR, wR);
-          for (let uR = Math.floor(tR / wR); uR * wR < ZR; uR++) {
-            const AR = RR(LR, yR, uR);
-            if (!AR) continue;
-            const CR = uR * wR,
-              XR = Math.max(tR - CR, 0),
-              MR = Math.min(ZR - CR, wR),
-              BR = AR.hr,
-              lR = AR.Rr,
-              pR = lR.data;
-            for (let RR = Math.min(iR - 1 - aR, wR - 1); RR >= Math.max(qR - aR, 0); RR--) {
-              const yR = BR[RR],
-                uR = yR === JR;
-              if (uR || 0 !== fR[yR]) {
-                for (let JR = UR; JR < WR; JR++)
-                  for (let ZR = XR; ZR < MR; ZR++) {
-                    const qR = (CR + ZR - tR) * rR + nR + JR - GR;
-                    if (0 !== VR[qR]) continue;
-                    const iR = uR ? pR[lR.index(JR, RR, ZR)] : yR;
-                    0 !== fR[iR] && (VR[qR] = iR, KR[qR] = aR + RR, eR--)
+    function Wr(rr, Sr, Qr, Wr, ar, jr, Ir, fr, Er, pr, xr) {
+      const mr = Zr.i.hx,
+        Nr = ar - Qr;
+      let Ur = Nr * (jr - Wr);
+      pr.fill(0, 0, Ur);
+      for (let Zr = Math.floor((fr - 1) / mr);
+        (Zr + 1) * mr > Ir; Zr--) {
+        const tr = Zr * mr;
+        for (let hr = Math.floor(Qr / mr); hr * mr < ar; hr++) {
+          const zr = hr * mr,
+            Yr = Math.max(Qr - zr, 0),
+            nr = Math.min(ar - zr, mr);
+          for (let ar = Math.floor(Wr / mr); ar * mr < jr; ar++) {
+            const er = rr(hr, Zr, ar);
+            if (!er) continue;
+            const Kr = ar * mr,
+              yr = Math.max(Wr - Kr, 0),
+              Br = Math.min(jr - Kr, mr),
+              Tr = er.DN,
+              vr = er.ZN,
+              Or = vr.data;
+            for (let rr = Math.min(fr - 1 - tr, mr - 1); rr >= Math.max(Ir - tr, 0); rr--) {
+              const Zr = Tr[rr],
+                ar = Zr === Sr;
+              if (ar || 0 !== Er[Zr]) {
+                for (let Sr = Yr; Sr < nr; Sr++)
+                  for (let jr = yr; jr < Br; jr++) {
+                    const Ir = (Kr + jr - Wr) * Nr + zr + Sr - Qr;
+                    if (0 !== pr[Ir]) continue;
+                    const fr = ar ? Or[vr.index(Sr, rr, jr)] : Zr;
+                    0 !== Er[fr] && (pr[Ir] = fr, xr[Ir] = tr + rr, Ur--)
                   }
-                if (0 === eR) return
+                if (0 === Ur) return
               }
             }
           }
@@ -1447,15 +1447,15 @@ export const modules = {
       }
     }
   },
-  34957: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR,
-      f: () => qR,
-      h: () => ZR,
-      k: () => tR,
-      o: () => yR
+  35261: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      g: () => Ir,
+      h: () => jr,
+      l: () => Wr,
+      o: () => Zr
     });
-    const yR = {
+    const Zr = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1542,43 +1542,43 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      tR = "/textures/dayNight/sun.png",
-      uR = "/textures/dayNight/moon.png",
-      ZR = "/textures/dayNight/stars",
-      qR = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      Wr = "/textures/dayNight/sun.png",
+      ar = "/textures/dayNight/moon.png",
+      jr = "/textures/dayNight/stars",
+      Ir = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  40470: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => KR,
-      d: () => wR,
-      f: () => yR,
-      i: () => tR,
-      k: () => fR,
-      o: () => uR,
-      r: () => VR,
-      s: () => iR,
-      t: () => qR
+  40770: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => xr,
+      d: () => mr,
+      f: () => Zr,
+      h: () => Wr,
+      j: () => Er,
+      n: () => ar,
+      p: () => pr,
+      s: () => fr,
+      v: () => Ir
     });
-    const yR = ["linear", "easeIn", "easeOut", "easeInOut"],
-      tR = ["feet", "eye"],
-      uR = ["movement", "camera", "cursor"],
-      ZR = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const Zr = ["linear", "easeIn", "easeOut", "easeInOut"],
+      Wr = ["feet", "eye"],
+      ar = ["movement", "camera", "cursor"],
+      jr = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function qR(RR, JR) {
-      return iR(RR, JR, ZR)
+    function Ir(rr, Sr) {
+      return fr(rr, Sr, jr)
     }
 
-    function iR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (RR === JR || Number.isNaN(RR) && Number.isNaN(JR)) return !0;
-      if ("object" !== typeof RR || "object" !== typeof JR || null === RR || null === JR || Array.isArray(RR) !== Array.isArray(JR)) return !1;
-      const yR = RR,
-        tR = JR;
-      for (const uR of new Set([...Object.keys(yR), ...Object.keys(tR)]))
-        if (!GR.includes(uR) && !iR(yR[uR], tR[uR])) return !1;
+    function fr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (rr === Sr || Number.isNaN(rr) && Number.isNaN(Sr)) return !0;
+      if ("object" !== typeof rr || "object" !== typeof Sr || null === rr || null === Sr || Array.isArray(rr) !== Array.isArray(Sr)) return !1;
+      const Zr = rr,
+        Wr = Sr;
+      for (const ar of new Set([...Object.keys(Zr), ...Object.keys(Wr)]))
+        if (!Qr.includes(ar) && !fr(Zr[ar], Wr[ar])) return !1;
       return !0
     }
-    const fR = {
+    const Er = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1600,10 +1600,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      VR = "^-[1-9][0-9]*$",
-      KR = "^#[0-9a-fA-F]{6}$",
-      wR = "#000000"
+      pr = "^-[1-9][0-9]*$",
+      xr = "^#[0-9a-fA-F]{6}$",
+      mr = "#000000"
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

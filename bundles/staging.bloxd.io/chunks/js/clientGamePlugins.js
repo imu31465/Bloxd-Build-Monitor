@@ -1,68 +1,68 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  40429: (RR, JR, GR) => {
-    function yR(RR) {
-      return void 0 === RR ? void 0 : [RR[0], RR[1], RR[2]]
+  40728: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return void 0 === rr ? void 0 : [rr[0], rr[1], rr[2]]
     }
 
-    function tR(RR) {
-      const JR = RR.particles;
+    function Wr(rr) {
+      const Sr = rr.particles;
       return {
         opts: {
-          texture: JR.texture,
-          hK: JR.hK,
-          minLifeTime: JR.minLifeTime,
-          maxLifeTime: JR.maxLifeTime,
-          minSize: JR.minSize,
-          maxSize: JR.maxSize,
-          minEmitPower: JR.minEmitPower,
-          maxEmitPower: JR.maxEmitPower,
-          emitRate: JR.emitRate,
-          gravity: yR(JR.gravity),
-          dir1: yR(JR.dir1),
-          dir2: yR(JR.dir2),
-          colorGradients: JR.colorGradients,
-          blendMode: JR.blendMode
+          texture: Sr.texture,
+          sx: Sr.sx,
+          minLifeTime: Sr.minLifeTime,
+          maxLifeTime: Sr.maxLifeTime,
+          minSize: Sr.minSize,
+          maxSize: Sr.maxSize,
+          minEmitPower: Sr.minEmitPower,
+          maxEmitPower: Sr.maxEmitPower,
+          emitRate: Sr.emitRate,
+          gravity: Zr(Sr.gravity),
+          dir1: Zr(Sr.dir1),
+          dir2: Zr(Sr.dir2),
+          colorGradients: Sr.colorGradients,
+          blendMode: Sr.blendMode
         },
-        half: [JR.width / 2, JR.height / 2, JR.depth / 2]
+        half: [Sr.width / 2, Sr.height / 2, Sr.depth / 2]
       }
     }
-    GR.d(JR, {
-      c: () => tR
+    Qr.d(Sr, {
+      e: () => Wr
     })
   },
-  40393: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      d: () => fR,
-      e: () => iR,
-      i: () => ZR
+  40699: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      h: () => Er,
+      i: () => fr,
+      l: () => jr
     });
-    var yR = GR(216);
-    const tR = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      uR = "PetRoot";
-    let ZR = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      qR = tR;
+    var Zr = Qr(215);
+    const Wr = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      ar = "PetRoot";
+    let jr = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      Ir = Wr;
     new Map, new Map;
 
-    function iR(RR) {
-      var JR;
-      return null !== (JR = (0, yR.b)(ZR, RR)) && void 0 !== JR ? JR : null
+    function fr(rr) {
+      var Sr;
+      return null !== (Sr = (0, Zr.b)(jr, rr)) && void 0 !== Sr ? Sr : null
     }
 
-    function fR(RR) {
-      var JR;
-      return null !== (JR = (0, yR.b)(qR, RR)) && void 0 !== JR ? JR : null
+    function Er(rr) {
+      var Sr;
+      return null !== (Sr = (0, Zr.b)(Ir, rr)) && void 0 !== Sr ? Sr : null
     }
   },
-  40432: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => yR,
-      c: () => tR,
-      g: () => uR
+  40733: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr,
+      e: () => Wr,
+      f: () => ar
     });
-    class yR {
+    class Zr {
       constructor() {
         this.pose = {
           pos: [0, 0, 0],
@@ -70,355 +70,355 @@ export const modules = {
           mode: "flying",
           seated: !1,
           clip: void 0
-        }, this.BL = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+        }, this.Lh = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
       }
-      step(RR) {
-        var JR;
+      step(rr) {
+        var Sr;
         const {
-          feet: GR,
-          heading: yR,
-          tuning: ZR
-        } = RR, qR = Math.min(Math.max(RR.dt, 0), .1), {
-          pose: iR,
-          BL: fR,
-          target: VR
+          feet: Qr,
+          heading: Zr,
+          tuning: jr
+        } = rr, Ir = Math.min(Math.max(rr.dt, 0), .1), {
+          pose: fr,
+          Lh: Er,
+          target: pr
         } = this;
-        if (this.started && qR > 0) {
-          const RR = Math.hypot(GR[0] - this.lastFeet[0], GR[1] - this.lastFeet[1], GR[2] - this.lastFeet[2]);
-          this.speed += (RR / qR - this.speed) * Math.min(qR / .15, 1)
+        if (this.started && Ir > 0) {
+          const rr = Math.hypot(Qr[0] - this.lastFeet[0], Qr[1] - this.lastFeet[1], Qr[2] - this.lastFeet[2]);
+          this.speed += (rr / Ir - this.speed) * Math.min(Ir / .15, 1)
         }
-        this.lastFeet[0] = GR[0], this.lastFeet[1] = GR[1], this.lastFeet[2] = GR[2], this.stillS = this.speed > .3 ? 0 : this.stillS + qR;
-        const KR = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === KR && "perched" === iR.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += qR, iR.mode = KR;
-        const wR = Math.sin(yR),
-          rR = Math.cos(yR);
-        "perched" === KR ? (uR(VR, GR, ZR.perchOffset, wR, rR), VR[1] += RR.headTopY - GR[1]) : (uR(VR, GR, ZR.followOffset, wR, rR), VR[1] += tR(ZR, RR.timeS));
+        this.lastFeet[0] = Qr[0], this.lastFeet[1] = Qr[1], this.lastFeet[2] = Qr[2], this.stillS = this.speed > .3 ? 0 : this.stillS + Ir;
+        const xr = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === xr && "perched" === fr.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += Ir, fr.mode = xr;
+        const mr = Math.sin(Zr),
+          Nr = Math.cos(Zr);
+        "perched" === xr ? (ar(pr, Qr, jr.perchOffset, mr, Nr), pr[1] += rr.headTopY - Qr[1]) : (ar(pr, Qr, jr.followOffset, mr, Nr), pr[1] += Wr(jr, rr.timeS));
         const {
-          pos: eR
-        } = iR, aR = Math.hypot(VR[0] - eR[0], VR[1] - eR[1], VR[2] - eR[2]);
-        if (!this.started || aR > 8 || "perched" === KR && (this.perchLocked || aR < .05)) this.perchLocked = this.started && "perched" === KR, eR[0] = VR[0], eR[1] = VR[1], eR[2] = VR[2], fR[0] = fR[1] = fR[2] = 0;
+          pos: Ur
+        } = fr, tr = Math.hypot(pr[0] - Ur[0], pr[1] - Ur[1], pr[2] - Ur[2]);
+        if (!this.started || tr > 8 || "perched" === xr && (this.perchLocked || tr < .05)) this.perchLocked = this.started && "perched" === xr, Ur[0] = pr[0], Ur[1] = pr[1], Ur[2] = pr[2], Er[0] = Er[1] = Er[2] = 0;
         else {
-          const RR = ZR.followStiffness;
-          for (let JR = 0; JR < 3; JR++) fR[JR] += (RR * RR * (VR[JR] - eR[JR]) - 2 * RR * fR[JR]) * qR, eR[JR] += fR[JR] * qR
+          const rr = jr.followStiffness;
+          for (let Sr = 0; Sr < 3; Sr++) Er[Sr] += (rr * rr * (pr[Sr] - Ur[Sr]) - 2 * rr * Er[Sr]) * Ir, Ur[Sr] += Er[Sr] * Ir
         }
-        const LR = yR + ZR.yawOffset;
-        var nR;
-        return this.started ? iR.yaw += ((nR = LR - iR.yaw) - 2 * Math.PI * Math.round(nR / (2 * Math.PI))) * Math.min(8 * qR, 1) : iR.yaw = LR, this.started = !0, iR.seated = "perched" === KR && this.perchLocked, iR.clip = null === (JR = ZR.clips) || void 0 === JR ? void 0 : JR[this.rG(KR)], iR
+        const hr = Zr + jr.yawOffset;
+        var zr;
+        return this.started ? fr.yaw += ((zr = hr - fr.yaw) - 2 * Math.PI * Math.round(zr / (2 * Math.PI))) * Math.min(8 * Ir, 1) : fr.yaw = hr, this.started = !0, fr.seated = "perched" === xr && this.perchLocked, fr.clip = null === (Sr = jr.clips) || void 0 === Sr ? void 0 : Sr[this.eQ(xr)], fr
       }
       reset() {
         this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
       }
-      rG(RR) {
-        return "perched" === RR ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      eQ(rr) {
+        return "perched" === rr ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
       }
     }
 
-    function tR(RR, JR) {
-      return RR.bobAmplitude * Math.sin(2 * Math.PI * RR.bobHz * JR)
+    function Wr(rr, Sr) {
+      return rr.bobAmplitude * Math.sin(2 * Math.PI * rr.bobHz * Sr)
     }
 
-    function uR(RR, JR, GR, yR, tR) {
-      const [uR, ZR, qR] = GR;
-      RR[0] = JR[0] + uR * tR + qR * yR, RR[1] = JR[1] + ZR, RR[2] = JR[2] - uR * yR + qR * tR
+    function ar(rr, Sr, Qr, Zr, Wr) {
+      const [ar, jr, Ir] = Qr;
+      rr[0] = Sr[0] + ar * Wr + Ir * Zr, rr[1] = Sr[1] + jr, rr[2] = Sr[2] - ar * Zr + Ir * Wr
     }
   },
-  5728: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => DR,
-      f: () => NR
+  5658: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Rr,
+      h: () => qr
     });
-    var yR = GR(5733),
-      tR = GR(359);
-    const uR = 120,
-      ZR = 260,
-      qR = 1.15,
-      iR = 1.2,
-      fR = 2,
-      VR = 1.08,
-      KR = .8,
-      wR = .95,
-      rR = 8,
-      eR = "[\"')\\]\u300d\u300f\uff09]*",
-      aR = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${eR}$`),
-      LR = new RegExp(`[?\uff1f]${eR}$`),
-      nR = new RegExp(`[!\uff01]${eR}$`),
-      UR = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      WR = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      AR = new RegExp(`[${WR}]`),
-      CR = new RegExp(`[${WR}]|[^${WR}]+`, "g"),
-      XR = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Zr = Qr(5667),
+      Wr = Qr(360);
+    const ar = 120,
+      jr = 260,
+      Ir = 1.15,
+      fr = 1.2,
+      Er = 2,
+      pr = 1.08,
+      xr = .8,
+      mr = .95,
+      Nr = 8,
+      Ur = "[\"')\\]\u300d\u300f\uff09]*",
+      tr = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ur}$`),
+      hr = new RegExp(`[?\uff1f]${Ur}$`),
+      zr = new RegExp(`[!\uff01]${Ur}$`),
+      Yr = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      nr = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      er = new RegExp(`[${nr}]`),
+      Kr = new RegExp(`[${nr}]|[^${nr}]+`, "g"),
+      yr = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function MR(RR) {
-      let JR = 2166136261;
-      for (let GR = 0; GR < RR.length; GR++) JR ^= RR.charCodeAt(GR), JR = Math.imul(JR, 16777619);
-      return (JR >>> 0) / 4294967295 * 2 - 1
+    function Br(rr) {
+      let Sr = 2166136261;
+      for (let Qr = 0; Qr < rr.length; Qr++) Sr ^= rr.charCodeAt(Qr), Sr = Math.imul(Sr, 16777619);
+      return (Sr >>> 0) / 4294967295 * 2 - 1
     }
 
-    function BR(RR) {
-      var JR;
-      if (AR.test(RR)) return 1;
-      const GR = RR.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        yR = GR.replace(/[^0-9]/g, "");
-      if (yR.length > 0 && !/\p{L}/u.test(GR)) return Math.min(yR.length, 4);
-      const tR = null !== (JR = GR.match(XR)) && void 0 !== JR ? JR : [];
-      if (0 === tR.length) {
-        var uR, ZR;
-        const RR = null !== (uR = null === (ZR = GR.match(/\p{L}/gu)) || void 0 === ZR ? void 0 : ZR.length) && void 0 !== uR ? uR : 0;
-        return 0 === RR ? 0 : Math.min(Math.max(1, Math.round(RR / 2.5)), rR)
+    function Tr(rr) {
+      var Sr;
+      if (er.test(rr)) return 1;
+      const Qr = rr.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Zr = Qr.replace(/[^0-9]/g, "");
+      if (Zr.length > 0 && !/\p{L}/u.test(Qr)) return Math.min(Zr.length, 4);
+      const Wr = null !== (Sr = Qr.match(yr)) && void 0 !== Sr ? Sr : [];
+      if (0 === Wr.length) {
+        var ar, jr;
+        const rr = null !== (ar = null === (jr = Qr.match(/\p{L}/gu)) || void 0 === jr ? void 0 : jr.length) && void 0 !== ar ? ar : 0;
+        return 0 === rr ? 0 : Math.min(Math.max(1, Math.round(rr / 2.5)), Nr)
       }
-      const qR = GR.replace(/[^\p{L}]/gu, ""),
-        iR = tR.length > 1 && "e" === tR.at(-1) && qR.endsWith("e") && !qR.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(RR.replace(/[^\p{L}]/gu, ""));
-      return Math.min(tR.length - (iR ? 1 : 0), rR)
+      const Ir = Qr.replace(/[^\p{L}]/gu, ""),
+        fr = Wr.length > 1 && "e" === Wr.at(-1) && Ir.endsWith("e") && !Ir.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(rr.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Wr.length - (fr ? 1 : 0), Nr)
     }
 
-    function lR(RR) {
-      return RR.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function vr(rr) {
+      return rr.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function pR(RR) {
-      const JR = RR.replace(/[^\p{L}]/gu, "");
-      return JR.length >= 2 && JR === JR.toUpperCase() && JR !== JR.toLowerCase()
+    function Or(rr) {
+      const Sr = rr.replace(/[^\p{L}]/gu, "");
+      return Sr.length >= 2 && Sr === Sr.toUpperCase() && Sr !== Sr.toLowerCase()
     }
 
-    function gR(RR, JR) {
-      var GR;
-      const rR = JR && (0, yR.i)(JR),
-        eR = null !== (GR = null === rR || void 0 === rR ? void 0 : rR.syllableMs) && void 0 !== GR ? GR : yR.b,
-        WR = function(RR) {
-          const JR = [];
-          for (const yR of (0, tR.dc)(RR))
-            if ("string" === typeof yR)
-              for (const RR of yR.split(/(\s+)/)) {
-                if ("" === RR) continue;
-                if (/^\s+$/.test(RR)) {
-                  JR.push({
+    function Lr(rr, Sr) {
+      var Qr;
+      const Nr = Sr && (0, Zr.n)(Sr),
+        Ur = null !== (Qr = null === Nr || void 0 === Nr ? void 0 : Nr.syllableMs) && void 0 !== Qr ? Qr : Zr.e,
+        nr = function(rr) {
+          const Sr = [];
+          for (const Zr of (0, Wr.gc)(rr))
+            if ("string" === typeof Zr)
+              for (const rr of Zr.split(/(\s+)/)) {
+                if ("" === rr) continue;
+                if (/^\s+$/.test(rr)) {
+                  Sr.push({
                     kind: "space",
-                    text: RR
+                    text: rr
                   });
                   continue
                 }
-                if (!AR.test(RR)) {
-                  JR.push({
+                if (!er.test(rr)) {
+                  Sr.push({
                     kind: "word",
-                    text: RR,
+                    text: rr,
                     delayMs: 0
                   });
                   continue
                 }
-                let yR = !0;
-                for (const tR of null !== (GR = RR.match(CR)) && void 0 !== GR ? GR : []) {
-                  var GR;
-                  const RR = JR.at(-1);
-                  yR || "word" !== (null === RR || void 0 === RR ? void 0 : RR.kind) || AR.test(tR) || /[\p{L}\p{N}]/u.test(tR) ? (yR || JR.push({
+                let Zr = !0;
+                for (const Wr of null !== (Qr = rr.match(Kr)) && void 0 !== Qr ? Qr : []) {
+                  var Qr;
+                  const rr = Sr.at(-1);
+                  Zr || "word" !== (null === rr || void 0 === rr ? void 0 : rr.kind) || er.test(Wr) || /[\p{L}\p{N}]/u.test(Wr) ? (Zr || Sr.push({
                     kind: "space",
                     text: "\u200b"
-                  }), JR.push({
+                  }), Sr.push({
                     kind: "word",
-                    text: tR,
+                    text: Wr,
                     delayMs: 0
-                  }), yR = !1) : RR.text += tR
+                  }), Zr = !1) : rr.text += Wr
                 }
-              } else JR.push({
+              } else Sr.push({
                 kind: "icon",
-                text: yR.icon,
+                text: Zr.icon,
                 delayMs: 0
               });
-          return JR
-        }(RR),
-        XR = [];
-      let gR = [];
-      for (const yR of WR) "space" !== yR.kind && (gR.push(yR), aR.test(yR.text) && (XR.push(gR), gR = []));
-      XR.push(gR);
-      const bR = [];
-      let vR = 0;
-      for (const yR of XR) {
-        var OR, xR;
-        const RR = null !== (OR = null === (xR = yR.at(-1)) || void 0 === xR ? void 0 : xR.text) && void 0 !== OR ? OR : "",
-          JR = LR.test(RR),
-          GR = nR.test(RR),
-          tR = yR.map((RR => "word" === RR.kind ? BR(RR.text) : 1)),
-          WR = tR.findLastIndex((RR => RR > 0));
-        for (const [LR, nR] of yR.entries()) {
-          const RR = "word" === nR.kind,
-            yR = tR[LR];
-          nR.delayMs = vR;
-          for (let tR = 0; rR && tR < yR; tR++) {
+          return Sr
+        }(rr),
+        yr = [];
+      let Lr = [];
+      for (const Zr of nr) "space" !== Zr.kind && (Lr.push(Zr), tr.test(Zr.text) && (yr.push(Lr), Lr = []));
+      yr.push(Lr);
+      const lr = [];
+      let Xr = 0;
+      for (const Zr of yr) {
+        var Pr, Hr;
+        const rr = null !== (Pr = null === (Hr = Zr.at(-1)) || void 0 === Hr ? void 0 : Hr.text) && void 0 !== Pr ? Pr : "",
+          Sr = hr.test(rr),
+          Qr = zr.test(rr),
+          Wr = Zr.map((rr => "word" === rr.kind ? Tr(rr.text) : 1)),
+          nr = Wr.findLastIndex((rr => rr > 0));
+        for (const [hr, zr] of Zr.entries()) {
+          const rr = "word" === zr.kind,
+            Zr = Wr[hr];
+          zr.delayMs = Xr;
+          for (let Wr = 0; Nr && Wr < Zr; Wr++) {
             const {
-              intonation: uR
-            } = rR;
-            let ZR = WR > 0 ? -uR.declineSemitones * (LR / WR) : 0;
-            ZR += MR(`${lR(nR.text)}|${tR}`) * uR.variationSemitones;
-            const aR = Math.min(1, uR.variationSemitones);
-            let UR = rR.glideSemitones,
-              AR = 1;
-            GR && (ZR += uR.exclaimLiftSemitones, AR *= qR), JR && LR === WR && (ZR += uR.questionRiseSemitones * (yR > 1 ? .5 + .5 * tR / (yR - 1) : 1), tR === yR - 1 && (UR = Math.abs(UR) + uR.questionRiseSemitones / 2)), RR && pR(nR.text) && (ZR += fR * aR, AR *= iR), yR > 1 && 0 === tR && (ZR += KR * aR, AR *= VR), bR.push({
-              atMs: vR + tR * eR,
-              semitones: ZR,
-              glideSemitones: UR,
-              durationMs: tR < yR - 1 ? Math.min(rR.durationMs, eR * wR) : rR.durationMs,
-              level: AR
+              intonation: ar
+            } = Nr;
+            let jr = nr > 0 ? -ar.declineSemitones * (hr / nr) : 0;
+            jr += Br(`${vr(zr.text)}|${Wr}`) * ar.variationSemitones;
+            const tr = Math.min(1, ar.variationSemitones);
+            let Yr = Nr.glideSemitones,
+              er = 1;
+            Qr && (jr += ar.exclaimLiftSemitones, er *= Ir), Sr && hr === nr && (jr += ar.questionRiseSemitones * (Zr > 1 ? .5 + .5 * Wr / (Zr - 1) : 1), Wr === Zr - 1 && (Yr = Math.abs(Yr) + ar.questionRiseSemitones / 2)), rr && Or(zr.text) && (jr += Er * tr, er *= fr), Zr > 1 && 0 === Wr && (jr += xr * tr, er *= pr), lr.push({
+              atMs: Xr + Wr * Ur,
+              semitones: jr,
+              glideSemitones: Yr,
+              durationMs: Wr < Zr - 1 ? Math.min(Nr.durationMs, Ur * mr) : Nr.durationMs,
+              level: er
             })
           }
-          vR += yR * eR + (aR.test(nR.text) ? ZR : UR.test(nR.text) ? uR : 0)
+          Xr += Zr * Ur + (tr.test(zr.text) ? jr : Yr.test(zr.text) ? ar : 0)
         }
       }
       return {
-        pieces: WR.map((RR => "space" === RR.kind ? RR : "icon" === RR.kind ? {
+        pieces: nr.map((rr => "space" === rr.kind ? rr : "icon" === rr.kind ? {
           kind: "icon",
-          icon: RR.text,
-          delayMs: RR.delayMs
+          icon: rr.text,
+          delayMs: rr.delayMs
         } : {
           kind: "word",
-          text: RR.text,
-          delayMs: RR.delayMs
+          text: rr.text,
+          delayMs: rr.delayMs
         })),
-        blips: bR
+        blips: lr
       }
     }
-    var bR = GR(1270),
-      vR = GR(1343),
-      OR = GR(2137);
+    var lr = Qr(1251),
+      Xr = Qr(1304),
+      Pr = Qr(2093);
 
-    function xR(RR) {
-      if ("string" === typeof RR) return RR;
-      const JR = vR.g.get().getCurrentLanguageCode();
-      return (0, bR.r)(JR, RR.translationKey, (0, bR.o)(RR.params, OR.e.shown))
+    function Hr(rr) {
+      if ("string" === typeof rr) return rr;
+      const Sr = Xr.f.get().getCurrentLanguageCode();
+      return (0, lr.s)(Sr, rr.translationKey, (0, lr.p)(rr.params, Pr.b.shown))
     }
 
-    function NR(RR) {
-      const JR = void 0 === RR.voice ? null : (0, yR.m)(RR.voice),
-        GR = JR && (0, yR.i)(JR);
+    function qr(rr) {
+      const Sr = void 0 === rr.voice ? null : (0, Zr.p)(rr.voice),
+        Qr = Sr && (0, Zr.n)(Sr);
       return {
-        plan: gR(xR(RR.line), GR),
-        synth: GR
+        plan: Lr(Hr(rr.line), Qr),
+        synth: Qr
       }
     }
 
-    function DR(RR) {
-      const JR = [];
-      let GR = [];
-      for (const [tR, uR] of RR.entries()) {
-        var yR;
-        "space" === uR.kind && (" " !== uR.text || "icon" !== (null === (yR = RR[tR + 1]) || void 0 === yR ? void 0 : yR.kind)) ? (GR.length > 0 && JR.push(GR), JR.push([uR]), GR = []) : GR.push(uR)
+    function Rr(rr) {
+      const Sr = [];
+      let Qr = [];
+      for (const [Wr, ar] of rr.entries()) {
+        var Zr;
+        "space" === ar.kind && (" " !== ar.text || "icon" !== (null === (Zr = rr[Wr + 1]) || void 0 === Zr ? void 0 : Zr.kind)) ? (Qr.length > 0 && Sr.push(Qr), Sr.push([ar]), Qr = []) : Qr.push(ar)
       }
-      return GR.length > 0 && JR.push(GR), JR
+      return Qr.length > 0 && Sr.push(Qr), Sr
     }
   },
-  5736: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => VR,
-      d: () => KR
+  5675: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => pr,
+      h: () => xr
     });
-    var yR = GR(5742),
-      tR = GR(25);
-    const uR = .25,
-      ZR = .85,
-      qR = .02,
-      iR = .01;
+    var Zr = Qr(5681),
+      Wr = Qr(26);
+    const ar = .25,
+      jr = .85,
+      Ir = .02,
+      fr = .01;
 
-    function fR(RR, JR, GR, yR, tR, uR, qR) {
+    function Er(rr, Sr, Qr, Zr, Wr, ar, Ir) {
       const {
-        waveform: iR,
-        pitchHz: fR,
-        attackMs: VR,
-        releaseMs: KR,
-        lowpassHz: wR
-      } = GR, rR = tR + yR.durationMs / 1e3, eR = fR * 2 ** (yR.semitones / 12), aR = RR.createOscillator();
-      aR.type = iR, aR.frequency.setValueAtTime(eR, tR), aR.frequency.exponentialRampToValueAtTime(eR * 2 ** (yR.glideSemitones / 12), rR);
-      const LR = tR + Math.min(VR, yR.durationMs) / 1e3,
-        nR = RR.createGain();
-      nR.gain.setValueAtTime(0, tR), nR.gain.linearRampToValueAtTime(uR, LR), nR.gain.linearRampToValueAtTime(uR * ZR, Math.max(LR, rR - KR / 1e3)), nR.gain.linearRampToValueAtTime(0, rR);
-      const UR = [aR];
-      if (null !== wR) {
-        const JR = RR.createBiquadFilter();
-        JR.type = "lowpass", JR.frequency.value = wR, UR.push(JR)
+        waveform: fr,
+        pitchHz: Er,
+        attackMs: pr,
+        releaseMs: xr,
+        lowpassHz: mr
+      } = Qr, Nr = Wr + Zr.durationMs / 1e3, Ur = Er * 2 ** (Zr.semitones / 12), tr = rr.createOscillator();
+      tr.type = fr, tr.frequency.setValueAtTime(Ur, Wr), tr.frequency.exponentialRampToValueAtTime(Ur * 2 ** (Zr.glideSemitones / 12), Nr);
+      const hr = Wr + Math.min(pr, Zr.durationMs) / 1e3,
+        zr = rr.createGain();
+      zr.gain.setValueAtTime(0, Wr), zr.gain.linearRampToValueAtTime(ar, hr), zr.gain.linearRampToValueAtTime(ar * jr, Math.max(hr, Nr - xr / 1e3)), zr.gain.linearRampToValueAtTime(0, Nr);
+      const Yr = [tr];
+      if (null !== mr) {
+        const Sr = rr.createBiquadFilter();
+        Sr.type = "lowpass", Sr.frequency.value = mr, Yr.push(Sr)
       }
-      UR.push(nR, JR);
-      for (let ZR = 1; ZR < UR.length; ZR++) UR[ZR - 1].connect(UR[ZR]);
-      return aR.onended = () => {
-        for (const RR of UR.slice(0, -1)) RR.disconnect();
-        qR()
-      }, aR.start(tR), aR.stop(rR), aR
+      Yr.push(zr, Sr);
+      for (let jr = 1; jr < Yr.length; jr++) Yr[jr - 1].connect(Yr[jr]);
+      return tr.onended = () => {
+        for (const rr of Yr.slice(0, -1)) rr.disconnect();
+        Ir()
+      }, tr.start(Wr), tr.stop(Nr), tr
     }
 
-    function VR(RR, JR, GR, yR, tR, ZR) {
-      if (0 === yR.length) return ZR(), () => {};
-      const VR = uR * GR.volume * tR,
-        KR = RR.createGain();
-      KR.connect(JR);
-      const wR = RR.currentTime + qR,
-        rR = new Set;
-      for (const uR of yR) {
-        const JR = fR(RR, KR, GR, uR, wR + uR.atMs / 1e3, VR * uR.level, (() => {
-          rR.delete(JR), 0 === rR.size && (KR.disconnect(), ZR())
+    function pr(rr, Sr, Qr, Zr, Wr, jr) {
+      if (0 === Zr.length) return jr(), () => {};
+      const pr = ar * Qr.volume * Wr,
+        xr = rr.createGain();
+      xr.connect(Sr);
+      const mr = rr.currentTime + Ir,
+        Nr = new Set;
+      for (const ar of Zr) {
+        const Sr = Er(rr, xr, Qr, ar, mr + ar.atMs / 1e3, pr * ar.level, (() => {
+          Nr.delete(Sr), 0 === Nr.size && (xr.disconnect(), jr())
         }));
-        rR.add(JR)
+        Nr.add(Sr)
       }
       return () => {
-        const JR = RR.currentTime;
-        KR.gain.setTargetAtTime(0, JR, iR);
-        for (const RR of rR) try {
-          RR.stop(JR + 5 * iR)
+        const Sr = rr.currentTime;
+        xr.gain.setTargetAtTime(0, Sr, fr);
+        for (const rr of Nr) try {
+          rr.stop(Sr + 5 * fr)
         } catch {}
       }
     }
 
-    function KR(RR, JR) {
-      var GR;
-      const uR = yR.Howler.ctx,
-        ZR = yR.Howler.masterGain;
-      if (!uR || !ZR || !tR.d.get("soundOnFromAd")) return () => {};
-      const qR = yR.Howler;
-      return null === (GR = qR._autoResume) || void 0 === GR || GR.call(qR), VR(uR, ZR, RR, JR, tR.d.get("soundVolume"), (() => {
-        var RR;
-        null === (RR = qR._autoSuspend) || void 0 === RR || RR.call(qR)
+    function xr(rr, Sr) {
+      var Qr;
+      const ar = Zr.Howler.ctx,
+        jr = Zr.Howler.masterGain;
+      if (!ar || !jr || !Wr.c.get("soundOnFromAd")) return () => {};
+      const Ir = Zr.Howler;
+      return null === (Qr = Ir._autoResume) || void 0 === Qr || Qr.call(Ir), pr(ar, jr, rr, Sr, Wr.c.get("soundVolume"), (() => {
+        var rr;
+        null === (rr = Ir._autoSuspend) || void 0 === rr || rr.call(Ir)
       }))
     }
   },
-  40419: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      closeClientGame: () => KJ,
-      createDefaultClientPlugins: () => VJ
+  40714: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      closeClientGame: () => xS,
+      createDefaultClientPlugins: () => pS
     });
-    var yR = GR(377);
+    var Zr = Qr(379);
 
-    function tR() {
-      let RR;
+    function Wr() {
+      let rr;
       return {
-        onCreate(JR) {
-          RR = JR
+        onCreate(Sr) {
+          rr = Sr
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(JR, GR, tR, uR, ZR, qR) {
-          var iR, fR;
-          if ("Iron Chest" !== RR.getMetaInfo(ZR).rootName) return;
-          if (!RR.hasEffect(JR, "Thief")) return;
-          const VR = RR.getBlockData(GR, tR, uR);
-          return RR.getPlayerDbId(JR) !== (null === VR || void 0 === VR || null === (iR = VR.persisted) || void 0 === iR || null === (fR = iR.shared) || void 0 === fR ? void 0 : fR.ownerDbId) ? (RR.sendMessage(JR, [{
+        onPlayerAttemptAltAction(Sr, Qr, Wr, ar, jr, Ir) {
+          var fr, Er;
+          if ("Iron Chest" !== rr.getMetaInfo(jr).rootName) return;
+          if (!rr.hasEffect(Sr, "Thief")) return;
+          const pr = rr.getBlockData(Qr, Wr, ar);
+          return rr.getPlayerDbId(Sr) !== (null === pr || void 0 === pr || null === (fr = pr.persisted) || void 0 === fr || null === (Er = fr.shared) || void 0 === Er ? void 0 : Er.ownerDbId) ? (rr.sendMessage(Sr, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: yR.C.redUiText
+              color: Zr.K.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var uR = GR(3017),
-      ZR = GR(1336);
-    const qR = 8.4,
-      iR = 1e-4,
-      fR = .15,
-      VR = .04,
-      KR = [.12, .04, .12],
-      wR = 26,
-      rR = {
+    var ar = Qr(2984),
+      jr = Qr(1287);
+    const Ir = 8.4,
+      fr = 1e-4,
+      Er = .15,
+      pr = .04,
+      xr = [.12, .04, .12],
+      mr = 26,
+      Nr = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        hK: 1,
-        minLifeTime: iR,
-        maxLifeTime: iR,
+        sx: 1,
+        minLifeTime: fr,
+        maxLifeTime: fr,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -431,19 +431,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: uR.c.Standard
+        blendMode: ar.e.Standard
       },
-      eR = {
+      Ur = {
         texture: "bubble",
         mipmaps: !1,
-        hK: 96,
+        sx: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: wR,
+        emitRate: mr,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -457,159 +457,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: uR.c.Standard
+        blendMode: ar.e.Standard
       },
-      aR = [0, 0, 0],
-      LR = [0, 0, 0];
+      tr = [0, 0, 0],
+      hr = [0, 0, 0];
 
-    function nR(RR) {
-      const JR = new Map;
-      let GR = null;
+    function zr(rr) {
+      const Sr = new Map;
+      let Qr = null;
 
-      function yR(RR) {
-        var JR, GR;
-        null === (JR = RR.bubbles) || void 0 === JR || JR.stop(), null === (GR = RR.fish) || void 0 === GR || GR.stop()
+      function Zr(rr) {
+        var Sr, Qr;
+        null === (Sr = rr.bubbles) || void 0 === Sr || Sr.stop(), null === (Qr = rr.fish) || void 0 === Qr || Qr.stop()
       }
 
-      function tR(GR) {
-        if (!GR.readDrawnPosition(RR, LR)) {
-          for (const RR of JR.values()) {
-            var yR;
-            null === (yR = RR.bubbles) || void 0 === yR || yR.setEmitRate(0)
+      function Wr(Qr) {
+        if (!Qr.readDrawnPosition(rr, hr)) {
+          for (const rr of Sr.values()) {
+            var Zr;
+            null === (Zr = rr.bubbles) || void 0 === Zr || Zr.setEmitRate(0)
           }
           return
         }
-        const tR = performance.now();
-        for (const [RR, ZR] of JR) {
-          var uR;
-          if (null === (uR = ZR.bubbles) || void 0 === uR || uR.setEmitRate(0), !GR.readDrawnPosition(RR, aR)) continue;
-          if (!((aR[0] - LR[0]) ** 2 + (aR[1] - LR[1]) ** 2 + (aR[2] - LR[2]) ** 2 < 900)) continue;
-          const JR = Math.max(0, ZR.biteAt - tR),
-            yR = ZR.approachDurationMs > 0 ? Math.min(1, 1 - JR / ZR.approachDurationMs) : 1,
-            iR = (ZR.approachDurationMs - JR) / 1e3,
-            nR = ZR.phase + .25 * Math.sin(1.7 * iR + ZR.phase),
-            UR = Math.min(ZR.approachDurationMs / 3e3 * 2.8, qR) * (1 - yR) * (1 + .15 * Math.sin(2.1 * iR + ZR.phase)),
-            WR = Math.min(1, 4 * (1 - yR)),
-            AR = (.45 * Math.sin(4.1 * iR + ZR.phase) + .18 * Math.sin(9.7 * iR + 2 * ZR.phase)) * WR,
-            CR = aR[0] + Math.cos(nR) * UR - Math.sin(nR) * AR,
-            XR = Math.ceil(ZR.surfaceY),
-            MR = aR[2] + Math.sin(nR) * UR + Math.cos(nR) * AR,
+        const Wr = performance.now();
+        for (const [rr, jr] of Sr) {
+          var ar;
+          if (null === (ar = jr.bubbles) || void 0 === ar || ar.setEmitRate(0), !Qr.readDrawnPosition(rr, tr)) continue;
+          if (!((tr[0] - hr[0]) ** 2 + (tr[1] - hr[1]) ** 2 + (tr[2] - hr[2]) ** 2 < 900)) continue;
+          const Sr = Math.max(0, jr.biteAt - Wr),
+            Zr = jr.approachDurationMs > 0 ? Math.min(1, 1 - Sr / jr.approachDurationMs) : 1,
+            fr = (jr.approachDurationMs - Sr) / 1e3,
+            zr = jr.phase + .25 * Math.sin(1.7 * fr + jr.phase),
+            Yr = Math.min(jr.approachDurationMs / 3e3 * 2.8, Ir) * (1 - Zr) * (1 + .15 * Math.sin(2.1 * fr + jr.phase)),
+            nr = Math.min(1, 4 * (1 - Zr)),
+            er = (.45 * Math.sin(4.1 * fr + jr.phase) + .18 * Math.sin(9.7 * fr + 2 * jr.phase)) * nr,
+            Kr = tr[0] + Math.cos(zr) * Yr - Math.sin(zr) * er,
+            yr = Math.ceil(jr.surfaceY),
+            Br = tr[2] + Math.sin(zr) * Yr + Math.cos(zr) * er,
             {
-              fishAt: BR,
-              bubblesAt: lR
-            } = ZR;
-          BR[0] = lR[0] = CR, BR[1] = XR + fR, lR[1] = XR + VR, BR[2] = lR[2] = MR, ZR.fish ??= GR.createParticles(rR, {
-            pos: BR
-          }), ZR.fish.moveTo(BR), ZR.fish.emit(1), ZR.bubbles ??= GR.createParticles(eR, {
-            pos: lR,
-            half: KR
-          }), ZR.bubbles.moveTo(lR), ZR.bubbles.setEmitRate(wR + 32 * (.5 + .5 * Math.sin(9 * iR + ZR.phase)) ** 4 + 13 * yR)
+              fishAt: Tr,
+              bubblesAt: vr
+            } = jr;
+          Tr[0] = vr[0] = Kr, Tr[1] = yr + Er, vr[1] = yr + pr, Tr[2] = vr[2] = Br, jr.fish ??= Qr.createParticles(Nr, {
+            pos: Tr
+          }), jr.fish.moveTo(Tr), jr.fish.emit(1), jr.bubbles ??= Qr.createParticles(Ur, {
+            pos: vr,
+            half: xr
+          }), jr.bubbles.moveTo(vr), jr.bubbles.setEmitRate(mr + 32 * (.5 + .5 * Math.sin(9 * fr + jr.phase)) ** 4 + 13 * Zr)
         }
       }
       return {
-        onCreate(RR) {
-          GR = RR
+        onCreate(rr) {
+          Qr = rr
         },
         onAfterRender() {
-          GR && tR(GR)
+          Qr && Wr(Qr)
         },
         onClose() {
-          for (const RR of JR.values()) yR(RR);
-          JR.clear(), GR = null
+          for (const rr of Sr.values()) Zr(rr);
+          Sr.clear(), Qr = null
         },
-        onReceivedMessageFromServer(RR, GR) {
-          if (RR !== ZR.B) return;
+        onReceivedMessageFromServer(rr, Qr) {
+          if (rr !== jr.F) return;
           const {
-            hookId: tR,
-            waiting: uR
-          } = GR;
-          if (uR) JR.has(tR) || JR.set(tR, {
+            hookId: Wr,
+            waiting: ar
+          } = Qr;
+          if (ar) Sr.has(Wr) || Sr.set(Wr, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + uR.remainingMs,
-            approachDurationMs: uR.durationMs,
-            surfaceY: uR.surfaceY,
+            biteAt: performance.now() + ar.remainingMs,
+            approachDurationMs: ar.durationMs,
+            surfaceY: ar.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const RR = JR.get(tR);
-            RR && yR(RR), JR.delete(tR)
+            const rr = Sr.get(Wr);
+            rr && Zr(rr), Sr.delete(Wr)
           }
         }
       }
     }
-    var UR = GR(5736),
-      WR = GR(5728);
+    var Yr = Qr(5675),
+      nr = Qr(5658);
 
-    function AR(RR) {
-      let JR, GR = null,
-        yR = null;
-      const tR = () => {
-        var RR;
-        null === (RR = yR) || void 0 === RR || RR(), yR = null
+    function er(rr) {
+      let Sr, Qr = null,
+        Zr = null;
+      const Wr = () => {
+        var rr;
+        null === (rr = Zr) || void 0 === rr || rr(), Zr = null
       };
       return {
-        onCreate(yR) {
-          JR = yR, GR = JR.getClientOption(RR, "dialogue")
+        onCreate(Zr) {
+          Sr = Zr, Qr = Sr.getClientOption(rr, "dialogue")
         },
         onAfterRender() {
-          if (!JR) return;
-          const uR = JR.getClientOption(RR, "dialogue");
-          if (uR === GR) return;
-          if (GR = uR, tR(), !uR || !1 === uR.animateIn) return;
+          if (!Sr) return;
+          const ar = Sr.getClientOption(rr, "dialogue");
+          if (ar === Qr) return;
+          if (Qr = ar, Wr(), !ar || !1 === ar.animateIn) return;
           const {
-            plan: ZR,
-            synth: qR
-          } = (0, WR.f)(uR);
-          qR && (yR = (0, UR.d)(qR, ZR.blips))
+            plan: jr,
+            synth: Ir
+          } = (0, nr.h)(ar);
+          Ir && (Zr = (0, Yr.h)(Ir, jr.blips))
         },
-        onClose: tR
+        onClose: Wr
       }
     }
-    var CR = GR(40422);
-    const XR = [
+    var Kr = Qr(40721);
+    const yr = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      MR = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      BR = [0, 1, 2, 0, 2, 3];
+      Br = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      Tr = [0, 1, 2, 0, 2, 3];
 
-    function lR(RR, JR, GR) {
-      var yR;
-      let [tR, uR, ZR] = JR;
-      if (RR.hasPackModel("Furnace")) return null;
-      const qR = ((null !== (yR = RR.getMetaInfo(GR).rot) && void 0 !== yR ? yR : 1) - 1) * Math.PI / 2,
-        iR = Math.PI + qR,
-        fR = Math.cos(iR),
-        VR = Math.sin(iR),
-        KR = [];
-      for (const [eR, aR] of XR) KR.push(eR * fR, aR, -eR * VR);
-      const wR = {
-          positions: KR,
-          indices: BR,
-          uvs: MR
+    function vr(rr, Sr, Qr) {
+      var Zr;
+      let [Wr, ar, jr] = Sr;
+      if (rr.hasPackModel("Furnace")) return null;
+      const Ir = ((null !== (Zr = rr.getMetaInfo(Qr).rot) && void 0 !== Zr ? Zr : 1) - 1) * Math.PI / 2,
+        fr = Math.PI + Ir,
+        Er = Math.cos(fr),
+        pr = Math.sin(fr),
+        xr = [];
+      for (const [Ur, tr] of yr) xr.push(Ur * Er, tr, -Ur * pr);
+      const mr = {
+          positions: xr,
+          indices: Tr,
+          uvs: Br
         },
-        rR = [tR + .5 + .51 * Math.sin(qR), uR + .375, ZR + .5 + .51 * Math.cos(qR)];
-      return RR.createGameMesh(wR, {
+        Nr = [Wr + .5 + .51 * Math.sin(Ir), ar + .375, jr + .5 + .51 * Math.cos(Ir)];
+      return rr.createGameMesh(mr, {
         kind: "furnaceFire"
-      }, rR)
+      }, Nr)
     }
 
-    function pR(RR) {
-      return Math.floor(RR / 200) % 3
+    function Or(rr) {
+      return Math.floor(rr / 200) % 3
     }
 
-    function gR(RR, JR, GR) {
-      RR.setGameMesh(JR, {
-        uvOffset: [0, GR / 3]
+    function Lr(rr, Sr, Qr) {
+      rr.setGameMesh(Sr, {
+        uvOffset: [0, Qr / 3]
       })
     }
-    const bR = [.12, .025, .12],
-      vR = [{
+    const lr = [.12, .025, .12],
+      Xr = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -622,7 +622,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: uR.c.Standard,
+          blendMode: ar.e.Standard,
           soft: !0
         },
         perSecond: 7
@@ -639,140 +639,140 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: uR.c.Add,
+          blendMode: ar.e.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class OR {
+    class Pr {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(RR, JR) {
-        const GR = RR.getBlockId(JR[0], JR[1], JR[2]);
-        if ("Furnace" !== RR.getMetaInfo(GR).rootName) return;
-        const yR = performance.now();
-        let tR = this.smokes.find((RR => RR.pos[0] === JR[0] && RR.pos[1] === JR[1] && RR.pos[2] === JR[2] && RR.Vq === GR));
-        if (tR || (tR = {
-            pos: [JR[0], JR[1], JR[2]],
-            Vq: GR,
-            endMs: yR,
+      start(rr, Sr) {
+        const Qr = rr.getBlockId(Sr[0], Sr[1], Sr[2]);
+        if ("Furnace" !== rr.getMetaInfo(Qr).rootName) return;
+        const Zr = performance.now();
+        let Wr = this.smokes.find((rr => rr.pos[0] === Sr[0] && rr.pos[1] === Sr[1] && rr.pos[2] === Sr[2] && rr.aI === Qr));
+        if (Wr || (Wr = {
+            pos: [Sr[0], Sr[1], Sr[2]],
+            aI: Qr,
+            endMs: Zr,
             lastBurstMs: -1 / 0,
-            pending: new Array(vR.length).fill(0),
-            fire: lR(RR, JR, GR)
-          }, this.smokes.push(tR), null !== tR.fire && (gR(RR, tR.fire, pR(yR)), this.shownFireFrame = -1)), tR.endMs = yR + 6e3, this.smokes.length > 4) {
-          const JR = this.smokes.reduce(((RR, JR) => JR.endMs < RR.endMs ? JR : RR));
-          xR(RR, JR), this.smokes.splice(this.smokes.indexOf(JR), 1)
+            pending: new Array(Xr.length).fill(0),
+            fire: vr(rr, Sr, Qr)
+          }, this.smokes.push(Wr), null !== Wr.fire && (Lr(rr, Wr.fire, Or(Zr)), this.shownFireFrame = -1)), Wr.endMs = Zr + 6e3, this.smokes.length > 4) {
+          const Sr = this.smokes.reduce(((rr, Sr) => Sr.endMs < rr.endMs ? Sr : rr));
+          Hr(rr, Sr), this.smokes.splice(this.smokes.indexOf(Sr), 1)
         }
-        yR - tR.lastBurstMs >= 300 && (tR.lastBurstMs = yR, vR.forEach(((RR, JR) => {
-          tR.pending[JR] += RR.style.count
+        Zr - Wr.lastBurstMs >= 300 && (Wr.lastBurstMs = Zr, Xr.forEach(((rr, Sr) => {
+          Wr.pending[Sr] += rr.style.count
         })))
       }
-      onAfterRender(RR, JR) {
+      onAfterRender(rr, Sr) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const GR = performance.now();
-        this.smokes = this.smokes.filter((JR => {
-          const [yR, tR, uR] = JR.pos, ZR = GR < JR.endMs && RR.getBlockId(yR, tR, uR) === JR.Vq;
-          return ZR || xR(RR, JR), ZR
+        const Qr = performance.now();
+        this.smokes = this.smokes.filter((Sr => {
+          const [Zr, Wr, ar] = Sr.pos, jr = Qr < Sr.endMs && rr.getBlockId(Zr, Wr, ar) === Sr.aI;
+          return jr || Hr(rr, Sr), jr
         }));
-        const yR = pR(GR);
-        if (yR !== this.shownFireFrame) {
-          this.shownFireFrame = yR;
-          for (const JR of this.smokes) null !== JR.fire && gR(RR, JR.fire, yR)
+        const Zr = Or(Qr);
+        if (Zr !== this.shownFireFrame) {
+          this.shownFireFrame = Zr;
+          for (const Sr of this.smokes) null !== Sr.fire && Lr(rr, Sr.fire, Zr)
         }
-        if (!RR.particlesEnabled()) {
-          for (const RR of this.smokes) RR.pending.fill(0);
+        if (!rr.particlesEnabled()) {
+          for (const rr of this.smokes) rr.pending.fill(0);
           return
         }
-        const tR = Math.min(JR, 250) / 1e3;
-        for (const uR of this.smokes) {
-          const [JR, yR, ZR] = uR.pos;
-          if (0 !== RR.getBlockId(JR, yR + 1, ZR)) {
-            uR.pending.fill(0);
+        const Wr = Math.min(Sr, 250) / 1e3;
+        for (const ar of this.smokes) {
+          const [Sr, Zr, jr] = ar.pos;
+          if (0 !== rr.getBlockId(Sr, Zr + 1, jr)) {
+            ar.pending.fill(0);
             continue
           }
-          const qR = (uR.endMs - GR) / 6e3,
-            iR = this.centre;
-          iR[0] = JR + .5, iR[1] = yR + 1.275, iR[2] = ZR + .5, vR.forEach(((JR, GR) => {
-            uR.pending[GR] += JR.perSecond * qR * tR;
-            const yR = Math.floor(uR.pending[GR]);
-            yR > 0 && this.emit(RR, GR, iR, yR) && (uR.pending[GR] -= yR)
+          const Ir = (ar.endMs - Qr) / 6e3,
+            fr = this.centre;
+          fr[0] = Sr + .5, fr[1] = Zr + 1.275, fr[2] = jr + .5, Xr.forEach(((Sr, Qr) => {
+            ar.pending[Qr] += Sr.perSecond * Ir * Wr;
+            const Zr = Math.floor(ar.pending[Qr]);
+            Zr > 0 && this.emit(rr, Qr, fr, Zr) && (ar.pending[Qr] -= Zr)
           }))
         }
       }
-      dispose(RR) {
-        for (const GR of this.smokes) xR(RR, GR);
+      dispose(rr) {
+        for (const Qr of this.smokes) Hr(rr, Qr);
         this.smokes = [];
-        for (const GR of null !== (JR = this.puffers) && void 0 !== JR ? JR : []) {
-          var JR;
-          GR.dispose()
+        for (const Qr of null !== (Sr = this.puffers) && void 0 !== Sr ? Sr : []) {
+          var Sr;
+          Qr.dispose()
         }
         this.puffers = null
       }
-      emit(RR, JR, GR, yR) {
-        return this.puffers ??= vR.map((RR => {
+      emit(rr, Sr, Qr, Zr) {
+        return this.puffers ??= Xr.map((rr => {
           let {
-            style: JR,
-            perSecond: GR
-          } = RR;
-          const yR = (JR.count / .3 + GR) * JR.life[1];
-          return new CR.d(JR, Math.ceil(4 * yR), bR)
-        })), this.puffers[JR].emit(RR, GR, this.renderFrame, yR)
+            style: Sr,
+            perSecond: Qr
+          } = rr;
+          const Zr = (Sr.count / .3 + Qr) * Sr.life[1];
+          return new Kr.d(Sr, Math.ceil(4 * Zr), lr)
+        })), this.puffers[Sr].emit(rr, Qr, this.renderFrame, Zr)
       }
     }
 
-    function xR(RR, JR) {
-      null !== JR.fire && (RR.disposeGameMesh(JR.fire), JR.fire = null)
+    function Hr(rr, Sr) {
+      null !== Sr.fire && (rr.disposeGameMesh(Sr.fire), Sr.fire = null)
     }
 
-    function NR() {
-      let RR;
-      const JR = new OR;
+    function qr() {
+      let rr;
+      const Sr = new Pr;
       return {
-        onCreate(JR) {
-          RR = JR
+        onCreate(Sr) {
+          rr = Sr
         },
-        onReceivedMessageFromServer(GR, yR) {
-          GR === ZR.F && JR.start(RR, yR)
+        onReceivedMessageFromServer(Qr, Zr) {
+          Qr === jr.J && Sr.start(rr, Zr)
         },
-        onAfterRender(GR) {
-          JR.onAfterRender(RR, GR)
+        onAfterRender(Qr) {
+          Sr.onAfterRender(rr, Qr)
         },
         onClose() {
-          JR.dispose(RR)
+          Sr.dispose(rr)
         }
       }
     }
-    var DR = GR(203),
-      HR = GR(40393),
-      oR = GR(40429),
-      cR = GR(40432);
-    class PR {
-      constructor(RR, JR, GR) {
-        this.api = RR, this.wearer = JR, this.name = GR, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new cR.b, this.shown = !1, this.raised = 0
+    var Rr = Qr(208),
+      gr = Qr(40699),
+      Cr = Qr(40728),
+      Mr = Qr(40733);
+    class Gr {
+      constructor(rr, Sr, Qr) {
+        this.api = rr, this.wearer = Sr, this.name = Qr, this.model = null, this.madeFrom = null, this.perchedWith = null, this.motion = new Mr.b, this.shown = !1, this.raised = 0
       }
-      update(RR) {
-        var JR;
-        const GR = (0, HR.e)(this.name);
-        if (!GR) return void this.dispose();
-        if (!this.madeFrom || this.madeFrom.model === GR.model && this.madeFrom.scale === GR.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(GR.model, GR.scale), this.madeFrom = GR, !this.model)) return void this.raiseNametag(0);
-        if (!(RR.drawn && !RR.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
-        const yR = this.motion.step({
-          dt: RR.dt,
-          feet: RR.feet,
-          heading: RR.heading,
-          headTopY: RR.headTopY,
-          tuning: GR,
-          timeS: RR.timeS
+      update(rr) {
+        var Sr;
+        const Qr = (0, gr.i)(this.name);
+        if (!Qr) return void this.dispose();
+        if (!this.madeFrom || this.madeFrom.model === Qr.model && this.madeFrom.scale === Qr.scale || this.freeModel(), !this.model && (this.model = this.api.createCosmeticModel(Qr.model, Qr.scale), this.madeFrom = Qr, !this.model)) return void this.raiseNametag(0);
+        if (!(rr.drawn && !rr.ownFirstPerson)) return this.setShown(!1), this.raiseNametag(0), void this.motion.reset();
+        const Zr = this.motion.step({
+          dt: rr.dt,
+          feet: rr.feet,
+          heading: rr.heading,
+          headTopY: rr.headTopY,
+          tuning: Qr,
+          timeS: rr.timeS
         });
-        this.model.setPose(yR.pos, yR.yaw + Math.PI), this.model.setClip(null !== (JR = yR.clip) && void 0 !== JR ? JR : null);
-        const tR = yR.seated ? GR : null;
-        tR !== this.perchedWith && (this.perchedWith = tR, this.model.setPerch(tR && {
-          fG: this.wearer,
-          offset: tR.perchOffset,
-          yaw: tR.yawOffset
-        })), this.setShown(!0), this.raiseNametag(GR.nametagRaise)
+        this.model.setPose(Zr.pos, Zr.yaw + Math.PI), this.model.setClip(null !== (Sr = Zr.clip) && void 0 !== Sr ? Sr : null);
+        const Wr = Zr.seated ? Qr : null;
+        Wr !== this.perchedWith && (this.perchedWith = Wr, this.model.setPerch(Wr && {
+          hQ: this.wearer,
+          offset: Wr.perchOffset,
+          yaw: Wr.yawOffset
+        })), this.setShown(!0), this.raiseNametag(Qr.nametagRaise)
       }
       refreshNametag() {
         0 !== this.raised && this.api.setNametagOffset(this.wearer, this.raised)
@@ -780,66 +780,66 @@ export const modules = {
       dispose() {
         this.freeModel(), this.raiseNametag(0)
       }
-      raiseNametag(RR) {
-        RR !== this.raised && (this.raised = RR, this.api.setNametagOffset(this.wearer, RR))
+      raiseNametag(rr) {
+        rr !== this.raised && (this.raised = rr, this.api.setNametagOffset(this.wearer, rr))
       }
       freeModel() {
-        var RR;
-        null === (RR = this.model) || void 0 === RR || RR.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
+        var rr;
+        null === (rr = this.model) || void 0 === rr || rr.dispose(), this.model = null, this.madeFrom = null, this.perchedWith = null, this.shown = !1, this.motion.reset()
       }
-      setShown(RR) {
-        this.model && RR !== this.shown && (this.shown = RR, this.model.setVisible(RR))
+      setShown(rr) {
+        this.model && rr !== this.shown && (this.shown = rr, this.model.setVisible(rr))
       }
     }
-    class IR {
-      constructor(RR, JR) {
-        this.api = RR, this.name = JR, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
+    class kr {
+      constructor(rr, Sr) {
+        this.api = rr, this.name = Sr, this.particles = null, this.madeFrom = null, this.half = [0, 0, 0], this.emitting = !0, this.centre = [0, 0, 0]
       }
-      update(RR) {
-        const JR = (0, HR.d)(this.name);
-        if (JR !== this.madeFrom && this.stop(), !JR) return;
-        const GR = RR.ownFirstPerson ? JR.ownInFirstPerson : RR.drawn;
-        if (GR) {
+      update(rr) {
+        const Sr = (0, gr.h)(this.name);
+        if (Sr !== this.madeFrom && this.stop(), !Sr) return;
+        const Qr = rr.ownFirstPerson ? Sr.ownInFirstPerson : rr.drawn;
+        if (Qr) {
           const {
-            centre: GR
+            centre: Qr
           } = this;
-          if ((0, cR.g)(GR, RR.feet, JR.offset, Math.sin(RR.heading), Math.cos(RR.heading)), this.particles) this.particles.moveTo(GR, this.half);
+          if ((0, Mr.f)(Qr, rr.feet, Sr.offset, Math.sin(rr.heading), Math.cos(rr.heading)), this.particles) this.particles.moveTo(Qr, this.half);
           else {
-            const RR = (0, oR.c)(JR);
-            this.half = RR.half, this.particles = this.api.createParticles(RR.opts, {
-              pos: GR,
-              half: RR.half
-            }), this.madeFrom = JR, this.emitting = !0
+            const rr = (0, Cr.e)(Sr);
+            this.half = rr.half, this.particles = this.api.createParticles(rr.opts, {
+              pos: Qr,
+              half: rr.half
+            }), this.madeFrom = Sr, this.emitting = !0
           }
         }
-        this.particles && GR !== this.emitting && (this.emitting = GR, this.particles.setEmitRate(GR ? JR.particles.emitRate : 0))
+        this.particles && Qr !== this.emitting && (this.emitting = Qr, this.particles.setEmitRate(Qr ? Sr.particles.emitRate : 0))
       }
       stop() {
-        var RR;
-        null === (RR = this.particles) || void 0 === RR || RR.stop(), this.particles = null, this.madeFrom = null
+        var rr;
+        null === (rr = this.particles) || void 0 === rr || rr.stop(), this.particles = null, this.madeFrom = null
       }
     }
-    const mR = .25,
-      zR = 48,
-      SR = 4,
-      jR = 24,
-      dR = 12,
-      ER = .6,
-      YR = 1 / DR.g.playerEyeToHeightRatio;
+    const Ar = .25,
+      Vr = 48,
+      ir = 4,
+      wr = 24,
+      cr = 12,
+      Fr = .6,
+      or = 1 / Rr.i.playerEyeToHeightRatio;
 
-    function kR(RR, JR, GR) {
-      const yR = RR.filter((RR => RR[JR] <= zR));
-      return yR.sort(((RR, GR) => RR[JR] - GR[JR])), new Set(yR.slice(0, GR).map((RR => RR.id)))
+    function br(rr, Sr, Qr) {
+      const Zr = rr.filter((rr => rr[Sr] <= Vr));
+      return Zr.sort(((rr, Qr) => rr[Sr] - Qr[Sr])), new Set(Zr.slice(0, Qr).map((rr => rr.id)))
     }
 
-    function QR() {
-      let RR;
-      const JR = new Map;
-      let GR = 0,
-        yR = 0;
-      const tR = [0, 0, 0],
-        uR = {
-          feet: tR,
+    function Jr() {
+      let rr;
+      const Sr = new Map;
+      let Qr = 0,
+        Zr = 0;
+      const Wr = [0, 0, 0],
+        ar = {
+          feet: Wr,
           heading: 0,
           headTopY: 0,
           drawn: !1,
@@ -848,96 +848,96 @@ export const modules = {
           timeS: 0
         };
 
-      function ZR(RR) {
-        var JR, GR;
-        null === (JR = RR.pet) || void 0 === JR || JR.dispose(), null === (GR = RR.aura) || void 0 === GR || GR.stop()
+      function jr(rr) {
+        var Sr, Qr;
+        null === (Sr = rr.pet) || void 0 === Sr || Sr.dispose(), null === (Qr = rr.aura) || void 0 === Qr || Qr.stop()
       }
 
-      function qR(JR, GR) {
-        var yR, ZR;
+      function Ir(Sr, Qr) {
+        var Zr, jr;
         const {
-          id: qR
-        } = JR, iR = RR.readDrawnPosition(qR, tR) ? RR.getDrawnHeading(qR) : null, fR = null === iR ? null : RR.getDrawnEyeHeight(qR);
-        if (null === iR || null === fR) uR.drawn = !1, uR.ownFirstPerson = !1;
+          id: Ir
+        } = Sr, fr = rr.readDrawnPosition(Ir, Wr) ? rr.getDrawnHeading(Ir) : null, Er = null === fr ? null : rr.getDrawnEyeHeight(Ir);
+        if (null === fr || null === Er) ar.drawn = !1, ar.ownFirstPerson = !1;
         else {
-          const JR = GR.cameraPosition;
-          uR.heading = iR, uR.headTopY = tR[1] + fR * YR, uR.drawn = RR.isAlive(qR) && RR.isEntityDrawn(qR), uR.ownFirstPerson = RR.isLocalPlayer(qR) && RR.isAlive(qR) && Math.hypot(JR[0] - tR[0], JR[1] - tR[1] - fR, JR[2] - tR[2]) < ER
+          const Sr = Qr.cameraPosition;
+          ar.heading = fr, ar.headTopY = Wr[1] + Er * or, ar.drawn = rr.isAlive(Ir) && rr.isEntityDrawn(Ir), ar.ownFirstPerson = rr.isLocalPlayer(Ir) && rr.isAlive(Ir) && Math.hypot(Sr[0] - Wr[0], Sr[1] - Wr[1] - Er, Sr[2] - Wr[2]) < Fr
         }
-        null === (yR = JR.pet) || void 0 === yR || yR.update(uR), null === (ZR = JR.aura) || void 0 === ZR || ZR.update(uR)
+        null === (Zr = Sr.pet) || void 0 === Zr || Zr.update(ar), null === (jr = Sr.aura) || void 0 === jr || jr.update(ar)
       }
       return {
-        onCreate(JR) {
-          RR = JR
+        onCreate(Sr) {
+          rr = Sr
         },
-        onAfterRender(iR, fR) {
-          const VR = iR / 1e3;
-          yR += VR, GR -= VR, GR <= 0 && (GR = mR, function(GR) {
-            const yR = [];
-            for (const ZR of RR.getPlayerIds()) {
-              const uR = RR.getPlayerCosmetics(ZR),
-                qR = void 0 !== (null === uR || void 0 === uR ? void 0 : uR.pet) && (0, HR.e)(uR.pet) ? uR.pet : null,
-                iR = void 0 !== (null === uR || void 0 === uR ? void 0 : uR.aura) && (0, HR.d)(uR.aura) ? uR.aura : null;
-              if (null === qR && null === iR || !RR.readDrawnPosition(ZR, tR)) continue;
-              const fR = Math.hypot(tR[0] - GR[0], tR[1] - GR[1], tR[2] - GR[2]),
-                VR = JR.get(ZR);
-              yR.push({
-                id: ZR,
-                pet: qR,
-                aura: iR,
-                petDist: null === qR ? 1 / 0 : fR - (null !== VR && void 0 !== VR && VR.pet ? SR : 0),
-                auraDist: null === iR ? 1 / 0 : fR - (null !== VR && void 0 !== VR && VR.aura ? SR : 0)
+        onAfterRender(fr, Er) {
+          const pr = fr / 1e3;
+          Zr += pr, Qr -= pr, Qr <= 0 && (Qr = Ar, function(Qr) {
+            const Zr = [];
+            for (const jr of rr.getPlayerIds()) {
+              const ar = rr.getPlayerCosmetics(jr),
+                Ir = void 0 !== (null === ar || void 0 === ar ? void 0 : ar.pet) && (0, gr.i)(ar.pet) ? ar.pet : null,
+                fr = void 0 !== (null === ar || void 0 === ar ? void 0 : ar.aura) && (0, gr.h)(ar.aura) ? ar.aura : null;
+              if (null === Ir && null === fr || !rr.readDrawnPosition(jr, Wr)) continue;
+              const Er = Math.hypot(Wr[0] - Qr[0], Wr[1] - Qr[1], Wr[2] - Qr[2]),
+                pr = Sr.get(jr);
+              Zr.push({
+                id: jr,
+                pet: Ir,
+                aura: fr,
+                petDist: null === Ir ? 1 / 0 : Er - (null !== pr && void 0 !== pr && pr.pet ? ir : 0),
+                auraDist: null === fr ? 1 / 0 : Er - (null !== pr && void 0 !== pr && pr.aura ? ir : 0)
               })
             }
-            const uR = kR(yR, "petDist", jR),
-              qR = RR.particlesEnabled() ? kR(yR, "auraDist", dR) : new Set,
-              iR = new Set;
+            const ar = br(Zr, "petDist", wr),
+              Ir = rr.particlesEnabled() ? br(Zr, "auraDist", cr) : new Set,
+              fr = new Set;
             for (const {
-                id: tR,
-                pet: ZR,
-                aura: aR
+                id: Wr,
+                pet: jr,
+                aura: tr
               }
-              of yR) {
-              var fR, VR, KR;
-              const GR = null !== (fR = JR.get(tR)) && void 0 !== fR ? fR : {
-                  id: tR,
+              of Zr) {
+              var Er, pr, xr;
+              const Qr = null !== (Er = Sr.get(Wr)) && void 0 !== Er ? Er : {
+                  id: Wr,
                   pet: null,
                   aura: null
                 },
-                yR = uR.has(tR) ? ZR : null,
-                LR = qR.has(tR) ? aR : null;
-              var wR, rR, eR;
-              (null === (VR = GR.pet) || void 0 === VR ? void 0 : VR.name) !== yR ? (null === (wR = GR.pet) || void 0 === wR || wR.dispose(), GR.pet = null === yR ? null : new PR(RR, tR, yR)) : null === (rR = GR.pet) || void 0 === rR || rR.refreshNametag(), (null === (KR = GR.aura) || void 0 === KR ? void 0 : KR.name) !== LR && (null === (eR = GR.aura) || void 0 === eR || eR.stop(), GR.aura = null === LR ? null : new IR(RR, LR)), (GR.pet || GR.aura) && (JR.set(tR, GR), iR.add(tR))
+                Zr = ar.has(Wr) ? jr : null,
+                hr = Ir.has(Wr) ? tr : null;
+              var mr, Nr, Ur;
+              (null === (pr = Qr.pet) || void 0 === pr ? void 0 : pr.name) !== Zr ? (null === (mr = Qr.pet) || void 0 === mr || mr.dispose(), Qr.pet = null === Zr ? null : new Gr(rr, Wr, Zr)) : null === (Nr = Qr.pet) || void 0 === Nr || Nr.refreshNametag(), (null === (xr = Qr.aura) || void 0 === xr ? void 0 : xr.name) !== hr && (null === (Ur = Qr.aura) || void 0 === Ur || Ur.stop(), Qr.aura = null === hr ? null : new kr(rr, hr)), (Qr.pet || Qr.aura) && (Sr.set(Wr, Qr), fr.add(Wr))
             }
-            for (const [RR, tR] of JR) iR.has(RR) || (ZR(tR), JR.delete(RR))
-          }(fR.cameraPosition)), uR.dt = VR, uR.timeS = yR;
-          for (const RR of JR.values()) qR(RR, fR)
+            for (const [rr, Wr] of Sr) fr.has(rr) || (jr(Wr), Sr.delete(rr))
+          }(Er.cameraPosition)), ar.dt = pr, ar.timeS = Zr;
+          for (const rr of Sr.values()) Ir(rr, Er)
         },
         onClose() {
-          for (const RR of JR.values()) ZR(RR);
-          JR.clear()
+          for (const rr of Sr.values()) jr(rr);
+          Sr.clear()
         }
       }
     }
-    var FR = GR(10063);
-    const TR = "skyblockLoot",
-      sR = "autoPickupClick";
-    var hR = GR(1841);
+    var Dr = Qr(9832);
+    const dr = "skyblockLoot",
+      sr = "autoPickupClick";
+    var ur = Qr(1788);
 
-    function RJ(RR, JR) {
+    function rS(rr, Sr) {
       return [{
         timeFraction: 0,
-        minColor: [255 * RR[0], 255 * RR[1], 255 * RR[2], 1],
-        maxColor: [255 * JR[0], 255 * JR[1], 255 * JR[2], 1]
+        minColor: [255 * rr[0], 255 * rr[1], 255 * rr[2], 1],
+        maxColor: [255 * Sr[0], 255 * Sr[1], 255 * Sr[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const JJ = [0, 0, 0],
-      GJ = {
+    const SS = [0, 0, 0],
+      QS = {
         texture: "glint",
         mipmaps: !1,
-        hK: 24,
+        sx: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -945,23 +945,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: JJ,
-        dir2: JJ,
-        blendMode: uR.c.OneOne
+        dir1: SS,
+        dir2: SS,
+        blendMode: ar.e.OneOne
       },
-      yJ = {
-        ...GJ,
-        colorGradients: RJ([1, .88, .38], [1, .65, .15])
+      ZS = {
+        ...QS,
+        colorGradients: rS([1, .88, .38], [1, .65, .15])
       },
-      tJ = {
-        ...GJ,
-        colorGradients: RJ([.55, .95, 1], [.9, 1, 1])
+      WS = {
+        ...QS,
+        colorGradients: rS([.55, .95, 1], [.9, 1, 1])
       },
-      uJ = [.5, .5, .5],
-      ZJ = {
+      aS = [.5, .5, .5],
+      jS = {
         texture: "glint",
         mipmaps: !1,
-        hK: 24,
+        sx: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -969,24 +969,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: RJ([1, .12, .12], [1, .35, .2]),
-        blendMode: uR.c.OneOne
+        colorGradients: rS([1, .12, .12], [1, .35, .2]),
+        blendMode: ar.e.OneOne
       };
-    class qJ {
+    class IS {
       constructor() {
         this.drops = new Map
       }
-      BK(RR, JR) {
-        if ("overflowFlash" === JR.kind) {
-          const [GR, yR, tR] = JR.position, uR = RR.createParticles(ZJ, {
-            pos: [GR, yR, tR],
-            half: uJ
+      vx(rr, Sr) {
+        if ("overflowFlash" === Sr.kind) {
+          const [Qr, Zr, Wr] = Sr.position, ar = rr.createParticles(jS, {
+            pos: [Qr, Zr, Wr],
+            half: aS
           });
-          return uR.emit(18), void uR.stop()
+          return ar.emit(18), void ar.stop()
         }
-        this.drops.has(JR.itemId) || this.drops.set(JR.itemId, {
-          owner: JR.owner,
-          cosmetic: JR.cosmetic,
+        this.drops.has(Sr.itemId) || this.drops.set(Sr.itemId, {
+          owner: Sr.owner,
+          cosmetic: Sr.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -995,168 +995,168 @@ export const modules = {
           particles: null
         })
       }
-      gK(RR) {
+      lx(rr) {
         if (0 === this.drops.size) return;
-        const JR = performance.now(),
-          GR = RR.getCameraPosition();
-        let yR = 0;
-        for (const uR of this.drops.values()) null !== uR.particles && yR++;
-        for (const [uR, ZR] of this.drops) {
-          const qR = RR.getPositionView(uR);
-          if (null === qR) {
-            var tR;
-            if (ZR.seen || JR - ZR.markedAt > 5e3) null !== ZR.particles && yR--, null === (tR = ZR.particles) || void 0 === tR || tR.stop(), this.drops.delete(uR);
+        const Sr = performance.now(),
+          Qr = rr.getCameraPosition();
+        let Zr = 0;
+        for (const ar of this.drops.values()) null !== ar.particles && Zr++;
+        for (const [ar, jr] of this.drops) {
+          const Ir = rr.getPositionView(ar);
+          if (null === Ir) {
+            var Wr;
+            if (jr.seen || Sr - jr.markedAt > 5e3) null !== jr.particles && Zr--, null === (Wr = jr.particles) || void 0 === Wr || Wr.stop(), this.drops.delete(ar);
             continue
           }
-          ZR.cosmetic || !RR.isLocalPlayer(ZR.owner) || ZR.pickupDelayCleared || (RR.clearPickupDelay(uR), ZR.pickupDelayCleared = !0);
-          const iR = ZR.lastPosition,
-            fR = ZR.seen && (qR[0] - iR[0]) ** 2 + (qR[1] - iR[1]) ** 2 + (qR[2] - iR[2]) ** 2 > 4e-4,
-            VR = (qR[0] - GR[0]) ** 2 + (qR[1] - GR[1]) ** 2 + (qR[2] - GR[2]) ** 2 < 2025;
-          ZR.seen = !0, iR[0] = qR[0], iR[1] = qR[1], iR[2] = qR[2], fR && (ZR.lastMovingAt = JR), null !== ZR.particles && (!VR || JR - ZR.lastMovingAt > 500) && (ZR.particles.stop(), ZR.particles = null, yR--), fR && VR && null === ZR.particles && yR < 32 && (ZR.particles = RR.createParticles(ZR.cosmetic ? tJ : yJ, {
-            pos: qR
-          }), yR++), null !== ZR.particles && (ZR.particles.moveTo(qR), ZR.particles.setEmitRate(fR ? 12 : 0)), !fR && null === ZR.particles && JR - Math.max(ZR.lastMovingAt, ZR.markedAt) > 2e3 && this.drops.delete(uR)
+          jr.cosmetic || !rr.isLocalPlayer(jr.owner) || jr.pickupDelayCleared || (rr.clearPickupDelay(ar), jr.pickupDelayCleared = !0);
+          const fr = jr.lastPosition,
+            Er = jr.seen && (Ir[0] - fr[0]) ** 2 + (Ir[1] - fr[1]) ** 2 + (Ir[2] - fr[2]) ** 2 > 4e-4,
+            pr = (Ir[0] - Qr[0]) ** 2 + (Ir[1] - Qr[1]) ** 2 + (Ir[2] - Qr[2]) ** 2 < 2025;
+          jr.seen = !0, fr[0] = Ir[0], fr[1] = Ir[1], fr[2] = Ir[2], Er && (jr.lastMovingAt = Sr), null !== jr.particles && (!pr || Sr - jr.lastMovingAt > 500) && (jr.particles.stop(), jr.particles = null, Zr--), Er && pr && null === jr.particles && Zr < 32 && (jr.particles = rr.createParticles(jr.cosmetic ? WS : ZS, {
+            pos: Ir
+          }), Zr++), null !== jr.particles && (jr.particles.moveTo(Ir), jr.particles.setEmitRate(Er ? 12 : 0)), !Er && null === jr.particles && Sr - Math.max(jr.lastMovingAt, jr.markedAt) > 2e3 && this.drops.delete(ar)
         }
       }
       dispose() {
-        for (const JR of this.drops.values()) {
-          var RR;
-          null === (RR = JR.particles) || void 0 === RR || RR.stop()
+        for (const Sr of this.drops.values()) {
+          var rr;
+          null === (rr = Sr.particles) || void 0 === rr || rr.stop()
         }
         this.drops.clear()
       }
     }
-    const iJ = new Set;
+    const fS = new Set;
 
-    function fJ() {
-      let RR;
-      const JR = new qJ;
+    function ES() {
+      let rr;
+      const Sr = new IS;
       return {
-        onCreate(JR) {
-          RR = JR
+        onCreate(Sr) {
+          rr = Sr
         },
-        onReceivedMessageFromServer(GR, yR) {
-          if (GR === TR) JR.BK(RR, yR);
-          else if (GR === sR) {
-            const RR = yR,
-              JR = `${RR.id}|${RR.value}`;
-            iJ.has(JR) || (iJ.add(JR), (0, hR.c)({
-              id: RR.id,
-              value: RR.value
+        onReceivedMessageFromServer(Qr, Zr) {
+          if (Qr === dr) Sr.vx(rr, Zr);
+          else if (Qr === sr) {
+            const rr = Zr,
+              Sr = `${rr.id}|${rr.value}`;
+            fS.has(Sr) || (fS.add(Sr), (0, ur.e)({
+              id: rr.id,
+              value: rr.value
             }))
           }
         },
-        gK() {
-          JR.gK(RR)
+        lx() {
+          Sr.lx(rr)
         },
         onClose() {
-          JR.dispose()
+          Sr.dispose()
         }
       }
     }
 
-    function VJ(RR, JR, GR, yR) {
+    function pS(rr, Sr, Qr, Zr) {
       return {
-        cosmeticCompanions: QR(),
-        dialogue: AR(yR.localPlayerId),
-        fishing: nR(yR.localPlayerId),
-        furnaceSmoke: NR(),
-        ironChest: tR(),
-        localBlockBroken: (0, FR.c)(),
-        magnetLoot: fJ()
+        cosmeticCompanions: Jr(),
+        dialogue: er(Zr.localPlayerId),
+        fishing: zr(Zr.localPlayerId),
+        furnaceSmoke: qr(),
+        ironChest: Wr(),
+        localBlockBroken: (0, Dr.e)(),
+        magnetLoot: ES()
       }
     }
 
-    function KJ(RR, JR) {
-      for (const tR of [RR, ...null !== JR && void 0 !== JR ? JR : []]) try {
-        var GR;
-        null === tR || void 0 === tR || null === (GR = tR.onClose) || void 0 === GR || GR.call(tR)
-      } catch (yR) {
-        console.error("Error in client onClose callback", yR)
+    function xS(rr, Sr) {
+      for (const Wr of [rr, ...null !== Sr && void 0 !== Sr ? Sr : []]) try {
+        var Qr;
+        null === Wr || void 0 === Wr || null === (Qr = Wr.onClose) || void 0 === Qr || Qr.call(Wr)
+      } catch (Zr) {
+        console.error("Error in client onClose callback", Zr)
       }
     }
   },
-  10063: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      e: () => tR
+  9832: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      h: () => Wr
     });
-    var yR = GR(32);
-    const tR = "localBlockBroken";
+    var Zr = Qr(34);
+    const Wr = "localBlockBroken";
 
-    function uR() {
+    function ar() {
       return {
-        onPlayerChangeBlock(RR, JR, GR, uR, ZR, qR) {
-          "Air" === qR && yR.n.JK(tR)
+        onPlayerChangeBlock(rr, Sr, Qr, ar, jr, Ir) {
+          "Air" === Ir && Zr.i.Jp(Wr)
         }
       }
     }
   },
-  40422: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => yR,
-      d: () => uR
+  40721: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr,
+      d: () => ar
     });
-    const yR = 1 / .6,
-      tR = {
+    const Zr = 1 / .6,
+      Wr = {
         kind: "smokePuff"
       };
-    class uR {
-      constructor(RR, JR, GR) {
-        this.style = RR, this.hK = JR, this.half = GR, this.particles = null, this.lastFrame = -1
+    class ar {
+      constructor(rr, Sr, Qr) {
+        this.style = rr, this.sx = Sr, this.half = Qr, this.particles = null, this.lastFrame = -1
       }
-      emit(RR, JR, GR) {
-        let uR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return GR !== this.lastFrame && (this.lastFrame = GR, this.particles || (this.particles = RR.createParticles(function(RR, JR) {
+      emit(rr, Sr, Qr) {
+        let ar = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return Qr !== this.lastFrame && (this.lastFrame = Qr, this.particles || (this.particles = rr.createParticles(function(rr, Sr) {
           const [
-            [GR, uR, ZR],
-            [qR, iR, fR]
-          ] = RR.colours;
+            [Qr, ar, jr],
+            [Ir, fr, Er]
+          ] = rr.colours;
           return {
-            texture: RR.soft ? tR : "square_particle",
-            hK: JR,
-            minLifeTime: RR.life[0] / yR,
-            maxLifeTime: RR.life[1] / yR,
-            minEmitPower: RR.power[0] * yR,
-            maxEmitPower: RR.power[1] * yR,
-            minSize: RR.size[0],
-            maxSize: RR.size[1],
+            texture: rr.soft ? Wr : "square_particle",
+            sx: Sr,
+            minLifeTime: rr.life[0] / Zr,
+            maxLifeTime: rr.life[1] / Zr,
+            minEmitPower: rr.power[0] * Zr,
+            maxEmitPower: rr.power[1] * Zr,
+            minSize: rr.size[0],
+            maxSize: rr.size[1],
             emitRate: 0,
-            gravity: [0, RR.lift * yR * yR, 0],
-            dir1: [-RR.spread, 1, -RR.spread],
-            dir2: [RR.spread, 1, RR.spread],
+            gravity: [0, rr.lift * Zr * Zr, 0],
+            dir1: [-rr.spread, 1, -rr.spread],
+            dir2: [rr.spread, 1, rr.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [GR, uR, ZR, RR.alpha],
-              maxColor: [qR, iR, fR, RR.alpha]
+              minColor: [Qr, ar, jr, rr.alpha],
+              maxColor: [Ir, fr, Er, rr.alpha]
             }, {
               timeFraction: 1,
-              minColor: [GR, uR, ZR, 0],
-              maxColor: [qR, iR, fR, 0]
+              minColor: [Qr, ar, jr, 0],
+              maxColor: [Ir, fr, Er, 0]
             }],
-            blendMode: RR.blendMode
+            blendMode: rr.blendMode
           }
-        }(this.style, this.hK), {
-          pos: JR,
+        }(this.style, this.sx), {
+          pos: Sr,
           half: this.half
-        })), this.particles.moveTo(JR, this.half), this.particles.emit(uR), !0)
+        })), this.particles.moveTo(Sr, this.half), this.particles.emit(ar), !0)
       }
       dispose() {
-        var RR;
-        null === (RR = this.particles) || void 0 === RR || RR.stop(), this.particles = null
+        var rr;
+        null === (rr = this.particles) || void 0 === rr || rr.stop(), this.particles = null
       }
     }
   },
-  5733: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => tR,
-      e: () => yR,
-      f: () => uR,
-      i: () => iR,
-      m: () => ZR
+  5667: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr,
+      h: () => Zr,
+      l: () => ar,
+      n: () => fr,
+      p: () => jr
     });
-    const yR = ["sine", "triangle", "square", "sawtooth"],
-      tR = 55,
-      uR = {
+    const Zr = ["sine", "triangle", "square", "sawtooth"],
+      Wr = 55,
+      ar = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1295,39 +1295,39 @@ export const modules = {
         }
       };
 
-    function ZR(RR) {
-      return "string" !== typeof RR ? RR : Object.hasOwn(uR, RR) ? uR[RR] : null
+    function jr(rr) {
+      return "string" !== typeof rr ? rr : Object.hasOwn(ar, rr) ? ar[rr] : null
     }
 
-    function qR(RR, JR, GR) {
-      return Math.min(GR, Math.max(JR, RR))
+    function Ir(rr, Sr, Qr) {
+      return Math.min(Qr, Math.max(Sr, rr))
     }
 
-    function iR(RR) {
-      const JR = qR(RR.durationMs, 10, 500),
-        GR = qR(RR.attackMs, 0, JR),
+    function fr(rr) {
+      const Sr = Ir(rr.durationMs, 10, 500),
+        Qr = Ir(rr.attackMs, 0, Sr),
         {
-          intonation: tR
-        } = RR;
+          intonation: Wr
+        } = rr;
       return {
-        waveform: yR.includes(RR.waveform) ? RR.waveform : "sine",
-        pitchHz: qR(RR.pitchHz, 20, 4e3),
-        glideSemitones: qR(RR.glideSemitones, -24, 24),
-        durationMs: JR,
-        attackMs: GR,
-        releaseMs: qR(RR.releaseMs, 0, JR - GR),
-        lowpassHz: null === RR.lowpassHz ? null : qR(RR.lowpassHz, 20, 2e4),
-        volume: qR(RR.volume, 0, 2),
+        waveform: Zr.includes(rr.waveform) ? rr.waveform : "sine",
+        pitchHz: Ir(rr.pitchHz, 20, 4e3),
+        glideSemitones: Ir(rr.glideSemitones, -24, 24),
+        durationMs: Sr,
+        attackMs: Qr,
+        releaseMs: Ir(rr.releaseMs, 0, Sr - Qr),
+        lowpassHz: null === rr.lowpassHz ? null : Ir(rr.lowpassHz, 20, 2e4),
+        volume: Ir(rr.volume, 0, 2),
         intonation: {
-          variationSemitones: qR(tR.variationSemitones, 0, 6),
-          declineSemitones: qR(tR.declineSemitones, 0, 12),
-          questionRiseSemitones: qR(tR.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: qR(tR.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Ir(Wr.variationSemitones, 0, 6),
+          declineSemitones: Ir(Wr.declineSemitones, 0, 12),
+          questionRiseSemitones: Ir(Wr.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Ir(Wr.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: qR(RR.syllableMs, 25, 200)
+        syllableMs: Ir(rr.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

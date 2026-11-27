@@ -1,472 +1,472 @@
 export const id = 118;
 export const ids = [118];
 export const modules = {
-  5792: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => wR
+  5731: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => mr
     });
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(1468),
-      ZR = GR(1465),
-      qR = GR(4850),
-      iR = GR(134),
-      fR = GR(4889),
-      VR = GR(4881),
-      KR = GR(1378);
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(1448),
+      jr = Qr(1444),
+      Ir = Qr(4759),
+      fr = Qr(139),
+      Er = Qr(4791),
+      pr = Qr(4777),
+      xr = Qr(1338);
 
-    function wR(RR) {
+    function mr(rr) {
       let {
-        game: JR
-      } = RR;
-      const GR = (0, iR.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        yR = (0, fR.d)(JR, GR),
-        wR = (0, qR.h)(yR),
-        rR = void 0 !== wR.blurhash;
-      return (0, KR.jsxs)("div", {
+        game: Sr
+      } = rr;
+      const Qr = (0, fr.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        Zr = (0, Er.g)(Sr, Qr),
+        mr = (0, Ir.f)(Zr),
+        Nr = void 0 !== mr.blurhash;
+      return (0, xr.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [wR.isLoading && !rR && (0, KR.jsx)(ZR.d, {
+        children: [mr.isLoading && !Nr && (0, xr.jsx)(jr.c, {
           loaderType: "Secondary"
-        }), !wR.failed && (null !== wR.src || rR) && (0, KR.jsx)("div", {
-          className: tR()("SchematicImage", VR.f, {
-            SchematicImageFadeIn: wR.fadeIn && !rR
+        }), !mr.failed && (null !== mr.src || Nr) && (0, xr.jsx)("div", {
+          className: Wr()("SchematicImage", pr.j, {
+            SchematicImageFadeIn: mr.fadeIn && !Nr
           }),
-          style: (0, VR.c)(wR),
-          children: (0, KR.jsx)(VR.b, {
-            image: wR
+          style: (0, pr.g)(mr),
+          children: (0, xr.jsx)(pr.c, {
+            image: mr
           })
-        }), wR.failed && (0, KR.jsx)("div", {
+        }), mr.failed && (0, xr.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, KR.jsx)(uR.d, {
+          children: (0, xr.jsx)(ar.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6072: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => LR
+  5991: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => hr
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(6003),
-      qR = GR(1465),
-      iR = GR(1270),
-      fR = GR(4428),
-      VR = GR(4571),
-      KR = GR(1468),
-      wR = GR(4436),
-      rR = GR(6076),
-      eR = GR(6092),
-      aR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(5919),
+      Ir = Qr(1444),
+      fr = Qr(1251),
+      Er = Qr(4362),
+      pr = Qr(4501),
+      xr = Qr(1448),
+      mr = Qr(4371),
+      Nr = Qr(5998),
+      Ur = Qr(6010),
+      tr = Qr(1338);
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        folderName: JR,
-        onTexturePackUpdated: tR,
-        disabled: LR = !1,
-        maxFileSizeMb: nR,
-        packOwner: UR
-      } = RR;
+        folderName: Sr,
+        onTexturePackUpdated: Wr,
+        disabled: hr = !1,
+        maxFileSizeMb: zr,
+        packOwner: Yr
+      } = rr;
       const {
-        t: WR
-      } = (0, iR.A)(), [AR, CR] = (0, yR.useState)(!1), [XR, MR] = (0, yR.useState)(null), [BR, lR] = (0, yR.useState)(null), pR = (0, yR.useRef)(null);
-      async function gR(RR) {
-        CR(!0);
+        t: nr
+      } = (0, fr.E)(), [er, Kr] = (0, Zr.useState)(!1), [yr, Br] = (0, Zr.useState)(null), [Tr, vr] = (0, Zr.useState)(null), Or = (0, Zr.useRef)(null);
+      async function Lr(rr) {
+        Kr(!0);
         try {
-          const JR = await (0, fR.t)(RR);
-          if ("customGame" === UR && (0, VR.k)(JR)) return void MR(WR(VR.b));
-          if (void 0 !== nR) {
-            const RR = JSON.stringify(JR).length / 1048576;
-            if (RR > nR) return void MR(WR("customTexturePack:packTooBig", {
-              size: RR.toFixed(1),
-              max: nR
+          const Sr = await (0, Er.m)(rr);
+          if ("customGame" === Yr && (0, pr.m)(Sr)) return void Br(nr(pr.d));
+          if (void 0 !== zr) {
+            const rr = JSON.stringify(Sr).length / 1048576;
+            if (rr > zr) return void Br(nr("customTexturePack:packTooBig", {
+              size: rr.toFixed(1),
+              max: zr
             }))
           }
-          MR(null), lR(null), tR(JR), pR.current = JR,
-            function(RR, JR) {
-              const yR = RR.modelOverrides;
-              yR && Promise.all([GR.e(233), GR.e(232)]).then((() => GR(35238))).then((GR => {
+          Br(null), vr(null), Wr(Sr), Or.current = Sr,
+            function(rr, Sr) {
+              const Zr = rr.modelOverrides;
+              Zr && Promise.all([Qr.e(234), Qr.e(233)]).then((() => Qr(35568))).then((Qr => {
                 let {
-                  packDisplayName: tR,
-                  refusedPackModels: uR,
-                  packModelSummary: ZR
-                } = GR;
-                const qR = tR(RR.metaData);
-                JR(ZR(qR, uR(qR, yR, !1)))
-              })).catch((RR => {
-                console.error("Checking the texture pack's models failed:", RR)
+                  packDisplayName: Wr,
+                  refusedPackModels: ar,
+                  packModelSummary: jr
+                } = Qr;
+                const Ir = Wr(rr.metaData);
+                Sr(jr(Ir, ar(Ir, Zr, !1)))
+              })).catch((rr => {
+                console.error("Checking the texture pack's models failed:", rr)
               }))
-            }(JR, (RR => {
-              pR.current === JR && lR(RR)
+            }(Sr, (rr => {
+              Or.current === Sr && vr(rr)
             }))
-        } catch (JR) {
-          if (JR instanceof wR.c) {
-            const RR = "customTexturePack:invalidPack" !== JR.translationKey || (0, eR.g)() ? JR.translationKey : "customTexturePack:invalidPackZip";
-            MR((0, rR.d)(WR, RR, JR.params))
-          } else console.error("Couldn't read the texture pack", JR), MR(WR("customTexturePack:errorTitle"))
+        } catch (Sr) {
+          if (Sr instanceof mr.b) {
+            const rr = "customTexturePack:invalidPack" !== Sr.translationKey || (0, Ur.d)() ? Sr.translationKey : "customTexturePack:invalidPackZip";
+            Br((0, Nr.g)(nr, rr, Sr.params))
+          } else console.error("Couldn't read the texture pack", Sr), Br(nr("customTexturePack:errorTitle"))
         } finally {
-          CR(!1)
+          Kr(!1)
         }
       }
       const {
-        getRootProps: bR,
-        getInputProps: vR,
-        isDragActive: OR,
-        open: xR
-      } = (0, ZR.e)({
-        onDrop: gR,
+        getRootProps: lr,
+        getInputProps: Xr,
+        isDragActive: Pr,
+        open: Hr
+      } = (0, jr.b)({
+        onDrop: Lr,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: LR
+        disabled: hr
       });
-      return (0, aR.jsxs)("div", {
+      return (0, tr.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, aR.jsxs)("div", {
+        children: [(0, tr.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [WR("settingsMenu:customTextureWarning"), ".", (0, aR.jsx)("br", {}), WR("settingsMenu:viewDocumentation"), ":", " ", (0, aR.jsx)("a", {
+          children: [nr("settingsMenu:customTextureWarning"), ".", (0, tr.jsx)("br", {}), nr("settingsMenu:viewDocumentation"), ":", " ", (0, tr.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), XR && (0, aR.jsxs)("div", {
+        }), yr && (0, tr.jsxs)("div", {
           className: "CustomTextureError",
-          children: [WR("general:error"), ": ", XR]
-        }), BR && (0, aR.jsx)("div", {
+          children: [nr("general:error"), ": ", yr]
+        }), Tr && (0, tr.jsx)("div", {
           className: "CustomTextureError",
-          children: BR
-        }), (0, aR.jsxs)("div", {
-          ...bR({
-            className: uR()("CustomTextureFolderUpload", {
-              ActiveDrag: OR,
-              Disabled: LR
+          children: Tr
+        }), (0, tr.jsxs)("div", {
+          ...lr({
+            className: ar()("CustomTextureFolderUpload", {
+              ActiveDrag: Pr,
+              Disabled: hr
             })
           }),
-          children: [(0, aR.jsx)("input", {
-            ...vR({
+          children: [(0, tr.jsx)("input", {
+            ...Xr({
               webkitdirectory: "true"
             })
-          }), AR && (0, aR.jsx)("div", {
+          }), er && (0, tr.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, aR.jsx)(qR.d, {})
-          }), !AR && !OR && JR && (0, aR.jsxs)(aR.Fragment, {
-            children: [(0, aR.jsx)("div", {
+            children: (0, tr.jsx)(Ir.c, {})
+          }), !er && !Pr && Sr && (0, tr.jsxs)(tr.Fragment, {
+            children: [(0, tr.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, aR.jsx)(KR.d, {
+              children: (0, tr.jsx)(xr.c, {
                 name: "folder-image"
               })
-            }), (0, aR.jsx)("div", {
+            }), (0, tr.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: JR
+              children: Sr
             })]
-          }), !AR && (OR || !JR) && (0, aR.jsxs)(aR.Fragment, {
-            children: [(0, aR.jsx)("div", {
+          }), !er && (Pr || !Sr) && (0, tr.jsxs)(tr.Fragment, {
+            children: [(0, tr.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, aR.jsx)(KR.d, {
+              children: (0, tr.jsx)(xr.c, {
                 name: "up-from-bracket"
               })
-            }), (0, aR.jsx)("div", {
+            }), (0, tr.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: WR((0, eR.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: nr((0, Ur.d)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !AR && (0, aR.jsx)(eR.c, {
-            disabled: LR,
-            openFolderPicker: xR,
-            onFiles: RR => {
-              gR(RR)
+          }), !er && (0, tr.jsx)(Ur.c, {
+            disabled: hr,
+            openFolderPicker: Hr,
+            onFiles: rr => {
+              Lr(rr)
             }
           })]
         })]
       })
     }
   },
-  6092: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => VR,
-      g: () => fR
+  6010: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => pr,
+      d: () => Er
     });
-    var yR = GR(66),
-      tR = GR(1590),
-      uR = GR(1270),
-      ZR = GR(103),
-      qR = GR(4385),
-      iR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1576),
+      ar = Qr(1251),
+      jr = Qr(109),
+      Ir = Qr(4334),
+      fr = Qr(1338);
 
-    function fR() {
-      return !(0, ZR.isMobile)()
+    function Er() {
+      return !(0, jr.isMobile)()
     }
 
-    function VR(RR) {
+    function pr(rr) {
       let {
-        disabled: JR,
-        openFolderPicker: GR,
-        onFiles: ZR
-      } = RR;
+        disabled: Sr,
+        openFolderPicker: Qr,
+        onFiles: jr
+      } = rr;
       const {
-        t: VR
-      } = (0, uR.A)(), KR = (0, yR.useRef)(null);
-      return (0, iR.jsxs)("div", {
+        t: pr
+      } = (0, ar.E)(), xr = (0, Zr.useRef)(null);
+      return (0, fr.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, iR.jsx)("input", {
-          ref: KR,
+        children: [(0, fr.jsx)("input", {
+          ref: xr,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(RR) {
-            const JR = Array.from(RR.target.files);
-            RR.target.value = "", ZR(JR)
+          onChange: function(rr) {
+            const Sr = Array.from(rr.target.files);
+            rr.target.value = "", jr(Sr)
           }
-        }), fR() && (0, iR.jsx)(tR.g, {
-          disabled: JR,
-          onClick: GR,
-          children: VR("general:chooseFolder")
-        }), (0, iR.jsx)(tR.g, {
-          disabled: JR,
+        }), Er() && (0, fr.jsx)(Wr.h, {
+          disabled: Sr,
+          onClick: Qr,
+          children: pr("general:chooseFolder")
+        }), (0, fr.jsx)(Wr.h, {
+          disabled: Sr,
           onClick: () => {
-            (0, qR.e)(KR.current)
+            (0, Ir.e)(xr.current)
           },
-          children: VR("general:chooseZip")
+          children: pr("general:chooseZip")
         })]
       })
     }
   },
-  6037: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => eR,
-      g: () => AR,
-      i: () => aR,
-      m: () => WR
+  5951: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Ur,
+      e: () => er,
+      f: () => tr,
+      i: () => nr
     });
-    var yR = GR(66),
-      tR = GR(6041),
-      uR = GR(5141),
-      ZR = GR(1501),
-      qR = GR(4250),
-      iR = GR(1163),
-      fR = GR.n(iR),
-      VR = GR(1493),
-      KR = GR(1943),
-      wR = GR(6063),
-      rR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(5960),
+      ar = Qr(5065),
+      jr = Qr(1489),
+      Ir = Qr(4205),
+      fr = Qr(1155),
+      Er = Qr.n(fr),
+      pr = Qr(1475),
+      xr = Qr(1885),
+      mr = Qr(5986),
+      Nr = Qr(1338);
 
-    function eR(RR) {
+    function Ur(rr) {
       let {
-        label: JR,
-        onClick: GR,
-        checked: yR,
-        circleInfoText: tR,
-        className: qR,
-        disabled: iR,
-        note: VR
-      } = RR;
-      return (0, rR.jsxs)("div", {
-        "aria-disabled": iR || void 0,
+        label: Sr,
+        onClick: Qr,
+        checked: Zr,
+        circleInfoText: Wr,
+        className: Ir,
+        disabled: fr,
+        note: pr
+      } = rr;
+      return (0, Nr.jsxs)("div", {
+        "aria-disabled": fr || void 0,
         "data-pad-focusable": !0,
-        className: fR()("SettingBox CheckboxContainer", {
-          [qR]: qR,
-          SettingBoxDisabled: iR
+        className: Er()("SettingBox CheckboxContainer", {
+          [Ir]: Ir,
+          SettingBoxDisabled: fr
         }),
         onClick: () => {
-          iR || GR(!yR)
+          fr || Qr(!Zr)
         },
-        children: [(0, rR.jsxs)("div", {
+        children: [(0, Nr.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, rR.jsx)("label", {
+          children: [(0, Nr.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, rR.jsx)(uR.d, {
+            children: (0, Nr.jsx)(ar.e, {
               className: "SettingsCheckbox",
-              checked: yR,
-              disabled: iR,
+              checked: Zr,
+              disabled: fr,
               onChange: () => {}
             })
-          }), (0, rR.jsxs)("div", {
+          }), (0, Nr.jsxs)("div", {
             className: "CheckboxText",
-            children: [JR, tR && (0, rR.jsx)("span", {
-              onClick: RR => RR.stopPropagation(),
-              children: (0, rR.jsx)(ZR.e, {
+            children: [Sr, Wr && (0, Nr.jsx)("span", {
+              onClick: rr => rr.stopPropagation(),
+              children: (0, Nr.jsx)(jr.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: tR
+                hoverInfo: Wr
               })
             })]
           })]
-        }), VR && (0, rR.jsx)("div", {
+        }), pr && (0, Nr.jsx)("div", {
           className: "SettingNote",
-          children: VR
+          children: pr
         })]
       })
     }
 
-    function aR(RR) {
+    function tr(rr) {
       let {
-        name: JR,
-        onChange: GR,
-        min: tR,
-        max: uR,
-        step: qR,
-        initValue: iR,
-        circleInfoText: VR,
-        format: KR,
-        className: wR,
-        padStep: eR,
-        disabled: aR = !1,
-        selectableMax: LR,
-        cappedNote: nR,
-        note: WR,
-        onChangeComplete: AR
-      } = RR;
-      const [CR, XR] = (0, yR.useState)(iR), MR = (0, yR.useRef)(iR);
-      (0, yR.useEffect)((() => {
-        MR.current = iR, XR(iR)
-      }), [iR]);
-      const BR = void 0 !== LR && LR < uR,
-        lR = BR ? {
-          "--slider-selectable": (LR - tR) / (uR - tR)
+        name: Sr,
+        onChange: Qr,
+        min: Wr,
+        max: ar,
+        step: Ir,
+        initValue: fr,
+        circleInfoText: pr,
+        format: xr,
+        className: mr,
+        padStep: Ur,
+        disabled: tr = !1,
+        selectableMax: hr,
+        cappedNote: zr,
+        note: nr,
+        onChangeComplete: er
+      } = rr;
+      const [Kr, yr] = (0, Zr.useState)(fr), Br = (0, Zr.useRef)(fr);
+      (0, Zr.useEffect)((() => {
+        Br.current = fr, yr(fr)
+      }), [fr]);
+      const Tr = void 0 !== hr && hr < ar,
+        vr = Tr ? {
+          "--slider-selectable": (hr - Wr) / (ar - Wr)
         } : void 0,
-        pR = BR && nR ? nR : WR;
-      return (0, rR.jsxs)("div", {
-        className: fR()("SettingBox SettingsSliderDiv", {
-          [wR]: wR,
-          SettingBoxDisabled: aR,
-          SliderCapped: BR
+        Or = Tr && zr ? zr : nr;
+      return (0, Nr.jsxs)("div", {
+        className: Er()("SettingBox SettingsSliderDiv", {
+          [mr]: mr,
+          SettingBoxDisabled: tr,
+          SliderCapped: Tr
         }),
-        style: lR,
-        children: [(0, rR.jsxs)("div", {
+        style: vr,
+        children: [(0, Nr.jsxs)("div", {
           className: "SliderText",
-          children: [`${JR}: ${KR?KR(CR):CR}`, VR && (0, rR.jsx)(ZR.e, {
+          children: [`${Sr}: ${xr?xr(Kr):Kr}`, pr && (0, Nr.jsx)(jr.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: VR
+            hoverInfo: pr
           })]
-        }), (0, rR.jsx)("div", {
+        }), (0, Nr.jsx)("div", {
           className: "SliderDiv",
-          children: (0, rR.jsx)(UR, {
-            value: CR,
-            min: tR,
-            max: uR,
-            step: qR,
-            onChange: RR => {
-              if (BR && RR >= LR && CR === LR) return;
-              const JR = BR ? Math.min(RR, LR) : RR;
-              MR.current = JR, XR(JR), GR(JR)
+          children: (0, Nr.jsx)(Yr, {
+            value: Kr,
+            min: Wr,
+            max: ar,
+            step: Ir,
+            onChange: rr => {
+              if (Tr && rr >= hr && Kr === hr) return;
+              const Sr = Tr ? Math.min(rr, hr) : rr;
+              Br.current = Sr, yr(Sr), Qr(Sr)
             },
-            onChangeComplete: AR && (() => {
-              AR(MR.current)
+            onChangeComplete: er && (() => {
+              er(Br.current)
             }),
-            format: KR,
-            padStep: eR,
-            disabled: aR
+            format: xr,
+            padStep: Ur,
+            disabled: tr
           })
-        }), pR && (0, rR.jsx)("div", {
+        }), Or && (0, Nr.jsx)("div", {
           className: "SettingNote",
-          children: pR
+          children: Or
         })]
       })
     }
-    const LR = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const hr = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function nR(RR) {
-      var JR;
-      return (null !== (JR = String(RR).split(".")[1]) && void 0 !== JR ? JR : "").length
+    function zr(rr) {
+      var Sr;
+      return (null !== (Sr = String(rr).split(".")[1]) && void 0 !== Sr ? Sr : "").length
     }
 
-    function UR(RR) {
+    function Yr(rr) {
       let {
-        value: JR,
-        min: GR,
-        max: uR,
-        step: ZR,
-        onChange: qR,
-        orientation: iR,
-        reverse: fR,
-        setIsChanging: VR,
-        tooltip: KR,
-        labels: eR,
-        handleLabel: aR,
-        format: UR,
-        onChangeStart: WR,
-        onChangeComplete: AR,
-        padStep: CR,
-        disabled: XR = !1
-      } = RR;
-      const MR = (0, yR.useRef)(null),
-        BR = (0, yR.useRef)(null);
-      (0, yR.useLayoutEffect)((() => {
-        var RR, JR, GR;
-        const yR = null !== (RR = null === (JR = MR.current) || void 0 === JR ? void 0 : JR.querySelector(".rangeslider")) && void 0 !== RR ? RR : null;
-        null === yR || void 0 === yR || yR.setAttribute("data-pad-slider", ""), null === yR || void 0 === yR || yR.setAttribute("data-pad-focusable", ""), null === yR || void 0 === yR || null === (GR = yR.querySelector(".rangeslider__handle")) || void 0 === GR || GR.setAttribute("data-pad-slider-handle", ""), BR.current = yR
-      }), []), (0, yR.useLayoutEffect)((() => {
-        var RR, JR;
-        XR ? null === (RR = BR.current) || void 0 === RR || RR.setAttribute("aria-disabled", "true") : null === (JR = BR.current) || void 0 === JR || JR.removeAttribute("aria-disabled")
-      }), [XR]);
-      const lR = Math.max(nR(ZR), nR(GR)),
-        pR = RR => {
-          if (RR >= uR) return uR;
-          if (RR <= GR) return GR;
-          const JR = Number((Math.round((RR - GR) / ZR) * ZR + GR).toFixed(lR));
-          return Math.min(uR, Math.max(GR, JR))
+        value: Sr,
+        min: Qr,
+        max: ar,
+        step: jr,
+        onChange: Ir,
+        orientation: fr,
+        reverse: Er,
+        setIsChanging: pr,
+        tooltip: xr,
+        labels: Ur,
+        handleLabel: tr,
+        format: Yr,
+        onChangeStart: nr,
+        onChangeComplete: er,
+        padStep: Kr,
+        disabled: yr = !1
+      } = rr;
+      const Br = (0, Zr.useRef)(null),
+        Tr = (0, Zr.useRef)(null);
+      (0, Zr.useLayoutEffect)((() => {
+        var rr, Sr, Qr;
+        const Zr = null !== (rr = null === (Sr = Br.current) || void 0 === Sr ? void 0 : Sr.querySelector(".rangeslider")) && void 0 !== rr ? rr : null;
+        null === Zr || void 0 === Zr || Zr.setAttribute("data-pad-slider", ""), null === Zr || void 0 === Zr || Zr.setAttribute("data-pad-focusable", ""), null === Zr || void 0 === Zr || null === (Qr = Zr.querySelector(".rangeslider__handle")) || void 0 === Qr || Qr.setAttribute("data-pad-slider-handle", ""), Tr.current = Zr
+      }), []), (0, Zr.useLayoutEffect)((() => {
+        var rr, Sr;
+        yr ? null === (rr = Tr.current) || void 0 === rr || rr.setAttribute("aria-disabled", "true") : null === (Sr = Tr.current) || void 0 === Sr || Sr.removeAttribute("aria-disabled")
+      }), [yr]);
+      const vr = Math.max(zr(jr), zr(Qr)),
+        Or = rr => {
+          if (rr >= ar) return ar;
+          if (rr <= Qr) return Qr;
+          const Sr = Number((Math.round((rr - Qr) / jr) * jr + Qr).toFixed(vr));
+          return Math.min(ar, Math.max(Qr, Sr))
         },
-        gR = (0, yR.useRef)(AR);
-      gR.current = AR, (0, yR.useEffect)((() => {
-        const RR = MR.current;
-        if (!RR) return;
-        const JR = RR => {
-          var JR;
-          LR.has(RR.key) && (null === (JR = gR.current) || void 0 === JR || JR.call(gR))
+        Lr = (0, Zr.useRef)(er);
+      Lr.current = er, (0, Zr.useEffect)((() => {
+        const rr = Br.current;
+        if (!rr) return;
+        const Sr = rr => {
+          var Sr;
+          hr.has(rr.key) && (null === (Sr = Lr.current) || void 0 === Sr || Sr.call(Lr))
         };
-        return RR.addEventListener("keyup", JR), () => {
-          RR.removeEventListener("keyup", JR)
+        return rr.addEventListener("keyup", Sr), () => {
+          rr.removeEventListener("keyup", Sr)
         }
       }), []);
-      const bR = (0, yR.useRef)(!1);
-      return (0, wR.i)(BR, {
-        adjust: RR => {
-          if (XR) return;
-          const yR = null !== CR && void 0 !== CR ? CR : Math.max(ZR, Math.round((uR - GR) / 20 / ZR) * ZR),
-            tR = pR(JR + RR * yR * (fR ? -1 : 1));
-          tR !== JR && (null === WR || void 0 === WR || WR(), qR(tR), null === AR || void 0 === AR || AR())
+      const lr = (0, Zr.useRef)(!1);
+      return (0, mr.c)(Tr, {
+        adjust: rr => {
+          if (yr) return;
+          const Zr = null !== Kr && void 0 !== Kr ? Kr : Math.max(jr, Math.round((ar - Qr) / 20 / jr) * jr),
+            Wr = Or(Sr + rr * Zr * (Er ? -1 : 1));
+          Wr !== Sr && (null === nr || void 0 === nr || nr(), Ir(Wr), null === er || void 0 === er || er())
         },
-        setFraction: RR => {
-          if (XR) return;
-          const yR = pR(GR + (fR ? 1 - RR : RR) * (uR - GR));
-          yR !== JR && (bR.current || (bR.current = !0, null === WR || void 0 === WR || WR()), qR(yR))
+        setFraction: rr => {
+          if (yr) return;
+          const Zr = Or(Qr + (Er ? 1 - rr : rr) * (ar - Qr));
+          Zr !== Sr && (lr.current || (lr.current = !0, null === nr || void 0 === nr || nr()), Ir(Zr))
         },
         endDrag: () => {
-          bR.current && (bR.current = !1, null === AR || void 0 === AR || AR())
+          lr.current && (lr.current = !1, null === er || void 0 === er || er())
         }
-      }), (0, rR.jsx)("div", {
-        ref: MR,
+      }), (0, Nr.jsx)("div", {
+        ref: Br,
         style: {
           display: "contents"
         },
-        children: (0, rR.jsx)(tR.b, {
-          value: JR,
-          min: GR,
-          max: uR,
-          step: ZR,
-          onChange: RR => {
-            qR(pR(RR))
+        children: (0, Nr.jsx)(Wr.c, {
+          value: Sr,
+          min: Qr,
+          max: ar,
+          step: jr,
+          onChange: rr => {
+            Ir(Or(rr))
           },
-          orientation: iR,
-          reverse: fR,
-          tooltip: KR,
-          labels: eR,
-          handleLabel: aR,
-          format: UR,
+          orientation: fr,
+          reverse: Er,
+          tooltip: xr,
+          labels: Ur,
+          handleLabel: tr,
+          format: Yr,
           onChangeStart: () => {
-            null === WR || void 0 === WR || WR(), null === VR || void 0 === VR || VR(!0)
+            null === nr || void 0 === nr || nr(), null === pr || void 0 === pr || pr(!0)
           },
           onChangeComplete: () => {
-            null === VR || void 0 === VR || VR(!1), null === AR || void 0 === AR || AR()
+            null === pr || void 0 === pr || pr(!1), null === er || void 0 === er || er()
           }
         })
       })
     }
-    async function WR() {
-      const RR = VR.NotificationProvider.showPromptPopup({
+    async function nr() {
+      const rr = pr.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -474,75 +474,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await RR.getResult() && (0, KR.reloadBloxd)()
+      !0 === await rr.getResult() && (0, xr.reloadBloxd)()
     }
 
-    function AR(RR) {
+    function er(rr) {
       let {
-        label: JR,
-        options: GR,
-        value: yR,
-        onChange: tR,
-        circleInfoText: uR
-      } = RR;
-      return (0, rR.jsxs)("div", {
+        label: Sr,
+        options: Qr,
+        value: Zr,
+        onChange: Wr,
+        circleInfoText: ar
+      } = rr;
+      return (0, Nr.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, rR.jsxs)("div", {
+        children: [(0, Nr.jsxs)("div", {
           className: "SliderText",
-          children: [JR, uR && (0, rR.jsx)(ZR.e, {
+          children: [Sr, ar && (0, Nr.jsx)(jr.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: uR
+            hoverInfo: ar
           })]
-        }), (0, rR.jsx)(qR.c, {
-          ariaLabel: JR,
-          options: GR,
-          value: yR,
-          onChange: tR
+        }), (0, Nr.jsx)(Ir.d, {
+          ariaLabel: Sr,
+          options: Qr,
+          value: Zr,
+          onChange: Wr
         })]
       })
     }
   },
-  6035: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => LR,
-      i: () => nR
+  5945: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => hr,
+      g: () => zr
     });
-    var yR = GR(4428),
-      tR = GR(2374),
-      uR = GR(66),
-      ZR = GR(1163),
-      qR = GR.n(ZR),
-      iR = GR(1465),
-      fR = GR(4422),
-      VR = GR(1493),
-      KR = GR(6037),
-      wR = GR(6072),
-      rR = GR(709),
-      eR = GR(6101),
-      aR = GR(1378);
+    var Zr = Qr(4362),
+      Wr = Qr(2325),
+      ar = Qr(72),
+      jr = Qr(1155),
+      Ir = Qr.n(jr),
+      fr = Qr(1444),
+      Er = Qr(4354),
+      pr = Qr(1475),
+      xr = Qr(5951),
+      mr = Qr(5991),
+      Nr = Qr(712),
+      Ur = Qr(6014),
+      tr = Qr(1338);
 
-    function LR(RR) {
-      var JR;
+    function hr(rr) {
+      var Sr;
       let {
-        setApplySettingsCallback: GR
-      } = RR;
-      const [, ZR] = (0, uR.useReducer)((RR => RR + 1), 0), qR = (0, uR.useRef)(!1), iR = (0, uR.useRef)(null);
+        setApplySettingsCallback: Qr
+      } = rr;
+      const [, jr] = (0, ar.useReducer)((rr => rr + 1), 0), Ir = (0, ar.useRef)(!1), fr = (0, ar.useRef)(null);
 
-      function LR(RR, JR) {
-        fR.b.setFromJson(RR, "player");
-        const yR = fR.b.saveTexturePack();
-        if (rR.G) {
-          const RR = fR.b.toJson();
-          yR.then((JR => {
-            JR && (0, eR.b)(RR)
+      function hr(rr, Sr) {
+        Er.d.setFromJson(rr, "player");
+        const Zr = Er.d.saveTexturePack();
+        if (Nr.I) {
+          const rr = Er.d.toJson();
+          Zr.then((Sr => {
+            Sr && (0, Ur.c)(rr)
           }))
-        } else qR.current ||= JR, iR.current !== fR.b.getId() || fR.b.getId() === tR.q.CUSTOM && qR.current ? GR((() => KR.m)) : GR(null);
-        ZR()
+        } else Ir.current ||= Sr, fr.current !== Er.d.getId() || Er.d.getId() === Wr.o.CUSTOM && Ir.current ? Qr((() => xr.i)) : Qr(null);
+        jr()
       }
-      async function UR(RR) {
-        if (fR.b.getId() !== RR.metaData.id) {
-          if (fR.b.getId() === tR.q.CUSTOM && fR.b.getFromFolderName()) {
-            const RR = VR.NotificationProvider.showPromptPopup({
+      async function Yr(rr) {
+        if (Er.d.getId() !== rr.metaData.id) {
+          if (Er.d.getId() === Wr.o.CUSTOM && Er.d.getFromFolderName()) {
+            const rr = pr.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -551,29 +551,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await RR.getResult()) return
+            if (!0 !== await rr.getResult()) return
           }
-          LR(RR, !1)
+          hr(rr, !1)
         }
-      }(0, uR.useEffect)((() => {
-        iR.current = fR.b.getId()
+      }(0, ar.useEffect)((() => {
+        fr.current = Er.d.getId()
       }), []);
-      const WR = yR.e,
-        AR = [WR, ...Object.values(tR.q).filter((RR => RR !== WR))];
-      return (0, aR.jsx)(aR.Fragment, {
-        children: (0, aR.jsxs)("div", {
+      const nr = Zr.c,
+        er = [nr, ...Object.values(Wr.o).filter((rr => rr !== nr))];
+      return (0, tr.jsx)(tr.Fragment, {
+        children: (0, tr.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, aR.jsx)("div", {
+          children: [(0, tr.jsx)("div", {
             className: "TexturePackList",
-            children: AR.map((RR => (0, aR.jsx)(nR, {
-              id: RR,
-              isSelected: RR === fR.b.getId(),
-              setSelected: UR
-            }, RR)))
-          }), fR.b.getId() === tR.q.CUSTOM && (0, aR.jsx)(wR.e, {
-            folderName: null !== (JR = fR.b.getFromFolderName()) && void 0 !== JR ? JR : null,
-            onTexturePackUpdated: function(RR) {
-              LR(RR, !0)
+            children: er.map((rr => (0, tr.jsx)(zr, {
+              id: rr,
+              isSelected: rr === Er.d.getId(),
+              setSelected: Yr
+            }, rr)))
+          }), Er.d.getId() === Wr.o.CUSTOM && (0, tr.jsx)(mr.b, {
+            folderName: null !== (Sr = Er.d.getFromFolderName()) && void 0 !== Sr ? Sr : null,
+            onTexturePackUpdated: function(rr) {
+              hr(rr, !0)
             },
             packOwner: "player"
           })]
@@ -581,367 +581,367 @@ export const modules = {
       })
     }
 
-    function nR(RR) {
+    function zr(rr) {
       let {
-        id: JR,
-        isSelected: GR,
-        setSelected: ZR,
-        disabled: fR = !1
-      } = RR;
-      const [VR, KR] = (0, uR.useState)(!0), [wR, rR] = (0, uR.useState)(""), [eR, LR] = (0, uR.useState)(""), [nR, UR] = (0, uR.useState)(""), WR = (0, uR.useRef)({});
-      return (0, uR.useEffect)((() => {
-        (0, yR.p)(JR).then((RR => {
-          var JR;
-          RR && (WR.current = RR, KR(!1), rR(WR.current.metaData.name), LR(WR.current.metaData.author), UR(null !== (JR = WR.current.metaData.previewImage) && void 0 !== JR ? JR : ""))
-        })).catch((RR => {
-          console.warn(`Failed to fetch texture pack ${JR}`, RR)
+        id: Sr,
+        isSelected: Qr,
+        setSelected: jr,
+        disabled: Er = !1
+      } = rr;
+      const [pr, xr] = (0, ar.useState)(!0), [mr, Nr] = (0, ar.useState)(""), [Ur, hr] = (0, ar.useState)(""), [zr, Yr] = (0, ar.useState)(""), nr = (0, ar.useRef)({});
+      return (0, ar.useEffect)((() => {
+        (0, Zr.k)(Sr).then((rr => {
+          var Sr;
+          rr && (nr.current = rr, xr(!1), Nr(nr.current.metaData.name), hr(nr.current.metaData.author), Yr(null !== (Sr = nr.current.metaData.previewImage) && void 0 !== Sr ? Sr : ""))
+        })).catch((rr => {
+          console.warn(`Failed to fetch texture pack ${Sr}`, rr)
         }))
-      }), [JR]), (0, aR.jsxs)("div", {
+      }), [Sr]), (0, tr.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": fR || void 0,
-        className: qR()("TexturePack", {
-          Selected: GR,
-          Custom: JR === tR.q.CUSTOM,
-          Disabled: fR
+        "aria-disabled": Er || void 0,
+        className: Ir()("TexturePack", {
+          Selected: Qr,
+          Custom: Sr === Wr.o.CUSTOM,
+          Disabled: Er
         }),
         onClick: () => {
-          VR || fR || ZR(WR.current)
+          pr || Er || jr(nr.current)
         },
-        children: [(0, aR.jsx)("div", {
+        children: [(0, tr.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: nR ? `url(${nR})` : void 0
+            backgroundImage: zr ? `url(${zr})` : void 0
           }
-        }), VR && (0, aR.jsx)("div", {
+        }), pr && (0, tr.jsx)("div", {
           className: "TexturePackName",
-          children: (0, aR.jsx)(iR.d, {})
-        }), !VR && wR && (0, aR.jsx)("div", {
+          children: (0, tr.jsx)(fr.c, {})
+        }), !pr && mr && (0, tr.jsx)("div", {
           className: "TexturePackName",
-          children: wR
-        }), !VR && eR && (0, aR.jsx)("div", {
+          children: mr
+        }), !pr && Ur && (0, tr.jsx)("div", {
           className: "TexturePackAuthor",
-          children: eR
+          children: Ur
         })]
       })
     }
   },
-  6076: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => qR,
-      c: () => ZR,
-      d: () => uR
+  5998: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir,
+      f: () => jr,
+      g: () => ar
     });
-    var yR = GR(6080);
-    const tR = [RR => RR.strict ? "strict" : "nonStrict", RR => RR.program];
+    var Zr = Qr(6005);
+    const Wr = [rr => rr.strict ? "strict" : "nonStrict", rr => rr.program];
 
-    function uR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const yR = {};
-      for (const tR in GR) yR[tR] = `\0${tR}\0`;
-      return RR(JR, yR).replace(/\0(\w+)\0/g, ((RR, JR) => GR[JR]))
+    function ar(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Zr = {};
+      for (const Wr in Qr) Zr[Wr] = `\0${Wr}\0`;
+      return rr(Sr, Zr).replace(/\0(\w+)\0/g, ((rr, Sr) => Qr[Sr]))
     }
 
-    function ZR(RR) {
-      return null === RR.file ? null : RR.line > 0 ? `${RR.file}:${RR.line}` : RR.file
+    function jr(rr) {
+      return null === rr.file ? null : rr.line > 0 ? `${rr.file}:${rr.line}` : rr.file
     }
 
-    function qR(RR) {
-      const JR = new Map(RR.map((RR => [iR(RR).join("."), RR])));
-      if (0 === JR.size) return [];
-      const GR = VR([...JR.values()]);
-      return 0 === GR[0].length ? [] : GR
+    function Ir(rr) {
+      const Sr = new Map(rr.map((rr => [fr(rr).join("."), rr])));
+      if (0 === Sr.size) return [];
+      const Qr = pr([...Sr.values()]);
+      return 0 === Qr[0].length ? [] : Qr
     }
 
-    function iR(RR) {
-      return tR.map((JR => JR(RR)))
+    function fr(rr) {
+      return Wr.map((Sr => Sr(rr)))
     }
-    const fR = tR.map((RR => new Set(yR.g.map(RR)).size));
+    const Er = Wr.map((rr => new Set(Zr.e.map(rr)).size));
 
-    function VR(RR) {
-      const JR = tR.map((JR => new Set(RR.map(JR)))),
-        GR = JR.reduce(((RR, JR) => RR * JR.size), 1),
-        yR = JR.every(((RR, JR) => 1 === RR.size || RR.size === fR[JR]));
-      if (GR === RR.length && yR) return [tR.filter(((RR, GR) => 1 === JR[GR].size)).map((JR => JR(RR[0])))];
-      let uR = null;
-      for (let ZR = 0; ZR < tR.length; ZR++) {
-        if (1 === JR[ZR].size) continue;
-        const GR = KR(RR, tR[ZR]).flatMap(VR);
-        (null === uR || GR.length < uR.length) && (uR = GR)
+    function pr(rr) {
+      const Sr = Wr.map((Sr => new Set(rr.map(Sr)))),
+        Qr = Sr.reduce(((rr, Sr) => rr * Sr.size), 1),
+        Zr = Sr.every(((rr, Sr) => 1 === rr.size || rr.size === Er[Sr]));
+      if (Qr === rr.length && Zr) return [Wr.filter(((rr, Qr) => 1 === Sr[Qr].size)).map((Sr => Sr(rr[0])))];
+      let ar = null;
+      for (let jr = 0; jr < Wr.length; jr++) {
+        if (1 === Sr[jr].size) continue;
+        const Qr = xr(rr, Wr[jr]).flatMap(pr);
+        (null === ar || Qr.length < ar.length) && (ar = Qr)
       }
-      return uR
+      return ar
     }
 
-    function KR(RR, JR) {
-      const GR = new Map;
-      for (const tR of RR) {
-        var yR;
-        const RR = JR(tR);
-        GR.set(RR, [...null !== (yR = GR.get(RR)) && void 0 !== yR ? yR : [], tR])
+    function xr(rr, Sr) {
+      const Qr = new Map;
+      for (const Wr of rr) {
+        var Zr;
+        const rr = Sr(Wr);
+        Qr.set(rr, [...null !== (Zr = Qr.get(rr)) && void 0 !== Zr ? Zr : [], Wr])
       }
-      return [...GR.values()]
+      return [...Qr.values()]
     }
   },
-  6063: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR,
-      i: () => ZR
+  5986: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar,
+      c: () => jr
     });
-    var yR = GR(66);
-    const tR = new WeakMap,
-      uR = RR => {
-        var JR;
-        const GR = RR.closest("[data-pad-slider]");
-        return GR && null !== (JR = tR.get(GR)) && void 0 !== JR ? JR : null
+    var Zr = Qr(72);
+    const Wr = new WeakMap,
+      ar = rr => {
+        var Sr;
+        const Qr = rr.closest("[data-pad-slider]");
+        return Qr && null !== (Sr = Wr.get(Qr)) && void 0 !== Sr ? Sr : null
       },
-      ZR = (RR, JR) => {
-        const GR = (0, yR.useRef)(JR);
-        GR.current = JR, (0, yR.useEffect)((() => {
-          if (RR.current) return ((RR, JR) => (tR.set(RR, JR), () => {
-            tR.get(RR) === JR && tR.delete(RR)
-          }))(RR.current, {
-            adjust: RR => {
-              GR.current.adjust(RR)
+      jr = (rr, Sr) => {
+        const Qr = (0, Zr.useRef)(Sr);
+        Qr.current = Sr, (0, Zr.useEffect)((() => {
+          if (rr.current) return ((rr, Sr) => (Wr.set(rr, Sr), () => {
+            Wr.get(rr) === Sr && Wr.delete(rr)
+          }))(rr.current, {
+            adjust: rr => {
+              Qr.current.adjust(rr)
             },
-            setFraction: RR => {
-              GR.current.setFraction(RR)
+            setFraction: rr => {
+              Qr.current.setFraction(rr)
             },
             endDrag: () => {
-              GR.current.endDrag()
+              Qr.current.endDrag()
             }
           })
-        }), [RR])
+        }), [rr])
       }
   },
-  6080: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR.f,
-      g: () => tR,
-      i: () => yR.o
+  6005: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr.j,
+      e: () => Wr,
+      i: () => Zr.r
     });
-    var yR = GR(6084);
-    const tR = [!1, !0].flatMap((RR => ["terrain", "liquid", "model"].map((JR => ({
-      strict: RR,
-      program: JR
+    var Zr = Qr(6007);
+    const Wr = [!1, !0].flatMap((rr => ["terrain", "liquid", "model"].map((Sr => ({
+      strict: rr,
+      program: Sr
     })))))
   },
-  6103: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      return tR(RR, JR)
+  6017: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
+      return Wr(rr, Sr)
     }
 
-    function tR(RR, JR) {
-      if (RR === JR) return !0;
-      if ("object" !== typeof RR || "object" !== typeof JR || null === RR || null === JR || Array.isArray(RR) !== Array.isArray(JR)) return !1;
-      const GR = RR,
-        yR = JR,
-        uR = Object.keys(GR);
-      return uR.length === Object.keys(yR).length && uR.every((RR => Object.prototype.hasOwnProperty.call(yR, RR) && tR(GR[RR], yR[RR])))
+    function Wr(rr, Sr) {
+      if (rr === Sr) return !0;
+      if ("object" !== typeof rr || "object" !== typeof Sr || null === rr || null === Sr || Array.isArray(rr) !== Array.isArray(Sr)) return !1;
+      const Qr = rr,
+        Zr = Sr,
+        ar = Object.keys(Qr);
+      return ar.length === Object.keys(Zr).length && ar.every((rr => Object.prototype.hasOwnProperty.call(Zr, rr) && Wr(Qr[rr], Zr[rr])))
     }
-    GR.d(JR, {
-      d: () => yR
+    Qr.d(Sr, {
+      b: () => Zr
     })
   },
-  6101: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR,
-      c: () => qR
+  6014: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr,
+      f: () => Ir
     });
-    var yR = GR(2374),
-      tR = GR(6103);
-    let uR = null;
+    var Zr = Qr(2325),
+      Wr = Qr(6017);
+    let ar = null;
 
-    function ZR(RR) {
-      uR = {
-        pack: RR.metaData.id === yR.e ? null : RR
+    function jr(rr) {
+      ar = {
+        pack: rr.metaData.id === Zr.e ? null : rr
       }
     }
 
-    function qR(RR) {
-      return !(null === uR || !(0, tR.d)(uR.pack, RR)) && (uR = null, !0)
+    function Ir(rr) {
+      return !(null === ar || !(0, Wr.b)(ar.pack, rr)) && (ar = null, !0)
     }
   },
-  6084: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => qR,
-      e: () => ZR,
-      f: () => yR,
-      j: () => aR,
-      l: () => KR,
-      o: () => tR,
-      r: () => uR,
-      t: () => fR,
-      x: () => VR,
-      z: () => wR
+  6007: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Ir,
+      g: () => jr,
+      j: () => Zr,
+      k: () => tr,
+      n: () => xr,
+      r: () => Wr,
+      s: () => ar,
+      v: () => Er,
+      w: () => pr,
+      z: () => mr
     });
-    const yR = 5;
+    const Zr = 5;
 
-    function tR(RR) {
-      return RR === yR
+    function Wr(rr) {
+      return rr === Zr
     }
 
-    function uR(RR) {
-      return [...RR.features]
+    function ar(rr) {
+      return [...rr.features]
     }
-    const ZR = 262144,
-      qR = 256,
-      iR = 256;
+    const jr = 262144,
+      Ir = 256,
+      fr = 256;
 
-    function fR(RR) {
-      if ("object" !== typeof RR || null === RR || Array.isArray(RR)) return "The pack has no files.";
-      const JR = [];
-      for (const [GR, yR] of Object.entries(RR)) {
-        if ("string" !== typeof yR) return `${GR} isn't text.`;
-        JR.push({
-          path: GR,
-          source: yR
+    function Er(rr) {
+      if ("object" !== typeof rr || null === rr || Array.isArray(rr)) return "The pack has no files.";
+      const Sr = [];
+      for (const [Qr, Zr] of Object.entries(rr)) {
+        if ("string" !== typeof Zr) return `${Qr} isn't text.`;
+        Sr.push({
+          path: Qr,
+          source: Zr
         })
       }
-      return JR.sort(((RR, JR) => KR(RR.path, JR.path))),
-        function(RR) {
-          if (0 === RR.length) return "The pack has no .wgsl files.";
-          if (RR.length > qR) return `The pack has more than ${qR} .wgsl files.`;
-          const JR = new Set;
+      return Sr.sort(((rr, Sr) => xr(rr.path, Sr.path))),
+        function(rr) {
+          if (0 === rr.length) return "The pack has no .wgsl files.";
+          if (rr.length > Ir) return `The pack has more than ${Ir} .wgsl files.`;
+          const Sr = new Set;
           for (const {
-              path: GR
+              path: Qr
             }
-            of RR) {
-            const RR = rR(GR);
-            if (null !== RR) return RR;
-            if (JR.has(GR)) return `The pack has two files at ${GR}.`;
-            JR.add(GR)
+            of rr) {
+            const rr = Nr(Qr);
+            if (null !== rr) return rr;
+            if (Sr.has(Qr)) return `The pack has two files at ${Qr}.`;
+            Sr.add(Qr)
           }
-          return wR(RR) > ZR ? `The pack's .wgsl files are over ${ZR/1024} KB in total.` : null
-        }(JR) ?? JR
+          return mr(rr) > jr ? `The pack's .wgsl files are over ${jr/1024} KB in total.` : null
+        }(Sr) ?? Sr
     }
 
-    function VR(RR) {
-      const JR = {};
-      for (const GR of RR) JR[GR.path] = GR.source;
-      return JR
+    function pr(rr) {
+      const Sr = {};
+      for (const Qr of rr) Sr[Qr.path] = Qr.source;
+      return Sr
     }
 
-    function KR(RR, JR) {
-      return RR < JR ? -1 : RR > JR ? 1 : 0
+    function xr(rr, Sr) {
+      return rr < Sr ? -1 : rr > Sr ? 1 : 0
     }
 
-    function wR(RR) {
-      const JR = new TextEncoder;
-      let GR = 0;
+    function mr(rr) {
+      const Sr = new TextEncoder;
+      let Qr = 0;
       for (const {
-          source: yR
+          source: Zr
         }
-        of RR) GR += JR.encode(yR).byteLength;
-      return GR
+        of rr) Qr += Sr.encode(Zr).byteLength;
+      return Qr
     }
 
-    function rR(RR) {
-      if (!RR.toLowerCase().endsWith(".wgsl")) return `${RR} isn't a .wgsl file.`;
-      if (RR.length > iR) return `A file path is over ${iR} characters.`;
-      if (RR.includes("\\") || /[\u0000-\u001f]/.test(RR)) return `${RR} isn't a valid file path.`;
-      return RR.split("/").some((RR => "" === RR || "." === RR || ".." === RR)) ? `${RR} isn't a valid file path.` : null
+    function Nr(rr) {
+      if (!rr.toLowerCase().endsWith(".wgsl")) return `${rr} isn't a .wgsl file.`;
+      if (rr.length > fr) return `A file path is over ${fr} characters.`;
+      if (rr.includes("\\") || /[\u0000-\u001f]/.test(rr)) return `${rr} isn't a valid file path.`;
+      return rr.split("/").some((rr => "" === rr || "." === rr || ".." === rr)) ? `${rr} isn't a valid file path.` : null
     }
-    const eR = /^(.*)\[rot\[([1-4])$/;
+    const Ur = /^(.*)\[rot\[([1-4])$/;
 
-    function aR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const yR = new Map;
-      JR.forEach(((RR, JR) => {
+    function tr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Zr = new Map;
+      Sr.forEach(((rr, Sr) => {
         let {
-          numAnimStates: GR,
-          animStartIdx: tR
-        } = RR;
-        for (let uR = 1; uR < GR; uR++) yR.set(tR + uR - 1, JR)
+          numAnimStates: Qr,
+          animStartIdx: Wr
+        } = rr;
+        for (let ar = 1; ar < Qr; ar++) Zr.set(Wr + ar - 1, Sr)
       }));
-      const tR = Object.entries(RR),
-        uR = new Map;
-      for (const [aR, LR] of tR) {
-        const RR = eR.exec(aR);
-        "1" === RR?.[2] && uR.set(RR[1], LR + 1)
+      const Wr = Object.entries(rr),
+        ar = new Map;
+      for (const [tr, hr] of Wr) {
+        const rr = Ur.exec(tr);
+        "1" === rr?.[2] && ar.set(rr[1], hr + 1)
       }
-      const ZR = RR => {
-          const JR = eR.exec(RR);
-          return JR && uR.has(JR[1]) ? {
-            root: JR[1],
-            rotation: Number(JR[2]) - 1
+      const jr = rr => {
+          const Sr = Ur.exec(rr);
+          return Sr && ar.has(Sr[1]) ? {
+            root: Sr[1],
+            rotation: Number(Sr[2]) - 1
           } : null
         },
-        qR = new Set(tR.map((RR => {
-          let [JR] = RR;
-          return ZR(JR)?.root ?? JR
+        Ir = new Set(Wr.map((rr => {
+          let [Sr] = rr;
+          return jr(Sr)?.root ?? Sr
         }))),
-        iR = (RR, GR) => {
-          const yR = RR.replace(/_?0$/, "");
-          return (JR[GR]?.numAnimStates ?? 0) > 1 && !qR.has(yR) ? yR : RR
+        fr = (rr, Qr) => {
+          const Zr = rr.replace(/_?0$/, "");
+          return (Sr[Qr]?.numAnimStates ?? 0) > 1 && !Ir.has(Zr) ? Zr : rr
         },
-        fR = new Map;
-      for (const [eR, aR] of tR) fR.set(aR, iR(ZR(eR)?.root ?? eR, aR));
-      const VR = tR.reduce(((RR, JR) => {
-          let [, GR] = JR;
-          return Math.max(RR, GR + 1)
+        Er = new Map;
+      for (const [Ur, tr] of Wr) Er.set(tr, fr(jr(Ur)?.root ?? Ur, tr));
+      const pr = Wr.reduce(((rr, Sr) => {
+          let [, Qr] = Sr;
+          return Math.max(rr, Qr + 1)
         }), 0),
-        KR = Array.from({
-          length: VR
-        }, ((RR, JR) => ({
-          id: JR + 1,
+        xr = Array.from({
+          length: pr
+        }, ((rr, Sr) => ({
+          id: Sr + 1,
           rotation: 0
         }))),
-        wR = new Map,
-        rR = new Map;
-      for (const [eR, aR] of tR) {
-        const RR = ZR(eR),
-          JR = yR.get(aR);
-        if (void 0 !== JR) {
-          const GR = fR.get(JR);
-          rR.set(eR, {
-            name: eR,
-            texture: GR,
+        mr = new Map,
+        Nr = new Map;
+      for (const [Ur, tr] of Wr) {
+        const rr = jr(Ur),
+          Sr = Zr.get(tr);
+        if (void 0 !== Sr) {
+          const Qr = Er.get(Sr);
+          Nr.set(Ur, {
+            name: Ur,
+            texture: Qr,
             kind: "frame"
-          }), RR && !rR.has(RR.root) && rR.set(RR.root, {
-            name: RR.root,
-            texture: GR,
+          }), rr && !Nr.has(rr.root) && Nr.set(rr.root, {
+            name: rr.root,
+            texture: Qr,
             kind: "frame"
           });
           continue
         }
-        const GR = fR.get(aR),
-          tR = RR?.root ?? eR;
-        if (GR !== tR && rR.set(tR, {
-            name: tR,
-            texture: GR,
+        const Qr = Er.get(tr),
+          Wr = rr?.root ?? Ur;
+        if (Qr !== Wr && Nr.set(Wr, {
+            name: Wr,
+            texture: Qr,
             kind: "frame"
-          }), RR) {
-          const JR = uR.get(RR.root);
-          KR[aR] = {
-            id: JR,
-            rotation: RR.rotation
-          }, wR.set(GR, JR), rR.set(eR, {
-            name: eR,
-            texture: GR,
+          }), rr) {
+          const Sr = ar.get(rr.root);
+          xr[tr] = {
+            id: Sr,
+            rotation: rr.rotation
+          }, mr.set(Qr, Sr), Nr.set(Ur, {
+            name: Ur,
+            texture: Qr,
             kind: "rotation"
           })
-        } else wR.set(GR, aR + 1)
+        } else mr.set(Qr, tr + 1)
       }
-      for (const eR of wR.keys()) rR.delete(eR);
-      for (const [eR, aR] of GR) {
-        const RR = wR.get(aR);
-        void 0 === RR || wR.has(eR) || (wR.set(eR, RR), rR.delete(eR))
+      for (const Ur of mr.keys()) Nr.delete(Ur);
+      for (const [Ur, tr] of Qr) {
+        const rr = mr.get(tr);
+        void 0 === rr || mr.has(Ur) || (mr.set(Ur, rr), Nr.delete(Ur))
       }
       return {
-        named: [...wR].sort(((RR, JR) => {
-          let [GR] = RR, [yR] = JR;
-          return GR < yR ? -1 : GR > yR ? 1 : 0
-        })).map((RR => {
-          let [JR, GR] = RR;
+        named: [...mr].sort(((rr, Sr) => {
+          let [Qr] = rr, [Zr] = Sr;
+          return Qr < Zr ? -1 : Qr > Zr ? 1 : 0
+        })).map((rr => {
+          let [Sr, Qr] = rr;
           return {
-            name: JR,
-            id: GR
+            name: Sr,
+            id: Qr
           }
         })),
-        aliases: [...rR.values()],
-        layers: KR
+        aliases: [...Nr.values()],
+        layers: xr
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

@@ -1,19 +1,19 @@
 export const id = 707;
 export const ids = [707];
 export const modules = {
-  64752: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      proceduralVertexShader: () => ZR
+  65174: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      proceduralVertexShaderWGSL: () => jr
     });
-    var yR = GR(41387);
-    const tR = "proceduralVertexShader",
-      uR = "attribute vec2 position;varying vec2 vPosition;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvPosition=position;vUV=position*madd+madd;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    yR.b.ShadersStore[tR] || (yR.b.ShadersStore[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "proceduralVertexShader",
+      ar = "attribute position: vec2f;varying vPosition: vec2f;varying vUV: vec2f;const madd: vec2f= vec2f(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vPosition=vertexInputs.position;vertexOutputs.vUV=vertexInputs.position*madd+madd;vertexOutputs.position= vec4f(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Zr.e.ShadersStoreWGSL[Wr] || (Zr.e.ShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

@@ -1,884 +1,1037 @@
 export const id = 294;
 export const ids = [294];
 export const modules = {
-  41777: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => wR
+  42047: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Or
     });
-    var yR = GR(41520),
-      tR = GR(41524),
-      uR = GR(38204),
-      ZR = GR(38331),
-      qR = GR(41741),
-      iR = GR(41650),
-      fR = GR(38253),
-      VR = GR(41715),
-      KR = GR(41542);
-    let wR = (() => {
-      var RR, JR;
-      let GR, wR, rR, eR, aR, LR, nR, UR, WR, AR, CR, XR, MR, BR = qR.d,
-        lR = [],
-        pR = [],
-        gR = [],
-        bR = [],
-        vR = [],
-        OR = [],
-        xR = [],
-        NR = [],
-        DR = [],
-        HR = [],
-        oR = [],
-        cR = [],
-        PR = [],
-        IR = [],
-        mR = [],
-        zR = [],
-        SR = [],
-        jR = [],
-        dR = [],
-        ER = [],
-        YR = [];
-      return RR = class extends BR {
-        get range() {
-          return this._range
+    var Zr = Qr(41872),
+      Wr = Qr(41875),
+      ar = Qr(38560),
+      jr = Qr(42052),
+      Ir = Qr(42080),
+      fr = Qr(42031),
+      Er = Qr(41950);
+    let pr = (() => {
+      var rr;
+      let Sr, Qr, jr, Ir, pr, xr, mr, Nr, Ur, tr, hr, zr = [],
+        Yr = [],
+        nr = [],
+        er = [],
+        Kr = [],
+        yr = [],
+        Br = [],
+        Tr = [],
+        vr = [],
+        Or = [],
+        Lr = [],
+        lr = [],
+        Xr = [],
+        Pr = [],
+        Hr = [],
+        qr = [],
+        Rr = [],
+        gr = [],
+        Cr = [],
+        Mr = [],
+        Gr = [],
+        kr = [];
+      return rr = class {
+        constructor() {
+          this.keysUp = (0, Zr.m)(this, zr, [38]), this.keysUpward = ((0, Zr.m)(this, Yr), (0, Zr.m)(this, nr, [33])), this.keysDown = ((0, Zr.m)(this, er), (0, Zr.m)(this, Kr, [40])), this.keysDownward = ((0, Zr.m)(this, yr), (0, Zr.m)(this, Br, [34])), this.keysLeft = ((0, Zr.m)(this, Tr), (0, Zr.m)(this, vr, [37])), this.keysRight = ((0, Zr.m)(this, Or), (0, Zr.m)(this, Lr, [39])), this.rotationSpeed = ((0, Zr.m)(this, lr), (0, Zr.m)(this, Xr, .5)), this.keysRotateLeft = ((0, Zr.m)(this, Pr), (0, Zr.m)(this, Hr, [])), this.keysRotateRight = ((0, Zr.m)(this, qr), (0, Zr.m)(this, Rr, [])), this.keysRotateUp = ((0, Zr.m)(this, gr), (0, Zr.m)(this, Cr, [])), this.keysRotateDown = ((0, Zr.m)(this, Mr), (0, Zr.m)(this, Gr, [])), this._keys = ((0, Zr.m)(this, kr), new Array)
         }
-        set range(RR) {
-          this._range = RR, this._inverseSquaredRange = 1 / (this.range * this.range)
+        attachControl(rr) {
+          rr = Er.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.eC(), this._engine = this._scene.MU(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+            this._keys.length = 0
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((Sr => {
+            const Qr = Sr.event;
+            if (!Qr.metaKey)
+              if (Sr.type === fr.e.KEYDOWN) {
+                if (-1 !== this.keysUp.indexOf(Qr.keyCode) || -1 !== this.keysDown.indexOf(Qr.keyCode) || -1 !== this.keysLeft.indexOf(Qr.keyCode) || -1 !== this.keysRight.indexOf(Qr.keyCode) || -1 !== this.keysUpward.indexOf(Qr.keyCode) || -1 !== this.keysDownward.indexOf(Qr.keyCode) || -1 !== this.keysRotateLeft.indexOf(Qr.keyCode) || -1 !== this.keysRotateRight.indexOf(Qr.keyCode) || -1 !== this.keysRotateUp.indexOf(Qr.keyCode) || -1 !== this.keysRotateDown.indexOf(Qr.keyCode)) {
+                  -1 === this._keys.indexOf(Qr.keyCode) && this._keys.push(Qr.keyCode), rr || Qr.preventDefault()
+                }
+              } else if (-1 !== this.keysUp.indexOf(Qr.keyCode) || -1 !== this.keysDown.indexOf(Qr.keyCode) || -1 !== this.keysLeft.indexOf(Qr.keyCode) || -1 !== this.keysRight.indexOf(Qr.keyCode) || -1 !== this.keysUpward.indexOf(Qr.keyCode) || -1 !== this.keysDownward.indexOf(Qr.keyCode) || -1 !== this.keysRotateLeft.indexOf(Qr.keyCode) || -1 !== this.keysRotateRight.indexOf(Qr.keyCode) || -1 !== this.keysRotateUp.indexOf(Qr.keyCode) || -1 !== this.keysRotateDown.indexOf(Qr.keyCode)) {
+              const Sr = this._keys.indexOf(Qr.keyCode);
+              Sr >= 0 && this._keys.splice(Sr, 1), rr || Qr.preventDefault()
+            }
+          })))
         }
-        get intensityMode() {
-          return this._intensityMode
+        detachControl() {
+          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
         }
-        set intensityMode(RR) {
-          this._intensityMode = RR, this._computePhotometricScale()
-        }
-        get radius() {
-          return this._radius
-        }
-        set radius(RR) {
-          this._radius = RR, this._computePhotometricScale()
-        }
-        get renderPriority() {
-          return (0, yR.e)(this, JR, "f")
-        }
-        set renderPriority(RR) {
-          (0, yR.i)(this, JR, RR, "f")
-        }
-        get shadowEnabled() {
-          return this._shadowEnabled
-        }
-        set shadowEnabled(RR) {
-          this._shadowEnabled !== RR && (this._shadowEnabled = RR, this._markMeshesAsLightDirty())
-        }
-        get includedOnlyMeshes() {
-          return this._includedOnlyMeshes
-        }
-        set includedOnlyMeshes(RR) {
-          this._includedOnlyMeshes = RR, this._hookArrayForIncludedOnly(RR)
-        }
-        get excludedMeshes() {
-          return this._excludedMeshes
-        }
-        set excludedMeshes(RR) {
-          this._excludedMeshes = RR, this._hookArrayForExcluded(RR)
-        }
-        get excludeWithLayerMask() {
-          return this._excludeWithLayerMask
-        }
-        set excludeWithLayerMask(RR) {
-          this._excludeWithLayerMask = RR, this._resyncMeshes()
-        }
-        get includeOnlyWithLayerMask() {
-          return this._includeOnlyWithLayerMask
-        }
-        set includeOnlyWithLayerMask(RR) {
-          this._includeOnlyWithLayerMask = RR, this._resyncMeshes()
-        }
-        get lightmapMode() {
-          return this._lightmapMode
-        }
-        set lightmapMode(RR) {
-          this._lightmapMode !== RR && (this._lightmapMode = RR, this._markMeshesAsLightDirty())
-        }
-        getViewMatrix(RR) {
-          return null
-        }
-        getProjectionMatrix(RR, JR) {
-          return null
-        }
-        constructor(GR, tR, uR) {
-          super(GR, tR, !1), this.diffuse = ((0, yR.m)(this, lR), (0, yR.m)(this, pR, new ZR.d(1, 1, 1))), this.specular = ((0, yR.m)(this, gR), (0, yR.m)(this, bR, new ZR.d(1, 1, 1))), this.falloffType = ((0, yR.m)(this, vR), (0, yR.m)(this, OR, RR.FALLOFF_DEFAULT)), this.intensity = ((0, yR.m)(this, xR), (0, yR.m)(this, NR, 1)), this._range = ((0, yR.m)(this, DR), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = RR.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, yR.m)(this, HR, void 0), JR.set(this, ((0, yR.m)(this, oR), (0, yR.m)(this, cR, 0))), this._shadowEnabled = ((0, yR.m)(this, PR), (0, yR.m)(this, IR, !0)), this._includedOnlyMeshes = (0, yR.m)(this, mR), this._excludeWithLayerMask = (0, yR.m)(this, zR, 0), this._includeOnlyWithLayerMask = ((0, yR.m)(this, SR), (0, yR.m)(this, jR, 0)), this._lightmapMode = ((0, yR.m)(this, dR), (0, yR.m)(this, ER, 0)), this._shadowGenerators = ((0, yR.m)(this, YR), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, uR || this.jH().addLight(this), this._uniformBuffer = new iR.b(this.jH().ke(), void 0, void 0, GR), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], uR || this._resyncMeshes()
-        }
-        transferTexturesToEffect(RR, JR) {
-          return this
-        }
-        _bindLight(RR, JR, GR, yR) {
-          let tR = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const uR = RR.toString();
-          let qR = !1;
-          if (this._uniformBuffer.bindToEffect(GR, "Light" + uR), this._renderId !== JR.getRenderId() || this._lastUseSpecular !== yR || !this._uniformBuffer.useUbo) {
-            this._renderId = JR.getRenderId(), this._lastUseSpecular = yR;
-            const RR = this.getScaledIntensity();
-            this.transferToEffect(GR, uR), this.diffuse.scaleToRef(RR, ZR.j.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", ZR.j.Color3[0], this.range, uR), yR && (this.specular.scaleToRef(RR, ZR.j.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", ZR.j.Color3[1], this.radius, uR)), qR = !0
+        checkInputs() {
+          if (this._onKeyboardObserver) {
+            const rr = this.camera,
+              Sr = rr.movement.input,
+              Qr = Sr.getEntry("keyboard", "translate"),
+              Zr = Sr.getEntry("keyboard", "rotate"),
+              Wr = Zr?.sensitivity ?? 1,
+              jr = rr._localDirection.Hrr(0, 0, 0);
+            for (let ar = 0; ar < this._keys.length; ar++) {
+              const Sr = this._keys[ar]; - 1 !== this.keysLeft.indexOf(Sr) ? jr.x -= 1 : -1 !== this.keysUp.indexOf(Sr) ? jr.z += 1 : -1 !== this.keysRight.indexOf(Sr) ? jr.x += 1 : -1 !== this.keysDown.indexOf(Sr) ? jr.z -= 1 : -1 !== this.keysUpward.indexOf(Sr) ? jr.y += 1 : -1 !== this.keysDownward.indexOf(Sr) ? jr.y -= 1 : -1 !== this.keysRotateLeft.indexOf(Sr) ? Zr && (rr.cameraRotation.y -= this._getLocalRotation() * Wr) : -1 !== this.keysRotateRight.indexOf(Sr) ? Zr && (rr.cameraRotation.y += this._getLocalRotation() * Wr) : -1 !== this.keysRotateUp.indexOf(Sr) ? Zr && (rr.cameraRotation.x -= this._getLocalRotation() * Wr) : -1 !== this.keysRotateDown.indexOf(Sr) && Zr && (rr.cameraRotation.x += this._getLocalRotation() * Wr)
+            }
+            if (Qr && (0 !== jr.x || 0 !== jr.y || 0 !== jr.z)) {
+              const Sr = rr._computeLocalCameraSpeed() * (Qr.sensitivity ?? 1);
+              jr.normalize().scaleInPlace(Sr), rr.eC().useRightHandedSystem && (jr.z *= -1), rr.getViewMatrix().invertToRef(rr._cameraTransformMatrix), ar.u.TransformNormalToRef(jr, rr._cameraTransformMatrix, rr._transformedDirection), rr.cameraDirection.addInPlace(rr._transformedDirection)
+            }
           }
-          if (this.transferTexturesToEffect(GR, uR), JR.shadowsEnabled && this.shadowEnabled && tR) {
-            const RR = this.getShadowGenerator(JR.activeCamera) ?? this.getShadowGenerator();
-            RR && (RR.bindShadowLight(uR, GR), qR = !0)
-          }
-          qR ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
         }
         getClassName() {
-          return "Light"
+          return "FreeCameraKeyboardMoveInput"
         }
-        toString(RR) {
-          let JR = "Name: " + this.name;
-          if (JR += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let GR = 0; GR < this.animations.length; GR++) JR += ", animation[0]: " + this.animations[GR].toString(RR);
-          return JR
+        _onLostFocus() {
+          this._keys.length = 0
         }
-        _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.oB() || this._resyncMeshes()
+        getSimpleName() {
+          return "keyboard"
         }
-        JA(RR) {
-          super.JA(RR), this._resyncMeshes()
+        _getLocalRotation() {
+          const rr = this.camera._calculateHandednessMultiplier();
+          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * rr
         }
-        getShadowGenerator() {
-          let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(RR) ?? null
-        }
-        getShadowGenerators() {
-          return this._shadowGenerators
-        }
-        getAbsolutePosition() {
-          return uR.r.Zero()
-        }
-        canAffectMesh(RR) {
-          return !RR || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(RR)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(RR)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & RR.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & RR.layerMask)))
-        }
-        dispose(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._shadowGenerators) {
-            const RR = this._shadowGenerators.values();
-            for (let JR = RR.next(); !0 !== JR.done; JR = RR.next()) {
-              JR.value.dispose()
-            }
-            this._shadowGenerators = null
-          }
-          if (this.jH().stopAnimation(this), this._parentContainer) {
-            const RR = this._parentContainer.lights.indexOf(this);
-            RR > -1 && this._parentContainer.lights.splice(RR, 1), this._parentContainer = null
-          }
-          for (const GR of this.jH().meshes) GR._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.jH().removeLight(this), super.dispose(RR, JR)
-        }
-        getTypeID() {
-          return 0
-        }
-        getScaledIntensity() {
-          return this._photometricScale * this.intensity
-        }
-        clone(JR) {
-          let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const yR = RR.GetConstructorFromName(this.getTypeID(), JR, this.jH());
-          if (!yR) return null;
-          const tR = KR.c.Clone(yR, this);
-          return JR && (tR.name = JR), GR && (tR.parent = GR), tR.JA(this.isEnabled()), this.onClonedObservable.notifyObservers(tR), tR
-        }
-        serialize() {
-          const RR = KR.c.Serialize(this);
-          if (RR.uniqueId = this.uniqueId, RR.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(RR), this.excludedMeshes.length > 0) {
-            RR.excludedMeshesIds = [];
-            for (const JR of this.excludedMeshes) RR.excludedMeshesIds.push(JR.id)
-          }
-          if (this.includedOnlyMeshes.length > 0) {
-            RR.includedOnlyMeshesIds = [];
-            for (const JR of this.includedOnlyMeshes) RR.includedOnlyMeshesIds.push(JR.id)
-          }
-          return KR.c.AppendSerializedAnimations(this, RR), RR.WL = this.serializeAnimationRanges(), RR.isEnabled = this.isEnabled(), RR
-        }
-        static GetConstructorFromName(RR, JR, GR) {
-          const yR = qR.d.Construct("Light_Type_" + RR, JR, GR);
-          return yR || null
-        }
-        static Parse(JR, GR) {
-          let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const tR = RR.GetConstructorFromName(JR.type, JR.name, GR);
-          if (!tR) return null;
-          const uR = KR.c.Parse(tR, JR, GR, yR);
-          if (JR.excludedMeshesIds && (uR._excludedMeshesIds = JR.excludedMeshesIds), JR.includedOnlyMeshesIds && (uR._includedOnlyMeshesIds = JR.includedOnlyMeshesIds), void 0 !== JR.parentId && (uR._waitingParentId = JR.parentId), void 0 !== JR.parentInstanceIndex && (uR._waitingParentInstanceIndex = JR.parentInstanceIndex), void 0 !== JR.falloffType && (uR.falloffType = JR.falloffType), void 0 !== JR.lightmapMode && (uR.lightmapMode = JR.lightmapMode), JR.animations) {
-            for (let RR = 0; RR < JR.animations.length; RR++) {
-              const GR = JR.animations[RR],
-                yR = (0, fR.e)("BABYLON.Animation");
-              yR && uR.animations.push(yR.Parse(GR))
-            }
-            qR.d.ParseAnimationRanges(uR, JR, GR)
-          }
-          return JR.autoAnimate && GR.beginAnimation(uR, JR.autoAnimateFrom, JR.autoAnimateTo, JR.autoAnimateLoop, JR.autoAnimateSpeed || 1), void 0 !== JR.isEnabled && uR.JA(JR.isEnabled), uR._onParsed(JR, GR, yR), uR
-        }
-        _onParsed(RR, JR) {}
-        _hookArrayForExcluded(RR) {
-          var JR = this;
-          const GR = RR.push;
-          RR.push = function() {
-            for (var yR = arguments.length, tR = new Array(yR), uR = 0; uR < yR; uR++) tR[uR] = arguments[uR];
-            const ZR = GR.apply(RR, tR);
-            if (JR._clusteredContainer) return ZR;
-            for (const RR of tR) RR._resyncLightSource(JR);
-            return ZR
-          };
-          const yR = RR.splice;
-          RR.splice = (JR, GR) => {
-            const tR = yR.call(RR, JR, GR ?? RR.length);
-            if (this._clusteredContainer) return tR;
-            for (const RR of tR) RR._resyncLightSource(this);
-            return tR
-          }, this._resyncMeshes()
-        }
-        _hookArrayForIncludedOnly(RR) {
-          var JR = this;
-          const GR = RR.push;
-          RR.push = function() {
-            for (var yR = arguments.length, tR = new Array(yR), uR = 0; uR < yR; uR++) tR[uR] = arguments[uR];
-            const ZR = GR.apply(RR, tR);
-            return JR._resyncMeshes(), ZR
-          };
-          const yR = RR.splice;
-          RR.splice = (JR, GR) => {
-            const tR = yR.call(RR, JR, GR ?? RR.length);
-            return this._resyncMeshes(), tR
-          }, this._resyncMeshes()
-        }
-        _resyncMeshes() {
-          if (!this._clusteredContainer)
-            for (const RR of this.jH().meshes) RR._resyncLightSource(this)
-        }
-        _markMeshesAsLightDirty() {
-          for (const RR of this.jH().meshes) - 1 !== RR.lightSources.indexOf(this) && RR._markSubMeshesAsLightDirty()
-        }
-        _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.jH().resetCachedMaterial()
-        }
-        _getPhotometricScale() {
-          let JR = 0;
-          const GR = this.getTypeID();
-          let yR = this.intensityMode;
-          switch (yR === RR.INTENSITYMODE_AUTOMATIC && (yR = GR === RR.LIGHTTYPEID_DIRECTIONALLIGHT ? RR.INTENSITYMODE_ILLUMINANCE : RR.INTENSITYMODE_LUMINOUSINTENSITY), GR) {
-            case RR.LIGHTTYPEID_POINTLIGHT:
-            case RR.LIGHTTYPEID_SPOTLIGHT:
-              switch (yR) {
-                case RR.INTENSITYMODE_LUMINOUSPOWER:
-                  JR = 1 / (4 * Math.PI);
-                  break;
-                case RR.INTENSITYMODE_LUMINOUSINTENSITY:
-                  JR = 1;
-                  break;
-                case RR.INTENSITYMODE_LUMINANCE:
-                  JR = this.radius * this.radius
-              }
-              break;
-            case RR.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (yR) {
-                case RR.INTENSITYMODE_ILLUMINANCE:
-                  JR = 1;
-                  break;
-                case RR.INTENSITYMODE_LUMINANCE: {
-                  let RR = this.radius;
-                  RR = Math.max(RR, .001);
-                  JR = 2 * Math.PI * (1 - Math.cos(RR));
-                  break
-                }
-              }
-              break;
-            case RR.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case RR.LIGHTTYPEID_RECT_AREALIGHT:
-              JR = 1
-          }
-          return JR
-        }
-        _reorderLightsInScene() {
-          const RR = this.jH();
-          0 != this._renderPriority && (RR.requireLightSorting = !0), this.jH().sortLightsByPriority()
-        }
-        areLightTexturesReady() {
-          return !0
-        }
-        _isReady() {
-          return !0
-        }
-      }, JR = new WeakMap, (() => {
-        const JR = "function" === typeof Symbol && Symbol.metadata ? Object.create(BR[Symbol.metadata] ?? null) : void 0;
-        GR = [(0, tR.k)()], wR = [(0, tR.k)()], rR = [(0, tR.H)()], eR = [(0, tR.H)()], aR = [(0, tR.H)()], LR = [(0, tR.H)()], nR = [(0, tR.H)()], UR = [(0, tR.H)()], WR = [(0, tR.d)("_reorderLightsInScene")], AR = [(0, tR.H)("shadowEnabled")], CR = [(0, tR.H)("excludeWithLayerMask")], XR = [(0, tR.H)("includeOnlyWithLayerMask")], MR = [(0, tR.H)("lightmapMode")], (0, yR.l)(RR, null, aR, {
-          kind: "getter",
-          name: "range",
-          static: !1,
-          private: !1,
-          access: {
-            has: RR => "range" in RR,
-            get: RR => RR.range
-          },
-          metadata: JR
-        }, null, lR), (0, yR.l)(RR, null, LR, {
-          kind: "getter",
-          name: "intensityMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: RR => "intensityMode" in RR,
-            get: RR => RR.intensityMode
-          },
-          metadata: JR
-        }, null, lR), (0, yR.l)(RR, null, nR, {
-          kind: "getter",
-          name: "radius",
-          static: !1,
-          private: !1,
-          access: {
-            has: RR => "radius" in RR,
-            get: RR => RR.radius
-          },
-          metadata: JR
-        }, null, lR), (0, yR.l)(RR, null, WR, {
-          kind: "accessor",
-          name: "renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: RR => "renderPriority" in RR,
-            get: RR => RR.renderPriority,
-            set: (RR, JR) => {
-              RR.renderPriority = JR
-            }
-          },
-          metadata: JR
-        }, cR, PR), (0, yR.l)(null, null, GR, {
+      }, (() => {
+        const ar = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        Sr = [(0, Wr.G)()], Qr = [(0, Wr.G)()], jr = [(0, Wr.G)()], Ir = [(0, Wr.G)()], pr = [(0, Wr.G)()], xr = [(0, Wr.G)()], mr = [(0, Wr.G)()], Nr = [(0, Wr.G)()], Ur = [(0, Wr.G)()], tr = [(0, Wr.G)()], hr = [(0, Wr.G)()], (0, Zr.k)(null, null, Sr, {
           kind: "field",
-          name: "diffuse",
+          name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: RR => "diffuse" in RR,
-            get: RR => RR.diffuse,
-            set: (RR, JR) => {
-              RR.diffuse = JR
+            has: rr => "keysUp" in rr,
+            get: rr => rr.keysUp,
+            set: (rr, Sr) => {
+              rr.keysUp = Sr
             }
           },
-          metadata: JR
-        }, pR, gR), (0, yR.l)(null, null, wR, {
+          metadata: ar
+        }, zr, Yr), (0, Zr.k)(null, null, Qr, {
           kind: "field",
-          name: "specular",
+          name: "keysUpward",
           static: !1,
           private: !1,
           access: {
-            has: RR => "specular" in RR,
-            get: RR => RR.specular,
-            set: (RR, JR) => {
-              RR.specular = JR
+            has: rr => "keysUpward" in rr,
+            get: rr => rr.keysUpward,
+            set: (rr, Sr) => {
+              rr.keysUpward = Sr
             }
           },
-          metadata: JR
-        }, bR, vR), (0, yR.l)(null, null, rR, {
+          metadata: ar
+        }, nr, er), (0, Zr.k)(null, null, jr, {
           kind: "field",
-          name: "falloffType",
+          name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: RR => "falloffType" in RR,
-            get: RR => RR.falloffType,
-            set: (RR, JR) => {
-              RR.falloffType = JR
+            has: rr => "keysDown" in rr,
+            get: rr => rr.keysDown,
+            set: (rr, Sr) => {
+              rr.keysDown = Sr
             }
           },
-          metadata: JR
-        }, OR, xR), (0, yR.l)(null, null, eR, {
+          metadata: ar
+        }, Kr, yr), (0, Zr.k)(null, null, Ir, {
           kind: "field",
-          name: "intensity",
+          name: "keysDownward",
           static: !1,
           private: !1,
           access: {
-            has: RR => "intensity" in RR,
-            get: RR => RR.intensity,
-            set: (RR, JR) => {
-              RR.intensity = JR
+            has: rr => "keysDownward" in rr,
+            get: rr => rr.keysDownward,
+            set: (rr, Sr) => {
+              rr.keysDownward = Sr
             }
           },
-          metadata: JR
-        }, NR, DR), (0, yR.l)(null, null, UR, {
+          metadata: ar
+        }, Br, Tr), (0, Zr.k)(null, null, pr, {
           kind: "field",
-          name: "_renderPriority",
+          name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: RR => "_renderPriority" in RR,
-            get: RR => RR._renderPriority,
-            set: (RR, JR) => {
-              RR._renderPriority = JR
+            has: rr => "keysLeft" in rr,
+            get: rr => rr.keysLeft,
+            set: (rr, Sr) => {
+              rr.keysLeft = Sr
             }
           },
-          metadata: JR
-        }, HR, oR), (0, yR.l)(null, null, AR, {
+          metadata: ar
+        }, vr, Or), (0, Zr.k)(null, null, xr, {
           kind: "field",
-          name: "_shadowEnabled",
+          name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: RR => "_shadowEnabled" in RR,
-            get: RR => RR._shadowEnabled,
-            set: (RR, JR) => {
-              RR._shadowEnabled = JR
+            has: rr => "keysRight" in rr,
+            get: rr => rr.keysRight,
+            set: (rr, Sr) => {
+              rr.keysRight = Sr
             }
           },
-          metadata: JR
-        }, IR, mR), (0, yR.l)(null, null, CR, {
+          metadata: ar
+        }, Lr, lr), (0, Zr.k)(null, null, mr, {
           kind: "field",
-          name: "_excludeWithLayerMask",
+          name: "rotationSpeed",
           static: !1,
           private: !1,
           access: {
-            has: RR => "_excludeWithLayerMask" in RR,
-            get: RR => RR._excludeWithLayerMask,
-            set: (RR, JR) => {
-              RR._excludeWithLayerMask = JR
+            has: rr => "rotationSpeed" in rr,
+            get: rr => rr.rotationSpeed,
+            set: (rr, Sr) => {
+              rr.rotationSpeed = Sr
             }
           },
-          metadata: JR
-        }, zR, SR), (0, yR.l)(null, null, XR, {
+          metadata: ar
+        }, Xr, Pr), (0, Zr.k)(null, null, Nr, {
           kind: "field",
-          name: "_includeOnlyWithLayerMask",
+          name: "keysRotateLeft",
           static: !1,
           private: !1,
           access: {
-            has: RR => "_includeOnlyWithLayerMask" in RR,
-            get: RR => RR._includeOnlyWithLayerMask,
-            set: (RR, JR) => {
-              RR._includeOnlyWithLayerMask = JR
+            has: rr => "keysRotateLeft" in rr,
+            get: rr => rr.keysRotateLeft,
+            set: (rr, Sr) => {
+              rr.keysRotateLeft = Sr
             }
           },
-          metadata: JR
-        }, jR, dR), (0, yR.l)(null, null, MR, {
+          metadata: ar
+        }, Hr, qr), (0, Zr.k)(null, null, Ur, {
           kind: "field",
-          name: "_lightmapMode",
+          name: "keysRotateRight",
           static: !1,
           private: !1,
           access: {
-            has: RR => "_lightmapMode" in RR,
-            get: RR => RR._lightmapMode,
-            set: (RR, JR) => {
-              RR._lightmapMode = JR
+            has: rr => "keysRotateRight" in rr,
+            get: rr => rr.keysRotateRight,
+            set: (rr, Sr) => {
+              rr.keysRotateRight = Sr
             }
           },
-          metadata: JR
-        }, ER, YR), JR && Object.defineProperty(RR, Symbol.metadata, {
+          metadata: ar
+        }, Rr, gr), (0, Zr.k)(null, null, tr, {
+          kind: "field",
+          name: "keysRotateUp",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "keysRotateUp" in rr,
+            get: rr => rr.keysRotateUp,
+            set: (rr, Sr) => {
+              rr.keysRotateUp = Sr
+            }
+          },
+          metadata: ar
+        }, Cr, Mr), (0, Zr.k)(null, null, hr, {
+          kind: "field",
+          name: "keysRotateDown",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "keysRotateDown" in rr,
+            get: rr => rr.keysRotateDown,
+            set: (rr, Sr) => {
+              rr.keysRotateDown = Sr
+            }
+          },
+          metadata: ar
+        }, Gr, kr), ar && Object.defineProperty(rr, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: JR
+          value: ar
         })
-      })(), RR.FALLOFF_DEFAULT = VR.c.FALLOFF_DEFAULT, RR.FALLOFF_PHYSICAL = VR.c.FALLOFF_PHYSICAL, RR.FALLOFF_GLTF = VR.c.FALLOFF_GLTF, RR.FALLOFF_STANDARD = VR.c.FALLOFF_STANDARD, RR.LIGHTMAP_DEFAULT = VR.c.LIGHTMAP_DEFAULT, RR.LIGHTMAP_SPECULAR = VR.c.LIGHTMAP_SPECULAR, RR.LIGHTMAP_SHADOWSONLY = VR.c.LIGHTMAP_SHADOWSONLY, RR.INTENSITYMODE_AUTOMATIC = VR.c.INTENSITYMODE_AUTOMATIC, RR.INTENSITYMODE_LUMINOUSPOWER = VR.c.INTENSITYMODE_LUMINOUSPOWER, RR.INTENSITYMODE_LUMINOUSINTENSITY = VR.c.INTENSITYMODE_LUMINOUSINTENSITY, RR.INTENSITYMODE_ILLUMINANCE = VR.c.INTENSITYMODE_ILLUMINANCE, RR.INTENSITYMODE_LUMINANCE = VR.c.INTENSITYMODE_LUMINANCE, RR.LIGHTTYPEID_POINTLIGHT = VR.c.LIGHTTYPEID_POINTLIGHT, RR.LIGHTTYPEID_DIRECTIONALLIGHT = VR.c.LIGHTTYPEID_DIRECTIONALLIGHT, RR.LIGHTTYPEID_SPOTLIGHT = VR.c.LIGHTTYPEID_SPOTLIGHT, RR.LIGHTTYPEID_HEMISPHERICLIGHT = VR.c.LIGHTTYPEID_HEMISPHERICLIGHT, RR.LIGHTTYPEID_RECT_AREALIGHT = VR.c.LIGHTTYPEID_RECT_AREALIGHT, RR
-    })()
-  },
-  41741: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => KR
-    });
-    var yR = GR(41520),
-      tR = GR(38204),
-      uR = GR(41524),
-      ZR = GR(38233),
-      qR = GR(38224),
-      iR = GR(41407),
-      fR = GR(41542);
-    class VR {
-      constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new ZR.b, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new ZR.b, this._inheritVisibility = !1, this._isVisible = !0
-      }
-    }
-    let KR = (() => {
-      var RR;
-      let JR, GR, KR, wR, rR, eR = [],
-        aR = [],
-        LR = [],
-        nR = [],
-        UR = [],
-        WR = [],
-        AR = [],
-        CR = [],
-        XR = [],
-        MR = [];
-      return RR = class {
-        static AddNodeConstructor(RR, JR) {
-          this._NodeConstructors[RR] = JR
+      })(), rr
+    })();
+    Ir.c.FreeCameraKeyboardMoveInput = pr;
+    var xr = Qr(38595),
+      mr = Qr(42028);
+    let Nr = (() => {
+      var rr;
+      let Sr, Qr, ar = [],
+        jr = [],
+        Ir = [],
+        fr = [];
+      return rr = class {
+        _applyPointerRotation(rr, Sr) {
+          this._pointerConditions.button = this._currentActiveButton;
+          const Qr = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
+          if (!Qr || "rotate" !== Qr.interaction) return;
+          const Zr = Qr.OJ ?? Qr.sensitivity ?? 1 / this.angularSensibility,
+            Wr = Qr.LJ ?? Qr.sensitivity ?? 1 / this.angularSensibility;
+          this.camera.cameraRotation.y += rr * Zr, this.camera.cameraRotation.x += Sr * Wr
         }
-        static Construct(RR, JR, GR, yR) {
-          const tR = this._NodeConstructors[RR];
-          return tR ? tR(JR, GR, yR) : null
+        constructor() {
+          let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+          this.touchEnabled = rr, this.buttons = (0, Zr.m)(this, ar, [0, 1, 2]), this.angularSensibility = ((0, Zr.m)(this, jr), (0, Zr.m)(this, Ir, 2e3)), this._pointerInput = (0, Zr.m)(this, fr), this._previousPosition = null, this.onPointerMovedObservable = new xr.d, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
         }
-        set accessibilityTag(RR) {
-          this._accessibilityTag = RR, this.onAccessibilityTagChangedObservable.notifyObservers(RR)
+        attachControl(rr) {
+          rr = Er.h.BackCompatCameraNoPreventDefault(arguments);
+          const Sr = this.camera.MU(),
+            Qr = Sr.getInputElement();
+          this._pointerInput || (this._pointerInput = Zr => {
+            const Wr = Zr.event,
+              ar = "touch" === Wr.pointerType;
+            if (!this.touchEnabled && ar) return;
+            if (Zr.type !== mr.b.POINTERMOVE && -1 === this.buttons.indexOf(Wr.button)) return;
+            const jr = Wr.target;
+            if (Zr.type === mr.b.POINTERDOWN) {
+              if (ar && -1 !== this._activePointerId || !ar && -1 !== this._currentActiveButton) return;
+              this._activePointerId = Wr.pointerId;
+              try {
+                jr?.setPointerCapture(Wr.pointerId)
+              } catch (Ir) {} - 1 === this._currentActiveButton && (this._currentActiveButton = Wr.button), this._previousPosition = {
+                x: Wr.clientX,
+                y: Wr.clientY
+              }, rr || (Wr.preventDefault(), Qr && Qr.focus()), Sr.isPointerLock && this._onMouseMove && this._onMouseMove(Zr.event)
+            } else if (Zr.type === mr.b.POINTERUP) {
+              if (ar && this._activePointerId !== Wr.pointerId || !ar && this._currentActiveButton !== Wr.button) return;
+              try {
+                jr?.releasePointerCapture(Wr.pointerId)
+              } catch (Ir) {}
+              this._currentActiveButton = -1, this._previousPosition = null, rr || Wr.preventDefault(), this._activePointerId = -1
+            } else if (Zr.type === mr.b.POINTERMOVE && (this._activePointerId === Wr.pointerId || !ar))
+              if (Sr.isPointerLock && this._onMouseMove) this._onMouseMove(Zr.event);
+              else if (this._previousPosition) {
+              const Sr = this.camera._calculateHandednessMultiplier(),
+                Qr = (Wr.clientX - this._previousPosition.x) * Sr,
+                Zr = (Wr.clientY - this._previousPosition.y) * Sr;
+              this._allowCameraRotation && this._applyPointerRotation(Qr, Zr), this.onPointerMovedObservable.notifyObservers({
+                offsetX: Qr,
+                offsetY: Zr
+              }), this._previousPosition = {
+                x: Wr.clientX,
+                y: Wr.clientY
+              }, rr || Wr.preventDefault()
+            }
+          }), this._onMouseMove = Qr => {
+            if (!Sr.isPointerLock) return;
+            const Zr = this.camera._calculateHandednessMultiplier();
+            this._applyPointerRotation(Qr.movementX * Zr, Qr.movementY * Zr), this._previousPosition = null, rr || Qr.preventDefault()
+          }, this._observer = this.camera.eC()._inputManager._addCameraPointerObserver(this._pointerInput, mr.b.POINTERDOWN | mr.b.POINTERUP | mr.b.POINTERMOVE), Qr && (this._contextMenuBind = rr => this.onContextMenu(rr), Qr.addEventListener("contextmenu", this._contextMenuBind, !1))
         }
-        get accessibilityTag() {
-          return this._accessibilityTag
+        onContextMenu(rr) {
+          rr.preventDefault()
         }
-        get doNotSerialize() {
-          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
-        }
-        set doNotSerialize(RR) {
-          this._nodeDataStorage._doNotSerialize = RR
-        }
-        oB() {
-          return this._nodeDataStorage._isDisposed
-        }
-        set parent(RR) {
-          if (this._parentNode === RR) return;
-          const JR = this._parentNode;
-          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const JR = this._parentNode._children.indexOf(this); - 1 !== JR && this._parentNode._children.splice(JR, 1), RR || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+        detachControl() {
+          if (this._observer) {
+            if (this.camera.eC()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
+              const rr = this.camera.MU().getInputElement();
+              rr && rr.removeEventListener("contextmenu", this._contextMenuBind)
+            }
+            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
           }
-          this._parentNode = RR, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), JR || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
-        }
-        get parent() {
-          return this._parentNode
-        }
-        get inheritVisibility() {
-          return this._nodeDataStorage._inheritVisibility
-        }
-        set inheritVisibility(RR) {
-          this._nodeDataStorage._inheritVisibility = RR
-        }
-        get isVisible() {
-          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
-        }
-        set isVisible(RR) {
-          this._nodeDataStorage._isVisible = RR
-        }
-        _serializeAsParent(RR) {
-          RR.parentId = this.uniqueId
-        }
-        _addToSceneRootNodes() {
-          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
-        }
-        _removeFromSceneRootNodes() {
-          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const RR = this._scene.rootNodes,
-              JR = RR.length - 1;
-            RR[this._nodeDataStorage._sceneRootNodesIndex] = RR[JR], RR[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
-          }
-        }
-        get animationPropertiesOverride() {
-          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
-        }
-        set animationPropertiesOverride(RR) {
-          this._animationPropertiesOverride = RR
+          this._activePointerId = -1, this._currentActiveButton = -1
         }
         getClassName() {
-          return "Node"
+          return "FreeCameraMouseInput"
         }
-        set onDispose(RR) {
-          this._onDisposeObserver && this.YH.remove(this._onDisposeObserver), this._onDisposeObserver = this.YH.add(RR)
+        getSimpleName() {
+          return "mouse"
         }
-        get onEnabledStateChangedObservable() {
-          return this._nodeDataStorage._onEnabledStateChangedObservable
-        }
-        get onEffectiveEnabledStateChangedObservable() {
-          var RR;
-          return (RR = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (RR._onEffectiveEnabledStateChangedObservable = new ZR.b)
-        }
-        get onClonedObservable() {
-          return this._nodeDataStorage._onClonedObservable
-        }
-        constructor(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            GR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new VR, this.name = (0, yR.m)(this, eR, void 0), this.id = ((0, yR.m)(this, aR), (0, yR.m)(this, LR, void 0)), this.uniqueId = ((0, yR.m)(this, nR), (0, yR.m)(this, UR, void 0)), this.state = ((0, yR.m)(this, WR), (0, yR.m)(this, AR, "")), this.metadata = ((0, yR.m)(this, CR), (0, yR.m)(this, XR, null)), this._internalMetadata = (0, yR.m)(this, MR), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new ZR.b, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = tR.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.YH = new ZR.b, this._onDisposeObserver = null, this._behaviors = new Array, this.name = RR, this.id = RR, this._scene = JR || qR.c.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), GR && this._addToSceneRootNodes()
-        }
-        jH() {
-          return this._scene
-        }
-        ke() {
-          return this._scene.ke()
-        }
-        addBehavior(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(RR) || (RR.init(), this._scene.isLoading && !JR ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(RR) && RR.attach(this)
-          })) : RR.attach(this), this._behaviors.push(RR)), this
-        }
-        removeBehavior(RR) {
-          const JR = this._behaviors.indexOf(RR);
-          return -1 === JR || (this._behaviors.splice(JR, 1), RR.detach()), this
-        }
-        get behaviors() {
-          return this._behaviors
-        }
-        getBehaviorByName(RR) {
-          for (const JR of this._behaviors)
-            if (JR.name === RR) return JR;
-          return null
-        }
-        getWorldMatrix() {
-          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
-        }
-        _getWorldMatrixDeterminant() {
-          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
-        }
-        get worldMatrixFromCache() {
-          return this._worldMatrix
-        }
-        _initCache() {
-          this._cache = {}
-        }
-        updateCache(RR) {
-          !RR && this.isSynchronized() || this._updateCache()
-        }
-        _getActionManagerForTrigger(RR) {
-          return this.parent ? this.parent._getActionManagerForTrigger(RR, !1) : null
-        }
-        _updateCache(RR) {}
-        _isSynchronized() {
-          return !0
-        }
-        _markSyncedWithParent() {
-          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
-        }
-        isSynchronizedWithParent() {
-          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
-        }
-        isSynchronized() {
-          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
-        }
-        isReady() {
-          return this._nodeDataStorage._isReady
-        }
-        hGR(RR) {
-          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
-        }
-        isEnabled() {
-          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
-        }
-        _hasEffectiveEnabledStateObservers() {
-          const RR = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!RR && RR.hasObservers()
-        }
-        _syncParentEnabledState() {
-          const RR = this._hasEffectiveEnabledStateObservers(),
-            JR = RR ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const GR of this._children) GR._syncParentEnabledState();
-          if (RR) {
-            const RR = this.isEnabled();
-            RR !== JR && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(RR)
-          }
-        }
-        JA(RR) {
-          if (this._nodeDataStorage._isEnabled === RR) return;
-          const JR = this._hasEffectiveEnabledStateObservers(),
-            GR = JR ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = RR, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(RR), JR) {
-            const RR = this.isEnabled();
-            RR !== GR && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(RR)
-          }
-        }
-        isDescendantOf(RR) {
-          return !!this.parent && (this.parent === RR || this.parent.isDescendantOf(RR))
-        }
-        _getDescendants(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            GR = arguments.length > 2 ? arguments[2] : void 0;
-          if (this._children)
-            for (let yR = 0; yR < this._children.length; yR++) {
-              const tR = this._children[yR];
-              GR && !GR(tR) || RR.push(tR), JR || tR._getDescendants(RR, !1, GR)
+      }, (() => {
+        const Er = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        Sr = [(0, Wr.G)()], Qr = [(0, Wr.G)()], (0, Zr.k)(null, null, Sr, {
+          kind: "field",
+          name: "buttons",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "buttons" in rr,
+            get: rr => rr.buttons,
+            set: (rr, Sr) => {
+              rr.buttons = Sr
             }
-        }
-        getDescendants(RR, JR) {
-          const GR = [];
-          return this._getDescendants(GR, RR, JR), GR
-        }
-        getChildMeshes(RR, JR) {
-          const GR = [];
-          return this._getDescendants(GR, RR, (RR => (!JR || JR(RR)) && void 0 !== RR.cullingStrategy)), GR
-        }
-        getChildren(RR) {
-          let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(JR, RR)
-        }
-        _setReady(RR) {
-          RR !== this._nodeDataStorage._isReady && (RR ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
-        }
-        getAnimationByName(RR) {
-          for (let JR = 0; JR < this.animations.length; JR++) {
-            const GR = this.animations[JR];
-            if (GR.name === RR) return GR
-          }
-          return null
-        }
-        createAnimationRange(JR, GR, yR) {
-          if (!this._ranges[JR]) {
-            this._ranges[JR] = RR._AnimationRangeFactory(JR, GR, yR);
-            for (let RR = 0, tR = this.animations.length; RR < tR; RR++) this.animations[RR] && this.animations[RR].createRange(JR, GR, yR)
-          }
-        }
-        deleteAnimationRange(RR) {
-          let JR = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let GR = 0, yR = this.animations.length; GR < yR; GR++) this.animations[GR] && this.animations[GR].deleteRange(RR, JR);
-          this._ranges[RR] = null
-        }
-        getAnimationRange(RR) {
-          return this._ranges[RR] || null
-        }
-        clone(JR, GR, yR) {
-          const tR = fR.c.Clone((() => new RR(JR, this.jH())), this);
-          if (GR && (tR.parent = GR), !yR) {
-            const RR = this.getDescendants(!0);
-            for (let GR = 0; GR < RR.length; GR++) {
-              const yR = RR[GR];
-              yR.clone(JR + "." + yR.name, tR)
+          },
+          metadata: Er
+        }, ar, jr), (0, Zr.k)(null, null, Qr, {
+          kind: "field",
+          name: "angularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "angularSensibility" in rr,
+            get: rr => rr.angularSensibility,
+            set: (rr, Sr) => {
+              rr.angularSensibility = Sr
             }
-          }
-          return tR
+          },
+          metadata: Er
+        }, Ir, fr), Er && Object.defineProperty(rr, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: Er
+        })
+      })(), rr
+    })();
+    Ir.c.FreeCameraMouseInput = Nr;
+    var Ur = Qr(42036);
+    let tr = (() => {
+      var rr;
+      let Sr, Qr, ar, jr = [],
+        Ir = [],
+        fr = [],
+        pr = [],
+        Nr = [],
+        tr = [];
+      return rr = class {
+        constructor() {
+          this.wheelPrecisionX = (0, Zr.m)(this, jr, 3), this.wheelPrecisionY = ((0, Zr.m)(this, Ir), (0, Zr.m)(this, fr, 3)), this.wheelPrecisionZ = ((0, Zr.m)(this, pr), (0, Zr.m)(this, Nr, 3)), this.onChangedObservable = ((0, Zr.m)(this, tr), new xr.d), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
         }
-        getAnimationRanges() {
-          const RR = [];
-          let JR;
-          for (JR in this._ranges) RR.push(this._ranges[JR]);
-          return RR
+        attachControl(rr) {
+          rr = Er.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = Sr => {
+            if (Sr.type !== mr.b.POINTERWHEEL) return;
+            const Qr = Sr.event,
+              Zr = Qr.deltaMode === Ur.b.DOM_DELTA_LINE ? this._ffMultiplier : 1;
+            this._wheelDeltaX += this.wheelPrecisionX * Zr * Qr.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * Zr * Qr.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * Zr * Qr.deltaZ / this._normalize, Qr.preventDefault && (rr || Qr.preventDefault())
+          }, this._observer = this.camera.eC()._inputManager._addCameraPointerObserver(this._wheel, mr.b.POINTERWHEEL)
         }
-        beginAnimation(RR, JR, GR, yR) {
-          const tR = this.getAnimationRange(RR);
-          return tR ? this._scene.beginAnimation(this, tR.from, tR.to, JR, GR, yR) : null
+        detachControl() {
+          this._observer && (this.camera.eC()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
         }
-        serializeAnimationRanges() {
-          const RR = [];
-          for (const JR in this._ranges) {
-            const GR = this._ranges[JR];
-            if (!GR) continue;
-            const yR = {};
-            yR.name = JR, yR.from = GR.from, yR.to = GR.to, RR.push(yR)
-          }
-          return RR
+        checkInputs() {
+          this.onChangedObservable.notifyObservers({
+            wheelDeltaX: this._wheelDeltaX,
+            wheelDeltaY: this._wheelDeltaY,
+            wheelDeltaZ: this._wheelDeltaZ
+          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
         }
-        computeWorldMatrix(RR) {
-          return this._worldMatrix || (this._worldMatrix = tR.e.Identity()), this._worldMatrix
+        getClassName() {
+          return "BaseCameraMouseWheelInput"
         }
-        dispose(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !RR) {
-            const GR = this.getDescendants(!0);
-            for (const yR of GR) yR.dispose(RR, JR)
-          }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.YH.notifyObservers(this), this.YH.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const GR of this._behaviors) GR.detach();
-          this._behaviors.length = 0, this.metadata = null
+        getSimpleName() {
+          return "mousewheel"
         }
-        static ParseAnimationRanges(RR, JR, GR) {
-          if (JR.WL)
-            for (let yR = 0; yR < JR.WL.length; yR++) {
-              const GR = JR.WL[yR];
-              RR.createAnimationRange(GR.name, GR.from, GR.to)
+      }, (() => {
+        const Er = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        Sr = [(0, Wr.G)()], Qr = [(0, Wr.G)()], ar = [(0, Wr.G)()], (0, Zr.k)(null, null, Sr, {
+          kind: "field",
+          name: "wheelPrecisionX",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelPrecisionX" in rr,
+            get: rr => rr.wheelPrecisionX,
+            set: (rr, Sr) => {
+              rr.wheelPrecisionX = Sr
             }
-        }
-        getHierarchyBoundingVectors() {
-          let RR, JR, GR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            yR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.jH().incrementRenderId(), this.computeWorldMatrix(!0);
-          const uR = this;
-          if (uR.Tm && uR.XM) {
-            const GR = uR.Tm();
-            RR = GR.boundingBox.minimumWorld.clone(), JR = GR.boundingBox.maximumWorld.clone()
-          } else RR = new tR.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), JR = new tR.r(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (GR) {
-            const GR = this.getDescendants(!1);
-            for (const uR of GR) {
-              const GR = uR;
-              if (GR.computeWorldMatrix(!0), yR && !yR(GR)) continue;
-              if (!GR.Tm || 0 === GR.getTotalVertices()) continue;
-              const ZR = GR.Tm().boundingBox,
-                qR = ZR.minimumWorld,
-                iR = ZR.maximumWorld;
-              tR.r.CheckExtends(qR, RR, JR), tR.r.CheckExtends(iR, RR, JR)
+          },
+          metadata: Er
+        }, jr, Ir), (0, Zr.k)(null, null, Qr, {
+          kind: "field",
+          name: "wheelPrecisionY",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelPrecisionY" in rr,
+            get: rr => rr.wheelPrecisionY,
+            set: (rr, Sr) => {
+              rr.wheelPrecisionY = Sr
             }
+          },
+          metadata: Er
+        }, fr, pr), (0, Zr.k)(null, null, ar, {
+          kind: "field",
+          name: "wheelPrecisionZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelPrecisionZ" in rr,
+            get: rr => rr.wheelPrecisionZ,
+            set: (rr, Sr) => {
+              rr.wheelPrecisionZ = Sr
+            }
+          },
+          metadata: Er
+        }, Nr, tr), Er && Object.defineProperty(rr, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: Er
+        })
+      })(), rr
+    })();
+    var hr;
+    ! function(rr) {
+      rr[rr.MoveRelative = 0] = "MoveRelative", rr[rr.RotateRelative = 1] = "RotateRelative", rr[rr.MoveScene = 2] = "MoveScene"
+    }(hr || (hr = {}));
+    let zr = (() => {
+      var rr;
+      let Sr, Qr, jr, Ir, fr, Er, pr, xr, mr, Nr = tr,
+        Ur = [];
+      return rr = class extends Nr {
+        constructor() {
+          super(...arguments), this.camera = (0, Zr.m)(this, Ur), this._moveRelative = ar.u.Zero(), this._rotateRelative = ar.u.Zero(), this._moveScene = ar.u.Zero(), this._wheelXAction = hr.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = hr.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
+        }
+        getClassName() {
+          return "FreeCameraMouseWheelInput"
+        }
+        set wheelXMoveRelative(rr) {
+          null === rr && this._wheelXAction !== hr.MoveRelative || (this._wheelXAction = hr.MoveRelative, this._wheelXActionCoordinate = rr)
+        }
+        get wheelXMoveRelative() {
+          return this._wheelXAction !== hr.MoveRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveRelative(rr) {
+          null === rr && this._wheelYAction !== hr.MoveRelative || (this._wheelYAction = hr.MoveRelative, this._wheelYActionCoordinate = rr)
+        }
+        get wheelYMoveRelative() {
+          return this._wheelYAction !== hr.MoveRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveRelative(rr) {
+          null === rr && this._wheelZAction !== hr.MoveRelative || (this._wheelZAction = hr.MoveRelative, this._wheelZActionCoordinate = rr)
+        }
+        get wheelZMoveRelative() {
+          return this._wheelZAction !== hr.MoveRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXRotateRelative(rr) {
+          null === rr && this._wheelXAction !== hr.RotateRelative || (this._wheelXAction = hr.RotateRelative, this._wheelXActionCoordinate = rr)
+        }
+        get wheelXRotateRelative() {
+          return this._wheelXAction !== hr.RotateRelative ? null : this._wheelXActionCoordinate
+        }
+        set wheelYRotateRelative(rr) {
+          null === rr && this._wheelYAction !== hr.RotateRelative || (this._wheelYAction = hr.RotateRelative, this._wheelYActionCoordinate = rr)
+        }
+        get wheelYRotateRelative() {
+          return this._wheelYAction !== hr.RotateRelative ? null : this._wheelYActionCoordinate
+        }
+        set wheelZRotateRelative(rr) {
+          null === rr && this._wheelZAction !== hr.RotateRelative || (this._wheelZAction = hr.RotateRelative, this._wheelZActionCoordinate = rr)
+        }
+        get wheelZRotateRelative() {
+          return this._wheelZAction !== hr.RotateRelative ? null : this._wheelZActionCoordinate
+        }
+        set wheelXMoveScene(rr) {
+          null === rr && this._wheelXAction !== hr.MoveScene || (this._wheelXAction = hr.MoveScene, this._wheelXActionCoordinate = rr)
+        }
+        get wheelXMoveScene() {
+          return this._wheelXAction !== hr.MoveScene ? null : this._wheelXActionCoordinate
+        }
+        set wheelYMoveScene(rr) {
+          null === rr && this._wheelYAction !== hr.MoveScene || (this._wheelYAction = hr.MoveScene, this._wheelYActionCoordinate = rr)
+        }
+        get wheelYMoveScene() {
+          return this._wheelYAction !== hr.MoveScene ? null : this._wheelYActionCoordinate
+        }
+        set wheelZMoveScene(rr) {
+          null === rr && this._wheelZAction !== hr.MoveScene || (this._wheelZAction = hr.MoveScene, this._wheelZActionCoordinate = rr)
+        }
+        get wheelZMoveScene() {
+          return this._wheelZAction !== hr.MoveScene ? null : this._wheelZActionCoordinate
+        }
+        checkInputs() {
+          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
+          this._moveRelative.Srr(0), this._rotateRelative.Srr(0), this._moveScene.Srr(0), this._updateCamera(), this.camera.eC().useRightHandedSystem && (this._moveRelative.z *= -1);
+          const rr = ar.d.Zero();
+          this.camera.getViewMatrix().invertToRef(rr);
+          const Sr = ar.u.Zero();
+          ar.u.TransformNormalToRef(this._moveRelative, rr, Sr), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(Sr), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
+        }
+        _updateCamera() {
+          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
+        }
+        _updateCameraProperty(rr, Sr, Qr) {
+          if (0 === rr) return;
+          if (null === Sr || null === Qr) return;
+          let Zr = null;
+          switch (Sr) {
+            case hr.MoveRelative:
+              Zr = this._moveRelative;
+              break;
+            case hr.RotateRelative:
+              Zr = this._rotateRelative;
+              break;
+            case hr.MoveScene:
+              Zr = this._moveScene
           }
-          return {
-            min: RR,
-            max: JR
+          switch (Qr) {
+            case 0:
+              Zr.set(rr, 0, 0);
+              break;
+            case 1:
+              Zr.set(0, rr, 0);
+              break;
+            case 2:
+              Zr.set(0, 0, rr)
           }
         }
       }, (() => {
-        const tR = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        JR = [(0, uR.H)()], GR = [(0, uR.H)()], KR = [(0, uR.H)()], wR = [(0, uR.H)()], rR = [(0, uR.H)()], (0, yR.l)(null, null, JR, {
-          kind: "field",
-          name: "name",
+        const ar = "function" === typeof Symbol && Symbol.metadata ? Object.create(Nr[Symbol.metadata] ?? null) : void 0;
+        Sr = [(0, Wr.G)()], Qr = [(0, Wr.G)()], jr = [(0, Wr.G)()], Ir = [(0, Wr.G)()], fr = [(0, Wr.G)()], Er = [(0, Wr.G)()], pr = [(0, Wr.G)()], xr = [(0, Wr.G)()], mr = [(0, Wr.G)()], (0, Zr.k)(rr, null, Sr, {
+          kind: "setter",
+          name: "wheelXMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: RR => "name" in RR,
-            get: RR => RR.name,
-            set: (RR, JR) => {
-              RR.name = JR
+            has: rr => "wheelXMoveRelative" in rr,
+            set: (rr, Sr) => {
+              rr.wheelXMoveRelative = Sr
             }
           },
-          metadata: tR
-        }, eR, aR), (0, yR.l)(null, null, GR, {
-          kind: "field",
-          name: "id",
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, Qr, {
+          kind: "setter",
+          name: "wheelYMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: RR => "id" in RR,
-            get: RR => RR.id,
-            set: (RR, JR) => {
-              RR.id = JR
+            has: rr => "wheelYMoveRelative" in rr,
+            set: (rr, Sr) => {
+              rr.wheelYMoveRelative = Sr
             }
           },
-          metadata: tR
-        }, LR, nR), (0, yR.l)(null, null, KR, {
-          kind: "field",
-          name: "uniqueId",
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, jr, {
+          kind: "setter",
+          name: "wheelZMoveRelative",
           static: !1,
           private: !1,
           access: {
-            has: RR => "uniqueId" in RR,
-            get: RR => RR.uniqueId,
-            set: (RR, JR) => {
-              RR.uniqueId = JR
+            has: rr => "wheelZMoveRelative" in rr,
+            set: (rr, Sr) => {
+              rr.wheelZMoveRelative = Sr
             }
           },
-          metadata: tR
-        }, UR, WR), (0, yR.l)(null, null, wR, {
-          kind: "field",
-          name: "state",
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, Ir, {
+          kind: "setter",
+          name: "wheelXRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: RR => "state" in RR,
-            get: RR => RR.state,
-            set: (RR, JR) => {
-              RR.state = JR
+            has: rr => "wheelXRotateRelative" in rr,
+            set: (rr, Sr) => {
+              rr.wheelXRotateRelative = Sr
             }
           },
-          metadata: tR
-        }, AR, CR), (0, yR.l)(null, null, rR, {
-          kind: "field",
-          name: "metadata",
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, fr, {
+          kind: "setter",
+          name: "wheelYRotateRelative",
           static: !1,
           private: !1,
           access: {
-            has: RR => "metadata" in RR,
-            get: RR => RR.metadata,
-            set: (RR, JR) => {
-              RR.metadata = JR
+            has: rr => "wheelYRotateRelative" in rr,
+            set: (rr, Sr) => {
+              rr.wheelYRotateRelative = Sr
             }
           },
-          metadata: tR
-        }, XR, MR), tR && Object.defineProperty(RR, Symbol.metadata, {
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, Er, {
+          kind: "setter",
+          name: "wheelZRotateRelative",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelZRotateRelative" in rr,
+            set: (rr, Sr) => {
+              rr.wheelZRotateRelative = Sr
+            }
+          },
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, pr, {
+          kind: "setter",
+          name: "wheelXMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelXMoveScene" in rr,
+            set: (rr, Sr) => {
+              rr.wheelXMoveScene = Sr
+            }
+          },
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, xr, {
+          kind: "setter",
+          name: "wheelYMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelYMoveScene" in rr,
+            set: (rr, Sr) => {
+              rr.wheelYMoveScene = Sr
+            }
+          },
+          metadata: ar
+        }, null, Ur), (0, Zr.k)(rr, null, mr, {
+          kind: "setter",
+          name: "wheelZMoveScene",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "wheelZMoveScene" in rr,
+            set: (rr, Sr) => {
+              rr.wheelZMoveScene = Sr
+            }
+          },
+          metadata: ar
+        }, null, Ur), ar && Object.defineProperty(rr, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: tR
+          value: ar
         })
-      })(), RR._AnimationRangeFactory = (RR, JR, GR) => {
-        throw (0, iR.j)("AnimationRange")
-      }, RR._NodeConstructors = {}, RR
-    })()
+      })(), rr
+    })();
+    Ir.c.FreeCameraMouseWheelInput = zr;
+    let Yr = (() => {
+      var rr;
+      let Sr, Qr, jr = [],
+        Ir = [],
+        fr = [],
+        pr = [];
+      return rr = class {
+        constructor() {
+          let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          this.allowMouse = rr, this.touchAngularSensibility = (0, Zr.m)(this, jr, 2e5), this.touchMoveSensibility = ((0, Zr.m)(this, Ir), (0, Zr.m)(this, fr, 250)), this.singleFingerRotate = ((0, Zr.m)(this, pr), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = Er.h.IsSafari()
+        }
+        attachControl(rr) {
+          rr = Er.h.BackCompatCameraNoPreventDefault(arguments);
+          let Sr = null;
+          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
+              this._offsetX = null, this._offsetY = null
+            }, this._pointerInput = Qr => {
+              const Zr = Qr.event,
+                Wr = "mouse" === Zr.pointerType || this._isSafari && "undefined" === typeof Zr.pointerType;
+              if (this.allowMouse || !Wr)
+                if (Qr.type === mr.b.POINTERDOWN) {
+                  if (rr || Zr.preventDefault(), this._pointerPressed.push(Zr.pointerId), 1 !== this._pointerPressed.length) return;
+                  Sr = {
+                    x: Zr.clientX,
+                    y: Zr.clientY
+                  }
+                } else if (Qr.type === mr.b.POINTERUP) {
+                rr || Zr.preventDefault();
+                const Qr = this._pointerPressed.indexOf(Zr.pointerId);
+                if (-1 === Qr) return;
+                if (this._pointerPressed.splice(Qr, 1), 0 != Qr) return;
+                Sr = null, this._offsetX = null, this._offsetY = null
+              } else if (Qr.type === mr.b.POINTERMOVE) {
+                if (rr || Zr.preventDefault(), !Sr) return;
+                if (0 != this._pointerPressed.indexOf(Zr.pointerId)) return;
+                this._offsetX = Zr.clientX - Sr.x, this._offsetY = -(Zr.clientY - Sr.y)
+              }
+            }), this._observer = this.camera.eC()._inputManager._addCameraPointerObserver(this._pointerInput, mr.b.POINTERDOWN | mr.b.POINTERUP | mr.b.POINTERMOVE), this._onLostFocus) {
+            const rr = this.camera.MU().getInputElement();
+            rr && rr.addEventListener("blur", this._onLostFocus)
+          }
+        }
+        detachControl() {
+          if (this._pointerInput) {
+            if (this._observer && (this.camera.eC()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
+              const rr = this.camera.MU().getInputElement();
+              rr && rr.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+            }
+            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
+          }
+        }
+        checkInputs() {
+          if (null === this._offsetX || null === this._offsetY) return;
+          if (0 === this._offsetX && 0 === this._offsetY) return;
+          const rr = this.camera,
+            Sr = rr.movement.input,
+            Qr = Sr.getEntry("touch", "rotate"),
+            Zr = Sr.getEntry("touch", "translate"),
+            Wr = rr._calculateHandednessMultiplier(),
+            jr = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
+          if (Qr) {
+            const Sr = Qr.sensitivity ?? 1 / this.touchAngularSensibility;
+            rr.cameraRotation.y = this._offsetX * Wr * Sr, jr && (rr.cameraRotation.x = -this._offsetY * Wr * Sr)
+          }
+          if (!jr && Zr) {
+            const Sr = rr._computeLocalCameraSpeed(),
+              Qr = Zr.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
+              Wr = ar.n.kU[0];
+            Wr.Hrr(0, 0, Sr * this._offsetY * Qr), ar.d.RotationYawPitchRollToRef(rr.rotation.y, rr.rotation.x, 0, rr._cameraRotationMatrix), ar.u.TransformCoordinatesToRef(Wr, rr._cameraRotationMatrix, Wr), rr.cameraDirection.addInPlace(Wr)
+          }
+        }
+        getClassName() {
+          return "FreeCameraTouchInput"
+        }
+        getSimpleName() {
+          return "touch"
+        }
+      }, (() => {
+        const ar = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        Sr = [(0, Wr.G)()], Qr = [(0, Wr.G)()], (0, Zr.k)(null, null, Sr, {
+          kind: "field",
+          name: "touchAngularSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "touchAngularSensibility" in rr,
+            get: rr => rr.touchAngularSensibility,
+            set: (rr, Sr) => {
+              rr.touchAngularSensibility = Sr
+            }
+          },
+          metadata: ar
+        }, jr, Ir), (0, Zr.k)(null, null, Qr, {
+          kind: "field",
+          name: "touchMoveSensibility",
+          static: !1,
+          private: !1,
+          access: {
+            has: rr => "touchMoveSensibility" in rr,
+            get: rr => rr.touchMoveSensibility,
+            set: (rr, Sr) => {
+              rr.touchMoveSensibility = Sr
+            }
+          },
+          metadata: ar
+        }, fr, pr), ar && Object.defineProperty(rr, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: ar
+        })
+      })(), rr
+    })();
+    Ir.c.FreeCameraTouchInput = Yr;
+    var nr, er, Kr, yr = Qr(41769);
+    class Br extends Ir.f {
+      constructor(rr) {
+        super(rr), this._mouseInput = null, this._mouseWheelInput = null
+      }
+      addKeyboard() {
+        return this.add(new pr), this
+      }
+      addMouse() {
+        let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._mouseInput || (this._mouseInput = new Nr(rr), this.add(this._mouseInput)), this
+      }
+      removeMouse() {
+        return this._mouseInput && this.remove(this._mouseInput), this
+      }
+      addMouseWheel() {
+        return this._mouseWheelInput || (this._mouseWheelInput = new zr, this.add(this._mouseWheelInput)), this
+      }
+      removeMouseWheel() {
+        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
+      }
+      addTouch() {
+        return this.add(new Yr), this
+      }
+      clear() {
+        super.clear(), this._mouseInput = null
+      }
+    }(nr = Br.prototype).addDeviceOrientation ?? (nr.addDeviceOrientation = (0, yr.h)("FreeCameraInputsManager", "addDeviceOrientation")), (er = Br.prototype).addVirtualJoystick ?? (er.addVirtualJoystick = (0, yr.h)("FreeCameraInputsManager", "addVirtualJoystick")), (Kr = Br.prototype).addGamepad ?? (Kr.addGamepad = (0, yr.h)("FreeCameraInputsManager", "addGamepad"));
+    var Tr = Qr(41784),
+      vr = Qr(38609);
+    let Or = (() => {
+        var rr;
+        let Sr, Qr, Ir, fr, pr = jr.f,
+          xr = [],
+          mr = [],
+          Nr = [],
+          Ur = [],
+          tr = [],
+          hr = [],
+          zr = [],
+          Yr = [];
+        return rr = class extends pr {
+          get angularSensibility() {
+            const rr = this.inputs.attached.mouse;
+            return rr ? rr.angularSensibility : 0
+          }
+          set angularSensibility(rr) {
+            const Sr = this.inputs.attached.mouse;
+            Sr && (Sr.angularSensibility = rr)
+          }
+          get keysUp() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysUp : []
+          }
+          set keysUp(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysUp = rr)
+          }
+          get keysUpward() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysUpward : []
+          }
+          set keysUpward(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysUpward = rr)
+          }
+          get keysDown() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysDown : []
+          }
+          set keysDown(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysDown = rr)
+          }
+          get keysDownward() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysDownward : []
+          }
+          set keysDownward(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysDownward = rr)
+          }
+          get keysLeft() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysLeft : []
+          }
+          set keysLeft(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysLeft = rr)
+          }
+          get keysRight() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysRight : []
+          }
+          set keysRight(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysRight = rr)
+          }
+          get keysRotateLeft() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysRotateLeft : []
+          }
+          set keysRotateLeft(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysRotateLeft = rr)
+          }
+          get keysRotateRight() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysRotateRight : []
+          }
+          set keysRotateRight(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysRotateRight = rr)
+          }
+          get keysRotateUp() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysRotateUp : []
+          }
+          set keysRotateUp(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysRotateUp = rr)
+          }
+          get keysRotateDown() {
+            const rr = this.inputs.attached.keyboard;
+            return rr ? rr.keysRotateDown : []
+          }
+          set keysRotateDown(rr) {
+            const Sr = this.inputs.attached.keyboard;
+            Sr && (Sr.keysRotateDown = rr)
+          }
+          constructor(rr, Sr, Qr) {
+            var Wr;
+            super(rr, Sr, Qr, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), Wr = this, this.ellipsoid = (0, Zr.m)(this, xr, new ar.u(.5, 1, .5)), this.ellipsoidOffset = ((0, Zr.m)(this, mr), (0, Zr.m)(this, Nr, new ar.u(0, 0, 0))), this.checkCollisions = ((0, Zr.m)(this, Ur), (0, Zr.m)(this, tr, !1)), this.applyGravity = ((0, Zr.m)(this, hr), (0, Zr.m)(this, zr, !1)), this.inputs = (0, Zr.m)(this, Yr), this._needMoveForGravity = !1, this._oldPosition = ar.u.Zero(), this._diffPosition = ar.u.Zero(), this._newPosition = ar.u.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(rr, Sr) {
+              let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              Wr._newPosition.iH(Sr), Wr._newPosition.subtractToRef(Wr._oldPosition, Wr._diffPosition), Wr._diffPosition.length() > Tr.e.CollisionsEpsilon && (Wr.position.addToRef(Wr._diffPosition, Wr._deferredPositionUpdate), Wr._deferOnly ? Wr._deferredUpdated = !0 : Wr.position.iH(Wr._deferredPositionUpdate), Wr.Am && Qr && Wr.Am(Qr))
+            }, this.inputs = new Br(this), this.inputs.addKeyboard().addMouse()
+          }
+          attachControl(rr, Sr) {
+            Sr = Er.h.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(Sr)
+          }
+          detachControl() {
+            this.inputs.detachElement(), this.cameraDirection = new ar.u(0, 0, 0), this.cameraRotation = new ar.q(0, 0)
+          }
+          get collisionMask() {
+            return this._collisionMask
+          }
+          set collisionMask(rr) {
+            this._collisionMask = isNaN(rr) ? -1 : rr
+          }
+          _collideWithWorld(rr) {
+            let Sr;
+            Sr = this.parent ? ar.u.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, Sr.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
+            const Qr = this.eC().collisionCoordinator;
+            this._collider || (this._collider = Qr.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
+            let Zr = rr;
+            this.applyGravity && (Zr = rr.add(this.eC().gravity)), Qr.getNewPosition(this._oldPosition, Zr, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+          }
+          _checkInputs() {
+            this._localDirection || (this._localDirection = ar.u.Zero(), this._transformedDirection = ar.u.Zero()), this.inputs.checkInputs(), super._checkInputs()
+          }
+          set needMoveForGravity(rr) {
+            this._needMoveForGravity = rr
+          }
+          get needMoveForGravity() {
+            return this._needMoveForGravity
+          }
+          _decideIfNeedsToMove() {
+            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
+          }
+          _updatePosition() {
+            this.checkCollisions && this.eC().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
+          }
+          dispose() {
+            this.inputs.clear(), super.dispose()
+          }
+          getClassName() {
+            return "FreeCamera"
+          }
+        }, (() => {
+          const ar = "function" === typeof Symbol && Symbol.metadata ? Object.create(pr[Symbol.metadata] ?? null) : void 0;
+          Sr = [(0, Wr.C)()], Qr = [(0, Wr.C)()], Ir = [(0, Wr.G)()], fr = [(0, Wr.G)()], (0, Zr.k)(null, null, Sr, {
+            kind: "field",
+            name: "ellipsoid",
+            static: !1,
+            private: !1,
+            access: {
+              has: rr => "ellipsoid" in rr,
+              get: rr => rr.ellipsoid,
+              set: (rr, Sr) => {
+                rr.ellipsoid = Sr
+              }
+            },
+            metadata: ar
+          }, xr, mr), (0, Zr.k)(null, null, Qr, {
+            kind: "field",
+            name: "ellipsoidOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: rr => "ellipsoidOffset" in rr,
+              get: rr => rr.ellipsoidOffset,
+              set: (rr, Sr) => {
+                rr.ellipsoidOffset = Sr
+              }
+            },
+            metadata: ar
+          }, Nr, Ur), (0, Zr.k)(null, null, Ir, {
+            kind: "field",
+            name: "checkCollisions",
+            static: !1,
+            private: !1,
+            access: {
+              has: rr => "checkCollisions" in rr,
+              get: rr => rr.checkCollisions,
+              set: (rr, Sr) => {
+                rr.checkCollisions = Sr
+              }
+            },
+            metadata: ar
+          }, tr, hr), (0, Zr.k)(null, null, fr, {
+            kind: "field",
+            name: "applyGravity",
+            static: !1,
+            private: !1,
+            access: {
+              has: rr => "applyGravity" in rr,
+              get: rr => rr.applyGravity,
+              set: (rr, Sr) => {
+                rr.applyGravity = Sr
+              }
+            },
+            metadata: ar
+          }, zr, Yr), ar && Object.defineProperty(rr, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: ar
+          })
+        })(), rr
+      })(),
+      Lr = !1;
+    Lr || (Lr = !0, (0, vr.e)("BABYLON.FreeCamera", Or))
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

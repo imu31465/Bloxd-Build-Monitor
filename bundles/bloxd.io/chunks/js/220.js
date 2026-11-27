@@ -1,46 +1,49 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  35029: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      ALL_DEV_TOOLS: () => ZR,
-      coreDevTools: () => fR,
-      devTools: () => iR
+  35335: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      ALL_DEV_TOOLS: () => jr,
+      coreDevTools: () => Er,
+      devTools: () => fr
     });
-    var yR = GR(709),
-      tR = GR(1397),
-      uR = GR(35031);
-    const ZR = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function qR() {
+    var Zr = Qr(712),
+      Wr = Qr(1364),
+      ar = Qr(35337);
+    const jr = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ir() {
       const {
-        noaDevTools: RR
-      } = await GR.e(269).then((() => GR(42590)));
-      return RR
+        noaDevTools: rr
+      } = await Qr.e(270).then((() => Qr(42923)));
+      return rr
     }
-    const iR = new class {
+    const fr = new class {
         constructor() {
-          this.loadHost = qR, this.tools = ZR
+          this.loadHost = Ir, this.tools = jr
         }
-        setHost(RR) {
-          this.tools = null === RR ? ZR : RR.tools, this.loadHost = null === RR ? qR : async () => RR
+        setHost(rr) {
+          this.tools = null === rr ? jr : rr.tools, this.loadHost = null === rr ? Ir : async () => rr
         }
-        supports(RR) {
-          return this.tools.has(RR)
+        supports(rr) {
+          return this.tools.has(rr)
         }
-        async downloadScene(RR, JR) {
-          const GR = await this.loadHost();
-          await GR.downloadScene(RR, JR)
+        async downloadScene(rr, Sr) {
+          const Qr = await this.loadHost();
+          await Qr.downloadScene(rr, Sr)
         }
-        async setAmbientLightIntensity(RR) {
-          const JR = await this.loadHost();
-          await JR.setAmbientLightIntensity(RR)
+        async setAmbientLightIntensity(rr) {
+          const Sr = await this.loadHost();
+          await Sr.setAmbientLightIntensity(rr)
         }
-        async capturePhoto(RR, JR, GR) {
-          return (await this.loadHost()).capturePhoto(RR, JR, GR)
+        async capturePhoto(rr, Sr, Qr) {
+          return (await this.loadHost()).capturePhoto(rr, Sr, Qr)
+        }
+        async snapshotNextFrame() {
+          return (await this.loadHost()).snapshotNextFrame()
         }
       },
-      fR = {
-        tools: uR.e,
+      Er = {
+        tools: ar.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -49,12 +52,15 @@ export const modules = {
         },
         capturePhoto: async () => {
           throw new Error("No game is drawing yet")
+        },
+        snapshotNextFrame: async () => {
+          throw new Error("No game is drawing yet")
         }
       };
-    yR.G && iR.setHost(fR), (0, tR.E)((() => {
-      iR.setHost(fR)
+    Zr.I && fr.setHost(Er), (0, Wr.M)((() => {
+      fr.setHost(Er)
     }))
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

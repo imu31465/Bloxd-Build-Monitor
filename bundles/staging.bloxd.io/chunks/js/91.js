@@ -1,509 +1,509 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  5554: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => zJ,
-      h: () => KG,
-      l: () => TJ,
-      p: () => JG,
-      r: () => kJ,
-      u: () => sJ,
-      y: () => cJ,
-      B: () => dJ,
-      D: () => bJ,
-      E: () => VG,
-      F: () => fG,
-      J: () => EJ,
-      K: () => oJ
+  5498: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => VS,
+      h: () => xQ,
+      k: () => dS,
+      o: () => SQ,
+      s: () => bS,
+      w: () => sS,
+      z: () => MS,
+      B: () => cS,
+      E: () => lS,
+      F: () => pQ,
+      H: () => EQ,
+      L: () => FS,
+      N: () => CS
     });
-    var yR = GR(2448);
-    const tR = Function.prototype.toString,
-      uR = RegExp.prototype.exec,
-      ZR = Reflect.apply,
-      qR = Function.prototype.call,
-      iR = Function.prototype.apply,
-      fR = Function.prototype.bind,
-      VR = Object.defineProperty,
-      KR = Uint8Array;
-    let wR, rR;
+    var Zr = Qr(2396);
+    const Wr = Function.prototype.toString,
+      ar = RegExp.prototype.exec,
+      jr = Reflect.apply,
+      Ir = Function.prototype.call,
+      fr = Function.prototype.apply,
+      Er = Function.prototype.bind,
+      pr = Object.defineProperty,
+      xr = Uint8Array;
+    let mr, Nr;
     try {
-      wR = globalThis.crypto, rR = void 0 === wR || null === wR ? void 0 : wR.getRandomValues
+      mr = globalThis.crypto, Nr = void 0 === mr || null === mr ? void 0 : mr.getRandomValues
     } catch {}
-    const eR = "bloxdBindApply";
-    let aR;
+    const Ur = "bloxdBindApply";
+    let tr;
     try {
-      const RR = qR;
-      VR(RR, eR, {
+      const rr = Ir;
+      pr(rr, Ur, {
         __proto__: null,
-        value: fR,
+        value: Er,
         configurable: !0
       });
       try {
-        aR = RR[eR](iR)
+        tr = rr[Ur](fr)
       } finally {
-        delete RR[eR]
+        delete rr[Ur]
       }
     } catch {}
-    const LR = 16,
-      nR = 256,
-      UR = 0,
-      WR = 1,
-      AR = 2,
-      CR = 3;
-    let XR, MR = UR,
-      BR = ZR,
-      lR = 0;
+    const hr = 16,
+      zr = 256,
+      Yr = 0,
+      nr = 1,
+      er = 2,
+      Kr = 3;
+    let yr, Br = Yr,
+      Tr = jr,
+      vr = 0;
 
-    function pR(RR, JR) {
-      return RR === `function ${JR}() { [native code] }` || RR === `function ${JR}() {\n    [native code]\n}`
+    function Or(rr, Sr) {
+      return rr === `function ${Sr}() { [native code] }` || rr === `function ${Sr}() {\n    [native code]\n}`
     }
-    const gR = 0,
-      bR = 1,
-      vR = 2;
-    let OR = gR;
+    const Lr = 0,
+      lr = 1,
+      Xr = 2;
+    let Pr = Lr;
 
-    function xR(RR, JR, GR) {
-      if (OR === vR && MR === WR && ! function() {
-          const RR = XR;
-          return lR >= nR && (BR(rR, wR, [RR]), lR = 0), RR[lR++] < 256 / LR
-        }()) return function(RR, JR, GR) {
-        return BR(RR, JR, GR ?? 0)
+    function Hr(rr, Sr, Qr) {
+      if (Pr === Xr && Br === nr && ! function() {
+          const rr = yr;
+          return vr >= zr && (Tr(Nr, mr, [rr]), vr = 0), rr[vr++] < 256 / hr
+        }()) return function(rr, Sr, Qr) {
+        return Tr(rr, Sr, Qr ?? 0)
       }(...arguments);
-      if (OR === gR || MR === AR) return ZR(RR, JR, GR);
-      let yR;
-      OR = gR;
+      if (Pr === Lr || Br === er) return jr(rr, Sr, Qr);
+      let Zr;
+      Pr = Lr;
       try {
-        MR === UR && (MR = CR, MR = function() {
-          const RR = ZR(tR, ZR, []);
-          if (pR(RR, "apply")) return AR;
-          if (null === ZR(uR, /\(\.\.\.arguments\)/, [RR]) && null === ZR(uR, /^function\s*\(\.\.\.[\w$]+\)/, [RR])) return AR;
-          if ("function" !== typeof aR || "function" !== typeof qR || "function" !== typeof iR || "function" !== typeof fR || "function" !== typeof VR || "function" !== typeof rR || "function" !== typeof KR || !pR(ZR(tR, qR, []), "call") || !pR(ZR(tR, iR, []), "apply") || !pR(ZR(tR, fR, []), "bind") || !pR(ZR(tR, VR, []), "defineProperty") || !pR(ZR(tR, rR, []), "getRandomValues") || !pR(ZR(tR, KR, []), "Uint8Array")) return AR;
-          const JR = aR,
-            GR = {},
-            yR = function(RR) {
-              return this === GR && RR === GR
+        Br === Yr && (Br = Kr, Br = function() {
+          const rr = jr(Wr, jr, []);
+          if (Or(rr, "apply")) return er;
+          if (null === jr(ar, /\(\.\.\.arguments\)/, [rr]) && null === jr(ar, /^function\s*\(\.\.\.[\w$]+\)/, [rr])) return er;
+          if ("function" !== typeof tr || "function" !== typeof Ir || "function" !== typeof fr || "function" !== typeof Er || "function" !== typeof pr || "function" !== typeof Nr || "function" !== typeof xr || !Or(jr(Wr, Ir, []), "call") || !Or(jr(Wr, fr, []), "apply") || !Or(jr(Wr, Er, []), "bind") || !Or(jr(Wr, pr, []), "defineProperty") || !Or(jr(Wr, Nr, []), "getRandomValues") || !Or(jr(Wr, xr, []), "Uint8Array")) return er;
+          const Sr = tr,
+            Qr = {},
+            Zr = function(rr) {
+              return this === Qr && rr === Qr
             };
           try {
-            if (!0 !== JR(yR, GR, [GR])) return AR;
-            const RR = new KR(nR);
-            JR(rR, wR, [RR]), XR = RR
+            if (!0 !== Sr(Zr, Qr, [Qr])) return er;
+            const rr = new xr(zr);
+            Sr(Nr, mr, [rr]), yr = rr
           } catch {
-            return AR
+            return er
           }
-          return BR = JR, WR
-        }()), yR = ZR(RR, JR, GR)
-      } catch (eR) {
-        throw MR = AR, eR
+          return Tr = Sr, nr
+        }()), Zr = jr(rr, Sr, Qr)
+      } catch (Ur) {
+        throw Br = er, Ur
       }
-      return OR = vR, yR
+      return Pr = Xr, Zr
     }
-    let NR = ZR;
+    let qr = jr;
 
-    function DR() {
-      return (NR === ZR ? 0 : 3) + OR
-    }
-
-    function HR() {
-      const RR = DR();
-      return NR = ZR, RR
+    function Rr() {
+      return (qr === jr ? 0 : 3) + Pr
     }
 
-    function oR(RR) {
-      NR = RR >= 3 ? xR : ZR, OR = RR % 3
-    }
-    const cR = Function.prototype.toString,
-      PR = Object.getOwnPropertyDescriptor,
-      IR = Object.prototype.hasOwnProperty,
-      mR = RegExp.prototype.exec,
-      zR = TextEncoder.prototype.encodeInto,
-      SR = String.prototype.startsWith,
-      jR = Number.prototype.toString,
-      dR = WeakMap.prototype.get,
-      ER = WeakMap.prototype.set,
-      YR = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      kR = new TextEncoder,
-      QR = new Uint8Array(1024),
-      FR = 9999999,
-      TR = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      sR = new WeakMap;
-
-    function hR(RR) {
-      if ("function" !== typeof RR) return "#a0.0";
-      const JR = NR(dR, sR, [RR]);
-      if (void 0 !== JR) return JR;
-      const GR = NR(cR, RR, []),
-        yR = GR.length > FR ? FR : GR.length,
-        tR = `#${function(RR,JR){const GR=NR(mR,YR,[JR]);if(null===GR)return"s";const yR=GR[1];if("ProxyObject"===yR)return"p";if(""!==yR)return NR(SR,yR,["bound "])?"b":"n";try{const JR=PR(RR,"name"),GR=void 0!==JR&&NR(IR,JR,["value"])?JR.value:void 0;return"string"===typeof GR&&NR(SR,GR,["bound "])?"b":"p"}catch{return"p"}}(RR,GR)}${yR}.${function(RR){const{written:JR}=NR(zR,kR,[RR,QR]);let GR=2166136261;for(let yR=0;yR<JR;yR++)GR=(GR^QR[yR])>>>0,GR=GR+(GR<<1)+(GR<<4)+(GR<<7)+(GR<<8)+(GR<<24)>>>0;return NR(jR,GR,[36])}(GR)}`;
-      return NR(ER, sR, [RR, tR]), tR
+    function gr() {
+      const rr = Rr();
+      return qr = jr, rr
     }
 
-    function RJ(RR) {
-      const JR = NR(mR, TR, [RR]);
-      return null === JR ? RR : JR[1]
+    function Cr(rr) {
+      qr = rr >= 3 ? Hr : jr, Pr = rr % 3
     }
-    var JJ = GR(2470);
-    const GJ = Function.prototype.toString,
-      yJ = Object.getOwnPropertyDescriptor,
-      tJ = RegExp.prototype.exec,
-      uJ = Object.prototype.hasOwnProperty,
-      ZJ = Set.prototype.has,
-      qJ = WeakMap.prototype.get,
-      iJ = WeakMap.prototype.set,
-      fJ = Reflect.get,
-      VJ = Object.getPrototypeOf,
-      KJ = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const Mr = Function.prototype.toString,
+      Gr = Object.getOwnPropertyDescriptor,
+      kr = Object.prototype.hasOwnProperty,
+      Ar = RegExp.prototype.exec,
+      Vr = TextEncoder.prototype.encodeInto,
+      ir = String.prototype.startsWith,
+      wr = Number.prototype.toString,
+      cr = WeakMap.prototype.get,
+      Fr = WeakMap.prototype.set,
+      or = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      br = new TextEncoder,
+      Jr = new Uint8Array(1024),
+      Dr = 9999999,
+      dr = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      sr = new WeakMap;
 
-    function wJ(RR, JR, GR) {
+    function ur(rr) {
+      if ("function" !== typeof rr) return "#a0.0";
+      const Sr = qr(cr, sr, [rr]);
+      if (void 0 !== Sr) return Sr;
+      const Qr = qr(Mr, rr, []),
+        Zr = Qr.length > Dr ? Dr : Qr.length,
+        Wr = `#${function(rr,Sr){const Qr=qr(Ar,or,[Sr]);if(null===Qr)return"s";const Zr=Qr[1];if("ProxyObject"===Zr)return"p";if(""!==Zr)return qr(ir,Zr,["bound "])?"b":"n";try{const Sr=Gr(rr,"name"),Qr=void 0!==Sr&&qr(kr,Sr,["value"])?Sr.value:void 0;return"string"===typeof Qr&&qr(ir,Qr,["bound "])?"b":"p"}catch{return"p"}}(rr,Qr)}${Zr}.${function(rr){const{written:Sr}=qr(Vr,br,[rr,Jr]);let Qr=2166136261;for(let Zr=0;Zr<Sr;Zr++)Qr=(Qr^Jr[Zr])>>>0,Qr=Qr+(Qr<<1)+(Qr<<4)+(Qr<<7)+(Qr<<8)+(Qr<<24)>>>0;return qr(wr,Qr,[36])}(Qr)}`;
+      return qr(Fr, sr, [rr, Wr]), Wr
+    }
+
+    function rS(rr) {
+      const Sr = qr(Ar, dr, [rr]);
+      return null === Sr ? rr : Sr[1]
+    }
+    var SS = Qr(2410);
+    const QS = Function.prototype.toString,
+      ZS = Object.getOwnPropertyDescriptor,
+      WS = RegExp.prototype.exec,
+      aS = Object.prototype.hasOwnProperty,
+      jS = Set.prototype.has,
+      IS = WeakMap.prototype.get,
+      fS = WeakMap.prototype.set,
+      ES = Reflect.get,
+      pS = Object.getPrototypeOf,
+      xS = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function mS(rr, Sr, Qr) {
       return {
-        code: RR,
-        holder: JR,
-        key: GR,
+        code: rr,
+        holder: Sr,
+        key: Qr,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${GR}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${Qr}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function rJ() {
-      return KJ
+    function NS() {
+      return xS
     }
-    const eJ = KJ?.Instance.prototype,
-      aJ = KJ?.Memory.prototype;
+    const US = xS?.Instance.prototype,
+      tS = xS?.Memory.prototype;
 
-    function LJ() {
-      return aJ
+    function hS() {
+      return tS
     }
-    let nJ, UJ;
+    let zS, YS;
     try {
-      const RR = globalThis.crypto,
-        JR = RR?.subtle;
-      nJ = RR ? VJ(RR) : void 0, UJ = JR ? VJ(JR) : void 0
+      const rr = globalThis.crypto,
+        Sr = rr?.subtle;
+      zS = rr ? pS(rr) : void 0, YS = Sr ? pS(Sr) : void 0
     } catch {}
 
-    function WJ(RR, JR) {
-      for (let GR = RR; void 0 !== GR && null !== GR; GR = VJ(GR)) {
-        const RR = yJ(GR, JR);
-        if (RR) return RR
+    function nS(rr, Sr) {
+      for (let Qr = rr; void 0 !== Qr && null !== Qr; Qr = pS(Qr)) {
+        const rr = ZS(Qr, Sr);
+        if (rr) return rr
       }
     }
-    const AJ = [wJ("in", rJ, "instantiate", {
+    const eS = [mS("in", NS, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), wJ("is", rJ, "instantiateStreaming", {
+    }), mS("is", NS, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), wJ("co", rJ, "compile", {
+    }), mS("co", NS, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), wJ("cs", rJ, "compileStreaming", {
+    }), mS("cs", NS, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), wJ("mo", rJ, "Module", {
+    }), mS("mo", NS, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), wJ("it", rJ, "Instance", {
+    }), mS("it", NS, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), wJ("me", rJ, "Memory", {
+    }), mS("me", NS, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), wJ("ex", (function() {
-      return eJ
+    }), mS("ex", (function() {
+      return US
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), wJ("bu", LJ, "buffer", {
+    }), mS("bu", hS, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), wJ("gr", LJ, "grow", {
+    }), mS("gr", hS, "grow", {
       tier: "punished"
-    }), wJ("rc", (function() {
+    }), mS("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), wJ("cr", (function() {
+    }), "clone"), mS("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), wJ("su", (function() {
-      return nJ
+    }), mS("su", (function() {
+      return zS
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), wJ("dg", (function() {
-      return UJ
+    }), mS("dg", (function() {
+      return YS
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function CJ(RR) {
-      let JR;
+    function KS(rr) {
+      let Sr;
       try {
-        const GR = fJ(globalThis, RR);
-        JR = "function" === typeof GR ? GR.prototype : void 0
+        const Qr = ES(globalThis, rr);
+        Sr = "function" === typeof Qr ? Qr.prototype : void 0
       } catch {}
-      return () => JR
+      return () => Sr
     }
 
-    function XJ(RR, JR, GR) {
-      return GR.map((GR => wJ(RR, JR, GR)))
+    function yS(rr, Sr, Qr) {
+      return Qr.map((Qr => mS(rr, Sr, Qr)))
     }
-    const MJ = wJ("rx", CJ("HTMLCanvasElement"), "getContext"),
-      BJ = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      lJ = {
-        webgpu: [...XJ("gd", CJ("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...XJ("gq", CJ("GPUQueue"), ["submit", "writeBuffer"]), ...XJ("ge", CJ("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...XJ("gp", CJ("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), MJ],
-        webgl: [...XJ("g2", CJ("WebGL2RenderingContext"), [...BJ, "drawArraysInstanced", "drawElementsInstanced"]), MJ],
-        webgl1: [...XJ("g1", CJ("WebGLRenderingContext"), BJ), MJ]
+    const BS = mS("rx", KS("HTMLCanvasElement"), "getContext"),
+      TS = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      vS = {
+        webgpu: [...yS("gd", KS("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...yS("gq", KS("GPUQueue"), ["submit", "writeBuffer"]), ...yS("ge", KS("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...yS("gp", KS("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), BS],
+        webgl: [...yS("g2", KS("WebGL2RenderingContext"), [...TS, "drawArraysInstanced", "drawElementsInstanced"]), BS],
+        webgl1: [...yS("g1", KS("WebGLRenderingContext"), TS), BS]
       };
-    let pJ = [];
-    const gJ = new WeakMap;
+    let OS = [];
+    const LS = new WeakMap;
 
-    function bJ(RR, JR) {
-      const GR = HR();
+    function lS(rr, Sr) {
+      const Qr = gr();
       try {
-        NR(iJ, gJ, [RR, JR])
+        qr(fS, LS, [rr, Sr])
       } finally {
-        oR(GR)
+        Cr(Qr)
       }
     }
 
-    function vJ(RR) {
+    function XS(rr) {
       try {
-        const JR = qG(RR),
-          GR = NR(qJ, gJ, [JR]);
-        return RG(GR, RR) ? OJ(RR, !0) : `${OJ(RR,!1)}${hR(GR??JR)}`
+        const Sr = IQ(rr),
+          Qr = qr(IS, LS, [Sr]);
+        return rQ(Qr, rr) ? PS(rr, !0) : `${PS(rr,!1)}${ur(Qr??Sr)}`
       } catch {
-        return `${OJ(RR,!1)}${hR(void 0)}`
+        return `${PS(rr,!1)}${ur(void 0)}`
       }
     }
 
-    function OJ(RR, JR) {
+    function PS(rr, Sr) {
       let {
-        code: GR,
-        key: yR
-      } = RR;
-      return `wh:${GR}${JR?"-dbg":""}:${yR}`
+        code: Qr,
+        key: Zr
+      } = rr;
+      return `wh:${Qr}${Sr?"-dbg":""}:${Zr}`
     }
 
-    function xJ(RR) {
-      return Object.values(lJ).flatMap((JR => JR.map((JR => OJ(JR, RR)))))
+    function HS(rr) {
+      return Object.values(vS).flatMap((Sr => Sr.map((Sr => PS(Sr, rr)))))
     }
-    const NJ = new Set(xJ(!0)),
-      DJ = new Set([...xJ(!1), ...NJ]),
-      HJ = OJ(MJ, !1);
+    const qS = new Set(HS(!0)),
+      RS = new Set([...HS(!1), ...qS]),
+      gS = PS(BS, !1);
 
-    function oJ(RR) {
-      pJ = lJ[RR]
+    function CS(rr) {
+      OS = vS[rr]
     }
 
-    function cJ(RR) {
-      const JR = HR();
+    function MS(rr) {
+      const Sr = gr();
       try {
-        return PJ(RR) || PJ(RJ(RR))
+        return GS(rr) || GS(rS(rr))
       } finally {
-        oR(JR)
+        Cr(Sr)
       }
     }
 
-    function PJ(RR) {
-      return NR(ZJ, DJ, [RR])
+    function GS(rr) {
+      return qr(jS, RS, [rr])
     }
 
-    function IJ(RR) {
-      return new Set(AJ.filter((JR => JR.tier === RR)).map((RR => `wh:${RR.code}`)))
+    function kS(rr) {
+      return new Set(eS.filter((Sr => Sr.tier === rr)).map((rr => `wh:${rr.code}`)))
     }
-    const mJ = IJ("punished"),
-      zJ = !1,
-      SJ = new Set(JJ.d),
-      jJ = IJ("weighted");
+    const AS = kS("punished"),
+      VS = !1,
+      iS = new Set(SS.b),
+      wS = kS("weighted");
 
-    function dJ(RR) {
-      const JR = HR();
+    function cS(rr) {
+      const Sr = gr();
       try {
-        return YJ(RJ(RR))
+        return oS(rS(rr))
       } finally {
-        oR(JR)
+        Cr(Sr)
       }
     }
 
-    function EJ(RR) {
-      const JR = HR();
+    function FS(rr) {
+      const Sr = gr();
       try {
-        return RJ(RR)
+        return rS(rr)
       } finally {
-        oR(JR)
+        Cr(Sr)
       }
     }
 
-    function YJ(RR) {
-      return NR(ZJ, jJ, [RR])
+    function oS(rr) {
+      return qr(jS, wS, [rr])
     }
 
-    function kJ(RR) {
-      const JR = HR();
+    function bS(rr) {
+      const Sr = gr();
       try {
-        return QJ(RR)
+        return JS(rr)
       } finally {
-        oR(JR)
+        Cr(Sr)
       }
     }
 
-    function QJ(RR) {
-      return NR(ZJ, SJ, [RR])
+    function JS(rr) {
+      return qr(jS, iS, [rr])
     }
 
-    function FJ(RR) {
-      return "wb" === RR || NR(ZJ, mJ, [RR])
+    function DS(rr) {
+      return "wb" === rr || qr(jS, AS, [rr])
     }
 
-    function TJ(RR) {
-      const JR = HR();
+    function dS(rr) {
+      const Sr = gr();
       try {
-        return FJ(RR) || QJ(RR)
+        return DS(rr) || JS(rr)
       } finally {
-        oR(JR)
+        Cr(Sr)
       }
     }
 
-    function sJ(RR) {
-      const JR = HR();
+    function sS(rr) {
+      const Sr = gr();
       try {
-        return "wb" === RR || zJ && FJ(RR)
+        return "wb" === rr || VS && DS(rr)
       } finally {
-        oR(JR)
+        Cr(Sr)
       }
     }
 
-    function hJ(RR, JR) {
+    function uS(rr, Sr) {
       let {
-        isGetter: GR
-      } = JR;
-      const yR = yJ(RR, GR ? "get" : "value");
-      return void 0 === yR ? void 0 : yR.value
+        isGetter: Qr
+      } = Sr;
+      const Zr = ZS(rr, Qr ? "get" : "value");
+      return void 0 === Zr ? void 0 : Zr.value
     }
 
-    function RG(RR, JR) {
+    function rQ(rr, Sr) {
       let {
-        isConstructor: GR,
-        native: yR
-      } = JR;
-      return "function" === typeof RR && (!(!GR && NR(uJ, RR, ["prototype"])) && null !== NR(tJ, yR, [NR(GJ, RR, [])]))
+        isConstructor: Qr,
+        native: Zr
+      } = Sr;
+      return "function" === typeof rr && (!(!Qr && qr(aS, rr, ["prototype"])) && null !== qr(WS, Zr, [qr(QS, rr, [])]))
     }
 
-    function JG(RR, JR) {
-      return RG(RR, wJ("", (() => {}), JR, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function SQ(rr, Sr) {
+      return rQ(rr, mS("", (() => {}), Sr, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let GG = null,
-      yG = !1;
+    let QQ = null,
+      ZQ = !1;
 
-    function tG() {
+    function WQ() {
       try {
-        return globalThis.WebAssembly === KJ
+        return globalThis.WebAssembly === xS
       } catch {
         return !1
       }
     }
 
-    function uG(RR) {
+    function aQ(rr) {
       try {
-        return function(RR) {
+        return function(rr) {
           const {
-            holder: JR,
-            key: GR,
-            onNamespace: yR,
-            inSecureContext: tR
-          } = RR, uR = JR(), ZR = WJ(uR, GR);
-          if (!ZR) return !(tR && !0 === globalThis.isSecureContext);
-          const qR = hJ(ZR, RR);
-          if (!RG(qR, RR)) return !1;
-          if (yR) {
-            const JR = globalThis.WebAssembly;
-            if (JR !== uR && null !== JR && ("object" === typeof JR || "function" === typeof JR)) {
-              const yR = fJ(JR, GR);
-              return yR === qR || void 0 === yR || RG(yR, RR)
+            holder: Sr,
+            key: Qr,
+            onNamespace: Zr,
+            inSecureContext: Wr
+          } = rr, ar = Sr(), jr = nS(ar, Qr);
+          if (!jr) return !(Wr && !0 === globalThis.isSecureContext);
+          const Ir = uS(jr, rr);
+          if (!rQ(Ir, rr)) return !1;
+          if (Zr) {
+            const Sr = globalThis.WebAssembly;
+            if (Sr !== ar && null !== Sr && ("object" === typeof Sr || "function" === typeof Sr)) {
+              const Zr = ES(Sr, Qr);
+              return Zr === Ir || void 0 === Zr || rQ(Zr, rr)
             }
           }
           return !0
-        }(RR)
+        }(rr)
       } catch {
         return !1
       }
     }
 
-    function ZG(RR) {
-      const JR = `wh:${RR.code}`;
-      if ("punished" === RR.tier) return JR;
+    function jQ(rr) {
+      const Sr = `wh:${rr.code}`;
+      if ("punished" === rr.tier) return Sr;
       try {
-        return `${JR}${hR(qG(RR))}`
+        return `${Sr}${ur(IQ(rr))}`
       } catch {
-        return `${JR}${hR(void 0)}`
+        return `${Sr}${ur(void 0)}`
       }
     }
 
-    function qG(RR) {
-      const JR = WJ(RR.holder(), RR.key),
-        GR = void 0 === JR ? void 0 : hJ(JR, RR);
-      return RR.onNamespace && !tG() && RG(GR, RR) ? fJ(globalThis.WebAssembly, RR.key) : GR
+    function IQ(rr) {
+      const Sr = nS(rr.holder(), rr.key),
+        Qr = void 0 === Sr ? void 0 : uS(Sr, rr);
+      return rr.onNamespace && !WQ() && rQ(Qr, rr) ? ES(globalThis.WebAssembly, rr.key) : Qr
     }
 
-    function iG(RR) {
-      if (FJ(RR)) return 5;
-      const JR = RJ(RR);
-      return YJ(JR) ? 4 : QJ(RR) ? 3 : PJ(JR) ? function(RR) {
-        return NR(ZJ, NJ, [RR])
-      }(JR) ? -1 : JR === HJ ? 0 : 1 : 2
+    function fQ(rr) {
+      if (DS(rr)) return 5;
+      const Sr = rS(rr);
+      return oS(Sr) ? 4 : JS(rr) ? 3 : GS(Sr) ? function(rr) {
+        return qr(jS, qS, [rr])
+      }(Sr) ? -1 : Sr === gS ? 0 : 1 : 2
     }
 
-    function fG() {
-      const RR = function() {
-        const RR = DR();
-        return MR === UR || MR === WR ? (NR = xR, OR = bR) : NR = ZR, RR
+    function EQ() {
+      const rr = function() {
+        const rr = Rr();
+        return Br === Yr || Br === nr ? (qr = Hr, Pr = lr) : qr = jr, rr
       }();
       try {
-        if (null === GG || !FJ(GG)) {
-          const RR = function() {
-            if (void 0 === KJ) return null;
-            let RR = tG() ? null : "wh:wa";
-            const JR = JR => {
-              null !== JR && (null === RR || iG(JR) > iG(RR)) && (RR = JR)
+        if (null === QQ || !DS(QQ)) {
+          const rr = function() {
+            if (void 0 === xS) return null;
+            let rr = WQ() ? null : "wh:wa";
+            const Sr = Sr => {
+              null !== Sr && (null === rr || fQ(Sr) > fQ(rr)) && (rr = Sr)
             };
-            for (let GR = 0; GR < AJ.length; GR++) {
-              const RR = AJ[GR];
-              void 0 === RR || uG(RR) || JR(ZG(RR))
+            for (let Qr = 0; Qr < eS.length; Qr++) {
+              const rr = eS[Qr];
+              void 0 === rr || aQ(rr) || Sr(jQ(rr))
             }
-            JR((0, JJ.o)());
-            for (let GR = 0; GR < pJ.length; GR++) {
-              const RR = pJ[GR];
-              void 0 === RR || uG(RR) || JR(vJ(RR))
+            Sr((0, SS.j)());
+            for (let Qr = 0; Qr < OS.length; Qr++) {
+              const rr = OS[Qr];
+              void 0 === rr || aQ(rr) || Sr(XS(rr))
             }
-            return RR
+            return rr
           }();
-          (null === GG || null !== RR && iG(RR) > iG(GG)) && (GG = RR)
+          (null === QQ || null !== rr && fQ(rr) > fQ(QQ)) && (QQ = rr)
         }
       } finally {
-        oR(RR)
+        Cr(rr)
       }
     }
 
-    function VG() {
-      yG = !0
+    function pQ() {
+      ZQ = !0
     }
 
-    function KG() {
-      if (yG) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && fG(), null !== GG) return GG;
-      if (void 0 === KJ) return "wn:unsupported";
-      const RR = (0, yR.i)();
-      return null === RR ? null : `wn:${RR}`
+    function xQ() {
+      if (ZQ) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && EQ(), null !== QQ) return QQ;
+      if (void 0 === xS) return "wn:unsupported";
+      const rr = (0, Zr.l)();
+      return null === rr ? null : `wn:${rr}`
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

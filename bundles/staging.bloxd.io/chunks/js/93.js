@@ -1,20 +1,20 @@
 export const id = 93;
 export const ids = [93];
 export const modules = {
-  5599: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      reportCarriedGlLossWait: () => tR
+  5523: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      reportCarriedGlLossWait: () => Wr
     });
-    var yR = GR(5203);
+    var Zr = Qr(5129);
 
-    function tR(RR) {
+    function Wr(rr) {
       try {
-        (0, yR.c)(RR.message, RR.code, void 0, {}, {})
-      } catch (JR) {
-        console.warn("Couldn't report the last page's WebGL context wait", JR)
+        (0, Zr.c)(rr.message, rr.code, void 0, {}, {})
+      } catch (Sr) {
+        console.warn("Couldn't report the last page's WebGL context wait", Sr)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

@@ -1,247 +1,247 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  37796: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => LR,
-      d: () => nR,
-      g: () => wR,
-      j: () => KR
+  38154: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => hr,
+      d: () => zr,
+      h: () => mr,
+      l: () => xr
     });
-    var yR = GR(35140),
-      tR = GR(3494),
-      uR = GR(3498),
-      ZR = GR(10048),
-      qR = GR(1581),
-      iR = GR(66),
-      fR = GR(83),
-      VR = GR(1378);
+    var Zr = Qr(35448),
+      Wr = Qr(3425),
+      ar = Qr(3429),
+      jr = Qr(9818),
+      Ir = Qr(1573),
+      fr = Qr(72),
+      Er = Qr(92),
+      pr = Qr(1338);
 
-    function KR() {
-      var RR;
-      return (0, qR.h)(tR.e, (0, tR.r)()), (0, VR.jsx)(VR.Fragment, {
-        children: null === (RR = (0, tR.r)()) || void 0 === RR ? void 0 : RR.content
+    function xr() {
+      var rr;
+      return (0, Ir.g)(Wr.e, (0, Wr.w)()), (0, pr.jsx)(pr.Fragment, {
+        children: null === (rr = (0, Wr.w)()) || void 0 === rr ? void 0 : rr.content
       })
     }
 
-    function wR(RR) {
-      var JR;
+    function mr(rr) {
+      var Sr;
       let {
-        show: GR
-      } = RR;
-      (0, qR.h)(tR.e, (0, tR.r)());
-      const fR = null === (JR = (0, tR.r)()) || void 0 === JR ? void 0 : JR.menu;
-      return (0, iR.useEffect)((() => {
-        var RR;
-        GR || (null === fR || void 0 === fR || null === (RR = fR.onClose) || void 0 === RR || RR.call(fR), (0, uR.m)())
-      }), [GR, fR]), (0, iR.useEffect)((() => GR ? (0, ZR.e)(uR.q, uR.e) : void 0), [GR]), (0, VR.jsx)(yR.b, {
-        showing: GR,
+        show: Qr
+      } = rr;
+      (0, Ir.g)(Wr.e, (0, Wr.w)());
+      const Er = null === (Sr = (0, Wr.w)()) || void 0 === Sr ? void 0 : Sr.menu;
+      return (0, fr.useEffect)((() => {
+        var rr;
+        Qr || (null === Er || void 0 === Er || null === (rr = Er.onClose) || void 0 === rr || rr.call(Er), (0, ar.o)())
+      }), [Qr, Er]), (0, fr.useEffect)((() => Qr ? (0, jr.f)(ar.v, ar.e) : void 0), [Qr]), (0, pr.jsx)(Zr.c, {
+        showing: Qr,
         globallyUniqueKey: "clientGameMenu",
-        children: null === fR || void 0 === fR ? void 0 : fR.content
+        children: null === Er || void 0 === Er ? void 0 : Er.content
       })
     }
-    const rR = new Map,
-      eR = new Set;
+    const Nr = new Map,
+      Ur = new Set;
 
-    function aR(RR, JR) {
-      JR ? rR.set(RR, JR) : rR.delete(RR);
-      for (const GR of eR) GR()
+    function tr(rr, Sr) {
+      Sr ? Nr.set(rr, Sr) : Nr.delete(rr);
+      for (const Qr of Ur) Qr()
     }
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        placement: JR = "bottom"
-      } = RR;
-      const GR = (0, iR.useRef)(null);
-      return (0, iR.useLayoutEffect)((() => {
-        const RR = GR.current;
-        return aR(JR, RR), () => {
-          rR.get(JR) === RR && aR(JR, null)
+        placement: Sr = "bottom"
+      } = rr;
+      const Qr = (0, fr.useRef)(null);
+      return (0, fr.useLayoutEffect)((() => {
+        const rr = Qr.current;
+        return tr(Sr, rr), () => {
+          Nr.get(Sr) === rr && tr(Sr, null)
         }
-      }), [JR]), (0, VR.jsx)("div", {
-        ref: GR,
-        id: `clientGameHud-${JR}`,
+      }), [Sr]), (0, pr.jsx)("div", {
+        ref: Qr,
+        id: `clientGameHud-${Sr}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function nR(RR) {
+    function zr(rr) {
       let {
-        children: JR,
-        placement: GR = "bottom"
-      } = RR;
-      const [yR, tR] = (0, iR.useState)((() => {
-        var RR;
-        return null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null
+        children: Sr,
+        placement: Qr = "bottom"
+      } = rr;
+      const [Zr, Wr] = (0, fr.useState)((() => {
+        var rr;
+        return null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null
       }));
-      return (0, iR.useEffect)((() => {
-        const RR = () => {
-          var RR;
-          tR(null !== (RR = rR.get(GR)) && void 0 !== RR ? RR : null)
+      return (0, fr.useEffect)((() => {
+        const rr = () => {
+          var rr;
+          Wr(null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null)
         };
-        return eR.add(RR), RR(), () => {
-          eR.delete(RR)
+        return Ur.add(rr), rr(), () => {
+          Ur.delete(rr)
         }
-      }), [GR]), yR ? (0, fR.createPortal)(JR, yR) : null
+      }), [Qr]), Zr ? (0, Er.createPortal)(Sr, Zr) : null
     }
   },
-  35140: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR
+  35448: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar
     });
-    var yR = GR(5343),
-      tR = GR(5347);
+    var Zr = Qr(5301),
+      Wr = Qr(5308);
 
-    function uR(RR) {
+    function ar(rr) {
       let {
-        children: JR,
-        showing: GR,
-        globallyUniqueKey: uR,
-        alwaysMountChildren: ZR = !1,
-        doGameplayStartStopOnShow: qR = !0,
-        keepsMovement: iR = !1
-      } = RR;
-      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
+        children: Sr,
+        showing: Qr,
+        globallyUniqueKey: ar,
+        alwaysMountChildren: jr = !1,
+        doGameplayStartStopOnShow: Ir = !0,
+        keepsMovement: fr = !1
+      } = rr;
+      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
     }
   },
-  10048: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      e: () => tR
+  9818: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      f: () => Wr
     });
-    let yR = null;
-    const tR = function(RR) {
-        const JR = {
-          cycle: RR,
+    let Zr = null;
+    const Wr = function(rr) {
+        const Sr = {
+          cycle: rr,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return yR = JR, () => {
-          yR === JR && (yR = null)
+        return Zr = Sr, () => {
+          Zr === Sr && (Zr = null)
         }
       },
-      uR = () => {
-        var RR;
-        return null !== (RR = yR) && void 0 !== RR && RR.canCycle() ? yR.cycle : null
+      ar = () => {
+        var rr;
+        return null !== (rr = Zr) && void 0 !== rr && rr.canCycle() ? Zr.cycle : null
       }
   },
-  53781: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      Smp2OnboardingUi: () => aR
+  54288: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      Smp2OnboardingUi: () => tr
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(40564),
-      qR = GR(32),
-      iR = GR(37796),
-      fR = GR(3059),
-      VR = GR(2123),
-      KR = GR(3701),
-      wR = GR(25),
-      rR = GR(40562),
-      eR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(40876),
+      Ir = Qr(34),
+      fr = Qr(38154),
+      Er = Qr(3039),
+      pr = Qr(2075),
+      xr = Qr(3640),
+      mr = Qr(26),
+      Nr = Qr(40873),
+      Ur = Qr(1338);
 
-    function aR(RR) {
+    function tr(rr) {
       let {
-        store: JR
-      } = RR;
-      const GR = function(RR) {
-          const [JR, GR] = (0, yR.useState)((() => RR.get()));
-          return (0, yR.useEffect)((() => {
-            const JR = qR.n.subscribe(rR.e, (RR => {
-              GR(RR)
+        store: Sr
+      } = rr;
+      const Qr = function(rr) {
+          const [Sr, Qr] = (0, Zr.useState)((() => rr.get()));
+          return (0, Zr.useEffect)((() => {
+            const Sr = Ir.i.subscribe(Nr.c, (rr => {
+              Qr(rr)
             }));
-            return GR(RR.get()), () => {
-              qR.n.unsubscribe(JR)
+            return Qr(rr.get()), () => {
+              Ir.i.unsubscribe(Sr)
             }
-          }), [RR]), JR
-        }(JR),
-        tR = (0, KR.c)(),
+          }), [rr]), Sr
+        }(Sr),
+        Wr = (0, xr.b)(),
         {
-          openInGameMenuName: uR,
-          openEverythingMenuName: ZR
-        } = (0, wR.o)(["openInGameMenuName", "openEverythingMenuName"]),
-        aR = !tR && null === uR && null === ZR;
-      (0, yR.useEffect)((() => {
-        JR.setShowing(aR)
-      }), [JR, aR]);
-      const nR = Boolean(GR.path);
-      return (0, yR.useEffect)((() => {
-        if (nR) return (0, fR.e)()
-      }), [nR]), aR ? (0, eR.jsxs)(eR.Fragment, {
-        children: [GR.path && (0, eR.jsx)(iR.d, {
+          openInGameMenuName: ar,
+          openEverythingMenuName: jr
+        } = (0, mr.n)(["openInGameMenuName", "openEverythingMenuName"]),
+        tr = !Wr && null === ar && null === jr;
+      (0, Zr.useEffect)((() => {
+        Sr.setShowing(tr)
+      }), [Sr, tr]);
+      const zr = Boolean(Qr.path);
+      return (0, Zr.useEffect)((() => {
+        if (zr) return (0, Er.f)()
+      }), [zr]), tr ? (0, Ur.jsxs)(Ur.Fragment, {
+        children: [Qr.path && (0, Ur.jsx)(fr.d, {
           placement: "topRight",
-          children: (0, eR.jsx)(LR, {
-            path: GR.path
+          children: (0, Ur.jsx)(hr, {
+            path: Qr.path
           })
-        }), GR.reward && (0, eR.jsxs)("div", {
+        }), Qr.reward && (0, Ur.jsxs)("div", {
           className: "Smp2RewardCard",
           role: "status",
           style: {
-            "--smp2-reward-show-ms": `${rR.i}ms`
+            "--smp2-reward-show-ms": `${Nr.e}ms`
           },
-          children: [(0, eR.jsx)("span", {
+          children: [(0, Ur.jsx)("span", {
             className: "Smp2RewardBurst",
             "aria-hidden": "true"
-          }), (0, eR.jsx)("div", {
+          }), (0, Ur.jsx)("div", {
             className: "Smp2RewardIcon",
-            children: (0, eR.jsx)(VR.b, {
-              itemName: GR.reward.icon,
+            children: (0, Ur.jsx)(pr.d, {
+              itemName: Qr.reward.icon,
               amount: 1
             })
-          }), (0, eR.jsxs)("div", {
+          }), (0, Ur.jsxs)("div", {
             className: "Smp2RewardText",
-            children: [(0, eR.jsx)("strong", {
-              children: GR.reward.title
-            }), (0, eR.jsx)("span", {
-              children: GR.reward.text
+            children: [(0, Ur.jsx)("strong", {
+              children: Qr.reward.title
+            }), (0, Ur.jsx)("span", {
+              children: Qr.reward.text
             })]
           })]
-        }, GR.reward.id)]
+        }, Qr.reward.id)]
       }) : null
     }
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        path: JR
-      } = RR;
-      const GR = JR.steps[JR.step],
-        yR = (0, ZR.k)(GR);
-      return (0, eR.jsxs)("div", {
+        path: Sr
+      } = rr;
+      const Qr = Sr.steps[Sr.step],
+        Zr = (0, jr.n)(Qr);
+      return (0, Ur.jsxs)("div", {
         className: "Smp2PathCard",
-        children: [(0, eR.jsx)("span", {
+        children: [(0, Ur.jsx)("span", {
           className: "Smp2PathTitle",
-          children: JR.title
-        }), (0, eR.jsx)("div", {
+          children: Sr.title
+        }), (0, Ur.jsx)("div", {
           className: "Smp2PathSegments",
           "aria-hidden": "true",
-          children: JR.steps.map(((RR, GR) => (0, eR.jsx)("span", {
-            className: uR()("Smp2PathSegment", {
-              Filled: GR < JR.step,
-              Current: GR === JR.step
+          children: Sr.steps.map(((rr, Qr) => (0, Ur.jsx)("span", {
+            className: ar()("Smp2PathSegment", {
+              Filled: Qr < Sr.step,
+              Current: Qr === Sr.step
             })
-          }, RR.key)))
-        }), (0, eR.jsxs)("div", {
+          }, rr.key)))
+        }), (0, Ur.jsxs)("div", {
           className: "Smp2PathStep",
-          children: [(0, eR.jsx)("div", {
+          children: [(0, Ur.jsx)("div", {
             className: "Smp2PathStepIcon",
-            children: (0, eR.jsx)(VR.b, {
-              itemName: GR.icon,
+            children: (0, Ur.jsx)(pr.d, {
+              itemName: Qr.icon,
               amount: 1
             })
-          }), (0, eR.jsx)("span", {
+          }), (0, Ur.jsx)("span", {
             className: "Smp2PathStepText",
-            children: GR.text
-          }), yR > 1 && (0, eR.jsxs)("span", {
+            children: Qr.text
+          }), Zr > 1 && (0, Ur.jsxs)("span", {
             className: "Smp2PathStepProgress",
-            children: [JR.progress, "/", yR]
+            children: [Sr.progress, "/", Zr]
           })]
-        }, `${JR.step}`)]
+        }, `${Sr.step}`)]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

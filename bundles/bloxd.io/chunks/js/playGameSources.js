@@ -1,184 +1,184 @@
 export const id = 55;
 export const ids = [55];
 export const modules = {
-  40978: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => iR,
-      f: () => uR,
-      i: () => tR
+  41324: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => fr,
+      f: () => ar,
+      j: () => Wr
     });
-    const yR = 6e3;
+    const Zr = 6e3;
 
-    function tR(RR, JR) {
-      return [Math.floor(RR[0] / JR) * JR, Math.floor(RR[1] / JR) * JR, Math.floor(RR[2] / JR) * JR]
+    function Wr(rr, Sr) {
+      return [Math.floor(rr[0] / Sr) * Sr, Math.floor(rr[1] / Sr) * Sr, Math.floor(rr[2] / Sr) * Sr]
     }
 
-    function uR(RR) {
-      const JR = (null !== RR && void 0 !== RR ? RR : "").match(/-?\d+(?:\.\d+)?/g);
-      return JR && JR.length >= 3 ? [Number(JR[0]), Number(JR[1]), Number(JR[2])] : null
+    function ar(rr) {
+      const Sr = (null !== rr && void 0 !== rr ? rr : "").match(/-?\d+(?:\.\d+)?/g);
+      return Sr && Sr.length >= 3 ? [Number(Sr[0]), Number(Sr[1]), Number(Sr[2])] : null
     }
 
-    function ZR(RR, JR) {
-      return RR === JR ? String(RR) : `${RR}-${JR}`
+    function jr(rr, Sr) {
+      return rr === Sr ? String(rr) : `${rr}-${Sr}`
     }
 
-    function qR(RR, JR, GR, yR) {
-      const tR = [];
-      let uR = new Map;
-      for (let ZR = RR[2]; ZR < RR[2] + JR; ZR++) {
-        const qR = new Map;
-        let iR = RR[0];
-        for (; iR < RR[0] + JR;) {
-          const tR = yR(iR, GR, ZR);
-          let fR = iR;
-          for (; fR + 1 < RR[0] + JR && yR(fR + 1, GR, ZR) === tR;) fR++;
-          if (null !== tR) {
-            const RR = `${iR} ${fR} ${tR}`,
-              JR = uR.get(RR);
-            JR ? (JR.z1 = ZR, uR.delete(RR), qR.set(RR, JR)) : qR.set(RR, {
-              x0: iR,
-              x1: fR,
-              z0: ZR,
-              z1: ZR,
-              name: tR
+    function Ir(rr, Sr, Qr, Zr) {
+      const Wr = [];
+      let ar = new Map;
+      for (let jr = rr[2]; jr < rr[2] + Sr; jr++) {
+        const Ir = new Map;
+        let fr = rr[0];
+        for (; fr < rr[0] + Sr;) {
+          const Wr = Zr(fr, Qr, jr);
+          let Er = fr;
+          for (; Er + 1 < rr[0] + Sr && Zr(Er + 1, Qr, jr) === Wr;) Er++;
+          if (null !== Wr) {
+            const rr = `${fr} ${Er} ${Wr}`,
+              Sr = ar.get(rr);
+            Sr ? (Sr.z1 = jr, ar.delete(rr), Ir.set(rr, Sr)) : Ir.set(rr, {
+              x0: fr,
+              x1: Er,
+              z0: jr,
+              z1: jr,
+              name: Wr
             })
           }
-          iR = fR + 1
+          fr = Er + 1
         }
-        tR.push(...uR.values()), uR = qR
+        Wr.push(...ar.values()), ar = Ir
       }
-      return tR.push(...uR.values()), tR.sort(((RR, JR) => RR.z0 - JR.z0 || RR.x0 - JR.x0)).map((RR => `x${ZR(RR.x0,RR.x1)} z${ZR(RR.z0,RR.z1)} ${RR.name}`))
+      return Wr.push(...ar.values()), Wr.sort(((rr, Sr) => rr.z0 - Sr.z0 || rr.x0 - Sr.x0)).map((rr => `x${jr(rr.x0,rr.x1)} z${jr(rr.z0,rr.z1)} ${rr.name}`))
     }
 
-    function iR(RR, JR, GR, tR) {
-      let uR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : yR;
-      const iR = [RR[0] + JR - 1, RR[1] + JR - 1, RR[2] + JR - 1],
-        fR = null !== tR && tR.every(((JR, GR) => Math.floor(JR) >= RR[GR] && Math.floor(JR) <= iR[GR])),
-        VR = [`The chunk from ${RR.join(" ")} to ${iR.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== tR && VR.push(`The player's feet are at ${tR.map(Math.floor).join(" ")}, ${fR?"in this chunk":"outside this chunk"}.`);
-      const KR = [];
-      for (let yR = RR[1]; yR <= iR[1]; yR++) {
-        const tR = qR(RR, JR, yR, GR).join("; "),
-          uR = KR[KR.length - 1];
-        (null === uR || void 0 === uR ? void 0 : uR.boxes) === tR ? uR.to = yR : KR.push({
-          from: yR,
-          to: yR,
-          boxes: tR
+    function fr(rr, Sr, Qr, Wr) {
+      let ar = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Zr;
+      const fr = [rr[0] + Sr - 1, rr[1] + Sr - 1, rr[2] + Sr - 1],
+        Er = null !== Wr && Wr.every(((Sr, Qr) => Math.floor(Sr) >= rr[Qr] && Math.floor(Sr) <= fr[Qr])),
+        pr = [`The chunk from ${rr.join(" ")} to ${fr.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== Wr && pr.push(`The player's feet are at ${Wr.map(Math.floor).join(" ")}, ${Er?"in this chunk":"outside this chunk"}.`);
+      const xr = [];
+      for (let Zr = rr[1]; Zr <= fr[1]; Zr++) {
+        const Wr = Ir(rr, Sr, Zr, Qr).join("; "),
+          ar = xr[xr.length - 1];
+        (null === ar || void 0 === ar ? void 0 : ar.boxes) === Wr ? ar.to = Zr : xr.push({
+          from: Zr,
+          to: Zr,
+          boxes: Wr
         })
       }
-      const wR = KR.filter((RR => "" !== RR.boxes));
-      0 === wR.length && VR.push("It is all air.");
-      let rR = VR.join("\n").length;
-      for (const yR of wR) {
-        const RR = `y${ZR(yR.from,yR.to)}: ${yR.boxes}`;
-        if (rR += RR.length + 1, rR > uR) {
-          VR.push(`Cut short: the layers from y${yR.from} up aren't shown, as there are too many blocks.`);
+      const mr = xr.filter((rr => "" !== rr.boxes));
+      0 === mr.length && pr.push("It is all air.");
+      let Nr = pr.join("\n").length;
+      for (const Zr of mr) {
+        const rr = `y${jr(Zr.from,Zr.to)}: ${Zr.boxes}`;
+        if (Nr += rr.length + 1, Nr > ar) {
+          pr.push(`Cut short: the layers from y${Zr.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        VR.push(RR)
+        pr.push(rr)
       }
-      return VR.join("\n")
+      return pr.join("\n")
     }
   },
-  10149: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => tR
+  9904: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Wr
     });
-    var yR = GR(25);
+    var Zr = Qr(26);
 
-    function tR() {
-      return !yR.d.get("isTouchScreen") && null !== document.pointerLockElement
+    function Wr() {
+      return !Zr.c.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  38060: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => ZR,
-      g: () => uR,
-      i: () => tR
+  38415: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => jr,
+      d: () => ar,
+      f: () => Wr
     });
-    const yR = [.25, .5, 1, 2, 4, 8, 16];
+    const Zr = [.25, .5, 1, 2, 4, 8, 16];
 
-    function tR(RR, JR) {
-      const GR = yR;
-      let tR = GR.indexOf(RR);
-      return -1 === tR && (tR = GR.findIndex((JR => JR >= RR)), -1 === tR && (tR = GR.length - 1)), "up" === JR ? GR[Math.min(tR + 1, GR.length - 1)] : GR[Math.max(tR - 1, 0)]
+    function Wr(rr, Sr) {
+      const Qr = Zr;
+      let Wr = Qr.indexOf(rr);
+      return -1 === Wr && (Wr = Qr.findIndex((Sr => Sr >= rr)), -1 === Wr && (Wr = Qr.length - 1)), "up" === Sr ? Qr[Math.min(Wr + 1, Qr.length - 1)] : Qr[Math.max(Wr - 1, 0)]
     }
 
-    function uR(RR) {
-      return RR <= yR[0]
+    function ar(rr) {
+      return rr <= Zr[0]
     }
 
-    function ZR(RR) {
-      return RR >= yR[yR.length - 1]
+    function jr(rr) {
+      return rr >= Zr[Zr.length - 1]
     }
   },
-  37651: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR,
-      i: () => uR
+  38031: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr,
+      f: () => ar
     });
-    let yR = !1;
+    let Zr = !1;
 
-    function tR() {
-      return yR
+    function Wr() {
+      return Zr
     }
 
-    function uR(RR) {
-      return yR !== RR && (yR = RR, !0)
+    function ar(rr) {
+      return Zr !== rr && (Zr = rr, !0)
     }
   },
-  40270: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  40587: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar
     });
-    var yR = GR(32),
-      tR = GR(2163);
+    var Zr = Qr(34),
+      Wr = Qr(2114);
 
-    function uR(RR) {
+    function ar(rr) {
       let {
-        taskId: JR,
-        progress: GR
-      } = RR;
-      const yR = tR.c.get("_tasks");
-      null !== yR && void 0 !== yR && yR[JR] && tR.c.apply({
+        taskId: Sr,
+        progress: Qr
+      } = rr;
+      const Zr = Wr.d.get("_tasks");
+      null !== Zr && void 0 !== Zr && Zr[Sr] && Wr.d.apply({
         _tasks: {
-          ...yR,
-          [JR]: {
-            ...yR[JR],
-            progress: GR
+          ...Zr,
+          [Sr]: {
+            ...Zr[Sr],
+            progress: Qr
           }
         }
       })
     }
-    yR.n.subscribe("clientTaskProgress", (RR => {
-      uR(RR)
+    Zr.i.subscribe("clientTaskProgress", (rr => {
+      ar(rr)
     }))
   },
-  40951: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => rR,
-      h: () => aR,
-      l: () => fR,
-      n: () => KR,
-      q: () => wR,
-      s: () => iR,
-      t: () => ZR,
-      v: () => VR,
-      z: () => LR
+  41296: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Nr,
+      f: () => tr,
+      h: () => Er,
+      j: () => xr,
+      m: () => mr,
+      q: () => fr,
+      t: () => jr,
+      u: () => pr,
+      v: () => hr
     });
-    var yR = GR(2163),
-      tR = GR(32),
-      uR = GR(2170);
-    const ZR = (0, uR.l)((function() {
-        var RR, JR, GR, tR;
+    var Zr = Qr(2114),
+      Wr = Qr(34),
+      ar = Qr(2119);
+    const jr = (0, ar.l)((function() {
+        var rr, Sr, Qr, Wr;
         return {
-          health: null !== (RR = yR.c.get("_health")) && void 0 !== RR ? RR : null,
-          maxHealth: null !== (JR = yR.c.get("_totalMaxHealth")) && void 0 !== JR ? JR : null,
-          shield: null !== (GR = yR.c.get("_shield")) && void 0 !== GR ? GR : null,
-          maxShield: null !== (tR = yR.c.get("maxShield")) && void 0 !== tR ? tR : null
+          health: null !== (rr = Zr.d.get("_health")) && void 0 !== rr ? rr : null,
+          maxHealth: null !== (Sr = Zr.d.get("_totalMaxHealth")) && void 0 !== Sr ? Sr : null,
+          shield: null !== (Qr = Zr.d.get("_shield")) && void 0 !== Qr ? Qr : null,
+          maxShield: null !== (Wr = Zr.d.get("maxShield")) && void 0 !== Wr ? Wr : null
         }
-      }), [], (0, uR.j)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      qR = [{
+      }), [], (0, ar.j)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      Ir = [{
         canFly: !1,
         flying: !1
       }, {
@@ -192,767 +192,767 @@ export const modules = {
         flying: !0
       }];
 
-    function iR(RR, JR) {
-      return qR[(RR ? 2 : 0) + (JR ? 1 : 0)]
+    function fr(rr, Sr) {
+      return Ir[(rr ? 2 : 0) + (Sr ? 1 : 0)]
     }
-    const fR = (0, uR.l)((function() {
-      var RR;
-      return null !== (RR = yR.c.get("_aura")) && void 0 !== RR ? RR : null
-    }), [], (0, uR.j)("_aura"));
+    const Er = (0, ar.l)((function() {
+      var rr;
+      return null !== (rr = Zr.d.get("_aura")) && void 0 !== rr ? rr : null
+    }), [], (0, ar.j)("_aura"));
 
-    function VR(RR) {
+    function pr(rr) {
       return {
-        watch: JR => (0, tR.q)("shotPlayer", (GR => {
+        watch: Sr => (0, Wr.j)("shotPlayer", (Qr => {
           let {
-            playerId: yR,
-            damage: tR,
-            wasCrit: uR,
-            distance: ZR
-          } = GR;
-          RR(yR) && JR({
-            damage: tR,
-            wasCrit: uR,
-            distance: ZR
+            playerId: Zr,
+            damage: Wr,
+            wasCrit: ar,
+            distance: jr
+          } = Qr;
+          rr(Zr) && Sr({
+            damage: Wr,
+            wasCrit: ar,
+            distance: jr
           })
         }))
       }
     }
 
-    function KR(RR) {
-      return (0, uR.d)("chat", (JR => {
+    function xr(rr) {
+      return (0, ar.c)("chat", (Sr => {
         let {
-          serverChatMsgId: GR,
-          worldCodeLineId: yR,
-          content: tR,
-          chatterEId: uR,
-          chatterObjectsToReplay: ZR
-        } = JR;
+          serverChatMsgId: Qr,
+          worldCodeLineId: Zr,
+          content: Wr,
+          chatterEId: ar,
+          chatterObjectsToReplay: jr
+        } = Sr;
         return {
-          serverChatMsgId: null !== GR && void 0 !== GR ? GR : null,
-          worldCodeLineId: null !== yR && void 0 !== yR ? yR : null,
-          content: tR,
-          author: uR ? RR(uR) : null,
-          hiddenFromReplay: !0 === ZR
+          serverChatMsgId: null !== Qr && void 0 !== Qr ? Qr : null,
+          worldCodeLineId: null !== Zr && void 0 !== Zr ? Zr : null,
+          content: Wr,
+          author: ar ? rr(ar) : null,
+          hiddenFromReplay: !0 === jr
         }
       }))
     }
-    const wR = (0, uR.d)("chatRemoved");
-    class rR {
+    const mr = (0, ar.c)("chatRemoved");
+    class Nr {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const GR = this.shown;
-        return RR !== this.needed && (this.needed = RR, this.neededSince = JR, null === RR && (this.shown = null)), this.shown !== this.needed && JR - this.neededSince > 200 && (this.shown = this.needed), this.shown !== GR
+      update(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const Qr = this.shown;
+        return rr !== this.needed && (this.needed = rr, this.neededSince = Sr, null === rr && (this.shown = null)), this.shown !== this.needed && Sr - this.neededSince > 200 && (this.shown = this.needed), this.shown !== Qr
       }
     }
 
-    function eR(RR) {
+    function Ur(rr) {
       return [{
-        translationKey: `touchKeys:${RR}`
+        translationKey: `touchKeys:${rr}`
       }]
     }
-    const aR = {
-      open: eR("open"),
-      close: eR("close"),
-      milk: eR("milk"),
-      shear: eR("shear"),
-      tame: eR("tame"),
-      feed: eR("feed"),
-      ride: eR("ride")
+    const tr = {
+      open: Ur("open"),
+      close: Ur("close"),
+      milk: Ur("milk"),
+      shear: Ur("shear"),
+      tame: Ur("tame"),
+      feed: Ur("feed"),
+      ride: Ur("ride")
     };
 
-    function LR(RR) {
+    function hr(rr) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: RR
+        icon: rr
       }]
     }
   },
-  37357: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      h: () => ZR
+  37743: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir,
+      e: () => jr
     });
-    var yR = GR(4563);
-    let tR = null,
-      uR = null;
+    var Zr = Qr(4494);
+    let Wr = null,
+      ar = null;
 
-    function ZR() {
-      return uR ??= GR.e(241).then((() => GR(37221))).then((RR => {
+    function jr() {
+      return ar ??= Qr.e(242).then((() => Qr(37580))).then((rr => {
         let {
-          ITEM_SPRITES: JR,
-          ITEM_SPRITES_WITHOUT_FILE: GR,
-          ITEM_FILES_WITHOUT_SPRITE: uR
-        } = RR;
-        tR = function(RR, JR, GR) {
-          const tR = new Set,
-            uR = (0, yR.u)(JR);
-          let ZR = 0;
-          for (const [yR, qR] of RR.entries()) yR === uR[ZR] ? ZR++ : tR.add(qR);
-          if ("" !== GR)
-            for (const qR of GR.split(yR.r)) tR.add(qR);
-          return tR
-        }(JR.split(yR.r), GR, uR)
-      }), (RR => {
-        throw uR = null, RR
-      })), uR
+          ITEM_SPRITES: Sr,
+          ITEM_SPRITES_WITHOUT_FILE: Qr,
+          ITEM_FILES_WITHOUT_SPRITE: ar
+        } = rr;
+        Wr = function(rr, Sr, Qr) {
+          const Wr = new Set,
+            ar = (0, Zr.t)(Sr);
+          let jr = 0;
+          for (const [Zr, Ir] of rr.entries()) Zr === ar[jr] ? jr++ : Wr.add(Ir);
+          if ("" !== Qr)
+            for (const Ir of Qr.split(Zr.r)) Wr.add(Ir);
+          return Wr
+        }(Sr.split(Zr.r), Qr, ar)
+      }), (rr => {
+        throw ar = null, rr
+      })), ar
     }
 
-    function qR(RR) {
-      var JR, GR;
-      return null !== (JR = null === (GR = tR) || void 0 === GR ? void 0 : GR.has(RR)) && void 0 !== JR && JR
+    function Ir(rr) {
+      var Sr, Qr;
+      return null !== (Sr = null === (Qr = Wr) || void 0 === Qr ? void 0 : Qr.has(rr)) && void 0 !== Sr && Sr
     }
   },
-  40965: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR,
-      e: () => uR,
-      f: () => tR
+  41311: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr,
+      h: () => ar,
+      k: () => Wr
     });
-    const yR = 128;
+    const Zr = 128;
 
-    function tR(RR, JR, GR, yR) {
-      const tR = 2 * JR - 1,
-        uR = 1 - 2 * GR,
-        ZR = RR(0) - tR * RR(3),
-        qR = RR(4) - tR * RR(7),
-        iR = RR(8) - tR * RR(11),
-        fR = RR(1) - uR * RR(3),
-        VR = RR(5) - uR * RR(7),
-        KR = RR(9) - uR * RR(11);
-      yR[0] = qR * KR - iR * VR, yR[1] = iR * fR - ZR * KR, yR[2] = ZR * VR - qR * fR;
-      const wR = yR[0] * RR(3) + yR[1] * RR(7) + yR[2] * RR(11) < 0 ? -1 : 1,
-        rR = Math.hypot(yR[0], yR[1], yR[2]) * wR;
-      return yR[0] /= rR, yR[1] /= rR, yR[2] /= rR, yR
+    function Wr(rr, Sr, Qr, Zr) {
+      const Wr = 2 * Sr - 1,
+        ar = 1 - 2 * Qr,
+        jr = rr(0) - Wr * rr(3),
+        Ir = rr(4) - Wr * rr(7),
+        fr = rr(8) - Wr * rr(11),
+        Er = rr(1) - ar * rr(3),
+        pr = rr(5) - ar * rr(7),
+        xr = rr(9) - ar * rr(11);
+      Zr[0] = Ir * xr - fr * pr, Zr[1] = fr * Er - jr * xr, Zr[2] = jr * pr - Ir * Er;
+      const mr = Zr[0] * rr(3) + Zr[1] * rr(7) + Zr[2] * rr(11) < 0 ? -1 : 1,
+        Nr = Math.hypot(Zr[0], Zr[1], Zr[2]) * mr;
+      return Zr[0] /= Nr, Zr[1] /= Nr, Zr[2] /= Nr, Zr
     }
 
-    function uR(RR, JR, GR, yR, tR, uR) {
-      const ZR = [Math.floor(JR[0]), Math.floor(JR[1]), Math.floor(JR[2])],
-        qR = [0, 0, 0],
-        iR = [1 / 0, 1 / 0, 1 / 0],
-        fR = [1 / 0, 1 / 0, 1 / 0];
-      for (let wR = 0; wR < 3; wR++) qR[wR] = Math.sign(GR[wR]), 0 !== qR[wR] && (fR[wR] = Math.abs(1 / GR[wR]), iR[wR] = (ZR[wR] + (qR[wR] > 0 ? 1 : 0) - JR[wR]) / GR[wR]);
-      let VR = 0,
-        KR = Math.abs(GR[0]) > Math.abs(GR[1]) ? 0 : 1;
-      for (Math.abs(GR[2]) > Math.abs(GR[KR]) && (KR = 2); VR <= yR;) {
-        if (RR(ZR[0], ZR[1], ZR[2])) return tR[0] = ZR[0], tR[1] = ZR[1], tR[2] = ZR[2], uR[0] = 0, uR[1] = 0, uR[2] = 0, uR[KR] = -qR[KR], !0;
-        KR = iR[0] < iR[1] ? 0 : 1, iR[2] < iR[KR] && (KR = 2), VR = iR[KR], ZR[KR] += qR[KR], iR[KR] += fR[KR]
+    function ar(rr, Sr, Qr, Zr, Wr, ar) {
+      const jr = [Math.floor(Sr[0]), Math.floor(Sr[1]), Math.floor(Sr[2])],
+        Ir = [0, 0, 0],
+        fr = [1 / 0, 1 / 0, 1 / 0],
+        Er = [1 / 0, 1 / 0, 1 / 0];
+      for (let mr = 0; mr < 3; mr++) Ir[mr] = Math.sign(Qr[mr]), 0 !== Ir[mr] && (Er[mr] = Math.abs(1 / Qr[mr]), fr[mr] = (jr[mr] + (Ir[mr] > 0 ? 1 : 0) - Sr[mr]) / Qr[mr]);
+      let pr = 0,
+        xr = Math.abs(Qr[0]) > Math.abs(Qr[1]) ? 0 : 1;
+      for (Math.abs(Qr[2]) > Math.abs(Qr[xr]) && (xr = 2); pr <= Zr;) {
+        if (rr(jr[0], jr[1], jr[2])) return Wr[0] = jr[0], Wr[1] = jr[1], Wr[2] = jr[2], ar[0] = 0, ar[1] = 0, ar[2] = 0, ar[xr] = -Ir[xr], !0;
+        xr = fr[0] < fr[1] ? 0 : 1, fr[2] < fr[xr] && (xr = 2), pr = fr[xr], jr[xr] += Ir[xr], fr[xr] += Er[xr]
       }
       return !1
     }
   },
-  37558: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => gR,
-      i: () => bR,
-      m: () => CR,
-      o: () => WR,
-      r: () => XR
+  37942: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Lr,
+      d: () => lr,
+      f: () => Kr,
+      g: () => nr,
+      k: () => yr
     });
-    var yR = GR(289),
-      tR = GR(103);
-    const uR = new(GR(37561).b)(new URL(GR.p + GR.u(3), GR.b), {
+    var Zr = Qr(300),
+      Wr = Qr(109);
+    const ar = new(Qr(37945).d)(new URL(Qr.p + Qr.u(3), Qr.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var ZR = GR(1825),
-      qR = GR(2366);
-    const iR = 1e4,
-      fR = 3e4;
-    let VR = null,
-      KR = null,
-      wR = null,
-      rR = !1,
-      eR = 0;
-    const aR = new Map;
-    let LR = null;
-    const nR = new Map,
-      UR = new Map;
+    var jr = Qr(1783),
+      Ir = Qr(2311);
+    const fr = 1e4,
+      Er = 3e4;
+    let pr = null,
+      xr = null,
+      mr = null,
+      Nr = !1,
+      Ur = 0;
+    const tr = new Map;
+    let hr = null;
+    const zr = new Map,
+      Yr = new Map;
 
-    function WR(RR) {
-      const JR = new Promise(((JR, GR) => {
-        const yR = new Image;
-        yR.crossOrigin = "anonymous", yR.fetchPriority = "high", yR.onload = () => {
-          JR(yR)
-        }, yR.onerror = () => {
-          GR(new Error(`A block icon's texture did not load: ${RR.slice(0,100)}`))
-        }, yR.src = RR
+    function nr(rr) {
+      const Sr = new Promise(((Sr, Qr) => {
+        const Zr = new Image;
+        Zr.crossOrigin = "anonymous", Zr.fetchPriority = "high", Zr.onload = () => {
+          Sr(Zr)
+        }, Zr.onerror = () => {
+          Qr(new Error(`A block icon's texture did not load: ${rr.slice(0,100)}`))
+        }, Zr.src = rr
       }));
-      return (0, qR.h)(JR)
+      return (0, Ir.g)(Sr)
     }
 
-    function AR(RR) {
-      var JR, GR;
-      rR || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${RR}`), rR = !0, null === (JR = VR) || void 0 === JR || JR.terminate(), VR = null, KR = null, nR.clear(), UR.clear();
-      for (const yR of aR.values()) yR(null);
-      aR.clear(), null === (GR = LR) || void 0 === GR || GR()
+    function er(rr) {
+      var Sr, Qr;
+      Nr || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${rr}`), Nr = !0, null === (Sr = pr) || void 0 === Sr || Sr.terminate(), pr = null, xr = null, zr.clear(), Yr.clear();
+      for (const Zr of tr.values()) Zr(null);
+      tr.clear(), null === (Qr = hr) || void 0 === Qr || Qr()
     }
 
-    function CR() {
-      return null !== KR
+    function Kr() {
+      return null !== xr
     }
 
-    function XR() {
-      return wR ??= async function() {
+    function yr() {
+      return mr ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === yR.c.ios_icon_worker_v1 && (0, tR.isWebKit)()) return;
+        if ("page" === Zr.e.ios_icon_worker_v1 && (0, Wr.isWebKit)()) return;
         try {
-          VR = await async function() {
-            return await uR.ready(), uR.start()
+          pr = await async function() {
+            return await ar.ready(), ar.start()
           }()
-        } catch (qR) {
-          return void AR(`did not start (${String(qR)})`)
+        } catch (Ir) {
+          return void er(`did not start (${String(Ir)})`)
         }
-        let RR = () => {};
-        const JR = new Promise((JR => {
-          RR = JR
+        let rr = () => {};
+        const Sr = new Promise((Sr => {
+          rr = Sr
         }));
-        VR.onmessage = JR => {
+        pr.onmessage = Sr => {
           let {
-            data: GR
-          } = JR;
-          if ("started" === GR.type) KR = VR, RR();
-          else if ("failed" === GR.type) AR(`failed a draw (${GR.message})`);
+            data: Qr
+          } = Sr;
+          if ("started" === Qr.type) xr = pr, rr();
+          else if ("failed" === Qr.type) er(`failed a draw (${Qr.message})`);
           else {
-            var yR, tR;
-            null === (yR = aR.get(GR.id)) || void 0 === yR || yR(GR.url), aR.delete(GR.id), null === (tR = LR) || void 0 === tR || tR()
+            var Zr, Wr;
+            null === (Zr = tr.get(Qr.id)) || void 0 === Zr || Zr(Qr.url), tr.delete(Qr.id), null === (Wr = hr) || void 0 === Wr || Wr()
           }
-        }, VR.onerror = JR => {
-          JR.preventDefault(), AR(`stopped (${JR.message||"its script did not load or run"})`), RR()
+        }, pr.onerror = Sr => {
+          Sr.preventDefault(), er(`stopped (${Sr.message||"its script did not load or run"})`), rr()
         };
-        const GR = `did not start in ${fR/1e3} s`;
-        await (0, ZR.k)(JR, fR, GR).catch((() => {
-          AR(GR)
+        const Qr = `did not start in ${Er/1e3} s`;
+        await (0, jr.h)(Sr, Er, Qr).catch((() => {
+          er(Qr)
         }))
-      }(), wR
+      }(), mr
     }
 
-    function MR() {
-      if (null !== LR || 0 === aR.size) return;
-      const RR = new Promise((RR => {
-          LR = RR
+    function Br() {
+      if (null !== hr || 0 === tr.size) return;
+      const rr = new Promise((rr => {
+          hr = rr
         })),
-        JR = `did not answer in ${iR/1e3} s`;
-      (0, ZR.k)(RR, iR, JR).then((() => {
-        LR = null, MR()
+        Sr = `did not answer in ${fr/1e3} s`;
+      (0, jr.h)(rr, fr, Sr).then((() => {
+        hr = null, Br()
       }), (() => {
-        LR = null, AR(JR)
+        hr = null, er(Sr)
       }))
     }
 
-    function BR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      RR.postMessage(JR, GR)
+    function Tr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      rr.postMessage(Sr, Qr)
     }
 
-    function lR(RR, JR, GR, yR) {
-      let tR = JR.get(GR);
-      return void 0 === tR && (tR = yR().then((async JR => {
+    function vr(rr, Sr, Qr, Zr) {
+      let Wr = Sr.get(Qr);
+      return void 0 === Wr && (Wr = Zr().then((async Sr => {
         let {
-          image: GR,
-          request: yR
-        } = JR;
+          image: Qr,
+          request: Zr
+        } = Sr;
         try {
-          const JR = await createImageBitmap(GR);
-          BR(RR, yR(JR), [JR])
-        } catch (tR) {
-          AR(`could not take an image (${String(tR)})`)
+          const Sr = await createImageBitmap(Qr);
+          Tr(rr, Zr(Sr), [Sr])
+        } catch (Wr) {
+          er(`could not take an image (${String(Wr)})`)
         }
-      })), tR.catch((() => {
-        JR.get(GR) === tR && JR.delete(GR)
-      })), JR.set(GR, tR)), tR
+      })), Wr.catch((() => {
+        Sr.get(Qr) === Wr && Sr.delete(Qr)
+      })), Sr.set(Qr, Wr)), Wr
     }
-    async function pR(RR, JR) {
-      XR();
-      const GR = KR;
-      if (null === GR) return null;
-      if (await RR(GR), KR !== GR) return null;
-      const yR = ++eR;
-      return new Promise((RR => {
-        aR.set(yR, RR), BR(GR, JR(yR)), MR()
+    async function Or(rr, Sr) {
+      yr();
+      const Qr = xr;
+      if (null === Qr) return null;
+      if (await rr(Qr), xr !== Qr) return null;
+      const Zr = ++Ur;
+      return new Promise((rr => {
+        tr.set(Zr, rr), Tr(Qr, Sr(Zr)), Br()
       }))
     }
 
-    function gR(RR, JR, GR) {
-      return pR((JR => Promise.all([RR.top, RR.left, RR.right].map((RR => function(RR, JR) {
-        return lR(RR, nR, JR, (async () => ({
-          image: await WR(JR),
-          request: RR => ({
+    function Lr(rr, Sr, Qr) {
+      return Or((Sr => Promise.all([rr.top, rr.left, rr.right].map((rr => function(rr, Sr) {
+        return vr(rr, zr, Sr, (async () => ({
+          image: await nr(Sr),
+          request: rr => ({
             type: "texture",
-            url: JR,
-            bitmap: RR
+            url: Sr,
+            bitmap: rr
           })
         })))
-      }(JR, RR))))), (yR => ({
+      }(Sr, rr))))), (Zr => ({
         type: "draw",
-        id: yR,
-        ...RR,
-        size: JR,
-        outlineWidth: GR
+        id: Zr,
+        ...rr,
+        size: Sr,
+        outlineWidth: Qr
       })))
     }
 
-    function bR(RR, JR, GR, yR) {
-      return pR((GR => function(RR, JR, GR) {
-        return lR(RR, UR, JR, (async () => {
+    function lr(rr, Sr, Qr, Zr) {
+      return Or((Qr => function(rr, Sr, Qr) {
+        return vr(rr, Yr, Sr, (async () => {
           const {
-            texture: RR,
-            ...yR
-          } = await GR();
+            texture: rr,
+            ...Zr
+          } = await Qr();
           return {
-            image: await WR(RR),
-            request: RR => ({
+            image: await nr(rr),
+            request: rr => ({
               type: "model",
-              name: JR,
-              bitmap: RR,
-              geometry: yR
+              name: Sr,
+              bitmap: rr,
+              geometry: Zr
             })
           }
         }))
-      }(GR, RR, JR)), (JR => ({
+      }(Qr, rr, Sr)), (Sr => ({
         type: "drawModel",
-        id: JR,
-        name: RR,
-        size: GR,
-        outlineWidth: yR
+        id: Sr,
+        name: rr,
+        size: Qr,
+        outlineWidth: Zr
       })))
     }
   },
-  40942: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR
+  41293: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    var yR = GR(2102);
+    var Zr = Qr(2049);
 
-    function tR(RR, JR, GR) {
-      return (0, yR.h)(RR, JR) < GR
+    function Wr(rr, Sr, Qr) {
+      return (0, Zr.m)(rr, Sr) < Qr
     }
   },
-  10057: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR
+  9827: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr
     });
-    var yR = GR(1349);
+    var Zr = Qr(1308);
 
-    function tR(RR, JR) {
-      var GR, tR;
+    function Wr(rr, Sr) {
+      var Qr, Wr;
       try {
-        const GR = (0, yR.d)();
-        if ("function" === typeof GR) {
-          const yR = new GR(RR, JR);
-          if (yR.type === RR) return yR
+        const Qr = (0, Zr.b)();
+        if ("function" === typeof Qr) {
+          const Zr = new Qr(rr, Sr);
+          if (Zr.type === rr) return Zr
         }
       } catch {}
-      const uR = document.createEvent("Event");
-      return uR.initEvent(RR, null !== (GR = null === JR || void 0 === JR ? void 0 : JR.bubbles) && void 0 !== GR && GR, null !== (tR = null === JR || void 0 === JR ? void 0 : JR.cancelable) && void 0 !== tR && tR), uR
+      const ar = document.createEvent("Event");
+      return ar.initEvent(rr, null !== (Qr = null === Sr || void 0 === Sr ? void 0 : Sr.bubbles) && void 0 !== Qr && Qr, null !== (Wr = null === Sr || void 0 === Sr ? void 0 : Sr.cancelable) && void 0 !== Wr && Wr), ar
     }
   },
-  40258: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => VR
+  40583: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => pr
     });
-    var yR = GR(1317),
-      tR = GR(1459),
-      uR = GR(25),
-      ZR = GR(1444),
-      qR = GR(1449),
-      iR = GR(1663),
-      fR = GR(37620);
+    var Zr = Qr(1279),
+      Wr = Qr(1433),
+      ar = Qr(26),
+      jr = Qr(1413),
+      Ir = Qr(1422),
+      fr = Qr(1644),
+      Er = Qr(38001);
 
-    function VR(RR) {
+    function pr(rr) {
       let {
-        au: JR,
-        Lu: GR
-      } = RR;
-      const VR = null !== JR && void 0 !== JR ? JR : (0, qR.d)().gameNameWithVariation;
-      (0, yR.D)(VR) && ((0, fR.i)(), (0, ZR.ib)((() => {
-        console.log("Received matchmaking order from game server to game", JR), (0, uR.k)("inGameReplay"), (0, iR.navigatePreserveSearch)((0, tR.e)(VR, null !== GR && void 0 !== GR ? GR : void 0))
+        xa: Sr,
+        ma: Qr
+      } = rr;
+      const pr = null !== Sr && void 0 !== Sr ? Sr : (0, Ir.b)().gameNameWithVariation;
+      (0, Zr.J)(pr) && ((0, Er.o)(), (0, jr.Y)((() => {
+        console.log("Received matchmaking order from game server to game", Sr), (0, ar.m)("inGameReplay"), (0, fr.navigatePreserveSearch)((0, Wr.c)(pr, null !== Qr && void 0 !== Qr ? Qr : void 0))
       }), "video_start"))
     }
   },
-  40464: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  40754: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar
     });
-    var yR = GR(32),
-      tR = GR(2194);
+    var Zr = Qr(34),
+      Wr = Qr(2135);
 
-    function uR(RR) {
-      var JR, GR;
-      const uR = (0, tR.m)(null !== (JR = null === (GR = tR.t.toggleFreeCam) || void 0 === GR ? void 0 : GR[0]) && void 0 !== JR ? JR : null);
-      yR.n.JK("showBottomMessage", {
-        message: `Free Camera ${RR?"Enabled":"Disabled"}${uR?` - Press ${uR} to toggle`:""}`,
+    function ar(rr) {
+      var Sr, Qr;
+      const ar = (0, Wr.j)(null !== (Sr = null === (Qr = Wr.q.toggleFreeCam) || void 0 === Qr ? void 0 : Qr[0]) && void 0 !== Sr ? Sr : null);
+      Zr.i.Jp("showBottomMessage", {
+        message: `Free Camera ${rr?"Enabled":"Disabled"}${ar?` - Press ${ar} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  40256: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => VR,
-      f: () => iR,
-      g: () => fR,
-      i: () => KR
+  40574: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => pr,
+      e: () => fr,
+      h: () => Er,
+      j: () => xr
     });
-    var yR = GR(2134),
-      tR = GR(32),
-      uR = GR(1493),
-      ZR = GR(1351);
-    const qR = new Map;
+    var Zr = Qr(2089),
+      Wr = Qr(34),
+      ar = Qr(1475),
+      jr = Qr(1317);
+    const Ir = new Map;
 
-    function iR(RR, JR) {
-      tR.n.JK("newUiRequest", {
-        id: RR,
-        clientParameters: JR
+    function fr(rr, Sr) {
+      Wr.i.Jp("newUiRequest", {
+        id: rr,
+        clientParameters: Sr
       }, !0)
     }
 
-    function fR(RR) {
-      tR.n.JK("removeUiRequest", RR, !0);
-      const JR = qR.get(RR);
-      JR && (JR.tearDownNotification(), qR.delete(RR))
+    function Er(rr) {
+      Wr.i.Jp("removeUiRequest", rr, !0);
+      const Sr = Ir.get(rr);
+      Sr && (Sr.tearDownNotification(), Ir.delete(rr))
     }
 
-    function VR() {
-      tR.n.JK("clearUiRequests");
-      for (const RR of qR.values()) RR.tearDownNotification();
-      qR.clear()
+    function pr() {
+      Wr.i.Jp("clearUiRequests");
+      for (const rr of Ir.values()) rr.tearDownNotification();
+      Ir.clear()
     }
 
-    function KR(RR, JR, GR, tR) {
-      const iR = "string" === typeof JR ? {
-          translationKey: JR
-        } : JR,
-        fR = uR.NotificationProvider.showPromptPopup({
-          title: iR.translationKey,
+    function xr(rr, Sr, Qr, Wr) {
+      const fr = "string" === typeof Sr ? {
+          translationKey: Sr
+        } : Sr,
+        Er = ar.NotificationProvider.showPromptPopup({
+          title: fr.translationKey,
           textOpts: {
-            title: (0, ZR.f)(iR.params, yR.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, jr.e)(fr.params, Zr.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: GR,
+          destructive: Qr,
           unlockPointerKey: "uiRequestPopup"
         });
-      qR.set(RR, fR), fR.getResult().then((JR => {
-        qR.delete(RR), "notificationTornDown" !== JR && tR(JR)
+      Ir.set(rr, Er), Er.getResult().then((Sr => {
+        Ir.delete(rr), "notificationTornDown" !== Sr && Wr(Sr)
       }))
     }
   },
-  40974: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => KR,
-      d: () => wR
+  41320: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => xr,
+      g: () => mr
     });
-    var yR = GR(203),
-      tR = GR(40978);
-    const uR = 20;
+    var Zr = Qr(208),
+      Wr = Qr(41324);
+    const ar = 20;
 
-    function ZR(RR) {
-      return RR.map(Math.floor).join(" ")
+    function jr(rr) {
+      return rr.map(Math.floor).join(" ")
     }
 
-    function qR(RR) {
-      return null === RR.amount || 1 === RR.amount ? RR.name : `${RR.amount} ${RR.name}`
+    function Ir(rr) {
+      return null === rr.amount || 1 === rr.amount ? rr.name : `${rr.amount} ${rr.name}`
     }
-    var iR = GR(40983),
-      fR = GR(2163),
-      VR = GR(1449);
+    var fr = Qr(41333),
+      Er = Qr(2114),
+      pr = Qr(1422);
 
-    function KR(RR, JR) {
-      if (!RR) return iR.b;
-      const GR = RR.playerFeet();
-      if (!GR) return "The player isn't in the world yet, so no blocks can be seen.";
-      const uR = yR.g.LK,
-        ZR = (0, tR.i)(null !== JR && void 0 !== JR ? JR : GR, uR),
-        qR = RR.chunkBlocks(ZR);
-      return qR ? (0, tR.c)(ZR, uR, ((JR, GR, yR) => {
-        const tR = qR(JR, GR, yR);
-        return 0 === tR ? null : RR.blockName(tR).split("|")[0]
-      }), GR) : `The chunk from ${ZR.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${GR.map(Math.floor).join(" ")}.`
+    function xr(rr, Sr) {
+      if (!rr) return fr.e;
+      const Qr = rr.playerFeet();
+      if (!Qr) return "The player isn't in the world yet, so no blocks can be seen.";
+      const ar = Zr.i.hx,
+        jr = (0, Wr.j)(null !== Sr && void 0 !== Sr ? Sr : Qr, ar),
+        Ir = rr.chunkBlocks(jr);
+      return Ir ? (0, Wr.b)(jr, ar, ((Sr, Qr, Zr) => {
+        const Wr = Ir(Sr, Qr, Zr);
+        return 0 === Wr ? null : rr.blockName(Wr).split("|")[0]
+      }), Qr) : `The chunk from ${jr.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${Qr.map(Math.floor).join(" ")}.`
     }
 
-    function wR(RR) {
-      var JR, GR, yR;
-      if (!RR) return iR.e;
-      const tR = RR.playerFeet();
-      if (!tR) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function mr(rr) {
+      var Sr, Qr, Zr;
+      if (!rr) return fr.f;
+      const Wr = rr.playerFeet();
+      if (!Wr) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: KR,
-        heldSlot: wR
-      } = RR.inventory();
-      return function(RR) {
-        const JR = [];
-        null !== RR.game && JR.push(`Game: ${RR.game}.`);
-        const GR = null === RR.health ? "" : `, health ${Math.round(RR.health)}${null===RR.maxHealth?"":` of ${Math.round(RR.maxHealth)}`}`;
-        JR.push(`The player (the creator) stands at ${ZR(RR.position)}${GR}, ${RR.creative?"in":"not in"} creative mode.`);
-        const yR = RR.slots[RR.heldSlot];
-        JR.push(yR ? `Holding (slot ${RR.heldSlot}): ${qR(yR)}.` : `Holding nothing (slot ${RR.heldSlot} is empty).`);
-        const tR = RR.slots.flatMap(((RR, JR) => RR ? [`slot ${JR}: ${qR(RR)}`] : []));
-        JR.push(tR.length > 0 ? `Inventory: ${tR.join(", ")}.` : "Inventory: empty.");
-        const iR = JR => Math.hypot(JR.position[0] - RR.position[0], JR.position[1] - RR.position[1], JR.position[2] - RR.position[2]),
-          fR = [...RR.nearby].sort(((RR, JR) => iR(RR) - iR(JR)));
-        if (0 === fR.length) JR.push("No other players or mobs are near enough to see.");
+        slots: xr,
+        heldSlot: mr
+      } = rr.inventory();
+      return function(rr) {
+        const Sr = [];
+        null !== rr.game && Sr.push(`Game: ${rr.game}.`);
+        const Qr = null === rr.health ? "" : `, health ${Math.round(rr.health)}${null===rr.maxHealth?"":` of ${Math.round(rr.maxHealth)}`}`;
+        Sr.push(`The player (the creator) stands at ${jr(rr.position)}${Qr}, ${rr.creative?"in":"not in"} creative mode.`);
+        const Zr = rr.slots[rr.heldSlot];
+        Sr.push(Zr ? `Holding (slot ${rr.heldSlot}): ${Ir(Zr)}.` : `Holding nothing (slot ${rr.heldSlot} is empty).`);
+        const Wr = rr.slots.flatMap(((rr, Sr) => rr ? [`slot ${Sr}: ${Ir(rr)}`] : []));
+        Sr.push(Wr.length > 0 ? `Inventory: ${Wr.join(", ")}.` : "Inventory: empty.");
+        const fr = Sr => Math.hypot(Sr.position[0] - rr.position[0], Sr.position[1] - rr.position[1], Sr.position[2] - rr.position[2]),
+          Er = [...rr.nearby].sort(((rr, Sr) => fr(rr) - fr(Sr)));
+        if (0 === Er.length) Sr.push("No other players or mobs are near enough to see.");
         else {
-          JR.push("Near them, nearest first:");
-          for (const RR of fR.slice(0, uR)) {
-            const GR = "player" === RR.kind ? `player "${RR.name||"?"}"` : RR.name && RR.name !== RR.kind ? `${RR.kind} "${RR.name}"` : RR.kind,
-              yR = Math.round(iR(RR));
-            JR.push(`- ${GR} at ${ZR(RR.position)}, ${yR} block${1===yR?"":"s"} away`)
+          Sr.push("Near them, nearest first:");
+          for (const rr of Er.slice(0, ar)) {
+            const Qr = "player" === rr.kind ? `player "${rr.name||"?"}"` : rr.name && rr.name !== rr.kind ? `${rr.kind} "${rr.name}"` : rr.kind,
+              Zr = Math.round(fr(rr));
+            Sr.push(`- ${Qr} at ${jr(rr.position)}, ${Zr} block${1===Zr?"":"s"} away`)
           }
-          fR.length > uR && JR.push(`- and ${fR.length-uR} more further away`)
+          Er.length > ar && Sr.push(`- and ${Er.length-ar} more further away`)
         }
-        return RR.droppedItems > 0 && JR.push(`${RR.droppedItems} dropped item${1===RR.droppedItems?" is":"s are"} on the ground nearby.`), JR.join("\n")
+        return rr.droppedItems > 0 && Sr.push(`${rr.droppedItems} dropped item${1===rr.droppedItems?" is":"s are"} on the ground nearby.`), Sr.join("\n")
       }({
-        game: null !== (JR = (0, VR.d)().gameNameWithVariation) && void 0 !== JR ? JR : null,
-        position: tR,
-        health: null !== (GR = fR.c.get("_health")) && void 0 !== GR ? GR : null,
-        maxHealth: null !== (yR = fR.c.get("_totalMaxHealth")) && void 0 !== yR ? yR : null,
-        creative: !0 === fR.c.get("creative"),
-        heldSlot: wR,
-        slots: KR,
-        nearby: RR.nearby(),
-        droppedItems: RR.droppedItems()
+        game: null !== (Sr = (0, pr.b)().gameNameWithVariation) && void 0 !== Sr ? Sr : null,
+        position: Wr,
+        health: null !== (Qr = Er.d.get("_health")) && void 0 !== Qr ? Qr : null,
+        maxHealth: null !== (Zr = Er.d.get("_totalMaxHealth")) && void 0 !== Zr ? Zr : null,
+        creative: !0 === Er.d.get("creative"),
+        heldSlot: mr,
+        slots: xr,
+        nearby: rr.nearby(),
+        droppedItems: rr.droppedItems()
       })
     }
   },
-  42538: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      attachPlayGameSources: () => Ey,
-      playGameSources: () => dy
+  42871: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      attachPlayGameSources: () => FZ,
+      playGameSources: () => cZ
     });
-    var yR = GR(2134),
-      tR = GR(42394),
-      uR = GR(5665),
-      ZR = GR(42118),
-      qR = GR(42523),
-      iR = GR(40951),
-      fR = GR(32),
-      VR = GR(5685),
-      KR = GR(5676),
-      wR = GR(42154),
-      rR = GR(42185),
-      eR = GR(42543),
-      aR = GR(42164);
-    (0, aR.l)(VR.sc.Chat, (RR => {
-      if (RR.payloadKind !== KR.gc.Msgpack) return;
-      const JR = function(RR) {
-        if (null === RR || "object" !== typeof RR || !("content" in RR)) return null;
+    var Zr = Qr(2089),
+      Wr = Qr(42726),
+      ar = Qr(5602),
+      jr = Qr(42451),
+      Ir = Qr(42845),
+      fr = Qr(41296),
+      Er = Qr(34),
+      pr = Qr(5617),
+      xr = Qr(5610),
+      mr = Qr(42485),
+      Nr = Qr(42516),
+      Ur = Qr(42876),
+      tr = Qr(42495);
+    (0, tr.j)(pr.pc.Chat, (rr => {
+      if (rr.payloadKind !== xr.nc.Msgpack) return;
+      const Sr = function(rr) {
+        if (null === rr || "object" !== typeof rr || !("content" in rr)) return null;
         const {
-          chatMsgId: JR,
-          worldCodeLineId: GR,
-          content: yR,
-          chatterEId: tR,
-          chatterObjectsToReplay: uR
-        } = RR;
+          chatMsgId: Sr,
+          worldCodeLineId: Qr,
+          content: Zr,
+          chatterEId: Wr,
+          chatterObjectsToReplay: ar
+        } = rr;
         return {
-          serverChatMsgId: null !== JR && void 0 !== JR ? JR : void 0,
-          worldCodeLineId: null !== GR && void 0 !== GR ? GR : void 0,
-          content: yR,
-          chatterEId: void 0 === tR || null === tR ? void 0 : String(tR),
-          chatterObjectsToReplay: uR
+          serverChatMsgId: null !== Sr && void 0 !== Sr ? Sr : void 0,
+          worldCodeLineId: null !== Qr && void 0 !== Qr ? Qr : void 0,
+          content: Zr,
+          chatterEId: void 0 === Wr || null === Wr ? void 0 : String(Wr),
+          chatterObjectsToReplay: ar
         }
-      }((0, wR.e)(RR.payload));
-      null !== JR && fR.n.JK("chat", JR, !0)
-    })), (0, aR.l)(VR.sc.ChatRemoved, (RR => {
-      if (RR.payloadKind === KR.gc.Msgpack) {
+      }((0, mr.d)(rr.payload));
+      null !== Sr && Er.i.Jp("chat", Sr, !0)
+    })), (0, tr.j)(pr.pc.ChatRemoved, (rr => {
+      if (rr.payloadKind === xr.nc.Msgpack) {
         const {
-          chatMsgId: JR
-        } = (0, wR.e)(RR.payload);
-        fR.n.JK("chatRemoved", JR, !0)
+          chatMsgId: Sr
+        } = (0, mr.d)(rr.payload);
+        Er.i.Jp("chatRemoved", Sr, !0)
       }
     }));
-    const LR = {
-        chatReceived: (0, iR.n)((function(RR) {
-          var JR, GR, yR;
+    const hr = {
+        chatReceived: (0, fr.j)((function(rr) {
+          var Sr, Qr, Zr;
           return {
-            id: RR,
-            name: null !== (JR = eR.f.getName(RR)) && void 0 !== JR ? JR : null,
-            local: (0, rR.e)() === RR,
-            profileEffect: null !== (GR = null === (yR = (0, eR.i)(RR)) || void 0 === yR ? void 0 : yR.profileEffect) && void 0 !== GR ? GR : null
+            id: rr,
+            name: null !== (Sr = Ur.g.getName(rr)) && void 0 !== Sr ? Sr : null,
+            local: (0, Nr.c)() === rr,
+            profileEffect: null !== (Qr = null === (Zr = (0, Ur.j)(rr)) || void 0 === Zr ? void 0 : Zr.profileEffect) && void 0 !== Qr ? Qr : null
           }
         })),
-        chatRemoved: iR.q
+        chatRemoved: fr.m
       },
-      nR = {
-        sendChatMessage(RR) {
-          var JR, GR;
+      zr = {
+        sendChatMessage(rr) {
+          var Sr, Qr;
           let {
-            LZ: yR,
-            channelName: tR
-          } = RR;
-          return null !== (JR = null === (GR = (0, ZR.l)()) || void 0 === GR ? void 0 : GR.clientApi.sendChat(yR, tR)) && void 0 !== JR && JR
+            xj: Zr,
+            channelName: Wr
+          } = rr;
+          return null !== (Sr = null === (Qr = (0, jr.f)()) || void 0 === Qr ? void 0 : Qr.clientApi.sendChat(Zr, Wr)) && void 0 !== Sr && Sr
         }
       };
-    var UR = GR(203),
-      WR = GR(2163),
-      AR = GR(42106),
-      CR = GR(40942);
-    const XR = [0, 0, 0],
-      MR = {
-        codeBlockClickable(RR) {
-          var JR;
-          const GR = (0, ZR.l)();
-          if (null === GR || void 0 === GR || !GR.isSessionLive) return !1;
-          const yR = GR.api;
-          if (0 !== (AR.s.playerFlags(yR.apiView, 0) & AR.xd.Crouching)) return !1;
-          const tR = yR.queries.directorEntity(yR.localId) >= AR.pb.BYTES ? yR.memoryData(yR.scratch(), AR.pb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === tR) return !1;
-          for (let uR = 0; uR < 3; uR++) XR[uR] = AR.pb.feet(tR, 0, uR);
-          return XR[1] += AR.pb.eyeHeight(tR, 0), (0, CR.e)(XR, RR, null !== (JR = WR.c.get("blockReach")) && void 0 !== JR ? JR : UR.g.Ln)
+    var Yr = Qr(208),
+      nr = Qr(2114),
+      er = Qr(42438),
+      Kr = Qr(41293);
+    const yr = [0, 0, 0],
+      Br = {
+        codeBlockClickable(rr) {
+          var Sr;
+          const Qr = (0, jr.f)();
+          if (null === Qr || void 0 === Qr || !Qr.isSessionLive) return !1;
+          const Zr = Qr.api;
+          if (0 !== (er.p.playerFlags(Zr.apiView, 0) & er.ud.Crouching)) return !1;
+          const Wr = Zr.queries.directorEntity(Zr.localId) >= er.gb.BYTES ? Zr.memoryData(Zr.scratch(), er.gb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === Wr) return !1;
+          for (let ar = 0; ar < 3; ar++) yr[ar] = er.gb.feet(Wr, 0, ar);
+          return yr[1] += er.gb.eyeHeight(Wr, 0), (0, Kr.d)(yr, rr, null !== (Sr = nr.d.get("blockReach")) && void 0 !== Sr ? Sr : Yr.i.hz)
         }
       },
-      BR = {
-        clickCodeBlock(RR) {
-          var JR;
-          null === (JR = (0, ZR.l)()) || void 0 === JR || JR.clickCodeBlock(RR)
+      Tr = {
+        clickCodeBlock(rr) {
+          var Sr;
+          null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.clickCodeBlock(rr)
         }
       };
-    var lR = GR(42130),
-      pR = GR(42552),
-      gR = GR(1127),
-      bR = GR(40283),
-      vR = GR(5658),
-      OR = GR(42137),
-      xR = GR(42126),
-      NR = GR(42145);
+    var vr = Qr(42463),
+      Or = Qr(42880),
+      Lr = Qr(1127),
+      lr = Qr(40599),
+      Xr = Qr(5594),
+      Pr = Qr(42477),
+      Hr = Qr(42456),
+      qr = Qr(42479);
 
-    function DR(RR) {
-      if (null === RR) return null;
-      const JR = [];
-      for (const GR of RR) {
-        const RR = Object.keys(GR)[0];
-        if ("EJ" === RR) {
+    function Rr(rr) {
+      if (null === rr) return null;
+      const Sr = [];
+      for (const Qr of rr) {
+        const rr = Object.keys(Qr)[0];
+        if ("rQ" === rr) {
           const {
-            str: RR,
-            style: yR,
-            clickableUrl: tR
-          } = GR.EJ, uR = Object.keys(RR)[0], ZR = RR[uR];
-          "string" !== uR && "styledEntityName" !== uR && "styledTranslatedText" !== uR || JR.push({
-            str: ZR,
-            style: yR,
-            clickableUrl: tR
+            str: rr,
+            style: Zr,
+            clickableUrl: Wr
+          } = Qr.rQ, ar = Object.keys(rr)[0], jr = rr[ar];
+          "string" !== ar && "styledEntityName" !== ar && "styledTranslatedText" !== ar || Sr.push({
+            str: jr,
+            style: Zr,
+            clickableUrl: Wr
           })
-        } else JR.push(GR[RR])
+        } else Sr.push(Qr[rr])
       }
-      return JR
+      return Sr
     }
-    const HR = {
-      screenPos(RR) {
-        var JR, GR;
-        return null !== (JR = null === (GR = (0, ZR.l)()) || void 0 === GR ? void 0 : GR.renderFrame.projectWorldPosToScreenPos(RR)) && void 0 !== JR ? JR : {
+    const gr = {
+      screenPos(rr) {
+        var Sr, Qr;
+        return null !== (Sr = null === (Qr = (0, jr.f)()) || void 0 === Qr ? void 0 : Qr.renderFrame.projectWorldPosToScreenPos(rr)) && void 0 !== Sr ? Sr : {
           x: 0,
           y: 0
         }
       }
     };
-    let oR = !1;
+    let Cr = !1;
 
-    function cR() {
-      oR || (oR = !0, (0, aR.l)(VR.sc.ProgressBarUpdate, (RR => {
-        const JR = (0, NR.k)(RR);
-        (0, NR.e)(JR) && fR.n.JK("progressBarUpdate", JR, !0)
-      })), (0, aR.l)(OR.s, (RR => {
-        const JR = (0, NR.i)(OR.s, RR);
-        JR && fR.n.JK("middleScreenBarInitiate", {
-          duration: JR.Wu,
-          Au: JR.Au,
-          horizBarRemOffset: JR.Cu
+    function Mr() {
+      Cr || (Cr = !0, (0, tr.j)(pr.pc.ProgressBarUpdate, (rr => {
+        const Sr = (0, qr.f)(rr);
+        (0, qr.b)(Sr) && Er.i.Jp("progressBarUpdate", Sr, !0)
+      })), (0, tr.j)(Pr.w, (rr => {
+        const Sr = (0, qr.d)(Pr.w, rr);
+        Sr && Er.i.Jp("middleScreenBarInitiate", {
+          duration: Sr.ta,
+          ha: Sr.ha,
+          horizBarRemOffset: Sr.za
         }, !0)
-      })), (0, aR.l)(VR.sc.RemoveMiddleScreenBar, (() => {
-        fR.n.JK("middleScreenBarRemove")
-      })), (0, aR.l)(OR.fb, (RR => {
-        const JR = (0, NR.i)(OR.fb, RR);
-        if (JR) {
-          var GR;
-          const RR = JR.NJ ? null === (GR = (0, ZR.l)()) || void 0 === GR ? void 0 : GR.renderFrame.projectDirectionToScreenPos(JR.NJ) : void 0;
-          fR.n.JK("sendHitmarker", {
-            xJ: JR.xJ,
-            screenPos: RR
+      })), (0, tr.j)(pr.pc.RemoveMiddleScreenBar, (() => {
+        Er.i.Jp("middleScreenBarRemove")
+      })), (0, tr.j)(Pr.cb, (rr => {
+        const Sr = (0, qr.d)(Pr.cb, rr);
+        if (Sr) {
+          var Qr;
+          const rr = Sr.kS ? null === (Qr = (0, jr.f)()) || void 0 === Qr ? void 0 : Qr.renderFrame.projectDirectionToScreenPos(Sr.kS) : void 0;
+          Er.i.Jp("sendHitmarker", {
+            GS: Sr.GS,
+            screenPos: rr
           }, !0)
         }
-      })), (0, aR.l)(OR.kb, (RR => {
-        const JR = (0, NR.i)(OR.kb, RR);
-        if (JR) {
+      })), (0, tr.j)(Pr.gb, (rr => {
+        const Sr = (0, qr.d)(Pr.gb, rr);
+        if (Sr) {
           const {
-            id: RR,
-            position: GR,
-            style: yR,
-            dJ: tR,
-            QJ: uR
-          } = JR;
-          fR.n.JK("setDirectionArrow", {
-            id: RR,
-            position: GR,
-            style: yR,
-            text: DR(tR),
-            QJ: uR
+            id: rr,
+            position: Qr,
+            style: Zr,
+            uS: Wr,
+            ZQ: ar
+          } = Sr;
+          Er.i.Jp("setDirectionArrow", {
+            id: rr,
+            position: Qr,
+            style: Zr,
+            text: Rr(Wr),
+            ZQ: ar
           }, !0)
         }
-      })), (0, aR.l)(OR.d, (RR => {
-        const JR = (0, NR.i)(OR.d, RR);
-        JR && fR.n.JK("clearDirectionArrow", {
-          id: JR.id
+      })), (0, tr.j)(Pr.f, (rr => {
+        const Sr = (0, qr.d)(Pr.f, rr);
+        Sr && Er.i.Jp("clearDirectionArrow", {
+          id: Sr.id
         }, !0)
-      })), (0, aR.l)(OR.l, (RR => {
-        const JR = (0, NR.i)(OR.l, RR);
-        JR && fR.n.JK("flyingMiddleMessage", {
-          content: DR(JR.su),
-          hu: JR.hu,
-          RZ: JR.RZ
+      })), (0, tr.j)(Pr.p, (rr => {
+        const Sr = (0, qr.d)(Pr.p, rr);
+        Sr && Er.i.Jp("flyingMiddleMessage", {
+          content: Rr(Sr.oa),
+          ba: Sr.ba,
+          Ja: Sr.Ja
         }, !0)
-      })), (0, aR.l)(VR.sc.WorldVariation, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ("string" === typeof JR) {
-          const RR = JR === gR.i ? null : {
-            message: `Currently loaded as variation: ${JR}`,
+      })), (0, tr.j)(pr.pc.WorldVariation, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ("string" === typeof Sr) {
+          const rr = Sr === Lr.e ? null : {
+            message: `Currently loaded as variation: ${Sr}`,
             type: "Warning"
           };
-          fR.n.JK("showPermanentBottomMessage", RR, !0)
+          Er.i.Jp("showPermanentBottomMessage", rr, !0)
         }
-      })), (0, aR.l)(OR.I, (RR => {
-        const JR = (0, NR.i)(OR.I, RR);
-        JR && function(RR, JR) {
+      })), (0, tr.j)(Pr.F, (rr => {
+        const Sr = (0, qr.d)(Pr.F, rr);
+        Sr && function(rr, Sr) {
           const {
-            type: GR,
-            params: yR
-          } = (0, bR.g)(JR), tR = {
-            ...yR
+            type: Qr,
+            params: Zr
+          } = (0, lr.g)(Sr), Wr = {
+            ...Zr
           };
-          for (const uR of bR.e) tR[uR] && (tR[uR] = DR(tR[uR]));
-          vR.d.queueQTE(RR, GR, tR).getResult().then((JR => {
-            var GR;
-            "boolean" === typeof JR && (null === (GR = (0, ZR.l)()) || void 0 === GR || GR.send(xR.d.QteResponse, {
-              qteId: RR,
-              qteResponse: JR
+          for (const ar of lr.e) Wr[ar] && (Wr[ar] = Rr(Wr[ar]));
+          Xr.e.queueQTE(rr, Qr, Wr).getResult().then((Sr => {
+            var Qr;
+            "boolean" === typeof Sr && (null === (Qr = (0, jr.f)()) || void 0 === Qr || Qr.send(Hr.b.QteResponse, {
+              qteId: rr,
+              qteResponse: Sr
             }))
           }))
-        }(JR.id, JR.Xu)
-      })), (0, aR.l)(OR.Y, (RR => {
-        const JR = (0, NR.i)(OR.Y, RR);
-        "number" === typeof JR && vR.d.cancelQTE(JR)
-      })), (0, aR.f)((() => {
-        vR.d.reset()
-      })), (0, aR.i)((() => {
-        vR.d.reset()
-      })), (0, aR.l)(VR.sc.EditItemCraftingRecipes, (RR => {
-        const JR = (0, NR.k)(RR);
-        (0, NR.e)(JR) && fR.n.JK("craftingRecipesEdited", {
-          itemName: JR.craftingRecipeItemName,
-          recipesForItem: JR.recipesForItem
+        }(Sr.id, Sr.Ya)
+      })), (0, tr.j)(Pr.V, (rr => {
+        const Sr = (0, qr.d)(Pr.V, rr);
+        "number" === typeof Sr && Xr.e.cancelQTE(Sr)
+      })), (0, tr.d)((() => {
+        Xr.e.reset()
+      })), (0, tr.f)((() => {
+        Xr.e.reset()
+      })), (0, tr.j)(pr.pc.EditItemCraftingRecipes, (rr => {
+        const Sr = (0, qr.f)(rr);
+        (0, qr.b)(Sr) && Er.i.Jp("craftingRecipesEdited", {
+          itemName: Sr.craftingRecipeItemName,
+          recipesForItem: Sr.recipesForItem
         })
-      })), (0, aR.l)(OR.V, (RR => {
-        const JR = (0, NR.i)(OR.V, RR);
-        JR && fR.n.JK("craftingRecipesEdited", {
-          itemName: JR.tJ,
+      })), (0, tr.j)(Pr.R, (rr => {
+        const Sr = (0, qr.d)(Pr.R, rr);
+        Sr && Er.i.Jp("craftingRecipesEdited", {
+          itemName: Sr.aS,
           recipesForItem: []
         })
       })))
     }
-    var PR = GR(25);
-    const IR = [{
+    var Gr = Qr(26);
+    const kr = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -966,1621 +966,1621 @@ export const modules = {
       movesFly: !0
     }];
 
-    function mR(RR) {
-      return AR.s.playerFlags(RR.api.apiView, 0)
+    function Ar(rr) {
+      return er.p.playerFlags(rr.api.apiView, 0)
     }
-    const zR = {
-        freeCamera: (0, rR.c)((RR => () => {
-          const JR = RR.isSessionLive && 0 !== (mR(RR) & AR.xd.FreeCamMoves),
-            GR = RR.freeCameraAllowed() && null === PR.d.get("scriptedCameraFacing");
-          return IR[(GR ? 2 : 0) + (JR ? 1 : 0)]
-        }), IR[0], (RR => (0, uR.n)(RR)))
+    const Vr = {
+        freeCamera: (0, Nr.b)((rr => () => {
+          const Sr = rr.isSessionLive && 0 !== (Ar(rr) & er.ud.FreeCamMoves),
+            Qr = rr.freeCameraAllowed() && null === Gr.c.get("scriptedCameraFacing");
+          return kr[(Qr ? 2 : 0) + (Sr ? 1 : 0)]
+        }), kr[0], (rr => (0, ar.w)(rr)))
       },
-      SR = {
-        setFreeCameraMovesFly: RR => {
-          var JR;
-          null === (JR = (0, ZR.l)()) || void 0 === JR || JR.setFreeCameraMovesFly(RR)
+      ir = {
+        setFreeCameraMovesFly: rr => {
+          var Sr;
+          null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.setFreeCameraMovesFly(rr)
         }
       },
-      jR = {
+      wr = {
         freeCameraPos: () => {
-          const RR = (0, ZR.l)();
-          return null !== RR && void 0 !== RR && RR.isSessionLive && RR.renderFrame.hasView && 0 !== (mR(RR) & AR.xd.FreeCam) ? RR.renderFrame.cameraPosition : null
+          const rr = (0, jr.f)();
+          return null !== rr && void 0 !== rr && rr.isSessionLive && rr.renderFrame.hasView && 0 !== (Ar(rr) & er.ud.FreeCam) ? rr.renderFrame.cameraPosition : null
         }
       };
-    var dR = GR(40464);
-    let ER = !1,
-      YR = !1;
+    var cr = Qr(40754);
+    let Fr = !1,
+      or = !1;
 
-    function kR() {
-      const RR = (0, ZR.l)();
-      if (null === RR || void 0 === RR || !RR.isSessionLive) return void(ER = !1);
-      const JR = 0 !== (AR.s.playerFlags(RR.api.apiView, 0) & AR.xd.FreeCam);
-      JR !== ER && (ER = JR, (0, dR.e)(JR))
+    function br() {
+      const rr = (0, jr.f)();
+      if (null === rr || void 0 === rr || !rr.isSessionLive) return void(Fr = !1);
+      const Sr = 0 !== (er.p.playerFlags(rr.api.apiView, 0) & er.ud.FreeCam);
+      Sr !== Fr && (Fr = Sr, (0, cr.b)(Sr))
     }
-    var QR = GR(377),
-      FR = GR(38150),
-      TR = GR(2170);
-    var sR = GR(42555),
-      hR = GR(42177);
-    const RJ = {
+    var Jr = Qr(379),
+      Dr = Qr(38509),
+      dr = Qr(2119);
+    var sr = Qr(42884),
+      ur = Qr(42507);
+    const rS = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let JJ = "off";
+    let SS = "off";
 
-    function GJ(RR) {
-      var JR;
-      return null === RR ? null : {
-        label: null !== (JR = (0, sR.b)(RR, "interactionPrompt")) && void 0 !== JR ? JR : null
+    function QS(rr) {
+      var Sr;
+      return null === rr ? null : {
+        label: null !== (Sr = (0, sr.b)(rr, "interactionPrompt")) && void 0 !== Sr ? Sr : null
       }
     }
-    const yJ = new Map([
-      [AR.qc.Open, {
-        label: iR.h.open
+    const ZS = new Map([
+      [er.dc.Open, {
+        label: fr.f.open
       }],
-      [AR.qc.Close, {
-        label: iR.h.close
+      [er.dc.Close, {
+        label: fr.f.close
       }],
-      [AR.qc.Milk, {
-        label: iR.h.milk
+      [er.dc.Milk, {
+        label: fr.f.milk
       }],
-      [AR.qc.Shear, {
-        label: iR.h.shear
+      [er.dc.Shear, {
+        label: fr.f.shear
       }],
-      [AR.qc.Tame, {
-        label: iR.h.tame
+      [er.dc.Tame, {
+        label: fr.f.tame
       }],
-      [AR.qc.Feed, {
-        label: iR.h.feed
+      [er.dc.Feed, {
+        label: fr.f.feed
       }],
-      [AR.qc.Ride, {
-        label: iR.h.ride
+      [er.dc.Ride, {
+        label: fr.f.ride
       }]
     ]);
-    class tJ {
+    class WS {
       constructor() {
-        this.target = RJ, this.Vq = AR.Yc, this.optionName = null, this.pickaxe = new iR.e
+        this.target = rS, this.aI = er.Oc, this.optionName = null, this.pickaxe = new fr.d
       }
-      read(RR) {
-        var JR;
-        const GR = AR.s.targetBlockId(RR.api.apiView, 0);
-        GR !== this.Vq && (this.Vq = GR, this.optionName = GR === AR.Yc ? null : `${RR.tables.getMetaInfo(GR).rootName}CrosshairText`);
-        const yR = null === this.optionName ? null : null !== (JR = RR.tables.getClientOption(this.optionName)) && void 0 !== JR ? JR : null;
-        this.pickaxe.update(function(RR, JR) {
-          var GR, yR, tR;
-          if (0 === (AR.s.playerFlags(RR.api.apiView, 0) & AR.xd.Breaking) || JR === AR.Yc || 0 === JR) return null;
+      read(rr) {
+        var Sr;
+        const Qr = er.p.targetBlockId(rr.api.apiView, 0);
+        Qr !== this.aI && (this.aI = Qr, this.optionName = Qr === er.Oc ? null : `${rr.tables.getMetaInfo(Qr).rootName}CrosshairText`);
+        const Zr = null === this.optionName ? null : null !== (Sr = rr.tables.getClientOption(this.optionName)) && void 0 !== Sr ? Sr : null;
+        this.pickaxe.update(function(rr, Sr) {
+          var Qr, Zr, Wr;
+          if (0 === (er.p.playerFlags(rr.api.apiView, 0) & er.ud.Breaking) || Sr === er.Oc || 0 === Sr) return null;
           const {
-            tables: uR
-          } = RR;
-          if (!0 === uR.getClientOption("creative")) return null;
-          const ZR = uR.nameOfId(JR),
-            qR = null === (GR = RR.items.Qq()) || void 0 === GR ? void 0 : GR.name,
-            iR = null !== (yR = uR.getItemStat(ZR, "harvestLevel")) && void 0 !== yR ? yR : 0;
-          return (0, QR.yc)({
-            blockHarvestType: uR.getDefaultItemStat(ZR, "harvestType"),
-            blockHarvestLevel: uR.getDefaultItemStat(ZR, "harvestLevel"),
-            harvestLevel: iR,
-            heldToolType: void 0 === qR ? void 0 : uR.getDefaultItemStat(qR, "harvests"),
-            heldToolLevel: void 0 === qR ? void 0 : uR.getDefaultItemStat(qR, "level")
-          }) && null !== (tR = FR.p[iR]) && void 0 !== tR ? tR : null
-        }(RR, GR)), RR.watchPromptPick(JJ);
-        const tR = "touch" === JJ ? function(RR) {
-          var JR;
-          const GR = RR.interactLabel;
-          return GR === AR.qc.Entity ? GJ(RR.promptEntity) : GR === AR.qc.TameWith ? {
-            label: (0, iR.z)(RR.tables.nameOfId(RR.interactIcon))
-          } : null !== (JR = yJ.get(GR)) && void 0 !== JR ? JR : null
-        }(RR) : GJ(RR.promptEntity);
-        return this.target = (0, TR.m)(this.target, {
-          interactPrompt: tR,
-          blockText: yR,
+            tables: ar
+          } = rr;
+          if (!0 === ar.getClientOption("creative")) return null;
+          const jr = ar.nameOfId(Sr),
+            Ir = null === (Qr = rr.items.wI()) || void 0 === Qr ? void 0 : Qr.name,
+            fr = null !== (Zr = ar.getItemStat(jr, "harvestLevel")) && void 0 !== Zr ? Zr : 0;
+          return (0, Jr.wc)({
+            blockHarvestType: ar.getDefaultItemStat(jr, "harvestType"),
+            blockHarvestLevel: ar.getDefaultItemStat(jr, "harvestLevel"),
+            harvestLevel: fr,
+            heldToolType: void 0 === Ir ? void 0 : ar.getDefaultItemStat(Ir, "harvests"),
+            heldToolLevel: void 0 === Ir ? void 0 : ar.getDefaultItemStat(Ir, "level")
+          }) && null !== (Wr = Dr.p[fr]) && void 0 !== Wr ? Wr : null
+        }(rr, Qr)), rr.watchPromptPick(SS);
+        const Wr = "touch" === SS ? function(rr) {
+          var Sr;
+          const Qr = rr.interactLabel;
+          return Qr === er.dc.Entity ? QS(rr.promptEntity) : Qr === er.dc.TameWith ? {
+            label: (0, fr.v)(rr.tables.nameOfId(rr.interactIcon))
+          } : null !== (Sr = ZS.get(Qr)) && void 0 !== Sr ? Sr : null
+        }(rr) : QS(rr.promptEntity);
+        return this.target = (0, dr.n)(this.target, {
+          interactPrompt: Wr,
+          blockText: Zr,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let uJ = null;
-    const ZJ = {
+    let aS = null;
+    const jS = {
       current: () => {
-        var RR, JR;
-        return null !== (RR = null === (JR = uJ) || void 0 === JR ? void 0 : JR.target) && void 0 !== RR ? RR : RJ
+        var rr, Sr;
+        return null !== (rr = null === (Sr = aS) || void 0 === Sr ? void 0 : Sr.target) && void 0 !== rr ? rr : rS
       },
-      watch: RR => {
-        const JR = new tJ;
-        uJ = JR;
-        const GR = (0, rR.g)((GR => {
-          let yR = JR.read(GR);
-          RR(yR);
-          const tR = (0, uR.r)((() => {
-            const tR = JR.read(GR);
-            tR !== yR && (yR = tR, RR(tR))
+      watch: rr => {
+        const Sr = new WS;
+        aS = Sr;
+        const Qr = (0, Nr.f)((Qr => {
+          let Zr = Sr.read(Qr);
+          rr(Zr);
+          const Wr = (0, ar.z)((() => {
+            const Wr = Sr.read(Qr);
+            Wr !== Zr && (Zr = Wr, rr(Wr))
           }));
           return () => {
-            tR(), GR.watchPromptPick("off")
+            Wr(), Qr.watchPromptPick("off")
           }
         }));
         return () => {
-          GR(), uJ === JR && (uJ = null)
+          Qr(), aS === Sr && (aS = null)
         }
       }
     };
-    let qJ = 0,
-      iJ = 0;
-    const fJ = {
-        health: iR.t,
-        aura: iR.l,
-        hotbar: hR.e.states.hotbar,
-        heldItemAim: hR.e.states.heldItemAim,
-        crouching: (0, rR.c)((RR => function(RR) {
-          const JR = () => 0 !== (AR.s.playerFlags(RR.apiView, 0) & AR.xd.Crouching);
+    let IS = 0,
+      fS = 0;
+    const ES = {
+        health: fr.t,
+        aura: fr.h,
+        hotbar: ur.b.states.hotbar,
+        heldItemAim: ur.b.states.heldItemAim,
+        crouching: (0, Nr.b)((rr => function(rr) {
+          const Sr = () => 0 !== (er.p.playerFlags(rr.apiView, 0) & er.ud.Crouching);
           return {
-            current: JR,
-            watch(RR) {
-              let GR = JR();
-              return (0, uR.n)((() => {
-                const yR = JR();
-                yR !== GR && (GR = yR, RR(yR))
+            current: Sr,
+            watch(rr) {
+              let Qr = Sr();
+              return (0, ar.w)((() => {
+                const Zr = Sr();
+                Zr !== Qr && (Qr = Zr, rr(Zr))
               }))
             }
           }
-        }(RR.api).current), !1, (RR => (0, uR.n)(RR))),
-        flight: (0, rR.c)((RR => () => function(RR) {
-          const JR = AR.s.playerFlags(RR.apiView, 0);
-          return (0, iR.s)(0 !== (JR & AR.xd.CanFly), 0 !== (JR & AR.xd.Flying))
-        }(RR.api)), (0, iR.s)(!1, !1), (RR => (0, uR.n)(RR))),
-        gliderBoostFuel: (0, rR.c)((RR => () => AR.s.gliderBoostFuel(RR.api.apiView, 0)), 0, (RR => (0, uR.n)(RR))),
-        crosshairTarget: ZJ
+        }(rr.api).current), !1, (rr => (0, ar.w)(rr))),
+        flight: (0, Nr.b)((rr => () => function(rr) {
+          const Sr = er.p.playerFlags(rr.apiView, 0);
+          return (0, fr.q)(0 !== (Sr & er.ud.CanFly), 0 !== (Sr & er.ud.Flying))
+        }(rr.api)), (0, fr.q)(!1, !1), (rr => (0, ar.w)(rr))),
+        gliderBoostFuel: (0, Nr.b)((rr => () => er.p.gliderBoostFuel(rr.api.apiView, 0)), 0, (rr => (0, ar.w)(rr))),
+        crosshairTarget: jS
       },
-      VJ = {
-        hotbarSlotRequested: hR.e.events.hotbarSlotRequested,
-        hotbarScrolled: hR.e.events.hotbarScrolled,
-        numberKeyPressed: hR.e.events.numberKeyPressed,
-        shotDamageToShow: (0, iR.v)((RR => !0 === (0, sR.b)(RR, "showDamageAmounts")))
+      pS = {
+        hotbarSlotRequested: ur.b.events.hotbarSlotRequested,
+        hotbarScrolled: ur.b.events.hotbarScrolled,
+        numberKeyPressed: ur.b.events.numberKeyPressed,
+        shotDamageToShow: (0, fr.u)((rr => !0 === (0, sr.b)(rr, "showDamageAmounts")))
       },
-      KJ = {
-        selectHotbarSlot: hR.e.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: RR => {
-          JJ = RR
+      xS = {
+        selectHotbarSlot: ur.b.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: rr => {
+          SS = rr
         }
       },
-      wJ = {
+      mS = {
         momentumFrac: function() {
-          var RR, JR, GR;
-          const yR = (0, ZR.l)(),
-            tR = performance.now(),
-            uR = null === yR || void 0 === yR || null === (RR = yR.items.Qq()) || void 0 === RR || null === (JR = RR.attributes) || void 0 === JR || null === (GR = JR.customAttributes) || void 0 === GR ? void 0 : GR.enchantments;
-          return qJ = null !== yR && null !== uR && void 0 !== uR && uR.Momentum ? 0 !== (AR.s.playerFlags(yR.api.apiView, 0) & AR.xd.Breaking) ? Math.max(0, AR.s.momentumFrac(yR.api.apiView, 0)) : Math.max(0, qJ - (tR - iJ) / 1500) : 0, iJ = tR, qJ
+          var rr, Sr, Qr;
+          const Zr = (0, jr.f)(),
+            Wr = performance.now(),
+            ar = null === Zr || void 0 === Zr || null === (rr = Zr.items.wI()) || void 0 === rr || null === (Sr = rr.attributes) || void 0 === Sr || null === (Qr = Sr.customAttributes) || void 0 === Qr ? void 0 : Qr.enchantments;
+          return IS = null !== Zr && null !== ar && void 0 !== ar && ar.Momentum ? 0 !== (er.p.playerFlags(Zr.api.apiView, 0) & er.ud.Breaking) ? Math.max(0, er.p.momentumFrac(Zr.api.apiView, 0)) : Math.max(0, IS - (Wr - fS) / 1500) : 0, fS = Wr, IS
         }
       };
-    var rJ = GR(42114);
-    const eJ = {
-      lobbyManage(RR) {
-        var JR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.LobbyManage, RR)
+    var NS = Qr(42445);
+    const US = {
+      lobbyManage(rr) {
+        var Sr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.LobbyManage, rr)
       }
     };
-    var aJ = GR(1336),
-      LJ = GR(37651),
-      nJ = GR(10149),
-      UJ = GR(1800),
-      WJ = GR(3428),
-      AJ = GR(5692);
-    let CJ = !1;
+    var tS = Qr(1287),
+      hS = Qr(38031),
+      zS = Qr(9904),
+      YS = Qr(1758),
+      nS = Qr(3372),
+      eS = Qr(5619);
+    let KS = !1;
 
-    function XJ(RR) {
-      CJ = RR
+    function yS(rr) {
+      KS = rr
     }
 
-    function MJ() {
-      "inGame" !== PR.d.get("gameState") || (0, UJ.r)() || fR.n.JK("ctrlCrouchWithoutFullscreen")
+    function BS() {
+      "inGame" !== Gr.c.get("gameState") || (0, YS.p)() || Er.i.Jp("ctrlCrouchWithoutFullscreen")
     }
-    let BJ = !1;
-    const lJ = {
+    let TS = !1;
+    const vS = {
         OpenEmoteWheel: () => {
-          XJ(!0), BJ = !0, queueMicrotask((() => {
-            BJ && (BJ = !1, fR.n.JK("requestEmoteWheelHoldOpen"))
+          yS(!0), TS = !0, queueMicrotask((() => {
+            TS && (TS = !1, Er.i.Jp("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          fR.n.JK("toggleFullCoordinateOverlay")
+          Er.i.Jp("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, LJ.e)() || fR.n.JK("YKeyPressed")
+          (0, hS.e)() || Er.i.Jp("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, LJ.e)() || fR.n.JK("XKeyPressed")
+          (0, hS.e)() || Er.i.Jp("XKeyPressed")
         },
-        CtrlCrouch: MJ,
+        CtrlCrouch: BS,
         "primary-fire": () => {
-          fR.n.JK("mouseState", {
-            hq: aJ.e.DownFirePrimary,
+          Er.i.Jp("mouseState", {
+            bI: tS.d.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          fR.n.JK("mouseState", {
-            hq: aJ.e.DownFireSecondary,
+          Er.i.Jp("mouseState", {
+            bI: tS.d.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          fR.n.JK("mouseState", {
-            hq: aJ.e.TouchDownLong,
+          Er.i.Jp("mouseState", {
+            bI: tS.d.TouchDownLong,
             isDown: !0
           })
         }
       },
-      pJ = {
+      OS = {
         OpenEmoteWheel: () => {
-          XJ(!1), BJ ? (BJ = !1, (0, nJ.b)() || fR.n.JK("requestEmoteWheelHoldOpen")) : fR.n.JK("requestEmoteWheelHoldRelease")
+          yS(!1), TS ? (TS = !1, (0, zS.c)() || Er.i.Jp("requestEmoteWheelHoldOpen")) : Er.i.Jp("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: MJ,
+        CtrlCrouch: BS,
         "primary-fire": () => {
-          fR.n.JK("mouseState", {
-            hq: aJ.e.UpFirePrimary,
+          Er.i.Jp("mouseState", {
+            bI: tS.d.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          fR.n.JK("mouseState", {
-            hq: aJ.e.UpFireSecondary,
+          Er.i.Jp("mouseState", {
+            bI: tS.d.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          fR.n.JK("mouseState", {
-            hq: aJ.e.UpFirePrimary,
+          Er.i.Jp("mouseState", {
+            bI: tS.d.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let gJ = !1;
+    let LS = !1;
 
-    function bJ() {
-      gJ || (gJ = !0, (0, AJ.f)((RR => {
-        if ((0, tR.b)()) return;
-        const JR = (0, AJ.d)(RR) ? "primary-fire" : RR.action;
-        var GR;
-        if (RR.down) {
-          if (0 === (RR.flags & WJ.b.Synthetic)) {
-            var yR;
-            null === (yR = lJ[JR]) || void 0 === yR || yR.call(lJ)
+    function lS() {
+      LS || (LS = !0, (0, eS.l)((rr => {
+        if ((0, Wr.d)()) return;
+        const Sr = (0, eS.i)(rr) ? "primary-fire" : rr.action;
+        var Qr;
+        if (rr.down) {
+          if (0 === (rr.flags & nS.e.Synthetic)) {
+            var Zr;
+            null === (Zr = vS[Sr]) || void 0 === Zr || Zr.call(vS)
           }
-        } else null === (GR = pJ[JR]) || void 0 === GR || GR.call(pJ)
+        } else null === (Qr = OS[Sr]) || void 0 === Qr || Qr.call(OS)
       })))
     }
-    var vJ = GR(359),
-      OJ = GR(103),
-      xJ = GR(46),
-      NJ = GR(42423),
-      DJ = GR(1449),
-      HJ = GR(3452);
-    let oJ = !1;
-    const cJ = {
-      sendCodeCollab(RR) {
-        var JR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.CodeCollab, (0, xR.q)(RR), (0, HJ.e)(RR))
+    var XS = Qr(360),
+      PS = Qr(109),
+      HS = Qr(43),
+      qS = Qr(42751),
+      RS = Qr(1422),
+      gS = Qr(3394);
+    let CS = !1;
+    const MS = {
+      sendCodeCollab(rr) {
+        var Sr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.CodeCollab, (0, Hr.l)(rr), (0, gS.f)(rr))
       }
     };
-    var PJ = GR(40356),
-      IJ = GR(10057);
-    let mJ = null,
-      zJ = !1,
-      SJ = null;
+    var GS = Qr(40670),
+      kS = Qr(9827);
+    let AS = null,
+      VS = !1,
+      iS = null;
 
-    function jJ() {
-      return "inGame" === PR.d.get("gameState") && !(0, LJ.e)()
+    function wS() {
+      return "inGame" === Gr.c.get("gameState") && !(0, hS.e)()
     }
-    const dJ = {
-        OpenInventory: RR => {
-          (0, UJ.y)(RR, "inventory", (0, rJ.p)())
+    const cS = {
+        OpenInventory: rr => {
+          (0, YS.v)(rr, "inventory", (0, NS.o)())
         },
-        OpenShop: RR => {
-          mJ && jJ() && (0, UJ.v)(RR, vJ.o.SHOP, !mJ.shopIsEmpty(WR.c.get("shopInfo")))
+        OpenShop: rr => {
+          AS && wS() && (0, YS.s)(rr, XS.q.SHOP, !AS.shopIsEmpty(nr.d.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: RR => {
-          var JR, GR;
-          jJ() && (0, UJ.A)(RR, (0, PJ.b)({
-            lobbyLeaderboardInfo: WR.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: WR.c.get("lobbyManage")
-          }), null !== (JR = null === (GR = mJ) || void 0 === GR ? void 0 : GR.getClientGameLeaderboardKey()) && void 0 !== JR ? JR : null)
+        OpenLobbyLeaderboard: rr => {
+          var Sr, Qr;
+          wS() && (0, YS.w)(rr, (0, GS.c)({
+            lobbyLeaderboardInfo: nr.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: nr.d.get("lobbyManage")
+          }), null !== (Sr = null === (Qr = AS) || void 0 === Qr ? void 0 : Qr.getClientGameLeaderboardKey()) && void 0 !== Sr ? Sr : null)
         },
-        OpenTasksAndLeaderboard: RR => {
-          var JR;
-          const GR = null === (JR = mJ) || void 0 === JR ? void 0 : JR.getClientGameMapKey();
-          GR ? (0, UJ.B)(RR, !0, GR) : (0, UJ.y)(RR, "retentionFeatures", !(!WR.c.get("_tasks") && !WR.c.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: rr => {
+          var Sr;
+          const Qr = null === (Sr = AS) || void 0 === Sr ? void 0 : Sr.getClientGameMapKey();
+          Qr ? (0, YS.y)(rr, !0, Qr) : (0, YS.v)(rr, "retentionFeatures", !(!nr.d.get("_tasks") && !nr.d.get("_availableLeaderboards")))
         },
-        OpenInviteLink: RR => {
-          (0, UJ.y)(RR, "inviteLink", OJ.featureFlags.canUseInviteLinks)
+        OpenInviteLink: rr => {
+          (0, YS.v)(rr, "inviteLink", PS.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: RR => {
-          jJ() && function(RR) {
-            const JR = (0, ZR.l)(),
-              GR = null !== JR && void 0 !== JR && JR.isSessionLive ? JR.api : null,
-              yR = GR ? GR.vW(GR.localId) : null;
-            (0, UJ.B)(RR, null !== yR && (0, HJ.b)((0, DJ.d)()), (() => {
-              (0, HJ.i)(yR)
+        OpenCodeEditor: rr => {
+          wS() && function(rr) {
+            const Sr = (0, jr.f)(),
+              Qr = null !== Sr && void 0 !== Sr && Sr.isSessionLive ? Sr.api : null,
+              Zr = Qr ? Qr.JY(Qr.localId) : null;
+            (0, YS.y)(rr, null !== Zr && (0, gS.e)((0, RS.b)()), (() => {
+              (0, gS.h)(Zr)
             }))
-          }(RR)
+          }(rr)
         },
         HideUi: () => {
-          fR.n.JK("showUi", !1)
+          Er.i.Jp("showUi", !1)
         }
       },
-      EJ = {
+      FS = {
         HideUi: () => {
-          fR.n.JK("showUi", !0)
+          Er.i.Jp("showUi", !0)
         }
       };
 
-    function YJ() {
-      zJ || (zJ = !0, GR.e(183).then((() => GR(64110))).then((RR => {
-        mJ = RR
-      }), (RR => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", RR)
-      })), (0, NJ.A)((RR => {
-        RR || !(0, NJ.k)() || (0, OJ.isMobile)() || !xJ.i.getItem("disableFullscreen") || (0, UJ.o)() || PR.d.set({
-          openEverythingMenuName: vJ.o.SETTINGS
+    function oS() {
+      VS || (VS = !0, Qr.e(183).then((() => Qr(64569))).then((rr => {
+        AS = rr
+      }), (rr => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", rr)
+      })), (0, qS.v)((rr => {
+        rr || !(0, qS.g)() || (0, PS.isMobile)() || !HS.j.getItem("disableFullscreen") || (0, YS.l)() || Gr.c.set({
+          openEverythingMenuName: XS.q.SETTINGS
         })
-      })), (0, AJ.f)((RR => {
+      })), (0, eS.l)((rr => {
         let {
-          action: JR,
-          down: GR,
-          press: yR
-        } = RR;
-        var uR, ZR;
-        (0, tR.b)() || (GR ? null === (uR = dJ[JR]) || void 0 === uR || uR.call(dJ, function(RR) {
-          var JR;
-          if (0 === RR || (null === (JR = SJ) || void 0 === JR ? void 0 : JR.press) !== RR) {
-            const JR = {
-              press: RR,
-              event: (0, IJ.e)("inputAction")
+          action: Sr,
+          down: Qr,
+          press: Zr
+        } = rr;
+        var ar, jr;
+        (0, Wr.d)() || (Qr ? null === (ar = cS[Sr]) || void 0 === ar || ar.call(cS, function(rr) {
+          var Sr;
+          if (0 === rr || (null === (Sr = iS) || void 0 === Sr ? void 0 : Sr.press) !== rr) {
+            const Sr = {
+              press: rr,
+              event: (0, kS.e)("inputAction")
             };
-            SJ = JR, queueMicrotask((() => {
-              SJ === JR && (SJ = null)
+            iS = Sr, queueMicrotask((() => {
+              iS === Sr && (iS = null)
             }))
           }
-          return SJ.event
-        }(yR)) : null === (ZR = EJ[JR]) || void 0 === ZR || ZR.call(EJ))
+          return iS.event
+        }(Zr)) : null === (jr = FS[Sr]) || void 0 === jr || jr.call(FS))
       })))
     }
-    var kJ = GR(40270),
-      QJ = GR(40258),
-      FJ = GR(40256);
-    const TJ = {
-      completeTask(RR) {
-        var JR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.CompleteTask, (0, xR.s)(RR))
+    var bS = Qr(40587),
+      JS = Qr(40583),
+      DS = Qr(40574);
+    const dS = {
+      completeTask(rr) {
+        var Sr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.CompleteTask, (0, Hr.p)(rr))
       },
-      setServerCookie(RR) {
-        var JR;
+      setServerCookie(rr) {
+        var Sr;
         let {
-          key: GR,
-          value: yR
-        } = RR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.GeneralCookieSet, (0, xR.y)({
-          WV: GR,
-          AV: yR
+          key: Qr,
+          value: Zr
+        } = rr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.GeneralCookieSet, (0, Hr.w)({
+          xp: Qr,
+          mp: Zr
         }))
       },
-      answerUiRequest(RR) {
-        var JR;
+      answerUiRequest(rr) {
+        var Sr;
         let {
-          id: GR,
-          wV: yR
-        } = RR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.UiRequestResp, (0, xR.U)({
-          XZ: GR,
-          MZ: yR,
-          BZ: 5
+          id: Qr,
+          ap: Zr
+        } = rr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.UiRequestResp, (0, Hr.R)({
+          zj: Qr,
+          Yj: Zr,
+          nj: 5
         }))
       },
-      chooseRewardedAd(RR) {
-        var JR;
+      chooseRewardedAd(rr) {
+        var Sr;
         let {
-          id: GR,
-          wV: yR
-        } = RR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.UiRequestResponded, (0, xR.T)({
-          id: GR,
-          wV: yR
+          id: Qr,
+          ap: Zr
+        } = rr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.UiRequestResponded, (0, Hr.P)({
+          id: Qr,
+          ap: Zr
         }))
       },
-      requestLeaderboard(RR) {
-        var JR;
+      requestLeaderboard(rr) {
+        var Sr;
         let {
-          category: GR,
-          timeframe: yR,
-          seeTop: tR
-        } = RR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.LeaderboardRequest, {
-          category: GR,
-          timeframe: yR,
-          seeTop: tR
+          category: Qr,
+          timeframe: Zr,
+          seeTop: Wr
+        } = rr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.LeaderboardRequest, {
+          category: Qr,
+          timeframe: Zr,
+          seeTop: Wr
         })
       }
     };
-    let sJ = !1;
-    const hJ = UR.g.Vn / 2,
-      RG = [hJ, -hJ, -hJ, -hJ, hJ, hJ, -hJ, hJ],
-      JG = [0, 0, 0];
+    let sS = !1;
+    const uS = Yr.i.Nz / 2,
+      rQ = [uS, -uS, -uS, -uS, uS, uS, -uS, uS],
+      SQ = [0, 0, 0];
 
-    function GG(RR, JR, GR) {
-      for (let yR = 0; yR < RR.length; yR += 2)
-        if (RR[yR] === JR && RR[yR + 1] === GR) return !0;
+    function QQ(rr, Sr, Qr) {
+      for (let Zr = 0; Zr < rr.length; Zr += 2)
+        if (rr[Zr] === Sr && rr[Zr + 1] === Qr) return !0;
       return !1
     }
-    const yG = {
+    const ZQ = {
       blocksStandingOn: function() {
-        const RR = (0, ZR.l)();
-        if (null === RR) return [];
+        const rr = (0, jr.f)();
+        if (null === rr) return [];
         const {
-          api: JR,
-          chunks: GR,
-          tables: yR
-        } = RR;
-        if (!JR.readPosition(JR.localId, JG)) return [];
-        const [tR, uR, qR] = JG, iR = Math.ceil(uR) - 1, fR = [], VR = [];
-        for (let ZR = 0; ZR < RG.length; ZR += 2) {
-          const RR = tR + RG[ZR],
-            JR = qR + RG[ZR + 1];
-          if (Number.isInteger(RR) || Number.isInteger(JR)) continue;
-          const uR = Math.floor(RR),
-            KR = Math.floor(JR);
-          if (GG(VR, uR, KR)) continue;
-          const wR = GR.Vq(uR, iR, KR);
-          yR.isSolidBlockId(wR) && (VR.push(uR, KR), fR.push(yR.nameOfId(wR)))
+          api: Sr,
+          chunks: Qr,
+          tables: Zr
+        } = rr;
+        if (!Sr.readPosition(Sr.localId, SQ)) return [];
+        const [Wr, ar, Ir] = SQ, fr = Math.ceil(ar) - 1, Er = [], pr = [];
+        for (let jr = 0; jr < rQ.length; jr += 2) {
+          const rr = Wr + rQ[jr],
+            Sr = Ir + rQ[jr + 1];
+          if (Number.isInteger(rr) || Number.isInteger(Sr)) continue;
+          const ar = Math.floor(rr),
+            xr = Math.floor(Sr);
+          if (QQ(pr, ar, xr)) continue;
+          const mr = Qr.aI(ar, fr, xr);
+          Zr.isSolidBlockId(mr) && (pr.push(ar, xr), Er.push(Zr.nameOfId(mr)))
         }
-        return fR
+        return Er
       },
       dropAhead: function() {
-        const RR = (0, ZR.l)();
-        return null !== RR && 0 !== (AR.s.playerFlags(RR.api.apiView, 0) & AR.xd.DropAhead)
+        const rr = (0, jr.f)();
+        return null !== rr && 0 !== (er.p.playerFlags(rr.api.apiView, 0) & er.ud.DropAhead)
       }
     };
-    var tG = GR(38060),
-      uG = GR(40333),
-      ZG = GR(1493),
-      qG = GR(42188);
-    const iG = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      fG = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var WQ = Qr(38415),
+      aQ = Qr(40646),
+      jQ = Qr(1475),
+      IQ = Qr(42519);
+    const fQ = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      EQ = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function VG() {
-      const RR = new Set;
+    function pQ() {
+      const rr = new Set;
       return {
-        add: JR => (RR.add(JR), () => {
-          RR.delete(JR)
+        add: Sr => (rr.add(Sr), () => {
+          rr.delete(Sr)
         }),
         fire() {
-          for (const JR of RR) JR()
+          for (const Sr of rr) Sr()
         }
       }
     }
-    const KG = Object.freeze([]);
+    const xQ = Object.freeze([]);
 
-    function wG(RR, JR) {
-      let GR, {
-        rereads: yR,
-        followLocalId: tR
-      } = JR;
-      const ZR = () => (GR = (0, TR.m)(GR, RR()), GR);
+    function mQ(rr, Sr) {
+      let Qr, {
+        rereads: Zr,
+        followLocalId: Wr
+      } = Sr;
+      const jr = () => (Qr = (0, dr.n)(Qr, rr()), Qr);
       return {
-        current: ZR,
-        watch(RR) {
-          const JR = (0, eR.e)((JR => {
-            yR(JR) && RR(ZR())
+        current: jr,
+        watch(rr) {
+          const Sr = (0, Ur.e)((Sr => {
+            Zr(Sr) && rr(jr())
           }));
-          if (!tR) return JR;
-          let GR = (0, rR.e)();
-          const qR = (0, uR.r)((() => {
-            const JR = (0, rR.e)();
-            JR !== GR && (GR = JR, RR(ZR()))
+          if (!Wr) return Sr;
+          let Qr = (0, Nr.c)();
+          const Ir = (0, ar.z)((() => {
+            const Sr = (0, Nr.c)();
+            Sr !== Qr && (Qr = Sr, rr(jr()))
           }));
           return () => {
-            JR(), qR()
+            Sr(), Ir()
           }
         }
       }
     }
-    const rG = {
-        players: wG((function() {
-          const RR = eR.f.ids(),
-            JR = {};
-          for (const uR of RR) {
-            var GR, yR, tR;
-            JR[uR] = {
-              name: null !== (GR = eR.f.getName(uR)) && void 0 !== GR ? GR : null,
-              ranks: null !== (yR = eR.f.getSetting(uR, "ranks")) && void 0 !== yR ? yR : KG,
-              cosmetics: null !== (tR = (0, eR.i)(uR)) && void 0 !== tR ? tR : null
+    const NQ = {
+        players: mQ((function() {
+          const rr = Ur.g.ids(),
+            Sr = {};
+          for (const ar of rr) {
+            var Qr, Zr, Wr;
+            Sr[ar] = {
+              name: null !== (Qr = Ur.g.getName(ar)) && void 0 !== Qr ? Qr : null,
+              ranks: null !== (Zr = Ur.g.getSetting(ar, "ranks")) && void 0 !== Zr ? Zr : xQ,
+              cosmetics: null !== (Wr = (0, Ur.j)(ar)) && void 0 !== Wr ? Wr : null
             }
           }
           return {
-            ids: RR,
-            byId: JR,
-            localId: (0, rR.e)()
+            ids: rr,
+            byId: Sr,
+            localId: (0, Nr.c)()
           }
         }), {
-          rereads: RR => "roster" !== RR.kind || RR.members || RR.settings.has("ranks"),
+          rereads: rr => "roster" !== rr.kind || rr.members || rr.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: wG((function() {
-          const RR = {};
-          for (const tR of eR.f.ids()) {
-            var JR, GR, yR;
-            RR[tR] = {
-              colour: null !== (JR = eR.f.getSetting(tR, "colorInLobbyLeaderboard")) && void 0 !== JR ? JR : null,
-              values: null !== (GR = eR.f.getSetting(tR, "lobbyLeaderboardValues")) && void 0 !== GR ? GR : null,
-              tags: null !== (yR = eR.f.getSetting(tR, "lobbyLeaderboardTags")) && void 0 !== yR ? yR : null
+        lobbyLeaderboardRows: mQ((function() {
+          const rr = {};
+          for (const Wr of Ur.g.ids()) {
+            var Sr, Qr, Zr;
+            rr[Wr] = {
+              colour: null !== (Sr = Ur.g.getSetting(Wr, "colorInLobbyLeaderboard")) && void 0 !== Sr ? Sr : null,
+              values: null !== (Qr = Ur.g.getSetting(Wr, "lobbyLeaderboardValues")) && void 0 !== Qr ? Qr : null,
+              tags: null !== (Zr = Ur.g.getSetting(Wr, "lobbyLeaderboardTags")) && void 0 !== Zr ? Zr : null
             }
           }
-          return RR
+          return rr
         }), {
-          rereads: function(RR) {
-            if ("roster" !== RR.kind) return "reset" === RR.kind;
+          rereads: function(rr) {
+            if ("roster" !== rr.kind) return "reset" === rr.kind;
             const {
-              members: JR,
-              settings: GR
-            } = RR;
-            return JR || GR.has("colorInLobbyLeaderboard") || GR.has("lobbyLeaderboardValues") || GR.has("lobbyLeaderboardTags")
+              members: Sr,
+              settings: Qr
+            } = rr;
+            return Sr || Qr.has("colorInLobbyLeaderboard") || Qr.has("lobbyLeaderboardValues") || Qr.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      eG = {
+      UQ = {
         cosmeticsUpdated: {
-          watch: RR => (0, eR.e)((JR => {
-            if ("cosmetics" !== JR.kind) return;
-            const GR = (0, rR.e)();
-            RR(JR.updates.map((RR => {
+          watch: rr => (0, Ur.e)((Sr => {
+            if ("cosmetics" !== Sr.kind) return;
+            const Qr = (0, Nr.c)();
+            rr(Sr.updates.map((rr => {
               let {
-                Zt: JR,
-                ft: yR,
-                Vt: tR
-              } = RR;
+                IW: Sr,
+                fW: Zr,
+                EW: Wr
+              } = rr;
               return {
-                local: JR === GR,
-                ft: yR,
-                Vt: tR
+                local: Sr === Qr,
+                fW: Zr,
+                EW: Wr
               }
             })))
           }))
         }
       };
-    var aG = GR(4053),
-      LG = GR(1943),
-      nG = GR(726),
-      UG = GR(42463);
-    let WG = !1,
-      AG = null;
-    const CG = {
-      setShopOpen(RR) {
-        var JR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.ShopMenuChanged, (0, xR.O)(RR))
+    var tQ = Qr(4010),
+      hQ = Qr(1885),
+      zQ = Qr(727),
+      YQ = Qr(42787);
+    let nQ = !1,
+      eQ = null;
+    const KQ = {
+      setShopOpen(rr) {
+        var Sr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.ShopMenuChanged, (0, Hr.M)(rr))
       },
-      buyShopItem(RR) {
-        var JR;
+      buyShopItem(rr) {
+        var Sr;
         let {
-          categoryKey: GR,
-          itemKey: yR,
-          userInput: tR
-        } = RR;
-        null === (JR = (0, ZR.l)()) || void 0 === JR || JR.send(xR.d.ItemBought, {
-          categoryKey: GR,
-          itemKey: yR,
-          shopVersion: WR.c.get("_shopVersion"),
-          userInput: tR
+          categoryKey: Qr,
+          itemKey: Zr,
+          userInput: Wr
+        } = rr;
+        null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.send(Hr.b.ItemBought, {
+          categoryKey: Qr,
+          itemKey: Zr,
+          shopVersion: nr.d.get("_shopVersion"),
+          userInput: Wr
         })
       }
     };
-    let XG = !1;
-    var MG = GR(5699);
-    const BG = WJ.C.LookFrozen | WJ.C.ClicksSuppressed;
+    let yQ = !1;
+    var BQ = Qr(5628);
+    const TQ = nS.y.LookFrozen | nS.y.ClicksSuppressed;
 
-    function lG(RR, JR) {
-      var GR;
-      null !== (GR = (0, ZR.l)()) && void 0 !== GR && GR.send(RR, JR) || console.warn(`[bloxd-wasm-client] message ${RR} not sent: no live game or the core's command ring is full`)
-    }(0, aR.l)(OR.ob, (RR => {
-      const JR = (0, NR.i)(OR.ob, RR);
-      void 0 !== JR && fR.n.JK("setDiscordReportKey", JR)
+    function vQ(rr, Sr) {
+      var Qr;
+      null !== (Qr = (0, jr.f)()) && void 0 !== Qr && Qr.send(rr, Sr) || console.warn(`[bloxd-wasm-client] message ${rr} not sent: no live game or the core's command ring is full`)
+    }(0, tr.j)(Pr.ib, (rr => {
+      const Sr = (0, qr.d)(Pr.ib, rr);
+      void 0 !== Sr && Er.i.Jp("setDiscordReportKey", Sr)
     }));
-    const pG = {
-      ignorePlayer(RR) {
-        lG(xR.d.IgnoreUser, (0, xR.z)({
-          fV: RR
+    const OQ = {
+      ignorePlayer(rr) {
+        vQ(Hr.b.IgnoreUser, (0, Hr.y)({
+          Qp: rr
         }))
       },
-      reportPlayer(RR) {
+      reportPlayer(rr) {
         let {
-          playerId: JR,
-          chatMsgId: GR,
-          contextChatMsgIds: yR,
-          policy: tR,
-          details: uR
-        } = RR;
-        lG(xR.d.UserReport, (0, xR.cb)({
-          PV: JR,
-          IV: GR,
-          policy: tR,
-          Kq: uR,
-          mV: yR
+          playerId: Sr,
+          chatMsgId: Qr,
+          contextChatMsgIds: Zr,
+          policy: Wr,
+          details: ar
+        } = rr;
+        vQ(Hr.b.UserReport, (0, Hr._)({
+          Xp: Sr,
+          Pp: Qr,
+          policy: Wr,
+          jI: ar,
+          Hp: Zr
         }))
       },
-      reportWorldCodeChat(RR) {
+      reportWorldCodeChat(rr) {
         let {
-          chatMsgId: JR,
-          policy: GR,
-          details: yR
-        } = RR;
-        lG(xR.d.UserReport, (0, xR.cb)({
-          PV: "",
-          IV: JR,
-          policy: GR,
-          Kq: yR,
-          mV: []
+          chatMsgId: Sr,
+          policy: Qr,
+          details: Zr
+        } = rr;
+        vQ(Hr.b.UserReport, (0, Hr._)({
+          Xp: "",
+          Pp: Sr,
+          policy: Qr,
+          jI: Zr,
+          Hp: []
         }))
       },
-      requestDiscordReportKey(RR) {
-        lG(xR.d.ReqDiscordReportKey, (0, xR.M)(RR))
+      requestDiscordReportKey(rr) {
+        vQ(Hr.b.ReqDiscordReportKey, (0, Hr.I)(rr))
       },
-      reportLobbyOrGame(RR) {
+      reportLobbyOrGame(rr) {
         let {
-          target: JR,
-          policy: GR,
-          details: yR
-        } = RR;
-        "customGame" === JR ? lG(xR.d.CustomGameReport, (0, xR.w)({
-          policy: GR,
-          Kq: yR
-        })) : lG(xR.d.LobbyReport, (0, xR.D)({
-          policy: GR,
-          Kq: yR
+          target: Sr,
+          policy: Qr,
+          details: Zr
+        } = rr;
+        "customGame" === Sr ? vQ(Hr.b.CustomGameReport, (0, Hr.t)({
+          policy: Qr,
+          jI: Zr
+        })) : vQ(Hr.b.LobbyReport, (0, Hr.C)({
+          policy: Qr,
+          jI: Zr
         }))
       },
-      updateMyCosmetic(RR) {
-        lG(xR.d.UpdateMyCosmetic, (0, xR.bb)(RR))
+      updateMyCosmetic(rr) {
+        vQ(Hr.b.UpdateMyCosmetic, (0, Hr.X)(rr))
       },
-      holdEmoteWheel(RR) {
-        !RR || CJ ? (0, MG.i)(BG, RR ? BG : 0) : fR.n.JK("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(rr) {
+        !rr || KS ? (0, BQ.f)(TQ, rr ? TQ : 0) : Er.i.Jp("requestEmoteWheelHoldRelease")
       }
     };
-    var gG = GR(42563),
-      bG = GR(5844),
-      vG = GR(40965);
-    const OG = [0, 0, 0],
-      xG = [0, 0, 0],
-      NG = [0, 0, 0],
-      DG = {
-        blockAtViewPoint(RR) {
+    var LQ = Qr(42890),
+      lQ = Qr(5779),
+      XQ = Qr(41311);
+    const PQ = [0, 0, 0],
+      HQ = [0, 0, 0],
+      qQ = [0, 0, 0],
+      RQ = {
+        blockAtViewPoint(rr) {
           let {
-            x: JR,
-            y: GR
-          } = RR;
-          const yR = (0, ZR.l)();
-          if (null === yR || void 0 === yR || !yR.renderFrame.hasView) return null;
+            x: Sr,
+            y: Qr
+          } = rr;
+          const Zr = (0, jr.f)();
+          if (null === Zr || void 0 === Zr || !Zr.renderFrame.hasView) return null;
           const {
-            renderFrame: tR,
-            clientApi: uR,
-            api: qR
-          } = yR;
-          let iR = 0;
-          return (0, vG.e)(((RR, JR, GR) => (iR = uR.getBlockId(RR, JR, GR), 0 !== iR)), tR.cameraPosition, (0, vG.f)((RR => AR.s.viewProj(qR.apiView, 0, RR)), JR, GR, OG), vG.d, xG, NG) ? {
-            pos: [xG[0], xG[1], xG[2]],
-            normal: [NG[0], NG[1], NG[2]],
-            name: (0, bG.h)(iR)
+            renderFrame: Wr,
+            clientApi: ar,
+            api: Ir
+          } = Zr;
+          let fr = 0;
+          return (0, XQ.h)(((rr, Sr, Qr) => (fr = ar.getBlockId(rr, Sr, Qr), 0 !== fr)), Wr.cameraPosition, (0, XQ.k)((rr => er.p.viewProj(Ir.apiView, 0, rr)), Sr, Qr, PQ), XQ.e, HQ, qQ) ? {
+            pos: [HQ[0], HQ[1], HQ[2]],
+            normal: [qQ[0], qQ[1], qQ[2]],
+            name: (0, lQ.g)(fr)
           } : null
         }
       },
-      HG = {
-        setBlockHighlight(RR) {
-          var JR;
-          null === (JR = (0, ZR.l)()) || void 0 === JR || JR.setBlockHighlight(RR)
+      gQ = {
+        setBlockHighlight(rr) {
+          var Sr;
+          null === (Sr = (0, jr.f)()) || void 0 === Sr || Sr.setBlockHighlight(rr)
         }
       };
-    var oG = GR(2144),
-      cG = GR(42454),
-      PG = GR(42568),
-      IG = GR(2177),
-      mG = GR(37558),
-      zG = GR(271);
-    const SG = {
+    var CQ = Qr(2098),
+      MQ = Qr(42776),
+      GQ = Qr(42895),
+      kQ = Qr(2130),
+      AQ = Qr(37942),
+      VQ = Qr(272);
+    const iQ = {
         icon: ".EntireInventoryWrapper .InvenBodyRight .InvenItem .DrawnBlockIcon",
         fallbackRem: 3.4,
         asked: new Set
       },
-      jG = {
+      wQ = {
         icon: ".EntireInventoryWrapper .LazyLoadedItemWrapper .InvenItem .DrawnBlockIcon",
-        fallbackRem: .9 * SG.fallbackRem,
+        fallbackRem: .9 * iQ.fallbackRem,
         asked: new Set
       },
-      dG = 2e3,
-      EG = 4;
-    let YG = [],
-      kG = !1,
-      QG = !1,
-      FG = !1;
-    const TG = new Set,
-      sG = [];
-    let hG = 0,
-      Ry = null;
+      cQ = 2e3,
+      FQ = 4;
+    let oQ = [],
+      bQ = !1,
+      JQ = !1,
+      DQ = !1;
+    const dQ = new Set,
+      sQ = [];
+    let uQ = 0,
+      rZ = null;
 
-    function Jy() {
-      return kG && (0, mG.m)()
+    function SZ() {
+      return bQ && (0, AQ.f)()
     }
 
-    function Gy() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yR.gameBridge.latest("inventory");
-      if (FG && !QG) {
-        for (const GR of RR.player) {
-          var JR;
-          if (null !== GR) yy(null !== (JR = GR.icon) && void 0 !== JR ? JR : GR.name, SG)
+    function QZ() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Zr.gameBridge.latest("inventory");
+      if (DQ && !JQ) {
+        for (const Qr of rr.player) {
+          var Sr;
+          if (null !== Qr) ZZ(null !== (Sr = Qr.icon) && void 0 !== Sr ? Sr : Qr.name, iQ)
         }
-        for (const RR of [...AR.I, ...YG]) yy(RR, jG);
-        uy()
+        for (const rr of [...er.C, ...oQ]) ZZ(rr, wQ);
+        aZ()
       }
     }
 
-    function yy(RR, JR) {
-      JR.asked.has(RR) || TG.has(RR) || ("model" === yR.gameBridge.lookup("itemIcon", RR).kind ? (JR.asked.add(RR), sG.push({
-        name: RR,
-        slot: JR
-      })) : TG.add(RR))
+    function ZZ(rr, Sr) {
+      Sr.asked.has(rr) || dQ.has(rr) || ("model" === Zr.gameBridge.lookup("itemIcon", rr).kind ? (Sr.asked.add(rr), sQ.push({
+        name: rr,
+        slot: Sr
+      })) : dQ.add(rr))
     }
 
-    function ty(RR) {
-      YG = RR, Gy()
+    function WZ(rr) {
+      oQ = rr, QZ()
     }
 
-    function uy() {
-      !FG || QG || null !== Ry || 0 === sG.length || hG >= EG || (Ry = (0, zG.e)((() => {
-        Ry = null;
-        const RR = sG.shift();
-        void 0 !== RR && FG && (hG++, async function(RR, JR) {
-          var GR, tR;
-          if (await (0, mG.r)(), !FG) return void JR.asked.delete(RR);
-          if (!(0, mG.m)()) return void(QG = !0);
-          const uR = window.devicePixelRatio,
-            ZR = null !== (GR = null === (tR = document.querySelector(JR.icon)) || void 0 === tR ? void 0 : tR.getBoundingClientRect().width) && void 0 !== GR ? GR : 0,
-            qR = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
-            iR = Math.round((ZR > 0 ? ZR : JR.fallbackRem * qR) * uR);
+    function aZ() {
+      !DQ || JQ || null !== rZ || 0 === sQ.length || uQ >= FQ || (rZ = (0, VQ.c)((() => {
+        rZ = null;
+        const rr = sQ.shift();
+        void 0 !== rr && DQ && (uQ++, async function(rr, Sr) {
+          var Qr, Wr;
+          if (await (0, AQ.k)(), !DQ) return void Sr.asked.delete(rr);
+          if (!(0, AQ.f)()) return void(JQ = !0);
+          const ar = window.devicePixelRatio,
+            jr = null !== (Qr = null === (Wr = document.querySelector(Sr.icon)) || void 0 === Wr ? void 0 : Wr.getBoundingClientRect().width) && void 0 !== Qr ? Qr : 0,
+            Ir = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+            fr = Math.round((jr > 0 ? jr : Sr.fallbackRem * Ir) * ar);
           try {
-            await yR.gameBridge.query("blockIcon", {
-              name: RR,
-              size: iR,
-              lineWidth: (0, IG.e)(uR)
-            }) || JR.asked.delete(RR)
+            await Zr.gameBridge.query("blockIcon", {
+              name: rr,
+              size: fr,
+              lineWidth: (0, kQ.b)(ar)
+            }) || Sr.asked.delete(rr)
           } catch {
-            JR.asked.delete(RR)
+            Sr.asked.delete(rr)
           }
-        }(RR.name, RR.slot).finally((() => {
-          hG--, uy()
-        })), uy())
+        }(rr.name, rr.slot).finally((() => {
+          uQ--, aZ()
+        })), aZ())
       }), {
-        timeoutMs: dG
+        timeoutMs: cQ
       }))
     }
-    var Zy = GR(5303),
-      qy = GR(5276),
-      iy = GR(42577),
-      fy = GR(4555),
-      Vy = GR(4563);
-    let Ky = null,
-      wy = null;
+    var jZ = Qr(5249),
+      IZ = Qr(5216),
+      fZ = Qr(42904),
+      EZ = Qr(4489),
+      pZ = Qr(4494);
+    let xZ = null,
+      mZ = null;
 
-    function ry(RR) {
-      const JR = RR.startsWith(Vy.h),
-        [GR, yR = GR, tR = GR] = (JR ? RR.slice(Vy.h.length) : RR).split(Vy.e);
+    function NZ(rr) {
+      const Sr = rr.startsWith(pZ.k),
+        [Qr, Zr = Qr, Wr = Qr] = (Sr ? rr.slice(pZ.k.length) : rr).split(pZ.j);
       return {
-        top: GR,
-        left: yR,
-        right: tR,
-        half: JR
+        top: Qr,
+        left: Zr,
+        right: Wr,
+        half: Sr
       }
     }
 
-    function ey(RR) {
-      const JR = null === Ky ? void 0 : (0, fy.b)(RR),
-        GR = void 0 === JR ? 0 : Ky.codes[JR];
-      return 0 === GR ? void 0 : Ky.pool[GR - 1]
+    function UZ(rr) {
+      const Sr = null === xZ ? void 0 : (0, EZ.e)(rr),
+        Qr = void 0 === Sr ? 0 : xZ.codes[Sr];
+      return 0 === Qr ? void 0 : xZ.pool[Qr - 1]
     }
-    var ay = GR(4546),
-      Ly = GR(5263),
-      ny = GR(5299),
-      Uy = GR(37346),
-      Wy = GR(37353);
-    const Ay = "item:";
-    let Cy = null,
-      Xy = null,
-      My = null,
-      By = null,
-      ly = !1,
-      py = !1;
+    var tZ = Qr(4485),
+      hZ = Qr(5203),
+      zZ = Qr(5240),
+      YZ = Qr(37726),
+      nZ = Qr(37734);
+    const eZ = "item:";
+    let KZ = null,
+      yZ = null,
+      BZ = null,
+      TZ = null,
+      vZ = !1,
+      OZ = !1;
 
-    function gy() {
-      return py || (py = !0, (0, ny.m)().then((RR => {
-        RR && (0, oG.e)()
-      }))), My ??= Promise.all([(0, ay.d)(), (wy ??= GR.e(1).then((() => GR(64123))).then((RR => {
+    function LZ() {
+      return OZ || (OZ = !0, (0, zZ.p)().then((rr => {
+        rr && (0, CQ.b)()
+      }))), BZ ??= Promise.all([(0, tZ.h)(), (mZ ??= Qr.e(1).then((() => Qr(64587))).then((rr => {
         let {
-          BLOCK_FACE_RUNS: JR,
-          BLOCK_FACES: GR,
-          MAX_FACE_ITEM_ID: yR
-        } = RR;
-        Ky = {
-          codes: (0, Vy.y)(JR, yR + 1),
-          pool: GR.split(Vy.r).map(ry)
+          BLOCK_FACE_RUNS: Sr,
+          BLOCK_FACES: Qr,
+          MAX_FACE_ITEM_ID: Zr
+        } = rr;
+        xZ = {
+          codes: (0, pZ.v)(Sr, Zr + 1),
+          pool: Qr.split(pZ.r).map(NZ)
         }
-      }), (RR => {
-        throw wy = null, RR
-      })), wy), (0, Wy.e)(), GR.e(224).then((() => GR(35162)))]).then((RR => {
-        let [, , JR, GR] = RR;
-        JR.followBundledTextures(), Cy = JR, Xy = GR, (0, oG.e)()
-      }), (RR => {
-        My = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", RR)
-      })), My
+      }), (rr => {
+        throw mZ = null, rr
+      })), mZ), (0, nZ.g)(), Qr.e(225).then((() => Qr(35472)))]).then((rr => {
+        let [, , Sr, Qr] = rr;
+        Sr.followBundledTextures(), KZ = Sr, yZ = Qr, (0, CQ.b)()
+      }), (rr => {
+        BZ = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", rr)
+      })), BZ
     }
 
-    function by(RR) {
-      var JR, GR;
-      return null !== (JR = null === (GR = (0, Uy.g)()) || void 0 === GR ? void 0 : GR.textureUrl(RR)) && void 0 !== JR ? JR : Cy.itemSpriteUrl(RR)
+    function lZ(rr) {
+      var Sr, Qr;
+      return null !== (Sr = null === (Qr = (0, YZ.j)()) || void 0 === Qr ? void 0 : Qr.textureUrl(rr)) && void 0 !== Sr ? Sr : KZ.itemSpriteUrl(rr)
     }
 
-    function vy(RR) {
-      var JR, GR;
-      return null !== (JR = null === (GR = (0, Uy.g)()) || void 0 === GR ? void 0 : GR.textureUrl(RR)) && void 0 !== JR ? JR : Cy.blockTextureUrl(RR)
+    function XZ(rr) {
+      var Sr, Qr;
+      return null !== (Sr = null === (Qr = (0, YZ.j)()) || void 0 === Qr ? void 0 : Qr.textureUrl(rr)) && void 0 !== Sr ? Sr : KZ.blockTextureUrl(rr)
     }
 
-    function Oy(RR) {
-      var JR;
-      return null !== (JR = (0, ay.c)(RR)) && void 0 !== JR ? JR : RR
+    function PZ(rr) {
+      var Sr;
+      return null !== (Sr = (0, tZ.d)(rr)) && void 0 !== Sr ? Sr : rr
     }
 
-    function xy(RR, JR) {
-      var GR, yR, tR;
-      return null !== (GR = null !== (yR = null !== (tR = vy(RR)) && void 0 !== tR ? tR : null === JR || void 0 === JR ? void 0 : JR.rotated[RR]) && void 0 !== yR ? yR : null === JR || void 0 === JR ? void 0 : JR.animated[RR]) && void 0 !== GR ? GR : Cy.notFoundUrl()
+    function HZ(rr, Sr) {
+      var Qr, Zr, Wr;
+      return null !== (Qr = null !== (Zr = null !== (Wr = XZ(rr)) && void 0 !== Wr ? Wr : null === Sr || void 0 === Sr ? void 0 : Sr.rotated[rr]) && void 0 !== Zr ? Zr : null === Sr || void 0 === Sr ? void 0 : Sr.animated[rr]) && void 0 !== Qr ? Qr : KZ.notFoundUrl()
     }
 
-    function Ny(RR) {
-      return void 0 !== (0, fy.b)(RR) ? RR : /^[1-9][0-9]*$/.test(RR) ? (0, fy.c)(Number(RR)) : void 0
+    function qZ(rr) {
+      return void 0 !== (0, EZ.e)(rr) ? rr : /^[1-9][0-9]*$/.test(rr) ? (0, EZ.g)(Number(rr)) : void 0
     }
 
-    function Dy(RR) {
-      var JR;
-      if (RR.startsWith(Ay)) {
-        var GR;
-        const JR = (0, ay.c)(RR.slice(5));
-        return null !== (GR = void 0 === JR ? null : by(JR)) && void 0 !== GR ? GR : Cy.notFoundUrl()
+    function RZ(rr) {
+      var Sr;
+      if (rr.startsWith(eZ)) {
+        var Qr;
+        const Sr = (0, tZ.d)(rr.slice(5));
+        return null !== (Qr = void 0 === Sr ? null : lZ(Sr)) && void 0 !== Qr ? Qr : KZ.notFoundUrl()
       }
-      return null !== (JR = Cy.particleUrl(RR)) && void 0 !== JR ? JR : Cy.notFoundUrl()
+      return null !== (Sr = KZ.particleUrl(rr)) && void 0 !== Sr ? Sr : KZ.notFoundUrl()
     }
 
-    function Hy(RR, JR) {
-      return "StairsBlock" === RR ? RR : JR ? "SlabBlock" : "CubeBlock"
+    function gZ(rr, Sr) {
+      return "StairsBlock" === rr ? rr : Sr ? "SlabBlock" : "CubeBlock"
     }
-    const oy = {
-        async blockIcon(RR) {
-          var JR;
+    const CZ = {
+        async blockIcon(rr) {
+          var Sr;
           let {
-            name: yR,
-            size: tR,
-            lineWidth: uR
-          } = RR;
-          await gy();
-          const ZR = null !== (JR = Ny(yR)) && void 0 !== JR ? JR : yR,
-            qR = (0, ny.g)(ZR, tR, uR);
-          if (null !== qR) return qR;
-          const iR = ey(ZR),
-            fR = (0, fy.b)(ZR),
-            VR = void 0 === fR || null === Xy ? void 0 : Xy.itemTypeNameOf(fR);
-          if (null === Cy || void 0 === iR) return "";
-          const KR = [iR.top, iR.left, iR.right].some((RR => null === vy(RR))),
-            wR = KR ? await (By ??= GR.e(234).then((() => GR(35257))).then((RR => (ly && (ly = !1, (0, oG.e)()), {
-              rotated: RR.rotatedBlockTextures,
-              animated: RR.animatedBlockTextures
-            })), (RR => (By = null, ly = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", RR), null))), By) : null;
-          if (KR && null === wR) return "";
-          const rR = {
-              top: xy(iR.top, wR),
-              left: xy(iR.left, wR),
-              right: xy(iR.right, wR),
-              itemType: Hy(VR, iR.half)
+            name: Zr,
+            size: Wr,
+            lineWidth: ar
+          } = rr;
+          await LZ();
+          const jr = null !== (Sr = qZ(Zr)) && void 0 !== Sr ? Sr : Zr,
+            Ir = (0, zZ.f)(jr, Wr, ar);
+          if (null !== Ir) return Ir;
+          const fr = UZ(jr),
+            Er = (0, EZ.e)(jr),
+            pr = void 0 === Er || null === yZ ? void 0 : yZ.itemTypeNameOf(Er);
+          if (null === KZ || void 0 === fr) return "";
+          const xr = [fr.top, fr.left, fr.right].some((rr => null === XZ(rr))),
+            mr = xr ? await (TZ ??= Qr.e(235).then((() => Qr(35587))).then((rr => (vZ && (vZ = !1, (0, CQ.b)()), {
+              rotated: rr.rotatedBlockTextures,
+              animated: rr.animatedBlockTextures
+            })), (rr => (TZ = null, vZ = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", rr), null))), TZ) : null;
+          if (xr && null === mr) return "";
+          const Nr = {
+              top: HZ(fr.top, mr),
+              left: HZ(fr.left, mr),
+              right: HZ(fr.right, mr),
+              itemType: gZ(pr, fr.half)
             },
-            eR = (0, Uy.f)(),
-            aR = 0 === eR ? ZR : `${ZR}#${eR}`;
-          return (await (0, Ly.d)()).drawBlockIconUrl(aR, tR, uR, (() => rR))
+            Ur = (0, YZ.g)(),
+            tr = 0 === Ur ? jr : `${jr}#${Ur}`;
+          return (await (0, hZ.c)()).drawBlockIconUrl(tr, Wr, ar, (() => Nr))
         }
       },
-      cy = {
-        itemIcon: function(RR) {
-          var JR, GR, tR, uR;
-          if (null === Cy) return gy(), yR.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(RR);
-          if ((0, qy.l)(RR)) return {
+      MZ = {
+        itemIcon: function(rr) {
+          var Sr, Qr, Wr, ar;
+          if (null === KZ) return LZ(), Zr.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(rr);
+          if ((0, IZ.i)(rr)) return {
             kind: "icon",
-            url: null !== (GR = null !== (tR = null === (uR = (0, Uy.g)()) || void 0 === uR ? void 0 : uR.textureUrl(RR)) && void 0 !== tR ? tR : Cy.ingameIconUrl(RR)) && void 0 !== GR ? GR : Cy.notFoundUrl()
+            url: null !== (Qr = null !== (Wr = null === (ar = (0, YZ.j)()) || void 0 === ar ? void 0 : ar.textureUrl(rr)) && void 0 !== Wr ? Wr : KZ.ingameIconUrl(rr)) && void 0 !== Qr ? Qr : KZ.notFoundUrl()
           };
-          if (RR.startsWith(qy.d)) return {
+          if (rr.startsWith(IZ.c)) return {
             kind: "icon",
-            url: Dy(RR.slice(qy.d.length))
+            url: RZ(rr.slice(IZ.c.length))
           };
-          if (0 === (0, fy.f)()) return (0, iy.c)(), yR.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(RR);
-          const ZR = null !== (JR = Ny(RR)) && void 0 !== JR ? JR : RR,
-            qR = (0, fy.b)(ZR),
-            iR = void 0 === qR ? void 0 : Xy.itemTypeNameOf(qR);
-          if (void 0 !== ey(ZR)) return {
+          if (0 === (0, EZ.k)()) return (0, fZ.c)(), Zr.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(rr);
+          const jr = null !== (Sr = qZ(rr)) && void 0 !== Sr ? Sr : rr,
+            Ir = (0, EZ.e)(jr),
+            fr = void 0 === Ir ? void 0 : yZ.itemTypeNameOf(Ir);
+          if (void 0 !== UZ(jr)) return {
             kind: "drawnBlock"
           };
-          const fR = function(RR) {
-            var JR;
-            return null !== (JR = by(Oy(RR))) && void 0 !== JR ? JR : Cy.notFoundUrl()
-          }(ZR);
-          if ((0, ny.l)(ZR) && ! function(RR) {
-              const JR = (0, Uy.g)();
-              return null !== JR && (null !== JR.textureUrl(Oy(RR)) || (0, ny.c)(RR).some((RR => null !== JR.modelUrl(RR))))
-            }(ZR)) return {
+          const Er = function(rr) {
+            var Sr;
+            return null !== (Sr = lZ(PZ(rr))) && void 0 !== Sr ? Sr : KZ.notFoundUrl()
+          }(jr);
+          if ((0, zZ.l)(jr) && ! function(rr) {
+              const Sr = (0, YZ.j)();
+              return null !== Sr && (null !== Sr.textureUrl(PZ(rr)) || (0, zZ.b)(rr).some((rr => null !== Sr.modelUrl(rr))))
+            }(jr)) return {
             kind: "model",
-            url: fR,
-            drawn: (0, ny.i)(ZR)
+            url: Er,
+            drawn: (0, zZ.i)(jr)
           };
-          if ("Gun" === iR) return {
+          if ("Gun" === fr) return {
             kind: "gun",
-            url: fR
+            url: Er
           };
-          if (void 0 !== qR && "GrayscaleArmour" === Xy.itemTypeOf(qR) || Object.hasOwn(Zy.d, ZR)) {
-            var VR;
-            const JR = null !== (VR = (0, Zy.f)(RR)) && void 0 !== VR ? VR : (0, Zy.f)(ZR);
-            if (JR) return {
+          if (void 0 !== Ir && "GrayscaleArmour" === yZ.itemTypeOf(Ir) || Object.hasOwn(jZ.c, jr)) {
+            var pr;
+            const Sr = null !== (pr = (0, jZ.e)(rr)) && void 0 !== pr ? pr : (0, jZ.e)(jr);
+            if (Sr) return {
               kind: "item",
-              url: fR,
-              tint: JR
+              url: Er,
+              tint: Sr
             }
           }
           return {
             kind: "item",
-            url: fR
+            url: Er
           }
         },
-        hasIcon: function(RR) {
-          return void 0 !== Ny(RR) || (0, qy.l)(RR) || RR.startsWith(qy.d)
+        hasIcon: function(rr) {
+          return void 0 !== qZ(rr) || (0, IZ.i)(rr) || rr.startsWith(IZ.c)
         },
-        isItemName: function(RR) {
-          return void 0 !== Ny(RR)
+        isItemName: function(rr) {
+          return void 0 !== qZ(rr)
         }
       };
 
-    function Py() {
-      (0, yR.installPageSources)({
+    function GZ() {
+      (0, Zr.installPageSources)({
         commands: {
-          ...yR.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: cG.o,
-          prewarmCreativeIcons: ty
+          ...Zr.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: MQ.l,
+          prewarmCreativeIcons: WZ
         },
-        queries: oy,
+        queries: CZ,
         lookups: {
-          ...yR.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...cy,
-          zW: cG.g,
-          drawCallStats: PG.g,
-          iconsDrawAhead: Jy
+          ...Zr.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...MZ,
+          IK: MQ.d,
+          drawCallStats: GQ.i,
+          iconsDrawAhead: SZ
         }
-      }), (0, oG.e)(), gy(), kG || (kG = !0, fR.n.subscribe("gameJoined", (() => {
-        var RR;
-        FG = !1, null === (RR = Ry) || void 0 === RR || RR(), Ry = null;
+      }), (0, CQ.b)(), LZ(), bQ || (bQ = !0, Er.i.subscribe("gameJoined", (() => {
+        var rr;
+        DQ = !1, null === (rr = rZ) || void 0 === rr || rr(), rZ = null;
         for (const {
-            name: JR,
-            slot: GR
+            name: Sr,
+            slot: Qr
           }
-          of sG.splice(0)) GR.asked.delete(JR)
-      })), fR.n.subscribe("gamePlayable", (() => {
-        FG = !0, Gy()
-      })), yR.gameBridge.subscribe("inventory", Gy), yR.gameBridge.subscribe("itemIconsVersion", (() => {
-        TG.clear(), Gy()
+          of sQ.splice(0)) Qr.asked.delete(Sr)
+      })), Er.i.subscribe("gamePlayable", (() => {
+        DQ = !0, QZ()
+      })), Zr.gameBridge.subscribe("inventory", QZ), Zr.gameBridge.subscribe("itemIconsVersion", (() => {
+        dQ.clear(), QZ()
       })))
     }
-    var Iy = GR(664),
-      my = GR(40974);
+    var kZ = Qr(679),
+      AZ = Qr(41320);
 
-    function zy(RR) {
-      if (null === RR || void 0 === RR || !RR.isCoreRunning) return null;
+    function VZ(rr) {
+      if (null === rr || void 0 === rr || !rr.isCoreRunning) return null;
       const {
-        api: JR,
-        chunks: GR,
-        items: yR,
-        tables: tR
-      } = RR;
+        api: Sr,
+        chunks: Qr,
+        items: Zr,
+        tables: Wr
+      } = rr;
       return {
         playerFeet() {
-          const RR = JR.vW(JR.localId);
-          return null !== RR && void 0 !== RR && RR.every(Number.isFinite) ? RR : null
+          const rr = Sr.JY(Sr.localId);
+          return null !== rr && void 0 !== rr && rr.every(Number.isFinite) ? rr : null
         },
-        chunkBlocks: RR => GR.isLoaded(RR[0], RR[1], RR[2]) ? (RR, JR, yR) => GR.Vq(RR, JR, yR) : null,
-        blockName: RR => tR.nameOfId(RR),
+        chunkBlocks: rr => Qr.isLoaded(rr[0], rr[1], rr[2]) ? (rr, Sr, Zr) => Qr.aI(rr, Sr, Zr) : null,
+        blockName: rr => Wr.nameOfId(rr),
         inventory: () => ({
-          slots: yR.playerItems().map((RR => RR ? {
-            name: RR.name,
-            amount: RR.amount
+          slots: Zr.playerItems().map((rr => rr ? {
+            name: rr.name,
+            amount: rr.amount
           } : null)),
-          heldSlot: yR.selectedSlot
+          heldSlot: Zr.selectedSlot
         }),
         nearby() {
-          const GR = [];
-          for (let tR = 0; tR < JR.idStr.length; tR++) {
-            var yR;
-            const uR = JR.idStr[tR],
-              ZR = JR.serverIds[tR],
-              qR = JR.kinds[tR];
-            if (null === uR || JR.isLocal(ZR) || qR >>> AR.d !== AR.q.Lifeform) continue;
-            const iR = JR.vW(ZR),
-              fR = Iy.k[qR & AR.e];
-            iR && void 0 !== fR && GR.push({
-              kind: "Player" === fR ? "player" : fR,
-              name: null !== (yR = RR.clientApi.getEntityName(uR)) && void 0 !== yR ? yR : null,
-              position: iR
+          const Qr = [];
+          for (let Wr = 0; Wr < Sr.idStr.length; Wr++) {
+            var Zr;
+            const ar = Sr.idStr[Wr],
+              jr = Sr.serverIds[Wr],
+              Ir = Sr.kinds[Wr];
+            if (null === ar || Sr.isLocal(jr) || Ir >>> er.c !== er.n.Lifeform) continue;
+            const fr = Sr.JY(jr),
+              Er = kZ.n[Ir & er.d];
+            fr && void 0 !== Er && Qr.push({
+              kind: "Player" === Er ? "player" : Er,
+              name: null !== (Zr = rr.clientApi.getEntityName(ar)) && void 0 !== Zr ? Zr : null,
+              position: fr
             })
           }
-          return GR
+          return Qr
         },
         droppedItems() {
-          let RR = 0;
-          for (let GR = 0; GR < JR.idStr.length; GR++) null !== JR.idStr[GR] && JR.kinds[GR] >>> AR.d === AR.q.Item && RR++;
-          return RR
+          let rr = 0;
+          for (let Qr = 0; Qr < Sr.idStr.length; Qr++) null !== Sr.idStr[Qr] && Sr.kinds[Qr] >>> er.c === er.n.Item && rr++;
+          return rr
         }
       }
     }
-    const Sy = {
-        worldCodeAiChunk: RR => Promise.resolve((0, my.b)(zy((0, ZR.l)()), RR)),
-        worldCodeAiGameState: () => Promise.resolve((0, my.d)(zy((0, ZR.l)())))
+    const iZ = {
+        worldCodeAiChunk: rr => Promise.resolve((0, AZ.e)(VZ((0, jr.f)()), rr)),
+        worldCodeAiGameState: () => Promise.resolve((0, AZ.g)(VZ((0, jr.f)())))
       },
-      jy = function(RR) {
-        const JR = VG(),
-          yR = VG(),
-          tR = new Set,
-          uR = new Set,
-          ZR = () => {
-            var JR, GR;
-            return null !== (JR = null === (GR = RR.runtime()) || void 0 === GR ? void 0 : GR.currentViewer) && void 0 !== JR ? JR : null
+      wZ = function(rr) {
+        const Sr = pQ(),
+          Zr = pQ(),
+          Wr = new Set,
+          ar = new Set,
+          jr = () => {
+            var Sr, Qr;
+            return null !== (Sr = null === (Qr = rr.runtime()) || void 0 === Qr ? void 0 : Qr.currentViewer) && void 0 !== Sr ? Sr : null
           };
-        let qR = null,
-          iR = null;
-        const VR = (RR, JR) => ({
-            current: RR,
-            watch(GR) {
-              let yR = RR();
-              return JR.add((() => {
-                const JR = RR();
-                JR !== yR && (yR = JR, GR(JR))
+        let Ir = null,
+          fr = null;
+        const pr = (rr, Sr) => ({
+            current: rr,
+            watch(Qr) {
+              let Zr = rr();
+              return Sr.add((() => {
+                const Sr = rr();
+                Sr !== Zr && (Zr = Sr, Qr(Sr))
               }))
             }
           }),
-          wR = RR => ({
-            watch: JR => (RR.add(JR), () => {
-              RR.delete(JR)
+          mr = rr => ({
+            watch: Sr => (rr.add(Sr), () => {
+              rr.delete(Sr)
             })
           }),
-          rR = RR => {
-            const JR = ZR(),
-              GR = null === JR || void 0 === JR ? void 0 : JR.view;
-            JR && GR && JR.seek(Math.max(0, Math.min(GR.totalTicks - 1, GR.gK + RR * KR.Bd)))
+          Nr = rr => {
+            const Sr = jr(),
+              Qr = null === Sr || void 0 === Sr ? void 0 : Sr.view;
+            Sr && Qr && Sr.seek(Math.max(0, Math.min(Qr.totalTicks - 1, Qr.lx + rr * xr.Pd)))
           },
-          eR = {
-            replay: VR((() => {
-              var RR;
-              const JR = ZR(),
-                GR = null !== (RR = null === JR || void 0 === JR ? void 0 : JR.view) && void 0 !== RR ? RR : null;
-              return null === JR || null === GR || GR.state === KR.ld.None ? (qR = null, null) : (qR = (0, TR.m)(qR, {
-                id: JR.id,
-                gK: GR.gK,
-                totalTicks: GR.totalTicks,
-                lH: KR.Bd,
-                playing: GR.state === KR.ld.Playing,
-                speed: GR.speed,
-                cameraMode: GR.cameraMode,
-                freecam: "freecam" === GR.cameraMode
-              }), qR)
-            }), JR),
-            replayEdits: VR((() => {
-              var RR;
-              const JR = ZR(),
-                GR = null !== (RR = null === JR || void 0 === JR ? void 0 : JR.view) && void 0 !== RR ? RR : null;
-              return null === JR || null === GR || GR.state === KR.ld.None ? (iR = null, null) : (iR = (0, TR.m)(iR, {
-                cameraKeyframes: [...JR.keyframes],
-                playbackMark: GR.mark,
-                fileName: JR.fileName,
-                unsavedChanges: JR.unsavedChanges,
-                suggestSaveAs: JR.suggestSaveAs
-              }), iR)
-            }), JR),
-            replayRecorder: VR((() => {
-              var JR, GR;
-              return null !== (JR = null === (GR = RR.runtime()) || void 0 === GR ? void 0 : GR.recorder.current) && void 0 !== JR ? JR : qG.c.states.replayRecorder.current()
-            }), yR),
+          Ur = {
+            replay: pr((() => {
+              var rr;
+              const Sr = jr(),
+                Qr = null !== (rr = null === Sr || void 0 === Sr ? void 0 : Sr.view) && void 0 !== rr ? rr : null;
+              return null === Sr || null === Qr || Qr.state === xr.yd.None ? (Ir = null, null) : (Ir = (0, dr.n)(Ir, {
+                id: Sr.id,
+                lx: Qr.lx,
+                totalTicks: Qr.totalTicks,
+                pC: xr.Pd,
+                playing: Qr.state === xr.yd.Playing,
+                speed: Qr.speed,
+                cameraMode: Qr.cameraMode,
+                freecam: "freecam" === Qr.cameraMode
+              }), Ir)
+            }), Sr),
+            replayEdits: pr((() => {
+              var rr;
+              const Sr = jr(),
+                Qr = null !== (rr = null === Sr || void 0 === Sr ? void 0 : Sr.view) && void 0 !== rr ? rr : null;
+              return null === Sr || null === Qr || Qr.state === xr.yd.None ? (fr = null, null) : (fr = (0, dr.n)(fr, {
+                cameraKeyframes: [...Sr.keyframes],
+                playbackMark: Qr.mark,
+                fileName: Sr.fileName,
+                unsavedChanges: Sr.unsavedChanges,
+                suggestSaveAs: Sr.suggestSaveAs
+              }), fr)
+            }), Sr),
+            replayRecorder: pr((() => {
+              var Sr, Qr;
+              return null !== (Sr = null === (Qr = rr.runtime()) || void 0 === Qr ? void 0 : Qr.recorder.current) && void 0 !== Sr ? Sr : IQ.b.states.replayRecorder.current()
+            }), Zr),
             replayVideoExporting: {
-              current: uG.b,
-              watch: RR => (0, fR.q)("replayViewer|videoExportChanged", (() => {
-                RR((0, uG.b)())
+              current: aQ.e,
+              watch: rr => (0, Er.j)("replayViewer|videoExportChanged", (() => {
+                rr((0, aQ.e)())
               }))
             }
           },
-          aR = {
-            replayUiActionRequested: wR(uR),
-            replayViewerRequested: wR(tR)
+          tr = {
+            replayUiActionRequested: mr(ar),
+            replayViewerRequested: mr(Wr)
           },
-          LR = RR => {
-            for (const JR of tR) JR(RR)
+          hr = rr => {
+            for (const Sr of Wr) Sr(rr)
           },
-          nR = () => {
-            var yR;
-            !0 === (null === (yR = ZR()) || void 0 === yR ? void 0 : yR.isOpen) && Promise.all([GR.e(113), GR.e(79)]).then((() => GR(64117))).then((GR => {
+          zr = () => {
+            var Zr;
+            !0 === (null === (Zr = jr()) || void 0 === Zr ? void 0 : Zr.isOpen) && Promise.all([Qr.e(113), Qr.e(79)]).then((() => Qr(64578))).then((Qr => {
               let {
-                startWasmReplayVideoExport: yR
-              } = GR;
-              return yR({
-                viewer: ZR,
+                startWasmReplayVideoExport: Zr
+              } = Qr;
+              return Zr({
+                viewer: jr,
                 canvas: () => {
-                  var JR, GR;
-                  return null !== (JR = null === (GR = RR.canvas) || void 0 === GR ? void 0 : GR.call(RR)) && void 0 !== JR ? JR : null
+                  var Sr, Qr;
+                  return null !== (Sr = null === (Qr = rr.canvas) || void 0 === Qr ? void 0 : Qr.call(rr)) && void 0 !== Sr ? Sr : null
                 },
-                watchViewer: JR.add,
-                requestViewer: LR
+                watchViewer: Sr.add,
+                requestViewer: hr
               })
-            }), (RR => {
-              console.error("Couldn't load the video export", RR), ZG.NotificationProvider.showAlertPopup({
+            }), (rr => {
+              console.error("Couldn't load the video export", rr), jQ.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((RR => {
-              console.error("The video export failed", RR)
+            })).catch((rr => {
+              console.error("The video export failed", rr)
             }))
           },
-          UR = {
-            replayAction(RR) {
-              if ((0, uG.b)()) return;
-              const JR = ZR();
-              switch (RR) {
+          Yr = {
+            replayAction(rr) {
+              if ((0, aQ.e)()) return;
+              const Sr = jr();
+              switch (rr) {
                 case "replaySkipBack":
-                  rR(-1);
+                  Nr(-1);
                   break;
                 case "replaySkipForward":
-                  rR(1);
+                  Nr(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== JR && void 0 !== JR && JR.view && JR.setSpeed((0, tG.i)(JR.view.speed, "replaySpeedUp" === RR ? "up" : "down"));
+                  null !== Sr && void 0 !== Sr && Sr.view && Sr.setSpeed((0, WQ.f)(Sr.view.speed, "replaySpeedUp" === rr ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === JR || void 0 === JR || JR.addKeyframe()
+                  null === Sr || void 0 === Sr || Sr.addKeyframe()
               }
             },
-            setReplayPlaying(RR) {
-              var JR, GR;
-              (0, uG.b)() || (RR ? null === (JR = ZR()) || void 0 === JR || JR.play() : null === (GR = ZR()) || void 0 === GR || GR.pause())
+            setReplayPlaying(rr) {
+              var Sr, Qr;
+              (0, aQ.e)() || (rr ? null === (Sr = jr()) || void 0 === Sr || Sr.play() : null === (Qr = jr()) || void 0 === Qr || Qr.pause())
             },
-            seekReplay(RR) {
-              var JR;
+            seekReplay(rr) {
+              var Sr;
               let {
-                gK: GR,
-                ignorePlaybackMark: yR
-              } = RR;
-              null === (JR = ZR()) || void 0 === JR || JR.seek(GR, null !== yR && void 0 !== yR && yR)
+                lx: Qr,
+                ignorePlaybackMark: Zr
+              } = rr;
+              null === (Sr = jr()) || void 0 === Sr || Sr.seek(Qr, null !== Zr && void 0 !== Zr && Zr)
             },
-            setReplayCameraMode(RR) {
-              var JR;
-              null === (JR = ZR()) || void 0 === JR || JR.setCameraMode(RR)
+            setReplayCameraMode(rr) {
+              var Sr;
+              null === (Sr = jr()) || void 0 === Sr || Sr.setCameraMode(rr)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(RR) {
-              var JR;
-              null === (JR = ZR()) || void 0 === JR || JR.setKeyframe(RR)
+            setReplayCameraKeyframe(rr) {
+              var Sr;
+              null === (Sr = jr()) || void 0 === Sr || Sr.setKeyframe(rr)
             },
-            moveReplayCameraKeyframe(RR) {
-              var JR;
+            moveReplayCameraKeyframe(rr) {
+              var Sr;
               let {
-                from: GR,
-                to: yR
-              } = RR;
-              null === (JR = ZR()) || void 0 === JR || JR.moveKeyframe(GR, yR)
+                from: Qr,
+                to: Zr
+              } = rr;
+              null === (Sr = jr()) || void 0 === Sr || Sr.moveKeyframe(Qr, Zr)
             },
-            deleteReplayCameraKeyframes(RR) {
-              var JR;
+            deleteReplayCameraKeyframes(rr) {
+              var Sr;
               let {
-                start: GR,
-                end: yR
-              } = RR;
-              null === (JR = ZR()) || void 0 === JR || JR.deleteKeyframes(GR, yR)
+                start: Qr,
+                end: Zr
+              } = rr;
+              null === (Sr = jr()) || void 0 === Sr || Sr.deleteKeyframes(Qr, Zr)
             },
-            setReplayPlaybackMark(RR) {
-              var JR;
-              null === (JR = ZR()) || void 0 === JR || JR.setMark(RR)
+            setReplayPlaybackMark(rr) {
+              var Sr;
+              null === (Sr = jr()) || void 0 === Sr || Sr.setMark(rr)
             },
-            cropReplay(RR) {
-              var JR, GR;
+            cropReplay(rr) {
+              var Sr, Qr;
               let {
-                start: yR,
-                end: tR
-              } = RR;
-              return !(0, uG.b)() && (null !== (JR = null === (GR = ZR()) || void 0 === GR ? void 0 : GR.crop(yR, tR)) && void 0 !== JR && JR)
+                start: Zr,
+                end: Wr
+              } = rr;
+              return !(0, aQ.e)() && (null !== (Sr = null === (Qr = jr()) || void 0 === Qr ? void 0 : Qr.crop(Zr, Wr)) && void 0 !== Sr && Sr)
             },
-            holdReplayForShaderPackFailure(RR) {
-              const JR = ZR();
-              JR && (JR.holdForShaderPackFailure(), function(RR) {
-                GR.e(138).then((() => GR(40495))).then((JR => {
+            holdReplayForShaderPackFailure(rr) {
+              const Sr = jr();
+              Sr && (Sr.holdForShaderPackFailure(), function(rr) {
+                Qr.e(138).then((() => Qr(40792))).then((Sr => {
                   let {
-                    shaderPackPage: GR
-                  } = JR;
-                  GR.block(RR)
-                })).catch((RR => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", RR)
+                    shaderPackPage: Qr
+                  } = Sr;
+                  Qr.block(rr)
+                })).catch((rr => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", rr)
                 }))
-              }(RR))
+              }(rr))
             },
             exportReplayVideo() {
-              nR()
+              zr()
             },
             toggleRecording() {
-              var JR;
-              null === (JR = RR.runtime()) || void 0 === JR || JR.recorder.toggleRecording()
+              var Sr;
+              null === (Sr = rr.runtime()) || void 0 === Sr || Sr.recorder.toggleRecording()
             },
             saveClip() {
-              var JR;
-              null === (JR = RR.runtime()) || void 0 === JR || JR.recorder.saveClip()
+              var Sr;
+              null === (Sr = rr.runtime()) || void 0 === Sr || Sr.recorder.saveClip()
             },
-            setRecorderPrefs(JR) {
-              var GR;
+            setRecorderPrefs(Sr) {
+              var Qr;
               let {
-                clipping: yR,
-                clipSeconds: tR
-              } = JR;
-              null === (GR = RR.runtime()) || void 0 === GR || GR.recorder.setPrefs(yR, tR)
+                clipping: Zr,
+                clipSeconds: Wr
+              } = Sr;
+              null === (Qr = rr.runtime()) || void 0 === Qr || Qr.recorder.setPrefs(Zr, Wr)
             },
-            setReplayViewerOpen(JR) {
-              var GR;
-              (0, LJ.i)(JR) && (null === (GR = RR.runtime()) || void 0 === GR || GR.recorder.viewerShown(JR))
+            setReplayViewerOpen(Sr) {
+              var Qr;
+              (0, hS.f)(Sr) && (null === (Qr = rr.runtime()) || void 0 === Qr || Qr.recorder.viewerShown(Sr))
             },
-            recordFlyingMiddleText(JR) {
-              var GR;
+            recordFlyingMiddleText(Sr) {
+              var Qr;
               let {
-                content: yR,
-                hu: tR,
-                angle: uR,
-                RZ: ZR
-              } = JR;
-              null === (GR = RR.runtime()) || void 0 === GR || GR.recorder.recordFlyingText(JSON.stringify(yR), tR, uR, ZR)
+                content: Zr,
+                ba: Wr,
+                angle: ar,
+                Ja: jr
+              } = Sr;
+              null === (Qr = rr.runtime()) || void 0 === Qr || Qr.recorder.recordFlyingText(JSON.stringify(Zr), Wr, ar, jr)
             },
-            dragReplayCamera(JR) {
-              var GR;
+            dragReplayCamera(Sr) {
+              var Qr;
               let {
-                dx: yR,
-                dy: tR
-              } = JR;
-              null === (GR = RR.freecam()) || void 0 === GR || GR.drag(yR, tR)
+                dx: Zr,
+                dy: Wr
+              } = Sr;
+              null === (Qr = rr.freecam()) || void 0 === Qr || Qr.drag(Zr, Wr)
             },
-            moveReplayFreecam(JR) {
-              var GR;
-              null === (GR = RR.freecam()) || void 0 === GR || GR.move(JR)
+            moveReplayFreecam(Sr) {
+              var Qr;
+              null === (Qr = rr.freecam()) || void 0 === Qr || Qr.move(Sr)
             },
-            holdReplayFreecamVertical(JR) {
-              var GR;
+            holdReplayFreecamVertical(Sr) {
+              var Qr;
               let {
-                action: yR,
-                Qq: tR
-              } = JR;
-              null === (GR = RR.freecam()) || void 0 === GR || GR.holdVertical(yR, tR)
+                action: Zr,
+                wI: Wr
+              } = Sr;
+              null === (Qr = rr.freecam()) || void 0 === Qr || Qr.holdVertical(Zr, Wr)
             }
           },
-          WR = RR => {
-            var JR;
-            const GR = ZR(),
-              yR = null !== (JR = null === GR || void 0 === GR ? void 0 : GR.view) && void 0 !== JR ? JR : null;
-            iG.has(RR) ? (RR => {
-              for (const JR of uR) JR(RR)
-            })(RR) : fG.has(RR) ? UR.replayAction(RR) : "replayPlayPause" === RR ? GR && yR && yR.state !== KR.ld.None && UR.setReplayPlaying(yR.state !== KR.ld.Playing) : "replayChangeCameraMode" === RR ? null === GR || void 0 === GR || GR.cycleCameraMode() : "replayExit" === RR ? !0 === (null === GR || void 0 === GR ? void 0 : GR.inPlayback) && (0, DJ.m)("/") : "replayExportVideo" === RR && nR()
+          nr = rr => {
+            var Sr;
+            const Qr = jr(),
+              Zr = null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.view) && void 0 !== Sr ? Sr : null;
+            fQ.has(rr) ? (rr => {
+              for (const Sr of ar) Sr(rr)
+            })(rr) : EQ.has(rr) ? Yr.replayAction(rr) : "replayPlayPause" === rr ? Qr && Zr && Zr.state !== xr.yd.None && Yr.setReplayPlaying(Zr.state !== xr.yd.Playing) : "replayChangeCameraMode" === rr ? null === Qr || void 0 === Qr || Qr.cycleCameraMode() : "replayExit" === rr ? !0 === (null === Qr || void 0 === Qr ? void 0 : Qr.inPlayback) && (0, RS.j)("/") : "replayExportVideo" === rr && zr()
           };
-        let AR = !1;
+        let er = !1;
         return {
-          states: eR,
-          events: aR,
-          commands: UR,
+          states: Ur,
+          events: tr,
+          commands: Yr,
           lookups: {
             replayCamera() {
-              var JR, GR, yR;
-              return !0 !== (null === (JR = ZR()) || void 0 === JR ? void 0 : JR.isOpen) ? null : null !== (GR = null === (yR = RR.cameraView) || void 0 === yR ? void 0 : yR.call(RR)) && void 0 !== GR ? GR : null
+              var Sr, Qr, Zr;
+              return !0 !== (null === (Sr = jr()) || void 0 === Sr ? void 0 : Sr.isOpen) ? null : null !== (Qr = null === (Zr = rr.cameraView) || void 0 === Zr ? void 0 : Zr.call(rr)) && void 0 !== Qr ? Qr : null
             },
             leaveGameReloadsPage() {
-              var RR;
-              return !0 === (null === (RR = ZR()) || void 0 === RR ? void 0 : RR.inPlayback)
+              var rr;
+              return !0 === (null === (rr = jr()) || void 0 === rr ? void 0 : rr.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var RR;
-              const GR = !0 === (null === (RR = ZR()) || void 0 === RR ? void 0 : RR.inPlayback);
-              GR !== AR && (AR = GR, fR.n.JK("connectedGameChanged")), JR.fire()
+              var rr;
+              const Qr = !0 === (null === (rr = jr()) || void 0 === rr ? void 0 : rr.inPlayback);
+              Qr !== er && (er = Qr, Er.i.Jp("connectedGameChanged")), Sr.fire()
             },
-            recorderChanged: yR.fire,
-            keyDown: RR => {
-              var JR;
-              switch (RR) {
+            recorderChanged: Zr.fire,
+            keyDown: rr => {
+              var Sr;
+              switch (rr) {
                 case "recordGame":
-                  return void UR.toggleRecording();
+                  return void Yr.toggleRecording();
                 case "recordClip":
-                  return void((0, LJ.e)() || UR.saveClip())
-              }(0, uG.b)() || ("replayViewerOpen" !== RR ? RR.startsWith("replay") && ((0, LJ.e)() || !0 === (null === (JR = ZR()) || void 0 === JR ? void 0 : JR.inPlayback)) && WR(RR) : LR("toggle"))
+                  return void((0, hS.e)() || Yr.saveClip())
+              }(0, aQ.e)() || ("replayViewerOpen" !== rr ? rr.startsWith("replay") && ((0, hS.e)() || !0 === (null === (Sr = jr()) || void 0 === Sr ? void 0 : Sr.inPlayback)) && nr(rr) : hr("toggle"))
             }
           }
         }
       }({
-        runtime: tR.l,
+        runtime: Wr.l,
         cameraView: () => {
-          var RR;
-          const JR = null === (RR = (0, ZR.l)()) || void 0 === RR ? void 0 : RR.renderFrame;
-          if (!JR) return null;
-          const [GR, yR, tR] = JR.cameraPosition, [uR, qR, iR] = JR.cameraDirection;
+          var rr;
+          const Sr = null === (rr = (0, jr.f)()) || void 0 === rr ? void 0 : rr.renderFrame;
+          if (!Sr) return null;
+          const [Qr, Zr, Wr] = Sr.cameraPosition, [ar, Ir, fr] = Sr.cameraDirection;
           return {
-            position: [GR, yR, tR],
-            direction: [uR, qR, iR]
+            position: [Qr, Zr, Wr],
+            direction: [ar, Ir, fr]
           }
         },
         canvas: () => {
-          var RR, JR, GR;
-          return null !== (RR = null === (JR = (GR = (0, uR.E)()).canvas) || void 0 === JR ? void 0 : JR.call(GR)) && void 0 !== RR ? RR : null
+          var rr, Sr, Qr;
+          return null !== (rr = null === (Sr = (Qr = (0, ar.N)()).canvas) || void 0 === Sr ? void 0 : Sr.call(Qr)) && void 0 !== rr ? rr : null
         },
-        freecam: tR.i
+        freecam: Wr.i
       }),
-      dy = {
+      cZ = {
         states: {
-          ...fJ,
-          ...rJ.l,
-          ...jy.states,
-          ...rG,
-          ...zR
+          ...ES,
+          ...NS.l,
+          ...wZ.states,
+          ...NQ,
+          ...Vr
         },
         events: {
-          ...VJ,
-          ...LR,
-          ...rJ.e,
-          ...pR.c,
-          ...gG.j,
-          ...jy.events,
-          ...eG,
-          ...lR.j
+          ...pS,
+          ...hr,
+          ...NS.e,
+          ...Or.c,
+          ...LQ.i,
+          ...wZ.events,
+          ...UQ,
+          ...vr.k
         },
         commands: {
-          ...BR,
-          ...KJ,
-          ...nR,
-          ...rJ.b,
-          ...TJ,
-          ...pG,
-          ...lR.f,
-          ...cJ,
-          ...jy.commands,
-          ...CG,
-          ...SR,
-          ...HG,
-          ...eJ
+          ...Tr,
+          ...xS,
+          ...zr,
+          ...NS.d,
+          ...dS,
+          ...OQ,
+          ...vr.i,
+          ...MS,
+          ...wZ.commands,
+          ...KQ,
+          ...ir,
+          ...gQ,
+          ...US
         },
         queries: {
-          ...rJ.i,
-          ...Sy
+          ...NS.h,
+          ...iZ
         },
         lookups: {
-          ...wJ,
-          ...HR,
-          ...gG.l,
-          ...jy.lookups,
-          ...MR,
-          ...yG,
-          ...DG,
-          ...jR
+          ...mS,
+          ...gr,
+          ...LQ.l,
+          ...wZ.lookups,
+          ...Br,
+          ...ZQ,
+          ...RQ,
+          ...wr
         }
       };
 
-    function Ey() {
-      (0, qR.g)(aR.o), (0, tR.n)(jy.feed), (0, pR.g)(), sJ || (sJ = !0, (0, aR.l)(OR.h, (RR => {
-        const JR = (0, NR.i)(OR.h, RR);
-        "string" === typeof JR && Promise.resolve().then((() => GR(4983))).then((RR => {
+    function FZ() {
+      (0, Ir.e)(tr.l), (0, Wr.o)(wZ.feed), (0, Or.g)(), sS || (sS = !0, (0, tr.j)(Pr.l, (rr => {
+        const Sr = (0, qr.d)(Pr.l, rr);
+        "string" === typeof Sr && Promise.resolve().then((() => Qr(4897))).then((rr => {
           let {
-            onCosmeticPackGranted: GR
-          } = RR;
-          GR(JR)
+            onCosmeticPackGranted: Qr
+          } = rr;
+          Qr(Sr)
         }))
-      })), (0, aR.l)(OR.jb, (RR => {
-        const JR = (0, NR.i)(OR.jb, RR);
-        "number" === typeof JR && fR.n.JK("serverUpdating", Date.now() + JR, !0)
-      })), (0, aR.l)(OR.F, (RR => {
-        const JR = (0, NR.i)(OR.F, RR);
-        if ((0, NR.e)(JR)) {
+      })), (0, tr.j)(Pr.db, (rr => {
+        const Sr = (0, qr.d)(Pr.db, rr);
+        "number" === typeof Sr && Er.i.Jp("serverUpdating", Date.now() + Sr, !0)
+      })), (0, tr.j)(Pr.E, (rr => {
+        const Sr = (0, qr.d)(Pr.E, rr);
+        if ((0, qr.b)(Sr)) {
           const {
-            au: RR,
-            Lu: GR
-          } = JR;
-          (0, QJ.d)({
-            au: "string" === typeof RR ? RR : null,
-            Lu: "string" === typeof GR ? GR : null
+            xa: rr,
+            ma: Qr
+          } = Sr;
+          (0, JS.b)({
+            xa: "string" === typeof rr ? rr : null,
+            ma: "string" === typeof Qr ? Qr : null
           })
         }
-      })), (0, aR.l)(VR.sc.NewUiRequest, (RR => {
-        const JR = (0, NR.k)(RR);
-        (0, NR.e)(JR) && "number" === typeof JR.id && (0, NR.e)(JR.clientParameters) && (0, FJ.f)(JR.id, JR.clientParameters)
-      })), (0, aR.l)(OR._, (RR => {
-        const JR = (0, NR.i)(OR._, RR);
-        "number" === typeof JR && (0, FJ.g)(JR)
-      })), (0, aR.i)(FJ.c), (0, aR.l)(VR.sc.UiRequestPopup, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ((0, NR.e)(JR) && "number" === typeof JR.id && ("string" === typeof JR.text || (0, NR.e)(JR.text) && "string" === typeof JR.text.translationKey)) {
-          const RR = JR.id;
-          (0, FJ.i)(RR, JR.text, !0 === JR.destructive, (JR => {
-            TJ.answerUiRequest({
-              id: RR,
-              wV: JR
+      })), (0, tr.j)(pr.pc.NewUiRequest, (rr => {
+        const Sr = (0, qr.f)(rr);
+        (0, qr.b)(Sr) && "number" === typeof Sr.id && (0, qr.b)(Sr.clientParameters) && (0, DS.e)(Sr.id, Sr.clientParameters)
+      })), (0, tr.j)(Pr.Z, (rr => {
+        const Sr = (0, qr.d)(Pr.Z, rr);
+        "number" === typeof Sr && (0, DS.h)(Sr)
+      })), (0, tr.f)(DS.b), (0, tr.j)(pr.pc.UiRequestPopup, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ((0, qr.b)(Sr) && "number" === typeof Sr.id && ("string" === typeof Sr.text || (0, qr.b)(Sr.text) && "string" === typeof Sr.text.translationKey)) {
+          const rr = Sr.id;
+          (0, DS.j)(rr, Sr.text, !0 === Sr.destructive, (Sr => {
+            dS.answerUiRequest({
+              id: rr,
+              ap: Sr
             })
           }))
         }
-      })), (0, aR.l)(VR.sc.TopRightHelper, (RR => {
-        const JR = (0, NR.k)(RR);
-        void 0 !== JR && fR.n.JK("TopRightHelper", JR, !0)
-      })), (0, aR.l)(VR.sc.TaskProgress, (RR => {
-        const JR = (0, NR.k)(RR);
-        (0, NR.e)(JR) && "string" === typeof JR.taskId && "number" === typeof JR.progress && (0, kJ.e)({
-          taskId: JR.taskId,
-          progress: JR.progress
+      })), (0, tr.j)(pr.pc.TopRightHelper, (rr => {
+        const Sr = (0, qr.f)(rr);
+        void 0 !== Sr && Er.i.Jp("TopRightHelper", Sr, !0)
+      })), (0, tr.j)(pr.pc.TaskProgress, (rr => {
+        const Sr = (0, qr.f)(rr);
+        (0, qr.b)(Sr) && "string" === typeof Sr.taskId && "number" === typeof Sr.progress && (0, bS.d)({
+          taskId: Sr.taskId,
+          progress: Sr.progress
         })
-      }))), XG || (XG = !0, (0, aR.l)(OR.n, (RR => {
-        const JR = (0, NR.i)(OR.n, RR);
-        (0, NR.e)(JR) && fR.n.JK("showShopFromServer", {
-          toggle: JR.vJ,
-          OJ: JR.OJ
+      }))), yQ || (yQ = !0, (0, tr.j)(Pr.r, (rr => {
+        const Sr = (0, qr.d)(Pr.r, rr);
+        (0, qr.b)(Sr) && Er.i.Jp("showShopFromServer", {
+          toggle: Sr.CS,
+          MS: Sr.MS
         }, !0)
-      })), (0, aR.l)(VR.sc.OverShopInfo, (RR => {
-        const JR = (0, NR.k)(RR);
-        (0, NR.e)(JR) && fR.n.JK("overShopInfo", JR.info, !0)
-      })), (0, aR.l)(VR.sc.ShowShopTutorial, (() => {
-        fR.n.JK("showShopTutorial", null, !0)
-      }))), WG || (WG = !0, (0, aR.f)((() => {
-        var RR;
-        (0, aG.resetLeaveEvents)(), null === (RR = AG) || void 0 === RR || RR(), AG = (0, aR.c)() ? (0, nG.onVisitSessionGameServerConnected)(aR.c) : null, (0, aR.c)() || fR.n.PU()
-      })), (0, aR.l)(VR.sc.SetCookie, (RR => {
-        const JR = (0, NR.k)(RR),
-          GR = (0, DJ.d)().gameNameWithVariation;
-        (0, NR.e)(JR) && "string" === typeof JR.key && null !== GR && (0, LG.setCookie)(GR, JR.key, JR.value)
-      })), (0, aR.l)(VR.sc.LeaveValues, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ((0, NR.e)(JR) && "string" === typeof JR.leaveEventType) {
+      })), (0, tr.j)(pr.pc.OverShopInfo, (rr => {
+        const Sr = (0, qr.f)(rr);
+        (0, qr.b)(Sr) && Er.i.Jp("overShopInfo", Sr.info, !0)
+      })), (0, tr.j)(pr.pc.ShowShopTutorial, (() => {
+        Er.i.Jp("showShopTutorial", null, !0)
+      }))), nQ || (nQ = !0, (0, tr.d)((() => {
+        var rr;
+        (0, tQ.resetLeaveEvents)(), null === (rr = eQ) || void 0 === rr || rr(), eQ = (0, tr.c)() ? (0, zQ.onVisitSessionGameServerConnected)(tr.c) : null, (0, tr.c)() || Er.i.mY()
+      })), (0, tr.j)(pr.pc.SetCookie, (rr => {
+        const Sr = (0, qr.f)(rr),
+          Qr = (0, RS.b)().gameNameWithVariation;
+        (0, qr.b)(Sr) && "string" === typeof Sr.key && null !== Qr && (0, hQ.setCookie)(Qr, Sr.key, Sr.value)
+      })), (0, tr.j)(pr.pc.LeaveValues, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ((0, qr.b)(Sr) && "string" === typeof Sr.leaveEventType) {
           const {
-            leaveEventType: RR,
-            category: GR,
-            subCategory: yR,
-            value: tR
-          } = JR;
-          (0, aG.updateLeaveValue)({
-            leaveEventType: RR,
-            category: GR,
-            subCategory: yR,
-            value: tR
+            leaveEventType: rr,
+            category: Qr,
+            subCategory: Zr,
+            value: Wr
+          } = Sr;
+          (0, tQ.updateLeaveValue)({
+            leaveEventType: rr,
+            category: Qr,
+            subCategory: Zr,
+            value: Wr
           })
         }
-      })), (0, aR.l)(VR.sc.CustomAnalyticsEvent, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ((0, NR.e)(JR) && "string" === typeof JR.cat1) {
+      })), (0, tr.j)(pr.pc.CustomAnalyticsEvent, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ((0, qr.b)(Sr) && "string" === typeof Sr.cat1) {
           const {
-            cat1: RR,
-            cat2: GR,
-            cat3: yR,
-            value: tR
-          } = JR;
-          (0, aG.logCustomAnalyticsEvent)({
-            cat1: RR,
-            cat2: GR,
-            cat3: yR,
-            value: tR
+            cat1: rr,
+            cat2: Qr,
+            cat3: Zr,
+            value: Wr
+          } = Sr;
+          (0, tQ.logCustomAnalyticsEvent)({
+            cat1: rr,
+            cat2: Qr,
+            cat3: Zr,
+            value: Wr
           })
         }
-      })), (0, aR.l)(VR.sc.ProgressionEvent, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ((0, NR.e)(JR)) {
+      })), (0, tr.j)(pr.pc.ProgressionEvent, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ((0, qr.b)(Sr)) {
           const {
-            type: RR,
-            location1: GR,
-            location2: yR,
-            location3: tR,
-            score: uR
-          } = JR;
-          (0, aG.logProgressionEvent)({
-            type: RR,
-            location1: GR,
-            location2: yR,
-            location3: tR,
-            score: uR
+            type: rr,
+            location1: Qr,
+            location2: Zr,
+            location3: Wr,
+            score: ar
+          } = Sr;
+          (0, tQ.logProgressionEvent)({
+            type: rr,
+            location1: Qr,
+            location2: Zr,
+            location3: Wr,
+            score: ar
           })
         }
-      })), (0, aR.l)(VR.sc.ResourceEvent, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ((0, NR.e)(JR)) {
+      })), (0, tr.j)(pr.pc.ResourceEvent, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ((0, qr.b)(Sr)) {
           const {
-            type: RR,
-            resourceType: GR,
-            amount: yR,
-            category: tR,
-            itemName: uR
-          } = JR;
-          (0, aG.logResourceEvent)({
-            type: RR,
-            resourceType: GR,
-            amount: yR,
-            category: tR,
-            itemName: uR
+            type: rr,
+            resourceType: Qr,
+            amount: Zr,
+            category: Wr,
+            itemName: ar
+          } = Sr;
+          (0, tQ.logResourceEvent)({
+            type: rr,
+            resourceType: Qr,
+            amount: Zr,
+            category: Wr,
+            itemName: ar
           })
         }
-      })), (0, aR.l)(VR.sc.LeaderboardResponse, (RR => {
-        const JR = (0, NR.k)(RR);
-        if ((0, NR.e)(JR)) {
+      })), (0, tr.j)(pr.pc.LeaderboardResponse, (rr => {
+        const Sr = (0, qr.f)(rr);
+        if ((0, qr.b)(Sr)) {
           const {
-            category: RR,
-            timeframe: GR,
-            data: yR
-          } = JR;
-          fR.n.JK("leaderboardResponse", {
-            category: RR,
-            timeframe: GR,
-            data: yR
+            category: rr,
+            timeframe: Qr,
+            data: Zr
+          } = Sr;
+          Er.i.Jp("leaderboardResponse", {
+            category: rr,
+            timeframe: Qr,
+            data: Zr
           })
         }
-      })), (0, aR.l)(OR.w, (RR => {
-        const JR = (0, NR.i)(OR.w, RR);
-        "string" === typeof JR && (0, UG.e)(RR.conn, JR)
-      })), (0, aR.l)(OR.z, (RR => {
-        const JR = (0, NR.i)(OR.z, RR);
-        "string" === typeof JR && console.error(`[logErrorToConsole]: ${JR}`)
-      }))), cR(), (0, gG.c)(), oJ || (oJ = !0, (0, aR.l)(OR.g, (RR => {
-        const JR = (0, NR.i)(OR.g, RR);
-        void 0 !== JR && (0, HJ.m)(JR)
-      }))), YJ(), bJ(), YR || (YR = !0, (0, uR.n)(kR)), yR.gameBridge.attach(dy), Py()
+      })), (0, tr.j)(Pr.x, (rr => {
+        const Sr = (0, qr.d)(Pr.x, rr);
+        "string" === typeof Sr && (0, YQ.c)(rr.conn, Sr)
+      })), (0, tr.j)(Pr.A, (rr => {
+        const Sr = (0, qr.d)(Pr.A, rr);
+        "string" === typeof Sr && console.error(`[logErrorToConsole]: ${Sr}`)
+      }))), Mr(), (0, LQ.b)(), CS || (CS = !0, (0, tr.j)(Pr.i, (rr => {
+        const Sr = (0, qr.d)(Pr.i, rr);
+        void 0 !== Sr && (0, gS.l)(Sr)
+      }))), oS(), lS(), or || (or = !0, (0, ar.w)(br)), Zr.gameBridge.attach(cZ), GZ()
     }
   },
-  37353: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => ZR,
-      e: () => qR
+  37734: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr,
+      g: () => Ir
     });
-    var yR = GR(37357);
-    let tR = null,
-      uR = null;
+    var Zr = Qr(37743);
+    let Wr = null,
+      ar = null;
 
-    function ZR() {
-      return tR ??= GR.e(74).then((() => GR(42743))).catch((RR => {
-        throw tR = null, RR
-      })), tR
+    function jr() {
+      return Wr ??= Qr.e(74).then((() => Qr(43057))).catch((rr => {
+        throw Wr = null, rr
+      })), Wr
     }
 
-    function qR() {
-      return uR ??= Promise.all([ZR(), (0, yR.h)()]).then((RR => {
-        let [JR] = RR;
-        return JR
-      }), (RR => {
-        throw uR = null, RR
-      })), uR
+    function Ir() {
+      return ar ??= Promise.all([jr(), (0, Zr.e)()]).then((rr => {
+        let [Sr] = rr;
+        return Sr
+      }), (rr => {
+        throw ar = null, rr
+      })), ar
     }
   },
-  37561: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => tR
+  37945: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    const yR = {
-      wait: function(RR) {
-        return new Promise((JR => {
-          setTimeout(JR, RR)
+    const Zr = {
+      wait: function(rr) {
+        return new Promise((Sr => {
+          setTimeout(Sr, rr)
         }))
       },
       stallMs: 2e4
     };
-    class tR {
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yR;
-        this.url = RR, this.options = JR, this.timing = GR, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = RR
+    class Wr {
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Zr;
+        this.url = rr, this.options = Sr, this.timing = Qr, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = rr
       }
       ready() {
         if (null === this.fetched) {
-          const RR = new AbortController;
-          this.fetchAbort = RR, this.fetched = this.fetchWithRetries(RR.signal).then((JR => (this.fetchAbort === RR && (this.fetchAbort = null), JR)))
+          const rr = new AbortController;
+          this.fetchAbort = rr, this.fetched = this.fetchWithRetries(rr.signal).then((Sr => (this.fetchAbort === rr && (this.fetchAbort = null), Sr)))
         }
         return this.fetched
       }
@@ -2596,56 +2596,56 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(RR) {
-        for (let JR = 0;; JR++) {
-          const GR = new URL(this.url);
-          if (JR > 0 && GR.searchParams.set("cache-bust", `${Date.now()}-${JR}`), await this.fetchWhole(GR, RR)) return this.scriptUrl = GR, !0;
-          if (JR >= 3 || RR.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** JR), RR.aborted) return !1
+      async fetchWithRetries(rr) {
+        for (let Sr = 0;; Sr++) {
+          const Qr = new URL(this.url);
+          if (Sr > 0 && Qr.searchParams.set("cache-bust", `${Date.now()}-${Sr}`), await this.fetchWhole(Qr, rr)) return this.scriptUrl = Qr, !0;
+          if (Sr >= 3 || rr.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** Sr), rr.aborted) return !1
         }
       }
-      async fetchWhole(RR, JR) {
-        const GR = new AbortController;
-        let yR;
-        const tR = () => {
-            clearTimeout(yR), yR = setTimeout((() => {
-              GR.abort()
+      async fetchWhole(rr, Sr) {
+        const Qr = new AbortController;
+        let Zr;
+        const Wr = () => {
+            clearTimeout(Zr), Zr = setTimeout((() => {
+              Qr.abort()
             }), this.timing.stallMs)
           },
-          uR = () => {
-            GR.abort()
+          ar = () => {
+            Qr.abort()
           };
-        JR.addEventListener("abort", uR, {
+        Sr.addEventListener("abort", ar, {
           once: !0
-        }), tR();
+        }), Wr();
         try {
-          var ZR;
-          const JR = await fetch(RR, {
-            signal: GR.signal
+          var jr;
+          const Sr = await fetch(rr, {
+            signal: Qr.signal
           });
-          if (!JR.ok) return !1;
-          const yR = null === (ZR = JR.body) || void 0 === ZR ? void 0 : ZR.getReader();
-          if (!yR) return !1;
+          if (!Sr.ok) return !1;
+          const Zr = null === (jr = Sr.body) || void 0 === jr ? void 0 : jr.getReader();
+          if (!Zr) return !1;
           for (;;) {
             const {
-              done: RR
-            } = await yR.read();
-            if (RR) return !0;
-            tR()
+              done: rr
+            } = await Zr.read();
+            if (rr) return !0;
+            Wr()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(yR), JR.removeEventListener("abort", uR)
+          clearTimeout(Zr), Sr.removeEventListener("abort", ar)
         }
       }
     }
   },
-  38176: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => yR
+  38538: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr
     });
-    const yR = {
+    const Zr = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2805,21 +2805,21 @@ export const modules = {
       }
     }
   },
-  40283: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => yR,
-      g: () => tR
+  40599: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr,
+      g: () => Wr
     });
-    const yR = ["description", "label"];
+    const Zr = ["description", "label"];
 
-    function tR(RR) {
-      const JR = RR.type;
+    function Wr(rr) {
+      const Sr = rr.type;
       return {
-        type: JR,
-        params: RR[JR]
+        type: Sr,
+        params: rr[Sr]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

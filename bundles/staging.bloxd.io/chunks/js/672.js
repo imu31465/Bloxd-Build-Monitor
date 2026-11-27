@@ -1,35 +1,19 @@
 export const id = 672;
 export const ids = [672];
 export const modules = {
-  64159: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      WorldCodeAiOutOfUsage: () => qR
+  64611: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      postprocessVertexShader: () => jr
     });
-    var yR = GR(1270),
-      tR = GR(3314),
-      uR = GR(1590),
-      ZR = GR(1378);
-
-    function qR(RR) {
-      let {
-        onGetSuperRank: JR
-      } = RR;
-      const {
-        t: GR
-      } = (0, yR.A)(), qR = (0, tR.s)(Date.now()), iR = GR(qR.nameKey);
-      return (0, ZR.jsxs)("div", {
-        className: "WorldCodeAiOutOfUsage",
-        children: [(0, ZR.jsx)("p", {
-          className: "WorldCodeAiOutOfUsageText",
-          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${iR} for more usage!`
-        }), (0, ZR.jsx)(uR.n, {
-          className: "WorldCodeAiOutOfUsageButton",
-          onClick: JR,
-          children: GR(qR.getKey)
-        })]
-      })
+    var Zr = Qr(41743);
+    const Wr = "postprocessVertexShader",
+      ar = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Zr.e.ShadersStore[Wr] || (Zr.e.ShadersStore[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

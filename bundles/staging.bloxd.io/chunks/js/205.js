@@ -1,11 +1,11 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  10421: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      pageBody: () => yR
+  10197: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      pageBody: () => Zr
     });
-    const yR = {
+    const Zr = {
       whatIs: ["Sharp aim and quick feet are what separate top frag from instant respawn. Bloxd Cube Warfare is a fast, free block FPS where the firefights don't stop. You can play Free-For-All, Team Deathmatch or Gun Game, and you'll unlock over 15 guns along the way. If you'd rather have objectives, kits and vehicles in big 12v12 battles, have a look at Frontline."],
       howToPlay: ["Join a match and vote on the map. In Free-For-All it's every player for themselves. Team Deathmatch puts you on a side, and your team has to outscore the other one. Rounds last 10 minutes. Get taken down and you'll respawn with 8 seconds of invincibility, though your killstreak resets.", "Keep taking down opponents without going down yourself and you'll build killstreaks. They reward you across 3 tiers with things like extra health, more damage, faster movement or free blocks. New guns unlock in the shop. There are pistols, SMGs, shotguns, sniper rifles and LMGs, and you can take any of them into Teams or FFA. Gun Game has its own queue. Every elimination swaps your weapon for the next one, and to win you need a final takedown with the sword.", "Some matches throw in a twist. In Collect Diamonds you gather diamonds to win. Explosives keeps handing you explosives, and each takedown gets you more."],
       features: ["Free-For-All, Team Deathmatch and Gun Game", "Over 15 Guns, Including the AK-47, AWP, Deagle, Striker-12 and GPMG", "Killstreak Rewards Across 3 Tiers", "Place Blocks for Cover with Killstreak Rewards", "Match Modifiers: Collect Diamonds and Explosives", "Maps Including Snowbase, Sienna, Cabins and More, with Map Voting", "Leaderboards and Player Stats"],
@@ -46,4 +46,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

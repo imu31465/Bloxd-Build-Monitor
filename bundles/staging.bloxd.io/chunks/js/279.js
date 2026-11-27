@@ -1,944 +1,412 @@
 export const id = 279;
 export const ids = [279];
 export const modules = {
-  40429: (RR, JR, GR) => {
-    function yR(RR) {
-      return void 0 === RR ? void 0 : [RR[0], RR[1], RR[2]]
-    }
-
-    function tR(RR) {
-      const JR = RR.particles;
-      return {
-        opts: {
-          texture: JR.texture,
-          hK: JR.hK,
-          minLifeTime: JR.minLifeTime,
-          maxLifeTime: JR.maxLifeTime,
-          minSize: JR.minSize,
-          maxSize: JR.maxSize,
-          minEmitPower: JR.minEmitPower,
-          maxEmitPower: JR.maxEmitPower,
-          emitRate: JR.emitRate,
-          gravity: yR(JR.gravity),
-          dir1: yR(JR.dir1),
-          dir2: yR(JR.dir2),
-          colorGradients: JR.colorGradients,
-          blendMode: JR.blendMode
-        },
-        half: [JR.width / 2, JR.height / 2, JR.depth / 2]
-      }
-    }
-    GR.d(JR, {
-      c: () => tR
-    })
-  },
-  40393: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      d: () => fR,
-      e: () => iR,
-      i: () => ZR
+  42952: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => jr,
+      h: () => pr,
+      k: () => Er
     });
-    var yR = GR(216);
-    const tR = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      uR = "PetRoot";
-    let ZR = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      qR = tR;
-    new Map, new Map;
-
-    function iR(RR) {
-      var JR;
-      return null !== (JR = (0, yR.b)(ZR, RR)) && void 0 !== JR ? JR : null
-    }
-
-    function fR(RR) {
-      var JR;
-      return null !== (JR = (0, yR.b)(qR, RR)) && void 0 !== JR ? JR : null
-    }
-  },
-  40432: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => yR,
-      c: () => tR,
-      g: () => uR
-    });
-    class yR {
-      constructor() {
-        this.pose = {
-          pos: [0, 0, 0],
-          yaw: 0,
-          mode: "flying",
-          seated: !1,
-          clip: void 0
-        }, this.BL = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
-      }
-      step(RR) {
-        var JR;
-        const {
-          feet: GR,
-          heading: yR,
-          tuning: ZR
-        } = RR, qR = Math.min(Math.max(RR.dt, 0), .1), {
-          pose: iR,
-          BL: fR,
-          target: VR
-        } = this;
-        if (this.started && qR > 0) {
-          const RR = Math.hypot(GR[0] - this.lastFeet[0], GR[1] - this.lastFeet[1], GR[2] - this.lastFeet[2]);
-          this.speed += (RR / qR - this.speed) * Math.min(qR / .15, 1)
+    var Zr, Wr = Qr(38599),
+      ar = Qr(38560);
+    ! function(rr) {
+      rr[rr.CW = 0] = "CW", rr[rr.CCW = 1] = "CCW"
+    }(Zr || (Zr = {}));
+    class jr {
+      static Interpolate(rr, Sr, Qr, Zr, Wr) {
+        if (0 === rr) return 0;
+        const ar = 1 - 3 * Zr + 3 * Sr,
+          jr = 3 * Zr - 6 * Sr,
+          Ir = 3 * Sr;
+        let fr = rr;
+        for (let Er = 0; Er < 5; Er++) {
+          const Sr = fr * fr;
+          fr -= (ar * (Sr * fr) + jr * Sr + Ir * fr - rr) * (1 / (3 * ar * Sr + 2 * jr * fr + Ir)), fr = Math.min(1, Math.max(0, fr))
         }
-        this.lastFeet[0] = GR[0], this.lastFeet[1] = GR[1], this.lastFeet[2] = GR[2], this.stillS = this.speed > .3 ? 0 : this.stillS + qR;
-        const KR = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === KR && "perched" === iR.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += qR, iR.mode = KR;
-        const wR = Math.sin(yR),
-          rR = Math.cos(yR);
-        "perched" === KR ? (uR(VR, GR, ZR.perchOffset, wR, rR), VR[1] += RR.headTopY - GR[1]) : (uR(VR, GR, ZR.followOffset, wR, rR), VR[1] += tR(ZR, RR.timeS));
-        const {
-          pos: eR
-        } = iR, aR = Math.hypot(VR[0] - eR[0], VR[1] - eR[1], VR[2] - eR[2]);
-        if (!this.started || aR > 8 || "perched" === KR && (this.perchLocked || aR < .05)) this.perchLocked = this.started && "perched" === KR, eR[0] = VR[0], eR[1] = VR[1], eR[2] = VR[2], fR[0] = fR[1] = fR[2] = 0;
-        else {
-          const RR = ZR.followStiffness;
-          for (let JR = 0; JR < 3; JR++) fR[JR] += (RR * RR * (VR[JR] - eR[JR]) - 2 * RR * fR[JR]) * qR, eR[JR] += fR[JR] * qR
+        return 3 * Math.pow(1 - fr, 2) * fr * Qr + 3 * (1 - fr) * Math.pow(fr, 2) * Wr + Math.pow(fr, 3)
+      }
+    }
+    class Ir {
+      constructor(rr) {
+        this._radians = rr, this._radians < 0 && (this._radians += 2 * Math.PI)
+      }
+      degrees() {
+        return 180 * this._radians / Math.PI
+      }
+      radians() {
+        return this._radians
+      }
+      static BetweenTwoPoints(rr, Sr) {
+        const Qr = Sr.subtract(rr),
+          Zr = Math.atan2(Qr.y, Qr.x);
+        return new Ir(Zr)
+      }
+      static BetweenTwoVectors(rr, Sr) {
+        let Qr = rr.lengthSquared() * Sr.lengthSquared();
+        if (0 === Qr) return new Ir(Math.PI / 2);
+        Qr = Math.sqrt(Qr);
+        let Zr = rr.dot(Sr) / Qr;
+        Zr = (0, Wr.Clamp)(Zr, -1, 1);
+        const ar = Math.acos(Zr);
+        return new Ir(ar)
+      }
+      static FromRadians(rr) {
+        return new Ir(rr)
+      }
+      static FromDegrees(rr) {
+        return new Ir(rr * Math.PI / 180)
+      }
+    }
+    class fr {
+      constructor(rr, Sr, Qr) {
+        this.startPoint = rr, this.midPoint = Sr, this.endPoint = Qr;
+        const Zr = Math.pow(Sr.x, 2) + Math.pow(Sr.y, 2),
+          Wr = (Math.pow(rr.x, 2) + Math.pow(rr.y, 2) - Zr) / 2,
+          jr = (Zr - Math.pow(Qr.x, 2) - Math.pow(Qr.y, 2)) / 2,
+          fr = (rr.x - Sr.x) * (Sr.y - Qr.y) - (Sr.x - Qr.x) * (rr.y - Sr.y);
+        this.centerPoint = new ar.q((Wr * (Sr.y - Qr.y) - jr * (rr.y - Sr.y)) / fr, ((rr.x - Sr.x) * jr - (Sr.x - Qr.x) * Wr) / fr), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = Ir.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const Er = this.startAngle.degrees();
+        let pr = Ir.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          xr = Ir.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        pr - Er > 180 && (pr -= 360), pr - Er < -180 && (pr += 360), xr - pr > 180 && (xr -= 360), xr - pr < -180 && (xr += 360), this.orientation = pr - Er < 0 ? 0 : 1, this.angle = Ir.FromDegrees(0 === this.orientation ? Er - xr : xr - Er)
+      }
+    }
+    class Er {
+      constructor(rr, Sr) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new ar.q(rr, Sr))
+      }
+      addLineTo(rr, Sr) {
+        if (this.closed) return this;
+        const Qr = new ar.q(rr, Sr),
+          Zr = this._points[this._points.length - 1];
+        return this._points.push(Qr), this._length += Qr.subtract(Zr).length(), this
+      }
+      addArcTo(rr, Sr, Qr, Zr) {
+        let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const jr = this._points[this._points.length - 1],
+          Ir = new ar.q(rr, Sr),
+          Er = new ar.q(Qr, Zr),
+          pr = new fr(jr, Ir, Er);
+        let xr = pr.angle.radians() / Wr;
+        0 === pr.orientation && (xr *= -1);
+        let mr = pr.startAngle.radians() + xr;
+        for (let ar = 0; ar < Wr; ar++) {
+          const rr = Math.cos(mr) * pr.radius + pr.centerPoint.x,
+            Sr = Math.sin(mr) * pr.radius + pr.centerPoint.y;
+          this.addLineTo(rr, Sr), mr += xr
         }
-        const LR = yR + ZR.yawOffset;
-        var nR;
-        return this.started ? iR.yaw += ((nR = LR - iR.yaw) - 2 * Math.PI * Math.round(nR / (2 * Math.PI))) * Math.min(8 * qR, 1) : iR.yaw = LR, this.started = !0, iR.seated = "perched" === KR && this.perchLocked, iR.clip = null === (JR = ZR.clips) || void 0 === JR ? void 0 : JR[this.rG(KR)], iR
+        return this
       }
-      reset() {
-        this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
+      addQuadraticCurveTo(rr, Sr, Qr, Zr) {
+        let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const ar = (rr, Sr, Qr, Zr) => (1 - rr) * (1 - rr) * Sr + 2 * rr * (1 - rr) * Qr + rr * rr * Zr,
+          jr = this._points[this._points.length - 1];
+        for (let Ir = 0; Ir <= Wr; Ir++) {
+          const fr = Ir / Wr,
+            Er = ar(fr, jr.x, rr, Qr),
+            pr = ar(fr, jr.y, Sr, Zr);
+          this.addLineTo(Er, pr)
+        }
+        return this
       }
-      rG(RR) {
-        return "perched" === RR ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      addBezierCurveTo(rr, Sr, Qr, Zr, Wr, ar) {
+        let jr = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+        if (this.closed) return this;
+        const Ir = (rr, Sr, Qr, Zr, Wr) => (1 - rr) * (1 - rr) * (1 - rr) * Sr + 3 * rr * (1 - rr) * (1 - rr) * Qr + 3 * rr * rr * (1 - rr) * Zr + rr * rr * rr * Wr,
+          fr = this._points[this._points.length - 1];
+        for (let Er = 0; Er <= jr; Er++) {
+          const pr = Er / jr,
+            xr = Ir(pr, fr.x, rr, Qr, Wr),
+            mr = Ir(pr, fr.y, Sr, Zr, ar);
+          this.addLineTo(xr, mr)
+        }
+        return this
       }
-    }
-
-    function tR(RR, JR) {
-      return RR.bobAmplitude * Math.sin(2 * Math.PI * RR.bobHz * JR)
-    }
-
-    function uR(RR, JR, GR, yR, tR) {
-      const [uR, ZR, qR] = GR;
-      RR[0] = JR[0] + uR * tR + qR * yR, RR[1] = JR[1] + ZR, RR[2] = JR[2] - uR * yR + qR * tR
-    }
-  },
-  40402: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR
-    });
-    var yR = GR(38195),
-      tR = GR(39020);
-
-    function uR(RR, JR) {
-      var GR;
-      RR.blendMode = JR.blendMode, RR.minLifeTime = JR.minLifeTime, RR.maxLifeTime = JR.maxLifeTime, RR.minSize = JR.minSize, RR.maxSize = JR.maxSize, RR.minEmitPower = JR.minEmitPower, RR.maxEmitPower = JR.maxEmitPower;
-      const uR = null !== (GR = JR.gravity) && void 0 !== GR ? GR : [0, 0, 0];
-      RR.gravity = new yR.Fe(uR[0], uR[1], uR[2]);
-      for (const yR of JR.colorGradients) RR.addColorGradient(yR.timeFraction, (0, tR.k)(yR.minColor), yR.maxColor ? (0, tR.k)(yR.maxColor) : void 0)
-    }
-  },
-  39961: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => AR,
-      h: () => MR,
-      k: () => XR,
-      l: () => lR,
-      n: () => pR,
-      o: () => WR
-    });
-    var yR = GR(359),
-      tR = GR(39974),
-      uR = GR(3928),
-      ZR = GR(3933),
-      qR = GR(39964),
-      iR = GR(39971),
-      fR = GR(25),
-      VR = GR(112),
-      KR = GR(4044),
-      wR = GR(103),
-      rR = GR(132),
-      eR = GR(46),
-      aR = GR(327),
-      LR = GR(4928),
-      nR = GR(123);
-    const UR = {
-      no_adapter: "start_no_adapter",
-      device: "device_failed"
-    };
-
-    function WR(RR) {
-      var JR;
-      const GR = null !== (JR = VR.currentUrl.getSearchParam(RR)) && void 0 !== JR ? JR : eR.i.getItem(RR);
-      return null === GR || void 0 === GR || "" === GR ? null : "0" !== GR && "false" !== GR && !1 !== GR && 0 !== GR
-    }
-    async function AR(RR, JR) {
-      (0, uR.x)(null);
-      const GR = (0, ZR.m)((0, ZR.l)(JR.useWebGpu, !0));
-      (0, wR.setWebGpuRequested)("lite" === GR.requested && (0, wR.getWebGpuSupported)());
-      const qR = (0, ZR.g)(GR.source);
-      null !== qR && console.info(`Renderer: ${GR.requested} from ${qR}`), null !== GR.fallbackReason && console.warn(`Renderer: ${GR.fallbackReason}`);
-      let VR = GR.fallbackReason;
-      if ("webgl2" !== GR.choice) {
-        const qR = await async function(RR, JR, GR, ZR) {
-          const qR = await (0, wR.probeWebGpuAdapter)();
-          if ("usable" !== qR) return (0, wR.setWebGpuFallbackReason)(qR), console.info("No usable WebGPU adapter, rendering with WebGL."), "no usable WebGPU adapter";
-          if (GR && !0 !== eR.i.getItem(yR.jc)) {
-            if (!0 === eR.i.getItem(nR.J)) return (0, wR.setWebGpuFallbackReason)("old_intel_driver"), console.info("The WebGPU adapter is an Intel GPU whose driver is too old for Lite (no shader-f16), rendering with WebGL."), nR.c;
-            if (await (0, aR.k)(), (0, aR.d)()) return (0, wR.setWebGpuFallbackReason)("few_wasm_memories"), console.info("This tab fits too few wasm memories for WebGPU, rendering with WebGL."), aR.c
-          }
-          let VR = "load_failed";
-          try {
-            const {
-              create: GR
-            } = await (0, uR.o)(ZR).load();
-            VR = "start_failed";
-            const yR = fR.d.antiAliasingOnWebGpuAdapter((0, rR.k)()),
-              tR = (0, iR.g)(RR),
-              qR = (0, iR.e)(tR, {
-                size: RR => (0, KR.j)(tR, RR)
-              });
-            return await GR(RR, {
-              xyR: yR,
-              sceneDepth: JR.sceneDepth,
-              sunShadow: JR.sunShadow,
-              bufferSize: qR
-            })
-          } catch (LR) {
-            const RR = (0, tR.e)(LR);
-            (0, wR.setWebGpuFallbackReason)(RR ? UR[RR] : VR);
-            const JR = null === LR || void 0 === LR ? void 0 : LR.fallbackReason;
-            return "string" === typeof JR ? (console.warn(`Lite could not start, falling back to WebGL: ${String(LR)}`), JR) : (console.error("Failed to initialise the Lite renderer, falling back to WebGL.", LR), "it failed to start (see the console)")
-          }
-        }(RR, JR, "setting" === GR.source, GR.choice);
-        if ("lite" === GR.choice && eR.i.setItem(nR.w, "string" === typeof qR), "string" !== typeof qR) return fR.d.followGameGpu((0, rR.k)()), (0, wR.setWebGpuFallbackReason)("none"), (0, ZR.p)(GR), (0, uR.x)(qR), {
-          lite: qR
-        };
-        VR = (0, ZR.c)(GR.choice, [qR]), RR.replaceWith(RR.cloneNode(!1))
-      } else "lite" === GR.requested ? (0, wR.setWebGpuFallbackReason)("load_failed") : "default" === GR.source && JR.webGpuDefaultOffReason ? (0, wR.setWebGpuFallbackReason)(JR.webGpuDefaultOffReason) : (0, wR.setWebGpuFallbackReason)("not_requested");
-      return (0, ZR.p)({
-        ...GR,
-        choice: "webgl2",
-        fallbackReason: VR
-      }), fR.d.followGameGpu(null), {
-        lite: null
-      }
-    }
-
-    function CR() {
-      return Promise.all([GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(299), GR.e(311), GR.e(298), GR.e(292), GR.e(293), GR.e(277), GR.e(0)]).then((() => GR(53540)))
-    }
-    async function XR() {
-      return (await CR()).createSceneParticleSystem
-    }
-    async function MR() {
-      Promise.all([GR.e(289), GR.e(621)]).then((() => GR(53623))).then((RR => {
-        RR.installImageBitmapTextureLoader()
-      })).catch((() => {}));
-      const [RR, JR] = await Promise.all([CR(), Promise.all([GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(299), GR.e(311), GR.e(298), GR.e(292), GR.e(293), GR.e(277), GR.e(0)]).then((() => GR(53641))), Promise.all([GR.e(289), GR.e(290), GR.e(287), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(299), GR.e(311), GR.e(298), GR.e(292), GR.e(293), GR.e(277), GR.e(0)]).then((() => GR(42663)))]);
-      return (0, qR.g)(JR.SkyMaterial), RR.default
-    }
-
-    function BR(RR) {
-      return "lite" === (0, ZR.m)((0, ZR.l)(RR, !1)).choice && (0, wR.getWebGpuSupported)() && !eR.i.getItem(nR.w)
-    }
-
-    function lR(RR) {
-      BR(RR) || MR().catch((RR => {
-        console.warn("Failed to prefetch noa's Babylon backend.", RR)
-      }))
-    }
-
-    function pR(RR) {
-      (0, LR.e)((() => {
-        BR(RR) ? (0, uR.k)().load().catch((RR => {
-          console.warn("Failed to prefetch the Lite renderer.", RR)
-        })) : lR(RR)
-      }))
-    }
-  },
-  39971: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      g: () => ZR
-    });
-    var yR = GR(25),
-      tR = GR(35085),
-      uR = GR(4044);
-
-    function ZR(RR) {
-      var JR;
-      return null !== (JR = RR.parentElement) && void 0 !== JR ? JR : RR
-    }
-
-    function qR(RR, JR) {
-      if (RR.clientWidth <= 0 || RR.clientHeight <= 0 || tR.c.isHeld()) return null;
-      const GR = (0, uR.l)(),
-        [ZR, qR] = JR.size(GR);
-      return (0, uR.n)(ZR, qR, GR, yR.d.get("clientEscMenuOptions").pixelScale)
-    }
-  },
-  40112: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      f: () => tR
-    });
-    const yR = 2.2;
-
-    function tR(RR) {
-      let JR = 0;
-      return RR > 5 && (JR = .12 * Math.min(RR - 5, 15), RR > 20 && (JR += .01 * (RR - 20))), 1.4 + JR
-    }
-  },
-  40105: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR,
-      d: () => qR,
-      h: () => uR,
-      k: () => rR,
-      n: () => iR,
-      o: () => VR,
-      p: () => fR,
-      r: () => wR
-    });
-    var yR = GR(38195),
-      tR = GR(38496);
-    const uR = 0,
-      ZR = 1,
-      qR = 18;
-
-    function iR(RR) {
-      return !1 !== RR && (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || arguments.length > 2 && void 0 !== arguments[2] && arguments[2])
-    }
-
-    function fR(RR, JR) {
-      return null !== RR && void 0 !== RR ? RR : JR
-    }
-
-    function VR(RR, JR, GR) {
-      return JR && !GR ? Math.max(1, RR / qR) : 1
-    }
-    const KR = new WeakMap;
-
-    function wR(RR, JR, GR, tR) {
-      const uR = RR.zC.vGR(GR),
-        ZR = uR.offset;
-      ZR[0] = ZR[1] = ZR[2] = 0;
-      const qR = RR.zC.vGR(JR);
-      if (tR || !qR || !uR.mesh.isEnabled() || !uR.mesh.isVisible) return 1;
-      const iR = RR.zC.f6(GR).B_,
-        fR = RR.camera.l_(),
-        VR = RR.camera.S_(),
-        wR = fR[0] - iR[0],
-        rR = fR[1] - iR[1],
-        eR = fR[2] - iR[2];
-      if (-(VR[0] * wR + VR[1] * rR + VR[2] * eR) <= 0 || Math.hypot(wR, rR, eR) < .1) return 1;
-      const aR = RR.lK.jH().getFrameId();
-      let LR = KR.get(qR);
-      if (LR || (LR = {
-          frame: -1,
-          minimum: new yR.Fe,
-          maximum: new yR.Fe,
-          valid: !1
-        }, KR.set(qR, LR)), LR.frame !== aR)
-        if (LR.frame = aR, qR.SyR) LR.valid = RR.lK.RP.getObjectBounds(qR.JI, LR.minimum, LR.maximum);
-        else {
-          LR.minimum.NRR(1 / 0), LR.maximum.NRR(-1 / 0), LR.valid = !1;
-          const RR = [qR.mesh, ...qR.mesh.getChildMeshes(!1)];
-          for (const JR of RR) {
-            if (!("getTotalVertices" in JR) || !JR.isEnabled() || !JR.isVisible || !JR.getTotalVertices()) continue;
-            JR.computeWorldMatrix();
-            const RR = JR.Tm().boundingBox;
-            LR.minimum.minimizeInPlace(RR.minimumWorld), LR.maximum.maximizeInPlace(RR.maximumWorld), LR.valid = !0
-          }
-        } if (!LR.valid) return 1;
-      const nR = function(RR, JR, GR, yR, tR) {
-        const uR = JR[0] - RR[0],
-          ZR = JR[1] - RR[1],
-          qR = JR[2] - RR[2],
-          iR = Math.hypot(uR, ZR, qR),
-          fR = -(tR[0] * uR + tR[1] * ZR + tR[2] * qR);
-        if (iR < .1 || fR <= 0) return 0;
-        const VR = (Math.abs(tR[0]) * (yR.x - GR.x) + Math.abs(tR[1]) * (yR.y - GR.y) + Math.abs(tR[2]) * (yR.z - GR.z)) / 2,
-          KR = -(tR[0] * ((GR.x + yR.x) / 2 - RR[0]) + tR[1] * ((GR.y + yR.y) / 2 - RR[1]) + tR[2] * ((GR.z + yR.z) / 2 - RR[2]));
-        return Math.max(0, Math.min((KR + VR + .01) / fR, 2 * VR / fR, 1 - .1 / fR))
-      }(iR, fR, LR.minimum, LR.maximum, RR.camera.S_());
-      for (let yR = 0; yR < 3; yR++) ZR[yR] = (fR[yR] - iR[yR]) * nR;
-      return 1 - nR
-    }
-
-    function rR(RR, JR) {
-      const {
-        mesh: GR,
-        offset: yR
-      } = RR.zC.vGR(JR), uR = RR.zC.f6(JR).B_, ZR = uR[0] + yR[0], qR = uR[1] + yR[1], iR = uR[2] + yR[2];
-      (0, tR.i)(GR, ZR, qR, iR)
-    }
-  },
-  39964: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => fR,
-      g: () => qR,
-      h: () => iR
-    });
-    var yR = GR(38489),
-      tR = GR(38382);
-    const uR = new Set;
-    let ZR = null;
-
-    function qR(RR) {
-      ZR = RR
-    }
-
-    function iR(RR) {
-      if (!ZR) throw new Error("No SkyMaterial: WebGL2's backend installs it");
-      return new ZR("sky", RR)
-    }
-
-    function fR(RR, JR, GR) {
-      if (!(0, yR.d)(RR)) return void RR.material.forceCompilation(RR, JR);
-      const ZR = () => {
-        if (RR.oB()) return void uR.delete(RR);
-        const yR = (0, tR.bb)(RR.material);
-        if (![null === yR || void 0 === yR ? void 0 : yR.diffuseTexture, null === yR || void 0 === yR ? void 0 : yR.opacityTexture, null === yR || void 0 === yR ? void 0 : yR.emissiveTexture, null === yR || void 0 === yR ? void 0 : yR.reflectionTexture].every((RR => !RR || GR.prepareTexture(RR)))) return uR.add(RR), void setTimeout(ZR, 16);
-        uR.delete(RR), JR()
-      };
-      ZR()
-    }
-  },
-  40103: (RR, JR, GR) => {
-    GR.d(JR, {
-      B: () => jR,
-      D: () => GJ,
-      F: () => KJ,
-      b: () => mR,
-      c: () => cR,
-      e: () => TR,
-      g: () => SR,
-      k: () => VJ,
-      n: () => uJ,
-      r: () => tJ,
-      u: () => zR,
-      y: () => QR
-    });
-    var yR = GR(1270),
-      tR = GR(1343),
-      uR = GR(359),
-      ZR = GR(1479),
-      qR = GR(5281),
-      iR = GR(5303),
-      fR = GR(2435),
-      VR = GR(38406),
-      KR = GR(38397),
-      wR = GR(39055),
-      rR = GR(38682),
-      eR = GR(38550),
-      aR = GR(38325),
-      LR = GR(40105),
-      nR = GR(39094),
-      UR = GR(39917),
-      WR = GR(38371),
-      AR = GR(38466),
-      CR = GR(679),
-      XR = GR(1351),
-      MR = GR(2137),
-      BR = GR(2242),
-      lR = GR(4428),
-      pR = GR(4422),
-      gR = GR(2194),
-      bR = GR(25),
-      vR = GR(10178),
-      OR = GR(5254),
-      xR = GR(5290),
-      NR = GR(5292),
-      DR = GR(37278);
-    const HR = Object.create(null),
-      oR = Object.create(null),
-      cR = {
-        DEFAULT_FONT_SIZE: 47,
-        DEFAULT_SUBTITLE_FONT_SIZE: 30,
-        HORIZONTAL_PADDING: 30,
-        VERTICAL_PADDING: 22,
-        TEXT_SHADOW_WIDTH: 2,
-        TEXT_PLANE_RATIO: .2 / 64,
-        LINE_SPACING: 8,
-        ICON_PADDING: 6,
-        ANIMATE_IN_DELAY: 40,
-        EFFECT_ICON_SIZE: 70
-      },
-      PR = {
-        text: RR => `bolder ${RR}px 'Jetbrains Mono'`
-      },
-      IR = 41,
-      mR = {
-        icon: BR.b,
-        mainRGB: "transparent",
-        chatTag: [],
-        nameTag: {
-          iconRGB: "#f38ab6",
-          iconShadowRGB: "black"
-        },
-        visible: !0
-      };
-
-    function zR(RR, JR) {
-      return RR.flatMap((RR => {
-        var GR;
-        if ("object" === typeof RR && "chatTag" in RR) return [RR];
-        if (dR(RR)) return [RR];
-        if ((0, uR.sb)(RR)) return [{
-          str: ""
-        }];
-        if ((0, uR.rb)(RR)) {
-          const GR = (0, vR.e)(RR.action);
-          if (GR) {
-            var ZR;
-            const yR = RR.style;
-            return [{
-              icon: (0, vR.g)(GR),
-              style: {
-                fontSize: null !== (ZR = null === yR || void 0 === yR ? void 0 : yR.fontSize) && void 0 !== ZR ? ZR : `${JR}px`,
-                opacity: null === yR || void 0 === yR ? void 0 : yR.opacity
-              }
-            }]
-          }
-          const yR = (0, gR.q)(RR.action, bR.d.get("isTouchScreen")),
-            tR = (0, gR.n)(RR.action);
-          null === yR && null === tR && console.warn(`No key binding found for action: ${RR.action}`), RR = {
-            str: null !== yR && void 0 !== yR ? yR : (0, gR.m)(tR),
-            style: RR.style
+      isPointInside(rr) {
+        let Sr = !1;
+        const Qr = this._points.length;
+        for (let Zr = Qr - 1, Wr = 0; Wr < Qr; Zr = Wr++) {
+          let Qr = this._points[Zr],
+            ar = this._points[Wr],
+            jr = ar.x - Qr.x,
+            Ir = ar.y - Qr.y;
+          if (Math.abs(Ir) > Number.EPSILON) {
+            if (Ir < 0 && (Qr = this._points[Wr], jr = -jr, ar = this._points[Zr], Ir = -Ir), rr.y < Qr.y || rr.y > ar.y) continue;
+            if (rr.y === Qr.y && rr.x === Qr.x) return !0;
+            {
+              const Zr = Ir * (rr.x - Qr.x) - jr * (rr.y - Qr.y);
+              if (0 === Zr) return !0;
+              if (Zr < 0) continue;
+              Sr = !Sr
+            }
+          } else {
+            if (rr.y !== Qr.y) continue;
+            if (ar.x <= rr.x && rr.x <= Qr.x || Qr.x <= rr.x && rr.x <= ar.x) return !0
           }
         }
-        let qR;
-        return qR = "string" !== typeof RR && "str" in RR ? RR : {
-            str: RR
-          }, null !== (GR = qR.style) && void 0 !== GR && GR.fontSize ? qR.style.fontSize.endsWith("px") || console.warn(new Error("Canvas text font size should be in px").stack) : qR.style ? qR.style.fontSize = `${JR}px` : qR.style = {
-            fontSize: `${JR}px`
-          },
-          function(RR) {
-            if ("object" !== typeof RR.str || !("translationKey" in RR.str)) return [RR];
-            const JR = tR.g.get().getCurrentLanguageCode(),
-              GR = (0, yR.o)(RR.str.params, MR.e.shown),
-              uR = (0, yR.u)(JR, RR.str.translationKey, GR);
-            if (uR.every((RR => "string" === typeof RR))) return [RR];
-            return uR.map((JR => "string" === typeof JR ? {
-              str: JR,
-              style: RR.style
-            } : {
-              icon: JR.icon,
-              style: {
-                fontSize: RR.style.fontSize,
-                opacity: RR.style.opacity
-              }
-            }))
-          }(qR)
-      }))
-    }
-
-    function SR(RR) {
-      const JR = Object.keys(RR).length;
-      return {
-        width: cR.EFFECT_ICON_SIZE * JR,
-        height: JR > 0 ? cR.EFFECT_ICON_SIZE : 0
+        return Sr
       }
-    }
-
-    function jR(RR) {
-      return RR && void 0 !== RR.str
-    }
-
-    function dR(RR) {
-      return RR && "object" === typeof RR && "icon" in RR && !("mainRGB" in RR)
-    }
-
-    function ER(RR) {
-      return RR && "object" === typeof RR && "mainRGB" in RR
-    }
-
-    function YR(RR) {
-      var JR, GR;
-      const yR = null !== (JR = jR(RR) ? null === (GR = RR.style) || void 0 === GR ? void 0 : GR.fontSize : void 0) && void 0 !== JR ? JR : `${cR.DEFAULT_FONT_SIZE}px`;
-      return PR.text(Number(yR.replace("px", "")))
-    }
-
-    function kR(RR) {
-      var JR;
-      const GR = null !== (JR = Object.hasOwn(DR.c, RR) ? DR.c[RR] : null) && void 0 !== JR ? JR : (0, ZR.c)(RR, (0, ZR.j)(RR));
-      return GR || console.warn(`Unknown rank icon "${RR}" \u2014 not in the bundled Font Awesome subset.`), GR
-    }
-
-    function QR(RR) {
-      return ER(RR) ? "" : FR(RR)
-    }
-
-    function FR(RR) {
-      if (!jR(RR)) return "";
-      if ("string" === typeof RR.str) return RR.str;
-      if ("translationKey" in RR.str) {
-        const JR = tR.g.get().getCurrentLanguageCode(),
-          GR = (0, yR.o)(RR.str.params, MR.e.shown);
-        return (0, yR.w)(JR, RR.str.translationKey, GR)
+      close() {
+        return this.closed = !0, this
       }
-      return "entityName" in RR.str ? (0, XR.e)(RR.str.entityName, MR.e.shown) : ""
-    }
-
-    function TR(RR, JR) {
-      if ((0, CR.I)(RR) || 0 === RR.length) return {
-        width: 0,
-        height: 0,
-        sizeCache: []
-      };
-      let GR = 0;
-      for (const ZR of RR) {
-        const RR = fJ(ZR);
-        GR = Math.max(GR, RR)
+      length() {
+        let rr = this._length;
+        if (this.closed) {
+          const Sr = this._points[this._points.length - 1];
+          rr += this._points[0].subtract(Sr).length()
+        }
+        return rr
       }
-      const yR = GR + cR.VERTICAL_PADDING,
-        tR = [];
-      let uR = 0;
-      uR += RJ(void 0, RR[0]);
-      for (let ZR = 0; ZR < RR.length; ZR++) {
-        const GR = RR[ZR],
-          yR = {
-            x: uR,
-            width: 0
-          };
-        uR += sR(GR, JR), uR += RJ(GR, RR[ZR + 1]), yR.width = uR - yR.x, tR.push(yR)
+      area() {
+        const rr = this._points.length;
+        let Sr = 0;
+        for (let Qr = rr - 1, Zr = 0; Zr < rr; Qr = Zr++) Sr += this._points[Qr].x * this._points[Zr].y - this._points[Zr].x * this._points[Qr].y;
+        return .5 * Sr
       }
-      return {
-        width: uR,
-        height: yR,
-        sizeCache: tR
+      getPoints() {
+        return this._points
       }
-    }
-
-    function sR(RR, JR) {
-      if (dR(RR)) return fJ(RR);
-      if (ER(RR)) return function(RR) {
-        const JR = kR(RR);
-        if (!JR) return IR;
-        const [GR, yR] = JR.icon;
-        return IR * (GR / yR)
-      }(RR.icon) + cR.HORIZONTAL_PADDING;
-      const GR = YR(RR);
-      return function(RR, JR, GR) {
-        return GR.font = JR, GR.measureText(RR).width
-      }(FR(RR), GR, JR)
-    }
-
-    function hR(RR) {
-      return jR(RR) || dR(RR)
-    }
-
-    function RJ(RR, JR) {
-      const GR = hR(RR),
-        yR = hR(JR);
-      return void 0 === RR && !yR || !GR && void 0 === JR ? 0 : GR !== yR ? .5 * cR.HORIZONTAL_PADDING : 0
-    }
-    let JJ;
-
-    function GJ() {
-      return JJ ??= document.createElement("canvas").getContext("2d"), JJ
-    }
-    const yJ = () => 0;
-
-    function tJ(RR, JR, GR, yR, tR) {
-      let uR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : yJ;
-      JR += RJ(void 0, RR[0]);
-      for (let ZR = 0; ZR < RR.length; ZR++) {
-        const qR = RR[ZR],
-          iR = uJ(qR, JR, GR, yR, tR, void 0, uR);
-        JR += 0 === iR ? 0 : iR + RJ(qR, RR[ZR + 1])
-      }
-    }
-
-    function uJ(RR, JR, GR, yR, tR, ZR) {
-      var KR;
-      let wR = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : yJ;
-      if (dR(RR)) {
-        const yR = fJ(RR);
-        return function(RR, JR, GR, yR, tR) {
-          var uR;
-          let ZR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : yJ;
-          const KR = (0, VR.j)(tR);
-          GR += cR.VERTICAL_PADDING / 2;
-          const wR = ZR(),
-            rR = (0, vR.m)(RR.icon),
-            eR = RR => {
-              if (wR === ZR())
-                if (KR.imageSmoothingEnabled = rR, rR && RR.width > RR.height) {
-                  const tR = yR * RR.height / RR.width;
-                  KR.drawImage(RR, JR, GR + (yR - tR) / 2, yR, tR)
-                } else KR.drawImage(RR, JR, GR, yR, yR)
-            };
-          if (oR[RR.icon]) return void eR(oR[RR.icon]);
-          if (HR[RR.icon]) {
-            const JR = HR[RR.icon];
-            if (JR.complete) return void eR(JR)
+      getPointAtLengthPosition(rr) {
+        if (rr < 0 || rr > 1) return ar.q.Zero();
+        const Sr = rr * this.length();
+        let Qr = 0;
+        for (let Zr = 0; Zr < this._points.length; Zr++) {
+          const rr = (Zr + 1) % this._points.length,
+            Wr = this._points[Zr],
+            jr = this._points[rr].subtract(Wr),
+            Ir = jr.length() + Qr;
+          if (Sr >= Qr && Sr <= Ir) {
+            const rr = jr.normalize(),
+              Zr = Sr - Qr;
+            return new ar.q(Wr.x + rr.x * Zr, Wr.y + rr.y * Zr)
           }
-          const aR = (0, OR.j)(RR.icon, yR);
-          if (aR) return void eR(aR);
-          const LR = function(RR) {
-              const JR = (0, vR.k)(RR);
-              if (null !== JR) return {
-                url: JR,
-                type: "padGlyph"
-              };
-              if (qR.c.includes(RR)) return {
-                url: pR.b.getTexture(RR, lR.k.ICON).url,
-                type: "ingameIcon"
-              };
-              {
-                var GR;
-                const JR = null === (GR = fR.k.itemsClient[RR]) || void 0 === GR ? void 0 : GR.type;
-                return iJ.includes(JR) ? (console.error(new Error(`Invalid icon type ${JR} is not supported in nametags`).stack), {
-                  url: "",
-                  type: ""
-                }) : (0, xR.b)(JR) ? {
-                  url: "",
-                  type: JR
-                } : "GrayscaleArmour" === JR || iR.d[RR] ? {
-                  url: (0, NR.g)(RR),
-                  type: JR,
-                  tint: (0, iR.f)(RR)
-                } : {
-                  url: (0, NR.g)(RR),
-                  type: JR
-                }
-              }
-            }(RR.icon),
-            nR = LR.tint;
-          let WR = LR.url;
-          if ((0, xR.b)(null === (uR = fR.k.itemsClient[RR.icon]) || void 0 === uR ? void 0 : uR.type)) {
-            const JR = RR.icon;
-            if (!fR.k.itemsClient[JR].itemTexture) return void(0, OR.f)(JR, yR).then((RR => {
-              eR(RR), (0, UR.l)(tR)
-            }), (() => {}));
-            WR = (0, NR.g)(JR)
+          Qr = Ir
+        }
+        return ar.q.Zero()
+      }
+      static StartingAt(rr, Sr) {
+        return new Er(rr, Sr)
+      }
+    }
+    class pr {
+      static CreateQuadraticBezier(rr, Sr, Qr, Zr) {
+        Zr = Zr > 2 ? Zr : 3;
+        const Wr = [],
+          jr = (rr, Sr, Qr, Zr) => (1 - rr) * (1 - rr) * Sr + 2 * rr * (1 - rr) * Qr + rr * rr * Zr;
+        for (let Ir = 0; Ir <= Zr; Ir++) Wr.push(new ar.u(jr(Ir / Zr, rr.x, Sr.x, Qr.x), jr(Ir / Zr, rr.y, Sr.y, Qr.y), jr(Ir / Zr, rr.z, Sr.z, Qr.z)));
+        return new pr(Wr)
+      }
+      static CreateCubicBezier(rr, Sr, Qr, Zr, Wr) {
+        Wr = Wr > 3 ? Wr : 4;
+        const jr = [],
+          Ir = (rr, Sr, Qr, Zr, Wr) => (1 - rr) * (1 - rr) * (1 - rr) * Sr + 3 * rr * (1 - rr) * (1 - rr) * Qr + 3 * rr * rr * (1 - rr) * Zr + rr * rr * rr * Wr;
+        for (let fr = 0; fr <= Wr; fr++) jr.push(new ar.u(Ir(fr / Wr, rr.x, Sr.x, Qr.x, Zr.x), Ir(fr / Wr, rr.y, Sr.y, Qr.y, Zr.y), Ir(fr / Wr, rr.z, Sr.z, Qr.z, Zr.z)));
+        return new pr(jr)
+      }
+      static CreateHermiteSpline(rr, Sr, Qr, Zr, Wr) {
+        const jr = [],
+          Ir = 1 / Wr;
+        for (let fr = 0; fr <= Wr; fr++) jr.push(ar.u.Hermite(rr, Sr, Qr, Zr, fr * Ir));
+        return new pr(jr)
+      }
+      static CreateCatmullRomSpline(rr, Sr, Qr) {
+        const Zr = [],
+          Wr = 1 / Sr;
+        let jr = 0;
+        if (Qr) {
+          const Qr = rr.length;
+          for (let Ir = 0; Ir < Qr; Ir++) {
+            jr = 0;
+            for (let fr = 0; fr < Sr; fr++) Zr.push(ar.u.CatmullRom(rr[Ir % Qr], rr[(Ir + 1) % Qr], rr[(Ir + 2) % Qr], rr[(Ir + 3) % Qr], jr)), jr += Wr
           }
-          if (!WR) return;
-          const AR = new Image;
-          rR && (AR.crossOrigin = "anonymous");
-          if (AR.src = WR, nR) return void(AR.onload = () => {
-            const JR = function(RR, JR) {
-              let [GR, yR, tR] = JR;
-              const uR = document.createElement("canvas");
-              uR.width = RR.naturalWidth, uR.height = RR.naturalHeight;
-              const ZR = uR.getContext("2d");
-              return ZR.drawImage(RR, 0, 0), ZR.globalCompositeOperation = "multiply", ZR.fillStyle = `rgb(${GR}, ${yR}, ${tR})`, ZR.fillRect(0, 0, uR.width, uR.height), ZR.globalCompositeOperation = "destination-in", ZR.drawImage(RR, 0, 0), uR
-            }(AR, nR);
-            oR[RR.icon] = JR, eR(JR), (0, UR.l)(tR)
-          });
-          HR[RR.icon] = AR, AR.onload = () => {
-            eR(AR), (0, UR.l)(tR)
+          Zr.push(Zr[0])
+        } else {
+          const Qr = [];
+          Qr.push(rr[0].clone()), Qr.push(...rr), Qr.push(rr[rr.length - 1].clone());
+          let Ir = 0;
+          for (; Ir < Qr.length - 3; Ir++) {
+            jr = 0;
+            for (let rr = 0; rr < Sr; rr++) Zr.push(ar.u.CatmullRom(Qr[Ir], Qr[Ir + 1], Qr[Ir + 2], Qr[Ir + 3], jr)), jr += Wr
           }
-        }(RR, JR, GR, yR, tR, wR), yR
+          Ir--, Zr.push(ar.u.CatmullRom(Qr[Ir], Qr[Ir + 1], Qr[Ir + 2], Qr[Ir + 3], jr))
+        }
+        return new pr(Zr)
       }
-      const rR = (0, VR.j)(tR);
-      if (ER(RR)) {
-        const tR = null !== ZR && void 0 !== ZR ? ZR : sR(RR, rR);
-        return function(RR, JR, GR, yR, tR, uR) {
-          var ZR, qR;
-          uR.fillStyle = RR.mainRGB, uR.fillRect(JR, GR, yR, tR);
-          const iR = kR(RR.icon);
-          if (!iR) return;
-          const fR = (null === (ZR = RR.nameTag) || void 0 === ZR ? void 0 : ZR.iconRGB) || "white",
-            VR = (null === (qR = RR.nameTag) || void 0 === qR ? void 0 : qR.iconShadowRGB) || "black",
-            [KR, wR, , , rR] = iR.icon,
-            eR = "string" === typeof rR ? rR : rR.join(" "),
-            aR = IR / wR,
-            LR = JR + (yR - KR * aR) / 2,
-            nR = GR + (tR - IR) / 2,
-            UR = new Path2D(eR),
-            WR = uR;
-          for (const AR of [-1, 1])
-            for (const RR of [-1, 1]) ZJ(WR, UR, LR + cR.TEXT_SHADOW_WIDTH * AR, nR + cR.TEXT_SHADOW_WIDTH * RR, aR, VR);
-          ZJ(WR, UR, LR, nR, aR, fR)
-        }(RR, JR, GR, tR, yR, rR), tR
+      static ArcThru3Points(rr, Sr, Qr) {
+        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          Wr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          jr = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const Ir = [],
+          fr = Sr.subtract(rr),
+          Er = Qr.subtract(Sr),
+          xr = rr.subtract(Qr),
+          mr = ar.u.Cross(fr, Er),
+          Nr = mr.length();
+        if (Nr < Math.pow(10, -8)) return new pr(Ir);
+        const Ur = fr.lengthSquared(),
+          tr = Er.lengthSquared(),
+          hr = xr.lengthSquared(),
+          zr = mr.lengthSquared(),
+          Yr = .5 * fr.length() * Er.length() * xr.length() / Nr,
+          nr = -.5 * tr * ar.u.Dot(fr, xr) / zr,
+          er = -.5 * hr * ar.u.Dot(fr, Er) / zr,
+          Kr = -.5 * Ur * ar.u.Dot(Er, xr) / zr,
+          yr = rr.scale(nr).add(Sr.scale(er)).add(Qr.scale(Kr)),
+          Br = rr.subtract(yr).normalize(),
+          Tr = ar.u.Cross(mr, Br).normalize();
+        if (jr) {
+          const Sr = 2 * Math.PI / Zr;
+          for (let rr = 0; rr <= 2 * Math.PI; rr += Sr) Ir.push(yr.add(Br.scale(Yr * Math.cos(rr)).add(Tr.scale(Yr * Math.sin(rr)))));
+          Ir.push(rr)
+        } else {
+          const Sr = 1 / Zr;
+          let ar, jr = 0;
+          do {
+            ar = yr.add(Br.scale(Yr * Math.cos(jr)).add(Tr.scale(Yr * Math.sin(jr)))), Ir.push(ar), jr += Sr
+          } while (!ar.equalsWithEpsilon(Qr, Yr * Sr * 1.1));
+          Ir.push(Qr), Wr && Ir.push(rr)
+        }
+        return new pr(Ir)
       }
-      const eR = FR(RR);
-      if (0 === eR.length) return 0;
-      const aR = YR(RR);
-      rR.font = aR;
-      const LR = null !== ZR && void 0 !== ZR ? ZR : sR(RR, rR),
-        nR = jR(RR) && null !== (KR = (0, uR.Zb)(RR.style)) && void 0 !== KR ? KR : "white";
-      let WR = GR + yR;
-      return WR -= cR.VERTICAL_PADDING, WR += jR(RR) ? 5 : 0,
-        function(RR, JR, GR, yR, tR, uR, ZR) {
-          let qR = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : cR.TEXT_SHADOW_WIDTH;
-          for (const iR of [-1, 1])
-            for (const tR of [-1, 1]) qJ(ZR, RR, JR + qR * iR, GR + qR * tR, yR, uR);
-          qJ(ZR, RR, JR, GR, yR, tR)
-        }(eR, JR, WR, aR, nR, "black", rR), LR
-    }
-
-    function ZJ(RR, JR, GR, yR, tR, uR) {
-      RR.save(), RR.translate(GR, yR), RR.scale(tR, tR), RR.fillStyle = uR, RR.fill(JR), RR.restore()
-    }
-
-    function qJ(RR, JR, GR, yR, tR, uR) {
-      RR.font = tR, RR.fillStyle = uR, RR.fillText(JR, GR, yR)
-    }
-    const iJ = ["Gun"];
-
-    function fJ(RR) {
-      if (jR(RR) || dR(RR)) {
-        var JR, GR;
-        const yR = null !== (JR = null === (GR = RR.style) || void 0 === GR ? void 0 : GR.fontSize) && void 0 !== JR ? JR : `${cR.DEFAULT_FONT_SIZE}px`;
-        return Number(yR.replace("px", "")) || cR.DEFAULT_FONT_SIZE
+      constructor(rr) {
+        this._length = 0, this._points = rr, this._length = this._computeLength(rr)
       }
-      return cR.DEFAULT_FONT_SIZE
-    }
-
-    function VJ(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-        tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        uR = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      const ZR = RR.lK.jH(),
-        qR = (0, UR.h)(RR, `${GR}Tex`, yR, tR, {
-          mipped: KR.f.nearestLinearMipLinear,
-          unmipped: KR.f.nearestLinearMipNearest
-        }),
-        iR = (0, wR.m)(RR.lK, GR, (0, rR.k)({
-          width: 1,
-          height: 1
-        }));
-      iR.metadata = new RR.lK.qL, iR.metadata[eR.C] = !0, iR.billboardMode = aR.d.BILLBOARDMODE_ALL, iR.renderingGroupId = LR.b;
-      const fR = RR.zC.add([0, 0, 0], 1, 1, iR, [0, 0, 0]);
-      let VR;
-      RR.zC.Jm(fR, RR.zC.names.bC, {
-        pe: JR
-      });
-      const {
-        mirror: CR
-      } = (0, WR.b)({
-        name: `${GR}Mat`,
-        tL: ZR,
-        sets: {
-          specularColor: [0, 0, 0],
-          ambientColor: [1.3, 1.3, 1.3],
-          emissiveColor: [1, 1, 1],
-          ...(0, UR.i)(qR)
-        },
-        features: JR => {
-          (0, UR.e)(JR, "planes"), VR = (0, AR.c)(JR, RR.lK, uR ? {
-            x: 1,
-            y: 1,
-            z: 1,
-            w: 1
-          } : void 0)
-        },
-        unrendered: !0,
-        freeze: !0
-      });
-      return iR.material = CR, uR ? RR.zC.vGR(fR).UiR = !1 : (0, nR.f)(iR), iR.YH.add((() => {
-        CR.dispose(!1, !0)
-      })), {
-        planeEId: fR,
-        plane: iR,
-        texture: qR,
-        lightState: VR
+      getPoints() {
+        return this._points
       }
-    }
-
-    function KJ(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const tR = (0, LR.n)(JR, GR, yR);
-      return RR.renderingGroupId = tR ? LR.b : LR.h, tR
+      length() {
+        return this._length
+      }
+      continue (rr) {
+        const Sr = this._points[this._points.length - 1],
+          Qr = this._points.slice(),
+          Zr = rr.getPoints();
+        for (let Wr = 1; Wr < Zr.length; Wr++) Qr.push(Zr[Wr].subtract(Zr[0]).add(Sr));
+        return new pr(Qr)
+      }
+      _computeLength(rr) {
+        let Sr = 0;
+        for (let Qr = 1; Qr < rr.length; Qr++) Sr += rr[Qr].subtract(rr[Qr - 1]).length();
+        return Sr
+      }
     }
   },
-  39917: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => fR,
-      h: () => ZR,
-      i: () => iR,
-      l: () => qR
+  40237: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar
     });
-    var yR = GR(38406),
-      tR = GR(38382),
-      uR = GR(39922);
-
-    function ZR(RR, JR, GR, tR, uR) {
-      const ZR = function(RR) {
-          return !RR.lK.engine.needPOTTextures
-        }(RR),
-        qR = ZR ? uR.mipped : uR.unmipped;
-      return (0, yR.n)(RR.lK.jH(), JR, {
-        width: GR,
-        height: tR,
-        mipmaps: ZR,
-        samplingMode: qR,
-        hasAlpha: !0
-      })
-    }
-
-    function qR(RR) {
-      (0, yR.Z)(RR, !0, !RR.sampler.noMipmap)
-    }
-
-    function iR(RR) {
-      return {
-        diffuseTexture: RR,
-        useAlphaFromDiffuseTexture: !0,
-        transparencyMode: tR.v.alphaTestAndBlend,
-        alphaCutOff: .05,
-        alphaMode: tR.e.premultiplied,
-        forceDepthWrite: !0
+    var Zr = Qr(40246);
+    const Wr = (rr, Sr, Qr) => rr ? rr.getClassName && "Mesh" === rr.getClassName() ? null : !rr.getClassName || "SubMesh" !== rr.getClassName() && "PhysicsBody" !== rr.getClassName() ? rr.clone ? rr.clone() : Array.isArray(rr) ? rr.slice() : Qr && "object" === typeof rr ? {
+      ...rr
+    } : null : rr.clone(Sr) : null;
+    class ar {
+      static DeepCopy(rr, Sr, Qr, ar) {
+        let jr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ir = function(rr) {
+          const Sr = [];
+          do {
+            const Qr = Object.getOwnPropertyNames(rr);
+            for (const rr of Qr) - 1 === Sr.indexOf(rr) && Sr.push(rr)
+          } while (rr = Object.getPrototypeOf(rr));
+          return Sr
+        }(rr);
+        for (const Er of Ir) {
+          if ("_" === Er[0] && (!ar || -1 === ar.indexOf(Er))) continue;
+          if (Er.endsWith("Observable")) continue;
+          if (Qr && -1 !== Qr.indexOf(Er)) continue;
+          const Ir = rr[Er],
+            pr = typeof Ir;
+          if ("function" !== pr) try {
+            if ("object" === pr)
+              if (Ir instanceof Uint8Array) Sr[Er] = Uint8Array.from(Ir);
+              else if (Ir instanceof Array) {
+              if (Sr[Er] = [], Ir.length > 0)
+                if ("object" == typeof Ir[0])
+                  for (let rr = 0; rr < Ir.length; rr++) {
+                    const Qr = Wr(Ir[rr], Sr, jr); - 1 === Sr[Er].indexOf(Qr) && Sr[Er].push(Qr)
+                  } else Sr[Er] = Ir.slice(0)
+            } else Sr[Er] = Wr(Ir, Sr, jr);
+            else Sr[Er] = Ir
+          } catch (fr) {
+            Zr.c.Warn(fr.message)
+          }
+        }
       }
     }
-
-    function fR(RR, JR) {
-      RR.diffuseTexture.sampler.noMipmap || (0, tR.y)(RR, uR.f, {
-        lodBias: uR.e[JR]
-      })
-    }
   },
-  39974: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      return "object" === typeof RR && null !== RR ? Object.assign(RR, {
-        startStep: JR
-      }) : RR
-    }
-
-    function tR(RR) {
-      return "object" === typeof RR && null !== RR && "startStep" in RR ? RR.startStep : null
-    }
-    GR.d(JR, {
-      e: () => tR,
-      h: () => yR
-    })
-  },
-  40042: (RR, JR, GR) => {
-    var yR = {
-      "./cape_cow_cream.png": 28783,
-      "./cape_cow_normal.png": 28787,
-      "./cape_creator_level1.png": 28794,
-      "./cape_creator_level2.png": 28801,
-      "./cape_creator_level3.png": 28803,
-      "./cape_none.png": 28806,
-      "./cape_pig.png": 28808,
-      "./cape_sheep.png": 28813,
-      "./cape_super.png": 28820,
-      "./cape_super_inverted.png": 28826,
-      "./cape_youtuber.png": 28829
-    };
-
-    function tR(RR) {
-      var JR = uR(RR);
-      return GR(JR)
-    }
-
-    function uR(RR) {
-      if (!GR.o(yR, RR)) {
-        var JR = new Error("Cannot find module '" + RR + "'");
-        throw JR.code = "MODULE_NOT_FOUND", JR
+  40246: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr
+    });
+    class Zr {
+      static _CheckLimit(rr, Sr) {
+        let Qr = Zr._LogLimitOutputs[rr];
+        return Qr ? Qr.current++ : (Qr = {
+          limit: Sr,
+          current: 1
+        }, Zr._LogLimitOutputs[rr] = Qr), Qr.current <= Qr.limit
       }
-      return yR[RR]
+      static _GenerateLimitMessage(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Qr = Zr._LogLimitOutputs[rr];
+        if (!Qr || !Zr.MessageLimitReached) return;
+        const Wr = this._Levels[Sr];
+        Qr.current === Qr.limit && Zr[Wr.name](Zr.MessageLimitReached.replace(/%LIMIT%/g, "" + Qr.limit).replace(/%TYPE%/g, Wr.name ?? ""))
+      }
+      static _AddLogEntry(rr) {
+        Zr._LogCache = rr + Zr._LogCache, Zr.OnNewCacheEntry && Zr.OnNewCacheEntry(rr)
+      }
+      static _FormatMessage(rr) {
+        const Sr = rr => rr < 10 ? "0" + rr : "" + rr,
+          Qr = new Date;
+        return "[" + Sr(Qr.getHours()) + ":" + Sr(Qr.getMinutes()) + ":" + Sr(Qr.getSeconds()) + "]: " + rr
+      }
+      static _LogDisabled(rr, Sr) {}
+      static _LogEnabled() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Sr = arguments.length > 1 ? arguments[1] : void 0,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        const Wr = Array.isArray(Sr) ? Sr[0] : Sr;
+        if (void 0 !== Qr && !Zr._CheckLimit(Wr, Qr)) return;
+        const ar = Zr._FormatMessage(Wr),
+          jr = this._Levels[rr],
+          Ir = Array.isArray(Sr) ? Sr.slice(1) : [];
+        jr.logFunc && jr.logFunc("BJS - " + ar, ...Ir);
+        const fr = `<div style='color:${jr.color}'>${ar}</div><br>`;
+        Zr._AddLogEntry(fr), Zr._GenerateLimitMessage(Wr, rr)
+      }
+      static get LogCache() {
+        return Zr._LogCache
+      }
+      static ClearLogCache() {
+        Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr.errorsCount = 0
+      }
+      static set LogLevels(rr) {
+        Zr.Log = Zr._LogDisabled, Zr.Warn = Zr._LogDisabled, Zr.Error = Zr._LogDisabled;
+        const Sr = [Zr.MessageLogLevel, Zr.WarningLogLevel, Zr.ErrorLogLevel];
+        for (const Qr of Sr)
+          if ((rr & Qr) === Qr) {
+            const rr = this._Levels[Qr];
+            Zr[rr.name] = Zr._LogEnabled.bind(Zr, Qr)
+          }
+      }
     }
-    tR.keys = function() {
-      return Object.keys(yR)
-    }, tR.resolve = uR, RR.exports = tR, tR.id = 40042
+    Zr.NoneLogLevel = 0, Zr.MessageLogLevel = 1, Zr.WarningLogLevel = 2, Zr.ErrorLogLevel = 4, Zr.AllLogLevel = 7, Zr.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Zr.errorsCount = 0, Zr.Log = Zr._LogEnabled.bind(Zr, Zr.MessageLogLevel), Zr.Warn = Zr._LogEnabled.bind(Zr, Zr.WarningLogLevel), Zr.Error = Zr._LogEnabled.bind(Zr, Zr.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

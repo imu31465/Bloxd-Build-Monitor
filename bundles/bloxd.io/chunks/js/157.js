@@ -1,759 +1,759 @@
 export const id = 157;
 export const ids = [157];
 export const modules = {
-  7756: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      loadPageShaderPackCompiler: () => rJ
+  7575: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      loadPageShaderPackCompiler: () => NS
     });
-    var yR = {};
-    GR.r(yR), GR.d(yR, {
-      SuR: () => tR,
-      UJR: () => uR,
-      default: () => dR,
-      juR: () => ZR,
-      duR: () => qR,
-      initSync: () => jR,
-      oK: () => iR,
-      ZtR: () => fR,
-      EuR: () => VR,
-      YuR: () => KR,
-      nH: () => wR,
-      kuR: () => rR,
-      iH: () => eR,
-      QuR: () => aR
+    var Zr = {};
+    Qr.r(Zr), Qr.d(Zr, {
+      Aar: () => Wr,
+      Vrr: () => ar,
+      default: () => cr,
+      Var: () => jr,
+      Jar: () => Ir,
+      initSync: () => wr,
+      ip: () => fr,
+      RZr: () => Er,
+      Dar: () => pr,
+      dar: () => xr,
+      ZC: () => mr,
+      uar: () => Nr,
+      rC: () => Ur,
+      rjr: () => tr
     });
-    class tR {
-      static __wrap(RR) {
-        const JR = Object.create(tR.prototype);
-        return JR.__wbg_ptr = RR, nR.register(JR, JR.__wbg_ptr, JR), JR
+    class Wr {
+      static __wrap(rr) {
+        const Sr = Object.create(Wr.prototype);
+        return Sr.__wbg_ptr = rr, zr.register(Sr, Sr.__wbg_ptr, Sr), Sr
       }
       __destroy_into_raw() {
-        const RR = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, nR.unregister(this), RR
+        const rr = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, zr.unregister(this), rr
       }
       free() {
-        const RR = this.__destroy_into_raw();
-        mR.o2j9(RR, 0)
+        const rr = this.__destroy_into_raw();
+        Ar.MfqQ(rr, 0)
       }
-      get FuR() {
-        let RR, JR;
+      get Sjr() {
+        let rr, Sr;
         try {
-          const GR = mR.ZqTf(this.__wbg_ptr);
-          return RR = GR[0], JR = GR[1], MR(GR[0], GR[1])
+          const Qr = Ar.dNY9(this.__wbg_ptr);
+          return rr = Qr[0], Sr = Qr[1], Br(Qr[0], Qr[1])
         } finally {
-          mR.Vmxh(RR, JR, 1)
+          Ar.gDuS(rr, Sr, 1)
         }
       }
       get features() {
-        const RR = mR.V2A4(this.__wbg_ptr);
-        var JR = WR(RR[0], RR[1]);
-        return mR.Vmxh(RR[0], 4 * RR[1], 4), JR
+        const rr = Ar.M3mv(this.__wbg_ptr);
+        var Sr = nr(rr[0], rr[1]);
+        return Ar.gDuS(rr[0], 4 * rr[1], 4), Sr
       }
       get hooks() {
-        const RR = mR.PMyy(this.__wbg_ptr);
-        var JR = AR(RR[0], RR[1]).slice();
-        return mR.Vmxh(RR[0], 1 * RR[1], 1), JR
+        const rr = Ar.mJps(this.__wbg_ptr);
+        var Sr = er(rr[0], rr[1]).slice();
+        return Ar.gDuS(rr[0], 1 * rr[1], 1), Sr
       }
-      mapValidationMessage(RR, JR, GR, yR, tR) {
-        let uR, ZR;
+      mapValidationMessage(rr, Sr, Qr, Zr, Wr) {
+        let ar, jr;
         try {
-          const fR = mR.QRQU(this.__wbg_ptr, RR, JR, GR, UR(yR), UR(tR));
-          var qR = fR[0],
-            iR = fR[1];
-          if (fR[3]) throw qR = 0, iR = 0, NR(fR[2]);
-          return uR = qR, ZR = iR, MR(qR, iR)
+          const Er = Ar.WQJD(this.__wbg_ptr, rr, Sr, Qr, Yr(Zr), Yr(Wr));
+          var Ir = Er[0],
+            fr = Er[1];
+          if (Er[3]) throw Ir = 0, fr = 0, qr(Er[2]);
+          return ar = Ir, jr = fr, Br(Ir, fr)
         } finally {
-          mR.Vmxh(uR, ZR, 1)
+          Ar.gDuS(ar, jr, 1)
         }
       }
       get moduleCodes() {
-        const RR = mR.zPGo(this.__wbg_ptr);
-        var JR = WR(RR[0], RR[1]);
-        return mR.Vmxh(RR[0], 4 * RR[1], 4), JR
+        const rr = Ar.OiXG(this.__wbg_ptr);
+        var Sr = nr(rr[0], rr[1]);
+        return Ar.gDuS(rr[0], 4 * rr[1], 4), Sr
       }
-      get TuR() {
-        let RR, JR;
+      get Qjr() {
+        let rr, Sr;
         try {
-          const GR = mR.SzP2(this.__wbg_ptr);
-          return RR = GR[0], JR = GR[1], MR(GR[0], GR[1])
+          const Qr = Ar.KHg9(this.__wbg_ptr);
+          return rr = Qr[0], Sr = Qr[1], Br(Qr[0], Qr[1])
         } finally {
-          mR.Vmxh(RR, JR, 1)
+          Ar.gDuS(rr, Sr, 1)
         }
       }
       get reads() {
-        const RR = mR.J4cM(this.__wbg_ptr);
-        var JR = WR(RR[0], RR[1]);
-        return mR.Vmxh(RR[0], 4 * RR[1], 4), JR
+        const rr = Ar.l6Ia(this.__wbg_ptr);
+        var Sr = nr(rr[0], rr[1]);
+        return Ar.gDuS(rr[0], 4 * rr[1], 4), Sr
       }
       get validationModuleCodes() {
-        const RR = mR.biKv(this.__wbg_ptr);
-        var JR = WR(RR[0], RR[1]);
-        return mR.Vmxh(RR[0], 4 * RR[1], 4), JR
+        const rr = Ar.gPKP(this.__wbg_ptr);
+        var Sr = nr(rr[0], rr[1]);
+        return Ar.gDuS(rr[0], 4 * rr[1], 4), Sr
       }
       get validationModuleKeys() {
-        const RR = mR.EMMt(this.__wbg_ptr);
-        var JR = AR(RR[0], RR[1]).slice();
-        return mR.Vmxh(RR[0], 1 * RR[1], 1), JR
+        const rr = Ar.aqnI(this.__wbg_ptr);
+        var Sr = er(rr[0], rr[1]).slice();
+        return Ar.gDuS(rr[0], 1 * rr[1], 1), Sr
       }
       get variantFlags() {
-        const RR = mR.Gd1S(this.__wbg_ptr);
-        var JR = AR(RR[0], RR[1]).slice();
-        return mR.Vmxh(RR[0], 1 * RR[1], 1), JR
+        const rr = Ar.Y2I8(this.__wbg_ptr);
+        var Sr = er(rr[0], rr[1]).slice();
+        return Ar.gDuS(rr[0], 1 * rr[1], 1), Sr
       }
     }
 
-    function uR(RR, JR, GR, yR, uR, ZR, qR) {
-      const iR = xR(RR, mR.AwQI),
-        fR = zR,
-        VR = xR(JR, mR.AwQI),
-        KR = zR,
-        wR = xR(GR, mR.AwQI),
-        rR = zR,
-        eR = OR(yR, mR.AwQI),
-        aR = zR,
-        LR = xR(uR, mR.AwQI),
-        nR = zR,
-        UR = xR(ZR, mR.AwQI),
-        WR = zR,
-        AR = xR(qR, mR.AwQI),
-        CR = zR,
-        XR = mR.Psuk(iR, fR, VR, KR, wR, rR, eR, aR, LR, nR, UR, WR, AR, CR);
-      if (XR[2]) throw NR(XR[1]);
-      return tR.__wrap(XR[0])
+    function ar(rr, Sr, Qr, Zr, ar, jr, Ir) {
+      const fr = Hr(rr, Ar.mkeo),
+        Er = Vr,
+        pr = Hr(Sr, Ar.mkeo),
+        xr = Vr,
+        mr = Hr(Qr, Ar.mkeo),
+        Nr = Vr,
+        Ur = Pr(Zr, Ar.mkeo),
+        tr = Vr,
+        hr = Hr(ar, Ar.mkeo),
+        zr = Vr,
+        Yr = Hr(jr, Ar.mkeo),
+        nr = Vr,
+        er = Hr(Ir, Ar.mkeo),
+        Kr = Vr,
+        yr = Ar.EwC1(fr, Er, pr, xr, mr, Nr, Ur, tr, hr, zr, Yr, nr, er, Kr);
+      if (yr[2]) throw qr(yr[1]);
+      return Wr.__wrap(yr[0])
     }
 
-    function ZR() {
-      const RR = mR.OSok();
-      var JR = WR(RR[0], RR[1]);
-      return mR.Vmxh(RR[0], 4 * RR[1], 4), JR
+    function jr() {
+      const rr = Ar.V2Vd();
+      var Sr = nr(rr[0], rr[1]);
+      return Ar.gDuS(rr[0], 4 * rr[1], 4), Sr
     }
 
-    function qR() {
-      const RR = mR.ib0g();
-      var JR = WR(RR[0], RR[1]);
-      return mR.Vmxh(RR[0], 4 * RR[1], 4), JR
+    function Ir() {
+      const rr = Ar.xngU();
+      var Sr = nr(rr[0], rr[1]);
+      return Ar.gDuS(rr[0], 4 * rr[1], 4), Sr
     }
 
-    function iR() {
-      mR.bChn()
+    function fr() {
+      Ar.D2Ug()
     }
 
-    function fR(RR, JR, GR, yR, tR) {
-      let uR, ZR;
+    function Er(rr, Sr, Qr, Zr, Wr) {
+      let ar, jr;
       try {
-        const fR = xR(RR, mR.AwQI),
-          VR = zR,
-          KR = OR(JR, mR.AwQI),
-          wR = zR,
-          rR = xR(GR, mR.AwQI),
-          eR = zR,
-          aR = OR(yR, mR.AwQI),
-          LR = zR,
-          nR = function(RR, JR) {
-            const GR = JR(1 * RR.length, 1) >>> 0;
-            return pR().set(RR, GR / 1), zR = RR.length, GR
-          }(tR, mR.AwQI),
-          UR = zR,
-          WR = mR.KkhN(fR, VR, KR, wR, rR, eR, aR, LR, nR, UR);
-        var qR = WR[0],
-          iR = WR[1];
-        if (WR[3]) throw qR = 0, iR = 0, NR(WR[2]);
-        return uR = qR, ZR = iR, MR(qR, iR)
+        const Er = Hr(rr, Ar.mkeo),
+          pr = Vr,
+          xr = Pr(Sr, Ar.mkeo),
+          mr = Vr,
+          Nr = Hr(Qr, Ar.mkeo),
+          Ur = Vr,
+          tr = Pr(Zr, Ar.mkeo),
+          hr = Vr,
+          zr = function(rr, Sr) {
+            const Qr = Sr(1 * rr.length, 1) >>> 0;
+            return Or().set(rr, Qr / 1), Vr = rr.length, Qr
+          }(Wr, Ar.mkeo),
+          Yr = Vr,
+          nr = Ar.Een5(Er, pr, xr, mr, Nr, Ur, tr, hr, zr, Yr);
+        var Ir = nr[0],
+          fr = nr[1];
+        if (nr[3]) throw Ir = 0, fr = 0, qr(nr[2]);
+        return ar = Ir, jr = fr, Br(Ir, fr)
       } finally {
-        mR.Vmxh(uR, ZR, 1)
+        Ar.gDuS(ar, jr, 1)
       }
     }
 
-    function VR() {
-      let RR, JR;
+    function pr() {
+      let rr, Sr;
       try {
-        const GR = mR.wdHH();
-        return RR = GR[0], JR = GR[1], MR(GR[0], GR[1])
+        const Qr = Ar.PEiv();
+        return rr = Qr[0], Sr = Qr[1], Br(Qr[0], Qr[1])
       } finally {
-        mR.Vmxh(RR, JR, 1)
+        Ar.gDuS(rr, Sr, 1)
       }
     }
 
-    function KR(RR) {
-      let JR, GR;
+    function xr(rr) {
+      let Sr, Qr;
       try {
-        const uR = mR.OIS6(RR);
-        var yR = uR[0],
-          tR = uR[1];
-        if (uR[3]) throw yR = 0, tR = 0, NR(uR[2]);
-        return JR = yR, GR = tR, MR(yR, tR)
+        const ar = Ar.BZxR(rr);
+        var Zr = ar[0],
+          Wr = ar[1];
+        if (ar[3]) throw Zr = 0, Wr = 0, qr(ar[2]);
+        return Sr = Zr, Qr = Wr, Br(Zr, Wr)
       } finally {
-        mR.Vmxh(JR, GR, 1)
+        Ar.gDuS(Sr, Qr, 1)
       }
     }
 
-    function wR() {
-      return mR.Wt9S() >>> 0
+    function mr() {
+      return Ar.kqD4() >>> 0
     }
 
-    function rR() {
-      let RR, JR;
+    function Nr() {
+      let rr, Sr;
       try {
-        const GR = mR.GAMP();
-        return RR = GR[0], JR = GR[1], MR(GR[0], GR[1])
+        const Qr = Ar.XNqY();
+        return rr = Qr[0], Sr = Qr[1], Br(Qr[0], Qr[1])
       } finally {
-        mR.Vmxh(RR, JR, 1)
+        Ar.gDuS(rr, Sr, 1)
       }
     }
 
-    function eR(RR, JR) {
-      let GR, yR;
+    function Ur(rr, Sr) {
+      let Qr, Zr;
       try {
-        const ZR = xR(RR, mR.AwQI),
-          qR = zR,
-          iR = OR(JR, mR.AwQI),
-          fR = zR,
-          VR = mR.MRn1(ZR, qR, iR, fR);
-        var tR = VR[0],
-          uR = VR[1];
-        if (VR[3]) throw tR = 0, uR = 0, NR(VR[2]);
-        return GR = tR, yR = uR, MR(tR, uR)
+        const jr = Hr(rr, Ar.mkeo),
+          Ir = Vr,
+          fr = Pr(Sr, Ar.mkeo),
+          Er = Vr,
+          pr = Ar.yc8p(jr, Ir, fr, Er);
+        var Wr = pr[0],
+          ar = pr[1];
+        if (pr[3]) throw Wr = 0, ar = 0, qr(pr[2]);
+        return Qr = Wr, Zr = ar, Br(Wr, ar)
       } finally {
-        mR.Vmxh(GR, yR, 1)
+        Ar.gDuS(Qr, Zr, 1)
       }
     }
 
-    function aR(RR) {
-      let JR, GR;
+    function tr(rr) {
+      let Sr, Qr;
       try {
-        const uR = mR.iaDq(UR(RR));
-        var yR = uR[0],
-          tR = uR[1];
-        if (uR[3]) throw yR = 0, tR = 0, NR(uR[2]);
-        return JR = yR, GR = tR, MR(yR, tR)
+        const ar = Ar.Foh4(Yr(rr));
+        var Zr = ar[0],
+          Wr = ar[1];
+        if (ar[3]) throw Zr = 0, Wr = 0, qr(ar[2]);
+        return Sr = Zr, Qr = Wr, Br(Zr, Wr)
       } finally {
-        mR.Vmxh(JR, GR, 1)
+        Ar.gDuS(Sr, Qr, 1)
       }
     }
 
-    function LR() {
+    function hr() {
       return {
         __proto__: null,
-        rBHD: {
+        CyM5: {
           __proto__: null,
-          sckj: function(RR, JR) {
-            return UR(Error(MR(RR, JR)))
+          sQ8M: function(rr, Sr) {
+            return Yr(Error(Br(rr, Sr)))
           },
-          rAgP: function(RR) {
-            return null === gR(RR)
+          FYzC: function(rr) {
+            return null === Lr(rr)
           },
-          nyjJ: function(RR) {
-            return "string" === typeof gR(RR)
+          WzKq: function(rr) {
+            return "string" === typeof Lr(rr)
           },
-          mXDX: function(RR, JR) {
-            const GR = gR(JR),
-              yR = "string" === typeof GR ? GR : void 0;
-            var tR, uR = void 0 === (tR = yR) || null === tR ? 0 : function(RR, JR, GR) {
-                if (void 0 === GR) {
-                  const GR = cR.encode(RR),
-                    yR = JR(GR.length, 1) >>> 0;
-                  return pR().subarray(yR, yR + GR.length).set(GR), zR = GR.length, yR
+          f9ec: function(rr, Sr) {
+            const Qr = Lr(Sr),
+              Zr = "string" === typeof Qr ? Qr : void 0;
+            var Wr, ar = void 0 === (Wr = Zr) || null === Wr ? 0 : function(rr, Sr, Qr) {
+                if (void 0 === Qr) {
+                  const Qr = Mr.encode(rr),
+                    Zr = Sr(Qr.length, 1) >>> 0;
+                  return Or().subarray(Zr, Zr + Qr.length).set(Qr), Vr = Qr.length, Zr
                 }
-                let yR = RR.length,
-                  tR = JR(yR, 1) >>> 0;
-                const uR = pR();
-                let ZR = 0;
-                for (; ZR < yR; ZR++) {
-                  const JR = RR.charCodeAt(ZR);
-                  if (JR > 127) break;
-                  uR[tR + ZR] = JR
+                let Zr = rr.length,
+                  Wr = Sr(Zr, 1) >>> 0;
+                const ar = Or();
+                let jr = 0;
+                for (; jr < Zr; jr++) {
+                  const Sr = rr.charCodeAt(jr);
+                  if (Sr > 127) break;
+                  ar[Wr + jr] = Sr
                 }
-                if (ZR !== yR) {
-                  0 !== ZR && (RR = RR.slice(ZR)), tR = GR(tR, yR, yR = ZR + 3 * RR.length, 1) >>> 0;
-                  const JR = pR().subarray(tR + ZR, tR + yR);
-                  ZR += cR.encodeInto(RR, JR).written, tR = GR(tR, yR, ZR, 1) >>> 0
+                if (jr !== Zr) {
+                  0 !== jr && (rr = rr.slice(jr)), Wr = Qr(Wr, Zr, Zr = jr + 3 * rr.length, 1) >>> 0;
+                  const Sr = Or().subarray(Wr + jr, Wr + Zr);
+                  jr += Mr.encodeInto(rr, Sr).written, Wr = Qr(Wr, Zr, jr, 1) >>> 0
                 }
-                return zR = ZR, tR
-              }(yR, mR.AwQI, mR.mELj),
-              ZR = zR;
-            XR().setInt32(RR + 4, ZR, !0), XR().setInt32(RR + 0, uR, !0)
+                return Vr = jr, Wr
+              }(Zr, Ar.mkeo, Ar.JN0D),
+              jr = Vr;
+            yr().setInt32(rr + 4, jr, !0), yr().setInt32(rr + 0, ar, !0)
           },
-          gFnX: function(RR, JR) {
-            throw new Error(MR(RR, JR))
+          CPRo: function(rr, Sr) {
+            throw new Error(Br(rr, Sr))
           },
-          GTsM: function(RR, JR) {
-            return gR(RR).charCodeAt(JR >>> 0)
+          KszC: function(rr, Sr) {
+            return Lr(rr).charCodeAt(Sr >>> 0)
           },
-          ZKep: function(RR, JR) {
-            console.error(MR(RR, JR))
+          l3Ju: function(rr, Sr) {
+            console.error(Br(rr, Sr))
           },
-          BQTi: function(RR) {
-            return gR(RR).length
+          YAoG: function(rr) {
+            return Lr(rr).length
           },
-          ur3M: function(RR, JR) {
-            return UR(MR(RR, JR))
+          CV6t: function(rr, Sr) {
+            return Yr(Br(rr, Sr))
           },
-          B5s5: function(RR) {
-            NR(RR)
+          a0zy: function(rr) {
+            qr(rr)
           }
         }
       }
     }
-    Symbol.dispose && (tR.prototype[Symbol.dispose] = tR.prototype.free);
-    const nR = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Wr.prototype[Symbol.dispose] = Wr.prototype.free);
+    const zr = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((RR => mR.o2j9(RR, 1)));
+    } : new FinalizationRegistry((rr => Ar.MfqQ(rr, 1)));
 
-    function UR(RR) {
-      vR === bR.length && bR.push(bR.length + 1);
-      const JR = vR;
-      return vR = bR[JR], bR[JR] = RR, JR
+    function Yr(rr) {
+      Xr === lr.length && lr.push(lr.length + 1);
+      const Sr = Xr;
+      return Xr = lr[Sr], lr[Sr] = rr, Sr
     }
 
-    function WR(RR, JR) {
-      RR >>>= 0;
-      const GR = XR(),
-        yR = [];
-      for (let tR = RR; tR < RR + 4 * JR; tR += 4) yR.push(NR(GR.getUint32(tR, !0)));
-      return yR
+    function nr(rr, Sr) {
+      rr >>>= 0;
+      const Qr = yr(),
+        Zr = [];
+      for (let Wr = rr; Wr < rr + 4 * Sr; Wr += 4) Zr.push(qr(Qr.getUint32(Wr, !0)));
+      return Zr
     }
 
-    function AR(RR, JR) {
-      return RR >>>= 0, pR().subarray(RR / 1, RR / 1 + JR)
+    function er(rr, Sr) {
+      return rr >>>= 0, Or().subarray(rr / 1, rr / 1 + Sr)
     }
-    let CR = null;
+    let Kr = null;
 
-    function XR() {
-      return null !== CR && CR.buffer === mR.memory.buffer || (CR = new DataView(mR.memory.buffer)), CR
+    function yr() {
+      return null !== Kr && Kr.buffer === Ar.memory.buffer || (Kr = new DataView(Ar.memory.buffer)), Kr
     }
 
-    function MR(RR, JR) {
-      return function(RR, JR) {
-        oR += JR, oR >= HR && (DR = new TextDecoder("utf-8", {
+    function Br(rr, Sr) {
+      return function(rr, Sr) {
+        Cr += Sr, Cr >= gr && (Rr = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), DR.decode(), oR = JR);
-        return DR.decode(pR().subarray(RR, RR + JR))
-      }(RR >>> 0, JR)
+        }), Rr.decode(), Cr = Sr);
+        return Rr.decode(Or().subarray(rr, rr + Sr))
+      }(rr >>> 0, Sr)
     }
-    let BR = null;
-    let lR = null;
+    let Tr = null;
+    let vr = null;
 
-    function pR() {
-      return null !== lR && 0 !== lR.byteLength || (lR = new Uint8Array(mR.memory.buffer)), lR
-    }
-
-    function gR(RR) {
-      return bR[RR]
-    }
-    let bR = new Array(1024).fill(void 0);
-    bR.push(void 0, null, !0, !1);
-    let vR = bR.length;
-
-    function OR(RR, JR) {
-      const GR = JR(4 * RR.length, 4) >>> 0;
-      return (null !== BR && 0 !== BR.byteLength || (BR = new Uint32Array(mR.memory.buffer)), BR).set(RR, GR / 4), zR = RR.length, GR
+    function Or() {
+      return null !== vr && 0 !== vr.byteLength || (vr = new Uint8Array(Ar.memory.buffer)), vr
     }
 
-    function xR(RR, JR) {
-      const GR = JR(4 * RR.length, 4) >>> 0,
-        yR = XR();
-      for (let tR = 0; tR < RR.length; tR++) yR.setUint32(GR + 4 * tR, UR(RR[tR]), !0);
-      return zR = RR.length, GR
+    function Lr(rr) {
+      return lr[rr]
+    }
+    let lr = new Array(1024).fill(void 0);
+    lr.push(void 0, null, !0, !1);
+    let Xr = lr.length;
+
+    function Pr(rr, Sr) {
+      const Qr = Sr(4 * rr.length, 4) >>> 0;
+      return (null !== Tr && 0 !== Tr.byteLength || (Tr = new Uint32Array(Ar.memory.buffer)), Tr).set(rr, Qr / 4), Vr = rr.length, Qr
     }
 
-    function NR(RR) {
-      const JR = gR(RR);
-      return function(RR) {
-        RR < 1028 || (bR[RR] = vR, vR = RR)
-      }(RR), JR
+    function Hr(rr, Sr) {
+      const Qr = Sr(4 * rr.length, 4) >>> 0,
+        Zr = yr();
+      for (let Wr = 0; Wr < rr.length; Wr++) Zr.setUint32(Qr + 4 * Wr, Yr(rr[Wr]), !0);
+      return Vr = rr.length, Qr
     }
-    let DR = new TextDecoder("utf-8", {
+
+    function qr(rr) {
+      const Sr = Lr(rr);
+      return function(rr) {
+        rr < 1028 || (lr[rr] = Xr, Xr = rr)
+      }(rr), Sr
+    }
+    let Rr = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    DR.decode();
-    const HR = 2146435072;
-    let oR = 0;
-    const cR = new TextEncoder;
-    "encodeInto" in cR || (cR.encodeInto = function(RR, JR) {
-      const GR = cR.encode(RR);
-      return JR.set(GR), {
-        read: RR.length,
-        written: GR.length
+    Rr.decode();
+    const gr = 2146435072;
+    let Cr = 0;
+    const Mr = new TextEncoder;
+    "encodeInto" in Mr || (Mr.encodeInto = function(rr, Sr) {
+      const Qr = Mr.encode(rr);
+      return Sr.set(Qr), {
+        read: rr.length,
+        written: Qr.length
       }
     });
-    let PR, IR, mR, zR = 0;
+    let Gr, kr, Ar, Vr = 0;
 
-    function SR(RR, JR) {
-      return IR = RR, mR = RR.exports, PR = JR, CR = null, BR = null, lR = null, mR.aSaB(), mR
+    function ir(rr, Sr) {
+      return kr = rr, Ar = rr.exports, Gr = Sr, Kr = null, Tr = null, vr = null, Ar.tBFa(), Ar
     }
 
-    function jR(RR) {
-      if (void 0 !== mR) return mR;
-      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
-        module: RR
-      } = RR) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const JR = LR();
-      RR instanceof WebAssembly.Module || (RR = new WebAssembly.Module(RR));
-      return SR(new WebAssembly.Instance(RR, JR), RR)
+    function wr(rr) {
+      if (void 0 !== Ar) return Ar;
+      void 0 !== rr && (Object.getPrototypeOf(rr) === Object.prototype ? ({
+        module: rr
+      } = rr) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Sr = hr();
+      rr instanceof WebAssembly.Module || (rr = new WebAssembly.Module(rr));
+      return ir(new WebAssembly.Instance(rr, Sr), rr)
     }
-    async function dR(RR) {
-      if (void 0 !== mR) return mR;
-      void 0 !== RR && (Object.getPrototypeOf(RR) === Object.prototype ? ({
-        module_or_path: RR
-      } = RR) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const JR = LR();
-      ("string" === typeof RR || "function" === typeof Request && RR instanceof Request || "function" === typeof URL && RR instanceof URL) && (RR = fetch(RR));
+    async function cr(rr) {
+      if (void 0 !== Ar) return Ar;
+      void 0 !== rr && (Object.getPrototypeOf(rr) === Object.prototype ? ({
+        module_or_path: rr
+      } = rr) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Sr = hr();
+      ("string" === typeof rr || "function" === typeof Request && rr instanceof Request || "function" === typeof URL && rr instanceof URL) && (rr = fetch(rr));
       const {
-        instance: GR,
-        module: yR
-      } = await async function(RR, JR) {
-        if ("function" === typeof Response && RR instanceof Response) {
-          if (!RR.ok) throw new Error(`failed to fetch Wasm: ${RR.status} ${RR.statusText} fetching '${RR.url}'`);
+        instance: Qr,
+        module: Zr
+      } = await async function(rr, Sr) {
+        if ("function" === typeof Response && rr instanceof Response) {
+          if (!rr.ok) throw new Error(`failed to fetch Wasm: ${rr.status} ${rr.statusText} fetching '${rr.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(RR, JR)
-          } catch (GR) {
-            if (! function(RR) {
-                switch (RR) {
+            return await WebAssembly.instantiateStreaming(rr, Sr)
+          } catch (Qr) {
+            if (! function(rr) {
+                switch (rr) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(RR.type) || "application/wasm" === RR.headers.get("Content-Type")) throw GR;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", GR)
+              }(rr.type) || "application/wasm" === rr.headers.get("Content-Type")) throw Qr;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Qr)
           }
-          const yR = await RR.arrayBuffer();
-          return await WebAssembly.instantiate(yR, JR)
+          const Zr = await rr.arrayBuffer();
+          return await WebAssembly.instantiate(Zr, Sr)
         } {
-          const GR = await WebAssembly.instantiate(RR, JR);
-          return GR instanceof WebAssembly.Instance ? {
-            instance: GR,
-            module: RR
-          } : GR
+          const Qr = await WebAssembly.instantiate(rr, Sr);
+          return Qr instanceof WebAssembly.Instance ? {
+            instance: Qr,
+            module: rr
+          } : Qr
         }
-      }(await RR, JR);
-      return SR(GR, yR)
+      }(await rr, Sr);
+      return ir(Qr, Zr)
     }
-    var ER = GR(2457),
-      YR = GR(7762);
-    class kR extends Error {
+    var Fr = Qr(2398),
+      or = Qr(7577);
+    class br extends Error {
       stage;
-      constructor(RR, JR) {
-        super((0, ER.z)(RR, JR), {
-          cause: JR
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = RR
+      constructor(rr, Sr) {
+        super((0, Fr.F)(rr, Sr), {
+          cause: Sr
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = rr
       }
     }
-    let QR = null,
-      FR = null;
+    let Jr = null,
+      Dr = null;
 
-    function TR() {
-      return QR ? Promise.resolve(QR) : (FR || (FR = async function() {
-        let RR;
+    function dr() {
+      return Jr ? Promise.resolve(Jr) : (Dr || (Dr = async function() {
+        let rr;
         try {
-          RR = await (0, ER.A)(new GR.U(GR(7764)), (0, YR.c)("bloxd_wasm_shader_pack"))
-        } catch (JR) {
-          throw new kR((0, ER.E)(JR), JR)
+          rr = await (0, Fr.I)(new Qr.U(Qr(7580)), (0, or.c)("bloxd_wasm_shader_pack"))
+        } catch (Sr) {
+          throw new br((0, Fr.M)(Sr), Sr)
         }
         try {
-          await dR({
-            module_or_path: RR
+          await cr({
+            module_or_path: rr
           })
-        } catch (JR) {
-          throw new kR("instantiate", JR)
+        } catch (Sr) {
+          throw new br("instantiate", Sr)
         }
-        return QR = yR, QR
-      }(), FR.then(void 0, (() => {
-        FR = null
-      }))), FR)
+        return Jr = Zr, Jr
+      }(), Dr.then(void 0, (() => {
+        Dr = null
+      }))), Dr)
     }
-    var sR = GR(7777);
+    var sr = Qr(7595);
 
-    function hR(RR) {
-      let [JR, GR, yR, tR] = RR;
-      const uR = {
-        file: JR,
-        line: GR,
-        message: yR
+    function ur(rr) {
+      let [Sr, Qr, Zr, Wr] = rr;
+      const ar = {
+        file: Sr,
+        line: Qr,
+        message: Zr
       };
-      return tR && (uR.variants = tR.map(sR.i)), uR
+      return Wr && (ar.variants = Wr.map(sr.k)), ar
     }
 
-    function RJ(RR) {
-      return JSON.parse(RR).map(hR)
+    function rS(rr) {
+      return JSON.parse(rr).map(ur)
     }
 
-    function JJ(RR, JR) {
-      if (!Number.isInteger(RR) || RR < 0 || RR > 4294967295) throw new Error(`${JR} ${RR} is not a whole number from 0 to 4294967295`);
-      return RR
+    function SS(rr, Sr) {
+      if (!Number.isInteger(rr) || rr < 0 || rr > 4294967295) throw new Error(`${Sr} ${rr} is not a whole number from 0 to 4294967295`);
+      return rr
     }
 
-    function GJ(RR) {
-      return [RR.named.map((RR => RR.name)), Uint32Array.from(RR.named, (RR => JJ(RR.id, "Texture ID")))]
+    function QS(rr) {
+      return [rr.named.map((rr => rr.name)), Uint32Array.from(rr.named, (rr => SS(rr.id, "Texture ID")))]
     }
-    const yJ = new WeakMap;
-    const tJ = new WeakMap,
-      uJ = new WeakSet;
+    const ZS = new WeakMap;
+    const WS = new WeakMap,
+      aS = new WeakSet;
 
-    function ZJ(RR, JR) {
-      if (uJ.has(RR)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function jS(rr, Sr) {
+      if (aS.has(rr)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return JR()
-      } catch (GR) {
-        throw GR instanceof WebAssembly.RuntimeError && uJ.add(RR), GR
+        return Sr()
+      } catch (Qr) {
+        throw Qr instanceof WebAssembly.RuntimeError && aS.add(rr), Qr
       }
     }
 
-    function qJ(RR) {
-      let JR = tJ.get(RR);
-      if (!JR) {
-        let GR, yR;
-        JR = {
-          UJR: (JR, GR) => ZJ(RR, (() => function(RR, JR, GR) {
-            const yR = RR.UJR(JR.map((RR => RR.path)), JR.map((RR => RR.source)), ...GJ(GR), GR.aliases.map((RR => RR.name)), GR.aliases.map((RR => RR.texture)), GR.aliases.map((RR => RR.kind)));
-            let tR = !1;
+    function IS(rr) {
+      let Sr = WS.get(rr);
+      if (!Sr) {
+        let Qr, Zr;
+        Sr = {
+          Vrr: (Sr, Qr) => jS(rr, (() => function(rr, Sr, Qr) {
+            const Zr = rr.Vrr(Sr.map((rr => rr.path)), Sr.map((rr => rr.source)), ...QS(Qr), Qr.aliases.map((rr => rr.name)), Qr.aliases.map((rr => rr.texture)), Qr.aliases.map((rr => rr.kind)));
+            let Wr = !1;
             try {
-              const RR = yR.validationModuleCodes,
-                JR = Array.from(yR.validationModuleKeys, ((JR, GR) => ({
-                  key: (0, sR.i)(JR),
-                  code: RR[GR]
+              const rr = Zr.validationModuleCodes,
+                Sr = Array.from(Zr.validationModuleKeys, ((Sr, Qr) => ({
+                  key: (0, sr.k)(Sr),
+                  code: rr[Qr]
                 }))),
-                GR = {
-                  errors: RJ(yR.FuR),
-                  offInStrict: RJ(yR.TuR),
-                  variants: (0, sR.e)(yR),
-                  validationModules: JR,
-                  features: yR.features
+                Qr = {
+                  errors: rS(Zr.Sjr),
+                  offInStrict: rS(Zr.Qjr),
+                  variants: (0, sr.g)(Zr),
+                  validationModules: Sr,
+                  features: Zr.features
                 };
-              return JR.forEach(((RR, JR) => {
-                yJ.set(RR, {
-                  pack: yR,
-                  index: JR
+              return Sr.forEach(((rr, Sr) => {
+                ZS.set(rr, {
+                  pack: Zr,
+                  index: Sr
                 })
-              })), tR = JR.length > 0, GR
+              })), Wr = Sr.length > 0, Qr
             } finally {
-              tR || yR.free()
+              Wr || Zr.free()
             }
-          }(RR, JR, GR))),
-          mapValidationMessage: (JR, GR) => {
-            const yR = yJ.get(JR);
-            if (!yR) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return hR(JSON.parse(ZJ(RR, (() => yR.pack.mapValidationMessage(yR.index, GR.lineNum, GR.linePos, GR.message, GR.type)))))
+          }(rr, Sr, Qr))),
+          mapValidationMessage: (Sr, Qr) => {
+            const Zr = ZS.get(Sr);
+            if (!Zr) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return ur(JSON.parse(jS(rr, (() => Zr.pack.mapValidationMessage(Zr.index, Qr.lineNum, Qr.linePos, Qr.message, Qr.type)))))
           },
-          ZtR: JR => ZJ(RR, (() => function(RR, JR) {
-            const GR = new Int32Array(JR.length),
-              yR = [];
-            return JR.forEach(((RR, JR) => {
-              GR[JR] = RR.variants ? RR.variants.length : -1;
-              for (const GR of RR.variants ?? []) yR.push((0, sR.h)(GR))
-            })), RJ(RR.ZtR(JR.map((RR => RR.file)), Uint32Array.from(JR, (RR => JJ(RR.line, "Diagnostic line"))), JR.map((RR => RR.message)), GR, Uint8Array.from(yR)))
-          }(RR, JR))),
-          iH: JR => ZJ(RR, (() => RR.iH(...GJ(JR)))),
+          RZr: Sr => jS(rr, (() => function(rr, Sr) {
+            const Qr = new Int32Array(Sr.length),
+              Zr = [];
+            return Sr.forEach(((rr, Sr) => {
+              Qr[Sr] = rr.variants ? rr.variants.length : -1;
+              for (const Qr of rr.variants ?? []) Zr.push((0, sr.i)(Qr))
+            })), rS(rr.RZr(Sr.map((rr => rr.file)), Uint32Array.from(Sr, (rr => SS(rr.line, "Diagnostic line"))), Sr.map((rr => rr.message)), Qr, Uint8Array.from(Zr)))
+          }(rr, Sr))),
+          rC: Sr => jS(rr, (() => rr.rC(...QS(Sr)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return GR ??= ZJ(RR, (() => RR.kuR())), GR
+            return Qr ??= jS(rr, (() => rr.uar())), Qr
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return yR ??= ZJ(RR, (() => {
-              const JR = RR.duR();
-              return RR.juR().map(((RR, GR) => ({
-                path: RR,
-                source: JR[GR]
+            return Zr ??= jS(rr, (() => {
+              const Sr = rr.Jar();
+              return rr.Var().map(((rr, Qr) => ({
+                path: rr,
+                source: Sr[Qr]
               })))
-            })), yR
+            })), Zr
           },
-          QuR: JR => ZJ(RR, (() => RR.QuR(JR))),
-          resolveHeader: JR => ZJ(RR, (() => RR.YuR((0, sR.h)(JR)))),
-          EuR: () => ZJ(RR, (() => RR.EuR()))
-        }, tJ.set(RR, JR)
+          rjr: Sr => jS(rr, (() => rr.rjr(Sr))),
+          resolveHeader: Sr => jS(rr, (() => rr.dar((0, sr.i)(Sr)))),
+          Dar: () => jS(rr, (() => rr.Dar()))
+        }, WS.set(rr, Sr)
       }
-      return JR
+      return Sr
     }
-    var iJ = GR(4491),
-      fJ = GR(327),
-      VJ = GR(7773);
-    const KJ = "bloxdShaderPackWasmFailureReported";
-    let wJ = null;
+    var fS = Qr(4425),
+      ES = Qr(335),
+      pS = Qr(7588);
+    const xS = "bloxdShaderPackWasmFailureReported";
+    let mS = null;
 
-    function rJ() {
-      return wJ ??= async function() {
-        if ("undefined" === typeof WebAssembly) return eJ("unsupported", "This browser has no WebAssembly"), null;
-        const RR = (0, VJ.loadShaderPackTextures)().then((() => !0), (RR => (console.error("Could not load the shader pack textures, so shader packs can't run", RR), !1)));
+    function NS() {
+      return mS ??= async function() {
+        if ("undefined" === typeof WebAssembly) return US("unsupported", "This browser has no WebAssembly"), null;
+        const rr = (0, pS.loadShaderPackTextures)().then((() => !0), (rr => (console.error("Could not load the shader pack textures, so shader packs can't run", rr), !1)));
         try {
-          await (0, fJ.k)();
-          const JR = await async function() {
-            let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : TR;
-            return qJ(await RR())
+          await (0, ES.p)();
+          const Sr = await async function() {
+            let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : dr;
+            return IS(await rr())
           }();
-          return await RR ? JR : null
-        } catch (JR) {
-          const RR = JR instanceof Error ? JR.message : String(JR);
-          return eJ(iJ.d[JR instanceof kR ? JR.stage : "instantiate"], RR), null
+          return await rr ? Sr : null
+        } catch (Sr) {
+          const rr = Sr instanceof Error ? Sr.message : String(Sr);
+          return US(fS.e[Sr instanceof br ? Sr.stage : "instantiate"], rr), null
         }
-      }(), wJ
+      }(), mS
     }
 
-    function eJ(RR, JR) {
-      (0, iJ.j)(KJ, `Shader pack wasm ${RR}, so shader packs can't run: ${JR}`, JR, `shader_pack_${RR}`)
+    function US(rr, Sr) {
+      (0, fS.k)(xS, `Shader pack wasm ${rr}, so shader packs can't run: ${Sr}`, Sr, `shader_pack_${rr}`)
     }
   },
-  7764: (RR, JR, GR) => {
-    RR.exports = GR.p + "static/media/bloxd_wasm_shader_pack_bg.29ad9a715cf58b4595c2.wasm"
+  7580: (rr, Sr, Qr) => {
+    rr.exports = Qr.p + "static/media/bloxd_wasm_shader_pack_bg.57d655048cabc284946d.wasm"
   },
-  7762: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR
+  7577: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr
     });
-    var yR = GR(2457);
-    const tR = {
-      bloxd_wasm: () => "31dc7d689c00e0ba537ee7f626a34d0004a848135d46f08eb518035abee4bd78",
-      bloxd_wasm_client: () => "3b6f626c672c16835e48be6eda2b8710ce7ef029c244b4a5763ca9c72afd1b15",
-      bloxd_wasm_workers: () => "57abc294db658237bc7d99b35bd3f29743c220eedebc8ac3f7feffe93ef605d9",
-      bloxd_wasm_models: () => "91848043cbb1596bc2da50dc271a4cd1d5748938f8eaa4bb6e2a97c3115313e3",
-      bloxd_wasm_webgpu: () => "f945f7dfcd84e1c2443e02ed24bd7fc26f3a25462a20b367dbcf6b52367ae837",
-      bloxd_wasm_webgl: () => "9fbafd6231ee584775c304827d74014f8c15cff0854a0975bc3b6d00259cb13b",
-      bloxd_wasm_webgl1: () => "23c52ed9fe5a4512122e2f73d5ee88fdaeeb108903994541446badd1fee1bb4c",
-      bloxd_wasm_replay: () => "972e1c6128c0d1cd8598ec680bedb57345cf87b953e82efa23119df1c888426d",
-      bloxd_wasm_recorder: () => "c168224dbeb3a34221482e3a0ad41a3c0ebe14db31539da9b26d296033e9fb3d",
-      bloxd_wasm_anim: () => "3cc08cf0d193225c4efab3299a0dd42815a95a9b8b44e2d5957de0a151ae7db3",
-      bloxd_wasm_textures: () => "78779f7faa55b7ab66454ef9cac79a3b6156f91b60fc795d24d615f3dca40e19",
-      bloxd_wasm_shader_pack: () => "2aca035dd9675be55a94be3cc38a846b93983e04d5e35b062d6e7f0e268c5303"
+    var Zr = Qr(2398);
+    const Wr = {
+      bloxd_wasm: () => "0c8b86ea7f87e28f201c328dade5c6244d58a98edf5279fe5c0ea9b57062f385",
+      bloxd_wasm_client: () => "299c35eb71d5d037788ea25f6b7287e40485e2a6ed22851efd5823593ae5be1b",
+      bloxd_wasm_workers: () => "eaeeb1e1d8f554dcf56047201f83b3954f1d231f54df5846dca6de7c92e59bde",
+      bloxd_wasm_models: () => "dc6d52b18d6afa3461a33750f7f1f0c757dbae6ea30bca3991affab56fad42de",
+      bloxd_wasm_webgpu: () => "4397e4e2e7e494aef2a757d6873b432cca5ceac83c5a3e54dd330b4ece9ba81a",
+      bloxd_wasm_webgl: () => "e3e0bf0da073da5cd2c55227a812527d1d5b4fd38f91e8c71b70364278ad47cf",
+      bloxd_wasm_webgl1: () => "6b69ab072c5f9793e3fee3b1fa30c246fb689a2400aefd7f486fe41358e364e5",
+      bloxd_wasm_replay: () => "f884251e5cfbdf122fa0e4c2746c9cc8bb3465ab2dcf3e9877f29ba5868851b0",
+      bloxd_wasm_recorder: () => "92aabaf952eabf5eb693775f1095c77a6582e07a32896291ede0cd044a026b22",
+      bloxd_wasm_anim: () => "74e18404f7ee650a703373595c2a2a131482e1a0dcb950788bac36e01714fec0",
+      bloxd_wasm_textures: () => "4752f813d0338c3727c1127168df7e6c13b50988f32409a906ecc533947797ed",
+      bloxd_wasm_shader_pack: () => "bc15fb00e7a581fb79301bdbfc659bdbc7ccbe7b0e189b588edf35cbec796fbe"
     };
-    var uR = GR(5554);
+    var ar = Qr(5498);
 
-    function ZR(RR) {
-      const JR = Object.prototype.hasOwnProperty.call(tR, RR) ? tR[RR]() : void 0;
-      if (void 0 !== JR) return {
-        sha256: JR,
-        onMismatch: uR.E
+    function jr(rr) {
+      const Sr = Object.prototype.hasOwnProperty.call(Wr, rr) ? Wr[rr]() : void 0;
+      if (void 0 !== Sr) return {
+        sha256: Sr,
+        onMismatch: ar.F
       };
-      throw new yR.g(`${RR} has no release digest, so this build refuses it`)
+      throw new Zr.g(`${rr} has no release digest, so this build refuses it`)
     }
   },
-  7777: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => AR,
-      e: () => CR,
-      h: () => UR,
-      i: () => nR
+  7595: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => er,
+      g: () => Kr,
+      i: () => Yr,
+      k: () => zr
     });
-    var yR = GR(7786);
-    const tR = 6,
-      uR = 3,
-      ZR = 1,
-      qR = 2,
-      iR = 4,
-      fR = 8,
-      VR = 16,
-      KR = 32,
-      wR = 64,
-      rR = 128,
-      eR = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Zr = Qr(7604);
+    const Wr = 6,
+      ar = 3,
+      jr = 1,
+      Ir = 2,
+      fr = 4,
+      Er = 8,
+      pr = 16,
+      xr = 32,
+      mr = 64,
+      Nr = 128,
+      Ur = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function aR(RR) {
-      if (!RR) return 0;
-      const JR = eR.indexOf(RR);
-      if (JR <= 0) throw new Error(`"${RR}" is not a shader pack hook function`);
-      return JR
+    function tr(rr) {
+      if (!rr) return 0;
+      const Sr = Ur.indexOf(rr);
+      if (Sr <= 0) throw new Error(`"${rr}" is not a shader pack hook function`);
+      return Sr
     }
 
-    function LR(RR) {
-      if (0 === RR) return null;
-      const JR = eR[RR];
-      if (void 0 === JR) throw new Error(`${RR} is not a shader pack hook function id`);
-      return JR
+    function hr(rr) {
+      if (0 === rr) return null;
+      const Sr = Ur[rr];
+      if (void 0 === Sr) throw new Error(`${rr} is not a shader pack hook function id`);
+      return Sr
     }
 
-    function nR(RR) {
-      const JR = yR.c.length;
+    function zr(rr) {
+      const Sr = Zr.e.length;
       return {
-        strict: RR >= JR,
-        program: yR.c[RR % JR]
+        strict: rr >= Sr,
+        program: Zr.e[rr % Sr]
       }
     }
 
-    function UR(RR) {
-      return Number(RR.strict) * yR.c.length + yR.c.indexOf(RR.program)
+    function Yr(rr) {
+      return Number(rr.strict) * Zr.e.length + Zr.e.indexOf(rr.program)
     }
 
-    function WR(RR) {
-      return "" === RR ? [] : RR.split(" ")
+    function nr(rr) {
+      return "" === rr ? [] : rr.split(" ")
     }
 
-    function AR(RR) {
-      const JR = {
-        variantFlags: new Uint8Array(tR),
-        hooks: new Uint8Array(tR * uR),
-        moduleCodes: Array(tR).fill(""),
-        reads: Array(2 * tR).fill("")
+    function er(rr) {
+      const Sr = {
+        variantFlags: new Uint8Array(Wr),
+        hooks: new Uint8Array(Wr * ar),
+        moduleCodes: Array(Wr).fill(""),
+        reads: Array(2 * Wr).fill("")
       };
-      for (const GR of RR) {
-        const RR = UR(GR.key),
-          yR = (RR, JR) => null === GR.hooks.surface || GR.reads.fragment.includes(RR) ? 0 : JR;
-        JR.variantFlags[RR] = (GR.sceneDepth ? ZR : 0) | (GR.movesVertices ? qR : 0) | (GR.sunShadow ? iR : 0) | (GR.airShadow ? fR : 0) | (GR.discards ? VR : 0) | yR("localPosition", KR) | yR("enchantSpeed", wR) | yR("enchantTier", rR), JR.hooks[RR * uR] = aR(GR.hooks.vertex), JR.hooks[RR * uR + 1] = aR(GR.hooks.surface), JR.hooks[RR * uR + 2] = aR(GR.hooks.light), JR.moduleCodes[RR] = GR.moduleCode, JR.reads[2 * RR] = GR.reads.vertex.join(" "), JR.reads[2 * RR + 1] = GR.reads.fragment.join(" ")
+      for (const Qr of rr) {
+        const rr = Yr(Qr.key),
+          Zr = (rr, Sr) => null === Qr.hooks.surface || Qr.reads.fragment.includes(rr) ? 0 : Sr;
+        Sr.variantFlags[rr] = (Qr.sceneDepth ? jr : 0) | (Qr.movesVertices ? Ir : 0) | (Qr.sunShadow ? fr : 0) | (Qr.airShadow ? Er : 0) | (Qr.discards ? pr : 0) | Zr("localPosition", xr) | Zr("enchantSpeed", mr) | Zr("enchantTier", Nr), Sr.hooks[rr * ar] = tr(Qr.hooks.vertex), Sr.hooks[rr * ar + 1] = tr(Qr.hooks.surface), Sr.hooks[rr * ar + 2] = tr(Qr.hooks.light), Sr.moduleCodes[rr] = Qr.moduleCode, Sr.reads[2 * rr] = Qr.reads.vertex.join(" "), Sr.reads[2 * rr + 1] = Qr.reads.fragment.join(" ")
       }
-      return JR
+      return Sr
     }
 
-    function CR(RR) {
+    function Kr(rr) {
       const {
-        hooks: JR,
-        moduleCodes: GR,
-        reads: yR
-      } = RR;
-      return Array.from(RR.variantFlags, ((RR, tR) => {
-        const KR = tR * uR;
+        hooks: Sr,
+        moduleCodes: Qr,
+        reads: Zr
+      } = rr;
+      return Array.from(rr.variantFlags, ((rr, Wr) => {
+        const xr = Wr * ar;
         return {
-          key: nR(tR),
+          key: zr(Wr),
           hooks: {
-            vertex: LR(JR[KR]),
-            surface: LR(JR[KR + 1]),
-            light: LR(JR[KR + 2])
+            vertex: hr(Sr[xr]),
+            surface: hr(Sr[xr + 1]),
+            light: hr(Sr[xr + 2])
           },
-          moduleCode: GR[tR],
-          sceneDepth: 0 !== (RR & ZR),
-          sunShadow: 0 !== (RR & iR),
-          airShadow: 0 !== (RR & fR),
-          movesVertices: 0 !== (RR & qR),
-          discards: 0 !== (RR & VR),
+          moduleCode: Qr[Wr],
+          sceneDepth: 0 !== (rr & jr),
+          sunShadow: 0 !== (rr & fr),
+          airShadow: 0 !== (rr & Er),
+          movesVertices: 0 !== (rr & Ir),
+          discards: 0 !== (rr & pr),
           reads: {
-            vertex: WR(yR[2 * tR]),
-            fragment: WR(yR[2 * tR + 1])
+            vertex: nr(Zr[2 * Wr]),
+            fragment: nr(Zr[2 * Wr + 1])
           }
         }
       }))
     }
   },
-  7786: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      e: () => ZR,
-      i: () => qR,
-      l: () => tR,
-      n: () => uR
+  7604: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr,
+      f: () => jr,
+      g: () => Ir,
+      k: () => Wr,
+      n: () => ar
     });
-    const yR = ["terrain", "liquid", "model"];
+    const Zr = ["terrain", "liquid", "model"];
 
-    function tR() {
-      const RR = [];
-      for (const JR of [!1, !0])
-        for (const GR of yR) RR.push({
-          strict: JR,
-          program: GR
+    function Wr() {
+      const rr = [];
+      for (const Sr of [!1, !0])
+        for (const Qr of Zr) rr.push({
+          strict: Sr,
+          program: Qr
         });
-      return RR
+      return rr
     }
 
-    function uR(RR) {
-      return `${RR.strict?"strict":"allow"}.${RR.program}`
+    function ar(rr) {
+      return `${rr.strict?"strict":"allow"}.${rr.program}`
     }
 
-    function ZR(RR) {
-      return !RR.hooks.vertex && !RR.hooks.surface && !RR.hooks.light
+    function jr(rr) {
+      return !rr.hooks.vertex && !rr.hooks.surface && !rr.hooks.light
     }
 
-    function qR(RR, JR) {
-      return "off" !== JR && (null === RR || RR.some((RR => RR.key.strict === ("strict" === JR) && !ZR(RR))))
+    function Ir(rr, Sr) {
+      return "off" !== Sr && (null === rr || rr.some((rr => rr.key.strict === ("strict" === Sr) && !jr(rr))))
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

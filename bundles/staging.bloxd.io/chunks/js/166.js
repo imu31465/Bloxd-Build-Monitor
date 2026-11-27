@@ -1,17 +1,17 @@
 export const id = 166;
 export const ids = [166];
 export const modules = {
-  7840: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      BloxdFirebaseSdk: () => wR
+  7651: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      BloxdFirebaseSdk: () => mr
     });
-    var yR = GR(2046),
-      tR = GR(4053),
-      uR = GR(112),
-      ZR = GR(103),
-      qR = GR(1879),
-      iR = GR(2261);
-    const fR = {
+    var Zr = Qr(1992),
+      Wr = Qr(4010),
+      ar = Qr(120),
+      jr = Qr(109),
+      Ir = Qr(1815),
+      fr = Qr(2200);
+    const Er = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,148 +19,148 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    var VR = GR(1972),
-      KR = GR(1916);
-    class wR {
+    var pr = Qr(1912),
+      xr = Qr(1846);
+    class mr {
       constructor() {}
       static async setup() {
         try {
-          return await wR.setupInternal()
-        } catch (RR) {
-          return console.error("Failed to setup Firebase SDK:", RR), null
+          return await mr.setupInternal()
+        } catch (rr) {
+          return console.error("Failed to setup Firebase SDK:", rr), null
         }
       }
       static async setupInternal() {
-        const RR = await Promise.all([GR.e(303), GR.e(302)]).then((() => GR(42036))),
-          JR = await Promise.all([GR.e(303), GR.e(304)]).then((() => GR(42054))),
-          rR = await Promise.all([GR.e(303), GR.e(305)]).then((() => GR(42062))),
-          eR = RR.initializeApp({
-            ...fR,
-            measurementId: tR.bloxdGa4MeasurementId
+        const rr = await Promise.all([Qr.e(304), Qr.e(303)]).then((() => Qr(42348))),
+          Sr = await Promise.all([Qr.e(304), Qr.e(305)]).then((() => Qr(42380))),
+          Nr = await Promise.all([Qr.e(304), Qr.e(306)]).then((() => Qr(42388))),
+          Ur = rr.initializeApp({
+            ...Er,
+            measurementId: Wr.bloxdGa4MeasurementId
           });
-        (0, tR.setUpGtag)(), window.gtag("config", tR.bloxdGa4MeasurementId), (0, tR.markBloxdGa4Configured)(), window.gtag("config", "AW-16469618203");
-        const aR = JR.getAnalytics(eR),
-          LR = {
-            portal: uR.currentUrl.getSearchParam("portal") || "root",
+        (0, Wr.setUpGtag)(), window.gtag("config", Wr.bloxdGa4MeasurementId), (0, Wr.markBloxdGa4Configured)(), window.gtag("config", "AW-16469618203");
+        const tr = Sr.getAnalytics(Ur),
+          hr = {
+            portal: ar.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        JR.setUserProperties(aR, LR);
-        const nR = rR.initializeAuth(eR, {
-          persistence: [rR.indexedDBLocalPersistence, rR.browserLocalPersistence, rR.browserSessionPersistence],
-          popupRedirectResolver: (0, ZR.isMobileApp)() ? void 0 : rR.browserPopupRedirectResolver
+        Sr.setUserProperties(tr, hr);
+        const zr = Nr.initializeAuth(Ur, {
+          persistence: [Nr.indexedDBLocalPersistence, Nr.browserLocalPersistence, Nr.browserSessionPersistence],
+          popupRedirectResolver: (0, jr.isMobileApp)() ? void 0 : Nr.browserPopupRedirectResolver
         });
-        rR.useDeviceLanguage(nR);
-        const UR = new rR.GoogleAuthProvider;
-        UR.setCustomParameters({
+        Nr.useDeviceLanguage(zr);
+        const Yr = new Nr.GoogleAuthProvider;
+        Yr.setCustomParameters({
           prompt: "select_account"
         });
-        const WR = new rR.OAuthProvider(yR.j[yR.e.APPLE]),
-          AR = new rR.OAuthProvider(yR.j[yR.e.MICROSOFT]);
-        AR.setCustomParameters({
+        const nr = new Nr.OAuthProvider(Zr.h[Zr.c.APPLE]),
+          er = new Nr.OAuthProvider(Zr.h[Zr.c.MICROSOFT]);
+        er.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const CR = {
-          [yR.e.GOOGLE]: UR,
-          [yR.e.APPLE]: WR,
-          [yR.e.MICROSOFT]: AR
+        const Kr = {
+          [Zr.c.GOOGLE]: Yr,
+          [Zr.c.APPLE]: nr,
+          [Zr.c.MICROSOFT]: er
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((RR => {
-          const JR = rR.onIdTokenChanged(nR, (GR => {
-            JR(), RR()
+        }), await new Promise((rr => {
+          const Sr = Nr.onIdTokenChanged(zr, (Qr => {
+            Sr(), rr()
           }))
         }));
-        class XR extends wR {
-          setUserProperties(RR) {
-            JR.setUserProperties(aR, RR)
+        class yr extends mr {
+          setUserProperties(rr) {
+            Sr.setUserProperties(tr, rr)
           }
-          onIdTokenChanged(RR) {
-            rR.onIdTokenChanged(nR, RR)
+          onIdTokenChanged(rr) {
+            Nr.onIdTokenChanged(zr, rr)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(RR) {
-            var JR;
-            const GR = await rR.signInWithPopup(nR, CR[RR]);
-            return null !== (JR = null === GR || void 0 === GR ? void 0 : GR.user) && void 0 !== JR ? JR : null
+          async signInWithPopup(rr) {
+            var Sr;
+            const Qr = await Nr.signInWithPopup(zr, Kr[rr]);
+            return null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.user) && void 0 !== Sr ? Sr : null
           }
-          async getCurrentUser(RR) {
-            const JR = nR.currentUser;
-            if (!JR) return null;
+          async getCurrentUser(rr) {
+            const Sr = zr.currentUser;
+            if (!Sr) return null;
             const {
-              signInProvider: GR
-            } = await JR.getIdTokenResult(!1);
-            return GR === yR.j[RR] ? JR : null
+              signInProvider: Qr
+            } = await Sr.getIdTokenResult(!1);
+            return Qr === Zr.h[rr] ? Sr : null
           }
-          async signOut(RR) {
-            null !== await this.getCurrentUser(RR) && await rR.signOut(nR)
+          async signOut(rr) {
+            null !== await this.getCurrentUser(rr) && await Nr.signOut(zr)
           }
         }
-        async function MR(RR, JR) {
-          const GR = await qR.c.request(`${RR}.${JR}`, {});
-          if (null === GR) return null;
-          const yR = "google" === RR ? rR.GoogleAuthProvider.credential(GR.idToken) : WR.credential({
-            idToken: GR.idToken
+        async function Br(rr, Sr) {
+          const Qr = await Ir.b.request(`${rr}.${Sr}`, {});
+          if (null === Qr) return null;
+          const Zr = "google" === rr ? Nr.GoogleAuthProvider.credential(Qr.idToken) : nr.credential({
+            idToken: Qr.idToken
           });
-          return (await rR.signInWithCredential(nR, yR)).user
+          return (await Nr.signInWithCredential(zr, Zr)).user
         }
-        class BR extends wR {
-          setUserProperties(RR) {
-            JR.setUserProperties(aR, RR)
+        class Tr extends mr {
+          setUserProperties(rr) {
+            Sr.setUserProperties(tr, rr)
           }
-          onIdTokenChanged(RR) {
-            rR.onIdTokenChanged(nR, RR)
+          onIdTokenChanged(rr) {
+            Nr.onIdTokenChanged(zr, rr)
           }
-          canSignIn(RR) {
-            return null !== (0, iR.d)(RR)
+          canSignIn(rr) {
+            return null !== (0, fr.d)(rr)
           }
-          async signInWithPopup(RR) {
-            const JR = (0, iR.d)(RR);
-            if (null === JR) return console.warn(`The app can't sign in with ${RR}; check canSignIn first`), null;
+          async signInWithPopup(rr) {
+            const Sr = (0, fr.d)(rr);
+            if (null === Sr) return console.warn(`The app can't sign in with ${rr}; check canSignIn first`), null;
             try {
-              return await MR(JR, "signIn")
-            } catch (GR) {
-              if (GR instanceof KR.b && "timeout" === GR.code) return null;
-              throw (0, VR.reportClientError)("login_failed", GR, `app_${JR}`), GR
+              return await Br(Sr, "signIn")
+            } catch (Qr) {
+              if (Qr instanceof xr.e && "timeout" === Qr.code) return null;
+              throw (0, pr.reportClientError)("login_failed", Qr, `app_${Sr}`), Qr
             }
           }
-          async getCurrentUser(RR) {
-            const JR = nR.currentUser;
-            if (JR) {
+          async getCurrentUser(rr) {
+            const Sr = zr.currentUser;
+            if (Sr) {
               const {
-                signInProvider: GR
-              } = await JR.getIdTokenResult(!1);
-              if (GR === yR.j[RR]) return JR
+                signInProvider: Qr
+              } = await Sr.getIdTokenResult(!1);
+              if (Qr === Zr.h[rr]) return Sr
             }
-            const GR = (0, iR.d)(RR);
-            if (null === GR) return null;
+            const Qr = (0, fr.d)(rr);
+            if (null === Qr) return null;
             try {
-              return await MR(GR, "getCurrentUser")
-            } catch (tR) {
-              return console.error(`Failed to get the current ${RR} user from the app:`, tR), null
+              return await Br(Qr, "getCurrentUser")
+            } catch (Wr) {
+              return console.error(`Failed to get the current ${rr} user from the app:`, Wr), null
             }
           }
-          async signOut(RR) {
-            const JR = (0, iR.d)(RR);
-            null !== JR && qR.c.request(`${JR}.signOut`, {}).catch((JR => {
-              console.error(`Failed to sign out of ${RR} in the app:`, JR)
+          async signOut(rr) {
+            const Sr = (0, fr.d)(rr);
+            null !== Sr && Ir.b.request(`${Sr}.signOut`, {}).catch((Sr => {
+              console.error(`Failed to sign out of ${rr} in the app:`, Sr)
             }));
-            const GR = nR.currentUser;
-            if (GR) {
+            const Qr = zr.currentUser;
+            if (Qr) {
               const {
-                signInProvider: JR
-              } = await GR.getIdTokenResult(!1);
-              JR === yR.j[RR] && await rR.signOut(nR)
+                signInProvider: Sr
+              } = await Qr.getIdTokenResult(!1);
+              Sr === Zr.h[rr] && await Nr.signOut(zr)
             }
           }
         }
-        return (0, ZR.isMobileApp)() ? (await qR.c.ready, new BR) : new XR
+        return (0, jr.isMobileApp)() ? (await Ir.b.ready, new Tr) : new yr
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

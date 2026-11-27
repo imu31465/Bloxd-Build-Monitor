@@ -1,442 +1,618 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  35236: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => tR,
-      g: () => uR
+  37835: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => QS
     });
-    var yR = GR(4521);
+    var Zr = Qr(72);
+    const Wr = "newPlayerDeal",
+      ar = 36e5,
+      jr = [4, 12, 20, 20, 30];
+    const Ir = 12 * ar;
 
-    function tR() {
-      if ("undefined" === typeof BroadcastChannel) return null;
-      const RR = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
-      try {
-        const JR = new BroadcastChannel(yR.j);
-        JR.postMessage({
-          stored: RR
-        }), JR.close()
-      } catch {
-        return null
-      }
-      return RR
+    function fr(rr) {
+      return rr - Ir
     }
 
-    function uR(RR) {
-      const JR = "object" === typeof RR && null !== RR ? RR.stored : null;
-      return "string" === typeof JR ? JR : null
+    function Er(rr, Sr, Qr) {
+      const Zr = fr(Qr);
+      return Sr >= Zr && Sr < Qr && (null === rr.lastShownAt || rr.lastShownAt < Zr)
     }
-  },
-  35230: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => ZR,
-      h: () => tR,
-      k: () => uR
-    });
-    var yR = GR(4521);
-    async function tR(RR, JR, GR) {
-      let tR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const uR = ZR(await RR.getItem(yR.g, JR));
-      if (null === uR || tR()) return null;
-      const qR = await RR.getItem(yR.i, JR);
-      return tR() ? null : (await async function(RR) {
-        await Promise.all([RR.removeItem(yR.g), RR.removeItem(yR.i)])
-      }(RR).catch(GR), {
-        pack: uR,
-        source: "string" === typeof qR ? qR : null
+
+    function pr(rr, Sr) {
+      const {
+        arrival: Qr,
+        now: Zr,
+        endsAt: Wr,
+        playedOnDevice: Ir
+      } = Sr;
+      return !(Zr >= Wr || !Ir) && (!(!Er(rr, Zr, Wr) && 0 !== rr.shownCount && null !== rr.lastShownAt) || "open" === Qr && Zr - rr.lastShownAt >= (fr = rr.shownCount, jr[Math.min(Math.max(fr, 1), jr.length) - 1] * ar));
+      var fr
+    }
+    var xr = Qr(360),
+      mr = Qr(1605),
+      Nr = Qr(26),
+      Ur = Qr(3192),
+      tr = Qr(4131),
+      hr = Qr(4135),
+      zr = Qr(2110),
+      Yr = Qr(1262),
+      nr = Qr(1187);
+    var er = Qr(1475),
+      Kr = Qr(43),
+      yr = Qr(727),
+      Br = Qr(3570),
+      Tr = Qr(1481),
+      vr = Qr(3572),
+      Or = Qr(3184),
+      Lr = Qr(1181),
+      lr = Qr(3612),
+      Xr = Qr(3617),
+      Pr = Qr(4170),
+      Hr = Qr(1251),
+      qr = Qr(1576),
+      Rr = Qr(4190),
+      gr = Qr(35523),
+      Cr = Qr(3619),
+      Mr = Qr(35532),
+      Gr = Qr(1338);
+
+    function kr(rr) {
+      let {
+        shownView: Sr,
+        close: Qr
+      } = rr;
+      const {
+        t: Wr
+      } = (0, Hr.E)(), ar = (0, lr.R)(), {
+        purchaseUnderWay: jr,
+        notice: Ir,
+        needsLogin: fr,
+        buyPack: Er
+      } = (0, Mr.e)("popup", ((rr, Sr) => {
+        Qr(!1), (0, Pr.e)(rr, Sr)
+      })), pr = null === ar;
+      (0, Zr.useEffect)((() => {
+        pr && Qr(!1)
+      }), [pr, Qr]);
+      const xr = null !== ar && void 0 !== ar ? ar : Sr;
+      return (0, Gr.jsxs)("div", {
+        className: "NewPlayerDealPopup",
+        children: [(0, Gr.jsx)("div", {
+          className: "NewPlayerDealPopupTitle",
+          children: Wr("newPlayerDeal:title")
+        }), (0, Gr.jsx)("div", {
+          className: "NewPlayerDealPopupSub",
+          children: Wr("newPlayerDeal:samePrice")
+        }), (0, Gr.jsx)(gr.d, {
+          className: "NewPlayerDealClockBig",
+          endsAt: xr.endsAt
+        }), (0, Gr.jsx)(gr.g, {
+          view: xr,
+          needsLogin: fr,
+          busy: jr,
+          highlight: null,
+          onBuy: rr => {
+            Er(xr, rr)
+          }
+        }), (0, Gr.jsx)(Rr.h, {
+          notice: Ir,
+          className: "SmallTextBold NewPlayerDealNotice"
+        }), (0, Gr.jsx)(Rr.c, {
+          className: "SmallTextBold NewPlayerDealNotice"
+        }), (0, Gr.jsx)(qr.L, {
+          className: "NewPlayerDealNoThanks",
+          onClick: () => {
+            Qr(!0)
+          },
+          children: Wr("newPlayerDeal:noThanks")
+        })]
       })
     }
 
-    function uR(RR) {
-      return (0, yR.s)() ? Promise.resolve(null) : tR(RR, !1, (RR => {
-        console.error("Error removing temporary texture pack: ", RR)
-      }), yR.s)
+    function Ar(rr) {
+      let {
+        arm: Sr,
+        children: Qr
+      } = rr;
+      return (0, Zr.useEffect)((() => {
+        (0, lr.I)(!0)
+      }), []), (0, lr.S)(Sr, "popup"), Qr
     }
 
-    function ZR(RR) {
-      if ("object" !== typeof RR || null === RR) return null;
-      const JR = RR.metaData;
-      return "object" !== typeof JR || null === JR || "string" !== typeof JR.id ? null : RR
-    }
-  },
-  54671: (RR, JR, GR) => {
-    function yR(RR) {
-      return null === RR.gameSource ? "player" : "customGame"
-    }
-    GR.d(JR, {
-      c: () => uR,
-      g: () => aR,
-      j: () => eR,
-      m: () => yR
-    });
-    const tR = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
-
-    function uR(RR) {
-      return "" === RR || "string" === typeof RR && tR.test(RR)
-    }
-
-    function ZR(RR) {
-      return "object" === typeof RR && null !== RR && ("earth" === RR.type || Object.entries(RR).every((RR => {
-        let [JR, GR] = RR;
-        return "type" === JR || uR(GR)
-      })))
-    }
-    const qR = /(?:src|image|image-set|cross-fade)\(/i,
-      iR = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
-      fR = /url\(/gi,
-      VR = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
-      KR = new Set([...VR.map((RR => new URL(RR).origin)), "https://fonts.gstatic.com"]),
-      wR = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
-
-    function rR(RR) {
-      var JR, GR;
-      if (RR.includes("\\") || qR.test(RR)) return !0;
-      const yR = [...RR.matchAll(iR)];
-      return yR.length !== (null !== (JR = null === (GR = RR.match(fR)) || void 0 === GR ? void 0 : GR.length) && void 0 !== JR ? JR : 0) || !yR.every((RR => {
-        var JR, GR, yR;
-        let {
-          groups: tR
-        } = RR;
-        return function(RR) {
-          try {
-            return VR.every((JR => {
-              const GR = new URL(RR, JR);
-              return "data:" === GR.protocol || KR.has(GR.origin) || wR.has(GR.href)
-            }))
-          } catch {
-            return !1
-          }
-        }(null !== (JR = null !== (GR = null !== (yR = null === tR || void 0 === tR ? void 0 : tR.doubleQuoted) && void 0 !== yR ? yR : null === tR || void 0 === tR ? void 0 : tR.singleQuoted) && void 0 !== GR ? GR : null === tR || void 0 === tR ? void 0 : tR.unquoted) && void 0 !== JR ? JR : "")
+    function Vr(rr) {
+      let Sr = null;
+      er.NotificationProvider.showCustomPopup({
+        body: Qr => (0, Gr.jsx)(Ar, {
+          arm: rr.arm,
+          children: (0, Gr.jsx)(kr, {
+            shownView: rr,
+            close: rr => {
+              Sr ??= rr, Qr()
+            }
+          })
+        }),
+        middleScreenPopupContainerClassName: "NewPlayerDealPopupContainer",
+        middleScreenPopupClassName: "NewPlayerDealPopupPanel",
+        unlockPointerKey: "NewPlayerDealPopup"
+      }).getResult().then((Qr => {
+        (0, lr.I)(!1), !1 !== Sr && "notificationTornDown" !== Qr && (0, lr.E)("new_player_deal.close", (0, Cr.b)(rr.arm, "popup"))
       }))
     }
+    const ir = 2500,
+      wr = 6e4;
+    const cr = 500,
+      Fr = 6e4;
 
-    function eR(RR) {
-      var JR, GR, yR, tR, qR, iR, fR;
-      const VR = [...Object.values(null !== (JR = RR.textureOverrides) && void 0 !== JR ? JR : {}), ...Object.values(null !== (GR = RR.modelOverrides) && void 0 !== GR ? GR : {})],
-        KR = [...Object.values(null !== (yR = null === (tR = RR.customCss) || void 0 === tR ? void 0 : tR.fontFaces) && void 0 !== yR ? yR : {}), ...Object.values(null !== (qR = null === (iR = RR.customCss) || void 0 === iR ? void 0 : iR.classStyles) && void 0 !== qR ? qR : {})].flatMap((RR => Object.values(null !== RR && void 0 !== RR ? RR : {})));
-      return !VR.every(uR) || !Object.values(null !== (fR = RR.skyBoxes) && void 0 !== fR ? fR : {}).every(ZR) || KR.some((RR => "string" === typeof RR && rR(RR)))
+    function or(rr) {
+      const Sr = Date.now() + Fr;
+      return new Promise((Qr => {
+        const Zr = () => {
+          rr() ? (0, vr.g)() || er.NotificationProvider.hasPopup() || (0, Tr.m)() || (0, lr.s)() || null !== Nr.c.get("openEverythingMenuName") ? Date.now() > Sr ? Qr(!1) : setTimeout(Zr, cr) : Qr(!0) : Qr(!1)
+        };
+        Zr()
+      }))
+    }
+    const br = "newPlayerDealPointerDeferred_";
+    let Jr = !1,
+      Dr = null;
+
+    function dr(rr, Sr) {
+      var Qr;
+      return (null === (Qr = Dr) || void 0 === Qr ? void 0 : Qr.accountId) === Sr && Dr.shownCount === rr.shownCount
     }
 
-    function aR(RR, JR) {
-      if (null === RR || "player" === JR || !eR(RR)) return RR;
-      const GR = {
-        ...RR
-      };
-      return RR.textureOverrides && (GR.textureOverrides = nR(RR.textureOverrides, uR, "texture")), RR.modelOverrides && (GR.modelOverrides = nR(RR.modelOverrides, uR, "model")), RR.skyBoxes && (GR.skyBoxes = nR(RR.skyBoxes, ZR, "sky")), RR.customCss && (GR.customCss = function(RR) {
-        const JR = RR => nR(RR, (RR => "string" === typeof RR && !rR(RR)), "CSS"),
-          {
-            fontFaces: GR,
-            classStyles: yR
-          } = LR(RR) ? RR : {},
-          tR = {};
-        for (const [uR, ZR] of Object.entries(LR(yR) ? yR : {})) tR[uR] = JR(ZR);
-        return {
-          fontFaces: (Array.isArray(GR) ? GR : []).map(JR),
-          classStyles: tR
-        }
-      }(RR.customCss)), GR
+    function sr(rr, Sr, Qr) {
+      return !!dr(Sr, Qr) && (Dr = null, (0, lr.x)(Qr), Vr(rr), !0)
     }
-
-    function LR(RR) {
-      return "object" === typeof RR && null !== RR && !Array.isArray(RR)
-    }
-
-    function nR(RR, JR, GR) {
-      const yR = Object.entries(LR(RR) ? RR : {}),
-        tR = yR.filter((RR => {
-          let [, GR] = RR;
-          return !JR(GR)
-        }));
-      if (tR.length > 0) {
-        const RR = tR.map((RR => {
-          let [JR] = RR;
-          return JR
-        }));
-        console.warn(`Ignoring a custom game texture pack's ${GR} files that name another site: ${RR.join(", ")}`)
+    async function ur(rr, Sr, Qr, Zr) {
+      if (Jr) return !1;
+      let Wr;
+      Jr = !0;
+      try {
+        Wr = await async function(rr) {
+          const {
+            newPlayerDeal: Sr,
+            counted: Qr
+          } = await (0, nr.postJsonWithMetricsCookiesAndJsonResponse)(`${Yr.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
+            shownCount: rr
+          }, {
+            retries: 1
+          });
+          return {
+            newPlayerDeal: Sr,
+            counted: !0 === Qr
+          }
+        }(Sr.shownCount)
+      } catch (ar) {
+        return console.error("New player deal: counting a showing of its popup failed", ar), !1
+      } finally {
+        Jr = !1
       }
-      return Object.fromEntries(yR.filter((RR => {
-        let [, GR] = RR;
-        return JR(GR)
-      })))
+      return (0, lr.M)(Qr, Wr.newPlayerDeal), Wr.counted && null !== Wr.newPlayerDeal && (Dr = {
+        accountId: Zr,
+        shownCount: Wr.newPlayerDeal.shownCount
+      }, "landingPage" === Nr.c.get("gameState") && sr(rr, Wr.newPlayerDeal, Zr)), !0
+    }
+    let rS = null;
+
+    function SS(rr, Sr, Qr, Wr, ar) {
+      var jr;
+      const {
+        gameState: Ir
+      } = (0, Nr.n)(["gameState"]), mr = "landingPage" === Ir, {
+        pointing: Ur
+      } = (0, Br.i)(), tr = (0, Zr.useRef)(Ur);
+      tr.current = Ur;
+      const hr = (0, Zr.useRef)(rr);
+      hr.current = rr;
+      const Yr = (0, Zr.useRef)(Sr);
+      Yr.current = Sr;
+      const nr = (0, Zr.useRef)(Qr);
+      nr.current = Qr;
+      const [er, Tr] = (0, Zr.useState)(null), vr = (0, Zr.useRef)(0), Or = (0, Zr.useRef)(0), Lr = (0, Zr.useRef)(!1), lr = (0, Zr.useCallback)((rr => {
+        "open" === function(rr) {
+          const Sr = rr ? (0, yr.getVisitSessionId)() : (0, yr.peekVisitSessionId)(),
+            Qr = null !== Sr && Sr === rS ? "return" : "open";
+          return rS = Sr, Qr
+        }(rr) && (Lr.current = !0), vr.current++, Tr({
+          seq: vr.current,
+          kind: Lr.current ? "open" : "return"
+        })
+      }), []);
+      (0, Zr.useEffect)((() => {
+        if (!mr) return void Tr(null);
+        lr(!0);
+        const rr = () => {
+          "visible" === document.visibilityState && lr(!0)
+        };
+        return document.addEventListener("visibilitychange", rr), () => {
+          document.removeEventListener("visibilitychange", rr)
+        }
+      }), [mr, lr]);
+      const Xr = null !== (jr = null === rr || void 0 === rr ? void 0 : rr.endsAt) && void 0 !== jr ? jr : null;
+      (0, Zr.useEffect)((() => {
+        if (!mr || null === Xr) return;
+        const rr = fr(Xr) - Date.now();
+        if (rr <= 0 || rr > zr.c) return;
+        const Sr = setTimeout((() => {
+          lr(!1)
+        }), rr);
+        return () => {
+          clearTimeout(Sr)
+        }
+      }), [mr, Xr, lr]);
+      const Pr = null !== rr && null !== Wr && null === ar;
+      (0, Zr.useEffect)((() => {
+        if (null === er || !Pr || Or.current >= er.seq) return;
+        const rr = () => vr.current === er.seq && "landingPage" === Nr.c.get("gameState"),
+          Sr = setTimeout((() => {
+            const Sr = hr.current,
+              Qr = Yr.current;
+            if (null === Sr || null === Qr || !rr()) return;
+            Or.current = er.seq;
+            const Zr = Date.now(),
+              ar = dr(Qr, Wr);
+            if (!(ar || pr(Qr, {
+                arrival: er.kind,
+                now: Zr,
+                endsAt: Sr.endsAt,
+                playedOnDevice: Kr.j.getItem(xr.Ib) > 0
+              }))) return void(Lr.current = !1);
+            const jr = Er(Qr, Zr, Sr.endsAt);
+            or(rr).then((async rr => {
+              const Sr = hr.current;
+              rr && null !== Sr && Yr.current === Qr && (!tr.current || jr || function(rr, Sr) {
+                return Kr.j.getItem(br + rr) === Sr
+              }(Wr, Qr.shownCount) ? ar ? sr(Sr, Qr, Wr) && (Lr.current = !1) : await ur(Sr, Qr, nr.current, Wr) && (Lr.current = !1) : function(rr, Sr) {
+                Kr.j.setItem(br + rr, Sr)
+              }(Wr, Qr.shownCount))
+            }))
+          }), ir);
+        return () => {
+          clearTimeout(Sr)
+        }
+      }), [er, Pr, Wr])
+    }
+
+    function QS() {
+      const {
+        userContext: rr
+      } = (0, Lr.c)(), Sr = (0, Ur.usePurchasesAllowed)(), [Qr, ar] = (0, Zr.useState)(Xr.g);
+      (0, Zr.useEffect)((() => (ar((0, Xr.g)()), (0, Xr.h)(ar))), []);
+      const jr = (0, lr.b)(rr);
+      ! function(rr, Sr, Qr) {
+        const [ar, jr] = (0, Zr.useState)(0);
+        (0, Zr.useEffect)((() => {
+          if (!Sr || null === rr) return;
+          if (null !== Qr) return void(0, lr.G)(rr, (0, Xr.d)());
+          if (null !== (0, lr.h)(rr)) return;
+          let Zr, ar = !1;
+          return (0, hr.getBillingClient)().getOfferings(Wr).then((Sr => {
+            let {
+              offering: Qr
+            } = Sr;
+            (0, lr.G)(rr, null === Qr ? [] : Qr.packages.filter(tr.isPricedPackage))
+          }), (rr => {
+            console.error("New player deal: loading its prices failed", rr), ar || (Zr = setTimeout((() => {
+              jr((rr => rr + 1))
+            }), wr))
+          })), () => {
+            ar = !0, clearTimeout(Zr)
+          }
+        }), [rr, Sr, Qr, ar])
+      }(jr, null !== (0, lr.j)(rr) && (Sr || null !== Qr), Qr);
+      const Ir = (0, lr.R)();
+      return SS(Ir, (0, lr.j)(rr), rr, jr, Qr),
+        function() {
+          const {
+            userContext: rr
+          } = (0, Lr.c)(), {
+            gameState: Sr
+          } = (0, Nr.n)(["gameState"]);
+          (0, Zr.useEffect)((() => {
+            if ("landingPage" !== Sr || !rr.isLoggedIn() && !(0, Ur.guestsMayBuy)()) return;
+            const Qr = (0, lr.f)(rr),
+              Zr = (0, Or.F)((rr => Qr.includes(rr.item)));
+            null !== Zr && ((0, mr.reportAnalyticsClick)({
+              id: "store.login_resume",
+              value: Zr.item
+            }), (0, Or.o)({
+              mode: "self",
+              source: "loginResume",
+              highlight: Zr.item
+            }))
+          }), [rr, Sr])
+        }(),
+        function(rr, Sr, Qr) {
+          const Wr = (0, Zr.useRef)(null);
+          (0, Zr.useEffect)((() => {
+            if (null === Qr || null === rr || null === Sr || Wr.current === Qr) return;
+            Wr.current = Qr;
+            const Zr = rr.packs[0].pack;
+            switch (Qr.show) {
+              case "popup":
+                (0, lr.x)(Sr), Vr(rr);
+                break;
+              case "store":
+                (0, Or.o)({
+                  mode: "self",
+                  source: "newPlayerDeal"
+                });
+                break;
+              case "resume":
+                (0, Or.o)({
+                  mode: "self",
+                  source: "loginResume",
+                  highlight: Zr.packageId
+                });
+                break;
+              case "bought":
+                (0, Or.o)({
+                  mode: "self",
+                  source: "newPlayerDeal"
+                }), (0, lr.v)(Sr), (0, Mr.c)(Zr.gems);
+                break;
+              case "gift":
+                (0, Or.o)({
+                  mode: "gift",
+                  source: "newPlayerDeal",
+                  giftRecipientName: "Friend"
+                })
+            }
+          }), [Qr, rr, Sr])
+        }(Ir, jr, Qr), null
     }
   },
-  54680: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => eR,
-      d: () => WR,
-      f: () => UR
+  35523: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ur,
+      g: () => hr
     });
-    var yR = GR(1127),
-      tR = GR(2374),
-      uR = GR(4509),
-      ZR = GR(4521),
-      qR = GR(35236),
-      iR = GR(35230),
-      fR = GR(54671),
-      VR = GR(42526),
-      KR = GR(42509),
-      wR = GR(6103);
-    const rR = {
-      pack: null,
-      gameSource: null
-    };
-    class eR {
-      constructor(RR) {
-        this.host = RR, this.ready = void 0, this.state = rR, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.He = !1, (0, ZR.n)(), this.ready = this.readStored()
-      }
-      readyWithin(RR) {
-        return Promise.race([this.ready, new Promise((JR => {
-          setTimeout(JR, RR)
-        }))])
-      }
-      current() {
-        return this.state
-      }
-      playerState() {
-        return {
-          pack: this.playerPack,
-          gameSource: null
-        }
-      }
-      onPlayerPackChange(RR) {
-        return this.ownListeners.add(RR), () => {
-          this.ownListeners.delete(RR)
-        }
-      }
-      isUsingCustomGameTexturePack(RR) {
-        return (0, KR.h)(this.state, RR)
-      }
-      setGamePackConfirm(RR) {
-        this.confirmGamePack = RR
-      }
-      subscribe(RR) {
-        return this.listeners.set(RR, null), this.ready.then((() => {
-          this.deliver(RR)
-        })), () => {
-          this.listeners.delete(RR)
-        }
-      }
-      async setPlayerPack(RR) {
-        const JR = LR(RR) ? null : RR;
-        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(JR), this.change({
-          pack: JR,
-          gameSource: null
-        }, !1);
-        const GR = await this.storePlayerPack(JR);
-        return GR && this.announce(), GR
-      }
-      async packForGame(RR, JR, GR) {
-        await this.readyWithin(Math.max(0, (null !== GR && void 0 !== GR ? GR : performance.now() + VR.b) - performance.now()));
-        const tR = ++this.picks,
-          uR = (0, yR.n)(RR) ? (0, yR.s)(RR) : null;
-        if (null === uR) return void this.usePlayerPack();
-        let ZR;
-        const qR = function(RR) {
-          let JR;
-          const GR = new Promise(((GR, yR) => {
-            JR = setTimeout((() => {
-              yR(new Error(`no answer in ${RR} ms`))
-            }), RR)
-          }));
-          return GR.catch((() => {})), {
-            passed: GR,
-            clear: () => {
-              clearTimeout(JR)
-            }
-          }
-        }(2e4);
-        try {
-          const RR = await Promise.race([JR.packKey(uR), qR.passed]);
-          if (null !== RR && this.onGamePack && this.state.gameSource === RR) return;
-          if (null !== RR && RR === this.skippedKey) return void(this.He || this.picks !== tR || this.usePlayerPack());
-          ZR = null === RR ? null : await Promise.race([aR(uR, RR, JR), qR.passed])
-        } catch (KR) {
-          const RR = !this.He && this.picks === tR && this.holdsOtherGamePack(uR);
-          return this.host.warn(`the texture pack of ${uR} didn't load: ${RR?"the player's own shows":"the pack in play stays"}`, KR), void(RR && this.usePlayerPack())
-        } finally {
-          qR.clear()
-        }
-        if (this.He || this.picks !== tR) return;
-        null !== ZR && (0, fR.j)(ZR.pack) && (this.host.warn(`the texture pack of ${uR} names files on other sites: the player's own shows`, null), ZR = null);
-        const iR = null === ZR || await this.confirmed(ZR.pack, uR) ? null : ZR.key;
-        this.He || this.picks !== tR || (null !== iR && (this.skippedKey = iR, ZR = null), null === ZR ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
-          pack: ZR.pack,
-          gameSource: ZR.key
-        }, !0)))
-      }
-      endGamePack() {
-        this.picks++, this.usePlayerPack()
-      }
-      holdsOtherGamePack(RR) {
-        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(RR)
-      }
-      async confirmed(RR, JR) {
-        const GR = this.confirmGamePack;
-        if (null === GR) return !0;
-        try {
-          return await GR(RR, JR)
-        } catch (yR) {
-          return this.host.warn(`the texture pack prompt of ${JR} failed: the pack is skipped`, yR), !1
-        }
-      }
-      async readPlayerPack() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        if (null !== RR && this.ownAnnouncements.delete(RR)) return;
-        await this.ready;
-        const JR = this.ownChanges;
-        let GR;
-        try {
-          GR = await this.host.store.getItem(ZR.e, !0)
-        } catch (tR) {
-          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", tR)
-        }
-        if (this.He || this.ownChanges !== JR) return;
-        const yR = nR(GR);
-        (0, wR.d)(yR, this.playerPack) || (this.ownChanges++, this.setOwn(yR), this.onGamePack || this.change({
-          pack: yR,
-          gameSource: null
-        }, !1))
-      }
-      joinedWithout() {
-        this.picks++
-      }
-      dispose() {
-        this.He = !0, this.listeners.clear()
-      }
-      async readStored() {
-        const {
-          store: RR,
-          warn: JR
-        } = this.host;
-        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, iR.h)(RR, !0, (RR => {
-          JR("the custom game's texture pack wasn't removed from storage", RR)
-        })).then((RR => {
-          this.takeOneShot(RR)
-        }), (RR => {
-          JR("the custom game's texture pack didn't read: the player's own shows", RR)
-        })), RR.getItem(ZR.e, !0).then((RR => {
-          this.takeStoredOwn(RR)
-        }), (RR => {
-          JR("the stored texture pack didn't read: the default pack shows", RR), this.takeStoredOwn(null)
-        }))]), this.update()
-      }
-      takeOneShot(RR) {
-        var JR;
-        null === RR || this.He || this.changes > 0 || this.picks > 0 || ((0, fR.j)(RR.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
-          pack: RR.pack,
-          gameSource: null !== (JR = RR.source) && void 0 !== JR ? JR : ""
-        }))
-      }
-      takeStoredOwn(RR) {
-        if (this.playerPicked || this.He) return;
-        if (this.ownChanges++, this.setOwn(nR(RR)), this.onGamePack) return;
-        const JR = {
-          pack: this.playerPack,
-          gameSource: null
-        };
-        0 === this.changes ? this.state = JR : this.change(JR, !1)
-      }
-      async update() {
-        const RR = this.playerPack,
-          JR = null === RR || void 0 === RR ? void 0 : RR.metaData.id;
-        if (!RR || !JR || !this.host.fetchLatest || JR === tR.e || JR === tR.q.CUSTOM) return;
-        const GR = tR.t[JR];
-        if (void 0 === GR || RR.metaData.version >= GR) return;
-        let yR;
-        try {
-          yR = nR(await this.host.fetchLatest(JR))
-        } catch (uR) {
-          return void this.host.warn(`texture pack ${JR} didn't update to version ${GR}`, uR)
-        }
-        null === yR || this.He || this.playerPack !== RR || (this.ownChanges++, this.setOwn(yR), this.onGamePack || this.change({
-          pack: yR,
-          gameSource: null
-        }, !1), await this.storePlayerPack(yR) && this.announce())
-      }
-      announce() {
-        const RR = (0, qR.d)();
-        null !== RR && this.ownAnnouncements.add(RR)
-      }
-      setOwn(RR) {
-        this.playerPack = RR;
-        for (const GR of [...this.ownListeners]) try {
-          GR()
-        } catch (JR) {
-          this.host.warn("a texture pack listener threw", JR)
-        }
-      }
-      usePlayerPack() {
-        this.onGamePack && this.change({
-          pack: this.playerPack,
-          gameSource: null
-        }, !1)
-      }
-      async storePlayerPack(RR) {
-        try {
-          return null === RR ? (await this.host.store.removeItem(ZR.e), !0) : await this.host.store.setItem(ZR.e, RR)
-        } catch (JR) {
-          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", JR), !1
-        }
-      }
-      change(RR, JR) {
-        if (!this.He) {
-          this.changes++, this.onGamePack = JR, this.state = RR;
-          for (const RR of [...this.listeners.keys()]) this.deliver(RR)
-        }
-      }
-      deliver(RR) {
-        if (!this.He && this.listeners.has(RR) && this.listeners.get(RR) !== this.state) {
-          this.listeners.set(RR, this.state);
-          try {
-            RR(this.state)
-          } catch (JR) {
-            this.host.warn("a texture pack listener threw", JR)
-          }
-        }
-      }
-    }
-    async function aR(RR, JR, GR) {
-      const yR = (0, iR.e)(await GR.fetchPack(JR));
-      if (null !== yR) return {
-        pack: yR,
-        key: JR
-      };
-      const tR = await GR.packKey(RR);
-      if (null === tR) return null;
-      const uR = (0, iR.e)(await GR.fetchPack(tR));
-      if (null === uR) throw new Error(`no texture pack at ${tR}`);
-      return {
-        pack: uR,
-        key: tR
-      }
-    }
+    Qr(35525);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(1251),
+      Ir = Qr(1576),
+      fr = Qr(3628),
+      Er = Qr(1448),
+      pr = Qr(3362),
+      xr = Qr(4187),
+      mr = Qr(3208),
+      Nr = Qr(1338);
 
-    function LR(RR) {
-      return null === RR || RR.metaData.id === tR.e
-    }
-
-    function nR(RR) {
-      const JR = (0, iR.e)(RR);
-      return LR(JR) ? null : JR
-    }
-    async function UR(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uR.b;
-      if (null === RR.pack) return null;
-      const {
-        packAssets: yR
-      } = await Promise.all([GR.e(233), GR.e(53)]).then((() => GR(64364)));
-      return yR(RR, JR)
-    }
-
-    function WR(RR) {
-      const JR = (0, ZR.v)();
-      return null === JR ? () => {} : (JR.onmessage = JR => {
-        RR.readPlayerPack((0, qR.g)(JR.data))
-      }, () => {
-        JR.close()
+    function Ur(rr) {
+      let {
+        endsAt: Sr,
+        className: Qr
+      } = rr;
+      return (0, Nr.jsxs)("span", {
+        className: ar()("NewPlayerDealClock", Qr),
+        children: [(0, Nr.jsx)(Er.c, {
+          name: "hourglass"
+        }), (0, Nr.jsx)(fr.f, {
+          toTime: Sr
+        })]
       })
     }
-  }
+
+    function tr(rr) {
+      let {
+        offered: Sr,
+        needsLogin: Qr,
+        busy: Zr,
+        highlight: Wr,
+        onBuy: fr
+      } = rr;
+      const {
+        t: Er
+      } = (0, jr.E)(), {
+        pack: Ur
+      } = Sr, tr = (0, xr.e)(Sr.package);
+      return (0, Nr.jsxs)("div", {
+        className: ar()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: Wr
+        }),
+        children: [(0, Nr.jsxs)("div", {
+          className: "NewPlayerDealPackArt",
+          children: [(0, Nr.jsx)("img", {
+            src: mr.d[Sr.tier],
+            alt: "",
+            draggable: !1
+          }), (0, Nr.jsx)("span", {
+            className: "NewPlayerDealTag",
+            children: Er("newPlayerDeal:tag")
+          })]
+        }), (0, Nr.jsxs)("div", {
+          className: "NewPlayerDealPackText",
+          children: [(0, Nr.jsx)(pr.c, {
+            className: "NewPlayerDealPackAmount",
+            amount: Ur.gems
+          }), (0, Nr.jsx)("span", {
+            className: "NewPlayerDealSplit",
+            children: Er("newPlayerDeal:split", {
+              usual: Ur.usualGems.toLocaleString(),
+              bonus: (Ur.gems - Ur.usualGems).toLocaleString()
+            })
+          })]
+        }), (0, Nr.jsx)(Ir.p, {
+          className: "NewPlayerDealBuy",
+          loading: Zr,
+          onClick: fr,
+          ariaLabel: Er("newPlayerDeal:buyLabel", {
+            amount: Ur.gems.toLocaleString(),
+            price: tr
+          }),
+          children: Er(Qr ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: tr
+          })
+        })]
+      })
+    }
+
+    function hr(rr) {
+      let {
+        view: Sr,
+        needsLogin: Qr,
+        busy: Wr,
+        highlight: Ir,
+        onBuy: fr
+      } = rr;
+      const {
+        t: Er
+      } = (0, jr.E)();
+      return (0, Nr.jsxs)("div", {
+        className: ar()("NewPlayerDealPacks", Sr.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [Sr.packs.map(((rr, Sr) => (0, Nr.jsxs)(Zr.Fragment, {
+          children: [Sr > 0 && (0, Nr.jsx)("div", {
+            className: "NewPlayerDealDivider",
+            "aria-hidden": !0,
+            children: (0, Nr.jsx)("i", {})
+          }), (0, Nr.jsx)(tr, {
+            offered: rr,
+            needsLogin: Qr,
+            busy: Wr,
+            highlight: Ir === rr.pack.packageId,
+            onBuy: () => {
+              fr(rr)
+            }
+          })]
+        }, rr.pack.packageId))), (0, Nr.jsx)("div", {
+          className: "NewPlayerDealUnder",
+          children: (0, Nr.jsx)("span", {
+            className: "NewPlayerDealLimit",
+            children: Er("newPlayerDeal:limit")
+          })
+        })]
+      })
+    }
+  },
+  35532: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => vr,
+      e: () => Lr
+    });
+    Qr(35525);
+    var Zr = Qr(4184),
+      Wr = Qr(1605),
+      ar = Qr(3192),
+      jr = Qr(4170),
+      Ir = Qr(4151),
+      fr = Qr(4176),
+      Er = Qr(4135),
+      pr = Qr(1251),
+      xr = Qr(1475),
+      mr = Qr(1181),
+      Nr = Qr(1576),
+      Ur = Qr(1448),
+      tr = Qr(3362),
+      hr = Qr(3749),
+      zr = Qr(3612),
+      Yr = Qr(3617),
+      nr = Qr(3619),
+      er = Qr(1338);
+    const Kr = new fr.c(Er.getBillingClient, Er.addPurchaseRecordListener);
+    let yr = !1;
+
+    function Br(rr, Sr) {
+      null !== rr && (0, zr.p)(rr) || ((0, Wr.reportAnalyticsClick)({
+        id: "store.purchase_done",
+        value: `self:${Sr.pack.packageId}`
+      }), null !== rr && (0, zr.v)(rr), vr(Sr.pack.gems))
+    }
+
+    function Tr(rr, Sr, Qr) {
+      const Wr = (0, zr.b)(Sr);
+      switch (rr.kind) {
+        case "completed":
+          Br(Wr, Qr);
+          break;
+        case "pending":
+          ar = rr.intentId, jr = () => {
+            hr.j.refresh(), Br(Wr, Qr)
+          }, yr || (yr = !0, Kr.listen()), Kr.follow(ar, jr);
+          break;
+        case "unknownPackage":
+          (0, zr.M)(Sr, null);
+          break;
+        case "failed":
+          rr.errorKey === Zr.e.newPlayerDealUnavailable && (0, zr.M)(Sr, null)
+      }
+      var ar, jr
+    }
+
+    function vr(rr) {
+      xr.NotificationProvider.showCustomPopup({
+        body: Sr => (0, er.jsx)(Or, {
+          gems: rr,
+          close: Sr
+        }),
+        middleScreenPopupClassName: "NewPlayerDealAddedPopup",
+        disableExitButton: !0
+      })
+    }
+
+    function Or(rr) {
+      let {
+        gems: Sr,
+        close: Qr
+      } = rr;
+      const {
+        t: Zr
+      } = (0, pr.E)();
+      return (0, er.jsxs)("div", {
+        className: "NewPlayerDealAdded",
+        children: [(0, er.jsxs)("div", {
+          className: "NewPlayerDealAddedHead",
+          children: [(0, er.jsx)(Ur.c, {
+            name: "circle-check"
+          }), (0, er.jsx)(tr.c, {
+            amount: Sr
+          }), (0, er.jsx)("span", {
+            children: Zr("newPlayerDeal:added")
+          })]
+        }), (0, er.jsx)(Nr.p, {
+          className: "NewPlayerDealAddedOk",
+          onClick: Qr,
+          children: Zr("general:ok")
+        })]
+      })
+    }
+
+    function Lr(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jr.e;
+      const {
+        userContext: Qr
+      } = (0, mr.c)(), {
+        purchaseUnderWay: Zr,
+        notice: Wr,
+        buy: fr
+      } = (0, Ir.d)(Sr), Er = (0, Yr.g)(), pr = Qr.mayBuy() || (0, ar.guestsMayBuy)(), xr = null === Er ? !pr : Er.guest && !Qr.isLoggedIn();
+      return {
+        purchaseUnderWay: Zr,
+        notice: Wr,
+        needsLogin: xr,
+        buyPack: function(Zr, Wr) {
+          (0, zr.E)("new_player_deal.buy", (0, nr.b)(Zr.arm, rr, Wr.pack.packageId)), null === Er ? fr(function(rr) {
+            return {
+              sku: rr.pack.packageId,
+              tier: rr.tier,
+              amount: rr.pack.gems,
+              bonusPercent: 0,
+              package: rr.package
+            }
+          }(Wr), null, {
+            followPending: !1
+          }).then((rr => {
+            Tr(rr, Qr, Wr)
+          })) : xr ? Sr(Wr.pack.packageId, null) : Br((0, zr.b)(Qr), Wr)
+        }
+      }
+    }
+  },
+  35525: () => {}
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

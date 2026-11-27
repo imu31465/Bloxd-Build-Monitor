@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var RR = __webpack_require__.u,
-        JR = __webpack_require__.e,
-        GR = {},
-        yR = {};
-      __webpack_require__.u = function(JR) {
-        return RR(JR) + (GR.hasOwnProperty(JR) ? "?" + GR[JR] : "")
-      }, __webpack_require__.e = function(tR) {
-        return JR(tR).catch((function(JR) {
-          var uR = yR.hasOwnProperty(tR) ? yR[tR] : 4;
-          if (uR < 1) {
-            var ZR = RR(tR);
-            if (JR.message = "Loading chunk " + tR + " failed after 4 retries.\n(" + ZR + ")", JR.request = ZR, GR[tR] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete yR[tR]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === JR.code) {
-              var qR = __webpack_require__.miniCssF(tR);
-              JR.message = JR.message.replace("Loading chunk", "Loading CSS chunk").replace(ZR, qR), JR.request = qR
+      var rr = __webpack_require__.u,
+        Sr = __webpack_require__.e,
+        Qr = {},
+        Zr = {};
+      __webpack_require__.u = function(Sr) {
+        return rr(Sr) + (Qr.hasOwnProperty(Sr) ? "?" + Qr[Sr] : "")
+      }, __webpack_require__.e = function(Wr) {
+        return Sr(Wr).catch((function(Sr) {
+          var ar = Zr.hasOwnProperty(Wr) ? Zr[Wr] : 4;
+          if (ar < 1) {
+            var jr = rr(Wr);
+            if (Sr.message = "Loading chunk " + Wr + " failed after 4 retries.\n(" + jr + ")", Sr.request = jr, Qr[Wr] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete Zr[Wr]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === Sr.code) {
+              var Ir = __webpack_require__.miniCssF(Wr);
+              Sr.message = Sr.message.replace("Loading chunk", "Loading CSS chunk").replace(jr, Ir), Sr.request = Ir
             }
-            throw JR
+            throw Sr
           }
-          return new Promise((function(RR) {
-            var JR = 4 - uR + 1;
+          return new Promise((function(rr) {
+            var Sr = 4 - ar + 1;
             setTimeout((function() {
-              var JR = "cache-bust=" + Date.now();
-              GR[tR] = JR, yR[tR] = uR - 1, RR(__webpack_require__.e(tR))
-            }), function(RR) {
-              return 500 * Math.pow(2, RR)
-            }(JR))
+              var Sr = "cache-bust=" + Date.now();
+              Qr[Wr] = Sr, Zr[Wr] = ar - 1, rr(__webpack_require__.e(Wr))
+            }), function(rr) {
+              return 500 * Math.pow(2, rr)
+            }(Sr))
           }))
         }))
       }
     }
   })();
-  const RR = Math.SQRT1_2,
-    JR = Math.SQRT1_2 / 2,
-    GR = Math.sqrt(3) / 2,
-    yR = 2 * RR,
-    tR = 2 * JR + GR;
+  const rr = Math.SQRT1_2,
+    Sr = Math.SQRT1_2 / 2,
+    Qr = Math.sqrt(3) / 2,
+    Zr = 2 * rr,
+    Wr = 2 * Sr + Qr;
 
-  function uR(JR, GR) {
-    const yR = GR > 0 ? GR + 1 : 0,
-      uR = .6 * JR - GR / RR;
-    return Math.max(0, Math.min(uR, (JR - 2 * yR) / tR))
+  function ar(Sr, Qr) {
+    const Zr = Qr > 0 ? Qr + 1 : 0,
+      ar = .6 * Sr - Qr / rr;
+    return Math.max(0, Math.min(ar, (Sr - 2 * Zr) / Wr))
   }
-  const ZR = [15, 15, 15],
-    qR = {
+  const jr = [15, 15, 15],
+    Ir = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function iR(RR, JR, GR, ZR) {
+  function fr(rr, Sr, Qr, jr) {
     const {
-      vertices: qR,
-      uvs: iR,
-      indices: fR,
-      shades: VR
-    } = RR, wR = function(RR, JR) {
-      const GR = uR(RR, JR),
-        ZR = yR * GR,
-        qR = tR * GR;
+      vertices: Ir,
+      uvs: fr,
+      indices: Er,
+      shades: pr
+    } = rr, mr = function(rr, Sr) {
+      const Qr = ar(rr, Sr),
+        jr = Zr * Qr,
+        Ir = Wr * Qr;
       return {
-        left: (RR - ZR) / 2,
-        top: (RR - qR) / 2,
-        width: ZR,
-        height: qR
+        left: (rr - jr) / 2,
+        top: (rr - Ir) / 2,
+        width: jr,
+        height: Ir
       }
-    }(GR, ZR), rR = new Float32Array(qR.length);
-    for (let yR = 0; yR < qR.length; yR += 3) rR[yR] = wR.left + qR[yR] * wR.width, rR[yR + 1] = wR.top + qR[yR + 1] * wR.height, rR[yR + 2] = qR[yR + 2];
-    const eR = new Float32Array(GR * GR).fill(-1 / 0),
-      aR = new Uint8ClampedArray(GR * GR * 4),
-      LR = 255 * RR.alphaCutoff;
-    for (let yR = 0; yR < fR.length; yR += 3) {
-      const [RR, tR, uR] = [fR[yR], fR[yR + 1], fR[yR + 2]], [ZR, qR, KR] = [3 * RR, 3 * tR, 3 * uR], [wR, nR, UR, WR, AR, CR] = [rR[ZR], rR[ZR + 1], rR[qR], rR[qR + 1], rR[KR], rR[KR + 1]], XR = (UR - wR) * (CR - nR) - (AR - wR) * (WR - nR);
-      if (Math.abs(XR) < 1e-9) continue;
-      const MR = VR[yR / 3],
-        [BR, lR, pR, gR, bR, vR] = [iR[2 * RR], iR[2 * RR + 1], iR[2 * tR], iR[2 * tR + 1], iR[2 * uR], iR[2 * uR + 1]],
-        OR = Math.max(0, Math.floor(Math.min(wR, UR, AR))),
-        xR = Math.min(GR - 1, Math.ceil(Math.max(wR, UR, AR))),
-        NR = Math.max(0, Math.floor(Math.min(nR, WR, CR))),
-        DR = Math.min(GR - 1, Math.ceil(Math.max(nR, WR, CR)));
-      for (let yR = NR; yR <= DR; yR++)
-        for (let RR = OR; RR <= xR; RR++) {
-          const [tR, uR] = [RR + .5, yR + .5], iR = ((tR - wR) * (CR - nR) - (AR - wR) * (uR - nR)) / XR, fR = ((UR - wR) * (uR - nR) - (tR - wR) * (WR - nR)) / XR, VR = 1 - iR - fR;
-          if (VR < 0 || iR < 0 || fR < 0) continue;
-          const OR = VR * rR[ZR + 2] + iR * rR[qR + 2] + fR * rR[KR + 2],
-            xR = yR * GR + RR;
-          if (OR <= eR[xR]) continue;
-          const NR = Math.max(0, Math.min(JR.width - 1, Math.floor((VR * BR + iR * pR + fR * bR) * JR.width))),
-            DR = 4 * (Math.max(0, Math.min(JR.height - 1, Math.floor((VR * lR + iR * gR + fR * vR) * JR.height))) * JR.width + NR);
-          JR.pixels[DR + 3] < LR || (eR[xR] = OR, aR[4 * xR] = JR.pixels[DR] * MR, aR[4 * xR + 1] = JR.pixels[DR + 1] * MR, aR[4 * xR + 2] = JR.pixels[DR + 2] * MR, aR[4 * xR + 3] = 255)
+    }(Qr, jr), Nr = new Float32Array(Ir.length);
+    for (let Zr = 0; Zr < Ir.length; Zr += 3) Nr[Zr] = mr.left + Ir[Zr] * mr.width, Nr[Zr + 1] = mr.top + Ir[Zr + 1] * mr.height, Nr[Zr + 2] = Ir[Zr + 2];
+    const Ur = new Float32Array(Qr * Qr).fill(-1 / 0),
+      tr = new Uint8ClampedArray(Qr * Qr * 4),
+      hr = 255 * rr.alphaCutoff;
+    for (let Zr = 0; Zr < Er.length; Zr += 3) {
+      const [rr, Wr, ar] = [Er[Zr], Er[Zr + 1], Er[Zr + 2]], [jr, Ir, xr] = [3 * rr, 3 * Wr, 3 * ar], [mr, zr, Yr, nr, er, Kr] = [Nr[jr], Nr[jr + 1], Nr[Ir], Nr[Ir + 1], Nr[xr], Nr[xr + 1]], yr = (Yr - mr) * (Kr - zr) - (er - mr) * (nr - zr);
+      if (Math.abs(yr) < 1e-9) continue;
+      const Br = pr[Zr / 3],
+        [Tr, vr, Or, Lr, lr, Xr] = [fr[2 * rr], fr[2 * rr + 1], fr[2 * Wr], fr[2 * Wr + 1], fr[2 * ar], fr[2 * ar + 1]],
+        Pr = Math.max(0, Math.floor(Math.min(mr, Yr, er))),
+        Hr = Math.min(Qr - 1, Math.ceil(Math.max(mr, Yr, er))),
+        qr = Math.max(0, Math.floor(Math.min(zr, nr, Kr))),
+        Rr = Math.min(Qr - 1, Math.ceil(Math.max(zr, nr, Kr)));
+      for (let Zr = qr; Zr <= Rr; Zr++)
+        for (let rr = Pr; rr <= Hr; rr++) {
+          const [Wr, ar] = [rr + .5, Zr + .5], fr = ((Wr - mr) * (Kr - zr) - (er - mr) * (ar - zr)) / yr, Er = ((Yr - mr) * (ar - zr) - (Wr - mr) * (nr - zr)) / yr, pr = 1 - fr - Er;
+          if (pr < 0 || fr < 0 || Er < 0) continue;
+          const Pr = pr * Nr[jr + 2] + fr * Nr[Ir + 2] + Er * Nr[xr + 2],
+            Hr = Zr * Qr + rr;
+          if (Pr <= Ur[Hr]) continue;
+          const qr = Math.max(0, Math.min(Sr.width - 1, Math.floor((pr * Tr + fr * Or + Er * lr) * Sr.width))),
+            Rr = 4 * (Math.max(0, Math.min(Sr.height - 1, Math.floor((pr * vr + fr * Lr + Er * Xr) * Sr.height))) * Sr.width + qr);
+          Sr.pixels[Rr + 3] < hr || (Ur[Hr] = Pr, tr[4 * Hr] = Sr.pixels[Rr] * Br, tr[4 * Hr + 1] = Sr.pixels[Rr + 1] * Br, tr[4 * Hr + 2] = Sr.pixels[Rr + 2] * Br, tr[4 * Hr + 3] = 255)
         }
     }
-    return KR(aR, GR, ZR), aR
+    return xr(tr, Qr, jr), tr
   }
-  let fR = NaN,
-    VR = new Int32Array(0);
+  let Er = NaN,
+    pr = new Int32Array(0);
 
-  function KR(RR, JR, GR) {
-    let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JR => 0 !== RR[4 * JR + 3];
-    const tR = new Uint8Array(JR * JR);
-    for (let ZR = 0; ZR < JR * JR; ZR++) tR[ZR] = yR(ZR) ? 1 : 0;
-    const uR = (RR, GR) => RR >= 0 && GR >= 0 && RR < JR && GR < JR && 0 === tR[GR * JR + RR],
-      qR = new Float32Array(JR * JR).fill(1 / 0),
-      iR = function(RR) {
-        if (RR !== fR) {
-          const JR = Math.ceil(RR + 1),
-            GR = [];
-          for (let yR = -JR; yR <= JR; yR++)
-            for (let tR = -JR; tR <= JR; tR++) {
-              const JR = tR * tR + yR * yR;
-              JR > 0 && JR < (RR + 1) ** 2 && GR.push(tR, yR, JR)
+  function xr(rr, Sr, Qr) {
+    let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Sr => 0 !== rr[4 * Sr + 3];
+    const Wr = new Uint8Array(Sr * Sr);
+    for (let jr = 0; jr < Sr * Sr; jr++) Wr[jr] = Zr(jr) ? 1 : 0;
+    const ar = (rr, Qr) => rr >= 0 && Qr >= 0 && rr < Sr && Qr < Sr && 0 === Wr[Qr * Sr + rr],
+      Ir = new Float32Array(Sr * Sr).fill(1 / 0),
+      fr = function(rr) {
+        if (rr !== Er) {
+          const Sr = Math.ceil(rr + 1),
+            Qr = [];
+          for (let Zr = -Sr; Zr <= Sr; Zr++)
+            for (let Wr = -Sr; Wr <= Sr; Wr++) {
+              const Sr = Wr * Wr + Zr * Zr;
+              Sr > 0 && Sr < (rr + 1) ** 2 && Qr.push(Wr, Zr, Sr)
             }
-          fR = RR, VR = Int32Array.from(GR)
+          Er = rr, pr = Int32Array.from(Qr)
         }
-        return VR
-      }(GR);
-    for (let ZR = 0; ZR < JR; ZR++)
-      for (let RR = 0; RR < JR; RR++) {
-        if (1 === tR[ZR * JR + RR] && (uR(RR - 1, ZR) || uR(RR + 1, ZR) || uR(RR, ZR - 1) || uR(RR, ZR + 1)))
-          for (let GR = 0; GR < iR.length; GR += 3) {
-            const yR = RR + iR[GR],
-              tR = ZR + iR[GR + 1];
-            if (yR >= 0 && tR >= 0 && yR < JR && tR < JR) {
-              const RR = tR * JR + yR;
-              qR[RR] = Math.min(qR[RR], iR[GR + 2])
+        return pr
+      }(Qr);
+    for (let jr = 0; jr < Sr; jr++)
+      for (let rr = 0; rr < Sr; rr++) {
+        if (1 === Wr[jr * Sr + rr] && (ar(rr - 1, jr) || ar(rr + 1, jr) || ar(rr, jr - 1) || ar(rr, jr + 1)))
+          for (let Qr = 0; Qr < fr.length; Qr += 3) {
+            const Zr = rr + fr[Qr],
+              Wr = jr + fr[Qr + 1];
+            if (Zr >= 0 && Wr >= 0 && Zr < Sr && Wr < Sr) {
+              const rr = Wr * Sr + Zr;
+              Ir[rr] = Math.min(Ir[rr], fr[Qr + 2])
             }
           }
       }
-    for (let fR = 0; fR < JR * JR; fR++) 1 !== tR[fR] && qR[fR] !== 1 / 0 && (RR.set(ZR, 4 * fR), RR[4 * fR + 3] = Math.round(255 * Math.min(1, GR + 1 - Math.sqrt(qR[fR]))))
+    for (let Er = 0; Er < Sr * Sr; Er++) 1 !== Wr[Er] && Ir[Er] !== 1 / 0 && (rr.set(jr, 4 * Er), rr[4 * Er + 3] = Math.round(255 * Math.min(1, Qr + 1 - Math.sqrt(Ir[Er]))))
   }
-  const wR = {
+  const mr = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    rR = {
+    Nr = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    eR = {
+    Ur = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const aR = 1e-6;
+  const tr = 1e-6;
 
-  function LR(RR, JR, GR, yR) {
+  function hr(rr, Sr, Qr, Zr) {
     let {
-      origin: tR,
-      across: uR,
-      down: ZR,
-      texture: qR,
-      rect: [iR, fR, VR, KR],
-      shade: wR
-    } = yR;
-    const rR = uR.x * ZR.y - uR.y * ZR.x;
-    if (Math.abs(rR) < 1e-9) return;
-    const eR = [tR.x, tR.x + uR.x, tR.x + ZR.x, tR.x + uR.x + ZR.x],
-      LR = [tR.y, tR.y + uR.y, tR.y + ZR.y, tR.y + uR.y + ZR.y],
-      nR = Math.max(0, Math.floor(Math.min(...eR))),
-      UR = Math.min(GR - 1, Math.ceil(Math.max(...eR))),
-      WR = Math.max(0, Math.floor(Math.min(...LR))),
-      AR = Math.min(GR - 1, Math.ceil(Math.max(...LR)));
-    for (let CR = WR; CR <= AR; CR++)
-      for (let yR = nR; yR <= UR; yR++) {
-        const eR = yR + .5 - tR.x,
-          LR = CR + .5 - tR.y,
-          nR = (eR * ZR.y - LR * ZR.x) / rR,
-          UR = (uR.x * LR - uR.y * eR) / rR;
-        if (nR < -aR || nR > 1 + aR || UR < -aR || UR > 1 + aR) continue;
-        const WR = CR * GR + yR;
-        JR[WR] = 1;
-        const AR = iR + Math.min(Math.max(nR, 0), 1) * (VR - iR),
-          XR = fR + Math.min(Math.max(UR, 0), 1) * (KR - fR),
-          MR = Math.min(qR.width - 1, Math.floor(AR * qR.width)),
-          BR = 4 * (Math.min(qR.height - 1, Math.floor(XR * qR.height)) * qR.width + MR),
-          lR = qR.pixels[BR + 3] / 255;
-        if (0 === lR) continue;
-        const pR = 4 * WR,
-          gR = RR[pR + 3] / 255 * (1 - lR),
-          bR = lR + gR;
-        for (let JR = 0; JR < 3; JR++) RR[pR + JR] = (qR.pixels[BR + JR] * wR * lR + RR[pR + JR] * gR) / bR;
-        RR[pR + 3] = 255 * bR
+      origin: Wr,
+      across: ar,
+      down: jr,
+      texture: Ir,
+      rect: [fr, Er, pr, xr],
+      shade: mr
+    } = Zr;
+    const Nr = ar.x * jr.y - ar.y * jr.x;
+    if (Math.abs(Nr) < 1e-9) return;
+    const Ur = [Wr.x, Wr.x + ar.x, Wr.x + jr.x, Wr.x + ar.x + jr.x],
+      hr = [Wr.y, Wr.y + ar.y, Wr.y + jr.y, Wr.y + ar.y + jr.y],
+      zr = Math.max(0, Math.floor(Math.min(...Ur))),
+      Yr = Math.min(Qr - 1, Math.ceil(Math.max(...Ur))),
+      nr = Math.max(0, Math.floor(Math.min(...hr))),
+      er = Math.min(Qr - 1, Math.ceil(Math.max(...hr)));
+    for (let Kr = nr; Kr <= er; Kr++)
+      for (let Zr = zr; Zr <= Yr; Zr++) {
+        const Ur = Zr + .5 - Wr.x,
+          hr = Kr + .5 - Wr.y,
+          zr = (Ur * jr.y - hr * jr.x) / Nr,
+          Yr = (ar.x * hr - ar.y * Ur) / Nr;
+        if (zr < -tr || zr > 1 + tr || Yr < -tr || Yr > 1 + tr) continue;
+        const nr = Kr * Qr + Zr;
+        Sr[nr] = 1;
+        const er = fr + Math.min(Math.max(zr, 0), 1) * (pr - fr),
+          yr = Er + Math.min(Math.max(Yr, 0), 1) * (xr - Er),
+          Br = Math.min(Ir.width - 1, Math.floor(er * Ir.width)),
+          Tr = 4 * (Math.min(Ir.height - 1, Math.floor(yr * Ir.height)) * Ir.width + Br),
+          vr = Ir.pixels[Tr + 3] / 255;
+        if (0 === vr) continue;
+        const Or = 4 * nr,
+          Lr = rr[Or + 3] / 255 * (1 - vr),
+          lr = vr + Lr;
+        for (let Sr = 0; Sr < 3; Sr++) rr[Or + Sr] = (Ir.pixels[Tr + Sr] * mr * vr + rr[Or + Sr] * Lr) / lr;
+        rr[Or + 3] = 255 * lr
       }
   }
 
-  function nR(RR, JR, GR) {
-    const yR = RR.get(JR);
-    if (void 0 === yR) throw new Error(`no ${GR} was sent for ${JR.slice(0,100)}`);
-    return yR
+  function zr(rr, Sr, Qr) {
+    const Zr = rr.get(Sr);
+    if (void 0 === Zr) throw new Error(`no ${Qr} was sent for ${Sr.slice(0,100)}`);
+    return Zr
   }
-  const UR = {
-      pixelsOf(RR) {
-        const JR = new OffscreenCanvas(RR.width, RR.height),
-          GR = JR.getContext("2d");
-        if (!GR) throw new Error("no 2D context");
-        return GR.drawImage(RR, 0, 0), RR.close(), {
-          width: JR.width,
-          height: JR.height,
-          pixels: GR.getImageData(0, 0, JR.width, JR.height).data
+  const Yr = {
+      pixelsOf(rr) {
+        const Sr = new OffscreenCanvas(rr.width, rr.height),
+          Qr = Sr.getContext("2d");
+        if (!Qr) throw new Error("no 2D context");
+        return Qr.drawImage(rr, 0, 0), rr.close(), {
+          width: Sr.width,
+          height: Sr.height,
+          pixels: Qr.getImageData(0, 0, Sr.width, Sr.height).data
         }
       },
-      async encode(RR, JR) {
-        const GR = new OffscreenCanvas(JR, JR),
-          yR = GR.getContext("2d");
-        if (!yR) throw new Error("no 2D context");
-        yR.putImageData(new ImageData(RR, JR, JR), 0, 0);
-        const tR = await GR.convertToBlob();
-        return new Promise(((RR, JR) => {
-          const GR = new FileReader;
-          GR.onload = () => {
-            RR(GR.result)
-          }, GR.onerror = () => {
-            var RR;
-            JR(null !== (RR = GR.error) && void 0 !== RR ? RR : new Error("the icon did not encode"))
-          }, GR.readAsDataURL(tR)
+      async encode(rr, Sr) {
+        const Qr = new OffscreenCanvas(Sr, Sr),
+          Zr = Qr.getContext("2d");
+        if (!Zr) throw new Error("no 2D context");
+        Zr.putImageData(new ImageData(rr, Sr, Sr), 0, 0);
+        const Wr = await Qr.convertToBlob();
+        return new Promise(((rr, Sr) => {
+          const Qr = new FileReader;
+          Qr.onload = () => {
+            rr(Qr.result)
+          }, Qr.onerror = () => {
+            var rr;
+            Sr(null !== (rr = Qr.error) && void 0 !== rr ? rr : new Error("the icon did not encode"))
+          }, Qr.readAsDataURL(Wr)
         }))
       }
     },
-    WR = globalThis.WorkerGlobalScope;
-  void 0 !== WR && globalThis instanceof WR && function(yR, tR) {
-    const ZR = new Map,
-      fR = new Map,
-      VR = (RR, JR, GR) => {
+    nr = globalThis.WorkerGlobalScope;
+  void 0 !== nr && globalThis instanceof nr && function(Zr, Wr) {
+    const jr = new Map,
+      Er = new Map,
+      pr = (rr, Sr, Qr) => {
         (async () => {
           try {
-            yR.postMessage({
+            Zr.postMessage({
               type: "drawn",
-              id: RR,
-              url: await tR.encode(GR(), JR)
+              id: rr,
+              url: await Wr.encode(Qr(), Sr)
             })
-          } catch (uR) {
-            yR.postMessage({
+          } catch (ar) {
+            Zr.postMessage({
               type: "failed",
-              message: String(uR)
+              message: String(ar)
             })
           }
         })()
       };
-    yR.onmessage = yR => {
+    Zr.onmessage = Zr => {
       let {
-        data: aR
-      } = yR;
-      if ("texture" === aR.type) ZR.set(aR.url, tR.pixelsOf(aR.bitmap));
-      else if ("model" === aR.type) fR.set(aR.name, {
-        geometry: aR.geometry,
-        texture: tR.pixelsOf(aR.bitmap)
+        data: tr
+      } = Zr;
+      if ("texture" === tr.type) jr.set(tr.url, Wr.pixelsOf(tr.bitmap));
+      else if ("model" === tr.type) Er.set(tr.name, {
+        geometry: tr.geometry,
+        texture: Wr.pixelsOf(tr.bitmap)
       });
-      else if ("draw" === aR.type) {
+      else if ("draw" === tr.type) {
         const {
-          id: yR,
-          top: tR,
-          left: iR,
-          right: fR,
-          itemType: UR,
-          size: WR,
-          outlineWidth: AR
-        } = aR;
-        VR(yR, WR, (() => function(yR, tR, ZR, iR) {
-          const fR = uR(ZR, iR),
-            VR = fR * RR,
-            wR = fR * JR,
-            rR = fR * GR,
-            eR = Math.max(...tR.boxes.map((RR => RR[4]))),
-            aR = ZR / 2,
-            nR = wR + (ZR - wR - wR - eR * rR) / 2,
-            UR = (RR, JR, GR) => ({
-              x: aR + (RR - GR) * VR,
-              y: nR - wR + (RR + GR) * wR + (eR - JR) * rR
+          id: Zr,
+          top: Wr,
+          left: fr,
+          right: Er,
+          itemType: Yr,
+          size: nr,
+          outlineWidth: er
+        } = tr;
+        pr(Zr, nr, (() => function(Zr, Wr, jr, fr) {
+          const Er = ar(jr, fr),
+            pr = Er * rr,
+            mr = Er * Sr,
+            Nr = Er * Qr,
+            Ur = Math.max(...Wr.boxes.map((rr => rr[4]))),
+            tr = jr / 2,
+            zr = mr + (jr - mr - mr - Ur * Nr) / 2,
+            Yr = (rr, Sr, Qr) => ({
+              x: tr + (rr - Qr) * pr,
+              y: zr - mr + (rr + Qr) * mr + (Ur - Sr) * Nr
             }),
-            WR = (RR, JR, GR, yR, uR, ZR) => ({
-              origin: RR,
+            nr = (rr, Sr, Qr, Zr, ar, jr) => ({
+              origin: rr,
               across: {
-                x: JR.x - RR.x,
-                y: JR.y - RR.y
+                x: Sr.x - rr.x,
+                y: Sr.y - rr.y
               },
               down: {
-                x: GR.x - RR.x,
-                y: GR.y - RR.y
+                x: Qr.x - rr.x,
+                y: Qr.y - rr.y
               },
-              texture: yR,
-              rect: tR.cropFaces ? uR : [0, 0, 1, 1],
-              shade: ZR
+              texture: Zr,
+              rect: Wr.cropFaces ? ar : [0, 0, 1, 1],
+              shade: jr
             }),
-            AR = new Uint8ClampedArray(ZR * ZR * 4),
-            CR = new Uint8Array(ZR * ZR),
-            XR = qR;
-          for (const [RR, JR, GR, uR, qR, KR] of tR.boxes) {
-            const tR = WR(UR(uR, qR, KR), UR(uR, qR, GR), UR(uR, JR, KR), yR.right, [1 - KR, 1 - qR, 1 - GR, 1 - JR], XR.right),
-              iR = WR(UR(RR, qR, KR), UR(uR, qR, KR), UR(RR, JR, KR), yR.left, [RR, 1 - qR, uR, 1 - JR], XR.left),
-              fR = WR(UR(RR, qR, GR), UR(uR, qR, GR), UR(RR, qR, KR), yR.top, [RR, GR, uR, KR], XR.top);
-            for (const RR of [tR, iR, fR]) LR(AR, CR, ZR, RR)
+            er = new Uint8ClampedArray(jr * jr * 4),
+            Kr = new Uint8Array(jr * jr),
+            yr = Ir;
+          for (const [rr, Sr, Qr, ar, Ir, xr] of Wr.boxes) {
+            const Wr = nr(Yr(ar, Ir, xr), Yr(ar, Ir, Qr), Yr(ar, Sr, xr), Zr.right, [1 - xr, 1 - Ir, 1 - Qr, 1 - Sr], yr.right),
+              fr = nr(Yr(rr, Ir, xr), Yr(ar, Ir, xr), Yr(rr, Sr, xr), Zr.left, [rr, 1 - Ir, ar, 1 - Sr], yr.left),
+              Er = nr(Yr(rr, Ir, Qr), Yr(ar, Ir, Qr), Yr(rr, Ir, xr), Zr.top, [rr, Qr, ar, xr], yr.top);
+            for (const rr of [Wr, fr, Er]) hr(er, Kr, jr, rr)
           }
-          return KR(AR, ZR, iR, (RR => 1 === CR[RR])), AR
+          return xr(er, jr, fr, (rr => 1 === Kr[rr])), er
         }({
-          top: nR(ZR, tR, "texture"),
-          left: nR(ZR, iR, "texture"),
-          right: nR(ZR, fR, "texture")
-        }, function(RR) {
-          return "SlabBlock" === RR ? rR : "StairsBlock" === RR ? eR : wR
-        }(UR), WR, AR)))
+          top: zr(jr, Wr, "texture"),
+          left: zr(jr, fr, "texture"),
+          right: zr(jr, Er, "texture")
+        }, function(rr) {
+          return "SlabBlock" === rr ? Nr : "StairsBlock" === rr ? Ur : mr
+        }(Yr), nr, er)))
       } else {
         const {
-          id: RR,
-          name: JR,
-          size: GR,
-          outlineWidth: yR
-        } = aR;
-        VR(RR, GR, (() => {
+          id: rr,
+          name: Sr,
+          size: Qr,
+          outlineWidth: Zr
+        } = tr;
+        pr(rr, Qr, (() => {
           const {
-            geometry: RR,
-            texture: tR
-          } = nR(fR, JR, "model");
-          return iR(RR, tR, GR, yR)
+            geometry: rr,
+            texture: Wr
+          } = zr(Er, Sr, "model");
+          return fr(rr, Wr, Qr, Zr)
         }))
       }
-    }, yR.postMessage({
+    }, Zr.postMessage({
       type: "started"
     })
-  }(globalThis, UR)
+  }(globalThis, Yr)
 })();

@@ -1,1109 +1,861 @@
 export const id = 243;
 export const ids = [243];
 export const modules = {
-  37357: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      h: () => ZR
+  42831: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr,
+      g: () => ar
     });
-    var yR = GR(4563);
-    let tR = null,
-      uR = null;
+    var Zr = Qr(2325),
+      Wr = Qr(1127);
 
-    function ZR() {
-      return uR ??= GR.e(241).then((() => GR(37221))).then((RR => {
-        let {
-          ITEM_SPRITES: JR,
-          ITEM_SPRITES_WITHOUT_FILE: GR,
-          ITEM_FILES_WITHOUT_SPRITE: uR
-        } = RR;
-        tR = function(RR, JR, GR) {
-          const tR = new Set,
-            uR = (0, yR.u)(JR);
-          let ZR = 0;
-          for (const [yR, qR] of RR.entries()) yR === uR[ZR] ? ZR++ : tR.add(qR);
-          if ("" !== GR)
-            for (const qR of GR.split(yR.r)) tR.add(qR);
-          return tR
-        }(JR.split(yR.r), GR, uR)
-      }), (RR => {
-        throw uR = null, RR
-      })), uR
+    function ar(rr, Sr) {
+      return null !== rr.gameSource && (0, Zr.n)(Sr, rr.gameSource)
     }
 
-    function qR(RR) {
-      var JR, GR;
-      return null !== (JR = null === (GR = tR) || void 0 === GR ? void 0 : GR.has(RR)) && void 0 !== JR && JR
+    function jr(rr, Sr) {
+      if (null === rr.gameSource || "" === rr.gameSource || null === Sr) return !0;
+      const Qr = (0, Wr.l)(Sr) ? (0, Wr.q)(Sr) : null;
+      return null !== Qr && ar(rr, Qr)
     }
   },
-  37346: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => VR,
-      f: () => iR,
-      g: () => qR,
-      j: () => fR
+  42810: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Ir
     });
-    var yR = GR(2144);
-    let tR = null,
-      uR = 0;
-    const ZR = new Set;
-
-    function qR() {
-      return tR
-    }
-
-    function iR() {
-      return uR
-    }
-
-    function fR(RR) {
-      tR = RR, uR++, (0, yR.e)();
-      for (const JR of ZR) JR()
-    }
-
-    function VR(RR) {
-      ZR.add(RR)
-    }
-  },
-  37353: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => ZR,
-      e: () => qR
-    });
-    var yR = GR(37357);
-    let tR = null,
-      uR = null;
-
-    function ZR() {
-      return tR ??= GR.e(74).then((() => GR(42743))).catch((RR => {
-        throw tR = null, RR
-      })), tR
-    }
-
-    function qR() {
-      return uR ??= Promise.all([ZR(), (0, yR.h)()]).then((RR => {
-        let [JR] = RR;
-        return JR
-      }), (RR => {
-        throw uR = null, RR
-      })), uR
-    }
-  },
-  37272: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => XR
-    });
-    var yR = GR(5281),
-      tR = GR(1359),
-      uR = GR(656),
-      ZR = GR(2242),
-      qR = GR(37278),
-      iR = GR(37266);
-    const fR = 10,
-      VR = 3,
-      KR = 3,
-      wR = [{
-        healthFraction: .25,
-        colour: "#ff0000"
-      }, {
-        healthFraction: .5,
-        colour: "#ffaa00"
-      }, {
-        healthFraction: 1,
-        colour: "#00ff00"
-      }],
-      rR = 64,
-      eR = 69,
-      aR = {
-        icon: ZR.b,
-        mainRGB: "transparent",
-        chatTag: [],
-        nameTag: {
-          iconRGB: "#f38ab6",
-          iconShadowRGB: "black"
-        },
-        visible: !0
-      };
-
-    function LR(RR) {
-      return "object" !== typeof RR || null === RR || Array.isArray(RR) ? void 0 : RR
-    }
-    const nR = new Set(yR.c);
-
-    function UR(RR, JR) {
-      return "string" === typeof RR ? (0, iR.m)(RR, JR) : JR
-    }
-
-    function WR(RR) {
-      return UR(RR.width, VR)
-    }
-
-    function AR(RR, JR) {
-      var GR;
-      const yR = null !== (GR = RR.applyTo) && void 0 !== GR ? GR : "both";
-      return "both" === yR || yR === JR
-    }
-
-    function CR(RR) {
-      const JR = WR(RR);
-      return "glow" === RR.style ? JR * KR : Math.ceil(JR / 2) + 1
-    }
-
-    function XR(RR, JR, GR) {
-      var yR, ZR;
-      const VR = null !== (yR = LR(RR.info)) && void 0 !== yR ? yR : {},
-        XR = "string" === typeof RR.name ? RR.name : "",
-        MR = VR.subtitle;
-      if (Array.isArray(VR.content) && 0 === VR.content.length && !(Array.isArray(MR) && MR.length > 0)) return null;
-      const BR = "number" === typeof RR.hideNameSeed ? RR.hideNameSeed : null,
-        lR = "" === XR || !0 === RR.mesh ? XR : (0, tR.e)(XR, !GR.canSeeRealPlayerNames, BR);
-      if (!lR && !VR.content) return null;
-      const pR = "string" === typeof RR.colour ? RR.colour : "default",
-        gR = Object.hasOwn(uR.v, pR) ? uR.v[pR] : void 0,
-        bR = VR.content ? (0, iR.h)(VR.content, iR.c.DEFAULT_FONT_SIZE, GR, gR) : [{
-          kind: "text",
-          text: lR,
-          size: iR.c.DEFAULT_FONT_SIZE,
-          colour: gR
-        }],
-        vR = [],
-        OR = "boolean" === typeof RR.player ? RR.player : Array.isArray(RR.ranks),
-        xR = OR ? (0, qR.i)(VR.backgroundColor) : null;
-      xR && vR.push({
-        kind: "rank",
-        rank: xR
-      });
-      for (const tR of Array.isArray(RR.ranks) ? RR.ranks : []) {
-        const RR = (0, iR.p)(tR);
-        null !== RR && void 0 !== RR && RR.nameTag && RR.visible && vR.push({
-          kind: "rank",
-          rank: RR
-        })
-      }
-      vR.push(...bR), OR && "" !== XR && GR.isFriend(XR) && vR.push({
-        kind: "rank",
-        rank: aR
-      }), "number" === typeof RR.xZ && vR.push({
-        kind: "text",
-        text: ` ${RR.xZ}m`,
-        size: iR.c.DEFAULT_FONT_SIZE,
-        colour: "#cef3ff"
-      });
-      const NR = MR ? (0, iR.h)(MR, iR.c.DEFAULT_SUBTITLE_FONT_SIZE, GR) : null,
-        DR = "string" === typeof VR.backgroundColor ? VR.backgroundColor : "#22283b",
-        HR = "string" === typeof VR.subtitleBackgroundColor ? VR.subtitleBackgroundColor : "#1a1e2d",
-        oR = LR(VR.healthbar),
-        cR = LR(VR.border),
-        PR = Array.isArray(RR.effects) ? RR.effects.filter((RR => "string" === typeof RR && nR.has(RR))) : [],
-        IR = "number" === typeof RR.health ? Math.max(0, Math.min(1, RR.health)) : null,
-        mR = (0, iR.g)(vR, JR, GR),
-        zR = (0, iR.g)(null !== NR && void 0 !== NR ? NR : [], JR, GR),
-        SR = {
-          width: iR.c.EFFECT_ICON_SIZE * PR.length,
-          height: PR.length > 0 ? iR.c.EFFECT_ICON_SIZE : 0
-        },
-        jR = cR && AR(cR, "nametag") ? CR(cR) : 0,
-        dR = UR(null === oR || void 0 === oR ? void 0 : oR.height, fR),
-        ER = cR && AR(cR, "healthbar") ? CR(cR) : 0,
-        YR = "never" === (null !== (ZR = null === oR || void 0 === oR ? void 0 : oR.display) && void 0 !== ZR ? ZR : "onDamage") ? 0 : dR + ER,
-        kR = Math.max(SR.height, jR),
-        QR = Math.max(iR.c.VERTICAL_PADDING, YR, jR);
-      let FR = Math.max(mR.width, zR.width, SR.width);
-      if (cR) {
-        const RR = CR(cR) + iR.c.HORIZONTAL_PADDING / 2;
-        FR = Math.max(FR, Math.max(mR.width, zR.width) + iR.c.HORIZONTAL_PADDING + 2 * RR)
-      }
-      const TR = mR.height + zR.height + kR + QR,
-        sR = mR.width + iR.c.HORIZONTAL_PADDING,
-        hR = zR.width + iR.c.HORIZONTAL_PADDING,
-        RJ = Math.max(sR, hR),
-        JJ = (FR - RJ) / 2,
-        GJ = Math.max(SR.height, jR);
-      return {
-        width: FR,
-        height: TR,
-        draw: RR => {
-          const JR = [];
-          if (RR.fillStyle = DR, RR.fillRect(JJ, GJ, RJ, mR.height), (0, iR.l)(vR, (FR - sR) / 2 + iR.c.HORIZONTAL_PADDING / 2, GJ, mR.height, RR, GR, JR), NR) {
-            const yR = GJ + mR.height;
-            RR.fillStyle = HR, RR.fillRect(JJ, yR, RJ, zR.height), (0, iR.l)(NR, (FR - hR) / 2 + iR.c.HORIZONTAL_PADDING / 2, yR, zR.height, RR, GR, JR)
-          }
-          let yR = null;
-          if (null !== IR) {
-            const JR = TR - dR - ER;
-            null !== oR && void 0 !== oR && oR.backgroundColour && (RR.fillStyle = oR.backgroundColour, RR.fillRect(JJ, JR, RJ, dR)), RR.fillStyle = function(RR, JR) {
-              const GR = null === RR || void 0 === RR ? void 0 : RR.foregroundColour;
-              if ("string" === typeof GR) return GR;
-              const yR = [...Array.isArray(GR) && GR.length > 0 ? GR : wR].sort(((RR, JR) => RR.healthFraction - JR.healthFraction)),
-                tR = yR.find((RR => JR <= RR.healthFraction));
-              return (null !== tR && void 0 !== tR ? tR : yR[yR.length - 1]).colour
-            }(oR, IR), RR.fillRect(JJ, JR, Math.round(RJ * IR), dR), yR = {
-              x: JJ,
-              y: JR,
-              width: RJ,
-              height: dR
-            }
-          }
-          if (cR) {
-            const JR = [];
-            AR(cR, "nametag") && JR.push({
-              x: JJ,
-              y: GJ,
-              width: RJ,
-              height: mR.height + (NR ? zR.height : 0)
-            }), yR && AR(cR, "healthbar") && JR.push(yR), JR.length > 0 && function(RR, JR, GR) {
-              const yR = WR(JR),
-                tR = yR / 2,
-                uR = RR => RR.width > 0 && RR.height > 0,
-                ZR = GR.map((RR => ({
-                  x: RR.x + tR,
-                  y: RR.y + tR,
-                  width: RR.width - yR,
-                  height: RR.height - yR
-                }))).filter(uR);
-              if (0 === ZR.length) return;
-              const qR = JR => {
-                const GR = JR.filter(uR);
-                if (0 !== GR.length) {
-                  RR.beginPath();
-                  for (const JR of GR) RR.rect(JR.x, JR.y, JR.width, JR.height);
-                  RR.stroke()
-                }
-              };
-              if (RR.save(), RR.strokeStyle = JR.colour, RR.lineWidth = yR, RR.lineJoin = "round", "glow" === JR.style) RR.shadowColor = JR.colour, RR.shadowBlur = yR * KR, qR(ZR), qR(ZR);
-              else if ("double" === JR.style) {
-                qR(ZR);
-                const RR = yR + 2;
-                qR(ZR.map((JR => ({
-                  x: JR.x + RR,
-                  y: JR.y + RR,
-                  width: JR.width - 2 * RR,
-                  height: JR.height - 2 * RR
-                }))))
-              } else qR(ZR);
-              RR.restore()
-            }(RR, cR, JR)
-          }(0, iR.j)(JR, RR);
-          for (let tR = 0; tR < PR.length; tR++) {
-            const JR = GR.effectImage(PR[tR]);
-            JR && (RR.imageSmoothingEnabled = !1, RR.drawImage(JR, 5 + eR * tR, 5, rR, rR))
-          }
-        }
+    var Zr = Qr(679),
+      Wr = Qr(42816),
+      ar = Qr(42694);
+    async function jr(rr) {
+      const Sr = await (0, Wr.i)({
+        Helmet: Qr(39465),
+        Chestplate: Qr(39470),
+        Gauntlets: Qr(39483),
+        Leggings: Qr(39477),
+        Boots: Qr(39479)
+      } [Zr.e[rr]]);
+      try {
+        return (0, ar.v)(Sr)
+      } finally {
+        Sr.close()
       }
     }
-  },
-  37266: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      g: () => UR,
-      h: () => rR,
-      j: () => CR,
-      k: () => AR,
-      l: () => WR,
-      m: () => fR,
-      p: () => KR
-    });
-    var yR = GR(656),
-      tR = GR(359);
-    const uR = {
-        DEFAULT_FONT_SIZE: 47,
-        DEFAULT_SUBTITLE_FONT_SIZE: 30,
-        HORIZONTAL_PADDING: 30,
-        VERTICAL_PADDING: 22,
-        TEXT_SHADOW_WIDTH: 2,
-        LINE_SPACING: 8,
-        EFFECT_ICON_SIZE: 70
-      },
-      ZR = 41;
-
-    function qR(RR) {
-      return `bolder ${RR}px 'Jetbrains Mono'`
-    }
-
-    function iR(RR) {
-      return "object" === typeof RR && null !== RR
-    }
-
-    function fR(RR, JR) {
-      const GR = "number" === typeof RR ? RR : "string" === typeof RR ? Number(RR.replace("px", "")) : NaN;
-      return Number.isFinite(GR) && GR > 0 ? GR : JR
-    }
-
-    function VR(RR) {
-      return iR(RR) ? RR : void 0
-    }
-
-    function KR(RR) {
-      const JR = "number" === typeof RR ? yR.z[RR] : RR;
-      return "string" === typeof JR && Object.hasOwn(yR.n, JR) ? yR.n[JR] : void 0
-    }
-
-    function wR(RR, JR) {
-      return "string" === typeof RR ? RR : iR(RR) ? "string" === typeof RR.translationKey ? JR.translate(RR.translationKey, RR.params).map((RR => "string" === typeof RR ? RR : RR.icon)).join("") : "string" === typeof RR.entityName ? JR.shownPlayerName(RR.entityName) : "" : void 0 === RR || null === RR ? "" : String(RR)
-    }
-
-    function rR(RR, JR, GR, yR) {
-      if (!Array.isArray(RR)) return [];
-      const ZR = [];
-      for (const eR of RR) {
-        var qR, KR;
-        if (iR(eR) && "chatTag" in eR) {
-          ZR.push({
-            kind: "rank",
-            rank: eR
-          });
-          continue
-        }
-        if (iR(eR) && "icon" in eR && !("mainRGB" in eR)) {
-          var rR;
-          ZR.push({
-            kind: "icon",
-            icon: String(eR.icon),
-            size: fR(null === (rR = VR(eR.style)) || void 0 === rR ? void 0 : rR.fontSize, uR.DEFAULT_FONT_SIZE)
-          });
-          continue
-        }
-        if (iR(eR) && (0, tR.sb)(eR)) {
-          ZR.push({
-            kind: "text",
-            text: "",
-            size: JR,
-            colour: yR
-          });
-          continue
-        }
-        let RR, aR;
-        iR(eR) && (0, tR.rb)(eR) ? (RR = GR.keyBindingText(String(eR.action)), aR = VR(eR.style)) : iR(eR) && "str" in eR ? (RR = eR.str, aR = VR(eR.style)) : RR = eR;
-        const LR = fR(null === (qR = aR) || void 0 === qR ? void 0 : qR.fontSize, JR),
-          nR = null !== (KR = (0, tR.Zb)(aR)) && void 0 !== KR ? KR : yR;
-        if (iR(RR) && "string" === typeof RR.translationKey) {
-          const JR = GR.translate(RR.translationKey, RR.params);
-          if (JR.some((RR => "string" !== typeof RR))) {
-            for (const RR of JR) ZR.push("string" === typeof RR ? {
-              kind: "text",
-              text: RR,
-              size: LR,
-              colour: nR
-            } : {
-              kind: "icon",
-              icon: RR.icon,
-              size: LR
-            });
-            continue
-          }
-        }
-        ZR.push({
-          kind: "text",
-          text: wR(RR, GR),
-          size: LR,
-          colour: nR
-        })
+    const Ir = new class {
+      constructor() {
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : jr,
+          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.k;
+        this.decode = rr, this.register = Sr, this.decoded = new Map
       }
-      return ZR
-    }
-
-    function eR(RR) {
-      return void 0 !== RR && "rank" !== RR.kind
-    }
-
-    function aR(RR, JR) {
-      const GR = eR(RR),
-        yR = eR(JR);
-      return void 0 === RR && !yR || !GR && void 0 === JR ? 0 : GR !== yR ? .5 * uR.HORIZONTAL_PADDING : 0
-    }
-
-    function LR(RR) {
-      return "rank" === RR.kind ? uR.DEFAULT_FONT_SIZE : RR.size
-    }
-
-    function nR(RR, JR, GR) {
-      return "icon" === RR.kind ? RR.size : "rank" === RR.kind ? function(RR, JR) {
-        const GR = JR.rankIcon(RR.rank.icon);
-        return GR ? ZR * (GR.width / GR.height) : ZR
-      }(RR, GR) + uR.HORIZONTAL_PADDING : (GR.glyphsShown(RR.text), JR.font = qR(RR.size), JR.measureText(RR.text).width)
-    }
-
-    function UR(RR, JR, GR) {
-      if (0 === RR.length) return {
-        width: 0,
-        height: 0,
-        sizes: []
-      };
-      let yR = 0;
-      for (const uR of RR) yR = Math.max(yR, LR(uR));
-      const tR = [];
-      let ZR = aR(void 0, RR[0]);
-      for (let uR = 0; uR < RR.length; uR++) {
-        const yR = ZR;
-        ZR += nR(RR[uR], JR, GR), ZR += aR(RR[uR], RR[uR + 1]), tR.push({
-          x: yR,
-          width: ZR - yR
-        })
-      }
-      return {
-        width: ZR,
-        height: yR + uR.VERTICAL_PADDING,
-        sizes: tR
-      }
-    }
-
-    function WR(RR, JR, GR, yR, tR, uR, ZR) {
-      JR += aR(void 0, RR[0]);
-      for (let qR = 0; qR < RR.length; qR++) {
-        const iR = AR(RR[qR], JR, GR, yR, tR, uR, ZR);
-        JR += 0 === iR ? 0 : iR + aR(RR[qR], RR[qR + 1])
-      }
-    }
-
-    function AR(RR, JR, GR, yR, tR, iR, fR, VR) {
-      var KR;
-      if ("icon" === RR.kind) {
-        const yR = iR.iconImage(RR.icon);
-        return yR && fR.push({
-          image: yR,
-          x: JR,
-          y: GR + uR.VERTICAL_PADDING / 2,
-          size: RR.size
-        }), RR.size
-      }
-      if ("rank" === RR.kind) {
-        const qR = null !== VR && void 0 !== VR ? VR : nR(RR, tR, iR);
-        return function(RR, JR, GR, yR, tR, qR, iR) {
-          var fR, VR;
-          const {
-            rank: KR
-          } = RR;
-          qR.fillStyle = KR.mainRGB, qR.fillRect(JR, GR, yR, tR);
-          const wR = iR.rankIcon(KR.icon);
-          if (!wR) return;
-          const rR = ZR / wR.height,
-            eR = JR + (yR - wR.width * rR) / 2,
-            aR = GR + (tR - ZR) / 2,
-            LR = new Path2D(wR.path),
-            nR = uR.TEXT_SHADOW_WIDTH,
-            UR = (null === (fR = KR.nameTag) || void 0 === fR ? void 0 : fR.iconShadowRGB) || "black";
-          for (const uR of [-1, 1])
-            for (const RR of [-1, 1]) XR(qR, LR, eR + nR * uR, aR + nR * RR, rR, UR);
-          XR(qR, LR, eR, aR, rR, (null === (VR = KR.nameTag) || void 0 === VR ? void 0 : VR.iconRGB) || "white")
-        }(RR, JR, GR, qR, yR, tR, iR), qR
-      }
-      if (0 === RR.text.length) return 0;
-      const wR = qR(RR.size);
-      tR.font = wR;
-      const rR = null !== VR && void 0 !== VR ? VR : tR.measureText(RR.text).width;
-      return function(RR, JR, GR, yR, tR, ZR) {
-        const qR = uR.TEXT_SHADOW_WIDTH;
-        ZR.font = yR, ZR.fillStyle = "black";
-        for (const uR of [-1, 1])
-          for (const yR of [-1, 1]) ZR.fillText(RR, JR + qR * uR, GR + qR * yR);
-        ZR.fillStyle = tR, ZR.fillText(RR, JR, GR)
-      }(RR.text, JR, GR + yR - uR.VERTICAL_PADDING + 5, wR, null !== (KR = RR.colour) && void 0 !== KR ? KR : "white", tR), rR
-    }
-
-    function CR(RR, JR) {
-      for (const {
-          image: GR,
-          x: yR,
-          y: tR,
-          size: uR
-        }
-        of RR) JR.imageSmoothingEnabled = !1, JR.drawImage(GR, yR, tR, uR, uR)
-    }
-
-    function XR(RR, JR, GR, yR, tR, uR) {
-      RR.save(), RR.translate(GR, yR), RR.scale(tR, tR), RR.fillStyle = uR, RR.fill(JR), RR.restore()
-    }
-  },
-  37341: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => QR,
-      f: () => JJ,
-      h: () => jR,
-      i: () => ER,
-      l: () => YR,
-      m: () => kR,
-      n: () => tJ,
-      q: () => dR,
-      r: () => zR
-    });
-    var yR = GR(5281),
-      tR = GR(5303),
-      uR = GR(35162),
-      ZR = GR(4555),
-      qR = GR(4546),
-      iR = GR(1485),
-      fR = GR(37256),
-      VR = GR(103),
-      KR = GR(1351),
-      wR = GR(37278),
-      rR = GR(37346),
-      eR = GR(37353),
-      aR = GR(9468),
-      LR = GR(8872),
-      nR = GR(9056),
-      UR = GR(9180),
-      WR = GR(9323),
-      AR = GR(9338);
-    const CR = {
-      youtube: aR.f,
-      "person-military-pointing": LR.g,
-      sparkle: nR.f,
-      user: UR.c,
-      wrench: WR.d,
-      zap: AR.f,
-      ...wR.c
-    };
-
-    function XR(RR) {
-      const [JR, GR, , , yR] = RR.icon;
-      return {
-        width: JR,
-        height: GR,
-        path: "string" === typeof yR ? yR : yR.join(" ")
-      }
-    }
-    const MR = new Map(Object.entries(CR).map((RR => {
-      let [JR, GR] = RR;
-      return [JR, XR(GR)]
-    })));
-    let BR = !1;
-    const lR = new Set;
-    var pR = GR(37362);
-    const gR = "Jetbrains Mono",
-      bR = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      vR = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
-
-    function OR(RR) {
-      return RR.split(",").map((RR => {
-        const [JR, GR = JR] = RR.slice(2).split("-");
-        return [parseInt(JR, 16), parseInt(GR, 16)]
-      }))
-    }
-    const xR = {
-        latin: OR(bR),
-        rest: OR(vR)
-      },
-      NR = new RegExp(`[${xR.rest.map((RR=>{let[JR,GR]=RR;return`\\u{${JR.toString(16)}}-\\u{${GR.toString(16)}}`})).join("")}]`, "u");
-
-    function DR(RR) {
-      return JR => {
-        console.warn(`[bloxd-wasm-client] the text font's ${RR} file did not load`, JR)
-      }
-    }
-    const HR = 397,
-      oR = 1,
-      cR = {
-        translate: RR => [RR],
-        keyBindingText: RR => RR,
-        isFriend: () => !1,
-        hiddenNames: {},
-        loadsFontRest: !1
-      };
-    let PR = null,
-      IR = 0,
-      mR = "none";
-
-    function zR() {
-      return IR
-    }
-    const SR = new Set;
-
-    function jR(RR) {
-      return SR.add(RR), () => {
-        SR.delete(RR)
-      }
-    }
-
-    function dR() {
-      IR++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? mR = "all" : "none" === mR && (mR = "notBoards");
-      for (const RR of SR) RR()
-    }(0, wR.m)((() => {
-      dR(!1)
-    })), (0, iR.t)((() => {
-      (function() {
-        const RR = BR;
-        return BR = !1, RR
-      })() && dR(!1)
-    }));
-    const ER = new class {
-      constructor(RR) {
-        this.loaded = RR, this.latin = null, this.rest = null, this.restWanted = !1
-      }
-      load() {
-        if (null === this.latin) {
-          this.latin = new FontFace(gR, `url(${(0,pR.f)()}) format("woff2")`, {
-            unicodeRange: bR
-          }).load().then((RR => {
-            document.fonts.add(RR), this.loaded()
-          }), DR("Latin"));
-          const RR = new FontFace(gR, `url(${(0,pR.j)()}) format("woff2")`, {
-            unicodeRange: vR,
-            display: "swap"
-          });
-          document.fonts.add(RR), RR.loaded.then((() => {
-            this.loaded()
-          }), DR("rest")), this.rest = RR, this.restWanted && RR.load()
-        }
-        return this.latin
-      }
-      loadRest() {
-        var RR;
-        this.restWanted || (this.restWanted = !0, null === (RR = this.rest) || void 0 === RR || RR.load())
-      }
-      async untilLoadedFor(RR) {
-        await this.load(), this.loadFor(RR), await document.fonts.load(`16px '${gR}'`, RR).catch((JR => {
-          console.warn("[bloxd-wasm-client] the text font did not load for", RR, JR)
+      warm() {
+        for (let rr = 0; rr < Zr.e.length; rr++) this.part(rr).catch((Sr => {
+          console.warn(`The grayscale armour ${Zr.e[rr]} image didn't decode ahead of use`, Sr)
         }))
       }
-      loadFor(RR) {
-        !this.restWanted && NR.test(RR) && this.loadRest()
-      }
-    }(dR);
-
-    function YR(RR) {
-      Object.assign(cR, RR), cR.loadsFontRest && ER.loadRest(), dR(!1)
-    }
-
-    function kR(RR) {
-      RR !== PR && (PR = RR, dR())
-    }
-
-    function QR(RR) {
-      if ("none" === mR || null === RR) return;
-      RR(HR, "all" === mR ? 0 : oR, new Uint8Array(0)) && (mR = "none")
-    }
-    const FR = new Map,
-      TR = new Map;
-
-    function sR(RR, JR, GR) {
-      var yR;
-      const tR = GR ? `${RR}#${GR.join(",")}` : RR,
-        uR = FR.get(tR);
-      if (uR) return uR.image;
-      const ZR = {
-        image: null !== (yR = TR.get(tR)) && void 0 !== yR ? yR : null
-      };
-      return FR.set(tR, ZR), JR().then((async RR => {
-        if (null === RR) return null;
-        const JR = new Image;
-        JR.crossOrigin = "anonymous", JR.src = RR, await JR.decode();
-        const yR = await createImageBitmap(JR);
-        if (!GR) return yR;
+      async load(rr, Sr) {
+        const {
+          width: Qr,
+          height: ar,
+          pixels: jr
+        } = await this.part(rr), Ir = new ImageData(function(rr, Sr) {
+          const Qr = new Uint8ClampedArray(rr.length);
+          for (let Zr = 0; Zr < rr.length; Zr += 4) Qr[Zr] = Math.round(rr[Zr] * Sr[0] / 255), Qr[Zr + 1] = Math.round(rr[Zr + 1] * Sr[1] / 255), Qr[Zr + 2] = Math.round(rr[Zr + 2] * Sr[2] / 255), Qr[Zr + 3] = rr[Zr + 3];
+          return Qr
+        }(jr, function(rr) {
+          return [rr >>> 16 & 255, rr >>> 8 & 255, 255 & rr]
+        }(Sr)), Qr, ar);
+        let fr;
         try {
-          return function(RR, JR) {
-            let [GR, yR, tR] = JR;
-            const uR = (0, fR.e)(RR.width, RR.height),
-              {
-                canvas: ZR
-              } = uR;
-            return uR.drawImage(RR, 0, 0), uR.globalCompositeOperation = "multiply", uR.fillStyle = `rgb(${GR}, ${yR}, ${tR})`, uR.fillRect(0, 0, ZR.width, ZR.height), uR.globalCompositeOperation = "destination-in", uR.drawImage(RR, 0, 0), ZR
-          }(yR, GR)
-        } finally {
-          yR.close()
+          fr = await createImageBitmap(Ir, {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none"
+          })
+        } catch (Er) {
+          throw new Wr.e("decode", `grayscale armour ${Zr.e[rr]}`, {
+            cause: Er
+          })
         }
-      })).then((RR => {
-        FR.get(tR) === ZR && TR.delete(tR), RR !== ZR.image && (ZR.image = RR, dR(!1))
-      }), (JR => {
-        console.warn(`[bloxd-wasm-client] text icon ${RR} did not load`, JR), FR.get(tR) === ZR && (FR.delete(tR), TR.delete(tR), null !== ZR.image && dR(!1))
-      })), ZR.image
-    }(0, rR.e)((() => {
-      TR.clear();
-      for (const [RR, {
-          image: JR
-        }] of FR) null !== JR && TR.set(RR, JR);
-      FR.clear(), dR(!1)
-    }));
-    const hR = new Set(yR.c),
-      RJ = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
-
-    function JJ() {
-      (0, eR.e)().catch((() => {}))
-    }
-
-    function GJ(RR) {
-      return hR.has(RR) ? sR(`icon:${RR}`, (async () => {
-        var JR, GR;
-        return null !== (JR = null === (GR = (0, rR.g)()) || void 0 === GR ? void 0 : GR.textureUrl(RR)) && void 0 !== JR ? JR : (await (0, eR.d)()).ingameIconUrl(RR)
-      })) : null
-    }
-    let yJ = "unasked";
-    const tJ = {
-      get canSeeRealPlayerNames() {
-        return VR.featureFlags.canSeeRealPlayerNames
-      },
-      get canSeePlayerWrittenText() {
-        return VR.featureFlags.canSeePlayerWrittenText
-      },
-      get localPlayerDbId() {
-        return PR
-      },
-      shownPlayerName: RR => (0, KR.e)(RR, cR.hiddenNames),
-      translate: (RR, JR) => {
-        const GR = "object" === typeof JR && null !== JR ? JR : void 0;
-        return cR.translate(RR, (0, KR.f)(GR, cR.hiddenNames))
-      },
-      keyBindingText: RR => cR.keyBindingText(RR),
-      isFriend: RR => cR.isFriend(RR, cR.hiddenNames),
-      iconImage: function(RR) {
-        if (hR.has(RR)) return GJ(RR);
-        if ("unasked" === yJ && (yJ = "loading", (0, qR.d)().then((() => {
-            yJ = "in", dR(!1)
-          }), (RR => {
-            yJ = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", RR)
-          }))), "in" !== yJ) return null;
-        const JR = (0, ZR.b)(RR),
-          GR = void 0 === JR ? void 0 : (0, uR.itemTypeNameOf)(JR);
-        if ("Gun" === GR) return null;
-        const yR = (0, qR.c)(RR),
-          iR = void 0 !== GR && RJ.has(GR);
-        if (iR && void 0 === yR) return null;
-        const fR = void 0 !== JR && "GrayscaleArmour" === (0, uR.itemTypeOf)(JR) || Object.hasOwn(tR.d, RR),
-          VR = null !== yR && void 0 !== yR ? yR : RR;
-        return sR(iR ? `block:${VR}` : `item:${VR}`, (async () => {
-          var RR, JR;
-          const GR = (0, rR.g)(),
-            yR = await (0, eR.e)();
-          return null !== (RR = null !== (JR = null === GR || void 0 === GR ? void 0 : GR.textureUrl(VR)) && void 0 !== JR ? JR : yR.itemSpriteUrl(VR)) && void 0 !== RR ? RR : iR ? null : yR.notFoundUrl()
-        }), fR ? (0, tR.f)(RR) : void 0)
-      },
-      effectImage: GJ,
-      rankIcon: function(RR) {
-        const JR = MR.get(RR);
-        if (JR) return JR;
-        const GR = (0, iR.e)(RR, (0, iR.l)(RR));
-        if (!GR) return (0, iR.h)("brands") && (0, iR.h)("solid") ? lR.has(RR) || (lR.add(RR), console.warn(`[bloxd-wasm-client] unknown rank icon "${RR}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : BR = !0, null;
-        const yR = XR(GR);
-        return MR.set(RR, yR), yR
-      },
-      glyphsShown: RR => {
-        ER.loadFor(RR)
+        return {
+          id: this.register(fr),
+          width: Qr,
+          height: ar
+        }
+      }
+      part(rr) {
+        const Sr = this.decoded.get(rr);
+        if (void 0 !== Sr) return Sr;
+        const Qr = this.decode(rr).catch((Sr => {
+          throw this.decoded.delete(rr), Sr instanceof Wr.e ? Sr : new Wr.e("decode", `grayscale armour ${Zr.e[rr]}`, {
+            cause: Sr
+          })
+        }));
+        return this.decoded.set(rr, Qr), Qr
       }
     }
   },
-  37247: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => LR,
-      f: () => mR,
-      h: () => vR,
-      i: () => NR
+  42805: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => jr,
+      g: () => hr,
+      i: () => pr,
+      l: () => xr,
+      o: () => tr
     });
-    var yR = GR(37329),
-      tR = GR(37256),
-      uR = GR(37262),
-      ZR = GR(37266);
+    var Zr = Qr(42684),
+      Wr = Qr(42810),
+      ar = Qr(42816);
+    const jr = 396,
+      Ir = 1,
+      fr = 2,
+      Er = 3,
+      pr = {
+        Glb: 1,
+        LifeformAtlas: 2,
+        ArmourAtlas: 3,
+        Cape: 4,
+        GroupAtlas: 5,
+        Particle: 6,
+        AttachmentImage: 7,
+        BlockImage: 8,
+        GreyscaleArmour: 9
+      },
+      xr = {
+        File: 0,
+        Item: 1
+      },
+      mr = 0,
+      Nr = 1,
+      Ur = 2;
 
-    function qR(RR, JR, GR) {
-      const yR = "object" === typeof RR && null !== RR ? RR : {},
-        tR = function(RR, JR, GR) {
-          if (!Array.isArray(RR) || 0 === RR.length) return [];
-          const yR = [{
-            width: 0,
-            height: 0,
-            y: 0,
-            items: []
-          }];
-          for (const qR of (0, ZR.h)(RR, ZR.c.DEFAULT_FONT_SIZE, GR)) {
-            if ("text" !== qR.kind) {
-              yR[yR.length - 1].items.push({
-                content: qR,
-                chars: 1,
-                size: {
-                  x: 0,
-                  width: 0
-                }
-              });
-              continue
-            }
-            if (0 === qR.text.length) continue;
-            const RR = yR[yR.length - 1].items.reduce(((RR, JR) => RR + ("text" === JR.content.kind ? (0, uR.d)(JR.content.text) : JR.chars)), 0);
-            (0, uR.h)(qR.text, RR).forEach(((RR, JR) => {
-              JR > 0 && yR.push({
-                width: 0,
-                height: 0,
-                y: 0,
-                items: []
-              }), RR.length > 0 && yR[yR.length - 1].items.push({
-                content: {
-                  ...qR,
-                  text: RR
-                },
-                chars: RR.length,
-                size: {
-                  x: 0,
-                  width: 0
-                }
-              })
-            }))
-          }
-          let tR = ZR.c.VERTICAL_PADDING / 2;
-          for (const uR of yR) {
-            if (0 === uR.items.length) continue;
-            const {
-              width: RR,
-              height: yR,
-              sizes: qR
-            } = (0, ZR.g)(uR.items.map((RR => RR.content)), JR, GR);
-            uR.items.forEach(((RR, JR) => {
-              RR.size = qR[JR]
-            })), uR.width = RR, uR.height = yR, uR.y = tR, tR += yR + ZR.c.LINE_SPACING
-          }
-          return yR
-        }(yR.content, JR, GR);
-      let qR = 0,
-        iR = ZR.c.VERTICAL_PADDING,
-        fR = 0;
-      for (const uR of tR) {
-        qR = Math.max(qR, uR.width + 2 * ZR.c.HORIZONTAL_PADDING), iR += uR.height + ZR.c.LINE_SPACING;
-        for (const RR of uR.items) fR += RR.chars
-      }
-      const VR = "string" === typeof yR.backgroundColor ? yR.backgroundColor : "#22283b";
+    function tr(rr) {
+      const Sr = (0, Zr.o)();
+      Sr.catch((() => {}));
+      let Wr = null;
       return {
-        width: qR,
-        height: iR,
-        chars: fR,
-        draw: (RR, JR) => {
-          const yR = [];
-          if (RR.fillStyle = VR, RR.fillRect(0, 0, qR, iR), null === JR)
-            for (const uR of tR) uR.items.length > 0 && (0, ZR.l)(uR.items.map((RR => RR.content)), 0, uR.y, uR.height, RR, GR, yR);
-          else {
-            let uR = 0;
-            for (const qR of tR)
-              for (const tR of qR.items) {
-                if (uR >= JR) break;
-                const iR = "text" === tR.content.kind ? {
-                  ...tR.content,
-                  text: tR.content.text.substring(0, JR - uR)
-                } : tR.content;
-                (0, ZR.k)(iR, tR.size.x, qR.y, qR.height, RR, GR, yR, tR.size.width), uR += tR.chars
-              }
-          }(0, ZR.j)(yR, RR)
-        }
+        glbUrl: rr,
+        lifeformAtlasUrl: async rr => (await Sr).lifeformAtlasUrl(rr),
+        armourAtlasUrl: async () => (await Qr.e(235).then((() => Qr(35587)))).armourAtlasUrl,
+        capeUrl: async rr => (await Sr).capeUrl(rr),
+        attachmentImageUrl: async rr => (await Sr).attachmentImageUrl(rr),
+        blockImageUrl: async rr => (await Sr).blockImageUrl(rr),
+        groupAtlasUrl: async rr => (await Sr).groupAtlasUrl(rr),
+        particleTextureUrl: async rr => (await Sr).particleTextureUrl(rr),
+        particleItemUrl: async rr => (Wr ??= Qr.e(45).then((() => Qr(55213))).catch((rr => {
+          throw Wr = null, rr
+        })), (await Wr).particleItemUrl(rr))
       }
     }
-    var iR = GR(37272),
-      fR = GR(37325);
-    const VR = 256,
-      KR = 1024,
-      wR = {
-        width: 1,
-        height: 7 / 8
-      };
-    var rR = GR(37338);
-    const eR = {
-      leaderboard: ""
-    };
-    var aR = GR(37341);
-    const LR = {
-        Nametag: 1,
-        MultilineText: 2,
-        Board: 3,
-        Leaderboard: 4
-      },
-      nR = 2048,
-      UR = 256,
-      WR = 10,
-      AR = 4,
-      CR = 65536,
-      XR = new TextDecoder;
-    let MR = aR.n,
-      BR = -1;
-    const lR = new Map,
-      pR = new Map;
-    let gR = 0;
-    const bR = new TextEncoder;
-
-    function vR(RR, JR) {
-      const GR = bR.encode(JSON.stringify(JR)),
-        yR = new Uint8Array(GR.length + 1);
-      return yR[0] = RR, yR.set(GR, 1), yR
-    }
-    const OR = {
-        name: "Ag",
-        info: null,
-        colour: "default",
-        ranks: [],
-        effects: [],
-        health: .5,
-        xZ: null,
-        hideNameSeed: null
-      },
-      xR = [vR(LR.Nametag, OR), vR(LR.Nametag, {
-        ...OR,
-        info: {
-          content: [{
-            str: "Ag"
-          }],
-          subtitle: ["Ag"]
+    class hr {
+      constructor(rr, Sr) {
+        var Qr, jr, Ir, fr;
+        let Er = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = rr, this.onFailure = Sr, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.vU = !1, this.load = null !== (Qr = Er.load) && void 0 !== Qr ? Qr : (rr, Sr, Qr) => (0, ar.j)(rr, Er.fetchImage, Sr, Qr), this.release = null !== (jr = Er.release) && void 0 !== jr ? jr : ar.m, this.fetchFile = null !== (Ir = Er.fetchFile) && void 0 !== Ir ? Ir : rr => (0, Zr.j)(rr), this.greyscaleArmour = null !== (fr = Er.greyscaleArmour) && void 0 !== fr ? fr : Wr.c
+      }
+      get waiting() {
+        return this.ready.length
+      }
+      get inFlight() {
+        return this.loading.size
+      }
+      glbWritten(rr, Sr) {
+        this.glbWrittenImages.set(rr, Br(Sr))
+      }
+      glbTaken(rr, Sr) {
+        const Qr = this.glbWrittenImages.get(rr);
+        this.glbWrittenImages.delete(rr), Sr && this.setGlbImages(rr, void 0 !== Qr && Qr.length > 0 ? Qr : void 0)
+      }
+      setGlbImages(rr, Sr) {
+        var Qr;
+        this.glbTakenCount.set(rr, (null !== (Qr = this.glbTakenCount.get(rr)) && void 0 !== Qr ? Qr : 0) + 1), void 0 === Sr ? this.glbImages.delete(rr) : this.glbImages.set(rr, Sr);
+        const Zr = [];
+        for (const {
+            key: Wr
+          }
+          of this.loading.values()) Wr.kind === pr.Glb && Wr.word === rr && Zr.push(Wr);
+        for (let Wr = this.ready.length - 1; Wr >= 0; Wr--) {
+          const {
+            key: Sr,
+            id: Qr
+          } = this.ready[Wr];
+          Sr.kind === pr.Glb && Sr.word === rr && (this.ready.splice(Wr, 1), null !== Qr && (this.answered.delete(Qr), this.release(Qr)), Zr.push(Sr))
         }
-      }), vR(LR.MultilineText, {
-        box: {
-          content: ["Ag"]
-        },
-        shown: null
-      }), ...yR.d.map(((RR, JR) => vR(LR.Board, {
-        shared: {
-          text: "Ag",
-          textSize: JR
-        },
-        w: 0,
-        h: 0
-      })))];
-
-    function NR(RR) {
-      aR.i.load().then((() => {
-        if (RR()) return;
-        const JR = (0, tR.e)(1, 1, {
-          willReadFrequently: !0
+        this.loadAgain(Zr)
+      }
+      onEvent(rr) {
+        if (this.vU) return;
+        const Sr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
+        for (let Qr = 0; Qr + 8 <= rr.byteLength; Qr += 8) {
+          const rr = Sr.getUint8(Qr),
+            Zr = Sr.getUint32(Qr + 4, !0);
+          if (rr === Er) {
+            this.answered.delete(Zr), this.release(Zr);
+            continue
+          }
+          const Wr = {
+            kind: Sr.getUint8(Qr + 1),
+            index: Sr.getUint8(Qr + 2),
+            word: Zr
+          };
+          rr === Ir ? this.want(Wr) : rr === fr && this.loading.delete(zr(Wr))
+        }
+      }
+      reload(rr, Sr) {
+        const Qr = Qr => rr.includes(Qr.kind) && (void 0 === Sr || Sr(Qr)),
+          Zr = new Map;
+        for (const Wr of this.answered.values()) Qr(Wr) && Zr.set(zr(Wr), Wr);
+        for (const [Wr, {
+            key: ar
+          }] of this.loading) Qr(ar) && Zr.set(Wr, ar);
+        this.loadAgain(Zr.values())
+      }
+      loadAgain(rr) {
+        for (const Sr of rr) this.loading.delete(zr(Sr)), this.want(Sr)
+      }
+      drain(rr) {
+        if (null !== rr)
+          for (; this.ready.length > 0;) {
+            if (!rr(jr, 0, this.ready[0].record)) return;
+            this.ready.shift()
+          }
+      }
+      dispose() {
+        this.vU = !0, this.loading.clear(), this.ready.length = 0;
+        for (const rr of this.answered.keys()) this.release(rr);
+        this.answered.clear()
+      }
+      want(rr) {
+        const Sr = zr(rr);
+        if (this.loading.has(Sr)) return;
+        const Qr = {
+          key: rr
+        };
+        this.loading.set(Sr, Qr), this.loadKey(rr).then((Zr => {
+          this.vU || this.loading.get(Sr) !== Qr ? this.release(Zr.id) : (this.loading.delete(Sr), this.answered.set(Zr.id, rr), this.ready.push({
+            record: nr(rr, mr, Zr),
+            key: rr,
+            id: Zr.id
+          }))
+        }), (Zr => {
+          if (this.vU || this.loading.get(Sr) !== Qr) return;
+          this.loading.delete(Sr), this.onFailure({
+            key: rr,
+            error: Zr
+          });
+          const Wr = Zr instanceof ar.e && "decode" === Zr.stage ? Nr : Ur;
+          this.ready.push({
+            record: nr(rr, Wr, null),
+            key: rr,
+            id: null
+          })
+        }))
+      }
+      async loadKey(rr) {
+        switch (rr.kind) {
+          case pr.Glb:
+            return this.load(await this.glbImage(rr), "none");
+          case pr.LifeformAtlas:
+            return this.load(Yr(await this.sources.lifeformAtlasUrl(rr.word), rr), "none", !0);
+          case pr.ArmourAtlas:
+            return this.load(Yr(await this.sources.armourAtlasUrl(), rr), "none");
+          case pr.Cape:
+            return this.load(Yr(await this.sources.capeUrl(rr.word), rr), "none");
+          case pr.AttachmentImage:
+            return this.load(Yr(await this.sources.attachmentImageUrl(rr.word), rr), "none");
+          case pr.GroupAtlas:
+            return this.load(Yr(await this.sources.groupAtlasUrl(rr.word), rr), "none");
+          case pr.BlockImage:
+            return this.load(Yr(await this.sources.blockImageUrl(rr.word), rr), "none");
+          case pr.Particle: {
+            const Sr = await (rr.index === xr.Item ? this.sources.particleItemUrl(rr.word) : this.sources.particleTextureUrl(rr.word));
+            return this.load(Yr(Sr, rr), "flipY")
+          }
+          case pr.GreyscaleArmour:
+            return this.greyscaleArmour.load(rr.index, rr.word);
+          default:
+            throw new ar.e("fetch", `image kind ${rr.kind}`, {
+              cause: null
+            })
+        }
+      }
+      async glbImage(rr) {
+        var Sr;
+        let Qr = this.glbImages.get(rr.word);
+        if (void 0 === Qr) {
+          const Sr = this.glbTakenCount.get(rr.word),
+            Zr = Yr(await this.sources.glbUrl(rr.word), rr);
+          try {
+            Qr = Br(await this.fetchFile(Zr))
+          } catch (Wr) {
+            throw new ar.e("fetch", Zr, {
+              cause: Wr
+            })
+          }
+          this.glbTakenCount.get(rr.word) === Sr && this.glbImages.set(rr.word, Qr)
+        }
+        const Zr = null === (Sr = Qr) || void 0 === Sr ? void 0 : Sr[rr.index];
+        if (!Zr) throw new ar.e("decode", `image ${rr.index} of file ${2147483647&rr.word}`, {
+          cause: null
         });
-        var GR;
-        JR && (GR = JR.canvas, xR.map((RR => mR(RR, GR))))
+        return Zr
+      }
+    }
+
+    function zr(rr) {
+      let {
+        kind: Sr,
+        index: Qr,
+        word: Zr
+      } = rr;
+      return `${Sr}:${Qr}:${Zr}`
+    }
+
+    function Yr(rr, Sr) {
+      if (null === rr) throw new ar.e("fetch", `no URL for image ${zr(Sr)}`, {
+        cause: null
+      });
+      return rr
+    }
+
+    function nr(rr, Sr, Qr) {
+      var Zr, Wr, ar;
+      const jr = new Uint8Array(16),
+        Ir = new DataView(jr.buffer);
+      return Ir.setUint8(0, rr.kind), Ir.setUint8(1, rr.index), Ir.setUint8(2, Sr), Ir.setUint32(4, rr.word, !0), Ir.setUint32(8, null !== (Zr = null === Qr || void 0 === Qr ? void 0 : Qr.id) && void 0 !== Zr ? Zr : 0, !0), Ir.setUint16(12, Math.min(null !== (Wr = null === Qr || void 0 === Qr ? void 0 : Qr.width) && void 0 !== Wr ? Wr : 0, 65535), !0), Ir.setUint16(14, Math.min(null !== (ar = null === Qr || void 0 === Qr ? void 0 : Qr.height) && void 0 !== ar ? ar : 0, 65535), !0), jr
+    }
+    const er = 1179937895,
+      Kr = 1313821514,
+      yr = 5130562;
+
+    function Br(rr) {
+      var Sr;
+      const Qr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
+      if (rr.byteLength < 20 || Qr.getUint32(0, !0) !== er || Qr.getUint32(16, !0) !== Kr) return [];
+      let Zr, Wr = 20 + Qr.getUint32(12, !0);
+      try {
+        Zr = JSON.parse((new TextDecoder).decode(rr.subarray(20, Wr)))
+      } catch {
+        return []
+      }
+      for (; Wr + 8 <= rr.byteLength && Qr.getUint32(Wr + 4, !0) !== yr;) Wr += 8 + Qr.getUint32(Wr, !0);
+      const ar = null !== (Sr = Zr.images) && void 0 !== Sr ? Sr : [];
+      if (0 === ar.length || Wr + 8 > rr.byteLength) return ar.map((() => null));
+      const jr = rr.subarray(Wr + 8, Math.min(rr.byteLength, Wr + 8 + Qr.getUint32(Wr, !0)));
+      return ar.map((rr => {
+        var Sr, Qr, Wr;
+        const ar = void 0 === rr.bufferView || null === (Sr = Zr.bufferViews) || void 0 === Sr ? void 0 : Sr[rr.bufferView];
+        if (!ar || 0 !== (null !== (Qr = ar.buffer) && void 0 !== Qr ? Qr : 0) || void 0 === ar.byteLength) return null;
+        const Ir = null !== (Wr = ar.byteOffset) && void 0 !== Wr ? Wr : 0,
+          fr = Ir + ar.byteLength;
+        return fr <= jr.byteLength ? jr.slice(Ir, fr) : null
       }))
     }
-    let DR = aR.r;
-
-    function HR() {
-      lR.clear(), pR.clear()
-    }
-
-    function oR(RR, JR) {
-      const GR = RR.get(JR);
-      return void 0 !== GR && (RR.delete(JR), RR.set(JR, GR)), GR
-    }
-
-    function cR(RR, JR, GR) {
-      RR.set(JR, GR), RR.size > UR && RR.delete(RR.keys().next().value)
-    }
-
-    function PR(RR, JR, GR) {
-      if (RR === LR.Nametag) {
-        let RR = oR(lR, JR);
-        return void 0 === RR && (RR = (0, iR.e)(JSON.parse(JR), GR, MR), cR(lR, JR, RR)), RR
+  },
+  42820: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => pr,
+      e: () => ar,
+      h: () => xr,
+      i: () => jr
+    });
+    var Zr = Qr(42805),
+      Wr = Qr(42684);
+    const ar = new class {
+      constructor() {
+        this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
-      if (RR === LR.MultilineText) {
-        var tR;
-        const RR = JSON.parse(JR),
-          yR = JSON.stringify(null !== (tR = RR.box) && void 0 !== tR ? tR : null),
-          uR = "number" === typeof RR.shown ? RR.shown : null;
-        let ZR = oR(pR, yR);
-        void 0 === ZR && (ZR = qR(RR.box, GR, MR), cR(pR, yR, ZR));
-        const iR = null === uR ? null : Math.min(Math.max(0, Math.floor(uR)), ZR.chars),
-          fR = ZR;
-        return {
-          width: fR.width,
-          height: fR.height,
-          draw: RR => {
-            fR.draw(RR, iR)
-          }
+      get current() {
+        return void 0 === this.session ? this.page : this.session
+      }
+      setPageFiles(rr) {
+        this.change((() => {
+          this.page = rr
+        }))
+      }
+      setSessionFiles(rr) {
+        const Sr = void 0 !== this.session && void 0 === rr;
+        if (this.change((() => {
+            this.session = rr
+          })), Sr)
+          for (const Qr of [...this.pageListeners]) Qr()
+      }
+      showsPage() {
+        return void 0 === this.session
+      }
+      onPageShown(rr) {
+        return this.pageListeners.add(rr), () => {
+          this.pageListeners.delete(rr)
         }
       }
-      if (RR === LR.Board) return function(RR, JR) {
-        var GR;
-        if (!JR.canSeePlayerWrittenText) return null;
-        const {
-          shared: tR,
-          w: uR = 0,
-          h: ZR = 0
-        } = RR, qR = !uR;
-        let iR;
-        if (qR) {
-          var rR, eR;
-          iR = null !== (rR = null === tR || void 0 === tR || null === (eR = tR.text) || void 0 === eR ? void 0 : eR.toString()) && void 0 !== rR ? rR : ""
-        } else {
-          if ("string" !== typeof(null === tR || void 0 === tR ? void 0 : tR.text)) return null;
-          iR = tR.text
+      setFollower(rr) {
+        this.follower = rr, this.startFollower()
+      }
+      wanted() {
+        this.isWanted = !0;
+        for (const rr of [...this.wantedListeners]) rr();
+        this.startFollower()
+      }
+      onWanted(rr) {
+        return this.wantedListeners.add(rr), () => {
+          this.wantedListeners.delete(rr)
         }
-        if ("" === iR.trim()) return null;
-        const aR = null !== (GR = null === tR || void 0 === tR ? void 0 : tR.textSize) && void 0 !== GR ? GR : 0,
-          LR = yR.d[aR].ingameFontSize;
-        let nR = wR,
-          UR = VR;
-        qR || (iR = (0, yR.o)(iR, aR, uR, ZR), nR = (0, yR.s)(uR, ZR), UR = Math.min(VR, KR / Math.max(nR.width, nR.height)));
-        const WR = Math.round(UR * nR.width),
-          AR = Math.round(UR * nR.height),
-          CR = UR / VR;
-        return {
-          width: WR,
-          height: AR,
-          draw: RR => {
-            fR.d.fontSize = LR * CR, fR.d.fontWeight = "bold", fR.d.font = "'Jetbrains Mono', monospace", fR.d.drawText(RR, iR, 0, (-10 - 7 * aR) * CR, WR, AR)
-          }
+      }
+      onChange(rr) {
+        return this.listeners.add(rr), () => {
+          this.listeners.delete(rr)
         }
-      }(JSON.parse(JR), MR);
-      if (RR === LR.Leaderboard) return function(RR, JR, GR) {
-        var yR;
-        const tR = (0, rR.n)(RR.opts, eR),
-          uR = (0, rR.i)(tR, GR),
-          ZR = {
-            top: (0, rR.k)(tR, (0, rR.r)(RR.top)),
-            around: null !== (yR = RR.around) && void 0 !== yR ? yR : null,
-            showPlayerText: JR.canSeePlayerWrittenText,
-            localPlayerDbId: JR.localPlayerDbId
-          };
-        return {
-          width: uR.pixelWidth,
-          height: uR.pixelHeight,
-          draw: RR => {
-            const {
-              a: JR,
-              d: GR
-            } = RR.getTransform();
-            (0, rR.e)(RR, Math.round(uR.pixelWidth * JR), Math.round(uR.pixelHeight * GR), uR, tR, ZR)
-          }
-        }
-      }(JSON.parse(JR), MR, nR);
-      throw new Error(`unknown text plane kind ${RR}`)
-    }
-    const IR = 2 ** Math.floor(Math.log2(nR));
+      }
+      startFollower() {
+        const rr = this.follower;
+        this.isWanted && null !== rr && (this.follower = null, rr((() => {
+          this.follower = rr
+        })))
+      }
+      change(rr) {
+        const Sr = this.current;
+        if (rr(), this.current !== Sr)
+          for (const Qr of this.listeners) Qr()
+      }
+    };
 
-    function mR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function jr(rr, Sr) {
+      return {
+        ...rr,
+        armourAtlasUrl: () => {
+          var Qr, Zr;
+          return null !== (Qr = null === (Zr = Sr()) || void 0 === Zr ? void 0 : Zr.armourAtlasUrl()) && void 0 !== Qr ? Qr : rr.armourAtlasUrl()
+        },
+        lifeformAtlasUrl: Qr => fr(Sr(), (rr => rr.LIFEFORM_ATLAS_PATHS[Qr]), (() => rr.lifeformAtlasUrl(Qr))),
+        groupAtlasUrl: Qr => fr(Sr(), (rr => rr.GROUP_ATLAS_PATHS[Qr]), (() => rr.groupAtlasUrl(Qr))),
+        particleItemUrl: Zr => Er(Sr(), (async () => {
+          const rr = await Qr.e(45).then((() => Qr(55213))).catch((() => null));
+          return (null === rr || void 0 === rr ? void 0 : rr.particleItemSprite(Zr)) || null
+        }), (() => rr.particleItemUrl(Zr))),
+        blockImageUrl: Qr => Er(Sr(), (async () => {
+          var rr, Sr;
+          return null !== (rr = null === (Sr = await Ir()) || void 0 === Sr ? void 0 : Sr.blockImageName(Qr)) && void 0 !== rr ? rr : null
+        }), (() => rr.blockImageUrl(Qr)))
+      }
+    }
+
+    function Ir() {
+      return (0, Wr.o)().catch((() => null))
+    }
+
+    function fr(rr, Sr, Qr) {
+      return Er(rr, (async () => {
+        var rr;
+        const Qr = await Ir(),
+          Zr = null === Qr ? null : Sr(Qr),
+          Wr = null !== (rr = null === Zr || void 0 === Zr ? void 0 : Zr.slice(Zr.lastIndexOf("/") + 1)) && void 0 !== rr ? rr : null;
+        return "Player_Atlas" === Wr ? null : Wr
+      }), Qr)
+    }
+    async function Er(rr, Sr, Qr) {
+      if (null !== rr) {
+        const Qr = await Sr(),
+          Zr = null === Qr ? null : rr.textureUrl(Qr);
+        if (null !== Zr) return Zr
+      }
+      return Qr()
+    }
+    const pr = 0;
+
+    function xr(rr) {
+      const Sr = [Zr.i.ArmourAtlas, Zr.i.LifeformAtlas, Zr.i.GroupAtlas, Zr.i.BlockImage, Zr.i.Particle];
+      rr.reload(Sr, (rr => {
+        switch (rr.kind) {
+          case Zr.i.Particle:
+            return rr.index === Zr.l.Item;
+          case Zr.i.LifeformAtlas:
+            return rr.word !== pr;
+          default:
+            return !0
+        }
+      }))
+    }
+  },
+  42746: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr,
+      f: () => Ir,
+      h: () => Wr,
+      i: () => ar
+    });
+    const Zr = 1e3;
+
+    function Wr() {
+      fr((() => {
+        window.location.reload()
+      }))
+    }
+
+    function ar() {
+      return new Promise((() => {}))
+    }
+
+    function jr(rr) {
+      fr((() => {
+        window.location.replace(rr(window.location.href))
+      }))
+    }
+
+    function Ir(rr) {
+      Promise.resolve().then((() => Qr(120))).then((Sr => {
+        let {
+          currentUrl: Qr
+        } = Sr;
+        jr((() => Qr.mergeSearchParamsInto(rr)))
+      }), (() => {
+        jr((() => rr))
+      }))
+    }
+
+    function fr(rr) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => Qr(1885))).then((Sr => {
+        let {
+          prepareForUnloadWithoutConfirmation: Qr
+        } = Sr;
+        try {
+          Qr()
+        } catch (Zr) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Zr), window.onbeforeunload = null
+        }
+        rr()
+      }), (() => {
+        window.onbeforeunload = null, rr()
+      })) : rr()
+    }
+  },
+  37587: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => hr,
+      d: () => pr,
+      f: () => Nr,
+      i: () => xr,
+      k: () => zr,
+      l: () => Ur,
+      p: () => tr,
+      s: () => mr
+    });
+    const Zr = 30,
+      Wr = 4;
+    let ar = 0,
+      jr = !1,
+      Ir = !1,
+      fr = Number.NEGATIVE_INFINITY,
+      Er = [];
+
+    function pr() {
+      0 === ar && (jr = !1, Ir = !1), ar++;
+      let rr = !1;
+      return () => {
+        rr || (rr = !0, ar--)
+      }
+    }
+
+    function xr(rr) {
+      rr && (Ir = !0)
+    }
+
+    function mr() {
+      return Ir
+    }
+
+    function Nr(rr) {
+      jr = rr
+    }
+
+    function Ur() {
+      return ar > 0
+    }
+
+    function tr(rr) {
+      return !(ar > 0 && (jr || rr - fr < 1e3 / Zr - Wr)) && (fr = rr, !0)
+    }
+
+    function hr(rr) {
+      return Er.push(rr), () => {
+        Er = Er.filter((Sr => Sr !== rr))
+      }
+    }
+
+    function zr() {
+      if (0 === Er.length) return;
+      const rr = Er;
+      Er = [];
+      for (const Qr of rr) try {
+        Qr()
+      } catch (Sr) {
+        console.warn("[bloxd-previews] an after-draw callback threw", Sr)
+      }
+    }
+  },
+  42753: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => yr,
+      g: () => mr,
+      k: () => nr,
+      n: () => Kr,
+      q: () => er,
+      s: () => Br
+    });
+    var Zr = Qr(181),
+      Wr = Qr(26),
+      ar = Qr(34),
+      jr = Qr(3995),
+      Ir = Qr(1364),
+      fr = Qr(35386),
+      Er = Qr(319),
+      pr = Qr(109),
+      xr = Qr(174);
+
+    function mr() {
+      var rr;
+      const Sr = (0, jr.J)(),
+        Qr = function(rr, Sr) {
+          return {
+            sampleCount: rr.antiAliasing ? 4 : 1,
+            n: (0, jr.y)(rr.pixelScale, Sr),
+            pixelated: (0, jr.v)(rr.pixelSmoothing)
+          }
+        }(Wr.c.get("clientEscMenuOptions"), Sr);
+      return Qr.sampleCount > 1 && (0, fr.c)() && (Qr.sampleCount = 1), Qr.n = null !== (rr = (0, fr.n)()) && void 0 !== rr ? rr : Qr.n, Zr.i.includes((0, pr.getSoftwareRenderer)()) && (Qr.sampleCount = 1, Qr.n = Math.max(Qr.n, (0, jr.y)(xr.l.pixelScale, Sr))), Qr
+    }
+    let Nr = null,
+      Ur = null;
+    const tr = new Set;
+    let hr = null;
+
+    function zr() {
+      for (const rr of tr) rr()
+    }
+
+    function Yr() {
+      if (null === Nr) {
+        const rr = document.createElement("div");
+        rr.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", rr.setAttribute("aria-hidden", "true"), document.body.append(rr), Ur = rr, Nr = new jr.d(rr, zr)
+      }
+      return Nr
+    }
+
+    function nr(rr) {
+      const Sr = (0, jr.m)(),
+        [Qr, Zr] = Yr().size(Sr);
+      return (0, jr.i)(Qr, Zr, Sr, rr.n)
+    }
+
+    function er(rr) {
+      var Sr, Qr, Zr, Wr;
+      const ar = (0, jr.m)(),
+        [fr, Er] = Yr().size(ar);
+      if (fr <= 0 || Er <= 0) return null;
+      const pr = (0, jr.i)(fr, Er, ar, mr().n);
+      return (0, jr.g)(rr, pr), rr.style.left = `${null!==(Sr=null===(Qr=hr)||void 0===Qr?void 0:Qr.rect.left)&&void 0!==Sr?Sr:0}px`, rr.style.top = `${null!==(Zr=null===(Wr=hr)||void 0===Wr?void 0:Wr.rect.top)&&void 0!==Zr?Zr:0}px`, (0, Ir.cb)(rr.style, hr), pr
+    }
+
+    function Kr(rr) {
+      hr = rr, Yr(), (0, Ir.X)(Ur.style, rr, ""), zr()
+    }
+
+    function yr(rr, Sr) {
+      rr.style.imageRendering = (0, jr.K)(Sr.pixelated)
+    }
+
+    function Br(rr, Sr) {
+      const Qr = (0, ar.j)("appManagerUpdated|clientEscMenuOptions", (() => {
+          yr(rr, mr()), Sr()
+        })),
+        Zr = (0, fr.A)(Sr),
+        Wr = (0, Er.q)(Sr);
+      return Yr(), tr.add(Sr), () => {
+        Qr(), Zr(), Wr(), tr.delete(Sr)
+      }
+    }
+  },
+  42827: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar
+    });
+    var Zr = Qr(42831),
+      Wr = Qr(42820);
+    const ar = new class {
+      constructor(rr) {
+        this.pack = rr, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, rr.onWanted((() => {
+          this.release()
+        }))
+      }
+      setGame(rr) {
+        if (void 0 === rr && null !== this.hold) return void(this.endedWhileHeld = !0);
+        this.hold = null, this.endedWhileHeld = !1;
+        const Sr = this.inGame();
+        if (this.game = rr, this.update(), this.inGame() !== Sr)
+          for (const Qr of this.gameListeners) Qr()
+      }
+      inGame() {
+        return void 0 !== this.game
+      }
+      onGameChange(rr) {
+        return this.gameListeners.add(rr), () => {
+          this.gameListeners.delete(rr)
+        }
+      }
+      unwantedLeave(rr) {
+        rr && void 0 !== this.game ? this.hold = {
+          game: this.game
+        } : this.release()
+      }
+      rejoinHold() {
+        return this.hold
+      }
+      releaseHold(rr) {
+        null !== rr && rr === this.hold && this.release()
+      }
+      release() {
+        if (null === this.hold) return;
+        const rr = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, rr && this.setGame(void 0)
+      }
+      setSettled(rr) {
+        this.settle = rr, this.update()
+      }
+      update() {
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Zr.d)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+      }
+    }(Wr.e)
+  },
+  42816: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Ir,
+      g: () => tr,
+      i: () => fr,
+      j: () => er,
+      k: () => nr,
+      m: () => Kr
+    });
+    var Zr = Qr(2398);
+    const Wr = 8388608,
+      ar = 1e3,
+      jr = 3e4;
+    class Ir extends Error {
+      constructor(rr, Sr, Qr) {
+        super(`${"fetch"===rr?"fetching":"decoding"} ${Sr} failed`, Qr), this.stage = rr, this.source = Sr, this.name = "ShellImageError"
+      }
+    }
+    async function fr(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Zr.K,
+        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      return pr(await Er(rr, Sr), "string" === typeof rr ? rr : null, Qr)
+    }
+    async function Er(rr, Sr) {
+      if ("string" !== typeof rr) return rr;
       try {
-        if (RR.length < 2) return [0, 0];
-        const uR = (0, tR.c)(JR);
-        if (!uR) return [0, 0];
-        const ZR = DR();
-        ZR !== BR && (BR = ZR, HR());
-        const [qR] = RR, iR = XR.decode(RR.subarray(1));
-        let fR;
-        qR !== LR.Board && qR !== LR.Leaderboard || !MR.canSeePlayerWrittenText || MR.glyphsShown(iR), uR.save();
-        try {
-          fR = PR(qR, iR, uR)
-        } finally {
-          uR.restore()
-        }
-        if (null === fR || !(fR.width > 0 && fR.height > 0)) return [0, 0];
-        const VR = Math.min(1, nR / fR.width, nR / fR.height),
-          KR = RR => yR ? function(RR) {
-            const JR = 2 ** Math.ceil(Math.log2(RR));
-            return Math.min(IR, JR - RR > RR - JR / 2 ? JR / 2 : JR)
-          }(RR) : Math.min(nR, Math.ceil(RR * VR)),
-          [wR, rR] = [KR(fR.width), KR(fR.height)];
-        ! function(RR, JR, GR, yR, tR) {
-          const uR = Math.max(RR.width, GR),
-            ZR = Math.max(RR.height, yR),
-            qR = tR || uR * ZR > Math.max(AR * GR * yR, CR),
-            [iR, fR] = qR ? [GR, yR] : [uR, ZR];
-          iR === RR.width && fR === RR.height ? JR.clearRect(0, 0, iR, fR) : (RR.width = iR, RR.height = fR)
-        }(JR, uR, wR, rR, GR), uR.save();
-        try {
-          const [RR, JR] = yR ? [wR / fR.width, rR / fR.height] : [VR, VR];
-          1 === RR && 1 === JR || uR.scale(RR, JR), fR.draw(uR)
-        } finally {
-          uR.restore()
-        }
-        return [wR, rR]
-      } catch (uR) {
-        ! function(RR, JR) {
-          gR < WR && (gR++, console.warn(`[bloxd-wasm-client] ${RR}`, JR))
-        }("could not raster a text plane", uR);
-        try {
-          JR.width = 1
-        } catch {}
-        return [0, 0]
+        return await Sr(rr)
+      } catch (Qr) {
+        throw new Ir("fetch", rr, {
+          cause: Qr
+        })
       }
     }
+    async function pr(rr, Sr, Qr) {
+      try {
+        const Sr = new Blob([rr.slice()], {
+          type: "image/png"
+        });
+        return await createImageBitmap(Sr, {
+          premultiplyAlpha: "none",
+          colorSpaceConversion: "none",
+          imageOrientation: Qr
+        })
+      } catch (Zr) {
+        throw new Ir("decode", null !== Sr && void 0 !== Sr ? Sr : `${rr.byteLength} bytes`, {
+          cause: Zr
+        })
+      }
+    }
+    let xr = null;
+    const mr = new Map;
+    let Nr = 1;
+    const Ur = new Map;
+
+    function tr(rr) {
+      var Sr;
+      if (xr = rr, null !== rr) {
+        null === (Sr = rr.BWr) || void 0 === Sr || Sr.call(rr, Yr);
+        for (const [Sr, Qr] of mr) hr(rr, Sr, Qr);
+        mr.clear()
+      }
+    }
+
+    function hr(rr, Sr, Qr) {
+      Ur.has(Sr) && void 0 !== rr.yWr ? rr.yWr(Sr, Qr) : rr.eWr(Sr, Qr)
+    }
+
+    function zr(rr, Sr) {
+      xr ? hr(xr, rr, Sr) : mr.set(rr, Sr)
+    }
+
+    function Yr(rr) {
+      const Sr = Ur.get(rr);
+      void 0 === Sr || Sr.decoding || (Sr.decoding = !0, pr(Sr.bytes, Sr.url, Sr.orientation).then((Qr => {
+        Sr.decoding = !1, Ur.get(rr) === Sr ? (Sr.failures = 0, zr(rr, Qr)) : Qr.close()
+      }), (Qr => {
+        Sr.decoding = !1, Sr.failures++, 1 === Sr.failures && console.warn(`shellImages: decoding image ${rr} again failed; trying again until it decodes`, Qr), setTimeout((() => {
+          Yr(rr)
+        }), Math.min(ar * 2 ** (Sr.failures - 1), jr))
+      })))
+    }
+
+    function nr(rr) {
+      const Sr = Nr++;
+      return zr(Sr, rr), Sr
+    }
+    async function er(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Zr.K,
+        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none",
+        ar = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const jr = "string" === typeof rr ? rr : null,
+        Ir = await Er(rr, Sr),
+        fr = await pr(Ir, jr, Qr),
+        {
+          width: xr,
+          height: mr
+        } = fr,
+        tr = Nr++;
+      return ar && xr * mr * 4 >= Wr && Ur.set(tr, {
+        bytes: Ir.slice(),
+        url: jr,
+        orientation: Qr,
+        decoding: !1,
+        failures: 0
+      }), zr(tr, fr), {
+        id: tr,
+        width: xr,
+        height: mr
+      }
+    }
+
+    function Kr(rr) {
+      var Sr;
+      Ur.delete(rr);
+      const Qr = mr.get(rr);
+      if (Qr) return Qr.close(), void mr.delete(rr);
+      null === (Sr = xr) || void 0 === Sr || Sr.KWr(rr)
+    }
+  },
+  39479: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  },
+  39470: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  },
+  39483: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  },
+  39465: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  },
+  39477: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

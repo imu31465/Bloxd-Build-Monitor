@@ -14074,6 +14074,17 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   background-color: #22283b
 }
 
+.ForceRotateGameStill {
+  height: 100vh;
+  height: 100dvh;
+  inset: 0;
+  object-fit: cover;
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  z-index: 17
+}
+
 .RotateScreenPrompt {
   font-size: min(10rem, 13vw)
 }

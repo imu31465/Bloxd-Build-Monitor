@@ -1,11 +1,11 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7596: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR
+  7432: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr
     });
-    const yR = {
+    const Zr = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -164,7 +164,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: GR(2167).e,
+      _shopVersion: Qr(2117).c,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -174,4 +174,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

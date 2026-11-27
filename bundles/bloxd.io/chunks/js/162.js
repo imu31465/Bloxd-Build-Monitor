@@ -1,132 +1,132 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  7777: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => AR,
-      e: () => CR,
-      h: () => UR,
-      i: () => nR
+  7595: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => er,
+      g: () => Kr,
+      i: () => Yr,
+      k: () => zr
     });
-    var yR = GR(7786);
-    const tR = 6,
-      uR = 3,
-      ZR = 1,
-      qR = 2,
-      iR = 4,
-      fR = 8,
-      VR = 16,
-      KR = 32,
-      wR = 64,
-      rR = 128,
-      eR = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Zr = Qr(7604);
+    const Wr = 6,
+      ar = 3,
+      jr = 1,
+      Ir = 2,
+      fr = 4,
+      Er = 8,
+      pr = 16,
+      xr = 32,
+      mr = 64,
+      Nr = 128,
+      Ur = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function aR(RR) {
-      if (!RR) return 0;
-      const JR = eR.indexOf(RR);
-      if (JR <= 0) throw new Error(`"${RR}" is not a shader pack hook function`);
-      return JR
+    function tr(rr) {
+      if (!rr) return 0;
+      const Sr = Ur.indexOf(rr);
+      if (Sr <= 0) throw new Error(`"${rr}" is not a shader pack hook function`);
+      return Sr
     }
 
-    function LR(RR) {
-      if (0 === RR) return null;
-      const JR = eR[RR];
-      if (void 0 === JR) throw new Error(`${RR} is not a shader pack hook function id`);
-      return JR
+    function hr(rr) {
+      if (0 === rr) return null;
+      const Sr = Ur[rr];
+      if (void 0 === Sr) throw new Error(`${rr} is not a shader pack hook function id`);
+      return Sr
     }
 
-    function nR(RR) {
-      const JR = yR.c.length;
+    function zr(rr) {
+      const Sr = Zr.e.length;
       return {
-        strict: RR >= JR,
-        program: yR.c[RR % JR]
+        strict: rr >= Sr,
+        program: Zr.e[rr % Sr]
       }
     }
 
-    function UR(RR) {
-      return Number(RR.strict) * yR.c.length + yR.c.indexOf(RR.program)
+    function Yr(rr) {
+      return Number(rr.strict) * Zr.e.length + Zr.e.indexOf(rr.program)
     }
 
-    function WR(RR) {
-      return "" === RR ? [] : RR.split(" ")
+    function nr(rr) {
+      return "" === rr ? [] : rr.split(" ")
     }
 
-    function AR(RR) {
-      const JR = {
-        variantFlags: new Uint8Array(tR),
-        hooks: new Uint8Array(tR * uR),
-        moduleCodes: Array(tR).fill(""),
-        reads: Array(2 * tR).fill("")
+    function er(rr) {
+      const Sr = {
+        variantFlags: new Uint8Array(Wr),
+        hooks: new Uint8Array(Wr * ar),
+        moduleCodes: Array(Wr).fill(""),
+        reads: Array(2 * Wr).fill("")
       };
-      for (const GR of RR) {
-        const RR = UR(GR.key),
-          yR = (RR, JR) => null === GR.hooks.surface || GR.reads.fragment.includes(RR) ? 0 : JR;
-        JR.variantFlags[RR] = (GR.sceneDepth ? ZR : 0) | (GR.movesVertices ? qR : 0) | (GR.sunShadow ? iR : 0) | (GR.airShadow ? fR : 0) | (GR.discards ? VR : 0) | yR("localPosition", KR) | yR("enchantSpeed", wR) | yR("enchantTier", rR), JR.hooks[RR * uR] = aR(GR.hooks.vertex), JR.hooks[RR * uR + 1] = aR(GR.hooks.surface), JR.hooks[RR * uR + 2] = aR(GR.hooks.light), JR.moduleCodes[RR] = GR.moduleCode, JR.reads[2 * RR] = GR.reads.vertex.join(" "), JR.reads[2 * RR + 1] = GR.reads.fragment.join(" ")
+      for (const Qr of rr) {
+        const rr = Yr(Qr.key),
+          Zr = (rr, Sr) => null === Qr.hooks.surface || Qr.reads.fragment.includes(rr) ? 0 : Sr;
+        Sr.variantFlags[rr] = (Qr.sceneDepth ? jr : 0) | (Qr.movesVertices ? Ir : 0) | (Qr.sunShadow ? fr : 0) | (Qr.airShadow ? Er : 0) | (Qr.discards ? pr : 0) | Zr("localPosition", xr) | Zr("enchantSpeed", mr) | Zr("enchantTier", Nr), Sr.hooks[rr * ar] = tr(Qr.hooks.vertex), Sr.hooks[rr * ar + 1] = tr(Qr.hooks.surface), Sr.hooks[rr * ar + 2] = tr(Qr.hooks.light), Sr.moduleCodes[rr] = Qr.moduleCode, Sr.reads[2 * rr] = Qr.reads.vertex.join(" "), Sr.reads[2 * rr + 1] = Qr.reads.fragment.join(" ")
       }
-      return JR
+      return Sr
     }
 
-    function CR(RR) {
+    function Kr(rr) {
       const {
-        hooks: JR,
-        moduleCodes: GR,
-        reads: yR
-      } = RR;
-      return Array.from(RR.variantFlags, ((RR, tR) => {
-        const KR = tR * uR;
+        hooks: Sr,
+        moduleCodes: Qr,
+        reads: Zr
+      } = rr;
+      return Array.from(rr.variantFlags, ((rr, Wr) => {
+        const xr = Wr * ar;
         return {
-          key: nR(tR),
+          key: zr(Wr),
           hooks: {
-            vertex: LR(JR[KR]),
-            surface: LR(JR[KR + 1]),
-            light: LR(JR[KR + 2])
+            vertex: hr(Sr[xr]),
+            surface: hr(Sr[xr + 1]),
+            light: hr(Sr[xr + 2])
           },
-          moduleCode: GR[tR],
-          sceneDepth: 0 !== (RR & ZR),
-          sunShadow: 0 !== (RR & iR),
-          airShadow: 0 !== (RR & fR),
-          movesVertices: 0 !== (RR & qR),
-          discards: 0 !== (RR & VR),
+          moduleCode: Qr[Wr],
+          sceneDepth: 0 !== (rr & jr),
+          sunShadow: 0 !== (rr & fr),
+          airShadow: 0 !== (rr & Er),
+          movesVertices: 0 !== (rr & Ir),
+          discards: 0 !== (rr & pr),
           reads: {
-            vertex: WR(yR[2 * tR]),
-            fragment: WR(yR[2 * tR + 1])
+            vertex: nr(Zr[2 * Wr]),
+            fragment: nr(Zr[2 * Wr + 1])
           }
         }
       }))
     }
   },
-  42342: (RR, JR, GR) => {
-    GR.d(JR, {
-      C: () => rR,
-      G: () => eR,
-      b: () => tR,
-      e: () => yR,
-      i: () => wR,
-      j: () => VR,
-      k: () => LR,
-      n: () => uR,
-      o: () => qR,
-      r: () => iR,
-      v: () => ZR,
-      y: () => aR
+  42673: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      B: () => Ur,
+      b: () => Wr,
+      d: () => Zr,
+      h: () => mr,
+      i: () => pr,
+      k: () => hr,
+      m: () => ar,
+      n: () => Ir,
+      p: () => fr,
+      q: () => jr,
+      u: () => tr,
+      x: () => Nr
     });
-    const yR = 3,
-      tR = 0,
-      uR = 1,
-      ZR = 2,
-      qR = {
+    const Zr = 3,
+      Wr = 0,
+      ar = 1,
+      jr = 2,
+      Ir = {
         uniform: 3,
-        Rr: 4,
+        ZN: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      iR = 10,
-      fR = "BloxdPackInputs",
-      VR = "bloxdPackInputs",
-      KR = [{
+      fr = 10,
+      Er = "BloxdPackInputs",
+      pr = "bloxdPackInputs",
+      xr = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      wR = 80;
+      mr = 80;
 
-    function rR() {
-      const RR = KR.map((RR => {
+    function Nr() {
+      const rr = xr.map((rr => {
         let {
-          name: JR,
-          type: GR
-        } = RR;
-        return `    ${JR}: ${GR},\n`
+          name: Sr,
+          type: Qr
+        } = rr;
+        return `    ${Sr}: ${Qr},\n`
       })).join("");
-      return `struct ${fR} {\n${RR}}\n@group(${yR}) @binding(${tR}) var<uniform> ${VR}: ${fR};\n`
+      return `struct ${Er} {\n${rr}}\n@group(${Zr}) @binding(${Wr}) var<uniform> ${pr}: ${Er};\n`
     }
 
-    function eR(RR, JR) {
-      const GR = new DataView(RR, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, wR),
-        [yR, tR, uR, ZR, qR, iR] = KR;
-      GR.setFloat32(yR.offset, JR.seconds, !0), GR.setUint32(tR.offset, JR.lit ? 1 : 0, !0);
-      for (let fR = 0; fR < 3; fR++) GR.setInt32(uR.offset + 4 * fR, JR.renderOffset[fR], !0), GR.setFloat32(ZR.offset + 4 * fR, JR.AJR[fR], !0), GR.setFloat32(qR.offset + 4 * fR, JR.eyePosition[fR], !0), GR.setFloat32(iR.offset + 4 * fR, JR.shadowDirection[fR], !0)
+    function Ur(rr, Sr) {
+      const Qr = new DataView(rr, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, mr),
+        [Zr, Wr, ar, jr, Ir, fr] = xr;
+      Qr.setFloat32(Zr.offset, Sr.seconds, !0), Qr.setUint32(Wr.offset, Sr.lit ? 1 : 0, !0);
+      for (let Er = 0; Er < 3; Er++) Qr.setInt32(ar.offset + 4 * Er, Sr.renderOffset[Er], !0), Qr.setFloat32(jr.offset + 4 * Er, Sr.crr[Er], !0), Qr.setFloat32(Ir.offset + 4 * Er, Sr.eyePosition[Er], !0), Qr.setFloat32(fr.offset + 4 * Er, Sr.shadowDirection[Er], !0)
     }
 
-    function aR(RR) {
-      const JR = new Uint32Array(Math.max(1, RR.length));
-      return RR.forEach(((RR, GR) => {
+    function tr(rr) {
+      const Sr = new Uint32Array(Math.max(1, rr.length));
+      return rr.forEach(((rr, Qr) => {
         let {
-          id: yR,
-          rotation: tR
-        } = RR;
-        JR[GR] = 65535 & yR | (3 & tR) << 16
-      })), JR
+          id: Zr,
+          rotation: Wr
+        } = rr;
+        Sr[Qr] = 65535 & Zr | (3 & Wr) << 16
+      })), Sr
     }
-    const LR = {
+    const hr = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7786: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      e: () => ZR,
-      i: () => qR,
-      l: () => tR,
-      n: () => uR
+  7604: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr,
+      f: () => jr,
+      g: () => Ir,
+      k: () => Wr,
+      n: () => ar
     });
-    const yR = ["terrain", "liquid", "model"];
+    const Zr = ["terrain", "liquid", "model"];
 
-    function tR() {
-      const RR = [];
-      for (const JR of [!1, !0])
-        for (const GR of yR) RR.push({
-          strict: JR,
-          program: GR
+    function Wr() {
+      const rr = [];
+      for (const Sr of [!1, !0])
+        for (const Qr of Zr) rr.push({
+          strict: Sr,
+          program: Qr
         });
-      return RR
+      return rr
     }
 
-    function uR(RR) {
-      return `${RR.strict?"strict":"allow"}.${RR.program}`
+    function ar(rr) {
+      return `${rr.strict?"strict":"allow"}.${rr.program}`
     }
 
-    function ZR(RR) {
-      return !RR.hooks.vertex && !RR.hooks.surface && !RR.hooks.light
+    function jr(rr) {
+      return !rr.hooks.vertex && !rr.hooks.surface && !rr.hooks.light
     }
 
-    function qR(RR, JR) {
-      return "off" !== JR && (null === RR || RR.some((RR => RR.key.strict === ("strict" === JR) && !ZR(RR))))
+    function Ir(rr, Sr) {
+      return "off" !== Sr && (null === rr || rr.some((rr => rr.key.strict === ("strict" === Sr) && !jr(rr))))
     }
   },
-  44983: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      SHADER_PACK_INPUTS_BINDING: () => uR.b,
-      SHADER_PACK_INPUTS_GROUP: () => uR.e,
-      SHADER_PACK_INPUTS_SIZE: () => uR.i,
-      SHADER_PACK_INPUTS_VAR: () => uR.j,
-      SHADER_PACK_MODES: () => uR.k,
-      SHADER_PACK_PROGRAMS: () => yR.c,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => uR.n,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => uR.o,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => uR.r,
-      SHADER_PACK_TEXTURES_BINDING: () => uR.v,
-      encodeTextureLayers: () => uR.y,
-      flattenVariants: () => tR.d,
-      isVariantOff: () => yR.e,
-      packRunsIn: () => yR.i,
-      shaderPackInputsWgsl: () => uR.C,
-      shaderPackVariantKeys: () => yR.l,
-      variantKeyId: () => yR.n,
-      writeShaderPackInputs: () => uR.G
+  45279: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      SHADER_PACK_INPUTS_BINDING: () => ar.b,
+      SHADER_PACK_INPUTS_GROUP: () => ar.d,
+      SHADER_PACK_INPUTS_SIZE: () => ar.h,
+      SHADER_PACK_INPUTS_VAR: () => ar.i,
+      SHADER_PACK_MODES: () => ar.k,
+      SHADER_PACK_PROGRAMS: () => Zr.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => ar.m,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => ar.n,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => ar.p,
+      SHADER_PACK_TEXTURES_BINDING: () => ar.q,
+      encodeTextureLayers: () => ar.u,
+      flattenVariants: () => Wr.c,
+      isVariantOff: () => Zr.f,
+      packRunsIn: () => Zr.g,
+      shaderPackInputsWgsl: () => ar.x,
+      shaderPackVariantKeys: () => Zr.k,
+      variantKeyId: () => Zr.n,
+      writeShaderPackInputs: () => ar.B
     });
-    var yR = GR(7786),
-      tR = GR(7777),
-      uR = GR(42342)
+    var Zr = Qr(7604),
+      Wr = Qr(7595),
+      ar = Qr(42673)
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

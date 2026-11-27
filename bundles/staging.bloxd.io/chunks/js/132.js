@@ -1,36 +1,36 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  6028: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR
+  5943: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Wr
     });
-    var yR = GR(1282);
-    async function tR(RR) {
-      const JR = await fetch(`${yR.clientSideServerUrls.s3Url}/${RR}`, {
+    var Zr = Qr(1262);
+    async function Wr(rr) {
+      const Sr = await fetch(`${Zr.clientSideServerUrls.s3Url}/${rr}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === JR.status || 403 === JR.status) return null;
-      if (!JR.ok) throw new Error(`Failed to download the texture pack (${JR.status})`);
-      return await JR.json()
+      if (404 === Sr.status || 403 === Sr.status) return null;
+      if (!Sr.ok) throw new Error(`Failed to download the texture pack (${Sr.status})`);
+      return await Sr.json()
     }
   },
-  42579: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      gamePackSource: () => uR
+  42906: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      gamePackSource: () => ar
     });
-    var yR = GR(6028),
-      tR = GR(1647);
+    var Zr = Qr(5943),
+      Wr = Qr(1629);
 
-    function uR(RR) {
+    function ar(rr) {
       return {
-        packKey: async JR => (await tR.c.getGame(RR, JR, !0)).customTexturePackKey,
-        fetchPack: yR.c
+        packKey: async Sr => (await Wr.c.getGame(rr, Sr, !0)).customTexturePackKey,
+        fetchPack: Zr.b
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

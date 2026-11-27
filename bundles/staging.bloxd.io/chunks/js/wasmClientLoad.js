@@ -1,139 +1,139 @@
 export const id = 71;
 export const ids = [71];
 export const modules = {
-  37520: (RR, JR, GR) => {
-    async function yR(RR) {
-      const JR = await fetch(RR, {
+  37908: (rr, Sr, Qr) => {
+    async function Zr(rr) {
+      const Sr = await fetch(rr, {
         priority: "low"
       });
-      if (!JR.ok) throw new Error(`Fetching ${RR} failed: HTTP ${JR.status}`);
-      const GR = JR.body.getReader();
-      for (; !(await GR.read()).done;);
+      if (!Sr.ok) throw new Error(`Fetching ${rr} failed: HTTP ${Sr.status}`);
+      const Qr = Sr.body.getReader();
+      for (; !(await Qr.read()).done;);
     }
-    GR.d(JR, {
-      b: () => yR
+    Qr.d(Sr, {
+      e: () => Zr
     })
   },
-  42208: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      prefetchWasmClient: () => MR,
-      probeWebgl2AheadOfJoin: () => VR._,
-      startJoinLoad: () => WR,
-      startLoadAheadOfJoin: () => CR
+  42541: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      prefetchWasmClient: () => Br,
+      probeWebgl2AheadOfJoin: () => pr.I,
+      startJoinLoad: () => nr,
+      startLoadAheadOfJoin: () => Kr
     });
-    var yR = GR(2448),
-      tR = GR(37213),
-      uR = GR(42212),
-      ZR = GR(1406),
-      qR = GR(42230),
-      iR = (GR(42265), GR(37520)),
-      fR = GR(2372),
-      VR = GR(42281),
-      KR = GR(42379),
-      wR = GR(37362);
-    const rR = "[bloxd-wasm-client]";
-    let eR = null,
-      aR = null,
-      LR = null,
-      nR = null,
-      UR = null;
+    var Zr = Qr(2396),
+      Wr = Qr(37566),
+      ar = Qr(42550),
+      jr = Qr(1371),
+      Ir = Qr(42559),
+      fr = (Qr(42589), Qr(37908)),
+      Er = Qr(2318),
+      pr = Qr(42598),
+      xr = Qr(42715),
+      mr = Qr(37748);
+    const Nr = "[bloxd-wasm-client]";
+    let Ur = null,
+      tr = null,
+      hr = null,
+      zr = null,
+      Yr = null;
 
-    function WR() {
-      return nR ??= (async () => {
+    function nr() {
+      return zr ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const RR = await (0, VR.W)();
-        if (null === RR) return;
-        if ((0, qR.o)(RR)) return (0, VR.bb)("none"), void AR("none");
-        (0, VR.bb)(RR.backend);
-        const JR = await RR.load();
-        AR(JR.name);
-        const GR = "unloaded" === (0, yR.s)();
-        if (GR && (0, VR.r)(), !await (0, KR.e)(JR)) return void console.warn(`${rR} the join's early wasm load failed: the boot loads the client itself`);
-        if (!GR) return;
-        const uR = (0, tR.o)(JR.name);
-        void 0 !== uR ? (0, ZR.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(uR.ms)
+        const rr = await (0, pr.H)();
+        if (null === rr) return;
+        if ((0, Ir.p)(rr)) return (0, pr.L)("none"), void er("none");
+        (0, pr.L)(rr.backend);
+        const Sr = await rr.load();
+        er(Sr.name);
+        const Qr = "unloaded" === (0, Zr.y)();
+        if (Qr && (0, pr.j)(), !await (0, xr.e)(Sr)) return void console.warn(`${Nr} the join's early wasm load failed: the boot loads the client itself`);
+        if (!Qr) return;
+        const ar = (0, Wr.l)(Sr.name);
+        void 0 !== ar ? (0, jr.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(ar.ms)
         }, {
-          path: uR.path,
-          build: JR.name
-        }) : console.warn(`${rR} the join's wasm load left no record of how it compiled ${JR.name}`)
-      })().catch((RR => {
-        console.warn(`${rR} the join's early wasm load did not start: the boot loads the client itself`, RR)
-      })), nR
+          path: ar.path,
+          build: Sr.name
+        }) : console.warn(`${Nr} the join's wasm load left no record of how it compiled ${Sr.name}`)
+      })().catch((rr => {
+        console.warn(`${Nr} the join's early wasm load did not start: the boot loads the client itself`, rr)
+      })), zr
     }
 
-    function AR(RR) {
-      null !== UR && (0, ZR.logClientMeasurement)("wasm_compile_ahead", {
-        hit: UR === RR ? 1 : 0
+    function er(rr) {
+      null !== Yr && (0, jr.logClientMeasurement)("wasm_compile_ahead", {
+        hit: Yr === rr ? 1 : 0
       }, {
-        guessed: UR,
-        loaded: RR
+        guessed: Yr,
+        loaded: rr
       })
     }
 
-    function CR() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === LR) {
-        var JR;
-        const GR = null !== (JR = RR.joinStarted) && void 0 !== JR ? JR : () => !1;
-        LR = Promise.all([MR(RR), XR(GR)]).then((() => {}))
+    function Kr() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === hr) {
+        var Sr;
+        const Qr = null !== (Sr = rr.joinStarted) && void 0 !== Sr ? Sr : () => !1;
+        hr = Promise.all([Br(rr), yr(Qr)]).then((() => {}))
       }
-      return LR
+      return hr
     }
 
-    function XR(RR) {
-      return aR ??= (async () => {
+    function yr(rr) {
+      return tr ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const JR = await (0, VR.j)();
-        null === JR || RR() || "unloaded" !== (0, yR.s)() || (UR = JR.name, await (0, tR.e)([JR, uR.d], "low"))
-      })().catch((RR => {
-        console.warn(`${rR} the compile ahead of the join did not start: the join loads the client itself`, RR)
-      })), aR
+        const Sr = await (0, pr.f)();
+        null === Sr || rr() || "unloaded" !== (0, Zr.y)() || (Yr = Sr.name, await (0, Wr.e)([Sr, ar.i], "low"))
+      })().catch((rr => {
+        console.warn(`${Nr} the compile ahead of the join did not start: the join loads the client itself`, rr)
+      })), tr
     }
 
-    function MR() {
+    function Br() {
       let {
-        joinStarted: RR = () => !1,
-        language: JR = ""
+        joinStarted: rr = () => !1,
+        language: Sr = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return eR ??= async function(RR, JR) {
-        if (!await async function(RR) {
-            if (RR()) return !1;
-            let JR;
+      return Ur ??= async function(rr, Sr) {
+        if (!await async function(rr) {
+            if (rr()) return !1;
+            let Sr;
             try {
-              var GR;
-              const RR = await fetch((0, fR.h)("static/js/4udp6d.wasmJoinFiles.json"), {
-                ...fR.d,
+              var Qr;
+              const rr = await fetch((0, Er.c)("static/js/fl4vv.wasmJoinFiles.json"), {
+                ...Er.b,
                 priority: "low"
               });
-              if (RR.ok && /\bno-store\b/.test(null !== (GR = RR.headers.get("Cache-Control")) && void 0 !== GR ? GR : "")) return !1;
-              JR = await (0, fR.k)(RR)
-            } catch (tR) {
-              return console.warn(`${rR} the join's chunk list did not load: the join downloads its chunks itself`, tR), !RR()
+              if (rr.ok && /\bno-store\b/.test(null !== (Qr = rr.headers.get("Cache-Control")) && void 0 !== Qr ? Qr : "")) return !1;
+              Sr = await (0, Er.d)(rr)
+            } catch (Wr) {
+              return console.warn(`${Nr} the join's chunk list did not load: the join downloads its chunks itself`, Wr), !rr()
             }
-            if (RR()) return !1;
-            const yR = document.createElement("link").relList.supports("prefetch");
-            for (const uR of JR) {
-              const RR = (0, fR.h)(uR);
-              yR ? BR(RR) : (0, iR.b)(RR).catch((JR => {
-                console.warn(`${rR} prefetching ${RR} failed`, JR)
+            if (rr()) return !1;
+            const Zr = document.createElement("link").relList.supports("prefetch");
+            for (const ar of Sr) {
+              const rr = (0, Er.c)(ar);
+              Zr ? Tr(rr) : (0, fr.e)(rr).catch((Sr => {
+                console.warn(`${Nr} prefetching ${rr} failed`, Sr)
               }))
             }
             return !0
-          }(RR)) return;
-        const GR = [(0, iR.b)((0, wR.f)())];
-        (0, wR.c)(JR) && GR.push((0, iR.b)((0, wR.j)()));
-        await Promise.all(GR)
-      }(RR, JR).catch((RR => {
-        console.warn(`${rR} the prefetch failed: the join downloads the client itself`, RR)
-      })), eR
+          }(rr)) return;
+        const Qr = [(0, fr.e)((0, mr.c)())];
+        (0, mr.b)(Sr) && Qr.push((0, fr.e)((0, mr.e)()));
+        await Promise.all(Qr)
+      }(rr, Sr).catch((rr => {
+        console.warn(`${Nr} the prefetch failed: the join downloads the client itself`, rr)
+      })), Ur
     }
 
-    function BR(RR) {
-      const JR = document.createElement("link");
-      JR.rel = "prefetch", JR.href = RR, RR.endsWith(".js") && (JR.crossOrigin = "anonymous"), document.head.appendChild(JR)
+    function Tr(rr) {
+      const Sr = document.createElement("link");
+      Sr.rel = "prefetch", Sr.href = rr, rr.endsWith(".js") && (Sr.crossOrigin = "anonymous"), document.head.appendChild(Sr)
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

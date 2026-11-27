@@ -1,378 +1,378 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  42071: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      startWasmPadGameplay: () => IR
+  42391: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      startWasmPadGameplay: () => kr
     });
-    GR(42078);
-    var yR = GR(42086),
-      tR = GR(42097),
-      uR = GR(2163),
-      ZR = GR(42106),
-      qR = GR(5685),
-      iR = GR(5665),
-      fR = GR(42114),
-      VR = GR(42118),
-      KR = GR(5697),
-      wR = GR(42194),
-      rR = GR(3437),
-      eR = GR(10203),
-      aR = GR(42088),
-      LR = GR(10181),
-      nR = GR(40356);
-    const UR = RR => {
-        const JR = KR.e.indexOf(RR);
-        if (JR < 0) throw new Error(`No core action "${RR}"`);
-        return JR
+    Qr(42398);
+    var Zr = Qr(42404),
+      Wr = Qr(42424),
+      ar = Qr(2114),
+      jr = Qr(42438),
+      Ir = Qr(5617),
+      fr = Qr(5602),
+      Er = Qr(42445),
+      pr = Qr(42451),
+      xr = Qr(5623),
+      mr = Qr(42526),
+      Nr = Qr(3378),
+      Ur = Qr(9971),
+      tr = Qr(42412),
+      hr = Qr(9946),
+      zr = Qr(40670);
+    const Yr = rr => {
+        const Sr = xr.d.indexOf(rr);
+        if (Sr < 0) throw new Error(`No core action "${rr}"`);
+        return Sr
       },
-      WR = UR("primary-fire"),
-      AR = UR("alt-fire"),
-      CR = UR("mid-fire"),
-      XR = UR("jump"),
-      MR = UR("ReloadGun"),
-      BR = UR("SwapCameraZoom"),
-      lR = UR("Zoom"),
-      pR = UR("TouchAction1"),
-      gR = {
-        SpecialAction1: UR("SpecialAction1"),
-        SpecialAction2: UR("SpecialAction2")
+      nr = Yr("primary-fire"),
+      er = Yr("alt-fire"),
+      Kr = Yr("mid-fire"),
+      yr = Yr("jump"),
+      Br = Yr("ReloadGun"),
+      Tr = Yr("SwapCameraZoom"),
+      vr = Yr("Zoom"),
+      Or = Yr("TouchAction1"),
+      Lr = {
+        SpecialAction1: Yr("SpecialAction1"),
+        SpecialAction2: Yr("SpecialAction2")
       },
-      bR = (RR, JR) => {
-        (0, rR.w)(qR.N.PadAction, RR, 0, 0, (0, rR.s)(JR, performance.now()))
+      lr = (rr, Sr) => {
+        (0, Nr.t)(Ir.M.PadAction, rr, 0, 0, (0, Nr.s)(Sr, performance.now()))
       },
-      vR = RR => {
-        bR(RR, ZR.md.Down)
+      Xr = rr => {
+        lr(rr, jr.dd.Down)
       },
-      OR = RR => {
-        bR(RR, 0)
+      Pr = rr => {
+        lr(rr, 0)
       },
-      xR = RR => {
-        vR(RR), OR(RR)
+      Hr = rr => {
+        Xr(rr), Pr(rr)
       },
-      NR = () => {
-        const RR = (0, VR.l)();
-        return null !== RR && void 0 !== RR && RR.isCoreRunning ? RR : null
+      qr = () => {
+        const rr = (0, pr.f)();
+        return null !== rr && void 0 !== rr && rr.isCoreRunning ? rr : null
       },
-      DR = RR => ZR.s.playerFlags(RR.api.apiView, 0),
-      HR = RR => null !== RR && ZR.s.targetBlockId(RR.api.apiView, 0) !== ZR.Yc,
-      oR = () => {
-        const RR = (0, eR.e)(),
-          JR = new aR.e;
-        let GR = !1;
-        const yR = (RR, JR) => {
-            (0, rR.w)(qR.N.PadLook, ZR.qd.Rate, RR, JR, 0)
+      Rr = rr => jr.p.playerFlags(rr.api.apiView, 0),
+      gr = rr => null !== rr && jr.p.targetBlockId(rr.api.apiView, 0) !== jr.Oc,
+      Cr = () => {
+        const rr = (0, Ur.b)(),
+          Sr = new tr.c;
+        let Qr = !1;
+        const Zr = (rr, Sr) => {
+            (0, Nr.t)(Ir.M.PadLook, jr.nd.Rate, rr, Sr, 0)
           },
-          tR = () => {
-            GR = !1, JR.reset(), yR(0, 0)
+          Wr = () => {
+            Qr = !1, Sr.reset(), Zr(0, 0)
           };
         return {
-          update: (tR, uR, iR) => {
-            GR || (RR.discardPending(), GR = !0);
-            const fR = (0, aR.r)(JR, tR, uR, iR, performance.now());
-            yR(fR.yawRadPerSec, fR.pitchRadPerSec);
-            const VR = RR.drainLookDelta();
-            0 === VR.bD && 0 === VR.PD || (0, rR.w)(qR.N.PadLook, ZR.qd.Gyro, VR.bD, VR.PD, 0)
+          update: (Wr, ar, fr) => {
+            Qr || (rr.discardPending(), Qr = !0);
+            const Er = (0, tr.q)(Sr, Wr, ar, fr, performance.now());
+            Zr(Er.yawRadPerSec, Er.pitchRadPerSec);
+            const pr = rr.drainLookDelta();
+            0 === pr.xR && 0 === pr.yR || (0, Nr.t)(Ir.M.PadLook, jr.nd.Gyro, pr.xR, pr.yR, 0)
           },
-          release: tR,
-          uninstall: tR
+          release: Wr,
+          uninstall: Wr
         }
       },
-      cR = () => {
-        const RR = NR();
-        return null !== RR && 0 !== (DR(RR) & ZR.xd.PadSneakToggled)
+      Mr = () => {
+        const rr = qr();
+        return null !== rr && 0 !== (Rr(rr) & jr.ud.PadSneakToggled)
       },
-      PR = () => {
-        const RR = (RR => {
-          const JR = RR => function() {
-            return (0, wR.c)(), RR(...arguments)
+      Gr = () => {
+        const rr = (rr => {
+          const Sr = rr => function() {
+            return (0, mr.d)(), rr(...arguments)
           };
           return {
-            primaryFireDown: JR((RR => (bR(WR, ZR.md.Down | (RR ? ZR.md.Repeat : 0)), 0))),
-            primaryFireUp: JR((() => {
-              OR(WR)
+            primaryFireDown: Sr((rr => (lr(nr, jr.dd.Down | (rr ? jr.dd.Repeat : 0)), 0))),
+            primaryFireUp: Sr((() => {
+              Pr(nr)
             })),
-            altFireDown: JR((() => (vR(AR), 0))),
-            altFireUp: JR((() => {
-              OR(AR)
+            altFireDown: Sr((() => (Xr(er), 0))),
+            altFireUp: Sr((() => {
+              Pr(er)
             })),
-            jumpDown: JR((() => {
-              xR(XR)
+            jumpDown: Sr((() => {
+              Hr(yr)
             })),
-            specialActionDown: JR((RR => {
-              vR(gR[RR])
+            specialActionDown: Sr((rr => {
+              Xr(Lr[rr])
             })),
-            specialActionUp: JR((RR => {
-              OR(gR[RR])
+            specialActionUp: Sr((rr => {
+              Pr(Lr[rr])
             })),
-            reloadGun: JR((() => {
-              xR(MR)
+            reloadGun: Sr((() => {
+              Hr(Br)
             })),
-            dropItem: JR((RR => {
-              bR(ZR.nd.Drop, ZR.md.Down | (RR ? ZR.md.Stack : 0))
+            dropItem: Sr((rr => {
+              lr(jr.fd.Drop, jr.dd.Down | (rr ? jr.dd.Stack : 0))
             })),
-            swapCameraZoom: JR((() => {
-              xR(BR)
+            swapCameraZoom: Sr((() => {
+              Hr(Tr)
             })),
-            zoom: JR((RR => {
-              RR ? vR(lR) : OR(lR)
+            zoom: Sr((rr => {
+              rr ? Xr(vr) : Pr(vr)
             })),
-            pickBlock: JR((() => (xR(CR), HR(RR()))))
+            pickBlock: Sr((() => (Hr(Kr), gr(rr()))))
           }
-        })(NR);
-        let JR = !1,
-          GR = null;
-        const yR = () => {
-          var RR;
-          null === (RR = GR) || void 0 === RR || RR(), GR = null
+        })(qr);
+        let Sr = !1,
+          Qr = null;
+        const Zr = () => {
+          var rr;
+          null === (rr = Qr) || void 0 === rr || rr(), Qr = null
         };
         return {
-          bodies: () => RR,
-          look: oR(),
-          move: (RR, GR) => {
-            var tR;
-            yR();
+          bodies: () => rr,
+          look: Cr(),
+          move: (rr, Qr) => {
+            var Wr;
+            Zr();
             const {
-              bits: uR,
-              flips: qR
-            } = (RR => {
-              if (null === RR) return {
-                bits: ZR.pd.Peek,
+              bits: ar,
+              flips: Ir
+            } = (rr => {
+              if (null === rr) return {
+                bits: jr.jd.Peek,
                 flips: 0
               };
-              const JR = RR.sneakHeld ? ZR.pd.SneakHeld : 0;
-              return "hold" === RR.mode ? {
-                bits: JR | ZR.pd.SneakHoldMode,
-                flips: RR.sneakTogglePressed ? 1 : 0
+              const Sr = rr.sneakHeld ? jr.jd.SneakHeld : 0;
+              return "hold" === rr.mode ? {
+                bits: Sr | jr.jd.SneakHoldMode,
+                flips: rr.sneakTogglePressed ? 1 : 0
               } : {
-                bits: JR,
-                flips: RR.sneakPressed || RR.sneakTogglePressed ? 1 : 0
+                bits: Sr,
+                flips: rr.sneakPressed || rr.sneakTogglePressed ? 1 : 0
               }
-            })(GR);
-            null !== (tR = NR()) && void 0 !== tR && tR.padMove(RR.x, RR.y, RR.magnitude, RR.headingOffset, (RR => ZR.pd.Active | (RR.jumpHeld ? ZR.pd.JumpHeld : 0) | (RR.jumpPressed ? ZR.pd.JumpPressed : 0) | (RR.running ? ZR.pd.Running : 0) | (RR.sprintHeld ? ZR.pd.SprintHeld : 0))(RR) | uR, qR) && (JR = !0), (0, LR.f)(cR())
+            })(Qr);
+            null !== (Wr = qr()) && void 0 !== Wr && Wr.padMove(rr.x, rr.y, rr.magnitude, rr.headingOffset, (rr => jr.jd.Active | (rr.jumpHeld ? jr.jd.JumpHeld : 0) | (rr.jumpPressed ? jr.jd.JumpPressed : 0) | (rr.running ? jr.jd.Running : 0) | (rr.sprintHeld ? jr.jd.SprintHeld : 0))(rr) | ar, Ir) && (Sr = !0), (0, hr.d)(Mr())
           },
           stopMoving: () => {
-            var RR;
-            JR && (JR = !(null !== (RR = NR()) && void 0 !== RR && RR.padMove(0, 0, 0, 0, 0, 0)), yR(), GR = (0, iR.r)((() => {
-              yR(), (0, LR.f)(cR())
+            var rr;
+            Sr && (Sr = !(null !== (rr = qr()) && void 0 !== rr && rr.padMove(0, 0, 0, 0, 0, 0)), Zr(), Qr = (0, fr.z)((() => {
+              Zr(), (0, hr.d)(Mr())
             })))
           },
-          uninstall: yR,
-          deviceChanged: RR => {
-            var GR;
-            "touch" === RR ? ((0, LR.f)(!1), null !== (GR = NR()) && void 0 !== GR && GR.padMove(0, 0, 0, 0, ZR.pd.EndToggle, 0) && (JR = !1)) : "gamepad" === RR && (0, LR.f)(cR())
+          uninstall: Zr,
+          deviceChanged: rr => {
+            var Qr;
+            "touch" === rr ? ((0, hr.d)(!1), null !== (Qr = qr()) && void 0 !== Qr && Qr.padMove(0, 0, 0, 0, jr.jd.EndToggle, 0) && (Sr = !1)) : "gamepad" === rr && (0, hr.d)(Mr())
           },
-          hasPlayer: () => null !== NR(),
+          hasPlayer: () => null !== qr(),
           isPlayerDead: () => {
-            var RR;
-            return !1 === (null === (RR = NR()) || void 0 === RR ? void 0 : RR.localPlayerAlive())
+            var rr;
+            return !1 === (null === (rr = qr()) || void 0 === rr ? void 0 : rr.localPlayerAlive())
           },
           isReplayMode: () => {
-            const RR = NR();
-            return null !== RR && 0 !== (DR(RR) & ZR.xd.Replay)
+            const rr = qr();
+            return null !== rr && 0 !== (Rr(rr) & jr.ud.Replay)
           },
           isFreeCameraOn: () => {
-            const RR = NR();
-            return null !== RR && 0 !== (DR(RR) & ZR.xd.FreeCam)
+            const rr = qr();
+            return null !== rr && 0 !== (Rr(rr) & jr.ud.FreeCam)
           },
-          targetsBlock: () => HR(NR()),
+          targetsBlock: () => gr(qr()),
           selectedSlotEmpty: () => {
-            var RR;
-            return !(null !== (RR = NR()) && void 0 !== RR && RR.items.Qq())
+            var rr;
+            return !(null !== (rr = qr()) && void 0 !== rr && rr.items.wI())
           },
-          pickBlockAllowed: () => !!uR.c.get("creative") && !!uR.c.get("canPickBlocks"),
-          zoomAllowed: () => !!uR.c.get("canUseZoomKey"),
-          scrollHotbar: RR => {
-            bR(ZR.nd.Hotbar, ZR.md.Down | (RR > 0 ? ZR.md.Next : 0))
+          pickBlockAllowed: () => !!ar.d.get("creative") && !!ar.d.get("canPickBlocks"),
+          zoomAllowed: () => !!ar.d.get("canUseZoomKey"),
+          scrollHotbar: rr => {
+            lr(jr.fd.Hotbar, jr.dd.Down | (rr > 0 ? jr.dd.Next : 0))
           },
-          hasFullInventory: fR.p,
-          hasLobbyTab: () => (0, nR.b)({
-            lobbyLeaderboardInfo: uR.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: uR.c.get("lobbyManage")
+          hasFullInventory: Er.o,
+          hasLobbyTab: () => (0, zr.c)({
+            lobbyLeaderboardInfo: ar.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: ar.d.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var RR, JR, GR, yR;
-            const tR = NR();
+            var rr, Sr, Qr, Zr;
+            const Wr = qr();
             return {
-              holdingGun: !1 !== (null === tR || void 0 === tR ? void 0 : tR.localPlayerAlive()) && "Gun" === (null === tR || void 0 === tR || null === (RR = tR.items.Qq()) || void 0 === RR || null === (JR = RR.typeObj) || void 0 === JR ? void 0 : JR.type),
-              customButtons: null !== (GR = uR.c.get("customButtons")) && void 0 !== GR ? GR : null,
-              touchscreenActionButton: null !== (yR = uR.c.get("touchscreenActionButton")) && void 0 !== yR ? yR : null
+              holdingGun: !1 !== (null === Wr || void 0 === Wr ? void 0 : Wr.localPlayerAlive()) && "Gun" === (null === Wr || void 0 === Wr || null === (rr = Wr.items.wI()) || void 0 === rr || null === (Sr = rr.typeObj) || void 0 === Sr ? void 0 : Sr.type),
+              customButtons: null !== (Qr = ar.d.get("customButtons")) && void 0 !== Qr ? Qr : null,
+              touchscreenActionButton: null !== (Zr = ar.d.get("touchscreenActionButton")) && void 0 !== Zr ? Zr : null
             }
           },
-          pressTouchButton: RR => {
-            RR ? vR(pR) : OR(pR)
+          pressTouchButton: rr => {
+            rr ? Xr(Or) : Pr(Or)
           }
         }
       },
-      IR = () => {
-        const RR = (0, tR.b)(PR()),
-          JR = (0, yR.c)(),
-          GR = null;
+      kr = () => {
+        const rr = (0, Wr.c)(Gr()),
+          Sr = (0, Zr.c)(),
+          Qr = null;
         return () => {
-          RR(), JR(), null === GR || void 0 === GR || GR()
+          rr(), Sr(), null === Qr || void 0 === Qr || Qr()
         }
       }
   },
-  5665: (RR, JR, GR) => {
-    GR.d(JR, {
-      B: () => ZR,
-      E: () => qR,
-      H: () => lR,
-      c: () => BR,
-      d: () => AR,
-      e: () => OR,
-      f: () => vR,
-      g: () => nR,
-      k: () => XR,
-      m: () => WR,
-      n: () => CR,
-      r: () => pR,
-      t: () => gR,
-      v: () => bR,
-      z: () => UR
+  5602: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      A: () => Lr,
+      E: () => lr,
+      G: () => Yr,
+      K: () => jr,
+      N: () => Ir,
+      Q: () => vr,
+      e: () => Tr,
+      i: () => er,
+      m: () => Pr,
+      p: () => Xr,
+      r: () => zr,
+      u: () => yr,
+      v: () => nr,
+      w: () => Kr,
+      z: () => Or
     });
-    var yR = GR(5671);
-    const tR = {
+    var Zr = Qr(5604);
+    const Wr = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let uR = tR;
+    let ar = Wr;
 
-    function ZR(RR) {
-      uR = null !== RR && void 0 !== RR ? RR : tR
+    function jr(rr) {
+      ar = null !== rr && void 0 !== rr ? rr : Wr
     }
 
-    function qR() {
-      return uR
+    function Ir() {
+      return ar
     }
-    const iR = new Set,
-      fR = new Set;
-    let VR = -1;
-    const KR = new Set,
-      wR = new Set;
-    let rR = 0,
-      eR = 0;
-    const aR = new Set,
-      LR = new Set;
+    const fr = new Set,
+      Er = new Set;
+    let pr = -1;
+    const xr = new Set,
+      mr = new Set;
+    let Nr = 0,
+      Ur = 0;
+    const tr = new Set,
+      hr = new Set;
 
-    function nR(RR) {
-      return iR.add(RR), () => {
-        iR.delete(RR)
+    function zr(rr) {
+      return fr.add(rr), () => {
+        fr.delete(rr)
       }
     }
 
-    function UR(RR, JR) {
-      for (const yR of iR) try {
-        yR(RR)
-      } catch (GR) {
-        JR(GR)
+    function Yr(rr, Sr) {
+      for (const Zr of fr) try {
+        Zr(rr)
+      } catch (Qr) {
+        Sr(Qr)
       }
     }
 
-    function WR(RR) {
-      return fR.add(RR), () => {
-        fR.delete(RR)
+    function nr(rr) {
+      return Er.add(rr), () => {
+        Er.delete(rr)
       }
     }
 
-    function AR(RR, JR) {
-      const GR = VR < 0 ? 0 : RR - VR;
-      VR = RR;
-      for (const tR of fR) try {
-        tR(GR)
-      } catch (yR) {
-        JR(yR)
+    function er(rr, Sr) {
+      const Qr = pr < 0 ? 0 : rr - pr;
+      pr = rr;
+      for (const Wr of Er) try {
+        Wr(Qr)
+      } catch (Zr) {
+        Sr(Zr)
       }
     }
 
-    function CR(RR) {
-      return KR.add(RR), () => {
-        KR.delete(RR)
+    function Kr(rr) {
+      return xr.add(rr), () => {
+        xr.delete(rr)
       }
     }
 
-    function XR(RR) {
-      return wR.add(RR), () => {
-        wR.delete(RR)
+    function yr(rr) {
+      return mr.add(rr), () => {
+        mr.delete(rr)
       }
     }
-    let MR = 0;
+    let Br = 0;
 
-    function BR(RR) {
-      MR += RR
+    function Tr(rr) {
+      Br += rr
     }
 
-    function lR() {
-      const RR = MR;
-      return MR = 0, RR
+    function vr() {
+      const rr = Br;
+      return Br = 0, rr
     }
 
-    function pR(RR) {
-      return aR.add(RR), () => {
-        aR.delete(RR)
-      }
-    }
-
-    function gR(RR) {
-      return LR.add(RR), () => {
-        LR.delete(RR)
+    function Or(rr) {
+      return tr.add(rr), () => {
+        tr.delete(rr)
       }
     }
 
-    function bR() {
-      rR = 0, eR = 0, VR = -1
+    function Lr(rr) {
+      return hr.add(rr), () => {
+        hr.delete(rr)
+      }
     }
 
-    function vR(RR, JR) {
-      if ("paced" === RR) return eR += JR, null;
-      if ("drawn" !== RR && "skipped" !== RR) return null;
-      const GR = JR + eR;
-      return eR = 0, GR
+    function lr() {
+      Nr = 0, Ur = 0, pr = -1
     }
 
-    function OR(RR, JR, GR, tR) {
-      const uR = (0, yR.f)(JR),
-        ZR = RR > 0 ? performance.now() : 0;
-      for (let yR = 0; yR < RR; yR++)
-        for (const RR of aR) try {
-          RR()
-        } catch (qR) {
-          tR(qR)
+    function Xr(rr, Sr) {
+      if ("paced" === rr) return Ur += Sr, null;
+      if ("drawn" !== rr && "skipped" !== rr) return null;
+      const Qr = Sr + Ur;
+      return Ur = 0, Qr
+    }
+
+    function Pr(rr, Sr, Qr, Wr) {
+      const ar = (0, Zr.i)(Sr),
+        jr = rr > 0 ? performance.now() : 0;
+      for (let Zr = 0; Zr < rr; Zr++)
+        for (const rr of tr) try {
+          rr()
+        } catch (Ir) {
+          Wr(Ir)
         }
-      if (RR > 0 && BR(performance.now() - ZR), null !== GR) {
-        for (const RR of KR) try {
-          RR(GR)
-        } catch (qR) {
-          tR(qR)
+      if (rr > 0 && Tr(performance.now() - jr), null !== Qr) {
+        for (const rr of xr) try {
+          rr(Qr)
+        } catch (Ir) {
+          Wr(Ir)
         }
-        rR += GR
+        Nr += Qr
       }
-      if ("drawn" === JR) {
-        const RR = rR;
-        rR = 0;
-        for (const JR of wR) try {
-          JR(RR)
-        } catch (qR) {
-          tR(qR)
+      if ("drawn" === Sr) {
+        const rr = Nr;
+        Nr = 0;
+        for (const Sr of mr) try {
+          Sr(rr)
+        } catch (Ir) {
+          Wr(Ir)
         }
       }
-      for (const yR of LR) try {
-        yR(RR, uR)
-      } catch (qR) {
-        tR(qR)
+      for (const Zr of hr) try {
+        Zr(rr, ar)
+      } catch (Ir) {
+        Wr(Ir)
       }
     }
   },
-  5697: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR,
-      f: () => uR,
-      g: () => ZR,
-      i: () => yR,
-      k: () => qR
+  5623: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr,
+      e: () => ar,
+      g: () => jr,
+      i: () => Zr,
+      m: () => Ir
     });
-    const yR = {
+    const Zr = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -570,8 +570,8 @@ export const modules = {
         TouchAttack: 195,
         TouchUse: 196
       },
-      tR = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      uR = {
+      Wr = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      ar = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -634,7 +634,7 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      ZR = {
+      jr = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
@@ -642,153 +642,153 @@ export const modules = {
         "primary-fire": [195],
         "alt-fire": [196]
       },
-      qR = [16]
+      Ir = [16]
   },
-  42194: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR,
-      g: () => uR,
-      h: () => tR
+  42526: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr,
+      h: () => ar,
+      l: () => Wr
     });
-    let yR = null;
+    let Zr = null;
 
-    function tR(RR) {
-      yR = RR
+    function Wr(rr) {
+      Zr = rr
     }
 
-    function uR(RR) {
-      yR === RR && (yR = null)
+    function ar(rr) {
+      Zr === rr && (Zr = null)
     }
 
-    function ZR() {
-      var RR;
-      null === (RR = yR) || void 0 === RR || RR()
+    function jr() {
+      var rr;
+      null === (rr = Zr) || void 0 === rr || rr()
     }
   },
-  5699: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      h: () => ZR,
-      i: () => fR
+  5628: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ir,
+      e: () => jr,
+      f: () => Er
     });
-    var yR = GR(3428),
-      tR = GR(3437);
-    const uR = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Zr = Qr(3372),
+      Wr = Qr(3378);
+    const ar = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function ZR(RR) {
-      return RR instanceof HTMLElement && (!!(RR.isContentEditable || RR instanceof HTMLTextAreaElement || RR instanceof HTMLSelectElement) || RR instanceof HTMLInputElement && !uR.has(RR.type))
+    function jr(rr) {
+      return rr instanceof HTMLElement && (!!(rr.isContentEditable || rr instanceof HTMLTextAreaElement || rr instanceof HTMLSelectElement) || rr instanceof HTMLInputElement && !ar.has(rr.type))
     }
 
-    function qR(RR) {
-      let JR = null;
-      const GR = GR => {
-          const tR = ZR(GR);
-          tR !== JR && (JR = tR, RR(yR.j.UiCapture, yR.C.Keyboard, 0, 0, tR ? yR.C.Keyboard : 0))
+    function Ir(rr) {
+      let Sr = null;
+      const Qr = Qr => {
+          const Wr = jr(Qr);
+          Wr !== Sr && (Sr = Wr, rr(Zr.g.UiCapture, Zr.y.Keyboard, 0, 0, Wr ? Zr.y.Keyboard : 0))
         },
-        tR = RR => {
-          GR(RR.target)
+        Wr = rr => {
+          Qr(rr.target)
         },
-        uR = RR => {
-          GR(RR.relatedTarget)
+        ar = rr => {
+          Qr(rr.relatedTarget)
         },
-        qR = () => {
-          GR(document.activeElement)
+        Ir = () => {
+          Qr(document.activeElement)
         },
-        iR = {
+        fr = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", tR, iR), document.addEventListener("focusout", uR, iR), document.addEventListener("keydown", qR, iR), GR(document.activeElement), () => {
-        document.removeEventListener("focusin", tR, iR), document.removeEventListener("focusout", uR, iR), document.removeEventListener("keydown", qR, iR)
+      return document.addEventListener("focusin", Wr, fr), document.addEventListener("focusout", ar, fr), document.addEventListener("keydown", Ir, fr), Qr(document.activeElement), () => {
+        document.removeEventListener("focusin", Wr, fr), document.removeEventListener("focusout", ar, fr), document.removeEventListener("keydown", Ir, fr)
       }
     }
-    const iR = new Map;
+    const fr = new Map;
 
-    function fR(RR, JR) {
-      var GR;
-      let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      iR.set(yR, (null !== (GR = iR.get(yR)) && void 0 !== GR ? GR : 0) & ~RR | JR & RR);
-      let uR = 0;
-      for (const tR of iR.values()) uR |= tR;
-      return (0, tR.H)(RR, uR & RR)
+    function Er(rr, Sr) {
+      var Qr;
+      let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      fr.set(Zr, (null !== (Qr = fr.get(Zr)) && void 0 !== Qr ? Qr : 0) & ~rr | Sr & rr);
+      let ar = 0;
+      for (const Wr of fr.values()) ar |= Wr;
+      return (0, Wr.A)(rr, ar & rr)
     }
   },
-  38040: (RR, JR, GR) => {
-    function yR(RR) {
-      return RR.includes("Leaf Bed")
+  38397: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return rr.includes("Leaf Bed")
     }
 
-    function tR(RR) {
-      return / Bed(?: Head)?(?:\||$)/.test(RR) && !yR(RR)
+    function Wr(rr) {
+      return / Bed(?: Head)?(?:\||$)/.test(rr) && !Zr(rr)
     }
 
-    function uR(RR) {
-      return RR.includes(" Strongbed")
+    function ar(rr) {
+      return rr.includes(" Strongbed")
     }
 
-    function ZR(RR) {
-      return yR(RR) || tR(RR) || uR(RR)
+    function jr(rr) {
+      return Zr(rr) || Wr(rr) || ar(rr)
     }
-    GR.d(JR, {
-      d: () => ZR,
-      f: () => yR,
-      h: () => uR,
-      k: () => tR
+    Qr.d(Sr, {
+      c: () => jr,
+      f: () => Zr,
+      h: () => ar,
+      i: () => Wr
     })
   },
-  38034: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => fR
+  38390: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Er
     });
-    var yR = GR(38040),
-      tR = GR(5844);
-    const uR = [],
-      ZR = [],
-      qR = [],
-      iR = [];
-    for (const VR of Object.keys(tR.q))(0, yR.f)(VR) ? uR.push(VR) : (0, yR.k)(VR) && ZR.push(VR), (0, yR.h)(VR) && qR.push(VR), (VR.includes(" Bed Head") || VR.includes(" Strongbed Head")) && iR.push(VR);
-    const fR = {
-      leafBeds: uR,
-      woolBeds: ZR,
-      strongBeds: qR,
-      beds: [...uR, ...ZR, ...qR],
-      bedHeads: iR,
+    var Zr = Qr(38397),
+      Wr = Qr(5779);
+    const ar = [],
+      jr = [],
+      Ir = [],
+      fr = [];
+    for (const pr of Object.keys(Wr.n))(0, Zr.f)(pr) ? ar.push(pr) : (0, Zr.i)(pr) && jr.push(pr), (0, Zr.h)(pr) && Ir.push(pr), (pr.includes(" Bed Head") || pr.includes(" Strongbed Head")) && fr.push(pr);
+    const Er = {
+      leafBeds: ar,
+      woolBeds: jr,
+      strongBeds: Ir,
+      beds: [...ar, ...jr, ...Ir],
+      bedHeads: fr,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7588: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR,
-      c: () => tR,
-      d: () => iR,
-      g: () => uR,
-      j: () => fR,
-      k: () => yR,
-      n: () => qR
+  7424: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr,
+      e: () => Wr,
+      f: () => fr,
+      j: () => ar,
+      k: () => Er,
+      n: () => Zr,
+      p: () => Ir
     });
-    let yR = function(RR) {
-        return RR[RR.DEFAULT = 0] = "DEFAULT", RR[RR.BOAT = 1] = "BOAT", RR[RR.GLIDER = 2] = "GLIDER", RR[RR.BALLOON = 3] = "BALLOON", RR[RR.SLEEPING = 4] = "SLEEPING", RR[RR.RIDING_MOB = 5] = "RIDING_MOB", RR[RR.CAR = 6] = "CAR", RR[RR.HOVERCRAFT = 7] = "HOVERCRAFT", RR
+    let Zr = function(rr) {
+        return rr[rr.DEFAULT = 0] = "DEFAULT", rr[rr.BOAT = 1] = "BOAT", rr[rr.GLIDER = 2] = "GLIDER", rr[rr.BALLOON = 3] = "BALLOON", rr[rr.SLEEPING = 4] = "SLEEPING", rr[rr.RIDING_MOB = 5] = "RIDING_MOB", rr[rr.CAR = 6] = "CAR", rr[rr.HOVERCRAFT = 7] = "HOVERCRAFT", rr
       }({}),
-      tR = function(RR) {
-        return RR[RR.WOOD = 0] = "WOOD", RR[RR.OBSIDIAN = 1] = "OBSIDIAN", RR[RR.SPEED = 2] = "SPEED", RR
+      Wr = function(rr) {
+        return rr[rr.WOOD = 0] = "WOOD", rr[rr.OBSIDIAN = 1] = "OBSIDIAN", rr[rr.SPEED = 2] = "SPEED", rr
       }({}),
-      uR = function(RR) {
-        return RR[RR.WOOD = 0] = "WOOD", RR[RR.IRON = 1] = "IRON", RR[RR.GOLD = 2] = "GOLD", RR[RR.DIAMOND = 3] = "DIAMOND", RR
+      ar = function(rr) {
+        return rr[rr.WOOD = 0] = "WOOD", rr[rr.IRON = 1] = "IRON", rr[rr.GOLD = 2] = "GOLD", rr[rr.DIAMOND = 3] = "DIAMOND", rr
       }({}),
-      ZR = function(RR) {
-        return RR[RR.YELLOW = 0] = "YELLOW", RR[RR.WHITE = 1] = "WHITE", RR[RR.RED = 2] = "RED", RR[RR.PURPLE = 3] = "PURPLE", RR[RR.PINK = 4] = "PINK", RR[RR.ORANGE = 5] = "ORANGE", RR[RR.MAGENTA = 6] = "MAGENTA", RR[RR.LIME = 7] = "LIME", RR[RR.LIGHT_GRAY = 8] = "LIGHT_GRAY", RR[RR.LIGHT_BLUE = 9] = "LIGHT_BLUE", RR[RR.GREEN = 10] = "GREEN", RR[RR.GRAY = 11] = "GRAY", RR[RR.CYAN = 12] = "CYAN", RR[RR.BROWN = 13] = "BROWN", RR[RR.BLUE = 14] = "BLUE", RR[RR.BLACK = 15] = "BLACK", RR
+      jr = function(rr) {
+        return rr[rr.YELLOW = 0] = "YELLOW", rr[rr.WHITE = 1] = "WHITE", rr[rr.RED = 2] = "RED", rr[rr.PURPLE = 3] = "PURPLE", rr[rr.PINK = 4] = "PINK", rr[rr.ORANGE = 5] = "ORANGE", rr[rr.MAGENTA = 6] = "MAGENTA", rr[rr.LIME = 7] = "LIME", rr[rr.LIGHT_GRAY = 8] = "LIGHT_GRAY", rr[rr.LIGHT_BLUE = 9] = "LIGHT_BLUE", rr[rr.GREEN = 10] = "GREEN", rr[rr.GRAY = 11] = "GRAY", rr[rr.CYAN = 12] = "CYAN", rr[rr.BROWN = 13] = "BROWN", rr[rr.BLUE = 14] = "BLUE", rr[rr.BLACK = 15] = "BLACK", rr
       }({}),
-      qR = function(RR) {
-        return RR[RR.ROTATION_1 = 0] = "ROTATION_1", RR[RR.ROTATION_2 = 1] = "ROTATION_2", RR[RR.ROTATION_3 = 2] = "ROTATION_3", RR[RR.ROTATION_4 = 3] = "ROTATION_4", RR
+      Ir = function(rr) {
+        return rr[rr.ROTATION_1 = 0] = "ROTATION_1", rr[rr.ROTATION_2 = 1] = "ROTATION_2", rr[rr.ROTATION_3 = 2] = "ROTATION_3", rr[rr.ROTATION_4 = 3] = "ROTATION_4", rr
       }({}),
-      iR = function(RR) {
-        return RR[RR.KART = 0] = "KART", RR[RR.OFF_ROADER = 1] = "OFF_ROADER", RR[RR.CAR = 2] = "CAR", RR[RR.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", RR[RR.ARMORED_CAR = 4] = "ARMORED_CAR", RR[RR.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", RR[RR.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", RR[RR.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", RR
+      fr = function(rr) {
+        return rr[rr.KART = 0] = "KART", rr[rr.OFF_ROADER = 1] = "OFF_ROADER", rr[rr.CAR = 2] = "CAR", rr[rr.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", rr[rr.ARMORED_CAR = 4] = "ARMORED_CAR", rr[rr.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", rr[rr.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", rr[rr.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", rr
       }({});
-    yR.DEFAULT, yR.BOAT, tR.SPEED, yR.GLIDER, uR.DIAMOND, yR.BALLOON, ZR.BLACK, yR.SLEEPING, qR.ROTATION_4, yR.RIDING_MOB, yR.CAR, iR.MOONSTONE_MINING_DRILL, yR.HOVERCRAFT;
-    let fR = function(RR) {
-      return RR[RR.NORMAL = 0] = "NORMAL", RR[RR.GLIDING = 1] = "GLIDING", RR[RR.FLOATING = 2] = "FLOATING", RR
+    Zr.DEFAULT, Zr.BOAT, Wr.SPEED, Zr.GLIDER, ar.DIAMOND, Zr.BALLOON, jr.BLACK, Zr.SLEEPING, Ir.ROTATION_4, Zr.RIDING_MOB, Zr.CAR, fr.MOONSTONE_MINING_DRILL, Zr.HOVERCRAFT;
+    let Er = function(rr) {
+      return rr[rr.NORMAL = 0] = "NORMAL", rr[rr.GLIDING = 1] = "GLIDING", rr[rr.FLOATING = 2] = "FLOATING", rr
     }({})
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

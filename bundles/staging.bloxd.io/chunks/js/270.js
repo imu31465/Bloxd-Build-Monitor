@@ -1,373 +1,600 @@
 export const id = 270;
 export const ids = [270];
 export const modules = {
-  38891: (RR, JR, GR) => {
-    var yR = GR(38898);
-
-    function tR(RR) {
-      for (var JR, GR, tR = 0, uR = RR.length, ZR = 0; ZR < RR.length;) {
-        for (JR = RR[ZR], GR = 0; ZR < uR && RR[ZR] === JR;) ++ZR, ++GR;
-        tR += yR.log2(GR) / 7 | 0, tR += yR.log2(JR >>> 0) / 7 | 0, tR += 2
-      }
-      return tR
-    }
-    JR.size = tR, JR.encode = function(RR, JR) {
-      JR || (JR = new Uint8Array(tR(RR)));
-      for (var GR, yR, uR = 0, ZR = JR.length, qR = 0; qR < RR.length;) {
-        for (GR = RR[qR], yR = 0; qR < RR.length && RR[qR] === GR;) ++qR, ++yR;
-        for (; uR < ZR && yR >= 128;) JR[uR++] = 128 + (127 & yR), yR >>>= 7;
-        if (uR >= ZR) throw new Error("RLE buffer overflow");
-        for (JR[uR++] = yR, GR >>>= 0; uR < ZR && GR >= 128;) JR[uR++] = 128 + (127 & GR), GR >>>= 7;
-        if (uR >= ZR) throw new Error("RLE buffer overflow");
-        JR[uR++] = GR
-      }
-      return JR
-    }, JR.decode = function(RR, JR) {
-      for (var GR, yR, tR, uR, ZR = JR.length, qR = RR.length, iR = 0, fR = 0; fR < qR;) {
-        for (GR = 0, yR = 0; fR < qR && RR[fR] >= 128;) GR += (127 & RR[fR++]) << yR, yR += 7;
-        if (GR += RR[fR++] << yR, fR >= qR) throw new Error("RLE buffer underrun");
-        if (iR + GR > ZR) throw new Error("Chunk buffer overflow");
-        for (tR = 0, yR = 0; fR < qR && RR[fR] >= 128;) tR += (127 & RR[fR++]) << yR, yR += 7;
-        if (fR >= qR) throw new Error("RLE buffer underrun");
-        for (tR += RR[fR++] << yR, uR = 0; uR < GR; ++uR) JR[iR++] = tR
-      }
-      return JR
-    }
-  },
-  38898: (RR, JR) => {
-    function GR(RR) {
-      var JR = 32;
-      return (RR &= -RR) && JR--, 65535 & RR && (JR -= 16), 16711935 & RR && (JR -= 8), 252645135 & RR && (JR -= 4), 858993459 & RR && (JR -= 2), 1431655765 & RR && (JR -= 1), JR
-    }
-    JR.INT_BITS = 32, JR.INT_MAX = 2147483647, JR.INT_MIN = -1 << 31, JR.sign = function(RR) {
-      return (RR > 0) - (RR < 0)
-    }, JR.abs = function(RR) {
-      var JR = RR >> 31;
-      return (RR ^ JR) - JR
-    }, JR.min = function(RR, JR) {
-      return JR ^ (RR ^ JR) & -(RR < JR)
-    }, JR.max = function(RR, JR) {
-      return RR ^ (RR ^ JR) & -(RR < JR)
-    }, JR.isPow2 = function(RR) {
-      return !(RR & RR - 1) && !!RR
-    }, JR.log2 = function(RR) {
-      var JR, GR;
-      return JR = (RR > 65535) << 4, JR |= GR = ((RR >>>= JR) > 255) << 3, JR |= GR = ((RR >>>= GR) > 15) << 2, (JR |= GR = ((RR >>>= GR) > 3) << 1) | (RR >>>= GR) >> 1
-    }, JR.log10 = function(RR) {
-      return RR >= 1e9 ? 9 : RR >= 1e8 ? 8 : RR >= 1e7 ? 7 : RR >= 1e6 ? 6 : RR >= 1e5 ? 5 : RR >= 1e4 ? 4 : RR >= 1e3 ? 3 : RR >= 100 ? 2 : RR >= 10 ? 1 : 0
-    }, JR.popCount = function(RR) {
-      return 16843009 * ((RR = (858993459 & (RR -= RR >>> 1 & 1431655765)) + (RR >>> 2 & 858993459)) + (RR >>> 4) & 252645135) >>> 24
-    }, JR.countTrailingZeros = GR, JR.nextPow2 = function(RR) {
-      return RR += 0 === RR, --RR, RR |= RR >>> 1, RR |= RR >>> 2, RR |= RR >>> 4, RR |= RR >>> 8, (RR |= RR >>> 16) + 1
-    }, JR.prevPow2 = function(RR) {
-      return RR |= RR >>> 1, RR |= RR >>> 2, RR |= RR >>> 4, RR |= RR >>> 8, (RR |= RR >>> 16) - (RR >>> 1)
-    }, JR.parity = function(RR) {
-      return RR ^= RR >>> 16, RR ^= RR >>> 8, RR ^= RR >>> 4, 27030 >>> (RR &= 15) & 1
-    };
-    var yR = new Array(256);
-    ! function(RR) {
-      for (var JR = 0; JR < 256; ++JR) {
-        var GR = JR,
-          yR = JR,
-          tR = 7;
-        for (GR >>>= 1; GR; GR >>>= 1) yR <<= 1, yR |= 1 & GR, --tR;
-        RR[JR] = yR << tR & 255
-      }
-    }(yR), JR.reverse = function(RR) {
-      return yR[255 & RR] << 24 | yR[RR >>> 8 & 255] << 16 | yR[RR >>> 16 & 255] << 8 | yR[RR >>> 24 & 255]
-    }, JR.interleave2 = function(RR, JR) {
-      return (RR = 1431655765 & ((RR = 858993459 & ((RR = 252645135 & ((RR = 16711935 & ((RR &= 65535) | RR << 8)) | RR << 4)) | RR << 2)) | RR << 1)) | (JR = 1431655765 & ((JR = 858993459 & ((JR = 252645135 & ((JR = 16711935 & ((JR &= 65535) | JR << 8)) | JR << 4)) | JR << 2)) | JR << 1)) << 1
-    }, JR.deinterleave2 = function(RR, JR) {
-      return (RR = 65535 & ((RR = 16711935 & ((RR = 252645135 & ((RR = 858993459 & ((RR = RR >>> JR & 1431655765) | RR >>> 1)) | RR >>> 2)) | RR >>> 4)) | RR >>> 16)) << 16 >> 16
-    }, JR.interleave3 = function(RR, JR, GR) {
-      return RR = 1227133513 & ((RR = 3272356035 & ((RR = 251719695 & ((RR = 4278190335 & ((RR &= 1023) | RR << 16)) | RR << 8)) | RR << 4)) | RR << 2), (RR |= (JR = 1227133513 & ((JR = 3272356035 & ((JR = 251719695 & ((JR = 4278190335 & ((JR &= 1023) | JR << 16)) | JR << 8)) | JR << 4)) | JR << 2)) << 1) | (GR = 1227133513 & ((GR = 3272356035 & ((GR = 251719695 & ((GR = 4278190335 & ((GR &= 1023) | GR << 16)) | GR << 8)) | GR << 4)) | GR << 2)) << 2
-    }, JR.deinterleave3 = function(RR, JR) {
-      return (RR = 1023 & ((RR = 4278190335 & ((RR = 251719695 & ((RR = 3272356035 & ((RR = RR >>> JR & 1227133513) | RR >>> 2)) | RR >>> 4)) | RR >>> 8)) | RR >>> 16)) << 22 >> 22
-    }, JR.nextCombination = function(RR) {
-      var JR = RR | RR - 1;
-      return JR + 1 | (~JR & -~JR) - 1 >>> GR(RR) + 1
-    }
-  },
-  41342: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      emptyColumnHeight: () => WR,
-      loadHeatmapSchematic: () => AR,
-      readSchematicBlocks: () => CR
+  42923: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      noaDevTools: () => xr
     });
-    var yR = GR(2537),
-      tR = GR.n(yR),
-      uR = GR(2502),
-      ZR = GR(38891),
-      qR = GR(203),
-      iR = GR(5844),
-      fR = GR(40752);
-    const VR = [{
-        name: "x",
-        type: "int"
-      }, {
-        name: "y",
-        type: "int"
-      }, {
-        name: "z",
-        type: "int"
-      }],
-      KR = [{
-        name: "name",
-        type: "string"
-      }, {
-        name: "startOffset",
-        type: {
-          type: "record",
-          fields: VR
-        }
-      }, {
-        name: "dimensions",
-        type: {
-          type: "record",
-          fields: VR
-        }
-      }, {
-        name: "chunkData",
-        type: {
-          type: "array",
-          items: {
-            type: "record",
-            fields: [...VR, {
-              name: "rle",
-              type: "bytes"
-            }]
-          }
-        }
-      }],
-      wR = tR().Type.forSchema({
-        type: "record",
-        fields: KR
-      }),
-      rR = tR().Type.forSchema({
-        type: "record",
-        fields: [...KR, {
-          name: "blockData",
-          type: {
-            type: "array",
-            items: {
-              type: "record",
-              fields: [...VR, {
-                name: "data",
-                type: "bytes"
-              }]
-            }
-          }
-        }, {
-          name: "pasteOffset",
-          type: {
-            type: "record",
-            fields: VR
-          }
-        }]
-      }),
-      eR = 2,
-      aR = 6,
-      LR = 16,
-      nR = 4096,
-      UR = qR.g.LK,
-      WR = -2147483648;
-    async function AR(RR) {
-      const JR = await (0, fR.e)(),
-        GR = await CR(new Uint8Array(await RR.arrayBuffer()), (RR => JR.get(RR)));
+    var Zr = Qr(38963),
+      Wr = Qr(38938),
+      ar = Qr(2383),
+      jr = Qr(1885),
+      Ir = Qr(42836);
+
+    function fr(rr) {
+      const {
+        Ox: Sr
+      } = rr, Qr = Sr.engine, Zr = {
+        width: Qr.getRenderWidth(),
+        height: Qr.getRenderHeight()
+      };
       return {
-        surface: GR.surface,
-        topDown: MR(GR.columnTops)
+        canvas: Qr.getRenderingCanvas(),
+        maxTextureSize: Qr.getCaps().maxTextureSize,
+        yx: () => !rr.Lx,
+        resize: (rr, Sr) => {
+          Qr.setSize(rr, Sr)
+        },
+        restoreSize: () => {
+          Qr.setSize(Zr.width, Zr.height), Sr.resize()
+        },
+        onFrameDrawn: Qr => {
+          const Zr = () => {
+            Sr.uB && Qr()
+          };
+          return rr.on("afterRender", Zr), () => {
+            rr.off("afterRender", Zr)
+          }
+        }
       }
     }
-    async function CR(RR, JR) {
-      var GR;
-      if (RR.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const yR = new DataView(RR.buffer, RR.byteOffset, RR.byteLength).getUint32(0, !0);
-      if (yR > aR) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const tR = (yR >= eR ? rR : wR).decode(uR.GK.from(RR.subarray(4)), 0).value;
-      if (!tR) throw new Error("The file isn't a schematic.");
-      if (0 === tR.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const qR = null !== (GR = tR.pasteOffset) && void 0 !== GR ? GR : {
-          x: 0,
-          y: 0,
-          z: 0
-        },
-        iR = [qR.x, qR.y, qR.z].map((RR => Math.floor(RR / UR))),
-        fR = tR.chunkData.map((RR => ({
-          x: RR.x + iR[0],
-          y: RR.y + iR[1],
-          z: RR.z + iR[2],
-          rle: RR.rle
-        }))),
-        VR = new Map;
-      for (const [uR, wR] of fR.entries()) {
-        const RR = new Uint16Array(UR ** 3);
-        ZR.decode(wR.rle, RR), VR.set(`${wR.x},${wR.y},${wR.z}`, RR), uR % LR === LR - 1 && await BR()
-      }
-      const KR = (RR, JR, GR) => RR * UR * UR + JR * UR + GR,
-        nR = (RR, JR, GR) => {
-          var yR, tR;
-          const uR = Math.floor(RR / UR),
-            ZR = Math.floor(JR / UR),
-            qR = Math.floor(GR / UR);
-          return null !== (yR = null === (tR = VR.get(`${uR},${ZR},${qR}`)) || void 0 === tR ? void 0 : tR[KR(RR - uR * UR, JR - ZR * UR, GR - qR * UR)]) && void 0 !== yR ? yR : 0
-        },
-        AR = new Map,
-        CR = [],
-        MR = [];
-      for (const [uR, ZR] of fR.entries()) {
-        const RR = VR.get(`${ZR.x},${ZR.y},${ZR.z}`),
-          GR = [ZR.x * UR, ZR.y * UR, ZR.z * UR],
-          yR = (JR, yR, tR) => JR < 0 || yR < 0 || tR < 0 || JR >= UR || yR >= UR || tR >= UR ? nR(GR[0] + JR, GR[1] + yR, GR[2] + tR) : RR[KR(JR, yR, tR)],
-          tR = `${ZR.x},${ZR.z}`;
-        let qR = AR.get(tR);
-        void 0 === qR && (qR = {
-          chunkX: ZR.x,
-          chunkZ: ZR.z,
-          heights: new Int32Array(UR * UR).fill(WR),
-          colours: new Uint8Array(UR * UR * 3)
-        }, AR.set(tR, qR));
-        for (let uR = 0; uR < UR; uR++)
-          for (let tR = 0; tR < UR; tR++)
-            for (let ZR = 0; ZR < UR; ZR++) {
-              const iR = RR[KR(uR, tR, ZR)];
-              if (0 === iR) continue;
-              const fR = GR[0] + uR,
-                VR = GR[1] + tR,
-                wR = GR[2] + ZR,
-                rR = JR(iR);
-              if (null === rR) continue;
-              const eR = ZR * UR + uR;
-              VR > qR.heights[eR] && (qR.heights[eR] = VR, qR.colours.set(rR, 3 * eR));
-              !XR(iR) && (XR(yR(uR + 1, tR, ZR)) || XR(yR(uR - 1, tR, ZR)) || XR(yR(uR, tR + 1, ZR)) || XR(yR(uR, tR - 1, ZR)) || XR(yR(uR, tR, ZR + 1)) || XR(yR(uR, tR, ZR - 1))) && (CR.push(fR, VR, wR), MR.push(rR[0], rR[1], rR[2]))
+    var Er = Qr(35335);
+
+    function pr(rr, Sr) {
+      let {
+        width: Er,
+        height: pr,
+        colouring: xr
+      } = Sr;
+      const mr = "normals" === xr,
+        Nr = "depth" === xr;
+      return new Promise((Sr => {
+        try {
+          const Ur = (0, ar.e)();
+          if (Ur.Ox.Wt) return "screenshot" !== rr || null !== xr ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Sr()) : void(0, Ir.f)(fr(Ur), Er, pr).finally(Sr);
+          const tr = Ur.Ox.engine,
+            hr = Ur.Ox.eC(),
+            zr = Er,
+            Yr = pr;
+          Promise.all([Promise.all([Qr.e(290), Qr.e(291), Qr.e(266)]).then((() => Qr(64590))), Promise.all([Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(292), Qr.e(295), Qr.e(630), Qr.e(272)]).then((() => Qr(64598))), Promise.all([Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(292), Qr.e(300), Qr.e(274)]).then((() => Qr(64605))), Qr.e(671).then((() => Qr(64609))), Promise.all([Qr.e(264), Qr.e(260)]).then((() => Qr(38555))), Qr.e(289).then((() => Qr(64611))), Qr.e(269).then((() => Qr(64619)))]).then((ar => {
+            const {
+              CreateScreenshotUsingRenderTarget: Ir
+            } = ar[1], {
+              ShaderMaterial: fr
+            } = ar[2], {
+              ShaderLanguage: Er
+            } = ar[3], {
+              kU: pr
+            } = ar[4], {
+              registerDevtoolsShader: xr
+            } = ar[6], Ur = Er.GLSL, nr = new Map, er = hr.meshes.filter((rr => rr.material));
+            let Kr = !1,
+              yr = null;
+
+            function Br() {
+              var rr;
+              Kr && (Kr = !1, (0, Zr.d)(hr.meshes, !1)), null === (rr = yr) || void 0 === rr || rr(), yr = null, er.forEach((rr => {
+                const Sr = nr.get(rr);
+                Sr && (rr.material = Sr)
+              }))
             }
-        uR % LR === LR - 1 && await BR()
-      }
-      if (0 === CR.length) throw new Error("The schematic has no blocks in it.");
-      return {
-        name: tR.name,
-        surface: {
-          positions: Int32Array.from(CR),
-          colours: Uint8Array.from(MR),
-          count: CR.length / 3
-        },
-        columnTops: [...AR.values()]
-      }
-    }
-
-    function XR(RR) {
-      if (0 === RR) return !0;
-      const JR = iR.l[RR];
-      return void 0 === JR || JR.Nr || JR.transTex || !1 === JR.solid
-    }
-
-    function MR(RR) {
-      let JR = 1 / 0,
-        GR = -1 / 0,
-        yR = 1 / 0,
-        tR = -1 / 0;
-      for (const {
-          chunkX: eR,
-          chunkZ: aR,
-          heights: LR
+            if (mr) {
+              const rr = [],
+                Sr = [];
+              er.forEach((Qr => {
+                const Zr = Qr.name.toLowerCase(),
+                  Wr = Qr.mG().boundingBox.center,
+                  ar = hr.activeCamera.position.subtract(Wr).length();
+                Zr.includes("sky") || Zr.includes("background") || Zr.includes("environment") || ar > 1e3 ? Sr.push(Qr) : rr.push(Qr)
+              })), xr("devtoolsNormal", Ur);
+              const Qr = new fr("normalMaterial", hr, "devtoolsNormal", {
+                attributes: ["position", "normal"],
+                uniforms: ["worldViewProjection", "world"],
+                shaderLanguage: Ur
+              });
+              xr("devtoolsWhite", Ur);
+              const Zr = new fr("whiteMaterial", hr, "devtoolsWhite", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection"],
+                shaderLanguage: Ur
+              });
+              rr.forEach((rr => {
+                nr.set(rr, rr.material), rr.material = Qr
+              })), Sr.forEach((rr => {
+                nr.set(rr, rr.material), rr.material = Zr
+              }))
+            } else if (Nr) {
+              xr("devtoolsDepth", Ur);
+              const rr = hr.activeCamera.position;
+              let Sr = 0,
+                Qr = 1 / 0;
+              er.forEach((Zr => {
+                const Wr = Zr.name.toLowerCase();
+                if (Wr.includes("sky") || Wr.includes("background") || Wr.includes("environment")) return;
+                const ar = Zr.mG().boundingBox.center,
+                  jr = pr.TransformCoordinates(ar, Zr.getWorldMatrix()),
+                  Ir = rr.subtract(jr).length();
+                Ir > 1e3 || (Sr = Math.max(Sr, Ir), Qr = Math.min(Qr, Ir))
+              }));
+              const Zr = Sr - Qr;
+              Sr += .1 * Zr, Qr = Math.max(0, Qr - .1 * Zr), console.log(`Depth range: min=${Qr.toFixed(2)}, max=${Sr.toFixed(2)}, range=${Zr.toFixed(2)}`), Zr < 1 && (Sr = Qr + 10);
+              const Wr = new fr("depthMaterial", hr, "devtoolsDepth", {
+                attributes: ["position"],
+                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
+                shaderLanguage: Ur
+              });
+              Wr.setVector3("cameraPosition", rr), Wr.setFloat("maxDepth", Sr), Wr.setFloat("minDepth", Qr), er.forEach((rr => {
+                nr.set(rr, rr.material), rr.material = Wr
+              }))
+            }
+            if ((0, Zr.d)(hr.meshes, !0), Kr = !0, "glb" === rr && (yr = (0, Wr.c)(hr.meshes)), "screenshot" === rr) {
+              let rr = `bloxd-screenshot-${zr}x${Yr}-${Date.now()}.png`;
+              mr ? rr = `bloxd-screenshot-normals-${zr}x${Yr}-${Date.now()}.png` : Nr && (rr = `bloxd-screenshot-depth-${zr}x${Yr}-${Date.now()}.png`), Ir(tr, hr.activeCamera, {
+                width: zr,
+                height: Yr
+              }, (function(Qr) {
+                Br(), fetch(Qr).then((function(rr) {
+                  return rr.blob()
+                })).then((function(Qr) {
+                  (0, jr.downloadBlob)(Qr, rr), Sr()
+                })).catch((function(rr) {
+                  console.error("Error processing screenshot:", rr), Sr()
+                }))
+              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
+                console.error("Screenshot timed out"), Br(), Sr()
+              }))
+            } else {
+              let rr = "Dt";
+              mr ? rr = "scene-normals" : Nr && (rr = "scene-depth"), mr || Nr ? setTimeout((() => {
+                (async function() {
+                  const {
+                    StandardMaterial: rr
+                  } = await Promise.all([Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(297), Qr.e(273)]).then((() => Qr(42100))), {
+                    Color3: Sr
+                  } = await Promise.all([Qr.e(265), Qr.e(268)]).then((() => Qr(38679))), Zr = [], Wr = [];
+                  if (er.forEach((rr => {
+                      const Sr = rr.name.toLowerCase(),
+                        Qr = rr.mG().boundingBox.center,
+                        ar = hr.activeCamera.position.subtract(Qr).length();
+                      Sr.includes("sky") || Sr.includes("background") || Sr.includes("environment") || ar > 1e3 ? Wr.push(rr) : Zr.push(rr)
+                    })), mr) Zr.forEach(((Qr, Zr) => {
+                    const Wr = Qr.getVerticesData("normal");
+                    if (Wr) {
+                      const ar = [];
+                      for (let rr = 0; rr < Wr.length; rr += 3) {
+                        const Sr = Math.abs(Wr[rr]),
+                          Qr = Math.abs(Wr[rr + 1]),
+                          Zr = Math.abs(Wr[rr + 2]);
+                        ar.push(Sr, Qr, Zr, 1)
+                      }
+                      Qr.setVerticesData("color", ar);
+                      const jr = new rr(`vertexColorMat_${Zr}`, hr);
+                      jr.disableLighting = !0, jr.emissiveColor = new Sr(1, 1, 1), jr.specularColor = new Sr(0, 0, 0), Qr.material = jr
+                    }
+                  })), Wr.forEach(((Qr, Zr) => {
+                    const Wr = Qr.getVerticesData("position");
+                    if (Wr) {
+                      const ar = [],
+                        jr = Wr.length / 3;
+                      for (let rr = 0; rr < jr; rr++) ar.push(1, 1, 1, 1);
+                      Qr.setVerticesData("color", ar);
+                      const Ir = new rr(`whiteMat_${Zr}`, hr);
+                      Ir.disableLighting = !0, Ir.emissiveColor = new Sr(1, 1, 1), Ir.specularColor = new Sr(0, 0, 0), Qr.material = Ir
+                    }
+                  }));
+                  else if (Nr) {
+                    const Qr = hr.activeCamera.position;
+                    let Wr = 0,
+                      ar = 1 / 0;
+                    Zr.forEach((rr => {
+                      const Sr = rr.mG().boundingBox.center,
+                        Zr = pr.TransformCoordinates(Sr, rr.getWorldMatrix()),
+                        jr = Qr.subtract(Zr).length();
+                      Wr = Math.max(Wr, jr), ar = Math.min(ar, jr)
+                    }));
+                    const jr = Wr - ar;
+                    Wr += .1 * jr, ar = Math.max(0, ar - .1 * jr), jr < 1 && (Wr = ar + 10), er.forEach(((Zr, jr) => {
+                      const Ir = Zr.name.toLowerCase(),
+                        fr = Zr.mG().boundingBox.center,
+                        Er = pr.TransformCoordinates(fr, Zr.getWorldMatrix()),
+                        xr = Qr.subtract(Er).length();
+                      if (!(Ir.includes("sky") || Ir.includes("background") || Ir.includes("environment") || xr > 1e3)) {
+                        const Qr = 1 - Math.min(Math.max((xr - ar) / (Wr - ar), 0), 1),
+                          Ir = new rr(`depthMat_${jr}`, hr);
+                        Ir.diffuseColor = new Sr(Qr, Qr, Qr), Ir.specularColor = new Sr(0, 0, 0), Zr.material = Ir
+                      }
+                    }))
+                  }
+                })().then((() => Promise.all([Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(300), Qr.e(312), Qr.e(630), Qr.e(279), Qr.e(299), Qr.e(263)]).then((() => Qr(64623))))).then((Sr => Sr.GLTF2Export.GLBAsync(hr, rr))).then((rr => {
+                  Br(), rr.downloadFiles(), Sr()
+                })).catch((rr => {
+                  console.error("Error exporting GLB:", rr), Br(), Sr()
+                }))
+              }), 100) : Promise.all([Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(300), Qr.e(312), Qr.e(630), Qr.e(279), Qr.e(299), Qr.e(263)]).then((() => Qr(64623))).then((Qr => {
+                Qr.GLTF2Export.GLBAsync(hr, rr).then((rr => {
+                  Br(), rr.downloadFiles(), Sr()
+                })).catch((rr => {
+                  console.error("Error exporting GLB:", rr), Br(), Sr()
+                }))
+              })).catch((rr => {
+                console.error("Error importing serializers:", rr), Br(), Sr()
+              }))
+            }
+          })).catch((rr => {
+            console.error("Error downloading the scene:", rr), Sr()
+          }))
+        } catch (Ur) {
+          console.error("Error taking screenshot:", Ur), Sr()
         }
-        of RR) LR.forEach(((RR, uR) => {
-        if (RR === WR) return;
-        const ZR = eR * UR + uR % UR,
-          qR = aR * UR + Math.floor(uR / UR);
-        JR = Math.min(JR, ZR), GR = Math.max(GR, ZR), yR = Math.min(yR, qR), tR = Math.max(tR, qR)
-      }));
-      const uR = GR - JR + 1,
-        ZR = tR - yR + 1,
-        qR = Math.max(1, Math.ceil(uR / nR), Math.ceil(ZR / nR)),
-        iR = Math.ceil(uR / qR),
-        fR = Math.ceil(ZR / qR),
-        VR = document.createElement("canvas");
-      VR.width = iR, VR.height = fR;
-      const KR = VR.getContext("2d");
-      if (!KR) throw new Error("Couldn't draw the schematic from above.");
-      const wR = KR.createImageData(iR, fR),
-        rR = new Int32Array(iR * fR).fill(WR);
-      for (const {
-          chunkX: eR,
-          chunkZ: aR,
-          heights: LR,
-          colours: nR
-        }
-        of RR) LR.forEach(((RR, JR) => {
-        const tR = eR * UR + JR % UR,
-          uR = aR * UR + Math.floor(JR / UR),
-          ZR = Math.floor((uR - yR) / qR) * iR + Math.floor((GR - tR) / qR);
-        RR === WR || RR <= rR[ZR] || (rR[ZR] = RR, wR.data.set(nR.subarray(3 * JR, 3 * JR + 3), 4 * ZR), wR.data[4 * ZR + 3] = 255)
-      }));
-      return KR.putImageData(wR, 0, 0), {
-        maxX: GR,
-        minZ: yR,
-        width: iR * qR,
-        depth: fR * qR,
-        canvas: VR
-      }
-    }
-
-    function BR() {
-      return new Promise((RR => {
-        setTimeout(RR, 0)
       }))
     }
-  },
-  40752: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR
-    });
-    var yR = GR(40756);
-    async function tR() {
-      const {
-        averageColors: RR
-      } = await GR.e(234).then((() => GR(35257)));
-      return new yR.b(RR)
+    const xr = new class {
+      constructor() {
+        this.tools = Er.ALL_DEV_TOOLS
+      }
+      downloadScene(rr, Sr) {
+        return pr(rr, Sr)
+      }
+      async setAmbientLightIntensity(rr) {
+        const {
+          Color3: Sr
+        } = await Promise.all([Qr.e(265), Qr.e(268)]).then((() => Qr(38679)));
+        (0, ar.e)().Ox.eC().ambientColor = Sr.FromArray([rr, rr, rr])
+      }
+      capturePhoto(rr, Sr, Qr) {
+        return function(rr, Sr, Qr, Zr) {
+          return (0, Ir.b)(fr(rr), Sr, Qr, Zr)
+        }((0, ar.e)(), rr, Sr, Qr)
+      }
+      snapshotNextFrame() {
+        return (0, Ir.i)(fr((0, ar.e)()))
+      }
     }
   },
-  40756: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => qR,
-      d: () => ZR
+  42836: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir,
+      f: () => Er,
+      i: () => fr
     });
-    var yR = GR(5844);
-    const tR = {
-        Water: [63, 118, 228],
-        Lava: [232, 110, 30]
-      },
-      uR = [150, 150, 150],
-      ZR = -2147483648;
-    class qR {
-      constructor(RR) {
-        this.averages = RR, this.byId = new Map
+    var Zr = Qr(1904);
+    const Wr = 33177600,
+      ar = 3e4;
+    let jr = !1;
+
+    function Ir(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const {
+        scale: Ir = 1,
+        type: fr = "image/png",
+        quality: Er
+      } = Zr;
+      return rr.yx() ? jr ? Promise.reject(new Error("A screenshot is already being taken")) : (jr = !0, new Promise(((Zr, pr) => {
+        let xr, mr = 2,
+          Nr = null;
+        const Ur = () => {
+          var Sr;
+          jr = !1, null === (Sr = Nr) || void 0 === Sr || Sr(), clearTimeout(xr);
+          try {
+            rr.restoreSize()
+          } catch (Qr) {
+            console.error("A screenshot couldn't size the canvas back", Qr)
+          }
+        };
+        xr = setTimeout((() => {
+          Ur(), pr(new Error("No frame was drawn to capture"))
+        }), ar);
+        try {
+          const Zr = function(rr, Sr, Qr) {
+            const Zr = Math.max(1, rr),
+              ar = Math.max(1, Sr),
+              jr = Math.min(1, Qr / Math.max(Zr, ar), Math.sqrt(Wr / (Zr * ar)));
+            return {
+              width: Math.max(1, Math.floor(Zr * jr)),
+              height: Math.max(1, Math.floor(ar * jr))
+            }
+          }(Sr, Qr, rr.maxTextureSize);
+          rr.resize(Zr.width, Zr.height, Ir * Zr.width / Math.max(1, Sr))
+        } catch (tr) {
+          return Ur(), void pr(tr)
+        }
+        Nr = rr.onFrameDrawn((() => {
+          if (mr--, mr > 0) return;
+          const {
+            canvas: Sr
+          } = rr, Qr = {
+            width: Sr.width,
+            height: Sr.height
+          };
+          try {
+            Sr.toBlob((rr => {
+              rr ? Zr({
+                blob: rr,
+                ...Qr
+              }) : pr(new Error("The canvas gave no image"))
+            }), fr, Er)
+          } catch (tr) {
+            pr(tr)
+          } finally {
+            Ur()
+          }
+        }))
+      }))) : Promise.reject(new Error("Screenshots need a game to be running"))
+    }
+
+    function fr(rr) {
+      return rr.yx() ? new Promise(((Sr, Qr) => {
+        let Zr;
+        const Wr = rr.onFrameDrawn((() => {
+          Wr(), clearTimeout(Zr), createImageBitmap(rr.canvas).then(Sr, Qr)
+        }));
+        Zr = setTimeout((() => {
+          Wr(), Qr(new Error("No frame was drawn to take"))
+        }), ar)
+      })) : Promise.reject(new Error("No game is drawing"))
+    }
+    async function Er(rr, Sr, Qr) {
+      try {
+        const Wr = await Ir(rr, Sr, Qr);
+        (0, Zr.c)(Wr.blob, `bloxd-screenshot-${Wr.width}x${Wr.height}-${Date.now()}.png`)
+      } catch (Wr) {
+        console.error("Error taking screenshot:", Wr)
       }
-      get(RR) {
-        var JR, GR, ZR, qR, iR;
-        const fR = this.byId.get(RR);
-        if (void 0 !== fR) return fR;
-        const VR = null !== (JR = null === (GR = yR.l[RR]) || void 0 === GR ? void 0 : GR.name) && void 0 !== JR ? JR : "",
-          KR = VR.split("|")[0],
-          wR = null !== (ZR = this.averages[VR]) && void 0 !== ZR ? ZR : this.averages[KR],
-          rR = null !== (qR = null !== (iR = null === wR || void 0 === wR ? void 0 : wR[0]) && void 0 !== iR ? iR : tR[KR]) && void 0 !== qR ? qR : 0 === (null === wR || void 0 === wR ? void 0 : wR.length) ? null : uR;
-        return this.byId.set(RR, rR), rR
+    }
+  },
+  38963: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Er,
+      d: () => Ir,
+      e: () => jr
+    });
+    var Zr = Qr(38956),
+      Wr = Qr(38972);
+    let ar = 0;
+
+    function jr(rr, Sr) {
+      const Qr = rr;
+      Qr._noaFaceGroups = null !== Sr && void 0 !== Sr ? Sr : null, Qr._noaFaceEpoch = -1, Qr._noaFaceMask = -1, Qr._noaFaceCount = -1, Qr._noaFaceMaterial = null;
+      const Zr = rr.jT;
+      Zr && 1 === Zr.length && (Zr[0].indexStart = 0, Zr[0].indexCount = rr.getTotalIndices())
+    }
+
+    function Ir(rr, Sr) {
+      if (Sr) {
+        ar++;
+        for (const Sr of rr) {
+          const rr = Sr._noaFaceGroups;
+          rr && jr(Sr, rr)
+        }
+      } else ar = Math.max(0, ar - 1)
+    }
+
+    function fr(rr, Sr, Qr) {
+      let Wr = -1,
+        ar = 0;
+      for (let jr = 0; jr < Zr.f; jr++) {
+        const Qr = rr[jr],
+          Ir = rr[jr + 1];
+        Ir > Qr && Sr & 1 << Zr.e[jr] && (Wr < 0 && (Wr = Qr), ar = Ir)
       }
-      getDrawnIds() {
-        const RR = new Uint8Array(65536);
-        for (let JR = 1; JR < 65536; JR++) void 0 !== yR.l[JR] && null !== this.get(JR) && (RR[JR] = 1);
-        return RR
+      return Wr < 0 ? (Qr[0] = 0, Qr[1] = 0, 0) : (Qr[0] = Wr, Qr[1] = ar - Wr, ar - Wr)
+    }
+    class Er {
+      constructor(rr, Sr) {
+        this.hx = rr, this.engine = Sr, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      drawPixel(RR, JR, GR, yR, tR, uR) {
-        const qR = function(RR, JR, GR) {
-            const yR = RR - JR + (RR - GR);
-            return Math.max(.65, Math.min(1.2, .97 + .055 * yR))
-          }(yR, tR === ZR ? yR : tR, uR === ZR ? yR : uR),
-          iR = this.get(GR);
-        RR[JR] = iR[0] * qR, RR[JR + 1] = iR[1] * qR, RR[JR + 2] = iR[2] * qR, RR[JR + 3] = 255
+      apply(rr, Sr) {
+        if (!Sr) return;
+        const Qr = Sr.getProjectionMatrix().m,
+          jr = 0 === ar && 0 === Qr[15],
+          Ir = Sr.globalPosition,
+          {
+            engine: Er
+          } = this,
+          pr = jr ? (0, Wr.c)(Qr, Er.getRenderWidth(), Er.getRenderHeight()) : 0;
+        Ir.x === this.eyeX && Ir.y === this.eyeY && Ir.z === this.eyeZ && pr === this.focalPx && jr === this.culling || (this.epoch++, this.eyeX = Ir.x, this.eyeY = Ir.y, this.eyeZ = Ir.z, this.focalPx = pr, this.culling = jr);
+        const {
+          epoch: xr,
+          range: mr
+        } = this, Nr = this.hx / 2, Ur = Nr * Math.sqrt(3), tr = rr.data, hr = rr.length;
+        let zr = 0;
+        for (let ar = 0; ar < hr; ar++) {
+          const rr = tr[ar],
+            Sr = rr._noaFaceGroups;
+          if (Sr && (rr._noaFaceEpoch !== xr || rr._noaFaceMaterial !== rr.material)) {
+            rr._noaFaceEpoch = xr, rr._noaFaceMaterial = rr.material;
+            const Qr = rr.jT,
+              ar = Qr && 1 === Qr.length ? Qr[0] : null;
+            let Er = -1;
+            if (jr && ar && (0, Zr.s)(rr.material)) {
+              const Qr = rr.position,
+                Zr = Ir.x - Qr.x,
+                ar = Ir.y - Qr.y,
+                jr = Ir.z - Qr.z,
+                fr = Zr - Nr,
+                xr = ar - Nr,
+                mr = jr - Nr,
+                tr = Math.sqrt(fr * fr + xr * xr + mr * mr) + Ur;
+              Er = (0, Wr.g)(Sr, Zr, ar, jr, (0, Wr.d)(tr, pr))
+            }
+            if (ar && Er !== rr._noaFaceMask) {
+              rr._noaFaceMask = Er;
+              let Qr = 0,
+                Wr = Sr[Zr.f]; - 1 !== Er && (Wr = fr(Sr, Er, mr), Qr = mr[0]), rr._noaFaceCount = Wr, ar.indexStart = 6 * Qr, ar.indexCount = 6 * Wr, ar.setBoundingInfo(rr.mG())
+            }
+          }
+          Sr && 0 === rr._noaFaceCount || (tr[zr++] = rr)
+        }
+        rr.length = zr
       }
+    }
+  },
+  38938: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => fr,
+      f: () => Ir
+    });
+    const Zr = new WeakSet;
+    let Wr = 0;
+    const ar = new Set;
+
+    function jr(rr, Sr) {
+      rr._data = Sr
+    }
+
+    function Ir(rr) {
+      var Sr, Qr;
+      (null !== (Sr = null === (Qr = rr.getBuffer()) || void 0 === Qr ? void 0 : Qr.sx) && void 0 !== Sr ? Sr : 0) > 0 && (Zr.add(rr), 0 === Wr ? jr(rr, null) : ar.add(rr))
+    }
+
+    function fr(rr) {
+      Wr++;
+      for (const Qr of function(rr) {
+          const Sr = new Set;
+          for (const Wr of rr) {
+            const rr = Wr.geometry;
+            for (const Wr of Object.values(null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.getVertexBuffers()) && void 0 !== Qr ? Qr : {})) {
+              var Qr;
+              const rr = Wr.getWrapperBuffer();
+              Zr.has(rr) && Sr.add(rr)
+            }
+          }
+          return Sr
+        }(rr)) Qr.getData() || Er(Qr), ar.add(Qr);
+      let Sr = !0;
+      return () => {
+        if (Sr && (Sr = !1, Wr--, 0 === Wr)) {
+          for (const rr of ar) jr(rr, null);
+          ar.clear()
+        }
+      }
+    }
+
+    function Er(rr) {
+      const Sr = rr.getBuffer();
+      if (!Sr || !(Sr.sx > 0)) return;
+      const Qr = rr._engine,
+        Zr = new Uint8Array(Sr.sx);
+      Qr.bindArrayBuffer(Sr), Qr._gl.getBufferSubData(Qr._gl.ARRAY_BUFFER, 0, Zr), Qr._resetVertexBufferBinding(), jr(rr, Zr)
+    }
+  },
+  38956: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => jr,
+      f: () => ar,
+      i: () => fr,
+      j: () => Zr,
+      n: () => Ir,
+      q: () => Wr,
+      s: () => Er
+    });
+    const Zr = 6,
+      Wr = [0, 2, 4, 1, 3, 5, 0, 2],
+      ar = 6,
+      jr = [1, 0, 3, 2, 5, 4];
+    for (let pr = ar; pr < Wr.length; pr++)
+      if (Wr[pr] !== Wr[pr - ar]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const Ir = Wr.length + 1,
+      fr = (() => {
+        const rr = [];
+        for (let Sr = 0; Sr < ar; Sr++) rr[Wr[Sr]] = Sr;
+        return rr
+      })();
+
+    function Er(rr) {
+      return !!rr && rr.backFaceCulling && (0 === rr.transparencyMode || 1 === rr.transparencyMode)
+    }
+  },
+  38972: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Ir,
+      d: () => fr,
+      e: () => pr,
+      g: () => Er,
+      h: () => Ur
+    });
+    var Zr = Qr(38956);
+    const Wr = 1 / 16,
+      ar = 1 / 64,
+      jr = 2048;
+    Zr.j;
+
+    function Ir(rr, Sr, Qr) {
+      return Math.min(Math.abs(rr[0] * Sr), Math.abs(rr[5] * Qr)) / 2
+    }
+
+    function fr(rr, Sr) {
+      return Wr + ar * rr * rr / Sr
+    }
+
+    function Er(rr, Sr, Qr, Wr, ar) {
+      const jr = Zr.n;
+      return pr(rr[jr], rr[jr + 1], rr[jr + 2], rr[jr + 3], rr[jr + 4], rr[jr + 5], Sr, Qr, Wr, ar)
+    }
+
+    function pr(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er) {
+      return (jr <= rr - Er ? 0 : 1) | (jr >= Sr + Er ? 0 : 2) | (Ir <= Qr - Er ? 0 : 4) | (Ir >= Zr + Er ? 0 : 8) | (fr <= Wr - Er ? 0 : 16) | (fr >= ar + Er ? 0 : 32)
+    }
+    const xr = (() => {
+        const rr = [];
+        for (let Sr = 0; Sr < Zr.q.length; Sr++) {
+          let Qr = 0;
+          for (let Wr = Sr + 1; Wr <= Zr.q.length; Wr++) {
+            const ar = 1 << Zr.q[Wr - 1];
+            if (Qr & ar) break;
+            Qr |= ar, rr.push({
+              start: Sr,
+              end: Wr,
+              Sr: Qr
+            })
+          }
+        }
+        return rr
+      })(),
+      mr = [];
+
+    function Nr(rr, Sr) {
+      const Qr = Zr.i[Sr];
+      return rr[Qr + 1] - rr[Qr]
+    }
+
+    function Ur(rr, Sr, Qr) {
+      let Wr = 0;
+      for (let jr = 0; jr < Zr.j; jr++) Nr(rr, jr) > 0 && (Wr |= 1 << jr);
+      if (0 === (Sr &= Wr)) return 0;
+      if (Sr === Wr) return Qr[0] = 0, Qr[1] = rr[Zr.f], 1;
+      let ar = null,
+        Ir = 1 / 0;
+      for (const Er of function(rr) {
+          let Sr = mr[rr];
+          if (Sr) return Sr;
+          const Qr = new Map,
+            Zr = (rr, Sr) => {
+              const Zr = 4 * rr + Sr.length / 2;
+              Qr.has(Zr) || Qr.set(Zr, {
+                Sr: rr,
+                windows: Sr
+              })
+            };
+          for (const ar of xr)
+            if ((ar.Sr & rr) === rr && Zr(ar.Sr, [ar.start, ar.end]), 0 !== (ar.Sr & rr))
+              for (const Sr of xr) Sr.start < ar.end || 0 !== (ar.Sr & Sr.Sr) || 0 === (Sr.Sr & rr) || ((ar.Sr | Sr.Sr) & rr) !== rr || Zr(ar.Sr | Sr.Sr, [ar.start, ar.end, Sr.start, Sr.end]);
+          const Wr = [...Qr.values()];
+          return Sr = Wr.filter((rr => !Wr.some((Sr => Sr !== rr && (Sr.Sr & rr.Sr) === Sr.Sr && Sr.windows.length <= rr.windows.length)))), mr[rr] = Sr, Sr
+        }(Sr)) {
+        let Qr = (Er.windows.length / 2 - 1) * jr;
+        const fr = Er.Sr & ~Sr & Wr;
+        for (let Sr = 0; Sr < Zr.j; Sr++) fr & 1 << Sr && (Qr += Nr(rr, Sr));
+        Qr < Ir && (ar = Er, Ir = Qr)
+      }
+      const fr = ar.windows;
+      for (let Zr = 0; Zr < fr.length; Zr += 2) {
+        const Sr = rr[fr[Zr]];
+        Qr[Zr] = Sr, Qr[Zr + 1] = rr[fr[Zr + 1]] - Sr
+      }
+      return fr.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

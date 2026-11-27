@@ -1,497 +1,497 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  37543: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      drawBlockIcon: () => UR,
-      drawBlockIconUrl: () => WR,
-      getDrawnBlockIcon: () => nR,
-      resetBlockIconDrawingForTests: () => eR
+  37933: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      drawBlockIcon: () => Yr,
+      drawBlockIconUrl: () => nr,
+      getDrawnBlockIcon: () => zr,
+      resetBlockIconDrawingForTests: () => Ur
     });
-    var yR = GR(37549);
-    const tR = {
+    var Zr = Qr(37939);
+    const Wr = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      uR = {
+      ar = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      ZR = {
+      jr = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const qR = 1e-6;
+    const Ir = 1e-6;
 
-    function iR(RR, JR, GR, yR) {
+    function fr(rr, Sr, Qr, Zr) {
       let {
-        origin: tR,
-        across: uR,
-        down: ZR,
-        texture: iR,
-        rect: [fR, VR, KR, wR],
-        shade: rR
-      } = yR;
-      const eR = uR.x * ZR.y - uR.y * ZR.x;
-      if (Math.abs(eR) < 1e-9) return;
-      const aR = [tR.x, tR.x + uR.x, tR.x + ZR.x, tR.x + uR.x + ZR.x],
-        LR = [tR.y, tR.y + uR.y, tR.y + ZR.y, tR.y + uR.y + ZR.y],
-        nR = Math.max(0, Math.floor(Math.min(...aR))),
-        UR = Math.min(GR - 1, Math.ceil(Math.max(...aR))),
-        WR = Math.max(0, Math.floor(Math.min(...LR))),
-        AR = Math.min(GR - 1, Math.ceil(Math.max(...LR)));
-      for (let CR = WR; CR <= AR; CR++)
-        for (let yR = nR; yR <= UR; yR++) {
-          const aR = yR + .5 - tR.x,
-            LR = CR + .5 - tR.y,
-            nR = (aR * ZR.y - LR * ZR.x) / eR,
-            UR = (uR.x * LR - uR.y * aR) / eR;
-          if (nR < -qR || nR > 1 + qR || UR < -qR || UR > 1 + qR) continue;
-          const WR = CR * GR + yR;
-          JR[WR] = 1;
-          const AR = fR + Math.min(Math.max(nR, 0), 1) * (KR - fR),
-            XR = VR + Math.min(Math.max(UR, 0), 1) * (wR - VR),
-            MR = Math.min(iR.width - 1, Math.floor(AR * iR.width)),
-            BR = 4 * (Math.min(iR.height - 1, Math.floor(XR * iR.height)) * iR.width + MR),
-            lR = iR.pixels[BR + 3] / 255;
-          if (0 === lR) continue;
-          const pR = 4 * WR,
-            gR = RR[pR + 3] / 255 * (1 - lR),
-            bR = lR + gR;
-          for (let JR = 0; JR < 3; JR++) RR[pR + JR] = (iR.pixels[BR + JR] * rR * lR + RR[pR + JR] * gR) / bR;
-          RR[pR + 3] = 255 * bR
+        origin: Wr,
+        across: ar,
+        down: jr,
+        texture: fr,
+        rect: [Er, pr, xr, mr],
+        shade: Nr
+      } = Zr;
+      const Ur = ar.x * jr.y - ar.y * jr.x;
+      if (Math.abs(Ur) < 1e-9) return;
+      const tr = [Wr.x, Wr.x + ar.x, Wr.x + jr.x, Wr.x + ar.x + jr.x],
+        hr = [Wr.y, Wr.y + ar.y, Wr.y + jr.y, Wr.y + ar.y + jr.y],
+        zr = Math.max(0, Math.floor(Math.min(...tr))),
+        Yr = Math.min(Qr - 1, Math.ceil(Math.max(...tr))),
+        nr = Math.max(0, Math.floor(Math.min(...hr))),
+        er = Math.min(Qr - 1, Math.ceil(Math.max(...hr)));
+      for (let Kr = nr; Kr <= er; Kr++)
+        for (let Zr = zr; Zr <= Yr; Zr++) {
+          const tr = Zr + .5 - Wr.x,
+            hr = Kr + .5 - Wr.y,
+            zr = (tr * jr.y - hr * jr.x) / Ur,
+            Yr = (ar.x * hr - ar.y * tr) / Ur;
+          if (zr < -Ir || zr > 1 + Ir || Yr < -Ir || Yr > 1 + Ir) continue;
+          const nr = Kr * Qr + Zr;
+          Sr[nr] = 1;
+          const er = Er + Math.min(Math.max(zr, 0), 1) * (xr - Er),
+            yr = pr + Math.min(Math.max(Yr, 0), 1) * (mr - pr),
+            Br = Math.min(fr.width - 1, Math.floor(er * fr.width)),
+            Tr = 4 * (Math.min(fr.height - 1, Math.floor(yr * fr.height)) * fr.width + Br),
+            vr = fr.pixels[Tr + 3] / 255;
+          if (0 === vr) continue;
+          const Or = 4 * nr,
+            Lr = rr[Or + 3] / 255 * (1 - vr),
+            lr = vr + Lr;
+          for (let Sr = 0; Sr < 3; Sr++) rr[Or + Sr] = (fr.pixels[Tr + Sr] * Nr * vr + rr[Or + Sr] * Lr) / lr;
+          rr[Or + 3] = 255 * lr
         }
     }
-    var fR = GR(37558);
-    const VR = new Map,
-      KR = new Map,
-      wR = new Map,
-      rR = new Map;
+    var Er = Qr(37942);
+    const pr = new Map,
+      xr = new Map,
+      mr = new Map,
+      Nr = new Map;
 
-    function eR() {
-      VR.clear(), KR.clear(), wR.clear(), rR.clear()
+    function Ur() {
+      pr.clear(), xr.clear(), mr.clear(), Nr.clear()
     }
 
-    function aR(RR, JR, GR) {
-      return `${JR}|${GR}|${RR}`
+    function tr(rr, Sr, Qr) {
+      return `${Sr}|${Qr}|${rr}`
     }
 
-    function LR(RR, JR, GR) {
-      let yR = RR.get(JR);
-      return void 0 === yR && (yR = GR().catch((GR => {
-        throw RR.delete(JR), GR
-      })), RR.set(JR, yR)), yR
+    function hr(rr, Sr, Qr) {
+      let Zr = rr.get(Sr);
+      return void 0 === Zr && (Zr = Qr().catch((Qr => {
+        throw rr.delete(Sr), Qr
+      })), rr.set(Sr, Zr)), Zr
     }
 
-    function nR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return KR.get(aR(RR, JR, GR))
+    function zr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return xr.get(tr(rr, Sr, Qr))
     }
 
-    function UR(RR, JR, GR, yR) {
-      const tR = aR(RR, JR, GR);
-      return LR(VR, tR, (async () => {
-        const uR = await AR(yR(RR), JR, GR);
-        return KR.set(tR, uR), uR
+    function Yr(rr, Sr, Qr, Zr) {
+      const Wr = tr(rr, Sr, Qr);
+      return hr(pr, Wr, (async () => {
+        const ar = await er(Zr(rr), Sr, Qr);
+        return xr.set(Wr, ar), ar
       }))
     }
 
-    function WR(RR, JR, GR, yR) {
-      return LR(wR, aR(RR, JR, GR), (async () => {
-        var tR;
-        const uR = yR(RR);
-        return null !== (tR = await (0, fR.e)(uR, JR, GR)) && void 0 !== tR ? tR : (await AR(uR, JR, GR)).toDataURL()
+    function nr(rr, Sr, Qr, Zr) {
+      return hr(mr, tr(rr, Sr, Qr), (async () => {
+        var Wr;
+        const ar = Zr(rr);
+        return null !== (Wr = await (0, Er.b)(ar, Sr, Qr)) && void 0 !== Wr ? Wr : (await er(ar, Sr, Qr)).toDataURL()
       }))
     }
-    async function AR(RR, JR, GR) {
+    async function er(rr, Sr, Qr) {
       let {
-        top: qR,
-        left: fR,
-        right: VR,
-        itemType: KR
-      } = RR;
-      const [wR, rR, eR] = await Promise.all([CR(qR), CR(fR), CR(VR)]), aR = function(RR, JR, GR, tR) {
-        const uR = (0, yR.i)(GR, tR),
-          ZR = uR * yR.c.across,
-          qR = uR * yR.c.down,
-          fR = uR * yR.c.up,
-          VR = Math.max(...JR.boxes.map((RR => RR[4]))),
-          KR = GR / 2,
-          wR = qR + (GR - qR - qR - VR * fR) / 2,
-          rR = (RR, JR, GR) => ({
-            x: KR + (RR - GR) * ZR,
-            y: wR - qR + (RR + GR) * qR + (VR - JR) * fR
+        top: Ir,
+        left: Er,
+        right: pr,
+        itemType: xr
+      } = rr;
+      const [mr, Nr, Ur] = await Promise.all([Kr(Ir), Kr(Er), Kr(pr)]), tr = function(rr, Sr, Qr, Wr) {
+        const ar = (0, Zr.j)(Qr, Wr),
+          jr = ar * Zr.d.across,
+          Ir = ar * Zr.d.down,
+          Er = ar * Zr.d.up,
+          pr = Math.max(...Sr.boxes.map((rr => rr[4]))),
+          xr = Qr / 2,
+          mr = Ir + (Qr - Ir - Ir - pr * Er) / 2,
+          Nr = (rr, Sr, Qr) => ({
+            x: xr + (rr - Qr) * jr,
+            y: mr - Ir + (rr + Qr) * Ir + (pr - Sr) * Er
           }),
-          eR = (RR, GR, yR, tR, uR, ZR) => ({
-            origin: RR,
+          Ur = (rr, Qr, Zr, Wr, ar, jr) => ({
+            origin: rr,
             across: {
-              x: GR.x - RR.x,
-              y: GR.y - RR.y
+              x: Qr.x - rr.x,
+              y: Qr.y - rr.y
             },
             down: {
-              x: yR.x - RR.x,
-              y: yR.y - RR.y
+              x: Zr.x - rr.x,
+              y: Zr.y - rr.y
             },
-            texture: tR,
-            rect: JR.cropFaces ? uR : [0, 0, 1, 1],
-            shade: ZR
+            texture: Wr,
+            rect: Sr.cropFaces ? ar : [0, 0, 1, 1],
+            shade: jr
           }),
-          aR = new Uint8ClampedArray(GR * GR * 4),
-          LR = new Uint8Array(GR * GR),
-          nR = yR.g;
-        for (const [yR, UR, WR, AR, CR, XR] of JR.boxes) {
-          const JR = eR(rR(AR, CR, XR), rR(AR, CR, WR), rR(AR, UR, XR), RR.right, [1 - XR, 1 - CR, 1 - WR, 1 - UR], nR.right),
-            tR = eR(rR(yR, CR, XR), rR(AR, CR, XR), rR(yR, UR, XR), RR.left, [yR, 1 - CR, AR, 1 - UR], nR.left),
-            uR = eR(rR(yR, CR, WR), rR(AR, CR, WR), rR(yR, CR, XR), RR.top, [yR, WR, AR, XR], nR.top);
-          for (const RR of [JR, tR, uR]) iR(aR, LR, GR, RR)
+          tr = new Uint8ClampedArray(Qr * Qr * 4),
+          hr = new Uint8Array(Qr * Qr),
+          zr = Zr.g;
+        for (const [Zr, Yr, nr, er, Kr, yr] of Sr.boxes) {
+          const Sr = Ur(Nr(er, Kr, yr), Nr(er, Kr, nr), Nr(er, Yr, yr), rr.right, [1 - yr, 1 - Kr, 1 - nr, 1 - Yr], zr.right),
+            Wr = Ur(Nr(Zr, Kr, yr), Nr(er, Kr, yr), Nr(Zr, Yr, yr), rr.left, [Zr, 1 - Kr, er, 1 - Yr], zr.left),
+            ar = Ur(Nr(Zr, Kr, nr), Nr(er, Kr, nr), Nr(Zr, Kr, yr), rr.top, [Zr, nr, er, yr], zr.top);
+          for (const rr of [Sr, Wr, ar]) fr(tr, hr, Qr, rr)
         }
-        return (0, yR.m)(aR, GR, tR, (RR => 1 === LR[RR])), aR
+        return (0, Zr.l)(tr, Qr, Wr, (rr => 1 === hr[rr])), tr
       }({
-        top: wR,
-        left: rR,
-        right: eR
-      }, function(RR) {
-        return "SlabBlock" === RR ? uR : "StairsBlock" === RR ? ZR : tR
-      }(KR), JR, GR), LR = document.createElement("canvas");
-      LR.width = JR, LR.height = JR;
-      const nR = LR.getContext("2d");
-      if (!nR) throw new Error("Failed to get 2D context");
-      return nR.putImageData(new ImageData(aR, JR, JR), 0, 0), LR
+        top: mr,
+        left: Nr,
+        right: Ur
+      }, function(rr) {
+        return "SlabBlock" === rr ? ar : "StairsBlock" === rr ? jr : Wr
+      }(xr), Sr, Qr), hr = document.createElement("canvas");
+      hr.width = Sr, hr.height = Sr;
+      const zr = hr.getContext("2d");
+      if (!zr) throw new Error("Failed to get 2D context");
+      return zr.putImageData(new ImageData(tr, Sr, Sr), 0, 0), hr
     }
 
-    function CR(RR) {
-      return LR(rR, RR, (async () => {
-        const JR = await (0, fR.o)(RR),
-          GR = document.createElement("canvas");
-        GR.width = JR.width, GR.height = JR.height;
-        const yR = GR.getContext("2d");
-        if (!yR) throw new Error("Failed to get 2D context");
-        return yR.drawImage(JR, 0, 0), {
-          width: JR.width,
-          height: JR.height,
-          pixels: yR.getImageData(0, 0, JR.width, JR.height).data
+    function Kr(rr) {
+      return hr(Nr, rr, (async () => {
+        const Sr = await (0, Er.g)(rr),
+          Qr = document.createElement("canvas");
+        Qr.width = Sr.width, Qr.height = Sr.height;
+        const Zr = Qr.getContext("2d");
+        if (!Zr) throw new Error("Failed to get 2D context");
+        return Zr.drawImage(Sr, 0, 0), {
+          width: Sr.width,
+          height: Sr.height,
+          pixels: Zr.getImageData(0, 0, Sr.width, Sr.height).data
         }
       }))
     }
   },
-  37558: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => gR,
-      i: () => bR,
-      m: () => CR,
-      o: () => WR,
-      r: () => XR
+  37942: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Lr,
+      d: () => lr,
+      f: () => Kr,
+      g: () => nr,
+      k: () => yr
     });
-    var yR = GR(289),
-      tR = GR(103);
-    const uR = new(GR(37561).b)(new URL(GR.p + GR.u(3), GR.b), {
+    var Zr = Qr(300),
+      Wr = Qr(109);
+    const ar = new(Qr(37945).d)(new URL(Qr.p + Qr.u(3), Qr.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var ZR = GR(1825),
-      qR = GR(2366);
-    const iR = 1e4,
-      fR = 3e4;
-    let VR = null,
-      KR = null,
-      wR = null,
-      rR = !1,
-      eR = 0;
-    const aR = new Map;
-    let LR = null;
-    const nR = new Map,
-      UR = new Map;
+    var jr = Qr(1783),
+      Ir = Qr(2311);
+    const fr = 1e4,
+      Er = 3e4;
+    let pr = null,
+      xr = null,
+      mr = null,
+      Nr = !1,
+      Ur = 0;
+    const tr = new Map;
+    let hr = null;
+    const zr = new Map,
+      Yr = new Map;
 
-    function WR(RR) {
-      const JR = new Promise(((JR, GR) => {
-        const yR = new Image;
-        yR.crossOrigin = "anonymous", yR.fetchPriority = "high", yR.onload = () => {
-          JR(yR)
-        }, yR.onerror = () => {
-          GR(new Error(`A block icon's texture did not load: ${RR.slice(0,100)}`))
-        }, yR.src = RR
+    function nr(rr) {
+      const Sr = new Promise(((Sr, Qr) => {
+        const Zr = new Image;
+        Zr.crossOrigin = "anonymous", Zr.fetchPriority = "high", Zr.onload = () => {
+          Sr(Zr)
+        }, Zr.onerror = () => {
+          Qr(new Error(`A block icon's texture did not load: ${rr.slice(0,100)}`))
+        }, Zr.src = rr
       }));
-      return (0, qR.h)(JR)
+      return (0, Ir.g)(Sr)
     }
 
-    function AR(RR) {
-      var JR, GR;
-      rR || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${RR}`), rR = !0, null === (JR = VR) || void 0 === JR || JR.terminate(), VR = null, KR = null, nR.clear(), UR.clear();
-      for (const yR of aR.values()) yR(null);
-      aR.clear(), null === (GR = LR) || void 0 === GR || GR()
+    function er(rr) {
+      var Sr, Qr;
+      Nr || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${rr}`), Nr = !0, null === (Sr = pr) || void 0 === Sr || Sr.terminate(), pr = null, xr = null, zr.clear(), Yr.clear();
+      for (const Zr of tr.values()) Zr(null);
+      tr.clear(), null === (Qr = hr) || void 0 === Qr || Qr()
     }
 
-    function CR() {
-      return null !== KR
+    function Kr() {
+      return null !== xr
     }
 
-    function XR() {
-      return wR ??= async function() {
+    function yr() {
+      return mr ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === yR.c.ios_icon_worker_v1 && (0, tR.isWebKit)()) return;
+        if ("page" === Zr.e.ios_icon_worker_v1 && (0, Wr.isWebKit)()) return;
         try {
-          VR = await async function() {
-            return await uR.ready(), uR.start()
+          pr = await async function() {
+            return await ar.ready(), ar.start()
           }()
-        } catch (qR) {
-          return void AR(`did not start (${String(qR)})`)
+        } catch (Ir) {
+          return void er(`did not start (${String(Ir)})`)
         }
-        let RR = () => {};
-        const JR = new Promise((JR => {
-          RR = JR
+        let rr = () => {};
+        const Sr = new Promise((Sr => {
+          rr = Sr
         }));
-        VR.onmessage = JR => {
+        pr.onmessage = Sr => {
           let {
-            data: GR
-          } = JR;
-          if ("started" === GR.type) KR = VR, RR();
-          else if ("failed" === GR.type) AR(`failed a draw (${GR.message})`);
+            data: Qr
+          } = Sr;
+          if ("started" === Qr.type) xr = pr, rr();
+          else if ("failed" === Qr.type) er(`failed a draw (${Qr.message})`);
           else {
-            var yR, tR;
-            null === (yR = aR.get(GR.id)) || void 0 === yR || yR(GR.url), aR.delete(GR.id), null === (tR = LR) || void 0 === tR || tR()
+            var Zr, Wr;
+            null === (Zr = tr.get(Qr.id)) || void 0 === Zr || Zr(Qr.url), tr.delete(Qr.id), null === (Wr = hr) || void 0 === Wr || Wr()
           }
-        }, VR.onerror = JR => {
-          JR.preventDefault(), AR(`stopped (${JR.message||"its script did not load or run"})`), RR()
+        }, pr.onerror = Sr => {
+          Sr.preventDefault(), er(`stopped (${Sr.message||"its script did not load or run"})`), rr()
         };
-        const GR = `did not start in ${fR/1e3} s`;
-        await (0, ZR.k)(JR, fR, GR).catch((() => {
-          AR(GR)
+        const Qr = `did not start in ${Er/1e3} s`;
+        await (0, jr.h)(Sr, Er, Qr).catch((() => {
+          er(Qr)
         }))
-      }(), wR
+      }(), mr
     }
 
-    function MR() {
-      if (null !== LR || 0 === aR.size) return;
-      const RR = new Promise((RR => {
-          LR = RR
+    function Br() {
+      if (null !== hr || 0 === tr.size) return;
+      const rr = new Promise((rr => {
+          hr = rr
         })),
-        JR = `did not answer in ${iR/1e3} s`;
-      (0, ZR.k)(RR, iR, JR).then((() => {
-        LR = null, MR()
+        Sr = `did not answer in ${fr/1e3} s`;
+      (0, jr.h)(rr, fr, Sr).then((() => {
+        hr = null, Br()
       }), (() => {
-        LR = null, AR(JR)
+        hr = null, er(Sr)
       }))
     }
 
-    function BR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      RR.postMessage(JR, GR)
+    function Tr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      rr.postMessage(Sr, Qr)
     }
 
-    function lR(RR, JR, GR, yR) {
-      let tR = JR.get(GR);
-      return void 0 === tR && (tR = yR().then((async JR => {
+    function vr(rr, Sr, Qr, Zr) {
+      let Wr = Sr.get(Qr);
+      return void 0 === Wr && (Wr = Zr().then((async Sr => {
         let {
-          image: GR,
-          request: yR
-        } = JR;
+          image: Qr,
+          request: Zr
+        } = Sr;
         try {
-          const JR = await createImageBitmap(GR);
-          BR(RR, yR(JR), [JR])
-        } catch (tR) {
-          AR(`could not take an image (${String(tR)})`)
+          const Sr = await createImageBitmap(Qr);
+          Tr(rr, Zr(Sr), [Sr])
+        } catch (Wr) {
+          er(`could not take an image (${String(Wr)})`)
         }
-      })), tR.catch((() => {
-        JR.get(GR) === tR && JR.delete(GR)
-      })), JR.set(GR, tR)), tR
+      })), Wr.catch((() => {
+        Sr.get(Qr) === Wr && Sr.delete(Qr)
+      })), Sr.set(Qr, Wr)), Wr
     }
-    async function pR(RR, JR) {
-      XR();
-      const GR = KR;
-      if (null === GR) return null;
-      if (await RR(GR), KR !== GR) return null;
-      const yR = ++eR;
-      return new Promise((RR => {
-        aR.set(yR, RR), BR(GR, JR(yR)), MR()
+    async function Or(rr, Sr) {
+      yr();
+      const Qr = xr;
+      if (null === Qr) return null;
+      if (await rr(Qr), xr !== Qr) return null;
+      const Zr = ++Ur;
+      return new Promise((rr => {
+        tr.set(Zr, rr), Tr(Qr, Sr(Zr)), Br()
       }))
     }
 
-    function gR(RR, JR, GR) {
-      return pR((JR => Promise.all([RR.top, RR.left, RR.right].map((RR => function(RR, JR) {
-        return lR(RR, nR, JR, (async () => ({
-          image: await WR(JR),
-          request: RR => ({
+    function Lr(rr, Sr, Qr) {
+      return Or((Sr => Promise.all([rr.top, rr.left, rr.right].map((rr => function(rr, Sr) {
+        return vr(rr, zr, Sr, (async () => ({
+          image: await nr(Sr),
+          request: rr => ({
             type: "texture",
-            url: JR,
-            bitmap: RR
+            url: Sr,
+            bitmap: rr
           })
         })))
-      }(JR, RR))))), (yR => ({
+      }(Sr, rr))))), (Zr => ({
         type: "draw",
-        id: yR,
-        ...RR,
-        size: JR,
-        outlineWidth: GR
+        id: Zr,
+        ...rr,
+        size: Sr,
+        outlineWidth: Qr
       })))
     }
 
-    function bR(RR, JR, GR, yR) {
-      return pR((GR => function(RR, JR, GR) {
-        return lR(RR, UR, JR, (async () => {
+    function lr(rr, Sr, Qr, Zr) {
+      return Or((Qr => function(rr, Sr, Qr) {
+        return vr(rr, Yr, Sr, (async () => {
           const {
-            texture: RR,
-            ...yR
-          } = await GR();
+            texture: rr,
+            ...Zr
+          } = await Qr();
           return {
-            image: await WR(RR),
-            request: RR => ({
+            image: await nr(rr),
+            request: rr => ({
               type: "model",
-              name: JR,
-              bitmap: RR,
-              geometry: yR
+              name: Sr,
+              bitmap: rr,
+              geometry: Zr
             })
           }
         }))
-      }(GR, RR, JR)), (JR => ({
+      }(Qr, rr, Sr)), (Sr => ({
         type: "drawModel",
-        id: JR,
-        name: RR,
-        size: GR,
-        outlineWidth: yR
+        id: Sr,
+        name: rr,
+        size: Qr,
+        outlineWidth: Zr
       })))
     }
   },
-  37549: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      g: () => iR,
-      i: () => ZR,
-      m: () => wR,
-      n: () => fR
+  37939: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr,
+      g: () => fr,
+      j: () => jr,
+      l: () => mr,
+      n: () => Er
     });
-    const yR = {
+    const Zr = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      tR = .6,
-      uR = {
-        width: 2 * yR.across,
-        height: 2 * yR.down + yR.up
+      Wr = .6,
+      ar = {
+        width: 2 * Zr.across,
+        height: 2 * Zr.down + Zr.up
       };
 
-    function ZR(RR, JR) {
-      const GR = JR > 0 ? JR + 1 : 0,
-        ZR = RR * tR - JR / yR.across;
-      return Math.max(0, Math.min(ZR, (RR - 2 * GR) / uR.height))
+    function jr(rr, Sr) {
+      const Qr = Sr > 0 ? Sr + 1 : 0,
+        jr = rr * Wr - Sr / Zr.across;
+      return Math.max(0, Math.min(jr, (rr - 2 * Qr) / ar.height))
     }
-    const qR = [15, 15, 15],
-      iR = {
+    const Ir = [15, 15, 15],
+      fr = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function fR(RR, JR, GR, yR) {
+    function Er(rr, Sr, Qr, Zr) {
       const {
-        vertices: tR,
-        uvs: qR,
-        indices: iR,
-        shades: fR
-      } = RR, VR = function(RR, JR) {
-        const GR = ZR(RR, JR),
-          yR = uR.width * GR,
-          tR = uR.height * GR;
+        vertices: Wr,
+        uvs: Ir,
+        indices: fr,
+        shades: Er
+      } = rr, pr = function(rr, Sr) {
+        const Qr = jr(rr, Sr),
+          Zr = ar.width * Qr,
+          Wr = ar.height * Qr;
         return {
-          left: (RR - yR) / 2,
-          top: (RR - tR) / 2,
-          width: yR,
-          height: tR
+          left: (rr - Zr) / 2,
+          top: (rr - Wr) / 2,
+          width: Zr,
+          height: Wr
         }
-      }(GR, yR), KR = new Float32Array(tR.length);
-      for (let uR = 0; uR < tR.length; uR += 3) KR[uR] = VR.left + tR[uR] * VR.width, KR[uR + 1] = VR.top + tR[uR + 1] * VR.height, KR[uR + 2] = tR[uR + 2];
-      const rR = new Float32Array(GR * GR).fill(-1 / 0),
-        eR = new Uint8ClampedArray(GR * GR * 4),
-        aR = 255 * RR.alphaCutoff;
-      for (let uR = 0; uR < iR.length; uR += 3) {
-        const [RR, yR, tR] = [iR[uR], iR[uR + 1], iR[uR + 2]], [ZR, VR, wR] = [3 * RR, 3 * yR, 3 * tR], [LR, nR, UR, WR, AR, CR] = [KR[ZR], KR[ZR + 1], KR[VR], KR[VR + 1], KR[wR], KR[wR + 1]], XR = (UR - LR) * (CR - nR) - (AR - LR) * (WR - nR);
-        if (Math.abs(XR) < 1e-9) continue;
-        const MR = fR[uR / 3],
-          [BR, lR, pR, gR, bR, vR] = [qR[2 * RR], qR[2 * RR + 1], qR[2 * yR], qR[2 * yR + 1], qR[2 * tR], qR[2 * tR + 1]],
-          OR = Math.max(0, Math.floor(Math.min(LR, UR, AR))),
-          xR = Math.min(GR - 1, Math.ceil(Math.max(LR, UR, AR))),
-          NR = Math.max(0, Math.floor(Math.min(nR, WR, CR))),
-          DR = Math.min(GR - 1, Math.ceil(Math.max(nR, WR, CR)));
-        for (let uR = NR; uR <= DR; uR++)
-          for (let RR = OR; RR <= xR; RR++) {
-            const [yR, tR] = [RR + .5, uR + .5], qR = ((yR - LR) * (CR - nR) - (AR - LR) * (tR - nR)) / XR, iR = ((UR - LR) * (tR - nR) - (yR - LR) * (WR - nR)) / XR, fR = 1 - qR - iR;
-            if (fR < 0 || qR < 0 || iR < 0) continue;
-            const OR = fR * KR[ZR + 2] + qR * KR[VR + 2] + iR * KR[wR + 2],
-              xR = uR * GR + RR;
-            if (OR <= rR[xR]) continue;
-            const NR = Math.max(0, Math.min(JR.width - 1, Math.floor((fR * BR + qR * pR + iR * bR) * JR.width))),
-              DR = 4 * (Math.max(0, Math.min(JR.height - 1, Math.floor((fR * lR + qR * gR + iR * vR) * JR.height))) * JR.width + NR);
-            JR.pixels[DR + 3] < aR || (rR[xR] = OR, eR[4 * xR] = JR.pixels[DR] * MR, eR[4 * xR + 1] = JR.pixels[DR + 1] * MR, eR[4 * xR + 2] = JR.pixels[DR + 2] * MR, eR[4 * xR + 3] = 255)
+      }(Qr, Zr), xr = new Float32Array(Wr.length);
+      for (let ar = 0; ar < Wr.length; ar += 3) xr[ar] = pr.left + Wr[ar] * pr.width, xr[ar + 1] = pr.top + Wr[ar + 1] * pr.height, xr[ar + 2] = Wr[ar + 2];
+      const Nr = new Float32Array(Qr * Qr).fill(-1 / 0),
+        Ur = new Uint8ClampedArray(Qr * Qr * 4),
+        tr = 255 * rr.alphaCutoff;
+      for (let ar = 0; ar < fr.length; ar += 3) {
+        const [rr, Zr, Wr] = [fr[ar], fr[ar + 1], fr[ar + 2]], [jr, pr, mr] = [3 * rr, 3 * Zr, 3 * Wr], [hr, zr, Yr, nr, er, Kr] = [xr[jr], xr[jr + 1], xr[pr], xr[pr + 1], xr[mr], xr[mr + 1]], yr = (Yr - hr) * (Kr - zr) - (er - hr) * (nr - zr);
+        if (Math.abs(yr) < 1e-9) continue;
+        const Br = Er[ar / 3],
+          [Tr, vr, Or, Lr, lr, Xr] = [Ir[2 * rr], Ir[2 * rr + 1], Ir[2 * Zr], Ir[2 * Zr + 1], Ir[2 * Wr], Ir[2 * Wr + 1]],
+          Pr = Math.max(0, Math.floor(Math.min(hr, Yr, er))),
+          Hr = Math.min(Qr - 1, Math.ceil(Math.max(hr, Yr, er))),
+          qr = Math.max(0, Math.floor(Math.min(zr, nr, Kr))),
+          Rr = Math.min(Qr - 1, Math.ceil(Math.max(zr, nr, Kr)));
+        for (let ar = qr; ar <= Rr; ar++)
+          for (let rr = Pr; rr <= Hr; rr++) {
+            const [Zr, Wr] = [rr + .5, ar + .5], Ir = ((Zr - hr) * (Kr - zr) - (er - hr) * (Wr - zr)) / yr, fr = ((Yr - hr) * (Wr - zr) - (Zr - hr) * (nr - zr)) / yr, Er = 1 - Ir - fr;
+            if (Er < 0 || Ir < 0 || fr < 0) continue;
+            const Pr = Er * xr[jr + 2] + Ir * xr[pr + 2] + fr * xr[mr + 2],
+              Hr = ar * Qr + rr;
+            if (Pr <= Nr[Hr]) continue;
+            const qr = Math.max(0, Math.min(Sr.width - 1, Math.floor((Er * Tr + Ir * Or + fr * lr) * Sr.width))),
+              Rr = 4 * (Math.max(0, Math.min(Sr.height - 1, Math.floor((Er * vr + Ir * Lr + fr * Xr) * Sr.height))) * Sr.width + qr);
+            Sr.pixels[Rr + 3] < tr || (Nr[Hr] = Pr, Ur[4 * Hr] = Sr.pixels[Rr] * Br, Ur[4 * Hr + 1] = Sr.pixels[Rr + 1] * Br, Ur[4 * Hr + 2] = Sr.pixels[Rr + 2] * Br, Ur[4 * Hr + 3] = 255)
           }
       }
-      return wR(eR, GR, yR), eR
+      return mr(Ur, Qr, Zr), Ur
     }
-    let VR = NaN,
-      KR = new Int32Array(0);
+    let pr = NaN,
+      xr = new Int32Array(0);
 
-    function wR(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : JR => 0 !== RR[4 * JR + 3];
-      const tR = new Uint8Array(JR * JR);
-      for (let qR = 0; qR < JR * JR; qR++) tR[qR] = yR(qR) ? 1 : 0;
-      const uR = (RR, GR) => RR >= 0 && GR >= 0 && RR < JR && GR < JR && 0 === tR[GR * JR + RR],
-        ZR = new Float32Array(JR * JR).fill(1 / 0),
-        iR = function(RR) {
-          if (RR !== VR) {
-            const JR = Math.ceil(RR + 1),
-              GR = [];
-            for (let yR = -JR; yR <= JR; yR++)
-              for (let tR = -JR; tR <= JR; tR++) {
-                const JR = tR * tR + yR * yR;
-                JR > 0 && JR < (RR + 1) ** 2 && GR.push(tR, yR, JR)
+    function mr(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Sr => 0 !== rr[4 * Sr + 3];
+      const Wr = new Uint8Array(Sr * Sr);
+      for (let Ir = 0; Ir < Sr * Sr; Ir++) Wr[Ir] = Zr(Ir) ? 1 : 0;
+      const ar = (rr, Qr) => rr >= 0 && Qr >= 0 && rr < Sr && Qr < Sr && 0 === Wr[Qr * Sr + rr],
+        jr = new Float32Array(Sr * Sr).fill(1 / 0),
+        fr = function(rr) {
+          if (rr !== pr) {
+            const Sr = Math.ceil(rr + 1),
+              Qr = [];
+            for (let Zr = -Sr; Zr <= Sr; Zr++)
+              for (let Wr = -Sr; Wr <= Sr; Wr++) {
+                const Sr = Wr * Wr + Zr * Zr;
+                Sr > 0 && Sr < (rr + 1) ** 2 && Qr.push(Wr, Zr, Sr)
               }
-            VR = RR, KR = Int32Array.from(GR)
+            pr = rr, xr = Int32Array.from(Qr)
           }
-          return KR
-        }(GR);
-      for (let qR = 0; qR < JR; qR++)
-        for (let RR = 0; RR < JR; RR++) {
-          if (1 === tR[qR * JR + RR] && (uR(RR - 1, qR) || uR(RR + 1, qR) || uR(RR, qR - 1) || uR(RR, qR + 1)))
-            for (let GR = 0; GR < iR.length; GR += 3) {
-              const yR = RR + iR[GR],
-                tR = qR + iR[GR + 1];
-              if (yR >= 0 && tR >= 0 && yR < JR && tR < JR) {
-                const RR = tR * JR + yR;
-                ZR[RR] = Math.min(ZR[RR], iR[GR + 2])
+          return xr
+        }(Qr);
+      for (let Ir = 0; Ir < Sr; Ir++)
+        for (let rr = 0; rr < Sr; rr++) {
+          if (1 === Wr[Ir * Sr + rr] && (ar(rr - 1, Ir) || ar(rr + 1, Ir) || ar(rr, Ir - 1) || ar(rr, Ir + 1)))
+            for (let Qr = 0; Qr < fr.length; Qr += 3) {
+              const Zr = rr + fr[Qr],
+                Wr = Ir + fr[Qr + 1];
+              if (Zr >= 0 && Wr >= 0 && Zr < Sr && Wr < Sr) {
+                const rr = Wr * Sr + Zr;
+                jr[rr] = Math.min(jr[rr], fr[Qr + 2])
               }
             }
         }
-      for (let fR = 0; fR < JR * JR; fR++) 1 !== tR[fR] && ZR[fR] !== 1 / 0 && (RR.set(qR, 4 * fR), RR[4 * fR + 3] = Math.round(255 * Math.min(1, GR + 1 - Math.sqrt(ZR[fR]))))
+      for (let Er = 0; Er < Sr * Sr; Er++) 1 !== Wr[Er] && jr[Er] !== 1 / 0 && (rr.set(Ir, 4 * Er), rr[4 * Er + 3] = Math.round(255 * Math.min(1, Qr + 1 - Math.sqrt(jr[Er]))))
     }
   },
-  37561: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => tR
+  37945: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    const yR = {
-      wait: function(RR) {
-        return new Promise((JR => {
-          setTimeout(JR, RR)
+    const Zr = {
+      wait: function(rr) {
+        return new Promise((Sr => {
+          setTimeout(Sr, rr)
         }))
       },
       stallMs: 2e4
     };
-    class tR {
-      constructor(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : yR;
-        this.url = RR, this.options = JR, this.timing = GR, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = RR
+    class Wr {
+      constructor(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Zr;
+        this.url = rr, this.options = Sr, this.timing = Qr, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = rr
       }
       ready() {
         if (null === this.fetched) {
-          const RR = new AbortController;
-          this.fetchAbort = RR, this.fetched = this.fetchWithRetries(RR.signal).then((JR => (this.fetchAbort === RR && (this.fetchAbort = null), JR)))
+          const rr = new AbortController;
+          this.fetchAbort = rr, this.fetched = this.fetchWithRetries(rr.signal).then((Sr => (this.fetchAbort === rr && (this.fetchAbort = null), Sr)))
         }
         return this.fetched
       }
@@ -507,51 +507,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(RR) {
-        for (let JR = 0;; JR++) {
-          const GR = new URL(this.url);
-          if (JR > 0 && GR.searchParams.set("cache-bust", `${Date.now()}-${JR}`), await this.fetchWhole(GR, RR)) return this.scriptUrl = GR, !0;
-          if (JR >= 3 || RR.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** JR), RR.aborted) return !1
+      async fetchWithRetries(rr) {
+        for (let Sr = 0;; Sr++) {
+          const Qr = new URL(this.url);
+          if (Sr > 0 && Qr.searchParams.set("cache-bust", `${Date.now()}-${Sr}`), await this.fetchWhole(Qr, rr)) return this.scriptUrl = Qr, !0;
+          if (Sr >= 3 || rr.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** Sr), rr.aborted) return !1
         }
       }
-      async fetchWhole(RR, JR) {
-        const GR = new AbortController;
-        let yR;
-        const tR = () => {
-            clearTimeout(yR), yR = setTimeout((() => {
-              GR.abort()
+      async fetchWhole(rr, Sr) {
+        const Qr = new AbortController;
+        let Zr;
+        const Wr = () => {
+            clearTimeout(Zr), Zr = setTimeout((() => {
+              Qr.abort()
             }), this.timing.stallMs)
           },
-          uR = () => {
-            GR.abort()
+          ar = () => {
+            Qr.abort()
           };
-        JR.addEventListener("abort", uR, {
+        Sr.addEventListener("abort", ar, {
           once: !0
-        }), tR();
+        }), Wr();
         try {
-          var ZR;
-          const JR = await fetch(RR, {
-            signal: GR.signal
+          var jr;
+          const Sr = await fetch(rr, {
+            signal: Qr.signal
           });
-          if (!JR.ok) return !1;
-          const yR = null === (ZR = JR.body) || void 0 === ZR ? void 0 : ZR.getReader();
-          if (!yR) return !1;
+          if (!Sr.ok) return !1;
+          const Zr = null === (jr = Sr.body) || void 0 === jr ? void 0 : jr.getReader();
+          if (!Zr) return !1;
           for (;;) {
             const {
-              done: RR
-            } = await yR.read();
-            if (RR) return !0;
-            tR()
+              done: rr
+            } = await Zr.read();
+            if (rr) return !0;
+            Wr()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(yR), JR.removeEventListener("abort", uR)
+          clearTimeout(Zr), Sr.removeEventListener("abort", ar)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

@@ -1,13 +1,13 @@
 export const id = 156;
 export const ids = [156, 159, 160];
 export const modules = {
-  7743: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR
+  7567: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => jr
     });
-    var yR = GR(6076),
-      tR = GR(1378);
-    const uR = {
+    var Zr = Qr(5998),
+      Wr = Qr(1338);
+    const ar = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,339 +15,339 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function ZR(RR) {
+    function jr(rr) {
       let {
-        diagnostics: JR,
-        more: GR = 0,
-        t: ZR
-      } = RR;
-      return (0, tR.jsxs)("ul", {
+        diagnostics: Sr,
+        more: Qr = 0,
+        t: jr
+      } = rr;
+      return (0, Wr.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [JR.map(((RR, JR) => {
-          const GR = (0, yR.c)(RR),
-            qR = function(RR, JR) {
-              const GR = (0, yR.b)(null !== RR && void 0 !== RR ? RR : []);
-              if (0 === GR.length) return null;
-              return GR.map((RR => RR.map((RR => JR(uR[RR]))).join(", "))).join("; ")
-            }(RR.variants, ZR);
-          return (0, tR.jsxs)("li", {
-            children: [GR && (0, tR.jsx)("span", {
+        children: [Sr.map(((rr, Sr) => {
+          const Qr = (0, Zr.f)(rr),
+            Ir = function(rr, Sr) {
+              const Qr = (0, Zr.b)(null !== rr && void 0 !== rr ? rr : []);
+              if (0 === Qr.length) return null;
+              return Qr.map((rr => rr.map((rr => Sr(ar[rr]))).join(", "))).join("; ")
+            }(rr.variants, jr);
+          return (0, Wr.jsxs)("li", {
+            children: [Qr && (0, Wr.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: GR
-            }), RR.message, qR && (0, tR.jsx)("span", {
+              children: Qr
+            }), rr.message, Ir && (0, Wr.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: ZR("shaderPack:onlyIn", {
-                variants: qR
+              children: jr("shaderPack:onlyIn", {
+                variants: Ir
               })
             })]
-          }, JR)
-        })), GR > 0 && (0, tR.jsx)("li", {
-          children: ZR("shaderPack:moreErrors", {
-            count: String(GR)
+          }, Sr)
+        })), Qr > 0 && (0, Wr.jsx)("li", {
+          children: jr("shaderPack:moreErrors", {
+            count: String(Qr)
           })
         })]
       })
     }
   },
-  7750: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => XR,
-      i: () => MR
+  7573: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => yr,
+      e: () => Br
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(6003),
-      qR = GR(1465),
-      iR = GR(1468),
-      fR = GR(1270),
-      VR = GR(6084),
-      KR = GR(6080),
-      wR = GR(4436);
-    const rR = 33554432,
-      eR = 1024,
-      aR = 65536;
-    async function LR(RR) {
-      const JR = (0, wR.o)(RR);
-      if (JR) {
-        if (JR.size > rR) throw new wR.c("shaderPack:loadZipTooBig", {
-          megabytes: String(rR / 1048576)
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(5919),
+      Ir = Qr(1444),
+      fr = Qr(1448),
+      Er = Qr(1251),
+      pr = Qr(6007),
+      xr = Qr(6005),
+      mr = Qr(4371);
+    const Nr = 33554432,
+      Ur = 1024,
+      tr = 65536;
+    async function hr(rr) {
+      const Sr = (0, mr.r)(rr);
+      if (Sr) {
+        if (Sr.size > Nr) throw new mr.b("shaderPack:loadZipTooBig", {
+          megabytes: String(Nr / 1048576)
         });
-        return async function(RR) {
-          return nR((0, wR.g)(RR, eR).map((JR => ({
-            path: JR.path,
-            read: GR => (0, wR.m)(RR, JR, GR)
+        return async function(rr) {
+          return zr((0, mr.g)(rr, Ur).map((Sr => ({
+            path: Sr.path,
+            read: Qr => (0, mr.n)(rr, Sr, Qr)
           }))))
-        }(new Uint8Array(await JR.arrayBuffer()))
+        }(new Uint8Array(await Sr.arrayBuffer()))
       }
-      return nR(RR.map((RR => ({
-        path: (0, wR.j)(RR),
-        read: JR => async function(RR, JR) {
-          return RR.size > JR ? null : new Uint8Array(await RR.arrayBuffer())
-        }(RR, JR)
+      return zr(rr.map((rr => ({
+        path: (0, mr.j)(rr),
+        read: Sr => async function(rr, Sr) {
+          return rr.size > Sr ? null : new Uint8Array(await rr.arrayBuffer())
+        }(rr, Sr)
       }))))
     }
-    async function nR(RR) {
-      const JR = function(RR) {
-          const JR = RR.length > 0 ? RR[0].path.indexOf("/") : -1;
-          if (-1 === JR) return RR;
-          const GR = RR[0].path.slice(0, JR + 1);
-          if (!RR.every((RR => RR.path.startsWith(GR)))) return RR;
-          return RR.map((RR => ({
-            ...RR,
-            path: RR.path.slice(GR.length)
+    async function zr(rr) {
+      const Sr = function(rr) {
+          const Sr = rr.length > 0 ? rr[0].path.indexOf("/") : -1;
+          if (-1 === Sr) return rr;
+          const Qr = rr[0].path.slice(0, Sr + 1);
+          if (!rr.every((rr => rr.path.startsWith(Qr)))) return rr;
+          return rr.map((rr => ({
+            ...rr,
+            path: rr.path.slice(Qr.length)
           })))
-        }(RR.filter((RR => !(0, wR.d)(RR.path)))),
-        GR = JR.filter((RR => "pack.json" === RR.path.toLowerCase()));
-      if (0 === GR.length) throw new wR.c("shaderPack:loadNoManifest");
-      if (GR.length > 1) throw new wR.c("shaderPack:loadDuplicateManifest");
-      const yR = GR[0],
-        tR = await yR.read(aR);
-      if (null === tR) throw new wR.c("shaderPack:loadManifestTooBig", {
-        kilobytes: String(aR / 1024)
+        }(rr.filter((rr => !(0, mr.e)(rr.path)))),
+        Qr = Sr.filter((rr => "pack.json" === rr.path.toLowerCase()));
+      if (0 === Qr.length) throw new mr.b("shaderPack:loadNoManifest");
+      if (Qr.length > 1) throw new mr.b("shaderPack:loadDuplicateManifest");
+      const Zr = Qr[0],
+        Wr = await Zr.read(tr);
+      if (null === Wr) throw new mr.b("shaderPack:loadManifestTooBig", {
+        kilobytes: String(tr / 1024)
       });
-      const uR = function(RR) {
-          let JR;
+      const ar = function(rr) {
+          let Sr;
           try {
-            JR = JSON.parse(RR)
-          } catch (qR) {
-            throw new wR.c("shaderPack:loadManifestNotJson", {
-              error: qR.message
+            Sr = JSON.parse(rr)
+          } catch (Ir) {
+            throw new mr.b("shaderPack:loadManifestNotJson", {
+              error: Ir.message
             }, {
-              cause: qR
+              cause: Ir
             })
           }
-          if ("object" !== typeof JR || null === JR || Array.isArray(JR)) throw new wR.c("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof Sr || null === Sr || Array.isArray(Sr)) throw new mr.b("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: GR,
-            name: yR,
-            author: tR,
-            description: uR,
-            keepCircleShadows: ZR
-          } = JR;
-          if (void 0 === GR) throw new wR.c("shaderPack:loadNoApiVersion", {
-            version: String(KR.c)
+            apiVersion: Qr,
+            name: Zr,
+            author: Wr,
+            description: ar,
+            keepCircleShadows: jr
+          } = Sr;
+          if (void 0 === Qr) throw new mr.b("shaderPack:loadNoApiVersion", {
+            version: String(xr.d)
           });
-          if (!(0, KR.i)(GR)) throw new wR.c("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(GR),
-            version: String(KR.c)
+          if (!(0, xr.i)(Qr)) throw new mr.b("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(Qr),
+            version: String(xr.d)
           });
-          if ("string" !== typeof yR || "" === yR.trim()) throw new wR.c("shaderPack:loadNoName");
-          if (void 0 !== tR && null !== tR && "string" !== typeof tR) throw new wR.c("shaderPack:loadAuthorNotString");
-          if (void 0 !== uR && null !== uR && "string" !== typeof uR) throw new wR.c("shaderPack:loadDescriptionNotString");
-          if (void 0 !== ZR && "boolean" !== typeof ZR) throw new wR.c("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof Zr || "" === Zr.trim()) throw new mr.b("shaderPack:loadNoName");
+          if (void 0 !== Wr && null !== Wr && "string" !== typeof Wr) throw new mr.b("shaderPack:loadAuthorNotString");
+          if (void 0 !== ar && null !== ar && "string" !== typeof ar) throw new mr.b("shaderPack:loadDescriptionNotString");
+          if (void 0 !== jr && "boolean" !== typeof jr) throw new mr.b("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: GR,
-            name: yR,
-            author: "string" === typeof tR ? tR : null,
-            description: "string" === typeof uR && "" !== uR.trim() ? uR : null,
-            keepCircleShadows: !0 === ZR
+            apiVersion: Qr,
+            name: Zr,
+            author: "string" === typeof Wr ? Wr : null,
+            description: "string" === typeof ar && "" !== ar.trim() ? ar : null,
+            keepCircleShadows: !0 === jr
           }
-        }(UR(tR, yR.path)),
-        ZR = JR.filter((RR => RR.path.toLowerCase().endsWith(".wgsl"))).sort(((RR, JR) => (0, VR.l)(RR.path, JR.path)));
-      if (0 === ZR.length) throw new wR.c("shaderPack:loadNoWgsl");
-      if (ZR.length > VR.c) throw new wR.c("shaderPack:loadTooManyWgsl", {
-        count: String(VR.c)
+        }(Yr(Wr, Zr.path)),
+        jr = Sr.filter((rr => rr.path.toLowerCase().endsWith(".wgsl"))).sort(((rr, Sr) => (0, pr.n)(rr.path, Sr.path)));
+      if (0 === jr.length) throw new mr.b("shaderPack:loadNoWgsl");
+      if (jr.length > pr.c) throw new mr.b("shaderPack:loadTooManyWgsl", {
+        count: String(pr.c)
       });
-      const qR = ZR.find(((RR, JR) => JR > 0 && RR.path === ZR[JR - 1].path));
-      if (qR) throw new wR.c("shaderPack:loadDuplicatePath", {
-        path: qR.path
+      const Ir = jr.find(((rr, Sr) => Sr > 0 && rr.path === jr[Sr - 1].path));
+      if (Ir) throw new mr.b("shaderPack:loadDuplicatePath", {
+        path: Ir.path
       });
-      const iR = [];
-      let fR = VR.e;
-      for (const KR of ZR) {
-        const RR = await KR.read(fR);
-        if (null === RR) throw new wR.c("shaderPack:loadSourceTooBig", {
-          kilobytes: String(VR.e / 1024)
+      const fr = [];
+      let Er = pr.g;
+      for (const xr of jr) {
+        const rr = await xr.read(Er);
+        if (null === rr) throw new mr.b("shaderPack:loadSourceTooBig", {
+          kilobytes: String(pr.g / 1024)
         });
-        fR -= RR.byteLength, iR.push({
-          path: KR.path,
-          source: UR(RR, KR.path)
+        Er -= rr.byteLength, fr.push({
+          path: xr.path,
+          source: Yr(rr, xr.path)
         })
       }
       return {
-        manifest: uR,
-        files: iR
+        manifest: ar,
+        files: fr
       }
     }
 
-    function UR(RR, JR) {
+    function Yr(rr, Sr) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(RR)
-      } catch (GR) {
-        throw new wR.c("shaderPack:loadNotUtf8", {
-          path: JR
+        }).decode(rr)
+      } catch (Qr) {
+        throw new mr.b("shaderPack:loadNotUtf8", {
+          path: Sr
         }, {
-          cause: GR
+          cause: Qr
         })
       }
     }
-    var WR = GR(6076),
-      AR = GR(6092),
-      CR = GR(1378);
+    var nr = Qr(5998),
+      er = Qr(6010),
+      Kr = Qr(1338);
 
-    function XR(RR) {
+    function yr(rr) {
       let {
-        busy: JR,
-        disabled: GR,
-        onFiles: yR
-      } = RR;
+        busy: Sr,
+        disabled: Qr,
+        onFiles: Zr
+      } = rr;
       const {
-        t: tR
-      } = (0, fR.A)(), {
-        getRootProps: VR,
-        getInputProps: KR,
-        isDragActive: wR,
-        open: rR
-      } = (0, ZR.e)({
-        onDrop: yR,
+        t: Wr
+      } = (0, Er.E)(), {
+        getRootProps: pr,
+        getInputProps: xr,
+        isDragActive: mr,
+        open: Nr
+      } = (0, jr.b)({
+        onDrop: Zr,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: GR
+        disabled: Qr
       });
-      return (0, CR.jsxs)("div", {
-        ...VR({
-          className: uR()("ShaderPackDropZone", {
-            ActiveDrag: wR,
-            Disabled: GR
+      return (0, Kr.jsxs)("div", {
+        ...pr({
+          className: ar()("ShaderPackDropZone", {
+            ActiveDrag: mr,
+            Disabled: Qr
           })
         }),
-        children: [(0, CR.jsx)("input", {
-          ...KR({
+        children: [(0, Kr.jsx)("input", {
+          ...xr({
             webkitdirectory: "true"
           })
-        }), JR && (0, CR.jsx)(qR.d, {}), !JR && (0, CR.jsxs)(CR.Fragment, {
-          children: [(0, CR.jsx)("div", {
+        }), Sr && (0, Kr.jsx)(Ir.c, {}), !Sr && (0, Kr.jsxs)(Kr.Fragment, {
+          children: [(0, Kr.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, CR.jsx)(iR.d, {
+            children: (0, Kr.jsx)(fr.c, {
               name: "up-from-bracket"
             })
-          }), (0, CR.jsx)("div", {
+          }), (0, Kr.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: tR((0, AR.g)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, CR.jsx)(AR.c, {
-            disabled: GR,
-            openFolderPicker: rR,
-            onFiles: yR
+            children: Wr((0, er.d)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, Kr.jsx)(er.c, {
+            disabled: Qr,
+            openFolderPicker: Nr,
+            onFiles: Zr
           })]
         })]
       })
     }
 
-    function MR(RR) {
+    function Br(rr) {
       const {
-        t: JR
-      } = (0, fR.A)(), [GR, tR] = (0, yR.useState)(!1), [uR, ZR] = (0, yR.useState)(null), qR = (0, yR.useRef)(!1);
+        t: Sr
+      } = (0, Er.E)(), [Qr, Wr] = (0, Zr.useState)(!1), [ar, jr] = (0, Zr.useState)(null), Ir = (0, Zr.useRef)(!1);
       return {
-        loading: GR,
-        error: uR,
-        setError: ZR,
-        onFiles: async function(GR) {
-          if (!qR.current) {
-            qR.current = !0, tR(!0), ZR(null);
+        loading: Qr,
+        error: ar,
+        setError: jr,
+        onFiles: async function(Qr) {
+          if (!Ir.current) {
+            Ir.current = !0, Wr(!0), jr(null);
             try {
-              await RR(await LR(GR))
-            } catch (yR) {
-              yR instanceof wR.c ? ZR((0, WR.d)(JR, yR.translationKey, yR.params)) : (console.error("Failed to load the shader pack", yR), ZR(JR("shaderPack:unexpectedError")))
+              await rr(await hr(Qr))
+            } catch (Zr) {
+              Zr instanceof mr.b ? jr((0, nr.g)(Sr, Zr.translationKey, Zr.params)) : (console.error("Failed to load the shader pack", Zr), jr(Sr("shaderPack:unexpectedError")))
             } finally {
-              qR.current = !1, tR(!1)
+              Ir.current = !1, Wr(!1)
             }
           }
         }
       }
     }
   },
-  7800: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      forgetShaderPackActiveHint: () => bR,
-      isOtherApiVersion: () => BR,
-      isShaderPackActive: () => AR,
-      isShaderPackChangePending: () => MR,
-      markShaderPackChangePending: () => XR,
-      pageShaderPackValidationVersion: () => lR,
-      reconcileStoredShaderPackHint: () => gR,
-      removeShaderPack: () => WR,
-      replaceShaderPack: () => LR,
-      saveShaderPack: () => aR,
-      shaderPackNeedsCheck: () => pR,
-      storedPackOutcome: () => CR,
-      storedShaderPackFiles: () => wR,
-      toStoredShaderPack: () => KR
+  7615: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      forgetShaderPackActiveHint: () => lr,
+      isOtherApiVersion: () => Tr,
+      isShaderPackActive: () => er,
+      isShaderPackChangePending: () => Br,
+      markShaderPackChangePending: () => yr,
+      pageShaderPackValidationVersion: () => vr,
+      reconcileStoredShaderPackHint: () => Lr,
+      removeShaderPack: () => nr,
+      replaceShaderPack: () => hr,
+      saveShaderPack: () => tr,
+      shaderPackNeedsCheck: () => Or,
+      storedPackOutcome: () => Kr,
+      storedShaderPackFiles: () => mr,
+      toStoredShaderPack: () => xr
     });
-    var yR = GR(6084),
-      tR = GR(6080),
-      uR = GR(46),
-      ZR = GR(4776),
-      qR = GR(7802),
-      iR = GR(7773);
-    const fR = "shaderPackChangePending";
-    let VR = null;
+    var Zr = Qr(6007),
+      Wr = Qr(6005),
+      ar = Qr(43),
+      jr = Qr(4690),
+      Ir = Qr(7617),
+      fr = Qr(7588);
+    const Er = "shaderPackChangePending";
+    let pr = null;
 
-    function KR(RR, JR, GR) {
+    function xr(rr, Sr, Qr) {
       return {
-        manifest: RR.manifest,
-        files: (0, yR.x)(RR.files),
-        validation: JR,
-        ...GR && {
-          listing: GR
+        manifest: rr.manifest,
+        files: (0, Zr.w)(rr.files),
+        validation: Sr,
+        ...Qr && {
+          listing: Qr
         }
       }
     }
 
-    function wR(RR) {
-      return Object.keys(RR.files).map((JR => ({
-        path: JR,
-        source: RR.files[JR]
+    function mr(rr) {
+      return Object.keys(rr.files).map((Sr => ({
+        path: Sr,
+        source: rr.files[Sr]
       })))
     }
-    let rR = Promise.resolve();
+    let Nr = Promise.resolve();
 
-    function eR(RR) {
-      const JR = rR.then(RR);
-      return rR = JR.catch((() => {})), JR
-    }
-
-    function aR(RR, JR) {
-      return eR((() => nR(RR, JR)))
+    function Ur(rr) {
+      const Sr = Nr.then(rr);
+      return Nr = Sr.catch((() => {})), Sr
     }
 
-    function LR(RR, JR, GR) {
-      return eR((async () => JSON.stringify(await (0, qR.d)()) === JSON.stringify(RR) && (null === JR ? (await UR(), !0) : nR(JR, GR))))
-    }
-    async function nR(RR, JR) {
-      const GR = await uR.g.setItem(qR.c, RR);
-      return GR && vR(RR, JR), GR
-    }
-    async function UR() {
-      await uR.g.removeItem(qR.c), uR.i.removeItem(ZR.e)
+    function tr(rr, Sr) {
+      return Ur((() => zr(rr, Sr)))
     }
 
-    function WR() {
-      return eR(UR)
+    function hr(rr, Sr, Qr) {
+      return Ur((async () => JSON.stringify(await (0, Ir.e)()) === JSON.stringify(rr) && (null === Sr ? (await Yr(), !0) : zr(Sr, Qr))))
+    }
+    async function zr(rr, Sr) {
+      const Qr = await ar.h.setItem(Ir.b, rr);
+      return Qr && Xr(rr, Sr), Qr
+    }
+    async function Yr() {
+      await ar.h.removeItem(Ir.b), ar.j.removeItem(jr.b)
     }
 
-    function AR(RR, JR) {
-      return "active" === CR(RR, JR).kind
+    function nr() {
+      return Ur(Yr)
     }
 
-    function CR(RR, JR) {
-      var GR;
-      return null === RR ? {
+    function er(rr, Sr) {
+      return "active" === Kr(rr, Sr).kind
+    }
+
+    function Kr(rr, Sr) {
+      var Qr;
+      return null === rr ? {
         kind: "none",
         reason: "nothingStored"
-      } : BR(RR) ? {
+      } : Tr(rr) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.ok) || RR.validation.fromRecheck ? null === JR ? {
+      } : !1 !== (null === (Qr = rr.validation) || void 0 === Qr ? void 0 : Qr.ok) || rr.validation.fromRecheck ? null === Sr ? {
         kind: "none",
         reason: "noCompiler"
-      } : pR(RR, JR) ? {
+      } : Or(rr, Sr) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : RR.validation.ok ? {
+      } : rr.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -358,149 +358,149 @@ export const modules = {
       }
     }
 
-    function XR() {
-      uR.k.setItem(fR, performance.timeOrigin)
+    function yr() {
+      ar.n.setItem(Er, performance.timeOrigin)
     }
 
-    function MR() {
-      return uR.k.getItem(fR) === performance.timeOrigin
+    function Br() {
+      return ar.n.getItem(Er) === performance.timeOrigin
     }
 
-    function BR(RR) {
-      return !(0, tR.i)(RR.manifest.apiVersion)
+    function Tr(rr) {
+      return !(0, Wr.i)(rr.manifest.apiVersion)
     }
 
-    function lR(RR) {
-      return VR ??= RR.iH((0, iR.shaderPackTextures)()), VR
+    function vr(rr) {
+      return pr ??= rr.rC((0, fr.shaderPackTextures)()), pr
     }
 
-    function pR(RR, JR) {
-      var GR;
-      return (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.headerVersion) !== lR(JR)
+    function Or(rr, Sr) {
+      var Qr;
+      return (null === (Qr = rr.validation) || void 0 === Qr ? void 0 : Qr.headerVersion) !== vr(Sr)
     }
 
-    function gR(RR) {
-      return eR((async () => {
-        vR(await (0, qR.d)(!0), RR)
+    function Lr(rr) {
+      return Ur((async () => {
+        Xr(await (0, Ir.e)(!0), rr)
       }))
     }
 
-    function bR() {
-      return eR((async () => {
-        uR.i.removeItem(ZR.e)
+    function lr() {
+      return Ur((async () => {
+        ar.j.removeItem(jr.b)
       }))
     }
 
-    function vR(RR, JR) {
-      AR(RR, JR) ? uR.i.setItem(ZR.e, !0) : uR.i.removeItem(ZR.e)
+    function Xr(rr, Sr) {
+      er(rr, Sr) ? ar.j.setItem(jr.b, !0) : ar.j.removeItem(jr.b)
     }
   },
-  7773: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      loadShaderPackTextures: () => ZR,
-      shaderPackTextures: () => qR
+  7588: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      loadShaderPackTextures: () => jr,
+      shaderPackTextures: () => Ir
     });
-    var yR = GR(6084);
-    let tR = null,
-      uR = null;
+    var Zr = Qr(6007);
+    let Wr = null,
+      ar = null;
 
-    function ZR() {
-      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
+    function jr() {
+      return ar ??= Promise.all([Qr.e(85), Qr.e(126)]).then((() => Qr(42330))).then((rr => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: JR,
-          textureNameToIndex: GR,
-          textureAnimationData: uR
-        } = RR;
-        return tR ??= (0, yR.j)(GR, uR, JR), tR
-      })), uR
+          FORMER_BLOCK_IMAGE_NAMES: Sr,
+          textureNameToIndex: Qr,
+          textureAnimationData: ar
+        } = rr;
+        return Wr ??= (0, Zr.k)(Qr, ar, Sr), Wr
+      })), ar
     }
 
-    function qR() {
-      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return tR
+    function Ir() {
+      if (null === Wr) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Wr
     }
   },
-  7792: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => iR,
-      h: () => qR
+  7610: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => fr,
+      e: () => Ir
     });
-    var yR = GR(7800),
-      tR = GR(7773),
-      uR = GR(123);
-    const ZR = 100;
-    async function qR(RR, JR) {
-      var GR;
-      let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (GR = navigator.gpu) && void 0 !== GR ? GR : null;
-      const ZR = RR.UJR(JR, (0, tR.shaderPackTextures)());
-      if (ZR.errors.length > 0) return fR(RR, ZR.errors, ZR.offInStrict);
-      const qR = await async function(RR) {
-        if (!RR) return null;
+    var Zr = Qr(7615),
+      Wr = Qr(7588),
+      ar = Qr(127);
+    const jr = 100;
+    async function Ir(rr, Sr) {
+      var Qr;
+      let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Qr = navigator.gpu) && void 0 !== Qr ? Qr : null;
+      const jr = rr.Vrr(Sr, (0, Wr.shaderPackTextures)());
+      if (jr.errors.length > 0) return Er(rr, jr.errors, jr.offInStrict);
+      const Ir = await async function(rr) {
+        if (!rr) return null;
         try {
-          const JR = await (0, uR.y)(RR);
-          return JR ? await JR.requestDevice() : null
-        } catch (JR) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", JR), null
+          const Sr = await (0, ar.t)(rr);
+          return Sr ? await Sr.requestDevice() : null
+        } catch (Sr) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Sr), null
         }
-      }(yR);
-      if (!qR) return null;
-      let iR = !1;
-      qR.lost.then((() => {
-        iR = !0
+      }(Zr);
+      if (!Ir) return null;
+      let fr = !1;
+      Ir.lost.then((() => {
+        fr = !0
       }));
       try {
-        const JR = await Promise.all(ZR.validationModules.map((JR => async function(RR, JR, GR) {
-          JR.pushErrorScope("validation");
-          const yR = JR.createShaderModule({
-              code: GR.code
+        const Sr = await Promise.all(jr.validationModules.map((Sr => async function(rr, Sr, Qr) {
+          Sr.pushErrorScope("validation");
+          const Zr = Sr.createShaderModule({
+              code: Qr.code
             }),
-            tR = JR.popErrorScope(),
+            Wr = Sr.popErrorScope(),
             {
-              messages: uR
-            } = await yR.getCompilationInfo(),
-            ZR = uR.filter((RR => "error" === RR.type)).map((JR => RR.mapValidationMessage(GR, JR))),
-            qR = await tR;
-          qR && 0 === ZR.length && ZR.push({
+              messages: ar
+            } = await Zr.getCompilationInfo(),
+            jr = ar.filter((rr => "error" === rr.type)).map((Sr => rr.mapValidationMessage(Qr, Sr))),
+            Ir = await Wr;
+          Ir && 0 === jr.length && jr.push({
             file: null,
             line: 0,
-            message: qR.message,
-            variants: [GR.key]
+            message: Ir.message,
+            variants: [Qr.key]
           });
-          return ZR
-        }(RR, qR, JR))));
-        return iR ? null : fR(RR, RR.ZtR(JR.flat()), ZR.offInStrict)
-      } catch (VR) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", VR), null
+          return jr
+        }(rr, Ir, Sr))));
+        return fr ? null : Er(rr, rr.RZr(Sr.flat()), jr.offInStrict)
+      } catch (pr) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", pr), null
       } finally {
-        qR.destroy()
+        Ir.destroy()
       }
     }
-    async function iR(RR, JR) {
-      var GR;
-      if (!(0, yR.shaderPackNeedsCheck)(RR, JR) || (0, yR.isOtherApiVersion)(RR)) return RR;
-      const tR = await qR(JR, (0, yR.storedShaderPackFiles)(RR));
-      if (!tR) return RR;
-      const uR = !1 === (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.ok) && !RR.validation.fromRecheck,
-        ZR = {
-          ...RR,
-          validation: uR ? tR : {
-            ...tR,
+    async function fr(rr, Sr) {
+      var Qr;
+      if (!(0, Zr.shaderPackNeedsCheck)(rr, Sr) || (0, Zr.isOtherApiVersion)(rr)) return rr;
+      const Wr = await Ir(Sr, (0, Zr.storedShaderPackFiles)(rr));
+      if (!Wr) return rr;
+      const ar = !1 === (null === (Qr = rr.validation) || void 0 === Qr ? void 0 : Qr.ok) && !rr.validation.fromRecheck,
+        jr = {
+          ...rr,
+          validation: ar ? Wr : {
+            ...Wr,
             fromRecheck: !0
           }
         };
-      return await (0, yR.replaceShaderPack)(RR, ZR, JR) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), ZR
+      return await (0, Zr.replaceShaderPack)(rr, jr, Sr) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), jr
     }
 
-    function fR(RR, JR, GR) {
+    function Er(rr, Sr, Qr) {
       return {
-        headerVersion: (0, yR.pageShaderPackValidationVersion)(RR),
-        ok: 0 === JR.length,
-        errors: JR.slice(0, ZR),
-        moreErrors: Math.max(0, JR.length - ZR),
-        offInStrict: GR
+        headerVersion: (0, Zr.pageShaderPackValidationVersion)(rr),
+        ok: 0 === Sr.length,
+        errors: Sr.slice(0, jr),
+        moreErrors: Math.max(0, Sr.length - jr),
+        offInStrict: Qr
       }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

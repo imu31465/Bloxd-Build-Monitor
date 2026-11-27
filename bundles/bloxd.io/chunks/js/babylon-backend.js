@@ -1,109 +1,109 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  42663: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      CapeMaterialPlugin: () => AR,
-      HueTintMaterialPlugin: () => CR,
-      LifeformMaterialPlugin: () => XR,
-      OverlayMaterialPlugin: () => MR
+  42986: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      CapeMaterialPlugin: () => er,
+      HueTintMaterialPlugin: () => Kr,
+      LifeformMaterialPlugin: () => yr,
+      OverlayMaterialPlugin: () => Br
     });
-    var yR = GR(42671),
-      tR = GR(39172);
-    class uR extends((0, yR.d)(tR.e)) {}(0, yR.e)(tR.e, uR);
-    var ZR = GR(38453);
-    class qR extends((0, yR.d)(ZR.f)) {}(0, yR.e)(ZR.f, qR);
-    var iR = GR(39010);
-    class fR extends((0, yR.d)(iR.f)) {}(0, yR.e)(iR.f, fR);
-    var VR = GR(38475),
-      KR = GR(41781),
-      wR = GR(38466);
-    class rR extends((0, yR.d)(wR.e)) {
-      constructor(RR, JR, GR) {
-        super(RR, JR, GR), (0, VR.j)(RR)
+    var Zr = Qr(42995),
+      Wr = Qr(39507);
+    class ar extends((0, Zr.h)(Wr.e)) {}(0, Zr.l)(Wr.e, ar);
+    var jr = Qr(38809);
+    class Ir extends((0, Zr.h)(jr.i)) {}(0, Zr.l)(jr.i, Ir);
+    var fr = Qr(39348);
+    class Er extends((0, Zr.h)(fr.h)) {}(0, Zr.l)(fr.h, Er);
+    var pr = Qr(38831),
+      xr = Qr(42100),
+      mr = Qr(38824);
+    class Nr extends((0, Zr.h)(mr.e)) {
+      constructor(rr, Sr, Qr) {
+        super(rr, Sr, Qr), (0, pr.j)(rr)
       }
-      dispose(RR) {
-        (0, VR.l)(this._material), super.dispose(RR)
+      dispose(rr) {
+        (0, pr.m)(this._material), super.dispose(rr)
       }
-    }(0, yR.e)(wR.e, rR), (0, wR.i)({
-      disableUnusedSpecularTerm: yR.b,
-      isLightingDisabled: RR => RR instanceof KR.StandardMaterial && RR.disableLighting
+    }(0, Zr.l)(mr.e, Nr), (0, mr.i)({
+      disableUnusedSpecularTerm: Zr.d,
+      isLightingDisabled: rr => rr instanceof xr.StandardMaterial && rr.disableLighting
     });
-    var eR = GR(39922);
-    class aR extends((0, yR.d)(eR.f)) {}(0, yR.e)(eR.f, aR);
-    var LR = GR(40035),
-      nR = GR(38340),
-      UR = GR(39288),
-      WR = GR(38460);
-    class AR extends((0, yR.d)(LR.c)) {}(0, yR.e)(LR.c, AR);
-    class CR extends((0, yR.d)(nR.c)) {}(0, yR.e)(nR.c, CR);
-    class XR extends((0, yR.d)(UR.q)) {}(0, yR.e)(UR.q, XR);
-    class MR extends((0, yR.d)(WR.b)) {}(0, yR.e)(WR.b, MR)
+    var Ur = Qr(40263);
+    class tr extends((0, Zr.h)(Ur.h)) {}(0, Zr.l)(Ur.h, tr);
+    var hr = Qr(40371),
+      zr = Qr(38692),
+      Yr = Qr(39632),
+      nr = Qr(38819);
+    class er extends((0, Zr.h)(hr.e)) {}(0, Zr.l)(hr.e, er);
+    class Kr extends((0, Zr.h)(zr.e)) {}(0, Zr.l)(zr.e, Kr);
+    class yr extends((0, Zr.h)(Yr.p)) {}(0, Zr.l)(Yr.p, yr);
+    class Br extends((0, Zr.h)(nr.b)) {}(0, Zr.l)(nr.b, Br)
   },
-  53540: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      addBabylonLights: () => gJ,
-      createSceneParticleSystem: () => xJ,
-      default: () => DJ
+  54088: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      addBabylonLights: () => LS,
+      createSceneParticleSystem: () => HS,
+      default: () => RS
     });
-    var yR = GR(53543),
-      tR = (GR(41497), GR(42657), GR(42014), GR(53557)),
-      uR = GR(38329),
-      ZR = GR(38195),
-      qR = GR(53568),
-      iR = GR(53576),
-      fR = GR(38397),
-      VR = (GR(42671), GR(53584)),
-      KR = GR(53579),
-      wR = GR(39950),
-      rR = GR(53589),
-      eR = GR(41387),
-      aR = GR(39934);
-    const LR = "gpuParticles",
-      nR = "gpuParticlesSummed",
-      UR = aR.x,
-      WR = RR => RR / 4,
-      AR = (RR, JR, GR, yR) => Array.from({
-        length: JR
-      }, ((tR, uR) => `(${((RR,JR,GR)=>0===JR?`${RR} < 1`:JR===GR-1?`${RR} >= ${JR}`:`${RR} == ${JR}`)(RR,uR,JR)} ? ${GR(uR)} : ${yR})`)).join("\n\t\t+ "),
-      CR = (RR, JR, GR) => `vec4 ${RR}(int i) {\n\treturn ${AR("i",GR,(RR=>`gpuParticleSystem[${JR+RR}]`),"vec4(0.0)")};\n}\n`,
-      XR = `\n${CR("colorPositionsAt",WR(UR.colorPositions),aR.c/4)}\n${CR("color1At",WR(UR.color1),aR.c)}\n${CR("color2At",WR(UR.color2),aR.c)}\n${CR("velocityAt",WR(UR.BL),aR.c)}\n${CR("remapStopAt",WR(UR.remap),aR.c)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${AR("j",4,(RR=>`v[${RR}]`),"0.0")};\n}\n`,
-      MR = (RR, JR, GR, yR) => RR ? `${GR}(${yR})` : `gpuParticleSystem[${JR} + ${yR}]`,
-      BR = RR => `gpuParticleSystem[${RR>>2}].${"xyzw"[3&RR]}`,
-      lR = RR => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${aR.c}\n#define COLOR_POSITIONS ${WR(UR.colorPositions)}\n#define COLOR1 ${WR(UR.color1)}\n#define COLOR2 ${WR(UR.color2)}\n#define VELOCITY ${WR(UR.BL)}\n#define REMAP ${WR(UR.remap)}\n#define RECORDS_PER_ROW ${aR.r}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${aR.t/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${BR(UR.gravity)}, ${BR(UR.gravity+1)}, ${BR(UR.gravity+2)}); }\nint colorCount() { return int(${BR(UR.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${WR(UR.colorDead)}]; }\nint velocityCount() { return int(${BR(UR.velocityCount)}); }\nint remapCount() { return int(${BR(UR.remapCount)}); }\n${RR?XR:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${RR?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${MR(RR,"COLOR1","color1At","i")}, ${MR(RR,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${MR(RR,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${MR(RR,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${MR(RR,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${MR(RR,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${MR(RR,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${MR(RR,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${MR(RR,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
-      pR = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    eR.b.ShadersStore[`${LR}VertexShader`] = lR(!1), eR.b.ShadersStore[`${LR}PixelShader`] = pR, eR.b.ShadersStore[`${nR}VertexShader`] = lR(!0), eR.b.ShadersStore[`${nR}PixelShader`] = pR;
-    const gR = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      bR = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var vR = GR(39932),
-      OR = GR(53594);
-    class xR extends vR.e {
-      constructor(RR, JR, GR, yR) {
-        super(RR, JR, GR), this.renderer = GR, this.tL = yR, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(aR.t), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, OR.d)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (RR, JR) => {
+    var Zr = Qr(54093),
+      Wr = (Qr(41851), Qr(42980), Qr(42318), Qr(54098)),
+      ar = Qr(38679),
+      jr = Qr(38555),
+      Ir = Qr(54112),
+      fr = Qr(54116),
+      Er = Qr(38754),
+      pr = (Qr(42995), Qr(54125)),
+      xr = Qr(54122),
+      mr = Qr(40293),
+      Nr = Qr(54128),
+      Ur = Qr(41743),
+      tr = Qr(40276);
+    const hr = "gpuParticles",
+      zr = "gpuParticlesSummed",
+      Yr = tr.s,
+      nr = rr => rr / 4,
+      er = (rr, Sr, Qr, Zr) => Array.from({
+        length: Sr
+      }, ((Wr, ar) => `(${((rr,Sr,Qr)=>0===Sr?`${rr} < 1`:Sr===Qr-1?`${rr} >= ${Sr}`:`${rr} == ${Sr}`)(rr,ar,Sr)} ? ${Qr(ar)} : ${Zr})`)).join("\n\t\t+ "),
+      Kr = (rr, Sr, Qr) => `vec4 ${rr}(int i) {\n\treturn ${er("i",Qr,(rr=>`gpuParticleSystem[${Sr+rr}]`),"vec4(0.0)")};\n}\n`,
+      yr = `\n${Kr("colorPositionsAt",nr(Yr.colorPositions),tr.b/4)}\n${Kr("color1At",nr(Yr.color1),tr.b)}\n${Kr("color2At",nr(Yr.color2),tr.b)}\n${Kr("velocityAt",nr(Yr.Lh),tr.b)}\n${Kr("remapStopAt",nr(Yr.remap),tr.b)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${er("j",4,(rr=>`v[${rr}]`),"0.0")};\n}\n`,
+      Br = (rr, Sr, Qr, Zr) => rr ? `${Qr}(${Zr})` : `gpuParticleSystem[${Sr} + ${Zr}]`,
+      Tr = rr => `gpuParticleSystem[${rr>>2}].${"xyzw"[3&rr]}`,
+      vr = rr => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${tr.b}\n#define COLOR_POSITIONS ${nr(Yr.colorPositions)}\n#define COLOR1 ${nr(Yr.color1)}\n#define COLOR2 ${nr(Yr.color2)}\n#define VELOCITY ${nr(Yr.Lh)}\n#define REMAP ${nr(Yr.remap)}\n#define RECORDS_PER_ROW ${tr.o}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${tr.p/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Tr(Yr.gravity)}, ${Tr(Yr.gravity+1)}, ${Tr(Yr.gravity+2)}); }\nint colorCount() { return int(${Tr(Yr.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${nr(Yr.colorDead)}]; }\nint velocityCount() { return int(${Tr(Yr.velocityCount)}); }\nint remapCount() { return int(${Tr(Yr.remapCount)}); }\n${rr?yr:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${rr?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${Br(rr,"COLOR1","color1At","i")}, ${Br(rr,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${Br(rr,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${Br(rr,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${Br(rr,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${Br(rr,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${Br(rr,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${Br(rr,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${Br(rr,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
+      Or = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    Ur.e.ShadersStore[`${hr}VertexShader`] = vr(!1), Ur.e.ShadersStore[`${hr}PixelShader`] = Or, Ur.e.ShadersStore[`${zr}VertexShader`] = vr(!0), Ur.e.ShadersStore[`${zr}PixelShader`] = Or;
+    const Lr = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      lr = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var Xr = Qr(40274),
+      Pr = Qr(54130);
+    class Hr extends Xr.c {
+      constructor(rr, Sr, Qr, Zr) {
+        super(rr, Sr, Qr), this.renderer = Qr, this.Dt = Zr, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(tr.p), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, Pr.f)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (rr, Sr) => {
           const {
-            engine: GR
-          } = this, yR = GR._gl;
-          GR._bindTextureDirectly(yR.TEXTURE_2D, this.records, !0), GR._unpackFlipY(!1);
-          const tR = this.ring.recordBits;
-          for (let uR = RR; uR < JR;) {
-            const RR = Math.floor(uR / aR.r),
-              GR = Math.min(JR, (RR + 1) * aR.r);
-            yR.texSubImage2D(yR.TEXTURE_2D, 0, uR % aR.r * 4, RR, 4 * (GR - uR), 1, yR.RGBA_INTEGER, yR.UNSIGNED_INT, tR, uR * aR.g), uR = GR
+            engine: Qr
+          } = this, Zr = Qr._gl;
+          Qr._bindTextureDirectly(Zr.TEXTURE_2D, this.records, !0), Qr._unpackFlipY(!1);
+          const Wr = this.ring.recordBits;
+          for (let ar = rr; ar < Sr;) {
+            const rr = Math.floor(ar / tr.o),
+              Qr = Math.min(Sr, (rr + 1) * tr.o);
+            Zr.texSubImage2D(Zr.TEXTURE_2D, 0, ar % tr.o * 4, rr, 4 * (Qr - ar), 1, Zr.RGBA_INTEGER, Zr.UNSIGNED_INT, Wr, ar * tr.f), ar = Qr
           }
-          GR._bindTextureDirectly(yR.TEXTURE_2D, null)
-        }, this.id = RR;
-        const tR = yR.ke();
-        this.engine = tR;
-        const uR = Math.max(1, JR),
-          ZR = Math.min(uR, aR.r);
-        this.records = tR.createRawTexture(null, 4 * ZR, Math.ceil(uR / ZR), VR.c.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, VR.c.TEXTURE_NEAREST_SAMPLINGMODE, null, VR.c.TEXTURETYPE_UNSIGNED_INTEGER)
+          Qr._bindTextureDirectly(Zr.TEXTURE_2D, null)
+        }, this.id = rr;
+        const Wr = Zr.MU();
+        this.engine = Wr;
+        const ar = Math.max(1, Sr),
+          jr = Math.min(ar, tr.o);
+        this.records = Wr.createRawTexture(null, 4 * jr, Math.ceil(ar / jr), pr.d.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, pr.d.TEXTURE_NEAREST_SAMPLINGMODE, null, pr.d.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.tL.getAnimationRatio() || 1;
-        const JR = this.tL.getFrameId();
-        if (JR === this.animatedFrame) return !1;
-        const GR = super.animate(RR);
-        return GR && (this.animatedFrame = JR, this.ring.takeUploads(this.uploadSlots)), GR
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.Dt.getAnimationRatio() || 1;
+        const Sr = this.Dt.getFrameId();
+        if (Sr === this.animatedFrame) return !1;
+        const Qr = super.animate(rr);
+        return Qr && (this.animatedFrame = Sr, this.ring.takeUploads(this.uploadSlots)), Qr
       }
       render() {
         return this.renderer.render(this)
@@ -112,780 +112,780 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(RR) {
-        (0, OR.e)(this, this.uniforms, this.uniformBits, RR);
-        for (const GR of aR.w) this.uniforms[GR] = this.uniformBits[GR];
-        var JR;
-        (0, OR.g)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (JR = this.ramp) || void 0 === JR || JR.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = KR.b.CreateRGBATexture(this.rampTexels.texels, aR.o, 1, this.tL, !1, !1, VR.c.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(rr) {
+        (0, Pr.j)(this, this.uniforms, this.uniformBits, rr);
+        for (const Qr of tr.r) this.uniforms[Qr] = this.uniformBits[Qr];
+        var Sr;
+        (0, Pr.l)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (Sr = this.ramp) || void 0 === Sr || Sr.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = xr.c.CreateRGBATexture(this.rampTexels.texels, tr.m, 1, this.Dt, !1, !1, pr.d.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var RR;
-        this.records.dispose(), null === (RR = this.ramp) || void 0 === RR || RR.dispose(), this.ramp = null
+        var rr;
+        this.records.dispose(), null === (rr = this.ramp) || void 0 === rr || rr.dispose(), this.ramp = null
       }
     }
-    const NR = "the context was lost before the programs linked";
-    class DR {
-      constructor(RR, JR) {
-        this.tL = RR, this.reportFailure = JR, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = LR, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, rR.d)(), this.engine = RR.ke(), this.whiteRamp = KR.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, RR, !1, !1, VR.c.TEXTURE_NEAREST_SAMPLINGMODE);
-        const GR = this.linkPair(LR),
-          yR = null !== GR && GR !== NR ? this.linkPair(nR) : GR;
-        null === yR && null !== GR ? (console.warn(`GPU particles link their fallback here: ${GR}`), this.reportFailure(GR, !0)) : null !== yR && this.fail(yR === NR ? NR : null !== GR && void 0 !== GR ? GR : yR)
+    const qr = "the context was lost before the programs linked";
+    class Rr {
+      constructor(rr, Sr) {
+        this.Dt = rr, this.reportFailure = Sr, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = hr, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, Nr.c)(), this.engine = rr.MU(), this.whiteRamp = xr.c.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, rr, !1, !1, pr.d.TEXTURE_NEAREST_SAMPLINGMODE);
+        const Qr = this.linkPair(hr),
+          Zr = null !== Qr && Qr !== qr ? this.linkPair(zr) : Qr;
+        null === Zr && null !== Qr ? (console.warn(`GPU particles link their fallback here: ${Qr}`), this.reportFailure(Qr, !0)) : null !== Zr && this.fail(Zr === qr ? qr : null !== Qr && void 0 !== Qr ? Qr : Zr)
       }
-      Km(RR, JR) {
-        const GR = aR.r * this.engine.getCaps().maxTextureSize;
-        JR > GR && this.warnOnce(`capacity:${RR}`, `particle system ${RR} holds ${GR} particles, not ${JR}: its records texture's limit`);
-        const yR = new xR(RR, Math.min(JR, GR), this, this.tL);
-        return this.tL.addParticleSystem(yR), yR
+      QG(rr, Sr) {
+        const Qr = tr.o * this.engine.getCaps().maxTextureSize;
+        Sr > Qr && this.warnOnce(`capacity:${rr}`, `particle system ${rr} holds ${Qr} particles, not ${Sr}: its records texture's limit`);
+        const Zr = new Hr(rr, Math.min(Sr, Qr), this, this.Dt);
+        return this.Dt.addParticleSystem(Zr), Zr
       }
-      canDraw(RR) {
-        var JR, GR;
-        if (this.failed || null === (JR = RR.texture) || void 0 === JR || null === (GR = JR.mirror) || void 0 === GR || !GR.isReady()) return !1;
-        for (const yR of (0, wR.m)(RR.blendMode))
-          if (!this.effectFor(yR).isReady()) return !1;
+      canDraw(rr) {
+        var Sr, Qr;
+        if (this.failed || null === (Sr = rr.texture) || void 0 === Sr || null === (Qr = Sr.mirror) || void 0 === Qr || !Qr.isReady()) return !1;
+        for (const Zr of (0, mr.h)(rr.blendMode))
+          if (!this.effectFor(Zr).isReady()) return !1;
         return !0
       }
-      disposeStopped(RR) {
-        this.tL._toBeDisposed.push(RR)
+      disposeStopped(rr) {
+        this.Dt._toBeDisposed.push(rr)
       }
-      remove(RR) {
-        this.tL.removeParticleSystem(RR), RR.releaseGl()
+      remove(rr) {
+        this.Dt.removeParticleSystem(rr), rr.releaseGl()
       }
-      render(RR) {
-        var JR;
-        if (!RR.isReady() || !RR.hasLiveParticles()) return 0;
+      render(rr) {
+        var Sr;
+        if (!rr.isReady() || !rr.hasLiveParticles()) return 0;
         const {
-          engine: GR,
-          tL: yR,
-          frame: tR
+          engine: Qr,
+          Dt: Zr,
+          frame: Wr
         } = this;
-        RR.prepareDraw(this.warnOnce), RR.drawOffset(tR, 0), tR[3] = RR.drawTime();
-        const uR = RR.ring.drawStart(),
-          ZR = RR.ring.drawCount(),
-          qR = null !== (JR = RR.ramp) && void 0 !== JR ? JR : this.whiteRamp;
-        GR.setState(!1);
-        for (const iR of (0, wR.m)(RR.blendMode)) {
-          const JR = this.effectFor(iR);
-          GR.enableEffect(JR), JR.setTexture("gpuParticleTexture", RR.texture.mirror), JR.setTexture("gpuParticleRampTexture", qR), JR._bindTexture("gpuParticleRecords", RR.records), JR.setMatrix("gpuParticleView", yR.getViewMatrix()), JR.setMatrix("gpuParticleProjection", yR.getProjectionMatrix()), JR.setFloatArray4("gpuParticleSystem", RR.uniforms), JR.setFloat4("gpuParticleFrame", tR[0], tR[1], tR[2], tR[3]), JR.setFloat2("gpuParticleRange", uR, ZR), JR.setFloat("gpuParticleRamp", RR.uniforms[aR.x.ramp]), GR.bindBuffers(this.vertexBuffers, null, JR), GR.setAlphaMode((0, wR.i)(iR)), GR.drawArraysType(VR.c.MATERIAL_TriangleStripDrawMode, 0, 4, ZR), JR._bindTexture("gpuParticleRecords", null)
+        rr.prepareDraw(this.warnOnce), rr.drawOffset(Wr, 0), Wr[3] = rr.drawTime();
+        const ar = rr.ring.drawStart(),
+          jr = rr.ring.drawCount(),
+          Ir = null !== (Sr = rr.ramp) && void 0 !== Sr ? Sr : this.whiteRamp;
+        Qr.setState(!1);
+        for (const fr of (0, mr.h)(rr.blendMode)) {
+          const Sr = this.effectFor(fr);
+          Qr.enableEffect(Sr), Sr.setTexture("gpuParticleTexture", rr.texture.mirror), Sr.setTexture("gpuParticleRampTexture", Ir), Sr._bindTexture("gpuParticleRecords", rr.records), Sr.setMatrix("gpuParticleView", Zr.getViewMatrix()), Sr.setMatrix("gpuParticleProjection", Zr.getProjectionMatrix()), Sr.setFloatArray4("gpuParticleSystem", rr.uniforms), Sr.setFloat4("gpuParticleFrame", Wr[0], Wr[1], Wr[2], Wr[3]), Sr.setFloat2("gpuParticleRange", ar, jr), Sr.setFloat("gpuParticleRamp", rr.uniforms[tr.s.ramp]), Qr.bindBuffers(this.vertexBuffers, null, Sr), Qr.setAlphaMode((0, mr.g)(fr)), Qr.drawArraysType(pr.d.MATERIAL_TriangleStripDrawMode, 0, 4, jr), Sr._bindTexture("gpuParticleRecords", null)
         }
-        return GR.setAlphaMode(VR.c.ALPHA_DISABLE), ZR
+        return Qr.setAlphaMode(pr.d.ALPHA_DISABLE), jr
       }
-      linkPair(RR) {
-        this.shader = RR, this.pairFailure = null, this.linkingPair = !0;
+      linkPair(rr) {
+        this.shader = rr, this.pairFailure = null, this.linkingPair = !0;
         try {
-          return this.effect = this.createEffect(RR, ""), this.multiplyEffect = this.createEffect(RR, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
+          return this.effect = this.createEffect(rr, ""), this.multiplyEffect = this.createEffect(rr, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
         } finally {
           this.linkingPair = !1
         }
       }
-      awaitLink(RR) {
-        const JR = RR.getPipelineContext(),
-          GR = this.gl();
-        GR && null === this.pairFailure && (!JR || JR.isParallelCompiled && !JR.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : JR.isParallelCompiled && JR.program && (GR.getProgramParameter(JR.program, GR.LINK_STATUS) || this.programFailed(function(RR, JR, GR) {
-          if (RR.isContextLost()) return NR;
-          for (const [yR, tR] of [
-              ["VERTEX SHADER", JR.vertexShader],
-              ["FRAGMENT SHADER", JR.fragmentShader]
+      awaitLink(rr) {
+        const Sr = rr.getPipelineContext(),
+          Qr = this.gl();
+        Qr && null === this.pairFailure && (!Sr || Sr.isParallelCompiled && !Sr.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : Sr.isParallelCompiled && Sr.program && (Qr.getProgramParameter(Sr.program, Qr.LINK_STATUS) || this.programFailed(function(rr, Sr, Qr) {
+          if (rr.isContextLost()) return qr;
+          for (const [Zr, Wr] of [
+              ["VERTEX SHADER", Sr.vertexShader],
+              ["FRAGMENT SHADER", Sr.fragmentShader]
             ]) {
-            const JR = tR && !RR.getShaderParameter(tR, RR.COMPILE_STATUS) ? RR.getShaderInfoLog(tR) : null;
-            if (JR) return `${yR} ${JR}`
+            const Sr = Wr && !rr.getShaderParameter(Wr, rr.COMPILE_STATUS) ? rr.getShaderInfoLog(Wr) : null;
+            if (Sr) return `${Zr} ${Sr}`
           }
-          return RR.getProgramInfoLog(GR) || "a program did not link"
-        }(GR, JR, JR.program))))
+          return rr.getProgramInfoLog(Qr) || "a program did not link"
+        }(Qr, Sr, Sr.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(RR) {
-        return RR === wR.c ? this.multiplyEffect : this.effect
+      effectFor(rr) {
+        return rr === mr.d ? this.multiplyEffect : this.effect
       }
-      createEffect(RR, JR) {
-        return this.engine.createEffect(RR, [], gR, bR, JR, void 0, void 0, ((JR, GR) => {
-          var yR;
-          RR === this.shader && this.programFailed(null !== (yR = this.gl()) && void 0 !== yR && yR.isContextLost() ? NR : function(RR) {
-            const JR = RR.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(JR) ? "a program failed, its log not in this browser's stack" : JR.replace(/^Error: /, "")
-          }(GR))
+      createEffect(rr, Sr) {
+        return this.engine.createEffect(rr, [], Lr, lr, Sr, void 0, void 0, ((Sr, Qr) => {
+          var Zr;
+          rr === this.shader && this.programFailed(null !== (Zr = this.gl()) && void 0 !== Zr && Zr.isContextLost() ? qr : function(rr) {
+            const Sr = rr.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(Sr) ? "a program failed, its log not in this browser's stack" : Sr.replace(/^Error: /, "")
+          }(Qr))
         }))
       }
-      programFailed(RR) {
-        this.linkingPair ? this.pairFailure ??= RR : this.fail(RR)
+      programFailed(rr) {
+        this.linkingPair ? this.pairFailure ??= rr : this.fail(rr)
       }
-      fail(RR) {
+      fail(rr) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${RR}`), this.reportFailure(RR, !1);
-          for (const RR of this.tL.pM.slice()) RR instanceof xR && RR.disposeOnStop && RR.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${rr}`), this.reportFailure(rr, !1);
+          for (const rr of this.Dt.pT.slice()) rr instanceof Hr && rr.disposeOnStop && rr.dispose()
         }
       }
     }
-    var HR = GR(41352);
-    class oR extends HR.c {
+    var gr = Qr(41725);
+    class Cr extends gr.d {
       createEffect() {
-        const RR = super.createEffect(...arguments);
-        return PR(RR), cR.has(RR) || (cR.add(RR), RR.onCompileObservable.add((() => {
-          PR(RR)
-        }))), RR
+        const rr = super.createEffect(...arguments);
+        return Gr(rr), Mr.has(rr) || (Mr.add(rr), rr.onCompileObservable.add((() => {
+          Gr(rr)
+        }))), rr
       }
     }
-    const cR = new WeakSet;
+    const Mr = new WeakSet;
 
-    function PR(RR) {
-      RR._vertexSourceCodeBeforeMigration = "", RR._fragmentSourceCodeBeforeMigration = ""
+    function Gr(rr) {
+      rr._vertexSourceCodeBeforeMigration = "", rr._fragmentSourceCodeBeforeMigration = ""
     }
-    var IR = GR(41719),
-      mR = GR(42644),
-      zR = GR(41475),
-      SR = GR(41690),
-      jR = GR(41681),
-      dR = GR(41610),
-      ER = GR(42716),
-      YR = GR(38675),
-      kR = GR(53599),
-      QR = GR(53605),
-      FR = GR(53612),
-      TR = GR(41626),
-      sR = GR(4006),
-      hR = GR(38550),
-      RJ = GR(41829),
-      JJ = GR(38628),
-      GJ = GR(38576);
+    var kr = Qr(42047),
+      Ar = Qr(42966),
+      Vr = Qr(41834),
+      ir = Qr(42018),
+      wr = Qr(42014),
+      cr = Qr(41934),
+      Fr = Qr(43039),
+      or = Qr(39021),
+      br = Qr(54135),
+      Jr = Qr(54138),
+      Dr = Qr(54146),
+      dr = Qr(41960),
+      sr = Qr(3959),
+      ur = Qr(38889),
+      rS = Qr(42155),
+      SS = Qr(38979),
+      QS = Qr(38913);
 
-    function yJ(RR) {
-      if (RR.visibility < 1 || !RR.isVisible || !RR.isEnabled() || RR.metadata[GJ.f] || !RR.isReady()) return !0;
-      const JR = RR.XM;
-      if (!JR || 0 === JR.length) return !0;
-      for (let GR = 0; GR < JR.length; GR++) {
-        const yR = JR[GR],
-          tR = yR.he();
-        if (!tR || !tR.isReadyForSubMesh(RR, yR, !1)) return !0
+    function ZS(rr) {
+      if (rr.visibility < 1 || !rr.isVisible || !rr.isEnabled() || rr.metadata[QS.f] || !rr.isReady()) return !0;
+      const Sr = rr.jT;
+      if (!Sr || 0 === Sr.length) return !0;
+      for (let Qr = 0; Qr < Sr.length; Qr++) {
+        const Zr = Sr[Qr],
+          Wr = Zr.iU();
+        if (!Wr || !Wr.isReadyForSubMesh(rr, Zr, !1)) return !0
       }
       return !1
     }
-    class tJ {
-      constructor(RR, JR) {
-        this.xw = RR, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, JR.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class WS {
+      constructor(rr, Sr) {
+        this.gm = rr, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, Sr.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      UK(RR) {
-        var JR;
-        const GR = this.armed;
-        if (this.armed = !1, this.vis = null, !GR) return !1;
+      Yx(rr) {
+        var Sr;
+        const Qr = this.armed;
+        if (this.armed = !1, this.vis = null, !Qr) return !1;
         this.culled = 0;
         const {
-          xw: yR
-        } = this, tR = null === (JR = yR.BX) || void 0 === JR ? void 0 : JR.visibility;
-        if (!tR || !RR || yR.lK.La) return !1;
-        if (!(yR.NK.htR[0] >= JJ.d)) return !1;
-        const uR = RR.getProjectionMatrix().m;
-        if (0 !== uR[15]) return !1;
-        const ZR = yR.Fw,
-          qR = RR.globalPosition,
-          iR = this.eye;
-        return iR[0] = qR.x + ZR[0], iR[1] = qR.y + ZR[1], iR[2] = qR.z + ZR[2], !!tR.eyeClear(iR[0], iR[1], iR[2], RR.minZ, uR, yR.NK) && (this.vis = tR, this.passable.clear(), this.count = 0, !0)
+          gm: Zr
+        } = this, Wr = null === (Sr = Zr.qB) || void 0 === Sr ? void 0 : Sr.visibility;
+        if (!Wr || !rr || Zr.Ox.Wt) return !1;
+        if (!(Zr.qx.PWr[0] >= SS.f)) return !1;
+        const ar = rr.getProjectionMatrix().m;
+        if (0 !== ar[15]) return !1;
+        const jr = Zr.um,
+          Ir = rr.globalPosition,
+          fr = this.eye;
+        return fr[0] = Ir.x + jr[0], fr[1] = Ir.y + jr[1], fr[2] = Ir.z + jr[2], !!Wr.eyeClear(fr[0], fr[1], fr[2], rr.minZ, ar, Zr.qx) && (this.vis = Wr, this.passable.clear(), this.count = 0, !0)
       }
-      see(RR, JR) {
-        const GR = this.count++;
-        if (GR === this.cellSlots.length) {
-          const RR = new Int32Array(2 * GR);
-          RR.set(this.cellSlots), this.cellSlots = RR
+      see(rr, Sr) {
+        const Qr = this.count++;
+        if (Qr === this.cellSlots.length) {
+          const rr = new Int32Array(2 * Qr);
+          rr.set(this.cellSlots), this.cellSlots = rr
         }
-        this.cellSlots[GR] = JR, this.meshes[GR] = RR
+        this.cellSlots[Qr] = Sr, this.meshes[Qr] = rr
       }
-      seeThrough(RR) {
-        this.passable.add(RR)
+      seeThrough(rr) {
+        this.passable.add(rr)
       }
-      finish(RR, JR) {
+      finish(rr, Sr) {
         const {
-          vis: GR,
-          eye: yR,
-          meshes: tR,
-          count: uR,
-          cellSlots: ZR
+          vis: Qr,
+          eye: Zr,
+          meshes: Wr,
+          count: ar,
+          cellSlots: jr
         } = this, {
-          NK: qR
-        } = this.xw, [iR, fR] = qR.htR, VR = null !== GR && GR.update(yR[0], yR[1], yR[2], qR.nK, iR, fR, this.passable);
-        let KR = 0;
-        for (let wR = 0; wR < uR; wR++) {
-          const yR = tR[wR];
-          if (VR) {
-            const RR = 3 * ZR[wR];
-            if (RR >= 0 && !GR.isDrawn(JR[RR], JR[RR + 1], JR[RR + 2])) {
-              KR++;
+          qx: Ir
+        } = this.gm, [fr, Er] = Ir.PWr, pr = null !== Qr && Qr.update(Zr[0], Zr[1], Zr[2], Ir.zx, fr, Er, this.passable);
+        let xr = 0;
+        for (let mr = 0; mr < ar; mr++) {
+          const Zr = Wr[mr];
+          if (pr) {
+            const rr = 3 * jr[mr];
+            if (rr >= 0 && !Qr.isDrawn(Sr[rr], Sr[rr + 1], Sr[rr + 2])) {
+              xr++;
               continue
             }
           }
-          TR.f.prototype.push.call(RR, yR)
+          dr.h.prototype.push.call(rr, Zr)
         }
-        tR.fill(null, 0, uR), this.count = 0, this.vis = null, this.culled = KR
+        Wr.fill(null, 0, ar), this.count = 0, this.vis = null, this.culled = xr
       }
     }
-    var uJ = GR(38616),
-      ZJ = GR(38565),
-      qJ = GR(41810),
-      iJ = GR(53615),
-      fJ = GR(41813),
-      VJ = GR(41741);
-    let KJ = 1;
-    const wJ = new WeakSet;
+    var aS = Qr(38963),
+      jS = Qr(38898),
+      IS = Qr(42130),
+      fS = Qr(54151),
+      ES = Qr(42134),
+      pS = Qr(42060);
+    let xS = 1;
+    const mS = new WeakSet;
 
-    function rJ() {
-      return KJ
+    function NS() {
+      return xS
     }
 
-    function eJ() {
-      KJ = KJ >= 1073741823 ? 1 : KJ + 1
+    function US() {
+      xS = xS >= 1073741823 ? 1 : xS + 1
     }
 
-    function aJ(RR) {
-      const JR = RR.metadata;
-      if (!JR || !0 !== JR[hR.s]) return;
-      const GR = JR[hR.x],
-        yR = null === GR || void 0 === GR ? void 0 : GR._noaStamps;
-      if (!GR || !yR) return;
-      const tR = GR.entries.indexOf(RR);
-      tR >= 0 && (yR[tR] = 0)
+    function tS(rr) {
+      const Sr = rr.metadata;
+      if (!Sr || !0 !== Sr[ur.p]) return;
+      const Qr = Sr[ur.v],
+        Zr = null === Qr || void 0 === Qr ? void 0 : Qr._noaStamps;
+      if (!Qr || !Zr) return;
+      const Wr = Qr.entries.indexOf(rr);
+      Wr >= 0 && (Zr[Wr] = 0)
     }
 
-    function LJ(RR) {
-      const JR = RR.XM;
-      for (let GR = 0; GR < JR.length; GR++) {
-        const RR = JR[GR].he();
-        if (RR && !RR.isFrozen) return !1
+    function hS(rr) {
+      const Sr = rr.jT;
+      for (let Qr = 0; Qr < Sr.length; Qr++) {
+        const rr = Sr[Qr].iU();
+        if (rr && !rr.isFrozen) return !1
       }
-      for (let GR = 0; GR < JR.length; GR++) {
-        const RR = JR[GR].he();
-        RR && wJ.add(RR)
+      for (let Qr = 0; Qr < Sr.length; Qr++) {
+        const rr = Sr[Qr].iU();
+        rr && mS.add(rr)
       }
       return !0
     }
-    let nJ = !1;
-    const UJ = new WeakSet;
+    let zS = !1;
+    const YS = new WeakSet;
 
-    function WJ(RR, JR) {
-      const GR = RR[JR];
-      if ("function" !== typeof GR) throw new Error(`terrainDrawState: Babylon has no ${JR} to hook`);
-      return GR
+    function nS(rr, Sr) {
+      const Qr = rr[Sr];
+      if ("function" !== typeof Qr) throw new Error(`terrainDrawState: Babylon has no ${Sr} to hook`);
+      return Qr
     }
 
-    function AJ(RR, JR, GR, yR, tR) {
-      const uR = GR.NK.nK,
-        ZR = new Map;
-      let qR = 0;
-      const iR = new tJ(GR, RR),
-        fR = new uJ.e(uR, RR.ke());
-      ! function(RR) {
-        if (UJ.has(RR) || (UJ.add(RR), RR.onContextLostObservable.add(eJ), RR.Ye.add(eJ)), nJ) return;
-        nJ = !0;
-        const JR = iJ.d.prototype,
-          GR = WJ(JR, "_markSubMeshesAsDirty");
-        Object.assign(JR, {
-          _markSubMeshesAsDirty(RR) {
-            GR.call(this, RR), aJ(this)
+    function eS(rr, Sr, Qr, Zr, Wr) {
+      const ar = Qr.qx.zx,
+        jr = new Map;
+      let Ir = 0;
+      const fr = new WS(Qr, rr),
+        Er = new aS.c(ar, rr.MU());
+      ! function(rr) {
+        if (YS.has(rr) || (YS.add(rr), rr.onContextLostObservable.add(US), rr.CU.add(US)), zS) return;
+        zS = !0;
+        const Sr = fS.b.prototype,
+          Qr = nS(Sr, "_markSubMeshesAsDirty");
+        Object.assign(Sr, {
+          _markSubMeshesAsDirty(rr) {
+            Qr.call(this, rr), tS(this)
           }
         });
-        const yR = WJ(VJ.d.prototype, "_syncParentEnabledState");
-        Object.assign(VJ.d.prototype, {
+        const Zr = nS(pS.c.prototype, "_syncParentEnabledState");
+        Object.assign(pS.c.prototype, {
           _syncParentEnabledState() {
-            yR.call(this), aJ(this)
+            Zr.call(this), tS(this)
           }
         });
-        const tR = WJ(fJ.b.prototype, "resetDrawCache");
-        fJ.b.prototype.resetDrawCache = function(RR, JR) {
-          tR.call(this, RR, JR), aJ(this.getMesh())
+        const Wr = nS(ES.b.prototype, "resetDrawCache");
+        ES.b.prototype.resetDrawCache = function(rr, Sr) {
+          Wr.call(this, rr, Sr), tS(this.getMesh())
         };
-        const uR = qJ.d.prototype,
-          ZR = WJ(uR, "markDirty");
-        uR.markDirty = function(RR) {
-          ZR.call(this, RR), wJ.has(this) && eJ()
+        const ar = IS.d.prototype,
+          jr = nS(ar, "markDirty");
+        ar.markDirty = function(rr) {
+          jr.call(this, rr), mS.has(this) && US()
         };
-        const qR = WJ(uR, "_markAllSubMeshesAsDirty");
-        Object.assign(uR, {
-          _markAllSubMeshesAsDirty(RR) {
-            qR.call(this, RR), wJ.has(this) && eJ()
+        const Ir = nS(ar, "_markAllSubMeshesAsDirty");
+        Object.assign(ar, {
+          _markAllSubMeshesAsDirty(rr) {
+            Ir.call(this, rr), mS.has(this) && US()
           }
         })
-      }(RR.ke());
-      let VR = new Float64Array(384),
-        KR = new Int32Array(64),
-        wR = new Uint8Array(64),
-        rR = new Float64Array(64),
-        eR = new Int32Array(192),
-        aR = 0;
-      const LR = [],
-        nR = new Float64Array(24),
-        UR = () => {
-          const RR = LR.pop();
-          return void 0 !== RR ? (KR[RR] = 0, RR) : (aR === KR.length && (VR = CJ(VR, new Float64Array(2 * VR.length)), KR = CJ(KR, new Int32Array(2 * KR.length)), wR = CJ(wR, new Uint8Array(2 * wR.length)), rR = CJ(rR, new Float64Array(2 * rR.length)), eR = CJ(eR, new Int32Array(2 * eR.length))), aR++)
+      }(rr.MU());
+      let pr = new Float64Array(384),
+        xr = new Int32Array(64),
+        mr = new Uint8Array(64),
+        Nr = new Float64Array(64),
+        Ur = new Int32Array(192),
+        tr = 0;
+      const hr = [],
+        zr = new Float64Array(24),
+        Yr = () => {
+          const rr = hr.pop();
+          return void 0 !== rr ? (xr[rr] = 0, rr) : (tr === xr.length && (pr = KS(pr, new Float64Array(2 * pr.length)), xr = KS(xr, new Int32Array(2 * xr.length)), mr = KS(mr, new Uint8Array(2 * mr.length)), Nr = KS(Nr, new Float64Array(2 * Nr.length)), Ur = KS(Ur, new Int32Array(2 * Ur.length))), tr++)
         },
-        WR = RR => {
-          const JR = 6 * RR._noaSlot,
-            GR = RR.ZuR[0],
-            yR = RR.ZuR[1];
-          VR[JR] = GR.x, VR[JR + 1] = GR.y, VR[JR + 2] = GR.z, VR[JR + 3] = yR.x, VR[JR + 4] = yR.y, VR[JR + 5] = yR.z
+        nr = rr => {
+          const Sr = 6 * rr._noaSlot,
+            Qr = rr.GWr[0],
+            Zr = rr.GWr[1];
+          pr[Sr] = Qr.x, pr[Sr + 1] = Qr.y, pr[Sr + 2] = Qr.z, pr[Sr + 3] = Zr.x, pr[Sr + 4] = Zr.y, pr[Sr + 5] = Zr.z
         },
-        AR = (RR, JR, GR) => {
-          if (!GR) return iR.see(RR, -1), !1;
-          const yR = yJ(RR);
-          return yR && iR.seeThrough(rR[JR]), iR.see(RR, JR), !yR
+        er = (rr, Sr, Qr) => {
+          if (!Qr) return fr.see(rr, -1), !1;
+          const Zr = ZS(rr);
+          return Zr && fr.seeThrough(Nr[Sr]), fr.see(rr, Sr), !Zr
         };
-      let CR = -1;
-      return RR.getActiveMeshCandidates = () => {
-        const GR = RR.frustumPlanes,
-          yR = JR._selectionContent;
-        yR.reset(), (GR => {
-          const yR = RR.frustumPlanes;
-          qR = qR + 1 | 0 || 1;
-          const tR = JR.blocks,
-            uR = iR.UK(RR.activeCamera),
-            ZR = uR && !0;
-          if (ZR) {
-            const JR = RR.ke().currentRenderPassId;
-            JR !== CR && (CR = JR, eJ())
+      let Kr = -1;
+      return rr.getActiveMeshCandidates = () => {
+        const Qr = rr.frustumPlanes,
+          Zr = Sr._selectionContent;
+        Zr.reset(), (Qr => {
+          const Zr = rr.frustumPlanes;
+          Ir = Ir + 1 | 0 || 1;
+          const Wr = Sr.blocks,
+            ar = fr.Yx(rr.activeCamera),
+            jr = ar && !0;
+          if (jr) {
+            const Sr = rr.MU().currentRenderPassId;
+            Sr !== Kr && (Kr = Sr, US())
           }
-          const fR = rJ(),
-            rR = ZR && !1;
-          tR.length > 0 && function(RR, JR) {
-            for (let GR = 0; GR < 6; GR++) {
-              const yR = RR[GR],
-                tR = yR.normal;
-              JR[4 * GR] = tR.x, JR[4 * GR + 1] = tR.y, JR[4 * GR + 2] = tR.z, JR[4 * GR + 3] = yR.d
+          const Er = NS(),
+            Nr = jr && !1;
+          Wr.length > 0 && function(rr, Sr) {
+            for (let Qr = 0; Qr < 6; Qr++) {
+              const Zr = rr[Qr],
+                Wr = Zr.normal;
+              Sr[4 * Qr] = Wr.x, Sr[4 * Qr + 1] = Wr.y, Sr[4 * Qr + 2] = Wr.z, Sr[4 * Qr + 3] = Zr.d
             }
-          }(yR, nR);
-          const aR = VR,
-            LR = KR,
-            UR = wR;
-          for (let RR = 0; RR < tR.length; RR++) {
-            const JR = tR[RR];
-            if (!RJ.c.IsInFrustum(JR.ZuR, yR)) continue;
-            const VR = JR.entries;
+          }(Zr, zr);
+          const tr = pr,
+            hr = xr,
+            Yr = mr;
+          for (let rr = 0; rr < Wr.length; rr++) {
+            const Sr = Wr[rr];
+            if (!rS.d.IsInFrustum(Sr.GWr, Zr)) continue;
+            const pr = Sr.entries;
             {
-              const RR = JR._noaSlots,
-                yR = JR._noaStamps,
-                tR = JR._noaTerrain;
-              for (let JR = 0; JR < VR.length; JR++) {
-                const KR = RR[JR];
-                if (LR[KR] !== qR && (LR[KR] = qR, UR[KR] = XJ(aR, 6 * KR, nR) ? 1 : 0), 0 === UR[KR]) continue;
-                const wR = VR[JR];
-                if (ZR && yR[JR] === fR) rR && 1 === tR[JR] && yJ(wR) && 0, iR.see(wR, 1 === tR[JR] ? KR : -1);
-                else if (ZR) {
-                  yR[JR] = fR;
-                  const RR = !0 === wR.metadata[ZJ.j];
-                  tR[JR] = RR ? 1 : 0;
-                  const GR = AR(wR, KR, RR);
-                  !RR || GR && LJ(wR) || (yR[JR] = 0)
-                } else uR ? AR(wR, KR, !0 === wR.metadata[ZJ.j]) : TR.f.prototype.push.call(GR, wR)
+              const rr = Sr._noaSlots,
+                Zr = Sr._noaStamps,
+                Wr = Sr._noaTerrain;
+              for (let Sr = 0; Sr < pr.length; Sr++) {
+                const xr = rr[Sr];
+                if (hr[xr] !== Ir && (hr[xr] = Ir, Yr[xr] = yS(tr, 6 * xr, zr) ? 1 : 0), 0 === Yr[xr]) continue;
+                const mr = pr[Sr];
+                if (jr && Zr[Sr] === Er) Nr && 1 === Wr[Sr] && ZS(mr) && 0, fr.see(mr, 1 === Wr[Sr] ? xr : -1);
+                else if (jr) {
+                  Zr[Sr] = Er;
+                  const rr = !0 === mr.metadata[jS.n];
+                  Wr[Sr] = rr ? 1 : 0;
+                  const Qr = er(mr, xr, rr);
+                  !rr || Qr && hS(mr) || (Zr[Sr] = 0)
+                } else ar ? er(mr, xr, !0 === mr.metadata[jS.n]) : dr.h.prototype.push.call(Qr, mr)
               }
               continue
             }
           }
-          uR && iR.finish(GR, eR)
-        })(yR), fR.apply(yR, RR.activeCamera);
-        const uR = JR.uuR;
-        for (let RR = 0; RR < uR.length; RR++) {
-          const JR = uR[RR];
-          JR.isEnabled() && TR.f.prototype.push.call(yR, JR)
+          ar && fr.finish(Qr, Ur)
+        })(Zr), Er.apply(Zr, rr.activeCamera);
+        const ar = Sr.MWr;
+        for (let rr = 0; rr < ar.length; rr++) {
+          const Sr = ar[rr];
+          Sr.isEnabled() && dr.h.prototype.push.call(Zr, Sr)
         }
-        return tR(yR, GR), yR
+        return Wr(Zr, Qr), Zr
       }, {
-        quR: () => iR.culled,
-        stR: (RR, JR) => {
-          const tR = Math.floor(JR[0] / uR),
-            qR = Math.floor(JR[1] / uR),
-            iR = Math.floor(JR[2] / uR),
-            fR = `${tR}|${qR}|${iR}`;
-          let VR = ZR.get(fR);
-          if (!VR) {
-            const RR = [0, 0, 0];
-            GR.gGR([tR * uR - 1, qR * uR - 1, iR * uR - 1], null, RR), VR = Object.assign(yR(RR, uR + 2), {
-              iuR: fR,
-              fuR: 0,
+        kWr: () => fr.culled,
+        XWr: (rr, Sr) => {
+          const Wr = Math.floor(Sr[0] / ar),
+            Ir = Math.floor(Sr[1] / ar),
+            fr = Math.floor(Sr[2] / ar),
+            Er = `${Wr}|${Ir}|${fr}`;
+          let pr = jr.get(Er);
+          if (!pr) {
+            const rr = [0, 0, 0];
+            Qr.sSr([Wr * ar - 1, Ir * ar - 1, fr * ar - 1], null, rr), pr = Object.assign(Zr(rr, ar + 2), {
+              AWr: Er,
+              VWr: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: UR()
-            }), WR(VR), rR[VR._noaSlot] = (0, sR.g)(tR, qR, iR), eR[3 * VR._noaSlot] = tR, eR[3 * VR._noaSlot + 1] = qR, eR[3 * VR._noaSlot + 2] = iR, ZR.set(fR, VR)
+              _noaSlot: Yr()
+            }), nr(pr), Nr[pr._noaSlot] = (0, sr.g)(Wr, Ir, fr), Ur[3 * pr._noaSlot] = Wr, Ur[3 * pr._noaSlot + 1] = Ir, Ur[3 * pr._noaSlot + 2] = fr, jr.set(Er, pr)
           }
-          VR.fuR++, RR.metadata[hR.A] = VR
+          pr.VWr++, rr.metadata[ur.w] = pr
         },
-        vI: RR => {
-          const JR = RR.metadata[hR.A];
-          JR && (JR.fuR--, JR.fuR <= 0 && (ZR.delete(JR.iuR), LR.push(JR._noaSlot)), RR.metadata[hR.A] = null)
+        rM: rr => {
+          const Sr = rr.metadata[ur.w];
+          Sr && (Sr.VWr--, Sr.VWr <= 0 && (jr.delete(Sr.AWr), hr.push(Sr._noaSlot)), rr.metadata[ur.w] = null)
         },
-        tuR: (RR, JR) => {
-          const GR = RR,
-            yR = JR.metadata[hR.A];
-          (GR._noaSlots ??= []).push(yR._noaSlot), (GR._noaStamps ??= []).push(0), (GR._noaTerrain ??= []).push(0), GR.entries.push(JR)
+        CWr: (rr, Sr) => {
+          const Qr = rr,
+            Zr = Sr.metadata[ur.w];
+          (Qr._noaSlots ??= []).push(Zr._noaSlot), (Qr._noaStamps ??= []).push(0), (Qr._noaTerrain ??= []).push(0), Qr.entries.push(Sr)
         },
-        removeEntry: (RR, JR) => {
-          const GR = RR,
-            yR = GR.entries,
-            tR = yR.indexOf(JR);
-          if (tR < 0) return;
-          const uR = GR._noaSlots,
-            ZR = GR._noaStamps,
-            qR = GR._noaTerrain,
-            iR = yR.length - 1;
-          yR[tR] = yR[iR], uR[tR] = uR[iR], ZR[tR] = ZR[iR], qR[tR] = qR[iR], yR.pop(), uR.pop(), ZR.pop(), qR.pop()
+        removeEntry: (rr, Sr) => {
+          const Qr = rr,
+            Zr = Qr.entries,
+            Wr = Zr.indexOf(Sr);
+          if (Wr < 0) return;
+          const ar = Qr._noaSlots,
+            jr = Qr._noaStamps,
+            Ir = Qr._noaTerrain,
+            fr = Zr.length - 1;
+          Zr[Wr] = Zr[fr], ar[Wr] = ar[fr], jr[Wr] = jr[fr], Ir[Wr] = Ir[fr], Zr.pop(), ar.pop(), jr.pop(), Ir.pop()
         },
-        fJR: RR => {
-          for (const JR of ZR.values()) {
-            JR.TtR.VuR(RR), JR.FtR.VuR(RR);
-            for (const GR of JR.ZuR) GR.VuR(RR);
-            WR(JR)
+        Prr: rr => {
+          for (const Sr of jr.values()) {
+            Sr.lWr.iWr(rr), Sr.LWr.iWr(rr);
+            for (const Qr of Sr.GWr) Qr.iWr(rr);
+            nr(Sr)
           }
         }
       }
     }
 
-    function CJ(RR, JR) {
-      return JR.set(RR), JR
+    function KS(rr, Sr) {
+      return Sr.set(rr), Sr
     }
 
-    function XJ(RR, JR, GR) {
-      const yR = RR[JR],
-        tR = RR[JR + 1],
-        uR = RR[JR + 2],
-        ZR = RR[JR + 3],
-        qR = RR[JR + 4],
-        iR = RR[JR + 5];
-      for (let fR = 0; fR < 24; fR += 4) {
-        const RR = GR[fR],
-          JR = GR[fR + 1],
-          VR = GR[fR + 2];
-        if (!(RR * (RR >= 0 ? ZR : yR) + JR * (JR >= 0 ? qR : tR) + VR * (VR >= 0 ? iR : uR) + GR[fR + 3] >= 0)) return !1
+    function yS(rr, Sr, Qr) {
+      const Zr = rr[Sr],
+        Wr = rr[Sr + 1],
+        ar = rr[Sr + 2],
+        jr = rr[Sr + 3],
+        Ir = rr[Sr + 4],
+        fr = rr[Sr + 5];
+      for (let Er = 0; Er < 24; Er += 4) {
+        const rr = Qr[Er],
+          Sr = Qr[Er + 1],
+          pr = Qr[Er + 2];
+        if (!(rr * (rr >= 0 ? jr : Zr) + Sr * (Sr >= 0 ? Ir : Wr) + pr * (pr >= 0 ? fr : ar) + Qr[Er + 3] >= 0)) return !1
       }
       return !0
     }
-    var MJ = GR(38935);
-    class BJ {
-      constructor(RR, JR) {
-        var GR = RR.tL;
-        GR.qtR(new FR.e(GR));
-        var yR = new kR.b(iR);
-        GR.wuR = yR, yR.blocks = [];
-        var tR, uR = {},
-          qR = [];
-        this.textPlanes = qR, this.quR = () => tR.quR(), this.fJR = RR => {
-          VR(yR, RR), tR.fJR(RR)
-        }, this.stR = (JR, GR, ZR) => {
-          if (!JR.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!JR.metadata[hR.x] && !JR.metadata[hR.o]) {
-            if (!GR) {
-              var iR = yR.uuR;
-              if (JR.metadata[hR.C] && !JR.parent) {
-                iR = qR;
-                var VR = JR.Tm().euR;
-                JR.metadata[hR.E] = VR.center.length() + VR.radius, JR.Qe = !0
+    var BS = Qr(39270);
+    class TS {
+      constructor(rr, Sr) {
+        var Qr = rr.Dt;
+        Qr.CZr(new Dr.b(Qr));
+        var Zr = new br.e(fr);
+        Qr.cWr = Zr, Zr.blocks = [];
+        var Wr, ar = {},
+          Ir = [];
+        this.textPlanes = Ir, this.kWr = () => Wr.kWr(), this.Prr = rr => {
+          pr(Zr, rr), Wr.Prr(rr)
+        }, this.XWr = (Sr, Qr, jr) => {
+          if (!Sr.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!Sr.metadata[ur.v] && !Sr.metadata[ur.l]) {
+            if (!Qr) {
+              var fr = Zr.MWr;
+              if (Sr.metadata[ur.C] && !Sr.parent) {
+                fr = Ir;
+                var pr = Sr.mG().oWr;
+                Sr.metadata[ur.E] = pr.center.length() + pr.radius, Sr.GU = !0
               }
-              return iR.push(JR), JR.metadata[hR.j] = iR, void(JR.metadata[hR.o] = !0)
+              return fr.push(Sr), Sr.metadata[ur.h] = fr, void(Sr.metadata[ur.l] = !0)
             }
-            var wR = Math.floor(ZR[0] / fR),
-              rR = Math.floor(ZR[1] / fR),
-              eR = Math.floor(ZR[2] / fR),
-              aR = wR + "|" + rR + "|" + eR,
-              LR = uR[aR];
-            if (!LR) {
-              var nR = [wR * fR, rR * fR, eR * fR],
-                UR = [0, 0, 0];
-              RR.xw.gGR(nR, null, UR), LR = KR(UR, fR), yR.blocks.push(LR), uR[aR] = LR, LR.iuR = aR
+            var mr = Math.floor(jr[0] / Er),
+              Nr = Math.floor(jr[1] / Er),
+              Ur = Math.floor(jr[2] / Er),
+              tr = mr + "|" + Nr + "|" + Ur,
+              hr = ar[tr];
+            if (!hr) {
+              var zr = [mr * Er, Nr * Er, Ur * Er],
+                Yr = [0, 0, 0];
+              rr.gm.sSr(zr, null, Yr), hr = xr(Yr, Er), Zr.blocks.push(hr), ar[tr] = hr, hr.AWr = tr
             }
-            tR.stR(JR, ZR), tR.tuR(LR, JR), LR.fuR = (LR.fuR || 0) + 1, JR.metadata[hR.x] = LR, JR.metadata[hR.s] = !0, JR.Qe = !0
+            Wr.XWr(Sr, jr), Wr.CWr(hr, Sr), hr.VWr = (hr.VWr || 0) + 1, Sr.metadata[ur.v] = hr, Sr.metadata[ur.p] = !0, Sr.GU = !0
           }
-        }, this.vI = RR => {
-          if (RR.metadata) {
-            RR.metadata[hR.o] && ((0, sR.k)(RR.metadata[hR.j], RR), RR.metadata[hR.o] = !1), RR.metadata[hR.j] === qR && (RR.Qe = !1), RR.metadata[hR.j] = void 0, RR.metadata[hR.E] = void 0;
-            var JR = RR.metadata[hR.x];
-            JR && JR.entries && (RR.metadata[hR.s] && tR.removeEntry(JR, RR), JR.fuR--, JR.fuR <= 0 && (delete uR[JR.iuR], (0, sR.k)(yR.blocks, JR))), tR.vI(RR), RR.metadata[hR.x] = null, RR.metadata[hR.s] = !1
+        }, this.rM = rr => {
+          if (rr.metadata) {
+            rr.metadata[ur.l] && ((0, sr.m)(rr.metadata[ur.h], rr), rr.metadata[ur.l] = !1), rr.metadata[ur.h] === Ir && (rr.GU = !1), rr.metadata[ur.h] = void 0, rr.metadata[ur.E] = void 0;
+            var Sr = rr.metadata[ur.v];
+            Sr && Sr.entries && (rr.metadata[ur.p] && Wr.removeEntry(Sr, rr), Sr.VWr--, Sr.VWr <= 0 && (delete ar[Sr.AWr], (0, sr.m)(Zr.blocks, Sr))), Wr.rM(rr), rr.metadata[ur.v] = null, rr.metadata[ur.p] = !1
           }
-        }, this.jRR = function(RR) {
-          let JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (RR.metadata[hR.x]) {
-            if (RR.metadata[hR.s] === JR) return;
-            var GR = RR.metadata[hR.x];
-            GR && GR.entries && (JR ? tR.tuR(GR, RR) : tR.removeEntry(GR, RR)), RR.metadata[hR.s] = JR
+        }, this.xrr = function(rr) {
+          let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (rr.metadata[ur.v]) {
+            if (rr.metadata[ur.p] === Sr) return;
+            var Qr = rr.metadata[ur.v];
+            Qr && Qr.entries && (Sr ? Wr.CWr(Qr, rr) : Wr.removeEntry(Qr, rr)), rr.metadata[ur.p] = Sr
           } else {
-            if (RR.metadata[hR.o] === JR) return;
-            var uR = RR.metadata[hR.j] || yR.uuR;
-            JR ? uR.push(RR) : (0, sR.k)(uR, RR), RR.metadata[hR.o] = JR
+            if (rr.metadata[ur.l] === Sr) return;
+            var ar = rr.metadata[ur.h] || Zr.MWr;
+            Sr ? ar.push(rr) : (0, sr.m)(ar, rr), rr.metadata[ur.l] = Sr
           }
         };
-        var iR = () => {},
-          fR = JR * RR.xw.NK.nK,
-          VR = (RR, JR) => {
-            RR.blocks.forEach((RR => {
-              RR.TtR.VuR(JR), RR.FtR.VuR(JR), RR.ZuR.forEach((RR => RR.VuR(JR))), RR.blocks && VR(RR, JR)
+        var fr = () => {},
+          Er = Sr * rr.gm.qx.zx,
+          pr = (rr, Sr) => {
+            rr.blocks.forEach((rr => {
+              rr.lWr.iWr(Sr), rr.LWr.iWr(Sr), rr.GWr.forEach((rr => rr.iWr(Sr))), rr.blocks && pr(rr, Sr)
             }))
           },
-          KR = (RR, JR) => {
-            var GR = new ZR.Fe(RR[0], RR[1], RR[2]),
-              yR = new ZR.Fe(RR[0] + JR, RR[1] + JR, RR[2] + JR);
-            return new QR.d(GR, yR, void 0, void 0, void 0, iR)
+          xr = (rr, Sr) => {
+            var Qr = new jr.kU(rr[0], rr[1], rr[2]),
+              Zr = new jr.kU(rr[0] + Sr, rr[1] + Sr, rr[2] + Sr);
+            return new Jr.d(Qr, Zr, void 0, void 0, void 0, fr)
           };
-        tR = AJ(GR, yR, RR.xw, KR, ((RR, JR) => {
-          for (var GR = 0; GR < qR.length; GR++) {
-            var yR = qR[GR];
-            yR.isEnabled(!1) && ((0, MJ.b)(yR, JR) && TR.f.prototype.push.call(RR, yR))
+        Wr = eS(Qr, Zr, rr.gm, xr, ((rr, Sr) => {
+          for (var Qr = 0; Qr < Ir.length; Qr++) {
+            var Zr = Ir[Qr];
+            Zr.isEnabled(!1) && ((0, BS.d)(Zr, Sr) && dr.h.prototype.push.call(rr, Zr))
           }
         }))
       }
     }
 
-    function lJ(RR) {
+    function vS(rr) {
       const {
-        holderPosition: JR,
-        holderRotation: GR,
-        y5: yR,
-        fov: tR,
-        near: uR,
-        far: ZR
-      } = RR.model.Z2, qR = RR.CuR;
-      qR.position.VJR(JR[0], JR[1], JR[2]), qR.rotation.VJR(GR[0], GR[1], GR[2]);
-      const iR = RR.camera;
-      iR.position.VJR(yR[0], yR[1], yR[2]), iR.fov = tR, iR.minZ = uR, iR.maxZ = ZR
+        holderPosition: Sr,
+        holderRotation: Qr,
+        S_: Zr,
+        fov: Wr,
+        near: ar,
+        far: jr
+      } = rr.model.r_, Ir = rr.Sar;
+      Ir.position.Hrr(Sr[0], Sr[1], Sr[2]), Ir.rotation.Hrr(Qr[0], Qr[1], Qr[2]);
+      const fr = rr.camera;
+      fr.position.Hrr(Zr[0], Zr[1], Zr[2]), fr.fov = Wr, fr.minZ = ar, fr.maxZ = jr
     }
 
-    function pJ(RR) {
-      const JR = RR.ke(),
-        GR = JR,
-        yR = GR._gl;
-      if (!yR || GR.Ma < 2 || JR.LtR || yR.getParameter(yR.DEPTH_BITS) < 24) return !1;
-      const tR = RR._renderingManager,
-        uR = tR.getRenderingGroup(-1),
-        ZR = tR.getRenderingGroup(0),
-        qR = SR.d.prototype.render;
-      return uR.render = function(RR, JR, GR, yR, tR, uR, iR, fR, VR) {
-        (RR || ZR._empty) && qR.call(this, RR, JR, GR, yR, tR, uR, iR, fR, VR)
-      }, ZR.render = function(RR, GR, tR, ZR) {
-        let iR = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          fR = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          KR = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          wR = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          rR = arguments.length > 8 ? arguments[8] : void 0;
-        RR ? qR.call(this, RR, GR, tR, ZR, iR, fR, KR, wR, rR) : (JR.setAlphaMode(VR.c.ALPHA_DISABLE), qR.call(this, null, !1, !1, ZR, iR, fR, KR, !1), uR._empty || (yR.depthRange(1, 1), qR.call(uR, null, GR, tR, ZR, iR, fR, KR, wR, rR), yR.depthRange(0, 1)), qR.call(this, null, GR, tR, ZR, !1, !1, !1, wR, rR))
+    function OS(rr) {
+      const Sr = rr.MU(),
+        Qr = Sr,
+        Zr = Qr._gl;
+      if (!Zr || Qr.tt < 2 || Sr.JZr || Zr.getParameter(Zr.DEPTH_BITS) < 24) return !1;
+      const Wr = rr._renderingManager,
+        ar = Wr.getRenderingGroup(-1),
+        jr = Wr.getRenderingGroup(0),
+        Ir = ir.c.prototype.render;
+      return ar.render = function(rr, Sr, Qr, Zr, Wr, ar, fr, Er, pr) {
+        (rr || jr._empty) && Ir.call(this, rr, Sr, Qr, Zr, Wr, ar, fr, Er, pr)
+      }, jr.render = function(rr, Qr, Wr, jr) {
+        let fr = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          Er = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          xr = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          mr = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          Nr = arguments.length > 8 ? arguments[8] : void 0;
+        rr ? Ir.call(this, rr, Qr, Wr, jr, fr, Er, xr, mr, Nr) : (Sr.setAlphaMode(pr.d.ALPHA_DISABLE), Ir.call(this, null, !1, !1, jr, fr, Er, xr, !1), ar._empty || (Zr.depthRange(1, 1), Ir.call(ar, null, Qr, Wr, jr, fr, Er, xr, mr, Nr), Zr.depthRange(0, 1)), Ir.call(this, null, Qr, Wr, jr, !1, !1, !1, mr, Nr))
       }, !0
     }
 
-    function gJ(RR, JR) {
-      return [JR, YR.g].map(((JR, GR) => {
-        const yR = new tR.c("light", ZR.Fe.FromArray(JR), RR);
-        return yR.diffuse = uR.Color3.FromArray([1, 1, 1]), yR.specular = uR.Color3.FromArray([1, 1, 1]), yR.intensity = YR.e[GR], yR
+    function LS(rr, Sr) {
+      return [Sr, or.f].map(((Sr, Qr) => {
+        const Zr = new Wr.b("light", jr.kU.FromArray(Sr), rr);
+        return Zr.diffuse = ar.Color3.FromArray([1, 1, 1]), Zr.specular = ar.Color3.FromArray([1, 1, 1]), Zr.intensity = or.e[Qr], Zr
       }))
     }
-    class bJ extends iR.e {
+    class lS extends fr.d {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(RR) {
-        var JR;
-        this.heldTexture = RR, this.particleTexture = null !== (JR = null === RR || void 0 === RR ? void 0 : RR.mirror) && void 0 !== JR ? JR : null
+      set texture(rr) {
+        var Sr;
+        this.heldTexture = rr, this.particleTexture = null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.mirror) && void 0 !== Sr ? Sr : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let RR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          JR = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        RR && (this.particleTexture = null, (0, fR.B)(this.heldTexture), this.heldTexture = null), super.dispose(RR, JR, GR)
+        let rr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        rr && (this.particleTexture = null, (0, Er.A)(this.heldTexture), this.heldTexture = null), super.dispose(rr, Sr, Qr)
       }
     }
 
-    function vJ(RR, JR, GR, yR) {
-      return JR && !JR.failed ? JR.Km(GR, yR) : new bJ(GR, yR, RR)
+    function XS(rr, Sr, Qr, Zr) {
+      return Sr && !Sr.failed ? Sr.QG(Qr, Zr) : new lS(Qr, Zr, rr)
     }
-    const OJ = new WeakMap;
+    const PS = new WeakMap;
 
-    function xJ(RR, JR, GR) {
-      var yR;
-      let tR = null !== (yR = OJ.get(RR)) && void 0 !== yR ? yR : null;
-      return !tR && RR.ke().Ma >= 2 && (tR = new DR(RR, (JR => {
-        console.error(`Particle programs failed in scene ${RR.uid}: ${JR}`)
-      })), OJ.set(RR, tR)), vJ(RR, tR, JR, GR)
+    function HS(rr, Sr, Qr) {
+      var Zr;
+      let Wr = null !== (Zr = PS.get(rr)) && void 0 !== Zr ? Zr : null;
+      return !Wr && rr.MU().tt >= 2 && (Wr = new Rr(rr, (Sr => {
+        console.error(`Particle programs failed in scene ${rr.uid}: ${Sr}`)
+      })), PS.set(rr, Wr)), XS(rr, Wr, Sr, Qr)
     }
-    const NJ = yR.d.Zero();
-    const DJ = {
-      oyR: function(RR, JR) {
-        return new oR(RR, JR.xyR, {
-          preserveDrawingBuffer: JR.preserveDrawingBuffer,
+    const qS = Zr.d.Zero();
+    const RS = {
+      EZr: function(rr, Sr) {
+        return new Cr(rr, Sr.aZr, {
+          preserveDrawingBuffer: Sr.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      BuR: function(RR, JR) {
-        ! function(RR, JR, GR) {
-          const yR = new dR.c(RR.engine);
-          RR.tL = yR, yR.detachControl(), yR.autoClear = !1, jR.e.MIN_RENDERINGGROUPS = -1;
-          for (let uR = jR.e.MIN_RENDERINGGROUPS; uR <= 1; uR++) yR.setRenderingOrder(uR, SR.d.PainterSortCompare, SR.d.PainterSortCompare, SR.d.PainterSortCompare);
-          yR.setRenderingAutoClearDepthStencil(0, !1), zR.d.Enabled = !1, RR.UuR = new BJ(RR, Math.round(JR.WuR)), RR.CuR = new mR.c("camHolder", yR), RR.camera = new IR.e("camera", new ZR.Fe(0, 0, 0), yR), RR.camera.parent = RR.CuR, lJ(RR), (0, YR.i)(RR, ((RR, JR, GR) => (0, ER.i)(JR, GR, RR.tL))), yR.clearColor = uR.e.FromArray(JR.clearColor), yR.ambientColor = uR.Color3.FromArray(JR.ambientColor);
-          const tR = GR(yR, JR.MuR);
-          yR.onNewLightAddedObservable.add((RR => {
-            tR.some((JR => JR === RR)) || console.error(`Light "${RR.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), yR.skipPointerMovePicking = !0
-        }(RR, JR, gJ), pJ(RR.tL)
+      Iar: function(rr, Sr) {
+        ! function(rr, Sr, Qr) {
+          const Zr = new cr.c(rr.engine);
+          rr.Dt = Zr, Zr.detachControl(), Zr.autoClear = !1, wr.b.MIN_RENDERINGGROUPS = -1;
+          for (let ar = wr.b.MIN_RENDERINGGROUPS; ar <= 1; ar++) Zr.setRenderingOrder(ar, ir.c.PainterSortCompare, ir.c.PainterSortCompare, ir.c.PainterSortCompare);
+          Zr.setRenderingAutoClearDepthStencil(0, !1), Vr.b.Enabled = !1, rr.dWr = new TS(rr, Math.round(Sr.sWr)), rr.Sar = new Ar.b("camHolder", Zr), rr.camera = new kr.b("camera", new jr.kU(0, 0, 0), Zr), rr.camera.parent = rr.Sar, vS(rr), (0, or.g)(rr, ((rr, Sr, Qr) => (0, Fr.j)(Sr, Qr, rr.Dt))), Zr.clearColor = ar.d.FromArray(Sr.clearColor), Zr.ambientColor = ar.Color3.FromArray(Sr.ambientColor);
+          const Wr = Qr(Zr, Sr.Zar);
+          Zr.onNewLightAddedObservable.add((rr => {
+            Wr.some((Sr => Sr === rr)) || console.error(`Light "${rr.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), Zr.skipPointerMovePicking = !0
+        }(rr, Sr, LS), OS(rr.Dt)
       },
-      AuR: lJ,
-      setBabylonFog: function(RR, JR, GR, yR) {
-        const tR = RR.tL;
-        tR.fogMode = 3, tR.fogStart = JR, tR.fogEnd = GR, tR.fogColor.set(yR[0], yR[1], yR[2])
+      uWr: vS,
+      setBabylonFog: function(rr, Sr, Qr, Zr) {
+        const Wr = rr.Dt;
+        Wr.fogMode = 3, Wr.fogStart = Sr, Wr.fogEnd = Qr, Wr.fogColor.set(Zr[0], Zr[1], Zr[2])
       },
-      puR: function(RR, JR, GR) {
-        return RR.engine.Ma >= 2 && !RR.guR && (RR.guR = new DR(RR.tL, RR.buR)), vJ(RR.tL, RR.guR, JR, GR)
+      xar: function(rr, Sr, Qr) {
+        return rr.engine.tt >= 2 && !rr.Nar && (rr.Nar = new Rr(rr.Dt, rr.Uar)), XS(rr.Dt, rr.Nar, Sr, Qr)
       },
-      OuR: function(RR, JR) {
-        RR.tL.pM.forEach((GR => {
-          if (GR instanceof xR) return void GR.fJR(JR, RR.xw.Fw);
-          const yR = GR;
-          if (yR.emitter.getConnectedParticleSystems)
-            for (const RR of yR._particles) RR.position.set(RR.position.x - JR[0], RR.position.y - JR[1], RR.position.z - JR[2]);
+      Yar: function(rr, Sr) {
+        rr.Dt.pT.forEach((Qr => {
+          if (Qr instanceof Hr) return void Qr.Prr(Sr, rr.gm.um);
+          const Zr = Qr;
+          if (Zr.emitter.getConnectedParticleSystems)
+            for (const rr of Zr._particles) rr.position.set(rr.position.x - Sr[0], rr.position.y - Sr[1], rr.position.z - Sr[2]);
           else {
-            if (!yR.worldOffset) throw new Error("Particle system has no world offset");
-            yR.worldOffset.x = -RR.xw.Fw[0], yR.worldOffset.y = -RR.xw.Fw[1], yR.worldOffset.z = -RR.xw.Fw[2]
+            if (!Zr.worldOffset) throw new Error("Particle system has no world offset");
+            Zr.worldOffset.x = -rr.gm.um[0], Zr.worldOffset.y = -rr.gm.um[1], Zr.worldOffset.z = -rr.gm.um[2]
           }
         }))
       },
-      linesFromArrays: function(RR, JR, GR) {
-        const yR = new qR.d(JR, RR.tL, null, void 0, void 0, !1);
-        return (0, ER.e)(JR, GR, RR.tL, yR), yR
+      linesFromArrays: function(rr, Sr, Qr) {
+        const Zr = new Ir.d(Sr, rr.Dt, null, void 0, void 0, !1);
+        return (0, Fr.g)(Sr, Qr, rr.Dt, Zr), Zr
       },
-      uL: aJ,
-      vuR: function(RR, JR) {
-        return NJ.origin.vN(JR.origin), NJ.direction.vN(JR.direction), NJ.length = JR.length, NJ.epsilon = JR.epsilon, NJ.vuR(RR, !1, void 0, !1, void 0, !0).pickedPoint
+      dt: tS,
+      har: function(rr, Sr) {
+        return qS.origin.iH(Sr.origin), qS.direction.iH(Sr.direction), qS.length = Sr.length, qS.epsilon = Sr.epsilon, qS.har(rr, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  42671: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => SR,
-      d: () => WR,
-      e: () => FR
+  42995: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ir,
+      h: () => nr,
+      l: () => Dr
     });
-    var yR = GR(41781),
-      tR = GR(42677),
-      uR = GR(42722),
-      ZR = GR(42685),
-      qR = GR(38986),
-      iR = GR(38988),
-      fR = GR(38995),
-      VR = GR(38998),
-      KR = GR(38424),
-      wR = GR(38391),
-      rR = GR(38397),
-      eR = GR(42693),
-      aR = GR(38366),
-      LR = GR(38382),
-      nR = GR(38358);
+    var Zr = Qr(42100),
+      Wr = Qr(43001),
+      ar = Qr(43041),
+      jr = Qr(43008),
+      Ir = Qr(39324),
+      fr = Qr(39332),
+      Er = Qr(39337),
+      pr = Qr(39342),
+      xr = Qr(38788),
+      mr = Qr(38747),
+      Nr = Qr(38754),
+      Ur = Qr(43012),
+      tr = Qr(38715),
+      hr = Qr(38736),
+      zr = Qr(38702);
 
-    function UR(RR, JR) {
-      return Object.assign((function(RR, GR, yR, tR) {
-        return JR(this.featureState, RR, GR, yR, tR)
+    function Yr(rr, Sr) {
+      return Object.assign((function(rr, Qr, Zr, Wr) {
+        return Sr(this.featureState, rr, Qr, Zr, Wr)
       }), {
-        iK: RR
+        Wx: rr
       })
     }
 
-    function WR(RR) {
-      const JR = class extends eR.e {
-          constructor(JR, GR) {
-            const yR = (0, LR.bb)(JR),
-              tR = yR && (0, LR.E)(yR, RR.name);
-            for (var uR = arguments.length, ZR = new Array(uR > 2 ? uR - 2 : 0), qR = 2; qR < uR; qR++) ZR[qR - 2] = arguments[qR];
-            super(JR, RR.name, RR.priority, tR ? tR.defines : RR.defines(...ZR), !1), this.featureState = void 0, this.featureState = GR, this._pluginManager._addPlugin(this), this._enable(!0), (0, LR.H)(this._material, RR, this.featureState, this._pluginDefineNames)
+    function nr(rr) {
+      const Sr = class extends Ur.e {
+          constructor(Sr, Qr) {
+            const Zr = (0, hr.Y)(Sr),
+              Wr = Zr && (0, hr.v)(Zr, rr.name);
+            for (var ar = arguments.length, jr = new Array(ar > 2 ? ar - 2 : 0), Ir = 2; Ir < ar; Ir++) jr[Ir - 2] = arguments[Ir];
+            super(Sr, rr.name, rr.priority, Wr ? Wr.defines : rr.defines(...jr), !1), this.featureState = void 0, this.featureState = Qr, this._pluginManager._addPlugin(this), this._enable(!0), (0, hr.x)(this._material, rr, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return RR.className
+            return rr.className
           }
-          isCompatible(RR) {
-            return RR === nR.c.GLSL || RR === nR.c.WGSL
+          isCompatible(rr) {
+            return rr === zr.d.GLSL || rr === zr.d.WGSL
           }
         },
-        GR = (0, aR.i)(RR);
-      for (const [yR, tR] of Object.entries(aR.e)) {
-        const uR = RR[yR];
-        if (uR) {
-          const RR = GR[yR];
-          Object.defineProperty(JR.prototype, tR, {
-            value: UR(uR, RR),
+        Qr = (0, tr.h)(rr);
+      for (const [Zr, Wr] of Object.entries(tr.c)) {
+        const ar = rr[Zr];
+        if (ar) {
+          const rr = Qr[Zr];
+          Object.defineProperty(Sr.prototype, Wr, {
+            value: Yr(ar, rr),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return JR
+      return Sr
     }
-    class AR extends(WR(qR.c)) {}
-    var CR = GR(41352),
-      XR = GR(42697),
-      MR = GR(42704);
+    class er extends(nr(Ir.c)) {}
+    var Kr = Qr(41725),
+      yr = Qr(43021),
+      Br = Qr(43027);
 
-    function BR(RR, JR, GR) {
-      return (0, MR.c)(GR, JR.urls, (() => async function(RR, JR, GR) {
+    function Tr(rr, Sr, Qr) {
+      return (0, Br.f)(Qr, Sr.urls, (() => async function(rr, Sr, Qr) {
         const {
-          width: yR
-        } = RR[0].getSize(), tR = RR.map(((RR, GR) => {
-          var tR;
-          const uR = Math.round(RR.getSize().height / yR),
-            ZR = null === JR || void 0 === JR ? void 0 : JR[GR];
+          width: Zr
+        } = rr[0].getSize(), Wr = rr.map(((rr, Qr) => {
+          var Wr;
+          const ar = Math.round(rr.getSize().height / Zr),
+            jr = null === Sr || void 0 === Sr ? void 0 : Sr[Qr];
           return {
-            pixels: ZR && ZR.byteLength === yR * yR * uR * 4 ? ZR : null !== (tR = lR.get(RR.getInternalTexture())) && void 0 !== tR ? tR : RR._readPixelsSync(),
-            layers: uR
+            pixels: jr && jr.byteLength === Zr * Zr * ar * 4 ? jr : null !== (Wr = vr.get(rr.getInternalTexture())) && void 0 !== Wr ? Wr : rr._readPixelsSync(),
+            layers: ar
           }
-        })), uR = Math.min(GR.ke().getCaps().texture2DArrayMaxLayerCount, 256), qR = (0, MR.b)(tR, yR, uR).map((RR => {
+        })), ar = Math.min(Qr.MU().getCaps().texture2DArrayMaxLayerCount, 256), Ir = (0, Br.b)(Wr, Zr, ar).map((rr => {
           let {
-            pixels: JR,
-            layers: tR
-          } = RR;
+            pixels: Sr,
+            layers: Wr
+          } = rr;
           return {
-            atlas: new XR.d(JR, yR, yR, tR, CR.c.TEXTUREFORMAT_RGBA, GR, !0, !1, ZR.c.NEAREST_NEAREST_MIPLINEAR),
-            layers: tR
+            atlas: new yr.b(Sr, Zr, Zr, Wr, Kr.d.TEXTUREFORMAT_RGBA, Qr, !0, !1, jr.e.NEAREST_NEAREST_MIPLINEAR),
+            layers: Wr
           }
         }));
-        return RR.forEach(((RR, JR) => {
-          const yR = RR.getInternalTexture();
-          lR.has(yR) || (! function(RR, JR) {
-            const GR = JR.createRawTexture(new Uint8Array(4), 1, 1, CR.c.TEXTUREFORMAT_RGBA, !1, !1, ZR.c.NEAREST_SAMPLINGMODE);
-            RR._hardwareTexture.release(), JR.unbindAllTextures(), GR._swapAndDie(RR, !1)
-          }(yR, GR.ke()), lR.set(yR, tR[JR].pixels))
-        })), qR
-      }(RR, JR.pixels, GR)))
+        return rr.forEach(((rr, Sr) => {
+          const Zr = rr.getInternalTexture();
+          vr.has(Zr) || (! function(rr, Sr) {
+            const Qr = Sr.createRawTexture(new Uint8Array(4), 1, 1, Kr.d.TEXTUREFORMAT_RGBA, !1, !1, jr.e.NEAREST_SAMPLINGMODE);
+            rr._hardwareTexture.release(), Sr.unbindAllTextures(), Qr._swapAndDie(rr, !1)
+          }(Zr, Qr.MU()), vr.set(Zr, Wr[Sr].pixels))
+        })), Ir
+      }(rr, Sr.pixels, Qr)))
     }
-    const lR = new WeakMap;
-    var pR = GR(39007);
-    class gR extends(WR(iR.j)) {
-      constructor(RR, JR) {
-        super(RR, JR), this.loaded = new Set, this.mirrors = void 0, this.mirrors = JR.textures.map((RR => RR.mirror)), JR.useWebGL2 && !JR.imagesPerAtlas.length && JR.textureAtlases.splice(0, JR.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((RR, JR) => {
-          RR.onLoadObservable.add((RR => {
-            this.setTextureArrayData(RR, JR).catch((RR => {
-              console.error(`Failed to build the texture arrays, at atlas ${JR}`, RR)
+    const vr = new WeakMap;
+    var Or = Qr(39345);
+    class Lr extends(nr(fr.j)) {
+      constructor(rr, Sr) {
+        super(rr, Sr), this.loaded = new Set, this.mirrors = void 0, this.mirrors = Sr.textures.map((rr => rr.mirror)), Sr.useWebGL2 && !Sr.imagesPerAtlas.length && Sr.textureAtlases.splice(0, Sr.textureAtlases.length, ...this.mirrors.map((() => null))), this.mirrors.forEach(((rr, Sr) => {
+          rr.onLoadObservable.add((rr => {
+            this.setTextureArrayData(rr, Sr).catch((rr => {
+              console.error(`Failed to build the texture arrays, at atlas ${Sr}`, rr)
             }))
           }))
-        })), (0, pR.l)(JR, RR.shaderLanguage)
+        })), (0, Or.i)(Sr, rr.shaderLanguage)
       }
-      async setTextureArrayData(RR, JR) {
-        const GR = this.featureState,
+      async setTextureArrayData(rr, Sr) {
+        const Qr = this.featureState,
           {
-            width: yR,
-            height: tR
-          } = RR.getSize(),
-          uR = this._material.shaderLanguage;
-        if (!GR.useWebGL2) return void(0, pR.g)(this._material, GR, JR, yR, Math.round(tR / yR), uR);
-        if (this.loaded.add(JR), this.loaded.size < this.mirrors.length) return;
-        const ZR = await BR(this.mirrors, GR.sources, this._material.jH());
-        (0, pR.e)(this._material, GR, ZR, yR, uR)
+            width: Zr,
+            height: Wr
+          } = rr.getSize(),
+          ar = this._material.shaderLanguage;
+        if (!Qr.useWebGL2) return void(0, Or.e)(this._material, Qr, Sr, Zr, Math.round(Wr / Zr), ar);
+        if (this.loaded.add(Sr), this.loaded.size < this.mirrors.length) return;
+        const jr = await Tr(this.mirrors, Qr.sources, this._material.eC());
+        (0, Or.c)(this._material, Qr, jr, Zr, ar)
       }
     }
-    var bR = GR(42711),
-      vR = GR(41822),
-      OR = GR(38195),
-      xR = GR(42714),
-      NR = GR(41951),
-      DR = GR(41813),
-      HR = GR(42644),
-      oR = GR(38650),
-      cR = GR(42716);
-    class PR extends bR.b {
+    var lr = Qr(43031),
+      Xr = Qr(42147),
+      Pr = Qr(38555),
+      Hr = Qr(43037),
+      qr = Qr(42256),
+      Rr = Qr(42134),
+      gr = Qr(42966),
+      Cr = Qr(39002),
+      Mr = Qr(43039);
+    class Gr extends lr.d {
       getData() {
         return null
       }
@@ -894,335 +894,335 @@ export const modules = {
         super._rebuild()
       }
     }
-    const IR = {
-      Mesh: xR.b,
-      TransformNode: HR.c,
-      GK: bR.b,
-      VertexBuffer: bR.c,
-      BoundingInfo: vR.c,
-      Fe: OR.Fe,
-      ArenaBuffer: PR,
-      SubMesh: DR.b,
-      VertexData: NR.c,
-      MirroredGeometry: cR.b,
-      meshFromArrays: cR.e,
-      plainMeshFromArrays: cR.i
+    const kr = {
+      Mesh: Hr.d,
+      TransformNode: gr.b,
+      Dp: lr.d,
+      VertexBuffer: lr.g,
+      BoundingInfo: Xr.c,
+      kU: Pr.kU,
+      ArenaBuffer: Gr,
+      SubMesh: Rr.b,
+      VertexData: qr.b,
+      MirroredGeometry: Mr.d,
+      meshFromArrays: Mr.g,
+      plainMeshFromArrays: Mr.j
     };
-    (0, oR.g)(IR);
-    var mR = GR(38475);
-    class zR extends(WR(VR.h)) {
-      constructor(RR, JR) {
-        if (super(RR, JR), RR instanceof yR.StandardMaterial && JR.dirLightCount > 0) {
-          const JR = RR,
-            GR = JR._blockDirtyMechanism;
-          JR._blockDirtyMechanism = !0, RR.disableLighting = !0, JR._blockDirtyMechanism = GR;
-          const yR = (0, LR.bb)(RR);
-          yR && (yR.disableLighting = !0, (0, LR._)(yR))
-        }(0, mR.j)(RR)
+    (0, Cr.g)(kr);
+    var Ar = Qr(38831);
+    class Vr extends(nr(pr.e)) {
+      constructor(rr, Sr) {
+        if (super(rr, Sr), rr instanceof Zr.StandardMaterial && Sr.dirLightCount > 0) {
+          const Sr = rr,
+            Qr = Sr._blockDirtyMechanism;
+          Sr._blockDirtyMechanism = !0, rr.disableLighting = !0, Sr._blockDirtyMechanism = Qr;
+          const Zr = (0, hr.Y)(rr);
+          Zr && (Zr.disableLighting = !0, (0, hr.W)(Zr))
+        }(0, Ar.j)(rr)
       }
-      dispose(RR) {
-        (0, mR.l)(this._material), super.dispose(RR)
+      dispose(rr) {
+        (0, Ar.m)(this._material), super.dispose(rr)
       }
     }
 
-    function SR(RR, JR) {
-      if (!(JR instanceof yR.StandardMaterial) || JR.specularTexture) return;
+    function ir(rr, Sr) {
+      if (!(Sr instanceof Zr.StandardMaterial) || Sr.specularTexture) return;
       const {
-        r: GR,
-        g: tR,
-        b: uR
-      } = JR.specularColor;
-      0 === GR && 0 === tR && 0 === uR && (RR.SPECULARTERM = !1)
-    }(0, VR.f)({
-      disableUnusedSpecularTerm: SR
+        r: Qr,
+        g: Wr,
+        b: ar
+      } = Sr.specularColor;
+      0 === Qr && 0 === Wr && 0 === ar && (rr.SPECULARTERM = !1)
+    }(0, pr.d)({
+      disableUnusedSpecularTerm: ir
     });
-    var jR = GR(38406),
-      dR = GR(38666);
-    const ER = new RegExp(`^#define ${fR.e}\\s*$`, "m");
-    class YR extends(WR(fR.j)) {
-      constructor(RR, JR) {
-        super(RR, JR), this.He = !1, JR.ditherOnlyWhileFading && (dR.f.add(RR), this.prewarmDitherTwins(RR))
+    var wr = Qr(38762),
+      cr = Qr(39013);
+    const Fr = new RegExp(`^#define ${Er.d}\\s*$`, "m");
+    class or extends(nr(Er.k)) {
+      constructor(rr, Sr) {
+        super(rr, Sr), this.vU = !1, Sr.ditherOnlyWhileFading && (cr.e.add(rr), this.prewarmDitherTwins(rr))
       }
-      prewarmDitherTwins(RR) {
-        const JR = new WeakSet;
-        RR.onEffectCreatedObservable.add((GR => {
+      prewarmDitherTwins(rr) {
+        const Sr = new WeakSet;
+        rr.onEffectCreatedObservable.add((Qr => {
           let {
-            effect: yR,
-            subMesh: tR
-          } = GR;
-          if (this.featureState.prewarmingDither || JR.has(yR)) return;
-          JR.add(yR);
-          const uR = null === tR || void 0 === tR ? void 0 : tR.getMesh();
-          uR && !ER.test(yR.defines) && RR.jH().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(uR) || JR.delete(yR)
+            effect: Zr,
+            subMesh: Wr
+          } = Qr;
+          if (this.featureState.prewarmingDither || Sr.has(Zr)) return;
+          Sr.add(Zr);
+          const ar = null === Wr || void 0 === Wr ? void 0 : Wr.getMesh();
+          ar && !Fr.test(Zr.defines) && rr.eC().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(ar) || Sr.delete(Zr)
           }))
         }))
       }
-      prewarmDither(RR) {
-        if (this.He || RR.oB()) return !1;
-        const JR = new DR.b(0, 0, 0, 0, 0, RR, void 0, !1, !1);
+      prewarmDither(rr) {
+        if (this.vU || rr.Dv()) return !1;
+        const Sr = new Rr.b(0, 0, 0, 0, 0, rr, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(RR, JR)
+          this._material.isReadyForSubMesh(rr, Sr)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== JR.effect
+        return null !== Sr.effect
       }
-      dispose(RR) {
-        this.He = !0, super.dispose(RR)
+      dispose(rr) {
+        this.vU = !0, super.dispose(rr)
       }
     }
-    class kR extends(WR(KR.e)) {}
-    const QR = new Map;
+    class br extends(nr(xr.d)) {}
+    const Jr = new Map;
 
-    function FR(RR, JR) {
-      QR.set(RR, JR)
+    function Dr(rr, Sr) {
+      Jr.set(rr, Sr)
     }
-    FR(qR.c, AR), FR(iR.j, gR), FR(fR.j, YR), FR(VR.h, zR), FR(KR.e, kR), (0, wR.b)({
-      create: (RR, JR) => {
-        const GR = new yR.StandardMaterial(RR.name, JR);
-        return (0, jR.t)(RR, GR), GR.detailMap._pluginDefineNames
+    Dr(Ir.c, er), Dr(fr.j, Lr), Dr(Er.k, or), Dr(pr.e, Vr), Dr(xr.d, br), (0, mr.d)({
+      create: (rr, Sr) => {
+        const Qr = new Zr.StandardMaterial(rr.name, Sr);
+        return (0, wr.p)(rr, Qr), Qr.detailMap._pluginDefineNames
       },
-      write: (RR, JR, GR) => {
-        (0, jR.ab)(RR.mirror, JR, GR)
+      write: (rr, Sr, Qr) => {
+        (0, wr.V)(rr.mirror, Sr, Qr)
       },
-      addFeature: (RR, JR, GR) => {
-        const yR = QR.get(JR.feature);
-        if (!yR) throw new Error(`${JR.feature.name} has no plugin class (registerPluginClass)`);
-        new yR(RR.mirror, JR.state, ...GR)
+      addFeature: (rr, Sr, Qr) => {
+        const Zr = Jr.get(Sr.feature);
+        if (!Zr) throw new Error(`${Sr.feature.name} has no plugin class (registerPluginClass)`);
+        new Zr(rr.mirror, Sr.state, ...Qr)
       },
-      texture: (RR, JR, GR) => {
+      texture: (rr, Sr, Qr) => {
         let {
-          url: yR,
-          noMipmap: tR,
-          invertY: uR,
-          samplingMode: qR,
-          data: iR,
-          sets: fR
-        } = GR;
-        if (!iR) {
-          const GR = new ZR.c(yR, JR, tR, uR, qR);
-          return Object.assign(GR, fR), void(0, rR.J)(RR, GR)
+          url: Zr,
+          noMipmap: Wr,
+          invertY: ar,
+          samplingMode: Ir,
+          data: fr,
+          sets: Er
+        } = Qr;
+        if (!fr) {
+          const Qr = new jr.e(Zr, Sr, Wr, ar, Ir);
+          return Object.assign(Qr, Er), void(0, Nr.H)(rr, Qr)
         }
-        const VR = {},
-          KR = new Promise(((RR, JR) => {
-            VR.onLoad = RR, VR.onError = (RR, GR) => {
-              JR(new Error(`${iR.context}: ${(null===GR||void 0===GR?void 0:GR.message)||RR||"Failed to load texture"}`))
+        const pr = {},
+          xr = new Promise(((rr, Sr) => {
+            pr.onLoad = rr, pr.onError = (rr, Qr) => {
+              Sr(new Error(`${fr.context}: ${(null===Qr||void 0===Qr?void 0:Qr.message)||rr||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: wR,
-            bytes: eR,
-            label: aR
-          } = iR,
-          LR = {
-            noMipmap: tR,
+            mimeType: mr,
+            bytes: Ur,
+            label: tr
+          } = fr,
+          hr = {
+            noMipmap: Wr,
             invertY: !1,
-            samplingMode: qR,
-            ...VR,
-            mimeType: wR,
+            samplingMode: Ir,
+            ...pr,
+            mimeType: mr,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          nR = new ZR.c(null, JR, LR);
-        jR.v.set(nR, KR), Object.assign(nR, fR), nR.updateURL(yR, eR);
-        const UR = nR.getInternalTexture();
-        UR && (UR.label = aR), RR.uvSet = nR.coordinatesIndex, RR.matrix.set((0, jR.T)(nR)), (0, rR.J)(RR, nR)
+          zr = new jr.e(null, Sr, hr);
+        wr.s.set(zr, xr), Object.assign(zr, Er), zr.updateURL(Zr, Ur);
+        const Yr = zr.getInternalTexture();
+        Yr && (Yr.label = tr), rr.uvSet = zr.coordinatesIndex, rr.matrix.set((0, wr.N)(zr)), (0, Nr.H)(rr, zr)
       },
-      cube: (RR, JR, GR) => {
+      cube: (rr, Sr, Qr) => {
         let {
-          rootUrl: yR,
-          files: uR,
-          noMipmap: qR,
-          luminance: iR
-        } = GR;
+          rootUrl: Zr,
+          files: ar,
+          noMipmap: Ir,
+          luminance: fr
+        } = Qr;
         const {
-          samplingMode: fR
-        } = RR.sampler, VR = fR === (0, rR.A)(qR) ? null : () => {
-          (0, jR.P)(KR, fR)
-        }, KR = new tR.d(yR, JR, null, qR, uR, VR, null, (0, rR.w)(iR));
-        KR.coordinatesMode = ZR.c.SKYBOX_MODE, (0, rR.J)(RR, KR)
+          samplingMode: Er
+        } = rr.sampler, pr = Er === (0, Nr.w)(Ir) ? null : () => {
+          (0, wr.K)(xr, Er)
+        }, xr = new Wr.d(Zr, Sr, null, Ir, ar, pr, null, (0, Nr.s)(fr));
+        xr.coordinatesMode = jr.e.SKYBOX_MODE, (0, Nr.H)(rr, xr)
       },
-      canvas: (RR, JR, GR) => {
+      canvas: (rr, Sr, Qr) => {
         let {
-          width: yR,
-          height: tR,
-          mipmaps: qR,
-          samplingMode: iR,
-          hasAlpha: fR = !1,
-          wrap: VR = ZR.c.CLAMP_ADDRESSMODE
-        } = GR;
-        const KR = new uR.b(JR, {
-          width: yR,
-          height: tR
-        }, RR, qR, iR);
-        KR.hasAlpha = fR, KR.wrapU = VR, KR.wrapV = VR;
-        const wR = (0, jR.D)(KR);
-        return (0, jR.G)(wR, KR), wR
+          width: Zr,
+          height: Wr,
+          mipmaps: Ir,
+          samplingMode: fr,
+          hasAlpha: Er = !1,
+          wrap: pr = jr.e.CLAMP_ADDRESSMODE
+        } = Qr;
+        const xr = new ar.e(Sr, {
+          width: Zr,
+          height: Wr
+        }, rr, Ir, fr);
+        xr.hasAlpha = Er, xr.wrapU = pr, xr.wrapV = pr;
+        const mr = (0, wr.B)(xr);
+        return (0, wr.F)(mr, xr), mr
       }
     })
   },
-  42716: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => VR,
-      e: () => KR,
-      i: () => wR
+  43039: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => pr,
+      g: () => xr,
+      j: () => mr
     });
-    var yR = GR(42711),
-      tR = GR(41586),
-      uR = GR(41822),
-      ZR = GR(41957),
-      qR = GR(42714),
-      iR = GR(41951),
-      fR = GR(38532);
-    class VR extends ZR.e {
+    var Zr = Qr(43031),
+      Wr = Qr(41919),
+      ar = Qr(42147),
+      jr = Qr(42265),
+      Ir = Qr(43037),
+      fr = Qr(42256),
+      Er = Qr(38879);
+    class pr extends jr.e {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (RR, JR) => {
-          this.releaseUnlessInstanced(JR)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (rr, Sr) => {
+          this.releaseUnlessInstanced(Sr)
         }, this.onLinked = null
       }
-      link(RR) {
-        var JR;
-        (0, fR.m)(RR), this.model = RR, null === (JR = this.onLinked) || void 0 === JR || JR.call(this, RR)
+      link(rr) {
+        var Sr;
+        (0, Er.i)(rr), this.model = rr, null === (Sr = this.onLinked) || void 0 === Sr || Sr.call(this, rr)
       }
       relink() {
         this.release();
-        const RR = [];
-        for (const tR of Object.values(this._vertexBuffers))
-          if (!tR.getIsInstanced()) {
+        const rr = [];
+        for (const Wr of Object.values(this._vertexBuffers))
+          if (!Wr.getIsInstanced()) {
             const {
-              byteOffset: JR,
-              byteStride: GR,
-              type: yR,
-              normalized: uR
-            } = tR;
-            RR.push({
-              kind: tR.getKind(),
-              data: tR.getData(),
-              offset: JR,
-              stride: GR,
-              components: tR.getSize(),
-              glType: yR,
-              isNormalized: uR
+              byteOffset: Sr,
+              byteStride: Qr,
+              type: Zr,
+              normalized: ar
+            } = Wr;
+            rr.push({
+              kind: Wr.getKind(),
+              data: Wr.getData(),
+              offset: Sr,
+              stride: Qr,
+              components: Wr.getSize(),
+              glType: Zr,
+              isNormalized: ar
             })
-          } const JR = this._indices.length ? this._indices : null,
+          } const Sr = this._indices.length ? this._indices : null,
           {
-            minimum: GR,
-            maximum: yR
+            minimum: Qr,
+            maximum: Zr
           } = this.extend;
-        this.link(new fR.e(RR, JR, this.getTotalVertices(), new Float64Array(GR.QtR()), new Float64Array(yR.QtR())))
+        this.link(new Er.f(rr, Sr, this.getTotalVertices(), new Float64Array(Qr.OWr()), new Float64Array(Zr.OWr())))
       }
-      copy(RR) {
-        if (!this.model) return super.copy(RR);
-        const JR = new VR(RR, this.jH()),
-          GR = this.NuR(void 0, !0);
-        GR && JR.setIndices(GR);
-        let ZR = !1;
-        for (const uR in this._vertexBuffers) {
-          const RR = this._vertexBuffers[uR],
-            GR = RR.getData();
-          if (!GR) continue;
-          const qR = RR.getSize(),
+      copy(rr) {
+        if (!this.model) return super.copy(rr);
+        const Sr = new pr(rr, this.eC()),
+          Qr = this.yar(void 0, !0);
+        Qr && Sr.setIndices(Qr);
+        let jr = !1;
+        for (const ar in this._vertexBuffers) {
+          const rr = this._vertexBuffers[ar],
+            Qr = rr.getData();
+          if (!Qr) continue;
+          const Ir = rr.getSize(),
             {
-              type: iR,
-              byteOffset: fR,
-              byteStride: VR,
-              normalized: KR
-            } = RR;
-          ZR ||= RR.isUpdatable();
-          const wR = RR.getIsInstanced() ? (GR instanceof Array ? 4 * GR.length : GR.byteLength) / VR : this.getTotalVertices(),
-            rR = (0, tR.l)(GR, qR, iR, fR, VR, wR, !0),
-            eR = {
-              updatable: RR.isUpdatable(),
-              stride: qR,
-              type: iR,
-              normalized: KR,
+              type: fr,
+              byteOffset: Er,
+              byteStride: pr,
+              normalized: xr
+            } = rr;
+          jr ||= rr.isUpdatable();
+          const mr = rr.getIsInstanced() ? (Qr instanceof Array ? 4 * Qr.length : Qr.byteLength) / pr : this.getTotalVertices(),
+            Nr = (0, Wr.n)(Qr, Ir, fr, Er, pr, mr, !0),
+            Ur = {
+              updatable: rr.isUpdatable(),
+              stride: Ir,
+              type: fr,
+              normalized: xr,
               takeBufferOwnership: !0,
-              instanced: RR.getIsInstanced()
+              instanced: rr.getIsInstanced()
             };
-          JR.setVerticesBuffer(new yR.c(this.ke(), rR, uR, eR), wR)
+          Sr.setVerticesBuffer(new Zr.g(this.MU(), Nr, ar, Ur), mr)
         }
-        return JR._updatable = ZR, JR._boundingInfo = new uR.c(this.extend.minimum, this.extend.maximum), JR.relink(), JR
+        return Sr._updatable = jr, Sr._boundingInfo = new ar.c(this.extend.minimum, this.extend.maximum), Sr.relink(), Sr
       }
-      static mergeMeshes(RR, JR, GR, yR, tR, uR) {
-        const iR = RR[0].jH(),
-          fR = new qR.b(RR[0].name + "_merged", iR),
-          KR = new VR(ZR.e.RandomId(), iR, void 0, !1, fR);
+      static mergeMeshes(rr, Sr, Qr, Zr, Wr, ar) {
+        const fr = rr[0].eC(),
+          Er = new Ir.d(rr[0].name + "_merged", fr),
+          xr = new pr(jr.e.RandomId(), fr, void 0, !1, Er);
         try {
-          if (!qR.b.MergeMeshes(RR, JR, GR, fR, tR, uR)) return fR.dispose(), null
-        } catch (wR) {
-          throw fR.dispose(), wR
+          if (!Ir.d.MergeMeshes(rr, Sr, Qr, Er, Wr, ar)) return Er.dispose(), null
+        } catch (mr) {
+          throw Er.dispose(), mr
         }
-        return KR.relink(), fR
+        return xr.relink(), Er
       }
-      removeVerticesData(RR) {
-        this.releaseUnlessInstanced(RR), super.removeVerticesData(RR)
+      removeVerticesData(rr) {
+        this.releaseUnlessInstanced(rr), super.removeVerticesData(rr)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(RR) {
-        var JR;
-        RR && null !== (JR = this.getVertexBuffer(RR)) && void 0 !== JR && JR.getIsInstanced() || this.release()
+      releaseUnlessInstanced(rr) {
+        var Sr;
+        rr && null !== (Sr = this.getVertexBuffer(rr)) && void 0 !== Sr && Sr.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, fR.s)(this.model), this.model = null)
+        this.model && ((0, Er.r)(this.model), this.model = null)
       }
     }
 
-    function KR(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new qR.b(RR, GR);
-      const tR = (0, fR.j)(JR),
+    function xr(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Ir.d(rr, Qr);
+      const Wr = (0, Er.h)(Sr),
         {
-          positions: uR,
-          normals: KR,
-          uvs: wR,
-          indices: rR,
-          named: eR = {}
-        } = JR,
-        aR = new iR.c;
-      aR.positions = uR, aR.normals = null !== KR && void 0 !== KR ? KR : null, aR.uvs = null !== wR && void 0 !== wR ? wR : null, aR.indices = rR;
-      const LR = new VR(ZR.e.RandomId(), GR, aR, !1, yR);
+          positions: ar,
+          normals: xr,
+          uvs: mr,
+          indices: Nr,
+          named: Ur = {}
+        } = Sr,
+        tr = new fr.b;
+      tr.positions = ar, tr.normals = null !== xr && void 0 !== xr ? xr : null, tr.uvs = null !== mr && void 0 !== mr ? mr : null, tr.indices = Nr;
+      const hr = new pr(jr.e.RandomId(), Qr, tr, !1, Zr);
       for (const {
-          kind: ZR,
-          components: qR
+          kind: jr,
+          components: Ir
         }
-        of tR.vertexAttributes) ZR in eR && yR.setVerticesData(ZR, eR[ZR], !1, qR);
-      return LR.link(tR), yR
+        of Wr.vertexAttributes) jr in Ur && Zr.setVerticesData(jr, Ur[jr], !1, Ir);
+      return hr.link(Wr), Zr
     }
 
-    function wR(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const tR = new qR.b(RR, GR),
+    function mr(rr, Sr, Qr) {
+      let Zr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Wr = new Ir.d(rr, Qr),
         {
-          positions: uR,
-          normals: ZR,
-          uvs: fR,
-          indices: VR
-        } = JR;
-      return Object.assign(new iR.c, {
-        positions: uR,
-        normals: ZR,
-        uvs: fR,
-        indices: VR
-      }).applyToMesh(tR, yR), tR
+          positions: ar,
+          normals: jr,
+          uvs: Er,
+          indices: pr
+        } = Sr;
+      return Object.assign(new fr.b, {
+        positions: ar,
+        normals: jr,
+        uvs: Er,
+        indices: pr
+      }).applyToMesh(Wr, Zr), Wr
     }
   },
-  39934: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR,
-      g: () => ZR,
-      k: () => uR,
-      o: () => tR,
-      r: () => qR,
-      t: () => fR,
-      w: () => VR,
-      x: () => iR
+  40276: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr,
+      f: () => jr,
+      j: () => ar,
+      m: () => Wr,
+      o: () => Ir,
+      p: () => Er,
+      r: () => pr,
+      s: () => fr
     });
-    const yR = 16,
-      tR = 256,
-      uR = {
+    const Zr = 16,
+      Wr = 256,
+      ar = {
         position: 0,
         time: 3,
         direction: 4,
@@ -1231,9 +1231,9 @@ export const modules = {
         seed: 9,
         colour: 12
       },
-      ZR = 16,
-      qR = 256,
-      iR = {
+      jr = 16,
+      Ir = 256,
+      fr = {
         gravity: 0,
         colorCount: 3,
         colorDead: 4,
@@ -1241,28 +1241,28 @@ export const modules = {
         remapCount: 9,
         ramp: 10,
         colorPositions: 12,
-        color1: 12 + yR,
-        color2: 12 + 5 * yR,
-        BL: 12 + 9 * yR,
-        remap: 12 + 13 * yR
+        color1: 12 + Zr,
+        color2: 12 + 5 * Zr,
+        Lh: 12 + 9 * Zr,
+        remap: 12 + 13 * Zr
       },
-      fR = 12 + 17 * yR,
-      VR = [iR.colorCount, iR.velocityCount, iR.remapCount, iR.ramp]
+      Er = 12 + 17 * Zr,
+      pr = [fr.colorCount, fr.velocityCount, fr.remapCount, fr.ramp]
   },
-  39932: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => LR,
-      g: () => WR
+  40274: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => hr,
+      d: () => nr
     });
-    var yR = GR(38239),
-      tR = GR(38195),
-      uR = GR(38397),
-      ZR = GR(39934);
-    class qR {
-      constructor(RR) {
-        this.hK = RR, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
-        const JR = Math.max(1, RR);
-        this.records = new Float32Array(JR * ZR.g), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(JR).fill(-1 / 0)
+    var Zr = Qr(38599),
+      Wr = Qr(38555),
+      ar = Qr(38754),
+      jr = Qr(40276);
+    class Ir {
+      constructor(rr) {
+        this.sx = rr, this.records = void 0, this.recordBits = void 0, this.deaths = void 0, this.cursor = 0, this.highWater = 0, this.uploadFrom = -1, this.uploadTo = 0, this.wrapTo = 0;
+        const Sr = Math.max(1, rr);
+        this.records = new Float32Array(Sr * jr.f), this.recordBits = new Uint32Array(this.records.buffer), this.deaths = new Float64Array(Sr).fill(-1 / 0)
       }
       restart() {
         this.cursor = 0, this.highWater = 0
@@ -1270,30 +1270,30 @@ export const modules = {
       clear() {
         this.deaths.fill(-1 / 0), this.restart(), this.uploadFrom = -1, this.wrapTo = 0
       }
-      freeSlot(RR) {
-        const JR = this.hK;
-        for (let GR = 0; GR < JR; GR++) {
-          const GR = this.cursor;
-          if (this.cursor = GR + 1 === JR ? 0 : GR + 1, this.deaths[GR] <= RR) return GR
+      freeSlot(rr) {
+        const Sr = this.sx;
+        for (let Qr = 0; Qr < Sr; Qr++) {
+          const Qr = this.cursor;
+          if (this.cursor = Qr + 1 === Sr ? 0 : Qr + 1, this.deaths[Qr] <= rr) return Qr
         }
         return -1
       }
-      written(RR, JR) {
-        this.deaths[RR] = JR, RR >= this.highWater && (this.highWater = RR + 1), this.uploadFrom < 0 ? (this.uploadFrom = RR, this.uploadTo = RR + 1) : RR >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, RR + 1) : this.wrapTo = Math.max(this.wrapTo, RR + 1)
+      written(rr, Sr) {
+        this.deaths[rr] = Sr, rr >= this.highWater && (this.highWater = rr + 1), this.uploadFrom < 0 ? (this.uploadFrom = rr, this.uploadTo = rr + 1) : rr >= this.uploadFrom && 0 === this.wrapTo ? this.uploadTo = Math.max(this.uploadTo, rr + 1) : this.wrapTo = Math.max(this.wrapTo, rr + 1)
       }
-      shiftTimes(RR) {
-        const JR = this.records,
-          GR = this.highWater * ZR.g;
-        for (let yR = ZR.k.time; yR < GR; yR += ZR.g) JR[yR] -= RR;
+      shiftTimes(rr) {
+        const Sr = this.records,
+          Qr = this.highWater * jr.f;
+        for (let Zr = jr.j.time; Zr < Qr; Zr += jr.f) Sr[Zr] -= rr;
         this.highWater > 0 && (this.uploadFrom = 0, this.uploadTo = this.highWater, this.wrapTo = 0)
       }
-      takeUploads(RR) {
-        this.uploadFrom >= 0 && (RR(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && RR(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
+      takeUploads(rr) {
+        this.uploadFrom >= 0 && (rr(this.uploadFrom, this.uploadTo), this.wrapTo > 0 && rr(0, this.wrapTo)), this.uploadFrom = -1, this.wrapTo = 0
       }
-      liveCount(RR) {
-        let JR = 0;
-        for (let GR = 0; GR < this.highWater; GR++) this.deaths[GR] > RR && JR++;
-        return JR
+      liveCount(rr) {
+        let Sr = 0;
+        for (let Qr = 0; Qr < this.highWater; Qr++) this.deaths[Qr] > rr && Sr++;
+        return Sr
       }
       drawCount() {
         return this.highWater
@@ -1302,107 +1302,107 @@ export const modules = {
         return this.cursor < this.highWater ? this.cursor : 0
       }
     }
-    var iR = GR(38329),
-      fR = GR(39941),
-      VR = GR(39943),
-      KR = GR(39950);
-    class wR {
+    var fr = Qr(38679),
+      Er = Qr(40284),
+      pr = Qr(40286),
+      xr = Qr(40293);
+    class mr {
       constructor() {
-        this.particleEmitterType = new VR.b, this.texture = null, this.blendMode = KR.f, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = tR.Fe.Zero(), this.worldOffset = new tR.Fe(0, 0, 0), this.color1 = new iR.e(1, 1, 1, 1), this.color2 = new iR.e(1, 1, 1, 1), this.colorDead = new iR.e(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
+        this.particleEmitterType = new pr.b, this.texture = null, this.blendMode = xr.f, this.emitRate = 10, this.manualEmitCount = -1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minSize = 1, this.maxSize = 1, this.updateSpeed = .01, this.gravity = Wr.kU.Zero(), this.worldOffset = new Wr.kU(0, 0, 0), this.color1 = new fr.d(1, 1, 1, 1), this.color2 = new fr.d(1, 1, 1, 1), this.colorDead = new fr.d(0, 0, 0, 1), this.useRampGradients = !1, this.disposeOnStop = !1, this.colorGradients = null, this.velocityGradients = null, this.colorRemapGradients = null, this.rampGradients = null
       }
       get direction1() {
-        var RR;
-        return null !== (RR = rR(this).direction1) && void 0 !== RR ? RR : tR.Fe.Zero()
+        var rr;
+        return null !== (rr = Nr(this).direction1) && void 0 !== rr ? rr : Wr.kU.Zero()
       }
-      set direction1(RR) {
-        const JR = rR(this);
-        JR.direction1 && (JR.direction1 = RR)
+      set direction1(rr) {
+        const Sr = Nr(this);
+        Sr.direction1 && (Sr.direction1 = rr)
       }
       get direction2() {
-        var RR;
-        return null !== (RR = rR(this).direction2) && void 0 !== RR ? RR : tR.Fe.Zero()
+        var rr;
+        return null !== (rr = Nr(this).direction2) && void 0 !== rr ? rr : Wr.kU.Zero()
       }
-      set direction2(RR) {
-        const JR = rR(this);
-        JR.direction2 && (JR.direction2 = RR)
+      set direction2(rr) {
+        const Sr = Nr(this);
+        Sr.direction2 && (Sr.direction2 = rr)
       }
       get minEmitBox() {
-        var RR;
-        return null !== (RR = rR(this).minEmitBox) && void 0 !== RR ? RR : tR.Fe.Zero()
+        var rr;
+        return null !== (rr = Nr(this).minEmitBox) && void 0 !== rr ? rr : Wr.kU.Zero()
       }
-      set minEmitBox(RR) {
-        const JR = rR(this);
-        JR.minEmitBox && (JR.minEmitBox = RR)
+      set minEmitBox(rr) {
+        const Sr = Nr(this);
+        Sr.minEmitBox && (Sr.minEmitBox = rr)
       }
       get maxEmitBox() {
-        var RR;
-        return null !== (RR = rR(this).maxEmitBox) && void 0 !== RR ? RR : tR.Fe.Zero()
+        var rr;
+        return null !== (rr = Nr(this).maxEmitBox) && void 0 !== rr ? rr : Wr.kU.Zero()
       }
-      set maxEmitBox(RR) {
-        const JR = rR(this);
-        JR.maxEmitBox && (JR.maxEmitBox = RR)
+      set maxEmitBox(rr) {
+        const Sr = Nr(this);
+        Sr.maxEmitBox && (Sr.maxEmitBox = rr)
       }
-      createBoxEmitter(RR, JR, GR, yR) {
-        const tR = new VR.b;
-        return this.particleEmitterType = tR, tR.direction1 = RR, tR.direction2 = JR, tR.minEmitBox = GR, tR.maxEmitBox = yR, tR
+      createBoxEmitter(rr, Sr, Qr, Zr) {
+        const Wr = new pr.b;
+        return this.particleEmitterType = Wr, Wr.direction1 = rr, Wr.direction2 = Sr, Wr.minEmitBox = Qr, Wr.maxEmitBox = Zr, Wr
       }
-      addColorGradient(RR, JR, GR) {
-        return this.colorGradients ??= [], this.colorGradients.push(new fR.c(RR, JR, GR)), this.colorGradients.sort(eR), this
+      addColorGradient(rr, Sr, Qr) {
+        return this.colorGradients ??= [], this.colorGradients.push(new Er.d(rr, Sr, Qr)), this.colorGradients.sort(Ur), this
       }
-      removeColorGradient(RR) {
-        return aR(this.colorGradients, RR), this
+      removeColorGradient(rr) {
+        return tr(this.colorGradients, rr), this
       }
       getColorGradients() {
         return this.colorGradients
       }
-      addVelocityGradient(RR, JR, GR) {
-        return this.velocityGradients ??= [], this.velocityGradients.push(new fR.k(RR, JR, GR)), this.velocityGradients.sort(eR), this
+      addVelocityGradient(rr, Sr, Qr) {
+        return this.velocityGradients ??= [], this.velocityGradients.push(new Er.i(rr, Sr, Qr)), this.velocityGradients.sort(Ur), this
       }
       getVelocityGradients() {
         return this.velocityGradients
       }
-      addColorRemapGradient(RR, JR, GR) {
-        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new fR.k(RR, JR, GR)), this.colorRemapGradients.sort(eR), this
+      addColorRemapGradient(rr, Sr, Qr) {
+        return this.colorRemapGradients ??= [], this.colorRemapGradients.push(new Er.i(rr, Sr, Qr)), this.colorRemapGradients.sort(Ur), this
       }
       getColorRemapGradients() {
         return this.colorRemapGradients
       }
-      addRampGradient(RR, JR) {
-        return this.rampGradients ??= [], this.rampGradients.push(new fR.g(RR, JR)), this.rampGradients.sort(eR), this
+      addRampGradient(rr, Sr) {
+        return this.rampGradients ??= [], this.rampGradients.push(new Er.f(rr, Sr)), this.rampGradients.sort(Ur), this
       }
-      removeRampGradient(RR) {
-        return aR(this.rampGradients, RR), this
+      removeRampGradient(rr) {
+        return tr(this.rampGradients, rr), this
       }
       getRampGradients() {
         return this.rampGradients
       }
     }
 
-    function rR(RR) {
-      return RR.particleEmitterType
+    function Nr(rr) {
+      return rr.particleEmitterType
     }
 
-    function eR(RR, JR) {
-      return RR.gradient < JR.gradient ? -1 : RR.gradient > JR.gradient ? 1 : 0
+    function Ur(rr, Sr) {
+      return rr.gradient < Sr.gradient ? -1 : rr.gradient > Sr.gradient ? 1 : 0
     }
 
-    function aR(RR, JR) {
-      const GR = RR ? RR.findIndex((RR => RR.gradient === JR)) : -1;
-      GR >= 0 && RR.splice(GR, 1)
+    function tr(rr, Sr) {
+      const Qr = rr ? rr.findIndex((rr => rr.gradient === Sr)) : -1;
+      Qr >= 0 && rr.splice(Qr, 1)
     }
-    class LR extends wR {
-      constructor(RR, JR, GR) {
-        super(), this.name = RR, this.host = GR, this.onDispose = nR, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = tR.Fe.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.He = !1, this.emitterMatrix = new tR.Matrix, this.inverseEmitterMatrix = new tR.Matrix, this.spawned = {
-          position: new tR.Fe,
-          direction: new tR.Fe
-        }, this.ring = new qR(JR)
+    class hr extends mr {
+      constructor(rr, Sr, Qr) {
+        super(), this.name = rr, this.host = Qr, this.onDispose = zr, this.onAnimationEnd = null, this.ring = void 0, this.emitterValue = Wr.kU.Zero(), this.emitterDisposed = null, this.time = 0, this.epoch = 0, this.anchor = [0, 0, 0], this.shift = [0, 0, 0], this.liveUntil = -1 / 0, this.newPartsExcess = 0, this.started = !1, this.stopped = !1, this.alive = !1, this.vU = !1, this.emitterMatrix = new Wr.Matrix, this.inverseEmitterMatrix = new Wr.Matrix, this.spawned = {
+          position: new Wr.kU,
+          direction: new Wr.kU
+        }, this.ring = new Ir(Sr)
       }
       get emitter() {
         return this.emitterValue
       }
-      set emitter(RR) {
-        var JR;
-        null === (JR = this.emitterDisposed) || void 0 === JR || JR.remove(), this.emitterDisposed = null, this.emitterValue = RR, RR && AR(RR) && (this.emitterDisposed = RR.YH.add((() => {
+      set emitter(rr) {
+        var Sr;
+        null === (Sr = this.emitterDisposed) || void 0 === Sr || Sr.remove(), this.emitterDisposed = null, this.emitterValue = rr, rr && er(rr) && (this.emitterDisposed = rr.lC.add((() => {
           this.emitterDisposed = null, this.dispose()
         })))
       }
@@ -1422,12 +1422,12 @@ export const modules = {
         return this.started && !this.stopped
       }
       isReady() {
-        return !this.He && null !== this.emitterValue && this.host.canDraw(this)
+        return !this.vU && null !== this.emitterValue && this.host.canDraw(this)
       }
       dispose() {
-        var RR;
-        let JR = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this.He || (this.He = !0, null === (RR = this.emitterDisposed) || void 0 === RR || RR.remove(), this.emitterDisposed = null, JR && ((0, uR.B)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
+        var rr;
+        let Sr = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this.vU || (this.vU = !0, null === (rr = this.emitterDisposed) || void 0 === rr || rr.remove(), this.emitterDisposed = null, Sr && ((0, ar.A)(this.texture), this.texture = null), this.host.remove(this), this.onDispose())
       }
       reset() {
         this.liveUntil = -1 / 0, this.alive = !1, this.ring.clear()
@@ -1435,258 +1435,258 @@ export const modules = {
       getActiveCount() {
         return this.ring.liveCount(this.time)
       }
-      animateIfActive(RR) {
-        const JR = this.emitter;
-        return !!JR && !(AR(JR) && !JR.isEnabled()) && this.animate(RR)
+      animateIfActive(rr) {
+        const Sr = this.emitter;
+        return !!Sr && !(er(Sr) && !Sr.isEnabled()) && this.animate(rr)
       }
-      animate(RR) {
+      animate(rr) {
         if (!this.started) return !1;
         if (!this.isReady()) return this.endIfSpent(), !1;
-        const JR = this.updateSpeed * RR;
-        let GR;
-        return this.manualEmitCount > -1 ? (GR = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (GR = this.emitRate * JR | 0, this.newPartsExcess += this.emitRate * JR - GR), this.newPartsExcess > 1 && (GR += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (GR = 0), this.alive = this.liveUntil > this.time, this.time += JR, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), GR > 0 && this.spawn(GR), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
+        const Sr = this.updateSpeed * rr;
+        let Qr;
+        return this.manualEmitCount > -1 ? (Qr = this.manualEmitCount, this.newPartsExcess = 0, this.manualEmitCount = 0) : (Qr = this.emitRate * Sr | 0, this.newPartsExcess += this.emitRate * Sr - Qr), this.newPartsExcess > 1 && (Qr += this.newPartsExcess | 0, this.newPartsExcess -= this.newPartsExcess | 0), this.stopped && (Qr = 0), this.alive = this.liveUntil > this.time, this.time += Sr, this.time - this.epoch > 4096 && (this.ring.shiftTimes(this.time - this.epoch), this.epoch = this.time), Qr > 0 && this.spawn(Qr), !(this.stopped && !this.alive && this.end()) && (0 === this.manualEmitCount && this.disposeOnStop && (this.stopped = !0), !0)
       }
       endIfSpent() {
-        this.started && this.stopped && !this.He && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
+        this.started && this.stopped && !this.vU && !this.hasLiveParticles() && (this.manualEmitCount > 0 && (this.manualEmitCount = 0), this.end())
       }
       end() {
-        var RR;
-        return this.started = !1, null === (RR = this.onAnimationEnd) || void 0 === RR || RR.call(this), !!this.He || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
+        var rr;
+        return this.started = !1, null === (rr = this.onAnimationEnd) || void 0 === rr || rr.call(this), !!this.vU || !!this.disposeOnStop && (this.host.disposeStopped(this), !0)
       }
       hasLiveParticles() {
         return this.liveUntil > this.time
       }
-      drawOffset(RR, JR) {
-        RR[JR] = this.anchor[0] + this.shift[0] + this.worldOffset.x, RR[JR + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, RR[JR + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
+      drawOffset(rr, Sr) {
+        rr[Sr] = this.anchor[0] + this.shift[0] + this.worldOffset.x, rr[Sr + 1] = this.anchor[1] + this.shift[1] + this.worldOffset.y, rr[Sr + 2] = this.anchor[2] + this.shift[2] + this.worldOffset.z
       }
       drawTime() {
         return this.time - this.epoch
       }
-      fJR(RR, JR) {
-        this.emitterValue && AR(this.emitterValue) ? (this.shift[0] -= RR[0], this.shift[1] -= RR[1], this.shift[2] -= RR[2]) : this.worldOffset.set(-JR[0], -JR[1], -JR[2])
+      Prr(rr, Sr) {
+        this.emitterValue && er(this.emitterValue) ? (this.shift[0] -= rr[0], this.shift[1] -= rr[1], this.shift[2] -= rr[2]) : this.worldOffset.set(-Sr[0], -Sr[1], -Sr[2])
       }
-      spawn(RR) {
-        var JR, GR;
-        const uR = this.emitterValue,
-          qR = AR(uR) ? uR.getWorldMatrix() : tR.Matrix.TranslationToRef(uR.x, uR.y, uR.z, this.emitterMatrix);
-        qR.invertToRef(this.inverseEmitterMatrix);
+      spawn(rr) {
+        var Sr, Qr;
+        const ar = this.emitterValue,
+          Ir = er(ar) ? ar.getWorldMatrix() : Wr.Matrix.TranslationToRef(ar.x, ar.y, ar.z, this.emitterMatrix);
+        Ir.invertToRef(this.inverseEmitterMatrix);
         const {
-          position: iR,
-          direction: fR
-        } = this.spawned, VR = this.spawned, KR = this.ring, wR = this.liveUntil <= this.time;
-        wR && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, KR.restart());
+          position: fr,
+          direction: Er
+        } = this.spawned, pr = this.spawned, xr = this.ring, mr = this.liveUntil <= this.time;
+        mr && (this.epoch = this.time, this.shift[0] = this.shift[1] = this.shift[2] = 0, xr.restart());
         const {
-          records: rR,
-          recordBits: eR
-        } = KR, aR = ZR.k, LR = null === (JR = this.getColorGradients()) || void 0 === JR ? void 0 : JR[0], nR = LR ? LR.color1 : this.color1, UR = LR ? null !== (GR = LR.color2) && void 0 !== GR ? GR : LR.color1 : this.color2;
-        for (let tR = 0; tR < RR; tR++) {
-          const RR = KR.freeSlot(this.time);
-          if (RR < 0) break;
-          const JR = (0, yR.RandomRange)(this.minLifeTime, this.maxLifeTime),
-            GR = (0, yR.RandomRange)(this.minEmitPower, this.maxEmitPower);
-          this.particleEmitterType.startPositionFunction(qR, iR, VR, !1), this.particleEmitterType.startDirectionFunction(qR, fR, VR, !1, this.inverseEmitterMatrix), 0 === GR ? fR.set(0, 0, 0) : fR.scaleInPlace(GR);
-          const uR = (0, yR.RandomRange)(this.minSize, this.maxSize);
-          wR && 0 === tR && (this.anchor[0] = iR.x, this.anchor[1] = iR.y, this.anchor[2] = iR.z);
-          const LR = RR * ZR.g;
-          rR[LR + aR.position] = iR.x - this.anchor[0] - this.shift[0], rR[LR + aR.position + 1] = iR.y - this.anchor[1] - this.shift[1], rR[LR + aR.position + 2] = iR.z - this.anchor[2] - this.shift[2], rR[LR + aR.time] = this.time - this.epoch, rR[LR + aR.direction] = fR.x, rR[LR + aR.direction + 1] = fR.y, rR[LR + aR.direction + 2] = fR.z, rR[LR + aR.lifeTime] = JR, rR[LR + aR.size] = uR, eR[LR + aR.seed] = 4294967296 * Math.random() >>> 0;
-          const WR = Math.random();
-          rR[LR + aR.colour] = nR.r + (UR.r - nR.r) * WR, rR[LR + aR.colour + 1] = nR.g + (UR.g - nR.g) * WR, rR[LR + aR.colour + 2] = nR.b + (UR.b - nR.b) * WR, rR[LR + aR.colour + 3] = nR.a + (UR.a - nR.a) * WR;
-          const AR = this.time + JR;
-          AR > this.liveUntil && (this.liveUntil = AR), KR.written(RR, AR)
+          records: Nr,
+          recordBits: Ur
+        } = xr, tr = jr.j, hr = null === (Sr = this.getColorGradients()) || void 0 === Sr ? void 0 : Sr[0], zr = hr ? hr.color1 : this.color1, Yr = hr ? null !== (Qr = hr.color2) && void 0 !== Qr ? Qr : hr.color1 : this.color2;
+        for (let Wr = 0; Wr < rr; Wr++) {
+          const rr = xr.freeSlot(this.time);
+          if (rr < 0) break;
+          const Sr = (0, Zr.RandomRange)(this.minLifeTime, this.maxLifeTime),
+            Qr = (0, Zr.RandomRange)(this.minEmitPower, this.maxEmitPower);
+          this.particleEmitterType.startPositionFunction(Ir, fr, pr, !1), this.particleEmitterType.startDirectionFunction(Ir, Er, pr, !1, this.inverseEmitterMatrix), 0 === Qr ? Er.set(0, 0, 0) : Er.scaleInPlace(Qr);
+          const ar = (0, Zr.RandomRange)(this.minSize, this.maxSize);
+          mr && 0 === Wr && (this.anchor[0] = fr.x, this.anchor[1] = fr.y, this.anchor[2] = fr.z);
+          const hr = rr * jr.f;
+          Nr[hr + tr.position] = fr.x - this.anchor[0] - this.shift[0], Nr[hr + tr.position + 1] = fr.y - this.anchor[1] - this.shift[1], Nr[hr + tr.position + 2] = fr.z - this.anchor[2] - this.shift[2], Nr[hr + tr.time] = this.time - this.epoch, Nr[hr + tr.direction] = Er.x, Nr[hr + tr.direction + 1] = Er.y, Nr[hr + tr.direction + 2] = Er.z, Nr[hr + tr.lifeTime] = Sr, Nr[hr + tr.size] = ar, Ur[hr + tr.seed] = 4294967296 * Math.random() >>> 0;
+          const nr = Math.random();
+          Nr[hr + tr.colour] = zr.r + (Yr.r - zr.r) * nr, Nr[hr + tr.colour + 1] = zr.g + (Yr.g - zr.g) * nr, Nr[hr + tr.colour + 2] = zr.b + (Yr.b - zr.b) * nr, Nr[hr + tr.colour + 3] = zr.a + (Yr.a - zr.a) * nr;
+          const er = this.time + Sr;
+          er > this.liveUntil && (this.liveUntil = er), xr.written(rr, er)
         }
       }
     }
 
-    function nR() {}
-    const UR = 5;
+    function zr() {}
+    const Yr = 5;
 
-    function WR(RR, JR) {
-      const GR = [];
-      let yR = 0;
-      for (const tR of RR) tR.isReady() || (yR++, GR.length < UR && GR.push(`${JR} particle system ${tR.name}`));
-      return yR > GR.length && GR.push(`${yR-GR.length} more ${JR} particle systems`), GR
+    function nr(rr, Sr) {
+      const Qr = [];
+      let Zr = 0;
+      for (const Wr of rr) Wr.isReady() || (Zr++, Qr.length < Yr && Qr.push(`${Sr} particle system ${Wr.name}`));
+      return Zr > Qr.length && Qr.push(`${Zr-Qr.length} more ${Sr} particle systems`), Qr
     }
 
-    function AR(RR) {
-      return void 0 !== RR.position
+    function er(rr) {
+      return void 0 !== rr.position
     }
   },
-  53594: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => LR,
-      d: () => qR,
-      e: () => ZR,
-      g: () => fR
+  54130: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => hr,
+      f: () => Ir,
+      j: () => jr,
+      l: () => Er
     });
-    var yR = GR(38329),
-      tR = GR(39941),
-      uR = GR(39934);
+    var Zr = Qr(38679),
+      Wr = Qr(40284),
+      ar = Qr(40276);
 
-    function ZR(RR, JR, GR, yR) {
-      const tR = uR.x;
-      JR.fill(0), RR.gravity.toArray(JR, tR.gravity), RR.colorDead.toArray(JR, tR.colorDead), GR[tR.ramp] = RR.useRampGradients ? 1 : 0;
-      const ZR = RR.getColorGradients(),
-        qR = wR(RR, ZR, "colour", yR);
-      GR[tR.colorCount] = qR;
-      for (let uR = 0; uR < qR; uR++) {
-        var iR;
-        const RR = ZR[rR(ZR, uR)];
-        JR[tR.colorPositions + uR] = RR.gradient, RR.color1.toArray(JR, tR.color1 + 4 * uR), (null !== (iR = RR.color2) && void 0 !== iR ? iR : RR.color1).toArray(JR, tR.color2 + 4 * uR)
+    function jr(rr, Sr, Qr, Zr) {
+      const Wr = ar.s;
+      Sr.fill(0), rr.gravity.toArray(Sr, Wr.gravity), rr.colorDead.toArray(Sr, Wr.colorDead), Qr[Wr.ramp] = rr.useRampGradients ? 1 : 0;
+      const jr = rr.getColorGradients(),
+        Ir = mr(rr, jr, "colour", Zr);
+      Qr[Wr.colorCount] = Ir;
+      for (let ar = 0; ar < Ir; ar++) {
+        var fr;
+        const rr = jr[Nr(jr, ar)];
+        Sr[Wr.colorPositions + ar] = rr.gradient, rr.color1.toArray(Sr, Wr.color1 + 4 * ar), (null !== (fr = rr.color2) && void 0 !== fr ? fr : rr.color1).toArray(Sr, Wr.color2 + 4 * ar)
       }
-      const fR = RR.getVelocityGradients(),
-        VR = wR(RR, fR, "BL", yR);
-      GR[tR.velocityCount] = VR;
-      for (let uR = 0; uR < VR; uR++) UR(JR, tR.BL + 4 * uR, fR[rR(fR, uR)]);
-      const KR = RR.useRampGradients ? RR.getColorRemapGradients() : null,
-        eR = wR(RR, KR, "colour remap", yR);
-      GR[tR.remapCount] = eR;
-      for (let uR = 0; uR < eR; uR++) UR(JR, tR.remap + 4 * uR, KR[rR(KR, uR)])
+      const Er = rr.getVelocityGradients(),
+        pr = mr(rr, Er, "Lh", Zr);
+      Qr[Wr.velocityCount] = pr;
+      for (let ar = 0; ar < pr; ar++) Yr(Sr, Wr.Lh + 4 * ar, Er[Nr(Er, ar)]);
+      const xr = rr.useRampGradients ? rr.getColorRemapGradients() : null,
+        Ur = mr(rr, xr, "colour remap", Zr);
+      Qr[Wr.remapCount] = Ur;
+      for (let ar = 0; ar < Ur; ar++) Yr(Sr, Wr.remap + 4 * ar, xr[Nr(xr, ar)])
     }
 
-    function qR() {
+    function Ir() {
       return {
         key: [],
-        texels: new Uint8Array(4 * uR.o)
+        texels: new Uint8Array(4 * ar.m)
       }
     }
-    const iR = [];
+    const fr = [];
 
-    function fR(RR, JR) {
-      return VR(RR, iR), !nR(iR, JR.key) && (JR.key.length = 0, JR.key.push(...iR), JR.key.length > 0 && function(RR, JR) {
-        for (let GR = 0; GR < uR.o; GR++) tR.m.GetCurrentGradient(GR / uR.o, RR, ((RR, JR, GR) => {
-          yR.Color3.LerpToRef(RR.color, JR.color, GR, KR)
-        })), JR[4 * GR] = 255 * KR.r, JR[4 * GR + 1] = 255 * KR.g, JR[4 * GR + 2] = 255 * KR.b, JR[4 * GR + 3] = 255
-      }(RR.getRampGradients(), JR.texels), !0)
+    function Er(rr, Sr) {
+      return pr(rr, fr), !zr(fr, Sr.key) && (Sr.key.length = 0, Sr.key.push(...fr), Sr.key.length > 0 && function(rr, Sr) {
+        for (let Qr = 0; Qr < ar.m; Qr++) Wr.j.GetCurrentGradient(Qr / ar.m, rr, ((rr, Sr, Qr) => {
+          Zr.Color3.LerpToRef(rr.color, Sr.color, Qr, xr)
+        })), Sr[4 * Qr] = 255 * xr.r, Sr[4 * Qr + 1] = 255 * xr.g, Sr[4 * Qr + 2] = 255 * xr.b, Sr[4 * Qr + 3] = 255
+      }(rr.getRampGradients(), Sr.texels), !0)
     }
 
-    function VR(RR, JR) {
-      JR.length = 0;
-      const GR = RR.useRampGradients ? RR.getRampGradients() : null;
-      if (null !== GR && void 0 !== GR && GR.length) {
-        JR.push(GR.length);
-        for (const RR of GR) JR.push(RR.gradient, RR.color.r, RR.color.g, RR.color.b)
+    function pr(rr, Sr) {
+      Sr.length = 0;
+      const Qr = rr.useRampGradients ? rr.getRampGradients() : null;
+      if (null !== Qr && void 0 !== Qr && Qr.length) {
+        Sr.push(Qr.length);
+        for (const rr of Qr) Sr.push(rr.gradient, rr.color.r, rr.color.g, rr.color.b)
       }
     }
-    const KR = new yR.Color3;
+    const xr = new Zr.Color3;
 
-    function wR(RR, JR, GR, yR) {
-      return JR ? JR.length > uR.c ? (yR(`particleStops:${GR}`, `GPU particles use the first 2 and last ${uR.c-2} of more than ${uR.c} ${GR} gradient stops (${RR.name})`), uR.c) : JR.length : 0
+    function mr(rr, Sr, Qr, Zr) {
+      return Sr ? Sr.length > ar.b ? (Zr(`particleStops:${Qr}`, `GPU particles use the first 2 and last ${ar.b-2} of more than ${ar.b} ${Qr} gradient stops (${rr.name})`), ar.b) : Sr.length : 0
     }
 
-    function rR(RR, JR) {
-      return JR < 2 || RR.length <= uR.c ? JR : RR.length - uR.c + JR
+    function Nr(rr, Sr) {
+      return Sr < 2 || rr.length <= ar.b ? Sr : rr.length - ar.b + Sr
     }
-    const eR = new Float32Array(uR.t),
-      aR = new Uint32Array(eR.buffer);
+    const Ur = new Float32Array(ar.p),
+      tr = new Uint32Array(Ur.buffer);
 
-    function LR(RR, JR, GR) {
-      return ZR(RR, eR, aR, GR), JR && nR(aR, JR) ? null : aR.slice()
+    function hr(rr, Sr, Qr) {
+      return jr(rr, Ur, tr, Qr), Sr && zr(tr, Sr) ? null : tr.slice()
     }
 
-    function nR(RR, JR) {
-      if (RR.length !== JR.length) return !1;
-      for (let GR = 0; GR < RR.length; GR++)
-        if (RR[GR] !== JR[GR]) return !1;
+    function zr(rr, Sr) {
+      if (rr.length !== Sr.length) return !1;
+      for (let Qr = 0; Qr < rr.length; Qr++)
+        if (rr[Qr] !== Sr[Qr]) return !1;
       return !0
     }
 
-    function UR(RR, JR, GR) {
-      var yR;
-      RR[JR] = GR.gradient, RR[JR + 1] = GR.factor1, RR[JR + 2] = null !== (yR = GR.factor2) && void 0 !== yR ? yR : GR.factor1
+    function Yr(rr, Sr, Qr) {
+      var Zr;
+      rr[Sr] = Qr.gradient, rr[Sr + 1] = Qr.factor1, rr[Sr + 2] = null !== (Zr = Qr.factor2) && void 0 !== Zr ? Zr : Qr.factor1
     }
   },
-  42704: (RR, JR, GR) => {
-    function yR(RR, JR, GR) {
-      const yR = JR * JR * 4,
-        tR = RR[0].layers,
-        uR = tR * (RR.length - 1) + RR[RR.length - 1].layers,
-        ZR = new Uint8Array(uR * yR);
-      RR.forEach(((JR, GR) => {
-        const uR = GR + 1 < RR.length ? Math.min(JR.layers, tR) : JR.layers;
-        ZR.set(new Uint8Array(JR.pixels.buffer, JR.pixels.byteOffset, uR * yR), GR * tR * yR)
+  43027: (rr, Sr, Qr) => {
+    function Zr(rr, Sr, Qr) {
+      const Zr = Sr * Sr * 4,
+        Wr = rr[0].layers,
+        ar = Wr * (rr.length - 1) + rr[rr.length - 1].layers,
+        jr = new Uint8Array(ar * Zr);
+      rr.forEach(((Sr, Qr) => {
+        const ar = Qr + 1 < rr.length ? Math.min(Sr.layers, Wr) : Sr.layers;
+        jr.set(new Uint8Array(Sr.pixels.buffer, Sr.pixels.byteOffset, ar * Zr), Qr * Wr * Zr)
       }));
-      const qR = Math.max(1, Math.min(uR, GR || uR));
-      if (qR === uR) return [{
-        pixels: ZR,
-        layers: uR
+      const Ir = Math.max(1, Math.min(ar, Qr || ar));
+      if (Ir === ar) return [{
+        pixels: jr,
+        layers: ar
       }];
-      const iR = [];
-      for (let fR = 0; fR < uR; fR += qR) {
-        const RR = Math.min(uR, fR + qR);
-        iR.push({
-          pixels: ZR.slice(fR * yR, RR * yR),
-          layers: RR - fR
+      const fr = [];
+      for (let Er = 0; Er < ar; Er += Ir) {
+        const rr = Math.min(ar, Er + Ir);
+        fr.push({
+          pixels: jr.slice(Er * Zr, rr * Zr),
+          layers: rr - Er
         })
       }
-      return iR
+      return fr
     }
-    GR.d(JR, {
-      b: () => yR,
-      c: () => uR
+    Qr.d(Sr, {
+      b: () => Zr,
+      f: () => ar
     });
-    const tR = new WeakMap;
+    const Wr = new WeakMap;
 
-    function uR(RR, JR, GR) {
-      var yR, uR;
-      const ZR = null !== (yR = tR.get(RR)) && void 0 !== yR ? yR : new Map;
-      tR.set(RR, ZR);
-      const qR = null !== (uR = ZR.get(JR[0])) && void 0 !== uR ? uR : [];
-      ZR.set(JR[0], qR);
-      const iR = qR.find((RR => RR.urls.length === JR.length && RR.urls.every(((RR, GR) => RR === JR[GR]))));
-      if (iR) return iR.built;
-      const fR = {
-        urls: [...JR],
-        built: GR()
+    function ar(rr, Sr, Qr) {
+      var Zr, ar;
+      const jr = null !== (Zr = Wr.get(rr)) && void 0 !== Zr ? Zr : new Map;
+      Wr.set(rr, jr);
+      const Ir = null !== (ar = jr.get(Sr[0])) && void 0 !== ar ? ar : [];
+      jr.set(Sr[0], Ir);
+      const fr = Ir.find((rr => rr.urls.length === Sr.length && rr.urls.every(((rr, Qr) => rr === Sr[Qr]))));
+      if (fr) return fr.built;
+      const Er = {
+        urls: [...Sr],
+        built: Qr()
       };
-      return qR.push(fR), fR.built.catch((() => {
-        qR.splice(qR.indexOf(fR), 1)
-      })), fR.built
+      return Ir.push(Er), Er.built.catch((() => {
+        Ir.splice(Ir.indexOf(Er), 1)
+      })), Er.built
     }
   },
-  39950: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      f: () => tR,
-      i: () => iR,
-      m: () => KR
+  40293: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      f: () => Wr,
+      g: () => fr,
+      h: () => xr
     });
-    var yR = GR(38325);
-    const tR = 0,
-      uR = 3,
-      ZR = 4,
-      qR = new Map([
-        [tR, yR.d.ALPHA_ONEONE],
-        [1, yR.d.ALPHA_COMBINE],
-        [2, yR.d.ALPHA_ADD],
-        [uR, yR.d.ALPHA_MULTIPLY],
-        [-1, yR.d.ALPHA_SUBTRACT]
+    var Zr = Qr(38677);
+    const Wr = 0,
+      ar = 3,
+      jr = 4,
+      Ir = new Map([
+        [Wr, Zr.d.ALPHA_ONEONE],
+        [1, Zr.d.ALPHA_COMBINE],
+        [2, Zr.d.ALPHA_ADD],
+        [ar, Zr.d.ALPHA_MULTIPLY],
+        [-1, Zr.d.ALPHA_SUBTRACT]
       ]);
 
-    function iR(RR) {
-      var JR;
-      return null !== (JR = qR.get(RR)) && void 0 !== JR ? JR : RR
+    function fr(rr) {
+      var Sr;
+      return null !== (Sr = Ir.get(rr)) && void 0 !== Sr ? Sr : rr
     }
-    const fR = [uR, 2],
-      VR = new Map;
+    const Er = [ar, 2],
+      pr = new Map;
 
-    function KR(RR) {
-      if (RR === ZR) return fR;
-      let JR = VR.get(RR);
-      return JR || (JR = [RR], VR.set(RR, JR)), JR
+    function xr(rr) {
+      if (rr === jr) return Er;
+      let Sr = pr.get(rr);
+      return Sr || (Sr = [rr], pr.set(rr, Sr)), Sr
     }
   },
-  53589: (RR, JR, GR) => {
-    function yR() {
-      let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const JR = new Set;
-      return (GR, yR) => {
-        JR.has(GR) || (JR.add(GR), console.warn(RR + yR))
+  54128: (rr, Sr, Qr) => {
+    function Zr() {
+      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const Sr = new Set;
+      return (Qr, Zr) => {
+        Sr.has(Qr) || (Sr.add(Qr), console.warn(rr + Zr))
       }
     }
-    GR.d(JR, {
-      d: () => yR
+    Qr.d(Sr, {
+      c: () => Zr
     })
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

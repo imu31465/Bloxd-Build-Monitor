@@ -1,117 +1,117 @@
 export const id = 116;
 export const ids = [116];
 export const modules = {
-  5792: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => wR
+  5731: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => mr
     });
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(1468),
-      ZR = GR(1465),
-      qR = GR(4850),
-      iR = GR(134),
-      fR = GR(4889),
-      VR = GR(4881),
-      KR = GR(1378);
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(1448),
+      jr = Qr(1444),
+      Ir = Qr(4759),
+      fr = Qr(139),
+      Er = Qr(4791),
+      pr = Qr(4777),
+      xr = Qr(1338);
 
-    function wR(RR) {
+    function mr(rr) {
       let {
-        game: JR
-      } = RR;
-      const GR = (0, iR.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        yR = (0, fR.d)(JR, GR),
-        wR = (0, qR.h)(yR),
-        rR = void 0 !== wR.blurhash;
-      return (0, KR.jsxs)("div", {
+        game: Sr
+      } = rr;
+      const Qr = (0, fr.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        Zr = (0, Er.g)(Sr, Qr),
+        mr = (0, Ir.f)(Zr),
+        Nr = void 0 !== mr.blurhash;
+      return (0, xr.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [wR.isLoading && !rR && (0, KR.jsx)(ZR.d, {
+        children: [mr.isLoading && !Nr && (0, xr.jsx)(jr.c, {
           loaderType: "Secondary"
-        }), !wR.failed && (null !== wR.src || rR) && (0, KR.jsx)("div", {
-          className: tR()("SchematicImage", VR.f, {
-            SchematicImageFadeIn: wR.fadeIn && !rR
+        }), !mr.failed && (null !== mr.src || Nr) && (0, xr.jsx)("div", {
+          className: Wr()("SchematicImage", pr.j, {
+            SchematicImageFadeIn: mr.fadeIn && !Nr
           }),
-          style: (0, VR.c)(wR),
-          children: (0, KR.jsx)(VR.b, {
-            image: wR
+          style: (0, pr.g)(mr),
+          children: (0, xr.jsx)(pr.c, {
+            image: mr
           })
-        }), wR.failed && (0, KR.jsx)("div", {
+        }), mr.failed && (0, xr.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, KR.jsx)(uR.d, {
+          children: (0, xr.jsx)(ar.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5777: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => lR
+  5722: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => vr
     });
-    GR(5785);
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(359),
-      qR = GR(1141),
-      iR = GR(1317),
-      fR = GR(1270),
-      VR = GR(1196),
-      KR = GR(1647),
-      wR = GR(5792),
-      rR = GR(1590),
-      eR = GR(5798),
-      aR = GR(1465),
-      LR = GR(1663),
-      nR = GR(5430),
-      UR = GR(1468),
-      WR = GR(1120),
-      AR = GR(3611),
-      CR = GR(5804),
-      XR = GR(1695),
-      MR = GR(1378);
+    Qr(5726);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(360),
+      Ir = Qr(1133),
+      fr = Qr(1279),
+      Er = Qr(1251),
+      pr = Qr(1181),
+      xr = Qr(1629),
+      mr = Qr(5731),
+      Nr = Qr(1576),
+      Ur = Qr(5736),
+      tr = Qr(1444),
+      hr = Qr(1644),
+      zr = Qr(5387),
+      Yr = Qr(1448),
+      nr = Qr(1121),
+      er = Qr(3549),
+      Kr = Qr(5738),
+      yr = Qr(1671),
+      Br = Qr(1338);
 
-    function BR() {
+    function Tr() {
       const {
-        t: RR
-      } = (0, fR.A)(), JR = (0, LR.useNavigatePreserveSearch)(), GR = (0, AR.l)(), tR = (0, yR.useMemo)((() => [...WR.b].sort(((JR, yR) => {
-        var tR, uR;
-        const ZR = (null !== (tR = (0, AR.c)(yR, GR)) && void 0 !== tR ? tR : 0) - (null !== (uR = (0, AR.c)(JR, GR)) && void 0 !== uR ? uR : 0);
-        return 0 !== ZR ? ZR : (0, XR.n)(JR, RR).localeCompare((0, XR.n)(yR, RR))
-      }))), [GR, RR]);
-      return (0, MR.jsxs)(MR.Fragment, {
-        children: [(0, MR.jsx)("div", {
+        t: rr
+      } = (0, Er.E)(), Sr = (0, hr.useNavigatePreserveSearch)(), Qr = (0, er.r)(), Wr = (0, Zr.useMemo)((() => [...nr.d].sort(((Sr, Zr) => {
+        var Wr, ar;
+        const jr = (null !== (Wr = (0, er.e)(Zr, Qr)) && void 0 !== Wr ? Wr : 0) - (null !== (ar = (0, er.e)(Sr, Qr)) && void 0 !== ar ? ar : 0);
+        return 0 !== jr ? jr : (0, yr.o)(Sr, rr).localeCompare((0, yr.o)(Zr, rr))
+      }))), [Qr, rr]);
+      return (0, Br.jsxs)(Br.Fragment, {
+        children: [(0, Br.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, MR.jsx)("h1", {
+          children: (0, Br.jsx)("h1", {
             className: "StudioPageTitle",
-            children: RR("studio:firstPartyGames")
+            children: rr("studio:firstPartyGames")
           })
-        }), (0, MR.jsx)(eR.e, {
+        }), (0, Br.jsx)(Ur.b, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: RR("general:game")
+            header: rr("general:game")
           }, {
             key: "ccu",
-            header: RR("studio:metricCcu")
+            header: rr("studio:metricCcu")
           }],
-          rows: tR,
-          getRowKey: RR => RR,
-          renderRow: yR => {
-            var tR;
-            return (0, MR.jsxs)("tr", {
+          rows: Wr,
+          getRowKey: rr => rr,
+          renderRow: Zr => {
+            var Wr;
+            return (0, Br.jsxs)("tr", {
               onClick: () => {
-                JR((0, XR.p)((0, qR.e)(yR, !0)))
+                Sr((0, yr.r)((0, Ir.d)(Zr, !0)))
               },
-              children: [(0, MR.jsx)("td", {
-                children: (0, MR.jsx)(CR.e, {
-                  thumbnail: (0, MR.jsx)(CR.d, {
-                    game: yR
+              children: [(0, Br.jsx)("td", {
+                children: (0, Br.jsx)(Kr.e, {
+                  thumbnail: (0, Br.jsx)(Kr.d, {
+                    game: Zr
                   }),
-                  name: (0, XR.n)(yR, RR)
+                  name: (0, yr.o)(Zr, rr)
                 })
-              }), (0, MR.jsx)("td", {
-                children: (0, iR.J)(null !== (tR = (0, AR.c)(yR, GR)) && void 0 !== tR ? tR : 0)
+              }), (0, Br.jsx)("td", {
+                children: (0, fr.S)(null !== (Wr = (0, er.e)(Zr, Qr)) && void 0 !== Wr ? Wr : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function lR() {
+    function vr() {
       const {
-        t: RR
-      } = (0, fR.A)(), JR = (0, LR.useNavigatePreserveSearch)(), {
-        userContext: GR,
-        isUserContextUpdating: tR
-      } = (0, VR.d)(), {
-        isCreating: WR,
-        create: AR
-      } = (0, nR.g)(), [lR, pR] = (0, yR.useState)(null), [gR, bR] = (0, yR.useState)(null), [vR, OR] = (0, yR.useState)(!1);
-      (0, yR.useEffect)((() => {
-        tR || (OR(!1), KR.c.getPublishedGamePreviews(GR, {
+        t: rr
+      } = (0, Er.E)(), Sr = (0, hr.useNavigatePreserveSearch)(), {
+        userContext: Qr,
+        isUserContextUpdating: Wr
+      } = (0, pr.c)(), {
+        isCreating: nr,
+        create: er
+      } = (0, zr.f)(), [vr, Or] = (0, Zr.useState)(null), [Lr, lr] = (0, Zr.useState)(null), [Xr, Pr] = (0, Zr.useState)(!1);
+      (0, Zr.useEffect)((() => {
+        Wr || (Pr(!1), xr.c.getPublishedGamePreviews(Qr, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,168 +140,168 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((RR => {
-          pR({
-            ...RR,
-            results: (0, ZR.$)(RR.results)
+        }).then((rr => {
+          Or({
+            ...rr,
+            results: (0, jr.fb)(rr.results)
           })
-        })).catch((RR => {
-          console.error("Failed to get owned published games", RR), OR(!0)
-        })), KR.c.getOwnedUnpublishedGames(GR).then((RR => {
-          bR(RR)
-        })).catch((RR => {
-          console.error("Failed to get owned unpublished games", RR), OR(!0)
+        })).catch((rr => {
+          console.error("Failed to get owned published games", rr), Pr(!0)
+        })), xr.c.getOwnedUnpublishedGames(Qr).then((rr => {
+          lr(rr)
+        })).catch((rr => {
+          console.error("Failed to get owned unpublished games", rr), Pr(!0)
         })))
-      }), [tR, GR]);
-      const xR = null !== lR && null !== gR ? [...lR.results, ...gR] : [],
-        NR = !vR && (null === lR || null === gR),
-        DR = !NR && !vR && 0 === xR.length,
-        HR = !tR && GR.playerHasRank("developer");
-      return (0, MR.jsxs)("div", {
+      }), [Wr, Qr]);
+      const Hr = null !== vr && null !== Lr ? [...vr.results, ...Lr] : [],
+        qr = !Xr && (null === vr || null === Lr),
+        Rr = !qr && !Xr && 0 === Hr.length,
+        gr = !Wr && Qr.playerHasRank("developer");
+      return (0, Br.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, MR.jsxs)("div", {
+        children: [(0, Br.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, MR.jsx)("h1", {
+          children: [(0, Br.jsx)("h1", {
             className: "StudioPageTitle",
-            children: RR("studio:myGames")
-          }), (0, MR.jsxs)(rR.n, {
-            onClick: AR,
-            loading: WR,
-            children: [(0, MR.jsx)(UR.d, {
+            children: rr("studio:myGames")
+          }), (0, Br.jsxs)(Nr.p, {
+            onClick: er,
+            loading: nr,
+            children: [(0, Br.jsx)(Yr.c, {
               name: "plus"
-            }), " ", RR("homePage:createCustomGame")]
+            }), " ", rr("homePage:createCustomGame")]
           })]
-        }), NR && (0, MR.jsx)("div", {
+        }), qr && (0, Br.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, MR.jsx)(aR.d, {})
-        }), vR && (0, MR.jsx)("div", {
+          children: (0, Br.jsx)(tr.c, {})
+        }), Xr && (0, Br.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: RR("studio:failedToLoadGames")
-        }), DR && (0, MR.jsx)("div", {
+          children: rr("studio:failedToLoadGames")
+        }), Rr && (0, Br.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: RR("studio:noGamesYet")
-        }), !NR && !vR && !DR && (0, MR.jsx)(eR.e, {
+          children: rr("studio:noGamesYet")
+        }), !qr && !Xr && !Rr && (0, Br.jsx)(Ur.b, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: RR("general:game")
+            header: rr("general:game")
           }, {
             key: "status",
-            header: RR("general:status")
+            header: rr("general:status")
           }, {
             key: "ccu",
-            header: RR("studio:metricCcu")
+            header: rr("studio:metricCcu")
           }, {
             key: "favourites",
-            header: RR("general:favourites")
+            header: rr("general:favourites")
           }],
-          rows: xR,
-          getRowKey: RR => RR.schematicId,
-          renderRow: GR => {
-            const yR = function(RR) {
-              return (0, XR.d)(RR.gamePublished, "takenDown" in RR && RR.takenDown)
-            }(GR);
-            return (0, MR.jsxs)("tr", {
+          rows: Hr,
+          getRowKey: rr => rr.schematicId,
+          renderRow: Qr => {
+            const Zr = function(rr) {
+              return (0, yr.g)(rr.gamePublished, "takenDown" in rr && rr.takenDown)
+            }(Qr);
+            return (0, Br.jsxs)("tr", {
               onClick: () => {
-                var RR;
-                RR = GR.schematicId, JR((0, XR.p)((0, qR.d)(RR)))
+                var rr;
+                rr = Qr.schematicId, Sr((0, yr.r)((0, Ir.b)(rr)))
               },
-              children: [(0, MR.jsx)("td", {
-                children: (0, MR.jsx)(CR.e, {
-                  thumbnail: (0, MR.jsx)(wR.e, {
-                    game: GR
+              children: [(0, Br.jsx)("td", {
+                children: (0, Br.jsx)(Kr.e, {
+                  thumbnail: (0, Br.jsx)(mr.e, {
+                    game: Qr
                   }),
-                  name: GR.name
+                  name: Qr.name
                 })
-              }), (0, MR.jsx)("td", {
-                children: (0, MR.jsx)("span", {
-                  className: uR()("StudioGameListStatusChip", {
-                    StudioGameListStatusChipPublished: "published" === yR,
-                    StudioGameListStatusChipTakenDown: "takenDown" === yR
+              }), (0, Br.jsx)("td", {
+                children: (0, Br.jsx)("span", {
+                  className: ar()("StudioGameListStatusChip", {
+                    StudioGameListStatusChipPublished: "published" === Zr,
+                    StudioGameListStatusChipTakenDown: "takenDown" === Zr
                   }),
-                  children: (0, XR.c)(RR, yR)
+                  children: (0, yr.e)(rr, Zr)
                 })
-              }), (0, MR.jsx)("td", {
-                children: (0, iR.J)(GR.ccu)
-              }), (0, MR.jsx)("td", {
-                children: (0, iR.J)(GR.favourites)
+              }), (0, Br.jsx)("td", {
+                children: (0, fr.S)(Qr.ccu)
+              }), (0, Br.jsx)("td", {
+                children: (0, fr.S)(Qr.favourites)
               })]
             })
           }
-        }), HR && (0, MR.jsx)(BR, {})]
+        }), gr && (0, Br.jsx)(Tr, {})]
       })
     }
   },
-  5804: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => ZR,
-      e: () => uR
+  5738: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => jr,
+      e: () => ar
     });
-    var yR = GR(1695),
-      tR = GR(1378);
+    var Zr = Qr(1671),
+      Wr = Qr(1338);
 
-    function uR(RR) {
+    function ar(rr) {
       let {
-        thumbnail: JR,
-        name: GR
-      } = RR;
-      return (0, tR.jsxs)("div", {
+        thumbnail: Sr,
+        name: Qr
+      } = rr;
+      return (0, Wr.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, tR.jsx)("div", {
+        children: [(0, Wr.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: JR
-        }), (0, tR.jsx)("span", {
+          children: Sr
+        }), (0, Wr.jsx)("span", {
           className: "StudioTableGameName",
-          children: GR
+          children: Qr
         })]
       })
     }
 
-    function ZR(RR) {
+    function jr(rr) {
       let {
-        game: JR
-      } = RR;
-      return (0, tR.jsx)("img", {
+        game: Sr
+      } = rr;
+      return (0, Wr.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, yR.k)(JR),
+        src: (0, Zr.m)(Sr),
         alt: ""
       })
     }
   },
-  5798: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR
+  5736: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(1338);
 
-    function qR(RR) {
+    function Ir(rr) {
       let {
-        columns: JR,
-        rows: GR,
-        getRowKey: tR,
-        renderRow: qR,
-        className: iR
-      } = RR;
-      return (0, ZR.jsxs)("table", {
-        className: uR()("Table", iR),
-        children: [(0, ZR.jsx)("thead", {
-          children: (0, ZR.jsx)("tr", {
-            children: JR.map((RR => (0, ZR.jsx)("th", {
-              children: RR.header
-            }, RR.key)))
+        columns: Sr,
+        rows: Qr,
+        getRowKey: Wr,
+        renderRow: Ir,
+        className: fr
+      } = rr;
+      return (0, jr.jsxs)("table", {
+        className: ar()("Table", fr),
+        children: [(0, jr.jsx)("thead", {
+          children: (0, jr.jsx)("tr", {
+            children: Sr.map((rr => (0, jr.jsx)("th", {
+              children: rr.header
+            }, rr.key)))
           })
-        }), (0, ZR.jsx)("tbody", {
-          children: GR.map(((RR, JR) => (0, ZR.jsx)(yR.Fragment, {
-            children: qR(RR, JR)
-          }, tR(RR))))
+        }), (0, jr.jsx)("tbody", {
+          children: Qr.map(((rr, Sr) => (0, jr.jsx)(Zr.Fragment, {
+            children: Ir(rr, Sr)
+          }, Wr(rr))))
         })]
       })
     }
   },
-  5785: () => {}
+  5726: () => {}
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

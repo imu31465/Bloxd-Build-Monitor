@@ -1,232 +1,241 @@
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  38213: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      e: () => yR,
-      i: () => tR
+  41700: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      getBlockFaces: () => mr,
+      getIngameIconUrl: () => tr,
+      getItemIconUrl: () => Ur,
+      getItemTextureUrl: () => Nr,
+      getParticleTextureUrl: () => hr
     });
-    const yR = 1 / 2.2,
-      tR = 2.2;
-    Math.sqrt(5);
-    let uR = .001
-  },
-  38239: (RR, JR, GR) => {
-    function yR(RR) {
-      return parseInt(RR.toString().replace(/\W/g, ""))
+    var Zr = Qr(5210),
+      Wr = Qr(38509),
+      ar = Qr(10365),
+      jr = Qr(4362);
+    const Ir = new Set,
+      fr = new Set;
+    let Er = null;
+
+    function pr(rr) {
+      Ir.has(rr) || (Ir.add(rr), fr.add(rr), Er ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${fr.size} names`, [...fr]), fr.clear(), Er = null
+      }), 1e3))
     }
 
-    function tR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(RR - JR) <= GR
+    function xr(rr, Sr) {
+      try {
+        return (0, ar.getDefaultTexture)(rr, Sr).url
+      } catch {
+        return pr(rr), null
+      }
     }
 
-    function uR(RR, JR, GR) {
-      let yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return RR < JR - yR || RR > GR + yR
+    function mr(rr) {
+      var Sr, Qr;
+      const ar = Wr.n[rr];
+      if (!ar || ar.itemTexture || !ar.textureInfo) return null;
+      const {
+        textureInfo: Ir,
+        texturePerSide: fr
+      } = ar, Er = rr => {
+        return "string" === typeof(Sr = fr && Array.isArray(Ir) ? Ir[fr[rr]] : Ir) ? xr(Sr, jr.e.BLOCK) : Sr && "object" === typeof Sr && "animTextures" in Sr ? xr((0, Zr.k)(Sr), jr.e.BLOCK) : null;
+        var Sr
+      }, pr = Er(2);
+      return pr ? {
+        top: pr,
+        left: null !== (Sr = Er(4)) && void 0 !== Sr ? Sr : pr,
+        right: null !== (Qr = Er(0)) && void 0 !== Qr ? Qr : pr
+      } : null
     }
 
-    function ZR(RR, JR) {
-      return RR === JR ? RR : Math.random() * (JR - RR) + RR
+    function Nr(rr) {
+      var Sr;
+      const Qr = Wr.n[rr];
+      return xr(null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.itemTexture) && void 0 !== Sr ? Sr : "string" === typeof(null === Qr || void 0 === Qr ? void 0 : Qr.textureInfo) ? Qr.textureInfo : rr, jr.e.ITEM)
     }
 
-    function qR(RR, JR, GR) {
-      return RR + (JR - RR) * GR
+    function Ur(rr) {
+      var Sr, Qr;
+      return Wr.n[rr] ? null !== (Sr = null === (Qr = mr(rr)) || void 0 === Qr ? void 0 : Qr.top) && void 0 !== Sr ? Sr : Nr(rr) : null
     }
 
-    function iR(RR, JR, GR) {
-      let yR = LR(JR - RR, 360);
-      return yR > 180 && (yR -= 360), RR + yR * wR(GR)
+    function tr(rr) {
+      return xr(rr, jr.e.ICON)
     }
 
-    function fR(RR, JR, GR) {
-      let yR;
-      return yR = RR != JR ? wR((GR - RR) / (JR - RR)) : 0, yR
-    }
-
-    function VR(RR, JR, GR, yR, tR) {
-      const uR = tR * tR,
-        ZR = tR * uR;
-      return RR * (2 * ZR - 3 * uR + 1) + GR * (-2 * ZR + 3 * uR) + JR * (ZR - 2 * uR + tR) + yR * (ZR - uR)
-    }
-
-    function KR(RR, JR, GR, yR, tR) {
-      const uR = tR * tR;
-      return 6 * (uR - tR) * RR + (3 * uR - 4 * tR + 1) * JR + 6 * (-uR + tR) * GR + (3 * uR - 2 * tR) * yR
-    }
-
-    function wR(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(GR, Math.max(JR, RR))
-    }
-
-    function rR(RR) {
-      return RR -= 2 * Math.PI * Math.floor((RR + Math.PI) / (2 * Math.PI))
-    }
-
-    function eR(RR) {
-      const JR = RR.toString(16);
-      return RR <= 15 ? ("0" + JR).toUpperCase() : JR.toUpperCase()
-    }
-
-    function aR(RR) {
-      if (Math.log2) return Math.floor(Math.log2(RR));
-      if (RR < 0) return NaN;
-      if (0 === RR) return -1 / 0;
-      let JR = 0;
-      if (RR < 1) {
-        for (; RR < 1;) JR++, RR *= 2;
-        JR = -JR
-      } else if (RR > 1)
-        for (; RR > 1;) JR++, RR = Math.floor(RR / 2);
-      return JR
-    }
-
-    function LR(RR, JR) {
-      return RR - Math.floor(RR / JR) * JR
-    }
-
-    function nR(RR, JR, GR) {
-      return (RR - JR) / (GR - JR)
-    }
-
-    function UR(RR, JR, GR) {
-      return RR * (GR - JR) + JR
-    }
-
-    function WR(RR, JR) {
-      let GR = LR(JR - RR, 360);
-      return GR > 180 && (GR -= 360), GR
-    }
-
-    function AR(RR, JR) {
-      const GR = LR(RR, 2 * JR);
-      return JR - Math.abs(GR - JR)
-    }
-
-    function CR(RR, JR, GR) {
-      let yR = wR(GR);
-      return yR = -2 * yR * yR * yR + 3 * yR * yR, JR * yR + RR * (1 - yR)
-    }
-
-    function XR(RR, JR, GR) {
-      let yR;
-      return yR = Math.abs(JR - RR) <= GR ? JR : RR + Math.sign(JR - RR) * GR, yR
-    }
-
-    function MR(RR, JR, GR) {
-      const yR = WR(RR, JR);
-      let tR;
-      return tR = -GR < yR && yR < GR ? JR : XR(RR, JR = RR + yR, GR), tR
-    }
-
-    function BR(RR, JR, GR) {
-      return (RR - JR) / (GR - JR)
-    }
-
-    function lR(RR, JR, GR) {
-      return (GR - JR) * RR + JR
-    }
-
-    function pR(RR, JR) {
-      const GR = RR % JR;
-      return 0 === GR ? JR : pR(JR, GR)
-    }
-    GR.r(JR), GR.d(JR, {
-      Clamp: () => wR,
-      DeltaAngle: () => WR,
-      Denormalize: () => UR,
-      ExtractAsInt: () => yR,
-      Hermite: () => VR,
-      Hermite1stDerivative: () => KR,
-      HighestCommonFactor: () => pR,
-      ILog2: () => aR,
-      InverseLerp: () => fR,
-      Lerp: () => qR,
-      LerpAngle: () => iR,
-      MoveTowards: () => XR,
-      MoveTowardsAngle: () => MR,
-      Normalize: () => nR,
-      NormalizeRadians: () => rR,
-      OutsideRange: () => uR,
-      PercentToRange: () => lR,
-      PingPong: () => AR,
-      RandomRange: () => ZR,
-      RangeToPercent: () => BR,
-      Repeat: () => LR,
-      SmoothStep: () => CR,
-      ToHex: () => eR,
-      WithinEpsilon: () => tR
-    })
-  },
-  38195: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      Matrix: () => yR.e,
-      Quaternion: () => yR.i,
-      RegisterMathVector: () => yR.j,
-      TmpVectors: () => yR.l,
-      Vector2: () => yR.n,
-      Fe: () => yR.r,
-      Vector4: () => yR.s
-    });
-    var yR = GR(38204);
-    (0, yR.j)()
-  },
-  38217: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      const GR = [];
-      for (let yR = 0; yR < RR; ++yR) GR.push(JR());
-      return GR
-    }
-
-    function tR(RR, JR) {
-      return yR(RR, JR)
-    }
-    GR.d(JR, {
-      c: () => yR,
-      g: () => tR,
-      i: () => ZR
-    });
-    const uR = ["push", "splice", "pop", "shift", "unshift"];
-
-    function ZR(RR, JR) {
-      const GR = uR.map((GR => function(RR, JR, GR) {
-        const yR = RR[JR];
-        if ("function" !== typeof yR) return null;
-        const tR = function() {
-          const yR = RR.length,
-            uR = tR.previous.apply(RR, arguments);
-          return GR(JR, yR), uR
-        };
-        return yR.next = tR, tR.previous = yR, RR[JR] = tR, () => {
-          const GR = tR.previous;
-          if (!GR) return;
-          const yR = tR.next;
-          yR ? (GR.next = yR, yR.previous = GR) : (GR.next = void 0, RR[JR] = GR), tR.next = void 0, tR.previous = void 0
-        }
-      }(RR, GR, JR)));
-      return () => {
-        for (const RR of GR) RR?.()
+    function hr(rr) {
+      try {
+        return Qr(4517)(`./${rr}.png`)
+      } catch {
+        return pr(rr), null
       }
     }
   },
-  38253: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR,
-      f: () => tR
+  38538: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr
     });
-    const yR = {};
-
-    function tR(RR, JR) {
-      yR[RR] = JR
-    }
-
-    function uR(RR) {
-      return yR[RR]
+    const Zr = {
+      "skyblock:forged:astral-astral-astral": {
+        name: "Heart of the Cosmos",
+        lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
+        damageMultiplier: 1.8,
+        cooldownMultiplier: .8,
+        ability: "starfall"
+      },
+      "skyblock:forged:astral-moonstone-sanguine": {
+        name: "Eclipse Edge",
+        lore: "Moonlight over starlight over blood: the sky goes dark wherever it is drawn.",
+        damageMultiplier: 1.7,
+        cooldownMultiplier: .81,
+        ability: "eclipseField"
+      },
+      "skyblock:forged:astral-diamond-moonstone": {
+        name: "Starcutter",
+        lore: "A blade so sharp the Forge Mother swears it once cut a falling star in two.",
+        damageMultiplier: 1.65,
+        cooldownMultiplier: .83,
+        ability: "starfall"
+      },
+      "skyblock:forged:astral-sanguine-magmasteel": {
+        name: "Triune Flame",
+        lore: "Each of Lord Vulcan's three faces, bound into one burning edge.",
+        damageMultiplier: 1.65,
+        cooldownMultiplier: .83,
+        ability: "magmaWave"
+      },
+      "skyblock:forged:magmasteel-magmasteel-magmasteel": {
+        name: "Vulcan's Bane",
+        lore: "Forged in the heat of his own rift. It remembers the way down.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "magmaWave"
+      },
+      "skyblock:forged:magmasteel-astral-sanguine": {
+        name: "Comet's Wake",
+        lore: "It leaves a trail of fire through the air, like something falling from very far up.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "starfall"
+      },
+      "skyblock:forged:magmasteel-sanguine-astral": {
+        name: "Vulcan's Ruin",
+        lore: "The Forge Mother made only one, then sat down for a long while.",
+        damageMultiplier: 1.6,
+        cooldownMultiplier: .83,
+        ability: "warcry"
+      },
+      "skyblock:forged:magmasteel-iron-stone": {
+        name: "Forgehand",
+        lore: "A smith's sword: plain to look at, and it hits like a hammer.",
+        damageMultiplier: 1.4,
+        cooldownMultiplier: .9,
+        ability: "quake"
+      },
+      "skyblock:forged:sanguine-sanguine-sanguine": {
+        name: "Crimson Covenant",
+        lore: "It drinks, and so do you.",
+        damageMultiplier: 1.53,
+        cooldownMultiplier: .83,
+        ability: "bloodPact"
+      },
+      "skyblock:forged:sanguine-astral-moonstone": {
+        name: "Nightbloom",
+        lore: "A red flower that only opens after dark.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "eclipseField"
+      },
+      "skyblock:forged:sanguine-iron-wood": {
+        name: "Butcher's Oath",
+        lore: "Heavy, honest and always hungry.",
+        damageMultiplier: 1.35,
+        cooldownMultiplier: .95,
+        ability: "bloodPact"
+      },
+      "skyblock:forged:moonstone-moonstone-moonstone": {
+        name: "Lunar Requiem",
+        lore: "Swung, it leaves a pale arc that lingers like a second moon.",
+        damageMultiplier: 1.35,
+        cooldownMultiplier: .85,
+        ability: "moonDash"
+      },
+      "skyblock:forged:moonstone-astral-moonstone": {
+        name: "Silver Tide",
+        lore: "Pulled by the same moon that pulls the sea.",
+        damageMultiplier: 1.4,
+        cooldownMultiplier: .84,
+        ability: "moonDash"
+      },
+      "skyblock:forged:diamond-diamond-diamond": {
+        name: "Prism Fang",
+        lore: "Every facet catches a different light, and every strike finds a different weakness.",
+        damageMultiplier: 1.29,
+        cooldownMultiplier: .88,
+        ability: "gildedEdge",
+        traits: {
+          crit: 1.8
+        }
+      },
+      "skyblock:forged:diamond-moonstone-gold": {
+        name: "Jeweller's Pride",
+        lore: "Too pretty to fight with. Fight with it anyway.",
+        damageMultiplier: 1.24,
+        cooldownMultiplier: .91,
+        ability: "gildedEdge"
+      },
+      "skyblock:forged:gold-gold-gold": {
+        name: "King's Ransom",
+        lore: "Worth more than the treasure it guards.",
+        damageMultiplier: 1.18,
+        cooldownMultiplier: .91,
+        ability: "gildedEdge",
+        traits: {
+          coins: 2.5
+        }
+      },
+      "skyblock:forged:gold-moonstone-gold": {
+        name: "Midas Moon",
+        lore: "Mobs it fells seem to rattle with coins.",
+        damageMultiplier: 1.18,
+        cooldownMultiplier: .92,
+        ability: "gildedEdge",
+        traits: {
+          coins: 2,
+          bossBane: .6
+        }
+      },
+      "skyblock:forged:iron-iron-iron": {
+        name: "Old Faithful",
+        lore: "It has never let anyone down. It never will.",
+        damageMultiplier: 1.15,
+        cooldownMultiplier: .94,
+        ability: "warcry"
+      },
+      "skyblock:forged:iron-wood-wood": {
+        name: "Militia Blade",
+        lore: "Handed out at the outpost gate when the rift first opened.",
+        damageMultiplier: 1.09,
+        cooldownMultiplier: .97,
+        ability: "warcry"
+      },
+      "skyblock:forged:stone-stone-stone": {
+        name: "Quarryman's Cleaver",
+        lore: "Chipped from one block of stone, handle and all.",
+        damageMultiplier: 1.09,
+        cooldownMultiplier: .97,
+        ability: "quake"
+      },
+      "skyblock:forged:wood-wood-wood": {
+        name: "Lorenzo's Lesson",
+        lore: "Courage matters more than the blade. This one is mostly courage.",
+        damageMultiplier: 1.06,
+        cooldownMultiplier: .97,
+        ability: "warcry"
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

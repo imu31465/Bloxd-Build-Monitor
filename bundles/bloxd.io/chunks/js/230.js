@@ -1,618 +1,305 @@
 export const id = 230;
 export const ids = [230];
 export const modules = {
-  37450: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => GJ
+  54078: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      MobPreview: () => xr
     });
-    var yR = GR(66);
-    const tR = "newPlayerDeal",
-      uR = 36e5,
-      ZR = [4, 12, 20, 20, 30];
-    const qR = 12 * uR;
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(53849),
+      Ir = Qr(35505),
+      fr = Qr(53844),
+      Er = Qr(1338);
 
-    function iR(RR) {
-      return RR - qR
+    function pr(rr) {
+      return Ir.j.openMob(rr)
     }
-
-    function fR(RR, JR, GR) {
-      const yR = iR(GR);
-      return JR >= yR && JR < GR && (null === RR.lastShownAt || RR.lastShownAt < yR)
-    }
-
-    function VR(RR, JR) {
-      const {
-        arrival: GR,
-        now: yR,
-        endsAt: tR,
-        playedOnDevice: qR
-      } = JR;
-      return !(yR >= tR || !qR) && (!(!fR(RR, yR, tR) && 0 !== RR.shownCount && null !== RR.lastShownAt) || "open" === GR && yR - RR.lastShownAt >= (iR = RR.shownCount, ZR[Math.min(Math.max(iR, 1), ZR.length) - 1] * uR));
-      var iR
-    }
-    var KR = GR(359),
-      wR = GR(1618),
-      rR = GR(25),
-      eR = GR(3217),
-      aR = GR(4171),
-      LR = GR(4175),
-      nR = GR(2154),
-      UR = GR(1282),
-      WR = GR(1201);
-    var AR = GR(1493),
-      CR = GR(46),
-      XR = GR(726),
-      MR = GR(3626),
-      BR = GR(1496),
-      lR = GR(3634),
-      pR = GR(3213),
-      gR = GR(1196),
-      bR = GR(3663),
-      vR = GR(3670),
-      OR = GR(4214),
-      xR = GR(1270),
-      NR = GR(1590),
-      DR = GR(4231),
-      HR = GR(35208),
-      oR = GR(3674),
-      cR = GR(35218),
-      PR = GR(1378);
-
-    function IR(RR) {
+    const xr = (0, Zr.memo)((function(rr) {
       let {
-        shownView: JR,
-        close: GR
-      } = RR;
-      const {
-        t: tR
-      } = (0, xR.A)(), uR = (0, bR.K)(), {
-        purchaseUnderWay: ZR,
-        notice: qR,
-        needsLogin: iR,
-        buyPack: fR
-      } = (0, cR.f)("popup", ((RR, JR) => {
-        GR(!1), (0, OR.c)(RR, JR)
-      })), VR = null === uR;
-      (0, yR.useEffect)((() => {
-        VR && GR(!1)
-      }), [VR, GR]);
-      const KR = null !== uR && void 0 !== uR ? uR : JR;
-      return (0, PR.jsxs)("div", {
-        className: "NewPlayerDealPopup",
-        children: [(0, PR.jsx)("div", {
-          className: "NewPlayerDealPopupTitle",
-          children: tR("newPlayerDeal:title")
-        }), (0, PR.jsx)("div", {
-          className: "NewPlayerDealPopupSub",
-          children: tR("newPlayerDeal:samePrice")
-        }), (0, PR.jsx)(HR.b, {
-          className: "NewPlayerDealClockBig",
-          endsAt: KR.endsAt
-        }), (0, PR.jsx)(HR.d, {
-          view: KR,
-          needsLogin: iR,
-          busy: ZR,
-          highlight: null,
-          onBuy: RR => {
-            fR(KR, RR)
-          }
-        }), (0, PR.jsx)(DR.j, {
-          notice: qR,
-          className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, PR.jsx)(DR.c, {
-          className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, PR.jsx)(NR.M, {
-          className: "NewPlayerDealNoThanks",
-          onClick: () => {
-            GR(!0)
-          },
-          children: tR("newPlayerDeal:noThanks")
-        })]
+        mobType: Sr,
+        variation: Qr = null,
+        animation: Wr = fr.g,
+        className: Ir
+      } = rr;
+      const xr = (0, Zr.useRef)(null),
+        mr = (0, Zr.useMemo)((() => ({
+          mobType: Sr,
+          variation: Qr,
+          animation: Wr
+        })), [Sr, Qr, Wr]);
+      return (0, jr.e)(xr, pr, mr), (0, Er.jsx)("div", {
+        className: ar()("MobPreview", Ir),
+        ref: xr
       })
-    }
+    }))
+  },
+  53849: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar
+    });
+    var Zr = Qr(72),
+      Wr = Qr(3855);
 
-    function mR(RR) {
-      let {
-        arm: JR,
-        children: GR
-      } = RR;
-      return (0, yR.useEffect)((() => {
-        (0, bR.D)(!0)
-      }), []), (0, bR.L)(JR, "popup"), GR
-    }
-
-    function zR(RR) {
-      let JR = null;
-      AR.NotificationProvider.showCustomPopup({
-        body: GR => (0, PR.jsx)(mR, {
-          arm: RR.arm,
-          children: (0, PR.jsx)(IR, {
-            shownView: RR,
-            close: RR => {
-              JR ??= RR, GR()
-            }
-          })
-        }),
-        middleScreenPopupContainerClassName: "NewPlayerDealPopupContainer",
-        middleScreenPopupClassName: "NewPlayerDealPopupPanel",
-        unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((GR => {
-        (0, bR.D)(!1), !1 !== JR && "notificationTornDown" !== GR && (0, bR.v)("new_player_deal.close", (0, oR.d)(RR.arm, "popup"))
-      }))
-    }
-    const SR = 2500,
-      jR = 6e4;
-    const dR = 500,
-      ER = 6e4;
-
-    function YR(RR) {
-      const JR = Date.now() + ER;
-      return new Promise((GR => {
-        const yR = () => {
-          RR() ? (0, lR.f)() || AR.NotificationProvider.hasPopup() || (0, BR.h)() || (0, bR.l)() || null !== rR.d.get("openEverythingMenuName") ? Date.now() > JR ? GR(!1) : setTimeout(yR, dR) : GR(!0) : GR(!1)
-        };
-        yR()
-      }))
-    }
-    const kR = "newPlayerDealPointerDeferred_";
-    let QR = !1,
-      FR = null;
-
-    function TR(RR, JR) {
-      var GR;
-      return (null === (GR = FR) || void 0 === GR ? void 0 : GR.accountId) === JR && FR.shownCount === RR.shownCount
-    }
-
-    function sR(RR, JR, GR) {
-      return !!TR(JR, GR) && (FR = null, (0, bR.q)(GR), zR(RR), !0)
-    }
-    async function hR(RR, JR, GR, yR) {
-      if (QR) return !1;
-      let tR;
-      QR = !0;
-      try {
-        tR = await async function(RR) {
-          const {
-            newPlayerDeal: JR,
-            counted: GR
-          } = await (0, WR.postJsonWithMetricsCookiesAndJsonResponse)(`${UR.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: RR
-          }, {
-            retries: 1
-          });
-          return {
-            newPlayerDeal: JR,
-            counted: !0 === GR
-          }
-        }(JR.shownCount)
-      } catch (uR) {
-        return console.error("New player deal: counting a showing of its popup failed", uR), !1
-      } finally {
-        QR = !1
-      }
-      return (0, bR.H)(GR, tR.newPlayerDeal), tR.counted && null !== tR.newPlayerDeal && (FR = {
-        accountId: yR,
-        shownCount: tR.newPlayerDeal.shownCount
-      }, "landingPage" === rR.d.get("gameState") && sR(RR, tR.newPlayerDeal, yR)), !0
-    }
-    let RJ = null;
-
-    function JJ(RR, JR, GR, tR, uR) {
-      var ZR;
-      const {
-        gameState: qR
-      } = (0, rR.o)(["gameState"]), wR = "landingPage" === qR, {
-        pointing: eR
-      } = (0, MR.e)(), aR = (0, yR.useRef)(eR);
-      aR.current = eR;
-      const LR = (0, yR.useRef)(RR);
-      LR.current = RR;
-      const UR = (0, yR.useRef)(JR);
-      UR.current = JR;
-      const WR = (0, yR.useRef)(GR);
-      WR.current = GR;
-      const [AR, BR] = (0, yR.useState)(null), lR = (0, yR.useRef)(0), pR = (0, yR.useRef)(0), gR = (0, yR.useRef)(!1), bR = (0, yR.useCallback)((RR => {
-        "open" === function(RR) {
-          const JR = RR ? (0, XR.getVisitSessionId)() : (0, XR.peekVisitSessionId)(),
-            GR = null !== JR && JR === RJ ? "return" : "open";
-          return RJ = JR, GR
-        }(RR) && (gR.current = !0), lR.current++, BR({
-          seq: lR.current,
-          kind: gR.current ? "open" : "return"
-        })
-      }), []);
-      (0, yR.useEffect)((() => {
-        if (!wR) return void BR(null);
-        bR(!0);
-        const RR = () => {
-          "visible" === document.visibilityState && bR(!0)
-        };
-        return document.addEventListener("visibilitychange", RR), () => {
-          document.removeEventListener("visibilitychange", RR)
+    function ar(rr, Sr, Qr) {
+      const ar = (0, Zr.useRef)(null),
+        {
+          width: jr,
+          height: Ir
+        } = (0, Wr.b)(rr);
+      (0, Zr.useEffect)((() => {
+        const Qr = Sr(rr.current);
+        return ar.current = Qr, () => {
+          Qr.close(), ar.current = null
         }
-      }), [wR, bR]);
-      const vR = null !== (ZR = null === RR || void 0 === RR ? void 0 : RR.endsAt) && void 0 !== ZR ? ZR : null;
-      (0, yR.useEffect)((() => {
-        if (!wR || null === vR) return;
-        const RR = iR(vR) - Date.now();
-        if (RR <= 0 || RR > nR.e) return;
-        const JR = setTimeout((() => {
-          bR(!1)
-        }), RR);
-        return () => {
-          clearTimeout(JR)
-        }
-      }), [wR, vR, bR]);
-      const OR = null !== RR && null !== tR && null === uR;
-      (0, yR.useEffect)((() => {
-        if (null === AR || !OR || pR.current >= AR.seq) return;
-        const RR = () => lR.current === AR.seq && "landingPage" === rR.d.get("gameState"),
-          JR = setTimeout((() => {
-            const JR = LR.current,
-              GR = UR.current;
-            if (null === JR || null === GR || !RR()) return;
-            pR.current = AR.seq;
-            const yR = Date.now(),
-              uR = TR(GR, tR);
-            if (!(uR || VR(GR, {
-                arrival: AR.kind,
-                now: yR,
-                endsAt: JR.endsAt,
-                playedOnDevice: CR.i.getItem(KR.Eb) > 0
-              }))) return void(gR.current = !1);
-            const ZR = fR(GR, yR, JR.endsAt);
-            YR(RR).then((async RR => {
-              const JR = LR.current;
-              RR && null !== JR && UR.current === GR && (!aR.current || ZR || function(RR, JR) {
-                return CR.i.getItem(kR + RR) === JR
-              }(tR, GR.shownCount) ? uR ? sR(JR, GR, tR) && (gR.current = !1) : await hR(JR, GR, WR.current, tR) && (gR.current = !1) : function(RR, JR) {
-                CR.i.setItem(kR + RR, JR)
-              }(tR, GR.shownCount))
-            }))
-          }), SR);
-        return () => {
-          clearTimeout(JR)
-        }
-      }), [AR, OR, tR])
-    }
-
-    function GJ() {
-      const {
-        userContext: RR
-      } = (0, gR.d)(), JR = (0, eR.usePurchasesAllowed)(), [GR, uR] = (0, yR.useState)(vR.i);
-      (0, yR.useEffect)((() => (uR((0, vR.i)()), (0, vR.l)(uR))), []);
-      const ZR = (0, bR.b)(RR);
-      ! function(RR, JR, GR) {
-        const [uR, ZR] = (0, yR.useState)(0);
-        (0, yR.useEffect)((() => {
-          if (!JR || null === RR) return;
-          if (null !== GR) return void(0, bR.z)(RR, (0, vR.c)());
-          if (null !== (0, bR.g)(RR)) return;
-          let yR, uR = !1;
-          return (0, LR.getBillingClient)().getOfferings(tR).then((JR => {
-            let {
-              offering: GR
-            } = JR;
-            (0, bR.z)(RR, null === GR ? [] : GR.packages.filter(aR.isPricedPackage))
-          }), (RR => {
-            console.error("New player deal: loading its prices failed", RR), uR || (yR = setTimeout((() => {
-              ZR((RR => RR + 1))
-            }), jR))
-          })), () => {
-            uR = !0, clearTimeout(yR)
-          }
-        }), [RR, JR, GR, uR])
-      }(ZR, null !== (0, bR.h)(RR) && (JR || null !== GR), GR);
-      const qR = (0, bR.K)();
-      return JJ(qR, (0, bR.h)(RR), RR, ZR, GR),
-        function() {
-          const {
-            userContext: RR
-          } = (0, gR.d)(), {
-            gameState: JR
-          } = (0, rR.o)(["gameState"]);
-          (0, yR.useEffect)((() => {
-            if ("landingPage" !== JR || !RR.isLoggedIn() && !(0, eR.guestsMayBuy)()) return;
-            const GR = (0, bR.e)(RR),
-              yR = (0, pR.A)((RR => GR.includes(RR.item)));
-            null !== yR && ((0, wR.reportAnalyticsClick)({
-              id: "store.login_resume",
-              value: yR.item
-            }), (0, pR.m)({
-              mode: "self",
-              source: "loginResume",
-              highlight: yR.item
-            }))
-          }), [RR, JR])
-        }(),
-        function(RR, JR, GR) {
-          const tR = (0, yR.useRef)(null);
-          (0, yR.useEffect)((() => {
-            if (null === GR || null === RR || null === JR || tR.current === GR) return;
-            tR.current = GR;
-            const yR = RR.packs[0].pack;
-            switch (GR.show) {
-              case "popup":
-                (0, bR.q)(JR), zR(RR);
-                break;
-              case "store":
-                (0, pR.m)({
-                  mode: "self",
-                  source: "newPlayerDeal"
-                });
-                break;
-              case "resume":
-                (0, pR.m)({
-                  mode: "self",
-                  source: "loginResume",
-                  highlight: yR.packageId
-                });
-                break;
-              case "bought":
-                (0, pR.m)({
-                  mode: "self",
-                  source: "newPlayerDeal"
-                }), (0, bR.m)(JR), (0, cR.b)(yR.gems);
-                break;
-              case "gift":
-                (0, pR.m)({
-                  mode: "gift",
-                  source: "newPlayerDeal",
-                  giftRecipientName: "Friend"
-                })
-            }
-          }), [GR, RR, JR])
-        }(qR, ZR, GR), null
+      }), [rr, Sr]), (0, Zr.useEffect)((() => {
+        jr <= 0 || Ir <= 0 || ar.current.resize(jr, Ir)
+      }), [jr, Ir]), (0, Zr.useEffect)((() => {
+        ar.current.show(Qr)
+      }), [Qr])
     }
   },
-  35208: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => eR,
-      d: () => LR
+  53844: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => mr,
+      f: () => xr,
+      g: () => fr
     });
-    GR(35211);
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(1270),
-      qR = GR(1590),
-      iR = GR(3690),
-      fR = GR(1468),
-      VR = GR(3413),
-      KR = GR(4227),
-      wR = GR(3240),
-      rR = GR(1378);
+    var Zr = Qr(38638),
+      Wr = Qr(40197);
 
-    function eR(RR) {
-      let {
-        endsAt: JR,
-        className: GR
-      } = RR;
-      return (0, rR.jsxs)("span", {
-        className: uR()("NewPlayerDealClock", GR),
-        children: [(0, rR.jsx)(fR.d, {
-          name: "hourglass"
-        }), (0, rR.jsx)(iR.g, {
-          toTime: JR
-        })]
-      })
+    function ar(rr, Sr) {
+      let [Qr, Zr, Wr] = rr;
+      return [0, .5, 1].map((rr => ({
+        timeFraction: rr,
+        rotation: {
+          lQ: "catmull-rom-spline",
+          point: [Qr, Zr, Wr + (.5 === rr ? Sr : 0)]
+        }
+      })))
     }
 
-    function aR(RR) {
-      let {
-        offered: JR,
-        needsLogin: GR,
-        busy: yR,
-        highlight: tR,
-        onBuy: iR
-      } = RR;
-      const {
-        t: fR
-      } = (0, ZR.A)(), {
-        pack: eR
-      } = JR, aR = (0, KR.d)(JR.package);
-      return (0, rR.jsxs)("div", {
-        className: uR()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: tR
-        }),
-        children: [(0, rR.jsxs)("div", {
-          className: "NewPlayerDealPackArt",
-          children: [(0, rR.jsx)("img", {
-            src: wR.b[JR.tier],
-            alt: "",
-            draggable: !1
-          }), (0, rR.jsx)("span", {
-            className: "NewPlayerDealTag",
-            children: fR("newPlayerDeal:tag")
-          })]
-        }), (0, rR.jsxs)("div", {
-          className: "NewPlayerDealPackText",
-          children: [(0, rR.jsx)(VR.b, {
-            className: "NewPlayerDealPackAmount",
-            amount: eR.gems
-          }), (0, rR.jsx)("span", {
-            className: "NewPlayerDealSplit",
-            children: fR("newPlayerDeal:split", {
-              usual: eR.usualGems.toLocaleString(),
-              bonus: (eR.gems - eR.usualGems).toLocaleString()
-            })
-          })]
-        }), (0, rR.jsx)(qR.n, {
-          className: "NewPlayerDealBuy",
-          loading: yR,
-          onClick: iR,
-          ariaLabel: fR("newPlayerDeal:buyLabel", {
-            amount: eR.gems.toLocaleString(),
-            price: aR
-          }),
-          children: fR(GR ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: aR
-          })
-        })]
-      })
-    }
-
-    function LR(RR) {
-      let {
-        view: JR,
-        needsLogin: GR,
-        busy: tR,
-        highlight: qR,
-        onBuy: iR
-      } = RR;
-      const {
-        t: fR
-      } = (0, ZR.A)();
-      return (0, rR.jsxs)("div", {
-        className: uR()("NewPlayerDealPacks", JR.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [JR.packs.map(((RR, JR) => (0, rR.jsxs)(yR.Fragment, {
-          children: [JR > 0 && (0, rR.jsx)("div", {
-            className: "NewPlayerDealDivider",
-            "aria-hidden": !0,
-            children: (0, rR.jsx)("i", {})
-          }), (0, rR.jsx)(aR, {
-            offered: RR,
-            needsLogin: GR,
-            busy: tR,
-            highlight: qR === RR.pack.packageId,
-            onBuy: () => {
-              iR(RR)
-            }
-          })]
-        }, RR.pack.packageId))), (0, rR.jsx)("div", {
-          className: "NewPlayerDealUnder",
-          children: (0, rR.jsx)("span", {
-            className: "NewPlayerDealLimit",
-            children: fR("newPlayerDeal:limit")
-          })
-        })]
-      })
-    }
-  },
-  35218: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => lR,
-      f: () => gR
-    });
-    GR(35211);
-    var yR = GR(4224),
-      tR = GR(1618),
-      uR = GR(3217),
-      ZR = GR(4214),
-      qR = GR(4191),
-      iR = GR(4216),
-      fR = GR(4175),
-      VR = GR(1270),
-      KR = GR(1493),
-      wR = GR(1196),
-      rR = GR(1590),
-      eR = GR(1468),
-      aR = GR(3413),
-      LR = GR(3804),
-      nR = GR(3663),
-      UR = GR(3670),
-      WR = GR(3674),
-      AR = GR(1378);
-    const CR = new iR.d(fR.getBillingClient, fR.addPurchaseRecordListener);
-    let XR = !1;
-
-    function MR(RR, JR) {
-      null !== RR && (0, nR.k)(RR) || ((0, tR.reportAnalyticsClick)({
-        id: "store.purchase_done",
-        value: `self:${JR.pack.packageId}`
-      }), null !== RR && (0, nR.m)(RR), lR(JR.pack.gems))
-    }
-
-    function BR(RR, JR, GR) {
-      const tR = (0, nR.b)(JR);
-      switch (RR.kind) {
-        case "completed":
-          MR(tR, GR);
-          break;
-        case "pending":
-          uR = RR.intentId, ZR = () => {
-            LR.g.refresh(), MR(tR, GR)
-          }, XR || (XR = !0, CR.listen()), CR.follow(uR, ZR);
-          break;
-        case "unknownPackage":
-          (0, nR.H)(JR, null);
-          break;
-        case "failed":
-          RR.errorKey === yR.d.newPlayerDealUnavailable && (0, nR.H)(JR, null)
-      }
-      var uR, ZR
-    }
-
-    function lR(RR) {
-      KR.NotificationProvider.showCustomPopup({
-        body: JR => (0, AR.jsx)(pR, {
-          gems: RR,
-          close: JR
-        }),
-        middleScreenPopupClassName: "NewPlayerDealAddedPopup",
-        disableExitButton: !0
-      })
-    }
-
-    function pR(RR) {
-      let {
-        gems: JR,
-        close: GR
-      } = RR;
-      const {
-        t: yR
-      } = (0, VR.A)();
-      return (0, AR.jsxs)("div", {
-        className: "NewPlayerDealAdded",
-        children: [(0, AR.jsxs)("div", {
-          className: "NewPlayerDealAddedHead",
-          children: [(0, AR.jsx)(eR.d, {
-            name: "circle-check"
-          }), (0, AR.jsx)(aR.b, {
-            amount: JR
-          }), (0, AR.jsx)("span", {
-            children: yR("newPlayerDeal:added")
-          })]
-        }), (0, AR.jsx)(rR.n, {
-          className: "NewPlayerDealAddedOk",
-          onClick: GR,
-          children: yR("general:ok")
-        })]
-      })
-    }
-
-    function gR(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR.c;
-      const {
-        userContext: GR
-      } = (0, wR.d)(), {
-        purchaseUnderWay: yR,
-        notice: tR,
-        buy: iR
-      } = (0, qR.e)(JR), fR = (0, UR.i)(), VR = GR.mayBuy() || (0, uR.guestsMayBuy)(), KR = null === fR ? !VR : fR.guest && !GR.isLoggedIn();
+    function jr(rr, Sr, Qr) {
       return {
-        purchaseUnderWay: yR,
-        notice: tR,
-        needsLogin: KR,
-        buyPack: function(yR, tR) {
-          (0, nR.v)("new_player_deal.buy", (0, WR.d)(yR.arm, RR, tR.pack.packageId)), null === fR ? iR(function(RR) {
-            return {
-              sku: RR.pack.packageId,
-              tier: RR.tier,
-              amount: RR.pack.gems,
-              bonusPercent: 0,
-              package: RR.package
-            }
-          }(tR), null, {
-            followPending: !1
-          }).then((RR => {
-            BR(RR, GR, tR)
-          })) : KR ? JR(tR.pack.packageId, null) : MR((0, nR.b)(GR), tR)
+        BQ: 3200,
+        loop: !0,
+        vQ: {
+          Root: {
+            timeline: [0, .5, 1].map((rr => ({
+              timeFraction: rr,
+              position: {
+                lQ: "catmull-rom-spline",
+                point: [0, .5 === rr ? .18 : 0, 0]
+              }
+            })))
+          },
+          HeadMesh: {
+            timeline: [0, .25, .75, 1].map((rr => ({
+              timeFraction: rr,
+              rotation: {
+                lQ: "catmull-rom-spline",
+                point: [0, .25 === rr ? .12 : .75 === rr ? -.12 : 0, 0]
+              }
+            })))
+          },
+          ArmLeftMesh: {
+            timeline: ar(rr, Qr)
+          },
+          ArmRightMesh: {
+            timeline: ar(Sr, -Qr)
+          }
         }
       }
     }
+    const Ir = jr([0, 0, 0], [0, 0, 0], .07),
+      fr = (0, Wr.c)((0, Zr.d)(Ir), "mobIdle"),
+      Er = jr([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      pr = jr([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      xr = (0, Wr.c)((0, Zr.d)(Er), "gunReady"),
+      mr = (0, Wr.c)((0, Zr.d)(pr), "gunAimed")
   },
-  35211: () => {}
+  35509: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ir,
+      e: () => Wr,
+      i: () => xr
+    });
+    var Zr = Qr(1686);
+
+    function Wr(rr) {
+      var Sr;
+      return {
+        ...Ir.store,
+        yaw: Ir.store.yaw + (null !== (Sr = Zr.e[rr].previewYaw) && void 0 !== Sr ? Sr : 0)
+      }
+    }
+    const ar = {
+        yaw: .61 * Math.PI,
+        pitch: Math.PI / 2.05,
+        radius: 30,
+        target: [0, 0, 0]
+      },
+      jr = {
+        ...ar,
+        radius: 33,
+        target: [0, 3.9, 0]
+      },
+      Ir = {
+        player: ar,
+        store: jr,
+        showcase: {
+          ...jr,
+          target: [0, 1.9, 0]
+        }
+      };
+
+    function fr(rr, Sr) {
+      rr instanceof Promise ? rr.then(Sr).catch((rr => {
+        console.error("Couldn't open the preview", rr)
+      })) : Sr(rr)
+    }
+    class Er {
+      constructor(rr) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, fr(rr, (rr => {
+          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height), null !== this.view && rr.show(this.view))
+        }))
+      }
+      show(rr) {
+        var Sr;
+        this.view = rr, null === (Sr = this.opened) || void 0 === Sr || Sr.show(rr)
+      }
+      resize(rr, Sr) {
+        var Qr;
+        this.size = {
+          width: rr,
+          height: Sr
+        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
+      }
+      close() {
+        var rr;
+        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
+      }
+    }
+    class pr {
+      constructor(rr) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(rr).then((rr => rr.ready)), fr(rr, (rr => {
+          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height))
+        }))
+      }
+      get dev() {
+        return this.opened.dev
+      }
+      isReady() {
+        var rr, Sr;
+        return null !== (rr = null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.isReady()) && void 0 !== rr && rr
+      }
+      setCosmetic(rr, Sr) {
+        var Qr;
+        null === (Qr = this.opened) || void 0 === Qr || Qr.setCosmetic(rr, Sr)
+      }
+      setNametag(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.setNametag(rr)
+      }
+      playEmote(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.playEmote(rr)
+      }
+      setOrbit(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.setOrbit(rr)
+      }
+      resetCamera() {
+        var rr;
+        null === (rr = this.opened) || void 0 === rr || rr.resetCamera()
+      }
+      async untilDrawn(rr) {
+        var Sr;
+        await this.ready, await (null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.untilDrawn(rr))
+      }
+      resize(rr, Sr) {
+        var Qr;
+        this.size = {
+          width: rr,
+          height: Sr
+        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
+      }
+      close() {
+        var rr;
+        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
+      }
+    }
+    const xr = new class {
+      constructor() {
+        this.host = null, this.makeDefault = null
+      }
+      setHost(rr) {
+        this.host = rr
+      }
+      setDefaultHost(rr) {
+        this.makeDefault = rr
+      }
+      current() {
+        if (null === this.host) {
+          if (null === this.makeDefault) throw new Error("no preview host");
+          this.host = this.makeDefault()
+        }
+        return this.host
+      }
+      openMob(rr) {
+        return new Er(this.current().openMob(rr))
+      }
+      openPet(rr) {
+        return new Er(this.current().openPet(rr))
+      }
+      openMobLineup(rr) {
+        return new Er(this.current().openMobLineup(rr))
+      }
+      sharesCharacter() {
+        return !0 === this.current().sharesCharacter
+      }
+      openCharacter(rr, Sr) {
+        return new pr(this.current().openCharacter(rr, Sr))
+      }
+    }
+  },
+  35505: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr.d,
+      f: () => Zr.e,
+      j: () => Zr.i
+    });
+    var Zr = Qr(35509);
+    class Wr {
+      constructor(rr) {
+        this.load = rr, this.loaded = null, this.loading = null
+      }
+      run(rr) {
+        return null !== this.loaded ? rr(this.loaded) : (this.loading ??= this.load().then((rr => (this.loaded = rr, rr)), (rr => {
+          throw this.loading = null, rr
+        })), this.loading.then(rr))
+      }
+    }
+    class ar {
+      constructor() {
+        this.sharesCharacter = !0, this.mobScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(311)]).then((() => Qr(42945))))), this.characterScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(177), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(225), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(280), Qr.e(184)]).then((() => Qr(43048)))))
+      }
+      openMob(rr) {
+        return this.mobScene.run((Sr => Sr.openMobPreview(rr)))
+      }
+      openPet(rr) {
+        return this.mobScene.run((Sr => Sr.openPetPreview(rr)))
+      }
+      openMobLineup(rr) {
+        return this.mobScene.run((Sr => Sr.openMobLineupPreview(rr)))
+      }
+      openCharacter(rr, Sr) {
+        return this.characterScene.run((Qr => Qr.openCharacterPreview(rr, Sr)))
+      }
+    }
+    Zr.i.setDefaultHost((() => new ar))
+  }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

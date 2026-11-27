@@ -1,260 +1,248 @@
 export const id = 273;
-export const ids = [272, 273];
+export const ids = [273];
 export const modules = {
-  64138: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      RegisterShaderMaterial: () => yR.c,
-      ShaderMaterial: () => yR.q,
-      ShaderMaterialCreateFromSnippetAsync: () => yR.g,
-      ShaderMaterialParse: () => yR.o,
-      ShaderMaterialParseFromFileAsync: () => yR.h,
-      ShaderMaterialParseFromSnippetAsync: () => yR.k
+  39262: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Wr
     });
-    var yR = GR(42005);
-    (0, yR.c)()
-  },
-  38928: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR
-    });
-    var yR = GR(38933);
-    class tR {
-      static GetPlanes(RR) {
-        const JR = [];
-        for (let GR = 0; GR < 6; GR++) JR.push(new yR.c(0, 0, 0, 0));
-        return tR.GetPlanesToRef(RR, JR), JR
+    var Zr = Qr(39264);
+    class Wr {
+      static GetPlanes(rr) {
+        const Sr = [];
+        for (let Qr = 0; Qr < 6; Qr++) Sr.push(new Zr.d(0, 0, 0, 0));
+        return Wr.GetPlanesToRef(rr, Sr), Sr
       }
-      static GetNearPlaneToRef(RR, JR) {
-        const GR = RR.m;
-        JR.normal.x = GR[3] + GR[2], JR.normal.y = GR[7] + GR[6], JR.normal.z = GR[11] + GR[10], JR.d = GR[15] + GR[14], JR.normalize()
+      static GetNearPlaneToRef(rr, Sr) {
+        const Qr = rr.m;
+        Sr.normal.x = Qr[3] + Qr[2], Sr.normal.y = Qr[7] + Qr[6], Sr.normal.z = Qr[11] + Qr[10], Sr.d = Qr[15] + Qr[14], Sr.normalize()
       }
-      static GetFarPlaneToRef(RR, JR) {
-        const GR = RR.m;
-        JR.normal.x = GR[3] - GR[2], JR.normal.y = GR[7] - GR[6], JR.normal.z = GR[11] - GR[10], JR.d = GR[15] - GR[14], JR.normalize()
+      static GetFarPlaneToRef(rr, Sr) {
+        const Qr = rr.m;
+        Sr.normal.x = Qr[3] - Qr[2], Sr.normal.y = Qr[7] - Qr[6], Sr.normal.z = Qr[11] - Qr[10], Sr.d = Qr[15] - Qr[14], Sr.normalize()
       }
-      static GetLeftPlaneToRef(RR, JR) {
-        const GR = RR.m;
-        JR.normal.x = GR[3] + GR[0], JR.normal.y = GR[7] + GR[4], JR.normal.z = GR[11] + GR[8], JR.d = GR[15] + GR[12], JR.normalize()
+      static GetLeftPlaneToRef(rr, Sr) {
+        const Qr = rr.m;
+        Sr.normal.x = Qr[3] + Qr[0], Sr.normal.y = Qr[7] + Qr[4], Sr.normal.z = Qr[11] + Qr[8], Sr.d = Qr[15] + Qr[12], Sr.normalize()
       }
-      static GetRightPlaneToRef(RR, JR) {
-        const GR = RR.m;
-        JR.normal.x = GR[3] - GR[0], JR.normal.y = GR[7] - GR[4], JR.normal.z = GR[11] - GR[8], JR.d = GR[15] - GR[12], JR.normalize()
+      static GetRightPlaneToRef(rr, Sr) {
+        const Qr = rr.m;
+        Sr.normal.x = Qr[3] - Qr[0], Sr.normal.y = Qr[7] - Qr[4], Sr.normal.z = Qr[11] - Qr[8], Sr.d = Qr[15] - Qr[12], Sr.normalize()
       }
-      static GetTopPlaneToRef(RR, JR) {
-        const GR = RR.m;
-        JR.normal.x = GR[3] - GR[1], JR.normal.y = GR[7] - GR[5], JR.normal.z = GR[11] - GR[9], JR.d = GR[15] - GR[13], JR.normalize()
+      static GetTopPlaneToRef(rr, Sr) {
+        const Qr = rr.m;
+        Sr.normal.x = Qr[3] - Qr[1], Sr.normal.y = Qr[7] - Qr[5], Sr.normal.z = Qr[11] - Qr[9], Sr.d = Qr[15] - Qr[13], Sr.normalize()
       }
-      static GetBottomPlaneToRef(RR, JR) {
-        const GR = RR.m;
-        JR.normal.x = GR[3] + GR[1], JR.normal.y = GR[7] + GR[5], JR.normal.z = GR[11] + GR[9], JR.d = GR[15] + GR[13], JR.normalize()
+      static GetBottomPlaneToRef(rr, Sr) {
+        const Qr = rr.m;
+        Sr.normal.x = Qr[3] + Qr[1], Sr.normal.y = Qr[7] + Qr[5], Sr.normal.z = Qr[11] + Qr[9], Sr.d = Qr[15] + Qr[13], Sr.normalize()
       }
-      static GetPlanesToRef(RR, JR) {
-        tR.GetNearPlaneToRef(RR, JR[0]), tR.GetFarPlaneToRef(RR, JR[1]), tR.GetLeftPlaneToRef(RR, JR[2]), tR.GetRightPlaneToRef(RR, JR[3]), tR.GetTopPlaneToRef(RR, JR[4]), tR.GetBottomPlaneToRef(RR, JR[5])
+      static GetPlanesToRef(rr, Sr) {
+        Wr.GetNearPlaneToRef(rr, Sr[0]), Wr.GetFarPlaneToRef(rr, Sr[1]), Wr.GetLeftPlaneToRef(rr, Sr[2]), Wr.GetRightPlaneToRef(rr, Sr[3]), Wr.GetTopPlaneToRef(rr, Sr[4]), Wr.GetBottomPlaneToRef(rr, Sr[5])
       }
-      static IsPointInFrustum(RR, JR) {
-        for (let GR = 0; GR < 6; GR++)
-          if (JR[GR].dotCoordinate(RR) < 0) return !1;
+      static IsPointInFrustum(rr, Sr) {
+        for (let Qr = 0; Qr < 6; Qr++)
+          if (Sr[Qr].dotCoordinate(rr) < 0) return !1;
         return !0
       }
     }
   },
-  38933: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR
+  39264: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Wr
     });
-    var yR = GR(38204);
-    class tR {
-      constructor(RR, JR, GR, tR) {
-        this.normal = new yR.r(RR, JR, GR), this.d = tR
+    var Zr = Qr(38560);
+    class Wr {
+      constructor(rr, Sr, Qr, Wr) {
+        this.normal = new Zr.u(rr, Sr, Qr), this.d = Wr
       }
-      QtR() {
+      OWr() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new tR(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Wr(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let RR = this.normal.getHashCode();
-        return RR = 397 * RR ^ this.d, RR
+        let rr = this.normal.getHashCode();
+        return rr = 397 * rr ^ this.d, rr
       }
       normalize() {
-        const RR = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let JR = 0;
-        return 0 !== RR && (JR = 1 / RR), this.normal.x *= JR, this.normal.y *= JR, this.normal.z *= JR, this.d *= JR, this
+        const rr = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Sr = 0;
+        return 0 !== rr && (Sr = 1 / rr), this.normal.x *= Sr, this.normal.y *= Sr, this.normal.z *= Sr, this.d *= Sr, this
       }
-      transform(RR) {
-        const JR = tR._TmpMatrix;
-        RR.invertToRef(JR);
-        const GR = JR.m,
-          yR = this.normal.x,
-          uR = this.normal.y,
-          ZR = this.normal.z,
-          qR = this.d,
-          iR = yR * GR[0] + uR * GR[1] + ZR * GR[2] + qR * GR[3],
-          fR = yR * GR[4] + uR * GR[5] + ZR * GR[6] + qR * GR[7],
-          VR = yR * GR[8] + uR * GR[9] + ZR * GR[10] + qR * GR[11],
-          KR = yR * GR[12] + uR * GR[13] + ZR * GR[14] + qR * GR[15];
-        return new tR(iR, fR, VR, KR)
+      transform(rr) {
+        const Sr = Wr._TmpMatrix;
+        rr.invertToRef(Sr);
+        const Qr = Sr.m,
+          Zr = this.normal.x,
+          ar = this.normal.y,
+          jr = this.normal.z,
+          Ir = this.d,
+          fr = Zr * Qr[0] + ar * Qr[1] + jr * Qr[2] + Ir * Qr[3],
+          Er = Zr * Qr[4] + ar * Qr[5] + jr * Qr[6] + Ir * Qr[7],
+          pr = Zr * Qr[8] + ar * Qr[9] + jr * Qr[10] + Ir * Qr[11],
+          xr = Zr * Qr[12] + ar * Qr[13] + jr * Qr[14] + Ir * Qr[15];
+        return new Wr(fr, Er, pr, xr)
       }
-      dotCoordinate(RR) {
-        return this.normal.x * RR.x + this.normal.y * RR.y + this.normal.z * RR.z + this.d
+      dotCoordinate(rr) {
+        return this.normal.x * rr.x + this.normal.y * rr.y + this.normal.z * rr.z + this.d
       }
-      copyFromPoints(RR, JR, GR) {
-        const yR = JR.x - RR.x,
-          tR = JR.y - RR.y,
-          uR = JR.z - RR.z,
-          ZR = GR.x - RR.x,
-          qR = GR.y - RR.y,
-          iR = GR.z - RR.z,
-          fR = tR * iR - uR * qR,
-          VR = uR * ZR - yR * iR,
-          KR = yR * qR - tR * ZR,
-          wR = Math.sqrt(fR * fR + VR * VR + KR * KR);
-        let rR;
-        return rR = 0 !== wR ? 1 / wR : 0, this.normal.x = fR * rR, this.normal.y = VR * rR, this.normal.z = KR * rR, this.d = -(this.normal.x * RR.x + this.normal.y * RR.y + this.normal.z * RR.z), this
+      copyFromPoints(rr, Sr, Qr) {
+        const Zr = Sr.x - rr.x,
+          Wr = Sr.y - rr.y,
+          ar = Sr.z - rr.z,
+          jr = Qr.x - rr.x,
+          Ir = Qr.y - rr.y,
+          fr = Qr.z - rr.z,
+          Er = Wr * fr - ar * Ir,
+          pr = ar * jr - Zr * fr,
+          xr = Zr * Ir - Wr * jr,
+          mr = Math.sqrt(Er * Er + pr * pr + xr * xr);
+        let Nr;
+        return Nr = 0 !== mr ? 1 / mr : 0, this.normal.x = Er * Nr, this.normal.y = pr * Nr, this.normal.z = xr * Nr, this.d = -(this.normal.x * rr.x + this.normal.y * rr.y + this.normal.z * rr.z), this
       }
-      isFrontFacingTo(RR, JR) {
-        return yR.r.Dot(this.normal, RR) <= JR
+      isFrontFacingTo(rr, Sr) {
+        return Zr.u.Dot(this.normal, rr) <= Sr
       }
-      signedDistanceTo(RR) {
-        return yR.r.Dot(RR, this.normal) + this.d
+      signedDistanceTo(rr) {
+        return Zr.u.Dot(rr, this.normal) + this.d
       }
-      static FromArray(RR) {
-        return new tR(RR[0], RR[1], RR[2], RR[3])
+      static FromArray(rr) {
+        return new Wr(rr[0], rr[1], rr[2], rr[3])
       }
-      static FromPoints(RR, JR, GR) {
-        const yR = new tR(0, 0, 0, 0);
-        return yR.copyFromPoints(RR, JR, GR), yR
+      static FromPoints(rr, Sr, Qr) {
+        const Zr = new Wr(0, 0, 0, 0);
+        return Zr.copyFromPoints(rr, Sr, Qr), Zr
       }
-      static FromPositionAndNormal(RR, JR) {
-        const GR = new tR(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(RR, JR, GR)
+      static FromPositionAndNormal(rr, Sr) {
+        const Qr = new Wr(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(rr, Sr, Qr)
       }
-      static FromPositionAndNormalToRef(RR, JR, GR) {
-        return GR.normal.vN(JR), GR.normal.normalize(), GR.d = -RR.dot(GR.normal), GR
+      static FromPositionAndNormalToRef(rr, Sr, Qr) {
+        return Qr.normal.iH(Sr), Qr.normal.normalize(), Qr.d = -rr.dot(Qr.normal), Qr
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(RR, JR, GR) {
-        const tR = -(JR.x * RR.x + JR.y * RR.y + JR.z * RR.z);
-        return yR.r.Dot(GR, JR) + tR
+      static SignedDistanceToPlaneFromPositionAndNormal(rr, Sr, Qr) {
+        const Wr = -(Sr.x * rr.x + Sr.y * rr.y + Sr.z * rr.z);
+        return Zr.u.Dot(Qr, Sr) + Wr
       }
     }
-    tR._TmpMatrix = yR.e.Identity()
+    Wr._TmpMatrix = Zr.d.Identity()
   },
-  39912: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR
+  40237: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar
     });
-    var yR = GR(39914);
-    const tR = (RR, JR, GR) => RR ? RR.getClassName && "Mesh" === RR.getClassName() ? null : !RR.getClassName || "SubMesh" !== RR.getClassName() && "PhysicsBody" !== RR.getClassName() ? RR.clone ? RR.clone() : Array.isArray(RR) ? RR.slice() : GR && "object" === typeof RR ? {
-      ...RR
-    } : null : RR.clone(JR) : null;
-    class uR {
-      static DeepCopy(RR, JR, GR, uR) {
-        let ZR = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const qR = function(RR) {
-          const JR = [];
+    var Zr = Qr(40246);
+    const Wr = (rr, Sr, Qr) => rr ? rr.getClassName && "Mesh" === rr.getClassName() ? null : !rr.getClassName || "SubMesh" !== rr.getClassName() && "PhysicsBody" !== rr.getClassName() ? rr.clone ? rr.clone() : Array.isArray(rr) ? rr.slice() : Qr && "object" === typeof rr ? {
+      ...rr
+    } : null : rr.clone(Sr) : null;
+    class ar {
+      static DeepCopy(rr, Sr, Qr, ar) {
+        let jr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ir = function(rr) {
+          const Sr = [];
           do {
-            const GR = Object.getOwnPropertyNames(RR);
-            for (const RR of GR) - 1 === JR.indexOf(RR) && JR.push(RR)
-          } while (RR = Object.getPrototypeOf(RR));
-          return JR
-        }(RR);
-        for (const fR of qR) {
-          if ("_" === fR[0] && (!uR || -1 === uR.indexOf(fR))) continue;
-          if (fR.endsWith("Observable")) continue;
-          if (GR && -1 !== GR.indexOf(fR)) continue;
-          const qR = RR[fR],
-            VR = typeof qR;
-          if ("function" !== VR) try {
-            if ("object" === VR)
-              if (qR instanceof Uint8Array) JR[fR] = Uint8Array.from(qR);
-              else if (qR instanceof Array) {
-              if (JR[fR] = [], qR.length > 0)
-                if ("object" == typeof qR[0])
-                  for (let RR = 0; RR < qR.length; RR++) {
-                    const GR = tR(qR[RR], JR, ZR); - 1 === JR[fR].indexOf(GR) && JR[fR].push(GR)
-                  } else JR[fR] = qR.slice(0)
-            } else JR[fR] = tR(qR, JR, ZR);
-            else JR[fR] = qR
-          } catch (iR) {
-            yR.c.Warn(iR.message)
+            const Qr = Object.getOwnPropertyNames(rr);
+            for (const rr of Qr) - 1 === Sr.indexOf(rr) && Sr.push(rr)
+          } while (rr = Object.getPrototypeOf(rr));
+          return Sr
+        }(rr);
+        for (const Er of Ir) {
+          if ("_" === Er[0] && (!ar || -1 === ar.indexOf(Er))) continue;
+          if (Er.endsWith("Observable")) continue;
+          if (Qr && -1 !== Qr.indexOf(Er)) continue;
+          const Ir = rr[Er],
+            pr = typeof Ir;
+          if ("function" !== pr) try {
+            if ("object" === pr)
+              if (Ir instanceof Uint8Array) Sr[Er] = Uint8Array.from(Ir);
+              else if (Ir instanceof Array) {
+              if (Sr[Er] = [], Ir.length > 0)
+                if ("object" == typeof Ir[0])
+                  for (let rr = 0; rr < Ir.length; rr++) {
+                    const Qr = Wr(Ir[rr], Sr, jr); - 1 === Sr[Er].indexOf(Qr) && Sr[Er].push(Qr)
+                  } else Sr[Er] = Ir.slice(0)
+            } else Sr[Er] = Wr(Ir, Sr, jr);
+            else Sr[Er] = Ir
+          } catch (fr) {
+            Zr.c.Warn(fr.message)
           }
         }
       }
     }
   },
-  39062: (RR, JR, GR) => {
-    function yR() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (RR => {
-        const JR = 16 * Math.random() | 0;
-        return ("x" === RR ? JR : 3 & JR | 8).toString(16)
+  39405: (rr, Sr, Qr) => {
+    function Zr() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (rr => {
+        const Sr = 16 * Math.random() | 0;
+        return ("x" === rr ? Sr : 3 & Sr | 8).toString(16)
       }))
     }
-    GR.d(JR, {
-      c: () => yR
+    Qr.d(Sr, {
+      b: () => Zr
     })
   },
-  39914: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => yR
+  40246: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr
     });
-    class yR {
-      static _CheckLimit(RR, JR) {
-        let GR = yR._LogLimitOutputs[RR];
-        return GR ? GR.current++ : (GR = {
-          limit: JR,
+    class Zr {
+      static _CheckLimit(rr, Sr) {
+        let Qr = Zr._LogLimitOutputs[rr];
+        return Qr ? Qr.current++ : (Qr = {
+          limit: Sr,
           current: 1
-        }, yR._LogLimitOutputs[RR] = GR), GR.current <= GR.limit
+        }, Zr._LogLimitOutputs[rr] = Qr), Qr.current <= Qr.limit
       }
-      static _GenerateLimitMessage(RR) {
-        let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const GR = yR._LogLimitOutputs[RR];
-        if (!GR || !yR.MessageLimitReached) return;
-        const tR = this._Levels[JR];
-        GR.current === GR.limit && yR[tR.name](yR.MessageLimitReached.replace(/%LIMIT%/g, "" + GR.limit).replace(/%TYPE%/g, tR.name ?? ""))
+      static _GenerateLimitMessage(rr) {
+        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Qr = Zr._LogLimitOutputs[rr];
+        if (!Qr || !Zr.MessageLimitReached) return;
+        const Wr = this._Levels[Sr];
+        Qr.current === Qr.limit && Zr[Wr.name](Zr.MessageLimitReached.replace(/%LIMIT%/g, "" + Qr.limit).replace(/%TYPE%/g, Wr.name ?? ""))
       }
-      static _AddLogEntry(RR) {
-        yR._LogCache = RR + yR._LogCache, yR.OnNewCacheEntry && yR.OnNewCacheEntry(RR)
+      static _AddLogEntry(rr) {
+        Zr._LogCache = rr + Zr._LogCache, Zr.OnNewCacheEntry && Zr.OnNewCacheEntry(rr)
       }
-      static _FormatMessage(RR) {
-        const JR = RR => RR < 10 ? "0" + RR : "" + RR,
-          GR = new Date;
-        return "[" + JR(GR.getHours()) + ":" + JR(GR.getMinutes()) + ":" + JR(GR.getSeconds()) + "]: " + RR
+      static _FormatMessage(rr) {
+        const Sr = rr => rr < 10 ? "0" + rr : "" + rr,
+          Qr = new Date;
+        return "[" + Sr(Qr.getHours()) + ":" + Sr(Qr.getMinutes()) + ":" + Sr(Qr.getSeconds()) + "]: " + rr
       }
-      static _LogDisabled(RR, JR) {}
+      static _LogDisabled(rr, Sr) {}
       static _LogEnabled() {
-        let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          JR = arguments.length > 1 ? arguments[1] : void 0,
-          GR = arguments.length > 2 ? arguments[2] : void 0;
-        const tR = Array.isArray(JR) ? JR[0] : JR;
-        if (void 0 !== GR && !yR._CheckLimit(tR, GR)) return;
-        const uR = yR._FormatMessage(tR),
-          ZR = this._Levels[RR],
-          qR = Array.isArray(JR) ? JR.slice(1) : [];
-        ZR.logFunc && ZR.logFunc("BJS - " + uR, ...qR);
-        const iR = `<div style='color:${ZR.color}'>${uR}</div><br>`;
-        yR._AddLogEntry(iR), yR._GenerateLimitMessage(tR, RR)
+        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Sr = arguments.length > 1 ? arguments[1] : void 0,
+          Qr = arguments.length > 2 ? arguments[2] : void 0;
+        const Wr = Array.isArray(Sr) ? Sr[0] : Sr;
+        if (void 0 !== Qr && !Zr._CheckLimit(Wr, Qr)) return;
+        const ar = Zr._FormatMessage(Wr),
+          jr = this._Levels[rr],
+          Ir = Array.isArray(Sr) ? Sr.slice(1) : [];
+        jr.logFunc && jr.logFunc("BJS - " + ar, ...Ir);
+        const fr = `<div style='color:${jr.color}'>${ar}</div><br>`;
+        Zr._AddLogEntry(fr), Zr._GenerateLimitMessage(Wr, rr)
       }
       static get LogCache() {
-        return yR._LogCache
+        return Zr._LogCache
       }
       static ClearLogCache() {
-        yR._LogCache = "", yR._LogLimitOutputs = {}, yR.errorsCount = 0
+        Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr.errorsCount = 0
       }
-      static set LogLevels(RR) {
-        yR.Log = yR._LogDisabled, yR.Warn = yR._LogDisabled, yR.Error = yR._LogDisabled;
-        const JR = [yR.MessageLogLevel, yR.WarningLogLevel, yR.ErrorLogLevel];
-        for (const GR of JR)
-          if ((RR & GR) === GR) {
-            const RR = this._Levels[GR];
-            yR[RR.name] = yR._LogEnabled.bind(yR, GR)
+      static set LogLevels(rr) {
+        Zr.Log = Zr._LogDisabled, Zr.Warn = Zr._LogDisabled, Zr.Error = Zr._LogDisabled;
+        const Sr = [Zr.MessageLogLevel, Zr.WarningLogLevel, Zr.ErrorLogLevel];
+        for (const Qr of Sr)
+          if ((rr & Qr) === Qr) {
+            const rr = this._Levels[Qr];
+            Zr[rr.name] = Zr._LogEnabled.bind(Zr, Qr)
           }
       }
     }
-    yR.NoneLogLevel = 0, yR.MessageLogLevel = 1, yR.WarningLogLevel = 2, yR.ErrorLogLevel = 4, yR.AllLogLevel = 7, yR.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", yR._LogCache = "", yR._LogLimitOutputs = {}, yR._Levels = [{}, {
+    Zr.NoneLogLevel = 0, Zr.MessageLogLevel = 1, Zr.WarningLogLevel = 2, Zr.ErrorLogLevel = 4, Zr.AllLogLevel = 7, Zr.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -266,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], yR.errorsCount = 0, yR.Log = yR._LogEnabled.bind(yR, yR.MessageLogLevel), yR.Warn = yR._LogEnabled.bind(yR, yR.WarningLogLevel), yR.Error = yR._LogEnabled.bind(yR, yR.ErrorLogLevel)
+    }], Zr.errorsCount = 0, Zr.Log = Zr._LogEnabled.bind(Zr, Zr.MessageLogLevel), Zr.Warn = Zr._LogEnabled.bind(Zr, Zr.WarningLogLevel), Zr.Error = Zr._LogEnabled.bind(Zr, Zr.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

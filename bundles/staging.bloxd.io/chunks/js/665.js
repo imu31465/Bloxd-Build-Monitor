@@ -1,105 +1,105 @@
 export const id = 665;
 export const ids = [665];
 export const modules = {
-  54390: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR
+  54876: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => jr
     });
-    var yR = GR(41387);
-    const tR = "clipPlaneVertex",
-      uR = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
-    yR.b.IncludesShadersStoreWGSL[tR] || (yR.b.IncludesShadersStoreWGSL[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "clipPlaneVertex",
+      ar = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
+    Zr.e.IncludesShadersStoreWGSL[Wr] || (Zr.e.IncludesShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   },
-  54299: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR
+  54788: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => jr
     });
-    var yR = GR(41387);
-    const tR = "clipPlaneVertexDeclaration",
-      uR = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
-    yR.b.IncludesShadersStoreWGSL[tR] || (yR.b.IncludesShadersStoreWGSL[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "clipPlaneVertexDeclaration",
+      ar = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
+    Zr.e.IncludesShadersStoreWGSL[Wr] || (Zr.e.IncludesShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   },
-  54392: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => ZR
+  54879: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => jr
     });
-    var yR = GR(41387);
-    const tR = "fogVertex",
-      uR = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
-    yR.b.IncludesShadersStoreWGSL[tR] || (yR.b.IncludesShadersStoreWGSL[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "fogVertex",
+      ar = "#ifdef FOG\n#ifdef SCENE_UBO\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#else\nvertexOutputs.vFogDistance=(uniforms.view*worldPos).xyz;\n#endif\n#endif\n";
+    Zr.e.IncludesShadersStoreWGSL[Wr] || (Zr.e.IncludesShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   },
-  54301: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR
+  54792: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr
     });
-    var yR = GR(41387);
-    const tR = "fogVertexDeclaration",
-      uR = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
-    yR.b.IncludesShadersStoreWGSL[tR] || (yR.b.IncludesShadersStoreWGSL[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "fogVertexDeclaration",
+      ar = "#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n";
+    Zr.e.IncludesShadersStoreWGSL[Wr] || (Zr.e.IncludesShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   },
-  54329: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => ZR
+  54814: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => jr
     });
-    var yR = GR(41387);
-    const tR = "logDepthDeclaration",
-      uR = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
-    yR.b.IncludesShadersStoreWGSL[tR] || (yR.b.IncludesShadersStoreWGSL[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "logDepthDeclaration",
+      ar = "#ifdef LOGARITHMICDEPTH\nuniform logarithmicDepthConstant: f32;varying vFragmentDepth: f32;\n#endif\n";
+    Zr.e.IncludesShadersStoreWGSL[Wr] || (Zr.e.IncludesShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   },
-  54401: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => ZR
+  54895: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => jr
     });
-    var yR = GR(41387);
-    const tR = "logDepthVertex",
-      uR = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
-    yR.b.IncludesShadersStoreWGSL[tR] || (yR.b.IncludesShadersStoreWGSL[tR] = uR);
-    const ZR = {
-      name: tR,
-      shader: uR
+    var Zr = Qr(41743);
+    const Wr = "logDepthVertex",
+      ar = "#ifdef LOGARITHMICDEPTH\nvertexOutputs.vFragmentDepth=1.0+vertexOutputs.position.w;vertexOutputs.position.z=log2(max(0.000001,vertexOutputs.vFragmentDepth))*uniforms.logarithmicDepthConstant;\n#endif\n";
+    Zr.e.IncludesShadersStoreWGSL[Wr] || (Zr.e.IncludesShadersStoreWGSL[Wr] = ar);
+    const jr = {
+      name: Wr,
+      shader: ar
     }
   },
-  64195: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      skyVertexShaderWGSL: () => rR
+  64640: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      particlesVertexShaderWGSL: () => Nr
     });
-    var yR = GR(41387),
-      tR = GR(54329),
-      uR = GR(54299),
-      ZR = GR(54301),
-      qR = GR(54390),
-      iR = GR(54401),
-      fR = GR(54392);
-    const VR = "skyVertexShader",
-      KR = "attribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\nuniform world: mat4x4f;uniform view: mat4x4f;uniform viewProjection: mat4x4f;\n#ifdef POINTSIZE\nuniform pointSize: f32;\n#endif\nvarying vPositionW: vec3f;\n#ifdef VERTEXCOLOR\nvarying vColor: vec4f;\n#endif\n#include<logDepthDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.position=uniforms.viewProjection*uniforms.world* vec4f(vertexInputs.position,1.0);var worldPos: vec4f=uniforms.world* vec4f(vertexInputs.position,1.0);vertexOutputs.vPositionW= worldPos.xyz;\n#include<clipPlaneVertex>\n#include<logDepthVertex>\n#include<fogVertex>\n#ifdef VERTEXCOLOR\nvertexOutputs.vColor=vertexInputs.color;\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
-    yR.b.ShadersStoreWGSL[VR] || (yR.b.ShadersStoreWGSL[VR] = KR);
-    const wR = [tR.e, uR.c, ZR.b, qR.b, iR.c, fR.d];
-    for (const eR of wR) yR.b.IncludesShadersStoreWGSL[eR.name] || (yR.b.IncludesShadersStoreWGSL[eR.name] = eR.shader);
-    const rR = {
-      name: VR,
-      shader: KR
+    var Zr = Qr(41743),
+      Wr = Qr(54788),
+      ar = Qr(54792),
+      jr = Qr(54814),
+      Ir = Qr(54876),
+      fr = Qr(54879),
+      Er = Qr(54895);
+    const pr = "particlesVertexShader",
+      xr = "attribute position: vec3f;attribute color: vec4f;attribute angle: f32;attribute size: vec2f;\n#ifdef ANIMATESHEET\nattribute cellIndex: f32;\n#endif\n#ifndef BILLBOARD\nattribute direction: vec3f;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute direction: vec3f;\n#endif\n#ifdef RAMPGRADIENT\nattribute remapData: vec4f;\n#endif\nattribute offset: vec2f;uniform view: mat4x4f;uniform projection: mat4x4f;uniform translationPivot: vec2f;\n#ifdef PREPASS\nuniform cameraInfo: vec2f;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform inverseEmitterWM: mat4x4f;uniform geometryWorldOffset: vec3f;\n#endif\n#ifdef PREPASS_POSITION\nvarying vGeometryPositionW: vec3f;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vGeometryNormalW: vec3f;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vGeometryNormalV: vec3f;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vPosition: vec3f;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vViewPos: vec3f;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying vNormViewDepth: f32;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform particlesInfos: vec3f; \n#endif\nvarying vUV: vec2f;varying vColor: vec4f;\n#ifdef POSITIONW_AS_VARYING\nvarying vPositionW: vec3f;\n#endif\n#ifdef RAMPGRADIENT\nvarying remapRanges: vec4f;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform invView: mat4x4f;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform eyePosition: vec3f;\n#endif\nfn rotate(yaxis: vec3f,rotatedCorner: vec3f)->vec3f {var xaxis: vec3f=normalize(cross( vec3f(0.,1.0,0.),yaxis));var zaxis: vec3f=normalize(cross(yaxis,xaxis));var row0: vec3f= vec3f(xaxis.x,xaxis.y,xaxis.z);var row1: vec3f= vec3f(yaxis.x,yaxis.y,yaxis.z);var row2: vec3f= vec3f(zaxis.x,zaxis.y,zaxis.z);var rotMatrix: mat3x3f= mat3x3f(row0,row1,row2);var alignedCorner: vec3f=rotMatrix*rotatedCorner;return vertexInputs.position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nfn rotateAlign(toCamera: vec3f,rotatedCorner: vec3f)->vec3f {var normalizedToCamera: vec3f=normalize(toCamera);var normalizedCrossDirToCamera: vec3f=normalize(cross(normalize(vertexInputs.direction),normalizedToCamera));var row0: vec3f= vec3f(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);var row2: vec3f= vec3f(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvar row1: vec3f=normalize(vertexInputs.direction);\n#else\nvar crossProduct: vec3f=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));var row1: vec3f= vec3f(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nvar rotMatrix: mat3x3f= mat3x3f(row0,row1,row2);var alignedCorner: vec3f=rotMatrix*rotatedCorner;return vertexInputs.position+alignedCorner;}\nfn stretchedNormal(toCamera: vec3f,stretchDirection: vec3f)->vec3f {let normalizedToCamera: vec3f=normalize(toCamera);let normalizedCrossDirToCamera: vec3f=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nlet row1: vec3f=normalize(stretchDirection);\n#else\nlet row1: vec3f=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar cornerPos: vec2f;var vPositionW: vec3f;\n#ifdef PREPASS\nvar geometryNormalW: vec3f;\n#endif\ncornerPos=( vec2f(vertexInputs.offset.x-0.5,vertexInputs.offset.y -0.5)-uniforms.translationPivot)*vertexInputs.size;\n#ifdef BILLBOARD\nvar rotatedCorner: vec3f;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.z=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.y=0.;var yaxis: vec3f=vertexInputs.position-uniforms.eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvar viewPos: vec3f=(uniforms.view* vec4f(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.y=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.z=0.;var toCamera: vec3f=vertexInputs.position-uniforms.eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,vertexInputs.direction);\n#endif\nvar viewPos: vec3f=(uniforms.view* vec4f(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.y=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.z=0.;var viewPos: vec3f=(uniforms.view* vec4f(vertexInputs.position,1.0)).xyz+rotatedCorner;vPositionW=(uniforms.invView* vec4f(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((uniforms.invView*vec4f(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nvertexOutputs.remapRanges=vertexInputs.remapData;\n#endif\nvertexOutputs.position=uniforms.projection* vec4f(viewPos,1.0);\n#else\nvar rotatedCorner: vec3f;rotatedCorner.x=cornerPos.x*cos(vertexInputs.angle)-cornerPos.y*sin(vertexInputs.angle)+uniforms.translationPivot.x;rotatedCorner.z=cornerPos.x*sin(vertexInputs.angle)+cornerPos.y*cos(vertexInputs.angle)+uniforms.translationPivot.y;rotatedCorner.y=0.;var yaxis: vec3f=normalize(vertexInputs.direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\nvertexOutputs.position=uniforms.projection*uniforms.view* vec4f(vPositionW,1.0);\n#endif\nvertexOutputs.vColor=vertexInputs.color;\n#ifdef ANIMATESHEET\nvar rowOffset: f32=floor(vertexInputs.cellIndex*uniforms.particlesInfos.z);var columnOffset: f32=vertexInputs.cellIndex-rowOffset/uniforms.particlesInfos.z;var uvScale: vec2f=uniforms.particlesInfos.xy;var uvOffset: vec2f= vec2f(vertexInputs.offset.x ,1.0-vertexInputs.offset.y);vertexOutputs.vUV=(uvOffset+ vec2f(columnOffset,rowOffset))*uvScale;\n#else\nvertexOutputs.vUV=vertexInputs.offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvar worldPos: vec4f= vec4f(vPositionW,1.0);\n#endif\n#ifdef POSITIONW_AS_VARYING\nvertexOutputs.vPositionW=vPositionW;\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nlet geometryViewPosition: vec4f=uniforms.view*vec4f(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvar geometryNormalV=normalize((uniforms.view*vec4f(geometryNormalW,0.0)).xyz);let geometryViewDirection=select(vec3f(0.0,0.0,geometryViewPosition.z),geometryViewPosition.xyz,uniforms.projection[3][3]==0.0);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvertexOutputs.vGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvertexOutputs.vGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvertexOutputs.vGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvar geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=vertexInputs.position+(uniforms.invView*vec4f(rotatedCorner,0.0)).xyz;\n#endif\nvertexOutputs.vPosition=(uniforms.inverseEmitterWM*vec4f(geometryRenderPosition-uniforms.geometryWorldOffset,1.0)).xyz;\n#else\nvertexOutputs.vPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvertexOutputs.vViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvertexOutputs.vNormViewDepth=(geometryViewPosition.z-uniforms.cameraInfo.x)/(uniforms.cameraInfo.y-uniforms.cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Zr.e.ShadersStoreWGSL[pr] || (Zr.e.ShadersStoreWGSL[pr] = xr);
+    const mr = [Wr.b, ar.c, jr.e, Ir.b, fr.b, Er.b];
+    for (const Ur of mr) Zr.e.IncludesShadersStoreWGSL[Ur.name] || (Zr.e.IncludesShadersStoreWGSL[Ur.name] = Ur.shader);
+    const Nr = {
+      name: pr,
+      shader: xr
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

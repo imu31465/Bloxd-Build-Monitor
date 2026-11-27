@@ -1,12 +1,12 @@
 # WASM module: `bloxd_wasm_models_bg`
 
-> environment **staging.bloxd.io** · build `4udp6d.2845de07` · analyzed 2026-11-28T07:18:32+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.c167c820e95fdd32ea75.wasm
-> 478,484 bytes (467.3 KB) · sha256 `91848043cbb1596b…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `fl4vv.bd3c59ce` · analyzed 2026-11-28T08:15:48+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.65d2d7a0e42a4e1c694f.wasm
+> 478,484 bytes (467.3 KB) · sha256 `dc6d52b18d6afa34…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `75bb01608344c086.893` → `bb030eed3ada4f1e.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- name-section module id `bb030eed3ada4f1e.893` → `bc92b5a516610a37.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/22 names kept (identifier names are randomly assigned per build; compare signatures instead)
 
 ## Overview
@@ -21,7 +21,7 @@
 | Data segments / bytes | 195 / 76,035 |
 | Element segments / entries | 1 / 46 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `bb030eed3ada4f1e.893` |
+| name-section module id | `bc92b5a516610a37.893` |
 | Sections | 12 |
 
 ## Sections
@@ -51,11 +51,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `Xd7x.uDZj` | func | `(i32) -> ()` |
-| 1 | `Xd7x.WIRy` | func | `(i32) -> ()` |
-| 2 | `Xd7x.b6H8` | func | `(i32 i32) -> ()` |
-| 3 | `Xd7x.YATS` | func | `(i32 i32) -> (i32)` |
-| 4 | `Xd7x.NHYp` | func | `(i32 i32) -> ()` |
+| 0 | `oG8H.xjmV` | func | `(i32) -> ()` |
+| 1 | `oG8H.JCCr` | func | `(i32) -> ()` |
+| 2 | `oG8H.Xaq9` | func | `(i32 i32) -> ()` |
+| 3 | `oG8H.E5R1` | func | `(i32 i32) -> (i32)` |
+| 4 | `oG8H.z00E` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -63,28 +63,28 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `IdsF` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
-| `Jx6f` | func | 290 | `(i32) -> (i32)` |
-| `bF5z` | func | 49 | `() -> (i32)` |
-| `TcBQ` | func | 245 | `() -> ()` |
+| `Yy3m` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `i63g` | func | 220 | `(i32) -> ()` |
+| `d8WF` | func | 246 | `(i32 i32) -> (i32)` |
+| `bsKs` | func | 152 | `() -> (i32)` |
+| `ftl0` | func | 74 | `() -> (i32)` |
+| `R4GE` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
+| `Jxp3` | func | 293 | `() -> (i32)` |
+| `EhVN` | func | 137 | `(i32 i32) -> ()` |
+| `YQle` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
+| `tGHe` | global | 1 | `` |
+| `h8Ch` | func | 245 | `() -> ()` |
+| `i5dA` | func | 291 | `(i32) -> ()` |
+| `ZAXO` | func | 273 | `(i32 i32 i32) -> ()` |
+| `kfU3` | func | 93 | `() -> (i32)` |
+| `Ui5r` | func | 49 | `() -> (i32)` |
+| `F9rg` | func | 290 | `(i32) -> (i32)` |
+| `zZ08` | func | 245 | `() -> ()` |
+| `DaPd` | func | 258 | `() -> (i32 i32)` |
+| `HxOA` | global | 2 | `` |
+| `zDH6` | func | 267 | `() -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `s1CH` | global | 2 | `` |
-| `U6Wp` | func | 220 | `(i32) -> ()` |
-| `kz9e` | func | 245 | `() -> ()` |
-| `ZrG9` | func | 93 | `() -> (i32)` |
-| `zlqx` | global | 1 | `` |
-| `SWnq` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `EJxW` | func | 213 | `(i32) -> (i32)` |
-| `FQMt` | func | 267 | `() -> (i32)` |
-| `Jl1W` | func | 258 | `() -> (i32 i32)` |
-| `wYRL` | func | 293 | `() -> (i32)` |
-| `hsVe` | func | 137 | `(i32 i32) -> ()` |
-| `dbMt` | func | 246 | `(i32 i32) -> (i32)` |
-| `ePUJ` | func | 152 | `() -> (i32)` |
-| `qjQe` | func | 291 | `(i32) -> ()` |
-| `Ae4R` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
-| `EIMb` | func | 74 | `() -> (i32)` |
-| `NCTb` | func | 273 | `(i32 i32 i32) -> ()` |
+| `hc59` | func | 213 | `(i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 

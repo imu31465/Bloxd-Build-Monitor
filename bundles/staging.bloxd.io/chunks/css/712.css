@@ -1,19 +1,4 @@
-.CustomTexturePackDownloaderLogoLoaderContainer {
-  align-items: center;
-  display: flex;
-  justify-content: center
-}
-
-.CustomTexturePackDownloaderLogoLoaderContainer .LogoLoader {
-  font-size: 10rem
-}
-
-.CustomTexturePackDownloaderSubtitleText .CustomTexturePackDownloaderWarningText {
-  color: #fcd373;
-  padding-top: 1rem
-}
-
-.CustomTexturePackDownloaderSubtitleText .CustomTexturePackDownloaderSecondaryText {
-  color: #a4a4a4;
-  padding-top: 1rem
+.WorldCodeAiExternalLink {
+  text-decoration: underline;
+  white-space: nowrap
 }

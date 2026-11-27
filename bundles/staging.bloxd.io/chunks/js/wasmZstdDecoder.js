@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var RR = __webpack_require__.u,
-        JR = __webpack_require__.e,
-        GR = {},
-        yR = {};
-      __webpack_require__.u = function(JR) {
-        return RR(JR) + (GR.hasOwnProperty(JR) ? "?" + GR[JR] : "")
-      }, __webpack_require__.e = function(tR) {
-        return JR(tR).catch((function(JR) {
-          var uR = yR.hasOwnProperty(tR) ? yR[tR] : 4;
-          if (uR < 1) {
-            var ZR = RR(tR);
-            if (JR.message = "Loading chunk " + tR + " failed after 4 retries.\n(" + ZR + ")", JR.request = ZR, GR[tR] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete yR[tR]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === JR.code) {
-              var qR = __webpack_require__.miniCssF(tR);
-              JR.message = JR.message.replace("Loading chunk", "Loading CSS chunk").replace(ZR, qR), JR.request = qR
+      var rr = __webpack_require__.u,
+        Sr = __webpack_require__.e,
+        Qr = {},
+        Zr = {};
+      __webpack_require__.u = function(Sr) {
+        return rr(Sr) + (Qr.hasOwnProperty(Sr) ? "?" + Qr[Sr] : "")
+      }, __webpack_require__.e = function(Wr) {
+        return Sr(Wr).catch((function(Sr) {
+          var ar = Zr.hasOwnProperty(Wr) ? Zr[Wr] : 4;
+          if (ar < 1) {
+            var jr = rr(Wr);
+            if (Sr.message = "Loading chunk " + Wr + " failed after 4 retries.\n(" + jr + ")", Sr.request = jr, Qr[Wr] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete Zr[Wr]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === Sr.code) {
+              var Ir = __webpack_require__.miniCssF(Wr);
+              Sr.message = Sr.message.replace("Loading chunk", "Loading CSS chunk").replace(jr, Ir), Sr.request = Ir
             }
-            throw JR
+            throw Sr
           }
-          return new Promise((function(RR) {
-            var JR = 4 - uR + 1;
+          return new Promise((function(rr) {
+            var Sr = 4 - ar + 1;
             setTimeout((function() {
-              var JR = "cache-bust=" + Date.now();
-              GR[tR] = JR, yR[tR] = uR - 1, RR(__webpack_require__.e(tR))
-            }), function(RR) {
-              return 500 * Math.pow(2, RR)
-            }(JR))
+              var Sr = "cache-bust=" + Date.now();
+              Qr[Wr] = Sr, Zr[Wr] = ar - 1, rr(__webpack_require__.e(Wr))
+            }), function(rr) {
+              return 500 * Math.pow(2, rr)
+            }(Sr))
           }))
         }))
       }
     }
   })();
 
-  function RR(RR) {
-    return RR instanceof Error ? RR.message : String(RR)
+  function rr(rr) {
+    return rr instanceof Error ? rr.message : String(rr)
   }
-  const JR = ArrayBuffer,
-    GR = Uint8Array,
-    yR = Uint16Array,
-    tR = Int16Array,
-    uR = Int32Array,
-    ZR = (RR, JR, yR) => {
-      if (GR.prototype.slice) return GR.prototype.slice.call(RR, JR, yR);
-      (null == JR || JR < 0) && (JR = 0), (null == yR || yR > RR.length) && (yR = RR.length);
-      const tR = new GR(yR - JR);
-      return tR.set(RR.subarray(JR, yR)), tR
+  const Sr = ArrayBuffer,
+    Qr = Uint8Array,
+    Zr = Uint16Array,
+    Wr = Int16Array,
+    ar = Int32Array,
+    jr = (rr, Sr, Zr) => {
+      if (Qr.prototype.slice) return Qr.prototype.slice.call(rr, Sr, Zr);
+      (null == Sr || Sr < 0) && (Sr = 0), (null == Zr || Zr > rr.length) && (Zr = rr.length);
+      const Wr = new Qr(Zr - Sr);
+      return Wr.set(rr.subarray(Sr, Zr)), Wr
     },
-    qR = (RR, JR, yR, tR) => {
-      if (GR.prototype.fill) return GR.prototype.fill.call(RR, JR, yR, tR);
-      for ((null == yR || yR < 0) && (yR = 0), (null == tR || tR > RR.length) && (tR = RR.length); yR < tR; ++yR) RR[yR] = JR;
-      return RR
+    Ir = (rr, Sr, Zr, Wr) => {
+      if (Qr.prototype.fill) return Qr.prototype.fill.call(rr, Sr, Zr, Wr);
+      for ((null == Zr || Zr < 0) && (Zr = 0), (null == Wr || Wr > rr.length) && (Wr = rr.length); Zr < Wr; ++Zr) rr[Zr] = Sr;
+      return rr
     },
-    iR = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    fR = (RR, JR, GR) => {
-      const yR = new Error(JR || iR[RR]);
-      if (yR.code = RR, Error.captureStackTrace && Error.captureStackTrace(yR, fR), !GR) throw yR;
-      return yR
+    fr = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    Er = (rr, Sr, Qr) => {
+      const Zr = new Error(Sr || fr[rr]);
+      if (Zr.code = rr, Error.captureStackTrace && Error.captureStackTrace(Zr, Er), !Qr) throw Zr;
+      return Zr
     },
-    VR = (RR, JR, GR) => {
-      let yR = 0,
-        tR = 0;
-      for (; yR < GR; ++yR) tR |= RR[JR++] << (yR << 3);
-      return tR
+    pr = (rr, Sr, Qr) => {
+      let Zr = 0,
+        Wr = 0;
+      for (; Zr < Qr; ++Zr) Wr |= rr[Sr++] << (Zr << 3);
+      return Wr
     },
-    KR = (RR, JR) => {
-      const yR = RR[0] | RR[1] << 8 | RR[2] << 16;
-      if (3126568 == yR && 253 == RR[3]) {
-        const yR = RR[4],
-          tR = yR >> 5 & 1,
-          ZR = yR >> 2 & 1,
-          qR = 3 & yR,
-          iR = yR >> 6;
-        8 & yR && fR(0);
-        let KR = 6 - tR;
-        const wR = 3 == qR ? 4 : qR,
-          rR = VR(RR, KR, wR);
-        KR += wR;
-        const eR = iR ? 1 << iR : tR,
-          aR = VR(RR, KR, eR) + (1 == iR && 256);
-        let LR = aR;
-        if (!tR) {
-          const JR = 1 << 10 + (RR[5] >> 3);
-          LR = JR + (JR >> 3) * (7 & RR[5])
+    xr = (rr, Sr) => {
+      const Zr = rr[0] | rr[1] << 8 | rr[2] << 16;
+      if (3126568 == Zr && 253 == rr[3]) {
+        const Zr = rr[4],
+          Wr = Zr >> 5 & 1,
+          jr = Zr >> 2 & 1,
+          Ir = 3 & Zr,
+          fr = Zr >> 6;
+        8 & Zr && Er(0);
+        let xr = 6 - Wr;
+        const mr = 3 == Ir ? 4 : Ir,
+          Nr = pr(rr, xr, mr);
+        xr += mr;
+        const Ur = fr ? 1 << fr : Wr,
+          tr = pr(rr, xr, Ur) + (1 == fr && 256);
+        let hr = tr;
+        if (!Wr) {
+          const Sr = 1 << 10 + (rr[5] >> 3);
+          hr = Sr + (Sr >> 3) * (7 & rr[5])
         }
-        LR > 2145386496 && fR(1);
-        const nR = new GR((1 == JR ? aR || LR : JR ? 0 : LR) + 12);
-        return nR[0] = 1, nR[4] = 4, nR[8] = 8, {
-          b: KR + eR,
+        hr > 2145386496 && Er(1);
+        const zr = new Qr((1 == Sr ? tr || hr : Sr ? 0 : hr) + 12);
+        return zr[0] = 1, zr[4] = 4, zr[8] = 8, {
+          b: xr + Ur,
           y: 0,
           l: 0,
-          d: rR,
-          w: JR && 1 != JR ? JR : nR.subarray(12),
-          e: LR,
-          o: new uR(nR.buffer, 0, 3),
-          u: aR,
-          c: ZR,
-          m: Math.min(131072, LR)
+          d: Nr,
+          w: Sr && 1 != Sr ? Sr : zr.subarray(12),
+          e: hr,
+          o: new ar(zr.buffer, 0, 3),
+          u: tr,
+          c: jr,
+          m: Math.min(131072, hr)
         }
       }
-      if (25481893 == (yR >> 4 | RR[3] << 20)) return 8 + (((tR = RR)[ZR = 4] | tR[ZR + 1] << 8 | tR[ZR + 2] << 16 | tR[ZR + 3] << 24) >>> 0);
-      var tR, ZR;
-      fR(0)
+      if (25481893 == (Zr >> 4 | rr[3] << 20)) return 8 + (((Wr = rr)[jr = 4] | Wr[jr + 1] << 8 | Wr[jr + 2] << 16 | Wr[jr + 3] << 24) >>> 0);
+      var Wr, jr;
+      Er(0)
     },
-    wR = RR => {
-      let JR = 0;
-      for (; 1 << JR <= RR; ++JR);
-      return JR - 1
+    mr = rr => {
+      let Sr = 0;
+      for (; 1 << Sr <= rr; ++Sr);
+      return Sr - 1
     },
-    rR = (RR, uR, ZR) => {
-      let qR = 4 + (uR << 3);
-      const iR = 5 + (15 & RR[uR]);
-      iR > ZR && fR(3);
-      const VR = 1 << iR;
-      let KR = VR,
-        rR = -1,
-        eR = -1,
-        aR = -1,
-        LR = VR;
-      const nR = new JR(512 + (VR << 2)),
-        UR = new tR(nR, 0, 256),
-        WR = new yR(nR, 0, 256),
-        AR = new yR(nR, 512, VR),
-        CR = 512 + (VR << 1),
-        XR = new GR(nR, CR, VR),
-        MR = new GR(nR, CR + VR);
-      for (; rR < 255 && KR > 0;) {
-        const JR = wR(KR + 1),
-          GR = qR >> 3,
-          yR = (1 << JR + 1) - 1;
-        let tR = (RR[GR] | RR[GR + 1] << 8 | RR[GR + 2] << 16) >> (7 & qR) & yR;
-        const uR = (1 << JR) - 1,
-          ZR = yR - KR - 1,
-          iR = tR & uR;
-        if (iR < ZR ? (qR += JR, tR = iR) : (qR += JR + 1, tR > uR && (tR -= ZR)), UR[++rR] = --tR, -1 == tR ? (KR += tR, XR[--LR] = rR) : KR -= tR, !tR)
+    Nr = (rr, ar, jr) => {
+      let Ir = 4 + (ar << 3);
+      const fr = 5 + (15 & rr[ar]);
+      fr > jr && Er(3);
+      const pr = 1 << fr;
+      let xr = pr,
+        Nr = -1,
+        Ur = -1,
+        tr = -1,
+        hr = pr;
+      const zr = new Sr(512 + (pr << 2)),
+        Yr = new Wr(zr, 0, 256),
+        nr = new Zr(zr, 0, 256),
+        er = new Zr(zr, 512, pr),
+        Kr = 512 + (pr << 1),
+        yr = new Qr(zr, Kr, pr),
+        Br = new Qr(zr, Kr + pr);
+      for (; Nr < 255 && xr > 0;) {
+        const Sr = mr(xr + 1),
+          Qr = Ir >> 3,
+          Zr = (1 << Sr + 1) - 1;
+        let Wr = (rr[Qr] | rr[Qr + 1] << 8 | rr[Qr + 2] << 16) >> (7 & Ir) & Zr;
+        const ar = (1 << Sr) - 1,
+          jr = Zr - xr - 1,
+          fr = Wr & ar;
+        if (fr < jr ? (Ir += Sr, Wr = fr) : (Ir += Sr + 1, Wr > ar && (Wr -= jr)), Yr[++Nr] = --Wr, -1 == Wr ? (xr += Wr, yr[--hr] = Nr) : xr -= Wr, !Wr)
           do {
-            const JR = qR >> 3;
-            eR = (RR[JR] | RR[JR + 1] << 8) >> (7 & qR) & 3, qR += 2, rR += eR
-          } while (3 == eR)
-      }(rR > 255 || KR) && fR(0);
-      let BR = 0;
-      const lR = (VR >> 1) + (VR >> 3) + 3,
-        pR = VR - 1;
-      for (let JR = 0; JR <= rR; ++JR) {
-        const RR = UR[JR];
-        if (RR < 1) WR[JR] = -RR;
+            const Sr = Ir >> 3;
+            Ur = (rr[Sr] | rr[Sr + 1] << 8) >> (7 & Ir) & 3, Ir += 2, Nr += Ur
+          } while (3 == Ur)
+      }(Nr > 255 || xr) && Er(0);
+      let Tr = 0;
+      const vr = (pr >> 1) + (pr >> 3) + 3,
+        Or = pr - 1;
+      for (let Sr = 0; Sr <= Nr; ++Sr) {
+        const rr = Yr[Sr];
+        if (rr < 1) nr[Sr] = -rr;
         else
-          for (aR = 0; aR < RR; ++aR) {
-            XR[BR] = JR;
+          for (tr = 0; tr < rr; ++tr) {
+            yr[Tr] = Sr;
             do {
-              BR = BR + lR & pR
-            } while (BR >= LR)
+              Tr = Tr + vr & Or
+            } while (Tr >= hr)
           }
       }
-      for (BR && fR(0), aR = 0; aR < VR; ++aR) {
-        const RR = WR[XR[aR]]++,
-          JR = MR[aR] = iR - wR(RR);
-        AR[aR] = (RR << JR) - VR
+      for (Tr && Er(0), tr = 0; tr < pr; ++tr) {
+        const rr = nr[yr[tr]]++,
+          Sr = Br[tr] = fr - mr(rr);
+        er[tr] = (rr << Sr) - pr
       }
-      return [qR + 7 >> 3, {
-        b: iR,
-        s: XR,
-        n: MR,
-        t: AR
+      return [Ir + 7 >> 3, {
+        b: fr,
+        s: yr,
+        n: Br,
+        t: er
       }]
     },
-    eR = rR(new GR([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    aR = rR(new GR([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    LR = rR(new GR([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    nR = (RR, JR) => {
-      const GR = RR.length,
-        yR = new uR(GR);
-      for (let tR = 0; tR < GR; ++tR) yR[tR] = JR, JR += 1 << RR[tR];
-      return yR
+    Ur = Nr(new Qr([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    tr = Nr(new Qr([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    hr = Nr(new Qr([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    zr = (rr, Sr) => {
+      const Qr = rr.length,
+        Zr = new ar(Qr);
+      for (let Wr = 0; Wr < Qr; ++Wr) Zr[Wr] = Sr, Sr += 1 << rr[Wr];
+      return Zr
     },
-    UR = new GR(new uR([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    WR = nR(UR, 0),
-    AR = new GR(new uR([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    CR = nR(AR, 3),
-    XR = (RR, JR, GR) => {
-      const yR = RR.length,
-        tR = JR.length,
-        uR = RR[yR - 1],
-        ZR = (1 << GR.b) - 1,
-        qR = -GR.b;
-      uR || fR(0);
-      let iR = 0,
-        VR = GR.b,
-        KR = (yR << 3) - 8 + wR(uR) - VR,
-        rR = -1;
-      for (; KR > qR && rR < tR;) {
-        const yR = KR >> 3;
-        iR = (iR << VR | (RR[yR] | RR[yR + 1] << 8 | RR[yR + 2] << 16) >> (7 & KR)) & ZR, JR[++rR] = GR.s[iR], KR -= VR = GR.n[iR]
+    Yr = new Qr(new ar([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    nr = zr(Yr, 0),
+    er = new Qr(new ar([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    Kr = zr(er, 3),
+    yr = (rr, Sr, Qr) => {
+      const Zr = rr.length,
+        Wr = Sr.length,
+        ar = rr[Zr - 1],
+        jr = (1 << Qr.b) - 1,
+        Ir = -Qr.b;
+      ar || Er(0);
+      let fr = 0,
+        pr = Qr.b,
+        xr = (Zr << 3) - 8 + mr(ar) - pr,
+        Nr = -1;
+      for (; xr > Ir && Nr < Wr;) {
+        const Zr = xr >> 3;
+        fr = (fr << pr | (rr[Zr] | rr[Zr + 1] << 8 | rr[Zr + 2] << 16) >> (7 & xr)) & jr, Sr[++Nr] = Qr.s[fr], xr -= pr = Qr.n[fr]
       }
-      KR == qR && rR + 1 == tR || fR(0)
+      xr == Ir && Nr + 1 == Wr || Er(0)
     },
-    MR = (RR, JR, GR) => {
-      let yR = 6;
-      const tR = JR.length + 3 >> 2,
-        uR = tR << 1,
-        ZR = tR + uR;
-      XR(RR.subarray(yR, yR += RR[0] | RR[1] << 8), JR.subarray(0, tR), GR), XR(RR.subarray(yR, yR += RR[2] | RR[3] << 8), JR.subarray(tR, uR), GR), XR(RR.subarray(yR, yR += RR[4] | RR[5] << 8), JR.subarray(uR, ZR), GR), XR(RR.subarray(yR), JR.subarray(ZR), GR)
+    Br = (rr, Sr, Qr) => {
+      let Zr = 6;
+      const Wr = Sr.length + 3 >> 2,
+        ar = Wr << 1,
+        jr = Wr + ar;
+      yr(rr.subarray(Zr, Zr += rr[0] | rr[1] << 8), Sr.subarray(0, Wr), Qr), yr(rr.subarray(Zr, Zr += rr[2] | rr[3] << 8), Sr.subarray(Wr, ar), Qr), yr(rr.subarray(Zr, Zr += rr[4] | rr[5] << 8), Sr.subarray(ar, jr), Qr), yr(rr.subarray(Zr), Sr.subarray(jr), Qr)
     },
-    BR = (RR, JR, tR) => {
-      let uR = JR.b;
-      const iR = RR[uR],
-        VR = iR >> 1 & 3;
-      JR.l = 1 & iR;
-      const KR = iR >> 3 | RR[uR + 1] << 5 | RR[uR + 2] << 13,
-        nR = (uR += 3) + KR;
-      if (1 == VR) {
-        if (uR >= RR.length) return;
-        return JR.b = uR + 1, tR ? (qR(tR, RR[uR], JR.y, JR.y += KR), tR) : qR(new GR(KR), RR[uR])
+    Tr = (rr, Sr, Wr) => {
+      let ar = Sr.b;
+      const fr = rr[ar],
+        pr = fr >> 1 & 3;
+      Sr.l = 1 & fr;
+      const xr = fr >> 3 | rr[ar + 1] << 5 | rr[ar + 2] << 13,
+        zr = (ar += 3) + xr;
+      if (1 == pr) {
+        if (ar >= rr.length) return;
+        return Sr.b = ar + 1, Wr ? (Ir(Wr, rr[ar], Sr.y, Sr.y += xr), Wr) : Ir(new Qr(xr), rr[ar])
       }
-      if (!(nR > RR.length)) {
-        if (0 == VR) return JR.b = nR, tR ? (tR.set(RR.subarray(uR, nR), JR.y), JR.y += KR, tR) : ZR(RR, uR, nR);
-        if (2 == VR) {
-          const iR = RR[uR],
-            VR = 3 & iR,
-            KR = iR >> 2 & 3;
-          let BR = iR >> 4,
-            lR = 0,
-            pR = 0;
-          VR < 2 ? 1 & KR ? BR |= RR[++uR] << 4 | (2 & KR && RR[++uR] << 12) : BR = iR >> 3 : (pR = KR, KR < 2 ? (BR |= (63 & RR[++uR]) << 4, lR = RR[uR] >> 6 | RR[++uR] << 2) : 2 == KR ? (BR |= RR[++uR] << 4 | (3 & RR[++uR]) << 12, lR = RR[uR] >> 2 | RR[++uR] << 6) : (BR |= RR[++uR] << 4 | (63 & RR[++uR]) << 12, lR = RR[uR] >> 6 | RR[++uR] << 2 | RR[++uR] << 10)), ++uR;
-          let gR = tR ? tR.subarray(JR.y, JR.y + JR.m) : new GR(JR.m),
-            bR = gR.length - BR;
-          if (bR < 0 && fR(0), 0 == VR) gR.set(RR.subarray(uR, uR += BR), bR);
-          else if (1 == VR) qR(gR, RR[uR++], bR);
+      if (!(zr > rr.length)) {
+        if (0 == pr) return Sr.b = zr, Wr ? (Wr.set(rr.subarray(ar, zr), Sr.y), Sr.y += xr, Wr) : jr(rr, ar, zr);
+        if (2 == pr) {
+          const fr = rr[ar],
+            pr = 3 & fr,
+            xr = fr >> 2 & 3;
+          let Tr = fr >> 4,
+            vr = 0,
+            Or = 0;
+          pr < 2 ? 1 & xr ? Tr |= rr[++ar] << 4 | (2 & xr && rr[++ar] << 12) : Tr = fr >> 3 : (Or = xr, xr < 2 ? (Tr |= (63 & rr[++ar]) << 4, vr = rr[ar] >> 6 | rr[++ar] << 2) : 2 == xr ? (Tr |= rr[++ar] << 4 | (3 & rr[++ar]) << 12, vr = rr[ar] >> 2 | rr[++ar] << 6) : (Tr |= rr[++ar] << 4 | (63 & rr[++ar]) << 12, vr = rr[ar] >> 6 | rr[++ar] << 2 | rr[++ar] << 10)), ++ar;
+          let Lr = Wr ? Wr.subarray(Sr.y, Sr.y + Sr.m) : new Qr(Sr.m),
+            lr = Lr.length - Tr;
+          if (lr < 0 && Er(0), 0 == pr) Lr.set(rr.subarray(ar, ar += Tr), lr);
+          else if (1 == pr) Ir(Lr, rr[ar++], lr);
           else {
-            let tR = JR.h;
-            if (2 == VR) {
-              const ZR = ((RR, JR) => {
-                let tR = 0,
-                  uR = -1;
-                const ZR = new GR(292),
-                  iR = RR[JR],
-                  VR = ZR.subarray(0, 256),
-                  KR = ZR.subarray(256, 268),
-                  eR = new yR(ZR.buffer, 268);
-                if (iR < 128) {
-                  const [GR, yR] = rR(RR, JR + 1, 6), tR = GR << 3, ZR = RR[JR += iR];
-                  ZR || fR(0);
-                  let qR = 0,
-                    KR = 0,
-                    eR = yR.b,
-                    aR = eR,
-                    LR = (++JR << 3) - 8 + wR(ZR);
-                  for (; uR > 254 && fR(0), LR -= eR, !(LR < tR);) {
-                    let JR = LR >> 3;
-                    if (qR += (RR[JR] | RR[JR + 1] << 8) >> (7 & LR) & (1 << eR) - 1, VR[++uR] = yR.s[qR], LR -= aR, LR < tR) break;
-                    JR = LR >> 3, KR += (RR[JR] | RR[JR + 1] << 8) >> (7 & LR) & (1 << aR) - 1, VR[++uR] = yR.s[KR], eR = yR.n[qR], qR = yR.t[qR], aR = yR.n[KR], KR = yR.t[KR]
-                  }++uR > 255 && fR(0)
+            let Wr = Sr.h;
+            if (2 == pr) {
+              const jr = ((rr, Sr) => {
+                let Wr = 0,
+                  ar = -1;
+                const jr = new Qr(292),
+                  fr = rr[Sr],
+                  pr = jr.subarray(0, 256),
+                  xr = jr.subarray(256, 268),
+                  Ur = new Zr(jr.buffer, 268);
+                if (fr < 128) {
+                  const [Qr, Zr] = Nr(rr, Sr + 1, 6), Wr = Qr << 3, jr = rr[Sr += fr];
+                  jr || Er(0);
+                  let Ir = 0,
+                    xr = 0,
+                    Ur = Zr.b,
+                    tr = Ur,
+                    hr = (++Sr << 3) - 8 + mr(jr);
+                  for (; ar > 254 && Er(0), hr -= Ur, !(hr < Wr);) {
+                    let Sr = hr >> 3;
+                    if (Ir += (rr[Sr] | rr[Sr + 1] << 8) >> (7 & hr) & (1 << Ur) - 1, pr[++ar] = Zr.s[Ir], hr -= tr, hr < Wr) break;
+                    Sr = hr >> 3, xr += (rr[Sr] | rr[Sr + 1] << 8) >> (7 & hr) & (1 << tr) - 1, pr[++ar] = Zr.s[xr], Ur = Zr.n[Ir], Ir = Zr.t[Ir], tr = Zr.n[xr], xr = Zr.t[xr]
+                  }++ar > 255 && Er(0)
                 } else {
-                  for (uR = iR - 127; tR < uR; tR += 2) {
-                    const GR = RR[++JR];
-                    VR[tR] = GR >> 4, VR[tR + 1] = 15 & GR
-                  }++JR
+                  for (ar = fr - 127; Wr < ar; Wr += 2) {
+                    const Qr = rr[++Sr];
+                    pr[Wr] = Qr >> 4, pr[Wr + 1] = 15 & Qr
+                  }++Sr
                 }
-                let aR = 0;
-                for (tR = 0; tR < uR; ++tR) {
-                  const RR = VR[tR];
-                  RR > 11 && fR(0), aR += RR && 1 << RR - 1
+                let tr = 0;
+                for (Wr = 0; Wr < ar; ++Wr) {
+                  const rr = pr[Wr];
+                  rr > 11 && Er(0), tr += rr && 1 << rr - 1
                 }
-                const LR = wR(aR) + 1,
-                  nR = 1 << LR,
-                  UR = nR - aR;
-                for (UR & UR - 1 && fR(0), VR[uR++] = wR(UR) + 1, tR = 0; tR < uR; ++tR) {
-                  const RR = VR[tR];
-                  ++KR[VR[tR] = RR && LR + 1 - RR]
+                const hr = mr(tr) + 1,
+                  zr = 1 << hr,
+                  Yr = zr - tr;
+                for (Yr & Yr - 1 && Er(0), pr[ar++] = mr(Yr) + 1, Wr = 0; Wr < ar; ++Wr) {
+                  const rr = pr[Wr];
+                  ++xr[pr[Wr] = rr && hr + 1 - rr]
                 }
-                const WR = new GR(nR << 1),
-                  AR = WR.subarray(0, nR),
-                  CR = WR.subarray(nR);
-                for (eR[LR] = 0, tR = LR; tR > 0; --tR) {
-                  const RR = eR[tR];
-                  qR(CR, tR, RR, eR[tR - 1] = RR + KR[tR] * (1 << LR - tR))
+                const nr = new Qr(zr << 1),
+                  er = nr.subarray(0, zr),
+                  Kr = nr.subarray(zr);
+                for (Ur[hr] = 0, Wr = hr; Wr > 0; --Wr) {
+                  const rr = Ur[Wr];
+                  Ir(Kr, Wr, rr, Ur[Wr - 1] = rr + xr[Wr] * (1 << hr - Wr))
                 }
-                for (eR[0] != nR && fR(0), tR = 0; tR < uR; ++tR) {
-                  const RR = VR[tR];
-                  if (RR) {
-                    const JR = eR[RR];
-                    qR(AR, tR, JR, eR[RR] = JR + (1 << LR - RR))
+                for (Ur[0] != zr && Er(0), Wr = 0; Wr < ar; ++Wr) {
+                  const rr = pr[Wr];
+                  if (rr) {
+                    const Sr = Ur[rr];
+                    Ir(er, Wr, Sr, Ur[rr] = Sr + (1 << hr - rr))
                   }
                 }
-                return [JR, {
-                  n: CR,
-                  b: LR,
-                  s: AR
+                return [Sr, {
+                  n: Kr,
+                  b: hr,
+                  s: er
                 }]
-              })(RR, uR);
-              lR += uR - (uR = ZR[0]), JR.h = tR = ZR[1]
-            } else tR || fR(0);
-            (pR ? MR : XR)(RR.subarray(uR, uR += lR), gR.subarray(bR), tR)
+              })(rr, ar);
+              vr += ar - (ar = jr[0]), Sr.h = Wr = jr[1]
+            } else Wr || Er(0);
+            (Or ? Br : yr)(rr.subarray(ar, ar += vr), Lr.subarray(lr), Wr)
           }
-          let vR = RR[uR++];
-          if (vR) {
-            255 == vR ? vR = 32512 + (RR[uR++] | RR[uR++] << 8) : vR > 127 && (vR = vR - 128 << 8 | RR[uR++]);
-            const qR = RR[uR++];
-            3 & qR && fR(0);
-            const iR = [aR, LR, eR];
-            for (let tR = 2; tR > -1; --tR) {
-              const ZR = qR >> 2 + (tR << 1) & 3;
-              if (1 == ZR) {
-                const JR = new GR([0, 0, RR[uR++]]);
-                iR[tR] = {
-                  s: JR.subarray(2, 3),
-                  n: JR.subarray(0, 1),
-                  t: new yR(JR.buffer, 0, 1),
+          let Xr = rr[ar++];
+          if (Xr) {
+            255 == Xr ? Xr = 32512 + (rr[ar++] | rr[ar++] << 8) : Xr > 127 && (Xr = Xr - 128 << 8 | rr[ar++]);
+            const Ir = rr[ar++];
+            3 & Ir && Er(0);
+            const fr = [tr, hr, Ur];
+            for (let Wr = 2; Wr > -1; --Wr) {
+              const jr = Ir >> 2 + (Wr << 1) & 3;
+              if (1 == jr) {
+                const Sr = new Qr([0, 0, rr[ar++]]);
+                fr[Wr] = {
+                  s: Sr.subarray(2, 3),
+                  n: Sr.subarray(0, 1),
+                  t: new Zr(Sr.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == ZR ? [uR, iR[tR]] = rR(RR, uR, 9 - (1 & tR)) : 3 == ZR && (JR.t || fR(0), iR[tR] = JR.t[tR])
+              } else 2 == jr ? [ar, fr[Wr]] = Nr(rr, ar, 9 - (1 & Wr)) : 3 == jr && (Sr.t || Er(0), fr[Wr] = Sr.t[Wr])
             }
-            const [VR, KR, XR] = JR.t = iR, MR = RR[nR - 1];
-            MR || fR(0);
-            let BR = (nR << 3) - 8 + wR(MR) - XR.b,
-              lR = BR >> 3,
-              pR = 0,
-              OR = (RR[lR] | RR[lR + 1] << 8) >> (7 & BR) & (1 << XR.b) - 1;
-            lR = (BR -= KR.b) >> 3;
-            let xR = (RR[lR] | RR[lR + 1] << 8) >> (7 & BR) & (1 << KR.b) - 1;
-            lR = (BR -= VR.b) >> 3;
-            let NR = (RR[lR] | RR[lR + 1] << 8) >> (7 & BR) & (1 << VR.b) - 1;
-            for (++vR; --vR;) {
-              const GR = XR.s[OR],
-                yR = XR.n[OR],
-                tR = VR.s[NR],
-                uR = VR.n[NR],
-                ZR = KR.s[xR],
-                qR = KR.n[xR];
-              lR = (BR -= ZR) >> 3;
-              const iR = 1 << ZR;
-              let wR = iR + ((RR[lR] | RR[lR + 1] << 8 | RR[lR + 2] << 16 | RR[lR + 3] << 24) >>> (7 & BR) & iR - 1);
-              lR = (BR -= AR[tR]) >> 3;
-              let rR = CR[tR] + ((RR[lR] | RR[lR + 1] << 8 | RR[lR + 2] << 16) >> (7 & BR) & (1 << AR[tR]) - 1);
-              lR = (BR -= UR[GR]) >> 3;
-              const eR = WR[GR] + ((RR[lR] | RR[lR + 1] << 8 | RR[lR + 2] << 16) >> (7 & BR) & (1 << UR[GR]) - 1);
-              if ((BR < 0 || bR + eR > gR.length || pR + eR + rR > gR.length) && fR(0), lR = (BR -= yR) >> 3, OR = XR.t[OR] + ((RR[lR] | RR[lR + 1] << 8) >> (7 & BR) & (1 << yR) - 1), lR = (BR -= uR) >> 3, NR = VR.t[NR] + ((RR[lR] | RR[lR + 1] << 8) >> (7 & BR) & (1 << uR) - 1), lR = (BR -= qR) >> 3, xR = KR.t[xR] + ((RR[lR] | RR[lR + 1] << 8) >> (7 & BR) & (1 << qR) - 1), wR > 3) JR.o[2] = JR.o[1], JR.o[1] = JR.o[0], JR.o[0] = wR -= 3;
+            const [pr, xr, yr] = Sr.t = fr, Br = rr[zr - 1];
+            Br || Er(0);
+            let Tr = (zr << 3) - 8 + mr(Br) - yr.b,
+              vr = Tr >> 3,
+              Or = 0,
+              Pr = (rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << yr.b) - 1;
+            vr = (Tr -= xr.b) >> 3;
+            let Hr = (rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << xr.b) - 1;
+            vr = (Tr -= pr.b) >> 3;
+            let qr = (rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << pr.b) - 1;
+            for (++Xr; --Xr;) {
+              const Qr = yr.s[Pr],
+                Zr = yr.n[Pr],
+                Wr = pr.s[qr],
+                ar = pr.n[qr],
+                jr = xr.s[Hr],
+                Ir = xr.n[Hr];
+              vr = (Tr -= jr) >> 3;
+              const fr = 1 << jr;
+              let mr = fr + ((rr[vr] | rr[vr + 1] << 8 | rr[vr + 2] << 16 | rr[vr + 3] << 24) >>> (7 & Tr) & fr - 1);
+              vr = (Tr -= er[Wr]) >> 3;
+              let Nr = Kr[Wr] + ((rr[vr] | rr[vr + 1] << 8 | rr[vr + 2] << 16) >> (7 & Tr) & (1 << er[Wr]) - 1);
+              vr = (Tr -= Yr[Qr]) >> 3;
+              const Ur = nr[Qr] + ((rr[vr] | rr[vr + 1] << 8 | rr[vr + 2] << 16) >> (7 & Tr) & (1 << Yr[Qr]) - 1);
+              if ((Tr < 0 || lr + Ur > Lr.length || Or + Ur + Nr > Lr.length) && Er(0), vr = (Tr -= Zr) >> 3, Pr = yr.t[Pr] + ((rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << Zr) - 1), vr = (Tr -= ar) >> 3, qr = pr.t[qr] + ((rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << ar) - 1), vr = (Tr -= Ir) >> 3, Hr = xr.t[Hr] + ((rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << Ir) - 1), mr > 3) Sr.o[2] = Sr.o[1], Sr.o[1] = Sr.o[0], Sr.o[0] = mr -= 3;
               else {
-                const RR = wR - (0 != eR);
-                RR ? (wR = 3 == RR ? JR.o[0] - 1 : JR.o[RR], RR > 1 && (JR.o[2] = JR.o[1]), JR.o[1] = JR.o[0], JR.o[0] = wR) : wR = JR.o[0]
+                const rr = mr - (0 != Ur);
+                rr ? (mr = 3 == rr ? Sr.o[0] - 1 : Sr.o[rr], rr > 1 && (Sr.o[2] = Sr.o[1]), Sr.o[1] = Sr.o[0], Sr.o[0] = mr) : mr = Sr.o[0]
               }
-              for (let RR = 0; RR < eR; ++RR) gR[pR + RR] = gR[bR + RR];
-              pR += eR, bR += eR;
-              let aR = pR - wR;
-              if (aR < 0) {
-                let RR = -aR;
-                const GR = JR.e + aR;
-                GR < 0 && fR(4), RR > rR && (RR = rR);
-                for (let yR = 0; yR < RR; ++yR) gR[pR + yR] = JR.w[GR + yR];
-                pR += RR, rR -= RR, aR = 0
+              for (let rr = 0; rr < Ur; ++rr) Lr[Or + rr] = Lr[lr + rr];
+              Or += Ur, lr += Ur;
+              let tr = Or - mr;
+              if (tr < 0) {
+                let rr = -tr;
+                const Qr = Sr.e + tr;
+                Qr < 0 && Er(4), rr > Nr && (rr = Nr);
+                for (let Zr = 0; Zr < rr; ++Zr) Lr[Or + Zr] = Sr.w[Qr + Zr];
+                Or += rr, Nr -= rr, tr = 0
               }
-              for (let RR = 0; RR < rR; ++RR) gR[pR + RR] = gR[aR + RR];
-              pR += rR
+              for (let rr = 0; rr < Nr; ++rr) Lr[Or + rr] = Lr[tr + rr];
+              Or += Nr
             }
-            if (pR != bR)
-              for (; bR < gR.length;) gR[pR++] = gR[bR++];
-            else pR = gR.length;
-            tR ? JR.y += pR : gR = ZR(gR, 0, pR)
-          } else if (tR) {
-            if (JR.y += BR, bR)
-              for (let RR = 0; RR < BR; ++RR) gR[RR] = gR[bR + RR]
-          } else bR && (gR = ZR(gR, bR));
-          return JR.b = nR, gR
+            if (Or != lr)
+              for (; lr < Lr.length;) Lr[Or++] = Lr[lr++];
+            else Or = Lr.length;
+            Wr ? Sr.y += Or : Lr = jr(Lr, 0, Or)
+          } else if (Wr) {
+            if (Sr.y += Tr, lr)
+              for (let rr = 0; rr < Tr; ++rr) Lr[rr] = Lr[lr + rr]
+          } else lr && (Lr = jr(Lr, lr));
+          return Sr.b = zr, Lr
         }
-        fR(2)
+        Er(2)
       }
     };
-  class lR {
+  class vr {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    Qq = 0;
+    wI = 0;
     needed = 18;
     size;
-    constructor(RR) {
-      this.size = RR
+    constructor(rr) {
+      this.size = rr
     }
-    push(RR) {
+    push(rr) {
       if (this.done) return;
-      if (this.parts.push(RR), this.Qq += RR.length, this.Qq < this.needed) return;
-      const JR = ((RR, JR) => {
-        if (1 == RR.length) return RR[0];
-        const yR = new GR(JR);
-        for (let GR = 0, tR = 0; GR < RR.length; ++GR) {
-          const JR = RR[GR];
-          yR.set(JR, tR), tR += JR.length
+      if (this.parts.push(rr), this.wI += rr.length, this.wI < this.needed) return;
+      const Sr = ((rr, Sr) => {
+        if (1 == rr.length) return rr[0];
+        const Zr = new Qr(Sr);
+        for (let Qr = 0, Wr = 0; Qr < rr.length; ++Qr) {
+          const Sr = rr[Qr];
+          Zr.set(Sr, Wr), Wr += Sr.length
         }
-        return yR
-      })(this.parts, this.Qq);
-      let yR = this.st;
-      if (!yR) {
-        const RR = KR(JR, new GR(0));
-        "number" != typeof RR && RR.u === this.size || fR(0, `not a zstd frame of ${this.size} bytes`), yR = this.st = KR(JR, 1), yR.e = 0, this.output = yR.w
+        return Zr
+      })(this.parts, this.wI);
+      let Zr = this.st;
+      if (!Zr) {
+        const rr = xr(Sr, new Qr(0));
+        "number" != typeof rr && rr.u === this.size || Er(0, `not a zstd frame of ${this.size} bytes`), Zr = this.st = xr(Sr, 1), Zr.e = 0, this.output = Zr.w
       }
       for (;;) {
-        const RR = JR.length - yR.b;
-        if (RR < 3) {
+        const rr = Sr.length - Zr.b;
+        if (rr < 3) {
           this.needed = 3;
           break
         }
-        const GR = JR[yR.b],
-          tR = GR >> 1 & 3;
-        3 == tR && fR(2);
-        const uR = GR >> 3 | JR[yR.b + 1] << 5 | JR[yR.b + 2] << 13;
-        uR > yR.m && fR(0), 0 == tR && yR.y + uR > yR.u && fR(0);
-        const ZR = 1 == tR ? 4 : 3 + uR;
-        if (RR < ZR) {
-          this.needed = ZR;
+        const Qr = Sr[Zr.b],
+          Wr = Qr >> 1 & 3;
+        3 == Wr && Er(2);
+        const ar = Qr >> 3 | Sr[Zr.b + 1] << 5 | Sr[Zr.b + 2] << 13;
+        ar > Zr.m && Er(0), 0 == Wr && Zr.y + ar > Zr.u && Er(0);
+        const jr = 1 == Wr ? 4 : 3 + ar;
+        if (rr < jr) {
+          this.needed = jr;
           break
         }
-        if (BR(JR, yR, yR.w) || fR(5), yR.e = yR.y, (yR.y > yR.u || yR.l && yR.y != yR.u) && fR(0), yR.l) {
+        if (Tr(Sr, Zr, Zr.w) || Er(5), Zr.e = Zr.y, (Zr.y > Zr.u || Zr.l && Zr.y != Zr.u) && Er(0), Zr.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = yR.y;
-      const tR = JR.subarray(yR.b);
-      this.parts = tR.length ? [tR] : [], this.Qq = tR.length, yR.b = 0
+      this.decoded = Zr.y;
+      const Wr = Sr.subarray(Zr.b);
+      this.parts = Wr.length ? [Wr] : [], this.wI = Wr.length, Zr.b = 0
     }
   }
-  class pR {
+  class Or {
     post;
     href = "";
-    VK = null;
+    Ix = null;
     given = 0;
     stopped = !1;
-    constructor(RR) {
-      this.post = RR
+    constructor(rr) {
+      this.post = rr
     }
-    take(JR) {
+    take(Sr) {
       if (!this.stopped) try {
-        this.answer(JR)
-      } catch (GR) {
-        this.stop(GR instanceof RangeError ? `out of memory decoding ${this.href}: ${RR(GR)}` : `${this.href} did not decode: ${RR(GR)}`)
+        this.answer(Sr)
+      } catch (Qr) {
+        this.stop(Qr instanceof RangeError ? `out of memory decoding ${this.href}: ${rr(Qr)}` : `${this.href} did not decode: ${rr(Qr)}`)
       }
     }
-    answer(RR) {
-      if (null === this.VK) {
-        const [JR, GR] = RR;
-        return this.href = JR, void(this.VK = new lR(GR))
+    answer(rr) {
+      if (null === this.Ix) {
+        const [Sr, Qr] = rr;
+        return this.href = Sr, void(this.Ix = new vr(Qr))
       }
-      if (null === RR) return void this.stop(`${this.href} ended before its module did`);
-      const JR = this.VK;
-      JR.push(RR);
+      if (null === rr) return void this.stop(`${this.href} ended before its module did`);
+      const Sr = this.Ix;
+      Sr.push(rr);
       const {
-        output: GR,
-        decoded: yR
-      } = JR;
-      if (null !== GR && yR > this.given) {
-        const RR = GR.slice(this.given, yR).buffer;
-        this.given = yR, this.post(RR, [RR])
+        output: Qr,
+        decoded: Zr
+      } = Sr;
+      if (null !== Qr && Zr > this.given) {
+        const rr = Qr.slice(this.given, Zr).buffer;
+        this.given = Zr, this.post(rr, [rr])
       }
-      JR.done && this.stop(!0)
+      Sr.done && this.stop(!0)
     }
-    stop(RR) {
-      this.stopped = !0, this.post(RR)
+    stop(rr) {
+      this.stopped = !0, this.post(rr)
     }
   }
-  const gR = globalThis.WorkerGlobalScope;
-  if (void 0 !== gR && globalThis instanceof gR) {
-    const RR = globalThis,
-      JR = new pR((function(JR) {
-        let GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        RR.postMessage(JR, GR)
+  const Lr = globalThis.WorkerGlobalScope;
+  if (void 0 !== Lr && globalThis instanceof Lr) {
+    const rr = globalThis,
+      Sr = new Or((function(Sr) {
+        let Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        rr.postMessage(Sr, Qr)
       }));
-    RR.addEventListener("message", (RR => {
+    rr.addEventListener("message", (rr => {
       let {
-        data: GR
-      } = RR;
-      JR.take(GR)
+        data: Qr
+      } = rr;
+      Sr.take(Qr)
     }))
   }
 })();

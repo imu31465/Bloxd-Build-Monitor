@@ -1,203 +1,203 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  7709: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => qR
+  7539: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ir
     });
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(1270),
-      ZR = GR(1378);
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(1251),
+      jr = Qr(1338);
 
-    function qR(RR) {
+    function Ir(rr) {
       let {
-        item: JR,
-        className: GR
-      } = RR;
+        item: Sr,
+        className: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, uR.A)();
-      return null === JR.renderId || JR.previewsOutdated ? (0, ZR.jsx)("div", {
-        className: tR()("ShaderPackPreviewsNotice", GR),
-        children: (0, ZR.jsx)("span", {
-          children: yR(null === JR.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: Zr
+      } = (0, ar.E)();
+      return null === Sr.renderId || Sr.previewsOutdated ? (0, jr.jsx)("div", {
+        className: Wr()("ShaderPackPreviewsNotice", Qr),
+        children: (0, jr.jsx)("span", {
+          children: Zr(null === Sr.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  7725: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => fR
+  7554: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Er
     });
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(7702),
-      ZR = GR(1270),
-      qR = GR(7697),
-      iR = GR(1378);
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(7533),
+      jr = Qr(1251),
+      Ir = Qr(7526),
+      fr = Qr(1338);
 
-    function fR(RR) {
+    function Er(rr) {
       let {
-        selected: JR,
-        onSelect: GR,
-        imageUrl: yR
-      } = RR;
+        selected: Sr,
+        onSelect: Qr,
+        imageUrl: Zr
+      } = rr;
       const {
-        t: fR
-      } = (0, ZR.A)();
-      return (0, iR.jsx)("div", {
+        t: Er
+      } = (0, jr.E)();
+      return (0, fr.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: uR.B.map((RR => {
-          const uR = yR(RR);
-          return (0, iR.jsxs)("button", {
+        children: ar.D.map((rr => {
+          const ar = Zr(rr);
+          return (0, fr.jsxs)("button", {
             type: "button",
-            "aria-pressed": RR === JR,
-            className: tR()("ShaderPackViewOption", {
-              Selected: RR === JR
+            "aria-pressed": rr === Sr,
+            className: Wr()("ShaderPackViewOption", {
+              Selected: rr === Sr
             }),
             onClick: () => {
-              GR(RR)
+              Qr(rr)
             },
-            children: [null !== uR && (0, iR.jsx)("img", {
-              src: uR,
+            children: [null !== ar && (0, fr.jsx)("img", {
+              src: ar,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, iR.jsx)("span", {
+            }), (0, fr.jsx)("span", {
               className: "SmallTextBold",
-              children: fR(qR.hb[RR])
+              children: Er(Ir.eb[rr])
             })]
-          }, RR)
+          }, rr)
         }))
       })
     }
   },
-  7714: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => wR,
-      e: () => rR,
-      h: () => KR,
-      k: () => eR
+  7541: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => mr,
+      f: () => Nr,
+      i: () => xr,
+      l: () => Ur
     });
-    var yR = GR(66),
-      tR = GR(7702),
-      uR = GR(1647),
-      ZR = GR(7697),
-      qR = GR(7717),
-      iR = GR(1196);
-    const fR = "shaderPackListingView",
-      VR = "shaderPackListingFilterOpen";
+    var Zr = Qr(72),
+      Wr = Qr(7533),
+      ar = Qr(1629),
+      jr = Qr(7526),
+      Ir = Qr(7550),
+      fr = Qr(1181);
+    const Er = "shaderPackListingView",
+      pr = "shaderPackListingFilterOpen";
 
-    function KR() {
-      var RR;
-      const [JR, GR] = (0, qR.e)(fR, tR.B[0]);
-      return [null !== (RR = tR.B.find((RR => RR === JR))) && void 0 !== RR ? RR : tR.B[0], GR]
+    function xr() {
+      var rr;
+      const [Sr, Qr] = (0, Ir.e)(Er, Wr.D[0]);
+      return [null !== (rr = Wr.D.find((rr => rr === Sr))) && void 0 !== rr ? rr : Wr.D[0], Qr]
     }
 
-    function wR() {
-      (0, yR.useEffect)((() => () => {
-        window.location.pathname.startsWith(ZR.Z) || (0, ZR.p)()
+    function mr() {
+      (0, Zr.useEffect)((() => () => {
+        window.location.pathname.startsWith(jr.X) || (0, jr.l)()
       }), [])
     }
 
-    function rR() {
-      return (0, qR.e)(VR, !1)
+    function Nr() {
+      return (0, Ir.e)(pr, !1)
     }
 
-    function eR() {
+    function Ur() {
       const {
-        userContext: RR,
-        isUserContextUpdating: JR
-      } = (0, iR.d)(), [GR, tR] = (0, yR.useState)(null), ZR = (0, yR.useRef)(new Set);
+        userContext: rr,
+        isUserContextUpdating: Sr
+      } = (0, fr.c)(), [Qr, Wr] = (0, Zr.useState)(null), jr = (0, Zr.useRef)(new Set);
 
-      function qR(RR, JR) {
-        tR((GR => {
-          const yR = new Set(GR);
-          return JR ? yR.add(RR) : yR.delete(RR), yR
+      function Ir(rr, Sr) {
+        Wr((Qr => {
+          const Zr = new Set(Qr);
+          return Sr ? Zr.add(rr) : Zr.delete(rr), Zr
         }))
       }
-      return (0, yR.useEffect)((() => {
-        if (JR) return;
-        let GR = !1;
-        return uR.c.getFavouriteShaderPacks(RR).then((RR => {
-          GR || tR(new Set(RR))
-        })).catch((RR => {
-          console.error("Failed to get favourite shader packs", RR), GR || tR(new Set)
+      return (0, Zr.useEffect)((() => {
+        if (Sr) return;
+        let Qr = !1;
+        return ar.c.getFavouriteShaderPacks(rr).then((rr => {
+          Qr || Wr(new Set(rr))
+        })).catch((rr => {
+          console.error("Failed to get favourite shader packs", rr), Qr || Wr(new Set)
         })), () => {
-          GR = !0
+          Qr = !0
         }
-      }), [RR, JR]), {
-        isFavourite: RR => null === GR ? null : GR.has(RR),
-        toggle: function(JR) {
-          if (null === GR || ZR.current.has(JR)) return;
-          ZR.current.add(JR);
-          const yR = !GR.has(JR);
-          qR(JR, yR), (yR ? uR.c.favouriteShaderPack(RR, JR) : uR.c.unfavouriteShaderPack(RR, JR)).catch((RR => {
-            console.error("Failed to change a favourite shader pack", RR), qR(JR, !yR)
+      }), [rr, Sr]), {
+        isFavourite: rr => null === Qr ? null : Qr.has(rr),
+        toggle: function(Sr) {
+          if (null === Qr || jr.current.has(Sr)) return;
+          jr.current.add(Sr);
+          const Zr = !Qr.has(Sr);
+          Ir(Sr, Zr), (Zr ? ar.c.favouriteShaderPack(rr, Sr) : ar.c.unfavouriteShaderPack(rr, Sr)).catch((rr => {
+            console.error("Failed to change a favourite shader pack", rr), Ir(Sr, !Zr)
           })).finally((() => {
-            ZR.current.delete(JR)
+            jr.current.delete(Sr)
           }))
         }
       }
     }
   },
-  7697: (RR, JR, GR) => {
-    GR.d(JR, {
-      B: () => xR,
-      F: () => IR,
-      I: () => eR,
-      K: () => nR,
-      M: () => gR,
-      Q: () => VR,
-      R: () => vR,
-      T: () => aR,
-      V: () => PR,
-      W: () => oR,
-      Z: () => ZR,
-      _: () => cR,
-      ab: () => iR,
-      bb: () => qR,
-      db: () => DR,
-      e: () => UR,
-      h: () => lR,
-      hb: () => HR,
-      jb: () => WR,
-      kb: () => bR,
-      l: () => LR,
-      p: () => wR,
-      s: () => KR,
-      u: () => OR,
-      x: () => rR
+  7526: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      A: () => Ur,
+      B: () => zr,
+      F: () => Lr,
+      I: () => pr,
+      M: () => Xr,
+      Q: () => tr,
+      R: () => Gr,
+      V: () => Cr,
+      X: () => jr,
+      Z: () => Mr,
+      _: () => fr,
+      bb: () => Ir,
+      cb: () => Rr,
+      d: () => Yr,
+      eb: () => gr,
+      gb: () => nr,
+      h: () => vr,
+      i: () => hr,
+      kb: () => lr,
+      l: () => mr,
+      n: () => xr,
+      p: () => Pr,
+      t: () => Nr,
+      v: () => Hr,
+      z: () => kr
     });
-    var yR = GR(7702),
-      tR = GR(163),
-      uR = GR(5368);
-    const ZR = "/shader-packs",
-      qR = `${ZR}/publish`;
+    var Zr = Qr(7533),
+      Wr = Qr(161),
+      ar = Qr(5323);
+    const jr = "/shader-packs",
+      Ir = `${jr}/publish`;
 
-    function iR(RR) {
-      return `${ZR}/${encodeURIComponent(RR)}`
+    function fr(rr) {
+      return `${jr}/${encodeURIComponent(rr)}`
     }
-    let fR = null;
+    let Er = null;
 
-    function VR(RR) {
-      fR = RR
-    }
-
-    function KR() {
-      return fR
+    function pr(rr) {
+      Er = rr
     }
 
-    function wR() {
-      fR = null
+    function xr() {
+      return Er
     }
 
-    function rR(RR) {
-      return RR.playerHasRank("developer") || RR.playerHasRank("admin")
+    function mr() {
+      Er = null
     }
-    const eR = ["terrain", "water", "models", "sunShadows", "strict"],
-      aR = {
+
+    function Nr(rr) {
+      return rr.playerHasRank("developer") || rr.playerHasRank("admin")
+    }
+    const Ur = ["terrain", "water", "models", "sunShadows", "strict"],
+      tr = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function LR(RR, JR) {
-      return RR.withFeatures.includes(JR) ? "with" : RR.withoutFeatures.includes(JR) ? "without" : null
+    function hr(rr, Sr) {
+      return rr.withFeatures.includes(Sr) ? "with" : rr.withoutFeatures.includes(Sr) ? "without" : null
     }
 
-    function nR(RR) {
-      return null === RR ? "with" : "with" === RR ? "without" : null
+    function zr(rr) {
+      return null === rr ? "with" : "with" === rr ? "without" : null
     }
 
-    function UR(RR) {
-      return "with" === RR ? "only" : null === RR ? "include" : void 0
+    function Yr(rr) {
+      return "with" === rr ? "only" : null === rr ? "include" : void 0
     }
 
-    function WR(RR, JR) {
-      const GR = LR(RR, JR),
-        yR = RR => RR.filter((RR => RR !== JR));
+    function nr(rr, Sr) {
+      const Qr = hr(rr, Sr),
+        Zr = rr => rr.filter((rr => rr !== Sr));
       return {
-        withFeatures: null === GR ? [...RR.withFeatures, JR] : yR(RR.withFeatures),
-        withoutFeatures: "with" === GR ? [...RR.withoutFeatures, JR] : yR(RR.withoutFeatures)
+        withFeatures: null === Qr ? [...rr.withFeatures, Sr] : Zr(rr.withFeatures),
+        withoutFeatures: "with" === Qr ? [...rr.withoutFeatures, Sr] : Zr(rr.withoutFeatures)
       }
     }
-    const AR = "section",
-      CR = "sort",
-      XR = "filters",
-      MR = "q",
-      BR = "banned",
-      lR = "popular",
-      pR = "strict";
+    const er = "section",
+      Kr = "sort",
+      yr = "filters",
+      Br = "q",
+      Tr = "banned",
+      vr = "popular",
+      Or = "strict";
 
-    function gR(RR) {
-      var JR, GR, tR;
-      const ZR = RR.get(AR),
-        qR = (null !== (JR = RR.get(XR)) && void 0 !== JR ? JR : pR).split(","),
-        iR = RR.get(BR);
+    function Lr(rr) {
+      var Sr, Qr, Wr;
+      const jr = rr.get(er),
+        Ir = (null !== (Sr = rr.get(yr)) && void 0 !== Sr ? Sr : Or).split(","),
+        fr = rr.get(Tr);
       return {
-        section: "favourites" === ZR || "mine" === ZR ? ZR : "explore",
-        sort: null !== (GR = yR.v.find((JR => JR === RR.get(CR)))) && void 0 !== GR ? GR : lR,
-        withFeatures: eR.filter((RR => qR.includes(RR) && !qR.includes(`-${RR}`))),
-        withoutFeatures: eR.filter((RR => qR.includes(`-${RR}`))),
-        searchQuery: (null === (tR = RR.get(MR)) || void 0 === tR ? void 0 : tR.slice(0, yR.E)) || null,
-        pageNumber: (0, uR.g)(RR.get(uR.c)),
-        banned: "only" === iR ? "with" : "include" === iR ? null : "without"
+        section: "favourites" === jr || "mine" === jr ? jr : "explore",
+        sort: null !== (Qr = Zr.w.find((Sr => Sr === rr.get(Kr)))) && void 0 !== Qr ? Qr : vr,
+        withFeatures: Ur.filter((rr => Ir.includes(rr) && !Ir.includes(`-${rr}`))),
+        withoutFeatures: Ur.filter((rr => Ir.includes(`-${rr}`))),
+        searchQuery: (null === (Wr = rr.get(Br)) || void 0 === Wr ? void 0 : Wr.slice(0, Zr.I)) || null,
+        pageNumber: (0, ar.c)(rr.get(ar.b)),
+        banned: "only" === fr ? "with" : "include" === fr ? null : "without"
       }
     }
 
-    function bR(RR, JR) {
-      var GR;
-      const yR = NR(JR);
-      (0, uR.h)(RR, AR, "explore" === JR.section ? null : JR.section), (0, uR.h)(RR, CR, JR.sort === lR ? null : JR.sort), (0, uR.h)(RR, XR, yR === pR ? null : yR), (0, uR.h)(RR, MR, JR.searchQuery), (0, uR.h)(RR, BR, null !== (GR = UR(JR.banned)) && void 0 !== GR ? GR : null), (0, uR.l)(RR, JR.pageNumber)
+    function lr(rr, Sr) {
+      var Qr;
+      const Zr = qr(Sr);
+      (0, ar.g)(rr, er, "explore" === Sr.section ? null : Sr.section), (0, ar.g)(rr, Kr, Sr.sort === vr ? null : Sr.sort), (0, ar.g)(rr, yr, Zr === Or ? null : Zr), (0, ar.g)(rr, Br, Sr.searchQuery), (0, ar.g)(rr, Tr, null !== (Qr = Yr(Sr.banned)) && void 0 !== Qr ? Qr : null), (0, ar.j)(rr, Sr.pageNumber)
     }
 
-    function vR(RR) {
-      const JR = new URLSearchParams;
-      return bR(JR, {
+    function Xr(rr) {
+      const Sr = new URLSearchParams;
+      return lr(Sr, {
         section: "explore",
-        sort: lR,
-        withFeatures: "strict" === RR ? [RR] : [RR, "strict"],
+        sort: vr,
+        withFeatures: "strict" === rr ? [rr] : [rr, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${ZR}?${JR.toString()}`
+      }), `${jr}?${Sr.toString()}`
     }
 
-    function OR(RR) {
-      return NR(RR) === pR
+    function Pr(rr) {
+      return qr(rr) === Or
     }
 
-    function xR(RR) {
-      return null !== RR.searchQuery || "with" === RR.banned || NR(RR) !== pR
+    function Hr(rr) {
+      return null !== rr.searchQuery || "with" === rr.banned || qr(rr) !== Or
     }
 
-    function NR(RR) {
-      return eR.flatMap((JR => {
-        const GR = LR(RR, JR);
-        return "with" === GR ? [JR] : "without" === GR ? [`-${JR}`] : []
+    function qr(rr) {
+      return Ur.flatMap((Sr => {
+        const Qr = hr(rr, Sr);
+        return "with" === Qr ? [Sr] : "without" === Qr ? [`-${Sr}`] : []
       })).join(",")
     }
-    const DR = {
+    const Rr = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      HR = {
+      gr = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function oR(RR) {
-      return Math.round(100 * Math.max(0, 1 - 1 / RR))
+    function Cr(rr) {
+      return Math.round(100 * Math.max(0, 1 - 1 / rr))
     }
 
-    function cR(RR, JR, GR, tR) {
-      const uR = [];
-      RR.isBanned && uR.push({
+    function Mr(rr, Sr, Qr, Wr) {
+      const ar = [];
+      rr.isBanned && ar.push({
         tone: "warning",
-        text: tR("shaderPackListing:ownerBanned"),
+        text: Wr("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: ZR
-      } = RR;
-      if (null === RR.brokenError || ZR && !ZR.error || uR.push({
+        pending: jr
+      } = rr;
+      if (null === rr.brokenError || jr && !jr.error || ar.push({
           tone: "warning",
-          text: tR("shaderPackListing:ownerBroken"),
-          detail: RR.brokenError
-        }), null !== ZR && void 0 !== ZR && ZR.error) uR.push({
+          text: Wr("shaderPackListing:ownerBroken"),
+          detail: rr.brokenError
+        }), null !== jr && void 0 !== jr && jr.error) ar.push({
         tone: "warning",
-        text: tR(JR ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, yR.n)(ZR.error) ? null : ZR.error
+        text: Wr(Sr ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Zr.l)(jr.error) ? null : jr.error
       });
-      else if (ZR) {
-        const RR = null === ZR.renderNotBefore ? 0 : ZR.renderNotBefore - GR,
-          yR = String(Math.ceil(RR / 6e4)),
-          qR = tR(JR ? RR > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : RR > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: yR
+      else if (jr) {
+        const rr = null === jr.renderNotBefore ? 0 : jr.renderNotBefore - Qr,
+          Zr = String(Math.ceil(rr / 6e4)),
+          Ir = Wr(Sr ? rr > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : rr > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Zr
           });
-        uR.push({
+        ar.push({
           tone: "info",
-          text: qR,
+          text: Ir,
           detail: null
         })
       }
-      return RR.listed || uR.push({
+      return rr.listed || ar.push({
         tone: "info",
-        text: tR("shaderPackListing:ownerUnlisted"),
+        text: Wr("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), uR
+      }), ar
     }
 
-    function PR(RR) {
-      return Math.max(1, Math.round(RR / 1024))
+    function Gr(rr) {
+      return Math.max(1, Math.round(rr / 1024))
     }
 
-    function IR(RR, JR, GR) {
-      return RR instanceof tR.d && RR.errorMessageForUser ? RR.errorMessageForUser : JR(GR)
+    function kr(rr, Sr, Qr) {
+      return rr instanceof Wr.b && rr.errorMessageForUser ? rr.errorMessageForUser : Sr(Qr)
     }
   },
-  7717: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  7550: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar
     });
-    var yR = GR(66),
-      tR = GR(46);
+    var Zr = Qr(72),
+      Wr = Qr(43);
 
-    function uR(RR, JR) {
-      var GR;
-      const [uR, ZR] = (0, yR.useState)(null !== (GR = tR.i.getItem(RR)) && void 0 !== GR ? GR : JR);
-      return [uR, JR => {
-        tR.i.setItem(RR, JR), ZR(JR)
+    function ar(rr, Sr) {
+      var Qr;
+      const [ar, jr] = (0, Zr.useState)(null !== (Qr = Wr.j.getItem(rr)) && void 0 !== Qr ? Qr : Sr);
+      return [ar, Sr => {
+        Wr.j.setItem(rr, Sr), jr(Sr)
       }]
     }
   },
-  7702: (RR, JR, GR) => {
-    GR.d(JR, {
-      B: () => yR,
-      C: () => wR,
-      E: () => VR,
-      I: () => AR,
-      M: () => KR,
-      N: () => fR,
-      d: () => eR,
-      e: () => LR,
-      i: () => aR,
-      j: () => rR,
-      n: () => WR,
-      p: () => XR,
-      q: () => iR,
-      s: () => tR,
-      u: () => CR,
-      v: () => uR,
-      w: () => qR,
-      z: () => ZR
+  7533: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      C: () => jr,
+      D: () => Zr,
+      E: () => mr,
+      I: () => pr,
+      J: () => er,
+      K: () => xr,
+      L: () => Er,
+      c: () => Ur,
+      g: () => hr,
+      i: () => tr,
+      j: () => Nr,
+      l: () => nr,
+      o: () => yr,
+      q: () => fr,
+      r: () => Wr,
+      u: () => Kr,
+      w: () => ar,
+      z: () => Ir
     });
-    const yR = ["forest", "desert", "water", "night", "cave"];
-    const tR = {
+    const Zr = ["forest", "desert", "water", "night", "cave"];
+    const Wr = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      uR = ["popular", "updated", "newest"],
-      ZR = 3,
-      qR = 32,
-      iR = 300;
+      ar = ["popular", "updated", "newest"],
+      jr = 3,
+      Ir = 32,
+      fr = 300;
 
-    function fR(RR, JR) {
-      return RR.slice(0, JR).replace(/[\uD800-\uDBFF]$/, "")
+    function Er(rr, Sr) {
+      return rr.slice(0, Sr).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const VR = 64,
-      KR = 512,
-      wR = 18e5;
+    const pr = 64,
+      xr = 512,
+      mr = 18e5;
 
-    function rR(RR) {
-      const JR = RR,
-        GR = null === JR || void 0 === JR ? void 0 : JR.files;
-      return "number" === typeof(null === JR || void 0 === JR ? void 0 : JR.apiVersion) && "string" === typeof JR.name && (null === JR.author || "string" === typeof JR.author) && (void 0 === JR.keepCircleShadows || "boolean" === typeof JR.keepCircleShadows) && "object" === typeof GR && null !== GR && Object.values(GR).every((RR => "string" === typeof RR))
+    function Nr(rr) {
+      const Sr = rr,
+        Qr = null === Sr || void 0 === Sr ? void 0 : Sr.files;
+      return "number" === typeof(null === Sr || void 0 === Sr ? void 0 : Sr.apiVersion) && "string" === typeof Sr.name && (null === Sr.author || "string" === typeof Sr.author) && (void 0 === Sr.keepCircleShadows || "boolean" === typeof Sr.keepCircleShadows) && "object" === typeof Qr && null !== Qr && Object.values(Qr).every((rr => "string" === typeof rr))
     }
-    const eR = "Bloxdhub",
-      aR = "https://bloxdhub.com/shaders";
+    const Ur = "Bloxdhub",
+      tr = "https://bloxdhub.com/shaders";
 
-    function LR(RR) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(RR)}`
+    function hr(rr) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(rr)}`
     }
-    const nR = "Screenshot generation failed.",
-      UR = "Its screenshots couldn't be generated:";
+    const zr = "Screenshot generation failed.",
+      Yr = "Its screenshots couldn't be generated:";
 
-    function WR(RR) {
-      var JR;
-      return RR === nR || null !== (JR = null === RR || void 0 === RR ? void 0 : RR.startsWith(UR)) && void 0 !== JR && JR
-    }
-
-    function AR(RR, JR) {
-      return `shaderPacks/${RR}/${JR}.json`
+    function nr(rr) {
+      var Sr;
+      return rr === zr || null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.startsWith(Yr)) && void 0 !== Sr && Sr
     }
 
-    function CR(RR, JR, GR, yR) {
-      return null === JR.renderId ? XR(RR, JR.baselineVersion, GR, yR) : `${RR}/${function(RR,JR,GR,yR){return`shaderPacks/${RR}/${JR}/${GR}-${yR}.webp`}(JR.packId,JR.renderId,GR,yR)}`
+    function er(rr, Sr) {
+      return `shaderPacks/${rr}/${Sr}.json`
     }
 
-    function XR(RR, JR, GR, yR) {
-      return `${RR}/${function(RR,JR,GR){return`shaderPacks/baseline/${RR}/${JR}-${GR}.webp`}(JR,GR,yR)}`
+    function Kr(rr, Sr, Qr, Zr) {
+      return null === Sr.renderId ? yr(rr, Sr.baselineVersion, Qr, Zr) : `${rr}/${function(rr,Sr,Qr,Zr){return`shaderPacks/${rr}/${Sr}/${Qr}-${Zr}.webp`}(Sr.packId,Sr.renderId,Qr,Zr)}`
+    }
+
+    function yr(rr, Sr, Qr, Zr) {
+      return `${rr}/${function(rr,Sr,Qr){return`shaderPacks/baseline/${rr}/${Sr}-${Qr}.webp`}(Sr,Qr,Zr)}`
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

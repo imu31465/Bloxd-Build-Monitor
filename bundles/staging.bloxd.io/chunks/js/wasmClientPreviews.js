@@ -1,462 +1,462 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  40429: (RR, JR, GR) => {
-    function yR(RR) {
-      return void 0 === RR ? void 0 : [RR[0], RR[1], RR[2]]
+  40728: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return void 0 === rr ? void 0 : [rr[0], rr[1], rr[2]]
     }
 
-    function tR(RR) {
-      const JR = RR.particles;
+    function Wr(rr) {
+      const Sr = rr.particles;
       return {
         opts: {
-          texture: JR.texture,
-          hK: JR.hK,
-          minLifeTime: JR.minLifeTime,
-          maxLifeTime: JR.maxLifeTime,
-          minSize: JR.minSize,
-          maxSize: JR.maxSize,
-          minEmitPower: JR.minEmitPower,
-          maxEmitPower: JR.maxEmitPower,
-          emitRate: JR.emitRate,
-          gravity: yR(JR.gravity),
-          dir1: yR(JR.dir1),
-          dir2: yR(JR.dir2),
-          colorGradients: JR.colorGradients,
-          blendMode: JR.blendMode
+          texture: Sr.texture,
+          sx: Sr.sx,
+          minLifeTime: Sr.minLifeTime,
+          maxLifeTime: Sr.maxLifeTime,
+          minSize: Sr.minSize,
+          maxSize: Sr.maxSize,
+          minEmitPower: Sr.minEmitPower,
+          maxEmitPower: Sr.maxEmitPower,
+          emitRate: Sr.emitRate,
+          gravity: Zr(Sr.gravity),
+          dir1: Zr(Sr.dir1),
+          dir2: Zr(Sr.dir2),
+          colorGradients: Sr.colorGradients,
+          blendMode: Sr.blendMode
         },
-        half: [JR.width / 2, JR.height / 2, JR.depth / 2]
+        half: [Sr.width / 2, Sr.height / 2, Sr.depth / 2]
       }
     }
-    GR.d(JR, {
-      c: () => tR
+    Qr.d(Sr, {
+      e: () => Wr
     })
   },
-  40393: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR,
-      d: () => fR,
-      e: () => iR,
-      i: () => ZR
+  40699: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar,
+      h: () => Er,
+      i: () => fr,
+      l: () => jr
     });
-    var yR = GR(216);
-    const tR = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      uR = "PetRoot";
-    let ZR = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      qR = tR;
+    var Zr = Qr(215);
+    const Wr = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      ar = "PetRoot";
+    let jr = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      Ir = Wr;
     new Map, new Map;
 
-    function iR(RR) {
-      var JR;
-      return null !== (JR = (0, yR.b)(ZR, RR)) && void 0 !== JR ? JR : null
+    function fr(rr) {
+      var Sr;
+      return null !== (Sr = (0, Zr.b)(jr, rr)) && void 0 !== Sr ? Sr : null
     }
 
-    function fR(RR) {
-      var JR;
-      return null !== (JR = (0, yR.b)(qR, RR)) && void 0 !== JR ? JR : null
+    function Er(rr) {
+      var Sr;
+      return null !== (Sr = (0, Zr.b)(Ir, rr)) && void 0 !== Sr ? Sr : null
     }
   },
-  39862: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR,
-      f: () => uR
+  40197: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Wr,
+      g: () => ar
     });
-    const yR = new WeakMap;
+    const Zr = new WeakMap;
 
-    function tR(RR, JR) {
-      return yR.set(RR, JR), RR
+    function Wr(rr, Sr) {
+      return Zr.set(rr, Sr), rr
     }
 
-    function uR(RR) {
-      var JR;
-      return null !== (JR = yR.get(RR)) && void 0 !== JR ? JR : null
+    function ar(rr) {
+      var Sr;
+      return null !== (Sr = Zr.get(rr)) && void 0 !== Sr ? Sr : null
     }
   },
-  42736: (RR, JR, GR) => {
-    function yR(RR, JR, GR) {
-      return new Promise((yR => {
-        const tR = setTimeout((() => {
-            uR(), yR(null)
-          }), GR),
-          uR = JR((() => {
-            clearTimeout(tR);
-            const JR = RR();
-            yR(null === JR ? null : function(RR) {
-              if (0 === RR.width || 0 === RR.height) return null;
-              const JR = document.createElement("canvas");
-              JR.width = RR.width, JR.height = RR.height;
-              const GR = JR.getContext("2d");
-              return GR ? (GR.drawImage(RR, 0, 0), JR) : null
-            }(JR))
+  43054: (rr, Sr, Qr) => {
+    function Zr(rr, Sr, Qr) {
+      return new Promise((Zr => {
+        const Wr = setTimeout((() => {
+            ar(), Zr(null)
+          }), Qr),
+          ar = Sr((() => {
+            clearTimeout(Wr);
+            const Sr = rr();
+            Zr(null === Sr ? null : function(rr) {
+              if (0 === rr.width || 0 === rr.height) return null;
+              const Sr = document.createElement("canvas");
+              Sr.width = rr.width, Sr.height = rr.height;
+              const Qr = Sr.getContext("2d");
+              return Qr ? (Qr.drawImage(rr, 0, 0), Sr) : null
+            }(Sr))
           }))
       }))
     }
-    GR.d(JR, {
-      e: () => yR
+    Qr.d(Sr, {
+      b: () => Zr
     })
   },
-  37238: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  37596: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar
     });
-    const yR = 4e5,
-      tR = 2;
+    const Zr = 4e5,
+      Wr = 2;
 
-    function uR(RR, JR, GR) {
-      let [uR, ZR] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [RR, JR], qR = Math.min(Number.isFinite(GR) && GR > 0 ? GR : 1, tR);
-      const iR = Math.max(0, uR, RR) * Math.max(0, ZR, JR) * qR * qR;
-      return iR > yR && (qR *= Math.sqrt(yR / iR)), [Math.max(1, Math.floor(Math.max(0, RR) * qR)), Math.max(1, Math.floor(Math.max(0, JR) * qR))]
+    function ar(rr, Sr, Qr) {
+      let [ar, jr] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [rr, Sr], Ir = Math.min(Number.isFinite(Qr) && Qr > 0 ? Qr : 1, Wr);
+      const fr = Math.max(0, ar, rr) * Math.max(0, jr, Sr) * Ir * Ir;
+      return fr > Zr && (Ir *= Math.sqrt(Zr / fr)), [Math.max(1, Math.floor(Math.max(0, rr) * Ir)), Math.max(1, Math.floor(Math.max(0, Sr) * Ir))]
     }
   },
-  35176: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => yR,
-      i: () => VR
+  35490: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr,
+      f: () => pr
     });
-    const yR = .01,
-      tR = .08,
-      uR = .01,
-      ZR = 5,
-      qR = 100,
-      iR = 40,
-      fR = 800;
+    const Zr = .01,
+      Wr = .08,
+      ar = .01,
+      jr = 5,
+      Ir = 100,
+      fr = 40,
+      Er = 800;
 
-    function VR(RR) {
+    function pr(rr) {
       const {
-        canvas: JR
-      } = RR;
-      let GR = null;
-      const VR = RR => {
-          var yR;
-          GR = {
-            pointer: RR.pointerId,
-            x: RR.clientX,
-            y: RR.clientY
-          }, null === (yR = JR.setPointerCapture) || void 0 === yR || yR.call(JR, RR.pointerId)
+        canvas: Sr
+      } = rr;
+      let Qr = null;
+      const pr = rr => {
+          var Zr;
+          Qr = {
+            pointer: rr.pointerId,
+            x: rr.clientX,
+            y: rr.clientY
+          }, null === (Zr = Sr.setPointerCapture) || void 0 === Zr || Zr.call(Sr, rr.pointerId)
         },
-        KR = JR => {
-          var tR;
-          const ZR = RR.orbit;
-          if ((null === (tR = GR) || void 0 === tR ? void 0 : tR.pointer) !== JR.pointerId || null === ZR) return;
-          const qR = JR.clientX - GR.x,
-            iR = JR.clientY - GR.y;
-          GR = {
-            ...GR,
-            x: JR.clientX,
-            y: JR.clientY
-          }, RR.setOrbit({
-            alpha: ZR.alpha - qR * yR,
-            beta: Math.min(Math.PI - uR, Math.max(uR, ZR.beta - iR * yR)),
-            radius: ZR.radius
+        xr = Sr => {
+          var Wr;
+          const jr = rr.orbit;
+          if ((null === (Wr = Qr) || void 0 === Wr ? void 0 : Wr.pointer) !== Sr.pointerId || null === jr) return;
+          const Ir = Sr.clientX - Qr.x,
+            fr = Sr.clientY - Qr.y;
+          Qr = {
+            ...Qr,
+            x: Sr.clientX,
+            y: Sr.clientY
+          }, rr.setOrbit({
+            alpha: jr.alpha - Ir * Zr,
+            beta: Math.min(Math.PI - ar, Math.max(ar, jr.beta - fr * Zr)),
+            radius: jr.radius
           })
         },
-        wR = RR => {
-          var JR;
-          (null === (JR = GR) || void 0 === JR ? void 0 : JR.pointer) === RR.pointerId && (GR = null)
+        mr = rr => {
+          var Sr;
+          (null === (Sr = Qr) || void 0 === Sr ? void 0 : Sr.pointer) === rr.pointerId && (Qr = null)
         },
-        rR = JR => {
-          const GR = RR.orbit;
-          if (null === GR) return;
-          JR.preventDefault();
-          const yR = JR.deltaY * (JR.deltaMode === WheelEvent.DOM_DELTA_LINE ? iR : JR.deltaMode === WheelEvent.DOM_DELTA_PAGE ? fR : 1),
-            uR = Math.min(qR, Math.max(ZR, GR.radius + yR * tR));
-          RR.setOrbit({
-            ...GR,
-            radius: uR
+        Nr = Sr => {
+          const Qr = rr.orbit;
+          if (null === Qr) return;
+          Sr.preventDefault();
+          const Zr = Sr.deltaY * (Sr.deltaMode === WheelEvent.DOM_DELTA_LINE ? fr : Sr.deltaMode === WheelEvent.DOM_DELTA_PAGE ? Er : 1),
+            ar = Math.min(Ir, Math.max(jr, Qr.radius + Zr * Wr));
+          rr.setOrbit({
+            ...Qr,
+            radius: ar
           })
         };
-      return JR.style.touchAction = "none", JR.addEventListener("pointerdown", VR), JR.addEventListener("pointermove", KR), JR.addEventListener("pointerup", wR), JR.addEventListener("pointercancel", wR), JR.addEventListener("wheel", rR, {
+      return Sr.style.touchAction = "none", Sr.addEventListener("pointerdown", pr), Sr.addEventListener("pointermove", xr), Sr.addEventListener("pointerup", mr), Sr.addEventListener("pointercancel", mr), Sr.addEventListener("wheel", Nr, {
         passive: !1
       }), () => {
-        JR.removeEventListener("pointerdown", VR), JR.removeEventListener("pointermove", KR), JR.removeEventListener("pointerup", wR), JR.removeEventListener("pointercancel", wR), JR.removeEventListener("wheel", rR)
+        Sr.removeEventListener("pointerdown", pr), Sr.removeEventListener("pointermove", xr), Sr.removeEventListener("pointerup", mr), Sr.removeEventListener("pointercancel", mr), Sr.removeEventListener("wheel", Nr)
       }
     }
   },
-  45007: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      WasmPreviewHost: () => PJ,
-      pageBuiltInAnimationPack: () => wR,
-      pagePreviews: () => qJ,
-      previewModule: () => hR
+  45305: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      WasmPreviewHost: () => GS,
+      pageBuiltInAnimationPack: () => mr,
+      pagePreviews: () => IS,
+      previewModule: () => ur
     });
-    var yR = GR(2457),
-      tR = GR(688);
-    const uR = "[bloxd-wasm-client]";
+    var Zr = Qr(2398),
+      Wr = Qr(692);
+    const ar = "[bloxd-wasm-client]";
 
-    function ZR(RR) {
-      const JR = {
+    function jr(rr) {
+      const Sr = {
         wasm: "unknown",
-        client: String(tR.d)
+        client: String(Wr.e)
       };
       try {
-        var GR;
-        JR.wasm = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.FK()) && void 0 !== GR ? GR : JR.wasm
+        var Qr;
+        Sr.wasm = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.bx()) && void 0 !== Qr ? Qr : Sr.wasm
       } catch {}
-      return JR
+      return Sr
     }
-    async function qR(RR) {
-      if (RR.length < 2 || 31 !== RR[0] || 139 !== RR[1]) return RR;
+    async function Ir(rr) {
+      if (rr.length < 2 || 31 !== rr[0] || 139 !== rr[1]) return rr;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: JR
-        } = await Promise.resolve().then((() => GR(3968)));
-        return JR(RR)
+          ungzip: Sr
+        } = await Promise.resolve().then((() => Qr(3926)));
+        return Sr(rr)
       }
-      const JR = new Blob([RR]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(JR).arrayBuffer())
+      const Sr = new Blob([rr]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(Sr).arrayBuffer())
     }
 
-    function iR(RR, JR, yR, tR) {
-      Promise.resolve().then((() => GR(42288))).then((GR => {
+    function fr(rr, Sr, Zr, Wr) {
+      Promise.resolve().then((() => Qr(42607))).then((Qr => {
         let {
-          reportDataLoadFailure: uR
-        } = GR;
-        uR(RR, JR, yR, tR)
-      }), (JR => {
-        console.warn(`${uR} ${RR} didn't load, and the report couldn't be sent`, yR.error, JR)
+          reportDataLoadFailure: ar
+        } = Qr;
+        ar(rr, Sr, Zr, Wr)
+      }), (Sr => {
+        console.warn(`${ar} ${rr} didn't load, and the report couldn't be sent`, Zr.error, Sr)
       }))
     }
-    const fR = [3e4, 12e4, 3e5];
-    class VR {
-      constructor(RR) {
-        this.deps = RR, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((RR => {
-          this.resolveSet = RR
+    const Er = [3e4, 12e4, 3e5];
+    class pr {
+      constructor(rr) {
+        this.deps = rr, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((rr => {
+          this.resolveSet = rr
         }))
       }
-      provide(RR) {
-        return this.loading ??= this.load(RR), this.loading
+      provide(rr) {
+        return this.loading ??= this.load(rr), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(RR) {
-        const JR = ZR(RR),
-          GR = await async function(RR, JR) {
-            let GR;
+      async load(rr) {
+        const Sr = jr(rr),
+          Qr = await async function(rr, Sr) {
+            let Qr;
             try {
-              GR = await RR()
-            } catch (yR) {
+              Qr = await rr()
+            } catch (Zr) {
               return {
                 stage: "fetch",
-                error: yR
+                error: Zr
               }
             }
             try {
-              return JR(GR) ? null : {
+              return Sr(Qr) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (yR) {
+            } catch (Zr) {
               return {
                 stage: "decode",
-                error: yR
+                error: Zr
               }
             }
-          }((() => this.deps.fetch()), (JR => {
-            const GR = RR.UtR(JR);
-            return GR && this.resolveSet(JR), GR
+          }((() => this.deps.fetch()), (Sr => {
+            const Qr = rr.dZr(Sr);
+            return Qr && this.resolveSet(Sr), Qr
           }));
-        if (null !== GR) {
-          if ("fetch" === GR.stage) {
+        if (null !== Qr) {
+          if ("fetch" === Qr.stage) {
             this.loading = null;
-            const JR = fR[this.retries++];
-            void 0 !== JR && this.deps.later((() => {
-              this.provide(RR)
-            }), JR)
+            const Sr = Er[this.retries++];
+            void 0 !== Sr && this.deps.later((() => {
+              this.provide(rr)
+            }), Sr)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(GR, JR))
+          this.reported || (this.reported = !0, this.deps.onFailed(Qr, Sr))
         }
       }
     }
-    let KR = null;
+    let xr = null;
 
-    function wR() {
-      return KR ??= new VR({
-        fetch: async () => qR(await (0, yR.B)(rR(), {
+    function mr() {
+      return xr ??= new pr({
+        fetch: async () => Ir(await (0, Zr.K)(Nr(), {
           priority: "low"
         })),
-        onFailed: (RR, JR) => {
-          iR("builtInAnimations", rR(), RR, JR)
+        onFailed: (rr, Sr) => {
+          fr("builtInAnimations", Nr(), rr, Sr)
         },
-        later: (RR, JR) => {
-          setTimeout(RR, JR)
+        later: (rr, Sr) => {
+          setTimeout(rr, Sr)
         }
-      }), KR
+      }), xr
     }
 
-    function rR() {
-      return GR(45013)
+    function Nr() {
+      return Qr(45314)
     }
-    var eR = GR(2448),
-      aR = GR(1282),
-      LR = GR(350),
-      nR = GR(342),
-      UR = GR(709),
-      WR = GR(5676),
-      AR = GR(42230),
-      CR = GR(42259),
-      XR = GR(42475),
-      MR = (GR(42265), GR(37232)),
-      BR = GR(42344),
-      lR = GR(42352),
-      pR = GR(42357),
-      gR = GR(42239),
-      bR = GR(42494),
-      vR = GR(42503),
-      OR = GR(42281),
-      xR = GR(42379),
-      NR = GR(42420),
-      DR = GR(42374),
-      HR = GR(42430),
-      oR = GR(42488),
-      cR = GR(37247),
-      PR = GR(37183),
-      IR = GR(2445),
-      mR = GR(37238);
-    const zR = "[bloxd-previews]",
-      SR = 0,
-      jR = 1,
-      dR = 2,
-      ER = 3,
-      YR = 1,
-      kR = 2,
-      QR = 3,
-      FR = 0,
-      TR = 1,
-      sR = 2;
+    var Ur = Qr(2396),
+      tr = Qr(1262),
+      hr = Qr(351),
+      zr = Qr(345),
+      Yr = Qr(712),
+      nr = Qr(5610),
+      er = Qr(42559),
+      Kr = Qr(42585),
+      yr = Qr(42805),
+      Br = (Qr(42589), Qr(37587)),
+      Tr = Qr(42680),
+      vr = Qr(42684),
+      Or = Qr(42691),
+      Lr = Qr(42574),
+      lr = Qr(42820),
+      Xr = Qr(42827),
+      Pr = Qr(42598),
+      Hr = Qr(42715),
+      qr = Qr(42746),
+      Rr = Qr(42707),
+      gr = Qr(42753),
+      Cr = Qr(42816),
+      Mr = Qr(37604),
+      Gr = Qr(37529),
+      kr = Qr(2393),
+      Ar = Qr(37596);
+    const Vr = "[bloxd-previews]",
+      ir = 0,
+      wr = 1,
+      cr = 2,
+      Fr = 3,
+      or = 1,
+      br = 2,
+      Jr = 3,
+      Dr = 0,
+      dr = 1,
+      sr = 2;
 
-    function hR(RR) {
-      const JR = RR,
-        GR = (0, AR.M)(RR),
-        yR = (0, AR.n)(RR);
-      return null !== GR && null !== yR && "function" === typeof JR.WtR && "function" === typeof JR.AtR && "function" === typeof JR.CtR && "function" === typeof JR.ZH ? JR : null
+    function ur(rr) {
+      const Sr = rr,
+        Qr = (0, er.T)(rr),
+        Zr = (0, er.n)(rr);
+      return null !== Qr && null !== Zr && "function" === typeof Sr.sZr && "function" === typeof Sr.uZr && "function" === typeof Sr.rWr && "function" === typeof Sr.uR ? Sr : null
     }
 
-    function RJ() {
-      return GR(45017)
+    function rS() {
+      return Qr(45323)
     }
-    async function JJ(RR, JR, yR) {
-      var tR;
-      let uR = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === RR && (0, OR.D)();
-      const qR = await (0, OR.W)();
-      if (null === qR || (0, AR.o)(qR) || (0, OR.c)()) return;
-      const iR = "webgpu" === qR.backend;
-      if (!iR && "lost" !== RR) return;
-      const fR = iR && (0, nR.m)(qR.adapter, null !== yR && void 0 !== yR ? yR : null, "lost" === RR, uR),
-        VR = null !== (tR = "lost" === RR ? (0, CR.l)((0, eR.F)() ? (0, AR.M)((0, eR.w)()) : null) : void 0) && void 0 !== tR ? tR : JR,
-        KR = iR ? (0, AR.W)(RR, void 0, (0, CR.d)(VR)) : (0, UR.u)() ? null : UR.e;
-      if (null === KR) {
-        (0, OR.t)();
+    async function SS(rr, Sr, Zr) {
+      var Wr;
+      let ar = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === rr && (0, Pr.s)();
+      const Ir = await (0, Pr.H)();
+      if (null === Ir || (0, er.p)(Ir) || (0, Pr.d)()) return;
+      const fr = "webgpu" === Ir.backend;
+      if (!fr && "lost" !== rr) return;
+      const Er = fr && (0, zr.p)(Ir.adapter, null !== Zr && void 0 !== Zr ? Zr : null, "lost" === rr, ar),
+        pr = null !== (Wr = "lost" === rr ? (0, Kr.j)((0, Ur.R)() ? (0, er.T)((0, Ur.z)()) : null) : void 0) && void 0 !== Wr ? Wr : Sr,
+        xr = fr ? (0, er.gb)(rr, void 0, (0, Kr.b)(pr)) : (0, Yr.w)() ? null : Yr.i;
+      if (null === xr) {
+        (0, Pr.l)();
         try {
-          await async function(RR, JR, yR, tR, uR) {
+          await async function(rr, Sr, Zr, Wr, ar) {
             let {
-              restoreLost: qR,
-              adapterRemembered: iR
-            } = uR;
-            const fR = (0, eR.F)(),
+              restoreLost: Ir,
+              adapterRemembered: fr
+            } = ar;
+            const Er = (0, Ur.R)(),
               {
-                flushCrashReports: VR,
-                reportRenderReload: KR
-              } = await Promise.resolve().then((() => GR(42288)));
-            KR(RR.backend, tR, ZR(fR ? (0, eR.w)() : null), {
+                flushCrashReports: pr,
+                reportRenderReload: xr
+              } = await Promise.resolve().then((() => Qr(42607)));
+            xr(rr.backend, Wr, jr(Er ? (0, Ur.z)() : null), {
               from: "home",
-              cause: JR,
-              restoreLost: qR,
-              adapterRemembered: iR,
-              ...GJ(RR, JR, yR)
-            }), await VR(NR.d)
-          }(qR, RR, VR, null !== yR && void 0 !== yR ? yR : "start_failed" === RR ? 0 : 1, {
-            restoreLost: uR,
-            adapterRemembered: fR
+              cause: Sr,
+              restoreLost: Ir,
+              adapterRemembered: fr,
+              ...QS(rr, Sr, Zr)
+            }), await pr(qr.c)
+          }(Ir, rr, pr, null !== Zr && void 0 !== Zr ? Zr : "start_failed" === rr ? 0 : 1, {
+            restoreLost: ar,
+            adapterRemembered: Er
           })
-        } catch (rR) {
-          console.warn(`${zR} ${qR.backend} failed at home (${RR}), and its report couldn't be sent`, rR)
-        }(0, NR.j)()
+        } catch (Nr) {
+          console.warn(`${Vr} ${Ir.backend} failed at home (${rr}), and its report couldn't be sent`, Nr)
+        }(0, qr.h)()
       } else {
-        var wR;
-        const JR = GJ(qR, RR, VR),
-          yR = `${iR?"WebGPU":"WebGL"} failed at home (${RR}${void 0===JR.error?"":`: ${JR.error instanceof Error?JR.error.message:(0,PR.k)(JR.error)}`}) and ${KR}`;
-        console.warn(`${zR} ${yR}: the previews stop`, null !== (wR = JR.error) && void 0 !== wR ? wR : ""), (0, OR.x)({
-          why: yR,
-          webgpu: iR
+        var mr;
+        const Sr = QS(Ir, rr, pr),
+          Zr = `${fr?"WebGPU":"WebGL"} failed at home (${rr}${void 0===Sr.error?"":`: ${Sr.error instanceof Error?Sr.error.message:(0,Gr.l)(Sr.error)}`}) and ${xr}`;
+        console.warn(`${Vr} ${Zr}: the previews stop`, null !== (mr = Sr.error) && void 0 !== mr ? mr : ""), (0, Pr.o)({
+          why: Zr,
+          webgpu: fr
         });
         try {
           const {
-            countRenderLost: yR
-          } = await Promise.resolve().then((() => GR(42288)));
-          yR(RR, JR.error, JR.context)
-        } catch (aR) {
-          console.warn(`${zR} ${qR.backend} failed at home (${RR}), and its count couldn't be sent`, aR)
+            countRenderLost: Zr
+          } = await Promise.resolve().then((() => Qr(42607)));
+          Zr(rr, Sr.error, Sr.context)
+        } catch (tr) {
+          console.warn(`${Vr} ${Ir.backend} failed at home (${rr}), and its count couldn't be sent`, tr)
         }
       }
     }
 
-    function GJ(RR, JR, GR) {
+    function QS(rr, Sr, Qr) {
       let {
-        adapter: yR
-      } = RR;
+        adapter: Zr
+      } = rr;
       return {
-        error: GR,
+        error: Qr,
         context: {
-          adapter: yR,
-          boundAtMs: "start_failed" === JR ? null : (0, OR.Q)(),
-          indirectHangs: (0, OR.H)(),
-          restoresSkipped: (0, OR.S)()
+          adapter: Zr,
+          boundAtMs: "start_failed" === Sr ? null : (0, Pr.D)(),
+          indirectHangs: (0, Pr.t)(),
+          restoresSkipped: (0, Pr.F)()
         }
       }
     }
-    async function yJ(RR) {
-      if (!(0, eR.F)()) {
-        await (null === RR || void 0 === RR ? void 0 : RR("renderer pick", {
+    async function ZS(rr) {
+      if (!(0, Ur.R)()) {
+        await (null === rr || void 0 === rr ? void 0 : rr("renderer pick", {
           longStep: !0
         }));
-        const JR = await (0, OR.W)();
-        if (null === JR || (0, AR.o)(JR)) return null;
-        const GR = await JR.load();
-        if (await (null === RR || void 0 === RR ? void 0 : RR("renderer instantiation", {
+        const Sr = await (0, Pr.H)();
+        if (null === Sr || (0, er.p)(Sr)) return null;
+        const Qr = await Sr.load();
+        if (await (null === rr || void 0 === rr ? void 0 : rr("renderer instantiation", {
             longStep: !0
-          })), await (0, xR.e)(GR), !(0, eR.F)()) return null
+          })), await (0, Hr.e)(Qr), !(0, Ur.R)()) return null
       }
-      return hR((0, eR.w)())
+      return ur((0, Ur.z)())
     }
-    class tJ {
-      constructor(RR, JR, GR, yR, tR, uR) {
-        this.page = RR, this.host = JR, this.id = GR, this.canvas = yR, this.size = tR, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const ZR = {
-            ...uR.images,
-            glbUrl: RR => {
-              var JR;
-              return null !== (JR = this.models.drawnUrl(RR)) && void 0 !== JR ? JR : uR.images.glbUrl(RR)
+    class WS {
+      constructor(rr, Sr, Qr, Zr, Wr, ar) {
+        this.page = rr, this.host = Sr, this.id = Qr, this.canvas = Zr, this.size = Wr, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const jr = {
+            ...ar.images,
+            glbUrl: rr => {
+              var Sr;
+              return null !== (Sr = this.models.drawnUrl(rr)) && void 0 !== Sr ? Sr : ar.images.glbUrl(rr)
             }
           },
-          qR = JR => RR.modelFile(JR);
-        this.images = new XR.f(ZR, (RR => {
-          console.warn(`${zR} image ${RR.key.kind}:${RR.key.index}:${RR.key.word} failed`, RR.error)
+          Ir = Sr => rr.modelFile(Sr);
+        this.images = new yr.g(jr, (rr => {
+          console.warn(`${Vr} image ${rr.key.kind}:${rr.key.index}:${rr.key.word} failed`, rr.error)
         }), {
-          fetchFile: qR,
-          fetchImage: JR => RR.imageFile(JR)
-        }), RR.startModels(), this.models = new BR.e(uR.files, ((JR, GR) => RR.buildModel(JR, GR)), (RR => {
-          console.warn(`${zR} model file ${RR.file} (${RR.url}) failed`, RR.error)
+          fetchFile: Ir,
+          fetchImage: Sr => rr.imageFile(Sr)
+        }), rr.startModels(), this.models = new Tr.j(ar.files, ((Sr, Qr) => rr.buildModel(Sr, Qr)), (rr => {
+          console.warn(`${Vr} model file ${rr.file} (${rr.url}) failed`, rr.error)
         }), {
-          fetchFile: qR,
-          onWritten: (RR, JR) => {
-            this.images.glbWritten(RR, JR)
+          fetchFile: Ir,
+          onWritten: (rr, Sr) => {
+            this.images.glbWritten(rr, Sr)
           },
-          onTaken: (RR, JR) => {
-            this.images.glbTaken(RR, JR)
+          onTaken: (rr, Sr) => {
+            this.images.glbTaken(rr, Sr)
           }
-        }), this.write = (RR, JR, GR) => {
+        }), this.write = (rr, Sr, Qr) => {
           if (this.closed) return !0;
-          if (RR === BR.c) {
-            const RR = new DataView(GR.buffer, GR.byteOffset, pR.e),
-              yR = RR.getUint32(0, !0),
-              tR = RR.getUint32(pR.h, !0),
-              uR = this.page.hostCall(sR, (() => this.host.XtR(this.id, yR, JR, GR.subarray(pR.e))));
-            return this.outcomes.push([tR, uR]), !0
+          if (rr === Tr.d) {
+            const rr = new DataView(Qr.buffer, Qr.byteOffset, Or.c),
+              Zr = rr.getUint32(0, !0),
+              Wr = rr.getUint32(Or.f, !0),
+              ar = this.page.hostCall(sr, (() => this.host.SWr(this.id, Zr, Sr, Qr.subarray(Or.c))));
+            return this.outcomes.push([Wr, ar]), !0
           }
-          return RR === XR.b && (this.page.hostCall(void 0, (() => {
-            this.host.MtR(this.id, GR)
+          return rr === yr.e && (this.page.hostCall(void 0, (() => {
+            this.host.QWr(this.id, Qr)
           })), !0)
         }
       }
@@ -466,94 +466,94 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(RR, JR, GR) {
+      resize(rr, Sr, Qr) {
         if (this.closed) return;
-        const [yR, tR] = (0, mR.e)(RR, JR, this.page.dpr(), GR);
-        yR === this.size[0] && tR === this.size[1] || (this.size = [yR, tR], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, yR, tR)
+        const [Zr, Wr] = (0, Ar.d)(rr, Sr, this.page.dpr(), Qr);
+        Zr === this.size[0] && Wr === this.size[1] || (this.size = [Zr, Wr], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, Zr, Wr)
         })))
       }
-      setMob(RR, JR, GR, yR) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.BtR(this.id, RR, JR, GR, yR))))
+      setMob(rr, Sr, Qr, Zr) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ZWr(this.id, rr, Sr, Qr, Zr))))
       }
-      setPet(RR, JR, GR, yR) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ltR(this.id, RR, JR, GR, yR))))
+      setPet(rr, Sr, Qr, Zr) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.WWr(this.id, rr, Sr, Qr, Zr))))
       }
-      setPlayer(RR, JR, GR) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ptR(this.id, RR, JR, GR))))
+      setPlayer(rr, Sr, Qr) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.aWr(this.id, rr, Sr, Qr))))
       }
-      setCompanions(RR) {
-        var JR;
+      setCompanions(rr) {
+        var Sr;
         let {
-          pet: GR,
-          aura: yR
-        } = RR;
+          pet: Qr,
+          aura: Zr
+        } = rr;
         if (this.closed) return;
-        const tR = null !== (JR = null === GR || void 0 === GR ? void 0 : GR.model) && void 0 !== JR ? JR : -1,
-          uR = new Float64Array(GR ? [GR.scale, ...GR.offset, GR.yawOffset, GR.bobAmplitude, GR.bobHz] : []),
-          ZR = new Float64Array(yR ? [...yR.offset, ...yR.half] : []);
+        const Wr = null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.model) && void 0 !== Sr ? Sr : -1,
+          ar = new Float64Array(Qr ? [Qr.scale, ...Qr.offset, Qr.yawOffset, Qr.bobAmplitude, Qr.bobHz] : []),
+          jr = new Float64Array(Zr ? [...Zr.offset, ...Zr.half] : []);
         this.page.hostCall(void 0, (() => {
-          var RR, JR;
-          this.host.gtR(this.id, tR, uR, null !== (RR = null === GR || void 0 === GR ? void 0 : GR.flyClip) && void 0 !== RR ? RR : "", null !== (JR = null === yR || void 0 === yR ? void 0 : yR.opts) && void 0 !== JR ? JR : "", ZR)
+          var rr, Sr;
+          this.host.jWr(this.id, Wr, ar, null !== (rr = null === Qr || void 0 === Qr ? void 0 : Qr.flyClip) && void 0 !== rr ? rr : "", null !== (Sr = null === Zr || void 0 === Zr ? void 0 : Zr.opts) && void 0 !== Sr ? Sr : "", jr)
         }))
       }
-      setNametag(RR, JR, GR) {
+      setNametag(rr, Sr, Qr) {
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.btR(this.id, RR, JR, GR)
+          this.host.IWr(this.id, rr, Sr, Qr)
         }))
       }
-      setFigure(RR, JR, GR, yR) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.vtR(this.id, RR, JR, GR, yR))))
+      setFigure(rr, Sr, Qr, Zr) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.fWr(this.id, rr, Sr, Qr, Zr))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const RR = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === RR || RR.length < 3 ? null : {
-          alpha: RR[0],
-          beta: RR[1],
-          radius: RR[2]
+        const rr = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === rr || rr.length < 3 ? null : {
+          alpha: rr[0],
+          beta: rr[1],
+          radius: rr[2]
         }
       }
-      setOrbit(RR) {
+      setOrbit(rr) {
         let {
-          alpha: JR,
-          beta: GR,
-          radius: yR
-        } = RR;
+          alpha: Sr,
+          beta: Qr,
+          radius: Zr
+        } = rr;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.OtR(this.id, JR, GR, yR)
+          this.host.EWr(this.id, Sr, Qr, Zr)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((RR => {
-          this.settled.push(RR)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((rr => {
+          this.settled.push(rr)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, bR.f)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, lr.h)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [RR, JR] of this.outcomes) {
-          const GR = JR === FR ? [] : [JR === TR ? RR : (RR | BR.d) >>> 0];
-          this.models.taken(RR, GR)
+        for (const [rr, Sr] of this.outcomes) {
+          const Qr = Sr === Dr ? [] : [Sr === dr ? rr : (rr | Tr.f) >>> 0];
+          this.models.taken(rr, Qr)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(RR) {
-        let JR = !1;
-        if (RR) {
-          const RR = this.host.xtR(this.id);
-          for (const JR of RR) this.models.request(JR);
-          const GR = this.host.NtR(this.id);
-          GR.length > 0 && this.images.onEvent(GR), JR = RR.length > 0 || GR.length > 0
+      collect(rr) {
+        let Sr = !1;
+        if (rr) {
+          const rr = this.host.pWr(this.id);
+          for (const Sr of rr) this.models.request(Sr);
+          const Qr = this.host.xWr(this.id);
+          Qr.length > 0 && this.images.onEvent(Qr), Sr = rr.length > 0 || Qr.length > 0
         }
-        const GR = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          yR = JR || GR > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = yR ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const Qr = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          Zr = Sr || Qr > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = Zr ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -561,313 +561,313 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(RR) {
+      dispose(rr) {
         this.page.hostCall(void 0, (() => {
-          const JR = this.host.close(this.id);
-          JR.length > 0 && this.images.onEvent(JR), this.page.isTrapped || RR.CtR(this.id)
+          const Sr = this.host.close(this.id);
+          Sr.length > 0 && this.images.onEvent(Sr), this.page.isTrapped || rr.rWr(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const RR = this.settled;
+        const rr = this.settled;
         this.settled = [];
-        for (const JR of RR) JR()
+        for (const Sr of rr) Sr()
       }
     }
-    class uJ {
-      constructor(RR) {
-        this.deps = RR, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: RR => {
-            this.modelsFailed(RR)
+    class aS {
+      constructor(rr) {
+        this.deps = rr, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: rr => {
+            this.modelsFailed(rr)
           },
-          onWorkerLost: RR => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${zR} a model worker was lost: ${RR}`))
+          onWorkerLost: rr => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Vr} a model worker was lost: ${rr}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Be = {
-          setShaderPack: (RR, JR, GR, yR, tR) => (this.shaderPackArgs = [RR, JR, GR, yR, tR], this.handOverShaderPack(), !0)
-        }, this.frame = RR => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.zU = {
+          setShaderPack: (rr, Sr, Qr, Zr, Wr) => (this.shaderPackArgs = [rr, Sr, Qr, Zr, Wr], this.handOverShaderPack(), !0)
+        }, this.frame = rr => {
           this.frameId = null;
-          const JR = this.host;
-          if (null !== JR && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped)
-            if (this.deps.frameDue(RR)) try {
-              this.drawFrame(JR, RR)
-            } catch (GR) {
-              if (!this.stopIfTrapped(GR) && (this.stop(), (0, AR.s)(GR))) return void this.deps.onRenderFailed("frames_refused", GR);
-              console.warn(`${zR} the previews stopped: their frame threw`, GR)
+          const Sr = this.host;
+          if (null !== Sr && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped)
+            if (this.deps.frameDue(rr)) try {
+              this.drawFrame(Sr, rr)
+            } catch (Qr) {
+              if (!this.stopIfTrapped(Qr) && (this.stop(), (0, er.t)(Qr))) return void this.deps.onRenderFailed("frames_refused", Qr);
+              console.warn(`${Vr} the previews stopped: their frame threw`, Qr)
             } else this.startFrames()
-        }, RR.pack.onChange((() => {
+        }, rr.pack.onChange((() => {
           this.packChanged()
-        })), RR.game.onGameChange((() => {
+        })), rr.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const RR of this.previews.values()) RR.packChanged()
+          for (const rr of this.previews.values()) rr.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var RR, JR;
-        return null !== (RR = null === (JR = this.host) || void 0 === JR ? void 0 : JR.attached()) && void 0 !== RR && RR
+        var rr, Sr;
+        return null !== (rr = null === (Sr = this.host) || void 0 === Sr ? void 0 : Sr.attached()) && void 0 !== rr && rr
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((RR, JR) => RR + JR), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((rr, Sr) => rr + Sr), 0) / this.costs.length
       }
-      async bindSession(RR, JR, GR) {
-        const yR = this.binding,
-          tR = this.sessionEnds;
+      async bindSession(rr, Sr, Qr) {
+        const Zr = this.binding,
+          Wr = this.sessionEnds;
         try {
-          const uR = this.hostOf(RR);
-          if (!uR.DtR()) {
-            const JR = (0, HR.g)().sampleCount,
-              ZR = await GR(JR);
-            if (this.sessionEnds !== tR) return this.keepRendererOfEndedSession(RR, uR, ZR, JR, yR), JR;
-            if (!uR.HtR(ZR)) throw new Error("the page has a renderer already");
-            (0, OR.A)(performance.now()), this.samples = JR, (0, oR.f)((0, AR.n)(RR))
+          const ar = this.hostOf(rr);
+          if (!ar.mWr()) {
+            const Sr = (0, gr.g)().sampleCount,
+              jr = await Qr(Sr);
+            if (this.sessionEnds !== Wr) return this.keepRendererOfEndedSession(rr, ar, jr, Sr, Zr), Sr;
+            if (!ar.NWr(jr)) throw new Error("the page has a renderer already");
+            (0, Pr.p)(performance.now()), this.samples = Sr, (0, Cr.g)((0, er.n)(rr))
           }
-          if (!uR.attach(JR)) throw new Error("the page's renderer is lent to another session");
+          if (!ar.attach(Sr)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === yR && this.endBinding()
+          this.binding === Zr && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(RR, JR, GR, yR, tR) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== tR) try {
-          GR.free()
-        } catch (uR) {
-          console.warn(`${zR} an ended session's renderer didn't free`, uR)
-        } else JR.HtR(GR) && ((0, OR.A)(performance.now()), this.samples = yR, (0, oR.f)(this.registryOf(RR)))
+      keepRendererOfEndedSession(rr, Sr, Qr, Zr, Wr) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== Wr) try {
+          Qr.free()
+        } catch (ar) {
+          console.warn(`${Vr} an ended session's renderer didn't free`, ar)
+        } else Sr.NWr(Qr) && ((0, Pr.p)(performance.now()), this.samples = Zr, (0, Cr.g)(this.registryOf(rr)))
       }
       async beginSession() {
-        var RR;
-        let JR = () => {};
-        const GR = new Promise((RR => {
-          JR = RR
+        var rr;
+        let Sr = () => {};
+        const Qr = new Promise((rr => {
+          Sr = rr
         }));
         this.binding = {
-          done: GR,
-          release: JR
-        }, await (null === (RR = this.opening) || void 0 === RR ? void 0 : RR.catch((() => null)));
-        const yR = this.pageCanvas;
-        return this.pageCanvas = null, yR
+          done: Qr,
+          release: Sr
+        }, await (null === (rr = this.opening) || void 0 === rr ? void 0 : rr.catch((() => null)));
+        const Zr = this.pageCanvas;
+        return this.pageCanvas = null, Zr
       }
-      endSession(RR) {
-        var JR, GR;
-        if (this.sessionEnds++, this.lastEndReturned = RR, this.endBinding(), RR) {
+      endSession(rr) {
+        var Sr, Qr;
+        if (this.sessionEnds++, this.lastEndReturned = rr, this.endBinding(), rr) {
           try {
-            var yR;
-            null === (yR = this.host) || void 0 === yR || yR.detach()
-          } catch (tR) {
-            return void console.warn(`${zR} the session's core kept the page's renderer`, tR)
-          }!0 === (null === (JR = this.host) || void 0 === JR ? void 0 : JR.attached()) && console.warn(`${zR} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (GR = this.host) || void 0 === GR ? void 0 : GR.DtR()) && (0, oR.f)(this.registryOf(this.module))
+            var Zr;
+            null === (Zr = this.host) || void 0 === Zr || Zr.detach()
+          } catch (Wr) {
+            return void console.warn(`${Vr} the session's core kept the page's renderer`, Wr)
+          }!0 === (null === (Sr = this.host) || void 0 === Sr ? void 0 : Sr.attached()) && console.warn(`${Vr} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (Qr = this.host) || void 0 === Qr ? void 0 : Qr.mWr()) && (0, Cr.g)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var RR;
-        null === (RR = this.binding) || void 0 === RR || RR.release(), this.binding = null
+        var rr;
+        null === (rr = this.binding) || void 0 === rr || rr.release(), this.binding = null
       }
-      async openPreview(RR, JR, GR, yR) {
-        const tR = await this.renderingHost(),
-          uR = this.module;
-        if (null === tR || null === uR) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(tR), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(rr, Sr, Qr, Zr) {
+        const Wr = await this.renderingHost(),
+          ar = this.module;
+        if (null === Wr || null === ar) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(Wr), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(uR)
+          this.deps.provideBuiltInAnimationPack(ar)
         }));
-        const ZR = this.nextId++,
-          qR = this.deps.createCanvas(),
-          [iR, fR] = (0, mR.e)(JR, GR, this.deps.dpr(), yR);
-        qR.width = iR, qR.height = fR;
-        if (!this.guarded((() => (uR.AtR(ZR, qR), tR.open(ZR, iR, fR, RR))))) throw this.hostCall(void 0, (() => {
-          uR.CtR(ZR)
+        const jr = this.nextId++,
+          Ir = this.deps.createCanvas(),
+          [fr, Er] = (0, Ar.d)(Sr, Qr, this.deps.dpr(), Zr);
+        Ir.width = fr, Ir.height = Er;
+        if (!this.guarded((() => (ar.uZr(jr, Ir), Wr.open(jr, fr, Er, rr))))) throw this.hostCall(void 0, (() => {
+          ar.rWr(jr)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const VR = new tJ(this, tR, ZR, qR, [iR, fR], this.deps);
-        return this.previews.set(ZR, VR), this.startFrames(), VR
+        const pr = new WS(this, Wr, jr, Ir, [fr, Er], this.deps);
+        return this.previews.set(jr, pr), this.startFrames(), pr
       }
-      prefetch(RR) {
+      prefetch(rr) {
         if (this.prefetched || !this.mayPrefetch) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule(RR) : Promise.resolve(this.module)).then((async JR => {
-          null !== JR && (await (null === RR || void 0 === RR ? void 0 : RR("preview workers and files")), this.mayPrefetch && (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles()))
+        (null === this.module ? this.loadModule(rr) : Promise.resolve(this.module)).then((async Sr => {
+          null !== Sr && (await (null === rr || void 0 === rr ? void 0 : rr("preview workers and files")), this.mayPrefetch && (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles()))
         }), (() => {}))
       }
-      modelFile(RR) {
-        return this.prefetchedOr(RR, this.deps.fetchModel)
+      modelFile(rr) {
+        return this.prefetchedOr(rr, this.deps.fetchModel)
       }
-      imageFile(RR) {
-        return this.prefetchedOr(RR, yR.B)
+      imageFile(rr) {
+        return this.prefetchedOr(rr, Zr.K)
       }
-      prefetchedOr(RR, JR) {
-        const GR = this.prefetchedFiles.get(RR);
-        return void 0 === GR ? JR(RR) : GR.catch((() => JR(RR)))
+      prefetchedOr(rr, Sr) {
+        const Qr = this.prefetchedFiles.get(rr);
+        return void 0 === Qr ? Sr(rr) : Qr.catch((() => Sr(rr)))
       }
       async prefetchPlayerFiles() {
-        const RR = this.deps.playerFile().then((RR => this.deps.files.url(RR))),
-          JR = await Promise.all([RR, this.deps.images.lifeformAtlasUrl(bR.b)]).catch((() => null));
-        if (null === JR) return;
-        const [GR, yR] = JR, tR = (RR, JR) => {
-          if (null === RR) return;
-          const GR = JR(RR);
-          this.prefetchedFiles.set(RR, GR), GR.catch((() => {
-            this.prefetchedFiles.delete(RR)
+        const rr = this.deps.playerFile().then((rr => this.deps.files.url(rr))),
+          Sr = await Promise.all([rr, this.deps.images.lifeformAtlasUrl(lr.d)]).catch((() => null));
+        if (null === Sr) return;
+        const [Qr, Zr] = Sr, Wr = (rr, Sr) => {
+          if (null === rr) return;
+          const Qr = Sr(rr);
+          this.prefetchedFiles.set(rr, Qr), Qr.catch((() => {
+            this.prefetchedFiles.delete(rr)
           }))
         };
-        tR(GR, (RR => this.modelFile(RR))), tR(yR, (RR => this.imageFile(RR)))
+        Wr(Qr, (rr => this.modelFile(rr))), Wr(Zr, (rr => this.imageFile(rr)))
       }
-      loadModule(RR) {
-        return this.moduleLoad ??= this.deps.loadModule(RR).then((RR => (null === RR && (this.moduleLoad = null), RR)), (RR => {
-          throw this.moduleLoad = null, RR
+      loadModule(rr) {
+        return this.moduleLoad ??= this.deps.loadModule(rr).then((rr => (null === rr && (this.moduleLoad = null), rr)), (rr => {
+          throw this.moduleLoad = null, rr
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((RR => {
-          throw this.animationTable = null, RR
+        return this.animationTable ??= this.deps.fetchAnimations().catch((rr => {
+          throw this.animationTable = null, rr
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((RR => (this.modelsFailed(RR), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((rr => (this.modelsFailed(rr), () => new Promise((() => {})))))
       }
-      buildModel(RR, JR) {
-        return this.startModels(), this.models.then((GR => GR(RR, JR))).then((RR => this.unavailable ? new Promise((() => {})) : RR))
+      buildModel(rr, Sr) {
+        return this.startModels(), this.models.then((Qr => Qr(rr, Sr))).then((rr => this.unavailable ? new Promise((() => {})) : rr))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(RR) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${zR} the model workers didn't start: models won't draw in the previews`, RR))
+      modelsFailed(rr) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Vr} the model workers didn't start: models won't draw in the previews`, rr))
       }
-      called(RR) {
-        return 0 !== RR && this.logError(RR, 0), RR
+      called(rr) {
+        return 0 !== rr && this.logError(rr, 0), rr
       }
-      closePreview(RR) {
-        this.previews.delete(RR.id), null !== this.module && RR.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(rr) {
+        this.previews.delete(rr.id), null !== this.module && rr.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(RR) {
-        if (null !== this.module && this.module !== RR) throw new Error("a second renderer module on one page");
-        return this.module = RR, null === this.host && (this.host = this.guarded((() => new RR.WtR)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(rr) {
+        if (null !== this.module && this.module !== rr) throw new Error("a second renderer module on one page");
+        return this.module = rr, null === this.host && (this.host = this.guarded((() => new rr.sZr)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: RR
+          host: rr
         } = this;
-        null !== RR && this.outsideCall("the game's start or end", (() => {
-          RR.otR(this.deps.game.inGame())
+        null !== rr && this.outsideCall("the game's start or end", (() => {
+          rr.UWr(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: RR,
-          shaderPackArgs: JR
+          host: rr,
+          shaderPackArgs: Sr
         } = this;
-        null !== RR && null !== JR && this.outsideCall("the shader pack's hand-over", (() => {
-          RR.ntR(...JR) || console.warn(`${zR} the host refused the shader pack: previews draw without it at home`)
+        null !== rr && null !== Sr && this.outsideCall("the shader pack's hand-over", (() => {
+          rr.DZr(...Sr) || console.warn(`${Vr} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(RR, JR) {
+      outsideCall(rr, Sr) {
         try {
-          this.hostCall(void 0, JR)
-        } catch (GR) {
-          this.stop(), console.warn(`${zR} the previews stopped: ${RR} threw`, GR)
+          this.hostCall(void 0, Sr)
+        } catch (Qr) {
+          this.stop(), console.warn(`${Vr} the previews stopped: ${rr} threw`, Qr)
         }
       }
-      async loadAnimations(RR) {
-        const JR = ZR(null),
-          GR = this.module;
+      async loadAnimations(rr) {
+        const Sr = jr(null),
+          Qr = this.module;
         try {
-          JR.wasm = null === GR ? JR.wasm : this.hostCall(JR.wasm, (() => GR.FK()))
+          Sr.wasm = null === Qr ? Sr.wasm : this.hostCall(Sr.wasm, (() => Qr.bx()))
         } catch {}
-        let yR, tR;
+        let Zr, Wr;
         try {
-          yR = await this.fetchAnimationTable()
-        } catch (uR) {
+          Zr = await this.fetchAnimationTable()
+        } catch (ar) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: uR
-          }, JR)
+            error: ar
+          }, Sr)
         }
         if (!this.settleIfTrapped()) {
           try {
-            tR = RR.ctR(yR)
-          } catch (uR) {
-            if (this.stopIfTrapped(uR)) return;
+            Wr = rr.tWr(Zr)
+          } catch (ar) {
+            if (this.stopIfTrapped(ar)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: uR
-            }, JR)
+              error: ar
+            }, Sr)
           }
-          tR || this.deps.onAnimationsFailed({
+          Wr || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, JR)
+          }, Sr)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const RR = this.host;
-        return null !== RR && this.guarded((() => RR.DtR())) ? RR : (this.opening ??= this.openAtHome().finally((() => {
+        const rr = this.host;
+        return null !== rr && this.guarded((() => rr.mWr())) ? rr : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var RR;
-        const JR = null !== (RR = this.module) && void 0 !== RR ? RR : await this.loadModule();
-        if (null === JR) return null;
-        const GR = this.hostOf(JR),
-          yR = () => this.guarded((() => GR.DtR()));
-        if (yR()) return GR;
-        if (null !== (0, OR.O)() || (0, OR.c)()) return null;
-        const tR = this.deps.createCanvas();
-        tR.width = 1, tR.height = 1;
-        const uR = await this.deps.openExtras();
+        var rr;
+        const Sr = null !== (rr = this.module) && void 0 !== rr ? rr : await this.loadModule();
+        if (null === Sr) return null;
+        const Qr = this.hostOf(Sr),
+          Zr = () => this.guarded((() => Qr.mWr()));
+        if (Zr()) return Qr;
+        if (null !== (0, Pr.B)() || (0, Pr.d)()) return null;
+        const Wr = this.deps.createCanvas();
+        Wr.width = 1, Wr.height = 1;
+        const ar = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const ZR = (0, HR.g)().sampleCount;
-        let qR;
+        const jr = (0, gr.g)().sampleCount;
+        let Ir;
         try {
-          qR = await (0, AR.v)(JR, "previewRenderer", tR, ZR, cR.f, uR)
-        } catch (iR) {
-          throw iR instanceof gR.e ? this.stopForTrap(iR) : (0, AR.t)(iR) && await this.deps.onRenderFailed("start_failed", iR), iR
+          Ir = await (0, er.z)(Sr, "previewRenderer", Wr, jr, Mr.i, ar)
+        } catch (fr) {
+          throw fr instanceof Lr.d ? this.stopForTrap(fr) : (0, er.x)(fr) && await this.deps.onRenderFailed("start_failed", fr), fr
         }
-        return this.guarded((() => GR.HtR(qR))) ? ((0, OR.A)(performance.now()), this.samples = ZR, this.pageCanvas = tR, (0, oR.f)(this.registryOf(JR)), GR) : yR() ? GR : null
+        return this.guarded((() => Qr.NWr(Ir))) ? ((0, Pr.p)(performance.now()), this.samples = jr, this.pageCanvas = Wr, (0, Cr.g)(this.registryOf(Sr)), Qr) : Zr() ? Qr : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(RR, JR) {
-        for (const ZR of this.previews.values()) ZR.feed();
+      drawFrame(rr, Sr) {
+        for (const jr of this.previews.values()) jr.feed();
         if (this.stopped) return;
-        this.module.ZH(this.deps.heldLow());
-        const GR = this.deps.now(),
-          yR = RR.frame(JR);
-        this.costs.push(this.deps.now() - GR), this.costs.length > 120 && this.costs.shift();
-        const tR = 0 !== (256 & yR),
-          uR = 255 & yR;
-        for (const ZR of this.previews.values()) {
+        this.module.uR(this.deps.heldLow());
+        const Qr = this.deps.now(),
+          Zr = rr.frame(Sr);
+        this.costs.push(this.deps.now() - Qr), this.costs.length > 120 && this.costs.shift();
+        const Wr = 0 !== (256 & Zr),
+          ar = 255 & Zr;
+        for (const jr of this.previews.values()) {
           if (this.stopped) return;
-          ZR.collect(tR)
+          jr.collect(Wr)
         }
         if (!this.stopped) {
-          if (0 !== (512 & yR) && this.deps.onDrew(), tR) {
-            const JR = RR.PtR();
-            for (let RR = 0; RR + 1 < JR.length; RR += 2) JR[RR] === WR.K.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(JR[RR], JR[RR + 1])
+          if (0 !== (512 & Zr) && this.deps.onDrew(), Wr) {
+            const Sr = rr.hWr();
+            for (let rr = 0; rr + 1 < Sr.length; rr += 2) Sr[rr] === nr.J.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Sr[rr], Sr[rr + 1])
           }
-          if (uR !== YR) {
-            if (uR === kR) return this.stop(), void this.deps.onFatal(RR.mtR(), RR.ztR());
-            if (uR === QR) return this.stop(), void console.warn(`${zR} the previews stopped: the page's renderer went with its session`);
-            (0, LR.b)(JR), this.startFrames()
+          if (ar !== or) {
+            if (ar === br) return this.stop(), void this.deps.onFatal(rr.YWr(), rr.nWr());
+            if (ar === Jr) return this.stop(), void console.warn(`${Vr} the previews stopped: the page's renderer went with its session`);
+            (0, hr.e)(Sr), this.startFrames()
           } else {
-            const JR = RR.ItR();
+            const Sr = rr.zWr();
             this.stop();
-            const GR = JR[2] === WR.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(GR, void 0, JR[1], JR[2] === WR.Yc.RESTORE_LOST)
+            const Qr = Sr[2] === nr.fd.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(Qr, void 0, Sr[1], Sr[2] === nr.fd.RESTORE_LOST)
           }
         }
       }
@@ -875,136 +875,136 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get mayPrefetch() {
-        return !this.isStopped && !(0, OR.c)() && null === (0, OR.O)()
+        return !this.isStopped && !(0, Pr.d)() && null === (0, Pr.B)()
       }
       get isTrapped() {
-        return null !== this.module && ((0, gR.j)(this.module) || "failed" === (0, eR.s)())
+        return null !== this.module && ((0, Lr.h)(this.module) || "failed" === (0, Ur.y)())
       }
-      hostCall(RR, JR) {
-        if (this.settleIfTrapped()) return RR;
+      hostCall(rr, Sr) {
+        if (this.settleIfTrapped()) return rr;
         try {
-          return JR()
-        } catch (GR) {
-          if (this.stopIfTrapped(GR)) return RR;
-          throw GR
+          return Sr()
+        } catch (Qr) {
+          if (this.stopIfTrapped(Qr)) return rr;
+          throw Qr
         }
       }
-      guarded(RR) {
+      guarded(rr) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return RR()
-        } catch (JR) {
-          throw this.stopIfTrapped(JR), JR
+          return rr()
+        } catch (Sr) {
+          throw this.stopIfTrapped(Sr), Sr
         }
       }
-      registryOf(RR) {
+      registryOf(rr) {
         return {
-          StR: (JR, GR) => {
+          eWr: (Sr, Qr) => {
             this.hostCall(void 0, (() => {
-              RR.StR(JR, GR)
+              rr.eWr(Sr, Qr)
             }))
           },
-          jtR: JR => {
+          KWr: Sr => {
             this.hostCall(void 0, (() => {
-              RR.jtR(JR)
+              rr.KWr(Sr)
             }))
           },
-          ...void 0 === RR.dtR ? {} : {
-            dtR: (JR, GR) => {
+          ...void 0 === rr.yWr ? {} : {
+            yWr: (Sr, Qr) => {
               this.hostCall(void 0, (() => {
-                var yR;
-                null === (yR = RR.dtR) || void 0 === yR || yR.call(RR, JR, GR)
+                var Zr;
+                null === (Zr = rr.yWr) || void 0 === Zr || Zr.call(rr, Sr, Qr)
               }))
             }
           },
-          ...void 0 === RR.EtR ? {} : {
-            EtR: JR => {
+          ...void 0 === rr.BWr ? {} : {
+            BWr: Sr => {
               this.hostCall(void 0, (() => {
-                var GR;
-                null === (GR = RR.EtR) || void 0 === GR || GR.call(RR, JR)
+                var Qr;
+                null === (Qr = rr.BWr) || void 0 === Qr || Qr.call(rr, Sr)
               }))
             }
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, oR.f)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Cr.g)(null)), !0)
       }
-      stopIfTrapped(RR) {
-        return !(null === this.module || !(0, gR.n)(this.module, RR)) && (this.stopForTrap(RR), !0)
+      stopIfTrapped(rr) {
+        return !(null === this.module || !(0, Lr.l)(this.module, rr)) && (this.stopForTrap(rr), !0)
       }
-      stopForTrap(RR) {
-        this.stop(), (0, oR.f)(null), (0, IR.g)("previews", RR)
+      stopForTrap(rr) {
+        this.stop(), (0, Cr.g)(null), (0, kr.e)("previews", rr)
       }
       stop() {
         this.stopped = !0;
-        for (const RR of this.previews.values()) RR.abandon()
+        for (const rr of this.previews.values()) rr.abandon()
       }
-      logError(RR, JR) {
-        const GR = `${RR}:${JR}`;
-        this.loggedErrors.has(GR) || (this.loggedErrors.add(GR), console.warn(`${zR} error ${RR} (detail ${JR})`))
+      logError(rr, Sr) {
+        const Qr = `${rr}:${Sr}`;
+        this.loggedErrors.has(Qr) || (this.loggedErrors.add(Qr), console.warn(`${Vr} error ${rr} (detail ${Sr})`))
       }
     }
-    let ZJ = null;
+    let jS = null;
 
-    function qJ() {
-      return ZJ ??= new uJ(function() {
-        const RR = (0, lR.m)(aR.clientSideServerUrls.staticUrl, {
-          packUrl: RR => {
-            var JR, GR;
-            return null !== (JR = null === (GR = bR.e.current) || void 0 === GR ? void 0 : GR.modelUrl(RR)) && void 0 !== JR ? JR : null
+    function IS() {
+      return jS ??= new aS(function() {
+        const rr = (0, vr.r)(tr.clientSideServerUrls.staticUrl, {
+          packUrl: rr => {
+            var Sr, Qr;
+            return null !== (Sr = null === (Qr = lr.e.current) || void 0 === Qr ? void 0 : Qr.modelUrl(rr)) && void 0 !== Sr ? Sr : null
           }
         });
         return {
-          loadModule: yJ,
-          startModels: async RR => {
+          loadModule: ZS,
+          startModels: async rr => {
             const {
-              pageModelPool: JR
-            } = await GR.e(51).then((() => GR(54712))), {
-              pool: yR
-            } = JR(RR);
-            return (RR, JR) => yR.build(RR, JR)
+              pageModelPool: Sr
+            } = await Qr.e(51).then((() => Qr(55199))), {
+              pool: Zr
+            } = Sr(rr);
+            return (rr, Sr) => Zr.build(rr, Sr)
           },
-          fetchAnimations: async () => qR(await (0, yR.B)(RJ())),
-          playerFile: async () => (await (0, lR.j)()).PLAYER_FILE,
-          onAnimationsFailed: (RR, JR) => {
-            iR("previewAnimations", RJ(), RR, JR)
+          fetchAnimations: async () => Ir(await (0, Zr.K)(rS())),
+          playerFile: async () => (await (0, vr.o)()).PLAYER_FILE,
+          onAnimationsFailed: (rr, Sr) => {
+            fr("previewAnimations", rS(), rr, Sr)
           },
-          provideBuiltInAnimationPack: RR => {
-            wR().provide(RR)
+          provideBuiltInAnimationPack: rr => {
+            mr().provide(rr)
           },
-          openExtras: OR.J,
-          files: RR,
-          images: (0, bR.j)((0, XR.l)(RR.url), (() => bR.e.current)),
-          pack: bR.e,
-          game: vR.d,
-          fetchModel: RR => (0, lR.f)(RR),
+          openExtras: Pr.w,
+          files: rr,
+          images: (0, lr.i)((0, yr.o)(rr.url), (() => lr.e.current)),
+          pack: lr.e,
+          game: Xr.b,
+          fetchModel: rr => (0, vr.j)(rr),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: RR => requestAnimationFrame(RR),
-          cancelFrame: RR => {
-            cancelAnimationFrame(RR)
+          requestFrame: rr => requestAnimationFrame(rr),
+          cancelFrame: rr => {
+            cancelAnimationFrame(rr)
           },
-          onRenderFailed: JJ,
-          onFatal: (RR, JR) => {
-            console.error(`${zR} the previews stopped: renderer error ${RR} (detail ${JR})`)
+          onRenderFailed: SS,
+          onFatal: (rr, Sr) => {
+            console.error(`${Vr} the previews stopped: renderer error ${rr} (detail ${Sr})`)
           },
           onDeviceLost: () => {
-            (0, OR.M)() === DR.d.webgpu && ((0, CR.e)((0, eR.F)() ? (0, AR.M)((0, eR.w)()) : null), nR.C.lost())
+            (0, Pr.z)() === Rr.c.webgpu && ((0, Kr.d)((0, Ur.R)() ? (0, er.T)((0, Ur.z)()) : null), zr.A.lost())
           },
           onDrew: () => {
-            nR.C.drew(), (0, MR.q)()
+            zr.A.drew(), (0, Br.k)()
           },
-          frameDue: MR.s,
-          heldLow: MR.r
+          frameDue: Br.p,
+          heldLow: Br.l
         }
-      }()), ZJ
+      }()), jS
     }
-    var iJ = GR(664),
-      fJ = GR(39862),
-      VJ = GR(4555);
-    const KJ = {
+    var fS = Qr(679),
+      ES = Qr(40197),
+      pS = Qr(4489);
+    const xS = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1024,337 +1024,337 @@ export const modules = {
       gunReady: 16,
       gunAimed: 17
     };
-    var wJ = GR(40429),
-      rJ = GR(40393),
-      eJ = GR(45021);
-    class aJ {
+    var mS = Qr(40728),
+      NS = Qr(40699),
+      US = Qr(45329);
+    class tS {
       constructor() {
         this.pet = null, this.aura = null, this.companions = {
           pet: null,
           aura: null
         }
       }
-      of(RR, JR) {
-        const GR = void 0 === RR ? null : (0, rJ.e)(RR),
-          yR = void 0 === JR ? null : (0, rJ.d)(JR);
-        return GR === this.pet && yR === this.aura || (this.pet = GR, this.aura = yR, this.companions = {
-          pet: GR && LJ(GR),
-          aura: yR && nJ(yR)
+      of(rr, Sr) {
+        const Qr = void 0 === rr ? null : (0, NS.i)(rr),
+          Zr = void 0 === Sr ? null : (0, NS.h)(Sr);
+        return Qr === this.pet && Zr === this.aura || (this.pet = Qr, this.aura = Zr, this.companions = {
+          pet: Qr && hS(Qr),
+          aura: Zr && zS(Zr)
         }), this.companions
       }
     }
 
-    function LJ(RR) {
-      var JR;
-      const GR = eJ.COSMETIC_MODEL_KEYS.get(RR.model);
-      if (void 0 === GR) return console.warn(`[bloxd-previews] pet model ${RR.model} isn't a Player attachment model`), null;
+    function hS(rr) {
+      var Sr;
+      const Qr = US.COSMETIC_MODEL_KEYS.get(rr.model);
+      if (void 0 === Qr) return console.warn(`[bloxd-previews] pet model ${rr.model} isn't a Player attachment model`), null;
       const {
-        scale: yR,
-        followOffset: tR,
-        yawOffset: uR,
-        bobAmplitude: ZR,
-        bobHz: qR,
-        clips: iR
-      } = RR;
+        scale: Zr,
+        followOffset: Wr,
+        yawOffset: ar,
+        bobAmplitude: jr,
+        bobHz: Ir,
+        clips: fr
+      } = rr;
       return {
-        model: GR,
-        scale: yR,
-        offset: tR,
-        yawOffset: uR,
-        bobAmplitude: ZR,
-        bobHz: qR,
-        flyClip: null !== (JR = null === iR || void 0 === iR ? void 0 : iR.fly) && void 0 !== JR ? JR : null
+        model: Qr,
+        scale: Zr,
+        offset: Wr,
+        yawOffset: ar,
+        bobAmplitude: jr,
+        bobHz: Ir,
+        flyClip: null !== (Sr = null === fr || void 0 === fr ? void 0 : fr.fly) && void 0 !== Sr ? Sr : null
       }
     }
 
-    function nJ(RR) {
+    function zS(rr) {
       const {
-        opts: JR,
-        half: GR
-      } = (0, wJ.c)(RR);
+        opts: Sr,
+        half: Qr
+      } = (0, mS.e)(rr);
       return {
-        opts: JSON.stringify(JR),
-        offset: RR.offset,
-        half: GR
+        opts: JSON.stringify(Sr),
+        offset: rr.offset,
+        half: Qr
       }
     }
-    var UJ = GR(35176),
-      WJ = GR(37341),
-      AJ = GR(42736);
-    const CJ = "[bloxd-previews]",
-      XJ = new Uint32Array(5);
+    var YS = Qr(35490),
+      nS = Qr(37718),
+      eS = Qr(43054);
+    const KS = "[bloxd-previews]",
+      yS = new Uint32Array(5);
 
-    function MJ(RR) {
-      return iJ.k.indexOf(RR)
+    function BS(rr) {
+      return fS.n.indexOf(rr)
     }
-    const BJ = new WeakSet;
+    const TS = new WeakSet;
 
-    function lJ(RR) {
-      const JR = (0, fJ.f)(RR),
-        GR = null === JR ? -1 : pJ(JR);
-      return -1 !== GR ? GR : (BJ.has(RR) || (BJ.add(RR), console.warn(`${CJ} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function pJ(RR) {
-      var JR;
-      return null !== (JR = KJ[RR]) && void 0 !== JR ? JR : -1
+    function vS(rr) {
+      const Sr = (0, ES.g)(rr),
+        Qr = null === Sr ? -1 : OS(Sr);
+      return -1 !== Qr ? Qr : (TS.has(rr) || (TS.add(rr), console.warn(`${KS} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function gJ(RR, JR) {
+    function OS(rr) {
+      var Sr;
+      return null !== (Sr = xS[rr]) && void 0 !== Sr ? Sr : -1
+    }
+
+    function LS(rr, Sr) {
       const {
-        canvas: GR
-      } = JR;
-      GR.style.width = "100%", GR.style.height = "100%", GR.style.display = "block", RR.appendChild(GR)
+        canvas: Qr
+      } = Sr;
+      Qr.style.width = "100%", Qr.style.height = "100%", Qr.style.display = "block", rr.appendChild(Qr)
     }
 
-    function bJ(RR) {
-      const JR = RR.getBoundingClientRect();
-      return [JR.width, JR.height]
+    function lS(rr) {
+      const Sr = rr.getBoundingClientRect();
+      return [Sr.width, Sr.height]
     }
-    class vJ {
-      constructor(RR, JR) {
-        this.preview = RR, this.showView = JR
+    class XS {
+      constructor(rr, Sr) {
+        this.preview = rr, this.showView = Sr
       }
-      show(RR) {
-        this.showView(this.preview, RR)
+      show(rr) {
+        this.showView(this.preview, rr)
       }
-      resize(RR, JR) {
-        this.preview.resize(RR, JR)
+      resize(rr, Sr) {
+        this.preview.resize(rr, Sr)
       }
       close() {
         this.preview.close()
       }
     }
-    class OJ {
-      constructor(RR) {
-        this.preview = RR, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new aJ, this.companions = null, this.nametag = null, this.stopRasteringNametag = null, this.detachControls = void 0, this.detachControls = (0, UJ.i)(RR), this.dev = {
-          canvas: () => RR.canvas,
-          captureFrame: JR => (0, AJ.e)((() => RR.isClosed ? null : RR.canvas), MR.e, JR),
+    class PS {
+      constructor(rr) {
+        this.preview = rr, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new tS, this.companions = null, this.nametag = null, this.stopRasteringNametag = null, this.detachControls = void 0, this.detachControls = (0, YS.f)(rr), this.dev = {
+          canvas: () => rr.canvas,
+          captureFrame: Sr => (0, eS.b)((() => rr.isClosed ? null : rr.canvas), Br.b, Sr),
           isolateHead: () => {
-            console.warn(`${CJ} isolateHead: noa's character preview only`)
+            console.warn(`${KS} isolateHead: noa's character preview only`)
           },
           isolatePet: () => {
-            console.warn(`${CJ} isolatePet: noa's character preview only`)
+            console.warn(`${KS} isolatePet: noa's character preview only`)
           }
-        }, this.apply(), this.ready = RR.untilSettled().then((() => {
-          if (RR.isStopped) throw new Error(`${CJ} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = rr.untilSettled().then((() => {
+          if (rr.isStopped) throw new Error(`${KS} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(RR, JR) {
-        this.cosmetics[RR] = JR, this.apply()
+      setCosmetic(rr, Sr) {
+        this.cosmetics[rr] = Sr, this.apply()
       }
-      setNametag(RR) {
-        var JR;
-        if (this.nametag = RR, null === (JR = this.stopRasteringNametag) || void 0 === JR || JR.call(this), this.stopRasteringNametag = null, null === RR || void 0 === RR || !RR.name) return void this.preview.setNametag("", "null", "null");
-        const GR = () => {
-          this.preview.setNametag(RR.name, JSON.stringify(RR.nameColour), JSON.stringify(RR.ranks))
+      setNametag(rr) {
+        var Sr;
+        if (this.nametag = rr, null === (Sr = this.stopRasteringNametag) || void 0 === Sr || Sr.call(this), this.stopRasteringNametag = null, null === rr || void 0 === rr || !rr.name) return void this.preview.setNametag("", "null", "null");
+        const Qr = () => {
+          this.preview.setNametag(rr.name, JSON.stringify(rr.nameColour), JSON.stringify(rr.ranks))
         };
-        WJ.i.untilLoadedFor(RR.name).then((() => {
-          this.nametag !== RR || this.preview.isClosed || (GR(), this.stopRasteringNametag = (0, WJ.h)(GR))
+        nS.i.untilLoadedFor(rr.name).then((() => {
+          this.nametag !== rr || this.preview.isClosed || (Qr(), this.stopRasteringNametag = (0, nS.f)(Qr))
         }))
       }
-      playEmote(RR) {
-        null === RR || RR !== this.emote ? (this.emote = RR, this.apply()) : this.preview.replay()
+      playEmote(rr) {
+        null === rr || rr !== this.emote ? (this.emote = rr, this.apply()) : this.preview.replay()
       }
-      untilDrawn(RR) {
+      untilDrawn(rr) {
         return this.preview.untilSettled()
       }
-      setOrbit(RR) {
+      setOrbit(rr) {
         let {
-          yaw: JR,
-          pitch: GR,
-          radius: yR
-        } = RR;
-        const tR = this.preview.orbit;
-        null !== tR && this.preview.setOrbit({
-          alpha: JR,
-          beta: GR,
-          radius: null !== yR && void 0 !== yR ? yR : tR.radius
+          yaw: Sr,
+          pitch: Qr,
+          radius: Zr
+        } = rr;
+        const Wr = this.preview.orbit;
+        null !== Wr && this.preview.setOrbit({
+          alpha: Sr,
+          beta: Qr,
+          radius: null !== Zr && void 0 !== Zr ? Zr : Wr.radius
         })
       }
       resetCamera() {}
-      resize(RR, JR) {
-        this.preview.resize(RR, JR)
+      resize(rr, Sr) {
+        this.preview.resize(rr, Sr)
       }
       close() {
-        var RR;
-        null === (RR = this.stopRasteringNametag) || void 0 === RR || RR.call(this), this.detachControls(), this.preview.close()
+        var rr;
+        null === (rr = this.stopRasteringNametag) || void 0 === rr || rr.call(this), this.detachControls(), this.preview.close()
       }
       apply() {
-        var RR;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), XJ, null === (RR = this.emote) ? -1 : pJ(RR));
-        const JR = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
-        JR !== this.companions && (this.companions = JR, this.preview.setCompanions(JR))
+        var rr;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), yS, null === (rr = this.emote) ? -1 : OS(rr));
+        const Sr = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
+        Sr !== this.companions && (this.companions = Sr, this.preview.setCompanions(Sr))
       }
     }
 
-    function xJ(RR, JR) {
+    function HS(rr, Sr) {
       let {
-        mobType: GR,
-        variation: yR,
-        animation: tR
-      } = JR;
-      RR.setMob(MJ(GR), null !== yR && void 0 !== yR ? yR : "", 1, lJ(tR))
+        mobType: Qr,
+        variation: Zr,
+        animation: Wr
+      } = Sr;
+      rr.setMob(BS(Qr), null !== Zr && void 0 !== Zr ? Zr : "", 1, vS(Wr))
     }
 
-    function NJ(RR, JR) {
+    function qS(rr, Sr) {
       let {
-        mobType: GR,
-        variation: yR,
-        metaInfo: tR,
-        tamed: uR
-      } = JR;
-      RR.setPet(MJ(GR), yR, tR, uR)
+        mobType: Qr,
+        variation: Zr,
+        metaInfo: Wr,
+        tamed: ar
+      } = Sr;
+      rr.setPet(BS(Qr), Zr, Wr, ar)
     }
-    const DJ = {
+    const RS = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class HJ {
-      constructor(RR, JR, GR, yR) {
+    class gS {
+      constructor(rr, Sr, Qr, Zr) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, RR(GR.width, yR[1], yR).then((RR => {
-          if (this.closed) return void RR.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, rr(Qr.width, Zr[1], Zr).then((rr => {
+          if (this.closed) return void rr.close();
           const {
-            style: GR
-          } = RR.canvas;
-          GR.position = "absolute", GR.top = "0", GR.visibility = "hidden", gJ(JR, RR), this.preview = RR, this.apply()
-        })).catch((RR => {
-          console.error(`${CJ} couldn't open a lineup figure`, RR)
+            style: Qr
+          } = rr.canvas;
+          Qr.position = "absolute", Qr.top = "0", Qr.visibility = "hidden", LS(Sr, rr), this.preview = rr, this.apply()
+        })).catch((rr => {
+          console.error(`${KS} couldn't open a lineup figure`, rr)
         }))
       }
-      update(RR, JR, GR, yR, tR) {
-        this.figure = RR, this.shown = JR, this.order = GR, this.span = yR, this.lineup = tR, this.apply()
+      update(rr, Sr, Qr, Zr, Wr) {
+        this.figure = rr, this.shown = Sr, this.order = Qr, this.span = Zr, this.lineup = Wr, this.apply()
       }
       close() {
-        var RR;
-        this.closed = !0, null === (RR = this.preview) || void 0 === RR || RR.close(), this.preview = null
+        var rr;
+        this.closed = !0, null === (rr = this.preview) || void 0 === rr || rr.close(), this.preview = null
       }
       apply() {
-        var RR;
+        var rr;
         const {
-          preview: JR,
-          figure: GR,
-          lineup: yR
+          preview: Sr,
+          figure: Qr,
+          lineup: Zr
         } = this;
-        if (null === JR || null === GR) return;
-        if (this.given !== GR) {
-          var tR;
-          this.given = GR, this.loaded = !1;
-          const RR = null === GR.gC ? 0 : null !== (tR = (0, VJ.b)(GR.gC)) && void 0 !== tR ? tR : 0;
-          JR.setFigure(function(RR) {
-            return JSON.stringify(Object.fromEntries(RR.cosmetics))
-          }(GR), RR, lJ(GR.animation), GR.size), JR.untilSettled().then((() => {
-            this.given === GR && (this.loaded = !0, this.apply())
+        if (null === Sr || null === Qr) return;
+        if (this.given !== Qr) {
+          var Wr;
+          this.given = Qr, this.loaded = !1;
+          const rr = null === Qr.jB ? 0 : null !== (Wr = (0, pS.e)(Qr.jB)) && void 0 !== Wr ? Wr : 0;
+          Sr.setFigure(function(rr) {
+            return JSON.stringify(Object.fromEntries(rr.cosmetics))
+          }(Qr), rr, vS(Qr.animation), Qr.size), Sr.untilSettled().then((() => {
+            this.given === Qr && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: uR,
-          width: ZR
+          left: ar,
+          width: jr
         } = this.span;
-        JR.resize(ZR, yR[1], yR);
+        Sr.resize(jr, Zr[1], Zr);
         const {
-          style: qR
-        } = JR.canvas;
-        qR.top = -(null !== (RR = GR.lift) && void 0 !== RR ? RR : 0) * yR[1] + "px", qR.left = `${uR}px`, qR.width = `${ZR}px`, qR.zIndex = this.order, qR.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: Ir
+        } = Sr.canvas;
+        Ir.top = -(null !== (rr = Qr.lift) && void 0 !== rr ? rr : 0) * Zr[1] + "px", Ir.left = `${ar}px`, Ir.width = `${jr}px`, Ir.zIndex = this.order, Ir.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class oJ {
-      constructor(RR, JR) {
-        this.open = JR, this.layer = void 0, this.figures = [], this.view = {
+    class CS {
+      constructor(rr, Sr) {
+        this.open = Sr, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = bJ(RR), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = lS(rr), this.layer = document.createElement("div");
         const {
-          style: GR
+          style: Qr
         } = this.layer;
-        GR.position = "relative", GR.isolation = "isolate", GR.overflow = "hidden", GR.width = "100%", GR.height = "100%", GR.pointerEvents = "none", RR.appendChild(this.layer)
+        Qr.position = "relative", Qr.isolation = "isolate", Qr.overflow = "hidden", Qr.width = "100%", Qr.height = "100%", Qr.pointerEvents = "none", rr.appendChild(this.layer)
       }
-      show(RR) {
-        this.view = RR, this.place()
+      show(rr) {
+        this.view = rr, this.place()
       }
-      resize(RR, JR) {
-        this.size = [RR, JR], this.place()
+      resize(rr, Sr) {
+        this.size = [rr, Sr], this.place()
       }
       close() {
-        for (const RR of this.figures) RR.close();
+        for (const rr of this.figures) rr.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: RR,
-          shown: JR
+          figures: rr,
+          shown: Sr
         } = this.view;
-        for (const yR of this.figures.splice(RR.length)) yR.close();
+        for (const Zr of this.figures.splice(rr.length)) Zr.close();
         const {
-          size: GR
+          size: Qr
         } = this;
-        RR.forEach(((yR, tR) => {
-          var uR;
-          const ZR = function(RR, JR, GR, yR) {
-            let [tR, uR] = yR;
-            const ZR = (RR + .5) * tR / JR,
-              qR = Math.min(Math.max(tR / JR, 2 * GR * uR), 2 * Math.max(ZR, tR - ZR));
+        rr.forEach(((Zr, Wr) => {
+          var ar;
+          const jr = function(rr, Sr, Qr, Zr) {
+            let [Wr, ar] = Zr;
+            const jr = (rr + .5) * Wr / Sr,
+              Ir = Math.min(Math.max(Wr / Sr, 2 * Qr * ar), 2 * Math.max(jr, Wr - jr));
             return {
-              left: ZR - qR / 2,
-              width: qR
+              left: jr - Ir / 2,
+              width: Ir
             }
-          }(tR, RR.length, function(RR) {
+          }(Wr, rr.length, function(rr) {
             let {
-              animation: JR,
-              size: GR
-            } = RR;
+              animation: Sr,
+              size: Qr
+            } = rr;
             const {
-              aimed: yR,
-              ready: tR
-            } = DJ;
-            return (lJ(JR) === KJ.gunAimed ? yR : tR) * GR
-          }(yR), GR);
-          this.figures[tR] ??= new HJ(this.open, this.layer, ZR, GR), this.figures[tR].update(yR, null !== (uR = JR[tR]) && void 0 !== uR && uR, function(RR, JR) {
-            return String(Math.round(1e3 * RR) + JR)
-          }(yR.size, tR), ZR, GR)
+              aimed: Zr,
+              ready: Wr
+            } = RS;
+            return (vS(Sr) === xS.gunAimed ? Zr : Wr) * Qr
+          }(Zr), Qr);
+          this.figures[Wr] ??= new gS(this.open, this.layer, jr, Qr), this.figures[Wr].update(Zr, null !== (ar = Sr[Wr]) && void 0 !== ar && ar, function(rr, Sr) {
+            return String(Math.round(1e3 * rr) + Sr)
+          }(Zr.size, Wr), jr, Qr)
         }))
       }
     }
-    const cJ = {
-      player: jR,
-      store: dR,
-      showcase: ER
+    const MS = {
+      player: wr,
+      store: cr,
+      showcase: Fr
     };
-    class PJ {
-      constructor(RR) {
-        this.page = RR
+    class GS {
+      constructor(rr) {
+        this.page = rr
       }
-      async openMob(RR) {
-        return new vJ(await this.open(RR, SR), xJ)
+      async openMob(rr) {
+        return new XS(await this.open(rr, ir), HS)
       }
-      async openPet(RR) {
-        return new vJ(await this.open(RR, SR), NJ)
+      async openPet(rr) {
+        return new XS(await this.open(rr, ir), qS)
       }
-      openMobLineup(RR) {
-        return new oJ(RR, ((RR, JR, GR) => this.page.openPreview(SR, RR, JR, GR)))
+      openMobLineup(rr) {
+        return new CS(rr, ((rr, Sr, Qr) => this.page.openPreview(ir, rr, Sr, Qr)))
       }
-      async openCharacter(RR, JR) {
-        return new OJ(await this.open(RR, cJ[JR]))
+      async openCharacter(rr, Sr) {
+        return new PS(await this.open(rr, MS[Sr]))
       }
-      async open(RR, JR) {
-        const [GR, yR] = bJ(RR), tR = await this.page.openPreview(JR, GR, yR);
-        return gJ(RR, tR), tR
+      async open(rr, Sr) {
+        const [Qr, Zr] = lS(rr), Wr = await this.page.openPreview(Sr, Qr, Zr);
+        return LS(rr, Wr), Wr
       }
     }
   },
-  45013: (RR, JR, GR) => {
-    RR.exports = GR.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
+  45314: (rr, Sr, Qr) => {
+    rr.exports = Qr.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
   },
-  45017: (RR, JR, GR) => {
-    RR.exports = GR.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
+  45323: (rr, Sr, Qr) => {
+    rr.exports = Qr.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

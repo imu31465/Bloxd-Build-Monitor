@@ -1,94 +1,94 @@
 export const id = 160;
 export const ids = [159, 160];
 export const modules = {
-  7800: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      forgetShaderPackActiveHint: () => bR,
-      isOtherApiVersion: () => BR,
-      isShaderPackActive: () => AR,
-      isShaderPackChangePending: () => MR,
-      markShaderPackChangePending: () => XR,
-      pageShaderPackValidationVersion: () => lR,
-      reconcileStoredShaderPackHint: () => gR,
-      removeShaderPack: () => WR,
-      replaceShaderPack: () => LR,
-      saveShaderPack: () => aR,
-      shaderPackNeedsCheck: () => pR,
-      storedPackOutcome: () => CR,
-      storedShaderPackFiles: () => wR,
-      toStoredShaderPack: () => KR
+  7615: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      forgetShaderPackActiveHint: () => lr,
+      isOtherApiVersion: () => Tr,
+      isShaderPackActive: () => er,
+      isShaderPackChangePending: () => Br,
+      markShaderPackChangePending: () => yr,
+      pageShaderPackValidationVersion: () => vr,
+      reconcileStoredShaderPackHint: () => Lr,
+      removeShaderPack: () => nr,
+      replaceShaderPack: () => hr,
+      saveShaderPack: () => tr,
+      shaderPackNeedsCheck: () => Or,
+      storedPackOutcome: () => Kr,
+      storedShaderPackFiles: () => mr,
+      toStoredShaderPack: () => xr
     });
-    var yR = GR(6084),
-      tR = GR(6080),
-      uR = GR(46),
-      ZR = GR(4776),
-      qR = GR(7802),
-      iR = GR(7773);
-    const fR = "shaderPackChangePending";
-    let VR = null;
+    var Zr = Qr(6007),
+      Wr = Qr(6005),
+      ar = Qr(43),
+      jr = Qr(4690),
+      Ir = Qr(7617),
+      fr = Qr(7588);
+    const Er = "shaderPackChangePending";
+    let pr = null;
 
-    function KR(RR, JR, GR) {
+    function xr(rr, Sr, Qr) {
       return {
-        manifest: RR.manifest,
-        files: (0, yR.x)(RR.files),
-        validation: JR,
-        ...GR && {
-          listing: GR
+        manifest: rr.manifest,
+        files: (0, Zr.w)(rr.files),
+        validation: Sr,
+        ...Qr && {
+          listing: Qr
         }
       }
     }
 
-    function wR(RR) {
-      return Object.keys(RR.files).map((JR => ({
-        path: JR,
-        source: RR.files[JR]
+    function mr(rr) {
+      return Object.keys(rr.files).map((Sr => ({
+        path: Sr,
+        source: rr.files[Sr]
       })))
     }
-    let rR = Promise.resolve();
+    let Nr = Promise.resolve();
 
-    function eR(RR) {
-      const JR = rR.then(RR);
-      return rR = JR.catch((() => {})), JR
-    }
-
-    function aR(RR, JR) {
-      return eR((() => nR(RR, JR)))
+    function Ur(rr) {
+      const Sr = Nr.then(rr);
+      return Nr = Sr.catch((() => {})), Sr
     }
 
-    function LR(RR, JR, GR) {
-      return eR((async () => JSON.stringify(await (0, qR.d)()) === JSON.stringify(RR) && (null === JR ? (await UR(), !0) : nR(JR, GR))))
-    }
-    async function nR(RR, JR) {
-      const GR = await uR.g.setItem(qR.c, RR);
-      return GR && vR(RR, JR), GR
-    }
-    async function UR() {
-      await uR.g.removeItem(qR.c), uR.i.removeItem(ZR.e)
+    function tr(rr, Sr) {
+      return Ur((() => zr(rr, Sr)))
     }
 
-    function WR() {
-      return eR(UR)
+    function hr(rr, Sr, Qr) {
+      return Ur((async () => JSON.stringify(await (0, Ir.e)()) === JSON.stringify(rr) && (null === Sr ? (await Yr(), !0) : zr(Sr, Qr))))
+    }
+    async function zr(rr, Sr) {
+      const Qr = await ar.h.setItem(Ir.b, rr);
+      return Qr && Xr(rr, Sr), Qr
+    }
+    async function Yr() {
+      await ar.h.removeItem(Ir.b), ar.j.removeItem(jr.b)
     }
 
-    function AR(RR, JR) {
-      return "active" === CR(RR, JR).kind
+    function nr() {
+      return Ur(Yr)
     }
 
-    function CR(RR, JR) {
-      var GR;
-      return null === RR ? {
+    function er(rr, Sr) {
+      return "active" === Kr(rr, Sr).kind
+    }
+
+    function Kr(rr, Sr) {
+      var Qr;
+      return null === rr ? {
         kind: "none",
         reason: "nothingStored"
-      } : BR(RR) ? {
+      } : Tr(rr) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.ok) || RR.validation.fromRecheck ? null === JR ? {
+      } : !1 !== (null === (Qr = rr.validation) || void 0 === Qr ? void 0 : Qr.ok) || rr.validation.fromRecheck ? null === Sr ? {
         kind: "none",
         reason: "noCompiler"
-      } : pR(RR, JR) ? {
+      } : Or(rr, Sr) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : RR.validation.ok ? {
+      } : rr.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -99,68 +99,68 @@ export const modules = {
       }
     }
 
-    function XR() {
-      uR.k.setItem(fR, performance.timeOrigin)
+    function yr() {
+      ar.n.setItem(Er, performance.timeOrigin)
     }
 
-    function MR() {
-      return uR.k.getItem(fR) === performance.timeOrigin
+    function Br() {
+      return ar.n.getItem(Er) === performance.timeOrigin
     }
 
-    function BR(RR) {
-      return !(0, tR.i)(RR.manifest.apiVersion)
+    function Tr(rr) {
+      return !(0, Wr.i)(rr.manifest.apiVersion)
     }
 
-    function lR(RR) {
-      return VR ??= RR.iH((0, iR.shaderPackTextures)()), VR
+    function vr(rr) {
+      return pr ??= rr.rC((0, fr.shaderPackTextures)()), pr
     }
 
-    function pR(RR, JR) {
-      var GR;
-      return (null === (GR = RR.validation) || void 0 === GR ? void 0 : GR.headerVersion) !== lR(JR)
+    function Or(rr, Sr) {
+      var Qr;
+      return (null === (Qr = rr.validation) || void 0 === Qr ? void 0 : Qr.headerVersion) !== vr(Sr)
     }
 
-    function gR(RR) {
-      return eR((async () => {
-        vR(await (0, qR.d)(!0), RR)
+    function Lr(rr) {
+      return Ur((async () => {
+        Xr(await (0, Ir.e)(!0), rr)
       }))
     }
 
-    function bR() {
-      return eR((async () => {
-        uR.i.removeItem(ZR.e)
+    function lr() {
+      return Ur((async () => {
+        ar.j.removeItem(jr.b)
       }))
     }
 
-    function vR(RR, JR) {
-      AR(RR, JR) ? uR.i.setItem(ZR.e, !0) : uR.i.removeItem(ZR.e)
+    function Xr(rr, Sr) {
+      er(rr, Sr) ? ar.j.setItem(jr.b, !0) : ar.j.removeItem(jr.b)
     }
   },
-  7773: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      loadShaderPackTextures: () => ZR,
-      shaderPackTextures: () => qR
+  7588: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      loadShaderPackTextures: () => jr,
+      shaderPackTextures: () => Ir
     });
-    var yR = GR(6084);
-    let tR = null,
-      uR = null;
+    var Zr = Qr(6007);
+    let Wr = null,
+      ar = null;
 
-    function ZR() {
-      return uR ??= Promise.all([GR.e(85), GR.e(126)]).then((() => GR(42031))).then((RR => {
+    function jr() {
+      return ar ??= Promise.all([Qr.e(85), Qr.e(126)]).then((() => Qr(42330))).then((rr => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: JR,
-          textureNameToIndex: GR,
-          textureAnimationData: uR
-        } = RR;
-        return tR ??= (0, yR.j)(GR, uR, JR), tR
-      })), uR
+          FORMER_BLOCK_IMAGE_NAMES: Sr,
+          textureNameToIndex: Qr,
+          textureAnimationData: ar
+        } = rr;
+        return Wr ??= (0, Zr.k)(Qr, ar, Sr), Wr
+      })), ar
     }
 
-    function qR() {
-      if (null === tR) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return tR
+    function Ir() {
+      if (null === Wr) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Wr
     }
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

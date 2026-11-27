@@ -1,485 +1,485 @@
 export const id = 92;
-export const ids = [92, 220];
+export const ids = [92, 220, 221];
 export const modules = {
-  35024: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      EverythingMenu: () => XV
+  35326: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      EverythingMenu: () => np
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(1270),
-      qR = GR(1468),
-      iR = GR(2278),
-      fR = GR(1590),
-      VR = GR(1179),
-      KR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(1251),
+      Ir = Qr(1448),
+      fr = Qr(2228),
+      Er = Qr(1576),
+      pr = Qr(1171),
+      xr = Qr(1338);
 
-    function wR(RR) {
+    function mr(rr) {
       let {
-        items: JR,
-        link: GR,
-        onClick: yR,
-        selectedItemId: tR,
-        className: wR,
-        padStartsOnTab: rR = !0
-      } = RR;
+        items: Sr,
+        link: Qr,
+        onClick: Zr,
+        selectedItemId: Wr,
+        className: mr,
+        padStartsOnTab: Nr = !0
+      } = rr;
       const {
-        t: eR
-      } = (0, ZR.A)(), aR = (0, VR.h)(), LR = [];
-      for (const uR of JR) {
-        var nR;
-        const RR = LR[LR.length - 1];
-        var UR;
-        if (RR && RR.title === (null !== (nR = uR.section) && void 0 !== nR ? nR : null)) RR.items.push(uR);
-        else LR.push({
-          title: null !== (UR = uR.section) && void 0 !== UR ? UR : null,
-          items: [uR]
+        t: Ur
+      } = (0, jr.E)(), tr = (0, pr.j)(), hr = [];
+      for (const ar of Sr) {
+        var zr;
+        const rr = hr[hr.length - 1];
+        var Yr;
+        if (rr && rr.title === (null !== (zr = ar.section) && void 0 !== zr ? zr : null)) rr.items.push(ar);
+        else hr.push({
+          title: null !== (Yr = ar.section) && void 0 !== Yr ? Yr : null,
+          items: [ar]
         })
       }
-      return (0, KR.jsxs)("div", {
-        className: uR()("MenuSideBarBody", wR),
+      return (0, xr.jsxs)("div", {
+        className: ar()("MenuSideBarBody", mr),
         "data-pad-tabs": "2",
-        children: [LR.map(((RR, JR) => {
-          var GR;
-          return (0, KR.jsxs)("div", {
+        children: [hr.map(((rr, Sr) => {
+          var Qr;
+          return (0, xr.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [RR.title && (0, KR.jsx)("div", {
+            children: [rr.title && (0, xr.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: eR(RR.title)
-            }), RR.items.map((RR => {
-              var JR;
-              const GR = !!RR.iconElement || !!RR.faIcon;
-              return (0, KR.jsxs)("div", {
+              children: Ur(rr.title)
+            }), rr.items.map((rr => {
+              var Sr;
+              const Qr = !!rr.iconElement || !!rr.faIcon;
+              return (0, xr.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": tR === RR.id ? "true" : void 0,
-                "data-pad-default-focus": rR && tR === RR.id || void 0,
-                className: uR()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: tR === RR.id
+                "data-pad-selected": Wr === rr.id ? "true" : void 0,
+                "data-pad-default-focus": Nr && Wr === rr.id || void 0,
+                className: ar()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Wr === rr.id
                 }),
                 onClick: () => {
-                  yR(RR.id)
+                  Zr(rr.id)
                 },
-                children: [GR && (0, KR.jsx)("div", {
+                children: [Qr && (0, xr.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (JR = RR.iconElement) && void 0 !== JR ? JR : (0, KR.jsx)(qR.d, {
-                    name: RR.faIcon
+                  children: null !== (Sr = rr.iconElement) && void 0 !== Sr ? Sr : (0, xr.jsx)(Ir.c, {
+                    name: rr.faIcon
                   })
-                }), (!aR || !GR) && (0, KR.jsx)("div", {
-                  children: eR(RR.title)
-                }), RR.redDot && (0, KR.jsx)(iR.c, {
+                }), (!tr || !Qr) && (0, xr.jsx)("div", {
+                  children: Ur(rr.title)
+                }), rr.redDot && (0, xr.jsx)(fr.d, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, RR.id)
+              }, rr.id)
             }))]
-          }, null !== (GR = RR.title) && void 0 !== GR ? GR : JR)
-        })), GR && (0, KR.jsxs)("div", {
-          ...(0, fR.bb)(),
+          }, null !== (Qr = rr.title) && void 0 !== Qr ? Qr : Sr)
+        })), Qr && (0, xr.jsxs)("div", {
+          ...(0, Er._)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: GR.onClick,
-          children: [(0, KR.jsx)("div", {
+          onClick: Qr.onClick,
+          children: [(0, xr.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, KR.jsx)(qR.d, {
-              name: GR.faIcon
+            children: (0, xr.jsx)(Ir.c, {
+              name: Qr.faIcon
             })
-          }), (0, KR.jsx)("div", {
-            children: eR(GR.title)
-          }), (0, KR.jsx)(qR.d, {
+          }), (0, xr.jsx)("div", {
+            children: Ur(Qr.title)
+          }), (0, xr.jsx)(Ir.c, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var rR = GR(3037),
-      eR = GR(1196),
-      aR = GR(3465),
-      LR = GR(4352),
-      nR = GR(103),
-      UR = GR(2134),
-      WR = GR(3204),
-      AR = GR(3210),
-      CR = GR(1867),
-      XR = GR(1465),
-      MR = GR(6037),
-      BR = GR(25),
-      lR = GR(35029);
+    var Nr = Qr(3002),
+      Ur = Qr(1181),
+      tr = Qr(3404),
+      hr = Qr(4302),
+      zr = Qr(109),
+      Yr = Qr(2089),
+      nr = Qr(3174),
+      er = Qr(3182),
+      Kr = Qr(1804),
+      yr = Qr(1444),
+      Br = Qr(5951),
+      Tr = Qr(26),
+      vr = Qr(35335);
 
-    function pR(RR) {
+    function Or(rr) {
       let {
-        setApplySettingsCallback: JR
-      } = RR;
+        setApplySettingsCallback: Sr
+      } = rr;
       const {
-        clientEscMenuOptions: GR
-      } = (0, BR.o)(["clientEscMenuOptions"]), [tR, uR] = (0, yR.useState)(!1), [ZR, qR] = (0, yR.useState)(!1), [iR, VR] = (0, yR.useState)(6400), [wR, rR] = (0, yR.useState)(3600), [eR, aR] = (0, yR.useState)(!1), [LR, nR] = (0, yR.useState)(!1);
+        clientEscMenuOptions: Qr
+      } = (0, Tr.n)(["clientEscMenuOptions"]), [Wr, ar] = (0, Zr.useState)(!1), [jr, Ir] = (0, Zr.useState)(!1), [fr, pr] = (0, Zr.useState)(6400), [mr, Nr] = (0, Zr.useState)(3600), [Ur, tr] = (0, Zr.useState)(!1), [hr, zr] = (0, Zr.useState)(!1);
 
-      function UR(RR) {
-        const JR = "screenshot" === RR ? qR : uR;
-        JR(!0);
-        const GR = eR ? "normals" : LR ? "depth" : null;
-        lR.devTools.downloadScene(RR, {
-          width: iR,
-          height: wR,
-          colouring: GR
-        }).catch((RR => {
-          console.error("Couldn't download the scene", RR)
+      function Yr(rr) {
+        const Sr = "screenshot" === rr ? Ir : ar;
+        Sr(!0);
+        const Qr = Ur ? "normals" : hr ? "depth" : null;
+        vr.devTools.downloadScene(rr, {
+          width: fr,
+          height: mr,
+          colouring: Qr
+        }).catch((rr => {
+          console.error("Couldn't download the scene", rr)
         })).finally((() => {
-          JR(!1)
+          Sr(!1)
         }))
       }
-      return (0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, KR.jsx)(MR.e, {
+        children: [(0, xr.jsx)(Br.c, {
           label: "Disable Ambient Occlusion",
-          checked: GR.disableAmbientOcclusion,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: RR
-            }), JR((() => MR.m))
+          checked: Qr.disableAmbientOcclusion,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              disableAmbientOcclusion: rr
+            }), Sr((() => Br.i))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), lR.devTools.supports("ambientLight") && (0, KR.jsx)(MR.i, {
+        }), vr.devTools.supports("ambientLight") && (0, xr.jsx)(Br.f, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: GR.ambientLightIntensity,
-          onChange: RR => {
-            lR.devTools.setAmbientLightIntensity(RR).then((() => {
-              BR.d.setClientEscMenuOptions({
-                ambientLightIntensity: RR
+          initValue: Qr.ambientLightIntensity,
+          onChange: rr => {
+            vr.devTools.setAmbientLightIntensity(rr).then((() => {
+              Tr.c.setClientEscMenuOptions({
+                ambientLightIntensity: rr
               })
-            })).catch((RR => {
-              console.error("Couldn't set the ambient light", RR)
+            })).catch((rr => {
+              console.error("Couldn't set the ambient light", rr)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), lR.devTools.supports("weaponRaycasts") && (0, KR.jsx)(MR.e, {
+        }), vr.devTools.supports("weaponRaycasts") && (0, xr.jsx)(Br.c, {
           label: "Show Weapon Raycasts",
-          checked: GR.showWeaponRaycasts,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              showWeaponRaycasts: RR
+          checked: Qr.showWeaponRaycasts,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              showWeaponRaycasts: rr
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), lR.devTools.supports("sceneDownload") && (0, KR.jsxs)("div", {
+        }), vr.devTools.supports("sceneDownload") && (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, KR.jsx)(MR.e, {
+            children: [(0, xr.jsx)(Br.c, {
               label: "Apply normal-based coloring",
-              checked: eR,
-              onClick: RR => {
-                aR(RR), RR && nR(!1)
+              checked: Ur,
+              onClick: rr => {
+                tr(rr), rr && zr(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, KR.jsx)(MR.e, {
+            }), (0, xr.jsx)(Br.c, {
               label: "Apply depth-based coloring",
-              checked: LR,
-              onClick: RR => {
-                nR(RR), RR && aR(!1)
+              checked: hr,
+              onClick: rr => {
+                zr(rr), rr && tr(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, KR.jsxs)("div", {
+            }), (0, xr.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, KR.jsx)("div", {
+              children: [(0, xr.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, KR.jsx)(CR.b, {
+              }), (0, xr.jsx)(Kr.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (RR, JR) => {
-                  const GR = parseInt(RR) || 6400;
-                  VR(GR)
+                onValueChange: (rr, Sr) => {
+                  const Qr = parseInt(rr) || 6400;
+                  pr(Qr)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: iR.toString()
-              }), (0, KR.jsx)("span", {
+                defaultValue: fr.toString()
+              }), (0, xr.jsx)("span", {
                 children: "X"
-              }), (0, KR.jsx)(CR.b, {
+              }), (0, xr.jsx)(Kr.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (RR, JR) => {
-                  const GR = parseInt(RR) || 3600;
-                  rR(GR)
+                onValueChange: (rr, Sr) => {
+                  const Qr = parseInt(rr) || 3600;
+                  Nr(Qr)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: wR.toString()
+                defaultValue: mr.toString()
               })]
-            }), (0, KR.jsxs)("div", {
+            }), (0, xr.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, KR.jsxs)(fR.g, {
+              children: [(0, xr.jsxs)(Er.h, {
                 onClick: () => {
-                  UR("screenshot")
+                  Yr("screenshot")
                 },
-                disabled: ZR,
-                children: [ZR && (0, KR.jsx)(XR.d, {}), "Download Screenshot"]
-              }), (0, KR.jsxs)(fR.g, {
+                disabled: jr,
+                children: [jr && (0, xr.jsx)(yr.c, {}), "Download Screenshot"]
+              }), (0, xr.jsxs)(Er.h, {
                 onClick: () => {
-                  UR("glb")
+                  Yr("glb")
                 },
-                disabled: tR,
-                children: [tR && (0, KR.jsx)(XR.d, {}), "Download GLB"]
+                disabled: Wr,
+                children: [Wr && (0, xr.jsx)(yr.c, {}), "Download GLB"]
               })]
             })]
-          }), (0, KR.jsx)("div", {
+          }), (0, xr.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var gR = GR(134),
-      bR = GR(1201),
-      vR = GR(35035),
-      OR = GR(4155),
-      xR = GR(1663),
-      NR = GR(1359),
-      DR = GR(1328),
-      HR = GR(2248),
-      oR = GR(1647),
-      cR = GR(377),
-      PR = GR(645),
-      IR = GR(3314),
-      mR = GR(3322);
-    const zR = "store:retiredRankEnds";
+    var Lr = Qr(139),
+      lr = Qr(1187),
+      Xr = Qr(35341),
+      Pr = Qr(4105),
+      Hr = Qr(1644),
+      qr = Qr(1321),
+      Rr = Qr(1283),
+      gr = Qr(2188),
+      Cr = Qr(1629),
+      Mr = Qr(379),
+      Gr = Qr(661),
+      kr = Qr(3267),
+      Ar = Qr(3276);
+    const Vr = "store:retiredRankEnds";
 
-    function SR(RR) {
+    function ir(rr) {
       let {
-        until: JR,
-        className: GR
-      } = RR;
+        until: Sr,
+        className: Qr
+      } = rr;
       const {
-        t: yR,
-        selectedLanguage: tR
-      } = (0, ZR.A)(), uR = new Date(JR).toLocaleDateString((0, ZR.n)(tR.code, zR), {
+        t: Zr,
+        selectedLanguage: Wr
+      } = (0, jr.E)(), ar = new Date(Sr).toLocaleDateString((0, jr.m)(Wr.code, Vr), {
         year: "numeric",
         month: "short",
         day: "numeric"
       });
-      return (0, KR.jsx)("span", {
-        className: GR,
-        children: yR(zR, {
-          date: uR
+      return (0, xr.jsx)("span", {
+        className: Qr,
+        children: Zr(Vr, {
+          date: ar
         })
       })
     }
-    var jR = GR(3217),
-      dR = GR(4186),
-      ER = GR(4180),
-      YR = GR(216),
-      kR = GR(1803),
-      QR = GR(1343),
-      FR = GR(4198);
+    var wr = Qr(3192),
+      cr = Qr(4142),
+      Fr = Qr(4140),
+      or = Qr(215),
+      br = Qr(1761),
+      Jr = Qr(1304),
+      Dr = Qr(4159);
 
-    function TR(RR, JR, GR) {
-      const yR = PR.r[(0, PR.l)(PR.r, JR)],
-        tR = void 0 === yR ? void 0 : (0, YR.b)(RR.entitlements, yR.entitlementId);
-      return void 0 === tR || null === tR.expiresAt || (0, ER.g)(tR) <= GR ? null : tR.willRenew && null === tR.billingIssueDetectedAt ? {
+    function dr(rr, Sr, Qr) {
+      const Zr = Gr.r[(0, Gr.n)(Gr.r, Sr)],
+        Wr = void 0 === Zr ? void 0 : (0, or.b)(rr.entitlements, Zr.entitlementId);
+      return void 0 === Wr || null === Wr.expiresAt || (0, Fr.g)(Wr) <= Qr ? null : Wr.willRenew && null === Wr.billingIssueDetectedAt ? {
         renews: !0,
-        at: Math.max(tR.expiresAt, GR)
+        at: Math.max(Wr.expiresAt, Qr)
       } : {
         renews: !1,
-        at: (0, ER.g)(tR)
+        at: (0, Fr.g)(Wr)
       }
     }
-    var sR = GR(4171),
-      hR = GR(4175);
-    const RJ = {
+    var sr = Qr(4131),
+      ur = Qr(4135);
+    const rS = {
       cancel: !1,
       resume: !1,
       manage: !1
     };
 
-    function JJ(RR) {
-      return RR instanceof dR.d && "storeUnavailable" === RR.code ? (console.warn("Billing: the store didn't take a subscription change:", RR), "store:subscriptionStoreUnavailable") : RR instanceof dR.d && "subscriptionActionUnavailable" === RR.code ? (console.warn("Billing: a subscription action billing no longer offers:", RR), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", RR), "store:subscriptionChangeFailed")
+    function SS(rr) {
+      return rr instanceof cr.b && "storeUnavailable" === rr.code ? (console.warn("Billing: the store didn't take a subscription change:", rr), "store:subscriptionStoreUnavailable") : rr instanceof cr.b && "subscriptionActionUnavailable" === rr.code ? (console.warn("Billing: a subscription action billing no longer offers:", rr), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", rr), "store:subscriptionChangeFailed")
     }
-    async function GJ() {
+    async function QS() {
       try {
-        var RR;
+        var rr;
         const {
-          offering: JR
-        } = await (0, hR.getBillingClient)().getOfferings((0, IR.l)(PR.h.id).placementId);
-        return null !== (RR = null === JR || void 0 === JR ? void 0 : JR.packages.find(sR.isPricedPackage)) && void 0 !== RR ? RR : null
-      } catch (JR) {
-        return console.warn("Billing: loading the rank plan's price failed:", JR), null
+          offering: Sr
+        } = await (0, ur.getBillingClient)().getOfferings((0, kr.l)(Gr.g.id).placementId);
+        return null !== (rr = null === Sr || void 0 === Sr ? void 0 : Sr.packages.find(sr.isPricedPackage)) && void 0 !== rr ? rr : null
+      } catch (Sr) {
+        return console.warn("Billing: loading the rank plan's price failed:", Sr), null
       }
     }
 
-    function yJ(RR) {
+    function ZS(rr) {
       const {
-        userContext: JR
-      } = (0, eR.d)(), {
-        superRankInfo: GR
-      } = JR, tR = (0, jR.usePurchasesAllowed)(), uR = (0, cR.wc)(GR), ZR = RR && tR && (uR || JR.ranksMayChange), [qR, iR] = (0, yR.useState)(null), [fR, VR] = (0, yR.useState)(!1), [KR, wR] = (0, yR.useState)(!1), [rR, aR] = (0, yR.useState)(null);
-      (0, yR.useEffect)((() => {
-        if (!ZR) return;
-        let RR = !1;
-        const GR = () => {
-          Promise.all([(0, hR.getBillingClient)().getSubscriptions(), GJ()]).then((GR => {
-            let [yR, tR] = GR;
-            RR || (iR({
-              for: JR,
-              answer: yR,
-              pkg: tR
-            }), VR(!1))
-          }), (JR => {
-            console.error("Billing: loading the player's subscriptions failed:", JR), RR || VR(!0)
+        userContext: Sr
+      } = (0, Ur.c)(), {
+        superRankInfo: Qr
+      } = Sr, Wr = (0, wr.usePurchasesAllowed)(), ar = (0, Mr.uc)(Qr), jr = rr && Wr && (ar || Sr.ranksMayChange), [Ir, fr] = (0, Zr.useState)(null), [Er, pr] = (0, Zr.useState)(!1), [xr, mr] = (0, Zr.useState)(!1), [Nr, tr] = (0, Zr.useState)(null);
+      (0, Zr.useEffect)((() => {
+        if (!jr) return;
+        let rr = !1;
+        const Qr = () => {
+          Promise.all([(0, ur.getBillingClient)().getSubscriptions(), QS()]).then((Qr => {
+            let [Zr, Wr] = Qr;
+            rr || (fr({
+              for: Sr,
+              answer: Zr,
+              pkg: Wr
+            }), pr(!1))
+          }), (Sr => {
+            console.error("Billing: loading the player's subscriptions failed:", Sr), rr || pr(!0)
           }))
         };
-        GR();
-        const yR = kR.e.addRefetchListener("billing", GR);
+        Qr();
+        const Zr = br.e.addRefetchListener("billing", Qr);
         return () => {
-          RR = !0, yR()
+          rr = !0, Zr()
         }
-      }), [ZR, JR]);
-      const LR = ZR && uR && null !== qR && qR.for === JR ? function(RR, JR, GR, yR) {
-        var tR;
+      }), [jr, Sr]);
+      const hr = jr && ar && null !== Ir && Ir.for === Sr ? function(rr, Sr, Qr, Zr) {
+        var Wr;
         const {
-          customerInfo: uR,
-          actions: ZR
-        } = RR, qR = PR.r[(0, PR.l)(PR.r, JR)], iR = void 0 === qR ? void 0 : (0, YR.b)(uR.entitlements, qR.entitlementId), fR = TR(uR, JR, yR);
-        if (void 0 === iR || null === fR) return null;
-        const VR = Object.entries(uR.subscriptions).find((RR => {
-          let [, JR] = RR;
-          return JR.productId === iR.productId && JR.store === iR.store && !(0, ER.m)(JR.status)
+          customerInfo: ar,
+          actions: jr
+        } = rr, Ir = Gr.r[(0, Gr.n)(Gr.r, Sr)], fr = void 0 === Ir ? void 0 : (0, or.b)(ar.entitlements, Ir.entitlementId), Er = dr(ar, Sr, Zr);
+        if (void 0 === fr || null === Er) return null;
+        const pr = Object.entries(ar.subscriptions).find((rr => {
+          let [, Sr] = rr;
+          return Sr.productId === fr.productId && Sr.store === fr.store && !(0, Fr.m)(Sr.status)
         }));
-        if (void 0 === VR) return null;
-        const [KR, wR] = VR, rR = (null === GR || void 0 === GR ? void 0 : GR.productId) === wR.productId && wR.store === (0, jR.getBillingStore)();
+        if (void 0 === pr) return null;
+        const [xr, mr] = pr, Nr = (null === Qr || void 0 === Qr ? void 0 : Qr.productId) === mr.productId && mr.store === (0, wr.getBillingStore)();
         return {
-          key: KR,
-          tierId: JR,
-          info: wR,
-          actions: null !== (tR = (0, YR.b)(ZR, KR)) && void 0 !== tR ? tR : RJ,
-          date: fR,
-          pkg: rR ? GR : null
+          key: xr,
+          tierId: Sr,
+          info: mr,
+          actions: null !== (Wr = (0, or.b)(jr, xr)) && void 0 !== Wr ? Wr : rS,
+          date: Er,
+          pkg: Nr ? Qr : null
         }
-      }(qR.answer, GR.tier, qR.pkg, Date.now()) : null;
+      }(Ir.answer, Qr.tier, Ir.pkg, Date.now()) : null;
       return {
-        subscription: LR,
-        loadFailed: ZR && uR && fR,
-        busy: KR,
-        errorKey: rR,
-        change: async function(RR) {
-          if (null === LR || KR) return;
-          wR(!0), aR(null);
-          const GR = (0, hR.getBillingClient)();
+        subscription: hr,
+        loadFailed: jr && ar && Er,
+        busy: xr,
+        errorKey: Nr,
+        change: async function(rr) {
+          if (null === hr || xr) return;
+          mr(!0), tr(null);
+          const Qr = (0, ur.getBillingClient)();
           try {
-            const yR = await ("cancel" === RR ? GR.cancelSubscription(LR.key) : GR.resumeSubscription(LR.key));
-            iR({
-              for: JR,
-              answer: yR,
-              pkg: LR.pkg
-            }), (0, FR.d)()
-          } catch (yR) {
-            aR(JJ(yR))
+            const Zr = await ("cancel" === rr ? Qr.cancelSubscription(hr.key) : Qr.resumeSubscription(hr.key));
+            fr({
+              for: Sr,
+              answer: Zr,
+              pkg: hr.pkg
+            }), (0, Dr.d)()
+          } catch (Zr) {
+            tr(SS(Zr))
           } finally {
-            wR(!1)
+            mr(!1)
           }
         },
         openManagePage: async function() {
-          if (null === LR || KR) return;
-          const RR = window.open("", "_blank");
-          wR(!0), aR(null);
+          if (null === hr || xr) return;
+          const rr = window.open("", "_blank");
+          mr(!0), tr(null);
           try {
-            const JR = await (0, hR.getBillingClient)().subscriptionManagementUrl(LR.key, QR.g.get().getCurrentLanguageCode());
-            null === RR ? window.open(JR, "_blank", "noopener") : (RR.opener = null, RR.location.href = JR)
-          } catch (JR) {
-            null === RR || void 0 === RR || RR.close(), aR(JJ(JR))
+            const Sr = await (0, ur.getBillingClient)().subscriptionManagementUrl(hr.key, Jr.f.get().getCurrentLanguageCode());
+            null === rr ? window.open(Sr, "_blank", "noopener") : (rr.opener = null, rr.location.href = Sr)
+          } catch (Sr) {
+            null === rr || void 0 === rr || rr.close(), tr(SS(Sr))
           } finally {
-            wR(!1)
+            mr(!1)
           }
         }
       }
     }
-    var tJ = GR(1493),
-      uJ = GR(4227);
+    var WS = Qr(1475),
+      aS = Qr(4187);
 
-    function ZJ(RR, JR) {
-      return new Date(RR).toLocaleDateString(JR, {
+    function jS(rr, Sr) {
+      return new Date(rr).toLocaleDateString(Sr, {
         year: "numeric",
         month: "short",
         day: "numeric"
       })
     }
 
-    function qJ(RR) {
+    function IS(rr) {
       let {
-        showing: JR,
-        className: GR
-      } = RR;
+        showing: Sr,
+        className: Qr
+      } = rr;
       const {
-        t: yR,
-        selectedLanguage: tR
-      } = (0, ZR.A)(), {
-        subscription: iR,
-        loadFailed: VR,
-        busy: wR,
-        errorKey: rR,
-        change: eR,
-        openManagePage: aR
-      } = yJ(JR);
-      if (VR) return (0, KR.jsx)("div", {
-        className: uR()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", GR),
-        children: yR("store:subscriptionLoadFailed")
+        t: Zr,
+        selectedLanguage: Wr
+      } = (0, jr.E)(), {
+        subscription: fr,
+        loadFailed: pr,
+        busy: mr,
+        errorKey: Nr,
+        change: Ur,
+        openManagePage: tr
+      } = ZS(Sr);
+      if (pr) return (0, xr.jsx)("div", {
+        className: ar()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", Qr),
+        children: Zr("store:subscriptionLoadFailed")
       });
-      if (null === iR) return null;
+      if (null === fr) return null;
       const {
-        date: LR,
-        info: nR,
-        actions: UR,
-        pkg: WR
-      } = iR, AR = LR.renews ? "store:renewsOn" : "store:endsOn", CR = ZJ(LR.at, (0, ZR.n)(tR.code, AR)), XR = yR((0, IR.l)(iR.tierId).nameKey), MR = null !== nR.billingIssueDetectedAt;
-      return (0, KR.jsxs)("div", {
-        className: uR()("RankSubscriptionManage", GR),
-        children: [(0, KR.jsxs)("div", {
+        date: hr,
+        info: zr,
+        actions: Yr,
+        pkg: nr
+      } = fr, er = hr.renews ? "store:renewsOn" : "store:endsOn", Kr = jS(hr.at, (0, jr.m)(Wr.code, er)), yr = Zr((0, kr.l)(fr.tierId).nameKey), Br = null !== zr.billingIssueDetectedAt;
+      return (0, xr.jsxs)("div", {
+        className: ar()("RankSubscriptionManage", Qr),
+        children: [(0, xr.jsxs)("div", {
           className: "RankSubscriptionManageStatus SmallTextBold",
-          children: [yR(AR, {
-            date: CR
-          }), LR.renews && null !== WR && (0, jR.subscriptionsSold)() && (0, KR.jsxs)(KR.Fragment, {
-            children: [" \xb7 ", yR("store:pricePerMonth", {
-              price: (0, uJ.d)(WR)
+          children: [Zr(er, {
+            date: Kr
+          }), hr.renews && null !== nr && (0, wr.subscriptionsSold)() && (0, xr.jsxs)(xr.Fragment, {
+            children: [" \xb7 ", Zr("store:pricePerMonth", {
+              price: (0, aS.e)(nr)
             })]
           })]
-        }), MR && (0, KR.jsxs)("div", {
+        }), Br && (0, xr.jsxs)("div", {
           className: "RankSubscriptionManageWarning SmallTextBold",
-          children: [(0, KR.jsx)(qR.d, {
+          children: [(0, xr.jsx)(Ir.c, {
             name: "triangle-exclamation"
-          }), " ", yR("store:paymentFailing", {
-            rank: XR
+          }), " ", Zr("store:paymentFailing", {
+            rank: yr
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "RankSubscriptionManageActions",
-          children: [UR.manage && (0, KR.jsx)(fR.i, {
-            disabled: wR,
+          children: [Yr.manage && (0, xr.jsx)(Er.k, {
+            disabled: mr,
             onClick: () => {
-              aR()
+              tr()
             },
-            children: yR(MR ? "store:updatePayment" : "payments:manageSubscription")
-          }), UR.resume && (0, KR.jsx)(fR.g, {
-            loading: wR,
+            children: Zr(Br ? "store:updatePayment" : "payments:manageSubscription")
+          }), Yr.resume && (0, xr.jsx)(Er.h, {
+            loading: mr,
             onClick: () => {
-              eR("resume")
+              Ur("resume")
             },
-            children: yR("store:resumeSubscription")
-          }), UR.cancel && (0, KR.jsx)(fR.M, {
-            loading: wR,
+            children: Zr("store:resumeSubscription")
+          }), Yr.cancel && (0, xr.jsx)(Er.L, {
+            loading: mr,
             onClick: () => {
-              (async function(RR, JR, GR) {
-                const yR = Date.now() >= RR.info.currentPeriodEnd;
-                return !0 === await tJ.NotificationProvider.showPromptPopup({
+              (async function(rr, Sr, Qr) {
+                const Zr = Date.now() >= rr.info.currentPeriodEnd;
+                return !0 === await WS.NotificationProvider.showPromptPopup({
                   title: "store:cancelSubscriptionTitle",
-                  subtitle: yR ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
+                  subtitle: Zr ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
                   textOpts: {
                     title: {
-                      rank: JR
+                      rank: Sr
                     },
                     subtitle: {
-                      rank: JR,
-                      date: GR
+                      rank: Sr,
+                      date: Qr
                     }
                   },
                   confirmText: "store:cancelSubscription",
@@ -489,143 +489,143 @@ export const modules = {
                   destructive: !0,
                   unlockPointerKey: "rankSubscriptionCancel"
                 }).getResult()
-              })(iR, XR, ZJ(nR.currentPeriodEnd, (0, ZR.n)(tR.code, "store:cancelKeepsUntil"))).then((RR => {
-                RR && eR("cancel")
+              })(fr, yr, jS(zr.currentPeriodEnd, (0, jr.m)(Wr.code, "store:cancelKeepsUntil"))).then((rr => {
+                rr && Ur("cancel")
               }))
             },
-            children: yR("store:cancelSubscription")
+            children: Zr("store:cancelSubscription")
           })]
-        }), null !== rR && (0, KR.jsx)("div", {
+        }), null !== Nr && (0, xr.jsx)("div", {
           className: "RankSubscriptionManageError SmallTextBold",
-          children: yR(rR)
+          children: Zr(Nr)
         })]
       })
     }
-    var iJ = GR(3213),
-      fJ = GR(3810),
-      VJ = GR(1825);
-    async function KJ() {
+    var fS = Qr(3184),
+      ES = Qr(3757),
+      pS = Qr(1783);
+    async function xS() {
       try {
-        return function(RR) {
-          const JR = new Map;
+        return function(rr) {
+          const Sr = new Map;
           for (const {
-              store: GR,
-              status: yR,
-              autoRenewStatus: tR,
-              managementUrl: uR
+              store: Qr,
+              status: Zr,
+              autoRenewStatus: Wr,
+              managementUrl: ar
             }
-            of Object.values(RR.subscriptions)) !(0, ER.i)(GR) || (0, ER.m)(yR) || "willNotRenew" === tR || JR.has(GR) || JR.set(GR, null !== uR && void 0 !== uR ? uR : ER.o[GR]);
-          return Array.from(JR, (RR => {
-            let [JR, GR] = RR;
+            of Object.values(rr.subscriptions)) !(0, Fr.j)(Qr) || (0, Fr.m)(Zr) || "willNotRenew" === Wr || Sr.has(Qr) || Sr.set(Qr, null !== ar && void 0 !== ar ? ar : Fr.p[Qr]);
+          return Array.from(Sr, (rr => {
+            let [Sr, Qr] = rr;
             return {
-              store: JR,
-              managementUrl: GR
+              store: Sr,
+              managementUrl: Qr
             }
           }))
-        }(await (0, VJ.k)((0, hR.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (RR) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", RR), null
+        }(await (0, pS.h)((0, ur.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (rr) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", rr), null
       }
     }
 
-    function wJ(RR) {
+    function mS(rr) {
       const {
-        t: JR,
-        selectedLanguage: GR
-      } = (0, ZR.A)(), {
-        userContext: tR
-      } = (0, eR.d)(), {
-        superRankInfo: uR
-      } = tR, qR = (0, jR.usePurchasesAllowed)(), iR = RR && ((0, cR.wc)(uR) || tR.ranksMayChange) && qR, {
-        accountId: fR,
-        data: VR
-      } = (0, fJ.h)(FR.c, iR);
-      if ((0, yR.useEffect)((() => {
-          if (iR) return FR.c.watchAccount(), kR.e.addRefetchListener("billing", (RR => {
-            "reconnected" === RR ? FR.c.refreshAfterReconnect() : FR.c.refresh()
+        t: Sr,
+        selectedLanguage: Qr
+      } = (0, jr.E)(), {
+        userContext: Wr
+      } = (0, Ur.c)(), {
+        superRankInfo: ar
+      } = Wr, Ir = (0, wr.usePurchasesAllowed)(), fr = rr && ((0, Mr.uc)(ar) || Wr.ranksMayChange) && Ir, {
+        accountId: Er,
+        data: pr
+      } = (0, ES.j)(Dr.c, fr);
+      if ((0, Zr.useEffect)((() => {
+          if (fr) return Dr.c.watchAccount(), br.e.addRefetchListener("billing", (rr => {
+            "reconnected" === rr ? Dr.c.refreshAfterReconnect() : Dr.c.refresh()
           }))
-        }), [iR]), !iR || !(0, cR.wc)(uR) || null === VR || fR !== tR.whamm) return null;
-      const KR = TR(VR, uR.tier, Date.now());
-      if (null === KR) return null;
-      const wR = KR.renews ? "store:renewsOn" : "store:endsOn",
-        rR = (0, ZR.f)(GR.code, wR, KR.at, {
+        }), [fr]), !fr || !(0, Mr.uc)(ar) || null === pr || Er !== Wr.whamm) return null;
+      const xr = dr(pr, ar.tier, Date.now());
+      if (null === xr) return null;
+      const mr = xr.renews ? "store:renewsOn" : "store:endsOn",
+        Nr = (0, jr.f)(Qr.code, mr, xr.at, {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        aR = (0, jR.getBillingStore)(),
-        LR = null !== aR && (0, ER.i)(aR) ? function(RR, JR) {
-          var GR;
-          const yR = Object.values(RR.subscriptions).find((RR => RR.store === JR && !(0, ER.m)(RR.status)));
-          return void 0 === yR ? null : null !== (GR = yR.managementUrl) && void 0 !== GR ? GR : ER.o[JR]
-        }(VR, aR) : null;
+        tr = (0, wr.getBillingStore)(),
+        hr = null !== tr && (0, Fr.j)(tr) ? function(rr, Sr) {
+          var Qr;
+          const Zr = Object.values(rr.subscriptions).find((rr => rr.store === Sr && !(0, Fr.m)(rr.status)));
+          return void 0 === Zr ? null : null !== (Qr = Zr.managementUrl) && void 0 !== Qr ? Qr : Fr.p[Sr]
+        }(pr, tr) : null;
       return {
-        text: JR(wR, {
-          date: rR
+        text: Sr(mr, {
+          date: Nr
         }),
-        manageUrl: LR
+        manageUrl: hr
       }
     }
-    var rJ = GR(1501),
-      eJ = GR(1304),
-      aJ = GR(5766),
-      LJ = GR(1618),
-      nJ = GR(5013),
-      UJ = GR(3410);
+    var NS = Qr(1489),
+      US = Qr(1269),
+      tS = Qr(5707),
+      hS = Qr(1605),
+      zS = Qr(4923),
+      YS = Qr(3360);
 
-    function WJ(RR) {
+    function nS(rr) {
       let {
-        showing: JR
-      } = RR;
+        showing: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)(), {
-        data: yR,
-        failed: tR
-      } = (0, fJ.h)(nJ.g, JR);
-      return 0 === (null === yR || void 0 === yR ? void 0 : yR.length) || null === yR && !tR ? null : (0, KR.jsxs)("div", {
+        t: Qr
+      } = (0, jr.E)(), {
+        data: Zr,
+        failed: Wr
+      } = (0, ES.j)(zS.d, Sr);
+      return 0 === (null === Zr || void 0 === Zr ? void 0 : Zr.length) || null === Zr && !Wr ? null : (0, xr.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: GR("paymentHistory:title")
-        }), null === yR && tR && (0, KR.jsx)("div", {
+          children: Qr("paymentHistory:title")
+        }), null === Zr && Wr && (0, xr.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: GR("paymentHistory:loadFailed")
-        }), null !== yR && (0, KR.jsx)("ul", {
+          children: Qr("paymentHistory:loadFailed")
+        }), null !== Zr && (0, xr.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: yR.map((RR => (0, KR.jsxs)("li", {
+          children: Zr.map((rr => (0, xr.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, KR.jsx)(UJ.d, {
-              entry: RR
-            }), (0, KR.jsxs)("div", {
+            children: [(0, xr.jsx)(YS.d, {
+              entry: rr
+            }), (0, xr.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, KR.jsx)("div", {
-                children: (0, UJ.i)(GR, RR)
-              }), (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)("div", {
+                children: (0, YS.k)(Qr, rr)
+              }), (0, xr.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(RR.at).toLocaleDateString(), "number" === typeof RR.orderId && ` \xb7 ${GR("paymentHistory:order",{orderId:RR.orderId})}`]
+                children: [new Date(rr.at).toLocaleDateString(), "number" === typeof rr.orderId && ` \xb7 ${Qr("paymentHistory:order",{orderId:rr.orderId})}`]
               })]
             })]
-          }, (0, nJ.e)(RR))))
+          }, (0, zS.b)(rr))))
         })]
       })
     }
-    var AJ = GR(3225),
-      CJ = GR(2344);
+    var eS = Qr(3198),
+      KS = Qr(2277);
 
-    function XJ() {
-      (0, CJ.e)({
+    function yS() {
+      (0, KS.c)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function MJ(RR) {
+    function BS(rr) {
       let {
-        status: JR
-      } = RR;
-      switch (JR) {
+        status: Sr
+      } = rr;
+      switch (Sr) {
         case "restored":
-          return (0, FR.d)(), {
+          return (0, Dr.d)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -638,898 +638,898 @@ export const modules = {
       }
     }
 
-    function BJ() {
-      const RR = (0, hR.usePageBillingClient)(),
+    function TS() {
+      const rr = (0, ur.usePageBillingClient)(),
         {
-          userContext: JR
-        } = (0, eR.d)(),
-        [GR, tR] = (0, yR.useState)(!1),
-        [uR, ZR] = (0, yR.useState)(null);
+          userContext: Sr
+        } = (0, Ur.c)(),
+        [Qr, Wr] = (0, Zr.useState)(!1),
+        [ar, jr] = (0, Zr.useState)(null);
       return {
-        restoring: GR,
-        notice: uR,
+        restoring: Qr,
+        notice: ar,
         restore: () => {
-          JR.isLoggedIn() ? (tR(!0), ZR(null), RR.restorePurchases().then(MJ, (RR => RR instanceof dR.d && "loginRequired" === RR.code ? (XJ(), null) : function(RR) {
-            return RR instanceof dR.d && "storeBusy" === RR.code ? {
+          Sr.isLoggedIn() ? (Wr(!0), jr(null), rr.restorePurchases().then(BS, (rr => rr instanceof cr.b && "loginRequired" === rr.code ? (yS(), null) : function(rr) {
+            return rr instanceof cr.b && "storeBusy" === rr.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", RR), (0, FR.d)(), {
+            } : (console.error("Billing: restoring purchases failed:", rr), (0, Dr.d)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(RR))).then(ZR).finally((() => {
-            tR(!1)
-          }))) : XJ()
+          }(rr))).then(jr).finally((() => {
+            Wr(!1)
+          }))) : yS()
         }
       }
     }
 
-    function lJ(RR) {
+    function vS(rr) {
       let {
-        restoring: JR,
-        notice: GR,
-        restore: tR
-      } = RR;
+        restoring: Sr,
+        notice: Qr,
+        restore: Wr
+      } = rr;
       const {
-        t: qR
-      } = (0, ZR.A)(), iR = (0, jR.usePurchasesAllowed)(), VR = (0, jR.getBillingStore)(), wR = (0, yR.useRef)(null);
-      return (0, yR.useEffect)((() => {
-        var RR;
-        null === (RR = wR.current) || void 0 === RR || RR.scrollIntoView({
+        t: Ir
+      } = (0, jr.E)(), fr = (0, wr.usePurchasesAllowed)(), pr = (0, wr.getBillingStore)(), mr = (0, Zr.useRef)(null);
+      return (0, Zr.useEffect)((() => {
+        var rr;
+        null === (rr = mr.current) || void 0 === rr || rr.scrollIntoView({
           block: "nearest"
         })
-      }), [GR]), iR && (0, AJ.e)(VR) ? (0, KR.jsxs)("div", {
+      }), [Qr]), fr && (0, eS.d)(pr) ? (0, xr.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, KR.jsx)(fR.i, {
+        children: [(0, xr.jsx)(Er.k, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: JR,
-          onClick: tR,
-          children: qR("payments:restorePurchases")
-        }), null !== GR && (0, KR.jsx)("div", {
-          ref: wR,
-          className: uR()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: GR.failed
+          loading: Sr,
+          onClick: Wr,
+          children: Ir("payments:restorePurchases")
+        }), null !== Qr && (0, xr.jsx)("div", {
+          ref: mr,
+          className: ar()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: Qr.failed
           }),
-          children: qR(GR.key)
+          children: Ir(Qr.key)
         })]
       }) : null
     }
-    var pJ = GR(2098),
-      gJ = GR(1341),
-      bJ = GR(1282),
-      vJ = GR(1444),
-      OJ = GR(359),
-      xJ = GR(3604);
-    const NJ = {
+    var OS = Qr(2042),
+      LS = Qr(1295),
+      lS = Qr(1262),
+      XS = Qr(1413),
+      PS = Qr(360),
+      HS = Qr(3532);
+    const qS = {
       appStore: {
         name: "App Store",
-        ...OJ.Vb.appStore
+        ...PS.Xb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...OJ.Vb.googlePlay
+        ...PS.Xb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...OJ.Vb.discord
+        ...PS.Xb.discord
       }
     };
 
-    function DJ(RR) {
+    function RS(rr) {
       let {
-        warning: JR,
-        subscriptions: GR
-      } = RR;
+        warning: Sr,
+        subscriptions: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return null !== GR && 0 === GR.length ? (0, KR.jsx)(KR.Fragment, {
-        children: yR(JR)
-      }) : (0, KR.jsxs)("div", {
+        t: Zr
+      } = (0, jr.E)();
+      return null !== Qr && 0 === Qr.length ? (0, xr.jsx)(xr.Fragment, {
+        children: Zr(Sr)
+      }) : (0, xr.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [yR(JR), null === GR && (0, KR.jsx)("div", {
+        children: [Zr(Sr), null === Qr && (0, xr.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: yR("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== GR && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)("div", {
+          children: Zr("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== Qr && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: yR("auth:deleteAccountStoreSubscriptions")
-          }), (0, KR.jsx)(xJ.d, {
+            children: Zr("auth:deleteAccountStoreSubscriptions")
+          }), (0, xr.jsx)(HS.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: GR.map((RR => {
+            links: Qr.map((rr => {
               let {
-                store: JR,
-                managementUrl: GR
-              } = RR;
+                store: Sr,
+                managementUrl: Qr
+              } = rr;
               return {
-                ...NJ[JR],
-                url: GR
+                ...qS[Sr],
+                url: Qr
               }
             }))
           })]
         })]
       })
     }
-    var HJ = GR(5482);
+    var gS = Qr(5440);
 
-    function oJ(RR) {
+    function CS(rr) {
       let {
-        showing: JR
-      } = RR;
+        showing: Sr
+      } = rr;
       const {
-        userContext: GR,
-        isUserContextUpdating: tR
-      } = (0, eR.d)(), {
-        t: uR
-      } = (0, ZR.A)(), [qR, iR] = (0, yR.useState)(!1), [VR, wR] = (0, yR.useState)(null), rR = (0, yR.useRef)(JR);
-      (0, yR.useEffect)((() => (rR.current = JR, () => {
-        rR.current = !1
-      })), [JR]);
-      const aR = tR || qR;
-      return (0, KR.jsxs)("div", {
+        userContext: Qr,
+        isUserContextUpdating: Wr
+      } = (0, Ur.c)(), {
+        t: ar
+      } = (0, jr.E)(), [Ir, fr] = (0, Zr.useState)(!1), [pr, mr] = (0, Zr.useState)(null), Nr = (0, Zr.useRef)(Sr);
+      (0, Zr.useEffect)((() => (Nr.current = Sr, () => {
+        Nr.current = !1
+      })), [Sr]);
+      const tr = Wr || Ir;
+      return (0, xr.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, KR.jsxs)(fR.M, {
+        children: [(0, xr.jsxs)(Er.L, {
           onClick: async function() {
-            if (!qR) {
-              iR(!0);
+            if (!Ir) {
+              fr(!0);
               try {
-                const RR = await async function() {
-                  const [RR, JR] = await Promise.all([(0, pJ.c)(GR.availableUserContextTypes) ? KJ() : [], PJ(GR)]);
-                  if (!rR.current) return gJ.e.ok();
-                  const yR = (0, NR.e)(GR.getPlayerName(), !nR.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await tJ.NotificationProvider.showPromptPopup({
+                const rr = await async function() {
+                  const [rr, Sr] = await Promise.all([(0, OS.b)(Qr.availableUserContextTypes) ? xS() : [], GS(Qr)]);
+                  if (!Nr.current) return LS.e.ok();
+                  const Zr = (0, qr.e)(Qr.getPlayerName(), !zr.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await WS.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: yR
+                          playerName: Zr
                         }
                       },
-                      subtitle: (0, KR.jsx)(DJ, {
-                        warning: cJ(GR.isLoggedIn(), JR),
-                        subscriptions: RR
+                      subtitle: (0, xr.jsx)(RS, {
+                        warning: MS(Qr.isLoggedIn(), Sr),
+                        subscriptions: rr
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: JR ? uR("auth:deleteAccountTypedConfirm", {
-                        playerName: yR
+                      typedConfirm: Sr ? ar("auth:deleteAccountTypedConfirm", {
+                        playerName: Zr
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return gJ.e.ok();
-                  const tR = await (0, bR.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: BR.d.get("gameState")
+                    }).getResult()) return LS.e.ok();
+                  const Wr = await (0, lr.postJsonWithMetricsCookiesAndJsonResponse)(`${lS.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: Tr.c.get("gameState")
                   }, {
                     retries: 3
-                  }, GR.getMetricsCookies());
-                  if (tR.error) return gJ.e.error(tR.error);
-                  (0, gR.isDiscordClient)() && (await vJ.l.discordActivity()).exit("User deleted their account");
-                  return HJ.e.stopRecordingHere("the player deleted their account", {
+                  }, Qr.getMetricsCookies());
+                  if (Wr.error) return LS.e.error(Wr.error);
+                  (0, Lr.isDiscordClient)() && (await XS.j.discordActivity()).exit("User deleted their account");
+                  return gS.e.stopRecordingHere("the player deleted their account", {
                     forget: !0
-                  }), (0, bR.forgetStoredGuestAccount)(GR.whamm), (0, bR.forceGlobalSignOut)(!0), gJ.e.ok()
-                }(), JR = RR.isError() ? RR.asError().message : null;
-                wR(JR)
-              } catch (RR) {
-                console.error("Failed to delete account:", RR), wR(uR("auth:genericDeleteAccountError"))
+                  }), (0, lr.forgetStoredGuestAccount)(Qr.whamm), (0, lr.forceGlobalSignOut)(!0), LS.e.ok()
+                }(), Sr = rr.isError() ? rr.asError().message : null;
+                mr(Sr)
+              } catch (rr) {
+                console.error("Failed to delete account:", rr), mr(ar("auth:genericDeleteAccountError"))
               }
-              iR(!1)
+              fr(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: aR,
-          children: [aR && (0, KR.jsx)("div", {
+          disabled: tr,
+          children: [tr && (0, xr.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, KR.jsx)(XR.d, {})
-          }), uR("auth:deleteAccount")]
-        }), VR && (0, KR.jsx)("div", {
+            children: (0, xr.jsx)(yr.c, {})
+          }), ar("auth:deleteAccount")]
+        }), pr && (0, xr.jsx)("div", {
           className: "DeleteAccountError",
-          children: VR
+          children: pr
         })]
       })
     }
 
-    function cJ(RR, JR) {
-      return (0, gR.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : RR ? "auth:deleteAccountLossWarning" : JR ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function MS(rr, Sr) {
+      return (0, Lr.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : rr ? "auth:deleteAccountLossWarning" : Sr ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function PJ(RR) {
+    async function GS(rr) {
       try {
         const {
-          accountCreatedAt: JR
-        } = await (0, VJ.k)(oR.c.getPlayerProfile(RR, {
-          lowerCaseName: RR.getPlayerName().toLowerCase()
+          accountCreatedAt: Sr
+        } = await (0, pS.h)(Cr.c.getPlayerProfile(rr, {
+          lowerCaseName: rr.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== JR && Date.now() - JR >= 7 * cR.i
-      } catch (JR) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", JR), !0
+        return null !== Sr && Date.now() - Sr >= 7 * Mr.d
+      } catch (Sr) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", Sr), !0
       }
     }
-    var IJ = GR(4939),
-      mJ = GR(4949),
-      zJ = GR(4945);
+    var kS = Qr(4846),
+      AS = Qr(4867),
+      VS = Qr(4858);
 
-    function SJ(RR) {
+    function iS(rr) {
       let {
-        showing: JR
-      } = RR;
+        showing: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)(), {
-        data: yR,
-        failed: tR
-      } = (0, fJ.h)(IJ.d, JR), uR = null === yR ? null : (0, IJ.f)(yR);
-      return (0, KR.jsxs)("div", {
+        t: Qr
+      } = (0, jr.E)(), {
+        data: Zr,
+        failed: Wr
+      } = (0, ES.j)(kS.e, Sr), ar = null === Zr ? null : (0, kS.h)(Zr);
+      return (0, xr.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: GR("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === uR && !tR && (0, KR.jsx)(XR.d, {}), null === uR && tR && (0, KR.jsxs)("div", {
+          children: Qr("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === ar && !Wr && (0, xr.jsx)(yr.c, {}), null === ar && Wr && (0, xr.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [GR("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, KR.jsx)(fR.g, {
+          children: [Qr("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, xr.jsx)(Er.h, {
             className: "SmallTextLight",
             onClick: () => {
-              IJ.d.refresh()
+              kS.e.refresh()
             },
-            children: GR("general:tryAgain")
+            children: Qr("general:tryAgain")
           })]
-        }), 0 === (null === uR || void 0 === uR ? void 0 : uR.length) && (0, KR.jsx)("div", {
+        }), 0 === (null === ar || void 0 === ar ? void 0 : ar.length) && (0, xr.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: GR("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== uR && uR.length > 0 && (0, KR.jsx)("ul", {
+          children: Qr("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== ar && ar.length > 0 && (0, xr.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: uR.map((RR => {
+          children: ar.map((rr => {
             let {
-              name: JR,
-              exclusion: yR
-            } = RR;
-            const tR = zJ.i[yR];
-            return (0, KR.jsxs)("li", {
+              name: Sr,
+              exclusion: Zr
+            } = rr;
+            const Wr = VS.e[Zr];
+            return (0, xr.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, KR.jsx)("div", {
+              children: [(0, xr.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: JR
-              }), (0, KR.jsx)(fR.i, {
+                children: Sr
+              }), (0, xr.jsx)(Er.k, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, mJ.f)(tR, JR, {
+                  (0, AS.h)(Wr, Sr, {
                     chatMessage: null
                   })
                 },
-                children: GR(zJ.l[tR].text)
+                children: Qr(VS.f[Wr].text)
               })]
-            }, JR)
+            }, Sr)
           }))
         })]
       })
     }
-    const jJ = (0, yR.memo)((function(RR) {
-      var JR, GR;
+    const wS = (0, Zr.memo)((function(rr) {
+      var Sr, Qr;
       let {
-        showing: tR,
-        inGame: iR
-      } = RR;
+        showing: Wr,
+        inGame: fr
+      } = rr;
       const {
-        t: VR,
-        selectedLanguage: wR
-      } = (0, ZR.A)(), {
-        hideSocialLocationFrom: aR
-      } = (0, BR.o)(["hideSocialLocationFrom"]), LR = (0, jR.usePurchasesAllowed)(), UR = BJ(), WR = (0, rR.b)(), {
-        userContext: AR,
-        isUserContextUpdating: lR
-      } = (0, eR.d)(), [pR, zR] = (0, yR.useState)(null !== (JR = AR.getPlayerName()) && void 0 !== JR ? JR : ""), [dR, ER] = (0, yR.useState)(null), {
-        purchasing: YR,
-        outcome: kR,
-        purchase: QR
-      } = (0, OR.c)("/super-rank-welcome"), FR = (0, cR.ic)((0, ZR.n)(wR.code, "general:timeLeft"), AR.superRankInfo), TR = null === (GR = wJ(tR)) || void 0 === GR ? void 0 : GR.text, sR = Date.now(), hR = (0, mR.i)(sR), RJ = (0, IR.v)(sR), JJ = (0, mR.g)(sR), GJ = (0, IR.l)(hR.id), yJ = JJ && (0, KR.jsxs)(fR.n, {
+        t: pr,
+        selectedLanguage: mr
+      } = (0, jr.E)(), {
+        hideSocialLocationFrom: tr
+      } = (0, Tr.n)(["hideSocialLocationFrom"]), hr = (0, wr.usePurchasesAllowed)(), Yr = TS(), nr = (0, Nr.e)(), {
+        userContext: er,
+        isUserContextUpdating: vr
+      } = (0, Ur.c)(), [Or, Vr] = (0, Zr.useState)(null !== (Sr = er.getPlayerName()) && void 0 !== Sr ? Sr : ""), [cr, Fr] = (0, Zr.useState)(null), {
+        purchasing: or,
+        outcome: br,
+        purchase: Jr
+      } = (0, Pr.d)("/super-rank-welcome"), Dr = (0, Mr.cc)((0, jr.m)(mr.code, "general:timeLeft"), er.superRankInfo), dr = null === (Qr = mS(Wr)) || void 0 === Qr ? void 0 : Qr.text, sr = Date.now(), ur = (0, Ar.i)(sr), rS = (0, kr.t)(sr), SS = (0, Ar.h)(sr), QS = (0, kr.l)(ur.id), ZS = SS && (0, xr.jsxs)(Er.p, {
         className: "AccountSettingsSuperRankProlong",
         onClick: () => {
-          (0, iJ.m)({
+          (0, fS.o)({
             mode: "gift",
             source: "accountSettings",
             openItem: "superRank"
           })
         },
-        children: [(0, KR.jsx)(qR.d, {
+        children: [(0, xr.jsx)(Ir.c, {
           name: "bolt"
-        }), VR(GJ.giftKey)]
-      }), tJ = (0, IR.h)(AR.getPlayerRanks(), sR), uJ = (0, IR.o)(AR.superRankInfo, sR), ZJ = hR.id !== PR.t.id, fJ = ZJ && !tJ && (0, cR.wc)(AR.superRankInfo) ? AR.superRankInfo : null, VJ = FR ? VR("general:timeLeft", {
-        time: FR
-      }) : !(ZJ && LR) && TR, [KJ, nJ] = (0, yR.useState)(!1), [UJ, AJ] = (0, yR.useState)(!1), CJ = (0, yR.useRef)(null), XJ = (0, yR.useRef)(null), MJ = (0, HR.e)({
+        }), pr(QS.giftKey)]
+      }), WS = (0, kr.j)(er.getPlayerRanks(), sr), aS = (0, kr.p)(er.superRankInfo, sr), jS = ur.id !== Gr.t.id, ES = jS && !WS && (0, Mr.uc)(er.superRankInfo) ? er.superRankInfo : null, pS = Dr ? pr("general:timeLeft", {
+        time: Dr
+      }) : !(jS && hr) && dr, [xS, zS] = (0, Zr.useState)(!1), [YS, eS] = (0, Zr.useState)(!1), KS = (0, Zr.useRef)(null), yS = (0, Zr.useRef)(null), BS = (0, gr.h)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), pJ = null === MJ, gJ = null !== MJ && void 0 !== MJ ? MJ : [], bJ = AR !== bR.NULL_USER_CONTEXT && !AR.isLoggedIn(), vJ = bJ && 0 !== (null === MJ || void 0 === MJ ? void 0 : MJ.length), [OJ, xJ] = (0, yR.useState)([]), [NJ, DJ] = (0, yR.useState)(!1), HJ = AR.playerHasRank("youtuber"), cJ = (0, yR.useCallback)((() => oR.c.getPlayerProfile(AR, {
-        lowerCaseName: AR.getPlayerName().toLowerCase()
-      }).then((RR => {
-        xJ(RR.socialLinks)
-      })).catch((RR => {
-        console.error("Failed to refresh social links", RR)
-      }))), [AR]);
+      }), OS = null === BS, LS = null !== BS && void 0 !== BS ? BS : [], lS = er !== lr.NULL_USER_CONTEXT && !er.isLoggedIn(), XS = lS && 0 !== (null === BS || void 0 === BS ? void 0 : BS.length), [PS, HS] = (0, Zr.useState)([]), [qS, RS] = (0, Zr.useState)(!1), gS = er.playerHasRank("youtuber"), MS = (0, Zr.useCallback)((() => Cr.c.getPlayerProfile(er, {
+        lowerCaseName: er.getPlayerName().toLowerCase()
+      }).then((rr => {
+        HS(rr.socialLinks)
+      })).catch((rr => {
+        console.error("Failed to refresh social links", rr)
+      }))), [er]);
 
-      function PJ(RR) {
-        RR !== pR && ((0, NR.m)(RR) ? (RR = (0, NR.q)(RR), ER(VR("homePage:nameCharacters"))) : ER(null), CJ.current && (CJ.current.value = RR), zR(RR))
+      function GS(rr) {
+        rr !== Or && ((0, qr.n)(rr) ? (rr = (0, qr.r)(rr), Fr(pr("homePage:nameCharacters"))) : Fr(null), KS.current && (KS.current.value = rr), Vr(rr))
       }
-      return (0, yR.useEffect)((() => (!0 === tR ? (clearInterval(XJ.current), XJ.current = setInterval(WR, 1e3)) : clearInterval(XJ.current), () => {
-        clearInterval(XJ.current)
-      })), [tR, WR]), (0, yR.useEffect)((() => {
-        var RR;
-        zR(null !== (RR = AR.getPlayerName()) && void 0 !== RR ? RR : "")
-      }), [AR]), (0, yR.useEffect)((() => {
-        if (!tR || !HJ || lR) return;
-        let RR = !1;
-        return DJ(!0), xJ([]), oR.c.getPlayerProfile(AR, {
-          lowerCaseName: AR.getPlayerName().toLowerCase()
-        }).then((JR => {
-          RR || xJ(JR.socialLinks)
-        })).catch((RR => {
-          console.error("Failed to load social links", RR)
+      return (0, Zr.useEffect)((() => (!0 === Wr ? (clearInterval(yS.current), yS.current = setInterval(nr, 1e3)) : clearInterval(yS.current), () => {
+        clearInterval(yS.current)
+      })), [Wr, nr]), (0, Zr.useEffect)((() => {
+        var rr;
+        Vr(null !== (rr = er.getPlayerName()) && void 0 !== rr ? rr : "")
+      }), [er]), (0, Zr.useEffect)((() => {
+        if (!Wr || !gS || vr) return;
+        let rr = !1;
+        return RS(!0), HS([]), Cr.c.getPlayerProfile(er, {
+          lowerCaseName: er.getPlayerName().toLowerCase()
+        }).then((Sr => {
+          rr || HS(Sr.socialLinks)
+        })).catch((rr => {
+          console.error("Failed to load social links", rr)
         })).finally((() => {
-          RR || DJ(!1)
+          rr || RS(!1)
         })), () => {
-          RR = !0
+          rr = !0
         }
-      }), [tR, HJ, lR, AR]), (0, KR.jsxs)("div", {
-        className: uR()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: iR
+      }), [Wr, gS, vr, er]), (0, xr.jsxs)("div", {
+        className: ar()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: fr
         }),
-        children: [iR && (0, KR.jsx)("div", {
+        children: [fr && (0, xr.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: VR("settingsMenu:accountSettingsInGameWarning")
-        }), (0, KR.jsxs)("div", {
+          children: pr("settingsMenu:accountSettingsInGameWarning")
+        }), (0, xr.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [VR("homePage:discordNamePopupTitle"), (0, KR.jsxs)(xR.LinkPreserveSearch, {
+            children: [pr("homePage:discordNamePopupTitle"), (0, xr.jsxs)(Hr.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, DR.d)({
-                name: AR.getPlayerName()
+              to: (0, Rr.l)({
+                name: er.getPlayerName()
               }),
               onClick: () => {
-                BR.d.set({
+                Tr.c.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", VR("profileCard:viewProfile")]
+              }), " ", pr("profileCard:viewProfile")]
             })]
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, KR.jsxs)("div", {
+            children: [(0, xr.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [nR.featureFlags.canChangeName && (0, KR.jsx)(CR.b, {
+              children: [zr.featureFlags.canChangeName && (0, xr.jsx)(Kr.b, {
                 className: "EnterName",
-                placeholderText: VR("homePage:enterName"),
-                maxLength: NR.i,
-                defaultValue: pR,
-                onValueChange: RR => {
-                  PJ(RR)
+                placeholderText: pr("homePage:enterName"),
+                maxLength: qr.h,
+                defaultValue: Or,
+                onValueChange: rr => {
+                  GS(rr)
                 },
-                forcedText: KJ || !nR.featureFlags.canChangeName ? pR : null,
+                forcedText: xS || !zr.featureFlags.canChangeName ? Or : null,
                 blurOnEnter: !0,
-                domRef: CJ
-              }), (0, KR.jsx)(fR.g, {
+                domRef: KS
+              }), (0, xr.jsx)(Er.h, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  PJ((0, NR.g)())
+                  GS((0, qr.f)())
                 },
-                children: (0, KR.jsx)(qR.d, {
+                children: (0, xr.jsx)(Ir.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !nR.featureFlags.canChangeName && (0, KR.jsx)("div", {
+              }), !zr.featureFlags.canChangeName && (0, xr.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, NR.e)(pR, !nR.featureFlags.canSeeRealPlayerNames)
+                children: (0, qr.e)(Or, !zr.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, KR.jsx)(fR.g, {
+            }), (0, xr.jsx)(Er.h, {
               className: "ChooseNameButton",
-              disabled: KJ || pR === AR.getPlayerName(),
+              disabled: xS || Or === er.getPlayerName(),
               onClick: () => {
-                pR.length < NR.j ? ER(VR("homePage:changeNameMinLengthError", {
-                  length: NR.j
-                })) : pR.length > NR.i ? ER(VR("homePage:changeNameMaxLengthError", {
-                  length: NR.i
-                })) : (nJ(!0), ER(null), (0, vR.f)(AR, pR).then((RR => {
-                  nJ(!1), "taken" === RR.outcome ? ER(VR("homePage:nameTaken")) : "refused" === RR.outcome ? ER(RR.message) : "failed" === RR.outcome && ER(VR((0, vR.e)(RR.failure)))
+                Or.length < qr.j ? Fr(pr("homePage:changeNameMinLengthError", {
+                  length: qr.j
+                })) : Or.length > qr.h ? Fr(pr("homePage:changeNameMaxLengthError", {
+                  length: qr.h
+                })) : (zS(!0), Fr(null), (0, Xr.k)(er, Or).then((rr => {
+                  zS(!1), "taken" === rr.outcome ? Fr(pr("homePage:nameTaken")) : "refused" === rr.outcome ? Fr(rr.message) : "failed" === rr.outcome && Fr(pr((0, Xr.g)(rr.failure)))
                 })))
               },
-              children: VR("general:choose")
+              children: pr("general:choose")
             })]
-          }), dR && (0, KR.jsx)("div", {
+          }), cr && (0, xr.jsx)("div", {
             className: "ChooseAccNameError",
-            children: dR
+            children: cr
           })]
-        }), (0, KR.jsx)(MR.e, {
+        }), (0, xr.jsx)(Br.c, {
           label: (() => {
-            if ((0, eJ.k)(aR)) {
-              const RR = (0, ZR.n)(wR.code, "general:timeLeft"),
-                JR = (0, cR.Z)(RR, Date.now(), aR + eJ.j);
-              return `${VR("settingsMenu:hideSocialLocation")} (${VR("general:timeLeft",{time:JR})})`
+            if ((0, US.p)(tr)) {
+              const rr = (0, jr.m)(mr.code, "general:timeLeft"),
+                Sr = (0, Mr.W)(rr, Date.now(), tr + US.l);
+              return `${pr("settingsMenu:hideSocialLocation")} (${pr("general:timeLeft",{time:Sr})})`
             }
-            return VR("settingsMenu:hideSocialLocation")
+            return pr("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const RR = !(0, eJ.k)(aR);
-            (0, LJ.reportAnalyticsClick)({
+            const rr = !(0, US.p)(tr);
+            (0, hS.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: RR ? "on" : "off"
-            }), AJ(!0), oR.c.setHideSocialLocation(AR, RR).then((() => {
-              BR.d.set({
-                hideSocialLocationFrom: RR ? Date.now() : null
+              value: rr ? "on" : "off"
+            }), eS(!0), Cr.c.setHideSocialLocation(er, rr).then((() => {
+              Tr.c.set({
+                hideSocialLocationFrom: rr ? Date.now() : null
               })
             })).finally((() => {
-              AJ(!1)
+              eS(!1)
             }))
           },
-          checked: (0, eJ.k)(aR),
-          disabled: UJ
-        }), HJ && (0, KR.jsxs)("div", {
+          checked: (0, US.p)(tr),
+          disabled: YS
+        }), gS && (0, xr.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: VR("settingsMenu:socialLinks")
-          }), NJ && (0, KR.jsx)(XR.d, {}), !NJ && (0, KR.jsx)(aJ.e, {
-            socialLinks: OJ,
+            children: pr("settingsMenu:socialLinks")
+          }), qS && (0, xr.jsx)(yr.c, {}), !qS && (0, xr.jsx)(tS.e, {
+            socialLinks: PS,
             editable: !0,
-            userContext: AR,
-            onLinksUpdated: cJ
+            userContext: er,
+            onLinksUpdated: MS
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: VR(vJ ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), pJ && (0, KR.jsx)(XR.d, {}), !pJ && 0 === gJ.length && (0, KR.jsx)("div", {
+            children: pr(XS ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), OS && (0, xr.jsx)(yr.c, {}), !OS && 0 === LS.length && (0, xr.jsx)("div", {
             className: "NoLoginOptions",
-            children: VR("auth:noLoginOptions")
-          }), !pJ && gJ.length > 0 && "crazygames" !== gR.siteUsed && (0, KR.jsx)("div", {
+            children: pr("auth:noLoginOptions")
+          }), !OS && LS.length > 0 && "crazygames" !== Lr.siteUsed && (0, xr.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: gJ
-          }), !pJ && gJ.length > 0 && "crazygames" === gR.siteUsed && (0, KR.jsxs)("div", {
+            children: LS
+          }), !OS && LS.length > 0 && "crazygames" === Lr.siteUsed && (0, xr.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [gJ[0], gJ.length > 1 && (0, KR.jsxs)(KR.Fragment, {
-              children: [(0, KR.jsxs)("div", {
+            children: [LS[0], LS.length > 1 && (0, xr.jsxs)(xr.Fragment, {
+              children: [(0, xr.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, KR.jsx)("span", {
+                children: [(0, xr.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: VR("auth:legacyLoginOptions")
-                }), (0, KR.jsx)(rJ.e, {
+                  children: pr("auth:legacyLoginOptions")
+                }), (0, xr.jsx)(NS.d, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: VR("auth:legacyLoginOptionsInfo")
+                  hoverInfo: pr("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, KR.jsx)("div", {
+              }), (0, xr.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: gJ.slice(1)
+                children: LS.slice(1)
               })]
             })]
-          }), nR.featureFlags.useLogin && (null !== AR.loggedInInfo || AR.isLoggedIn()) && (0, KR.jsxs)(KR.Fragment, {
-            children: [(0, KR.jsx)("div", {
+          }), zr.featureFlags.useLogin && (null !== er.loggedInInfo || er.isLoggedIn()) && (0, xr.jsxs)(xr.Fragment, {
+            children: [(0, xr.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, KR.jsxs)(fR.M, {
+            }), (0, xr.jsxs)(Er.L, {
               onClick: () => {
-                (0, bR.forceGlobalSignOut)()
+                (0, lr.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "right-from-bracket"
-              }), VR("auth:signOut")]
+              }), pr("auth:signOut")]
             })]
           })]
-        }), null !== fJ && (0, KR.jsxs)("div", {
+        }), null !== ES && (0, xr.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, KR.jsx)(IR.g, {
-              tierId: fJ.tier
+            children: (0, xr.jsx)(kr.i, {
+              tierId: ES.tier
             })
-          }), (0, KR.jsx)(qJ, {
-            showing: tR
+          }), (0, xr.jsx)(IS, {
+            showing: Wr
           })]
-        }), !tJ && LR && (0, KR.jsxs)("div", {
+        }), !WS && hr && (0, xr.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, KR.jsx)(IR.g, {
-              tierId: hR.id
+            children: (0, xr.jsx)(kr.i, {
+              tierId: ur.id
             })
-          }), null !== uJ && (0, KR.jsx)(SR, {
+          }), null !== aS && (0, xr.jsx)(ir, {
             className: "AccountSettingsSuperRankRetired SmallTextBold",
-            until: uJ
-          }), (0, KR.jsxs)("div", {
+            until: aS
+          }), (0, xr.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, KR.jsxs)(fR.n, {
+            children: [(0, xr.jsxs)(Er.p, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, iJ.m)({
+                (0, fS.o)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "bolt"
-              }), VR(null !== uJ ? "store:upgradeToHyperRank" : GJ.getKey)]
-            }), yJ]
-          }), (0, KR.jsx)(lJ, {
-            ...UR
+              }), pr(null !== aS ? "store:upgradeToHyperRank" : QS.getKey)]
+            }), ZS]
+          }), (0, xr.jsx)(vS, {
+            ...Yr
           })]
-        }), tJ && (0, KR.jsxs)("div", {
+        }), WS && (0, xr.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, KR.jsx)(IR.g, {
-              tierId: hR.id
-            }), VJ && (0, KR.jsxs)("div", {
+            children: [(0, xr.jsx)(kr.i, {
+              tierId: ur.id
+            }), pS && (0, xr.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", VJ, ")"]
+              children: ["(", pS, ")"]
             })]
-          }), ZJ && (0, KR.jsx)(qJ, {
-            showing: tR
-          }), LR && JJ && (0, KR.jsxs)("div", {
+          }), jS && (0, xr.jsx)(IS, {
+            showing: Wr
+          }), hr && SS && (0, xr.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, cR.wc)(AR.superRankInfo) && (0, KR.jsxs)(fR.n, {
+            children: [!(0, Mr.uc)(er.superRankInfo) && (0, xr.jsxs)(Er.p, {
               className: "AccountSettingsSuperRankProlong",
-              loading: YR,
+              loading: or,
               onClick: () => {
-                QR(RJ.id, null)
+                Jr(rS.id, null)
               },
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "bolt"
-              }), VR("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: RJ.product.days,
-                price: RJ.price
+              }), pr("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: rS.product.days,
+                price: rS.price
               })]
-            }), yJ]
-          }), kR && (0, KR.jsx)("div", {
+            }), ZS]
+          }), br && (0, xr.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: VR(kR.translationKey)
-          }), (0, KR.jsx)(lJ, {
-            ...UR
+            children: pr(br.translationKey)
+          }), (0, xr.jsx)(vS, {
+            ...Yr
           })]
-        }), (0, KR.jsx)(WJ, {
-          showing: tR
-        }), nR.featureFlags.useSocialFeatures && (0, KR.jsx)(SJ, {
-          showing: tR
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsx)(nS, {
+          showing: Wr
+        }), zr.featureFlags.useSocialFeatures && (0, xr.jsx)(iS, {
+          showing: Wr
+        }), (0, xr.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: VR(dJ(bJ, vJ))
-            }), (0, gR.isDiscordClient)() && (0, KR.jsx)("div", {
+              children: pr(cS(lS, XS))
+            }), (0, Lr.isDiscordClient)() && (0, xr.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: VR("auth:discordActivityKickWarning")
-            }), (0, KR.jsx)(oJ, {
-              showing: tR
+              children: pr("auth:discordActivityKickWarning")
+            }), (0, xr.jsx)(CS, {
+              showing: Wr
             })]
-          }), (0, KR.jsx)("div", {
+          }), (0, xr.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: VR(bJ ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: pr(lS ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function dJ(RR, JR) {
-      return RR ? JR ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function cS(rr, Sr) {
+      return rr ? Sr ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var EJ = GR(35044),
-      YJ = GR(4375),
-      kJ = GR(1570),
-      QJ = GR(2173),
-      FJ = GR(10241),
-      TJ = GR(35047);
+    var FS = Qr(35347),
+      oS = Qr(4323),
+      bS = Qr(1568),
+      JS = Qr(2128),
+      DS = Qr(10005),
+      dS = Qr(35350);
 
-    function sJ() {
+    function sS() {
       const {
-        t: RR
-      } = (0, ZR.A)();
-      return (0, QJ.i)("localPlayerAlive") ? (0, KR.jsx)(FJ.b, {
+        t: rr
+      } = (0, jr.E)();
+      return (0, JS.j)("localPlayerAlive") ? (0, xr.jsx)(DS.d, {
         icon: "camera-alt",
-        title: RR("screenshotMode:title"),
-        sub: RR("screenshotMode:entrySub"),
-        onClick: TJ.e
+        title: rr("screenshotMode:title"),
+        sub: rr("screenshotMode:entrySub"),
+        onClick: dS.f
       }) : null
     }
-    var hJ = GR(35059);
-    const RG = (0, yR.memo)((function(RR) {
+    var uS = Qr(35371);
+    const rQ = (0, Zr.memo)((function(rr) {
         let {
-          inGame: JR
-        } = RR;
+          inGame: Sr
+        } = rr;
         const {
-          t: GR,
-          selectedLanguage: yR
-        } = (0, ZR.A)(), {
-          clientEscMenuOptions: tR,
-          showDebugOverlay: uR,
-          isTouchScreen: qR
-        } = (0, BR.o)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), iR = (0, aR.f)("hideCoordinates");
-        let fR = "settingsMenu:showCoordinates",
-          VR = "settingsMenu:showChunkCoordinates";
+          t: Qr,
+          selectedLanguage: Zr
+        } = (0, jr.E)(), {
+          clientEscMenuOptions: Wr,
+          showDebugOverlay: ar,
+          isTouchScreen: Ir
+        } = (0, Tr.n)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), fr = (0, tr.l)("hideCoordinates");
+        let Er = "settingsMenu:showCoordinates",
+          pr = "settingsMenu:showChunkCoordinates";
 
-        function wR(RR) {
-          const JR = new Intl.DisplayNames([RR], {
+        function mr(rr) {
+          const Sr = new Intl.DisplayNames([rr], {
             type: "language"
-          }).of(RR);
-          return JR.charAt(0).toUpperCase() + JR.slice(1)
+          }).of(rr);
+          return Sr.charAt(0).toUpperCase() + Sr.slice(1)
         }
-        return iR && (fR = "settingsMenu:showCoordinatesHidden", VR = "settingsMenu:showChunkCoordinatesHidden"), (0, KR.jsxs)("div", {
+        return fr && (Er = "settingsMenu:showCoordinatesHidden", pr = "settingsMenu:showChunkCoordinatesHidden"), (0, xr.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [JR && nR.featureFlags.canUseInviteLinks && (0, KR.jsxs)("div", {
+          children: [Sr && zr.featureFlags.canUseInviteLinks && (0, xr.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: GR("settingsMenu:inviteLink")
-            }), (0, KR.jsx)(EJ.h, {})]
-          }), (0, KR.jsxs)("div", {
+              children: Qr("settingsMenu:inviteLink")
+            }), (0, xr.jsx)(FS.d, {})]
+          }), (0, xr.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: GR("settingsMenu:language")
-            }), (0, KR.jsx)(YJ.e, {
-              options: Object.entries(ZR.j).map((RR => {
-                let [JR, GR] = RR;
+              children: Qr("settingsMenu:language")
+            }), (0, xr.jsx)(oS.c, {
+              options: Object.entries(jr.i).map((rr => {
+                let [Sr, Qr] = rr;
                 return {
-                  label: (0, KR.jsxs)("div", {
+                  label: (0, xr.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, KR.jsx)("img", {
-                      src: GR.flagImg,
+                    children: [(0, xr.jsx)("img", {
+                      src: Qr.flagImg,
                       alt: "flag"
-                    }), (0, KR.jsxs)("span", {
-                      children: [wR(JR), " ", (0, KR.jsxs)("span", {
+                    }), (0, xr.jsxs)("span", {
+                      children: [mr(Sr), " ", (0, xr.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", JR, ")"]
+                        children: ["(", Sr, ")"]
                       })]
                     })]
                   }),
-                  value: JR
+                  value: Sr
                 }
               })),
-              value: yR.code,
-              onChange: RR => {
-                QR.g.get().setCurrentLanguage(RR.value)
+              value: Zr.code,
+              onChange: rr => {
+                Jr.f.get().setCurrentLanguage(rr.value)
               }
             })]
-          }), JR && qR && (0, hJ.b)() && (0, KR.jsx)(sJ, {}), !(0, nR.isMobileApp)() && (0, kJ.l)() && nR.featureFlags.useForceRotateForceFullscreenOverlay && (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:disableFullscreenMode"),
-            checked: tR.disableFullscreen,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                disableFullscreen: RR
+          }), Sr && Ir && (0, uS.b)() && (0, xr.jsx)(sS, {}), !(0, zr.isMobileApp)() && (0, bS.k)() && zr.featureFlags.useForceRotateForceFullscreenOverlay && (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:disableFullscreenMode"),
+            checked: Wr.disableFullscreen,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                disableFullscreen: rr
               })
             }
-          }), (0, KR.jsx)(MR.e, {
-            label: GR(fR),
-            checked: tR.showCoordinates,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showCoordinates: RR
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr(Er),
+            checked: Wr.showCoordinates,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showCoordinates: rr
               })
             },
-            disabled: iR
-          }), (0, KR.jsx)(MR.e, {
-            label: GR(VR),
-            checked: tR.showChunkCoordinates,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showChunkCoordinates: RR
+            disabled: fr
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr(pr),
+            checked: Wr.showChunkCoordinates,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showChunkCoordinates: rr
               })
             },
-            disabled: iR
-          }), (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:showFps"),
-            checked: tR.showFPS,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showFPS: RR
+            disabled: fr
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:showFps"),
+            checked: Wr.showFPS,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showFPS: rr
               })
             }
-          }), (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:disableBunnyHopping"),
-            checked: tR.disableBunnyHopping,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                disableBunnyHopping: RR
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:disableBunnyHopping"),
+            checked: Wr.disableBunnyHopping,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                disableBunnyHopping: rr
               })
             }
-          }), (0, vJ.x)() && (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:showChat"),
-            checked: tR.showChat,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showChat: RR
+          }), (0, XS.v)() && (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:showChat"),
+            checked: Wr.showChat,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showChat: rr
               })
             }
-          }), (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:showDebugOverlay"),
-            checked: uR,
-            onClick: RR => {
-              BR.d.set({
-                showDebugOverlay: RR
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:showDebugOverlay"),
+            checked: ar,
+            onClick: rr => {
+              Tr.c.set({
+                showDebugOverlay: rr
               })
             }
-          }), nR.featureFlags.useSocialFeatures && (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:showFriendOnlineToasts"),
-            checked: tR.showFriendOnlineToasts,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: RR
+          }), zr.featureFlags.useSocialFeatures && (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:showFriendOnlineToasts"),
+            checked: Wr.showFriendOnlineToasts,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showFriendOnlineToasts: rr
               })
             }
-          }), (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:showNewItemIndicator"),
-            checked: tR.showNewItemIndicator,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showNewItemIndicator: RR
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:showNewItemIndicator"),
+            checked: Wr.showNewItemIndicator,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showNewItemIndicator: rr
               })
             }
-          }), (0, KR.jsx)(MR.e, {
-            label: GR("settingsMenu:showTeamSymbols"),
-            checked: tR.showTeamSymbols,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showTeamSymbols: RR
+          }), (0, xr.jsx)(Br.c, {
+            label: Qr("settingsMenu:showTeamSymbols"),
+            checked: Wr.showTeamSymbols,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showTeamSymbols: rr
               })
             },
-            circleInfoText: GR("settingsMenu:showTeamSymbolsInfo")
+            circleInfoText: Qr("settingsMenu:showTeamSymbolsInfo")
           })]
         })
       })),
-      JG = (0, yR.memo)((function() {
+      SQ = (0, Zr.memo)((function() {
         const {
-          t: RR
-        } = (0, ZR.A)(), {
-          soundVolume: JR,
-          musicVolume: GR,
-          clientEscMenuOptions: yR
-        } = (0, BR.o)(["soundVolume", "musicVolume", "clientEscMenuOptions"]);
-        return (0, KR.jsxs)("div", {
+          t: rr
+        } = (0, jr.E)(), {
+          soundVolume: Sr,
+          musicVolume: Qr,
+          clientEscMenuOptions: Zr
+        } = (0, Tr.n)(["soundVolume", "musicVolume", "clientEscMenuOptions"]);
+        return (0, xr.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, KR.jsx)(MR.i, {
-            name: RR("settingsMenu:musicVolume"),
+          children: [(0, xr.jsx)(Br.f, {
+            name: rr("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: GR,
-            onChange: RR => {
-              BR.d.set({
-                musicVolume: Math.round(100 * RR) / 100
+            initValue: Qr,
+            onChange: rr => {
+              Tr.c.set({
+                musicVolume: Math.round(100 * rr) / 100
               })
             },
-            format: RR => RR.toFixed(2)
-          }), (0, KR.jsx)(MR.i, {
-            name: RR("settingsMenu:soundEffectsVolume"),
+            format: rr => rr.toFixed(2)
+          }), (0, xr.jsx)(Br.f, {
+            name: rr("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: JR,
-            onChange: RR => {
-              BR.d.set({
-                soundVolume: Math.round(100 * RR) / 100
+            initValue: Sr,
+            onChange: rr => {
+              Tr.c.set({
+                soundVolume: Math.round(100 * rr) / 100
               })
             },
-            format: RR => RR.toFixed(2)
-          }), (0, KR.jsx)(MR.e, {
-            label: RR("settingsMenu:showSoundDirections"),
-            checked: yR.showSoundDirections,
-            onClick: RR => {
-              BR.d.setClientEscMenuOptions({
-                showSoundDirections: RR
+            format: rr => rr.toFixed(2)
+          }), (0, xr.jsx)(Br.c, {
+            label: rr("settingsMenu:showSoundDirections"),
+            checked: Zr.showSoundDirections,
+            onClick: rr => {
+              Tr.c.setClientEscMenuOptions({
+                showSoundDirections: rr
               })
             },
-            circleInfoText: RR("settingsMenu:showSoundDirectionsInfo")
+            circleInfoText: rr("settingsMenu:showSoundDirectionsInfo")
           })]
         })
       }));
-    var GG = GR(773),
-      yG = GR(1581),
-      tG = GR(3403),
-      uG = GR(3391),
-      ZG = GR(4829);
-    const qG = {
+    var QQ = Qr(778),
+      ZQ = Qr(1573),
+      WQ = Qr(3351),
+      aQ = Qr(3343),
+      jQ = Qr(4746);
+    const IQ = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function iG() {
+    function fQ() {
       const {
-        t: RR
-      } = (0, ZR.A)(), JR = (0, ZG.d)(), {
-        mobilePushNotificationsCanAsk: GR
-      } = (0, BR.o)(["mobilePushNotificationsCanAsk"]), [tR, uR] = (0, yR.useState)(null), [qR, iR] = (0, yR.useState)(!1), [VR, wR] = (0, yR.useState)(null), [rR, eR] = (0, yR.useState)(!1), aR = (0, yR.useCallback)((() => {
-        (0, tG.d)().then((RR => {
-          JR.current && (uR(RR), iR(!1))
-        })).catch((RR => {
-          console.error("Failed to load push notification targets:", RR), JR.current && iR(!0)
+        t: rr
+      } = (0, jr.E)(), Sr = (0, jQ.b)(), {
+        mobilePushNotificationsCanAsk: Qr
+      } = (0, Tr.n)(["mobilePushNotificationsCanAsk"]), [Wr, ar] = (0, Zr.useState)(null), [Ir, fr] = (0, Zr.useState)(!1), [pr, mr] = (0, Zr.useState)(null), [Nr, Ur] = (0, Zr.useState)(!1), tr = (0, Zr.useCallback)((() => {
+        (0, WQ.d)().then((rr => {
+          Sr.current && (ar(rr), fr(!1))
+        })).catch((rr => {
+          console.error("Failed to load push notification targets:", rr), Sr.current && fr(!0)
         }))
-      }), [JR]), LR = (0, yR.useCallback)((() => {
-        (0, uG.g)().then((RR => {
-          JR.current && wR((() => RR))
+      }), [Sr]), hr = (0, Zr.useCallback)((() => {
+        (0, aQ.g)().then((rr => {
+          Sr.current && mr((() => rr))
         }))
-      }), [JR]);
-      (0, yR.useEffect)((() => {
-        aR()
-      }), [aR]), (0, yR.useEffect)((() => {
-        LR()
-      }), [LR, GR]), (0, yG.f)(tG.g, aR);
-      const nR = null === tR ? [] : Object.keys(qG).filter((RR => tR[RR] > 0));
-      return (0, KR.jsxs)("div", {
+      }), [Sr]);
+      (0, Zr.useEffect)((() => {
+        tr()
+      }), [tr]), (0, Zr.useEffect)((() => {
+        hr()
+      }), [hr, Qr]), (0, ZQ.c)(WQ.h, tr);
+      const zr = null === Wr ? [] : Object.keys(IQ).filter((rr => Wr[rr] > 0));
+      return (0, xr.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "SliderText",
-          children: RR("notificationSettings:pushNotifications")
-        }), null === tR && qR && (0, KR.jsx)("div", {
+          children: rr("notificationSettings:pushNotifications")
+        }), null === Wr && Ir && (0, xr.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: RR("notificationSettings:pushTargetsLoadFailed")
-        }), null !== tR && 0 === nR.length && (0, KR.jsx)("div", {
+          children: rr("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Wr && 0 === zr.length && (0, xr.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: RR("notificationSettings:pushTargetsNone")
-        }), nR.length > 0 && (0, KR.jsx)("ul", {
+          children: rr("notificationSettings:pushTargetsNone")
+        }), zr.length > 0 && (0, xr.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: nR.map((JR => {
-            var GR;
-            return (0, KR.jsx)("li", {
-              children: RR(qG[JR], {
-                count: null !== (GR = null === tR || void 0 === tR ? void 0 : tR[JR]) && void 0 !== GR ? GR : 0
+          children: zr.map((Sr => {
+            var Qr;
+            return (0, xr.jsx)("li", {
+              children: rr(IQ[Sr], {
+                count: null !== (Qr = null === Wr || void 0 === Wr ? void 0 : Wr[Sr]) && void 0 !== Qr ? Qr : 0
               })
-            }, JR)
+            }, Sr)
           }))
-        }), null !== VR && (0, KR.jsx)(fR.g, {
+        }), null !== pr && (0, xr.jsx)(Er.h, {
           className: "PushNotificationSettingsButton",
-          loading: rR,
+          loading: Nr,
           onClick: () => {
-            eR(!0), VR().catch((RR => {
-              console.error("Failed to turn on push notifications:", RR)
+            Ur(!0), pr().catch((rr => {
+              console.error("Failed to turn on push notifications:", rr)
             })).finally((() => {
-              JR.current && (eR(!1), LR())
+              Sr.current && (Ur(!1), hr())
             }))
           },
-          children: RR("notificationSettings:pushTurnOn")
+          children: rr("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var fG = GR(3637),
-      VG = GR(3379),
-      KG = GR(2068),
-      wG = GR(46);
-    async function rG() {
-      return "dailyDropReminderAsked_" + (await bR.userContextManager.getCurrentUserContext()).whamm
+    var EQ = Qr(3580),
+      pQ = Qr(3330),
+      xQ = Qr(2015),
+      mQ = Qr(43);
+    async function NQ() {
+      return "dailyDropReminderAsked_" + (await lr.userContextManager.getCurrentUserContext()).whamm
     }
 
-    function eG(RR) {
-      return async function(RR) {
-        if (RR.remindersOn || (0, BR.h)(BR.d.get("gameState"))) return null;
-        const JR = await rG();
-        if (null !== wG.i.getItem(JR)) return null;
-        const [GR, yR] = await Promise.all([(0, uG.g)().catch((RR => (console.error("Couldn't tell whether this device can take push notifications:", RR), null))), aG()]);
-        if (null === GR && !yR) return null;
-        if (null !== GR && ((0, VG.e)() || (0, uG.h)())) return null;
+    function UQ(rr) {
+      return async function(rr) {
+        if (rr.remindersOn || (0, Tr.g)(Tr.c.get("gameState"))) return null;
+        const Sr = await NQ();
+        if (null !== mQ.j.getItem(Sr)) return null;
+        const [Qr, Zr] = await Promise.all([(0, aQ.g)().catch((rr => (console.error("Couldn't tell whether this device can take push notifications:", rr), null))), tQ()]);
+        if (null === Qr && !Zr) return null;
+        if (null !== Qr && ((0, pQ.c)() || (0, aQ.h)())) return null;
         return {
-          askedKey: JR,
-          requester: GR
+          askedKey: Sr,
+          requester: Qr
         }
-      }(RR).catch((RR => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", RR), null)))
+      }(rr).catch((rr => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", rr), null)))
     }
 
-    function aG() {
-      return (0, tG.d)().then((RR => RR.app + RR.browser + RR.msnPlay > 0), (RR => (console.error("Couldn't tell where push notifications reach this account:", RR), !0)))
+    function tQ() {
+      return (0, WQ.d)().then((rr => rr.app + rr.browser + rr.msnPlay > 0), (rr => (console.error("Couldn't tell where push notifications reach this account:", rr), !0)))
     }
-    async function LG(RR) {
-      const JR = (0, fG.C)({
+    async function hQ(rr) {
+      const Sr = (0, EQ.x)({
           remindersOn: !0
         }),
-        GR = null === RR ? Promise.resolve() : RR(),
-        [yR, tR] = await Promise.allSettled([JR, GR]);
-      "rejected" === yR.status && console.error("Failed to turn on Lucky Skin Block reminders:", yR.reason), "rejected" === tR.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", tR.reason), "rejected" !== yR.status && "rejected" !== tR.status || KG.j.showMessage({
+        Qr = null === rr ? Promise.resolve() : rr(),
+        [Zr, Wr] = await Promise.allSettled([Sr, Qr]);
+      "rejected" === Zr.status && console.error("Failed to turn on Lucky Skin Block reminders:", Zr.reason), "rejected" === Wr.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", Wr.reason), "rejected" !== Zr.status && "rejected" !== Wr.status || xQ.h.showMessage({
         translationKey: "dailyDrop:remindFailed"
       })
     }
-    const nG = {
+    const zQ = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1543,7 +1543,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      UG = {
+      YQ = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1554,401 +1554,401 @@ export const modules = {
         }
       };
 
-    function WG(RR) {
+    function nQ(rr) {
       let {
-        setting: JR,
-        value: GR
-      } = RR;
+        setting: Sr,
+        value: Qr
+      } = rr;
       const {
-        t: tR
-      } = (0, ZR.A)(), qR = (0, ZG.d)(), [iR, fR] = (0, yR.useState)(null), [VR, wR] = (0, yR.useState)(!1), [rR, eR] = (0, yR.useState)(null);
-      return (0, yR.useEffect)((() => {
-        "remindersOn" === JR && (0, uG.g)().then((RR => {
-          qR.current && eR((() => RR))
-        }), (RR => {
-          console.error("Couldn't tell whether this device can take push notifications:", RR)
+        t: Wr
+      } = (0, jr.E)(), Ir = (0, jQ.b)(), [fr, Er] = (0, Zr.useState)(null), [pr, mr] = (0, Zr.useState)(!1), [Nr, Ur] = (0, Zr.useState)(null);
+      return (0, Zr.useEffect)((() => {
+        "remindersOn" === Sr && (0, aQ.g)().then((rr => {
+          Ir.current && Ur((() => rr))
+        }), (rr => {
+          console.error("Couldn't tell whether this device can take push notifications:", rr)
         }))
-      }), [JR, qR]), (0, KR.jsx)(MR.e, {
-        className: uR()({
-          DailyDropSettingFailed: VR
+      }), [Sr, Ir]), (0, xr.jsx)(Br.c, {
+        className: ar()({
+          DailyDropSettingFailed: pr
         }),
-        label: tR(UG[JR].label),
-        checked: null !== iR && void 0 !== iR ? iR : GR,
-        note: VR ? tR("dailyDrop:settingFailed") : void 0,
-        onClick: RR => {
-          null === iR && (fR(RR), wR(!1), RR && null !== rR && rR().catch((RR => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", RR)
-          })), (0, fG.y)("daily_drop.setting", `${UG[JR].reportAs}_${RR?"on":"off"}`), "remindersOn" === JR && rG().then((RR => {
-            wG.i.setItem(RR, !0)
-          }), (RR => {
-            console.error("Failed to keep the Lucky Skin Block reminders choice:", RR)
-          })), (0, fG.C)("hidden" === JR ? {
-            hidden: RR
+        label: Wr(YQ[Sr].label),
+        checked: null !== fr && void 0 !== fr ? fr : Qr,
+        note: pr ? Wr("dailyDrop:settingFailed") : void 0,
+        onClick: rr => {
+          null === fr && (Er(rr), mr(!1), rr && null !== Nr && Nr().catch((rr => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", rr)
+          })), (0, EQ.t)("daily_drop.setting", `${YQ[Sr].reportAs}_${rr?"on":"off"}`), "remindersOn" === Sr && NQ().then((rr => {
+            mQ.j.setItem(rr, !0)
+          }), (rr => {
+            console.error("Failed to keep the Lucky Skin Block reminders choice:", rr)
+          })), (0, EQ.x)("hidden" === Sr ? {
+            hidden: rr
           } : {
-            remindersOn: RR
-          }).catch((RR => {
-            console.error(`Failed to save the Lucky Skin Block's ${JR} setting:`, RR), qR.current && wR(!0)
+            remindersOn: rr
+          }).catch((rr => {
+            console.error(`Failed to save the Lucky Skin Block's ${Sr} setting:`, rr), Ir.current && mr(!0)
           })).finally((() => {
-            qR.current && fR(null)
+            Ir.current && Er(null)
           })))
         }
       })
     }
-    const AG = (0, yR.memo)((function() {
+    const eQ = (0, Zr.memo)((function() {
       const {
-        t: RR
-      } = (0, ZR.A)(), {
-        clientEscMenuOptions: JR
-      } = (0, BR.o)(["clientEscMenuOptions"]), {
-        userContext: GR
-      } = (0, eR.d)(), yR = GR.dailyDrop;
-      return (0, KR.jsxs)("div", {
+        t: rr
+      } = (0, jr.E)(), {
+        clientEscMenuOptions: Sr
+      } = (0, Tr.n)(["clientEscMenuOptions"]), {
+        userContext: Qr
+      } = (0, Ur.c)(), Zr = Qr.dailyDrop;
+      return (0, xr.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [nR.featureFlags.useSocialFeatures && (0, KR.jsx)(MR.g, {
-          label: RR("notificationSettings:friendRequests"),
-          options: GG.d.map((JR => ({
-            value: JR,
-            label: RR(nG[JR].label)
+        children: [zr.featureFlags.useSocialFeatures && (0, xr.jsx)(Br.e, {
+          label: rr("notificationSettings:friendRequests"),
+          options: QQ.d.map((Sr => ({
+            value: Sr,
+            label: rr(zQ[Sr].label)
           }))),
-          value: JR.friendRequestNotifications,
-          onChange: RR => {
-            BR.d.setClientEscMenuOptions({
-              friendRequestNotifications: RR
+          value: Sr.friendRequestNotifications,
+          onChange: rr => {
+            Tr.c.setClientEscMenuOptions({
+              friendRequestNotifications: rr
             })
           },
-          circleInfoText: (0, KR.jsx)("div", {
+          circleInfoText: (0, xr.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: GG.d.map((JR => (0, KR.jsxs)("div", {
-              children: [(0, KR.jsx)("b", {
-                children: RR(nG[JR].label)
-              }), ": ", RR(nG[JR].info)]
-            }, JR)))
+            children: QQ.d.map((Sr => (0, xr.jsxs)("div", {
+              children: [(0, xr.jsx)("b", {
+                children: rr(zQ[Sr].label)
+              }), ": ", rr(zQ[Sr].info)]
+            }, Sr)))
           })
-        }), null !== yR && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)(WG, {
+        }), null !== Zr && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)(nQ, {
             setting: "remindersOn",
-            value: yR.remindersOn
-          }), (0, KR.jsx)(WG, {
+            value: Zr.remindersOn
+          }), (0, xr.jsx)(nQ, {
             setting: "hidden",
-            value: yR.hidden
+            value: Zr.hidden
           })]
-        }), (0, KR.jsx)(iG, {})]
+        }), (0, xr.jsx)(fQ, {})]
       })
     }));
-    var CG = GR(5313),
-      XG = GR(203),
-      MG = GR(342),
-      BG = GR(7802),
-      lG = GR(4776),
-      pG = GR(35064),
-      gG = GR(679),
-      bG = GR(32);
-    var vG = GR(709),
-      OG = GR(5145);
-    const xG = new Map([
+    var KQ = Qr(5264),
+      yQ = Qr(208),
+      BQ = Qr(345),
+      TQ = Qr(7617),
+      vQ = Qr(4690),
+      OQ = Qr(35378),
+      LQ = Qr(688),
+      lQ = Qr(34);
+    var XQ = Qr(712),
+      PQ = Qr(5070);
+    const HQ = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function NG(RR) {
-      return xG.has(RR) ? UR.gameBridge.lookup("zW", null) : null
+    function qQ(rr) {
+      return HQ.has(rr) ? Yr.gameBridge.lookup("IK", null) : null
     }
 
-    function DG(RR) {
-      if (!(0, gG.I)(BR.d.get("clientEscMenuOptions")[RR])) return BR.d.get("clientEscMenuOptions")[RR];
-      const JR = NG(RR);
-      return null !== JR ? JR[xG.get(RR)] : wG.i.getItem(RR)
+    function RQ(rr) {
+      if (!(0, LQ.L)(Tr.c.get("clientEscMenuOptions")[rr])) return Tr.c.get("clientEscMenuOptions")[rr];
+      const Sr = qQ(rr);
+      return null !== Sr ? Sr[HQ.get(rr)] : mQ.j.getItem(rr)
     }
 
-    function HG(RR, JR) {
-      if ("useTouchControls" === RR) return void(0, OG.b)(JR);
-      RR in BR.d.get("clientEscMenuOptions") && BR.d.setClientEscMenuOptions({
-        [RR]: JR
+    function gQ(rr, Sr) {
+      if ("useTouchControls" === rr) return void(0, PQ.b)(Sr);
+      rr in Tr.c.get("clientEscMenuOptions") && Tr.c.setClientEscMenuOptions({
+        [rr]: Sr
       });
-      const GR = NG(RR);
-      null !== GR && UR.gameBridge.send("setChunkAddDistance", {
-        ...GR,
-        [xG.get(RR)]: JR
-      }), wG.i.setItem(RR, JR)
+      const Qr = qQ(rr);
+      null !== Qr && Yr.gameBridge.send("setChunkAddDistance", {
+        ...Qr,
+        [HQ.get(rr)]: Sr
+      }), mQ.j.setItem(rr, Sr)
     }
-    var oG = GR(5224),
-      cG = GR(35067),
-      PG = GR(35072),
-      IG = GR(5310),
-      mG = GR(35094);
+    var CQ = Qr(5157),
+      MQ = Qr(35381),
+      GQ = Qr(35386),
+      kQ = Qr(5257),
+      AQ = Qr(35408);
 
-    function zG(RR) {
-      var JR, tR, qR, iR;
+    function VQ(rr) {
+      var Sr, Wr, Ir, fr;
       let {
-        minChunkAddDist: fR,
-        getValue: VR,
-        onChange: wR,
-        setApplySettingsCallback: rR
-      } = RR;
+        minChunkAddDist: Er,
+        getValue: pr,
+        onChange: mr,
+        setApplySettingsCallback: Nr
+      } = rr;
       const {
-        t: eR
-      } = (0, ZR.A)(), {
-        clientEscMenuOptions: LR
-      } = (0, BR.o)(["clientEscMenuOptions", "showDistantNametags"]), UR = (0, yR.useRef)(VR("showFog")), WR = (0, yR.useRef)(LR.antiAliasing), AR = (0, yR.useRef)(LR.useWebGpu), [CR, XR] = (0, yR.useState)(null), [pR, gR] = (0, yR.useState)(!1), [bR, vR] = (0, yR.useState)((() => (0, lG.h)(nR.featureFlags.settings.canUseShaderPacks))), [OR] = (0, yR.useState)((() => BR.d.isWebGpuDefaultOff())), [xR] = (0, yR.useState)(MG.j), [NR, DR] = (0, yR.useState)(!1);
-      (0, yR.useEffect)((() => {
-        const RR = () => {
-          DR((0, PG.p)())
+        t: Ur
+      } = (0, jr.E)(), {
+        clientEscMenuOptions: hr
+      } = (0, Tr.n)(["clientEscMenuOptions", "showDistantNametags"]), Yr = (0, Zr.useRef)(pr("showFog")), nr = (0, Zr.useRef)(hr.antiAliasing), er = (0, Zr.useRef)(hr.useWebGpu), [Kr, yr] = (0, Zr.useState)(null), [Or, Lr] = (0, Zr.useState)(!1), [lr, Xr] = (0, Zr.useState)((() => (0, vQ.d)(zr.featureFlags.settings.canUseShaderPacks))), [Pr] = (0, Zr.useState)((() => Tr.c.isWebGpuDefaultOff())), [Hr] = (0, Zr.useState)(BQ.l), [qr, Rr] = (0, Zr.useState)(!1);
+      (0, Zr.useEffect)((() => {
+        const rr = () => {
+          Rr((0, GQ.t)())
         };
-        return RR(), (0, PG.v)(RR)
-      }), []), (0, yG.f)("appManagerUpdated|clientEscMenuOptions", (() => {
-        DR((0, PG.p)())
+        return rr(), (0, GQ.A)(rr)
+      }), []), (0, ZQ.c)("appManagerUpdated|clientEscMenuOptions", (() => {
+        Rr((0, GQ.t)())
       }));
-      const [HR] = (0, yR.useState)((() => !0 === wG.i.getItem(OJ.jc))), [oR] = (0, yR.useState)((() => BR.d.isWebGpuOnStored()));
-      (0, yR.useEffect)((() => {
-        let RR = !1;
-        return (0, nR.hasUsableWebGpuAdapter)().then((async JR => {
-          const GR = HR || oR,
-            yR = !JR && vG.G && await (0, mG.f)(GR);
-          RR || (XR(JR || yR), gR(yR))
-        })), (0, lG.o)(nR.featureFlags.settings.canUseShaderPacks) && (0, BG.d)().then((async JR => {
-          const yR = null !== JR && await async function(RR) {
+      const [gr] = (0, Zr.useState)((() => !0 === mQ.j.getItem(PS.mc))), [Cr] = (0, Zr.useState)((() => Tr.c.isWebGpuOnStored()));
+      (0, Zr.useEffect)((() => {
+        let rr = !1;
+        return (0, zr.hasUsableWebGpuAdapter)().then((async Sr => {
+          const Qr = gr || Cr,
+            Zr = !Sr && XQ.I && await (0, AQ.h)(Qr);
+          rr || (yr(Sr || Zr), Lr(Zr))
+        })), (0, vQ.k)(zr.featureFlags.settings.canUseShaderPacks) && (0, TQ.e)().then((async Sr => {
+          const Zr = null !== Sr && await async function(rr) {
             const [{
-              isShaderPackActive: JR
+              isShaderPackActive: Sr
             }, {
-              loadPageShaderPackCompiler: yR
-            }] = await Promise.all([GR.e(160).then((() => GR(7800))), Promise.all([GR.e(91), GR.e(157), GR.e(159)]).then((() => GR(7756)))]);
-            return JR(RR, await yR())
-          }(JR);
-          RR || vR(yR)
+              loadPageShaderPackCompiler: Zr
+            }] = await Promise.all([Qr.e(160).then((() => Qr(7615))), Promise.all([Qr.e(91), Qr.e(157), Qr.e(159)]).then((() => Qr(7575)))]);
+            return Sr(rr, await Zr())
+          }(Sr);
+          rr || Xr(Zr)
         })), () => {
-          RR = !0
+          rr = !0
         }
-      }), [HR, oR]);
-      const cR = (!(bR && !HR) || !pR) && CR,
-        PR = function(RR, JR, GR, yR, tR) {
-          return (0, pG.b)(GR, yR) && !0 === JR ? {
+      }), [gr, Cr]);
+      const Mr = (!(lr && !gr) || !Or) && Kr,
+        Gr = function(rr, Sr, Qr, Zr, Wr) {
+          return (0, OQ.d)(Qr, Zr) && !0 === Sr ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== JR ? "settingsMenu:newWebGpu" : tR ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: RR && !1 !== JR,
-            disabled: !0 !== JR
+            translationKey: !1 !== Sr ? "settingsMenu:newWebGpu" : Wr ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: rr && !1 !== Sr,
+            disabled: !0 !== Sr
           }
-        }(LR.useWebGpu, cR, bR, OR, xR),
-        IR = (LR.useWebGpu || (0, pG.b)(bR, OR)) && bR && !0 === cR,
-        mR = (0, aR.f)("lightingOverride"),
-        zR = !(0, gG.I)(mR);
-      let SR = "settingsMenu:enableLighting";
-      zR && (SR = mR ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const jR = RR => {
-          var JR, GR, yR;
-          const tR = null !== (JR = RR.showFog) && void 0 !== JR ? JR : VR("showFog"),
-            uR = null !== (GR = RR.antiAliasing) && void 0 !== GR ? GR : LR.antiAliasing,
-            ZR = null !== (yR = RR.useWebGpu) && void 0 !== yR ? yR : LR.useWebGpu,
-            qR = !vG.G && tR !== UR.current || uR !== WR.current || ZR !== AR.current;
-          rR(qR ? () => MR.m : null)
+        }(hr.useWebGpu, Mr, lr, Pr, Hr),
+        kr = (hr.useWebGpu || (0, OQ.d)(lr, Pr)) && lr && !0 === Mr,
+        Ar = (0, tr.l)("lightingOverride"),
+        Vr = !(0, LQ.L)(Ar);
+      let ir = "settingsMenu:enableLighting";
+      Vr && (ir = Ar ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const wr = rr => {
+          var Sr, Qr, Zr;
+          const Wr = null !== (Sr = rr.showFog) && void 0 !== Sr ? Sr : pr("showFog"),
+            ar = null !== (Qr = rr.antiAliasing) && void 0 !== Qr ? Qr : hr.antiAliasing,
+            jr = null !== (Zr = rr.useWebGpu) && void 0 !== Zr ? Zr : hr.useWebGpu,
+            Ir = !XQ.I && Wr !== Yr.current || ar !== nr.current || jr !== er.current;
+          Nr(Ir ? () => Br.i : null)
         },
-        dR = (0, aR.f)("fogChunkDistanceOverride"),
-        ER = (0, aR.f)("fogBlockDistanceOverride"),
-        YR = !(0, gG.I)(dR) || !(0, gG.I)(ER),
-        kR = YR ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [QR, FR] = (0, CG.f)(fR),
-        [TR, sR] = (0, IG.l)(fR),
-        hR = eR("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        RJ = TR < QR,
-        JJ = Math.min(null !== (JR = VR("chunkHorizAddDist")) && void 0 !== JR ? JR : fR[0], TR),
-        GJ = !YR && function(RR, JR) {
-          return !0 === RR.showFog && RR.fogChunkDistance > JR
-        }(LR, JJ);
-      return (0, KR.jsxs)("div", {
+        cr = (0, tr.l)("fogChunkDistanceOverride"),
+        Fr = (0, tr.l)("fogBlockDistanceOverride"),
+        or = !(0, LQ.L)(cr) || !(0, LQ.L)(Fr),
+        br = or ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [Jr, Dr] = (0, KQ.f)(Er),
+        [dr, sr] = (0, kQ.f)(Er),
+        ur = Ur("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        rS = dr < Jr,
+        SS = Math.min(null !== (Sr = pr("chunkHorizAddDist")) && void 0 !== Sr ? Sr : Er[0], dr),
+        QS = !or && function(rr, Sr) {
+          return !0 === rr.showFog && rr.fogChunkDistance > Sr
+        }(hr, SS);
+      return (0, xr.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, KR.jsx)(MR.i, {
-          name: eR("settingsMenu:horizontalChunkLoadDistance"),
-          min: fR[0],
-          max: QR,
-          selectableMax: TR,
-          cappedNote: hR,
+        children: [(0, xr.jsx)(Br.f, {
+          name: Ur("settingsMenu:horizontalChunkLoadDistance"),
+          min: Er[0],
+          max: Jr,
+          selectableMax: dr,
+          cappedNote: ur,
           step: 1,
-          initValue: JJ,
-          onChange: RR => {
-            !0 === VR("showFog") && RR < VR("fogChunkDistance") && wR("fogChunkDistance", RR), wR("chunkHorizAddDist", RR), bG.n.JK("updatedChunkLoadDist")
+          initValue: SS,
+          onChange: rr => {
+            !0 === pr("showFog") && rr < pr("fogChunkDistance") && mr("fogChunkDistance", rr), mr("chunkHorizAddDist", rr), lQ.i.Jp("updatedChunkLoadDist")
           },
-          circleInfoText: eR("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, KR.jsx)(MR.i, {
-          name: eR("settingsMenu:verticalChunkLoadDistance"),
-          min: fR[1],
-          max: FR,
-          selectableMax: sR,
-          cappedNote: RJ ? void 0 : hR,
+          circleInfoText: Ur("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, xr.jsx)(Br.f, {
+          name: Ur("settingsMenu:verticalChunkLoadDistance"),
+          min: Er[1],
+          max: Dr,
+          selectableMax: sr,
+          cappedNote: rS ? void 0 : ur,
           step: 1,
-          initValue: Math.min(null !== (tR = VR("chunkVertAddDist")) && void 0 !== tR ? tR : fR[1], sR),
-          onChange: RR => {
-            wR("chunkVertAddDist", RR), bG.n.JK("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Wr = pr("chunkVertAddDist")) && void 0 !== Wr ? Wr : Er[1], sr),
+          onChange: rr => {
+            mr("chunkVertAddDist", rr), lQ.i.Jp("updatedChunkLoadDist")
           },
-          circleInfoText: eR("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: Ur("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, KR.jsx)(MR.e, {
-          label: eR("settingsMenu:chunkFadeIn"),
-          checked: LR.chunkFadeIn,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              chunkFadeIn: RR
+        }), (0, xr.jsx)(Br.c, {
+          label: Ur("settingsMenu:chunkFadeIn"),
+          checked: hr.chunkFadeIn,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              chunkFadeIn: rr
             })
           },
-          circleInfoText: eR("settingsMenu:chunkFadeInInfo")
-        }), lR.devTools.supports("chunkBorders") && (0, KR.jsx)(MR.e, {
-          label: eR("settingsMenu:showChunkBorders"),
-          checked: LR.showChunkBorders,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              showChunkBorders: RR
+          circleInfoText: Ur("settingsMenu:chunkFadeInInfo")
+        }), vr.devTools.supports("chunkBorders") && (0, xr.jsx)(Br.c, {
+          label: Ur("settingsMenu:showChunkBorders"),
+          checked: hr.showChunkBorders,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              showChunkBorders: rr
             })
           },
-          circleInfoText: eR("settingsMenu:showChunkBordersInfo")
-        }), (0, KR.jsx)(MR.e, {
-          label: eR(SR),
-          checked: LR.enableLighting,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              enableLighting: RR
+          circleInfoText: Ur("settingsMenu:showChunkBordersInfo")
+        }), (0, xr.jsx)(Br.c, {
+          label: Ur(ir),
+          checked: hr.enableLighting,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              enableLighting: rr
             })
           },
-          disabled: zR
-        }), (0, KR.jsxs)("div", {
+          disabled: Vr
+        }), (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, KR.jsx)(MR.e, {
-            label: eR(kR),
-            checked: LR.showFog,
-            onClick: RR => {
-              jR({
-                showFog: RR
-              }), BR.d.setClientEscMenuOptions({
-                showFog: RR
+          children: [(0, xr.jsx)(Br.c, {
+            label: Ur(br),
+            checked: hr.showFog,
+            onClick: rr => {
+              wr({
+                showFog: rr
+              }), Tr.c.setClientEscMenuOptions({
+                showFog: rr
               })
             },
-            disabled: YR,
-            className: uR()({
-              SettingBoxWarning: GJ
+            disabled: or,
+            className: ar()({
+              SettingBoxWarning: QS
             })
-          }), (0, KR.jsx)(MR.i, {
-            name: eR("settingsMenu:fogChunkDistance"),
-            min: fR[0],
-            max: XG.g.maxChunkHorizAddDistance,
+          }), (0, xr.jsx)(Br.f, {
+            name: Ur("settingsMenu:fogChunkDistance"),
+            min: Er[0],
+            max: yQ.i.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (qR = LR.fogChunkDistance) && void 0 !== qR ? qR : fR[0],
-            onChange: RR => {
-              BR.d.setClientEscMenuOptions({
-                fogChunkDistance: RR
-              }), bG.n.JK("fogChunkDistanceChanged", RR)
+            initValue: null !== (Ir = hr.fogChunkDistance) && void 0 !== Ir ? Ir : Er[0],
+            onChange: rr => {
+              Tr.c.setClientEscMenuOptions({
+                fogChunkDistance: rr
+              }), lQ.i.Jp("fogChunkDistanceChanged", rr)
             },
-            circleInfoText: eR("settingsMenu:fogChunkDistanceInfo"),
-            disabled: YR || !1 === VR("showFog"),
-            className: uR()({
-              SettingBoxWarning: GJ
+            circleInfoText: Ur("settingsMenu:fogChunkDistanceInfo"),
+            disabled: or || !1 === pr("showFog"),
+            className: ar()({
+              SettingBoxWarning: QS
             })
-          }), GJ && (0, KR.jsx)("div", {
+          }), QS && (0, xr.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: eR("settingsMenu:fogChunkDistanceInfo")
+            children: Ur("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !vG.G && (0, KR.jsx)(MR.e, {
-          label: eR(IR ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !IR && LR.disableTexAtlas,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              disableTexAtlas: RR
+        }), !XQ.I && (0, xr.jsx)(Br.c, {
+          label: Ur(kr ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !kr && hr.disableTexAtlas,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              disableTexAtlas: rr
             })
           },
-          circleInfoText: eR("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: IR
-        }), (0, KR.jsx)(MR.i, {
-          name: eR("settingsMenu:fieldOfView"),
+          circleInfoText: Ur("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: kr
+        }), (0, xr.jsx)(Br.f, {
+          name: Ur("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: LR.cameraFOV,
-          onChange: RR => {
-            BR.d.setClientEscMenuOptions({
-              cameraFOV: RR
+          initValue: hr.cameraFOV,
+          onChange: rr => {
+            Tr.c.setClientEscMenuOptions({
+              cameraFOV: rr
             })
           }
-        }), (0, KR.jsx)(MR.e, {
-          label: eR("settingsMenu:disableViewBobbing"),
-          checked: LR.disableBobbing,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              disableBobbing: RR
+        }), (0, xr.jsx)(Br.c, {
+          label: Ur("settingsMenu:disableViewBobbing"),
+          checked: hr.disableBobbing,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              disableBobbing: rr
             })
           },
-          circleInfoText: eR("settingsMenu:disableViewBobbingInfo")
-        }), (0, KR.jsx)(MR.e, {
-          label: eR("settingsMenu:antiAliasing"),
-          checked: LR.antiAliasing,
-          onClick: RR => {
-            jR({
-              antiAliasing: RR
-            }), (0, oG.i)("antiAliasing"), BR.d.setClientEscMenuOptions({
-              antiAliasing: RR
+          circleInfoText: Ur("settingsMenu:disableViewBobbingInfo")
+        }), (0, xr.jsx)(Br.c, {
+          label: Ur("settingsMenu:antiAliasing"),
+          checked: hr.antiAliasing,
+          onClick: rr => {
+            wr({
+              antiAliasing: rr
+            }), (0, CQ.c)("antiAliasing"), Tr.c.setClientEscMenuOptions({
+              antiAliasing: rr
             })
           },
-          circleInfoText: eR("settingsMenu:antiAliasingInfo")
-        }), (0, KR.jsx)(MR.i, {
-          name: eR("settingsMenu:pixelScale"),
+          circleInfoText: Ur("settingsMenu:antiAliasingInfo")
+        }), (0, xr.jsx)(Br.f, {
+          name: Ur("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (iR = LR.pixelScale) && void 0 !== iR ? iR : 1,
-          onChange: RR => {
-            (RR !== BR.d.get("clientEscMenuOptions").pixelScale || (0, PG.m)()) && (0, oG.i)("pixelScale"), BR.d.setClientEscMenuOptions({
-              pixelScale: RR
+          initValue: null !== (fr = hr.pixelScale) && void 0 !== fr ? fr : 1,
+          onChange: rr => {
+            (rr !== Tr.c.get("clientEscMenuOptions").pixelScale || (0, GQ.r)()) && (0, CQ.c)("pixelScale"), Tr.c.setClientEscMenuOptions({
+              pixelScale: rr
             })
           },
-          circleInfoText: eR("settingsMenu:pixelScaleInfo"),
-          note: NR ? eR("settingsMenu:pixelScaleLowered") : void 0,
-          format: RR => `${RR}x`
-        }), (0, KR.jsx)(MR.e, {
-          label: eR("settingsMenu:pixelSmoothing"),
-          checked: LR.pixelSmoothing,
-          onClick: RR => {
-            BR.d.setClientEscMenuOptions({
-              pixelSmoothing: RR
+          circleInfoText: Ur("settingsMenu:pixelScaleInfo"),
+          note: qr ? Ur("settingsMenu:pixelScaleLowered") : void 0,
+          format: rr => `${rr}x`
+        }), (0, xr.jsx)(Br.c, {
+          label: Ur("settingsMenu:pixelSmoothing"),
+          checked: hr.pixelSmoothing,
+          onClick: rr => {
+            Tr.c.setClientEscMenuOptions({
+              pixelSmoothing: rr
             })
           },
-          circleInfoText: eR("settingsMenu:pixelSmoothingInfo")
-        }), vG.G && (0, KR.jsx)(MR.e, {
-          label: eR("settingsMenu:distantNametags"),
-          checked: (0, cG.d)(),
-          onClick: RR => {
-            BR.d.set({
-              showDistantNametags: RR
+          circleInfoText: Ur("settingsMenu:pixelSmoothingInfo")
+        }), XQ.I && (0, xr.jsx)(Br.c, {
+          label: Ur("settingsMenu:distantNametags"),
+          checked: (0, MQ.e)(),
+          onClick: rr => {
+            Tr.c.set({
+              showDistantNametags: rr
             })
           },
-          circleInfoText: eR("settingsMenu:distantNametagsInfo")
-        }), (0, KR.jsx)(MR.e, {
-          label: eR(PR.translationKey),
-          checked: PR.checked,
-          onClick: RR => {
-            jR({
-              useWebGpu: RR
-            }), BR.d.setClientEscMenuOptions({
-              useWebGpu: RR
+          circleInfoText: Ur("settingsMenu:distantNametagsInfo")
+        }), (0, xr.jsx)(Br.c, {
+          label: Ur(Gr.translationKey),
+          checked: Gr.checked,
+          onClick: rr => {
+            wr({
+              useWebGpu: rr
+            }), Tr.c.setClientEscMenuOptions({
+              useWebGpu: rr
             })
           },
-          circleInfoText: eR("settingsMenu:newWebGpuInfo"),
-          disabled: PR.disabled
+          circleInfoText: Ur("settingsMenu:newWebGpuInfo"),
+          disabled: Gr.disabled
         })]
       })
     }
-    var SG = GR(5218),
-      jG = GR(10215),
-      dG = GR(35099),
-      EG = GR(10227),
-      YG = GR(10273),
-      kG = GR(35106);
-    const QG = {
+    var iQ = Qr(5150),
+      wQ = Qr(9980),
+      cQ = Qr(35416),
+      FQ = Qr(9988),
+      oQ = Qr(10037),
+      bQ = Qr(35422);
+    const JQ = {
         color: 16777215,
         name: "white"
       },
-      FG = {
+      DQ = {
         color: 0,
         name: "black"
       },
-      TG = [QG, {
+      dQ = [JQ, {
         color: 5046092,
         name: "green"
       }, {
@@ -1963,134 +1963,134 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, FG],
-      sG = [FG, QG];
+      }, DQ],
+      sQ = [DQ, JQ];
 
-    function hG(RR) {
-      return `${RR} px`
+    function uQ(rr) {
+      return `${rr} px`
     }
 
-    function Ry(RR) {
-      return `${RR}%`
+    function rZ(rr) {
+      return `${rr}%`
     }
 
-    function Jy(RR) {
+    function SZ(rr) {
       let {
-        settings: JR,
-        onChange: GR
-      } = RR;
+        settings: Sr,
+        onChange: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)(), tR = (RR, yR) => {
-        GR((0, kG.w)(JR, RR, yR))
-      }, uR = function(RR, GR) {
-        let yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hG;
+        t: Zr
+      } = (0, jr.E)(), Wr = (rr, Zr) => {
+        Qr((0, bQ.u)(Sr, rr, Zr))
+      }, ar = function(rr, Qr) {
+        let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uQ;
         const {
-          min: uR,
-          max: ZR,
-          step: qR
-        } = kG.d[RR];
-        return (0, KR.jsx)(MR.i, {
-          name: GR,
-          min: uR,
-          max: ZR,
-          step: qR,
-          initValue: JR[RR],
-          format: yR,
-          onChange: JR => {
-            tR(RR, JR)
+          min: ar,
+          max: jr,
+          step: Ir
+        } = bQ.b[rr];
+        return (0, xr.jsx)(Br.f, {
+          name: Qr,
+          min: ar,
+          max: jr,
+          step: Ir,
+          initValue: Sr[rr],
+          format: Zr,
+          onChange: Sr => {
+            Wr(rr, Sr)
           }
-        }, RR)
-      }, qR = (RR, GR, uR) => (0, KR.jsx)(YG.b, {
-        label: RR,
-        value: (0, kG.j)(JR[GR]),
-        swatches: uR.map((RR => {
+        }, rr)
+      }, Ir = (rr, Qr, ar) => (0, xr.jsx)(oQ.c, {
+        label: rr,
+        value: (0, bQ.l)(Sr[Qr]),
+        swatches: ar.map((rr => {
           let {
-            color: JR,
-            name: GR
-          } = RR;
+            color: Sr,
+            name: Qr
+          } = rr;
           return {
-            colour: (0, kG.j)(JR),
-            label: yR(`crosshairSettings:color_${GR}`)
+            colour: (0, bQ.l)(Sr),
+            label: Zr(`crosshairSettings:color_${Qr}`)
           }
         })),
-        customLabel: yR("crosshairSettings:customColor"),
-        onChange: RR => {
-          const JR = (0, kG.p)(RR);
-          null !== JR && tR(GR, JR)
+        customLabel: Zr("crosshairSettings:customColor"),
+        onChange: rr => {
+          const Sr = (0, bQ.r)(rr);
+          null !== Sr && Wr(Qr, Sr)
         }
-      }), iR = ["lines", "dot", "circle"].filter((RR => JR[RR])), fR = (RR, GR, yR) => (0, KR.jsx)(MR.e, {
-        label: GR,
-        checked: JR[RR],
-        disabled: 1 === iR.length && iR[0] === RR,
-        circleInfoText: yR,
-        onClick: JR => {
-          tR(RR, JR)
+      }), fr = ["lines", "dot", "circle"].filter((rr => Sr[rr])), Er = (rr, Qr, Zr) => (0, xr.jsx)(Br.c, {
+        label: Qr,
+        checked: Sr[rr],
+        disabled: 1 === fr.length && fr[0] === rr,
+        circleInfoText: Zr,
+        onClick: Sr => {
+          Wr(rr, Sr)
         }
-      }, RR), VR = "shapes" === JR.style;
-      return (0, KR.jsxs)(KR.Fragment, {
-        children: [(0, KR.jsx)(MR.g, {
-          label: yR("crosshairSettings:style"),
+      }, rr), pr = "shapes" === Sr.style;
+      return (0, xr.jsxs)(xr.Fragment, {
+        children: [(0, xr.jsx)(Br.e, {
+          label: Zr("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: yR("crosshairSettings:styleClassic")
+            label: Zr("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: yR("crosshairSettings:styleShapes")
+            label: Zr("crosshairSettings:styleShapes")
           }],
-          value: JR.style,
-          onChange: RR => {
-            tR("style", RR)
+          value: Sr.style,
+          onChange: rr => {
+            Wr("style", rr)
           }
-        }), qR(yR("crosshairSettings:color"), "color", TG), uR("opacity", yR("crosshairSettings:opacity"), Ry), !VR && uR("size", yR("crosshairSettings:size"), Ry), VR && (0, KR.jsxs)("div", {
+        }), Ir(Zr("crosshairSettings:color"), "color", dQ), ar("opacity", Zr("crosshairSettings:opacity"), rZ), !pr && ar("size", Zr("crosshairSettings:size"), rZ), pr && (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [fR("lines", yR("crosshairSettings:lines")), JR.lines && uR("lineLength", yR("crosshairSettings:lineLength")), JR.lines && uR("lineThickness", yR("crosshairSettings:lineThickness")), JR.lines && uR("gap", yR("crosshairSettings:gap")), JR.lines && fR("tStyle", yR("crosshairSettings:tStyle"))]
-        }), VR && (0, KR.jsxs)("div", {
+          children: [Er("lines", Zr("crosshairSettings:lines")), Sr.lines && ar("lineLength", Zr("crosshairSettings:lineLength")), Sr.lines && ar("lineThickness", Zr("crosshairSettings:lineThickness")), Sr.lines && ar("gap", Zr("crosshairSettings:gap")), Sr.lines && Er("tStyle", Zr("crosshairSettings:tStyle"))]
+        }), pr && (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [fR("dot", yR("crosshairSettings:dot")), JR.dot && uR("dotSize", yR("crosshairSettings:dotSize"))]
-        }), VR && (0, KR.jsxs)("div", {
+          children: [Er("dot", Zr("crosshairSettings:dot")), Sr.dot && ar("dotSize", Zr("crosshairSettings:dotSize"))]
+        }), pr && (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [fR("circle", yR("crosshairSettings:circle")), JR.circle && uR("circleRadius", yR("crosshairSettings:circleRadius")), JR.circle && uR("circleThickness", yR("crosshairSettings:circleThickness"))]
-        }), (0, KR.jsxs)("div", {
+          children: [Er("circle", Zr("crosshairSettings:circle")), Sr.circle && ar("circleRadius", Zr("crosshairSettings:circleRadius")), Sr.circle && ar("circleThickness", Zr("crosshairSettings:circleThickness"))]
+        }), (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [uR("outline", yR("crosshairSettings:outline"), (RR => RR > 0 ? hG(RR) : yR("crosshairSettings:off"))), JR.outline > 0 && qR(yR("crosshairSettings:outlineColor"), "outlineColor", sG)]
-        }), fR("growOnClick", yR("crosshairSettings:growOnClick")), VR && fR("forGuns", yR("crosshairSettings:forGuns"), yR("crosshairSettings:forGunsInfo"))]
+          children: [ar("outline", Zr("crosshairSettings:outline"), (rr => rr > 0 ? uQ(rr) : Zr("crosshairSettings:off"))), Sr.outline > 0 && Ir(Zr("crosshairSettings:outlineColor"), "outlineColor", sQ)]
+        }), Er("growOnClick", Zr("crosshairSettings:growOnClick")), pr && Er("forGuns", Zr("crosshairSettings:forGuns"), Zr("crosshairSettings:forGunsInfo"))]
       })
     }
-    var Gy = GR(83),
-      yy = GR(1366),
-      ty = GR(14020),
-      uy = GR(15168),
-      Zy = GR(16520),
-      qy = GR(17051);
-    const iy = ["sky", "grass", "stone", "sand", "snow", "night"],
-      fy = "4rem";
+    var QZ = Qr(92),
+      ZZ = Qr(1330),
+      WZ = Qr(13750),
+      aZ = Qr(14956),
+      jZ = Qr(16388),
+      IZ = Qr(16909);
+    const fZ = ["sky", "grass", "stone", "sand", "snow", "night"],
+      EZ = "4rem";
 
-    function Vy(RR) {
+    function pZ(rr) {
       return {
-        backgroundImage: `url(${RR})`,
-        backgroundSize: `${fy} ${fy}`,
+        backgroundImage: `url(${rr})`,
+        backgroundSize: `${EZ} ${EZ}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function Ky(RR) {
+    function xZ(rr) {
       return {
         ...(() => {
-          switch (RR) {
+          switch (rr) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return Vy(ty);
+              return pZ(WZ);
             case "stone":
-              return Vy(uy);
+              return pZ(aZ);
             case "sand":
-              return Vy(Zy);
+              return pZ(jZ);
             case "snow":
-              return Vy(qy);
+              return pZ(IZ);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -2101,21 +2101,21 @@ export const modules = {
       }
     }
 
-    function wy(RR) {
+    function mZ(rr) {
       return Object.freeze({
-        ...kG.e,
+        ...bQ.f,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...RR
+        ...rr
       })
     }
-    const ry = [{
+    const NZ = [{
         id: "default",
-        settings: kG.e
+        settings: bQ.f
       }, {
         id: "cross",
-        settings: wy({
+        settings: mZ({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -2124,7 +2124,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: wy({
+        settings: mZ({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -2135,13 +2135,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: wy({
+        settings: mZ({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: wy({
+        settings: mZ({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -2150,7 +2150,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: wy({
+        settings: mZ({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -2160,7 +2160,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: wy({
+        settings: mZ({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -2169,7 +2169,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: wy({
+        settings: mZ({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -2177,570 +2177,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      ey = ["growOnClick", "forGuns"];
-    var ay = GR(35111);
+      UZ = ["growOnClick", "forGuns"];
+    var tZ = Qr(35426);
 
-    function Ly(RR) {
+    function hZ(rr) {
       let {
-        label: JR,
-        selected: GR,
-        onClick: yR,
-        className: tR,
-        style: ZR,
-        children: qR
-      } = RR;
-      return (0, KR.jsx)("button", {
+        label: Sr,
+        selected: Qr,
+        onClick: Zr,
+        className: Wr,
+        style: jr,
+        children: Ir
+      } = rr;
+      return (0, xr.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": GR,
-        title: JR,
-        "aria-label": JR,
+        "aria-checked": Qr,
+        title: Sr,
+        "aria-label": Sr,
         "data-pad-focusable": !0,
-        className: uR()("CrosshairBackdropSwatch", tR, {
-          Selected: GR
+        className: ar()("CrosshairBackdropSwatch", Wr, {
+          Selected: Qr
         }),
-        style: ZR,
-        onClick: yR,
-        children: qR
+        style: jr,
+        onClick: Zr,
+        children: Ir
       })
     }
 
-    function ny(RR) {
+    function zZ(rr) {
       let {
-        backdrop: JR,
-        onChange: GR,
-        game: yR
-      } = RR;
+        backdrop: Sr,
+        onChange: Qr,
+        game: Zr
+      } = rr;
       const {
-        t: tR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
+        t: Wr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": tR("crosshairSettings:background"),
-        children: [yR && (0, KR.jsx)(Ly, {
-          label: tR("crosshairSettings:bg_game"),
-          selected: yR.selected,
-          onClick: yR.onSelect,
+        "aria-label": Wr("crosshairSettings:background"),
+        children: [Zr && (0, xr.jsx)(hZ, {
+          label: Wr("crosshairSettings:bg_game"),
+          selected: Zr.selected,
+          onClick: Zr.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, KR.jsx)(qR.d, {
+          children: (0, xr.jsx)(Ir.c, {
             name: "cube"
           })
-        }), iy.map((RR => (0, KR.jsx)(Ly, {
-          label: tR(`crosshairSettings:bg_${RR}`),
-          selected: !(null !== yR && void 0 !== yR && yR.selected) && RR === JR,
-          style: Ky(RR),
+        }), fZ.map((rr => (0, xr.jsx)(hZ, {
+          label: Wr(`crosshairSettings:bg_${rr}`),
+          selected: !(null !== Zr && void 0 !== Zr && Zr.selected) && rr === Sr,
+          style: xZ(rr),
           onClick: () => {
-            GR(RR)
+            Qr(rr)
           }
-        }, RR)))]
+        }, rr)))]
       })
     }
 
-    function Uy(RR) {
+    function YZ(rr) {
       let {
-        settings: JR,
-        touch: GR,
-        backdrop: yR,
-        onChange: tR
-      } = RR;
+        settings: Sr,
+        touch: Qr,
+        backdrop: Zr,
+        onChange: Wr
+      } = rr;
       const {
-        t: qR
-      } = (0, ZR.A)(), iR = function(RR) {
-        var JR;
-        return null !== (JR = ry.find((JR => (0, kG.t)(JR.settings, RR, ey)))) && void 0 !== JR ? JR : null
-      }(JR);
-      return (0, KR.jsx)("div", {
+        t: Ir
+      } = (0, jr.E)(), fr = function(rr) {
+        var Sr;
+        return null !== (Sr = NZ.find((Sr => (0, bQ.t)(Sr.settings, rr, UZ)))) && void 0 !== Sr ? Sr : null
+      }(Sr);
+      return (0, xr.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": qR("crosshairSettings:presets"),
-        children: ry.map((RR => {
-          const ZR = (null === iR || void 0 === iR ? void 0 : iR.id) === RR.id;
-          return (0, KR.jsxs)("button", {
+        "aria-label": Ir("crosshairSettings:presets"),
+        children: NZ.map((rr => {
+          const jr = (null === fr || void 0 === fr ? void 0 : fr.id) === rr.id;
+          return (0, xr.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": ZR,
+            "aria-checked": jr,
             "data-pad-focusable": !0,
-            className: uR()("CrosshairPreset", {
-              Selected: ZR
+            className: ar()("CrosshairPreset", {
+              Selected: jr
             }),
             onClick: () => {
-              tR(function(RR, JR) {
+              Wr(function(rr, Sr) {
                 return {
-                  ...JR.settings,
-                  growOnClick: RR.growOnClick,
-                  forGuns: RR.forGuns
+                  ...Sr.settings,
+                  growOnClick: rr.growOnClick,
+                  forGuns: rr.forGuns
                 }
-              }(JR, RR))
+              }(Sr, rr))
             },
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: Ky(yR),
-              children: (0, KR.jsx)(ay.d, {
-                settings: RR.settings,
-                touch: GR,
+              style: xZ(Zr),
+              children: (0, xr.jsx)(tZ.b, {
+                settings: rr.settings,
+                touch: Qr,
                 inPreview: !0
               })
-            }), (0, KR.jsx)("div", {
+            }), (0, xr.jsx)("div", {
               className: "CrosshairPresetName",
-              children: qR(`crosshairSettings:preset_${RR.id}`)
+              children: Ir(`crosshairSettings:preset_${rr.id}`)
             })]
-          }, RR.id)
+          }, rr.id)
         }))
       })
     }
-    var Wy = GR(1859);
+    var nZ = Qr(1796);
 
-    function Ay(RR, JR) {
-      const [GR, tR] = (0, yR.useState)(!1), uR = () => {
-        tR(!1)
-      }, [ZR, qR] = (0, yR.useState)(!1), iR = (0, yR.useRef)({
-        growOnClick: RR.growOnClick,
-        forGuns: RR.forGuns
+    function eZ(rr, Sr) {
+      const [Qr, Wr] = (0, Zr.useState)(!1), ar = () => {
+        Wr(!1)
+      }, [jr, Ir] = (0, Zr.useState)(!1), fr = (0, Zr.useRef)({
+        growOnClick: rr.growOnClick,
+        forGuns: rr.forGuns
       });
-      (0, yR.useEffect)((() => {
-        const JR = iR.current;
-        iR.current = {
-          growOnClick: RR.growOnClick,
-          forGuns: RR.forGuns
-        }, (RR.growOnClick && !JR.growOnClick || RR.forGuns && !JR.forGuns) && qR(!0)
-      }), [RR.growOnClick, RR.forGuns]), (0, yR.useEffect)((() => {
-        if (!ZR) return;
-        const RR = setTimeout((() => {
-          qR(!1)
+      (0, Zr.useEffect)((() => {
+        const Sr = fr.current;
+        fr.current = {
+          growOnClick: rr.growOnClick,
+          forGuns: rr.forGuns
+        }, (rr.growOnClick && !Sr.growOnClick || rr.forGuns && !Sr.forGuns) && Ir(!0)
+      }), [rr.growOnClick, rr.forGuns]), (0, Zr.useEffect)((() => {
+        if (!jr) return;
+        const rr = setTimeout((() => {
+          Ir(!1)
         }), 600);
         return () => {
-          clearTimeout(RR)
+          clearTimeout(rr)
         }
-      }), [ZR]);
-      const fR = GR || ZR;
+      }), [jr]);
+      const Er = Qr || jr;
       return {
         view: {
-          pressed: fR,
-          spread: fR && RR.forGuns && !RR.growOnClick ? 6 : 0
+          pressed: Er,
+          spread: Er && rr.forGuns && !rr.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: RR => {
-            !RR.target.closest(JR) && (0, Wy.b)(RR.currentTarget, RR.pointerId) && tR(!0)
+          onPointerDown: rr => {
+            !rr.target.closest(Sr) && (0, nZ.b)(rr.currentTarget, rr.pointerId) && Wr(!0)
           },
-          onPointerUp: uR,
-          onPointerCancel: uR,
-          onLostPointerCapture: uR
+          onPointerUp: ar,
+          onPointerCancel: ar,
+          onLostPointerCapture: ar
         }
       }
     }
 
-    function Cy(RR) {
+    function KZ(rr) {
       let {
-        settings: JR,
-        touch: GR,
-        backdrop: yR,
-        className: tR,
-        children: ZR,
-        label: qR
-      } = RR;
-      const iR = Ay(JR, ".CrosshairStageControls");
-      return (0, KR.jsxs)("div", {
-        className: uR()("CrosshairStage", tR),
-        style: Ky(yR),
-        ...iR.handlers,
-        children: [(0, KR.jsx)("div", {
+        settings: Sr,
+        touch: Qr,
+        backdrop: Zr,
+        className: Wr,
+        children: jr,
+        label: Ir
+      } = rr;
+      const fr = eZ(Sr, ".CrosshairStageControls");
+      return (0, xr.jsxs)("div", {
+        className: ar()("CrosshairStage", Wr),
+        style: xZ(Zr),
+        ...fr.handlers,
+        children: [(0, xr.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": qR,
-          children: (0, KR.jsx)(ay.d, {
-            settings: JR,
-            touch: GR,
+          "aria-label": Ir,
+          children: (0, xr.jsx)(tZ.b, {
+            settings: Sr,
+            touch: Qr,
             inPreview: !0,
-            ...iR.view
+            ...fr.view
           })
-        }), ZR]
+        }), jr]
       })
     }
-    const Xy = "crosshairFullScreen";
+    const yZ = "crosshairFullScreen";
 
-    function My(RR) {
+    function BZ(rr) {
       let {
-        settings: JR,
-        touch: GR,
-        backdrop: tR,
-        onBackdrop: iR,
-        inGame: VR,
-        onChange: wR,
-        onClose: rR
-      } = RR;
+        settings: Sr,
+        touch: Qr,
+        backdrop: Wr,
+        onBackdrop: fr,
+        inGame: pr,
+        onChange: mr,
+        onClose: Nr
+      } = rr;
       const {
-        t: eR
-      } = (0, ZR.A)(), aR = (0, yR.useRef)(null);
-      (0, yy.u)("popup", aR, rR),
-      function(RR) {
-        const JR = (0, yR.useRef)(RR);
-        JR.current = RR, (0, yR.useEffect)((() => {
+        t: Ur
+      } = (0, jr.E)(), tr = (0, Zr.useRef)(null);
+      (0, ZZ.u)("popup", tr, Nr),
+      function(rr) {
+        const Sr = (0, Zr.useRef)(rr);
+        Sr.current = rr, (0, Zr.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [Xy]: !0
+            [yZ]: !0
           }, "");
-          let RR = !1;
-          const GR = () => {
-            RR = !0, JR.current()
+          let rr = !1;
+          const Qr = () => {
+            rr = !0, Sr.current()
           };
-          return window.addEventListener("popstate", GR), () => {
-            var JR;
-            window.removeEventListener("popstate", GR), !RR && null !== (JR = window.history.state) && void 0 !== JR && JR[Xy] && window.history.back()
+          return window.addEventListener("popstate", Qr), () => {
+            var Sr;
+            window.removeEventListener("popstate", Qr), !rr && null !== (Sr = window.history.state) && void 0 !== Sr && Sr[yZ] && window.history.back()
           }
         }), [])
-      }(rR);
-      const LR = (0, yR.useRef)(rR);
-      LR.current = rR, (0, yR.useEffect)((() => {
-        function RR(RR) {
-          "Escape" === RR.key && (RR.stopPropagation(), LR.current())
+      }(Nr);
+      const hr = (0, Zr.useRef)(Nr);
+      hr.current = Nr, (0, Zr.useEffect)((() => {
+        function rr(rr) {
+          "Escape" === rr.key && (rr.stopPropagation(), hr.current())
         }
-        return window.addEventListener("keydown", RR, !0), () => {
-          window.removeEventListener("keydown", RR, !0)
+        return window.addEventListener("keydown", rr, !0), () => {
+          window.removeEventListener("keydown", rr, !0)
         }
       }), []);
-      const nR = Ay(JR, ".CrosshairFullScreenPanel"),
-        [UR, WR] = (0, yR.useState)(!0),
-        AR = UR && VR;
-      (0, yR.useEffect)((() => {
-        if (AR) return BR.d.set({
+      const zr = eZ(Sr, ".CrosshairFullScreenPanel"),
+        [Yr, nr] = (0, Zr.useState)(!0),
+        er = Yr && pr;
+      (0, Zr.useEffect)((() => {
+        if (er) return Tr.c.set({
           crosshairGameView: !0
         }), () => {
-          BR.d.set({
+          Tr.c.set({
             crosshairGameView: !1
           })
         }
-      }), [AR]);
-      const [CR, XR] = (0, yR.useState)(!0);
-      return (0, Gy.createPortal)((0, KR.jsxs)("div", {
-        ref: aR,
+      }), [er]);
+      const [Kr, yr] = (0, Zr.useState)(!0);
+      return (0, QZ.createPortal)((0, xr.jsxs)("div", {
+        ref: tr,
         className: "CrosshairFullScreen",
-        style: AR ? void 0 : Ky(tR),
-        ...nR.handlers,
-        children: [(0, KR.jsx)(ay.d, {
-          settings: JR,
-          touch: GR,
+        style: er ? void 0 : xZ(Wr),
+        ...zr.handlers,
+        children: [(0, xr.jsx)(tZ.b, {
+          settings: Sr,
+          touch: Qr,
           inEditor: !0,
-          ...nR.view
-        }), (0, KR.jsxs)("div", {
-          className: uR()("CrosshairFullScreenPanel", {
-            Collapsed: !CR
+          ...zr.view
+        }), (0, xr.jsxs)("div", {
+          className: ar()("CrosshairFullScreenPanel", {
+            Collapsed: !Kr
           }),
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, KR.jsx)(ny, {
-              backdrop: tR,
-              onChange: RR => {
-                WR(!1), iR(RR)
+            children: [(0, xr.jsx)(zZ, {
+              backdrop: Wr,
+              onChange: rr => {
+                nr(!1), fr(rr)
               },
-              game: VR ? {
-                selected: AR,
+              game: pr ? {
+                selected: er,
                 onSelect: () => {
-                  WR(!0)
+                  nr(!0)
                 }
               } : void 0
-            }), (0, KR.jsx)(fR.U, {
+            }), (0, xr.jsx)(Er.U, {
               className: "CrosshairPanelToggle",
-              ariaLabel: eR(CR ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: Ur(Kr ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                XR(!CR)
+                yr(!Kr)
               },
-              children: (0, KR.jsx)(qR.d, {
-                name: CR ? "caret-up" : "pen"
+              children: (0, xr.jsx)(Ir.c, {
+                name: Kr ? "caret-up" : "pen"
               })
-            }), (0, KR.jsx)(fR.g, {
+            }), (0, xr.jsx)(Er.h, {
               className: "CrosshairFullScreenDone",
-              onClick: rR,
+              onClick: Nr,
               padDefaultFocus: !0,
-              children: eR("crosshairSettings:done")
+              children: Ur("crosshairSettings:done")
             })]
-          }), CR && (0, KR.jsxs)("div", {
+          }), Kr && (0, xr.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, KR.jsx)(Uy, {
-              settings: JR,
-              touch: GR,
-              backdrop: tR,
-              onChange: wR
-            }), (0, KR.jsx)(Jy, {
-              settings: JR,
-              onChange: wR
+            children: [(0, xr.jsx)(YZ, {
+              settings: Sr,
+              touch: Qr,
+              backdrop: Wr,
+              onChange: mr
+            }), (0, xr.jsx)(SZ, {
+              settings: Sr,
+              onChange: mr
             })]
           })]
         })]
       }), document.body)
     }
-    var By = GR(3791),
-      ly = GR(35122);
+    var TZ = Qr(3742),
+      vZ = Qr(35435);
 
-    function py(RR) {
+    function OZ(rr) {
       let {
-        settings: JR,
-        onChange: GR
-      } = RR;
+        settings: Sr,
+        onChange: Qr
+      } = rr;
       const {
-        t: tR
-      } = (0, ZR.A)(), iR = (0, ly.h)(JR), [VR, wR] = (0, By.h)(), [rR, eR] = (0, yR.useState)(!1), aR = (0, yR.useRef)(null), [LR, nR] = (0, By.h)(), [UR, WR] = (0, yR.useState)(!1);
-      return (0, KR.jsxs)("div", {
+        t: Wr
+      } = (0, jr.E)(), fr = (0, vZ.m)(Sr), [pr, mr] = (0, TZ.g)(), [Nr, Ur] = (0, Zr.useState)(!1), tr = (0, Zr.useRef)(null), [hr, zr] = (0, TZ.g)(), [Yr, nr] = (0, Zr.useState)(!1);
+      return (0, xr.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, KR.jsxs)(fR.U, {
-            className: uR()("CrosshairCopy", {
-              ActiveSecondaryButton: VR
+          children: [(0, xr.jsxs)(Er.U, {
+            className: ar()("CrosshairCopy", {
+              ActiveSecondaryButton: pr
             }),
             onClick: () => {
-              (0, By.d)(iR, {
+              (0, TZ.c)(fr, {
                 useShareSheet: !1,
-                onOutcome: RR => {
-                  eR("failed" === RR), "copied" === RR && wR()
+                onOutcome: rr => {
+                  Ur("failed" === rr), "copied" === rr && mr()
                 }
               })
             },
-            children: [(0, KR.jsx)(qR.d, {
-              name: VR ? "check" : "copy"
-            }), " ", tR(VR ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, KR.jsx)(CR.b, {
+            children: [(0, xr.jsx)(Ir.c, {
+              name: pr ? "check" : "copy"
+            }), " ", Wr(pr ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, xr.jsx)(Kr.b, {
             className: "CrosshairPaste",
-            domRef: aR,
-            ariaLabel: tR("crosshairSettings:paste"),
-            placeholderText: tR("crosshairSettings:paste"),
-            onValueChange: RR => {
-              const JR = (0, ly.f)(RR);
-              WR(!JR && RR.trim().length >= ly.e), JR && (GR(JR), aR.current.value = "", nR())
+            domRef: tr,
+            ariaLabel: Wr("crosshairSettings:paste"),
+            placeholderText: Wr("crosshairSettings:paste"),
+            onValueChange: rr => {
+              const Sr = (0, vZ.i)(rr);
+              nr(!Sr && rr.trim().length >= vZ.e), Sr && (Qr(Sr), tr.current.value = "", zr())
             }
           })]
-        }), rR && (0, KR.jsx)("input", {
+        }), Nr && (0, xr.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: iR,
-          "aria-label": tR("crosshairSettings:copy"),
-          onFocus: RR => {
-            RR.currentTarget.select()
+          value: fr,
+          "aria-label": Wr("crosshairSettings:copy"),
+          onFocus: rr => {
+            rr.currentTarget.select()
           }
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           "aria-live": "polite",
-          children: [UR && (0, KR.jsx)("div", {
+          children: [Yr && (0, xr.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: tR("crosshairSettings:pasteInvalid")
-          }), LR && !UR && (0, KR.jsx)("div", {
+            children: Wr("crosshairSettings:pasteInvalid")
+          }), hr && !Yr && (0, xr.jsx)("div", {
             className: "CrosshairShareNote",
-            children: tR("crosshairSettings:applied")
+            children: Wr("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var gy = GR(35124);
-    let by = "sky";
+    var LZ = Qr(35437);
+    let lZ = "sky";
 
-    function vy(RR) {
+    function XZ(rr) {
       let {
-        showing: JR
-      } = RR;
+        showing: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)(), {
-        isTouchScreen: tR,
-        gameState: uR,
-        clientEscMenuOptions: iR
-      } = (0, BR.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), VR = (0, gy.f)(), [wR, rR] = (0, yR.useState)(by), eR = RR => {
-        by = RR, rR(RR)
-      }, [aR, LR] = (0, yR.useState)(!1);
-      return (0, yR.useEffect)((() => {
-        JR || LR(!1)
-      }), [JR]), (0, KR.jsxs)("div", {
+        t: Qr
+      } = (0, jr.E)(), {
+        isTouchScreen: Wr,
+        gameState: ar,
+        clientEscMenuOptions: fr
+      } = (0, Tr.n)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), pr = (0, LZ.f)(), [mr, Nr] = (0, Zr.useState)(lZ), Ur = rr => {
+        lZ = rr, Nr(rr)
+      }, [tr, hr] = (0, Zr.useState)(!1);
+      return (0, Zr.useEffect)((() => {
+        Sr || hr(!1)
+      }), [Sr]), (0, xr.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, KR.jsx)(Cy, {
+          children: (0, xr.jsx)(KZ, {
             className: "CrosshairPreviewStage",
-            settings: VR,
-            touch: tR,
-            backdrop: wR,
-            label: GR("crosshairSettings:preview"),
-            children: (0, KR.jsxs)("div", {
+            settings: pr,
+            touch: Wr,
+            backdrop: mr,
+            label: Qr("crosshairSettings:preview"),
+            children: (0, xr.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, KR.jsx)(ny, {
-                backdrop: wR,
-                onChange: eR
-              }), (0, KR.jsxs)(fR.U, {
+              children: [(0, xr.jsx)(zZ, {
+                backdrop: mr,
+                onChange: Ur
+              }), (0, xr.jsxs)(Er.U, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  LR(!0)
+                  hr(!0)
                 },
-                children: [(0, KR.jsx)(qR.d, {
+                children: [(0, xr.jsx)(Ir.c, {
                   name: "expand"
-                }), " ", GR("crosshairSettings:fullScreen")]
+                }), " ", Qr("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "SettingBox",
-          children: (0, KR.jsx)(Uy, {
-            settings: VR,
-            touch: tR,
-            backdrop: wR,
-            onChange: gy.d
+          children: (0, xr.jsx)(YZ, {
+            settings: pr,
+            touch: Wr,
+            backdrop: mr,
+            onChange: LZ.b
           })
-        }), (0, KR.jsx)(py, {
-          settings: VR,
-          onChange: gy.d
-        }), tR && (0, KR.jsx)(EG.c, {
-          note: (0, dG.i)(tR, iR.touchActionButtons) ? GR("crosshairSettings:touchNote") : void 0
-        }), (0, KR.jsx)(Jy, {
-          settings: VR,
-          onChange: gy.d
-        }), aR && (0, KR.jsx)(My, {
-          settings: VR,
-          touch: tR,
-          backdrop: wR,
-          onBackdrop: eR,
-          inGame: "inGame" === uR,
-          onChange: gy.d,
+        }), (0, xr.jsx)(OZ, {
+          settings: pr,
+          onChange: LZ.b
+        }), Wr && (0, xr.jsx)(FQ.b, {
+          note: (0, cQ.d)(Wr, fr.touchActionButtons) ? Qr("crosshairSettings:touchNote") : void 0
+        }), (0, xr.jsx)(SZ, {
+          settings: pr,
+          onChange: LZ.b
+        }), tr && (0, xr.jsx)(BZ, {
+          settings: pr,
+          touch: Wr,
+          backdrop: mr,
+          onBackdrop: Ur,
+          inGame: "inGame" === ar,
+          onChange: LZ.b,
           onClose: () => {
-            LR(!1)
+            hr(!1)
           }
         })]
       })
     }
-    var Oy = GR(10223),
-      xy = GR(1542),
-      Ny = GR(6035),
-      Dy = GR(35131),
-      Hy = GR(5028),
-      oy = GR(2186),
-      cy = GR(775);
-    const Py = (0, yR.memo)((function() {
+    var PZ = Qr(9986),
+      HZ = Qr(1534),
+      qZ = Qr(5945),
+      RZ = Qr(35441),
+      gZ = Qr(4937),
+      CZ = Qr(2132),
+      MZ = Qr(782);
+    const GZ = (0, Zr.memo)((function() {
       const {
-        clientEscMenuOptions: RR
-      } = (0, BR.o)(["clientEscMenuOptions"]), {
-        recording: JR,
-        clipping: GR,
-        hasClipBuffer: tR
-      } = (0, QJ.i)("replayRecorder"), ZR = (0, QJ.e)("connectedGame", (RR => RR.replay)), qR = (0, Hy.k)(), iR = !1 === (0, aR.f)("canRecordReplays");
-      (0, yR.useEffect)((() => {
-        UR.gameBridge.send("setRecorderPrefs", {
-          clipping: RR.enableClipping,
-          clipSeconds: RR.clipDurationSeconds
+        clientEscMenuOptions: rr
+      } = (0, Tr.n)(["clientEscMenuOptions"]), {
+        recording: Sr,
+        clipping: Qr,
+        hasClipBuffer: Wr
+      } = (0, JS.j)("replayRecorder"), jr = (0, JS.f)("connectedGame", (rr => rr.replay)), Ir = (0, gZ.l)(), fr = !1 === (0, tr.l)("canRecordReplays");
+      (0, Zr.useEffect)((() => {
+        Yr.gameBridge.send("setRecorderPrefs", {
+          clipping: rr.enableClipping,
+          clipSeconds: rr.clipDurationSeconds
         })
-      }), [RR.enableClipping, RR.clipDurationSeconds]);
-      const VR = qR || ZR,
-        wR = !VR && !iR,
-        rR = JR || wR,
-        eR = wR,
-        LR = eR && GR && !JR;
+      }), [rr.enableClipping, rr.clipDurationSeconds]);
+      const pr = Ir || jr,
+        mr = !pr && !fr,
+        Nr = Sr || mr,
+        Ur = mr,
+        hr = Ur && Qr && !Sr;
 
-      function nR() {
-        rR && UR.gameBridge.send("toggleRecording", null)
+      function zr() {
+        Nr && Yr.gameBridge.send("toggleRecording", null)
       }
-      return (0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: JR ? (0, KR.jsxs)(KR.Fragment, {
-              children: [(0, KR.jsxs)(fR.M, {
+            children: Sr ? (0, xr.jsxs)(xr.Fragment, {
+              children: [(0, xr.jsxs)(Er.L, {
                 className: "ReplayViewerCategoryButton",
-                onClick: nR,
-                disabled: !rR,
-                children: [(0, KR.jsx)("span", {
+                onClick: zr,
+                disabled: !Nr,
+                children: [(0, xr.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, KR.jsx)(oy.c, {
+                }), (0, xr.jsx)(CZ.c, {
                   noaAction: "recordGame"
                 })]
-              }), (0, KR.jsx)(Dy.e, {
+              }), (0, xr.jsx)(RZ.b, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, KR.jsxs)(fR.g, {
+            }) : (0, xr.jsxs)(Er.h, {
               className: "ReplayViewerCategoryButton",
-              onClick: nR,
-              disabled: !rR,
-              children: [(0, KR.jsx)("span", {
+              onClick: zr,
+              disabled: !Nr,
+              children: [(0, xr.jsx)("span", {
                 children: "Start Recording"
-              }), (0, KR.jsx)(oy.c, {
+              }), (0, xr.jsx)(CZ.c, {
                 noaAction: "recordGame"
               })]
             })
-          }), iR && (0, KR.jsx)("div", {
+          }), fr && (0, xr.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), VR && !JR && (0, KR.jsx)("div", {
+          }), pr && !Sr && (0, xr.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, KR.jsx)(MR.e, {
+          children: [(0, xr.jsx)(Br.c, {
             label: "Enable clipping",
-            checked: RR.enableClipping,
-            disabled: !eR,
-            onClick: function(RR) {
-              eR && BR.d.setClientEscMenuOptions({
-                enableClipping: RR
+            checked: rr.enableClipping,
+            disabled: !Ur,
+            onClick: function(rr) {
+              Ur && Tr.c.setClientEscMenuOptions({
+                enableClipping: rr
               })
             },
-            className: uR()({
-              SettingBoxDisabled: !eR
+            className: ar()({
+              SettingBoxDisabled: !Ur
             })
-          }), (0, KR.jsx)(MR.i, {
+          }), (0, xr.jsx)(Br.f, {
             name: "Clip duration (seconds)",
-            min: cy.i,
-            max: cy.e,
-            step: cy.b,
-            initValue: RR.clipDurationSeconds,
-            onChange: function(RR) {
-              BR.d.setClientEscMenuOptions({
-                clipDurationSeconds: RR
+            min: MZ.h,
+            max: MZ.g,
+            step: MZ.c,
+            initValue: rr.clipDurationSeconds,
+            onChange: function(rr) {
+              Tr.c.setClientEscMenuOptions({
+                clipDurationSeconds: rr
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !eR || !RR.enableClipping
+            disabled: !Ur || !rr.enableClipping
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, KR.jsxs)(fR.g, {
+          children: [(0, xr.jsxs)(Er.h, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              LR && UR.gameBridge.send("saveClip", null)
+              hr && Yr.gameBridge.send("saveClip", null)
             },
-            disabled: !LR,
-            children: [(0, KR.jsx)("span", {
+            disabled: !hr,
+            children: [(0, xr.jsx)("span", {
               children: "Record clip"
-            }), (0, KR.jsx)(oy.c, {
+            }), (0, xr.jsx)(CZ.c, {
               noaAction: "recordClip"
             })]
-          }), RR.enableClipping && !tR && eR && !JR && (0, KR.jsx)("div", {
+          }), rr.enableClipping && !Wr && Ur && !Sr && (0, xr.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), JR && (0, KR.jsx)("div", {
+          }), Sr && (0, xr.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, KR.jsxs)(fR.g, {
+          children: [(0, xr.jsxs)(Er.h, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Hy.h)(!0), BR.d.set({
+              (0, gZ.i)(!0), Tr.c.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: qR,
-            children: [(0, KR.jsx)("span", {
+            disabled: Ir,
+            children: [(0, xr.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, KR.jsx)(oy.c, {
+            }), (0, xr.jsx)(CZ.c, {
               noaAction: "replayViewerOpen"
             })]
-          }), qR && (0, KR.jsx)("div", {
+          }), Ir && (0, xr.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, KR.jsx)("iframe", {
+          }), (0, xr.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2751,8 +2751,8 @@ export const modules = {
         })]
       })
     }));
-    var Iy = GR(2102);
-    const my = {
+    var kZ = Qr(2049);
+    const AZ = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2774,11 +2774,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, KR.jsx)("svg", {
+        icon: () => (0, xr.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, KR.jsx)("path", {
+          children: (0, xr.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2797,7 +2797,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      Be: {
+      zU: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2823,376 +2823,376 @@ export const modules = {
       }
     };
 
-    function zy() {
-      return Promise.all([GR.e(91), GR.e(157), GR.e(156), GR.e(153)]).then((() => GR(42603))).then((RR => ({
-        default: RR.ShaderPackCategory
-      })), (RR => (console.error("Failed to load the shader pack settings", RR), {
-        default: Sy
+    function VZ() {
+      return Promise.all([Qr.e(91), Qr.e(157), Qr.e(156), Qr.e(153)]).then((() => Qr(42936))).then((rr => ({
+        default: rr.ShaderPackCategory
+      })), (rr => (console.error("Failed to load the shader pack settings", rr), {
+        default: iZ
       })))
     }
 
-    function Sy() {
+    function iZ() {
       const {
-        t: RR
-      } = (0, ZR.A)();
-      return (0, KR.jsx)("div", {
+        t: rr
+      } = (0, jr.E)();
+      return (0, xr.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: RR("shaderPack:tabLoadFailed")
+        children: rr("shaderPack:tabLoadFailed")
       })
     }
-    var jy = GR(1532),
-      dy = GR(188);
-    const Ey = /party\s*voice/i;
-    let Yy = !1;
+    var wZ = Qr(1518),
+      cZ = Qr(194);
+    const FZ = /party\s*voice/i;
+    let oZ = !1;
 
-    function ky(RR) {
-      return Object.keys(RR).some((RR => RR.startsWith("__reactFiber$")))
+    function bZ(rr) {
+      return Object.keys(rr).some((rr => rr.startsWith("__reactFiber$")))
     }
-    const Qy = ".MenuSideBarBody, .MenuSideBarSection";
+    const JZ = ".MenuSideBarBody, .MenuSideBarSection";
 
-    function Fy(RR) {
-      var JR;
-      return (null !== (JR = RR.textContent) && void 0 !== JR ? JR : "").replace(/\s+/g, " ").trim()
+    function DZ(rr) {
+      var Sr;
+      return (null !== (Sr = rr.textContent) && void 0 !== Sr ? Sr : "").replace(/\s+/g, " ").trim()
     }
 
-    function Ty(RR) {
-      for (const JR of function(RR) {
-          const JR = new Set;
-          for (const GR of RR.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) JR.add(GR);
-          for (const GR of [RR, ...RR.querySelectorAll(Qy)])
-            for (const RR of GR.children) JR.add(RR);
-          return [...JR]
-        }(RR))
-        if (!ky(JR) || !JR.matches(Qy) && Ey.test(Fy(JR))) return JR;
+    function dZ(rr) {
+      for (const Sr of function(rr) {
+          const Sr = new Set;
+          for (const Qr of rr.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) Sr.add(Qr);
+          for (const Qr of [rr, ...rr.querySelectorAll(JZ)])
+            for (const rr of Qr.children) Sr.add(rr);
+          return [...Sr]
+        }(rr))
+        if (!bZ(Sr) || !Sr.matches(JZ) && FZ.test(DZ(Sr))) return Sr;
       return null
     }
 
-    function sy(RR) {
-      return RR.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
+    function sZ(rr) {
+      return rr.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
     }
-    const hy = new Set(["STYLE", "SCRIPT", "TITLE"]);
+    const uZ = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
-    function Rt(RR) {
-      const JR = document.createTreeWalker(RR, NodeFilter.SHOW_TEXT, {
-        acceptNode: RR => {
-          var JR, GR;
-          return hy.has(null !== (JR = null === (GR = RR.parentElement) || void 0 === GR ? void 0 : GR.tagName.toUpperCase()) && void 0 !== JR ? JR : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    function rW(rr) {
+      const Sr = document.createTreeWalker(rr, NodeFilter.SHOW_TEXT, {
+        acceptNode: rr => {
+          var Sr, Qr;
+          return uZ.has(null !== (Sr = null === (Qr = rr.parentElement) || void 0 === Qr ? void 0 : Qr.tagName.toUpperCase()) && void 0 !== Sr ? Sr : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
         }
       });
-      for (let uR = JR.nextNode(); null !== uR; uR = JR.nextNode()) {
-        var GR;
-        const RR = (null !== (GR = uR.textContent) && void 0 !== GR ? GR : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
-        if ("" !== RR) {
-          var yR, tR;
-          return (null !== (yR = null === (tR = RR.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === tR ? void 0 : tR[0]) && void 0 !== yR ? yR : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
+      for (let ar = Sr.nextNode(); null !== ar; ar = Sr.nextNode()) {
+        var Qr;
+        const rr = (null !== (Qr = ar.textContent) && void 0 !== Qr ? Qr : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
+        if ("" !== rr) {
+          var Zr, Wr;
+          return (null !== (Zr = null === (Wr = rr.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === Wr ? void 0 : Wr[0]) && void 0 !== Zr ? Zr : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
         }
       }
       return ""
     }
 
-    function Jt(RR, JR) {
-      const GR = sy(JR).slice(0, 40) || "blank";
-      return `${(sy(RR.toLowerCase())||"none").slice(0,Math.max(23,dy.fb-1-GR.length))}:${GR}`.slice(0, dy.fb)
+    function SW(rr, Sr) {
+      const Qr = sZ(Sr).slice(0, 40) || "blank";
+      return `${(sZ(rr.toLowerCase())||"none").slice(0,Math.max(23,cZ.kb-1-Qr.length))}:${Qr}`.slice(0, cZ.kb)
     }
-    const Gt = (0, yR.lazy)((() => GR.e(308).then((() => GR(42584))).then((RR => ({
-        default: RR.BloxdInformation
+    const QW = (0, Zr.lazy)((() => Qr.e(309).then((() => Qr(42914))).then((rr => ({
+        default: rr.BloxdInformation
       }))))),
-      yt = (0, yR.lazy)(zy);
+      ZW = (0, Zr.lazy)(VZ);
 
-    function tt(RR) {
-      return RR ? "general" : "account"
+    function WW(rr) {
+      return rr ? "general" : "account"
     }
-    const ut = new Map,
-      Zt = (0, yR.memo)((function(RR) {
+    const aW = new Map,
+      jW = (0, Zr.memo)((function(rr) {
         let {
-          show: JR,
-          setBeforeResumeCallback: GR
-        } = RR;
-        (0, LR.e)();
+          show: Sr,
+          setBeforeResumeCallback: Qr
+        } = rr;
+        (0, hr.e)();
         const {
-          gameState: tR,
-          openSettingsCategory: uR
-        } = (0, BR.o)(["gameState", "openSettingsCategory"]), {
-          userContext: iR
-        } = (0, eR.d)(), {
-          t: VR
-        } = (0, ZR.A)(), CR = (0, rR.b)(), XR = (0, aR.f)("minChunkAddDist"), MR = "inGame" === tR, [lR, bR] = (0, yR.useState)(tt(MR)), [vR, OR] = (0, yR.useState)(null), [xR, NR] = (0, yR.useState)([]), DR = (0, yR.useRef)(function() {
-          const RR = new Date,
-            JR = 6 * (RR.getMonth() + RR.getDate()) % OJ.x.length;
-          return [...OJ.x, ...OJ.x].slice(JR, JR + 6)
-        }()), HR = (0, yR.useRef)(null), oR = (0, yR.useRef)(null), cR = (0, yG.h)(xy.k, (0, xy.d)()), PR = Object.keys(my).filter((RR => {
-          switch (RR) {
+          gameState: Wr,
+          openSettingsCategory: ar
+        } = (0, Tr.n)(["gameState", "openSettingsCategory"]), {
+          userContext: fr
+        } = (0, Ur.c)(), {
+          t: pr
+        } = (0, jr.E)(), Kr = (0, Nr.e)(), yr = (0, tr.l)("minChunkAddDist"), Br = "inGame" === Wr, [vr, lr] = (0, Zr.useState)(WW(Br)), [Xr, Pr] = (0, Zr.useState)(null), [Hr, qr] = (0, Zr.useState)([]), Rr = (0, Zr.useRef)(function() {
+          const rr = new Date,
+            Sr = 6 * (rr.getMonth() + rr.getDate()) % PS.w.length;
+          return [...PS.w, ...PS.w].slice(Sr, Sr + 6)
+        }()), gr = (0, Zr.useRef)(null), Cr = (0, Zr.useRef)(null), Mr = (0, ZQ.g)(HZ.h, (0, HZ.e)()), Gr = Object.keys(AZ).filter((rr => {
+          switch (rr) {
             case "replayViewer":
-              return MR;
+              return Br;
             case "developerTools":
-              return iR.playerHasRank("developer") || !1;
+              return fr.playerHasRank("developer") || !1;
             case "texturePack":
-              return nR.featureFlags.settings.canChangeTexturePack;
-            case "Be":
-              return nR.featureFlags.settings.canUseShaderPacks;
+              return zr.featureFlags.settings.canChangeTexturePack;
+            case "zU":
+              return zr.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return nR.featureFlags.useSocialFeatures || null !== iR.dailyDrop;
+              return zr.featureFlags.useSocialFeatures || null !== fr.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== gR.siteUsed;
+              return "crazygames" !== Lr.siteUsed;
             case "controller":
-              return nR.featureFlags.useControllerSupport && (cR || "controller" === lR);
+              return zr.featureFlags.useControllerSupport && (Mr || "controller" === vr);
             default:
               return !0
           }
         }));
-        (0, yG.f)("toggleFullCoordinateOverlay", (() => {
-          const RR = DG("showCoordinates") && DG("showChunkCoordinates") && DG("showFPS");
-          HG("showCoordinates", !RR), HG("showChunkCoordinates", !RR), HG("showFPS", !RR), CR()
-        })), (0, yG.f)("updatedChunkLoadDist", (() => {
-          CR()
-        })), (0, yR.useEffect)((() => {
-          if (OR(null), null === BR.d.get("openSettingsCategory")) {
-            const RR = (0, jy.j)() ? ut.get(MR) : void 0;
-            bR(RR && PR.includes(RR) ? RR : tt(MR))
+        (0, ZQ.c)("toggleFullCoordinateOverlay", (() => {
+          const rr = RQ("showCoordinates") && RQ("showChunkCoordinates") && RQ("showFPS");
+          gQ("showCoordinates", !rr), gQ("showChunkCoordinates", !rr), gQ("showFPS", !rr), Kr()
+        })), (0, ZQ.c)("updatedChunkLoadDist", (() => {
+          Kr()
+        })), (0, Zr.useEffect)((() => {
+          if (Pr(null), null === Tr.c.get("openSettingsCategory")) {
+            const rr = (0, wZ.j)() ? aW.get(Br) : void 0;
+            lr(rr && Gr.includes(rr) ? rr : WW(Br))
           }
-        }), [JR]), (0, yR.useEffect)((() => {
-          if (JR && oR.current) return function(RR) {
-            if (Yy) return () => {};
-            let JR = null,
-              GR = null;
-            const yR = () => {
-                var RR;
-                null !== GR && (clearTimeout(GR), GR = null), null === (RR = JR) || void 0 === RR || RR.disconnect(), JR = null
+        }), [Sr]), (0, Zr.useEffect)((() => {
+          if (Sr && Cr.current) return function(rr) {
+            if (oZ) return () => {};
+            let Sr = null,
+              Qr = null;
+            const Zr = () => {
+                var rr;
+                null !== Qr && (clearTimeout(Qr), Qr = null), null === (rr = Sr) || void 0 === rr || rr.disconnect(), Sr = null
               },
-              tR = () => {
-                const JR = Ty(RR);
-                null !== JR && (Yy = !0, yR(), (0, LJ.reportAnalyticsClick)({
+              Wr = () => {
+                const Sr = dZ(rr);
+                null !== Sr && (oZ = !0, Zr(), (0, hS.reportAnalyticsClick)({
                   id: "settings.unknown_tab_seen",
-                  value: Jt(window.location.hostname, Rt(JR))
+                  value: SW(window.location.hostname, rW(Sr))
                 }))
               };
-            return GR = setTimeout((() => {
-              GR = null, tR(), Yy || (JR = new MutationObserver(tR), JR.observe(RR, {
+            return Qr = setTimeout((() => {
+              Qr = null, Wr(), oZ || (Sr = new MutationObserver(Wr), Sr.observe(rr, {
                 childList: !0,
                 subtree: !0
               }))
-            }), 2e3), yR
-          }(oR.current)
-        }), [JR]), (0, yR.useEffect)((() => {
-          null !== uR && (bR(uR), ut.set(MR, uR), BR.d.set({
+            }), 2e3), Zr
+          }(Cr.current)
+        }), [Sr]), (0, Zr.useEffect)((() => {
+          null !== ar && (lr(ar), aW.set(Br, ar), Tr.c.set({
             openSettingsCategory: null
           }))
-        }), [uR, MR]), (0, yR.useLayoutEffect)((() => {
-          HR.current && (HR.current.scrollTop = 0)
-        }), [lR, JR]), (0, yR.useEffect)((() => {
-          "updateLog" === lR && (0, AR.b)().then(NR)
-        }), [lR]), (0, yR.useEffect)((() => {
-          if ((0, gG.I)(XR)) return;
-          const [RR, JR] = (0, SG.g)(), [GR, yR] = (0, CG.f)(XR), tR = (0, Iy.e)(XR[0], RR, GR), uR = (0, Iy.e)(XR[1], JR, yR);
-          UR.gameBridge.send("setChunkAddDistance", {
-            horizontal: tR,
-            vertical: uR
+        }), [ar, Br]), (0, Zr.useLayoutEffect)((() => {
+          gr.current && (gr.current.scrollTop = 0)
+        }), [vr, Sr]), (0, Zr.useEffect)((() => {
+          "updateLog" === vr && (0, er.b)().then(qr)
+        }), [vr]), (0, Zr.useEffect)((() => {
+          if ((0, LQ.L)(yr)) return;
+          const [rr, Sr] = (0, iQ.g)(), [Qr, Zr] = (0, KQ.f)(yr), Wr = (0, kZ.h)(yr[0], rr, Qr), ar = (0, kZ.h)(yr[1], Sr, Zr);
+          Yr.gameBridge.send("setChunkAddDistance", {
+            horizontal: Wr,
+            vertical: ar
           })
-        }), [XR]);
-        const IR = (0, yR.useCallback)((async () => {
-          vR && (await vR(), OR(null))
-        }), [vR]);
+        }), [yr]);
+        const kr = (0, Zr.useCallback)((async () => {
+          Xr && (await Xr(), Pr(null))
+        }), [Xr]);
 
-        function mR() {
-          BR.d.set({
+        function Ar() {
+          Tr.c.set({
             openEverythingMenuName: null
           })
         }
-        return (0, yR.useEffect)((() => {
-          GR((() => IR))
-        }), [IR, GR]), (0, KR.jsxs)("div", {
+        return (0, Zr.useEffect)((() => {
+          Qr((() => kr))
+        }), [kr, Qr]), (0, xr.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: JR ? {} : {
+          style: Sr ? {} : {
             display: "none"
           },
-          children: [(0, KR.jsx)("div", {
-            ref: oR,
+          children: [(0, xr.jsx)("div", {
+            ref: Cr,
             className: "MenuSideBar",
-            children: (0, KR.jsx)("div", {
+            children: (0, xr.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, KR.jsx)(wR, {
-                items: PR.map((RR => {
-                  const JR = my[RR].icon;
+              children: (0, xr.jsx)(mr, {
+                items: Gr.map((rr => {
+                  const Sr = AZ[rr].icon;
                   return {
-                    id: RR,
-                    faIcon: "string" === typeof JR ? JR : void 0,
-                    iconElement: "string" === typeof JR ? void 0 : (0, KR.jsx)(JR, {}),
-                    title: VR(my[RR].displayName),
+                    id: rr,
+                    faIcon: "string" === typeof Sr ? Sr : void 0,
+                    iconElement: "string" === typeof Sr ? void 0 : (0, xr.jsx)(Sr, {}),
+                    title: pr(AZ[rr].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: lR,
-                onClick: RR => {
-                  !async function(RR) {
-                    await IR(), bR(RR), ut.set(MR, RR)
-                  }(RR)
+                selectedItemId: vr,
+                onClick: rr => {
+                  !async function(rr) {
+                    await kr(), lr(rr), aW.set(Br, rr)
+                  }(rr)
                 }
               })
             })
-          }), (0, KR.jsxs)("div", {
-            ref: HR,
+          }), (0, xr.jsxs)("div", {
+            ref: gr,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === lR && (0, KR.jsx)(jJ, {
-              showing: JR,
-              inGame: MR
-            }), "general" === lR && (0, KR.jsx)(RG, {
-              inGame: MR
-            }), "audio" === lR && (0, KR.jsx)(JG, {}), "notifications" === lR && (0, KR.jsx)(AG, {}), "graphics" === lR && (0, KR.jsx)(zG, {
-              minChunkAddDist: null !== XR && void 0 !== XR ? XR : [2, 2],
-              getValue: DG,
-              onChange: HG,
-              setApplySettingsCallback: OR
-            }), "controls" === lR && (0, KR.jsx)(jG.f, {}), "crosshair" === lR && (0, KR.jsx)(vy, {
-              showing: JR
-            }), "controller" === lR && nR.featureFlags.useControllerSupport && (0, KR.jsx)(Oy.d, {}), nR.featureFlags.settings.canChangeTexturePack && "texturePack" === lR && (0, KR.jsx)(Ny.e, {
-              setApplySettingsCallback: OR
-            }), nR.featureFlags.settings.canUseShaderPacks && "Be" === lR && (0, KR.jsx)(yR.Suspense, {
+            children: ["account" === vr && (0, xr.jsx)(wS, {
+              showing: Sr,
+              inGame: Br
+            }), "general" === vr && (0, xr.jsx)(rQ, {
+              inGame: Br
+            }), "audio" === vr && (0, xr.jsx)(SQ, {}), "notifications" === vr && (0, xr.jsx)(eQ, {}), "graphics" === vr && (0, xr.jsx)(VQ, {
+              minChunkAddDist: null !== yr && void 0 !== yr ? yr : [2, 2],
+              getValue: RQ,
+              onChange: gQ,
+              setApplySettingsCallback: Pr
+            }), "controls" === vr && (0, xr.jsx)(wQ.i, {}), "crosshair" === vr && (0, xr.jsx)(XZ, {
+              showing: Sr
+            }), "controller" === vr && zr.featureFlags.useControllerSupport && (0, xr.jsx)(PZ.d, {}), zr.featureFlags.settings.canChangeTexturePack && "texturePack" === vr && (0, xr.jsx)(qZ.e, {
+              setApplySettingsCallback: Pr
+            }), zr.featureFlags.settings.canUseShaderPacks && "zU" === vr && (0, xr.jsx)(Zr.Suspense, {
               fallback: null,
-              children: (0, KR.jsx)(yt, {
-                setApplySettingsCallback: OR
+              children: (0, xr.jsx)(ZW, {
+                setApplySettingsCallback: Pr
               })
-            }), "updateLog" === lR && (0, KR.jsx)("div", {
+            }), "updateLog" === vr && (0, xr.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, KR.jsx)("div", {
+              children: (0, xr.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: xR.map(((RR, JR) => (0, KR.jsx)(WR.c, {
-                  updateLog: RR,
-                  index: JR,
-                  close: mR
-                }, JR)))
+                children: Hr.map(((rr, Sr) => (0, xr.jsx)(nr.c, {
+                  updateLog: rr,
+                  index: Sr,
+                  close: Ar
+                }, Sr)))
               })
-            }), "information" === lR && (0, KR.jsx)("div", {
+            }), "information" === vr && (0, xr.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, KR.jsx)(yR.Suspense, {
+              children: (0, xr.jsx)(Zr.Suspense, {
                 fallback: null,
-                children: (0, KR.jsx)(Gt, {})
+                children: (0, xr.jsx)(QW, {})
               })
-            }), "alternativeDomains" === lR && (0, KR.jsxs)("div", {
+            }), "alternativeDomains" === vr && (0, xr.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, KR.jsx)("div", {
+              children: [(0, xr.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: VR("settingsMenu:unblockedDomainsDescription")
-              }), (0, KR.jsx)("div", {
+                children: pr("settingsMenu:unblockedDomainsDescription")
+              }), (0, xr.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: DR.current.map((RR => (0, KR.jsxs)(fR.g, {
+                children: Rr.current.map((rr => (0, xr.jsxs)(Er.h, {
                   onClick: () => {
-                    window.open(`https://${RR}`)
+                    window.open(`https://${rr}`)
                   },
-                  children: [(0, KR.jsx)(qR.d, {
+                  children: [(0, xr.jsx)(Ir.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", RR]
-                }, RR)))
+                  }), " ", rr]
+                }, rr)))
               })]
-            }), "replayViewer" === lR && (0, KR.jsx)(Py, {}), "developerTools" === lR && (0, KR.jsx)("div", {
+            }), "replayViewer" === vr && (0, xr.jsx)(GZ, {}), "developerTools" === vr && (0, xr.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, KR.jsx)(pR, {
-                setApplySettingsCallback: OR
+              children: (0, xr.jsx)(Or, {
+                setApplySettingsCallback: Pr
               })
-            }), null !== vR && (0, KR.jsx)("div", {
+            }), null !== Xr && (0, xr.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, KR.jsx)(fR.g, {
+              children: (0, xr.jsx)(Er.h, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: IR,
-                children: VR("general:apply")
+                onClick: kr,
+                children: pr("general:apply")
               })
             })]
           })]
         })
       }));
-    var qt = GR(3728),
-      it = GR(1727),
-      ft = GR(3283),
-      Vt = GR(5134);
-    const Kt = (0, yR.lazy)((() => Promise.resolve().then((() => GR(5463))).then((RR => (RR.needGameClientAfterPaint(), (0, qt.c)((RR => RR.loadCharacterCustomisationUI()), (RR => RR.CharacterCustomisationUI))))))),
-      wt = "openCustomisationTab";
+    var IW = Qr(3674),
+      fW = Qr(1699),
+      EW = Qr(3242),
+      pW = Qr(5054);
+    const xW = (0, Zr.lazy)((() => Promise.resolve().then((() => Qr(5420))).then((rr => (rr.needGameClientAfterPaint(), (0, IW.b)((rr => rr.loadCharacterCustomisationUI()), (rr => rr.CharacterCustomisationUI))))))),
+      mW = "openCustomisationTab";
 
-    function rt(RR) {
-      var JR, GR, tR;
+    function NW(rr) {
+      var Sr, Qr, Wr;
       let {
-        show: uR
-      } = RR;
+        show: ar
+      } = rr;
       const {
-        userContext: ZR
-      } = (0, eR.d)(), qR = (0, jR.usePurchasesAllowed)(), iR = (0, yR.useRef)(null);
-      var fR, VR;
-      ZR !== bR.NULL_USER_CONTEXT && (null === (JR = iR.current) || void 0 === JR ? void 0 : JR.whamm) !== ZR.whamm && (iR.current = {
-        whamm: ZR.whamm,
-        mountKey: (null !== (fR = null === (VR = iR.current) || void 0 === VR ? void 0 : VR.mountKey) && void 0 !== fR ? fR : -1) + 1
+        userContext: jr
+      } = (0, Ur.c)(), Ir = (0, wr.usePurchasesAllowed)(), fr = (0, Zr.useRef)(null);
+      var Er, pr;
+      jr !== lr.NULL_USER_CONTEXT && (null === (Sr = fr.current) || void 0 === Sr ? void 0 : Sr.whamm) !== jr.whamm && (fr.current = {
+        whamm: jr.whamm,
+        mountKey: (null !== (Er = null === (pr = fr.current) || void 0 === pr ? void 0 : pr.mountKey) && void 0 !== Er ? Er : -1) + 1
       });
-      const [rR, aR] = (0, yR.useState)("characters");
-      if ((0, yG.f)(wt, aR), !uR) return null;
-      const LR = null !== (0, it.i)(Date.now()),
-        nR = ZR.getOwnedCosmeticPacks(),
-        UR = OJ.Mb.filter((RR => "pet" === RR || "aura" === RR ? LR || (0, ft.p)(RR).some((JR => JR !== `${RR}_none` && (0, ft.G)(RR, JR, nR))) : "cape" !== RR && "nameColour" !== RR || (0, PR.e)(ZR.getPlayerRanks()) || qR)).map((RR => ({
-          id: RR,
-          faIcon: OJ.E[RR],
-          title: OJ.I[RR],
+      const [Nr, tr] = (0, Zr.useState)("characters");
+      if ((0, ZQ.c)(mW, tr), !ar) return null;
+      const hr = null !== (0, fW.l)(Date.now()),
+        zr = jr.getOwnedCosmeticPacks(),
+        Yr = PS.Qb.filter((rr => "pet" === rr || "aura" === rr ? hr || (0, EW.t)(rr).some((Sr => Sr !== `${rr}_none` && (0, EW.E)(rr, Sr, zr))) : "cape" !== rr && "nameColour" !== rr || (0, Gr.c)(jr.getPlayerRanks()) || Ir)).map((rr => ({
+          id: rr,
+          faIcon: PS.E[rr],
+          title: PS.H[rr],
           redDot: !1
         })));
-      return (0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, KR.jsx)(wR, {
-            items: UR,
-            selectedItemId: rR,
-            onClick: RR => {
-              aR(RR)
+          children: (0, xr.jsx)(mr, {
+            items: Yr,
+            selectedItemId: Nr,
+            onClick: rr => {
+              tr(rr)
             }
           })
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "MenuBody",
-          children: (0, KR.jsx)(yR.Suspense, {
-            fallback: (0, KR.jsx)("div", {
+          children: (0, xr.jsx)(Zr.Suspense, {
+            fallback: (0, xr.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, KR.jsx)(XR.d, {})
+              children: (0, xr.jsx)(yr.c, {})
             }),
-            children: (0, KR.jsx)(Kt, {
-              selectedTab: rR,
-              noWebGlFallback: Lt
-            }, null !== (GR = null === (tR = iR.current) || void 0 === tR ? void 0 : tR.mountKey) && void 0 !== GR ? GR : 0)
+            children: (0, xr.jsx)(xW, {
+              selectedTab: Nr,
+              noWebGlFallback: tW
+            }, null !== (Qr = null === (Wr = fr.current) || void 0 === Wr ? void 0 : Wr.mountKey) && void 0 !== Qr ? Qr : 0)
           })
         })]
       })
     }
 
-    function et() {
+    function UW() {
       const {
-        t: RR
-      } = (0, ZR.A)();
-      return (0, KR.jsx)("div", {
+        t: rr
+      } = (0, jr.E)();
+      return (0, xr.jsx)("div", {
         className: "CharacterCustomisationNoWebGl SmallTextBold",
-        children: RR((0, Vt.d)((0, Vt.b)()))
+        children: rr((0, pW.e)((0, pW.b)()))
       })
     }
-    const Lt = (0, KR.jsx)(et, {});
-    var nt = GR(1605),
-      Ut = GR(1614),
-      Wt = GR(35140),
-      At = GR(5338),
-      Ct = GR(4728),
-      Xt = GR(4822),
-      Mt = GR(10125),
-      Bt = GR(35143),
-      lt = GR(35155),
-      pt = GR(2123),
-      gt = GR(2105),
-      bt = GR(5792),
-      vt = GR(1351),
-      Ot = GR(1317),
-      xt = GR(1850),
-      Nt = GR(10199),
-      Dt = GR(3473),
-      Ht = GR(3479);
+    const tW = (0, xr.jsx)(UW, {});
+    var hW = Qr(1588),
+      zW = Qr(1597),
+      YW = Qr(35448),
+      nW = Qr(5297),
+      eW = Qr(4656),
+      KW = Qr(4738),
+      yW = Qr(9890),
+      BW = Qr(35455),
+      TW = Qr(35468),
+      vW = Qr(2075),
+      OW = Qr(2057),
+      LW = Qr(5731),
+      lW = Qr(1317),
+      XW = Qr(1279),
+      PW = Qr(1793),
+      HW = Qr(9965),
+      qW = Qr(3416),
+      RW = Qr(3418);
 
-    function ot(RR) {
-      return RR ? Object.keys(RR).sort(((JR, GR) => {
-        var yR, tR, uR, ZR;
-        const qR = (null !== (yR = null === (tR = RR[GR]) || void 0 === tR ? void 0 : tR.sortPriority) && void 0 !== yR ? yR : 0) - (null !== (uR = null === (ZR = RR[JR]) || void 0 === ZR ? void 0 : ZR.sortPriority) && void 0 !== uR ? uR : 0);
-        return 0 !== qR ? qR : JR.localeCompare(GR)
+    function gW(rr) {
+      return rr ? Object.keys(rr).sort(((Sr, Qr) => {
+        var Zr, Wr, ar, jr;
+        const Ir = (null !== (Zr = null === (Wr = rr[Qr]) || void 0 === Wr ? void 0 : Wr.sortPriority) && void 0 !== Zr ? Zr : 0) - (null !== (ar = null === (jr = rr[Sr]) || void 0 === jr ? void 0 : jr.sortPriority) && void 0 !== ar ? ar : 0);
+        return 0 !== Ir ? Ir : Sr.localeCompare(Qr)
       })) : []
     }
-    const ct = [{
+    const CW = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -3206,241 +3206,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Pt(RR) {
+    function MW(rr) {
       for (const {
-          threshold: JR,
-          suffix: GR
+          threshold: Sr,
+          suffix: Qr
         }
-        of ct)
-        if (RR >= JR) {
-          const yR = RR / JR;
-          return yR >= 100 ? `${Math.floor(yR)}${GR}` : yR >= 10 ? `${yR.toFixed(1).replace(/\.0$/,"")}${GR}` : `${yR.toFixed(2).replace(/\.?0+$/,"")}${GR}`
-        } return String(RR)
+        of CW)
+        if (rr >= Sr) {
+          const Zr = rr / Sr;
+          return Zr >= 100 ? `${Math.floor(Zr)}${Qr}` : Zr >= 10 ? `${Zr.toFixed(1).replace(/\.0$/,"")}${Qr}` : `${Zr.toFixed(2).replace(/\.?0+$/,"")}${Qr}`
+        } return String(rr)
     }
-    var It = GR(4250);
-    const mt = {
+    var GW = Qr(4205);
+    const kW = {
         normal: "0.8em",
         big: "1em"
       },
-      zt = (0, yR.memo)((function(RR) {
+      AW = (0, Zr.memo)((function(rr) {
         let {
-          item: JR,
-          amount: GR = 0,
-          size: yR = "normal",
-          tier: tR = null
-        } = RR;
-        return (0, KR.jsx)("div", {
-          className: uR()("SmpSlot", `SmpSlot-${yR}`),
-          children: JR && (0, KR.jsx)(pt.b, {
-            itemName: JR,
-            amount: GR > 1 ? GR : 0,
-            amountFontSize: mt[yR],
-            enchantmentTier: tR
+          item: Sr,
+          amount: Qr = 0,
+          size: Zr = "normal",
+          tier: Wr = null
+        } = rr;
+        return (0, xr.jsx)("div", {
+          className: ar()("SmpSlot", `SmpSlot-${Zr}`),
+          children: Sr && (0, xr.jsx)(vW.d, {
+            itemName: Sr,
+            amount: Qr > 1 ? Qr : 0,
+            amountFontSize: kW[Zr],
+            enchantmentTier: Wr
           })
         })
       }));
 
-    function St(RR) {
+    function VW(rr) {
       let {
-        amount: JR,
-        exact: GR = !1,
-        className: yR
-      } = RR;
-      return (0, KR.jsxs)("span", {
-        className: uR()("SmpGold", yR),
-        children: [(0, KR.jsx)("span", {
+        amount: Sr,
+        exact: Qr = !1,
+        className: Zr
+      } = rr;
+      return (0, xr.jsxs)("span", {
+        className: ar()("SmpGold", Zr),
+        children: [(0, xr.jsx)("span", {
           className: "SmpCoin",
-          children: (0, KR.jsx)(pt.b, {
+          children: (0, xr.jsx)(vW.d, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), GR ? JR.toLocaleString("en-US") : Pt(JR)]
+        }), Qr ? Sr.toLocaleString("en-US") : MW(Sr)]
       })
     }
 
-    function jt(RR) {
+    function iW(rr) {
       let {
-        count: JR = 5,
-        grid: GR = !1
-      } = RR;
-      return (0, KR.jsx)("div", {
-        className: GR ? "SmpCardGrid" : "SmpList",
+        count: Sr = 5,
+        grid: Qr = !1
+      } = rr;
+      return (0, xr.jsx)("div", {
+        className: Qr ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: JR
-        }, ((RR, JR) => (0, KR.jsxs)("div", {
-          className: uR()(GR ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, KR.jsx)("div", {
-            className: uR()("SmpSlot", GR ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, KR.jsxs)("div", {
+          length: Sr
+        }, ((rr, Sr) => (0, xr.jsxs)("div", {
+          className: ar()(Qr ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, xr.jsx)("div", {
+            className: ar()("SmpSlot", Qr ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, xr.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, KR.jsx)("b", {}), (0, KR.jsx)("small", {})]
-          }), (0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("b", {}), (0, xr.jsx)("small", {})]
+          }), (0, xr.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, JR)))
+        }, Sr)))
       })
     }
 
-    function dt(RR) {
+    function wW(rr) {
       let {
-        title: JR,
-        children: GR
-      } = RR;
-      return (0, KR.jsxs)("div", {
+        title: Sr,
+        children: Qr
+      } = rr;
+      return (0, xr.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, KR.jsx)("b", {
-          children: JR
-        }), GR && (0, KR.jsx)("small", {
-          children: GR
+        children: [(0, xr.jsx)("b", {
+          children: Sr
+        }), Qr && (0, xr.jsx)("small", {
+          children: Qr
         })]
       })
     }
 
-    function Et(RR) {
+    function cW(rr) {
       let {
-        entry: JR
-      } = RR;
-      return (0, KR.jsx)(dt, {
-        title: (0, KR.jsx)(gt.c, {
-          text: JR.item.customTitle
+        entry: Sr
+      } = rr;
+      return (0, xr.jsx)(wW, {
+        title: (0, xr.jsx)(OW.c, {
+          text: Sr.item.customTitle
         }),
-        children: (0, KR.jsx)(gt.c, {
-          text: JR.item.description
+        children: (0, xr.jsx)(OW.c, {
+          text: Sr.item.description
         })
       })
     }
 
-    function Yt(RR) {
-      return (0, KR.jsx)(It.c, {
-        ...RR,
-        className: uR()("SmpChoice", RR.className),
+    function FW(rr) {
+      return (0, xr.jsx)(GW.d, {
+        ...rr,
+        className: ar()("SmpChoice", rr.className),
         reselectable: !0
       })
     }
 
-    function kt() {
-      return (0, KR.jsx)("span", {
+    function oW() {
+      return (0, xr.jsx)("span", {
         className: "SmpLoader",
-        children: (0, KR.jsx)(XR.d, {})
+        children: (0, xr.jsx)(yr.c, {})
       })
     }
 
-    function Qt(RR) {
+    function bW(rr) {
       let {
-        value: JR,
-        onChange: GR,
-        min: tR = 1,
-        max: uR,
-        step: ZR = 1,
-        label: qR
-      } = RR;
-      const iR = (0, yR.useRef)(null),
-        fR = (0, yR.useRef)(JR);
-      fR.current = JR;
-      const [VR, wR] = (0, yR.useState)(null), rR = RR => Math.max(tR, Math.min(uR, Math.floor(RR))), eR = RR => {
-        const JR = fR.current,
-          yR = "function" === typeof ZR ? ZR(JR, RR) : ZR,
-          tR = rR(JR + yR * RR);
-        fR.current = tR, GR(tR)
+        value: Sr,
+        onChange: Qr,
+        min: Wr = 1,
+        max: ar,
+        step: jr = 1,
+        label: Ir
+      } = rr;
+      const fr = (0, Zr.useRef)(null),
+        Er = (0, Zr.useRef)(Sr);
+      Er.current = Sr;
+      const [pr, mr] = (0, Zr.useState)(null), Nr = rr => Math.max(Wr, Math.min(ar, Math.floor(rr))), Ur = rr => {
+        const Sr = Er.current,
+          Zr = "function" === typeof jr ? jr(Sr, rr) : jr,
+          Wr = Nr(Sr + Zr * rr);
+        Er.current = Wr, Qr(Wr)
       };
-      (0, yR.useEffect)((() => {
-        if (null === VR) return;
-        let RR;
-        const JR = () => {
-            wR(null)
+      (0, Zr.useEffect)((() => {
+        if (null === pr) return;
+        let rr;
+        const Sr = () => {
+            mr(null)
           },
-          GR = setTimeout((() => {
-            RR = setInterval((() => {
-              eR(VR);
-              const RR = fR.current;
-              (VR > 0 ? RR >= uR : RR <= tR) && JR()
+          Qr = setTimeout((() => {
+            rr = setInterval((() => {
+              Ur(pr);
+              const rr = Er.current;
+              (pr > 0 ? rr >= ar : rr <= Wr) && Sr()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", JR), window.addEventListener("pointercancel", JR), window.addEventListener("blur", JR), () => {
-          clearTimeout(GR), clearInterval(RR), window.removeEventListener("pointerup", JR), window.removeEventListener("pointercancel", JR), window.removeEventListener("blur", JR)
+        return window.addEventListener("pointerup", Sr), window.addEventListener("pointercancel", Sr), window.addEventListener("blur", Sr), () => {
+          clearTimeout(Qr), clearInterval(rr), window.removeEventListener("pointerup", Sr), window.removeEventListener("pointercancel", Sr), window.removeEventListener("blur", Sr)
         }
-      }), [VR]), (0, yR.useEffect)((() => {
-        const RR = iR.current;
-        RR && document.activeElement !== RR && RR.value !== String(JR) && (RR.value = String(JR))
-      }), [JR]), (0, yR.useEffect)((() => {
-        const RR = iR.current;
-        if (!RR) return;
-        const JR = () => {
-          RR.value = String(fR.current)
+      }), [pr]), (0, Zr.useEffect)((() => {
+        const rr = fr.current;
+        rr && document.activeElement !== rr && rr.value !== String(Sr) && (rr.value = String(Sr))
+      }), [Sr]), (0, Zr.useEffect)((() => {
+        const rr = fr.current;
+        if (!rr) return;
+        const Sr = () => {
+          rr.value = String(Er.current)
         };
-        return RR.addEventListener("blur", JR), () => {
-          RR.removeEventListener("blur", JR)
+        return rr.addEventListener("blur", Sr), () => {
+          rr.removeEventListener("blur", Sr)
         }
       }), []);
-      const aR = RR => (0, KR.jsx)("button", {
+      const tr = rr => (0, xr.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${RR>0?"More":"Less"} ${qR}`,
-        disabled: RR > 0 ? JR >= uR : JR <= tR,
-        onPointerDown: JR => {
-          0 === JR.button && (eR(RR), wR(RR))
+        "aria-label": `${rr>0?"More":"Less"} ${Ir}`,
+        disabled: rr > 0 ? Sr >= ar : Sr <= Wr,
+        onPointerDown: Sr => {
+          0 === Sr.button && (Ur(rr), mr(rr))
         },
-        onKeyDown: JR => {
-          "Enter" !== JR.key && " " !== JR.key || eR(RR)
+        onKeyDown: Sr => {
+          "Enter" !== Sr.key && " " !== Sr.key || Ur(rr)
         },
-        onContextMenu: RR => {
-          RR.preventDefault()
+        onContextMenu: rr => {
+          rr.preventDefault()
         },
-        children: RR > 0 ? "+" : "\u2212"
+        children: rr > 0 ? "+" : "\u2212"
       });
-      return (0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
         className: "SmpStepper",
-        children: [aR(-1), (0, KR.jsx)(CR.b, {
+        children: [tr(-1), (0, xr.jsx)(Kr.b, {
           className: "SmpStepperInput",
-          domRef: iR,
-          defaultValue: String(JR),
-          ariaLabel: qR,
+          domRef: fr,
+          defaultValue: String(Sr),
+          ariaLabel: Ir,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: RR => {
-            const JR = RR.replace(/[^\d]/g, "");
-            iR.current && JR !== RR && (iR.current.value = JR), "" !== JR && GR(rR(Number(JR)))
+          onValueChange: rr => {
+            const Sr = rr.replace(/[^\d]/g, "");
+            fr.current && Sr !== rr && (fr.current.value = Sr), "" !== Sr && Qr(Nr(Number(Sr)))
           }
-        }), aR(1)]
+        }), tr(1)]
       })
     }
 
-    function Ft(RR) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, RR))) - 1))
+    function JW(rr) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, rr))) - 1))
     }
-    var Tt = GR(35162),
-      st = GR(1336);
-    const ht = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    st.x, cR.Cc.length;
+    var DW = Qr(35472),
+      dW = Qr(1287);
+    const sW = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    dW.D, Mr.Cc.length;
     new Map;
-    var Ru = GR(4555);
+    var uW = Qr(4489);
 
-    function Ju(RR, JR) {
-      var GR;
-      return JR && (null === (GR = RR[JR]) || void 0 === GR ? void 0 : GR.smp) || null
+    function ra(rr, Sr) {
+      var Qr;
+      return Sr && (null === (Qr = rr[Sr]) || void 0 === Qr ? void 0 : Qr.smp) || null
     }
 
-    function Gu(RR, JR) {
-      const GR = [];
-      for (const tR of ot(RR)) {
-        var yR;
-        const uR = RR[tR];
-        (null === (yR = uR.smp) || void 0 === yR ? void 0 : yR.kind) === JR && GR.push({
-          key: tR,
-          item: uR,
-          meta: uR.smp
+    function Sa(rr, Sr) {
+      const Qr = [];
+      for (const Wr of gW(rr)) {
+        var Zr;
+        const ar = rr[Wr];
+        (null === (Zr = ar.smp) || void 0 === Zr ? void 0 : Zr.kind) === Sr && Qr.push({
+          key: Wr,
+          item: ar,
+          meta: ar.smp
         })
       }
-      return GR
+      return Qr
     }
 
-    function yu(RR, JR) {
-      var GR;
-      return null !== (GR = Gu(RR, JR)[0]) && void 0 !== GR ? GR : null
+    function Qa(rr, Sr) {
+      var Qr;
+      return null !== (Qr = Sa(rr, Sr)[0]) && void 0 !== Qr ? Qr : null
     }
-    const tu = "50% 0% 50% 0%",
-      uu = [{
+    const Za = "50% 0% 50% 0%",
+      Wa = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3454,746 +3454,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function Zu(RR) {
-      const JR = RR - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function aa(rr) {
+      const Sr = rr - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: GR,
-          suffix: yR
+          divisor: Qr,
+          suffix: Zr
         }
-        of uu)
-        if (JR >= GR) return `${Math.floor(JR/GR)}${yR}`;
+        of Wa)
+        if (Sr >= Qr) return `${Math.floor(Sr/Qr)}${Zr}`;
       return "<1s"
     }
 
-    function qu(RR) {
-      const JR = RR.map(Mt.f),
-        GR = [];
-      return JR.forEach(((RR, yR) => {
-        const tR = function(RR) {
-            const JR = RR.match(/\d+/);
-            return JR ? Number(JR[0]) : 0
-          }(RR),
-          uR = yR === JR.length - 1;
-        (uR || 1 === tR || 10 === tR || 100 === tR) && GR.push({
-          label: RR,
-          quantity: tR,
-          isAll: uR
+    function ja(rr) {
+      const Sr = rr.map(yW.f),
+        Qr = [];
+      return Sr.forEach(((rr, Zr) => {
+        const Wr = function(rr) {
+            const Sr = rr.match(/\d+/);
+            return Sr ? Number(Sr[0]) : 0
+          }(rr),
+          ar = Zr === Sr.length - 1;
+        (ar || 1 === Wr || 10 === Wr || 100 === Wr) && Qr.push({
+          label: rr,
+          quantity: Wr,
+          isAll: ar
         })
-      })), GR
+      })), Qr
     }
-    let iu = null;
+    let Ia = null;
 
-    function fu(RR, JR) {
-      const GR = JR.trim().toLowerCase();
-      if (!GR) return [];
-      const yR = RR => {
-          if (RR === GR) return 0;
-          if (RR.startsWith(GR)) return 1;
-          const JR = RR.indexOf(GR);
-          return -1 === JR ? -1 : 2 + JR
+    function fa(rr, Sr) {
+      const Qr = Sr.trim().toLowerCase();
+      if (!Qr) return [];
+      const Zr = rr => {
+          if (rr === Qr) return 0;
+          if (rr.startsWith(Qr)) return 1;
+          const Sr = rr.indexOf(Qr);
+          return -1 === Sr ? -1 : 2 + Sr
         },
-        tR = [];
-      for (const qR of RR) {
-        const RR = [yR(qR.lowerLabel), yR(qR.lowerName)].filter((RR => -1 !== RR));
-        RR.length && tR.push({
-          item: qR,
-          rank: Math.min(...RR)
+        Wr = [];
+      for (const Ir of rr) {
+        const rr = [Zr(Ir.lowerLabel), Zr(Ir.lowerName)].filter((rr => -1 !== rr));
+        rr.length && Wr.push({
+          item: Ir,
+          rank: Math.min(...rr)
         })
       }
-      if (tR.length > 0) return tR.sort(((RR, JR) => RR.rank - JR.rank)).map((RR => RR.item));
-      const uR = [...GR],
-        ZR = RR => {
-          let JR = 0;
-          for (const GR of uR) {
-            if (JR = RR.indexOf(GR, JR), -1 === JR) return !1;
-            JR++
+      if (Wr.length > 0) return Wr.sort(((rr, Sr) => rr.rank - Sr.rank)).map((rr => rr.item));
+      const ar = [...Qr],
+        jr = rr => {
+          let Sr = 0;
+          for (const Qr of ar) {
+            if (Sr = rr.indexOf(Qr, Sr), -1 === Sr) return !1;
+            Sr++
           }
           return !0
         };
-      return RR.filter((RR => ZR(RR.lowerLabel) || ZR(RR.lowerName)))
+      return rr.filter((rr => jr(rr.lowerLabel) || jr(rr.lowerName)))
     }
 
-    function Vu(RR, JR) {
-      var GR;
-      return null !== (GR = null === RR || void 0 === RR ? void 0 : RR[JR]) && void 0 !== GR ? GR : JR
+    function Ea(rr, Sr) {
+      var Qr;
+      return null !== (Qr = null === rr || void 0 === rr ? void 0 : rr[Sr]) && void 0 !== Qr ? Qr : Sr
     }
 
-    function Ku(RR, JR) {
-      const GR = RR.userInput;
-      return void 0 !== JR && "dropdown" === (null === GR || void 0 === GR ? void 0 : GR.type) && GR.dropdownOptions.map(Mt.f).includes(JR) ? JR : function(RR) {
-        const JR = RR.userInput;
-        if ("dropdown" !== (null === JR || void 0 === JR ? void 0 : JR.type) || 0 === JR.dropdownOptions.length) return null;
-        const GR = JR.dropdownOptions.map(Mt.f);
-        return JR.initialValue && GR.includes(JR.initialValue) ? JR.initialValue : GR[GR.length - 1]
-      }(RR)
+    function pa(rr, Sr) {
+      const Qr = rr.userInput;
+      return void 0 !== Sr && "dropdown" === (null === Qr || void 0 === Qr ? void 0 : Qr.type) && Qr.dropdownOptions.map(yW.f).includes(Sr) ? Sr : function(rr) {
+        const Sr = rr.userInput;
+        if ("dropdown" !== (null === Sr || void 0 === Sr ? void 0 : Sr.type) || 0 === Sr.dropdownOptions.length) return null;
+        const Qr = Sr.dropdownOptions.map(yW.f);
+        return Sr.initialValue && Qr.includes(Sr.initialValue) ? Sr.initialValue : Qr[Qr.length - 1]
+      }(rr)
     }
 
-    function wu(RR) {
-      return void 0 === RR ? "" : JSON.stringify(RR)
+    function xa(rr) {
+      return void 0 === rr ? "" : JSON.stringify(rr)
     }
-    const ru = (0, yR.createContext)(null);
+    const ma = (0, Zr.createContext)(null);
 
-    function eu() {
-      return (0, yR.useContext)(ru)
+    function Na() {
+      return (0, Zr.useContext)(ma)
     }
-    var au = GR(3815);
-    const Lu = (0, yR.memo)((function(RR) {
+    var Ua = Qr(3773);
+    const ta = (0, Zr.memo)((function(rr) {
         let {
-          name: JR,
-          label: GR,
-          onPick: yR
-        } = RR;
-        return (0, KR.jsxs)("button", {
+          name: Sr,
+          label: Qr,
+          onPick: Zr
+        } = rr;
+        return (0, xr.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: GR,
+          title: Qr,
           onClick: () => {
-            yR(JR)
+            Zr(Sr)
           },
-          children: [(0, KR.jsx)(zt, {
-            item: JR,
+          children: [(0, xr.jsx)(AW, {
+            item: Sr,
             size: "big"
-          }), (0, KR.jsx)("span", {
-            children: GR
+          }), (0, xr.jsx)("span", {
+            children: Qr
           })]
         })
       })),
-      nu = (0, yR.memo)((function(RR) {
+      ha = (0, Zr.memo)((function(rr) {
         let {
-          items: JR,
-          query: GR,
-          onPick: tR
-        } = RR;
+          items: Sr,
+          query: Qr,
+          onPick: Wr
+        } = rr;
         const {
-          t: uR
-        } = (0, ZR.A)(), [qR, iR] = (0, yR.useState)(new Set), fR = (0, yR.useMemo)((() => function(RR) {
-          const JR = new Map;
-          for (const GR of RR) {
-            let RR = JR.get(GR.category);
-            RR || (RR = [], JR.set(GR.category, RR)), RR.push(GR)
+          t: ar
+        } = (0, jr.E)(), [Ir, fr] = (0, Zr.useState)(new Set), Er = (0, Zr.useMemo)((() => function(rr) {
+          const Sr = new Map;
+          for (const Qr of rr) {
+            let rr = Sr.get(Qr.category);
+            rr || (rr = [], Sr.set(Qr.category, rr)), rr.push(Qr)
           }
-          return [...ht, "other"].filter((RR => JR.has(RR))).map((RR => ({
-            category: RR,
-            items: JR.get(RR)
+          return [...sW, "other"].filter((rr => Sr.has(rr))).map((rr => ({
+            category: rr,
+            items: Sr.get(rr)
           })))
-        }(JR)), [JR]), VR = (0, yR.useMemo)((() => fu(JR, GR).slice(0, 60)), [JR, GR]);
-        return GR.trim() ? 0 === VR.length ? (0, KR.jsx)(dt, {
-          title: uR("smpShop:noItemsFound", {
-            query: GR.trim()
+        }(Sr)), [Sr]), pr = (0, Zr.useMemo)((() => fa(Sr, Qr).slice(0, 60)), [Sr, Qr]);
+        return Qr.trim() ? 0 === pr.length ? (0, xr.jsx)(wW, {
+          title: ar("smpShop:noItemsFound", {
+            query: Qr.trim()
           }),
-          children: uR("smpShop:tryShorterName")
-        }) : (0, KR.jsx)(au.d, {
+          children: ar("smpShop:tryShorterName")
+        }) : (0, xr.jsx)(Ua.d, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: tu,
-          observerUpdateDeps: [GR],
-          children: VR.map((RR => (0, KR.jsx)(Lu, {
-            name: RR.name,
-            label: RR.label,
-            onPick: tR
-          }, RR.name)))
-        }) : (0, KR.jsx)(KR.Fragment, {
-          children: fR.map((RR => {
+          rootMargin: Za,
+          observerUpdateDeps: [Qr],
+          children: pr.map((rr => (0, xr.jsx)(ta, {
+            name: rr.name,
+            label: rr.label,
+            onPick: Wr
+          }, rr.name)))
+        }) : (0, xr.jsx)(xr.Fragment, {
+          children: Er.map((rr => {
             let {
-              category: JR,
-              items: GR
-            } = RR;
-            const yR = qR.has(JR) || GR.length <= 48,
-              ZR = yR ? GR : GR.slice(0, 48);
-            return (0, KR.jsxs)("section", {
+              category: Sr,
+              items: Qr
+            } = rr;
+            const Zr = Ir.has(Sr) || Qr.length <= 48,
+              jr = Zr ? Qr : Qr.slice(0, 48);
+            return (0, xr.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, KR.jsxs)("h4", {
-                children: [uR("other" === JR ? "smpShop:otherItems" : `creativeInventory:${JR}`), !yR && (0, KR.jsx)("button", {
+              children: [(0, xr.jsxs)("h4", {
+                children: [ar("other" === Sr ? "smpShop:otherItems" : `creativeInventory:${Sr}`), !Zr && (0, xr.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    iR(new Set([...qR, JR]))
+                    fr(new Set([...Ir, Sr]))
                   },
-                  children: uR("smpShop:showAll", {
-                    count: GR.length
+                  children: ar("smpShop:showAll", {
+                    count: Qr.length
                   })
                 })]
-              }), (0, KR.jsx)(au.d, {
+              }), (0, xr.jsx)(Ua.d, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: tu,
-                observerUpdateDeps: [yR],
-                children: ZR.map((RR => (0, KR.jsx)(Lu, {
-                  name: RR.name,
-                  label: RR.label,
-                  onPick: tR
-                }, RR.name)))
+                rootMargin: Za,
+                observerUpdateDeps: [Zr],
+                children: jr.map((rr => (0, xr.jsx)(ta, {
+                  name: rr.name,
+                  label: rr.label,
+                  onPick: Wr
+                }, rr.name)))
               })]
-            }, JR)
+            }, Sr)
           }))
         })
       }));
 
-    function Uu(RR, JR) {
+    function za(rr, Sr) {
       const {
-        searched: GR,
-        shown: tR,
-        searchFor: uR,
-        loading: ZR
-      } = function(RR, JR) {
-        var GR;
-        const tR = eu(),
-          [uR, ZR] = (0, yR.useState)(void 0),
-          qR = (0, yR.useRef)(void 0),
-          iR = (0, yR.useRef)(0),
-          fR = (0, yR.useRef)(void 0),
-          VR = null !== (GR = null === RR || void 0 === RR ? void 0 : RR.meta.item) && void 0 !== GR ? GR : null,
-          KR = !!RR && tR.isPending(RR.key);
-        (0, yR.useEffect)((() => {
-          if (!RR || KR || !JR || void 0 === uR || uR === VR) return;
-          const GR = uR === qR.current && tR.gaveUpAt(RR.key) > iR.current && fR.current !== uR;
-          (uR !== qR.current || GR) && tR.act(RR.key, null !== uR && void 0 !== uR ? uR : "*", GR) && (GR && (fR.current = uR), qR.current = uR, iR.current = Date.now())
-        }), [RR, KR, JR, uR, VR, tR]);
-        const wR = (0, yR.useCallback)((RR => {
-            qR.current = void 0, fR.current = void 0, ZR(RR)
+        searched: Qr,
+        shown: Wr,
+        searchFor: ar,
+        loading: jr
+      } = function(rr, Sr) {
+        var Qr;
+        const Wr = Na(),
+          [ar, jr] = (0, Zr.useState)(void 0),
+          Ir = (0, Zr.useRef)(void 0),
+          fr = (0, Zr.useRef)(0),
+          Er = (0, Zr.useRef)(void 0),
+          pr = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.meta.item) && void 0 !== Qr ? Qr : null,
+          xr = !!rr && Wr.isPending(rr.key);
+        (0, Zr.useEffect)((() => {
+          if (!rr || xr || !Sr || void 0 === ar || ar === pr) return;
+          const Qr = ar === Ir.current && Wr.gaveUpAt(rr.key) > fr.current && Er.current !== ar;
+          (ar !== Ir.current || Qr) && Wr.act(rr.key, null !== ar && void 0 !== ar ? ar : "*", Qr) && (Qr && (Er.current = ar), Ir.current = ar, fr.current = Date.now())
+        }), [rr, xr, Sr, ar, pr, Wr]);
+        const mr = (0, Zr.useCallback)((rr => {
+            Ir.current = void 0, Er.current = void 0, jr(rr)
           }), []),
-          rR = void 0 !== uR && uR !== VR && (KR || qR.current !== uR);
+          Nr = void 0 !== ar && ar !== pr && (xr || Ir.current !== ar);
         return {
-          searched: VR,
-          shown: rR ? uR : VR,
-          searchFor: wR,
-          loading: rR || KR || null !== VR && !JR
+          searched: pr,
+          shown: Nr ? ar : pr,
+          searchFor: mr,
+          loading: Nr || xr || null !== pr && !Sr
         }
-      }(RR, JR), qR = (0, yR.useMemo)((() => function() {
-        var RR;
-        let JR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          yR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const tR = `${(0,Ru.f)()}\x1f${JR.join("\x1e")}\x1f${GR.join("\x1e")}\x1f${JSON.stringify(yR)}`;
-        if ((null === (RR = iu) || void 0 === RR ? void 0 : RR.key) === tR) return iu.items;
-        const uR = new Set(GR),
-          ZR = new Set,
-          qR = [],
-          iR = (RR, JR) => {
-            var GR;
-            if (!RR || ZR.has(RR) || uR.has(RR)) return;
-            ZR.add(RR);
-            const tR = null !== (GR = yR[RR]) && void 0 !== GR ? GR : RR;
-            qR.push({
-              name: RR,
-              label: tR,
-              lowerLabel: tR.toLowerCase(),
-              lowerName: RR.toLowerCase(),
-              category: JR
+      }(rr, Sr), Ir = (0, Zr.useMemo)((() => function() {
+        var rr;
+        let Sr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Wr = `${(0,uW.k)()}\x1f${Sr.join("\x1e")}\x1f${Qr.join("\x1e")}\x1f${JSON.stringify(Zr)}`;
+        if ((null === (rr = Ia) || void 0 === rr ? void 0 : rr.key) === Wr) return Ia.items;
+        const ar = new Set(Qr),
+          jr = new Set,
+          Ir = [],
+          fr = (rr, Sr) => {
+            var Qr;
+            if (!rr || jr.has(rr) || ar.has(rr)) return;
+            jr.add(rr);
+            const Wr = null !== (Qr = Zr[rr]) && void 0 !== Qr ? Qr : rr;
+            Ir.push({
+              name: rr,
+              label: Wr,
+              lowerLabel: Wr.toLowerCase(),
+              lowerName: rr.toLowerCase(),
+              category: Sr
             })
           };
-        for (const VR of (0, Tt.creativeItemIds)()) {
-          var fR;
-          (0, Tt.itemIsDisabled)(VR, !0, !0, !1) || (0, Tt.showOnlyInCreativeSearch)(VR) || iR((0, Ru.c)(VR), null !== (fR = (0, Tt.creativeCategoryOf)(VR)) && void 0 !== fR ? fR : "other")
+        for (const pr of (0, DW.creativeItemIds)()) {
+          var Er;
+          (0, DW.itemIsDisabled)(pr, !0, !0, !1) || (0, DW.showOnlyInCreativeSearch)(pr) || fr((0, uW.g)(pr), null !== (Er = (0, DW.creativeCategoryOf)(pr)) && void 0 !== Er ? Er : "other")
         }
-        for (const VR of JR) iR(VR, "other");
-        return iu = {
-          key: tR,
-          items: qR
-        }, qR
-      }(null === RR || void 0 === RR ? void 0 : RR.meta.extra, null === RR || void 0 === RR ? void 0 : RR.meta.excluded, null === RR || void 0 === RR ? void 0 : RR.meta.names)), [null === RR || void 0 === RR ? void 0 : RR.meta.extra, null === RR || void 0 === RR ? void 0 : RR.meta.excluded, null === RR || void 0 === RR ? void 0 : RR.meta.names]), [iR, fR] = (0, yR.useState)(""), [VR, KR] = (0, yR.useState)(0), [wR, rR] = (0, yR.useState)("recent"), eR = (0, yR.useCallback)((RR => {
-        fR(""), KR((RR => RR + 1)), uR(RR)
-      }), [uR]), aR = "browse" === wR || "" !== iR.trim();
+        for (const pr of Sr) fr(pr, "other");
+        return Ia = {
+          key: Wr,
+          items: Ir
+        }, Ir
+      }(null === rr || void 0 === rr ? void 0 : rr.meta.extra, null === rr || void 0 === rr ? void 0 : rr.meta.excluded, null === rr || void 0 === rr ? void 0 : rr.meta.names)), [null === rr || void 0 === rr ? void 0 : rr.meta.extra, null === rr || void 0 === rr ? void 0 : rr.meta.excluded, null === rr || void 0 === rr ? void 0 : rr.meta.names]), [fr, Er] = (0, Zr.useState)(""), [pr, xr] = (0, Zr.useState)(0), [mr, Nr] = (0, Zr.useState)("recent"), Ur = (0, Zr.useCallback)((rr => {
+        Er(""), xr((rr => rr + 1)), ar(rr)
+      }), [ar]), tr = "browse" === mr || "" !== fr.trim();
       return {
-        searched: GR,
-        shown: tR,
-        searchFor: uR,
-        loading: ZR,
-        catalogue: qR,
-        names: null === RR || void 0 === RR ? void 0 : RR.meta.names,
-        query: iR,
-        setQuery: fR,
-        searchBoxKey: VR,
-        pickItem: eR,
-        setView: rR,
-        browsing: aR
+        searched: Qr,
+        shown: Wr,
+        searchFor: ar,
+        loading: jr,
+        catalogue: Ir,
+        names: null === rr || void 0 === rr ? void 0 : rr.meta.names,
+        query: fr,
+        setQuery: Er,
+        searchBoxKey: pr,
+        pickItem: Ur,
+        setView: Nr,
+        browsing: tr
       }
     }
 
-    function Wu(RR) {
+    function Ya(rr) {
       let {
-        browser: JR,
-        children: GR
-      } = RR;
+        browser: Sr,
+        children: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)(), tR = eu();
-      return (0, KR.jsxs)("div", {
+        t: Zr
+      } = (0, jr.E)(), Wr = Na();
+      return (0, xr.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "SmpSearch",
-          children: (0, KR.jsx)(CR.b, {
+          children: (0, xr.jsx)(Kr.b, {
             className: "SmpSearchInput",
-            placeholderText: yR("smpShop:searchPlaceholder"),
-            defaultValue: JR.query,
-            onValueChange: RR => {
-              JR.setQuery(RR), JR.searched && RR.trim() && JR.searchFor(null)
+            placeholderText: Zr("smpShop:searchPlaceholder"),
+            defaultValue: Sr.query,
+            onValueChange: rr => {
+              Sr.setQuery(rr), Sr.searched && rr.trim() && Sr.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const RR = fu(JR.catalogue, JR.query)[0];
-              RR ? JR.pickItem(RR.name) : JR.query.trim() && tR.notify(yR("smpShop:noItemsFound", {
-                query: JR.query.trim()
+              const rr = fa(Sr.catalogue, Sr.query)[0];
+              rr ? Sr.pickItem(rr.name) : Sr.query.trim() && Wr.notify(Zr("smpShop:noItemsFound", {
+                query: Sr.query.trim()
               }))
             }
-          }, JR.searchBoxKey)
-        }), GR]
+          }, Sr.searchBoxKey)
+        }), Qr]
       })
     }
 
-    function Au(RR) {
+    function na(rr) {
       let {
-        browser: JR,
-        recentLabel: GR,
-        children: yR
-      } = RR;
+        browser: Sr,
+        recentLabel: Qr,
+        children: Zr
+      } = rr;
       const {
-        t: tR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
+        t: Wr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, KR.jsx)(Yt, {
+        children: [(0, xr.jsx)(FW, {
           options: [{
             value: "recent",
-            label: GR
+            label: Qr
           }, {
             value: "browse",
-            label: tR("smpShop:browseItems")
+            label: Wr("smpShop:browseItems")
           }],
-          value: JR.browsing ? "browse" : "recent",
-          onChange: JR.setView,
-          ariaLabel: tR("smpShop:show")
-        }), !JR.browsing && yR]
+          value: Sr.browsing ? "browse" : "recent",
+          onChange: Sr.setView,
+          ariaLabel: Wr("smpShop:show")
+        }), !Sr.browsing && Zr]
       })
     }
 
-    function Cu(RR) {
+    function ea(rr) {
       let {
-        item: JR,
-        names: GR,
-        summary: yR,
-        onBack: tR,
-        children: uR
-      } = RR;
+        item: Sr,
+        names: Qr,
+        summary: Zr,
+        onBack: Wr,
+        children: ar
+      } = rr;
       const {
-        t: qR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
+        t: Ir
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, KR.jsx)(fR.d, {
+        children: [(0, xr.jsx)(Er.d, {
           className: "SmpBackButton",
-          onClick: tR,
-          children: qR("general:back")
-        }), (0, KR.jsx)(zt, {
-          item: JR,
+          onClick: Wr,
+          children: Ir("general:back")
+        }), (0, xr.jsx)(AW, {
+          item: Sr,
           size: "big"
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, KR.jsx)("b", {
-            children: Vu(GR, JR)
-          }), yR && (0, KR.jsx)("small", {
-            children: yR
+          children: [(0, xr.jsx)("b", {
+            children: Ea(Qr, Sr)
+          }), Zr && (0, xr.jsx)("small", {
+            children: Zr
           })]
-        }), uR]
+        }), ar]
       })
     }
 
-    function Xu(RR) {
+    function Ka(rr) {
       let {
-        browser: JR,
-        className: GR,
-        action: yR,
-        above: tR,
-        list: ZR,
-        summary: qR,
-        recentLabel: iR,
-        listControls: fR,
-        onBack: VR
-      } = RR;
-      return (0, KR.jsxs)("div", {
-        className: uR()("SmpScreen", GR),
-        children: [(0, KR.jsx)(Wu, {
-          browser: JR,
-          children: yR
-        }), JR.shown && (0, KR.jsx)(Cu, {
-          item: JR.shown,
-          names: JR.names,
-          summary: !JR.loading && qR,
+        browser: Sr,
+        className: Qr,
+        action: Zr,
+        above: Wr,
+        list: jr,
+        summary: Ir,
+        recentLabel: fr,
+        listControls: Er,
+        onBack: pr
+      } = rr;
+      return (0, xr.jsxs)("div", {
+        className: ar()("SmpScreen", Qr),
+        children: [(0, xr.jsx)(Ya, {
+          browser: Sr,
+          children: Zr
+        }), Sr.shown && (0, xr.jsx)(ea, {
+          item: Sr.shown,
+          names: Sr.names,
+          summary: !Sr.loading && Ir,
           onBack: () => {
-            null === VR || void 0 === VR || VR(), JR.searchFor(null)
+            null === pr || void 0 === pr || pr(), Sr.searchFor(null)
           },
-          children: fR
-        }), tR, JR.shown ? ZR : (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)(Au, {
-            browser: JR,
-            recentLabel: iR,
-            children: fR
-          }), JR.browsing ? (0, KR.jsx)(nu, {
-            items: JR.catalogue,
-            query: JR.query,
-            onPick: JR.pickItem
-          }) : ZR]
+          children: Er
+        }), Wr, Sr.shown ? jr : (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)(na, {
+            browser: Sr,
+            recentLabel: fr,
+            children: Er
+          }), Sr.browsing ? (0, xr.jsx)(ha, {
+            items: Sr.catalogue,
+            query: Sr.query,
+            onPick: Sr.pickItem
+          }) : jr]
         })]
       })
     }
 
-    function Mu(RR, JR) {
-      const GR = RR.map((RR => {
+    function ya(rr, Sr) {
+      const Qr = rr.map((rr => {
         let {
-          meta: JR
-        } = RR;
-        return JR.pricePerItem
+          meta: Sr
+        } = rr;
+        return Sr.pricePerItem
       }));
-      return "min" === JR ? Math.min(...GR) : Math.max(...GR)
+      return "min" === Sr ? Math.min(...Qr) : Math.max(...Qr)
     }
-    var Bu = GR(7717);
-    const lu = (0, yR.memo)((function(RR) {
-      var JR;
+    var Ba = Qr(7550);
+    const Ta = (0, Zr.memo)((function(rr) {
+      var Sr;
       const {
-        t: GR
-      } = (0, ZR.A)(), yR = null === RR.seller, tR = RR.quantity * RR.pricePerItem;
-      return (0, KR.jsxs)("div", {
-        className: RR.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, KR.jsx)(zt, {
-          item: RR.item,
-          amount: RR.quantity,
-          size: RR.grid ? "big" : "normal",
-          tier: RR.tier
-        }), (0, KR.jsxs)("div", {
+        t: Qr
+      } = (0, jr.E)(), Zr = null === rr.seller, Wr = rr.quantity * rr.pricePerItem;
+      return (0, xr.jsxs)("div", {
+        className: rr.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, xr.jsx)(AW, {
+          item: rr.item,
+          amount: rr.quantity,
+          size: rr.grid ? "big" : "normal",
+          tier: rr.tier
+        }), (0, xr.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, KR.jsx)("b", {
-            children: (0, KR.jsx)(gt.c, {
-              text: null !== (JR = RR.title) && void 0 !== JR ? JR : `${RR.quantity}x ${RR.item}`
+          children: [(0, xr.jsx)("b", {
+            children: (0, xr.jsx)(OW.c, {
+              text: null !== (Sr = rr.title) && void 0 !== Sr ? Sr : `${rr.quantity}x ${rr.item}`
             })
-          }), (0, KR.jsxs)("small", {
+          }), (0, xr.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, KR.jsx)("span", {
-              children: yR ? GR("smpShop:you") : (0, KR.jsx)(gt.c, {
+            children: [(0, xr.jsx)("span", {
+              children: Zr ? Qr("smpShop:you") : (0, xr.jsx)(OW.c, {
                 text: [{
-                  entityName: RR.seller
+                  entityName: rr.seller
                 }]
               })
-            }), (0, KR.jsx)("span", {
-              children: GR("smpShop:timeLeft", {
-                time: Zu(RR.expiresAt)
+            }), (0, xr.jsx)("span", {
+              children: Qr("smpShop:timeLeft", {
+                time: aa(rr.expiresAt)
               })
             })]
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, KR.jsx)(St, {
-            amount: RR.pricePerItem
-          }), (0, KR.jsx)("small", {
-            children: GR("smpShop:each")
+          children: [(0, xr.jsx)(VW, {
+            amount: rr.pricePerItem
+          }), (0, xr.jsx)("small", {
+            children: Qr("smpShop:each")
           })]
-        }), (0, KR.jsx)(fR.g, {
+        }), (0, xr.jsx)(Er.h, {
           className: "SmpBuyButton",
-          disabled: yR || !RR.canAfford && !RR.busy,
-          loading: RR.busy,
+          disabled: Zr || !rr.canAfford && !rr.busy,
+          loading: rr.busy,
           onClick: () => {
-            RR.onBuy(RR.itemKey)
+            rr.onBuy(rr.itemKey)
           },
-          children: yR ? GR("smpShop:yours") : (0, KR.jsx)(St, {
-            amount: tR
+          children: Zr ? Qr("smpShop:yours") : (0, xr.jsx)(VW, {
+            amount: Wr
           })
         })]
       })
     }));
 
-    function pu(RR) {
+    function va(rr) {
       let {
-        view: JR,
-        onChange: GR
-      } = RR;
+        view: Sr,
+        onChange: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return (0, KR.jsx)(It.c, {
+        t: Zr
+      } = (0, jr.E)();
+      return (0, xr.jsx)(GW.d, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: yR("smpShop:layout"),
+        ariaLabel: Zr("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, KR.jsx)(qR.d, {
+          label: (0, xr.jsx)(Ir.c, {
             name: "list"
           }),
-          ariaLabel: yR("smpShop:listView")
+          ariaLabel: Zr("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, KR.jsx)(qR.d, {
+          label: (0, xr.jsx)(Ir.c, {
             name: "grid-2"
           }),
-          ariaLabel: yR("smpShop:gridView")
+          ariaLabel: Zr("smpShop:gridView")
         }],
-        value: JR,
-        onChange: GR
+        value: Sr,
+        onChange: Qr
       })
     }
 
-    function gu(RR) {
+    function Oa(rr) {
       let {
-        entries: JR,
-        view: GR
-      } = RR;
+        entries: Sr,
+        view: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)(), tR = eu(), uR = "grid" === GR;
-      return (0, KR.jsxs)(KR.Fragment, {
-        children: [!uR && (0, KR.jsxs)("div", {
+        t: Zr
+      } = (0, jr.E)(), Wr = Na(), ar = "grid" === Qr;
+      return (0, xr.jsxs)(xr.Fragment, {
+        children: [!ar && (0, xr.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, KR.jsx)("span", {}), (0, KR.jsx)("span", {
-            children: yR("smpShop:columnItem")
-          }), (0, KR.jsx)("span", {
-            children: yR("smpShop:columnPriceEach")
-          }), (0, KR.jsx)("span", {
-            children: yR("smpShop:columnTotal")
+          children: [(0, xr.jsx)("span", {}), (0, xr.jsx)("span", {
+            children: Zr("smpShop:columnItem")
+          }), (0, xr.jsx)("span", {
+            children: Zr("smpShop:columnPriceEach")
+          }), (0, xr.jsx)("span", {
+            children: Zr("smpShop:columnTotal")
           })]
-        }), (0, KR.jsx)(au.d, {
-          lazyLoadedClassName: uR ? "SmpCardGrid" : "SmpList",
+        }), (0, xr.jsx)(Ua.d, {
+          lazyLoadedClassName: ar ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: tu,
-          observerUpdateDeps: [JR.length],
-          children: JR.map((RR => {
-            var JR, GR;
+          rootMargin: Za,
+          observerUpdateDeps: [Sr.length],
+          children: Sr.map((rr => {
+            var Sr, Qr;
             let {
-              key: yR,
-              item: ZR,
-              meta: qR
-            } = RR;
-            const iR = qR.quantity * qR.pricePerItem;
-            return (0, KR.jsx)(lu, {
-              itemKey: yR,
-              item: qR.item,
-              title: ZR.customTitle,
-              quantity: qR.quantity,
-              pricePerItem: qR.pricePerItem,
-              seller: qR.seller,
-              expiresAt: qR.expiresAt,
-              tier: null !== (JR = null === (GR = ZR.enchant) || void 0 === GR ? void 0 : GR.tier) && void 0 !== JR ? JR : null,
-              busy: tR.isPending(yR) || null !== qR.seller && !1 === ZR.canBuy,
-              canAfford: tR.canAfford(ZR, iR),
-              grid: uR,
-              onBuy: tR.act
-            }, yR)
+              key: Zr,
+              item: jr,
+              meta: Ir
+            } = rr;
+            const fr = Ir.quantity * Ir.pricePerItem;
+            return (0, xr.jsx)(Ta, {
+              itemKey: Zr,
+              item: Ir.item,
+              title: jr.customTitle,
+              quantity: Ir.quantity,
+              pricePerItem: Ir.pricePerItem,
+              seller: Ir.seller,
+              expiresAt: Ir.expiresAt,
+              tier: null !== (Sr = null === (Qr = jr.enchant) || void 0 === Qr ? void 0 : Qr.tier) && void 0 !== Sr ? Sr : null,
+              busy: Wr.isPending(Zr) || null !== Ir.seller && !1 === jr.canBuy,
+              canAfford: Wr.canAfford(jr, fr),
+              grid: ar,
+              onBuy: Wr.act
+            }, Zr)
           }))
-        }, GR)]
+        }, Qr)]
       })
     }
-    const bu = [1, 10, 100],
-      vu = [1, 10, 100, 999];
+    const La = [1, 10, 100],
+      la = [1, 10, 100, 999];
 
-    function Ou(RR) {
-      var JR, GR, tR, iR, VR, wR, rR, eR, aR, LR;
+    function Xa(rr) {
+      var Sr, Qr, Wr, fr, pr, mr, Nr, Ur, tr, hr;
       const {
-        t: nR
-      } = (0, ZR.A)(), UR = eu(), {
-        creator: WR,
-        mode: AR
-      } = RR, [XR, MR] = (0, yR.useState)(null !== (JR = null === WR || void 0 === WR ? void 0 : WR.meta.item) && void 0 !== JR ? JR : null), [BR, lR] = (0, yR.useState)(1), [pR, gR] = (0, yR.useState)(0), [bR, vR] = (0, yR.useState)(""), [OR, xR] = (0, yR.useState)(0), NR = (0, yR.useRef)(XR), DR = (0, yR.useRef)(!1), [HR, oR] = (0, yR.useState)(!1), cR = null !== (GR = null === WR || void 0 === WR ? void 0 : WR.meta.item) && void 0 !== GR ? GR : null, PR = null !== (tR = null === WR || void 0 === WR ? void 0 : WR.meta.owned) && void 0 !== tR ? tR : 0;
-      (0, yR.useEffect)((() => {
-        RR.searching || null === cR || cR === NR.current || (NR.current = cR, DR.current = !1, MR(cR), gR(0), lR("list" === AR ? Math.max(1, PR) : 1))
-      }), [cR, RR.searching]);
-      const IR = !!WR && !!XR && WR.meta.item === XR,
-        mR = IR ? WR.meta.owned : null !== (iR = null === (VR = RR.inventory) || void 0 === VR || null === (wR = VR.find((RR => RR.item === XR))) || void 0 === wR ? void 0 : wR.quantity) && void 0 !== iR ? iR : 0,
-        zR = "list" === AR ? Math.max(1, mR) : 45954,
-        SR = null !== (rR = RR.prices[0]) && void 0 !== rR ? rR : null,
-        jR = RR.prices.length ? Math.round(RR.prices.reduce(((RR, JR) => RR + JR), 0) / RR.prices.length) : null,
-        dR = null === (eR = RR.inventory) || void 0 === eR || null === (aR = eR.find((RR => RR.item === XR))) || void 0 === aR ? void 0 : aR.sellPrice;
-      (0, yR.useEffect)((() => {
-        var RR;
-        IR && (lR((RR => "list" === AR ? Math.min(Math.max(1, RR), Math.max(1, mR)) : RR)), DR.current || gR(null !== (RR = null !== SR && void 0 !== SR ? SR : jR) && void 0 !== RR ? RR : Math.max(1, null !== dR && void 0 !== dR ? dR : 1)))
-      }), [IR, mR, XR, SR, jR]);
-      const ER = RR => {
-          DR.current = !0, gR(RR)
+        t: zr
+      } = (0, jr.E)(), Yr = Na(), {
+        creator: nr,
+        mode: er
+      } = rr, [yr, Br] = (0, Zr.useState)(null !== (Sr = null === nr || void 0 === nr ? void 0 : nr.meta.item) && void 0 !== Sr ? Sr : null), [Tr, vr] = (0, Zr.useState)(1), [Or, Lr] = (0, Zr.useState)(0), [lr, Xr] = (0, Zr.useState)(""), [Pr, Hr] = (0, Zr.useState)(0), qr = (0, Zr.useRef)(yr), Rr = (0, Zr.useRef)(!1), [gr, Cr] = (0, Zr.useState)(!1), Mr = null !== (Qr = null === nr || void 0 === nr ? void 0 : nr.meta.item) && void 0 !== Qr ? Qr : null, Gr = null !== (Wr = null === nr || void 0 === nr ? void 0 : nr.meta.owned) && void 0 !== Wr ? Wr : 0;
+      (0, Zr.useEffect)((() => {
+        rr.searching || null === Mr || Mr === qr.current || (qr.current = Mr, Rr.current = !1, Br(Mr), Lr(0), vr("list" === er ? Math.max(1, Gr) : 1))
+      }), [Mr, rr.searching]);
+      const kr = !!nr && !!yr && nr.meta.item === yr,
+        Ar = kr ? nr.meta.owned : null !== (fr = null === (pr = rr.inventory) || void 0 === pr || null === (mr = pr.find((rr => rr.item === yr))) || void 0 === mr ? void 0 : mr.quantity) && void 0 !== fr ? fr : 0,
+        Vr = "list" === er ? Math.max(1, Ar) : 45954,
+        ir = null !== (Nr = rr.prices[0]) && void 0 !== Nr ? Nr : null,
+        wr = rr.prices.length ? Math.round(rr.prices.reduce(((rr, Sr) => rr + Sr), 0) / rr.prices.length) : null,
+        cr = null === (Ur = rr.inventory) || void 0 === Ur || null === (tr = Ur.find((rr => rr.item === yr))) || void 0 === tr ? void 0 : tr.sellPrice;
+      (0, Zr.useEffect)((() => {
+        var rr;
+        kr && (vr((rr => "list" === er ? Math.min(Math.max(1, rr), Math.max(1, Ar)) : rr)), Rr.current || Lr(null !== (rr = null !== ir && void 0 !== ir ? ir : wr) && void 0 !== rr ? rr : Math.max(1, null !== cr && void 0 !== cr ? cr : 1)))
+      }), [kr, Ar, yr, ir, wr]);
+      const Fr = rr => {
+          Rr.current = !0, Lr(rr)
         },
-        YR = JR => {
-          var GR, yR, tR;
-          NR.current = JR, DR.current = !1, oR(!1), vR(""), xR((RR => RR + 1)), MR(JR), gR(0), lR("list" === AR && null !== (GR = null === (yR = RR.inventory) || void 0 === yR || null === (tR = yR.find((RR => RR.item === JR))) || void 0 === tR ? void 0 : tR.quantity) && void 0 !== GR ? GR : 1), (null === WR || void 0 === WR ? void 0 : WR.meta.item) !== JR && RR.onPickItem(JR)
+        or = Sr => {
+          var Qr, Zr, Wr;
+          qr.current = Sr, Rr.current = !1, Cr(!1), Xr(""), Hr((rr => rr + 1)), Br(Sr), Lr(0), vr("list" === er && null !== (Qr = null === (Zr = rr.inventory) || void 0 === Zr || null === (Wr = Zr.find((rr => rr.item === Sr))) || void 0 === Wr ? void 0 : Wr.quantity) && void 0 !== Qr ? Qr : 1), (null === nr || void 0 === nr ? void 0 : nr.meta.item) !== Sr && rr.onPickItem(Sr)
         },
-        kR = BR * pR,
-        QR = "list" === AR && null !== WR && void 0 !== WR && WR.meta.fee ? function(RR, JR) {
-          const GR = Math.max(0, JR - RR.taxFreeAllowance);
-          return Math.ceil(Math.round(GR * RR.rate * 1e6) / 1e6)
-        }(WR.meta.fee, kR) : 0,
-        FR = !!WR && UR.isPending(WR.key),
-        TR = IR && !RR.searching && BR >= 1 && pR >= 1 && ("order" === AR || mR >= BR) && !FR,
-        sR = !!XR && !IR && !RR.searching && BR >= 1 && pR >= 1,
-        hR = () => {
-          TR ? UR.act(WR.key, `${BR}|${pR}`) : sR && (RR.onPickItem(XR), oR(!0))
+        br = Tr * Or,
+        Jr = "list" === er && null !== nr && void 0 !== nr && nr.meta.fee ? function(rr, Sr) {
+          const Qr = Math.max(0, Sr - rr.taxFreeAllowance);
+          return Math.ceil(Math.round(Qr * rr.rate * 1e6) / 1e6)
+        }(nr.meta.fee, br) : 0,
+        Dr = !!nr && Yr.isPending(nr.key),
+        dr = kr && !rr.searching && Tr >= 1 && Or >= 1 && ("order" === er || Ar >= Tr) && !Dr,
+        sr = !!yr && !kr && !rr.searching && Tr >= 1 && Or >= 1,
+        ur = () => {
+          dr ? Yr.act(nr.key, `${Tr}|${Or}`) : sr && (rr.onPickItem(yr), Cr(!0))
         };
-      (0, yR.useEffect)((() => {
-        HR && IR && !RR.searching && (oR(!1), hR())
-      }), [HR, IR, RR.searching]);
-      const RJ = !!XR && !IR && (RR.searching || HR),
-        JJ = XR ? Vu(RR.names, XR) : "",
-        GJ = (0, yR.useMemo)((() => fu(RR.catalogue, bR).slice(0, 8)), [RR.catalogue, bR]),
-        yJ = ("list" === AR ? bu.filter((RR => RR < mR)) : vu).map((RR => ({
-          value: RR,
-          label: String(RR)
+      (0, Zr.useEffect)((() => {
+        gr && kr && !rr.searching && (Cr(!1), ur())
+      }), [gr, kr, rr.searching]);
+      const rS = !!yr && !kr && (rr.searching || gr),
+        SS = yr ? Ea(rr.names, yr) : "",
+        QS = (0, Zr.useMemo)((() => fa(rr.catalogue, lr).slice(0, 8)), [rr.catalogue, lr]),
+        ZS = ("list" === er ? La.filter((rr => rr < Ar)) : la).map((rr => ({
+          value: rr,
+          label: String(rr)
         })));
-      "list" === AR && mR > 0 && yJ.push({
-        value: mR,
-        label: nR("smpShop:all", {
-          count: mR
+      "list" === er && Ar > 0 && ZS.push({
+        value: Ar,
+        label: zr("smpShop:all", {
+          count: Ar
         })
       });
-      const tJ = [];
-      return null !== SR && (SR > 1 && tJ.push({
-        value: SR - 1,
-        label: nR("smpShop:undercut", {
-          price: Pt(SR - 1)
+      const WS = [];
+      return null !== ir && (ir > 1 && WS.push({
+        value: ir - 1,
+        label: zr("smpShop:undercut", {
+          price: MW(ir - 1)
         })
-      }), tJ.push({
-        value: SR,
-        label: nR("smpShop:lowest", {
-          price: Pt(SR)
+      }), WS.push({
+        value: ir,
+        label: zr("smpShop:lowest", {
+          price: MW(ir)
         })
-      })), null !== jR && jR !== SR && tJ.push({
-        value: jR,
-        label: nR("smpShop:average", {
-          price: Pt(jR)
+      })), null !== wr && wr !== ir && WS.push({
+        value: wr,
+        label: zr("smpShop:average", {
+          price: MW(wr)
         })
-      }), (0, KR.jsxs)("div", {
+      }), (0, xr.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, KR.jsx)("b", {
-            children: nR("list" === AR ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, KR.jsx)("button", {
+          children: [(0, xr.jsx)("b", {
+            children: zr("list" === er ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, xr.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": nR("smpShop:close"),
-            onClick: RR.onClose,
-            children: (0, KR.jsx)(qR.d, {
+            "aria-label": zr("smpShop:close"),
+            onClick: rr.onClose,
+            children: (0, xr.jsx)(Ir.c, {
               name: "xmark"
             })
           })]
-        }), "list" === AR && (0, KR.jsx)("div", {
+        }), "list" === er && (0, xr.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (LR = RR.inventory) && void 0 !== LR && LR.length ? RR.inventory.map((RR => {
+          children: null !== (hr = rr.inventory) && void 0 !== hr && hr.length ? rr.inventory.map((rr => {
             let {
-              item: JR,
-              quantity: GR
-            } = RR;
-            return (0, KR.jsx)("button", {
+              item: Sr,
+              quantity: Qr
+            } = rr;
+            return (0, xr.jsx)("button", {
               type: "button",
-              title: JR,
-              className: uR()("SmpPickerSlot", {
-                SmpPickerSlotOn: JR === XR
+              title: Sr,
+              className: ar()("SmpPickerSlot", {
+                SmpPickerSlotOn: Sr === yr
               }),
               onClick: () => {
-                YR(JR)
+                or(Sr)
               },
-              children: (0, KR.jsx)(zt, {
-                item: JR,
-                amount: GR
+              children: (0, xr.jsx)(AW, {
+                item: Sr,
+                amount: Qr
               })
-            }, JR)
-          })) : (0, KR.jsx)("span", {
+            }, Sr)
+          })) : (0, xr.jsx)("span", {
             className: "SmpMuted",
-            children: nR("smpShop:nothingToList")
+            children: zr("smpShop:nothingToList")
           })
-        }), ("list" === AR || !XR) && (0, KR.jsxs)("div", {
+        }), ("list" === er || !yr) && (0, xr.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, KR.jsx)(CR.b, {
+          children: [(0, xr.jsx)(Kr.b, {
             className: "SmpSearchInput",
-            placeholderText: nR("list" === AR ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: bR,
-            onValueChange: vR,
+            placeholderText: zr("list" === er ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: lr,
+            onValueChange: Xr,
             blurOnEnter: !0,
             onEnter: () => {
-              GJ[0] && YR(GJ[0].name)
+              QS[0] && or(QS[0].name)
             }
-          }, OR), GJ.length > 0 && (0, KR.jsx)("div", {
+          }, Pr), QS.length > 0 && (0, xr.jsx)("div", {
             className: "SmpPicker",
-            children: GJ.map((RR => {
+            children: QS.map((rr => {
               let {
-                name: JR
-              } = RR;
-              return (0, KR.jsx)("button", {
+                name: Sr
+              } = rr;
+              return (0, xr.jsx)("button", {
                 type: "button",
-                title: JR,
-                className: uR()("SmpPickerSlot", {
-                  SmpPickerSlotOn: JR === XR
+                title: Sr,
+                className: ar()("SmpPickerSlot", {
+                  SmpPickerSlotOn: Sr === yr
                 }),
                 onClick: () => {
-                  YR(JR)
+                  or(Sr)
                 },
-                children: (0, KR.jsx)(zt, {
-                  item: JR
+                children: (0, xr.jsx)(AW, {
+                  item: Sr
                 })
-              }, JR)
+              }, Sr)
             }))
           })]
-        }), XR && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsxs)("div", {
+        }), yr && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsxs)("div", {
             className: "SmpPickedName",
-            children: [JJ, RJ && (0, KR.jsx)(kt, {})]
-          }), (0, KR.jsxs)("div", {
+            children: [SS, rS && (0, xr.jsx)(oW, {})]
+          }), (0, xr.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, KR.jsxs)("div", {
+            children: [(0, xr.jsxs)("div", {
               className: "SmpField",
-              children: [(0, KR.jsxs)("span", {
-                children: [nR("smpShop:quantity"), "list" === AR && IR && (0, KR.jsx)("small", {
-                  children: nR("smpShop:youHave", {
-                    count: mR
+              children: [(0, xr.jsxs)("span", {
+                children: [zr("smpShop:quantity"), "list" === er && kr && (0, xr.jsx)("small", {
+                  children: zr("smpShop:youHave", {
+                    count: Ar
                   })
                 })]
-              }), (0, KR.jsx)(Qt, {
-                value: BR,
-                onChange: lR,
-                max: zR,
-                label: nR("smpShop:quantity")
-              }), (0, KR.jsx)(Yt, {
-                options: yJ,
-                value: BR,
-                onChange: lR,
-                ariaLabel: nR("smpShop:quantity")
+              }), (0, xr.jsx)(bW, {
+                value: Tr,
+                onChange: vr,
+                max: Vr,
+                label: zr("smpShop:quantity")
+              }), (0, xr.jsx)(FW, {
+                options: ZS,
+                value: Tr,
+                onChange: vr,
+                ariaLabel: zr("smpShop:quantity")
               })]
-            }), (0, KR.jsxs)("div", {
+            }), (0, xr.jsxs)("div", {
               className: "SmpField",
-              children: [(0, KR.jsx)("span", {
-                children: nR("smpShop:pricePerItem")
-              }), (0, KR.jsx)(Qt, {
-                value: Math.max(1, pR),
-                onChange: ER,
+              children: [(0, xr.jsx)("span", {
+                children: zr("smpShop:pricePerItem")
+              }), (0, xr.jsx)(bW, {
+                value: Math.max(1, Or),
+                onChange: Fr,
                 max: 9999999,
-                step: Ft,
-                label: nR("smpShop:pricePerItem")
-              }), (0, KR.jsx)(Yt, {
-                options: tJ,
-                value: pR,
-                onChange: ER,
-                ariaLabel: nR("smpShop:pricePerItem")
+                step: JW,
+                label: zr("smpShop:pricePerItem")
+              }), (0, xr.jsx)(FW, {
+                options: WS,
+                value: Or,
+                onChange: Fr,
+                ariaLabel: zr("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === AR && (0, KR.jsxs)("div", {
+          }), "list" === er && (0, xr.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, KR.jsxs)("span", {
-              children: [nR("smpShop:youGet"), " ", (0, KR.jsx)(St, {
-                amount: Math.max(0, kR - QR),
+            children: [(0, xr.jsxs)("span", {
+              children: [zr("smpShop:youGet"), " ", (0, xr.jsx)(VW, {
+                amount: Math.max(0, br - Jr),
                 exact: !0
               })]
-            }), (0, KR.jsx)("small", {
-              children: QR > 0 ? nR("smpShop:listingFee", {
-                fee: QR.toLocaleString("en-US")
-              }) : nR("smpShop:listingRules")
+            }), (0, xr.jsx)("small", {
+              children: Jr > 0 ? zr("smpShop:listingFee", {
+                fee: Jr.toLocaleString("en-US")
+              }) : zr("smpShop:listingRules")
             })]
-          }), (0, KR.jsx)(fR.r, {
+          }), (0, xr.jsx)(Er.u, {
             className: "SmpSubmit",
-            disabled: !TR && !sR && !FR,
-            loading: FR || RJ || IR && RR.searching,
-            onClick: hR,
-            children: "list" === AR ? nR("smpShop:listButton", {
-              count: BR,
-              item: JJ
-            }) : (0, KR.jsxs)(KR.Fragment, {
-              children: [nR("smpShop:orderButton", {
-                count: BR,
-                item: JJ
-              }), " ", pR >= 1 && (0, KR.jsx)(St, {
-                amount: kR
+            disabled: !dr && !sr && !Dr,
+            loading: Dr || rS || kr && rr.searching,
+            onClick: ur,
+            children: "list" === er ? zr("smpShop:listButton", {
+              count: Tr,
+              item: SS
+            }) : (0, xr.jsxs)(xr.Fragment, {
+              children: [zr("smpShop:orderButton", {
+                count: Tr,
+                item: SS
+              }), " ", Or >= 1 && (0, xr.jsx)(VW, {
+                amount: br
               })]
             })
           })]
@@ -4201,627 +4201,627 @@ export const modules = {
       })
     }
 
-    function xu() {
-      var RR;
+    function Pa() {
+      var rr;
       const {
-        t: JR
-      } = (0, ZR.A)(), GR = eu(), tR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, uR = yu(tR, "search"), qR = yu(tR, "creator"), iR = Gu(tR, "enchantedCreator"), VR = Gu(tR, "listing"), wR = yu(tR, "empty"), rR = Uu(uR, VR.length > 0 || null !== wR), {
-        searched: eR,
-        shown: aR,
-        loading: LR
-      } = rR, [nR, UR] = (0, yR.useState)(!1), [WR, AR] = function() {
-        const [RR, JR] = (0, Bu.e)("smpMarketView", "list");
-        return ["grid" === RR ? "grid" : "list", JR]
-      }(), CR = "grid" === WR, XR = (0, yR.useMemo)((() => VR.filter((RR => {
+        t: Sr
+      } = (0, jr.E)(), Qr = Na(), Wr = null === (rr = Qr.shopInfo[Qr.categoryKey]) || void 0 === rr ? void 0 : rr.items, ar = Qa(Wr, "search"), Ir = Qa(Wr, "creator"), fr = Sa(Wr, "enchantedCreator"), pr = Sa(Wr, "listing"), mr = Qa(Wr, "empty"), Nr = za(ar, pr.length > 0 || null !== mr), {
+        searched: Ur,
+        shown: tr,
+        loading: hr
+      } = Nr, [zr, Yr] = (0, Zr.useState)(!1), [nr, er] = function() {
+        const [rr, Sr] = (0, Ba.e)("smpMarketView", "list");
+        return ["grid" === rr ? "grid" : "list", Sr]
+      }(), Kr = "grid" === nr, yr = (0, Zr.useMemo)((() => pr.filter((rr => {
         let {
-          meta: JR
-        } = RR;
-        return null !== JR.seller && JR.item === eR
-      })).map((RR => {
+          meta: Sr
+        } = rr;
+        return null !== Sr.seller && Sr.item === Ur
+      })).map((rr => {
         let {
-          meta: JR
-        } = RR;
-        return JR.pricePerItem
-      })).sort(((RR, JR) => RR - JR))), [VR, eR]), MR = (0, yR.useMemo)((() => {
-        const RR = new Set(rR.catalogue.map((RR => {
+          meta: Sr
+        } = rr;
+        return Sr.pricePerItem
+      })).sort(((rr, Sr) => rr - Sr))), [pr, Ur]), Br = (0, Zr.useMemo)((() => {
+        const rr = new Set(Nr.catalogue.map((rr => {
           let {
-            name: JR
-          } = RR;
-          return JR
+            name: Sr
+          } = rr;
+          return Sr
         })));
-        return function(RR) {
-          for (const JR in RR)
-            if ("sell" === RR[JR].smp) return Gu(RR[JR].items, "sell").filter((RR => {
+        return function(rr) {
+          for (const Sr in rr)
+            if ("sell" === rr[Sr].smp) return Sa(rr[Sr].items, "sell").filter((rr => {
               let {
-                item: JR
-              } = RR;
-              return !JR.enchant
-            })).map((RR => {
+                item: Sr
+              } = rr;
+              return !Sr.enchant
+            })).map((rr => {
               let {
-                meta: JR
-              } = RR;
+                meta: Sr
+              } = rr;
               return {
-                item: JR.item,
-                quantity: JR.quantity,
-                sellPrice: JR.pricePerItem
+                item: Sr.item,
+                quantity: Sr.quantity,
+                sellPrice: Sr.pricePerItem
               }
             }));
           return []
-        }(GR.shopInfo).filter((JR => {
+        }(Qr.shopInfo).filter((Sr => {
           let {
-            item: GR
-          } = JR;
-          return RR.has(GR)
+            item: Qr
+          } = Sr;
+          return rr.has(Qr)
         }))
-      }), [GR.shopInfo, rR.catalogue]);
-      return (0, KR.jsx)(Xu, {
-        browser: rR,
+      }), [Qr.shopInfo, Nr.catalogue]);
+      return (0, xr.jsx)(Ka, {
+        browser: Nr,
         className: "SmpMarketTab",
-        recentLabel: JR("smpShop:recentlyListed"),
-        action: (0, KR.jsx)(fR.r, {
+        recentLabel: Sr("smpShop:recentlyListed"),
+        action: (0, xr.jsx)(Er.u, {
           className: "SmpSellButton",
           onClick: () => {
-            UR((RR => !RR))
+            Yr((rr => !rr))
           },
-          children: JR("smpShop:sell")
+          children: Sr("smpShop:sell")
         }),
-        above: nR && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)(Ou, {
+        above: zr && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)(Xa, {
             mode: "list",
-            creator: qR,
-            inventory: MR,
-            catalogue: rR.catalogue,
-            names: rR.names,
-            searching: LR,
-            prices: XR,
-            onPickItem: rR.searchFor,
+            creator: Ir,
+            inventory: Br,
+            catalogue: Nr.catalogue,
+            names: Nr.names,
+            searching: hr,
+            prices: yr,
+            onPickItem: Nr.searchFor,
             onClose: () => {
-              UR(!1)
+              Yr(!1)
             }
-          }), iR.length > 0 && (0, KR.jsx)(Nu, {
-            entries: iR
+          }), fr.length > 0 && (0, xr.jsx)(Ha, {
+            entries: fr
           })]
         }),
-        listControls: (0, KR.jsx)(pu, {
-          view: WR,
-          onChange: AR
+        listControls: (0, xr.jsx)(va, {
+          view: nr,
+          onChange: er
         }),
-        summary: aR && (VR.length > 0 ? JR(1 === VR.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: VR.length,
-          price: Pt(Mu(VR, "min"))
-        }) : JR("smpShop:noOneSelling", {
-          item: Vu(rR.names, aR)
+        summary: tr && (pr.length > 0 ? Sr(1 === pr.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: pr.length,
+          price: MW(ya(pr, "min"))
+        }) : Sr("smpShop:noOneSelling", {
+          item: Ea(Nr.names, tr)
         })),
-        list: LR ? (0, KR.jsx)(jt, {
-          grid: CR
-        }) : VR.length > 0 ? (0, KR.jsx)(gu, {
-          entries: VR,
-          view: WR
-        }) : wR ? (0, KR.jsx)(Et, {
-          entry: wR
-        }) : (0, KR.jsx)(jt, {
+        list: hr ? (0, xr.jsx)(iW, {
+          grid: Kr
+        }) : pr.length > 0 ? (0, xr.jsx)(Oa, {
+          entries: pr,
+          view: nr
+        }) : mr ? (0, xr.jsx)(cW, {
+          entry: mr
+        }) : (0, xr.jsx)(iW, {
           count: 3,
-          grid: CR
+          grid: Kr
         })
       })
     }
 
-    function Nu(RR) {
+    function Ha(rr) {
       let {
-        entries: JR
-      } = RR;
+        entries: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)(), tR = eu(), [uR, qR] = (0, yR.useState)({});
-      return (0, KR.jsx)("div", {
+        t: Qr
+      } = (0, jr.E)(), Wr = Na(), [ar, Ir] = (0, Zr.useState)({});
+      return (0, xr.jsx)("div", {
         className: "SmpList",
-        children: JR.map((RR => {
-          var JR, yR, ZR;
+        children: Sr.map((rr => {
+          var Sr, Zr, jr;
           let {
-            key: iR,
-            item: VR,
-            meta: wR
-          } = RR;
-          const rR = null !== (JR = uR[iR]) && void 0 !== JR ? JR : 1;
-          return (0, KR.jsxs)("div", {
+            key: fr,
+            item: pr,
+            meta: mr
+          } = rr;
+          const Nr = null !== (Sr = ar[fr]) && void 0 !== Sr ? Sr : 1;
+          return (0, xr.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, KR.jsx)(zt, {
-              item: wR.item,
-              amount: wR.quantity,
-              tier: null !== (yR = null === (ZR = VR.enchant) || void 0 === ZR ? void 0 : ZR.tier) && void 0 !== yR ? yR : null
-            }), (0, KR.jsxs)("div", {
+            children: [(0, xr.jsx)(AW, {
+              item: mr.item,
+              amount: mr.quantity,
+              tier: null !== (Zr = null === (jr = pr.enchant) || void 0 === jr ? void 0 : jr.tier) && void 0 !== Zr ? Zr : null
+            }), (0, xr.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, KR.jsx)("b", {
-                children: (0, KR.jsx)(gt.c, {
-                  text: VR.customTitle
+              children: [(0, xr.jsx)("b", {
+                children: (0, xr.jsx)(OW.c, {
+                  text: pr.customTitle
                 })
-              }), (0, KR.jsx)("small", {
-                children: GR("smpShop:enchantedListing")
+              }), (0, xr.jsx)("small", {
+                children: Qr("smpShop:enchantedListing")
               })]
-            }), (0, KR.jsx)(Qt, {
-              value: rR,
-              onChange: RR => {
-                qR({
-                  ...uR,
-                  [iR]: RR
+            }), (0, xr.jsx)(bW, {
+              value: Nr,
+              onChange: rr => {
+                Ir({
+                  ...ar,
+                  [fr]: rr
                 })
               },
               max: 9999999,
-              step: Ft,
-              label: GR("smpShop:pricePerItem")
-            }), (0, KR.jsxs)(fR.r, {
-              loading: tR.isPending(iR),
+              step: JW,
+              label: Qr("smpShop:pricePerItem")
+            }), (0, xr.jsxs)(Er.u, {
+              loading: Wr.isPending(fr),
               onClick: () => {
-                tR.act(iR, String(rR))
+                Wr.act(fr, String(Nr))
               },
-              children: [GR("smpShop:list"), " ", (0, KR.jsx)(St, {
-                amount: rR
+              children: [Qr("smpShop:list"), " ", (0, xr.jsx)(VW, {
+                amount: Nr
               })]
             })]
-          }, iR)
+          }, fr)
         }))
       })
     }
-    const Du = (0, yR.memo)((function(RR) {
+    const qa = (0, Zr.memo)((function(rr) {
       let {
-        itemKey: JR,
-        item: GR,
-        quantity: yR,
-        pricePerItem: tR,
-        tier: ZR,
-        selected: qR,
-        onSelect: iR
-      } = RR;
-      return (0, KR.jsxs)("button", {
+        itemKey: Sr,
+        item: Qr,
+        quantity: Zr,
+        pricePerItem: Wr,
+        tier: jr,
+        selected: Ir,
+        onSelect: fr
+      } = rr;
+      return (0, xr.jsxs)("button", {
         type: "button",
-        className: uR()("SmpInventorySlot", {
-          SmpInventorySlotOn: qR
+        className: ar()("SmpInventorySlot", {
+          SmpInventorySlotOn: Ir
         }),
-        title: GR,
+        title: Qr,
         onClick: () => {
-          iR(JR)
+          fr(Sr)
         },
-        children: [(0, KR.jsx)(zt, {
-          item: GR,
-          amount: yR,
-          tier: ZR
-        }), (0, KR.jsx)(St, {
-          amount: tR
+        children: [(0, xr.jsx)(AW, {
+          item: Qr,
+          amount: Zr,
+          tier: jr
+        }), (0, xr.jsx)(VW, {
+          amount: Wr
         })]
       })
     }));
 
-    function Hu() {
-      var RR;
+    function Ra() {
+      var rr;
       const {
-        t: JR
-      } = (0, ZR.A)(), GR = eu(), tR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, qR = Gu(tR, "sell"), iR = yu(tR, "empty"), [fR, VR] = (0, yR.useState)(null), [wR, rR] = (0, yR.useState)({}), eR = qR.find((RR => {
+        t: Sr
+      } = (0, jr.E)(), Qr = Na(), Wr = null === (rr = Qr.shopInfo[Qr.categoryKey]) || void 0 === rr ? void 0 : rr.items, Ir = Sa(Wr, "sell"), fr = Qa(Wr, "empty"), [Er, pr] = (0, Zr.useState)(null), [mr, Nr] = (0, Zr.useState)({}), Ur = Ir.find((rr => {
         let {
-          key: JR
-        } = RR;
-        return JR === fR
+          key: Sr
+        } = rr;
+        return Sr === Er
       }));
-      return 0 === qR.length ? (0, KR.jsx)("div", {
+      return 0 === Ir.length ? (0, xr.jsx)("div", {
         className: "SmpScreen",
-        children: (0, KR.jsx)(dt, {
-          title: iR ? (0, KR.jsx)(gt.c, {
-            text: iR.item.customTitle
-          }) : JR("smpShop:nothingToSell"),
-          children: iR && (0, KR.jsx)(gt.c, {
-            text: iR.item.description
+        children: (0, xr.jsx)(wW, {
+          title: fr ? (0, xr.jsx)(OW.c, {
+            text: fr.item.customTitle
+          }) : Sr("smpShop:nothingToSell"),
+          children: fr && (0, xr.jsx)(OW.c, {
+            text: fr.item.description
           })
         })
-      }) : (0, KR.jsxs)("div", {
+      }) : (0, xr.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: qR.map((RR => {
-            var JR, GR;
+          children: Ir.map((rr => {
+            var Sr, Qr;
             let {
-              key: yR,
-              item: tR,
-              meta: uR
-            } = RR;
-            return (0, KR.jsx)(Du, {
-              itemKey: yR,
-              item: uR.item,
-              quantity: uR.quantity,
-              pricePerItem: uR.pricePerItem,
-              tier: null !== (JR = null === (GR = tR.enchant) || void 0 === GR ? void 0 : GR.tier) && void 0 !== JR ? JR : null,
-              selected: yR === fR,
-              onSelect: VR
-            }, yR)
+              key: Zr,
+              item: Wr,
+              meta: ar
+            } = rr;
+            return (0, xr.jsx)(qa, {
+              itemKey: Zr,
+              item: ar.item,
+              quantity: ar.quantity,
+              pricePerItem: ar.pricePerItem,
+              tier: null !== (Sr = null === (Qr = Wr.enchant) || void 0 === Qr ? void 0 : Qr.tier) && void 0 !== Sr ? Sr : null,
+              selected: Zr === Er,
+              onSelect: pr
+            }, Zr)
           }))
-        }), (0, KR.jsx)("div", {
-          className: uR()("SmpSellBar", {
-            SmpSellBarIdle: !eR
+        }), (0, xr.jsx)("div", {
+          className: ar()("SmpSellBar", {
+            SmpSellBarIdle: !Ur
           }),
-          children: eR ? (0, KR.jsx)(ou, {
-            entry: eR,
-            choice: Ku(eR.item, wR[eR.key]),
-            onChoose: RR => {
-              rR({
-                ...wR,
-                [eR.key]: RR
+          children: Ur ? (0, xr.jsx)(ga, {
+            entry: Ur,
+            choice: pa(Ur.item, mr[Ur.key]),
+            onChoose: rr => {
+              Nr({
+                ...mr,
+                [Ur.key]: rr
               })
             }
-          }) : (0, KR.jsx)("span", {
+          }) : (0, xr.jsx)("span", {
             className: "SmpMuted",
-            children: JR("smpShop:tapToSell")
+            children: Sr("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function ou(RR) {
-      var JR, GR, yR, tR;
+    function ga(rr) {
+      var Sr, Qr, Zr, Wr;
       let {
-        entry: uR,
-        choice: qR,
-        onChoose: iR
-      } = RR;
+        entry: ar,
+        choice: Ir,
+        onChoose: fr
+      } = rr;
       const {
-        t: VR
-      } = (0, ZR.A)(), wR = eu(), {
-        key: rR,
-        item: eR,
-        meta: aR
-      } = uR, LR = qu("dropdown" === (null === (JR = eR.userInput) || void 0 === JR ? void 0 : JR.type) ? eR.userInput.dropdownOptions : []), nR = null === qR ? 0 : -(0, Mt.e)(eR, qR);
-      return (0, KR.jsxs)(KR.Fragment, {
-        children: [(0, KR.jsx)(zt, {
-          item: aR.item,
-          amount: aR.quantity,
-          tier: null !== (GR = null === (yR = eR.enchant) || void 0 === yR ? void 0 : yR.tier) && void 0 !== GR ? GR : null
-        }), (0, KR.jsxs)("div", {
+        t: pr
+      } = (0, jr.E)(), mr = Na(), {
+        key: Nr,
+        item: Ur,
+        meta: tr
+      } = ar, hr = ja("dropdown" === (null === (Sr = Ur.userInput) || void 0 === Sr ? void 0 : Sr.type) ? Ur.userInput.dropdownOptions : []), zr = null === Ir ? 0 : -(0, yW.e)(Ur, Ir);
+      return (0, xr.jsxs)(xr.Fragment, {
+        children: [(0, xr.jsx)(AW, {
+          item: tr.item,
+          amount: tr.quantity,
+          tier: null !== (Qr = null === (Zr = Ur.enchant) || void 0 === Zr ? void 0 : Zr.tier) && void 0 !== Qr ? Qr : null
+        }), (0, xr.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, KR.jsx)("b", {
-            children: (0, KR.jsx)(gt.c, {
-              text: null !== (tR = eR.customTitle) && void 0 !== tR ? tR : aR.item
+          children: [(0, xr.jsx)("b", {
+            children: (0, xr.jsx)(OW.c, {
+              text: null !== (Wr = Ur.customTitle) && void 0 !== Wr ? Wr : tr.item
             })
-          }), (0, KR.jsx)("small", {
-            children: VR("smpShop:sellEach", {
-              count: aR.quantity
+          }), (0, xr.jsx)("small", {
+            children: pr("smpShop:sellEach", {
+              count: tr.quantity
             })
           })]
-        }), (0, KR.jsx)(Yt, {
-          options: LR.map((RR => {
+        }), (0, xr.jsx)(FW, {
+          options: hr.map((rr => {
             let {
-              label: JR,
-              quantity: GR,
-              isAll: yR
-            } = RR;
+              label: Sr,
+              quantity: Qr,
+              isAll: Zr
+            } = rr;
             return {
-              value: JR,
-              label: yR ? VR("smpShop:all", {
-                count: GR
-              }) : String(GR)
+              value: Sr,
+              label: Zr ? pr("smpShop:all", {
+                count: Qr
+              }) : String(Qr)
             }
           })),
-          value: qR,
-          onChange: iR,
-          ariaLabel: VR("smpShop:quantity")
-        }), (0, KR.jsxs)(fR.r, {
-          loading: wR.isPending(rR),
-          disabled: null === qR,
+          value: Ir,
+          onChange: fr,
+          ariaLabel: pr("smpShop:quantity")
+        }), (0, xr.jsxs)(Er.u, {
+          loading: mr.isPending(Nr),
+          disabled: null === Ir,
           onClick: () => {
-            wR.act(rR, qR)
+            mr.act(Nr, Ir)
           },
-          children: [VR("smpShop:sellButton"), " ", (0, KR.jsx)(St, {
-            amount: nR
+          children: [pr("smpShop:sellButton"), " ", (0, xr.jsx)(VW, {
+            amount: zr
           })]
         })]
       })
     }
 
-    function cu() {
-      var RR;
+    function Ca() {
+      var rr;
       const {
-        t: JR
-      } = (0, ZR.A)(), GR = eu(), yR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, tR = Gu(yR, "collect"), uR = Gu(yR, "myListing"), qR = (RR, JR) => GR.isPending(RR) || !1 === JR.canBuy;
-      return (0, KR.jsxs)("div", {
+        t: Sr
+      } = (0, jr.E)(), Qr = Na(), Zr = null === (rr = Qr.shopInfo[Qr.categoryKey]) || void 0 === rr ? void 0 : rr.items, Wr = Sa(Zr, "collect"), ar = Sa(Zr, "myListing"), Ir = (rr, Sr) => Qr.isPending(rr) || !1 === Sr.canBuy;
+      return (0, xr.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, KR.jsx)("h3", {
+        children: [(0, xr.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: JR("smpShop:readyToCollect")
-        }), tR.length > 0 ? (0, KR.jsx)("div", {
+          children: Sr("smpShop:readyToCollect")
+        }), Wr.length > 0 ? (0, xr.jsx)("div", {
           className: "SmpList",
-          children: tR.map((RR => {
-            var yR, tR;
+          children: Wr.map((rr => {
+            var Zr, Wr;
             let {
-              key: uR,
-              item: ZR,
-              meta: iR
-            } = RR;
-            return (0, KR.jsxs)("div", {
+              key: ar,
+              item: jr,
+              meta: fr
+            } = rr;
+            return (0, xr.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, KR.jsx)(zt, {
-                item: "sold" === iR.type ? "Gold Coin" : iR.item,
-                amount: "sold" === iR.type ? 0 : iR.quantity,
-                tier: null !== (yR = null === (tR = ZR.enchant) || void 0 === tR ? void 0 : tR.tier) && void 0 !== yR ? yR : null
-              }), (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)(AW, {
+                item: "sold" === fr.type ? "Gold Coin" : fr.item,
+                amount: "sold" === fr.type ? 0 : fr.quantity,
+                tier: null !== (Zr = null === (Wr = jr.enchant) || void 0 === Wr ? void 0 : Wr.tier) && void 0 !== Zr ? Zr : null
+              }), (0, xr.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, KR.jsx)("b", {
-                  children: (0, KR.jsx)(gt.c, {
-                    text: ZR.customTitle
+                children: [(0, xr.jsx)("b", {
+                  children: (0, xr.jsx)(OW.c, {
+                    text: jr.customTitle
                   })
-                }), (0, KR.jsx)("small", {
-                  children: (0, KR.jsx)(gt.c, {
-                    text: ZR.description
+                }), (0, xr.jsx)("small", {
+                  children: (0, xr.jsx)(OW.c, {
+                    text: jr.description
                   })
                 })]
-              }), (0, KR.jsx)(fR.n, {
-                loading: qR(uR, ZR),
+              }), (0, xr.jsx)(Er.p, {
+                loading: Ir(ar, jr),
                 onClick: () => {
-                  GR.act(uR)
+                  Qr.act(ar)
                 },
-                children: JR("smpShop:collect")
+                children: Sr("smpShop:collect")
               })]
-            }, uR)
+            }, ar)
           }))
-        }) : (0, KR.jsx)(dt, {
-          title: JR("smpShop:nothingToCollect"),
-          children: JR("smpShop:nothingToCollectHint")
-        }), (0, KR.jsx)("h3", {
+        }) : (0, xr.jsx)(wW, {
+          title: Sr("smpShop:nothingToCollect"),
+          children: Sr("smpShop:nothingToCollectHint")
+        }), (0, xr.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: JR("smpShop:activeListings", {
-            count: uR.length
+          children: Sr("smpShop:activeListings", {
+            count: ar.length
           })
-        }), uR.length > 0 ? (0, KR.jsx)("div", {
+        }), ar.length > 0 ? (0, xr.jsx)("div", {
           className: "SmpList",
-          children: uR.map((RR => {
-            var yR, tR;
+          children: ar.map((rr => {
+            var Zr, Wr;
             let {
-              key: uR,
-              item: ZR,
-              meta: iR
-            } = RR;
-            return (0, KR.jsxs)("div", {
+              key: ar,
+              item: jr,
+              meta: fr
+            } = rr;
+            return (0, xr.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, KR.jsx)(zt, {
-                item: iR.item,
-                amount: iR.quantity,
-                tier: null !== (yR = null === (tR = ZR.enchant) || void 0 === tR ? void 0 : tR.tier) && void 0 !== yR ? yR : null
-              }), (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)(AW, {
+                item: fr.item,
+                amount: fr.quantity,
+                tier: null !== (Zr = null === (Wr = jr.enchant) || void 0 === Wr ? void 0 : Wr.tier) && void 0 !== Zr ? Zr : null
+              }), (0, xr.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, KR.jsx)("b", {
-                  children: (0, KR.jsx)(gt.c, {
-                    text: ZR.customTitle
+                children: [(0, xr.jsx)("b", {
+                  children: (0, xr.jsx)(OW.c, {
+                    text: jr.customTitle
                   })
-                }), (0, KR.jsx)("small", {
-                  children: JR("smpShop:timeLeft", {
-                    time: Zu(iR.expiresAt)
+                }), (0, xr.jsx)("small", {
+                  children: Sr("smpShop:timeLeft", {
+                    time: aa(fr.expiresAt)
                   })
                 })]
-              }), (0, KR.jsxs)("div", {
+              }), (0, xr.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, KR.jsx)(St, {
-                  amount: iR.pricePerItem
-                }), (0, KR.jsx)("small", {
-                  children: JR("smpShop:each")
+                children: [(0, xr.jsx)(VW, {
+                  amount: fr.pricePerItem
+                }), (0, xr.jsx)("small", {
+                  children: Sr("smpShop:each")
                 })]
-              }), (0, KR.jsx)(fR.M, {
-                loading: qR(uR, ZR),
+              }), (0, xr.jsx)(Er.L, {
+                loading: Ir(ar, jr),
                 onClick: () => {
-                  GR.act(uR)
+                  Qr.act(ar)
                 },
-                children: JR("smpShop:cancel")
+                children: Sr("smpShop:cancel")
               })]
-            }, uR)
+            }, ar)
           }))
-        }) : (0, KR.jsx)(dt, {
-          title: JR("smpShop:noActiveListings"),
-          children: JR("smpShop:noActiveListingsHint")
+        }) : (0, xr.jsx)(wW, {
+          title: Sr("smpShop:noActiveListings"),
+          children: Sr("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function Pu(RR) {
+    function Ma(rr) {
       let {
-        done: JR,
-        of: GR
-      } = RR;
-      return (0, KR.jsx)("span", {
+        done: Sr,
+        of: Qr
+      } = rr;
+      return (0, xr.jsx)("span", {
         className: "SmpProgress",
-        children: (0, KR.jsx)("i", {
+        children: (0, xr.jsx)("i", {
           style: {
-            width: `${Math.min(100,JR/Math.max(1,GR)*100)}%`
+            width: `${Math.min(100,Sr/Math.max(1,Qr)*100)}%`
           }
         })
       })
     }
 
-    function Iu(RR) {
-      var JR, GR, yR;
+    function Ga(rr) {
+      var Sr, Qr, Zr;
       let {
-        entry: tR,
-        choice: uR,
-        onChoose: qR
-      } = RR;
+        entry: Wr,
+        choice: ar,
+        onChoose: Ir
+      } = rr;
       const {
-        t: iR
-      } = (0, ZR.A)(), VR = eu(), {
-        key: wR,
-        item: rR,
-        meta: eR
-      } = tR, aR = "dropdown" === (null === (JR = rR.userInput) || void 0 === JR ? void 0 : JR.type) ? rR.userInput.dropdownOptions : [], LR = !0 === eR.processing, nR = null !== eR.creator && (eR.owned > 0 || LR), UR = nR && eR.owned > 0 ? qu(aR) : [], WR = null === uR ? 0 : null !== (GR = null === (yR = UR.find((RR => RR.label === uR))) || void 0 === yR ? void 0 : yR.quantity) && void 0 !== GR ? GR : 0;
-      return (0, KR.jsxs)("div", {
+        t: fr
+      } = (0, jr.E)(), pr = Na(), {
+        key: mr,
+        item: Nr,
+        meta: Ur
+      } = Wr, tr = "dropdown" === (null === (Sr = Nr.userInput) || void 0 === Sr ? void 0 : Sr.type) ? Nr.userInput.dropdownOptions : [], hr = !0 === Ur.processing, zr = null !== Ur.creator && (Ur.owned > 0 || hr), Yr = zr && Ur.owned > 0 ? ja(tr) : [], nr = null === ar ? 0 : null !== (Qr = null === (Zr = Yr.find((rr => rr.label === ar))) || void 0 === Zr ? void 0 : Zr.quantity) && void 0 !== Qr ? Qr : 0;
+      return (0, xr.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, KR.jsx)(zt, {
-          item: eR.item
-        }), (0, KR.jsxs)("div", {
+        children: [(0, xr.jsx)(AW, {
+          item: Ur.item
+        }), (0, xr.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, KR.jsx)("b", {
-            children: (0, KR.jsx)(gt.c, {
-              text: rR.customTitle
+          children: [(0, xr.jsx)("b", {
+            children: (0, xr.jsx)(OW.c, {
+              text: Nr.customTitle
             })
-          }), (0, KR.jsxs)("small", {
-            children: [(0, KR.jsx)(St, {
-              amount: eR.pricePerItem
-            }), " ", iR("smpShop:each"), " \xb7", " ", null === eR.creator ? iR("smpShop:you") : (0, KR.jsx)(gt.c, {
+          }), (0, xr.jsxs)("small", {
+            children: [(0, xr.jsx)(VW, {
+              amount: Ur.pricePerItem
+            }), " ", fr("smpShop:each"), " \xb7", " ", null === Ur.creator ? fr("smpShop:you") : (0, xr.jsx)(OW.c, {
               text: [{
-                entityName: eR.creator
+                entityName: Ur.creator
               }]
             })]
-          }), (0, KR.jsx)(Pu, {
-            done: eR.delivered,
-            of: eR.wanted
+          }), (0, xr.jsx)(Ma, {
+            done: Ur.delivered,
+            of: Ur.wanted
           })]
-        }), nR ? (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)(Yt, {
-            options: UR.map((RR => {
+        }), zr ? (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)(FW, {
+            options: Yr.map((rr => {
               let {
-                label: JR,
-                quantity: GR,
-                isAll: yR
-              } = RR;
+                label: Sr,
+                quantity: Qr,
+                isAll: Zr
+              } = rr;
               return {
-                value: JR,
-                label: yR ? iR("smpShop:max", {
-                  count: GR
-                }) : String(GR)
+                value: Sr,
+                label: Zr ? fr("smpShop:max", {
+                  count: Qr
+                }) : String(Qr)
               }
             })),
-            value: uR,
-            onChange: qR,
-            ariaLabel: iR("smpShop:quantity")
-          }), (0, KR.jsxs)(fR.r, {
-            loading: VR.isPending(wR) || LR,
-            disabled: null === uR,
+            value: ar,
+            onChange: Ir,
+            ariaLabel: fr("smpShop:quantity")
+          }), (0, xr.jsxs)(Er.u, {
+            loading: pr.isPending(mr) || hr,
+            disabled: null === ar,
             onClick: () => {
-              VR.act(wR, uR)
+              pr.act(mr, ar)
             },
-            children: [iR("smpShop:deliver"), " ", (0, KR.jsx)(St, {
-              amount: WR * eR.pricePerItem
+            children: [fr("smpShop:deliver"), " ", (0, xr.jsx)(VW, {
+              amount: nr * Ur.pricePerItem
             })]
           })]
-        }) : (0, KR.jsx)("span", {
+        }) : (0, xr.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === eR.creator ? iR("smpShop:yourOrder") : iR("smpShop:youHave", {
+          children: null === Ur.creator ? fr("smpShop:yourOrder") : fr("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function mu() {
-      var RR;
+    function ka() {
+      var rr;
       const {
-        t: JR
-      } = (0, ZR.A)(), GR = eu(), tR = null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, uR = yu(tR, "search"), qR = yu(tR, "creator"), iR = Gu(tR, "order"), VR = yu(tR, "empty"), wR = Uu(uR, iR.length > 0 || null !== VR), [rR, eR] = (0, yR.useState)(!1), [aR, LR] = (0, yR.useState)({});
-      return (0, KR.jsx)(Xu, {
-        browser: wR,
-        recentLabel: JR("smpShop:recentOrders"),
-        action: (0, KR.jsx)(fR.r, {
+        t: Sr
+      } = (0, jr.E)(), Qr = Na(), Wr = null === (rr = Qr.shopInfo[Qr.categoryKey]) || void 0 === rr ? void 0 : rr.items, ar = Qa(Wr, "search"), Ir = Qa(Wr, "creator"), fr = Sa(Wr, "order"), pr = Qa(Wr, "empty"), mr = za(ar, fr.length > 0 || null !== pr), [Nr, Ur] = (0, Zr.useState)(!1), [tr, hr] = (0, Zr.useState)({});
+      return (0, xr.jsx)(Ka, {
+        browser: mr,
+        recentLabel: Sr("smpShop:recentOrders"),
+        action: (0, xr.jsx)(Er.u, {
           onClick: () => {
-            eR((RR => !RR))
+            Ur((rr => !rr))
           },
-          children: JR("smpShop:createOrder")
+          children: Sr("smpShop:createOrder")
         }),
-        above: rR && (0, KR.jsx)(Ou, {
+        above: Nr && (0, xr.jsx)(Xa, {
           mode: "order",
-          creator: qR,
-          catalogue: wR.catalogue,
-          names: wR.names,
-          searching: wR.loading,
+          creator: Ir,
+          catalogue: mr.catalogue,
+          names: mr.names,
+          searching: mr.loading,
           prices: [],
-          onPickItem: wR.searchFor,
+          onPickItem: mr.searchFor,
           onClose: () => {
-            eR(!1)
+            Ur(!1)
           }
         }),
         onBack: () => {
-          eR(!1)
+          Ur(!1)
         },
-        summary: iR.length > 0 && JR(1 === iR.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: iR.length,
-          price: Pt(Mu(iR, "max"))
+        summary: fr.length > 0 && Sr(1 === fr.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: fr.length,
+          price: MW(ya(fr, "max"))
         }),
-        list: wR.loading ? (0, KR.jsx)(jt, {}) : iR.length > 0 ? (0, KR.jsx)(au.d, {
+        list: mr.loading ? (0, xr.jsx)(iW, {}) : fr.length > 0 ? (0, xr.jsx)(Ua.d, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: tu,
-          observerUpdateDeps: [iR.length],
-          children: iR.map((RR => (0, KR.jsx)(Iu, {
-            entry: RR,
-            choice: Ku(RR.item, aR[RR.key]),
-            onChoose: JR => {
-              LR({
-                ...aR,
-                [RR.key]: JR
+          rootMargin: Za,
+          observerUpdateDeps: [fr.length],
+          children: fr.map((rr => (0, xr.jsx)(Ga, {
+            entry: rr,
+            choice: pa(rr.item, tr[rr.key]),
+            onChoose: Sr => {
+              hr({
+                ...tr,
+                [rr.key]: Sr
               })
             }
-          }, RR.key)))
-        }) : VR ? (0, KR.jsx)(Et, {
-          entry: VR
-        }) : (0, KR.jsx)(jt, {
+          }, rr.key)))
+        }) : pr ? (0, xr.jsx)(cW, {
+          entry: pr
+        }) : (0, xr.jsx)(iW, {
           count: 3
         })
       })
     }
 
-    function zu() {
-      var RR;
+    function Aa() {
+      var rr;
       const {
-        t: JR
-      } = (0, ZR.A)(), GR = eu(), yR = Gu(null === (RR = GR.shopInfo[GR.categoryKey]) || void 0 === RR ? void 0 : RR.items, "myOrder");
-      return 0 === yR.length ? (0, KR.jsx)("div", {
+        t: Sr
+      } = (0, jr.E)(), Qr = Na(), Zr = Sa(null === (rr = Qr.shopInfo[Qr.categoryKey]) || void 0 === rr ? void 0 : rr.items, "myOrder");
+      return 0 === Zr.length ? (0, xr.jsx)("div", {
         className: "SmpScreen",
-        children: (0, KR.jsx)(dt, {
-          title: JR("smpShop:noOrders"),
-          children: JR("smpShop:noOrdersHint")
+        children: (0, xr.jsx)(wW, {
+          title: Sr("smpShop:noOrders"),
+          children: Sr("smpShop:noOrdersHint")
         })
-      }) : (0, KR.jsx)("div", {
+      }) : (0, xr.jsx)("div", {
         className: "SmpScreen",
-        children: (0, KR.jsx)("div", {
+        children: (0, xr.jsx)("div", {
           className: "SmpList",
-          children: yR.map((RR => {
+          children: Zr.map((rr => {
             let {
-              key: yR,
-              item: tR,
-              meta: uR
-            } = RR;
-            const ZR = GR.isPending(yR) || !1 === tR.canBuy;
-            return (0, KR.jsxs)("div", {
+              key: Zr,
+              item: Wr,
+              meta: ar
+            } = rr;
+            const jr = Qr.isPending(Zr) || !1 === Wr.canBuy;
+            return (0, xr.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, KR.jsx)(zt, {
-                item: uR.item,
-                amount: uR.collectable
-              }), (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)(AW, {
+                item: ar.item,
+                amount: ar.collectable
+              }), (0, xr.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, KR.jsx)("b", {
-                  children: (0, KR.jsx)(gt.c, {
-                    text: tR.customTitle
+                children: [(0, xr.jsx)("b", {
+                  children: (0, xr.jsx)(OW.c, {
+                    text: Wr.customTitle
                   })
-                }), (0, KR.jsxs)("small", {
-                  children: [(0, KR.jsx)(St, {
-                    amount: uR.pricePerItem
-                  }), " ", JR("smpShop:each"), uR.collectable > 0 && ` \xb7 ${JR("smpShop:readyCount",{count:uR.collectable})}`]
-                }), (0, KR.jsx)(Pu, {
-                  done: uR.delivered,
-                  of: uR.wanted
+                }), (0, xr.jsxs)("small", {
+                  children: [(0, xr.jsx)(VW, {
+                    amount: ar.pricePerItem
+                  }), " ", Sr("smpShop:each"), ar.collectable > 0 && ` \xb7 ${Sr("smpShop:readyCount",{count:ar.collectable})}`]
+                }), (0, xr.jsx)(Ma, {
+                  done: ar.delivered,
+                  of: ar.wanted
                 })]
-              }), uR.collectable > 0 ? (0, KR.jsx)(fR.n, {
-                loading: ZR,
+              }), ar.collectable > 0 ? (0, xr.jsx)(Er.p, {
+                loading: jr,
                 onClick: () => {
-                  GR.act(yR)
+                  Qr.act(Zr)
                 },
-                children: JR("smpShop:collectCount", {
-                  count: uR.collectable
+                children: Sr("smpShop:collectCount", {
+                  count: ar.collectable
                 })
-              }) : (0, KR.jsx)(fR.M, {
-                loading: ZR,
+              }) : (0, xr.jsx)(Er.L, {
+                loading: jr,
                 onClick: () => {
-                  GR.act(yR)
+                  Qr.act(Zr)
                 },
-                children: JR("smpShop:cancel")
+                children: Sr("smpShop:cancel")
               })]
-            }, yR)
+            }, Zr)
           }))
         })
       })
     }
-    const Su = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      ju = {
+    const Va = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      ia = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4829,293 +4829,293 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function du(RR, JR) {
-      let GR = !1;
-      const yR = {};
-      for (const tR in RR) JR(tR, RR[tR]) ? yR[tR] = RR[tR] : GR = !0;
-      return GR ? yR : RR
+    function wa(rr, Sr) {
+      let Qr = !1;
+      const Zr = {};
+      for (const Wr in rr) Sr(Wr, rr[Wr]) ? Zr[Wr] = rr[Wr] : Qr = !0;
+      return Qr ? Zr : rr
     }
 
-    function Eu(RR) {
-      var JR, GR, tR, iR;
+    function ca(rr) {
+      var Sr, Qr, Wr, fr;
       const {
-        show: fR,
-        shopInfo: VR,
-        selectedCategoryKey: wR
-      } = RR, {
-        t: rR
-      } = (0, ZR.A)(), eR = null !== wR && void 0 !== wR ? wR : "", aR = Ju(VR, eR), LR = null === (JR = VR[eR]) || void 0 === JR ? void 0 : JR.items, nR = null !== aR, [UR, WR] = (0, yR.useState)({}), [AR, CR] = (0, yR.useState)([]), [XR, MR] = (0, yR.useState)(!1), [BR, lR] = (0, yR.useState)(null), [, pR] = (0, yR.useState)(0), gR = (0, yR.useRef)(0), bR = (0, yR.useRef)({}), vR = (0, yR.useRef)({
-        items: LR,
-        pending: UR,
-        shopInfo: VR,
-        active: nR,
-        show: fR,
-        canAfford: RR.canAfford,
-        buy: RR.buy
+        show: Er,
+        shopInfo: pr,
+        selectedCategoryKey: mr
+      } = rr, {
+        t: Nr
+      } = (0, jr.E)(), Ur = null !== mr && void 0 !== mr ? mr : "", tr = ra(pr, Ur), hr = null === (Sr = pr[Ur]) || void 0 === Sr ? void 0 : Sr.items, zr = null !== tr, [Yr, nr] = (0, Zr.useState)({}), [er, Kr] = (0, Zr.useState)([]), [yr, Br] = (0, Zr.useState)(!1), [Tr, vr] = (0, Zr.useState)(null), [, Or] = (0, Zr.useState)(0), Lr = (0, Zr.useRef)(0), lr = (0, Zr.useRef)({}), Xr = (0, Zr.useRef)({
+        items: hr,
+        pending: Yr,
+        shopInfo: pr,
+        active: zr,
+        show: Er,
+        canAfford: rr.canAfford,
+        buy: rr.buy
       });
-      vR.current = {
-        items: LR,
-        pending: UR,
-        shopInfo: VR,
-        active: nR,
-        show: fR,
-        canAfford: RR.canAfford,
-        buy: RR.buy
+      Xr.current = {
+        items: hr,
+        pending: Yr,
+        shopInfo: pr,
+        active: zr,
+        show: Er,
+        canAfford: rr.canAfford,
+        buy: rr.buy
       };
-      const OR = (0, yR.useCallback)((RR => {
-        gR.current++;
-        const JR = gR.current;
-        CR((GR => [{
-          id: JR,
-          text: RR
-        }, ...GR].slice(0, 8))), lR(JR)
+      const Pr = (0, Zr.useCallback)((rr => {
+        Lr.current++;
+        const Sr = Lr.current;
+        Kr((Qr => [{
+          id: Sr,
+          text: rr
+        }, ...Qr].slice(0, 8))), vr(Sr)
       }), []);
-      (0, yR.useEffect)((() => {
-        if (null === BR) return;
-        const RR = setTimeout((() => {
-          lR(null)
+      (0, Zr.useEffect)((() => {
+        if (null === Tr) return;
+        const rr = setTimeout((() => {
+          vr(null)
         }), 3e3);
         return () => {
-          clearTimeout(RR)
+          clearTimeout(rr)
         }
-      }), [BR]), (0, yR.useEffect)((() => {
-        const JR = RR.message;
-        if (!JR) return;
+      }), [Tr]), (0, Zr.useEffect)((() => {
+        const Sr = rr.message;
+        if (!Sr) return;
         const {
-          shopInfo: GR,
-          active: yR,
-          items: tR
-        } = vR.current, uR = null !== JR.categoryKey ? null !== Ju(GR, JR.categoryKey) : yR;
-        (uR || yR) && OR(JR.text), uR && WR((RR => du(RR, (RR => {
-          var JR, GR;
-          return !Su.has(null === tR || void 0 === tR || null === (JR = tR[RR]) || void 0 === JR || null === (GR = JR.smp) || void 0 === GR ? void 0 : GR.kind)
+          shopInfo: Qr,
+          active: Zr,
+          items: Wr
+        } = Xr.current, ar = null !== Sr.categoryKey ? null !== ra(Qr, Sr.categoryKey) : Zr;
+        (ar || Zr) && Pr(Sr.text), ar && nr((rr => wa(rr, (rr => {
+          var Sr, Qr;
+          return !Va.has(null === Wr || void 0 === Wr || null === (Sr = Wr[rr]) || void 0 === Sr || null === (Qr = Sr.smp) || void 0 === Qr ? void 0 : Qr.kind)
         }))))
-      }), [RR.message, OR]), (0, yR.useEffect)((() => {
-        WR((RR => du(RR, ((RR, JR) => wu(null === LR || void 0 === LR ? void 0 : LR[RR]) === JR.snapshot))))
-      }), [VR, LR]);
-      const xR = Object.keys(UR).length > 0;
-      (0, yR.useEffect)((() => {
-        if (!xR) return;
-        const RR = setInterval((() => {
+      }), [rr.message, Pr]), (0, Zr.useEffect)((() => {
+        nr((rr => wa(rr, ((rr, Sr) => xa(null === hr || void 0 === hr ? void 0 : hr[rr]) === Sr.snapshot))))
+      }), [pr, hr]);
+      const Hr = Object.keys(Yr).length > 0;
+      (0, Zr.useEffect)((() => {
+        if (!Hr) return;
+        const rr = setInterval((() => {
           const {
-            pending: RR,
-            items: JR,
-            show: GR
-          } = vR.current;
-          if (!GR) return;
-          pR((RR => RR + 1));
-          const yR = Date.now(),
-            tR = Object.keys(RR).filter((GR => yR - RR[GR].at >= 12e3 && wu(null === JR || void 0 === JR ? void 0 : JR[GR]) === RR[GR].snapshot));
-          if (0 === tR.length) return;
-          const uR = tR.some((GR => {
-            var yR, tR;
-            return "search" !== (null === JR || void 0 === JR || null === (yR = JR[GR]) || void 0 === yR || null === (tR = yR.smp) || void 0 === tR ? void 0 : tR.kind) || RR[GR].resend
+            pending: rr,
+            items: Sr,
+            show: Qr
+          } = Xr.current;
+          if (!Qr) return;
+          Or((rr => rr + 1));
+          const Zr = Date.now(),
+            Wr = Object.keys(rr).filter((Qr => Zr - rr[Qr].at >= 12e3 && xa(null === Sr || void 0 === Sr ? void 0 : Sr[Qr]) === rr[Qr].snapshot));
+          if (0 === Wr.length) return;
+          const ar = Wr.some((Qr => {
+            var Zr, Wr;
+            return "search" !== (null === Sr || void 0 === Sr || null === (Zr = Sr[Qr]) || void 0 === Zr || null === (Wr = Zr.smp) || void 0 === Wr ? void 0 : Wr.kind) || rr[Qr].resend
           }));
-          for (const ZR of tR) bR.current[ZR] = yR;
-          WR((RR => du(RR, (RR => !tR.includes(RR))))), uR && OR(rR("smpShop:noAnswer"))
+          for (const jr of Wr) lr.current[jr] = Zr;
+          nr((rr => wa(rr, (rr => !Wr.includes(rr))))), ar && Pr(Nr("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(RR)
+          clearInterval(rr)
         }
-      }), [xR]), (0, yR.useEffect)((() => {
-        WR({})
-      }), [eR]), (0, yR.useEffect)((() => {
-        fR || MR(!1)
-      }), [fR]);
-      const NR = (0, yR.useCallback)((function(RR, JR) {
-          let GR = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [Hr]), (0, Zr.useEffect)((() => {
+        nr({})
+      }), [Ur]), (0, Zr.useEffect)((() => {
+        Er || Br(!1)
+      }), [Er]);
+      const qr = (0, Zr.useCallback)((function(rr, Sr) {
+          let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: yR,
-            pending: tR,
-            canAfford: uR,
-            buy: ZR
-          } = vR.current, qR = null === yR || void 0 === yR ? void 0 : yR[RR];
-          if (!qR || RR in tR || !1 === qR.canBuy) return !1;
-          if (!uR(qR, (0, Mt.e)(qR, JR))) return !1;
-          ZR(RR, qR, JR);
-          const iR = {
-            snapshot: wu(qR),
+            items: Zr,
+            pending: Wr,
+            canAfford: ar,
+            buy: jr
+          } = Xr.current, Ir = null === Zr || void 0 === Zr ? void 0 : Zr[rr];
+          if (!Ir || rr in Wr || !1 === Ir.canBuy) return !1;
+          if (!ar(Ir, (0, yW.e)(Ir, Sr))) return !1;
+          jr(rr, Ir, Sr);
+          const fr = {
+            snapshot: xa(Ir),
             at: Date.now(),
-            resend: GR
+            resend: Qr
           };
-          return vR.current.pending = {
-            ...vR.current.pending,
-            [RR]: iR
-          }, WR((JR => ({
-            ...JR,
-            [RR]: iR
+          return Xr.current.pending = {
+            ...Xr.current.pending,
+            [rr]: fr
+          }, nr((Sr => ({
+            ...Sr,
+            [rr]: fr
           }))), !0
         }), []),
-        DR = (0, yR.useMemo)((() => ({
-          shopInfo: VR,
-          categoryKey: eR,
-          canAfford: RR.canAfford,
-          isPending: RR => RR in UR,
-          gaveUpAt: RR => {
-            var JR;
-            return null !== (JR = bR.current[RR]) && void 0 !== JR ? JR : 0
+        Rr = (0, Zr.useMemo)((() => ({
+          shopInfo: pr,
+          categoryKey: Ur,
+          canAfford: rr.canAfford,
+          isPending: rr => rr in Yr,
+          gaveUpAt: rr => {
+            var Sr;
+            return null !== (Sr = lr.current[rr]) && void 0 !== Sr ? Sr : 0
           },
-          act: NR,
-          notify: OR
-        })), [VR, eR, RR.canAfford, UR, NR, OR]),
-        HR = Math.min(...Object.values(UR).map((RR => RR.at))),
-        oR = xR && Date.now() - HR > 1500,
-        cR = AR.length > 1,
-        PR = null !== (GR = null === (tR = VR[eR]) || void 0 === tR ? void 0 : tR.customTitle) && void 0 !== GR ? GR : eR,
-        IR = null === (iR = VR[eR]) || void 0 === iR ? void 0 : iR.description;
-      let mR = null;
-      return "market" === aR ? mR = (0, KR.jsx)(xu, {}) : "sell" === aR ? mR = (0, KR.jsx)(Hu, {}) : "collect" === aR ? mR = (0, KR.jsx)(cu, {}) : "orders" === aR ? mR = (0, KR.jsx)(mu, {}) : "myOrders" === aR && (mR = (0, KR.jsx)(zu, {})), (0, KR.jsx)(ru.Provider, {
-        value: DR,
-        children: (0, KR.jsx)("div", {
+          act: qr,
+          notify: Pr
+        })), [pr, Ur, rr.canAfford, Yr, qr, Pr]),
+        gr = Math.min(...Object.values(Yr).map((rr => rr.at))),
+        Cr = Hr && Date.now() - gr > 1500,
+        Mr = er.length > 1,
+        Gr = null !== (Qr = null === (Wr = pr[Ur]) || void 0 === Wr ? void 0 : Wr.customTitle) && void 0 !== Qr ? Qr : Ur,
+        kr = null === (fr = pr[Ur]) || void 0 === fr ? void 0 : fr.description;
+      let Ar = null;
+      return "market" === tr ? Ar = (0, xr.jsx)(Pa, {}) : "sell" === tr ? Ar = (0, xr.jsx)(Ra, {}) : "collect" === tr ? Ar = (0, xr.jsx)(Ca, {}) : "orders" === tr ? Ar = (0, xr.jsx)(ka, {}) : "myOrders" === tr && (Ar = (0, xr.jsx)(Aa, {})), (0, xr.jsx)(ma.Provider, {
+        value: Rr,
+        children: (0, xr.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !nR,
-          children: (0, KR.jsxs)("div", {
+          hidden: !zr,
+          children: (0, xr.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, KR.jsx)("header", {
+            children: [(0, xr.jsx)("header", {
               className: "SmpHeader",
-              children: (0, KR.jsxs)("div", {
+              children: (0, xr.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, KR.jsxs)("h2", {
-                  children: [aR && (0, KR.jsx)(qR.d, {
-                    name: ju[aR]
-                  }), rR(PR)]
-                }), IR && (0, KR.jsx)("p", {
-                  children: (0, KR.jsx)(gt.c, {
-                    text: IR
+                children: [(0, xr.jsxs)("h2", {
+                  children: [tr && (0, xr.jsx)(Ir.c, {
+                    name: ia[tr]
+                  }), Nr(Gr)]
+                }), kr && (0, xr.jsx)("p", {
+                  children: (0, xr.jsx)(OW.c, {
+                    text: kr
                   })
                 })]
               })
-            }), (0, KR.jsx)("main", {
+            }), (0, xr.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: fR && mR
-            }), (0, KR.jsxs)("button", {
+              children: Er && Ar
+            }), (0, xr.jsxs)("button", {
               type: "button",
-              className: uR()("SmpStatus", {
-                SmpStatusWaiting: xR,
-                SmpStatusFresh: !xR && null !== BR,
-                SmpStatusHasHistory: cR
+              className: ar()("SmpStatus", {
+                SmpStatusWaiting: Hr,
+                SmpStatusFresh: !Hr && null !== Tr,
+                SmpStatusHasHistory: Mr
               }),
               "aria-live": "polite",
-              "aria-expanded": cR ? XR : void 0,
+              "aria-expanded": Mr ? yr : void 0,
               onClick: () => {
-                cR && MR((RR => !RR))
+                Mr && Br((rr => !rr))
               },
-              children: [xR ? (0, KR.jsxs)("span", {
+              children: [Hr ? (0, xr.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, KR.jsx)(kt, {}), rR(oR ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : AR[0] ? (0, KR.jsx)("span", {
+                children: [(0, xr.jsx)(oW, {}), Nr(Cr ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : er[0] ? (0, xr.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, KR.jsx)(gt.c, {
-                  text: AR[0].text
+                children: (0, xr.jsx)(OW.c, {
+                  text: er[0].text
                 })
-              }, AR[0].id) : (0, KR.jsx)("span", {
+              }, er[0].id) : (0, xr.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: rR("smpShop:ready")
-              }), cR && (0, KR.jsx)("small", {
-                children: rR("smpShop:recentMessages", {
-                  count: AR.length
+                children: Nr("smpShop:ready")
+              }), Mr && (0, xr.jsx)("small", {
+                children: Nr("smpShop:recentMessages", {
+                  count: er.length
                 })
               })]
-            }), XR && cR && (0, KR.jsx)("div", {
+            }), yr && Mr && (0, xr.jsx)("div", {
               className: "SmpStatusHistory",
-              children: AR.map((RR => (0, KR.jsx)("div", {
-                children: (0, KR.jsx)(gt.c, {
-                  text: RR.text
+              children: er.map((rr => (0, xr.jsx)("div", {
+                children: (0, xr.jsx)(OW.c, {
+                  text: rr.text
                 })
-              }, RR.id)))
+              }, rr.id)))
             })]
           })
         })
       })
     }
-    var Yu = GR(2163),
-      ku = GR(35166);
-    const Qu = "\x1floadout";
+    var Fa = Qr(2114),
+      oa = Qr(35481);
+    const ba = "\x1floadout";
 
-    function Fu(RR) {
-      const JR = [];
-      for (const GR in RR) {
-        const yR = RR[GR].loadout;
-        yR && JR.push({
-          categoryKey: GR,
-          config: yR
+    function Ja(rr) {
+      const Sr = [];
+      for (const Qr in rr) {
+        const Zr = rr[Qr].loadout;
+        Zr && Sr.push({
+          categoryKey: Qr,
+          config: Zr
         })
       }
-      return JR.sort(((RR, JR) => Tu(RR.config) - Tu(JR.config)))
+      return Sr.sort(((rr, Sr) => Da(rr.config) - Da(Sr.config)))
     }
 
-    function Tu(RR) {
-      return "gun" === RR.slot ? 0 : RR.tier
+    function Da(rr) {
+      return "gun" === rr.slot ? 0 : rr.tier
     }
 
-    function su(RR) {
-      const JR = [];
-      for (const GR of ot(RR)) RR[GR].loadout ? JR.includes(Qu) || JR.push(Qu) : JR.push(GR);
-      return JR
+    function da(rr) {
+      const Sr = [];
+      for (const Qr of gW(rr)) rr[Qr].loadout ? Sr.includes(ba) || Sr.push(ba) : Sr.push(Qr);
+      return Sr
     }
 
-    function hu(RR, JR) {
-      const GR = [];
-      for (const yR in RR) {
-        const tR = RR[yR].loadout;
-        (null === tR || void 0 === tR ? void 0 : tR.kind) === JR && GR.push({
-          key: yR,
-          item: RR[yR],
-          meta: tR
+    function sa(rr, Sr) {
+      const Qr = [];
+      for (const Zr in rr) {
+        const Wr = rr[Zr].loadout;
+        (null === Wr || void 0 === Wr ? void 0 : Wr.kind) === Sr && Qr.push({
+          key: Zr,
+          item: rr[Zr],
+          meta: Wr
         })
       }
-      return GR.sort(((RR, JR) => {
-        const GR = JZ(RR.meta) - JZ(JR.meta);
-        return 0 !== GR ? GR : RR.meta.free !== JR.meta.free ? RR.meta.free ? -1 : 1 : RR.key.localeCompare(JR.key)
+      return Qr.sort(((rr, Sr) => {
+        const Qr = rj(rr.meta) - rj(Sr.meta);
+        return 0 !== Qr ? Qr : rr.meta.free !== Sr.meta.free ? rr.meta.free ? -1 : 1 : rr.key.localeCompare(Sr.key)
       }))
     }
-    const RZ = ["assaultRifle", "battleRifle", "smg", "shotgun", "marksman", "sniper", "machineGun", "pistol", "machinePistol"];
+    const ua = ["assaultRifle", "battleRifle", "smg", "shotgun", "marksman", "sniper", "machineGun", "pistol", "machinePistol"];
 
-    function JZ(RR) {
-      return "gun" === RR.kind ? RZ.indexOf(RR.gunClass) : 0
+    function rj(rr) {
+      return "gun" === rr.kind ? ua.indexOf(rr.gunClass) : 0
     }
-    const GZ = ["damage", "fireRate", "accuracy"];
+    const Sj = ["damage", "fireRate", "accuracy"];
 
-    function yZ(RR, JR) {
-      var GR, yR, tR;
-      const uR = ku.e[RR];
-      if (!uR) return null;
-      const ZR = {
-        ...uR,
-        ...JR
+    function Qj(rr, Sr) {
+      var Qr, Zr, Wr;
+      const ar = oa.c[rr];
+      if (!ar) return null;
+      const jr = {
+        ...ar,
+        ...Sr
       };
       return {
-        damage: ZR.damage * (null !== (GR = ZR.shotPelletCount) && void 0 !== GR ? GR : 1),
-        fireRate: tZ(ZR.fireRate, null !== (yR = ZR.burstCount) && void 0 !== yR ? yR : 1, null !== (tR = ZR.burstDelay) && void 0 !== tR ? tR : 0),
-        accuracy: -(ZR.altInaccuracyStanding + ZR.altInaccuracyFromShot),
-        clipSize: ZR.clipSize
+        damage: jr.damage * (null !== (Qr = jr.shotPelletCount) && void 0 !== Qr ? Qr : 1),
+        fireRate: Zj(jr.fireRate, null !== (Zr = jr.burstCount) && void 0 !== Zr ? Zr : 1, null !== (Wr = jr.burstDelay) && void 0 !== Wr ? Wr : 0),
+        accuracy: -(jr.altInaccuracyStanding + jr.altInaccuracyFromShot),
+        clipSize: jr.clipSize
       }
     }
 
-    function tZ(RR, JR, GR) {
-      return 6e4 * JR / (6e4 / RR + (JR - 1) * GR)
+    function Zj(rr, Sr, Qr) {
+      return 6e4 * Sr / (6e4 / rr + (Sr - 1) * Qr)
     }
 
-    function uZ(RR, JR, GR, yR) {
-      if ("accuracy" !== RR) return GR <= 0 ? 1 : JR / GR;
-      const tR = Math.sqrt(-yR) - Math.sqrt(-GR);
-      return tR <= 0 ? 1 : 1 - (Math.sqrt(-JR) - Math.sqrt(-GR)) / tR * .94
+    function Wj(rr, Sr, Qr, Zr) {
+      if ("accuracy" !== rr) return Qr <= 0 ? 1 : Sr / Qr;
+      const Wr = Math.sqrt(-Zr) - Math.sqrt(-Qr);
+      return Wr <= 0 ? 1 : 1 - (Math.sqrt(-Sr) - Math.sqrt(-Qr)) / Wr * .94
     }
 
-    function ZZ(RR) {
+    function aj(rr) {
       let {
-        iconName: JR
-      } = RR;
-      return UR.gameBridge.lookup("isItemName", JR) ? (0, KR.jsx)(pt.b, {
-        itemName: JR,
+        iconName: Sr
+      } = rr;
+      return Yr.gameBridge.lookup("isItemName", Sr) ? (0, xr.jsx)(vW.d, {
+        itemName: Sr,
         amount: 1
-      }) : (0, KR.jsx)(qR.d, {
-        name: JR,
+      }) : (0, xr.jsx)(Ir.c, {
+        name: Sr,
         className: "2x"
       })
     }
-    const qZ = {
+    const jj = {
       assaultRifle: "loadoutShop:classAssaultRifle",
       battleRifle: "loadoutShop:classBattleRifle",
       smg: "loadoutShop:classSmg",
@@ -5127,251 +5127,251 @@ export const modules = {
       machinePistol: "loadoutShop:classMachinePistol"
     };
 
-    function iZ(RR) {
+    function Ij(rr) {
       let {
-        entry: JR,
-        stats: GR,
-        bars: yR,
-        compared: tR,
-        buy: iR,
-        canAfford: fR,
-        currency: VR
-      } = RR;
+        entry: Sr,
+        stats: Qr,
+        bars: Zr,
+        compared: Wr,
+        buy: fr,
+        canAfford: Er,
+        currency: pr
+      } = rr;
       const {
-        t: wR
-      } = (0, ZR.A)(), {
-        meta: rR
-      } = JR;
-      return (0, KR.jsxs)("div", {
-        className: uR()("LoadoutCard", "LoadoutGunCard", {
-          LoadoutCardEquipped: rR.equipped,
-          LoadoutCardLocked: !rR.unlocked
+        t: mr
+      } = (0, jr.E)(), {
+        meta: Nr
+      } = Sr;
+      return (0, xr.jsxs)("div", {
+        className: ar()("LoadoutCard", "LoadoutGunCard", {
+          LoadoutCardEquipped: Nr.equipped,
+          LoadoutCardLocked: !Nr.unlocked
         }),
-        children: [!rR.unlocked && (0, KR.jsx)(qR.d, {
+        children: [!Nr.unlocked && (0, xr.jsx)(Ir.c, {
           name: "lock",
           className: "LoadoutCardLock"
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "LoadoutGunArt",
-          children: (0, KR.jsx)(pt.b, {
-            itemName: rR.gun,
+          children: (0, xr.jsx)(vW.d, {
+            itemName: Nr.gun,
             amount: 0,
             gunTransform: "none"
           })
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "LoadoutCardTitle",
-          children: [(0, KR.jsx)("b", {
-            children: JR.key
-          }), (0, KR.jsxs)("small", {
-            children: [wR(qZ[rR.gunClass]), GR && (0, KR.jsxs)(KR.Fragment, {
-              children: [" \xb7 ", wR("loadoutShop:rounds", {
-                count: GR.clipSize
+          children: [(0, xr.jsx)("b", {
+            children: Sr.key
+          }), (0, xr.jsxs)("small", {
+            children: [mr(jj[Nr.gunClass]), Qr && (0, xr.jsxs)(xr.Fragment, {
+              children: [" \xb7 ", mr("loadoutShop:rounds", {
+                count: Qr.clipSize
               })]
             })]
           })]
-        }), GR && yR && (0, KR.jsx)("div", {
+        }), Qr && Zr && (0, xr.jsx)("div", {
           className: "LoadoutStats",
-          children: GZ.map((RR => {
-            const JR = tR ? function(RR, JR) {
-              const GR = Math.max(Math.abs(RR), Math.abs(JR), 1);
-              return Math.abs(RR - JR) / GR < .05 ? null : RR > JR ? "better" : "worse"
-            }(GR[RR], tR[RR]) : null;
-            return (0, KR.jsxs)("div", {
+          children: Sj.map((rr => {
+            const Sr = Wr ? function(rr, Sr) {
+              const Qr = Math.max(Math.abs(rr), Math.abs(Sr), 1);
+              return Math.abs(rr - Sr) / Qr < .05 ? null : rr > Sr ? "better" : "worse"
+            }(Qr[rr], Wr[rr]) : null;
+            return (0, xr.jsxs)("div", {
               className: "LoadoutStat",
-              children: [(0, KR.jsx)("span", {
-                children: wR(`loadoutShop:${RR}`)
-              }), (0, KR.jsx)("div", {
+              children: [(0, xr.jsx)("span", {
+                children: mr(`loadoutShop:${rr}`)
+              }), (0, xr.jsx)("div", {
                 className: "LoadoutBar",
-                children: (0, KR.jsx)("i", {
-                  className: uR()({
-                    LoadoutBarBetter: "better" === JR,
-                    LoadoutBarWorse: "worse" === JR
+                children: (0, xr.jsx)("i", {
+                  className: ar()({
+                    LoadoutBarBetter: "better" === Sr,
+                    LoadoutBarWorse: "worse" === Sr
                   }),
                   style: {
-                    width: 100 * yR[RR] + "%"
+                    width: 100 * Zr[rr] + "%"
                   }
                 })
               })]
-            }, RR)
+            }, rr)
           }))
-        }), (0, KR.jsx)(VZ, {
-          entry: JR,
-          buy: iR,
-          canAfford: fR,
-          currency: VR
+        }), (0, xr.jsx)(Ej, {
+          entry: Sr,
+          buy: fr,
+          canAfford: Er,
+          currency: pr
         })]
       })
     }
 
-    function fZ(RR) {
+    function fj(rr) {
       let {
-        entry: JR,
-        buy: GR,
-        canAfford: yR,
-        currency: tR
-      } = RR;
+        entry: Sr,
+        buy: Qr,
+        canAfford: Zr,
+        currency: Wr
+      } = rr;
       const {
-        meta: ZR
-      } = JR;
-      return (0, KR.jsxs)("div", {
-        className: uR()("LoadoutCard", "LoadoutPerkCard", {
-          LoadoutCardEquipped: ZR.equipped,
-          LoadoutCardLocked: !ZR.unlocked
+        meta: jr
+      } = Sr;
+      return (0, xr.jsxs)("div", {
+        className: ar()("LoadoutCard", "LoadoutPerkCard", {
+          LoadoutCardEquipped: jr.equipped,
+          LoadoutCardLocked: !jr.unlocked
         }),
-        children: [!ZR.unlocked && (0, KR.jsx)(qR.d, {
+        children: [!jr.unlocked && (0, xr.jsx)(Ir.c, {
           name: "lock",
           className: "LoadoutCardLock"
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "LoadoutPerkIcon",
-          children: (0, KR.jsx)(qR.d, {
-            name: ZR.icon
+          children: (0, xr.jsx)(Ir.c, {
+            name: jr.icon
           })
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "LoadoutCardTitle",
-          children: [(0, KR.jsx)("b", {
-            children: JR.key
-          }), (0, KR.jsx)("small", {
-            children: ZR.description
+          children: [(0, xr.jsx)("b", {
+            children: Sr.key
+          }), (0, xr.jsx)("small", {
+            children: jr.description
           })]
-        }), (0, KR.jsx)(VZ, {
-          entry: JR,
-          buy: GR,
-          canAfford: yR,
-          currency: tR
+        }), (0, xr.jsx)(Ej, {
+          entry: Sr,
+          buy: Qr,
+          canAfford: Zr,
+          currency: Wr
         })]
       })
     }
 
-    function VZ(RR) {
+    function Ej(rr) {
       let {
-        entry: JR,
-        buy: GR,
-        canAfford: yR,
-        currency: tR
-      } = RR;
+        entry: Sr,
+        buy: Qr,
+        canAfford: Zr,
+        currency: Wr
+      } = rr;
       const {
-        t: iR
-      } = (0, ZR.A)(), {
-        meta: VR,
-        item: wR
-      } = JR, rR = () => {
-        GR(JR.key, wR)
+        t: fr
+      } = (0, jr.E)(), {
+        meta: pr,
+        item: mr
+      } = Sr, Nr = () => {
+        Qr(Sr.key, mr)
       };
-      return (0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
         className: "LoadoutCardFoot",
-        children: [VR.equipped && (0, KR.jsxs)("span", {
+        children: [pr.equipped && (0, xr.jsxs)("span", {
           className: "LoadoutCardState LoadoutCardStateEquipped",
-          children: [(0, KR.jsx)(qR.d, {
+          children: [(0, xr.jsx)(Ir.c, {
             name: "check"
-          }), iR("loadoutShop:equipped")]
-        }), VR.unlocked && !VR.equipped && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)("span", {
+          }), fr("loadoutShop:equipped")]
+        }), pr.unlocked && !pr.equipped && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)("span", {
             className: "LoadoutCardState",
-            children: VR.free ? iR("loadoutShop:free") : iR("loadoutShop:owned")
-          }), (0, KR.jsx)(fR.g, {
+            children: pr.free ? fr("loadoutShop:free") : fr("loadoutShop:owned")
+          }), (0, xr.jsx)(Er.h, {
             className: "LoadoutCardButton",
-            disabled: !yR,
-            onClick: rR,
-            children: iR("loadoutShop:equip")
+            disabled: !Zr,
+            onClick: Nr,
+            children: fr("loadoutShop:equip")
           })]
-        }), !VR.unlocked && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsxs)("span", {
-            className: uR()("LoadoutPrice", {
-              LoadoutPriceShort: !yR
+        }), !pr.unlocked && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsxs)("span", {
+            className: ar()("LoadoutPrice", {
+              LoadoutPriceShort: !Zr
             }),
-            children: [tR && (0, KR.jsx)("span", {
+            children: [Wr && (0, xr.jsx)("span", {
               className: "LoadoutPriceIcon",
               style: {
-                color: tR.iconColour
+                color: Wr.iconColour
               },
-              children: (0, KR.jsx)(ZZ, {
-                iconName: tR.icon
+              children: (0, xr.jsx)(aj, {
+                iconName: Wr.icon
               })
-            }), wR.cost]
-          }), (0, KR.jsx)(fR.n, {
+            }), mr.cost]
+          }), (0, xr.jsx)(Er.p, {
             className: "LoadoutCardButton",
-            disabled: !yR,
-            onClick: rR,
-            children: iR("loadoutShop:unlock")
+            disabled: !Zr,
+            onClick: Nr,
+            children: fr("loadoutShop:unlock")
           })]
         })]
       })
     }
 
-    function KZ(RR) {
+    function pj(rr) {
       let {
-        shopInfo: JR,
-        selectedCategoryKey: GR,
-        selectCategory: tR,
-        buy: uR,
-        canAfford: qR,
-        currencyAmounts: iR
-      } = RR;
+        shopInfo: Sr,
+        selectedCategoryKey: Qr,
+        selectCategory: Wr,
+        buy: ar,
+        canAfford: Ir,
+        currencyAmounts: fr
+      } = rr;
       const {
-        t: fR
-      } = (0, ZR.A)(), VR = Fu(JR), {
-        loadout: wR,
-        items: rR
-      } = JR[GR], eR = RR => qR(RR, (0, Mt.e)(RR, null)), aR = {
-        buy: (RR, JR) => {
-          eR(JR) && uR(RR, JR)
+        t: Er
+      } = (0, jr.E)(), pr = Ja(Sr), {
+        loadout: mr,
+        items: Nr
+      } = Sr[Qr], Ur = rr => Ir(rr, (0, yW.e)(rr, null)), tr = {
+        buy: (rr, Sr) => {
+          Ur(Sr) && ar(rr, Sr)
         },
-        affordable: eR,
-        currencyAmounts: iR
+        affordable: Ur,
+        currencyAmounts: fr
       };
-      return (0, KR.jsx)("div", {
+      return (0, xr.jsx)("div", {
         className: "LoadoutShopHost",
-        children: (0, KR.jsxs)("div", {
+        children: (0, xr.jsxs)("div", {
           className: "LoadoutShop",
-          children: [(0, KR.jsxs)("header", {
+          children: [(0, xr.jsxs)("header", {
             className: "LoadoutHeader",
-            children: [(0, KR.jsx)("h2", {
-              children: fR("loadoutShop:title")
-            }), (0, KR.jsx)("p", {
-              children: fR("loadoutShop:subtitle")
+            children: [(0, xr.jsx)("h2", {
+              children: Er("loadoutShop:title")
+            }), (0, xr.jsx)("p", {
+              children: Er("loadoutShop:subtitle")
             })]
-          }), (0, KR.jsx)("nav", {
+          }), (0, xr.jsx)("nav", {
             className: "LoadoutSlots",
             "data-pad-tabs": "3",
-            children: VR.map((RR => {
-              var uR, ZR;
+            children: pr.map((rr => {
+              var ar, jr;
               const {
-                config: qR
-              } = RR;
-              return (0, KR.jsxs)(yR.Fragment, {
-                children: ["perk" === qR.slot && (0, KR.jsx)(rZ, {
-                  points: qR.points,
-                  reached: (null !== (uR = null === iR || void 0 === iR || null === (ZR = iR[qR.pointsCurrency]) || void 0 === ZR ? void 0 : ZR.amount) && void 0 !== uR ? uR : 0) >= qR.points
-                }), (0, KR.jsx)(eZ, {
-                  slot: RR,
-                  items: JR[RR.categoryKey].items,
-                  selected: RR.categoryKey === GR,
+                config: Ir
+              } = rr;
+              return (0, xr.jsxs)(Zr.Fragment, {
+                children: ["perk" === Ir.slot && (0, xr.jsx)(mj, {
+                  points: Ir.points,
+                  reached: (null !== (ar = null === fr || void 0 === fr || null === (jr = fr[Ir.pointsCurrency]) || void 0 === jr ? void 0 : jr.amount) && void 0 !== ar ? ar : 0) >= Ir.points
+                }), (0, xr.jsx)(Nj, {
+                  slot: rr,
+                  items: Sr[rr.categoryKey].items,
+                  selected: rr.categoryKey === Qr,
                   onClick: () => {
-                    tR(RR.categoryKey)
+                    Wr(rr.categoryKey)
                   }
                 })]
-              }, RR.categoryKey)
+              }, rr.categoryKey)
             }))
-          }), (0, KR.jsxs)("main", {
+          }), (0, xr.jsxs)("main", {
             className: "LoadoutPicker",
             "data-pad-initial-area": !0,
-            children: ["gun" === (null === wR || void 0 === wR ? void 0 : wR.slot) && (0, KR.jsx)(LZ, {
-              items: rR,
-              ...aR
-            }), "perk" === (null === wR || void 0 === wR ? void 0 : wR.slot) && (0, KR.jsxs)(KR.Fragment, {
-              children: [(0, KR.jsx)("p", {
+            children: ["gun" === (null === mr || void 0 === mr ? void 0 : mr.slot) && (0, xr.jsx)(tj, {
+              items: Nr,
+              ...tr
+            }), "perk" === (null === mr || void 0 === mr ? void 0 : mr.slot) && (0, xr.jsxs)(xr.Fragment, {
+              children: [(0, xr.jsx)("p", {
                 className: "LoadoutPickerNote",
-                children: fR("loadoutShop:tierPicker", {
-                  tier: wR.tier,
-                  points: wR.points
+                children: Er("loadoutShop:tierPicker", {
+                  tier: mr.tier,
+                  points: mr.points
                 })
-              }), (0, KR.jsx)("div", {
+              }), (0, xr.jsx)("div", {
                 className: "LoadoutPerkGrid",
-                children: hu(rR, "perk").map((RR => (0, KR.jsx)(fZ, {
-                  entry: RR,
-                  buy: aR.buy,
-                  canAfford: eR(RR.item),
-                  currency: wZ(iR, RR.item)
-                }, RR.key)))
+                children: sa(Nr, "perk").map((rr => (0, xr.jsx)(fj, {
+                  entry: rr,
+                  buy: tr.buy,
+                  canAfford: Ur(rr.item),
+                  currency: xj(fr, rr.item)
+                }, rr.key)))
               })]
             })]
           })]
@@ -5379,815 +5379,815 @@ export const modules = {
       })
     }
 
-    function wZ(RR, JR) {
-      return JR.currency ? null === RR || void 0 === RR ? void 0 : RR[JR.currency] : void 0
+    function xj(rr, Sr) {
+      return Sr.currency ? null === rr || void 0 === rr ? void 0 : rr[Sr.currency] : void 0
     }
 
-    function rZ(RR) {
+    function mj(rr) {
       let {
-        points: JR,
-        reached: GR
-      } = RR;
+        points: Sr,
+        reached: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
-        className: uR()("LoadoutStep", {
-          LoadoutStepReached: GR
+        t: Zr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
+        className: ar()("LoadoutStep", {
+          LoadoutStepReached: Qr
         }),
-        title: yR("loadoutShop:pointsTooltip", {
-          points: JR
+        title: Zr("loadoutShop:pointsTooltip", {
+          points: Sr
         }),
-        children: [(0, KR.jsx)(qR.d, {
+        children: [(0, xr.jsx)(Ir.c, {
           name: "arrow-right",
           className: "LoadoutStepArrow"
-        }), (0, KR.jsxs)("span", {
-          children: [GR && (0, KR.jsx)(qR.d, {
+        }), (0, xr.jsxs)("span", {
+          children: [Qr && (0, xr.jsx)(Ir.c, {
             name: "check"
-          }), yR("loadoutShop:points", {
-            points: JR
+          }), Zr("loadoutShop:points", {
+            points: Sr
           })]
         })]
       })
     }
 
-    function eZ(RR) {
+    function Nj(rr) {
       let {
-        slot: JR,
-        items: GR,
-        selected: yR,
-        onClick: tR
-      } = RR;
+        slot: Sr,
+        items: Qr,
+        selected: Zr,
+        onClick: Wr
+      } = rr;
       const {
-        t: iR
-      } = (0, ZR.A)(), {
-        config: fR
-      } = JR, VR = "gun" === fR.slot ? aZ(hu(GR, "gun")) : aZ(hu(GR, "perk")), wR = "gun" === fR.slot ? iR("loadoutShop:gun") : iR("loadoutShop:tier", {
-        tier: fR.tier
+        t: fr
+      } = (0, jr.E)(), {
+        config: Er
+      } = Sr, pr = "gun" === Er.slot ? Uj(sa(Qr, "gun")) : Uj(sa(Qr, "perk")), mr = "gun" === Er.slot ? fr("loadoutShop:gun") : fr("loadoutShop:tier", {
+        tier: Er.tier
       });
-      return (0, KR.jsxs)("button", {
+      return (0, xr.jsxs)("button", {
         type: "button",
-        className: uR()("LoadoutSlot", {
-          LoadoutSlotSelected: yR,
-          LoadoutSlotEmpty: !VR
+        className: ar()("LoadoutSlot", {
+          LoadoutSlotSelected: Zr,
+          LoadoutSlotEmpty: !pr
         }),
         "data-pad-tab": !0,
-        "data-pad-selected": yR ? "true" : void 0,
-        "aria-pressed": yR,
-        onClick: tR,
-        children: [(0, KR.jsxs)("span", {
+        "data-pad-selected": Zr ? "true" : void 0,
+        "aria-pressed": Zr,
+        onClick: Wr,
+        children: [(0, xr.jsxs)("span", {
           className: "LoadoutSlotArt",
-          children: ["gun" === (null === VR || void 0 === VR ? void 0 : VR.meta.kind) && (0, KR.jsx)(pt.b, {
-            itemName: VR.meta.gun,
+          children: ["gun" === (null === pr || void 0 === pr ? void 0 : pr.meta.kind) && (0, xr.jsx)(vW.d, {
+            itemName: pr.meta.gun,
             amount: 0,
             gunTransform: "none"
-          }), "perk" === (null === VR || void 0 === VR ? void 0 : VR.meta.kind) && (0, KR.jsx)(qR.d, {
-            name: VR.meta.icon
-          }), !VR && (0, KR.jsx)(qR.d, {
+          }), "perk" === (null === pr || void 0 === pr ? void 0 : pr.meta.kind) && (0, xr.jsx)(Ir.c, {
+            name: pr.meta.icon
+          }), !pr && (0, xr.jsx)(Ir.c, {
             name: "plus"
           })]
-        }), (0, KR.jsxs)("span", {
+        }), (0, xr.jsxs)("span", {
           className: "LoadoutSlotText",
-          children: [(0, KR.jsx)("small", {
-            children: wR
-          }), (0, KR.jsx)("b", {
-            children: VR ? VR.key : iR("gun" === fR.slot ? "loadoutShop:noGun" : "loadoutShop:noPerk")
+          children: [(0, xr.jsx)("small", {
+            children: mr
+          }), (0, xr.jsx)("b", {
+            children: pr ? pr.key : fr("gun" === Er.slot ? "loadoutShop:noGun" : "loadoutShop:noPerk")
           })]
         })]
       })
     }
 
-    function aZ(RR) {
-      var JR;
-      return null !== (JR = RR.find((RR => RR.meta.equipped))) && void 0 !== JR ? JR : null
+    function Uj(rr) {
+      var Sr;
+      return null !== (Sr = rr.find((rr => rr.meta.equipped))) && void 0 !== Sr ? Sr : null
     }
 
-    function LZ(RR) {
+    function tj(rr) {
       let {
-        items: JR,
-        buy: GR,
-        affordable: yR,
-        currencyAmounts: tR
-      } = RR;
+        items: Sr,
+        buy: Qr,
+        affordable: Zr,
+        currencyAmounts: Wr
+      } = rr;
       const {
-        t: uR
-      } = (0, ZR.A)(), qR = hu(JR, "gun"), iR = aZ(qR), fR = {};
+        t: ar
+      } = (0, jr.E)(), Ir = sa(Sr, "gun"), fr = Uj(Ir), Er = {};
       for (const {
-          meta: ZR
+          meta: jr
         }
-        of qR) {
-        const RR = Yu.c.get(`${ZR.gun}GunStats`),
-          JR = yZ(ZR.gun, RR);
-        JR && (fR[ZR.gun] = JR)
+        of Ir) {
+        const rr = Fa.d.get(`${jr.gun}GunStats`),
+          Sr = Qj(jr.gun, rr);
+        Sr && (Er[jr.gun] = Sr)
       }
-      const VR = function(RR) {
-          const JR = {},
-            GR = {};
-          for (const tR of GZ) {
-            JR[tR] = -1 / 0, GR[tR] = 1 / 0;
-            for (const yR in RR) JR[tR] = Math.max(JR[tR], RR[yR][tR]), GR[tR] = Math.min(GR[tR], RR[yR][tR])
+      const pr = function(rr) {
+          const Sr = {},
+            Qr = {};
+          for (const Wr of Sj) {
+            Sr[Wr] = -1 / 0, Qr[Wr] = 1 / 0;
+            for (const Zr in rr) Sr[Wr] = Math.max(Sr[Wr], rr[Zr][Wr]), Qr[Wr] = Math.min(Qr[Wr], rr[Zr][Wr])
           }
-          const yR = {};
-          for (const tR in RR) {
-            yR[tR] = {};
-            for (const uR of GZ) yR[tR][uR] = Math.max(.06, uZ(uR, RR[tR][uR], JR[uR], GR[uR]))
+          const Zr = {};
+          for (const Wr in rr) {
+            Zr[Wr] = {};
+            for (const ar of Sj) Zr[Wr][ar] = Math.max(.06, Wj(ar, rr[Wr][ar], Sr[ar], Qr[ar]))
           }
-          return yR
-        }(fR),
-        wR = iR ? fR[iR.meta.gun] : void 0,
-        [rR, eR] = uR("loadoutShop:comparing", {
+          return Zr
+        }(Er),
+        mr = fr ? Er[fr.meta.gun] : void 0,
+        [Nr, Ur] = ar("loadoutShop:comparing", {
           gun: "\x01"
         }).split("\x01");
-      return (0, KR.jsxs)(KR.Fragment, {
-        children: [iR && (0, KR.jsxs)("p", {
+      return (0, xr.jsxs)(xr.Fragment, {
+        children: [fr && (0, xr.jsxs)("p", {
           className: "LoadoutPickerNote",
-          children: [rR, (0, KR.jsx)("b", {
+          children: [Nr, (0, xr.jsx)("b", {
             className: "LoadoutGold",
-            children: iR.key
-          }), eR]
-        }), (0, KR.jsx)("div", {
+            children: fr.key
+          }), Ur]
+        }), (0, xr.jsx)("div", {
           className: "LoadoutGunGrid",
-          children: qR.map((RR => (0, KR.jsx)(iZ, {
-            entry: RR,
-            stats: fR[RR.meta.gun],
-            bars: VR[RR.meta.gun],
-            compared: RR.meta.equipped ? void 0 : wR,
-            buy: GR,
-            canAfford: yR(RR.item),
-            currency: wZ(tR, RR.item)
-          }, RR.key)))
+          children: Ir.map((rr => (0, xr.jsx)(Ij, {
+            entry: rr,
+            stats: Er[rr.meta.gun],
+            bars: pr[rr.meta.gun],
+            compared: rr.meta.equipped ? void 0 : mr,
+            buy: Qr,
+            canAfford: Zr(rr.item),
+            currency: xj(Wr, rr.item)
+          }, rr.key)))
         })]
       })
     }
-    var nZ = GR(35174),
-      UZ = GR(35172);
+    var hj = Qr(35488),
+      zj = Qr(35484);
 
-    function WZ(RR) {
+    function Yj(rr) {
       let {
-        currency: JR,
-        info: GR,
-        smaller: tR,
-        show: ZR
-      } = RR;
-      const qR = (0, yR.useRef)(null);
-      (0, UZ.h)(JR, qR, ZR);
-      const iR = (0, UZ.l)(JR, GR.amount);
-      return (0, KR.jsxs)("div", {
-        className: uR()("ShopCurrencyDiv", {
-          SmallText: tR
+        currency: Sr,
+        info: Qr,
+        smaller: Wr,
+        show: jr
+      } = rr;
+      const Ir = (0, Zr.useRef)(null);
+      (0, zj.i)(Sr, Ir, jr);
+      const fr = (0, zj.m)(Sr, Qr.amount);
+      return (0, xr.jsxs)("div", {
+        className: ar()("ShopCurrencyDiv", {
+          SmallText: Wr
         }),
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "ShopCurrencyDetails",
-          children: [(0, KR.jsx)("div", {
-            ref: qR,
+          children: [(0, xr.jsx)("div", {
+            ref: Ir,
             className: "ShopCurrencyAmtIcon",
             style: {
-              color: GR.iconColour
+              color: Qr.iconColour
             },
-            children: (0, KR.jsx)(ZZ, {
-              iconName: GR.icon
+            children: (0, xr.jsx)(aj, {
+              iconName: Qr.icon
             })
-          }), "\xa0", (0, nZ.e)(iR, 6)]
-        }), void 0 !== GR.subtext && GR.subtext.length > 0 && (0, KR.jsx)("div", {
+          }), "\xa0", (0, hj.e)(fr, 6)]
+        }), void 0 !== Qr.subtext && Qr.subtext.length > 0 && (0, xr.jsx)("div", {
           className: "ShopCurrencySubtext",
-          children: (0, KR.jsx)(gt.c, {
-            text: GR.subtext
+          children: (0, xr.jsx)(OW.c, {
+            text: Qr.subtext
           })
         })]
       })
     }
-    class AZ {
-      constructor(RR) {
-        this.info = RR
+    class nj {
+      constructor(rr) {
+        this.info = rr
       }
-      static fromShopInfo(RR) {
-        const JR = {};
-        for (const GR in RR) {
-          const yR = !0 === RR[GR].redDot && !0 !== RR[GR].forceRemoveRedDot;
-          JR[GR] = {
-            redDot: yR,
+      static fromShopInfo(rr) {
+        const Sr = {};
+        for (const Qr in rr) {
+          const Zr = !0 === rr[Qr].redDot && !0 !== rr[Qr].forceRemoveRedDot;
+          Sr[Qr] = {
+            redDot: Zr,
             items: {}
           };
-          for (const tR in RR[GR].items) {
-            const yR = RR[GR].items[tR],
-              uR = !0 === yR.redDot && !0 !== yR.forceRemoveRedDot;
-            JR[GR].items[tR] = {
-              redDot: uR
+          for (const Wr in rr[Qr].items) {
+            const Zr = rr[Qr].items[Wr],
+              ar = !0 === Zr.redDot && !0 !== Zr.forceRemoveRedDot;
+            Sr[Qr].items[Wr] = {
+              redDot: ar
             }
           }
         }
-        return new AZ(JR)
+        return new nj(Sr)
       }
       anyCategoryHasRedDots() {
-        for (const RR in this.info)
-          if (this.categoryHasRedDot(RR)) return !0;
+        for (const rr in this.info)
+          if (this.categoryHasRedDot(rr)) return !0;
         return !1
       }
-      doesCategoryExist(RR) {
-        return !(0, gG.I)(this.info[RR])
+      doesCategoryExist(rr) {
+        return !(0, LQ.L)(this.info[rr])
       }
-      categoryHasRedDot(RR) {
-        return !0 === this.info[RR].redDot
+      categoryHasRedDot(rr) {
+        return !0 === this.info[rr].redDot
       }
-      updateCategoryRedDot(RR, JR) {
-        this.info[RR].redDot = JR
+      updateCategoryRedDot(rr, Sr) {
+        this.info[rr].redDot = Sr
       }
-      doesItemExist(RR, JR) {
-        return this.doesCategoryExist(RR) && !(0, gG.I)(this.info[RR].items[JR])
+      doesItemExist(rr, Sr) {
+        return this.doesCategoryExist(rr) && !(0, LQ.L)(this.info[rr].items[Sr])
       }
-      itemHasRedDot(RR, JR) {
-        return !0 === this.info[RR].items[JR].redDot
+      itemHasRedDot(rr, Sr) {
+        return !0 === this.info[rr].items[Sr].redDot
       }
-      updateItemRedDot(RR, JR, GR) {
-        this.info[RR].items[JR].redDot = GR
+      updateItemRedDot(rr, Sr, Qr) {
+        this.info[rr].items[Sr].redDot = Qr
       }
       shallowCopy() {
-        return new AZ(this.info)
+        return new nj(this.info)
       }
     }
 
-    function CZ(RR, JR) {
-      return `${RR}\x1f${JR}`
+    function ej(rr, Sr) {
+      return `${rr}\x1f${Sr}`
     }
 
-    function XZ(RR, JR, GR) {
-      const yR = AZ.fromShopInfo(RR);
-      for (const qR in RR) {
-        var tR;
-        if (GR.doesCategoryExist(qR)) {
-          (null === (tR = JR[qR]) || void 0 === tR ? void 0 : tR.redDot) === RR[qR].redDot && yR.updateCategoryRedDot(qR, GR.categoryHasRedDot(qR));
-          for (const tR in RR[qR].items) {
-            var uR, ZR;
-            GR.doesItemExist(qR, tR) && ((null === (uR = JR[qR]) || void 0 === uR || null === (ZR = uR.items[tR]) || void 0 === ZR ? void 0 : ZR.redDot) === RR[qR].items[tR].redDot && yR.updateItemRedDot(qR, tR, GR.itemHasRedDot(qR, tR)))
+    function Kj(rr, Sr, Qr) {
+      const Zr = nj.fromShopInfo(rr);
+      for (const Ir in rr) {
+        var Wr;
+        if (Qr.doesCategoryExist(Ir)) {
+          (null === (Wr = Sr[Ir]) || void 0 === Wr ? void 0 : Wr.redDot) === rr[Ir].redDot && Zr.updateCategoryRedDot(Ir, Qr.categoryHasRedDot(Ir));
+          for (const Wr in rr[Ir].items) {
+            var ar, jr;
+            Qr.doesItemExist(Ir, Wr) && ((null === (ar = Sr[Ir]) || void 0 === ar || null === (jr = ar.items[Wr]) || void 0 === jr ? void 0 : jr.redDot) === rr[Ir].items[Wr].redDot && Zr.updateItemRedDot(Ir, Wr, Qr.itemHasRedDot(Ir, Wr)))
           }
         }
       }
-      return yR
+      return Zr
     }
 
-    function MZ(RR, JR, GR, yR) {
-      if (null !== JR && !yR) return JR;
-      if (null === GR || !RR[GR]) {
-        const JR = ot(RR);
-        return JR.length > 0 ? JR[0] : null
+    function yj(rr, Sr, Qr, Zr) {
+      if (null !== Sr && !Zr) return Sr;
+      if (null === Qr || !rr[Qr]) {
+        const Sr = gW(rr);
+        return Sr.length > 0 ? Sr[0] : null
       }
-      return GR
+      return Qr
     }
 
-    function BZ(RR, JR, GR) {
-      if ((0, gG.I)(RR) || 0 === Object.keys(RR).length) return {
+    function Bj(rr, Sr, Qr) {
+      if ((0, LQ.L)(rr) || 0 === Object.keys(rr).length) return {
         shopInfo: {},
-        redDotInfo: AZ.fromShopInfo({}),
+        redDotInfo: nj.fromShopInfo({}),
         selectedCategoryKey: null
       };
       const {
-        shopInfo: yR,
-        autoSelectCategory: tR
-      } = function(RR) {
-        const JR = gR.siteUsedData[gR.siteUsed].adConfig.showRewardedAds,
-          GR = {};
-        let yR = null;
-        for (const tR in RR) {
-          const uR = RR[tR],
-            ZR = {};
-          let qR = !1;
-          for (const RR in uR.items) {
-            const GR = uR.items[RR];
-            (0, Mt.n)(GR, JR) && (ZR[RR] = GR, qR = !0)
+        shopInfo: Zr,
+        autoSelectCategory: Wr
+      } = function(rr) {
+        const Sr = Lr.siteUsedData[Lr.siteUsed].adConfig.showRewardedAds,
+          Qr = {};
+        let Zr = null;
+        for (const Wr in rr) {
+          const ar = rr[Wr],
+            jr = {};
+          let Ir = !1;
+          for (const rr in ar.items) {
+            const Qr = ar.items[rr];
+            (0, yW.m)(Qr, Sr) && (jr[rr] = Qr, Ir = !0)
           }
-          qR && (GR[tR] = {
-            ...uR,
-            items: ZR
-          }, !0 === uR.autoSelectCategory && (yR = tR))
+          Ir && (Qr[Wr] = {
+            ...ar,
+            items: jr
+          }, !0 === ar.autoSelectCategory && (Zr = Wr))
         }
         return {
-          shopInfo: GR,
-          autoSelectCategory: yR
+          shopInfo: Qr,
+          autoSelectCategory: Zr
         }
-      }(RR);
+      }(rr);
       return {
-        shopInfo: yR,
-        redDotInfo: XZ(yR, JR.shopInfo, JR.redDotInfo),
-        selectedCategoryKey: MZ(yR, tR, JR.selectedCategoryKey, GR)
+        shopInfo: Zr,
+        redDotInfo: Kj(Zr, Sr.shopInfo, Sr.redDotInfo),
+        selectedCategoryKey: yj(Zr, Wr, Sr.selectedCategoryKey, Qr)
       }
     }
 
-    function lZ(RR, JR, GR, yR, tR) {
-      const uR = {},
-        ZR = (RR, JR, ZR, qR) => {
-          var iR, fR;
-          const VR = CZ(RR, JR),
-            KR = null !== (iR = GR[VR]) && void 0 !== iR ? iR : GR[JR];
-          if (null !== (fR = qR.userInput) && void 0 !== fR && fR.type) switch (qR.userInput.type) {
+    function Tj(rr, Sr, Qr, Zr, Wr) {
+      const ar = {},
+        jr = (rr, Sr, jr, Ir) => {
+          var fr, Er;
+          const pr = ej(rr, Sr),
+            xr = null !== (fr = Qr[pr]) && void 0 !== fr ? fr : Qr[Sr];
+          if (null !== (Er = Ir.userInput) && void 0 !== Er && Er.type) switch (Ir.userInput.type) {
             case "dropdown": {
-              var wR;
-              const RR = !KR || !qR.userInput.dropdownOptions.some((RR => (0, Mt.f)(RR) === KR)),
-                JR = qR.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === ZR || void 0 === ZR || null === (wR = ZR.userInput) || void 0 === wR ? void 0 : wR.type) || JSON.stringify(ZR.userInput.dropdownOptions) !== JSON.stringify(qR.userInput.dropdownOptions)),
-                GR = qR.userInput,
-                yR = !(0, gG.I)(GR.initialValue) && GR.dropdownOptions.some((RR => (0, Mt.f)(RR) === GR.initialValue));
-              var rR;
-              if (RR || JR)
-                if (yR) uR[VR] = null !== (rR = qR.userInput.initialValue) && void 0 !== rR ? rR : null;
-                else qR.userInput.dropdownOptions.length > 0 ? uR[VR] = (0, Mt.f)(qR.userInput.dropdownOptions[0]) : uR[VR] = null;
-              else uR[VR] = KR;
+              var mr;
+              const rr = !xr || !Ir.userInput.dropdownOptions.some((rr => (0, yW.f)(rr) === xr)),
+                Sr = Ir.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === jr || void 0 === jr || null === (mr = jr.userInput) || void 0 === mr ? void 0 : mr.type) || JSON.stringify(jr.userInput.dropdownOptions) !== JSON.stringify(Ir.userInput.dropdownOptions)),
+                Qr = Ir.userInput,
+                Zr = !(0, LQ.L)(Qr.initialValue) && Qr.dropdownOptions.some((rr => (0, yW.f)(rr) === Qr.initialValue));
+              var Nr;
+              if (rr || Sr)
+                if (Zr) ar[pr] = null !== (Nr = Ir.userInput.initialValue) && void 0 !== Nr ? Nr : null;
+                else Ir.userInput.dropdownOptions.length > 0 ? ar[pr] = (0, yW.f)(Ir.userInput.dropdownOptions[0]) : ar[pr] = null;
+              else ar[pr] = xr;
               return
             }
             case "text":
             case "number":
-              var eR, aR, LR;
-              if ((null === ZR || void 0 === ZR ? void 0 : ZR.userInput) !== qR.userInput) uR[VR] = null !== (eR = null !== (aR = qR.userInput.initialValue) && void 0 !== aR ? aR : KR) && void 0 !== eR ? eR : "";
-              else uR[VR] = null !== (LR = null !== KR && void 0 !== KR ? KR : qR.userInput.initialValue) && void 0 !== LR ? LR : "";
+              var Ur, tr, hr;
+              if ((null === jr || void 0 === jr ? void 0 : jr.userInput) !== Ir.userInput) ar[pr] = null !== (Ur = null !== (tr = Ir.userInput.initialValue) && void 0 !== tr ? tr : xr) && void 0 !== Ur ? Ur : "";
+              else ar[pr] = null !== (hr = null !== xr && void 0 !== xr ? xr : Ir.userInput.initialValue) && void 0 !== hr ? hr : "";
               return;
             case "color":
-              var nR, UR, WR;
-              if ((null === ZR || void 0 === ZR ? void 0 : ZR.userInput) !== qR.userInput) uR[VR] = null !== (nR = null !== (UR = qR.userInput.initialValue) && void 0 !== UR ? UR : KR) && void 0 !== nR ? nR : "#000000";
-              else uR[VR] = null !== (WR = null !== KR && void 0 !== KR ? KR : qR.userInput.initialValue) && void 0 !== WR ? WR : "#000000";
+              var zr, Yr, nr;
+              if ((null === jr || void 0 === jr ? void 0 : jr.userInput) !== Ir.userInput) ar[pr] = null !== (zr = null !== (Yr = Ir.userInput.initialValue) && void 0 !== Yr ? Yr : xr) && void 0 !== zr ? zr : "#000000";
+              else ar[pr] = null !== (nr = null !== xr && void 0 !== xr ? xr : Ir.userInput.initialValue) && void 0 !== nr ? nr : "#000000";
               return;
             case "player": {
-              const RR = (0, Mt.j)(yR, tR, qR.userInput);
-              return void(KR && RR.includes(KR) ? uR[VR] = KR : uR[VR] = RR.length > 0 ? RR[0] : null)
+              const rr = (0, yW.j)(Zr, Wr, Ir.userInput);
+              return void(xr && rr.includes(xr) ? ar[pr] = xr : ar[pr] = rr.length > 0 ? rr[0] : null)
             }
           }
         };
-      for (const iR in RR)
-        for (const GR in RR[iR].items) {
-          var qR;
-          const yR = RR[iR].items[GR];
-          ZR(iR, GR, null === (qR = JR[iR]) || void 0 === qR ? void 0 : qR.items[GR], yR)
+      for (const fr in rr)
+        for (const Qr in rr[fr].items) {
+          var Ir;
+          const Zr = rr[fr].items[Qr];
+          jr(fr, Qr, null === (Ir = Sr[fr]) || void 0 === Ir ? void 0 : Ir.items[Qr], Zr)
         }
-      return uR
+      return ar
     }
 
-    function pZ(RR, JR) {
-      return !(0, gG.I)(JR) && !(0, gG.I)(RR) && JR in RR
+    function vj(rr, Sr) {
+      return !(0, LQ.L)(Sr) && !(0, LQ.L)(rr) && Sr in rr
     }
-    const gZ = (0, yR.memo)((function(RR) {
-      var JR, GR;
+    const Oj = (0, Zr.memo)((function(rr) {
+      var Sr, Qr;
       let {
-        show: tR
-      } = RR;
-      const ZR = (0, QJ.e)("players", DZ),
-        qR = (0, QJ.e)("players", HZ),
-        VR = (0, Dt.c)(),
-        [rR, eR] = (0, yR.useState)({
+        show: Wr
+      } = rr;
+      const jr = (0, JS.f)("players", qj),
+        Ir = (0, JS.f)("players", Rj),
+        pr = (0, qW.c)(),
+        [Nr, Ur] = (0, Zr.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: AZ.fromShopInfo({}),
+          redDotInfo: nj.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        LR = (0, yR.useRef)(""),
-        nR = (0, yR.useRef)(null),
-        WR = (0, yR.useRef)(null),
-        AR = (0, yR.useRef)(0),
-        CR = (0, yR.useRef)(void 0),
-        XR = (0, yR.useRef)(null),
-        MR = (0, yR.useRef)(rR),
-        lR = (0, yR.useRef)(null),
-        pR = rR.redDotInfo.anyCategoryHasRedDots(),
-        [gR, bR] = (0, yR.useState)(null),
-        vR = (0, yR.useRef)(!1);
-      let OR = !1,
-        xR = 0,
-        NR = 0;
-      if (rR.currencyAmounts) {
-        for (const RR in rR.currencyAmounts) {
-          var DR;
-          const JR = rR.currencyAmounts[RR];
-          JR.hidden || (xR++, (null === (DR = JR.subtext) || void 0 === DR ? void 0 : DR.length) > 0 && NR++)
+        hr = (0, Zr.useRef)(""),
+        zr = (0, Zr.useRef)(null),
+        nr = (0, Zr.useRef)(null),
+        er = (0, Zr.useRef)(0),
+        Kr = (0, Zr.useRef)(void 0),
+        yr = (0, Zr.useRef)(null),
+        Br = (0, Zr.useRef)(Nr),
+        vr = (0, Zr.useRef)(null),
+        Or = Nr.redDotInfo.anyCategoryHasRedDots(),
+        [Lr, lr] = (0, Zr.useState)(null),
+        Xr = (0, Zr.useRef)(!1);
+      let Pr = !1,
+        Hr = 0,
+        qr = 0;
+      if (Nr.currencyAmounts) {
+        for (const rr in Nr.currencyAmounts) {
+          var Rr;
+          const Sr = Nr.currencyAmounts[rr];
+          Sr.hidden || (Hr++, (null === (Rr = Sr.subtext) || void 0 === Rr ? void 0 : Rr.length) > 0 && qr++)
         }
-        OR = xR + NR > 4
-      }(0, yR.useEffect)((() => {
-        bG.n.JK("showShopIconRedDot", pR, !0)
-      }), [pR]), (0, yR.useEffect)((() => {
-        UR.gameBridge.send("setShopOpen", tR), tR || (clearTimeout(CR.current), eR((RR => RR.awaitingPurchase ? {
-          ...RR,
+        Pr = Hr + qr > 4
+      }(0, Zr.useEffect)((() => {
+        lQ.i.Jp("showShopIconRedDot", Or, !0)
+      }), [Or]), (0, Zr.useEffect)((() => {
+        Yr.gameBridge.send("setShopOpen", Wr), Wr || (clearTimeout(Kr.current), Ur((rr => rr.awaitingPurchase ? {
+          ...rr,
           awaitingPurchase: !1
-        } : RR)))
-      }), [tR]), (0, yR.useEffect)((() => () => {
-        UR.gameBridge.send("setShopOpen", !1), clearTimeout(CR.current)
-      }), []), (0, yR.useEffect)((() => {
-        MR.current = rR
-      }), [rR]), (0, yR.useEffect)((() => {
-        if (null === gR) return;
-        return (0, xt.c)("pointerdown", (RR => {
-          const JR = RR.target;
-          null !== JR && void 0 !== JR && JR.closest(".ShopItem") || bR(null)
+        } : rr)))
+      }), [Wr]), (0, Zr.useEffect)((() => () => {
+        Yr.gameBridge.send("setShopOpen", !1), clearTimeout(Kr.current)
+      }), []), (0, Zr.useEffect)((() => {
+        Br.current = Nr
+      }), [Nr]), (0, Zr.useEffect)((() => {
+        if (null === Lr) return;
+        return (0, PW.b)("pointerdown", (rr => {
+          const Sr = rr.target;
+          null !== Sr && void 0 !== Sr && Sr.closest(".ShopItem") || lr(null)
         }))
-      }), [gR]);
-      const HR = RR => {
-          eR((JR => ({
-            ...JR,
-            ...RR
+      }), [Lr]);
+      const gr = rr => {
+          Ur((Sr => ({
+            ...Sr,
+            ...rr
           })))
         },
-        oR = RR => {
-          var JR;
-          clearTimeout(null === (JR = rR.onBoughtInfo) || void 0 === JR ? void 0 : JR.timeout);
-          const GR = setTimeout((() => {
-            HR({
+        Cr = rr => {
+          var Sr;
+          clearTimeout(null === (Sr = Nr.onBoughtInfo) || void 0 === Sr ? void 0 : Sr.timeout);
+          const Qr = setTimeout((() => {
+            gr({
               onBoughtInfo: null
             })
           }), 3e3);
-          LR.current = RR, HR({
+          hr.current = rr, gr({
             onBoughtInfo: {
-              text: RR,
-              timeout: GR,
-              categoryKey: nR.current
+              text: rr,
+              timeout: Qr,
+              categoryKey: zr.current
             }
           })
         },
-        PR = RR => {
-          const JR = BZ(RR, rR, !0);
-          return 0 === Object.keys(JR.shopInfo).length && BR.d.set({
+        Gr = rr => {
+          const Sr = Bj(rr, Nr, !0);
+          return 0 === Object.keys(Sr.shopInfo).length && Tr.c.set({
             openEverythingMenuName: null
           }), {
-            ...JR,
-            userInputsPerItem: lZ(JR.shopInfo, rR.shopInfo, rR.userInputsPerItem, ZR, qR)
+            ...Sr,
+            userInputsPerItem: Tj(Sr.shopInfo, Nr.shopInfo, Nr.userInputsPerItem, jr, Ir)
           }
         },
-        IR = () => {
-          var RR;
-          return null !== (RR = lR.current) && void 0 !== RR ? RR : rR
+        kr = () => {
+          var rr;
+          return null !== (rr = vr.current) && void 0 !== rr ? rr : Nr
         },
-        mR = RR => {
-          const JR = IR(),
-            GR = BZ(RR, JR, !1);
-          lR.current = GR;
-          const yR = GR.redDotInfo.anyCategoryHasRedDots();
-          yR !== JR.redDotInfo.anyCategoryHasRedDots() && bG.n.JK("showShopIconRedDot", yR, !0)
+        Ar = rr => {
+          const Sr = kr(),
+            Qr = Bj(rr, Sr, !1);
+          vr.current = Qr;
+          const Zr = Qr.redDotInfo.anyCategoryHasRedDots();
+          Zr !== Sr.redDotInfo.anyCategoryHasRedDots() && lQ.i.Jp("showShopIconRedDot", Zr, !0)
         },
-        zR = () => {
-          const RR = lR.current;
-          null !== RR && (lR.current = null, eR((JR => {
-            const GR = lZ(RR.shopInfo, JR.shopInfo, JR.userInputsPerItem, ZR, qR);
+        Vr = () => {
+          const rr = vr.current;
+          null !== rr && (vr.current = null, Ur((Sr => {
+            const Qr = Tj(rr.shopInfo, Sr.shopInfo, Sr.userInputsPerItem, jr, Ir);
             return {
-              ...JR,
-              ...RR,
-              userInputsPerItem: GR
+              ...Sr,
+              ...rr,
+              userInputsPerItem: Qr
             }
           })))
         },
-        SR = (RR, JR, GR) => {
-          const yR = rR.selectedCategoryKey,
-            tR = CZ(yR, RR),
-            uR = null !== GR && void 0 !== GR ? GR : rR.userInputsPerItem[tR],
-            ZR = {
-              categoryKey: yR,
-              itemKey: RR,
-              userInput: uR
+        ir = (rr, Sr, Qr) => {
+          const Zr = Nr.selectedCategoryKey,
+            Wr = ej(Zr, rr),
+            ar = null !== Qr && void 0 !== Qr ? Qr : Nr.userInputsPerItem[Wr],
+            jr = {
+              categoryKey: Zr,
+              itemKey: rr,
+              userInput: ar
             };
-          if (nR.current = yR, JR.isRewardedAd) {
-            if (Date.now() - AR.current < 5e3) return;
-            (0, vJ.eb)((() => {
-              var GR, yR, uR;
+          if (zr.current = Zr, Sr.isRewardedAd) {
+            if (Date.now() - er.current < 5e3) return;
+            (0, XS.V)((() => {
+              var Qr, Zr, ar;
               console.log("bought rewarded ad");
-              const qR = lR.current,
-                iR = (null !== qR && void 0 !== qR ? qR : MR.current).shopInfo,
-                fR = ZR.categoryKey ? null === (GR = iR[ZR.categoryKey]) || void 0 === GR ? void 0 : GR.items[RR] : null;
-              if (!fR || !fR.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              if (!((null === (yR = JR.userInput) || void 0 === yR ? void 0 : yR.type) === (null === fR || void 0 === fR || null === (uR = fR.userInput) || void 0 === uR ? void 0 : uR.type))) return void console.warn("Shop item input type changed, early out");
+              const Ir = vr.current,
+                fr = (null !== Ir && void 0 !== Ir ? Ir : Br.current).shopInfo,
+                Er = jr.categoryKey ? null === (Qr = fr[jr.categoryKey]) || void 0 === Qr ? void 0 : Qr.items[rr] : null;
+              if (!Er || !Er.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              if (!((null === (Zr = Sr.userInput) || void 0 === Zr ? void 0 : Zr.type) === (null === Er || void 0 === Er || null === (ar = Er.userInput) || void 0 === ar ? void 0 : ar.type))) return void console.warn("Shop item input type changed, early out");
               const {
-                shopInfo: VR,
-                userInputsPerItem: KR
-              } = MR.current, wR = ER.current;
-              ZR.userInput = (null === qR ? KR : lZ(qR.shopInfo, VR, KR, wR.playerIds, wR.localPlayerId))[tR], UR.gameBridge.send("buyShopItem", ZR), JR.onBoughtMessage && oR(JR.onBoughtMessage)
-            })), AR.current = Date.now()
+                shopInfo: pr,
+                userInputsPerItem: xr
+              } = Br.current, mr = Fr.current;
+              jr.userInput = (null === Ir ? xr : Tj(Ir.shopInfo, pr, xr, mr.playerIds, mr.localPlayerId))[Wr], Yr.gameBridge.send("buyShopItem", jr), Sr.onBoughtMessage && Cr(Sr.onBoughtMessage)
+            })), er.current = Date.now()
           } else {
-            UR.gameBridge.send("buyShopItem", ZR), HR({
+            Yr.gameBridge.send("buyShopItem", jr), gr({
               awaitingPurchase: !0
-            }), clearTimeout(CR.current), CR.current = setTimeout((() => {
-              XR.current = null, HR({
+            }), clearTimeout(Kr.current), Kr.current = setTimeout((() => {
+              yr.current = null, gr({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const RR = (0, Mt.e)(JR, uR);
-            if (XR.current = null, !isNaN(RR) && pZ(rR.currencyAmounts, JR.currency)) {
-              0 !== RR && (XR.current = {
-                currency: JR.currency,
-                amountBefore: rR.currencyAmounts[JR.currency].amount
+            const rr = (0, yW.e)(Sr, ar);
+            if (yr.current = null, !isNaN(rr) && vj(Nr.currencyAmounts, Sr.currency)) {
+              0 !== rr && (yr.current = {
+                currency: Sr.currency,
+                amountBefore: Nr.currencyAmounts[Sr.currency].amount
               });
-              const GR = {
-                ...rR.currencyAmounts
+              const Qr = {
+                ...Nr.currencyAmounts
               };
-              GR[JR.currency].amount -= RR, HR({
-                currencyAmounts: GR
+              Qr[Sr.currency].amount -= rr, gr({
+                currencyAmounts: Qr
               })
             }
-            JR.onBoughtMessage && oR(JR.onBoughtMessage)
+            Sr.onBoughtMessage && Cr(Sr.onBoughtMessage)
           }
         },
-        jR = (RR, JR) => {
-          if (null === JR || !RR.shopInfo[JR]) return RR;
-          let GR = RR.redDotInfo;
-          return GR.categoryHasRedDot(JR) && (GR.updateCategoryRedDot(JR, !1), GR = GR.shallowCopy()), {
-            ...RR,
-            selectedCategoryKey: JR,
-            redDotInfo: GR
+        wr = (rr, Sr) => {
+          if (null === Sr || !rr.shopInfo[Sr]) return rr;
+          let Qr = rr.redDotInfo;
+          return Qr.categoryHasRedDot(Sr) && (Qr.updateCategoryRedDot(Sr, !1), Qr = Qr.shallowCopy()), {
+            ...rr,
+            selectedCategoryKey: Sr,
+            redDotInfo: Qr
           }
         },
-        dR = RR => {
-          zR(), eR((JR => jR(JR, RR)))
+        cr = rr => {
+          Vr(), Ur((Sr => wr(Sr, rr)))
         };
-      (0, yG.f)(Nt.i, (() => {
-        zR(), eR((RR => {
-          const JR = (0, Nt.m)(ot(RR.shopInfo), RR.selectedCategoryKey, (JR => (0, Nt.g)(RR.shopInfo[JR].items)));
-          return JR === RR.selectedCategoryKey ? RR : jR(RR, JR)
+      (0, ZQ.c)(HW.n, (() => {
+        Vr(), Ur((rr => {
+          const Sr = (0, HW.r)(gW(rr.shopInfo), rr.selectedCategoryKey, (Sr => (0, HW.j)(rr.shopInfo[Sr].items)));
+          return Sr === rr.selectedCategoryKey ? rr : wr(rr, Sr)
         }))
-      })), (0, yG.f)("showShopFromServer", (RR => {
+      })), (0, ZQ.c)("showShopFromServer", (rr => {
         let {
-          toggle: JR,
-          OJ: GR
-        } = RR;
-        const yR = 0 !== Object.keys(IR().shopInfo).length;
-        GR && dR(GR), !yR || JR && tR ? BR.d.set({
+          toggle: Sr,
+          MS: Qr
+        } = rr;
+        const Zr = 0 !== Object.keys(kr().shopInfo).length;
+        Qr && cr(Qr), !Zr || Sr && Wr ? Tr.c.set({
           openEverythingMenuName: null
-        }) : BR.d.set({
-          openEverythingMenuName: OJ.o.SHOP
+        }) : Tr.c.set({
+          openEverythingMenuName: PS.q.SHOP
         })
-      })), (0, yG.f)("closeShopOnDamaged", (() => {
-        tR && BR.d.set({
+      })), (0, ZQ.c)("closeShopOnDamaged", (() => {
+        Wr && Tr.c.set({
           openEverythingMenuName: null
         })
-      })), (0, yG.f)("overShopInfo", (RR => {
-        oR(RR)
-      })), (0, aR.e)("currencyAmounts", (RR => {
-        var JR;
-        const GR = XR.current;
-        GR && (null === RR || void 0 === RR || null === (JR = RR[GR.currency]) || void 0 === JR ? void 0 : JR.amount) === GR.amountBefore ? HR({
-          currencyAmounts: RR
-        }) : (XR.current = null, HR({
-          currencyAmounts: RR,
+      })), (0, ZQ.c)("overShopInfo", (rr => {
+        Cr(rr)
+      })), (0, tr.h)("currencyAmounts", (rr => {
+        var Sr;
+        const Qr = yr.current;
+        Qr && (null === rr || void 0 === rr || null === (Sr = rr[Qr.currency]) || void 0 === Sr ? void 0 : Sr.amount) === Qr.amountBefore ? gr({
+          currencyAmounts: rr
+        }) : (yr.current = null, gr({
+          currencyAmounts: rr,
           awaitingPurchase: !1
         }))
-      })), (0, aR.e)("shopInfo", (RR => {
-        tR ? HR({
-          ...PR(RR),
+      })), (0, tr.h)("shopInfo", (rr => {
+        Wr ? gr({
+          ...Gr(rr),
           awaitingPurchase: !1
-        }) : mR(RR)
-      })), (0, yR.useLayoutEffect)((() => {
-        tR && zR()
-      }), [tR]);
-      const ER = (0, yR.useRef)({
-        playerIds: ZR,
-        localPlayerId: qR
+        }) : Ar(rr)
+      })), (0, Zr.useLayoutEffect)((() => {
+        Wr && Vr()
+      }), [Wr]);
+      const Fr = (0, Zr.useRef)({
+        playerIds: jr,
+        localPlayerId: Ir
       });
-      (0, yR.useEffect)((() => {
-        ER.current.playerIds === ZR && ER.current.localPlayerId === qR || (ER.current = {
-          playerIds: ZR,
-          localPlayerId: qR
-        }, tR ? eR((RR => {
-          const JR = PR(RR.shopInfo);
+      (0, Zr.useEffect)((() => {
+        Fr.current.playerIds === jr && Fr.current.localPlayerId === Ir || (Fr.current = {
+          playerIds: jr,
+          localPlayerId: Ir
+        }, Wr ? Ur((rr => {
+          const Sr = Gr(rr.shopInfo);
           return {
-            ...RR,
-            ...JR
+            ...rr,
+            ...Sr
           }
-        })) : mR(IR().shopInfo))
-      }), [ZR, qR]);
-      const YR = rR.selectedCategoryKey,
-        kR = (RR, JR) => {
-          var GR, yR;
-          return (isNaN(JR) || (0, gG.I)(RR.currency) || pZ(rR.currencyAmounts, RR.currency) && JR <= rR.currencyAmounts[RR.currency].amount) && (null === (GR = RR.canBuy) || void 0 === GR || GR) && !(null !== (yR = RR.hidden) && void 0 !== yR && yR)
+        })) : Ar(kr().shopInfo))
+      }), [jr, Ir]);
+      const or = Nr.selectedCategoryKey,
+        br = (rr, Sr) => {
+          var Qr, Zr;
+          return (isNaN(Sr) || (0, LQ.L)(rr.currency) || vj(Nr.currencyAmounts, rr.currency) && Sr <= Nr.currencyAmounts[rr.currency].amount) && (null === (Qr = rr.canBuy) || void 0 === Qr || Qr) && !(null !== (Zr = rr.hidden) && void 0 !== Zr && Zr)
         },
-        QR = (RR, JR) => {
-          var GR, yR, tR;
-          const ZR = CZ(YR, RR),
-            qR = rR.shopInfo[YR].items[RR],
-            VR = rR.userInputsPerItem[ZR],
-            wR = (0, Mt.e)(qR, VR),
-            eR = kR(qR, wR),
-            aR = qR.enchant,
-            LR = aR ? (0, cR.rb)(null !== (GR = qR.customTitle) && void 0 !== GR ? GR : RR, {
-              colour: cR.kb[aR.tier]
-            }) : null !== (yR = qR.customTitle) && void 0 !== yR ? yR : RR,
-            nR = JR => {
-              const GR = null !== JR && void 0 !== JR ? JR : VR,
-                yR = void 0 !== JR ? (0, Mt.e)(qR, JR) : wR;
-              kR(qR, yR) && null !== GR && SR(RR, qR, JR);
-              let tR = rR.redDotInfo;
-              tR.itemHasRedDot(YR, RR) && (tR.updateItemRedDot(YR, RR, !1), tR = tR.shallowCopy()), HR({
-                redDotInfo: tR
+        Jr = (rr, Sr) => {
+          var Qr, Zr, Wr;
+          const jr = ej(or, rr),
+            Ir = Nr.shopInfo[or].items[rr],
+            pr = Nr.userInputsPerItem[jr],
+            mr = (0, yW.e)(Ir, pr),
+            Ur = br(Ir, mr),
+            tr = Ir.enchant,
+            hr = tr ? (0, Mr.kb)(null !== (Qr = Ir.customTitle) && void 0 !== Qr ? Qr : rr, {
+              colour: Mr.fb[tr.tier]
+            }) : null !== (Zr = Ir.customTitle) && void 0 !== Zr ? Zr : rr,
+            zr = Sr => {
+              const Qr = null !== Sr && void 0 !== Sr ? Sr : pr,
+                Zr = void 0 !== Sr ? (0, yW.e)(Ir, Sr) : mr;
+              br(Ir, Zr) && null !== Qr && ir(rr, Ir, Sr);
+              let Wr = Nr.redDotInfo;
+              Wr.itemHasRedDot(or, rr) && (Wr.updateItemRedDot(or, rr, !1), Wr = Wr.shallowCopy()), gr({
+                redDotInfo: Wr
               })
             };
-          return (0, KR.jsxs)("div", {
-            className: uR()("ShopItem", {
-              ShopItemNoInput: !qR.userInput,
-              ShopItemNoInputCanBuy: !qR.userInput && eR,
-              ShopItemNoInputSelected: qR.isSelected,
-              ShopItemEnchant: !!aR
+          return (0, xr.jsxs)("div", {
+            className: ar()("ShopItem", {
+              ShopItemNoInput: !Ir.userInput,
+              ShopItemNoInputCanBuy: !Ir.userInput && Ur,
+              ShopItemNoInputSelected: Ir.isSelected,
+              ShopItemEnchant: !!tr
             }),
-            "data-pad-focusable": !qR.userInput || void 0,
-            "data-pad-unavailable": !qR.userInput && !eR || void 0,
-            "data-pad-repeat": null !== (tR = (0, Nt.c)(qR)) && void 0 !== tR ? tR : void 0,
-            "data-pad-repeat-wait": rR.awaitingPurchase || void 0,
+            "data-pad-focusable": !Ir.userInput || void 0,
+            "data-pad-unavailable": !Ir.userInput && !Ur || void 0,
+            "data-pad-repeat": null !== (Wr = (0, HW.b)(Ir)) && void 0 !== Wr ? Wr : void 0,
+            "data-pad-repeat-wait": Nr.awaitingPurchase || void 0,
             onClick: () => {
-              if (aR && vR.current) {
-                if (gR !== ZR) return void bR(ZR);
-                bR(null)
+              if (tr && Xr.current) {
+                if (Lr !== jr) return void lr(jr);
+                lr(null)
               }
-              qR.userInput || nR()
+              Ir.userInput || zr()
             },
-            onPointerDown: RR => {
-              aR && (vR.current = (0, lt.w)(RR))
+            onPointerDown: rr => {
+              tr && (Xr.current = (0, TW.o)(rr))
             },
-            onPointerEnter: RR => {
-              aR && !(0, lt.w)(RR) && bR(ZR)
+            onPointerEnter: rr => {
+              tr && !(0, TW.o)(rr) && lr(jr)
             },
-            onPointerLeave: RR => {
-              aR && !(0, lt.w)(RR) && bR((RR => RR === ZR ? null : RR))
+            onPointerLeave: rr => {
+              tr && !(0, TW.o)(rr) && lr((rr => rr === jr ? null : rr))
             },
             style: {
-              zIndex: Object.keys(rR.shopInfo[YR].items).length - JR
+              zIndex: Object.keys(Nr.shopInfo[or].items).length - Sr
             },
-            children: [rR.redDotInfo.itemHasRedDot(YR, RR) && (0, KR.jsx)(iR.c, {
+            children: [Nr.redDotInfo.itemHasRedDot(or, rr) && (0, xr.jsx)(fr.d, {
               top: "-6px",
               right: "-6px"
-            }), qR.badge && (0, KR.jsx)("div", {
+            }), Ir.badge && (0, xr.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, KR.jsx)("div", {
-                className: uR()("ShopBadgeMain", qR.badge.type),
-                children: (0, KR.jsx)(gt.c, {
-                  text: qR.badge.text
+              children: (0, xr.jsx)("div", {
+                className: ar()("ShopBadgeMain", Ir.badge.type),
+                children: (0, xr.jsx)(OW.c, {
+                  text: Ir.badge.text
                 })
               })
-            }), (0, KR.jsx)("div", {
+            }), (0, xr.jsx)("div", {
               className: "ShopItemLeft",
-              children: qR.image && (0, KR.jsx)(bZ, {
-                item: qR,
+              children: Ir.image && (0, xr.jsx)(Lj, {
+                item: Ir,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, KR.jsxs)("div", {
+            }), (0, xr.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, KR.jsxs)("div", {
+              children: [(0, xr.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, KR.jsx)("div", {
+                children: [(0, xr.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, KR.jsx)(gt.c, {
-                    text: LR
+                  children: (0, xr.jsx)(OW.c, {
+                    text: hr
                   })
-                }), (0, KR.jsx)("div", {
+                }), (0, xr.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, KR.jsx)(gt.c, {
-                    text: qR.description
+                  children: (0, xr.jsx)(OW.c, {
+                    text: Ir.description
                   })
                 })]
-              }), qR.userInput && (0, KR.jsxs)("div", {
+              }), Ir.userInput && (0, xr.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: RR => {
-                  RR.stopPropagation()
+                onClick: rr => {
+                  rr.stopPropagation()
                 },
-                children: [(0, KR.jsx)(xZ, {
-                  item: qR,
-                  currInput: VR,
-                  updateInput: JR => {
-                    ((RR, JR, GR) => {
-                      const yR = CZ(RR, JR),
-                        tR = {
-                          ...rR.userInputsPerItem
+                children: [(0, xr.jsx)(Pj, {
+                  item: Ir,
+                  currInput: pr,
+                  updateInput: Sr => {
+                    ((rr, Sr, Qr) => {
+                      const Zr = ej(rr, Sr),
+                        Wr = {
+                          ...Nr.userInputsPerItem
                         };
-                      tR[yR] = GR, HR({
-                        userInputsPerItem: tR
+                      Wr[Zr] = Qr, gr({
+                        userInputsPerItem: Wr
                       })
-                    })(YR, RR, JR)
+                    })(or, rr, Sr)
                   },
-                  onSubmit: RR => {
-                    nR(RR)
+                  onSubmit: rr => {
+                    zr(rr)
                   }
-                }), ("dropdown" !== qR.userInput.type || !qR.userInput.autoSubmit) && (0, KR.jsx)(fR.g, {
+                }), ("dropdown" !== Ir.userInput.type || !Ir.userInput.autoSubmit) && (0, xr.jsx)(Er.h, {
                   className: "ItemCostButton",
-                  disabled: !eR && null !== VR,
+                  disabled: !Ur && null !== pr,
                   onClick: () => {
-                    nR()
+                    zr()
                   },
-                  children: (0, KR.jsx)(OZ, {
-                    item: qR,
-                    cost: wR,
-                    currencyAmounts: rR.currencyAmounts
+                  children: (0, xr.jsx)(Xj, {
+                    item: Ir,
+                    cost: mr,
+                    currencyAmounts: Nr.currencyAmounts
                   })
                 })]
               })]
-            }), !qR.userInput && (0, KR.jsx)("div", {
+            }), !Ir.userInput && (0, xr.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, KR.jsx)(OZ, {
-                item: qR,
-                cost: wR,
-                currencyAmounts: rR.currencyAmounts
+              children: (0, xr.jsx)(Xj, {
+                item: Ir,
+                cost: mr,
+                currencyAmounts: Nr.currencyAmounts
               })
-            }), aR && gR === ZR && (0, KR.jsxs)("div", {
+            }), tr && Lr === jr && (0, xr.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, KR.jsx)(gt.c, {
-                text: LR
-              }), (0, KR.jsx)("div", {
+              children: [(0, xr.jsx)(OW.c, {
+                text: hr
+              }), (0, xr.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, KR.jsx)(gt.c, {
-                  text: (0, Bt.d)("", aR.enchantments, aR.enchantmentData)
+                children: (0, xr.jsx)(OW.c, {
+                  text: (0, BW.c)("", tr.enchantments, tr.enchantmentData)
                 })
               })]
             })]
-          }, ZR)
+          }, jr)
         },
-        FR = function(RR) {
-          for (const JR in RR)
-            if (RR[JR].smp) return !0;
+        Dr = function(rr) {
+          for (const Sr in rr)
+            if (rr[Sr].smp) return !0;
           return !1
-        }(rR.shopInfo),
-        TR = Ju(rR.shopInfo, YR),
-        sR = function(RR, JR) {
-          var GR;
-          return !!JR && !(null === (GR = RR[JR]) || void 0 === GR || !GR.loadout)
-        }(rR.shopInfo, YR),
-        hR = (0, KR.jsx)("div", {
-          className: uR()("ShopOnBoughtInfo", {
-            ShopOnBoughtInfoShow: null !== rR.onBoughtInfo
+        }(Nr.shopInfo),
+        dr = ra(Nr.shopInfo, or),
+        sr = function(rr, Sr) {
+          var Qr;
+          return !!Sr && !(null === (Qr = rr[Sr]) || void 0 === Qr || !Qr.loadout)
+        }(Nr.shopInfo, or),
+        ur = (0, xr.jsx)("div", {
+          className: ar()("ShopOnBoughtInfo", {
+            ShopOnBoughtInfoShow: null !== Nr.onBoughtInfo
           }),
-          children: (0, KR.jsx)(gt.c, {
-            text: LR.current
+          children: (0, xr.jsx)(OW.c, {
+            text: hr.current
           })
         });
-      return (0, KR.jsx)(Ct.d, {
+      return (0, xr.jsx)(eW.e, {
         className: "Menu ShopBody",
-        show: tR,
-        children: 0 !== Object.keys(rR.shopInfo).length && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsxs)("div", {
+        show: Wr,
+        children: 0 !== Object.keys(Nr.shopInfo).length && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, KR.jsx)(wR, {
-              items: su(rR.shopInfo).map((RR => {
-                var JR;
-                return RR === Qu ? {
-                  id: RR,
+            children: [(0, xr.jsx)(mr, {
+              items: da(Nr.shopInfo).map((rr => {
+                var Sr;
+                return rr === ba ? {
+                  id: rr,
                   title: "loadoutShop:title",
                   redDot: !1
                 } : {
-                  id: RR,
-                  title: null !== (JR = rR.shopInfo[RR].customTitle) && void 0 !== JR ? JR : RR,
-                  redDot: rR.redDotInfo.categoryHasRedDot(RR)
+                  id: rr,
+                  title: null !== (Sr = Nr.shopInfo[rr].customTitle) && void 0 !== Sr ? Sr : rr,
+                  redDot: Nr.redDotInfo.categoryHasRedDot(rr)
                 }
               })),
-              link: VR ? {
+              link: pr ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, Ht.f)({
-                    page: (0, Ht.b)(),
+                  (0, RW.e)({
+                    page: (0, RW.d)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: sR ? Qu : YR,
-              onClick: RR => {
-                RR !== Qu ? dR(RR) : sR || dR(Fu(rR.shopInfo)[0].categoryKey)
+              selectedItemId: sr ? ba : or,
+              onClick: rr => {
+                rr !== ba ? cr(rr) : sr || cr(Ja(Nr.shopInfo)[0].categoryKey)
               },
-              padStartsOnTab: (0, Nt.f)(YR)
-            }), (0, KR.jsx)("div", {
+              padStartsOnTab: (0, HW.f)(or)
+            }), (0, xr.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: rR.currencyAmounts && Object.keys(rR.currencyAmounts).map((RR => {
-                const JR = rR.currencyAmounts[RR];
-                return JR.hidden ? null : (0, KR.jsx)(WZ, {
-                  currency: RR,
-                  info: JR,
-                  smaller: OR,
-                  show: tR
-                }, RR)
+              children: Nr.currencyAmounts && Object.keys(Nr.currencyAmounts).map((rr => {
+                const Sr = Nr.currencyAmounts[rr];
+                return Sr.hidden ? null : (0, xr.jsx)(Yj, {
+                  currency: rr,
+                  info: Sr,
+                  smaller: Pr,
+                  show: Wr
+                }, rr)
               }))
             })]
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [FR && (0, KR.jsx)(Eu, {
-              show: tR,
-              shopInfo: rR.shopInfo,
-              selectedCategoryKey: YR,
-              buy: (RR, JR, GR) => {
-                SR(RR, JR, GR)
+            children: [Dr && (0, xr.jsx)(ca, {
+              show: Wr,
+              shopInfo: Nr.shopInfo,
+              selectedCategoryKey: or,
+              buy: (rr, Sr, Qr) => {
+                ir(rr, Sr, Qr)
               },
-              canAfford: kR,
-              message: rR.onBoughtInfo
-            }), sR && tR && (0, KR.jsxs)(KR.Fragment, {
-              children: [hR, (0, KR.jsx)(KZ, {
-                shopInfo: rR.shopInfo,
-                selectedCategoryKey: YR,
-                selectCategory: dR,
-                buy: SR,
-                canAfford: kR,
-                currencyAmounts: rR.currencyAmounts
+              canAfford: br,
+              message: Nr.onBoughtInfo
+            }), sr && Wr && (0, xr.jsxs)(xr.Fragment, {
+              children: [ur, (0, xr.jsx)(pj, {
+                shopInfo: Nr.shopInfo,
+                selectedCategoryKey: or,
+                selectCategory: cr,
+                buy: ir,
+                canAfford: br,
+                currencyAmounts: Nr.currencyAmounts
               })]
-            }), null === TR && !sR && (0, KR.jsxs)(KR.Fragment, {
-              children: [hR, (0, KR.jsx)("div", {
+            }), null === dr && !sr && (0, xr.jsxs)(xr.Fragment, {
+              children: [ur, (0, xr.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, KR.jsxs)("div", {
+                children: (0, xr.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (JR = rR.shopInfo[YR]) || void 0 === JR ? void 0 : JR.description) && (0, KR.jsx)("div", {
+                  children: [(null === (Sr = Nr.shopInfo[or]) || void 0 === Sr ? void 0 : Sr.description) && (0, xr.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, KR.jsx)(gt.c, {
-                      text: rR.shopInfo[YR].description
+                    children: (0, xr.jsx)(OW.c, {
+                      text: Nr.shopInfo[or].description
                     })
-                  }), tR && (0, KR.jsx)("div", {
+                  }), Wr && (0, xr.jsx)("div", {
                     className: "ShopItems",
-                    ref: WR,
+                    ref: nr,
                     "data-pad-initial-area": !0,
-                    children: ot(null === (GR = rR.shopInfo[YR]) || void 0 === GR ? void 0 : GR.items).map(((RR, JR) => QR(RR, JR)))
+                    children: gW(null === (Qr = Nr.shopInfo[or]) || void 0 === Qr ? void 0 : Qr.items).map(((rr, Sr) => Jr(rr, Sr)))
                   })]
                 })
               })]
@@ -6197,681 +6197,681 @@ export const modules = {
       })
     }));
 
-    function bZ(RR) {
+    function Lj(rr) {
       let {
-        item: JR,
-        minWidth: GR,
-        minHeight: yR
-      } = RR;
+        item: Sr,
+        minWidth: Qr,
+        minHeight: Zr
+      } = rr;
       const {
-        image: tR,
-        schematicId: uR,
-        imageColour: ZR
-      } = JR;
-      if (uR) return (0, KR.jsx)("div", {
+        image: Wr,
+        schematicId: ar,
+        imageColour: jr
+      } = Sr;
+      if (ar) return (0, xr.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${GR}rem`,
-          height: `${yR}rem`
+          width: `${Qr}rem`,
+          height: `${Zr}rem`
         },
-        children: (0, KR.jsx)(bt.e, {
+        children: (0, xr.jsx)(LW.e, {
           game: {
-            schematicId: uR
+            schematicId: ar
           }
         })
       });
-      var iR, fR;
-      if ((0, pt.c)(tR)) return (0, KR.jsx)("div", {
+      var fr, Er;
+      if ((0, vW.h)(Wr)) return (0, xr.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${GR}rem`,
+          minWidth: `${Qr}rem`,
           height: "0",
-          minHeight: `${yR}rem`
+          minHeight: `${Zr}rem`
         },
-        children: (0, KR.jsx)(pt.b, {
-          itemName: tR,
-          amount: null !== (iR = JR.amount) && void 0 !== iR ? iR : 0,
-          amountFontSize: yR / 4 + "rem",
-          enchantmentTier: null === (fR = JR.enchant) || void 0 === fR ? void 0 : fR.tier
+        children: (0, xr.jsx)(vW.d, {
+          itemName: Wr,
+          amount: null !== (fr = Sr.amount) && void 0 !== fr ? fr : 0,
+          amountFontSize: Zr / 4 + "rem",
+          enchantmentTier: null === (Er = Sr.enchant) || void 0 === Er ? void 0 : Er.tier
         })
       });
-      const VR = tR.slice(-4);
-      return ".jpg" === VR || ".png" === VR ? (0, KR.jsx)(vZ, {
-        image: tR,
-        minWidth: GR
-      }) : (0, KR.jsx)(qR.d, {
-        name: tR,
+      const pr = Wr.slice(-4);
+      return ".jpg" === pr || ".png" === pr ? (0, xr.jsx)(lj, {
+        image: Wr,
+        minWidth: Qr
+      }) : (0, xr.jsx)(Ir.c, {
+        name: Wr,
         className: "SelectedItemImage",
         style: {
-          color: ZR
+          color: jr
         }
       })
     }
 
-    function vZ(RR) {
+    function lj(rr) {
       let {
-        image: JR,
-        minWidth: GR
-      } = RR;
+        image: Sr,
+        minWidth: Qr
+      } = rr;
       const {
-        gameNameWithVariation: yR
-      } = (0, QJ.i)("connectedGame"), tR = JR.endsWith(".jpg");
-      return (0, KR.jsx)("img", {
-        className: uR()({
-          ShopPixelImage: !tR
+        gameNameWithVariation: Zr
+      } = (0, JS.j)("connectedGame"), Wr = Sr.endsWith(".jpg");
+      return (0, xr.jsx)("img", {
+        className: ar()({
+          ShopPixelImage: !Wr
         }),
         style: {
-          width: `${tR?1.6*GR:GR}rem`,
+          width: `${Wr?1.6*Qr:Qr}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,cR.Sb)(yR)}/${JR}`,
-        alt: JR,
+        src: `/textures/games/${(0,Mr.Mb)(Zr)}/${Sr}`,
+        alt: Sr,
         draggable: !1
       })
     }
 
-    function OZ(RR) {
+    function Xj(rr) {
       let {
-        item: JR,
-        cost: GR,
-        currencyAmounts: yR
-      } = RR;
-      const tR = !isNaN(GR) && 0 !== GR && pZ(yR, JR.currency);
-      let uR = null;
-      return JR.buyButtonText ? uR = JR.buyButtonText : tR ? (uR = GR, JR.sell && (uR = -1 * GR), uR = uR.toString()) : 0 === GR ? uR = "Free" : JR.isRewardedAd && (uR = "Watch ad"), (0, gG.I)(uR) || " " === uR ? null : (0, KR.jsxs)("div", {
+        item: Sr,
+        cost: Qr,
+        currencyAmounts: Zr
+      } = rr;
+      const Wr = !isNaN(Qr) && 0 !== Qr && vj(Zr, Sr.currency);
+      let ar = null;
+      return Sr.buyButtonText ? ar = Sr.buyButtonText : Wr ? (ar = Qr, Sr.sell && (ar = -1 * Qr), ar = ar.toString()) : 0 === Qr ? ar = "Free" : Sr.isRewardedAd && (ar = "Watch ad"), (0, LQ.L)(ar) || " " === ar ? null : (0, xr.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [tR && (0, KR.jsx)("div", {
+        children: [Wr && (0, xr.jsx)("div", {
           style: {
-            color: yR[JR.currency].iconColour
+            color: Zr[Sr.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, KR.jsx)(ZZ, {
-            iconName: yR[JR.currency].icon
+          children: (0, xr.jsx)(aj, {
+            iconName: Zr[Sr.currency].icon
           })
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, KR.jsx)(gt.c, {
-            text: uR
+          children: (0, xr.jsx)(OW.c, {
+            text: ar
           })
         })]
       })
     }
 
-    function xZ(RR) {
+    function Pj(rr) {
       let {
-        item: JR,
-        currInput: GR,
-        updateInput: tR,
-        onSubmit: uR
-      } = RR;
+        item: Sr,
+        currInput: Qr,
+        updateInput: Wr,
+        onSubmit: ar
+      } = rr;
       const {
-        t: qR
-      } = (0, ZR.A)(), iR = (0, yR.useRef)(null);
-      if ((0, yR.useEffect)((() => {
-          const RR = iR.current;
-          RR && RR.value !== GR && document.activeElement !== RR && (RR.value = null !== GR && void 0 !== GR ? GR : "")
-        }), [GR]), !JR.userInput) return null;
-      let fR = JR.userInput;
-      if (nR.featureFlags.sanitizeShopInput && "text" === JR.userInput.type && (fR = {
+        t: Ir
+      } = (0, jr.E)(), fr = (0, Zr.useRef)(null);
+      if ((0, Zr.useEffect)((() => {
+          const rr = fr.current;
+          rr && rr.value !== Qr && document.activeElement !== rr && (rr.value = null !== Qr && void 0 !== Qr ? Qr : "")
+        }), [Qr]), !Sr.userInput) return null;
+      let Er = Sr.userInput;
+      if (zr.featureFlags.sanitizeShopInput && "text" === Sr.userInput.type && (Er = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === fR.type || "number" === fR.type) {
-        var VR, wR;
-        console.assert(void 0 !== GR, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(JR)}`);
-        const RR = "text" === fR.type && fR.wordCharsOnly;
-        return (0, KR.jsx)("div", {
+        }), "text" === Er.type || "number" === Er.type) {
+        var pr, mr;
+        console.assert(void 0 !== Qr, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Sr)}`);
+        const rr = "text" === Er.type && Er.wordCharsOnly;
+        return (0, xr.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, KR.jsx)(CR.b, {
+          children: (0, xr.jsx)(Kr.b, {
             className: "ShopItemUserInputText",
-            placeholderText: qR(fR.placeholderText),
-            defaultValue: GR,
-            domRef: iR,
-            onValueChange: (JR, GR) => {
-              !0 === RR && (JR = (0, Ot.ab)(JR)), iR.current.value = JR, tR(JR)
+            placeholderText: Ir(Er.placeholderText),
+            defaultValue: Qr,
+            domRef: fr,
+            onValueChange: (Sr, Qr) => {
+              !0 === rr && (Sr = (0, XW.lb)(Sr)), fr.current.value = Sr, Wr(Sr)
             },
-            onEnter: uR,
-            type: fR.type
-          }, (null !== (VR = fR.initialValue) && void 0 !== VR ? VR : "") + (null !== (wR = fR.placeholderText) && void 0 !== wR ? wR : ""))
+            onEnter: ar,
+            type: Er.type
+          }, (null !== (pr = Er.initialValue) && void 0 !== pr ? pr : "") + (null !== (mr = Er.placeholderText) && void 0 !== mr ? mr : ""))
         })
       }
-      if ("dropdown" === fR.type) {
-        console.assert(void 0 !== GR, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(JR)}`);
-        const RR = fR.autoSubmit;
-        return (0, KR.jsx)("div", {
+      if ("dropdown" === Er.type) {
+        console.assert(void 0 !== Qr, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Sr)}`);
+        const rr = Er.autoSubmit;
+        return (0, xr.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, KR.jsx)(YJ.e, {
-            options: fR.dropdownOptions.map((RR => (0, Mt.f)(RR))),
-            value: GR,
-            onChange: JR => {
+          children: (0, xr.jsx)(oS.c, {
+            options: Er.dropdownOptions.map((rr => (0, yW.f)(rr))),
+            value: Qr,
+            onChange: Sr => {
               let {
-                value: GR
-              } = JR;
-              tR(GR), RR && uR(GR)
+                value: Qr
+              } = Sr;
+              Wr(Qr), rr && ar(Qr)
             }
           })
         })
       }
-      return "player" === fR.type ? (0, KR.jsx)(NZ, {
-        userInput: fR,
-        currInput: GR,
-        updateInput: tR
-      }) : "color" === fR.type ? (0, KR.jsx)("div", {
+      return "player" === Er.type ? (0, xr.jsx)(Hj, {
+        userInput: Er,
+        currInput: Qr,
+        updateInput: Wr
+      }) : "color" === Er.type ? (0, xr.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, KR.jsx)("input", {
+        children: (0, xr.jsx)("input", {
           type: "color",
-          value: GR,
-          onChange: RR => {
-            tR(RR.target.value)
+          value: Qr,
+          onChange: rr => {
+            Wr(rr.target.value)
           }
         })
       }) : null
     }
 
-    function NZ(RR) {
+    function Hj(rr) {
       let {
-        userInput: JR,
-        currInput: GR,
-        updateInput: yR
-      } = RR;
-      const tR = (0, QJ.i)("players"),
-        uR = (0, QJ.i)("hiddenPlayerNames"),
-        ZR = (0, Mt.j)(tR.ids, tR.localId, JR);
-      return (0, KR.jsx)("div", {
+        userInput: Sr,
+        currInput: Qr,
+        updateInput: Zr
+      } = rr;
+      const Wr = (0, JS.j)("players"),
+        ar = (0, JS.j)("hiddenPlayerNames"),
+        jr = (0, yW.j)(Wr.ids, Wr.localId, Sr);
+      return (0, xr.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, KR.jsx)(YJ.e, {
-          options: ZR.map((RR => {
+        children: (0, xr.jsx)(oS.c, {
+          options: jr.map((rr => {
             const {
-              name: JR
-            } = tR.byId[RR];
+              name: Sr
+            } = Wr.byId[rr];
             return {
-              value: RR,
-              label: null === JR ? "" : (0, vt.e)(JR, uR)
+              value: rr,
+              label: null === Sr ? "" : (0, lW.c)(Sr, ar)
             }
           })),
-          value: GR,
-          onChange: RR => {
+          value: Qr,
+          onChange: rr => {
             let {
-              value: JR
-            } = RR;
-            yR(JR)
+              value: Sr
+            } = rr;
+            Zr(Sr)
           }
         })
       })
     }
 
-    function DZ(RR) {
+    function qj(rr) {
       let {
-        ids: JR
-      } = RR;
-      return JR
+        ids: Sr
+      } = rr;
+      return Sr
     }
 
-    function HZ(RR) {
+    function Rj(rr) {
       let {
-        localId: JR
-      } = RR;
-      return JR
+        localId: Sr
+      } = rr;
+      return Sr
     }
-    var oZ = GR(1800);
-    const cZ = (0, GR(1547).j)((RR => RR.PadLobbyShortcuts)),
-      PZ = (0, yR.lazy)((() => Promise.resolve().then((() => GR(5463))).then((RR => ({
-        default: RR.Lobbyleaderboard
+    var gj = Qr(1758);
+    const Cj = (0, Qr(1541).j)((rr => rr.PadLobbyShortcuts)),
+      Mj = (0, Zr.lazy)((() => Promise.resolve().then((() => Qr(5420))).then((rr => ({
+        default: rr.Lobbyleaderboard
       }))))),
-      IZ = (0, yR.lazy)((() => GR.e(253).then((() => GR(42608))).then((RR => ({
-        default: RR.LobbyManageView
+      Gj = (0, Zr.lazy)((() => Qr.e(254).then((() => Qr(42938))).then((rr => ({
+        default: rr.LobbyManageView
       })))));
 
-    function mZ(RR) {
+    function kj(rr) {
       let {
-        show: JR
-      } = RR;
-      return JR ? (0, KR.jsx)(zZ, {}) : null
+        show: Sr
+      } = rr;
+      return Sr ? (0, xr.jsx)(Aj, {}) : null
     }
 
-    function zZ() {
-      const RR = (0, Dt.c)();
-      return (0, KR.jsxs)(KR.Fragment, {
-        children: [(0, KR.jsx)(cZ, {}), (0, KR.jsxs)(yR.Suspense, {
-          fallback: (0, KR.jsx)("div", {
+    function Aj() {
+      const rr = (0, qW.c)();
+      return (0, xr.jsxs)(xr.Fragment, {
+        children: [(0, xr.jsx)(Cj, {}), (0, xr.jsxs)(Zr.Suspense, {
+          fallback: (0, xr.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, KR.jsx)(XR.d, {})
+            children: (0, xr.jsx)(yr.c, {})
           }),
-          children: [RR && (0, KR.jsx)(IZ, {
-            leaderboard: (0, KR.jsx)(PZ, {})
-          }), !RR && (0, KR.jsx)(PZ, {})]
+          children: [rr && (0, xr.jsx)(Gj, {
+            leaderboard: (0, xr.jsx)(Mj, {})
+          }), !rr && (0, xr.jsx)(Mj, {})]
         })]
       })
     }
-    var SZ = GR(1716),
-      jZ = GR(3329),
-      dZ = GR(1943),
-      EZ = GR(4214),
-      YZ = GR(3804),
-      kZ = GR(1642),
-      QZ = GR(1594),
-      FZ = GR(4150),
-      TZ = GR(4161),
-      sZ = GR(4293),
-      hZ = GR(3301);
-    const Rq = "storeRecentGiftRecipients",
-      Jq = new Map;
+    var Vj = Qr(1684),
+      ij = Qr(3280),
+      wj = Qr(1885),
+      cj = Qr(4170),
+      Fj = Qr(3749),
+      oj = Qr(1626),
+      bj = Qr(1578),
+      Jj = Qr(4100),
+      Dj = Qr(4113),
+      dj = Qr(4250),
+      sj = Qr(3255);
+    const uj = "storeRecentGiftRecipients",
+      rI = new Map;
 
-    function Gq() {
+    function SI() {
       try {
-        const RR = wG.i.getItem(Rq);
-        return Array.isArray(RR) ? RR.filter((RR => "string" === typeof(null === RR || void 0 === RR ? void 0 : RR.name) && RR.name.length > 0)).map((RR => ({
-          name: RR.name,
-          cosmetics: RR.cosmetics && "object" === typeof RR.cosmetics ? RR.cosmetics : null
+        const rr = mQ.j.getItem(uj);
+        return Array.isArray(rr) ? rr.filter((rr => "string" === typeof(null === rr || void 0 === rr ? void 0 : rr.name) && rr.name.length > 0)).map((rr => ({
+          name: rr.name,
+          cosmetics: rr.cosmetics && "object" === typeof rr.cosmetics ? rr.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function yq(RR, JR) {
-      var GR;
-      const [tR, uR] = (0, yR.useState)(""), [ZR, qR] = (0, yR.useState)("search"), [iR, fR] = (0, yR.useState)(null), [VR, KR] = (0, yR.useState)(null), wR = (0, yR.useRef)(null), rR = (0, yR.useRef)(null);
-      (0, yR.useEffect)((() => () => {
-        wR.current && clearTimeout(wR.current)
-      }), []), (0, yR.useEffect)((() => {
-        JR || LR()
-      }), [JR]);
-      const eR = null !== (GR = null === iR || void 0 === iR ? void 0 : iR.name) && void 0 !== GR ? GR : null;
+    function QI(rr, Sr) {
+      var Qr;
+      const [Wr, ar] = (0, Zr.useState)(""), [jr, Ir] = (0, Zr.useState)("search"), [fr, Er] = (0, Zr.useState)(null), [pr, xr] = (0, Zr.useState)(null), mr = (0, Zr.useRef)(null), Nr = (0, Zr.useRef)(null);
+      (0, Zr.useEffect)((() => () => {
+        mr.current && clearTimeout(mr.current)
+      }), []), (0, Zr.useEffect)((() => {
+        Sr || hr()
+      }), [Sr]);
+      const Ur = null !== (Qr = null === fr || void 0 === fr ? void 0 : fr.name) && void 0 !== Qr ? Qr : null;
 
-      function aR() {
-        wR.current && (clearTimeout(wR.current), wR.current = null)
+      function tr() {
+        mr.current && (clearTimeout(mr.current), mr.current = null)
       }
 
-      function LR() {
-        aR(), uR(""), qR("search"), fR(null)
-      }(0, yR.useEffect)((() => {
-        if (null === eR || RR === bR.NULL_USER_CONTEXT) return;
-        const JR = eR.toLowerCase();
-        if (JR === RR.getPlayerName().toLowerCase()) return void KR({
-          name: eR,
+      function hr() {
+        tr(), ar(""), Ir("search"), Er(null)
+      }(0, Zr.useEffect)((() => {
+        if (null === Ur || rr === lr.NULL_USER_CONTEXT) return;
+        const Sr = Ur.toLowerCase();
+        if (Sr === rr.getPlayerName().toLowerCase()) return void xr({
+          name: Ur,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const GR = Jq.get(JR);
-        if (GR) return void KR({
-          name: eR,
-          result: GR
+        const Qr = rI.get(Sr);
+        if (Qr) return void xr({
+          name: Ur,
+          result: Qr
         });
-        let yR = !1;
-        return async function(RR, JR) {
+        let Zr = !1;
+        return async function(rr, Sr) {
           try {
-            const GR = await (0, bR.postJsonWithMetricsCookiesAndJsonResponse)(`${bJ.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: JR
+            const Qr = await (0, lr.postJsonWithMetricsCookiesAndJsonResponse)(`${lS.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: Sr
             }, {
               retries: 1
-            }, RR.getMetricsCookies());
-            if ("boolean" !== typeof(null === GR || void 0 === GR ? void 0 : GR.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(GR)}`);
-            return GR
-          } catch (GR) {
-            return console.error("Failed to look up gift recipient:", GR), {
+            }, rr.getMetricsCookies());
+            if ("boolean" !== typeof(null === Qr || void 0 === Qr ? void 0 : Qr.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(Qr)}`);
+            return Qr
+          } catch (Qr) {
+            return console.error("Failed to look up gift recipient:", Qr), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(RR, eR).catch((RR => (console.error("Gift recipient lookup failed:", RR), {
+        }(rr, Ur).catch((rr => (console.error("Gift recipient lookup failed:", rr), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((RR => {
-          !0 !== RR.giftRecipientFound && "store:giftRecipientLookupFailed" === RR.giftRecipientError || Jq.set(JR, RR), yR || KR({
-            name: eR,
-            result: RR
+        }))).then((rr => {
+          !0 !== rr.giftRecipientFound && "store:giftRecipientLookupFailed" === rr.giftRecipientError || rI.set(Sr, rr), Zr || xr({
+            name: Ur,
+            result: rr
           })
         })), () => {
-          yR = !0
+          Zr = !0
         }
-      }), [eR, RR]);
-      const nR = (0, yR.useMemo)((() => {
-        const RR = tR.trim();
-        if (!RR) return {
+      }), [Ur, rr]);
+      const zr = (0, Zr.useMemo)((() => {
+        const rr = Wr.trim();
+        if (!rr) return {
           status: "none"
         };
-        if (!iR || iR.name !== RR || (null === VR || void 0 === VR ? void 0 : VR.name) !== iR.name) return {
+        if (!fr || fr.name !== rr || (null === pr || void 0 === pr ? void 0 : pr.name) !== fr.name) return {
           status: "pending",
-          name: RR
+          name: rr
         };
-        const JR = VR.result;
-        return !1 === JR.giftRecipientFound ? {
+        const Sr = pr.result;
+        return !1 === Sr.giftRecipientFound ? {
           status: "error",
-          name: iR.name,
-          error: JR.giftRecipientError
+          name: fr.name,
+          error: Sr.giftRecipientError
         } : {
           status: "found",
-          name: JR.giftRecipientName,
-          ownedPacks: JR.giftRecipientOwnedPacks,
-          hasSuperRank: JR.giftRecipientHasSuperRank,
-          isSubscriber: JR.giftRecipientIsSubscriber
+          name: Sr.giftRecipientName,
+          ownedPacks: Sr.giftRecipientOwnedPacks,
+          hasSuperRank: Sr.giftRecipientHasSuperRank,
+          isSubscriber: Sr.giftRecipientIsSubscriber
         }
-      }), [tR, iR, VR]);
-      (0, yR.useEffect)((() => {
-        "found" === nR.status && "typed" === (null === iR || void 0 === iR ? void 0 : iR.source) && rR.current !== nR.name && (rR.current = nR.name, (0, LJ.reportAnalyticsClick)({
+      }), [Wr, fr, pr]);
+      (0, Zr.useEffect)((() => {
+        "found" === zr.status && "typed" === (null === fr || void 0 === fr ? void 0 : fr.source) && Nr.current !== zr.name && (Nr.current = zr.name, (0, hS.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [nR, iR]);
-      const UR = (null === VR || void 0 === VR ? void 0 : VR.name) === (null === iR || void 0 === iR ? void 0 : iR.name) ? null === VR || void 0 === VR ? void 0 : VR.result : null,
-        WR = !0 === (null === UR || void 0 === UR ? void 0 : UR.giftRecipientFound) ? UR.giftRecipientCosmetics : null;
+      }), [zr, fr]);
+      const Yr = (null === pr || void 0 === pr ? void 0 : pr.name) === (null === fr || void 0 === fr ? void 0 : fr.name) ? null === pr || void 0 === pr ? void 0 : pr.result : null,
+        nr = !0 === (null === Yr || void 0 === Yr ? void 0 : Yr.giftRecipientFound) ? Yr.giftRecipientCosmetics : null;
       return {
-        query: tR,
-        via: ZR,
-        recipient: nR,
-        recipientCosmetics: WR,
-        type: function(RR) {
-          uR(RR), qR("search"), aR();
-          const JR = RR.trim();
-          JR ? wR.current = setTimeout((() => {
-            fR({
-              name: JR,
+        query: Wr,
+        via: jr,
+        recipient: zr,
+        recipientCosmetics: nr,
+        type: function(rr) {
+          ar(rr), Ir("search"), tr();
+          const Sr = rr.trim();
+          Sr ? mr.current = setTimeout((() => {
+            Er({
+              name: Sr,
               source: "typed"
             })
-          }), 400) : fR(null)
+          }), 400) : Er(null)
         },
-        choose: function(RR, JR) {
-          aR(), uR(RR), qR("typed" === JR ? "search" : "prefilled" === JR ? "prefilled" : "suggestion"), fR({
-            name: RR,
-            source: JR
-          }), "typed" !== JR && "prefilled" !== JR && (0, LJ.reportAnalyticsClick)({
+        choose: function(rr, Sr) {
+          tr(), ar(rr), Ir("typed" === Sr ? "search" : "prefilled" === Sr ? "prefilled" : "suggestion"), Er({
+            name: rr,
+            source: Sr
+          }), "typed" !== Sr && "prefilled" !== Sr && (0, hS.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: JR
+            value: Sr
           })
         },
-        clear: LR,
-        recordGift: function(RR, JR) {
-          ! function(RR) {
-            Jq.delete(RR.toLowerCase())
-          }(RR), KR((GR => {
-            if (!GR || GR.name.toLowerCase() !== RR.toLowerCase() || !0 !== GR.result.giftRecipientFound || "superRank" === JR) return GR;
-            const yR = GR.result.giftRecipientOwnedPacks;
+        clear: hr,
+        recordGift: function(rr, Sr) {
+          ! function(rr) {
+            rI.delete(rr.toLowerCase())
+          }(rr), xr((Qr => {
+            if (!Qr || Qr.name.toLowerCase() !== rr.toLowerCase() || !0 !== Qr.result.giftRecipientFound || "superRank" === Sr) return Qr;
+            const Zr = Qr.result.giftRecipientOwnedPacks;
             return {
-              ...GR,
+              ...Qr,
               result: {
-                ...GR.result,
-                giftRecipientOwnedPacks: yR.includes(JR) ? yR : [...yR, JR]
+                ...Qr.result,
+                giftRecipientOwnedPacks: Zr.includes(Sr) ? Zr : [...Zr, Sr]
               }
             }
           }))
         }
       }
     }
-    var tq = GR(3292),
-      uq = GR(5474),
-      Zq = GR(271),
-      qq = GR(4051);
-    const iq = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var fq = GR(3240),
-      Vq = GR(656),
-      Kq = GR(3361),
-      wq = GR(3713);
+    var ZI = Qr(3251),
+      WI = Qr(5433),
+      aI = Qr(272),
+      jI = Qr(4001);
+    const II = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var fI = Qr(3208),
+      EI = Qr(672),
+      pI = Qr(3320),
+      xI = Qr(3657);
 
-    function rq(RR) {
+    function mI(rr) {
       let {
-        cosmetics: JR
-      } = RR;
-      return (0, KR.jsx)("span", {
+        cosmetics: Sr
+      } = rr;
+      return (0, xr.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, KR.jsx)(Kq.c, {
-          cosmetics: JR
+        children: (0, xr.jsx)(pI.b, {
+          cosmetics: Sr
         })
       })
     }
 
-    function eq(RR, JR) {
-      var GR, yR;
-      const tR = null !== (GR = RR.friend) && void 0 !== GR ? GR : {
+    function NI(rr, Sr) {
+      var Qr, Zr;
+      const Wr = null !== (Qr = rr.friend) && void 0 !== Qr ? Qr : {
         isError: !1,
-        name: RR.name,
+        name: rr.name,
         ranks: [],
-        cosmetics: null !== (yR = RR.cosmetics) && void 0 !== yR ? yR : {},
-        nameColour: Vq.c,
+        cosmetics: null !== (Zr = rr.cosmetics) && void 0 !== Zr ? Zr : {},
+        nameColour: EI.e,
         location: {
           status: "noGamePlayed"
         }
       };
-      return JR ? {
-        ...tR,
-        cosmetics: JR
-      } : tR
+      return Sr ? {
+        ...Wr,
+        cosmetics: Sr
+      } : Wr
     }
 
-    function aq(RR) {
+    function UI(rr) {
       let {
-        pending: JR
-      } = RR;
-      return (0, KR.jsx)("span", {
+        pending: Sr
+      } = rr;
+      return (0, xr.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: JR && (0, KR.jsx)(XR.d, {})
+        children: Sr && (0, xr.jsx)(yr.c, {})
       })
     }
 
-    function Lq(RR) {
-      var JR;
+    function tI(rr) {
+      var Sr;
       let {
-        selfName: GR,
-        giftRecipient: tR,
-        suggestionsVersion: iR,
-        pulseSignal: VR,
-        disabled: wR
-      } = RR;
+        selfName: Qr,
+        giftRecipient: Wr,
+        suggestionsVersion: fr,
+        pulseSignal: pr,
+        disabled: mr
+      } = rr;
       const {
-        t: rR
-      } = (0, ZR.A)(), eR = (0, kR.k)(), aR = (0, yR.useRef)(null), LR = (0, yR.useRef)(null), {
-        query: UR,
-        via: WR,
-        recipient: AR,
-        recipientCosmetics: XR
-      } = tR, MR = (0, hZ.i)(UR), BR = (0, yR.useMemo)((() => {
-        const RR = nR.featureFlags.useSocialFeatures ? eR.friends.filter((RR => !RR.isError)) : [];
-        return (0, hZ.g)({
-          onlineFriends: (0, kR.f)(RR),
-          recentRecipients: Gq(),
-          friends: RR,
-          selfName: GR,
+        t: Nr
+      } = (0, jr.E)(), Ur = (0, br.m)(), tr = (0, Zr.useRef)(null), hr = (0, Zr.useRef)(null), {
+        query: Yr,
+        via: nr,
+        recipient: er,
+        recipientCosmetics: yr
+      } = Wr, Br = (0, sj.n)(Yr), Tr = (0, Zr.useMemo)((() => {
+        const rr = zr.featureFlags.useSocialFeatures ? Ur.friends.filter((rr => !rr.isError)) : [];
+        return (0, sj.j)({
+          onlineFriends: (0, br.h)(rr),
+          recentRecipients: SI(),
+          friends: rr,
+          selfName: Qr,
           max: 8
         })
-      }), [eR.friends, GR, iR]), lR = UR.trim().toLowerCase(), pR = "search" !== WR && lR ? BR.find((RR => RR.name.toLowerCase() === lR)) : void 0, gR = pR && "prefilled" === WR ? [pR, ...BR.filter((RR => RR !== pR))] : BR, bR = "" !== lR && !pR, vR = bR ? UR : "", OR = gR.length > 0;
-      (0, yR.useEffect)((() => {
-        aR.current && aR.current.value !== vR && (aR.current.value = vR)
-      }), [vR]), (0, yR.useEffect)((() => {
-        aR.current && (aR.current.disabled = wR)
-      }), [wR, VR]);
-      const xR = (0, yR.useRef)(0);
+      }), [Ur.friends, Qr, fr]), vr = Yr.trim().toLowerCase(), Or = "search" !== nr && vr ? Tr.find((rr => rr.name.toLowerCase() === vr)) : void 0, Lr = Or && "prefilled" === nr ? [Or, ...Tr.filter((rr => rr !== Or))] : Tr, lr = "" !== vr && !Or, Xr = lr ? Yr : "", Pr = Lr.length > 0;
+      (0, Zr.useEffect)((() => {
+        tr.current && tr.current.value !== Xr && (tr.current.value = Xr)
+      }), [Xr]), (0, Zr.useEffect)((() => {
+        tr.current && (tr.current.disabled = mr)
+      }), [mr, pr]);
+      const Hr = (0, Zr.useRef)(0);
 
-      function DR() {
-        "self" !== MR && (0, LJ.reportAnalyticsClick)({
+      function Rr() {
+        "self" !== Br && (0, hS.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), tR.clear()
+        }), Wr.clear()
       }
 
-      function HR(RR) {
-        var JR, GR;
-        if (wR) return;
-        if (" " === RR.key || "Enter" === RR.key) return RR.preventDefault(), void RR.currentTarget.click();
-        const yR = Array.from(null !== (JR = null === (GR = LR.current) || void 0 === GR ? void 0 : GR.querySelectorAll("[role=radio]")) && void 0 !== JR ? JR : []),
-          tR = yR.indexOf(RR.currentTarget);
-        let uR;
-        "ArrowRight" === RR.key || "ArrowDown" === RR.key ? uR = yR[(tR + 1) % yR.length] : "ArrowLeft" === RR.key || "ArrowUp" === RR.key ? uR = yR[(tR - 1 + yR.length) % yR.length] : "Home" === RR.key ? uR = yR[0] : "End" === RR.key && (uR = yR[yR.length - 1]), uR && (RR.preventDefault(), uR.focus(), uR.click())
-      }(0, yR.useEffect)((() => {
-        var RR;
-        VR > xR.current && !wR && (xR.current = VR, null === (RR = aR.current) || void 0 === RR || RR.focus())
-      }), [VR, wR]);
-      const oR = "self" === MR,
-        cR = null !== (JR = null === pR || void 0 === pR ? void 0 : pR.name) && void 0 !== JR ? JR : null,
-        PR = "error" === AR.status ? AR.error : null,
-        IR = "store:giftRecipientLookupFailed" === PR;
-      return (0, KR.jsxs)("div", {
-        className: uR()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: wR,
-          StoreRecipientStripNoChips: !OR
+      function gr(rr) {
+        var Sr, Qr;
+        if (mr) return;
+        if (" " === rr.key || "Enter" === rr.key) return rr.preventDefault(), void rr.currentTarget.click();
+        const Zr = Array.from(null !== (Sr = null === (Qr = hr.current) || void 0 === Qr ? void 0 : Qr.querySelectorAll("[role=radio]")) && void 0 !== Sr ? Sr : []),
+          Wr = Zr.indexOf(rr.currentTarget);
+        let ar;
+        "ArrowRight" === rr.key || "ArrowDown" === rr.key ? ar = Zr[(Wr + 1) % Zr.length] : "ArrowLeft" === rr.key || "ArrowUp" === rr.key ? ar = Zr[(Wr - 1 + Zr.length) % Zr.length] : "Home" === rr.key ? ar = Zr[0] : "End" === rr.key && (ar = Zr[Zr.length - 1]), ar && (rr.preventDefault(), ar.focus(), ar.click())
+      }(0, Zr.useEffect)((() => {
+        var rr;
+        pr > Hr.current && !mr && (Hr.current = pr, null === (rr = tr.current) || void 0 === rr || rr.focus())
+      }), [pr, mr]);
+      const Cr = "self" === Br,
+        Mr = null !== (Sr = null === Or || void 0 === Or ? void 0 : Or.name) && void 0 !== Sr ? Sr : null,
+        Gr = "error" === er.status ? er.error : null,
+        kr = "store:giftRecipientLookupFailed" === Gr;
+      return (0, xr.jsxs)("div", {
+        className: ar()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: mr,
+          StoreRecipientStripNoChips: !Pr
         }),
-        children: [(0, KR.jsx)("span", {
+        children: [(0, xr.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: rR("store:buyingFor")
-        }), (0, KR.jsxs)("div", {
-          ref: LR,
+          children: Nr("store:buyingFor")
+        }), (0, xr.jsxs)("div", {
+          ref: hr,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": rR("store:whoIsItFor"),
-          children: [(0, KR.jsxs)("div", {
+          "aria-label": Nr("store:whoIsItFor"),
+          children: [(0, xr.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": oR,
-            tabIndex: wR || !oR && null !== cR ? -1 : 0,
-            className: uR()("StoreRecipientMe", {
-              StoreRecipientChecked: oR
+            "aria-checked": Cr,
+            tabIndex: mr || !Cr && null !== Mr ? -1 : 0,
+            className: ar()("StoreRecipientMe", {
+              StoreRecipientChecked: Cr
             }),
             onClick: () => {
-              wR || DR()
+              mr || Rr()
             },
-            onKeyDown: HR,
-            children: [(0, KR.jsx)(qR.d, {
+            onKeyDown: gr,
+            children: [(0, xr.jsx)(Ir.c, {
               name: "user"
-            }), " ", rR("store:me")]
-          }), OR && (0, KR.jsx)("div", {
+            }), " ", Nr("store:me")]
+          }), Pr && (0, xr.jsx)("div", {
             className: "StoreRecipientChips",
-            children: gR.map((RR => {
-              const JR = RR === pR;
-              return (0, KR.jsx)("div", {
+            children: Lr.map((rr => {
+              const Sr = rr === Or;
+              return (0, xr.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": JR,
-                tabIndex: !wR && JR ? 0 : -1,
-                title: RR.name,
-                className: uR()("StoreRecipientChip", {
-                  StoreRecipientChecked: JR
+                "aria-checked": Sr,
+                tabIndex: !mr && Sr ? 0 : -1,
+                title: rr.name,
+                className: ar()("StoreRecipientChip", {
+                  StoreRecipientChecked: Sr
                 }),
                 onClick: () => {
-                  wR || function(RR) {
-                    "gift" !== MR && (0, LJ.reportAnalyticsClick)({
+                  mr || function(rr) {
+                    "gift" !== Br && (0, hS.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), tR.choose(RR.name, RR.kind)
-                  }(RR)
+                    }), Wr.choose(rr.name, rr.kind)
+                  }(rr)
                 },
-                onKeyDown: HR,
-                children: (0, KR.jsx)(wq.h, {
-                  playerSocialPreview: eq(RR, JR ? XR : null),
+                onKeyDown: gr,
+                children: (0, xr.jsx)(xI.i, {
+                  playerSocialPreview: NI(rr, Sr ? yr : null),
                   opensProfileCard: !1,
-                  isFriend: null !== RR.friend,
+                  isFriend: null !== rr.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== RR.friend,
-                  status: null === RR.friend ? null : void 0,
-                  trailing: JR ? (0, KR.jsx)(aq, {
-                    pending: "pending" === AR.status
+                  showLocation: null !== rr.friend,
+                  status: null === rr.friend ? null : void 0,
+                  trailing: Sr ? (0, xr.jsx)(UI, {
+                    pending: "pending" === er.status
                   }) : void 0
                 })
-              }, RR.name)
+              }, rr.name)
             }))
           })]
-        }), (0, KR.jsxs)("div", {
-          className: uR()("StoreRecipientSearch", {
-            StoreRecipientChecked: bR,
-            StoreRecipientSearchPulse: VR > 0 && !bR,
-            StoreRecipientSearchError: null !== PR && !IR
+        }), (0, xr.jsxs)("div", {
+          className: ar()("StoreRecipientSearch", {
+            StoreRecipientChecked: lr,
+            StoreRecipientSearchPulse: pr > 0 && !lr,
+            StoreRecipientSearchError: null !== Gr && !kr
           }),
           onClick: () => {
-            var RR;
-            null === (RR = aR.current) || void 0 === RR || RR.focus()
+            var rr;
+            null === (rr = tr.current) || void 0 === rr || rr.focus()
           },
-          children: [bR && "found" === AR.status && XR && (0, KR.jsx)(rq, {
-            cosmetics: XR
-          }), !(bR && "found" === AR.status && XR) && (0, KR.jsx)(qR.d, {
+          children: [lr && "found" === er.status && yr && (0, xr.jsx)(mI, {
+            cosmetics: yr
+          }), !(lr && "found" === er.status && yr) && (0, xr.jsx)(Ir.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, KR.jsx)(CR.b, {
+          }), (0, xr.jsx)(Kr.b, {
             className: "StoreRecipientSearchInput",
-            domRef: aR,
-            placeholderText: rR("store:searchName"),
-            defaultValue: vR,
-            maxLength: NR.i,
-            onValueChange: function(RR) {
-              "gift" !== MR && RR.trim() && (0, LJ.reportAnalyticsClick)({
+            domRef: tr,
+            placeholderText: Nr("store:searchName"),
+            defaultValue: Xr,
+            maxLength: qr.h,
+            onValueChange: function(rr) {
+              "gift" !== Br && rr.trim() && (0, hS.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), tR.type(RR)
+              }), Wr.type(rr)
             },
             onEnter: () => {
-              var RR;
-              const JR = null === (RR = aR.current) || void 0 === RR ? void 0 : RR.value.trim();
-              JR && tR.choose(JR, "typed")
+              var rr;
+              const Sr = null === (rr = tr.current) || void 0 === rr ? void 0 : rr.value.trim();
+              Sr && Wr.choose(Sr, "typed")
             },
             blurOnEnter: !0
-          }), bR && (0, KR.jsx)(aq, {
-            pending: "pending" === AR.status
-          }), bR && (0, KR.jsx)("div", {
-            ...(0, fR.bb)({
-              disabled: wR
+          }), lr && (0, xr.jsx)(UI, {
+            pending: "pending" === er.status
+          }), lr && (0, xr.jsx)("div", {
+            ...(0, Er._)({
+              disabled: mr
             }),
-            "aria-label": rR("store:clearRecipient"),
-            title: rR("store:clearRecipient"),
+            "aria-label": Nr("store:clearRecipient"),
+            title: Nr("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: RR => {
-              RR.stopPropagation(), wR || DR()
+            onClick: rr => {
+              rr.stopPropagation(), mr || Rr()
             },
-            children: (0, KR.jsx)(qR.d, {
+            children: (0, xr.jsx)(Ir.c, {
               name: "xmark"
             })
           })]
-        }, VR), PR && (0, KR.jsx)("div", {
-          className: uR()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: IR
+        }, pr), Gr && (0, xr.jsx)("div", {
+          className: ar()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: kr
           }),
           role: "status",
-          children: rR(PR)
+          children: Nr(Gr)
         })]
       })
     }
-    var nq = GR(3172),
-      Uq = GR(3413),
-      Wq = GR(3724),
-      Aq = GR(4884),
-      Cq = GR(3243),
-      Xq = GR(4326),
-      Mq = GR(4332),
-      Bq = GR(4296);
-    const lq = [Vq.v.yellow, Vq.v.green, Vq.v.aqua, Vq.v.blue, Vq.v.purple, Vq.v.red];
+    var hI = Qr(3130),
+      zI = Qr(3362),
+      YI = Qr(3672),
+      nI = Qr(4785),
+      eI = Qr(3216),
+      KI = Qr(4287),
+      yI = Qr(4290),
+      BI = Qr(4259);
+    const TI = [EI.r.yellow, EI.r.green, EI.r.aqua, EI.r.blue, EI.r.purple, EI.r.red];
 
-    function pq(RR) {
-      return "needsRecipient" === RR || "lookingUp" === RR || "gift" === RR || "recipientOwns" === RR || "recipientSharesOwned" === RR || "recipientSubscribed" === RR
+    function vI(rr) {
+      return "needsRecipient" === rr || "lookingUp" === rr || "gift" === rr || "recipientOwns" === rr || "recipientSharesOwned" === rr || "recipientSubscribed" === rr
     }
 
-    function gq(RR) {
+    function OI(rr) {
       const {
-        onKeyDown: JR,
-        ...GR
-      } = (0, fR.bb)();
+        onKeyDown: Sr,
+        ...Qr
+      } = (0, Er._)();
       return {
-        ...GR,
-        "aria-label": RR,
-        onKeyDown: RR => {
-          RR.target === RR.currentTarget && (null === JR || void 0 === JR || JR(RR))
+        ...Qr,
+        "aria-label": rr,
+        onKeyDown: rr => {
+          rr.target === rr.currentTarget && (null === Sr || void 0 === Sr || Sr(rr))
         }
       }
     }
 
-    function bq(RR) {
+    function LI(rr) {
       let {
-        text: JR
-      } = RR;
-      return (0, KR.jsx)("span", {
+        text: Sr
+      } = rr;
+      return (0, xr.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(JR).map(((RR, JR) => (0, KR.jsx)("span", {
+        children: Array.from(Sr).map(((rr, Sr) => (0, xr.jsx)("span", {
           style: {
-            color: lq[JR % lq.length]
+            color: TI[Sr % TI.length]
           },
-          children: RR
-        }, JR)))
+          children: rr
+        }, Sr)))
       })
     }
-    const vq = {
+    const lI = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6879,81 +6879,81 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Oq(RR) {
+    function XI(rr) {
       let {
-        state: JR,
-        item: GR,
-        price: yR,
-        busy: tR,
-        highlight: iR = !1,
-        secondary: VR = !1,
-        onAct: wR,
-        onNeedRecipient: rR,
-        onLogin: eR
-      } = RR;
+        state: Sr,
+        item: Qr,
+        price: Zr,
+        busy: Wr,
+        highlight: fr = !1,
+        secondary: pr = !1,
+        onAct: mr,
+        onNeedRecipient: Nr,
+        onLogin: Ur
+      } = rr;
       const {
-        t: aR
-      } = (0, ZR.A)(), LR = "superRank" === GR ? (0, IR.v)(Date.now()).product.days : null, nR = "superRank" === GR && "hyper" === (0, IR.s)(Date.now()).look ? fR.u : fR.n, UR = VR ? fR.i : nR, WR = RR => null === LR ? aR(RR ? "general:gift" : "general:buy") : aR(RR ? "store:giftDays" : "store:buyDays", {
-        days: LR
-      }), AR = (RR, JR) => {
-        const GR = (0, KR.jsxs)(KR.Fragment, {
-          children: [null === RR && (0, KR.jsx)("span", {
+        t: tr
+      } = (0, jr.E)(), hr = "superRank" === Qr ? (0, kr.t)(Date.now()).product.days : null, zr = "superRank" === Qr && "hyper" === (0, kr.r)(Date.now()).look ? Er.v : Er.p, Yr = pr ? Er.k : zr, nr = rr => null === hr ? tr(rr ? "general:gift" : "general:buy") : tr(rr ? "store:giftDays" : "store:buyDays", {
+        days: hr
+      }), er = (rr, Sr) => {
+        const Qr = (0, xr.jsxs)(xr.Fragment, {
+          children: [null === rr && (0, xr.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== RR && (0, KR.jsx)("span", {
+          }), null !== rr && (0, xr.jsx)("span", {
             className: "StoreCtaLabel",
-            title: RR,
-            children: RR
+            title: rr,
+            children: rr
           })]
         });
-        return null !== LR ? (0, KR.jsxs)(KR.Fragment, {
-          children: [JR && (0, KR.jsx)("span", {
+        return null !== hr ? (0, xr.jsxs)(xr.Fragment, {
+          children: [Sr && (0, xr.jsx)("span", {
             className: "StoreCtaIcon",
-            children: JR
-          }), GR, (0, KR.jsxs)("span", {
+            children: Sr
+          }), Qr, (0, xr.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, KR.jsx)(Uq.b, {
-              amount: yR
+            children: ["\xb7", (0, xr.jsx)(zI.c, {
+              amount: Zr
             })]
           })]
-        }) : (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsxs)("span", {
+        }) : (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [GR, "\xb7"]
-          }), (0, KR.jsxs)("span", {
+            children: [Qr, "\xb7"]
+          }), (0, xr.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [JR, (0, KR.jsx)(Uq.b, {
-              amount: yR
+            children: [Sr, (0, xr.jsx)(zI.c, {
+              amount: Zr
             })]
           })]
         })
       };
-      let CR;
-      switch (JR) {
+      let Kr;
+      switch (Sr) {
         case "pending":
-          CR = (0, KR.jsx)(nR, {
+          Kr = (0, xr.jsx)(zr, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: AR(null)
+            children: er(null)
           });
           break;
         case "login":
-          CR = (0, KR.jsx)(UR, {
+          Kr = (0, xr.jsx)(Yr, {
             className: "StoreCtaButton",
-            onClick: eR,
-            children: AR(WR(!1))
+            onClick: Ur,
+            children: er(nr(!1))
           });
           break;
         case "owned":
-          CR = (0, KR.jsx)(fR.i, {
+          Kr = (0, xr.jsx)(Er.k, {
             className: "StoreCtaButton",
             onClick: () => {
-              (0, nq.b)("store")
+              (0, hI.c)("store")
             },
-            children: (0, KR.jsxs)("span", {
+            children: (0, xr.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "shirt"
-              }), " ", aR("store:equip")]
+              }), " ", tr("store:equip")]
             })
           });
           break;
@@ -6962,56 +6962,56 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          CR = (0, KR.jsx)(nR, {
+          Kr = (0, xr.jsx)(zr, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, KR.jsx)("span", {
+            children: (0, xr.jsx)("span", {
               className: "StoreCtaLabel",
-              children: aR(vq[JR])
+              children: tr(lI[Sr])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          CR = (0, KR.jsx)(nR, {
+          Kr = (0, xr.jsx)(zr, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === JR || null === yR,
-            loading: "lookingUp" === JR || tR,
-            onClick: wR,
+            disabled: "needsRecipient" === Sr || null === Zr,
+            loading: "lookingUp" === Sr || Wr,
+            onClick: mr,
             analyticsClick: {
               id: "store.gift",
-              value: GR
+              value: Qr
             },
-            children: AR(WR(!0), hZ.b)
+            children: er(nr(!0), sj.c)
           });
           break;
         case "buy":
         case "recharge":
-          CR = (0, KR.jsx)(UR, {
+          Kr = (0, xr.jsx)(Yr, {
             className: "StoreCtaButton",
-            loading: tR,
-            disabled: null === yR,
-            onClick: wR,
+            loading: Wr,
+            disabled: null === Zr,
+            onClick: mr,
             analyticsClick: {
               id: "store.buy",
-              value: GR
+              value: Qr
             },
-            children: AR(WR(!1))
+            children: er(nr(!1))
           })
       }
-      return (0, KR.jsx)("div", {
-        className: uR()("StoreCta", {
-          StoreCtaHighlight: iR,
-          StoreCtaLabelFirst: null !== LR
+      return (0, xr.jsx)("div", {
+        className: ar()("StoreCta", {
+          StoreCtaHighlight: fr,
+          StoreCtaLabelFirst: null !== hr
         }),
-        onClick: RR => {
-          RR.stopPropagation(), "needsRecipient" === JR && rR()
+        onClick: rr => {
+          rr.stopPropagation(), "needsRecipient" === Sr && Nr()
         },
-        children: CR
+        children: Kr
       })
     }
-    const xq = {
+    const PI = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -7019,474 +7019,474 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function Nq(RR) {
-      var JR;
+    function HI(rr) {
+      var Sr;
       let {
-        pack: GR,
-        state: tR,
-        busy: iR,
-        onOpen: fR,
-        onAct: VR,
-        onNeedRecipient: wR,
-        onLogin: rR
-      } = RR;
+        pack: Qr,
+        state: Wr,
+        busy: fr,
+        onOpen: Er,
+        onAct: pr,
+        onNeedRecipient: mr,
+        onLogin: Nr
+      } = rr;
       const {
-        t: eR
-      } = (0, ZR.A)(), aR = SZ.b[GR], LR = FZ.j[GR], nR = (0, fq.k)(GR), UR = (0, yR.useRef)(null);
-      (0, Xq.n)(GR, UR);
-      const WR = pq(tR),
-        AR = null !== (JR = aR.displayName) && void 0 !== JR ? JR : GR,
-        CR = (0, Aq.e)((() => {
-          (0, Wq.g)();
-          const RR = (0, Xq.f)(GR);
-          void 0 !== RR && (0, Cq.g)((0, Xq.e)(RR))
+        t: Ur
+      } = (0, jr.E)(), tr = Vj.b[Qr], hr = Jj.i[Qr], zr = (0, fI.l)(Qr), Yr = (0, Zr.useRef)(null);
+      (0, KI.h)(Qr, Yr);
+      const nr = vI(Wr),
+        er = null !== (Sr = tr.displayName) && void 0 !== Sr ? Sr : Qr,
+        Kr = (0, nI.b)((() => {
+          (0, YI.f)();
+          const rr = (0, KI.e)(Qr);
+          void 0 !== rr && (0, eI.h)((0, KI.b)(rr))
         })),
-        [XR] = (0, yR.useState)(qq.i);
-      return (0, KR.jsxs)("div", {
-        className: uR()("StoreTile StorePackTile", xq[aR.tier], {
-          StorePackTileOwned: "owned" === tR,
-          StorePackTileRecipientOwns: "recipientOwns" === tR,
-          StoreTileGift: WR
+        [yr] = (0, Zr.useState)(jI.m);
+      return (0, xr.jsxs)("div", {
+        className: ar()("StoreTile StorePackTile", PI[tr.tier], {
+          StorePackTileOwned: "owned" === Wr,
+          StorePackTileRecipientOwns: "recipientOwns" === Wr,
+          StoreTileGift: nr
         }),
-        ...gq(AR),
-        ref: UR,
-        "data-store-item": GR,
-        onClick: fR,
-        onPointerMove: RR => {
-          "mouse" !== RR.pointerType || 0 === RR.movementX && 0 === RR.movementY || XR || CR.start()
+        ...OI(er),
+        ref: Yr,
+        "data-store-item": Qr,
+        onClick: Er,
+        onPointerMove: rr => {
+          "mouse" !== rr.pointerType || 0 === rr.movementX && 0 === rr.movementY || yr || Kr.start()
         },
-        onPointerLeave: CR.cancel,
-        children: [LR && (0, KR.jsx)(LR, {
+        onPointerLeave: Kr.cancel,
+        children: [hr && (0, xr.jsx)(hr, {
           simple: !0
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "StorePackCharacters",
-          children: nR.map((RR => (0, KR.jsx)("div", {
+          children: zr.map((rr => (0, xr.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,fq.g)(RR)})`
+              backgroundImage: `url(${(0,fI.g)(rr)})`
             }
-          }, RR)))
-        }), (0, KR.jsx)("div", {
+          }, rr)))
+        }), (0, xr.jsx)("div", {
           className: "StoreTileScrim"
-        }), WR && (0, KR.jsx)("div", {
+        }), nr && (0, xr.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, KR.jsx)(Bq.c, {
-          pack: GR,
-          className: uR()({
-            PackAnimatedBadgeBesideRibbon: WR
+        }), (0, xr.jsx)(BI.b, {
+          pack: Qr,
+          className: ar()({
+            PackAnimatedBadgeBesideRibbon: nr
           })
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "StoreTileTitle",
-            children: AR
-          }), (0, KR.jsxs)("div", {
+            children: er
+          }), (0, xr.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, KR.jsx)(Mq.b, {
-              tier: aR.tier
-            }), " \xb7 ", eR("store:itemCount", {
-              count: (0, ft.j)(GR)
-            }), "owned" === tR && (0, KR.jsxs)("span", {
+            children: [(0, xr.jsx)(yI.d, {
+              tier: tr.tier
+            }), " \xb7 ", Ur("store:itemCount", {
+              count: (0, EW.p)(Qr)
+            }), "owned" === Wr && (0, xr.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, KR.jsx)(qR.d, {
+              children: [" \xb7 ", (0, xr.jsx)(Ir.c, {
                 name: "check"
-              }), " ", eR("general:owned")]
+              }), " ", Ur("general:owned")]
             })]
-          }), (0, KR.jsx)(Oq, {
-            state: tR,
-            item: GR,
-            price: (0, jZ.f)(GR),
-            busy: iR,
-            onAct: VR,
-            onNeedRecipient: wR,
-            onLogin: rR
+          }), (0, xr.jsx)(XI, {
+            state: Wr,
+            item: Qr,
+            price: (0, ij.e)(Qr),
+            busy: fr,
+            onAct: pr,
+            onNeedRecipient: mr,
+            onLogin: Nr
           })]
         })]
       })
     }
-    var Dq = GR(1724),
-      Hq = GR(4937),
-      oq = GR(4360),
-      cq = GR(5041),
-      Pq = GR(35176),
-      Iq = GR(4955);
-    const mq = {
-      cape: PR.h.cape
+    var qI = Qr(1693),
+      RI = Qr(4840),
+      gI = Qr(4311),
+      CI = Qr(4948),
+      MI = Qr(35490),
+      GI = Qr(4876);
+    const kI = {
+      cape: Gr.g.cape
     };
 
-    function zq(RR) {
-      var JR, GR;
+    function AI(rr) {
+      var Sr, Qr;
       let {
-        wearer: tR,
-        active: qR,
-        tryOn: iR = mq,
-        framing: fR = "store",
-        glow: VR = !0,
-        turnable: wR = !1,
-        className: rR
-      } = RR;
+        wearer: Wr,
+        active: Ir,
+        tryOn: fr = kI,
+        framing: Er = "store",
+        glow: pr = !0,
+        turnable: mr = !1,
+        className: Nr
+      } = rr;
       const {
-        t: eR
-      } = (0, ZR.A)(), aR = (0, yR.useRef)(null), [LR] = (0, yR.useState)(qq.i), nR = function(RR) {
-        const [JR, GR] = (0, yR.useState)(!1);
-        return (0, yR.useEffect)((() => {
-          const JR = new IntersectionObserver((RR => {
-            GR(RR[RR.length - 1].isIntersecting)
+        t: Ur
+      } = (0, jr.E)(), tr = (0, Zr.useRef)(null), [hr] = (0, Zr.useState)(jI.m), zr = function(rr) {
+        const [Sr, Qr] = (0, Zr.useState)(!1);
+        return (0, Zr.useEffect)((() => {
+          const Sr = new IntersectionObserver((rr => {
+            Qr(rr[rr.length - 1].isIntersecting)
           }));
-          return JR.observe(RR.current), () => {
-            JR.disconnect()
+          return Sr.observe(rr.current), () => {
+            Sr.disconnect()
           }
-        }), [RR]), JR
-      }(aR), UR = (0, Iq.f)("storeRank"), WR = null !== (JR = tR.name) && void 0 !== JR ? JR : eR(tR.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), AR = null !== (GR = tR.cosmetics) && void 0 !== GR ? GR : {}, CR = `${WR}|${JSON.stringify(AR)}`, XR = qR && nR && !LR && !UR, [MR, BR] = (0, yR.useState)(null);
-      XR || null === MR || BR(null);
-      const lR = XR && MR === CR;
-      return (0, KR.jsxs)("div", {
-        ref: aR,
-        className: uR()("HyperRankStage", rR, {
-          HyperRankStageDrawn: lR
+        }), [rr]), Sr
+      }(tr), Yr = (0, GI.g)("storeRank"), nr = null !== (Sr = Wr.name) && void 0 !== Sr ? Sr : Ur(Wr.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), er = null !== (Qr = Wr.cosmetics) && void 0 !== Qr ? Qr : {}, Kr = `${nr}|${JSON.stringify(er)}`, yr = Ir && zr && !hr && !Yr, [Br, Tr] = (0, Zr.useState)(null);
+      yr || null === Br || Tr(null);
+      const vr = yr && Br === Kr;
+      return (0, xr.jsxs)("div", {
+        ref: tr,
+        className: ar()("HyperRankStage", Nr, {
+          HyperRankStageDrawn: vr
         }),
-        children: [VR && (0, KR.jsx)("div", {
+        children: [pr && (0, xr.jsx)("div", {
           className: "HyperRankStageGlow"
-        }), (0, KR.jsx)(IR.c, {
+        }), (0, xr.jsx)(kr.d, {
           className: "HyperRankStageStandIn"
-        }), XR && (0, KR.jsx)(Sq, {
-          name: WR,
-          cosmetics: AR,
-          tryOn: iR,
-          framing: fR,
-          turnable: wR,
+        }), yr && (0, xr.jsx)(VI, {
+          name: nr,
+          cosmetics: er,
+          tryOn: fr,
+          framing: Er,
+          turnable: mr,
           onDrawn: () => {
-            BR(CR)
+            Tr(Kr)
           }
-        }, CR), (0, KR.jsx)("div", {
+        }, Kr), (0, xr.jsx)("div", {
           className: "HyperRankStageFloor"
         })]
       })
     }
 
-    function Sq(RR) {
+    function VI(rr) {
       let {
-        name: JR,
-        cosmetics: GR,
-        tryOn: tR,
-        framing: ZR,
-        turnable: qR,
-        onDrawn: iR
-      } = RR;
-      const fR = (0, yR.useRef)(null),
-        VR = (0, yR.useRef)(0),
-        wR = (0, yR.useRef)(null),
-        rR = (0, yR.useMemo)((() => {
-          var RR;
+        name: Sr,
+        cosmetics: Qr,
+        tryOn: Wr,
+        framing: jr,
+        turnable: Ir,
+        onDrawn: fr
+      } = rr;
+      const Er = (0, Zr.useRef)(null),
+        pr = (0, Zr.useRef)(0),
+        mr = (0, Zr.useRef)(null),
+        Nr = (0, Zr.useMemo)((() => {
+          var rr;
           return {
-            name: JR,
-            ranks: [PR.h.rank],
-            nameColour: null !== (RR = GR.nameColour) && void 0 !== RR ? RR : Vq.c
+            name: Sr,
+            ranks: [Gr.g.rank],
+            nameColour: null !== (rr = Qr.nameColour) && void 0 !== rr ? rr : EI.e
           }
-        }), [JR, GR.nameColour]),
-        eR = RR => {
-          var JR;
-          (null === (JR = wR.current) || void 0 === JR ? void 0 : JR.pointerId) === RR.pointerId && (wR.current = null)
+        }), [Sr, Qr.nameColour]),
+        Ur = rr => {
+          var Sr;
+          (null === (Sr = mr.current) || void 0 === Sr ? void 0 : Sr.pointerId) === rr.pointerId && (mr.current = null)
         },
-        aR = qR ? {
-          onPointerDown: RR => {
-            0 === RR.button && (wR.current = {
-              pointerId: RR.pointerId,
-              x: RR.clientX
-            }, RR.currentTarget.setPointerCapture(RR.pointerId))
+        tr = Ir ? {
+          onPointerDown: rr => {
+            0 === rr.button && (mr.current = {
+              pointerId: rr.pointerId,
+              x: rr.clientX
+            }, rr.currentTarget.setPointerCapture(rr.pointerId))
           },
-          onPointerMove: RR => {
-            var JR;
-            const GR = wR.current;
-            (null === GR || void 0 === GR ? void 0 : GR.pointerId) === RR.pointerId && (VR.current -= (RR.clientX - GR.x) * Pq.e, GR.x = RR.clientX, null === (JR = fR.current) || void 0 === JR || JR.turnCamera(VR.current))
+          onPointerMove: rr => {
+            var Sr;
+            const Qr = mr.current;
+            (null === Qr || void 0 === Qr ? void 0 : Qr.pointerId) === rr.pointerId && (pr.current -= (rr.clientX - Qr.x) * MI.d, Qr.x = rr.clientX, null === (Sr = Er.current) || void 0 === Sr || Sr.turnCamera(pr.current))
           },
-          onPointerUp: eR,
-          onPointerCancel: eR
+          onPointerUp: Ur,
+          onPointerCancel: Ur
         } : {};
-      return (0, KR.jsx)("div", {
-        className: uR()("HyperRankStageLive", {
-          HyperRankStageTurnable: qR
+      return (0, xr.jsx)("div", {
+        className: ar()("HyperRankStageLive", {
+          HyperRankStageTurnable: Ir
         }),
-        ...aR,
-        children: (0, KR.jsx)(yR.Suspense, {
+        ...tr,
+        children: (0, xr.jsx)(Zr.Suspense, {
           fallback: null,
-          children: (0, KR.jsx)(Wq.e, {
-            ref: fR,
+          children: (0, xr.jsx)(YI.b, {
+            ref: Er,
             owner: "storeRank",
-            framing: ZR,
-            forcedCosmetics: tR,
-            nametag: rR,
+            framing: jr,
+            forcedCosmetics: Wr,
+            nametag: Nr,
             onReady: () => {
-              var RR;
-              null === (RR = fR.current) || void 0 === RR || RR.setAllCosmetics(GR)
+              var rr;
+              null === (rr = Er.current) || void 0 === rr || rr.setAllCosmetics(Qr)
             },
-            onDrawn: iR
+            onDrawn: fr
           })
         })
       })
     }
-    var jq = GR(5043);
+    var iI = Qr(4955);
 
-    function dq(RR) {
-      var JR;
-      return null !== (JR = (0, it.i)(RR)) && void 0 !== JR ? JR : it.n[it.n.length - 1]
+    function wI(rr) {
+      var Sr;
+      return null !== (Sr = (0, fW.l)(rr)) && void 0 !== Sr ? Sr : fW.p[fW.p.length - 1]
     }
 
-    function Eq(RR, JR) {
-      return RR.tiers.flatMap((RR => {
-        var GR;
-        return null !== (GR = RR[JR]) && void 0 !== GR ? GR : []
+    function cI(rr, Sr) {
+      return rr.tiers.flatMap((rr => {
+        var Qr;
+        return null !== (Qr = rr[Sr]) && void 0 !== Qr ? Qr : []
       }))
     }
 
-    function Yq(RR) {
-      const JR = Eq(RR, "hyper");
-      return JR.filter((RR => "cosmetic" === RR.kind && !(0, cq.q)(RR, JR)))
+    function FI(rr) {
+      const Sr = cI(rr, "hyper");
+      return Sr.filter((rr => "cosmetic" === rr.kind && !(0, CI.n)(rr, Sr)))
     }
 
-    function kq(RR, JR) {
-      const GR = Eq(RR, JR).find((RR => "xpBoost" === RR.kind));
-      return "xpBoost" === (null === GR || void 0 === GR ? void 0 : GR.kind) ? GR : null
+    function oI(rr, Sr) {
+      const Qr = cI(rr, Sr).find((rr => "xpBoost" === rr.kind));
+      return "xpBoost" === (null === Qr || void 0 === Qr ? void 0 : Qr.kind) ? Qr : null
     }
 
-    function Qq(RR) {
+    function bI(rr) {
       return [{
         id: "colourfulNames",
         icon: "palette",
-        title: (0, KR.jsx)(bq, {
-          text: RR("store:colourfulNames")
+        title: (0, xr.jsx)(LI, {
+          text: rr("store:colourfulNames")
         }),
-        detail: RR("store:perkColourfulNamesDetail")
+        detail: rr("store:perkColourfulNamesDetail")
       }, {
         id: "capes",
         icon: "shirt",
-        title: RR("store:perkCapes"),
-        detail: RR("store:perkCapesDetail")
+        title: rr("store:perkCapes"),
+        detail: rr("store:perkCapesDetail")
       }, {
         id: "nametag",
         icon: "user",
-        title: RR("store:perkNametag", {
-          rank: RR((0, IR.l)(PR.h.id).nameKey)
+        title: rr("store:perkNametag", {
+          rank: rr((0, kr.l)(Gr.g.id).nameKey)
         }),
-        detail: RR("store:perkNametagDetail")
+        detail: rr("store:perkNametagDetail")
       }, {
         id: "noAdverts",
         icon: "eye-slash",
-        title: RR("store:perkNoAdverts"),
-        detail: RR("store:perkNoAdvertsDetail")
+        title: rr("store:perkNoAdverts"),
+        detail: rr("store:perkNoAdvertsDetail")
       }, {
         id: "friends",
         icon: "user-group",
-        title: RR("store:perkFriends", {
-          count: (0, eJ.d)([PR.h.rank])
+        title: rr("store:perkFriends", {
+          count: (0, US.e)([Gr.g.rank])
         }),
-        detail: RR("store:perkFriendsDetail", {
-          count: (0, eJ.d)([])
+        detail: rr("store:perkFriendsDetail", {
+          count: (0, US.e)([])
         })
       }]
     }
 
-    function Fq() {
+    function JI() {
       const {
-        t: RR
-      } = (0, ZR.A)(), JR = [{
+        t: rr
+      } = (0, jr.E)(), Sr = [{
         id: "battlePass",
         icon: "crown",
-        title: RR("store:perkBattlePassTrack")
-      }, ...Qq(RR)];
-      return (0, KR.jsx)("ul", {
+        title: rr("store:perkBattlePassTrack")
+      }, ...bI(rr)];
+      return (0, xr.jsx)("ul", {
         className: "HyperRankTilePerks",
-        children: JR.map((RR => (0, KR.jsxs)("li", {
-          children: [(0, KR.jsx)("span", {
+        children: Sr.map((rr => (0, xr.jsxs)("li", {
+          children: [(0, xr.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, KR.jsx)(qR.d, {
-              name: RR.icon
+            children: (0, xr.jsx)(Ir.c, {
+              name: rr.icon
             })
-          }), RR.title]
-        }, RR.id)))
+          }), rr.title]
+        }, rr.id)))
       })
     }
 
-    function Tq() {
+    function DI() {
       const {
-        t: RR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
+        t: rr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
         className: "HyperRankPerkTiles",
-        children: [(0, KR.jsx)(sq, {}), Qq(RR).map((RR => (0, KR.jsxs)("div", {
+        children: [(0, xr.jsx)(dI, {}), bI(rr).map((rr => (0, xr.jsxs)("div", {
           className: "HyperRankPerkTile",
-          children: [(0, KR.jsx)("span", {
+          children: [(0, xr.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, KR.jsx)(qR.d, {
-              name: RR.icon
+            children: (0, xr.jsx)(Ir.c, {
+              name: rr.icon
             })
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "HyperRankPerkText",
-            children: [(0, KR.jsx)("b", {
-              children: RR.title
-            }), (0, KR.jsx)("small", {
-              children: RR.detail
+            children: [(0, xr.jsx)("b", {
+              children: rr.title
+            }), (0, xr.jsx)("small", {
+              children: rr.detail
             })]
           })]
-        }, RR.id)))]
+        }, rr.id)))]
       })
     }
 
-    function sq() {
+    function dI() {
       const {
-        t: RR,
-        selectedLanguage: JR
-      } = (0, ZR.A)(), GR = dq(Date.now()), yR = Yq(GR), tR = function(RR) {
-        return Yq(RR).filter((RR => null !== (0, cq.o)(RR) || null !== (0, cq.p)(RR))).reverse()
-      }(GR).slice(0, 4), uR = kq(GR, "hyper"), iR = kq(GR, "free"), fR = (0, ZR.f)(JR.code, "store:battlePassTiersEnds", GR.endsAtMs, {
+        t: rr,
+        selectedLanguage: Sr
+      } = (0, jr.E)(), Qr = wI(Date.now()), Zr = FI(Qr), Wr = function(rr) {
+        return FI(rr).filter((rr => null !== (0, CI.j)(rr) || null !== (0, CI.k)(rr))).reverse()
+      }(Qr).slice(0, 4), ar = oI(Qr, "hyper"), fr = oI(Qr, "free"), Er = (0, jr.f)(Sr.code, "store:battlePassTiersEnds", Qr.endsAtMs, {
         month: "long",
         day: "numeric"
       });
-      return (0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
         className: "HyperRankPerkTile HyperRankBattlePassPerk",
-        children: [(0, KR.jsx)("span", {
+        children: [(0, xr.jsx)("span", {
           className: "HyperRankPerkIcon",
-          children: (0, KR.jsx)(qR.d, {
+          children: (0, xr.jsx)(Ir.c, {
             name: "crown"
           })
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "HyperRankPerkText",
-          children: [(0, KR.jsx)("b", {
-            children: RR("store:battlePassSeason", {
-              season: GR.seasonNumber
+          children: [(0, xr.jsx)("b", {
+            children: rr("store:battlePassSeason", {
+              season: Qr.seasonNumber
             })
-          }), (0, KR.jsx)("small", {
-            children: RR("store:battlePassTiersEnds", {
-              tiers: GR.tierCount,
-              date: fR
+          }), (0, xr.jsx)("small", {
+            children: rr("store:battlePassTiersEnds", {
+              tiers: Qr.tierCount,
+              date: Er
             })
           })]
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "HyperRankBattlePassRewards",
-          children: [(0, KR.jsx)("span", {
+          children: [(0, xr.jsx)("span", {
             className: "HyperRankBattlePassCount",
-            children: 1 === yR.length ? RR("store:battlePassOneCosmetic") : RR("store:battlePassCosmetics", {
-              count: yR.length
+            children: 1 === Zr.length ? rr("store:battlePassOneCosmetic") : rr("store:battlePassCosmetics", {
+              count: Zr.length
             })
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "HyperRankBattlePassFeatured",
-            children: [tR.map((JR => (0, KR.jsx)("span", {
+            children: [Wr.map((Sr => (0, xr.jsx)("span", {
               className: "HyperRankBattlePassReward",
-              title: (0, cq.f)(JR, RR),
-              children: (0, KR.jsx)(jq.e, {
-                reward: JR
+              title: (0, CI.e)(Sr, rr),
+              children: (0, xr.jsx)(iI.d, {
+                reward: Sr
               })
-            }, JR.id))), yR.length > tR.length && (0, KR.jsx)("span", {
+            }, Sr.id))), Zr.length > Wr.length && (0, xr.jsx)("span", {
               className: "HyperRankBattlePassReward HyperRankBattlePassMore",
-              children: RR("store:battlePassMore", {
-                count: yR.length - tR.length
+              children: rr("store:battlePassMore", {
+                count: Zr.length - Wr.length
               })
             })]
           })]
-        }), (0, KR.jsxs)("ul", {
+        }), (0, xr.jsxs)("ul", {
           className: "HyperRankBattlePassFacts",
-          children: [uR && iR && (0, KR.jsxs)("li", {
-            children: [(0, KR.jsx)(qR.d, {
+          children: [ar && fr && (0, xr.jsxs)("li", {
+            children: [(0, xr.jsx)(Ir.c, {
               name: "angles-up"
-            }), RR("store:battlePassXp", {
-              multiplier: uR.multiplier,
-              minutes: uR.minutes,
-              freeMinutes: iR.minutes
+            }), rr("store:battlePassXp", {
+              multiplier: ar.multiplier,
+              minutes: ar.minutes,
+              freeMinutes: fr.minutes
             })]
-          }), (0, KR.jsxs)("li", {
-            children: [(0, KR.jsx)(qR.d, {
+          }), (0, xr.jsxs)("li", {
+            children: [(0, xr.jsx)(Ir.c, {
               name: "lock-open"
-            }), RR("store:battlePassUnlockAtOnce")]
+            }), rr("store:battlePassUnlockAtOnce")]
           })]
         })]
       })
     }
-    const hq = ["snowmanSet", "skis", "reindeerPet"];
+    const sI = ["snowmanSet", "skis", "reindeerPet"];
 
-    function Ri() {
-      const RR = dq(Date.now()),
-        JR = {};
-      let GR = 0;
-      for (const tR of RR.tiers) {
-        const RR = tR.hyper;
-        var yR;
-        if ("cosmetic" === (null === RR || void 0 === RR ? void 0 : RR.kind) && hq.includes(RR.id)) Object.assign(JR, null === (yR = (0, cq.k)(RR)) || void 0 === yR ? void 0 : yR.cosmetics), GR++
+    function uI() {
+      const rr = wI(Date.now()),
+        Sr = {};
+      let Qr = 0;
+      for (const Wr of rr.tiers) {
+        const rr = Wr.hyper;
+        var Zr;
+        if ("cosmetic" === (null === rr || void 0 === rr ? void 0 : rr.kind) && sI.includes(rr.id)) Object.assign(Sr, null === (Zr = (0, CI.h)(rr)) || void 0 === Zr ? void 0 : Zr.cosmetics), Qr++
       }
-      return GR < hq.length && console.warn(`Hyper Rank's page wears ${GR} of its ${hq.length} rewards: ${RR.seasonId} lacks the others`), {
-        ...JR,
-        cape: PR.h.cape
+      return Qr < sI.length && console.warn(`Hyper Rank's page wears ${Qr} of its ${sI.length} rewards: ${rr.seasonId} lacks the others`), {
+        ...Sr,
+        cape: Gr.g.cape
       }
     }
 
-    function Ji(RR) {
+    function rf(rr) {
       let {
-        wearer: JR
-      } = RR;
-      const GR = (0, yR.useMemo)(Ri, []);
-      return (0, KR.jsx)(zq, {
+        wearer: Sr
+      } = rr;
+      const Qr = (0, Zr.useMemo)(uI, []);
+      return (0, xr.jsx)(AI, {
         className: "HyperRankShowcase",
-        wearer: JR,
+        wearer: Sr,
         active: !0,
-        tryOn: GR,
+        tryOn: Qr,
         framing: "showcase",
         glow: !1,
         turnable: !0
       })
     }
-    const Gi = GR.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    const Sf = Qr.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function yi() {
-      (0, Cq.g)(Gi, {
+    function Qf() {
+      (0, eI.h)(Sf, {
         lowPriority: !1
       })
     }
 
-    function ti() {
+    function Zf() {
       const {
-        t: RR
-      } = (0, ZR.A)(), [JR, GR] = (0, yR.useState)("starting"), tR = (0, yR.useRef)(null), uR = (0, ZG.d)(), iR = (0, yR.useRef)(null), VR = (0, yR.useCallback)((() => {
-        const RR = tR.current;
-        null !== RR.error && RR.load();
-        const JR = RR.play();
-        iR.current = JR, JR.catch((RR => {
-          (0, Hq.e)("Failed to play Super Rank video", RR), uR.current && iR.current === JR && GR("failed")
+        t: rr
+      } = (0, jr.E)(), [Sr, Qr] = (0, Zr.useState)("starting"), Wr = (0, Zr.useRef)(null), ar = (0, jQ.b)(), fr = (0, Zr.useRef)(null), pr = (0, Zr.useCallback)((() => {
+        const rr = Wr.current;
+        null !== rr.error && rr.load();
+        const Sr = rr.play();
+        fr.current = Sr, Sr.catch((rr => {
+          (0, RI.c)("Failed to play Super Rank video", rr), ar.current && fr.current === Sr && Qr("failed")
         }))
-      }), [uR]);
-      return (0, yR.useEffect)((() => {
-        const RR = tR.current;
-        let JR;
+      }), [ar]);
+      return (0, Zr.useEffect)((() => {
+        const rr = Wr.current;
+        let Sr;
 
-        function GR() {
-          clearTimeout(JR), JR = setTimeout(VR, 3e3)
+        function Qr() {
+          clearTimeout(Sr), Sr = setTimeout(pr, 3e3)
         }
-        return VR(), RR.addEventListener("ended", GR), () => {
-          clearTimeout(JR), RR.removeEventListener("ended", GR)
+        return pr(), rr.addEventListener("ended", Qr), () => {
+          clearTimeout(Sr), rr.removeEventListener("ended", Qr)
         }
-      }), [VR]), (0, KR.jsxs)("div", {
+      }), [pr]), (0, xr.jsxs)("div", {
         className: "StoreSuperRankVideo",
-        children: [(0, KR.jsx)("video", {
-          ref: tR,
-          src: `${bJ.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-          poster: Gi,
+        children: [(0, xr.jsx)("video", {
+          ref: Wr,
+          src: `${lS.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+          poster: Sf,
           muted: !0,
           playsInline: !0,
-          controls: "playing" === JR,
+          controls: "playing" === Sr,
           onPlaying: () => {
-            GR("playing")
+            Qr("playing")
           },
           onError: () => {
-            GR("failed")
+            Qr("failed")
           }
-        }), ("failed" === JR || "loading" === JR) && (0, KR.jsx)("div", {
+        }), ("failed" === Sr || "loading" === Sr) && (0, xr.jsx)("div", {
           className: "StoreSuperRankPlay",
-          children: (0, KR.jsx)(fR.g, {
-            ariaLabel: RR("general:play"),
-            loading: "loading" === JR,
+          children: (0, xr.jsx)(Er.h, {
+            ariaLabel: rr("general:play"),
+            loading: "loading" === Sr,
             onClick: () => {
-              GR("loading"), VR()
+              Qr("loading"), pr()
             },
             touchPressOn: "pointerup",
-            children: (0, KR.jsx)(qR.d, {
+            children: (0, xr.jsx)(Ir.c, {
               name: "play"
             })
           })
@@ -7494,76 +7494,76 @@ export const modules = {
       })
     }
 
-    function ui(RR) {
+    function Wf(rr) {
       let {
-        tierId: JR,
-        wearer: GR,
-        onBack: yR,
-        cta: tR,
-        recipient: qR,
-        afterCta: iR
-      } = RR;
+        tierId: Sr,
+        wearer: Qr,
+        onBack: Zr,
+        cta: Wr,
+        recipient: Ir,
+        afterCta: fr
+      } = rr;
       const {
-        t: VR
-      } = (0, ZR.A)(), wR = "hyper" === (0, IR.l)(JR).look;
-      return (0, KR.jsxs)("div", {
-        className: uR()("StoreSuperRankDetail", {
-          StoreHyperRankDetail: wR
+        t: pr
+      } = (0, jr.E)(), mr = "hyper" === (0, kr.l)(Sr).look;
+      return (0, xr.jsxs)("div", {
+        className: ar()("StoreSuperRankDetail", {
+          StoreHyperRankDetail: mr
         }),
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, KR.jsx)(fR.d, {
+          children: [(0, xr.jsx)(Er.d, {
             className: "StoreDetailBackButton",
-            onClick: yR,
+            onClick: Zr,
             padBack: !0,
-            children: VR("general:back")
-          }), (0, KR.jsx)("div", {
+            children: pr("general:back")
+          }), (0, xr.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, KR.jsx)(IR.g, {
-              tierId: JR
+            children: (0, xr.jsx)(kr.i, {
+              tierId: Sr
             })
-          }), qR]
-        }), (0, KR.jsxs)("div", {
+          }), Ir]
+        }), (0, xr.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [wR && (0, KR.jsx)(Ji, {
-            wearer: GR
-          }), !wR && (0, KR.jsx)(ti, {}), (0, KR.jsxs)("div", {
+          children: [mr && (0, xr.jsx)(rf, {
+            wearer: Qr
+          }), !mr && (0, xr.jsx)(Zf, {}), (0, xr.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [wR && (0, KR.jsx)(Tq, {}), !wR && (0, KR.jsx)("div", {
+            children: [mr && (0, xr.jsx)(DI, {}), !mr && (0, xr.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, KR.jsx)(oq.b, {
-                tierId: JR
+              children: (0, xr.jsx)(gI.b, {
+                tierId: Sr
               })
-            }), (0, KR.jsxs)("div", {
+            }), (0, xr.jsxs)("div", {
               className: "StoreTileActions",
-              children: [tR, iR]
+              children: [Wr, fr]
             })]
           })]
         })]
       })
     }
-    var Zi = GR(4231),
-      qi = GR(3731);
+    var af = Qr(4190),
+      jf = Qr(3677);
 
-    function ii() {
+    function If() {
       const {
-        t: RR
-      } = (0, ZR.A)();
-      return (0, KR.jsx)("div", {
+        t: rr
+      } = (0, jr.E)();
+      return (0, xr.jsx)("div", {
         className: "SmallTextBold",
-        children: RR("payments:legalDocumentLoadFailed")
+        children: rr("payments:legalDocumentLoadFailed")
       })
     }
-    const fi = (0, yR.lazy)((() => (0, qi.b)(Promise.all([GR.e(146), GR.e(711)]).then((() => GR(7654))), (RR => RR.default), ii))),
-      Vi = (0, yR.lazy)((() => (0, qi.b)(GR.e(148).then((() => GR(7675))), (RR => RR.default), ii)));
+    const ff = (0, Zr.lazy)((() => (0, jf.c)(Promise.all([Qr.e(146), Qr.e(712)]).then((() => Qr(7482))), (rr => rr.default), If))),
+      Ef = (0, Zr.lazy)((() => (0, jf.c)(Qr.e(148).then((() => Qr(7496))), (rr => rr.default), If)));
 
-    function Ki(RR, JR) {
-      RR.preventDefault(), tJ.NotificationProvider.showCustomPopup({
-        body: (0, KR.jsx)("div", {
+    function pf(rr, Sr) {
+      rr.preventDefault(), WS.NotificationProvider.showCustomPopup({
+        body: (0, xr.jsx)("div", {
           className: "AppLegalDocument",
-          children: (0, KR.jsx)(yR.Suspense, {
-            fallback: (0, KR.jsx)(XR.d, {}),
-            children: (0, KR.jsx)(JR, {})
+          children: (0, xr.jsx)(Zr.Suspense, {
+            fallback: (0, xr.jsx)(yr.c, {}),
+            children: (0, xr.jsx)(Sr, {})
           })
         }),
         middleScreenPopupClassName: "AppLegalDocumentPopup",
@@ -7571,137 +7571,137 @@ export const modules = {
       })
     }
 
-    function wi(RR) {
+    function xf(rr) {
       let {
-        price: JR,
-        perks: GR
-      } = RR;
+        price: Sr,
+        perks: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
+        t: Zr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [GR, (0, KR.jsx)("div", {
+        children: [Qr, (0, xr.jsx)("div", {
           className: "SmallTextLight",
-          children: yR("payments:subscriptionRenewsMonthly", {
-            price: JR
+          children: Zr("payments:subscriptionRenewsMonthly", {
+            price: Sr
           })
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: ["mobileIos" === gR.siteUsed && (0, KR.jsx)("a", {
+          children: ["mobileIos" === Lr.siteUsed && (0, xr.jsx)("a", {
             href: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
             target: "_blank",
             rel: "noreferrer",
-            children: yR("payments:appleTermsOfUse")
-          }), "mobileIos" !== gR.siteUsed && (0, KR.jsx)("a", {
+            children: Zr("payments:appleTermsOfUse")
+          }), "mobileIos" !== Lr.siteUsed && (0, xr.jsx)("a", {
             href: "/terms-of-service",
-            onClick: RR => {
-              Ki(RR, Vi)
+            onClick: rr => {
+              pf(rr, Ef)
             },
-            children: yR("homePage:termsOfService")
-          }), (0, KR.jsx)("a", {
+            children: Zr("homePage:termsOfService")
+          }), (0, xr.jsx)("a", {
             href: "/privacy-policy",
-            onClick: RR => {
-              Ki(RR, fi)
+            onClick: rr => {
+              pf(rr, ff)
             },
-            children: yR("homePage:privacyPolicy")
+            children: Zr("homePage:privacyPolicy")
           })]
         })]
       })
     }
-    var ri = GR(4305),
-      ei = GR(4307),
-      ai = GR(4191);
+    var mf = Qr(4273),
+      Nf = Qr(4275),
+      Uf = Qr(4151);
 
-    function Li(RR) {
+    function tf(rr) {
       const {
-        userContext: JR
-      } = (0, eR.d)(), {
-        purchaseUnderWay: GR,
-        notice: tR,
-        subscribe: uR
-      } = (0, ai.e)(), [ZR, qR] = (0, yR.useState)(null), [iR, fR] = (0, yR.useState)(0), VR = (0, ZG.d)(), KR = JR !== bR.NULL_USER_CONTEXT, wR = KR && (JR.mayBuy() || (0, jR.guestsMayBuy)()), rR = null !== ZR && ZR.loadedFor === JR ? ZR.offer : null, aR = null === tR || void 0 === tR ? void 0 : tR.pendingIntentId, LR = (0, yR.useRef)(aR);
+        userContext: Sr
+      } = (0, Ur.c)(), {
+        purchaseUnderWay: Qr,
+        notice: Wr,
+        subscribe: ar
+      } = (0, Uf.d)(), [jr, Ir] = (0, Zr.useState)(null), [fr, Er] = (0, Zr.useState)(0), pr = (0, jQ.b)(), xr = Sr !== lr.NULL_USER_CONTEXT, mr = xr && (Sr.mayBuy() || (0, wr.guestsMayBuy)()), Nr = null !== jr && jr.loadedFor === Sr ? jr.offer : null, tr = null === Wr || void 0 === Wr ? void 0 : Wr.pendingIntentId, hr = (0, Zr.useRef)(tr);
 
-      function nR() {
-        fR((RR => RR + 1))
+      function zr() {
+        Er((rr => rr + 1))
       }
-      return (0, yR.useEffect)((() => {
-        void 0 !== LR.current && void 0 === aR && nR(), LR.current = aR
-      }), [aR]), (0, yR.useEffect)((() => {
-        if (!KR) return;
-        let GR = !1;
-        return async function(RR, JR) {
+      return (0, Zr.useEffect)((() => {
+        void 0 !== hr.current && void 0 === tr && zr(), hr.current = tr
+      }), [tr]), (0, Zr.useEffect)((() => {
+        if (!xr) return;
+        let Qr = !1;
+        return async function(rr, Sr) {
           const {
-            offering: GR
-          } = await (0, hR.getBillingClient)().getOfferings(RR), yR = null === GR || void 0 === GR ? void 0 : GR.packages.find(sR.isPricedPackage);
-          return void 0 === yR ? {
+            offering: Qr
+          } = await (0, ur.getBillingClient)().getOfferings(rr), Zr = null === Qr || void 0 === Qr ? void 0 : Qr.packages.find(sr.isPricedPackage);
+          return void 0 === Zr ? {
             kind: "unavailable"
-          } : JR ? {
+          } : Sr ? {
             kind: "loaded",
-            pkg: yR,
-            preview: await (0, ei.f)(yR.productId)
+            pkg: Zr,
+            preview: await (0, Nf.c)(Zr.productId)
           } : {
             kind: "loaded",
-            pkg: yR,
+            pkg: Zr,
             preview: {
               kind: "none"
             }
           }
-        }(RR, wR).catch((JR => (console.error(`Billing: loading the ${RR} subscription or its preview failed:`, JR), {
+        }(rr, mr).catch((Sr => (console.error(`Billing: loading the ${rr} subscription or its preview failed:`, Sr), {
           kind: "loadFailed"
-        }))).then((RR => {
-          GR || qR((GR => "loadFailed" === RR.kind && (null === GR || void 0 === GR ? void 0 : GR.loadedFor) === JR ? GR : {
-            loadedFor: JR,
-            offer: RR
+        }))).then((rr => {
+          Qr || Ir((Qr => "loadFailed" === rr.kind && (null === Qr || void 0 === Qr ? void 0 : Qr.loadedFor) === Sr ? Qr : {
+            loadedFor: Sr,
+            offer: rr
           }))
         })), () => {
-          GR = !0
+          Qr = !0
         }
-      }), [RR, JR, KR, wR, iR]), {
-        offer: rR,
-        purchaseUnderWay: GR,
-        notice: tR,
-        pendingIntentId: aR,
-        mountedRef: VR,
-        checkOut: async function(RR) {
-          const GR = await uR(RR);
-          VR.current && ("unknownPackage" === GR.kind && qR({
-            loadedFor: JR,
+      }), [rr, Sr, xr, mr, fr]), {
+        offer: Nr,
+        purchaseUnderWay: Qr,
+        notice: Wr,
+        pendingIntentId: tr,
+        mountedRef: pr,
+        checkOut: async function(rr) {
+          const Qr = await ar(rr);
+          pr.current && ("unknownPackage" === Qr.kind && Ir({
+            loadedFor: Sr,
             offer: {
               kind: "unavailable"
             }
-          }), nR())
+          }), zr())
         }
       }
     }
 
-    function ni(RR) {
+    function hf(rr) {
       let {
-        onOfferedChange: JR
-      } = RR;
-      return (0, jR.usePurchasesAllowed)() && (0, jR.subscriptionsSold)() ? (0, KR.jsx)(Ui, {
-        onOfferedChange: JR
+        onOfferedChange: Sr
+      } = rr;
+      return (0, wr.usePurchasesAllowed)() && (0, wr.subscriptionsSold)() ? (0, xr.jsx)(zf, {
+        onOfferedChange: Sr
       }) : null
     }
 
-    function Ui(RR) {
+    function zf(rr) {
       let {
-        onOfferedChange: JR
-      } = RR;
+        onOfferedChange: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)(), {
-        offer: tR,
-        purchaseUnderWay: uR,
-        notice: qR,
-        pendingIntentId: iR,
-        mountedRef: VR,
-        checkOut: wR
-      } = Li((0, IR.l)(PR.h.id).placementId), [rR, eR] = (0, yR.useState)(!1), aR = null === tR || "loaded" === tR.kind && "refused" !== tR.preview.kind;
-      if ((0, yR.useEffect)((() => {
-          JR(aR)
-        }), [aR]), null === tR || "unavailable" === tR.kind) return null;
-      if ("loadFailed" === tR.kind) return (0, KR.jsx)(Zi.j, {
+        t: Qr
+      } = (0, jr.E)(), {
+        offer: Wr,
+        purchaseUnderWay: ar,
+        notice: Ir,
+        pendingIntentId: fr,
+        mountedRef: pr,
+        checkOut: mr
+      } = tf((0, kr.l)(Gr.g.id).placementId), [Nr, Ur] = (0, Zr.useState)(!1), tr = null === Wr || "loaded" === Wr.kind && "refused" !== Wr.preview.kind;
+      if ((0, Zr.useEffect)((() => {
+          Sr(tr)
+        }), [tr]), null === Wr || "unavailable" === Wr.kind) return null;
+      if ("loadFailed" === Wr.kind) return (0, xr.jsx)(af.h, {
         notice: {
           kind: "error",
           key: "payments:subscriptionLoadFailed"
@@ -7709,595 +7709,595 @@ export const modules = {
         className: "StoreSubscribe SmallTextBold"
       });
       const {
-        pkg: LR,
-        preview: UR
-      } = tR;
-      if ("refused" === UR.kind) return (0, KR.jsx)(Zi.j, {
+        pkg: hr,
+        preview: Yr
+      } = Wr;
+      if ("refused" === Yr.kind) return (0, xr.jsx)(af.h, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(UR.until).toLocaleDateString()
+            date: new Date(Yr.until).toLocaleDateString()
           }
         },
         className: "StoreSubscribe SmallTextBold"
       });
-      const WR = (0, uJ.d)(LR);
-      return (0, KR.jsxs)("div", {
+      const nr = (0, aS.e)(hr);
+      return (0, xr.jsxs)("div", {
         className: "StoreSubscribe",
-        onClick: RR => {
-          RR.stopPropagation()
+        onClick: rr => {
+          rr.stopPropagation()
         },
-        children: [(0, KR.jsx)(Zi.j, {
-          notice: qR,
+        children: [(0, xr.jsx)(af.h, {
+          notice: Ir,
           className: "SmallTextBold"
-        }), (0, KR.jsx)(Zi.c, {
+        }), (0, xr.jsx)(af.c, {
           className: "SmallTextBold"
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "StoreCta",
-          children: (0, KR.jsx)(fR.u, {
+          children: (0, xr.jsx)(Er.v, {
             className: "StoreSubscribeButton",
             onClick: () => {
-              !async function(RR, JR) {
-                if ("refund" === JR.kind) {
-                  eR(!0);
-                  const RR = await (0, ri.e)(JR, null);
-                  if (!VR.current) return;
-                  if (eR(!1), !RR) return
+              !async function(rr, Sr) {
+                if ("refund" === Sr.kind) {
+                  Ur(!0);
+                  const rr = await (0, mf.c)(Sr, null);
+                  if (!pr.current) return;
+                  if (Ur(!1), !rr) return
                 }
-                await wR(RR)
-              }(LR, UR)
+                await mr(rr)
+              }(hr, Yr)
             },
-            disabled: void 0 !== iR,
-            loading: uR || rR,
+            disabled: void 0 !== fr,
+            loading: ar || Nr,
             analyticsClick: {
               id: "store.buy",
               value: "subscription"
             },
-            children: (0, KR.jsx)("span", {
+            children: (0, xr.jsx)("span", {
               className: "StoreCtaLabel",
-              children: GR("payments:subscribeContinue", {
-                price: WR
+              children: Qr("payments:subscribeContinue", {
+                price: nr
               })
             })
           })
-        }), (0, nR.isMobileApp)() && (0, KR.jsx)(wi, {
-          price: WR,
-          perks: (0, KR.jsx)(Fq, {})
+        }), (0, zr.isMobileApp)() && (0, xr.jsx)(xf, {
+          price: nr,
+          perks: (0, xr.jsx)(JI, {})
         })]
       })
     }
 
-    function Wi() {
+    function Yf() {
       const {
-        t: RR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("ul", {
+        t: rr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, KR.jsxs)("li", {
-          children: [(0, KR.jsx)(qR.d, {
+        children: [(0, xr.jsxs)("li", {
+          children: [(0, xr.jsx)(Ir.c, {
             name: "check"
-          }), (0, KR.jsx)(bq, {
-            text: RR("store:colourfulNames")
+          }), (0, xr.jsx)(LI, {
+            text: rr("store:colourfulNames")
           })]
-        }), (0, KR.jsxs)("li", {
-          children: [(0, KR.jsx)(qR.d, {
+        }), (0, xr.jsxs)("li", {
+          children: [(0, xr.jsx)(Ir.c, {
             name: "check"
-          }), RR("store:perkCapes")]
-        }), (0, KR.jsxs)("li", {
-          children: [(0, KR.jsx)(qR.d, {
+          }), rr("store:perkCapes")]
+        }), (0, xr.jsxs)("li", {
+          children: [(0, xr.jsx)(Ir.c, {
             name: "check"
-          }), RR("store:perkNoAdverts")]
-        }), (0, KR.jsxs)("li", {
-          children: [(0, KR.jsx)(qR.d, {
+          }), rr("store:perkNoAdverts")]
+        }), (0, xr.jsxs)("li", {
+          children: [(0, xr.jsx)(Ir.c, {
             name: "check"
-          }), RR("store:perkFriends", {
-            count: (0, eJ.d)(["super"])
+          }), rr("store:perkFriends", {
+            count: (0, US.e)(["super"])
           })]
         })]
       })
     }
 
-    function Ai(RR, JR) {
-      return 1 === JR ? RR("store:oneDayLeft") : RR("store:daysLeft", {
-        days: JR
+    function nf(rr, Sr) {
+      return 1 === Sr ? rr("store:oneDayLeft") : rr("store:daysLeft", {
+        days: Sr
       })
     }
 
-    function Ci(RR) {
+    function ef(rr) {
       let {
-        daysLeft: JR,
-        totalDays: GR,
-        urgent: yR
-      } = RR;
+        daysLeft: Sr,
+        totalDays: Qr,
+        urgent: Zr
+      } = rr;
       const {
-        t: tR
-      } = (0, ZR.A)(), qR = GR > 0 ? Math.min(1, Math.max(.03, JR / GR)) : 1;
-      return (0, KR.jsxs)("div", {
-        className: uR()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: yR
+        t: Wr
+      } = (0, jr.E)(), Ir = Qr > 0 ? Math.min(1, Math.max(.03, Sr / Qr)) : 1;
+      return (0, xr.jsxs)("div", {
+        className: ar()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: Zr
         }),
-        children: [(0, KR.jsx)("span", {
+        children: [(0, xr.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: Ai(tR, JR)
-        }), (0, KR.jsx)("div", {
+          children: nf(Wr, Sr)
+        }), (0, xr.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, KR.jsx)("i", {
+          children: (0, xr.jsx)("i", {
             style: {
-              width: 100 * qR + "%"
+              width: 100 * Ir + "%"
             }
           })
         })]
       })
     }
 
-    function Xi(RR) {
-      var JR;
+    function Kf(rr) {
+      var Sr;
       let {
-        state: GR,
-        urgent: tR,
-        daysLeft: qR,
-        totalDays: iR,
-        recipientHasSuperRank: fR,
-        busy: VR,
-        highlight: wR,
-        onOpen: rR,
-        onAct: aR,
-        onNeedRecipient: LR,
-        onLogin: UR,
-        wearer: WR,
-        live: AR,
-        onWake: CR
-      } = RR;
+        state: Qr,
+        urgent: Wr,
+        daysLeft: Ir,
+        totalDays: fr,
+        recipientHasSuperRank: Er,
+        busy: pr,
+        highlight: mr,
+        onOpen: Nr,
+        onAct: tr,
+        onNeedRecipient: hr,
+        onLogin: Yr,
+        wearer: nr,
+        live: er,
+        onWake: Kr
+      } = rr;
       const {
-        t: XR
-      } = (0, ZR.A)(), {
-        userContext: MR
-      } = (0, eR.d)(), BR = Date.now(), lR = (0, IR.s)(BR), pR = "hyper" === lR.look, gR = pR ? void 0 : yi, bR = pq(GR), vR = (0, IR.v)(BR), {
-        days: OR
-      } = vR.product, xR = XR("store:recipientHasSuperRank", {
-        giftDays: OR
-      }), NR = null === (JR = wJ("subscribed" === GR)) || void 0 === JR ? void 0 : JR.text, DR = bR ? null : (0, IR.o)(MR.superRankInfo, BR), HR = pR && !bR && "subscribed" !== GR && "pending" !== GR && (0, jR.subscriptionsSold)() && !(0, nR.isMobileApp)(), [oR, cR] = (0, yR.useState)(!0);
-      return (0, KR.jsxs)("div", {
-        className: uR()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: bR,
-          StoreSuperRankTileUrgent: "recharge" === GR && tR,
-          StoreSuperRankTileWithChip: fR,
-          StoreSuperRankTileGiftReady: "gift" === GR,
-          StoreHyperRankTile: pR
+        t: yr
+      } = (0, jr.E)(), {
+        userContext: Br
+      } = (0, Ur.c)(), Tr = Date.now(), vr = (0, kr.r)(Tr), Or = "hyper" === vr.look, Lr = Or ? void 0 : Qf, lr = vI(Qr), Xr = (0, kr.t)(Tr), {
+        days: Pr
+      } = Xr.product, Hr = yr("store:recipientHasSuperRank", {
+        giftDays: Pr
+      }), qr = null === (Sr = mS("subscribed" === Qr)) || void 0 === Sr ? void 0 : Sr.text, Rr = lr ? null : (0, kr.p)(Br.superRankInfo, Tr), gr = Or && !lr && "subscribed" !== Qr && "pending" !== Qr && (0, wr.subscriptionsSold)() && !(0, zr.isMobileApp)(), [Cr, Mr] = (0, Zr.useState)(!0);
+      return (0, xr.jsxs)("div", {
+        className: ar()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: lr,
+          StoreSuperRankTileUrgent: "recharge" === Qr && Wr,
+          StoreSuperRankTileWithChip: Er,
+          StoreSuperRankTileGiftReady: "gift" === Qr,
+          StoreHyperRankTile: Or
         }),
-        ...gq(XR(lR.nameKey)),
+        ...OI(yr(vr.nameKey)),
         "data-store-item": "superRank",
-        onPointerEnter: gR,
-        onFocus: gR,
-        onPointerMove: RR => {
-          !pR || AR || "mouse" !== RR.pointerType || 0 === RR.movementX && 0 === RR.movementY || CR()
+        onPointerEnter: Lr,
+        onFocus: Lr,
+        onPointerMove: rr => {
+          !Or || er || "mouse" !== rr.pointerType || 0 === rr.movementX && 0 === rr.movementY || Kr()
         },
-        onClick: rR,
-        children: [pR && (0, KR.jsx)(zq, {
+        onClick: Nr,
+        children: [Or && (0, xr.jsx)(AI, {
           className: "StoreHyperRankTileStage",
-          wearer: WR,
-          active: AR
-        }), !pR && (0, KR.jsx)("div", {
+          wearer: nr,
+          active: er
+        }), !Or && (0, xr.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${lR.artUrl})`
+            backgroundImage: `url(${vr.artUrl})`
           }
-        }), bR && (0, KR.jsx)("div", {
+        }), lr && (0, xr.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "StoreTileContent",
-          children: [fR && (0, KR.jsx)("span", {
+          children: [Er && (0, xr.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: xR,
-            children: xR
-          }), (0, KR.jsx)("div", {
+            title: Hr,
+            children: Hr
+          }), (0, xr.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, KR.jsx)(IR.g, {
-              tierId: (0, mR.i)(BR).id
+            children: (0, xr.jsx)(kr.i, {
+              tierId: (0, Ar.i)(Tr).id
             })
-          }), bR && (0, KR.jsx)("div", {
+          }), lr && (0, xr.jsx)("div", {
             className: "StoreTilePitch",
-            children: XR("store:giftPitch", {
-              days: OR
+            children: yr("store:giftPitch", {
+              days: Pr
             })
-          }), pR && ("buy" === GR || "login" === GR) && null === DR && (0, KR.jsx)("div", {
+          }), Or && ("buy" === Qr || "login" === Qr) && null === Rr && (0, xr.jsx)("div", {
             className: "StoreTilePitch",
-            children: XR("store:hyperHook")
-          }), "recharge" === GR && (0, KR.jsx)(Ci, {
-            daysLeft: qR,
-            totalDays: iR,
-            urgent: tR
-          }), NR && (0, KR.jsx)("div", {
+            children: yr("store:hyperHook")
+          }), "recharge" === Qr && (0, xr.jsx)(ef, {
+            daysLeft: Ir,
+            totalDays: fr,
+            urgent: Wr
+          }), qr && (0, xr.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, KR.jsx)("span", {
+            children: (0, xr.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: NR
+              children: qr
             })
-          }), null !== DR && (0, KR.jsx)("div", {
+          }), null !== Rr && (0, xr.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, KR.jsx)(SR, {
+            children: (0, xr.jsx)(ir, {
               className: "StoreSuperRankDaysLeft",
-              until: DR
+              until: Rr
             })
-          }), pR && (0, KR.jsx)(Fq, {}), !pR && (0, KR.jsx)(Wi, {}), (0, KR.jsxs)("div", {
+          }), Or && (0, xr.jsx)(JI, {}), !Or && (0, xr.jsx)(Yf, {}), (0, xr.jsxs)("div", {
             className: "StoreTileActions",
-            children: [HR && (0, KR.jsx)(ni, {
-              onOfferedChange: cR
-            }), (0, Dq.e)(vR.product.tierId, BR) && (0, KR.jsx)(Oq, {
-              state: GR,
+            children: [gr && (0, xr.jsx)(hf, {
+              onOfferedChange: Mr
+            }), (0, qI.c)(Xr.product.tierId, Tr) && (0, xr.jsx)(XI, {
+              state: Qr,
               item: "superRank",
-              price: vR.price,
-              busy: VR,
-              highlight: wR,
-              secondary: HR && oR,
-              onAct: aR,
-              onNeedRecipient: LR,
-              onLogin: UR
-            }), "needsRecipient" === GR && (0, KR.jsx)("span", {
+              price: Xr.price,
+              busy: pr,
+              highlight: mr,
+              secondary: gr && Cr,
+              onAct: tr,
+              onNeedRecipient: hr,
+              onLogin: Yr
+            }), "needsRecipient" === Qr && (0, xr.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: XR("store:pickRecipientFirst")
-            }), "recharge" === GR && tR && (0, KR.jsx)("span", {
+              children: yr("store:pickRecipientFirst")
+            }), "recharge" === Qr && Wr && (0, xr.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === qR ? XR("store:endsInOneDay") : XR("store:endsInDays", {
-                days: qR
+              children: 1 === Ir ? yr("store:endsInOneDay") : yr("store:endsInDays", {
+                days: Ir
               })
             })]
           })]
         })]
       })
     }
-    var Mi = GR(1709),
-      Bi = GR(1597),
-      li = GR(4913);
+    var yf = Qr(1677),
+      Bf = Qr(1583),
+      Tf = Qr(4820);
 
-    function gi() {
-      return (0, KR.jsx)("span", {
+    function vf() {
+      return (0, xr.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var bi = GR(1487),
-      vi = GR(1718),
-      Oi = GR(35193);
+    var Of = Qr(1472),
+      Lf = Qr(1686),
+      lf = Qr(35505);
 
-    function xi(RR) {
+    function Xf(rr) {
       let {
-        character: JR,
-        drawn: GR,
-        onDrawn: tR
-      } = RR;
-      const ZR = (0, yR.useRef)(null),
-        qR = (0, Oi.e)(JR);
-      return (0, KR.jsx)("div", {
-        className: uR()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: GR
+        character: Sr,
+        drawn: Qr,
+        onDrawn: Wr
+      } = rr;
+      const jr = (0, Zr.useRef)(null),
+        Ir = (0, lf.f)(Sr);
+      return (0, xr.jsx)("div", {
+        className: ar()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: Qr
         }),
-        children: (0, KR.jsx)(yR.Suspense, {
+        children: (0, xr.jsx)(Zr.Suspense, {
           fallback: null,
-          children: (0, KR.jsx)(Wq.e, {
-            ref: ZR,
+          children: (0, xr.jsx)(YI.b, {
+            ref: jr,
             framing: "store",
-            turntableFromYaw: GR ? qR.yaw : null,
+            turntableFromYaw: Qr ? Ir.yaw : null,
             onReady: () => {
-              var RR, GR;
-              null === (RR = ZR.current) || void 0 === RR || RR.setOrbit(qR), null === (GR = ZR.current) || void 0 === GR || GR.setAllCosmetics(vi.b[JR].cosmetics)
+              var rr, Qr;
+              null === (rr = jr.current) || void 0 === rr || rr.setOrbit(Ir), null === (Qr = jr.current) || void 0 === Qr || Qr.setAllCosmetics(Lf.e[Sr].cosmetics)
             },
-            onDrawn: tR
+            onDrawn: Wr
           })
         })
       })
     }
-    var Ni = GR(4303);
-    const Di = {
+    var Pf = Qr(4266);
+    const Hf = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      Hi = new Set(["wildSpirits"]);
+      qf = new Set(["wildSpirits"]);
 
-    function oi(RR) {
-      var JR;
+    function Rf(rr) {
+      var Sr;
       let {
-        tile: GR,
-        design: tR,
-        canGoLive: iR,
-        live: fR,
-        busy: VR,
-        highlight: wR,
-        onLiveStart: rR,
-        onLiveEnd: eR,
-        onOpen: aR,
-        onAct: LR,
-        onNeedRecipient: nR,
-        onLogin: UR
-      } = RR;
+        tile: Qr,
+        design: Wr,
+        canGoLive: fr,
+        live: Er,
+        busy: pr,
+        highlight: mr,
+        onLiveStart: Nr,
+        onLiveEnd: Ur,
+        onOpen: tr,
+        onAct: hr,
+        onNeedRecipient: zr,
+        onLogin: Yr
+      } = rr;
       const {
-        t: WR
-      } = (0, ZR.A)(), {
-        pack: AR,
-        state: CR
-      } = GR, XR = SZ.b[AR], MR = (0, SZ.c)(AR), BR = (0, fq.h)(AR), lR = FZ.j[BR], pR = Hi.has(BR), {
-        tier: gR
-      } = XR, bR = (0, Ni.f)(AR), vR = "legendary" === gR || "mythic" === gR, OR = (0, yR.useRef)(null);
-      (0, bi.b)(OR, "epic" === gR || vR || pR);
-      const [NR, DR] = (0, yR.useState)(!1);
-      return !fR && NR && DR(!1), (0, KR.jsxs)("div", {
-        ref: OR,
-        className: uR()("StoreCharacterCard", `StoreCharacterCard${tR}`, Di[gR], {
-          StoreCharacterCardOwned: "owned" === CR || "recipientOwns" === CR,
-          StoreCharacterCardGift: pq(CR),
-          StoreCharacterCardItem: void 0 === MR
+        t: nr
+      } = (0, jr.E)(), {
+        pack: er,
+        state: Kr
+      } = Qr, yr = Vj.b[er], Br = (0, Vj.d)(er), Tr = (0, fI.k)(er), vr = Jj.i[Tr], Or = qf.has(Tr), {
+        tier: Lr
+      } = yr, lr = (0, Pf.i)(er), Xr = "legendary" === Lr || "mythic" === Lr, Pr = (0, Zr.useRef)(null);
+      (0, Of.b)(Pr, "epic" === Lr || Xr || Or);
+      const [qr, Rr] = (0, Zr.useState)(!1);
+      return !Er && qr && Rr(!1), (0, xr.jsxs)("div", {
+        ref: Pr,
+        className: ar()("StoreCharacterCard", `StoreCharacterCard${Wr}`, Hf[Lr], {
+          StoreCharacterCardOwned: "owned" === Kr || "recipientOwns" === Kr,
+          StoreCharacterCardGift: vI(Kr),
+          StoreCharacterCardItem: void 0 === Br
         }),
-        onPointerMove: RR => {
-          "mouse" !== RR.pointerType || 0 === RR.movementX && 0 === RR.movementY || !iR || fR || void 0 === MR || rR()
+        onPointerMove: rr => {
+          "mouse" !== rr.pointerType || 0 === rr.movementX && 0 === rr.movementY || !fr || Er || void 0 === Br || Nr()
         },
-        onPointerLeave: eR,
-        children: [(0, KR.jsx)("div", {
+        onPointerLeave: Ur,
+        children: [(0, xr.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: lR && (0, KR.jsx)(lR, {
+          children: vr && (0, xr.jsx)(vr, {
             simple: !0
           })
-        }), vR && (0, KR.jsx)("div", {
+        }), Xr && (0, xr.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, KR.jsxs)(xR.LinkPreserveSearch, {
+        }), (0, xr.jsxs)(Hr.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, Mi.g)({
+          to: (0, yf.f)({
             kind: "pack",
-            pack: AR
+            pack: er
           }, Date.now()),
-          "data-store-item": AR,
-          onClick: RR => {
-            (0, Bi.e)(RR) && (RR.preventDefault(), aR())
+          "data-store-item": er,
+          onClick: rr => {
+            (0, Bf.d)(rr) && (rr.preventDefault(), tr())
           },
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, KR.jsx)("div", {
-              className: uR()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: NR
+            }), (0, xr.jsx)("div", {
+              className: ar()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: qr
               }),
               style: {
-                backgroundImage: `url(${(0,fq.o)(AR)})`
+                backgroundImage: `url(${(0,fI.s)(er)})`
               }
-            }), fR && void 0 !== MR && (0, KR.jsx)(xi, {
-              character: MR,
-              drawn: NR,
+            }), Er && void 0 !== Br && (0, xr.jsx)(Xf, {
+              character: Br,
+              drawn: qr,
               onDrawn: () => {
-                DR(!0)
+                Rr(!0)
               }
             })]
-          }), (0, KR.jsx)("div", {
+          }), (0, xr.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (JR = XR.displayName) && void 0 !== JR ? JR : AR
-          }), (0, KR.jsxs)("div", {
+            children: null !== (Sr = yr.displayName) && void 0 !== Sr ? Sr : er
+          }), (0, xr.jsxs)("div", {
             className: "StoreCharacterTierLine",
-            children: [(0, KR.jsx)(Mq.b, {
-              tier: gR
-            }), bR && (0, KR.jsxs)("span", {
+            children: [(0, xr.jsx)(yI.d, {
+              tier: Lr
+            }), lr && (0, xr.jsxs)("span", {
               className: "StoreTierLabel StoreCharacterAnimated",
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "film"
-              }), WR("packPerks:badgeAnimated")]
+              }), nr("packPerks:badgeAnimated")]
             })]
           })]
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), pR && (0, KR.jsx)("span", {
+        }), Or && (0, xr.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, KR.jsx)(gi, {})
-        }), (0, KR.jsx)(Bq.c, {
-          pack: AR,
+          children: (0, xr.jsx)(vf, {})
+        }), (0, xr.jsx)(BI.b, {
+          pack: er,
           iconOnly: !0,
-          className: uR()({
-            PackAnimatedBadgeBelowOwned: "owned" === CR
+          className: ar()({
+            PackAnimatedBadgeBelowOwned: "owned" === Kr
           })
-        }), "owned" === CR && (0, KR.jsx)("span", {
+        }), "owned" === Kr && (0, xr.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: WR("general:owned"),
-          "aria-label": WR("general:owned"),
-          children: (0, KR.jsx)(qR.d, {
+          title: nr("general:owned"),
+          "aria-label": nr("general:owned"),
+          children: (0, xr.jsx)(Ir.c, {
             name: "check"
           })
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, KR.jsx)(Oq, {
-            state: CR,
-            item: AR,
-            price: (0, jZ.f)(AR),
-            busy: VR,
-            highlight: wR,
-            onAct: LR,
-            onNeedRecipient: nR,
-            onLogin: UR
+          children: (0, xr.jsx)(XI, {
+            state: Kr,
+            item: er,
+            price: (0, ij.e)(er),
+            busy: pr,
+            highlight: mr,
+            onAct: hr,
+            onNeedRecipient: zr,
+            onLogin: Yr
           })
         })]
       })
     }
 
-    function ci(RR) {
+    function gf(rr) {
       let {
-        tiles: JR,
-        busy: GR,
-        highlightItem: tR,
-        onOpen: uR,
-        onAct: ZR,
-        onNeedRecipient: qR,
-        onLogin: iR,
-        livePack: fR,
-        setLivePack: VR
-      } = RR;
-      const wR = (0, li.s)("storeCharacterCardFoil"),
-        rR = (0, li.s)("storeCharacterCardSpotlight"),
-        eR = wR ? "Foil" : rR ? "Spotlight" : "Showcase",
-        [aR] = (0, yR.useState)(qq.i);
-      return (0, KR.jsx)("div", {
+        tiles: Sr,
+        busy: Qr,
+        highlightItem: Wr,
+        onOpen: ar,
+        onAct: jr,
+        onNeedRecipient: Ir,
+        onLogin: fr,
+        livePack: Er,
+        setLivePack: pr
+      } = rr;
+      const mr = (0, Tf.n)("storeCharacterCardFoil"),
+        Nr = (0, Tf.n)("storeCharacterCardSpotlight"),
+        Ur = mr ? "Foil" : Nr ? "Spotlight" : "Showcase",
+        [tr] = (0, Zr.useState)(jI.m);
+      return (0, xr.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: JR.map((RR => (0, KR.jsx)(oi, {
-          tile: RR,
-          design: eR,
-          canGoLive: !aR,
-          live: fR === RR.pack,
-          busy: GR,
-          highlight: tR === RR.pack,
+        children: Sr.map((rr => (0, xr.jsx)(Rf, {
+          tile: rr,
+          design: Ur,
+          canGoLive: !tr,
+          live: Er === rr.pack,
+          busy: Qr,
+          highlight: Wr === rr.pack,
           onLiveStart: () => {
-            VR(RR.pack)
+            pr(rr.pack)
           },
           onLiveEnd: () => {
-            VR((JR => JR === RR.pack ? null : JR))
+            pr((Sr => Sr === rr.pack ? null : Sr))
           },
           onOpen: () => {
-            uR(RR.pack)
+            ar(rr.pack)
           },
           onAct: () => {
-            ZR(RR.pack)
+            jr(rr.pack)
           },
-          onNeedRecipient: qR,
+          onNeedRecipient: Ir,
           onLogin: () => {
-            iR(RR.pack)
+            fr(rr.pack)
           }
-        }, RR.pack)))
+        }, rr.pack)))
       })
     }
-    var Pi = GR(35204);
+    var Cf = Qr(35515);
 
-    function Ii(RR) {
+    function Mf(rr) {
       let {
-        title: JR
-      } = RR;
-      return (0, KR.jsx)("h2", {
+        title: Sr
+      } = rr;
+      return (0, xr.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, KR.jsx)("span", {
+        children: (0, xr.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: JR
+          children: Sr
         })
       })
     }
 
-    function mi(RR) {
+    function Gf(rr) {
       let {
-        mountAtOnce: JR,
-        children: GR
-      } = RR;
-      const tR = (0, yR.useRef)(null),
-        [uR, ZR] = (0, yR.useState)(JR),
-        qR = (0, Pi.e)();
-      return (0, yR.useLayoutEffect)((() => {
-        const RR = tR.current;
-        RR && RR.getBoundingClientRect().top < RR.parentElement.getBoundingClientRect().bottom && ZR(!0)
-      }), []), uR || qR ? (0, KR.jsx)(KR.Fragment, {
-        children: GR
-      }) : (0, KR.jsx)("div", {
-        ref: tR
+        mountAtOnce: Sr,
+        children: Qr
+      } = rr;
+      const Wr = (0, Zr.useRef)(null),
+        [ar, jr] = (0, Zr.useState)(Sr),
+        Ir = (0, Cf.d)();
+      return (0, Zr.useLayoutEffect)((() => {
+        const rr = Wr.current;
+        rr && rr.getBoundingClientRect().top < rr.parentElement.getBoundingClientRect().bottom && jr(!0)
+      }), []), ar || Ir ? (0, xr.jsx)(xr.Fragment, {
+        children: Qr
+      }) : (0, xr.jsx)("div", {
+        ref: Wr
       })
     }
 
-    function zi(RR) {
+    function kf(rr) {
       let {
-        layout: JR,
-        mountAtOnce: GR,
-        bundleGift: tR,
-        superRankTotalDays: uR,
-        busy: qR,
-        highlightItem: iR,
-        onOpen: fR,
-        onAct: VR,
-        onNeedRecipient: wR,
-        onLogin: rR,
-        dailyDropTile: eR,
-        dealBanner: aR,
-        rankWearer: LR
-      } = RR;
+        layout: Sr,
+        mountAtOnce: Qr,
+        bundleGift: Wr,
+        superRankTotalDays: ar,
+        busy: Ir,
+        highlightItem: fr,
+        onOpen: Er,
+        onAct: pr,
+        onNeedRecipient: mr,
+        onLogin: Nr,
+        dailyDropTile: Ur,
+        dealBanner: tr,
+        rankWearer: hr
+      } = rr;
       const {
-        t: nR
-      } = (0, ZR.A)(), UR = JR.packs.filter((RR => void 0 === (0, SZ.c)(RR.pack) && !(0, SZ.h)(RR.pack))), WR = JR.packs.filter((RR => void 0 !== (0, SZ.c)(RR.pack))), AR = JR.packs.filter((RR => (0, SZ.h)(RR.pack))), [CR, XR] = (0, yR.useState)(null), [MR, lR] = (0, yR.useState)(!1), {
-        gameState: pR
-      } = (0, BR.o)(["gameState"]), gR = null === CR && (MR || "inGame" === pR);
-      return (0, KR.jsxs)(KR.Fragment, {
-        children: [(0, KR.jsx)(uJ.c, {
+        t: zr
+      } = (0, jr.E)(), Yr = Sr.packs.filter((rr => void 0 === (0, Vj.d)(rr.pack) && !(0, Vj.i)(rr.pack))), nr = Sr.packs.filter((rr => void 0 !== (0, Vj.d)(rr.pack))), er = Sr.packs.filter((rr => (0, Vj.i)(rr.pack))), [Kr, yr] = (0, Zr.useState)(null), [Br, vr] = (0, Zr.useState)(!1), {
+        gameState: Or
+      } = (0, Tr.n)(["gameState"]), Lr = null === Kr && (Br || "inGame" === Or);
+      return (0, xr.jsxs)(xr.Fragment, {
+        children: [(0, xr.jsx)(aS.b, {
           className: "StoreSuperGems",
-          gift: tR,
-          highlightSku: iR,
-          leadingTile: eR,
-          afterLeadingTile: aR
-        }), null !== JR.superRank && (0, KR.jsxs)(KR.Fragment, {
-          children: [(0, KR.jsx)(Ii, {
-            title: nR("store:rank")
-          }), (0, KR.jsx)(Xi, {
-            state: JR.superRank.state,
-            urgent: JR.superRank.urgent,
-            daysLeft: JR.superRankDaysLeft,
-            totalDays: uR,
-            recipientHasSuperRank: JR.recipientHasSuperRank,
-            wearer: LR,
-            live: gR,
+          gift: Wr,
+          highlightSku: fr,
+          leadingTile: Ur,
+          afterLeadingTile: tr
+        }), null !== Sr.superRank && (0, xr.jsxs)(xr.Fragment, {
+          children: [(0, xr.jsx)(Mf, {
+            title: zr("store:rank")
+          }), (0, xr.jsx)(Kf, {
+            state: Sr.superRank.state,
+            urgent: Sr.superRank.urgent,
+            daysLeft: Sr.superRankDaysLeft,
+            totalDays: ar,
+            recipientHasSuperRank: Sr.recipientHasSuperRank,
+            wearer: hr,
+            live: Lr,
             onWake: () => {
-              lR(!0)
+              vr(!0)
             },
-            busy: qR,
-            highlight: "superRank" === iR,
+            busy: Ir,
+            highlight: "superRank" === fr,
             onOpen: () => {
-              fR("superRank")
+              Er("superRank")
             },
             onAct: () => {
-              VR("superRank")
+              pr("superRank")
             },
-            onNeedRecipient: wR,
+            onNeedRecipient: mr,
             onLogin: () => {
-              rR("superRank")
+              Nr("superRank")
             }
           })]
-        }), (0, KR.jsxs)(mi, {
-          mountAtOnce: GR,
-          children: [(0, KR.jsx)(Ii, {
-            title: nR("store:bundles")
-          }), (0, KR.jsx)("div", {
+        }), (0, xr.jsxs)(Gf, {
+          mountAtOnce: Qr,
+          children: [(0, xr.jsx)(Mf, {
+            title: zr("store:bundles")
+          }), (0, xr.jsx)("div", {
             className: "StorePackGrid",
-            children: UR.map((RR => (0, KR.jsx)(Nq, {
-              pack: RR.pack,
-              state: RR.state,
-              busy: qR,
+            children: Yr.map((rr => (0, xr.jsx)(HI, {
+              pack: rr.pack,
+              state: rr.state,
+              busy: Ir,
               onOpen: () => {
-                fR(RR.pack)
+                Er(rr.pack)
               },
               onAct: () => {
-                VR(RR.pack)
+                pr(rr.pack)
               },
-              onNeedRecipient: wR,
+              onNeedRecipient: mr,
               onLogin: () => {
-                rR(RR.pack)
+                Nr(rr.pack)
               }
-            }, RR.pack)))
-          }), (0, KR.jsxs)(mi, {
-            mountAtOnce: GR,
-            children: [(0, KR.jsx)(Ii, {
-              title: nR("store:characters")
-            }), (0, KR.jsx)(ci, {
-              tiles: WR,
-              busy: qR,
-              highlightItem: iR,
-              onOpen: fR,
-              onAct: VR,
-              onNeedRecipient: wR,
-              onLogin: rR,
-              livePack: CR,
-              setLivePack: XR
-            }), AR.length > 0 && (0, KR.jsxs)(KR.Fragment, {
-              children: [(0, KR.jsx)(Ii, {
-                title: nR("store:premiumItems")
-              }), (0, KR.jsx)(ci, {
-                tiles: AR,
-                busy: qR,
-                highlightItem: iR,
-                onOpen: fR,
-                onAct: VR,
-                onNeedRecipient: wR,
-                onLogin: rR,
-                livePack: CR,
-                setLivePack: XR
+            }, rr.pack)))
+          }), (0, xr.jsxs)(Gf, {
+            mountAtOnce: Qr,
+            children: [(0, xr.jsx)(Mf, {
+              title: zr("store:characters")
+            }), (0, xr.jsx)(gf, {
+              tiles: nr,
+              busy: Ir,
+              highlightItem: fr,
+              onOpen: Er,
+              onAct: pr,
+              onNeedRecipient: mr,
+              onLogin: Nr,
+              livePack: Kr,
+              setLivePack: yr
+            }), er.length > 0 && (0, xr.jsxs)(xr.Fragment, {
+              children: [(0, xr.jsx)(Mf, {
+                title: zr("store:premiumItems")
+              }), (0, xr.jsx)(gf, {
+                tiles: er,
+                busy: Ir,
+                highlightItem: fr,
+                onOpen: Er,
+                onAct: pr,
+                onNeedRecipient: mr,
+                onLogin: Nr,
+                livePack: Kr,
+                setLivePack: yr
               })]
             })]
           })]
@@ -8305,471 +8305,471 @@ export const modules = {
       })
     }
 
-    function Si(RR) {
+    function Af(rr) {
       let {
-        giftName: JR,
-        onChooseRecipient: GR
-      } = RR;
+        giftName: Sr,
+        onChooseRecipient: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return JR ? (0, KR.jsxs)("span", {
+        t: Zr
+      } = (0, jr.E)();
+      return Sr ? (0, xr.jsxs)("span", {
         className: "StoreDetailRecipient",
-        title: yR("store:giftFor", {
-          name: JR
+        title: Zr("store:giftFor", {
+          name: Sr
         }),
-        children: [hZ.b, " ", yR("store:giftFor", {
-          name: JR
+        children: [sj.c, " ", Zr("store:giftFor", {
+          name: Sr
         })]
-      }) : (0, KR.jsxs)("div", {
-        ...(0, fR.bb)(),
+      }) : (0, xr.jsxs)("div", {
+        ...(0, Er._)(),
         className: "StoreDetailRecipient StoreDetailRecipientChoose",
-        onClick: GR,
-        children: [hZ.b, " ", yR("store:chooseRecipient")]
+        onClick: Qr,
+        children: [sj.c, " ", Zr("store:chooseRecipient")]
       })
     }
 
-    function ji(RR) {
-      return (0, mR.c)(Date.now()) ? (0, KR.jsx)(Ei, {
-        ...RR
-      }) : (0, KR.jsx)(di, {
-        ...RR
+    function Vf(rr) {
+      return (0, Ar.d)(Date.now()) ? (0, xr.jsx)(Ff, {
+        ...rr
+      }) : (0, xr.jsx)(wf, {
+        ...rr
       })
     }
 
-    function di(RR) {
+    function wf(rr) {
       let {
-        state: JR,
-        wearer: GR,
-        mode: yR,
-        giftName: tR,
-        busy: uR,
-        highlight: qR,
-        purchaseError: iR,
-        onBack: fR,
-        onChooseRecipient: VR,
-        onAct: wR,
-        onLogin: rR
-      } = RR;
+        state: Sr,
+        wearer: Qr,
+        mode: Zr,
+        giftName: Wr,
+        busy: ar,
+        highlight: Ir,
+        purchaseError: fr,
+        onBack: Er,
+        onChooseRecipient: pr,
+        onAct: mr,
+        onLogin: Nr
+      } = rr;
       const {
-        t: eR
-      } = (0, ZR.A)(), aR = wJ("gift" !== yR);
-      return (0, KR.jsx)(ui, {
-        tierId: PR.t.id,
-        wearer: GR,
-        onBack: fR,
-        recipient: "gift" === yR && (0, KR.jsx)(Si, {
-          giftName: tR,
-          onChooseRecipient: VR
+        t: Ur
+      } = (0, jr.E)(), tr = mS("gift" !== Zr);
+      return (0, xr.jsx)(Wf, {
+        tierId: Gr.t.id,
+        wearer: Qr,
+        onBack: Er,
+        recipient: "gift" === Zr && (0, xr.jsx)(Af, {
+          giftName: Wr,
+          onChooseRecipient: pr
         }),
-        cta: (0, KR.jsx)(Oq, {
-          state: JR,
+        cta: (0, xr.jsx)(XI, {
+          state: Sr,
           item: "superRank",
-          price: (0, IR.v)(Date.now()).price,
-          busy: uR,
-          highlight: qR,
-          onAct: wR,
-          onNeedRecipient: VR,
-          onLogin: rR
+          price: (0, kr.t)(Date.now()).price,
+          busy: ar,
+          highlight: Ir,
+          onAct: mr,
+          onNeedRecipient: pr,
+          onLogin: Nr
         }),
-        afterCta: (0, KR.jsxs)(KR.Fragment, {
-          children: [aR && (0, KR.jsx)("span", {
+        afterCta: (0, xr.jsxs)(xr.Fragment, {
+          children: [tr && (0, xr.jsx)("span", {
             className: "StoreTileNote",
-            children: aR.text
-          }), (null === aR || void 0 === aR ? void 0 : aR.manageUrl) && (0, KR.jsx)("a", {
+            children: tr.text
+          }), (null === tr || void 0 === tr ? void 0 : tr.manageUrl) && (0, xr.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: aR.manageUrl,
+            href: tr.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: eR("payments:manageSubscription")
-          }), iR && (0, KR.jsx)("span", {
+            children: Ur("payments:manageSubscription")
+          }), fr && (0, xr.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: eR(iR)
+            children: Ur(fr)
           })]
         })
       })
     }
 
-    function Ei(RR) {
+    function Ff(rr) {
       let {
-        state: JR,
-        daysLeft: GR,
-        wearer: tR,
-        mode: uR,
-        giftName: qR,
-        busy: iR,
-        highlight: fR,
-        purchaseError: VR,
-        onBack: wR,
-        onChooseRecipient: rR,
-        onAct: aR,
-        onLogin: LR
-      } = RR;
+        state: Sr,
+        daysLeft: Qr,
+        wearer: Wr,
+        mode: ar,
+        giftName: Ir,
+        busy: fr,
+        highlight: Er,
+        purchaseError: pr,
+        onBack: mr,
+        onChooseRecipient: Nr,
+        onAct: tr,
+        onLogin: hr
+      } = rr;
       const {
-        t: nR
-      } = (0, ZR.A)(), {
-        userContext: UR
-      } = (0, eR.d)(), WR = Date.now(), AR = "gift" !== uR, CR = AR && "subscribed" === JR, XR = AR ? (0, IR.o)(UR.superRankInfo, WR) : null, MR = AR && !CR && "pending" !== JR && (0, jR.subscriptionsSold)(), [BR, lR] = (0, yR.useState)(!0);
-      return (0, KR.jsx)(ui, {
-        tierId: PR.h.id,
-        wearer: tR,
-        onBack: wR,
-        recipient: !AR && (0, KR.jsx)(Si, {
-          giftName: qR,
-          onChooseRecipient: rR
+        t: zr
+      } = (0, jr.E)(), {
+        userContext: Yr
+      } = (0, Ur.c)(), nr = Date.now(), er = "gift" !== ar, Kr = er && "subscribed" === Sr, yr = er ? (0, kr.p)(Yr.superRankInfo, nr) : null, Br = er && !Kr && "pending" !== Sr && (0, wr.subscriptionsSold)(), [Tr, vr] = (0, Zr.useState)(!0);
+      return (0, xr.jsx)(Wf, {
+        tierId: Gr.g.id,
+        wearer: Wr,
+        onBack: mr,
+        recipient: !er && (0, xr.jsx)(Af, {
+          giftName: Ir,
+          onChooseRecipient: Nr
         }),
-        cta: (0, KR.jsxs)(KR.Fragment, {
-          children: [null !== XR && (0, KR.jsx)(SR, {
+        cta: (0, xr.jsxs)(xr.Fragment, {
+          children: [null !== yr && (0, xr.jsx)(ir, {
             className: "StoreTileNote StoreDetailNote",
-            until: XR
-          }), "recharge" === JR && GR > 0 && (0, KR.jsx)("span", {
+            until: yr
+          }), "recharge" === Sr && Qr > 0 && (0, xr.jsx)("span", {
             className: "StoreTileNote StoreDetailNote",
-            children: Ai(nR, GR)
-          }), MR && (0, KR.jsx)(ni, {
-            onOfferedChange: lR
-          }), AR && (0, KR.jsx)(qJ, {
+            children: nf(zr, Qr)
+          }), Br && (0, xr.jsx)(hf, {
+            onOfferedChange: vr
+          }), er && (0, xr.jsx)(IS, {
             showing: !0
-          }), !CR && (0, Dq.e)(PR.h.id, WR) && (0, KR.jsx)(Oq, {
-            state: JR,
+          }), !Kr && (0, qI.c)(Gr.g.id, nr) && (0, xr.jsx)(XI, {
+            state: Sr,
             item: "superRank",
-            price: (0, IR.v)(WR).price,
-            busy: iR,
-            highlight: fR,
-            secondary: MR && BR,
-            onAct: aR,
-            onNeedRecipient: rR,
-            onLogin: LR
+            price: (0, kr.t)(nr).price,
+            busy: fr,
+            highlight: Er,
+            secondary: Br && Tr,
+            onAct: tr,
+            onNeedRecipient: Nr,
+            onLogin: hr
           })]
         }),
-        afterCta: VR && (0, KR.jsx)("span", {
+        afterCta: pr && (0, xr.jsx)("span", {
           className: "StoreTileNote StoreDetailNote StoreTileNoteError",
-          children: nR(VR)
+          children: zr(pr)
         })
       })
     }
 
-    function Yi() {}
+    function of() {}
 
-    function ki() {
-      return "true" !== new URLSearchParams(window.location.search).get("tempSubscription") ? null : (0, KR.jsx)("div", {
+    function bf() {
+      return "true" !== new URLSearchParams(window.location.search).get("tempSubscription") ? null : (0, xr.jsx)("div", {
         className: "StoreTempSubscribe",
-        children: (0, KR.jsx)(ni, {
-          onOfferedChange: Yi
+        children: (0, xr.jsx)(hf, {
+          onOfferedChange: of
         })
       })
     }
-    var Qi = GR(3653);
+    var Jf = Qr(3603);
 
-    function Fi(RR) {
+    function Df(rr) {
       let {
-        state: JR,
-        view: GR,
-        claiming: tR,
-        onOpen: qR
-      } = RR;
+        state: Sr,
+        view: Qr,
+        claiming: Wr,
+        onOpen: Ir
+      } = rr;
       const {
-        t: VR
-      } = (0, ZR.A)(), wR = (0, yR.useRef)(null), rR = "ready" === GR.kind;
-      return (0, bi.b)(wR, rR), (0, KR.jsxs)("div", {
-        ref: wR,
-        className: uR()("DailyDropTile", {
-          DailyDropTileReady: rR
+        t: pr
+      } = (0, jr.E)(), mr = (0, Zr.useRef)(null), Nr = "ready" === Qr.kind;
+      return (0, Of.b)(mr, Nr), (0, xr.jsxs)("div", {
+        ref: mr,
+        className: ar()("DailyDropTile", {
+          DailyDropTileReady: Nr
         }),
-        children: [rR && (0, KR.jsx)(iR.c, {
+        children: [Nr && (0, xr.jsx)(fr.d, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: VR("dailyDrop:name")
-        }), (0, KR.jsxs)("div", {
+          children: pr("dailyDrop:name")
+        }), (0, xr.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, KR.jsx)(Qi.c, {
+          children: [(0, xr.jsx)(Jf.c, {
             className: "DailyDropTileBlock"
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: [(0, KR.jsx)("span", {
-              children: VR("dailyDrop:basicItems")
-            }), " ", (0, KR.jsx)("span", {
-              children: VR("dailyDrop:collected", {
-                count: JR.collected.length,
-                total: JR.total
+            children: [(0, xr.jsx)("span", {
+              children: pr("dailyDrop:basicItems")
+            }), " ", (0, xr.jsx)("span", {
+              children: pr("dailyDrop:collected", {
+                count: Sr.collected.length,
+                total: Sr.total
               })
             })]
           })]
-        }), "ready" === GR.kind && (0, KR.jsx)(fR.n, {
+        }), "ready" === Qr.kind && (0, xr.jsx)(Er.p, {
           className: "DailyDropTileOpen",
-          onClick: qR,
-          loading: tR,
-          children: VR("dailyDrop:open")
-        }), "waiting" === GR.kind && (0, KR.jsx)("div", {
+          onClick: Ir,
+          loading: Wr,
+          children: pr("dailyDrop:open")
+        }), "waiting" === Qr.kind && (0, xr.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: VR("dailyDrop:nextIn", {
-            count: GR.hours
+          children: pr("dailyDrop:nextIn", {
+            count: Qr.hours
           })
         })]
       })
     }
-    var Ti = GR(3178);
-    const si = Math.PI / 180;
+    var df = Qr(3139);
+    const sf = Math.PI / 180;
 
-    function Rf(RR) {
-      return RR / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
+    function uf(rr) {
+      return rr / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
     }
 
-    function Jf(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const yR = (RR / (2 * Math.PI / GR) % GR + GR) % GR;
-      let tR = null,
-        uR = 1 / 0;
-      for (let ZR = 0; ZR < GR; ZR++) {
-        if (!JR[ZR]) continue;
-        const RR = Math.abs(ZR - yR),
-          qR = Math.min(RR, GR - RR);
-        qR < uR && (tR = ZR, uR = qR)
+    function rE(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const Zr = (rr / (2 * Math.PI / Qr) % Qr + Qr) % Qr;
+      let Wr = null,
+        ar = 1 / 0;
+      for (let jr = 0; jr < Qr; jr++) {
+        if (!Sr[jr]) continue;
+        const rr = Math.abs(jr - Zr),
+          Ir = Math.min(rr, Qr - rr);
+        Ir < ar && (Wr = jr, ar = Ir)
       }
-      return tR
+      return Wr
     }
 
-    function Gf(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const yR = Jf(RR, JR, GR);
-      if (null === yR) return RR;
-      const tR = Rf(yR, GR) - RR;
-      return RR + tR - 2 * Math.PI * Math.round(tR / (2 * Math.PI))
+    function SE(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const Zr = rE(rr, Sr, Qr);
+      if (null === Zr) return rr;
+      const Wr = uf(Zr, Qr) - rr;
+      return rr + Wr - 2 * Math.PI * Math.round(Wr / (2 * Math.PI))
     }
-    const yf = 32;
+    const QE = 32;
 
-    function tf(RR) {
-      if (0 === RR.width || 0 === RR.height) return !0;
-      const JR = document.createElement("canvas");
-      JR.width = yf, JR.height = yf;
-      const GR = JR.getContext("2d", {
+    function ZE(rr) {
+      if (0 === rr.width || 0 === rr.height) return !0;
+      const Sr = document.createElement("canvas");
+      Sr.width = QE, Sr.height = QE;
+      const Qr = Sr.getContext("2d", {
         willReadFrequently: !0
       });
-      if (!GR) return !0;
-      GR.drawImage(RR, 0, 0, yf, yf);
+      if (!Qr) return !0;
+      Qr.drawImage(rr, 0, 0, QE, QE);
       const {
-        data: yR
-      } = GR.getImageData(0, 0, yf, yf);
-      for (let tR = 3; tR < yR.length; tR += 4)
-        if (yR[tR] > 0) return !1;
+        data: Zr
+      } = Qr.getImageData(0, 0, QE, QE);
+      for (let Wr = 3; Wr < Zr.length; Wr += 4)
+        if (Zr[Wr] > 0) return !1;
       return !0
     }
 
-    function uf(RR) {
-      RR.width = 0, RR.height = 0
+    function WE(rr) {
+      rr.width = 0, rr.height = 0
     }
 
-    function Zf() {
+    function aE() {
       return "hidden" === document.visibilityState
     }
-    async function qf(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 1e3;
+    async function jE(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 1e3;
       for (;;) {
-        await (Zf() ? new Promise((RR => {
-          const JR = () => {
-            Zf() || (document.removeEventListener("visibilitychange", JR), RR())
+        await (aE() ? new Promise((rr => {
+          const Sr = () => {
+            aE() || (document.removeEventListener("visibilitychange", Sr), rr())
           };
-          document.addEventListener("visibilitychange", JR)
+          document.addEventListener("visibilitychange", Sr)
         })) : Promise.resolve());
-        const GR = Math.min(JR(), 1e3);
-        if (GR <= 0) return null;
-        const yR = await RR.captureFrame(GR);
-        if (null !== yR || !Zf()) return null !== yR && tf(yR) ? (uf(yR), null) : yR
+        const Qr = Math.min(Sr(), 1e3);
+        if (Qr <= 0) return null;
+        const Zr = await rr.captureFrame(Qr);
+        if (null !== Zr || !aE()) return null !== Zr && ZE(Zr) ? (WE(Zr), null) : Zr
       }
     }
-    async function ff(RR, JR) {
-      const GR = performance.now();
-      let yR = 0,
-        tR = Zf() ? GR : null;
-      const uR = () => {
-          Zf() ? tR ??= performance.now() : null !== tR && (yR += performance.now() - tR, tR = null)
+    async function IE(rr, Sr) {
+      const Qr = performance.now();
+      let Zr = 0,
+        Wr = aE() ? Qr : null;
+      const ar = () => {
+          aE() ? Wr ??= performance.now() : null !== Wr && (Zr += performance.now() - Wr, Wr = null)
         },
-        ZR = () => {
-          const RR = performance.now();
-          return 3e3 - (RR - GR - yR - (null === tR ? 0 : RR - tR))
+        jr = () => {
+          const rr = performance.now();
+          return 3e3 - (rr - Qr - Zr - (null === Wr ? 0 : rr - Wr))
         };
-      document.addEventListener("visibilitychange", uR);
+      document.addEventListener("visibilitychange", ar);
       try {
-        let GR = await qf(RR);
-        for (; null === GR && JR() && ZR() > 0;) GR = await qf(RR, ZR);
-        return GR
+        let Qr = await jE(rr);
+        for (; null === Qr && Sr() && jr() > 0;) Qr = await jE(rr, jr);
+        return Qr
       } finally {
-        document.removeEventListener("visibilitychange", uR)
+        document.removeEventListener("visibilitychange", ar)
       }
     }
 
-    function Vf(RR) {
+    function fE(rr) {
       let {
-        cosmetics: JR
-      } = RR;
-      return (0, KR.jsx)("div", {
+        cosmetics: Sr
+      } = rr;
+      return (0, xr.jsx)("div", {
         className: "DailyDropRevealHead",
-        children: (0, KR.jsx)(Kq.c, {
-          cosmetics: JR
+        children: (0, xr.jsx)(pI.b, {
+          cosmetics: Sr
         })
       })
     }
 
-    function Kf(RR) {
+    function EE(rr) {
       let {
-        worn: JR,
-        ft: GR,
-        Vt: tR,
-        prompting: iR,
-        className: fR
-      } = RR;
+        worn: Sr,
+        fW: Qr,
+        EW: Wr,
+        prompting: fr,
+        className: Er
+      } = rr;
       const {
-        t: VR
-      } = (0, ZR.A)(), wR = (0, yR.useRef)(null), [rR, eR] = (0, yR.useState)(null), [aR, LR] = (0, yR.useState)(!1), [nR, UR] = (0, yR.useState)(!1), WR = (0, yR.useRef)([]), AR = (0, yR.useRef)(null), CR = (0, yR.useRef)(0), MR = (0, yR.useRef)(null), BR = (0, yR.useRef)(!0), lR = (0, yR.useCallback)((() => {
-        const RR = AR.current,
-          JR = WR.current,
-          GR = Jf(CR.current, JR),
-          yR = null === GR ? null : JR[GR],
-          tR = null === RR || void 0 === RR ? void 0 : RR.getContext("2d");
-        RR && yR && tR && (RR.width === yR.width && RR.height === yR.height || (RR.width = yR.width, RR.height = yR.height), tR.clearRect(0, 0, RR.width, RR.height), tR.drawImage(yR, 0, 0))
+        t: pr
+      } = (0, jr.E)(), mr = (0, Zr.useRef)(null), [Nr, Ur] = (0, Zr.useState)(null), [tr, hr] = (0, Zr.useState)(!1), [zr, Yr] = (0, Zr.useState)(!1), nr = (0, Zr.useRef)([]), er = (0, Zr.useRef)(null), Kr = (0, Zr.useRef)(0), Br = (0, Zr.useRef)(null), Tr = (0, Zr.useRef)(!0), vr = (0, Zr.useCallback)((() => {
+        const rr = er.current,
+          Sr = nr.current,
+          Qr = rE(Kr.current, Sr),
+          Zr = null === Qr ? null : Sr[Qr],
+          Wr = null === rr || void 0 === rr ? void 0 : rr.getContext("2d");
+        rr && Zr && Wr && (rr.width === Zr.width && rr.height === Zr.height || (rr.width = Zr.width, rr.height = Zr.height), Wr.clearRect(0, 0, rr.width, rr.height), Wr.drawImage(Zr, 0, 0))
       }), []);
-      async function pR(RR, JR) {
-        const GR = performance.now(),
-          yR = () => wR.current === RR;
-        let tR = 0;
-        for (const uR of function() {
-            let RR = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
-            const JR = [],
-              GR = new Set;
-            for (let yR = RR / 2; yR >= 1 && Number.isInteger(yR); yR /= 2)
-              for (let tR = 0; tR < RR; tR += yR) GR.has(tR) || (GR.add(tR), JR.push(tR));
-            for (let yR = 0; yR < RR; yR++) GR.has(yR) || JR.push(yR);
-            return JR
+      async function Or(rr, Sr) {
+        const Qr = performance.now(),
+          Zr = () => mr.current === rr;
+        let Wr = 0;
+        for (const ar of function() {
+            let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
+            const Sr = [],
+              Qr = new Set;
+            for (let Zr = rr / 2; Zr >= 1 && Number.isInteger(Zr); Zr /= 2)
+              for (let Wr = 0; Wr < rr; Wr += Zr) Qr.has(Wr) || (Qr.add(Wr), Sr.push(Wr));
+            for (let Zr = 0; Zr < rr; Zr++) Qr.has(Zr) || Sr.push(Zr);
+            return Sr
           }()) {
-          if (!yR()) break;
-          RR.turnCamera(Rf(uR));
-          const GR = 0 === uR ? await ff(JR, yR) : await qf(JR);
-          if (!yR()) {
-            null !== GR && uf(GR);
+          if (!Zr()) break;
+          rr.turnCamera(uf(ar));
+          const Qr = 0 === ar ? await IE(Sr, Zr) : await jE(Sr);
+          if (!Zr()) {
+            null !== Qr && WE(Qr);
             break
           }
-          if (null !== GR) WR.current[uR] = GR, tR++, 0 === uR && eR("stills");
-          else if (0 === uR) break
+          if (null !== Qr) nr.current[ar] = Qr, Wr++, 0 === ar && Ur("stills");
+          else if (0 === ar) break
         }
-        tR > 0 && console.info(`Lucky Skin Block's Before: ${tR} stills in ${Math.round(performance.now()-GR)} ms`)
+        Wr > 0 && console.info(`Lucky Skin Block's Before: ${Wr} stills in ${Math.round(performance.now()-Qr)} ms`)
       }
 
-      function gR(RR) {
-        var JR, GR;
-        (null === (JR = MR.current) || void 0 === JR ? void 0 : JR.pointerId) === RR.pointerId && (MR.current = null, BR.current || (CR.current = Gf(CR.current, WR.current), lR(), null === (GR = wR.current) || void 0 === GR || GR.turnCamera(CR.current)))
-      }(0, yR.useEffect)((() => {
-        "stills" === rR && lR()
-      }), [rR, lR]), (0, yR.useEffect)((() => () => {
-        for (const RR of WR.current) RR && uf(RR);
-        WR.current = []
+      function Lr(rr) {
+        var Sr, Qr;
+        (null === (Sr = Br.current) || void 0 === Sr ? void 0 : Sr.pointerId) === rr.pointerId && (Br.current = null, Tr.current || (Kr.current = SE(Kr.current, nr.current), vr(), null === (Qr = mr.current) || void 0 === Qr || Qr.turnCamera(Kr.current)))
+      }(0, Zr.useEffect)((() => {
+        "stills" === Nr && vr()
+      }), [Nr, vr]), (0, Zr.useEffect)((() => () => {
+        for (const rr of nr.current) rr && WE(rr);
+        nr.current = []
       }), []);
-      const bR = iR && !nR,
-        vR = bR ? {
-          onPointerDown: RR => {
-            null === MR.current && (RR.currentTarget.setPointerCapture(RR.pointerId), MR.current = {
-              pointerId: RR.pointerId,
-              startX: RR.clientX,
-              startTurn: CR.current
+      const lr = fr && !zr,
+        Xr = lr ? {
+          onPointerDown: rr => {
+            null === Br.current && (rr.currentTarget.setPointerCapture(rr.pointerId), Br.current = {
+              pointerId: rr.pointerId,
+              startX: rr.clientX,
+              startTurn: Kr.current
             })
           },
-          onPointerMove: RR => {
-            const JR = MR.current;
-            var GR;
-            null !== JR && JR.pointerId === RR.pointerId && (CR.current = JR.startTurn - (RR.clientX - JR.startX) * si, lR(), BR.current || null === (GR = wR.current) || void 0 === GR || GR.turnCamera(CR.current))
+          onPointerMove: rr => {
+            const Sr = Br.current;
+            var Qr;
+            null !== Sr && Sr.pointerId === rr.pointerId && (Kr.current = Sr.startTurn - (rr.clientX - Sr.startX) * sf, vr(), Tr.current || null === (Qr = mr.current) || void 0 === Qr || Qr.turnCamera(Kr.current))
           },
-          onPointerUp: gR,
-          onPointerCancel: gR
+          onPointerUp: Lr,
+          onPointerCancel: Lr
         } : {};
-      return (0, KR.jsxs)("div", {
-        className: uR()("DailyDropRevealFigures", {
-          DailyDropRevealFiguresTurnable: bR
-        }, fR),
-        children: [(0, KR.jsxs)("div", {
+      return (0, xr.jsxs)("div", {
+        className: ar()("DailyDropRevealFigures", {
+          DailyDropRevealFiguresTurnable: lr
+        }, Er),
+        children: [(0, xr.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            ...vR,
-            children: ["stills" === rR && (0, KR.jsx)("canvas", {
-              ref: AR,
+            ...Xr,
+            children: ["stills" === Nr && (0, xr.jsx)("canvas", {
+              ref: er,
               className: "DailyDropRevealBeforeStill"
-            }), "head" === rR && (0, KR.jsx)(Vf, {
-              cosmetics: JR
-            }), null === rR && (0, KR.jsx)(XR.d, {})]
-          }), (0, KR.jsx)("span", {
+            }), "head" === Nr && (0, xr.jsx)(fE, {
+              cosmetics: Sr
+            }), null === Nr && (0, xr.jsx)(yr.c, {})]
+          }), (0, xr.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: VR("dailyDrop:before")
+            children: pr("dailyDrop:before")
           })]
-        }), (0, KR.jsx)(qR.d, {
+        }), (0, xr.jsx)(Ir.c, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, KR.jsx)("div", {
-              className: uR()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: aR
+            children: [(0, xr.jsx)("div", {
+              className: ar()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: tr
               }),
-              children: (0, KR.jsx)(yR.Suspense, {
+              children: (0, xr.jsx)(Zr.Suspense, {
                 fallback: null,
-                children: (0, KR.jsx)(Wq.e, {
+                children: (0, xr.jsx)(YI.b, {
                   onNoWebGl: () => {
-                    eR("head"), UR(!0)
+                    Ur("head"), Yr(!0)
                   },
-                  ref: wR,
+                  ref: mr,
                   onReady: () => {
-                    var RR, GR;
-                    null === (RR = wR.current) || void 0 === RR || RR.resetCamera(), null === (GR = wR.current) || void 0 === GR || GR.setAllCosmetics(JR)
+                    var rr, Qr;
+                    null === (rr = mr.current) || void 0 === rr || rr.resetCamera(), null === (Qr = mr.current) || void 0 === Qr || Qr.setAllCosmetics(Sr)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
                       !async function() {
-                        const RR = wR.current;
-                        if (!RR) return;
-                        const JR = RR.getDevTools();
+                        const rr = mr.current;
+                        if (!rr) return;
+                        const Sr = rr.getDevTools();
                         try {
-                          JR && await pR(RR, JR)
-                        } catch (uR) {
-                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", uR)
+                          Sr && await Or(rr, Sr)
+                        } catch (ar) {
+                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", ar)
                         } finally {
-                          BR.current = !1
+                          Tr.current = !1
                         }
-                        if (wR.current !== RR) return;
-                        WR.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), (0, fG.y)("daily_drop.before_head", "no_front_still"), eR("head")), null === MR.current && (CR.current = Gf(CR.current, WR.current)), RR.turnCamera(CR.current), lR(), RR.updateCosmetic(GR, tR);
-                        const yR = new Promise((RR => {
-                          setTimeout(RR, 1e4)
+                        if (mr.current !== rr) return;
+                        nr.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), (0, EQ.t)("daily_drop.before_head", "no_front_still"), Ur("head")), null === Br.current && (Kr.current = SE(Kr.current, nr.current)), rr.turnCamera(Kr.current), vr(), rr.updateCosmetic(Qr, Wr);
+                        const Zr = new Promise((rr => {
+                          setTimeout(rr, 1e4)
                         }));
-                        await Promise.race([RR.ensureReadyForCapture(GR), yR]).catch((RR => {
-                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", RR)
-                        })), wR.current === RR && LR(!0)
+                        await Promise.race([rr.ensureReadyForCapture(Qr), Zr]).catch((rr => {
+                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", rr)
+                        })), mr.current === rr && hr(!0)
                       }()
                     }))
                   }
                 })
               })
-            }), nR && (st.R.includes(GR) ? (0, KR.jsx)(Vf, {
+            }), zr && (dW.X.includes(Qr) ? (0, xr.jsx)(fE, {
               cosmetics: {
-                ...JR,
-                [GR]: tR
+                ...Sr,
+                [Qr]: Wr
               }
-            }) : (0, KR.jsx)("img", {
+            }) : (0, xr.jsx)("img", {
               className: "DailyDropRevealAfterPiece",
-              src: `/textures/charSkins/previews/${(0,Ti.m)(GR,tR).previewTex}.png`,
+              src: `/textures/charSkins/previews/${(0,df.k)(Qr,Wr).previewTex}.png`,
               alt: "",
               draggable: !1
-            })), !aR && !nR && (0, KR.jsx)(XR.d, {}), (0, KR.jsx)("div", {
+            })), !tr && !zr && (0, xr.jsx)(yr.c, {}), (0, xr.jsx)("div", {
               className: "DailyDropRevealTurn",
-              ...vR
+              ...Xr
             })]
-          }), (0, KR.jsx)("span", {
+          }), (0, xr.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: VR("dailyDrop:after")
+            children: pr("dailyDrop:after")
           })]
         })]
       })
     }
-    const wf = {
+    const pE = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -8777,211 +8777,211 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      rf = {
+      xE = {
         opening: 900,
         shrinking: 700
       };
 
-    function ef(RR) {
+    function mE(rr) {
       let {
-        drop: JR,
-        onClose: GR
-      } = RR;
+        drop: Sr,
+        onClose: Qr
+      } = rr;
       const {
-        t: tR
-      } = (0, ZR.A)(), {
-        userContext: iR
-      } = (0, eR.d)(), {
-        state: VR,
-        view: wR
-      } = (0, fG.F)(), [rR, aR] = (0, yR.useState)("closed"), [LR] = (0, yR.useState)((() => ({
-        ...iR.getPlayerCosmetics()
-      }))), [nR] = (0, yR.useState)((() => (0, fG.j)(JR, LR))), [UR, WR] = (0, yR.useState)(!1), [AR, CR] = (0, yR.useState)(!1), [XR] = (0, yR.useState)((() => null === VR ? Promise.resolve(null) : eG(VR))), [MR, lR] = (0, yR.useState)(null), pR = (0, ZG.d)(), {
-        gameState: gR
-      } = (0, BR.o)(["gameState"]);
-      async function bR() {
-        const RR = await XR;
-        pR.current && (null === RR ? (GR(), async function(RR) {
-          let JR = null;
+        t: Wr
+      } = (0, jr.E)(), {
+        userContext: fr
+      } = (0, Ur.c)(), {
+        state: pr,
+        view: mr
+      } = (0, EQ.z)(), [Nr, tr] = (0, Zr.useState)("closed"), [hr] = (0, Zr.useState)((() => ({
+        ...fr.getPlayerCosmetics()
+      }))), [zr] = (0, Zr.useState)((() => (0, EQ.h)(Sr, hr))), [Yr, nr] = (0, Zr.useState)(!1), [er, Kr] = (0, Zr.useState)(!1), [yr] = (0, Zr.useState)((() => null === pr ? Promise.resolve(null) : UQ(pr))), [Br, vr] = (0, Zr.useState)(null), Or = (0, jQ.b)(), {
+        gameState: Lr
+      } = (0, Tr.n)(["gameState"]);
+      async function lr() {
+        const rr = await yr;
+        Or.current && (null === rr ? (Qr(), async function(rr) {
+          let Sr = null;
           try {
-            const GR = await rG();
-            null === RR || RR.remindersOn || null !== wG.i.getItem(GR) || (JR = GR)
-          } catch (yR) {
-            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", yR)
+            const Qr = await NQ();
+            null === rr || rr.remindersOn || null !== mQ.j.getItem(Qr) || (Sr = Qr)
+          } catch (Zr) {
+            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", Zr)
           }
-          if (null === JR) return void await (0, VG.k)("dailyDrop");
-          const GR = JR;
-          await (0, VG.k)("dailyDrop", {
+          if (null === Sr) return void await (0, pQ.o)("dailyDrop");
+          const Qr = Sr;
+          await (0, pQ.o)("dailyDrop", {
             copy: {
               title: "mobilePushNotifications:optInTitle",
               subtitle: "mobilePushNotifications:offerSubtitleDailyDrop"
             },
             onAllow: () => {
-              wG.i.setItem(GR, !0), LG(null)
+              mQ.j.setItem(Qr, !0), hQ(null)
             }
           })
-        }(VR)) : ((0, VG.h)(), lR(RR), aR("remind")))
+        }(pr)) : ((0, pQ.g)(), vr(rr), tr("remind")))
       }
 
-      function vR(RR) {
-        null !== MR && function(RR, JR) {
-          wG.i.setItem(RR.askedKey, !0), (0, uG.k)(), (0, fG.y)("daily_drop.remind", JR ? "yes" : "no"), JR && LG(RR.requester)
-        }(MR, RR), GR()
-      }(0, yR.useEffect)((() => {
-        (0, fG.y)("daily_drop.reveal_step", rR)
-      }), [rR]), (0, yR.useEffect)((() => {
-        const RR = rf[rR];
-        if (void 0 === RR) return;
-        const JR = setTimeout((() => {
-          aR(wf[rR])
-        }), RR);
+      function Xr(rr) {
+        null !== Br && function(rr, Sr) {
+          mQ.j.setItem(rr.askedKey, !0), (0, aQ.l)(), (0, EQ.t)("daily_drop.remind", Sr ? "yes" : "no"), Sr && hQ(rr.requester)
+        }(Br, rr), Qr()
+      }(0, Zr.useEffect)((() => {
+        (0, EQ.t)("daily_drop.reveal_step", Nr)
+      }), [Nr]), (0, Zr.useEffect)((() => {
+        const rr = xE[Nr];
+        if (void 0 === rr) return;
+        const Sr = setTimeout((() => {
+          tr(pE[Nr])
+        }), rr);
         return () => {
-          clearTimeout(JR)
+          clearTimeout(Sr)
         }
-      }), [rR]);
-      const OR = tR(`dailyDrop:kind_${nR.ft}`),
-        xR = VR && tR("dailyDrop:collected", {
-          count: VR.collected.length,
-          total: VR.total
+      }), [Nr]);
+      const Pr = Wr(`dailyDrop:kind_${zr.fW}`),
+        Hr = pr && Wr("dailyDrop:collected", {
+          count: pr.collected.length,
+          total: pr.total
         }),
-        NR = "revealed" === rR || "shrinking" === rR,
-        DR = "equip" !== rR && "remind" !== rR;
-      return (0, KR.jsx)(At.e, {
+        qr = "revealed" === Nr || "shrinking" === Nr,
+        Rr = "equip" !== Nr && "remind" !== Nr;
+      return (0, xr.jsx)(nW.b, {
         className: "DailyDropRevealScreen",
-        close: "remind" === rR ? () => {
-          vR(!1)
-        } : GR,
+        close: "remind" === Nr ? () => {
+          Xr(!1)
+        } : Qr,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, KR.jsxs)("div", {
-          className: uR()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === rR,
-            DailyDropRevealShrinking: "shrinking" === rR,
-            DailyDropRevealFiguresShown: "shrinking" === rR || "equip" === rR || "remind" === rR
+        children: (0, xr.jsxs)("div", {
+          className: ar()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === Nr,
+            DailyDropRevealShrinking: "shrinking" === Nr,
+            DailyDropRevealFiguresShown: "shrinking" === Nr || "equip" === Nr || "remind" === Nr
           }),
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, KR.jsx)(Kf, {
+            children: [(0, xr.jsx)(EE, {
               className: "DailyDropRevealStageFigures",
-              worn: LR,
-              ft: nR.ft,
-              Vt: nR.Vt,
-              prompting: !DR
-            }), ("closed" === rR || "opening" === rR) && (0, KR.jsx)(Qi.c, {
+              worn: hr,
+              fW: zr.fW,
+              EW: zr.EW,
+              prompting: !Rr
+            }), ("closed" === Nr || "opening" === Nr) && (0, xr.jsx)(Jf.c, {
               className: "DailyDropRevealBlock",
-              open: "opening" === rR
-            }), NR && (0, KR.jsx)("div", {
+              open: "opening" === Nr
+            }), qr && (0, xr.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, KR.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,Ti.m)(nR.ft,nR.Vt).previewTex}.png`,
-                alt: OR,
+              children: (0, xr.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,df.k)(zr.fW,zr.EW).previewTex}.png`,
+                alt: Pr,
                 draggable: !1
               })
             })]
-          }), DR && (0, KR.jsxs)(KR.Fragment, {
-            children: [(0, KR.jsxs)("div", {
+          }), Rr && (0, xr.jsxs)(xr.Fragment, {
+            children: [(0, xr.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, KR.jsx)("div", {
+              children: [(0, xr.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: NR ? OR : tR("dailyDrop:name")
-              }), "closed" === rR && (0, KR.jsx)("div", {
+                children: qr ? Pr : Wr("dailyDrop:name")
+              }), "closed" === Nr && (0, xr.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: tR("dailyDrop:tapToOpen")
-              }), "revealed" === rR && (0, KR.jsx)("div", {
+                children: Wr("dailyDrop:tapToOpen")
+              }), "revealed" === Nr && (0, xr.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: tR("dailyDrop:tapToContinue")
+                children: Wr("dailyDrop:tapToContinue")
               })]
-            }), (0, KR.jsx)("button", {
+            }), (0, xr.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": tR("closed" === rR ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": Wr("closed" === Nr ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                aR(wf[rR])
+                tr(pE[Nr])
               }
             })]
-          }), "equip" === rR && (0, KR.jsxs)("div", {
+          }), "equip" === Nr && (0, xr.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: OR
-            }), (0, KR.jsx)("div", {
+              children: Pr
+            }), (0, xr.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: tR("dailyDrop:equipQuestion")
-            }), (0, KR.jsxs)("div", {
+              children: Wr("dailyDrop:equipQuestion")
+            }), (0, xr.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, KR.jsx)(fR.g, {
+              children: [(0, xr.jsx)(Er.h, {
                 className: "DailyDropRevealButton",
-                disabled: UR,
+                disabled: Yr,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, fG.y)("daily_drop.not_now", JR), bR()
+                  (0, EQ.t)("daily_drop.not_now", Sr), lr()
                 },
-                children: tR("dailyDrop:notNow")
-              }), (0, KR.jsx)(fR.g, {
+                children: Wr("dailyDrop:notNow")
+              }), (0, xr.jsx)(Er.h, {
                 className: "DailyDropRevealButton",
-                loading: UR,
+                loading: Yr,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, fG.y)("daily_drop.equip", JR), WR(!0), CR(!1);
+                    (0, EQ.t)("daily_drop.equip", Sr), nr(!0), Kr(!1);
                     try {
-                      await (0, fG.g)(iR, nR.ft, nR.Vt)
-                    } catch (RR) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", RR), WR(!1), void CR(!0)
+                      await (0, EQ.g)(fr, zr.fW, zr.EW)
+                    } catch (rr) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", rr), nr(!1), void Kr(!0)
                     }
-                    await bR()
+                    await lr()
                   }()
                 },
-                children: tR("dailyDrop:equip")
+                children: Wr("dailyDrop:equip")
               })]
-            }), AR && (0, KR.jsx)("div", {
+            }), er && (0, xr.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: tR("dailyDrop:equipFailed")
-            }), !(0, BR.h)(gR) && (0, KR.jsxs)("button", {
+              children: Wr("dailyDrop:equipFailed")
+            }), !(0, Tr.g)(Lr) && (0, xr.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: UR,
+              disabled: Yr,
               onClick: () => {
-                var RR;
-                (0, fG.y)("daily_drop.customise", JR), RR = nR.ft, bG.n.JK(wt, RR), BR.d.set({
-                  openEverythingMenuName: OJ.o.CUSTOMISATION
-                }), GR()
+                var rr;
+                (0, EQ.t)("daily_drop.customise", Sr), rr = zr.fW, lQ.i.Jp(mW, rr), Tr.c.set({
+                  openEverythingMenuName: PS.q.CUSTOMISATION
+                }), Qr()
               },
-              children: [tR("dailyDrop:customise"), " ", (0, KR.jsx)(qR.d, {
+              children: [Wr("dailyDrop:customise"), " ", (0, xr.jsx)(Ir.c, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), xR && (0, KR.jsxs)("div", {
+            }), Hr && (0, xr.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [xR, "waiting" === (null === wR || void 0 === wR ? void 0 : wR.kind) && ` \xb7 ${tR("dailyDrop:nextInInline",{count:wR.hours})}`]
+              children: [Hr, "waiting" === (null === mr || void 0 === mr ? void 0 : mr.kind) && ` \xb7 ${Wr("dailyDrop:nextInInline",{count:mr.hours})}`]
             })]
-          }), "remind" === rR && (0, KR.jsxs)("div", {
+          }), "remind" === Nr && (0, xr.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, KR.jsx)("div", {
+            children: [(0, xr.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: tR("dailyDrop:remindTitle")
-            }), (0, KR.jsx)("div", {
+              children: Wr("dailyDrop:remindTitle")
+            }), (0, xr.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: tR("dailyDrop:remindSubtitle")
-            }), (0, KR.jsxs)("div", {
+              children: Wr("dailyDrop:remindSubtitle")
+            }), (0, xr.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, KR.jsx)(fR.g, {
+              children: [(0, xr.jsx)(Er.h, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  vR(!1)
+                  Xr(!1)
                 },
-                children: tR("dailyDrop:remindNo")
-              }), (0, KR.jsx)(fR.n, {
+                children: Wr("dailyDrop:remindNo")
+              }), (0, xr.jsx)(Er.p, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  vR(!0)
+                  Xr(!0)
                 },
-                children: tR("dailyDrop:remindYes")
+                children: Wr("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -8989,803 +8989,803 @@ export const modules = {
       })
     }
 
-    function af(RR, JR) {
+    function NE(rr, Sr) {
       const {
-        t: GR
-      } = (0, ZR.A)(), tR = function(RR, JR) {
+        t: Qr
+      } = (0, jr.E)(), Wr = function(rr, Sr) {
         const {
-          state: GR,
-          view: tR
-        } = (0, fG.F)(), [uR, ZR] = (0, yR.useState)(!1), [qR, iR] = (0, yR.useState)(!1), [fR, VR] = (0, yR.useState)(null), KR = (0, yR.useRef)(null), wR = (0, yR.useRef)(!1), rR = JR && "ready" === (null === tR || void 0 === tR ? void 0 : tR.kind);
-        (0, yR.useEffect)((() => {
-          RR ? rR && !wR.current && (wR.current = !0, (0, fG.y)("daily_drop.shown", "tile")) : wR.current = !1
-        }), [RR, rR]), (0, yR.useEffect)((() => {
-          RR || (nR(), iR(!1))
-        }), [RR]);
-        const eR = RR && null === fR && !(0, fG.u)(tR);
-        (0, yR.useEffect)((() => {
-          eR && BR.d.set({
-            openEverythingMenuName: OJ.o.CUSTOMISATION
+          state: Qr,
+          view: Wr
+        } = (0, EQ.z)(), [ar, jr] = (0, Zr.useState)(!1), [Ir, fr] = (0, Zr.useState)(!1), [Er, pr] = (0, Zr.useState)(null), xr = (0, Zr.useRef)(null), mr = (0, Zr.useRef)(!1), Nr = Sr && "ready" === (null === Wr || void 0 === Wr ? void 0 : Wr.kind);
+        (0, Zr.useEffect)((() => {
+          rr ? Nr && !mr.current && (mr.current = !0, (0, EQ.t)("daily_drop.shown", "tile")) : mr.current = !1
+        }), [rr, Nr]), (0, Zr.useEffect)((() => {
+          rr || (zr(), fr(!1))
+        }), [rr]);
+        const Ur = rr && null === Er && !(0, EQ.p)(Wr);
+        (0, Zr.useEffect)((() => {
+          Ur && Tr.c.set({
+            openEverythingMenuName: PS.q.CUSTOMISATION
           })
-        }), [eR]);
-        const aR = (0, yR.useRef)(!1),
-          LR = (0, yR.useRef)(RR);
+        }), [Ur]);
+        const tr = (0, Zr.useRef)(!1),
+          hr = (0, Zr.useRef)(rr);
 
-        function nR() {
-          null !== KR.current && (KR.current = null, VR(null))
+        function zr() {
+          null !== xr.current && (xr.current = null, pr(null))
         }
-        return LR.current = RR, {
-          state: GR,
-          view: tR,
-          claiming: uR,
-          claimFailed: qR,
-          reveal: fR,
+        return hr.current = rr, {
+          state: Qr,
+          view: Wr,
+          claiming: ar,
+          claimFailed: Ir,
+          reveal: Er,
           open: async function() {
-            if (!aR.current) {
-              aR.current = !0, ZR(!0), iR(!1);
+            if (!tr.current) {
+              tr.current = !0, jr(!0), fr(!1);
               try {
                 const {
-                  state: RR,
-                  drop: JR
-                } = await (0, fG.e)();
-                if (null === RR || null === JR) return;
-                if (!LR.current) return;
-                (0, fG.y)("daily_drop.open", JR), KR.current = {
-                  state: RR,
-                  drop: JR
-                }, VR(KR.current)
-              } catch (RR) {
-                console.error("Failed to claim the Lucky Skin Block", RR), LR.current && iR(!0)
+                  state: rr,
+                  drop: Sr
+                } = await (0, EQ.d)();
+                if (null === rr || null === Sr) return;
+                if (!hr.current) return;
+                (0, EQ.t)("daily_drop.open", Sr), xr.current = {
+                  state: rr,
+                  drop: Sr
+                }, pr(xr.current)
+              } catch (rr) {
+                console.error("Failed to claim the Lucky Skin Block", rr), hr.current && fr(!0)
               } finally {
-                aR.current = !1, ZR(!1)
+                tr.current = !1, jr(!1)
               }
             }
           },
-          closeReveal: nR
+          closeReveal: zr
         }
-      }(RR, JR);
+      }(rr, Sr);
       return {
-        shown: (0, fG.u)(tR.view) || null !== tR.reveal,
-        tile: tR.state && tR.view && (0, KR.jsx)(Fi, {
-          state: tR.state,
-          view: tR.view,
-          claiming: tR.claiming,
-          onOpen: tR.open
+        shown: (0, EQ.p)(Wr.view) || null !== Wr.reveal,
+        tile: Wr.state && Wr.view && (0, xr.jsx)(Df, {
+          state: Wr.state,
+          view: Wr.view,
+          claiming: Wr.claiming,
+          onOpen: Wr.open
         }),
-        claimFailed: tR.claimFailed && (0, KR.jsx)("div", {
+        claimFailed: Wr.claimFailed && (0, xr.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: GR("dailyDrop:claimFailed")
+          children: Qr("dailyDrop:claimFailed")
         }),
-        reveal: tR.reveal && (0, KR.jsx)(ef, {
-          drop: tR.reveal.drop,
-          onClose: tR.closeReveal
+        reveal: Wr.reveal && (0, xr.jsx)(mE, {
+          drop: Wr.reveal.drop,
+          onClose: Wr.closeReveal
         })
       }
     }
 
-    function Lf(RR) {
+    function UE(rr) {
       let {
-        show: JR
-      } = RR;
-      const GR = af(JR, JR);
-      return (0, iJ.D)(JR && GR.shown, (0, iJ.E)(), (RR => {
-        (0, fG.y)("daily_drop.store_only_open", RR)
-      })), JR && GR.shown ? (0, KR.jsxs)("div", {
+        show: Sr
+      } = rr;
+      const Qr = NE(Sr, Sr);
+      return (0, fS.I)(Sr && Qr.shown, (0, fS.K)(), (rr => {
+        (0, EQ.t)("daily_drop.store_only_open", rr)
+      })), Sr && Qr.shown ? (0, xr.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [GR.claimFailed, GR.tile && (0, KR.jsx)("div", {
+        children: [Qr.claimFailed, Qr.tile && (0, xr.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: GR.tile
-        }), GR.reveal]
+          children: Qr.tile
+        }), Qr.reveal]
       }) : null
     }
-    var nf = GR(3663),
-      Uf = GR(35208),
-      Wf = GR(35218);
+    var tE = Qr(3612),
+      hE = Qr(35523),
+      zE = Qr(35532);
 
-    function Af(RR) {
+    function YE(rr) {
       let {
-        view: JR,
-        highlight: GR,
-        scrollSignal: tR,
-        onScrolledIntoView: uR
-      } = RR;
+        view: Sr,
+        highlight: Qr,
+        scrollSignal: Wr,
+        onScrolledIntoView: ar
+      } = rr;
       const {
-        t: qR
-      } = (0, ZR.A)(), {
-        purchaseUnderWay: iR,
-        notice: fR,
-        needsLogin: VR,
-        buyPack: wR
-      } = (0, Wf.f)("banner");
-      (0, nf.L)(JR.arm, "banner");
-      const rR = (0, yR.useRef)(null);
-      return (0, yR.useEffect)((() => {
-        var RR;
-        tR > 0 && (null === (RR = rR.current) || void 0 === RR || RR.scrollIntoView({
+        t: Ir
+      } = (0, jr.E)(), {
+        purchaseUnderWay: fr,
+        notice: Er,
+        needsLogin: pr,
+        buyPack: mr
+      } = (0, zE.e)("banner");
+      (0, tE.S)(Sr.arm, "banner");
+      const Nr = (0, Zr.useRef)(null);
+      return (0, Zr.useEffect)((() => {
+        var rr;
+        Wr > 0 && (null === (rr = Nr.current) || void 0 === rr || rr.scrollIntoView({
           block: "nearest"
-        }), uR())
-      }), [tR]), (0, KR.jsxs)("div", {
-        ref: rR,
+        }), ar())
+      }), [Wr]), (0, xr.jsxs)("div", {
+        ref: Nr,
         className: "NewPlayerDealBanner",
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "NewPlayerDealBannerHead",
-          children: [(0, KR.jsx)("div", {
+          children: [(0, xr.jsx)("div", {
             className: "NewPlayerDealBannerTitle",
-            children: qR("newPlayerDeal:title")
-          }), (0, KR.jsx)(Uf.b, {
-            endsAt: JR.endsAt
+            children: Ir("newPlayerDeal:title")
+          }), (0, xr.jsx)(hE.d, {
+            endsAt: Sr.endsAt
           })]
-        }), (0, KR.jsx)(Uf.d, {
-          view: JR,
-          needsLogin: VR,
-          busy: iR,
-          highlight: GR,
-          onBuy: RR => {
-            wR(JR, RR)
+        }), (0, xr.jsx)(hE.g, {
+          view: Sr,
+          needsLogin: pr,
+          busy: fr,
+          highlight: Qr,
+          onBuy: rr => {
+            mr(Sr, rr)
           }
-        }), (0, KR.jsx)(Zi.j, {
-          notice: fR,
+        }), (0, xr.jsx)(af.h, {
+          notice: Er,
           className: "SmallTextBold NewPlayerDealNotice"
         })]
       })
     }
-    GR(35211);
-    var Cf = GR(3670);
+    Qr(35525);
+    var nE = Qr(3617);
 
-    function Xf(RR) {
+    function eE(rr) {
       let {
-        wallet: JR,
-        close: GR
-      } = RR;
+        wallet: Sr,
+        close: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("div", {
+        t: Zr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("div", {
         className: "NewPlayerDealGiftNotice",
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "NewPlayerDealGiftNoticeRows",
-          children: [(0, KR.jsx)("span", {
-            children: yR("newPlayerDeal:giftable")
-          }), (0, KR.jsx)(Uq.b, {
-            amount: (0, YZ.b)(JR)
-          }), (0, KR.jsx)("span", {
-            children: yR("newPlayerDeal:ungiftable")
-          }), (0, KR.jsx)(Uq.b, {
-            amount: JR.ungiftable
+          children: [(0, xr.jsx)("span", {
+            children: Zr("newPlayerDeal:giftable")
+          }), (0, xr.jsx)(zI.c, {
+            amount: (0, Fj.c)(Sr)
+          }), (0, xr.jsx)("span", {
+            children: Zr("newPlayerDeal:ungiftable")
+          }), (0, xr.jsx)(zI.c, {
+            amount: Sr.ungiftable
           })]
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "NewPlayerDealGiftNoticeWhy",
-          children: yR("newPlayerDeal:ungiftableWhy")
-        }), (0, KR.jsx)(fR.n, {
+          children: Zr("newPlayerDeal:ungiftableWhy")
+        }), (0, xr.jsx)(Er.p, {
           className: "NewPlayerDealGiftNoticeOk",
-          onClick: GR,
-          children: yR("general:ok")
+          onClick: Qr,
+          children: Zr("general:ok")
         })]
       })
     }
 
-    function Mf(RR) {
-      tJ.NotificationProvider.showCustomPopup({
-        body: JR => (0, KR.jsx)(Xf, {
-          wallet: RR,
-          close: JR
+    function KE(rr) {
+      WS.NotificationProvider.showCustomPopup({
+        body: Sr => (0, xr.jsx)(eE, {
+          wallet: rr,
+          close: Sr
         }),
         middleScreenPopupClassName: "NewPlayerDealGiftNoticePopup",
         disableExitButton: !0
       })
     }
-    const Bf = {
+    const yE = {
       kind: "board"
     };
-    let lf = !1;
+    let BE = !1;
 
-    function pf(RR) {
-      return "found" === RR.status || "error" === RR.status && "store:giftRecipientLookupFailed" === RR.error ? RR.name : null
-    }(0, iJ.u)(sR.prefetchBillingOfferings);
-    const gf = (0, yR.memo)((function(RR) {
-      var JR;
+    function TE(rr) {
+      return "found" === rr.status || "error" === rr.status && "store:giftRecipientLookupFailed" === rr.error ? rr.name : null
+    }(0, fS.y)(sr.prefetchBillingOfferings);
+    const vE = (0, Zr.memo)((function(rr) {
+      var Sr;
       let {
-        show: tR
-      } = RR;
+        show: Wr
+      } = rr;
       const {
-        t: qR
-      } = (0, ZR.A)(), {
-        userContext: iR
-      } = (0, eR.d)(), fR = (0, jR.usePurchasesAllowed)(), VR = iR !== bR.NULL_USER_CONTEXT, wR = yq(iR, tR), [rR, aR] = (0, LR.e)(), {
-        page: nR,
-        urlMode: UR,
-        goTo: WR
-      } = (0, tq.e)(), AR = function(RR) {
-        return "superRank" === RR.kind ? "superRank" : "pack" === RR.kind ? RR.pack : null
-      }(nR), {
-        openEverythingMenuName: CR,
-        gameState: XR
-      } = (0, BR.o)(["openEverythingMenuName", "gameState"]), MR = null !== CR, lR = "landingPage" === XR;
-      ! function(RR, JR) {
-        const [tR] = (0, yR.useState)(qq.i), [uR, ZR] = (0, yR.useState)(!1);
-        tR && JR && !uR && ZR(!0);
-        const qR = (0, jy.s)(),
-          iR = tR && uR && RR && !qR;
-        (0, yR.useEffect)((() => {
-          if (!iR) return;
-          let RR = null,
-            JR = null,
-            yR = null;
-          const tR = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, hR.getBillingClient)().purchaseUnderWay,
-            uR = () => {
-              var GR;
-              null === (GR = yR) || void 0 === GR || GR(), yR = null, null !== RR && (clearTimeout(RR), RR = null), null !== JR && (clearTimeout(JR), JR = null)
+        t: Ir
+      } = (0, jr.E)(), {
+        userContext: fr
+      } = (0, Ur.c)(), Er = (0, wr.usePurchasesAllowed)(), pr = fr !== lr.NULL_USER_CONTEXT, mr = QI(fr, Wr), [Nr, tr] = (0, hr.e)(), {
+        page: zr,
+        urlMode: Yr,
+        goTo: nr
+      } = (0, ZI.g)(), er = function(rr) {
+        return "superRank" === rr.kind ? "superRank" : "pack" === rr.kind ? rr.pack : null
+      }(zr), {
+        openEverythingMenuName: Kr,
+        gameState: yr
+      } = (0, Tr.n)(["openEverythingMenuName", "gameState"]), Br = null !== Kr, vr = "landingPage" === yr;
+      ! function(rr, Sr) {
+        const [Wr] = (0, Zr.useState)(jI.m), [ar, jr] = (0, Zr.useState)(!1);
+        Wr && Sr && !ar && jr(!0);
+        const Ir = (0, wZ.z)(),
+          fr = Wr && ar && rr && !Ir;
+        (0, Zr.useEffect)((() => {
+          if (!fr) return;
+          let rr = null,
+            Sr = null,
+            Zr = null;
+          const Wr = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, ur.getBillingClient)().purchaseUnderWay,
+            ar = () => {
+              var Qr;
+              null === (Qr = Zr) || void 0 === Qr || Qr(), Zr = null, null !== rr && (clearTimeout(rr), rr = null), null !== Sr && (clearTimeout(Sr), Sr = null)
             },
-            ZR = () => {
-              (0, uq.p)(!1), (0, uq.n)(!1), uR(), RR = setTimeout((() => {
-                RR = null, yR = (0, Zq.e)((() => {
-                  yR = null, tR() ? ZR() : ((0, uq.p)(!0), JR = setTimeout((() => {
-                    JR = null, yR = (0, Zq.e)((() => {
-                      yR = null, tR() ? ZR() : (0, uq.n)(!0)
+            jr = () => {
+              (0, WI.r)(!1), (0, WI.n)(!1), ar(), rr = setTimeout((() => {
+                rr = null, Zr = (0, aI.c)((() => {
+                  Zr = null, Wr() ? jr() : ((0, WI.r)(!0), Sr = setTimeout((() => {
+                    Sr = null, Zr = (0, aI.c)((() => {
+                      Zr = null, Wr() ? jr() : (0, WI.n)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => GR(5463))).then((RR => {
-                    RR.startBackgroundGameSetup()
-                  }), (RR => {
-                    console.warn("Background game setup: its chunk failed to load", RR)
+                  }), 3e3), Promise.resolve().then((() => Qr(5420))).then((rr => {
+                    rr.startBackgroundGameSetup()
+                  }), (rr => {
+                    console.warn("Background game setup: its chunk failed to load", rr)
                   })))
                 }))
               }), 2e3)
             };
-          for (const GR of iq) window.addEventListener(GR, ZR, {
+          for (const Qr of II) window.addEventListener(Qr, jr, {
             capture: !0,
             passive: !0
           });
-          return ZR(), () => {
-            for (const RR of iq) window.removeEventListener(RR, ZR, {
+          return jr(), () => {
+            for (const rr of II) window.removeEventListener(rr, jr, {
               capture: !0
             });
-            uR(), (0, uq.p)(!1), (0, uq.n)(!1)
+            ar(), (0, WI.r)(!1), (0, WI.n)(!1)
           }
-        }), [iR])
-      }(tR && MR && lR, "pack" === nR.kind), (0, yR.useEffect)((() => {
-        MR && (0, sR.prefetchBillingOfferings)()
-      }), [MR]), (0, yR.useEffect)((() => {
-        MR && !tR && lR && (0, fq.p)()
-      }), [MR, tR, lR]);
-      const [pR, gR] = (0, yR.useState)(0), [vR, OR] = (0, yR.useState)(null), [xR, NR] = (0, yR.useState)(null), [DR, HR] = (0, yR.useState)(null), [oR, cR] = (0, yR.useState)(null), [PR, zR] = (0, yR.useState)(0), SR = (0, yR.useRef)(null), dR = (0, yR.useRef)(null), ER = (0, yR.useRef)(null), YR = (0, yR.useRef)(!1), kR = (0, iJ.E)(), QR = (0, yR.useRef)(0);
+        }), [fr])
+      }(Wr && Br && vr, "pack" === zr.kind), (0, Zr.useEffect)((() => {
+        Br && (0, sr.prefetchBillingOfferings)()
+      }), [Br]), (0, Zr.useEffect)((() => {
+        Br && !Wr && vr && (0, fI.t)()
+      }), [Br, Wr, vr]);
+      const [Or, Lr] = (0, Zr.useState)(0), [Xr, Pr] = (0, Zr.useState)(null), [Hr, qr] = (0, Zr.useState)(null), [Rr, gr] = (0, Zr.useState)(null), [Cr, Mr] = (0, Zr.useState)(null), [Gr, Vr] = (0, Zr.useState)(0), ir = (0, Zr.useRef)(null), cr = (0, Zr.useRef)(null), Fr = (0, Zr.useRef)(null), or = (0, Zr.useRef)(!1), br = (0, fS.K)(), Jr = (0, Zr.useRef)(0);
 
-      function FR() {
-        gR((RR => RR + 1))
-      }(0, yR.useEffect)((() => {
-        if (tR) {
-          if (lf = !0, (0, iJ.k)(), kR && kR.seq !== QR.current) {
-            var RR;
-            QR.current = kR.seq, "loginResume" !== kR.source && (0, iJ.A)();
-            const JR = (0, iJ.b)(kR);
-            UR || WR(JR), cR(null !== (RR = kR.highlight) && void 0 !== RR ? RR : null);
-            const GR = "newPlayerDeal" === kR.source || "loginResume" === kR.source && void 0 !== kR.highlight && (0, nf.e)(iR).includes(kR.highlight);
-            zR((RR => GR ? RR + 1 : 0)), NR(null), "gift" === kR.mode && kR.giftRecipientName ? wR.choose(kR.giftRecipientName, "prefilled") : wR.clear(), "gift" !== kR.mode || kR.giftRecipientName || FR()
+      function Dr() {
+        Lr((rr => rr + 1))
+      }(0, Zr.useEffect)((() => {
+        if (Wr) {
+          if (BE = !0, (0, fS.k)(), br && br.seq !== Jr.current) {
+            var rr;
+            Jr.current = br.seq, "loginResume" !== br.source && (0, fS.F)();
+            const Sr = (0, fS.c)(br);
+            Yr || nr(Sr), Mr(null !== (rr = br.highlight) && void 0 !== rr ? rr : null);
+            const Qr = "newPlayerDeal" === br.source || "loginResume" === br.source && void 0 !== br.highlight && (0, tE.f)(fr).includes(br.highlight);
+            Vr((rr => Qr ? rr + 1 : 0)), qr(null), "gift" === br.mode && br.giftRecipientName ? mr.choose(br.giftRecipientName, "prefilled") : mr.clear(), "gift" !== br.mode || br.giftRecipientName || Dr()
           }
-        } else zR(0)
-      }), [tR, kR]), (0, iJ.D)(tR, kR, (RR => {
-        (0, LJ.reportAnalyticsClick)({
+        } else Vr(0)
+      }), [Wr, br]), (0, fS.I)(Wr, br, (rr => {
+        (0, hS.reportAnalyticsClick)({
           id: "store.open",
-          value: RR
+          value: rr
         })
       }));
-      const TR = (0, nf.K)(),
-        RJ = null !== oR && null === TR && null === (0, nf.g)((0, nf.b)(iR)) && (0, nf.e)(iR).includes(oR);
-      (0, yR.useEffect)((() => {
-        if (!oR) return;
-        const RR = setTimeout((() => {
-          cR(null)
-        }), RJ ? 15e3 : 4e3);
+      const dr = (0, tE.R)(),
+        rS = null !== Cr && null === dr && null === (0, tE.h)((0, tE.b)(fr)) && (0, tE.f)(fr).includes(Cr);
+      (0, Zr.useEffect)((() => {
+        if (!Cr) return;
+        const rr = setTimeout((() => {
+          Mr(null)
+        }), rS ? 15e3 : 4e3);
         return () => {
-          clearTimeout(RR)
+          clearTimeout(rr)
         }
-      }), [oR, RJ]), (0, yR.useLayoutEffect)((() => {
-        const RR = SR.current;
-        if (!tR || !RR) return dR.current = null, void(ER.current = null);
-        var JR;
-        if (AR) dR.current = AR, null === (JR = RR.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === JR || JR.focus();
-        else if (dR.current) {
-          const JR = ER.current;
-          null !== JR && (RR.scrollTop = JR);
-          const GR = RR.querySelector(`[data-store-item="${dR.current}"]`);
-          if (GR) {
-            const yR = GR.getBoundingClientRect(),
-              tR = RR.getBoundingClientRect();
-            GR.focus({
-              preventScroll: null !== JR && yR.bottom > tR.top && yR.top < tR.bottom
+      }), [Cr, rS]), (0, Zr.useLayoutEffect)((() => {
+        const rr = ir.current;
+        if (!Wr || !rr) return cr.current = null, void(Fr.current = null);
+        var Sr;
+        if (er) cr.current = er, null === (Sr = rr.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Sr || Sr.focus();
+        else if (cr.current) {
+          const Sr = Fr.current;
+          null !== Sr && (rr.scrollTop = Sr);
+          const Qr = rr.querySelector(`[data-store-item="${cr.current}"]`);
+          if (Qr) {
+            const Zr = Qr.getBoundingClientRect(),
+              Wr = rr.getBoundingClientRect();
+            Qr.focus({
+              preventScroll: null !== Sr && Zr.bottom > Wr.top && Zr.top < Wr.bottom
             })
           }
-          dR.current = null
+          cr.current = null
         }
-      }), [AR, tR]), (0, yR.useEffect)((() => {
-        NR(null)
-      }), [wR.query]), (0, yR.useEffect)((() => {
-        if (!DR) return;
-        const RR = setTimeout((() => {
-          HR(null)
+      }), [er, Wr]), (0, Zr.useEffect)((() => {
+        qr(null)
+      }), [mr.query]), (0, Zr.useEffect)((() => {
+        if (!Rr) return;
+        const rr = setTimeout((() => {
+          gr(null)
         }), 8e3);
         return () => {
-          clearTimeout(RR)
+          clearTimeout(rr)
         }
-      }), [DR]);
-      const JJ = iR.superRankInfo,
-        GJ = iR.isLoggedIn() || (0, jR.guestsMayBuy)(),
-        yJ = iR.getOwnedCosmeticPacks(),
-        tJ = (0, hZ.i)(wR.query),
-        uJ = (0, hZ.d)({
-          mode: tJ,
-          loggedIn: VR ? GJ : null,
-          superRankInfo: JJ,
-          soldTierId: (0, IR.v)(Date.now()).product.tierId,
+      }), [Rr]);
+      const SS = fr.superRankInfo,
+        QS = fr.isLoggedIn() || (0, wr.guestsMayBuy)(),
+        ZS = fr.getOwnedCosmeticPacks(),
+        WS = (0, sj.n)(mr.query),
+        aS = (0, sj.g)({
+          mode: WS,
+          loggedIn: pr ? QS : null,
+          superRankInfo: SS,
+          soldTierId: (0, kr.t)(Date.now()).product.tierId,
           now: Date.now(),
-          ownedPacks: yJ,
-          packs: SZ.p,
-          recipient: wR.recipient
+          ownedPacks: ZS,
+          packs: Vj.s,
+          recipient: mr.recipient
         });
-      (0, yR.useEffect)((() => {
-        if (!GJ || !tR) return;
-        const RR = (0, nf.e)(iR),
-          JR = (0, iJ.A)((JR => !RR.includes(JR.item))),
-          GR = JR && (0, hZ.h)(JR, SZ.p);
-        JR && GR && ((0, LJ.reportAnalyticsClick)({
+      (0, Zr.useEffect)((() => {
+        if (!QS || !Wr) return;
+        const rr = (0, tE.f)(fr),
+          Sr = (0, fS.F)((Sr => !rr.includes(Sr.item))),
+          Qr = Sr && (0, sj.l)(Sr, Vj.s);
+        Sr && Qr && ((0, hS.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: JR.item
-        }), (0, iJ.m)(GR))
-      }), [GJ, tR]);
-      const ZJ = tR && "gift" === tJ,
-        qJ = (0, yR.useRef)(ZJ);
-      qJ.current = ZJ;
-      const fJ = "none" !== wR.recipient.status,
-        VJ = (0, yR.useRef)(!1);
-      (0, yR.useEffect)((() => {
-        ZJ ? fJ && !VJ.current && (VJ.current = !0, async function(RR) {
-          var JR;
-          if ("gift" === (null === (JR = (0, Cf.i)()) || void 0 === JR ? void 0 : JR.show)) return void Mf(Cf.b);
-          const GR = await (0, YZ.f)();
-          null !== GR && GR.ungiftable > 0 && RR() && Mf(GR)
-        }((() => qJ.current))) : VJ.current = !1
-      }), [ZJ, fJ]);
-      const KJ = (0, hZ.l)({
-        superRankDaysLeft: uJ.superRankDaysLeft,
-        openedThisSession: lf || tR,
-        seenNewItems: (0, iJ.g)()
+          value: Sr.item
+        }), (0, fS.o)(Qr))
+      }), [QS, Wr]);
+      const jS = Wr && "gift" === WS,
+        IS = (0, Zr.useRef)(jS);
+      IS.current = jS;
+      const ES = "none" !== mr.recipient.status,
+        pS = (0, Zr.useRef)(!1);
+      (0, Zr.useEffect)((() => {
+        jS ? ES && !pS.current && (pS.current = !0, async function(rr) {
+          var Sr;
+          if ("gift" === (null === (Sr = (0, nE.g)()) || void 0 === Sr ? void 0 : Sr.show)) return void KE(nE.c);
+          const Qr = await (0, Fj.f)();
+          null !== Qr && Qr.ungiftable > 0 && rr() && KE(Qr)
+        }((() => IS.current))) : pS.current = !1
+      }), [jS, ES]);
+      const xS = (0, sj.p)({
+        superRankDaysLeft: aS.superRankDaysLeft,
+        openedThisSession: BE || Wr,
+        seenNewItems: (0, fS.h)()
       });
-      (0, yR.useEffect)((() => {
-        (0, iJ.y)(KJ)
-      }), [KJ]);
-      const wJ = "self" === tJ,
-        rJ = af(tR, tR && wJ && "board" === nR.kind);
-      if (!tR || !fR) return null;
-      const eJ = aR > rR && rR <= 700,
-        aJ = !eJ && aR <= 420,
-        nJ = "gift" === tJ ? pf(wR.recipient) : null,
-        UJ = null !== vR,
-        WJ = "gift" === tJ ? {
-          name: nJ,
-          cosmetics: wR.recipientCosmetics,
+      (0, Zr.useEffect)((() => {
+        (0, fS.C)(xS)
+      }), [xS]);
+      const mS = "self" === WS,
+        NS = NE(Wr, Wr && mS && "board" === zr.kind);
+      if (!Wr || !Er) return null;
+      const US = tr > Nr && Nr <= 700,
+        tS = !US && tr <= 420,
+        zS = "gift" === WS ? TE(mr.recipient) : null,
+        YS = null !== Xr,
+        nS = "gift" === WS ? {
+          name: zS,
+          cosmetics: mr.recipientCosmetics,
           gift: !0
         } : {
-          name: VR && iR.getPlayerName() || null,
-          cosmetics: iR.getPlayerCosmetics(),
+          name: pr && fr.getPlayerName() || null,
+          cosmetics: fr.getPlayerCosmetics(),
           gift: !1
         };
 
-      function AJ(RR) {
-        (0, EZ.c)(RR, "gift" === tJ ? wR.query.trim() : null)
+      function eS(rr) {
+        (0, cj.e)(rr, "gift" === WS ? mr.query.trim() : null)
       }
 
-      function CJ(RR, JR) {
-        (0, LJ.reportAnalyticsClick)({
+      function KS(rr, Sr) {
+        (0, hS.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${JR?"gift":"self"}:${RR}`
-        }), JR && (wR.recordGift(JR.name, RR), XJ(JR))
+          value: `${Sr?"gift":"self"}:${rr}`
+        }), Sr && (mr.recordGift(Sr.name, rr), yS(Sr))
       }
 
-      function XJ(RR) {
-        ! function(RR) {
+      function yS(rr) {
+        ! function(rr) {
           try {
-            wG.i.setItem(Rq, (0, hZ.u)(Gq(), RR))
+            mQ.j.setItem(uj, (0, sj.y)(SI(), rr))
           } catch {}
         }({
-          name: RR.name,
-          cosmetics: RR.cosmetics
-        }), WR(Bf), HR((JR => {
-          var GR;
+          name: rr.name,
+          cosmetics: rr.cosmetics
+        }), nr(yE), gr((Sr => {
+          var Qr;
           return {
-            name: RR.name,
-            seq: (null !== (GR = null === JR || void 0 === JR ? void 0 : JR.seq) && void 0 !== GR ? GR : 0) + 1
+            name: rr.name,
+            seq: (null !== (Qr = null === Sr || void 0 === Sr ? void 0 : Sr.seq) && void 0 !== Qr ? Qr : 0) + 1
           }
         }))
       }
-      async function MJ(RR) {
-        var JR, GR;
-        if (YR.current) return;
-        if (!GJ) return void AJ(RR);
-        NR(null), cR(null);
-        const yR = "gift" === tJ ? {
-          name: pf(wR.recipient),
-          cosmetics: wR.recipientCosmetics
+      async function BS(rr) {
+        var Sr, Qr;
+        if (or.current) return;
+        if (!QS) return void eS(rr);
+        qr(null), Mr(null);
+        const Zr = "gift" === WS ? {
+          name: TE(mr.recipient),
+          cosmetics: mr.recipientCosmetics
         } : null;
-        if (yR && !yR.name) return void FR();
-        const tR = "superRank" === RR ? (0, IR.v)(Date.now()).id : (0, jZ.b)(RR);
-        YR.current = !0;
-        const uR = await (0, TZ.b)(tR, null !== (JR = null === yR || void 0 === yR ? void 0 : yR.name) && void 0 !== JR ? JR : null);
-        if (YR.current = !1, !uR) return;
-        OR(RR);
-        const ZR = await YZ.g.purchase(tR, null !== (GR = null === yR || void 0 === yR ? void 0 : yR.name) && void 0 !== GR ? GR : null, uR);
-        OR(null), ZR ? NR(ZR) : (CJ(RR, yR), yR && (0, sZ.g)(tR, uR, yR.name), yR || (await (0, kZ.flushClientAnalyticsEvents)(), (0, dZ.refreshWithoutConfirmation)("superRank" === RR ? "/super-rank-welcome" : `/pack-welcome/${RR}`)))
+        if (Zr && !Zr.name) return void Dr();
+        const Wr = "superRank" === rr ? (0, kr.t)(Date.now()).id : (0, ij.d)(rr);
+        or.current = !0;
+        const ar = await (0, Dj.b)(Wr, null !== (Sr = null === Zr || void 0 === Zr ? void 0 : Zr.name) && void 0 !== Sr ? Sr : null);
+        if (or.current = !1, !ar) return;
+        Pr(rr);
+        const jr = await Fj.j.purchase(Wr, null !== (Qr = null === Zr || void 0 === Zr ? void 0 : Zr.name) && void 0 !== Qr ? Qr : null, ar);
+        Pr(null), jr ? qr(jr) : (KS(rr, Zr), Zr && (0, dj.g)(Wr, ar, Zr.name), Zr || (await (0, oj.flushClientAnalyticsEvents)(), (0, wj.refreshWithoutConfirmation)("superRank" === rr ? "/super-rank-welcome" : `/pack-welcome/${rr}`)))
       }
-      const BJ = uR()("Store", {
-        StoreGift: "gift" === tJ,
-        StorePortrait: eJ,
-        StoreCompact: aJ
+      const TS = ar()("Store", {
+        StoreGift: "gift" === WS,
+        StorePortrait: US,
+        StoreCompact: tS
       });
-      if ("pack" === nR.kind) {
-        const RR = nR.pack,
-          JR = uJ.packs.find((JR => JR.pack === RR));
-        return (0, KR.jsx)("div", {
-          ref: SR,
+      if ("pack" === zr.kind) {
+        const rr = zr.pack,
+          Sr = aS.packs.find((Sr => Sr.pack === rr));
+        return (0, xr.jsx)("div", {
+          ref: ir,
           className: "CosmeticShopContainer",
-          children: (0, KR.jsx)(FZ.f, {
-            pack: RR,
+          children: (0, xr.jsx)(Jj.d, {
+            pack: rr,
             onBack: () => {
-              WR(Bf)
+              nr(yE)
             },
-            onPurchased: JR => {
-              CJ(RR, JR ? {
-                name: JR,
+            onPurchased: Sr => {
+              KS(rr, Sr ? {
+                name: Sr,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === tJ && nJ && JR && (0, KR.jsxs)(KR.Fragment, {
-              children: [(0, KR.jsx)(Oq, {
-                state: JR.state,
-                item: RR,
-                price: (lJ = RR, "superRank" === lJ ? (0, IR.v)(Date.now()).price : (0, jZ.f)(lJ)),
-                busy: UJ,
+            giftCta: "gift" === WS && zS && Sr && (0, xr.jsxs)(xr.Fragment, {
+              children: [(0, xr.jsx)(XI, {
+                state: Sr.state,
+                item: rr,
+                price: (vS = rr, "superRank" === vS ? (0, kr.t)(Date.now()).price : (0, ij.e)(vS)),
+                busy: YS,
                 onAct: () => {
-                  MJ(RR)
+                  BS(rr)
                 },
                 onNeedRecipient: () => {
-                  WR(Bf), FR()
+                  nr(yE), Dr()
                 },
                 onLogin: () => {
-                  AJ(RR)
+                  eS(rr)
                 },
-                highlight: oR === RR
-              }), xR && (0, KR.jsx)("span", {
+                highlight: Cr === rr
+              }), Hr && (0, xr.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: qR(xR)
+                children: Ir(Hr)
               })]
             }),
-            ownedPacks: yJ,
-            startAsGift: "gift" === tJ,
-            initialGiftRecipient: "gift" === tJ ? null !== nJ && void 0 !== nJ ? nJ : wR.query.trim() : "",
-            highlightCta: oR === RR
-          }, RR)
+            ownedPacks: ZS,
+            startAsGift: "gift" === WS,
+            initialGiftRecipient: "gift" === WS ? null !== zS && void 0 !== zS ? zS : mr.query.trim() : "",
+            highlightCta: Cr === rr
+          }, rr)
         })
       }
-      var lJ;
-      return "superRank" === nR.kind && null !== uJ.superRank ? (0, KR.jsx)("div", {
-        ref: SR,
-        className: uR()(BJ, "StoreDetailView"),
-        children: (0, KR.jsx)(ji, {
-          state: uJ.superRank.state,
-          daysLeft: uJ.superRankDaysLeft,
-          wearer: WJ,
-          mode: tJ,
-          giftName: nJ,
-          busy: UJ,
-          highlight: "superRank" === oR,
-          purchaseError: xR,
+      var vS;
+      return "superRank" === zr.kind && null !== aS.superRank ? (0, xr.jsx)("div", {
+        ref: ir,
+        className: ar()(TS, "StoreDetailView"),
+        children: (0, xr.jsx)(Vf, {
+          state: aS.superRank.state,
+          daysLeft: aS.superRankDaysLeft,
+          wearer: nS,
+          mode: WS,
+          giftName: zS,
+          busy: YS,
+          highlight: "superRank" === Cr,
+          purchaseError: Hr,
           onBack: () => {
-            WR(Bf)
+            nr(yE)
           },
           onChooseRecipient: () => {
-            WR(Bf), FR()
+            nr(yE), Dr()
           },
           onAct: () => {
-            MJ("superRank")
+            BS("superRank")
           },
           onLogin: () => {
-            AJ("superRank")
+            eS("superRank")
           }
         })
-      }) : (0, KR.jsxs)("div", {
-        ref: SR,
-        className: BJ,
-        onScroll: RR => {
-          ER.current = RR.currentTarget.scrollTop
+      }) : (0, xr.jsxs)("div", {
+        ref: ir,
+        className: TS,
+        onScroll: rr => {
+          Fr.current = rr.currentTarget.scrollTop
         },
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, KR.jsx)(Lq, {
-            selfName: VR ? iR.getPlayerName() : "",
-            giftRecipient: wR,
-            suggestionsVersion: null !== (JR = null === DR || void 0 === DR ? void 0 : DR.seq) && void 0 !== JR ? JR : 0,
-            pulseSignal: pR,
-            disabled: UJ || !VR
+          children: (0, xr.jsx)(tI, {
+            selfName: pr ? fr.getPlayerName() : "",
+            giftRecipient: mr,
+            suggestionsVersion: null !== (Sr = null === Rr || void 0 === Rr ? void 0 : Rr.seq) && void 0 !== Sr ? Sr : 0,
+            pulseSignal: Or,
+            disabled: YS || !pr
           })
-        }), DR && (0, KR.jsxs)("div", {
+        }), Rr && (0, xr.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            HR(null)
+            gr(null)
           },
-          children: [(0, KR.jsx)(QZ.b, {
-            showSignal: DR.seq
-          }), hZ.b, " ", qR("store:giftSent", {
-            name: DR.name
+          children: [(0, xr.jsx)(bj.e, {
+            showSignal: Rr.seq
+          }), sj.c, " ", Ir("store:giftSent", {
+            name: Rr.name
           })]
-        }, DR.seq), !DR && xR && (0, KR.jsx)("div", {
+        }, Rr.seq), !Rr && Hr && (0, xr.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: qR(xR)
-        }), wJ && rJ.claimFailed, (0, KR.jsx)(zi, {
-          layout: uJ,
-          mountAtOnce: null !== dR.current,
-          bundleGift: "gift" === tJ ? {
-            recipientName: nJ,
-            lookingUp: "pending" === wR.recipient.status,
-            busy: UJ,
-            onNeedRecipient: FR,
-            onSent: RR => {
-              (0, LJ.reportAnalyticsClick)({
+          children: Ir(Hr)
+        }), mS && NS.claimFailed, (0, xr.jsx)(kf, {
+          layout: aS,
+          mountAtOnce: null !== cr.current,
+          bundleGift: "gift" === WS ? {
+            recipientName: zS,
+            lookingUp: "pending" === mr.recipient.status,
+            busy: YS,
+            onNeedRecipient: Dr,
+            onSent: rr => {
+              (0, hS.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), XJ({
-                name: RR,
-                cosmetics: wR.recipientCosmetics
+              }), yS({
+                name: rr,
+                cosmetics: mr.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, hZ.m)(JJ),
-          busy: UJ,
-          highlightItem: oR,
-          onOpen: function(RR) {
-            (0, LJ.reportAnalyticsClick)({
+          superRankTotalDays: (0, sj.s)(SS),
+          busy: YS,
+          highlightItem: Cr,
+          onOpen: function(rr) {
+            (0, hS.reportAnalyticsClick)({
               id: "store.item_open",
-              value: RR
-            }), WR((0, iJ.d)(RR))
+              value: rr
+            }), nr((0, fS.d)(rr))
           },
-          onAct: MJ,
-          onNeedRecipient: FR,
-          onLogin: AJ,
-          dailyDropTile: wJ && rJ.tile,
-          rankWearer: WJ,
-          dealBanner: "self" === tJ && null !== TR && (0, KR.jsx)(Af, {
-            view: TR,
-            highlight: oR,
-            scrollSignal: PR,
+          onAct: BS,
+          onNeedRecipient: Dr,
+          onLogin: eS,
+          dailyDropTile: mS && NS.tile,
+          rankWearer: nS,
+          dealBanner: "self" === WS && null !== dr && (0, xr.jsx)(YE, {
+            view: dr,
+            highlight: Cr,
+            scrollSignal: Gr,
             onScrolledIntoView: () => {
-              zR(0)
+              Vr(0)
             }
           })
-        }), "gift" !== tJ && !(0, mR.c)(Date.now()) && (0, KR.jsx)(ki, {}), rJ.reveal]
+        }), "gift" !== WS && !(0, Ar.d)(Date.now()) && (0, xr.jsx)(bf, {}), NS.reveal]
       })
     }));
-    var bf = GR(3795),
-      vf = GR(10194),
-      Of = GR(9992),
-      xf = GR(3902),
-      Nf = GR(3706),
-      Df = GR(3747),
-      Hf = GR(3761),
-      of = GR(3763),
-      Pf = GR(3848),
-      If = GR(3828),
-      mf = GR(3347),
-      zf = GR(3416),
-      Sf = GR(3370),
-      jf = GR(2242),
-      df = GR(3772),
-      Ef = GR(3422);
+    var OE = Qr(3747),
+      LE = Qr(9959),
+      lE = Qr(9765),
+      XE = Qr(3851),
+      PE = Qr(3646),
+      HE = Qr(3700),
+      qE = Qr(3711),
+      RE = Qr(3713),
+      gE = Qr(3801),
+      CE = Qr(3783),
+      ME = Qr(3296),
+      GE = Qr(3366),
+      kE = Qr(3322),
+      AE = Qr(2179),
+      VE = Qr(3717),
+      iE = Qr(3368);
 
-    function Yf(RR) {
+    function wE(rr) {
       let {
-        show: JR
-      } = RR;
-      return JR ? (0, KR.jsx)(kf, {}) : null
+        show: Sr
+      } = rr;
+      return Sr ? (0, xr.jsx)(cE, {}) : null
     }
 
-    function kf() {
+    function cE() {
       const {
-        t: RR
-      } = (0, ZR.A)(), {
-        followsLeader: JR
-      } = (0, Nf.d)(), {
-        loading: GR,
-        friends: tR,
-        requests: iR,
-        invites: VR
-      } = (0, kR.k)(), {
-        userContext: wR
-      } = (0, eR.d)(), [rR, aR] = (0, yR.useState)(Ef.n);
-      (0, yR.useEffect)((() => {
-        (0, Ef.d)()
+        t: rr
+      } = (0, jr.E)(), {
+        followsLeader: Sr
+      } = (0, PE.g)(), {
+        loading: Qr,
+        friends: Wr,
+        requests: fr,
+        invites: pr
+      } = (0, br.m)(), {
+        userContext: mr
+      } = (0, Ur.c)(), [Nr, tr] = (0, Zr.useState)(iE.l);
+      (0, Zr.useEffect)((() => {
+        (0, iE.b)()
       }), []);
-      const LR = iR.map((RR => RR.name)),
+      const hr = fr.map((rr => rr.name)),
         {
-          state: nR,
-          recentRequesters: UR
-        } = (0, If.n)(),
-        WR = new Map([...("loaded" === nR.status ? nR.recentPlayers : []).map((RR => [RR.preview.name, RR])), ...UR.map((RR => [RR.name, RR]))]),
-        AR = (0, yR.useRef)(null),
-        [MR, BR] = (0, yR.useState)(""),
-        [lR, pR] = (0, yR.useState)("Enter"),
-        [gR, bR] = (0, yR.useState)(null);
+          state: zr,
+          recentRequesters: Yr
+        } = (0, CE.q)(),
+        nr = new Map([...("loaded" === zr.status ? zr.recentPlayers : []).map((rr => [rr.preview.name, rr])), ...Yr.map((rr => [rr.name, rr]))]),
+        er = (0, Zr.useRef)(null),
+        [Br, Tr] = (0, Zr.useState)(""),
+        [vr, Or] = (0, Zr.useState)("Enter"),
+        [Lr, lr] = (0, Zr.useState)(null);
 
-      function vR() {
-        MR && (pR("Loading"), (0, Sf.j)(MR, "social_menu").then((RR => {
-          if (AR.current) switch (RR.kind) {
+      function Xr() {
+        Br && (Or("Loading"), (0, kE.j)(Br, "social_menu").then((rr => {
+          if (er.current) switch (rr.kind) {
             case "sent":
-              pR("Success");
+              Or("Success");
               break;
             case "becameFriends":
-              pR("BecameFriends");
+              Or("BecameFriends");
               break;
             case "failed":
-              bR(RR.message), pR("Error")
+              lr(rr.message), Or("Error")
           }
         })))
       }
-      return (0, yR.useEffect)((() => {
-        if ("Enter" === lR || "Loading" === lR) return;
-        const RR = setTimeout((() => {
-          AR.current.value = "", BR(""), pR("Enter")
-        }), "Success" === lR ? 1e3 : 4e3);
+      return (0, Zr.useEffect)((() => {
+        if ("Enter" === vr || "Loading" === vr) return;
+        const rr = setTimeout((() => {
+          er.current.value = "", Tr(""), Or("Enter")
+        }), "Success" === vr ? 1e3 : 4e3);
         return () => {
-          clearTimeout(RR)
+          clearTimeout(rr)
         }
-      }), [lR]), (0, KR.jsx)("div", {
+      }), [vr]), (0, xr.jsx)("div", {
         className: "SocialMenu",
-        children: (0, KR.jsxs)("div", {
+        children: (0, xr.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, KR.jsxs)("div", {
+            children: [(0, xr.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, KR.jsx)(of.c, {
-                label: RR("socialBar:addFriend")
-              }), (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)(RE.c, {
+                label: rr("socialBar:addFriend")
+              }), (0, xr.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, KR.jsxs)("div", {
-                  className: uR()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${lR}`]: !0
+                children: [(0, xr.jsxs)("div", {
+                  className: ar()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${vr}`]: !0
                   }),
-                  children: ["Loading" === lR && (0, KR.jsx)(XR.d, {}), "Success" === lR && (0, KR.jsx)(qR.d, {
+                  children: ["Loading" === vr && (0, xr.jsx)(yr.c, {}), "Success" === vr && (0, xr.jsx)(Ir.c, {
                     name: "check"
-                  }), "BecameFriends" === lR && (0, KR.jsx)(KR.Fragment, {
-                    children: RR("socialBar:nowFriends", {
-                      playerName: MR
+                  }), "BecameFriends" === vr && (0, xr.jsx)(xr.Fragment, {
+                    children: rr("socialBar:nowFriends", {
+                      playerName: Br
                     })
-                  }), "Error" === lR && gR && (0, KR.jsx)(KR.Fragment, {
-                    children: RR(gR.translationKey, gR.params)
+                  }), "Error" === vr && Lr && (0, xr.jsx)(xr.Fragment, {
+                    children: rr(Lr.translationKey, Lr.params)
                   })]
-                }), (0, KR.jsxs)("div", {
+                }), (0, xr.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, KR.jsx)(CR.b, {
+                  children: [(0, xr.jsx)(Kr.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: RR("socialBar:enterPlayerName"),
-                    domRef: AR,
-                    onValueChange: RR => {
-                      BR((0, NR.q)(RR)), AR.current.value = (0, NR.q)(RR)
+                    placeholderText: rr("socialBar:enterPlayerName"),
+                    domRef: er,
+                    onValueChange: rr => {
+                      Tr((0, qr.r)(rr)), er.current.value = (0, qr.r)(rr)
                     },
                     onEnter: () => {
-                      MR && (0, LJ.reportAnalyticsClick)({
+                      Br && (0, hS.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), vR()
+                      }), Xr()
                     }
-                  }), (0, KR.jsxs)(fR.g, {
+                  }), (0, xr.jsxs)(Er.h, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      vR()
+                      Xr()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, KR.jsx)(qR.d, {
+                    children: [(0, xr.jsx)(Ir.c, {
                       name: "user-plus"
-                    }), " ", RR("socialBar:sendRequest")]
+                    }), " ", rr("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, KR.jsx)(df.b, {
+              }), (0, xr.jsx)(VE.e, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), VR.length > 0 && (0, KR.jsxs)("div", {
+            }), pr.length > 0 && (0, xr.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, KR.jsx)(of.c, {
-                label: RR("socialBar:invites"),
-                meta: VR.length
-              }), VR.map((JR => (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)(RE.c, {
+                label: rr("socialBar:invites"),
+                meta: pr.length
+              }), pr.map((Sr => (0, xr.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, KR.jsx)("div", {
+                children: [(0, xr.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, KR.jsx)(mf.d, {
-                    invite: JR
+                  children: (0, xr.jsx)(ME.e, {
+                    invite: Sr
                   })
-                }), (0, KR.jsx)("div", {
+                }), (0, xr.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, KR.jsx)(mf.e, {
-                    invite: JR
+                  children: (0, xr.jsx)(ME.i, {
+                    invite: Sr
                   })
-                }), (0, KR.jsx)(fR.n, {
+                }), (0, xr.jsx)(Er.p, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, zf.d)(JR)
+                    (0, GE.f)(Sr)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${JR.destination.kind}`
+                    value: `social_menu:${Sr.destination.kind}`
                   },
-                  children: RR("general:join")
-                }), (0, KR.jsx)(rJ.h, {
-                  tooltipInner: (0, KR.jsx)(KR.Fragment, {
-                    children: RR("general:decline")
+                  children: rr("general:join")
+                }), (0, xr.jsx)(NS.f, {
+                  tooltipInner: (0, xr.jsx)(xr.Fragment, {
+                    children: rr("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, KR.jsx)(fR.i, {
+                  children: (0, xr.jsx)(Er.k, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === rR || void 0 === rR ? void 0 : rR.kind) && rR.inviteId === JR.id,
+                    padDefaultFocus: "invite" === (null === Nr || void 0 === Nr ? void 0 : Nr.kind) && Nr.inviteId === Sr.id,
                     onClick: () => {
-                      kR.e.declineInvite(JR.id)
+                      br.e.declineInvite(Sr.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${JR.destination.kind}`
+                      value: `social_menu:${Sr.destination.kind}`
                     },
-                    children: (0, KR.jsx)(qR.d, {
+                    children: (0, xr.jsx)(Ir.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, JR.id)))]
-            }), (0, KR.jsxs)("div", {
-              className: uR()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !GR && 0 === iR.length
+              }, Sr.id)))]
+            }), (0, xr.jsxs)("div", {
+              className: ar()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !Qr && 0 === fr.length
               }),
-              children: [(0, KR.jsx)(of.c, {
-                label: (0, KR.jsxs)(KR.Fragment, {
-                  children: [(0, KR.jsx)(qR.d, {
-                    name: jf.c
-                  }), " ", RR("socialBar:requests")]
+              children: [(0, xr.jsx)(RE.c, {
+                label: (0, xr.jsxs)(xr.Fragment, {
+                  children: [(0, xr.jsx)(Ir.c, {
+                    name: AE.c
+                  }), " ", rr("socialBar:requests")]
                 }),
-                meta: (0, KR.jsxs)(KR.Fragment, {
-                  children: [iR.length, iR.length === eJ.n && (0, KR.jsx)("span", {
+                meta: (0, xr.jsxs)(xr.Fragment, {
+                  children: [fr.length, fr.length === US.q && (0, xr.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: RR("socialBar:limitReached")
+                    children: rr("socialBar:limitReached")
                   })]
                 })
-              }), GR && (0, KR.jsx)("div", {
+              }), Qr && (0, xr.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, KR.jsx)(XR.d, {})
-              }), !GR && 0 === iR.length && (0, KR.jsx)("div", {
+                children: (0, xr.jsx)(yr.c, {})
+              }), !Qr && 0 === fr.length && (0, xr.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: RR("socialBar:noFriendRequests")
-              }), !GR && iR.length > 0 && (0, KR.jsx)("div", {
+                children: rr("socialBar:noFriendRequests")
+              }), !Qr && fr.length > 0 && (0, xr.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, KR.jsx)(au.d, {
+                children: (0, xr.jsx)(Ua.d, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [iR],
-                  children: iR.map(((JR, GR) => {
-                    const yR = WR.get(JR.name);
-                    return (0, KR.jsxs)(Hf.g, {
-                      playerSocialPreview: JR,
-                      zIndex: iR.length - GR,
-                      padDefaultFocus: (0, Ef.j)(rR, JR.name, GR),
-                      status: yR && (0, KR.jsx)(Pf.e, {
-                        gameNameWithVariation: yR.gameNameWithVariation,
-                        isPrivateLobby: yR.isPrivateLobby
+                  observerUpdateDeps: [fr],
+                  children: fr.map(((Sr, Qr) => {
+                    const Zr = nr.get(Sr.name);
+                    return (0, xr.jsxs)(qE.f, {
+                      playerSocialPreview: Sr,
+                      zIndex: fr.length - Qr,
+                      padDefaultFocus: (0, iE.j)(Nr, Sr.name, Qr),
+                      status: Zr && (0, xr.jsx)(gE.b, {
+                        gameNameWithVariation: Zr.gameNameWithVariation,
+                        isPrivateLobby: Zr.isPrivateLobby
                       }),
-                      children: [(0, KR.jsx)(rJ.h, {
-                        tooltipInner: (0, KR.jsx)(KR.Fragment, {
-                          children: RR("general:accept")
+                      children: [(0, xr.jsx)(NS.f, {
+                        tooltipInner: (0, xr.jsx)(xr.Fragment, {
+                          children: rr("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, KR.jsx)(fR.g, {
+                        children: (0, xr.jsx)(Er.h, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            aR((0, Ef.g)(LR, GR)), (0, Sf.f)(JR.name, !0, {
+                            tr((0, iE.f)(hr, Qr)), (0, kE.i)(Sr.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -9794,19 +9794,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, KR.jsx)(qR.d, {
+                          children: (0, xr.jsx)(Ir.c, {
                             name: "check"
                           })
                         })
-                      }), (0, KR.jsx)(rJ.h, {
-                        tooltipInner: (0, KR.jsx)(KR.Fragment, {
-                          children: RR("general:decline")
+                      }), (0, xr.jsx)(NS.f, {
+                        tooltipInner: (0, xr.jsx)(xr.Fragment, {
+                          children: rr("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, KR.jsx)(fR.i, {
+                        children: (0, xr.jsx)(Er.k, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            aR((0, Ef.g)(LR, GR)), (0, Sf.f)(JR.name, !1, {
+                            tr((0, iE.f)(hr, Qr)), (0, kE.i)(Sr.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -9814,62 +9814,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, KR.jsx)(qR.d, {
+                          children: (0, xr.jsx)(Ir.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${JR.name}_${JR.isError}`)
+                    }, `${Sr.name}_${Sr.isError}`)
                   }))
                 })
               })]
-            }), (0, KR.jsx)(Pf.k, {})]
-          }), (0, KR.jsxs)("div", {
+            }), (0, xr.jsx)(gE.h, {})]
+          }), (0, xr.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, KR.jsxs)("div", {
+            children: [(0, xr.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, KR.jsx)(of.c, {
-                label: RR("socialBar:party")
-              }), (0, KR.jsx)(Df.b, {})]
-            }), (0, KR.jsxs)("div", {
+              children: [(0, xr.jsx)(RE.c, {
+                label: rr("socialBar:party")
+              }), (0, xr.jsx)(HE.b, {})]
+            }), (0, xr.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, KR.jsx)(of.c, {
-                label: (0, KR.jsxs)(KR.Fragment, {
-                  children: [(0, KR.jsx)(qR.d, {
-                    name: jf.b
-                  }), " ", RR("socialBar:friends")]
+              children: [(0, xr.jsx)(RE.c, {
+                label: (0, xr.jsxs)(xr.Fragment, {
+                  children: [(0, xr.jsx)(Ir.c, {
+                    name: AE.b
+                  }), " ", rr("socialBar:friends")]
                 }),
-                meta: (0, KR.jsxs)(KR.Fragment, {
-                  children: [tR.length, tR.length >= (0, eJ.d)(wR.getPlayerRanks()) && (0, KR.jsx)("span", {
+                meta: (0, xr.jsxs)(xr.Fragment, {
+                  children: [Wr.length, Wr.length >= (0, US.e)(mr.getPlayerRanks()) && (0, xr.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: RR("socialBar:limitReached")
+                    children: rr("socialBar:limitReached")
                   })]
                 })
-              }), GR && (0, KR.jsx)("div", {
+              }), Qr && (0, xr.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, KR.jsx)(XR.d, {})
-              }), !GR && 0 === tR.length && (0, KR.jsx)("div", {
+                children: (0, xr.jsx)(yr.c, {})
+              }), !Qr && 0 === Wr.length && (0, xr.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: RR("socialBar:noFriends")
-              }), !GR && tR.length > 0 && (0, KR.jsx)("div", {
+                children: rr("socialBar:noFriends")
+              }), !Qr && Wr.length > 0 && (0, xr.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, KR.jsx)(au.d, {
+                children: (0, xr.jsx)(Ua.d, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [tR],
-                  children: tR.map(((RR, GR) => (0, KR.jsx)(Hf.g, {
-                    playerSocialPreview: RR,
+                  observerUpdateDeps: [Wr],
+                  children: Wr.map(((rr, Qr) => (0, xr.jsx)(qE.f, {
+                    playerSocialPreview: rr,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: RR => {
-                      kR.e.removeFriendFromState(RR)
+                    onFriendRemoved: rr => {
+                      br.e.removeFriendFromState(rr)
                     },
-                    zIndex: tR.length - GR,
-                    children: (0, KR.jsx)(Hf.e, {
-                      friend: RR,
-                      followsLeader: JR,
+                    zIndex: Wr.length - Qr,
+                    children: (0, xr.jsx)(qE.c, {
+                      friend: rr,
+                      followsLeader: Sr,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${RR.name}_${RR.isError}`)))
+                  }, `${rr.name}_${rr.isError}`)))
                 })
               })]
             })]
@@ -9877,834 +9877,834 @@ export const modules = {
         })
       })
     }
-    var Qf = GR(3621),
-      Ff = GR(4970),
-      Tf = GR(2046),
-      sf = GR(4964),
-      hf = GR(4978);
+    var FE = Qr(3562),
+      oE = Qr(4890),
+      bE = Qr(1992),
+      JE = Qr(4881),
+      DE = Qr(4893);
 
-    function RV(RR) {
+    function dE(rr) {
       let {
-        count: JR,
-        claiming: GR
-      } = RR;
+        count: Sr,
+        claiming: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return 0 === JR ? null : (0, KR.jsx)(fR.n, {
+        t: Zr
+      } = (0, jr.E)();
+      return 0 === Sr ? null : (0, xr.jsx)(Er.p, {
         className: "SeasonPassClaimAllButton",
-        loading: GR,
+        loading: Qr,
         onClick: () => {
-          Ff.h.claimAll().catch((RR => {
-            console.error("Failed to claim all season pass rewards", RR)
+          oE.g.claimAll().catch((rr => {
+            console.error("Failed to claim all season pass rewards", rr)
           }))
         },
-        children: yR("seasonPass:claimAll", {
-          count: JR
+        children: Zr("seasonPass:claimAll", {
+          count: Sr
         })
       })
     }
 
-    function JV(RR) {
+    function sE(rr) {
       let {
-        view: JR,
-        claiming: GR
-      } = RR;
+        view: Sr,
+        claiming: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)(), {
-        userContext: tR
-      } = (0, eR.d)(), {
-        config: uR,
-        state: iR,
-        tier: fR,
-        xpIntoTier: VR,
-        xpForNextTier: wR
-      } = JR, rR = Date.now(), aR = (0, hf.l)(JR, rR), LR = fR >= uR.tierCount, nR = aR && !LR && wR > 0, UR = wR > 0 && !LR ? Math.min(100, VR / wR * 100) : 100, WR = iR.xpToday >= uR.maxXpPerDay, AR = null !== JR.xpBoost && JR.xpBoost.endsAtMs > rR && !WR ? JR.xpBoost : null;
-      return (0, KR.jsxs)("header", {
+        t: Zr
+      } = (0, jr.E)(), {
+        userContext: Wr
+      } = (0, Ur.c)(), {
+        config: ar,
+        state: fr,
+        tier: Er,
+        xpIntoTier: pr,
+        xpForNextTier: mr
+      } = Sr, Nr = Date.now(), tr = (0, DE.i)(Sr, Nr), hr = Er >= ar.tierCount, zr = tr && !hr && mr > 0, Yr = mr > 0 && !hr ? Math.min(100, pr / mr * 100) : 100, nr = fr.xpToday >= ar.maxXpPerDay, er = null !== Sr.xpBoost && Sr.xpBoost.endsAtMs > Nr && !nr ? Sr.xpBoost : null;
+      return (0, xr.jsxs)("header", {
         className: "SeasonPassHeader",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "SeasonPassHeaderTitleBlock",
-          children: (0, KR.jsx)("h1", {
+          children: (0, xr.jsx)("h1", {
             className: "SeasonPassHeaderTitle",
-            children: yR("seasonPass:title", {
-              season: iR.seasonNumber
+            children: Zr("seasonPass:title", {
+              season: fr.seasonNumber
             })
           })
-        }), (0, KR.jsxs)("div", {
+        }), (0, xr.jsxs)("div", {
           className: "SeasonPassHeaderProgress",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "SeasonPassHeaderProgressRow",
-            children: [(0, KR.jsx)("span", {
+            children: [(0, xr.jsx)("span", {
               className: "SeasonPassHeaderTierBadge",
-              title: yR("seasonPass:tier"),
-              "aria-label": `${yR("seasonPass:tier")} ${fR}`,
-              children: fR
-            }), (0, KR.jsxs)("div", {
+              title: Zr("seasonPass:tier"),
+              "aria-label": `${Zr("seasonPass:tier")} ${Er}`,
+              children: Er
+            }), (0, xr.jsxs)("div", {
               className: "SeasonPassHeaderBar",
               role: "progressbar",
               "aria-valuemin": 0,
               "aria-valuemax": 100,
-              "aria-valuenow": Math.round(UR),
-              children: [(0, KR.jsx)("div", {
+              "aria-valuenow": Math.round(Yr),
+              children: [(0, xr.jsx)("div", {
                 className: "SeasonPassHeaderBarFill",
                 style: {
-                  width: `${UR}%`
+                  width: `${Yr}%`
                 }
-              }), (0, KR.jsxs)("span", {
+              }), (0, xr.jsxs)("span", {
                 className: "SeasonPassHeaderBarText SmallTextBold",
-                children: [LR && yR("seasonPass:passComplete"), nR && yR("seasonPass:xpProgress", {
-                  xp: VR,
-                  xpForNextTier: wR
+                children: [hr && Zr("seasonPass:passComplete"), zr && Zr("seasonPass:xpProgress", {
+                  xp: pr,
+                  xpForNextTier: mr
                 })]
               })]
-            }), nR && (0, KR.jsxs)(KR.Fragment, {
-              children: [(0, KR.jsx)(qR.d, {
+            }), zr && (0, xr.jsxs)(xr.Fragment, {
+              children: [(0, xr.jsx)(Ir.c, {
                 className: "SeasonPassHeaderNextArrow",
                 name: "caret-right"
-              }), (0, KR.jsx)("span", {
+              }), (0, xr.jsx)("span", {
                 className: "SeasonPassHeaderNextTier",
-                children: fR + 1
+                children: Er + 1
               })]
             })]
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "SeasonPassHeaderFootnotes",
-            children: [(0, KR.jsxs)("span", {
+            children: [(0, xr.jsxs)("span", {
               className: "SeasonPassHeaderTimeLeft",
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "hourglass"
-              }), " ", aR ? yR("seasonPass:endsIn", {
-                time: (0, sf.e)((JR.endsAtMs - rR) / 6e4)
-              }) : (0, cq.c)(JR.claimEndsAtMs, yR, rR)]
-            }), aR && !LR && (0, KR.jsx)("span", {
-              className: WR ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
-              children: WR ? yR("seasonPass:dailyCapReached") : yR("seasonPass:dailyXp", {
-                xp: iR.xpToday,
-                cap: uR.maxXpPerDay
+              }), " ", tr ? Zr("seasonPass:endsIn", {
+                time: (0, JE.e)((Sr.endsAtMs - Nr) / 6e4)
+              }) : (0, CI.c)(Sr.claimEndsAtMs, Zr, Nr)]
+            }), tr && !hr && (0, xr.jsx)("span", {
+              className: nr ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
+              children: nr ? Zr("seasonPass:dailyCapReached") : Zr("seasonPass:dailyXp", {
+                xp: fr.xpToday,
+                cap: ar.maxXpPerDay
               })
-            }), aR && !LR && AR && (0, KR.jsxs)("span", {
+            }), tr && !hr && er && (0, xr.jsxs)("span", {
               className: "SeasonPassHeaderBoost",
-              children: [(0, KR.jsx)(qR.d, {
+              children: [(0, xr.jsx)(Ir.c, {
                 name: "angles-up"
-              }), " ", yR("seasonPass:xpBoostActive", {
-                multiplier: AR.multiplier,
-                time: (0, sf.e)(Math.ceil((AR.endsAtMs - rR) / 6e4))
+              }), " ", Zr("seasonPass:xpBoostActive", {
+                multiplier: er.multiplier,
+                time: (0, JE.e)(Math.ceil((er.endsAtMs - Nr) / 6e4))
               })]
-            }), aR && !LR && !WR && !AR && (0, KR.jsx)("span", {
+            }), tr && !hr && !nr && !er && (0, xr.jsx)("span", {
               className: "SeasonPassHeaderHint",
-              children: yR("seasonPass:playToEarn")
-            }), tR.type === Tf.e.ANONYMOUS && (0, KR.jsx)("span", {
+              children: Zr("seasonPass:playToEarn")
+            }), Wr.type === bE.c.ANONYMOUS && (0, xr.jsx)("span", {
               className: "SeasonPassHeaderGuest",
-              children: yR("seasonPass:logInToKeep")
+              children: Zr("seasonPass:logInToKeep")
             })]
           })]
-        }), (0, KR.jsx)(RV, {
-          count: JR.claimable.length,
-          claiming: GR
+        }), (0, xr.jsx)(dE, {
+          count: Sr.claimable.length,
+          claiming: Qr
         })]
       })
     }
-    var GV = GR(4315),
-      yV = GR(4324);
+    var uE = Qr(4278),
+      rp = Qr(4280);
 
-    function tV(RR) {
-      return null !== (0, cq.p)(RR) || null !== (0, cq.k)(RR)
+    function Sp(rr) {
+      return null !== (0, CI.k)(rr) || null !== (0, CI.h)(rr)
     }
-    let uV = null;
+    let Qp = null;
 
-    function ZV() {
-      var RR;
-      null === (RR = uV) || void 0 === RR || RR.tearDownNotification()
+    function Zp() {
+      var rr;
+      null === (rr = Qp) || void 0 === rr || rr.tearDownNotification()
     }
 
-    function qV(RR) {
+    function Wp(rr) {
       let {
-        reward: JR
-      } = RR;
+        reward: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)(), {
-        userContext: yR
-      } = (0, eR.d)(), tR = (0, cq.p)(JR);
-      return (0, KR.jsxs)("div", {
+        t: Qr
+      } = (0, jr.E)(), {
+        userContext: Zr
+      } = (0, Ur.c)(), Wr = (0, CI.k)(Sr);
+      return (0, xr.jsxs)("div", {
         className: "PromptGenericPopup SeasonPassRewardPreview",
-        children: [(0, KR.jsx)("div", {
+        children: [(0, xr.jsx)("div", {
           className: "PromptGenericPopupTitle SmallTextBold",
-          children: (0, cq.f)(JR, GR)
-        }), null !== tR && (0, KR.jsx)("div", {
+          children: (0, CI.e)(Sr, Qr)
+        }), null !== Wr && (0, xr.jsx)("div", {
           className: "SeasonPassRewardPreviewProfileEffect",
-          children: (0, KR.jsx)(GV.b, {
-            profileEffect: tR,
-            name: yR.getPlayerName(),
-            cosmetics: yR.getPlayerCosmetics()
+          children: (0, xr.jsx)(uE.c, {
+            profileEffect: Wr,
+            name: Zr.getPlayerName(),
+            cosmetics: Zr.getPlayerCosmetics()
           })
-        }), null === tR && (0, KR.jsx)(iV, {
-          reward: JR
+        }), null === Wr && (0, xr.jsx)(ap, {
+          reward: Sr
         })]
       })
     }
 
-    function iV(RR) {
+    function ap(rr) {
       let {
-        reward: JR
-      } = RR;
+        reward: Sr
+      } = rr;
       const {
-        userContext: GR
-      } = (0, eR.d)(), tR = (0, yR.useRef)(null), {
-        previewEmote: uR,
-        playEmote: ZR
-      } = (0, yV.e)(), qR = (0, yR.useMemo)((() => (0, cq.k)(JR)), [JR]), iR = qR.emote;
-      return (0, KR.jsx)("div", {
+        userContext: Qr
+      } = (0, Ur.c)(), Wr = (0, Zr.useRef)(null), {
+        previewEmote: ar,
+        playEmote: jr
+      } = (0, rp.d)(), Ir = (0, Zr.useMemo)((() => (0, CI.h)(Sr)), [Sr]), fr = Ir.emote;
+      return (0, xr.jsx)("div", {
         className: "SeasonPassRewardPreviewCharacter",
-        children: (0, KR.jsx)(yR.Suspense, {
-          fallback: (0, KR.jsx)(XR.d, {}),
-          children: (0, KR.jsx)(Wq.e, {
-            ref: tR,
+        children: (0, xr.jsx)(Zr.Suspense, {
+          fallback: (0, xr.jsx)(yr.c, {}),
+          children: (0, xr.jsx)(YI.b, {
+            ref: Wr,
             framing: "store",
-            forcedCosmetics: qR.cosmetics,
-            wq: uR.id,
-            emotePlaySeq: uR.seq,
+            forcedCosmetics: Ir.cosmetics,
+            II: ar.id,
+            emotePlaySeq: ar.seq,
             onReady: () => {
-              var RR, JR;
-              null === (RR = tR.current) || void 0 === RR || RR.resetCamera(), null === (JR = tR.current) || void 0 === JR || JR.setAllCosmetics(GR.getPlayerCosmetics())
+              var rr, Sr;
+              null === (rr = Wr.current) || void 0 === rr || rr.resetCamera(), null === (Sr = Wr.current) || void 0 === Sr || Sr.setAllCosmetics(Qr.getPlayerCosmetics())
             },
             onDrawn: () => {
-              null !== iR && ZR(iR)
+              null !== fr && jr(fr)
             }
           })
         })
       })
     }
 
-    function fV(RR) {
+    function jp(rr) {
       let {
-        waitingCount: JR
-      } = RR;
+        waitingCount: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, ZR.A)();
-      return (0, jR.usePurchasesAllowed)() ? (0, KR.jsxs)("div", {
+        t: Qr
+      } = (0, jr.E)();
+      return (0, wr.usePurchasesAllowed)() ? (0, xr.jsxs)("div", {
         className: "SeasonPassHyperUpsell",
-        children: [JR > 0 && (0, KR.jsx)("span", {
+        children: [Sr > 0 && (0, xr.jsx)("span", {
           className: "SeasonPassHyperUpsellText",
-          children: 1 === JR ? GR("seasonPass:hyperRewardWaiting") : GR("seasonPass:hyperRewardsWaiting", {
-            count: JR
+          children: 1 === Sr ? Qr("seasonPass:hyperRewardWaiting") : Qr("seasonPass:hyperRewardsWaiting", {
+            count: Sr
           })
-        }), (0, KR.jsxs)("span", {
+        }), (0, xr.jsxs)("span", {
           className: "SeasonPassHyperUpsellButtonWrapper",
-          children: [(0, KR.jsxs)(fR.u, {
+          children: [(0, xr.jsxs)(Er.v, {
             className: "SeasonPassHyperUpsellButton",
             onClick: () => {
-              (0, iJ.m)({
+              (0, fS.o)({
                 mode: "self",
                 source: "seasonPass",
                 openItem: "superRank"
               })
             },
-            children: [(0, KR.jsx)(IR.c, {}), " ", GR("homePage:getHyperRank")]
-          }), JR > 0 && (0, KR.jsx)("span", {
+            children: [(0, xr.jsx)(kr.d, {}), " ", Qr("homePage:getHyperRank")]
+          }), Sr > 0 && (0, xr.jsx)("span", {
             className: "SeasonPassHyperUpsellCount",
-            children: JR
+            children: Sr
           })]
         })]
       }) : null
     }
-    var VV = GR(35221);
+    var Ip = Qr(35535);
 
-    function KV(RR) {
+    function fp(rr) {
       let {
-        stub: JR,
-        name: GR
-      } = RR;
+        stub: Sr,
+        name: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, ZR.A)();
-      return (0, KR.jsxs)("span", {
+        t: Zr
+      } = (0, jr.E)();
+      return (0, xr.jsxs)("span", {
         className: "SeasonPassTrackLabelName",
-        children: [(0, KR.jsx)("span", {
+        children: [(0, xr.jsx)("span", {
           className: "SeasonPassTicketStub",
-          children: JR
-        }), (0, KR.jsxs)("span", {
+          children: Sr
+        }), (0, xr.jsxs)("span", {
           className: "SeasonPassTicketBody",
-          children: [(0, KR.jsx)("span", {
+          children: [(0, xr.jsx)("span", {
             className: "SeasonPassTicketPass",
-            children: yR("seasonPass:trackTicketPass")
-          }), (0, KR.jsx)("span", {
+            children: Zr("seasonPass:trackTicketPass")
+          }), (0, xr.jsx)("span", {
             className: "SeasonPassTicketName",
-            children: GR
+            children: Qr
           })]
         })]
       })
     }
 
-    function wV(RR) {
-      var JR, GR;
+    function Ep(rr) {
+      var Sr, Qr;
       let {
-        view: tR,
-        claimingKeys: uR,
-        hyperWaitingCount: iR,
-        onClaim: fR
-      } = RR;
+        view: Wr,
+        claimingKeys: ar,
+        hyperWaitingCount: fr,
+        onClaim: Er
+      } = rr;
       const {
-        t: VR
-      } = (0, ZR.A)(), wR = (0, yR.useRef)(null), {
-        config: rR,
-        tier: eR,
-        xpIntoTier: aR,
-        xpForNextTier: LR,
-        state: nR
-      } = tR, UR = (0, hf.l)(tR), WR = (0, yR.useRef)(!1), AR = null !== (JR = null === (GR = tR.claimable[0]) || void 0 === GR ? void 0 : GR.tier) && void 0 !== JR ? JR : Math.min(eR + 1, rR.tierCount);
-      (0, yR.useLayoutEffect)((() => {
-        if (WR.current) return;
-        const RR = wR.current,
-          JR = RR.querySelector(`[data-tier="${AR}"]`).getBoundingClientRect(),
-          GR = RR.getBoundingClientRect();
-        RR.scrollLeft += JR.left - GR.left - .3 * RR.clientWidth, RR.scrollTop += JR.top - GR.top - .3 * RR.clientHeight
-      }), [AR]), (0, yR.useEffect)((() => {
-        const RR = wR.current;
+        t: pr
+      } = (0, jr.E)(), mr = (0, Zr.useRef)(null), {
+        config: Nr,
+        tier: Ur,
+        xpIntoTier: tr,
+        xpForNextTier: hr,
+        state: zr
+      } = Wr, Yr = (0, DE.i)(Wr), nr = (0, Zr.useRef)(!1), er = null !== (Sr = null === (Qr = Wr.claimable[0]) || void 0 === Qr ? void 0 : Qr.tier) && void 0 !== Sr ? Sr : Math.min(Ur + 1, Nr.tierCount);
+      (0, Zr.useLayoutEffect)((() => {
+        if (nr.current) return;
+        const rr = mr.current,
+          Sr = rr.querySelector(`[data-tier="${er}"]`).getBoundingClientRect(),
+          Qr = rr.getBoundingClientRect();
+        rr.scrollLeft += Sr.left - Qr.left - .3 * rr.clientWidth, rr.scrollTop += Sr.top - Qr.top - .3 * rr.clientHeight
+      }), [er]), (0, Zr.useEffect)((() => {
+        const rr = mr.current;
 
-        function JR(JR) {
-          WR.current = !0, Math.abs(JR.deltaY) <= Math.abs(JR.deltaX) || RR.scrollWidth <= RR.clientWidth || (JR.preventDefault(), RR.scrollLeft += JR.deltaY)
+        function Sr(Sr) {
+          nr.current = !0, Math.abs(Sr.deltaY) <= Math.abs(Sr.deltaX) || rr.scrollWidth <= rr.clientWidth || (Sr.preventDefault(), rr.scrollLeft += Sr.deltaY)
         }
-        return RR.addEventListener("wheel", JR, {
+        return rr.addEventListener("wheel", Sr, {
           passive: !1
         }), () => {
-          RR.removeEventListener("wheel", JR)
+          rr.removeEventListener("wheel", Sr)
         }
       }), []);
-      const CR = LR > 0 ? aR / LR : 1;
-      return (0, KR.jsxs)("div", {
+      const Kr = hr > 0 ? tr / hr : 1;
+      return (0, xr.jsxs)("div", {
         className: "SeasonPassTrack",
-        children: [(0, KR.jsxs)("div", {
+        children: [(0, xr.jsxs)("div", {
           className: "SeasonPassTrackLabels",
-          children: [(0, KR.jsxs)("div", {
+          children: [(0, xr.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelHyper",
-            children: [(0, KR.jsx)(KV, {
-              stub: (0, KR.jsx)(IR.c, {}),
-              name: VR("seasonPass:hyperTrack")
-            }), !nR.hasHyperRank && (0, KR.jsx)(fV, {
-              waitingCount: iR
+            children: [(0, xr.jsx)(fp, {
+              stub: (0, xr.jsx)(kr.d, {}),
+              name: pr("seasonPass:hyperTrack")
+            }), !zr.hasHyperRank && (0, xr.jsx)(jp, {
+              waitingCount: fr
             })]
-          }), (0, KR.jsxs)("div", {
+          }), (0, xr.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelFree",
-            children: [(0, KR.jsx)(KV, {
-              stub: (0, KR.jsx)(qR.d, {
+            children: [(0, xr.jsx)(fp, {
+              stub: (0, xr.jsx)(Ir.c, {
                 name: "star"
               }),
-              name: VR("seasonPass:freeTrack")
-            }), (0, KR.jsx)("span", {
+              name: pr("seasonPass:freeTrack")
+            }), (0, xr.jsx)("span", {
               className: "SeasonPassTrackLabelHint",
-              children: VR("seasonPass:freeTrackHint")
+              children: pr("seasonPass:freeTrackHint")
             })]
           })]
-        }), (0, KR.jsx)("div", {
+        }), (0, xr.jsx)("div", {
           className: "SeasonPassTrackScroller",
-          ref: wR,
+          ref: mr,
           onPointerDown: () => {
-            WR.current = !0
+            nr.current = !0
           },
-          children: (0, KR.jsx)("div", {
+          children: (0, xr.jsx)("div", {
             className: "SeasonPassTrackRow",
-            children: rR.tiers.map((RR => {
-              const JR = RR.tier,
-                GR = function(RR, JR, GR) {
-                  if (RR <= JR) return "reached";
-                  return GR && RR === JR + 1 ? "earning" : "locked"
-                }(JR, eR, UR),
-                yR = "earning" === GR;
-              return (0, KR.jsx)(rV, {
-                tierRewards: RR,
-                nodeState: GR,
-                progress: yR ? CR : 0,
-                freeState: tR.tileState({
-                  tier: JR,
+            children: Nr.tiers.map((rr => {
+              const Sr = rr.tier,
+                Qr = function(rr, Sr, Qr) {
+                  if (rr <= Sr) return "reached";
+                  return Qr && rr === Sr + 1 ? "earning" : "locked"
+                }(Sr, Ur, Yr),
+                Zr = "earning" === Qr;
+              return (0, xr.jsx)(pp, {
+                tierRewards: rr,
+                nodeState: Qr,
+                progress: Zr ? Kr : 0,
+                freeState: Wr.tileState({
+                  tier: Sr,
                   track: "free"
                 }),
-                hyperState: tR.tileState({
-                  tier: JR,
+                hyperState: Wr.tileState({
+                  tier: Sr,
                   track: "hyper"
                 }),
-                freeClaiming: uR.has((0, hf.p)({
-                  tier: JR,
+                freeClaiming: ar.has((0, DE.j)({
+                  tier: Sr,
                   track: "free"
                 })),
-                hyperClaiming: uR.has((0, hf.p)({
-                  tier: JR,
+                hyperClaiming: ar.has((0, DE.j)({
+                  tier: Sr,
                   track: "hyper"
                 })),
-                hasHyperRank: nR.hasHyperRank,
-                onClaim: fR
-              }, JR)
+                hasHyperRank: zr.hasHyperRank,
+                onClaim: Er
+              }, Sr)
             }))
           })
         })]
       })
     }
-    const rV = (0, yR.memo)((function(RR) {
+    const pp = (0, Zr.memo)((function(rr) {
       let {
-        tierRewards: JR,
-        nodeState: GR,
-        progress: yR,
-        freeState: tR,
-        hyperState: ZR,
-        freeClaiming: qR,
-        hyperClaiming: iR,
-        hasHyperRank: fR,
-        onClaim: VR
-      } = RR;
+        tierRewards: Sr,
+        nodeState: Qr,
+        progress: Zr,
+        freeState: Wr,
+        hyperState: jr,
+        freeClaiming: Ir,
+        hyperClaiming: fr,
+        hasHyperRank: Er,
+        onClaim: pr
+      } = rr;
       const {
-        tier: wR
-      } = JR;
-      return (0, KR.jsxs)("div", {
-        className: uR()("SeasonPassTrackColumn", {
-          SeasonPassTrackColumnLocked: "reached" !== GR
+        tier: mr
+      } = Sr;
+      return (0, xr.jsxs)("div", {
+        className: ar()("SeasonPassTrackColumn", {
+          SeasonPassTrackColumnLocked: "reached" !== Qr
         }),
-        "data-tier": wR,
-        children: [(0, KR.jsx)(eV, {
-          tier: wR,
+        "data-tier": mr,
+        children: [(0, xr.jsx)(xp, {
+          tier: mr,
           track: "hyper",
-          reward: JR.hyper,
-          tileState: ZR,
-          claiming: iR,
-          padlock: !fR && "claimed" !== ZR,
-          onClaim: VR
-        }), (0, KR.jsxs)("div", {
+          reward: Sr.hyper,
+          tileState: jr,
+          claiming: fr,
+          padlock: !Er && "claimed" !== jr,
+          onClaim: pr
+        }), (0, xr.jsxs)("div", {
           className: "SeasonPassTrackRoad",
-          children: [(0, KR.jsx)("span", {
-            className: uR()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
-              SeasonPassTrackRoadFilled: "reached" === GR
+          children: [(0, xr.jsx)("span", {
+            className: ar()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
+              SeasonPassTrackRoadFilled: "reached" === Qr
             }),
-            children: "earning" === GR && (0, KR.jsx)("span", {
+            children: "earning" === Qr && (0, xr.jsx)("span", {
               className: "SeasonPassTrackRoadProgress",
               style: {
-                "--seasonPassRoadProgress": 100 * yR + "%"
+                "--seasonPassRoadProgress": 100 * Zr + "%"
               }
             })
-          }), (0, KR.jsx)("span", {
-            className: uR()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
-              SeasonPassTrackRoadFilled: "reached" === GR
+          }), (0, xr.jsx)("span", {
+            className: ar()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
+              SeasonPassTrackRoadFilled: "reached" === Qr
             })
-          }), (0, KR.jsx)(VV.e, {
-            tier: wR,
-            state: GR,
-            progress: yR
+          }), (0, xr.jsx)(Ip.e, {
+            tier: mr,
+            state: Qr,
+            progress: Zr
           })]
-        }), (0, KR.jsx)(eV, {
-          tier: wR,
+        }), (0, xr.jsx)(xp, {
+          tier: mr,
           track: "free",
-          reward: JR.free,
-          tileState: tR,
-          claiming: qR,
+          reward: Sr.free,
+          tileState: Wr,
+          claiming: Ir,
           padlock: !1,
-          onClaim: VR
+          onClaim: pr
         })]
       })
     }));
 
-    function eV(RR) {
+    function xp(rr) {
       let {
-        tier: JR,
-        track: GR,
-        reward: yR,
-        tileState: tR,
-        claiming: uR,
-        padlock: ZR,
-        onClaim: qR
-      } = RR;
-      return yR ? (0, KR.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${GR}`,
-        children: (0, KR.jsx)(jq.g, {
-          reward: yR,
-          tileState: tR,
-          track: GR,
+        tier: Sr,
+        track: Qr,
+        reward: Zr,
+        tileState: Wr,
+        claiming: ar,
+        padlock: jr,
+        onClaim: Ir
+      } = rr;
+      return Zr ? (0, xr.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${Qr}`,
+        children: (0, xr.jsx)(iI.g, {
+          reward: Zr,
+          tileState: Wr,
+          track: Qr,
           size: "large",
           onClaim: () => {
-            qR({
-              tier: JR,
-              track: GR
+            Ir({
+              tier: Sr,
+              track: Qr
             })
           },
-          claiming: uR,
-          padlock: ZR,
-          onPreview: tV(yR) ? () => {
-            ! function(RR) {
-              const JR = tJ.NotificationProvider.showCustomPopup({
-                body: (0, KR.jsx)(qV, {
-                  reward: RR
+          claiming: ar,
+          padlock: jr,
+          onPreview: Sp(Zr) ? () => {
+            ! function(rr) {
+              const Sr = WS.NotificationProvider.showCustomPopup({
+                body: (0, xr.jsx)(Wp, {
+                  reward: rr
                 })
               });
-              uV = JR, JR.getResult().finally((() => {
-                uV === JR && (uV = null)
+              Qp = Sr, Sr.getResult().finally((() => {
+                Qp === Sr && (Qp = null)
               }))
-            }(yR)
+            }(Zr)
           } : void 0
         })
-      }) : (0, KR.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${GR}`
+      }) : (0, xr.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${Qr}`
       })
     }
 
-    function aV(RR) {
+    function mp(rr) {
       let {
-        show: JR
-      } = RR;
-      return JR ? (0, KR.jsx)(LV, {}) : null
+        show: Sr
+      } = rr;
+      return Sr ? (0, xr.jsx)(Np, {}) : null
     }
 
-    function LV() {
+    function Np() {
       const {
-        t: RR
-      } = (0, ZR.A)(), JR = (0, Ff.k)();
-      return (0, yR.useEffect)((() => ZV), []), (0, KR.jsxs)("div", {
+        t: rr
+      } = (0, jr.E)(), Sr = (0, oE.k)();
+      return (0, Zr.useEffect)((() => Zp), []), (0, xr.jsxs)("div", {
         className: "SeasonPassScreen",
-        children: ["loading" === JR.status && (0, KR.jsx)(XR.d, {}), "error" === JR.status && (0, KR.jsxs)("div", {
+        children: ["loading" === Sr.status && (0, xr.jsx)(yr.c, {}), "error" === Sr.status && (0, xr.jsxs)("div", {
           className: "SeasonPassScreenNotice",
-          children: [(0, KR.jsx)("p", {
+          children: [(0, xr.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: RR("seasonPass:errorLoad")
-          }), (0, KR.jsx)(fR.g, {
+            children: rr("seasonPass:errorLoad")
+          }), (0, xr.jsx)(Er.h, {
             className: "SeasonPassScreenRetry",
             onClick: () => {
-              Ff.h.retry()
+              oE.g.retry()
             },
-            children: RR("seasonPass:retry")
+            children: rr("seasonPass:retry")
           })]
-        }), "noSeason" === JR.status && (0, KR.jsx)("div", {
+        }), "noSeason" === Sr.status && (0, xr.jsx)("div", {
           className: "SeasonPassScreenNotice",
-          children: (0, KR.jsx)("p", {
+          children: (0, xr.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: (0, cq.d)(RR)
+            children: (0, CI.d)(rr)
           })
-        }), "loaded" === JR.status && (0, KR.jsx)(nV, {
-          view: JR.view,
-          claimingKeys: JR.claimingKeys
+        }), "loaded" === Sr.status && (0, xr.jsx)(Up, {
+          view: Sr.view,
+          claimingKeys: Sr.claimingKeys
         })]
       })
     }
 
-    function nV(RR) {
+    function Up(rr) {
       let {
-        view: JR,
-        claimingKeys: GR
-      } = RR;
-      const yR = JR.config.tiers.filter((RR => "needsHyper" === JR.tileState({
-          tier: RR.tier,
+        view: Sr,
+        claimingKeys: Qr
+      } = rr;
+      const Zr = Sr.config.tiers.filter((rr => "needsHyper" === Sr.tileState({
+          tier: rr.tier,
           track: "hyper"
         }))).length,
-        tR = GR.size > 0;
-      return (0, KR.jsxs)("div", {
+        Wr = Qr.size > 0;
+      return (0, xr.jsxs)("div", {
         className: "SeasonPassScreenLoaded",
-        children: [(0, KR.jsx)(JV, {
-          view: JR,
-          claiming: tR
-        }), (0, KR.jsx)(wV, {
-          view: JR,
-          claimingKeys: GR,
-          hyperWaitingCount: yR,
-          onClaim: UV
-        }), (0, KR.jsxs)("div", {
+        children: [(0, xr.jsx)(sE, {
+          view: Sr,
+          claiming: Wr
+        }), (0, xr.jsx)(Ep, {
+          view: Sr,
+          claimingKeys: Qr,
+          hyperWaitingCount: Zr,
+          onClaim: tp
+        }), (0, xr.jsxs)("div", {
           className: "SeasonPassScreenActions",
-          children: [(0, KR.jsx)(RV, {
-            count: JR.claimable.length,
-            claiming: tR
-          }), !JR.state.hasHyperRank && (0, KR.jsx)(fV, {
-            waitingCount: yR
+          children: [(0, xr.jsx)(dE, {
+            count: Sr.claimable.length,
+            claiming: Wr
+          }), !Sr.state.hasHyperRank && (0, xr.jsx)(jp, {
+            waitingCount: Zr
           })]
         })]
       })
     }
 
-    function UV(RR) {
-      Ff.h.claim(RR).catch((RR => {
-        console.error("Failed to claim season pass reward", RR)
+    function tp(rr) {
+      oE.g.claim(rr).catch((rr => {
+        console.error("Failed to claim season pass reward", rr)
       }))
     }
-    var WV = GR(5581);
-    var AV = GR(4096);
-    const CV = RR => {
+    var hp = Qr(5517);
+    var zp = Qr(4048);
+    const Yp = rr => {
         let {
-          action: JR,
-          padAction: GR
-        } = RR;
+          action: Sr,
+          padAction: Qr
+        } = rr;
         const {
-          isTouchScreen: yR
-        } = (0, BR.o)(["isTouchScreen"]), tR = (0, jy.s)();
-        return yR && !tR ? null : (0, KR.jsx)(oy.c, {
+          isTouchScreen: Zr
+        } = (0, Tr.n)(["isTouchScreen"]), Wr = (0, wZ.z)();
+        return Zr && !Wr ? null : (0, xr.jsx)(CZ.c, {
           className: "EverythingMenuTabKey",
-          noaAction: JR,
+          noaAction: Sr,
           padHidesKey: !0,
-          padMenuShortcut: GR
+          padMenuShortcut: Qr
         })
       },
-      XV = (0, yR.memo)((function() {
+      np = (0, Zr.memo)((function() {
         const {
-          t: RR
-        } = (0, ZR.A)(), {
-          gameState: JR,
-          openEverythingMenuName: GR,
-          crosshairGameView: tR,
-          everythingMenuOverLoadingScreen: qR
-        } = (0, BR.o)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
-          userContext: iR
-        } = (0, eR.d)(), VR = (0, it.i)(Date.now()), wR = (0, jR.usePurchasesAllowed)(), rR = (0, iJ.H)(), {
-          view: aR
-        } = (0, fG.F)(), LR = "dot" === rR || null === rR && "ready" === (null === aR || void 0 === aR ? void 0 : aR.kind), UR = (RR, JR) => (0, KR.jsx)(CV, {
-          action: RR,
-          padAction: JR
-        }), [WR, AR] = (0, yR.useState)(null), CR = (0, yR.useRef)(null), XR = (0, yR.useRef)(null);
-        (0, yR.useEffect)((() => {
-          var RR;
-          const JR = null === (RR = XR.current) || void 0 === RR ? void 0 : RR.querySelector(".EverythingMenuTabActive");
-          null === JR || void 0 === JR || JR.scrollIntoView({
+          t: rr
+        } = (0, jr.E)(), {
+          gameState: Sr,
+          openEverythingMenuName: Qr,
+          crosshairGameView: Wr,
+          everythingMenuOverLoadingScreen: Ir
+        } = (0, Tr.n)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
+          userContext: fr
+        } = (0, Ur.c)(), pr = (0, fW.l)(Date.now()), mr = (0, wr.usePurchasesAllowed)(), Nr = (0, fS.O)(), {
+          view: tr
+        } = (0, EQ.z)(), hr = "dot" === Nr || null === Nr && "ready" === (null === tr || void 0 === tr ? void 0 : tr.kind), Yr = (rr, Sr) => (0, xr.jsx)(Yp, {
+          action: rr,
+          padAction: Sr
+        }), [nr, er] = (0, Zr.useState)(null), Kr = (0, Zr.useRef)(null), yr = (0, Zr.useRef)(null);
+        (0, Zr.useEffect)((() => {
+          var rr;
+          const Sr = null === (rr = yr.current) || void 0 === rr ? void 0 : rr.querySelector(".EverythingMenuTabActive");
+          null === Sr || void 0 === Sr || Sr.scrollIntoView({
             block: "nearest",
             inline: "nearest"
           })
-        }), [GR]);
-        const MR = {
-            ..."inGame" === JR ? {} : (0, fR.bb)({
+        }), [Qr]);
+        const Br = {
+            ..."inGame" === Sr ? {} : (0, Er._)({
               focusOnClick: !1
             }),
-            ...nt.f
+            ...hW.c
           },
-          lR = RR => {
-            const JR = (0, Ut.f)((JR => {
-              (0, fR.$)(JR.currentTarget), BR.d.set({
-                openEverythingMenuName: RR
+          vr = rr => {
+            const Sr = (0, zW.g)((Sr => {
+              (0, Er.Z)(Sr.currentTarget), Tr.c.set({
+                openEverythingMenuName: rr
               })
             }), "pointerup");
             return {
-              ...MR,
-              onPointerDown: RR => {
-                MR.onPointerDown(RR), JR.onPointerDown(RR)
+              ...Br,
+              onPointerDown: rr => {
+                Br.onPointerDown(rr), Sr.onPointerDown(rr)
               },
-              onPointerUp: RR => {
-                MR.onPointerUp(RR), JR.onPointerUp(RR)
+              onPointerUp: rr => {
+                Br.onPointerUp(rr), Sr.onPointerUp(rr)
               },
-              onClick: JR.onClick
+              onClick: Sr.onClick
             }
           },
-          pR = null !== GR;
-        (0, yR.useEffect)((() => {
-          GR === OJ.o.CUSTOMISATION ? (0, LJ.reportAnalyticsClick)({
+          Or = null !== Qr;
+        (0, Zr.useEffect)((() => {
+          Qr === PS.q.CUSTOMISATION ? (0, hS.reportAnalyticsClick)({
             id: "customise.open",
-            value: (0, nq.d)()
-          }) : null === GR && BR.d.get("everythingMenuOverLoadingScreen") && BR.d.set({
+            value: (0, hI.g)()
+          }) : null === Qr && Tr.c.get("everythingMenuOverLoadingScreen") && Tr.c.set({
             everythingMenuOverLoadingScreen: !1
           })
-        }), [GR]);
-        const bR = GR !== OJ.o.COSMETIC_SHOP && !tR;
-        async function vR() {
+        }), [Qr]);
+        const lr = Qr !== PS.q.COSMETIC_SHOP && !Wr;
+        async function Xr() {
           await async function() {
-            if (!WR) return;
-            await WR(), AR(null)
-          }(), BR.d.set({
+            if (!nr) return;
+            await nr(), er(null)
+          }(), Tr.c.set({
             openEverythingMenuName: null
           })
         }
-        const OR = (0, yR.useRef)(null),
-          xR = (0, yR.useCallback)((() => null !== OR.current && (0, Of.f)(OR.current)), []);
+        const Pr = (0, Zr.useRef)(null),
+          Hr = (0, Zr.useCallback)((() => null !== Pr.current && (0, lE.f)(Pr.current)), []);
 
-        function NR() {
-          xR() || vR()
-        }(0, yR.useEffect)((() => (0, oZ.t)(xR)), [xR]);
-        const DR = (0, yR.useMemo)((() => "inGame" === JR ? {
-            text: RR("settingsMenu:exitGame"),
+        function qr() {
+          Hr() || Xr()
+        }(0, Zr.useEffect)((() => (0, gj.r)(Hr)), [Hr]);
+        const Rr = (0, Zr.useMemo)((() => "inGame" === Sr ? {
+            text: rr("settingsMenu:exitGame"),
             onClick: () => {
-              (0, vf.e)()
+              (0, LE.c)()
             }
-          } : (0, gR.isDiscordClient)() ? {
-            text: RR("settingsMenu:exitGame"),
+          } : (0, Lr.isDiscordClient)() ? {
+            text: rr("settingsMenu:exitGame"),
             onClick: () => {
-              vJ.l.discordActivity().then((RR => {
-                RR.exit("User exited the game")
+              XS.j.discordActivity().then((rr => {
+                rr.exit("User exited the game")
               }))
             }
-          } : null), [JR, RR]),
-          HR = pR && !tR,
-          oR = "inGame" !== JR,
-          cR = HR && oR;
-        (0, yR.useLayoutEffect)((() => {
-          if (cR) return BR.d.set({
+          } : null), [Sr, rr]),
+          gr = Or && !Wr,
+          Cr = "inGame" !== Sr,
+          Mr = gr && Cr;
+        (0, Zr.useLayoutEffect)((() => {
+          if (Mr) return Tr.c.set({
             menuCoversPage: !0
           }), () => {
-            BR.d.set({
+            Tr.c.set({
               menuCoversPage: !1
             })
           }
-        }), [cR]);
-        const PR = (0, yR.useRef)(null);
-        ! function(RR, JR) {
-          (0, yR.useEffect)((() => {
-            var GR;
-            const yR = (0, WV.c)();
-            if (!JR || null === yR || !(0, WV.b)({
-                site: gR.siteUsed,
-                isMobileApp: (0, nR.isMobileApp)(),
-                isTouchScreen: BR.d.get("isTouchScreen")
+        }), [Mr]);
+        const Gr = (0, Zr.useRef)(null);
+        ! function(rr, Sr) {
+          (0, Zr.useEffect)((() => {
+            var Qr;
+            const Zr = (0, hp.f)();
+            if (!Sr || null === Zr || !(0, hp.c)({
+                site: Lr.siteUsed,
+                isMobileApp: (0, zr.isMobileApp)(),
+                isTouchScreen: Tr.c.get("isTouchScreen")
               })) return;
-            const tR = null === (GR = RR.current) || void 0 === GR ? void 0 : GR.querySelector(".EverythingMenuBackButton");
-            return tR ? yR(tR) : void 0
-          }), [RR, JR])
-        }(PR, HR && !(0, oZ.i)(GR) && "inGame" === JR);
-        const IR = (0, KR.jsx)("div", {
+            const Wr = null === (Qr = rr.current) || void 0 === Qr ? void 0 : Qr.querySelector(".EverythingMenuBackButton");
+            return Wr ? Zr(Wr) : void 0
+          }), [rr, Sr])
+        }(Gr, gr && !(0, gj.i)(Qr) && "inGame" === Sr);
+        const kr = (0, xr.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: NR,
-          children: (0, KR.jsx)(fR.l, {
+          onClick: qr,
+          children: (0, xr.jsx)(Er.l, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, KR.jsx)(Wt.b, {
-          showing: pR,
+        return (0, xr.jsx)(YW.c, {
+          showing: Or,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: GR === OJ.o.SHOP,
-          doGameplayStartStopOnShow: "inGame" === JR,
-          children: (0, KR.jsx)(Ct.d, {
-            className: uR()("EverythingMenuContainer", {
-              EverythingMenuOverLoadingScreen: qR
+          keepsMovement: Qr === PS.q.SHOP,
+          doGameplayStartStopOnShow: "inGame" === Sr,
+          children: (0, xr.jsx)(eW.e, {
+            className: ar()("EverythingMenuContainer", {
+              EverythingMenuOverLoadingScreen: Ir
             }),
-            show: HR,
-            children: (0, KR.jsx)(At.e, {
-              close: NR,
+            show: gr,
+            children: (0, xr.jsx)(nW.b, {
+              close: qr,
               togglePointerLock: !1,
-              children: (0, KR.jsxs)("div", {
+              children: (0, xr.jsxs)("div", {
                 className: "EverythingMenu",
-                ref: PR,
-                children: [!(0, oZ.i)(GR) && (0, KR.jsxs)("div", {
+                ref: Gr,
+                children: [!(0, gj.i)(Qr) && (0, xr.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, KR.jsxs)("div", {
+                  children: [(0, xr.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [DR && (0, KR.jsx)(fR.d, {
+                    children: [Rr && (0, xr.jsx)(Er.d, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        DR.onClick()
+                        Rr.onClick()
                       },
-                      children: DR.text
-                    }), pR && wR && (0, KR.jsx)("div", {
-                      ...MR,
+                      children: Rr.text
+                    }), Or && mr && (0, xr.jsx)("div", {
+                      ...Br,
                       className: "EverythingMenuWallet",
-                      title: RR("homePage:getPremiumCurrency"),
+                      title: rr("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, iJ.m)({
+                        (0, fS.o)({
                           mode: "self",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, KR.jsx)(bf.f, {})
+                      children: (0, xr.jsx)(OE.h, {})
                     })]
-                  }), (0, KR.jsxs)("div", {
+                  }), (0, xr.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
-                    ref: XR,
+                    ref: yr,
                     "data-pad-tabs": "1",
-                    children: [(0, KR.jsxs)("div", {
-                      ...lR(OJ.o.SETTINGS),
+                    children: [(0, xr.jsxs)("div", {
+                      ...vr(PS.q.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": GR === OJ.o.SETTINGS ? "true" : void 0,
-                      className: uR()("EverythingMenuTab", {
-                        EverythingMenuTabActive: GR === OJ.o.SETTINGS
+                      "data-pad-selected": Qr === PS.q.SETTINGS ? "true" : void 0,
+                      className: ar()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Qr === PS.q.SETTINGS
                       }),
-                      children: [RR("general:settings"), UR("OpenSettings", "pause")]
-                    }), (0, KR.jsxs)("div", {
-                      ...lR(OJ.o.CUSTOMISATION),
+                      children: [rr("general:settings"), Yr("OpenSettings", "pause")]
+                    }), (0, xr.jsxs)("div", {
+                      ...vr(PS.q.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": GR === OJ.o.CUSTOMISATION ? "true" : void 0,
-                      className: uR()("EverythingMenuTab", {
-                        EverythingMenuTabActive: GR === OJ.o.CUSTOMISATION
+                      "data-pad-selected": Qr === PS.q.CUSTOMISATION ? "true" : void 0,
+                      className: ar()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Qr === PS.q.CUSTOMISATION
                       }),
-                      children: [RR("general:player"), UR("OpenCharacterCustomization")]
-                    }), nR.featureFlags.useSocialFeatures && (0, KR.jsxs)("div", {
-                      ...lR(OJ.o.SOCIAL),
+                      children: [rr("general:player"), Yr("OpenCharacterCustomization")]
+                    }), zr.featureFlags.useSocialFeatures && (0, xr.jsxs)("div", {
+                      ...vr(PS.q.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": GR === OJ.o.SOCIAL ? "true" : void 0,
-                      className: uR()("EverythingMenuTab", {
-                        EverythingMenuTabActive: GR === OJ.o.SOCIAL
+                      "data-pad-selected": Qr === PS.q.SOCIAL ? "true" : void 0,
+                      className: ar()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Qr === PS.q.SOCIAL
                       }),
-                      ...(0, LJ.getAnalyticsClickAttributes)({
+                      ...(0, hS.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, GR === OJ.o.SOCIAL),
-                      children: [RR("socialBar:social"), (0, KR.jsx)(Qf.b, {})]
-                    }), VR && (0, KR.jsx)("div", {
-                      ...lR(OJ.o.SEASON_PASS),
+                      }, Qr === PS.q.SOCIAL),
+                      children: [rr("socialBar:social"), (0, xr.jsx)(FE.b, {})]
+                    }), pr && (0, xr.jsx)("div", {
+                      ...vr(PS.q.SEASON_PASS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": GR === OJ.o.SEASON_PASS ? "true" : void 0,
-                      className: uR()("EverythingMenuTab", {
-                        EverythingMenuTabActive: GR === OJ.o.SEASON_PASS
+                      "data-pad-selected": Qr === PS.q.SEASON_PASS ? "true" : void 0,
+                      className: ar()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Qr === PS.q.SEASON_PASS
                       }),
-                      children: RR("seasonPass:title", {
-                        season: VR.seasonNumber
+                      children: rr("seasonPass:title", {
+                        season: pr.seasonNumber
                       })
-                    }), (0, fG.u)(aR) && (0, KR.jsxs)("div", {
-                      ...lR(OJ.o.COSMETIC_SHOP),
+                    }), (0, EQ.p)(tr) && (0, xr.jsxs)("div", {
+                      ...vr(PS.q.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": GR === OJ.o.COSMETIC_SHOP ? "true" : void 0,
-                      className: uR()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: GR === OJ.o.COSMETIC_SHOP
+                      "data-pad-selected": Qr === PS.q.COSMETIC_SHOP ? "true" : void 0,
+                      className: ar()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: Qr === PS.q.COSMETIC_SHOP
                       }),
-                      children: [(0, KR.jsx)("span", {
+                      children: [(0, xr.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: RR("store:title")
-                      }), "new" === rR && (0, KR.jsx)(gi, {}), LR && (0, KR.jsx)("span", {
+                        children: rr("store:title")
+                      }), "new" === Nr && (0, xr.jsx)(vf, {}), hr && (0, xr.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === JR && (0, KR.jsxs)("div", {
-                      ...lR(OJ.o.LOBBY_LEADERBOARD),
+                    }), "inGame" === Sr && (0, xr.jsxs)("div", {
+                      ...vr(PS.q.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": GR === OJ.o.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: uR()("EverythingMenuTab", {
-                        EverythingMenuTabActive: GR === OJ.o.LOBBY_LEADERBOARD
+                      "data-pad-selected": Qr === PS.q.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: ar()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Qr === PS.q.LOBBY_LEADERBOARD
                       }),
-                      children: [RR("general:lobby"), UR("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [rr("general:lobby"), Yr("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, KR.jsx)("div", {
+                  }), (0, xr.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: IR
+                    children: kr
                   })]
-                }), (0, oZ.i)(GR) && IR, (0, KR.jsxs)("div", {
-                  ref: OR,
+                }), (0, gj.i)(Qr) && kr, (0, xr.jsxs)("div", {
+                  ref: Pr,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": oR ? "1" : "0.85"
+                    "--everythingMenuBodyBackgroundOpacity": Cr ? "1" : "0.85"
                   },
-                  children: [(0, KR.jsx)(Zt, {
-                    show: GR === OJ.o.SETTINGS,
-                    setBeforeResumeCallback: AR
-                  }), (0, KR.jsx)(rt, {
-                    show: GR === OJ.o.CUSTOMISATION
-                  }), (0, KR.jsx)(yR.Suspense, {
+                  children: [(0, xr.jsx)(jW, {
+                    show: Qr === PS.q.SETTINGS,
+                    setBeforeResumeCallback: er
+                  }), (0, xr.jsx)(NW, {
+                    show: Qr === PS.q.CUSTOMISATION
+                  }), (0, xr.jsx)(Zr.Suspense, {
                     fallback: null,
-                    children: (0, KR.jsx)(gZ, {
-                      show: GR === OJ.o.SHOP
+                    children: (0, xr.jsx)(Oj, {
+                      show: Qr === PS.q.SHOP
                     })
-                  }), (0, KR.jsx)(mZ, {
-                    show: GR === OJ.o.LOBBY_LEADERBOARD
-                  }), wR && (0, KR.jsx)(gf, {
-                    show: GR === OJ.o.COSMETIC_SHOP
-                  }), !wR && (0, KR.jsx)(Lf, {
-                    show: GR === OJ.o.COSMETIC_SHOP
-                  }), (0, KR.jsx)(Yf, {
-                    show: GR === OJ.o.SOCIAL
-                  }), (0, KR.jsx)(aV, {
-                    show: GR === OJ.o.SEASON_PASS
+                  }), (0, xr.jsx)(kj, {
+                    show: Qr === PS.q.LOBBY_LEADERBOARD
+                  }), mr && (0, xr.jsx)(vE, {
+                    show: Qr === PS.q.COSMETIC_SHOP
+                  }), !mr && (0, xr.jsx)(UE, {
+                    show: Qr === PS.q.COSMETIC_SHOP
+                  }), (0, xr.jsx)(wE, {
+                    show: Qr === PS.q.SOCIAL
+                  }), (0, xr.jsx)(mp, {
+                    show: Qr === PS.q.SEASON_PASS
                   })]
-                }), !(0, nR.isMobileApp)() && (0, AV.i)() && (0, Xt.i)(iR.getPlayerRanks()) && (0, KR.jsx)(Ct.d, {
-                  ref: CR,
+                }), !(0, zr.isMobileApp)() && (0, zp.l)() && (0, KW.i)(fr.getPlayerRanks()) && (0, xr.jsx)(eW.e, {
+                  ref: Kr,
                   className: "EverythingMenuBannerDiv",
-                  show: bR,
+                  show: lr,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, KR.jsx)(xf.d, {
+                  children: (0, xr.jsx)(XE.d, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: CR
+                      parentRef: Kr
                     },
-                    showing: pR && bR,
+                    showing: Or && lr,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -10716,135 +10716,135 @@ export const modules = {
         })
       }))
   },
-  35143: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => uR
+  35455: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar
     });
-    var yR = GR(377),
-      tR = GR(35150);
+    var Zr = Qr(379),
+      Wr = Qr(35459);
 
-    function uR(RR, JR, GR) {
-      const uR = Object.entries(JR).sort(((RR, JR) => JR[1] - RR[1])),
-        ZR = (0, yR.rb)(RR);
-      ZR.push(RR ? "\n\n" : "\n");
-      for (const [tR, eR] of uR) {
-        var qR, iR, fR;
-        const RR = null !== (qR = null === GR || void 0 === GR || null === (iR = GR[tR]) || void 0 === iR ? void 0 : iR.icon) && void 0 !== qR ? qR : `${tR} Enchantment`;
-        ZR.push({
-          icon: RR,
+    function ar(rr, Sr, Qr) {
+      const ar = Object.entries(Sr).sort(((rr, Sr) => Sr[1] - rr[1])),
+        jr = (0, Zr.kb)(rr);
+      jr.push(rr ? "\n\n" : "\n");
+      for (const [Wr, Ur] of ar) {
+        var Ir, fr, Er;
+        const rr = null !== (Ir = null === Qr || void 0 === Qr || null === (fr = Qr[Wr]) || void 0 === fr ? void 0 : fr.icon) && void 0 !== Ir ? Ir : `${Wr} Enchantment`;
+        jr.push({
+          icon: rr,
           style: {
             fontSize: "1.5rem"
           }
-        }), ZR.push({
-          str: `${tR} ${null!==(fR=(0,yR.J)(eR))&&void 0!==fR?fR:eR}\n`
+        }), jr.push({
+          str: `${Wr} ${null!==(Er=(0,Zr.P)(Ur))&&void 0!==Er?Er:Ur}\n`
         })
       }
-      ZR.push({
+      jr.push({
         str: "\n"
       });
-      for (const [yR, eR] of uR) {
-        var VR, KR, wR, rR;
-        const RR = null !== (VR = null === GR || void 0 === GR || null === (KR = GR[yR]) || void 0 === KR ? void 0 : KR.icon) && void 0 !== VR ? VR : `${yR} Enchantment`,
-          JR = null !== (wR = null === GR || void 0 === GR || null === (rR = GR[yR]) || void 0 === rR ? void 0 : rR.description) && void 0 !== wR ? wR : (0, tR.o)(yR);
-        ZR.push({
-          icon: RR,
+      for (const [Zr, Ur] of ar) {
+        var pr, xr, mr, Nr;
+        const rr = null !== (pr = null === Qr || void 0 === Qr || null === (xr = Qr[Zr]) || void 0 === xr ? void 0 : xr.icon) && void 0 !== pr ? pr : `${Zr} Enchantment`,
+          Sr = null !== (mr = null === Qr || void 0 === Qr || null === (Nr = Qr[Zr]) || void 0 === Nr ? void 0 : Nr.description) && void 0 !== mr ? mr : (0, Wr.j)(Zr);
+        jr.push({
+          icon: rr,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), ZR.push({
-          str: JR,
+        }), jr.push({
+          str: Sr,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), ZR.push({
+        }), jr.push({
           str: "\n"
         })
       }
-      return ZR
+      return jr
     }
   },
-  35155: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => fR,
-      h: () => UR,
-      l: () => LR,
-      n: () => iR,
-      q: () => nR,
-      t: () => VR,
-      w: () => wR,
-      x: () => aR,
-      y: () => KR
+  35468: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Er,
+      g: () => Yr,
+      h: () => hr,
+      i: () => fr,
+      j: () => zr,
+      l: () => pr,
+      o: () => mr,
+      s: () => tr,
+      u: () => xr
     });
-    var yR = GR(359),
-      tR = GR(679),
-      uR = GR(377),
-      ZR = GR(3004),
-      qR = GR(35143);
+    var Zr = Qr(360),
+      Wr = Qr(688),
+      ar = Qr(379),
+      jr = Qr(2977),
+      Ir = Qr(35455);
 
-    function iR(RR, JR) {
-      var GR;
+    function fr(rr, Sr) {
+      var Qr;
       let {
-        player: yR,
-        chestOrCreative: tR
-      } = RR;
-      var uR;
-      return JR < yR.length ? null !== (uR = yR[JR]) && void 0 !== uR ? uR : null : null !== (GR = tR[JR - yR.length]) && void 0 !== GR ? GR : null
+        player: Zr,
+        chestOrCreative: Wr
+      } = rr;
+      var ar;
+      return Sr < Zr.length ? null !== (ar = Zr[Sr]) && void 0 !== ar ? ar : null : null !== (Qr = Wr[Sr - Zr.length]) && void 0 !== Qr ? Qr : null
     }
 
-    function fR(RR) {
-      var JR;
-      return null !== (JR = RR.amount) && void 0 !== JR ? JR : 0
+    function Er(rr) {
+      var Sr;
+      return null !== (Sr = rr.amount) && void 0 !== Sr ? Sr : 0
     }
 
-    function VR(RR) {
-      return 0 === RR.button || void 0 === RR.button
+    function pr(rr) {
+      return 0 === rr.button || void 0 === rr.button
     }
 
-    function KR(RR) {
-      return !!RR.shiftKey
+    function xr(rr) {
+      return !!rr.shiftKey
     }
 
-    function wR(RR) {
-      return "touches" in RR || "touch" === RR.pointerType || "pen" === RR.pointerType
+    function mr(rr) {
+      return "touches" in rr || "touch" === rr.pointerType || "pen" === rr.pointerType
     }
-    const rR = new Set,
-      eR = 50;
+    const Nr = new Set,
+      Ur = 50;
 
-    function aR(RR, JR) {
-      var GR;
-      const yR = null === (GR = RR[JR]) || void 0 === GR ? void 0 : GR.displayName;
-      return (0, tR.I)(yR) ? "string" !== typeof JR ? "" : (!rR.has(JR) && rR.size < eR && (rR.add(JR), console.warn(`No item called "${JR}", so its hover shows the name as given`)), JR) : yR
+    function tr(rr, Sr) {
+      var Qr;
+      const Zr = null === (Qr = rr[Sr]) || void 0 === Qr ? void 0 : Qr.displayName;
+      return (0, Wr.L)(Zr) ? "string" !== typeof Sr ? "" : (!Nr.has(Sr) && Nr.size < Ur && (Nr.add(Sr), console.warn(`No item called "${Sr}", so its hover shows the name as given`)), Sr) : Zr
     }
 
-    function LR(RR, JR, GR) {
-      var iR, fR, VR, KR, wR, rR, eR, LR, nR, UR, WR, AR, CR, XR;
-      const MR = RR.attributes,
-        BR = null !== (iR = null === (fR = JR[RR.name]) || void 0 === fR ? void 0 : fR.rootName) && void 0 !== iR ? iR : RR.name,
-        lR = null !== (VR = null !== (KR = MR.customDisplayName) && void 0 !== KR ? KR : null === (wR = JR[RR.name]) || void 0 === wR ? void 0 : wR.displayName) && void 0 !== VR ? VR : aR(JR, BR);
-      let pR = lR;
-      const gR = null === (rR = MR.customAttributes) || void 0 === rR ? void 0 : rR.enchantmentTier;
-      gR && (pR = (0, uR.rb)(lR, {
-        colour: uR.kb[gR]
+    function hr(rr, Sr, Qr) {
+      var fr, Er, pr, xr, mr, Nr, Ur, hr, zr, Yr, nr, er, Kr, yr;
+      const Br = rr.attributes,
+        Tr = null !== (fr = null === (Er = Sr[rr.name]) || void 0 === Er ? void 0 : Er.rootName) && void 0 !== fr ? fr : rr.name,
+        vr = null !== (pr = null !== (xr = Br.customDisplayName) && void 0 !== xr ? xr : null === (mr = Sr[rr.name]) || void 0 === mr ? void 0 : mr.displayName) && void 0 !== pr ? pr : tr(Sr, Tr);
+      let Or = vr;
+      const Lr = null === (Nr = Br.customAttributes) || void 0 === Nr ? void 0 : Nr.enchantmentTier;
+      Lr && (Or = (0, ar.kb)(vr, {
+        colour: ar.fb[Lr]
       }));
-      const bR = null !== (eR = null !== (LR = null !== (nR = function(RR, JR) {
-        var GR;
-        if (void 0 === RR || null !== (GR = JR.customAttributes) && void 0 !== GR && GR.author) return RR;
-        const tR = (0, yR.dc)(RR);
-        return tR.every((RR => "string" === typeof RR)) ? RR : tR.map((RR => "string" === typeof RR ? RR : {
-          icon: RR.icon,
+      const lr = null !== (Ur = null !== (hr = null !== (zr = function(rr, Sr) {
+        var Qr;
+        if (void 0 === rr || null !== (Qr = Sr.customAttributes) && void 0 !== Qr && Qr.author) return rr;
+        const Wr = (0, Zr.gc)(rr);
+        return Wr.every((rr => "string" === typeof rr)) ? rr : Wr.map((rr => "string" === typeof rr ? rr : {
+          icon: rr.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(MR.customDescription, MR)) && void 0 !== nR ? nR : null === (UR = JR[RR.name]) || void 0 === UR ? void 0 : UR.description) && void 0 !== LR ? LR : null === (WR = JR[BR]) || void 0 === WR ? void 0 : WR.description) && void 0 !== eR ? eR : "";
-      let vR = bR;
-      if (null !== (AR = MR.customAttributes) && void 0 !== AR && AR.enchantments) vR = (0, qR.d)(bR, MR.customAttributes.enchantments, MR.customAttributes.enchantmentData);
-      else if (GR[BR]) vR = (0, uR.rb)(bR), vR.push({
+      }(Br.customDescription, Br)) && void 0 !== zr ? zr : null === (Yr = Sr[rr.name]) || void 0 === Yr ? void 0 : Yr.description) && void 0 !== hr ? hr : null === (nr = Sr[Tr]) || void 0 === nr ? void 0 : nr.description) && void 0 !== Ur ? Ur : "";
+      let Xr = lr;
+      if (null !== (er = Br.customAttributes) && void 0 !== er && er.enchantments) Xr = (0, Ir.c)(lr, Br.customAttributes.enchantments, Br.customAttributes.enchantmentData);
+      else if (Qr[Tr]) Xr = (0, ar.kb)(lr), Xr.push({
         str: "\n"
-      }), vR.push({
+      }), Xr.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -10852,700 +10852,700 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (CR = MR.customAttributes) && void 0 !== CR && CR.mobSettings) {
-        var OR, xR;
-        const RR = MR.customAttributes.mobSettings;
-        var NR, DR;
-        if (vR = [], (0, tR.I)(MR.customAttributes.health) || (vR.push({
+      else if (null !== (Kr = Br.customAttributes) && void 0 !== Kr && Kr.mobSettings) {
+        var Pr, Hr;
+        const rr = Br.customAttributes.mobSettings;
+        var qr, Rr;
+        if (Xr = [], (0, Wr.L)(Br.customAttributes.health) || (Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
-          }), vR.push({
-            str: MR.customAttributes.health.toString()
-          }), (0, tR.I)(RR.maxHealth) || (vR.push({
+          }), Xr.push({
+            str: Br.customAttributes.health.toString()
+          }), (0, Wr.L)(rr.maxHealth) || (Xr.push({
             str: "/"
-          }), vR.push({
-            str: RR.maxHealth.toString()
-          }))), !(0, tR.I)(RR.attackDamage) && RR.attackDamage > 0 && (vR.push({
+          }), Xr.push({
+            str: rr.maxHealth.toString()
+          }))), !(0, Wr.L)(rr.attackDamage) && rr.attackDamage > 0 && (Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
-          }), vR.push({
-            str: RR.attackDamage.toString()
-          })), !(0, tR.I)(RR.secondaryAttackDamage) && RR.secondaryAttackDamage > 0 && (vR.push({
+          }), Xr.push({
+            str: rr.attackDamage.toString()
+          })), !(0, Wr.L)(rr.secondaryAttackDamage) && rr.secondaryAttackDamage > 0 && (Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
-          }), vR.push({
-            str: RR.secondaryAttackDamage.toString()
-          })), (0, tR.I)(RR.baseRunningSpeed) || (vR.push({
+          }), Xr.push({
+            str: rr.secondaryAttackDamage.toString()
+          })), (0, Wr.L)(rr.baseRunningSpeed) || (Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
-          }), vR.push({
-            str: RR.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === RR.metaInfo) vR.push({
+          }), Xr.push({
+            str: rr.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === rr.metaInfo) Xr.push({
           str: "\n"
-        }), vR.push({
+        }), Xr.push({
           str: {
             translationKey: "general:has"
           }
-        }), vR.push({
+        }), Xr.push({
           str: " "
-        }), vR.push({
-          icon: null !== (NR = null === (DR = RR.tameInfo) || void 0 === DR ? void 0 : DR.saddleItemName) && void 0 !== NR ? NR : "Saddle",
+        }), Xr.push({
+          icon: null !== (qr = null === (Rr = rr.tameInfo) || void 0 === Rr ? void 0 : Rr.saddleItemName) && void 0 !== qr ? qr : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (vR.push({
+        if (Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             str: "\n"
-          }), RR.petInfo && null !== (OR = RR.tameInfo) && void 0 !== OR && OR.supportsFriendship) {
-          const JR = ZR.e.getIconsFromFriendshipPoints(RR.petInfo.friendshipPoints);
-          for (const RR of JR) vR.push({
-            icon: RR,
+          }), rr.petInfo && null !== (Pr = rr.tameInfo) && void 0 !== Pr && Pr.supportsFriendship) {
+          const Sr = jr.c.getIconsFromFriendshipPoints(rr.petInfo.friendshipPoints);
+          for (const rr of Sr) Xr.push({
+            icon: rr,
             style: {
               fontSize: "1.5em"
             }
           });
-          vR.push({
+          Xr.push({
             str: "\n"
           });
-          const GR = ZR.e.getMobHungerLevel(RR.petInfo.lastFedAt);
-          for (const RR of ZR.e.hungerLevelIcons[GR]) vR.push({
-            icon: RR,
+          const Qr = jr.c.getMobHungerLevel(rr.petInfo.lastFedAt);
+          for (const rr of jr.c.hungerLevelIcons[Qr]) Xr.push({
+            icon: rr,
             style: {
               fontSize: "1.5em"
             }
           });
-          vR.push({
+          Xr.push({
             str: " "
-          }), vR.push({
-            str: ZR.e.hungerLevelTranslations[GR],
+          }), Xr.push({
+            str: jr.c.hungerLevelTranslations[Qr],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (RR.tameInfo && null !== (xR = RR.tameInfo) && void 0 !== xR && xR.supportsFriendship) {
-          var HR, oR;
-          let JR = null !== (HR = RR.tameInfo.likedFoods) && void 0 !== HR ? HR : [];
-          vR.push({
+        if (rr.tameInfo && null !== (Hr = rr.tameInfo) && void 0 !== Hr && Hr.supportsFriendship) {
+          var gr, Cr;
+          let Sr = null !== (gr = rr.tameInfo.likedFoods) && void 0 !== gr ? gr : [];
+          Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Superliked]
+              color: jr.c.feedTextColours[jr.c.MobFoodType.Superliked]
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
-          }), null !== (oR = RR.petInfo) && void 0 !== oR && oR.superlikedFoodKnown ? (vR.push({
-            icon: RR.petInfo.superlikedFood,
+          }), null !== (Cr = rr.petInfo) && void 0 !== Cr && Cr.superlikedFoodKnown ? (Xr.push({
+            icon: rr.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), JR = JR.filter((JR => JR !== RR.petInfo.superlikedFood))) : vR.push({
+          }), Sr = Sr.filter((Sr => Sr !== rr.petInfo.superlikedFood))) : Xr.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), vR.push({
+          }), Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Liked]
+              color: jr.c.feedTextColours[jr.c.MobFoodType.Liked]
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
           });
-          for (const RR of JR) vR.push({
-            icon: RR,
+          for (const rr of Sr) Xr.push({
+            icon: rr,
             style: {
               fontSize: "1.5em"
             }
           });
-          vR.push({
+          Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Neutral]
+              color: jr.c.feedTextColours[jr.c.MobFoodType.Neutral]
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
           });
-          for (const GR of null !== (cR = RR.tameInfo.neutralFoods) && void 0 !== cR ? cR : []) {
-            var cR;
-            vR.push({
-              icon: GR,
+          for (const Qr of null !== (Mr = rr.tameInfo.neutralFoods) && void 0 !== Mr ? Mr : []) {
+            var Mr;
+            Xr.push({
+              icon: Qr,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          vR.push({
+          Xr.push({
             str: "\n"
-          }), vR.push({
+          }), Xr.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: ZR.e.feedTextColours[ZR.e.MobFoodType.Disliked]
+              color: jr.c.feedTextColours[jr.c.MobFoodType.Disliked]
             }
-          }), vR.push({
+          }), Xr.push({
             str: " "
           });
-          for (const GR of null !== (PR = RR.tameInfo.dislikedFoods) && void 0 !== PR ? PR : []) {
-            var PR;
-            vR.push({
-              icon: GR,
+          for (const Qr of null !== (Gr = rr.tameInfo.dislikedFoods) && void 0 !== Gr ? Gr : []) {
+            var Gr;
+            Xr.push({
+              icon: Qr,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        vR.length > 0 ? (vR.shift(), vR.unshift(...(0, uR.rb)(bR))) : vR = (0, uR.rb)(bR)
+        Xr.length > 0 ? (Xr.shift(), Xr.unshift(...(0, ar.kb)(lr))) : Xr = (0, ar.kb)(lr)
       }
       return {
-        name: pR,
-        desc: vR,
-        fontStyle: null !== (XR = MR.customAttributes) && void 0 !== XR && XR.author ? "italic" : "normal"
+        name: Or,
+        desc: Xr,
+        fontStyle: null !== (yr = Br.customAttributes) && void 0 !== yr && yr.author ? "italic" : "normal"
       }
     }
 
-    function nR(RR, JR, GR, yR) {
-      const tR = iR(RR, GR),
-        uR = iR(RR, yR);
-      if (!tR) return !1;
-      const ZR = JR[tR.name].armourReduction,
-        qR = JR[uR.name].armourReduction;
-      if (qR === ZR) {
-        var fR, VR, KR, wR;
-        const RR = null !== (fR = null === (VR = tR.attributes.customAttributes) || void 0 === VR ? void 0 : VR.enchantmentTier) && void 0 !== fR ? fR : "Tier 0",
-          JR = null !== (KR = null === (wR = uR.attributes.customAttributes) || void 0 === wR ? void 0 : wR.enchantmentTier) && void 0 !== KR ? KR : "Tier 0";
-        return parseInt(RR.replace("Tier ", "")) >= parseInt(JR.replace("Tier ", ""))
+    function zr(rr, Sr, Qr, Zr) {
+      const Wr = fr(rr, Qr),
+        ar = fr(rr, Zr);
+      if (!Wr) return !1;
+      const jr = Sr[Wr.name].armourReduction,
+        Ir = Sr[ar.name].armourReduction;
+      if (Ir === jr) {
+        var Er, pr, xr, mr;
+        const rr = null !== (Er = null === (pr = Wr.attributes.customAttributes) || void 0 === pr ? void 0 : pr.enchantmentTier) && void 0 !== Er ? Er : "Tier 0",
+          Sr = null !== (xr = null === (mr = ar.attributes.customAttributes) || void 0 === mr ? void 0 : mr.enchantmentTier) && void 0 !== xr ? xr : "Tier 0";
+        return parseInt(rr.replace("Tier ", "")) >= parseInt(Sr.replace("Tier ", ""))
       }
-      return ZR > qR
+      return jr > Ir
     }
 
-    function UR(RR) {
-      let JR;
-      if ("number" === typeof RR) {
-        const GR = document.querySelector(`[data-inven-idx="${RR}"]`);
-        if (!GR) return null;
-        JR = GR.getBoundingClientRect()
-      } else JR = RR.getBoundingClientRect();
+    function Yr(rr) {
+      let Sr;
+      if ("number" === typeof rr) {
+        const Qr = document.querySelector(`[data-inven-idx="${rr}"]`);
+        if (!Qr) return null;
+        Sr = Qr.getBoundingClientRect()
+      } else Sr = rr.getBoundingClientRect();
       return {
-        x: JR.left + JR.width / 2,
-        y: JR.top + JR.height / 2
+        x: Sr.left + Sr.width / 2,
+        y: Sr.top + Sr.height / 2
       }
     }
   },
-  35044: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => LR,
-      h: () => nR,
-      j: () => UR
+  35347: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => hr,
+      d: () => zr,
+      g: () => Yr
     });
-    var yR = GR(66),
-      tR = GR(5138),
-      uR = GR(1270),
-      ZR = GR(3791),
-      qR = GR(1590),
-      iR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(5063),
+      ar = Qr(1251),
+      jr = Qr(3742),
+      Ir = Qr(1576),
+      fr = Qr(1338);
 
-    function fR(RR) {
+    function Er(rr) {
       let {
-        text: JR
-      } = RR;
+        text: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, uR.A)(), [yR, fR] = (0, ZR.h)();
-      return (0, iR.jsxs)("div", {
+        t: Qr
+      } = (0, ar.E)(), [Zr, Er] = (0, jr.g)();
+      return (0, fr.jsxs)("div", {
         className: "CopyTextRow",
-        children: [(0, iR.jsx)("div", {
+        children: [(0, fr.jsx)("div", {
           className: "CopyTextRowText",
-          children: JR
-        }), (0, iR.jsx)(qR.g, {
+          children: Sr
+        }), (0, fr.jsx)(Ir.h, {
           className: "CopyTextRowButton",
           onClick: () => {
-            (0, tR.e)(JR).catch((RR => {
-              console.error("Failed to copy text:", RR)
-            })), fR()
+            (0, Wr.b)(Sr).catch((rr => {
+              console.error("Failed to copy text:", rr)
+            })), Er()
           },
-          disabled: yR,
-          children: GR(yR ? "general:copied" : "general:copy")
+          disabled: Zr,
+          children: Qr(Zr ? "general:copied" : "general:copy")
         })]
       })
     }
-    var VR = GR(1444),
-      KR = GR(5338),
-      wR = GR(3351),
-      rR = GR(103),
-      eR = GR(2173),
-      aR = GR(1465);
+    var pr = Qr(1413),
+      xr = Qr(5297),
+      mr = Qr(3305),
+      Nr = Qr(109),
+      Ur = Qr(2128),
+      tr = Qr(1444);
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        show: JR,
-        onClose: GR
-      } = RR;
+        show: Sr,
+        onClose: Qr
+      } = rr;
       const {
-        requestedGameNameWithVariation: yR,
-        lobbyName: tR,
-        shownLobbyName: uR
-      } = (0, eR.i)("connectedGame"), ZR = (0, wR.e)(yR, tR, !1);
-      return rR.featureFlags.canUseInviteLinks && (0, iR.jsx)(KR.e, {
-        show: JR,
-        close: GR,
+        requestedGameNameWithVariation: Zr,
+        lobbyName: Wr,
+        shownLobbyName: ar
+      } = (0, Ur.j)("connectedGame"), jr = (0, mr.b)(Zr, Wr, !1);
+      return Nr.featureFlags.canUseInviteLinks && (0, fr.jsx)(xr.b, {
+        show: Sr,
+        close: Qr,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, iR.jsxs)("div", {
+        children: (0, fr.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, iR.jsx)("div", {
+          children: [(0, fr.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, iR.jsxs)("div", {
+          }), (0, fr.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, iR.jsx)("div", {
+            children: [(0, fr.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === ZR ? (0, iR.jsx)(aR.d, {}) : ZR, (0, iR.jsx)("br", {}), "Lobby Name: ", uR, (0, iR.jsx)("br", {}), (0, iR.jsx)("br", {}), (0, iR.jsx)("br", {}), (0, iR.jsx)("div", {
+            }), "Game: ", null === jr ? (0, fr.jsx)(tr.c, {}) : jr, (0, fr.jsx)("br", {}), "Lobby Name: ", ar, (0, fr.jsx)("br", {}), (0, fr.jsx)("br", {}), (0, fr.jsx)("br", {}), (0, fr.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, iR.jsx)(nR, {})]
+          }), (0, fr.jsx)(zr, {})]
         })
       })
     }
 
-    function nR() {
-      var RR;
-      const JR = null !== (RR = UR(rR.featureFlags.canUseInviteLinks)) && void 0 !== RR ? RR : "Loading Link...";
-      return rR.featureFlags.canUseInviteLinks && (0, iR.jsx)(fR, {
-        text: JR
+    function zr() {
+      var rr;
+      const Sr = null !== (rr = Yr(Nr.featureFlags.canUseInviteLinks)) && void 0 !== rr ? rr : "Loading Link...";
+      return Nr.featureFlags.canUseInviteLinks && (0, fr.jsx)(Er, {
+        text: Sr
       })
     }
 
-    function UR(RR) {
-      const [JR, GR] = (0, yR.useState)(null);
-      return (0, yR.useEffect)((() => {
-        if (!RR) return;
-        let JR = !0;
-        return (0, VR.B)().then((RR => {
-          JR && GR(RR)
-        })).catch((RR => {
-          console.error("Failed to get invite link:", RR)
+    function Yr(rr) {
+      const [Sr, Qr] = (0, Zr.useState)(null);
+      return (0, Zr.useEffect)((() => {
+        if (!rr) return;
+        let Sr = !0;
+        return (0, pr.w)().then((rr => {
+          Sr && Qr(rr)
+        })).catch((rr => {
+          console.error("Failed to get invite link:", rr)
         })), () => {
-          JR = !1
+          Sr = !1
         }
-      }), [RR]), JR
+      }), [rr]), Sr
     }
   },
-  35208: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => eR,
-      d: () => LR
+  35523: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ur,
+      g: () => hr
     });
-    GR(35211);
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(1270),
-      qR = GR(1590),
-      iR = GR(3690),
-      fR = GR(1468),
-      VR = GR(3413),
-      KR = GR(4227),
-      wR = GR(3240),
-      rR = GR(1378);
+    Qr(35525);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(1251),
+      Ir = Qr(1576),
+      fr = Qr(3628),
+      Er = Qr(1448),
+      pr = Qr(3362),
+      xr = Qr(4187),
+      mr = Qr(3208),
+      Nr = Qr(1338);
 
-    function eR(RR) {
+    function Ur(rr) {
       let {
-        endsAt: JR,
-        className: GR
-      } = RR;
-      return (0, rR.jsxs)("span", {
-        className: uR()("NewPlayerDealClock", GR),
-        children: [(0, rR.jsx)(fR.d, {
+        endsAt: Sr,
+        className: Qr
+      } = rr;
+      return (0, Nr.jsxs)("span", {
+        className: ar()("NewPlayerDealClock", Qr),
+        children: [(0, Nr.jsx)(Er.c, {
           name: "hourglass"
-        }), (0, rR.jsx)(iR.g, {
-          toTime: JR
+        }), (0, Nr.jsx)(fr.f, {
+          toTime: Sr
         })]
       })
     }
 
-    function aR(RR) {
+    function tr(rr) {
       let {
-        offered: JR,
-        needsLogin: GR,
-        busy: yR,
-        highlight: tR,
-        onBuy: iR
-      } = RR;
+        offered: Sr,
+        needsLogin: Qr,
+        busy: Zr,
+        highlight: Wr,
+        onBuy: fr
+      } = rr;
       const {
-        t: fR
-      } = (0, ZR.A)(), {
-        pack: eR
-      } = JR, aR = (0, KR.d)(JR.package);
-      return (0, rR.jsxs)("div", {
-        className: uR()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: tR
+        t: Er
+      } = (0, jr.E)(), {
+        pack: Ur
+      } = Sr, tr = (0, xr.e)(Sr.package);
+      return (0, Nr.jsxs)("div", {
+        className: ar()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: Wr
         }),
-        children: [(0, rR.jsxs)("div", {
+        children: [(0, Nr.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, rR.jsx)("img", {
-            src: wR.b[JR.tier],
+          children: [(0, Nr.jsx)("img", {
+            src: mr.d[Sr.tier],
             alt: "",
             draggable: !1
-          }), (0, rR.jsx)("span", {
+          }), (0, Nr.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: fR("newPlayerDeal:tag")
+            children: Er("newPlayerDeal:tag")
           })]
-        }), (0, rR.jsxs)("div", {
+        }), (0, Nr.jsxs)("div", {
           className: "NewPlayerDealPackText",
-          children: [(0, rR.jsx)(VR.b, {
+          children: [(0, Nr.jsx)(pr.c, {
             className: "NewPlayerDealPackAmount",
-            amount: eR.gems
-          }), (0, rR.jsx)("span", {
+            amount: Ur.gems
+          }), (0, Nr.jsx)("span", {
             className: "NewPlayerDealSplit",
-            children: fR("newPlayerDeal:split", {
-              usual: eR.usualGems.toLocaleString(),
-              bonus: (eR.gems - eR.usualGems).toLocaleString()
+            children: Er("newPlayerDeal:split", {
+              usual: Ur.usualGems.toLocaleString(),
+              bonus: (Ur.gems - Ur.usualGems).toLocaleString()
             })
           })]
-        }), (0, rR.jsx)(qR.n, {
+        }), (0, Nr.jsx)(Ir.p, {
           className: "NewPlayerDealBuy",
-          loading: yR,
-          onClick: iR,
-          ariaLabel: fR("newPlayerDeal:buyLabel", {
-            amount: eR.gems.toLocaleString(),
-            price: aR
+          loading: Zr,
+          onClick: fr,
+          ariaLabel: Er("newPlayerDeal:buyLabel", {
+            amount: Ur.gems.toLocaleString(),
+            price: tr
           }),
-          children: fR(GR ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: aR
+          children: Er(Qr ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: tr
           })
         })]
       })
     }
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        view: JR,
-        needsLogin: GR,
-        busy: tR,
-        highlight: qR,
-        onBuy: iR
-      } = RR;
+        view: Sr,
+        needsLogin: Qr,
+        busy: Wr,
+        highlight: Ir,
+        onBuy: fr
+      } = rr;
       const {
-        t: fR
-      } = (0, ZR.A)();
-      return (0, rR.jsxs)("div", {
-        className: uR()("NewPlayerDealPacks", JR.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [JR.packs.map(((RR, JR) => (0, rR.jsxs)(yR.Fragment, {
-          children: [JR > 0 && (0, rR.jsx)("div", {
+        t: Er
+      } = (0, jr.E)();
+      return (0, Nr.jsxs)("div", {
+        className: ar()("NewPlayerDealPacks", Sr.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [Sr.packs.map(((rr, Sr) => (0, Nr.jsxs)(Zr.Fragment, {
+          children: [Sr > 0 && (0, Nr.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, rR.jsx)("i", {})
-          }), (0, rR.jsx)(aR, {
-            offered: RR,
-            needsLogin: GR,
-            busy: tR,
-            highlight: qR === RR.pack.packageId,
+            children: (0, Nr.jsx)("i", {})
+          }), (0, Nr.jsx)(tr, {
+            offered: rr,
+            needsLogin: Qr,
+            busy: Wr,
+            highlight: Ir === rr.pack.packageId,
             onBuy: () => {
-              iR(RR)
+              fr(rr)
             }
           })]
-        }, RR.pack.packageId))), (0, rR.jsx)("div", {
+        }, rr.pack.packageId))), (0, Nr.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, rR.jsx)("span", {
+          children: (0, Nr.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: fR("newPlayerDeal:limit")
+            children: Er("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35218: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => lR,
-      f: () => gR
+  35532: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => vr,
+      e: () => Lr
     });
-    GR(35211);
-    var yR = GR(4224),
-      tR = GR(1618),
-      uR = GR(3217),
-      ZR = GR(4214),
-      qR = GR(4191),
-      iR = GR(4216),
-      fR = GR(4175),
-      VR = GR(1270),
-      KR = GR(1493),
-      wR = GR(1196),
-      rR = GR(1590),
-      eR = GR(1468),
-      aR = GR(3413),
-      LR = GR(3804),
-      nR = GR(3663),
-      UR = GR(3670),
-      WR = GR(3674),
-      AR = GR(1378);
-    const CR = new iR.d(fR.getBillingClient, fR.addPurchaseRecordListener);
-    let XR = !1;
+    Qr(35525);
+    var Zr = Qr(4184),
+      Wr = Qr(1605),
+      ar = Qr(3192),
+      jr = Qr(4170),
+      Ir = Qr(4151),
+      fr = Qr(4176),
+      Er = Qr(4135),
+      pr = Qr(1251),
+      xr = Qr(1475),
+      mr = Qr(1181),
+      Nr = Qr(1576),
+      Ur = Qr(1448),
+      tr = Qr(3362),
+      hr = Qr(3749),
+      zr = Qr(3612),
+      Yr = Qr(3617),
+      nr = Qr(3619),
+      er = Qr(1338);
+    const Kr = new fr.c(Er.getBillingClient, Er.addPurchaseRecordListener);
+    let yr = !1;
 
-    function MR(RR, JR) {
-      null !== RR && (0, nR.k)(RR) || ((0, tR.reportAnalyticsClick)({
+    function Br(rr, Sr) {
+      null !== rr && (0, zr.p)(rr) || ((0, Wr.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${JR.pack.packageId}`
-      }), null !== RR && (0, nR.m)(RR), lR(JR.pack.gems))
+        value: `self:${Sr.pack.packageId}`
+      }), null !== rr && (0, zr.v)(rr), vr(Sr.pack.gems))
     }
 
-    function BR(RR, JR, GR) {
-      const tR = (0, nR.b)(JR);
-      switch (RR.kind) {
+    function Tr(rr, Sr, Qr) {
+      const Wr = (0, zr.b)(Sr);
+      switch (rr.kind) {
         case "completed":
-          MR(tR, GR);
+          Br(Wr, Qr);
           break;
         case "pending":
-          uR = RR.intentId, ZR = () => {
-            LR.g.refresh(), MR(tR, GR)
-          }, XR || (XR = !0, CR.listen()), CR.follow(uR, ZR);
+          ar = rr.intentId, jr = () => {
+            hr.j.refresh(), Br(Wr, Qr)
+          }, yr || (yr = !0, Kr.listen()), Kr.follow(ar, jr);
           break;
         case "unknownPackage":
-          (0, nR.H)(JR, null);
+          (0, zr.M)(Sr, null);
           break;
         case "failed":
-          RR.errorKey === yR.d.newPlayerDealUnavailable && (0, nR.H)(JR, null)
+          rr.errorKey === Zr.e.newPlayerDealUnavailable && (0, zr.M)(Sr, null)
       }
-      var uR, ZR
+      var ar, jr
     }
 
-    function lR(RR) {
-      KR.NotificationProvider.showCustomPopup({
-        body: JR => (0, AR.jsx)(pR, {
-          gems: RR,
-          close: JR
+    function vr(rr) {
+      xr.NotificationProvider.showCustomPopup({
+        body: Sr => (0, er.jsx)(Or, {
+          gems: rr,
+          close: Sr
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function pR(RR) {
+    function Or(rr) {
       let {
-        gems: JR,
-        close: GR
-      } = RR;
+        gems: Sr,
+        close: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, VR.A)();
-      return (0, AR.jsxs)("div", {
+        t: Zr
+      } = (0, pr.E)();
+      return (0, er.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, AR.jsxs)("div", {
+        children: [(0, er.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, AR.jsx)(eR.d, {
+          children: [(0, er.jsx)(Ur.c, {
             name: "circle-check"
-          }), (0, AR.jsx)(aR.b, {
-            amount: JR
-          }), (0, AR.jsx)("span", {
-            children: yR("newPlayerDeal:added")
+          }), (0, er.jsx)(tr.c, {
+            amount: Sr
+          }), (0, er.jsx)("span", {
+            children: Zr("newPlayerDeal:added")
           })]
-        }), (0, AR.jsx)(rR.n, {
+        }), (0, er.jsx)(Nr.p, {
           className: "NewPlayerDealAddedOk",
-          onClick: GR,
-          children: yR("general:ok")
+          onClick: Qr,
+          children: Zr("general:ok")
         })]
       })
     }
 
-    function gR(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ZR.c;
+    function Lr(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jr.e;
       const {
-        userContext: GR
-      } = (0, wR.d)(), {
-        purchaseUnderWay: yR,
-        notice: tR,
-        buy: iR
-      } = (0, qR.e)(JR), fR = (0, UR.i)(), VR = GR.mayBuy() || (0, uR.guestsMayBuy)(), KR = null === fR ? !VR : fR.guest && !GR.isLoggedIn();
+        userContext: Qr
+      } = (0, mr.c)(), {
+        purchaseUnderWay: Zr,
+        notice: Wr,
+        buy: fr
+      } = (0, Ir.d)(Sr), Er = (0, Yr.g)(), pr = Qr.mayBuy() || (0, ar.guestsMayBuy)(), xr = null === Er ? !pr : Er.guest && !Qr.isLoggedIn();
       return {
-        purchaseUnderWay: yR,
-        notice: tR,
-        needsLogin: KR,
-        buyPack: function(yR, tR) {
-          (0, nR.v)("new_player_deal.buy", (0, WR.d)(yR.arm, RR, tR.pack.packageId)), null === fR ? iR(function(RR) {
+        purchaseUnderWay: Zr,
+        notice: Wr,
+        needsLogin: xr,
+        buyPack: function(Zr, Wr) {
+          (0, zr.E)("new_player_deal.buy", (0, nr.b)(Zr.arm, rr, Wr.pack.packageId)), null === Er ? fr(function(rr) {
             return {
-              sku: RR.pack.packageId,
-              tier: RR.tier,
-              amount: RR.pack.gems,
+              sku: rr.pack.packageId,
+              tier: rr.tier,
+              amount: rr.pack.gems,
               bonusPercent: 0,
-              package: RR.package
+              package: rr.package
             }
-          }(tR), null, {
+          }(Wr), null, {
             followPending: !1
-          }).then((RR => {
-            BR(RR, GR, tR)
-          })) : KR ? JR(tR.pack.packageId, null) : MR((0, nR.b)(GR), tR)
+          }).then((rr => {
+            Tr(rr, Qr, Wr)
+          })) : xr ? Sr(Wr.pack.packageId, null) : Br((0, zr.b)(Qr), Wr)
         }
       }
     }
   },
-  35131: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => fR
+  35441: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Er
     });
-    var yR = GR(66),
-      tR = GR(1163),
-      uR = GR.n(tR),
-      ZR = GR(2173),
-      qR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1155),
+      ar = Qr.n(Wr),
+      jr = Qr(2128),
+      Ir = Qr(1338);
 
-    function iR(RR) {
-      const JR = Math.floor(RR / 3600),
-        GR = Math.floor(RR % 3600 / 60),
-        yR = Math.floor(RR % 60),
-        tR = `${GR.toString().padStart(2,"0")}:${yR.toString().padStart(2,"0")}`;
-      return JR > 0 ? `${JR}:${tR}` : tR
+    function fr(rr) {
+      const Sr = Math.floor(rr / 3600),
+        Qr = Math.floor(rr % 3600 / 60),
+        Zr = Math.floor(rr % 60),
+        Wr = `${Qr.toString().padStart(2,"0")}:${Zr.toString().padStart(2,"0")}`;
+      return Sr > 0 ? `${Sr}:${Wr}` : Wr
     }
-    const fR = (0, yR.memo)((function(RR) {
+    const Er = (0, Zr.memo)((function(rr) {
       let {
-        className: JR
-      } = RR;
+        className: Sr
+      } = rr;
       const {
-        recording: GR,
-        clipping: yR,
-        seconds: tR
-      } = (0, ZR.i)("replayRecorder");
-      return GR || yR ? (0, qR.jsxs)("div", {
-        className: uR()("RecordingIndicator", {
-          RecordingIndicatorClipping: !GR
-        }, JR),
+        recording: Qr,
+        clipping: Zr,
+        seconds: Wr
+      } = (0, jr.j)("replayRecorder");
+      return Qr || Zr ? (0, Ir.jsxs)("div", {
+        className: ar()("RecordingIndicator", {
+          RecordingIndicatorClipping: !Qr
+        }, Sr),
         "data-camera-keeper": "",
-        children: [(0, qR.jsx)("span", {
+        children: [(0, Ir.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, qR.jsx)("span", {
+        }), (0, Ir.jsx)("span", {
           className: "RecordingIndicatorLabel",
-          children: GR ? "REC" : "CLIP"
-        }), GR && (0, qR.jsx)("span", {
+          children: Qr ? "REC" : "CLIP"
+        }), Qr && (0, Ir.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: iR(tR)
+          children: fr(Wr)
         })]
       }) : null
     }))
   },
-  35221: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => iR
+  35535: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => fr
     });
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(1378);
-    const ZR = 21,
-      qR = 2 * Math.PI * ZR;
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(1338);
+    const jr = 21,
+      Ir = 2 * Math.PI * jr;
 
-    function iR(RR) {
+    function fr(rr) {
       let {
-        tier: JR,
-        state: GR,
-        progress: yR,
-        size: iR = "large"
-      } = RR;
-      const fR = tR()("SeasonPassTierNode", {
-        SeasonPassTierNodeSmall: "small" === iR,
-        SeasonPassTierNodeLarge: "large" === iR,
-        SeasonPassTierNodeReached: "reached" === GR,
-        SeasonPassTierNodeEarning: "earning" === GR
+        tier: Sr,
+        state: Qr,
+        progress: Zr,
+        size: fr = "large"
+      } = rr;
+      const Er = Wr()("SeasonPassTierNode", {
+        SeasonPassTierNodeSmall: "small" === fr,
+        SeasonPassTierNodeLarge: "large" === fr,
+        SeasonPassTierNodeReached: "reached" === Qr,
+        SeasonPassTierNodeEarning: "earning" === Qr
       });
-      if ("earning" !== GR || "large" === iR) return (0, uR.jsx)("span", {
-        className: fR,
-        children: (0, uR.jsx)("span", {
+      if ("earning" !== Qr || "large" === fr) return (0, ar.jsx)("span", {
+        className: Er,
+        children: (0, ar.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: JR
+          children: Sr
         })
       });
-      const VR = Math.max(0, Math.min(1, yR));
-      return (0, uR.jsxs)("span", {
-        className: fR,
+      const pr = Math.max(0, Math.min(1, Zr));
+      return (0, ar.jsxs)("span", {
+        className: Er,
         role: "progressbar",
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(100 * VR),
-        children: [(0, uR.jsxs)("svg", {
+        "aria-valuenow": Math.round(100 * pr),
+        children: [(0, ar.jsxs)("svg", {
           className: "SeasonPassTierNodeRing",
           viewBox: "0 0 56 56",
           "aria-hidden": "true",
-          children: [(0, uR.jsx)("circle", {
+          children: [(0, ar.jsx)("circle", {
             className: "SeasonPassTierNodeRingEdge",
             cx: "28",
             cy: "28",
             r: "26"
-          }), (0, uR.jsx)("circle", {
+          }), (0, ar.jsx)("circle", {
             className: "SeasonPassTierNodeRingTrack",
             cx: "28",
             cy: "28",
-            r: ZR
-          }), (0, uR.jsx)("circle", {
+            r: jr
+          }), (0, ar.jsx)("circle", {
             className: "SeasonPassTierNodeRingFill",
             cx: "28",
             cy: "28",
-            r: ZR,
-            strokeDasharray: `${VR*qR} ${qR}`,
+            r: jr,
+            strokeDasharray: `${pr*Ir} ${Ir}`,
             transform: "rotate(-90 28 28)"
-          }), (0, uR.jsx)("circle", {
+          }), (0, ar.jsx)("circle", {
             className: "SeasonPassTierNodeRingCore",
             cx: "28",
             cy: "28",
             r: "16"
           })]
-        }), (0, uR.jsx)("span", {
+        }), (0, ar.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: JR
+          children: Sr
         })]
       })
     }
   },
-  5766: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => LR
+  5707: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => hr
     });
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(5434),
-      ZR = GR(1270),
-      qR = GR(1468),
-      iR = GR(1590),
-      fR = GR(1647),
-      VR = GR(1493),
-      KR = GR(3606),
-      wR = GR(1378);
-    const rR = {
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(5390),
+      jr = Qr(1251),
+      Ir = Qr(1448),
+      fr = Qr(1576),
+      Er = Qr(1629),
+      pr = Qr(1475),
+      xr = Qr(3536),
+      mr = Qr(1338);
+    const Nr = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -11573,440 +11573,440 @@ export const modules = {
       }
     };
 
-    function eR(RR) {
+    function Ur(rr) {
       let {
-        platform: JR
-      } = RR;
-      const GR = "youtube" === JR;
-      return (0, wR.jsxs)("span", {
-        className: tR()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: GR
+        platform: Sr
+      } = rr;
+      const Qr = "youtube" === Sr;
+      return (0, mr.jsxs)("span", {
+        className: Wr()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: Qr
         }),
-        children: [GR && (0, wR.jsx)(KR.e, {
+        children: [Qr && (0, mr.jsx)(xr.c, {
           variant: "white"
-        }), !GR && (0, wR.jsx)(qR.d, {
-          name: rR[JR].icon,
+        }), !Qr && (0, mr.jsx)(Ir.c, {
+          name: Nr[Sr].icon,
           kit: "brands"
         })]
       })
     }
 
-    function aR(RR) {
+    function tr(rr) {
       let {
-        platform: JR,
-        link: GR,
-        editable: yR,
-        userContext: tR,
-        onLinksUpdated: KR
-      } = RR;
+        platform: Sr,
+        link: Qr,
+        editable: Zr,
+        userContext: Wr,
+        onLinksUpdated: xr
+      } = rr;
       const {
-        t: aR
-      } = (0, ZR.A)(), LR = rR[JR];
-      if (!GR && !yR) return null;
+        t: tr
+      } = (0, jr.E)(), hr = Nr[Sr];
+      if (!Qr && !Zr) return null;
 
-      function nR() {
-        var RR;
-        if (!tR || !KR) return;
-        VR.NotificationProvider.showInputPopup({
+      function zr() {
+        var rr;
+        if (!Wr || !xr) return;
+        pr.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: LR.name
+              platform: hr.name
             }
           },
-          prefixText: uR.u[JR],
+          prefixText: ar.v[Sr],
           placeholderText: "playBloxd",
-          initialValue: null !== (RR = null === GR || void 0 === GR ? void 0 : GR.handle) && void 0 !== RR ? RR : "",
+          initialValue: null !== (rr = null === Qr || void 0 === Qr ? void 0 : Qr.handle) && void 0 !== rr ? rr : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: GR ? "general:remove" : void 0
-        }).getResult().then((async RR => {
-          if ("notificationTornDown" !== RR && null !== RR) try {
-            "submit" === RR.type ? await fR.c.setSocialLink(tR, JR, RR.value) : await fR.c.clearSocialLink(tR, JR), KR()
-          } catch (GR) {
-            console.error("Failed to update social link", GR), VR.NotificationProvider.showAlertPopup({
-              title: GR.errorMessageForUser,
+          secondaryButtonText: Qr ? "general:remove" : void 0
+        }).getResult().then((async rr => {
+          if ("notificationTornDown" !== rr && null !== rr) try {
+            "submit" === rr.type ? await Er.c.setSocialLink(Wr, Sr, rr.value) : await Er.c.clearSocialLink(Wr, Sr), xr()
+          } catch (Qr) {
+            console.error("Failed to update social link", Qr), pr.NotificationProvider.showAlertPopup({
+              title: Qr.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (GR) {
-        const RR = `@${GR.handle}`;
-        return (0, wR.jsxs)("a", {
+      if (Qr) {
+        const rr = `@${Qr.handle}`;
+        return (0, mr.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: LR.color
+            background: hr.color
           },
-          href: GR.profileUrl,
+          href: Qr.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, wR.jsxs)("div", {
+          children: [(0, mr.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, wR.jsx)(eR, {
-              platform: JR
-            }), (0, wR.jsx)("span", {
+            children: [(0, mr.jsx)(Ur, {
+              platform: Sr
+            }), (0, mr.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, wR.jsx)("span", {
+              children: (0, mr.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: RR
+                children: rr
               })
             })]
-          }), yR && (0, wR.jsx)("button", {
+          }), Zr && (0, mr.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, iR.bb)({
+            ...(0, fr._)({
               stopPropagation: !0
             }),
-            onClick: RR => {
-              RR.stopPropagation(), RR.preventDefault(), nR()
+            onClick: rr => {
+              rr.stopPropagation(), rr.preventDefault(), zr()
             },
-            children: (0, wR.jsx)(qR.d, {
+            children: (0, mr.jsx)(Ir.c, {
               name: "pen-to-square"
             })
-          }), !yR && (0, wR.jsx)("span", {
+          }), !Zr && (0, mr.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, wR.jsx)(qR.d, {
+            children: (0, mr.jsx)(Ir.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, wR.jsxs)("button", {
+      return (0, mr.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: LR.color
+          background: hr.color
         },
-        ...(0, iR.bb)(),
+        ...(0, fr._)(),
         onClick: () => {
-          nR()
+          zr()
         },
-        children: [(0, wR.jsx)(eR, {
-          platform: JR
-        }), (0, wR.jsxs)("span", {
+        children: [(0, mr.jsx)(Ur, {
+          platform: Sr
+        }), (0, mr.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, wR.jsx)("span", {
+          children: [(0, mr.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: LR.name
-          }), (0, wR.jsx)("span", {
+            children: hr.name
+          }), (0, mr.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: aR("homePage:profileSocialLinkAdd")
+            children: tr("homePage:profileSocialLinkAdd")
           })]
-        }), (0, wR.jsx)("span", {
+        }), (0, mr.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, wR.jsx)(qR.d, {
+          children: (0, mr.jsx)(Ir.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function LR(RR) {
+    function hr(rr) {
       let {
-        socialLinks: JR,
-        editable: GR = !1,
-        userContext: yR,
-        onLinksUpdated: tR
-      } = RR;
-      if (!GR && 0 === JR.length) return null;
-      const ZR = new Map(JR.map((RR => [RR.platform, RR]))),
-        qR = GR ? uR.r : JR.map((RR => RR.platform));
-      return (0, wR.jsx)("div", {
+        socialLinks: Sr,
+        editable: Qr = !1,
+        userContext: Zr,
+        onLinksUpdated: Wr
+      } = rr;
+      if (!Qr && 0 === Sr.length) return null;
+      const jr = new Map(Sr.map((rr => [rr.platform, rr]))),
+        Ir = Qr ? ar.r : Sr.map((rr => rr.platform));
+      return (0, mr.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, wR.jsx)("div", {
+        children: (0, mr.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: qR.map((RR => (0, wR.jsx)(aR, {
-            platform: RR,
-            link: ZR.get(RR),
-            editable: GR,
-            userContext: yR,
-            onLinksUpdated: tR
-          }, RR)))
+          children: Ir.map((rr => (0, mr.jsx)(tr, {
+            platform: rr,
+            link: jr.get(rr),
+            editable: Qr,
+            userContext: Zr,
+            onLinksUpdated: Wr
+          }, rr)))
         })
       })
     }
   },
-  35140: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR
+  35448: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar
     });
-    var yR = GR(5343),
-      tR = GR(5347);
+    var Zr = Qr(5301),
+      Wr = Qr(5308);
 
-    function uR(RR) {
+    function ar(rr) {
       let {
-        children: JR,
-        showing: GR,
-        globallyUniqueKey: uR,
-        alwaysMountChildren: ZR = !1,
-        doGameplayStartStopOnShow: qR = !0,
-        keepsMovement: iR = !1
-      } = RR;
-      return (0, tR.d)(!0, GR, uR, iR), (0, yR.d)(qR, GR), GR || ZR ? JR : null
+        children: Sr,
+        showing: Qr,
+        globallyUniqueKey: ar,
+        alwaysMountChildren: jr = !1,
+        doGameplayStartStopOnShow: Ir = !0,
+        keepsMovement: fr = !1
+      } = rr;
+      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
     }
   },
-  35204: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  35515: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar
     });
-    var yR = GR(66),
-      tR = GR(4757);
+    var Zr = Qr(72),
+      Wr = Qr(4681);
 
-    function uR() {
-      const [RR, JR] = (0, yR.useState)(!1);
-      return (0, yR.useLayoutEffect)((() => {
-        let RR = !0;
-        return (0, tR.h)().then((() => {
-          RR && JR(!0)
+    function ar() {
+      const [rr, Sr] = (0, Zr.useState)(!1);
+      return (0, Zr.useLayoutEffect)((() => {
+        let rr = !0;
+        return (0, Wr.i)().then((() => {
+          rr && Sr(!0)
         })), () => {
-          RR = !1
+          rr = !1
         }
-      }), []), RR
+      }), []), rr
     }
   },
-  7717: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  7550: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar
     });
-    var yR = GR(66),
-      tR = GR(46);
+    var Zr = Qr(72),
+      Wr = Qr(43);
 
-    function uR(RR, JR) {
-      var GR;
-      const [uR, ZR] = (0, yR.useState)(null !== (GR = tR.i.getItem(RR)) && void 0 !== GR ? GR : JR);
-      return [uR, JR => {
-        tR.i.setItem(RR, JR), ZR(JR)
+    function ar(rr, Sr) {
+      var Qr;
+      const [ar, jr] = (0, Zr.useState)(null !== (Qr = Wr.j.getItem(rr)) && void 0 !== Qr ? Qr : Sr);
+      return [ar, Sr => {
+        Wr.j.setItem(rr, Sr), jr(Sr)
       }]
     }
   },
-  35111: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => aR,
-      e: () => eR
+  35426: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => tr,
+      f: () => Ur
     });
-    GR(35113);
-    var yR = GR(1163),
-      tR = GR.n(yR),
-      uR = GR(66),
-      ZR = GR(35106);
+    Qr(35432);
+    var Zr = Qr(1155),
+      Wr = Qr.n(Zr),
+      ar = Qr(72),
+      jr = Qr(35422);
 
-    function qR(RR, JR) {
-      return Math.max(1, Math.round(RR * JR))
+    function Ir(rr, Sr) {
+      return Math.max(1, Math.round(rr * Sr))
     }
 
-    function iR(RR, JR) {
-      const GR = JR * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        yR = function(RR, JR) {
-          if (RR.lines) return qR(RR.lineThickness, JR) % 2;
-          if (RR.dot) return qR(RR.dotSize, JR) % 2;
-          return fR(RR, JR) % 2
-        }(RR, JR),
-        tR = VR(RR.lineThickness * GR, yR),
-        uR = qR(RR.lineLength, GR),
-        ZR = Math.round(RR.gap * GR),
-        iR = RR.outline > 0 ? qR(RR.outline, GR) : 0,
-        wR = [];
-      if (RR.lines && (wR.push({
-          x: tR + ZR,
+    function fr(rr, Sr) {
+      const Qr = Sr * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        Zr = function(rr, Sr) {
+          if (rr.lines) return Ir(rr.lineThickness, Sr) % 2;
+          if (rr.dot) return Ir(rr.dotSize, Sr) % 2;
+          return Er(rr, Sr) % 2
+        }(rr, Sr),
+        Wr = pr(rr.lineThickness * Qr, Zr),
+        ar = Ir(rr.lineLength, Qr),
+        jr = Math.round(rr.gap * Qr),
+        fr = rr.outline > 0 ? Ir(rr.outline, Qr) : 0,
+        mr = [];
+      if (rr.lines && (mr.push({
+          x: Wr + jr,
           y: 0,
-          w: uR,
-          h: tR,
+          w: ar,
+          h: Wr,
           arm: "right"
-        }), wR.push({
-          x: -ZR - uR,
+        }), mr.push({
+          x: -jr - ar,
           y: 0,
-          w: uR,
-          h: tR,
+          w: ar,
+          h: Wr,
           arm: "left"
-        }), wR.push({
+        }), mr.push({
           x: 0,
-          y: tR + ZR,
-          w: tR,
-          h: uR,
+          y: Wr + jr,
+          w: Wr,
+          h: ar,
           arm: "down"
-        }), RR.tStyle || wR.push({
+        }), rr.tStyle || mr.push({
           x: 0,
-          y: -ZR - uR,
-          w: tR,
-          h: uR,
+          y: -jr - ar,
+          w: Wr,
+          h: ar,
           arm: "up"
-        }), 0 === ZR && wR.push({
+        }), 0 === jr && mr.push({
           x: 0,
           y: 0,
-          w: tR,
-          h: tR
-        })), RR.dot) {
-        const JR = VR(RR.dotSize * GR, yR),
-          uR = RR.lines && 0 === ZR && RR.dotSize > RR.lineThickness ? Math.max(JR, tR + 2) : JR,
-          qR = (tR - uR) / 2;
-        wR.push({
-          x: qR,
-          y: qR,
-          w: uR,
-          h: uR
+          w: Wr,
+          h: Wr
+        })), rr.dot) {
+        const Sr = pr(rr.dotSize * Qr, Zr),
+          ar = rr.lines && 0 === jr && rr.dotSize > rr.lineThickness ? Math.max(Sr, Wr + 2) : Sr,
+          Ir = (Wr - ar) / 2;
+        mr.push({
+          x: Ir,
+          y: Ir,
+          w: ar,
+          h: ar
         })
       }
-      const rR = wR.map((RR => ({
-        ...RR,
-        x: RR.x - iR,
-        y: RR.y - iR,
-        w: RR.w + 2 * iR,
-        h: RR.h + 2 * iR
+      const Nr = mr.map((rr => ({
+        ...rr,
+        x: rr.x - fr,
+        y: rr.y - fr,
+        w: rr.w + 2 * fr,
+        h: rr.h + 2 * fr
       })));
-      let eR = null,
-        aR = null;
-      if (RR.circle) {
-        const JR = qR(RR.circleThickness, GR),
-          uR = function(RR, JR) {
-            return RR + (RR % 2 === JR ? 0 : 1)
-          }(fR(RR, GR), yR),
-          ZR = (tR - uR) / 2;
-        eR = KR(ZR, uR, JR), iR > 0 && (aR = KR(ZR - iR, uR + 2 * iR, JR + 2 * iR))
+      let Ur = null,
+        tr = null;
+      if (rr.circle) {
+        const Sr = Ir(rr.circleThickness, Qr),
+          ar = function(rr, Sr) {
+            return rr + (rr % 2 === Sr ? 0 : 1)
+          }(Er(rr, Qr), Zr),
+          jr = (Wr - ar) / 2;
+        Ur = xr(jr, ar, Sr), fr > 0 && (tr = xr(jr - fr, ar + 2 * fr, Sr + 2 * fr))
       }
       return {
-        cell: tR,
-        fills: wR,
-        outlines: iR > 0 ? rR : [],
-        ring: eR,
-        ringOutline: aR
+        cell: Wr,
+        fills: mr,
+        outlines: fr > 0 ? Nr : [],
+        ring: Ur,
+        ringOutline: tr
       }
     }
 
-    function fR(RR, JR) {
-      return Math.round(RR.circleRadius * JR * 2 + qR(RR.circleThickness, JR))
+    function Er(rr, Sr) {
+      return Math.round(rr.circleRadius * Sr * 2 + Ir(rr.circleThickness, Sr))
     }
 
-    function VR(RR, JR) {
-      return Math.max(2 - JR, 2 * Math.round((RR - JR) / 2) + JR)
+    function pr(rr, Sr) {
+      return Math.max(2 - Sr, 2 * Math.round((rr - Sr) / 2) + Sr)
     }
 
-    function KR(RR, JR, GR) {
-      const yR = 2 * GR >= JR - 1;
+    function xr(rr, Sr, Qr) {
+      const Zr = 2 * Qr >= Sr - 1;
       return {
-        x: RR,
-        y: RR,
-        size: JR,
-        border: Math.min(GR, Math.floor(JR / 2)),
-        filled: yR
+        x: rr,
+        y: rr,
+        size: Sr,
+        border: Math.min(Qr, Math.floor(Sr / 2)),
+        filled: Zr
       }
     }
-    var wR = GR(1378);
-    const rR = 1.4;
+    var mr = Qr(1338);
+    const Nr = 1.4;
 
-    function eR(RR, JR) {
-      return RR && JR ? `scale(${rR})` : "scale(1)"
+    function Ur(rr, Sr) {
+      return rr && Sr ? `scale(${Nr})` : "scale(1)"
     }
 
-    function aR(RR) {
-      return "classic" === RR.settings.style ? (0, wR.jsx)(UR, {
-        ...RR
-      }) : (0, wR.jsx)(lR, {
-        ...RR
+    function tr(rr) {
+      return "classic" === rr.settings.style ? (0, mr.jsx)(Yr, {
+        ...rr
+      }) : (0, mr.jsx)(vr, {
+        ...rr
       })
     }
-    const LR = .125;
+    const hr = .125;
 
-    function nR(RR, JR) {
-      const GR = {};
-      if (RR.color !== ZR.e.color && (GR.color = (0, ZR.j)(RR.color)), RR.opacity !== ZR.e.opacity && (GR.opacity = RR.opacity / 100), RR.outline !== ZR.e.outline || RR.outlineColor !== ZR.e.outlineColor) {
-        const JR = RR.outline,
-          yR = (0, ZR.j)(RR.outlineColor);
-        GR.textShadow = JR > 0 ? `-${JR}px 0 ${yR}, 0 ${JR}px ${yR}, ${JR}px 0 ${yR}, 0 -${JR}px ${yR}` : "none"
+    function zr(rr, Sr) {
+      const Qr = {};
+      if (rr.color !== jr.f.color && (Qr.color = (0, jr.l)(rr.color)), rr.opacity !== jr.f.opacity && (Qr.opacity = rr.opacity / 100), rr.outline !== jr.f.outline || rr.outlineColor !== jr.f.outlineColor) {
+        const Sr = rr.outline,
+          Zr = (0, jr.l)(rr.outlineColor);
+        Qr.textShadow = Sr > 0 ? `-${Sr}px 0 ${Zr}, 0 ${Sr}px ${Zr}, ${Sr}px 0 ${Zr}, 0 -${Sr}px ${Zr}` : "none"
       }
-      if (RR.size !== ZR.e.size) {
-        const yR = RR.size / 100;
-        GR.fontSize = JR ? `calc(max(1.3rem, 18px) * ${yR})` : `calc(1.3rem * ${yR})`, GR.marginTop = `-${LR}em`, GR.transformOrigin = `50% calc(50% + ${LR}em)`
+      if (rr.size !== jr.f.size) {
+        const Zr = rr.size / 100;
+        Qr.fontSize = Sr ? `calc(max(1.3rem, 18px) * ${Zr})` : `calc(1.3rem * ${Zr})`, Qr.marginTop = `-${hr}em`, Qr.transformOrigin = `50% calc(50% + ${hr}em)`
       }
-      return GR
+      return Qr
     }
 
-    function UR(RR) {
+    function Yr(rr) {
       let {
-        settings: JR,
-        touch: GR,
-        inPreview: yR,
-        inEditor: uR,
-        pressed: ZR = !1,
-        pressRef: qR
-      } = RR;
-      return (0, wR.jsx)("div", {
-        className: tR()("Crosshair", {
-          Touch: GR,
-          CrosshairInPreview: yR,
-          CrosshairInEditor: uR || yR
+        settings: Sr,
+        touch: Qr,
+        inPreview: Zr,
+        inEditor: ar,
+        pressed: jr = !1,
+        pressRef: Ir
+      } = rr;
+      return (0, mr.jsx)("div", {
+        className: Wr()("Crosshair", {
+          Touch: Qr,
+          CrosshairInPreview: Zr,
+          CrosshairInEditor: ar || Zr
         }),
-        ref: qR,
+        ref: Ir,
         style: {
-          transform: eR(ZR, JR.growOnClick),
-          ...nR(JR, GR)
+          transform: Ur(jr, Sr.growOnClick),
+          ...zr(Sr, Qr)
         },
         children: "+"
       })
     }
 
-    function WR(RR, JR) {
-      return RR / JR + "px"
+    function nr(rr, Sr) {
+      return rr / Sr + "px"
     }
 
-    function AR(RR, JR, GR, yR) {
+    function er(rr, Sr, Qr, Zr) {
       return {
-        ...MR(RR, JR, GR),
-        width: WR(RR.w, GR),
-        height: WR(RR.h, GR),
-        background: yR
+        ...Br(rr, Sr, Qr),
+        width: nr(rr.w, Qr),
+        height: nr(rr.h, Qr),
+        background: Zr
       }
     }
 
-    function CR(RR, JR, GR) {
+    function Kr(rr, Sr, Qr) {
       return {
-        left: WR(RR.x, JR),
-        top: WR(RR.y, JR),
-        width: WR(RR.size, JR),
-        height: WR(RR.size, JR),
-        borderWidth: WR(RR.border, JR),
-        borderColor: GR,
-        background: RR.filled ? GR : void 0
+        left: nr(rr.x, Sr),
+        top: nr(rr.y, Sr),
+        width: nr(rr.size, Sr),
+        height: nr(rr.size, Sr),
+        borderWidth: nr(rr.border, Sr),
+        borderColor: Qr,
+        background: rr.filled ? Qr : void 0
       }
     }
-    const XR = {
+    const yr = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function MR(RR, JR, GR) {
-      const [yR, tR] = RR.arm ? XR[RR.arm] : [0, 0], uR = Math.round(JR * GR);
+    function Br(rr, Sr, Qr) {
+      const [Zr, Wr] = rr.arm ? yr[rr.arm] : [0, 0], ar = Math.round(Sr * Qr);
       return {
-        left: WR(RR.x + yR * uR, GR),
-        top: WR(RR.y + tR * uR, GR)
+        left: nr(rr.x + Zr * ar, Qr),
+        top: nr(rr.y + Wr * ar, Qr)
       }
     }
 
-    function BR(RR) {
-      return RR.arm ? {
-        "data-arm": RR.arm,
-        "data-x": RR.x,
-        "data-y": RR.y
+    function Tr(rr) {
+      return rr.arm ? {
+        "data-arm": rr.arm,
+        "data-x": rr.x,
+        "data-y": rr.y
       } : {}
     }
 
-    function lR(RR) {
+    function vr(rr) {
       let {
-        settings: JR,
-        inPreview: GR,
-        inEditor: yR,
-        pressed: qR = !1,
-        spread: fR,
-        spreadRef: VR
-      } = RR;
-      const KR = (0, uR.useRef)(null),
+        settings: Sr,
+        inPreview: Qr,
+        inEditor: Zr,
+        pressed: Ir = !1,
+        spread: Er,
+        spreadRef: pr
+      } = rr;
+      const xr = (0, ar.useRef)(null),
         {
-          box: eR,
-          dpr: aR
-        } = function(RR) {
-          const [JR, GR] = (0, uR.useState)({
+          box: Ur,
+          dpr: tr
+        } = function(rr) {
+          const [Sr, Qr] = (0, ar.useState)({
             box: {
               left: 0,
               top: 0,
@@ -12015,200 +12015,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, uR.useLayoutEffect)((() => {
-            const JR = RR.current;
-            if (!JR) return;
-            const yR = () => {
-              const RR = JR.getBoundingClientRect(),
-                yR = window.devicePixelRatio || 1;
-              GR((JR => JR.dpr === yR && JR.box.left === RR.left && JR.box.top === RR.top && JR.box.width === RR.width && JR.box.height === RR.height ? JR : {
+          return (0, ar.useLayoutEffect)((() => {
+            const Sr = rr.current;
+            if (!Sr) return;
+            const Zr = () => {
+              const rr = Sr.getBoundingClientRect(),
+                Zr = window.devicePixelRatio || 1;
+              Qr((Sr => Sr.dpr === Zr && Sr.box.left === rr.left && Sr.box.top === rr.top && Sr.box.width === rr.width && Sr.box.height === rr.height ? Sr : {
                 box: {
-                  left: RR.left,
-                  top: RR.top,
-                  width: RR.width,
-                  height: RR.height
+                  left: rr.left,
+                  top: rr.top,
+                  width: rr.width,
+                  height: rr.height
                 },
-                dpr: yR
+                dpr: Zr
               }))
             };
-            yR();
-            const tR = new ResizeObserver(yR);
-            return tR.observe(JR), window.addEventListener("resize", yR), window.addEventListener("scroll", yR, !0), () => {
-              tR.disconnect(), window.removeEventListener("resize", yR), window.removeEventListener("scroll", yR, !0)
+            Zr();
+            const Wr = new ResizeObserver(Zr);
+            return Wr.observe(Sr), window.addEventListener("resize", Zr), window.addEventListener("scroll", Zr, !0), () => {
+              Wr.disconnect(), window.removeEventListener("resize", Zr), window.removeEventListener("scroll", Zr, !0)
             }
-          }), [RR]), JR
-        }(KR),
-        LR = (0, uR.useRef)(aR);
-      LR.current = aR;
-      const nR = iR(JR, aR, qR && JR.growOnClick ? rR : 1),
-        UR = function(RR, JR, GR) {
-          const yR = Math.round((RR.left + RR.width / 2) * GR - JR / 2),
-            tR = Math.round((RR.top + RR.height / 2) * GR - JR / 2);
+          }), [rr]), Sr
+        }(xr),
+        hr = (0, ar.useRef)(tr);
+      hr.current = tr;
+      const zr = fr(Sr, tr, Ir && Sr.growOnClick ? Nr : 1),
+        Yr = function(rr, Sr, Qr) {
+          const Zr = Math.round((rr.left + rr.width / 2) * Qr - Sr / 2),
+            Wr = Math.round((rr.top + rr.height / 2) * Qr - Sr / 2);
           return {
-            x: yR / GR - RR.left,
-            y: tR / GR - RR.top
+            x: Zr / Qr - rr.left,
+            y: Wr / Qr - rr.top
           }
-        }(eR, nR.cell, aR),
-        WR = (0, ZR.j)(JR.color),
-        XR = (0, ZR.j)(JR.outlineColor),
-        lR = (0, uR.useRef)(0);
-      (0, uR.useLayoutEffect)((() => {
-        if (VR) return VR.current = RR => {
-          var JR;
-          lR.current = RR, null === (JR = KR.current) || void 0 === JR || JR.querySelectorAll("[data-arm]").forEach((JR => {
-            Object.assign(JR.style, MR(function(RR) {
+        }(Ur, zr.cell, tr),
+        nr = (0, jr.l)(Sr.color),
+        yr = (0, jr.l)(Sr.outlineColor),
+        vr = (0, ar.useRef)(0);
+      (0, ar.useLayoutEffect)((() => {
+        if (pr) return pr.current = rr => {
+          var Sr;
+          vr.current = rr, null === (Sr = xr.current) || void 0 === Sr || Sr.querySelectorAll("[data-arm]").forEach((Sr => {
+            Object.assign(Sr.style, Br(function(rr) {
               return {
-                x: Number(RR.dataset.x),
-                y: Number(RR.dataset.y),
-                arm: RR.dataset.arm
+                x: Number(rr.dataset.x),
+                y: Number(rr.dataset.y),
+                arm: rr.dataset.arm
               }
-            }(JR), RR, LR.current))
+            }(Sr), rr, hr.current))
           }))
         }, () => {
-          VR.current = null
+          pr.current = null
         }
-      }), [VR]);
-      const pR = null !== fR && void 0 !== fR ? fR : lR.current;
-      return (0, wR.jsx)("div", {
-        ref: KR,
-        className: tR()("CrosshairShapes", {
-          CrosshairInPreview: GR,
-          CrosshairInEditor: yR || GR,
-          CrosshairSpreads: void 0 !== VR
+      }), [pr]);
+      const Or = null !== Er && void 0 !== Er ? Er : vr.current;
+      return (0, mr.jsx)("div", {
+        ref: xr,
+        className: Wr()("CrosshairShapes", {
+          CrosshairInPreview: Qr,
+          CrosshairInEditor: Zr || Qr,
+          CrosshairSpreads: void 0 !== pr
         }),
-        children: (0, wR.jsx)("div", {
+        children: (0, mr.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: UR.x,
-            top: UR.y,
-            opacity: JR.opacity / 100
+            left: Yr.x,
+            top: Yr.y,
+            opacity: Sr.opacity / 100
           },
-          children: (0, wR.jsxs)("div", {
+          children: (0, mr.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [nR.ringOutline && (0, wR.jsx)("div", {
+            children: [zr.ringOutline && (0, mr.jsx)("div", {
               className: "CrosshairRing",
-              style: CR(nR.ringOutline, aR, XR)
-            }), nR.outlines.map(((RR, JR) => (0, wR.jsx)("div", {
+              style: Kr(zr.ringOutline, tr, yr)
+            }), zr.outlines.map(((rr, Sr) => (0, mr.jsx)("div", {
               className: "CrosshairPart",
-              ...BR(RR),
-              style: AR(RR, pR, aR, XR)
-            }, `o${JR}`))), nR.ring && (0, wR.jsx)("div", {
+              ...Tr(rr),
+              style: er(rr, Or, tr, yr)
+            }, `o${Sr}`))), zr.ring && (0, mr.jsx)("div", {
               className: "CrosshairRing",
-              style: CR(nR.ring, aR, WR)
-            }), nR.fills.map(((RR, JR) => (0, wR.jsx)("div", {
+              style: Kr(zr.ring, tr, nr)
+            }), zr.fills.map(((rr, Sr) => (0, mr.jsx)("div", {
               className: "CrosshairPart",
-              ...BR(RR),
-              style: AR(RR, pR, aR, WR)
-            }, `f${JR}`)))]
+              ...Tr(rr),
+              style: er(rr, Or, tr, nr)
+            }, `f${Sr}`)))]
           })
         })
       })
     }
   },
-  35122: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => VR,
-      f: () => LR,
-      h: () => aR
+  35435: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => pr,
+      i: () => hr,
+      m: () => tr
     });
-    var yR = GR(35106);
-    const tR = "XH1-",
-      uR = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      ZR = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      qR = ["color", "outlineColor"],
-      iR = 1 + 3 * qR.length + ZR.length + 1,
-      fR = Math.ceil(8 * iR / Math.log2(62)),
-      VR = tR.length + fR;
+    var Zr = Qr(35422);
+    const Wr = "XH1-",
+      ar = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      jr = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      Ir = ["color", "outlineColor"],
+      fr = 1 + 3 * Ir.length + jr.length + 1,
+      Er = Math.ceil(8 * fr / Math.log2(62)),
+      pr = Wr.length + Er;
 
-    function KR(RR) {
-      let JR = 90;
-      for (const GR of RR) JR = 31 * JR + GR & 255;
-      return JR
+    function xr(rr) {
+      let Sr = 90;
+      for (const Qr of rr) Sr = 31 * Sr + Qr & 255;
+      return Sr
     }
-    const wR = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      rR = BigInt(wR.length);
+    const mr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      Nr = BigInt(mr.length);
 
-    function eR(RR, JR) {
-      let GR = 0n;
-      for (const tR of RR) {
-        const RR = wR.indexOf(tR);
-        if (RR < 0) return null;
-        GR = GR * rR + BigInt(RR)
+    function Ur(rr, Sr) {
+      let Qr = 0n;
+      for (const Wr of rr) {
+        const rr = mr.indexOf(Wr);
+        if (rr < 0) return null;
+        Qr = Qr * Nr + BigInt(rr)
       }
-      if (GR >> BigInt(8 * JR) !== 0n) return null;
-      const yR = [];
-      for (let tR = 0; tR < JR; tR++) yR.unshift(Number(0xffn & GR)), GR >>= 8n;
-      return yR
+      if (Qr >> BigInt(8 * Sr) !== 0n) return null;
+      const Zr = [];
+      for (let Wr = 0; Wr < Sr; Wr++) Zr.unshift(Number(0xffn & Qr)), Qr >>= 8n;
+      return Zr
     }
 
-    function aR(RR) {
-      let JR = "shapes" === RR.style ? 1 : 0;
-      uR.forEach(((GR, yR) => {
-        RR[GR] && (JR |= 1 << yR + 1)
+    function tr(rr) {
+      let Sr = "shapes" === rr.style ? 1 : 0;
+      ar.forEach(((Qr, Zr) => {
+        rr[Qr] && (Sr |= 1 << Zr + 1)
       }));
-      const GR = [JR];
-      for (const tR of qR) {
-        const JR = (0, yR.f)(tR, RR[tR]);
-        GR.push(JR >> 16 & 255, JR >> 8 & 255, 255 & JR)
+      const Qr = [Sr];
+      for (const Wr of Ir) {
+        const Sr = (0, Zr.j)(Wr, rr[Wr]);
+        Qr.push(Sr >> 16 & 255, Sr >> 8 & 255, 255 & Sr)
       }
-      for (const tR of ZR) {
+      for (const Wr of jr) {
         const {
-          min: JR,
-          step: uR
-        } = yR.d[tR];
-        GR.push(Math.round(((0, yR.f)(tR, RR[tR]) - JR) / uR))
+          min: Sr,
+          step: ar
+        } = Zr.b[Wr];
+        Qr.push(Math.round(((0, Zr.j)(Wr, rr[Wr]) - Sr) / ar))
       }
-      return GR.push(KR(GR)), tR + function(RR, JR) {
-        let GR = 0n;
-        for (const tR of RR) GR = GR << 8n | BigInt(tR);
-        let yR = "";
-        for (let tR = 0; tR < JR; tR++) yR = wR[Number(GR % rR)] + yR, GR /= rR;
-        return yR
-      }(GR, fR)
+      return Qr.push(xr(Qr)), Wr + function(rr, Sr) {
+        let Qr = 0n;
+        for (const Wr of rr) Qr = Qr << 8n | BigInt(Wr);
+        let Zr = "";
+        for (let Wr = 0; Wr < Sr; Wr++) Zr = mr[Number(Qr % Nr)] + Zr, Qr /= Nr;
+        return Zr
+      }(Qr, Er)
     }
 
-    function LR(RR) {
-      for (const JR of RR.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${fR}})`, "gi"))) {
-        const RR = nR(eR(JR[1], iR));
-        if (RR) return RR
+    function hr(rr) {
+      for (const Sr of rr.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Er}})`, "gi"))) {
+        const rr = zr(Ur(Sr[1], fr));
+        if (rr) return rr
       }
       return null
     }
 
-    function nR(RR) {
-      if (!RR || RR.length !== iR || KR(RR.slice(0, -1)) !== RR[RR.length - 1]) return null;
-      const JR = RR[0],
-        GR = {
-          ...yR.e,
-          style: 1 & JR ? "shapes" : "classic"
+    function zr(rr) {
+      if (!rr || rr.length !== fr || xr(rr.slice(0, -1)) !== rr[rr.length - 1]) return null;
+      const Sr = rr[0],
+        Qr = {
+          ...Zr.f,
+          style: 1 & Sr ? "shapes" : "classic"
         };
-      uR.forEach(((RR, yR) => {
-        GR[RR] = 0 !== (JR & 1 << yR + 1)
+      ar.forEach(((rr, Zr) => {
+        Qr[rr] = 0 !== (Sr & 1 << Zr + 1)
       }));
-      let tR = 1;
-      for (const yR of qR) GR[yR] = RR[tR] << 16 | RR[tR + 1] << 8 | RR[tR + 2], tR += 3;
-      for (const uR of ZR) {
+      let Wr = 1;
+      for (const Zr of Ir) Qr[Zr] = rr[Wr] << 16 | rr[Wr + 1] << 8 | rr[Wr + 2], Wr += 3;
+      for (const ar of jr) {
         const {
-          min: JR,
-          step: ZR
-        } = yR.d[uR];
-        GR[uR] = (0, yR.f)(uR, JR + RR[tR] * ZR), tR++
+          min: Sr,
+          step: jr
+        } = Zr.b[ar];
+        Qr[ar] = (0, Zr.j)(ar, Sr + rr[Wr] * jr), Wr++
       }
-      return GR
+      return Qr
     }
   },
-  35106: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR,
-      e: () => tR,
-      f: () => uR,
-      j: () => fR,
-      m: () => iR,
-      p: () => VR,
-      t: () => qR,
-      w: () => ZR
+  35422: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Zr,
+      f: () => Wr,
+      j: () => ar,
+      l: () => Er,
+      o: () => fr,
+      r: () => pr,
+      t: () => Ir,
+      u: () => jr
     });
-    const yR = {
+    const Zr = {
         opacity: {
           min: 5,
           max: 100,
@@ -12265,7 +12265,7 @@ export const modules = {
           step: 1
         }
       },
-      tR = Object.freeze({
+      Wr = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -12286,412 +12286,415 @@ export const modules = {
         forGuns: !1
       });
 
-    function uR(RR, JR) {
-      var GR;
+    function ar(rr, Sr) {
+      var Qr;
       const {
-        min: uR,
-        max: ZR,
-        step: qR
-      } = yR[RR];
-      if (!Number.isFinite(JR)) return tR[RR];
-      const iR = (null !== (GR = String(qR).split(".")[1]) && void 0 !== GR ? GR : "").length,
-        fR = Number((Math.round(JR / qR) * qR).toFixed(iR));
-      return Math.min(ZR, Math.max(uR, fR))
+        min: ar,
+        max: jr,
+        step: Ir
+      } = Zr[rr];
+      if (!Number.isFinite(Sr)) return Wr[rr];
+      const fr = (null !== (Qr = String(Ir).split(".")[1]) && void 0 !== Qr ? Qr : "").length,
+        Er = Number((Math.round(Sr / Ir) * Ir).toFixed(fr));
+      return Math.min(jr, Math.max(ar, Er))
     }
 
-    function ZR(RR, JR, GR) {
-      const yR = "number" === typeof GR ? uR(JR, GR) : GR;
+    function jr(rr, Sr, Qr) {
+      const Zr = "number" === typeof Qr ? ar(Sr, Qr) : Qr;
       return {
-        ...RR,
-        [JR]: yR
+        ...rr,
+        [Sr]: Zr
       }
     }
 
-    function qR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(tR).every((yR => GR.includes(yR) || RR[yR] === JR[yR]))
+    function Ir(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Wr).every((Zr => Qr.includes(Zr) || rr[Zr] === Sr[Zr]))
     }
 
-    function iR(RR) {
-      return qR(RR, tR)
+    function fr(rr) {
+      return Ir(rr, Wr)
     }
 
-    function fR(RR) {
-      return `#${RR.toString(16).padStart(6,"0")}`
+    function Er(rr) {
+      return `#${rr.toString(16).padStart(6,"0")}`
     }
 
-    function VR(RR) {
-      const JR = /^#?([0-9a-f]{6})$/i.exec(RR.trim());
-      return JR ? parseInt(JR[1], 16) : null
+    function pr(rr) {
+      const Sr = /^#?([0-9a-f]{6})$/i.exec(rr.trim());
+      return Sr ? parseInt(Sr[1], 16) : null
     }
   },
-  35124: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => KR,
-      f: () => wR
+  35437: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => xr,
+      f: () => mr
     });
-    var yR = GR(66),
-      tR = GR(46),
-      uR = GR(35122),
-      ZR = GR(35106);
-    const qR = "crosshairCode";
-    let iR = null;
-    const fR = new Set;
+    var Zr = Qr(72),
+      Wr = Qr(43),
+      ar = Qr(35435),
+      jr = Qr(35422);
+    const Ir = "crosshairCode";
+    let fr = null;
+    const Er = new Set;
 
-    function VR() {
-      if (null === iR) {
-        var RR;
-        const JR = tR.i.getItem(qR);
-        iR = null !== (RR = "string" === typeof JR ? (0, uR.f)(JR) : null) && void 0 !== RR ? RR : ZR.e
+    function pr() {
+      if (null === fr) {
+        var rr;
+        const Sr = Wr.j.getItem(Ir);
+        fr = null !== (rr = "string" === typeof Sr ? (0, ar.i)(Sr) : null) && void 0 !== rr ? rr : jr.f
       }
-      return iR
+      return fr
     }
 
-    function KR(RR) {
-      iR = RR, (0, ZR.m)(RR) ? tR.i.removeItem(qR) : tR.i.setItem(qR, (0, uR.h)(RR));
-      for (const JR of fR) JR()
+    function xr(rr) {
+      fr = rr, (0, jr.o)(rr) ? Wr.j.removeItem(Ir) : Wr.j.setItem(Ir, (0, ar.m)(rr));
+      for (const Sr of Er) Sr()
     }
 
-    function wR() {
-      const [RR, JR] = (0, yR.useState)(VR);
-      return (0, yR.useEffect)((() => {
-        const RR = () => {
-          JR(VR())
+    function mr() {
+      const [rr, Sr] = (0, Zr.useState)(pr);
+      return (0, Zr.useEffect)((() => {
+        const rr = () => {
+          Sr(pr())
         };
-        return RR(), GR = RR, fR.add(GR), () => {
-          fR.delete(GR)
+        return rr(), Qr = rr, Er.add(Qr), () => {
+          Er.delete(Qr)
         };
-        var GR
-      }), []), RR
+        var Qr
+      }), []), rr
     }
   },
-  35172: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR,
-      h: () => ZR,
-      l: () => uR
+  35484: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr,
+      i: () => jr,
+      m: () => ar
     });
-    var yR = GR(66);
-    const tR = new class {
+    var Zr = Qr(72);
+    const Wr = new class {
       constructor() {
         this.inFlight = new Map, this.landings = new Map, this.listeners = new Set
       }
-      getInFlight(RR) {
-        var JR;
-        return null !== (JR = this.inFlight.get(RR)) && void 0 !== JR ? JR : 0
+      getInFlight(rr) {
+        var Sr;
+        return null !== (Sr = this.inFlight.get(rr)) && void 0 !== Sr ? Sr : 0
       }
-      setInFlight(RR, JR) {
-        this.getInFlight(RR) !== JR && (this.inFlight.set(RR, JR), this.notify())
+      setInFlight(rr, Sr) {
+        this.getInFlight(rr) !== Sr && (this.inFlight.set(rr, Sr), this.notify())
       }
-      subscribe(RR) {
-        return this.listeners.add(RR), () => {
-          this.listeners.delete(RR)
+      subscribe(rr) {
+        return this.listeners.add(rr), () => {
+          this.listeners.delete(rr)
         }
       }
-      getLanding(RR) {
-        var JR, GR;
-        return null !== (JR = null === (GR = this.landings.get(RR)) || void 0 === GR ? void 0 : GR.at(-1)) && void 0 !== JR ? JR : null
+      getLanding(rr) {
+        var Sr, Qr;
+        return null !== (Sr = null === (Qr = this.landings.get(rr)) || void 0 === Qr ? void 0 : Qr.at(-1)) && void 0 !== Sr ? Sr : null
       }
-      hasLanding(RR, JR) {
-        var GR, yR;
-        return null !== (GR = null === (yR = this.landings.get(RR)) || void 0 === yR ? void 0 : yR.includes(JR)) && void 0 !== GR && GR
+      hasLanding(rr, Sr) {
+        var Qr, Zr;
+        return null !== (Qr = null === (Zr = this.landings.get(rr)) || void 0 === Zr ? void 0 : Zr.includes(Sr)) && void 0 !== Qr && Qr
       }
-      addLanding(RR, JR) {
-        var GR;
-        const yR = null !== (GR = this.landings.get(RR)) && void 0 !== GR ? GR : [];
-        return this.landings.set(RR, [...yR, JR]), this.notify(), () => {
-          this.landings.set(RR, this.landings.get(RR).filter((RR => RR !== JR))), this.notify()
+      addLanding(rr, Sr) {
+        var Qr;
+        const Zr = null !== (Qr = this.landings.get(rr)) && void 0 !== Qr ? Qr : [];
+        return this.landings.set(rr, [...Zr, Sr]), this.notify(), () => {
+          this.landings.set(rr, this.landings.get(rr).filter((rr => rr !== Sr))), this.notify()
         }
       }
       notify() {
-        for (const RR of this.listeners) RR()
+        for (const rr of this.listeners) rr()
       }
     };
 
-    function uR(RR, JR) {
-      const [GR, uR] = (0, yR.useState)((() => tR.getInFlight(RR)));
-      return (0, yR.useLayoutEffect)((() => {
-        const JR = () => {
-          uR(tR.getInFlight(RR))
+    function ar(rr, Sr) {
+      const [Qr, ar] = (0, Zr.useState)((() => Wr.getInFlight(rr)));
+      return (0, Zr.useLayoutEffect)((() => {
+        const Sr = () => {
+          ar(Wr.getInFlight(rr))
         };
-        return JR(), tR.subscribe(JR)
-      }), [RR]), Math.max(0, JR - GR)
+        return Sr(), Wr.subscribe(Sr)
+      }), [rr]), Math.max(0, Sr - Qr)
     }
 
-    function ZR(RR, JR) {
-      let GR = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      (0, yR.useLayoutEffect)((() => {
-        if (GR) return tR.addLanding(RR, JR.current)
-      }), [RR, JR, GR])
+    function jr(rr, Sr) {
+      let Qr = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      (0, Zr.useLayoutEffect)((() => {
+        if (Qr) return Wr.addLanding(rr, Sr.current)
+      }), [rr, Sr, Qr])
     }
   },
-  35054: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR,
-      h: () => yR
+  35366: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr,
+      h: () => Zr
     });
-    const yR = "image/jpeg",
-      tR = "jpg"
+    const Zr = "image/jpeg",
+      Wr = "jpg"
   },
-  35059: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => iR,
-      e: () => fR,
-      f: () => VR
+  35371: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => fr,
+      c: () => Er,
+      d: () => pr
     });
-    var yR = GR(1879),
-      tR = GR(4479),
-      uR = GR(103),
-      ZR = GR(1963),
-      qR = GR(35054);
+    var Zr = Qr(1815),
+      Wr = Qr(4413),
+      ar = Qr(109),
+      jr = Qr(1904),
+      Ir = Qr(35366);
 
-    function iR() {
-      return !(0, uR.isMobileApp)() || yR.c.supports("photos")
+    function fr() {
+      return !(0, ar.isMobileApp)() || Zr.b.supports("photos")
     }
-    async function fR(RR) {
-      var JR, GR;
-      if ((0, uR.isMobileApp)()) {
+    async function Er(rr) {
+      var Sr, Qr;
+      if ((0, ar.isMobileApp)()) {
         const {
-          saved: JR
-        } = await yR.c.request("photos.save", {
-          data: await (0, tR.e)(RR),
-          mimeType: qR.h
+          saved: Sr
+        } = await Zr.b.request("photos.save", {
+          data: await (0, Wr.f)(rr),
+          mimeType: Ir.h
         });
-        return JR ? "saved" : "denied"
+        return Sr ? "saved" : "denied"
       }
-      return (0, uR.isIOS)() && null !== (JR = (GR = navigator).canShare) && void 0 !== JR && JR.call(GR, {
-        files: [RR]
-      }) ? VR(RR) : ((0, ZR.e)(RR, RR.name), "saved")
+      return (0, ar.isIOS)() && null !== (Sr = (Qr = navigator).canShare) && void 0 !== Sr && Sr.call(Qr, {
+        files: [rr]
+      }) ? pr(rr) : ((0, jr.c)(rr, rr.name), "saved")
     }
-    async function VR(RR) {
+    async function pr(rr) {
       try {
         return await navigator.share({
-          files: [RR]
+          files: [rr]
         }), "shared"
-      } catch (JR) {
-        if (JR instanceof DOMException && "AbortError" === JR.name) return "xR";
-        if (JR instanceof DOMException && "NotAllowedError" === JR.name) return "needsTap";
-        throw JR
+      } catch (Sr) {
+        if (Sr instanceof DOMException && "AbortError" === Sr.name) return "Rr";
+        if (Sr instanceof DOMException && "NotAllowedError" === Sr.name) return "needsTap";
+        throw Sr
       }
     }
   },
-  35047: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => eR,
-      e: () => aR,
-      h: () => LR,
-      i: () => nR
+  35350: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Ur,
+      f: () => tr,
+      g: () => hr,
+      k: () => zr
     });
-    var yR = GR(25),
-      tR = GR(35029),
-      uR = GR(1800),
-      ZR = GR(35051);
-    const qR = 64,
-      iR = 8;
-    async function fR(RR) {
+    var Zr = Qr(26),
+      Wr = Qr(35335),
+      ar = Qr(1758),
+      jr = Qr(35359);
+    const Ir = 64,
+      fr = 8;
+    async function Er(rr) {
       try {
-        const JR = await createImageBitmap(RR, {
-          resizeWidth: qR,
-          resizeHeight: qR,
+        const Sr = await createImageBitmap(rr, {
+          resizeWidth: Ir,
+          resizeHeight: Ir,
           resizeQuality: "high"
         });
         try {
-          const RR = document.createElement("canvas");
-          RR.width = qR, RR.height = qR;
-          const GR = RR.getContext("2d", {
+          const rr = document.createElement("canvas");
+          rr.width = Ir, rr.height = Ir;
+          const Qr = rr.getContext("2d", {
             willReadFrequently: !0
           });
-          return GR.drawImage(JR, 0, 0, qR, qR),
-            function(RR) {
-              for (let JR = 0; JR < RR.length; JR += 4)
-                if (RR[JR] > iR || RR[JR + 1] > iR || RR[JR + 2] > iR) return !1;
+          return Qr.drawImage(Sr, 0, 0, Ir, Ir),
+            function(rr) {
+              for (let Sr = 0; Sr < rr.length; Sr += 4)
+                if (rr[Sr] > fr || rr[Sr + 1] > fr || rr[Sr + 2] > fr) return !1;
               return !0
-            }(GR.getImageData(0, 0, qR, qR).data)
+            }(Qr.getImageData(0, 0, Ir, Ir).data)
         } finally {
-          JR.close()
+          Sr.close()
         }
-      } catch (JR) {
-        return console.warn("Screenshot mode: couldn't check whether a photo is blank", JR), !1
+      } catch (Sr) {
+        return console.warn("Screenshot mode: couldn't check whether a photo is blank", Sr), !1
       }
     }
-    var VR = GR(35054);
-    const KR = 8294400,
-      wR = .92,
-      rR = 3;
-    class eR extends Error {
-      constructor(RR) {
-        super(`The photo came out blank ${RR} times`), this.name = "BlankPhotoError"
+    var pr = Qr(35366);
+    const xr = 8294400,
+      mr = .92,
+      Nr = 3;
+    class Ur extends Error {
+      constructor(rr) {
+        super(`The photo came out blank ${rr} times`), this.name = "BlankPhotoError"
       }
     }
 
-    function aR() {
-      (0, uR.e)(), yR.d.set({
+    function tr() {
+      (0, ar.e)(), Zr.c.set({
         screenshotMode: !0
       })
     }
 
-    function LR() {
-      yR.d.set({
+    function hr() {
+      Zr.c.set({
         screenshotMode: !1
       })
     }
-    async function nR() {
-      const RR = performance.now(),
-        JR = await async function(RR, JR) {
-          let GR = 0;
-          for (; GR < rR;) {
-            let tR;
+    async function zr() {
+      const rr = performance.now(),
+        Sr = await async function(rr, Sr) {
+          let Qr = 0;
+          for (; Qr < Nr;) {
+            let Wr;
             try {
-              tR = await RR()
-            } catch (yR) {
-              if (0 === GR) throw yR;
+              Wr = await rr()
+            } catch (Zr) {
+              if (0 === Qr) throw Zr;
               return {
                 outcome: "failed",
-                error: yR,
-                blanks: GR
+                error: Zr,
+                blanks: Qr
               }
             }
-            if (!await JR(tR)) return {
+            if (!await Sr(Wr)) return {
               outcome: "saved",
-              blob: tR,
-              blanks: GR
+              blob: Wr,
+              blanks: Qr
             };
-            GR++
+            Qr++
           }
           return {
             outcome: "refused",
-            blanks: GR
+            blanks: Qr
           }
         }((async () => {
           const {
-            width: RR,
-            height: JR,
-            scale: GR
-          } = function(RR, JR, GR) {
-            const yR = Math.max(1, RR),
-              tR = Math.max(1, JR),
-              uR = Math.min(Math.max(1, GR), Math.sqrt(KR / (yR * tR)));
+            width: rr,
+            height: Sr,
+            scale: Qr
+          } = function(rr, Sr, Qr) {
+            const Zr = Math.max(1, rr),
+              Wr = Math.max(1, Sr),
+              ar = Math.min(Math.max(1, Qr), Math.sqrt(xr / (Zr * Wr)));
             return {
-              width: Math.round(yR * uR),
-              height: Math.round(tR * uR),
-              scale: uR
+              width: Math.round(Zr * ar),
+              height: Math.round(Wr * ar),
+              scale: ar
             }
           }(window.innerWidth, window.innerHeight, window.devicePixelRatio);
-          return (await tR.devTools.capturePhoto(RR, JR, {
-            scale: GR,
-            type: VR.h,
-            quality: wR
+          return (await Wr.devTools.capturePhoto(rr, Sr, {
+            scale: Qr,
+            type: pr.h,
+            quality: mr
           })).blob
-        }), fR);
-      if (JR.blanks > 0) {
-        const yR = (0, ZR.d)();
-        GR.e(309).then((() => GR(42594))).then((GR => {
+        }), Er);
+      if (Sr.blanks > 0) {
+        const Zr = (0, jr.c)();
+        Qr.e(310).then((() => Qr(42928))).then((Qr => {
           let {
-            reportBlankPhoto: tR
-          } = GR;
-          tR(JR.blanks, JR.outcome, RR, yR)
-        })).catch((RR => {
-          console.warn("Screenshot mode: couldn't report a blank photo", RR)
+            reportBlankPhoto: Wr
+          } = Qr;
+          Wr(Sr.blanks, Sr.outcome, rr, Zr)
+        })).catch((rr => {
+          console.warn("Screenshot mode: couldn't report a blank photo", rr)
         }))
       }
-      switch (JR.outcome) {
+      switch (Sr.outcome) {
         case "saved":
-          return new File([JR.blob], function(RR) {
-            const JR = RR => String(RR).padStart(2, "0"),
-              GR = `${RR.getFullYear()}${JR(RR.getMonth()+1)}${JR(RR.getDate())}`,
-              yR = `${JR(RR.getHours())}${JR(RR.getMinutes())}${JR(RR.getSeconds())}`;
-            return `bloxd-${GR}-${yR}.${VR.e}`
+          return new File([Sr.blob], function(rr) {
+            const Sr = rr => String(rr).padStart(2, "0"),
+              Qr = `${rr.getFullYear()}${Sr(rr.getMonth()+1)}${Sr(rr.getDate())}`,
+              Zr = `${Sr(rr.getHours())}${Sr(rr.getMinutes())}${Sr(rr.getSeconds())}`;
+            return `bloxd-${Qr}-${Zr}.${pr.e}`
           }(new Date), {
-            type: VR.h
+            type: pr.h
           });
         case "refused":
-          throw new eR(JR.blanks);
+          throw new Ur(Sr.blanks);
         case "failed":
-          throw JR.error
+          throw Sr.error
       }
     }
   },
-  35099: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR,
-      i: () => tR
+  35416: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar,
+      d: () => Wr
     });
-    var yR = GR(25);
+    var Zr = Qr(26);
 
-    function tR(RR, JR) {
-      return RR && !JR
+    function Wr(rr, Sr) {
+      return rr && !Sr
     }
 
-    function uR() {
-      return tR(yR.d.get("isTouchScreen"), yR.d.get("clientEscMenuOptions").touchActionButtons)
+    function ar() {
+      return Wr(Zr.c.get("isTouchScreen"), Zr.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  5581: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR,
-      c: () => uR,
-      e: () => tR
+  5517: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr,
+      f: () => ar,
+      j: () => Wr
     });
-    let yR = null;
+    let Zr = null;
 
-    function tR(RR) {
-      yR = RR
+    function Wr(rr) {
+      Zr = rr
     }
 
-    function uR() {
-      return yR
+    function ar() {
+      return Zr
     }
 
-    function ZR(RR) {
-      return "bloxd" === RR.site && !RR.isMobileApp && !RR.isTouchScreen
+    function jr(rr) {
+      return "bloxd" === rr.site && !rr.isMobileApp && !rr.isTouchScreen
     }
   },
-  35031: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => yR
+  35337: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Zr
     });
-    const yR = new Set(["chunkBorders"])
+    const Zr = new Set(["chunkBorders"])
   },
-  35029: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      ALL_DEV_TOOLS: () => ZR,
-      coreDevTools: () => fR,
-      devTools: () => iR
+  35335: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      ALL_DEV_TOOLS: () => jr,
+      coreDevTools: () => Er,
+      devTools: () => fr
     });
-    var yR = GR(709),
-      tR = GR(1397),
-      uR = GR(35031);
-    const ZR = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function qR() {
+    var Zr = Qr(712),
+      Wr = Qr(1364),
+      ar = Qr(35337);
+    const jr = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ir() {
       const {
-        noaDevTools: RR
-      } = await GR.e(269).then((() => GR(42590)));
-      return RR
+        noaDevTools: rr
+      } = await Qr.e(270).then((() => Qr(42923)));
+      return rr
     }
-    const iR = new class {
+    const fr = new class {
         constructor() {
-          this.loadHost = qR, this.tools = ZR
+          this.loadHost = Ir, this.tools = jr
         }
-        setHost(RR) {
-          this.tools = null === RR ? ZR : RR.tools, this.loadHost = null === RR ? qR : async () => RR
+        setHost(rr) {
+          this.tools = null === rr ? jr : rr.tools, this.loadHost = null === rr ? Ir : async () => rr
         }
-        supports(RR) {
-          return this.tools.has(RR)
+        supports(rr) {
+          return this.tools.has(rr)
         }
-        async downloadScene(RR, JR) {
-          const GR = await this.loadHost();
-          await GR.downloadScene(RR, JR)
+        async downloadScene(rr, Sr) {
+          const Qr = await this.loadHost();
+          await Qr.downloadScene(rr, Sr)
         }
-        async setAmbientLightIntensity(RR) {
-          const JR = await this.loadHost();
-          await JR.setAmbientLightIntensity(RR)
+        async setAmbientLightIntensity(rr) {
+          const Sr = await this.loadHost();
+          await Sr.setAmbientLightIntensity(rr)
         }
-        async capturePhoto(RR, JR, GR) {
-          return (await this.loadHost()).capturePhoto(RR, JR, GR)
+        async capturePhoto(rr, Sr, Qr) {
+          return (await this.loadHost()).capturePhoto(rr, Sr, Qr)
+        }
+        async snapshotNextFrame() {
+          return (await this.loadHost()).snapshotNextFrame()
         }
       },
-      fR = {
-        tools: uR.e,
+      Er = {
+        tools: ar.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -12700,132 +12703,135 @@ export const modules = {
         },
         capturePhoto: async () => {
           throw new Error("No game is drawing yet")
+        },
+        snapshotNextFrame: async () => {
+          throw new Error("No game is drawing yet")
         }
       };
-    yR.G && iR.setHost(fR), (0, tR.E)((() => {
-      iR.setHost(fR)
+    Zr.I && fr.setHost(Er), (0, Wr.M)((() => {
+      fr.setHost(Er)
     }))
   },
-  35195: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR,
-      i: () => tR,
-      l: () => KR
+  35509: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Ir,
+      e: () => Wr,
+      i: () => xr
     });
-    var yR = GR(1718);
+    var Zr = Qr(1686);
 
-    function tR(RR) {
-      var JR;
+    function Wr(rr) {
+      var Sr;
       return {
-        ...qR.store,
-        yaw: qR.store.yaw + (null !== (JR = yR.b[RR].previewYaw) && void 0 !== JR ? JR : 0)
+        ...Ir.store,
+        yaw: Ir.store.yaw + (null !== (Sr = Zr.e[rr].previewYaw) && void 0 !== Sr ? Sr : 0)
       }
     }
-    const uR = {
+    const ar = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      ZR = {
-        ...uR,
+      jr = {
+        ...ar,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      qR = {
-        player: uR,
-        store: ZR,
+      Ir = {
+        player: ar,
+        store: jr,
         showcase: {
-          ...ZR,
+          ...jr,
           target: [0, 1.9, 0]
         }
       };
 
-    function iR(RR, JR) {
-      RR instanceof Promise ? RR.then(JR).catch((RR => {
-        console.error("Couldn't open the preview", RR)
-      })) : JR(RR)
+    function fr(rr, Sr) {
+      rr instanceof Promise ? rr.then(Sr).catch((rr => {
+        console.error("Couldn't open the preview", rr)
+      })) : Sr(rr)
     }
-    class fR {
-      constructor(RR) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, iR(RR, (RR => {
-          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height), null !== this.view && RR.show(this.view))
+    class Er {
+      constructor(rr) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, fr(rr, (rr => {
+          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height), null !== this.view && rr.show(this.view))
         }))
       }
-      show(RR) {
-        var JR;
-        this.view = RR, null === (JR = this.opened) || void 0 === JR || JR.show(RR)
+      show(rr) {
+        var Sr;
+        this.view = rr, null === (Sr = this.opened) || void 0 === Sr || Sr.show(rr)
       }
-      resize(RR, JR) {
-        var GR;
+      resize(rr, Sr) {
+        var Qr;
         this.size = {
-          width: RR,
-          height: JR
-        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
+          width: rr,
+          height: Sr
+        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
       }
       close() {
-        var RR;
-        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
+        var rr;
+        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
       }
     }
-    class VR {
-      constructor(RR) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(RR).then((RR => RR.ready)), iR(RR, (RR => {
-          this.closed ? RR.close() : (this.opened = RR, null !== this.size && RR.resize(this.size.width, this.size.height))
+    class pr {
+      constructor(rr) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(rr).then((rr => rr.ready)), fr(rr, (rr => {
+          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var RR, JR;
-        return null !== (RR = null === (JR = this.opened) || void 0 === JR ? void 0 : JR.isReady()) && void 0 !== RR && RR
+        var rr, Sr;
+        return null !== (rr = null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.isReady()) && void 0 !== rr && rr
       }
-      setCosmetic(RR, JR) {
-        var GR;
-        null === (GR = this.opened) || void 0 === GR || GR.setCosmetic(RR, JR)
+      setCosmetic(rr, Sr) {
+        var Qr;
+        null === (Qr = this.opened) || void 0 === Qr || Qr.setCosmetic(rr, Sr)
       }
-      setNametag(RR) {
-        var JR;
-        null === (JR = this.opened) || void 0 === JR || JR.setNametag(RR)
+      setNametag(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.setNametag(rr)
       }
-      playEmote(RR) {
-        var JR;
-        null === (JR = this.opened) || void 0 === JR || JR.playEmote(RR)
+      playEmote(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.playEmote(rr)
       }
-      setOrbit(RR) {
-        var JR;
-        null === (JR = this.opened) || void 0 === JR || JR.setOrbit(RR)
+      setOrbit(rr) {
+        var Sr;
+        null === (Sr = this.opened) || void 0 === Sr || Sr.setOrbit(rr)
       }
       resetCamera() {
-        var RR;
-        null === (RR = this.opened) || void 0 === RR || RR.resetCamera()
+        var rr;
+        null === (rr = this.opened) || void 0 === rr || rr.resetCamera()
       }
-      async untilDrawn(RR) {
-        var JR;
-        await this.ready, await (null === (JR = this.opened) || void 0 === JR ? void 0 : JR.untilDrawn(RR))
+      async untilDrawn(rr) {
+        var Sr;
+        await this.ready, await (null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.untilDrawn(rr))
       }
-      resize(RR, JR) {
-        var GR;
+      resize(rr, Sr) {
+        var Qr;
         this.size = {
-          width: RR,
-          height: JR
-        }, null === (GR = this.opened) || void 0 === GR || GR.resize(RR, JR)
+          width: rr,
+          height: Sr
+        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
       }
       close() {
-        var RR;
-        this.closed = !0, null === (RR = this.opened) || void 0 === RR || RR.close(), this.opened = null
+        var rr;
+        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
       }
     }
-    const KR = new class {
+    const xr = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(RR) {
-        this.host = RR
+      setHost(rr) {
+        this.host = rr
       }
-      setDefaultHost(RR) {
-        this.makeDefault = RR
+      setDefaultHost(rr) {
+        this.makeDefault = rr
       }
       current() {
         if (null === this.host) {
@@ -12834,102 +12840,102 @@ export const modules = {
         }
         return this.host
       }
-      openMob(RR) {
-        return new fR(this.current().openMob(RR))
+      openMob(rr) {
+        return new Er(this.current().openMob(rr))
       }
-      openPet(RR) {
-        return new fR(this.current().openPet(RR))
+      openPet(rr) {
+        return new Er(this.current().openPet(rr))
       }
-      openMobLineup(RR) {
-        return new fR(this.current().openMobLineup(RR))
+      openMobLineup(rr) {
+        return new Er(this.current().openMobLineup(rr))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(RR, JR) {
-        return new VR(this.current().openCharacter(RR, JR))
+      openCharacter(rr, Sr) {
+        return new pr(this.current().openCharacter(rr, Sr))
       }
     }
   },
-  35193: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => yR.e,
-      e: () => yR.i,
-      g: () => yR.l
+  35505: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Zr.d,
+      f: () => Zr.e,
+      j: () => Zr.i
     });
-    var yR = GR(35195);
-    class tR {
-      constructor(RR) {
-        this.load = RR, this.loaded = null, this.loading = null
+    var Zr = Qr(35509);
+    class Wr {
+      constructor(rr) {
+        this.load = rr, this.loaded = null, this.loading = null
       }
-      run(RR) {
-        return null !== this.loaded ? RR(this.loaded) : (this.loading ??= this.load().then((RR => (this.loaded = RR, RR)), (RR => {
-          throw this.loading = null, RR
-        })), this.loading.then(RR))
+      run(rr) {
+        return null !== this.loaded ? rr(this.loaded) : (this.loading ??= this.load().then((rr => (this.loaded = rr, rr)), (rr => {
+          throw this.loading = null, rr
+        })), this.loading.then(rr))
       }
     }
-    class uR {
+    class ar {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(310)]).then((() => GR(42616))))), this.characterScene = new tR((() => Promise.all([GR.e(85), GR.e(264), GR.e(263), GR.e(289), GR.e(113), GR.e(290), GR.e(89), GR.e(86), GR.e(287), GR.e(87), GR.e(88), GR.e(297), GR.e(291), GR.e(296), GR.e(294), GR.e(286), GR.e(311), GR.e(177), GR.e(260), GR.e(278), GR.e(292), GR.e(295), GR.e(91), GR.e(224), GR.e(252), GR.e(266), GR.e(112), GR.e(124), GR.e(257), GR.e(142), GR.e(90), GR.e(122), GR.e(279), GR.e(184)]).then((() => GR(42729)))))
+        this.sharesCharacter = !0, this.mobScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(311)]).then((() => Qr(42945))))), this.characterScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(177), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(225), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(280), Qr.e(184)]).then((() => Qr(43048)))))
       }
-      openMob(RR) {
-        return this.mobScene.run((JR => JR.openMobPreview(RR)))
+      openMob(rr) {
+        return this.mobScene.run((Sr => Sr.openMobPreview(rr)))
       }
-      openPet(RR) {
-        return this.mobScene.run((JR => JR.openPetPreview(RR)))
+      openPet(rr) {
+        return this.mobScene.run((Sr => Sr.openPetPreview(rr)))
       }
-      openMobLineup(RR) {
-        return this.mobScene.run((JR => JR.openMobLineupPreview(RR)))
+      openMobLineup(rr) {
+        return this.mobScene.run((Sr => Sr.openMobLineupPreview(rr)))
       }
-      openCharacter(RR, JR) {
-        return this.characterScene.run((GR => GR.openCharacterPreview(RR, JR)))
+      openCharacter(rr, Sr) {
+        return this.characterScene.run((Qr => Qr.openCharacterPreview(rr, Sr)))
       }
     }
-    yR.l.setDefaultHost((() => new uR))
+    Zr.i.setDefaultHost((() => new ar))
   },
-  7802: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => tR,
-      d: () => uR
+  7617: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Wr,
+      e: () => ar
     });
-    var yR = GR(46);
-    const tR = "shaderPack";
-    async function uR() {
-      var RR;
-      let JR = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (RR = await yR.g.getItem(tR, JR)) && void 0 !== RR ? RR : null
+    var Zr = Qr(43);
+    const Wr = "shaderPack";
+    async function ar() {
+      var rr;
+      let Sr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (rr = await Zr.h.getItem(Wr, Sr)) && void 0 !== rr ? rr : null
     }
   },
-  35064: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      return RR && !JR
+  35378: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
+      return rr && !Sr
     }
-    GR.d(JR, {
-      b: () => yR
+    Qr.d(Sr, {
+      d: () => Zr
     })
   },
-  35085: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => uR
+  35399: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar
     });
-    var yR = GR(1406);
+    var Zr = Qr(1371);
 
-    function tR() {
-      var RR, JR;
-      return null !== (RR = null === (JR = screen.orientation) || void 0 === JR ? void 0 : JR.type) && void 0 !== RR ? RR : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Wr() {
+      var rr, Sr;
+      return null !== (rr = null === (Sr = screen.orientation) || void 0 === Sr ? void 0 : Sr.type) && void 0 !== rr ? rr : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const uR = new class {
+    const ar = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && tR() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Wr() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = tR(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, yR.ma)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Wr(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Zr.Pt)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -12937,260 +12943,260 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const RR of this.resizers) RR()
+            for (const rr of this.resizers) rr()
           }
         }), 1e3)
       }
-      heldSizer(RR) {
-        let JR = !1;
+      heldSizer(rr) {
+        let Sr = !1;
         return () => {
-          if (JR && this.isHeld()) return null;
-          const GR = RR();
-          return JR ||= null !== GR, GR
+          if (Sr && this.isHeld()) return null;
+          const Qr = rr();
+          return Sr ||= null !== Qr, Qr
         }
       }
-      onRelease(RR) {
-        return this.resizers.add(RR), () => {
-          this.resizers.delete(RR)
+      onRelease(rr) {
+        return this.resizers.add(rr), () => {
+          this.resizers.delete(rr)
         }
       }
     }
   },
-  35035: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => UR,
-      e: () => fR,
-      f: () => aR,
-      j: () => eR
+  35341: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Yr,
+      g: () => Er,
+      k: () => tr,
+      n: () => Ur
     });
-    var yR = GR(163),
-      tR = GR(1359),
-      uR = GR(1282),
-      ZR = GR(1201),
-      qR = GR(1939);
-    const iR = {
+    var Zr = Qr(161),
+      Wr = Qr(1321),
+      ar = Qr(1262),
+      jr = Qr(1187),
+      Ir = Qr(1879);
+    const fr = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function fR(RR) {
-      return iR[RR]
+    function Er(rr) {
+      return fr[rr]
     }
 
-    function VR(RR) {
-      return (0, qR.b)(RR) ? "outdated" : RR instanceof yR.d ? 429 === RR.httpCode ? "busy" : "server" : "offline"
+    function pr(rr) {
+      return (0, Ir.c)(rr) ? "outdated" : rr instanceof Zr.b ? 429 === rr.httpCode ? "busy" : "server" : "offline"
     }
 
-    function KR(RR, JR, GR) {
-      return (0, ZR.postJsonWithMetricsCookiesAndJsonResponse)(`${uR.clientSideServerUrls.indexUrl}${JR}`, GR, {
+    function xr(rr, Sr, Qr) {
+      return (0, jr.postJsonWithMetricsCookiesAndJsonResponse)(`${ar.clientSideServerUrls.indexUrl}${Sr}`, Qr, {
         retries: 3
-      }, RR.getMetricsCookies()).catch((RR => (console.error("Bad response from the server when trying to change name:", JR, RR), {
+      }, rr.getMetricsCookies()).catch((rr => (console.error("Bad response from the server when trying to change name:", Sr, rr), {
         outcome: "failed",
-        failure: VR(RR)
+        failure: pr(rr)
       })))
     }
 
-    function wR(RR) {
-      return "outcome" in RR && "failed" === RR.outcome
+    function mr(rr) {
+      return "outcome" in rr && "failed" === rr.outcome
     }
 
-    function rR(RR) {
-      return console.error("Error when trying to get with new name from DB", RR), {
+    function Nr(rr) {
+      return console.error("Error when trying to get with new name from DB", rr), {
         outcome: "refused",
-        message: RR
+        message: rr
       }
     }
-    async function eR(RR) {
-      const JR = await KR(RR, "/index/name/random", {});
-      return wR(JR) ? JR : "err" in JR ? rR(JR.err) : (RR.setPlayerName(JR.name), {
+    async function Ur(rr) {
+      const Sr = await xr(rr, "/index/name/random", {});
+      return mr(Sr) ? Sr : "err" in Sr ? Nr(Sr.err) : (rr.setPlayerName(Sr.name), {
         outcome: "changed",
-        name: JR.name
+        name: Sr.name
       })
     }
-    async function aR(RR, JR) {
-      const GR = await KR(RR, "/index/name/update", {
-        name: JR
+    async function tr(rr, Sr) {
+      const Qr = await xr(rr, "/index/name/update", {
+        name: Sr
       });
-      return wR(GR) ? GR : "err" in GR ? rR(GR.err) : GR.nameExists ? {
+      return mr(Qr) ? Qr : "err" in Qr ? Nr(Qr.err) : Qr.nameExists ? {
         outcome: "taken"
-      } : (RR.setPlayerName(JR), {
+      } : (rr.setPlayerName(Sr), {
         outcome: "changed",
-        name: JR
+        name: Sr
       })
     }
 
-    function LR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const yR = 1 === JR ? 1 : 10 ** (JR - 1),
-        uR = String(yR + Math.floor(GR() * (10 ** JR - yR)));
-      return `${RR.slice(0,tR.i-JR)}${uR}`
+    function hr(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const Zr = 1 === Sr ? 1 : 10 ** (Sr - 1),
+        ar = String(Zr + Math.floor(Qr() * (10 ** Sr - Zr)));
+      return `${rr.slice(0,Wr.h-Sr)}${ar}`
     }
-    const nR = [1, 2, 3, 4];
-    async function UR(RR, JR) {
-      const GR = await aR(RR, JR);
-      if ("taken" !== GR.outcome) return GR;
-      for (const yR of nR) {
-        const GR = LR(JR, yR),
-          tR = await aR(RR, GR);
-        if ("taken" !== tR.outcome) return tR
+    const zr = [1, 2, 3, 4];
+    async function Yr(rr, Sr) {
+      const Qr = await tr(rr, Sr);
+      if ("taken" !== Qr.outcome) return Qr;
+      for (const Zr of zr) {
+        const Qr = hr(Sr, Zr),
+          Wr = await tr(rr, Qr);
+        if ("taken" !== Wr.outcome) return Wr
       }
       return {
         outcome: "taken"
       }
     }
   },
-  35051: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => uR,
-      g: () => tR
+  35359: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar,
+      g: () => Wr
     });
-    let yR = null;
+    let Zr = null;
 
-    function tR() {
-      yR = performance.now()
+    function Wr() {
+      Zr = performance.now()
     }
 
-    function uR() {
-      return yR
+    function ar() {
+      return Zr
     }
   },
-  35067: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => qR,
-      h: () => iR
+  35381: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Ir,
+      g: () => fr
     });
-    var yR = GR(25);
-    const tR = 24,
-      uR = "farNametags",
-      ZR = 1e5;
+    var Zr = Qr(26);
+    const Wr = 24,
+      ar = "farNametags",
+      jr = 1e5;
 
-    function qR() {
-      var RR;
-      return null === (RR = yR.d.get("showDistantNametags")) || void 0 === RR || RR
+    function Ir() {
+      var rr;
+      return null === (rr = Zr.c.get("showDistantNametags")) || void 0 === rr || rr
     }
 
-    function iR() {
-      var RR;
-      return null !== (RR = function() {
-        const RR = new URLSearchParams(window.location.search).get(uR),
-          JR = null === RR || "" === RR ? NaN : Number(RR);
-        return Number.isFinite(JR) && JR >= 0 ? Math.min(JR, ZR) : null
-      }()) && void 0 !== RR ? RR : qR() ? 0 : tR
+    function fr() {
+      var rr;
+      return null !== (rr = function() {
+        const rr = new URLSearchParams(window.location.search).get(ar),
+          Sr = null === rr || "" === rr ? NaN : Number(rr);
+        return Number.isFinite(Sr) && Sr >= 0 ? Math.min(Sr, jr) : null
+      }()) && void 0 !== rr ? rr : Ir() ? 0 : Wr
     }
   },
-  35176: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => yR,
-      i: () => VR
+  35490: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => Zr,
+      f: () => pr
     });
-    const yR = .01,
-      tR = .08,
-      uR = .01,
-      ZR = 5,
-      qR = 100,
-      iR = 40,
-      fR = 800;
+    const Zr = .01,
+      Wr = .08,
+      ar = .01,
+      jr = 5,
+      Ir = 100,
+      fr = 40,
+      Er = 800;
 
-    function VR(RR) {
+    function pr(rr) {
       const {
-        canvas: JR
-      } = RR;
-      let GR = null;
-      const VR = RR => {
-          var yR;
-          GR = {
-            pointer: RR.pointerId,
-            x: RR.clientX,
-            y: RR.clientY
-          }, null === (yR = JR.setPointerCapture) || void 0 === yR || yR.call(JR, RR.pointerId)
+        canvas: Sr
+      } = rr;
+      let Qr = null;
+      const pr = rr => {
+          var Zr;
+          Qr = {
+            pointer: rr.pointerId,
+            x: rr.clientX,
+            y: rr.clientY
+          }, null === (Zr = Sr.setPointerCapture) || void 0 === Zr || Zr.call(Sr, rr.pointerId)
         },
-        KR = JR => {
-          var tR;
-          const ZR = RR.orbit;
-          if ((null === (tR = GR) || void 0 === tR ? void 0 : tR.pointer) !== JR.pointerId || null === ZR) return;
-          const qR = JR.clientX - GR.x,
-            iR = JR.clientY - GR.y;
-          GR = {
-            ...GR,
-            x: JR.clientX,
-            y: JR.clientY
-          }, RR.setOrbit({
-            alpha: ZR.alpha - qR * yR,
-            beta: Math.min(Math.PI - uR, Math.max(uR, ZR.beta - iR * yR)),
-            radius: ZR.radius
+        xr = Sr => {
+          var Wr;
+          const jr = rr.orbit;
+          if ((null === (Wr = Qr) || void 0 === Wr ? void 0 : Wr.pointer) !== Sr.pointerId || null === jr) return;
+          const Ir = Sr.clientX - Qr.x,
+            fr = Sr.clientY - Qr.y;
+          Qr = {
+            ...Qr,
+            x: Sr.clientX,
+            y: Sr.clientY
+          }, rr.setOrbit({
+            alpha: jr.alpha - Ir * Zr,
+            beta: Math.min(Math.PI - ar, Math.max(ar, jr.beta - fr * Zr)),
+            radius: jr.radius
           })
         },
-        wR = RR => {
-          var JR;
-          (null === (JR = GR) || void 0 === JR ? void 0 : JR.pointer) === RR.pointerId && (GR = null)
+        mr = rr => {
+          var Sr;
+          (null === (Sr = Qr) || void 0 === Sr ? void 0 : Sr.pointer) === rr.pointerId && (Qr = null)
         },
-        rR = JR => {
-          const GR = RR.orbit;
-          if (null === GR) return;
-          JR.preventDefault();
-          const yR = JR.deltaY * (JR.deltaMode === WheelEvent.DOM_DELTA_LINE ? iR : JR.deltaMode === WheelEvent.DOM_DELTA_PAGE ? fR : 1),
-            uR = Math.min(qR, Math.max(ZR, GR.radius + yR * tR));
-          RR.setOrbit({
-            ...GR,
-            radius: uR
+        Nr = Sr => {
+          const Qr = rr.orbit;
+          if (null === Qr) return;
+          Sr.preventDefault();
+          const Zr = Sr.deltaY * (Sr.deltaMode === WheelEvent.DOM_DELTA_LINE ? fr : Sr.deltaMode === WheelEvent.DOM_DELTA_PAGE ? Er : 1),
+            ar = Math.min(Ir, Math.max(jr, Qr.radius + Zr * Wr));
+          rr.setOrbit({
+            ...Qr,
+            radius: ar
           })
         };
-      return JR.style.touchAction = "none", JR.addEventListener("pointerdown", VR), JR.addEventListener("pointermove", KR), JR.addEventListener("pointerup", wR), JR.addEventListener("pointercancel", wR), JR.addEventListener("wheel", rR, {
+      return Sr.style.touchAction = "none", Sr.addEventListener("pointerdown", pr), Sr.addEventListener("pointermove", xr), Sr.addEventListener("pointerup", mr), Sr.addEventListener("pointercancel", mr), Sr.addEventListener("wheel", Nr, {
         passive: !1
       }), () => {
-        JR.removeEventListener("pointerdown", VR), JR.removeEventListener("pointermove", KR), JR.removeEventListener("pointerup", wR), JR.removeEventListener("pointercancel", wR), JR.removeEventListener("wheel", rR)
+        Sr.removeEventListener("pointerdown", pr), Sr.removeEventListener("pointermove", xr), Sr.removeEventListener("pointerup", mr), Sr.removeEventListener("pointercancel", mr), Sr.removeEventListener("wheel", Nr)
       }
     }
   },
-  35094: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => fR,
-      f: () => KR,
-      i: () => VR
+  35408: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Er,
+      h: () => xr,
+      l: () => pr
     });
-    var yR = GR(279),
-      tR = GR(103),
-      uR = GR(132),
-      ZR = GR(127),
-      qR = GR(706);
-    const iR = new Set(["mali_bifrost"]);
+    var Zr = Qr(285),
+      Wr = Qr(109),
+      ar = Qr(135),
+      jr = Qr(129),
+      Ir = Qr(705);
+    const fr = new Set(["mali_bifrost"]);
 
-    function fR() {
-      if (qR.e) return;
-      const RR = (0, tR.pageOperatingSystem)();
-      if ("android" !== RR && "windows" !== RR || (0, qR.c)("webgl_default")) return;
-      if ("windows" === RR) return RR => "qualcomm" === (0, tR.normaliseGpuVendor)((0, ZR.b)(RR).vendor);
-      const JR = (0, uR.o)(),
-        GR = null === JR ? (0, yR.u)() : (0, yR.k)(JR.vendor, JR.renderer);
-      return null !== GR && iR.has(GR) ? RR => (0, yR.q)((0, ZR.b)(RR).vendor, GR) : void 0
+    function Er() {
+      if (Ir.h) return;
+      const rr = (0, Wr.pageOperatingSystem)();
+      if ("android" !== rr && "windows" !== rr || (0, Ir.d)("webgl_default")) return;
+      if ("windows" === rr) return rr => "qualcomm" === (0, Wr.normaliseGpuVendor)((0, jr.c)(rr).vendor);
+      const Sr = (0, ar.q)(),
+        Qr = null === Sr ? (0, Zr.p)() : (0, Zr.g)(Sr.vendor, Sr.renderer);
+      return null !== Qr && fr.has(Qr) ? rr => (0, Zr.l)((0, jr.c)(rr).vendor, Qr) : void 0
     }
 
-    function VR(RR, JR) {
-      return RR ? () => !0 : JR()
+    function pr(rr, Sr) {
+      return rr ? () => !0 : Sr()
     }
-    async function KR(RR) {
+    async function xr(rr) {
       try {
-        const JR = VR(RR, fR),
-          GR = navigator.gpu;
-        if (void 0 === JR || void 0 === GR) return !1;
-        const yR = await (0, ZR.i)(GR, {
+        const Sr = pr(rr, Er),
+          Qr = navigator.gpu;
+        if (void 0 === Sr || void 0 === Qr) return !1;
+        const Zr = await (0, jr.k)(Qr, {
           seed: !1,
-          compatibility: JR
+          compatibility: Sr
         });
-        return "string" !== typeof yR && yR.compatibility && !(0, ZR.e)(yR.adapter)
-      } catch (JR) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", JR), !1
+        return "string" !== typeof Zr && Zr.compatibility && !(0, jr.f)(Zr.adapter)
+      } catch (Sr) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", Sr), !1
       }
     }
   },
-  35174: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => tR,
-      i: () => ZR
+  35488: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => Wr,
+      i: () => jr
     });
-    const yR = [{
+    const Zr = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -13372,79 +13378,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function tR(RR) {
-      let JR, GR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof RR) {
-        if (!Number.isFinite(RR)) return "0";
-        if (Math.abs(RR) < 100) {
-          const JR = RR < 0 ? "-" : "",
-            GR = Math.abs(RR);
-          return GR >= 10 ? `${JR}${GR.toFixed(1).replace(/\.0$/,"")}` : `${JR}${GR.toFixed(2).replace(/\.?0+$/,"")}`
+    function Wr(rr) {
+      let Sr, Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof rr) {
+        if (!Number.isFinite(rr)) return "0";
+        if (Math.abs(rr) < 100) {
+          const Sr = rr < 0 ? "-" : "",
+            Qr = Math.abs(rr);
+          return Qr >= 10 ? `${Sr}${Qr.toFixed(1).replace(/\.0$/,"")}` : `${Sr}${Qr.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        JR = BigInt(Math.floor(RR))
-      } else JR = RR;
-      const tR = JR < 0n ? -JR : JR,
-        uR = JR < 0n ? "-" : "",
-        ZR = tR.toString();
-      if (ZR.length <= GR) return `${uR}${ZR}`;
-      const qR = 3 * Math.floor((ZR.length - 1) / 3);
-      if (qR < 3) return `${uR}${ZR}`;
-      if (qR > 3 * yR.length) {
-        const RR = ZR[0],
-          JR = ZR.slice(1, 3).replace(/0+$/, "");
-        return `${uR}${JR?`${RR}.${JR}`:RR}e${ZR.length-1}`
+        Sr = BigInt(Math.floor(rr))
+      } else Sr = rr;
+      const Wr = Sr < 0n ? -Sr : Sr,
+        ar = Sr < 0n ? "-" : "",
+        jr = Wr.toString();
+      if (jr.length <= Qr) return `${ar}${jr}`;
+      const Ir = 3 * Math.floor((jr.length - 1) / 3);
+      if (Ir < 3) return `${ar}${jr}`;
+      if (Ir > 3 * Zr.length) {
+        const rr = jr[0],
+          Sr = jr.slice(1, 3).replace(/0+$/, "");
+        return `${ar}${Sr?`${rr}.${Sr}`:rr}e${jr.length-1}`
       }
       const {
-        threshold: iR,
-        suffix: fR
-      } = yR[yR.length - qR / 3], VR = tR / iR, KR = Number(1000n * (tR % iR) / iR), wR = Number(VR) + KR / 1e3;
-      let rR;
-      return rR = wR >= 100 ? Math.floor(wR).toString() : wR >= 10 ? wR.toFixed(1).replace(/\.0$/, "") : wR.toFixed(2).replace(/\.?0+$/, ""), `${uR}${rR}${fR}`
+        threshold: fr,
+        suffix: Er
+      } = Zr[Zr.length - Ir / 3], pr = Wr / fr, xr = Number(1000n * (Wr % fr) / fr), mr = Number(pr) + xr / 1e3;
+      let Nr;
+      return Nr = mr >= 100 ? Math.floor(mr).toString() : mr >= 10 ? mr.toFixed(1).replace(/\.0$/, "") : mr.toFixed(2).replace(/\.?0+$/, ""), `${ar}${Nr}${Er}`
     }
-    const uR = yR.map((RR => {
+    const ar = Zr.map((rr => {
       let {
-        threshold: JR,
-        suffix: GR
-      } = RR;
+        threshold: Sr,
+        suffix: Qr
+      } = rr;
       return {
-        threshold: Number(JR),
-        suffix: GR
+        threshold: Number(Sr),
+        suffix: Qr
       }
-    })).filter((RR => {
+    })).filter((rr => {
       let {
-        threshold: JR
-      } = RR;
-      return Number.isFinite(JR)
+        threshold: Sr
+      } = rr;
+      return Number.isFinite(Sr)
     }));
 
-    function ZR(RR) {
-      const JR = Math.abs(RR),
-        GR = RR < 0 ? "-" : "";
+    function jr(rr) {
+      const Sr = Math.abs(rr),
+        Qr = rr < 0 ? "-" : "";
       for (const {
-          threshold: yR,
-          suffix: tR
+          threshold: Zr,
+          suffix: Wr
         }
-        of uR)
-        if (JR >= yR) {
-          const RR = JR / yR;
-          if (RR >= 1e3) return `${GR}${JR.toExponential(2).replace("e+","e")}`;
-          let uR;
-          return uR = RR >= 100 ? Math.floor(RR).toString() : RR >= 10 ? RR.toFixed(1).replace(/\.0$/, "") : RR.toFixed(2).replace(/\.?0+$/, ""), `${GR}${uR}${tR}`
-        } return `${GR}${JR}`
+        of ar)
+        if (Sr >= Zr) {
+          const rr = Sr / Zr;
+          if (rr >= 1e3) return `${Qr}${Sr.toExponential(2).replace("e+","e")}`;
+          let ar;
+          return ar = rr >= 100 ? Math.floor(rr).toString() : rr >= 10 ? rr.toFixed(1).replace(/\.0$/, "") : rr.toFixed(2).replace(/\.?0+$/, ""), `${Qr}${ar}${Wr}`
+        } return `${Qr}${Sr}`
     }
   },
-  35150: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => VR,
-      i: () => wR,
-      k: () => KR,
-      o: () => ZR,
-      r: () => fR,
-      v: () => iR
+  35459: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => pr,
+      f: () => mr,
+      g: () => xr,
+      j: () => jr,
+      l: () => Er,
+      p: () => fr
     });
-    var yR = GR(377);
-    const tR = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      uR = {
+    var Zr = Qr(379);
+    const Wr = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      ar = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -13519,13 +13525,13 @@ export const modules = {
         }
       };
 
-    function ZR(RR) {
-      var JR;
-      return null !== (JR = uR[RR]) && void 0 !== JR ? JR : {
+    function jr(rr) {
+      var Sr;
+      return null !== (Sr = ar[rr]) && void 0 !== Sr ? Sr : {
         translationKey: ""
       }
     }
-    const qR = {
+    const Ir = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -13578,77 +13584,77 @@ export const modules = {
       }]
     };
 
-    function iR(RR) {
-      return tR.includes(RR)
+    function fr(rr) {
+      return Wr.includes(rr)
     }
 
-    function fR(RR) {
-      var JR;
-      return !0 === (null === RR || void 0 === RR || null === (JR = RR.customAttributes) || void 0 === JR ? void 0 : JR.cannotEnchant)
+    function Er(rr) {
+      var Sr;
+      return !0 === (null === rr || void 0 === rr || null === (Sr = rr.customAttributes) || void 0 === Sr ? void 0 : Sr.cannotEnchant)
     }
 
-    function VR(RR, JR) {
+    function pr(rr, Sr) {
       const {
-        max: GR
-      } = qR[RR].at(-1);
-      return JR <= GR
+        max: Qr
+      } = Ir[rr].at(-1);
+      return Sr <= Qr
     }
 
-    function KR(RR) {
-      const JR = Math.sin(RR / 80),
-        GR = RR => {
-          if (RR <= 0) return 0;
-          if (RR > 1) return 1;
-          let JR = 0;
-          const GR = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let yR = 0; yR < GR.length; yR++) {
-            JR += (yR % 2 === 0 ? 1 : -1) * GR[yR] * Math.pow(RR, 2 + yR) / (2 + yR)
+    function xr(rr) {
+      const Sr = Math.sin(rr / 80),
+        Qr = rr => {
+          if (rr <= 0) return 0;
+          if (rr > 1) return 1;
+          let Sr = 0;
+          const Qr = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let Zr = 0; Zr < Qr.length; Zr++) {
+            Sr += (Zr % 2 === 0 ? 1 : -1) * Qr[Zr] * Math.pow(rr, 2 + Zr) / (2 + Zr)
           }
-          return 72 * JR
+          return 72 * Sr
         },
-        yR = .3 - .78 * JR,
-        tR = .5 - .78 * JR,
-        uR = .6 - .7 * JR,
-        ZR = .8 - .6 * JR;
-      let qR = GR(yR),
-        iR = GR(tR) - qR,
-        fR = GR(uR) - iR - qR,
-        VR = GR(ZR) - fR - iR - qR;
-      yR < .041 && (iR /= 1 - qR, fR /= 1 - qR, VR /= 1 - qR, qR = 0), tR < .041 && (qR /= 1 - iR, fR /= 1 - iR, VR /= 1 - iR, iR = 0), uR < .041 && (qR /= 1 - fR, iR /= 1 - fR, VR /= 1 - fR, fR = 0), ZR < .041 && (qR /= 1 - VR, iR /= 1 - VR, fR /= 1 - VR, VR = 0);
+        Zr = .3 - .78 * Sr,
+        Wr = .5 - .78 * Sr,
+        ar = .6 - .7 * Sr,
+        jr = .8 - .6 * Sr;
+      let Ir = Qr(Zr),
+        fr = Qr(Wr) - Ir,
+        Er = Qr(ar) - fr - Ir,
+        pr = Qr(jr) - Er - fr - Ir;
+      Zr < .041 && (fr /= 1 - Ir, Er /= 1 - Ir, pr /= 1 - Ir, Ir = 0), Wr < .041 && (Ir /= 1 - fr, Er /= 1 - fr, pr /= 1 - fr, fr = 0), ar < .041 && (Ir /= 1 - Er, fr /= 1 - Er, pr /= 1 - Er, Er = 0), jr < .041 && (Ir /= 1 - pr, fr /= 1 - pr, Er /= 1 - pr, pr = 0);
       return {
-        commonProb: qR,
-        uncommonProb: iR,
-        rareProb: fR,
-        epicProb: VR,
-        legendaryProb: 1 - (VR + fR + iR + qR)
+        commonProb: Ir,
+        uncommonProb: fr,
+        rareProb: Er,
+        epicProb: pr,
+        legendaryProb: 1 - (pr + Er + fr + Ir)
       }
     }
 
-    function wR(RR, JR) {
+    function mr(rr, Sr) {
       const {
-        min: GR,
-        max: tR
-      } = qR[RR][JR], uR = yR.e.sampleUniformIntDistribution(GR, tR, "includeMax");
+        min: Qr,
+        max: Wr
+      } = Ir[rr][Sr], ar = Zr.b.sampleUniformIntDistribution(Qr, Wr, "includeMax");
       return {
-        ...KR(uR),
-        level: uR
+        ...xr(ar),
+        level: ar
       }
     }
   },
-  35113: () => {},
-  35211: () => {},
-  14020: RR => {
-    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  35432: () => {},
+  35525: () => {},
+  13750: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  15168: RR => {
-    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  14956: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  16520: RR => {
-    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  16388: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  17051: RR => {
-    RR.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  16909: rr => {
+    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

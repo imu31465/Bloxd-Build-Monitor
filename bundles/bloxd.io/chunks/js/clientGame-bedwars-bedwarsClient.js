@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  40540: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => tR
+  40850: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => Wr
     });
-    var yR = GR(39198);
-    const tR = function(RR, JR, GR) {
-      let tR;
+    var Zr = Qr(39525);
+    const Wr = function(rr, Sr, Qr) {
+      let Wr;
       return {
         plugins: {
-          placeAgainstBeds: (0, yR.e)()
+          placeAgainstBeds: (0, Zr.b)()
         },
-        onCreate: RR => {
-          tR = RR
+        onCreate: rr => {
+          Wr = rr
         },
-        onPlayerAltAction: (RR, JR, GR, yR, uR, ZR) => {
-          ((RR, JR) => {
-            if (!JR || "Mesh" !== tR.getEntityType(JR)) return;
-            const GR = tR.getEntityName(JR);
-            "Upgrades" === GR ? tR.openShop(RR, !1, "Upgrades") : "Items" === GR && tR.openShop(RR, !1, "Recommended")
-          })(RR, ZR)
+        onPlayerAltAction: (rr, Sr, Qr, Zr, ar, jr) => {
+          ((rr, Sr) => {
+            if (!Sr || "Mesh" !== Wr.getEntityType(Sr)) return;
+            const Qr = Wr.getEntityName(Sr);
+            "Upgrades" === Qr ? Wr.openShop(rr, !1, "Upgrades") : "Items" === Qr && Wr.openShop(rr, !1, "Recommended")
+          })(rr, jr)
         }
       }
     }
   },
-  39198: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => qR
+  39525: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir
     });
-    var yR = GR(377),
-      tR = GR(38040),
-      uR = GR(5290);
-    const ZR = ["Leaf Bed", "_Leaf Bed Head", ...yR.Cc.flatMap((RR => [`${RR} Bed`, `_${RR} Bed Head`, `${RR} Strongbed`, `_${RR} Strongbed Head`]))];
+    var Zr = Qr(379),
+      Wr = Qr(38397),
+      ar = Qr(5229);
+    const jr = ["Leaf Bed", "_Leaf Bed Head", ...Zr.Cc.flatMap((rr => [`${rr} Bed`, `_${rr} Bed Head`, `${rr} Strongbed`, `_${rr} Strongbed Head`]))];
 
-    function qR() {
-      let RR;
+    function Ir() {
+      let rr;
       return {
-        onCreate(JR) {
-          RR = JR
+        onCreate(Sr) {
+          rr = Sr
         },
-        altVetoBlocks: ZR,
-        onPlayerAttemptAltAction(JR, GR, yR, ZR, qR, iR) {
-          var fR;
-          if ((0, tR.d)(RR.getMetaInfo(qR).rootName) && !RR.isEntityInteractable(iR) && (0, uR.c)(null === (fR = RR.uyR(JR)) || void 0 === fR ? void 0 : fR.typeObj.type)) return "preventAction"
+        altVetoBlocks: jr,
+        onPlayerAttemptAltAction(Sr, Qr, Zr, jr, Ir, fr) {
+          var Er;
+          if ((0, Wr.c)(rr.getMetaInfo(Ir).rootName) && !rr.isEntityInteractable(fr) && (0, ar.h)(null === (Er = rr.XQr(Sr)) || void 0 === Er ? void 0 : Er.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  38040: (RR, JR, GR) => {
-    function yR(RR) {
-      return RR.includes("Leaf Bed")
+  38397: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      return rr.includes("Leaf Bed")
     }
 
-    function tR(RR) {
-      return / Bed(?: Head)?(?:\||$)/.test(RR) && !yR(RR)
+    function Wr(rr) {
+      return / Bed(?: Head)?(?:\||$)/.test(rr) && !Zr(rr)
     }
 
-    function uR(RR) {
-      return RR.includes(" Strongbed")
+    function ar(rr) {
+      return rr.includes(" Strongbed")
     }
 
-    function ZR(RR) {
-      return yR(RR) || tR(RR) || uR(RR)
+    function jr(rr) {
+      return Zr(rr) || Wr(rr) || ar(rr)
     }
-    GR.d(JR, {
-      d: () => ZR,
-      f: () => yR,
-      h: () => uR,
-      k: () => tR
+    Qr.d(Sr, {
+      c: () => jr,
+      f: () => Zr,
+      h: () => ar,
+      i: () => Wr
     })
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

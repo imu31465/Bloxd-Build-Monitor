@@ -1,243 +1,243 @@
 export const id = 144;
-export const ids = [144, 714];
+export const ids = [144, 715];
 export const modules = {
-  37382: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      default: () => oJ
+  37766: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      default: () => CS
     });
-    var yR = GR(359),
-      tR = GR(4850),
-      uR = GR(4889),
-      ZR = GR(4884),
-      qR = GR(4881),
-      iR = GR(1270),
-      fR = GR(46),
-      VR = GR(1943),
-      KR = GR(1501),
-      wR = GR(1590),
-      rR = GR(1163),
-      eR = GR.n(rR),
-      aR = GR(1867),
-      LR = GR(66),
-      nR = GR(83),
-      UR = GR(3357),
-      WR = GR(1459),
-      AR = GR(1778),
-      CR = GR(1196),
-      XR = GR(4724),
-      MR = GR(5361),
-      BR = GR(3690),
-      lR = GR(2105),
-      pR = GR(4841),
-      gR = GR(1956),
-      bR = GR(1647),
-      vR = GR(3071),
-      OR = GR(1465),
-      xR = GR(3713),
-      NR = GR(4250),
-      DR = GR(1378);
-    const HR = 15e3,
-      oR = 2500;
+    var Zr = Qr(360),
+      Wr = Qr(4759),
+      ar = Qr(4791),
+      jr = Qr(4785),
+      Ir = Qr(4777),
+      fr = Qr(1251),
+      Er = Qr(43),
+      pr = Qr(1885),
+      xr = Qr(1489),
+      mr = Qr(1576),
+      Nr = Qr(1155),
+      Ur = Qr.n(Nr),
+      tr = Qr(1804),
+      hr = Qr(72),
+      zr = Qr(92),
+      Yr = Qr(3312),
+      nr = Qr(1433),
+      er = Qr(1743),
+      Kr = Qr(1181),
+      yr = Qr(4650),
+      Br = Qr(5320),
+      Tr = Qr(3628),
+      vr = Qr(2057),
+      Or = Qr(4752),
+      Lr = Qr(1895),
+      lr = Qr(1629),
+      Xr = Qr(3045),
+      Pr = Qr(1444),
+      Hr = Qr(3657),
+      qr = Qr(4205),
+      Rr = Qr(1338);
+    const gr = 15e3,
+      Cr = 2500;
 
-    function cR(RR) {
-      var JR;
+    function Mr(rr) {
+      var Sr;
       let {
-        eventName: GR
-      } = RR;
+        eventName: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, iR.A)(), tR = gR.g[GR], [uR, ZR] = (0, LR.useState)((() => Date.now() >= tR.endsAt.getTime())), [qR, fR] = (0, LR.useState)("overall"), VR = function(RR, JR) {
+        t: Zr
+      } = (0, fr.E)(), Wr = Lr.d[Qr], [ar, jr] = (0, hr.useState)((() => Date.now() >= Wr.endsAt.getTime())), [Ir, Er] = (0, hr.useState)("overall"), pr = function(rr, Sr) {
         const {
-          userContext: GR,
-          isUserContextUpdating: yR
-        } = (0, CR.d)(), tR = `${RR}:${JR}`, [uR, ZR] = (0, LR.useState)({
-          requestKey: tR,
+          userContext: Qr,
+          isUserContextUpdating: Zr
+        } = (0, Kr.c)(), Wr = `${rr}:${Sr}`, [ar, jr] = (0, hr.useState)({
+          requestKey: Wr,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, LR.useEffect)((() => {
-          if (yR) return;
-          let uR, qR = !1;
-          const iR = async () => {
+        return (0, hr.useEffect)((() => {
+          if (Zr) return;
+          let ar, Ir = !1;
+          const fr = async () => {
             if ("visible" === document.visibilityState) try {
-              const yR = await bR.c.getGameEventLeaderboard(GR, {
-                event: RR,
-                scope: JR
+              const Zr = await lr.c.getGameEventLeaderboard(Qr, {
+                event: rr,
+                scope: Sr
               });
-              qR || ZR({
-                requestKey: tR,
+              Ir || jr({
+                requestKey: Wr,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: yR
+                  leaderboard: Zr
                 }
               })
             } catch {
-              qR || ZR((RR => RR.requestKey === tR && "loaded" === RR.leaderboard.status ? RR : {
-                requestKey: tR,
+              Ir || jr((rr => rr.requestKey === Wr && "loaded" === rr.leaderboard.status ? rr : {
+                requestKey: Wr,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            qR || (uR = setTimeout(iR, HR))
+            Ir || (ar = setTimeout(fr, gr))
           };
-          return iR(), () => {
-            qR = !0, clearTimeout(uR)
+          return fr(), () => {
+            Ir = !0, clearTimeout(ar)
           }
-        }), [RR, JR, tR, GR, yR]), uR.requestKey === tR ? uR.leaderboard : {
+        }), [rr, Sr, Wr, Qr, Zr]), ar.requestKey === Wr ? ar.leaderboard : {
           status: "loading"
         }
-      }(GR, qR), KR = function(RR) {
-        const JR = (0, LR.useRef)(null),
-          GR = (0, LR.useRef)(0),
-          yR = (0, LR.useRef)(),
-          [tR, uR] = (0, LR.useState)({});
-        return (0, LR.useEffect)((() => {
-          const tR = null === RR || void 0 === RR ? void 0 : RR.entries;
-          if (!tR) return;
-          const ZR = new Map(tR.map((RR => [RR.player.name, RR.value]))),
-            qR = JR.current;
-          if (JR.current = ZR, null === qR) return;
-          const iR = {};
-          for (const [RR, JR] of ZR) {
-            const yR = qR.get(RR);
-            void 0 !== yR && JR > yR && (iR[RR] = {
-              amount: JR - yR,
-              key: GR.current++
+      }(Qr, Ir), xr = function(rr) {
+        const Sr = (0, hr.useRef)(null),
+          Qr = (0, hr.useRef)(0),
+          Zr = (0, hr.useRef)(),
+          [Wr, ar] = (0, hr.useState)({});
+        return (0, hr.useEffect)((() => {
+          const Wr = null === rr || void 0 === rr ? void 0 : rr.entries;
+          if (!Wr) return;
+          const jr = new Map(Wr.map((rr => [rr.player.name, rr.value]))),
+            Ir = Sr.current;
+          if (Sr.current = jr, null === Ir) return;
+          const fr = {};
+          for (const [rr, Sr] of jr) {
+            const Zr = Ir.get(rr);
+            void 0 !== Zr && Sr > Zr && (fr[rr] = {
+              amount: Sr - Zr,
+              key: Qr.current++
             })
           }
-          0 !== Object.keys(iR).length && (uR(iR), clearTimeout(yR.current), yR.current = setTimeout((() => {
-            uR({})
-          }), oR))
-        }), [RR]), (0, LR.useEffect)((() => () => {
-          clearTimeout(yR.current)
-        }), []), tR
-      }("loaded" === VR.status ? VR.leaderboard : null), wR = function(RR) {
-        const [JR, GR] = (0, LR.useState)(null), yR = "loaded" === RR.status ? RR.leaderboard.goalProgress : void 0;
-        return (0, LR.useEffect)((() => {
-          yR && GR(yR)
-        }), [yR]), JR
-      }(VR), rR = vR.f[`profileEffect_${tR.prizePack}`];
-      if (uR) return null;
-      const aR = "loaded" === VR.status ? VR.leaderboard : null,
-        nR = null !== (JR = null === aR || void 0 === aR ? void 0 : aR.entries) && void 0 !== JR ? JR : null,
-        UR = null !== aR && void 0 !== aR && aR.own && null !== nR && !nR.some((RR => RR.isOwn)) ? aR.own : null;
-      return (0, DR.jsx)("section", {
+          0 !== Object.keys(fr).length && (ar(fr), clearTimeout(Zr.current), Zr.current = setTimeout((() => {
+            ar({})
+          }), Cr))
+        }), [rr]), (0, hr.useEffect)((() => () => {
+          clearTimeout(Zr.current)
+        }), []), Wr
+      }("loaded" === pr.status ? pr.leaderboard : null), mr = function(rr) {
+        const [Sr, Qr] = (0, hr.useState)(null), Zr = "loaded" === rr.status ? rr.leaderboard.goalProgress : void 0;
+        return (0, hr.useEffect)((() => {
+          Zr && Qr(Zr)
+        }), [Zr]), Sr
+      }(pr), Nr = Xr.f[`profileEffect_${Wr.prizePack}`];
+      if (ar) return null;
+      const tr = "loaded" === pr.status ? pr.leaderboard : null,
+        zr = null !== (Sr = null === tr || void 0 === tr ? void 0 : tr.entries) && void 0 !== Sr ? Sr : null,
+        Yr = null !== tr && void 0 !== tr && tr.own && null !== zr && !zr.some((rr => rr.isOwn)) ? tr.own : null;
+      return (0, Rr.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, DR.jsxs)("div", {
+        children: (0, Rr.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, DR.jsxs)("div", {
+          children: [(0, Rr.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, DR.jsxs)("div", {
+            children: [(0, Rr.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, DR.jsxs)("span", {
+              children: [(0, Rr.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, DR.jsx)("span", {
+                children: [(0, Rr.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), yR("gameEvents:live")]
-              }), (0, DR.jsxs)("span", {
+                }), Zr("gameEvents:live")]
+              }), (0, Rr.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [yR("gameEvents:endsIn"), (0, DR.jsx)(BR.d, {
-                  toTime: tR.endsAt,
+                children: [Zr("gameEvents:endsIn"), (0, Rr.jsx)(Tr.d, {
+                  toTime: Wr.endsAt,
                   onReachEndOfCountdown: () => {
-                    ZR(!0)
+                    jr(!0)
                   }
                 })]
               })]
-            }), (0, DR.jsx)("h2", {
+            }), (0, Rr.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: yR(tR.titleKey)
-            }), (0, DR.jsxs)("div", {
+              children: Zr(Wr.titleKey)
+            }), (0, Rr.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, DR.jsxs)("div", {
+              children: [(0, Rr.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [rR && (0, DR.jsx)("div", {
+                children: [Nr && (0, Rr.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, DR.jsx)(rR, {})
-                }), (0, DR.jsxs)("div", {
+                  children: (0, Rr.jsx)(Nr, {})
+                }), (0, Rr.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, DR.jsx)("div", {
+                  children: [(0, Rr.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: yR("gameEvents:prize")
-                  }), (0, DR.jsx)("div", {
+                    children: Zr("gameEvents:prize")
+                  }), (0, Rr.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: yR(tR.prizeNameKey)
+                    children: Zr(Wr.prizeNameKey)
                   })]
                 })]
-              }), (0, DR.jsx)(PR, {
-                event: tR,
-                progress: wR
+              }), (0, Rr.jsx)(Gr, {
+                event: Wr,
+                progress: mr
               })]
             })]
-          }), (0, DR.jsxs)("div", {
+          }), (0, Rr.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, DR.jsxs)("div", {
+            children: [(0, Rr.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, DR.jsx)("h3", {
+              children: [(0, Rr.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: yR(tR.leaderboard.titleKey)
-              }), (0, DR.jsx)(NR.c, {
-                ariaLabel: yR("gameEvents:leaderboardScope"),
-                options: gR.c.map((RR => ({
-                  value: RR,
-                  label: yR(`gameEvents:${RR}Scope`)
+                children: Zr(Wr.leaderboard.titleKey)
+              }), (0, Rr.jsx)(qr.d, {
+                ariaLabel: Zr("gameEvents:leaderboardScope"),
+                options: Lr.c.map((rr => ({
+                  value: rr,
+                  label: Zr(`gameEvents:${rr}Scope`)
                 }))),
-                value: qR,
-                onChange: fR
+                value: Ir,
+                onChange: Er
               })]
-            }), "loading" === VR.status && (0, DR.jsx)("div", {
+            }), "loading" === pr.status && (0, Rr.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, DR.jsx)(OR.d, {})
-            }), ("unavailable" === VR.status || "loaded" === VR.status && null === nR) && (0, DR.jsx)("div", {
+              children: (0, Rr.jsx)(Pr.c, {})
+            }), ("unavailable" === pr.status || "loaded" === pr.status && null === zr) && (0, Rr.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: yR("gameEvents:leaderboardUnavailable")
-            }), null !== nR && 0 === nR.length && (0, DR.jsx)("div", {
+              children: Zr("gameEvents:leaderboardUnavailable")
+            }), null !== zr && 0 === zr.length && (0, Rr.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: yR("friends" === qR ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== nR && nR.length > 0 && (0, DR.jsx)("ol", {
+              children: Zr("friends" === Ir ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== zr && zr.length > 0 && (0, Rr.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: nR.map((RR => {
-                const JR = KR[RR.player.name];
-                return (0, DR.jsxs)("li", {
-                  className: eR()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: RR.isOwn,
-                    GameEventPanelRowTop: RR.rank <= 3
+              children: zr.map((rr => {
+                const Sr = xr[rr.player.name];
+                return (0, Rr.jsxs)("li", {
+                  className: Ur()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: rr.isOwn,
+                    GameEventPanelRowTop: rr.rank <= 3
                   }),
-                  children: [(0, DR.jsxs)("span", {
+                  children: [(0, Rr.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", RR.rank]
-                  }), (0, DR.jsx)("div", {
+                    children: ["#", rr.rank]
+                  }), (0, Rr.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, DR.jsx)(xR.h, {
+                    children: (0, Rr.jsx)(Hr.i, {
                       playerSocialPreview: {
-                        ...RR.player,
+                        ...rr.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== JR && (0, DR.jsxs)("span", {
+                  }), void 0 !== Sr && (0, Rr.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", JR.amount.toLocaleString()]
-                  }, JR.key), (0, DR.jsx)("span", {
+                    children: ["+", Sr.amount.toLocaleString()]
+                  }, Sr.key), (0, Rr.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: RR.value.toLocaleString()
+                    children: rr.value.toLocaleString()
                   })]
-                }, RR.player.name)
+                }, rr.player.name)
               }))
-            }), UR && (0, DR.jsxs)("div", {
+            }), Yr && (0, Rr.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, DR.jsxs)("span", {
+              children: [(0, Rr.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", UR.rank.toLocaleString()]
-              }), (0, DR.jsx)("span", {
+                children: ["#", Yr.rank.toLocaleString()]
+              }), (0, Rr.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: yR("gameEvents:yourPlace")
-              }), (0, DR.jsx)("span", {
+                children: Zr("gameEvents:yourPlace")
+              }), (0, Rr.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: UR.value.toLocaleString()
+                children: Yr.value.toLocaleString()
               })]
             })]
           })]
@@ -245,356 +245,356 @@ export const modules = {
       })
     }
 
-    function PR(RR) {
+    function Gr(rr) {
       let {
-        event: JR,
-        progress: GR
-      } = RR;
+        event: Sr,
+        progress: Qr
+      } = rr;
       const {
-        t: yR
-      } = (0, iR.A)(), tR = null !== GR && JR.prizeGoals.some(((RR, JR) => GR[JR] >= RR.target));
-      return (0, DR.jsxs)("div", {
+        t: Zr
+      } = (0, fr.E)(), Wr = null !== Qr && Sr.prizeGoals.some(((rr, Sr) => Qr[Sr] >= rr.target));
+      return (0, Rr.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, DR.jsx)("div", {
+        children: [(0, Rr.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: yR(tR ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, DR.jsx)("div", {
+          children: Zr(Wr ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, Rr.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: JR.prizeGoals.map(((RR, JR) => {
-            const tR = null === GR ? null : Math.min(GR[JR], RR.target);
-            return (0, DR.jsxs)(LR.Fragment, {
-              children: [JR > 0 && (0, DR.jsx)("div", {
+          children: Sr.prizeGoals.map(((rr, Sr) => {
+            const Wr = null === Qr ? null : Math.min(Qr[Sr], rr.target);
+            return (0, Rr.jsxs)(hr.Fragment, {
+              children: [Sr > 0 && (0, Rr.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: yR("gameEvents:goalsOr")
-              }), (0, DR.jsxs)("div", {
-                className: eR()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: tR === RR.target
+                children: Zr("gameEvents:goalsOr")
+              }), (0, Rr.jsxs)("div", {
+                className: Ur()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: Wr === rr.target
                 }),
-                children: [(0, DR.jsx)("span", {
+                children: [(0, Rr.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: yR(RR.labelKey)
-                }), (0, DR.jsxs)("div", {
+                  children: Zr(rr.labelKey)
+                }), (0, Rr.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, DR.jsx)("div", {
+                  children: [(0, Rr.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== tR && void 0 !== tR ? tR : 0) / RR.target * 100 + "%"
+                      width: (null !== Wr && void 0 !== Wr ? Wr : 0) / rr.target * 100 + "%"
                     }
-                  }), null !== tR && (0, DR.jsxs)("span", {
+                  }), null !== Wr && (0, Rr.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [tR.toLocaleString(), " / ", RR.target.toLocaleString()]
+                    children: [Wr.toLocaleString(), " / ", rr.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, RR.board)
+            }, rr.board)
           }))
         })]
       })
     }
-    var IR = GR(1701),
-      mR = GR(1757),
-      zR = GR(1149),
-      SR = GR(810),
-      jR = GR(4824);
+    var kr = Qr(1675),
+      Ar = Qr(1729),
+      Vr = Qr(1144),
+      ir = Qr(815),
+      wr = Qr(4743);
 
-    function dR(RR) {
+    function cr(rr) {
       let {
-        gameNameWithVariation: JR
-      } = RR;
-      const GR = (0, IR.E)(JR),
-        [yR, tR] = (0, LR.useState)(null);
-      if ((0, LR.useEffect)((() => {
-          if (!GR) return;
-          let RR = !0;
-          return (0, mR.i)(GR).then((JR => {
-            RR && tR(JR)
-          })).catch((RR => {
-            console.error(`Failed to load the page copy for ${GR.name}`, RR)
+        gameNameWithVariation: Sr
+      } = rr;
+      const Qr = (0, kr.G)(Sr),
+        [Zr, Wr] = (0, hr.useState)(null);
+      if ((0, hr.useEffect)((() => {
+          if (!Qr) return;
+          let rr = !0;
+          return (0, Ar.i)(Qr).then((Sr => {
+            rr && Wr(Sr)
+          })).catch((rr => {
+            console.error(`Failed to load the page copy for ${Qr.name}`, rr)
           })), () => {
-            RR = !1
+            rr = !1
           }
-        }), [GR]), !GR || !yR || yR.name !== GR.name) return null;
-      const uR = (0, mR.h)(yR),
-        ZR = new Set((0, zR.d)((0, SR.j)()).map((RR => (0, IR.v)(RR)))),
-        qR = yR.similarGames.filter((RR => ZR.has((0, IR.v)(RR))));
-      return (0, DR.jsx)("div", {
+        }), [Qr]), !Qr || !Zr || Zr.name !== Qr.name) return null;
+      const ar = (0, Ar.f)(Zr),
+        jr = new Set((0, Vr.d)((0, ir.f)()).map((rr => (0, kr.y)(rr)))),
+        Ir = Zr.similarGames.filter((rr => jr.has((0, kr.y)(rr))));
+      return (0, Rr.jsx)("div", {
         className: "GamePageContent",
-        children: (0, DR.jsxs)("div", {
+        children: (0, Rr.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, DR.jsxs)("section", {
+          children: [(0, Rr.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, DR.jsx)("h2", {
-              children: uR.whatIs
-            }), yR.whatIs.map((RR => (0, DR.jsx)("p", {
-              children: RR
-            }, RR)))]
-          }), (0, DR.jsxs)("section", {
+            children: [(0, Rr.jsx)("h2", {
+              children: ar.whatIs
+            }), Zr.whatIs.map((rr => (0, Rr.jsx)("p", {
+              children: rr
+            }, rr)))]
+          }), (0, Rr.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, DR.jsx)("h2", {
-              children: uR.howToPlay
-            }), yR.howToPlay.map((RR => (0, DR.jsx)("p", {
-              children: RR
-            }, RR)))]
-          }), (0, DR.jsxs)("section", {
+            children: [(0, Rr.jsx)("h2", {
+              children: ar.howToPlay
+            }), Zr.howToPlay.map((rr => (0, Rr.jsx)("p", {
+              children: rr
+            }, rr)))]
+          }), (0, Rr.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, DR.jsx)("h2", {
-              children: uR.features
-            }), (0, DR.jsx)("ul", {
-              children: yR.features.map((RR => (0, DR.jsx)("li", {
-                children: RR
-              }, RR)))
+            children: [(0, Rr.jsx)("h2", {
+              children: ar.features
+            }), (0, Rr.jsx)("ul", {
+              children: Zr.features.map((rr => (0, Rr.jsx)("li", {
+                children: rr
+              }, rr)))
             })]
-          }), (0, DR.jsxs)("aside", {
+          }), (0, Rr.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, DR.jsx)("h2", {
-              children: uR.tips
-            }), (0, DR.jsx)("ul", {
-              children: yR.tips.map((RR => (0, DR.jsx)("li", {
-                children: RR
-              }, RR)))
+            children: [(0, Rr.jsx)("h2", {
+              children: ar.tips
+            }), (0, Rr.jsx)("ul", {
+              children: Zr.tips.map((rr => (0, Rr.jsx)("li", {
+                children: rr
+              }, rr)))
             })]
-          }), (0, DR.jsxs)("section", {
+          }), (0, Rr.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, DR.jsx)("h2", {
-              children: uR.faq
-            }), yR.faq.map((RR => {
+            children: [(0, Rr.jsx)("h2", {
+              children: ar.faq
+            }), Zr.faq.map((rr => {
               let {
-                question: JR,
-                answer: GR
-              } = RR;
-              return (0, DR.jsxs)("div", {
+                question: Sr,
+                answer: Qr
+              } = rr;
+              return (0, Rr.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, DR.jsx)("h3", {
-                  children: JR
-                }), (0, DR.jsx)("p", {
-                  children: GR
+                children: [(0, Rr.jsx)("h3", {
+                  children: Sr
+                }), (0, Rr.jsx)("p", {
+                  children: Qr
                 })]
-              }, JR)
+              }, Sr)
             }))]
-          }), qR.length > 0 && (0, DR.jsxs)("nav", {
+          }), Ir.length > 0 && (0, Rr.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, DR.jsx)("h2", {
-              children: uR.similarGames
-            }), (0, DR.jsx)("ul", {
+            children: [(0, Rr.jsx)("h2", {
+              children: ar.similarGames
+            }), (0, Rr.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: qR.map((RR => (0, DR.jsx)("li", {
-                children: (0, DR.jsx)(jR.i, {
+              children: Ir.map((rr => (0, Rr.jsx)("li", {
+                children: (0, Rr.jsx)(wr.e, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: RR
+                    gameNameWithVariation: rr
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, RR)))
+              }, rr)))
             })]
           })]
         })
       })
     }
-    var ER = GR(1468),
-      YR = GR(103),
-      kR = GR(1201),
-      QR = GR(35204),
-      FR = GR(1814),
-      TR = GR(1677),
-      sR = GR(1663),
-      hR = GR(1771),
-      RJ = GR(1597),
-      JJ = GR(1493),
-      GJ = GR(37389),
-      yJ = GR(1328),
-      tJ = GR(1127),
-      uJ = GR(377),
-      ZJ = GR(1141),
-      qJ = GR(1695),
-      iJ = GR(10315),
-      fJ = GR(25),
-      VJ = GR(3611),
-      KJ = GR(858),
-      wJ = GR(1317),
-      rJ = GR(7622),
-      eJ = GR(4829);
+    var Fr = Qr(1448),
+      or = Qr(109),
+      br = Qr(1187),
+      Jr = Qr(35515),
+      Dr = Qr(1776),
+      dr = Qr(1653),
+      sr = Qr(1644),
+      ur = Qr(1738),
+      rS = Qr(1583),
+      SS = Qr(1475),
+      QS = Qr(37770),
+      ZS = Qr(1283),
+      WS = Qr(1127),
+      aS = Qr(379),
+      jS = Qr(1133),
+      IS = Qr(1671),
+      fS = Qr(10073),
+      ES = Qr(26),
+      pS = Qr(3549),
+      xS = Qr(868),
+      mS = Qr(1279),
+      NS = Qr(7458),
+      US = Qr(4746);
 
-    function aJ(RR) {
+    function tS(rr) {
       let {
-        preview: JR,
-        isBroken: GR
-      } = RR;
-      const yR = null === JR ? null : (0, uR.d)(JR, "small"),
-        ZR = (0, tR.h)(null !== yR && void 0 !== yR ? yR : uR.p);
-      return null === JR ? (0, DR.jsx)("div", {
-        className: eR()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: GR
+        preview: Sr,
+        isBroken: Qr
+      } = rr;
+      const Zr = null === Sr ? null : (0, ar.g)(Sr, "small"),
+        jr = (0, Wr.f)(null !== Zr && void 0 !== Zr ? Zr : ar.q);
+      return null === Sr ? (0, Rr.jsx)("div", {
+        className: Ur()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: Qr
         }),
-        children: (0, DR.jsx)(ER.d, {
-          name: GR ? "triangle-exclamation" : "star"
+        children: (0, Rr.jsx)(Fr.c, {
+          name: Qr ? "triangle-exclamation" : "star"
         })
-      }) : (0, DR.jsx)("div", {
-        className: eR()("FeaturedGamesPopupSlotThumbnail", qR.f),
-        style: (0, qR.c)(ZR),
+      }) : (0, Rr.jsx)("div", {
+        className: Ur()("FeaturedGamesPopupSlotThumbnail", Ir.j),
+        style: (0, Ir.g)(jr),
         role: "img",
-        "aria-label": JR.name,
-        children: (0, DR.jsx)(qR.b, {
-          image: ZR
+        "aria-label": Sr.name,
+        children: (0, Rr.jsx)(Ir.c, {
+          image: jr
         })
       })
     }
 
-    function LJ(RR) {
+    function hS(rr) {
       let {
-        schematicId: JR,
-        gameName: GR
-      } = RR;
+        schematicId: Sr,
+        gameName: Qr
+      } = rr;
       const {
-        userContext: tR
-      } = (0, CR.d)(), uR = (0, eJ.d)(), [ZR, qR] = (0, LR.useState)(null), [iR, fR] = (0, LR.useState)(null), [VR, KR] = (0, LR.useState)(!1), rR = (0, LR.useCallback)((() => {
-        fR(null), bR.c.getFeaturedGames(tR).then((RR => {
-          uR.current && qR(RR.slots)
-        })).catch((RR => {
-          console.error("Failed to get featured games", RR), uR.current && fR("Failed to load featured games")
+        userContext: Wr
+      } = (0, Kr.c)(), ar = (0, US.b)(), [jr, Ir] = (0, hr.useState)(null), [fr, Er] = (0, hr.useState)(null), [pr, xr] = (0, hr.useState)(!1), Nr = (0, hr.useCallback)((() => {
+        Er(null), lr.c.getFeaturedGames(Wr).then((rr => {
+          ar.current && Ir(rr.slots)
+        })).catch((rr => {
+          console.error("Failed to get featured games", rr), ar.current && Er("Failed to load featured games")
         }))
-      }), [tR, uR]);
-      (0, LR.useEffect)((() => {
-        rR()
-      }), [rR]);
-      const eR = (RR, JR) => {
-        VR || (KR(!0), bR.c.setFeaturedGame(tR, RR, JR).then((() => {
-          uR.current && rR()
-        })).catch((RR => {
-          console.error("Failed to set featured game", RR), uR.current && fR("Failed to update the featured slot")
+      }), [Wr, ar]);
+      (0, hr.useEffect)((() => {
+        Nr()
+      }), [Nr]);
+      const Ur = (rr, Sr) => {
+        pr || (xr(!0), lr.c.setFeaturedGame(Wr, rr, Sr).then((() => {
+          ar.current && Nr()
+        })).catch((rr => {
+          console.error("Failed to set featured game", rr), ar.current && Er("Failed to update the featured slot")
         })).finally((() => {
-          uR.current && KR(!1)
+          ar.current && xr(!1)
         })))
       };
-      return (0, DR.jsxs)("div", {
+      return (0, Rr.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, DR.jsx)("h1", {
+        children: [(0, Rr.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !ZR && !iR && (0, DR.jsx)("div", {
+        }), !jr && !fr && (0, Rr.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, DR.jsx)(OR.d, {})
-        }), iR && (0, DR.jsx)("div", {
+          children: (0, Rr.jsx)(Pr.c, {})
+        }), fr && (0, Rr.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: iR
-        }), ZR && (0, DR.jsxs)(DR.Fragment, {
-          children: [(0, DR.jsx)("div", {
+          children: fr
+        }), jr && (0, Rr.jsxs)(Rr.Fragment, {
+          children: [(0, Rr.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: ZR.map((RR => {
-              const GR = RR.schematicId === JR,
-                tR = null === RR.schematicId,
+            children: jr.map((rr => {
+              const Qr = rr.schematicId === Sr,
+                Wr = null === rr.schematicId,
                 {
-                  categoryGroup: uR
-                } = yR.O[RR.slotId];
-              return (0, DR.jsxs)("div", {
+                  categoryGroup: ar
+                } = Zr.N[rr.slotId];
+              return (0, Rr.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, DR.jsx)(aJ, {
-                  preview: RR.preview,
-                  isBroken: !tR
-                }), (0, DR.jsxs)("div", {
+                children: [(0, Rr.jsx)(tS, {
+                  preview: rr.preview,
+                  isBroken: !Wr
+                }), (0, Rr.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, DR.jsxs)("div", {
+                  children: [(0, Rr.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, yR.jb)(uR), " \xb7 position", " ", (0, yR.Q)(RR.slotId, yR.Jb) + 1, " of", " ", (0, yR.Hb)(uR, yR.Jb)]
-                  }), tR && (0, DR.jsx)("div", {
+                    children: [(0, Zr.ob)(ar), " \xb7 position", " ", (0, Zr.Q)(rr.slotId, Zr.Pb) + 1, " of", " ", (0, Zr.Lb)(ar, Zr.Pb)]
+                  }), Wr && (0, Rr.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !tR && null !== RR.preview && (0, DR.jsx)("div", {
+                  }), !Wr && null !== rr.preview && (0, Rr.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: RR.preview.name
-                  }), !tR && null === RR.preview && (0, DR.jsxs)("div", {
+                    children: rr.preview.name
+                  }), !Wr && null === rr.preview && (0, Rr.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, DR.jsx)(ER.d, {
+                    children: [(0, Rr.jsx)(Fr.c, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, DR.jsxs)("div", {
+                }), (0, Rr.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [tR && (0, DR.jsxs)(wR.r, {
+                  children: [Wr && (0, Rr.jsxs)(mr.u, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      eR(RR.slotId, JR)
+                      Ur(rr.slotId, Sr)
                     },
-                    disabled: VR,
-                    children: [(0, DR.jsx)(ER.d, {
+                    disabled: pr,
+                    children: [(0, Rr.jsx)(Fr.c, {
                       name: "star"
                     }), " Feature here"]
-                  }), !tR && !GR && (0, DR.jsxs)(wR.U, {
+                  }), !Wr && !Qr && (0, Rr.jsxs)(mr.U, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      eR(RR.slotId, JR)
+                      Ur(rr.slotId, Sr)
                     },
-                    disabled: VR,
-                    children: [(0, DR.jsx)(ER.d, {
+                    disabled: pr,
+                    children: [(0, Rr.jsx)(Fr.c, {
                       name: "star"
                     }), " Replace"]
-                  }), !tR && (0, DR.jsxs)(wR.M, {
+                  }), !Wr && (0, Rr.jsxs)(mr.L, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      eR(RR.slotId, null)
+                      Ur(rr.slotId, null)
                     },
-                    disabled: VR,
-                    children: [(0, DR.jsx)(ER.d, {
+                    disabled: pr,
+                    children: [(0, Rr.jsx)(Fr.c, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, RR.slotId)
+              }, rr.slotId)
             }))
-          }), (0, DR.jsx)("p", {
+          }), (0, Rr.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var nJ = GR(5531),
-      UJ = GR(5400),
-      WJ = GR(4757);
-    const AJ = 8,
-      CJ = 12;
+    var zS = Qr(5473),
+      YS = Qr(5352),
+      nS = Qr(4681);
+    const eS = 8,
+      KS = 12;
 
-    function XJ(RR) {
+    function yS(rr) {
       let {
-        customLobbies: JR,
-        favouriteLobbies: GR,
-        toggleLikeLobby: yR,
-        showReport: tR
-      } = RR;
-      const [uR, ZR] = (0, LR.useState)(AJ);
-      return (0, LR.useEffect)((() => {
-        if (uR >= JR.length) return;
-        let RR = !0;
-        return (0, WJ.h)().then((() => {
-          RR && ZR(uR + CJ)
+        customLobbies: Sr,
+        favouriteLobbies: Qr,
+        toggleLikeLobby: Zr,
+        showReport: Wr
+      } = rr;
+      const [ar, jr] = (0, hr.useState)(eS);
+      return (0, hr.useEffect)((() => {
+        if (ar >= Sr.length) return;
+        let rr = !0;
+        return (0, nS.i)().then((() => {
+          rr && jr(ar + KS)
         })), () => {
-          RR = !1
+          rr = !1
         }
-      }), [uR, JR.length]), (0, DR.jsx)(DR.Fragment, {
-        children: JR.slice(0, uR).map((RR => (0, DR.jsx)(UJ.d, {
-          customLobby: RR,
-          favouriteLobbies: GR,
-          toggleLikeLobby: yR,
-          showReport: tR
-        }, RR.name)))
+      }), [ar, Sr.length]), (0, Rr.jsx)(Rr.Fragment, {
+        children: Sr.slice(0, ar).map((rr => (0, Rr.jsx)(YS.c, {
+          customLobby: rr,
+          favouriteLobbies: Qr,
+          toggleLikeLobby: Zr,
+          showReport: Wr
+        }, rr.name)))
       })
     }
-    var MJ = GR(5405),
-      BJ = GR(5420),
-      lJ = GR(5378),
-      pJ = GR(4921),
-      gJ = GR(5467),
-      bJ = GR(10291),
-      vJ = GR(224);
-    const OJ = {
-      skyblock: [GR(37415).d]
+    var BS = Qr(5359),
+      TS = Qr(5375),
+      vS = Qr(5335),
+      OS = Qr(4828),
+      LS = Qr(5428),
+      lS = Qr(10055),
+      XS = Qr(219);
+    const PS = {
+      skyblock: [Qr(37798).b]
     };
-    var xJ = GR(679);
-    const NJ = {
+    var HS = Qr(688);
+    const qS = {
       listedVariations: null,
-      backgroundImage: uR.p,
+      backgroundImage: ar.q,
       badges: [],
       category: null,
       title: null,
@@ -610,377 +610,377 @@ export const modules = {
       countdownInformation: null
     };
 
-    function DJ(RR, JR) {
-      const GR = KJ.d[RR.schematicId];
+    function RS(rr, Sr) {
+      const Qr = xS.f[rr.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, uR.d)(RR, "large"),
+        backgroundImage: (0, ar.g)(rr, "large"),
         badges: [],
-        category: RR.gameCategory,
-        title: void 0 !== (null === GR || void 0 === GR ? void 0 : GR.title) ? JR(GR.title) : RR.name,
+        category: rr.gameCategory,
+        title: void 0 !== (null === Qr || void 0 === Qr ? void 0 : Qr.title) ? Sr(Qr.title) : rr.name,
         variationTitle: null,
-        description: void 0 !== (null === GR || void 0 === GR ? void 0 : GR.description) ? JR(GR.description) : RR.description,
-        ownerSocialPreviewWithoutLocation: "owner" in RR ? RR.owner : null,
-        ccu: RR.ccu,
-        favourites: RR.favourites,
+        description: void 0 !== (null === Qr || void 0 === Qr ? void 0 : Qr.description) ? Sr(Qr.description) : rr.description,
+        ownerSocialPreviewWithoutLocation: "owner" in rr ? rr.owner : null,
+        ccu: rr.ccu,
+        favourites: rr.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in RR ? RR.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in rr ? rr.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function HJ(RR) {
-      var JR, GR, yR;
-      return null !== (JR = null !== (GR = (0, vJ.k)() ? function(RR) {
-        for (const [JR, GR] of Object.entries(OJ)) {
-          const yR = [JR, ...GR.map((RR => (0, uJ.Qb)(JR, RR)))];
-          if (yR.includes(RR)) return yR
+    function gS(rr) {
+      var Sr, Qr, Zr;
+      return null !== (Sr = null !== (Qr = (0, XS.m)() ? function(rr) {
+        for (const [Sr, Qr] of Object.entries(PS)) {
+          const Zr = [Sr, ...Qr.map((rr => (0, aS.Ib)(Sr, rr)))];
+          if (Zr.includes(rr)) return Zr
         }
         return null
-      }(RR) : null) && void 0 !== GR ? GR : null === (yR = KJ.b[RR]) || void 0 === yR ? void 0 : yR.listedVariations) && void 0 !== JR ? JR : null
+      }(rr) : null) && void 0 !== Qr ? Qr : null === (Zr = xS.c[rr]) || void 0 === Zr ? void 0 : Zr.listedVariations) && void 0 !== Sr ? Sr : null
     }
 
-    function oJ() {
+    function CS() {
       const {
-        gameNameWithVariation: RR
-      } = (0, TR.x)();
-      if ((0, LR.useEffect)(pJ.t, []), RR && (0, yJ.l)(RR)) return (0, DR.jsx)(cJ, {
-        urlId: RR
-      }, RR);
-      const JR = RR && (0, tJ.n)(RR) ? RR : "firstParty";
-      return (0, DR.jsx)(IJ, {}, JR)
+        gameNameWithVariation: rr
+      } = (0, dr.w)();
+      if ((0, hr.useEffect)(OS.n, []), rr && (0, ZS.u)(rr)) return (0, Rr.jsx)(MS, {
+        urlId: rr
+      }, rr);
+      const Sr = rr && (0, WS.l)(rr) ? rr : "firstParty";
+      return (0, Rr.jsx)(kS, {}, Sr)
     }
 
-    function cJ(RR) {
+    function MS(rr) {
       let {
-        urlId: JR
-      } = RR;
+        urlId: Sr
+      } = rr;
       const {
-        t: GR
-      } = (0, iR.A)(), {
-        userContext: yR,
-        isUserContextUpdating: tR
-      } = (0, CR.d)(), uR = (0, LR.useMemo)((() => (0, FR.h)(JR)), [JR]);
-      (0, LR.useMemo)((() => {
-        if (null === uR) return;
-        const RR = kR.userContextManager.peekCurrentUserContext();
-        (null !== RR ? bR.c.getGame(RR, uR.schematicId) : kR.userContextManager.getCurrentUserContext().then((RR => bR.c.getGame(RR, uR.schematicId)))).catch((RR => {
-          null === (0, bR.k)(RR) && console.error(`Failed to get the custom game ${uR.schematicId}`, RR), (0, FR.e)(JR)
+        t: Qr
+      } = (0, fr.E)(), {
+        userContext: Zr,
+        isUserContextUpdating: Wr
+      } = (0, Kr.c)(), ar = (0, hr.useMemo)((() => (0, Dr.i)(Sr)), [Sr]);
+      (0, hr.useMemo)((() => {
+        if (null === ar) return;
+        const rr = br.userContextManager.peekCurrentUserContext();
+        (null !== rr ? lr.c.getGame(rr, ar.schematicId) : br.userContextManager.getCurrentUserContext().then((rr => lr.c.getGame(rr, ar.schematicId)))).catch((rr => {
+          null === (0, lr.h)(rr) && console.error(`Failed to get the custom game ${ar.schematicId}`, rr), (0, Dr.f)(Sr)
         }))
-      }), [uR, JR]);
-      const [ZR, qR] = (0, LR.useState)(null), fR = (0, QR.e)();
-      (0, LR.useEffect)((() => {
-        if (null !== uR || tR) return;
-        let RR = !0;
-        return bR.c.getGameByUrlId(yR, JR).then((yR => {
-          RR && (yR.takenDown ? PJ(GR, yR) : qR({
-            urlId: JR,
-            game: yR
+      }), [ar, Sr]);
+      const [jr, Ir] = (0, hr.useState)(null), Er = (0, Jr.d)();
+      (0, hr.useEffect)((() => {
+        if (null !== ar || Wr) return;
+        let rr = !0;
+        return lr.c.getGameByUrlId(Zr, Sr).then((Zr => {
+          rr && (Zr.takenDown ? GS(Qr, Zr) : Ir({
+            urlId: Sr,
+            game: Zr
           }))
-        })).catch((yR => {
-          const tR = null !== (0, bR.k)(yR);
-          tR || console.error(`Failed to find the custom game with urlId ${JR}`, yR), RR && (tR ? PJ(GR, null) : (0, sR.navigateToHomePage)())
+        })).catch((Zr => {
+          const Wr = null !== (0, lr.h)(Zr);
+          Wr || console.error(`Failed to find the custom game with urlId ${Sr}`, Zr), rr && (Wr ? GS(Qr, null) : (0, sr.navigateToHomePage)())
         })), () => {
-          RR = !1
+          rr = !1
         }
-      }), [JR, uR, tR, yR, GR]);
-      const VR = null !== uR && void 0 !== uR ? uR : (null === ZR || void 0 === ZR ? void 0 : ZR.urlId) === JR ? ZR.game : null;
-      return null === VR ? (0, DR.jsx)(OR.d, {}) : fR ? (0, DR.jsx)(IJ, {
-        gameNameWithVariation: (0, tJ.w)(VR.schematicId),
-        knownCustomGame: VR
-      }, VR.schematicId) : null
+      }), [Sr, ar, Wr, Zr, Qr]);
+      const pr = null !== ar && void 0 !== ar ? ar : (null === jr || void 0 === jr ? void 0 : jr.urlId) === Sr ? jr.game : null;
+      return null === pr ? (0, Rr.jsx)(Pr.c, {}) : Er ? (0, Rr.jsx)(kS, {
+        gameNameWithVariation: (0, WS.v)(pr.schematicId),
+        knownCustomGame: pr
+      }, pr.schematicId) : null
     }
 
-    function PJ(RR, JR) {
-      (0, sR.navigateToHomePage)(), (0, bJ.i)(RR, JR)
+    function GS(rr, Sr) {
+      (0, sr.navigateToHomePage)(), (0, lS.f)(rr, Sr)
     }
 
-    function IJ(RR) {
-      var JR, GR, ZR, rR, gR, vR, OR, NR;
+    function kS(rr) {
+      var Sr, Qr, jr, Nr, Lr, Xr, Pr, qr;
       let {
-        gameNameWithVariation: HR,
-        knownCustomGame: oR = null
-      } = RR;
+        gameNameWithVariation: gr,
+        knownCustomGame: Cr = null
+      } = rr;
       const {
-        t: PR
-      } = (0, iR.A)();
-      (0, VJ.i)();
-      const mR = (0, VJ.l)(),
+        t: Gr
+      } = (0, fr.E)();
+      (0, pS.k)();
+      const Ar = (0, pS.r)(),
         {
-          userContext: zR,
-          isUserContextUpdating: SR
-        } = (0, CR.d)(),
-        jR = (0, lJ.f)(),
-        kR = (0, sR.useNavigatePreserveSearch)(),
-        QR = (0, TR.x)(),
-        FR = (0, LR.useMemo)((() => HR ? {
-          gameNameWithVariation: HR
-        } : QR), [HR, QR]),
-        RJ = (0, iJ.b)(FR),
-        yJ = (0, LR.useMemo)((() => {
-          const RR = function(RR) {
-            var JR, GR;
-            const yR = HJ(RR);
-            if (!yR || 0 === yR.length || yR.includes(RR)) return RR;
-            const tR = fR.i.getItem((0, UR.i)(RR));
-            if (tR && yR.includes(tR)) return tR;
-            return null !== (JR = null === (GR = KJ.b[RR]) || void 0 === GR ? void 0 : GR.defaultListedVariation) && void 0 !== JR ? JR : yR[0]
-          }(RJ.gameNameWithVariation);
-          return RR === RJ.gameNameWithVariation ? RJ : {
-            ...RJ,
-            gameNameWithVariation: RR
+          userContext: Vr,
+          isUserContextUpdating: ir
+        } = (0, Kr.c)(),
+        wr = (0, vS.e)(),
+        br = (0, sr.useNavigatePreserveSearch)(),
+        Jr = (0, dr.w)(),
+        Dr = (0, hr.useMemo)((() => gr ? {
+          gameNameWithVariation: gr
+        } : Jr), [gr, Jr]),
+        rS = (0, fS.c)(Dr),
+        ZS = (0, hr.useMemo)((() => {
+          const rr = function(rr) {
+            var Sr, Qr;
+            const Zr = gS(rr);
+            if (!Zr || 0 === Zr.length || Zr.includes(rr)) return rr;
+            const Wr = Er.j.getItem((0, Yr.g)(rr));
+            if (Wr && Zr.includes(Wr)) return Wr;
+            return null !== (Sr = null === (Qr = xS.c[rr]) || void 0 === Qr ? void 0 : Qr.defaultListedVariation) && void 0 !== Sr ? Sr : Zr[0]
+          }(rS.gameNameWithVariation);
+          return rr === rS.gameNameWithVariation ? rS : {
+            ...rS,
+            gameNameWithVariation: rr
           }
-        }), [RJ]);
-      (0, LR.useEffect)((() => {
-        const RR = RJ.gameNameWithVariation;
-        yJ.gameNameWithVariation !== RR && RR !== (0, uJ.Sb)(RR) && kR((0, IR.z)(yJ.gameNameWithVariation), {
+        }), [rS]);
+      (0, hr.useEffect)((() => {
+        const rr = rS.gameNameWithVariation;
+        ZS.gameNameWithVariation !== rr && rr !== (0, aS.Mb)(rr) && br((0, kr.A)(ZS.gameNameWithVariation), {
           replace: !0
         })
-      }), [yJ.gameNameWithVariation, RJ.gameNameWithVariation, kR]);
-      const [eJ, aJ] = (0, LR.useState)(""), WJ = LR.useRef(null), [AJ, CJ] = (0, LR.useState)(), pJ = (0, tJ.n)(yJ.gameNameWithVariation), bJ = (0, LR.useMemo)((() => pJ ? null : function(RR, JR, GR) {
-        var yR, tR;
-        const ZR = KJ.b[RR];
-        return (0, xJ.I)(ZR) ? null : {
-          listedVariations: HJ(RR),
-          backgroundImage: (0, uR.l)(RR, (0, uR.b)(ZR)),
-          badges: (0, VR.filterBadges)(ZR.badges),
-          category: ZR.type,
-          title: GR(ZR.title),
-          variationTitle: ZR.variationTitle ? GR(ZR.variationTitle) : null,
-          description: GR(ZR.description),
+      }), [ZS.gameNameWithVariation, rS.gameNameWithVariation, br]);
+      const [US, tS] = (0, hr.useState)(""), nS = hr.useRef(null), [eS, KS] = (0, hr.useState)(), OS = (0, WS.l)(ZS.gameNameWithVariation), lS = (0, hr.useMemo)((() => OS ? null : function(rr, Sr, Qr) {
+        var Zr, Wr;
+        const jr = xS.c[rr];
+        return (0, HS.L)(jr) ? null : {
+          listedVariations: gS(rr),
+          backgroundImage: (0, ar.m)(rr, (0, ar.d)(jr)),
+          badges: (0, pr.filterBadges)(jr.badges),
+          category: jr.type,
+          title: Qr(jr.title),
+          variationTitle: jr.variationTitle ? Qr(jr.variationTitle) : null,
+          description: Qr(jr.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== JR ? null !== (yR = JR[RR]) && void 0 !== yR ? yR : 0 : null,
+          ccu: null !== Sr ? null !== (Zr = Sr[rr]) && void 0 !== Zr ? Zr : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: ZR.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: ZR.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (tR = ZR.canCreateCustomLobbies) || void 0 === tR || tR,
-          countdownInformation: (0, UR.g)(RR)
+          useRejoinLastLobbyButton: jr.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: jr.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (Wr = jr.canCreateCustomLobbies) || void 0 === Wr || Wr,
+          countdownInformation: (0, Yr.f)(rr)
         }
-      }(yJ.gameNameWithVariation, mR, PR)), [pJ, yJ.gameNameWithVariation, mR, PR]), [vJ, OJ] = (0, LR.useState)(!1), [oJ, cJ] = (0, LR.useState)(null), [IJ, zJ] = (0, LR.useState)((() => oR ? DJ(oR, PR) : NJ)), SJ = null !== bJ && void 0 !== bJ ? bJ : IJ, [jJ] = (0, LR.useState)(SJ === NJ), dJ = (0, tR.h)(SJ.backgroundImage, {
+      }(ZS.gameNameWithVariation, Ar, Gr)), [OS, ZS.gameNameWithVariation, Ar, Gr]), [XS, PS] = (0, hr.useState)(!1), [CS, MS] = (0, hr.useState)(null), [kS, VS] = (0, hr.useState)((() => Cr ? RS(Cr, Gr) : qS)), iS = null !== lS && void 0 !== lS ? lS : kS, [wS] = (0, hr.useState)(iS === qS), cS = (0, Wr.f)(iS.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: EJ,
-        recentlyPlayedCustomLobbies: YJ
-      } = (0, LR.useMemo)((() => function(RR, JR, GR, yR) {
-        var tR;
-        const uR = RR => {
-            const GR = (0, tJ.s)(RR),
-              yR = JR.find((JR => "custom" === JR.type ? JR.schematicId === GR : JR.gameNameWithVariation === RR));
-            return yR ? [...yR.recentLobbies] : []
+        recentlyPlayedPublicLobbies: FS,
+        recentlyPlayedCustomLobbies: oS
+      } = (0, hr.useMemo)((() => function(rr, Sr, Qr, Zr) {
+        var Wr;
+        const ar = rr => {
+            const Qr = (0, WS.q)(rr),
+              Zr = Sr.find((Sr => "custom" === Sr.type ? Sr.schematicId === Qr : Sr.gameNameWithVariation === rr));
+            return Zr ? [...Zr.recentLobbies] : []
           },
-          ZR = (0, VR.getRecentGameNameWithVariationLobbiesKey)(RR),
-          qR = null !== (tR = fR.i.getItem(ZR)) && void 0 !== tR ? tR : [],
-          iR = [...uR(RR), ...qR],
-          KR = [];
-        for (const fR of iR)(0, wJ.E)(fR) && !KR.includes(fR) && KR.push(fR);
-        let wR = iR;
-        if (GR) {
-          const RR = uR("classic_worlds"),
-            JR = iR.filter((JR => !RR.includes(JR)));
-          wR = [...RR, ...JR]
+          jr = (0, pr.getRecentGameNameWithVariationLobbiesKey)(rr),
+          Ir = null !== (Wr = Er.j.getItem(jr)) && void 0 !== Wr ? Wr : [],
+          fr = [...ar(rr), ...Ir],
+          xr = [];
+        for (const Er of fr)(0, mS.M)(Er) && !xr.includes(Er) && xr.push(Er);
+        let mr = fr;
+        if (Qr) {
+          const rr = ar("classic_worlds"),
+            Sr = fr.filter((Sr => !rr.includes(Sr)));
+          mr = [...rr, ...Sr]
         }
-        const rR = [],
-          eR = !1 === yR ? [] : wR;
-        for (const fR of eR)(0, wJ.E)(fR) || rR.includes(fR) || rR.push(fR);
+        const Nr = [],
+          Ur = !1 === Zr ? [] : mr;
+        for (const Er of Ur)(0, mS.M)(Er) || Nr.includes(Er) || Nr.push(Er);
         return {
-          recentlyPlayedPublicLobbies: KR,
-          recentlyPlayedCustomLobbies: rR
+          recentlyPlayedPublicLobbies: xr,
+          recentlyPlayedCustomLobbies: Nr
         }
-      }(yJ.gameNameWithVariation, jR, SJ.showWorldsInsteadOfCustomLobbies, SJ.canCreateCustomLobbies)), [yJ.gameNameWithVariation, jR, SJ.showWorldsInsteadOfCustomLobbies, SJ.canCreateCustomLobbies]), [kJ, QJ] = (0, LR.useState)(!0), [FJ, TJ] = (0, LR.useState)([]), [sJ, hJ] = (0, LR.useState)(null), [RG, JG] = (0, LR.useState)("explore"), GG = (0, LR.useRef)(!1), yG = (0, LR.useCallback)((RR => {
-        (0, nR.unstable_batchedUpdates)((() => {
-          CJ(RR), zJ((JR => ({
-            ...DJ(RR, PR),
-            isFavourite: JR.isFavourite
+      }(ZS.gameNameWithVariation, wr, iS.showWorldsInsteadOfCustomLobbies, iS.canCreateCustomLobbies)), [ZS.gameNameWithVariation, wr, iS.showWorldsInsteadOfCustomLobbies, iS.canCreateCustomLobbies]), [bS, JS] = (0, hr.useState)(!0), [DS, dS] = (0, hr.useState)([]), [sS, uS] = (0, hr.useState)(null), [rQ, SQ] = (0, hr.useState)("explore"), QQ = (0, hr.useRef)(!1), ZQ = (0, hr.useCallback)((rr => {
+        (0, zr.unstable_batchedUpdates)((() => {
+          KS(rr), VS((Sr => ({
+            ...RS(rr, Gr),
+            isFavourite: Sr.isFavourite
           })))
         }))
-      }), [PR]);
-      (0, LR.useEffect)((() => {
-        null === fJ.d.get("gameEntrySource") && (0, fJ.k)("gameInformationPageDirect")
+      }), [Gr]);
+      (0, hr.useEffect)((() => {
+        null === ES.c.get("gameEntrySource") && (0, ES.m)("gameInformationPageDirect")
       }), []);
-      const tG = (0, LR.useRef)(null);
-      (0, LR.useEffect)((() => {
-        const RR = RR => {
-            tG.current = RR.target instanceof Element ? RR.target.closest("a, button") : null
+      const WQ = (0, hr.useRef)(null);
+      (0, hr.useEffect)((() => {
+        const rr = rr => {
+            WQ.current = rr.target instanceof Element ? rr.target.closest("a, button") : null
           },
-          JR = RR => {
-            "Tab" === RR.key && (tG.current = null)
+          Sr = rr => {
+            "Tab" === rr.key && (WQ.current = null)
           };
-        return document.addEventListener("pointerdown", RR, !0), document.addEventListener("keydown", JR, !0), () => {
-          document.removeEventListener("pointerdown", RR, !0), document.removeEventListener("keydown", JR, !0)
+        return document.addEventListener("pointerdown", rr, !0), document.addEventListener("keydown", Sr, !0), () => {
+          document.removeEventListener("pointerdown", rr, !0), document.removeEventListener("keydown", Sr, !0)
         }
-      }), []), (0, XR.e)("Enter", (RR => {
-        const JR = RR.target instanceof Element ? RR.target : null;
-        if (RR.defaultPrevented || null !== JR && void 0 !== JR && JR.closest("input, textarea, select")) return;
-        const GR = null === JR || void 0 === JR ? void 0 : JR.closest("a, button");
-        GR && GR !== tG.current || (RR.preventDefault(), rG())
-      })), (0, MR.c)(sR.navigateToHomePage);
-      const uG = EJ.length > 0 || YJ.length > 0,
-        ZG = !SJ.useRejoinLastLobbyButton || 0 === EJ.length,
-        qG = pJ && null === SJ.ownerSocialPreviewWithoutLocation,
-        iG = zR.getPlayerName() === (null === AJ || void 0 === AJ || null === (JR = AJ.owner) || void 0 === JR ? void 0 : JR.name),
-        fG = null !== (GR = null === (ZR = SJ.badges.find((RR => "event" === RR.type))) || void 0 === ZR ? void 0 : ZR.event) && void 0 !== GR ? GR : null,
-        VG = ZG ? wR.n : wR.g,
-        KG = (0, DR.jsx)(KR.h, {
-          tooltipInner: (0, DR.jsx)("div", {
-            children: PR("homePage:quickPlayInfo")
+      }), []), (0, yr.d)("Enter", (rr => {
+        const Sr = rr.target instanceof Element ? rr.target : null;
+        if (rr.defaultPrevented || null !== Sr && void 0 !== Sr && Sr.closest("input, textarea, select")) return;
+        const Qr = null === Sr || void 0 === Sr ? void 0 : Sr.closest("a, button");
+        Qr && Qr !== WQ.current || (rr.preventDefault(), NQ())
+      })), (0, Br.e)(sr.navigateToHomePage);
+      const aQ = FS.length > 0 || oS.length > 0,
+        jQ = !iS.useRejoinLastLobbyButton || 0 === FS.length,
+        IQ = OS && null === iS.ownerSocialPreviewWithoutLocation,
+        fQ = Vr.getPlayerName() === (null === eS || void 0 === eS || null === (Sr = eS.owner) || void 0 === Sr ? void 0 : Sr.name),
+        EQ = null !== (Qr = null === (jr = iS.badges.find((rr => "event" === rr.type))) || void 0 === jr ? void 0 : jr.event) && void 0 !== Qr ? Qr : null,
+        pQ = jQ ? mr.p : mr.h,
+        xQ = (0, Rr.jsx)(xr.f, {
+          tooltipInner: (0, Rr.jsx)("div", {
+            children: Gr("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, DR.jsx)(VG, {
+          children: (0, Rr.jsx)(pQ, {
             className: "GameInformationButton",
-            padDefaultFocus: ZG,
+            padDefaultFocus: jQ,
             showPress: !0,
             onClick: () => {
-              rG()
+              NQ()
             },
-            children: (0, DR.jsxs)("div", {
+            children: (0, Rr.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [ZG && (0, DR.jsxs)(DR.Fragment, {
-                children: [(0, DR.jsx)(ER.d, {
+              children: [jQ && (0, Rr.jsxs)(Rr.Fragment, {
+                children: [(0, Rr.jsx)(Fr.c, {
                   name: "play"
                 }), " "]
-              }), PR("homePage:quickPlay")]
+              }), Gr("homePage:quickPlay")]
             })
           })
         });
-      (0, LR.useEffect)((() => {
-        if (!pJ || SR) return;
-        let RR = !0;
-        const JR = (0, tJ.s)(yJ.gameNameWithVariation);
-        return bR.c.getGame(zR, JR).then((JR => {
-          RR && (JR.takenDown ? cJ({
-            ownGame: JR
-          }) : yG(JR))
-        })).catch((JR => {
-          const GR = null !== (0, bR.k)(JR);
-          GR || console.error("Failed to get Custom Game information", JR), RR && (GR ? cJ({
+      (0, hr.useEffect)((() => {
+        if (!OS || ir) return;
+        let rr = !0;
+        const Sr = (0, WS.q)(ZS.gameNameWithVariation);
+        return lr.c.getGame(Vr, Sr).then((Sr => {
+          rr && (Sr.takenDown ? MS({
+            ownGame: Sr
+          }) : ZQ(Sr))
+        })).catch((Sr => {
+          const Qr = null !== (0, lr.h)(Sr);
+          Qr || console.error("Failed to get Custom Game information", Sr), rr && (Qr ? MS({
             ownGame: null
-          }) : (0, sR.navigateToHomePage)())
-        })), bR.c.getFavouriteGames(zR).then((GR => {
-          RR && zJ((RR => ({
-            ...RR,
-            isFavourite: GR.includes(JR)
+          }) : (0, sr.navigateToHomePage)())
+        })), lr.c.getFavouriteGames(Vr).then((Qr => {
+          rr && VS((rr => ({
+            ...rr,
+            isFavourite: Qr.includes(Sr)
           })))
-        })).catch((JR => {
-          console.error("Failed to get favourite games", JR), RR && OJ(!0)
+        })).catch((Sr => {
+          console.error("Failed to get favourite games", Sr), rr && PS(!0)
         })), () => {
-          RR = !1
+          rr = !1
         }
-      }), [pJ, SR, yJ.gameNameWithVariation, yG, zR]), (0, LR.useEffect)((() => {
-        null !== oJ && PJ(PR, oJ.ownGame)
-      }), [oJ, PR]);
-      const wG = !pJ && null === bJ;
+      }), [OS, ir, ZS.gameNameWithVariation, ZQ, Vr]), (0, hr.useEffect)((() => {
+        null !== CS && GS(Gr, CS.ownGame)
+      }), [CS, Gr]);
+      const mQ = !OS && null === lS;
 
-      function rG(RR) {
-        (0, gJ.h)(), kR((0, WR.e)(yJ.gameNameWithVariation, RR))
-      }(0, LR.useEffect)((() => {
-        wG && (0, sR.navigateToHomePage)()
-      }), [wG]), (0, LR.useEffect)((() => {
-        if (!1 === SJ.canCreateCustomLobbies) return;
-        let RR = !0;
-        return null !== SJ.showWorldsInsteadOfCustomLobbies && !1 === SR && (QJ(!0), bR.c.getFavouriteLobbies(zR).then((RR => {
-          hJ(RR)
-        })), bR.c.getOpenCustomLobbies(zR, {
-          gameNameWithVariation: SJ.showWorldsInsteadOfCustomLobbies ? "classic" : yJ.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === RG,
-          onlyFavouriteLobbies: "favourite" === RG
-        }).then((JR => {
-          RR && (0, nR.unstable_batchedUpdates)((() => {
-            TJ(JR), QJ(!1)
+      function NQ(rr) {
+        (0, LS.e)(), br((0, nr.c)(ZS.gameNameWithVariation, rr))
+      }(0, hr.useEffect)((() => {
+        mQ && (0, sr.navigateToHomePage)()
+      }), [mQ]), (0, hr.useEffect)((() => {
+        if (!1 === iS.canCreateCustomLobbies) return;
+        let rr = !0;
+        return null !== iS.showWorldsInsteadOfCustomLobbies && !1 === ir && (JS(!0), lr.c.getFavouriteLobbies(Vr).then((rr => {
+          uS(rr)
+        })), lr.c.getOpenCustomLobbies(Vr, {
+          gameNameWithVariation: iS.showWorldsInsteadOfCustomLobbies ? "classic" : ZS.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === rQ,
+          onlyFavouriteLobbies: "favourite" === rQ
+        }).then((Sr => {
+          rr && (0, zr.unstable_batchedUpdates)((() => {
+            dS(Sr), JS(!1)
           }))
-        })).catch((JR => {
-          console.error("Failed to get open custom lobbies", JR), RR && QJ(!1)
+        })).catch((Sr => {
+          console.error("Failed to get open custom lobbies", Sr), rr && JS(!1)
         }))), () => {
-          RR = !1
+          rr = !1
         }
-      }), [SR, yJ, RG, SJ.showWorldsInsteadOfCustomLobbies, SJ.canCreateCustomLobbies, zR]);
-      const eG = (0, LR.useCallback)((async RR => {
+      }), [ir, ZS, rQ, iS.showWorldsInsteadOfCustomLobbies, iS.canCreateCustomLobbies, Vr]);
+      const UQ = (0, hr.useCallback)((async rr => {
           try {
-            if (!sJ) return;
-            sJ.includes(RR) ? (bR.c.unfavouriteLobby(zR, RR), hJ(sJ.filter((JR => JR !== RR)))) : (bR.c.favouriteLobby(zR, RR).catch((RR => {
-              console.error("Failed to favourite lobby", RR)
-            })), hJ([...sJ, RR]))
-          } catch (JR) {
-            console.error("Failed to like lobby", JR)
+            if (!sS) return;
+            sS.includes(rr) ? (lr.c.unfavouriteLobby(Vr, rr), uS(sS.filter((Sr => Sr !== rr)))) : (lr.c.favouriteLobby(Vr, rr).catch((rr => {
+              console.error("Failed to favourite lobby", rr)
+            })), uS([...sS, rr]))
+          } catch (Sr) {
+            console.error("Failed to like lobby", Sr)
           }
-        }), [zR, sJ]),
-        aG = (null === AJ || void 0 === AJ ? void 0 : AJ.schematicId) === (0, tJ.s)(RJ.gameNameWithVariation) ? AJ : null,
-        LG = aG && (0, IR.G)(RJ.gameNameWithVariation, (RR => PR(RR)), aG);
-      (0, hR.i)(aG && (0, IR.z)(RJ.gameNameWithVariation, aG));
-      const nG = YR.featureFlags.canUseCustomLobbies && !0 === SJ.canCreateCustomLobbies,
-        UG = (0, DR.jsx)("div", {
+        }), [Vr, sS]),
+        tQ = (null === eS || void 0 === eS ? void 0 : eS.schematicId) === (0, WS.q)(rS.gameNameWithVariation) ? eS : null,
+        hQ = tQ && (0, kr.I)(rS.gameNameWithVariation, (rr => Gr(rr)), tQ);
+      (0, ur.e)(tQ && (0, kr.A)(rS.gameNameWithVariation, tQ));
+      const zQ = or.featureFlags.canUseCustomLobbies && !0 === iS.canCreateCustomLobbies,
+        YQ = (0, Rr.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, DR.jsx)(dR, {
-            gameNameWithVariation: yJ.gameNameWithVariation
+          children: (0, Rr.jsx)(cr, {
+            gameNameWithVariation: ZS.gameNameWithVariation
           })
         });
-      return (0, DR.jsx)(DR.Fragment, {
-        children: (0, DR.jsxs)("article", {
-          className: eR()("GameInformation", {
-            GameInformationFadeIn: jJ,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (rR = SJ.countdownInformation) || void 0 === rR ? void 0 : rR.type)
+      return (0, Rr.jsx)(Rr.Fragment, {
+        children: (0, Rr.jsxs)("article", {
+          className: Ur()("GameInformation", {
+            GameInformationFadeIn: wS,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (Nr = iS.countdownInformation) || void 0 === Nr ? void 0 : Nr.type)
           }),
-          children: [LG && (0, DR.jsx)(AR.b, {
-            meta: LG
-          }), (0, DR.jsxs)("div", {
+          children: [hQ && (0, Rr.jsx)(er.b, {
+            meta: hQ
+          }), (0, Rr.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, DR.jsxs)("div", {
+            children: [(0, Rr.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, DR.jsxs)("div", {
+              children: [(0, Rr.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, DR.jsx)("div", {
+                children: [(0, Rr.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, DR.jsx)("div", {
-                  className: eR()("GameInformationTopBackgroundImage", qR.f),
-                  style: (0, qR.c)(dJ),
-                  children: (0, DR.jsx)(qR.b, {
-                    image: dJ
+                }), (0, Rr.jsx)("div", {
+                  className: Ur()("GameInformationTopBackgroundImage", Ir.j),
+                  style: (0, Ir.g)(cS),
+                  children: (0, Rr.jsx)(Ir.c, {
+                    image: cS
                   })
                 })]
-              }), (0, DR.jsxs)("div", {
+              }), (0, Rr.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, DR.jsx)(nJ.c, {}), (0, DR.jsxs)("div", {
+                children: [(0, Rr.jsx)(zS.e, {}), (0, Rr.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, DR.jsxs)("div", {
+                  children: [(0, Rr.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, DR.jsxs)("div", {
-                      className: eR()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: qG
+                    children: [(0, Rr.jsxs)("div", {
+                      className: Ur()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: IQ
                       }),
-                      children: [SJ.badges.map((RR => (0, DR.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${RR.type}`,
-                        children: (0, DR.jsx)(pR.d, {
-                          badge: RR
+                      children: [iS.badges.map((rr => (0, Rr.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${rr.type}`,
+                        children: (0, Rr.jsx)(Or.e, {
+                          badge: rr
                         })
-                      }, RR.type))), pJ && (0, DR.jsx)("div", {
+                      }, rr.type))), OS && (0, Rr.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, DR.jsx)(lR.c, {
-                          text: (0, yR.db)({
+                        children: (0, Rr.jsx)(vr.c, {
+                          text: (0, Zr.hb)({
                             type: "playerCrafted"
                           })
                         })
-                      }), SJ.category && (0, DR.jsx)("div", {
+                      }), iS.category && (0, Rr.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, DR.jsx)(lR.c, {
+                        children: (0, Rr.jsx)(vr.c, {
                           text: [{
-                            str: (0, yR.eb)(SJ.category).toUpperCase()
+                            str: (0, Zr.jb)(iS.category).toUpperCase()
                           }]
                         })
-                      }), null !== SJ.ccu && (0, DR.jsxs)("div", {
+                      }), null !== iS.ccu && (0, Rr.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, DR.jsx)(ER.d, {
+                        children: [(0, Rr.jsx)(Fr.c, {
                           name: "user"
-                        }), (0, wJ.J)(SJ.ccu), " online"]
-                      }), null !== SJ.ownerSocialPreviewWithoutLocation && (0, DR.jsxs)("div", {
+                        }), (0, mS.S)(iS.ccu), " online"]
+                      }), null !== iS.ownerSocialPreviewWithoutLocation && (0, Rr.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, DR.jsx)("span", {
+                        children: [(0, Rr.jsx)("span", {
                           children: "Made by"
-                        }), (0, DR.jsx)(xR.h, {
+                        }), (0, Rr.jsx)(Hr.i, {
                           playerSocialPreview: {
-                            ...SJ.ownerSocialPreviewWithoutLocation,
+                            ...iS.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -988,402 +988,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), qG && (0, DR.jsxs)("div", {
+                      }), IQ && (0, Rr.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, DR.jsx)("span", {
+                        children: [(0, Rr.jsx)("span", {
                           children: "Made by"
-                        }), (0, DR.jsx)("div", {
+                        }), (0, Rr.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== SJ.favourites && (null !== SJ.isFavourite || pJ && !vJ) && (0, DR.jsx)(wR.y, {
+                      }), null !== iS.favourites && (null !== iS.isFavourite || OS && !XS) && (0, Rr.jsx)(mr.w, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== GG.current && (GG.current = !0, null !== SJ.isFavourite)) {
-                              const RR = (0, tJ.s)(yJ.gameNameWithVariation);
-                              let JR;
-                              SJ.isFavourite ? (JR = -1, bR.c.unfavouriteGame(zR, RR).catch((RR => {
-                                console.error("Failed to get unfavourite game", RR)
+                            if (!0 !== QQ.current && (QQ.current = !0, null !== iS.isFavourite)) {
+                              const rr = (0, WS.q)(ZS.gameNameWithVariation);
+                              let Sr;
+                              iS.isFavourite ? (Sr = -1, lr.c.unfavouriteGame(Vr, rr).catch((rr => {
+                                console.error("Failed to get unfavourite game", rr)
                               })).finally((() => {
-                                GG.current = !1
-                              }))) : (JR = 1, bR.c.favouriteGame(zR, RR).catch((RR => {
-                                console.error("Failed to get favourite game", RR)
+                                QQ.current = !1
+                              }))) : (Sr = 1, lr.c.favouriteGame(Vr, rr).catch((rr => {
+                                console.error("Failed to get favourite game", rr)
                               })).finally((() => {
-                                GG.current = !1
-                              }))), zJ((RR => ({
-                                ...RR,
-                                isFavourite: !RR.isFavourite
-                              }))), zJ((RR => ({
-                                ...RR,
-                                favourites: RR.favourites + JR
+                                QQ.current = !1
+                              }))), VS((rr => ({
+                                ...rr,
+                                isFavourite: !rr.isFavourite
+                              }))), VS((rr => ({
+                                ...rr,
+                                favourites: rr.favourites + Sr
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (gR = SJ.isFavourite) && void 0 !== gR && gR,
-                        disabled: null === SJ.isFavourite,
-                        className: eR()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === SJ.isFavourite
+                        isLiked: null !== (Lr = iS.isFavourite) && void 0 !== Lr && Lr,
+                        disabled: null === iS.isFavourite,
+                        className: Ur()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === iS.isFavourite
                         })
-                      }, null === SJ.isFavourite ? "pending" : "known"), pJ && !qG && YR.featureFlags.useSocialFeatures && !iG && (0, DR.jsx)(MJ.c, {
+                      }, null === iS.isFavourite ? "pending" : "known"), OS && !IQ && or.featureFlags.useSocialFeatures && !fQ && (0, Rr.jsx)(BS.d, {
                         targetType: "customGame",
-                        targetId: (0, tJ.s)(yJ.gameNameWithVariation),
+                        targetId: (0, WS.q)(ZS.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (zR.playerHasRank("developer") || zR.playerHasRank("admin") && iG) && (0, DR.jsxs)(wR.n, {
+                      }), (Vr.playerHasRank("developer") || Vr.playerHasRank("admin") && fQ) && (0, Rr.jsxs)(mr.p, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          kR((0, qJ.p)((0, ZJ.e)(yJ.gameNameWithVariation, !0)))
+                          br((0, IS.r)((0, jS.d)(ZS.gameNameWithVariation, !0)))
                         },
-                        children: [(0, DR.jsx)(ER.d, {
+                        children: [(0, Rr.jsx)(Fr.c, {
                           name: "star-christmas"
-                        }), " ", PR("studio:viewInStudio")]
-                      }), pJ && zR.playerHasRank("developer") && (0, DR.jsxs)(wR.g, {
+                        }), " ", Gr("studio:viewInStudio")]
+                      }), OS && Vr.playerHasRank("developer") && (0, Rr.jsxs)(mr.h, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, rJ.e)({
-                            schematicId: (0, tJ.s)(yJ.gameNameWithVariation),
+                          (0, NS.c)({
+                            schematicId: (0, WS.q)(ZS.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, DR.jsx)(ER.d, {
+                        children: [(0, Rr.jsx)(Fr.c, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), pJ && zR.playerHasRank("developer") && (0, DR.jsxs)(wR.g, {
+                      }), OS && Vr.playerHasRank("developer") && (0, Rr.jsxs)(mr.h, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          JJ.NotificationProvider.showCustomPopup({
-                            body: () => (0, DR.jsx)(LJ, {
-                              schematicId: (0, tJ.s)(yJ.gameNameWithVariation),
-                              gameName: SJ.title
+                          SS.NotificationProvider.showCustomPopup({
+                            body: () => (0, Rr.jsx)(hS, {
+                              schematicId: (0, WS.q)(ZS.gameNameWithVariation),
+                              gameName: iS.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, DR.jsx)(ER.d, {
+                        children: [(0, Rr.jsx)(Fr.c, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (vR = SJ.countdownInformation) || void 0 === vR ? void 0 : vR.type) && (0, DR.jsxs)("div", {
+                      }), "updateCountdown" === (null === (Xr = iS.countdownInformation) || void 0 === Xr ? void 0 : Xr.type) && (0, Rr.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, DR.jsxs)("div", {
+                        children: [(0, Rr.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, DR.jsx)(BR.d, {
-                            toTime: SJ.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, Rr.jsx)(Tr.d, {
+                            toTime: iS.countdownInformation.countdownToTime
                           })]
-                        }), (0, DR.jsx)("div", {
+                        }), (0, Rr.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: SJ.countdownInformation.previewText
+                          children: iS.countdownInformation.previewText
                         })]
                       })]
-                    }, qG ? "pending" : "shown"), (0, DR.jsxs)("header", {
+                    }, IQ ? "pending" : "shown"), (0, Rr.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, DR.jsx)("div", {
+                      children: [(0, Rr.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, DR.jsxs)("h1", {
+                        children: (0, Rr.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [SJ.title, " ", SJ.variationTitle && (null === (OR = KJ.b[yJ.gameNameWithVariation]) || void 0 === OR ? void 0 : OR.variationThumbnailUseBigRatio) && (0, DR.jsx)("span", {
+                          children: [iS.title, " ", iS.variationTitle && (null === (Pr = xS.c[ZS.gameNameWithVariation]) || void 0 === Pr ? void 0 : Pr.variationThumbnailUseBigRatio) && (0, Rr.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: SJ.variationTitle
+                            children: iS.variationTitle
                           })]
                         })
-                      }), SJ.listedVariations && SJ.listedVariations.length > 1 && (0, DR.jsx)("div", {
-                        className: eR()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (NR = KJ.b[yJ.gameNameWithVariation]) || void 0 === NR ? void 0 : NR.variationThumbnailUseBigRatio
+                      }), iS.listedVariations && iS.listedVariations.length > 1 && (0, Rr.jsx)("div", {
+                        className: Ur()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (qr = xS.c[ZS.gameNameWithVariation]) || void 0 === qr ? void 0 : qr.variationThumbnailUseBigRatio
                         }),
-                        children: SJ.listedVariations.map((RR => {
-                          var JR, GR;
-                          return (0, DR.jsxs)(mJ, {
-                            variation: RR,
-                            isSelected: yJ.gameNameWithVariation === RR,
-                            children: [null !== mR && (0, DR.jsx)("div", {
+                        children: iS.listedVariations.map((rr => {
+                          var Sr, Qr;
+                          return (0, Rr.jsxs)(AS, {
+                            variation: rr,
+                            isSelected: ZS.gameNameWithVariation === rr,
+                            children: [null !== Ar && (0, Rr.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, DR.jsxs)("div", {
+                              children: (0, Rr.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, DR.jsx)(ER.d, {
+                                children: [(0, Rr.jsx)(Fr.c, {
                                   name: "user"
-                                }), " ", (0, wJ.J)(null !== (JR = mR[RR]) && void 0 !== JR ? JR : 0)]
+                                }), " ", (0, mS.S)(null !== (Sr = Ar[rr]) && void 0 !== Sr ? Sr : 0)]
                               })
-                            }), (0, DR.jsx)("div", {
+                            }), (0, Rr.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: PR(null !== (GR = KJ.b[RR].variationTitle) && void 0 !== GR ? GR : KJ.b[RR].title)
-                            }), (0, DR.jsx)("div", {
+                              children: Gr(null !== (Qr = xS.c[rr].variationTitle) && void 0 !== Qr ? Qr : xS.c[rr].title)
+                            }), (0, Rr.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, VR.filterBadges)(KJ.b[RR].badges).map((RR => (0, DR.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + RR.type,
-                                children: (0, DR.jsx)("div", {
+                              children: (0, pr.filterBadges)(xS.c[rr].badges).map((rr => (0, Rr.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + rr.type,
+                                children: (0, Rr.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, DR.jsx)(pR.d, {
-                                    badge: RR
+                                  children: (0, Rr.jsx)(Or.e, {
+                                    badge: rr
                                   })
                                 })
-                              }, RR.type)))
+                              }, rr.type)))
                             })]
-                          }, RR)
+                          }, rr)
                         }))
                       })]
-                    }), SJ.description && (0, DR.jsx)("p", {
+                    }), iS.description && (0, Rr.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: SJ.description
+                      children: iS.description
                     })]
-                  }), (0, DR.jsxs)("div", {
+                  }), (0, Rr.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, DR.jsxs)("div", {
+                    children: [(0, Rr.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!ZG && (0, DR.jsx)(KR.h, {
-                        tooltipInner: (0, DR.jsx)("div", {
-                          children: PR("homePage:rejoinLobbyNumberInfo")
+                      children: [!jQ && (0, Rr.jsx)(xr.f, {
+                        tooltipInner: (0, Rr.jsx)("div", {
+                          children: Gr("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, DR.jsx)(wR.n, {
+                        children: (0, Rr.jsx)(mr.p, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            rG(EJ[0])
+                            NQ(FS[0])
                           },
-                          children: (0, DR.jsxs)("div", {
+                          children: (0, Rr.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, DR.jsx)(ER.d, {
+                            children: [(0, Rr.jsx)(Fr.c, {
                               name: "play"
-                            }), " ", PR("homePage:rejoinLobbyNumber", {
-                              number: EJ[0]
+                            }), " ", Gr("homePage:rejoinLobbyNumber", {
+                              number: FS[0]
                             })]
                           })
                         })
-                      }), ZG && KG]
-                    }), (0, DR.jsxs)("div", {
+                      }), jQ && xQ]
+                    }), (0, Rr.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!ZG && KG, (0, DR.jsxs)("div", {
+                      children: [!jQ && xQ, (0, Rr.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, DR.jsx)(ER.d, {
+                        children: [(0, Rr.jsx)(Fr.c, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, DR.jsx)(aR.b, {
+                        }), (0, Rr.jsx)(tr.b, {
                           className: "JoinLobbyInput",
-                          placeholderText: PR("homePage:lobbyName"),
-                          maxLength: wJ.I,
-                          domRef: WJ,
-                          onValueChange: RR => {
-                            RR = (0, wJ.hb)(RR), aJ(RR)
+                          placeholderText: Gr("homePage:lobbyName"),
+                          maxLength: mS.O,
+                          domRef: nS,
+                          onValueChange: rr => {
+                            rr = (0, mS.ub)(rr), tS(rr)
                           },
                           onEnter: () => {
-                            0 === eJ.length ? rG(EJ[0]) : rG(eJ)
+                            0 === US.length ? NQ(FS[0]) : NQ(US)
                           }
-                        }), (0, DR.jsx)(wR.g, {
+                        }), (0, Rr.jsx)(mr.h, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === eJ.length ? rG(EJ[0]) : rG(eJ)
+                            0 === US.length ? NQ(FS[0]) : NQ(US)
                           },
-                          children: PR("general:join")
+                          children: Gr("general:join")
                         })]
                       })]
-                    }), (0, DR.jsxs)("section", {
-                      className: eR()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !uG
+                    }), (0, Rr.jsxs)("section", {
+                      className: Ur()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !aQ
                       }),
-                      children: [(0, DR.jsx)("div", {
+                      children: [(0, Rr.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, DR.jsxs)("div", {
+                        children: (0, Rr.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, DR.jsx)(ER.d, {
+                          children: [(0, Rr.jsx)(Fr.c, {
                             name: "clock-rotate-left"
-                          }), uG && (0, DR.jsx)("h2", {
+                          }), aQ && (0, Rr.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: PR("homePage:recentlyPlayedLobbies")
+                            children: Gr("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, DR.jsx)(BJ.e, {
-                        lobbyGroups: [EJ, YJ],
-                        onLobbyClick: RR => {
-                          rG(RR)
+                      }), (0, Rr.jsx)(TS.e, {
+                        lobbyGroups: [FS, oS],
+                        onLobbyClick: rr => {
+                          NQ(rr)
                         },
-                        keyPrefix: yJ.gameNameWithVariation
+                        keyPrefix: ZS.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== fG && (0, DR.jsx)(cR, {
-                eventName: fG
+              }), null !== EQ && (0, Rr.jsx)(Mr, {
+                eventName: EQ
               })]
-            }), nG && (0, DR.jsx)("div", {
+            }), zQ && (0, Rr.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, DR.jsxs)("section", {
+              children: (0, Rr.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, DR.jsxs)("div", {
-                  className: eR()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === SJ.showWorldsInsteadOfCustomLobbies
+                children: [(0, Rr.jsxs)("div", {
+                  className: Ur()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === iS.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === SJ.showWorldsInsteadOfCustomLobbies && (0, DR.jsxs)("h2", {
+                  children: [!0 === iS.showWorldsInsteadOfCustomLobbies && (0, Rr.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, DR.jsx)(ER.d, {
+                    children: [(0, Rr.jsx)(Fr.c, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, DR.jsxs)("div", {
+                    }), (0, Rr.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, DR.jsx)("div", {
+                      children: [(0, Rr.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), PR("game:worlds")]
+                      }), Gr("game:worlds")]
                     })]
-                  }), !1 === SJ.showWorldsInsteadOfCustomLobbies && (0, DR.jsxs)("h2", {
+                  }), !1 === iS.showWorldsInsteadOfCustomLobbies && (0, Rr.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, DR.jsx)(ER.d, {
+                    children: [(0, Rr.jsx)(Fr.c, {
                       name: "joystick"
-                    }), (0, DR.jsxs)("div", {
+                    }), (0, Rr.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, DR.jsx)("div", {
+                      children: [(0, Rr.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), PR("homePage:customLobbies")]
+                      }), Gr("homePage:customLobbies")]
                     })]
-                  }), (0, DR.jsx)(wR.U, {
+                  }), (0, Rr.jsx)(mr.U, {
                     onClick: () => {
-                      JG("explore")
+                      SQ("explore")
                     },
-                    active: "explore" === RG,
-                    children: PR("general:explore")
-                  }), (0, DR.jsx)(wR.U, {
+                    active: "explore" === rQ,
+                    children: Gr("general:explore")
+                  }), (0, Rr.jsx)(mr.U, {
                     onClick: () => {
-                      JG("favourite")
+                      SQ("favourite")
                     },
-                    active: "favourite" === RG,
-                    children: PR("homePage:favouriteLobbies")
-                  }), (0, DR.jsx)(wR.U, {
+                    active: "favourite" === rQ,
+                    children: Gr("homePage:favouriteLobbies")
+                  }), (0, Rr.jsx)(mr.U, {
                     onClick: () => {
-                      JG("owned")
+                      SQ("owned")
                     },
-                    active: "owned" === RG,
-                    children: PR("homePage:ownedLobbies")
+                    active: "owned" === rQ,
+                    children: Gr("homePage:ownedLobbies")
                   })]
-                }), (0, DR.jsxs)("div", {
+                }), (0, Rr.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, DR.jsxs)("div", {
+                  children: [(0, Rr.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, DR.jsx)(UJ.c, {
+                    children: [(0, Rr.jsx)(YS.b, {
                       label: "Create",
                       onClick: () => {
-                        JJ.NotificationProvider.showCustomPopup({
-                          body: RR => (0, DR.jsx)(GJ.CreateCustomLobby, {
-                            gameNameWithVariation: yJ.gameNameWithVariation,
-                            close: RR
+                        SS.NotificationProvider.showCustomPopup({
+                          body: rr => (0, Rr.jsx)(QS.CreateCustomLobby, {
+                            gameNameWithVariation: ZS.gameNameWithVariation,
+                            close: rr
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === kJ && (0, DR.jsx)(UJ.g, {}), !1 === kJ && (0, DR.jsx)(XJ, {
-                      customLobbies: FJ,
-                      favouriteLobbies: sJ,
-                      toggleLikeLobby: eG,
-                      showReport: YR.featureFlags.useSocialFeatures && "owned" !== RG
+                    }), !0 === bS && (0, Rr.jsx)(YS.d, {}), !1 === bS && (0, Rr.jsx)(yS, {
+                      customLobbies: DS,
+                      favouriteLobbies: sS,
+                      toggleLikeLobby: UQ,
+                      showReport: or.featureFlags.useSocialFeatures && "owned" !== rQ
                     })]
-                  }), UG]
+                  }), YQ]
                 })]
               })
             })]
-          }), !nG && UG]
+          }), !zQ && YQ]
         })
       })
     }
 
-    function mJ(RR) {
+    function AS(rr) {
       let {
-        variation: JR,
-        isSelected: GR,
-        children: yR
-      } = RR;
-      const iR = KJ.b[JR],
-        VR = (0, uR.l)(JR, (0, uR.o)(iR)),
-        KR = (0, tR.h)(VR),
-        wR = (0, ZR.f)([(0, uR.h)(JR, (0, uR.b)(iR))]);
-      return (0, DR.jsxs)(sR.LinkPreserveSearch, {
-        to: (0, IR.z)(JR),
+        variation: Sr,
+        isSelected: Qr,
+        children: Zr
+      } = rr;
+      const fr = xS.c[Sr],
+        pr = (0, ar.m)(Sr, (0, ar.p)(fr)),
+        xr = (0, Wr.f)(pr),
+        mr = (0, jr.e)([(0, ar.i)(Sr, (0, ar.d)(fr))]);
+      return (0, Rr.jsxs)(sr.LinkPreserveSearch, {
+        to: (0, kr.A)(Sr),
         replace: !0,
-        className: eR()("GameInformationVariation", qR.f, {
-          SelectedGameInformationVariation: GR
+        className: Ur()("GameInformationVariation", Ir.j, {
+          SelectedGameInformationVariation: Qr
         }),
-        onClick: RR => {
-          if (!(0, RJ.e)(RR)) return;
-          const GR = (0, UR.i)(JR);
-          fR.i.setItem(GR, JR)
+        onClick: rr => {
+          if (!(0, rS.d)(rr)) return;
+          const Qr = (0, Yr.g)(Sr);
+          Er.j.setItem(Qr, Sr)
         },
-        onMouseEnter: wR.start,
-        onMouseLeave: wR.cancel,
-        onFocus: wR.start,
-        onBlur: wR.cancel,
-        style: (0, qR.c)(KR),
-        children: [(0, DR.jsx)(qR.b, {
-          image: KR
-        }), yR]
+        onMouseEnter: mr.start,
+        onMouseLeave: mr.cancel,
+        onFocus: mr.start,
+        onBlur: mr.cancel,
+        style: (0, Ir.g)(xr),
+        children: [(0, Rr.jsx)(Ir.c, {
+          image: xr
+        }), Zr]
       })
     }
   },
-  7622: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => UR
+  7458: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Yr
     });
-    var yR = GR(66),
-      tR = GR(1590),
-      uR = GR(1647),
-      ZR = GR(4829),
-      qR = GR(1196),
-      iR = GR(1465),
-      fR = GR(1501),
-      VR = GR(1468),
-      KR = GR(1163),
-      wR = GR.n(KR),
-      rR = GR(7615),
-      eR = GR(1378);
+    var Zr = Qr(72),
+      Wr = Qr(1576),
+      ar = Qr(1629),
+      jr = Qr(4746),
+      Ir = Qr(1181),
+      fr = Qr(1444),
+      Er = Qr(1489),
+      pr = Qr(1448),
+      xr = Qr(1155),
+      mr = Qr.n(xr),
+      Nr = Qr(7449),
+      Ur = Qr(1338);
 
-    function aR(RR) {
+    function tr(rr) {
       let {
-        info: JR,
-        className: GR
-      } = RR;
+        info: Sr,
+        className: Qr
+      } = rr;
       const {
-        statusText: yR,
-        rowText: tR
-      } = (0, rR.f)();
-      return (0, eR.jsxs)("div", {
-        className: wR()("GameApprovalInfoDetails", GR),
-        children: [(0, eR.jsxs)("div", {
-          className: wR()("GameApprovalInfoSummary", JR.overallPassed ? "Passed" : "Failed"),
-          children: [(0, eR.jsx)(VR.d, {
-            name: JR.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, eR.jsx)("span", {
-            children: yR(JR.status)
+        statusText: Zr,
+        rowText: Wr
+      } = (0, Nr.e)();
+      return (0, Ur.jsxs)("div", {
+        className: mr()("GameApprovalInfoDetails", Qr),
+        children: [(0, Ur.jsxs)("div", {
+          className: mr()("GameApprovalInfoSummary", Sr.overallPassed ? "Passed" : "Failed"),
+          children: [(0, Ur.jsx)(pr.c, {
+            name: Sr.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, Ur.jsx)("span", {
+            children: Zr(Sr.status)
           })]
-        }), JR.rows.length > 0 && (0, eR.jsx)("div", {
+        }), Sr.rows.length > 0 && (0, Ur.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: JR.rows.map((RR => {
+          children: Sr.rows.map((rr => {
             const {
-              label: JR,
-              value: GR
-            } = tR(RR);
-            return (0, eR.jsxs)("div", {
-              className: wR()("GameApprovalInfoRow", RR.passed ? "Passed" : "Failed"),
-              children: [(0, eR.jsx)(VR.d, {
-                name: RR.passed ? "check" : "xmark"
-              }), (0, eR.jsxs)("div", {
+              label: Sr,
+              value: Qr
+            } = Wr(rr);
+            return (0, Ur.jsxs)("div", {
+              className: mr()("GameApprovalInfoRow", rr.passed ? "Passed" : "Failed"),
+              children: [(0, Ur.jsx)(pr.c, {
+                name: rr.passed ? "check" : "xmark"
+              }), (0, Ur.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, eR.jsx)("div", {
+                children: [(0, Ur.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: JR
-                }), null !== GR && (0, eR.jsx)("div", {
+                  children: Sr
+                }), null !== Qr && (0, Ur.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: GR
+                  children: Qr
                 })]
               })]
-            }, RR.kind)
+            }, rr.kind)
           }))
         })]
       })
     }
-    var LR = GR(1270),
-      nR = GR(1493);
+    var hr = Qr(1251),
+      zr = Qr(1475);
 
-    function UR(RR) {
-      nR.NotificationProvider.showCustomPopup({
-        body: () => (0, eR.jsx)(WR, {
-          ...RR
+    function Yr(rr) {
+      zr.NotificationProvider.showCustomPopup({
+        body: () => (0, Ur.jsx)(nr, {
+          ...rr
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1391,92 +1391,92 @@ export const modules = {
       })
     }
 
-    function WR(RR) {
+    function nr(rr) {
       let {
-        schematicId: JR,
-        canOverride: GR,
-        onApprovalChanged: KR
-      } = RR;
+        schematicId: Sr,
+        canOverride: Qr,
+        onApprovalChanged: xr
+      } = rr;
       const {
-        t: wR
-      } = (0, LR.A)(), {
-        userContext: rR
-      } = (0, qR.d)(), nR = (0, ZR.d)(), [UR, WR] = (0, yR.useState)(null), [AR, CR] = (0, yR.useState)(null), [XR, MR] = (0, yR.useState)(!1), BR = (0, yR.useCallback)((() => {
-        CR(null), uR.c.getGameApprovalInfo(rR, JR).then((RR => {
-          nR.current && WR(RR)
-        })).catch((RR => {
-          console.error("Failed to get game approval info", RR), nR.current && CR(wR("studio:approvalLoadFailed"))
+        t: mr
+      } = (0, hr.E)(), {
+        userContext: Nr
+      } = (0, Ir.c)(), zr = (0, jr.b)(), [Yr, nr] = (0, Zr.useState)(null), [er, Kr] = (0, Zr.useState)(null), [yr, Br] = (0, Zr.useState)(!1), Tr = (0, Zr.useCallback)((() => {
+        Kr(null), ar.c.getGameApprovalInfo(Nr, Sr).then((rr => {
+          zr.current && nr(rr)
+        })).catch((rr => {
+          console.error("Failed to get game approval info", rr), zr.current && Kr(mr("studio:approvalLoadFailed"))
         }))
-      }), [rR, JR, nR, wR]);
-      (0, yR.useEffect)((() => {
-        BR()
-      }), [BR]);
-      const lR = RR => {
-        XR || (MR(!0), uR.c.setGameApproval(rR, JR, RR).then((() => {
-          null === KR || void 0 === KR || KR(), nR.current && BR()
-        })).catch((RR => {
-          console.error("Failed to set game approval", RR)
+      }), [Nr, Sr, zr, mr]);
+      (0, Zr.useEffect)((() => {
+        Tr()
+      }), [Tr]);
+      const vr = rr => {
+        yr || (Br(!0), ar.c.setGameApproval(Nr, Sr, rr).then((() => {
+          null === xr || void 0 === xr || xr(), zr.current && Tr()
+        })).catch((rr => {
+          console.error("Failed to set game approval", rr)
         })).finally((() => {
-          nR.current && MR(!1)
+          zr.current && Br(!1)
         })))
       };
-      return (0, eR.jsxs)("div", {
+      return (0, Ur.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, eR.jsx)("h1", {
+        children: [(0, Ur.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: wR("studio:approvalTitle")
-        }), !UR && !AR && (0, eR.jsx)("div", {
+          children: mr("studio:approvalTitle")
+        }), !Yr && !er && (0, Ur.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, eR.jsx)(iR.d, {})
-        }), AR && (0, eR.jsx)("div", {
+          children: (0, Ur.jsx)(fr.c, {})
+        }), er && (0, Ur.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: AR
-        }), UR && (0, eR.jsxs)(eR.Fragment, {
-          children: [(0, eR.jsx)(aR, {
-            info: UR
-          }), GR && (0, eR.jsxs)("div", {
+          children: er
+        }), Yr && (0, Ur.jsxs)(Ur.Fragment, {
+          children: [(0, Ur.jsx)(tr, {
+            info: Yr
+          }), Qr && (0, Ur.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== UR.manualOverride && (0, eR.jsx)(fR.h, {
-              tooltipInner: (0, eR.jsx)("div", {
-                children: wR("studio:approvalApproveTooltip")
+            children: [!0 !== Yr.manualOverride && (0, Ur.jsx)(Er.f, {
+              tooltipInner: (0, Ur.jsx)("div", {
+                children: mr("studio:approvalApproveTooltip")
               }),
-              children: (0, eR.jsxs)(tR.n, {
+              children: (0, Ur.jsxs)(Wr.p, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  lR(!0)
+                  vr(!0)
                 },
-                disabled: XR,
-                children: [(0, eR.jsx)(VR.d, {
+                disabled: yr,
+                children: [(0, Ur.jsx)(pr.c, {
                   name: "check"
-                }), " ", wR("studio:approvalApprove")]
+                }), " ", mr("studio:approvalApprove")]
               })
-            }), !1 !== UR.manualOverride && (0, eR.jsx)(fR.h, {
-              tooltipInner: (0, eR.jsx)("div", {
-                children: wR("studio:approvalDenyTooltip")
+            }), !1 !== Yr.manualOverride && (0, Ur.jsx)(Er.f, {
+              tooltipInner: (0, Ur.jsx)("div", {
+                children: mr("studio:approvalDenyTooltip")
               }),
-              children: (0, eR.jsxs)(tR.M, {
+              children: (0, Ur.jsxs)(Wr.L, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  lR(!1)
+                  vr(!1)
                 },
-                disabled: XR,
-                children: [(0, eR.jsx)(VR.d, {
+                disabled: yr,
+                children: [(0, Ur.jsx)(pr.c, {
                   name: "xmark"
-                }), " ", wR("studio:approvalDeny")]
+                }), " ", mr("studio:approvalDeny")]
               })
-            }), null !== UR.manualOverride && (0, eR.jsx)(fR.h, {
-              tooltipInner: (0, eR.jsx)("div", {
-                children: wR("studio:approvalClearOverrideTooltip")
+            }), null !== Yr.manualOverride && (0, Ur.jsx)(Er.f, {
+              tooltipInner: (0, Ur.jsx)("div", {
+                children: mr("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, eR.jsxs)(tR.g, {
+              children: (0, Ur.jsxs)(Wr.h, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  lR(null)
+                  vr(null)
                 },
-                disabled: XR,
-                children: [(0, eR.jsx)(VR.d, {
+                disabled: yr,
+                children: [(0, Ur.jsx)(pr.c, {
                   name: "arrows-rotate"
-                }), " ", wR("studio:approvalClearOverride")]
+                }), " ", mr("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1484,14 +1484,14 @@ export const modules = {
       })
     }
   },
-  7615: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => qR,
-      f: () => ZR
+  7449: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => Ir,
+      e: () => jr
     });
-    var yR = GR(377),
-      tR = GR(1270);
-    const uR = {
+    var Zr = Qr(379),
+      Wr = Qr(1251);
+    const ar = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1500,60 +1500,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function ZR() {
+    function jr() {
       const {
-        t: RR,
-        selectedLanguage: JR
-      } = (0, tR.A)();
+        t: rr,
+        selectedLanguage: Sr
+      } = (0, Wr.E)();
       return {
-        statusText: JR => RR(uR[JR]),
-        rowText: GR => {
-          const uR = (RR, GR) => (0, yR.Z)((0, tR.n)(JR.code, RR), 0, GR),
-            ZR = (JR, GR) => null === GR ? JR : RR("studio:approvalWithMinDays", {
-              value: JR,
-              days: GR
+        statusText: Sr => rr(ar[Sr]),
+        rowText: Qr => {
+          const ar = (rr, Qr) => (0, Zr.W)((0, Wr.m)(Sr.code, rr), 0, Qr),
+            jr = (Sr, Qr) => null === Qr ? Sr : rr("studio:approvalWithMinDays", {
+              value: Sr,
+              days: Qr
             });
-          switch (GR.kind) {
+          switch (Qr.kind) {
             case "ownerAccountAge": {
-              const JR = GR.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const Sr = Qr.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: RR("studio:approvalAccountAgeLabel"),
-                value: ZR(RR(JR, {
-                  age: uR(JR, GR.accountAgeMs)
-                }), GR.minAccountAgeDays)
+                label: rr("studio:approvalAccountAgeLabel"),
+                value: jr(rr(Sr, {
+                  age: ar(Sr, Qr.accountAgeMs)
+                }), Qr.minAccountAgeDays)
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: RR("studio:approvalSinceUnbannedLabel"), value: ZR(uR("studio:approvalSinceUnbannedLabel", GR.sinceMs), GR.minDays)
+                label: rr("studio:approvalSinceUnbannedLabel"), value: jr(ar("studio:approvalSinceUnbannedLabel", Qr.sinceMs), Qr.minDays)
               };
             case "reportHold": {
               const {
-                detail: JR
-              } = GR;
-              if (null === JR) return {
-                label: RR("studio:approvalUnderInvestigation"),
+                detail: Sr
+              } = Qr;
+              if (null === Sr) return {
+                label: rr("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const yR = JR.weightedReporters.toFixed(1),
-                tR = JR.threshold.toFixed(1),
-                ZR = RR("studio:approvalReportHoldLabel", {
-                  hours: JR.windowHours
+              const Zr = Sr.weightedReporters.toFixed(1),
+                Wr = Sr.threshold.toFixed(1),
+                jr = rr("studio:approvalReportHoldLabel", {
+                  hours: Sr.windowHours
                 });
-              if (null === JR.heldUntil) return {
-                label: ZR,
-                value: RR("studio:approvalReportHoldValue", {
-                  weightedReporters: yR,
-                  threshold: tR
+              if (null === Sr.heldUntil) return {
+                label: jr,
+                value: rr("studio:approvalReportHoldValue", {
+                  weightedReporters: Zr,
+                  threshold: Wr
                 })
               };
-              const qR = "studio:approvalReportHoldValueHeld";
+              const Ir = "studio:approvalReportHoldValueHeld";
               return {
-                label: ZR,
-                value: RR(qR, {
-                  weightedReporters: yR,
-                  threshold: tR,
-                  time: uR(qR, JR.heldUntil - Date.now())
+                label: jr,
+                value: rr(Ir, {
+                  weightedReporters: Zr,
+                  threshold: Wr,
+                  time: ar(Ir, Sr.heldUntil - Date.now())
                 })
               }
             }
@@ -1562,189 +1562,189 @@ export const modules = {
       }
     }
 
-    function qR(RR) {
-      return null === RR.manualOverride && RR.rows.some((RR => "reportHold" === RR.kind && !RR.passed))
+    function Ir(rr) {
+      return null === rr.manualOverride && rr.rows.some((rr => "reportHold" === rr.kind && !rr.passed))
     }
   },
-  35204: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR
+  35515: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => ar
     });
-    var yR = GR(66),
-      tR = GR(4757);
+    var Zr = Qr(72),
+      Wr = Qr(4681);
 
-    function uR() {
-      const [RR, JR] = (0, yR.useState)(!1);
-      return (0, yR.useLayoutEffect)((() => {
-        let RR = !0;
-        return (0, tR.h)().then((() => {
-          RR && JR(!0)
+    function ar() {
+      const [rr, Sr] = (0, Zr.useState)(!1);
+      return (0, Zr.useLayoutEffect)((() => {
+        let rr = !0;
+        return (0, Wr.i)().then((() => {
+          rr && Sr(!0)
         })), () => {
-          RR = !1
+          rr = !1
         }
-      }), []), RR
+      }), []), rr
     }
   },
-  10291: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => LR,
-      i: () => nR
+  10055: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => hr,
+      f: () => zr
     });
-    var yR = GR(163),
-      tR = GR(203),
-      uR = GR(1127),
-      ZR = GR(1141),
-      qR = GR(1317),
-      iR = GR(2134),
-      fR = GR(3357),
-      VR = GR(1647),
-      KR = GR(1493),
-      wR = GR(1201),
-      rR = GR(10298),
-      eR = GR(1663),
-      aR = GR(1695);
+    var Zr = Qr(161),
+      Wr = Qr(208),
+      ar = Qr(1127),
+      jr = Qr(1133),
+      Ir = Qr(1279),
+      fr = Qr(2089),
+      Er = Qr(3312),
+      pr = Qr(1629),
+      xr = Qr(1475),
+      mr = Qr(1187),
+      Nr = Qr(10062),
+      Ur = Qr(1644),
+      tr = Qr(1671);
 
-    function LR(RR, JR) {
-      const GR = !0 === JR.debugResult.gameRefused,
-        uR = GR || JR.code === yR.j.REQUEST_TO_MATCHMAKING ? (0, rR.k)(JR.message) : null;
-      if (null !== uR) return CR(RR, RR((0, rR.p)(uR)), RR(rR.n[uR])), !0;
-      if (GR) return async function(RR) {
+    function hr(rr, Sr) {
+      const Qr = !0 === Sr.debugResult.gameRefused,
+        ar = Qr || Sr.code === Zr.i.REQUEST_TO_MATCHMAKING ? (0, Nr.e)(Sr.message) : null;
+      if (null !== ar) return Kr(rr, rr((0, Nr.g)(ar)), rr(Nr.f[ar])), !0;
+      if (Qr) return async function(rr) {
         const {
-          gameNameWithVariation: JR,
-          lobbyName: GR,
-          shownLobbyName: yR
-        } = iR.gameBridge.latest("connectedGame"), tR = "classic" === JR && (0, qR.A)(GR) ? yR : await (0, fR.d)(RR, JR, GR);
-        return "" !== tR ? RR("general:cantJoinGame", {
-          game: tR
-        }) : RR("general:cantJoinThisGame")
-      }(RR).then((GR => {
-        CR(RR, GR, JR.message)
+          gameNameWithVariation: Sr,
+          lobbyName: Qr,
+          shownLobbyName: Zr
+        } = fr.gameBridge.latest("connectedGame"), Wr = "classic" === Sr && (0, Ir.F)(Qr) ? Zr : await (0, Er.e)(rr, Sr, Qr);
+        return "" !== Wr ? rr("general:cantJoinGame", {
+          game: Wr
+        }) : rr("general:cantJoinThisGame")
+      }(rr).then((Qr => {
+        Kr(rr, Qr, Sr.message)
       })), !0;
       const {
-        joinFailure: ZR
-      } = JR.debugResult, VR = "refused" === (null === ZR || void 0 === ZR ? void 0 : ZR.at) ? ZR.code : null;
-      return VR === tR.e.schematicNotPublished.code ? (async function(RR, JR) {
-        const GR = UR(),
-          yR = await AR(GR);
-        if (null === yR || yR.gamePublished) return void CR(RR, RR("general:cantJoinThisGame"), JR);
-        await WR(RR, "rocket-launch", RR("studio:gameNotPublishedTitle", {
-          game: yR.name
-        }), RR("studio:publishInStudio"), GR)
-      }(RR, JR.message), !0) : (VR === tR.e.schematicBanned.code || VR === tR.e.customGameTakenDown.code) && (AR(UR()).then((JR => {
-        nR(RR, JR)
+        joinFailure: jr
+      } = Sr.debugResult, pr = "refused" === (null === jr || void 0 === jr ? void 0 : jr.at) ? jr.code : null;
+      return pr === Wr.e.schematicNotPublished.code ? (async function(rr, Sr) {
+        const Qr = Yr(),
+          Zr = await er(Qr);
+        if (null === Zr || Zr.gamePublished) return void Kr(rr, rr("general:cantJoinThisGame"), Sr);
+        await nr(rr, "rocket-launch", rr("studio:gameNotPublishedTitle", {
+          game: Zr.name
+        }), rr("studio:publishInStudio"), Qr)
+      }(rr, Sr.message), !0) : (pr === Wr.e.schematicBanned.code || pr === Wr.e.customGameTakenDown.code) && (er(Yr()).then((Sr => {
+        zr(rr, Sr)
       })), !0)
     }
 
-    function nR(RR, JR) {
-      !0 !== (null === JR || void 0 === JR ? void 0 : JR.takenDown) ? CR(RR, RR("general:cantJoinThisGame"), tR.e.customGameTakenDown.text) : WR(RR, "lock", RR("studio:gameTakenDownTitle", {
-        game: JR.name
-      }), RR("studio:viewInStudio"), JR.schematicId)
+    function zr(rr, Sr) {
+      !0 !== (null === Sr || void 0 === Sr ? void 0 : Sr.takenDown) ? Kr(rr, rr("general:cantJoinThisGame"), Wr.e.customGameTakenDown.text) : nr(rr, "lock", rr("studio:gameTakenDownTitle", {
+        game: Sr.name
+      }), rr("studio:viewInStudio"), Sr.schematicId)
     }
 
-    function UR() {
-      return (0, uR.s)(iR.gameBridge.latest("connectedGame").gameNameWithVariation)
+    function Yr() {
+      return (0, ar.q)(fr.gameBridge.latest("connectedGame").gameNameWithVariation)
     }
-    async function WR(RR, JR, GR, yR, tR) {
-      !0 === await KR.NotificationProvider.showPromptPopup({
-        icon: JR,
-        title: GR,
-        confirmText: yR,
-        cancelText: RR("general:cancel")
-      }).getResult() && (0, eR.navigatePreserveSearch)((0, aR.p)((0, ZR.d)(tR), "manage"))
+    async function nr(rr, Sr, Qr, Zr, Wr) {
+      !0 === await xr.NotificationProvider.showPromptPopup({
+        icon: Sr,
+        title: Qr,
+        confirmText: Zr,
+        cancelText: rr("general:cancel")
+      }).getResult() && (0, Ur.navigatePreserveSearch)((0, tr.r)((0, jr.b)(Wr), "manage"))
     }
-    async function AR(RR) {
+    async function er(rr) {
       try {
-        return await VR.c.getGame(await wR.userContextManager.getCurrentUserContext(), RR, !0)
-      } catch (JR) {
-        return (0, VR.g)(JR) || console.error(`Failed to get game ${RR}`, JR), null
+        return await pr.c.getGame(await mr.userContextManager.getCurrentUserContext(), rr, !0)
+      } catch (Sr) {
+        return (0, pr.g)(Sr) || console.error(`Failed to get game ${rr}`, Sr), null
       }
     }
 
-    function CR(RR, JR, GR) {
-      KR.NotificationProvider.showPromptPopup({
+    function Kr(rr, Sr, Qr) {
+      xr.NotificationProvider.showPromptPopup({
         icon: "lock",
-        title: JR,
-        subtitle: GR,
-        confirmText: RR("general:ok"),
+        title: Sr,
+        subtitle: Qr,
+        confirmText: rr("general:ok"),
         cancelText: ""
       })
     }
   },
-  10315: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR
+  10073: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr
     });
-    var yR = GR(1459),
-      tR = GR(1317),
-      uR = GR(679);
+    var Zr = Qr(1433),
+      Wr = Qr(1279),
+      ar = Qr(688);
 
-    function ZR(RR) {
-      return RR = function(RR, JR) {
-        var GR;
-        const yR = new URLSearchParams(JR),
-          tR = yR.get("lobby"),
-          uR = yR.get("vm"),
-          ZR = null !== (GR = tR) && void 0 !== GR ? GR : RR.lobbyName,
-          qR = null !== uR && void 0 !== uR ? uR : RR.directJoinVmUrl;
-        if (ZR === RR.lobbyName && qR === RR.directJoinVmUrl) return RR;
+    function jr(rr) {
+      return rr = function(rr, Sr) {
+        var Qr;
+        const Zr = new URLSearchParams(Sr),
+          Wr = Zr.get("lobby"),
+          ar = Zr.get("vm"),
+          jr = null !== (Qr = Wr) && void 0 !== Qr ? Qr : rr.lobbyName,
+          Ir = null !== ar && void 0 !== ar ? ar : rr.directJoinVmUrl;
+        if (jr === rr.lobbyName && Ir === rr.directJoinVmUrl) return rr;
         return {
-          ...RR,
-          lobbyName: ZR,
-          directJoinVmUrl: qR
+          ...rr,
+          lobbyName: jr,
+          directJoinVmUrl: Ir
         }
-      }(RR, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), RR = function(RR) {
-        if ((0, uR.I)(RR.directJoinVmUrl)) return RR;
-        const JR = (0, tR.S)(RR.directJoinVmUrl);
-        null === JR && (RR.directJoinVmUrl = void 0);
-        return RR
-      }(RR = function(RR) {
-        if ((0, uR.I)(RR.gameNameWithVariation)) return RR;
-        return RR.gameNameWithVariation = (0, yR.j)(RR.gameNameWithVariation), RR
-      }(RR))
+      }(rr, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), rr = function(rr) {
+        if ((0, ar.L)(rr.directJoinVmUrl)) return rr;
+        const Sr = (0, Wr.cb)(rr.directJoinVmUrl);
+        null === Sr && (rr.directJoinVmUrl = void 0);
+        return rr
+      }(rr = function(rr) {
+        if ((0, ar.L)(rr.gameNameWithVariation)) return rr;
+        return rr.gameNameWithVariation = (0, Zr.g)(rr.gameNameWithVariation), rr
+      }(rr))
     }
   },
-  10298: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => uR,
-      h: () => ZR,
-      k: () => qR,
-      n: () => fR,
-      p: () => iR
+  10062: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => ar,
+      d: () => jr,
+      e: () => Ir,
+      f: () => Er,
+      g: () => fr
     });
-    var yR = GR(203),
-      tR = GR(5425);
+    var Zr = Qr(208),
+      Wr = Qr(5384);
 
-    function uR(RR) {
-      return ZR(RR) === yR.e.gameOrPluginOnPlayerAuthRejected.code
+    function ar(rr) {
+      return jr(rr) === Zr.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function ZR(RR) {
-      return "object" === typeof RR && null !== RR ? RR.code : void 0
+    function jr(rr) {
+      return "object" === typeof rr && null !== rr ? rr.code : void 0
     }
 
-    function qR(RR) {
-      var JR;
-      return null !== (JR = Object.keys(tR.d).find((JR => tR.d[JR] === RR))) && void 0 !== JR ? JR : null
+    function Ir(rr) {
+      var Sr;
+      return null !== (Sr = Object.keys(Wr.b).find((Sr => Wr.b[Sr] === rr))) && void 0 !== Sr ? Sr : null
     }
 
-    function iR(RR) {
-      return "notWhitelisted" === RR ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function fr(rr) {
+      return "notWhitelisted" === rr ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const fR = {
+    const Er = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  37415: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => tR,
-      g: () => yR
+  37798: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Wr,
+      c: () => Zr
     });
-    const yR = "skyblockSkills",
-      tR = "skills_test_gym"
+    const Zr = "skyblockSkills",
+      Wr = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

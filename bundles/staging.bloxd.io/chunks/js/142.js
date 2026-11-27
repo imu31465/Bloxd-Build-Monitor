@@ -1,92 +1,92 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  37820: (RR, JR, GR) => {
-    function yR(RR, JR, GR, yR) {
-      return !(GR && !RR.aimable) && (!JR || RR.gun && "head" !== yR)
+  38191: (rr, Sr, Qr) => {
+    function Zr(rr, Sr, Qr, Zr) {
+      return !(Qr && !rr.aimable) && (!Sr || rr.gun && "head" !== Zr)
     }
 
-    function tR(RR) {
-      return Math.max(.1 * RR, 1)
+    function Wr(rr) {
+      return Math.max(.1 * rr, 1)
     }
 
-    function uR(RR, JR) {
-      return !RR && JR
+    function ar(rr, Sr) {
+      return !rr && Sr
     }
-    GR.d(JR, {
-      e: () => uR,
-      g: () => tR,
-      h: () => yR
+    Qr.d(Sr, {
+      c: () => ar,
+      d: () => Wr,
+      g: () => Zr
     })
   },
-  37829: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => qR,
-      e: () => ZR
+  38193: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Ir,
+      e: () => jr
     });
-    let yR = null;
-    const tR = {
+    let Zr = null;
+    const Wr = {
         crosshairAccuracy: [],
         turnDamageIndicators: [],
         turnSoundCues: []
       },
-      uR = {
-        crosshairAccuracy: RR => {
-          const JR = tR.crosshairAccuracy.at(-1);
-          JR ? JR.hook(RR) : yR = RR
+      ar = {
+        crosshairAccuracy: rr => {
+          const Sr = Wr.crosshairAccuracy.at(-1);
+          Sr ? Sr.hook(rr) : Zr = rr
         },
-        turnDamageIndicators: RR => {
-          var JR;
-          null === (JR = tR.turnDamageIndicators.at(-1)) || void 0 === JR || JR.hook(RR)
+        turnDamageIndicators: rr => {
+          var Sr;
+          null === (Sr = Wr.turnDamageIndicators.at(-1)) || void 0 === Sr || Sr.hook(rr)
         },
-        turnSoundCues: RR => {
-          var JR;
-          null === (JR = tR.turnSoundCues.at(-1)) || void 0 === JR || JR.hook(RR)
+        turnSoundCues: rr => {
+          var Sr;
+          null === (Sr = Wr.turnSoundCues.at(-1)) || void 0 === Sr || Sr.hook(rr)
         }
       };
 
-    function ZR(RR, JR) {
-      const GR = {
-          hook: JR
+    function jr(rr, Sr) {
+      const Qr = {
+          hook: Sr
         },
-        ZR = tR[RR];
-      if (ZR.push(GR), "crosshairAccuracy" === RR && null !== yR) {
-        const RR = yR;
-        yR = null, uR.crosshairAccuracy(RR)
+        jr = Wr[rr];
+      if (jr.push(Qr), "crosshairAccuracy" === rr && null !== Zr) {
+        const rr = Zr;
+        Zr = null, ar.crosshairAccuracy(rr)
       }
       return () => {
-        const RR = ZR.indexOf(GR); - 1 !== RR && ZR.splice(RR, 1)
+        const rr = jr.indexOf(Qr); - 1 !== rr && jr.splice(rr, 1)
       }
     }
 
-    function qR() {
-      return uR
+    function Ir() {
+      return ar
     }
   },
-  35099: (RR, JR, GR) => {
-    GR.d(JR, {
-      e: () => uR,
-      i: () => tR
+  35416: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => ar,
+      d: () => Wr
     });
-    var yR = GR(25);
+    var Zr = Qr(26);
 
-    function tR(RR, JR) {
-      return RR && !JR
+    function Wr(rr, Sr) {
+      return rr && !Sr
     }
 
-    function uR() {
-      return tR(yR.d.get("isTouchScreen"), yR.d.get("clientEscMenuOptions").touchActionButtons)
+    function ar() {
+      return Wr(Zr.c.get("isTouchScreen"), Zr.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  38977: (RR, JR, GR) => {
-    GR.d(JR, {
-      c: () => KR,
-      f: () => ZR
+  39311: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      d: () => xr,
+      g: () => jr
     });
-    var yR = GR(5871),
-      tR = GR(5844),
-      uR = GR(377);
-    const ZR = {
+    var Zr = Qr(5806),
+      Wr = Qr(5779),
+      ar = Qr(379);
+    const jr = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -3025,52 +3025,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...qR("White"),
-      ...qR("Orange"),
-      ...qR("Magenta"),
-      ...qR("Light Blue"),
-      ...qR("Yellow"),
-      ...qR("Lime"),
-      ...qR("Pink"),
-      ...qR("Gray"),
-      ...qR("Light Gray"),
-      ...qR("Cyan"),
-      ...qR("Purple"),
-      ...qR("Blue"),
-      ...qR("Brown"),
-      ...qR("Green"),
-      ...qR("Red"),
-      ...qR("Black"),
-      ...qR("Draugr"),
-      ...qR("Skull"),
-      ...qR("Rainbow"),
-      ...iR("Sheep"),
-      ...iR("Cow"),
-      ...iR("Pig"),
-      ...iR("Horse"),
-      ...iR("Camel"),
-      ...iR("Wolf"),
-      ...iR("Deer"),
-      ...iR("Wildcat"),
-      ...fR("Radar"),
-      ...fR("Inactive Radar"),
-      ...fR("Active Radar"),
-      ...VR("Magenta"),
-      ...VR("Light Gray"),
-      ...VR("Red"),
-      ...VR("White"),
-      ...VR("Orange"),
-      ...VR("Light Blue"),
-      ...VR("Yellow"),
-      ...VR("Lime"),
-      ...VR("Pink"),
-      ...VR("Gray"),
-      ...VR("Cyan"),
-      ...VR("Purple"),
-      ...VR("Blue"),
-      ...VR("Brown"),
-      ...VR("Green"),
-      ...VR("Black"),
+      ...Ir("White"),
+      ...Ir("Orange"),
+      ...Ir("Magenta"),
+      ...Ir("Light Blue"),
+      ...Ir("Yellow"),
+      ...Ir("Lime"),
+      ...Ir("Pink"),
+      ...Ir("Gray"),
+      ...Ir("Light Gray"),
+      ...Ir("Cyan"),
+      ...Ir("Purple"),
+      ...Ir("Blue"),
+      ...Ir("Brown"),
+      ...Ir("Green"),
+      ...Ir("Red"),
+      ...Ir("Black"),
+      ...Ir("Draugr"),
+      ...Ir("Skull"),
+      ...Ir("Rainbow"),
+      ...fr("Sheep"),
+      ...fr("Cow"),
+      ...fr("Pig"),
+      ...fr("Horse"),
+      ...fr("Camel"),
+      ...fr("Wolf"),
+      ...fr("Deer"),
+      ...fr("Wildcat"),
+      ...Er("Radar"),
+      ...Er("Inactive Radar"),
+      ...Er("Active Radar"),
+      ...pr("Magenta"),
+      ...pr("Light Gray"),
+      ...pr("Red"),
+      ...pr("White"),
+      ...pr("Orange"),
+      ...pr("Light Blue"),
+      ...pr("Yellow"),
+      ...pr("Lime"),
+      ...pr("Pink"),
+      ...pr("Gray"),
+      ...pr("Cyan"),
+      ...pr("Purple"),
+      ...pr("Blue"),
+      ...pr("Brown"),
+      ...pr("Green"),
+      ...pr("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3184,11 +3184,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const RR = "Lunite Auto Miner";
+        const rr = "Lunite Auto Miner";
         return {
-          [RR]: {
+          [rr]: {
             positions: [{
-              block: RR,
+              block: rr,
               x: 0,
               y: 0,
               z: 0
@@ -3214,9 +3214,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${RR}|meta|rot2`]: {
+          [`${rr}|meta|rot2`]: {
             positions: [{
-              block: `${RR}|meta|rot2`,
+              block: `${rr}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3242,9 +3242,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${RR}|meta|rot3`]: {
+          [`${rr}|meta|rot3`]: {
             positions: [{
-              block: `${RR}|meta|rot3`,
+              block: `${rr}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3270,9 +3270,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${RR}|meta|rot4`]: {
+          [`${rr}|meta|rot4`]: {
             positions: [{
-              block: `${RR}|meta|rot4`,
+              block: `${rr}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3301,74 +3301,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const RR = {
-            1: RR => ({
+        const rr = {
+            1: rr => ({
               x: 0,
-              z: RR
+              z: rr
             }),
-            2: RR => ({
-              x: RR,
+            2: rr => ({
+              x: rr,
               z: 0
             }),
-            3: RR => ({
+            3: rr => ({
               x: 0,
-              z: -RR
+              z: -rr
             }),
-            4: RR => ({
-              x: -RR,
+            4: rr => ({
+              x: -rr,
               z: 0
             })
           },
-          JR = {};
-        for (let GR = 1; GR <= 4; GR++) {
-          const tR = 1 === GR ? "" : `|meta|rot${GR}`;
-          JR[`${yR.c[0].block}${tR}`] = {
-            positions: yR.c.map((JR => {
+          Sr = {};
+        for (let Qr = 1; Qr <= 4; Qr++) {
+          const Wr = 1 === Qr ? "" : `|meta|rot${Qr}`;
+          Sr[`${Zr.c[0].block}${Wr}`] = {
+            positions: Zr.c.map((Sr => {
               let {
-                block: yR,
-                y: uR,
-                z: ZR
-              } = JR;
+                block: Zr,
+                y: ar,
+                z: jr
+              } = Sr;
               return {
-                block: `${yR}${tR}`,
-                y: uR,
-                ...RR[GR](ZR)
+                block: `${Zr}${Wr}`,
+                y: ar,
+                ...rr[Qr](jr)
               }
             }))
           }
         }
-        return JR
+        return Sr
       }(),
       ... function() {
-        const RR = {};
-        for (let JR = 1; JR <= yR.l; JR++) {
-          const GR = (0, yR.fc)(JR),
-            tR = yR.p[JR - 1],
-            uR = [{
-              block: GR,
+        const rr = {};
+        for (let Sr = 1; Sr <= Zr.l; Sr++) {
+          const Qr = (0, Zr.dc)(Sr),
+            Wr = Zr.o[Sr - 1],
+            ar = [{
+              block: Qr,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const RR of yR.g)
-            for (let JR = 1; JR <= tR; JR++) {
-              if ("southwest" === RR && 1 === JR) continue;
+          for (const rr of Zr.i)
+            for (let Sr = 1; Sr <= Wr; Sr++) {
+              if ("southwest" === rr && 1 === Sr) continue;
               const {
-                x: GR,
-                z: tR
-              } = yR.i[RR];
-              uR.push({
-                block: (0, yR.ec)(RR, JR),
-                x: GR,
-                y: JR - 1,
-                z: tR
+                x: Qr,
+                z: Wr
+              } = Zr.k[rr];
+              ar.push({
+                block: (0, Zr.$b)(rr, Sr),
+                x: Qr,
+                y: Sr - 1,
+                z: Wr
               })
             }
-          RR[GR] = {
-            positions: uR
+          rr[Qr] = {
+            positions: ar
           }
         }
-        return RR
+        return rr
       }(),
       "Solar Panel": {
         positions: [{
@@ -3482,159 +3482,159 @@ export const modules = {
       }
     };
 
-    function qR(RR) {
+    function Ir(rr) {
       return {
-        [`${RR} Banner`]: {
+        [`${rr} Banner`]: {
           positions: [{
-            block: `${RR} Banner`,
+            block: `${rr} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot1|bot`,
+            block: `_${rr} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot2|bot`]: {
+        [`${rr} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot2|bot`,
+            block: `${rr} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot2|bot`,
+            block: `_${rr} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot3|bot`]: {
+        [`${rr} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot3|bot`,
+            block: `${rr} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot3|bot`,
+            block: `_${rr} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot4|bot`]: {
+        [`${rr} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot4|bot`,
+            block: `${rr} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot4|bot`,
+            block: `_${rr} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot1|side`]: {
+        [`${rr} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot1|side`,
+            block: `${rr} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot1|side`,
+            block: `_${rr} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot2|side`]: {
+        [`${rr} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot2|side`,
+            block: `${rr} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot2|side`,
+            block: `_${rr} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot3|side`]: {
+        [`${rr} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot3|side`,
+            block: `${rr} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot3|side`,
+            block: `_${rr} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot4|side`]: {
+        [`${rr} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot4|side`,
+            block: `${rr} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot4|side`,
+            block: `_${rr} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot1|top`]: {
+        [`${rr} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot1|top`,
+            block: `${rr} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag`,
+            block: `_${rr} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot2|top`]: {
+        [`${rr} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot2|top`,
+            block: `${rr} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot2|top`,
+            block: `_${rr} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot3|top`]: {
+        [`${rr} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot3|top`,
+            block: `${rr} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot3|top`,
+            block: `_${rr} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${RR} Banner|meta|rot4|top`]: {
+        [`${rr} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${RR} Banner|meta|rot4|top`,
+            block: `${rr} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${RR} Banner Flag|meta|rot4|top`,
+            block: `_${rr} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3643,96 +3643,96 @@ export const modules = {
       }
     }
 
-    function iR(RR) {
-      const JR = (0, uR.Yb)(RR);
+    function fr(rr) {
+      const Sr = (0, ar.Qb)(rr);
       return {
-        [JR]: {
+        [Sr]: {
           positions: [{
-            block: JR,
+            block: Sr,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${JR} Top Left`,
+            block: `_${Sr} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${JR} Top Right`,
+            block: `_${Sr} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${JR} Bottom Right`,
+            block: `_${Sr} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${JR}|meta|rot2`]: {
+        [`${Sr}|meta|rot2`]: {
           positions: [{
-            block: `${JR}|meta|rot2`,
+            block: `${Sr}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${JR} Top Left|meta|rot2`,
+            block: `_${Sr} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${JR} Top Right|meta|rot2`,
+            block: `_${Sr} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${JR} Bottom Right|meta|rot2`,
+            block: `_${Sr} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${JR}|meta|rot3`]: {
+        [`${Sr}|meta|rot3`]: {
           positions: [{
-            block: `${JR}|meta|rot3`,
+            block: `${Sr}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${JR} Top Left|meta|rot3`,
+            block: `_${Sr} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${JR} Top Right|meta|rot3`,
+            block: `_${Sr} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${JR} Bottom Right|meta|rot3`,
+            block: `_${Sr} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${JR}|meta|rot4`]: {
+        [`${Sr}|meta|rot4`]: {
           positions: [{
-            block: `${JR}|meta|rot4`,
+            block: `${Sr}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${JR} Top Left|meta|rot4`,
+            block: `_${Sr} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${JR} Top Right|meta|rot4`,
+            block: `_${Sr} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${JR} Bottom Right|meta|rot4`,
+            block: `_${Sr} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3741,77 +3741,77 @@ export const modules = {
       }
     }
 
-    function fR(RR) {
-      const JR = `_${RR} Back`,
-        GR = `_${RR} Dish`;
+    function Er(rr) {
+      const Sr = `_${rr} Back`,
+        Qr = `_${rr} Dish`;
       return {
-        [RR]: {
+        [rr]: {
           positions: [{
-            block: RR,
+            block: rr,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: JR,
+            block: Sr,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: GR,
+            block: Qr,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${RR}|meta|rot2`]: {
+        [`${rr}|meta|rot2`]: {
           positions: [{
-            block: `${RR}|meta|rot2`,
+            block: `${rr}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${JR}|meta|rot2`,
+            block: `${Sr}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${GR}|meta|rot2`,
+            block: `${Qr}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${RR}|meta|rot3`]: {
+        [`${rr}|meta|rot3`]: {
           positions: [{
-            block: `${RR}|meta|rot3`,
+            block: `${rr}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${JR}|meta|rot3`,
+            block: `${Sr}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${GR}|meta|rot3`,
+            block: `${Qr}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${RR}|meta|rot4`]: {
+        [`${rr}|meta|rot4`]: {
           positions: [{
-            block: `${RR}|meta|rot4`,
+            block: `${rr}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${JR}|meta|rot4`,
+            block: `${Sr}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${GR}|meta|rot4`,
+            block: `${Qr}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3820,22 +3820,22 @@ export const modules = {
       }
     }
 
-    function VR(RR) {
-      const JR = `Small ${RR} Pod`;
+    function pr(rr) {
+      const Sr = `Small ${rr} Pod`;
       return {
-        [JR]: {
+        [Sr]: {
           positions: [{
-            block: JR,
+            block: Sr,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${RR} Pod Mid`,
+            block: `_Small ${rr} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${RR} Pod Top`,
+            block: `_Small ${rr} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3843,286 +3843,286 @@ export const modules = {
         }
       }
     }
-    for (const wR in ZR) {
-      for (const RR of ZR[wR].positions)
-        if (RR.id = tR.l[RR.block].id, wR === RR.block && (0 !== RR.x || 0 !== RR.y || 0 !== RR.z)) throw new Error(`Multiblock "${wR}" has main block "${RR.block}" at non-origin position (${RR.x}, ${RR.y}, ${RR.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      ZR[tR.l[wR].id] = ZR[wR]
+    for (const mr in jr) {
+      for (const rr of jr[mr].positions)
+        if (rr.id = Wr.j[rr.block].id, mr === rr.block && (0 !== rr.x || 0 !== rr.y || 0 !== rr.z)) throw new Error(`Multiblock "${mr}" has main block "${rr.block}" at non-origin position (${rr.x}, ${rr.y}, ${rr.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      jr[Wr.j[mr].id] = jr[mr]
     }
-    const KR = {};
-    for (const wR in ZR)
+    const xr = {};
+    for (const mr in jr)
       for (const {
-          block: RR,
-          x: JR,
-          y: GR,
-          z: yR
+          block: rr,
+          x: Sr,
+          y: Qr,
+          z: Zr
         }
-        of ZR[wR].positions) {
-        const uR = {
-          mainMultiblock: wR,
-          compX: JR,
-          compY: GR,
-          compZ: yR
+        of jr[mr].positions) {
+        const ar = {
+          mainMultiblock: mr,
+          compX: Sr,
+          compY: Qr,
+          compZ: Zr
         };
-        KR[RR] = uR, KR[tR.l[RR].id] = uR
+        xr[rr] = ar, xr[Wr.j[rr].id] = ar
       }
   },
-  39380: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => iR,
-      e: () => qR
+  39717: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => fr,
+      e: () => Ir
     });
-    var yR = GR(5844),
-      tR = GR(5907),
-      uR = GR(5912);
-    const ZR = tR.s.map((RR => {
+    var Zr = Qr(5779),
+      Wr = Qr(5833),
+      ar = Qr(5838);
+    const jr = Wr.r.map((rr => {
       let {
-        dx: JR,
-        dz: GR
-      } = RR;
-      return [JR, 0, GR]
+        dx: Sr,
+        dz: Qr
+      } = rr;
+      return [Sr, 0, Qr]
     }));
 
-    function qR(RR) {
-      const JR = yR.l[RR];
-      return !!JR && RR !== yR.d && !JR.model && !JR.Nr && !1 !== JR.solid && !JR.AL
+    function Ir(rr) {
+      const Sr = Zr.j[rr];
+      return !!Sr && rr !== Zr.d && !Sr.model && !Sr.HN && !1 !== Sr.solid && !Sr.Bh
     }
-    class iR {
-      constructor(RR) {
-        this.model = RR, this.reshapeOffsets = [...ZR, [0, -1, 0]]
+    class fr {
+      constructor(rr) {
+        this.model = rr, this.reshapeOffsets = [...jr, [0, -1, 0]]
       }
-      handles(RR) {
-        const JR = yR.l[RR];
-        return (null === JR || void 0 === JR ? void 0 : JR.model) === this.model && void 0 !== JR.attachedTop
+      handles(rr) {
+        const Sr = Zr.j[rr];
+        return (null === Sr || void 0 === Sr ? void 0 : Sr.model) === this.model && void 0 !== Sr.attachedTop
       }
-      affects(RR) {
-        return this.handles(RR) || qR(RR) || (0, uR.v)(yR.l[RR])
+      affects(rr) {
+        return this.handles(rr) || Ir(rr) || (0, ar.y)(Zr.j[rr])
       }
-      shape(RR, JR, GR, ZR, iR) {
-        let fR = this.handles(RR(JR, GR + 1, ZR)) ? tR.h : 0;
-        return tR.s.forEach(((iR, VR) => {
+      shape(rr, Sr, Qr, jr, fr) {
+        let Er = this.handles(rr(Sr, Qr + 1, jr)) ? Wr.i : 0;
+        return Wr.r.forEach(((fr, pr) => {
           let {
-            dx: KR,
-            dz: wR
-          } = iR;
-          const rR = RR(JR + KR, GR, ZR + wR);
-          (this.handles(rR) || qR(rR) || function(RR, JR) {
-            const GR = yR.l[RR];
-            return (0, uR.v)(GR) && (0, uR.r)(GR.meta.rot) === (0 !== tR.s[JR].dx)
-          }(rR, VR)) && (fR |= 1 << VR)
-        })), (0, yR.n)((0, tR.j)(yR.l[iR].meta.rootName, fR))
+            dx: xr,
+            dz: mr
+          } = fr;
+          const Nr = rr(Sr + xr, Qr, jr + mr);
+          (this.handles(Nr) || Ir(Nr) || function(rr, Sr) {
+            const Qr = Zr.j[rr];
+            return (0, ar.y)(Qr) && (0, ar.r)(Qr.meta.rot) === (0 !== Wr.r[Sr].dx)
+          }(Nr, pr)) && (Er |= 1 << pr)
+        })), (0, Zr.k)((0, Wr.j)(Zr.j[fr].meta.rootName, Er))
       }
     }
   },
-  39158: (RR, JR, GR) => {
-    function yR(RR, JR) {
-      var GR;
-      JR || (JR = {});
-      const yR = null !== (GR = JR.customAttributes) && void 0 !== GR ? GR : {};
-      var tR, uR, ZR;
-      "Gun" === (null === RR || void 0 === RR ? void 0 : RR.type) && (yR.shotsLeft = null !== (tR = null !== (uR = yR.shotsLeft) && void 0 !== uR ? uR : null === (ZR = yR.gunStats) || void 0 === ZR ? void 0 : ZR.clipSize) && void 0 !== tR ? tR : RR.clipSize);
-      if (yR.enchantmentTier && (yR.enchantmentTier = yR.enchantmentTier.toString()), yR.enchantments)
-        for (const KR in yR.enchantments) {
-          const RR = yR.enchantments[KR];
-          if ("number" !== typeof RR) {
-            const JR = parseInt(RR);
-            isNaN(JR) || JR < 0 ? yR.enchantments[KR] = void 0 : yR.enchantments[KR] = JR > 1e9 ? 1e9 : JR
+  39496: (rr, Sr, Qr) => {
+    function Zr(rr, Sr) {
+      var Qr;
+      Sr || (Sr = {});
+      const Zr = null !== (Qr = Sr.customAttributes) && void 0 !== Qr ? Qr : {};
+      var Wr, ar, jr;
+      "Gun" === (null === rr || void 0 === rr ? void 0 : rr.type) && (Zr.shotsLeft = null !== (Wr = null !== (ar = Zr.shotsLeft) && void 0 !== ar ? ar : null === (jr = Zr.gunStats) || void 0 === jr ? void 0 : jr.clipSize) && void 0 !== Wr ? Wr : rr.clipSize);
+      if (Zr.enchantmentTier && (Zr.enchantmentTier = Zr.enchantmentTier.toString()), Zr.enchantments)
+        for (const xr in Zr.enchantments) {
+          const rr = Zr.enchantments[xr];
+          if ("number" !== typeof rr) {
+            const Sr = parseInt(rr);
+            isNaN(Sr) || Sr < 0 ? Zr.enchantments[xr] = void 0 : Zr.enchantments[xr] = Sr > 1e9 ? 1e9 : Sr
           }
         }
-      if (yR.enchantmentData)
-        for (const KR in yR.enchantmentData) {
-          const RR = yR.enchantmentData[KR];
-          if (!RR) continue;
-          if ("object" !== typeof RR) {
-            yR.enchantmentData[KR] = void 0;
+      if (Zr.enchantmentData)
+        for (const xr in Zr.enchantmentData) {
+          const rr = Zr.enchantmentData[xr];
+          if (!rr) continue;
+          if ("object" !== typeof rr) {
+            Zr.enchantmentData[xr] = void 0;
             continue
           }
-          const JR = RR.icon,
-            GR = RR.description;
-          var qR, iR, fR, VR;
-          if ("string" !== typeof JR) yR.enchantmentData[KR].icon = null !== (qR = null === JR || void 0 === JR || null === (iR = JR.toString) || void 0 === iR ? void 0 : iR.call(JR)) && void 0 !== qR ? qR : void 0;
-          if ("string" !== typeof GR) yR.enchantmentData[KR].description = null !== (fR = null === GR || void 0 === GR || null === (VR = GR.toString) || void 0 === VR ? void 0 : VR.call(GR)) && void 0 !== fR ? fR : void 0
+          const Sr = rr.icon,
+            Qr = rr.description;
+          var Ir, fr, Er, pr;
+          if ("string" !== typeof Sr) Zr.enchantmentData[xr].icon = null !== (Ir = null === Sr || void 0 === Sr || null === (fr = Sr.toString) || void 0 === fr ? void 0 : fr.call(Sr)) && void 0 !== Ir ? Ir : void 0;
+          if ("string" !== typeof Qr) Zr.enchantmentData[xr].description = null !== (Er = null === Qr || void 0 === Qr || null === (pr = Qr.toString) || void 0 === pr ? void 0 : pr.call(Qr)) && void 0 !== Er ? Er : void 0
         }
-      return JR.customAttributes = yR, JR
+      return Sr.customAttributes = Zr, Sr
     }
-    GR.d(JR, {
-      b: () => yR
+    Qr.d(Sr, {
+      d: () => Zr
     })
   },
-  39375: (RR, JR, GR) => {
-    GR.d(JR, {
-      d: () => MR,
-      h: () => nR,
-      j: () => iR,
-      k: () => KR,
-      l: () => BR
+  39715: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      b: () => Br,
+      f: () => zr,
+      g: () => fr,
+      h: () => xr,
+      j: () => Tr
     });
-    var yR = GR(5844),
-      tR = GR(5886),
-      uR = GR(39380);
-    const ZR = (0, yR.n)("Noticeboard"),
-      qR = (0, yR.n)("Standing Noticeboard|meta|rot4|lrud");
+    var Zr = Qr(5779),
+      Wr = Qr(5817),
+      ar = Qr(39717);
+    const jr = (0, Zr.k)("Noticeboard"),
+      Ir = (0, Zr.k)("Standing Noticeboard|meta|rot4|lrud");
 
-    function iR(RR) {
-      return ZR <= RR && RR <= qR
+    function fr(rr) {
+      return jr <= rr && rr <= Ir
     }
-    const fR = new Uint8Array(qR - ZR + 1);
-    for (let lR = ZR; lR <= qR; lR++) fR[lR - ZR] = (0, tR.r)(yR.l[lR].meta.metaStr);
-    const VR = 64,
-      KR = VR * VR,
-      [wR, rR, eR, aR] = [0, 1, 2, 3];
+    const Er = new Uint8Array(Ir - jr + 1);
+    for (let vr = jr; vr <= Ir; vr++) Er[vr - jr] = (0, Wr.w)(Zr.j[vr].meta.metaStr);
+    const pr = 64,
+      xr = pr * pr,
+      [mr, Nr, Ur, tr] = [0, 1, 2, 3];
 
-    function LR(RR) {
-      var JR, GR;
-      return "string" === typeof(null === RR || void 0 === RR || null === (JR = RR.persisted) || void 0 === JR || null === (GR = JR.shared) || void 0 === GR ? void 0 : GR.text)
-    }
-
-    function nR(RR) {
-      return LR(RR) && "" !== RR.persisted.shared.text.trim()
+    function hr(rr) {
+      var Sr, Qr;
+      return "string" === typeof(null === rr || void 0 === rr || null === (Sr = rr.persisted) || void 0 === Sr || null === (Qr = Sr.shared) || void 0 === Qr ? void 0 : Qr.text)
     }
 
-    function UR(RR, JR) {
-      let [GR, , yR] = JR;
-      const [uR, , ZR] = tR.t[RR][rR];
-      return GR * uR + yR * ZR
+    function zr(rr) {
+      return hr(rr) && "" !== rr.persisted.shared.text.trim()
     }
 
-    function WR(RR, JR, GR) {
-      return GR[1] - JR[1] || UR(RR, JR) - UR(RR, GR)
+    function Yr(rr, Sr) {
+      let [Qr, , Zr] = Sr;
+      const [ar, , jr] = Wr.A[rr][Nr];
+      return Qr * ar + Zr * jr
     }
 
-    function AR(RR, JR, GR, uR, qR) {
-      var iR;
-      let VR = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RR(JR[0], JR[1], JR[2]);
-      if (!(fR[VR - ZR] & 1 << GR)) return null;
-      const [KR, wR, rR] = tR.t[qR][GR], eR = [JR[0] + KR, JR[1] + wR, JR[2] + rR], aR = RR(eR[0], eR[1], eR[2]), LR = null === (iR = yR.l[aR]) || void 0 === iR ? void 0 : iR.meta;
-      return (null === LR || void 0 === LR ? void 0 : LR.rootId) === uR && LR.rot === qR && fR[aR - ZR] & 1 << (1 ^ GR) ? eR : null
+    function nr(rr, Sr, Qr) {
+      return Qr[1] - Sr[1] || Yr(rr, Sr) - Yr(rr, Qr)
     }
 
-    function CR(RR, JR, GR, uR) {
-      const ZR = RR(JR, GR, uR);
-      if (!iR(ZR)) return null;
+    function er(rr, Sr, Qr, ar, Ir) {
+      var fr;
+      let pr = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : rr(Sr[0], Sr[1], Sr[2]);
+      if (!(Er[pr - jr] & 1 << Qr)) return null;
+      const [xr, mr, Nr] = Wr.A[Ir][Qr], Ur = [Sr[0] + xr, Sr[1] + mr, Sr[2] + Nr], tr = rr(Ur[0], Ur[1], Ur[2]), hr = null === (fr = Zr.j[tr]) || void 0 === fr ? void 0 : fr.meta;
+      return (null === hr || void 0 === hr ? void 0 : hr.rootId) === ar && hr.rot === Ir && Er[tr - jr] & 1 << (1 ^ Qr) ? Ur : null
+    }
+
+    function Kr(rr, Sr, Qr, ar) {
+      const jr = rr(Sr, Qr, ar);
+      if (!fr(jr)) return null;
       const {
-        rootId: qR,
-        rot: fR
-      } = yR.l[ZR].meta, KR = (JR, GR) => {
-        let yR = JR,
-          tR = 1;
-        for (let uR = AR(RR, yR, GR, qR, fR); uR && tR < VR; uR = AR(RR, yR, GR, qR, fR)) yR = uR, tR++;
+        rootId: Ir,
+        rot: Er
+      } = Zr.j[jr].meta, xr = (Sr, Qr) => {
+        let Zr = Sr,
+          Wr = 1;
+        for (let ar = er(rr, Zr, Qr, Ir, Er); ar && Wr < pr; ar = er(rr, Zr, Qr, Ir, Er)) Zr = ar, Wr++;
         return {
-          end: yR,
-          cells: tR
+          end: Zr,
+          cells: Wr
         }
-      }, LR = KR(KR([JR, GR, uR], wR).end, eR).end, nR = KR(LR, rR).cells, [UR, , WR] = tR.t[fR][rR];
-      let CR = 1;
-      RR: for (; CR < VR; CR++)
-        for (let JR = 0; JR < nR; JR++)
-          if (!AR(RR, [LR[0] + UR * JR, LR[1] - CR + 1, LR[2] + WR * JR], aR, qR, fR)) break RR;
+      }, hr = xr(xr([Sr, Qr, ar], mr).end, Ur).end, zr = xr(hr, Nr).cells, [Yr, , nr] = Wr.A[Er][Nr];
+      let Kr = 1;
+      rr: for (; Kr < pr; Kr++)
+        for (let Sr = 0; Sr < zr; Sr++)
+          if (!er(rr, [hr[0] + Yr * Sr, hr[1] - Kr + 1, hr[2] + nr * Sr], tr, Ir, Er)) break rr;
       return {
-        anchor: LR,
-        rootId: qR,
-        rot: fR,
-        width: nR,
-        height: CR
+        anchor: hr,
+        rootId: Ir,
+        rot: Er,
+        width: zr,
+        height: Kr
       }
     }
 
-    function XR(RR, JR) {
-      for (const GR of function(RR) {
+    function yr(rr, Sr) {
+      for (const Qr of function(rr) {
           let {
-            anchor: JR,
-            rot: GR,
-            width: yR,
-            height: uR
-          } = RR;
-          const [ZR, , qR] = tR.t[GR][rR], iR = [];
-          for (let tR = 0; tR < uR; tR++)
-            for (let RR = 0; RR < yR; RR++) iR.push([JR[0] + ZR * RR, JR[1] - tR, JR[2] + qR * RR]);
-          return iR
-        }(RR))
-        if (LR(JR(GR[0], GR[1], GR[2]))) return GR;
+            anchor: Sr,
+            rot: Qr,
+            width: Zr,
+            height: ar
+          } = rr;
+          const [jr, , Ir] = Wr.A[Qr][Nr], fr = [];
+          for (let Wr = 0; Wr < ar; Wr++)
+            for (let rr = 0; rr < Zr; rr++) fr.push([Sr[0] + jr * rr, Sr[1] - Wr, Sr[2] + Ir * rr]);
+          return fr
+        }(rr))
+        if (hr(Sr(Qr[0], Qr[1], Qr[2]))) return Qr;
       return null
     }
 
-    function MR(RR, JR, GR, tR, uR) {
-      const ZR = RR(GR, tR, uR);
-      if (!iR(ZR)) return null;
+    function Br(rr, Sr, Qr, Wr, ar) {
+      const jr = rr(Qr, Wr, ar);
+      if (!fr(jr)) return null;
       const {
-        rootId: qR,
-        rot: fR
-      } = yR.l[ZR].meta, VR = [
-        [GR, tR, uR]
-      ], wR = new Set([VR[0].join()]);
-      let rR = VR[0],
-        eR = null;
-      for (let yR = 0; yR < VR.length; yR++) {
-        const GR = VR[yR];
-        if (WR(fR, GR, rR) < 0 && (rR = GR), LR(JR(GR[0], GR[1], GR[2]))) {
-          const JR = CR(RR, GR[0], GR[1], GR[2]);
-          (!eR || WR(fR, JR.anchor, eR.anchor) < 0) && (eR = JR)
+        rootId: Ir,
+        rot: Er
+      } = Zr.j[jr].meta, pr = [
+        [Qr, Wr, ar]
+      ], mr = new Set([pr[0].join()]);
+      let Nr = pr[0],
+        Ur = null;
+      for (let Zr = 0; Zr < pr.length; Zr++) {
+        const Qr = pr[Zr];
+        if (nr(Er, Qr, Nr) < 0 && (Nr = Qr), hr(Sr(Qr[0], Qr[1], Qr[2]))) {
+          const Sr = Kr(rr, Qr[0], Qr[1], Qr[2]);
+          (!Ur || nr(Er, Sr.anchor, Ur.anchor) < 0) && (Ur = Sr)
         }
-        for (let JR = 0; JR < 4 && VR.length < KR; JR++) {
-          const yR = AR(RR, GR, JR, qR, fR);
-          yR && !wR.has(yR.join()) && (wR.add(yR.join()), VR.push(yR))
+        for (let Sr = 0; Sr < 4 && pr.length < xr; Sr++) {
+          const Zr = er(rr, Qr, Sr, Ir, Er);
+          Zr && !mr.has(Zr.join()) && (mr.add(Zr.join()), pr.push(Zr))
         }
       }
-      return eR ??= CR(RR, rR[0], rR[1], rR[2]), {
-        cells: VR,
-        topLeft: rR,
-        rect: eR,
-        textCell: XR(eR, JR)
+      return Ur ??= Kr(rr, Nr[0], Nr[1], Nr[2]), {
+        cells: pr,
+        topLeft: Nr,
+        rect: Ur,
+        textCell: yr(Ur, Sr)
       }
     }
 
-    function BR(RR, JR, GR, ZR, qR) {
-      if (null !== GR && iR(GR)) {
+    function Tr(rr, Sr, Qr, jr, Ir) {
+      if (null !== Qr && fr(Qr)) {
         const {
-          rootName: RR,
-          rot: JR
-        } = yR.l[GR].meta;
-        if (tR.t[JR].some((RR => {
-            let [JR, GR, yR] = RR;
-            return JR === ZR[0] && GR === ZR[1] && yR === ZR[2]
+          rootName: rr,
+          rot: Sr
+        } = Zr.j[Qr].meta;
+        if (Wr.A[Sr].some((rr => {
+            let [Sr, Qr, Zr] = rr;
+            return Sr === jr[0] && Qr === jr[1] && Zr === jr[2]
           }))) return {
-          root: RR,
-          rot: JR
+          root: rr,
+          rot: Sr
         }
       }
-      const [fR, VR] = tR.l[qR], KR = RR(JR[0] - fR, JR[1], JR[2] - VR);
+      const [Er, pr] = Wr.r[Ir], xr = rr(Sr[0] - Er, Sr[1], Sr[2] - pr);
       return {
-        root: (0, uR.e)(KR) ? tR.A : tR.w,
-        rot: qR
+        root: (0, ar.e)(xr) ? Wr.G : Wr.D,
+        rot: Ir
       }
     }
   },
-  39368: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => nR,
-      f: () => AR,
-      h: () => MR,
-      j: () => BR,
-      m: () => eR,
-      q: () => KR,
-      r: () => rR,
-      s: () => lR,
-      v: () => pR,
-      y: () => wR
+  39711: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      D: () => mr,
+      b: () => zr,
+      f: () => er,
+      h: () => Br,
+      k: () => Tr,
+      o: () => Ur,
+      r: () => xr,
+      u: () => Nr,
+      w: () => vr,
+      z: () => Or
     });
-    var yR = GR(7588),
-      tR = GR(38166),
-      uR = GR(5844);
-    const ZR = (0, uR.n)("Water"),
-      qR = (0, uR.n)("Lava"),
-      iR = (0, uR.n)("Air"),
-      fR = {
+    var Zr = Qr(7424),
+      Wr = Qr(38528),
+      ar = Qr(5779);
+    const jr = (0, ar.k)("Water"),
+      Ir = (0, ar.k)("Lava"),
+      fr = (0, ar.k)("Air"),
+      Er = {
         physicsState: {
-          type: yR.k.CAR,
-          tier: yR.d.KART
+          type: Zr.n.CAR,
+          tier: Zr.f.KART
         },
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null
       },
-      VR = {
+      pr = {
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null,
@@ -4131,41 +4131,41 @@ export const modules = {
           localOffset: [0, .75, -.35]
         }]
       },
-      KR = {
+      xr = {
         Boat: {
           meshItemName: "INTERNAL_MESH_Boat",
           physicsState: {
-            type: yR.k.BOAT,
-            tier: yR.c.WOOD
+            type: Zr.n.BOAT,
+            tier: Zr.e.WOOD
           },
-          validBlockIds: [ZR, qR],
+          validBlockIds: [jr, Ir],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         "Obsidian Boat": {
           meshItemName: "INTERNAL_MESH_Obsidian Boat",
           physicsState: {
-            type: yR.k.BOAT,
-            tier: yR.c.OBSIDIAN
+            type: Zr.n.BOAT,
+            tier: Zr.e.OBSIDIAN
           },
-          validBlockIds: [ZR, qR],
+          validBlockIds: [jr, Ir],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Speedboat: {
           meshItemName: "INTERNAL_MESH_Speedboat",
           physicsState: {
-            type: yR.k.BOAT,
-            tier: yR.c.SPEED
+            type: Zr.n.BOAT,
+            tier: Zr.e.SPEED
           },
-          validBlockIds: [ZR],
+          validBlockIds: [jr],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Hovercraft: {
           meshItemName: "INTERNAL_MESH_Hovercraft",
           physicsState: {
-            type: yR.k.HOVERCRAFT,
+            type: Zr.n.HOVERCRAFT,
             tier: null
           },
           validBlockIds: "solidBlocksOrFluid",
@@ -4173,74 +4173,74 @@ export const modules = {
           placeSound: null
         },
         "Yellow Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Yellow Kart"
         },
         "White Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_White Kart"
         },
         "Red Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Red Kart"
         },
         "Purple Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Purple Kart"
         },
         "Pink Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Pink Kart"
         },
         "Orange Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Orange Kart"
         },
         "Magenta Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Magenta Kart"
         },
         "Lime Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Lime Kart"
         },
         "Light Gray Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Light Gray Kart"
         },
         "Light Blue Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Light Blue Kart"
         },
         "Green Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Green Kart"
         },
         "Gray Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Gray Kart"
         },
         "Cyan Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Cyan Kart"
         },
         "Brown Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Brown Kart"
         },
         "Blue Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Blue Kart"
         },
         "Black Kart": {
-          ...fR,
+          ...Er,
           meshItemName: "INTERNAL_MESH_Black Kart"
         },
         "Off Roader": {
           meshItemName: "INTERNAL_MESH_Off Roader",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.OFF_ROADER
+            type: Zr.n.CAR,
+            tier: Zr.f.OFF_ROADER
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4254,42 +4254,42 @@ export const modules = {
           }]
         },
         "Gold Mining Drill": {
-          ...VR,
+          ...pr,
           meshItemName: "INTERNAL_MESH_Gold Mining Drill",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.GOLD_MINING_DRILL
+            type: Zr.n.CAR,
+            tier: Zr.f.GOLD_MINING_DRILL
           }
         },
         "Iron Mining Drill": {
-          ...VR,
+          ...pr,
           meshItemName: "INTERNAL_MESH_Iron Mining Drill",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.IRON_MINING_DRILL
+            type: Zr.n.CAR,
+            tier: Zr.f.IRON_MINING_DRILL
           }
         },
         "Diamond Mining Drill": {
-          ...VR,
+          ...pr,
           meshItemName: "INTERNAL_MESH_Diamond Mining Drill",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.DIAMOND_MINING_DRILL
+            type: Zr.n.CAR,
+            tier: Zr.f.DIAMOND_MINING_DRILL
           }
         },
         "Moonstone Mining Drill": {
-          ...VR,
+          ...pr,
           meshItemName: "INTERNAL_MESH_Moonstone Mining Drill",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.MOONSTONE_MINING_DRILL
+            type: Zr.n.CAR,
+            tier: Zr.f.MOONSTONE_MINING_DRILL
           }
         },
         "Armored Car": {
           meshItemName: "INTERNAL_MESH_Armored Car",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.ARMORED_CAR
+            type: Zr.n.CAR,
+            tier: Zr.f.ARMORED_CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4305,275 +4305,275 @@ export const modules = {
         "Light Blue Car": {
           meshItemName: "INTERNAL_MESH_Car",
           physicsState: {
-            type: yR.k.CAR,
-            tier: yR.d.CAR
+            type: Zr.n.CAR,
+            tier: Zr.f.CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
           placeSound: null
         }
       },
-      wR = Object.values(KR).map((RR => RR.meshItemName));
+      mr = Object.values(xr).map((rr => rr.meshItemName));
 
-    function rR(RR) {
-      for (const JR of tR.b)
-        if (KR[JR].meshItemName === RR) return JR;
+    function Nr(rr) {
+      for (const Sr of Wr.e)
+        if (xr[Sr].meshItemName === rr) return Sr;
       return null
     }
 
-    function eR(RR, JR) {
-      const GR = RR.validBlockIds;
-      if (Array.isArray(GR)) return GR.includes(JR);
-      if (JR === iR) return !1;
-      if ("solidBlocks" === GR) return !0 !== uR.l[JR].Nr;
-      if ("solidBlocksOrFluid" === GR) return !0;
-      throw new Error(`Unsupported validBlockIds for ${JR}: ${JSON.stringify(GR)}`)
+    function Ur(rr, Sr) {
+      const Qr = rr.validBlockIds;
+      if (Array.isArray(Qr)) return Qr.includes(Sr);
+      if (Sr === fr) return !1;
+      if ("solidBlocks" === Qr) return !0 !== ar.j[Sr].HN;
+      if ("solidBlocksOrFluid" === Qr) return !0;
+      throw new Error(`Unsupported validBlockIds for ${Sr}: ${JSON.stringify(Qr)}`)
     }
-    const aR = {
+    const tr = {
         meshAttachment: {
           size: .12,
           offset: [0, 1.8, -.24],
           rotation: [0, 0, 0]
         }
       },
-      LR = {
+      hr = {
         "Yellow Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.YELLOW
+            type: Zr.n.BALLOON,
+            tier: Zr.c.YELLOW
           }
         },
         "White Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.WHITE
+            type: Zr.n.BALLOON,
+            tier: Zr.c.WHITE
           }
         },
         "Red Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.RED
+            type: Zr.n.BALLOON,
+            tier: Zr.c.RED
           }
         },
         "Purple Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.PURPLE
+            type: Zr.n.BALLOON,
+            tier: Zr.c.PURPLE
           }
         },
         "Pink Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.PINK
+            type: Zr.n.BALLOON,
+            tier: Zr.c.PINK
           }
         },
         "Orange Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.ORANGE
+            type: Zr.n.BALLOON,
+            tier: Zr.c.ORANGE
           }
         },
         "Magenta Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.MAGENTA
+            type: Zr.n.BALLOON,
+            tier: Zr.c.MAGENTA
           }
         },
         "Lime Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.LIME
+            type: Zr.n.BALLOON,
+            tier: Zr.c.LIME
           }
         },
         "Light Gray Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.LIGHT_GRAY
+            type: Zr.n.BALLOON,
+            tier: Zr.c.LIGHT_GRAY
           }
         },
         "Light Blue Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.LIGHT_BLUE
+            type: Zr.n.BALLOON,
+            tier: Zr.c.LIGHT_BLUE
           }
         },
         "Green Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.GREEN
+            type: Zr.n.BALLOON,
+            tier: Zr.c.GREEN
           }
         },
         "Gray Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.GRAY
+            type: Zr.n.BALLOON,
+            tier: Zr.c.GRAY
           }
         },
         "Cyan Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.CYAN
+            type: Zr.n.BALLOON,
+            tier: Zr.c.CYAN
           }
         },
         "Brown Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.BROWN
+            type: Zr.n.BALLOON,
+            tier: Zr.c.BROWN
           }
         },
         "Blue Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.BLUE
+            type: Zr.n.BALLOON,
+            tier: Zr.c.BLUE
           }
         },
         "Black Balloon": {
-          ...aR,
+          ...tr,
           physicsState: {
-            type: yR.k.BALLOON,
-            tier: yR.b.BLACK
+            type: Zr.n.BALLOON,
+            tier: Zr.c.BLACK
           }
         }
       };
 
-    function nR(RR) {
-      var JR;
-      return null === RR || void 0 === RR ? null : null !== (JR = LR[RR]) && void 0 !== JR ? JR : null
+    function zr(rr) {
+      var Sr;
+      return null === rr || void 0 === rr ? null : null !== (Sr = hr[rr]) && void 0 !== Sr ? Sr : null
     }
-    const UR = {
+    const Yr = {
         meshAttachment: {
           size: 3,
           offset: [0, .72, .3],
           rotation: [-Math.PI / 2, Math.PI, Math.PI]
         }
       },
-      WR = {
+      nr = {
         "Wood Hang Glider": {
-          ...UR,
+          ...Yr,
           physicsState: {
-            type: yR.k.GLIDER,
-            tier: yR.g.WOOD
+            type: Zr.n.GLIDER,
+            tier: Zr.j.WOOD
           }
         },
         "Iron Hang Glider": {
-          ...UR,
+          ...Yr,
           physicsState: {
-            type: yR.k.GLIDER,
-            tier: yR.g.IRON
+            type: Zr.n.GLIDER,
+            tier: Zr.j.IRON
           }
         },
         "Gold Hang Glider": {
-          ...UR,
+          ...Yr,
           physicsState: {
-            type: yR.k.GLIDER,
-            tier: yR.g.GOLD
+            type: Zr.n.GLIDER,
+            tier: Zr.j.GOLD
           }
         },
         "Diamond Hang Glider": {
-          ...UR,
+          ...Yr,
           physicsState: {
-            type: yR.k.GLIDER,
-            tier: yR.g.DIAMOND
+            type: Zr.n.GLIDER,
+            tier: Zr.j.DIAMOND
           }
         }
       };
 
-    function AR(RR) {
-      var JR;
-      return null === RR || void 0 === RR ? null : null !== (JR = WR[RR]) && void 0 !== JR ? JR : null
+    function er(rr) {
+      var Sr;
+      return null === rr || void 0 === rr ? null : null !== (Sr = nr[rr]) && void 0 !== Sr ? Sr : null
     }
-    const CR = new Set(Object.values(LR).map((RR => RR.physicsState.type))),
-      XR = new Set(Object.values(WR).map((RR => RR.physicsState.type)));
+    const Kr = new Set(Object.values(hr).map((rr => rr.physicsState.type))),
+      yr = new Set(Object.values(nr).map((rr => rr.physicsState.type)));
 
-    function MR(RR) {
-      return CR.has(RR)
-    }
-
-    function BR(RR) {
-      return XR.has(RR)
+    function Br(rr) {
+      return Kr.has(rr)
     }
 
-    function lR(RR) {
-      return RR === yR.k.DEFAULT || function(RR) {
-        return CR.has(RR) || XR.has(RR)
-      }(RR)
+    function Tr(rr) {
+      return yr.has(rr)
     }
 
-    function pR(RR) {
-      return !lR(RR) && RR !== yR.k.SLEEPING
+    function vr(rr) {
+      return rr === Zr.n.DEFAULT || function(rr) {
+        return Kr.has(rr) || yr.has(rr)
+      }(rr)
+    }
+
+    function Or(rr) {
+      return !vr(rr) && rr !== Zr.n.SLEEPING
     }
   },
-  7588: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => ZR,
-      c: () => tR,
-      d: () => iR,
-      g: () => uR,
-      j: () => fR,
-      k: () => yR,
-      n: () => qR
+  7424: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => jr,
+      e: () => Wr,
+      f: () => fr,
+      j: () => ar,
+      k: () => Er,
+      n: () => Zr,
+      p: () => Ir
     });
-    let yR = function(RR) {
-        return RR[RR.DEFAULT = 0] = "DEFAULT", RR[RR.BOAT = 1] = "BOAT", RR[RR.GLIDER = 2] = "GLIDER", RR[RR.BALLOON = 3] = "BALLOON", RR[RR.SLEEPING = 4] = "SLEEPING", RR[RR.RIDING_MOB = 5] = "RIDING_MOB", RR[RR.CAR = 6] = "CAR", RR[RR.HOVERCRAFT = 7] = "HOVERCRAFT", RR
+    let Zr = function(rr) {
+        return rr[rr.DEFAULT = 0] = "DEFAULT", rr[rr.BOAT = 1] = "BOAT", rr[rr.GLIDER = 2] = "GLIDER", rr[rr.BALLOON = 3] = "BALLOON", rr[rr.SLEEPING = 4] = "SLEEPING", rr[rr.RIDING_MOB = 5] = "RIDING_MOB", rr[rr.CAR = 6] = "CAR", rr[rr.HOVERCRAFT = 7] = "HOVERCRAFT", rr
       }({}),
-      tR = function(RR) {
-        return RR[RR.WOOD = 0] = "WOOD", RR[RR.OBSIDIAN = 1] = "OBSIDIAN", RR[RR.SPEED = 2] = "SPEED", RR
+      Wr = function(rr) {
+        return rr[rr.WOOD = 0] = "WOOD", rr[rr.OBSIDIAN = 1] = "OBSIDIAN", rr[rr.SPEED = 2] = "SPEED", rr
       }({}),
-      uR = function(RR) {
-        return RR[RR.WOOD = 0] = "WOOD", RR[RR.IRON = 1] = "IRON", RR[RR.GOLD = 2] = "GOLD", RR[RR.DIAMOND = 3] = "DIAMOND", RR
+      ar = function(rr) {
+        return rr[rr.WOOD = 0] = "WOOD", rr[rr.IRON = 1] = "IRON", rr[rr.GOLD = 2] = "GOLD", rr[rr.DIAMOND = 3] = "DIAMOND", rr
       }({}),
-      ZR = function(RR) {
-        return RR[RR.YELLOW = 0] = "YELLOW", RR[RR.WHITE = 1] = "WHITE", RR[RR.RED = 2] = "RED", RR[RR.PURPLE = 3] = "PURPLE", RR[RR.PINK = 4] = "PINK", RR[RR.ORANGE = 5] = "ORANGE", RR[RR.MAGENTA = 6] = "MAGENTA", RR[RR.LIME = 7] = "LIME", RR[RR.LIGHT_GRAY = 8] = "LIGHT_GRAY", RR[RR.LIGHT_BLUE = 9] = "LIGHT_BLUE", RR[RR.GREEN = 10] = "GREEN", RR[RR.GRAY = 11] = "GRAY", RR[RR.CYAN = 12] = "CYAN", RR[RR.BROWN = 13] = "BROWN", RR[RR.BLUE = 14] = "BLUE", RR[RR.BLACK = 15] = "BLACK", RR
+      jr = function(rr) {
+        return rr[rr.YELLOW = 0] = "YELLOW", rr[rr.WHITE = 1] = "WHITE", rr[rr.RED = 2] = "RED", rr[rr.PURPLE = 3] = "PURPLE", rr[rr.PINK = 4] = "PINK", rr[rr.ORANGE = 5] = "ORANGE", rr[rr.MAGENTA = 6] = "MAGENTA", rr[rr.LIME = 7] = "LIME", rr[rr.LIGHT_GRAY = 8] = "LIGHT_GRAY", rr[rr.LIGHT_BLUE = 9] = "LIGHT_BLUE", rr[rr.GREEN = 10] = "GREEN", rr[rr.GRAY = 11] = "GRAY", rr[rr.CYAN = 12] = "CYAN", rr[rr.BROWN = 13] = "BROWN", rr[rr.BLUE = 14] = "BLUE", rr[rr.BLACK = 15] = "BLACK", rr
       }({}),
-      qR = function(RR) {
-        return RR[RR.ROTATION_1 = 0] = "ROTATION_1", RR[RR.ROTATION_2 = 1] = "ROTATION_2", RR[RR.ROTATION_3 = 2] = "ROTATION_3", RR[RR.ROTATION_4 = 3] = "ROTATION_4", RR
+      Ir = function(rr) {
+        return rr[rr.ROTATION_1 = 0] = "ROTATION_1", rr[rr.ROTATION_2 = 1] = "ROTATION_2", rr[rr.ROTATION_3 = 2] = "ROTATION_3", rr[rr.ROTATION_4 = 3] = "ROTATION_4", rr
       }({}),
-      iR = function(RR) {
-        return RR[RR.KART = 0] = "KART", RR[RR.OFF_ROADER = 1] = "OFF_ROADER", RR[RR.CAR = 2] = "CAR", RR[RR.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", RR[RR.ARMORED_CAR = 4] = "ARMORED_CAR", RR[RR.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", RR[RR.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", RR[RR.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", RR
+      fr = function(rr) {
+        return rr[rr.KART = 0] = "KART", rr[rr.OFF_ROADER = 1] = "OFF_ROADER", rr[rr.CAR = 2] = "CAR", rr[rr.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", rr[rr.ARMORED_CAR = 4] = "ARMORED_CAR", rr[rr.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", rr[rr.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", rr[rr.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", rr
       }({});
-    yR.DEFAULT, yR.BOAT, tR.SPEED, yR.GLIDER, uR.DIAMOND, yR.BALLOON, ZR.BLACK, yR.SLEEPING, qR.ROTATION_4, yR.RIDING_MOB, yR.CAR, iR.MOONSTONE_MINING_DRILL, yR.HOVERCRAFT;
-    let fR = function(RR) {
-      return RR[RR.NORMAL = 0] = "NORMAL", RR[RR.GLIDING = 1] = "GLIDING", RR[RR.FLOATING = 2] = "FLOATING", RR
+    Zr.DEFAULT, Zr.BOAT, Wr.SPEED, Zr.GLIDER, ar.DIAMOND, Zr.BALLOON, jr.BLACK, Zr.SLEEPING, Ir.ROTATION_4, Zr.RIDING_MOB, Zr.CAR, fr.MOONSTONE_MINING_DRILL, Zr.HOVERCRAFT;
+    let Er = function(rr) {
+      return rr[rr.NORMAL = 0] = "NORMAL", rr[rr.GLIDING = 1] = "GLIDING", rr[rr.FLOATING = 2] = "FLOATING", rr
     }({})
   },
-  39383: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => uR,
-      e: () => ZR,
-      g: () => tR,
-      k: () => qR
+  39720: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      e: () => ar,
+      h: () => jr,
+      k: () => Wr,
+      o: () => Ir
     });
-    var yR = GR(382);
-    const tR = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...GR(671).v.map((RR => `${RR} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...yR.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      uR = ["Obby RPG"];
+    var Zr = Qr(381);
+    const Wr = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...Qr(683).t.map((rr => `${rr} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Zr.g, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      ar = ["Obby RPG"];
 
-    function ZR(RR) {
-      const JR = RR.indexOf("|");
-      return -1 === JR ? {
-        item: RR,
+    function jr(rr) {
+      const Sr = rr.indexOf("|");
+      return -1 === Sr ? {
+        item: rr,
         clientPredictedThrower: null
       } : {
-        item: RR.slice(0, JR),
-        clientPredictedThrower: RR.slice(JR + 1)
+        item: rr.slice(0, Sr),
+        clientPredictedThrower: rr.slice(Sr + 1)
       }
     }
-    const qR = [...tR, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const Ir = [...Wr, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);

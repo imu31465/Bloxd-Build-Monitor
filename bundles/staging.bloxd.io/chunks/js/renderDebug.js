@@ -1,30 +1,30 @@
 export const id = 57;
 export const ids = [57];
 export const modules = {
-  5547: (RR, JR, GR) => {
-    GR.d(JR, {
-      b: () => VR
+  5489: (rr, Sr, Qr) => {
+    Qr.d(Sr, {
+      c: () => pr
     });
-    var yR = GR(25),
-      tR = GR(32),
-      uR = GR(1383),
-      ZR = GR(3960);
-    const qR = 3e4,
-      iR = 1e3;
+    var Zr = Qr(26),
+      Wr = Qr(34),
+      ar = Qr(1353),
+      jr = Qr(3909);
+    const Ir = 3e4,
+      fr = 1e3;
 
-    function fR() {
-      return "visible" === document.visibilityState && "inGame" === yR.d.get("gameState") && (0, uR.u)()
+    function Er() {
+      return "visible" === document.visibilityState && "inGame" === Zr.c.get("gameState") && (0, ar.v)()
     }
 
-    function VR(RR, JR) {
-      (0, ZR.p)() || function(RR, JR, GR) {
-        let yR = 0;
-        const tR = setInterval((() => {
-          JR() && (yR += iR, yR >= RR && (clearInterval(tR), GR()))
-        }), iR)
-      }(qR, fR, (() => {
-        JR().then((() => {
-          RR(`saved for the player after ${qR/1e3} s of play`), (0, ZR.C)(), tR.n.JK("chat", {
+    function pr(rr, Sr) {
+      (0, jr.t)() || function(rr, Sr, Qr) {
+        let Zr = 0;
+        const Wr = setInterval((() => {
+          Sr() && (Zr += fr, Zr >= rr && (clearInterval(Wr), Qr()))
+        }), fr)
+      }(Ir, Er, (() => {
+        Sr().then((() => {
+          rr(`saved for the player after ${Ir/1e3} s of play`), (0, jr.I)(), Wr.i.Jp("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  5539: (RR, JR, GR) => {
-    GR.r(JR), GR.d(JR, {
-      installRenderDebug: () => KG,
-      renderDebugPlayable: () => rG,
-      startRenderDebug: () => wG,
-      waitForDraw: () => eG
+  5481: (rr, Sr, Qr) => {
+    Qr.r(Sr), Qr.d(Sr, {
+      installRenderDebug: () => xQ,
+      renderDebugPlayable: () => NQ,
+      startRenderDebug: () => mQ,
+      waitForDraw: () => UQ
     });
-    var yR = GR(2023),
-      tR = GR(5547),
-      uR = GR(3960);
-    const ZR = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var Zr = Qr(1974),
+      Wr = Qr(5489),
+      ar = Qr(3909);
+    const jr = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function qR(RR) {
-      return 7 & RR
+    function Ir(rr) {
+      return 7 & rr
     }
 
-    function iR(RR) {
-      return RR >>> 11 & 1
+    function fr(rr) {
+      return rr >>> 11 & 1
     }
 
-    function fR(RR) {
-      return [1 + (RR >>> 18 & 63), 1 + (RR >>> 24 & 63)]
+    function Er(rr) {
+      return [1 + (rr >>> 18 & 63), 1 + (rr >>> 24 & 63)]
     }
 
-    function VR(RR, JR) {
-      const [GR, , yR] = RR, tR = qR(yR), uR = function(RR, JR, GR) {
-        return JR + (1 === (22 >>> RR & 1) ? 4 - GR : GR) & 3
-      }(tR, iR(yR), JR), ZR = tR >>> 1, [VR, KR] = fR(GR), wR = 1 === uR || 2 === uR ? VR : 0, rR = uR >= 2 ? KR : 0, eR = [63 & GR, GR >>> 6 & 63, GR >>> 12 & 63];
-      return eR[2 === ZR ? 0 : 2] += wR, eR[1 === ZR ? 0 : 1] += rR, eR
+    function pr(rr, Sr) {
+      const [Qr, , Zr] = rr, Wr = Ir(Zr), ar = function(rr, Sr, Qr) {
+        return Sr + (1 === (22 >>> rr & 1) ? 4 - Qr : Qr) & 3
+      }(Wr, fr(Zr), Sr), jr = Wr >>> 1, [pr, xr] = Er(Qr), mr = 1 === ar || 2 === ar ? pr : 0, Nr = ar >= 2 ? xr : 0, Ur = [63 & Qr, Qr >>> 6 & 63, Qr >>> 12 & 63];
+      return Ur[2 === jr ? 0 : 2] += mr, Ur[1 === jr ? 0 : 1] += Nr, Ur
     }
 
-    function KR(RR) {
-      const JR = Math.max(...fR(RR[0]));
-      return 1 === JR ? "1" : JR <= 4 ? "2-4" : JR <= 16 ? "5-16" : "17-64"
+    function xr(rr) {
+      const Sr = Math.max(...Er(rr[0]));
+      return 1 === Sr ? "1" : Sr <= 4 ? "2-4" : Sr <= 16 ? "5-16" : "17-64"
     }
-    const wR = 16;
+    const mr = 16;
 
-    function rR(RR) {
-      let JR = 2166136261;
-      for (let GR = 0; GR < RR.length; GR++) JR = Math.imul(JR ^ RR[GR], 16777619);
-      return JR >>> 0
+    function Nr(rr) {
+      let Sr = 2166136261;
+      for (let Qr = 0; Qr < rr.length; Qr++) Sr = Math.imul(Sr ^ rr[Qr], 16777619);
+      return Sr >>> 0
     }
 
-    function eR(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const yR = Math.max(0, JR - GR),
-        tR = Math.min(RR.length, JR + GR),
-        uR = [];
-      for (let ZR = yR; ZR < tR; ZR++) {
-        const GR = RR[ZR].toString(16).padStart(2, "0");
-        uR.push(ZR === JR ? `[${GR}]` : GR)
+    function Ur(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const Zr = Math.max(0, Sr - Qr),
+        Wr = Math.min(rr.length, Sr + Qr),
+        ar = [];
+      for (let jr = Zr; jr < Wr; jr++) {
+        const Qr = rr[jr].toString(16).padStart(2, "0");
+        ar.push(jr === Sr ? `[${Qr}]` : Qr)
       }
-      return uR.join(" ")
+      return ar.join(" ")
     }
-    const aR = {
+    const tr = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,438 +168,438 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      LR = "_vs2fs_location0";
-    const nR = 0,
-      UR = 4,
-      WR = 6,
-      AR = [0, 1, 2, 0, 2, 3],
-      CR = 2048,
-      XR = 4,
-      MR = 256,
-      BR = 64,
-      lR = 268435456,
-      pR = 65536,
-      gR = /^#version [^\n]*\/\/ program (\S+)$/m;
+      hr = "_vs2fs_location0";
+    const zr = 0,
+      Yr = 4,
+      nr = 6,
+      er = [0, 1, 2, 0, 2, 3],
+      Kr = 2048,
+      yr = 4,
+      Br = 256,
+      Tr = 64,
+      vr = 268435456,
+      Or = 65536,
+      Lr = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function bR(RR) {
-      return null === RR.name ? `#${RR.id}` : `#${RR.id} ${RR.name}`
+    function lr(rr) {
+      return null === rr.name ? `#${rr.id}` : `#${rr.id} ${rr.name}`
     }
-    const vR = [],
-      OR = new WeakMap,
-      xR = new WeakMap,
-      NR = {
+    const Xr = [],
+      Pr = new WeakMap,
+      Hr = new WeakMap,
+      qr = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let DR = 1;
-    const HR = new WeakMap;
+    let Rr = 1;
+    const gr = new WeakMap;
 
-    function oR(RR) {
-      if (null === RR) return 0;
-      let JR = HR.get(RR);
-      return void 0 === JR && (JR = DR++, HR.set(RR, JR)), JR
+    function Cr(rr) {
+      if (null === rr) return 0;
+      let Sr = gr.get(rr);
+      return void 0 === Sr && (Sr = Rr++, gr.set(rr, Sr)), Sr
     }
-    class cR {
-      constructor(RR, JR) {
-        this.print = RR, this.now = JR, this.shown = 0, this.Qq = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.tK = [], this.dropped = 0
+    class Mr {
+      constructor(rr, Sr) {
+        this.print = rr, this.now = Sr, this.shown = 0, this.wI = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.sp = [], this.dropped = 0
       }
-      line(RR) {
-        const JR = this.now();
-        if (JR - this.second >= 1e3 && (this.second = JR, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.Qq++, void this.store(RR);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${RR} (the last line here: the rest go to bloxdDebug.save())` : RR)
+      line(rr) {
+        const Sr = this.now();
+        if (Sr - this.second >= 1e3 && (this.second = Sr, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.wI++, void this.store(rr);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${rr} (the last line here: the rest go to bloxdDebug.save())` : rr)
       }
-      keep(RR) {
-        this.sections++, this.store(RR)
+      keep(rr) {
+        this.sections++, this.store(rr)
       }
-      store(RR) {
-        this.tK.push(`${new Date(Date.now()).toISOString()} ${RR}`), this.tK.length > 2e4 && (this.tK.shift(), this.dropped++)
+      store(rr) {
+        this.sp.push(`${new Date(Date.now()).toISOString()} ${rr}`), this.sp.length > 2e4 && (this.sp.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.Qq} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.tK].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.wI} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.sp].join("\n")
       }
     }
-    let PR = null;
+    let Gr = null;
 
-    function IR() {
-      if (null === PR) {
-        const RR = new cR((RR => {
-          (0, uR.k)("render", RR)
+    function kr() {
+      if (null === Gr) {
+        const rr = new Mr((rr => {
+          (0, ar.l)("render", rr)
         }), (() => performance.now()));
-        (0, uR.i)("render", (() => RR.dump())), PR = RR
+        (0, ar.i)("render", (() => rr.dump())), Gr = rr
       }
-      return PR
+      return Gr
     }
 
-    function mR(RR) {
-      IR().line(RR)
+    function Ar(rr) {
+      kr().line(rr)
     }
 
-    function zR(RR) {
-      IR().keep(RR)
+    function Vr(rr) {
+      kr().keep(rr)
     }
 
-    function SR(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return RR.length <= JR ? RR : `${RR.slice(0,JR)}... (${RR.length-JR} more characters)`
+    function ir(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return rr.length <= Sr ? rr : `${rr.slice(0,Sr)}... (${rr.length-Sr} more characters)`
     }
 
-    function jR(RR, JR, GR, yR, tR, uR) {
-      const ZR = NR.pendingCheck;
-      if (null === ZR) return;
-      const qR = "undefined" !== typeof WebGL2RenderingContext && RR instanceof WebGL2RenderingContext,
-        iR = {
-          gl: RR,
-          program: GR,
-          call: yR,
-          WL: tR,
-          instances: uR,
+    function wr(rr, Sr, Qr, Zr, Wr, ar) {
+      const jr = qr.pendingCheck;
+      if (null === jr) return;
+      const Ir = "undefined" !== typeof WebGL2RenderingContext && rr instanceof WebGL2RenderingContext,
+        fr = {
+          gl: rr,
+          program: Qr,
+          call: Zr,
+          yh: Wr,
+          instances: ar,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (ZR.draws.push(iR), qR) try {
-        const yR = function(RR) {
-          const JR = [],
-            GR = new Map,
-            yR = Math.min(16, RR.getParameter(aR.MAX_VERTEX_ATTRIBS));
-          for (let tR = 0; tR < yR; tR++) {
-            if (!RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const yR = RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              uR = RR.getVertexAttribOffset(tR, aR.VERTEX_ATTRIB_ARRAY_POINTER),
-              ZR = RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_STRIDE),
-              qR = RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_SIZE),
-              iR = RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_TYPE),
-              fR = "VERTEX_ATTRIB_ARRAY_INTEGER" in RR && RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_INTEGER),
-              VR = "VERTEX_ATTRIB_ARRAY_DIVISOR" in RR ? RR.getVertexAttrib(tR, aR.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            GR.set(tR, {
-              buffer: yR,
-              offset: uR,
-              stride: ZR
-            }), JR.push(`@${tR} buf#${oR(yR)} +${uR} stride ${ZR} ${qR}x0x${iR.toString(16)}${fR?" int":""} div ${VR}`)
+      if (jr.draws.push(fr), Ir) try {
+        const Zr = function(rr) {
+          const Sr = [],
+            Qr = new Map,
+            Zr = Math.min(16, rr.getParameter(tr.MAX_VERTEX_ATTRIBS));
+          for (let Wr = 0; Wr < Zr; Wr++) {
+            if (!rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const Zr = rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              ar = rr.getVertexAttribOffset(Wr, tr.VERTEX_ATTRIB_ARRAY_POINTER),
+              jr = rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_STRIDE),
+              Ir = rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_SIZE),
+              fr = rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_TYPE),
+              Er = "VERTEX_ATTRIB_ARRAY_INTEGER" in rr && rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_INTEGER),
+              pr = "VERTEX_ATTRIB_ARRAY_DIVISOR" in rr ? rr.getVertexAttrib(Wr, tr.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            Qr.set(Wr, {
+              buffer: Zr,
+              offset: ar,
+              stride: jr
+            }), Sr.push(`@${Wr} buf#${Cr(Zr)} +${ar} stride ${jr} ${Ir}x0x${fr.toString(16)}${Er?" int":""} div ${pr}`)
           }
           return {
-            lines: JR,
-            byLocation: GR
+            lines: Sr,
+            byLocation: Qr
           }
-        }(RR);
-        if (iR.attributes = yR.lines, "inst" === GR.terrain) {
+        }(rr);
+        if (fr.attributes = Zr.lines, "inst" === Qr.terrain) {
           const {
-            group: tR,
-            chunk: qR
-          } = function(RR, JR, GR) {
-            const yR = JR.get(WR),
-              tR = RR.getVertexAttrib(WR, aR.CURRENT_VERTEX_ATTRIB),
-              uR = yR ? `+${yR.offset}` : tR ? Array.from(tR).slice(0, 3).join(",") : "?";
-            let ZR = GR.groups.get(uR);
-            return void 0 === ZR && (ZR = GR.groups.size, GR.groups.set(uR, ZR)), {
-              group: ZR,
-              chunk: uR
+            group: Wr,
+            chunk: Ir
+          } = function(rr, Sr, Qr) {
+            const Zr = Sr.get(nr),
+              Wr = rr.getVertexAttrib(nr, tr.CURRENT_VERTEX_ATTRIB),
+              ar = Zr ? `+${Zr.offset}` : Wr ? Array.from(Wr).slice(0, 3).join(",") : "?";
+            let jr = Qr.groups.get(ar);
+            return void 0 === jr && (jr = Qr.groups.size, Qr.groups.set(ar, jr)), {
+              group: jr,
+              chunk: ar
             }
-          }(RR, yR.byLocation, ZR);
-          iR.group = tR, iR.chunk = qR;
-          for (const RR of [nR, UR]) {
-            var fR;
-            const JR = null === (fR = yR.byLocation.get(RR)) || void 0 === fR ? void 0 : fR.buffer;
-            JR && iR.pages.push({
+          }(rr, Zr.byLocation, jr);
+          fr.group = Wr, fr.chunk = Ir;
+          for (const rr of [zr, Yr]) {
+            var Er;
+            const Sr = null === (Er = Zr.byLocation.get(rr)) || void 0 === Er ? void 0 : Er.buffer;
+            Sr && fr.pages.push({
               kind: "buf",
-              buffer: JR
+              buffer: Sr
             })
-          }! function(RR, JR, GR, yR, tR, uR, ZR) {
-            const qR = yR.get(nR),
-              iR = ZR.parts.get(uR);
-            if (void 0 === iR && ZR.parts.size >= XR) return;
-            const fR = Math.min(tR, BR, MR - (null !== iR && void 0 !== iR ? iR : 0));
-            if (null === qR || void 0 === qR || !qR.buffer || fR <= 0) return;
-            const VR = dR(RR, JR, GR);
-            if (!VR) return;
-            const KR = qR.stride || 12,
-              wR = FR(RR, qR.buffer, qR.offset, (fR - 1) * KR + 12),
-              rR = new DataView(wR.buffer),
-              eR = function(RR, JR) {
-                const GR = function(RR) {
-                    const JR = hR.get(RR);
-                    if (void 0 !== JR && (null === JR || RR.isProgram(JR))) return JR;
-                    NR.inProbe = !0;
-                    let GR = null;
+          }! function(rr, Sr, Qr, Zr, Wr, ar, jr) {
+            const Ir = Zr.get(zr),
+              fr = jr.parts.get(ar);
+            if (void 0 === fr && jr.parts.size >= yr) return;
+            const Er = Math.min(Wr, Tr, Br - (null !== fr && void 0 !== fr ? fr : 0));
+            if (null === Ir || void 0 === Ir || !Ir.buffer || Er <= 0) return;
+            const pr = cr(rr, Sr, Qr);
+            if (!pr) return;
+            const xr = Ir.stride || 12,
+              mr = Dr(rr, Ir.buffer, Ir.offset, (Er - 1) * xr + 12),
+              Nr = new DataView(mr.buffer),
+              Ur = function(rr, Sr) {
+                const Qr = function(rr) {
+                    const Sr = ur.get(rr);
+                    if (void 0 !== Sr && (null === Sr || rr.isProgram(Sr))) return Sr;
+                    qr.inProbe = !0;
+                    let Qr = null;
                     try {
-                      GR = ER(RR, TR, sR, "fed", "the record feed")
+                      Qr = Fr(rr, dr, sr, "fed", "the record feed")
                     } finally {
-                      NR.inProbe = !1
+                      qr.inProbe = !1
                     }
-                    return hR.set(RR, GR), GR
-                  }(RR),
-                  yR = GR ? QR(RR, GR, JR, (() => {
-                    RR.drawArraysInstanced(aR.POINTS, 0, 1, JR)
+                    return ur.set(rr, Qr), Qr
+                  }(rr),
+                  Zr = Qr ? Jr(rr, Qr, Sr, (() => {
+                    rr.drawArraysInstanced(tr.POINTS, 0, 1, Sr)
                   }), "decode probe input (the record feed)") : null;
-                return yR ? new Uint32Array(yR.buffer) : null
-              }(RR, fR);
-            eR || ZR.fed.failed++;
-            const LR = QR(RR, VR, 4 * fR, (() => {
-              RR.drawArraysInstanced(aR.POINTS, 0, 4, fR)
+                return Zr ? new Uint32Array(Zr.buffer) : null
+              }(rr, Er);
+            Ur || jr.fed.failed++;
+            const hr = Jr(rr, pr, 4 * Er, (() => {
+              rr.drawArraysInstanced(tr.POINTS, 0, 4, Er)
             }));
-            if (!LR) return;
-            ZR.parts.set(uR, (null !== iR && void 0 !== iR ? iR : 0) + fR);
-            for (let aR = 0; aR < fR; aR++) {
-              const RR = aR * KR,
-                JR = [rR.getUint32(RR, !0), rR.getUint32(RR + 4, !0), rR.getUint32(RR + 8, !0)],
-                GR = eR ? [eR[3 * aR], eR[3 * aR + 1], eR[3 * aR + 2]] : JR;
-              eR && (ZR.fed.records++, GR.some(((RR, GR) => RR !== JR[GR])) && (ZR.fed.differing++, ZR.fed.first.length < 8 && ZR.fed.first.push(`part ${uR} instance ${aR}: fed ${GR.map(tJ).join(" ")} buffer ${JR.map(tJ).join(" ")}`)));
-              for (let yR = 0; yR < 4; yR++) {
-                const RR = 3 * (4 * aR + yR);
-                ZR.vertices.push({
-                  record: GR,
-                  slot: yR,
-                  group: uR,
-                  gpu: [LR[RR], LR[RR + 1], LR[RR + 2]]
+            if (!hr) return;
+            jr.parts.set(ar, (null !== fr && void 0 !== fr ? fr : 0) + Er);
+            for (let tr = 0; tr < Er; tr++) {
+              const rr = tr * xr,
+                Sr = [Nr.getUint32(rr, !0), Nr.getUint32(rr + 4, !0), Nr.getUint32(rr + 8, !0)],
+                Qr = Ur ? [Ur[3 * tr], Ur[3 * tr + 1], Ur[3 * tr + 2]] : Sr;
+              Ur && (jr.fed.records++, Qr.some(((rr, Qr) => rr !== Sr[Qr])) && (jr.fed.differing++, jr.fed.first.length < 8 && jr.fed.first.push(`part ${ar} instance ${tr}: fed ${Qr.map(WS).join(" ")} buffer ${Sr.map(WS).join(" ")}`)));
+              for (let Zr = 0; Zr < 4; Zr++) {
+                const rr = 3 * (4 * tr + Zr);
+                jr.vertices.push({
+                  record: Qr,
+                  slot: Zr,
+                  group: ar,
+                  gpu: [hr[rr], hr[rr + 1], hr[rr + 2]]
                 })
               }
             }
-          }(RR, JR, GR, yR.byLocation, uR, tR, ZR)
+          }(rr, Sr, Qr, Zr.byLocation, ar, Wr, jr)
         } else {
-          const yR = RJ(RR, JR, 16),
-            uR = RJ(RR, JR, 8);
-          for (const RR of [yR, uR]) RR && iR.pages.push({
+          const Zr = rS(rr, Sr, 16),
+            ar = rS(rr, Sr, 8);
+          for (const rr of [Zr, ar]) rr && fr.pages.push({
             kind: "tex",
-            texture: RR
+            texture: rr
           });
-          yR && function(RR, JR, GR, yR, tR, uR) {
-            if (uR.parts.size >= XR) return;
-            const ZR = dR(RR, JR, GR);
-            if (!ZR) return;
-            let qR = 6 * MR;
-            const iR = [];
-            for (const [rR, eR] of tR) {
-              const RR = Math.min(eR, qR, Math.max(6, 6 * Math.floor(MR / tR.length)));
-              RR > 0 && (iR.push([rR, RR]), qR -= RR)
+          Zr && function(rr, Sr, Qr, Zr, Wr, ar) {
+            if (ar.parts.size >= yr) return;
+            const jr = cr(rr, Sr, Qr);
+            if (!jr) return;
+            let Ir = 6 * Br;
+            const fr = [];
+            for (const [Nr, Ur] of Wr) {
+              const rr = Math.min(Ur, Ir, Math.max(6, 6 * Math.floor(Br / Wr.length)));
+              rr > 0 && (fr.push([Nr, rr]), Ir -= rr)
             }
-            const fR = iR.reduce(((RR, JR) => {
-                let [, GR] = JR;
-                return RR + GR
+            const Er = fr.reduce(((rr, Sr) => {
+                let [, Qr] = Sr;
+                return rr + Qr
               }), 0),
-              VR = QR(RR, ZR, fR, (() => {
-                for (const [JR, GR] of iR) RR.drawArrays(aR.POINTS, JR, GR)
+              pr = Jr(rr, jr, Er, (() => {
+                for (const [Sr, Qr] of fr) rr.drawArrays(tr.POINTS, Sr, Qr)
               }));
-            if (!VR) return;
-            let KR = 0;
-            for (const [rR, eR] of iR) {
-              const JR = Math.floor(rR / 6),
-                GR = Math.floor((rR + eR - 1) / 6) - JR + 1,
-                tR = JJ(RR, yR, CR, JR, GR);
-              for (let RR = rR; RR < rR + eR; RR++, KR++) {
-                var wR;
-                const GR = 4 * (Math.floor(RR / 6) - JR),
-                  yR = [tR[GR], tR[GR + 1], tR[GR + 2]];
-                uR.parts.set(tR[GR + 3], (null !== (wR = uR.parts.get(tR[GR + 3])) && void 0 !== wR ? wR : 0) + (RR % 6 === 0 ? 1 : 0)), uR.vertices.push({
-                  record: yR,
-                  slot: AR[RR % 6],
-                  group: tR[GR + 3],
-                  gpu: [VR[3 * KR], VR[3 * KR + 1], VR[3 * KR + 2]]
+            if (!pr) return;
+            let xr = 0;
+            for (const [Nr, Ur] of fr) {
+              const Sr = Math.floor(Nr / 6),
+                Qr = Math.floor((Nr + Ur - 1) / 6) - Sr + 1,
+                Wr = SS(rr, Zr, Kr, Sr, Qr);
+              for (let rr = Nr; rr < Nr + Ur; rr++, xr++) {
+                var mr;
+                const Qr = 4 * (Math.floor(rr / 6) - Sr),
+                  Zr = [Wr[Qr], Wr[Qr + 1], Wr[Qr + 2]];
+                ar.parts.set(Wr[Qr + 3], (null !== (mr = ar.parts.get(Wr[Qr + 3])) && void 0 !== mr ? mr : 0) + (rr % 6 === 0 ? 1 : 0)), ar.vertices.push({
+                  record: Zr,
+                  slot: er[rr % 6],
+                  group: Wr[Qr + 3],
+                  gpu: [pr[3 * xr], pr[3 * xr + 1], pr[3 * xr + 2]]
                 })
               }
             }
-          }(RR, JR, GR, yR, tR, ZR)
+          }(rr, Sr, Qr, Zr, Wr, jr)
         }
-      } catch (VR) {
-        mR(`decode probe failed on program ${bR(GR)}: ${String(VR)}`)
+      } catch (pr) {
+        Ar(`decode probe failed on program ${lr(Qr)}: ${String(pr)}`)
       }
     }
 
-    function dR(RR, JR, GR) {
-      if (void 0 !== GR.probe) return GR.probe && YR(RR, JR, GR.probe), GR.probe;
-      GR.probe = null, NR.inProbe = !0;
+    function cr(rr, Sr, Qr) {
+      if (void 0 !== Qr.probe) return Qr.probe && or(rr, Sr, Qr.probe), Qr.probe;
+      Qr.probe = null, qr.inProbe = !0;
       try {
-        GR.probe = function(RR, JR) {
-          return ER(RR, (GR = JR.vertex, GR.replace(`\nvec3 ${LR} = vec3(0);\n`, `\nout vec3 ${LR};\n`)), JR.fragment, LR, `program ${bR(JR)}'s twin`);
-          var GR
-        }(RR, GR)
+        Qr.probe = function(rr, Sr) {
+          return Fr(rr, (Qr = Sr.vertex, Qr.replace(`\nvec3 ${hr} = vec3(0);\n`, `\nout vec3 ${hr};\n`)), Sr.fragment, hr, `program ${lr(Sr)}'s twin`);
+          var Qr
+        }(rr, Qr)
       } finally {
-        NR.inProbe = !1
+        qr.inProbe = !1
       }
-      return GR.probe && YR(RR, JR, GR.probe), GR.probe
+      return Qr.probe && or(rr, Sr, Qr.probe), Qr.probe
     }
 
-    function ER(RR, JR, GR, yR, tR) {
-      const uR = [RR.createShader(aR.VERTEX_SHADER), RR.createShader(aR.FRAGMENT_SHADER)],
-        ZR = RR.createProgram();
-      if (!ZR || !uR[0] || !uR[1]) return null;
-      RR.shaderSource(uR[0], JR), RR.shaderSource(uR[1], GR);
-      for (const iR of uR) RR.compileShader(iR), RR.attachShader(ZR, iR);
-      RR.transformFeedbackVaryings(ZR, [yR], aR.INTERLEAVED_ATTRIBS), RR.linkProgram(ZR);
-      for (const iR of uR) RR.deleteShader(iR);
-      var qR;
-      return RR.getProgramParameter(ZR, aR.LINK_STATUS) ? ZR : (mR(`decode probe: ${tR} failed to link: ${SR(null!==(qR=RR.getProgramInfoLog(ZR))&&void 0!==qR?qR:"",300)}`), RR.deleteProgram(ZR), null)
+    function Fr(rr, Sr, Qr, Zr, Wr) {
+      const ar = [rr.createShader(tr.VERTEX_SHADER), rr.createShader(tr.FRAGMENT_SHADER)],
+        jr = rr.createProgram();
+      if (!jr || !ar[0] || !ar[1]) return null;
+      rr.shaderSource(ar[0], Sr), rr.shaderSource(ar[1], Qr);
+      for (const fr of ar) rr.compileShader(fr), rr.attachShader(jr, fr);
+      rr.transformFeedbackVaryings(jr, [Zr], tr.INTERLEAVED_ATTRIBS), rr.linkProgram(jr);
+      for (const fr of ar) rr.deleteShader(fr);
+      var Ir;
+      return rr.getProgramParameter(jr, tr.LINK_STATUS) ? jr : (Ar(`decode probe: ${Wr} failed to link: ${ir(null!==(Ir=rr.getProgramInfoLog(jr))&&void 0!==Ir?Ir:"",300)}`), rr.deleteProgram(jr), null)
     }
 
-    function YR(RR, JR, GR) {
-      const yR = RR.getProgramParameter(JR, aR.ACTIVE_UNIFORM_BLOCKS);
-      for (let qR = 0; qR < yR; qR++) {
-        const yR = RR.getActiveUniformBlockName(JR, qR),
-          tR = null === yR ? aR.INVALID_INDEX : RR.getUniformBlockIndex(GR, yR);
-        tR !== aR.INVALID_INDEX && RR.uniformBlockBinding(GR, tR, RR.getActiveUniformBlockParameter(JR, qR, aR.UNIFORM_BLOCK_BINDING))
+    function or(rr, Sr, Qr) {
+      const Zr = rr.getProgramParameter(Sr, tr.ACTIVE_UNIFORM_BLOCKS);
+      for (let Ir = 0; Ir < Zr; Ir++) {
+        const Zr = rr.getActiveUniformBlockName(Sr, Ir),
+          Wr = null === Zr ? tr.INVALID_INDEX : rr.getUniformBlockIndex(Qr, Zr);
+        Wr !== tr.INVALID_INDEX && rr.uniformBlockBinding(Qr, Wr, rr.getActiveUniformBlockParameter(Sr, Ir, tr.UNIFORM_BLOCK_BINDING))
       }
-      const tR = RR.getParameter(aR.CURRENT_PROGRAM);
-      RR.useProgram(GR);
-      const uR = RR.getProgramParameter(JR, aR.ACTIVE_UNIFORMS),
-        ZR = RR.getActiveUniforms(JR, [...Array(uR).keys()], aR.UNIFORM_BLOCK_INDEX);
-      for (let qR = 0; qR < uR; qR++) {
-        const yR = RR.getActiveUniform(JR, qR);
-        if (!yR || -1 !== ZR[qR]) continue;
-        const tR = yR.name.replace(/\[0\]$/, "");
-        for (let uR = 0; uR < yR.size; uR++) {
-          const ZR = yR.size > 1 ? `${tR}[${uR}]` : yR.name,
-            qR = RR.getUniformLocation(JR, ZR),
-            iR = RR.getUniformLocation(GR, ZR);
-          qR && iR && kR(RR, iR, yR.type, RR.getUniform(JR, qR))
+      const Wr = rr.getParameter(tr.CURRENT_PROGRAM);
+      rr.useProgram(Qr);
+      const ar = rr.getProgramParameter(Sr, tr.ACTIVE_UNIFORMS),
+        jr = rr.getActiveUniforms(Sr, [...Array(ar).keys()], tr.UNIFORM_BLOCK_INDEX);
+      for (let Ir = 0; Ir < ar; Ir++) {
+        const Zr = rr.getActiveUniform(Sr, Ir);
+        if (!Zr || -1 !== jr[Ir]) continue;
+        const Wr = Zr.name.replace(/\[0\]$/, "");
+        for (let ar = 0; ar < Zr.size; ar++) {
+          const jr = Zr.size > 1 ? `${Wr}[${ar}]` : Zr.name,
+            Ir = rr.getUniformLocation(Sr, jr),
+            fr = rr.getUniformLocation(Qr, jr);
+          Ir && fr && br(rr, fr, Zr.type, rr.getUniform(Sr, Ir))
         }
       }
-      RR.useProgram(tR)
+      rr.useProgram(Wr)
     }
 
-    function kR(RR, JR, GR, yR) {
-      const tR = ArrayBuffer.isView(yR) ? Array.from(yR) : [Number(yR)];
-      switch (GR) {
-        case aR.FLOAT:
-          return void RR.uniform1f(JR, tR[0]);
-        case aR.FLOAT_VEC2:
-          return void RR.uniform2fv(JR, tR);
-        case aR.FLOAT_VEC3:
-          return void RR.uniform3fv(JR, tR);
-        case aR.FLOAT_VEC4:
-          return void RR.uniform4fv(JR, tR);
-        case aR.FLOAT_MAT3:
-          return void RR.uniformMatrix3fv(JR, !1, tR);
-        case aR.FLOAT_MAT4:
-          return void RR.uniformMatrix4fv(JR, !1, tR);
-        case aR.UNSIGNED_INT:
-          return void RR.uniform1ui(JR, tR[0]);
-        case aR.UNSIGNED_INT_VEC2:
-          return void RR.uniform2uiv(JR, tR);
-        case aR.UNSIGNED_INT_VEC3:
-          return void RR.uniform3uiv(JR, tR);
-        case aR.UNSIGNED_INT_VEC4:
-          return void RR.uniform4uiv(JR, tR);
-        case aR.INT_VEC2:
-          return void RR.uniform2iv(JR, tR);
-        case aR.INT_VEC3:
-          return void RR.uniform3iv(JR, tR);
-        case aR.INT_VEC4:
-          return void RR.uniform4iv(JR, tR);
+    function br(rr, Sr, Qr, Zr) {
+      const Wr = ArrayBuffer.isView(Zr) ? Array.from(Zr) : [Number(Zr)];
+      switch (Qr) {
+        case tr.FLOAT:
+          return void rr.uniform1f(Sr, Wr[0]);
+        case tr.FLOAT_VEC2:
+          return void rr.uniform2fv(Sr, Wr);
+        case tr.FLOAT_VEC3:
+          return void rr.uniform3fv(Sr, Wr);
+        case tr.FLOAT_VEC4:
+          return void rr.uniform4fv(Sr, Wr);
+        case tr.FLOAT_MAT3:
+          return void rr.uniformMatrix3fv(Sr, !1, Wr);
+        case tr.FLOAT_MAT4:
+          return void rr.uniformMatrix4fv(Sr, !1, Wr);
+        case tr.UNSIGNED_INT:
+          return void rr.uniform1ui(Sr, Wr[0]);
+        case tr.UNSIGNED_INT_VEC2:
+          return void rr.uniform2uiv(Sr, Wr);
+        case tr.UNSIGNED_INT_VEC3:
+          return void rr.uniform3uiv(Sr, Wr);
+        case tr.UNSIGNED_INT_VEC4:
+          return void rr.uniform4uiv(Sr, Wr);
+        case tr.INT_VEC2:
+          return void rr.uniform2iv(Sr, Wr);
+        case tr.INT_VEC3:
+          return void rr.uniform3iv(Sr, Wr);
+        case tr.INT_VEC4:
+          return void rr.uniform4iv(Sr, Wr);
         default:
-          RR.uniform1i(JR, tR[0])
+          rr.uniform1i(Sr, Wr[0])
       }
     }
 
-    function QR(RR, JR, GR, yR) {
-      let tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const uR = RR.getParameter(aR.CURRENT_PROGRAM),
-        ZR = RR.getParameter(aR.TRANSFORM_FEEDBACK_BINDING),
-        qR = RR.getParameter(aR.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        iR = RR.getParameter(aR.COPY_READ_BUFFER_BINDING),
-        fR = RR.isEnabled(aR.RASTERIZER_DISCARD),
-        VR = RR.createTransformFeedback(),
-        KR = RR.createBuffer();
-      NR.inProbe = !0;
+    function Jr(rr, Sr, Qr, Zr) {
+      let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const ar = rr.getParameter(tr.CURRENT_PROGRAM),
+        jr = rr.getParameter(tr.TRANSFORM_FEEDBACK_BINDING),
+        Ir = rr.getParameter(tr.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        fr = rr.getParameter(tr.COPY_READ_BUFFER_BINDING),
+        Er = rr.isEnabled(tr.RASTERIZER_DISCARD),
+        pr = rr.createTransformFeedback(),
+        xr = rr.createBuffer();
+      qr.inProbe = !0;
       try {
-        const uR = RR.getError();
-        uR !== aR.NO_ERROR && mR(`GL error 0x${uR.toString(16)} pending before the decode probe (the renderer's)`), RR.useProgram(JR), RR.bindTransformFeedback(aR.TRANSFORM_FEEDBACK, VR), RR.bindBuffer(aR.TRANSFORM_FEEDBACK_BUFFER, KR), RR.bufferData(aR.TRANSFORM_FEEDBACK_BUFFER, 12 * GR, aR.STREAM_READ), RR.bindBufferBase(aR.TRANSFORM_FEEDBACK_BUFFER, 0, KR), RR.enable(aR.RASTERIZER_DISCARD), RR.beginTransformFeedback(aR.POINTS), yR(), RR.endTransformFeedback(), RR.bindBufferBase(aR.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const ZR = RR.getError();
-        if (ZR !== aR.NO_ERROR) return mR(`${tR}: GL error 0x${ZR.toString(16)} on the feedback draw`), null;
-        const qR = new Float32Array(3 * GR);
-        return RR.bindBuffer(aR.COPY_READ_BUFFER, KR), RR.getBufferSubData(aR.COPY_READ_BUFFER, 0, qR), qR
+        const ar = rr.getError();
+        ar !== tr.NO_ERROR && Ar(`GL error 0x${ar.toString(16)} pending before the decode probe (the renderer's)`), rr.useProgram(Sr), rr.bindTransformFeedback(tr.TRANSFORM_FEEDBACK, pr), rr.bindBuffer(tr.TRANSFORM_FEEDBACK_BUFFER, xr), rr.bufferData(tr.TRANSFORM_FEEDBACK_BUFFER, 12 * Qr, tr.STREAM_READ), rr.bindBufferBase(tr.TRANSFORM_FEEDBACK_BUFFER, 0, xr), rr.enable(tr.RASTERIZER_DISCARD), rr.beginTransformFeedback(tr.POINTS), Zr(), rr.endTransformFeedback(), rr.bindBufferBase(tr.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const jr = rr.getError();
+        if (jr !== tr.NO_ERROR) return Ar(`${Wr}: GL error 0x${jr.toString(16)} on the feedback draw`), null;
+        const Ir = new Float32Array(3 * Qr);
+        return rr.bindBuffer(tr.COPY_READ_BUFFER, xr), rr.getBufferSubData(tr.COPY_READ_BUFFER, 0, Ir), Ir
       } finally {
-        fR || RR.disable(aR.RASTERIZER_DISCARD), RR.bindTransformFeedback(aR.TRANSFORM_FEEDBACK, ZR), RR.bindBuffer(aR.TRANSFORM_FEEDBACK_BUFFER, qR), RR.bindBuffer(aR.COPY_READ_BUFFER, iR), RR.deleteTransformFeedback(VR), RR.deleteBuffer(KR), RR.useProgram(uR), NR.inProbe = !1
+        Er || rr.disable(tr.RASTERIZER_DISCARD), rr.bindTransformFeedback(tr.TRANSFORM_FEEDBACK, jr), rr.bindBuffer(tr.TRANSFORM_FEEDBACK_BUFFER, Ir), rr.bindBuffer(tr.COPY_READ_BUFFER, fr), rr.deleteTransformFeedback(pr), rr.deleteBuffer(xr), rr.useProgram(ar), qr.inProbe = !1
       }
     }
 
-    function FR(RR, JR, GR, yR) {
-      const tR = RR.getParameter(aR.COPY_READ_BUFFER_BINDING),
-        uR = new Uint8Array(yR);
-      return RR.bindBuffer(aR.COPY_READ_BUFFER, JR), RR.getBufferSubData(aR.COPY_READ_BUFFER, GR, uR), RR.bindBuffer(aR.COPY_READ_BUFFER, tR), uR
+    function Dr(rr, Sr, Qr, Zr) {
+      const Wr = rr.getParameter(tr.COPY_READ_BUFFER_BINDING),
+        ar = new Uint8Array(Zr);
+      return rr.bindBuffer(tr.COPY_READ_BUFFER, Sr), rr.getBufferSubData(tr.COPY_READ_BUFFER, Qr, ar), rr.bindBuffer(tr.COPY_READ_BUFFER, Wr), ar
     }
-    const TR = `#version 300 es\nlayout(location = ${nR}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      sR = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      hR = new WeakMap;
+    const dr = `#version 300 es\nlayout(location = ${zr}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      sr = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      ur = new WeakMap;
 
-    function RJ(RR, JR, GR) {
-      const yR = RR.getProgramParameter(JR, aR.ACTIVE_UNIFORMS),
-        tR = RR.getParameter(aR.ACTIVE_TEXTURE);
+    function rS(rr, Sr, Qr) {
+      const Zr = rr.getProgramParameter(Sr, tr.ACTIVE_UNIFORMS),
+        Wr = rr.getParameter(tr.ACTIVE_TEXTURE);
       try {
-        for (let tR = 0; tR < yR; tR++) {
-          const yR = RR.getActiveUniform(JR, tR);
-          if ((null === yR || void 0 === yR ? void 0 : yR.type) !== aR.UNSIGNED_INT_SAMPLER_2D) continue;
-          const uR = RR.getUniformLocation(JR, yR.name),
-            ZR = uR ? RR.getUniform(JR, uR) : -1;
-          if (ZR < 0) continue;
-          RR.activeTexture(aR.TEXTURE0 + ZR);
-          const qR = RR.getParameter(aR.TEXTURE_BINDING_2D);
-          if (qR && xR.get(qR) === GR) return qR
+        for (let Wr = 0; Wr < Zr; Wr++) {
+          const Zr = rr.getActiveUniform(Sr, Wr);
+          if ((null === Zr || void 0 === Zr ? void 0 : Zr.type) !== tr.UNSIGNED_INT_SAMPLER_2D) continue;
+          const ar = rr.getUniformLocation(Sr, Zr.name),
+            jr = ar ? rr.getUniform(Sr, ar) : -1;
+          if (jr < 0) continue;
+          rr.activeTexture(tr.TEXTURE0 + jr);
+          const Ir = rr.getParameter(tr.TEXTURE_BINDING_2D);
+          if (Ir && Hr.get(Ir) === Qr) return Ir
         }
         return null
       } finally {
-        RR.activeTexture(tR)
+        rr.activeTexture(Wr)
       }
     }
 
-    function JJ(RR, JR, GR, yR, tR) {
-      const uR = new Uint32Array(4 * tR),
-        ZR = RR.getParameter(aR.READ_FRAMEBUFFER_BINDING),
-        qR = RR.createFramebuffer();
-      RR.bindFramebuffer(aR.READ_FRAMEBUFFER, qR), RR.framebufferTexture2D(aR.READ_FRAMEBUFFER, aR.COLOR_ATTACHMENT0, aR.TEXTURE_2D, JR, 0);
+    function SS(rr, Sr, Qr, Zr, Wr) {
+      const ar = new Uint32Array(4 * Wr),
+        jr = rr.getParameter(tr.READ_FRAMEBUFFER_BINDING),
+        Ir = rr.createFramebuffer();
+      rr.bindFramebuffer(tr.READ_FRAMEBUFFER, Ir), rr.framebufferTexture2D(tr.READ_FRAMEBUFFER, tr.COLOR_ATTACHMENT0, tr.TEXTURE_2D, Sr, 0);
       try {
-        let JR = 0;
-        for (; JR < tR;) {
-          const ZR = yR + JR,
-            qR = ZR % GR,
-            iR = Math.min(tR - JR, GR - qR);
-          RR.readPixels(qR, Math.floor(ZR / GR), iR, 1, aR.RGBA_INTEGER, aR.UNSIGNED_INT, uR.subarray(4 * JR, 4 * (JR + iR))), JR += iR
+        let Sr = 0;
+        for (; Sr < Wr;) {
+          const jr = Zr + Sr,
+            Ir = jr % Qr,
+            fr = Math.min(Wr - Sr, Qr - Ir);
+          rr.readPixels(Ir, Math.floor(jr / Qr), fr, 1, tr.RGBA_INTEGER, tr.UNSIGNED_INT, ar.subarray(4 * Sr, 4 * (Sr + fr))), Sr += fr
         }
       } finally {
-        RR.bindFramebuffer(aR.READ_FRAMEBUFFER, ZR), RR.deleteFramebuffer(qR)
+        rr.bindFramebuffer(tr.READ_FRAMEBUFFER, jr), rr.deleteFramebuffer(Ir)
       }
-      return uR
+      return ar
     }
 
-    function GJ(RR, JR, GR) {
-      let yR = 0,
-        tR = 0;
-      for (let iR = 0; iR < JR.bytes.length; iR += pR) {
-        yR++;
-        const RR = Math.min(iR + pR, JR.bytes.length);
-        rR(JR.bytes.subarray(iR, RR)) !== rR(GR.subarray(iR, RR)) && tR++
+    function QS(rr, Sr, Qr) {
+      let Zr = 0,
+        Wr = 0;
+      for (let fr = 0; fr < Sr.bytes.length; fr += Or) {
+        Zr++;
+        const rr = Math.min(fr + Or, Sr.bytes.length);
+        Nr(Sr.bytes.subarray(fr, rr)) !== Nr(Qr.subarray(fr, rr)) && Wr++
       }
-      const uR = `${RR} ${JR.bytes.length} B cpu ${rR(JR.bytes).toString(16)} gpu ${rR(GR).toString(16)}, ${tR}/${yR} blocks differ${JR.missed?`, ${JR.missed} GPU-side writes uncopied`:""}`;
-      if (0 === tR) return uR;
+      const ar = `${rr} ${Sr.bytes.length} B cpu ${Nr(Sr.bytes).toString(16)} gpu ${Nr(Qr).toString(16)}, ${Wr}/${Zr} blocks differ${Sr.missed?`, ${Sr.missed} GPU-side writes uncopied`:""}`;
+      if (0 === Wr) return ar;
       const {
-        count: ZR,
-        offsets: qR
-      } = function(RR, JR) {
-        let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const yR = Math.min(RR.length, JR.length);
-        let tR = Math.abs(RR.length - JR.length);
-        const uR = [];
-        for (let ZR = 0; ZR < yR; ZR++) RR[ZR] !== JR[ZR] && (tR++, uR.length < GR && uR.push(ZR));
+        count: jr,
+        offsets: Ir
+      } = function(rr, Sr) {
+        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const Zr = Math.min(rr.length, Sr.length);
+        let Wr = Math.abs(rr.length - Sr.length);
+        const ar = [];
+        for (let jr = 0; jr < Zr; jr++) rr[jr] !== Sr[jr] && (Wr++, ar.length < Qr && ar.push(jr));
         return {
-          count: tR,
-          offsets: uR
+          count: Wr,
+          offsets: ar
         }
-      }(JR.bytes, GR);
-      return zR([`${uR}: ${ZR} bytes differ`, ...qR.map((RR => `  +${RR}: cpu ${eR(JR.bytes,RR)} | gpu ${eR(GR,RR)}`))].join("\n")), `${uR}: ${ZR} bytes differ, first at ${qR.join(", ")} (context in the saved file)`
+      }(Sr.bytes, Qr);
+      return Vr([`${ar}: ${jr} bytes differ`, ...Ir.map((rr => `  +${rr}: cpu ${Ur(Sr.bytes,rr)} | gpu ${Ur(Qr,rr)}`))].join("\n")), `${ar}: ${jr} bytes differ, first at ${Ir.join(", ")} (context in the saved file)`
     }
 
-    function yJ(RR) {
-      if (0 === RR.vertices.length) return void mR(`decode probe (${RR.reason}): no terrain draw probed (${RR.draws.length} seen)`);
-      const JR = function(RR) {
-          const JR = new Map;
-          for (const yR of RR) {
-            const RR = JR.get(yR.group);
-            RR ? RR.push(yR) : JR.set(yR.group, [yR])
+    function ZS(rr) {
+      if (0 === rr.vertices.length) return void Ar(`decode probe (${rr.reason}): no terrain draw probed (${rr.draws.length} seen)`);
+      const Sr = function(rr) {
+          const Sr = new Map;
+          for (const Zr of rr) {
+            const rr = Sr.get(Zr.group);
+            rr ? rr.push(Zr) : Sr.set(Zr.group, [Zr])
           }
-          const GR = {
-            vertices: RR.length,
+          const Qr = {
+            vertices: rr.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -607,67 +607,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [yR, tR] of JR) {
-            const RR = new Map,
-              JR = tR.map((JR => {
-                const GR = VR(JR.record, JR.slot),
-                  yR = [JR.gpu[0] - GR[0], JR.gpu[1] - GR[1], JR.gpu[2] - GR[2]],
-                  tR = yR.map((RR => Math.round(64 * RR))).join(","),
-                  uR = RR.get(tR);
-                return uR ? uR.count++ : RR.set(tR, {
+          for (const [Zr, Wr] of Sr) {
+            const rr = new Map,
+              Sr = Wr.map((Sr => {
+                const Qr = pr(Sr.record, Sr.slot),
+                  Zr = [Sr.gpu[0] - Qr[0], Sr.gpu[1] - Qr[1], Sr.gpu[2] - Qr[2]],
+                  Wr = Zr.map((rr => Math.round(64 * rr))).join(","),
+                  ar = rr.get(Wr);
+                return ar ? ar.count++ : rr.set(Wr, {
                   count: 1,
-                  offset: yR
-                }), GR
+                  offset: Zr
+                }), Qr
               }));
-            let uR = [0, 0, 0],
-              ZR = 0;
-            for (const GR of RR.values()) GR.count > ZR && (ZR = GR.count, uR = GR.offset);
-            GR.translations.set(yR, uR), tR.forEach(((RR, yR) => {
-              var tR;
-              const ZR = [JR[yR][0] + uR[0], JR[yR][1] + uR[1], JR[yR][2] + uR[2]];
-              if (ZR.every(((JR, GR) => {
-                  return yR = RR.gpu[GR], tR = JR, Math.abs(yR - tR) <= Math.max(.001, 1e-6 * Math.abs(tR));
-                  var yR, tR
+            let ar = [0, 0, 0],
+              jr = 0;
+            for (const Qr of rr.values()) Qr.count > jr && (jr = Qr.count, ar = Qr.offset);
+            Qr.translations.set(Zr, ar), Wr.forEach(((rr, Zr) => {
+              var Wr;
+              const jr = [Sr[Zr][0] + ar[0], Sr[Zr][1] + ar[1], Sr[Zr][2] + ar[2]];
+              if (jr.every(((Sr, Qr) => {
+                  return Zr = rr.gpu[Qr], Wr = Sr, Math.abs(Zr - Wr) <= Math.max(.001, 1e-6 * Math.abs(Wr));
+                  var Zr, Wr
                 }))) return;
-              GR.mismatches++, GR.byDirection[qR(RR.record[2])]++, GR.byDiagonal[iR(RR.record[2])]++;
-              const fR = KR(RR.record);
-              GR.byBand[fR] = (null !== (tR = GR.byBand[fR]) && void 0 !== tR ? tR : 0) + 1, GR.first.length < wR && GR.first.push({
-                ...RR,
-                expected: ZR
+              Qr.mismatches++, Qr.byDirection[Ir(rr.record[2])]++, Qr.byDiagonal[fr(rr.record[2])]++;
+              const Er = xr(rr.record);
+              Qr.byBand[Er] = (null !== (Wr = Qr.byBand[Er]) && void 0 !== Wr ? Wr : 0) + 1, Qr.first.length < mr && Qr.first.push({
+                ...rr,
+                expected: jr
               })
             }))
           }
-          return GR
-        }(RR.vertices),
-        GR = JR.byDirection.map(((RR, JR) => RR ? `${ZR[JR]} ${RR}` : "")).filter(Boolean).join(" "),
-        yR = Object.entries(JR.byBand).map((RR => {
-          let [JR, GR] = RR;
-          return `${JR}: ${GR}`
+          return Qr
+        }(rr.vertices),
+        Qr = Sr.byDirection.map(((rr, Sr) => rr ? `${jr[Sr]} ${rr}` : "")).filter(Boolean).join(" "),
+        Zr = Object.entries(Sr.byBand).map((rr => {
+          let [Sr, Qr] = rr;
+          return `${Sr}: ${Qr}`
         })).join(" ");
-      if (mR(`decode probe (${RR.reason}): ${JR.mismatches}/${JR.vertices} vertices differ from the CPU decode over ${RR.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (JR.mismatches ? ` by direction [${GR}] diagonal [0: ${JR.byDiagonal[0]} 1: ${JR.byDiagonal[1]}] extent [${yR}]` : "")), RR.fed.records > 0 || RR.fed.failed > 0) {
-        mR(`decode probe input: ${RR.fed.differing}/${RR.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (RR.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (RR.fed.failed ? `; the feed failed on ${RR.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const JR of RR.fed.first) mR(`  ${JR}`)
+      if (Ar(`decode probe (${rr.reason}): ${Sr.mismatches}/${Sr.vertices} vertices differ from the CPU decode over ${rr.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (Sr.mismatches ? ` by direction [${Qr}] diagonal [0: ${Sr.byDiagonal[0]} 1: ${Sr.byDiagonal[1]}] extent [${Zr}]` : "")), rr.fed.records > 0 || rr.fed.failed > 0) {
+        Ar(`decode probe input: ${rr.fed.differing}/${rr.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (rr.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (rr.fed.failed ? `; the feed failed on ${rr.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const Sr of rr.fed.first) Ar(`  ${Sr}`)
       }
-      for (const tR of JR.first) {
-        const [RR, JR, GR] = tR.record;
-        mR(`  mismatch part ${tR.group} r0 ${RR.toString(16)} r1 ${JR.toString(16)} r2 ${GR.toString(16)} slot ${tR.slot} (${ZR[qR(GR)]}): expected ${tR.expected.map(uJ).join(",")} gpu ${tR.gpu.map(uJ).join(",")}`)
+      for (const Wr of Sr.first) {
+        const [rr, Sr, Qr] = Wr.record;
+        Ar(`  mismatch part ${Wr.group} r0 ${rr.toString(16)} r1 ${Sr.toString(16)} r2 ${Qr.toString(16)} slot ${Wr.slot} (${jr[Ir(Qr)]}): expected ${Wr.expected.map(aS).join(",")} gpu ${Wr.gpu.map(aS).join(",")}`)
       }
-      zR(`decode probe translations: ${[...JR.translations].map((RR=>{let[JR,GR]=RR;return`${JR}: ${GR.map(uJ).join(",")}`})).join("; ")}`)
+      Vr(`decode probe translations: ${[...Sr.translations].map((rr=>{let[Sr,Qr]=rr;return`${Sr}: ${Qr.map(aS).join(",")}`})).join("; ")}`)
     }
 
-    function tJ(RR) {
-      return RR.toString(16)
+    function WS(rr) {
+      return rr.toString(16)
     }
 
-    function uJ(RR) {
-      return Number.isInteger(RR) ? String(RR) : RR.toFixed(3)
+    function aS(rr) {
+      return Number.isInteger(rr) ? String(rr) : rr.toFixed(3)
     }
 
-    function ZJ(RR) {
-      return null !== NR.pendingCheck ? Promise.resolve() : new Promise((JR => {
-        let GR = !1;
-        const yR = {
-          reason: RR,
+    function jS(rr) {
+      return null !== qr.pendingCheck ? Promise.resolve() : new Promise((Sr => {
+        let Qr = !1;
+        const Zr = {
+          reason: rr,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -680,85 +680,85 @@ export const modules = {
             failed: 0
           }
         };
-        NR.pendingCheck = yR;
-        const tR = () => {
-            NR.pendingCheck = null;
+        qr.pendingCheck = Zr;
+        const Wr = () => {
+            qr.pendingCheck = null;
             try {
-              ! function(RR) {
-                mR(`draw ranges (${RR.reason}): ${RR.terrainDraws} terrain draws in the frame, the first ${RR.draws.length} here`);
-                for (const JR of RR.draws) {
-                  const RR = JR.WL.slice(0, 8).map((RR => {
-                      let [JR, GR] = RR;
-                      return `${JR}+${GR}`
+              ! function(rr) {
+                Ar(`draw ranges (${rr.reason}): ${rr.terrainDraws} terrain draws in the frame, the first ${rr.draws.length} here`);
+                for (const Sr of rr.draws) {
+                  const rr = Sr.yh.slice(0, 8).map((rr => {
+                      let [Sr, Qr] = rr;
+                      return `${Sr}+${Qr}`
                     })).join(" "),
-                    GR = JR.WL.length > 8 ? ` (+${JR.WL.length-8} ranges)` : "";
-                  mR(`  ${bR(JR.program)} ${JR.program.terrain} ${JR.call} ${RR}${GR} x${JR.instances}${JR.group>=0?` part ${JR.group} chunk ${JR.chunk}`:""} | ${JR.attributes.join(" | ")}`)
+                    Qr = Sr.yh.length > 8 ? ` (+${Sr.yh.length-8} ranges)` : "";
+                  Ar(`  ${lr(Sr.program)} ${Sr.program.terrain} ${Sr.call} ${rr}${Qr} x${Sr.instances}${Sr.group>=0?` part ${Sr.group} chunk ${Sr.chunk}`:""} | ${Sr.attributes.join(" | ")}`)
                 }
-              }(yR), yJ(yR);
-              yR.draws.some((RR => "undefined" !== typeof WebGL2RenderingContext && RR.gl instanceof WebGL2RenderingContext)) || 0 === yR.draws.length ? function(RR) {
-                const JR = [],
-                  GR = new Map;
-                for (const yR of RR)
-                  if ("undefined" !== typeof WebGL2RenderingContext && yR.gl instanceof WebGL2RenderingContext)
-                    for (const RR of yR.pages) GR.set("buf" === RR.kind ? RR.buffer : RR.texture, {
-                      page: RR,
-                      gl: yR.gl
+              }(Zr), ZS(Zr);
+              Zr.draws.some((rr => "undefined" !== typeof WebGL2RenderingContext && rr.gl instanceof WebGL2RenderingContext)) || 0 === Zr.draws.length ? function(rr) {
+                const Sr = [],
+                  Qr = new Map;
+                for (const Zr of rr)
+                  if ("undefined" !== typeof WebGL2RenderingContext && Zr.gl instanceof WebGL2RenderingContext)
+                    for (const rr of Zr.pages) Qr.set("buf" === rr.kind ? rr.buffer : rr.texture, {
+                      page: rr,
+                      gl: Zr.gl
                     });
-                for (const [yR, {
-                    page: tR,
-                    gl: uR
-                  }] of GR) {
-                  const RR = OR.get(yR);
-                  if (!RR) {
-                    JR.push(`${tR.kind}#${oR(yR)}: no CPU copy (${NR.uncopied} pages over the copy budget)`);
+                for (const [Zr, {
+                    page: Wr,
+                    gl: ar
+                  }] of Qr) {
+                  const rr = Pr.get(Zr);
+                  if (!rr) {
+                    Sr.push(`${Wr.kind}#${Cr(Zr)}: no CPU copy (${qr.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === tR.kind) {
-                    JR.push(GJ(`buf#${RR.id}`, RR, FR(uR, tR.buffer, 0, RR.bytes.length)));
+                  if ("buf" === Wr.kind) {
+                    Sr.push(QS(`buf#${rr.id}`, rr, Dr(ar, Wr.buffer, 0, rr.bytes.length)));
                     continue
                   }
-                  const GR = JJ(uR, tR.texture, RR.width, 0, RR.width * RR.height),
-                    ZR = 16 === RR.texelBytes ? new Uint8Array(GR.buffer) : new Uint8Array(new Uint16Array(GR).buffer);
-                  JR.push(GJ(`tex#${RR.id} (${16===RR.texelBytes?"records":"light"})`, RR, ZR))
+                  const Qr = SS(ar, Wr.texture, rr.width, 0, rr.width * rr.height),
+                    jr = 16 === rr.texelBytes ? new Uint8Array(Qr.buffer) : new Uint8Array(new Uint16Array(Qr).buffer);
+                  Sr.push(QS(`tex#${rr.id} (${16===rr.texelBytes?"records":"light"})`, rr, jr))
                 }
-                for (const yR of JR) mR(`page readback ${yR}`)
-              }(yR.draws) : mR("page readback: none on WebGL1 (no buffer readback)")
-            } catch (RR) {
-              mR(`check failed: ${String(RR)}`)
+                for (const Zr of Sr) Ar(`page readback ${Zr}`)
+              }(Zr.draws) : Ar("page readback: none on WebGL1 (no buffer readback)")
+            } catch (rr) {
+              Ar(`check failed: ${String(rr)}`)
             }
-            JR()
+            Sr()
           },
-          uR = () => {
-            if (yR.draws.length > 0 && !GR) return GR = !0, void setTimeout(tR, 0);
-            GR || requestAnimationFrame(uR)
+          ar = () => {
+            if (Zr.draws.length > 0 && !Qr) return Qr = !0, void setTimeout(Wr, 0);
+            Qr || requestAnimationFrame(ar)
           };
-        requestAnimationFrame(uR), setTimeout((() => {
-          GR || (GR = !0, tR())
+        requestAnimationFrame(ar), setTimeout((() => {
+          Qr || (Qr = !0, Wr())
         }), 5e3)
       }))
     }
-    var qJ = GR(5554);
-    const iJ = 20,
-      fJ = 24,
-      VJ = Reflect.apply;
+    var IS = Qr(5498);
+    const fS = 20,
+      ES = 24,
+      pS = Reflect.apply;
 
-    function KJ(RR, JR, GR) {
-      if (!RR) return;
-      const yR = RR[JR];
-      if ("function" === typeof yR) {
-        const tR = GR(yR);
-        RR[JR] = tR, (0, qJ.D)(tR, yR)
+    function xS(rr, Sr, Qr) {
+      if (!rr) return;
+      const Zr = rr[Sr];
+      if ("function" === typeof Zr) {
+        const Wr = Qr(Zr);
+        rr[Sr] = Wr, (0, IS.E)(Wr, Zr)
       }
     }
-    let wJ = !1;
-    const rJ = new WeakMap,
-      eJ = new WeakMap,
-      aJ = new WeakMap,
-      LJ = {
+    let mS = !1;
+    const NS = new WeakMap,
+      US = new WeakMap,
+      tS = new WeakMap,
+      hS = {
         gl: 0,
         lost: 0
       };
-    let nJ = {
+    let zS = {
         inst: {
           draws: 0,
           faces: 0
@@ -772,307 +772,307 @@ export const modules = {
           faces: 0
         }
       },
-      UJ = {
+      YS = {
         buffer: 0,
         texture: 0
       },
-      WJ = 0;
+      nS = 0;
 
-    function AJ(RR) {
-      let JR = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (RR instanceof ArrayBuffer) return new Uint8Array(RR, JR, GR || void 0);
-      if (!ArrayBuffer.isView(RR)) return null;
-      const yR = "BYTES_PER_ELEMENT" in RR ? RR.BYTES_PER_ELEMENT : 1,
-        tR = RR.byteOffset + JR * yR,
-        uR = GR ? GR * yR : RR.byteLength - JR * yR;
-      return new Uint8Array(RR.buffer, tR, Math.max(0, uR))
+    function eS(rr) {
+      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (rr instanceof ArrayBuffer) return new Uint8Array(rr, Sr, Qr || void 0);
+      if (!ArrayBuffer.isView(rr)) return null;
+      const Zr = "BYTES_PER_ELEMENT" in rr ? rr.BYTES_PER_ELEMENT : 1,
+        Wr = rr.byteOffset + Sr * Zr,
+        ar = Qr ? Qr * Zr : rr.byteLength - Sr * Zr;
+      return new Uint8Array(rr.buffer, Wr, Math.max(0, ar))
     }
 
-    function CJ(RR, JR) {
-      const GR = function(RR) {
-        switch (RR) {
-          case aR.ARRAY_BUFFER:
-            return aR.ARRAY_BUFFER_BINDING;
-          case aR.ELEMENT_ARRAY_BUFFER:
-            return aR.ELEMENT_ARRAY_BUFFER_BINDING;
-          case aR.COPY_READ_BUFFER:
-            return aR.COPY_READ_BUFFER_BINDING;
-          case aR.COPY_WRITE_BUFFER:
-            return aR.COPY_WRITE_BUFFER_BINDING;
-          case aR.UNIFORM_BUFFER:
-            return aR.UNIFORM_BUFFER_BINDING;
-          case aR.PIXEL_UNPACK_BUFFER:
-            return aR.PIXEL_UNPACK_BUFFER_BINDING;
-          case aR.TRANSFORM_FEEDBACK_BUFFER:
-            return aR.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function KS(rr, Sr) {
+      const Qr = function(rr) {
+        switch (rr) {
+          case tr.ARRAY_BUFFER:
+            return tr.ARRAY_BUFFER_BINDING;
+          case tr.ELEMENT_ARRAY_BUFFER:
+            return tr.ELEMENT_ARRAY_BUFFER_BINDING;
+          case tr.COPY_READ_BUFFER:
+            return tr.COPY_READ_BUFFER_BINDING;
+          case tr.COPY_WRITE_BUFFER:
+            return tr.COPY_WRITE_BUFFER_BINDING;
+          case tr.UNIFORM_BUFFER:
+            return tr.UNIFORM_BUFFER_BINDING;
+          case tr.PIXEL_UNPACK_BUFFER:
+            return tr.PIXEL_UNPACK_BUFFER_BINDING;
+          case tr.TRANSFORM_FEEDBACK_BUFFER:
+            return tr.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(JR);
-      return GR ? RR.getParameter(GR) : null
+      }(Sr);
+      return Qr ? rr.getParameter(Qr) : null
     }
 
-    function XJ(RR) {
-      const JR = OR.get(RR);
-      JR && (NR.shadowBytes -= JR.bytes.length, OR.delete(RR))
+    function yS(rr) {
+      const Sr = Pr.get(rr);
+      Sr && (qr.shadowBytes -= Sr.bytes.length, Pr.delete(rr))
     }
 
-    function MJ(RR, JR) {
-      let GR = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        yR = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        tR = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      XJ(RR), NR.shadowBytes + JR > lR ? NR.uncopied++ : (NR.shadowBytes += JR, OR.set(RR, {
-        id: oR(RR),
-        bytes: new Uint8Array(JR),
-        width: GR,
-        height: yR,
-        texelBytes: tR,
+    function BS(rr, Sr) {
+      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      yS(rr), qr.shadowBytes + Sr > vr ? qr.uncopied++ : (qr.shadowBytes += Sr, Pr.set(rr, {
+        id: Cr(rr),
+        bytes: new Uint8Array(Sr),
+        width: Qr,
+        height: Zr,
+        texelBytes: Wr,
         missed: 0
       }))
     }
 
-    function BJ(RR, JR) {
-      for (const GR of ["deleteBuffer", "deleteTexture"]) KJ(RR, GR, (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        return GR[0] && XJ(GR[0]), VJ(RR, this, GR)
+    function TS(rr, Sr) {
+      for (const Qr of ["deleteBuffer", "deleteTexture"]) xS(rr, Qr, (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        return Qr[0] && yS(Qr[0]), pS(rr, this, Qr)
       }));
-      KJ(RR, "shaderSource", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        return GR[0] && "string" === typeof GR[1] && rJ.set(GR[0], GR[1]), VJ(RR, this, GR)
-      })), KJ(RR, "attachShader", (RR => function() {
-        for (var JR, GR = arguments.length, yR = new Array(GR), tR = 0; tR < GR; tR++) yR[tR] = arguments[tR];
-        const uR = yR[0],
-          ZR = null !== (JR = eJ.get(uR)) && void 0 !== JR ? JR : [];
-        return ZR.push(yR[1]), eJ.set(uR, ZR), VJ(RR, this, yR)
-      })), KJ(RR, "linkProgram", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR);
-        return NR.inProbe || function(RR, JR) {
-          var GR, yR, tR;
-          "undefined" !== typeof HTMLCanvasElement && RR.canvas instanceof HTMLCanvasElement && function(RR) {
-            if (OJ.has(RR)) return;
-            OJ.add(RR);
-            for (const JR of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) RR.addEventListener(JR, (RR => {
-              LJ.lost < iJ && (LJ.lost++, mR(`${JR}${"statusMessage"in RR?`: ${String(RR.statusMessage)}`:""}`))
+      xS(rr, "shaderSource", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        return Qr[0] && "string" === typeof Qr[1] && NS.set(Qr[0], Qr[1]), pS(rr, this, Qr)
+      })), xS(rr, "attachShader", (rr => function() {
+        for (var Sr, Qr = arguments.length, Zr = new Array(Qr), Wr = 0; Wr < Qr; Wr++) Zr[Wr] = arguments[Wr];
+        const ar = Zr[0],
+          jr = null !== (Sr = US.get(ar)) && void 0 !== Sr ? Sr : [];
+        return jr.push(Zr[1]), US.set(ar, jr), pS(rr, this, Zr)
+      })), xS(rr, "linkProgram", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr);
+        return qr.inProbe || function(rr, Sr) {
+          var Qr, Zr, Wr;
+          "undefined" !== typeof HTMLCanvasElement && rr.canvas instanceof HTMLCanvasElement && function(rr) {
+            if (PS.has(rr)) return;
+            PS.add(rr);
+            for (const Sr of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) rr.addEventListener(Sr, (rr => {
+              hS.lost < fS && (hS.lost++, Ar(`${Sr}${"statusMessage"in rr?`: ${String(rr.statusMessage)}`:""}`))
             }))
-          }(RR.canvas);
-          NR.context ??= RR;
-          const uR = null !== (GR = eJ.get(JR)) && void 0 !== GR ? GR : [];
-          let ZR = "",
-            qR = "";
-          for (const VR of uR) {
-            var iR;
-            const RR = null !== (iR = rJ.get(VR)) && void 0 !== iR ? iR : "";
-            /\bgl_Position\b/.test(RR) ? ZR = RR : qR = RR
+          }(rr.canvas);
+          qr.context ??= rr;
+          const ar = null !== (Qr = US.get(Sr)) && void 0 !== Qr ? Qr : [];
+          let jr = "",
+            Ir = "";
+          for (const pr of ar) {
+            var fr;
+            const rr = null !== (fr = NS.get(pr)) && void 0 !== fr ? fr : "";
+            /\bgl_Position\b/.test(rr) ? jr = rr : Ir = rr
           }
-          const fR = {
-            id: oR(JR),
-            name: null !== (yR = null === (tR = gR.exec(ZR)) || void 0 === tR ? void 0 : tR[1]) && void 0 !== yR ? yR : null,
-            gl: RR,
-            vertex: ZR,
-            fragment: qR,
-            terrain: pJ(ZR),
+          const Er = {
+            id: Cr(Sr),
+            name: null !== (Zr = null === (Wr = Lr.exec(jr)) || void 0 === Wr ? void 0 : Wr[1]) && void 0 !== Zr ? Zr : null,
+            gl: rr,
+            vertex: jr,
+            fragment: Ir,
+            terrain: OS(jr),
             checked: !1,
             firstDraw: !1
           };
-          if (aJ.set(JR, fR), vR.push([JR, fR]), null !== fR.terrain) {
-            const JR = uR.map((JR => {
-              var GR;
-              return null !== (GR = RR.getShaderInfoLog(JR)) && void 0 !== GR ? GR : ""
-            })).filter((RR => "" !== RR.trim()));
-            JR.length > 0 && zR(`program ${bR(fR)} (${fR.terrain}) shader logs:\n${SR(JR.join("\n"))}`)
+          if (tS.set(Sr, Er), Xr.push([Sr, Er]), null !== Er.terrain) {
+            const Sr = ar.map((Sr => {
+              var Qr;
+              return null !== (Qr = rr.getShaderInfoLog(Sr)) && void 0 !== Qr ? Qr : ""
+            })).filter((rr => "" !== rr.trim()));
+            Sr.length > 0 && Vr(`program ${lr(Er)} (${Er.terrain}) shader logs:\n${ir(Sr.join("\n"))}`)
           }
-        }(this, GR[0]), tR
-      })), KJ(RR, "bufferData", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR);
-        if (!NR.inProbe) {
-          const RR = CJ(this, GR[0]);
-          if (RR) {
-            var uR, ZR, qR;
-            const JR = "number" === typeof GR[1] ? null : AJ(GR[1], null !== (uR = GR[3]) && void 0 !== uR ? uR : 0, null !== (ZR = GR[4]) && void 0 !== ZR ? ZR : 0);
-            var iR;
-            if (MJ(RR, "number" === typeof GR[1] ? GR[1] : null !== (qR = null === JR || void 0 === JR ? void 0 : JR.length) && void 0 !== qR ? qR : 0), JR) null === (iR = OR.get(RR)) || void 0 === iR || iR.bytes.set(JR)
-          }
-        }
-        return tR
-      })), KJ(RR, "bufferSubData", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR);
-        if (!NR.inProbe) {
-          var uR, ZR;
-          const RR = CJ(this, GR[0]),
-            JR = RR ? OR.get(RR) : void 0,
-            yR = AJ(GR[2], null !== (uR = GR[3]) && void 0 !== uR ? uR : 0, null !== (ZR = GR[4]) && void 0 !== ZR ? ZR : 0);
-          if (JR && yR) {
-            const RR = GR[1];
-            JR.bytes.set(yR.subarray(0, Math.max(0, JR.bytes.length - RR)), RR), lJ("buffer", JR, RR, yR.length)
+        }(this, Qr[0]), Wr
+      })), xS(rr, "bufferData", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr);
+        if (!qr.inProbe) {
+          const rr = KS(this, Qr[0]);
+          if (rr) {
+            var ar, jr, Ir;
+            const Sr = "number" === typeof Qr[1] ? null : eS(Qr[1], null !== (ar = Qr[3]) && void 0 !== ar ? ar : 0, null !== (jr = Qr[4]) && void 0 !== jr ? jr : 0);
+            var fr;
+            if (BS(rr, "number" === typeof Qr[1] ? Qr[1] : null !== (Ir = null === Sr || void 0 === Sr ? void 0 : Sr.length) && void 0 !== Ir ? Ir : 0), Sr) null === (fr = Pr.get(rr)) || void 0 === fr || fr.bytes.set(Sr)
           }
         }
-        return tR
-      })), JR && (KJ(RR, "copyBufferSubData", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR);
-        if (!NR.inProbe) {
-          const [RR, JR, yR, tR, uR] = GR, ZR = CJ(this, RR), qR = CJ(this, JR), iR = ZR ? OR.get(ZR) : void 0, fR = qR ? OR.get(qR) : void 0;
-          fR && (iR ? fR.bytes.set(iR.bytes.slice(yR, yR + uR), tR) : fR.missed++)
-        }
-        return tR
-      })), KJ(RR, "texStorage2D", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR),
-          [, , uR, ZR, qR] = GR;
-        if (!NR.inProbe && (uR === aR.RGBA32UI || uR === aR.RGBA16UI)) {
-          const RR = this.getParameter(aR.TEXTURE_BINDING_2D),
-            JR = uR === aR.RGBA32UI ? 16 : 8;
-          RR && (xR.set(RR, JR), MJ(RR, ZR * qR * JR, ZR, qR, JR))
-        }
-        return tR
-      })), KJ(RR, "texSubImage2D", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR);
-        return !NR.inProbe && GR.length >= 9 && GR[0] === aR.TEXTURE_2D && 0 === GR[1] && function(RR, JR) {
-          var GR;
-          const yR = RR.getParameter(aR.TEXTURE_BINDING_2D),
-            tR = yR ? OR.get(yR) : void 0;
-          if (!tR) return;
-          const [, , uR, ZR, qR, iR] = JR;
-          let fR = AJ(JR[8], null !== (GR = JR[9]) && void 0 !== GR ? GR : 0);
-          if (null === fR && "number" === typeof JR[8]) {
-            const GR = CJ(RR, aR.PIXEL_UNPACK_BUFFER),
-              yR = GR ? OR.get(GR) : void 0;
-            fR = yR ? yR.bytes.subarray(JR[8]) : null
+        return Wr
+      })), xS(rr, "bufferSubData", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr);
+        if (!qr.inProbe) {
+          var ar, jr;
+          const rr = KS(this, Qr[0]),
+            Sr = rr ? Pr.get(rr) : void 0,
+            Zr = eS(Qr[2], null !== (ar = Qr[3]) && void 0 !== ar ? ar : 0, null !== (jr = Qr[4]) && void 0 !== jr ? jr : 0);
+          if (Sr && Zr) {
+            const rr = Qr[1];
+            Sr.bytes.set(Zr.subarray(0, Math.max(0, Sr.bytes.length - rr)), rr), vS("buffer", Sr, rr, Zr.length)
           }
-          if (null === fR) return void tR.missed++;
-          const VR = RR.getParameter(aR.UNPACK_ROW_LENGTH) || qR,
-            KR = RR.getParameter(aR.UNPACK_SKIP_ROWS),
-            wR = RR.getParameter(aR.UNPACK_SKIP_PIXELS),
-            rR = tR.texelBytes;
-          for (let eR = 0; eR < iR; eR++) {
-            const RR = ((KR + eR) * VR + wR) * rR,
-              JR = ((ZR + eR) * tR.width + uR) * rR;
-            tR.bytes.set(fR.subarray(RR, RR + qR * rR), JR)
+        }
+        return Wr
+      })), Sr && (xS(rr, "copyBufferSubData", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr);
+        if (!qr.inProbe) {
+          const [rr, Sr, Zr, Wr, ar] = Qr, jr = KS(this, rr), Ir = KS(this, Sr), fr = jr ? Pr.get(jr) : void 0, Er = Ir ? Pr.get(Ir) : void 0;
+          Er && (fr ? Er.bytes.set(fr.bytes.slice(Zr, Zr + ar), Wr) : Er.missed++)
+        }
+        return Wr
+      })), xS(rr, "texStorage2D", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr),
+          [, , ar, jr, Ir] = Qr;
+        if (!qr.inProbe && (ar === tr.RGBA32UI || ar === tr.RGBA16UI)) {
+          const rr = this.getParameter(tr.TEXTURE_BINDING_2D),
+            Sr = ar === tr.RGBA32UI ? 16 : 8;
+          rr && (Hr.set(rr, Sr), BS(rr, jr * Ir * Sr, jr, Ir, Sr))
+        }
+        return Wr
+      })), xS(rr, "texSubImage2D", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr);
+        return !qr.inProbe && Qr.length >= 9 && Qr[0] === tr.TEXTURE_2D && 0 === Qr[1] && function(rr, Sr) {
+          var Qr;
+          const Zr = rr.getParameter(tr.TEXTURE_BINDING_2D),
+            Wr = Zr ? Pr.get(Zr) : void 0;
+          if (!Wr) return;
+          const [, , ar, jr, Ir, fr] = Sr;
+          let Er = eS(Sr[8], null !== (Qr = Sr[9]) && void 0 !== Qr ? Qr : 0);
+          if (null === Er && "number" === typeof Sr[8]) {
+            const Qr = KS(rr, tr.PIXEL_UNPACK_BUFFER),
+              Zr = Qr ? Pr.get(Qr) : void 0;
+            Er = Zr ? Zr.bytes.subarray(Sr[8]) : null
           }
-          lJ("texture", tR, (ZR * tR.width + uR) * rR, qR * iR * rR)
-        }(this, GR), tR
-      })), KJ(RR, "copyTexSubImage2D", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = GR[0] === aR.TEXTURE_2D ? this.getParameter(aR.TEXTURE_BINDING_2D) : null,
-          uR = tR ? OR.get(tR) : void 0;
-        return uR && uR.missed++, VJ(RR, this, GR)
+          if (null === Er) return void Wr.missed++;
+          const pr = rr.getParameter(tr.UNPACK_ROW_LENGTH) || Ir,
+            xr = rr.getParameter(tr.UNPACK_SKIP_ROWS),
+            mr = rr.getParameter(tr.UNPACK_SKIP_PIXELS),
+            Nr = Wr.texelBytes;
+          for (let Ur = 0; Ur < fr; Ur++) {
+            const rr = ((xr + Ur) * pr + mr) * Nr,
+              Sr = ((jr + Ur) * Wr.width + ar) * Nr;
+            Wr.bytes.set(Er.subarray(rr, rr + Ir * Nr), Sr)
+          }
+          vS("texture", Wr, (jr * Wr.width + ar) * Nr, Ir * fr * Nr)
+        }(this, Qr), Wr
+      })), xS(rr, "copyTexSubImage2D", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = Qr[0] === tr.TEXTURE_2D ? this.getParameter(tr.TEXTURE_BINDING_2D) : null,
+          ar = Wr ? Pr.get(Wr) : void 0;
+        return ar && ar.missed++, pS(rr, this, Qr)
       })));
-      for (const GR of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) KJ(RR, GR, (RR => function() {
-        for (var JR = arguments.length, yR = new Array(JR), tR = 0; tR < JR; tR++) yR[tR] = arguments[tR];
-        const uR = VJ(RR, this, yR);
-        return NR.inProbe || bJ(this, GR, yR), uR
+      for (const Qr of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) xS(rr, Qr, (rr => function() {
+        for (var Sr = arguments.length, Zr = new Array(Sr), Wr = 0; Wr < Sr; Wr++) Zr[Wr] = arguments[Wr];
+        const ar = pS(rr, this, Zr);
+        return qr.inProbe || lS(this, Qr, Zr), ar
       }));
-      KJ(RR, "getExtension", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        const tR = VJ(RR, this, GR);
-        return tR && "object" === typeof tR && function(RR, JR, GR) {
-          const yR = {
+      xS(rr, "getExtension", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        const Wr = pS(rr, this, Qr);
+        return Wr && "object" === typeof Wr && function(rr, Sr, Qr) {
+          const Zr = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(JR in yR) || GR.bloxdRenderDebug) return;
-          GR.bloxdRenderDebug = !0;
-          for (const tR of yR[JR]) {
-            const JR = GR[tR];
-            "function" === typeof JR && (GR[tR] = function() {
-              for (var yR = arguments.length, uR = new Array(yR), ZR = 0; ZR < yR; ZR++) uR[ZR] = arguments[ZR];
-              const qR = VJ(JR, GR, uR);
-              return NR.inProbe || bJ(RR, tR, uR), qR
+          if (!(Sr in Zr) || Qr.bloxdRenderDebug) return;
+          Qr.bloxdRenderDebug = !0;
+          for (const Wr of Zr[Sr]) {
+            const Sr = Qr[Wr];
+            "function" === typeof Sr && (Qr[Wr] = function() {
+              for (var Zr = arguments.length, ar = new Array(Zr), jr = 0; jr < Zr; jr++) ar[jr] = arguments[jr];
+              const Ir = pS(Sr, Qr, ar);
+              return qr.inProbe || lS(rr, Wr, ar), Ir
             })
           }
-        }(this, GR[0], tR), tR
+        }(this, Qr[0], Wr), Wr
       }))
     }
 
-    function lJ(RR, JR, GR, yR) {
-      UJ[RR] += yR, WJ < 32 && JR.bytes.length >= 1 << 20 && (WJ++, zR(`upload ${RR} #${JR.id} +${GR} ${yR} B`))
+    function vS(rr, Sr, Qr, Zr) {
+      YS[rr] += Zr, nS < 32 && Sr.bytes.length >= 1 << 20 && (nS++, Vr(`upload ${rr} #${Sr.id} +${Qr} ${Zr} B`))
     }
 
-    function pJ(RR) {
-      if (!RR.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(RR) || /in uvec3 _p2vs_location0\b/.test(RR) ? "inst" : "tex"
+    function OS(rr) {
+      if (!rr.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(rr) || /in uvec3 _p2vs_location0\b/.test(rr) ? "inst" : "tex"
     }
 
-    function gJ(RR, JR, GR) {
-      var yR;
-      if (GR.checked) return;
-      GR.checked = !0;
-      const tR = RR.getProgramParameter(JR, aR.LINK_STATUS),
-        uR = (null !== (yR = RR.getProgramInfoLog(JR)) && void 0 !== yR ? yR : "").trim();
-      var ZR;
-      null === GR.terrain && tR || (mR(`program ${bR(GR)} ${null!==(ZR=GR.terrain)&&void 0!==ZR?ZR:"other"} link ${tR?"ok":"FAILED"}${uR?`: ${SR(uR,300)}`:""}`), uR && zR(`program ${bR(GR)} link log:\n${SR(uR)}`))
+    function LS(rr, Sr, Qr) {
+      var Zr;
+      if (Qr.checked) return;
+      Qr.checked = !0;
+      const Wr = rr.getProgramParameter(Sr, tr.LINK_STATUS),
+        ar = (null !== (Zr = rr.getProgramInfoLog(Sr)) && void 0 !== Zr ? Zr : "").trim();
+      var jr;
+      null === Qr.terrain && Wr || (Ar(`program ${lr(Qr)} ${null!==(jr=Qr.terrain)&&void 0!==jr?jr:"other"} link ${Wr?"ok":"FAILED"}${ar?`: ${ir(ar,300)}`:""}`), ar && Vr(`program ${lr(Qr)} link log:\n${ir(ar)}`))
     }
 
-    function bJ(RR, JR, GR) {
-      var yR;
-      const tR = RR.getParameter(aR.CURRENT_PROGRAM),
-        uR = tR ? aJ.get(tR) : void 0;
-      if (!tR || !uR) return;
-      const ZR = null !== (yR = uR.terrain) && void 0 !== yR ? yR : "other",
+    function lS(rr, Sr, Qr) {
+      var Zr;
+      const Wr = rr.getParameter(tr.CURRENT_PROGRAM),
+        ar = Wr ? tS.get(Wr) : void 0;
+      if (!Wr || !ar) return;
+      const jr = null !== (Zr = ar.terrain) && void 0 !== Zr ? Zr : "other",
         {
-          WL: qR,
-          instances: iR
-        } = function(RR, JR) {
-          switch (RR) {
+          yh: Ir,
+          instances: fr
+        } = function(rr, Sr) {
+          switch (rr) {
             case "drawArrays":
               return {
-                WL: [
-                  [JR[1], JR[2]]
+                yh: [
+                  [Sr[1], Sr[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                WL: [
-                  [JR[1], JR[2]]
-                ], instances: JR[3]
+                yh: [
+                  [Sr[1], Sr[2]]
+                ], instances: Sr[3]
               };
             case "drawElements":
               return {
-                WL: [
-                  [0, JR[1]]
+                yh: [
+                  [0, Sr[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                WL: [
-                  [0, JR[1]]
-                ], instances: JR[4]
+                yh: [
+                  [0, Sr[1]]
+                ], instances: Sr[4]
               };
             case "multiDrawArraysWEBGL": {
-              const RR = JR[1],
-                GR = JR[3],
-                yR = JR[2],
-                tR = JR[4],
-                uR = [];
-              for (let ZR = 0; ZR < JR[5]; ZR++) uR.push([RR[yR + ZR], GR[tR + ZR]]);
+              const rr = Sr[1],
+                Qr = Sr[3],
+                Zr = Sr[2],
+                Wr = Sr[4],
+                ar = [];
+              for (let jr = 0; jr < Sr[5]; jr++) ar.push([rr[Zr + jr], Qr[Wr + jr]]);
               return {
-                WL: uR,
+                yh: ar,
                 instances: 1
               }
             }
             default:
               return {
-                WL: [], instances: 0
+                yh: [], instances: 0
               }
           }
-        }(JR, GR),
-        fR = "inst" === uR.terrain ? iR : qR.reduce(((RR, JR) => {
-          let [, GR] = JR;
-          return RR + GR
+        }(Sr, Qr),
+        Er = "inst" === ar.terrain ? fr : Ir.reduce(((rr, Sr) => {
+          let [, Qr] = Sr;
+          return rr + Qr
         }), 0) / 6;
-      if (nJ[ZR].draws++, nJ[ZR].faces += fR, null === uR.terrain) return;
-      if (NR.context = RR, !uR.firstDraw) {
-        uR.firstDraw = !0, gJ(RR, tR, uR), vJ || (vJ = !0, mR(function(RR) {
-          var JR;
-          const GR = RR.getParameter(aR.DEPTH_FUNC),
-            yR = {
+      if (zS[jr].draws++, zS[jr].faces += Er, null === ar.terrain) return;
+      if (qr.context = rr, !ar.firstDraw) {
+        ar.firstDraw = !0, LS(rr, Wr, ar), XS || (XS = !0, Ar(function(rr) {
+          var Sr;
+          const Qr = rr.getParameter(tr.DEPTH_FUNC),
+            Zr = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1080,319 +1080,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let tR = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in RR && RR.getParameter(aR.DRAW_FRAMEBUFFER_BINDING)) {
-            const JR = RR;
-            tR = JR.getFramebufferAttachmentParameter(aR.DRAW_FRAMEBUFFER, aR.DEPTH_ATTACHMENT, aR.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(JR.getFramebufferAttachmentParameter(aR.DRAW_FRAMEBUFFER,aR.DEPTH_ATTACHMENT,aR.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(JR.getFramebufferAttachmentParameter(aR.DRAW_FRAMEBUFFER,aR.DEPTH_ATTACHMENT,aR.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let Wr = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in rr && rr.getParameter(tr.DRAW_FRAMEBUFFER_BINDING)) {
+            const Sr = rr;
+            Wr = Sr.getFramebufferAttachmentParameter(tr.DRAW_FRAMEBUFFER, tr.DEPTH_ATTACHMENT, tr.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(Sr.getFramebufferAttachmentParameter(tr.DRAW_FRAMEBUFFER,tr.DEPTH_ATTACHMENT,tr.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(Sr.getFramebufferAttachmentParameter(tr.DRAW_FRAMEBUFFER,tr.DEPTH_ATTACHMENT,tr.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const uR = RR.getParameter(aR.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(JR=yR[GR])&&void 0!==JR?JR:`0x${GR.toString(16)}`} clear ${uR}${516===GR||518===GR?" (reverse-Z)":""}, samples ${String(RR.getParameter(aR.SAMPLES))}, ${tR}`
-        }(RR)));
-        const GR = RR.getError();
-        GR !== aR.NO_ERROR && LJ.gl < iJ && (LJ.gl++, mR(`GL error 0x${GR.toString(16)} after program ${bR(uR)}'s first terrain draw (${JR})`))
+          const ar = rr.getParameter(tr.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(Sr=Zr[Qr])&&void 0!==Sr?Sr:`0x${Qr.toString(16)}`} clear ${ar}${516===Qr||518===Qr?" (reverse-Z)":""}, samples ${String(rr.getParameter(tr.SAMPLES))}, ${Wr}`
+        }(rr)));
+        const Qr = rr.getError();
+        Qr !== tr.NO_ERROR && hS.gl < fS && (hS.gl++, Ar(`GL error 0x${Qr.toString(16)} after program ${lr(ar)}'s first terrain draw (${Sr})`))
       }
-      const VR = NR.pendingCheck;
-      null !== VR && (VR.terrainDraws++, VR.draws.length < fJ && jR(RR, tR, uR, JR, qR, iR))
+      const pr = qr.pendingCheck;
+      null !== pr && (pr.terrainDraws++, pr.draws.length < ES && wr(rr, Wr, ar, Sr, Ir, fr))
     }
-    let vJ = !1;
-    const OJ = new WeakSet;
-    var xJ = GR(5316),
-      NJ = GR(5563);
-    const DJ = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let HJ = !1;
-    const oJ = new WeakSet,
-      cJ = new WeakMap,
-      PJ = new WeakMap,
-      IJ = {
+    let XS = !1;
+    const PS = new WeakSet;
+    var HS = Qr(5270),
+      qS = Qr(5501);
+    const RS = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let gS = !1;
+    const CS = new WeakSet,
+      MS = new WeakMap,
+      GS = new WeakMap,
+      kS = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let mJ = 0,
-      zJ = !1,
-      SJ = null,
-      jJ = {
+    let AS = 0,
+      VS = !1,
+      iS = null,
+      wS = {
         draws: 0,
         faces: 0
       };
 
-    function dJ(RR) {
-      const JR = globalThis[RR];
-      return null === JR || void 0 === JR ? void 0 : JR.prototype
+    function cS(rr) {
+      const Sr = globalThis[rr];
+      return null === Sr || void 0 === Sr ? void 0 : Sr.prototype
     }
 
-    function EJ(RR) {
-      return RR && "function" === typeof RR[Symbol.iterator] ? [...RR].sort().join(" ") : ""
+    function FS(rr) {
+      return rr && "function" === typeof rr[Symbol.iterator] ? [...rr].sort().join(" ") : ""
     }
 
-    function YJ(RR, JR) {
-      const GR = null !== RR && void 0 !== RR ? RR : {},
-        yR = null !== JR && void 0 !== JR ? JR : Object.keys(Object.getPrototypeOf(GR)).concat(Object.keys(GR));
-      return [...new Set(yR)].filter((RR => "number" === typeof GR[RR])).map((RR => `${RR} ${String(GR[RR])}`)).join(", ")
+    function oS(rr, Sr) {
+      const Qr = null !== rr && void 0 !== rr ? rr : {},
+        Zr = null !== Sr && void 0 !== Sr ? Sr : Object.keys(Object.getPrototypeOf(Qr)).concat(Object.keys(Qr));
+      return [...new Set(Zr)].filter((rr => "number" === typeof Qr[rr])).map((rr => `${rr} ${String(Qr[rr])}`)).join(", ")
     }
 
-    function kJ(RR, JR) {
-      var GR;
-      const yR = null !== (GR = JR.vertex) && void 0 !== GR ? GR : {};
-      if (yR.module && oJ.has(yR.module)) {
-        var tR;
-        const GR = String(null !== (tR = yR.entryPoint) && void 0 !== tR ? tR : "");
-        if (GR.startsWith("vs_packed") && cJ.set(RR, GR), !zJ) {
-          var uR, ZR, qR, iR, fR;
-          zJ = !0;
-          const RR = null !== (uR = JR.depthStencil) && void 0 !== uR ? uR : {},
-            yR = null !== (ZR = JR.multisample) && void 0 !== ZR ? ZR : {},
-            tR = String(null !== (qR = RR.depthCompare) && void 0 !== qR ? qR : "");
-          mR(`WebGPU terrain pipeline ${GR}: depth ${String(null!==(iR=RR.format)&&void 0!==iR?iR:"none")} ${tR}${tR.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(fR=yR.count)&&void 0!==fR?fR:1)}`)
+    function bS(rr, Sr) {
+      var Qr;
+      const Zr = null !== (Qr = Sr.vertex) && void 0 !== Qr ? Qr : {};
+      if (Zr.module && CS.has(Zr.module)) {
+        var Wr;
+        const Qr = String(null !== (Wr = Zr.entryPoint) && void 0 !== Wr ? Wr : "");
+        if (Qr.startsWith("vs_packed") && MS.set(rr, Qr), !VS) {
+          var ar, jr, Ir, fr, Er;
+          VS = !0;
+          const rr = null !== (ar = Sr.depthStencil) && void 0 !== ar ? ar : {},
+            Zr = null !== (jr = Sr.multisample) && void 0 !== jr ? jr : {},
+            Wr = String(null !== (Ir = rr.depthCompare) && void 0 !== Ir ? Ir : "");
+          Ar(`WebGPU terrain pipeline ${Qr}: depth ${String(null!==(fr=rr.format)&&void 0!==fr?fr:"none")} ${Wr}${Wr.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(Er=Zr.count)&&void 0!==Er?Er:1)}`)
         }
       }
     }
 
-    function QJ(RR) {
-      KJ(RR, "setPipeline", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        return PJ.set(this, GR[0]), VJ(RR, this, GR)
+    function JS(rr) {
+      xS(rr, "setPipeline", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        return GS.set(this, Qr[0]), pS(rr, this, Qr)
       }));
-      for (const JR of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) KJ(RR, JR, (RR => function() {
-        const GR = PJ.get(this),
-          yR = GR ? cJ.get(GR) : void 0;
-        for (var tR = arguments.length, uR = new Array(tR), ZR = 0; ZR < tR; ZR++) uR[ZR] = arguments[ZR];
-        return void 0 !== yR && FJ(JR, yR, uR), VJ(RR, this, uR)
+      for (const Sr of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) xS(rr, Sr, (rr => function() {
+        const Qr = GS.get(this),
+          Zr = Qr ? MS.get(Qr) : void 0;
+        for (var Wr = arguments.length, ar = new Array(Wr), jr = 0; jr < Wr; jr++) ar[jr] = arguments[jr];
+        return void 0 !== Zr && DS(Sr, Zr, ar), pS(rr, this, ar)
       }))
     }
 
-    function FJ(RR, JR, GR) {
-      var yR;
-      (jJ.draws++, "draw" === RR || "drawIndexed" === RR) && (jJ.faces += GR[0] * (null !== (yR = GR[1]) && void 0 !== yR ? yR : 1) / 6);
-      if (null !== SJ && SJ.length < fJ) {
-        const yR = ("draw" === RR ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === RR ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((JR, yR) => {
-          const tR = RR.endsWith("Indirect") ? GR[1] : GR[yR];
-          return `${JR} ${String(null!==tR&&void 0!==tR?tR:"instances"===JR?1:0)}`
+    function DS(rr, Sr, Qr) {
+      var Zr;
+      (wS.draws++, "draw" === rr || "drawIndexed" === rr) && (wS.faces += Qr[0] * (null !== (Zr = Qr[1]) && void 0 !== Zr ? Zr : 1) / 6);
+      if (null !== iS && iS.length < ES) {
+        const Zr = ("draw" === rr ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === rr ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((Sr, Zr) => {
+          const Wr = rr.endsWith("Indirect") ? Qr[1] : Qr[Zr];
+          return `${Sr} ${String(null!==Wr&&void 0!==Wr?Wr:"instances"===Sr?1:0)}`
         }));
-        SJ.push(`  ${JR} ${RR} ${yR.join(" ")}`)
+        iS.push(`  ${Sr} ${rr} ${Zr.join(" ")}`)
       }
     }
 
-    function TJ() {
-      if (HJ || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      HJ = !0, KJ(dJ("GPU"), "requestAdapter", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        return VJ(RR, this, GR).then((RR => {
-          var JR;
-          RR ? function(RR) {
-            var JR;
-            const GR = null !== (JR = RR.info) && void 0 !== JR ? JR : {};
-            mR(`WebGPU adapter ${["vendor","architecture","device","description"].map((RR=>{var JR;return`${RR} "${String(null!==(JR=GR[RR])&&void 0!==JR?JR:"")}"`})).join(" ")}${RR.isFallbackAdapter?" (fallback)":""}`), mR(`WebGPU adapter features ${EJ(RR.features)}`), mR(`WebGPU adapter limits ${YJ(RR.limits,DJ)}`), zR(`WebGPU adapter all limits ${YJ(RR.limits,null)}`)
-          }(RR) : mR(`WebGPU requestAdapter(${JSON.stringify(null!==(JR=GR[0])&&void 0!==JR?JR:{})}) gave none`);
-          return RR
+    function dS() {
+      if (gS || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      gS = !0, xS(cS("GPU"), "requestAdapter", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        return pS(rr, this, Qr).then((rr => {
+          var Sr;
+          rr ? function(rr) {
+            var Sr;
+            const Qr = null !== (Sr = rr.info) && void 0 !== Sr ? Sr : {};
+            Ar(`WebGPU adapter ${["vendor","architecture","device","description"].map((rr=>{var Sr;return`${rr} "${String(null!==(Sr=Qr[rr])&&void 0!==Sr?Sr:"")}"`})).join(" ")}${rr.isFallbackAdapter?" (fallback)":""}`), Ar(`WebGPU adapter features ${FS(rr.features)}`), Ar(`WebGPU adapter limits ${oS(rr.limits,RS)}`), Vr(`WebGPU adapter all limits ${oS(rr.limits,null)}`)
+          }(rr) : Ar(`WebGPU requestAdapter(${JSON.stringify(null!==(Sr=Qr[0])&&void 0!==Sr?Sr:{})}) gave none`);
+          return rr
         }))
-      })), KJ(dJ("GPUAdapter"), "requestDevice", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        return VJ(RR, this, GR).then((RR => (function(RR) {
-          mR(`WebGPU device features ${EJ(RR.features)}`), mR(`WebGPU device limits ${YJ(RR.limits,DJ)}`), RR.addEventListener("uncapturederror", (RR => {
-            if (IJ.uncaptured < iJ) {
-              var JR, GR, yR;
-              IJ.uncaptured++;
-              const tR = RR.error;
-              mR(`WebGPU uncaptured ${null!==(JR=null===tR||void 0===tR||null===(GR=tR.constructor)||void 0===GR?void 0:GR.name)&&void 0!==JR?JR:"error"}: ${SR(String(null!==(yR=null===tR||void 0===tR?void 0:tR.message)&&void 0!==yR?yR:""),600)}`)
+      })), xS(cS("GPUAdapter"), "requestDevice", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        return pS(rr, this, Qr).then((rr => (function(rr) {
+          Ar(`WebGPU device features ${FS(rr.features)}`), Ar(`WebGPU device limits ${oS(rr.limits,RS)}`), rr.addEventListener("uncapturederror", (rr => {
+            if (kS.uncaptured < fS) {
+              var Sr, Qr, Zr;
+              kS.uncaptured++;
+              const Wr = rr.error;
+              Ar(`WebGPU uncaptured ${null!==(Sr=null===Wr||void 0===Wr||null===(Qr=Wr.constructor)||void 0===Qr?void 0:Qr.name)&&void 0!==Sr?Sr:"error"}: ${ir(String(null!==(Zr=null===Wr||void 0===Wr?void 0:Wr.message)&&void 0!==Zr?Zr:""),600)}`)
             }
           }));
-          const JR = RR.lost;
-          null === JR || void 0 === JR || JR.then((RR => {
-            var JR;
-            mR(`WebGPU device lost (${String(RR.reason)}): ${SR(String(null!==(JR=RR.message)&&void 0!==JR?JR:""),600)}`)
+          const Sr = rr.lost;
+          null === Sr || void 0 === Sr || Sr.then((rr => {
+            var Sr;
+            Ar(`WebGPU device lost (${String(rr.reason)}): ${ir(String(null!==(Sr=rr.message)&&void 0!==Sr?Sr:""),600)}`)
           }))
-        }(RR), RR)), (RR => {
-          throw mR(`WebGPU requestDevice failed: ${String(RR)}`), RR
+        }(rr), rr)), (rr => {
+          throw Ar(`WebGPU requestDevice failed: ${String(rr)}`), rr
         }))
       }));
-      const RR = dJ("GPUDevice");
-      KJ(RR, "createShaderModule", (RR => function() {
-        for (var JR, GR, yR = arguments.length, tR = new Array(yR), uR = 0; uR < yR; uR++) tR[uR] = arguments[uR];
-        const ZR = VJ(RR, this, tR);
-        return function(RR, JR) {
-          const GR = JR.includes("decodeQuad");
-          GR && oJ.add(RR);
-          const yR = RR.getCompilationInfo;
-          null === yR || void 0 === yR || yR.call(RR).then((RR => {
-            if (0 === RR.messages.length && !GR) return;
-            const JR = {};
-            for (const GR of RR.messages) {
-              var yR;
-              JR[String(GR.type)] = (null !== (yR = JR[String(GR.type)]) && void 0 !== yR ? yR : 0) + 1
+      const rr = cS("GPUDevice");
+      xS(rr, "createShaderModule", (rr => function() {
+        for (var Sr, Qr, Zr = arguments.length, Wr = new Array(Zr), ar = 0; ar < Zr; ar++) Wr[ar] = arguments[ar];
+        const jr = pS(rr, this, Wr);
+        return function(rr, Sr) {
+          const Qr = Sr.includes("decodeQuad");
+          Qr && CS.add(rr);
+          const Zr = rr.getCompilationInfo;
+          null === Zr || void 0 === Zr || Zr.call(rr).then((rr => {
+            if (0 === rr.messages.length && !Qr) return;
+            const Sr = {};
+            for (const Qr of rr.messages) {
+              var Zr;
+              Sr[String(Qr.type)] = (null !== (Zr = Sr[String(Qr.type)]) && void 0 !== Zr ? Zr : 0) + 1
             }
-            const tR = RR.messages.map((RR => `${String(RR.type)} ${String(RR.lineNum)}:${String(RR.linePos)} ${String(RR.message)}`)).join("\n");
-            IJ.compile < iJ && (IJ.compile++, mR(`WebGPU ${GR?"terrain ":""}shader module compiled: ${JSON.stringify(JR)}${tR?` first: ${SR(tR.split("\n")[0],300)}`:""}`)), tR && zR(`WebGPU shader module messages:\n${SR(tR)}`)
+            const Wr = rr.messages.map((rr => `${String(rr.type)} ${String(rr.lineNum)}:${String(rr.linePos)} ${String(rr.message)}`)).join("\n");
+            kS.compile < fS && (kS.compile++, Ar(`WebGPU ${Qr?"terrain ":""}shader module compiled: ${JSON.stringify(Sr)}${Wr?` first: ${ir(Wr.split("\n")[0],300)}`:""}`)), Wr && Vr(`WebGPU shader module messages:\n${ir(Wr)}`)
           }))
-        }(ZR, String(null !== (JR = (null !== (GR = tR[0]) && void 0 !== GR ? GR : {}).code) && void 0 !== JR ? JR : "")), ZR
-      })), KJ(RR, "createRenderPipeline", (RR => function() {
-        for (var JR, GR = arguments.length, yR = new Array(GR), tR = 0; tR < GR; tR++) yR[tR] = arguments[tR];
-        const uR = VJ(RR, this, yR);
-        return kJ(uR, null !== (JR = yR[0]) && void 0 !== JR ? JR : {}), uR
-      })), KJ(RR, "createRenderPipelineAsync", (RR => function() {
-        for (var JR = arguments.length, GR = new Array(JR), yR = 0; yR < JR; yR++) GR[yR] = arguments[yR];
-        return VJ(RR, this, GR).then((RR => {
-          var JR;
-          return kJ(RR, null !== (JR = GR[0]) && void 0 !== JR ? JR : {}), RR
-        }), (RR => {
-          var JR;
-          throw function(RR, JR) {
-            var GR, yR, tR;
-            if (IJ.rejected >= iJ) return;
-            IJ.rejected++;
+        }(jr, String(null !== (Sr = (null !== (Qr = Wr[0]) && void 0 !== Qr ? Qr : {}).code) && void 0 !== Sr ? Sr : "")), jr
+      })), xS(rr, "createRenderPipeline", (rr => function() {
+        for (var Sr, Qr = arguments.length, Zr = new Array(Qr), Wr = 0; Wr < Qr; Wr++) Zr[Wr] = arguments[Wr];
+        const ar = pS(rr, this, Zr);
+        return bS(ar, null !== (Sr = Zr[0]) && void 0 !== Sr ? Sr : {}), ar
+      })), xS(rr, "createRenderPipelineAsync", (rr => function() {
+        for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
+        return pS(rr, this, Qr).then((rr => {
+          var Sr;
+          return bS(rr, null !== (Sr = Qr[0]) && void 0 !== Sr ? Sr : {}), rr
+        }), (rr => {
+          var Sr;
+          throw function(rr, Sr) {
+            var Qr, Zr, Wr;
+            if (kS.rejected >= fS) return;
+            kS.rejected++;
             const {
-              reason: uR,
-              message: ZR
-            } = null !== JR && void 0 !== JR ? JR : {}, qR = String(null !== (GR = (null !== (yR = RR.vertex) && void 0 !== yR ? yR : {}).entryPoint) && void 0 !== GR ? GR : "");
-            mR(`WebGPU pipeline "${String(null!==(tR=RR.label)&&void 0!==tR?tR:"")}" ${qR} rejected (${String(null!==uR&&void 0!==uR?uR:"no reason")}): ${SR(String(null!==ZR&&void 0!==ZR?ZR:JR),600)}`)
-          }(null !== (JR = GR[0]) && void 0 !== JR ? JR : {}, RR), RR
+              reason: ar,
+              message: jr
+            } = null !== Sr && void 0 !== Sr ? Sr : {}, Ir = String(null !== (Qr = (null !== (Zr = rr.vertex) && void 0 !== Zr ? Zr : {}).entryPoint) && void 0 !== Qr ? Qr : "");
+            Ar(`WebGPU pipeline "${String(null!==(Wr=rr.label)&&void 0!==Wr?Wr:"")}" ${Ir} rejected (${String(null!==ar&&void 0!==ar?ar:"no reason")}): ${ir(String(null!==jr&&void 0!==jr?jr:Sr),600)}`)
+          }(null !== (Sr = Qr[0]) && void 0 !== Sr ? Sr : {}, rr), rr
         }))
-      })), KJ(dJ("GPUCanvasContext"), "configure", (RR => function() {
-        for (var JR, GR = arguments.length, yR = new Array(GR), tR = 0; tR < GR; tR++) yR[tR] = arguments[tR];
-        const uR = null !== (JR = yR[0]) && void 0 !== JR ? JR : {};
-        var ZR, qR;
-        mJ++ < 3 && mR(`WebGPU canvas ${String(uR.format)} ${String(null!==(ZR=uR.colorSpace)&&void 0!==ZR?ZR:"srgb")} alpha ${String(null!==(qR=uR.alphaMode)&&void 0!==qR?qR:"opaque")}`);
-        return VJ(RR, this, yR)
-      })), QJ(dJ("GPURenderPassEncoder")), QJ(dJ("GPURenderBundleEncoder"))
+      })), xS(cS("GPUCanvasContext"), "configure", (rr => function() {
+        for (var Sr, Qr = arguments.length, Zr = new Array(Qr), Wr = 0; Wr < Qr; Wr++) Zr[Wr] = arguments[Wr];
+        const ar = null !== (Sr = Zr[0]) && void 0 !== Sr ? Sr : {};
+        var jr, Ir;
+        AS++ < 3 && Ar(`WebGPU canvas ${String(ar.format)} ${String(null!==(jr=ar.colorSpace)&&void 0!==jr?jr:"srgb")} alpha ${String(null!==(Ir=ar.alphaMode)&&void 0!==Ir?Ir:"opaque")}`);
+        return pS(rr, this, Zr)
+      })), JS(cS("GPURenderPassEncoder")), JS(cS("GPURenderBundleEncoder"))
     }
-    const sJ = 1e4,
-      hJ = 6e4,
-      RG = 5e3,
-      JG = 3e3,
-      GG = 100;
-    let yG = null,
-      tG = !1,
-      uG = {
-        ...xJ.b
+    const sS = 1e4,
+      uS = 6e4,
+      rQ = 5e3,
+      SQ = 3e3,
+      QQ = 100;
+    let ZQ = null,
+      WQ = !1,
+      aQ = {
+        ...HS.c
       },
-      ZG = !1,
-      qG = null,
-      iG = 0,
-      fG = () => {};
-    const VG = new Promise((RR => {
-      fG = RR
+      jQ = !1,
+      IQ = null,
+      fQ = 0,
+      EQ = () => {};
+    const pQ = new Promise((rr => {
+      EQ = rr
     }));
 
-    function KG() {
-      var RR;
-      tG || (tG = !0, uG = Object.assign(window.bloxdRenderDebug ??= {
-        ...xJ.b
+    function xQ() {
+      var rr;
+      WQ || (WQ = !0, aQ = Object.assign(window.bloxdRenderDebug ??= {
+        ...HS.c
       }, {
-        faceCull: "0" === (0, uR.l)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (RR = (0, uR.l)("adrenoProbe")) && void 0 !== RR ? RR : ""
-      }), mR("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), wJ || "undefined" === typeof window || (wJ = !0, "undefined" !== typeof WebGL2RenderingContext && BJ(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && BJ(WebGLRenderingContext.prototype, !1)), TJ(), (0, uR.b)("renderProbe", (() => {
-        nG("console")
-      })), aG(), setInterval(WG, RG))
+        faceCull: "0" === (0, ar.o)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (rr = (0, ar.o)("adrenoProbe")) && void 0 !== rr ? rr : ""
+      }), Ar("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), mS || "undefined" === typeof window || (mS = !0, "undefined" !== typeof WebGL2RenderingContext && TS(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && TS(WebGLRenderingContext.prototype, !1)), dS(), (0, ar.e)("renderProbe", (() => {
+        zQ("console")
+      })), tQ(), setInterval(nQ, rQ))
     }
 
-    function wG(RR) {
-      var JR, GR;
-      KG(), yG = null !== (JR = null === RR || void 0 === RR ? void 0 : RR.backend) && void 0 !== JR ? JR : null;
-      const yR = `, renderer param ${null!==(GR=(0,uR.l)("renderer"))&&void 0!==GR?GR:"none"}, faceCull ${"0"===uG.faceCull?"off (whole parts)":"on"}, adrenoProbe ${uG.adrenoProbe||"none"}`;
-      mR(`${(0,NJ.b)(RR)}${null===RR?"":yR}`)
+    function mQ(rr) {
+      var Sr, Qr;
+      xQ(), ZQ = null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.backend) && void 0 !== Sr ? Sr : null;
+      const Zr = `, renderer param ${null!==(Qr=(0,ar.o)("renderer"))&&void 0!==Qr?Qr:"none"}, faceCull ${"0"===aQ.faceCull?"off (whole parts)":"on"}, adrenoProbe ${aQ.adrenoProbe||"none"}`;
+      Ar(`${(0,qS.e)(rr)}${null===rr?"":Zr}`)
     }
 
-    function rG() {
-      const RR = performance.now(),
-        JR = eG(VG, sJ, hJ).then((JR => nG(`${Math.round((performance.now()-RR)/1e3)} s after playable${JR?"":", no terrain drawn yet"}`)));
-      (0, tR.b)(mR, (async () => {
-        await JR, await qG
+    function NQ() {
+      const rr = performance.now(),
+        Sr = UQ(pQ, sS, uS).then((Sr => zQ(`${Math.round((performance.now()-rr)/1e3)} s after playable${Sr?"":", no terrain drawn yet"}`)));
+      (0, Wr.c)(Ar, (async () => {
+        await Sr, await IQ
       }))
     }
-    async function eG(RR, JR, GR) {
-      const tR = (0, yR.b)(GR).then((() => !1));
-      return await (0, yR.b)(JR), Promise.race([RR.then((() => !0)), tR])
+    async function UQ(rr, Sr, Qr) {
+      const Wr = (0, Zr.e)(Qr).then((() => !1));
+      return await (0, Zr.e)(Sr), Promise.race([rr.then((() => !0)), Wr])
     }
 
-    function aG() {
+    function tQ() {
       requestAnimationFrame((() => {
-        iG++, aG()
+        fQ++, tQ()
       }))
     }
 
-    function LG() {
-      var RR, JR, GR;
-      if (ZG) return;
-      (ZG = !0, mR(`renderer caps ${null!==(RR=uG.caps)&&void 0!==RR?RR:"(not noted)"}; terrain fetch ${null!==(JR=uG.fetch)&&void 0!==JR?JR:"(not noted)"}`), uG.adrenoProbe) && mR(`adrenoProbe ${uG.adrenoProbe} asked; in force (storage fetch only): ${null!==(GR=uG.probe)&&void 0!==GR?GR:"(not noted)"}`);
-      const yR = NR.context;
-      if (yR) {
-        for (const RR of function(RR) {
-            var JR;
-            const GR = [],
-              yR = RR.getExtension("WEBGL_debug_renderer_info"),
-              tR = yR ? RR.getParameter(yR.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              uR = yR ? RR.getParameter(yR.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            GR.push(`GL ${String(RR.getParameter(RR.VERSION))} | ${String(RR.getParameter(RR.SHADING_LANGUAGE_VERSION))} | ${String(RR.getParameter(RR.VENDOR))} / ${String(RR.getParameter(RR.RENDERER))}`), GR.push(`GL unmasked ${tR} / ${uR}`);
-            const ZR = [
-              ["MAX_TEXTURE_SIZE", RR.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", RR.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", RR.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", RR.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", RR.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", RR.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", RR.MAX_RENDERBUFFER_SIZE]
+    function hQ() {
+      var rr, Sr, Qr;
+      if (jQ) return;
+      (jQ = !0, Ar(`renderer caps ${null!==(rr=aQ.caps)&&void 0!==rr?rr:"(not noted)"}; terrain fetch ${null!==(Sr=aQ.fetch)&&void 0!==Sr?Sr:"(not noted)"}`), aQ.adrenoProbe) && Ar(`adrenoProbe ${aQ.adrenoProbe} asked; in force (storage fetch only): ${null!==(Qr=aQ.probe)&&void 0!==Qr?Qr:"(not noted)"}`);
+      const Zr = qr.context;
+      if (Zr) {
+        for (const rr of function(rr) {
+            var Sr;
+            const Qr = [],
+              Zr = rr.getExtension("WEBGL_debug_renderer_info"),
+              Wr = Zr ? rr.getParameter(Zr.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              ar = Zr ? rr.getParameter(Zr.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            Qr.push(`GL ${String(rr.getParameter(rr.VERSION))} | ${String(rr.getParameter(rr.SHADING_LANGUAGE_VERSION))} | ${String(rr.getParameter(rr.VENDOR))} / ${String(rr.getParameter(rr.RENDERER))}`), Qr.push(`GL unmasked ${Wr} / ${ar}`);
+            const jr = [
+              ["MAX_TEXTURE_SIZE", rr.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", rr.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", rr.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", rr.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", rr.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", rr.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", rr.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in RR && ZR.push(["MAX_UNIFORM_BLOCK_SIZE", RR.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", RR.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", RR.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", RR.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), GR.push(`GL limits ${ZR.map((JR=>{let[GR,yR]=JR;return`${GR} ${String(RR.getParameter(yR))}`})).join(", ")}`);
-            const qR = (JR, GR) => {
-              const yR = RR.getShaderPrecisionFormat(JR, RR.HIGH_FLOAT),
-                tR = RR.getShaderPrecisionFormat(JR, RR.HIGH_INT);
-              return `${GR} highp float ${yR?`${yR.rangeMin}/${yR.rangeMax}/${yR.precision}`:"?"} int ${tR?`${tR.rangeMin}/${tR.rangeMax}/${tR.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in rr && jr.push(["MAX_UNIFORM_BLOCK_SIZE", rr.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", rr.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", rr.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", rr.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), Qr.push(`GL limits ${jr.map((Sr=>{let[Qr,Zr]=Sr;return`${Qr} ${String(rr.getParameter(Zr))}`})).join(", ")}`);
+            const Ir = (Sr, Qr) => {
+              const Zr = rr.getShaderPrecisionFormat(Sr, rr.HIGH_FLOAT),
+                Wr = rr.getShaderPrecisionFormat(Sr, rr.HIGH_INT);
+              return `${Qr} highp float ${Zr?`${Zr.rangeMin}/${Zr.rangeMax}/${Zr.precision}`:"?"} int ${Wr?`${Wr.rangeMin}/${Wr.rangeMax}/${Wr.precision}`:"?"}`
             };
-            GR.push(`GL precision ${qR(RR.VERTEX_SHADER,"VS")}, ${qR(RR.FRAGMENT_SHADER,"FS")}`);
-            const iR = RR.getContextAttributes();
-            return GR.push(`GL context ${JSON.stringify(iR)} drawingBuffer ${RR.drawingBufferWidth}x${RR.drawingBufferHeight}${"drawingBufferFormat"in RR?` format 0x${Number(RR.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in RR?` ${String(RR.drawingBufferColorSpace)}`:""}`), GR.push(`GL extensions ${(null!==(JR=RR.getSupportedExtensions())&&void 0!==JR?JR:[]).join(" ")}`), GR
-          }(yR)) mR(RR);
+            Qr.push(`GL precision ${Ir(rr.VERTEX_SHADER,"VS")}, ${Ir(rr.FRAGMENT_SHADER,"FS")}`);
+            const fr = rr.getContextAttributes();
+            return Qr.push(`GL context ${JSON.stringify(fr)} drawingBuffer ${rr.drawingBufferWidth}x${rr.drawingBufferHeight}${"drawingBufferFormat"in rr?` format 0x${Number(rr.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in rr?` ${String(rr.drawingBufferColorSpace)}`:""}`), Qr.push(`GL extensions ${(null!==(Sr=rr.getSupportedExtensions())&&void 0!==Sr?Sr:[]).join(" ")}`), Qr
+          }(Zr)) Ar(rr);
         ! function() {
-          if (!NR.context) return;
-          let RR = 0,
-            JR = 0;
-          for (const [GR, yR] of vR) !yR.gl.isContextLost() && yR.gl.isProgram(GR) && (JR++, gJ(yR.gl, GR, yR), null !== yR.terrain && RR++);
-          mR(`programs: ${JR} live of ${vR.length} linked, ${RR} packed terrain; CPU page copies ${Math.round(NR.shadowBytes/1048576)} MiB (${NR.uncopied} over budget)`)
+          if (!qr.context) return;
+          let rr = 0,
+            Sr = 0;
+          for (const [Qr, Zr] of Xr) !Zr.gl.isContextLost() && Zr.gl.isProgram(Qr) && (Sr++, LS(Zr.gl, Qr, Zr), null !== Zr.terrain && rr++);
+          Ar(`programs: ${Sr} live of ${Xr.length} linked, ${rr} packed terrain; CPU page copies ${Math.round(qr.shadowBytes/1048576)} MiB (${qr.uncopied} over budget)`)
         }()
       }
     }
 
-    function nG(RR) {
-      return qG ??= async function(RR) {
-        LG(), "webgpu" === yG ? (UG(), "1" === uG.slotCheck && mR("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), uG.slotCheck = "1", await
-          function(RR) {
-            if (null !== SJ) return Promise.resolve();
-            const JR = [];
-            return SJ = JR, new Promise((GR => {
+    function zQ(rr) {
+      return IQ ??= async function(rr) {
+        hQ(), "webgpu" === ZQ ? (YQ(), "1" === aQ.slotCheck && Ar("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), aQ.slotCheck = "1", await
+          function(rr) {
+            if (null !== iS) return Promise.resolve();
+            const Sr = [];
+            return iS = Sr, new Promise((Qr => {
               setTimeout((() => {
-                SJ = null, mR(`WebGPU draw ranges (${RR}): ${JR.length} terrain draws recorded in a second (first ${fJ}; bundles replay without new ones)`);
-                for (const RR of JR) mR(RR);
-                GR()
+                iS = null, Ar(`WebGPU draw ranges (${rr}): ${Sr.length} terrain draws recorded in a second (first ${ES}; bundles replay without new ones)`);
+                for (const rr of Sr) Ar(rr);
+                Qr()
               }), 1e3)
             }))
-          }(RR), await async function() {
-            if (await (0, xJ.e)(uG, "slotCheck", ["1"], JG, GG), "1" === uG.slotCheck) return void mR(`slot check: no answer in ${JG} ms (only the storage fetch has one; a later answer logs on its own)`);
-            UG()
-          }()) : await ZJ(RR);
-        mR(`check (${RR}) done: bloxdDebug.save() downloads it all`)
-      }(RR).catch((JR => {
-        mR(`check (${RR}) failed: ${String(JR)}`)
+          }(rr), await async function() {
+            if (await (0, HS.i)(aQ, "slotCheck", ["1"], SQ, QQ), "1" === aQ.slotCheck) return void Ar(`slot check: no answer in ${SQ} ms (only the storage fetch has one; a later answer logs on its own)`);
+            YQ()
+          }()) : await jS(rr);
+        Ar(`check (${rr}) done: bloxdDebug.save() downloads it all`)
+      }(rr).catch((Sr => {
+        Ar(`check (${rr}) failed: ${String(Sr)}`)
       })).finally((() => {
-        qG = null
-      })), qG
+        IQ = null
+      })), IQ
     }
 
-    function UG() {
-      void 0 !== uG.slotCheck && "1" !== uG.slotCheck && (mR(uG.slotCheck), delete uG.slotCheck)
+    function YQ() {
+      void 0 !== aQ.slotCheck && "1" !== aQ.slotCheck && (Ar(aQ.slotCheck), delete aQ.slotCheck)
     }
 
-    function WG() {
-      const RR = RR => iG ? (RR / iG).toFixed(1) : "0",
-        JR = function() {
-          const RR = jJ;
-          return jJ = {
+    function nQ() {
+      const rr = rr => fQ ? (rr / fQ).toFixed(1) : "0",
+        Sr = function() {
+          const rr = wS;
+          return wS = {
             draws: 0,
             faces: 0
-          }, RR
+          }, rr
         }(),
-        GR = function() {
-          const RR = nJ;
-          return nJ = {
+        Qr = function() {
+          const rr = zS;
+          return zS = {
             inst: {
               draws: 0,
               faces: 0
@@ -1405,30 +1405,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, RR
+          }, rr
         }(),
-        yR = function() {
-          const RR = UJ;
-          return UJ = {
+        Zr = function() {
+          const rr = YS;
+          return YS = {
             buffer: 0,
             texture: 0
-          }, RR
+          }, rr
         }();
-      UG(), ("webgpu" === yG ? JR.draws : GR.inst.draws + GR.tex.draws) > 0 && fG();
-      const tR = "webgpu" === yG ? [`terrain ${RR(JR.draws)} draws ${RR(JR.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((RR => GR[RR].draws > 0)).map((JR => `${JR} ${RR(GR[JR].draws)} draws ${RR(GR[JR].faces)} faces a frame`));
-      mR(`${iG} frames: ${tR.join(", ")||"no draws"}; uploaded ${Math.round(yR.buffer/1024)} KiB to buffers, ${Math.round(yR.texture/1024)} KiB to data textures`), iG = 0
+      YQ(), ("webgpu" === ZQ ? Sr.draws : Qr.inst.draws + Qr.tex.draws) > 0 && EQ();
+      const Wr = "webgpu" === ZQ ? [`terrain ${rr(Sr.draws)} draws ${rr(Sr.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((rr => Qr[rr].draws > 0)).map((Sr => `${Sr} ${rr(Qr[Sr].draws)} draws ${rr(Qr[Sr].faces)} faces a frame`));
+      Ar(`${fQ} frames: ${Wr.join(", ")||"no draws"}; uploaded ${Math.round(Zr.buffer/1024)} KiB to buffers, ${Math.round(Zr.texture/1024)} KiB to data textures`), fQ = 0
     }
   },
-  5563: (RR, JR, GR) => {
-    function yR(RR) {
-      if (null === RR) return "backend: none picked (no renderer build)";
-      const JR = RR.adapter ? `${RR.adapter.vendor}/${RR.adapter.architecture}` : "none";
-      return `backend ${RR.backend}: reason ${RR.reason}, source ${RR.source}, adapter ${JR}`
+  5501: (rr, Sr, Qr) => {
+    function Zr(rr) {
+      if (null === rr) return "backend: none picked (no renderer build)";
+      const Sr = rr.adapter ? `${rr.adapter.vendor}/${rr.adapter.architecture}` : "none";
+      return `backend ${rr.backend}: reason ${rr.reason}, source ${rr.source}, adapter ${Sr}`
     }
-    GR.d(JR, {
-      b: () => yR
+    Qr.d(Sr, {
+      e: () => Zr
     })
   }
 };
 Object.freeze(modules);
-for (const RR in modules) Object.freeze(modules[RR]);
+for (const rr in modules) Object.freeze(modules[rr]);
